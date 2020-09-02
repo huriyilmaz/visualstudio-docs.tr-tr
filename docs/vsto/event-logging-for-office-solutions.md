@@ -1,5 +1,5 @@
 ---
-title: Office çözümleri için olay günlüğüne kaydetme
+title: Office çözümleri için olay günlüğü
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,86 +16,86 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 480a355ee2af321341c54b90edcc582d49102186
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62951950"
 ---
-# <a name="event-logging-for-office-solutions"></a>Office çözümleri için olay günlüğüne kaydetme
-  Tarafından yakalanan özel durum iletilerini görmek için Windows Olay Görüntüleyicisi'ni kullanabilirsiniz [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] yüklediğinizde veya Office çözümleri kaldırın. Olay günlüğü ileti, yükleme ve dağıtım sorunlarını gidermek için kullanabilirsiniz.
+# <a name="event-logging-for-office-solutions"></a>Office çözümleri için olay günlüğü
+  Office çözümlerini yüklerken veya kaldırırken tarafından yakalanan özel durum iletilerini görmek için Windows 'daki Olay Görüntüleyicisi 'ni kullanabilirsiniz [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] . Bu iletileri, yükleme ve dağıtım sorunlarını çözmek için olay günlükçüsü ' nden kullanabilirsiniz.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
-## <a name="read-the-event-log"></a>Olay günlüğünü okuma
- Açık **Olay Görüntüleyicisi'ni** ve görmek istediğiniz olayları için filtre.
+## <a name="read-the-event-log"></a>Olay günlüğünü okuyun
+ **Olay Görüntüleyicisi** açın ve görmek istediğiniz olayları filtreleyin.
 
-### <a name="to-read-the-event-log-in-windows-server-2003-and-windows-xp"></a>Windows Server 2003 ve Windows XP olay günlüğünde okumak için
+### <a name="to-read-the-event-log-in-windows-server-2003-and-windows-xp"></a>Windows Server 2003 ve Windows XP 'de olay günlüğünü okumak için
 
-1. Denetim Masası'nda açın **Yönetimsel Araçlar**.
+1. Denetim Masası 'nda **Yönetimsel Araçlar**' ı açın.
 
-2. Başlangıç **Olay Görüntüleyicisi'ni**.
+2. **Olay Görüntüleyicisi**başlatın.
 
-3. Olay günlükleri listesinde seçin **uygulama**.
+3. Olay günlükleri listesinde **uygulama**' yı seçin.
 
-4. Üzerinde **görünümü** menüsünde tıklatın **filtre**.
+4. **Görünüm** menüsünde **filtre**' ye tıklayın.
 
-5. İçinde **olay kaynağı** listesinden **VSTO 4.0**.
+5. **Olay kaynağı** listesinde **VSTO 4,0**' ı seçin.
 
-6. Yükleme olayları için de **öğesini belirten Olay No.** kutusuna **4096**.
+6. Yükleme olayları için, **olay kimliği** kutusuna **4096**yazın.
 
-7. Tıklayın **Tamam** filtrelenmiş görünümü görmek için.
+7. Filtrelenmiş görünümü görmek için **Tamam** ' ı tıklatın.
 
-### <a name="to-read-the-event-log-in-windows-7-windows-vista-and-windows-server-2008"></a>Windows 7, Windows Vista ve Windows Server 2008 olay günlüğünde okumak için
+### <a name="to-read-the-event-log-in-windows-7-windows-vista-and-windows-server-2008"></a>Windows 7, Windows Vista ve Windows Server 2008 ' de olay günlüğünü okumak için
 
-1. Denetim Masası'nda açın **Yönetimsel Araçlar**.
+1. Denetim Masası 'nda **Yönetimsel Araçlar**' ı açın.
 
-2. Başlangıç **Olay Görüntüleyicisi'ni**.
+2. **Olay Görüntüleyicisi**başlatın.
 
-3. Genişletin **Windows Günlükleri**.
+3. **Windows günlükleri**' ni genişletin.
 
-4. Olay günlükleri listesinde seçin **uygulama**.
+4. Olay günlükleri listesinde **uygulama**' yı seçin.
 
-5. Üzerinde **eylem** menüsünü tıklatın **geçerli günlüğü Filtrele**.
+5. **Eylem** menüsünde **geçerli günlüğü filtrele**' ye tıklayın.
 
-6. İçinde **olay kaynağı** listesinden **VSTO 4.0**.
+6. **Olay kaynağı** listesinde **VSTO 4,0**' ı seçin.
 
-7. Yükleme olayları için de **öğesini belirten Olay No.** kutusuna **4096**.
+7. Yükleme olayları için, **olay kimliği** kutusuna **4096**yazın.
 
-8. Tıklayın **Tamam** filtrelenmiş görünümü görmek için.
+8. Filtrelenmiş görünümü görmek için **Tamam** ' ı tıklatın.
 
-   Olay Görüntüleyicisi'ni, aşağıdaki bilgileri içerir:
+   Olay Görüntüleyicisi aşağıdaki bilgileri içerir:
 
-- Çözüm için dağıtım bildiriminin konumunu.
+- Çözüm için dağıtım bildiriminin konumu.
 
-- Hata veya özel durum nedenini açıklayan bir ileti.
+- Hatanın veya özel durumun nedenini açıklayan bir ileti.
 
-  Bu özel durum iletileri, güvenilmeyen bir sertifika, güvenilmeyen dosya konumu veya geçersiz dağıtım bildirimi gibi bir yükleme sorunu nedenini belirlemenize yardımcı olabilir.
+  Bu özel durum iletileri, güvenilmeyen bir sertifika, güvenilmeyen belge konumu veya geçersiz bir dağıtım bildirimi gibi yükleme sorununun nedenini belirlemenize yardımcı olabilir.
 
-  Office çözümünü kaldırıldıktan sonra özel durum iletilerini olay günlüğüne kalır.
+  Bir Office çözümü kaldırıldıktan sonra, özel durum iletileri olay günlüğünde kalır.
 
-  Office çözümünü çalışırken özel durum iletilerini günlüğe kaydet veya göstermek için bkz [hata ayıklama Office projeleri](../vsto/debugging-office-projects.md) ve [hata ayıklama Office projeleri](../vsto/debugging-office-projects.md).
+  Bir Office çözümü çalışırken özel durum iletilerini göstermek veya günlüğe kaydetmek için bkz. [Office projelerinde hata ayıklama](../vsto/debugging-office-projects.md) ve [Office projelerinde hata ayıklama](../vsto/debugging-office-projects.md).
 
 ### <a name="localization"></a>Yerelleştirme
- Özel durum iletisi dili, Office çalışma zamanı dil için Visual Studio Araçları tarafından belirlenir. Örneğin, son kullanıcı bilgisayarına yüklü Japonca dil paketi varsa, özel durum iletisi Japonca olay günlüğüne yazılır.
+ Özel durum iletisinin dili, Office çalışma zamanı dili için Visual Studio Araçları belirlenir. Örneğin, Son Kullanıcı bilgisayarda Japonca dil paketi yüklüyse, özel durum iletisi, Japonca 'daki olay günlüğüne yazılır.
 
-## <a name="disable-the-event-logger"></a>Olay günlüğü devre dışı bırak
- Yüklediğinizde veya Office çözümlerini kaldırma olay günlüğü varsayılan olarak etkinleştirilir. Olay günlüğü "1" (bir tane) VSTO_EVENTLOGDISABLED ortam değişkenini ayarlayarak devre dışı bırakabilirsiniz.
+## <a name="disable-the-event-logger"></a>Olay günlükçüsü 'yi devre dışı bırakma
+ Varsayılan olarak, Office çözümlerini yüklerken veya kaldırdığınızda olay günlükçüsü etkinleştirilir. VSTO_EVENTLOGDISABLED ortam değişkenini "1" (bir) olarak ayarlayarak olay günlükçüsü 'yi devre dışı bırakabilirsiniz.
 
 ### <a name="to-disable-the-event-log"></a>Olay günlüğünü devre dışı bırakmak için
 
-1. Denetim Masası'nda açın **sistem**.
+1. Denetim Masası 'nda **sistem**' i açın.
 
-2. Üzerinde **Gelişmiş** sekmesinde **ortam değişkenlerini**.
+2. **Gelişmiş** sekmesinde, **ortam değişkenleri**' ne tıklayın.
 
-3. İçinde **sistem değişkenlerini** bölmesinde tıklayın **yeni**.
+3. **Sistem değişkenleri** bölmesinde **Yeni**' ye tıklayın.
 
-4. İçinde **yeni sistem değişkeni** iletişim kutusuna **VSTO_EVENTLOGDISABLED** içinde **değişken adı** kutusu.
+4. **Yeni sistem değişkeni** iletişim kutusunda, **değişken adı** kutusuna **VSTO_EVENTLOGDISABLED** yazın.
 
-5. İçinde **değişken değeri** kutusuna **1**.
+5. **Değişken değeri** kutusuna **1**yazın.
 
-6. **Tamam**'ı tıklatın.
+6. **Tamam**’a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
-- [Office çözümü dağıtımında sorunlarını giderme](../vsto/troubleshooting-office-solution-deployment.md)
+- [Office çözüm dağıtımı sorunlarını giderme](../vsto/troubleshooting-office-solution-deployment.md)

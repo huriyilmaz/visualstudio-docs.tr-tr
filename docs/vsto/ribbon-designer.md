@@ -27,10 +27,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: e1c2941b0c088a832540fd3380c993fe2c380b44
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72985620"
 ---
 # <a name="ribbon-designer"></a>Şerit Tasarımcısı
@@ -62,7 +62,7 @@ ms.locfileid: "72985620"
 
   Başka bir projeden **Şerit (görsel Tasarımcı)** öğesi zaten varsa, **Varolan öğe Ekle** iletişim kutusunu kullanarak mevcut projenizde onu yeniden kullanabilirsiniz.
 
-## <a name="DesigningRibbonLayout"></a>Şerit tasarlama
+## <a name="design-a-ribbon"></a><a name="DesigningRibbonLayout"></a> Şerit tasarlama
  Şerit tasarımcısını açmak için üç yol vardır:
 
 - **Çözüm Gezgini**, Şerit kod dosyasına çift tıklayın.
@@ -96,7 +96,7 @@ ms.locfileid: "72985620"
 
    Şerit üzerinde denetimleri bir sekmeden diğerine sürükleyemezsiniz. Bir denetimi başka bir sekmeye taşımak istiyorsanız, denetimi bir sekmeden kaldırmak için **Kes** komutunu kullanmanız ve sonra denetimi başka bir sekmeye yapıştırmanız gerekir. Denetimi keser ve yapıştırırsanız, olay işleyicisi çalışmayı durduruyor. Olay işleyicisini **Özellikler** penceresinde yeniden bağlayabilirsiniz. Daha fazla bilgi için bkz. [Özellikler penceresi](../ide/reference/properties-window.md).
 
-### <a name="AddTabToRibbon"></a>Şerite özel sekmeler ekleme
+### <a name="add-custom-tabs-to-the-ribbon"></a><a name="AddTabToRibbon"></a> Şerite özel sekmeler ekleme
  Şerite özel sekme eklemenin üç yolu vardır:
 
 - **Araç kutusundan**bir sekme ekleyin.
@@ -130,29 +130,29 @@ ms.locfileid: "72985620"
 
  Yerleşik bir sekmeyi özelleştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: yerleşik bir sekmeyi özelleştirme](../vsto/how-to-customize-a-built-in-tab.md).
 
-### <a name="AddGroupsToTab"></a>Bir sekmeye gruplar ekleme
+### <a name="add-groups-to-a-tab"></a><a name="AddGroupsToTab"></a> Bir sekmeye gruplar ekleme
  Gruplar Şeritteki denetimleri mantıksal olarak düzenler. Sekmelere gruplar ekleyin. Diğer tüm denetimleri gruba ekleyin.
 
-### <a name="AddControlsToGroups"></a>Gruplara denetim ekleme
+### <a name="add-controls-to-groups"></a><a name="AddControlsToGroups"></a> Gruplara denetim ekleme
  Bir gruba bir veya daha fazla denetim ekleyin. Aşağıdaki tabloda her bir denetim açıklanmaktadır.
 
-|Denetim|Açıklama|
+|Denetim|Description|
 |-------------|-----------------|
-|**Kutudaki**|Bir gruptaki denetimleri düzenleyen bir kapsayıcı. Ayırıcı, Grup veya sekme dışında bir kutuya herhangi bir denetim ekleyebilirsiniz. Bir kutu yatay veya dikey olabilir.|
+|**Box**|Bir gruptaki denetimleri düzenleyen bir kapsayıcı. Ayırıcı, Grup veya sekme dışında bir kutuya herhangi bir denetim ekleyebilirsiniz. Bir kutu yatay veya dikey olabilir.|
 |**Düğme**|Bir eylemi başlatan düğme. Bir gruba, düğme grubuna, açılan listeye, galeriye, menüye veya bölünmüş düğmeye düğme ekleyebilirsiniz.|
 |**ButtonGroup**|Bir veya daha fazla düğme, iki durumlu düğme, menü, bölünmüş düğme ve galerinin bulunduğu bir grup. Bir grup veya menüye düğme grubu ekleyebilirsiniz.|
 |**CheckBox**|Bir seçeneği açmak veya kapatmak için seçilen veya temizlenmiş bir kutu.|
-|**ComboBox**|Liste kutusu eklenmiş bir düzenleme kutusu. Kullanıcılar kendi tercih edebilir veya seçebilir. Kutu geçerli seçimi görüntüler. Şerit Office uygulamasına yüklenmeden önce veya sonra çalışma zamanında öğe eklemek ve kaldırmak için <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Items%2A> özelliğini kullanın.|
-|**Listenin**|Kullanıcının seçebileceğiniz öğelerin listesi. Kullanıcı açılan listede yeni bir öğe yazamaz.<br /><br /> Listeye öğe eklemek için <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A> özelliğini kullanın. Çalışma zamanında öğeleri ekleyebilir ve kaldırabilirsiniz.<br /><br /> Listeye düğme eklemek için <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A> özelliğini kullanın. Ancak, Şerit Office uygulamasına yüklendikten sonra çalışma zamanında düğme ekleyemez ve kaldıramazsınız.|
+|**ComboBox**|Liste kutusu eklenmiş bir düzenleme kutusu. Kullanıcılar kendi tercih edebilir veya seçebilir. Kutu geçerli seçimi görüntüler. <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Items%2A>Şerit Office uygulamasına yüklenmeden önce veya sonra çalışma zamanında öğe eklemek ve kaldırmak için özelliğini kullanın.|
+|**DropDown**|Kullanıcının seçebileceğiniz öğelerin listesi. Kullanıcı açılan listede yeni bir öğe yazamaz.<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>Listeye öğe eklemek için özelliğini kullanın. Çalışma zamanında öğeleri ekleyebilir ve kaldırabilirsiniz.<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A>Listeye düğme eklemek için özelliğini kullanın. Ancak, Şerit Office uygulamasına yüklendikten sonra çalışma zamanında düğme ekleyemez ve kaldıramazsınız.|
 |**EditBox**|Kullanıcının metin yazbileceği bir kutu.|
-|**Galeri**|Kullanıcıların seçebileceğiniz görsel seçimlerden oluşan bir dizi veya kılavuz sunan bir menü. Menüdeki seçimlerin yerleşimini kontrol edebilirsiniz. <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ColumnCount%2A> ve <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.RowCount%2A> özelliklerini kullanarak galerinin öğe ve düğmelerinin görüntüleneceği satır ve sütun sayısını belirtin.|
-|**Etiket**|Şeritteki denetimleri tanımlamak için kullanabileceğiniz metin.|
-|**Menü**|Aşağıdaki denetimlerden herhangi birini içerebilen bir açılan liste:<br /><br /> -Düğme<br />-Onay kutusu<br />-Galeri<br />-Menü<br />-Böl düğmesi<br />-İki durumlu düğme<br />-Ayırıcı<br /><br /> Şerit tasarımcısında bir menüye denetim eklemek için menüdeki aşağı oka tıklayarak Menü tasarım yüzeyini kullanıma sunun. Daha sonra şerit denetimlerini **araç kutusundan** menü üzerine sürükleyebilirsiniz. Denetimleri düzenlemek için onları istediğiniz konumlara sürükleyin.<br /><br /> Şerit Office uygulamasına yüklendikten sonra <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu> denetim eklemek için, Şerit yüklenmeden önce <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A> özelliğini **true** olarak ayarlamanız gerekir. Bunun nasıl yapılacağı hakkında bilgi için bkz. [Şerit nesne modeline genel bakış](../vsto/ribbon-object-model-overview.md).|
-|**Ayıraç**|Bir listedeki öğeleri ayırmak için kullanılan ince bir çubuk. Bir gruba eklendiğinde çubuk dikey olur. Bir menüye eklendiğinde çubuk yatay olur.|
+|**Galeri**|Kullanıcıların seçebileceğiniz görsel seçimlerden oluşan bir dizi veya kılavuz sunan bir menü. Menüdeki seçimlerin yerleşimini kontrol edebilirsiniz. <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ColumnCount%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.RowCount%2A> Galerinin öğe ve düğmelerini görüntüleyecek olan satır ve sütun sayısını belirtmek için ve özelliklerini kullanın.|
+|**Etiketle**|Şeritteki denetimleri tanımlamak için kullanabileceğiniz metin.|
+|**Menü**|Aşağıdaki denetimlerden herhangi birini içerebilen bir açılan liste:<br /><br /> -Düğme<br />-Onay kutusu<br />-Galeri<br />-Menü<br />-Böl düğmesi<br />-İki durumlu düğme<br />-Ayırıcı<br /><br /> Şerit tasarımcısında bir menüye denetim eklemek için menüdeki aşağı oka tıklayarak Menü tasarım yüzeyini kullanıma sunun. Daha sonra şerit denetimlerini **araç kutusundan** menü üzerine sürükleyebilirsiniz. Denetimleri düzenlemek için onları istediğiniz konumlara sürükleyin.<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>Şerit Office uygulamasına yüklendikten sonra öğesine denetim eklemek için, <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A> Şerit yüklenmeden önce özelliği **true** olarak ayarlamanız gerekir. Bunun nasıl yapılacağı hakkında bilgi için bkz. [Şerit nesne modeline genel bakış](../vsto/ribbon-object-model-overview.md).|
+|**Ayırıcı**|Bir listedeki öğeleri ayırmak için kullanılan ince bir çubuk. Bir gruba eklendiğinde çubuk dikey olur. Bir menüye eklendiğinde çubuk yatay olur.|
 |**SplitButton**|İliştirilmiş bir menü içeren düğme. Bölünmüş bir düğme, aşağıdaki denetimlerden herhangi birini içerebilir:<br /><br /> -Düğme<br />-Onay kutusu<br />-Galeri<br />-Menü<br />-Böl düğmesi<br />-İki durumlu düğme<br />-Ayırıcı<br /><br /> Menü gibi, bölünmüş düğmenin kendi tasarım yüzeyi vardır. Ancak, bir menünün aksine, yalnızca bir bölünmüş düğmedeki öğeleri, Şerit Office uygulamasına yüklenmeden önce güncelleştirebilirsiniz. Bölünmüş düğmedeki öğeleri güncelleştirme hakkında daha fazla bilgi için bkz. [Şerit nesne modeline genel bakış](../vsto/ribbon-object-model-overview.md).|
 |**ToggleButton**|Basılan veya basılmamış görüntülenen bir düğme.|
 
-## <a name="HandleEventsSetProperties"></a>Olayları işleme ve özellikleri ayarlama
+## <a name="handle-events-and-setting-properties"></a><a name="HandleEventsSetProperties"></a> Olayları işleme ve özellikleri ayarlama
  Şerit Tasarımcısı, tasarım zamanında **Özellikler** penceresini kullanarak denetim özelliklerini ayarlamanıza olanak sağlar. Ayrıca, şerit, çalışma zamanında Şerit denetimlerinin özelliklerini almak ve ayarlamak için kullanabileceğiniz, türü kesin belirlenmiş bir nesne modeli kullanıma sunar.
 
  Denetimin varsayılan olayı için bir olay işleyicisi açmak üzere Tasarımcıda herhangi bir denetime çift tıklayabilirsiniz. **Özellikler** penceresini kullanarak diğer tüm denetim olayları için olay işleyicileri oluşturabilirsiniz.
@@ -161,7 +161,7 @@ ms.locfileid: "72985620"
 
  Şerit olaylarını işleme ve çalışma zamanında Şerit denetimlerinin özelliklerini ayarlama hakkında daha fazla bilgi için bkz. [Şerit nesne modeline genel bakış](../vsto/ribbon-object-model-overview.md).
 
-## <a name="CustomizingMicrosoftOfficeButton"></a>Backstage görünümünü özelleştirme
+## <a name="customize-backstage-view"></a><a name="CustomizingMicrosoftOfficeButton"></a> Backstage görünümünü özelleştirme
  **Dosya** sekmesine tıkladığınızda açılan menüye denetim eklemek Için şerit tasarımcısını kullanabilirsiniz. Bu menü, Backstage görünümü olarak adlandırılır.
 
  Şerit Tasarımcısını kullanarak, yerleşik denetimlerden önce veya sonra Denetim konumlandırabilirsiniz. Yerleşik denetim, Backstage görünümünde zaten görüntülenen bir denetimdir. Denetimleri yerleşik denetimlerden önce veya sonra konumlandırmak istiyorsanız Şerit XML 'i kullanmanız gerekir. **Şerit (XML)** hakkında daha fazla bilgi için bkz. [Ribbon XML](../vsto/ribbon-xml.md). Backstage görünümünü özelleştirme hakkında daha fazla bilgi için bkz. [geliştiriciler Için office 2010 Backstage görünümüne giriş](/previous-versions/office/developer/office-2010/ee691833(v=office.14)) ve [geliştiriciler Için Office 2010 Backstage görünümünü özelleştirme](/previous-versions/office/developer/office-2010/ee815851(v=office.14)).
@@ -170,26 +170,26 @@ ms.locfileid: "72985620"
 
  Backstage görünümüne denetimler ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Backstage görünümüne denetimler ekleme](../vsto/how-to-add-controls-to-the-backstage-view.md).
 
-## <a name="Accessibility"></a>Şerit tasarımcısında erişilebilirlik
+## <a name="accessibility-in-the-ribbon-designer"></a><a name="Accessibility"></a> Şerit tasarımcısında erişilebilirlik
  Şerit tasarımcısında denetimleri taşımak için klavye kısayollarını kullanabilirsiniz. Bazı klavye kısayolları tüm denetimler için geçerlidir ve bazıları yalnızca menülere sahip denetimler için geçerlidir.
 
  Tüm denetimler için uygulanan klavye kısayolları aşağıdaki tabloda gösterilmiştir.
 
 |Eylem|Klavye kısayolu|
 |------------|-----------------------|
-|Listedeki bir denetimi önceki denetimden önce taşıyın.|**Ctrl**+**yukarı**<br /><br /> **Sola** **CTRL**+|
-|Bir denetimi listedeki bir sonraki denetimden sonra taşıyın.|**Ctrl**+**aşağı**<br /><br /> **Ctrl**+**sağ**|
-|Seçimi aynı gruptaki bir denetimden diğerine taşıyın. Açılır panel için, açılan paneldeki üst denetim ve denetimler arasında geçiş yapın.|**Ayarlama**<br /><br /> **Kapatılıp**|
+|Listedeki bir denetimi önceki denetimden önce taşıyın.|**CTRL** + **Yukarı**<br /><br /> **CTRL** + **Sol**|
+|Bir denetimi listedeki bir sonraki denetimden sonra taşıyın.|**CTRL** + **Aşağı**<br /><br /> **CTRL** + **Sağ**|
+|Seçimi aynı gruptaki bir denetimden diğerine taşıyın. Açılır panel için, açılan paneldeki üst denetim ve denetimler arasında geçiş yapın.|**Yukarı**<br /><br /> **Kapatılıp**|
 |Tüm denetimlerde ileri doğru yineleyin.|**Sekmesinde**|
-|Tüm denetimler boyunca ters yönde yineleme yapın.|**Shıft** +**sekmesi**|
-|Seçili denetimi veya denetim kümesini silin.|**Delete**|
-|Seçili denetimleri kopyalayın.|**Ctrl**+**C**|
-|Seçili denetimleri kesin.|**Ctrl**+**X**|
-|Denetimleri panodan yapıştırın.|**Ctrl**+**V**|
-|**Araç kutusunu**seçin.|**Ctrl**+**alt**+**X**|
-|Ana bileşeni seçin.|**Larına**|
+|Tüm denetimler boyunca ters yönde yineleme yapın.|**SHIFT** + **Sekme**|
+|Seçili denetimi veya denetim kümesini silin.|**Silme**|
+|Seçili denetimleri kopyalayın.|**CTRL** + **C**|
+|Seçili denetimleri kesin.|**CTRL** + **X**|
+|Denetimleri panodan yapıştırın.|**CTRL** + **V**|
+|**Araç kutusunu**seçin.|**CTRL** + **Alt** + **X**|
+|Ana bileşeni seçin.|**Esc**|
 
- Yalnızca Microsoft Office menü, <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>ve <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton> için uygulanan klavye kısayolları aşağıdaki tabloda gösterilmiştir.
+ Yalnızca Microsoft Office menüsüne uygulanan klavye kısayolları <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton> Aşağıdaki tabloda gösterilmiştir.
 
 |Eylem|Klavye kısayolu|
 |------------|-----------------------|
@@ -197,7 +197,7 @@ ms.locfileid: "72985620"
 |Açılır panel açık ise ve üst denetim seçiliyse açılan paneli kapatın.|**Tarafta**|
 |Açılır paneli açın.|**Right**|
 |Açılır panel açıksa, açılan panelde ilk denetimi seçin.|**Right**|
-|Açılan paneli kapatın.|**Larına**|
+|Açılan paneli kapatın.|**Esc**|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

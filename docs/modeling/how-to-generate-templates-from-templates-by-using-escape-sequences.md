@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1460b03a027a2b33844edc7d617f8b5f21208772
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75594649"
 ---
 # <a name="how-to-generate-templates-from-templates-by-using-escape-sequences"></a>Nasıl yapılır: Çıkış Sıraları Kullanarak Şablonlardan Şablon Oluşturma
@@ -21,7 +21,7 @@ Oluşturulan metin çıktısı olarak başka bir metin şablonu oluşturan bir m
 
 ### <a name="to-generate-a-text-template-from-within-a-text-template"></a>Metin şablonu içinden metin şablonu oluşturmak için
 
-- Farklı metin şablonu dosyasındaki yönergeler, deyimler, ifadeler ve sınıf özellikleri için metin şablonunda gerekli biçimlendirme etiketlerini oluşturmak için bir kaçış karakteri olarak ters eğik çizgi (\\) kullanın.
+- \\Farklı bir metin şablonu dosyasındaki yönergeler, deyimler, ifadeler ve sınıf özellikleri için metin şablonu içinde gerekli biçimlendirme etiketlerini oluşturmak için bir kaçış karakteri olarak ters eğik çizgi () kullanın.
 
     ```
     \<#@ directive \#>
@@ -31,7 +31,7 @@ Oluşturulan metin çıktısı olarak başka bir metin şablonu oluşturan bir m
     ```
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir metin şablonundan metin şablonu oluşturmak için kaçış karakterleri kullanır. `output` yönergesi, hedef dosya türünü metin şablonu dosya türüne (. tt) ayarlar.
+ Aşağıdaki örnek, bir metin şablonundan metin şablonu oluşturmak için kaçış karakterleri kullanır. `output`Yönergesi, hedef dosya türünü metin şablonu dosya türüne (. tt) ayarlar.
 
 ```csharp
 \<#@ output extension=".tt" \#>

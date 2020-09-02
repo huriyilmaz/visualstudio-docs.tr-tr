@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 9b76c239606a4bf0d6da203bd4eea45a11162706
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546958"
 ---
 # <a name="how-to-programmatically-update-bookmark-text"></a>Nasıl yapılır: yer işareti metnini program aracılığıyla güncelleştirme
@@ -30,11 +30,11 @@ ms.locfileid: "85546958"
 
 - Bir <xref:Microsoft.Office.Tools.Word.Bookmark> konak denetimi.
 
-   <xref:Microsoft.Office.Tools.Word.Bookmark>denetimler <xref:Microsoft.Office.Interop.Word.Bookmark> , veri bağlamayı etkinleştirerek ve olayları ortaya çıkaran yerel nesneleri genişletir. Konak denetimleri hakkında daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
+   <xref:Microsoft.Office.Tools.Word.Bookmark> denetimler <xref:Microsoft.Office.Interop.Word.Bookmark> , veri bağlamayı etkinleştirerek ve olayları ortaya çıkaran yerel nesneleri genişletir. Konak denetimleri hakkında daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
 
 - Yerel bir <xref:Microsoft.Office.Interop.Word.Bookmark> nesne.
 
-   <xref:Microsoft.Office.Interop.Word.Bookmark>nesneler, olay veya veri bağlama özelliklerine sahip değildir.
+   <xref:Microsoft.Office.Interop.Word.Bookmark> nesneler, olay veya veri bağlama özelliklerine sahip değildir.
 
   Bir yer işaretine metin atadığınızda, davranış bir ve arasında farklılık gösterir <xref:Microsoft.Office.Interop.Word.Bookmark> <xref:Microsoft.Office.Tools.Word.Bookmark> . Daha fazla bilgi için bkz. [Bookmark Control](../vsto/bookmark-control.md).
 

@@ -1,6 +1,6 @@
 ---
-title: R için Yardım Penceresi
-description: R için Yardım visual Studio interaktif pencereye doğrudan entegre edilir? Komut.
+title: R için Yardım penceresi
+description: R için yardım, Visual Studio 'daki etkileşimli pencereye aracılığıyla doğrudan tümleşiktir mi? komutundaki.
 ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
@@ -9,55 +9,55 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: af6c6156b1d88c1d015f7700fc7bed061bbe9a76
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62950584"
 ---
-# <a name="help-in-r-tools-for-visual-studio"></a>Visual Studio için R Tools yardım
+# <a name="help-in-r-tools-for-visual-studio"></a>Visual Studio için R Araçları Yardım
 
-R için Yardım visual Studio'daki etkileşimli pencereye doğrudan entegre edilmiştir. R belgelerinden `?` yardım gibi `?mtcars`komutu her kullandığınızda Visual Studio penceresinde görünür:
+R yardımı, doğrudan Visual Studio 'daki etkileşimli pencereye tümleştirilir. Komutunu kullandığınızda, `?` Örneğin `?mtcars` , R belgelerindeki yardım bir Visual Studio penceresinde görünür:
 
-![Visual Studio'da Yardım penceresi](media/help-window.png)
+![Visual Studio 'da Yardım penceresi](media/help-window.png)
 
 > [!Tip]
-> Yardım penceresi, Visual Studio'daki diğer tüm kişiler gibi, istediğiniz gibi düzenlenebilir ve sabitlenebilir. [Bkz. Visual Studio'da pencere düzenlerini özelleştirin.](../ide/customizing-window-layouts-in-visual-studio.md)
+> Visual Studio 'daki tüm diğerleri gibi Yardım penceresi, istediğiniz gibi düzenlenebilir ve yerleştirilebilir. Bkz. [Visual Studio 'da pencere düzenlerini özelleştirme](../ide/customizing-window-layouts-in-visual-studio.md).
 >
-> Bir tarayıcıda yardım sonuçlarını açmak için **R Araçları** > **Seçenekleri** menüsünü seçin ve R **Yardım Tarayıcısı** özelliğini ' ye `External`ayarlayın. [Bkz. Seçenekler](options-for-r-tools-in-visual-studio.md).
+> Yardım sonuçlarını bir tarayıcıda açmak için **R araçları**  >  **Seçenekler** menüsünü seçin ve **R yardım Browser** özelliğini olarak ayarlayın `External` . Bkz. [Seçenekler](options-for-r-tools-in-visual-studio.md).
 
-Yardım aramak için, `??` arama teriminin ardından gelen komutu kullanın. Arama terimi boşluklar içeriyorsa tırnak işaretini kullanın:
+Yardım aramak için, komutu ve `??` ardından arama terimini kullanın. Arama terimi boşluk içeriyorsa, tırnak işaretleri kullanın:
 
 ```R
 ??"Motor Trend"
 ```
 
-![Arama sonuçlarına yardım edin](media/help-search1.png)
+![Yardım arama sonuçları](media/help-search1.png)
 
-Yardım penceresinde ayrıca Doğrudan R belgelerinde daha fazla arama yapabileceğiniz bir arama giriş alanı vardır:
+Yardım penceresinde Ayrıca, R belgelerinde doğrudan daha fazla arama yapmak için kullanabileceğiniz bir arama girişi alanı vardır:
 
 ![Giriş alanını kullanarak arama sonuçlarına yardım edin](media/help-search2.png)
 
-## <a name="integrated-help-lookup"></a>Entegre yardım arama
+## <a name="integrated-help-lookup"></a>Tümleşik Yardım araması
 
-Geliştiriciler genellikle işlev adları, veri kümeleri ve diğer öğeler hakkında yardım için R belgelerinde arama yapar. R Tools for Visual Studio (RTVS), yardım aramalarını doğrudan düzenleyiciye ve etkileşimli pencerelere entegre ederek işlemi kolaylaştırır.
+Geliştiriciler, genellikle işlev adları, veri kümeleri ve diğer öğeler hakkında yardım almak için R belgelerinde arama yapılır. Visual Studio için R Araçları (RTVS), yardım aramalarını doğrudan düzenleyici ve etkileşimli pencereler ile tümleştirerek işlemi basitleştirir.
 
-- Otomatik tamamlama işlemi sırasında **F1** tuşuna basıldığında, alt dizeyle eşleşen bir yardım sonuçları listesi üretir.
-- Bir arama terimini (işlev gibi) sağ tıklatma ve **komuttaki Yardım'ı** seçmek, bu işlev için yardım açar. Ayrıca herhangi bir seçim için **Yardım** çağırabilirsiniz.
+- Otomatik tamamlanmış bir işlem sırasında **F1** tuşuna basmak, alt dizeyle eşleşen yardım sonuçlarının bir listesini oluşturur.
+- Bir arama terimine (bir işlev gibi) sağ tıklayın ve **Yardım hakkında** komutu seçildiğinde bu işlev için yardım açılır. Ayrıca, herhangi bir seçim için **Yardım** çağırabilirsiniz.
 
-    ![Sağ tıklama bağlam menüsünden yardım çağırmak](media/help-right-click.png)
+    ![Sağ tıklama bağlam menüsünde Yardım çağırma](media/help-right-click.png)
 
 > [!Tip]
-> Bir tarayıcıda tümleşik yardım açmak için **R Araçları** >  `External`**Seçenekleri'ni** seçin ve **F1 Web Tarayıcısını** ' ya ayarlayın. [Bkz. Seçenekler](options-for-r-tools-in-visual-studio.md).
+> Tümleşik yardımı bir tarayıcıda açmak için **R araçları**  >  **Seçenekler** ' i seçin ve **F1 web tarayıcısını** olarak ayarlayın `External` . Bkz. [Seçenekler](options-for-r-tools-in-visual-studio.md).
 
-## <a name="integrated-stackoverflow-search"></a>Entegre StackOverflow arama
+## <a name="integrated-stackoverflow-search"></a>Tümleşik StackOverflow araması
 
-R belgelerinde arama nın yanı sıra, geliştiriciler kod yazarken genellikle StackOverflow'da arama yapar. RTVS de bu süreci kolaylaştırır. Bir terimi veya seçimi sağ tıklatın, komut **için Arama web'ini** seçin **(Ctrl**+**F1)** ve Visual Studio StackOverflow kapsamına giren arama sonuçlarıiçeren bir pencere açar:
+Geliştiriciler R belgelerinde aramanın yanı sıra, genellikle kod yazarken StackOverflow arar. RTVS bu süreci de basitleştirir. Bir terime veya seçime sağ tıklayın, **Web 'de ara** komutunu seçin (**CTRL** + **F1**) ve Visual Studio StackOverflow için arama sonuçları kapsamındaki bir pencere açar:
 
-![Visual Studio'da web arama sonuçları](media/help-web-search-results.png)
+![Visual Studio 'da Web araması sonuçları](media/help-web-search-results.png)
 
-**R Tools** > **Options** > **F1 Web arama dizesi** seçeneği aracılığıyla eklenen kapsam dizesini `R site:stackoverflow`değiştirebilirsiniz:
+Eklenen kapsam dizesini, `R site:stackoverflow` **R araçları**  >  **seçenekleri**  >  **F1 web arama dizesi** seçeneği aracılığıyla değiştirebilirsiniz:
 
-![F1 Web arama dizesi seçeneğini değiştirme](media/options-dialog.png)
+![F1 web arama dizesi seçeneğini değiştirme](media/options-dialog.png)
 
-Sonuçları bir tarayıcıda göstermeyi tercih ederseniz, [Seçenekler'de](options-for-r-tools-in-visual-studio.md)açıklandığı gibi **F1 Web Tarayıcısı** seçeneğini değiştirin.
+Sonuçları bir tarayıcıda göstermeyi tercih ediyorsanız, [Seçenekler](options-for-r-tools-in-visual-studio.md)' de açıklandığı gibi **F1 web tarayıcısı** seçeneğini değiştirin.

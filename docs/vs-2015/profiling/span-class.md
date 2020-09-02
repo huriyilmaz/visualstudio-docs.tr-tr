@@ -1,5 +1,5 @@
 ---
-title: span sınıfı | Microsoft Docs
+title: Span sınıfı | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bd9775bf03754913aea84f41e9878e755ff15d95
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198355"
 ---
 # <a name="span-class"></a>span Sınıfı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Uygulamanın bir aşama tanımlar.  
+Uygulamanın aşamasını tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class span;  
@@ -37,16 +37,16 @@ class span;
   
 |Ad|Açıklama|  
 |----------|-----------------|  
-|[span::span Oluşturucusu](../profiling/span-span-constructor.md)|Yeni bir örneğini başlatır `span` sınıfı.|  
-|[span::~span Yıkıcısı](../profiling/span-tilde-span-destructor.md)|Yok eder `span` nesne ve kaynaklarını serbest bırakır.|  
+|[span::span Oluşturucusu](../profiling/span-span-constructor.md)|`span` sınıfının yeni bir örneğini başlatır.|  
+|[span::~span Yok Edicisi](../profiling/span-tilde-span-destructor.md)|Nesneyi yok eder `span` ve kaynaklarını serbest bırakır.|  
   
 ## <a name="inheritance-hierarchy"></a>Devralma Hiyerarşisi  
  `span`  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** cvmarkersobj.h  
+ **Üst bilgi:** cvmarkersobj. h  
   
- **Namespace:** CONCURRENCY::Diagnostic  
+ **Ad alanı:** Eşzamanlılık::d ıagstik  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Tanılama Ad Alanı](../profiling/diagnostic-namespace.md)
+ [Tanılama ad alanı](../profiling/diagnostic-namespace.md)

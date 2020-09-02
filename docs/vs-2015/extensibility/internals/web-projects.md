@@ -11,24 +11,24 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f2994c219dd1aadf7f5b9bc833eb7867baede9a6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144340"
 ---
 # <a name="web-projects"></a>Web Projeleri
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Web Proje sistemi, Web projeleri oluşturan bir proje sistemidir. Web projeleri sırayla Web uygulamaları oluşturun. Geleneksel programlama dilleri gibi kullanarak bir Web sayfası programlayabileceğiniz [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] veya [!INCLUDE[csprcs](../../includes/csprcs-md.md)]toplamak ve kullanıcıdan bilgi işlem, bir veritabanında saklamak ve benzeri için. Web sayfaları ile ilişkili kod akıllı Web sayfaları denir.  
+Web proje sistemi, Web projeleri oluşturan bir proje sistemidir. Web projeleri Web uygulamaları oluşturur. Bir Web sayfasını, veya gibi geleneksel programlama dilleri kullanarak, [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] bir kullanıcıdan bilgi toplamak ve işlemek, bir veritabanında depolamak ve benzeri bir şekilde programlayabilirsiniz. İlişkili koda sahip Web sayfalarına akıllı Web sayfaları denir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Temel Bileşenler](../../extensibility/internals/web-project-essentials.md)  
- Önemli öğeleri sunan [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Web projeleri.  
+ [Essentials](../../extensibility/internals/web-project-essentials.md)  
+ Önemli öğeleri [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Web projelerini gösterir.  
   
  [Web Sitesi Desteği](../../extensibility/internals/web-site-support.md)  
- Genel bir bakış sunan [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Web sitesi projeleri. Bir Web sitesi projesi her akıllı Web sayfası için bir yürütülebilir dosya oluşturur. Ek yürütülebilir dosyalar /App_Code klasöründeki kaynak kodu dosyasından oluşturulur.  
+ Web sitesi projelerine genel bir bakış sunar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Web sitesi projesi her akıllı Web sayfası için bir yürütülebilir dosya oluşturur. Ek yürütülebilir dosyalar/App_Code klasöründeki kaynak kod dosyalarından oluşturulur.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Projeler](../../extensibility/internals/projects.md)  
- Nasıl genişletileceğini açıklar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] proje sistemi.
+ Proje sisteminin nasıl genişletileceğini açıklar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .

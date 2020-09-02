@@ -1,5 +1,5 @@
 ---
-title: Çalışma alanı Visual Studio'da dizinleme | Microsoft Docs
+title: Visual Studio 'da çalışma alanı dizini oluşturma | Microsoft Docs
 ms.date: 02/21/2018
 ms.topic: conceptual
 author: vukelich
@@ -8,29 +8,29 @@ manager: viveis
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9bf7df777d27003fa5763debc772a8804ec28ef5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62952725"
 ---
-# <a name="workspace-indexing"></a>Çalışma dizini oluşturma
+# <a name="workspace-indexing"></a>Çalışma alanı dizini oluşturma
 
-Bir çözümde proje sistemleri için derleme işlevselliği sağlamaktan sorumluysa, hata ayıklama, **GoTo** sembol arama ve daha fazlası. Proje sistemleri, ilişki ve bir proje içindeki dosyaların özelliklerini anlamak için bu işi yapabilmek için. Bir [Klasör Aç](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) çalışma zengin IDE özelliklerini de sağlamak için aynı olan bilgileri gerekir. Toplama ve bu verileri kalıcı olarak depolanması çalışma dizinini adlı bir işlemdir. Bu dizini oluşturulmuş bir veri kümesi zaman uyumsuz API'ler aracılığıyla sorgulanabilir. Genişleticiler için de geçerlidir dizin oluşturma işleminde sağlayarak <xref:Microsoft.VisualStudio.Workspace.Indexing.IFileScanner>belirli türden dosyalar yapılacağını bildiğiniz s.
+Bir çözümde, proje sistemleri derleme, hata ayıklama, simge aramaya **Git** ve daha fazlası için işlevsellik sağlamaktan sorumludur. Proje sistemleri, bir proje içindeki dosyaların ilişkilerini ve yeteneklerini anladıkları için bu işi gerçekleştirebilir. [Açık bir klasör](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) çalışma alanı, zengin IDE özellikleri de sağlamaya yönelik aynı öngörüye ihtiyaç duyuyor. Bu verilerin toplanması ve kalıcı depolanması, çalışma alanı dizin oluşturma adlı bir işlemdir. Bu dizine alınmış veriler, bir dizi zaman uyumsuz API 'Ler aracılığıyla sorgulanabilir. Extender 'lar, <xref:Microsoft.VisualStudio.Workspace.Indexing.IFileScanner> bazı dosya türlerini nasıl işleyeceğinizi belirten s sağlayarak dizin oluşturma işlemine katılabilir.
 
-## <a name="types-of-indexed-data"></a>Dizini oluşturulmuş veri türleri
+## <a name="types-of-indexed-data"></a>Dizinli veri türleri
 
-Dizine alınmış verilerin üç türü vardır. Not Dosya tarayıcılarından beklenen türde dizinden seri durumdan çıkarılmış türü farklıdır.
+Dizine eklenen üç tür veri vardır. Dosya tarayıcılarından beklenen türün dizinden Serisi kaldırılan türden farklı olduğunu aklınızda yazın.
 
-|Veri|Dosya tarayıcı türü|Dizin sorgu sonuç türü|İlgili türleri|
+|Veriler|Dosya tarayıcı türü|Dizin sorgusu sonuç türü|İlgili türler|
 |--|--|--|--|
-|Referanslar|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileReferenceInfo>|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileReferenceResult>|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileReferenceInfoType>|
-|Simgeleri|<xref:Microsoft.VisualStudio.Workspace.Indexing.SymbolDefinition>|<xref:Microsoft.VisualStudio.Workspace.Indexing.SymbolDefinitionSearchResult>|<xref:Microsoft.VisualStudio.Workspace.Indexing.ISymbolService> yerine kullanılması gereken `IIndexWorkspaceService` sorgular için|
+|Başvurular|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileReferenceInfo>|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileReferenceResult>|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileReferenceInfoType>|
+|Simgeleri|<xref:Microsoft.VisualStudio.Workspace.Indexing.SymbolDefinition>|<xref:Microsoft.VisualStudio.Workspace.Indexing.SymbolDefinitionSearchResult>|<xref:Microsoft.VisualStudio.Workspace.Indexing.ISymbolService>sorgular yerine kullanılmalıdır `IIndexWorkspaceService`|
 |Veri değerleri|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileDataValue>|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileDataResult`1>||
 
-## <a name="querying-for-indexed-data"></a>Dizini oluşturulmuş veri sorgulama
+## <a name="querying-for-indexed-data"></a>Dizinli verileri sorgulama
 
-Kalıcı veri erişmek için kullanılabilecek iki zaman uyumsuz türler var. İlk aracılığıyladır <xref:Microsoft.VisualStudio.Workspace.Indexing.IIndexWorkspaceData>. Bir tek dosyanın temel erişim sağlayan `FileReferenceResult` ve `FileDataResult` veri ve sonuçlarını önbelleğe alır. İkinci <xref:Microsoft.VisualStudio.Workspace.Indexing.IIndexWorkspaceService> , önbelleğe alma kullanmıyor, ancak daha fazla sorgulama özellikleri sunar.
+Kalıcı verilere erişmek için kullanılabilecek iki zaman uyumsuz tür vardır. Birincisi <xref:Microsoft.VisualStudio.Workspace.Indexing.IIndexWorkspaceData> . Tek bir dosyanın ve verilerin temel erişimini sağlar `FileReferenceResult` `FileDataResult` ve sonuçları önbelleğe alır. İkincisi, <xref:Microsoft.VisualStudio.Workspace.Indexing.IIndexWorkspaceService> önbelleğe alma özelliğini kullanmaz, ancak daha fazla sorgulama özelliğine izin verir.
 
 ```csharp
 using Microsoft.VisualStudio.Workspace;
@@ -50,23 +50,23 @@ private static IIndexWorkspaceService GetDirectIndexedData(IWorkspace workspace)
 }
 ```
 
-## <a name="participating-in-indexing"></a>Dizin oluşturma işleminde katılma
+## <a name="participating-in-indexing"></a>Dizine katılma
 
-Çalışma dizini oluşturma kabaca aşağıdaki sırayla aşağıdaki gibidir:
+Çalışma alanı dizin oluşturma kabaca aşağıdaki sırayı izler:
 
-1. Bulma ve Kalıcılık dosya sistemi varlık çalışma alanı (yalnızca ilk açılış tarama).
-1. Dosya en yüksek önceliğe sahip eşleşen sağlayıcısı taramak için sorulan `FileReferenceInfo`s.
-1. Dosya en yüksek önceliğe sahip eşleşen sağlayıcısı taramak için sorulan `SymbolDefinition`s.
-1. Dosya tüm sağlayıcılar için sorulan `FileDataValue`s.
+1. Dosya sistemi varlıklarının çalışma alanında bulunması ve kalıcı hale getirme (yalnızca ilk açılış taramasında).
+1. Dosya başına, en yüksek önceliğe sahip eşleşen sağlayıcının s taraması istenir `FileReferenceInfo` .
+1. Dosya başına, en yüksek önceliğe sahip eşleşen sağlayıcının s taraması istenir `SymbolDefinition` .
+1. Her dosya için tüm sağlayıcılara sorulur `FileDataValue` .
 
-Uzantıları, bir tarayıcı uygulayarak verebilirsiniz `IWorkspaceProviderFactory<IFileScanner>` ve türü ile dışarı aktarma <xref:Microsoft.VisualStudio.Workspace.Indexing.ExportFileScannerAttribute>. `SupportedTypes` Öznitelik bağımsız değişkeni, bir veya daha fazla değerlerinden olmalıdır <xref:Microsoft.VisualStudio.Workspace.Indexing.FileScannerTypeConstants>. Örnek tarayıcı için bkz: VS SDK [örnek](https://github.com/Microsoft/VSSDK-Extensibility-Samples/blob/master/Open_Folder_Extensibility/C%23/SymbolScannerSample/TxtFileSymbolScanner.cs).
+Uzantılar `IWorkspaceProviderFactory<IFileScanner>` , ile türü uygulayarak ve dışarı aktararak bir tarayıcı dışarı aktarabilir <xref:Microsoft.VisualStudio.Workspace.Indexing.ExportFileScannerAttribute> . `SupportedTypes`Öznitelik bağımsız değişkeni, öğesinden bir veya daha fazla değer olmalıdır <xref:Microsoft.VisualStudio.Workspace.Indexing.FileScannerTypeConstants> . Örnek bir tarayıcı için bkz. VS SDK [örneği](https://github.com/Microsoft/VSSDK-Extensibility-Samples/blob/master/Open_Folder_Extensibility/C%23/SymbolScannerSample/TxtFileSymbolScanner.cs).
 
 > [!WARNING]
-> Destekleyen bir dosya tarayıcı verme `FileScannerTypeConstants.FileScannerContentType` türü. Bu, Microsoft iç, yalnızca amacıyla kullanılır.
+> Türü destekleyen bir dosya tarayıcısını dışarı aktarmayın `FileScannerTypeConstants.FileScannerContentType` . Yalnızca Microsoft iç amaçları için kullanılır.
 
-Gelişmiş durumlarda, bir uzantı dinamik olarak rastgele bir dosya türleri kümesi destekleyebilir. MEF dışarı aktarma yerine `IWorkspaceProviderFactory<IFileScanner>`, uzantı verebilirsiniz `IWorkspaceProviderFactory<IFileScannerProvider>`. Dizin oluşturma işlemi başladığında, bu Fabrika türü örneği, alınan, ve sahip kendi <xref:Microsoft.VisualStudio.Workspace.Indexing.IFileScannerProvider.GetSymbolScannersAsync%2A> yöntemi çağrılır. `IFileScanner` örnekleri destekleyen herhangi bir değer `FileScannerTpeConstants` testleriyle kullanılır, yalnızca simgeler.
+Gelişmiş durumlarda, bir uzantı rastgele bir dosya türleri kümesini dinamik olarak destekleyebilir. MEF dışarı aktarma yerine `IWorkspaceProviderFactory<IFileScanner>` , bir uzantı dışarı aktarabilir `IWorkspaceProviderFactory<IFileScannerProvider>` . Dizin oluşturma başladığında, bu fabrika türü içeri aktarılır, örneklenmiştir ve <xref:Microsoft.VisualStudio.Workspace.Indexing.IFileScannerProvider.GetSymbolScannersAsync%2A> yönteminin çağrılması gerekir. `IFileScanner` Bunlardan herhangi bir değeri destekleyen örnekler `FileScannerTpeConstants` yalnızca semboller değil, kabul edilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-* [Çalışma alanları ve dil Hizmetleri](workspace-language-services.md) -bir klasör Aç çalışma alanınıza dil hizmetlerini tümleştirmeyi öğrenin.
-* [Çalışma alanı derleme](workspace-build.md) -Klasör Aç destekler MSBuild ve derleme görevleri dosyalarını gibi sistemleri oluşturun.
+* [Çalışma alanları ve dil Hizmetleri](workspace-language-services.md) -dil hizmetlerini bir açık klasör çalışma alanıyla tümleştirmeyi öğrenin.
+* [Çalışma alanı derlemesi](workspace-build.md) -aç klasörü MSBuild ve makefiles gibi derleme sistemlerini destekler.

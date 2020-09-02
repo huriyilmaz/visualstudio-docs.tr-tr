@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b45716db44dcc316ec60604aa0411e6498797ae0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595039"
 ---
 # <a name="options-page-environment-node-properties"></a>Seçenekler Sayfası, Ortam Düğümü Özellikleri
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu belgede, **Seçenekler** Iletişim kutusunun **ortam** kategorisi, `DTE.Properties("Environment", <Property Page>)`ilişkili sayfalar (veya özellikler koleksiyonlar) açıklanmaktadır. Her alt bölümünün başlığı, özellikler koleksiyonuna erişmek için kullanılan çağrıdır ve her alt bölüm içindeki tablo koleksiyondaki özellikleri listeler.
+Bu belgede, **Environment** `DTE.Properties("Environment", <Property Page>)` **Seçenekler** iletişim kutusunun ortam kategorisiyle ilişkili sayfalar (veya özellikler koleksiyonlar) açıklanmaktadır. Her alt bölümünün başlığı, özellikler koleksiyonuna erişmek için kullanılan çağrıdır ve her alt bölüm içindeki tablo koleksiyondaki özellikleri listeler.
 
 ## <a name="general"></a>Genel
  `DTE.Properties("Environment", "General")`
@@ -35,7 +35,7 @@ Bu belgede, **Seçenekler** Iletişim kutusunun **ortam** kategorisi, `DTE.Prope
 |Animasyonlar|Get/Set (Boole)|Tümleşik geliştirme ortamının (IDE) durum çubuğunda animasyon kullanıp kullanmadığını belirler.|
 |AnimationSpeed|Al/ayarla (kısa)||
 |Oto ayarlan, Texperience|Get/Set (Boole)|İstemci performansına bağlı olarak görsel deneyimi otomatik olarak ayarlar.|
-|RichClientExperienceOptions|Get/Set (Enum)|<xref:EnvDTE100.vsRichClientExperienceOptions>değerlerle zengin istemci görsel deneyimini sunar.|
+|RichClientExperienceOptions|Get/Set (Enum)|İçindeki değerlerle zengin istemci görsel deneyimini sunar <xref:EnvDTE100.vsRichClientExperienceOptions> .|
 |Yalnızca CloseButtonActiveTabOnly|Get/Set (Boole)|**Kapat** düğmesinin yalnızca etkin sekmede gösterilip gösterilmeyeceğini belirler.|
 |Yalnızca oto hidepınactivetab|Get/Set (Boole)|**Otomatik gizleme** düğmesinin yalnızca etkin sekmeyi etkileyip etkilemeyeceğini belirler.|
 
@@ -53,10 +53,10 @@ Bu belgede, **Seçenekler** Iletişim kutusunun **ortam** kategorisi, `DTE.Prope
 
 |Özellik Öğesi Adı|Değer|Açıklama|
 |------------------------|-----------|-----------------|
-|ReuseSavedActiveDocWindow|Get/Set (Boole)|Geçerli belge kaydedilmişse yeni bir dosyanın açılmasını geçerli belge penceresini yeniden kullanıp kullanmayacağını belirler. `false` her belge açıldığında her zaman yeni bir belge penceresi açar.|
+|ReuseSavedActiveDocWindow|Get/Set (Boole)|Geçerli belge kaydedilmişse yeni bir dosyanın açılmasını geçerli belge penceresini yeniden kullanıp kullanmayacağını belirler. `false` her zaman açık her belge için yeni bir belge penceresi açar demektir.|
 |DetectFileChangesOutsideIDE|Get/Set (Boole)|İşletim sistemi IDE 'ye dosyaların diskte değiştirildiğini bildirir, ortamın IDE 'de açılan dosyaları otomatik olarak yeniden yükleyemeyeceğini belirler.|
-|Oto Loadexternalchanges|Get/Set (Boole)|Açık belge değiştirilmediyse, belgeleri açmak için algılanan dış değişikliklerin değiştirilen dosyayı otomatik olarak yeniden yükleyip yükleyemeyeceğini belirler. Açık belge değiştirilirse ve bu özellik `true`, IDE, bu özellik `false`gibi uyarır.|
-|InitializeOpenFileFromCurrentDocument|Get/Set (Boole)|<xref:EnvDTE.DTEClass.OpenFile%2A> komutunun, son etkin belgeden veya bir dosyayı açtığınız son konumdan dizin ve dosya adı olup olmadığını belirler.|
+|Oto Loadexternalchanges|Get/Set (Boole)|Açık belge değiştirilmediyse, belgeleri açmak için algılanan dış değişikliklerin değiştirilen dosyayı otomatik olarak yeniden yükleyip yükleyemeyeceğini belirler. Açık belge değiştirilirse ve bu özellik ise `true` IDE, bu özellik gibi istemde bulunur `false` .|
+|InitializeOpenFileFromCurrentDocument|Get/Set (Boole)|<xref:EnvDTE.DTEClass.OpenFile%2A>Komutun, son etkin belgeden veya bir dosyayı açtığınız son konumdan dizin ve dosya adı olup olmadığını belirler.|
 |MiscFilesProjectSavesLastNItems|Al/ayarla (kısa)|Çeşitli dosyalar projesinin kaç dosya için kayıt olduğunu belirler. Sonuç olarak, IDE 'yi bir dahaki kullandığınızda diskte en son ne kadar çok dosya olarak açık olduğunu görebilirsiniz.|
 |Showmiscfilesprojesi|Get/Set (Boole)|Çeşitli dosyalar projesinin gösterilip gösterilmeyeceğini belirler.|
 |CheckFor, Entlinesonları|Get/Set (Boole)|Dosya yüklerinde tutarlı satır sonları olup olmadığını denetler.|
@@ -130,17 +130,17 @@ Bu belgede, **Seçenekler** Iletişim kutusunun **ortam** kategorisi, `DTE.Prope
 |DefaultBehaviorForStartupProjects|Get/Set (dize)||
 |MSBuildOutputVerbosity|Get/Set (dize)|Derleme çıkışı için ayrıntı düzeyini belirtir.|
 
-## <a name="startup"></a>Başlat
+## <a name="startup"></a>Başlangıç
  `DTE.Properties("Environment", "Startup")`
 
 |Özellik Öğesi Adı|Değer|Açıklama|
 |------------------------|-----------|-----------------|
-|OnStartUp|Get/Set (Enum)|Başlangıçta gerçekleştirilecek eylem, <xref:EnvDTE.vsStartUp>0 ile 5 arasında değerler içeren:<br /><br /> -0: giriş sayfasını aç<br />-1: son yüklenen çözümü yükle<br />-2: **Proje Aç** iletişim kutusunu göster<br />-3: **Yeni proje** göster iletişim kutusu<br />-4: boş ortamı göster<br />-5: başlangıç sayfasını göster|
+|OnStartUp|Get/Set (Enum)|Başlangıç olarak gerçekleştirilecek eylem, <xref:EnvDTE.vsStartUp> 0 ile 5 arasında değerler içeren:<br /><br /> -0: giriş sayfasını aç<br />-1: son yüklenen çözümü yükle<br />-2: **Proje Aç** iletişim kutusunu göster<br />-3: **Yeni proje** göster iletişim kutusu<br />-4: boş ortamı göster<br />-5: başlangıç sayfasını göster|
 |StartPageRSSUrl 'Si|Get/Set (dize)|Başlangıçta kullanılan RSS akışı URL 'SI.|
 |StartPageRefreshDownloadedContent|Get/Set (Boole)|StartPageRefreshInterval içinde belirtilen aralığın her geçtikten sonra başlangıç sayfasını yeniler.|
 |StartPageRefreshInterval|Al/ayarla (kısa)|Başlangıç sayfasını yenilemek için dakika cinsinden Aralık.|
 
-## <a name="tasklist"></a>Görev listesi
+## <a name="tasklist"></a>KILL
  `DTE.Properties("Environment", "TaskList")`
 
 |Özellik Öğesi Adı|Değer|Açıklama|
@@ -148,16 +148,16 @@ Bu belgede, **Seçenekler** Iletişim kutusunun **ortam** kategorisi, `DTE.Prope
 |ConfirmTaskDeletion|Get/Set (Boole)|**Görev listesi**görevler silinirken bir onay kutusunun görüntülenip görüntülenmeyeceğini belirtir.|
 |WarnOnAddingHiddenItem|Get/Set (Boole)|Gösterilmeyecek bir kullanıcı görevi eklerken uyarılmak isteyip istemediğinizi belirtir.|
 |DontShowFilePaths|Get/Set (Boole)|Görev Listesi tam dosya yollarının gösterilip gösterilmeyeceğini belirtir.|
-|CommentTokens|Güvenli|Açıklama belirteci değerlerinin bir SafeArray değerini döndürür. Her birinin alanları, `Name` (dize) ve `Priority` (<xref:EnvDTE.vsTaskPriority>, yüksek, orta veya düşük) vardır.|
+|CommentTokens|Güvenli|Açıklama belirteci değerlerinin bir SafeArray değerini döndürür. Her birinin alanları, `Name` (dize) ve `Priority` ( <xref:EnvDTE.vsTaskPriority> , yüksek, orta veya düşük).|
 
-## <a name="web-browser"></a>Web tarayıcısı
+## <a name="web-browser"></a>Web Tarayıcısı
  `DTE.Properties("Environment", "WebBrowser")`
 
 |Özellik Öğesi Adı|Değer|Açıklama|
 |------------------------|-----------|-----------------|
-|Giriş Sayfası|Get/Set (dize)|Giriş sayfası URL 'sini temsil eder.|
+|Değiştirir|Get/Set (dize)|Giriş sayfası URL 'sini temsil eder.|
 |SearchPage|Get/Set (dize)|Arama sayfası URL 'sini temsil eder.|
-|ViewSourceIn|Get/Set (Enum)|<xref:EnvDTE.vsBrowserViewSource> (kaynak, tasarım, dış).|
+|ViewSourceIn|Get/Set (Enum)|<xref:EnvDTE.vsBrowserViewSource> (Kaynak, tasarım, dış).|
 |ViewSourceExternalProgram|Get/Set (dize)|Dış kaynak görüntüleyicisinin yolu.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.

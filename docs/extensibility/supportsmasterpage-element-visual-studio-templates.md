@@ -1,5 +1,5 @@
 ---
-title: SupportsMasterPage Öğesi (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: SupportsMasterPage öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,18 +15,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 384672303d00b72431820b98fa02d09e440a1de5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699446"
 ---
 # <a name="supportsmasterpage-element-visual-studio-templates"></a>SupportsMasterPage Öğesi (Visual Studio Şablonları)
-**Yeni Öğe Ekle** iletişim kutusunda Ana Sayfa **Seç** onay kutusunun etkin olup olmadığını belirtir.
+**Yeni öğe Ekle** Iletişim kutusunda **Ana sayfa seç** onay kutusunun etkin olup olmadığını belirtir.
 
- \<VSTemplate \<> ŞablonVeri> \<DesteklerMasterPage>
+ \<VSTemplate> \<TemplateData>
+ \<SupportsMasterPage>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <SupportsMasterPage> true/false </SupportsMasterPage>
@@ -45,20 +46,20 @@ ms.locfileid: "80699446"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayıran verileri belirtir ve **Yeni Proje** veya **Yeni Öğe** iletişim kutusunda nasıl görüntülenebildiğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin Değeri
  Bir metin değeri gereklidir.
 
- Yeni **Öğe Ekle** `false`iletişim kutusunda Ana Sayfa **Seç** onay kutusunun etkin olup olmadığını belirten metin veya `true` metin olmalıdır.
+ Metin ya da ya da `true` `false` **Yeni öğe Ekle** Iletişim kutusunda **Ana sayfa seç** onay kutusunun etkin olup olmadığını gösteren bir değer olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
- `SupportsMasterPage`isteğe bağlı bir unsurdur. Varsayılan değer: `false`.
+ `SupportsMasterPage` isteğe bağlı bir öğedir. Varsayılan değer: `false`.
 
- Öğe `SupportsMasterPage` yalnızca Web öğesi şablonları için kullanılabilir.
+ `SupportsMasterPage`Öğesi yalnızca Web öğesi şablonları için kullanılabilir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, bir web projesinin ana sayfa desteği içeren meta verileri gösterilmiştir.
+ Aşağıdaki örnek, bir ana sayfa için destek içeren bir Web projesinin meta verilerini gösterir.
 
 ```
 <VSTemplate Version="3.0.0" Type="Project"

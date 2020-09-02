@@ -1,5 +1,5 @@
 ---
-title: marker_importance sabit listesi | Microsoft Docs
+title: marker_importance numaralandırması | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a4451a7b222b66f0fe5bea2b0e5f2b8499c9033c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198389"
 ---
-# <a name="markerimportance-enumeration"></a>marker_importance Numaralandırması
+# <a name="marker_importance-enumeration"></a>marker_importance Numaralandırması
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Eşzamanlılık görselleştiricisi işaretleyicisi önem düzeyini temsil eder.  
+Bir eşzamanlılık görselleştiricisi işaretçisinin önem derecesini temsil eder.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 enum marker_importance;  
@@ -37,15 +37,15 @@ enum marker_importance;
   
 |Ad|Açıklama|  
 |----------|-----------------|  
-|`critical_importance`|İşaretin kritik öneme sahip olduğunu belirtir.|  
-|`high_importance`|İşaretin yüksek önem sahip olduğunu belirtir.|  
-|`low_importance`|İşaretin düşük öneme sahip olduğunu belirtir.|  
-|`normal_importance`|İşaretin normal önem sahip olduğunu belirtir.|  
+|`critical_importance`|İşaretin önemli öneme sahip olduğunu belirtir.|  
+|`high_importance`|İşaretin yüksek önem derecesine sahip olduğunu belirtir.|  
+|`low_importance`|İşaretin düşük önem derecesine sahip olduğunu belirtir.|  
+|`normal_importance`|İşaretin normal öneme sahip olduğunu belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** cvmarkersobj.h  
+ **Üst bilgi:** cvmarkersobj. h  
   
- **Namespace:** CONCURRENCY::Diagnostic  
+ **Ad alanı:** Eşzamanlılık::d ıagstik  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Tanılama Ad Alanı](../profiling/diagnostic-namespace.md)
+ [Tanılama ad alanı](../profiling/diagnostic-namespace.md)

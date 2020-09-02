@@ -18,25 +18,25 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 13202f8eb266c82cdd57c227ed4c480a0c871cf7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68141999"
 ---
 # <a name="debugging-wcf-services"></a>WCF Hizmetlerinde Hata Ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu Bölümde  
- [WCE Hata Ayıklama Sınırlamaları](../debugger/limitations-on-wcf-debugging.md)  
- WCE hata üzerindeki kısıtlamaları açıklar.  
+ [WCE Hata Ayıklamasında Sınırlamalar](../debugger/limitations-on-wcf-debugging.md)  
+ WCF hata ayıklama üzerindeki kısıtlamaları açıklar.  
   
- [Nasıl yapılır: WCF Hizmetleri içine adımlama](../debugger/how-to-step-into-wcf-services.md)  
- Bir WCF Hizmeti Adımlama için hata ayıklayıcı desteği açıklanmaktadır.  
+ [Nasıl yapılır: WCF hizmetlerine adımla](../debugger/how-to-step-into-wcf-services.md)  
+ Bir WCF hizmetine adımlamayı desteklemek için hata ayıklayıcı desteğini açıklar.  
   
- [Nasıl yapılır: Kendini Barındıran WCF Hizmetinde Hata Ayıklama](../debugger/how-to-debug-a-self-hosted-wcf-service.md)  
- Dış IIS çalıştıran bir WCF hizmetinde hata ayıklama işlemini açıklamaktadır veya [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] geliştirme sunucusu.  
+ [Nasıl Yapılır: Kendini Barındıran WCF Hizmetinde Hata Ayıklama](../debugger/how-to-debug-a-self-hosted-wcf-service.md)  
+ IIS veya geliştirme sunucusu dışında çalışan bir WCF hizmetinde hata ayıklamanın nasıl yapılacağını açıklar [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)   
- [Visual Studio’da hata ayıklama](../debugger/debugging-in-visual-studio.md)
+ [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)   
+ [Visual Studio'da Hata Ayıklama](../debugger/debugging-in-visual-studio.md)

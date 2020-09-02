@@ -1,5 +1,5 @@
 ---
-title: span::span Oluşturucusu | Microsoft Docs
+title: 'span:: span Oluşturucusu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,19 +14,19 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: df6df731de90a9aad9e6cc637b3f218e481b66b7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198292"
 ---
 # <a name="spanspan-constructor"></a>span::span Oluşturucusu
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yeni bir örneğini başlatır `span` sınıfı.
+`span` sınıfının yeni bir örneğini başlatır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 span(
@@ -57,20 +57,20 @@ span(
 
 #### <a name="parameters"></a>Parametreler
 
-`_Series` Geçerli işaret serisi bağlamı.
+`_Series` Geçerli işaretleyici serisi bağlamı.
 
-`_Format` Bağımsız değişken listesindeki nesnelere karşılık gelen sıfır veya daha fazla biçim öğeleri ile karıştırılmış, metin içeren bir bileşik biçimlendirme dizesi.
+`_Format` Bağımsız değişken listesindeki nesnelere karşılık gelen sıfır veya daha fazla biçim öğesiyle metin içeren bir bileşik biçim dizesi.
 
 `_Importance` Önem düzeyi.
 
-`_Category` Kategori.
+`_Category` Alan.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Başlık:** cvmarkersobj.h
+**Üst bilgi:** cvmarkersobj. h
 
-**Namespace:** CONCURRENCY::Diagnostic
+**Ad alanı:** Eşzamanlılık::d ıagstik
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-[span Sınıfı](../profiling/span-class.md)
+[Span sınıfı](../profiling/span-class.md)

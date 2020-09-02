@@ -1,5 +1,5 @@
 ---
-title: SupportsLanguageDropDown Element (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: SupportsLanguageDropDown öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,18 +15,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1230b493fe746a272cf4ca4cffe9d197afd8ba1b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699464"
 ---
 # <a name="supportslanguagedropdown-element-visual-studio-templates"></a>SupportsLanguageDropDown Öğesi (Visual Studio Şablonları)
-Web öğesi şablonu birden çok dil için aynı olup olmadığını ve **Yeni Öğe Ekle** iletişim kutusunda **Dil** seçeneğinin etkin olup olmadığını belirtir.
+Web öğesi şablonunun birden çok dil için aynı olup olmadığını ve **Yeni öğe Ekle** Iletişim kutusunda **dil** seçeneğinin etkinleştirilip etkinleştirilmediğini belirtir.
 
- \<VSTemplate \<> ŞablonVeri> \<DesteklerLanguageDropDown>
+ \<VSTemplate> \<TemplateData>
+ \<SupportsLanguageDropDown>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <SupportsLanguageDropDown> true/false </SupportsLanguageDropDown>
@@ -45,22 +46,22 @@ Web öğesi şablonu birden çok dil için aynı olup olmadığını ve **Yeni �
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırın ve Yeni **Proje'de** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleyeceğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin Değeri
  Bir metin değeri gereklidir.
 
- Metin, `true` Yeni Öğe `false` **Ekle** iletişim **kutusundan Dil** seçeneğinin kullanılabilir olup olmadığını belirten metin olmalıdır.
+ Metin ya da `true` `false` , **dil** seçeneğinin **Yeni öğe Ekle** iletişim kutusundan kullanılıp kullanılamayacağını belirten olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
- `SupportsLanguageDropDown`isteğe bağlı bir unsurdur. Varsayılan değer: `false`.
+ `SupportsLanguageDropDown` isteğe bağlı bir öğedir. Varsayılan değer: `false`.
 
- Öğe `SupportsLanguageDropDown` yalnızca Web öğesi şablonları için kullanılabilir.
+ `SupportsLanguageDropDown`Öğesi yalnızca Web öğesi şablonları için kullanılabilir.
 
- Bu öğenin değeri `true`,, öğe şablonu tüm programlama dilleri için aynıdır ve **Dil** seçeneği Yeni Öğe **Ekle** iletişim kutusunda etkinleştirilir. Bu seçenek, şablondan oluşturmak istediğiniz yeni öğenin programlama dilini seçmenize olanak tanır.
+ Bu öğe için değer olarak ayarlanırsa `true` , öğe şablonu tüm programlama dilleri için aynı olur ve **Yeni öğe Ekle** iletişim kutusunda **dil** seçeneği etkinleştirilir. Bu seçenek, şablondan oluşturmak istediğiniz yeni öğenin programlama dilini seçmenizi sağlar.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte **Dil** açılır seçeneğini görüntülemek için belirtilir.
+ Aşağıdaki örnek, **dil** açılan seçeneğini göstermek için belirtir.
 
 ```
 <VSTemplate Version="3.0.0" Type="Project"

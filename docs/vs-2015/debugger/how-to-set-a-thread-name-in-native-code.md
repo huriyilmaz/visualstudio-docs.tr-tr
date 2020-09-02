@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yerel kodda iş parçacığı adı ayarlama | Microsoft Docs'
+title: 'Nasıl yapılır: yerel kodda Iş parçacığı adı ayarlama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -21,16 +21,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 37554c8ba72257ee78b219774425c7e8acb305a2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156676"
 ---
-# <a name="how-to-set-a-thread-name-in-native-code"></a>Nasıl yapılır: Yerel Kodda İş Parçacığı Adı Ayarlama
+# <a name="how-to-set-a-thread-name-in-native-code"></a>Nasıl Yapılır: Yerel Kodda İş Parçacığı Adı Ayarlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Programınızdaki iş parçacığı adı ayarlamak için kullanın `SetThreadName` , aşağıdaki kod örneğinde gösterildiği gibi işlev. İş parçacığı adı iş parçacığına kopyalanır unutmayın. böylece belleği `threadName` parametresi serbest bırakılabilir.  
+Programınızda bir iş parçacığı adı ayarlamak için, `SetThreadName` Aşağıdaki kod örneğinde gösterildiği gibi işlevini kullanın. Parametre için belleğin yayımlanabilmesi için iş parçacığı adının iş parçacığına kopyalanıp kopyalanmayacağını unutmayın `threadName` .  
   
 ## <a name="example"></a>Örnek  
   
@@ -68,6 +68,6 @@ void SetThreadName(DWORD dwThreadID, const char* threadName) {
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çok iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
+ [Çok Iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [Hata ayıklayıcıda verileri görüntüleme](../debugger/viewing-data-in-the-debugger.md)   
- [Nasıl yapılır: Yerel Kodda İş Parçacığı Adı Ayarlama](../debugger/how-to-set-a-thread-name-in-managed-code.md)
+ [Nasıl Yapılır: Yönetilen Kodda İş Parçacığı Adı Ayarlama](../debugger/how-to-set-a-thread-name-in-managed-code.md)

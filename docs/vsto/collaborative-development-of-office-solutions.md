@@ -16,33 +16,33 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 76c26a110d88d3dee8bf7540647ea0bfde4e7c4f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62949493"
 ---
 # <a name="collaborative-development-of-office-solutions"></a>Office çözümlerinin işbirlikçi geliştirmesi
-  Birden çok geliştirici Office projesinde diğer Visual Studio projelerinde bunlar birlikte aynı şekilde çalışabilir. Farklı konumlarda Office yüklü olsa bile visual Studio her bilgisayara Microsoft Office yükleme doğru şekilde bulur. Ancak, dikkat edilmesi gereken bazı önemli noktalar vardır.
+  Birden çok geliştirici, diğer Visual Studio projelerinde birlikte çalıştıkları şekilde bir Office projesi üzerinde çalışabilir. Visual Studio, Office farklı konumlara yüklense bile, her bilgisayarda Microsoft Office yüklemesini doğru şekilde konumlandırır. Ancak farkında olmanız gereken bazı önemli noktalar vardır.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
-## <a name="debug-properties-are-not-shared"></a>Hata ayıklama özellikleri paylaşılmaz
- Hata ayıklama özellikleri kaynak denetimi altında birden çok kullanıcı arasında paylaşılan değil. Visual Basic ve Visual C# projeleri, bir kullanıcıya özel dosyada hata ayıklama özelliklerini depolar (*ProjectName*. vbproj.user veya *ProjectName*. csproj.user), ve bu dosya kaynak denetimi altında değil . Her kullanıcı birden fazla kişi hata ayıklama, hata ayıklama özelliklerini el ile girmeniz gerekir.
+## <a name="debug-properties-are-not-shared"></a>Hata ayıklama özellikleri paylaşılmıyor
+ Hata ayıklama özellikleri, kaynak denetimi altındaki birden çok kullanıcı arasında paylaşılmaz. Visual Basic ve Visual C# projeleri, hata ayıklama özelliklerini kullanıcıya özgü bir dosyaya (*ProjectName*. vbproj. User veya *ProjectName*. csproj. User) depolar ve bu dosya kaynak denetimi altında değildir. Birden fazla kişinin hata ayıklaması varsa, her bir kişinin hata ayıklama özelliklerini el ile girmesi gerekir.
 
- Proje kaynak denetiminde yerine bir ağ paylaşımı üzerinde barındırılıyorsa, çözümü açın ve derleme test etmek işbirliği yapan geliştiricilerin için bazı ek adımlar atılmalıdır.
+ Proje kaynak denetimi yerine bir ağ paylaşımında kullanılıyorsa, işbirliği geliştiricilerin çözümü açmasını ve derlemeyi test etmesini sağlamak için bazı ek adımlar gerçekleştirilmelidir.
 
-## <a name="source-control-requires-checking-out-all-files"></a>Kaynak Denetimi tüm dosyalar kullanıma alınıyor gerektirir.
- Projeleriniz için kaynak denetimini kullanırsanız, tüm dosyaların altında bir kod dosyasında denetlemelisiniz **Çözüm Gezgini** (gibi *ThisDocument*, *ThisWorkbook*, veya *ThisAddIn* kod dosyaları) her kod dosyasını değiştirdiğinizde, varsayılan olarak gizlidir dosyalar bile. Yalnızca üst düzey kod dosyasını kullanıma işaretlerseniz, değişiklikler kaybolabilir.
+## <a name="source-control-requires-checking-out-all-files"></a>Kaynak denetimi tüm dosyaları kullanıma alma gerektiriyor
+ Projeleriniz için kaynak denetimi kullanıyorsanız, kod dosyasını her değiştirmenizde (örneğin, *ThisDocument*, *ThisWorkbook*veya *ThisAddIn* kodu dosyaları gibi) bir kod **Çözüm Gezgini** dosyası altındaki tüm dosyaları (örneğin, varsayılan olarak gizli olan dosyalar) denetlemeniz gerekir. Yalnızca en üst düzey kod dosyasına göz atın, değişiklikleriniz kaybolmuş olabilir.
 
- Değişikliklerinizi yaptıktan sonra tüm dosyaları geri denetleyin. Projelerinde, kod dosyaları hakkında daha fazla bilgi için bkz. [Visual Studio ortamında Office projeleri](../vsto/office-projects-in-the-visual-studio-environment.md).
+ Değişikliklerinizi yaptıktan sonra, tüm dosyaları geri iade edin. Projelerde gizli kod dosyaları hakkında daha fazla bilgi için bkz. [Visual Studio ortamında Office projeleri](../vsto/office-projects-in-the-visual-studio-environment.md).
 
 ## <a name="security-for-informal-collaboration-on-a-network"></a>Bir ağ üzerinde resmi olmayan işbirliği için güvenlik
- Bir ağ konumuna olan tüm belge düzeyi çözümleri (gibi \\ \\ *Servername*\\*Sharename*), tam olarak belirtilen konumda eklenmelidir çalıştığınız Microsoft Office uygulamasının güvenilen klasör listesi. Ana klasörü altında alt dizinleri içerir veya özellikle hata ayıklama ekleyin ve güvenilir bir klasör listesine klasörleri oluşturmak için bu seçeneği seçin. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [belgelere güven verme](../vsto/granting-trust-to-documents.md).
+ Bir ağ konumunda (sunucuadı \ PaylaşımAdı) olan tüm belge düzeyi çözümler için \\ \\ *Servername* \\ *Sharename*, üzerinde çalıştığınız Microsoft Office uygulamasındaki güvenilen klasör listesine tam nitelikli konum eklenmelidir. Ana klasörün altına alt dizinleri dahil etme seçeneğini belirleyin veya özel olarak hata ayıklama ve yapı klasörlerini güvenilen klasör listesine ekleyin. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [belgelere güven verme](../vsto/granting-trust-to-documents.md).
 
- Derleme sırasında otomatik olarak oluşturulan geçici sertifikalar parolaları tarafından sağlanmaz. Sertifikalar, geliştiricilere yönelik oturum açma adı ve diğer kişisel bilgilerini içerir. Geçici sertifikalar tarafından imzalanan özelleştirmeleri dağıtırsanız, başkalarının bu bilgilere erişmek mümkün olabilir.
+ Derleme zamanında otomatik olarak oluşturulan geçici sertifikalar parolalarla güvenli değildir. Sertifikalar, geliştiricinin oturum açma adını ve diğer kişisel bilgilerini içerir. Geçici sertifikalar tarafından imzalanan özelleştirmeler dağıtırsanız, diğerleri bu bilgilere erişebiliyor olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office çözümleri güvenliğini sağlama](../vsto/securing-office-solutions.md)
-- [Office çözümleri oluşturma ve tasarlama](../vsto/designing-and-creating-office-solutions.md)
-- [Office çözümleri oluşturun](../vsto/building-office-solutions.md)
+- [Güvenli Office çözümleri](../vsto/securing-office-solutions.md)
+- [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)
+- [Office çözümleri oluşturma](../vsto/building-office-solutions.md)

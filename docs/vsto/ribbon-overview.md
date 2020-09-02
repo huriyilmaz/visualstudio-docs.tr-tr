@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 668517705caa7ba6baef0b85305bf4470bc3b26b
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72985607"
 ---
 # <a name="ribbon-overview"></a>Şerite genel bakış
@@ -84,9 +84,9 @@ ms.locfileid: "72985607"
  Şeriti XML 'e aktarma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Şerit Tasarımcısından ŞERIT XML 'ine nasıl bir şerit dışarı aktarma](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md).
 
 ### <a name="update-the-code"></a>Kodu güncelleştirme
- **Çözüm Gezgini**yeni bir Şerit kod dosyası eklenir. Bu dosya Ribbon XML sınıfını içerir. Bir düğmeye tıklanması gibi kullanıcı eylemlerini işlemek için bu sınıfın `Ribbon Callbacks` bölgesinde geri çağırma yöntemleri oluşturmanız gerekir. Olay işleyicilerindeki kodunuzu bu geri çağırma yöntemlerine taşıyın ve şerit genişletilebilirliği (RibbonX) programlama modeliyle çalışmak için kodu değiştirin. Daha fazla bilgi için bkz. [ŞERIT XML](../vsto/ribbon-xml.md).
+ **Çözüm Gezgini**yeni bir Şerit kod dosyası eklenir. Bu dosya Ribbon XML sınıfını içerir. `Ribbon Callbacks`Bir düğmeye tıklanması gibi kullanıcı eylemlerini işlemek için bu sınıfın bölgesinde geri çağırma yöntemleri oluşturmanız gerekir. Olay işleyicilerindeki kodunuzu bu geri çağırma yöntemlerine taşıyın ve şerit genişletilebilirliği (RibbonX) programlama modeliyle çalışmak için kodu değiştirin. Daha fazla bilgi için bkz. [ŞERIT XML](../vsto/ribbon-xml.md).
 
- Ayrıca, `CreateRibbonExtensibilityObject` yöntemini geçersiz kılan ve Şerit XML sınıfını Office uygulamasına döndüren `ThisAddIn`, `ThisWorkbook`veya `ThisDocument` sınıfa kod eklemeniz gerekir.
+ Ayrıca `ThisAddIn` , `ThisWorkbook` yöntemi geçersiz kılan, veya sınıfına kod eklemeniz gerekir `ThisDocument` `CreateRibbonExtensibilityObject` ve Office uygulamasına Şerit XML sınıfını geri döndürür.
 
  Daha fazla bilgi için bkz. [ŞERIT XML](../vsto/ribbon-xml.md).
 
@@ -103,12 +103,12 @@ ms.locfileid: "72985607"
 ### <a name="select-which-ribbons-to-display-at-run-time"></a>Çalışma zamanında görüntülenecek şeritleri seçin
  Bir proje birden fazla şerit içerebildiğinden, çalışma zamanında görüntülenecek Şeriti seçebilirsiniz.
 
- Çalışma zamanında görüntülenecek bir Şerit seçmek için, projenizin `ThisAddin`, `ThisWorkbook`veya `ThisDocument` sınıfında `CreateRibbonExtensibilityObject` yöntemi geçersiz kılın ve göstermek istediğiniz şeridi döndürün. Aşağıdaki örnek, `myCondition` adlı bir alanın değerini denetler ve uygun şeridi döndürür.
+ Çalışma zamanında görüntülenecek bir Şerit seçmek için, `CreateRibbonExtensibilityObject` projenizin, veya sınıfındaki yöntemini geçersiz kılın `ThisAddin` `ThisWorkbook` `ThisDocument` ve göstermek istediğiniz şeridi döndürün. Aşağıdaki örnek, adlı bir alanın değerini denetler `myCondition` ve uygun şeridi döndürür.
 
 > [!NOTE]
 > Bu örnekte kullanılan sözdizimi, **Şerit (görsel Tasarımcı)** öğesi kullanılarak oluşturulmuş bir şerit döndürüyor. **Şerit (XML)** öğesi kullanılarak oluşturulan bir şeridi döndürme için sözdizimi biraz farklıdır. **Şerit (XML)** öğesi döndürme hakkında daha fazla bilgi için bkz. [Ribbon XML](../vsto/ribbon-xml.md).
 
- Aşağıdaki kodu ekleyin:
+ Şu kodu ekleyin:
 
  [!code-vb[Trin_Ribbon_Choose_Ribbon#1](../vsto/codesnippet/VisualBasic/trin_Ribbon_choose_Ribbon_4/ThisWorkbook.vb#1)]
  [!code-csharp[Trin_Ribbon_Choose_Ribbon#1](../vsto/codesnippet/CSharp/trin_Ribbon_choose_Ribbon_4/ThisWorkbook.cs#1)]

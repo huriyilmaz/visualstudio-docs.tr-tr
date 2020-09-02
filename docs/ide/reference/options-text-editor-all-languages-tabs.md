@@ -42,54 +42,54 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0fc169960cf757e4e334d5f77b06ff70b0d6da7c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75594753"
 ---
 # <a name="options-text-editor-all-languages-tabs"></a>Seçenekler, Metin Düzenleyici, Tüm Diller, Sekmeler
 
-Bu iletişim kutusu, Kod Düzenleyicisi'nin varsayılan davranışını değiştirmenize olanak tanır. Bu ayarlar, HTML Tasarımcısı'nın Kaynak görünümü gibi Kod Düzenleyicisi'ni temel alan diğer düzenleyiciler için de geçerlidir. Bu seçenekleri görüntülemek için **Araçlar** menüsünden **Seçenekler'i** seçin. Metin **Düzenleyicisi** klasöründe **Tüm Diller** alt klasörünü genişletin ve ardından **Sekmeleri**seçin.
+Bu iletişim kutusu, kod düzenleyicisinin varsayılan davranışını değiştirmenize izin verir. Bu ayarlar ayrıca, HTML tasarımcısının kaynak görünümü gibi kod düzenleyicisine dayalı diğer düzenleyiciler için de geçerlidir. Bu seçenekleri göstermek için, **Araçlar** menüsünden **Seçenekler** ' i seçin. **Metin Düzenleyicisi** klasörü Içinde **tüm diller** alt klasörünü genişletin ve ardından **Sekmeler**' i seçin.
 
 > [!CAUTION]
-> Bu sayfa, tüm geliştirme dilleri için varsayılan seçenekleri ayarlar. Bu iletişim kutusundaki bir seçeneği sıfırlamanın, tüm dillerdeki Sekmeseçeneklerini burada seçilecek seçeneklere sıfırlayacak olduğunu unutmayın. Metin Düzenleyicisi seçeneklerini yalnızca bir dil için değiştirmek için, söz sözlere dilin alt klasörünü genişletin ve seçenek sayfalarını seçin.
+> Bu sayfa tüm geliştirme dillerinin varsayılan seçeneklerini ayarlar. Bu iletişim kutusunda bir seçeneğin sıfırlanması, burada seçili olan seçimler için tüm dillerdeki sekmeler seçeneklerini sıfırlayacaktır. Yalnızca bir dile ait metin düzenleyici seçeneklerini değiştirmek için, bu dilin alt klasörünü genişletin ve seçenek sayfalarını seçin.
 
-Belirli programlama dilleri için Sekmeler seçenekleri sayfalarında farklı ayarlar seçilirse, farklı **Girinti** seçenekleri için "Tek tek metin biçimlerinin girinti ayarları birbiriyle çakışıyor" iletisi görüntülenir; ve "Tek tek metin biçimlerinin sekme ayarları birbiriyle çakışıyor" iletisi, farklı **Sekme** seçenekleri için görüntülenir. Örneğin, Visual Basic için **Akıllı girinti** seçeneği seçilirse, ancak Visual C++için **Blok girintisi** seçilirse bu anımsatıcı görüntülenir.
+Belirli programlama dilleri için sekmeler seçenekler sayfalarında farklı ayarlar seçilirse, "tekil metin biçimleri için girinti ayarları birbirleriyle çakışıyor" iletisi, farklı **girintileme** seçenekleri için görüntülenir; ve "tekil metin biçimleri için sekme ayarları birbirleriyle çakışıyor" iletisi, farklı **sekme** seçenekleri için görüntülenir. Örneğin, **akıllı girintileme** seçeneği Visual Basic için seçilmişse bu anımsatıcı görüntülenir, ancak Visual C++ için **blok girintileme** seçilidir.
 
 ## <a name="indenting"></a>Girintileme
 
-None
+Hiçbiri
 
-Seçildiğinde, yeni satırlar girintisi değildir. Ekleme noktası yeni bir satırın ilk sütununa yerleştirilir.
+Seçildiğinde, yeni satırlar girintili değildir. Ekleme noktası yeni bir satırın ilk sütununa yerleştirilir.
 
 Blok
 
-Seçildiğinde, yeni satırlar otomatik olarak girintilir. Ekleme noktası, önceki satırla aynı başlangıç noktasına yerleştirilir.
+Seçildiğinde, yeni satırlar otomatik olarak girintilenir. Ekleme noktası, önceki satır ile aynı başlangıç noktasına yerleştirilir.
 
-Akıllı
+Lý
 
-Seçildiğinde, geliştirme diliniz için diğer kod biçimlendirme ayarlarına ve IntelliSense kurallarına göre kod bağlamına uyacak şekilde yeni satırlar konumlandırılır. Bu seçenek tüm geliştirme dilleri için kullanılamaz.
+Seçildiğinde, yeni satırlar kod bağlamına sığacak şekilde konumlandırılır, diğer kod biçimlendirme ayarları ve geliştirme diliniz için IntelliSense kuralları kullanılır. Bu seçenek tüm geliştirme dilleri için kullanılamaz.
 
-Örneğin, bir açılış ayracı ( { ) ve kapanış ayracı ( } ) arasında kaplanmış çizgiler, hizalanmış ayraçların konumundan otomatik olarak eksek durağı olarak girintilenebilir.
+Örneğin, bir açma küme ayracı ({) ve bir kapanış ayracı (}) arasına alınmış satırlar otomatik olarak hizalı küme ayraçlarının konumundan fazladan bir sekme durağı girintili olabilir.
 
 ## <a name="tabs"></a>Sekmeler
 
 Sekme boyutu
 
-Sekme durakları arasındaki boşluklardaki mesafeyi ayarlar. Varsayılan dört boşluk.
+Sekme duraklarının boşluk cinsinden uzaklığını ayarlar. Varsayılan değer dört boşluklardan oluşamaz.
 
-Girintisi boyutu
+Boyut Girintile
 
-Boyutu otomatik girintinin boşluklarında ayarlar. Varsayılan dört boşluk. Sekme karakterleri, boşluk karakterleri veya her ikisi belirtilen boyutu doldurmak için eklenir.
+Boyutu otomatik girintide boşluk olarak ayarlar. Varsayılan değer dört boşluklardan oluşamaz. Belirtilen boyutu dolduracak şekilde sekme karakterleri, boşluk karakterleri veya her ikisi de eklenir.
 
-Boşluk ekleme
+Boşluk Ekle
 
-Seçili olduğunda, girintisi işlemleri TAB karakterleri değil, yalnızca boşluk karakterleri ekleyin. **Girinti boyutu** 5 olarak ayarlanmışsa, örneğin, TAB tuşuna veya **Biçimlendirme** araç çubuğundaki **Girinti artır** düğmesine her bastığınızda beş boşluk karakteri eklenir.
+Seçildiğinde, girinti işlemleri sekme karakterleri değil yalnızca boşluk karakterleri ekler. Örneğin, **girinti boyutu** 5 olarak AYARLANDıYSA, sekme tuşuna veya **biçimlendirme** araç çubuğundaki **Girintiyi Artır** düğmesine her bastığınızda beş boşluk karakteri eklenir.
 
 Sekmeleri izleyin
 
-Seçildiğinde, girintin işlemleri mümkün olduğunca çok SAYıDA TAB karakteri ekleyin. Her SEKME **karakteri, Sekme boyutunda**belirtilen boşluk sayısını doldurur. **Girintisi boyutu** **Sekme boyutunun**çift katı değilse, boşluğu doldurmak için boşluk karakterleri eklenir.
+Seçildiğinde, Girintile işlemleri mümkün olduğunca çok sekme karakteri ekler. Her sekme karakteri, **sekme boyutunda**belirtilen boşluk sayısını doldurur. **Girinti boyutu** **sekme boyutunun**Çift katı değilse, farkı dolduracak şekilde boşluk karakterleri eklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

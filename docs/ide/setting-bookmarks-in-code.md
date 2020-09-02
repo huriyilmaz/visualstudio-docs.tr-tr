@@ -1,5 +1,5 @@
 ---
-title: Kod yer imlerini ayarlama
+title: Kod yer işaretlerini ayarla
 ms.date: 02/23/2018
 ms.topic: conceptual
 f1_keywords:
@@ -11,34 +11,34 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2c62ded0b94db9d39a197dde55fbc77434c5325d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595442"
 ---
 # <a name="set-bookmarks-in-code"></a>Kodda yer işaretleri ayarlama
 
-Belirli bir konuma hızla dönebilmek veya konumlar arasında ileri geri atlamak için kodunuzdaki satırları işaretlemek için yer imlerini kullanabilirsiniz. Yer imi komutları ve simgeleri iki yerde kullanılabilir: **Yer Imi Penceresi** (**Bookmark Penceresi****görüntüle** > ) ve metin düzenleyiciaraç çubuğu.
+Belirli bir konuma hızlı bir şekilde dönebilmeniz veya konumlar arasında ileri ve geri geçebilmeniz için kodunuzda satırları işaretlemek üzere yer işaretlerini kullanabilirsiniz. Yer işareti komutları ve simgeler iki yerde mevcuttur: **yer işareti penceresi** (**View**  >  **yer işareti penceresini**görüntüle) ve metin düzenleyici araç çubuğu.
 
-![Yer imi araç çubuğu](media/bookmark-toolbar.png)
+![Yer işareti araç çubuğu](media/bookmark-toolbar.png)
 
-![Yer Imi Penceresi](media/bookmark-window.png)
+![Yer işareti penceresi](media/bookmark-window.png)
 
-## <a name="manage-bookmarks"></a>Yer imlerini yönetme
+## <a name="manage-bookmarks"></a>Yer imlerini yönet
 
-Yer imi eklemek için imleci yer imi istediğiniz satıra yerleştirin. Yer **imi toggle** düğmesini seçin veya **Ctrl**+K , **Ctrl**+**K****K**tuşuna basın. Bu yer imi ekler. Yer **imi düğmesini toggle'ı** seçerseniz (veya **Ctrl**+**K**, **Ctrl**+**K)** tekrar basarsanız, yer imi kaldırılır.
+Bir yer işareti eklemek için imleci, yer işaretine eklemek istediğiniz satıra yerleştirin. **Bir yer işaretine geçiş yap** düğmesini seçin veya **CTRL** + **k**, **CTRL** + **k**tuşlarına basın. Bu, yer işaretini ekler. **Bir yer işaretine geçiş yap** düğmesini (veya **CTRL** + **k**, **CTRL** + **k**tuşlarına basın) seçerseniz, yer işareti kaldırılır.
 
-Belirli bir yer işaretinin ne için olduğunu bir bakışta bilmek için, sağ tıklatma veya bağlam menüsünden **Yer İşareti Penceresinde** yeniden adlandırabilirsiniz. Yer imi **penceresindesil** düğmesini seçerek yer imlerini silebilirsiniz.
+Belirli bir yer işaretinin ne için olduğunu bir bakışta görmek için sağ tıklama veya bağlam menüsünden **yer Işareti penceresinde** yeniden adlandırabilirsiniz. Yer işaretlerini, yer işareti penceresindeki **Sil** düğmesini seçerek silebilirsiniz.
 
 > [!IMPORTANT]
-> Yer imi koda değil, satır numarasına ayarlanır. Kodu değiştirirseniz, yer imi satır numarasında tutulur ve kodla birlikte hareket etmez.
+> Yer işareti, koda değil, satır numarasına ayarlanır. Kodu değiştirirseniz, yer işareti satır numarasında tutulur ve kodla birlikte hareket etmez.
 
-Yer imi penceresinde Sonraki **yer imi** ve **Önceki yer imi** düğmelerini kullanarak yer imleri arasında gezinebilirsiniz.
+Yer işaretleri penceresinde bir **sonraki yer işaretini** ve **önceki yer** işareti düğmelerini kullanarak yer işaretleri arasında gezinebilirsiniz.
 
-Yer imleri penceresinde **Yeni Klasör'ü** seçip seçili yer işaretlerini yeni klasöre sürükleyerek yer imlerini sanal klasörlere ayarlayabilirsiniz.
+Yer işaretlerini, yer işareti penceresinde **Yeni klasör** ' i seçerek ve ardından Seçili yer imlerini yeni klasöre sürükleyerek sanal klasörlerde düzenleyebilirsiniz.
 
-Yer imleri penceresindeki **Tüm Yer İşaretlerini Devre Dışı** Bırak düğmesini seçerek yer imlerini (kaldırmadan) kapatabilirsiniz. Aynı düğmeyi (şimdi **Tüm Yer İşaretlerini Etkinleştir'** olarak adlandırılır) seçerek bunları yeniden etkinleştirebilirsiniz.
+Yer işaretlerini (kaldırmadan), yer işareti penceresindeki **tüm yer Imlerini devre dışı bırak** düğmesini seçerek kapatabilirsiniz. Aynı düğmeyi (artık **tüm yer Imlerini etkinleştir**olarak adlandırılır) seçerek yeniden etkinleştirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

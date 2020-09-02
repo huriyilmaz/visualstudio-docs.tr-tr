@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 30fd29357ab8b42ea6a8baa6412f9ccf7eafed28
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350517"
 ---
 # <a name="get-started-debugging-multithreaded-applications-c-visual-basic-c"></a>Çoklu iş parçacıklı uygulamalarda hata ayıklamaya başlama (C#, Visual Basic, C++)
@@ -209,7 +209,7 @@ Bu iki konu, diğer çok iş parçacıklı hata ayıklama araçlarını kullanma
     End Class
     ```
 
-1. **Dosya** menüsünde **Tümünü Kaydet**' i seçin.
+1. **Dosya** menüsünde **Tümünü Kaydet**’i seçin.
 
 1. (Yalnızca Visual Basic) Çözüm Gezgini (sağ bölme) menüsünde, proje düğümüne sağ tıklayın, **Özellikler**' i seçin. **Uygulama** sekmesinde, **Başlangıç nesnesini** **basit**olarak değiştirin.
 
@@ -248,7 +248,7 @@ Bu iki konu, diğer çok iş parçacıklı hata ayıklama araçlarını kullanma
 
 2. Hata ayıklayıcı bir kod satırına ilerlemek için **F11** tuşuna basın.
 
-3. Pencerenin sol tarafındaki cilt paya bakın. Bu satırda iki bükümlü iş parçacığına benzeyen bir *iş parçacığı işaretleyici* simgesi ![iş parçacığı işaretçisi](../debugger/media/dbg-thread-marker.png "Threadişaretleyici") görürsünüz. İş parçacığı işaretçisi, bu konumda bir iş parçacığının durdurulduğunu gösterir.
+3. Pencerenin sol tarafındaki cilt paya bakın. Bu satırda iki bükümlü iş parçacığına benzeyen bir *iş parçacığı işaretleyici* simgesi  ![iş parçacığı işaretçisi](../debugger/media/dbg-thread-marker.png "Threadişaretleyici") görürsünüz. İş parçacığı işaretçisi, bu konumda bir iş parçacığının durdurulduğunu gösterir.
 
     Bir iş parçacığı işaretleyicisi, bir kesme noktası tarafından kısmen eklenebilir.
 
@@ -313,7 +313,7 @@ Bu iki konu, diğer çok iş parçacıklı hata ayıklama araçlarını kullanma
 
 5. İş parçacıklarını işaretlemek için, **paralel izleme** penceresinde bir veya daha fazla bayraklı iş parçacığına sağ tıklayın ve **bayrağı kaldır**' ı seçin.
 
-### <a name="freeze-and-thaw-thread-execution"></a><a name="bkmk_freeze"></a>İş parçacığı yürütmeyi dondurma ve çözme
+### <a name="freeze-and-thaw-thread-execution"></a><a name="bkmk_freeze"></a> İş parçacığı yürütmeyi dondurma ve çözme
 
 > [!TIP]
 > İş parçacıklarının iş gerçekleştirdiği sırayı denetlemek için iş parçacıklarını dondurabilir ve çözme (askıya al ve devam ettir). Bu, Kilitlenmeler ve yarış koşulları gibi eşzamanlılık sorunlarını çözmenize yardımcı olabilir.
@@ -332,7 +332,7 @@ Bu iki konu, diğer çok iş parçacıklı hata ayıklama araçlarını kullanma
 
     Uygulama, bazı yeni iş parçacıkları da oluşturabilir. Herhangi bir yeni iş parçacığı işaretlenir ve dondurulmuş değildir.
 
-### <a name="follow-a-single-thread-with-conditional-breakpoints"></a><a name="bkmk_follow_a_thread"></a>Koşullu kesme noktalarıyla tek bir iş parçacığını takip edin
+### <a name="follow-a-single-thread-with-conditional-breakpoints"></a><a name="bkmk_follow_a_thread"></a> Koşullu kesme noktalarıyla tek bir iş parçacığını takip edin
 
 Hata ayıklayıcıda tek bir iş parçacığının yürütülmesini izlemek faydalı olabilir. Bunu yapmanın bir yolu, ilgilendiğiniz iş parçacıklarını donduruyor. Bazı senaryolarda, belirli bir hatayı yeniden oluşturmak için diğer iş parçacıklarını dondurmadan tek bir iş parçacığını izlemeniz gerekebilir. Diğer iş parçacıklarını dondurmadan bir iş parçacığını izlemek için, ilgilendiğiniz iş parçacığı hariç koda aşmaktan kaçınmanız gerekir. Bunu, [koşullu bir kesme noktası](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)ayarlayarak yapabilirsiniz.
 

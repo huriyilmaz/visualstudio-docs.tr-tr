@@ -13,21 +13,21 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8c3ae2ce451f076c33ea5613b71c6d262c1d7a0e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63430829"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64811745"
 ---
 # <a name="poplistfunc"></a>POPLISTFUNC
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu geri çağırma için sağlanan [SccPopulateList](../extensibility/sccpopulatelist-function.md) IDE tarafından ve kaynak denetimi eklentisi tarafından bir dosya veya dizinlerin listesini güncelleştirmek için kullanılır (Ayrıca sağlanan `SccPopulateList` işlevi).  
+Bu geri çağırma, IDE tarafından [SccPopulateList](../extensibility/sccpopulatelist-function.md) için sağlanır ve kaynak denetim eklentisi tarafından, bir dosya veya dizinlerin listesini güncelleştirmek için kullanılır (işleve de sağlanır `SccPopulateList` ).  
   
- Ne zaman bir kullanıcının seçtiği **alma** komut IDE'de IDE kullanıcı alabileceği tüm dosyaların bir liste kutusu görüntüler. Ne yazık ki, IDE kullanıcı alabilirsiniz tüm dosyaların tam listesini bilmez; Bu liste yalnızca eklenti vardır. Diğer kullanıcılar için kaynak kodu denetim projesinin dosyaları eklediyseniz, bu dosyalar, listede görünmesi gerekir, ancak IDE bunları hakkında bilmez. IDE kullanıcı alabilirsiniz gördüğü dosyaların bir listesini oluşturur. Kullanıcıya bu listeyi gösterir önce çağrılır [SccPopulateList](../extensibility/sccpopulatelist-function.md) `,` kaynak denetimi eklentisi vererek eklemek ve dosyaları listeden silmek için bir fırsat.  
+ Bir Kullanıcı IDE 'de **Get** komutunu SEÇTIĞINDE, IDE kullanıcının alabilir tüm dosyaların bir liste kutusunu görüntüler. Ne yazık ki IDE, kullanıcının alabilir tüm dosyaların tam listesini bilmez; yalnızca eklentide bu liste vardır. Diğer kullanıcılar kaynak kodu denetim projesine dosya eklemiş ise, bu dosyalar listede görünmelidir, ancak IDE bunun hakkında bilgi sahibi değildir. IDE, kullanıcının alabilir olduğunu düşündüğü dosyaların bir listesini oluşturur. Bu listeyi kullanıcıya görüntülemeden önce, [SccPopulateList](../extensibility/sccpopulatelist-function.md) `,` kaynak denetimi eklentisine, listeden dosya ekleme ve silme şansı sağlayan SccPopulateList öğesini çağırır.  
   
 ## <a name="signature"></a>İmza  
- Kaynak Denetimi Eklentisi aşağıdaki prototipe sahip bir IDE uygulanan işlevi çağrılarak listenin değiştirir:  
+ Kaynak denetimi eklentisi, aşağıdaki prototiple IDE uygulanmış bir işlev çağırarak listeyi değiştirir:  
   
 ```cpp#  
 typedef BOOL (*POPLISTFUNC) (  
@@ -40,32 +40,32 @@ typedef BOOL (*POPLISTFUNC) (
   
 ## <a name="parameters"></a>Parametreler  
  pvCallerData  
- `pvCallerData` Parametresi için (IDE) çağıran tarafından geçirilen [SccPopulateList](../extensibility/sccpopulatelist-function.md). Kaynak Denetimi Eklentisi bu parametrenin içeriği hakkında hiçbir şey varsaymanız gerekir.  
+ `pvCallerData`Çağıran tarafından (IDE) [SccPopulateList](../extensibility/sccpopulatelist-function.md)öğesine geçirilen parametre. Kaynak denetimi eklentisinin bu parametrenin içeriğiyle ilgili hiçbir şey kabul etmesi gerekir.  
   
  fAddRemove  
- Varsa `TRUE`, `lpFileName` dosya listesine eklenmesi gereken bir dosyadır. Varsa `FALSE`, `lpFileName` dosya listesinden silinmesi gereken bir dosyadır.  
+ `TRUE`, `lpFileName` Dosya listesine eklenmesi gereken bir dosyadır. İse `FALSE` , `lpFileName` dosya listesinden silinmesi gereken bir dosyadır.  
   
- nStatus  
- Durumunu `lpFileName` (bir birleşimini `SCC_STATUS` BITS; bkz: [dosya durum kodu](../extensibility/file-status-code-enumerator.md) Ayrıntılar için).  
+ nDurum  
+ Durumu `lpFileName` ( `SCC_STATUS` bitlerin birleşimi; Ayrıntılar Için [dosya durum koduna](../extensibility/file-status-code-enumerator.md) bakın).  
   
  lpFileName  
- Dosya adı eklemek veya listeden silmek için tam dizin yolu.  
+ Listeye eklenecek veya listeden Silinecek dosya adının tam dizin yolu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`TRUE`|Eklenti bu fonksiyonu çağıran devam edebilirsiniz.|  
-|`FALSE`|IDE tarafında (örneğin, yetersiz bellek durumunun) ilgili bir sorun oluştu. Eklenti işlem durdurmanız gerekir.|  
+|`TRUE`|Eklenti bu işlevi çağırmaya devam edebilir.|  
+|`FALSE`|IDE tarafında (yetersiz bellek durumu gibi) ilgili bir sorun oluştu. Eklenti işlemi durdurmalıdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İsteğe bağlı olarak ekleyin veya dosya listeden silmek için kaynak denetimi eklentisi isteyen her dosya için tümleştirilmesidir, bu işlevi çağıran `lpFileName`. `fAddRemove` Bayrak listeye eklemek için yeni bir dosya veya silmek için eski bir dosyayı belirtir. `nStatus` Parametre dosyanın durumunu sağlar. Eklenti SCC dosya eklemeye ve silmeye sona erdiğinde arasında döndürür [SccPopulateList](../extensibility/sccpopulatelist-function.md) çağırın.  
+ Kaynak denetimi eklentisinin dosya listesine eklemek veya silmek istediği her dosya için, bu işlevi çağırır `lpFileName` . `fAddRemove`Bayrak, listeye eklenecek yeni bir dosyayı veya silinecek eski bir dosyayı gösterir. `nStatus`Parametresi, dosyanın durumunu verir. SCC eklentisinin dosya ekleme ve silme işlemi tamamlandığında, [SccPopulateList](../extensibility/sccpopulatelist-function.md) çağrısından geri döner.  
   
 > [!NOTE]
-> `SCC_CAP_POPULATELIST` Özelliği bit Visual Studio için gereklidir.  
+> `SCC_CAP_POPULATELIST`Visual Studio için yetenek biti gereklidir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [IDE tarafından uygulanan geri çağırma işlevleri](../extensibility/callback-functions-implemented-by-the-ide.md)   
+ [IDE tarafından uygulanan geri çağırma Işlevleri](../extensibility/callback-functions-implemented-by-the-ide.md)   
  [Kaynak denetimi eklentileri](../extensibility/source-control-plug-ins.md)   
  [SccPopulateList](../extensibility/sccpopulatelist-function.md)   
  [Dosya Durumu Kodu](../extensibility/file-status-code-enumerator.md)

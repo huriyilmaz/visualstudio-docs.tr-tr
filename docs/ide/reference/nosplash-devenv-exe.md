@@ -13,41 +13,41 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9a1e8118faa743398271fb282a2603aab5fcd76b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62950654"
 ---
 # <a name="nosplash-devenvexe"></a>/NoSplash (devenv.exe)
 
-Sıçrama ekranının gösterilmesini önler.
+Giriş ekranının gösterilmesini engeller.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```shell
 devenv /NoSplash [File1[ FileN]...]
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
-- *Dosya1*
+- *FILE1*
 
-  İsteğe bağlı. Dosya Visual Studio'nun varolan bir örneğinde açılacak. Visual Studio'nun hiçbir örneği yoksa, basitleştirilmiş bir pencere düzeniyle yeni bir örnek oluşturulur ve araç yeni örnekte *Dosya1'i* açar.
+  İsteğe bağlı. Visual Studio 'nun mevcut bir örneğinde açılacak dosya. Visual Studio 'nun bir örneği yoksa, Basitleştirilmiş bir pencere düzeniyle yeni bir örnek oluşturulur ve araç yeni örnekte *FILE1* öğesini açar.
 
-- *FileN*
+- *Dosyan*
 
-  İsteğe bağlı. Visual Studio'nun varolan örneğinde açılacak bir veya daha fazla ek dosya.
+  İsteğe bağlı. Visual Studio 'nun mevcut örneğinde açmak için bir veya daha fazla ek dosya.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu anahtar sıçrama ekranını gizler. Bu anahtarın dışarıda bırakması sıçrama ekranının gösterilmesine neden olur. Sıçrama ekranını daha fazla incelemek istiyorsanız (örneğin, VSPackage ürün simgesini kontrol etmek [için), /Splash](../../extensibility/devenv-command-line-switches-for-vspackage-development.md) anahtarını kullanın.
+Bu anahtar giriş ekranını gizler. Bu anahtardan ayrıldığınızda giriş ekranının görüntülenmesine neden olur. Giriş ekranını daha fazla incelemek istiyorsanız (örneğin, VSPackage ürün simgesini denetlemek için), [/Splash](../../extensibility/devenv-command-line-switches-for-vspackage-development.md) anahtarını kullanın.
 
-Anahtar, `/NoSplash` [/Run](run-devenv-exe.md) veya [/DebugExe](debugexe-devenv-exe.md)gibi diğer anahtarlarla birleştirilebilir.
+`/NoSplash`Anahtar, [/Run](run-devenv-exe.md) veya [/debugexe](debugexe-devenv-exe.md)gibi diğer anahtarlarla birleştirilebilir.
 
 ## <a name="example"></a>Örnek
 
-Örneklerin üçü de sıçrama ekranını görüntülemeden IDE'yi açar. İkinci örnek de belirtilen çözümü derler ve yapılı yürütülebilir çalışır. Üçüncü örnek, IDE'de hata ayıklama için belirtilen yürütücünün açılışını açar.
+Örneklerin üçü de giriş ekranını görüntülemeden IDE 'yi açar. İkinci örnek ayrıca, belirtilen çözümü derler ve oluşturulmuş çalıştırılabiliri çalıştırır. Üçüncü örnek, IDE 'de hata ayıklama için belirtilen yürütülebiliri açar.
 
 ```shell
 devenv /nosplash
@@ -60,4 +60,4 @@ devenv /nosplash /debugexe MySolution.exe
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md)
-- [VSPackage geliştirme için Devenv komut satırı anahtarları](../../extensibility/devenv-command-line-switches-for-vspackage-development.md)
+- [VSPackage geliştirmesi için Devenv komut satırı anahtarları](../../extensibility/devenv-command-line-switches-for-vspackage-development.md)

@@ -25,10 +25,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3307fc124f50e8c9f73749293c36f53be36c5e3c
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71252456"
 ---
 # <a name="create-clickonce-applications-for-others-to-deploy"></a>Başkalarının dağıtması için ClickOnce uygulamaları oluşturma
@@ -41,7 +41,7 @@ ClickOnce dağıtımları oluşturan tüm geliştiriciler uygulamaları kendiler
 
  Örneğin, Adventure Works 'ün bir finans departmanı ve insan kaynakları departmanı olduğunu varsayalım. Her iki departman de bir SQL veritabanında depolanan verilerden rapor üreten bir Microsoft Corporation ClickOnce uygulamasını lisansluyor. Microsoft, her departmanı, verileri için özelleştirilmiş bir uygulama sürümü sağlar. Uygulamalar aynı Authenticode sertifikasıyla imzalanmışsa, ClickOnce ikinci uygulamayı birinciyle özdeş olacak şekilde kullanacağından, her iki uygulamayı da kullanmaya çalışan bir Kullanıcı hatayla karşılaşır. Bu durumda, müşteri, uygulama tarafından yerel olarak depolanan verilerin kaybını içeren öngörülemeyen ve istenmeyen yan etkilerle karşılaşabilir.
 
- Kod imzalama `deploymentProvider` ile ilgili ek bir sorun, dağıtım bildirimindeki öğesidir ve bu, ClickOnce 'a uygulama güncelleştirmelerinin nerede bakacağını söyler. Bu öğe imzalamadan önce dağıtım bildirimine eklenmelidir. Bu öğe daha sonra eklenirse, dağıtım bildiriminin yeniden imzalanması gerekir.
+ Kod imzalama ile ilgili ek bir sorun, `deploymentProvider` dağıtım bildirimindeki öğesidir ve bu, ClickOnce 'a uygulama güncelleştirmelerinin nerede bakacağını söyler. Bu öğe imzalamadan önce dağıtım bildirimine eklenmelidir. Bu öğe daha sonra eklenirse, dağıtım bildiriminin yeniden imzalanması gerekir.
 
 ### <a name="require-the-customer-to-sign-the-deployment-manifest"></a>Müşterinin dağıtım bildirimini imzalamasını gerektir
  Benzersiz olmayan dağıtımlarda bu soruna yönelik bir çözüm, geliştirici uygulama bildirimini imzalayave müşterinin dağıtım bildirimini imzalayamidir. Bu yaklaşım işe yarar, ancak diğer sorunlar ortaya koymaktadır. Authenticode sertifikası korunan bir varlık olarak kalması gerektiğinden, müşteri, dağıtımı imzalamak için sertifikayı yalnızca geliştiriciye sunamaz. Müşteri, .NET Framework SDK 'Sı ile ücretsiz sunulan araçları kullanarak dağıtım bildirimini imzalayabilirken, bu, müşterinin sunabileceği veya sağlayabilenden daha fazla teknik bilgi gerektirebilir. Bu gibi durumlarda, geliştirici genellikle müşterinin imza için uygulama sürümünü gönderebileceği bir uygulama, Web sitesi veya başka bir mekanizma oluşturur.
@@ -50,13 +50,13 @@ ClickOnce dağıtımları oluşturan tüm geliştiriciler uygulamaları kendiler
  Geliştirici ve müşteri, müşterinin uygulama bildirimini imzalayacağını kabul etse bile, bu durum özellikle güvenilen uygulama dağıtımı için geçerli olduğu gibi uygulamanın kimliğini çevreleyen diğer sorunları da yükseltir. (Bu özellik hakkında daha fazla bilgi için bkz. [Güvenilen uygulama dağıtımına genel bakış](../deployment/trusted-application-deployment-overview.md).) Adventure Works 'ün, Microsoft Corporation tarafından sunulan herhangi bir uygulamanın tam güvenle çalışması için istemci bilgisayarlarını yapılandırmak istediğini varsayalım. Adventure Works dağıtım bildirimini imzalarsa, ClickOnce, uygulamanın güven düzeyini belirlemekte Adventure Work 'ün güvenlik imzasını kullanacaktır.
 
 ## <a name="create-customer-deployments-by-using-application-manifest-for-trust"></a>Güven için uygulama bildirimini kullanarak müşteri dağıtımları oluşturma
- .NET Framework 3,5 ' de ClickOnce, geliştiricilere ve müşterilere bildirimlerin nasıl imzalanması gerektiğine ilişkin senaryoya yeni bir çözüm veren yeni bir özellik içerir. ClickOnce uygulama bildirimi, bir geliştiricinin uygulama bildiriminin dijital `<useManifestForTrust>` imzasının güven kararları vermek için kullanılması gerekenler olduğunu işaret etmesini sağlayan adlı yeni bir öğeyi destekler. Geliştirici, uygulama bildirimine bu öğeyi dahil etmek ve hem yayımcı adını hem de uygulamanın adını bildirime eklemek için, Visual *Studio gibi ClickOnce*paketleme *araçları 'nı kullanır*.
+ .NET Framework 3,5 ' de ClickOnce, geliştiricilere ve müşterilere bildirimlerin nasıl imzalanması gerektiğine ilişkin senaryoya yeni bir çözüm veren yeni bir özellik içerir. ClickOnce uygulama bildirimi, `<useManifestForTrust>` bir geliştiricinin uygulama bildiriminin dijital imzasının güven kararları vermek için kullanılması gerekenler olduğunu işaret etmesini sağlayan adlı yeni bir öğeyi destekler. Geliştirici, bu öğeyi uygulama bildirimine dahil etmek için *Mage.exe*, *MageUI.exe*ve Visual Studio gibi ClickOnce paketleme araçları 'Nı kullanır ve hem yayımcı adını hem de bildirimin uygulamanın adını eklemek için.
 
- Kullanırken `<useManifestForTrust>`, dağıtım bildiriminin, bir sertifika yetkilisi tarafından verilen bir Authenticode sertifikasıyla imzalanması gerekmez. Bunun yerine, otomatik olarak imzalanan sertifika olarak bilinen ile imzalanabilir. Otomatik olarak imzalanan bir sertifika, standart .NET Framework SDK araçları kullanılarak müşteri ya da geliştirici tarafından oluşturulur ve ardından standart ClickOnce dağıtım araçları kullanılarak dağıtım bildirimine uygulanır. Daha fazla bilgi için bkz. [MakeCert](/windows/desktop/SecCrypto/makecert).
+ Kullanırken `<useManifestForTrust>` , dağıtım bildiriminin, bir sertifika yetkilisi tarafından verilen bir Authenticode sertifikasıyla imzalanması gerekmez. Bunun yerine, otomatik olarak imzalanan sertifika olarak bilinen ile imzalanabilir. Otomatik olarak imzalanan bir sertifika, standart .NET Framework SDK araçları kullanılarak müşteri ya da geliştirici tarafından oluşturulur ve ardından standart ClickOnce dağıtım araçları kullanılarak dağıtım bildirimine uygulanır. Daha fazla bilgi için bkz. [MakeCert](/windows/desktop/SecCrypto/makecert).
 
- Dağıtım bildirimi için otomatik olarak imzalanan bir sertifika kullanılması çeşitli avantajlar sunar. Müşterinin kendi Authenticode sertifikasını `<useManifestForTrust>` alması veya oluşturması gereksinimini ortadan kaldırarak, müşterinin dağıtımını basitleştirir, bu da geliştiricinin uygulama üzerinde kendi marka kimliğini korumasına olanak tanır. Sonuç, daha güvenli ve benzersiz uygulama kimliklerine sahip olan imzalanmış dağıtımlar kümesidir. Bu, aynı uygulamanın birden fazla müşteriye dağıtılmasından oluşabilen olası çakışmayı ortadan kaldırır.
+ Dağıtım bildirimi için otomatik olarak imzalanan bir sertifika kullanılması çeşitli avantajlar sunar. Müşterinin kendi Authenticode sertifikasını alması veya oluşturması gereksinimini ortadan kaldırarak, `<useManifestForTrust>` müşterinin dağıtımını basitleştirir, bu da geliştiricinin uygulama üzerinde kendi marka kimliğini korumasına olanak tanır. Sonuç, daha güvenli ve benzersiz uygulama kimliklerine sahip olan imzalanmış dağıtımlar kümesidir. Bu, aynı uygulamanın birden fazla müşteriye dağıtılmasından oluşabilen olası çakışmayı ortadan kaldırır.
 
- `<useManifestForTrust>` Etkin bir ClickOnce dağıtımı oluşturma hakkında adım adım bilgiler için bkz [. İzlenecek yol: Yeniden imzalama gerektirmeyen ve marka bilgilerini](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md)koruyan bir ClickOnce uygulamasını el ile dağıtın.
+ Etkin bir ClickOnce dağıtımı oluşturma hakkında adım adım bilgiler için `<useManifestForTrust>` bkz. [izlenecek yol: yeniden imzalama gerektirmeyen ve marka bilgilerini koruyan bir ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md).
 
 ### <a name="how-application-manifest-for-trust-works-at-run-time"></a>Güven için uygulama bildirimi çalışma zamanında nasıl çalışır
  Güven için uygulama bildiriminin çalışma zamanında nasıl çalıştığını daha iyi anlamak için aşağıdaki örneği göz önünde bulundurun. .NET Framework 3,5 ' i hedefleyen bir ClickOnce uygulaması Microsoft tarafından oluşturulur. Uygulama bildirimi `<useManifestForTrust>` öğesini kullanır ve Microsoft tarafından imzalanır. Adventure Works, otomatik olarak imzalanan bir sertifika kullanarak dağıtım bildirimini imzalar. Adventure Works istemcileri, Microsoft tarafından imzalanan herhangi bir uygulamaya güvenmek üzere yapılandırılır.
@@ -73,7 +73,7 @@ ClickOnce dağıtımları oluşturan tüm geliştiriciler uygulamaları kendiler
 
  Bu yöntemin bir dezavantajı, bunu uygulamak için gereken zaman ve masrafdır. Bu tür bir hizmet, .NET Framework SDK 'sında sunulan araçlar kullanılarak oluşturulabilir, ancak ürün yaşam döngüsüne daha fazla geliştirme süresi eklenir.
 
- Bu konuda daha önce belirtildiği gibi, başka bir sakıncası, her bir müşterinin uygulamanın her sürümünün aynı uygulama kimliğine sahip olması ve bu da çakışmalara yol açabilir. Bu sorun varsa, geliştirici her uygulamaya benzersiz bir ad vermek için dağıtım bildirimini oluştururken kullanılan ad alanını değiştirebilir. Bu, uygulamanın her sürümü için ayrı bir kimlik oluşturur ve olası kimlik çakışmalarını ortadan kaldırır. Bu alan, Mage. `-Name` exe ' nin bağımsız değişkenine ve MageUI. exe ' de **ad** sekmesindeki **ad** alanına karşılık gelir.
+ Bu konuda daha önce belirtildiği gibi, başka bir sakıncası, her bir müşterinin uygulamanın her sürümünün aynı uygulama kimliğine sahip olması ve bu da çakışmalara yol açabilir. Bu sorun varsa, geliştirici her uygulamaya benzersiz bir ad vermek için dağıtım bildirimini oluştururken kullanılan ad alanını değiştirebilir. Bu, uygulamanın her sürümü için ayrı bir kimlik oluşturur ve olası kimlik çakışmalarını ortadan kaldırır. Bu alan `-Name` Mage.exe bağımsız değişkenine ve MageUI.exe **ad** sekmesindeki **ad** alanına karşılık gelir.
 
  Örneğin, geliştiricinin Application1 adlı bir uygulama oluşturduğunu varsayalım. Geliştirici, ad alanı Application1 olarak ayarlanmış tek bir dağıtım oluşturmak yerine, bu ad üzerinde Application1-CustomerA, Application1-CustomerB vb. gibi, müşteriye özgü bir çeşitlemesi olan birkaç dağıtım oluşturabilir.
 
@@ -99,5 +99,5 @@ ClickOnce dağıtımları oluşturan tüm geliştiriciler uygulamaları kendiler
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Sınama ve üretim sunucuları için teslim etmeden ClickOnce uygulamaları dağıtma](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md)
-- [İzlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)
-- [İzlenecek yol: Yeniden imzalama gerektirmeyen ve marka bilgilerini koruyan bir ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md)
+- [İzlenecek yol: ClickOnce uygulamasını El Ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)
+- [İzlenecek yol: yeniden imzalama gerektirmeyen ve marka bilgilerini koruyan bir ClickOnce uygulamasını El Ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md)

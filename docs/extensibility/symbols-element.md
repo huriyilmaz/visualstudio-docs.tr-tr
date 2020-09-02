@@ -1,5 +1,5 @@
 ---
-title: Semboller Öğesi | Microsoft Dokümanlar
+title: Symbols öğesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,20 +12,20 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 5c24c3f84df23a07b6b16272b66b29e32ad7b911
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699345"
 ---
 # <a name="symbols-element"></a>Symbols Öğesi
-Diğer VSCT elemanları tarafından kullanılan GUI'leri ve KOPYALARı tanımlar. Yönetilmeyen kod için, bu bilgiler genellikle [Extern Öğesi](../extensibility/extern-element.md)tarafından belirtilen üstbilgi dosyalarından gelir. Yönetilen kod, bu bilgileri tanımlamak için Semboller öğesinin alt öğelerini kullanır.
+Diğer VSCT öğeleri tarafından kullanılan GUID 'Leri ve kimlikleri tanımlar. Yönetilmeyen kod için bu bilgiler genellikle [extern öğesi](../extensibility/extern-element.md)tarafından belirtilen başlık dosyalarından gelir. Yönetilen kod, bu bilgileri tanımlamak için semboller öğesinin alt öğelerini kullanır.
 
- Varolan bir .cto dosyasından .vsct dosyası oluşturursanız, semboller Semboller öğesinin alt öğesi olarak oluşturulur. Daha fazla bilgi için [bkz: Nasıl: Bir . Varolan bir dosyadan Vsct Dosyası . Cto Dosyası](../extensibility/internals/how-to-create-a-dot-vsct-file.md#how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file).
+ Var olan bir. CTO dosyasından bir. vsct dosyası oluşturursanız, semboller semboller öğesinin alt öğesi olarak oluşturulur. Daha fazla bilgi için bkz [. nasıl yapılır: oluşturma. Varolan bir dosyadan vsct dosyası. CTO dosyası](../extensibility/internals/how-to-create-a-dot-vsct-file.md#how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file).
 
- Semboller öğesi, önişlemci tarafından kullanılmak üzere ad değeri çiftleri tanımlayan [Tanım Öğesi](../extensibility/define-element.md)ile karıştırılmamalıdır.
+ Sembol öğesi, Önişlemci tarafından kullanılmak üzere ad-değer çiftlerini tanımlayan [define öğesiyle](../extensibility/define-element.md)karıştırılmamalıdır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <Symbols>
@@ -41,20 +41,20 @@ Diğer VSCT elemanları tarafından kullanılan GUI'leri ve KOPYALARı tanımlar
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|None||
+|Hiçbiri||
 
 ### <a name="child-elements"></a>Alt Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|GuidSymbol|GUID simgesi tanımlar. GuidSymbol'un iki gerekli özelliği vardır: ad ve değer. Ad, sembolün adıdır ve değer GUID'in dize olarak değeridir.<br /><br /> Örneğin:\<GuidSymbol adı="guidVsPackage1Pkg" value="{c5f54698-101a-4846-84d3-dc748f9cd848}" />|
-|IDSymbol|Bir sembol tanımlar. IDSymbol'un iki gerekli özelliği vardır: ad ve değer. Ad, sembolün adıdır ve değer de simgenin dize olarak değeridir.<br /><br /> Örneğin:\<IDSymbol adı="MyMenuGroup" value="0x1020" />|
+|GuidSymbol|Bir GUID sembolünü tanımlar. GuidSymbol iki gerekli özniteliğe sahiptir: ad ve değer. Ad, simgenin adıdır ve değer, GUID 'in bir dize olarak değeridir.<br /><br /> Örneğin:\<GuidSymbol name="guidVsPackage1Pkg"   value="{c5f54698-101a-4846-84d3-dc748f9cd848}" />|
+|IDSymbol|Bir sembol tanımlar. IDSymbol iki gerekli özniteliğe sahiptir: ad ve değer. Ad, simgenin adıdır ve değer, sembolün bir dize olarak değeridir.<br /><br /> Örneğin:\<IDSymbol name="MyMenuGroup" value="0x1020" />|
 
 ### <a name="parent-elements"></a>Üst Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[CommandTable Öğesi](../extensibility/commandtable-element.md)|.vsct dosyasının kök öğesi.|
+|[CommandTable Öğesi](../extensibility/commandtable-element.md)|. Vsct dosyasının kök öğesi.|
 
 ## <a name="example"></a>Örnek
 

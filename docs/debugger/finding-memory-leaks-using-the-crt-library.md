@@ -27,10 +27,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5deb42b2ab708bae572aebbcac15af2d077b14fa
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350491"
 ---
 # <a name="find-memory-leaks-with-the-crt-library"></a>CRT kitaplığı ile bellek sızıntılarını bulma
@@ -186,11 +186,11 @@ Ayırma numarasını, bellek ayırmada bir kesme noktası ayarlamak için kullan
 
 1. **Gözcü** penceresinde `_crtBreakAlloc` **ad** sütununu yazın.
 
-   CRT kitaplığının çok iş parçacıklı DLL sürümünü (/MD seçeneği) kullanıyorsanız, bağlam işlecini ekleyin:`{,,ucrtbased.dll}_crtBreakAlloc`
+   CRT kitaplığının çok iş parçacıklı DLL sürümünü (/MD seçeneği) kullanıyorsanız, bağlam işlecini ekleyin: `{,,ucrtbased.dll}_crtBreakAlloc`
    
    Hata ayıklama simgelerinin yüklendiğinden emin olun. Aksi takdirde `_crtBreakAlloc` , *tanımlanamayan*olarak bildirilir.
 
-1. **Enter**'a basın.
+1.  **Enter** tuşuna basın.
 
    Hata ayıklayıcı çağrıyı değerlendirir ve sonucu **değer** sütununa koyar. Bellek ayırmaları üzerinde herhangi bir kesme noktası ayarlanmamışsa bu değer **-1** olacaktır.
 
@@ -229,7 +229,7 @@ Bir yapının içeriğini çıkarmak için `_CrtMemState` yapıyı `_ CrtMemDump
 _CrtMemDumpStatistics( &s1 );
 ```
 
-`_ CrtMemDumpStatistics`aşağıdaki gibi görünen bellek durumunun dökümünü verir:
+`_ CrtMemDumpStatistics` aşağıdaki gibi görünen bellek durumunun dökümünü verir:
 
 ```cmd
 0 bytes in 0 Free Blocks.
@@ -252,13 +252,13 @@ if ( _CrtMemDifference( &s3, &s1, &s2) )
    _CrtMemDumpStatistics( &s3 );
 ```
 
-`_CrtMemDifference`bellek durumlarını karşılaştırır ve `s1` , `s2` `s3` ve arasındaki fark olan () içinde bir sonuç döndürür `s1` `s2` .
+`_CrtMemDifference` bellek durumlarını karşılaştırır ve `s1` , `s2` `s3` ve arasındaki fark olan () içinde bir sonuç döndürür `s1` `s2` .
 
 Bellek sızıntılarını bulmak için bir teknik `_CrtMemCheckpoint` , uygulamanızın başlangıcında ve sonunda çağrılar yerleştirip `_CrtMemDifference` sonuçları karşılaştırmak için kullanarak başlar. `_CrtMemDifference`Bir bellek sızıntısı gösteriyorsa, `_CrtMemCheckpoint` sızıntı kaynağını yalıtana kadar programınızı bir ikili arama kullanarak bölmek için daha fazla çağrı ekleyebilirsiniz.
 
 ## <a name="false-positives"></a>Hatalı pozitif sonuçlar
 
- `_CrtDumpMemoryLeaks`bir kitaplık, iç ayırmaları CRT blokları veya istemci blokları yerine normal bloklar olarak işaretlerse, bellek sızıntılarına ilişkin hatalı göstergeler verebilir. Bu durumda, `_CrtDumpMemoryLeaks` Kullanıcı ayırmaları ve iç kitaplık ayırmaları arasındaki farkı söylemez. Kitaplık ayırmaları için genel Yıkıcılar, çağırdığınız noktadan sonra çalışıyorsa `_CrtDumpMemoryLeaks` , her iç kitaplık ayırması bir bellek sızıntısı olarak bildirilir. Visual Studio .NET ' den önceki standart Şablon Kitaplığı sürümleri, `_CrtDumpMemoryLeaks` Bu tür hatalı pozitif sonuçları raporlamayabilir.
+ `_CrtDumpMemoryLeaks` bir kitaplık, iç ayırmaları CRT blokları veya istemci blokları yerine normal bloklar olarak işaretlerse, bellek sızıntılarına ilişkin hatalı göstergeler verebilir. Bu durumda, `_CrtDumpMemoryLeaks` Kullanıcı ayırmaları ve iç kitaplık ayırmaları arasındaki farkı söylemez. Kitaplık ayırmaları için genel Yıkıcılar, çağırdığınız noktadan sonra çalışıyorsa `_CrtDumpMemoryLeaks` , her iç kitaplık ayırması bir bellek sızıntısı olarak bildirilir. Visual Studio .NET ' den önceki standart Şablon Kitaplığı sürümleri, `_CrtDumpMemoryLeaks` Bu tür hatalı pozitif sonuçları raporlamayabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

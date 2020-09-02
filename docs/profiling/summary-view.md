@@ -17,10 +17,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: a12989004b5bed8601bdda1ec0719eda789ff822
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546893"
 ---
 # <a name="summary-view"></a>Özet görünümü
@@ -37,7 +37,7 @@ ms.locfileid: "85546893"
 ## <a name="notifications-links"></a>Bildirimler bağlantıları
  Raporun görüntüleme seçeneklerini ayarlamak için bildirim listesindeki bağlantılar ' a tıklayabilirsiniz. Liste, zaman çizelgesi grafiğinin sağında bulunur.
 
-|Seçenek|Description|
+|Seçenek|Açıklama|
 |-|-|
 |**Kullanıcı dışı kodu göster**<br /><br /> **Yalnızca kendi kodum göster**|Yerel kod veya izleme yöntemi kullanılarak toplanan profil oluşturma verileri için kullanılamaz. Yalnızca Kullanıcı kodundaki verileri görüntüleme (**yalnızca kendi kodum göster**) ve sistem kodu (**Kullanıcı dışı kodu göster**) dahil olmak üzere tüm koddan verileri görüntüleme arasında geçiş yapar. Varsayılan olarak, veriler Kullanıcı kodu ile sınırlandırılmıştır. Ayarı değiştirmek için bkz. [nasıl yapılır: profil oluşturma araçları rapor görünümlerini yalnızca kendi kodum görüntülemek Için filtreleme](../profiling/how-to-filter-profiling-tools-report-views-to-display-just-my-code.md).|
 |**Kılavuzu görüntüle**|**Hata listesi** penceresindeki performans kuralı uyarılarını görüntüler. Daha fazla bilgi için bkz. [verileri çözümlemek için performans kurallarını kullanma](../profiling/using-performance-rules-to-analyze-data.md)|
@@ -45,7 +45,7 @@ ms.locfileid: "85546893"
 ## <a name="report"></a>Rapor
  Farklı görünümleri açmak ve raporu karşılaştırmak, kaydetmek veya filtrelemek için rapor listesindeki bağlantılar ' a tıklayabilirsiniz. Liste, zaman çizelgesi grafiğinin sağında bulunur.
 
-|Seçenek |Description |
+|Seçenek |Açıklama |
 |----------------------------| - |
 | **Kırpılmış çağrı ağacını göster** | Çağrı ağacı görünümünde en pahalı yürütme yollarını görüntüler. Daha fazla bilgi için bkz. [çağrı ağacı görünümü](../profiling/call-tree-view.md). |
 | **Etkin çizgileri göster** | , İzleme yöntemi kullanılarak toplanan profil oluşturma verileri için kullanılamaz. Satırlar görünümünde en pahalı kaynak kodu satırlarını görüntüler. Daha fazla bilgi için bkz. [çizgiler görünümü](../profiling/lines-view.md). |

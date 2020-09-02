@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3c68d8a75ca8203a790684506ffd44b3d890648a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546931"
 ---
 # <a name="add-custom-properties-to-dependency-diagrams"></a>Bağımlılık diyagramlarına özel özellikler ekleme
@@ -43,7 +43,7 @@ Yalnızca kodunuzun bir bağımlılık diyagramında herhangi bir öğeye değer
 >      `devenv /rootSuffix /updateConfiguration`
 >
 >      `devenv /rootSuffix Exp /updateConfiguration`
-> 4. Visual Studio'yu yeniden başlatın.
+> 4. Visual Studio’yu yeniden başlatın.
 
 **Kodunuzun bir VSıX projesinde olduğundan emin olun**
 
@@ -63,11 +63,11 @@ public class MyProperty : PropertyExtension<ILayerElement>
 
 [ILayerElement](/previous-versions/ff644511(v=vs.140)) veya türetilmiş sınıflarından herhangi birini içeren özellikleri tanımlayabilirsiniz:
 
-- `ILayerModel`-Model
+- `ILayerModel` -Model
 
-- `ILayer`-Her katman
+- `ILayer` -Her katman
 
-- `ILayerDependencyLink`-Katmanlar arasındaki bağlantılar
+- `ILayerDependencyLink` -Katmanlar arasındaki bağlantılar
 
 - `ILayerComment`
 
