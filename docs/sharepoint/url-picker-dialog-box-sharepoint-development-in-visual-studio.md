@@ -1,5 +1,5 @@
 ---
-title: URL Seçici iletişim kutusu (SharePoint Geliştirme)
+title: URL Seçici iletişim kutusu (SharePoint geliştirme)
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -16,41 +16,41 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 991693c3379e008a2a907efd3127290c7e804c22
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66261939"
 ---
-# <a name="url-picker-dialog-box-sharepoint-development-in-visual-studio"></a>URL Seçici iletişim kutusu (Visual Studio'da SharePoint Geliştirme)
-  URL Seçici iletişim kutusu içinde SharePoint çalıştıran yerel sunucu ana sayfa dosyası veya projenizdeki veya bulunan görüntü dosyaları gibi dosyaları seçebilirsiniz.
+# <a name="url-picker-dialog-box-sharepoint-development-in-visual-studio"></a>URL Seçici iletişim kutusu (Visual Studio 'da SharePoint geliştirme)
+  URL Seçici iletişim kutusunda, projenizde veya SharePoint çalıştıran yerel sunucuda bulunan ana sayfa dosyaları veya görüntü dosyaları gibi dosyaları seçebilirsiniz.
 
- Özellik ayarlamak için bir dosya seçmek için seçeneği varsa, bu iletişim kutusu görüntülenir. Üç nokta düğmesini seçerek bu iletişim kutusunu açabilirsiniz (![ASP.NET Mobil Tasarımcısı elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil Tasarımcısı elips")) çeşitli özelliklerinde yanındaki **özellikleri** penceresi. Belirli öznitelikler için değerleri atadığınızda üç nokta düğmesini de bir IntelliSense komut istemi görünür **kaynak** Tasarımcı görünümü.
+ Bu iletişim kutusu, bir özelliği ayarlamak için bir dosya seçme seçeneğine sahip olduğunuzda görüntülenir. **Özellikler** penceresinde çeşitli Özellikler ' in yanındaki üç nokta düğmesini (![ASP.net Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer elips")) seçerek bu iletişim kutusunu açabilirsiniz. Üç nokta düğmesi, tasarımcı **kaynak** görünümündeki belirli özniteliklere değer atarken bir IntelliSense istemi olarak da görünür.
 
 ## <a name="uielement-list"></a>UIElement listesi
- **Proje klasörleri** proje ya da SharePoint çalıştıran yerel sunucu üzerinde tanımlanan klasörlerin listesini görüntüler. Alt klasörleri görüntülemek için genişletme düğmesini seçin.
+ **Proje klasörleri** Projede veya SharePoint çalıştıran yerel sunucuda tanımlanan klasörlerin listesini görüntüler. Alt klasörleri göstermek için genişletme düğmesini seçin.
 
- Genişletin **proje** düğümünü, projenizdeki dosyaları seçin. İletişim kutusundaki olarak seçilebilir görünmesi için projenizdeki dosyaları aşağıdaki ölçütleri karşılaması gerekir:
+ Projenizdeki dosyaları seçmek için **Proje** düğümünü genişletin. İletişim kutusunda seçilebilir olarak görünmesi için, projenizdeki dosyaların aşağıdaki ölçütlere uyması gerekir:
 
 - Dosya eşlenmiş bir klasörde bulunmalıdır.
 
-- Dosya çözüm paketine eklenmesi gerekir.
+- Dosyanın çözüm paketine eklenmesi gerekir.
 
-- Dosya başka bir projede yer almamalıdır.
+- Dosya başka bir projede bulunamıyor.
 
-  Bu ölçütleri karşılamayan dosyalara başvurmak istiyorsanız, dosyanın yolu el ile girmek zorunda.
+  Bu ölçütlere uymayan dosyalara başvurmak isterseniz, dosyanın yolunu el ile girmeniz gerekir.
 
-  Genişletin **sunucu** düğümünü SharePoint çalıştıran yerel sunucu üzerinde bulunan dosyaları seçin. Bu dosyalar olarak seçilebilir iletişim kutusunda görünmesi için aşağıdaki ölçütleri karşılaması gerekir:
+  SharePoint çalıştıran yerel sunucuda bulunan dosyaları seçmek için **sunucu** düğümünü genişletin. İletişim kutusunda seçilebilir olarak görünmesi için, bu dosyaların aşağıdaki ölçütlere uyması gerekir:
 
-- Dosya aşağıdaki eşlenen klasörler birinde bulunmalıdır: **Görüntüleri**, **düzenleri**, veya **ControlTemplates**.
+- Dosya şu eşlenmiş klasörlerden birinde bulunmalıdır: **resimler**, **düzenler**veya **ControlTemplates**.
 
-- Dosyanın SharePoint içerik veritabanı bulunamıyor.
+- Dosya, SharePoint içerik veritabanında bulunamıyor.
 
-  Bu ölçütleri karşılamayan dosyalara başvurmak istiyorsanız, dosyanın yolu el ile girmek zorunda.
+  Bu ölçütlere uymayan dosyalara başvurmak isterseniz, dosyanın yolunu el ile girmeniz gerekir.
 
-  **Klasörünün içeriğini** seçili klasörde bulunan dosyaları listesini görüntüler. Bir dosya seçin ve ardından **Tamam** düğmesine iletişim kutusunu kapatmak ve onu çağıran işleme seçiminizi göndermek.
+  **Klasörün içeriği** Seçili klasördeki dosyaların listesini görüntüler. Bir dosya seçin ve ardından iletişim kutusunu kapatmak ve seçiminizi çağıran işleme göndermek için **Tamam** düğmesini seçin.
 
-  **Dosya türü** görevin yapmakta olduğunuz için uygun olan dosyalar listesinden seçim yapmanızı sağlar.
+  **Dosya türü** Gerçekleştirdiğiniz görev için uygun olan dosya listesinden seçim yapmanıza olanak sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint için uygulama sayfaları oluşturma](../sharepoint/creating-application-pages-for-sharepoint.md)

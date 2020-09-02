@@ -18,15 +18,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b98481cb1727ecad9289f63136291d500c0d577e
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85347969"
 ---
 # <a name="tell-the-debugger-what-type-to-show-using-debuggertypeproxy-attribute-c-visual-basic-ccli"></a>Hata ayıklayıcıya DebuggerTypeProxy özniteliği kullanarak hangi türün gösterileceğini söyleyin (C#, Visual Basic, C++/CLı)
 
-<xref:System.Diagnostics.DebuggerTypeProxyAttribute>bir ara sunucu veya bir tür için tek başına belirtir ve türün hata ayıklayıcı penceresinde görüntülenme şeklini değiştirir. Proxy 'si olan bir değişkeni görüntülediğinizde, proxy, **ekranda**orijinal tür için temsil eder. Hata ayıklayıcı değişkeni penceresi yalnızca proxy türünün ortak üyelerini görüntüler. Özel Üyeler gösterilmez.
+<xref:System.Diagnostics.DebuggerTypeProxyAttribute> bir ara sunucu veya bir tür için tek başına belirtir ve türün hata ayıklayıcı penceresinde görüntülenme şeklini değiştirir. Proxy 'si olan bir değişkeni görüntülediğinizde, proxy, **ekranda**orijinal tür için temsil eder. Hata ayıklayıcı değişkeni penceresi yalnızca proxy türünün ortak üyelerini görüntüler. Özel Üyeler gösterilmez.
 
 Bu öznitelik, öğesine uygulanabilir:
 
@@ -43,7 +43,7 @@ Performans cezalarını en aza indirmek için, ifade değerlendirici, tür Kulla
 
 Tür proxy 'sinin, özniteliğin hedeflediği sınıf içinde özel bir iç içe sınıf olması iyi bir fikirdir. Bu, iç üyelere kolayca erişmesini sağlar.
 
-<xref:System.Diagnostics.DebuggerTypeProxyAttribute>devralınabilir, bu nedenle bir temel sınıfta tür ara sunucusu belirtilmişse türetilmiş sınıflar kendi tür ara sunucusunu belirtmedikleri takdirde, bu türetilmiş sınıflar için de geçerlidir.
+<xref:System.Diagnostics.DebuggerTypeProxyAttribute> devralınabilir, bu nedenle bir temel sınıfta tür ara sunucusu belirtilmişse türetilmiş sınıflar kendi tür ara sunucusunu belirtmedikleri takdirde, bu türetilmiş sınıflar için de geçerlidir.
 
 <xref:System.Diagnostics.DebuggerTypeProxyAttribute>Derleme düzeyinde kullanılırsa `Target` parametresi, proxy 'nin yerine geçecek türü belirtir.
 

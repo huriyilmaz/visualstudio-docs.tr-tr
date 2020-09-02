@@ -11,52 +11,52 @@ caps.latest.revision: 39
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 81043cc87dd659f14ec634dc14990956a0864f9b
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66263574"
 ---
 # <a name="adding-search-to-a-tool-window"></a>Araç Penceresine Arama Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Uzantınızı bir araç penceresi güncelle, Visual Studio'da başka bir yerde görünür aynı arama işlevleri ekleyebilirsiniz. Bu işlev, aşağıdaki özellikleri içerir:  
+Uzantınızın bir araç penceresini oluştururken veya güncelleştirdiğinizde, Visual Studio 'da başka bir yerde görünen aynı arama işlevini ekleyebilirsiniz. Bu işlevsellik aşağıdaki özellikleri içerir:  
   
-- Her zaman özel bir araç çubuğu alanında bulunan bir arama kutusu.  
+- Araç çubuğunun özel bir alanında her zaman bulunan bir arama kutusu.  
   
-- Arama kutusuna kendisini yayılan bir İlerleme göstergesi.  
+- Arama kutusunun kendisi üzerinde yer alan bir ilerleme göstergesi.  
   
-- Her bir karakter (hızlı arama) girilmez veya Enter tuşuna (isteğe bağlı arama) yalnızca seçtiğiniz sonra sonuçları göstermek için yeteneği.  
+- Her karakteri (anında arama) girdikten hemen sonra veya anahtarı gir (isteğe bağlı ara) seçeneğini belirledikten sonra sonuçları gösterme özelliği.  
   
-- Koşulları, size en yakın zamanda araştırdık gösteren bir liste.  
+- En son aradığınız koşulları gösteren bir liste.  
   
-- Aramaları belirli alanlar veya arama hedefleri yönlerini göre filtreleme özelliği.  
+- Belirli alanlara veya arama hedeflerinin yönlerini göre aramaları filtreleme özelliği.  
   
-  Bu izlenecek yolu takip ederek, aşağıdaki görevlerin nasıl gerçekleştirileceğini öğreneceksiniz:  
+  Bu izlenecek yolu izleyerek aşağıdaki görevleri nasıl gerçekleştireceğinizi öğreneceksiniz:  
   
 1. VSPackage projesi oluşturun.  
   
-2. Salt-okunur TextBox ile bir UserControl içeren bir araç penceresi oluşturun.  
+2. Salt okunurdur metin kutusuna sahip bir UserControl içeren bir araç penceresi oluşturur.  
   
-3. Araç penceresine arama kutusuna ekleyin.  
+3. Araç penceresine bir arama kutusu ekleyin.  
   
-4. Arama uygulaması ekleyin.  
+4. Arama uygulamasını ekleyin.  
   
-5. Hızlı arama ve bir ilerleme çubuğu görüntülenmesini sağlar.  
+5. Anlık aramayı etkinleştirin ve ilerleme çubuğunun görüntülenmesini sağlayın.  
   
-6. Ekleme bir **eşleşen servis talebi** seçeneği.  
+6. **Match Case** seçeneği ekleyin.  
   
-7. Ekleme bir **arama yalnızca çift çizgileri** filtre.  
+7. Yalnızca bir **arama çizgisi** filtresi ekleyin.  
   
-## <a name="to-create-a-vsix-project"></a>Bir VSIX projesi oluşturmak için  
+## <a name="to-create-a-vsix-project"></a>VSıX projesi oluşturmak için  
   
-1. Adlı bir VSIX projesi oluşturun `TestToolWindowSearch` adlı bir araç penceresi ile **TestSearch**. Bunun yapılması yardıma ihtiyacınız varsa bkz [araç penceresi içeren bir uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).  
+1. `TestToolWindowSearch` **Testsearch**adlı bir araç penceresi Ile adlı bir VSIX projesi oluşturun. Bu işlemi gerçekleştirmek için yardıma ihtiyacınız varsa, bkz. [bir araç penceresi Ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).  
   
-## <a name="to-create-a-tool-window"></a>Araç penceresi oluşturma  
+## <a name="to-create-a-tool-window"></a>Bir araç penceresi oluşturmak için  
   
-1. İçinde `TestToolWindowSearch` proje, TestSearchControl.xaml dosyasını açın.  
+1. `TestToolWindowSearch`Projede TestSearchControl. xaml dosyasını açın.  
   
-2. Varolan `<StackPanel>` salt okunur ekleyen aşağıdaki blok blok <xref:System.Windows.Controls.TextBox> için <xref:System.Windows.Controls.UserControl> araç penceresindeki.  
+2. Mevcut bloğunu, `<StackPanel>` araç penceresine salt bir okuma ekleyen aşağıdaki blokla değiştirin <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.UserControl> .  
   
     ```xaml  
     <StackPanel Orientation="Vertical">  
@@ -67,17 +67,17 @@ Uzantınızı bir araç penceresi güncelle, Visual Studio'da başka bir yerde g
     </StackPanel>  
     ```  
   
-3. TestSearchControl.xaml.cs dosyasına aşağıdakileri ekleyin using deyimi:  
+3. TestSearchControl.xaml.cs dosyasında, aşağıdaki using ifadesini ekleyin:  
   
     ```csharp  
     using System.Text;  
     ```  
   
-4. Kaldırma `button1_Click()` yöntemi.  
+4. Yöntemi kaldırın `button1_Click()` .  
   
-     İçinde **TestSearchControl** sınıfında, aşağıdaki kodu ekleyin.  
+     **Testsearchcontrol** sınıfında aşağıdaki kodu ekleyin.  
   
-     Bu kod, bir ortak ekler <xref:System.Windows.Controls.TextBox> adlı özellik **SearchResultsTextBox** ve adlı bir genel dize özelliği **SearchContent**. Oluşturucu, metin kutusuna SearchResultsTextBox ayarlanır ve SearchContent dizeler yeni satır-ayrılmış kümesi için başlatılır. Metin kutusunun içeriğini de dizeler kümesi için başlatılır.  
+     Bu kod <xref:System.Windows.Controls.TextBox> **Searchresultstextbox** adlı ortak bir özellik ve **searchcontent**adlı bir genel dize özelliği ekler. Oluşturucuda, SearchResultsTextBox metin kutusu olarak ayarlanır ve SearchContent, yeni bir dize kümesi olarak başlatılır. Metin kutusunun içeriği, dizeler kümesine de başlatılır.  
   
     ```csharp  
     public partial class TestSearchControl : UserControl  
@@ -113,17 +113,17 @@ Uzantınızı bir araç penceresi güncelle, Visual Studio'da başka bir yerde g
      [!code-csharp[ToolWindowSearch#1](../snippets/csharp/VS_Snippets_VBCSharp/toolwindowsearch/cs/mycontrol.xaml.cs#1)]
      [!code-vb[ToolWindowSearch#1](../snippets/visualbasic/VS_Snippets_VBCSharp/toolwindowsearch/vb/mycontrol.xaml.vb#1)]  
   
-5. Projeyi oluşturmak ve hata ayıklamaya başlayın. Visual Studio'nun deneysel örneğinde görünür.  
+5. Projeyi derleyin ve hata ayıklamayı başlatın. Visual Studio 'nun deneysel örneği görüntülenir.  
   
-6. Menü çubuğunda, **görünümü**, **diğer Windows**, **TestSearch**.  
+6. Menü çubuğunda **Görünüm**, **diğer pencereler**, **testsearch**öğesini seçin.  
   
-     Araç penceresi görünür, ancak henüz arama denetimi görünür değil.  
+     Araç penceresi görünür, ancak arama denetimi henüz görünmez.  
   
-## <a name="to-add-a-search-box-to-the-tool-window"></a>Araç penceresine arama kutusunu eklemek için  
+## <a name="to-add-a-search-box-to-the-tool-window"></a>Araç penceresine bir arama kutusu eklemek için  
   
-1. TestSearch.cs dosyasına aşağıdaki kodu ekleyin `TestSearch` sınıfı. Kodu geçersiz kılmalar <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> özellik get erişimcisine döndürür, böylece `true`.  
+1. TestSearch.cs dosyasında, sınıfına aşağıdaki kodu ekleyin `TestSearch` . Kod, <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> Get erişimcisinin döndürdüğü şekilde özelliği geçersiz kılar `true` .  
   
-     Aramayı etkinleştirmek için geçersiz kılmanız gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> özelliği. <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> Sınıfının Implements <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch> ve arama sağlamaz bir varsayılan uygulamasını sağlar.  
+     Aramayı etkinleştirmek için, özelliğini geçersiz kılmanız gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> . <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>Sınıfı uygular <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch> ve aramayı etkinleştiremeyen varsayılan bir uygulama sağlar.  
   
     ```csharp  
     public override bool SearchEnabled  
@@ -132,16 +132,16 @@ Uzantınızı bir araç penceresi güncelle, Visual Studio'da başka bir yerde g
     }  
     ```  
   
-2. Projeyi oluşturmak ve hata ayıklamaya başlayın. Deneysel örneği açılır.  
+2. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnek görüntülenir.  
   
-3. Visual Studio'nun deneysel örneğinde açın **TestSearch**.  
+3. Visual Studio 'nun deneysel örneğinde **Testsearch**' u açın.  
   
-     Arama denetimi görünür araç penceresinin en üstünde bir **arama** Filigran ve büyütme cam simgesi. Ancak, arama işlemi uygulanmadı çünkü arama henüz işe yaramaz.  
+     Araç penceresinin üst kısmında, arama filigranı ve büyüteç simgesiyle **bir arama denetimi** görünür. Ancak arama işlemi uygulanmadığı için arama henüz çalışmaz.  
   
-## <a name="to-add-the-search-implementation"></a>Arama uygulaması eklemek için  
- Üzerinde arama etkinleştirdiğinizde bir <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>gibi önceki yordamda bir konak araç penceresi oluşturur. Bu konak, ayarlar ve her zaman bir arka plan iş parçacığında ortaya çıkan arama işlemlerini yönetir. Çünkü <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> sınıfı arama ana ve ayarı oluşturulmasını arama yukarı yönetir, yalnızca bir arama görevi oluşturma ve arama yöntemi sağlar. Arama işlemi bir arka plan iş parçacığında oluşur ve araç penceresi denetimini çağrıları UI iş parçacığı üzerinde oluşur. Bu nedenle, kullanmalısınız [ThreadHelper.Invoke*](https://msdn.microsoft.com/data/ee197798(v=vs.85)) denetimi ile ilgili yaptığınız çağrıları yönetmek için yöntemi.  
+## <a name="to-add-the-search-implementation"></a>Arama uygulamasını eklemek için  
+ Bir üzerinde aramayı etkinleştirdiğinizde <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> , önceki yordamda olduğu gibi, araç penceresi bir arama ana bilgisayarı oluşturur. Bu konak, bir arka plan iş parçacığında her zaman gerçekleşen arama işlemlerini ayarlar ve yönetir. Sınıfı, <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> arama konağının oluşturulmasını ve aramanın kurulumunu yönettiğinden, yalnızca bir arama görevi oluşturmanız ve arama yöntemi sağlamanız gerekir. Arama işlemi bir arka plan iş parçacığında gerçekleşir ve Kullanıcı arabirimi iş parçacığında araç penceresi denetimine yapılan çağrılar oluşur. Bu nedenle, denetimle ilgili olarak yaptığınız tüm çağrıları yönetmek için [ThreadHelper. Invoke *](https://msdn.microsoft.com/data/ee197798(v=vs.85)) metodunu kullanmanız gerekir.  
   
-1. TestSearch.cs dosyasına aşağıdakileri ekleyin `using` ifadeleri:  
+1. TestSearch.cs dosyasında aşağıdaki `using` deyimleri ekleyin:  
   
     ```csharp  
     using System;  
@@ -156,15 +156,15 @@ Uzantınızı bir araç penceresi güncelle, Visual Studio'da başka bir yerde g
     using Microsoft.VisualStudio.Shell.Interop;  
     ```  
   
-2. İçinde `TestSearch` sınıfında, aşağıdaki eylemleri gerçekleştirir aşağıdaki kodu ekleyin:  
+2. Sınıfında, aşağıdaki `TestSearch` eylemleri gerçekleştiren aşağıdaki kodu ekleyin:  
   
-    - Geçersiz kılmalar <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A> arama görevi oluşturmak için yöntemi.  
+    - <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A>Arama görevi oluşturma yöntemini geçersiz kılar.  
   
-    - Geçersiz kılmalar <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> metin kutusunun durumunu geri yüklemek için yöntemi. Bir kullanıcı arama görevi ve ne zaman bir kullanıcı ayarlar veya seçenekleri veya filtreleri dağıtır iptal ettiğinde, bu yöntem çağrılır. Her ikisi de <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> UI iş parçacığı üzerinde çağrılır. Bu nedenle, metin kutusu yoluyla erişmeye ihtiyacınız yoksa [ThreadHelper.Invoke*](https://msdn.microsoft.com/data/ee197798(v=vs.85)) yöntemi.  
+    - <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A>Metin kutusunun durumunu geri yüklemek için yöntemini geçersiz kılar. Bu yöntem, bir Kullanıcı bir arama görevini iptal ettiğinde ve Kullanıcı seçenekleri ya da filtreleri ayarlarsa ya da ayarlarsa çağrılır. Her ikisi de <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> UI iş parçacığında çağırılır. Bu nedenle, [ThreadHelper. Invoke *](https://msdn.microsoft.com/data/ee197798(v=vs.85)) yöntemi aracılığıyla metin kutusuna erişmeniz gerekmez.  
   
-    - Adlı bir sınıf oluşturur `TestSearchTask` öğesinden devralan <xref:Microsoft.VisualStudio.Shell.VsSearchTask>, varsayılan bir uygulama sağlayan <xref:Microsoft.VisualStudio.Shell.Interop.IVsSearchTask>.  
+    - `TestSearchTask` <xref:Microsoft.VisualStudio.Shell.VsSearchTask> Varsayılan bir uygulamasını sağlayan öğesinden devralan adlı bir sınıf oluşturur <xref:Microsoft.VisualStudio.Shell.Interop.IVsSearchTask> .  
   
-         İçinde `TestSearchTask`, araç penceresi başvuran özel bir alan oluşturucu ayarlar. Arama yöntemi sağlamak için geçersiz kılma <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> ve <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStopSearch%2A> yöntemleri. <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> Yöntemdir burada arama işlemi uygulayabilir. Bu işlem, araması yaparak, metin kutusuna arama sonuçlarını görüntüleme ve arama tamamlandığını bildirmek için bu yöntemin temel sınıf uygulamasını çağırma içerir.  
+         İçinde `TestSearchTask` , Oluşturucu araç penceresine başvuran bir özel alan ayarlar. Arama yöntemini sağlamak için ve yöntemlerini geçersiz kılarsınız <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStopSearch%2A> . <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A>Yöntemi, arama işlemini uyguladığınız yerdir. Bu işlem aramanın tamamlanmasının, arama sonuçlarının metin kutusunda görüntülenmesine ve aramanın tamamlandığını raporlamak için bu yöntemin temel sınıf uygulamasını çağırmaya dahildir.  
   
     ```csharp  
     public override IVsSearchTask CreateSearch(uint dwCookie, IVsSearchQuery pSearchQuery, IVsSearchCallback pSearchCallback)  
@@ -263,16 +263,16 @@ Uzantınızı bir araç penceresi güncelle, Visual Studio'da başka bir yerde g
   
 3. Aşağıdaki adımları gerçekleştirerek arama uygulamanızı test edin:  
   
-    1. Projeyi yeniden derleyin ve hata ayıklamaya başlayın.  
+    1. Projeyi yeniden derleyin ve hata ayıklamayı başlatın.  
   
-    2. Visual Studio'nun deneysel örneğinde, araç penceresini yeniden açın, arama penceresinde bazı arama metni girin ve ENTER'ı tıklatın.  
+    2. Visual Studio 'nun deneysel örneğinde, araç penceresini yeniden açın, arama penceresinde bir arama metni girin ve ENTER ' a tıklayın.  
   
-         Doğru sonuçlar görüntülenmesi gerekir.  
+         Doğru sonuçlar görünmelidir.  
   
 ## <a name="to-customize-the-search-behavior"></a>Arama davranışını özelleştirmek için  
- Arama ayarları değiştirerek arama denetiminin nasıl göründüğünü ve nasıl arama gerçekleştirilir çeşitli değişiklikler yapabilirsiniz. Örneğin, (arama kutusuna görünen varsayılan metni) Filigran, en düşük ve en fazla arama denetiminin genişliğini ve bir ilerleme çubuğu gösterilip gösterilmeyeceğini değiştirebilirsiniz. (İsteğe bağlı veya hızlı arama) görünmesini hangi arama sonuçları başlatmak ve koşulları için son arama listesi gösterilip gösterilmeyeceğini noktada da değiştirebilirsiniz. Ayarlarında tam listesini bulabilirsiniz <xref:Microsoft.VisualStudio.PlatformUI.SearchSettingsDataSource> sınıfı.  
+ Arama ayarlarını değiştirerek, arama denetiminin görünme ve aramanın nasıl gerçekleştirildiği gibi çeşitli değişiklikler yapabilirsiniz. Örneğin, filigranı (arama kutusunda görünen varsayılan metin), arama denetiminin en düşük ve en yüksek genişliğini ve ilerleme çubuğunun gösterilip gösterilmeyeceğini değiştirebilirsiniz. Ayrıca, arama sonuçlarının görüntüleneceği noktayı (isteğe bağlı veya anında arama) ve en son aradığınız koşulların bir listesini gösterip göstermeyeceğinizi de değiştirebilirsiniz. Tüm ayarların listesini <xref:Microsoft.VisualStudio.PlatformUI.SearchSettingsDataSource> sınıfında bulabilirsiniz.  
   
-1. TestSearch.cs dosyasına aşağıdaki kodu ekleyin `TestSearch` sınıfı. Bu kod, isteğe bağlı arama (kullanıcının ENTER'ı gerekmez anlamına gelir) yerine hızlı arama sağlar. Kodu geçersiz kılmalar `ProvideSearchSettings` yönteminde `TestSearch` varsayılan ayarları değiştirmek gerekli olan sınıf.  
+1. TestSearch.cs dosyasında, sınıfına aşağıdaki kodu ekleyin `TestSearch` . Bu kod, isteğe bağlı arama yerine anında arama sağlar (kullanıcının ENTER 'a tıklamasından başka bir deyişle). Kod, `ProvideSearchSettings` `TestSearch` sınıfının varsayılan ayarlarını değiştirmek için gerekli olan yöntemini geçersiz kılar.  
   
     ```csharp  
     public override void ProvideSearchSettings(IVsUIDataSource pSearchSettings)  
@@ -282,11 +282,11 @@ Uzantınızı bir araç penceresi güncelle, Visual Studio'da başka bir yerde g
             (uint)VSSEARCHSTARTTYPE.SST_INSTANT);}  
     ```  
   
-2. Yeni test çözümün yeniden derlenmesi ve hata ayıklayıcıyı yeniden başlatılıyor.  
+2. Çözümü yeniden oluşturarak ve hata ayıklayıcıyı yeniden başlatarak yeni ayarı test edin.  
   
-     Arama sonuçları her zaman bir karakter arama kutusuna girin görüntülenir.  
+     Arama kutusuna her seferinde bir karakter girdiğinizde arama sonuçları görüntülenir.  
   
-3. İçinde `ProvideSearchSettings` yöntemi, bir ilerleme çubuğu görüntülenmesini sağlar aşağıdaki satırı ekleyin.  
+3. Yönteminde, `ProvideSearchSettings` ilerleme çubuğunun görüntülenmesini sağlayan aşağıdaki satırı ekleyin.  
   
     ```csharp  
     public override void ProvideSearchSettings(IVsUIDataSource pSearchSettings)  
@@ -300,26 +300,26 @@ Uzantınızı bir araç penceresi güncelle, Visual Studio'da başka bir yerde g
     }  
     ```  
   
-     İlerleme çubuğu görünmesini ilerleme bildirilmelidir. İlerleme durumunu bildirmek için aşağıdaki kod açıklamasını kaldırın `OnStartSearch` yöntemi `TestSearchTask` sınıfı:  
+     İlerleme çubuğunun görünmesi için ilerleme durumu bildirilmelidir. İlerlemeyi raporlamak için, sınıfının yönteminde aşağıdaki kodun açıklamasını kaldırın `OnStartSearch` `TestSearchTask` :  
   
     ```csharp  
     SearchCallback.ReportProgress(this, progress++, (uint)contentArr.GetLength(0));  
     ```  
   
-4. Yeterli, işleme ilerleme durumu yavaş çubuğu görünür dosyasında aşağıdaki satırı açıklamadan çıkarın `OnStartSearch` yöntemi `TestSearchTask` sınıfı:  
+4. İlerleme çubuğunun görünür olduğunu yeterince yavaş işlemek için, sınıfının yönteminde aşağıdaki satırın açıklamasını kaldırın `OnStartSearch` `TestSearchTask` :  
   
     ```csharp  
     System.Threading.Thread.Sleep(100);  
     ```  
   
-5. Yeni ayarları debugb için başlangıç ve çözümün yeniden derlenmesi sınayın.  
+5. Çözümü yeniden oluşturarak ve hata ayıklayıcıdan başlayarak yeni ayarları test edin.  
   
-     İlerleme çubuğu arama penceresinde (olarak, arama metin kutusu altında mavi bir çizgi) her zaman araması yaptığınızda görünür.  
+     Her arama yaptığınızda arama penceresinde (arama metin kutusunun altında bir mavi çizgi olarak) ilerleme çubuğu görüntülenir.  
   
-## <a name="to-enable-users-to-refine-their-searches"></a>Kendi aramaları iyileştirmek kullanıcıları etkinleştirmek için  
- Kullanıcılar kendi aramaları gibi seçenekleri daraltmak izin verebilirsiniz **eşleşen servis talebi** veya **eşleşen tam sözcük**. Onay kutuları veya düğme olarak görüntülenen komutları olarak görünen seçenekleri boolean, olabilir. Bu kılavuz için bir boolean seçeneği oluşturacaksınız.  
+## <a name="to-enable-users-to-refine-their-searches"></a>Kullanıcıların aramalarını iyileştirmesini sağlamak için  
+ Kullanıcıların aramalarını, **büyük/küçük harf eşleştirme** veya **sözcüğün tamamını eşleştirme**gibi seçenekler aracılığıyla iyileştirmelerine izin verebilirsiniz. Seçenekler, düğme olarak görünen onay kutuları veya komutlar olarak görünen Boole olabilir. Bu izlenecek yol için bir Boole seçeneği oluşturacaksınız.  
   
-1. TestSearch.cs dosyasına aşağıdaki kodu ekleyin `TestSearch` sınıfı. Kodu geçersiz kılmalar `SearchOptionsEnum` yöntemi belirli bir seçeneği açıp olup olmadığını algılamak, aramanın uygulanmasını sağlar. Kodda `SearchOptionsEnum` ekler seçeneği için büyük küçük harf duyarlı bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumWindowSearchOptions> Numaralandırıcı. Büyük küçük harf duyarlı seçeneğine de olarak kullanılabilir hale getirileceğini `MatchCaseOption` özelliği.  
+1. TestSearch.cs dosyasında, sınıfına aşağıdaki kodu ekleyin `TestSearch` . Kod, `SearchOptionsEnum` Arama uygulamasının belirli bir seçeneğin açık veya kapalı olduğunu algılamasına izin veren yöntemini geçersiz kılar. İçindeki kod, `SearchOptionsEnum` bir Numaralandırıcı ile büyük/küçük harf eşleştirmek için bir seçenek ekler <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumWindowSearchOptions> . Büyük/küçük harf eşleştirme seçeneği de özellik olarak kullanılabilir hale getirilir `MatchCaseOption` .  
   
     ```csharp  
     private IVsEnumWindowSearchOptions m_optionsEnum;  
@@ -353,7 +353,7 @@ Uzantınızı bir araç penceresi güncelle, Visual Studio'da başka bir yerde g
     }  
     ```  
   
-2. İçinde `TestSearchTask` sınıfı içinde matchCase satırı açıklamadan çıkarın `OnStartSearch` yöntemi:  
+2. `TestSearchTask`Sınıfında, yönteminde matchCase satırının açıklamasını kaldırın `OnStartSearch` :  
   
     ```csharp  
     private IVsEnumWindowSearchOptions m_optionsEnum;  
@@ -387,20 +387,20 @@ Uzantınızı bir araç penceresi güncelle, Visual Studio'da başka bir yerde g
     }  
     ```  
   
-3. Seçeneğini test edin:  
+3. Bu seçeneği test edin:  
   
-    1. Projeyi oluşturmak ve hata ayıklamaya başlayın. Deneysel örneği açılır.  
+    1. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnek görüntülenir.  
   
-    2. Araç penceresinde metin kutusunun sağ tarafındaki aşağı oku seçin.  
+    2. Araç penceresinde, metin kutusunun sağ tarafındaki aşağı oku seçin.  
   
-         **Eşleşen servis talebi** onay kutusu görüntülenir.  
+         **Büyük/küçük harf eşleştir** onay kutusu görüntülenir.  
   
-    3. Seçin **eşleşen servis talebi** onay kutusunu işaretleyin ve ardından bazı aramaları gerçekleştirin.  
+    3. **Büyük/küçük harf eşleştir** onay kutusunu seçin ve ardından bazı aramalar gerçekleştirin.  
   
-## <a name="to-add-a-search-filter"></a>Arama filtre eklemek için  
- Kullanıcıların arama hedefleri kümesini iyileştirmek arama filtreleri ekleyebilirsiniz. Örneğin, dosya Gezgini'nde dosyalar üzerinde en son değiştirildikleri tarihleri ve bunların dosya adı uzantıları tarafından filtre uygulayabilirsiniz. Bu kılavuzda, yalnızca çift çizgileri için bir filtre ekleyeceksiniz. Kullanıcı Bu filtre seçtiğinde, arama ana belirttiğiniz dizeleri arama sorgusuna eklenir. Bu dizeler arama yönteminizi belirlemek ve arama hedeflerini buna göre filtreleyin.  
+## <a name="to-add-a-search-filter"></a>Arama filtresi eklemek için  
+ Kullanıcıların arama hedefleri kümesini iyileştirmesine izin veren arama filtreleri ekleyebilirsiniz. Örneğin, dosya Gezgini 'ndeki dosyaları en son değiştirildiği tarih ve bunların dosya adı uzantılarına göre filtreleyebilirsiniz. Bu kılavuzda, yalnızca çift satırlar için bir filtre ekleyeceksiniz. Kullanıcı bu filtreyi seçtiğinde, arama ana bilgisayarı belirttiğiniz dizeleri arama sorgusuna ekler. Daha sonra bu dizeleri arama yönteminizin içinde tanımlayabilir ve arama hedeflerini buna göre filtreleyebilirsiniz.  
   
-1. TestSearch.cs dosyasına aşağıdaki kodu ekleyin `TestSearch` sınıfı. Kod uygulayan `SearchFiltersEnum` ekleyerek bir <xref:Microsoft.VisualStudio.PlatformUI.WindowSearchSimpleFilter> yalnızca satırlar da görünecek biçimde arama sonuçlarını filtrelemek için belirtir.  
+1. TestSearch.cs dosyasında, sınıfına aşağıdaki kodu ekleyin `TestSearch` . Kod, `SearchFiltersEnum` <xref:Microsoft.VisualStudio.PlatformUI.WindowSearchSimpleFilter> arama sonuçlarının yalnızca çift satır görünecek şekilde filtreleneceğini belirten bir ekleyerek uygular.  
   
     ```csharp  
     public override IVsEnumWindowSearchFilters SearchFiltersEnum  
@@ -415,9 +415,9 @@ Uzantınızı bir araç penceresi güncelle, Visual Studio'da başka bir yerde g
   
     ```  
   
-     Arama filtresi arama denetimi görüntüler artık `Search even lines only`. Ne zaman, kullanıcının seçtiği filtre dizesi `lines:"even"` arama kutusunda görünür. Diğer arama ölçütleri filtre olarak aynı anda görünebilir. Arama dizelerini filtre önce Filtre veya her ikisi de sonra görünebilir.  
+     Arama denetimi artık arama filtresini görüntülüyor `Search even lines only` . Kullanıcı filtreyi seçtiğinde, dize `lines:"even"` arama kutusunda görünür. Diğer arama ölçütleri de filtreyle aynı anda görünebilir. Arama dizeleri filtreden önce, filtreden sonra veya her ikisiyle de görünebilir.  
   
-2. TestSearch.cs dosyasında, aşağıdaki yöntemi ekleyin `TestSearchTask` bulunduğu sınıfı `TestSearch` sınıfı. Şu yöntemleri destekler `OnStartSearch` yöntemi bir sonraki adımda değiştireceksiniz.  
+2. TestSearch.cs dosyasında, sınıfındaki sınıfına aşağıdaki yöntemleri ekleyin `TestSearchTask` `TestSearch` . Bu yöntemler, bir `OnStartSearch` sonraki adımda değiştireceğiniz yöntemini destekler.  
   
     ```csharp  
     private string RemoveFromString(string origString, string stringToRemove)  
@@ -445,7 +445,7 @@ Uzantınızı bir araç penceresi güncelle, Visual Studio'da başka bir yerde g
     }  
     ```  
   
-3. İçinde `TestSearchTask` sınıfı, güncelleştirme `OnStartSearch` yöntemini aşağıdaki kod ile. Bu değişiklik, filtre desteklemek için kodu güncelleştirir.  
+3. Sınıfında, `TestSearchTask` `OnStartSearch` aşağıdaki kodla yöntemi güncelleştirin. Bu değişiklik, filtreyi desteklemek için kodu güncelleştirir.  
   
     ```csharp  
     protected override void OnStartSearch()  
@@ -526,30 +526,30 @@ Uzantınızı bir araç penceresi güncelle, Visual Studio'da başka bir yerde g
   
 4. Kodunuzu test edin.  
   
-5. Projeyi oluşturmak ve hata ayıklamaya başlayın. Visual Studio'nun deneysel örneğinde, araç penceresi açın ve ardından arama denetimi aşağı oku seçin.  
+5. Projeyi derleyin ve hata ayıklamayı başlatın. Visual Studio 'nun deneysel örneğinde araç penceresini açın ve arama denetimindeki aşağı oku seçin.  
   
-     **Eşleşen servis talebi** onay kutusunu ve **arama yalnızca çift çizgileri** filtre görünür.  
+     **Büyük/küçük harf eşleştir** onay kutusu ve **yalnızca arama satırları** filtresi görüntülenir.  
   
 6. Filtreyi seçin.  
   
-     Arama kutusuna içeren **satırlar: "da"**, ve aşağıdaki sonuçlar gösterilir:  
+     Arama kutusu şu **satırları içerir: "çift"** ve aşağıdaki sonuçlar görünür:  
   
-     iyi 2  
+     2 iyi  
   
      4 iyi  
   
-     6 güle güle  
+     6 güle  
   
-7. Silme `lines:"even"` arama kutusundan **eşleşen servis talebi** onay kutusunu işaretleyin ve ardından girin `g` arama kutusuna.  
+7. `lines:"even"`Arama kutusundan Sil, **büyük/küçük harf eşleştir** onay kutusunu seçin ve `g` Arama kutusuna girin.  
   
      Aşağıdaki sonuçlar görüntülenir:  
   
-     1'e  
+     1 git  
   
-     iyi 2  
+     2 iyi  
   
-     5 güle güle  
+     5 güle  
   
-8. Arama kutusunun sağındaki X seçin.  
+8. Arama kutusunun sağ tarafındaki X seçeneğini belirleyin.  
   
-     Arama temizlenir ve özgün içeriği görüntülenir. Ancak, **eşleşen servis talebi** onay kutusu seçili durumdayken.
+     Arama temizlenir ve özgün içerik görüntülenir. Ancak, **büyük/küçük harf eşleştir** onay kutusu hala seçilidir.

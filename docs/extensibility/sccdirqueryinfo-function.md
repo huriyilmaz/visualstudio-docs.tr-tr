@@ -1,5 +1,5 @@
 ---
-title: SccDirQueryInfo Fonksiyonu | Microsoft Dokümanlar
+title: SccDirQueryInfo Işlevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 222b5d15a1e2bcd9bd3f27a5cd0e9904642d9786
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80700947"
 ---
-# <a name="sccdirqueryinfo-function"></a>SccDirQueryInfo fonksiyonu
-Bu işlev, geçerli durumları için tam nitelikli dizinlerin listesini inceler.
+# <a name="sccdirqueryinfo-function"></a>SccDirQueryInfo işlevi
+Bu işlev, geçerli durumları için tam dizinlerin listesini inceler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 SCCRTN SccDirQueryInfo(
@@ -34,40 +34,40 @@ LPLONG  lpStatus
 ```
 
 ### <a name="parameters"></a>Parametreler
- Pcontext
+ pContext
 
-[içinde] Kaynak denetimi eklentisi bağlam yapısı.
+'ndaki Kaynak denetimi eklentisi bağlam yapısı.
 
  nDirs
 
-[içinde] Sorgulanacak dizin sayısı.
+'ndaki Sorgulanmasını seçtiğiniz dizinlerin sayısı.
 
  lpDirNames
 
-[içinde] Sorgulanacak dizinlerin tam nitelikli yolları dizisi.
+'ndaki Sorgulanacak dizinlerin tam nitelikli yolları dizisi.
 
- lpDurum
+ lpStatus
 
-[içinde, dışarı] Durum bayraklarını döndürmek için kaynak denetim eklentisi için bir dizi yapısı (ayrıntılar için [Dizin durum koduna](../extensibility/directory-status-code-enumerator.md) bakın).
+[in, out] Kaynak denetimi eklentisinin durum bayraklarını döndürmesi için bir dizi yapısı (Ayrıntılar için [Dizin durum koduna](../extensibility/directory-status-code-enumerator.md) bakın).
 
 ## <a name="return-value"></a>Döndürülen değer
- Bu işlevin kaynak denetim eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |SCC_OK|Sorgu başarılı oldu.|
-|SCC_E_OPNOTSUPPORTED|Kaynak kodu denetim sistemi bu işlemi desteklemez.|
-|SCC_E_ACCESSFAILURE|Kaynak denetim sistemine erişmede büyük olasılıkla ağ veya çekişme sorunları nedeniyle bir sorun vardı. Yeniden deneme önerilir.|
-|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Nonspesifik bir hata.|
+|SCC_E_OPNOTSUPPORTED|Kaynak kodu denetim sistemi bu işlemi desteklemiyor.|
+|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya çekişme sorunlarından dolayı kaynak denetim sistemine erişirken bir sorun oluştu. Yeniden deneme önerilir.|
+|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Özel olmayan hata.|
 
 ## <a name="remarks"></a>Açıklamalar
- İşlev, geri dönüş dizisini `SCC_DIRSTATUS` aileden gelen bit maskesiyle doldurur (bkz. [Dizin durum kodu),](../extensibility/directory-status-code-enumerator.md)verilen her dizin için bir giriş. Durum dizisi arayan tarafından ayrılır.
+ İşlevi, döndürülen diziyi aileden bit bit maskesi `SCC_DIRSTATUS` (bkz. [Dizin durum kodu](../extensibility/directory-status-code-enumerator.md)), verilen her dizin için bir giriş ile doldurur. Durum dizisi, çağıran tarafından ayrılır.
 
- Dizin, ilgili bir projeye sahip olup olmadığını sorgulayarak dizinin kaynak denetimi altında olup olmadığını denetlemek için dizin yeniden adlandırılmadan önce Bu işlevi kullanır. Dizin kaynak denetimi altında değilse, IDE kullanıcıya uygun uyarı sağlayabilir.
+ Bu işlev, bir dizin yeniden adlandırılmadan önce, kaynağın karşılık gelen bir proje olup olmadığını sorgulayarak kaynak denetimi altında olup olmadığını denetlemek için kullanılır. Dizin, kaynak denetimi altında değilse, IDE kullanıcıya uygun bir uyarı verebilir.
 
 > [!NOTE]
-> Kaynak denetim eklentisi durum değerlerinden birini veya birkaçını uygulamamayı seçerse, uygulanmamış bitler sıfıra ayarlanmalıdır.
+> Bir kaynak denetimi eklentisi bir veya daha fazla durum değeri uygulamamı seçerse, uygulanmayan bitler sıfır olarak ayarlanmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak kontrol eklentisi API fonksiyonları](../extensibility/source-control-plug-in-api-functions.md)
+- [Kaynak denetimi eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)
 - [Dizin durum kodu](../extensibility/directory-status-code-enumerator.md)

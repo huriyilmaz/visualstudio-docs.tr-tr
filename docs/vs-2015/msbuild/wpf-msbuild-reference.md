@@ -18,38 +18,38 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a940cf371373d23d98ce8f89005197ee3ea7c309
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65687063"
 ---
 # <a name="wpf-msbuild-reference"></a>WPF MSBuild Başvurusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Windows Presentation Foundation (WPF), bu bölümde belgelenen diğer derleme desteğiyle Microsoft yapı engine (MSBuild) genişletir.  
+Windows Presentation Foundation (WPF), bu bölümde belgelenen ek derleme desteğiyle Microsoft Build Engine 'i (MSBuild) genişletir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [.Targets Dosyaları](../msbuild/wpf-dot-targets-files.md)  
- WPF açıklar. Dosyaları hedefler.  
+ [Targets Dosyaları](../msbuild/wpf-dot-targets-files.md)  
+ WPF 'yi açıklar. Hedef dosyaları.  
   
- [Görev Başvurusu](../msbuild/wpf-msbuild-task-reference.md)  
- Derleme görevleri kullanılabilir WPF listeler.  
+ [Görev başvurusu](../msbuild/wpf-msbuild-task-reference.md)  
+ Kullanılabilir WPF derleme görevlerini listeler.  
   
  <xref:Microsoft.Build.Tasks>  
- Bir derleme görevi derleme.  
+ Derleme görevi derlemesi.  
   
  <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper>  
- Yapı görev dağıtım önyükleyici derleme.  
+ Derleme görev dağıtımı önyükleyici derlemesi.  
   
  <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities>  
- Yapı görev dağıtım bildirimi yardımcı programını derleme.  
+ Derleme görevi dağıtım bildirimi yardımcı programı derlemesi.  
   
  <xref:Microsoft.Build.Tasks.Hosting>  
- Bir derleme, barındırma derleme görevi.  
+ Derleme görevi barındırma derlemesi.  
   
  <xref:Microsoft.Build.Tasks.Windows>  
- Yapı görev windows derleme.  
+ Derleme görevi Windows derlemesi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [MSBuild](https://msdn.microsoft.com/7c49aba1-ee6c-47d8-9de1-6f29a906e20b)
+ [MSBUILD](https://msdn.microsoft.com/7c49aba1-ee6c-47d8-9de1-6f29a906e20b)

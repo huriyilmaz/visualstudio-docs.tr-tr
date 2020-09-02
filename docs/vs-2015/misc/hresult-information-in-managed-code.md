@@ -1,5 +1,5 @@
 ---
-title: Yönetilen kodda HRESULT bilgi | Microsoft Docs
+title: Yönetilen koddaki HRESULT bilgileri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -11,60 +11,60 @@ ms.assetid: 0795ee94-17a8-4327-bf57-27cd5e312a4c
 caps.latest.revision: 29
 manager: jillfra
 ms.openlocfilehash: 4f80b575656c2d8b1740f217f2e144f89f254078
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65681627"
 ---
-# <a name="hresult-information-in-managed-code"></a>Yönetilen kodda HRESULT bilgileri
-HRESULT dönüş değerlerini karşılaştığında, yönetilen kodda COM arasındaki etkileşimi sorunlara neden olabilir.  
+# <a name="hresult-information-in-managed-code"></a>Yönetilen koddaki HRESULT bilgileri
+Yönetilen kod ve COM arasındaki etkileşim, HRESULT dönüş değerleriyle karşılaşıldığında sorunlara neden olabilir.  
   
- Bir COM arabirimi içinde bu rolleri HRESULT dönüş değerini yürütebilirsiniz:  
+ Bir COM arabiriminde, HRESULT dönüş değeri şu rolleri yürütebilir:  
   
-- Hata bilgisi sunar (örneğin, <xref:Microsoft.VisualStudio.VSConstants.E_INVALIDARG>).  
+- Hata bilgilerini sunun (örneğin, <xref:Microsoft.VisualStudio.VSConstants.E_INVALIDARG> ).  
   
-- Programın normal davranış hakkında durum bilgileri sağlar.  
+- Normal program davranışına ilişkin durum bilgilerini sunun.  
   
-  HRESULT'ları, COM yönetilen kodu çağırdığında, bu sorunlara neden olabilir:  
+  COM yönetilen koda çağırdığında, HRESULTs bu sorunlara neden olabilir:  
   
-- HRESULT değerleri dönüş küçüktür sıfır (hata kodları) COM İşlevler, özel durum oluşturur.  
+- Sıfırdan küçük HRESULT değerleri döndüren COM işlevleri (hata kodları) özel durum oluşturur.  
   
-- Dönüş düzenli olarak iki veya daha fazla farklı başarı kodları, örneğin, COM yöntemleri <xref:Microsoft.VisualStudio.VSConstants.S_OK> veya <xref:Microsoft.VisualStudio.VSConstants.S_FALSE>, ayırt edici olamaz.  
+- Veya gibi iki veya daha fazla farklı başarı kodunu düzenli olarak döndüren COM yöntemleri <xref:Microsoft.VisualStudio.VSConstants.S_OK> ayırt edilemez <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> .  
   
-  Çünkü çoğu [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] HRESULT değerlerini değerinden, sıfır veya farklı bir başarı kodu döndürür ya da dönüş COM işlevleri [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] birlikte çalışma derlemelerini yazılı böylece yöntem imzaları korunur. Tüm [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] birlikte çalışma yöntemlerdir `int` türü. HRESULT değerleri, birlikte çalışma katmanı değişikliğinin ve özel durumların olmadan aracılığıyla geçirilir.  
+  [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]Com işlevlerinin birçoğu sıfırdan küçük HRESULT değerleri döndürdüğü veya farklı başarı kodları döndürtiğinden, [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] birlikte çalışma derlemeleri, yöntem imzalarının korunması için yazılmıştır. Tüm [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] birlikte çalışma yöntemleri `int` türdür. HRESULT değerleri, değişiklik yapılmadan ve özel durum oluşturmadan birlikte çalışma katmanından geçirilir.  
   
-  Bir COM işlev çağıran yönetilen yönteme HRESULT döndürdüğünden, çağıran Metoda HRESULT denetleyin ve gerekirse özel durumlar gerekir.  
+  Bir COM işlevi çağıran yönetilen metoda bir HRESULT döndürdüğünden, çağıran yöntem HRESULT 'yi denetlemesi ve gerektiğinde özel durumlar oluşturması gerekir.  
   
-## <a name="handling-hresults-returned-to-managed-code-from-com"></a>Yönetilen kod için COM'dan döndürülen HRESULTs işleme  
- Yönetilen koddan bir COM arabirimi çağırdığınızda HRESULT değerini inceleyin ve gerekirse bir özel durum. <xref:Microsoft.VisualStudio.ErrorHandler> Sınıfı içeren <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> HRESULT değerine bağlı olarak bir COM özel durumu oluşturan yöntem kendisine geçirilen.  
+## <a name="handling-hresults-returned-to-managed-code-from-com"></a>COM 'dan yönetilen koda döndürülen HRESULTs işleme  
+ Yönetilen koddan bir COM arabirimini çağırdığınızda, HRESULT değerini inceleyin ve gerekirse bir özel durum oluşturun. <xref:Microsoft.VisualStudio.ErrorHandler>Sınıfı, <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> kendısıne geçirilen HRESULT değerine bağlı olarak bir com özel durumu oluşturan yöntemini içerir.  
   
- Varsayılan olarak, <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> değeri sıfırdan küçük olan bir HRESULT geçirilen her bir özel durum oluşturur. Ek HRESULTS değerlerini olduğu gibi HRESULTs kabul edilebilir değerler ve hiçbir özel durum durumlarda iletilmesi gereken <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> değerleri test sonra. Test edilen HRESULT açıkça geçirilecek herhangi bir HRESULT değerlerini eşleşip eşleşmediğini <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>, hiçbir özel durum.  
+ Varsayılan olarak, <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> sıfırdan küçük bir değere sahip BIR HRESULT geçirildiğinde bir özel durum oluşturur. Bu tür Hsonuçların kabul edilebilir değerler olduğu ve hiçbir özel durum oluşturulması gereken durumlarda, <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> değerler test edildikten sonra ek HSONUÇLARıN değerlerinin geçirilmesi gerekir. Test edilmekte olan HRESULT, açıkça geçirilen herhangi bir HRESULT değeri ile eşleşiyorsa <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> , hiçbir özel durum oluşturulmaz.  
   
 > [!NOTE]
-> <xref:Microsoft.VisualStudio.VSConstants> Sınıfı sabitler gibi ortak HRESULT'ları için içeren <xref:Microsoft.VisualStudio.VSConstants.S_OK> ve <xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL>, ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] HRESULTS, örneğin, <xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA> ve <xref:Microsoft.VisualStudio.VSConstants.VS_E_UNSUPPORTEDFORMAT>. <xref:Microsoft.VisualStudio.VSConstants> Ayrıca sağlar <xref:Microsoft.VisualStudio.ErrorHandler.Succeeded%2A> ve <xref:Microsoft.VisualStudio.ErrorHandler.Failed%2A> com başarılı ve başarısız makrolarındaki karşılık gelen yöntemleri  
+> Sınıfı, ve gibi <xref:Microsoft.VisualStudio.VSConstants> ortak HRESULTS için sabitler içerir, örneğin, ve <xref:Microsoft.VisualStudio.VSConstants.S_OK> <xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] <xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA> <xref:Microsoft.VisualStudio.VSConstants.VS_E_UNSUPPORTEDFORMAT> . <xref:Microsoft.VisualStudio.VSConstants> Ayrıca, <xref:Microsoft.VisualStudio.ErrorHandler.Succeeded%2A> <xref:Microsoft.VisualStudio.ErrorHandler.Failed%2A> com 'daki başarılı ve başarısız makrolara karşılık gelen ve yöntemlerini de sağlar.  
   
- Örneğin, aşağıdaki işlev çağrısı göz önünde bulundurun <xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL> kabul edilebilir bir dönüş değeri başka bir HRESULT hata küçüktür sıfır temsil nesnesidir.  
+ Örneğin, <xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL> kabul edilebilir bir dönüş değeri olan, ancak sıfırdan küçük DIĞER HRESULT bir hatayı temsil eden aşağıdaki işlev çağrısını göz önünde bulundurun.  
   
  [!code-csharp[VSSDKHRESULTInformation#1](../snippets/csharp/VS_Snippets_VSSDK/vssdkhresultinformation/cs/vssdkhresultinformationpackage.cs#1)]
  [!code-vb[VSSDKHRESULTInformation#1](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkhresultinformation/vb/vssdkhresultinformationpackage.vb#1)]  
   
- Varsa birden fazla dönüş kabul edilebilir değerler, ek HRESULT değerleri yalnızca çağrı listesine eklenebilecek <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>.  
+ Birden fazla kabul edilebilir dönüş değeri varsa, ek HRESULT değerleri yalnızca öğesine yapılan çağrının listesine eklenebilir <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> .  
   
  [!code-csharp[VSSDKHRESULTInformation#2](../snippets/csharp/VS_Snippets_VSSDK/vssdkhresultinformation/cs/vssdkhresultinformationpackage.cs#2)]
  [!code-vb[VSSDKHRESULTInformation#2](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkhresultinformation/vb/vssdkhresultinformationpackage.vb#2)]  
   
-## <a name="returning-hresults-to-com-from-managed-code"></a>HRESULT'ları, yönetilen koddan COM döndürme  
- Hiçbir özel durum oluşursa, kod döndürür yönetilen <xref:Microsoft.VisualStudio.VSConstants.S_OK> adlı COM işlev. COM birlikte çalışma, yönetilen kodda kesin olarak belirlenmiştir ortak özel durumu destekler. Örneğin, kabul edilebilir bir alan bir yöntem `null` bağımsız değişkeni oluşturur bir <xref:System.ArgumentNullException>.  
+## <a name="returning-hresults-to-com-from-managed-code"></a>Yönetilen koddan COM 'a HRESULTS döndürme  
+ Özel durum oluşursa, yönetilen kod <xref:Microsoft.VisualStudio.VSConstants.S_OK> onu ÇAĞıRAN com işlevine geri döner. COM birlikte çalışması, yönetilen kodda kesin olarak belirlenmiş ortak özel durumları destekler. Örneğin, kabul edilemez bir bağımsız değişken alan bir yöntem `null` bir oluşturur <xref:System.ArgumentNullException> .  
   
- Hangi özel durum throw emin değilseniz ancak HRESULT biliyorsanız döndürmek için COM, kullanabileceğiniz istediğiniz <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> uygun özel durum için yöntemi. Bu standart olmayan hatayla bile bir örneğin çalışır <xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA>. <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> kesin türü belirtilmiş bir özel durum girişimi HRESULT eşlemek için geçirilen. Erişilemiyorsa, bunun yerine genel bir COM özel durumu oluşturur. Ultimate sonucudur HRESULT için geçirdiğiniz olduğunu <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> yönetilen koddan adlı COM işlevi döndürülür.  
+ Hangi özel durumun oluşturulması gerektiğini, ancak COM 'a geri dönmek istediğiniz HRESULT 'yi biliyorsanız, <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> uygun bir özel durum oluşturmak için yöntemini kullanabilirsiniz. Bu, standart dışı bir hata ile (örneğin,) birlikte kullanılır <xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA> . <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> kendisine geçirilen HRESULT 'yi kesin türü belirtilmiş bir özel durumla eşlemeye çalışır. Değilse, bunun yerine genel bir COM özel durumu oluşturur. Nihai sonuç, <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> yönetilen koddan kendisine GEÇIRDIĞINIZ HRESULT, ÇAĞıRAN com işlevine döndürülür.  
   
 > [!NOTE]
-> Özel durumlar, performans tehlikeye ve anormal program koşullarını göstermek için tasarlanmıştır. Genellikle ortaya koşullarını oluşan bir özel durum yerine işlenmiş satır içi olması gerekir.  
+> Özel durumların performansı tehlikeye alınır ve anormal program koşullarını göstermek için tasarlanmıştır. Genellikle oluşan koşulların, oluşturulan özel durum yerine satır içi olarak işlenmesi gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen VSPackage'ları](../misc/managed-vspackages.md)   
- [Yönetilmeyen kod ile birlikte çalışma](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258)   
- [Nasıl yapılır: Harita HRESULTs ve özel durumları](https://msdn.microsoft.com/library/610b364b-2761-429d-9c4a-afbc3e66f1b9)   
- [Birlikte çalışma için COM bileşenleri oluşturma](https://msdn.microsoft.com/7a2c657a-cfef-40f0-bed3-7c2c0ac4abdf)   
- [Yönetilen VSPackage'ları](../misc/managed-vspackages.md)
+ [Yönetilen VSPackages](../misc/managed-vspackages.md)   
+ [Yönetilmeyen kodla birlikte çalışma](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258)   
+ [Nasıl yapılır: HRESULTs ve özel durumları eşleme](https://msdn.microsoft.com/library/610b364b-2761-429d-9c4a-afbc3e66f1b9)   
+ [Birlikte çalışabilirlik için COM bileşenleri oluşturma](https://msdn.microsoft.com/7a2c657a-cfef-40f0-bed3-7c2c0ac4abdf)   
+ [Yönetilen VSPackages](../misc/managed-vspackages.md)

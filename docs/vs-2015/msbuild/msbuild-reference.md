@@ -17,80 +17,80 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8dfa8314ffe8f174422519ba549d9949cc36b764
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65683008"
 ---
 # <a name="msbuild-reference"></a>MSBuild Başvurusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] için derleme sistemidir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Aşağıdaki bağlantılar içeren konuların müşteri adayı [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] başvuru bilgileri.  
+[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] , için derleme sistemidir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Aşağıdaki bağlantılar başvuru bilgilerini içeren konulara yol açabilir [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Proje Dosyası Şema Başvurusu](../msbuild/msbuild-project-file-schema-reference.md)  
- Oluşturan XML öğeleri açıklanır [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] dosya biçimi.  
+ Dosya biçimini oluşturan XML öğelerini açıklar [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
- [Görev Başvurusu](../msbuild/msbuild-task-reference.md)  
- Dahil olan tipik görevlerden bazılarını açıklar [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)].  
+ [Görev başvurusu](../msbuild/msbuild-task-reference.md)  
+ İçindeki bazı tipik görevleri açıklar [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
  [Koşullar](../msbuild/msbuild-conditions.md)  
- İçinde kullanılabilir olan koşulları açıklayan [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] dosyaları.  
+ Dosyalardaki kullanılabilir koşulları açıklar [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
  [Koşullu Yapılar](../msbuild/msbuild-conditional-constructs.md)  
- Nasıl kullanılacağını açıklar `Choose`, `When`, ve `Otherwise` öğeleri.  
+ `Choose`, Ve öğelerinin nasıl kullanılacağını açıklar `When` `Otherwise` .  
   
- [MSBuild Ayrılmış ve Tanınmış Özellikleri](../msbuild/msbuild-reserved-and-well-known-properties.md)  
- Açıklar [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] ayrılmış özellikleri.  
+ [MSBuild ayrılmış ve Iyi bilinen Özellikler](../msbuild/msbuild-reserved-and-well-known-properties.md)  
+ [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]Ayrılmış özellikleri açıklar.  
   
- [Yaygın MSBuild Proje Özellikleri](../msbuild/common-msbuild-project-properties.md)  
- Tüm proje türleri için ortak olan proje özellikleri ve genellikle belirli bir proje türü tarafından kullanılan özellikleri açıklanmaktadır.  
+ [Ortak MSBuild proje özellikleri](../msbuild/common-msbuild-project-properties.md)  
+ Tüm proje türlerinde ortak olan proje özelliklerini ve genellikle belirli proje türleri tarafından kullanılan özellikleri açıklar.  
   
- [Yaygın MSBuild Proje Öğeleri](../msbuild/common-msbuild-project-items.md)  
- Tüm proje türleri için ortak olan proje öğeleri ve de genellikle belirli bir proje türü tarafından kullanılan öğeleri açıklar.  
+ [Ortak MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)  
+ Tüm proje türlerinde ortak olan proje öğelerini ve genellikle belirli proje türleri tarafından kullanılan öğeleri açıklar.  
   
- [Komut Satırı Başvurusu](../msbuild/msbuild-command-line-reference.md)  
- İle kullanılabilecek anahtarlar ve bağımsız değişkenleri açıklar [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)].exe.  
+ [Komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md)  
+ . Exe ile kullanılabilen bağımsız değişkenleri ve anahtarları açıklar [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
- [.Targets Dosyaları](../msbuild/msbuild-dot-targets-files.md)  
- Açıklar. Dahil edilen hedefler dosyası [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)].  
+ [Targets Dosyaları](../msbuild/msbuild-dot-targets-files.md)  
+ Açıklanır. Uygulamasına dahil edilen hedefler dosyası [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
  [Tanınmış Öğe Meta Verisi](../msbuild/msbuild-well-known-item-metadata.md)  
- İle birlikte her bir öğe oluşturulduğunda meta verilerini listeler.  
+ Her öğeyle birlikte oluşturulan meta verileri listeler.  
   
  [Yanıt Dosyaları](../msbuild/msbuild-response-files.md)  
- Komut satırı anahtarları içeren .rsp dosyaları açıklar.  
+ Komut satırı anahtarlarını içeren. rsp dosyalarını açıklar.  
   
- [Ek Kaynaklar](../msbuild/additional-resources-for-msbuild.md)  
- Bağlantılar sağlar [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] Web sitelerinin ve haber gruplarının.  
+ [Ek kaynaklar](../msbuild/additional-resources-for-msbuild.md)  
+ [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]Web siteleri ve haber grupları için bağlantılar sağlar.  
   
  [WPF MSBuild Başvurusu](../msbuild/wpf-msbuild-reference.md)  
- İçeren bir [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] hedeflerini ve görev başvurusu Windows Presentation Foundation (WPF).  
+ [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]Windows Presentation Foundation (WPF) için bir hedefler ve görev başvurusu içerir.  
   
- [Kaçış İçin Özel Karakterler](../msbuild/special-characters-to-escape.md)  
- "Doğru yorumlanması için kaçış karakterleri" gerekebilir karakterleri listeler. Bir kaçış dizisi aşağıda alternatif bir yorumu olduğunu belirten bir karakter dizisi ' dir.  
+ [Kaçış için özel karakterler](../msbuild/special-characters-to-escape.md)  
+ Doğru yorumlanan "kaçan" olması gereken karakterleri listeler. Kaçış dizisi, bir alternatif yorum olduğunu belirten bir karakter dizisidir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [MSBuild'e genel bakış](https://msdn.microsoft.com/e39f13f7-1e1d-4435-95ca-0c222bca071c) Introduces [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] ve nasıl projeleri derlemek için kullanılacağını açıklayan konulara bağlantılar sağlar.  
+ [MSBuild genel bakış](https://msdn.microsoft.com/e39f13f7-1e1d-4435-95ca-0c222bca071c) [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] , Projenin derlenmesi için nasıl kullanılacağını açıklayan konuların bağlantılarını tanıtır ve sunar.  
   
  <xref:Microsoft.Build.Conversion>  
- Dönüştürme ad alanı başvurusu içeriyor  
+ Dönüştürme ad alanı başvurusunu içerir  
   
  <xref:Microsoft.Build.Evaluation>  
- Değerlendirme ad alanı başvurusu içeriyor  
+ Değerlendirme ad alanı başvurusunu içerir  
   
  <xref:Microsoft.Build.Execution>  
- Yürütme ad alanı başvurusu içeriyor  
+ Yürütme ad alanı başvurusunu içerir  
   
  <xref:Microsoft.Build.Framework>  
- Framework ad alanı başvurusu içeriyor  
+ Framework ad alanı başvurusunu içerir  
   
  <xref:Microsoft.Build.Logging>  
- Günlüğe kaydetme ad alanı başvurusu içeriyor  
+ Günlüğe kaydetme ad alanı başvurusunu içerir  
   
  <xref:Microsoft.Build.Tasks>  
- Görevleri ad alanı başvurusu içeriyor  
+ Görevler ad alanı başvurusunu içerir  
   
  <xref:Microsoft.Build.Utilities>  
- Yardımcı programları ad alanı başvurusu içeriyor
+ Yardımcı programlar ad alanı başvurusunu içerir

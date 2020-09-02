@@ -1,5 +1,5 @@
 ---
-title: 'Hata: Otomatik olarak adımlanamıyor aktarılacaksa | Microsoft Docs'
+title: 'Hata: sunucuda otomatik olarak adımla | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -23,27 +23,27 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c8dcb8fa757f1cccf2f3aef6c2520e0c61da0b9f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65682674"
 ---
-# <a name="error-unable-to-automatically-step-into-the-server"></a>Hata: Otomatik olarak adımlanamıyor aktarılacaksa
+# <a name="error-unable-to-automatically-step-into-the-server"></a>Hata: Sunucunun İçine Otomatik Olarak Adımlanamıyor
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Hata görünür:  
+Hata şunu okur:  
   
- Otomatik olarak adımlanamıyor aktarılacaksa. Hata ayıklayıcı uzak yordam yürütülmesi önce bildirilmedi  
+ Otomatik olarak sunucuda adım adım alınamıyor. Uzaktan yordam yürütülmeden önce hata ayıklayıcıya bildirimde bulunulmadı  
   
- Bir web hizmeti adımlamak çalışırken, bu hata oluşabilir (bkz [Adımlama içine bir XML Web hizmeti](https://msdn.microsoft.com/8e67de38-bf5f-41cc-a457-1b88ce63d764)). Herhangi bir zamanda gerçekleşebilir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] düzgün ayarlanmadı.  
+ Bu hata, bir Web hizmetine (bkz. [BIR XML Web hizmeti Içine adımla](https://msdn.microsoft.com/8e67de38-bf5f-41cc-a457-1b88ce63d764)) çalışırken ortaya çıkabilir. Düzgün kurulmamış her zaman oluşabilir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] .  
   
  Olası nedenler şunlardır:  
   
-- Web.config dosyasında, [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] uygulama ayarlı değil "true" debug (bkz [ASP.NET uygulamalarında hata ayıklama modu](../debugger/how-to-enable-debugging-for-aspnet-applications.md)).  
+- Uygulamanız için web.config dosyası [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ' de hata ayıklamayı "true" olarak ayarladı (bkz. [ASP.NET uygulamalarında hata ayıklama modu](../debugger/how-to-enable-debugging-for-aspnet-applications.md)).  
   
-- Bir sürümünü [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Visual Studio yüklendikten sonra yüklendi. [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Visual Studio'da daha önce yüklü olması gerekir. Bu sorunu gidermek için Windows kullanın **Denetim Masası**, **programlar ve Özellikler** Visual Studio yüklemenizi onarmak için.  
+- [!INCLUDE[vstecasp](../includes/vstecasp-md.md)]Visual Studio yüklendikten sonra bir sürümü yüklendi. [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Visual Studio 'dan önce yüklenmelidir. Bu sorunu gidermek için, Visual Studio yüklemenizi onarmak üzere Windows **Denetim Masası**, **Programlar ve Özellikler** ' i kullanın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Uzaktan hata ayıklama ve sorun giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)   
- [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)
+ [Uzaktan hata ayıklama hataları ve sorun giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)   
+ [Uzaktan hata ayıklama](../debugger/remote-debugging.md)

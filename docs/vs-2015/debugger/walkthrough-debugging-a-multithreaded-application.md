@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Çok iş parçacıklı uygulamada hata ayıklama | Microsoft Docs'
+title: 'İzlenecek yol: çok Iş parçacıklı uygulamada hata ayıklama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,42 +18,42 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 33ce391523a256bcb195deccf0c14868b5eae707
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65683089"
 ---
-# <a name="walkthrough-debugging-a-multithreaded-application"></a>İzlenecek yol: Çok iş parçacıklı uygulamada hata ayıklama
+# <a name="walkthrough-debugging-a-multithreaded-application"></a>İzlenecek Yol: Çok İş Parçacıklı Uygulamada Hata Ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] Gelişmiş sağlar **iş parçacıkları** penceresi ve diğer kullanıcı arabirimi hata ayıklama çok iş parçacıklı uygulamalarda daha kolay hale getirmek için iyileştirmeler. Bu izlenecek yol yalnızca birkaç dakika sürer, ancak bunu tamamlamaya, çok iş parçacıklı uygulamalarda hata ayıklama için yeni arabirimi özellikleri ile alışmanızı.  
+[!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] çok iş parçacıklı uygulamalarda hata ayıklamayı kolaylaştırmak için geliştirilmiş bir **Iş parçacığı** penceresi ve diğer kullanıcı arabirimi geliştirmeleri sağlar. Bu izlenecek yol yalnızca birkaç dakika sürer, ancak bunu tamamlamak çok iş parçacıklı uygulamalarda hata ayıklamaya yönelik yeni arabirim özellikleri hakkında bilgi sağlar.  
   
- Bu izlenecek yolda başlamak için bir çok iş parçacıklı uygulaması projesi gerekir. Bu projeyi oluşturmak için burada listelenen adımları izleyin.  
+ Bu yönergeyi başlamak için çok iş parçacıklı bir uygulama projesine ihtiyacınız vardır. Bu projeyi oluşturmak için burada listelenen adımları izleyin.  
   
-#### <a name="to-create-the-walkthrough-project"></a>İzlenecek yol projeyi oluşturmak için  
+#### <a name="to-create-the-walkthrough-project"></a>İzlenecek yol projesi oluşturmak için  
   
-1. Üzerinde **dosya** menüsünde seçin **yeni** ve ardından **proje**.  
+1. **Dosya** menüsünde, **Yeni** ' yi seçin ve ardından **Proje**' ye tıklayın.  
   
      **Yeni Proje** iletişim kutusu görünür.  
   
-2. İçinde **proje türü**s kutusunda, tercih ettiğiniz dili seçin: **Visual Basic**, **Visual C#** , veya **Visual C++**.  
+2. **Proje türü**kutusunda, tercih ettiğiniz dile tıklayın: **Visual Basic**, **Visual C#** veya **Visual C++**.  
   
-3. İçinde **şablonları** kutusunda **konsol uygulaması** veya **CLR konsol uygulaması**.  
+3. **Şablonlar** kutusunda **konsol uygulaması** veya **clr konsol uygulaması**' nı seçin.  
   
-4. İçinde **adı** kutusuna MyThreadWalkthroughApp adı yazın.  
+4. **Ad** kutusuna MyThreadWalkthroughApp adını yazın.  
   
-5. **Tamam**'ı tıklatın.  
+5. **Tamam**’a tıklayın.  
   
-     Yeni bir konsol projesi görünür. Bir kaynak dosyası projeyi oluşturduğunuzda görünür. Seçtiğiniz dile bağlı olarak, kaynak dosya Module1.vb, Program.cs veya MyThreadWalkthroughApp.cpp çağrılabilir  
+     Yeni bir konsol projesi görüntülenir. Proje oluşturulduğunda, bir kaynak dosya görüntülenir. Seçtiğiniz dile bağlı olarak, kaynak dosyaya Module1. vb, Program.cs veya MyThreadWalkthroughApp. cpp adı verilir  
   
-6. Kaynak dosyada kod silin ve konunun bölümünde "Bir iş parçacığı oluşturulurken" görünen örnek kod ile değiştirin [iş parçacığı oluşturma ve geçirme verilerini başlangıç zamanında](https://msdn.microsoft.com/library/52b32222-e185-4f42-91a7-eaca65c0ab6d).  
+6. Kaynak dosyada görüntülenen kodu silin ve bunu, [Iş parçacığı oluşturma ve Başlangıç zamanında veri geçirme](https://msdn.microsoft.com/library/52b32222-e185-4f42-91a7-eaca65c0ab6d)konusunun "Iş parçacığı oluşturma" bölümünde görüntülenen örnek kodla değiştirin.  
   
-7. Üzerinde **dosya** menüsünü tıklatın **Tümünü Kaydet**.  
+7. **Dosya** menüsünde **Tümünü Kaydet**’e tıklayın.  
   
-#### <a name="to-begin-the-walkthrough"></a>İzlenecek yol başlamak için  
+#### <a name="to-begin-the-walkthrough"></a>İzlenecek yolu kullanmaya başlamak için  
   
-- Kaynak penceresinde, aşağıdaki kodu bulun:  
+- Kaynak penceresinde aşağıdaki kodu arayın:  
   
     ```vb  
     Thread.Sleep(3000)   
@@ -72,15 +72,15 @@ Console.WriteLine();
   
 #### <a name="to-start-debugging"></a>Hata ayıklamayı başlatmak için  
   
-1. Sağ `Console.WriteLine` deyimi, noktasına **kesme noktası** ve ardından **kesme noktası Ekle**.  
+1. Deyime sağ tıklayın `Console.WriteLine` , **kesme** noktası ' nın üzerine gelin ve ardından **kesme noktası Ekle**' ye tıklayın.  
   
-     Kaynak pencerenin sol tarafındaki kanalda, kırmızı bir TOP görünür. Bu, bir kesme noktası bu konumda şimdi ayarlandığını gösterir.  
+     Kaynak pencerenin sol tarafındaki cilt alanında kırmızı bir top görüntülenir. Bu, bir kesme noktasının artık bu konumda ayarlandığını gösterir.  
   
-2. Üzerinde **hata ayıklama** menüsünü tıklatın **hata ayıklamayı Başlat**.  
+2. **Hata ayıkla** menüsünde **Hata Ayıklamayı Başlat**’a tıklayın.  
   
-     Hata ayıklama başladığında, çalıştırmak için konsol uygulaması başlar ve kesme noktası sonra durur.  
+     Hata ayıklama başlar, konsol uygulamanız çalışmaya başlar ve sonra kesme noktasında durmaktadır.  
   
-3. Konsol uygulama penceresine odak bu noktada varsa, tıklayın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Pencere odağı döndürülecek [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+3. Konsol uygulama penceresi bu noktada odağa sahipse, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] odağı öğesine döndürmek için pencereye tıklayın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
 4. Kaynak penceresinde, aşağıdaki kodu içeren satırı bulun:  
   
@@ -98,164 +98,164 @@ Thread::Sleep(3000);
   
 1. 
   
-#### <a name="to-discover-the-thread-marker"></a>İş parçacığı işaret bulmak için  
+#### <a name="to-discover-the-thread-marker"></a>İş parçacığı işaretçisini bulma  
   
-1. Sağ **iş parçacıkları** penceresinde ardından **kaynak iş parçacıklarını Göster**.  
+1. **Iş parçacıkları** penceresinde sağ tıklayın ve sonra **Iş parçacıklarını kaynakta göster**' e tıklayın.  
   
-2. Pencerenin sol tarafındaki cilt payını bakın. Bu satırda iki bez iş parçacığı benzer bir simge görürsünüz. Bir iş parçacığı kırmızı ve diğer mavi şeklindedir. İş parçacığı işaretçisi, bir iş parçacığı bu konuma durdurulduğunu gösterir. Bu konumda büyük olasılıkla, iş parçacığı durduruldu.  
+2. Pencerenin sol tarafındaki cilt paya bakın. Bu satırda, iki kumaş iş parçacığına benzer bir simge görürsünüz. Bir iş parçacığı kırmızı ve diğeri mavi. İş parçacığı işaretçisi, bu konumda bir iş parçacığının durdurulduğunu gösterir. Büyük olasılıkla, iş parçacığı bu konumda durdurulmuş.  
   
-3. İşaretçi iş parçacığı işaret gelin. Bir DataTip görünür. DataTip durdurulmuş her iş parçacığı için adı ve iş parçacığı kimlik numarasını belirtir. Bu durumda, yalnızca bir iş parçacığı adı büyük olasılıkla yoktur `<noname>`.  
+3. İşaretçiyi iş parçacığı işaretçisinin üzerine getirin. Görüntülenen bir veri Ipucu. Veri Ipucu, her durdurulan iş parçacığı için ad ve iş parçacığı KIMLIĞI numarası size bildirir. Bu durumda, adı muhtemelen olan yalnızca bir iş parçacığı vardır `<noname>` .  
   
-4. İş parçacığı işaret sağ tıklayın. Kısayol menüsündeki seçenekleri unutmayın.  
+4. İş parçacığı işaretine sağ tıklayın. Kısayol menüsündeki seçeneklere göz önünde edin.  
   
-   Bu simge bir *iş parçacığı işaret*:  
+   Bu simge bir *iş parçacığı işaretleyicisi*:  
   
-   ![İş parçacığı işaret](../debugger/media/threadmarker.gif "ThreadMarker")  
+   ![İş parçacığı Işaretçisi](../debugger/media/threadmarker.gif "Threadişaretleyici")  
   
-## <a name="flagging-and-unflagging-threads"></a>Bayrak ekleme ve Unflagging iş parçacıkları  
- İçinde [!INCLUDE[vs_orcas_long](../includes/vs-orcas-long-md.md)], özel dikkat vermek istediğiniz iş parçacıklarının bayrağını. İş parçacıklarını işaretleme, önemli iş parçacığı izlemek ve iş parçacıkları hakkında önemli yoksaymak için iyi bir yoludur.  
+## <a name="flagging-and-unflagging-threads"></a>Iş parçacıklarının işaretlemesini ve Işaretini kaldırma  
+ İçinde [!INCLUDE[vs_orcas_long](../includes/vs-orcas-long-md.md)] , özel dikkat sağlamak istediğiniz iş parçacıklarını Bayrakla işaretleyebilirsiniz. İş parçacıkları için bayrak eklemek, önemli iş parçacıklarını izlemenin ve ilgilendiğiniz iş parçacıklarını yoksaymanın iyi bir yoludur.  
   
-#### <a name="to-flag-threads"></a>İş parçacıklarını için  
+#### <a name="to-flag-threads"></a>İş parçacıklarını işaretlemek için  
   
-1. Üzerinde **görünümü** menüsünde **araç çubukları**.  
+1. **Görünüm** menüsünde, **araç çubukları**' nın üzerine gelin.  
   
-     Emin olun **hata ayıklama konumu** araç seçili.  
+     **Hata ayıklama konumu** araç çubuğunun seçili olduğundan emin olun.  
   
-2. Git **hata ayıklama konumu** araç çubuğu ve tıklatın **iş parçacığı** listesi.  
+2. **Hata ayıklama konumu** araç çubuğuna gidin ve **iş parçacığı** listesine tıklayın.  
   
     > [!NOTE]
-    > Bu araç üç tanınmış listeleri tarafından tanınmasını sağlayabilir: **İşlem**, **iş parçacığı**, ve **yığın çerçeve**.  
+    > Bu araç çubuğunu üç belirgin listeye göre tanıyabilir: **işlem**, **Iş parçacığı**ve **yığın çerçevesi**.  
   
-3. Ne kadar iş parçacığı listede göründüğüne dikkat edin.  
+3. Listede kaç iş parçacığı göründüğünü unutmayın.  
   
-4. Geri Git sağ tıklayın ve kaynak penceresinde **iş parçacığı** yeniden işaretçisi.  
+4. Kaynak penceresine geri dönün ve **Iş parçacığı** işaretine tekrar sağ tıklayın.  
   
-5. Kısayol menüsünde, işaret **bayrağı**, iş parçacığı adı ve kimlik numarası'ı tıklatın.  
+5. Kısayol menüsünde, **bayrak**' ın üzerine gelin ve ardından iş parçacığı adı ve kimlik numarası ' na tıklayın.  
   
-6. Geri Git **hata ayıklama konumu** araç çubuğu ve tıklayın **iş parçacığı** yeniden listeleyin.  
+6. **Hata ayıklama konumu** araç çubuğuna geri dönün ve **iş parçacığı** listesine tekrar tıklayın.  
   
-     Yalnızca bayraklı iş parçacığı listesinde görünür. Yalnızca sağında bayrağı düğmesi **iş parçacığı** listesi. Bayrak simgesine düğmesine, önce soluk. Şimdi, bir düz, parlak kırmızı geldi.  
+     Artık listede yalnızca bayraklı iş parçacığı görüntülenir. **Iş parçacığı** listesinin hemen sağındaki bayrak düğmesi. Düğme üzerindeki bayrak simgesi daha önce soluk. Artık kesintisiz, parlak kırmızı.  
   
-7. İşaretçiyi, bayrak simgesinin üzerine gelin.  
+7. İşaretçiyi bayrak simgesinin üzerine getirin.  
   
-     Bir açılır pencere görüntülenir. Bu açılır pencere modu söyler **iş parçacığı** listesi konusu: **Yalnızca bayraklı iş parçacıklarını Göster**.  
+     Açılır pencere görüntülenir. Bu açılır pencere, **Iş parçacığı** listesinin hangi modda olduğunu söyler: **yalnızca bayraklı iş parçacıklarını göster**.  
   
-8. Geri geçiş yapmak için bayrağı düğmesine **tüm iş parçacıklarını Göster** modu.  
+8. **Tüm Iş parçacıkları modunu göstermek** üzere geri dönmek için bayrak düğmesine tıklayın.  
   
-9. Tıklayın **iş parçacığı** yeniden listeleme ve, artık tüm iş parçacıklarını yeniden görebildiğinizi doğrulayın.  
+9. **Iş parçacığı** listesine yeniden tıklayın ve artık tüm iş parçacıklarını yeniden görebildiğinizi doğrulayın.  
   
-10. Geri geçiş yapmak için bayrağı düğmesine **yalnızca bayraklı iş parçacıklarını Göster**.  
+10. **Yalnızca bayraklı Iş parçacıklarını göstermek**üzere geri dönmek için bayrak düğmesine tıklayın.  
   
-11. Üzerinde **hata ayıklama** menüsünde **Windows** ve ardından **iş parçacıkları**.  
+11. **Hata Ayıkla** menüsünde **Windows** ' un üzerine gelin ve ardından **iş parçacıkları**' na tıklayın.  
   
-     **İş parçacıkları** penceresi görüntülenir. Bir iş parçacığı bağlı bir belirgin bayrak simgesine sahip.  
+     **Iş parçacıkları** penceresi görüntülenir. Bir iş parçacığında kendisine bağlı belirgin bayrak simgesi vardır.  
   
-12. Kaynak penceresinde, iş parçacığı işaret tekrar sağ tıklayın.  
+12. Kaynak penceresinde iş parçacığı işaretine yeniden sağ tıklayın.  
   
-     Hangi seçenek kısayol menüsünde kullanılabilir dikkat edin. Yerine **bayrağı**, şimdi **Unflag**. Tıklamayın **Unflag**.  
+     Artık kısayol menüsünde hangi seçeneklerin kullanılabilir olduğuna dikkat edin. **Bayrak**yerine **artık bayrak işaretini görürsünüz.** **Unflag**tıklamayın.  
   
-13. İş parçacıklarını bayrakla konusunda sonraki yordama gidin.  
+13. İş parçacıklarının işaretini kaldırma hakkında sonraki yordama gidin.  
   
-#### <a name="to-unflag-threads"></a>İş parçacıklarını bayrakla için  
+#### <a name="to-unflag-threads"></a>İş parçacıklarının bayrağını kaldırmak için  
   
-1. Üzerinde **iş parçacıkları** penceresinde bayraklı iş parçacığına karşılık gelen satıra sağ tıklayın.  
+1. **Iş parçacıkları** penceresinde, bayraklı iş parçacığına karşılık gelen satıra sağ tıklayın.  
   
-     Bir kısayol menüsü görüntülenir. Seçeneklerine sahip **Unflag** ve **işaretsiz tüm**.  
+     Kısayol menüsü görüntülenir. **Bayrak kaldırmak** ve **tümünün**işaretini kaldırmak seçeneklere sahiptir.  
   
-2. İş parçacığının işaretini Kaldır için tıklatın **Unflag**.  
+2. İş parçacığının bayrağını kaldırmak için, **bayrağı kaldır**' ı tıklatın.  
   
 3. Kırmızı bayrak simgesine tıklayın.  
   
-4. Bakmak **hata ayıklama konumu** yeniden araç çubuğu. Bayrak düğmesini tekrar soluklaşır. Yalnızca bayraklı iş parçacığının işaretini kaldıran. Hiçbir işaretli iş parçacığı olduğundan, araç için geri geçti **tüm iş parçacıklarını Göster** modu. Tıklayın **iş parçacığı** listelemek ve tüm iş parçacıklarının görebildiğinizi doğrulayın.  
+4. **Hata ayıklama konumu** araç çubuğuna tekrar bakın. Bayrak düğmesi bir daha soluk. Bayrak eklenmiş olan iş parçacığının işaretini kaldırunlar. Bayraklı iş parçacığı olmadığından, araç çubuğu **Tüm Iş parçacıkları modunu göstermeye** geri gitti. **Iş parçacığı** listesine tıklayın ve tüm iş parçacıklarını görebildiğinizi doğrulayın.  
   
-5. Geri Git **iş parçacıkları** penceresi ve bilgi sütunu inceleyin.  
+5. **Iş parçacıkları** penceresine geri dönün ve bilgi sütunlarını inceleyin.  
   
-     Her bir sütunun üstünde, düğmelerin çoğu sütun tanımlayan başlıklar sahiptir. Ancak, sol taraftaki ilk sütun başlığı yok. Bunun yerine, bir bayrak anahat bir simge vardır. Dizi listesinin her satırında aynı ana hat fark edeceksiniz. Ana hat iş parçacığı bayrak yok anlamına gelir.  
+     Her sütunun üst kısmında, çoğu düğme sütunu tanımlayan başlıklar vardır. Ancak, sol taraftaki ilk sütunda başlık yoktur. Bunun yerine, bir bayrağın ana hattı olan bir simge vardır. İş parçacığı listesinin her satırında aynı ana hat olduğunu fark edeceksiniz. Ana hat, iş parçacığının işaretlenmediği anlamına gelir.  
   
-6. İki iş parçacığı, ikinci ve üçüncü listenin en üstündeki bayrağı anahatları tıklayın.  
+6. İkinci ve üçüncü, listenin en altında bulunan iki iş parçacığı için bayrak anahatlara tıklayın.  
   
-     Bayrak simgeleri boş anahatları yerine düz kırmızı olur.  
+     Bayrak simgeleri boş anahatlar yerine düz kırmızı olur.  
   
-7. Bayrak sütunu üst kısmındaki düğmeye tıklayın.  
+7. Bayrak sütununun en üstündeki düğmeye tıklayın.  
   
-     Düğme tıklandığında değiştirilen iş parçacığı listesi sırası. Dizi listesini üstte bayraklı iş parçacıklarını artık sıralanır.  
+     Düğmeye tıkladığınızda iş parçacığı listesinin sırası değişti. İş parçacığı listesi artık üstteki bayraklı iş parçacıkları ile sıralanır.  
   
-8. Yeniden, bayrak sütunu üst kısmındaki düğmeye tıklayın.  
+8. Yine, bayrak sütununun en üstündeki düğmeye tıklayın.  
   
-     Sıralama düzenini yeniden değiştirildi.  
+     Sıralama düzeni yeniden değiştirildi.  
   
-## <a name="more-about-the-threads-window"></a>İş parçacıkları penceresi hakkında daha fazla bilgi  
+## <a name="more-about-the-threads-window"></a>Iş parçacıkları penceresi hakkında daha fazla bilgi  
   
-#### <a name="to-learn-more-about-the-threads-window"></a>İş parçacıkları penceresi hakkında daha fazla bilgi edinmek için  
+#### <a name="to-learn-more-about-the-threads-window"></a>Iş parçacıkları penceresi hakkında daha fazla bilgi edinmek için  
   
-1. İçinde **iş parçacıkları** penceresinde üçüncü sütunda soldan inceleyin. Bu sütunun üstünde düğme diyor **kimliği**.  
+1. **Iş parçacıkları** penceresinde, sol taraftaki üçüncü sütunu inceleyin. Bu sütunun en üstündeki düğme **kimlik**diyor.  
   
-2. Tıklayın **kimliği**.  
+2. **Kimlik**' e tıklayın.  
   
-     Dizi listesini artık iş parçacığı kimliği numarasına göre sıralanır.  
+     İş parçacığı listesi artık iş parçacığı KIMLIĞI numarasına göre sıralanır.  
   
-3. Listedeki herhangi bir iş parçacığı sağ tıklayın. Kısayol menüsünde **onaltılık gösterim**.  
+3. Listedeki herhangi bir iş parçacığına sağ tıklayın. Kısayol menüsünde **onaltılık görüntü**' e tıklayın.  
   
-     İş parçacığı kimliği sayılarının biçimini değiştirilir.  
+     İş parçacığı KIMLIK numaralarının biçimi değiştirildi.  
   
-4. Fare işaretçisi listedeki herhangi bir iş parçacığı üzerine gelin.  
+4. Fare işaretçisini listedeki herhangi bir iş parçacığının üzerine getirin.  
   
-     İçeriklerinin anlık bir gecikmeden sonra bir DataTip görünür. Bu iş parçacığı için bir kısmi çağrı yığınını gösterir.  
+     Bir kopan gecikmeden sonra bir veri Ipucu belirir. İş parçacığı için kısmi bir çağrı yığını gösterir.  
   
-5. Etiketli üstten dördüncü sütununda Ara **kategori**. İş parçacıkları kategoride sınıflandırılır.  
+5. Sol taraftaki **Kategori**etiketli dördüncü sütuna bakın. İş parçacıkları kategoriler halinde sınıflandırılır.  
   
-     Bir işlemde oluşturulan ilk iş parçacığında ana iş parçacığı adlandırılır. İş parçacığı listesinde bulun.  
+     Bir işlemde oluşturulan ilk iş parçacığı ana iş parçacığı olarak adlandırılır. İş parçacığı listesinde bulun.  
   
-6. Ana iş parçacığı sağ tıklayın ve ardından **iş parçacığına geçiş**.  
+6. Ana iş parçacığına sağ tıklayıp **Iş parçacığına geç ' e**tıklayın.  
   
-     Bir uyarı iletişim kutusu görünür. Bu başarısız olduğunu anlatan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ana iş parçacığı için kaynak kodu görüntülenemiyor.  
+     Bir uyarı iletişim kutusu görüntülenir. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Ana iş parçacığı için kaynak kodu göstermeyeceğini söyler.  
   
-     **Tamam**'ı tıklatın.  
+     **Tamam**’a tıklayın.  
   
-7. Bakmak **çağrı yığını** penceresi ve **hata ayıklama konumu** araç çubuğu.  
+7. **Çağrı yığını** penceresine ve **hata ayıklama konumu** araç çubuğuna bakın.  
   
-     İçeriğini **çağrı yığını** penceresi değişti.  
+     **Çağrı yığını** penceresinin içeriği değişti.  
   
-## <a name="switching-the-active-thread"></a>Etkin iş parçacığı değiştirme  
+## <a name="switching-the-active-thread"></a>Etkin Iş parçacığını değiştirme  
   
-#### <a name="to-switch-threads"></a>Geçiş yapmak için iş parçacıkları  
+#### <a name="to-switch-threads"></a>İş parçacıklarını değiştirmek için  
   
-1. İçinde **iş parçacıkları** penceresinde soldan ikinci sütunda inceleyin. Bu sütunun üstünde düğme, metin veya simge vardır. Bu sütun **etkin iş parçacığı** sütun.  
+1. **Iş parçacıkları** penceresinde, sol taraftaki ikinci sütunu inceleyin. Bu sütunun en üstündeki düğme metin veya simge içermiyor. Bu sütun **etkin Iş parçacığı** sütunudur.  
   
-2. Bakmak **etkin iş parçacığı** sütunu ve tek bir iş parçacığı bir sarı ok olduğunu göreceksiniz. Bu *etkin iş parçacığı göstergesi*.  
+2. **Etkin Iş parçacığı** sütununa bakın ve bir iş parçacığının Sarı oka sahip olduğuna dikkat edin. Bu, *etkin iş parçacığı göstergesidir*.  
   
-3. Etkin iş parçacığı göstergesi bulunduğu iş parçacığı kimlik numarasını not edin. Başka bir iş parçacığı için etkin iş parçacığı göstergesi taşınır, ancak geri bitirdiğinizde koymak istediğiniz gerekir.  
+3. Etkin iş parçacığı göstergesinin bulunduğu iş parçacığı KIMLIĞI numarasını bir yere unutmayın. Etkin iş parçacığı göstergesini başka bir iş parçacığına taşıyacaksınız, ancak işiniz bittiğinde geri koymanız gerekir.  
   
-4. Başka bir iş parçacığı sağ tıklayın ve ardından **iş parçacığına geçiş**.  
+4. Başka bir iş parçacığına sağ tıklayıp **Iş parçacığına geç ' e**tıklayın.  
   
-5. Bakmak **çağrı yığını** penceresi kaynak penceresinde. İçeriği değişmiş.  
+5. Kaynak penceredeki **çağrı yığını** penceresine bakın. İçerik değiştirildi.  
   
-6. Bakmak **hata ayıklama konumu** araç çubuğu. Etkin iş parçacığı, çok değişti.  
+6. **Hata ayıklama konumu** araç çubuğuna bakın. Etkin iş parçacığı aynı şekilde değiştirildi.  
   
-7. Git **hata ayıklama konumu** araç çubuğu. Tıklayın **iş parçacığı** kutusu ve aşağı açılan listeden farklı bir iş parçacığı seçin.  
+7. **Hata ayıklama konumu** araç çubuğuna gidin. **Iş parçacığı** kutusuna tıklayın ve açılan listeden farklı bir iş parçacığı seçin.  
   
-8. Bakmak **iş parçacıkları** penceresi. Etkin iş parçacığı göstergesi değişti.  
+8. **Iş parçacıkları** penceresine bakın. Etkin iş parçacığı göstergesi değişti.  
   
-9. Kaynak penceresinde, bir iş parçacığı işaret sağ tıklayın. Kısayol menüsünde, işaret **geçin** ve bir iş parçacığı adı/kimlik numarasını'ı tıklatın.  
+9. Kaynak penceresinde bir iş parçacığı işaretine sağ tıklayın. Kısayol menüsünde, **Değiştir** ' in üzerine gelin ve bir iş parçacığı adı/kimlik numarası ' na tıklayın.  
   
-     Etkin iş parçacığı değiştirme üç yolu artık gördünüz: kullanarak **iş parçacıkları** penceresinde **iş parçacığı** kutusunda **hata ayıklama konumu** araç çubuğu ve iş parçacığı göstergesi Kaynak penceresi.  
+     Etkin iş parçacığını değiştirmenin üç yolunu gördünüz: **Iş parçacıkları** penceresini, **hata ayıklama konumu** araç çubuğundaki **iş parçacığı** kutusunu ve kaynak penceredeki iş parçacığı göstergesini kullanarak.  
   
-     İş parçacığı göstergesi ile belirli bir konumda durdurulan iş parçacığı geçiş yapabilirsiniz. Kullanarak **iş parçacıkları** penceresi ve **hata ayıklama konumu** araç için herhangi bir iş parçacığı geçirebilirsiniz.  
+     İş parçacığı göstergesi ile yalnızca belirli bir konumda durdurulmuş olan iş parçacıklarıyla geçiş yapabilirsiniz. **Iş parçacıkları** penceresini ve **hata ayıklama konumu** araç çubuğunu kullanarak herhangi bir iş parçacığına geçiş yapabilirsiniz.  
   
-## <a name="freezing-and-thawing-thread-execution"></a>Dondurma ve iş parçacığı yürütmeyi çözme  
+## <a name="freezing-and-thawing-thread-execution"></a>İş parçacığı yürütmeyi donduruyor ve thakelebek  
   
-#### <a name="to-freeze-and-unfreeze-threads"></a>Freeze ve iş parçacığı Çöz  
+#### <a name="to-freeze-and-unfreeze-threads"></a>İş parçacıklarını dondurmak ve çözmek için  
   
-1. İçinde **iş parçacıkları** penceresinde herhangi bir iş parçacığı sağ tıklayın ve ardından **dondurma**.  
+1. **Iş parçacıkları** penceresinde herhangi bir iş parçacığına sağ tıklayın ve ardından **dondurma**' ya tıklayın.  
   
-2. Etkin iş parçacığı sütununa bakın. Dikey çubuk çifti artık var. görüntülenir. Bu iki mavi çubukları, iş parçacığı'nın dondurulmuş olup olmadığını gösterir.  
+2. Etkin iş parçacığı sütununa bakın. Dikey çubukların çifti artık burada görünür. Bu iki mavi çubuk, iş parçacığının dondurulmuş olduğunu gösterir.  
   
-3. Bakmak **askıya alma** sütun. İş parçacığı için askıya alma sayımı artık 1'dir.  
+3. **Askıda kalma** sütununa bakın. İş parçacığının askıya alma sayısı artık 1 ' dir.  
   
-4. Dondurulmuş bir iş parçacığı sağ tıklayın ve ardından **çözme**.  
+4. Dondurulmuş iş parçacığına sağ tıklayın ve ardından **çözme**' ye tıklayın.  
   
-     Etkin iş parçacığı sütunu ve **askıya alma** sütun değişikliği.  
+     Etkin iş parçacığı sütunu ve **askıya alma** sütunu değişikliği.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çok iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [Nasıl yapılır: Hata Ayıklarken Başka Bir İş Parçacığına Geçme](../debugger/how-to-switch-to-another-thread-while-debugging.md)
+ [Çok Iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
+ [Nasıl yapılır: hata ayıklarken başka bir Iş parçacığına geçme](../debugger/how-to-switch-to-another-thread-while-debugging.md)

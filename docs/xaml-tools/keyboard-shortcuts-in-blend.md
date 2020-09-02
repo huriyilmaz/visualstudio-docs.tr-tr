@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a4d0d537dc93479cc791b2e1c3246e9bab74139f
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85332233"
 ---
 # <a name="keyboard-shortcuts-in-blend-for-visual-studio"></a>Visual Studio için Blend klavye kısayolları
@@ -46,7 +46,7 @@ ms.locfileid: "85332233"
 |Kes|**CTRL** + **X**|
 |Kopyala|**CTRL** + **C**|
 |Yapıştır|**CTRL** + **V**|
-|Sil|**Sil**|
+|Sil|**Silme**|
 |Metin bul (yalnızca XAML görünümü veya JavaScript Düzenleyicisi)|**CTRL** + **F**|
 |Metnin bir sonraki tekrarını bul (yalnızca XAML görünümü veya JavaScript Düzenleyicisi)|**F3** veya **CTRL** + **H**|
 

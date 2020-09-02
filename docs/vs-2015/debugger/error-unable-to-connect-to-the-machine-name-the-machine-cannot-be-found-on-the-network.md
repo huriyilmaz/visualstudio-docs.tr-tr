@@ -1,5 +1,5 @@
 ---
-title: 'Hata: Makineye bağlanılamıyor &lt;adı&gt;. Makine ağ üzerinde bulunamadı. | Microsoft Docs'
+title: 'Hata: makine &lt; adına bağlanılamıyor &gt; . Makine ağ üzerinde bulunamadı. | Microsoft Belgeleri'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,34 +19,34 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: dd1402a476ce2dceaaaf78580b36db20c3eed24f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65682553"
 ---
-# <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>Hata: Makineye bağlanılamıyor &lt;adı&gt;. Makine ağ üzerinde bulunamadı.
+# <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>Hata: makine &lt; adına bağlanılamıyor &gt; . Makine ağ üzerinde bulunamadı.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu davranış, aşağıdaki koşullardan biri doğru ise oluşur:  
+Bu davranış, aşağıdaki koşullardan biri doğru olduğunda meydana gelir:  
   
 - Uzak bilgisayarla bağlantınız kesildi.  
   
-- Kullanıcı hesabınızın uzak bilgisayarda devre dışıdır.  
+- Uzak bilgisayardaki kullanıcı hesabınız devre dışı bırakıldı.  
   
 - Uzak bilgisayardaki parolanızın süresi doldu.  
   
-### <a name="to-resolve-this-behavior"></a>Bu davranışı düzeltmek için  
+### <a name="to-resolve-this-behavior"></a>Bu davranışı çözümlemek için  
   
-- Yerel bilgisayarda ve uzak bilgisayar aynı ağda olduğundan emin olun. Bunu yapmak için uzak bilgisayara erişmeye denemek için Microsoft Windows Explorer'ı (veya dosya Gezgini) kullanın.  
+- Yerel bilgisayarın ve uzak bilgisayarın aynı ağda bulunduğundan emin olun. Bunu yapmak için, uzak bilgisayara erişmeyi denemek üzere Microsoft Windows Explorer (veya dosya Gezgini) kullanın.  
   
-     — ve —  
+     '  
   
-- Uzak bilgisayara bağlanmak için kullandığınız kullanıcı hesabının etkin olduğundan emin olun.  
+- Uzak bilgisayara bağlanmak için kullandığınız kullanıcı hesabının etkinleştirildiğinden emin olun.  
   
-     — ve —  
+     '  
   
-- Uzak bilgisayara bağlanmak için kullandığınız parolayı geçerlidir ve süresi geçmemiş olduğundan emin olun.  
+- Uzak bilgisayara bağlanmak için kullandığınız parolanın geçerli olduğundan ve süresi dolmadığından emin olun.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Cihazda uzak araçları ayarlama](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c)   

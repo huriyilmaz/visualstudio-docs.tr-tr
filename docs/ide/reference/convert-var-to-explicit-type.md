@@ -1,5 +1,5 @@
 ---
-title: Var'ı açık bir türle değiştirmek için yeniden düzenleme kodu
+title: Var olan bir açık türle değiştirmek için kodu yeniden düzenleme
 ms.date: 05/15/2018
 ms.topic: reference
 author: TerryGLee
@@ -10,42 +10,42 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 4ec388564e1851402f085f6bbaefba08dbea212c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595780"
 ---
-# <a name="refactoring-to-replace-var-with-an-explicit-type"></a>Var'ı açık bir türle değiştirmek için yeniden düzenleme
+# <a name="refactoring-to-replace-var-with-an-explicit-type"></a>Var olan öğesini açık bir türle değiştirecek şekilde yeniden düzenleme
 
-Yerel bir değişken bildiriminde [var'ı](/dotnet/csharp/language-reference/keywords/var) açık bir türle değiştirmek için bu yeniden düzenlemeyi kullanın.
+Yerel bir değişken bildiriminde [var](/dotnet/csharp/language-reference/keywords/var) olan bir açık tür ile değiştirmek için bu yeniden düzenlemeyi kullanın.
 
-Bu yeniden düzenleme aşağıdakiler için geçerlidir:
+Bu yeniden düzenleme için geçerlidir:
 
 - C#
 
-## <a name="why-to-use-an-explicit-type"></a>Neden açık bir tür kullanmak için
+## <a name="why-to-use-an-explicit-type"></a>Neden açık bir tür kullanılmalıdır
 
-Aşağıda, açık bir türü olan bir değişkeni bildirmek için bazı nedenler veremenedenleri ve
+Aşağıda açık türde bir değişken bildirmek için bazı nedenler verilmiştir:
 
-- Kodun okunabilirliğini artırmak için.
+- Kodun okunabilirliğini geliştirmek için.
 
-- Bildirimdeki değişkeni başlatmayı istemediğiniz zaman.
+- Bildiriminde değişkeni başlatmak istemediğinizde.
 
-Ancak, bir değişken anonim bir türle baş harfe döndüğünde ve nesnenin özelliklerine daha sonraki bir noktada erişildiğinde [var](/dotnet/csharp/language-reference/keywords/var) kullanılmalıdır. Daha fazla bilgi için bkz: [Örtülü olarak yazılan yerel değişkenler (C#)](/dotnet/csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables).
+Ancak, bir değişken anonim bir türle başlatıldığında ve nesnenin özelliklerine sonraki bir noktada erişildiğinde, [var](/dotnet/csharp/language-reference/keywords/var) kullanılması gerekir. Daha fazla bilgi için bkz. [örtülü olarak yazılan yerel değişkenler (C#)](/dotnet/csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables).
 
 ## <a name="how-to-use-it"></a>Nasıl kullanılır?
 
-1. Özeni anahtar kelimeye `var` yerleştirin.
+1. Giriş işaretini `var` anahtar sözcüğe yerleştirin.
 
-1. **Ctrl**+tuşuna**basın.** veya kod dosyasının kenar boşluğundaki tornavida ![simgesi simgesini](../media/screwdriver-icon.png) tıklatın.
+1. **CTRL**tuşuna basın + **.** ya da ![ kod dosyasının kenar boşluğundaki screwdriver screwdriver simge ](../media/screwdriver-icon.png) simgesine tıklayın.
 
-   ![Açık tür hızlı eylemler menüsünü kullanma](media/use-explicit-type.png)
+   ![Açık tür hızlı eylemler menüsünü kullan](media/use-explicit-type.png)
 
-1. **Açık türü kullan'ı**seçin. Veya, [Değişiklikleri Önizleme](../../ide/preview-changes.md) iletişim kutusunu açmak için Değişiklikleri **Önizleyin'i** seçin ve ardından **Uygula'yı**seçin.
+1. **Açık türü kullan**' ı seçin. Ya [da Değişiklikleri Önizle iletişim kutusunu](../../ide/preview-changes.md) açmak Için **Değişiklikleri Önizle** ' yi seçin ve ardından **Uygula**' yı seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Örtülü olarak yazılan değişkenler (C#)](/dotnet/csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables)
+- [Örtük olarak yazılan değişkenler (C#)](/dotnet/csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables)
 - [Yeniden Düzenle](../refactoring-in-visual-studio.md)
 - [Değişiklikleri Önizleme](../../ide/preview-changes.md)

@@ -1,5 +1,5 @@
 ---
-title: Using the Tasks Window | Microsoft Docs
+title: Görevler penceresini kullanma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,83 +19,83 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 267a04e0d717bde311423aae7f35fba07ca6f39b
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65684033"
 ---
 # <a name="using-the-tasks-window"></a>Görevleri Penceresini Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Görevleri** pencere benzeyen **iş parçacıkları** BT'nin hakkında bilgileri gösterir ancak pencere <xref:System.Threading.Tasks.Task?displayProperty=fullName>, [task_handle](https://msdn.microsoft.com/library/b4af5b28-227d-4488-8194-0a0d039173b7), veya [WinJS.Promise ](https://msdn.microsoft.com/library/windows/apps/br211867.aspx) yerine her bir iş parçacığı nesneleri. İş parçacığı gibi görevleri aynı anda çalışabilecek zaman uyumsuz işlemleri temsil eder; Ancak, birden çok görev aynı iş parçacığı üzerinde çalışabilir. Bkz: [zaman uyumsuz programlama (Windows Store apps) javascript'teki](https://msdn.microsoft.com/library/windows/apps/hh700330.aspx) daha fazla bilgi için.  
+**Görevler** penceresi, **iş parçacıkları** penceresine benzer, ancak <xref:System.Threading.Tasks.Task?displayProperty=fullName> her iş parçacığı yerine, [task_handle](https://msdn.microsoft.com/library/b4af5b28-227d-4488-8194-0a0d039173b7)veya [WinJS. Promise](https://msdn.microsoft.com/library/windows/apps/br211867.aspx) nesneleri hakkında bilgi gösterir. İş parçacıkları gibi görevler, eşzamanlı olarak çalışabilecek zaman uyumsuz işlemleri temsil eder; Ancak, aynı iş parçacığında birden çok görev çalıştırılabilir. Daha fazla bilgi için bkz. [JavaScript 'Te zaman uyumsuz programlama (Windows Mağazası uygulamaları)](https://msdn.microsoft.com/library/windows/apps/hh700330.aspx) .  
   
- Yönetilen kodda kullanabileceğiniz **görevleri** ile çalışırken penceresi <xref:System.Threading.Tasks.Task?displayProperty=fullName> nesneleri veya **await** ve **zaman uyumsuz** anahtar sözcükleri (**Await** ve **zaman uyumsuz** VisualBasic içinde). Yönetilen kodda görevleri hakkında daha fazla bilgi için bkz. [paralel programlama](https://msdn.microsoft.com/library/4d83c690-ad2d-489e-a2e0-b85b898a672d).  
+ Yönetilen **Tasks** kodda, nesnelerle çalışırken <xref:System.Threading.Tasks.Task?displayProperty=fullName> veya **await** ve **Async** anahtar sözcükleriyle (VisualBasic içinde**await** ve **Async** ) görevler penceresini kullanabilirsiniz. Yönetilen koddaki görevler hakkında daha fazla bilgi için bkz.  [paralel programlama](https://msdn.microsoft.com/library/4d83c690-ad2d-489e-a2e0-b85b898a672d).  
   
- Yerel kod halinde kullanabileceğiniz **görevleri** ile çalışırken penceresi [görev grupları](https://msdn.microsoft.com/library/42f05ac3-2098-494a-ba84-737fcdcad077), [paralel algoritmalar](https://msdn.microsoft.com/library/045dca7b-4d73-4558-a44c-383b88a28473), [zaman uyumsuz aracılar](https://msdn.microsoft.com/library/6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a), ve [Basit görevler](https://msdn.microsoft.com/library/9aba278c-e0c9-4ede-b7c6-fedf7a365d90). Yerel kodda görevleri hakkında daha fazla bilgi için bkz. [eşzamanlılık çalışma zamanı](https://msdn.microsoft.com/library/874bc58f-8dce-483e-a3a1-4dcc9e52ed2c).  
+ Yerel kodda [görev grupları](https://msdn.microsoft.com/library/42f05ac3-2098-494a-ba84-737fcdcad077), [paralel algoritmalar](https://msdn.microsoft.com/library/045dca7b-4d73-4558-a44c-383b88a28473), [zaman uyumsuz aracılar](https://msdn.microsoft.com/library/6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a)ve [hafif görevlerle](https://msdn.microsoft.com/library/9aba278c-e0c9-4ede-b7c6-fedf7a365d90)çalışırken **Görevler** penceresini kullanabilirsiniz. Yerel koddaki görevler hakkında daha fazla bilgi için bkz. [Eşzamanlılık çalışma zamanı](https://msdn.microsoft.com/library/874bc58f-8dce-483e-a3a1-4dcc9e52ed2c).  
   
- JavaScript'te, promise .then kodla çalışırken görevler penceresini kullanabilirsiniz.  
+ JavaScript 'te, taahhüt ile çalışırken görevler penceresini kullanabilirsiniz. daha sonra kodu.  
   
- Kullanabileceğiniz **görevleri** hata ayıklayıcıya girdikten zaman penceresi. Şirket erişim **hata ayıklama** tıklayarak menü **Windows** tıklayıp **görevleri**. Aşağıdaki çizimde gösterildiği **görevleri** kendi varsayılan modunda penceresi.  
+ Hata ayıklayıcıya her kesme yaptığınızda **Görevler** penceresini kullanabilirsiniz. **Hata Ayıkla** menüsünde **Windows** ' a ve ardından **Görevler**' e tıklayarak erişebilirsiniz. Aşağıdaki çizimde **Görevler** penceresi varsayılan modunda gösterilmektedir.  
   
  ![Paralel Görevler penceresi](../debugger/media/parallel-tasks-window.png "Parallel_Tasks_Window")  
   
 > [!NOTE]
-> Yönetilen kodda bir <xref:System.Threading.Tasks.Task> durumu olan <xref:System.Threading.Tasks.TaskStatus>, <xref:System.Threading.Tasks.TaskStatus>, veya <xref:System.Threading.Tasks.TaskStatus> yönetilen iş parçacıklarını bir uyku ya da birleştirme durumdayken Görevler penceresinde görüntülenmeyebilir.  
+> Yönetilen kodda, <xref:System.Threading.Tasks.Task> durumu <xref:System.Threading.Tasks.TaskStatus> , <xref:System.Threading.Tasks.TaskStatus> veya, <xref:System.Threading.Tasks.TaskStatus> yönetilen iş parçacıkları bir uyku ya da JOIN durumunda olduğunda Görevler penceresinde görüntülenmeyebilir.  
   
-## <a name="tasks-column-information"></a>Görevleri sütun bilgileri  
- Sütunları **görevleri** penceresi, aşağıdaki bilgileri gösterir.  
+## <a name="tasks-column-information"></a>Görevler sütun bilgileri  
+ **Görevler** penceresindeki sütunlar aşağıdaki bilgileri gösterir.  
   
-|Sütun adı|Açıklama|  
+|Sütun adı|Description|  
 |-----------------|-----------------|  
-|**bayrakları**|Hangi görevlerin işaretlenmiş gösterir ve bir görevi işaretleme veya işaretini kaldırma olanak tanır.|  
-|**Simgeler**|Sarı bir ok, geçerli görev gösterir. Geçerli görev, geçerli iş parçacığı üzerinde en üstteki görevdir.<br /><br /> Bölme görevi, diğer bir deyişle, hata ayıklayıcı çağrıldığında geçerli bir beyaz bir ok gösterir.<br /><br /> Duraklatma simgesi, kullanıcı tarafından dondurulmuş bir görevi gösterir. Dondurma ve bir görev listesinde sağ tıklayarak Çöz.|  
-|**ID**|Görev için sistem tarafından sağlanan bir sayı. Yerel kod halinde, bu görev adresidir.|  
-|**Status**|Geçerli durumu (zamanlanmış, etkin, kilitlenen, bekleyen veya tamamlanmış) görev. Zamanlanmış bir görev henüz çalıştırılmadı ve bu nedenle, henüz bir çağrı yığını, atanan bir iş parçacığı veya ilgili bilgiler yok biridir.<br /><br /> Etkin görev kodu hata ayıklayıcıda kesmeden önce yürütülen biridir.<br /><br /> Bekleyen görev sinyal bir olay, bir kilidi serbest bırakılması veya başka bir görevi tamamlamak için beklediği, engellenen biridir.<br /><br /> Kilitlenen bir görevi başka bir iş parçacığıyla, iş parçacığı kilitlendiğini bekleyen bir görevdir.<br /><br /> Üzerine **durumu** hücre bloğu hakkında daha fazla bilgi kilitlenen veya bekleyen bir görev için. **Uyarı:**  **Görevleri** penceresi bekleyin zinciri geçişi (WCT) tarafından desteklenen eşitleme temel kullanan bir engellenen görev için kilitlenme bildirir. Örneğin, bir kilitlenen <xref:System.Threading.Tasks.Task> WCT, hata ayıklayıcı raporları kullanan nesne **bekleme kilitlendiğini**. Eşzamanlılık WCT kullanmaz, çalışma zamanı tarafından yönetilen kilitlenen bir görev için hata ayıklayıcı raporları **bekleyen**. WCT hakkında daha fazla bilgi için bkz: [bekleyin zinciri geçişi](https://msdn.microsoft.com/library/ms681622\(VS.85\).aspx).|  
-|**Başlangıç saati**|Saat, görev etkin hale geldi.|  
-|**Süresi**|Görev etkin biçimde saniye sayısı.|  
-|**Tamamlanma Zamanı**|Hangi görev tamamlanma zamanı.|  
-|**Konum**|Görevin çağrı yığınındaki geçerli konum. Görev için bütün çağrı yığını görmek için bu hücreyi üzerine gelin. Zamanlanmış Görevler, bu sütunda bir değer yoktur.|  
-|**Görev**|İlk yöntem ve oluşturulduğunda bu göreve geçirilen bağımsız değişkenler.|  
-|**Üst**|Bu görevi oluşturan görevin kimliği. Boş ise, hiçbir üst görev vardır. Bu yalnızca yönetilen programlar için geçerlidir.|  
-|**İş parçacığı atama**|Görevin üzerinde çalıştığı iş parçacığının adı ve kimliği.|  
-|**Dönüş durumu**|Tamamlandığında, görev durumu. Dönüş durumu değerler **başarı**, **iptal edildi**, ve **hata**.|  
+|**Larına**|Hangi görevlerin işaretlenip işaretlenmediğini gösterir ve bir görevi işaretlemenizi veya bayrak kaldırmanızı sağlar.|  
+|**Simgeler**|Sarı ok geçerli görevi gösterir. Geçerli görev, geçerli iş parçacığında en üstteki görevdir.<br /><br /> Beyaz ok, son görevi, yani hata ayıklayıcı çağrıldığında geçerli olan olanı gösterir.<br /><br /> Duraklat simgesi, Kullanıcı tarafından dondurulmuş olan bir görevi gösterir. Listede sağ tıklayarak bir görevi dondurabilir ve çöz ' ü seçebilirsiniz.|  
+|**ID**|Görevin sistem tarafından sağlanmış numarası. Yerel kodda, bu görevin adresidir.|  
+|**Durum**|Görevin geçerli durumu (zamanlanan, etkin, kilitli, bekleniyor veya tamamlandı). Zamanlanmış bir görev henüz çalıştırılmayan ve bu nedenle çağrı yığınına, atanan iş parçacığına veya ilgili bilgilere sahip değildir.<br /><br /> Etkin bir görev, hata ayıklayıcıda kesmeden önce kodu yürüten bir görevdir.<br /><br /> Bekleyen bir görev, bir olayın bildirilebilmesi, yayınlanacak bir kilit ya da başka bir görevin bitmesi beklediği için engellenmiş bir görevdir.<br /><br /> Kilitlenen bir görev, iş parçacığı başka bir iş parçacığıyla kilitlenmiş bekleyen bir görevdir.<br /><br /> Blok hakkında daha fazla bilgi görmek için kilitlenen veya bekleyen bir görevin **durum** hücresinin üzerine gelin. **Uyarı:**  **Görevler** penceresi, yalnızca bekleme zinciri çapraz geçişi (WCT) tarafından desteklenen bir eşitleme temel alanı kullanan engellenen bir görev için kilitlenme bildirir. Örneğin, <xref:System.Threading.Tasks.Task> WCT kullanan, kilitli olmayan bir nesne için, hata ayıklayıcı **bekliyor-** kilitlendi ' ı raporlar. WCT kullanmayan Eşzamanlılık Çalışma Zamanı tarafından yönetilen kilitli olmayan bir görev için, hata ayıklayıcı rapor **bekliyor**. WCT hakkında daha fazla bilgi için bkz. [zincir geçişini bekleme](https://msdn.microsoft.com/library/ms681622\(VS.85\).aspx).|  
+|**Başlangıç Zamanı**|Görevin etkin hale geldiğinden geçen süre.|  
+|**Süre**|Görevin etkin olduğu saniye sayısı.|  
+|**Tamamlanma Zamanı**|Görevin tamamlandığı zaman.|  
+|**Konum**|Görevin çağrı yığınında geçerli konum. Görevin tüm çağrı yığınını görmek için bu hücrenin üzerine gelin. Zamanlanan görevlerin bu sütunda bir değeri yok.|  
+|**Görev**|İlk yöntem ve oluşturulduğunda göreve geçirilen bağımsız değişkenler.|  
+|**Parent**|Bu görevi oluşturan görevin KIMLIĞI. Bu boşsa, görevin üst öğesi yok. Bu yalnızca yönetilen programlar için geçerlidir.|  
+|**İş parçacığı ataması**|Görevin üzerinde çalıştığı iş parçacığının KIMLIĞI ve adı.|  
+|**Dönüş durumu**|Görevin tamamlandığı durum. Döndürülen durum değerleri **başarılı**, **Iptal edildi**ve **hata**.|  
 |**AppDomain**|Yönetilen kod için görevin yürütüldüğü uygulama etki alanı.|  
-|**task_group**|Yerel kod, adresini [task_group](https://msdn.microsoft.com/library/b4af5b28-227d-4488-8194-0a0d039173b7) zamanlanmış görev nesnesi. Zaman uyumsuz aracılar ve Basit görevler için bu sütun 0 olarak ayarlanır.|  
-|İşlem|Görevin üzerinde çalıştığı işlem kimliği.|  
-|Zaman uyumsuz durumu|Yönetilen kod için görev durumu. Bu sütun varsayılan olarak gizlidir. Bu sütunu görüntülemek için bir sütun başlıkları için bağlam menüsünü açın. Seçin **sütunları**, **AsyncState**.|  
+|**task_group**|Yerel kod için, görevi planladığı [task_group](https://msdn.microsoft.com/library/b4af5b28-227d-4488-8194-0a0d039173b7) nesnesinin adresi. Zaman uyumsuz aracılar ve hafif görevler için bu sütun 0 olarak ayarlanır.|  
+|İşleme|Görevin üzerinde çalıştığı işlemin KIMLIĞI.|  
+|Zaman uyumsuz durum|Yönetilen kod için görev durumu. Bu sütun varsayılan olarak gizlidir. Bu sütunu göstermek için, sütun başlıklarından biri için bağlam menüsünü açın. **Sütunları**, **AsyncState**öğesini seçin.|  
   
- Bir sütunun başlığına sağ tıklayıp sonra istediğiniz sütunları seçerek görünüme sütun ekleyebilirsiniz. (Seçim işaretini kaldırarak sütunları kaldırın.) Sütun sağa veya sola sürükleyerek de yeniden sıralayabilirsiniz. Sütun kısayol menüsünü aşağıdaki çizimde gösterilmektedir.  
+ Bir sütun başlığına sağ tıklayıp istediğiniz sütunları seçerek görünüme sütun ekleyebilirsiniz. (Seçimleri temizleyerek sütunları kaldırın.) Sütunları sola veya sağa sürükleyerek da sıralayabilirsiniz. Sütun kısayol menüsü aşağıdaki çizimde gösterilmiştir.  
   
- ![Paralel Görevler penceresi kısayol Görünüm menüsünde](../debugger/media/parallel-tasks-contextmenu.png "Parallel_Tasks_ContextMenu")  
+ ![Paralel Görevler penceresinde kısayol Görünüm menüsü](../debugger/media/parallel-tasks-contextmenu.png "Parallel_Tasks_ContextMenu")  
   
-## <a name="sorting-tasks"></a>Sıralama görevleri  
- Görevleri sütun ölçütlerine göre sıralamak için sütun başlığına tıklayın. Tıklayarak gibi **kimliği** sütun üst bilgisine görevleri görev Kimliğine göre sıralayabilirsiniz: 1,2,3,4,5 ve benzeri. Sıralama düzenini tersine çevirmek için sütun başlığını tekrar tıklatın. Geçerli sıralama sütunu ve sıralama düzenini sütununda bir ok ile belirtilir.  
+## <a name="sorting-tasks"></a>Görevleri sıralama  
+ Görevleri sütun ölçütlerine göre sıralamak için sütun başlığına tıklayın. Örneğin, **kimlik** sütunu başlığına tıklayarak GÖREVLERI görev kimliği: 1, 2, 3, 4, 5 vb. olarak sıralayabilirsiniz. Sıralama düzenini tersine çevirmek için sütun başlığına tekrar tıklayın. Geçerli sıralama sütunu ve sıralama düzeni, sütundaki bir okla belirtilir.  
   
 ## <a name="grouping-tasks"></a>Görevleri gruplandırma  
- Görevleri liste görünümünde herhangi bir sütuna göre gruplandırabilirsiniz. Tıklanarak gibi **durumu** sütun başlığını ve ardından **durumuna göre grup**, aynı durumunda olan tüm görevleri gruplayabilirsiniz. Örneğin, neden, engellenen üzerinde odaklanın böylece bekleme görevleri hızlı bir şekilde görebilir. Hata ayıklama oturumu sırasında ilgi değil bir grup da daraltabilirsiniz. Aynı şekilde, diğer sütunlara göre gruplandırabilirsiniz. Bir grubu (BM) olarak yalnızca Grup üstbilgisi yanındaki düğmeye tıklayarak bayrağı. Aşağıdaki çizimde gösterildiği **görevleri** gruplandırılmış modunda penceresi.  
+ Görevleri liste görünümündeki herhangi bir sütuna göre gruplandırabilirsiniz. Örneğin, **durum** sütunu başlığına sağ tıklayıp ardından **duruma göre Gruplandır**' a tıkladığınızda, aynı duruma sahip tüm görevleri gruplandırabilirsiniz. Örneğin, neden engellendikleri konusunda odaklanabilmeniz için bekleyen görevleri hızla görebilirsiniz. Ayrıca, hata ayıklama oturumu sırasında ilgilenmeyen bir grubu daraltabilirsiniz. Aynı şekilde, diğer sütunlara göre gruplandırabilirsiniz. Grup üst bilgisinin yanındaki düğmeye tıklanarak, bir grup (yok) belirlenemez. Aşağıdaki çizimde, **Görevler** penceresi gruplanmış modda gösterilmektedir.  
   
- ![Paralel Görevler penceresi gruplandırılmış modunda](../debugger/media/parallel-tasks-groupedmode.png "Parallel_Tasks_GroupedMode")  
+ ![Paralel Görevler penceresinde gruplanmış mod](../debugger/media/parallel-tasks-groupedmode.png "Parallel_Tasks_GroupedMode")  
   
-## <a name="parent-child-view"></a>Üst alt Görünüm  
- (Bu görünüm, yalnızca yönetilen kod için kullanılabilir.) Bir sütun başlığına sağ tıklayıp ardından **üst-alt Görünüm**, görevlerin listesi her hangi bir alt görevi olan görüntülenen veya onun üst öğe altında gizli bir alt düğümü, hiyerarşik bir görünümü değiştirebilirsiniz. Aşağıdaki çizimde, üst-alt Görünümü'nde Görevler gösterilmektedir.  
+## <a name="parent-child-view"></a>Üst alt öğe görünümü  
+ (Bu görünüm yalnızca yönetilen kod için kullanılabilir.) Bir sütun başlığına sağ tıklayıp **üst alt öğe görünümü**' ne tıklayarak, görev listesini her alt görevin üst öğesi altında görüntülenebilen veya gizlenebilen bir alt düğüm olduğu hiyerarşik bir görünüm olarak değiştirebilirsiniz. Aşağıdaki çizimde, üst-alt görünümündeki görevler gösterilmektedir.  
   
- ![Üst&#45;Paralel Görevler penceresi alt görünümünde](../debugger/media/parallel-tasks-parentchildview.png "Parallel_Tasks_ParentChildView")  
+ ![Paralel Görevler penceresinde üst&#45;alt öğe görünümü](../debugger/media/parallel-tasks-parentchildview.png "Parallel_Tasks_ParentChildView")  
   
-## <a name="flagging-tasks"></a>Görevleri işaretleme  
- Görevin çalıştığı görev seçerek görev listesi öğesi ve ardından iş parçacığı işaretleyebilirsiniz **bayrağı** bağlam menüsünden veya ilk sütunda bayrak simgesine tıklayarak. Çeşitli görevler bayrağı, böylece yalnızca bunlara odaklanabilirsiniz dön bayrak eklenmiş olan tüm görevleri getirilecek bayrağı sütununda ardından sıralayabilirsiniz. Ayrıca **Paralel Yığınlar** penceresini görüntülemek için görevleri yalnızca bayrak. Bu, hata ayıklama için ilgilenmediğiniz görevlerini filtreleme yapmanızı sağlıyor. Hata ayıklama oturumları arasında bayrakları kalıcı değildir.  
+## <a name="flagging-tasks"></a>Görevleri bayrak atama  
+ Görev listesi öğesini seçip bağlam menüsünden **bayrak** ' i seçerek veya ilk sütundaki bayrak simgesine tıklayarak iş parçacığına bir görevin çalıştığı görevi işaretleyebilirsiniz. Birkaç görevi işaretlemeniz halinde bayrak sütunu üzerinde sıralama yapabilirsiniz. böylece, yalnızca bunlara odaklanabilmeniz için bayraklı tüm görevleri en üste getirebilirsiniz. Yalnızca işaretlenen görevleri görüntülemek için **Paralel Yığınlar** penceresini de kullanabilirsiniz. Bu, hata ayıklama için ilgilendiğiniz görevleri filtrelemenizi sağlar. Bayraklar hata ayıklama oturumları arasında kalıcı değildir.  
   
-## <a name="freezing-and-thawing-tasks"></a>Dondurma ve görevleri çözme  
- Görevin çalıştığı görev listesi öğesini sağ tıklatın ve ardından iş parçacığını Dondur **atanan iş parçacığını Dondur**. (Bir görev zaten dondurulmuş olup olmadığını komuttur **çözme atanmış iş parçacığı**.) Bir iş parçacığını Dondur, geçerli kesme noktası sonra kodunuz içinde adım adım olduğunda, iş parçacığı yürütülmez. **Dondurma tüm iş parçacıkları, ancak bu** komutu, görev listesi öğesini yürüten dışındaki tüm iş parçacıklarının donuyor.  
+## <a name="freezing-and-thawing-tasks"></a>Görevleri donduruyor ve Thakelebek  
+ Görev listesi öğesine sağ tıklayıp **atanan Iş parçacığını dondur**' a tıklayarak bir görevin çalıştığı iş parçacığını dondurabilirsiniz. (Bir görev zaten dondurulmuşsa, komut **atanan Iş parçacığını çözme**işlemi olur.) Bir iş parçacığını dondurduktan sonra, geçerli kesme noktasından sonra koddan ilerledikten sonra bu iş parçacığı yürütülmez. **Tüm Iş parçacıklarını dondur, ancak bu** komut, görev listesi öğesini yürüten öğe dışındaki tüm iş parçacıklarını dondurur.  
   
- Bir menü öğelerini her görev için aşağıda gösterilmiştir.  
+ Aşağıdaki çizim her bir görev için diğer menü öğelerini gösterir.  
   
- ![Paralel Görevler penceresi kısayol iş parçacığı menüde](../debugger/media/parallel-tasks-contextmenu2.png "Parallel_Tasks_ContextMenu2")  
+ ![Paralel Görevler penceresinde kısayol iş parçacığı menüsü](../debugger/media/parallel-tasks-contextmenu2.png "Parallel_Tasks_ContextMenu2")  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklayıcı temel bilgileri](../debugger/debugger-basics.md)   
+ [Hata ayıklayıcı temelleri](../debugger/debugger-basics.md)   
  [Yönetilen kodda hata ayıklama](../debugger/debugging-managed-code.md)   
- [Paralel Programlama](https://msdn.microsoft.com/library/4d83c690-ad2d-489e-a2e0-b85b898a672d)   
- [Eşzamanlılık Çalışma zamanı](https://msdn.microsoft.com/library/874bc58f-8dce-483e-a3a1-4dcc9e52ed2c)   
+ [Paralel programlama](https://msdn.microsoft.com/library/4d83c690-ad2d-489e-a2e0-b85b898a672d)   
+ [Eşzamanlılık Çalışma Zamanı](https://msdn.microsoft.com/library/874bc58f-8dce-483e-a3a1-4dcc9e52ed2c)   
  [Paralel Yığınlar penceresini kullanma](../debugger/using-the-parallel-stacks-window.md)   
- [İzlenecek yol: Paralel Uygulamada Hata Ayıklama](../debugger/walkthrough-debugging-a-parallel-application.md)
+ [İzlenecek Yol: Paralel Uygulamada Hata Ayıklama](../debugger/walkthrough-debugging-a-parallel-application.md)

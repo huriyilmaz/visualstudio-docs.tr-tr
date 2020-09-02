@@ -1,5 +1,5 @@
 ---
-title: Uydu derlemesi ClickOnce dağıtım API'si ile isteğe bağlı indirme
+title: ClickOnce dağıtım API 'SI ile isteğe bağlı uydu derlemesini indirin
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -22,48 +22,48 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 34cde3a2444525e48455e445894fd5ab1c66fab8
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66262964"
 ---
-# <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api"></a>İzlenecek yol: ClickOnce dağıtım API'si ile uydu derlemelerini indirme
-Windows Forms uygulamaları için uydu derlemelerini kullanarak birden çok kültürde yapılandırılabilir. A *uydu derleme* uygulamanın varsayılan kültürünü dışındaki bir kültür için uygulama kaynaklarını içeren bir derlemedir.
+# <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api"></a>İzlenecek yol: ClickOnce dağıtım API 'SI ile isteğe bağlı uydu derlemelerini Indirme
+Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür için yapılandırılabilir. *Uydu derlemesi* , uygulamanın varsayılan kültürü dışında bir kültür için uygulama kaynakları içeren bir derlemedir.
 
- Bölümünde açıklandığı gibi [yerelleştirmek ClickOnce uygulamaları](../deployment/localizing-clickonce-applications.md), birden çok uydu derlemeleri aynı birden çok kültürde içerebilir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtım. Varsayılan olarak, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] tek bir istemci, büyük olasılıkla yalnızca bir uydu derlemesine gereksinim duyacak olmanıza rağmen tüm uydu derlemeler, dağıtımınızdaki istemci makineye indirir.
+ [ClickOnce uygulamalarında yerelde](../deployment/localizing-clickonce-applications.md)anlatıldığı gibi, aynı dağıtımda birden çok kültür için birden çok uydu derlemesi ekleyebilirsiniz [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Varsayılan olarak, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Tüm uydu derlemelerini istemci makinesine indirir, ancak tek bir istemci muhtemelen yalnızca bir uydu derlemesi gerektirecektir.
 
- Bu yönerge, uydu derlemeleri isteğe bağlı olarak işaretleme ve istemci makinesi, geçerli kültür ayarları için ihtiyaç duyduğu derlemeyi indirme nasıl gösterir. Aşağıdaki yordam kullanılabilen araçlar kullanır [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]. Bu görev ile de gerçekleştirebilirsiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  Ayrıca bkz: [izlenecek yol: ClickOnce dağıtım Tasarımcısı'nı kullanarak API'si ile uydu derlemelerini indirme](/previous-versions/visualstudio/visual-studio-2012/ms366788(v=vs.110)) veya [izlenecek yol: ClickOnce dağıtım Tasarımcısı'nı kullanarak API'si ile uydu derlemelerini indirme](/previous-versions/visualstudio/visual-studio-2013/ms366788(v=vs.120)).
+ Bu izlenecek yol, uydu derlemelerinizi isteğe bağlı olarak nasıl işaretleyeceğinizi ve yalnızca geçerli kültür ayarlarına yönelik bir istemci makinesi için gereken derlemeyi nasıl indileceğini gösterir. Aşağıdaki yordam, içinde bulunan araçları kullanır [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] . Ayrıca, bu görevi ' de gerçekleştirebilirsiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .  Ayrıca bkz. [Izlenecek yol: Tasarımcıyı kullanarak ClickOnce dağıtım API 'si ile isteğe bağlı uydu derlemelerini indirme](/previous-versions/visualstudio/visual-studio-2012/ms366788(v=vs.110)) [: Tasarımcıyı kullanarak ClickOnce dağıtım API 'si Ile uydu derlemelerini indirme](/previous-versions/visualstudio/visual-studio-2013/ms366788(v=vs.120)).
 
 > [!NOTE]
-> Test amacıyla, aşağıdaki kod örneği programlı olarak kültürü ayarlar `ja-JP`. Bir üretim ortamı için bu kodu ayarlama konusunda bilgi için bu konunun ilerleyen bölümlerindeki "Sonraki adımlar" bölümüne bakın.
+> Test amacıyla, aşağıdaki kod örneği program aracılığıyla kültürü olarak ayarlar `ja-JP` . Üretim ortamı için bu kodu ayarlama hakkında daha fazla bilgi için bu konunun ilerleyen kısımlarında yer alan "sonraki adımlar" bölümüne bakın.
 
-## <a name="prerequisites"></a>Önkoşullar
- Bu konuda, Visual Studio'yu kullanarak uygulamanıza yerelleştirilmiş kaynaklar ekleme bildiğiniz varsayılır. Ayrıntılı yönergeler için bkz. [izlenecek yol: Windows formlarını yerelleştirmeye](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100)).
+## <a name="prerequisites"></a>Ön koşullar
+ Bu konu başlığında, Visual Studio kullanarak uygulamanıza nasıl yerelleştirilmiş kaynaklar ekleneceğini bildiğiniz varsayılmaktadır. Ayrıntılı yönergeler için bkz. [Izlenecek yol: Windows Forms 'U yerelleştirin](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100)).
 
-### <a name="to-download-satellite-assemblies-on-demand"></a>Uydu derlemelerini yüklemek için
+### <a name="to-download-satellite-assemblies-on-demand"></a>Uydu derlemelerini isteğe bağlı olarak indirmek için
 
-1. Uygulamanızı isteğe bağlı uydu derlemelerinin indirilmesini etkinleştirmek için aşağıdaki kodu ekleyin.
+1. Uydu derlemelerinin isteğe bağlı olarak indirilmesini sağlamak için uygulamanıza aşağıdaki kodu ekleyin.
 
     [!code-csharp[ClickOnce.SatelliteAssembliesSDK#1](../deployment/codesnippet/CSharp/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api_1.cs)]
     [!code-vb[ClickOnce.SatelliteAssembliesSDK#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api_1.vb)]
 
-2. Uygulamanız için uydu derlemeleri oluşturmak [Resgen.exe (kaynak dosya oluşturucu)](/dotnet/framework/tools/resgen-exe-resource-file-generator) veya [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+2. [Resgen.exe (kaynak dosya Oluşturucu)](/dotnet/framework/tools/resgen-exe-resource-file-generator) veya kullanarak uygulamanız için uydu derlemeleri oluşturun [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
-3. Bir uygulama bildirimi oluşturmak veya mevcut uygulama bildiriminizi kullanarak açmak *MageUI.exe*. Bu araç hakkında daha fazla bilgi için bkz. [MageUI.exe (bildirim üretme ve düzenleme aracı, grafik istemci)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client).
+3. *MageUI.exe*kullanarak, bir uygulama bildirimi oluşturun veya mevcut uygulama bildiriminizi açın. Bu araç hakkında daha fazla bilgi için bkz. [MageUI.exe (bildirim oluşturma ve düzenleme aracı, grafik istemci)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client).
 
-4. Tıklayın **dosyaları** sekmesi.
+4. **Dosyalar** sekmesine tıklayın.
 
-5. Tıklayın **üç nokta** düğmesine ( **...** ) ve tüm uygulamanızın derlemeleri ve oluşturulan kullanarak uydu derlemeleri dahil dosyaları içeren dizini seçin *Resgen.exe*. (Bir uydu derlemesine biçiminde bir ada sahip olacaktır  *\<isoCode > \ApplicationName.resources.dll*burada \<isoCode > RFC 1766 biçiminde bir dil tanımlayıcısı.)
+5. **Üç nokta** düğmesine (**...**) tıklayın ve *Resgen.exe*kullanarak oluşturduğunuz uydu derlemeleri dahil olmak üzere tüm uygulamanızın derlemelerini ve dosyalarını içeren dizini seçin. (Uydu derlemesi, RFC 1766 biçiminde bir dil tanımlayıcısı olan * \<isoCode>\ApplicationName.resources.dll*biçimde bir ada sahip olacaktır \<isoCode> .)
 
-6. Tıklayın **Doldur** dosyaları dağıtıma eklenecek.
+6. Dosyaları dağıtımınıza eklemek için **doldur** ' a tıklayın.
 
-7. Seçin **isteğe bağlı** her bir uydu derleme için onay kutusu.
+7. Her uydu derlemesi için **Isteğe bağlı** onay kutusunu seçin.
 
-8. Her bir uydu derlemesi için ISO dil tanımlayıcısını grup alanını ayarlayın. Örneğin, Japonca uydu derlemesi için bir yükleme grubunun adını belirtirsiniz `ja-JP`. Bu, kullanıcının bağlı olarak uygun uydu derlemesini indirmek için 1. adımda eklediğiniz kodun olanak tanıyacak <xref:System.Threading.Thread.CurrentUICulture%2A> özellik ayarı.
+8. Her uydu derlemesi için Grup alanını ISO dili tanımlayıcısına ayarlayın. Örneğin, Japonca bir uydu derlemesi için bir indirme grubu adı belirtmeniz gerekir `ja-JP` . Bu, kullanıcının özellik ayarına bağlı olarak, adım 1 ' de eklediğiniz kodu uygun uydu derlemesini indirmek üzere etkinleştirir <xref:System.Threading.Thread.CurrentUICulture%2A> .
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Bir üretim ortamında, büyük olasılıkla ayarlar aşağıdaki kod örneğinde şu satırı kaldırın gerekir <xref:System.Threading.Thread.CurrentUICulture%2A> belirli bir değere istemci makinelere doğru değerine ayarlanmış olduğundan varsayılan olarak. Japonca istemci makine üzerinde örneğin, uygulamanız çalıştığında zaman <xref:System.Threading.Thread.CurrentUICulture%2A> olacaktır `ja-JP` varsayılan olarak. Bu değer programlı olarak ayarlama, uydu bütünleştirilmiş kodlarınızı Uygulamanızı dağıtmadan önce test etmek için iyi bir yoludur.
+ Bir üretim ortamında, büyük olasılıkla belirli bir değere ayarlanmış olan kod örneğinde satırı kaldırmanız gerekir <xref:System.Threading.Thread.CurrentUICulture%2A> , çünkü istemci makineler varsayılan olarak doğru değere sahip olacaktır. Uygulamanız bir Japonca istemci makinesinde çalıştığında, örneğin, <xref:System.Threading.Thread.CurrentUICulture%2A> `ja-JP` Varsayılan olarak olur. Bu değeri programlı olarak ayarlamak, uygulamanızı dağıtmadan önce uydu derlemelerinizi test etmenin iyi bir yoludur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce uygulamalarını yerelleştirme](../deployment/localizing-clickonce-applications.md)

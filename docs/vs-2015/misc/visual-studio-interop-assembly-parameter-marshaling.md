@@ -1,5 +1,5 @@
 ---
-title: Visual Studio birlikte çalışma bütünleştirilmiş kodu parametresi hazırlama | Microsoft Docs
+title: Visual Studio birlikte çalışma derleme parametresi sıralaması | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -12,45 +12,45 @@ ms.assetid: 89123eae-0fef-46d5-bd36-3d2a166b14e3
 caps.latest.revision: 24
 manager: jillfra
 ms.openlocfilehash: ac95c40b356c542da323a3ea3744827087f2d840
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65686920"
 ---
-# <a name="visual-studio-interop-assembly-parameter-marshaling"></a>Visual Studio birlikte çalışma bütünleştirilmiş kodu parametresi hazırlama
-Yönetilen kodda yazılır VSPackages çağrı yapma veya yönetilmeyen COM kod tarafından çağrılmak gerekebilir. Genellikle, yöntem bağımsız değişkenleri dönüştürülmüş veya otomatik olarak birlikte çalışma sıralayıcısı göre sıralanır. Ancak, bazen bağımsız değişkenleri basit bir şekilde dönüştürülemez. Bu gibi durumlarda birlikte çalışma derlemesi yöntemi prototip parametreleri COM işlev parametrelerini mümkün olduğunca yakın eşleştirmek için kullanılır. Daha fazla bilgi için [birlikte çalışma hazırlama](https://msdn.microsoft.com/library/115f7a2f-d422-4605-ab36-13a8dd28142a).  
+# <a name="visual-studio-interop-assembly-parameter-marshaling"></a>Visual Studio birlikte çalışma derleme parametresi sıralaması
+Yönetilen kodda yazılan VSPackages 'in yönetilmeyen COM kodu çağrısı veya çağrılması gerekebilir. Genellikle, yöntem bağımsız değişkenleri birlikte çalışma sıralayıcısı tarafından otomatik olarak dönüştürülür veya sıralanır. Ancak bazen bağımsız değişkenler kolay bir şekilde dönüştürülemez. Bu durumlarda birlikte çalışma derleme yöntemi prototip parametreleri, COM işlev parametrelerini mümkün olduğunca yakından eşleştirmek için kullanılır. Daha fazla bilgi için bkz. [birlikte çalışma hazırlama](https://msdn.microsoft.com/library/115f7a2f-d422-4605-ab36-13a8dd28142a).  
   
 ## <a name="general-suggestions"></a>Genel öneriler  
   
-##### <a name="read-the-reference-documentation"></a>Başvuru belgeleri okuyun  
- Her yöntem için başvuru belgeleri okumak için birlikte çalışabilirlik sorunlarını algılamak için verimli bir yöntem var.  
+##### <a name="read-the-reference-documentation"></a>Başvuru belgelerini okuyun  
+ Birlikte çalışabilirlik sorunlarını algılamaya yönelik etkili bir yol, her yöntemin başvuru belgelerini okumalıdır.  
   
- Her yöntem için başvuru belgeleri üç ilgili bölümleri içerir:  
+ Her yöntemin başvuru belgeleri üç ilgili bölüm içerir:  
   
-- [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] COM işlev prototipi.  
+- [!INCLUDE[vcprvc](../includes/vcprvc-md.md)]Com işlevi prototipi.  
   
-- Birlikte çalışma derlemesi yöntemi prototipi.  
+- Birlikte çalışma bütünleştirilmiş kod yöntemi prototipi.  
   
-- COM parametreleri ve her kısa bir açıklamasını listesi.  
+- COM parametrelerinin bir listesi ve her biri için kısa bir açıklama.  
   
-##### <a name="look-for-differences-between-the-two-prototypes"></a>İki prototip arasındaki farklar arayın  
- COM arabirimi içinde belirli bir tür tanımı hem de aynı türden tanımı uyuşmazlıklarını çoğu birlikte çalışabilirlik sorunlarını türetilmesi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birlikte çalışma bütünleştirilmiş kodları. Örneğin, geçirme özelliği fark düşünün bir `null` [out] parametresi değeri. İki prototip arasındaki farklar arayın ve geçirilen veriler için kendi ayrımlar göz önünde bulundurun gerekir.  
+##### <a name="look-for-differences-between-the-two-prototypes"></a>İki prototiptür arasındaki farkları arayın  
+ Birçok birlikte çalışabilirlik sorunu, bir COM arabirimindeki belirli bir türün tanımı ile [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birlikte çalışma derlemelerindeki aynı türün tanımı arasındaki uyuşmazlıkları türeten türetilir. Örneğin, `null` bir [out] parametresinde değer geçme yeteneğinin farkını göz önünde bulundurun. İki prototiptür arasındaki farkları aramanız ve geçirilmekte olan veriler için kollarını göz önünde bulundurmanız gerekir.  
   
 ##### <a name="read-the-parameter-definitions"></a>Parametre tanımlarını oku  
- Parametre tanımlarıyla okuyun. COM farklı türde tek bir parametre verilerinde karıştırma hakkında ortak dil çalışma zamanı (CLR) daha az katı. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] COM arabirimleri bu esneklik avantajlarından yararlanın. Geçti veya standart olmayan bir değer veya işaretçi parametresi, sabit bir değer gibi bir veri türü gerektiren herhangi bir parametre belgelerinde şekilde açıklanmalıdır.  
+ Parametre tanımlarını okuyun. COM, farklı veri türlerini tek bir parametrede karıştırma hakkında ortak dil çalışma zamanından (CLR) daha az katı. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Com arabirimleri bu esnekliğin tam avantajlarından yararlanır. Standart olmayan bir değer veya bir işaretçi parametresindeki sabit değer gibi bir veri türü geçirebilen veya gerektirebilecek herhangi bir parametre, belgelerde olduğu gibi açıklanmalıdır.  
   
-### <a name="iunknown-objects-passed-as-type-void"></a>IUnknown nesneleri türü void ** geçirildi  
- [Out] türü olarak tanımlanmış parametreleri Ara `void **` COM arabirimi, ancak tanımlı olarak `[``iid_is``]` içinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birlikte çalışma derlemesi yöntemi prototip.  
+### <a name="iunknown-objects-passed-as-type-void"></a>Tür void * * olarak geçirilen IUnknown nesneleri  
+ COM arabiriminde tür olarak tanımlanan `void **` , ancak `[``iid_is``]` [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birlikte çalışma derleme yöntemi prototipi içinde olarak tanımlanan [out] parametrelerini arayın.  
   
- Bazı durumlarda, bir COM arabirimi oluşturan bir `IUnknown` nesne ve COM arabirimi sonra geçirir, türü olarak `void **`. Bu arabirimler özellikle önemlidir çünkü değişken olarak tanımlanmışsa [out] IDL ile sonra `IUnknown` nesne başvuru sayılan ile `AddRef` yöntemi. Bir bellek sızıntısı, nesneyi doğru işlenmiyor oluşur.  
+ Bazen bir COM arabirimi bir nesne oluşturur `IUnknown` ve com arabirimi bunu tür olarak geçirir `void **` . Bu arabirimler özellikle önemlidir çünkü değişken IDL içinde [out] olarak tanımlanmışsa, `IUnknown` nesne, yöntemiyle başvuruya göre sayılır `AddRef` . Nesne doğru işlenmediğinde bir bellek sızıntısı oluşur.  
   
 > [!NOTE]
-> Bir `IUnknown` COM arabirimi tarafından oluşturulan ve bir [out] değişkeninde döndürülen nesne açıkça serbest, bellek sızıntısı neden olur.  
+> `IUnknown`Com arabirimi tarafından oluşturulan ve bir [out] değişkeninde döndürülen bir nesne, açıkça yayınlanmadıysa bellek sızıntısına neden olur.  
   
- Bu nesneleri işlemek, yönetilen yöntemleri kabul <xref:System.IntPtr> işaretçisi olarak bir `IUnknown` nesne ve çağrı <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> nesne elde etmek için yöntemi. Çağıran, hangi tür uygun olan dönüş değeri ardından atamalısınız. Nesne artık gerekmediğinde çağrı <xref:System.Runtime.InteropServices.Marshal.Release%2A> bunu serbest bırakmak için.  
+ Bu tür nesneleri işleyen yönetilen yöntemler <xref:System.IntPtr> bir nesnenin işaretçisi olarak değerlendirilir `IUnknown` ve <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> nesneyi elde etmek için yöntemini çağırır. Çağıran, dönüş değerini uygun türe göre saçmalıdır. Nesne artık gerekli olmadığında, <xref:System.Runtime.InteropServices.Marshal.Release%2A> serbest bırakmak için çağırın.  
   
- Çağırma örneği aşağıdadır <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.QueryViewInterface%2A> yöntemi ve işleme `IUnknown` doğru nesne:  
+ Aşağıda <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.QueryViewInterface%2A> yöntemi çağırma ve nesneyi doğru işleme örneği verilmiştir `IUnknown` :  
   
 ```  
 MyClass myclass;  
@@ -77,7 +77,7 @@ else
 ```  
   
 > [!NOTE]
-> Geçirmek için aşağıdaki yöntemlerden bilinen `IUnknown` nesne işaretçileri türü <xref:System.IntPtr>. Bunları, bu bölümde açıklanan şekilde işleyin.  
+> Aşağıdaki yöntemlerin `IUnknown` nesne işaretçilerini tür olarak geçirmesi bilinmektedir <xref:System.IntPtr> . Bu bölümde açıklandığı gibi işleyin.  
   
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>  
   
@@ -91,39 +91,39 @@ else
   
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2.get_CfgType%2A>  
   
-### <a name="optional-out-parameters"></a>[Out] parametreleri isteğe bağlı  
- [Out] tanımlanan parametreler için konum veri türü (`int`, `object`, vb.) COM arabirimi, ancak tanımlanmış aynı veri türü bir dizi olarak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birlikte çalışma derlemesi yöntemi prototip.  
+### <a name="optional-out-parameters"></a>İsteğe bağlı [out] Parametreler  
+ COM arabiriminde [out] veri türü (,, vb.) olarak tanımlanan parametreleri arayın `int` `object` , ancak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birlikte çalışma derleme yöntemi prototipde aynı veri türünde diziler olarak tanımlanır.  
   
- Gibi bazı COM arabirimleri <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgs%2A>, [out] parametreleri isteğe bağlı olarak değerlendir. Bir nesne gerekli değilse, bu COM arabirimleri dönüş bir `null` [out] nesne oluşturmak yerine bu parametrenin değeri olarak işaretçi. Bu tasarım gereğidir. Bu arabirimler için `null` işaretçileri doğru davranış göstermesini VSPackage'ı bir parçası olarak kabul ve herhangi bir hata döndürülür.  
+ Gibi bazı COM arabirimleri, <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgs%2A> [out] parametrelerini isteğe bağlı olarak değerlendirir. Bir nesne gerekli değilse, bu COM arabirimleri `null` [out] nesnesini oluşturmak yerine bu parametrenin değeri olarak bir işaretçi döndürür. Bu tasarım gereğidir. Bu arabirimler için `null` işaretçiler, VSPackage 'ın doğru davranışının bir parçası olarak kabul edilir ve hiçbir hata döndürülmez.  
   
- CLR bir [out] parametre değerini izin vermediğinden `null`, bu arabirimler tasarlanmış davranışını parçası, yönetilen kod içinde doğrudan kullanılabilir değil. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Etkilenen arabirimleri için birlikte çalışma derlemesi yöntemler, arayanın CLR izin verdiğinden ilgili parametreler olarak diziler tanımlayarak sorunu geçici olarak işe `null` dizileri.  
+ CLR bir [out] parametresinin değerine izin vermediğinden `null` , bu arabirimlerin tasarlanan davranışının bir kısmı yönetilen kod içinde doğrudan kullanılamaz. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Etkilenen arabirimlerin birlikte çalışma derleme yöntemleri, clr 'nin dizi geçişine izin verdiğinden ilgili parametreleri diziler olarak tanımlayarak soruna geçici olarak çalışır `null` .  
   
- Yönetilen uygulamaları bu yöntemlerin put bir `null` olduğunda döndürülecek bir şey parametre dizisine. Aksi takdirde, doğru türde tek öğeli bir dizi oluşturun ve dönüş değeri dizide yerleştirin.  
+ Bu yöntemlerin yönetilen uygulamaları döndürülecek bir şey olmadığında `null` parametreye bir dizi koymalıdır. Aksi takdirde, doğru türde tek öğeli bir dizi oluşturun ve dönüş değerini diziye koyun.  
   
- Yönetilen isteğe bağlı [out] arabirimleriyle bilgi almak için yöntemler parametre, parametre olarak bir dizi alma. Yalnızca dizinin ilk öğesinin değerini inceleyin. Değilse `null`, özgün parametresi gibi ilk öğesi kabul edin.  
+ İsteğe bağlı [out] parametrelerine sahip arabirimlerden bilgi alan yönetilen yöntemler, parametreyi bir dizi olarak alır. Yalnızca dizinin ilk öğesinin değerini inceleyin. Değilse `null` , ilk öğeyi özgün parametresi gibi değerlendirin.  
   
-### <a name="passing-constants-in-pointer-parameters"></a>İşaretçi parametreleri geçirme sabitleri  
- [İn] COM arabiriminde işaretçileri olarak tanımlandı ancak olarak tanımlanan parametreler için konum bir <xref:System.IntPtr> yazın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birlikte çalışma derlemesi yöntemi prototip.  
+### <a name="passing-constants-in-pointer-parameters"></a>Işaretçi parametrelerinde sabitleri geçirme  
+ COM arabiriminde [in] işaretçileri olarak tanımlanan, ancak <xref:System.IntPtr> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birlikte çalışma derleme yöntemi prototipte bir tür olarak tanımlanmış parametreleri arayın.  
   
- Özel bir değer, 0, -1 veya – 2 yerine bir nesne işaretçisi gibi bir COM arabirimi başarılı olduğunda benzer bir sorun oluşur. Aksine [!INCLUDE[vcprvc](../includes/vcprvc-md.md)], CLR nesneler olarak yayınlanamadı sabitleri izin vermiyor. Bunun yerine, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birlikte çalışma derlemesi tanımlar parametre olarak bir <xref:System.IntPtr> türü.  
+ Bir COM arabirimi bir nesne işaretçisi yerine 0,-1 veya – 2 gibi özel bir değer geçirdiğinde benzer bir sorun oluşur. Farklı olarak [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] , clr sabitler nesne olarak atama yapmasına izin vermez. Bunun yerine, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birlikte çalışma derlemesi parametreyi bir tür olarak tanımlar <xref:System.IntPtr> .  
   
- Bu yöntemlerin yönetilen uygulamaları avantajından olgu, <xref:System.IntPtr> sınıf her ikisi de sahip `int` ve `void *` oluşturmak için oluşturucular bir <xref:System.IntPtr> bir nesne veya bir tamsayı sabiti, uygun şekilde.  
+ Bu yöntemlerin yönetilen uygulamaları, bir <xref:System.IntPtr> `int` `void *` <xref:System.IntPtr> nesneden veya bir tamsayı sabitinden (uygun şekilde) oluşturmak için, sınıfın hem hem de oluşturuculara sahip olduğundan emin olmalıdır.  
   
- Yönetilen alma yöntemleri <xref:System.IntPtr> bu tür parametreleri kullanması gereken <xref:System.IntPtr> sonuçları işlemek için dönüştürme işleçleri yazın. Dönüştürmeniz <xref:System.IntPtr> için `int` ve ilgili tamsayı sabitleri karşı test edin. Yok değerleri eşleşirse, gerekli türü bir nesneye dönüştürmek ve devam et.  
+ Bu türün parametrelerini alan yönetilen yöntemler, <xref:System.IntPtr> <xref:System.IntPtr> sonuçları işlemek için tür dönüştürme işleçlerini kullanmalıdır. Önce öğesini <xref:System.IntPtr> öğesine dönüştürüp `int` ilgili tamsayı sabitlerine göre test edin. Hiçbir değer eşleşmezse, gerekli türdeki bir nesneye dönüştürün ve devam edin.  
   
- Bu örnekler için bkz <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenSpecificEditor%2A>.  
+ Bunun örnekleri için bkz <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenSpecificEditor%2A> . ve.  
   
-### <a name="ole-return-values-passed-as-out-parameters"></a>OLE dönüş değerleri olarak geçirildi [out] parametreleri  
- Sahip yöntemler için konum bir `retval` COM arabirimi, ancak, dönüş değerine sahip bir `int` dönüş değeri ve ek bir [out] dizi parametresinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birlikte çalışma derlemesi yöntemi prototip. Bu yöntemler için özel işlem gerektiren açık olmalıdır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] COM arabirim yöntemleri'den bir daha fazla parametre birlikte çalışma derlemesi yöntemi prototipe sahip.  
+### <a name="ole-return-values-passed-as-out-parameters"></a>OLE dönüş değerleri [out] parametresi olarak geçirildi  
+ `retval`Com arabiriminde dönüş değeri olan, ancak `int` [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birlikte çalışabilirlik derleme yöntemi prototipinin bir dönüş değerine ve ek [out] dizi parametresine sahip olan yöntemleri arayın. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Birlikte çalışma bütünleştirilmiş kod yöntemi prototiptürleri com arabirimi yöntemlerinden daha fazla parametre içerdiğinden, bu yöntemlerin özel bir işleme gerektirmesinin açık olması gerekir.  
   
- OLE etkinliği ile işlem birçok COM arabirimleri geri depolanan çağıran program OLE durumu hakkındaki bilgileri göndermek `retval` arabiriminin değeri döndürür. Buna karşılık gelen bir dönüş değeri yerine [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birlikte çalışma derlemesi yöntemleri geri [out] içinde depolanan çağıran program bilgileri Gönder dizi parametresi.  
+ OLE etkinliğiyle ilgilenen birçok COM arabirimi, OLE durumu hakkında bilgileri arabirimin dönüş değerinde depolanan çağıran programa geri gönderir `retval` . Bir dönüş değeri kullanmak yerine, karşılık gelen [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birlikte çalışma derleme yöntemleri, bilgileri bir [out] dizi parametresinde depolanan çağıran programa geri gönderir.  
   
- Yönetilen uygulamaları bu yöntemlerin [out] parametresi ile aynı türdeki tek öğeli bir dizi oluşturup parametreyi koymak. Dizi öğesinin değeri, uygun COM ile aynı olmalıdır `retval`.  
+ Bu yöntemlerin yönetilen uygulamaları, [out] parametresiyle aynı türde tek öğeli bir dizi oluşturmalı ve bu parametreyi parametreye koymalıdır. Dizi öğesinin değeri uygun COM ile aynı olmalıdır `retval` .  
   
- Bu tür arabirimleri çağıran yönetilen yöntemleri ilk öğe dışında [out] dizi çekmelidir. Bu öğe olarak bulunuyorlarmış işlenebilir bir `retval` karşılık gelen bir COM arabiriminden değeri döndürür.  
+ Bu türün arabirimlerini çağıran yönetilen yöntemler, ilk öğeyi [out] dizisinin dışına çekmelidir. Bu öğe `retval` , karşılık gelen com arabiriminden bir dönüş değeri gibi kabul edilebilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Birlikte çalışma hazırlama](https://msdn.microsoft.com/a95fdb76-7c0d-409e-a77e-0349b1ea1490)   
- [Birlikte çalışma hazırlama](https://msdn.microsoft.com/library/115f7a2f-d422-4605-ab36-13a8dd28142a)   
+ [Birlikte çalışabilirlik sıralaması](https://msdn.microsoft.com/a95fdb76-7c0d-409e-a77e-0349b1ea1490)   
+ [Birlikte çalışabilirlik sıralaması](https://msdn.microsoft.com/library/115f7a2f-d422-4605-ab36-13a8dd28142a)   
  [Birlikte çalışabilirlik sorunlarını giderme](https://msdn.microsoft.com/library/b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37)   
- [Yönetilen VSPackage'ları](../misc/managed-vspackages.md)
+ [Yönetilen VSPackages](../misc/managed-vspackages.md)

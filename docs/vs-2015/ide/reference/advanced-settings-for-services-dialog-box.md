@@ -14,16 +14,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1a021475df1ade9bb6220612aad666d503c19cb8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651711"
 ---
 # <a name="advanced-settings-for-services-dialog-box"></a>Hizmetler İçin Gelişmiş Ayarlar İletişim Kutusu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-İstemci uygulama hizmetleri, Windows Forms ve Windows Presentation Foundation (WPF) uygulamalarından [!INCLUDE[ajax_current_short](../../includes/ajax-current-short-md.md)] oturum açma, rol ve profil hizmetlerine yönelik Basitleştirilmiş erişim sağlar. İstemci uygulama hizmetlerini yapılandırmak için **Proje tasarımcısında** **Hizmetler** sayfasını kullanabilirsiniz. **Hizmetler** sayfası hakkında daha fazla bilgi için bkz. [Hizmetler sayfası, proje Tasarımcısı](../../ide/reference/services-page-project-designer.md).
+İstemci uygulama Hizmetleri [!INCLUDE[ajax_current_short](../../includes/ajax-current-short-md.md)] , Windows Forms ve Windows Presentation Foundation (WPF) uygulamalarından oturum açma, rol ve profil hizmetlerine Basitleştirilmiş erişim sağlar. İstemci uygulama hizmetlerini yapılandırmak için **Proje tasarımcısında** **Hizmetler** sayfasını kullanabilirsiniz. **Hizmetler** sayfası hakkında daha fazla bilgi için bkz. [Hizmetler sayfası, proje Tasarımcısı](../../ide/reference/services-page-project-designer.md).
 
  İstemci uygulama hizmetlerinin gelişmiş ayarlarını yapılandırmak için **Proje Tasarımcısı** 'ndaki **Hizmetler** sayfasının **Gelişmiş ayarlar** iletişim kutusunu kullanın. Bu ayarları kullanarak, daha az yaygın senaryolar sağlamak için bazı varsayılan uygulama hizmeti davranışlarını geçersiz kılabilirsiniz. Daha fazla bilgi için bkz. [istemci uygulama hizmetleri](https://msdn.microsoft.com/library/1487d8df-089e-4f21-abfb-a791a652b58e).
 
@@ -41,7 +41,7 @@ ms.locfileid: "72651711"
 
  **Rol hizmeti önbellek zaman aşımı** İstemci rolü sağlayıcısının roller hizmetine erişmek yerine önbelleğe alınmış rol değerlerini kullanacağı süreyi belirtir. Roller sık sık güncelleştirildiği zaman zaman aralığını küçük bir değere ayarlayın ve roller seyrek olarak güncelleniyorsa daha büyük bir değere ayarlayın. Varsayılan değer bir gündür.
 
- Rol sağlayıcısı, <xref:System.Web.Security.RolePrincipal.IsInRole%2A> yöntemini çağırdığınızda önbelleğe alınmış rol değerlerine veya rol hizmetine erişir. Önbelleği programlı bir şekilde temizlemek ve bu yöntemin uzak hizmete erişmesini zorlamak için <xref:System.Web.ClientServices.Providers.ClientRoleProvider.ResetCache%2A> yöntemini çağırın.
+ Rol sağlayıcısı, yöntemi çağırdığınızda önbelleğe alınmış rol değerlerine veya rol hizmetine erişir <xref:System.Web.Security.RolePrincipal.IsInRole%2A> . Önbelleği programlı bir şekilde temizlemek ve bu yöntemin uzak hizmete erişmesini zorlamak için <xref:System.Web.ClientServices.Providers.ClientRoleProvider.ResetCache%2A> yöntemini çağırın.
 
  **Özel bağlantı dizesi kullan** İstemci hizmet sağlayıcılarının yerel önbellek için özel bir veri deposu kullanıp kullanmayacağını belirtir. Varsayılan olarak, hizmet sağlayıcıları önbellek için yerel dosya sistemini kullanır. Bu seçeneğin belirlenmesi, metin kutusunu otomatik olarak varsayılan bir bağlantı dizesiyle dolduracaktır. Otomatik olarak bir SQL Server Compact Edition veritabanı oluşturmak ve kullanmak için varsayılan bağlantı dizesini tutabilir veya var olan bir SQL Server veritabanına bir bağlantı dizesi belirtebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Configure Client uygulama hizmetleri](https://msdn.microsoft.com/library/34a8688a-a32c-40d3-94be-c8e610c6a4e8). Bu seçenek varsayılan olarak temizlenir.
 
