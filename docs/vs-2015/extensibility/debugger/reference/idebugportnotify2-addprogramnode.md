@@ -1,5 +1,5 @@
 ---
-title: IDebugPortNotify2::AddProgramNode | Microsoft Docs
+title: 'IDebugPortNotify2:: AddProgramNode | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f96a76b7e9cf10c571ab1b9fac92e514ccfbeeb7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188431"
 ---
 # <a name="idebugportnotify2addprogramnode"></a>IDebugPortNotify2::AddProgramNode
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Hata ayıklaması yapılabilir bir program çalıştığı bağlantı noktası ile kaydeder.  
+Üzerinde çalıştığı bağlantı noktasıyla ayıklanabilecek bir programı kaydeder.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT AddProgramNode(   
@@ -40,13 +40,13 @@ int AddProgramNode( 
   
 #### <a name="parameters"></a>Parametreler  
  `pProgramNode`  
- [in] Bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) kaydedilecek program temsil eden nesne.  
+ 'ndaki Kaydedilecek programı temsil eden bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir program düğüm bağlantı noktasından çağırarak kaldırmanın [RemoveProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md) yöntemi.  
+ [RemoveProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md) yöntemini çağırarak, bir program düğümünün bağlantı noktasından kaydı kaldırılabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md)   

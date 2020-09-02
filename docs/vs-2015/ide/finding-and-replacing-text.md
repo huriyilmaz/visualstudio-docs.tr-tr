@@ -38,10 +38,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 025ba2eb95514efc740d1f8f7b3bf674d6bf237a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645645"
 ---
 # <a name="finding-and-replacing-text"></a>Metin Bulma ve Değiştirme
@@ -64,7 +64,7 @@ Visual Studio Code Editor içindeki metni ve bulma **ve değiştirme** veya **do
  Eşleşmelerin vurgu rengini değiştirmek için, **Araçlar** menüsünü seçin, **Seçenekler**' i seçin ve ardından **ortam**' ı seçin ve **yazı tipleri ve renkler**' i seçin. **Ayarları göster** listesinde, **metin düzenleyici**' yi seçin ve ardından **öğeleri görüntüle** listesinde, **vurgu bul (uzantı)** öğesini seçin.
 
 ### <a name="searching-tool-windows"></a>Araç pencerelerini arama
- **Düzenle** menüsünde **Bul ve Değiştir** ' i seçerek veya (CTRL + F) , bir kod veya metin penceresinde **bul** denetimini kullanabilirsiniz.
+ **Düzenle** menüsünde **Bul ve Değiştir** ' i seçerek veya (CTRL + F) **Output** , bir kod veya **Find Results** metin penceresinde **bul** denetimini kullanabilirsiniz.
 
  Bul denetiminin bir sürümü de bazı araç pencereleri için de kullanılabilir. Örneğin, artık, arama kutusuna metin girerek **araç kutusu** penceresindeki denetim listesini filtreleyebilirsiniz. Artık içeriklerini aramanıza izin veren diğer araç pencereleri **Çözüm Gezgini**, **özellikler** penceresi ve **Takım Gezgini**diğerleri arasında yer alır.
 
@@ -74,7 +74,7 @@ Visual Studio Code Editor içindeki metni ve bulma **ve değiştirme** veya **do
  **Tümünü Bul**' u seçtiğinizde, bir **sonuçları bul** penceresi açılır ve aramanızın eşleşmeleri listelenir. Listede bir sonuç seçildiğinde ilişkili dosya görüntülenir ve eşleşme vurgulanır. Dosya zaten düzenlenmek üzere açık değilse, sekme alanının sağ tarafındaki bir önizleme sekmesinde açılır. **Bul denetimini,** **sonuçları bul** listesinde aramak için kullanabilirsiniz.
 
 ### <a name="creating-custom-search-folder-sets"></a>Özel arama klasörü kümeleri oluşturma
- Arama **yeri** kutusunun yanındaki arama **klasörlerini Seç** düğmesini ( **.** ..) seçerek bir arama kapsamı tanımlayabilirsiniz. **Arama klasörlerini Seç** iletişim kutusunda, içinde arama yapılacak bir klasör kümesi belirtebilir ve daha sonra yeniden kullanabilmeniz için belirtimi kaydedebilirsiniz. Uzak bir makinedeki klasörleri, yalnızca sürücüsünü yerel makineye eşleştirdiyseniz belirtebilirsiniz.
+ Arama **yeri** kutusunun yanındaki arama **klasörlerini Seç** düğmesini ( **.**..) seçerek bir arama kapsamı tanımlayabilirsiniz. **Arama klasörlerini Seç** iletişim kutusunda, içinde arama yapılacak bir klasör kümesi belirtebilir ve daha sonra yeniden kullanabilmeniz için belirtimi kaydedebilirsiniz. Uzak bir makinedeki klasörleri, yalnızca sürücüsünü yerel makineye eşleştirdiyseniz belirtebilirsiniz.
 
 ### <a name="creating-custom-component-sets"></a>Özel bileşen kümeleri oluşturma
  Arama **yeri** kutusunun yanındaki **özel bileşen kümesini Düzenle** düğmesini seçerek, bileşen kümelerini arama kapsamınız olarak tanımlayabilirsiniz. Yüklü .NET veya COM bileşenlerini, çözümünüze dahil olan Visual Studio projelerini veya herhangi bir derlemeyi ya da tür kitaplığını (. dll,. tlb,. olb,. exe veya. ocx) belirtebilirsiniz. Başvuruları aramak için **başvurularda ara** kutusunu seçin.

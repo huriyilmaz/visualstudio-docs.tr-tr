@@ -24,42 +24,42 @@ caps.latest.revision: 37
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0f981b76d471658fe82e874901ad784a17841891
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446425"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64778368"
 ---
-# <a name="how-to-use-a-visualizer"></a>Nasıl yapılır: Görselleştirici kullanma
-Görselleştirici, veri türü için anlamlı bir şekilde bir değişken veya nesne içeriğini görüntülemek için kullanabilirsiniz. Görselleştiriciler dan kullanabileceğiniz **DataTips**, **izleme** penceresinde **Otolar** penceresinde veya **Yereller** penceresi.  
+# <a name="how-to-use-a-visualizer"></a>Nasıl Yapılır: Görselleştirici Kullanma
+Bir değişken ya da nesnenin içeriğini veri türü için anlamlı bir biçimde göstermek için Görselleştirici kullanabilirsiniz. Görsel öğeleri **DataTips**, bir **Gözcü** penceresi, **oto** penceresi veya **Locals** penceresinden kullanabilirsiniz.  
   
- Görselleştiriciler Compact Framework'te desteklenmez.  
+ Görselleyiciler Compact Framework 'te desteklenmez.  
   
 > [!NOTE]
-> İçinde **Store** uygulamalar, yalnızca standart metin, HTML, XML ve JSON görselleştiriciler desteklenir. Özel (kullanıcı tarafından oluşturulmuş) görselleştiriciler desteklenmez.  
+> **Mağaza** uygulamalarında yalnızca standart metın, HTML, XML ve JSON Görselleştiriciler desteklenir. Özel (Kullanıcı tarafından oluşturulan) Görselleştiriciler desteklenmez.  
   
 ### <a name="to-open-a-visualizer"></a>Görselleştirici açmak için  
   
-1. Bir değişken adı ile yanında Büyüteç simgesine tıklayarak **DataTips**, **Watch** penceresinde veya **Otolar**, **Yereller**, veya **Hızlı Bakış** penceresi.  
+1. **DataTips**, bir **Gözcü** penceresinde veya **oto**, **Yereller**veya **hızlı gözcü** penceresinde bir değişken adının yanında görünen büyüteç simgesine tıklayın.  
   
-     Görselleştiriciler listesi görüntülenir.  
+     Görselleştiricilerin bir listesi görüntülenir.  
   
-2. Kullanmak istediğiniz Görselleştirici'a tıklayın.  
+2. Kullanmak istediğiniz Görselleştirici tıklayın.  
   
 ### <a name="to-use-a-visualizer-for-managed-code-during-remote-debugging"></a>Uzaktan hata ayıklama sırasında yönetilen kod için Görselleştirici kullanmak için  
   
-- Hata ayıklama oturumu başlatmadan önce DLL Görselleştirici, uzak bilgisayara kopyalayın.  
+- Hata ayıklama oturumuna başlamadan önce Görselleştirici DLL 'ini uzak bilgisayara kopyalayın.  
   
-     DLL yolu hem uzak ve yerel bilgisayarlardan aynı olmalıdır. Bu yolu aşağıdaki konumlarda olabilir:  
+     DLL yolu hem uzak hem de yerel bilgisayarlarda aynı olmalıdır. Bu yol aşağıdaki konumlardan herhangi biri olabilir:  
   
-     *Visual Studio yükleme yolu* `\Common7\Packages\Debugger\Visualizers`  
+     *Visual Studio yüklemesi yolu*`\Common7\Packages\Debugger\Visualizers`  
   
      -veya-  
   
-     `My Documents\Visual Studio 2010\Visualizers` *Visual Studio sürümü* `\Visualizers`  
+     `My Documents\Visual Studio 2010\Visualizers`*Visual Studio sürümü*`\Visualizers`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Özel Görselleştiriciler oluşturma](../debugger/create-custom-visualizers-of-data.md)   
- [Nasıl yapılır: Görselleştiriciyi yükleme](../debugger/how-to-install-a-visualizer.md)   
- [Nasıl yapılır: Görselleştirici yazma](../debugger/how-to-write-a-visualizer.md)   
+ [Nasıl yapılır: Görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md)   
+ [Nasıl yapılır: Görselleştirici Yazma](../debugger/how-to-write-a-visualizer.md)   
  [Veri İpuçları'ndaki veri değerlerini görüntüleme](../debugger/view-data-values-in-data-tips-in-the-code-editor.md)

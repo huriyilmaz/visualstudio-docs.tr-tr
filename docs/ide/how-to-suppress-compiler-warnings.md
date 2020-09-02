@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 53db72495b64236441b9ce517c0eb25dc09a207c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85283963"
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>Nasıl yapılır: derleyici uyarılarını gösterme
@@ -134,4 +134,4 @@ Bazı durumlarda, tüm proje için değil tek bir NuGet paketi için NuGet derle
 
 - [İzlenecek yol: Uygulama oluşturma](../ide/walkthrough-building-an-application.md)
 - [Nasıl yapılır: derleme günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma](../ide/how-to-view-save-and-configure-build-log-files.md)
-- [Derle ve derle](../ide/compiling-and-building-in-visual-studio.md)
+- [Derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md)

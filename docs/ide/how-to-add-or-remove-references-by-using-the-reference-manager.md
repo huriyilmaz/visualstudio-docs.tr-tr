@@ -22,10 +22,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f02dcc5f38bf8eb4acc702c5d8a1ee466a6a4a71
-ms.sourcegitcommit: 9179c33a78c2ac690ce908d7c73eef50b6e367f0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87390268"
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>Nasıl yapılır: başvuru Yöneticisi 'ni kullanarak başvuru ekleme veya kaldırma
@@ -114,7 +114,7 @@ Aynı çözümdeki başka bir projenin çıktılarına dosya başvuruları eklem
 
   - Aynı çözümdeki diğer proje dizinleri. ( **Projeler** sekmesini kullanarak bu derlemeleri bulabilirsiniz.)
 
-  \-veya
+  \- veya
 
 - Görüntülenecek derlemelerin konumunu belirten bir kayıt defteri anahtarı ayarlayın:
 
@@ -130,9 +130,9 @@ Aynı çözümdeki başka bir projenin çıktılarına dosya başvuruları eklem
 
   - `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\<VersionMinimum>\AssemblyFoldersEx\MyAssemblies]@="<AssemblyLocation>"`
 
-  *\<VersionMinimum\>*, uygulanan en düşük çerçeve sürümüdür. *\<VersionMinimum\>* V 3.0 ise, *AssemblyFoldersEx* içinde belirtilen klasörler, .NET Framework 3,0 ve üstünü hedefleyen projeler için geçerlidir.
+  *\<VersionMinimum\>* , uygulanan en düşük çerçeve sürümüdür. *\<VersionMinimum\>* V 3.0 ise, *AssemblyFoldersEx* içinde belirtilen klasörler, .NET Framework 3,0 ve üstünü hedefleyen projeler için geçerlidir.
 
-  *\<AssemblyLocation\>*, **Başvuru Ekle** iletişim kutusunda görünmesini istediğiniz derlemelerin dizinidir, örneğin, *C:\MyAssemblies*.
+  *\<AssemblyLocation\>* , **Başvuru Ekle** iletişim kutusunda görünmesini istediğiniz derlemelerin dizinidir, örneğin, *C:\MyAssemblies*.
 
   Düğüm altında kayıt defteri anahtarı oluşturulması, `HKEY_LOCAL_MACHINE` tüm kullanıcıların **Başvuru Ekle** iletişim kutusunda belirtilen konumdaki derlemeleri görmesini sağlar. Düğüm altında kayıt defteri anahtarı oluşturulması `HKEY_CURRENT_USER` yalnızca geçerli kullanıcının ayarını etkiler.
 
@@ -208,7 +208,7 @@ Bir WinMD 'ye dosya başvurusu yaparken, beklenen Düzen * \<FileName> . winmd*,
 
 **Derlemeler**, **com**, **Windows** **ve en son bir sekmeye** **gözatıp** , son olarak projelere eklenen bileşenlerin listesini numaralandırır.
 
-## <a name="search"></a>Arama
+## <a name="search"></a>Arayın
 
 Başvuru Yöneticisi iletişim kutusundaki arama çubuğu, odağa sahip olan sekmenin üzerinde çalışır. Örneğin, **çözüm** sekmesi odağa karşın bir Kullanıcı arama çubuğuna "sistem" yazdığında, çözüm "sistem" içeren bir proje adından oluşmadığı sürece arama hiçbir sonuç döndürmez.
 

@@ -18,16 +18,16 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: c41b2942b53c97222abf7308b6706a7cdc734df1
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72985663"
 ---
 # <a name="powerpoint-solutions"></a>PowerPoint çözümleri
   Visual Studio, Microsoft Office PowerPoint için VSTO eklentileri oluşturmak için kullanabileceğiniz proje şablonları sağlar. PowerPoint 'i otomatikleştirebilmek, PowerPoint özelliklerini genişletmek veya PowerPoint Kullanıcı arabirimini (UI) özelleştirmek için VSTO Eklentilerini kullanabilirsiniz.
 
- VSTO eklentileri hakkında daha fazla bilgi için bkz. VSTO eklentileri ve VSTO eklentilerinin [mimarisi](architecture-of-vsto-add-ins.md) [programlamasına](getting-started-programming-vsto-add-ins.md) başlama. Microsoft Office ile programlama konusunda yeni [başladıysanız bkz. Visual Studio &#40;&#41;'da çalışmaya başlama Office geliştirme](getting-started-office-development-in-visual-studio.md).
+ VSTO eklentileri hakkında daha fazla bilgi için bkz. VSTO eklentileri ve VSTO eklentilerinin [mimarisi](architecture-of-vsto-add-ins.md) [programlamasına](getting-started-programming-vsto-add-ins.md) başlama. Microsoft Office ile programlama konusunda yeni başladıysanız, bkz. [Visual Studio 'Da Office geliştirme &#40;kullanmaya başlama&#41;](getting-started-office-development-in-visual-studio.md).
 
  [!INCLUDE[appliesto_pptallapp](includes/appliesto-pptallapp-md.md)]
 
@@ -42,11 +42,11 @@ ms.locfileid: "72985663"
 
 - Slaytlara şekil ekleme veya şekilleri değiştirme.
 
-  Bir VSTO eklentisinin PowerPoint nesne modeline erişmek için, projenizdeki `ThisAddIn` sınıfının `Application` alanını kullanın. `Application` alanı, PowerPoint 'in geçerli örneğini temsil eden bir [uygulama](/previous-versions/office/developer/office-2010/ff764034(v=office.14)) nesnesi döndürür. Daha fazla bilgi için bkz. [Program VSTO eklentileri](programming-vsto-add-ins.md).
+  Bir VSTO eklentisinin PowerPoint nesne modeline erişmek için, `Application` `ThisAddIn` projenizdeki sınıfının alanını kullanın. `Application`Alan, PowerPoint 'in geçerli örneğini temsil eden bir [uygulama](/previous-versions/office/developer/office-2010/ff764034(v=office.14)) nesnesi döndürür. Daha fazla bilgi için bkz. [Program VSTO eklentileri](programming-vsto-add-ins.md).
 
-  PowerPoint nesne modeli ' ne çağırdığınızda, PowerPoint için birincil birlikte çalışma derlemesinde sunulan türleri kullanırsınız. Birincil birlikte çalışma derlemesi, VSTO eklentisinin yönetilen kodu ile PowerPoint 'teki COM nesne modelinde bir köprü görevi görür. PowerPoint birincil birlikte çalışma derlemesindeki tüm türler, [Microsoft. Office. Interop. PowerPoint](/previous-versions/office/developer/office-2010/ff763170(v=office.14)) ad alanında tanımlanmıştır. Birincil birlikte çalışma derlemeleri hakkında daha fazla bilgi için bkz. [Office çözümleri &#40;geliştirmeye&#41; genel bakış VSTO](office-solutions-development-overview-vsto.md) ve [Office birincil birlikte çalışma derlemeleri](office-primary-interop-assemblies.md).
+  PowerPoint nesne modeli ' ne çağırdığınızda, PowerPoint için birincil birlikte çalışma derlemesinde sunulan türleri kullanırsınız. Birincil birlikte çalışma derlemesi, VSTO eklentisinin yönetilen kodu ile PowerPoint 'teki COM nesne modelinde bir köprü görevi görür. PowerPoint birincil birlikte çalışma derlemesindeki tüm türler, [Microsoft. Office. Interop. PowerPoint](/previous-versions/office/developer/office-2010/ff763170(v=office.14)) ad alanında tanımlanmıştır. Birincil birlikte çalışma derlemeleri hakkında daha fazla bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](office-solutions-development-overview-vsto.md) ve [Office birincil birlikte çalışma derlemeleri](office-primary-interop-assemblies.md).
 
-## <a name="WordOMDocumentation"></a>PowerPoint nesne modeli belgelerini kullanma
+## <a name="use-the-powerpoint-object-model-documentation"></a><a name="WordOMDocumentation"></a> PowerPoint nesne modeli belgelerini kullanma
  PowerPoint nesne modeli hakkında tüm bilgiler için, PowerPoint birincil birlikte çalışma derlemesi (PIA) başvurusuna ve VBA nesne modeli başvurusuna başvurabilirsiniz.
 
 ### <a name="primary-interop-assembly-reference"></a>Birincil birlikte çalışma derleme başvurusu
@@ -57,12 +57,12 @@ ms.locfileid: "72985663"
 ### <a name="vba-object-model-reference"></a>VBA nesne modeli başvurusu
  VBA nesne modeli başvurusu, Visual Basic for Applications (VBA) koduna açık olduğu için PowerPoint nesne modelini belgeler. Daha fazla bilgi için bkz. [PowerPoint 2010 nesne modeli başvurusu](/office/vba/api/overview/PowerPoint/object-model).
 
- VBA nesne modeli başvurusundaki tüm nesneler ve Üyeler, PowerPoint birincil birlikte çalışma derlemesindeki (PIA) türlere ve üyelere karşılık gelir. Örneğin, VBA nesne modeli başvurusundaki sunum nesnesi, PowerPoint PIA içindeki [sunum](/previous-versions/office/developer/office-2010/ff761925(v=office.14)) türüne karşılık gelir. VBA nesne modeli başvurusu birçok özellik, yöntem ve olay için kod örnekleri sağlasa da, bunları tarafından oluşturduğunuz bir PowerPoint VSTO eklentisi projesinde kullanmak istiyorsanız bu başvurudaki VBA kodunu Visual Basic C# veya görsele çevirmeniz gerekir Visual Studio 'Yu kullanma.
+ VBA nesne modeli başvurusundaki tüm nesneler ve Üyeler, PowerPoint birincil birlikte çalışma derlemesindeki (PIA) türlere ve üyelere karşılık gelir. Örneğin, VBA nesne modeli başvurusundaki sunum nesnesi, PowerPoint PIA içindeki [sunum](/previous-versions/office/developer/office-2010/ff761925(v=office.14)) türüne karşılık gelir. VBA nesne modeli başvurusu birçok özellik, yöntem ve olay için kod örnekleri sağlasa da, Visual Studio 'Yu kullanarak oluşturduğunuz bir PowerPoint VSTO eklentisi projesinde kullanmak istiyorsanız bu başvurudaki VBA kodunu Visual Basic veya Visual C# ' ye çevirmeniz gerekir.
 
 ## <a name="customize-the-user-interface-of-powerpoint"></a>PowerPoint 'in Kullanıcı arabirimini özelleştirme
  PowerPoint Kullanıcı arabirimini aşağıdaki yollarla değiştirebilirsiniz.
 
-|Görev|Daha fazla bilgi için|
+|Görev|Daha fazla bilgi edinmek için|
 |----------|--------------------------|
 |Özel bir görev bölmesi oluşturun.|[Özel görev bölmeleri](custom-task-panes.md)|
 |Şerite özel sekmeler ekleyin.|[Şerite genel bakış](ribbon-overview.md)|
@@ -73,7 +73,7 @@ ms.locfileid: "72985663"
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İzlenecek yol: PowerPoint için ilk VSTO eklentisini oluşturma](walkthrough-creating-your-first-vsto-add-in-for-powerpoint.md)
 - [VSTO Eklentilerini Programlamaya Başlama](getting-started-programming-vsto-add-ins.md)
-- [Office çözümleri geliştirmesine genel &#40;bakış VSTO&#41;](office-solutions-development-overview-vsto.md)
+- [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](office-solutions-development-overview-vsto.md)
 - [VSTO Eklentileri Mimarisi](architecture-of-vsto-add-ins.md)
 - [Nasıl yapılır: Visual Studio 'da Office projeleri oluşturma](how-to-create-office-projects-in-visual-studio.md)
 - [Program VSTO eklentileri](programming-vsto-add-ins.md)

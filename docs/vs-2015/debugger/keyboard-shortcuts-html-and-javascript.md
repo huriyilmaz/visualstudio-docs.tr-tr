@@ -15,50 +15,50 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: dedfc8e5be9b3410c978722518f50162bcd2b40b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68199677"
 ---
 # <a name="keyboard-shortcuts-html-and-javascript"></a>Klavye kısayolları (HTML ve JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Windows ve Windows Phone için geçerlidir] (.. /Image/windows_and_phone_content.png "windows_and_phone_content")  
+Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content.png "windows_and_phone_content")  
   
- HTML ve JavaScript kullanarak Store uygulamalarında hata ayıklamaya yönelik Visual Studio'daki klavye kısayollarını.  
+ HTML ve JavaScript kullanarak Mağaza uygulamalarında hata ayıklamak için Visual Studio 'da klavye kısayolları.  
   
-## <a name="general-shortcuts"></a>Genel kısayolları  
- Bu kısayollar, HTML ve JavaScript kullanarak Store uygulamaları için tüm araçlar arasında çalışır.  
+## <a name="general-shortcuts"></a>Genel kısayollar  
+ Bu kısayollar, HTML ve JavaScript kullanarak mağaza uygulamalarına yönelik tüm araçların tamamında çalışır.  
   
 |Eylem|Kısayol|  
 |------------|--------------|  
 |Windows uygulamasını Yenile|Ctrl+Shift+R|  
-|Windows uygulamasını yeniden başlatın|Ctrl+Shift+F5|  
+|Windows uygulamasını yeniden Başlat|Ctrl+Shift+F5|  
 |Hata ayıklamayı Durdur|Shift+F5|  
-|Performans ve tanılama hub'ı açın|Alt+F2|  
+|Performans ve tanılama hub 'ını aç|Alt+F2|  
   
-## <a name="javascript-console-shortcuts"></a>JavaScript Konsolu kısayollarını  
- Bu kısayollar, JavaScript konsol penceresinde kullanın.  
+## <a name="javascript-console-shortcuts"></a>JavaScript Konsol kısayolları  
+ JavaScript Konsol penceresinde bu kısayolları kullanın.  
   
 |Eylem|Kısayol|  
 |------------|--------------|  
-|Bir konsol komutunu çalıştırın|Enter|  
-|Konsolu Temizle|Esc|  
-|Tek satır ve çok satırlı modu arasında geçiş|Ctrl + Alt + M|  
+|Konsol komutu çalıştırma|Enter|  
+|Konsolu temizle|Esc|  
+|Tek satırlı ve çok satırlı mod arasında geçiş yap|Ctrl + alt + a|  
   
 ## <a name="dom-explorer-shortcuts"></a>DOM Gezgini kısayolları  
- Bu kısayollar DOM Gezgini'nde kullanın.  
+ Bu kısayolları DOM Gezgini 'nde kullanın.  
   
 |Eylem|Kısayol|  
 |------------|--------------|  
-|Öğe Seç|Ctrl+B|  
-|Görüntüleme ve Web sayfası vurgulama kutularını kullanırken gizleme arasında geçiş **öğe seçin**|Ctrl+Shift+I|  
-|Kullanarak değişiklikleri **HTML olarak Düzenle**|Ctrl+Enter|  
-|Kullanarak değişiklikleri atmak **HTML olarak Düzenle**|Esc|  
-|1 seçili CSS değerini artırın|Yukarı Ok|  
-|1 seçili CSS değeri Azalt|Aşağı Ok|  
+|Öğe seçin|Ctrl+B|  
+|**Select öğesi** kullanılırken Web sayfası vurgulama kutularını görüntüleme ve gizleme arasında geçiş yap|Ctrl+Shift+I|  
+|**HTML olarak Düzenle** kullanarak değişiklikleri Yürüt|Ctrl+Enter|  
+|**HTML olarak Düzenle** 'yi kullanarak değişiklikleri at|Esc|  
+|Seçili CSS değerini 1 artır|Yukarı Ok|  
+|Seçili CSS değerini 1 azalt|Aşağı Ok|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hızlı Başlangıç: HTML ve CSS hatalarını ayıklama](../debugger/quickstart-debug-html-and-css.md)   
- [Hızlı Başlangıç: JavaScript hatalarını ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md)
+ [Hızlı başlangıç: hata ayıklama HTML ve CSS](../debugger/quickstart-debug-html-and-css.md)   
+ [Hızlı Başlangıç: JavaScript hata ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md)

@@ -9,18 +9,18 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 606c6595f83003c463d218cf7253407ae2e925d1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160755"
 ---
 # <a name="sdkreference-element-visual-studio-templates"></a>SDKReference Öğesi (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Öğe şablonunda bir SDK başvurusu kullandığını belirtir.  
+Öğe şablonunun bir SDK başvurusu kullandığını belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <VSTemplate>      
@@ -43,13 +43,13 @@ ms.locfileid: "68160755"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[Başvuru](../extensibility/reference-element-visual-studio-templates.md)|Öğe bir projeye eklendiğinde eklemek için derleme başvurusu belirtir.|  
+|[Başvuru](../extensibility/reference-element-visual-studio-templates.md)|Öğe projeye eklendiğinde Eklenecek derleme başvurusunu belirtir.|  
   
 ## <a name="text-value"></a>Metin Değeri  
  Bir metin değeri gereklidir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu metin, öğe şablonu örneği oluşturulduğunda bir projeye eklemek için SDK başvurusu belirtir.  
+ Bu metin, öğe şablonu örneği oluşturulduğunda bir projeye eklenecek SDK başvurusunu belirtir.  
   
 ```xml  
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">   

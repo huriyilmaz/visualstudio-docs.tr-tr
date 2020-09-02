@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointResolution2::GetResolutionInfo | Microsoft Docs
+title: 'IDebugBreakpointResolution2:: GetResolutionInfo | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 03cdeb1539fc9811a1692a1f7a768da0114a90c4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160099"
 ---
 # <a name="idebugbreakpointresolution2getresolutioninfo"></a>IDebugBreakpointResolution2::GetResolutionInfo
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu Kesme noktasının açıklayan kesme noktası çözünürlüğü bilgileri alır.  
+Bu kesme noktasını açıklayan kesme noktası çözümleme bilgilerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetResolutionInfo(   
@@ -42,16 +42,16 @@ int GetResolutionInfo( 
   
 #### <a name="parameters"></a>Parametreler  
  `dwFields`  
- [in] Bayraklarının bir birleşimi [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md) hangi alanları belirlemek numaralandırma `pBPResolutionInfo` parametresi doldurulması üzeresiniz.  
+ 'ndaki [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md) Numaralandırmadaki, parametrenin hangi alanlarının doldurulacağını belirleyen bayrakların birleşimi `pBPResolutionInfo` .  
   
  `pBPResolutionInfo`  
- [out] [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) bu kesme noktası hakkında bilgi doldurulması için yapı.  
+ dışı Bu kesme noktasıyla ilgili bilgilerle doldurulacak [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) yapısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte bu yöntem için basit bir uygulayan `CDebugBreakpointResolution` gösteren nesne [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) arabirimi.  
+ Aşağıdaki örnek, `CDebugBreakpointResolution` [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) arabirimini kullanıma sunan basit bir nesne için bu yöntemi uygular.  
   
 ```  
 HRESULT CDebugBreakpointResolution::GetResolutionInfo(  

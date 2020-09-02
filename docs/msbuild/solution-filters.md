@@ -1,5 +1,5 @@
 ---
-title: MSBuild 'de çözüm filtreleri
+title: MSBuild’da çözüm filtreleri
 description: Çözüm filtrelerini açıklar ve MSBuild ile bir çözüm filtresi dosyası oluşturmayı gösterir.
 ms.date: 07/28/2020
 ms.topic: reference
@@ -11,13 +11,13 @@ ms.author: ghogen
 manager: jillfra
 monikerRange: '>= vs-2019'
 ms.openlocfilehash: 998103828d20827e8a1d99e0cc34d7f9beb6bd7c
-ms.sourcegitcommit: 9179c33a78c2ac690ce908d7c73eef50b6e367f0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87401037"
 ---
-# <a name="solution-filters-in-msbuild"></a>MSBuild 'de çözüm filtreleri
+# <a name="solution-filters-in-msbuild"></a>MSBuild’da çözüm filtreleri
 
 Çözüm filtresi dosyaları, bir Çözümdeki tüm projelerden hangi projelerin derleneceğini veya yükleneceğini belirten *. slnf* uzantılı JSON dosyalarıdır. MSBuild 16,7 ' den başlayarak, çözümü filtreleme etkinken oluşturmak için çözüm filtresi dosyasında MSBuild 'i çağırabilirsiniz. 
 

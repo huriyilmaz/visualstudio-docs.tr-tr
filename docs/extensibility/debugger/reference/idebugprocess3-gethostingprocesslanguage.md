@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::GetHostingProcessLanguage | Microsoft Dokümanlar
+title: 'IDebugProcess3:: GetHostingProcessLanguage | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 3b27be0850755a1a2808c8c5c758a3ad59b41d7e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723623"
 ---
 # <a name="idebugprocess3gethostingprocesslanguage"></a>IDebugProcess3::GetHostingProcessLanguage
-Bu yöntem `GUID` [SetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md)için bir çağrı tarafından ayarlanan bu işlemin dilini temsil eden döndürür.
+Bu yöntem, bir `GUID` [Sethostingprocesslanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md)çağrısıyla ayarlanan bu işlemin dilini temsil eden bir döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetHostingProcessLanguage(
@@ -41,10 +41,10 @@ int GetHostingProcessLanguage(
 
 ## <a name="parameters"></a>Parametreler
 `pguidLang`\
-[çıkış] `GUID` Bu sürecin dilinin. `GUID_NULL`(C++) `Guid.Empty` veya (C#) dilin ayarlanmadığı anlamına gelir.
+dışı `GUID` Bu işlemin dili. `GUID_NULL` (C++) veya `Guid.Empty` (C#), dilin ayarlanmayacağı anlamına gelir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)

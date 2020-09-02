@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::GetProgramName | Microsoft Docs
+title: 'IDebugProgramNode2:: GetProgramName | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0c46cb55140159bff12d297adbc5c0346ffe0409
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68148558"
 ---
 # <a name="idebugprogramnode2getprogramname"></a>IDebugProgramNode2::GetProgramName
@@ -24,7 +24,7 @@ ms.locfileid: "68148558"
 
 Programın adını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetProgramName (   
@@ -40,16 +40,16 @@ int GetProgramName ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pbstrProgramName`  
- [out] Programın adını döndürür.  
+ dışı Programın adını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Programın adını, bu tür bir yol bir parçası olabilir ancak bir programın adı program yolu ile aynı şeydir değil.  
+ Programın adı bu tür bir yolun parçası olabilse de programın adı, programın yoluyla aynı şey değildir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CProgram` uygulayan nesne [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) arabirimi. `MakeBstr` İşlevi BSTR olarak belirtilen dizenin bir kopyasını ayırır.  
+ Aşağıdaki örnek, `CProgram` [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir. `MakeBstr`İşlevi belirtilen dizenin bir KOPYASıNı BSTR olarak ayırır.  
   
 ```cpp#  
 HRESULT CProgram::GetProgramName(BSTR* pbstrProgramName) {    

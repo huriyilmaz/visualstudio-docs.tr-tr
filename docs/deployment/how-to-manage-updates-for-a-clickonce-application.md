@@ -20,14 +20,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 534171d9145d0a21fee7f8831e9a6355e6079cbd
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382360"
 ---
 # <a name="how-to-manage-updates-for-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulaması için güncelleştirmeleri yönetme
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]uygulamalar güncelleştirmeleri otomatik olarak veya programlı bir şekilde denetleyebilir. Bir geliştirici olarak, güncelleştirme denetimlerinin ne zaman ve nasıl gerçekleştirileceğini, güncelleştirmelerin zorunlu olup olmadığını ve uygulamanın güncelleştirmeleri denetlemesi gereken yeri belirtme konusunda çok sayıda esnekliğe sahip olursunuz.
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamalar güncelleştirmeleri otomatik olarak veya programlı bir şekilde denetleyebilir. Bir geliştirici olarak, güncelleştirme denetimlerinin ne zaman ve nasıl gerçekleştirileceğini, güncelleştirmelerin zorunlu olup olmadığını ve uygulamanın güncelleştirmeleri denetlemesi gereken yeri belirtme konusunda çok sayıda esnekliğe sahip olursunuz.
 
  Uygulamayı, uygulama başlamadan önce otomatik olarak güncelleştirmeleri denetlemek üzere veya uygulama başladıktan sonra ayarlanan aralıklarda otomatik olarak denetleyecek şekilde yapılandırabilirsiniz. Ayrıca, gerekli en düşük sürümü belirtebilirsiniz; diğer bir deyişle, kullanıcının sürümü gereken sürümden düşükse bir güncelleştirme yüklenir.
 

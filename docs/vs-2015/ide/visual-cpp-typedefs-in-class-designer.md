@@ -1,5 +1,5 @@
 ---
-title: Sınıf Tasarımcısı C++ 'de görsel tür tanımları | Microsoft Docs
+title: Sınıf Tasarımcısı Visual C++ Typedefs | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -15,16 +15,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 980c49aafba55e29714d786e492f7bb37a8ca621
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72646744"
 ---
 # <a name="visual-c-typedefs-in-class-designer"></a>Sınıf Tasarımcısında Visual C++ Typedefs
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-TypeDef deyimleri, bir ad ve temel alınan türü arasında bir veya daha fazla yöneltme katmanı oluşturur. Sınıf Tasarımcısı, anahtar C++ sözcüğü `typedef` ile belirtilen typedef türlerini destekler, örneğin:
+TypeDef deyimleri, bir ad ve temel alınan türü arasında bir veya daha fazla yöneltme katmanı oluşturur. Sınıf Tasarımcısı, anahtar sözcüğüyle belirtilen C++ typedef türlerini destekler `typedef` , örneğin:
 
 ```
 typedef class coord
@@ -39,7 +39,7 @@ typedef class coord
 
  `COORD OriginPoint;`
 
- Bir typedef adı olmadan bildirebilseniz de Sınıf Tasarımcısı belirttiğiniz etiket adını kullanmaz; Sınıf Görünümü oluşturduğu adı kullanacaktır. Örneğin, aşağıdaki bildirim geçerlidir, ancak Sınıf Görünümü ve **__adlandırılmamış**adlı bir nesne olarak sınıf Tasarımcısı görünür:
+ Bir typedef adı olmadan bildirebilseniz de Sınıf Tasarımcısı belirttiğiniz etiket adını kullanmaz; Sınıf Görünümü oluşturduğu adı kullanacaktır. Örneğin, aşağıdaki bildirim geçerlidir, ancak Sınıf Görünümü ve Sınıf Tasarımcısı **__unnamed**adlı bir nesne olarak görünür:
 
 ```
 typedef class coord
@@ -50,9 +50,9 @@ typedef class coord
 };
 ```
 
- @No__t_0 türünü kullanma hakkında daha fazla bilgi için, bkz. [(NOTINBUILD) typedef tanımlayıcısı](https://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1).
+ Türü kullanma hakkında daha fazla bilgi için `typedef` bkz. [(NOTINBUILD) typedef tanımlayıcısı](https://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1).
 
- C++ Typedef şeklinin, typedef içinde belirtilen türün şekli vardır. Örneğin, kaynak `typedef class` bildiriyorsa, şekil yuvarlak köşeler ve Label **sınıfına**sahiptir. @No__t_0 için, şekil kare köşeleri ve Label **yapısına**sahiptir.
+ C++ typedef şeklinin, typedef içinde belirtilen türün şekli vardır. Örneğin, kaynak bildirirse `typedef class` , şekil yuvarlak köşeler ve Label **sınıfına**sahiptir. İçin `typedef struct` , şeklinin kare köşeleri ve Label **yapısı**vardır.
 
  Sınıfların ve yapıların içinde bildirildiği iç içe tür tanımları olabilir; Bu nedenle, sınıf ve yapı şekilleri iç içe geçmiş bir typedef bildirimini iç içe geçmiş şekiller olarak gösterebilir
 
@@ -64,7 +64,7 @@ typedef class coord
 
  *ad* : *tür*
 
- typedef
+  typedef
 
  Mümkünse, tür *adına*bağlanan bir ilişkilendirme satırı çizer.
 
@@ -72,7 +72,7 @@ typedef class coord
 
  `func: void (*)(int)`
 
- typedef
+  typedef
 
  İşlev işaretçileri için typedef. Hiçbir ilişkilendirme çizgisi çizilmez.
 
@@ -87,11 +87,11 @@ class A {
 
  `MyInt: int`
 
- typedef
+  typedef
 
  `A`
 
- örneği
+ Sınıf
 
  Kaynak türü şeklinden hedef tür şekline işaret eden bir ilişkilendirme çizgisi çizer.
 
@@ -101,11 +101,11 @@ class A {
 
  `B`
 
- örneği
+ Sınıf
 
  `MyB : B`
 
- typedef
+  typedef
 
  Bir typedef şekline sağ tıklayıp, **Ilişkilendirmeyi göster** ' e tıkladığınızda typedef veya sınıf ve iki şekle katılan çizginin bir **diğer adı** (ilişki hattına benzer) görüntülenir.
 
@@ -115,7 +115,7 @@ class A {
 
  `MyBar : Bar`
 
- typedef
+  typedef
 
  Yukarıdaki gibi.
 
@@ -130,15 +130,15 @@ class A {
 
  `B`
 
- örneği
+ Sınıf
 
  `MyB : B`
 
- typedef
+  typedef
 
  `A`
 
- örneği
+ Sınıf
 
  `MyB` iç içe geçmiş bir typedef şekli.
 
@@ -152,11 +152,11 @@ class A {
 
  `typedef vector<int> MyIntVect;`
 
- `vector<T>`Class
+ `vector<T>`Sınıf
 
  `MyIntVect : vector<int>`
 
- typedef
+  typedef
 
  `class B {};`
 
@@ -166,7 +166,7 @@ class A {
 
  `MyB : B`
 
- typedef
+  typedef
 
  -> B
 
@@ -174,7 +174,7 @@ class A {
 
  `A`
 
- örneği
+ Sınıf
 
  -> MyB
 
@@ -188,17 +188,17 @@ class A {
 
  `std::vector<T>`
 
- örneği
+ Sınıf
 
  `MyIntVect : std::vector<int>`
 
- typedef
+  typedef
 
  `MyVect`
 
- örneği
+ Sınıf
 
  -> MyIntVect
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Visual C++ Code (sınıf Tasarımcısı)](../ide/working-with-visual-cpp-code-class-designer.md) [(NOTINBUILD) typedef tanımlayıcısı](https://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1) ile çalışma
+ [Visual C++ Code (sınıf Tasarımcısı)](../ide/working-with-visual-cpp-code-class-designer.md) [(NOTINBUILD) typedef belirticisi](https://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1) ile çalışma

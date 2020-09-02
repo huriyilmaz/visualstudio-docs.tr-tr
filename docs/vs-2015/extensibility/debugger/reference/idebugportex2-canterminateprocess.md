@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2::CanTerminateProcess | Microsoft Docs
+title: 'IDebugPortEx2:: CanTerminateProcess | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ae67aaee2eca8ff94f1c1620c5fb6797eb37dda9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188520"
 ---
 # <a name="idebugportex2canterminateprocess"></a>IDebugPortEx2::CanTerminateProcess
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bir işlem sonlandırılabilir olup olmadığını belirler.  
+Bir işlemin sonlandırılıp sonlandırılamayacağını belirler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT CanTerminateProcess(   
@@ -40,10 +40,10 @@ HRESULT CanTerminateProcess( 
   
 #### <a name="parameters"></a>Parametreler  
  `pPortProcess`  
- [in] Bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) sonlandırılacak işlemi temsil eden nesne.  
+ 'ndaki Sonlandırılacak işlemi temsil eden bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Döndürür `S_OK` işlem sonlandırılabilir; Aksi halde döndürür `S_FALSE`.  
+ `S_OK`İşlemin sonlandırılıp sonlandırılmayacağını döndürür; Aksi takdirde, döndürür `S_FALSE` .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)   

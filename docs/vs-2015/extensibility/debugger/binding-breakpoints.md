@@ -1,5 +1,5 @@
 ---
-title: Kesme noktaları bağlama | Microsoft Docs
+title: Bağlama kesme noktaları | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,49 +11,49 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: fc7f68093432c96d496921ea593b6e936bad8302
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68147974"
 ---
 # <a name="binding-breakpoints"></a>Kesme Noktaları Bağlama
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Kullanıcı bir kesme noktası ayarlar, belki de F9 tuşuna basarak IDE istek formulates ve kesme noktası oluşturmak için hata ayıklama oturumu ister.  
+Kullanıcı bir kesme noktası ayarlarsa, belki de F9 tuşuna basarak, IDE isteği tanımlar ve hata ayıklama oturumunun kesme noktasını oluşturmasını ister.  
   
-## <a name="setting-a-breakpoint"></a>Bir kesme noktası ayarlama  
- Bir kesme noktası ayarlamak, kod veya veri kesme noktası tarafından etkilenen henüz kullanılabilir olmayabileceğinden iki adımlı bir işlem olduğu. İlk olarak, bir kesme noktası açıklanan ve kod ve veriler kullanıma sunulduğunda, daha sonra bu kod veya veri gibi bağlı olması gerekir:  
+## <a name="setting-a-breakpoint"></a>Kesme noktası ayarlama  
+ Kesme noktası tarafından etkilenen kod veya veriler henüz kullanılamadığından bir kesme noktası ayarlamak iki adımlı bir işlemdir. İlk olarak, kesme noktası açıklanmalıdır ve kod veya veri kullanılabilir hale geldiğinde, bu kod veya verilere aşağıdaki gibi bağlanmalıdır:  
   
-1. Kesme noktası (DEs) ilgili hata ayıklama motorlardan istenen ve uygun olduğunda ardından kesme noktası kod veya veri bağlıdır.  
+1. Kesme noktası ilgili hata ayıklama altyapılarından (DEs) istenir ve ardından kesme noktası, kullanılabilir hale geldiğinde koda veya verilere bağlanır.  
   
-2. Kesme noktası istek için tüm ilgili DEs gönderir hata ayıklama oturumu için gönderilir. Kesme noktasına karşılık gelen bir kesme noktası işlemek için seçtiği herhangi bir DE oluşturur.  
+2. Kesme noktası isteği, ilgili tüm DEs 'e gönderen hata ayıklama oturumuna gönderilir. Kesme noktasını işlemeye seçen her türlü DE karşılık gelen bir bekleyen kesme noktası oluşturur.  
   
-3. Hata ayıklama oturumu bekleyen kesme noktalarının toplar ve bunları hata ayıklama paketi geri (Visual Studio hata ayıklama bileşeni) gönderir.  
+3. Hata ayıklama oturumu bekleyen kesme noktalarını toplar ve bunları hata ayıklama paketine (Visual Studio 'nun hata ayıklama bileşeni) geri gönderir.  
   
-4. Hata ayıklama paketi bekleyen kesme noktasının kod veya veri bağlamak için hata ayıklama oturumu ister. Hata ayıklama oturumu için tüm ilgili DEs bu isteği gönderir.  
+4. Hata ayıklama paketi, bekleyen kesme noktasını koda veya verilere bağlamak için hata ayıklama oturumuna sorar. Hata ayıklama oturumu bu isteği ilgili tüm DEs 'e gönderir.  
   
-5. Kesme noktasına bağlamak için DE ise, bir kesme noktası olay hata ayıklama oturumu bağımlı gönderir. Aksi durumda, bunun yerine bir kesme noktası hatası olay gönderir.  
+5. Ayrıca, kesme noktasını bağlayabiliyorsa, hata ayıklama oturumuna bir kesme noktası bağlı olay gönderir. Aksi takdirde, bunun yerine bir kesme noktası hata olayı gönderir.  
   
 ## <a name="pending-breakpoints"></a>Bekleyen kesme noktaları  
- Bir bekleyen kesme noktasının birden çok kod konumlara bağlayabilirsiniz. Örneğin, bir C++ şablon için kaynak kod satırı şablondan oluşturulan her kod dizisi bağlayabilirsiniz. Hata ayıklama oturumu, bir kesme noktası ilişkili olay, olay gönderildiği sırada bir kesme noktasına bağlı kod bağlamları listelemek için kullanabilirsiniz. DE olayları bağlama her istek için birden fazla kesme noktası bağlı gönderebilir. Bu nedenle daha fazla kod bağlamı daha sonra bağlı olabilir. Ancak, bir DE bağlama istek başına yalnızca bir kesme noktası hatası olay göndermesi gerekir.  
+ Bekleyen bir kesme noktası birden çok kod konumuna bağlanabilir. Örneğin, bir C++ şablonu için bir kaynak kodu satırı, şablondan oluşturulan her kod dizisine bağlanabilir. Hata ayıklama oturumu, olay gönderilirken bir kesme noktasına dayalı kod bağlamlarını numaralandırmak için kesme noktası ile bağlantılı bir olay kullanabilir. Daha sonra daha fazla kod bağlamı bağlanabilir, bu nedenle her bir bağlama isteği için birden çok kesme noktası bağlı olay gönderebilir. Ancak, bir DE bağlama isteği başına yalnızca bir kesme noktası hata olayı göndermelidir.  
   
 ## <a name="implementation"></a>Uygulama  
- Programlı olarak hata ayıklama paketi Yöneticisi (SDM) oturum hata ayıklama çağırır ve verir bir [IDebugBreakpointRequest2](../../extensibility/debugger/reference/idebugbreakpointrequest2.md) sarmalar arabirimi bir [BP_REQUEST_INFO](../../extensibility/debugger/reference/bp-request-info.md) açıklayan yapısı Ayarlanacak kesme noktası. Kesme noktaları birçok biçimlerinin olsa da, bunlar sonuç olarak bir kod veya veri bağlamı çözümleyin.  
+ Programlı olarak, hata ayıklama paketi oturum hata ayıklama Yöneticisi 'ni (SDM) çağırır ve bir [BP_REQUEST_INFO](../../extensibility/debugger/reference/bp-request-info.md) yapısını sarmalayan bir [IDebugBreakpointRequest2](../../extensibility/debugger/reference/idebugbreakpointrequest2.md) arabirimi sağlar ve bu da ayarlanacak kesme noktasını tanımlar. Kesme noktaları pek çok form olabilir, ancak sonuçta bir kod veya veri bağlamına çözümlenirler.  
   
- SDM çağırarak ilgili her DE bu çağrıyı geçirir, [CreatePendingBreakpoint](../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) yöntemi. Kesme noktası işlemek DE seçerse, oluşturur ve döndürür bir [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimi. SDM Bu arabirimler toplar ve bunları tek bir hata ayıklama paketin dön geçirir `IDebugPendingBreakpoint2` arabirimi.  
+ SDM, [CreatePendingBreakpoint](../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) yöntemini çağırarak her ilgisi olan bu çağrıyı geçirir. Ayrıca, kesme noktasını tanıtıcıyı seçerse, bir [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimi oluşturur ve döndürür. SDM bu arabirimleri toplar ve bunları hata ayıklama paketine tek bir arabirim olarak geri geçirir `IDebugPendingBreakpoint2` .  
   
- Şu ana kadar hiçbir olay üretilmedi.  
+ Şimdiye kadar, hiçbir olay üretilmez.  
   
- Bekleyen kesme noktasının çağırarak kod veya veri bağlamak hata ayıklama paketi daha sonra çalışır [bağlama](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md), DE tarafından gerçekleştirilir.  
+ Hata ayıklama paketi daha sonra, ve ile uygulanan [bind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)çağırarak, bekleyen kesme noktasını koda veya verilere bağlamayı dener.  
   
- Kesme noktasına bağlıysa DE gönderir. bir [IDebugBreakpointBoundEvent2](../../extensibility/debugger/reference/idebugbreakpointboundevent2.md) olay arabirimi hata ayıklama paketi. Bu arabirim, tüm kod bağlamları (veya tek bir veri bağlamı) Numaralandırılacak çağırarak kesme noktasına bağlı hata ayıklama paketi kullandığı [EnumBoundBreakpoints](../../extensibility/debugger/reference/idebugbreakpointboundevent2-enumboundbreakpoints.md), bir veya daha fazla döndüren [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) arabirimleri. [GetBreakpointResolution](../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md) arabirim döndürür bir [IDebugBreakpointResolution2](../../extensibility/debugger/reference/idebugbreakpointresolution2.md) arabirimi ve [GetResolutionInfo](../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) döndürür bir [BP_ RESOLUTION_INFO](../../extensibility/debugger/reference/bp-resolution-info.md) kod veya veri bağlamını içeren bir birleşimi.  
+ Kesme noktası bağlıysa, DE hata ayıklama paketine bir [IDebugBreakpointBoundEvent2](../../extensibility/debugger/reference/idebugbreakpointboundevent2.md) olay arabirimi gönderir. Hata ayıklama paketi, bir veya daha fazla [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) arabirimi döndüren [EnumBoundBreakpoints](../../extensibility/debugger/reference/idebugbreakpointboundevent2-enumboundbreakpoints.md)çağırarak kesme noktasıyla bağlantılı tüm kod bağlamlarını (veya tek veri bağlamını) numaralandırmak için bu arabirimi kullanır. [GetBreakpointResolution](../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md) arabirimi bir [IDebugBreakpointResolution2](../../extensibility/debugger/reference/idebugbreakpointresolution2.md) arabirimi döndürür ve [GetResolutionInfo](../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) kodu veya veri bağlamını içeren [BP_RESOLUTION_INFO](../../extensibility/debugger/reference/bp-resolution-info.md) bir UNION döndürür.  
   
- Kesme noktası bağlanamıyor DE ise, tek bir gönderdiği [IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) olay arabirimi hata ayıklama paketi. Hata ayıklama paketi çağırarak iletisidir ve hata türü (hata veya uyarı) alır [GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md)çizgidir [GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md) ve [ GetResolutionInfo](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md). Bu döndürür bir [BP_ERROR_RESOLUTION_INFO](../../extensibility/debugger/reference/bp-error-resolution-info.md) hata türünü ve iletisini içeren yapısı.  
+ DE, kesme noktasını bağlayamıyor, hata ayıklama paketine tek bir [IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) Event arabirimi gönderir. Hata ayıklama paketi, [GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md)ve ardından [GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md) ve [GetResolutionInfo](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)' ı çağırarak hata türünü (hata veya uyarı) ve bilgilendirici iletiyi alır. Bu, hata türünü ve iletisini içeren bir [BP_ERROR_RESOLUTION_INFO](../../extensibility/debugger/reference/bp-error-resolution-info.md) yapısı döndürür.  
   
- Bir DE bir kesme noktası işler, ancak bağlama yapılamaz, hata türü döndürür. `BPET_TYPE_ERROR`. Bir hata iletişim kutusu göstererek paketinin Hatalarını Ayıkla yanıt verir ve IDE bir ünlem işareti karakteri kaynak kod satırının sol kesme noktası glifine içine yerleştirir.  
+ Bir kesme noktası işler, ancak bağlanamaz, türünde bir hata döndürür `BPET_TYPE_ERROR` . Hata ayıklama paketi bir hata iletişim kutusu görüntüleyerek yanıt verir ve IDE, kaynak kodu satırının soluna kesme işareti glifin içine bir ünlem karakteri koyar.  
   
- Bir DE bir kesme noktası işleme, bunu ancak bazı diğer bağlanamıyor DE bağlamak, bir uyarı verir. IDE içinde kaynak kod satırının sol kesme karakteri bir soru glif yerleştirerek yanıt verir.  
+ Bir kesme noktasını da işlediğinde, bağlanamaz, ancak başka bir durum da bağlayabilir, bir uyarı döndürür. IDE, kaynak kodu satırının soluna bir soru karakteri yazarak yanıt verir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hata Ayıklama Görevleri](../../extensibility/debugger/debugging-tasks.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3 | Microsoft Dokümanlar
+title: IDebugBinder3 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,50 +13,50 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: aa85872337fdc1f7519d0de98cffe1436ef41c67
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735677"
 ---
 # <a name="idebugbinder3"></a>IDebugBinder3
 > [!IMPORTANT]
-> Visual Studio 2015'te ifade değerlendiricilerinin bu şekilde uygulanması amortismana uymaktadır. CLR ifade değerlendiricilerinin uygulanması hakkında bilgi için lütfen [CLR İfade Değerlendiriciler](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [Yönetilen İfade Değerlendirici Örneği'ne](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)bakın.
+> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Bu arabirim türleri, diğer adlar ve özel görselleştirici hizmetlerine erişim sağlar.
+ Bu arabirim, türlere, diğer adlara ve özel Görselleştirici hizmetlerine erişim sağlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugBinder3 : IDebugBinder
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Hata ayıklama altyapısı bu arabirimi takma adları, özel görselleştirici hizmetleri ve nesne türü bilgilerine erişimi desteklemek için uygular.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Bir hata ayıklama altyapısı, bu arabirimi diğer adları, özel görselleştiricisi hizmetlerini ve nesne türü bilgilerine erişimi desteklemek için uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bir [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) arabirimi [QueryInterface](/cpp/atl/queryinterface)kullanarak bu arabirimi elde eder.
+ Bir [ıdebugciltçi](../../../extensibility/debugger/reference/idebugbinder.md) arabirimi bu arabirimi [QueryInterface](/cpp/atl/queryinterface)kullanarak edinir.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasına göre yöntemler
- [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) arabirimi tarafından sağlanan yöntemlere ek olarak, bu arabirim aşağıdakileri uygular:
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+ [Idebugciltçi](../../../extensibility/debugger/reference/idebugbinder.md) arabirimi tarafından sunulan yöntemlerin yanı sıra, bu arabirim şunları uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetMemoryObject](../../../extensibility/debugger/reference/idebugbinder3-getmemoryobject.md)|Bu nesnenin bağlı olduğu belleği temsil eden bir bellek nesnesi alır.|
+|[GetMemoryObject](../../../extensibility/debugger/reference/idebugbinder3-getmemoryobject.md)|Bu nesnenin bağlandığı belleği temsil eden bir bellek nesnesi alır.|
 |[GetExceptionObjectAndType](../../../extensibility/debugger/reference/idebugbinder3-getexceptionobjectandtype.md)|Bu nesneyle ilişkili özel durumu alır (varsa),|
-|[FindAlias](../../../extensibility/debugger/reference/idebugbinder3-findalias.md)|Adı verilen bir takma adı alır,|
-|[GetAllAliases](../../../extensibility/debugger/reference/idebugbinder3-getallaliases.md)|Bu nesne için tüm diğer adlardan oluşan bir dizi alır,|
+|[FindAlias](../../../extensibility/debugger/reference/idebugbinder3-findalias.md)|Adı verilen bir diğer ad alır,|
+|[GetAllAliases](../../../extensibility/debugger/reference/idebugbinder3-getallaliases.md)|Bu nesne için tüm diğer adların bir dizisini alır,|
 |[GetTypeArgumentCount](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md)|Bu nesneyle ilişkili bağımsız değişken türlerinin sayısını alır,|
-|[GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md)|Bu nesneyle ilişkili bağımsız değişken türlerinin listesini alır,|
-|[GetEEService](../../../extensibility/debugger/reference/idebugbinder3-geteeservice.md)|Görselleştirici hizmetine arayüz alır,|
-|[GetMemoryContext64](../../../extensibility/debugger/reference/idebugbinder3-getmemorycontext64.md)|Nesne konumunu veya 64 bit bellek adresini bellek bağlamına dönüştürür.|
+|[GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md)|Bu nesneyle ilişkili bağımsız değişken türlerinin bir listesini alır,|
+|[GetEEService](../../../extensibility/debugger/reference/idebugbinder3-geteeservice.md)|Görselleştirici hizmetine bir arabirim alır,|
+|[GetMemoryContext64](../../../extensibility/debugger/reference/idebugbinder3-getmemorycontext64.md)|Bir nesne konumu ya da 64 bitlik bir bellek adresini bir bellek bağlamına dönüştürür.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: ee.h
+ Üstbilgi: ee. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İfade Değerlendirme Arabirimleri](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)

@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: e95f760712f46632120540091b9f8f408aad9da4
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85903422"
 ---
 # <a name="create-a-basic-project-system-part-1"></a>Temel proje sistemi oluşturma, Bölüm 1
@@ -520,7 +520,7 @@ Templates
 
 - *SimpleProject.Resources.SimpleProjectNode.bmp*
 
-  Örnek oluşturma sırasında, `ProjectNode` temel sınıf, *Resources\imagelis.bmp*, yaygın olarak kullanılan 16 x 16 bit eşlem olan *Resources.imagelis.bmp*yükler. Bu bit eşlem listesi olarak kullanılabilir hale `SimpleProjectNode` getirilir `ImageHandler.ImageList` . `SimpleProjectNode`proje düğümü bit eşlemini listeye ekler. Görüntü listesindeki proje düğümü bit eşleminin boşluğu daha sonra public özelliğinin değeri olarak kullanılmak üzere önbelleğe alınır `ImageIndex` . Visual Studio, proje düğümü simgesi olarak hangi bit eşlemin gösterileceğini öğrenmek için bu özelliği kullanır.
+  Örnek oluşturma sırasında, `ProjectNode` temel sınıf, *Resources\imagelis.bmp*, yaygın olarak kullanılan 16 x 16 bit eşlem olan *Resources.imagelis.bmp*yükler. Bu bit eşlem listesi olarak kullanılabilir hale `SimpleProjectNode` getirilir `ImageHandler.ImageList` . `SimpleProjectNode` proje düğümü bit eşlemini listeye ekler. Görüntü listesindeki proje düğümü bit eşleminin boşluğu daha sonra public özelliğinin değeri olarak kullanılmak üzere önbelleğe alınır `ImageIndex` . Visual Studio, proje düğümü simgesi olarak hangi bit eşlemin gösterileceğini öğrenmek için bu özelliği kullanır.
 
 ## <a name="test-the-custom-project-node-icon"></a>Özel proje düğümü simgesini test etme
  Özel proje düğümünüz simgenizi içeren bir proje hiyerarşisi oluşturup oluşturmadığını görmek için proje fabrikasını test edin.
@@ -601,9 +601,9 @@ Templates
 
 3. `nameSpace`Ve parametrelerinin değerlerini inceleyin `className` .
 
-   - `nameSpace`, \<RootNamespace> *\Templates\projelerisimpleproject\simpleproject.exe. myproj* proje şablonu dosyasındaki öğesinin değeri olarak verilir. Bu durumda, değer `MyRootNamespace` .
+   - `nameSpace` , \<RootNamespace> *\Templates\projelerisimpleproject\simpleproject.exe. myproj* proje şablonu dosyasındaki öğesinin değeri olarak verilir. Bu durumda, değer `MyRootNamespace` .
 
-   - `className`, dosya adı uzantısı olmadan sınıf kaynak dosya adının değeri olarak verilir. Bu durumda, hedef klasöre kopyalanacak ilk dosya *AssemblyInfo.cs*; Bu nedenle, className değeri `AssemblyInfo` .
+   - `className` , dosya adı uzantısı olmadan sınıf kaynak dosya adının değeri olarak verilir. Bu durumda, hedef klasöre kopyalanacak ilk dosya *AssemblyInfo.cs*; Bu nedenle, className değeri `AssemblyInfo` .
 
 4. Kesme noktasını kaldırın ve yürütmeye devam etmek için **F5** 'e basın.
 

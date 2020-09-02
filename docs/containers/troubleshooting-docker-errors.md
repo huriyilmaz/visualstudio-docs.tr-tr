@@ -12,10 +12,10 @@ ms.workload: multiple
 ms.date: 01/27/2020
 ms.author: ghogen
 ms.openlocfilehash: 31b9d8649abed0f9901aa872ff3939c25e3025b8
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87235114"
 ---
 # <a name="troubleshoot-visual-studio-development-with-docker"></a>Docker ile Visual Studio geliştirme sorunlarını giderme
@@ -95,7 +95,7 @@ Docker 'ı yeniden başlatmak için **Uygula** ' ya tıklayın. Bu adımlar *üz
 
 ## <a name="microsoftdockertools-github-repo"></a>Microsoft/DockerTools GitHub deposu
 
-Karşılaştığınız diğer sorunlar için bkz. [Microsoft/DockerTools](https://github.com/microsoft/dockertools/issues) sorunları.
+Karşılaştığınız diğer sorunlar için bkz.  [Microsoft/DockerTools](https://github.com/microsoft/dockertools/issues) sorunları.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

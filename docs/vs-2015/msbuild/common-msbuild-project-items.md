@@ -1,5 +1,5 @@
 ---
-title: Yaygın MSBuild proje öğeleri | Microsoft Docs
+title: Ortak MSBuild proje öğeleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -17,130 +17,130 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8e36d5e50b15a5ede425715ec756f05ab8d014de
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160408"
 ---
 # <a name="common-msbuild-project-items"></a>Yaygın MSBuild Proje Öğeleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İçinde [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)], adlandırılmış bir veya daha fazla dosya başvurusu bir öğedir. Meta veri dosya adları, yollar ve sürüm numaraları gibi öğeleri içerir. Tüm proje türlerinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çeşitli öğeleri ortaktır. Bu öğeler, dosya Microsoft.Build.commontypes.xsd'de tanımlanmıştır.  
+[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]' De, bir öğe bir veya daha fazla dosyaya adlandırılmış bir başvurudur. Öğeler, dosya adları, yollar ve sürüm numaraları gibi meta verileri içerir. İçindeki tüm proje türlerinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ortak olarak birkaç öğe vardır. Bu öğeler Microsoft. Build. CommonTypes. xsd dosyasında tanımlanmıştır.  
   
 ## <a name="common-items"></a>Ortak öğeler  
- Ortak proje öğeleri listesi verilmiştir.  
+ Tüm ortak proje öğelerinin listesi aşağıda verilmiştir.  
   
 ### <a name="reference"></a>Başvuru  
- Projesinde bir derleme (yönetilen) başvuruyu temsil eder.  
+ Projedeki derleme (yönetilen) başvurusunu temsil eder.  
   
-|Öğe adı|Açıklama|  
+|Öğe Adı|Açıklama|  
 |---------------|-----------------|  
 |HintPath|İsteğe bağlı dize. Derlemenin göreli veya mutlak yolu.|  
-|Ad|İsteğe bağlı dize. Örneğin, "System.Windows.Forms." derlemenin görünen adı|  
-|FusionName|İsteğe bağlı dize. Öğe için basit veya güçlü Füzyon adı belirtir.<br /><br /> Bu öznitelik mevcut olduğunda, derleme dosyasını Füzyon adı almak için açık olması gerekmez çünkü zaman kazandırabilir.|  
-|SpecificVersion|İsteğe bağlı boolean. Sadece Füzyon adındaki sürümünde başvuruda bulunup bulunmadığını belirtir.|  
-|Diğer adlar|İsteğe bağlı dize. Başvuru için diğer adlar.|  
-|Özel|İsteğe bağlı boolean. Başvurunun çıkış klasörüne kopyalanıp kopyalanmayacağını belirtir. Bu özniteliği ile eşleşen **Yereli Kopyala** Visual Studio IDE içinde olan başvuru özelliği.|  
+|Name|İsteğe bağlı dize. Derlemenin görünen adı, örneğin, "System. Windows. Forms."|  
+|FusionName|İsteğe bağlı dize. Öğe için basit veya güçlü Fusion adı belirtir.<br /><br /> Bu öznitelik mevcut olduğunda, derleme dosyası Fusion adını almak için açılmadığından zaman tasarrufu yapabilirsiniz.|  
+|Bahsedilen SpecificVersion|İsteğe bağlı Boolean. Yalnızca Fusion adındaki sürümün başvurulması gerekip gerekmediğini belirtir.|  
+|Diğer adlar|İsteğe bağlı dize. Başvuru için herhangi bir diğer ad.|  
+|Özel|İsteğe bağlı Boolean. Başvurunun çıkış klasörüne kopyalanıp kopyalanmayacağını belirtir. Bu öznitelik, Visual Studio IDE içinde olan başvurunun yereli **Kopyala** özelliğiyle eşleşir.|  
   
 ### <a name="comreference"></a>COMReference  
- Temsil eder (yönetilmeyen) COM bileşeni projede başvuru.  
+ Projedeki COM (yönetilmeyen) bileşen başvurusunu temsil eder.  
   
-|Öğe adı|Açıklama|  
+|Öğe Adı|Açıklama|  
 |---------------|-----------------|  
 |Ad|İsteğe bağlı dize. Bileşenin görünen adı.|  
-|Guid|İsteğe bağlı dize. Bir GUID biçiminde bileşeni için {12345678-1234-1234-1234-1234567891234}.|  
-|VersionMajor|İsteğe bağlı dize. Bileşenin sürüm numarasının ana bölümü. Örneğin, "5" tam sürüm numarası "5.46." ise|  
-|VersionMinor|İsteğe bağlı dize. Bileşenin sürüm numarasının ikincil bölümü. Örneğin, "46" tam sürüm numarası "5.46." ise|  
-|LCID|İsteğe bağlı dize. LocaleID bileşeni için.|  
-|WrapperTool|İsteğe bağlı dize. Bileşen, örneğin, "tlbimp." kullanılan sarmalayıcı aracı adı|  
-|Yalıtılmış|İsteğe bağlı boolean. Bileşen reg ücretsiz bir bileşen olup olmadığını belirtir.|  
+|Guid|İsteğe bağlı dize. Formundaki bileşeni için bir GUID {12345678-1234-1234-1234-1234567891234} .|  
+|VersionAna|İsteğe bağlı dize. Bileşenin sürüm numarasının ana bölümü. Örneğin, tam sürüm numarası "5,46" ise "5".|  
+|VersionMinor|İsteğe bağlı dize. Bileşenin sürüm numarasının küçük bölümü. Örneğin, tam sürüm numarası "5,46" ise, "46".|  
+|LCID|İsteğe bağlı dize. Bileşenin LocaleID 'Si.|  
+|WrapperTool|İsteğe bağlı dize. Bileşende kullanılan sarmalayıcı aracının adı, örneğin, "Tlbimp."|  
+|Yalıtılmış|İsteğe bağlı Boolean. Bileşenin bir reg-Free bileşeni olup olmadığını belirtir.|  
   
 ### <a name="comfilereference"></a>COMFileReference  
- Akış ResolvedComreference hedef tür kitaplıklarını listesini temsil eder.  
+ ResolvedComreference hedefine akışa eklenen kitaplıkların tür bir listesini temsil eder.  
   
-|Öğe adı|Açıklama|  
+|Öğe Adı|Açıklama|  
 |---------------|-----------------|  
-|WrapperTool|İsteğe bağlı dize. Bileşen, örneğin, "tlbimp." kullanılan sarmalayıcı aracı adı|  
+|WrapperTool|İsteğe bağlı dize. Bileşende kullanılan sarmalayıcı aracının adı, örneğin, "Tlbimp."|  
   
 ### <a name="nativereference"></a>NativeReference  
- Yerel bir bildirim dosyası veya böyle bir dosya başvurusu temsil eder.  
+ Yerel bir bildirim dosyasını veya bu tür bir dosyaya yapılan başvuruyu temsil eder.  
   
-|Öğe adı|Açıklama|  
+|Öğe Adı|Açıklama|  
 |---------------|-----------------|  
-|Ad|Zorunlu dize. Bildirim dosyasının temel adı.|  
-|HintPath|Zorunlu dize. Bildirim dosyasının göreli yolu.|  
+|Ad|Gerekli dize. Bildirim dosyasının temel adı.|  
+|HintPath|Gerekli dize. Bildirim dosyasının göreli yolu.|  
   
 ### <a name="projectreference"></a>ProjectReference  
- Başka bir projeye başvuruyu temsil eder.  
+ Başka bir projenin başvurusunu temsil eder.  
   
-|Öğe adı|Açıklama|  
+|Öğe Adı|Açıklama|  
 |---------------|-----------------|  
 |Ad|İsteğe bağlı dize. Başvurunun görünen adı.|  
-|Project|İsteğe bağlı dize. Bir GUID biçiminde başvuru {12345678-1234-1234-1234-1234567891234}.|  
-|Paket|İsteğe bağlı dize. Başvurulan proje dosyasının yolu.|  
+|Project|İsteğe bağlı dize. Formundaki, başvuru için bir GUID {12345678-1234-1234-1234-1234567891234} .|  
+|Paket|İsteğe bağlı dize. Başvurulduğu proje dosyasının yolu.|  
   
-### <a name="compile"></a>Derleme  
- Derleyici için kaynak dosyaları temsil eder.  
+### <a name="compile"></a>Se  
+ Derleyicinin kaynak dosyalarını temsil eder.  
   
-|Öğe adı|Açıklama|  
+|Öğe Adı|Açıklama|  
 |---------------|-----------------|  
-|DependentUpon|İsteğe bağlı dize. Bu dosyayı doğru şekilde derlenmesi için bağımlı dosyasını belirtir.|  
-|AutoGen|İsteğe bağlı boolean. Dosya için proje tarafından oluşturulup oluşturulmadığını gösterir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE).|  
-|Bağlantı|İsteğe bağlı dize. Dosya fiziksel olarak proje dosyasının etkisi dışında bulunduğunda görüntülenecek notational yolu.|  
-|Görünür|İsteğe bağlı boolean. Dosyada görüntülenip görüntülenmeyeceğini gösterir **Çözüm Gezgini** içinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].|  
-|CopyToOutputDirectory|İsteğe bağlı dize. Dosyayı çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1.  hiçbir zaman<br />2.  Her zaman<br />3.  PreserveNewest|  
+|DependentUpon|İsteğe bağlı dize. Doğru derlemek için bu dosyanın bağlı olduğu dosyayı belirtir.|  
+|Oto gen|İsteğe bağlı Boolean. Dosyanın proje için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tümleşik geliştirme ortamı (IDE) tarafından oluşturulup oluşturulmayacağını gösterir.|  
+|Bağlantı|İsteğe bağlı dize. Dosya fiziksel olarak proje dosyasının etki dışında konumlandırıldığında görüntülenecek olan notational yolu.|  
+|Görünür|İsteğe bağlı Boolean. Dosyasında **Çözüm Gezgini** içinde görüntülenip görüntülenmeyeceğini gösterir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .|  
+|CopyToOutputDirectory|İsteğe bağlı dize. Dosyanın çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1. hiçbir şekilde<br />2. her zaman<br />3. Preservenebatı|  
   
 ### <a name="embeddedresource"></a>EmbeddedResource  
- Üretilen derleme içine gömülü olması için kaynaklar temsil eder.  
+ Oluşturulan derlemeye gömülebilen kaynakları temsil eder.  
   
-|Öğe adı|Açıklama|  
+|Öğe Adı|Açıklama|  
 |---------------|-----------------|  
-|DependentUpon|İsteğe bağlı dize. Bu dosyayı doğru şekilde derlenmesi için bağımlı dosyasını belirtir|  
-|Oluşturucu|Zorunlu dize. Bu öğe üzerinde çalıştırılmış herhangi bir dosya üreticisinin adı.|  
-|LastGenOutput|Zorunlu dize. Bu öğe üzerinde çalışan herhangi bir dosya üreticisi tarafından oluşturulan dosyanın adı.|  
-|CustomToolNamespace|Zorunlu dize. Hangi herhangi bir dosyada bu öğe üzerinde çalışan bir Oluşturucu kod üretmesi gereken ad alanı.|  
-|Bağlantı|İsteğe bağlı dize. Dosya fiziksel olarak proje etki dışında yer alıyorsa notational yolu görüntülenir.|  
-|Görünür|İsteğe bağlı boolean. Dosyada görüntülenip görüntülenmeyeceğini gösterir **Çözüm Gezgini** içinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].|  
-|CopyToOutputDirectory|İsteğe bağlı dize. Dosyayı çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1.  hiçbir zaman<br />2.  Her zaman<br />3.  PreserveNewest|  
-|LogicalName|Zorunlu dize. Katıştırılmış kaynağın mantıksal adı.|  
+|DependentUpon|İsteğe bağlı dize. Doğru derlemek için bu dosyanın bağlı olduğu dosyayı belirtir|  
+|Oluşturucu|Gerekli dize. Bu öğede çalıştırılan herhangi bir dosya oluşturucusunun adı.|  
+|LastGenOutput|Gerekli dize. Bu öğede çalıştırılan herhangi bir dosya üreticisi tarafından oluşturulan dosyanın adı.|  
+|CustomToolNamespace|Gerekli dize. Bu öğe üzerinde çalışan herhangi bir dosya oluşturucusunun kod oluşturması gereken ad alanı.|  
+|Bağlantı|İsteğe bağlı dize. Dosya fiziksel olarak projenin etki alanının dışında konumlandırıldığında, notational yolu görüntülenir.|  
+|Görünür|İsteğe bağlı Boolean. Dosyasında **Çözüm Gezgini** içinde görüntülenip görüntülenmeyeceğini gösterir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .|  
+|CopyToOutputDirectory|İsteğe bağlı dize. Dosyanın çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1. hiçbir şekilde<br />2. her zaman<br />3. Preservenebatı|  
+|LogicalName|Gerekli dize. Gömülü kaynağın mantıksal adı.|  
   
-### <a name="content"></a>İçerik  
- Projeye derlenmemiş ancak katıştırılmış veya olabilir, birlikte yayımlanan dosyaları gösterir.  
+### <a name="content"></a>Content  
+ Projeye derlenmemiş ancak birlikte gömülebilir veya onunla birlikte yayımlanabilir olan dosyaları temsil eder.  
   
-|Öğe adı|Açıklama|  
+|Öğe Adı|Açıklama|  
 |---------------|-----------------|  
-|DependentUpon|İsteğe bağlı dize. Bu dosyayı doğru şekilde derlenmesi için bağımlı dosyasını belirtir.|  
-|Oluşturucu|Zorunlu dize. Bu öğe üzerinde çalışan herhangi bir dosya üreticisinin adı.|  
-|LastGenOutput|Zorunlu dize. Bu öğe üzerinde çalıştırılmış herhangi bir dosya üreticisi tarafından oluşturulan dosyanın adı.|  
-|CustomToolNamespace|Zorunlu dize. Hangi herhangi bir dosyada bu öğe üzerinde çalışan bir Oluşturucu kod üretmesi gereken ad alanı.|  
-|Bağlantı|İsteğe bağlı boolean. Dosyada görüntülenip görüntülenmeyeceğini gösterir **Çözüm Gezgini** içinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].|  
-|PublishState|Zorunlu dize. İçerik Yayımlama durumu ya da:<br /><br /> -Varsayılan<br />-Dahil<br />-Dışlanan<br />-Veri dosyası<br />-Önkoşulu|  
-|IsAssembly|İsteğe bağlı boolean. Dosyanın derleme olup olmadığını belirtir.|  
-|Görünür|İsteğe bağlı boolean. Dosyada görüntülenip görüntülenmeyeceğini gösterir **Çözüm Gezgini** içinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].|  
-|CopyToOutputDirectory|İsteğe bağlı dize. Dosyayı çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1.  hiçbir zaman<br />2.  Her zaman<br />3.  PreserveNewest|  
+|DependentUpon|İsteğe bağlı dize. Doğru derlemek için bu dosyanın bağlı olduğu dosyayı belirtir.|  
+|Oluşturucu|Gerekli dize. Bu öğe üzerinde çalışan herhangi bir dosya oluşturucusunun adı.|  
+|LastGenOutput|Gerekli dize. Bu öğede çalıştırılan herhangi bir dosya Oluşturucu tarafından oluşturulan dosyanın adı.|  
+|CustomToolNamespace|Gerekli dize. Bu öğe üzerinde çalışan herhangi bir dosya oluşturucusunun kod oluşturması gereken ad alanı.|  
+|Bağlantı|İsteğe bağlı Boolean. Dosyasında **Çözüm Gezgini** içinde görüntülenip görüntülenmeyeceğini gösterir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .|  
+|PublishState|Gerekli dize. İçeriğin Yayımlanma Durumu, aşağıdakilerden biri:<br /><br /> -Varsayılan<br />-Dahil edilen<br />-Dışlanan<br />-Veri dosyası<br />-Önkoşul|  
+|IsAssembly|İsteğe bağlı Boolean. Dosyanın bir derleme olup olmadığını belirtir.|  
+|Görünür|İsteğe bağlı Boolean. Dosyasında **Çözüm Gezgini** içinde görüntülenip görüntülenmeyeceğini gösterir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .|  
+|CopyToOutputDirectory|İsteğe bağlı dize. Dosyanın çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1. hiçbir şekilde<br />2. her zaman<br />3. Preservenebatı|  
   
-### <a name="none"></a>None  
- Derleme işleminde hiçbir rolü olması gereken dosyaları temsil eder.  
+### <a name="none"></a>Hiçbiri  
+ Yapı işleminde rolü olmaması gereken dosyaları temsil eder.  
   
-|Öğe adı|Açıklama|  
+|Öğe Adı|Açıklama|  
 |---------------|-----------------|  
-|DependentUpon|İsteğe bağlı dize. Bu dosyayı doğru şekilde derlenmesi için bağımlı dosyasını belirtir.|  
-|Oluşturucu|Zorunlu dize. Bu öğe üzerinde çalıştırılmış herhangi bir dosya üreticisinin adı.|  
-|LastGenOutput|Zorunlu dize. Bu öğe üzerinde çalışan herhangi bir dosya üreticisi tarafından oluşturulan dosyanın adı.|  
-|CustomToolNamespace|Zorunlu dize. Hangi herhangi bir dosyada bu öğe üzerinde çalışan bir Oluşturucu kod üretmesi gereken ad alanı.|  
-|Bağlantı|İsteğe bağlı dize. Dosya fiziksel olarak proje etki dışında yer alıyorsa görüntülenecek notational yolu.|  
-|Görünür|İsteğe bağlı boolean. Dosyada görüntülenip görüntülenmeyeceğini gösterir **Çözüm Gezgini** içinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].|  
-|CopyToOutputDirectory|İsteğe bağlı dize. Dosyayı çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1.  hiçbir zaman<br />2.  Her zaman<br />3.  PreserveNewest|  
+|DependentUpon|İsteğe bağlı dize. Doğru derlemek için bu dosyanın bağlı olduğu dosyayı belirtir.|  
+|Oluşturucu|Gerekli dize. Bu öğede çalıştırılan herhangi bir dosya oluşturucusunun adı.|  
+|LastGenOutput|Gerekli dize. Bu öğede çalıştırılan herhangi bir dosya üreticisi tarafından oluşturulan dosyanın adı.|  
+|CustomToolNamespace|Gerekli dize. Bu öğe üzerinde çalışan herhangi bir dosya oluşturucusunun kod oluşturması gereken ad alanı.|  
+|Bağlantı|İsteğe bağlı dize. Dosya fiziksel olarak projenin etkisi dışında konumlandırıldığında görüntülenecek olan notational yolu.|  
+|Görünür|İsteğe bağlı Boolean. Dosyasında **Çözüm Gezgini** içinde görüntülenip görüntülenmeyeceğini gösterir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .|  
+|CopyToOutputDirectory|İsteğe bağlı dize. Dosyanın çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1. hiçbir şekilde<br />2. her zaman<br />3. Preservenebatı|  
   
 ### <a name="baseapplicationmanifest"></a>BaseApplicationManifest  
- Yapı için temel uygulama bildirimini temsil eder ve içeren [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] dağıtım güvenlik bilgileri.  
+ Yapı için temel uygulama bildirimini temsil eder ve [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] dağıtım güvenliği bilgilerini içerir.  
   
-### <a name="codeanalysisimport"></a>CodeAnalysisImport  
- İçeri aktarmak için FxCop projesi temsil eder.  
+### <a name="codeanalysisimport"></a>Codeanalysisımport  
+ İçeri aktarılacak FxCop projesini temsil eder.  
   
-### <a name="import"></a>İçeri Aktarma  
- Ad uzayları, tarafından aktarılacaksa derlemeleri temsil [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] derleyici.  
+### <a name="import"></a>İçeri Aktar  
+ Ad alanları derleyici tarafından içeri aktarılmalıdır derlemeleri temsil eder [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yaygın MSBuild Proje Özellikleri](../msbuild/common-msbuild-project-properties.md)
+ [Ortak MSBuild proje özellikleri](../msbuild/common-msbuild-project-properties.md)

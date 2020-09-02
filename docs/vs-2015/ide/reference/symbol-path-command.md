@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9d02d4cfede6ed3499d09ff58e4454c1ef9cbe0d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651011"
 ---
 # <a name="symbol-path-command"></a>Sembol Yolu Komutu
@@ -27,17 +27,17 @@ ms.locfileid: "72651011"
 
 Hata ayıklayıcının simge araması için dizinlerin listesini ayarlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Debug.SymbolPath pathname1;pathname2;... pathnameN
 ```
 
-## <a name="arguments"></a>Arguments
- Isteğe bağlı `pathname`. Hata ayıklayıcının simge araması için bir noktalı virgülle ayrılmış yol listesi.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `pathname` Seçim. Hata ayıklayıcının simge araması için bir noktalı virgülle ayrılmış yol listesi.
 
 ## <a name="remarks"></a>Açıklamalar
- @No__t_0 belirtilmemişse, komut geçerli sembol yollarını listeler.
+ Hayır `pathname` belirtilmemişse, komut geçerli sembol yollarını listeler.
 
 ## <a name="example"></a>Örnek
  Bu örnek, sembol dizinleri listesine iki yol ekler.

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 70c0044a0436dcf27a3b087b3f11a5f759824735
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645559"
 ---
 # <a name="help-content-manager-overrides"></a>Yardım İçerik Yöneticisi Geçersiz Kılmaları
@@ -23,14 +23,14 @@ Visual Studio IDE 'deki Yardım Görüntüleyicisi ve yardım ile ilgili özelli
 
 |Görev|Kayıt Defteri Anahtarı|Değer ve tanım|
 |----------|------------------|--------------------------|
-|Benzersiz hizmet uç noktası tanımla|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSWinExpress\14.0\Help|NewContentAndUpdateService--*Httpvaluefortheserviceendpoint*.|
-|Çevrimiçi/çevrimdışı varsayılanı tanımla|HKEY_LOCAL_MACHINE\Software\Microsoft\VSWinExpress\14.0\help|UseOnlineHelp-yerel yardım belirtmek için `0` girin ve çevrimiçi Yardımı belirtmek için `1` girin.|
-|Benzersiz F1 uç noktası tanımlama|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSWinExpress\14.0\Help|OnlineBaseUrl--*Httpvaluefortheserviceendpoint*|
-|BITS iş önceliğini geçersiz kıl|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (64 bitlik bir makinede) \Microsoft\help\v2,2|Bitspriallık--şu değerlerden birini kullanın: **ön plan**, **yüksek**, **normal**veya **düşük**.|
-|Çevrimiçi devre dışı bırak (ve IDE çevrimiçi seçeneği)|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (64 bitlik bir makinede) \Microsoft\VisualStudio\14.0\Help|OnlineHelpPreferenceDisabled--çevrimiçi Yardım içeriğinin erişimini devre dışı bırakmak için 1 olarak ayarlayın.|
-|Içeriği yönetmeyi devre dışı bırak|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (64 bitlik bir makinede) \Microsoft\VisualStudio\14.0\Help|ContentManagementDisabled--yardım görüntüleyicisinde **Içeriği Yönet** sekmesini devre dışı bırakmak için 1 olarak ayarlayın.|
-|Ağ paylaşımındaki yerel içerik deposuna işaret edin|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.2\Catalogs\VisualStudio11|LocationPath = "*Contentstorenetworkshare*"|
-|Visual Studio 'nun ilk başlatıldığında içerik yüklemeyi devre dışı bırakın.|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (64 bitlik bir makinede) \Microsoft\VisualStudio\14.0\Help|DisableFirstRunHelpSelection--Visual Studio ilk kez başlatıldığında yapılandırılmış yardım özelliklerini devre dışı bırakmak için 1 olarak ayarlayın.|
+|Benzersiz hizmet uç noktası tanımla|HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VSWinExpress\14.0\Help|NewContentAndUpdateService--*Httpvaluefortheserviceendpoint*.|
+|Çevrimiçi/çevrimdışı varsayılanı tanımla|HKEY_LOCAL_MACHINE \Software\Microsoft\VSWinExpress\14.0\help|UseOnlineHelp-- `0` yerel yardım belirtmek Için yazın ve `1` çevrimiçi yardım 'ı belirtmek için girin.|
+|Benzersiz F1 uç noktası tanımlama|HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VSWinExpress\14.0\Help|OnlineBaseUrl--*Httpvaluefortheserviceendpoint*|
+|BITS iş önceliğini geçersiz kıl|HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node (64 bitlik bir makinede) \Microsoft\help\v2,2|Bitspriallık--şu değerlerden birini kullanın: **ön plan**, **yüksek**, **normal**veya **düşük**.|
+|Çevrimiçi devre dışı bırak (ve IDE çevrimiçi seçeneği)|HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node (64 bitlik bir makinede) \Microsoft\VisualStudio\14.0\Help|OnlineHelpPreferenceDisabled--çevrimiçi Yardım içeriğinin erişimini devre dışı bırakmak için 1 olarak ayarlayın.|
+|Içeriği yönetmeyi devre dışı bırak|HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node (64 bitlik bir makinede) \Microsoft\VisualStudio\14.0\Help|ContentManagementDisabled--yardım görüntüleyicisinde **Içeriği Yönet** sekmesini devre dışı bırakmak için 1 olarak ayarlayın.|
+|Ağ paylaşımındaki yerel içerik deposuna işaret edin|HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Help\v2.2\Catalogs\VisualStudio11|LocationPath = "*Contentstorenetworkshare*"|
+|Visual Studio 'nun ilk başlatıldığında içerik yüklemeyi devre dışı bırakın.|HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node (64 bitlik bir makinede) \Microsoft\VisualStudio\14.0\Help|DisableFirstRunHelpSelection--Visual Studio ilk kez başlatıldığında yapılandırılmış yardım özelliklerini devre dışı bırakmak için 1 olarak ayarlayın.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Yardım Görüntüleyicisi Yönetici Kılavuzu](../ide/help-viewer-administrator-guide.md)

@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: bb4abf5352ac6ad78852bd3224df0b22784470db
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85903479"
 ---
 # <a name="add-command-line-switches"></a>Komut satırı anahtarları Ekle
@@ -29,12 +29,12 @@ ms.locfileid: "85903479"
 
  Adlandırılmış parametreler aşağıdaki açıklamalarda gösterilmiştir.
 
-|Adı|Description|
+|Ad|Açıklama|
 |-|-|
 | Arguments | Anahtar için bağımsız değişkenlerin sayısı. "*" Veya bağımsız değişken listesi olabilir. |
 | Isteğsiz yük | Bu 1 olarak ayarlanırsa VSPackage 'ı otomatik olarak yükleyin, aksi takdirde 0 olarak ayarlayın. |
 | HelpString | **Devenv/?** ile görüntülenecek dizenin Yardım dizesi veya kaynak kimliği. |
-| Adı | Anahtar. |
+| Name | Anahtar. |
 | PackageGuid | Paketin GUID 'SI. |
 
  Bağımsız değişkenlerin ilk değeri genellikle 0 veya 1 ' dir. Komut satırının tüm geri kalanın bağımsız değişken olduğunu göstermek için ' * ' özel değeri kullanılabilir. Bu, kullanıcının bir hata ayıklayıcı komut dizesinde geçmesi gereken hata ayıklama senaryolarında yararlı olabilir.

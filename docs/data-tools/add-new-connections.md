@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 5f6f34c28a6bbba236a4d90e2f936fad0b2a3f60
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85283066"
 ---
 # <a name="add-new-connections"></a>Yeni bağlantı ekleme
@@ -46,7 +46,7 @@ Veri kaynağı istediğiniz gibi değilse, yeni bir veri kaynağı ve/veya yeni 
 
 ![AD0.NET Veri Sağlayıcısı Değiştir](../data-tools/media/raddata-change-ad0.net-data-provider.png)
 
-## <a name="test-the-connection"></a>Bağlantıyı sınama
+## <a name="test-the-connection"></a>Bağlantıyı test etme
 
 Veri kaynağını seçtikten sonra **Bağlantıyı Sına**' ya tıklayın. Başarılı olmazsa, satıcının belgelerine göre sorun gidermeniz gerekecektir.
 

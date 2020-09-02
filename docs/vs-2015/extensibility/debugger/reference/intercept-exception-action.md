@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4fcccffecaf465af36d5e4925d43214ff132756f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68147519"
 ---
-# <a name="interceptexceptionaction"></a>INTERCEPT_EXCEPTION_ACTION
+# <a name="intercept_exception_action"></a>INTERCEPT_EXCEPTION_ACTION
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Özel durumları yakalayıp olduğunda gerçekleştirilecek eylemleri belirtir.  
+Özel durumları kesintiye girilirken gerçekleştirilecek eylemleri belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 enum enum_INTERCEPT_EXCEPTION_ACTION  
@@ -43,18 +43,18 @@ public enum enum_INTERCEPT_EXCEPTION_ACTION
   
 #### <a name="parameters"></a>Parametreler  
  IEA_INTERCEPT  
- Geçerli özel durumun engellemesine olanak tanır. Bu, şu anda desteklenen tek değerdir ve belirtilmesi gerekir.  
+ Geçerli özel durumu kesintiye uğratan izin vermez. Bu, şu anda desteklenen tek değerdir ve belirtilmelidir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu değerleri yöntemlere geçirilen [Interceptcurrentexception](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) yöntemi.  
+ Bu değerler, [Yakatcurrentexception](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) yöntemine geçirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)

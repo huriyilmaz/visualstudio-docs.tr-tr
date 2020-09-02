@@ -1,5 +1,5 @@
 ---
-title: IDebugPort2::GetPortSupplier | Microsoft Docs
+title: 'IDebugPort2:: Getporttedarikçi | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e897259dbbd8c5045a72853bccd0b9c8b7423318
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188574"
 ---
 # <a name="idebugport2getportsupplier"></a>IDebugPort2::GetPortSupplier
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu bağlantı için bağlantı noktası sağlayıcısı alır.  
+Bu bağlantı noktası için bağlantı noktası tedarikçiyi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetPortSupplier(   
@@ -40,10 +40,10 @@ int GetPortSupplier( 
   
 #### <a name="parameters"></a>Parametreler  
  `ppSupplier`  
- [out] Döndürür bir [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) nesnesini temsil eden bir bağlantı noktası için bağlantı noktası sağlayıcısı.  
+ dışı Bir bağlantı noktası için bağlantı noktası tedarikçiyi temsil eden bir [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)   

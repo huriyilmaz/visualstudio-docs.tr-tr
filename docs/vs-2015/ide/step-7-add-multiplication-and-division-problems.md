@@ -1,5 +1,5 @@
 ---
-title: '7\. Adım: çarpma ve bölme sorunları ekleme | Microsoft Docs'
+title: '7. Adım: çarpma ve bölme sorunları ekleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f7f7efb0acf6611346abe67a7a94e5c221919665
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72646972"
 ---
-# <a name="step-7-add-multiplication-and-division-problems"></a>7\. Adım: Çarpma ve Bölme Problemleri Ekleme
+# <a name="step-7-add-multiplication-and-division-problems"></a>7. Adım: Çarpma ve Bölme Problemleri Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu öğreticinin yedinci kısmında çarpma ve bölme sorunları ekleyeceksiniz, ancak önce bu değişikliği nasıl yapacağınızı düşünün. Değerlerin depolanmasını içeren ilk adımı göz önünde bulundurun.
@@ -28,17 +28,17 @@ Bu öğreticinin yedinci kısmında çarpma ve bölme sorunları ekleyeceksiniz,
      [!code-csharp[VbExpressTutorial3Step7#15](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step7/cs/form1.cs#15)]
      [!code-vb[VbExpressTutorial3Step7#15](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step7/vb/form1.vb#15)]
 
-2. Daha önce yaptığınız gibi `StartTheQuiz()` yöntemini, çarpma ve bölme sorunları için rastgele sayıları dolduracak şekilde değiştirin.
+2. Daha önce yaptığınız gibi, `StartTheQuiz()` çarpma ve bölme sorunları için yöntemi rastgele sayıları dolduracak şekilde değiştirin.
 
      [!code-csharp[VbExpressTutorial3Step7#16](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step7/cs/form1.cs#16)]
      [!code-vb[VbExpressTutorial3Step7#16](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step7/vb/form1.vb#16)]
 
-3. @No__t_0 yöntemini, çarpma ve bölme sorunlarını da denetleyecek şekilde değiştirin.
+3. Yöntemi, `CheckTheAnswer()` çarpma ve bölme sorunlarını da denetleyecek şekilde değiştirin.
 
      [!code-csharp[VbExpressTutorial3Step7#17](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step7/cs/form1.cs#17)]
      [!code-vb[VbExpressTutorial3Step7#17](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step7/vb/form1.vb#17)]
 
-     Klavye kullanarak çarpma işaretini (×) ve bölme işaretini (÷) kolayca giremezsiniz, böylece görsel C# ve Visual Basic bölme için bir yıldız işareti (*) ve bölme için bir eğik çizgi (/) kabul eder.
+     Klavyeyi kullanarak çarpma işaretini (×) ve bölme işaretini (÷) kolayca giremezsiniz, bu nedenle Visual C# ve Visual Basic bölme için bir yıldız işareti (*) ve bölme için bir eğik çizgi (/) kabul eder.
 
 4. Zamanlayıcının Tick olay işleyicisinin son kısmını, zaman dolduğunda doğru yanıtı dolduracak şekilde değiştirin.
 

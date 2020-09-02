@@ -1,5 +1,5 @@
 ---
-title: Ayarlar şelale | Microsoft IntelliTest Geliştirici Test Aracı
+title: Ayarlar şelale | Microsoft IntelliTest geliştirici test aracı
 ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,23 +10,23 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 95a2029cee1fd13241aba727f671a164d7272543
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75591586"
 ---
 # <a name="settings-waterfall"></a>Ayarlar şelalesi
 
-Ayarları şelale kavramı kullanıcı **Montaj,** **Fikstür**ve **Keşif** düzeyinde ayarları belirtebilirsiniz anlamına gelir:
+Ayarlar şelale kavramı, kullanıcının **derlemeyi**, **armatürü**ve **araştırma** düzeyinde ayarları belirleyebileceği anlamına gelir:
 
-* Montaj - [PexAssemblySettings](attribute-glossary.md#pexassemblysettings)
-* Fikstür - [PexClass](attribute-glossary.md#pexclass)
-* Keşif - [PexExplorationAttributeBase](attribute-glossary.md#pexexplorationattributebase)
+* Assembly- [Pexassemblysettings](attribute-glossary.md#pexassemblysettings)
+* Fixture- [PexClass](attribute-glossary.md#pexclass)
+* Araştırma- [Pexaraştırması Ationattributebase](attribute-glossary.md#pexexplorationattributebase)
 
-**Montaj** düzeyinde belirtilen ayarlar, bu montaj altındaki tüm demirbaşları ve keşifleri etkiler. **Fikstür** seviyesinde belirtilen ayarlar, bu fikstür altındaki tüm keşifleri etkiler. **Montaj** ve&mdash; **Fikstür** seviyelerinde bir ayar tanımlanırsa, **Fikstür** ayarları kullanılırsa alt ayarlar kazanır.
+**Derleme** düzeyinde belirtilen ayarlar, bu derleme altındaki tüm armatürleri ve araştırmayı etkiler. **Fixture** düzeyinde belirtilen ayarlar, bu armaün altındaki tüm araştırmaları etkiler. Alt ayarlar Win &mdash; bir ayar derleme ve **armadeğer** düzeylerinde tanımlandıysa, **armakod** ayarları kullanılır. **Fixture**
 
-Bazı ayarların **Montaj** düzeyine veya **Fikstür** düzeyine özgü olduğunu unutmayın.
+Bazı ayarların **derleme** düzeyi veya **armatürü** düzeyine özgü olduğunu unutmayın.
 
 **Örnek**
 

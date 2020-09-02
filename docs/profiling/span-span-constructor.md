@@ -1,5 +1,5 @@
 ---
-title: span::span Constructor | Microsoft Dokümanlar
+title: 'span:: span Oluşturucusu | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,17 +13,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f761e87c1658c11bfdfd93a4f4e22299d88575a8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62979828"
 ---
 # <a name="spanspan-constructor"></a>span::span Oluşturucusu
 
 `span` sınıfının yeni bir örneğini başlatır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 span(
@@ -54,19 +54,19 @@ span(
 
 #### <a name="parameters"></a>Parametreler
 
-`_Series`Geçerli işaretçi serisi bağlamı.
+`_Series` Geçerli işaretleyici serisi bağlamı.
 
-`_Format`Bağımsız değişken listesindeki nesnelere karşılık gelen sıfır veya daha fazla biçim öğesiyle karışık metin içeren bileşik biçim dizesi.
+`_Format` Bağımsız değişken listesindeki nesnelere karşılık gelen sıfır veya daha fazla biçim öğesiyle metin içeren bir bileşik biçim dizesi.
 
-`_Importance`Önem düzeyi.
+`_Importance` Önem düzeyi.
 
-`_Category`Kategori.
+`_Category` Alan.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Başlık:** *cvmarkersobj.h*
+**Üst bilgi:** *cvmarkersobj. h*
 
-**Ad alanı:** Eşzamanlılık::diagnostik
+**Ad alanı:** Eşzamanlılık::d ıagstik
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

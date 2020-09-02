@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 08c790af5504c902bf5fe37d2cddba9b9f63aa40
-ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87425374"
 ---
 # <a name="common-msbuild-project-properties"></a>Yaygın MSBuild proje özellikleri
@@ -44,10 +44,10 @@ Aşağıdaki tabloda, Visual Studio proje dosyalarında tanımlanan veya MSBuild
 | AssemblySearchPaths | .NET | Derleme zamanı başvuru derleme çözümlemesi sırasında aranacak konumların listesi. Daha önce listelenen yollar daha sonraki girişlerden daha öncelikli olduğundan, yolların bu listede görünme sırası anlamlı. |
 | AssemblyName | .NET | Proje derlendikten sonra nihai çıkış derlemesinin adı. |
 | BaseAddress | .NET | Ana çıkış derlemesinin temel adresini belirtir. Bu özellik, `/baseaddress` derleyici anahtarıyla eşdeğerdir. |
-| Baseıntermediateoutputpath | Tümü | Yapılandırmaya özgü tüm ara çıkış klasörlerinin oluşturulduğu en üst düzey klasör. Varsayılan değer: `obj\`. Aşağıdaki kod bir örnektir:`<BaseIntermediateOutputPath>c:\xyz\obj\</BaseIntermediateOutputPath>` |
-| BaseOutputPath | Tümü | Çıkış dosyası için temel yolu belirtir. Ayarlanırsa, MSBuild kullanır `OutputPath = $(BaseOutputPath)\$(Configuration)\` . Örnek sözdizimi:`<BaseOutputPath>c:\xyz\bin\</BaseOutputPath>` |
+| Baseıntermediateoutputpath | Tümü | Yapılandırmaya özgü tüm ara çıkış klasörlerinin oluşturulduğu en üst düzey klasör. Varsayılan değer: `obj\`. Aşağıdaki kod bir örnektir: `<BaseIntermediateOutputPath>c:\xyz\obj\</BaseIntermediateOutputPath>` |
+| BaseOutputPath | Tümü | Çıkış dosyası için temel yolu belirtir. Ayarlanırsa, MSBuild kullanır `OutputPath = $(BaseOutputPath)\$(Configuration)\` . Örnek sözdizimi: `<BaseOutputPath>c:\xyz\bin\</BaseOutputPath>` |
 | BuildInParallel | Tümü | Multi-proc MSBuild kullanılırken proje başvurularının paralel olarak oluşturulup temizlenmediğini belirten bir Boolean değer. Varsayılan değer `true` , bu, sistemin birden çok çekirdeği veya işlemciyi varsa, projenin paralel olarak derlenme anlamına gelir. |
-| BuildProjectReferences | Tümü | Proje başvurularının MSBuild tarafından oluşturulup oluşturulmayacağını gösteren bir Boolean değer. `false`Projenizi Visual Studio tümleşik geliştirme ortamında (IDE) oluşturuyorsanız, `true` Aksi takdirde olarak ayarlayın. `-p:BuildProjectReferences=false`, başvurulan projelerin güncel olup olmadığını kontrol etmekten kaçınmak için komut satırında belirtilebilir. |
+| BuildProjectReferences | Tümü | Proje başvurularının MSBuild tarafından oluşturulup oluşturulmayacağını gösteren bir Boolean değer. `false`Projenizi Visual Studio tümleşik geliştirme ortamında (IDE) oluşturuyorsanız, `true` Aksi takdirde olarak ayarlayın. `-p:BuildProjectReferences=false` , başvurulan projelerin güncel olup olmadığını kontrol etmekten kaçınmak için komut satırında belirtilebilir. |
 | CleanFile | Tümü | "Temiz önbellek" olarak kullanılacak dosyanın adı. Temizleme önbelleği, temizleme işlemi sırasında silinecek oluşturulan dosyaların bir listesidir. Dosya, yapı işlemi tarafından ara çıkış yoluna konur.<br /><br /> Bu özellik yalnızca yol bilgilerine sahip olmayan dosya adlarını belirtir. |
 | Sayfasının | .NET | Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını belirtir. Bu özellik, `/codepage` derleyici anahtarıyla eşdeğerdir. |
 | CompilerResponseFile | .NET | Derleyici görevlerine geçirilebilecek, isteğe bağlı bir yanıt dosyası. |
@@ -79,7 +79,7 @@ Aşağıdaki tabloda, Visual Studio proje dosyalarında tanımlanan veya MSBuild
 | NoStdLib | .NET | Standart kitaplığa (*mscorlib.dll*) başvurulmaya engellenip engellenmeyeceğini belirten bir Boole değeri. Varsayılan değer: `false`. |
 | NoVBRuntimeReference | Visual Basic | Visual Basic çalışma zamanının (*Microsoft.VisualBasic.dll*) projeye başvuru olarak dahil edilip edilmeyeceğini belirten bir Boole değeri. |
 | NoWarn | .NET | Belirtilen uyarıları bastırır. Uyarı tanımlayıcısının yalnızca sayısal kısmı belirtilmelidir. Birden çok uyarı noktalı virgülle ayrılır. Bu parametre, `/nowarn` derleyicilerin anahtarına karşılık gelir. |
-| NoWin32Manifest | .NET | Kullanıcı hesabı denetimi (UAC) bildirim bilgisinin uygulamanın yürütülebilir dosyasına katıştırılacağını belirten bir Boole değeri. Yalnızca Windows Vista 'Yı hedefleyen Visual Studio projeleri için geçerlidir. ClickOnce ve kayıtsız COM kullanılarak dağıtılan projelerde, bu öğe yok sayılır. `False`(varsayılan değer) Kullanıcı hesabı denetimi (UAC) bildirim bilgisinin uygulamanın yürütülebilir dosyasına katıştırılacağını belirtir. `True`UAC bildirim bilgilerinin gömülmeyeceğini belirtir.<br /><br /> Bu özellik yalnızca Windows Vista 'Yı hedefleyen Visual Studio projeleri için geçerlidir. ClickOnce ve kayıtsız COM kullanılarak dağıtılan projelerde, bu özellik yok sayılır.<br /><br /> Yalnızca Visual Studio 'Nun uygulamanın yürütülebilir dosyasına herhangi bir bildirim bilgisini katıştırmayı istemiyorsanız NoWin32Manifest eklemeniz gerekir; Bu işleme *sanallaştırma*olarak adlandırılır. Sanallaştırmayı kullanmak için `<ApplicationManifest>` ile birlikte `<NoWin32Manifest>` aşağıdaki şekilde ayarlayın:<br /><br /> -Visual Basic projeleri için `<ApplicationManifest>` düğümünü kaldırın. (Visual Basic projelerinde, `<NoWin32Manifest>` bir `<ApplicationManifest>` düğüm varken yoksayılır.)<br />-C# projeleri için, `<ApplicationManifest>` `False` ve olarak ayarlayın `<NoWin32Manifest>` `True` . (C# projelerinde, `<ApplicationManifest>` geçersiz kılmalar `<NoWin32Manifest>` .)<br /> Bu özellik `/nowin32manifest` *vbc.exe*derleyici anahtarıyla eşdeğerdir. |
+| NoWin32Manifest | .NET | Kullanıcı hesabı denetimi (UAC) bildirim bilgisinin uygulamanın yürütülebilir dosyasına katıştırılacağını belirten bir Boole değeri. Yalnızca Windows Vista 'Yı hedefleyen Visual Studio projeleri için geçerlidir. ClickOnce ve kayıtsız COM kullanılarak dağıtılan projelerde, bu öğe yok sayılır. `False` (varsayılan değer) Kullanıcı hesabı denetimi (UAC) bildirim bilgisinin uygulamanın yürütülebilir dosyasına katıştırılacağını belirtir. `True` UAC bildirim bilgilerinin gömülmeyeceğini belirtir.<br /><br /> Bu özellik yalnızca Windows Vista 'Yı hedefleyen Visual Studio projeleri için geçerlidir. ClickOnce ve kayıtsız COM kullanılarak dağıtılan projelerde, bu özellik yok sayılır.<br /><br /> Yalnızca Visual Studio 'Nun uygulamanın yürütülebilir dosyasına herhangi bir bildirim bilgisini katıştırmayı istemiyorsanız NoWin32Manifest eklemeniz gerekir; Bu işleme *sanallaştırma*olarak adlandırılır. Sanallaştırmayı kullanmak için `<ApplicationManifest>` ile birlikte `<NoWin32Manifest>` aşağıdaki şekilde ayarlayın:<br /><br /> -Visual Basic projeleri için `<ApplicationManifest>` düğümünü kaldırın. (Visual Basic projelerinde, `<NoWin32Manifest>` bir `<ApplicationManifest>` düğüm varken yoksayılır.)<br />-C# projeleri için, `<ApplicationManifest>` `False` ve olarak ayarlayın `<NoWin32Manifest>` `True` . (C# projelerinde, `<ApplicationManifest>` geçersiz kılmalar `<NoWin32Manifest>` .)<br /> Bu özellik `/nowin32manifest` *vbc.exe*derleyici anahtarıyla eşdeğerdir. |
 | İyileştirme | .NET | Olarak ayarlandığında `true` derleyici iyileştirmelerini sağlayan bir Boole değeri. Bu özellik, `/optimize` derleyici anahtarıyla eşdeğerdir. |
 | OptionCompare | VisualBasic | Dize karşılaştırmalarının nasıl yapılacağını belirtir. Geçerli değerler şunlardır "binary" veya "Text." Bu özellik `/optioncompare` *vbc.exe*derleyici anahtarıyla eşdeğerdir. |
 | OptionExplicit | Visual Basic | Olarak ayarlandığında `true` , kaynak koddaki değişkenlerin açık bildirimini gerektiren Boolean bir değer. Bu özellik, `/optionexplicit` derleyici anahtarıyla eşdeğerdir. |
@@ -137,5 +137,5 @@ Aşağıdaki tabloda, Visual Studio proje dosyalarında tanımlanan veya MSBuild
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yaygın MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)
-- [Ortak MSBuild öğe meta verileri](common-msbuild-item-metadata.md)
+- [Yaygın MSBuild öğesi meta verileri](common-msbuild-item-metadata.md)
 - [MSBuild ayrılmış ve Iyi bilinen Özellikler](msbuild-reserved-and-well-known-properties.md)

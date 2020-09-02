@@ -1,5 +1,5 @@
 ---
-title: Android için Visual Studio Emülatör için Sistem Gereksinimleri | Microsoft Dokümanlar
+title: Android için Visual Studio öykünücüsü için sistem gereksinimleri | Microsoft Docs
 ms.custom: ''
 ms.prod: visual-studio-dev15
 ms.date: 11/04/2016
@@ -13,24 +13,24 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: f1462769a4ba9929a000bca998c1fe3708908798
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77272042"
 ---
-# <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>Android için Visual Studio Emülatörü için sistem gereksinimleri
+# <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>Android için Visual Studio öykünücüsü sistem gereksinimleri
 
-Android için Visual Studio Emulator Hyper-V, Windows 8 ve daha sonraki sürümleri için sanallaştırma teknolojisi sanalbir makine olarak çalışır. Emülatörçalıştırmak için bilgisayarınızın bu konuda açıklandığı gibi Hyper-V çalıştırmak için gereksinimleri karşılaması gerekir.
+Android için Visual Studio öykünücüsü, Windows 8 ve sonraki sürümleri için sanallaştırma teknolojisi olan Hyper-V ' d a sanal makine olarak çalışır. Öykünücüyü çalıştırmak için bilgisayarınızın bu konuda açıklandığı gibi Hyper-V ' d i çalıştırmak için gereken gereksinimleri karşılaması gerekir.
 
-Kurulum programı, emülatöryüklediğinizde bu ön koşulları sessizce sizin için yapılandırmaya çalışır. Kurulum ön koşulları başarıyla yapılandırdığında, emülatör beklendiği gibi çalışır. Aksi takdirde bu ön koşulları el ile etkinleştirmeniz gerekebilir. Ön koşulları el ile yapılandırmanız gerekiyorsa, adımlar ve araçlar Windows Phone Emülatörü için [burada](/previous-versions/windows/apps/jj863509\(v=vs.105\)) açıklanan adımlarla aynıdır.
+Kurulum programı, öykünücüsü yüklerken sessizce bu önkoşulları yapılandırmaya çalışır. Kurulum önkoşulları başarıyla yapılandırdığında, öykünücü yalnızca beklendiği gibi çalışmaktadır. Aksi takdirde, bu önkoşulları el ile etkinleştirmeniz gerekebilir. Önkoşulları el ile yapılandırmanız gerekirse, adımlar ve araçlar Windows Phone öykünücüsü için [burada](/previous-versions/windows/apps/jj863509\(v=vs.105\)) açıklanan adımlardan aynıdır.
 
 > [!IMPORTANT]
-> Emülatör için kurulum programı Android için Visual Studio Emulator çalıştırmak için ön koşulları denetler. Ön koşullar yoksa uyarılar görüntüler, ancak bunları gerektirmez.
+> Öykünücü için Kurulum programı, Android için Visual Studio öykünücüsü 'nü çalıştırmaya yönelik önkoşulları denetler. Önkoşullar yoksa uyarıları görüntüler, ancak bunu gerektirmez.
 
-## <a name="quick-checklist"></a><a name="Checklist"></a>Hızlı denetim listesi
+## <a name="quick-checklist"></a><a name="Checklist"></a> Hızlı denetim listesi
 
-Burada Android için Visual Studio Emülatörü çalıştırmak için gereksinimleri hızlı bir kontrol listesidir. Daha ayrıntılı bilgi için bu konuyla ilgili sonraki bölümlere bakın.
+Android için Visual Studio öykünücüsü 'nü çalıştırmaya yönelik gereksinimlerin hızlı bir denetim listesi aşağıda verilmiştir. Daha ayrıntılı bilgi için bu konudaki sonraki bölümlere bakın.
 
 Sistem gereksinimleri
 
@@ -38,9 +38,9 @@ Sistem gereksinimleri
 
 - 6 GB veya daha fazla RAM.
 
-- Windows 8, Windows 8.1, Windows10 veya daha yüksek Pro sürümü 64 bit sürümü
+- Windows 8, Windows 8.1, Windows10 veya üzeri Pro sürümünün 64 bit sürümü
 
-- SSSE3 veya daha sonra destekleyen bir işlemci.
+- SSSE3 veya üstünü destekleyen bir işlemci.
 
 Ağ gereksinimleri
 
@@ -48,104 +48,104 @@ Ağ gereksinimleri
 
 - Otomatik olarak yapılandırılan DNS ve ağ geçidi ayarları
 
-Hiper-V gereksinimleri
+Hyper-V gereksinimleri
 
-- BIOS'ta aşağıdaki özellikler desteklenmelidir:
+- BIOS 'ta aşağıdaki özellikler desteklenmelidir:
 
   - Donanım destekli sanallaştırma
 
-  - İkinci Düzey Adres Çevirisi (SLAT)
+  - İkinci düzey adres çevirisi (SLAT)
 
-  - Donanım tabanlı Veri Yürütme Önleme (DEP)
+  - Donanım tabanlı veri yürütme engellemesi (DEP)
 
-- Windows'da Hyper-V etkin ve çalışır durumda olmalıdır.
+- Windows 'de, Hyper-V etkinleştirilmeli ve çalışıyor olmalıdır.
 
-- Yerel Hyper-V Yöneticileri grubunun bir üyesi olabilirsiniz.
+- Yerel Hyper-V yöneticileri grubunun bir üyesi olmanız gerekir.
 
 ## <a name="system-requirements"></a>Sistem gereksinimleri
- Bilgisayarınız aşağıdaki gereksinimleri karşılamalıdır:
+ Bilgisayarınızın aşağıdaki gereksinimleri karşılaması gerekir:
 
-- Hyper-V desteği (bkz. [Hyper-V gereksinimleri)](#hyper-v-requirements)
+- Hyper-V desteği (bkz. [Hyper-v gereksinimleri](#hyper-v-requirements))
 
 - 6 GB veya daha fazla RAM.
 
-- Windows 8, Windows 8.1, Windows10 veya daha yüksek Pro sürümü 64 bit sürümü.
+- Windows 8, Windows 8.1, Windows10 veya üzeri Pro sürümünün 64 bitlik sürümü.
 
-Denetim Masası'nda RAM ve Windows gereksinimlerini denetlemek için Sistem ve Güvenlik'i seçin ve ardından Sistem'i seçin.
+RAM ve Windows gereksinimlerini denetlemek için, Denetim Masası 'nda sistem ve güvenlik ' i seçin ve ardından Sistem ' i seçin.
 
 ![Sistem gereksinimlerini doğrulama](../cross-platform/media/android_emu_system_requirements.png "Android_Emu_System_Requirements")
 
 ## <a name="network-requirements"></a>Ağ gereksinimleri
 
-Ağınız aşağıdaki gereksinimleri karşılamalıdır:
+Ağınızın aşağıdaki gereksinimleri karşılaması gerekir:
 
 - DHCP
 
-   Emülatör, kendisini ağüzerinde kendi IP adresine sahip ayrı bir aygıt olarak yapılandırdığı için DHCP gerektirir.
+   Öykünücü, kendisini ağ üzerinde kendi IP adresiyle ayrı bir cihaz olarak yapılandırdığından DHCP gerektirir.
 
 - Otomatik olarak yapılandırılan DNS ve ağ geçidi ayarları
 
-   DNS ve ağ geçidi ayarlarını emülatör için el ile yapılandırmak mümkün değildir.
+   Öykünücü için DNS ve ağ geçidi ayarlarını el ile yapılandırmak mümkün değildir.
 
-  Emülatördeki ağ sorunlarını gidermek için aşağıdaki konulara bakın:
+  Öykünücüdeki ağ sorunlarını gidermek için aşağıdaki konulara bakın:
 
 - [Android için Visual Studio Öykünücüsü’nde Sorun Giderme](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)
 
-## <a name="hyper-v-requirements"></a>Hiper-V gereksinimleri
+## <a name="hyper-v-requirements"></a>Hyper-V gereksinimleri
 
-BIOS'ta Hyper-V gereksinimleri
+BIOS 'ta Hyper-V gereksinimleri
 
-Bilgisayarınızın BIOS'u aşağıdaki gereksinimleri desteklemeli ve etkinleştirilmelidir:
+Bilgisayarınızın BIOS 'U aşağıdaki gereksinimleri desteklemelidir ve bu koşulların etkinleştirilmesi gerekir:
 
 - Donanım destekli sanallaştırma
 
-- İkinci Düzey Adres Çevirisi (SLAT)
+- İkinci düzey adres çevirisi (SLAT)
 
-- Donanım tabanlı Veri Yürütme Önleme (DEP)
+- Donanım tabanlı veri yürütme engellemesi (DEP)
 
-Windows'da Hyper-V gereksinimleri
+Windows 'daki Hyper-V gereksinimleri
 
-Bilgisayarınız ve BIOS ayarları zaten Hyper-V'yi destekleyecek şekilde yapılandırıldığınızda, kurulum programı Hyper-V'yi etkinleştirer ve başlatır. Aksi takdirde bu gereksinimleri el ile etkinleştirmeniz gerekebilir.
+Bilgisayarınız ve BIOS ayarlarınız zaten Hyper-V ' d i destekleyecek şekilde yapılandırıldıysa, Kurulum programı Hyper-V ' ı sağlar ve başlatır. Aksi takdirde, bu gereksinimleri el ile etkinleştirmeniz gerekebilir.
 
-|Gereksinim|Bu gereksinimi nasıl denetler ve etkinleştirin|
+|Gereksinim|Bu gereksinimi denetleme ve etkinleştirme|
 |-----------------|----------------------------------------------|
-|Hyper-V yüklü olmalıdır|[Windows Phone emülatörü için Hyper-V'yi etkinleştirmek için](/previous-versions/windows/apps/jj863509(v=vs.105))kullanılan talimatları izleyin.<br /><br /> Hizmetler snap-in **Hyper-V Sanal Makine Yönetimi** hizmetinin durumunu kontrol edin.|
-|Hyper-V çalışıyor olmalı.|Hizmetleri yönetme hakkında daha fazla bilgi için aşağıdaki konulara bakın:<br /><br /> -   [Bir hizmeti başlatma, durdurma, duraklatma, devam ettirme veya yeniden başlatma](https://technet.microsoft.com/library/cc736564\(v=WS.10\).aspx)<br />-   [Bir hizmetin nasıl başlatıldığını yapılandırma](https://technet.microsoft.com/%20library/cc739213\(v=ws.10\))|
+|Hyper-V yüklü olmalıdır|[Windows Phone öykünücüsü Için Hyper-V](/previous-versions/windows/apps/jj863509(v=vs.105))' i etkinleştirmek için kullanılan yönergeleri izleyin.<br /><br /> Hizmetler ek bileşeninde **Hyper-V sanal makine yönetimi** hizmetinin durumunu denetleyin.|
+|Hyper-V çalışıyor olmalıdır.|Hizmetleri yönetme hakkında daha fazla bilgi için aşağıdaki konulara bakın:<br /><br /> -   [Hizmeti başlatma, durdurma, duraklatma, devam ettirme veya yeniden başlatma](https://technet.microsoft.com/library/cc736564\(v=WS.10\).aspx)<br />-   [Hizmetin nasıl başlatıldığını yapılandırma](https://technet.microsoft.com/%20library/cc739213\(v=ws.10\))|
 
- Yerel Hyper-V Yöneticileri grubunun bir üyesi olabilirsiniz.
+ Yerel Hyper-V yöneticileri grubunun bir üyesi olmanız gerekir.
 
- Haklarınızı yükseltmek için yinelenen bir istem olmadan Android için Visual Studio Emülatörü çalıştırmak için, yerel Hyper-V Yöneticileri grubunun bir üyesi olmak zorunda. SDK'yı yüklediğinizde zaten bilgisayarda yerel bir yöneticiyseniz, SDK'nın kurulum programı sizi Hyper-V Yöneticileri grubuna ekler. Aksi takdirde bu gereksinimi el ile etkinleştirmeniz gerekebilir.
+ Haklarınızı yükseltmek için yinelenen bir istem olmadan Android için Visual Studio öykünücüsü 'nü çalıştırmak için yerel Hyper-V yöneticileri grubunun bir üyesi olmanız gerekir. SDK 'Yı yüklerken bilgisayarda zaten bir yerel yönetici varsa SDK 'nın Kurulum programı sizi Hyper-V Yöneticiler grubuna ekler. Aksi takdirde, bu gereksinimi el ile etkinleştirmeniz gerekebilir.
 
- Emülatörçalıştırdığınızda, Hyper-V Yöneticileri grubunun bir üyesi değilseniz, gruba katılmanız istenir (iletişim kutusu Windows Phone emülatörünün ifadesidir). Gruba katılmak yönetici hakları gerektirir.
+ Öykünücüyü çalıştırdığınızda, zaten Hyper-V yöneticileri grubunun bir üyesi değilseniz, gruba katılmanız istenir (iletişim kutusu Windows Phone öykünücüsünü ifade eder). Gruba katılabilmek için yönetici hakları gerekir.
 
 > [!IMPORTANT]
-> Gruba katıldıktan sonra, değişikliğin etkili olması için oturumu kapatın veya yeniden başlatın.
+> Gruba katılırsanız, değişikliğin etkili olması için oturumu kapatın veya yeniden başlatın.
 
- ![Hyper&#45;V Administrators güvenlik grubuna katılma](../cross-platform/media/android_emu_hyperv_admin.png "Android_Emu_HyperV_Admin")
+ ![Hyper&#45;V yöneticileri güvenlik grubuna katılma](../cross-platform/media/android_emu_hyperv_admin.png "Android_Emu_HyperV_Admin")
 
- Kendinizi bir gruba el ile eklemek için Yerel Kullanıcılar ve Gruplar'ı açın.
+ Kendiniz bir gruba el ile eklemek için, yerel kullanıcılar ve Gruplar ek bileşenini açın.
 
-## <a name="running-the-emulator-from-a-bootable-vhd-is-not-supported"></a>Önyüklenebilir bir VHD'den emülatör çalıştırma desteklenmez
- Önyüklemeli bir VHD'den Windows çalıştırırken Android için Visual Studio Emülatör'de bir uygulamayı çalıştırmaya çalışırsanız, emülatörün başlatılması genellikle birkaç dakika sürer veya başlatılamaz. Emülatör başlatıldığında aşağıdaki iletiyi görürsünüz: Uygulama dağıtımı başarısız oldu. Lütfen tekrar deneyin.
+## <a name="running-the-emulator-from-a-bootable-vhd-is-not-supported"></a>Öykünücüyü önyüklenebilir bir VHD 'den çalıştırmak desteklenmez
+ Windows 'u önyüklenebilir bir VHD 'den çalıştırdığınız sırada Android için Visual Studio öykünücüsü üzerinde uygulamayı çalıştırmayı denerseniz, öykünücü genellikle başlatılması veya başlatılması birkaç dakika sürer. Öykünücü başlayamazsa şu iletiyi görürsünüz: uygulama dağıtımı başarısız oldu. Lütfen tekrar deneyin.
 
- Bu yapılandırma desteklenmez. İlgili konular hakkında daha fazla bilgi için [Android için Visual Studio Emülatörü Sorun Giderme](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)konusuna bakın.
+ Bu yapılandırma desteklenmez. İlgili sorunlar hakkında daha fazla bilgi için bkz. [Android Için Visual Studio öykünücüsü sorunlarını giderme](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md).
 
 ## <a name="hyper-v-requires-uncompressed-and-unencrypted-files"></a>Hyper-V sıkıştırılmamış ve şifrelenmemiş dosyalar gerektirir
- NTFS dosya sistemiyle yapılandırılan bir sabit diskte Hyper-V tarafından kullanılan sanal sabit disk dosyaları sıkıştırılmamış ve şifrelenmemiş olmalıdır. Aşağıdaki dizinlerin sıkıştırılmadığını veya şifrelenmediğinden emin olun:
+ NTFS dosya sistemiyle yapılandırılmış bir sabit sürücüde, Hyper-V tarafından kullanılan sanal sabit disk dosyalarının sıkıştırması ve şifrelenmemiş olması gerekir. Aşağıdaki dizinlerin sıkıştırıldığından veya şifrelendiğinden emin olun:
 
 - %localappdata%\Microsoft\XDE
 
-- C:\Program Dosyaları (x86)\Microsoft Emülatör Yöneticisi
+- C:\Program Files (x86) \Microsoft öykünücü yöneticisi
 
 - C:\Program Files (x86)\Microsoft Visual Studio Emulator for Android
 
 - %localappdata%\Microsoft\VisualStudioEmulator
 
-ReFS dosya sisteminde, sanal sabit disk dosyaları bütünlük biti kümesine sahip olmamalıdır.
+ReFS dosya sisteminde, sanal sabit disk dosyalarının bütünlük bit kümesi olmamalıdır.
 
-## <a name="hardware-graphics-forwarding-opengl-es-support-requirements"></a>Donanım grafik yönlendirme (OpenGL ES desteği) gereksinimleri
+## <a name="hardware-graphics-forwarding-opengl-es-support-requirements"></a>Donanım grafikleri iletme (OpenGL ES desteği) gereksinimleri
 
-Emülatörün OpenGL ES tarafından kullanılanlar gibi GPU'ya yapılan çağrıları taklit edebilmesi için makinenizin uygun DirectX sürücüleri yüklü directx uyumlu bir GPU'ya sahip olması gerekir.
+Öykünücüsünün, OpenGL 'ler tarafından kullanılanlar gibi GPU 'ya yapılan çağrılara öykünmesine olanak sağlamak için, makinenizde uygun DirectX sürücüleri yüklü bir DirectX uyumlu GPU olması gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

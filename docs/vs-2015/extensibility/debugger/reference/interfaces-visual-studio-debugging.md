@@ -11,30 +11,30 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 37ff35e5b073c820f77e5cd861c517bfccbf6ace
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68199540"
 ---
 # <a name="interfaces-visual-studio-debugging"></a>Arabirimler (Visual Studio Hata Ayıklama)
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Yöntemleri, İçindekiler ve Vtable sırayla arabirimi sayfasındaki tabloda her arabirim alfabetik olarak listelenir.  
+Yöntemler, içindekiler tablosundaki her arabirim altında ve vtable sırasındaki arabirim sayfasında alfabetik olarak listelenir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)  
- Hata ayıklama altyapısında kullanılan arabirimler açıklanmaktadır.  
+ Hata ayıklama altyapısında kullanılan arabirimleri açıklar.  
   
  [İfade Değerlendirme Arabirimleri](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)  
- Kesme modu sırasında çağrı yığınında nevyhodnocovat arabirimler açıklanmaktadır.  
+ Kesme modunda bir çağrı yığınında ifadeleri değerlendiren arabirimleri açıklar.  
   
  [Sembol Sağlayıcısı Arabirimleri](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)  
- Sembol sağlayıcısı türlerini tanımlayıcılara ilişkilendirmek için uyguladığı arabirimlerin açıklar.  
+ Bir sembol sağlayıcının türleri tanımlayıcılarla ilişkilendirmek için uyguladığı arabirimleri açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [API Başvurusu](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)  
- Arabirimleri, numaralandırıcılar ve yapıları belgelerini içeren [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] hata ayıklama SDK'sı.  
+ Hata ayıklama SDK 'sının arabirimleri, Numaralandırıcılar ve yapıları için belgeler içerir [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [API Başvurusu](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

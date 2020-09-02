@@ -1,5 +1,5 @@
 ---
-title: Yakınlaştırma Denetimi (Kullanım Görünümü) | Microsoft Dokümanlar
+title: Yakınlaştırma denetimi (kullanım görünümü) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7c7f50a3117daeee0ec1727adbcdcc5ca710be36
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62960113"
 ---
 # <a name="zoom-control-utilization-view"></a>Yakınlaştırma denetimi (kullanım görünümü)
-Yakınlaştırma denetimi, özellikle ilgi çekici alanlara odaklanmak için CPU kullanım grafiğini yakınlaştırmanıza yardımcı olur. Bu denetim görünümün ortasını yakınlaştırır. Bu nedenle, yakınlaştırmadan önce ilgi alanını ortalamalısınız.
+Yakınlaştırma denetimi, belirli bir ilgilendiğiniz alanlara odaklanmak için CPU kullanımı grafiğini yakınlaştırmanıza yardımcı olur. Bu denetim, görünümün merkezinde yakınlaştırılır. Bu nedenle, yakınlaştırmadan önce ilgilendiğiniz alanı ortamalısınız.
 
- Vurgulanmış bir alan oluşturmak için fare işaretçisini CPU kullanım grafiğinde veya GPU etkinlik grafiğinde sürükleyebilirsiniz. Fare düğmesi serbest bırakıldığında, görünüm seçili aralığı yakınlaştırır.
+ Vurgulanan bir alan oluşturmak için, CPU kullanım grafiğinde veya GPU etkinlik grafiğinde fare işaretçisini sürükleyebilirsiniz. Fare düğmesi serbest bırakıldığında, görünüm seçilen aralığa göre yakınlaştırılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kullanım görünümü](../profiling/utilization-view.md)

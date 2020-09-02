@@ -13,41 +13,41 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 24a1a1942031dac71ddad7b528f0e5df161c629e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68148624"
 ---
 # <a name="idebugprogramcreateevent2"></a>IDebugProgramCreateEvent2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bir program bağlı olduğu bu arabirimi hata ayıklama altyapısı (DE) oturum hata ayıklama Yöneticisi (SDM) gönderilir.  
+Bu arabirim, bir program öğesine eklendiğinde hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama Yöneticisi (SDM) tarafından gönderilir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugProgramCreateEvent2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar  
- DE veya özel bağlantı noktası sağlayıcısı programı, genellikle programın bağlı olduğu zaman oluşturulduğunu bildirmek için bu arabirimi uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirim uygulandığında, bu arabirimle aynı nesne üzerinde. SDM kullanan `QueryInterface` erişmeye yöntemi `IDebugEvent2` arabirimi.  
+## <a name="notes-for-implementers"></a>Implemenonun notları  
+ DE veya özel bağlantı noktası sağlayıcısı bu arabirimi, genellikle programın eklendiği zaman bir programın oluşturulduğunu raporlamak için uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabiriminin bu arabirimle aynı nesne üzerinde uygulanması gerekir. SDM, `QueryInterface` arabirime erişmek için yöntemini kullanır `IDebugEvent2` .  
   
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar  
- DE veya özel bağlantı noktası sağlayıcısı oluşturur ve bu olay bir program oluşturmayı rapor nesnesine gönderir. Kullanarak DE bu olay gönderen [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) ayıklanan programa eklendiğinde SDM tarafından sağlanan geri çağırma işlevi. Özel bağlantı noktası sağlayıcısı kullanarak bu olay gönderir [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md) arabirimi.  
+ DE veya özel bağlantı noktası sağlayıcısı, bir programın oluşturulmasını raporlamak için bu olay nesnesini oluşturur ve gönderir. Bu olayı, hata ayıklamakta olan programa eklendiğinde SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) callback işlevini kullanarak gönderir. Özel bağlantı noktası sağlayıcısı bu olayı [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md) arabirimini kullanarak gönderir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Özel bağlantı noktası sağlayıcısı ve DE yeni bir yayımlar [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) çağırarak arabirim [PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md).  
+ DE veya özel bağlantı noktası sağlayıcısı, [PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)çağırarak yeni bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) arabirimi yayımlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)   
+ [Çekirdek arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)   
  [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md)   

@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 8239afd1cf4e8c0a5e702f2b0e4ed64408cada09
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645748"
 ---
 # <a name="walkthrough-configuring-and-using-a-custom-rule-set"></a>İzlenecek Yol: Özel bir Kural Kümesini Yapılandırma ve Kullanma
@@ -38,9 +38,9 @@ Bu izlenecek yol, bir sınıf kitaplığında özelleştirilmiş bir *kural küm
 
 - Kod analizini çalıştırın ve kural kümesi özelleştirme davranışının nasıl çalıştığını görün.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Ön koşullar
 
-- [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] veya [!INCLUDE[vsPro](../includes/vspro-md.md)]
+- [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] , veya [!INCLUDE[vsPro](../includes/vspro-md.md)]
 
 ## <a name="using-rule-sets-with-code-analysis"></a>Kod Analizi ile kural kümeleri kullanma
  İlk olarak basit bir sınıf kitaplığı oluşturun.
@@ -49,9 +49,9 @@ Bu izlenecek yol, bir sınıf kitaplığında özelleştirilmiş bir *kural küm
 
 1. **Dosya** menüsünde **Yeni** ' ye ve ardından **Proje**' ye tıklayın.
 
-2. **Yeni proje** iletişim kutusunda, **Proje türleri**altında, **C#görsel**' e tıklayın.
+2. **Yeni proje** iletişim kutusunda, **Proje türleri**altında, **Visual C#**' ye tıklayın.
 
-3. **C#Görsel**altında **sınıf kitaplığı**' nı seçin.
+3. **Visual C#** altında, **sınıf kitaplığı**' nı seçin.
 
 4. **Ad** metin kutusuna **RuleSetSample** yazın ve ardından **Tamam**' a tıklayın.
 
@@ -70,7 +70,7 @@ Bu izlenecek yol, bir sınıf kitaplığında özelleştirilmiş bir *kural küm
     Dosya menüsünde, seçili **öğeleri kaydet** ' e tıklayarak proje dosyasını seçtiğiniz kural kümesi ve ayarları hakkında bilgilerle güncelleştirin.
 
    > [!TIP]
-   > Gerçek dünyada bir durumda, kod analizi ile hedeflemek istediğiniz sorunları önceliklendirerek, **Önerilen en düşük kural** kümesi kümesiyle başlamak ve istenen sorunları düzeltmek ve ardından ' ye artımlı olarak daha fazla kural veya kural kümesi eklemek için iyi bir uygulamadır. ek sorunları bulun ve düzeltin.
+   > Gerçek dünyada bir durumda, kod analizi ile hedeflemek istediğiniz sorunları önceliklendirerek, **Önerilen en düşük kural** kümesi kümesiyle başlamak ve istenen sorunları düzeltmek ve daha sonra ek sorunları bulmak ve düzeltmek için daha fazla kural veya kural kümesi eklemek üzere kullanmak için iyi bir uygulamadır.
 
    Daha sonra, CA1704 "tanımlayıcılarının doğru yazılması gerekir" kod analizi kuralına ilişkin ihlalleri göstermek için kullanılacak sınıf kitaplığına bazı kodlar ekleyeceksiniz. Daha fazla bilgi için bkz. [CA1704: tanımlayıcılar doğru yazılmalıdır](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md).
 
@@ -128,7 +128,7 @@ Bu izlenecek yol, bir sınıf kitaplığında özelleştirilmiş bir *kural küm
 
     Şimdi, çeşitli araç çubuğu düğmeleri ve filtreleme seçenekleriyle denemeler yapmak için uygun bir zaman kullanabilirsiniz. Örneğin, belirli bir kuralı veya kuralların kategorisini bulmaya yardımcı olması için **Gruplandırma ölçütü** açılan listesini kullanabilirsiniz. Diğer bir örnek, **eylem** sütunu **yok**olarak ayarlanmış tüm kuralları gizlemek veya göstermek için kural kümesi sayfaları araç çubuğundaki **devre dışı kuralları gizle** düğmesini kullanabileceğiniz bir örnektir. Bu, hala devre dışı bırakmak istediğinizi doğrulamak üzere kapattığınız kuralları taramak istiyorsanız yararlı olabilir.
 
-5. Görünüm menüsünde Özellikler penceresi ' ne tıklayın. Özellikler araç penceresinin Ad kutusuna **özel kurallarımı** yazın. Bu, [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] IDE 'de yeni kural kümesinin görünen adını değiştirir.
+5. Görünüm menüsünde Özellikler penceresi ' ne tıklayın. Özellikler araç penceresinin Ad kutusuna **özel kurallarımı** yazın. Bu, IDE 'de yeni kural kümesinin görünen adını değiştirir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] .
 
 6. Özelleştirilmiş kural kümesini kaydetmek için **Dosya** menüsünde **Microsoft All Rules. RuleSet öğesini kaydet** ' e tıklayın. Projenizin kök klasörüne gidin. **Dosya adı** metin kutusuna **MyCustomRuleSet**yazın. Özel kural kümesi artık projenizle birlikte kullanılacak şekilde seçilebilir.
 
@@ -140,7 +140,7 @@ Bu izlenecek yol, bir sınıf kitaplığında özelleştirilmiş bir *kural küm
 
 2. **Özellikler** sekmesinde, **Kod Analizi**' ne tıklayın.
 
-    **Bu kural kümesini Çalıştır** açılan listesinde \<Browse ' ye tıklayın **. >** . Kod projenizin kök klasörüne gidin ve **MyCustomRuleSet. RuleSet**' i seçin. Bu, önceki yordamda oluşturduğunuz yeni kural kümesidir.
+    **Bu kural kümesini Çalıştır** açılan listesinde, öğesine tıklayın **\<Browse..>** . Kod projenizin kök klasörüne gidin ve **MyCustomRuleSet. RuleSet**' i seçin. Bu, önceki yordamda oluşturduğunuz yeni kural kümesidir.
 
 3. Proje yapılandırmanızı kaydetmek için **Dosya** menüsünde **Kaydet** ' e tıklayın. Özel kural kümesi artık projenizle birlikte kullanılabilir.
 
