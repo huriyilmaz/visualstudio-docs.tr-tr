@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Belge verilerine görünüm ekleme | Microsoft Docs'
+title: 'Nasıl yapılır: belge verilerine görünümler Iliştirme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,39 +11,39 @@ caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6bc1b57e189902624c13149d0264142ff66af050
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435998"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64799292"
 ---
-# <a name="how-to-attach-views-to-document-data"></a>Nasıl yapılır: Belge Verilerine Görünüm Ekleme
+# <a name="how-to-attach-views-to-document-data"></a>Nasıl Yapılır: Belge Verilerine Görünüm Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yeni bir belge görünümü varsa, var olan bir belge veri nesnesine iliştirme mümkün olabilir.  
+Yeni bir belge görünümleriniz varsa, varolan bir belge veri nesnesine iliştirebilirsiniz.  
   
-### <a name="to-determine-if-you-can-attach-a-view-to-an-existing-document-data-object"></a>Var olan bir belge veri nesnesine ekleyebilirsiniz görünüm belirlemek için  
+### <a name="to-determine-if-you-can-attach-a-view-to-an-existing-document-data-object"></a>Varolan bir belge verisi nesnesine bir görünüm iliştirilemiyor olup olmadığını belirleme  
   
-1. Uygulama <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>.  
+1. Uygulayın <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> .  
   
-2. Uygulamanızda `IVsEditorFactory::CreateEditorInstance`, çağrı `QueryInterface` IDE çağırdığında mevcut belge verileri nesne üzerinde `CreateEditorInstance` uygulaması.  
+2. Uygulamanızda `IVsEditorFactory::CreateEditorInstance` `QueryInterface` uygulamanızı çağırdığında mevcut belge verileri nesnesini çağırın `CreateEditorInstance` .  
   
-     Çağırma `QueryInterface` , belirtilen mevcut belge veri nesnesi incelemenize olanak sağlayan `punkDocDataExisting` parametresi.  
+     Çağırmak `QueryInterface` , parametresinde belirtilen varolan belge verileri nesnesini incelemenizi sağlar `punkDocDataExisting` .  
   
-     Tam arabirimler sorgulaması gerekir ancak bağlıdır, belgeyi açmayı Düzenleyicisi üzerinde 4. adımında belirtilen şekilde.  
+     Bununla birlikte, sorgu yapmanız gereken tam arabirimler, 4. adımda özetlenen belgeyi açan düzenleyiciye bağlıdır.  
   
-3. Mevcut belge veri nesnesi üzerinde uygun arabirimleri bulamazsanız, düzenleyiciniz belge veri nesnesi düzenleyiciniz ile uyumsuz olduğunu belirten bir hata kodu dönün.  
+3. Mevcut belge verileri nesnesinde uygun arabirimleri bulamazsanız, belge verileri nesnesinin düzenleyicinizle uyumsuz olduğunu belirten bir hata kodu düzenleyicinize döndürün.  
   
-     IDE'nin uygulamasında <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>, belge başka bir düzenleyicide açık durumda olan ve kapatmak isteyip istemediğinizi soran bir ileti kutusu size bildirir.  
+     IDE 'nin uygulamasında <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> , bir ileti kutusu, belgenin başka bir düzenleyicide açık olduğunu ve bunu kapatmak isteyip istemediğinizi sorar.  
   
-4. Bu belge kapatırsanız, Visual Studio Düzenleyicisi Fabrika için ikinci bir kez çağırır. Bu çağrıda `DocDataExisting` parametresi NULL değerine eşittir. Düzenleyici fabrikası uygulamanız sonra belge veri nesnesi kendi Düzenleyicisi'nde açın.  
+4. Bu belgeyi kapatırsanız, Visual Studio, düzenleyici fabrikasını ikinci bir kez çağırır. Bu çağrıda, `DocDataExisting` PARAMETRESI null değerine eşittir. Düzenleyici Fabrika uygulamanız daha sonra belge verileri nesnesini kendi Düzenleyicinizde açabilir.  
   
     > [!NOTE]
-    > Var olan bir belge veri nesnesi çalışıp çalışmadığını belirlemek için de arabirim uygulamasına özel bilgi gerçek bir işaretçiye atayarak kullanabilirsiniz [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] özel uygulamanızın sınıfı. Örneğin, tüm standart düzenleyicileri uygulamak `IVsPersistFileFormat`, işlevinden devralan <xref:Microsoft.VisualStudio.OLE.Interop.IPersist>. Bu nedenle, çağırabilirsiniz `QueryInterface` için <xref:Microsoft.VisualStudio.OLE.Interop.IPersist.GetClassID%2A>, sınıf kimliği ve mevcut belge veri nesnesi üzerinde sınıf kimliği uygulamanızın eşleşip eşleşmediğini ve belge veri nesnesi ile çalışabilirsiniz.  
+    > Varolan bir belge verileri nesnesiyle çalışamayacağını öğrenmek için özel uygulamanızın gerçek sınıfına bir işaretçi atayarak arabirim uygulamasının özel bilgisini de kullanabilirsiniz [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] . Örneğin, ' den devralan tüm standart düzenleyiciler uygular `IVsPersistFileFormat` <xref:Microsoft.VisualStudio.OLE.Interop.IPersist> . Bu nedenle, için ' i çağırabilir `QueryInterface` <xref:Microsoft.VisualStudio.OLE.Interop.IPersist.GetClassID%2A> ve var olan belge verileri NESNESINDEKI sınıf kimliği UYGULAMANıZıN sınıf kimliğiyle eşleşiyorsa, belge verileri nesnesiyle çalışabilirsiniz.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Visual Studio, uygulamanıza çağırdığında <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> yöntemi arabimini geri bir işaretçi ise mevcut belge veri nesnesine `punkDocDataExisting` varsa parametresi. Döndürülen belge veri nesnesini inceler `punkDocDataExisting` belge veri nesnesi bu konudaki yordamının 4. adımda not açıklandığı gibi düzenleyiciniz için uygun olup olmadığını belirlemek için. Uygun sonra Düzenleyici fabrikası ikinci bir görünüm için veriler açıklandığı şekilde sağlamalıdır [birden çok belge görünümünü destekleme](../extensibility/supporting-multiple-document-views.md). Aksi durumda, ardından uygun bir hata iletisi görüntülenmelidir.  
+ Visual Studio yöntemi uygulamanızı çağırdığında <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> , varsa, parametresindeki mevcut belge veri nesnesine bir işaretçi geçirir `punkDocDataExisting` . `punkDocDataExisting`Belge verileri nesnesinin, bu konudaki yordamın 4. adımında gösterildiği gibi, düzenleyicinize göre uygun olup olmadığını öğrenmek için ' de döndürülen belge verileri nesnesini inceleyin. Uygunsa, Düzenleyici fabrikanızın [birden çok belge görünümünü destekleme](../extensibility/supporting-multiple-document-views.md)bölümünde özetlenen ikinci bir görünüm sağlaması gerekir. Aksi takdirde, uygun bir hata iletisi görüntülenmelidir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Birden çok belge görünümünü destekleme](../extensibility/supporting-multiple-document-views.md)   
+ [Çoklu belge görünümlerini destekleme](../extensibility/supporting-multiple-document-views.md)   
  [Özel Düzenleyicilerde Belge Verileri ve Belge Görünümü](../extensibility/document-data-and-document-view-in-custom-editors.md)

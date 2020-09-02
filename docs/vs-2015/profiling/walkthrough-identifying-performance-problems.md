@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Performans sorunlarını belirleme | Microsoft Docs'
+title: 'İzlenecek yol: performans sorunlarını tanımlama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,150 +15,150 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6bc4135b9b861a460295c67c576405edd5c63211
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65695011"
 ---
-# <a name="walkthrough-identifying-performance-problems"></a>İzlenecek yol: Performans sorunlarını tanımlama
+# <a name="walkthrough-identifying-performance-problems"></a>İzlenecek Yol: Performans Sorunlarını Tanımlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu izlenecek yol, performans sorunlarını belirlemek için bir uygulamanın profilini gösterilmiştir.  
+Bu izlenecek yol, performans sorunlarını belirlemek için bir uygulamanın profilini oluşturmayı gösterir.  
   
- Bu kılavuzda, yönetilen bir uygulama profili oluşturma ve uygulamada performans sorunlarını belirlemek ve ayırmak için örnekleme ve Araçları'nı kullanarak işlemi adım adım.  
+ Bu kılavuzda, yönetilen bir uygulamanın profilini oluşturma ve örnekleme ve izleme kullanarak uygulamadaki performans sorunlarını yalıtmak ve tanımlamak için adım adım ilerleyerek adım adım ilerleyerek.  
   
- Bu kılavuzda, aşağıdaki adımları izler:  
+ Bu kılavuzda, aşağıdaki adımları izleyeceğinizi göreceksiniz:  
   
-- Örnekleme yöntemini kullanarak bir uygulama profili.  
+- Örnekleme yöntemini kullanarak bir uygulama profili oluşturma.  
   
-- Bir performans sorunu bulup örneklenen profil oluşturma sonuçları analiz edin.  
+- Bir performans sorununu bulmak ve onarmak için örneklenmiş profil oluşturma sonuçlarını çözümleyin.  
   
-- Araçlar yöntemini kullanarak bir uygulama profili.  
+- İzleme yöntemini kullanarak bir uygulamayı profil haline getirme.  
   
-- Bulmak ve bir performans sorunu gidermek için izleme eklenmiş profil oluşturma sonuçları analiz edin.  
+- Bir performans sorununu bulmak ve onarmak için, işaretlenmiş profil oluşturma sonuçlarını çözümleyin.  
   
-## <a name="prerequisites"></a>Önkoşullar  
+## <a name="prerequisites"></a>Ön koşullar  
   
-- C# Ara anlama.  
+- C# ' nin ara anlama.  
   
-- Bir kopyasını [PeopleTrax örneği](../profiling/peopletrax-sample-profiling-tools.md).  
+- [PeopleTrax örneğinin](../profiling/peopletrax-sample-profiling-tools.md)bir kopyası.  
   
-  Profil oluşturma tarafından sağlanan bilgiler ile çalışmak için hata ayıklama sembol bilgisi kullanılabilir olması en iyisidir.  
+  Profil oluşturma tarafından sağlanan bilgilerle çalışmak için, hata ayıklama sembol bilgilerinin kullanılabilir olması en iyisidir.  
   
-## <a name="profiling-by-using-the-sampling-method"></a>Örnekleme yöntemiyle profili oluşturma  
- Örnekleme tarafından söz konusu işlemi düzenli aralıklarla etkin işlev belirlemek için yoklanabileceği bir profil oluşturma yöntemidir. Sonuçta elde edilen veriler işlem örneklendiğinde ne sıklıkta söz konusu işlev çağrı yığının en üstünde olan sayısına sağlar.  
+## <a name="profiling-by-using-the-sampling-method"></a>Örnekleme yöntemi kullanılarak profil oluşturma  
+ Örnekleme, etkin işlevi belirlemede, söz konusu işlemin düzenli aralıklarla sorgulandığı bir profil oluşturma yöntemidir. Elde edilen veriler, işlem örneklendiği zaman, söz konusu işlevin çağrı yığınının en üstünde ne sıklıkta olduğunu gösteren bir sayı sağlar.  
   
-#### <a name="to-profile-an-application-by-using-the-sampling-method"></a>Örnekleme yöntemini kullanarak uygulamanın profilini çıkarmak için  
+#### <a name="to-profile-an-application-by-using-the-sampling-method"></a>Örnekleme yöntemini kullanarak bir uygulama profili oluşturma  
   
-1. Açık [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] yönetici ayrıcalıklarına sahip. Bir yönetici olarak, profil oluşturma için gereklidir.  
+1. [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]Yönetici ayrıcalıklarıyla açın. Profil oluşturma için yönetici olarak çalışma gerekir.  
   
-2. PeopleTrax çözümü açın.  
+2. PeopleTrax çözümünü açın.  
   
-     PeopleTrax çözümü, Çözüm Gezgini artık doldurur.  
+     PeopleTrax çözümü artık Çözüm Gezgini doldurur.  
   
-3. Proje yapılandırma ayarı **yayın**.  
+3. Proje yapılandırma ayarını **serbest bırakma**olarak ayarlayın.  
   
-     Bir yayın yapısı, uygulamanızda performans sorunlarını algılamak için kullanmanız gerekir. Yayın derlemesi profil oluşturma, hata ayıklama derlemesi performansı olumsuz etkileyebilir ve performans sorunlarını doğru bir şekilde açıklamak değildir içine derlenmiş ek bilgilere sahip olduğu için önerilir.  
+     Uygulamanızdaki performans sorunlarını algılamak için bir yayın derlemesi kullanmanız gerekir. Bir hata ayıklama derlemesi, performansı olumsuz etkileyebilecek ve performans sorunlarını doğru bir şekilde göstermediği için derlenmiş ek bilgiler içerdiğinden, profil oluşturma için bir yayın derlemesi önerilir.  
   
-4. Üzerinde **Çözümle** menüsünü tıklatın **performans Sihirbazını Başlat**.  
+4. **Çözümle** menüsünde, **Performans Sihirbazını Başlat**' ı tıklatın.  
   
-     Performans Sihirbazı görünür.  
+     Performans Sihirbazı görüntülenir.  
   
-5. Emin **CPU örnekleme (önerilir)** seçilir ve ardından **sonraki**.  
+5. **CPU örnekleme (önerilen)** seçeneğinin belirlendiğinden emin olun ve ardından **İleri**' ye tıklayın.  
   
-6. İçinde **hangi uygulamanın profilini oluşturmak için hedeflemek istiyorsunuz**PeopleTrax seçin ve ardından **sonraki**.  
+6. **Profil oluşturmak Için hangi uygulamayı hedeflemek**Istiyorsunuz, PeopleTrax ' i seçin ve ardından **İleri**' ye tıklayın.  
   
-     [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] Projeyi oluşturur ve uygulamanın profilini başlar. **PeopleTrax** uygulama penceresi görünür.  
+     [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] projeyi oluşturur ve uygulamayı profil olarak başlatır. **PeopleTrax** uygulama penceresi görüntülenir.  
   
-7. Tıklayın **kişileri Al**.  
+7. **Kişi al**seçeneğine tıklayın.  
   
-8. Tıklayın **ExportData**.  
+8. **ExportData**öğesine tıklayın.  
   
-     Notepad açılır ve dışarı aktarılan verileri içeren yeni bir dosya görüntüler **PeopleTrax**.  
+     Not Defteri açılır ve **PeopleTrax**adresinden dışarıya aktarılmış verileri içeren yeni bir dosya görüntüler.  
   
-9. Not Defteri'ni kapatın ve ardından kapatın **PeopleTrax** uygulama.  
+9. Not defteri 'ni kapatın ve sonra **PeopleTrax** uygulamasını kapatın.  
   
-     Profil Oluşturucu profil oluşturma verilerini oluşturur (\*.vsp) dosyasının dosya adı performans Gezgini penceresi Raporlar bölümünde listeler ve otomatik olarak yükler **özeti** anapencereninveridosyasındagörünümünü[!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)].  
+     Profil Oluşturucu bir profil oluşturma verileri ( \* . vsp) dosyası oluşturur, dosya adını performans Gezgini penceresinin Raporlar bölümünde listeler ve veri dosyasının **Özet** görünümünü otomatik olarak ' ın ana penceresinde yükler [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] .  
   
-#### <a name="to-analyze-sampled-profiling-results"></a>Çözümlemek için profil oluşturma sonuçlarının örneklenir  
+#### <a name="to-analyze-sampled-profiling-results"></a>Örneklenmiş profil oluşturma sonuçlarını çözümlemek için  
   
-1. Özet görünümü, CPU kullanımı bir zaman çizelgesi profil oluşturma çalıştırmasını kursunda görüntüler **etkin yolu** en aktif olan uygulamanın çağrı ağacının dalını temsil eden bir listesi ve listesini  **En bireysel işleri yapan işlevler** en yoğun bir şekilde kendi işlev gövdesinde kod yürütürken örneklenen işlevleri gösterir.  
+1. Özet görünümü, profil oluşturma çalışma sırasında CPU kullanımının bir zaman çizelgesini, en çok etkin olan uygulamanın çağrı ağacının dalını temsil eden **sık kullanılan yol** listesini ve kodu kendi işlev gövdesinde yürütürken en yoğun şekilde örnekleyen Işlevleri gösteren **işlevlerin** bir listesini görüntüler.  
   
-     İnceleme **etkin yolu** listelemek ve PeopleNS.People.GetNames yöntemi PeopleTrax işlevi listenin sonuna yakın olduğuna dikkat edin. Konumuna analiz için iyi bir adaydır kolaylaştırır. GetNames ayrıntılarını görüntülemek için işlevin adını tıklayarak **işlev ayrıntıları** görünümü.  
+     **Etkin yol** listesini Inceleyin ve PeopleNS. kişiler. GetNames yönteminin listenin sonuna en yakın PeopleTrax işlevi olduğuna dikkat edin. Konumu analiz için iyi bir aday yapar. **Işlev ayrıntıları** görünümündeki GetNames ayrıntılarını görüntülemek için işlev adına tıklayın.  
   
-2. **İşlev ayrıntıları** iki windows görünümü içerir. Maliyet dağıtımı penceresi çalışmanın işlevi tarafından çağrıldığında fonksiyonların çalışmanın ve örneklenen örneklerinin işleve çağıran işlevler katkısını grafik bir görünümünü sağlar. Görünümün odağını bir işlev adına tıklayarak, işlev değiştirebilirsiniz. Örneğin, GetPeople seçili işlev yapmak PeopleNS.People.GetPeople tıklayabilirsiniz.  
+2. **Işlev ayrıntıları** görünümü iki pencere içerir. Maliyet dağılımı penceresi, işlevi tarafından gerçekleştirilen çalışmanın grafik görünümünü, çağırdığı işlevlerin yaptığı çalışmayı ve işlev çağıran işlevlerin örneklendiği örnek sayısına katkısı sağlar. Bir işlev adına tıklayarak, görünümün odağı olan işlevini değiştirebilirsiniz. Örneğin, PeopleNS. kişiler. Getkişileri ' ne tıklayarak Getinsanları seçili işlevi yapabilirsiniz.  
   
-     **İşlev kod görünümü** penceresi gösterir, işlev için kaynak kodu varsa ve seçili işlev en pahalı satırları vurgulanmaktadır. GetNames seçildiğinde, bu işlev bir dize uygulama kaynaklarından okur ve kullanır görebilirsiniz bir <xref:System.IO.StringReader> dizesindeki her bir satır eklemek için bir <xref:System.Collections.ArrayList>. Bu işlev iyileştirmek için belirgin bir yolu yoktur.  
+     **Işlev kod görünümü** penceresi, varsa işlevin kaynak kodunu gösterir ve seçili işlevdeki en pahalı satırları vurgular. {1 & gt; GetNames & lt; 1} seçildiğinde, bu işlevin uygulama kaynaklarından bir dize okuyabileceğini ve sonra <xref:System.IO.StringReader> dizedeki her satırı bir satıra eklemek için kullandığını görebilirsiniz <xref:System.Collections.ArrayList> . Bu işlevi iyileştirmek için belirgin bir yol yoktur.  
   
-3. GetNames yalnızca çağıran PeopleNS.People.GetPeople olduğu için kodunu incelemek için maliyet dağıtım penceresinde GetPeople tıklayın. Bu yöntem döndürür bir <xref:System.Collections.ArrayList> kişileri ve şirketleri GetNames tarafından üretilen adlarından PersonInformationNS.PersonInformation nesne. Ancak, GetNames iki kez PersonInformation nesne oluşturulan her zaman çağrılır. Yöntemi yalnızca bir kez listeler yönteminin başlangıcında oluşturup PersonInformation oluşturma döngüsü sırasında bu listeye dizin kolayca iyileştirilebilir görebilirsiniz.  
+3. PeopleNS. kişiler. Getkişiler tek GetNames çağıranıdır, kodunu incelemek için maliyet dağılımı penceresinde Getkişiler ' e tıklayın. Bu yöntem <xref:System.Collections.ArrayList> , GetNames tarafından üretilen kişilerin ve şirketlerin adlarından PersonInformationNS. PersonInformation nesnelerinden birini döndürür. Ancak, bir PersonInformation nesnesi oluşturulduğu her seferinde GetNames iki kez çağrılır. Yöntemin başlangıcında yalnızca bir kez ve PersonInformation oluşturma döngüsü sırasında bu listelerde dizin oluşturarak, metodun kolayca iyileştirebilmesini sağlayabilirsiniz.  
   
-4. GetPeople alternatif bir sürümü ile örnek uygulama kodu sağlanır ve derleme özellikleri için bir koşullu derleme sembol ekleyerek en iyi duruma getirilmiş işlevi çağırabilir. Çözüm Gezgini penceresinde kişiler projeye sağ tıklayın ve ardından **özellikleri**. Tıklayın **derleme** özellik sayfası menüsünü ve sonra türü **OPTIMIZED_GETPEOPLE** koşullu derleme sembol metin kutusuna. En iyi duruma getirilmiş sürümünü GetPeople sonraki derleme özgün yöntemi değiştirir.  
+4. Örnek uygulama kodu ile birlikte Getkişiler 'in alternatif bir sürümü sağlanır ve derleme özelliklerine koşullu bir derleme sembolü ekleyerek iyileştirilmiş işlevi çağırabilirsiniz. Çözüm Gezgini penceresinde, kişiler projesine sağ tıklayın ve ardından **Özellikler**' e tıklayın. Özellik sayfası menüsünde **Oluştur** ' a tıklayın ve sonra koşullu derleme sembolü metin kutusuna **OPTIMIZED_GETPEOPLE** yazın. En iyileştirilmiş Getkişiler sürümü, sonraki derlemede orijinal yöntemin yerini alır.  
   
-5. Performans oturumu yeniden çalıştırın. Performans Gezgini araç çubuğunda **profil ile Başlat**. Tıklayın **kişileri Al** ve ardından **verileri dışarı aktarma**. Görünen ve kişiler Trax uygulamayı kapatın Not Defteri penceresini kapatın.  
+5. Performans oturumunu yeniden çalıştırın. Performans Gezgini araç çubuğunda, **profil oluşturma Ile Başlat**' a tıklayın. **Kişi al** ' a ve ardından **verileri dışarı aktar**' a tıklayın. Görüntülenen Not Defteri penceresini kapatın ve ardından Insanlar Trax uygulamasını kapatın.  
   
-     Yeni bir profil oluşturma veri dosyası oluşturulur ve **özeti** görünür yeni veri görünümü [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] ana penceresi.  
+     Yeni bir profil oluşturma veri dosyası oluşturulur ve ana pencerede yeni veriler için bir **Özet** görünümü görüntülenir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] .  
   
-6. İki profil oluşturma çalışması karşılaştırmak, performans Gezgini içinde iki veri dosyaları seçin, dosyaları sağ tıklayın ve ardından **Performans raporlarını Karşılaştır**. Karşılaştırma raporu bir pencere [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] ana penceresi. **Delta** sütun önceki işlevlerin performans değerindeki değişikliği gösterir **temel** sonraki değerine **karşılaştırma** değeri. Değerleri karşılaştırmak için seçebileceğiniz **sütun** açılan liste. Seçin **kapsamlı örnek yüzdesi**.  
+6. İki profil oluşturma çalıştırmasını karşılaştırmak için, Performans Gezgini iki veri dosyasını seçin, dosyalara sağ tıklayın ve ardından **performans raporlarını karşılaştır**' a tıklayın. Ana pencerede bir karşılaştırma raporu penceresi görüntülenir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] . **Delta** sütunu, önceki **taban çizgisi** değerindeki işlevlerin performans değerindeki değişikliği sonraki **karşılaştırma** değerine gösterir. **Sütun** açılan listesinden Karşılaştırılacak değerleri seçebilirsiniz. **Kapsanan örnekleri seçin%**.  
   
-     GetPeople ve GetNames yöntemi önemli ölçüde performans artışı Göster dikkat edin.  
+     Getkişiler ve GetNames yöntemlerinin önemli performans kazançlarını gösterdiğine dikkat edin.  
   
-## <a name="profiling-by-using-the-instrumentation-method"></a>Araçlar yöntemini kullanarak profil oluşturma  
- İzleme ve profil oluşturucu araştırma işlevleri profili oluşturulan ikili dosyalarının özel olarak oluşturulmuş sürümlere ekler bir profil oluşturma yöntemidir. Araştırmaları giriş ve çıkış Araçlı modüllerdeki işlevlerin ve işlevlerden tüm çağrı sitede zamanlama bilgilerini toplayın. İzleme işlemi, diske yazma ve bir ağ üzerinden iletişim kurma gibi giriş/çıkış işlemleri ile ilgili sorunları araştırmak için yararlıdır. Örnekleme daha ayrıntılı bilgi, ancak işlem yürütme daha kapsayıcıdır ve büyük miktarda bir ek yük doğurur araçları sağlar. İzlenen ikili dosyaların hatalarını ayıklama veya ikili dosyaları sürüm ve dağıtım için hedeflenmemiş büyük.  
+## <a name="profiling-by-using-the-instrumentation-method"></a>Izleme yöntemini kullanarak profil oluşturma  
+ İzleme, profil oluşturucunun, profili oluşturulmuş ikililerin özel olarak oluşturulmuş sürümlerine araştırma işlevleri eklediği bir profil oluşturma yöntemidir. Araştırmalar, planlama bilgilerini girişte ve bu işlevlerdeki tüm çağrı sitesinde bulunan işlevlerin giriş ve çıkış bilgileri toplar. İzleme işlemi, diske yazma ve ağ üzerinden iletişim kurma gibi giriş/çıkış işlemleriyle ilgili sorunları araştırmak için yararlıdır. İzleme, örneklemeye göre daha ayrıntılı bilgiler sağlar, ancak işlem yürütmesinde daha fazla zorlayıcıdır ve daha fazla ek yük tutar. Belgelenmiş ikili dosyalar aynı zamanda hata ayıklama veya sürüm ikilileriyle daha büyüktür ve dağıtıma yönelik değildir.  
   
- Kılavuzun bu bölümünde, size daha önce profili PeopleTrax uygulamada iyileştirebilirsiniz daha fazla kod bulmak için izleme metodunu kullanacağız. Özet görünümü zaman çizelgesi kısmındaki filtreyi kullanarak, biz çözümlememiz dışarı aktarma veri senaryoya kişilerin listesini bir not defteri dosyasına yazılır profili oluşturulmuş uygulamamızdaki odaklanır.  
+ Bu kılavuzda, daha önce profili oluşturulan PeopleTrax uygulamasında iyileştirebildiğimiz daha fazla kodu saptamak için izleme yöntemini kullanacağız. Özet görünüm zaman çizelgesinin filtresini kullanarak analizine, kişi listesinin bir not defteri dosyasına yazıldığı, profili oluşturulmuş uygulamamızda verileri dışarı aktarma senaryosuna odaklanacağız.  
   
-#### <a name="to-profile-an-existing-application-by-using-the-instrumentation-method"></a>Araçlar yöntemini kullanarak mevcut bir uygulama profiline  
+#### <a name="to-profile-an-existing-application-by-using-the-instrumentation-method"></a>İzleme yöntemini kullanarak var olan bir uygulamayı profil haline getirme  
   
-1. Gerekirse, PeopleTrax uygulamayı Visual Studio'da açın.  
+1. Gerekirse, Visual Studio 'da PeopleTrax uygulamasını açın.  
   
-     Çözüm yapı yapılandırması ayarlanır ve yönetici olarak çalıştırdığınızdan emin olun **yayın**.  
+     Yönetici olarak çalıştırdığınızdan ve çözüme yönelik derleme yapılandırmasının **serbest**olarak ayarlandığından emin olun.  
   
-2. Performans Gezgini tıklayın **izleme**.  
+2. Performans Gezgini, **Araçlar**' a tıklayın.  
   
-3. Performans Gezgini araç çubuğunda **profil ile Başlat**.  
+3. Performans Gezgini araç çubuğunda, **profil oluşturma Ile Başlat**' a tıklayın.  
   
-     Profil Oluşturucu, projeyi oluşturur ve uygulamanın profilini başlar. PeopleTrax uygulama penceresi görünür.  
+     Profil Oluşturucu projeyi oluşturur ve uygulamayı profil olarak başlatır. PeopleTrax uygulama penceresi görüntülenir.  
   
-4. Tıklayın **kişileri Al**.  
+4. **Kişi al**seçeneğine tıklayın.  
   
-     PeopleTrax veri kılavuzu verilerle doldurur.  
+     PeopleTrax veri kılavuzu, verilerle doldurulur.  
   
-5. Yaklaşık 10 saniye bekleyin ve ardından **verileri dışarı aktarma**.  
+5. Yaklaşık 10 saniye bekleyip **verileri dışarı aktar**' a tıklayın.  
   
-     **Not Defteri'ni** başlar ve PeopleTrax kişilerden listesini içeren yeni bir dosyayı görüntüler. Bekleyen etkinleştirir, verileri daha kolay tanımlamak için filtre yordamı dışarı aktarın.  
+     **Not defteri** başlar ve PeopleTrax 'deki kişilerin listesini içeren yeni bir dosya görüntüler. Bekliyor, filtreleme için veri dışarı aktarma yordamını daha kolay bir şekilde tanımlamanızı sağlar.  
   
-6. Kapatma **not defteri**ve ardından kapatın **PeopleTrax** uygulama.  
+6. **Not defteri**'ni kapatın ve sonra **PeopleTrax** uygulamasını kapatın.  
   
-     [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] bir performans oturumu raporu (*.vsp) oluşturur.  
+     [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] bir performans oturumu raporu üretir (*. vsp).  
   
-#### <a name="to-analyze-instrumented-profiling-results"></a>İzleme eklenmiş profil oluşturma sonuçları analiz etmek için  
+#### <a name="to-analyze-instrumented-profiling-results"></a>Belgelenmiş profil oluşturma sonuçlarını çözümlemek için  
   
-1. Zaman Çizelgesi grafiği **özeti** rapor görünümünü programının CPU kullanımı, profil oluşturma süresi boyunca çalışma gösterir. Verileri dışarı aktarma işlemi, büyük yoğun veya grafiğin sağ tarafında bir platoya olması gerekir. Biz görüntülemek ve dışarı aktarma işleminde toplanan verileri çözümlemek için performans oturumu filtreleyebilirsiniz. Noktası solundaki veri dışarı aktarma işleminin başladığı grafiğe tıklayın. İşlemi sağ tarafına tekrar tıklayın. Ardından **seçime göre filtre** zaman çizelgesinin sağdaki bağlantılar listesinde.  
+1. Raporun **Özet** görünümünün zaman çizelgesi grafiği, profil oluşturma çalışmasının süresi boyunca programın CPU kullanımını gösterir. Verileri dışarı aktar işlemi, grafiğin sağ tarafındaki büyük tepe veya plasyon u olmalıdır. Yalnızca dışa aktarma işleminde toplanan verileri göstermek ve analiz etmek için performans oturumunu filtreleyebiliriz. Verileri dışarı aktarma işleminin başladığı grafikte noktanın soluna tıklayın. İşlemin sağ tarafına tekrar tıklayın. Sonra, zaman çizelgesinin sağındaki bağlantı listesinden **seçime göre filtrele** ' ye tıklayın.  
   
-    **Etkin yolu** ağacını Göster <xref:System.String.Concat%2A> PeopleTrax.Form1.ExportData yöntemi tarafından çağrılan yöntem zaman büyük bir yüzdesini kullanıyor. Çünkü **System.String.Concat** ayrıca üst kısmında, **işlevleri ile en bireysel işleri** işlevde harcanan zamanı azaltmak listesinde olan büyük olasılıkla bir nokta iyileştirme.  
+    **Etkin yol** ağacı, <xref:System.String.Concat%2A> PeopleTrax. Form1. ExportData yöntemi tarafından çağrılan yöntemin zamanın büyük bir yüzdesini tükettiğini gösterir. **System. String. Concat** , **en çok bireysel çalışma listesi olan işlevlerin** en üstünde da olduğundan, işlevde harcanan süreyi azaltmak olası bir iyileştirme noktasıdır.  
   
-2. Çift **System.String.Concat** işlev Ayrıntıları görünümünde daha fazla bilgi için Özet tabloların her ikisinde.  
+2. Işlev Ayrıntıları görünümünde daha fazla bilgi görmek için Özet tablolarından birinde **System. String. Concat** öğesine çift tıklayın.  
   
-3. PeopleTrax.Form1.ExportData Concat çağıran tek bir yöntem olduğunu görebilirsiniz. Tıklayın **PeopleTrax.Form1.ExportData** içinde **çağıran fonksiyonları** olan işlev Ayrıntıları görünümünde hedefi olarak yöntemi seçin.  
+3. PeopleTrax. Form1. ExportData 'ın Concat öğesini çağıran tek yöntem olduğunu görebilirsiniz. Yöntemi, Işlev ayrıntıları görünümünün hedefi olarak belirlemek için **çağırma işlevleri** listesindeki **PeopleTrax. Form1. ExportData** öğesine tıklayın.  
   
-4. İşlev kod Görünümü penceresi yönteminde inceleyin. Değişmez değer çağrı olduğunu fark **System.String.Concat**. Bunun yerine, derleyici çağrıları değiştirir işlenenin += çeşitli kullanımları vardır **System.String.Concat**. .NET Framework içindeki dize herhangi bir değişiklik, ayrılması yeni bir dize neden. .NET Framework'ü içeren bir <xref:System.Text.StringBuilder> dize birleştirme için en iyi duruma getirilmiş sınıfı  
+4. Işlev kod görünümü penceresinde yöntemini inceleyin. **System. String. Concat**için değişmez değer çağrısı olmadığına dikkat edin. Bunun yerine, + = işleneninin bazı kullanımları vardır. Bu, derleyicinin **System. String. Concat**çağrıları ile yerini almıştır. .NET Framework bir dizedeki herhangi bir değişiklik, yeni bir dizenin ayrılmasına neden olur. .NET Framework <xref:System.Text.StringBuilder> dize birleştirme için iyileştirilmiş bir sınıf içerir  
   
-5. Bu sorunun görüldüğü alan ile en iyi duruma getirilmiş kodu değiştirmek için bir koşullu derleme simgesi olarak OPTIMIZED_EXPORTDATA PeopleTrax projeye ekleyin.  
+5. Bu sorun alanını iyileştirilmiş kodla değiştirmek için, PeopleTrax projesine koşullu derleme simgesi olarak OPTIMIZED_EXPORTDATA ekleyin.  
   
-6. Çözüm Gezgini'nde PeopleTrax projeye sağ tıklayın ve ardından **özellikleri**.  
+6. Çözüm Gezgini, PeopleTrax projesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.  
   
     PeopleTrax proje özellikleri formu görüntülenir.  
   
-7. Tıklayın **derleme** sekmesi.  
+7. **Derleme** sekmesine tıklayın.  
   
-8. İçinde **koşullu derleme simgeleri** metin kutusunda, **OPTIMIZED_EXPORTDATA**.  
+8. **Koşullu derleme sembolleri** metin kutusuna **OPTIMIZED_EXPORTDATA**yazın.  
   
-9. Proje özelliği formu kapatmak ve seçin **Tümünü Kaydet** sorulduğunda.  
+9. Proje özellik formunu kapatın ve istendiğinde **Tümünü Kaydet** ' i seçin.  
   
-   Uygulamayı yeniden çalıştırdığınızda, işaretli performans geliştirmeleri göreceksiniz. Görünür kullanıcı performans iyileştirmeleri olsa bile, profil oluşturma oturumunu yeniden çalıştırmanız önerilir. Bir sorunu düzelttikten sonra verileri gözden geçirmek, ilk sorun başka bir sorun gizlememeniz çünkü önemlidir.  
+   Uygulamayı yeniden çalıştırdığınızda, performans ile işaretlenmiş iyileştirmeler görürsünüz. Performansla ilgili Kullanıcı görünür iyileştirmeleri olsa bile profil oluşturma oturumunu yeniden çalıştırmanız önerilir. Sorunu düzelttikten sonra verileri gözden geçirmek, ilk sorun başka bir sorunu gizlebileceğinden önemlidir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Genel bakış](../profiling/overviews-performance-tools.md)   
- [Çalışmaya başlama](../profiling/getting-started-with-performance-tools.md)   
- [/Z7, /Zi, /ZI (Hata Ayıklama Bilgileri Biçimi)](https://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8)
+ [Tahmin](../profiling/overviews-performance-tools.md)   
+ [Başlarken](../profiling/getting-started-with-performance-tools.md)   
+ [/Z7,/Zi,/ZI (hata ayıklama bilgileri biçimi)](https://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8)

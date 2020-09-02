@@ -1,5 +1,5 @@
 ---
-title: Uygulamayı yenileme (JavaScript) | Microsoft Docs
+title: Bir uygulamayı yenileme (JavaScript) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -20,67 +20,67 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b5b8be97212f4510002a78e6565fc9884930db89
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446094"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64808021"
 ---
 # <a name="refresh-an-app-javascript"></a>Uygulamayı yenileme (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Windows ve Windows Phone için geçerlidir] (.. /Image/windows_and_phone_content.png "windows_and_phone_content")  
+Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content.png "windows_and_phone_content")  
   
- Hata ayıklama ve ardından seçerek JavaScript kullanarak bir Store uygulaması yenileme sırasında kodunuzda değişiklikler yapabilirsiniz **Yenile Windows uygulama** düğmesini **hata ayıklama** araç çubuğu. Bu düğmeyi seçerek uygulama hata ayıklayıcıyı durdurup yeniden olmadan yeniden yükler. Yenileme özelliği, HTML, CSS ve JavaScript kodu Değiştir ve hızlı bir şekilde sonuçları görmek sağlar. Bu özellik, Windows Store hem de Windows Phone Store uygulamaları için desteklenir.  
+ Hata ayıklarken kodunuzda değişiklik yapabilir ve sonra **hata ayıklama** araç çubuğundaki **Windows uygulamasını Yenile** düğmesini seçerek JavaScript kullanarak bir mağaza uygulamasını yenileyebilirsiniz. Bu düğmenin belirlenmesi, hata ayıklayıcıyı durdurup yeniden başlatmadan uygulamayı yeniden yükler. Yenile özelliği, HTML, CSS ve JavaScript kodunu değiştirmenize ve sonucu hızla görebilmenizi sağlar. Bu özellik hem Windows Mağazası hem de Windows Phone Mağazası uygulamaları için desteklenir.  
   
- Yenileme değil, uygulama durumunu korumak veya uygulamanız için aşağıdaki değişiklikleri yansıtacak:  
+ Yenileme, uygulamanızın durumunu korumaz veya uygulamanızda aşağıdaki değişiklikleri yansıtmaz:  
   
-- Görüntü paketi bildiriminde belirtilen değişiklikler de dahil olmak üzere paket bildirim dosyası değişiklikler.  
+- Paket bildiriminde belirtilen görüntülerde yapılan değişiklikler dahil olmak üzere Paket bildirim dosyası değişiklikleri.  
   
-- Başvuru ekleme veya bir SDK başvurusu kaldırma gibi değiştirir veya Windows çalışma zamanı bileşenleri (.winmd dosyaları) değiştirir.  
+- Bir SDK başvurusu ekleme veya kaldırma veya Windows Çalışma Zamanı bileşenlerinde değişiklikler (. winmd dosyaları) gibi başvuru değişiklikleri.  
   
-- Kaynak dizeleri .resjson dosyalardaki değişiklikler gibi değiştirir.  
+- . Resjson dosyalarındaki dizelerdeki değişiklikler gibi kaynak değişiklikleri.  
   
-- Proje dosyası yolu adı değişiklikleri, yeni proje dosyaları ya da silinen dosyaları ile sonuçlanan değiştirir.  
+- Yol adı ile sonuçlanan proje dosyası değişiklikleri, yeni proje dosyaları veya silinen dosyalar.  
   
-- Proje ve öğe özellik değişiklikleri seçili hata ayıklama cihazı değişiklikleri gibi veya paket eylemi (Özellikler penceresinde) bir dosya için değişiklikler.  
+- Seçilen hata ayıklama cihazında yapılan değişiklikler veya bir dosya için paket eyleminde yapılan değişiklikler gibi proje ve öğe özelliği değişiklikleri (Özellikler penceresi).  
   
 > [!IMPORTANT]
-> Başvuruları değiştirme, paket bildirimini değiştirmek veya önceki listesinde belirtilen diğer değişiklikleri yapın, HTML, CSS ve JavaScript kaynak dosyalarını güncelleştirmek için hata ayıklayıcıyı yeniden başlatın ve durdurun gerekir.  
+> Başvuruları değiştirdiğinizde, paket bildirimini değiştirdiğinizde veya yukarıdaki listede başka değişiklikler yaparsanız, HTML, CSS ve JavaScript kaynak dosyalarını güncelleştirmek için hata ayıklayıcıyı durdurup yeniden başlatmanız gerekir.  
   
 ### <a name="to-refresh-an-app"></a>Bir uygulamayı yenilemek için  
   
-1. Visual Studio'da gezinti uygulaması proje şablonunu kullanarak yeni bir proje oluşturun.  
+1. Visual Studio 'da, gezinti uygulaması proje şablonunu kullanarak yeni bir proje oluşturun.  
   
-     Bu, Windows Store uygulaması, Windows Phone Store uygulaması veya bir evrensel uygulama olabilir.  
+     Bu, Windows Mağazası uygulaması, Windows Phone Mağazası uygulaması veya evrensel bir uygulama olabilir.  
   
-2. Şablon ile Visual Studio'da açın, hata ayıklama hedefi seçin.  
+2. Visual Studio 'da şablon açıkken bir hata ayıklama hedefi seçin.  
   
-     Bir Windows Phone projesi geçerli başlangıç projeniz varsa, hata ayıklama hedefi için bir Windows Phone öykünücüsü seçin. Aksi takdirde seçin **simülatör** veya **yerel makine**.  
+     Geçerli başlangıç projeniz bir Windows Phone projesi ise, hata ayıklama hedefi için bir Windows Phone öykünücü seçin. Aksi takdirde, **simülatör** veya **yerel makine**' yi seçin.  
   
-     ![Select hata ayıklama hedef liste](../debugger/media/js-select-target.png "JS_Select_Target")  
+     ![Hata ayıklama hedef listesini seçin](../debugger/media/js-select-target.png "JS_Select_Target")  
   
 3. Uygulamayı hata ayıklama modunda çalıştırmak için F5 tuşuna basın.  
   
-4. Visual Studio'ya geçiş yapın. (F12 tuşuna basın.)  
+4. Visual Studio 'ya geçiş yapın. (F12 tuşuna basın.)  
   
-5. İçinde **Çözüm Gezgini**, **sayfaları** > **giriş** klasör, açık home.html.  
+5. **Çözüm Gezgini**, **Sayfalar**  >  **giriş** klasöründe home.html ' yi açın.  
   
-6. Sayfa başlığı metni değiştirme  
+6. Sayfa başlığı metnini Değiştir  
   
     ```html  
     Welcome to yourAppName!  
     ```  
   
-     başka bir şeye şöyle:  
+     Bunun gibi başka bir şey için:  
   
     ```html  
     Hello!  
     ```  
   
-7. Tıklayın **Yenile Windows uygulama** şuna benzeyen düğmesi: ![Windows uygulama düğmesine Yenile](../debugger/media/js-refresh.png "JS_Refresh"). (Veya F4 tuşuna basın.)  
+7. Windows uygulamasını **Yenile** düğmesine tıklayın ve şuna benzer: ![Windows uygulamasını Yenile düğmesi](../debugger/media/js-refresh.png "JS_Refresh"). (Veya F4 tuşuna basın.)  
   
-8. Uygulamasına geçin. Uygulamayı yeniden başlatmayı hata ayıklayıcı olmadan yüklenir ve yeni sayfa başlığı görüntülenir.  
+8. Uygulamaya geçiş yapın. Uygulama, hata ayıklayıcı yeniden başlatılmadan yeniden yüklenir ve yeni sayfa başlığı görüntülenir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hızlı Başlangıç: HTML ve CSS hatalarını ayıklama](../debugger/quickstart-debug-html-and-css.md)
+ [Hızlı başlangıç: HTML ve CSS hatalarını ayıklama](../debugger/quickstart-debug-html-and-css.md)

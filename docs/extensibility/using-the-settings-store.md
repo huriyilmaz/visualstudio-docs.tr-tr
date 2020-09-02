@@ -1,5 +1,5 @@
 ---
-title: Ayarlar Deposunu Kullanma | Microsoft Dokümanlar
+title: Ayarlar deposunu kullanma | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,32 +11,32 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b3bbc09586f883e067e32f525a0331c1a9e253f5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80698512"
 ---
 # <a name="using-the-settings-store"></a>Ayarlar Deposu Kullanma
-İki tür ayar vardır:
+İki tür ayar deposu vardır:
 
-- Salt okunur Visual Studio ve VSPackage ayarları olan yapılandırma ayarları. Visual Studio, bilinen tüm .pkgdef dosyalarının ayarlarını bu mağazada birleştirir.
+- Salt okunurdur, Visual Studio ve VSPackage ayarları olan yapılandırma ayarları. Visual Studio, bilinen tüm. pkgdef dosyalarındaki ayarları bu depoya birleştirir.
 
-- **Seçenekler** iletişim kutusundaki sayfalarda, özellik sayfalarında ve diğer bazı iletişim kutularında görüntülenen ayarlar gibi yazılabilir ayarlar olan kullanıcı ayarları. Visual Studio uzantıları bunları küçük miktarlardaki verilerin yerel depolaması için kullanabilir.
+- **Seçenekler** iletişim kutusunda, özellik sayfalarında ve bazı diğer iletişim kutularında görüntülenenler gibi yazılabilir ayarlar olan Kullanıcı ayarları. Visual Studio uzantıları bunları, küçük miktarlarda verilerin yerel depolaması için kullanabilir.
 
-  Bu gözden geçirme, yapılandırma ayar deposundaki verilerin nasıl okunduğunu gösterir. [Kullanıcı ayarları deposuna](../extensibility/writing-to-the-user-settings-store.md) nasıl yazılanın nasıl yazıldığına ilişkin bir açıklama için Kullanıcı Ayarları Mağazası'na yazma bölümüne bakın.
+  Bu izlenecek yol, yapılandırma ayarı deposundan verilerin nasıl okunacağını gösterir. Kullanıcı ayarları deposuna yazma hakkında bir açıklama için bkz. [Kullanıcı ayarları deposuna yazma](../extensibility/writing-to-the-user-settings-store.md) .
 
-## <a name="creating-the-example-project"></a>Örnek Proje Oluşturma
- Bu bölümde, gösteri için bir menü komutu ile basit bir uzantı projesi oluşturmak için nasıl gösterir.
+## <a name="creating-the-example-project"></a>Örnek proje oluşturma
+ Bu bölümde, gösterim için bir menü komutuyla basit uzantı projesi oluşturma gösterilmektedir.
 
-1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSIX dağıtım projesiyle başlar. Adlı `SettingsStoreExtension` [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir VSIX projesi oluşturun. **Visual C# / Genişletilebilirlik**altında **Yeni Proje** iletişim kutusunda VSIX proje şablonu bulabilirsiniz.
+1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSıX dağıtım projesiyle başlar. Adlı bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX projesi oluşturun `SettingsStoreExtension` . VSıX proje şablonunu, **Visual C#/genişletilebilirlik**altında **Yeni proje** iletişim kutusunda bulabilirsiniz.
 
-2. Şimdi **SettingsStoreCommand**adlı özel bir komut öğesi şablonu ekleyin. Yeni **Öğe Ekle** iletişim kutusunda Visual **C# / Genişletilebilirlik'e** gidin ve **Özel Komut'u**seçin. Pencerenin altındaki **Ad** alanında, komut dosyası adını **SettingsStoreCommand.cs**olarak değiştirin. Özel komut oluşturma hakkında daha fazla bilgi için [Menü Komutu yla Uzantı Oluşturma'ya](../extensibility/creating-an-extension-with-a-menu-command.md) bakın
+2. Şimdi **SettingsStoreCommand**adlı özel bir komut öğesi şablonu ekleyin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#/genişletilebilirlik** ' e gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını **SettingsStoreCommand.cs**olarak değiştirin. Özel bir komut oluşturma hakkında daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md)
 
-## <a name="using-the-configuration-settings-store"></a>Yapılandırma Ayarları Deposu'nu kullanma
- Bu bölümde, yapılandırma ayarlarının nasıl algılanıp görüntülenenegösterilmektedir.
+## <a name="using-the-configuration-settings-store"></a>Yapılandırma ayarları deposunu kullanma
+ Bu bölümde yapılandırma ayarlarını algılama ve görüntüleme işlemlerinin nasıl yapılacağı gösterilmektedir.
 
-1. SettingsStorageCommand.cs dosyasına, yönergeleri kullanarak aşağıdakileri ekleyin:
+1. SettingsStorageCommand.cs dosyasında aşağıdaki yönergeleri kullanarak aşağıdakileri ekleyin:
 
    ```
    using System.Collections.Generic;
@@ -45,16 +45,16 @@ ms.locfileid: "80698512"
    using System.Windows.Forms;
    ```
 
-2. In, `MenuItemCallback`yöntemin gövdesini kaldırmak ve bu satırları eklemek yapılandırma ayarları deposu olsun:
+2. İçinde `MenuItemCallback` , yönteminin gövdesini kaldırın ve bu satırları ekleyerek yapılandırma ayarları deposunu alın:
 
    ```
    SettingsManager settingsManager = new ShellSettingsManager(ServiceProvider);
    SettingsStore configurationSettingsStore = settingsManager.GetReadOnlySettingsStore(SettingsScope.Configuration);
    ```
 
-    Hizmet <xref:Microsoft.VisualStudio.Shell.Settings.ShellSettingsManager> üzerinde <xref:Microsoft.VisualStudio.Shell.Interop.IVsSettingsManager> yönetilen bir yardımcı sınıftır.
+    , <xref:Microsoft.VisualStudio.Shell.Settings.ShellSettingsManager> Hizmet üzerinde yönetilen bir yardımcı sınıftır <xref:Microsoft.VisualStudio.Shell.Interop.IVsSettingsManager> .
 
-3. Şimdi Windows Phone Araçları'nın yüklü olup olmadığını öğrenin. Kod şu na benzemelidir:
+3. Şimdi Windows Phone araçlarının yüklenip yüklenmediğini öğrenin. Kod şöyle görünmelidir:
 
    ```
    private void MenuItemCallback(object sender, EventArgs e)
@@ -67,21 +67,21 @@ ms.locfileid: "80698512"
    }
    ```
 
-4. Kodu test edin. Projeyi oluşturun ve hata ayıklamaya başlayın.
+4. Kodu test edin. Projeyi derleyin ve hata ayıklamayı başlatın.
 
-5. Deneysel örnekte, **Araçlar** menüsünde, **Invoke SettingsStoreCommand'ı**tıklatın.
+5. Deneysel örnekte, **Araçlar** menüsünde **SettingsStoreCommand komutunu çağır**' a tıklayın.
 
-    Microsoft Windows Phone Geliştirici Araçları'nı belirten bir ileti kutusu görmeniz **gerekir:** ardından **True** or **False**.
+    **Microsoft Windows Phone Geliştirici Araçları** belirten bir ileti kutusu görmeniz gerekir: ardından **true** veya **false**.
 
-   Visual Studio, sistem kayıt defterinde ayarlar deposunu tutar.
+   Visual Studio, sistem kayıt defterinde ayarlar deposunu saklar.
 
-#### <a name="to-use-a-registry-editor-to-verify-configuration-settings"></a>Yapılandırma ayarlarını doğrulamak için bir kayıt defteri düzenleyicisi kullanmak için
+#### <a name="to-use-a-registry-editor-to-verify-configuration-settings"></a>Yapılandırma ayarlarını doğrulamak üzere bir kayıt defteri Düzenleyicisi kullanmak için
 
-1. Regedit.exe'yi aç.
+1. Regedit.exe açın.
 
-2. HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp_Config\InstalledProducts'e\\gidin.
+2. HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\14.0Exp_Config \ınstalınstalsınürünler ' e gidin \\ .
 
     > [!NOTE]
-    > \14.0Exp_Config\ içeren ve \14.0_Config'i\\içermeyen anahtara baktığından emin olun. Visual Studio'nun deneysel örneğini çalıştırdığınızda, yapılandırma ayarları kayıt defteri kovanında "14.0Exp_Config" şeklindedir.
+    > \ 14.0Exp_Config \ içeren ve \ 14.0_Config olmayan anahtara baktığınızdan emin olun \\ . Visual Studio 'nun Deneysel örneğini çalıştırdığınızda yapılandırma ayarları "14.0Exp_Config" kayıt defteri kovanında bulunur.
 
-3. \Yüklü Ürünler\ düğümündeki nigenişletin. Önceki adımlardaki ileti **Microsoft Windows Phone Geliştirici Araçları Yüklüyse: True**, sonra \Installed Products\ bir Microsoft Windows Phone Geliştirici Araçları düğümü içermelidir. İleti Microsoft **Windows Phone Geliştirici Araçları Yüklü ise: False**, sonra \Installed Products\ bir Microsoft Windows Phone Geliştirici Araçları düğüm içermemelidir.
+3. \Yüklü Ürünler \ düğümünü genişletin. Önceki adımlarda bulunan ileti **microsoft Windows Phone Geliştirici Araçları yüklüyse: true**ise, \Yüklü Ürünler \ bir Microsoft Windows Phone Geliştirici Araçları düğümü içermelidir. İleti **microsoft Windows Phone Geliştirici Araçları yüklüyse: false**ise, \Yüklü Ürünler \ microsoft Windows Phone Geliştirici Araçları düğümü içermemelidir.

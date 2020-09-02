@@ -10,47 +10,47 @@ ms.assetid: 7d316945-06e0-4d8e-ba3a-0ef96fc75399
 caps.latest.revision: 26
 manager: jillfra
 ms.openlocfilehash: 192274d087731f68cb7e01c1da20e80cbfef0360
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446422"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64802928"
 ---
 # <a name="in-place-activation"></a>Yerinde etkinleştirme
-Düzenleyici görünümü ActiveX veya diğer etkin denetimleri barındırıyorsa, bir ActiveX denetimi veya yerinde etkinleştirme modeli kullanarak etkin belgeyi veri nesnesi olarak Düzenleyicisi görünümünüzü uygulamalıdır.  
+Düzenleyiciniz görünümü ActiveX veya diğer etkin denetimleri barındırıyorsa, düzenleyici görünümünüzü bir ActiveX denetimi olarak veya etkin bir belge veri nesnesi olarak yerinde etkinleştirme modelini kullanarak uygulamanız gerekir.  
   
-## <a name="support-for-menus-toolbars-and-commands"></a>Menüleri, araç çubukları ve komutları için destek  
- Visual Studio IDE'nin araç çubukları ve menüler kullanmak, düzenleyici görünümü sağlar. Bu uzantıları olarak ifade edilir *OLE yerinde bileşenler*. Daha fazla bilgi için <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent> ve <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager>.  
+## <a name="support-for-menus-toolbars-and-commands"></a>Menüler, araç çubukları ve komutlar için destek  
+ Visual Studio, düzenleyici görünümlerinizin IDE 'nin menülerini ve araç çubuklarını kullanmasına izin verir. Bu uzantılar, *OLE yerinde bileşenler*olarak adlandırılır. Daha fazla bilgi için bkz <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent> . ve <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager> .  
   
- ActiveX denetimi uygularsanız, katıştırılmış diğer nesneleri barındırabilir. Bir belge veri nesnesi uygularsanız, pencere çerçevesi ActiveX denetimlerini kullanma yeteneğinizi kısıtlar.  
+ Bir ActiveX denetimi uygularsanız, diğer katıştırılmış nesneleri barındırabilirsiniz. Bir belge veri nesnesi uygularsanız, pencere çerçevesi, ActiveX denetimlerini kullanma yeteneğinizi kısıtlar.  
   
 > [!NOTE]
-> <xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument> Ve <xref:Microsoft.VisualStudio.OLE.Interop.IOleDocumentView> arabirimleri izin vermek için veri görünümü ve bir ayrım. Ancak, Visual Studio bu işlevselliği desteklemiyor ve bu arabirimler yalnızca belge view nesnesinin temsil etmek için kullanılır.  
+> <xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument>Ve <xref:Microsoft.VisualStudio.OLE.Interop.IOleDocumentView> arabirimleri, verilerin ve görünümün bir ayrımı için izin verir. Ancak, Visual Studio bu işlevi desteklemez ve bu arabirimler yalnızca belge görünümü nesnesini temsil etmek için kullanılır.  
   
- Kullanan düzenleyicileri <xref:Microsoft.VisualStudio.Shell.Interop.SOleComponentUIManager> hizmet sağlayabilir menü ve araç çubuğu komut tümleştirme yöntemleri çağırarak <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager> arabirim uygulandığında tarafından <xref:Microsoft.VisualStudio.Shell.Interop.SOleComponentUIManager> hizmeti. Ayrıca düzenleyicileri izleme seçimi gibi diğer Visual Studio işlevselliği sunar ve yönetim geri. Daha fazla bilgi için [oluşturma özel düzenleyiciler ve tasarımcılar](../extensibility/creating-custom-editors-and-designers.md).  
+ Hizmeti kullanan düzenleyiciler, <xref:Microsoft.VisualStudio.Shell.Interop.SOleComponentUIManager> <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager> hizmet tarafından uygulanan arabirimin yöntemlerini çağırarak menü, araç çubuğu ve komut tümleştirmesi sağlayabilir <xref:Microsoft.VisualStudio.Shell.Interop.SOleComponentUIManager> . Düzenleyiciler, seçim izleme ve yönetimi geri alma gibi diğer Visual Studio işlevlerini de sunabilir. Daha fazla bilgi için bkz. [özel düzenleyiciler ve tasarımcılar oluşturma](../extensibility/creating-custom-editors-and-designers.md).  
   
-## <a name="objects-and-interfaces-used"></a>Nesneleri ve kullanılan arabirimleri  
- Yerinde etkinleştirme oluşturmak için kullanılan nesneleri aşağıdaki çizimde gösterilmektedir.  
+## <a name="objects-and-interfaces-used"></a>Kullanılan nesneler ve arabirimler  
+ Yerinde etkinleştirme oluşturmak için kullanılan nesneler aşağıdaki çizimde gösterilmiştir.  
   
- ![İçinde&#45;etkinleştirme Düzenleyicisi yerleştirin](../misc/media/vsinplaceactivationeditor.gif "vsInPlaceActivationEditor")  
+ ![&#45;yerinde etkinleştirme Düzenleyicisi](../misc/media/vsinplaceactivationeditor.gif "vsInPlaceActivationEditor")  
 Yerinde etkinleştirme Düzenleyicisi  
   
 > [!NOTE]
-> Bu, yalnızca çizim nesneleri `CYourEditorFactory` nesnesi, standart bir düzenleyici oluşturmak için gereklidir. Özel bir düzenleyici oluşturuyorsanız, uygulama gerekmez <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> düzenleyiciniz büyük olasılıkla kendi özel Kalıcılık mekanizması olduğundan. Daha fazla bilgi için [oluşturma özel düzenleyiciler ve tasarımcılar](../extensibility/creating-custom-editors-and-designers.md).  
+> Bu çizimdeki nesnelerden yalnızca `CYourEditorFactory` nesne, standart bir düzenleyici oluşturmak için gereklidir. Özel bir düzenleyici oluşturuyorsanız, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> düzenleyiciniz büyük olasılıkla kendi özel Kalıcılık mekanizmasına sahip olacağı için uygulamanız gerekmez. Daha fazla bilgi için bkz. [özel düzenleyiciler ve tasarımcılar oluşturma](../extensibility/creating-custom-editors-and-designers.md).  
   
- Tek bir yerinde etkinleştirme düzenleyici oluşturmak için uygulanan tüm arabirimler gösterilir `CYourEditorDocument` nesne, ancak bu yapılandırma yalnızca belge verilerini tek bir görünüm destekler. Belge verilerinizi birden çok görünüm destekleme hakkında daha fazla bilgi için bkz. [birden çok belge görünümünü destekleme](../extensibility/supporting-multiple-document-views.md).  
+ Bir yerinde etkinleştirme Düzenleyicisi oluşturmak için uygulanan tüm arabirimler tek `CYourEditorDocument` nesnede gösterilir, ancak bu yapılandırma yalnızca belge verilerinin tek bir görünümünü destekler. Belge verilerinizin birden çok görünümünü destekleme hakkında daha fazla bilgi için bkz. [birden çok belge görünümünü destekleme](../extensibility/supporting-multiple-document-views.md).  
   
-|Arabirim|Nesne türü|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|  
+|Arabirim|Nesne türü|Kullanın|  
 |---------------|--------------------|---------|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent>|Görüntüle|Yerinde VSPackage nesneler kullanarak IDE, tamamen tümleşik bileşenleri olarak çalışılacak sağlayan <xref:Microsoft.VisualStudio.Shell.Interop.SOleComponentUIManager> hizmeti. Bu hizmet, menüleri, araç çubukları ve nesnenin komutları IDE'ye tümleştirilir ve durum değişikliği bildirimleri verir.|  
-|<xref:Microsoft.VisualStudio.OLE.Interop.IOleObject>|Görüntüle|Katıştırılmış nesne kapsayıcısı için temel işlevleri sağlar ve bununla iletişim kurar, asıl anlamına gelir.|  
-|<xref:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceActiveObject>|Görüntüle|Etkinleştirme ve devre dışı bırakma yerinde nesnelerin yönetir ve yerinde nesne ne kadarının görünür olacağını belirler.|  
-|<xref:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceObject>|Görüntüle|Yerinde nesneyi, ilişkili uygulamanın en dıştaki çerçeve penceresi ve katıştırılmış nesne içeren uygulamayı belge penceresinde arasındaki iletişimin doğrudan bir kanal sağlar.|  
-|<xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument>|Görüntüle|Bir ActiveX nesnesinden uygular. Unutmayın yöntemlerinin <xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument> ve `T:Microsoft.VisualStudio.OLE.Interop.IOleDocumentView` ayrı bir belge verileri ve görünümü IDE içinde kullanılmaz.|  
-|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|Verileri görüntüle|Belge veri nesnesi veya belge view nesnesinin ya da hem komut işlemede katılmasını sağlar.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser>|Görüntüle|Durum çubuğu güncelleştirmeleri sağlar.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser>|Görüntüle|Öğe araç kutusuna ekleme etkinleştirir.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEvents>|Veri|Değişiklik bildirimi, düzenlenen dosyayı gönderir. (Bu arabirim, isteğe bağlıdır.)|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>|Veri|Bir dosya türü için Farklı Kaydet özelliğini etkinleştirmek için kullanılır.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData>|Veri|Belge için kalıcılığını etkinleştirir. Salt okunur dosyalar için çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.SetDocDataReadOnly%2A> salt okunur dosyaları belirten "Kilitle" simge sağlamak için.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl>|Veri|Belge verilerini değişiklikler yok sayılıp sayılmayacağını belirler.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent>|Görünüm|Yerinde VSPackage nesnelerinin, hizmeti kullanarak IDE 'nin tamamen tümleşik bileşenleri olarak çalışmasını sağlar <xref:Microsoft.VisualStudio.Shell.Interop.SOleComponentUIManager> . Bu hizmet, nesnenin menülerini, araç çubuklarını ve komutlarını IDE 'ye ve durum değişikliklerinin sorun bildirimlerini tümleştirir.|  
+|<xref:Microsoft.VisualStudio.OLE.Interop.IOleObject>|Görünüm|Asıl, gömülü bir nesnenin kapsayıcısına temel işlevsellik sağladığı ve bununla iletişim kurduğu anlamına gelir.|  
+|<xref:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceActiveObject>|Görünüm|Yerinde nesnelerin etkinleştirilmesini ve devre dışı bırakılması işlemini yönetir ve yerinde nesnenin ne kadarının görünür olacağını belirler.|  
+|<xref:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceObject>|Görünüm|Bir yerinde nesne, ilişkili uygulamanın en dıştaki çerçevesi penceresi ve katıştırılmış nesneyi içeren uygulamadaki belge penceresi arasında doğrudan iletişim kanalı sağlar.|  
+|<xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument>|Görünüm|Bir ActiveX nesnesi uygular. <xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument> `T:Microsoft.VisualStudio.OLE.Interop.IOleDocumentView` Belge verilerinin ve görünümün ayrı ve bu yöntemlerinin IDE 'de kullanılmadığını unutmayın.|  
+|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|Görünüm/veri|Belge veri nesnesini veya belge görünümü nesnesini ya da her ikisini de komut işleme katılmasını sağlar.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser>|Görünüm|Durum çubuğu güncelleştirmelerini etkinleştirilir.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser>|Görünüm|Araç kutusuna öğe eklemeyi sağlar.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEvents>|Veriler|Düzenlenen dosyadaki değişiklikler hakkında bildirim gönderir. (Bu arabirim isteğe bağlıdır.)|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>|Veriler|Dosya türü için farklı Kaydet özelliğini etkinleştirmek üzere kullanılır.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData>|Veriler|Belge için kalıcılığı mümkün hale getirme. Salt okuma dosyaları için, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.SetDocDataReadOnly%2A> salt okuma dosyalarını belirten "kilit" simgesini sağlamak için öğesini çağırın.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl>|Veriler|Belge verilerinde değişiklik yapılıp yapılmayacağını belirler.|

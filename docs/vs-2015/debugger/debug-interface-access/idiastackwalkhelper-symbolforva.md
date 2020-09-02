@@ -1,5 +1,5 @@
 ---
-title: Idiastackwalkhelper::symbolforva | Microsoft Docs
+title: 'IDiaStackWalkHelper:: symbolForVA | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5ed714501f18b0c1ab771556a56a6ca3bbc061d8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150055"
 ---
 # <a name="idiastackwalkhelpersymbolforva"></a>IDiaStackWalkHelper::symbolForVA
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Belirtilen sanal adres içeren simgeyi alır.  
+Belirtilen sanal adresi içeren simgeyi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT symbolForVA(   
@@ -36,13 +36,13 @@ HRESULT symbolForVA( 
   
 #### <a name="parameters"></a>Parametreler  
  `va`  
- [in] İstenen sembol içinde yer alan sanal adres. Sembol olmalıdır bir `SymTagFunctionType` (arasında bir değer [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) sabit listesi).  
+ 'ndaki İstenen sembolün içerdiği sanal adres. Simgenin bir `SymTagFunctionType` ( [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) numaralandırmasından bir değer) olması gerekir.  
   
  `ppSymbol`  
- [out] Bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) sembolü belirtilen adreste temsil eden nesne.  
+ dışı Belirtilen adresteki simgeyi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   

@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetInfo | Microsoft Dokümanlar
+title: 'IDebugField:: GetInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 1b3251db3426f87901ca0768800feaa36fef5373
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728850"
 ---
 # <a name="idebugfieldgetinfo"></a>IDebugField::GetInfo
-Bu yöntem, alan hakkında görüntülenebilir bilgiler alır.
+Bu yöntem, alanla ilgili görüntülenebilen bilgileri alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetInfo( 
@@ -43,13 +43,13 @@ int GetInfo(
 
 ## <a name="parameters"></a>Parametreler
 `dwFields`\
-[içinde] Görüntülenecek bilgileri seçen [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) sabitlerinin birleşimi. Alan bir sembolü temsil ediyorsa, bu genellikle sembol adı ve türüdür.
+'ndaki Görüntülenecek bilgileri seçen [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) sabitlerin birleşimi. Alan bir sembolü temsil ediyorsa, bu genellikle sembol adı ve türüdür.
 
 `pFieldInfo`\
-[çıkış] Verilen [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) yapısındaki bilgileri verir.
+dışı Sağlanan [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) yapısındaki bilgileri döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

@@ -1,5 +1,5 @@
 ---
-title: VSIX Paketlerini İmzalama | Microsoft Dokümanlar
+title: VSıX paketleri imzalanıyor | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,36 +15,36 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 17179c35496fc19322c5bb951f4d04bc28e5d7bc
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80700083"
 ---
 # <a name="signing-vsix-packages"></a>VSIX Paketlerini İmzalama
-Uzatma derlemelerinin Visual Studio'da çalıştırılmadan önce imzalanması gerekmez, ancak bunu yapmak iyi bir uygulamadır.
+Uzantı derlemelerinin Visual Studio 'da çalıştırılmadan önce imzalanması gerekmez, ancak bunu yapmak iyi bir uygulamadır.
 
- Uzantınızın güvenliğini sağlamak ve üzerinde oynanmış olmadığından emin olmak istiyorsanız, VSIX paketine dijital imza ekleyebilirsiniz. Bir VSIX imzalandığında, VSIX yükleyicisi imzalandığına dair bir ileti ve imzanın kendisi hakkında daha fazla bilgi görüntüler. VSIX'nin içeriği değiştirilmişse ve VSIX yeniden imzalanmadıysa, VSIX yükleyiciimzanın geçerli olmadığını gösterir. Yükleme durdurulmuyor, ancak kullanıcı uyarılır.
+ Uzantınızı güvenli hale getirmek ve kurcalanmadığından emin olmak istiyorsanız VSıX paketine dijital imza ekleyebilirsiniz. Bir VSıX imzalandığı zaman VSıX yükleyicisi, imzalandığını belirten bir ileti ve imzanın kendisi hakkında daha fazla bilgi görüntüler. VSıX içeriği değiştirilmişse ve VSıX yeniden imzalanmamışsa, VSıX yükleyicisi imza geçerli değil olarak gösterilir. Yükleme durdurulmaz, ancak Kullanıcı uyarıladır.
 
 > [!IMPORTANT]
-> Visual Studio 2015'ten itibaren SHA256 şifrelemesi dışında herhangi bir şey kullanılarak imzalanan VSIX paketlerinin geçersiz imzaya sahip olduğu tespit edilecektir. VSIX yüklemesi engellenmez, ancak kullanıcı uyarılır.
+> Visual Studio 2015 ' den başlayarak, SHA256 şifrelemesi dışında bir şey kullanılarak imzalanmış VSıX paketleri geçersiz imzaya sahip olacak şekilde tanımlanır. VSıX yüklemesi engellenmiyor, ancak Kullanıcı uyarılacaktır.
 
-## <a name="signing-a-vsix-with-vsixsigntool"></a>VSIXSignTool ile VSIX İmzalama
- [VsixSignTool'da](https://www.nuget.org/packages/Microsoft.VSSDK.Vsixsigntool) [VisualStudioExtensibility'den](https://www.nuget.org/profiles/VisualStudioExtensibility) nuget.org bir SHA256 şifreleme imzalama aracı mevcuttur.
+## <a name="signing-a-vsix-with-vsixsigntool"></a>Valtsigntool ile VSıX imzalama
+ [Valtsigntool](https://www.nuget.org/packages/Microsoft.VSSDK.Vsixsigntool)'de NuGet.org üzerinde [VisualStudioExtensibility](https://www.nuget.org/profiles/VisualStudioExtensibility) tarafından kullanılabilen bir SHA256 şifreleme imzalama aracı vardır.
 
-#### <a name="to-use-the-vsixsigntool"></a>VSIXSignTool kullanmak için
+#### <a name="to-use-the-vsixsigntool"></a>Valtsigntool kullanmak için
 
-1. VSIX'nizi bir projeye ekleyin.
+1. VSıX 'i bir projeye ekleyin.
 
-2. Solution Explorer'da proje düğümüne sağ tıklayın, **NuGet Paketlerini &#124; Yönet'i**seçin.  NuGet ve NuGet paketleri ekleme hakkında daha fazla bilgi için [NuGet belgeleri](/NuGet) ve [Paket Yöneticisi Kullanıcı Arabirimi](/NuGet/Tools/Package-Manager-UI) konularına bakın.
+2. Çözüm Gezgini ' de proje düğümüne sağ tıklayın, &#124; Ekle ' yi seçin ve **NuGet Paketlerini Yönet**' i seçin.  NuGet ve NuGet paketleri ekleme hakkında daha fazla bilgi için bkz. [NuGet belge](/NuGet) ve [Paket Yöneticisi Kullanıcı arabirimi](/NuGet/Tools/Package-Manager-UI) konuları.
 
-3. VisualStudioExtensibility'den VSIXSignTool'u arayın ve NuGet paketini yükleyin.
+3. VisualStudioExtensibility adresinden Valtsigntool araması yapın ve NuGet paketini yükledikten sonra.
 
-4. Artık VSIXSignTool'u projenin yerel paket konumundan çalıştırabilirsiniz. İmzalama senaryonuz için aracın komut satırına başvurun (VSIXSignTool.exe /?).
+4. Şimdi de, projenin yerel paketler konumundan Valtsigntool öğesini çalıştırabilirsiniz. İmzalama senaryonuz (VSIXSignTool.exe/?) için araç komut satırı yardımına bakın.
 
-   Örneğin parola korumalı sertifika dosyasıyla imzalamak için:
+   Örneğin, parola korumalı bir sertifika dosyası ile imzalamak için:
 
-   VSIXSignTool.exe işareti \</f certfile \<> \</p şifre> VSIXfile>
+   VSIXSignTool.exe Sign/f \<certfile> /p \<password>\<VSIXfile>
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio Uzantıları Gönderme](../extensibility/shipping-visual-studio-extensions.md)

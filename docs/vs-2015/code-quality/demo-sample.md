@@ -13,18 +13,18 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 3a49859a8cd1c4ffb01f93bf2539fc16c42f8c4c
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77277888"
 ---
 # <a name="demo-sample"></a>Gösterim Örneği
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Aşağıdaki yordamlarda Izlenecek yol için örneğin nasıl oluşturulacağı gösterilmektedir [: hatalar Için CC++ /Code çözümleme](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md). Şu yordamları oluşturun:  
+Aşağıdaki yordamlarda Izlenecek yol için örneğin nasıl oluşturulacağı gösterilmektedir [: hatalar Için C/C++ kodunu analiz etme](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md). Şu yordamları oluşturun:  
   
-- CppDemo adlı bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümü.  
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]CppDemo adlı bir çözüm.  
   
 - Codearızaları adlı bir statik kitaplık projesi.  
   
@@ -36,9 +36,9 @@ Aşağıdaki yordamlarda Izlenecek yol için örneğin nasıl oluşturulacağı 
   
 1. **Dosya** menüsüne tıklayın, **Yeni**' nin üzerine gelin ve ardından **Yeni proje**' ye tıklayın.  
   
-2. **Proje türleri** ağaç listesinde, Visual C++ varsayılan diliniz, vs genişletme **diğer dillerde**değilse.  
+2. **Proje türleri** ağaç LISTESINDE, vs genişletme **diğer dillerde**Visual C++ varsayılan diliniz değilse.  
   
-3. **Görsel C++** ' i genişletin ve ardından **genel**' e tıklayın.  
+3. **Visual C++** öğesini genişletin ve ardından **genel**' e tıklayın.  
   
 4. **Şablonlar**' da **boş proje**' ye tıklayın.  
   
@@ -62,11 +62,11 @@ Aşağıdaki yordamlarda Izlenecek yol için örneğin nasıl oluşturulacağı 
   
 1. Çözüm Gezgini, **kod hataları**' nı genişletin, **üst bilgi dosyaları**' na sağ tıklayın, **Ekle**' ye ve ardından **Yeni öğe**' ye tıklayın  
   
-2. **Yeni öğe Ekle** iletişim kutusunda, **kod**' a ve ardından **üstbilgi dosyası (. h)** ' na tıklayın.  
+2. **Yeni öğe Ekle** iletişim kutusunda, **kod**' a ve ardından **üstbilgi dosyası (. h)**' na tıklayın.  
   
 3. **Ad** kutusuna **Bug. cpp** yazın ve ardından **Ekle**' ye tıklayın.  
   
-4. Aşağıdaki kodu kopyalayın ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] düzenleyicisinde **hata. cpp** dosyasına yapıştırın.  
+4. Aşağıdaki kodu kopyalayın ve düzenleyicideki **hata. cpp** dosyasına yapıştırın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
     ```  
     #include <windows.h>  
@@ -90,11 +90,11 @@ Aşağıdaki yordamlarda Izlenecek yol için örneğin nasıl oluşturulacağı 
   
 5. Çözüm Gezgini, **kaynak dosyalar**' a sağ tıklayın, **Yeni**' nin üzerine gelin ve ardından **Yeni öğe**' ye tıklayın.  
   
-6. **Yeni öğe Ekle** iletişim kutusunda  **C++ dosya (. cpp)** öğesine tıklayın.  
+6. **Yeni öğe Ekle** iletişim kutusunda, **C++ dosyası (. cpp)** seçeneğine tıklayın.  
   
 7. **Ad** kutusuna **Bug. cpp** yazın ve ardından **Ekle**' ye tıklayın.  
   
-8. Aşağıdaki kodu kopyalayın ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] düzenleyicisinde hata. h dosyasına yapıştırın.  
+8. Aşağıdaki kodu kopyalayın ve düzenleyicideki hata. h dosyasına yapıştırın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
     ```  
     #include <stdlib.h>  
@@ -160,7 +160,7 @@ Aşağıdaki yordamlarda Izlenecek yol için örneğin nasıl oluşturulacağı 
   
 1. Çözüm Gezgini, **CppDemo**' e tıklayın, **Ekle**' nin üzerine gelin ve ardından **Yeni proje**' ye tıklayın.  
   
-2. **Yeni Proje Ekle** iletişim kutusunda, görsel C++' i genişletin, **genel**' i ve ardından **boş proje**' yi tıklatın.  
+2. **Yeni Proje Ekle** iletişim kutusunda Visual C++ ' ı genişletin, **genel**' i ve ardından **boş proje**' yi tıklatın.  
   
 3. **Ad** metin kutusuna **ek açıklamalar**yazın ve ardından **Ekle**' ye tıklayın.  
   
@@ -180,7 +180,7 @@ Aşağıdaki yordamlarda Izlenecek yol için örneğin nasıl oluşturulacağı 
   
 3. **Ad** kutusuna, **ek açıklama. h** yazın ve ardından **Ekle**' ye tıklayın.  
   
-4. Aşağıdaki kodu kopyalayın ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] düzenleyicisinde **ek açıklamalar. h** dosyasına yapıştırın.  
+4. Aşağıdaki kodu kopyalayın ve düzenleyicideki **ek açıklamalar. h** dosyasına yapıştırın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
     ```  
     #include <CodeAnalysis/SourceAnnotations.h>  
@@ -199,11 +199,11 @@ Aşağıdaki yordamlarda Izlenecek yol için örneğin nasıl oluşturulacağı 
   
 5. Çözüm Gezgini, **kaynak dosyalar**' a sağ tıklayın, **Yeni**' nin üzerine gelin ve ardından **Yeni öğe**' ye tıklayın.  
   
-6. **Yeni öğe Ekle** iletişim kutusunda, **kod** ' a ve ardından  **C++ dosya (. cpp)** ' ye tıklayın.  
+6. **Yeni öğe Ekle** iletişim kutusunda, **kod** ' a ve ardından **C++ dosyası (. cpp)** seçeneğine tıklayın.  
   
 7. **Ad** kutusuna, **ek açıklama. cpp** yazın ve ardından **Ekle**' ye tıklayın.  
   
-8. Aşağıdaki kodu kopyalayın ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] düzenleyicisinde **ek açıklamalar. cpp** dosyasına yapıştırın.  
+8. Aşağıdaki kodu kopyalayın ve düzenleyicideki **ek açıklama. cpp** dosyasına yapıştırın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
     ```  
     #include <CodeAnalysis/SourceAnnotations.h>  

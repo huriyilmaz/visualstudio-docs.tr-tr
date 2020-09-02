@@ -1,5 +1,5 @@
 ---
-title: Hata Ayıklama Motoru | Microsoft Dokümanlar
+title: Hata ayıklama altyapısı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,33 +11,33 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a4cb00796f8db23a43cd81a06d80d0fac40f075e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739057"
 ---
-# <a name="debug-engine"></a>Hata ayıklama motoru
-Hata ayıklama altyapısı (DE), yürütme denetimi, kesme noktaları ve ifade değerlendirmesi gibi hata ayıklama hizmetlerini sağlamak için yorumlayıcı veya işletim sistemiyle birlikte çalışır. DE, debugged olan bir programın durumunu izlemekten sorumludur. Bunu başarmak için DE, ister CPU'dan ister çalışma zamanı tarafından sağlanan API'lerden olsun, desteklenen çalışma zamanında kullanabileceği her türlü yöntemi kullanır.
+# <a name="debug-engine"></a>Hata ayıklama altyapısı
+Hata ayıklama altyapısı (DE), yürütme denetimi, kesme noktaları ve ifade değerlendirmesi gibi hata ayıklama hizmetleri sağlamak için yorumlayıcı veya işletim sistemi ile birlikte kullanılır. Aynı hata ayıklanmakta olan bir programın durumunu izlemenin DE sorumluluğundadır. Bunu gerçekleştirmek için, bu, CPU 'dan veya çalışma zamanının sağladığı API 'lerden bağımsız olarak, desteklenen çalışma zamanında bu için kullanılabilen yöntemleri kullanır.
 
- Örneğin, ortak dil çalışma zamanı (CLR) ICorDebugXXX arabirimleri üzerinden çalışan bir programı izlemek için mekanizmalar sağlar. CLR destekleyen bir DE, debugged olan yönetilen bir kod programını izlemek için uygun ICorDebugXXX arabirimlerini kullanır. Daha sonra, bu tür bilgileri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE'ye ileten oturum hata ayıklama yöneticisine (SDM) durum değişiklikleri iletir.
-
-> [!NOTE]
-> Hata ayıklama altyapısı belirli bir çalışma zamanını, yani programın hata ayıklandığı sistemi hedefler. CLR yönetilen kodun çalışma zamanıdır ve Win32 çalışma süresi yerel Windows uygulamaları içindir. Oluşturduğunuz dil bu iki çalışma zamanından [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] birini hedeflenebiliyorsa, gerekli hata ayıklama motorlarını zaten sağlar. Uygulamanız gereken tek şey bir ifade değerlendiricisi.
-
-## <a name="debug-engine-operation"></a>Hata ayıklama motoru çalışması
- İzleme hizmetleri DE arabirimleri üzerinden uygulanır ve hata ayıklama paketinin farklı çalışma modları arasında geçişine neden olabilir. Daha fazla bilgi için [Bkz. Operasyonel modlar.](../../extensibility/debugger/operational-modes.md) Çalışma zamanı ortamı başına genellikle yalnızca bir DE uygulaması vardır.
+ Örneğin, ortak dil çalışma zamanı (CLR) ICorDebugXXX arabirimleri aracılığıyla çalışan bir programı izlemeye yönelik mekanizmalar sağlar. CLR 'yi destekleyen bir DE, hata ayıklamakta olan bir yönetilen kod programının izini tutmak için uygun ICorDebugXXX arabirimlerini kullanır. Daha sonra bu bilgileri IDE 'ye ileten oturum hata ayıklama Yöneticisi 'nde (SDM) tüm durum değişikliklerini iletişim kurar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
 > [!NOTE]
-> Transact-SQL ve [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)], VBScript için ayrı DE [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] uygulamaları olsa da ve tek bir DE paylaşın.
+> Bir hata ayıklama altyapısı belirli bir çalışma zamanını ve diğer bir deyişle, hata ayıklamakta olan programın çalıştırıldığı sistemi hedefler. CLR, yönetilen kod için çalışma zamanı ve Win32 çalışma zamanı yerel Windows uygulamaları içindir. Oluşturduğunuz dil bu iki çalışma zamanlarının birini hedefleyebilir, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] gerekli hata ayıklama altyapılarını zaten temin eder. Uygulamanız için tek bir ifade değerlendirici.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]hata ayıklama hata ayıklama, hata ayıklama motorlarının iki şekilde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] çalışmasını sağlar: kabukla aynı işlemde veya hedef programın debugged olduğu aynı işlemde. İkinci form genellikle debugged olan işlem aslında bir yorumlayıcı altında çalışan bir komut dosyası olduğunda oluşur. Hata ayıklama motoru, komut dosyasını izlemek için tercümanın yakın bilgisine sahip olmalıdır. Bu durumda, tercüman aslında bir çalışma zamanıdır; hata ayıklama motorları belirli çalışma zamanı uygulamaları içindir. Buna ek olarak, tek bir DE uygulaması işlem ve makine sınırları arasında bölünebilir (örneğin, uzaktan hata ayıklama).
+## <a name="debug-engine-operation"></a>Hata ayıklama altyapısı işlemi
+ İzleme hizmetleri DE aynı arabirimler aracılığıyla uygulanır ve hata ayıklama paketinin farklı çalışma modları arasında geçişine neden olabilir. Daha fazla bilgi için bkz. [işletimsel modlar](../../extensibility/debugger/operational-modes.md). Çalışma zamanı ortamı başına genellikle yalnızca bir DE uygulama vardır.
 
- DE hata ayıklama arabirimlerini [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ortaya çıkarır. Tüm iletişim COM üzerinden. DE ister işlem içi, ister işlem dışı ister başka bir bilgisayara yüklenirse de, bileşen iletişimini etkilemez.
+> [!NOTE]
+> Transact-SQL ve VBScript için ayrı uygulamalar olmakla kalmaz [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] ve [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] tek bir de paylaşabilirsiniz.
 
- DE, ifadelerin sözdizimini anlamak için sözdizimini anlamak için sözdizimi nin sözdizimini anlamak için sözdizimi nin sözdizimini sağlamak için bir ifade değerlendirici bileşeniyle çalışır. DE ayrıca dil derleyicisi tarafından oluşturulan sembolik hata ayıklama bilgilerine erişmek için bir sembol işleyici bileşeni ile çalışır. Daha fazla bilgi için Ifade [değerlendiricisi](../../extensibility/debugger/expression-evaluator.md) ve [Sembol sağlayıcısına](../../extensibility/debugger/symbol-provider.md)bakın.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hata ayıklama, hata ayıklama altyapısının iki şekilde çalışmasını sağlar: [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kabukta aynı işlemde veya hata ayıklamakta olan hedef programla aynı işlemde. İkinci form genellikle hata ayıklamakta olan işlem aslında yorumlayıcı altında çalışan bir komut dosyası olduğunda oluşur. Betiği izlemek için hata ayıklama altyapısı yorumlayıcı intimate bilgisine sahip olmalıdır. Bu durumda, yorumlayıcı aslında bir çalışma zamanı; hata ayıklama motorları, belirli çalışma zamanı uygulamalarına yöneliktir. Buna ek olarak, tek bir DE uygulanması işlem ve makine sınırları genelinde bölünebilir (örneğin, uzaktan hata ayıklama).
+
+ DE [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hata ayıklama arabirimlerini kullanıma sunar. Tüm iletişimler COM üzerinden yapılır. Ayrıca, uygulamasının işlem içi, işlem dışı veya başka bir bilgisayarda yüklü olup olmadığı, bileşen iletişimini etkilemez.
+
+ DE, söz konusu çalışma zamanının ifade sözdizimini anlaması için DE bir ifade değerlendirici bileşeniyle birlikte çalışarak. Ayrıca, dil derleyicisi tarafından oluşturulan sembolik hata ayıklama bilgilerine erişmek için bir sembol işleyici bileşeniyle de birlikte da kullanılır. Daha fazla bilgi için bkz. [ifade değerlendiricisi](../../extensibility/debugger/expression-evaluator.md) ve [sembol sağlayıcısı](../../extensibility/debugger/symbol-provider.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklama bileşenleri](../../extensibility/debugger/debugger-components.md)
-- [İfade değerlendiricisi](../../extensibility/debugger/expression-evaluator.md)
-- [Sembol sağlayıcı](../../extensibility/debugger/symbol-provider.md)
+- [Hata ayıklayıcı bileşenleri](../../extensibility/debugger/debugger-components.md)
+- [İfade değerlendirici](../../extensibility/debugger/expression-evaluator.md)
+- [Sembol sağlayıcısı](../../extensibility/debugger/symbol-provider.md)

@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a222d5f69d19d2891b4aa20239c1874f55a056e0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536948"
 ---
 # <a name="integrate-models-by-using-visual-studio-modelbus"></a>Visual Studio ModelBus kullanarak modelleri tümleştirme
@@ -31,16 +31,16 @@ Ek bilgi ve örnek kod için bkz.:
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="providing-access-to-a-dsl"></a><a name="provide"></a>DSL erişimi sağlama
+## <a name="providing-access-to-a-dsl"></a><a name="provide"></a> DSL erişimi sağlama
  Bir modele veya öğelerine ModelBus başvuruları oluşturabilmeniz için önce DSL için bir ModelBusAdapter tanımlamanız gerekir. Bunu yapmanın en kolay yolu, DSL Tasarımcısı komutları ekleyen Visual Studio Model veri yolu uzantısını kullanmaktır.
 
-### <a name="to-expose-a-dsl-definition-to-model-bus"></a><a name="expose"></a>Bir DSL tanımını model veri yoluna göstermek için
+### <a name="to-expose-a-dsl-definition-to-model-bus"></a><a name="expose"></a> Bir DSL tanımını model veri yoluna göstermek için
 
 1. DSL tanım dosyasını açın. Tasarım yüzeyine sağ tıklayın ve sonra **ModelBus 'ı etkinleştir**' e tıklayın.
 
 2. İletişim kutusunda **Bu DSL 'Yi ModelBus**' a göstermek istiyorum ' u seçin. Bu DSL 'nin modellerini sergilemesini ve diğer DSLs başvurularını kullanmasını istiyorsanız her iki seçeneği de belirleyebilirsiniz.
 
-3. **Tamam**'a tıklayın. DSL çözümüne yeni bir "ModelBusAdapter" projesi eklenir.
+3. **Tamam**’a tıklayın. DSL çözümüne yeni bir "ModelBusAdapter" projesi eklenir.
 
 4. DSL 'ye bir metin şablonundan erişmek istiyorsanız, yeni projedeki AdapterManager.tt öğesini değiştirmeniz gerekir. DSL 'ye komutlar ve olay işleyicileri gibi diğer koddan erişmek istiyorsanız bu adımı atlayın. Daha fazla bilgi için bkz. [bir metin şablonunda Visual Studio ModelBus kullanma](../modeling/using-visual-studio-modelbus-in-a-text-template.md).
 
@@ -82,7 +82,7 @@ Visual Studio ModelBus bağdaştırıcılar, varsayılan olarak onu tanımlamak 
 
 - `ResolveElementReference`Model veri yolu başvurusundan doğru öğeyi bulmak için geçersiz kılın.
 
-## <a name="accessing-a-dsl-from-another-dsl"></a><a name="editRef"></a>Başka bir DSL 'den DSL 'ye erişme
+## <a name="accessing-a-dsl-from-another-dsl"></a><a name="editRef"></a> Başka bir DSL 'den DSL 'ye erişme
 
 Model veri yolu başvurularını DSL içindeki bir etki alanı özelliğinde depolayabilmeniz ve bunları kullanan özel kod yazabilirsiniz. Ayrıca, bir model dosyası ve içindeki bir öğe seçerek kullanıcının model veri yolu başvurusu oluşturmasına izin verebilirsiniz.
 
@@ -386,7 +386,7 @@ ModelBusReference elementReferenceRestored =
 
  MBR, iki aşamada seri durumdan çıkarılacak:
 
-- `ModelBusReferencePropertySerializer`, MBR üstbilgisiyle ilgilenen standart serileştirici. `SerializationContext`Anahtarı kullanılarak içinde depolanan standart dsl özellik paketini kullanır `ReferenceContext` `ModelBusReferencePropertySerializer.ModelBusLoadContextKey` . Özellikle, `SerializationContext` öğesinin bir örneğini içermesi gerekir `ModelBus` .
+- `ModelBusReferencePropertySerializer` , MBR üstbilgisiyle ilgilenen standart serileştirici. `SerializationContext`Anahtarı kullanılarak içinde depolanan standart dsl özellik paketini kullanır `ReferenceContext` `ModelBusReferencePropertySerializer.ModelBusLoadContextKey` . Özellikle, `SerializationContext` öğesinin bir örneğini içermesi gerekir `ModelBus` .
 
 - ModelBus bağdaştırıcınız, MBR 'nin bağdaştırıcıya özgü bölümüyle ilgilenir. MBR 'nin ReferenceContext öğesinde depolanan ek bilgileri kullanabilir. Basit dosya tabanlı bağdaştırıcı, ve anahtarlarını kullanarak kök dosya yollarını korur `FilePathLoadContextKey` `FilePathSaveContextKey` .
 
@@ -510,7 +510,7 @@ DSL tanımı diyagramına sağ tıkladıktan sonra ModelBus 'ı etkinleştir ' e
 
 - Çözüme yeni bir proje `ModelBusAdapter` eklenir.
 
-- Projeye bir başvuru `ModelBusAdapter` eklenir `DslPackage` . `ModelBusAdapter`projeye bir başvuru içerir `Dsl` .
+- Projeye bir başvuru `ModelBusAdapter` eklenir `DslPackage` . `ModelBusAdapter` projeye bir başvuru içerir `Dsl` .
 
 - **DslPackage\source.Extention.tt**IÇINDE, `|ModelBusAdapter|` MEF bileşeni olarak eklenmiştir.
 

@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fe49c928ca3de318410eba56afeae6f4329efed3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670657"
 ---
 # <a name="how-to-substitute-parameters-in-a-template"></a>Nasıl Yapılır: Şablonda Parametreleri İkame Etme
@@ -38,9 +38,9 @@ Bir şablonu temel alan bir dosya oluşturulduğunda sınıf adları ve ad alanl
     > [!NOTE]
     > Şablon parametreleri $*Parameter*$ biçiminde yazılır.
 
-2. Şablonun. vstemplate dosyasında, bu dosyayı içeren `ProjectItem` öğesini bulun.
+2. Şablonun. vstemplate dosyasında, `ProjectItem` bu dosyayı içeren öğeyi bulun.
 
-3. @No__t_2 öğesi için `ReplaceParameters` özniteliğini `true` olarak ayarlayın. Örneğin:
+3. `ReplaceParameters`Öğesi için özniteliğini ayarlayın `true` `ProjectItem` . Örneğin:
 
     ```
     <ProjectItem ReplaceParameters="true">Class1.cs</ProjectItem>

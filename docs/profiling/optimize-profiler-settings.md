@@ -10,10 +10,10 @@ manager: AndSter
 ms.workload:
 - multiple
 ms.openlocfilehash: 1ef802958817b43dd66973db66a80d328454aa83
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85329251"
 ---
 # <a name="optimizing-profiler-settings"></a>Profil Oluşturucu ayarlarını iyileştirme
@@ -49,5 +49,5 @@ Daha küçük süreler profil oluşturma daha az veri ile sonuçlanır ve bu dah
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata ayıklayıcı ile veya olmayan profil oluşturma araçlarını çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
-- [Aynı anda birden çok profil Oluşturucu aracını kullanma](../profiling/use-multiple-profiler-tools-simultaneously.md)
+- [Aynı anda birden çok profil oluşturucu aracını kullanma](../profiling/use-multiple-profiler-tools-simultaneously.md)
 - [Performans bilgilerini toplama metotlarını anlama](../profiling/understanding-performance-collection-methods-perf-profiler.md)

@@ -8,10 +8,10 @@ ms.date: 04/13/2020
 ms.topic: how-to
 description: Visual Studio aboneliklerini Microsoft Store nasıl satın alabileceğinizi ve bunları Visual Studio abonelikleri portalında nasıl etkinleştireceğinizi öğrenin.
 ms.openlocfilehash: f6fdb8dcc8b0e3eaa5e67692e7c3dd92f1467c5a
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88247481"
 ---
 # <a name="visual-studio-subscriptions-are-available-through-the-microsoft-store"></a>Visual Studio abonelikleri Microsoft Store aracılığıyla kullanılabilir

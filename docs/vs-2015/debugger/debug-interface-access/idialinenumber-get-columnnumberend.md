@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_columnnumberend | Microsoft Docs
+title: 'IDiaLineNumber:: get_columnNumberEnd | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9d6fb8cb5b3cfa7aa741db4e49dc7c2b3e1daee4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192353"
 ---
-# <a name="idialinenumbergetcolumnnumberend"></a>IDiaLineNumber::get_columnNumberEnd
+# <a name="idialinenumberget_columnnumberend"></a>IDiaLineNumber::get_columnNumberEnd
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-İfade veya deyimin sona ereceği bir tabanlı bir kaynak sütun sayısını alır.  
+İfade veya deyimin bittiği tek tabanlı kaynak sütun numarasını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_columnNumberEnd (   
@@ -35,13 +35,13 @@ HRESULT get_columnNumberEnd ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] İfade veya deyimin sona ereceği sütun sayısını döndürür. Değer sıfır ise son sütun bilgisi mevcut değil.  
+ dışı İfadenin veya deyimin bittiği sütun numarasını döndürür. Değer sıfırsa, sütun bitiş bilgileri mevcut değildir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem tarafından döndürülen sütun satırında ifadesinin son karakterden sonra satırına konumuna uzaklık bir bayt değeridir.  
+ Bu yöntem tarafından döndürülen sütun değeri, satırdaki deyimin son karakterinden sonraki konuma satıra kadar olan bir bayt kaydırmadır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

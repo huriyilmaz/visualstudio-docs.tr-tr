@@ -1,5 +1,5 @@
 ---
-title: Dosya Adı Uzantıları için Dosya İşleyicileri Belirtme | Microsoft Dokümanlar
+title: Dosya adı uzantıları için dosya Işleyicileri belirtme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,19 +11,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: af195aea09c91696843c6be42c20053bb8c095a2
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699749"
 ---
 # <a name="specifying-file-handlers-for-file-name-extensions"></a>Dosya Adı Uzantıları için Dosya İşleyicileri Belirtme
-Belirli bir dosya uzantısı olan bir dosyayı işleyen uygulamayı belirlemenin birkaç yolu vardır. OpenWithList ve OpenWithProgids fiilleri, dosya uzantısı için kayıt defteri girişinin altında dosya işleyicilerini belirtmenin iki yolu vardır.
+Belirli bir dosya uzantısına sahip olan bir dosyayı işleyen uygulamayı belirlemenin çeşitli yolları vardır. OpenWithList ve Openwithprogıd fiilleri, dosya uzantısının kayıt defteri girişi altında dosya işleyicilerini belirtmek için iki yol sunar.
 
-## <a name="openwithlist-verb"></a>OpenWithList Fiil
- Windows Gezgini'nde bir dosyayı sağ tıklattığınızda **Aç** komutunu görürsünüz. Birden fazla ürün bir uzantıyla ilişkiliyse, bir **Açık** alt menüsü görürsünüz.
+## <a name="openwithlist-verb"></a>OpenWithList fiili
+ Windows Gezgini 'nde bir dosyaya sağ tıkladığınızda, **Aç** komutunu görürsünüz. Birden fazla ürün bir uzantıyla ilişkiliyse, **birlikte Aç** alt menüsünü görürsünüz.
 
- HKEY_CLASSES_ROOT'da dosya uzantısı için OpenWithList anahtarını ayarlayarak bir uzantı açmak için farklı uygulamaları kaydedebilirsiniz. Dosya uzantısı için bu anahtarın altında listelenen uygulamalar, **Ile Aç** iletişim kutusunda **Önerilen Programlar** başlığıaltında görünür. Aşağıdaki örnekte .vcproj dosya uzantısını açmak için kayıtlı uygulamalar gösterilmektedir.
+ HKEY_CLASSES_ROOT dosya uzantısı için OpenWithList anahtarını ayarlayarak bir uzantıyı açmak üzere farklı uygulamalar kaydedebilirsiniz. Bir dosya uzantısı için bu anahtar altında listelenen uygulamalar, **birlikte Aç** Iletişim kutusunda **Önerilen programlar** başlığının altında görüntülenir. Aşağıdaki örnek,. VCPROJ dosya uzantısını açmak için kaydedilen uygulamaları gösterir.
 
 ```
 HKEY_CLASSES_ROOT\
@@ -34,25 +34,25 @@ HKEY_CLASSES_ROOT\
 ```
 
 > [!NOTE]
-> Uygulamaları belirten anahtarlar HKEY_CLASSES_ROOT\Applications altındaki listeden alınır.
+> Uygulamaları belirten anahtarlar HKEY_CLASSES_ROOT \Applications. altındaki listeden alınır.
 
- OpenWithList tuşu ekleyerek, başka bir uygulama uzantının sahipliğini kabul etse bile uygulamanızın bir dosya uzantısını desteklediğini beyan emiş olursunuz. Bu, uygulamanızın veya başka bir uygulamanın gelecekteki bir sürümü olabilir.
+ Bir OpenWithList anahtarı ekleyerek, başka bir uygulama uzantının sahipliğini alıp alsa bile uygulamanızın bir dosya uzantısını desteklediğini bildirirsiniz. Bu, uygulamanızın veya başka bir uygulamanın gelecek bir sürümü olabilir.
 
-## <a name="openwithprogids"></a>OpenWithProgIDs
- Programlı tanımlayıcılar (ProgID'ler), bir uygulamanın veya COM nesnesinin sürümünü tanımlayan Sınıfların arkadaş çafedilir sürümleridir. Her eş-creatable nesnenin kendi ProgID olmalıdır. Örneğin VisualStudio.DTE.7.1 Visual Studio .NET 2003'ü, VisualStudio.DTE.10.0 ise başlar. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Proje türü veya proje öğesi türünün sahibi olarak, dosya uzantınız için sürüme özgü bir ProgID oluşturmanız gerekir. Bu ProgID'ler, birden fazla ProgID'nin aynı uygulamayı başlatabileceği nden fazla gereksiz olabilir. Daha fazla bilgi için dosya [adı uzantıları için Fiilleri Kaydetme'ye](../extensibility/registering-verbs-for-file-name-extensions.md)bakın.
+## <a name="openwithprogids"></a>Openwithprogıds
+ Programlı tanımlayıcılar (ProgID 'ler), bir uygulamanın veya COM nesnesinin bir sürümünü tanımlayan, ClassID 'lerin kolay sürümleridir. Tüm ortak creatable nesneleri kendi program adına sahip olmalıdır. Örneğin, VisualStudio. DTE. 7.1, VisualStudio. DTE. 10.0 başladığında Visual Studio .NET 2003 'yi başlatır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Proje türü veya proje öğesi türü sahibi olarak, dosya uzantınız için sürüme özgü bir ProgID oluşturmanız gerekir. Bu Progıd 'ler, birden fazla ProgID 'nin aynı uygulamayı başlatabileceğinden gereksiz olabilir. Daha fazla bilgi için bkz. [dosya adı uzantıları Için fiiller kaydetme](../extensibility/registering-verbs-for-file-name-extensions.md).
 
- Diğer satıcılardan gelen kayıtla yinelemeyi önlemek için sürümlü dosya ProgID'leri için aşağıdaki adlandırma kuralını kullanın:
+ Diğer satıcıların kaydıyla tekrardan kaçınmak için sürümlenmiş dosya ProgID 'leri için aşağıdaki adlandırma kuralını kullanın:
 
-|Dosya uzantısı|Sürümlü ProgID|
+|Dosya uzantısı|Sürümlü program kimliği|
 |--------------------|----------------------|
-|.uzantı|Productname. extension.versionMajor.versionMinor|
+|. Extension|ProductName. . VersionAna. versionMinor uzantısı|
 
- \OpenWithProgids tuşu>HKEY_CLASSES_ROOT\\*\<uzantısına *değer olarak sürümlü ProgID'ler ekleyerek belirli bir dosya uzantısını açabilen farklı uygulamaları kaydedebilirsiniz. Bu kayıt defteri anahtarı, dosya uzantısı ile ilişkili alternatif ProgID'lerin bir listesini içerir. Listelenen ProgID'lerle ilişkili uygulamalar Ürün **Open With**_Adı_ yla Açık alt menüsünde görünür. Aynı uygulama hem anahtarlarda `OpenWithList` hem `OpenWithProgids` de anahtarlarda belirtilirse, işletim sistemi yinelenenleri birleştirir.
+ Sürümlü ProgID 'leri HKEY_CLASSES_ROOT \\ \Openwithprogıds anahtarına değer olarak ekleyerek belirli bir dosya uzantısını açabiliyor olan farklı uygulamaları kaydedebilirsiniz *\<extension>* . Bu kayıt defteri anahtarı, dosya uzantısıyla ilişkili alternatif ProgID listesini içerir. Listelenen ProgID 'ler ile ilişkili uygulamalar,_ürün adı_ **ile aç**alt menüsünde görüntülenir. Aynı uygulama hem hem de `OpenWithList` `OpenWithProgids` anahtarında belirtilmişse, işletim sistemi yinelenenleri birleştirir.
 
 > [!NOTE]
-> Anahtar `OpenWithProgids` yalnızca Windows XP'de desteklenir. Diğer işletim sistemleri bu anahtarı yoksaydığından, dosya işleyicileri için tek kayıt olarak kullanmayın. Windows XP'de daha iyi bir kullanıcı deneyimi sağlamak için bu anahtarı kullanın.
+> `OpenWithProgids`Anahtar yalnızca WINDOWS XP 'de desteklenir. Diğer işletim sistemleri bu anahtarı yoksaydığı için dosya işleyicileri için tek kayıt olarak kullanmayın. Windows XP 'de daha iyi bir kullanıcı deneyimi sağlamak için bu anahtarı kullanın.
 
- REG_NONE türündeki değerler olarak istenilen ProgID'leri ekleyin. Aşağıdaki kod, bir dosya uzantısı için ProgID'leri kaydetme nin bir örneğini sağlar (.* ext*).
+ İstenen ProgID 'leri REG_NONE türü değerler olarak ekleyin. Aşağıdaki kod, bir dosya uzantısı için ProgID 'leri kaydetme örneği sağlar (.* ext*).
 
 ```
 HKEY_CLASSES_ROOT\
@@ -63,7 +63,7 @@ HKEY_CLASSES_ROOT\
          otherprogid   REG_NONE (zero-length binary value)
 ```
 
- Dosya uzantısı için varsayılan değer olarak belirtilen ProgID varsayılan dosya işleyicisidir. ProgID'yi önceki sürümüyle gönderilen [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] veya diğer uygulamalar tarafından devralınabilecek bir dosya uzantısı için değiştirirseniz, dosya uzantınızın anahtarını `OpenWithProgids` kaydetmeniz ve desteklediğiniz eski ProgID'lerle birlikte listedeki yeni ProgID'yi belirtmeniz gerekir. Örnek:
+ Dosya uzantısı için varsayılan değer olarak belirtilen ProgID varsayılan dosya işleyicisidir. ' Nin önceki bir sürümü ile birlikte gelen [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] veya diğer uygulamalar tarafından alınabilecek bir dosya uzantısı Için ProgID 'yi değiştirirseniz, `OpenWithProgids` Dosya uzantınızın anahtarını kaydetmeniz ve yeni ProgID 'yi, destekettiğiniz eski ProgID 'ler ile birlikte belirtmeniz gerekir. Örneğin:
 
 ```
 HKEY_CLASSES_ROOT\
@@ -75,7 +75,7 @@ HKEY_CLASSES_ROOT\
          VisualStudio.vcproj.14.0 //new progid
 ```
 
- Eski ProgID'de onunla ilişkili fiiller varsa, bu fiiller kısayol menüsünde *Ürün Adı* **ile Açık'ın** altında da görünür.
+ Eski ProgID ile ilişkili fiiller varsa, bu fiiller kısayol menüsündeki *ürün adıyla* **Aç** altında da görünür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Dosya Adı Uzantıları Hakkında](../extensibility/about-file-name-extensions.md)

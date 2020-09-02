@@ -1,5 +1,5 @@
 ---
-title: Tek dosya oluşturucuları kaydetme | Microsoft Docs
+title: Tek dosya oluşturanlar kaydediliyor | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,22 +12,22 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6afcd708ac50a46ceb3359f0d2c0821e3b788f47
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65696099"
 ---
 # <a name="registering-single-file-generators"></a>Tek Dosya Oluşturucuları Kaydetme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Özel bir araç olarak kullanılabilir hale getirmek için [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], bu nedenle kaydetmelisiniz [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] örneği oluşturabilir ve belirli proje türüyle ilişkilendirir.  
+Özel bir aracın ' de kullanılabilmesini sağlamak için [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , onu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] örneklendirilecek ve belirli bir proje türüyle ilişkilenbilmeniz için kaydetmeniz gerekir.  
   
-### <a name="to-register-a-custom-tool"></a>Özel bir aracı kaydetmek için  
+### <a name="to-register-a-custom-tool"></a>Özel bir araç kaydetmek için  
   
-1. Özel araç DLL ya da kayıt içinde [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] yerel kayıt defteri veya sistem kayıt defterinde HKEY_CLASSES_ROOT altında.  
+1. Özel araç DLL 'sini [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] yerel kayıt defterinde veya sistem kayıt defterinde, HKEY_CLASSES_ROOT altına kaydedin.  
   
-     Örneğin, ile sunulan yönetilen MSDataSetGenerator özel aracı için kayıt bilgileri işte [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]:  
+     Örneğin, aşağıda verilen yönetilen MSDataSetGenerator özel aracı için kayıt bilgileri verilmiştir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] :  
   
     ```  
     [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0\CLSID\{E76D53CC-3D4F-40A2-BD4D-4F3419755476}]  
@@ -38,24 +38,24 @@ ms.locfileid: "65696099"
     "Assembly"="Microsoft.VSDesigner, Version=14.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a"  
     ```  
   
-2. İstenen bir kayıt defteri anahtarı oluşturma [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oluşturucuları altında hive\\*GUID* burada *GUID* GUID belirli dil proje sistemi veya hizmet tarafından tanımlanır. Anahtar adı özel aracınızı programlı adı haline gelir. Özel araç anahtar aşağıdaki değerlere sahip:  
+2. İstenen Hive içindeki bir kayıt defteri anahtarını [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] \\ , *GUID* 'in belirli dilin proje sistemi veya hizmeti tarafından tanımlanan GUID olduğu,*Bu GUID* 'nin altında yer aldığı bir kayıt defteri anahtarı oluşturun. Anahtarın adı, özel aracınıza ait programlı ad olur. Özel araç anahtarı aşağıdaki değerlere sahiptir:  
   
     - (Varsayılan)  
   
-         İsteğe bağlı. Özel aracın kullanıcı dostu bir açıklama sağlar. Bu parametre isteğe bağlıdır ancak önerilir.  
+         İsteğe bağlı. Özel araç için Kullanıcı dostu bir açıklama sağlar. Bu parametre isteğe bağlıdır, ancak önerilir.  
   
-    - CLSID  
+    - IN  
   
-         Gerekli. Sınıf kitaplığı uygulayan COM bileşeninin tanımlayıcısını belirtir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>.  
+         Gereklidir. Uygulayan COM bileşeni sınıf kitaplığının tanımlayıcısını belirtir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> .  
   
     - GeneratesDesignTimeSource  
   
-         Gerekli. Bu özel araç tarafından üretilen dosyaları türlerinden görsel tasarımcılar için kullanılabilir olup olmadığını gösterir. Bu parametrenin değeri türleri görsel tasarımcılar için kullanılabilir değil (sıfır) 0 veya (bir adet) 1 türleri için görsel tasarımcılar kullanılabilir olması gerekir.  
+         Gereklidir. Bu özel araç tarafından üretilen dosyalardaki türlerin görsel tasarımcılar tarafından kullanılabilir duruma getirilmeyeceğini gösterir. Görsel tasarımcılarda kullanılabilir olan türler için bu parametrenin değerinin (sıfır) 0 olması gerekir.  
   
     > [!NOTE]
-    > Ayrı ayrı, özel aracın kullanılabilir olmasını istediğiniz her dil için özel aracı kaydetmeniz gerekir.  
+    > Özel aracının kullanılabilir olmasını istediğiniz her dil için özel aracı ayrı olarak kaydetmeniz gerekir.  
   
-     Örneğin, MSDataSetGenerator kendini kez her dil için kaydeder:  
+     Örneğin, MSDataSetGenerator her dil için kendisini bir kez kaydeder:  
   
     ```  
     [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0\Generators\{164b10b9-b200-11d0-8c61-00a0c91e29d5}\MSDataSetGenerator]  
@@ -76,7 +76,7 @@ ms.locfileid: "65696099"
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>   
- [Tek dosya oluşturucular ekleme](../../extensibility/internals/implementing-single-file-generators.md)   
- [Bir projenin varsayılan Namespace belirleme](../../misc/determining-the-default-namespace-of-a-project.md)   
- [Türleri görsel tasarımcıların gösterme](../../extensibility/internals/exposing-types-to-visual-designers.md)   
+ [Tek dosya oluşturucularını uygulama](../../extensibility/internals/implementing-single-file-generators.md)   
+ [Projenin varsayılan ad alanını belirleme](../../misc/determining-the-default-namespace-of-a-project.md)   
+ [Türleri görsel tasarımcılara gösterme](../../extensibility/internals/exposing-types-to-visual-designers.md)   
  [BuildManager nesnesine giriş](https://msdn.microsoft.com/50080ec2-c1c9-412c-98ef-18d7f895e7fa)

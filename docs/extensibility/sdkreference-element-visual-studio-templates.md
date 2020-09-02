@@ -1,5 +1,5 @@
 ---
-title: SDKReference Elemanı (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: SDKReference öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -10,16 +10,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 2f43c813e688c1e175f1d36e6f06125f92404c48
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80700173"
 ---
 # <a name="sdkreference-element-visual-studio-templates"></a>SDKReference Öğesi (Visual Studio Şablonları)
-Madde şablonunda Bir SDK başvurusu kullandığını belirtir.
+Öğe şablonunun bir SDK başvurusu kullandığını belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <VSTemplate>
@@ -42,13 +42,13 @@ Madde şablonunda Bir SDK başvurusu kullandığını belirtir.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Başvuru](../extensibility/reference-element-visual-studio-templates.md)|Öğe projeye eklendiğinde eklemek için derleme başvuru belirtir.|
+|[Başvuru](../extensibility/reference-element-visual-studio-templates.md)|Öğe projeye eklendiğinde Eklenecek derleme başvurusunu belirtir.|
 
 ## <a name="text-value"></a>Metin Değeri
  Bir metin değeri gereklidir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu metin, madde şablonu anında olduğunda projeye eklemek için SDK başvuru belirtir.
+ Bu metin, öğe şablonu örneği oluşturulduğunda bir projeye eklenecek SDK başvurusunu belirtir.
 
 ```xml
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">

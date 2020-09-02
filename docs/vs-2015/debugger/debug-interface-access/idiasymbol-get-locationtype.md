@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_locationtype | Microsoft Docs
+title: 'IDiaSymbol:: get_locationType | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 49d92f0891af725e8e17c673d975a300a1fa6bdf
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64804066"
 ---
-# <a name="idiasymbolgetlocationtype"></a>IDiaSymbol::get_locationType
+# <a name="idiasymbolget_locationtype"></a>IDiaSymbol::get_locationType
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir veri sembolü konum türünü alır.  
+Bir veri sembolünün konum türünü alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_locationType (   
@@ -35,14 +35,14 @@ HRESULT get_locationType ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Bir değer döndürür [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) gibi bir veri simgenin konumu türünü belirten numaralandırma `static` veya `local`.  
+ dışı , Veya gibi bir veri sembolünün konum türünü belirten [LocationType sabit](../../debugger/debug-interface-access/locationtype.md) listesi numaralandırmasından bir değer döndürür `static` `local` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.  
   
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.  
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md)   
+ [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [LocationType Numaralandırması](../../debugger/debug-interface-access/locationtype.md)

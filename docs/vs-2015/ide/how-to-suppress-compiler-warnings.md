@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: aeb404c479edec5dec89f28e80584d435f5c370a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670652"
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>Nasıl yapılır: Derleyici Uyarılarını Gizleme
@@ -22,7 +22,7 @@ ms.locfileid: "72670652"
 
 Bir yapı günlüğünü, içermesini istemediğiniz bir veya daha fazla derleyici uyarısı türü belirterek declutter yapabilirsiniz. Örneğin, derleme günlüğü ayrıntı düzeyini normal, ayrıntılı veya tanılama olarak ayarladığınızda otomatik olarak oluşturulan bilgilerin tümünü gözden geçirmek için bu tekniği kullanabilirsiniz. Ayrıntı düzeyi hakkında daha fazla bilgi için bkz. [nasıl yapılır: görüntüleme, kaydetme ve derleme günlüğü dosyalarını yapılandırma](../ide/how-to-view-save-and-configure-build-log-files.md).
 
-### <a name="to-suppress-specific-warnings-for-visual-c-or-f"></a>Visual C# veya F \# için belirli uyarıları gizlemek için
+### <a name="to-suppress-specific-warnings-for-visual-c-or-f"></a>Visual C# veya F için belirli uyarıları gizlemek için\#
 
 1. **Çözüm Gezgini**içinde, uyarılarını bastırmak istediğiniz projeyi seçin.
 
@@ -32,13 +32,13 @@ Bir yapı günlüğünü, içermesini istemediğiniz bir veya daha fazla derleyi
 
 4. **Uyarıları bastır** kutusunda, gizlemek istediğiniz uyarıların hata kodlarını noktalı virgülle ayırarak belirtin ve sonra çözümü yeniden derleyin.
 
-### <a name="to-suppress-specific-warnings-for-visual-c"></a>Görsel için belirli uyarıları gizlemek içinC++
+### <a name="to-suppress-specific-warnings-for-visual-c"></a>Visual C++ için belirli uyarıları gizlemek için
 
 1. **Çözüm Gezgini**, içinde uyarıları bastırmak istediğiniz proje veya kaynak dosyasını seçin.
 
 2. Menü çubuğunda **Görünüm**, **Özellik sayfaları**' nı seçin.
 
-3. **Yapılandırma özellikleri** kategorisini seçin, **C/C++**  kategorisini seçin ve ardından **Gelişmiş** sayfasını seçin.
+3. **Yapılandırma özellikleri** kategorisini seçin, **C/C++** kategorisini seçin ve ardından **Gelişmiş** sayfasını seçin.
 
 4. Aşağıdaki adımlardan birini uygulayın:
 
@@ -58,13 +58,13 @@ Projenin. vbproj dosyasını düzenleyerek Visual Basic için belirli derleyici 
 
 2. Menü çubuğunda **Proje**, **Projeyi Kaldır**' ı seçin.
 
-3. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve ardından_ProjectName_ **. vbproj**öğesini **Düzenle**' yi seçin.
+3. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve ardından_ProjectName_**. vbproj**öğesini **Düzenle**' yi seçin.
 
     Proje dosyası kod düzenleyicisinde açılır.
 
-4. Oluşturmakta olduğunuz yapı yapılandırmasındaki `<NoWarn></NoWarn>` öğesini bulun.
+4. `<NoWarn></NoWarn>`Oluşturmakta olduğunuz yapı yapılandırmasındaki öğeyi bulun.
 
-    Aşağıdaki örnek, bir x86 platformunda hata ayıklama derleme yapılandırması için `<NoWarn></NoWarn>` öğesini kalın metin olarak gösterir:
+    Aşağıdaki örnek, `<NoWarn></NoWarn>` bir x86 platformunda hata ayıklama derleme yapılandırması için öğeyi kalın metinle gösterir:
 
    ```xml
    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -81,7 +81,7 @@ Projenin. vbproj dosyasını düzenleyerek Visual Basic için belirli derleyici 
      </PropertyGroup>
    ```
 
-5. @No__t_0 öğesinin değeri olarak bir veya daha fazla uyarı numarası ekleyin. Birden çok uyarı numarası belirtirseniz, aşağıdaki örnekte gösterildiği gibi bunları virgülle ayırın.
+5. Öğenin değeri olarak bir veya daha fazla uyarı numarası ekleyin `<NoWarn>` . Birden çok uyarı numarası belirtirseniz, aşağıdaki örnekte gösterildiği gibi bunları virgülle ayırın.
 
    ```xml
    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">

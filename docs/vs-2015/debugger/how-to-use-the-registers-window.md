@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yazmaçlar penceresini kullanma | Microsoft Docs'
+title: 'Nasıl yapılır: Yazmaçları penceresini kullanma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -28,36 +28,36 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 233092af638824c462a6d9a47865a1c6f5fd9397
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65697462"
 ---
-# <a name="how-to-use-the-registers-window"></a>Nasıl yapılır: Yazmaçlar penceresini kullanma
+# <a name="how-to-use-the-registers-window"></a>Nasıl Yapılır: Yazmaçlar Penceresini Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yazmaçlar penceresi yalnızca adres seviyesinde hata ayıklamayı etkin değilse kullanılabilir **seçenekleri** iletişim kutusu, **hata ayıklama** düğümünün **genel** kategorisi.  
+Yazmaçları penceresi yalnızca, **Seçenekler** iletişim kutusunda, **hata ayıklama** düğümünde, **genel** kategoride Adres düzeyinde hata ayıklama etkinse kullanılabilir.  
   
- **Kaydeder** penceresi görüntülendiğinde, içeriği kaydedin. Tutarsanız **kaydeder** , program aracılığıyla ilerleyerek açık penceresinde görebilirsiniz yazmaç değerleri değiştiğinde gibi kodunuzu yürütür. Değişen değerler, yakın zamanda kırmızı renkte görüntülenir. YAZMAÇ değerlerini düzenleyebilirsiniz. Daha fazla bilgi için [nasıl yapılır: YAZMAÇ değerini düzenleme](../debugger/how-to-edit-a-register-value.md).  
+ **Yazmaçları** penceresinde, kayıt içeriği görüntülenir. Programda adım adım **kayıtları** açık tutarsanız, kodunuzun yürütüldüğü kayıt değerlerini Değiştir seçeneğini görebilirsiniz. Yakın zamanda değiştirilen değerler kırmızı renkte görüntülenir. Kayıt değerlerini düzenleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: kayıt değerini düzenleme](../debugger/how-to-edit-a-register-value.md).  
   
- Dağınıklığı, azaltmak için **kaydeder** penceresi kayıtları platform ve işlemci göre değişiklik gösteren gruplar halinde düzenler türü. Görüntüleyebilir ya da istediğiniz grupları gizleyebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Görüntüleme ve gizleme yazmaç gruplarını](../debugger/how-to-display-and-hide-register-groups.md).  
+ Dağınıklığı azaltmak için, **yazmaçların** penceresi, platform ve işlemci türüne göre değişiklik gösteren gruplara kayıtları düzenler. Grupları istediğiniz gibi görüntüleyebilir veya gizleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: kayıt gruplarını görüntüleme ve gizleme](../debugger/how-to-display-and-hide-register-groups.md).  
   
- Yazmaçlar ve yazmaçlar penceresi kavramları üst düzey bir giriş için bkz [hata ayıklama temelleri: Yazmaçlar penceresi](../debugger/debugging-basics-registers-window.md).  
+ Yazmaçların ve yazmaçların arkasındaki kavramlara yönelik yüksek düzey bir giriş için bkz. [hata ayıklama temelleri: kayıt penceresi](../debugger/debugging-basics-registers-window.md).  
   
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### <a name="to-display-the-registers-window"></a>Yazmaçlar penceresini görüntülemek için  
+### <a name="to-display-the-registers-window"></a>Yazmaçları penceresini görüntüleme  
   
-- Üzerinde **hata ayıklama** menüsünde seçin **Windows**ve ardından **kaydeder**.  
+- **Hata Ayıkla** menüsünde **Windows**' u ve ardından **Yazmaçları**' ı seçin.  
   
-     Hata ayıklayıcı, çalışan veya kesme modunda olması gerekir.  
+     Hata ayıklayıcı, veya kesme modunda çalışıyor olmalıdır.  
   
     > [!NOTE]
-    > Betik veya SQL uygulamalar için kayıt bilgileri kullanılamıyor.  
+    > Kayıt bilgileri, betik veya SQL uygulamaları için kullanılamaz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklamanın Temelleri: Yazmaçlar penceresi](../debugger/debugging-basics-registers-window.md)   
+ [Hata ayıklama temelleri: kayıt penceresi](../debugger/debugging-basics-registers-window.md)   
  [Hata ayıklayıcıda verileri görüntüleme](../debugger/viewing-data-in-the-debugger.md)   
- [Hata Ayıklamanın Temelleri: Yazmaçlar Penceresi](../debugger/debugging-basics-registers-window.md)
+ [Hata Ayıklama Temelleri: Yazmaçlar Penceresi](../debugger/debugging-basics-registers-window.md)

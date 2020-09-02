@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cdb635854d298b8a1eabc81019f7b18c2f50eecc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670559"
 ---
 # <a name="how-to-use-surround-with-code-snippets"></a>Nasıl Yapılır: Şununla Çevrele Kod Parçacıklarını Kullanma
@@ -59,4 +59,4 @@ Aşağıdaki yordamlar, kod parçacıkları ile surround kullanmayı açıklamak
      Alternatif olarak, kod parçacığının adını yazabilir ve ardından sekme veya ENTER tuşuna basın.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Görsel C# kod parçacıkları](../ide/visual-csharp-code-snippets.md) [kod parçacığı seçici](../ide/reference/code-snippet-picker.md)
+ [Visual C# kod parçacıkları](../ide/visual-csharp-code-snippets.md) [kod parçacığı seçici](../ide/reference/code-snippet-picker.md)

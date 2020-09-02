@@ -18,36 +18,36 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7a1b7c93e4b30bbfd373a5fad9d7001452d4f587
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63403544"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64795933"
 ---
 # <a name="how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors"></a>Nasıl yapılır: ClickOnce Dağıtım Hataları için Özel Günlük Dosyası Konumu Ayarlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] tüm dağıtımlar için etkinleştirme günlük dosyalarını korur. Bu günlükler yükleme ve başlatma ilgili hataları belge bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] dağıtım. Varsayılan olarak, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] her dağıtım etkinleştirme için tek bir günlük dosyası oluşturur. Bu, bu günlük dosyaları geçici Internet dosyaları klasöründe depolar. Bir dağıtım için günlük dosyasına bir etkinleştirme hatası oluşur ve kullanıcının'ı tıklattığında kullanıcıya görüntülenir **ayrıntıları** ortaya çıkan hata iletişim kutusunda.  
+[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] tüm dağıtımlar için etkinleştirme günlük dosyalarını tutar. Bu Günlükler, bir dağıtımı yükleme ve başlatma ile ilgili tüm hataları belgeleyin [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] . Varsayılan olarak, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] her dağıtım etkinleştirmesi için bir günlük dosyası oluşturur. Bu günlük dosyalarını Temporary Internet Files klasöründe depolar. Bir dağıtım için günlük dosyası, bir etkinleştirme hatası oluştuğunda kullanıcıya gösterilir ve Kullanıcı ortaya çıkan hata iletişim kutusunda **Ayrıntılar** ' a tıklar.  
   
- Belirli bir istemci için Kayıt Defteri Düzenleyicisi'ni kullanarak bu davranışı değiştirebilirsiniz (**regedit.exe**) özel bir günlük dosyası yolunu ayarlamak için. Bu durumda, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] etkinleştirme başarı ve başarısızlık tüm dağıtımlar için tek bir dosyaya kaydeder.  
+ Özel bir günlük dosyası yolu ayarlamak için, kayıt defteri Düzenleyicisi 'Ni (**regedit.exe**) kullanarak belirli bir istemci için bu davranışı değiştirebilirsiniz. Bu durumda, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] tek bir dosyadaki tüm dağıtımlar için etkinleştirme başarıları ve başarısızlıklarını günlüğe kaydeder.  
   
 > [!CAUTION]
-> Kayıt Defteri Düzenleyicisi'ni yanlış kullanırsanız, işletim sistemini yeniden yüklemenizi gerektirebilecek önemli sorunlara neden olabilir. Kendi risk altında Kayıt Defteri Düzenleyicisi'ni kullanın.  
+> Kayıt Defteri Düzenleyicisi 'Ni yanlış kullanırsanız, işletim sisteminizi yeniden yüklemenizi gerektirebilecek önemli sorunlara neden olabilirsiniz. Kayıt Defteri Düzenleyicisi 'Ni kullanarak kendi sorumluluğunuzdadır.  
   
 > [!NOTE]
-> Truncate ya da bazen çok fazla büyümesini önlemek için günlük dosyasını silmek gerekir.  
+> Büyük bir zaman büyümesini engellemek için günlük dosyasını kesmeniz veya silmeniz gerekir.  
   
- Aşağıdaki yordam, tek bir istemci için özel günlük dosyası konumu ayarlama işlemi açıklanmaktadır.  
+ Aşağıdaki yordamda, tek bir istemci için özel bir günlük dosyası konumunun nasıl ayarlanacağı açıklanmaktadır.  
   
-### <a name="to-set-a-custom-log-file-location"></a>Özel günlük dosyası konumu ayarlama  
+### <a name="to-set-a-custom-log-file-location"></a>Özel bir günlük dosyası konumu ayarlamak için  
   
-1. Açık **Regedit.exe**.  
+1. **Regedit.exe**açın.  
   
-2. Düğümüne gidin `HKCU\Software\Classes\Software\Microsoft\Windows\CurrentVersion\Deployment`.  
+2. Düğüme gidin `HKCU\Software\Classes\Software\Microsoft\Windows\CurrentVersion\Deployment` .  
   
-3. Dize değeri ayarlamak `LogFilePath` tam yolu ve dosya adı, tercih edilen özel günlük konum.  
+3. Dize değerini `LogFilePath` tercih ettiğiniz özel günlük konumunun tam yolu ve dosya adı olarak ayarlayın.  
   
-     Bu konum, kullanıcı yazma erişimi olan bir dizinde olması gerekir. Örneğin, Windows Vista, aşağıdaki klasör yapısına oluşturup `LogFilePath` C:\Users için\\< kullanıcı adı\>\Documents\Logs\ClickOnce\installation.log.  
+     Bu konum, kullanıcının yazma erişimine sahip olduğu bir dizinde olmalıdır. Örneğin, Windows Vista 'da aşağıdaki klasör yapısını oluşturun ve `LogFilePath` C:\Users \\<kullanıcıadı \> \Documents\logs\clickonce\ınstalsı.log olarak ayarlayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ClickOnce Dağıtım Sorunlarını Giderme](../deployment/troubleshooting-clickonce-deployments.md)
