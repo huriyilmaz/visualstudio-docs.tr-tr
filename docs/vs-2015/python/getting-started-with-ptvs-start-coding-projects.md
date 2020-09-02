@@ -1,5 +1,5 @@
 ---
-title: 'PTVS kullanmaya Başlarken: (Projeler) kodlamaya başlayın | Microsoft Docs'
+title: "PTV 'leri kullanmaya başlama: kodlamaya başlama (projeler) | Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-python
@@ -10,34 +10,34 @@ author: kraigb
 ms.author: kraigb
 manager: jillfra
 ms.openlocfilehash: 28622f290d82f86bf3d18cc4f40cfcfc8e953dad
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62537159"
 ---
-# <a name="getting-started-with-ptvs-start-coding-projects"></a>PTVS kullanmaya Başlarken: (Projeler) kodlamaya başlayın
+# <a name="getting-started-with-ptvs-start-coding-projects"></a>PTVS Kullanmaya Başlarken: Kod Yazmaya Başlama (Projeler)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Python araçları için Visual Studio (PTVS) kodunuzu yönetmenize yardımcı olur. 
+Visual Studio için Python Araçları (PTV) kodunuzu yönetmenize yardımcı olur. 
  
- Bu çok kısa yönergeleri izleyebilirsiniz [youtube video](https://www.youtube.com/watch?v=KHPoVpL7zHg&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=2). 
+ Bu yönergeleri, çok kısa bir [youtube videosunda](https://www.youtube.com/watch?v=KHPoVpL7zHg&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=2)izleyebilirsiniz. 
  
- Önce Python kullandıysanız, projenizin nasıl, dosyaları diskte yerleştirme tarafından tanımlı bildirin. Bu düz Python projeleri için mükemmel çalışıyor, ancak daha fazla dosya (web sayfaları, JavaScript, birim testleri ve derleme betikleri ile) sahip olduğunuzda, dosya sistemleri olmasını başlatabilirsiniz bir sınırlama. Visual Studio projeleri üç şeyi elde etmek için kullanır. 
+ Daha önce Python kullandıysanız, projenizin dosyaları diske nasıl yerleşeceğine göre tanımlandığını bilirsiniz. Bu, düz Python projeleri için harika çalışmaktadır, ancak daha fazla dosyaya (JavaScript, birim testleri ve derleme betikleri içeren Web sayfaları) sahip olduğunuzda, dosya sistemleri bir bit sınırlandırmaya başlayabilir. Visual Studio, projeleri kullanarak üç şey elde etmenizi sağlar. 
  
-- Kritik dosyaları belirleyin. Önemli dosya derleme çıkışı gibi oluşturulan dosyaları değil bir sürüm denetim sistemine (kaynak dosyaları, kaynaklar, vb.) denetleyin olanlardır. Önemli dosya ayrıca başkasının uygulamanız üzerinde çalışabilmeniz için başka bir bilgisayara kopyalamak izinlerdir. 
+- Kritik dosyaları belirler. Önemli dosyalar bir sürüm denetim sistemine (kaynak dosyaları, kaynaklar, vb.) iade edersiniz, ancak derleme çıkışı olarak oluşturulan dosyalar değildir. Önemli dosyalar aynı zamanda başka bir bilgisayara kopyalayacaklarınız olduğundan, başka birinin uygulamanızda çalışmasını sağlayabilirsiniz. 
  
-- Dosyaları nasıl kullanılması gerektiğini belirtin. Bir aracı dosyaları değiştirdiğinizde işlemesi gereken dosyalar olabilir. Visual Studio projeleri bu bilgileri yakalamak için 
+- Dosyaların nasıl kullanılacağını belirtin. Dosyalar her değiştiğinde bir aracın işlemesi gereken dosyalara sahip olabilirsiniz. Visual Studio projeleri, bu bilgileri yakalayabilir 
  
-- Bileşenlerinizi sınırlarını tanımlayın. Uygulamanızda birden çok bileşen varsa, her biri ayrı bir projede koyabilirsiniz. Bu farklı sunucular, farklı bir derleme ile oluşturulan sonunda dağıtılabilir veya hata ayıklama ayarları veya bile C++ veya Node.js gibi Visual Studio tarafından desteklenen başka bir dili kullanılarak yazılabilir 
+- Bileşenlerinizin sınırlarını tanımlayın. Uygulamanızda birden çok bileşen varsa, her birini ayrı bir projeye yerleştirebilirsiniz. Bunlar sonunda, farklı derleme veya hata ayıklama ayarları kullanılarak oluşturulmuş farklı sunuculara dağıtılabilir ya da C++ veya Node.js gibi Visual Studio tarafından desteklenen başka bir dil kullanılarak yazılabilir. 
  
-  Başlamanıza yardımcı olacak çeşitli proje taslakları vardır. Üzerinde çalışmak istediğiniz Python kodu zaten varsa, gelen var olan kod Sihirbazı'nı tüm dosyaları içeren bir proje oluşturmanıza yardımcı olur. Birden çok Web projeleri için bazı popüler çerçeveleri mevcut. Daha fazla şablonları PTVS örnekleri paketinde mevcuttur. Diğer çerçevelerle iş şablonları sağlanan web oluşturma seçenekleriniz vardır. Python uygulaması, temiz, boş bir proje şablonudur. Başlamanıza yardımcı olmak için bir modül yok. 
+  Başlamanıza yardımcı olacak birkaç proje şablonu vardır. Üzerinde çalışmak istediğiniz Python kodunuz zaten varsa, mevcut kod Sihirbazı, tüm dosyalarınızı içeren bir proje oluşturmanıza yardımcı olur. Bazı popüler çerçeveler için birden çok Web projesi mevcuttur. PTV örnekleri paketinde daha fazla şablon bulunabilir. Belirtilen Web şablonlarının diğer çerçeveler ile çalışmasını sağlamak için seçenekler vardır. Python uygulama şablonu temiz, boş bir projem. Başlamanızı sağlamak için bir modül vardır. 
  
-  Visual Studio, Aç, projeler tüm dosyalar, arama yollarını ve Python ortamları da dahil olmak üzere Çözüm Gezgini penceresinde gösterir. Yeni öğeler eklemek için proje klasörü seçin ve bağlam menüsünden (doğru işaretçi düğmesine basın), ekleme ve ardından yeni bir öğe seçin. İletişim kutusunda herhangi bir öğe seçin, öğenin adını özelleştirme ve projeye öğe ekleyin. 
+  Visual Studio, tüm dosyalar, arama yolları ve Python ortamları dahil olmak üzere Çözüm Gezgini penceresinde açık projelerinizi gösterir. Yeni öğeler eklemek için, proje klasörünüzü ve bağlam menüsünden (sağ işaretçi düğmesine basın), Ekle ' yi ve ardından yeni öğe ' yi seçin. İletişim kutusunda herhangi bir öğeyi seçebilir, öğenin adını özelleştirebilir ve öğeyi projeye ekleyebilirsiniz. 
  
-  Çözüm Gezginine sürükleyip bırakabilirsiniz. Dosyaları, proje dizin yapısına zaten kopyaladıysanız, Çözüm Gezgini'nde üstündeki tüm dosyaları göster seçebilirsiniz. Ardından eklemek istediğiniz öğeleri seçin ve bağlam menüsünden INCLUDE projesinde seçin. 
+  Çözüm Gezgini sürükleyip bırakabilirsiniz. Zaten proje dizin yapınıza dosya kopyaladıysanız, Çözüm Gezgini en üstünde tüm dosyaları göster seçeneğini belirleyebilirsiniz. Ardından, eklemek istediğiniz öğeleri seçebilir ve bağlam menüsünden projeye dahil et ' i seçin. 
  
-  Bu çok kısa yönergeleri izleyebilirsiniz [youtube video](https://www.youtube.com/watch?v=KHPoVpL7zHg&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=2). 
+  Bu yönergeleri, çok kısa bir [youtube videosunda](https://www.youtube.com/watch?v=KHPoVpL7zHg&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=2)izleyebilirsiniz. 
  
 ## <a name="see-also"></a>Ayrıca Bkz. 
- [Wiki belgeleri](https://github.com/Microsoft/PTVS/wiki/Projects) [PTVS Başlarken ve kapsamlı videolar](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)
+ [Wiki belgeleri](https://github.com/Microsoft/PTVS/wiki/Projects) [PTV 'leri kullanmaya başlama ve derin video](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)

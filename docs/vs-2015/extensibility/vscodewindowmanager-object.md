@@ -14,22 +14,22 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: addd7a0146a9443739c3a63f29fe59979176edc4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62421895"
 ---
 # <a name="vscodewindowmanager-object"></a>VSCodeWindowManager Nesnesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Dil hizmeti, kod penceresi Yöneticisi uygular ve Kenarlıklar (örneğin, aşağı açılan çubuk) yönetmekten sorumludur. Daha fazla bilgi için [eski API'yi kullanarak kod Windows özelleştirme](../extensibility/customizing-code-windows-by-using-the-legacy-api.md).  
+Dil hizmeti, kod penceresi yöneticisini uygular ve donatılabilen (örneğin, açılan çubuğun) yönetilirken sorumludur. Daha fazla bilgi için bkz. [eskı API 'Yi kullanarak kod pencerelerini özelleştirme](../extensibility/customizing-code-windows-by-using-the-legacy-api.md).  
   
- Aşağıdaki tabloda, arabirimler gösterilir `VSCodeWindowManager` nesne.  
+ Aşağıdaki tabloda, nesnesindeki arabirimler gösterilmektedir `VSCodeWindowManager` .  
   
 |Arabirim|Açıklama|  
 |---------------|-----------------|  
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Kenarlıklar (örneğin, aşağı açılan çubuk), eklenen veya kaldırılan bir kod penceresinden imkan tanır.|  
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Donatılabilen (açılan çubuklar gibi) bir kod penceresine eklenmesine veya kaldırılmasına izin verir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Eski API'yi Kullanarak Kod Penceresini Özelleştirme](../extensibility/customizing-code-windows-by-using-the-legacy-api.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Performans uyarılarını görüntüleme | Microsoft Docs'
+title: 'Nasıl yapılır: performans uyarılarını görüntüleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,15 +10,15 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 382d8660adc482a2ab6c7417cf795f84b6fa9e25
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62420127"
 ---
-# <a name="how-to-view-performance-warnings"></a>Nasıl yapılır: Performans Uyarıları görüntüle
+# <a name="how-to-view-performance-warnings"></a>Nasıl yapılır: Performans Uyarılarını Görüntüleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Performans uyarılarını [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] profil oluşturma araçları profil oluşturma araçları program yürütme yavaşlatabilir profili oluşturulmuş bir uygulamada sorunları gösterir. Uyarılar, daha kullanışlı verileri toplamak için koleksiyon metotları değiştirmek isteyebilirsiniz de belirtebilir. Performans uyarıları profil oluşturma oturumunu otomatik olarak oluşturulur ve görünür **hata listesi** bir profil oluşturma veri dosyasını açıldığında penceresi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE.  
+Profil Oluşturma Araçları Profil Oluşturma Araçları performans uyarıları, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] programın yürütülmesini yavaşlatabilecek, profili oluşturulmuş bir uygulamadaki sorunları gösterir. Uyarılar Ayrıca daha faydalı veriler toplamak için koleksiyon yöntemlerini değiştirmek isteyebileceğiniz anlamına da gelebilir. Performans uyarıları bir profil oluşturma oturumunda otomatik olarak oluşturulur ve bir profil oluşturma veri dosyası IDE 'de açıldığında **hata listesi** penceresinde görüntülenir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
- Varsa **hata listesi** 'a tıklayın, bir profil oluşturma veri dosyasını açtığınızda penceresi görüntülenmez **görünümü** menüsüne ve ardından **hata listesi**.
+ Profil oluşturma veri dosyasını açtığınızda **hata listesi** penceresi görünmezse, **Görünüm** menüsüne tıklayın ve ardından **hata listesi**' e tıklayın.

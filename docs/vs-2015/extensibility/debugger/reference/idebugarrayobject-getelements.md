@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject::GetElements | Microsoft Docs
+title: 'Ihata ayıklama Garrayobject:: GetElements | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: cad81d76e2fcec01fa50a37fa6ab6cb49cfc79be
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62423705"
 ---
 # <a name="idebugarrayobjectgetelements"></a>IDebugArrayObject::GetElements
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Dizinin tüm öğelerinin bir numaralandırıcıyı alır.  
+Dizinin tüm öğelerinin bir Numaralandırıcı alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetElements(   
@@ -40,13 +40,13 @@ int GetElements(
   
 #### <a name="parameters"></a>Parametreler  
  `ppEnum`  
- [out] Döndürür bir [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md) tüm öğelerini numaralandırma sağlayan nesne.  
+ dışı Tüm öğeler üzerinde numaralandırma yapılmasına izin veren bir [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Alternatif olarak, kullanın [GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md) ve [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) öğeler boyunca yineleme yapmak için yöntemleri.  
+ Alternatif olarak, öğeleri içinde yinelemek için [GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md) ve [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) yöntemlerini kullanın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

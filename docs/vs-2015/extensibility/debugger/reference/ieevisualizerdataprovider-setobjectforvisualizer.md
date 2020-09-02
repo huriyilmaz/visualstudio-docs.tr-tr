@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerDataProvider::SetObjectForVisualizer | Microsoft Docs
+title: 'IEEVisualizerDataProvider:: SetObjectForVisualizer | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d20164e31f8c42b7099f99ff34ac120319a2def1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62540285"
 ---
 # <a name="ieevisualizerdataprovidersetobjectforvisualizer"></a>IEEVisualizerDataProvider::SetObjectForVisualizer
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu yöntem Görselleştirici temsil eden nesneyi değiştirir.  
+Bu yöntem, Görselleştirici temsil ettiği nesneyi değiştirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetObjectForVisualizer(  
@@ -44,19 +44,19 @@ int SetObjectForVisualizer(
   
 #### <a name="parameters"></a>Parametreler  
  `pNewObject`  
- [in] Ayarlanacağı nesne.  
+ 'ndaki Ayarlanacak nesne.  
   
  `error`  
- [out] Bu dize, nesne ayarlanırken bir hata oluştu, hata iletisi tutar.  
+ dışı Nesne ayarlanırken bir hata oluşursa, bu dize hata iletisini tutar.  
   
  `pException`  
- [out] Bir hata varsa, bu nesne, özel durum bilgilerini tutar.  
+ dışı Bir hata oluşursa, bu nesne özel durum bilgilerini tutar.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu, nasıl hata bilgileri döndürülür belirlemek için en fazla uygulayan olur. Ancak, bir hata olduğunda bu yöntem her zaman bir özel durum nesnesi döndürmelidir bu nedenle bir özel durum nesnesi var. bilmek döndürüldü, görmek için Görünüm, bir hata oluştu. yalnızca bazı çağıranlar olabilir mümkündür. Çağıranın olun ister durumunda hata dizesi ayrıca sağlanan bunu kullanın.  
+ Bu, hata bilgilerinin nasıl döndürüldüğünü belirleme uygulayıcısı 'na sahiptir. Ancak bazı çağıranlar yalnızca bir hata olduğunu anlamak için bir özel durum nesnesinin döndürülüp döndürülmeyeceğini görebilir, bu nedenle bir hata oluşursa bu yöntem her zaman bir özel durum nesnesi döndürmelidir. Çağıran tarafından kullanılması istediği durumlarda hata dizesi de sağlanmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)   

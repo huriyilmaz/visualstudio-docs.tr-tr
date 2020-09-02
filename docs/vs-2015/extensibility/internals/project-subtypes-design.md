@@ -11,83 +11,83 @@ caps.latest.revision: 33
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0e7cd96324e5a2bbd6c9b0acf4125bc0450cfd06
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62430555"
 ---
 # <a name="project-subtypes-design"></a>Proje Alt Türleri Tasarımı
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Proje alt türleri kılan Microsoft Build Engine (MSBuild) üzerinde temel projeleri VSPackages olanak tanır. Toplama kullanımı sayesinde uygulanan yönetilen çekirdek proje sisteminin toplu yeniden [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ancak yine de belirli bir senaryo davranışını özelleştirebilirsiniz.  
+Proje alt türleri, VSPackages 'ın Microsoft Build Engine (MSBuild) temelinde projeleri genişlemesine izin verir. Toplama kullanımı, içinde uygulanan temel yönetilen proje sisteminin toplu öğesini yeniden kullanmanıza olanak tanır, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ancak yine de belirli bir senaryonun davranışını özelleştirebilirsiniz.  
   
- Aşağıdaki konular temel tasarım ve uygulama proje alt türlerinin başlatılma vermektedir:  
+ Aşağıdaki konular, proje alt türleri için temel tasarımı ve uygulamayı ayrıntılandırır:  
   
-- Proje alt türü tasarım.  
+- Proje alt türü tasarımı.  
   
 - Çok düzeyli toplama.  
   
-- Arabirimleri destekleme.  
+- Destekleyici arabirimler.  
   
-## <a name="project-subtype-design"></a>Proje alt tasarımı  
- Bir proje alt başlatma ana toplayarak sağlanır <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject> nesneleri. Bu toplama geçersiz kılabilir veya en temel projenin yeteneklerini geliştirmek bir proje alt sağlar. Proje alt türleri alma özelliklerini kullanarak işlemek için ilk şans <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>, komutları kullanarak <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>ve proje öğesi Yönetimi'ni kullanarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>. Proje alt türleri de genişletebilirsiniz:  
+## <a name="project-subtype-design"></a>Proje alt türü tasarımı  
+ Proje alt türünün başlatılması, ana ve nesneler toplayarak elde edilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject> . Bu toplama, proje alt türünün temel proje yeteneklerini geçersiz kılmasını veya geliştirmesini sağlar. Proje alt türleri, kullanarak özellikleri <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> , ve kullanan komutları <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> ve proje öğesi yönetimini kullanarak işleme için ilk şans elde edin <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3> . Proje alt türleri de genişletebilir:  
   
 - Proje yapılandırma nesneleri.  
   
-- Yapılandırma bağımlı nesneler.  
+- Yapılandırmaya bağlı nesneler.  
   
-- Bağımsız yapılandırma Gözat nesneleri.  
+- Yapılandırmaya bağımsız tarama nesneleri.  
   
-- Proje Otomasyon nesneleri.  
+- Proje Otomasyonu nesneleri.  
   
-- Proje Otomasyon özellik koleksiyonları.  
+- Proje Otomasyonu özellik koleksiyonları.  
   
-  Proje alt türleri tarafından genişletilebilirlik hakkında daha fazla bilgi için bkz. [özellikleri ve yöntemleri genişletilmiş proje alt türleri tarafından](../../extensibility/internals/properties-and-methods-extended-by-project-subtypes.md).  
+  Proje alt türleri tarafından genişletilebilirlik hakkında daha fazla bilgi için bkz. [Proje alt türleri tarafından genişletilmiş özellikler ve Yöntemler](../../extensibility/internals/properties-and-methods-extended-by-project-subtypes.md).  
   
 ##### <a name="policy-files"></a>İlke dosyaları  
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Ortamı ile bir proje alt ilke dosyaları uygulamaya temel proje sistemini genişletme örneği sağlar. Bir ilke dosyası, şekillendirme sağlar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Solution Explorer dahil özelliklerini yönetme tarafından ortam **Proje Ekle** iletişim kutusu, **Yeni Öğe Ekle** iletişim kutusu ve  **Özellikleri** iletişim kutusu. İlke alt geçersiz kılar ve bu özellikleri aracılığıyla geliştirir <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg>, `IOleCommandTarget` ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> uygulamaları.  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Ortam, ilke dosyaları uygulamasında bir proje alt türü ile temel proje sistemini genişletmeye bir örnek sağlar. İlke dosyası, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Çözüm Gezgini, **Proje Ekle** Iletişim kutusu, **Yeni öğe Ekle** iletişim kutusu ve **Özellikler** iletişim kutusunu içeren özellikleri yöneterek ortamın şekillendirmeye olanak tanır. İlke alt türü bu özellikleri ve uygulamalarını geçersiz kılar ve geliştirir <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg> `IOleCommandTarget` <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> .  
   
 ##### <a name="aggregation-mechanism"></a>Toplama mekanizması  
- Ortamın proje alt toplama mekanizması birden çok toplama, bu nedenle daha fazla flavored proje flavoring uygulanması gereken gelişmiş bir alt tür izin düzeylerini destekler. Ayrıca, bir projenin destekleyici nesneleri, gibi alt tür <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg>, birden çok katman düzeyini sağlamak amacıyla tasarlanmıştır. COM ve COM kısıtlamaları mantığıyla toplama kuralları, proje alt türleri ve temel projeleri iç alt veya temel Proje düzgün bir şekilde yöntem çağrıları için temsilci seçme ve başvuru sayısı yönetme katılacak şekilde etkinleştirmek için işbirliği ile programlanmak gerekir . Diğer bir deyişle, proje hakkında toplanacak toplama desteklemek için programlanmış gerekir.  
+ Ortamın proje alt türü toplama mekanizması, birden çok toplamayı destekler, böylece gelişmiş bir alt türe, flavored projesi daha ayrıntılı bir şekilde uygulanması sağlanır. Ayrıca, gibi bir proje alt türünün destekleme nesneleri, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg> birden çok katman düzeyi sağlamak için tasarlanmıştır. COM ve COM toplama kurallarının kısıtlamalarına sahip olmak için, proje alt türleri ve temel projelerin, iç alt türü veya temel projenin, yöntem çağrılarına temsilci seçme ve başvuru sayılarını yönetme konusunda düzgün bir şekilde katılmasını sağlamak için programlanmalıdır. Diğer bir deyişle, toplanacak projenin toplamayı desteklemek için programlanmalıdır.  
   
- Aşağıdaki çizimde, çok düzeyli proje alt toplama şematik bir temsilini gösterir.  
+ Aşağıdaki çizimde çok düzeyli bir proje alt türü toplamasının şema gösterimi gösterilmektedir.  
   
  ![Visual Studio çok düzeyli projectflavor grafiği](../../extensibility/internals/media/vs-multilevelprojectflavor.gif "VS_MultilevelProjectFlavor")  
 Çok düzeyli proje alt türü  
   
- Çok düzeyli proje alt toplama üç düzeyi, bir proje alt tarafından toplanan sonra başka bir düzey proje alt türü tarafından toplanan bir temel proje oluşur. Şekil bir parçası olarak sağlanan destek arabirimlerin bazıları odaklanır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] proje alt mimarisi.  
+ Çok düzeyli bir proje alt türü toplama, bir proje alt türü tarafından toplanan ve daha sonra Gelişmiş bir proje alt türü tarafından toplanan temel bir proje olan üç düzeyden oluşur. Şekil, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Proje alt türü mimarisinin bir parçası olarak sunulan destekleyici arabirimlerin bazılarına odaklanır.  
   
-##### <a name="deployment-mechanisms"></a>Dağıtım mekanizması  
- Birçok temel proje sistemi arasında bir proje alt tarafından gelişmiş işlevler dağıtım mekanizmasıdır. Proje alt yapılandırma arabirimlerini uygulayarak dağıtım mekanizması etkiler (gibi <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg>) üzerinde QueryInterface çağırarak alınır <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider>. Temel projenin nerede hem proje alt düzey proje alt ekleyip farklı yapılandırma uygulamaları bir senaryoda, çağıran `QueryInterface` Gelişmiş proje alt'ın üzerinde `IUnknown`. Gelişmiş proje alt türü iç proje alt türü temel proje için soran yapılandırma uygulaması içeriyorsa, iç proje alt türü tarafından sağlanan uygulama devreder. Bir toplama düzeyinde bir durumdan diğerine kalıcı hale getirmek için bir mekanizma proje alt türleri tüm düzeyleri uygulayan <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> derleme olmayan kalıcı hale getirmek için proje dosyalarına ilgili XML verileri. Daha fazla bilgi için [MSBuild proje dosyasında verileri kalıcı hale](../../extensibility/internals/persisting-data-in-the-msbuild-project-file.md). <xref:EnvDTE80.IInternalExtenderProvider> Otomasyon genişleticilerine proje alt türleri ' almak için bir mekanizma olarak uygulanır.  
+##### <a name="deployment-mechanisms"></a>Dağıtım mekanizmaları  
+ Proje alt türü tarafından geliştirilmiş temel proje sistemi işlevlerinin birçoğu arasında dağıtım mekanizmaları vardır. Proje alt türü <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> , <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> üzerinde QueryInterface çağırarak alınan yapılandırma arabirimlerini (ve gibi) uygulayarak dağıtım mekanizmalarını etkiler <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider> . Hem proje alt türü hem de gelişmiş proje alt türünün farklı yapılandırma uygulamaları eklemesi durumunda, temel proje `QueryInterface` Gelişmiş proje alt türü ' ne çağırır `IUnknown` . İç proje alt türü, temel projenin istediği yapılandırma uygulamasını içeriyorsa, gelişmiş proje alt türü, iç proje alt türü tarafından belirtilen uygulamayı temsil eder. Bir toplama düzeyinden diğerine durum kalıcı hale getirmek için tüm proje alt türleri, <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> derleme olmayan ılgılı XML verilerini proje dosyalarına kalıcı hale getirmek için uygular. Daha fazla bilgi için bkz. [MSBuild proje dosyasındaki verileri kalıcı](../../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)hale getirme. <xref:EnvDTE80.IInternalExtenderProvider> , proje alt türlerinden Otomasyon Genişleticilerini almak için bir mekanizma olarak uygulanır.  
   
- Aşağıdaki çizimde, Otomasyon extender uygulaması, proje yapılandırması Gözat nesnesi özellikle, temel proje sistemini genişletmek için proje alt türleri tarafından kullanılan odaklanır.  
+ Aşağıdaki çizim, Otomasyon genişletici uygulamasına odaklanarak proje yapılandırma nesnesi, proje alt türleri tarafından temel proje sistemini genişletmek için kullanılır.  
   
- ![VS proje Flavor otomatik genişletici grafiği](../../extensibility/internals/media/vs-projectflavorautoextender.gif "VS_ProjectFlavorAutoExtender")  
-Proje alt Otomasyon Extender'ı seçin.  
+ ![VS projesi Flavor otomatik genişletici grafiği](../../extensibility/internals/media/vs-projectflavorautoextender.gif "VS_ProjectFlavorAutoExtender")  
+Project Subtype Otomasyon Genişleticisi.  
   
- Proje alt türleri, Otomasyon nesne modeli genişleterek temel proje sistemi daha da genişletebilirsiniz. Bunlar DTE Otomasyon nesnesi bir parçası olarak tanımlanır ve proje nesneyi genişletmek için kullanılan `ProjectItem` nesne ve `Configuration` nesne. Daha fazla bilgi edinmek, [temel projenin nesne modelini genişletme](../../extensibility/internals/extending-the-object-model-of-the-base-project.md).  
+ Proje alt türleri, Otomasyon nesne modelini genişleterek temel proje sistemini daha da genişletebilir. Bunlar, DTE Otomasyon nesnesinin bir parçası olarak tanımlanır ve proje nesnesini, `ProjectItem` nesnesini ve nesnesini genişletmek için kullanılır `Configuration` . Daha fazla bilgi için bkz. [temel projenin nesne modelini genişletme](../../extensibility/internals/extending-the-object-model-of-the-base-project.md).  
   
 ## <a name="multi-level-aggregation"></a>Çok düzeyli toplama  
- Alt düzey proje alt türü sarmalayan bir proje alt uygulama düzgün şekilde çalışabilmesi iç proje alt izin vermek için işbirliği ile programlanmak gerekir. Sorumlulukları programlama bir liste aşağıdakileri içerir:  
+ Alt düzey proje alt türünü sarmalayan bir proje alt türü uygulamasının, iç proje alt türünün düzgün şekilde çalışmasını sağlamak için programlı olarak programlanabilir olması gerekir. Programlama sorumluluklarına ait bir liste şunları içerir:  
   
-- <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> İç alt sarmalama proje alt uygulaması için temsilci seçme gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> iç proje alt uygulaması hem de <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Load%2A> ve <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Save%2A> yöntemleri.  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>İç alt türü sarmaladığı proje alt türünün uygulanması, <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> hem hem de yöntemlerinin iç proje alt türünün uygulamasına temsilci seçme olmalıdır <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Load%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Save%2A> .  
   
-- <xref:EnvDTE80.IInternalExtenderProvider> Sarmalayıcı proje alt uygulaması, kendi iç proje alt temsilci gerekir. Özellikle, uygulanması <xref:EnvDTE80.IInternalExtenderProvider.GetExtenderNames%2A> iç proje alt türü adları dizisi alın ve ardından istediği Genişleticileri eklemek için dizeleri birleştirmek gerekir.  
+- <xref:EnvDTE80.IInternalExtenderProvider>Sarmalayıcı proje alt türünün uygulanması, kendi iç proje alt türüne temsilci seçme sağlamalıdır. Özellikle, uygulamasının, <xref:EnvDTE80.IInternalExtenderProvider.GetExtenderNames%2A> iç proje alt türünden adların dize alması ve ardından, Extender olarak eklemek istediği dizeleri eklemesi gerekir.  
   
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider> Gereken bir sarmalayıcı proje alt uygulama örneğini <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg> kendi iç nesne alt proje ve temel projenin proje yapılandırması nesnesi doğrudan olduğunu bilir yalnızca özel bir temsilci beri tutun sarmalayıcı Proje alt yapılandırma nesnesi yok. Dış Proje alt başlangıçta istediği doğrudan işlemek için yapılandırma arabirimleri seçin ve ardından kalan iç proje alt 's uygulaması için temsilci <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg.get_CfgType%2A>.  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider>Sarmalayıcı proje alt türünün uygulanması, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg> iç proje alt türünün nesnesini örneklendirilecek ve onu yalnızca temel projenin proje yapılandırma nesnesi, sarmalayıcı proje alt türü yapılandırma nesnesinin var olduğunu bildiği için özel bir temsilci olarak tutamalıdır. Dış proje alt türü, başlangıçta doğrudan işlemek istediği yapılandırma arabirimlerini seçebilir ve sonra geri kalanı iç proje alt türünün uygulamasına devredebilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg.get_CfgType%2A> .  
   
-## <a name="supporting-interfaces"></a>Arabirimleri destekleme  
- Temel projenin uygulanması çeşitli yönlerini genişletmek için bir proje alt tarafından eklenen arabirimleri destekleme çağrıları atar. Bu proje yapılandırma nesneleri ve çeşitli özellik tarayıcısı nesneleri içerir. Bu arabirimler çağırarak alınır `QueryInterface` üzerinde `punkOuter` (bir işaretçiye `IUnknown`), en dıştaki proje alt toplayıcısı.  
+## <a name="supporting-interfaces"></a>Destekleyici arabirimler  
+ Temel proje, uygulamasının çeşitli yönlerini genişletmek için bir proje alt türü tarafından eklenen destekleyici arabirimlerin çağrılarını devreder. Bu, proje yapılandırma nesnelerini ve çeşitli özellik tarayıcısı nesnelerini genişletmeyi içerir. Bu arabirimler, `QueryInterface` `punkOuter` `IUnknown` en dıştaki proje alt türü toplayıcısı 'nın (bir işaretçisi) çağırarak alınır.  
   
 |Arabirim|Proje alt türü|  
 |---------------|---------------------|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg>|Proje alt türü için izin verir:<br /><br /> -Bir uygulamasını sağlamak <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>.<br />-Denetim hata ayıklayıcı başlatma kendi uygulamasını sağlamak üzere proje alt vererek <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg>.<br />-Tasarım zamanı ifade değerlendirmesi uygun şekilde işleyerek devre dışı `DBGLAUNCH_DesignTimeExprEval` uygulaması örneğini <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.QueryDebugLaunch%2A>.|  
-|<xref:EnvDTE80.IInternalExtenderProvider>|Proje alt türü için izin verir:<br /><br /> -Genişletme <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> ekleme veya kaldırma bağımsız yapılandırma özellikleri projenin proje.<br />-Proje Otomasyon nesnesi genişletin (<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>) projenin.<br /><br /> Yukarıdaki özellik değerlerini verilerinden alınır <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> sabit listesi.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject>|Yeniden eşlemek proje alt sağlayan <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg> proje yapılandırması Gözat nesnesi verilen nesne.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsBrowseObject>|Yeniden eşlemek proje alt sağlayan <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> veya `VSITEMID` nesne, belirtilen proje yapılandırması Gözat nesnesi.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>|Proje dosyası (.vbproj veya .csproj) için rastgele yapılandırılmış XML verileri kalıcı hale getirmek proje alt türü sağlar. Bu veriler, MSBuild için görünür değil.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>|Proje alt türü için izin verir:<br /><br /> -Kalıcı için yeni MSBuild özellikleri ekleyin.<br />-Gereksiz özellikleri MSBuild'den kaldırın.<br />-Sorgu için bir MSBuild özelliğinin geçerli değeri.<br />-Geçerli bir MSBuild özellik değerini değiştirin.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg>|Proje alt türünün şunları yapmasına izin verir:<br /><br /> -Uygulamasının bir uygulamasını sağlayın <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> .<br />-Proje alt türünün kendi uygulamasını sağlamasına izin vererek hata ayıklayıcının başlatılmasını denetleyin <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg> .<br />-Uygulamasında durumunu uygun şekilde işleyerek tasarım zamanı ifade değerlendirmesini devre dışı bırakın `DBGLAUNCH_DesignTimeExprEval` <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.QueryDebugLaunch%2A> .|  
+|<xref:EnvDTE80.IInternalExtenderProvider>|Proje alt türünün şunları yapmasına izin verir:<br /><br /> -Projenin <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> yapılandırma bağımsız özelliklerini eklemek veya kaldırmak için projenin ' i genişletin.<br />-Projenin proje Otomasyonu nesnesini ( <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> ) genişletin.<br /><br /> Yukarıdaki özellik değerleri <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> numaralandırmasından alınmıştır.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject>|Proje alt türünün <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg> Proje yapılandırma Gözat nesnesine verilen nesneye geri eşleşmesini sağlar.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsBrowseObject>|Proje <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> `VSITEMID` yapılandırması, nesne ve nesne yapılandırma nesnesi olarak verilen proje alt türünün veya nesnesine eşlenmesini sağlar.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>|Proje alt türünün, rastgele XML yapılandırılmış verileri proje dosyasına (. vbproj veya. csproj) kalıcı hale getirebileceği şekilde izin verir. Bu veriler MSBuild 'e görünür değil.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>|Proje alt türünün şunları yapmasına izin verir:<br /><br /> -Kalıcı olacak yeni MSBuild özellikleri ekleyin.<br />-Gereksiz özellikleri MSBuild 'ten kaldırın.<br />-MSBuild özelliğinin geçerli bir değeri için sorgu.<br />-MSBuild özelliğinin geçerli değerini değiştirin.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID>   

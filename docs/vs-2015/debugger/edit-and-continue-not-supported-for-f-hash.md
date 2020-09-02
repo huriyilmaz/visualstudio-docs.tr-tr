@@ -1,5 +1,5 @@
 ---
-title: Düzenle ve devam et için desteklenmeyen F# | Microsoft Docs
+title: 'F # için Düzenle ve devam et desteklenmiyor | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,13 +18,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a4fef61335679e3f82d5916726981e003bf9c332
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62428470"
 ---
 # <a name="edit-and-continue-not-supported-for-f"></a>Düzenle ve Devam Et F#'de Desteklenmez #
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Düzenle ve devam et desteklenmez, hata ayıklaması yaparken F# kod. Düzenlemeleri F# kod hata ayıklama oturumu sırasında mümkündür, ancak kaçınılmalıdır. Kod değişiklikleri, hata ayıklama oturumu sırasında uygulanmaz. Tüm düzenlemeleri bu nedenle, yapılan F# , hata ayıklarken kod, kaynak kodunda hata ayıklaması yapılan kod eşleşmeyen neden olur.
+F # kodunda hata ayıklarken Düzenle ve devam et desteklenmez. F # kodundaki düzenlemeler hata ayıklama oturumu sırasında mümkündür ancak kaçınılması gerekir. Kod değişiklikleri hata ayıklama oturumu sırasında uygulanmaz. Bu nedenle, hata ayıklama sırasında F # kodunda yapılan tüm düzenlemeler, hata ayıklamakta olan kodla eşleşmeyen kaynak koda neden olur.

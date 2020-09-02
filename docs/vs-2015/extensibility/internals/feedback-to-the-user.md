@@ -14,52 +14,52 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7773c611733ccec525fc25264311e72c1dfe36e2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62537686"
 ---
 # <a name="feedback-to-the-user"></a>Kullanıcıya Geri Bildirim
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-İçinde [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE), kullanıcının geçerli seçimi ve genel seçim bağlamını ilgili kullanılabilir işlevler temel görsel geri bildirim. Aşağıdaki tabloda farklı seçim bağlamlarında kullanılabilir olan işlevleri listeler.  
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Tümleşik geliştirme ortamında (IDE), kullanılabilir işlevlerle ilgili görsel geri bildirimler kullanıcının geçerli seçimine ve genel seçim içeriğine göre belirlenir. Aşağıdaki tabloda, farklı seçim bağlamlarında kullanılabilen işlevler listelenmektedir.  
   
-|Seçim bağlamı|Kullanılabilir işlevleri|  
+|Seçim bağlamı|Kullanılabilir işlevsellik|  
 |-----------------------|-----------------------------|  
-|IDE|Global|  
-|Geçerli ürün kümesi|Belirli bir ürün|  
-|Etkin olan hiyerarşi|Hiyerarşi türü özel|  
-|Etkin olan hiyerarşi öğesi|Hiyerarşi öğesi türü özel|  
-|Etkin belge|Belge türü özel|  
-|En üstteki Çok Belgeli Arabirim (MDI) penceresi|Pencere türü özel|  
-|Geçerli seçim bağlamı|Seçim bağlamını belirli|  
+|IDE|Genel|  
+|Geçerli ürün kümesi|Ürüne özgü|  
+|Etkin hiyerarşi|Hiyerarşi türüne özgü|  
+|Etkin hiyerarşi öğesi|Hiyerarşi öğesi türüne özgü|  
+|Etkin belge|Belge türüne özgü|  
+|En üstteki çoklu belge arabirimi (MDI) penceresi|Pencere türüne özgü|  
+|Geçerli seçim bağlamı|Seçim bağlamı özel|  
   
- Yalnızca kullanıcılar gereken ve sürekli olarak tutarlı seçimi ve ortam bağlamı geri bildirim sağlamak işlevselliğini yüzey, IDE karmaşıklığını azaltın. Her bir pencere IDE içinde açıldığında aşağıdaki kurallar geçerlidir:  
+ Yalnızca kullanıcıların ihtiyacı olan işlevleri ve sürekli olarak tutarlı seçim ve ortam bağlamı geri bildirimi sağlamak istiyorsanız IDE 'deki karmaşıklığı azaltabilirsiniz. IDE 'de bir pencere her açıldığında aşağıdaki kurallar geçerlidir:  
   
-- Pencerenin alt seçim bağlamını değişirse, seçim geri bildirimi penceresinde açıkça belirtilir ve dinamik Yardım penceresi, geçerli bağlam yansıtacak şekilde güncelleştirilir yoksa.  
+- Pencere seçim bağlamını değiştirirse, pencerede seçim geri bildirimi açıkça belirtilir ve gösterilen dinamik Yardım penceresi, geçerli bağlamı yansıtacak şekilde güncelleştirilir.  
   
-- Pencerenin genel seçim bağlamını değişirse, tüm özel bağlam menüleri, etkin olan hiyerarşi pencere ve uygulama başlık çubuğunun geçerli bağlam yansıtacak şekilde güncelleştirilir.  
+- Pencere, genel seçim bağlamını değiştirirse, içeriğe özgü tüm menüler, etkin hiyerarşi penceresi ve uygulama başlık çubuğu geçerli bağlamı yansıtacak şekilde güncelleştirilir.  
   
-- Pencerenin geçerli seçimde özelliklerini yüzey **özellikleri** penceresi ve isteğe bağlı olarak gösteriliyorsa, **özellik sayfaları** iletişim kutusu.  
+- Pencere, **Özellikler** penceresinde geçerli seçimin özelliklerini ve isteğe bağlı olarak, **Özellik sayfaları** iletişim kutusunu göstermek zorunda olmalıdır.  
   
-- Pencere özellikleri surface etmez veya genel seçim bağlamını değiştirme, artık IDE'de etkin pencere olduğunda seçim geri bildirimi penceresinde kalmalıdır değil.  
+- Pencere özellikleri göstermez veya genel seçim bağlamını değiştirmezse, artık IDE 'de etkin pencere olmadığında seçim geri bildirimi pencerede kalmaz.  
   
-- Tüm belge özel araç pencereleri, sürekli olarak etkin belgeyi yansıtmalıdır.  
+- Belgeye özgü tüm araç pencereleri sürekli olarak etkin belgeyi yansıtmalıdır.  
   
-- Menüleri ve araç çubukları uygulama başlık çubuğunda en üstteki Çok Belgeli Arabirim (MDI) istemci penceresi yansıtmalıdır.  
+- Menüler, araç çubukları ve uygulama başlık çubuğu en üstteki çoklu belge arabirimi (MDI) istemci penceresini yansıtmalıdır.  
   
-  Örneğin, zaman içinde bir Visual Basic Web uygulaması projesini Web formu HTML görünümü açılır ve kullanıcının seçtiği bir `<td>` etiketi, geri bildirim aşağıdaki şekilde sağlanır:  
+  Örneğin, bir Visual Basic Web uygulaması projesi içindeki bir Web formunun HTML görünümü açıldığında ve Kullanıcı bir `<td>` etiketi seçtiğinde, aşağıdaki şekilde geri bildirim sağlanır:  
   
-- Seçimi etkin pencerede gösterilir ve yansıtılan **özellikleri** penceresi.  
+- Seçim etkin pencerede gösterilir ve **Özellikler** penceresinde yansıtılır.  
   
 - Belgeye özgü **araç kutusu** etkin belgeyi yansıtacak şekilde güncelleştirilir.  
   
-- **Düzenleyicisi** araç ve **tablo** menüsü görüntülenir ve Web formu pencerenin yansıtmak için başlık çubuğunda güncelleştirir.  
+- **Düzenleyici** araç çubuğu ve **tablo** menüsü görüntülenir ve başlık çubuğu Web formu penceresini yansıtacak şekilde güncelleştirilir.  
   
-- Genellikle etkin olan hiyerarşi penceresinde **Çözüm Gezgini**ve geçerli bağlamı ve bağlama duyarlı yansıtmak için başlık çubuğunda güncelleştirme **proje** menü komutları, etkin Web şimdi Uygula Uygulama projesi.  
+- Genellikle **Çözüm Gezgini**olan etkin hiyerarşi penceresi ve geçerli bağlamı yansıtmak için başlık çubuğu güncelleştirmesi ve bağlam duyarlı **Proje** menü komutları artık etkin Web uygulaması projesi için geçerlidir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Seçim ve para birimi IDE](../../extensibility/internals/selection-and-currency-in-the-ide.md)   
+ [IDE 'de seçim ve para birimi](../../extensibility/internals/selection-and-currency-in-the-ide.md)   
  [Seçim bağlamı nesneleri](../../extensibility/internals/selection-context-objects.md)   
  [Hiyerarşiler ve Seçim](../../extensibility/internals/hierarchies-and-selection.md)

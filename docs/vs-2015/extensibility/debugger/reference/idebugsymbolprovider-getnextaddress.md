@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetNextAddress | Microsoft Docs
+title: 'IDebugSymbolProvider:: GetNextAddress | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e1bf0798e0f49d9e7b2871c5601f966bc282b186
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62421456"
 ---
 # <a name="idebugsymbolprovidergetnextaddress"></a>IDebugSymbolProvider::GetNextAddress
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bir yöntemde belirli hata ayıklama adresi aşağıdaki hata ayıklama adresi alır.  
+Bir yöntemde belirli bir hata ayıklama adresini izleyen hata ayıklama adresini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetNextAddress(   
@@ -44,16 +44,16 @@ int GetNextAddress( 
   
 #### <a name="parameters"></a>Parametreler  
  `pAddress`  
- [in] Hata ayıklama adresi verilir.  
+ 'ndaki Verilen hata ayıklama adresi.  
   
  `fStatementOnly`  
- [in] TRUE ise tek bir deyimde hata ayıklama adresler sınırlar.  
+ 'ndaki TRUE ise, hata ayıklama adreslerini tek bir deyimle sınırlandırır.  
   
  `ppAddress`  
- [out] Sonraki hata ayıklama adresi döndürür.  
+ dışı Sonraki hata ayıklama adresini döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Geçerli bir döndürür `HRESULT`, genellikle S_OK.  
+ Geçerli bir `HRESULT` , genellikle S_OK döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

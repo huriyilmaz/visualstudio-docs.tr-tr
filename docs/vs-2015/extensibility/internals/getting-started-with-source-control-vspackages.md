@@ -1,5 +1,5 @@
 ---
-title: Kaynak denetimi VSPackage'larını kullanmaya başlama | Microsoft Docs
+title: Kaynak denetimi VSPackages ile çalışmaya başlama | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,24 +12,24 @@ caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f9891461312f3e0db8b3961160de094e0ed34dd2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62537530"
 ---
 # <a name="getting-started-with-source-control-vspackages"></a>Kaynak Denetimi VSPackage’larını Kullanmaya Başlama
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir kaynak denetimi VSPackage'ı, kaynak denetimi eklentisi için daha gelişmiş bir alternatiftir. (Bkz [kaynak denetimi eklentisi oluşturma](../../extensibility/internals/creating-a-source-control-plug-in.md) kaynak hakkında daha fazla bilgi için eklentiler kontrol.) Bir kaynak denetimi VSPackage'ı kaynak denetimi modeli, özellikler ve kullanıcı arabirimi (UI) üzerinde tam denetim sağlar ve bu tümleştirir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ortamı VSPackage olarak.  
+Kaynak denetimi VSPackage, kaynak denetimi eklentisinin daha gelişmiş bir alternatifidir. (Kaynak denetimi eklentileri hakkında daha fazla bilgi için bkz. [kaynak denetim eklentisi oluşturma](../../extensibility/internals/creating-a-source-control-plug-in.md) .) Kaynak denetimi VSPackage, kaynak denetim modeli, Özellikler ve Kullanıcı arabirimi (UI) üzerinde tam denetim olanağı sunar ve [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ortam Ile VSPackage olarak tümleştirilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Kaynak Denetimi VSPackage’ının Uygulanıp Uygulanmayacağını Belirleme](../../extensibility/internals/determining-whether-to-implement-a-source-control-vspackage.md)  
- Kaynak denetimi çözümleri için seçenekleri açıklar ve uygun tümleştirme yolu seçmek için genel yönergeler sağlar.  
+ Kaynak denetim çözümleri seçeneklerini açıklar ve uygun bir tümleştirme yolu seçmek için geniş yönergeler sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Kaynak Denetimindeki Yenilikler](../../extensibility/internals/what-s-new-in-source-control.md)  
- İle kaynak denetimi VSPackage'ları kullanarak yeni özellikleri açıklar.  
+ Kaynak denetimi ile VSPackages kullanan yeni özellikleri açıklar.  
   
  [Kaynak Denetimi VSPackage’ı Oluşturma](../../extensibility/internals/creating-a-source-control-vspackage.md)  
- Kaynak denetimi, yalnızca kaynak denetimi işlevlerini sağlar ancak özelleştirmek için kullanılan VSPackage'ı oluşturma anlatılmaktadır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kaynak UI denetimi.
+ Yalnızca kaynak denetimi işlevselliği sağlayan, ancak [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kaynak denetimi kullanıcı arabirimini özelleştirmek için kullanılabilen bir kaynak denetimi VSPackage oluşturmayı açıklar.

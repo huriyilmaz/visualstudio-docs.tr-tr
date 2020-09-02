@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Spy ++ görünümlerini görüntüleme | Microsoft Docs'
+title: 'Nasıl yapılır: Spy + + görünümlerini görüntüleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,17 +12,17 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6e034bdf1ecefc996aa238cbcd97616d083363b4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62538793"
 ---
-# <a name="how-to-display-spy-views"></a>Nasıl yapılır: Spy ++ görünümlerini görüntüleme
+# <a name="how-to-display-spy-views"></a>Nasıl Yapılır: Spy++ Görünümlerini Görüntüleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Spy ++ başladığında, açılır [Windows görünümü](../debugger/windows-view.md), tüm windows ve makinenizde kullanılabilir denetimleri ağaç görünümü. Bu kök pencerenin belirlenmiş "Windows 1." Ayrıca üç diğer Spy ++ görünümleri kullanılabilen vardır: [İletiler görünümünü](../debugger/messages-view.md), [işler görünümü](../debugger/processes-view.md), ve [iş parçacıkları görünümü](../debugger/threads-view.md). İstenen görünümünden görüntüleyebilirsiniz **Spy** menüsü. Daha fazla bilgi için [Spy ++ görünümleri](../debugger/spy-increment-views.md).  
+Spy + + başladığında, makinenizde bulunan tüm pencerelerin ve denetimlerin ağaç görünümü [Windows görünümü](../debugger/windows-view.md)'nde açılır. Bu kök pencere, "Windows 1" şeklinde açıklamalı. Ayrıca üç farklı Spy + + görünümü mevcuttur: [Iletiler görünümü](../debugger/messages-view.md), [süreçler görünümü](../debugger/processes-view.md)ve [iş parçacıkları görünümü](../debugger/threads-view.md). **Spy** menüsünden istediğiniz görünümü görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [Spy + + görünümleri](../debugger/spy-increment-views.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Spy ++ kullanma](../debugger/using-spy-increment.md)   
+ [Spy + + kullanma](../debugger/using-spy-increment.md)   
  [Spy++ Başvurusu](../debugger/spy-increment-reference.md)

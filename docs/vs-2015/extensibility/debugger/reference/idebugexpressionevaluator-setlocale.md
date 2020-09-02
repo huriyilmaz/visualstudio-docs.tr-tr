@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator::SetLocale | Microsoft Docs
+title: 'Idebugexpressiondeğerlendirici:: SetLocale | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 730a105b12016ea031bdb4753da009223a5d39f5
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62540530"
 ---
 # <a name="idebugexpressionevaluatorsetlocale"></a>IDebugExpressionEvaluator::SetLocale
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu yöntem yazdırılabilir sonuçları oluşturmak için kullanılacak dili ayarlar.  
+Bu yöntem, yazdırılabilir sonuçlar oluşturmak için kullanılacak dili ayarlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT SetLocale(   
@@ -40,13 +40,13 @@ int SetLocale(
   
 #### <a name="parameters"></a>Parametreler  
  `wLangID`  
- [in] Dil tanımlayıcısı.  
+ 'ndaki Dil tanımlayıcısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, EE diller çalışma sırasında geçiş yapmak için (EE) ifade değerlendiricisi yüklenir ancak birden çok kez çağrılabilir. EE hata iletileri ve dizeleri uygun dilde döndürmek için bu yerel ayarı kullanır.  
+ Bu yöntem, ifade değerlendiricisi (EE) yüklenirken birçok kez çağrılabilir, bu nedenle EE 'ın anında diller arasında geçiş yapabilmesi gerekir. EE, uygun dilde hata iletileri ve dizeler döndürmek için bu yerel ayarı kullanır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

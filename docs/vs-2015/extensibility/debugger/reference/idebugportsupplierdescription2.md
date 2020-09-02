@@ -11,36 +11,36 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e3da559a2d843ddb1129236966093b8a41f4234b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62538570"
 ---
 # <a name="idebugportsupplierdescription2"></a>IDebugPortSupplierDescription2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Sağlar [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] içindeki metni görüntülemek için kullanıcı Arabirimi **aktarım bilgi** bölümünü **iliştirme** iletişim kutusu.  
+[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]Kullanıcı arabiriminin, **İşleme İliştir** Iletişim kutusunun **Aktarım bilgileri** bölümünde metin görüntülemesini sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugPortSupplierDescription2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar  
- Bu arabirim, bağlantı noktası sağlayıcıları tarafından uygulanır.  
+## <a name="notes-for-implementers"></a>Implemenonun notları  
+ Bu arabirim, bağlantı noktası tedarikçileri tarafından uygulanır.  
   
 ## <a name="methods"></a>Yöntemler  
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugPortSupplierDescription2`.  
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugPortSupplierDescription2` .  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md)|Bağlantı noktası sağlayıcısı için bir açıklama ve açıklama meta verilerini alır.|  
+|[GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md)|Bağlantı noktası sağlayıcısına ilişkin açıklama ve açıklama meta verilerini alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üst bilgi: Msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll

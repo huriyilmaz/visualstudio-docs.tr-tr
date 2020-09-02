@@ -1,7 +1,7 @@
 ---
-title: Python Visual Studio öğretici adım 1, bir proje oluşturmak
+title: Visual Studio 'da Python öğreticisi 1. adım, proje oluşturma
 titleSuffix: ''
-description: Ön koşullar ve yeni bir Python projesi oluşturma dahil olmak üzere Visual Studio'daki Python yeteneklerinin temel bir gözden geçirmesine genel bakış ve adım 1.
+description: Önkoşullar ve yeni bir Python projesi oluşturma gibi Visual Studio 'da Python özelliklerine ilişkin temel bir izlenecek yol ve adım 1 ' e genel bakış.
 ms.date: 01/28/2019
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -12,69 +12,69 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: ed4fdbfe7090a66d955461f2c3a394f6fb661c5a
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62430756"
 ---
-# <a name="tutorial-work-with-python-in-visual-studio"></a>Öğretici: Visual Studio Python ile çalışma
+# <a name="tutorial-work-with-python-in-visual-studio"></a>Öğretici: Visual Studio 'da Python ile çalışma
 
-Python güvenilir, esnek, öğrenmesi kolay, tüm işletim sistemlerinde kullanımı ücretsiz ve hem güçlü bir geliştirici topluluğu hem de birçok ücretsiz kütüphane tarafından desteklenen popüler bir programlama dilidir. Dil, web uygulamaları, web hizmetleri, masaüstü uygulamaları, komut dosyası ve bilimsel bilgi işlem de dahil olmak üzere tüm gelişim yöntemlerini destekler ve birçok üniversite, bilim adamı, gündelik geliştiriciler ve profesyonel geliştiriciler tarafından kullanılır.
+Python, güvenilir, esnek, öğrenilmesi kolay, tüm işletim sistemlerinde kullanılmak üzere ücretsiz olan ve güçlü bir geliştirici topluluğu ve çok sayıda ücretsiz kitaplık tarafından desteklenen popüler bir programlama dilidir. Dil, Web uygulamaları, Web Hizmetleri, masaüstü uygulamaları, komut dosyası ve bilimsel bilgi işlem gibi tüm geliştiriciler destekler ve birçok üniversiteler, bilimçiler, rastgele geliştiriciler ve profesyonel geliştiriciler tarafından kullanılır.
 
-Visual Studio Python için birinci sınıf dil desteği sağlar. Bu öğretici size aşağıdaki adımlarda rehberlik eder:
+Visual Studio, Python için birinci sınıf dil desteği sağlar. Bu öğretici aşağıdaki adımlarda size rehberlik eder:
 
-- [Adım 0: Kurulum](tutorial-working-with-python-in-visual-studio-step-00-installation.md)
-- [Adım 1: Python projesi oluşturma (bu makale)](#step-1-create-a-new-python-project)
-- [Adım 2: Visual Studio IntelliSense'i iş yerinde görmek için kod yazın ve çalıştırın](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)
-- [Adım 3: Etkileşimli REPL penceresinde daha fazla kod oluşturma](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)
-- [Adım 4: Visual Studio hata ayıklama tamamlanan programı çalıştırın](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
-- [Adım 5: Paketleri yükleyin ve Python ortamlarını yönetin](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)
-- [Adım 6: Git ile çalışın](tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md)
+- [Adım 0: yükleme](tutorial-working-with-python-in-visual-studio-step-00-installation.md)
+- [1. Adım: Python projesi oluşturma (Bu makale)](#step-1-create-a-new-python-project)
+- [2. Adım: Visual Studio IntelliSense 'i iş başında görmek için kodu yazma ve çalıştırma](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)
+- [3. Adım: etkileşimli REPL penceresinde daha fazla kod oluşturma](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)
+- [4. Adım: tamamlanmış programı Visual Studio hata ayıklayıcısında çalıştırma](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
+- [5. Adım: paketleri yükleyip Python ortamlarını yönetme](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)
+- [6. Adım: git ile çalışma](tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md)
 
 [!INCLUDE[tutorial-prereqs](includes/tutorial-prereqs.md)]
 
-## <a name="step-1-create-a-new-python-project"></a>Adım 1: Yeni bir Python projesi oluşturma
+## <a name="step-1-create-a-new-python-project"></a>1. Adım: yeni bir Python projesi oluşturma
 
-*Proje,* Visual Studio'nun kaynak kodu, kaynaklar, yapılandırmalar ve benzeri gibi tek bir uygulama oluşturmak için bir araya gelen tüm dosyaları nasıl yönettiğidir. Proje, tüm projenin dosyalarının yanı sıra birden çok proje arasında paylaşılan dış kaynaklar arasındaki ilişkiyi resmileştirir ve korur. Bu nedenle, projeler uygulamanızın yalnızca özel klasörlerde, komut dosyalarında, metin dosyalarında ve hatta kendi zihninizde bir projenin ilişkilerini yönetmekten çok daha kolay genişlemesine ve büyümesine olanak sağlar.
+*Proje* , Visual Studio 'nun, kaynak kodu, kaynaklar, konfigürasyonlar vb. gibi tek bir uygulama oluşturmak için birlikte gelen tüm dosyaları yönetmektedir. Proje formları, projenin tüm dosyaları ve birden çok proje arasında paylaşılan dış kaynaklar arasındaki ilişkiyi korur. Bu nedenle, projeler, uygulamanızın geçici klasörlerde, betiklere, metin dosyalarında ve hatta kendi aklından daha kolay bir şekilde genişlemesine ve büyümesine imkan sağlar.
 
-Bu öğreticide, tek, boş kod dosyası içeren basit bir proje ile başlar.
+Bu öğreticide, tek bir boş kod dosyası içeren basit bir proje ile çalışmaya başlayabilirsiniz.
 
-1. Visual Studio'da, **Yeni Proje** iletişim kutusunu gündeme getiren **Dosya** > **Yeni** > **Projesi** 'ni **(Ctrl**+**Shift**+**N)** seçin. Burada farklı dillerde şablonlara göz atın, ardından projeniz için bir tane seçin ve Visual Studio'nun dosyaları nereye yerleştirdiğinizi belirtin.
+1. Visual Studio 'da **File**  >  **New**  >  **Project** **Ctrl** + **Shift** + **Yeni proje** iletişim kutusunu gösteren dosya yeni proje ' yi (CTRL SHIFT**N**) seçin. Burada, farklı dillerdeki şablonlara gözatıp projeniz için bir tane seçin ve Visual Studio 'Nun dosyaları nereye yerleştirip nerede olduğunu belirtirsiniz.
 
-1. Python şablonlarını görüntülemek için solda **Yüklü** > **Python'u** seçin veya "Python"u arayın. Aramayı kullanmak, dil ağacındaki konumunu hatırlayamadığınız da şablonu bulmanın harika bir yoludur.
+1. Python şablonlarını görüntülemek için sol tarafta **yüklü**  >  **Python** ' ı seçin veya "Python" ifadesini arayın. Arama kullanmak, dil ağacındaki konumunu anımsayamıyorsanız bir şablonu bulmanın harika bir yoludur.
 
     ![Python projeleri gösterilen yeni proje iletişim kutusu](media/vs-getting-started-python-01-new-project.png)
 
-    Visual Studio'daki Python desteğinin Şişe, Flask ve Django çerçevelerini kullanan web uygulamaları da dahil olmak üzere bir dizi proje şablonunu nasıl içerdiğine dikkat edin. Ancak bu iznin amaçları için boş bir projeyle başlayalım.
+    Visual Studio 'da Python desteğinin, şişe, Flask ve Docgo çerçevelerini kullanan Web uygulamaları dahil olmak üzere birçok proje şablonu nasıl içerdiğini fark edebilirsiniz. Ancak bu izlenecek yolun amaçları doğrultusunda boş bir proje ile başlayalım.
 
-1. Python **Application** şablonunu seçin, proje için bir ad belirtin ve **Tamam'ı**seçin.
+1. **Python uygulama** şablonu ' nu seçin, proje için bir ad belirtin ve **Tamam**' ı seçin.
 
-1. Birkaç dakika sonra Visual Studio, Çözüm **Gezgini** penceresinde proje yapısını gösterir (1). Varsayılan kod dosyası düzenleyicide açıktır (2). **Özellikler** penceresi (3), **Çözüm Gezgini'nde**seçilen herhangi bir öğe için diskteki tam konumu da dahil olmak üzere ek bilgiler gösterir.
+1. Birkaç dakika sonra Visual Studio **Çözüm Gezgini** penceresinde (1) proje yapısını gösterir. Varsayılan kod dosyası düzenleyicide açıktır (2). **Özellikler** penceresi (3) ayrıca, **Çözüm Gezgini**' de seçilen herhangi bir öğe için, diskteki tam konumu da dahil olmak üzere ek bilgileri göstermek için de görünür.
 
-    ![Python projesi ile Çözüm Gezgini](media/vs-getting-started-python-02-windows.png)
+    ![Python projesiyle Çözüm Gezgini](media/vs-getting-started-python-02-windows.png)
 
-1. Projenizdeki dosya ve klasörlere göz attığınız **Solution Explorer'ı**tanımak için birkaç dakikanızı ayırın.
+1. Projenizdeki dosyalara ve klasörlere gözatabileceğiniz **Çözüm Gezgini**hakkında bilgi edinmek için birkaç dakikanızı ayırın.
 
-    ![Çözüm Gezgini çeşitli özellikleri göstermek için genişletilmiş](media/vs-getting-started-python-03-solution-explorer.png)
+    ![Çeşitli özellikleri göstermek için genişletilmiş Çözüm Gezgini](media/vs-getting-started-python-03-solution-explorer.png)
 
-    (1) **Yeni Proje** iletişim kutusunda vermiş olduğunuz adı kullanarak projeniz kalın olarak vurgulanır. Diskte, bu proje proje klasörünüzde bir *.pyproj* dosyası yla temsil edilir.
+    (1), **Yeni proje** iletişim kutusunda verdiğiniz adı kullanarak projenizde kalın olarak vurgulanır. Disk üzerinde bu proje, proje klasörünüzdeki bir *. pyproj* dosyası tarafından temsil edilir.
 
-    (2) En üst düzeyde varsayılan olarak projeile aynı ada sahip bir *çözüm*dür. Diskteki *bir .sln* dosyasıyla temsil edilen çözüm, bir veya daha fazla ilgili proje için bir kapsayıcıdır. Örneğin, Python uygulamanız için bir C++ uzantısı yazarsanız, bu C++ projesi aynı çözüm içinde yer alabilir. Çözüm, özel test programları için projelerle birlikte bir web hizmeti projesi de içerebilir.
+    (2) en üst düzeyde, varsayılan olarak projenizle aynı ada sahip olan bir *çözümdür*. Disk üzerinde *. sln* dosyası tarafından temsil edilen bir çözüm, bir veya daha fazla ilgili proje için bir kapsayıcıdır. Örneğin, Python uygulamanız için bir C++ uzantısı yazarsanız, bu C++ projesi aynı çözüm içinde bulunabilir. Bu çözüm, özel test programları için projelerle birlikte bir Web hizmeti projesi de içerebilir.
 
-    (3) Projenizin altında kaynak dosyaları görürsünüz, bu durumda yalnızca tek bir *.py* dosyası. Bir dosya seçilirken özellikleri **Özellikler** penceresinde görüntülenir. Bir dosyayı çift tıklatma, dosyayı o dosya için uygun olan şekilde açar.
+    (3) projenizin altında, kaynak dosyaları, bu durumda yalnızca tek bir *. Kopyala* dosyası görürsünüz. Bir dosya seçilmesi **Özellikler** penceresinde özelliklerini görüntüler. Bir dosyaya çift tıklamak söz konusu dosya için uygun olan her türlü şekilde açılır.
 
-    (4) Ayrıca proje altında **Python Ortamlar** düğüm. Genişletildiğinde, kullanabileceğiniz Python yorumlayıcılarını görürsünüz. Bu ortama yüklenen kitaplıkları görmek için bir yorumlayıcı düğümgenişletin (5).
+    (4) Ayrıca, **Python ortamları** düğümüdür. Genişletilmişse, sizin için kullanılabilen Python yorumlayıcılarını görürsünüz. Bu ortama yüklenen kitaplıkları (5) görmek için bir yorumlayıcı düğümünü genişletin.
 
-    Geçerli komutlardan oluşan bir menüye erişmek için **Solution Explorer'daki** herhangi bir düğümü veya öğeyi sağ tıklatın. Örneğin, **Yeniden Adlandırma** komutu, proje ve çözüm de dahil olmak üzere herhangi bir düğümün veya öğenin adını değiştirmenize olanak tanır.
+    İlgili komutların menüsüne erişmek için **Çözüm Gezgini** bir düğüme veya öğeye sağ tıklayın. Örneğin, **Rename** komutu, proje ve çözüm dahil olmak üzere herhangi bir düğüm veya öğenin adını değiştirmenize izin verir.
 
 ## <a name="next-step"></a>Sonraki adım
 
 > [!div class="nextstepaction"]
-> [Kod yazma ve çalıştırma](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)
+> [Kodu yaz ve Çalıştır](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)
 
-## <a name="go-deeper"></a>Daha derine inin
+## <a name="go-deeper"></a>Daha derin git
 
-- [Visual Studio'da Python projeleri](managing-python-projects-in-visual-studio.md).
-- [python.org'daki Python dili hakkında bilgi edinin](https://www.python.org)
-- [Yeni Başlayanlar için Python](https://www.python.org/about/gettingstarted/) (python.org)
+- [Visual Studio 'Da Python projeleri](managing-python-projects-in-visual-studio.md).
+- [Python.org üzerinde Python dili hakkında bilgi edinin](https://www.python.org)
+- [Yeni başlayanlar Için Python](https://www.python.org/about/gettingstarted/) (Python.org)

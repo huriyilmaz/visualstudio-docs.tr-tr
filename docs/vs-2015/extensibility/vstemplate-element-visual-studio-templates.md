@@ -13,18 +13,18 @@ caps.latest.revision: 21
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e8219f12eed091858a43c2bd5092b8b06f8320bc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62422916"
 ---
 # <a name="vstemplate-element-visual-studio-templates"></a>VSTemplate Öğesi (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Proje şablonu, öğe şablonu veya başlangıç Seti hakkındaki meta verileri içerir.  
+Proje şablonu, öğe şablonu veya Starter Kit ile ilgili tüm meta verileri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <VSTemplate Type="TemplateType" Version="x.x.x">  
@@ -41,15 +41,15 @@ Proje şablonu, öğe şablonu veya başlangıç Seti hakkındaki meta verileri 
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`Type`|Şablonu proje şablonu veya bir öğe şablonu olarak tanımlar. Bu öznitelik değeri olabilir `Project` veya `Item`.|  
-|`Version`|Şablon için bir sürüm numarasını belirtir. Şablonlarda [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] ve [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] sahip bir `Version` öznitelik değerini `3.0.0`.|  
+|`Type`|Şablonu bir proje şablonu veya bir öğe şablonu olarak tanımlar. Bu öznitelik veya değerine sahip olabilir `Project` `Item` .|  
+|`Version`|Şablon için sürüm numarasını belirtir. Ve içindeki [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] Şablonlar [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] `Version` özniteliği değeri `3.0.0` .|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve içinde biçimini tanımlar verileri belirtir **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|  
-|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu içeriğini belirtir.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|  
+|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonun içeriğini belirtir.|  
 |[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|İsteğe bağlı öğe.|  
 |[WizardData](../extensibility/wizarddata-element-visual-studio-templates.md)|İsteğe bağlı öğe.|  
   
@@ -57,10 +57,10 @@ Proje şablonu, öğe şablonu veya başlangıç Seti hakkındaki meta verileri 
  Yok.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `VSTemplate` .Vstemplate dosyaları kök öğesi bir öğedir.  
+ `VSTemplate`Öğesi. vstemplate dosyalarının kök öğesidir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir proje şablonu için meta verileri gösterir. bir [!INCLUDE[csprcs](../includes/csprcs-md.md)] uygulama.  
+ Aşağıdaki örnek, bir uygulama için bir proje şablonu meta verilerini gösterir [!INCLUDE[csprcs](../includes/csprcs-md.md)] .  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  

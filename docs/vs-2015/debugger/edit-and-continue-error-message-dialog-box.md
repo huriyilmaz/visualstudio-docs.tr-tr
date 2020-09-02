@@ -1,5 +1,5 @@
 ---
-title: Düzenle ve devam et hata iletisi iletişim kutusu | Microsoft Docs
+title: Düzenle ve devam et hata Iletisi Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -20,44 +20,44 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5437ef982309ef8595f08283f2685e93d346e764
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62428306"
 ---
 # <a name="edit-and-continue-error-message-dialog-box"></a>Düzenle ve Devam Et Hata İletisi İletişim Kutusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Düzenle ve devam et, destekleyen bir dilde hata ayıklaması yapıyorsanız, bu iletişim kutusu görüntülenir ancak **Düzenle ve devam et** yapmış olduğunuz değişiklikleri kod türü için kullanılabilir değil. Hata iletisi kutu içinde daha ayrıntılı bir açıklama sağlar. Bu iletişim kutusunu dahil görmek için olası nedenler:  
+Düzenle ve devam et 'i destekleyen bir dilde hata ayıklarken bu iletişim kutusu görüntülenir, ancak yaptığınız kod değişikliklerinin türü için **Düzenle ve devam et** kullanılamaz. Kutu içindeki hata mesajı daha ayrıntılı bir açıklama sağlar. Bu iletişim kutusunu görmenizin olası nedenleri şunlardır:  
   
-- Yönetilemeyen hata ayıklama etkinleştirildiğinde, yönetilen kod düzenleme denedi. Düzenle ve devam et seçenekleri çalışmaz karışık mod hata ayıklama ile.  
+- Yönetilmeyen hata ayıklama etkinleştirildiğinde yönetilen kodu düzenlemeye çalıştınız. Düzenle ve devam et karışık modda hata ayıklama ile çalışmaz.  
   
-- SQL Server kod düzenleme denedi.  
+- SQL Server kodu düzenlemeye çalıştınız.  
   
-- Kod bir Dr hata ayıklarken Düzenle denedi. Watson dökümü.  
+- Dr. Watson dökümünden hata ayıklarken kodu düzenlemeye çalıştınız.  
   
-- İşlenmeyen bir özel durum oluştuktan sonra kod ve seçeneği düzenlemeye çalıştığınız "**işlenmemiş özel durumlarda çağrı yığınını geriye doğru izleme**" seçilmedi.  
+- İşlenmeyen bir özel durum oluştuğundan kodu düzenlemeye çalıştınız ve "**işlenmemiş özel durumlarla çağrı yığınını geriye doğru izleme**" seçeneği işaretli değil.  
   
-- Kod katıştırılmış çalışma zamanı uygulamanın hata ayıklarken Düzenle denedi.  
+- Gömülü çalışma zamanı uygulamasında hata ayıklarken kodu düzenlemeye çalıştınız.  
   
-- Başlangıç yerine ekli bir program kodunda düzenlemeye çalıştığınız **hata ayıklama** menüsü.  
+- **Hata ayıklama** menüsünden başlamak yerine, eklediğiniz bir programda kodu düzenlemeye çalıştınız.  
   
-- En iyi duruma getirilmiş kod düzenleme denedi.  
+- İyileştirilmiş kodu düzenlemeye çalıştınız.  
   
-- Yönetilen kodu 64 bitlik bir uygulama hedeflendiğinde Düzenle denedi. İsterseniz kullanım Düzenle ve devam et, hedef x86 için ayarlamanız gerekir. (*Proje* **özellikleri**, **derleme** sekmesinde **Gelişmiş derleyici** ayarı.).  
+- Hedef, 64 bitlik bir uygulama olduğunda yönetilen kodu düzenlemeye çalıştınız. Düzenle ve devam et ' i kullanmak istiyorsanız, hedefi x86 olarak ayarlamanız gerekir. (*Proje* **özellikleri**, **derleme** sekmesi, **Gelişmiş derleyici** ayarı.).  
   
-- Hata ayıklama sırasında değiştirildi ve yeniden yüklendi bütünleştirilmiş kodu düzenleme denedi.  
+- Hata ayıklama sırasında değiştirilmiş ve yeniden yüklenmiş bir derlemede kodu düzenlemeye çalıştınız.  
   
-- Yüklenmemiş olan bütünleştirilmiş kodu düzenleme denedi.  
+- Yüklenmemiş bir derlemede kodu düzenlemeye çalıştınız.  
   
-- (Yeni sürümü derleme hataları olduğundan) eski bir sürümünü, uygulamanızın hata ayıklama başlangıç.  
+- Uygulamanızın eski bir sürümünde hata ayıklamaya başladıysanız (yeni sürümde derleme hataları olduğundan).  
   
-- Bunu çalışırken kod düzenleme denedi.  
+- Çalışırken kodu düzenlemeye çalıştınız.  
   
 ## <a name="uielement-list"></a>UIElement Listesi  
- **TAMAM**  
- İletişim kutusundan çıkmak ve hemen önceki düzenleme denemesi iptal edin.  
+ **Tamam**  
+ İletişim kutusundan çıkın ve hemen önceki düzenleme girişimini iptal edin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Desteklenen Kod Değişiklikleri (C++)](../debugger/supported-code-changes-cpp.md)
+ [Desteklenen kod değişiklikleri (C++)](../debugger/supported-code-changes-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject2::GetBaseIndices | Microsoft Docs
+title: 'IDebugArrayObject2:: Getbasedizinler | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3c10fb65ec698bf9c5c9b7623b29e2f47851afe8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62423609"
 ---
 # <a name="idebugarrayobject2getbaseindices"></a>IDebugArrayObject2::GetBaseIndices
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Dizideki boyutların sayısı verilen her dizin için temel dizin (alt sınırı) alır.  
+Dizideki boyutların sayısını verilen her bir dizin için temel dizinleri (alt sınır) alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetBaseIndices (  
@@ -41,16 +41,16 @@ int GetBaseIndices (
   
 #### <a name="parameters"></a>Parametreler  
  `dwRank`  
- [in] Dizi boyutları (derece) sayısı.  
+ 'ndaki Dizinin boyut (derece) sayısı.  
   
  `dwIndices`  
- [out] Dizi için temel dizin (alt sınırı).  
+ dışı Dizi için temel dizinler (alt sınırlar).  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Örneğin, bu işlev aşağıdaki C# kod tarafından oluşturulan dizi ' 5' döndürür:  
+ Örnek olarak, bu işlev aşağıdaki C# kodu tarafından oluşturulan dizi için ' 5 ' döndürür:  
   
 ```  
 int[] lengths = { 12 };  

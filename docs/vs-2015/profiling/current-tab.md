@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b3c901803d8ab2b35624d185e62588c72a3586ca
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62537150"
 ---
 # <a name="current-tab"></a>Geçerli Sekme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tıklayarak **geçerli** sekmesinde, gördüğünüz bir çağrı yığını (varsa) olan geçerli seçimi noktası Zaman Çizelgesi'nde en yakın bir CPU iş parçacığı segment seçtiyseniz.  Bu durumda, seçimi noktası bir siyah ok ya da giriş işaretini zaman çizelgesinin üzerindeki tarafından temsil edilir. Bir engelleme segmentini seçildiğinde hiçbir yürütme olduğundan giriş işaretini görüntülenmez. Ancak, kesim hala vurgulanır ve çağrı yığını görüntülenir.  
+**Geçerli** sekmeye tıklayarak, bir CPU iş parçacığı kesimi seçildiyse, zaman çizelgesinde geçerli seçim noktasına en yakın olan çağrı yığınını (varsa) görebilirsiniz.  Bu durumda seçim noktası, zaman çizelgesinin üzerindeki bir siyah ok veya şapka ile temsil edilir. Engelleyici bir segment seçildiğinde, bir yürütme olmadığından giriş işareti görüntülenmez. Ancak, segment hala vurgulanmıştır ve bir çağrı yığını görüntülenir.  
   
- **Geçerli** sekmesi ayrıca, DirectX etkinliği kesimleri, işaretçileri ve g/ç erişimi hakkındaki bilgileri görüntüler.  DirectX etkinliği kesimine yönelik donanım kuyruk tarafından işlenen DMA paket yolu hakkında bilgi görüntülenir.  İşaretçileri için açıklama ve işaret türü hakkında bilgi görüntülenir.  G/ç erişimi için dosya ve okunan veya yazılan bayt sayısı hakkında bilgiler görüntülenir.  
+ **Geçerli** sekme, DirectX etkinlik kesimleri, işaretleyiciler ve g/ç erişimiyle ilgili bilgileri de görüntüler.  DirectX etkinlik kesimleri için, DMA paketlerinin donanım kuyruğu tarafından işlenme şekli hakkında bilgi görüntülenir.  İşaretleyiciler için, açıklama ve işaret türü hakkında bilgi görüntülenir.  G/ç erişimi için, dosya ve okunan veya yazılan bayt sayısı hakkında bilgi görüntülenir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

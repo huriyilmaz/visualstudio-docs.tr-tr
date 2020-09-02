@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_sizeInUdt | Microsoft Docs
+title: 'IDiaSymbol:: get_sizeInUdt | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,18 +12,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 147368e19bb1bcc1ccaa0bf94823df2e3f73a4be
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62428371"
 ---
-# <a name="idiasymbolgetsizeinudt"></a>IDiaSymbol::get_sizeInUdt
+# <a name="idiasymbolget_sizeinudt"></a>IDiaSymbol::get_sizeInUdt
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Kullanıcı tanımlı bir tür üyesi VHD'nin boyutunu alır.  
+Kullanıcı tanımlı bir türün bir üyesinin boyutunu alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT get_sizeInUdt(   
@@ -32,10 +32,10 @@ HRESULT get_sizeInUdt(
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Bir işaretçi bir `DWORD` üye boyutunu belirtir.  
+ dışı `DWORD` Üyenin boyutunu belirten bir işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

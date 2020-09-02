@@ -22,34 +22,34 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 24782fee98cff09513ff2b4d1606f2be0bd9fbd2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62428561"
 ---
 # <a name="edit-and-continue-visual-basic"></a>Düzenle ve Devam Et (Visual Basic)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Düzenle ve devam et özelliği olan [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] , hata ayıklama kesme modunda yürütülürken kodunuzu değiştirmenize olanak sağlar. Kod düzenlemeler uygulandıktan sonra yeni düzenlemeler yerinde ile kod yürütmeyi devam etmek ve etkisine bakın.  
+Düzenle ve devam et, hata ayıklama için bir özelliktir ve [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Bu, kesme modunda yürütülürken kodunuzu değiştirmenize olanak sağlar. Kod düzenlemeleri uygulandıktan sonra, yeni düzenlemelerle birlikte kod yürütmeyi sürdürmeye ve etkiyi görmenizi sağlayabilirsiniz.  
   
- Düzen ve kesme moduna her özellik devam edebilirsiniz. Kesme modu, yönerge işaretçisini, kaynak penceresinde, sarı bir ok noktalarına sonraki yürütülür ve bir yöntem veya özellik gövdesi içindeki yürütülebilir bir deyimin üzerinde bulunan satır. Kesme modunda yürütülebilir deyimleri, neredeyse her tür değişiklik yapabilirsiniz ve temel alınan projeye değişiklik eklenecektir. Kesme modundayken, Bununla birlikte, genellikle ortak yöntemler, genel alanlar veya sınıf bildirimleri gibi bildirim deyimleri değiştirmek için izin verilmez.  
+ Kesme moduna girerken Düzenle ve devam et özelliğini kullanabilirsiniz. Kesme modunda, yönerge işaretçisi, kaynak penceredeki sarı bir ok ucu, bir sonraki çalıştırılacak satıra işaret eder ve bir yöntem veya Özellik gövdesi içindeki yürütülebilir bir bildirimde bulunur. Kesme modundayken çalıştırılabilir deyimlerde neredeyse her türlü değişikliği yapabilirsiniz ve değişiklik temel alınan projeye dahil edilir. Ancak kesme modundayken, genel yöntemler, ortak alanlar veya sınıf bildirimleri gibi bildirim deyimlerini genellikle değiştirmenize izin verilmez.  
   
- Yetkisiz bir düzenleme yaptığınız değişikliği mor dalgalı çizgi ile işaretlenmiş ve bir görev görev listesinde görüntülenir. Düzenle ve devam et kullanmaya devam etmek isterseniz, yetkisiz bir düzenlemeyi geri almanız gerekir. Yetkisiz olduğu belirli düzenlemeleri dış Düzenle ve devam et yapıldığında izin verilebilir. Yetkisiz bir düzenleme sonuçlarını korumak istiyorsanız, hata ayıklamayı durdurmak ve uygulamanızı yeniden başlatın.  
+ Yetkisiz bir düzenleme yaptığınızda, değişiklik mor dalgalı alt çizgiyle işaretlenir ve Görev Listesi bir görev görüntülenir. Düzenle ve devam et ' i kullanmaya devam etmek istiyorsanız yetkisiz düzenlemeyi geri almalısınız. Düzenle ve devam et dışında yapıldığında, bazı yetkisiz düzenlemelere izin verilir. Böyle bir yetkisiz düzenleme sonuçlarını sürdürmek istiyorsanız, hata ayıklamayı durdurup uygulamanızı yeniden başlatmanız gerekir.  
   
- Düzenle ve devam .NET Framework 4.5.1'i hedefleyen 64-bit projeler için desteklenir.  
+ Düzenle ve devam et, .NET Framework 4.5.1 ' i hedefleyen 64-bit projeler için desteklenir.  
   
- Düzenle ve devam et desteklenmez kullanarak hata ayıklamaya başladığınızda **iliştirme**. Düzenle ve devam et desteklenmez en iyi duruma getirilmiş kod, karışık yönetilen ve yerel kod veya Compact Framework (Akıllı cihaz) projeler için.  
+ **Işleme İliştir**kullanarak hata ayıklamaya başladığınızda Düzenle ve devam et desteklenmez. En iyi duruma getirilmiş kod, karma yönetilen ve yerel kod veya Compact Framework (akıllı cihaz) projeleri için Düzenle ve devam et desteklenmez.  
   
- Bu bölümdeki konularda, bu özelliği kullanmak nasıl ve ne tür değişiklikler hakkında ek ayrıntılar izin verilmeyen sağlar.  
+ Bu bölümdeki konularda, bu özelliğin nasıl kullanılacağı ve ne tür değişikliklere izin verilmediğinden ilgili ek ayrıntılar sağlanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Düzenle ve Devam Et ile Kesme Modunda Düzenleme Uygulama](../debugger/how-to-apply-edits-in-break-mode-with-edit-and-continue.md)  
- Kodu kesme modunda düzenlemeleri uygulama açıklanmaktadır.  
+ [Nasıl Yapılır: Düzenle ve Devam Et ile Kesme Modunda Düzenlemeleri Uygulama](../debugger/how-to-apply-edits-in-break-mode-with-edit-and-continue.md)  
+ Kesme modunda kod düzenlemelerinin nasıl uygulanacağını açıklar.  
   
- [Visual Basic Düzenle ve Devam Et Özelliğinde Desteklenmeyen Düzenlemeler](../debugger/unsupported-edits-in-visual-basic-edit-and-continue.md)  
- Ne düzenlemeleri türleri olamaz açıklar gerçekleştirilen [!INCLUDE[vb_current_short](../includes/vb-current-short-md.md)] Düzenle ve devam et.  
+ [Visual Basic Düzenle ve Devam Et'de Desteklenmeyen Düzenlemeler](../debugger/unsupported-edits-in-visual-basic-edit-and-continue.md)  
+ Düzenle ve devam et 'de hangi düzenleme türlerinin gerçekleştirilebileceğini açıklar [!INCLUDE[vb_current_short](../includes/vb-current-short-md.md)] .  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Düzenle ve Devam Et](../debugger/edit-and-continue.md)  
- Düzenle ve devam et üzerinde konuların listesini sağlar.
+ Düzenle ve devam et ile ilgili konuların bir listesini sağlar.

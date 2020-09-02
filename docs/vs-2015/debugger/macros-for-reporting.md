@@ -1,5 +1,5 @@
 ---
-title: Raporlama makroları | Microsoft Docs
+title: Raporlama için makrolar | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -25,23 +25,23 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e4aee33d571f95e24a359fa2bc7e12ae8d64eae0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62431634"
 ---
 # <a name="macros-for-reporting"></a>Raporlama Makroları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kullanabileceğiniz **_RPTn**, ve **_RPTFn** CRTDBG içinde tanımlı makrolar,. Kullanımını değiştirmek için H `printf` hata ayıklama için deyimleri. Bu makrolar, sürümde otomatik olarak kaybolur ne zaman yapı **_DEBUG** içine alınmaları gerekmez. Bu nedenle, tanımlanmamış **#ifdef**s.  
+**_RPTn**ve **_RPTFn** makrolarını, Crtdbg içinde tanımlanan şekilde kullanabilirsiniz. H, `printf` hata ayıklama için deyimlerin kullanımını değiştirmek üzere. **_DEBUG** tanımlanmamışsa, bu makrolar otomatik olarak yayın derlemesinde kaybolur, bu nedenle bunları **#ifdef**s 'ye almanız gerekmez.  
   
-|Makrosu|Açıklama|  
+|Makroya|Açıklama|  
 |-----------|-----------------|  
-|**_RPT0**, **_RPT1**, **_RPT2**, **_RPT3**, **_RPT4**|Bir ileti dizesi ve sıfır dört bağımsız değişken olarak çıkarır. _RPT1 için **_RPT4**, printf stili bir biçimlendirme dizesi bağımsız değişkenler için ileti dizesi görür.|  
-|**_RPTF0**, **_RPTF1**, **,_RPTF2**, **_RPTF4**|Aynı **_RPTn** , fakat bu makrolar da makro bulunduğu dosyanın adı ve satır numarası çıktı.|  
+|**_RPT0**, **_RPT1**, **_RPT2**, **_RPT3**, **_RPT4**|İleti dizesi ve sıfırdan dört bağımsız değişken verir. **_RPT4**üzerinden _RPT1 için, ileti dizesi bağımsız değişkenler için bir printf stili biçimlendirme dizesi işlevi görür.|  
+|**_RPTF0**, **_RPTF1**, **, _RPTF2**, **_RPTF4**|**_RPTn** ile aynıdır, ancak bu makrolar, makronun bulunduğu dosya adı ve satır numarasını da çıktı olarak alır.|  
   
- Aşağıdaki örnek göz önünde bulundurun:  
+ Aşağıdaki örneği inceleyin:  
   
 ```  
 #ifdef _DEBUG  
@@ -52,13 +52,13 @@ Kullanabileceğiniz **_RPTn**, ve **_RPTFn** CRTDBG içinde tanımlı makrolar,.
 #endif  
 ```  
   
- Bu kodu değerini çıkarır `someVar` ve `otherVar` için **stdout**. Aşağıdaki çağrısını kullanabilirsiniz `_RPTF2` bildirme aynı değerler ve ayrıca, dosya adı ve satır numarası:  
+ Bu kod, `someVar` ve değerlerini `otherVar` **stdout**olarak verir. `_RPTF2`Aynı değerleri ve ek olarak dosya adını ve satır numarasını raporlamak için aşağıdaki çağrısını kullanabilirsiniz:  
   
 ```  
 if (someVar > MAX_SOMEVAR) _RPTF2(_CRT_WARN, "In NameOfThisFunc( ), someVar= %d, otherVar= %d\n", someVar, otherVar );  
 ```  
   
- Belirli bir uygulama, C çalışma zamanı kitaplığı ile sağlanan makroları sağlamadığı bildirme hatalarını ayıklama gerektiğini fark ederseniz, özellikle kendi gereksinimlerinizi karşılayacak şekilde tasarlanmış bir makro yazabilirsiniz. Üstbilgi dosyalarınızın her birinde Örneğin, adında bir makro tanımlamak için aşağıdaki gibi kod içerebilir **ALERT_IF2**:  
+ Belirli bir uygulamanın, C çalışma zamanı kitaplığı ile sağlanan makroların sağlamadığına ilişkin hata ayıklama için gerekli olduğunu fark ederseniz, özellikle kendi gereksinimlerinize uyacak şekilde tasarlanan bir makro yazabilirsiniz. Başlık dosyalarından birinde, örneğin, **ALERT_IF2**adlı bir makro tanımlamak için aşağıdakine benzer bir kod ekleyebilirsiniz:  
   
 ```  
 #ifndef _DEBUG                  /* For RELEASE builds */  
@@ -74,14 +74,14 @@ if (someVar > MAX_SOMEVAR) _RPTF2(_CRT_WARN, "In NameOfThisFunc( ), someVar= %d,
 #endif  
 ```  
   
- Çağrı **ALERT_IF2** tüm işlevlerini gerçekleştirebilir **printf** bu konunun başındaki kod:  
+ **ALERT_IF2** bir çağrı, bu konunun başlangıcında **printf** kodunun tüm işlevlerini gerçekleştirebilir:  
   
 ```  
 ALERT_IF2(someVar > MAX_SOMEVAR, "OVERFLOW! In NameOfThisFunc( ),   
 someVar=%d, otherVar=%d.\n", someVar, otherVar );  
 ```  
   
- Özel bir makro daha az veya farklı hedeflere (ne daha uygun olduğuna bağlı olarak) rapor için kolayca değiştirilebilir çünkü hata ayıklama gereksinimleriniz değiştikçe bu yaklaşım özellikle yararlı olabilir.  
+ Özel bir makro farklı hedeflere daha fazla veya daha az bilgi bildirmek üzere kolayca değiştirilebildiğinden (daha uygun olan seçeneklere bağlı olarak), hata ayıklama gereksinimleriniz geliştikçe bu yaklaşım özellikle yararlı olabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [CRT Hata Ayıklama Teknikleri](../debugger/crt-debugging-techniques.md)

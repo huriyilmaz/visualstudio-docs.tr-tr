@@ -1,5 +1,5 @@
 ---
-title: Kullanarak yalıtılmış Kabuğu değiştirme. Pkgundef dosya | Microsoft Docs
+title: Kullanarak yalıtılmış Kabuğu değiştirme. Pkgundef dosyası | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,39 +11,39 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: eab02fe900e96ba37c63faae535974788f99ba78
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62538400"
 ---
-# <a name="modifying-the-isolated-shell-by-using-the-pkgundef-file"></a>Kullanarak yalıtılmış Kabuğu değiştirme. Pkgundef dosyası
+# <a name="modifying-the-isolated-shell-by-using-the-pkgundef-file"></a>.Pkgundef Dosyası Kullanarak Yalıtılmış Kabuğu Değiştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yalıtılmış Kabuk uygulaması belirtilen kayıt defteri girişlerini dışarıda bırakmak için .pkgundef dosyası değiştirebilirsiniz. Genellikle, bir bilgisayarda, bir uygulama başlatıldığında ilk kez uygulamanın kök kayıt defteri anahtarı için Visual Studio kayıt defteri girdilerinin Visual Studio Kabuğu kopyalar. Bu, şu anda yüklü VSPackages yönelik başvuruları içerir.  
+Bir yalıtılmış Kabuk uygulamasından belirtilen kayıt defteri girişlerini hariç tutmak için. pkgundef dosyasını değiştirebilirsiniz. Genellikle, bir uygulama bir bilgisayarda ilk kez başlatıldığında, Visual Studio Kabuğu mevcut Visual Studio kayıt defteri girişlerini uygulamanın kök kayıt defteri anahtarına kopyalar. Bu, şu anda yüklü VSPackages 'e yönelik tüm başvuruları içerir.  
   
- Bir yalıtılmış Kabuk uygulamasından bir özel kayıt defteri girişi dışlamak için paket anahtarı giriş tarafından izlenen uygulama .pkgundef dosyası ekleyin. Yalnızca .pkgdef dosyası olduğu gibi anahtarları ve girişleri temsil edilir. diğer bir deyişle [$RootKey $] veya [$RootKey$\\*alt*] ve "*giriş*" =*değer*burada *alt* etkilemek için alt *giriş* kaldırmak için giriş ve *değer* ya da `""` veya `dword:00000000`.  
+ Yalıtılmış bir kabuk uygulamasından belirli bir kayıt defteri girişini dışlamak için, anahtar tarafından izlenen uygulama. pkgundef dosyasına ekleyin. Anahtarlar ve girdiler. pkgdef dosyasında olduğu gibi gösterilir; diğer bir deyişle, [$RootKey $] veya [$RootKey $ \\ *AltAnahtar*] ve "*Entry*" =*değeri*, burada *alt anahtar* , kaldırılacak olan anahtar, *giriş* , kaldırılacak giriştir ve *değeri* ya da olur `""` `dword:00000000` .  
   
- Dışlanacak yalnızca kayıt defteri anahtarından birden çok girişi hariç tutmak her giriş için bir satır tarafından izlenen anahtarı bir kez listeler.  
+ Birden çok girişi bir kayıt defteri anahtarından dışlamak için, anahtarı tek bir kez listeleyerek her girdinin hariç tutulması için bir satır gelmelidir.  
   
- Yalıtılmış Kabuk uygulaması tüm kayıt defteri anahtarı tutmak için anahtar için uygulama .pkgundef dosyası ekleyin, ancak bu anahtar için kayıt defteri girdilerini belirtmeyin.  
+ Yalıtılmış bir kabuk uygulamasından tüm kayıt defteri anahtarını dışlamak için, anahtarı Application. pkgundef dosyasına ekleyin, ancak bu anahtar için herhangi bir kayıt defteri girişi belirtmeyin.  
   
- .Pkgundef dosyaya açıklama ekleyebilirsiniz. Tek satırlı açıklama iki eğik çizgi ilk iki karakter olmalıdır.  
+ . Pkgundef dosyasına yorum ekleyebilirsiniz. Tek satırlık bir yorum, ilk iki karakterle iki eğik çizgiye sahip olmalıdır.  
   
- Örneğin, kaldırmak için **veritabanına bağlan** ve **hizmet vermemesini r Bağlan** komutlarını **Araçları** menüsünde, satırın açıklamasını kaldırın:  
+ Örneğin, **Araçlar** menüsünde **veritabanına Bağlan** ve **r 'ye Bağlan** komutlarını kaldırmak için satırın açıklamasını kaldırabilirsiniz:  
   
 ```  
 [$RootKey$\Packages\{8D8529D3-625D-4496-8354-3DAD630ECC1B}]  
 ```  
   
- ve satır ekleyin:  
+ ve şu satırı ekleyin:  
   
 ```  
 [$RootKey$\Packages\{198E76C1-34C0-424D-9957-B3EBD80265FB}]  
 ```  
   
- uygulamanın .pkgundef dosyası için.  
+ uygulamanın. pkgundef dosyasına.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Studio özelliklerinin paket GUID'leri](../extensibility/package-guids-of-visual-studio-features.md)   
+ [Visual Studio özelliklerinin paket GUID 'Leri](../extensibility/package-guids-of-visual-studio-features.md)   
  [Yalıtılmış Kabuğu Özelleştirme](../extensibility/customizing-the-isolated-shell.md)

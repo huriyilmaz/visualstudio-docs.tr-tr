@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider2::GetTypesByName | Microsoft Docs
+title: 'IDebugComPlusSymbolProvider2:: GetTypesByName | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 40eb29bab07e657d22cd9559fa53fa3ced2139ff
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62540621"
 ---
 # <a name="idebugcomplussymbolprovider2gettypesbyname"></a>IDebugComPlusSymbolProvider2::GetTypesByName
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Adı verilen bir türü alır.  
+Adı verilen bir tür alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetTypesByName(  
@@ -43,22 +43,22 @@ int GetTypesByName(
   
 #### <a name="parameters"></a>Parametreler  
  `pszClassName`  
- [in] Türün adı.  
+ 'ndaki Türün adı.  
   
  `nameMatch`  
- [in] Türü eşleşen, örneğin, büyük/küçük harfe seçer. Bir değer [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) sabit listesi.  
+ 'ndaki Eşleşme türünü (örneğin, büyük/küçük harfe duyarlı) seçer. [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) numaralandırmasından bir değer.  
   
  `ppEnum`  
- [out] Belirtilen ada sahip türlerini içeren bir numaralandırıcı.  
+ dışı Verilen ada sahip türü veya türleri içeren bir Numaralandırıcı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Genel türler, adı için konum için ' listesi\<int >' veya ' listesi\<int, int >' 'List' olacaktır. Türleri aynı ada sahip birden çok modül içinde görünüp görünmediğini `ppEnum` parametresi tüm kopyalarını içerir. Kullanmak zorunda [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) ve temel alınarak ayırt `guidModule` parametresi.  
+ Genel türler için, ' List \<int> ' veya ' List ' için aranacak ad \<int,int> ' List ' olur. Aynı ada sahip türler birden çok modülde görünürse, `ppEnum` parametre tüm kopyaları içerecektir. [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) kullanmanız ve parametreye göre ayırt etmeniz gerekir `guidModule` .  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **CDebugSymbolProvider** gösteren nesne [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) arabirimi.  
+ Aşağıdaki örnek, [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::GetTypesByName(  

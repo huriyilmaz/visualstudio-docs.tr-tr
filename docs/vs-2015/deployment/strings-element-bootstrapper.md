@@ -1,5 +1,5 @@
 ---
-title: '&lt;Dizeleri&gt; öğesi (Önyükleyici) | Microsoft Docs'
+title: '&lt;Dizeler &gt; öğesi (önyükleyici) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -20,18 +20,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: dd799020e50121e2f3e9a6ba7ad90fd79a1241cb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62421531"
 ---
-# <a name="ltstringsgt-element-bootstrapper"></a>&lt;Dizeleri&gt; öğesi (Önyükleyici)
+# <a name="ltstringsgt-element-bootstrapper"></a>&lt;Dizeler &gt; öğesi (önyükleyici)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Ürün adları, paket adları ve yükleme hata iletileri için yerelleştirilmiş dizeleri tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Strings>  
@@ -43,19 +43,19 @@ ms.locfileid: "62421531"
 ```  
   
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler  
- `Strings` Öğesi alt öğesi olan `Package` öğesi. Bu öznitelikleri yok.  
+ `Strings`Öğesi, öğesinin bir alt öğesidir `Package` . Hiç özniteliği yok.  
   
 ## <a name="string"></a>Dize  
- `String` Öğesi alt öğesi olan `Strings` öğesi. A `Strings` öğesi bir veya daha fazla olabilir `String` öğeleri.  
+ `String`Öğesi, öğesinin bir alt öğesidir `Strings` . Bir `Strings` öğenin bir veya daha fazla öğesi olabilir `String` .  
   
- `String` Aşağıdaki özniteliklere sahiptir.  
+ `String` aşağıdaki özniteliğe sahiptir.  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`Name`|Gerekli. Dize adı.|  
+|`Name`|Gereklidir. Dizenin adı.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği için İngilizce dizelerini belirtir [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] yükleyici.  
+ Aşağıdaki kod örneği, yükleyicinin tüm Ingilizce dizelerini belirtir [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .  
   
 ```  
 <Strings>  
@@ -77,4 +77,4 @@ ms.locfileid: "62421531"
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [\<Package> Öğesi](../deployment/package-element-bootstrapper.md)
+ [\<Package> Dosyalarında](../deployment/package-element-bootstrapper.md)

@@ -13,10 +13,10 @@ caps.latest.revision: 25
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a15a08dc674940897bf465946efd2ec350cc7c42
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62422129"
 ---
 # <a name="visual-studio-template-schema-reference"></a>Visual Studio Şablon Şeması Başvurusu
@@ -24,34 +24,34 @@ ms.locfileid: "62422129"
 
 Bu bölüm; proje şablonları, öğe şablonları ve Başlangıç Paketleri için meta verileri depolayan .vstemplate dosyalarındaki XML öğeleri hakkında bilgileri içerir.  
   
- Özel vstemplate dosyalarını doğrulamak için vstemplate.xsd'yi kullanabilirsiniz. Bu dosya şu adresten edinilebilir... \\ *Visual Studio yükleme klasörü*\Xml\Schemas\1033\vstemplate.xsd.  
+ Özel vstemplate dosyalarını doğrulamak için vstemplate.xsd'yi kullanabilirsiniz. Bu dosya, adresinde bulunabilir. \\ *Visual Studio yükleme klasörü*\Xml\Schemas\1033\vstemplate.xsd.  
   
 |Öğe|Alt Öğeler|Öznitelikler|  
 |-------------|--------------------|----------------|  
-|[AppliesTo](../extensibility/appliesto-element-visual-studio-templates.md)|None|None|  
-|[Assembly (şablon)](../extensibility/assembly-element-visual-studio-templates.md)|--|--|  
-|[Assembly (Sihirbaz uzantısı)](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|--|--|  
+|[AppliesTo](../extensibility/appliesto-element-visual-studio-templates.md)|Hiçbiri|Hiçbiri|  
+|[Bütünleştirilmiş kod (şablon)](../extensibility/assembly-element-visual-studio-templates.md)|--|--|  
+|[Bütünleştirilmiş kod (sihirbaz uzantısı)](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|--|--|  
 |[BuildProjectOnload](../extensibility/buildprojectonload-element-visual-studio-templates.md)|--|--|  
-|[Createınplace](../extensibility/createinplace-visual-studio-templates.md)|--|--|  
+|[CreateInPlace](../extensibility/createinplace-visual-studio-templates.md)|--|--|  
 |[CreateNewFolder](../extensibility/createnewfolder-element-visual-studio-templates.md)|--|--|  
 |[CustomDataSignature](../extensibility/customdatasignature-element-visual-studio-templates.md)|--|--|  
-|[CustomParameter](../extensibility/customparameter-element-visual-studio-templates.md)|--|Ad<br /><br /> Değer|  
+|[CustomParameter](../extensibility/customparameter-element-visual-studio-templates.md)|--|Name<br /><br /> Değer|  
 |[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|CustomParameter|--|  
 |[DefaultName](../extensibility/defaultname-element-visual-studio-templates.md)|--|--|  
-|[Açıklama](../extensibility/description-element-visual-studio-templates.md)|--|Paket<br /><br /> Kimlik|  
+|[Açıklama](../extensibility/description-element-visual-studio-templates.md)|--|Paket<br /><br /> ID|  
 |[EnableEditOfLocationField](../extensibility/enableeditoflocationfield-element-visual-studio-templates.md)|--|--|  
 |[EnableLocationBrowseButton](../extensibility/enablelocationbrowsebutton-element-visual-studio-templates.md)|--|--|  
-|[Klasör](../extensibility/folder-element-visual-studio-project-templates.md)|ProjectItem<br /><br /> Klasör|Ad|  
+|[Klasör](../extensibility/folder-element-visual-studio-project-templates.md)|ProjectItem<br /><br /> Klasör|Name|  
 ||[kullanım dışı]|--|  
 |[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|--|--|  
-|[Gizli](../extensibility/hidden-element-visual-studio-templates.md)|--|--|  
-|[Simgesi](../extensibility/icon-element-visual-studio-templates.md)|--|Paket<br /><br /> Kimlik|  
+|[Lene](../extensibility/hidden-element-visual-studio-templates.md)|--|--|  
+|[Simg](../extensibility/icon-element-visual-studio-templates.md)|--|Paket<br /><br /> ID|  
 |[LocationField](../extensibility/locationfield-element-visual-studio-project-templates.md)|--|--|  
 |[LocationFieldMRUPrefix](../extensibility/locationfieldmruprefix-element-visual-studio-templates.md)|--|--|  
 |[MaxFrameworkVersion](../extensibility/maxframeworkversion-element-visual-studio-templates.md)|--|--|  
-|[Ad](../extensibility/name-element-visual-studio-templates.md)|--|Paket<br /><br /> Kimlik|  
+|[Ad](../extensibility/name-element-visual-studio-templates.md)|--|Paket<br /><br /> ID|  
 |[NumberOfParentCategoriesToRollUp](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md)|--|--|  
-|[Previewımage](../extensibility/previewimage-element-visual-studio-templates.md)|--|--|  
+|[PreviewImage](../extensibility/previewimage-element-visual-studio-templates.md)|--|--|  
 |[Project](../extensibility/project-element-visual-studio-templates.md)|Klasör<br /><br /> ProjectItem|Dosya<br /><br /> TargetFileName<br /><br /> ReplaceParameters|  
 |[ProjectCollection](../extensibility/projectcollection-element-visual-studio-templates.md)|ProjectTemplateLink<br /><br /> SolutionFolder|--|  
 |[ProjectItem (öğe şablonları)](../extensibility/projectitem-element-visual-studio-item-templates.md)|--|SubType<br /><br /> CustomTool<br /><br /> ItemType<br /><br /> ReplaceParameters<br /><br /> TargetFileName|  
@@ -61,26 +61,26 @@ Bu bölüm; proje şablonları, öğe şablonları ve Başlangıç Paketleri iç
 |[ProjectType](../extensibility/projecttype-element-visual-studio-templates.md)|--|--|  
 |[PromptForSaveOnCreation](../extensibility/promptforsaveoncreation-element-visual-studio-templates.md)|--|--|  
 |[ProvideDefaultName](../extensibility/providedefaultname-element-visual-studio-templates.md)|--|--|  
-|[Başvuru](../extensibility/reference-element-visual-studio-templates.md)|Derleme|--|  
+|[Başvuru](../extensibility/reference-element-visual-studio-templates.md)|Bütünleştirilmiş Kod|--|  
 |[Başvurular](../extensibility/references-element-visual-studio-templates.md)|Başvuru|--|  
 |[RequiredFrameworkVersion](../extensibility/requiredframeworkversion-element-visual-studio-templates.md)|--|--|  
 |[RequiredPlatformVersion](../extensibility/requiredplatformversion-element-visual-studio-templates.md)|--|Sürüm|  
 |[SDKReference](../extensibility/sdkreference-element-visual-studio-templates.md)|--|Paket|  
 |[ShowByDefault](../extensibility/showbydefault-visual-studio-templates.md)|--|--|  
-|[SolutionFolder](../extensibility/solutionfolder-element-visual-studio-templates.md)|ProjectTemplateLink<br /><br /> SolutionFolder|Ad|  
+|[SolutionFolder](../extensibility/solutionfolder-element-visual-studio-templates.md)|ProjectTemplateLink<br /><br /> SolutionFolder|Name|  
 |[SortOrder](../extensibility/sortorder-element-visual-studio-templates.md)|--|--|  
 |[SupportsCodeSeparation](../extensibility/supportscodeseparation-element-visual-studio-templates.md)|--|--|  
 |[SupportsLanguageDropDown](../extensibility/supportslanguagedropdown-element-visual-studio-templates.md)|--|--|  
 |[SupportsMasterPage](../extensibility/supportsmasterpage-element-visual-studio-templates.md)|--|--|  
 |[TargetPlatformName](../extensibility/targetplatformname-element-visual-studio-templates.md)|RequiredPlatformVersion|--|  
-|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|ProjectCollection<br /><br /> Project<br /><br /> Referanslar<br /><br /> ProjectItem<br /><br /> CustomParameters|[BuildOnLoad](../extensibility/buildprojectonload-visual-studio-templates.md)|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Ad<br /><br /> Açıklama<br /><br /> Simge<br /><br /> PreviewImage<br /><br /> ProjectType<br /><br /> ProjectSubType<br /><br /> TemplateID<br /><br /> TemplateGroupID<br /><br /> SortOrder<br /><br /> CreateNewFolder<br /><br /> DefaultName<br /><br /> ProvideDefaultName<br /><br /> PromptForSaveOnCreation<br /><br /> EnableLocationBrowseButton<br /><br /> EnableEditOfLocationField<br /><br /> Hidden<br /><br /> DisplayInParentCategories<br /><br /> LocationFieldMRUPrefix<br /><br /> NumberOfParentCategoriesToRollUp<br /><br /> CreateInPlace<br /><br /> BuildOnLoad<br /><br /> BuildProjectOnload<br /><br /> ShowByDefault<br /><br /> LocationField<br /><br /> SupportsMasterPage<br /><br /> SupportsCodeSeparation<br /><br /> SupportsLanguageDropDown<br /><br /> RequiredFrameworkVersion<br /><br /> FrameworkVersion<br /><br /> MaxFrameworkVersion<br /><br /> CustomDataSignature<br /><br /> TargetPlatformName|--|  
-|[Templategroupıd](../extensibility/templategroupid-element-visual-studio-templates.md)|--|--|  
-|[Templateıd](../extensibility/templateid-element-visual-studio-templates.md)|--|--|  
+|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|ProjectCollection<br /><br /> Project<br /><br /> Başvurular<br /><br /> ProjectItem<br /><br /> CustomParameters|[BuildOnLoad](../extensibility/buildprojectonload-visual-studio-templates.md)|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Ad<br /><br /> Açıklama<br /><br /> Simge<br /><br /> PreviewImage<br /><br /> ProjectType<br /><br /> ProjectSubType<br /><br /> TemplateID<br /><br /> TemplateGroupID<br /><br /> SortOrder<br /><br /> CreateNewFolder<br /><br /> DefaultName<br /><br /> ProvideDefaultName<br /><br /> PromptForSaveOnCreation<br /><br /> EnableLocationBrowseButton<br /><br /> EnableEditOfLocationField<br /><br /> Gizli<br /><br /> DisplayInParentCategories<br /><br /> LocationFieldMRUPrefix<br /><br /> NumberOfParentCategoriesToRollUp<br /><br /> CreateInPlace<br /><br /> BuildOnLoad<br /><br /> BuildProjectOnload<br /><br /> ShowByDefault<br /><br /> LocationField<br /><br /> SupportsMasterPage<br /><br /> SupportsCodeSeparation<br /><br /> SupportsLanguageDropDown<br /><br /> RequiredFrameworkVersion<br /><br /> FrameworkVersion<br /><br /> MaxFrameworkVersion<br /><br /> CustomDataSignature<br /><br /> TargetPlatformName|--|  
+|[TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)|--|--|  
+|[TemplateID](../extensibility/templateid-element-visual-studio-templates.md)|--|--|  
 |[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|TemplateData<br /><br /> TemplateContent<br /><br /> WizardExtension<br /><br /> WizardData|Tür<br /><br /> Sürüm|  
-|[WizardData](../extensibility/wizarddata-element-visual-studio-templates.md)|--|Ad|  
-|[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Derleme<br /><br /> FullClassName|--|  
+|[WizardData](../extensibility/wizarddata-element-visual-studio-templates.md)|--|Name|  
+|[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Bütünleştirilmiş Kod<br /><br /> FullClassName|--|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)   
- [Nasıl yapılır: Başlangıç Paketleri Oluşturma](../ide/how-to-create-starter-kits.md)
+ [Nasıl Yapılır: Başlangıç Paketleri Oluşturma](../ide/how-to-create-starter-kits.md)
