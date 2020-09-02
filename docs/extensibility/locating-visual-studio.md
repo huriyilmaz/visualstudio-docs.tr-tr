@@ -1,5 +1,5 @@
 ---
-title: Visual Studio'yu bulma | Microsoft Docs
+title: Visual Studio 'Yu bulma | Microsoft Docs
 ms.date: 08/21/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,36 +10,36 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a7187fbcc3e3aca990846176676a47f5d17aaf00
-ms.sourcegitcommit: 62f42113ae4dae1ddfff1c4e02445acc09913445
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64878153"
 ---
-# <a name="locate-visual-studio"></a>Visual Studio bulun
+# <a name="locate-visual-studio"></a>Visual Studio’yu Bulma
 
-Visual Studio 2017'den itibaren aynı sürümü veya hatta sürümü birden çok örneğini yükleyebilirsiniz. Bu, önceki yüklemede korurken yeni işlevleri birincil geliştirme makinenizde izlemek istediğinizde yararlıdır. Bu değişiklikler nedeniyle örneği bulmak için kullanabileceğiniz tek bir ortam değişkeninin veya kayıt defteri değeri yoktur. Bunun yerine kullanabileceğiniz bir [COM sorgu API'si](https://msdn.microsoft.com/library/microsoft.visualstudio.setup.configuration.aspx) Uzantınız için ilgili ölçütlere göre örnekleri bulunamadı.
+Visual Studio 2017 ' den itibaren, aynı sürümden veya hatta sürümden daha fazla örnek yükleyebilirsiniz. Bu, önceki yüklemenizi korurken birincil geliştirme makinenizdeki yeni işlevselliği önizlemek istediğinizde yararlıdır. Bu değişiklikler nedeniyle, bir örneği bulmak için kullanabileceğiniz tek bir ortam değişkeni veya kayıt defteri değeri yoktur. Bunun yerine, uzantınızla ilgili ölçütlere göre örnekleri bulmak için bir [com sorgu API 'si](https://msdn.microsoft.com/library/microsoft.visualstudio.setup.configuration.aspx) kullanabilirsiniz.
 
-NuGet paketlerini yerel ve yönetilen kod için kullanılabilir olan hızlı, salt okunur bir API budur.
+Bu, yerel ve yönetilen kod için kullanılabilen NuGet paketlerine sahip hızlı, salt okunurdur bir API 'dir.
 
 | Kod | Paket |
 | ---- | --- |
 | Yerel | https://nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Native |
 | Yönetilen | https://nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop |
 
-Bir yolu veya geçerli işlem verilen tek bir örneği bulun veya tüm örnekleri numaralandırır. Bkz: [örneklerimizi](https://github.com/Microsoft/vs-setup-samples) tam örnekler nasıl Visual Studio bulun.
+Bir yol veya geçerli işlem verilen tek bir örneği bulabilir veya tüm örnekleri numaralandırabilirsiniz. Visual Studio 'Yu nasıl bulaöğreneceksiniz hakkında tüm [örneklere bakın.](https://github.com/Microsoft/vs-setup-samples)
 
 ## <a name="tools"></a>Araçlar
 
-Visual Studio ve diğer araçları, derleme ortamları, PowerShell betikleri, yükleyiciler ve daha fazla senaryo bulmak için doğrudan kullanabilir veya kendi komut dosyalarınızı birlikte yeniden açık kaynak araçlar vardır.
+Visual Studio 'Yu ve derleme ortamlarında, PowerShell betikleri, yükleyicilerinin ve diğer senaryolarda bulunan diğer araçları bulmak için, doğrudan veya kendi betiklerinizde birlikte kullanabileceğiniz bir dizi açık kaynak aracı vardır.
 
-| Project | Açıklama |
+| Proje | Açıklama |
 | ------- | ----------- |
-| [vswhere](https://github.com/Microsoft/vswhere) | Yayın veya yayın öncesi sürüm, hangi ürünü yüklü olduğundan ve hangi iş yüklerini yüklü gibi ölçütlerine uyan örneklerini bulmak için yerel yürütülebilir tek dosya. Ayrıca, daha az bilgi, Visual Studio 2017 için ve döndürülmesine rağmen Visual Studio 2010 ve sonraki sürümleri, bulma destekler. Bkz: [wiki](https://github.com/Microsoft/vswhere/wiki) örnekler. |
-| [VSSetup cmdlet'leri](https://github.com/Microsoft/vssetup.powershell) | Desteklenen PowerShell cmdlet'leri 2.0 ve üzeri sürümlerde, aynı ölçütüne göre örneklerini bulmak için kullanabileceğiniz Zengin bilgiler nesneler olarak iade _vswhere_ ve örnekleri hakkında daha fazla özellikleri bulur. Bkz: [wiki](https://github.com/Microsoft/vssetup.powershell/wiki) örnekler. |
-| [VSIXBootstrapper](https://github.com/Microsoft/vsixbootstrapper) | Otomatik olarak bulur _Vsıxınstaller_ ve yüklemek için komut satırı aracılığıyla başarılı bir **.vsix* dosya. Bu özellik doğrudan sorgu API desteği olmayan yükleyicileri yararlı olabilir. Bkz: [wiki](https://github.com/Microsoft/vsixbootstrapper/wiki) örnekler. |
+| [vswhere](https://github.com/Microsoft/vswhere) | Yayın veya ön sürüm, hangi ürünün yüklendiği ve hangi iş yüklerinin yüklendiği gibi toplantı ölçütlerini bulmak için tek dosya yerel yürütülebilir dosyası. Visual Studio 2010 ve üstünü bulmayı da destekler, ancak Visual Studio 2017 ve daha yeni bir sürümü daha az bilgi döndürülür. Örnekler için bkz. [wiki](https://github.com/Microsoft/vswhere/wiki) . |
+| [VSSetup cmdlet 'leri](https://github.com/Microsoft/vssetup.powershell) | PowerShell cmdlet 'leri, benzer ölçütlere göre örnekleri bulmak ve örnekler hakkında daha fazla özelliği bulmak için kullanabileceğiniz bir _nesne olarak zengin_ bilgileri döndüren 2,0 ve daha yeni bir sürümü destekler. Örnekler için bkz. [wiki](https://github.com/Microsoft/vssetup.powershell/wiki) . |
+| [Valtıönyükleyici](https://github.com/Microsoft/vsixbootstrapper) | _Valtıyükleyici_ 'yi otomatik olarak bulur ve bir **. vsix* dosyası yüklemek için komut satırını aracılığıyla geçirir. Bu özellik sorgu API 'Leri için doğrudan desteğe sahip olmayan yükleyicilerle yararlı olabilir. Örnekler için bkz. [wiki](https://github.com/Microsoft/vsixbootstrapper/wiki) . |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio 2017 Kurulum değişiklikler](https://devblogs.microsoft.com/setup/changes-to-visual-studio-15-setup/)
-* [DTE kullanarak Visual Studio'yu başlatın](launch-visual-studio-dte.md)
+* [Visual Studio 2017 kurulumu değişiklikleri](https://devblogs.microsoft.com/setup/changes-to-visual-studio-15-setup/)
+* [DTE kullanarak Visual Studio’yu Başlatma](launch-visual-studio-dte.md)

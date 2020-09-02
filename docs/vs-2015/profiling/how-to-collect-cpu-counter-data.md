@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: CPU sayaç verileri toplama | Microsoft Docs'
+title: 'Nasıl yapılır: CPU sayacı verilerini toplama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,58 +15,58 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 76dac6e20cc85eeb5784b0b6e29ee8d1b23fbd92
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432806"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64823419"
 ---
-# <a name="how-to-collect-cpu-counter-data"></a>Nasıl yapılır: CPU sayaç verileri toplama
+# <a name="how-to-collect-cpu-counter-data"></a>Nasıl yapılır: CPU Sayaç Verileri Toplama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-CPU olay sayaç donanıma özgü performans verilerini toplamak için kullanılır. Bu konuda yöntemi profil oluşturma Araçları'nı kullandığınızda olay sayacı verilerini nasıl toplayacağınızı gösterilmektedir.  
+Donanıma özgü performans verilerini toplamak için bir CPU olay sayacı kullanılır. Bu konuda, izleme profil oluşturma yöntemini kullandığınızda olay sayacı verilerinin nasıl toplanacağı gösterilmektedir.  
   
  **Gereksinimler**  
   
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
-  İki tür CPU sayaç olaylarını gerçekleşir:  
+  İki tür CPU sayacı olayı oluşur:  
   
-- Taşınabilir olayları - bağımsız olarak belirli CPU toplanabilir CPU olayları.  
+- Taşınabilir olaylar-belirli bir CPU 'ya bakılmaksızın toplanabilecek CPU olayları.  
   
-- Platform olayları - belirli bir CPU'ya bağlı CPU olayları'nı tıklatın.  
+- Platform olayları-belirli bir CPU ile bağlanmış CPU olayları.  
   
-  Taşınabilir olayları yönergeleri Çekildi ve olmayan durdurulamaz döngüleri gibi genel olayları, CPU arabellek olayları, dallanma olayları ve L2 önbellek olayları içerir. Kullanılabilir platformu olay sayaç işlemci üreticisi tarafından belirlenir.  
+  Taşınabilir olaylar, kullanımdan kaldırılan yönergeler, durdurulmayan döngüler, CPU arabellek olayları, dallanma olayları ve L2 önbellek olayları gibi genel olayları içerir. Kullanılabilir platform olay sayaçları, işlemci üreticisi tarafından belirlenir.  
   
-  Olayların kategorilerini taşınabilir ve platform sayaçları arasında paylaşılabilir. Örneğin, aşağıdaki veri kategorileri için her iki tür sık ortaktır:  
+  Etkinlik kategorileri, taşınabilir ve Platform sayaçları arasında paylaşılabilir. Örneğin, aşağıdaki veri kategorileri genellikle her iki tür için ortaktır:  
   
 - Bellek olayları.  
   
-- Ön uç etkinlikleri.  
+- Ön uç olayları.  
   
-- Dal etkinlikleri.  
+- Dal olayları.  
   
-  Profiler iki yolla performans sayacı verilerini toplayabilirsiniz:  
+  Profil Oluşturucu 'da performans sayacı verilerini iki şekilde toplayabilirsiniz:  
   
-- Ölçümlü izlemeyle profil, bir veya daha fazla sayaçlarından veri toplayın.  
+- İzleme tarafından profil oluştururken bir veya daha fazla sayaçdan veri toplayın.  
   
-- Örnekleme tarafından profil, bir sayaç olay örnekleme aralığı belirtin. Daha fazla bilgi için [nasıl yapılır: Örnekleme olayları seçme](../profiling/how-to-choose-sampling-events.md).  
+- Örneklemeye göre profil oluştururken örnekleme aralığı olarak bir sayaç olayı belirtin. Daha fazla bilgi için bkz. [nasıl yapılır: örnekleme olaylarını seçme](../profiling/how-to-choose-sampling-events.md).  
   
-### <a name="to-collect-cpu-performance-counter-data-when-you-profile-by-instrumentation"></a>Ölçümlü izlemeyle profil, CPU performans sayacı verilerini toplamak için  
+### <a name="to-collect-cpu-performance-counter-data-when-you-profile-by-instrumentation"></a>İzleme ile profil oluşturduğunuzda CPU performans sayacı verilerini toplamak için  
   
-1. Performans oturum **özellik sayfaları**, tıklayın **CPU sayaçları.**  
+1. Performans oturumu **özellik sayfalarında** **CPU sayaçları** ' na tıklayın.  
   
-2. Seçin **CPU sayaçlarını Topla** onay kutusu.  
+2. **CPU sayaçlarını topla** onay kutusunu seçin.  
   
-3. Genişletin **ulaşılabilir performans sayaçları** toplamak istediğiniz örnek olaylar bulana kadar ağaç.  
+3. Toplamak istediğiniz örnek olayları bulana kadar, **kullanılabilir performans sayaçları** ağacını genişletin.  
   
-4. Toplamak istediğiniz her olay, olay seçin ve ardından olaya eklemek için sağ oka tıklayın **sayaçları seçildi** listesi.  
+4. Toplamak istediğiniz her olay için, olayı seçin ve ardından sağ oka tıklayarak olayı **Seçili sayaçlar** listesine ekleyin.  
   
     > [!NOTE]
-    > **Ulaşılabilir performans sayaçları** yalnızca seçerseniz etkin **toplamak CPU sayaçları** onay kutusu.  
+    > **Kullanılabilir performans sayaçları** yalnızca **CPU sayaçlarını topla** onay kutusunu seçerseniz etkindir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md)   
- [Performans oturum özellikleri](../profiling/performance-session-properties.md)   
+ [Performans oturumu özellikleri](../profiling/performance-session-properties.md)   
  [CPU ve Windows sayaçları](../profiling/cpu-and-windows-counters.md)   
- [Nasıl yapılır: Örnekleme Olaylarını Seçme](../profiling/how-to-choose-sampling-events.md)
+ [Nasıl Yapılır: Örnekleme Olayları Seçme](../profiling/how-to-choose-sampling-events.md)

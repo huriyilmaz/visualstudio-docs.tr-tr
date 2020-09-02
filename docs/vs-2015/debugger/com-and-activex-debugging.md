@@ -23,33 +23,33 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4b4d74a6a1c4f03951d93eaf2aa5e556762b9021
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65702314"
 ---
 # <a name="com-and-activex-debugging"></a>COM ve ActiveX Hata Ayıklaması
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu bölümde, hata ayıklama COM uygulamaları ve ActiveX denetimleri hakkında ipuçları sağlar.  
+Bu bölümde, COM uygulamalarında ve ActiveX denetimlerinde hata ayıklama hakkında ipuçları verilmektedir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [COM Sunucusunda ve Kapsayıcısında Hata Ayıklama](../debugger/com-server-and-container-debugging.md)  
- Özel durumlar, COM uygulamalarında hata ayıklaması yaparken değinmektedir. Sorunlar şunlardır: COM sunucusunda ve aynı çözüm içinde iki proje kullanarak, işlem sınırları arasında Git çağrıları oturum izleme, geri çağırma işlevlerde kesme noktalarını ayarlamadan ve arasında ve kapsayıcılar ve sunucular içine Adımlama kapsayıcı hata ayıklama.  
+ COM uygulamalarında hata ayıklarken özel önemli noktalara değinin. Sorunlar şunlardır: aynı çözüm içinde iki proje kullanarak bir COM sunucusunda ve kapsayıcıda hata ayıklama, işlem sınırları arasında gidip gelen aramalara izleme, geri çağırma işlevlerinde kesme noktaları ayarlama ve kapsayıcılara ve sunuculara atlama.  
   
- [Nasıl yapılır: ActiveX Denetiminde Hata Ayıklama](../debugger/how-to-debug-an-activex-control.md)  
- ActiveX denetimlerinde hata ayıklama hakkında bilgi içerir. Bu içerir: belirli bir kapsayıcıda benzetimi ve kapsayıcının kodun içine Adımlama bir veri bağımlı ActiveX denetiminde hata ayıklama nasıl ActiveX denetiminizin kodu yürütür, görmek hata ayıklama oturumu için bir kapsayıcı belirtme.  
+ [Nasıl yapılır: ActiveX denetiminde hata ayıklama](../debugger/how-to-debug-an-activex-control.md)  
+ ActiveX denetimlerinde hata ayıklama hakkında bilgi içerir. Buna şunlar dahildir: ActiveX denetiinizdeki kodun nasıl yürütüldüğü, veri bağlantılı ActiveX denetiminde hata ayıklama, belirli bir kapsayıcının benzetimini yapma ve kapsayıcının koduna atlama gibi bir kapsayıcı belirtme.  
   
  [COM Hata Ayıklama Araçları](../debugger/com-debugging-tools.md)  
- Görüntüleyiciler ve COM uygulamanızı hata ayıklama faydalı olabilecek örnek uygulamaları listeler.  
+ COM uygulamanızda hata ayıklama yararlı olabilecek görüntüleyicilerin ve örnek uygulamaların listesini görüntüler.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Visual Studio’da hata ayıklama](../debugger/debugging-in-visual-studio.md)  
- Hata ayıklama belgesinin en geniş bölümlerine bağlantılar sağlar. Bilgileri içerir: hata ayıklayıcı, ayarları ve hazırlığı yeni nedir, özel durumları, kesme noktaları, Düzenle ve devam et, hata ayıklama yönetilen kodu, Visual C++ projelerinde hata ayıklama, hata ayıklama COM ve ActiveX, DLL'lerinde hata ayıklama, SQL ve kullanıcı hata ayıklama arabirimi başvuruları.  
+ [Visual Studio'da Hata Ayıklama](../debugger/debugging-in-visual-studio.md)  
+ Hata ayıklama belgelerinin daha büyük bölümlerine bağlantılar sağlar. Bilgiler şunları içerir: hata ayıklayıcı, ayarlar ve hazırlık, kesme noktaları, özel durumları işleme, düzenleme ve devam etme, yönetilen kodda hata ayıklama, hata ayıklama Visual C++ projeleri, hata ayıklama, COM ve ActiveX, hata ayıklama dll 'Leri ve Kullanıcı arabirimi başvuruları.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)   
- [COM'a giriş](https://msdn.microsoft.com/library/120735d9-db71-4ad3-a730-ce576ea2354e)   
+ [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)   
+ [COM 'a giriş](https://msdn.microsoft.com/library/120735d9-db71-4ad3-a730-ce576ea2354e)   
  [ActiveX denetimleri](https://msdn.microsoft.com/library/52aaec4d-3889-402e-b57d-758078f8ac57)   
  [SDI Sunucu Uygulamaları](../debugger/sdi-server-applications.md)

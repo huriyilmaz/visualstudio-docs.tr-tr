@@ -16,36 +16,36 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: afee2c56a7f29d50f46c7cbb734bc0297223845c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446693"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64829028"
 ---
 # <a name="vsperfclrenv"></a>VSPerfCLREnv
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-VSPerfCLREnv aracı, .NET Framework uygulamasına profil için gereken ortam değişkenlerini ayarlamak için kullanılır. Aşağıdaki sözdizimini kullanır:  
+VSPerfCLREnv Aracı, bir .NET Framework uygulamasının profilini oluşturma için gereken ortam değişkenlerini ayarlamak için kullanılır. Aşağıdaki sözdizimini kullanır:  
   
 ```  
 VsPerfCLREnv [/option]  
 ```  
   
- Seçtiğiniz seçenek olan, profil oluşturma üç tür kullandığınıza bağlıdır: örnekleme, izleme, ya da genel. Katman etkileşim verileri profil oluşturma verileri dahil etmek için ayrı bir seçenek gereklidir. Her seçeneği söz dizimi aşağıdaki tablolarda açıklanmıştır.  
+ Seçtiğiniz seçenek, kullandığınız üç profil oluşturma türünden hangisinin olacağına bağlıdır: örnekleme, izleme veya küresel. Profil oluşturma verilerine katman etkileşim verileri dahil etmek için ayrı bir seçenek gereklidir. Her seçeneğin sözdizimi aşağıdaki tablolarda açıklanmıştır.  
   
 > [!NOTE]
-> İşiniz bittiğinde profil oluşturma, çalıştırma **VSPerfCLREnv** ile **/ off** veya **/globaloff** profil oluşturmak için gereken ortam değişkenlerini silmeniz için seçeneği. Daha fazla bilgi için VSPerfCLREnv seçenekleri ortam burada gösterilen ayarları silmek için bkz.  
+> Profil oluşturmayı tamamladığınızda, profil oluşturma için gereken ortam değişkenlerini silmek için **/off** veya **/globaloff** seçeneğiyle **VSPerfCLREnv** komutunu çalıştırın. Daha fazla bilgi için burada gösterilen ortam ayarlarını silmek üzere VSPerfCLREnv seçenekleri bölümüne bakın.  
   
- **Katman etkileşim verileri ekleme VSPerfCLREnv seçenekleri**  
+ **Katman etkileşimi verilerini dahil etmek için VSPerfCLREnv seçenekleri**  
   
 > [!WARNING]
-> Katman etkileşim profili oluşturma toplanacak kullanarak [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], veya [!INCLUDE[vs_pro_current_short](../includes/vs-pro-current-short-md.md)]. Ancak, katman etkileşimli profil oluşturma veri yalnızca görüntülenebilir [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] ve [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)].  
+> Katman etkileşimi profili oluşturma,, veya kullanılarak toplanabilir [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] [!INCLUDE[vs_pro_current_short](../includes/vs-pro-current-short-md.md)] . Ancak, katman etkileşimi profil oluşturma verileri yalnızca ve ' de [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] görüntülenebilir [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] .  
   
- Katman etkileşim profili oluşturma, çok katmanlı uygulamalarda ADO.NET sorgularının hakkında ek bilgi sağlar. Verileri yalnızca zaman uyumlu işlev çağrıları için toplanır. Herhangi bir profil oluşturma yöntemini kullanarak tüm profil oluşturma yürütmesine etkileşim verileri eklenebilir.  
+ Katman etkileşimi profili oluşturma, çok katmanlı uygulamalardaki ADO.NET sorguları hakkında ek bilgiler sağlar. Veriler yalnızca zaman uyumlu işlev çağrıları için toplanır. Etkileşim verileri, herhangi bir profil oluşturma yöntemi kullanılarak herhangi bir profil oluşturma çalıştırmasına eklenebilir.  
   
- **InteractionOn** ve **GlobalInteractionOn** seçenekleri katman etkileşim verilerinin toplanmasını sağlar. Sonra VSPerfCLREnv ortam değişkenini ayarlayarak bir uygulama profili için gerekli olan etkileşimi seçeneği ayarlanmalıdır.  
+ **InteractionOn** ve **GlobalInteractionOn** seçenekleri, katman etkileşim verileri koleksiyonunu etkinleştirir. Bir uygulamayı profil için gereken VSPerfCLREnv ortam değişkeni ayarlandıktan sonra etkileşim seçeneği ayarlanmalıdır.  
   
- Aşağıdaki örnek örnekleme yöntemini kullanan profil oluşturma yürütmesine katman etkileşim verileri içerir:  
+ Aşağıdaki örnek, örnekleme yöntemini kullanan bir profil oluşturma çalıştırmasında katman etkileşim verileri içerir:  
   
 ```  
 VSPerfCLREnv /SampleOn  
@@ -53,7 +53,7 @@ VSPerfCLREnv /InteractionOn
 VSPerfCmd /Start:Sample /Output:MyApp.exe.vsp /Launch:MyApp.exe  
 ```  
   
- Aşağıdaki örnek bir Windows hizmeti için profil oluşturma yürütmesine katman etkileşim verileri içerir:  
+ Aşağıdaki örnek, bir Windows hizmeti için profil oluşturma çalıştırmasında katman etkileşim verileri içerir:  
   
 ```  
 VSPerfCLREnv /GlobalSampleOn  
@@ -63,53 +63,53 @@ VSPerfCmd /Start:Sample /Output:MyService.exe.vsp
 VSPerfCmd /Attach:MyService.exe  
 ```  
   
- **VSPerfCLREnv seçeneklerini işlem izleme profil**  
+ **Işlem Izleme profili oluşturma için VSPerfCLREnv seçenekleri**  
   
- Aşağıdaki tabloda, profil oluşturma araçları için VSPerfCLREnv seçenekleri tanımlar:  
-  
-|Seçenek|Açıklama|  
-|------------|-----------------|  
-|**TraceOn**|Araçlar yöntemini kullanarak profil oluşturmayı etkinleştirir. Bellek ayırma profil oluşturma veya nesne yaşam süresi verilerini toplama etkinleştirmez.|  
-|**TraceGC**|Bellek ayırma izleme metodunu kullanarak profili oluşturmayı etkinleştirir. Nesne yaşam verisi toplamayı etkinleştirmez.|  
-|**TraceGCLife**|Bellek ayırma profil oluşturma ve izleme metodunu kullanarak nesne yaşam verisi toplamayı etkinleştirir.|  
-  
- **İşlem örnekleme profil VSPerfCLREnv seçenekleri**  
-  
- Örnekleme profil VSPerfCLREnv seçenekleri aşağıdaki tabloda açıklanmaktadır:  
+ Aşağıdaki tabloda, izleme profili oluşturma için VSPerfCLREnv seçenekleri açıklanmaktadır:  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**SampleOn**|Örnekleme metodu kullanılarak profili oluşturma etkinleştirir. Bellek ayırma profil oluşturma veya nesne yaşam süresi verilerini toplama etkinleştirmez.|  
-|**SampleGC**|Bellek ayırma örnekleme metodu kullanılarak profili oluşturmayı etkinleştirir. Nesne yaşam verisi toplamayı etkinleştirmez.|  
-|**SampleGCLife**|Bellek ayırma örnekleme metodu kullanılarak profili oluşturmayı etkinleştirir. Ayrıca nesne yaşam verisi toplamayı sağlar.|  
-|**SampleLineOff**|.NET profil oluşturma verilerini satır düzeyi koleksiyonunu devre dışı bırakır.|  
+|**TraceOn**|İzleme yöntemini kullanarak profil oluşturmayı etkinleştirilir. Bellek ayırma profili oluşturmayı veya nesne yaşam süresi verilerini toplamayı etkinleştirmez.|  
+|**TraceGC**|İzleme yöntemini kullanarak bellek ayırma profili oluşturmayı mümkün. Nesne ömrü verilerinin toplanmasını etkinleştirmez.|  
+|**TraceGCLife**|Bellek ayırma profili oluşturmayı ve izleme yöntemini kullanarak nesne yaşam süresi verilerini toplamayı mümkün bir şekilde sunar.|  
+  
+ **Işlem örnekleme profili oluşturma için VSPerfCLREnv seçenekleri**  
+  
+ Aşağıdaki tabloda örnekleme profili oluşturma için VSPerfCLREnv seçenekleri açıklanmaktadır:  
+  
+|Seçenek|Açıklama|  
+|------------|-----------------|  
+|**SampleOn**|Örnekleme yöntemi kullanılarak profil oluşturmayı etkinleştirilir. Bellek ayırma profili oluşturmayı veya nesne yaşam süresi verilerini toplamayı etkinleştirmez.|  
+|**Örnekley**|Örnekleme yöntemini kullanarak bellek ayırma profili oluşturmayı mümkün. Nesne ömrü verilerinin toplanmasını etkinleştirmez.|  
+|**SampleGCLife**|Örnekleme yöntemini kullanarak bellek ayırma profili oluşturmayı mümkün. , Nesne ömrü verilerinin toplanmasını de mümkün.|  
+|**SampleLineOff**|.NET satır düzeyi profil oluşturma verilerinin koleksiyonunu devre dışı bırakır.|  
   
  **Genel profil oluşturma için VSPerfCLREnv seçenekleri**  
   
- Gibi yönetilen hizmet ve işletim sistemi yerine kullanıcı tarafından başlatıldı başlatan, ASP.NET web uygulamasının profilini çıkarmak için seçenekleri VSPerfCLREnv seçenekleri genel profil oluşturma için kullanın. Aşağıdaki tabloda, genel sürümlerini VSPerfCLREnv seçenekleri açıklar. Bu seçenekler, kayıt defterinde uygun ortam değişkenlerini ayarlayın.  
+ Ve Kullanıcı tarafından başlatılmakta olan işletim sistemi tarafından başlatılan Web uygulaması gibi yönetilen bir hizmeti profil oluşturmak için, VSPerfCLREnv seçeneklerinin genel profil oluşturma seçeneklerini kullanın. Aşağıdaki tablo, VSPerfCLREnv seçeneklerinin genel sürümlerini açıklamaktadır. Bu seçenekler kayıt defterindeki uygun ortam değişkenlerini ayarlar.  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**GlobalTraceOn**|Araçlar yöntemini kullanarak genel profil oluşturma sağlar. Bellek ayırma olayları veya nesne yaşam süresi verilerini toplamaz.|  
-|**GlobalTraceGC**|Araçlar yöntemini kullanarak genel bellek ayırma profil oluşturma sağlar. Nesne yaşam verisi toplamayı etkinleştirmez.|  
-|**GlobalTraceGCLife**|Araçlar yöntemini kullanarak genel bellek ayırma profil oluşturma sağlar. Ayrıca nesne yaşam süresi verilerinin toplanmasını sağlar.|  
-|**GlobalSampleOn**|Örnekleme metodu kullanılarak genel profil oluşturma sağlar. Bellek ayırma olayları toplamak veya nesne yaşam verisi etkinleştirmez.|  
-|**GlobalSampleGC**|Örnekleme metodu kullanılarak genel bellek ayırma profil oluşturma sağlar. Nesne yaşam verisi toplamayı etkinleştirmez.|  
-|**GlobalSampleGCLife**|Örnekleme metodu kullanılarak genel bellek ayırma profil oluşturma sağlar. Ayrıca nesne yaşam verisi toplamayı sağlar.|  
+|**GlobalTraceOn**|İzleme yöntemini kullanarak genel profil oluşturmayı mümkün. Bellek ayırma olayları veya nesne yaşam süresi verileri toplamaz.|  
+|**GlobalTraceGC**|İzleme yöntemini kullanarak genel bellek ayırma profili oluşturmayı mümkün. Nesne ömrü verilerinin toplanmasını etkinleştirmez.|  
+|**GlobalTraceGCLife**|İzleme yöntemini kullanarak genel bellek ayırma profili oluşturmayı mümkün. , Nesne ömrü verilerinin toplanmasını da mümkün.|  
+|**GlobalSampleOn**|Örnekleme yöntemini kullanarak genel profil oluşturmayı mümkün. , Bellek ayırma olaylarının veya nesne yaşam süresi verilerinin toplanmasını etkinleştirmez.|  
+|**GlobalSampleGC**|Örnekleme yöntemini kullanarak genel bellek ayırma profili oluşturmayı mümkün. Nesne ömrü verilerinin toplanmasını etkinleştirmez.|  
+|**GlobalSampleGCLife**|Örnekleme yöntemini kullanarak genel bellek ayırma profili oluşturmayı mümkün. , Nesne ömrü verilerinin toplanmasını de mümkün.|  
   
- **Ortam ayarları silmek için VSPerfCLREnv seçenekleri**  
+ **Ortam ayarlarını silmek için VSPerfCLREnv seçenekleri**  
   
- Yönetilen uygulama profil oluşturmayı tamamladığınızda, VSPerfCLREnv tarafından eklenen ortam değişkenlerini silmek için aşağıdaki seçeneklerden birini kullanın. Aşağıdaki tabloda, her iki standart ve genel ortam değişkenlerini silmeniz açıklar:  
+ Yönetilen uygulamanın profilini oluşturmayı tamamladığınızda, VSPerfCLREnv tarafından eklenen ortam değişkenlerini silmek için aşağıdaki seçeneklerden birini kullanın. Aşağıdaki tabloda hem standart hem de genel ortam değişkenlerinin nasıl silineceği açıklanmaktadır:  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**Kapalı**|Standart .NET profil oluşturma ortam değişkenlerini siler. Profil Oluşturucu ortam değişkenlerini ayarlamak için kullanılan genel olmayan VSPerfClrEnv seçenekleri olduğunda bu seçeneği kullanın.|  
-|**GlobalOff**|Genel .NET profil oluşturma ortam değişkenlerini siler. İşletim sistemi olmayan Profil Oluşturucu ile uygulama başlatıldığında, bu seçeneği kullanın.|  
+|**Kapalı**|Standart .NET profil oluşturma için ortam değişkenlerini siler. Profil Oluşturucu ortam değişkenlerini ayarlamak için genel olmayan VSPerfClrEnv seçenekleri kullanıldığında bu seçeneği kullanın.|  
+|**GlobalOff**|Genel .NET profil oluşturma için ortam değişkenlerini siler. Uygulama, profil oluşturucu değil, işletim sistemi tarafından başlatıldığında bu seçeneği kullanın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu seçenekler, IDE içinde performans Gezgini kullanarak uygulama başlatıldığında, yönetilen bir uygulamaya profil oluşturma için gerekli değildir. Performans Gezgini, tüm gerekli ortam ayarlarını belirler.  
+ Bu seçenekler, uygulama IDE 'de Performans Gezgini kullanılarak başlatılırsa, yönetilen bir uygulamanın profilini oluşturmak için gerekli değildir. Performans Gezgini, sizin için gerekli tüm ortam ayarlarını belirler.  
   
- Profil oluşturma sırasında doğru ortamı ayarlı değil, bir uyarı çözümleme ve yönetilen işlev adları değil düzgün çözümlenir sırasında bildirilir.  
+ Profil oluşturma sırasında doğru ortam ayarlanmamışsa, analiz sırasında bir uyarı bildirilir ve yönetilen işlev adları düzgün bir şekilde çözümlenmeyecektir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Komut Satırından Profil Oluşturma](../profiling/using-the-profiling-tools-from-the-command-line.md)

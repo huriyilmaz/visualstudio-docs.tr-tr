@@ -1,5 +1,5 @@
 ---
-title: SccUninitialize Fonksiyonu | Microsoft Dokümanlar
+title: Sccunınitialize Işlevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c4706ddf28949af4fe1bba01c32b2c64c9156d51
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80700237"
 ---
 # <a name="sccuninitialize-function"></a>SccUninitialize İşlevi
-Bu işlev, kaynak denetim eklentisini kapatmaya hazırlık olarak [SccInitialize'ye](../extensibility/sccinitialize-function.md) yapılan önceki bir çağrı tarafından oluşturulan ayırmaları veya açık bağlantıları temizler.
+Bu işlev, kaynak denetimi eklentisinin kapanmasından dolayı bir önceki [SccInitialize](../extensibility/sccinitialize-function.md) çağrısıyla oluşturulan tüm ayırmaları veya açık bağlantıları temizler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 SCCRTN SccUninitialize (
@@ -33,17 +33,17 @@ SCCRTN SccUninitialize (
 #### <a name="parameters"></a>Parametreler
  pvContext
 
-[içinde] [SccInitialize](../extensibility/sccinitialize-function.md)oluşturulan kaynak denetimi eklentisi bağlam yapısı için işaretçi.
+'ndaki [SccInitialize](../extensibility/sccinitialize-function.md)içinde oluşturulan kaynak denetimi eklentisi bağlam yapısına yönelik işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Bu işlevin kaynak denetim eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|SCC_OK|Temizleme başarıyla tamamlandı.|
+|SCC_OK|Temizleme işlemi başarıyla tamamlandı.|
 
 ## <a name="remarks"></a>Açıklamalar
- Kaynak denetim eklentisi, kapatmaya hazırlanmasından ve eklentinin bağlam yapısına ayırdığı belleği serbest düşürmekten sorumludur. İşlev, verilen her bir eklenti örneği için bir kez çağrılır. [SccInitialize'a](../extensibility/sccinitialize-function.md) yapılan bir çağrı bu çağrıdan önce gelir. Çağrı sırasında hiçbir proje hala açık `SccUninitialize`olamaz.
+ Kaynak denetimi eklentisi kapanmaya hazırlanmaktan ve eklentinin bağlam yapısına ayrılan bellek boşaltmasından sorumludur. Bu işlev, bir eklentinin verilen her örneği için bir kez çağrılır. [SccInitialize](../extensibility/sccinitialize-function.md) çağrısı bu çağrıdan önce gelir. Çağrısı sırasında hiç proje hala açık olamaz `SccUninitialize` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentisi API İşlevleri](../extensibility/source-control-plug-in-api-functions.md)

@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9c1fabdb202d51b85eb2983360bdfd02757f7649
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65699356"
 ---
-# <a name="cvcfllang"></a>CV_CFL_LANG
+# <a name="cv_cfl_lang"></a>CV_CFL_LANG
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bağlantılı modül ve uygulama kaynak kod dilini belirtir.  
+Uygulamanın veya bağlı modülün kaynak kodu dilini belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef enum CV_CFL_LANG {   
@@ -49,64 +49,64 @@ typedef enum CV_CFL_LANG { 
 } CV_CFL_LANG;  
 ```  
   
-## <a name="elements"></a>Öğeleri  
+## <a name="elements"></a>Öğeler  
  CV_CFL_C  
- Uygulama dilidir C.  
+ Uygulama dili C 'dir.  
   
  CV_CFL_CXX  
- C++ uygulama dilidir.  
+ Uygulama dili C++ ' dır.  
   
  CV_CFL_FORTRAN  
- Uygulama, FORTRAN dilidir.  
+ Uygulama dili FORTRAN.  
   
  CV_CFL_MASM  
- Uygulama, Microsoft Macro Assembler dilidir.  
+ Uygulama dili Microsoft Macro Assembler ' dur.  
   
  CV_CFL_PASCAL  
- Uygulama, Pascal dilidir.  
+ Uygulama dili Pascal.  
   
  CV_CFL_BASIC  
- Uygulama, temel dilidir.  
+ Uygulama dili temel.  
   
  CV_CFL_COBOL  
- Uygulama, COBOL dilidir.  
+ Uygulama dili COBOL.  
   
  CV_CFL_LINK  
- Uygulama bağlayıcı tarafından oluşturulan bir modüldür.  
+ Uygulama, bağlayıcı tarafından oluşturulan bir modüldür.  
   
  CV_CFL_CVTRES  
- CVTRES aracıyla dönüştürülen bir kaynak modülü uygulamasıdır.  
+ Uygulama, CVTRES aracıyla dönüştürülen bir kaynak modülüdür.  
   
  CV_CFL_CVTPGD  
- Uygulama CVTPGD aracıyla oluşturulan POGO en iyi duruma getirilmiş bir modüldür.  
+ Uygulama, CVTPGD aracı ile oluşturulmuş bir POGO iyileştirilmiş modüldür.  
   
  CV_CFL_CSHARP  
- Uygulama C# dilidir.  
+ Uygulama dili C# ' dir.  
   
  CV_CFL_VB  
- Visual Basic uygulama dilidir.  
+ Uygulama dili Visual Basic.  
   
  CV_CFL_ILASM  
- Uygulama dili Ara dil (diğer bir deyişle, ortak dil çalışma zamanı (CLR) derleme) derlemesidir.  
+ Uygulama dili, ara dil derlemesi (yani, ortak dil çalışma zamanı (CLR) derlemesi).  
   
  CV_CFL_JAVA  
- Java uygulama dilidir.  
+ Uygulama dili Java.  
   
  CV_CFL_JSCRIPT  
- Uygulama, Jscript dilidir.  
+ Uygulama dili JScript ' dir.  
   
  CV_CFL_MSIL  
- Uygulama dilidir bir bilinmeyen Microsoft Ara dil (MSIL) kullanarak, büyük olasılıkla bir sonuç [/LTCG (bağlama zamanı kodu oluşturma)](https://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2) geçin.  
+ Uygulama dili bilinmeyen bir Microsoft ara dili (MSIL), büyük olasılıkla [/LTCG (bağlama zamanı kodu oluşturma)](https://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2) anahtarını kullanmanın bir sonucudur.  
   
  CV_CFL_HLSL  
- Uygulama, yüksek düzey gölgelendirici dili dilidir.  
+ Uygulama dili yüksek düzey gölgelendirici dilidir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu numaralandırma değerleri için yapılan bir çağrı tarafından döndürülen [Idiasymbol::get_language](../../debugger/debug-interface-access/idiasymbol-get-language.md) yöntemi.  
+ Bu Numaralandırmadaki değerler [IDiaSymbol:: get_language](../../debugger/debug-interface-access/idiasymbol-get-language.md) metoduna yapılan bir çağrı tarafından döndürülür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: cvconst.h  
+ Üst bilgi: cvconst. h  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri ve yapıları](../../debugger/debug-interface-access/enumerations-and-structures.md)   
+ [Numaralandırmalar ve yapılar](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaSymbol::get_language](../../debugger/debug-interface-access/idiasymbol-get-language.md)

@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 53de9ee136c9bd12c732339b4c1c8a223fe1a3ac
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85330066"
 ---
 # <a name="cvisenabled-function"></a>CvIsEnabled işlevi
@@ -38,11 +38,11 @@ HRESULT CvIsEnabledEx(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `category`Alan.
+ `category` Alan.
 
- `level`Önem düzeyi.
+ `level` Önem düzeyi.
 
- `pProvider`Geçerli sağlayıcı nesnesi. NULL olamaz.
+ `pProvider` Geçerli sağlayıcı nesnesi. NULL olamaz.
 
 ## <a name="return-value"></a>Döndürülen değer
  Sağlayıcı Şu anda etkin ise S_OK. Sağlayıcı Şu anda devre dışıysa S_FALSE. Herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için başarısız makroyu kullanın ve ardından S_OK/S_FALSE kontrol edin.

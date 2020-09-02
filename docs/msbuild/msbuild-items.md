@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 020983182706bd6d9382f4d0bd4885ffa0f86f52
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88247594"
 ---
 # <a name="msbuild-items"></a>MSBuild öğeleri
@@ -502,7 +502,7 @@ Açıklamalarının
   - Başvurulan her öğe türünden son oluşum yakalanır (Bu nedenle, öğe türü başına yakalanan bir öğe).
   - Bu, hedefler altında görev öğesi toplu işleme davranışını eşleştirir.
 - Her biri%() başvuruyu koyabileceği yer:
-  - Meta veri
+  - Meta Veriler
   - Meta veri koşulları
 - Meta veri adı eşleştirmesi büyük/küçük harfe duyarlıdır.
 :::moniker-end

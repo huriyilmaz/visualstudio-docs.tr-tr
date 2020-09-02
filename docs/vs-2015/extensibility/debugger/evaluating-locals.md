@@ -1,5 +1,5 @@
 ---
-title: Yerel öğeleri değerlendirme | Microsoft Docs
+title: Yereller değerlendiriliyor | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,32 +12,32 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7e31aa560422c9f18ec30a6e203559ef3ed10c52
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444760"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64838177"
 ---
 # <a name="evaluating-locals"></a>Yerel Öğeleri Değerlendirme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
-> Visual Studio 2015'te, bu şekilde ifade değerlendiricisi uygulama kullanım dışı bırakılmıştır. CLR ifade değerlendiricisi uygulama hakkında daha fazla bilgi için lütfen bkz [CLR ifade Değerlendiricilerini](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendiricisi örnek](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) yerel olarak hem de yerel'ın ad ve tür değeri elde etmek için çağrılır. Yerel bir değeri, programın geçerli durumuna bağımlı olduğundan, yerel'ın değeri bellekten alınmalıdır. [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md) bağlamak için kullanılan nesne [IDebugField](../../extensibility/debugger/reference/idebugfield.md) yerel bellek değeri içeren uygun konumda temsil eden nesne. Bu konumda bir bellek tarafından temsil edilen bir [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) nesne.  
+ [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) , yerel bir değerin ve yerel adının yanı sıra yerel adı ve türü almak için çağrılır. Bir yerel değerin değeri programın geçerli durumuna bağlı olduğundan, yerel öğesinin değeri bellekten alınmalıdır. [Idebugciltçi](../../extensibility/debugger/reference/idebugbinder.md) nesnesi, yereli temsil eden [IDebugField](../../extensibility/debugger/reference/idebugfield.md) nesnesini, değeri içeren bellekteki uygun konuma bağlamak için kullanılır. Bellekteki bu konum bir [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) nesnesi tarafından temsil edilir.  
   
- Yerel bir değerini alarak, bu işlev, aşağıdaki görevleri gerçekleştiren bir yardımcı işlevini kapsüllenir:  
+ Bir yerel değeri almanın bu işlevselliği, aşağıdaki görevleri gerçekleştiren bir yardımcı işlevde kapsüllenir:  
   
-1. Bağlar `IDebugField` bellek elde etmek için nesneye bir `IDebugObject` nesne.  
+1. Nesneyi `IDebugField` almak için nesneyi belleğe bağlar `IDebugObject` .  
   
-2. Bellekten değerini alır. Bu değer, bayt dizisi olarak temsil edilir.  
+2. Bellekten değeri alır. Bu değer, bir dizi bayt olarak temsil edilir.  
   
-3. Yerel'ın türüne göre değeri biçimlendirir.  
+3. Değeri, yerel öğesinin türüne göre biçimlendirir.  
   
-4. Yerel'ın değerini içeren genel bir nesne döndürür. C# ' ta Bu, bir `object`, ve C++'da, bu, bir `VARIANT`.  
+4. Yerel değerini içeren genel bir nesne döndürür. C# ' de, bu bir `object` ' dir ve C++ ' da bu bir ' dır `VARIANT` .  
   
 ## <a name="managed-code"></a>Yönetilen kod  
- Yönetilen kod içinde yerel bir değeri alır. bir işlev uygulaması budur.  
+ Bu, yönetilen bir kodda yerel bir değeri alan bir işlev uygulamasıdır.  
   
 ```csharp  
 namespace EEMC  
@@ -79,7 +79,7 @@ namespace EEMC
 ```  
   
 ## <a name="unmanaged-code"></a>Yönetilmeyen Kod  
- Yönetilmeyen kod içinde yerel bir değeri alır. bir işlev uygulaması budur. `FieldGetType` gösterilen [yerel değerleri alma](../../extensibility/debugger/getting-local-values.md).  
+ Bu, yönetilmeyen bir kodda yerel bir değeri alan bir işlev uygulamasıdır. `FieldGetType`[yerel değerler alınırken](../../extensibility/debugger/getting-local-values.md)gösterilir.  
   
 ```cpp#  
 HRESULT FieldGetPrimitiveValue(  
@@ -192,6 +192,6 @@ HRESULT FieldGetPrimitiveValue(
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Örnek yerel öğeler uygulaması](../../extensibility/debugger/sample-implementation-of-locals.md)   
- [Yerel değerleri alma](../../extensibility/debugger/getting-local-values.md)   
+ [Yereller için örnek uygulama](../../extensibility/debugger/sample-implementation-of-locals.md)   
+ [Yerel değerler alınıyor](../../extensibility/debugger/getting-local-values.md)   
  [Değerlendirme Bağlamı](../../extensibility/debugger/evaluation-context.md)

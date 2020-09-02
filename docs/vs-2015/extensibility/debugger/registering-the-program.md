@@ -1,5 +1,5 @@
 ---
-title: Program kaydetme | Microsoft Docs
+title: Program kaydediliyor | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,35 +12,35 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 31d03f12a31953cbc0e20d06820dd49b5f9827e6
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441968"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64824542"
 ---
 # <a name="registering-the-program"></a>Program Kaydetme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Hata ayıklama altyapısı bir bağlantı noktası aldıktan sonra tarafından temsil edilen bir [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) arabirimi, ayıklanacak programın etkinleştirmenin sonraki adımı olan bağlantı noktası ile kaydetmek için. Kaydedildikten sonra program aşağıdaki yollardan birini kullanarak hata ayıklama için kullanılabilir:  
+Hata ayıklama altyapısı bir [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) arabirimi tarafından temsil edilen bir bağlantı noktasını aldıktan sonra, bir programın hata ayıklamasını etkinleştirmeye yönelik bir sonraki adım, bağlantı noktası ile kaydettirilmelidir. Kaydolduktan sonra, program hata ayıklama için aşağıdaki yollardan biriyle kullanılabilir:  
   
-- Çalışan bir uygulamanın hata ayıklama tam denetim kazanmak hata ayıklayıcı sağlayan ekleme, işlemi.  
+- Hata ayıklayıcının çalışan bir uygulamanın hata ayıklama denetimini ele geçirmesine olanak sağlayan ekleme işlemi.  
   
-- Yalnızca hata ayıklama sonrasında-aslında bir hata ayıklayıcı bağımsız olarak çalışan bir programın hata ayıklama için izin veren zamanında (JIT). Çalışma zamanı mimari bir hataya yakalar, hata ayıklayıcı önce işletim sistemine bildirilir veya çalışma zamanı ortamı bellek ve hataya neden olan program kaynaklarını serbest bırakır.  
+- Just-In-Time (JıT) hata ayıklayıcı, bir hata ayıklayıcının bağımsız olarak çalışan bir programın olay ayıklamasına olanak tanır. Çalışma zamanı mimarisi bir hata yakalarsa, işletim sistemi veya çalışma zamanı ortamı, hatalı programın bellek ve kaynaklarını serbest bırakmadan önce hata ayıklayıcıya bildirilir.  
   
-## <a name="registering-procedure"></a>Yordam kaydedilemedi  
+## <a name="registering-procedure"></a>Yordam kaydediliyor  
   
 #### <a name="to-register-your-program"></a>Programınızı kaydetmek için  
   
-1. Çağrı [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) bağlantı noktası tarafından uygulanan yöntem.  
+1. Bağlantı noktası tarafından uygulanan [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) yöntemini çağırın.  
   
-     `IDebugPortNotify2::AddProgramNode` bir işaretçi gerektiren bir [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) arabirimi.  
+     `IDebugPortNotify2::AddProgramNode`[IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) arabirimine yönelik bir işaretçi gerektirir.  
   
-     Genellikle, bir program, işletim sistemi ya da çalışma zamanı ortamı yüklediğinde, program düğümü oluşturur. Hata ayıklama altyapısı (DE) programı yüklemek için sorulursa DE oluşturur ve program düğüm kaydeder.  
+     Genellikle, işletim sistemi veya çalışma zamanı ortamı bir program yüklediğinde program düğümünü oluşturur. Hata ayıklama altyapısının (DE) programı yüklemesi istenirse, DE program düğümünü oluşturur ve kaydeder.  
   
-     Aşağıdaki örnek, program başlatma ve bağlantı noktası ile kayıt hata ayıklama altyapısı gösterir.  
+     Aşağıdaki örnekte, programı başlatan hata ayıklama altyapısı gösterilmektedir ve bir bağlantı noktasıyla kayıt yapılır.  
   
     > [!NOTE]
-    > Bu, başlatın ve işlemi sürdürme tek yolu değildir; Bu, bir bağlantı noktası ile bir program kaydetme çoğunlukla bir örnektir.  
+    > Bu işlem, bir işlemi başlatmak ve sürdürmenin tek yolu değildir; Bu, genellikle bir programı bağlantı noktasıyla kaydetme örneğidir.  
   
     ```cpp#  
     // This is an IDebugEngineLaunch2 method.  

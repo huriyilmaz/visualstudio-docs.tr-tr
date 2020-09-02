@@ -1,5 +1,5 @@
 ---
-title: BDC modeli Tasarım araçları genel bakış | Microsoft Docs
+title: IVB modeli tasarım araçlarına genel bakış | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -24,65 +24,65 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 7a2531f1cc6352a03acf0b3d6af82c35e47c2743
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63387722"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64827946"
 ---
-# <a name="bdc-model-design-tools-overview"></a>BDC modeli tasarım araçlarına genel bakış
-  İVB Tasarımcısı kullanarak bir iş verileri bağlantısı (BDC) modeli tasarlayabilirsiniz **BDC yöntem ayrıntıları** penceresinde ve **BDC Gezgini**.
+# <a name="bdc-model-design-tools-overview"></a>IVB modeli tasarım araçlarına genel bakış
+  IVB tasarımcısını, **IVB yöntemi ayrıntıları** penceresini ve **BDC Gezginini**kullanarak bir Iş verileri bağlantısı (BDC) modeli tasarlayabilirsiniz.
 
- **BDC Gezgini** modeli Gözat'ı, model arama ve tür tanımlayıcısı tanımlamanızı sağlar.
+ **IVB Gezgini** modele gözatmanızı, modeli aramanızı ve tür tanımlayıcılarını tanımlamanızı sağlar.
 
-## <a name="bdc-designer"></a>İVB Tasarımcısı
- İVB Tasarımcısı, modelinizdeki varlıklar tanımlayan ve görsel olarak birbirleriyle ilişkilerini düzenlemek için sağlar. İVB Tasarımcısı, aşağıdaki görevleri gerçekleştirmek için kullanın:
+## <a name="bdc-designer"></a>IVB Tasarımcısı
+ IVB Tasarımcısı, modelinizdeki varlıkları tanımlamanızı ve ilişkilerini bir biriyle görsel olarak düzenlemenizi sağlar. Aşağıdaki görevleri gerçekleştirmek için BDC tasarımcısını kullanın:
 
-- Modele varlık ekleme.
+- Modele varlık ekleyin.
 
 - Varlıkları modelden kaldırın.
 
 - Varlıklar arasındaki ilişkileri tanımlayın.
 
-  İVB Tasarımcısı'nı açmak için projenizde, model dosyasına çift tıklayın veya model dosyası için kısayol menüsünü açın ve ardından **açın**. Sürükleyerek veya kopyalayarak modele bir varlık eklemek bir **varlık** gelen **araç kutusu** tasarımcıya. İki varlık arasında bir ilişki oluşturmak için seçin **ilişkilendirme** denetim **araç kutusu**, birinci varlığın seçin ve ardından ikinci varlığı seçin.
+  IVB tasarımcısını açmak için, projenizdeki model dosyasına çift tıklayın veya model dosyasının kısayol menüsünü açın ve **Aç**' ı seçin. **Araç kutusundan** tasarımcı üzerine bir **varlık** sürükleyip veya kopyalayarak modele bir varlık ekleyin. İki varlık arasında bir ilişki oluşturmak için, **araç kutusunda** **ilişki** denetimini seçin, ilk varlığı seçin ve ardından ikinci varlığı seçin.
 
-## <a name="bdc-method-details-window"></a>BDC yöntem Ayrıntıları penceresi
- Kullanım **BDC yöntem ayrıntıları** parametreleri, örnekleri tanımlayın ve filtre tanımlayıcıları bir yöntemin penceresi.
+## <a name="bdc-method-details-window"></a>IVB yöntemi ayrıntıları penceresi
+ Bir metodun parametrelerini, örneklerini ve filtre tanımlayıcılarını tanımlamak için **BDC Yöntem ayrıntıları** penceresini kullanın.
 
- Bulucu, belirli Bulucu, oluşturucu, güncelleştirici ve Silici yöntemleri hızlı bir şekilde oluşturabileceğiniz **BDC yöntem ayrıntıları** penceresi. Bu yöntemleri oluşturduğunuzda, Visual Studio yönteme parametre, örnekleri ve tür tanımlayıcısı gibi meta veri ekler. Bu meta veriler kendi senaryonuza karşılamak için değiştirebilirsiniz.
+ **BDC Yöntem ayrıntıları** penceresinde bulucu, belirli bulucu, Oluşturucu, Güncelleştirici ve deleter yöntemlerini hızlıca oluşturabilirsiniz. Bu yöntemleri oluştururken, Visual Studio metoduna parametreler, örnekler ve tür tanımlayıcıları gibi meta veriler ekler. Bu meta verileri, belirli senaryonuzu karşılayacak şekilde değiştirebilirsiniz.
 
- Açmak için **BDC yöntem ayrıntıları** menü çubuğunda, pencere **görünümü** > **diğer Windows** > **BDC yöntem ayrıntıları** .
+ **İVB yöntemi ayrıntıları** penceresini açmak için, menü çubuğunda **View**  >  **diğer Windows**  >  **BDC Yöntem ayrıntılarını**görüntüle ' yi seçin.
 
- Yöntemleri görüntülemek için **BDC yöntem ayrıntıları** penceresinde İVB Tasarımcısı'nda varlık seçin. Seçilen varlığın yöntemleri görünür **BDC yöntem ayrıntıları** penceresi. Bir varlığı İVB Tasarımcısı'nda seçmezseniz **BDC yöntem ayrıntıları** penceresi hiçbir bilgi görüntüler.
+ **IVB yöntemi ayrıntıları** penceresindeki yöntemleri görüntülemek Için bdc Tasarımcısı 'nda varlığı seçin. Seçilen varlığın yöntemleri **BDC Yöntem ayrıntıları** penceresinde görünür. IVB tasarımcısında bir varlık görmüyorsanız, **IVB yöntemi ayrıntıları** penceresi hiçbir bilgi görüntüler.
 
- Genişlet veya daralt düğümler **BDC yöntem ayrıntıları** parametreleri, örnekler, tanımlamak ve filtre tanımlayıcıları penceresi. Kullanım **BDC Gezgini** tür tanımlayıcısı tanımlamak için.
+ Parametreleri, örnekleri ve filtre tanımlayıcılarını tanımlamak için **BDC Yöntem ayrıntıları** penceresindeki düğümleri genişletin veya daraltın. Tür tanımlayıcılarını tanımlamak için **BDC Gezginini** kullanın.
 
 ## <a name="bdc-explorer"></a>BDC Gezgini
- **BDC Gezgini** modeli öğeleri görüntüler. Açmak için **BDC Gezgini**, menü çubuğunda, **görünümü** > **diğer Windows** > **BDC Gezgini**. Model göz atmak için düğümleri genişletin **BDC Gezgini**. Her düğüm, model dosyası XML içindeki bir öğeyi temsil eder.
+ **IVB Gezgini** , modeli oluşturan öğeleri görüntüler. **İVB Gezginini**açmak için, menü çubuğunda **View**  >  **diğer Windows**  >  **BDC Gezginini**görüntüle ' yi seçin. Modele gözatabileceğiniz **BDC Gezgini**'ndeki düğümler ' i genişletin. Her düğüm, model dosyasının XML dosyasındaki bir öğeyi temsil eder.
 
- Düğümler seçerken **BDC Gezgini**, seçtiğiniz her bir düğümün özellikleri görünür **özellikleri** penceresi. Bu özelliklerin çoğu model dosyası özniteliğine karşılık gelir. En üstündeki arama kutusunu kullanarak model arayabilirsiniz **BDC Gezgini**.
-
-> [!NOTE]
-> **BDC Gezgini** tanımlayıcıları, özel özellikler, yerelleştirilmiş dizeleri, ilişkilendirme grupları, Eylemler, filtre tanımlayıcıları, eylem denetim listeleri ve varsayılan parametre değerlerini görüntülemez.
-
-### <a name="define-type-descriptors"></a>Tür tanımlayıcıları tanımlayın
- Kullanım **BDC Gezgini** tür tanımlayıcısı tanımlamak için. BDC Gezgini, bir tür tanımlayıcı bir kez tanımlamanızı ve daha sonra bu tür tanımlayıcıyı modelinizdeki başka bir yerde yeniden sağlar. Bunu gerçekleştirmek için bir tür tanımlayıcı kopyalayıp başka bir parametre yapıştırın veya tür tanımlayıcısı.
+ **IVB Gezgininde**düğümleri seçerken, seçtiğiniz her bir düğümün özellikleri **Özellikler** penceresinde görünür. Bu özelliklerin birçoğu model dosyasındaki özniteliklere karşılık gelir. **IVB Gezgini**'nin en üstündeki arama kutusunu kullanarak modelde arama yapabilirsiniz.
 
 > [!NOTE]
-> Özgün bir tür tanımlayıcı değişiklikler, bu tür tanımlayıcıyı kopyalarını etkilemez.
+> **BDC Gezgini** , tanımlayıcıları, özel özellikleri, yerelleştirilmiş dizeleri, ilişki gruplarını, eylemleri, filtre tanımlayıcılarını, eylem denetim listelerini ve varsayılan parametre değerlerini görüntülemez.
 
- Daha fazla bilgi için [nasıl yapılır: Bir parametrenin tür tanımlayıcısını tanımlama](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md).
+### <a name="define-type-descriptors"></a>Tür tanımlayıcılarını tanımla
+ Tür tanımlayıcılarını tanımlamak için **BDC Gezginini** kullanın. IVB Gezgini bir kez bir tür tanımlayıcısı tanımlamanızı ve ardından bu tür tanımlayıcısını modelinizde başka bir yerde yeniden kullanmanıza olanak sağlar. Bunu gerçekleştirmek için, bir tür tanımlayıcısı kopyalayın ve diğer herhangi bir parametreye veya tür tanımlayıcısına yapıştırın.
+
+> [!NOTE]
+> Özgün tür tanımlayıcısındaki değişiklikler bu tür tanımlayıcısının kopyalarını etkilemez.
+
+ Daha fazla bilgi için bkz. [nasıl yapılır: bir parametrenin tür tanımlayıcısını tanımlama](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl yapılır: BDC modeli oluşturma](../sharepoint/how-to-create-a-bdc-model.md)
-- [Nasıl yapılır: Modele bir varlık ekleme](../sharepoint/how-to-add-an-entity-to-a-model.md)
-- [Nasıl yapılır: Bir Bulucu yöntemi ekleme](../sharepoint/how-to-add-a-finder-method.md)
-- [Nasıl yapılır: Belirli bir Bulucu yöntemi ekleme](../sharepoint/how-to-add-a-specific-finder-method.md)
-- [Nasıl yapılır: Bir yaratıcı metodu ekleme](../sharepoint/how-to-add-a-creator-method.md)
-- [Nasıl yapılır: Silici metodu ekleme](../sharepoint/how-to-add-a-deleter-method.md)
-- [Nasıl yapılır: Bir güncelleyici metodu ekleme](../sharepoint/how-to-add-an-updater-method.md)
+- [Nasıl yapılır: modele varlık ekleme](../sharepoint/how-to-add-an-entity-to-a-model.md)
+- [Nasıl yapılır: Bulucu yöntemi ekleme](../sharepoint/how-to-add-a-finder-method.md)
+- [Nasıl yapılır: belirli bir bulucu yöntemi ekleme](../sharepoint/how-to-add-a-specific-finder-method.md)
+- [Nasıl yapılır: bir Oluşturucu yöntemi ekleme](../sharepoint/how-to-add-a-creator-method.md)
+- [Nasıl yapılır: bir silici yöntemi ekleme](../sharepoint/how-to-add-a-deleter-method.md)
+- [Nasıl yapılır: Güncelleştirici yöntemi ekleme](../sharepoint/how-to-add-an-updater-method.md)
 - [Varlıklar arasında ilişkilendirme oluşturma](../sharepoint/creating-an-association-between-entities.md)
-- [İzlenecek yol: İş verileri kullanarak SharePoint'te dış liste oluşturma](../sharepoint/walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data.md)
+- [İzlenecek yol: iş verileri kullanarak SharePoint 'te dış liste oluşturma](../sharepoint/walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data.md)
 - [İş verilerini SharePoint ile tümleştirme](../sharepoint/integrating-business-data-into-sharepoint.md)
 - [İş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md)
 - [İş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiaenumınjectedsources::Skip | Microsoft Docs
+title: 'IDiaEnumInjectedSources:: Skip | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 890d9c5b1673a9af4acabf8262a76e2840ede8ad
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150887"
 ---
 # <a name="idiaenuminjectedsourcesskip"></a>IDiaEnumInjectedSources::Skip
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir numaralandırma sıralı eklenen kaynakları belirtilen sayıda atlar.  
+Bir numaralandırma dizisinde belirtilen sayıda eklenen kaynağı atlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Skip (   
@@ -35,10 +35,10 @@ HRESULT Skip ( 
   
 #### <a name="parameters"></a>Parametreler  
  celt  
- [in] Eklenen kaynakları atlamak için numaralandırma sıralı sayısı.  
+ 'ndaki Atlanacak numaralandırma dizisindeki eklenen kaynak sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` atlamak için artık eklenen kaynakları varsa.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` atlayabilmeniz için başka eklenen kaynak yoksa döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

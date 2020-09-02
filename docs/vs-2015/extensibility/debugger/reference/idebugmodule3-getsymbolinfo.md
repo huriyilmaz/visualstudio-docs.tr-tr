@@ -1,5 +1,5 @@
 ---
-title: IDebugModule3::GetSymbolInfo | Microsoft Docs
+title: 'IDebugModule3:: Getsymbolınfo | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,18 +14,18 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 48dd08b8ef1a8b32497d03dc7989b32a22ee5a9c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63426362"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64833551"
 ---
 # <a name="idebugmodule3getsymbolinfo"></a>IDebugModule3::GetSymbolInfo
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Her yol arama sonuçlarını yanı sıra semboller için Aranan yol listesini alır.  
+Simgeler için aranan yolların yanı sıra her bir yolu aramanın sonuçlarını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetSymbolInfo(  
@@ -44,29 +44,29 @@ int GetSymbolInfo(
   
 #### <a name="parameters"></a>Parametreler  
  `dwFields`  
- [in] Bayraklarının bir birleşimi [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) hangi alanları belirten sabit listesi `pInfo` doldurulacak olan.  
+ 'ndaki [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) Numaralandırmadaki, doldurulacak alanları belirten bayrakların birleşimi `pInfo` .  
   
  `pInfo`  
- [out] A [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md) Yapı üyeleri olan belirtilen bilgileriyle doldurulacak. Bu bir null değeri ise, bu yöntemi döndürür `E_INVALIDARG`.  
+ dışı Üyeleri belirtilen bilgilerle doldurulacak [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md) yapısı. Bu null bir değer ise, bu yöntem döndürür `E_INVALIDARG` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa, döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Yöntem başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 > [!NOTE]
-> Döndürülen dize (içinde `MODULE_SYMBOL_SEARCH_INFO` yapısı) boş olabilir bile `S_OK` döndürülür. Bu durumda, geri dönmek için hiçbir arama bilgisi vardı.  
+> Döndürülen dize ( `MODULE_SYMBOL_SEARCH_INFO` yapıda) döndürülse bile boş olabilir `S_OK` . Bu durumda, döndürülecek arama bilgisi yoktu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa `bstrVerboseSearchInfo` alanını `MODULE_SYMBOL_SEARCH_INFO` yapısı boş değil ve ardından arama yolları ve bu arama sonuçlarının bir listesini içerir. Listenin sonuca göre ve ardından üç nokta ("..."), ardından bir yol ile biçimlendirilir. Birden fazla yol sonuç çifti varsa, her bir çifti "\r\n" (satır başı-başı/satır besleme) çifti tarafından ayrılmış. Desen şöyle görünür:  
+ `bstrVerboseSearchInfo` `MODULE_SYMBOL_SEARCH_INFO` Yapı alanı boş değilse, aranan yolların ve bu aramanın sonuçlarının bir listesini içerir. Liste, bir yol ile, ardından üç nokta ("...") ve ardından sonuç olarak biçimlendirilir. Birden fazla yol sonuç çifti varsa, her çift bir "\r\n" (satır başı/linefeed) çifti ile ayrılır. Bu model şöyle görünür:  
   
- \<yolu >... \<sonucu > \r\n\<yolu >... \<sonucu > \r\n\<yolu >... \<sonucu >  
+ \<path>...\<result> \r\n \<path> ... \<result> \r\n \<path> ...\<result>  
   
- En son giriş \r\n dizisi yok unutmayın.  
+ Son girişin bir \r\n dizisine sahip olmadığına unutmayın.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, üç farklı arama sonuçları ile üç yolları Bu yöntemi döndürür. Her satır, satır başı-başı/satır besleme çifti ile sonlandırılır. Örnek Çıktı, yalnızca tek bir dize olarak arama sonuçlarını yazdırır.  
+ Bu örnekte, bu yöntem üç farklı arama sonucu olan üç yol döndürür. Her satır, bir satır başı/satır besleme çifti ile sonlandırılır. Örnek çıktı yalnızca arama sonuçlarını tek bir dize olarak yazdırır.  
   
 > [!NOTE]
-> Bir durum hemen ardından "..." satırın sonuna kadar her şeyi sonucudur.  
+> Durum sonucu, "..." öğesinden hemen sonra gelen her şey olur satırın sonuna kadar.  
   
 ```cpp#  
 void ShowSymbolSearchResults(IDebugModule3 *pIDebugModule3)  
@@ -84,9 +84,9 @@ void ShowSymbolSearchResults(IDebugModule3 *pIDebugModule3)
 }  
 ```  
   
- **c:\symbols\user32.pdb... Soubor nebyl nalezen.**  
+ **c:\symbols\user32.pdb... Dosya bulunamadı.**  
 **c:\winnt\symbols\user32.pdb... Sürüm eşleşmiyor.**  
-**\\\symbols\symbols\user32.dll\0a8sd0ad8ad\user32.pdb... Sembol yüklenmedi.**   
+**\\\symbols\symbols\user32.dll \0a8sd0ad8ad\user32.pdb... Semboller yüklendi.**   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md)   
  [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md)   

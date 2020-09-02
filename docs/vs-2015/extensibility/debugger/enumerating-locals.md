@@ -1,5 +1,5 @@
 ---
-title: Yerel öğeleri numaralandırma | Microsoft Docs
+title: Yereller numaralandırılıyor | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,38 +12,38 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 31d158a0c8f52e6ca8fe496885a0a3d5b862a543
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440731"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64835578"
 ---
 # <a name="enumerating-locals"></a>Yerel Öğeleri Numaralandırma
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
-> Visual Studio 2015'te, bu şekilde ifade değerlendiricisi uygulama kullanım dışı bırakılmıştır. CLR ifade değerlendiricisi uygulama hakkında daha fazla bilgi için lütfen bkz [CLR ifade Değerlendiricilerini](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendiricisi örnek](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Visual Studio olduğunda doldurmak hazır **Yereller** penceresinde çağrı [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) üzerinde [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) döndürülen nesne [ GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) (bkz [GetMethodProperty uygulama](../../extensibility/debugger/implementing-getmethodproperty.md)). `IDebugProperty2::EnumChildren` döndürür bir [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) nesne.  
+ Visual Studio **Yereller** penceresini doldurmak için hazırsanız, [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) 'Den döndürülen [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) nesnesinde [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) 'ı çağırır (bkz. [GetMethodProperty uygulama](../../extensibility/debugger/implementing-getmethodproperty.md)). `IDebugProperty2::EnumChildren` bir [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) nesnesi döndürür.  
   
- Bu uygulaması `IDebugProperty2::EnumChildren` aşağıdaki görevleri gerçekleştirir:  
+ Bu uygulama `IDebugProperty2::EnumChildren` aşağıdaki görevleri gerçekleştirir:  
   
-1. Bu bir yöntemi temsil eden sağlar.  
+1. Bunun bir yöntemi temsil eder.  
   
-2. Kullanan `guidFilter` çağırmak için hangi yöntemin belirlemek için bağımsız değişken [IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md) nesne. Varsa `guidFilter` eşittir:  
+2. , `guidFilter` [IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md) nesnesinde hangi yöntemin çağrılacağını belirleyen bağımsız değişkenini kullanır. `guidFilter`Eşittir ise:  
   
-    1. `guidFilterLocals`, çağrı [EnumLocals](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md) almak için bir [IEnumDebugFields](../../extensibility/debugger/reference/ienumdebugfields.md) nesne.  
+    1. `guidFilterLocals`, bir [IEnumDebugFields](../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi almak Için [EnumLocals](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md) öğesini çağırın.  
   
-    2. `guidFilterArgs`, çağrı [EnumArguments](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) almak için bir `IEnumDebugFields` nesne.  
+    2. `guidFilterArgs`, bir nesne almak için [EnumArguments](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) çağırın `IEnumDebugFields` .  
   
-    3. `guidFilterLocalsPlusArgs`, sonuçları bir araya getiren bir numaralandırma sentezlemek `IDebugMethodField::EnumLocals` ve `IDebugMethodField::EnumArguments`. Bu sentezi sınıfı tarafından temsil edilen `CEnumMethodField`.  
+    3. `guidFilterLocalsPlusArgs`, ve sonuçlarını birleştiren bir sabit listesini sentezleştirme `IDebugMethodField::EnumLocals` `IDebugMethodField::EnumArguments` . Bu birleştirbir sınıf tarafından temsil edilir `CEnumMethodField` .  
   
-3. Bir sınıf oluşturur (adlı `CEnumPropertyInfo` Bu örnekte) uygulayan `IEnumDebugPropertyInfo2` arabirim ve içeren `IEnumDebugFields` nesne.  
+3. `CEnumPropertyInfo` `IEnumDebugPropertyInfo2` Arabirimini uygulayan ve nesnesini içeren bir sınıfı (Bu örnekte çağırılır) başlatır `IEnumDebugFields` .  
   
-4. Döndürür `IEnumDebugProperty2Info2` alanından arabirim `CEnumPropertyInfo` nesne.  
+4. `IEnumDebugProperty2Info2`Nesneden arabirimi döndürür `CEnumPropertyInfo` .  
   
 ## <a name="managed-code"></a>Yönetilen kod  
- Bu örnekte uygulanışı gösterilmektedir `IDebugProperty2::EnumChildren` yönetilen kod.  
+ Bu örnek, yönetilen kodda uygulamasının bir uygulamasını gösterir `IDebugProperty2::EnumChildren` .  
   
 ```csharp  
 namespace EEMC  
@@ -122,7 +122,7 @@ namespace EEMC
 ```  
   
 ## <a name="unmanaged-code"></a>Yönetilmeyen Kod  
- Bu örnekte uygulanışı gösterilmektedir `IDebugProperty2::EnumChildren` yönetilmeyen kod.  
+ Bu örnek, yönetilmeyen kodda uygulamasının bir uygulamasını gösterir `IDebugProperty2::EnumChildren` .  
   
 ```cpp#  
 STDMETHODIMP CFieldProperty::EnumChildren(   
@@ -248,6 +248,6 @@ STDMETHODIMP CFieldProperty::EnumChildren(
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Örnek yerel öğeler uygulaması](../../extensibility/debugger/sample-implementation-of-locals.md)   
+ [Yereller için örnek uygulama](../../extensibility/debugger/sample-implementation-of-locals.md)   
  [GetMethodProperty uygulama](../../extensibility/debugger/implementing-getmethodproperty.md)   
  [Değerlendirme Bağlamı](../../extensibility/debugger/evaluation-context.md)

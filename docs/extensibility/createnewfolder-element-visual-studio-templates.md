@@ -1,5 +1,5 @@
 ---
-title: CreateNewFolder Öğesi (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: CreateNewFolder öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,18 +14,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 860f4df3e69a568a3e391da4d7437d9a5fd83f15
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739677"
 ---
 # <a name="createnewfolder-element-visual-studio-templates"></a>CreateNewFolder öğesi (Visual Studio şablonları)
-Projenin oluşturulacağı hedef dizinin var olup olmadığını denetleyip denetlemeyeceğini belirler. Dizin varsa, proje için yeni bir dizin oluşturulabilir. Bu ayar genellikle `NewProjectRequiresNewFolder(VsTemplate)` tüm yaygın proje türlerinin`HKEY_LOCAL_MACHINE/SOFTWARE(/Wow6432Node)/Microsoft/VisualStudio/<version number>/Projects/<project GUID>`yeni bir dizinde yeni bir proje oluşturup oluşturmayacağını belirlemek için kullandığı kayıt defteri bayrağı ( ) tarafından geçersiz kılınan bir ayardır.
+Projenin oluşturulacağı hedef dizinin mevcut olmadığını denetleyip denetmeyeceğini belirler. Dizin varsa, proje için yeni bir dizin oluşturulabilir. Bu ayar genellikle, `NewProjectRequiresNewFolder(VsTemplate)` `HKEY_LOCAL_MACHINE/SOFTWARE(/Wow6432Node)/Microsoft/VisualStudio/<version number>/Projects/<project GUID>` tüm ortak proje türlerinin yeni bir dizinde yeni bir proje oluşturulup oluşturulmayacağını belirlemede kullanılan kayıt defteri bayrağı () tarafından geçersiz kılınır.
 
- \<VSTemplate \<> ŞablonVeri> \<CreateNewFolder>
+ \<VSTemplate> \<TemplateData>
+ \<CreateNewFolder>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <CreateNewFolder>
@@ -49,20 +50,20 @@ Projenin oluşturulacağı hedef dizinin var olup olmadığını denetleyip dene
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırın ve Yeni **Proje'de** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleyeceğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Metin, `true` `false`şablondan bir proje oluşturulduğunda yeni bir kapsayıcı klasörü oluşturulup oluşturulmaması gerektiğini belirten metin olmalıdır.
+ Metin `true` veya `false` şablondan bir proje oluşturulduğunda yeni bir kapsayıcı klasörünün oluşturulup oluşturulmayacağını belirten bir değer olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
- `CreateNewFolder`isteğe bağlı bir unsurdur. Varsayılan değer: `true`.
+ `CreateNewFolder` isteğe bağlı bir öğedir. Varsayılan değer: `true`.
 
- `CreateNewFolder` Öğede belirtilen değer, yalnızca temel [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] proje sistemi destekliyorsa onurlanır.
+ Öğesinde belirtilen değer `CreateNewFolder` yalnızca [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] temel alınan proje sistemi tarafından destekliyorsa kabul edilir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, şablondan bir proje oluşturulduğunda yeni bir klasör oluşturmamayı belirtir.
+ Aşağıdaki kod örneği, şablondan bir proje oluşturulduğunda yeni bir klasör oluşturmamalıdır.
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -90,5 +91,5 @@ Projenin oluşturulacağı hedef dizinin var olup olmadığını denetleyip dene
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
-- [Proje ve madde şablonları oluşturma](../ide/creating-project-and-item-templates.md)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

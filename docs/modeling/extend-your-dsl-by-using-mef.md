@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 04d14b3b17953ef30620d9f616bb471b186e9c9f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547647"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>MEF kullanarak DSL'nizi genişletme
@@ -26,7 +26,7 @@ MEF hakkında daha fazla bilgi için bkz. [Managed Extensibility Framework (MEF)
 
 1. **DslPackage** projesi Içinde **MefExtension** adlı yeni bir klasör oluşturun. Aşağıdaki dosyaları bu dosyaya ekleyin:
 
-     Dosya adı:`CommandExtensionVSCT.tt`
+     Dosya adı: `CommandExtensionVSCT.tt`
 
     > [!IMPORTANT]
     > Bu dosyadaki GUID 'yi DslPackage\GeneratedCode\Constants.tt içinde tanımlanan GUID CommandSetId ile aynı olacak şekilde ayarlayın
@@ -42,21 +42,21 @@ MEF hakkında daha fazla bilgi için bkz. [Managed Extensibility Framework (MEF)
     <#@ include file="DslPackage\CommandExtensionVSCT.tt" #>
     ```
 
-    Dosya adı:`CommandExtensionRegistrar.tt`
+    Dosya adı: `CommandExtensionRegistrar.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="DslPackage\CommandExtensionRegistrar.tt" #>
     ```
 
-    Dosya adı:`ValidationExtensionEnablement.tt`
+    Dosya adı: `ValidationExtensionEnablement.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="DslPackage\ValidationExtensionEnablement.tt" #>
     ```
 
-    Dosya adı:`ValidationExtensionRegistrar.tt`
+    Dosya adı: `ValidationExtensionRegistrar.tt`
 
     Bu dosyayı eklerseniz, DSL Explorer 'da **Editorvalidation** içindeki anahtarlardan en az bırını kullanarak DSL 'de doğrulamayı etkinleştirmeniz gerekir.
 
@@ -65,7 +65,7 @@ MEF hakkında daha fazla bilgi için bkz. [Managed Extensibility Framework (MEF)
     <#@ include file="DslPackage\ValidationExtensionRegistrar.tt" #>
     ```
 
-    Dosya adı:`PackageExtensionEnablement.tt`
+    Dosya adı: `PackageExtensionEnablement.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
@@ -74,21 +74,21 @@ MEF hakkında daha fazla bilgi için bkz. [Managed Extensibility Framework (MEF)
 
 2. **DSL** projesi Içinde **MefExtension** adlı yeni bir klasör oluşturun. Aşağıdaki dosyaları bu dosyaya ekleyin:
 
-     Dosya adı:`DesignerExtensionMetaDataAttribute.tt`
+     Dosya adı: `DesignerExtensionMetaDataAttribute.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="Dsl\DesignerExtensionMetadataAttribute.tt" #>
     ```
 
-    Dosya adı:`GestureExtensionEnablement.tt`
+    Dosya adı: `GestureExtensionEnablement.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="Dsl\GestureExtensionEnablement.tt" #>
     ```
 
-    Dosya adı:`GestureExtensionController.tt`
+    Dosya adı: `GestureExtensionController.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
@@ -177,7 +177,7 @@ Ayrı bir DSL uzantısı çözümünün derleme kodu projesinde uzantı yazabili
 
 Bir menü komutu yazmak için, bir sınıfı, uygulayan <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> ve DSL ADLı DSL adında tanımlanmış olan özniteliğe önek olarak tanımlayın *YourDsl* `CommandExtension` . Birden fazla menü komut sınıfı yazabilirsiniz.
 
-`QueryStatus()`kullanıcının diyagrama sağ tıkladığı her zaman çağrılır. Geçerli seçimi incelemelidir ve `command.Enabled` komutun ne zaman geçerli olduğunu belirtecek şekilde ayarlanmalıdır.
+`QueryStatus()` kullanıcının diyagrama sağ tıkladığı her zaman çağrılır. Geçerli seçimi incelemelidir ve `command.Enabled` komutun ne zaman geçerli olduğunu belirtecek şekilde ayarlanmalıdır.
 
 ```csharp
 using System.ComponentModel.Composition;

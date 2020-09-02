@@ -14,54 +14,54 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 894378d6648139b7ec2b587eb0066a5725af7a71
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443730"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64838240"
 ---
 # <a name="manage-channels"></a>Kanalları Yönet
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İçinde **iş parçacıkları görünümü** belirli desenleri inceleyebilirsiniz için eşzamanlılık görselleştiricisi içinde kanalları süreciniz için düzenleyebilirsiniz. Kanalları sıralamak, yukarı ve aşağı taşıyın ve gizlemek veya göstermek.  
+Eşzamanlılık görselleştiricisi içindeki **Iş parçacıkları görünümünde** , işlem için kanalları düzenleyerek belirli desenleri inceleyebilirsiniz. Kanalları sıralayabilir, yukarı ve aşağı taşıyabilir, gizleyebilir veya gösterebilirsiniz.  
   
-## <a name="sort-by"></a>Sıralama ölçütü  
- Sıralama ölçütü denetimi, iş parçacıklarının geçerli yakınlaştırma düzeyini temel alan farklı ölçütlere göre sıralamak için kullanabilirsiniz. Bu, belirli bir desene aranırken özellikle yararlıdır. Bu ölçüte göre sıralama yapabilirsiniz:  
+## <a name="sort-by"></a>Sıralama Ölçütü  
+ Geçerli yakınlaştırma düzeyine göre iş parçacıklarını farklı ölçütlere göre sıralamak için sıralama ölçütü denetimi kullanabilirsiniz. Bu, özellikle belirli bir model ararken yararlıdır. Şu ölçütlere göre sıralama yapabilirsiniz:  
   
-|Ölçütleri|Tanım|  
+|Ölçütler|Tanım|  
 |--------------|----------------|  
-|Başlangıç Zamanı|İş parçacığı başlangıç süreleri göre sıralar. Varsayılan sıralama düzenini budur.|  
-|Bitiş Zamanı|İş parçacıkları, bitiş zamanına göre sıralar.|  
-|Yürütme|İş parçacıkları tarafından yürütme için harcanan sürenin yüzdesi sıralar.|  
-|Eşitleme|İş parçacığı eşitleme harcanan sürenin yüzdesi göre sıralar.|  
-|G/Ç|İş parçacıkları (veri okuma ve yazma) I/O için harcanan sürenin yüzdesi göre sıralar.|  
-|Uyku|İş parçacıkları, uyku modunda harcanan sürenin yüzdesi olarak sıralar.|  
-|Disk Belleği|İş parçacıkları disk belleği harcanan sürenin yüzdesi göre sıralar.|  
-|Önalım|İş parçacıkları önalım harcanan sürenin yüzdesi olarak sıralar.|  
-|UI işleme|İş parçacıkları, kullanıcı arabirimi işlenmesinde harcanan sürenin yüzdesi olarak sıralar.|  
+|Başlangıç Zamanı|İş parçacıklarını başlangıç sürelerine göre sıralar. Bu, varsayılan sıralama sıraladır.|  
+|Bitiş Zamanı|İş parçacıklarını bitiş sürelerine göre sıralar.|  
+|Yürütme|İş parçacıklarını yürütme sırasında harcanan sürenin yüzdesine göre sıralar.|  
+|Eşitleme|İş parçacıklarını eşitlemede harcanan sürenin yüzdesine göre sıralar.|  
+|G/Ç|İş parçacıklarını g/ç 'de harcanan sürenin yüzdesine göre sıralar (verileri okuma ve yazma).|  
+|Uyku|İş parçacıklarını, uyku modunda harcanan sürenin yüzdesine göre sıralar.|  
+|Sayfalama|İş parçacıklarını sayfalama sırasında harcanan sürenin yüzdesine göre sıralar.|  
+|Önalım|İş parçacıklarını önalım ' de harcanan sürenin yüzdesine göre sıralar.|  
+|UI Işleme|İş parçacıklarını Kullanıcı arabirimi işlemede harcanan sürenin yüzdesine göre sıralar.|  
   
-## <a name="move-selected-channel-up-or-down"></a>Seçilen kanal yukarı veya Aşağı Taşı  
- Bir kanal listede yukarı veya aşağı taşımak için bu denetimleri kullanabilirsiniz. Örneğin, diğer iş parçacıkları arası ilişki ya da belirli bir desene incelemenize yardımcı olmak için yanındaki ilgili kanalları getirin.  
+## <a name="move-selected-channel-up-or-down"></a>Seçili kanalı yukarı veya aşağı taşı  
+ Bu denetimleri listede bir kanalı yukarı veya aşağı taşımak için kullanabilirsiniz. Örneğin, belirli bir model veya bir çapraz iş parçacığı ilişkisini incelemenize yardımcı olması için birbirleriyle ilgili kanalları konumlandırabilirsiniz.  
   
-## <a name="move-selected-channel-to-top-or-bottom"></a>Seçilen kanal üstüne veya altına taşıyın.  
- Böylece belirli bir desene inceleyin veya başkalarının incelediğinizde bazı kanalları dışına taşıyın, seçilen kanallar üst veya listenin taşıyabilirsiniz.  
+## <a name="move-selected-channel-to-top-or-bottom"></a>Seçili kanalı en üste veya en alta taşı  
+ Seçili kanalları listenin en üstüne veya altına taşıyarak belirli bir kalıbı inceleyebilir veya diğerlerini incelerken bazı kanalları izleyebilirsiniz.  
   
-## <a name="hide-selected-channels"></a>Seçilen kanallar Gizle  
- Kanalları gizlemek istediğinizde bu denetimi seçin. Bir iş parçacığını ömrü boyunca yönetilen işleminizi yüzde 100 eşitleme ise, diğer iş parçacıklarını analiz ederken gibi gizlemek.  
+## <a name="hide-selected-channels"></a>Seçili kanalları gizle  
+ Kanalları gizlemek istediğinizde bu denetimi seçin. Örneğin, bir iş parçacığı yönetilen işleminizin ömrü boyunca yüzde 100 Eşitleme ise, diğer iş parçacıklarını analiz ettiğiniz zaman onu gizleyebilirsiniz.  
   
 > [!NOTE]
-> Bir iş parçacığını gizleme Ayrıca, etkin açıklama ve profili raporlarda gösterilen hesaplama zamanı kaldırır.  
+> Bir iş parçacığının gizlenmesi, etkin göstergede ve profil raporlarında gösterilen hesaplama zamanından de kaldırılır.  
   
-## <a name="show-all-channels"></a>Tüm kanalları Göster  
- Bu denetim, bir veya daha fazla kanal gizlendiğinde etkin değil. Seçerseniz, tüm gizli öğeleri gösterilir ve saat hesaplamaları için döndürülür.  
+## <a name="show-all-channels"></a>Tüm kanalları göster  
+ Bir veya daha fazla kanal gizliyse bu denetim etkin olur. Bunu seçerseniz, tüm gizli öğeler gösterilir ve zaman hesaplamalara döndürülür.  
   
-## <a name="move-markers-to-top"></a>İşaretleyicileri en üste Taşı  
- Bir izleme işaret olayları içeriyorsa, işaret kanalları zaman çizelgesi üstüne taşımak için bu komutu kullanabilirsiniz. Kendi göreli sıralarını korunur.  
+## <a name="move-markers-to-top"></a>Işaretçileri üste taşı  
+ Bir izleme işaret olaylarını içeriyorsa, işaretleyici kanalları zaman çizelgesinin en üstüne taşımak için bu komutu kullanabilirsiniz. Göreli sırası korunur.  
   
-## <a name="group-markers-by-thread"></a>Grup işaretleyicileri iş parçacığına göre  
- Bir izleme işaret olayları içeriyorsa, işaret olayları oluşturan iş parçacığı grubu işaret kanallarda için bu komutu kullanabilirsiniz.  Disk Kanallar, kanal listesinin üstüne taşınır ve GPU kanalları altına taşınır.  
+## <a name="group-markers-by-thread"></a>Işaretçileri Iş parçacığına göre grupla  
+ Bir izleme işaret olaylarını içeriyorsa, işaret olaylarını oluşturan iş parçacığının altında işaretleyici kanalları gruplandırmak için bu komutu kullanabilirsiniz.  Disk kanalları Kanal listesinin en üstüne taşınır ve GPU kanalları en alta taşınır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yakınlaştırma Denetimi (iş parçacıkları görünümü)](../profiling/zoom-control-threads-view.md)   
- [Ölçüm modu açık/kapalı](../profiling/measure-mode-on-off.md)   
+ [Yakınlaştırma denetimi (Iş parçacıkları görünümü)](../profiling/zoom-control-threads-view.md)   
+ [Ölçü modu açık/kapalı](../profiling/measure-mode-on-off.md)   
  [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

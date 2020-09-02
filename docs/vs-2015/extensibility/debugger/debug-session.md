@@ -1,5 +1,5 @@
 ---
-title: Oturum hatalarını ayıklama | Microsoft Docs
+title: Hata ayıklama oturumu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -10,21 +10,21 @@ ms.assetid: 18d82199-b2d4-47a9-924f-ab64faf60ca1
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 81867f413a5e631d1831fdb342487acb13cb75a3
-ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.openlocfilehash: eeacd639dff8b22e23711702d1b113a49b8e5b9d
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54760542"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64838221"
 ---
 # <a name="debug-session"></a>Oturum Hatalarını Ayıklama
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Hata ayıklayıcı mimarisi bakımından bir **oturumu**:  
+Hata ayıklayıcı mimarisi açısından bir **oturum**:  
   
--   İlgili veya ilgisiz tüm kümesini işler, başlatılan veya IDE'nin tek bir örneğinden bağlı olur.  
+- , Bir IDE 'nin tek bir örneğinden başlatılmış veya bağlı olan, ilişkili veya ilgisiz tüm işlemlerin kümesidir.  
   
--   Oturum hata ayıklama Yöneticisi (SDM) tarafından uygulanır. Daha fazla bilgi için [oturum hata ayıklama Yöneticisi](../../extensibility/debugger/session-debug-manager.md).  
+- , Bir oturum hata ayıklama Yöneticisi (SDM) tarafından uygulanır. Daha fazla bilgi için bkz. [oturum hata ayıklama Yöneticisi](../../extensibility/debugger/session-debug-manager.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Oturum hata ayıklama Yöneticisi](../../extensibility/debugger/session-debug-manager.md)   

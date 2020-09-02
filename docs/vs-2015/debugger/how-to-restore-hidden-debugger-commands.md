@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Gizli hata ayıklayıcı komutlarını geri yükleme | Microsoft Docs'
+title: 'Nasıl yapılır: gizli hata ayıklayıcı komutlarını geri yükleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -23,61 +23,61 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 297be3a3a4ad3c70ad28c627d5dc8d64c6ba1c7a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442070"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64830858"
 ---
-# <a name="how-to-restore-hidden-debugger-commands"></a>Nasıl yapılır: Gizli hata ayıklayıcı komutlarını geri yükleme
+# <a name="how-to-restore-hidden-debugger-commands"></a>Nasıl Yapılır: Gizli Hata Ayıklayıcı Komutlarını Geri Yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio'yu kurarken IDE ayarları birincil programlama diliniz için bir dizi varsayılan seçmeniz istenir. Bazı diller için varsayılan IDE ayarları belirli hata ayıklayıcı komutları gizlemek.  
+Visual Studio 'yu ayarlarken, birincil programlama diliniz için bir varsayılan IDE ayarları kümesi seçmeniz istenir. Bazı diller için varsayılan IDE ayarları, bazı hata ayıklayıcı komutlarını gizleyebilir.  
   
- Varsayılan IDE ayarlarınız tarafından gizlenen hata ayıklayıcı özelliği kullanmak istiyorsanız, komutu aşağıdaki yordamı kullanarak menüsüne geri ekleyebilirsiniz.  
+ Varsayılan IDE ayarlarınız tarafından gizlenen bir hata ayıklayıcı özelliğini kullanmak istiyorsanız, aşağıdaki yordamı kullanarak komutu menüye geri ekleyebilirsiniz.  
   
-### <a name="to-restore-hidden-debugger-commands"></a>Gizli hata ayıklayıcı komutlarını geri yükleme  
+### <a name="to-restore-hidden-debugger-commands"></a>Gizli hata ayıklayıcı komutlarını geri yüklemek için  
   
-1. Açık bir projeyle **Araçları** menüsünde tıklatın **Özelleştir**.  
+1. Bir proje açıkken, **Araçlar** menüsünde **Özelleştir**' e tıklayın.  
   
-2. İçinde **Özelleştir** iletişim kutusu, tıklayın **komutları** sekmesi.  
+2. **Özelleştir** Iletişim kutusunda **Komutlar** sekmesine tıklayın.  
   
-3. İçinde **menü çubuğu:** açılan listesinde, select **hata ayıklama** geri yüklenen komut içermesini istediğiniz menü.  
+3. **Menü çubuğunda: açılan menüsünde** , geri yüklenen komutu Içermesini Istediğiniz **hata ayıklama** menüsünü seçin.  
   
-4. Tıklayın **komut Ekle...** düğmesi.  
+4. **Ekle komutuna tıklayın...** tıklayın.  
   
-5. İçinde **Add Command** kutusunda, ardından istediğiniz komutu seçin **Tamam**.  
+5. **Ekle komut** kutusunda, eklemek istediğiniz komutu seçin ve **Tamam**' ı tıklatın.  
   
-6. Başka bir komut eklemek için önceki adımı yineleyin.  
+6. Başka bir komut eklemek için önceki adımı tekrarlayın.  
   
-7. Tıklayın **Kapat** tamamladığınızda menüsüne komut ekleme.  
+7. Menüye komut eklemeyi bitirdiğinizde **Kapat** ' a tıklayın.  
   
     > [!WARNING]
-    > Bazı menü öğeleri yalnızca hata ayıklayıcı çalışma modunda veya kesme moduna gibi belirli modda olduğunda görünür. Bu nedenle, bu adımları tamamladıktan sonra eklenen öğenin hemen görünür olmayabilir.  
+    > Bazı menü öğeleri yalnızca hata ayıklayıcı çalışma modu veya kesme modu gibi belirli modlarda olduğunda görüntülenir. Bu nedenle, bu adımları tamamladığınızda eklediğiniz bir öğe hemen görünür olmayabilir.  
   
-## <a name="restoring-commands-not-available-from-the-customize-dialog-box"></a>Geri yükleme komutları kullanılamaz Özelleştir iletişim kutusu  
- Bazı komutlar, özellikle hiyerarşik menülerinde bulunan geri yüklenemez **Özelleştir** iletişim kutusu. Bu komutları geri yüklemek için IDE ayarları yeni bir koleksiyonu içeri aktarmanız gerekir.  
+## <a name="restoring-commands-not-available-from-the-customize-dialog-box"></a>Özelleştirme Iletişim kutusunda kullanılamayan komutları geri yükleme  
+ Özellikle hiyerarşik menülerde bulunan bazı komutlar, **Özelleştir** iletişim kutusundan geri yüklenemez. Bu komutları geri yüklemek için yeni bir IDE ayarları koleksiyonu içeri aktarmanız gerekir.  
   
-#### <a name="to-import-new-ide-settings"></a>Yeni IDE ayarları içeri aktarmak için  
+#### <a name="to-import-new-ide-settings"></a>Yeni IDE ayarlarını içeri aktarmak için  
   
-1. Üzerinde **Araçları** menüsünde tıklatın **içeri ve dışarı aktarma ayarları**.  
+1. **Araçlar** menüsünde **Içeri ve dışarı aktarma ayarları**' na tıklayın.  
   
-2. Üzerinde **içeri aktarma ve dışarı aktarma ayarları Sihirbazı Hoş Geldiniz** sayfasında **seçili ortam ayarlarını içeri aktarma**ve ardından **sonraki**.  
+2. **Ayarları içeri ve dışarı aktarma Sihirbazı 'Na hoş geldiniz** sayfasında, **Seçili ortam ayarlarını içeri aktar**' a tıklayın ve ardından **İleri**' ye tıklayın.  
   
-3. Üzerinde **geçerli ayarları Kaydet** sayfasında, mevcut ayarlarınızı kaydedin ve ardından gerekip gerekmediğini karar **sonraki**.  
+3. **Geçerli ayarları Kaydet** sayfasında, mevcut ayarlarınızın kaydedilip edilmeyeceğini belirleyin ve ardından **İleri**' ye tıklayın.  
   
-4. Üzerinde **içeri aktarmak için bir ayarlar koleksiyonu seçin** sayfasındaki **varsayılan ayarları** klasörü, kullanmak istediğiniz komutları olan geliştirme ayarlar koleksiyonu seçin. Hangi koleksiyonu seçmek için bilmiyorsanız deneyin **genel geliştirme ayarları** veya **Visual C++ geliştirme ayarları**, en iyi hata ayıklayıcı komutlarını sağlar.  
+4. **İçeri aktarılacak ayarların bir koleksiyonunu seçin** sayfasında, **varsayılan ayarlar** klasörü altında kullanmak istediğiniz komutları içeren bir geliştirme ayarları koleksiyonu seçin. Hangi koleksiyonun seçeceğimizi görmüyorsanız, en çok hata ayıklayıcı komutlarını sağlayan **genel geliştirme ayarlarını** veya **Visual C++ geliştirme ayarlarını**deneyin.  
   
-5. **İleri**'ye tıklayın.  
+5. **İleri**’ye tıklayın.  
   
-6. Üzerinde **ayarlarını içeri aktarmak için seçin** sayfasındaki **seçenekleri**, emin **hata ayıklama** seçilir. Bu ayarların yanı içe aktarmak istediğiniz sürece diğer onay kutularını temizleyin.  
+6. **İçeri aktarılacak ayarları seçin** sayfasında, **Seçenekler**altında, **hata ayıklamayı** seçtiğinizden emin olun. Bu ayarları da içeri aktarmak istemediğiniz sürece diğer onay kutularını temizleyin.  
   
 7. **Son**'a tıklayın.  
   
-8. Üzerinde **içeri aktarma tamamlandı** sayfasında, ayarlarınızı altında sıfırlama ile ilişkili hataları gözden geçirin **ayrıntıları**.  
+8. **Içeri aktarma Tamam** sayfasında, **Ayrıntılar**altında ayarlarınızı sıfırlamayla ilişkili tüm hataları gözden geçirin.  
   
-9. **Kapat**'ı tıklatın.  
+9. **Kapat**’a tıklayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)   
- [Hata Ayıklayıcısı Temel Bilgileri](../debugger/debugger-basics.md)
+ [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)   
+ [Hata Ayıklayıcı Temel Bilgileri](../debugger/debugger-basics.md)

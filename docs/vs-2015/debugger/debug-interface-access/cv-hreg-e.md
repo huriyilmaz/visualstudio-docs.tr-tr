@@ -14,21 +14,21 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ace9f28c0726a762e0ffe2abcf0538c5a629b06c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443510"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64825350"
 ---
-# <a name="cvhrege"></a>CV_HREG_e
+# <a name="cv_hreg_e"></a>CV_HREG_e
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 Bir hedef kayıt belirtir.  
   
 > [!NOTE]
-> Çünkü `CV_HREG_e` numaralandırma burada sunabilen çoğaltmak için çok büyük olduğu gibi bir kısaltılmış bir başvuru olarak sağlanır. Eksik girdiler italik gösterilen. Tam numaralandırma cvconst.h üstbilgi dosyasında kullanılabilir.  
+> `CV_HREG_e`Sabit listesi tamamen çoğaltılamayacak kadar büyük olduğundan, kısaltılmış bir sürüm başvuru olarak sağlanır. Eksik girişler italik olarak oluşturulur. Tüm sabit listesi, cvconst. h üstbilgi dosyasında bulunur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum CV_HREG_e {   
@@ -411,44 +411,44 @@ enum CV_HREG_e { 
 } CV_HREG_e;  
 ```  
   
-## <a name="elements"></a>Öğeleri  
- CV_REG_*  
- Intel 80 x 86 ve ix86 işlemciler ve p-code tarafından kullanılan kaydeder.  
+## <a name="elements"></a>Öğeler  
+ CV_REG_ *  
+ Intel 80x86 ve ix86 işlemcileri ve p kodu tarafından kullanılan kayıt kayıtları.  
   
- CV_R68_*  
- Yazmaçları 68 K işlemcisi tarafından kullanılır.  
+ CV_R68_ *  
+ 68K işlemcisi tarafından kullanılan kayıt.  
   
- CV_M4_*  
- MIPS 4000 serisi işlemcisi tarafından kullanılan kaydeder.  
+ CV_M4_ *  
+ MIPS 4000 serisi işlemcisi tarafından kullanılan kayıt.  
   
- CV_ALPHA_*  
- Dijital ekipman Corporation alfa AXP serisi işlemcisi tarafından kullanılan kaydeder.  
+ CV_ALPHA_ *  
+ Digital Equipment Corporation Alpha AıXP serisi işlemcisi tarafından kullanılan kayıt.  
   
- CV_PPC_*  
- Yazmaçları Motorola/IBM PowerPC işlemci tarafından kullanılır.  
+ CV_PPC_ *  
+ Motorola/IBM PowerPC işlemcisi tarafından kullanılan kayıt.  
   
  CV_SH3_ * ve CV_SH_\*  
- Yazmaçları Hitachi SH3 ve Hitachi SH serisi işlemcisi tarafından kullanılır.  
+ Hitachi SH3 ve Hitachi SH Serisi işlemcisi tarafından kullanılan kayıt.  
   
- CV_ARM_*  
- Gelişmiş RISC makinesi (ARM) işlemcileri tarafından kullanılan kaydeder.  
+ CV_ARM_ *  
+ Gelişmiş RıSC makinesi (ARM) işlemcileri tarafından kullanılan kayıt.  
   
- CV_IA64_*  
- Intel IA64 serisi işlemcileri tarafından kullanılan kaydeder.  
+ CV_IA64_ *  
+ Intel ıA64 serisi işlemciler tarafından kullanılan kayıt.  
   
- CV_TRI_*  
- Yazmaçları Infineon teknolojileri TriCore işlemcisi tarafından kullanılır.  
+ CV_TRI_ *  
+ Infineon teknolojileri tarafından daha karmaşık bir işlemci tarafından kullanılan kayıt.  
   
- CV_AM33_*  
- Yazmaçları Matsushita/Panasonic AM33 tarafından kullanılan ve işlemciler ilgili.  
+ CV_AM33_ *  
+ Matsushita/Panasonic AM33 ve ilgili işlemciler tarafından kullanılan kayıt.  
   
- CV_M32R_*  
- Mitsubishi M32R işlemcisi tarafından kullanılan kaydeder.  
+ CV_M32R_ *  
+ Mitsubishi M32R işlemcisi tarafından kullanılan kayıt.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her işlemci türü kendi benzersiz yazmaç kümesini kullanır.  
+ Her işlemci türü kendi benzersiz kayıt kümesini kullanır.  
   
- Bu numaralandırma değerleri için aşağıdaki yöntemlerden geçirilir:  
+ Bu Numaralandırmadaki değerler aşağıdaki yöntemlere geçirilir:  
   
 - [IDiaStackWalkFrame::get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)  
   
@@ -461,12 +461,12 @@ enum CV_HREG_e { 
 - [IDiaStackFrame::get_registerValue](../../debugger/debug-interface-access/idiastackframe-get-registervalue.md)  
   
 ## <a name="requirements"></a>Gereksinimler:  
- Üstbilgi: cvconst.h  
+ Üst bilgi: cvconst. h  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri ve yapıları](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [Idiastackwalkframe::get_registervalue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)   
- [Idiastackwalkframe::put_registervalue](../../debugger/debug-interface-access/idiastackwalkframe-put-registervalue.md)   
- [IDiaStackWalkHelper::get_registerValue](../../debugger/debug-interface-access/idiastackwalkhelper-get-registervalue.md)   
- [IDiaStackWalkHelper::put_registerValue](../../debugger/debug-interface-access/idiastackwalkhelper-put-registervalue.md)   
+ [Numaralandırmalar ve yapılar](../../debugger/debug-interface-access/enumerations-and-structures.md)   
+ [IDiaStackWalkFrame:: get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)   
+ [IDiaStackWalkFrame::p ut_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-put-registervalue.md)   
+ [IDiaStackWalkHelper:: get_registerValue](../../debugger/debug-interface-access/idiastackwalkhelper-get-registervalue.md)   
+ [IDiaStackWalkHelper::p ut_registerValue](../../debugger/debug-interface-access/idiastackwalkhelper-put-registervalue.md)   
  [IDiaStackFrame::get_registerValue](../../debugger/debug-interface-access/idiastackframe-get-registervalue.md)

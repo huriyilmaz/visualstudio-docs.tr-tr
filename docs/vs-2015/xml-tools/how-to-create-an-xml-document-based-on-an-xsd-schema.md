@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e9e48c48d6711a1eb21157122d13790e22688855
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670943"
 ---
-# <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>Nasıl yapılır: XSD şemasını temel alan XML belgesi oluşturma
+# <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>Nasıl Yapılır: Bir XSD Şemasını Temel Alan XML Belgesi Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 **Örnek XML oluştur** ÖZELLIĞI, XML ŞEMASı (xsd) dosyanızı temel alan örnek bir XML dosyası oluşturur.
@@ -31,23 +31,23 @@ ms.locfileid: "72670943"
 
   Bu özellik genellikle geçerli XML belgeleri oluşturur. Ancak, şema aşağıdakilerden birini veya birkaçını içeriyorsa, örnek geçerli olmayabilir:
 
-- @No__t_0, `xs:keyref` ve `xs:unique` kimlik kısıtlamaları.
+- `xs:key`, `xs:keyref` Ve `xs:unique` Kimlik kısıtlamaları.
 
-- `xs:pattern` modelleri.
+- `xs:pattern` lerle.
 
-- @No__t_0 türünün Numaralandırmalar.
+- Türün numaralandırmalar `xs:QName` .
 
 - `xs:ENTITY`, `xs:ENTITIES` ve `xs:NOTATION` türleri.
 
-  Ayrıca, yalnızca bu tür için şemada numaralandırmalar oluşursa `xs:base64Binary` içeriğin üretileceğini aklınızda bulabilirsiniz.
+  Ayrıca, `xs:base64Binary` içeriğin yalnızca bu tür için şemada numaralandırmalar oluşması durumunda üretilecek olduğunu unutmayın.
 
 ### <a name="to-generate-an-xml-instance-document-based-on-the-xsd-file"></a>XSD dosyasını temel alan bir XML örnek belgesi oluşturmak için
 
 1. [Nasıl yapılır: xsd şema dosyası oluşturma ve düzenleme](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)bölümündeki adımları izleyin.
 
-2. [XML şeması Gezgini](../xml-tools/xml-schema-explorer.md)' nde, `PurchaseOrder` Genel öğesine sağ tıklayın. **Örnek XML oluştur**' u seçin.
+2. [XML şeması Gezgini](../xml-tools/xml-schema-explorer.md)' nde, Genel öğesine sağ tıklayın `PurchaseOrder` . **Örnek XML oluştur**' u seçin.
 
-     Bu seçeneği belirlediğinizde, XML düzenleyicisinde aşağıdaki örnek XML içeriğine sahip PurchaseOrder. xml dosyası oluşturulur ve açılır:
+     Bu seçeneği belirlediğinizde, XML düzenleyicisinde aşağıdaki örnek XML içeriğine sahip PurchaseOrder.xml dosyası oluşturulur ve açılır:
 
     ```
     <?xml version="1.0" encoding="utf-8"?>

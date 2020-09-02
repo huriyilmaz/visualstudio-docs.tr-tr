@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fe609d53571e6ffcd8e18919f0351e29c0329b46
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85465365"
 ---
 # <a name="idiasessionsymsareequiv"></a>IDiaSession::symsAreEquiv
@@ -38,7 +38,7 @@ HRESULT symsAreEquiv ( 
 
  `symbolB`
 
-'ndaki `IDiaSymbol`Karşılaştırmada kullanılan ikinci nesne.
+'ndaki `IDiaSymbol` Karşılaştırmada kullanılan ikinci nesne.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Semboller eşdeğer ise, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` simgeler eşdeğer değildir. Aksi takdirde, bir hata kodu döndürün.
