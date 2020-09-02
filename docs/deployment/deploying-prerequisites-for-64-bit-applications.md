@@ -1,5 +1,5 @@
 ---
-title: 64-bit uygulamalar için önkoşulları dağıtma | Microsoft Docs
+title: 64 bit uygulamalar için önkoşulları dağıtma | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,29 +19,29 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7c70b58577f8aa6e391215658afb7f8fa43c9bb5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62928877"
 ---
-# <a name="deploy-prerequisites-for-64-bit-applications"></a>64-bit uygulamalar için önkoşulları dağıtma
-ClickOnce dağıtımı, 64-bit platformlarda uygulamaların yüklenmesini destekler. Hedef platformlar **x86** 32-bit platformları için **x64** AMD64 ve EM64T komut kümelerini destekleyen makineler için ve **Itanium** 64-bit Itanium işlemcisi için.
+# <a name="deploy-prerequisites-for-64-bit-applications"></a>64 bit uygulamalar için dağıtım önkoşulları
+ClickOnce dağıtımı, uygulamaların 64-bit platformlarda yüklenmesini destekler. Hedef platformlar, 32 bitlik platformlar için **x86** , amd64 ve EM64T yönerge kümelerini destekleyen makineler için **x64** ve 64 bit Itanium işlemci için **Itanium** .
 
 ## <a name="prerequisites"></a>Önkoşullar
- Aşağıdaki tabloda, 64-bit uygulamanızın kurulum için önkoşul olarak kullanabileceğiniz yeniden dağıtılabilir dosyaları listeler.
+ Aşağıdaki tabloda, 64 bit uygulamanızın yüklemesi için ön koşullar olarak kullanabileceğiniz yeniden dağıtılabilir listelenmektedir.
 
- 64-bit bileşen yok. bir önkoşul seçerseniz, seçilen paketleri 64-bit platformu için kullanılabilir olmadığını belirten bir uyarı görebilirsiniz.
+ 64 bitlik bileşenlere sahip olmayan bir önkoşul seçerseniz, seçili paketlerin 64 bit platformda kullanılamaz olduğunu belirten bir uyarı görebilirsiniz.
 
 | Yeniden dağıtılabilir | x64 desteği | IA64 desteği |
 | - |-------------|--------------|
-| [!INCLUDE[vsto_runtime](../deployment/includes/vsto_runtime_md.md)] | Evet | Hayır |
-| Visual C++ 2010 Çalışma zamanı kitaplıkları (IA64) | Hayır | Evet |
-| Visual C++ 2010 Çalışma zamanı kitaplıkları (x64) | Evet | Hayır |
-| Microsoft .NET Framework 4 (x86 ve x64) | Evet | |
-| Microsoft .NET Framework 4 istemci profili (x86 ve x64) | Evet | |
+| [!INCLUDE[vsto_runtime](../deployment/includes/vsto_runtime_md.md)] | Yes | Hayır |
+| Visual C++ 2010 çalışma zamanı kitaplığı (ıA64) | Hayır | Yes |
+| Visual C++ 2010 çalışma zamanı kitaplıkları (x64) | Yes | Hayır |
+| Microsoft .NET Framework 4 (x86 ve x64) | Yes | |
+| Microsoft .NET Framework 4 Istemci profili (x86 ve x64) | Yes | |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Uygulamaları, hizmetleri ve bileşenleri dağıtma](../deployment/deploying-applications-services-and-components.md)
-- [Nasıl yapılır: ClickOnce uygulamasıyla Önkoşulları Yükleme](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)
-- [64-bit uygulamalar](/dotnet/framework/64-bit-apps)
+- [Nasıl yapılır: ClickOnce uygulamasıyla önkoşulları yüklemek](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)
+- [64 bitlik uygulamalar](/dotnet/framework/64-bit-apps)

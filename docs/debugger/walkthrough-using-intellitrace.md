@@ -9,33 +9,33 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0ffbe0b8365948dc5a69edca390f308cb55ba5a3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62929389"
 ---
-# <a name="view-events-with-intellitrace-in-visual-studio-enterprise-c-visual-basic"></a>Visual Studio Enterprise'da IntelliTrace ile olayları görüntüleme (C#, Visual Basic)
+# <a name="view-events-with-intellitrace-in-visual-studio-enterprise-c-visual-basic"></a>Visual Studio Enterprise IntelliTrace ile olayları görüntüleme (C#, Visual Basic)
 
-Ayrı ayrı işlev çağrıları veya belirli olayları ya da olayların kategorilerini hakkında bilgi, ayrıca olayları toplamak için IntelliTrace'i kullanabilirsiniz. Aşağıdaki yordamlar, bunun nasıl yapılacağını gösterir.
+IntelliTrace kullanarak belirli olaylar veya olay kategorileri hakkında bilgi toplamak veya olaylara ek olarak tek tek işlev çağrıları hakkında bilgi toplamak için kullanabilirsiniz. Aşağıdaki yordamlarda bunun nasıl yapılacağı gösterilmektedir.
 
-IntelliTrace, Visual Studio Enterprise sürümünde, ancak değil Professional veya Community sürümlerini kullanabilirsiniz.
+Visual Studio Enterprise sürümünde IntelliTrace kullanabilirsiniz, ancak Professional veya Community sürümlerinde kullanamazsınız.
 
-## <a name="GettingStarted"></a> IntelliTrace yapılandırma
+## <a name="configure-intellitrace"></a><a name="GettingStarted"></a> IntelliTrace 'i yapılandırma
 
-Yalnızca IntelliTrace olayları ile hata ayıklama deneyebilirsiniz. IntelliTrace olayları hata ayıklayıcı olayları, özel durumlar, .NET Framework olayları ve diğer sistem olaylarıdır ' dir. Açın veya hatalarını ayıklamaya başlamadan önce Intellitrace'in kaydettiği olayları kontrol belirli olayları açmak. Daha fazla bilgi için [IntelliTrace özellikleri](../debugger/intellitrace-features.md).
+Yalnızca IntelliTrace olayları ile hata ayıklamayı deneyebilirsiniz. IntelliTrace olayları hata ayıklayıcı olayları, özel durumlar, .NET Framework olayları ve diğer sistem olaylardır. Hata ayıklamaya başlamadan önce IntelliTrace 'in kaydettiği olayları denetlemek için belirli olayları açmanız veya kapatmanız gerekir. Daha fazla bilgi için bkz. [IntelliTrace Özellikleri](../debugger/intellitrace-features.md).
 
-- Dosya erişimi için IntelliTrace olayı kapatın. Git **Araçlar > Seçenekler > IntelliTrace > IntelliTrace olayları** sayfasında ve genişletin **dosya** kategorisi. Denetleme **dosya** olay kategorisi. Bu, Kontrol edilecek tüm dosya olayları (erişim, Kapat, silme) neden olur.
+- Dosya erişimi için IntelliTrace olayını açın. **Araçlar > seçenekler > ıntellitrace > IntelliTrace olayları** sayfasına gidin ve **Dosya** kategorisini genişletin. **Dosya** olay kategorisini denetleyin. Bu, tüm dosya olaylarının (erişim, kapatma, silme) denetlenmesini sağlar.
 
-## <a name="create-your-app"></a>Uygulamanızı oluşturma
+## <a name="create-your-app"></a>Uygulamanızı oluşturun
 
-1. Bir C# konsol uygulaması oluşturun. Program.cs dosyasında, aşağıdaki ekleyin `using` deyimi:
+1. Bir C# konsol uygulaması oluşturun. Program.cs dosyasında aşağıdaki `using` ifadeyi ekleyin:
 
     ```csharp
     using System.IO;
     ```
 
-2. Oluşturma bir <xref:System.IO.FileStream> ana yöntemde, kendisinden okuma kapatın ve dosyayı silin. Yalnızca bir kesme noktası ayarlamak için bir yer olması için başka bir satır ekleyin:
+2. Ana yöntemde bir oluşturun, <xref:System.IO.FileStream> buradan okuyun, kapatın ve dosyayı silin. Yalnızca bir kesme noktası ayarlamak için bir yer eklemek üzere başka bir satır ekleyin:
 
     ```csharp
     static void Main(string[] args)
@@ -49,42 +49,42 @@ Yalnızca IntelliTrace olayları ile hata ayıklama deneyebilirsiniz. IntelliTra
     }
     ```
 
-3. Bir kesme noktası ayarlayın `Console.WriteLine("done");`
+3. Üzerinde bir kesme noktası ayarlayın `Console.WriteLine("done");`
 
-## <a name="start-debugging-and-view-intellitrace-events"></a>Hata ayıklamayı başlatmak ve IntelliTrace olaylarını görüntüleme
+## <a name="start-debugging-and-view-intellitrace-events"></a>Hata ayıklamayı Başlat ve IntelliTrace olaylarını görüntüle
 
-1. Zamanki gibi hata ayıklamaya başlayın. (Tuşuna **F5** veya **hata ayıklama > hata ayıklamayı Başlat**.)
+1. Hata ayıklamayı her zamanki gibi başlatın. ( **F5** tuşuna basın veya hata **ayıklamayı başlatmak > hata ayıkla**seçeneğine tıklayın.)
 
     > [!TIP]
-    > Tutun **Yereller** ve **Otolar** windows görmek ve bu pencerelerde değerlerini kaydetmek için hata ayıklarken açın.
+    > Bu Windows 'daki değerleri görmek ve kaydetmek için, hata ayıklama sırasında **Yereller** ve **oto** pencerelerini açık tutun.
 
-2. Yürütme kesme noktasında durur. Görmüyorsanız, **tanılama araçları** penceresinde tıklayın **hata ayıklama > Windows > IntelliTrace olayları**.
+2. Yürütme kesme noktasında durmaktadır. **Tanılama araçları** penceresini görmüyorsanız, **Windows > IntelliTrace olayları > hata ayıkla**' ya tıklayın.
 
-    İçinde **tanılama araçları** penceresinde Bul **olayları** sekme (3 sekme görmeniz gerekir **olayları**, **bellek kullanımı**, ve **CPU Kullanım**). **Olayları** sekmesi, olaylar, hata ayıklayıcı yürütmeyi kesmeden son olay ile biten kronolojik bir listesini gösterir. Adlı bir olay görmelisiniz **erişim WordSearchInputs.txt**.
+    **Tanılama araçları** penceresinde **Olaylar** sekmesini bulun (3 sekme, **olay**, **bellek kullanımı**ve **CPU kullanımı**görmeniz gerekir). **Olaylar** sekmesi, hata ayıklayıcının yürütmeden önce son olayla biten kronolojik bir olay listesini gösterir. **Erişim WordSearchInputs.txt**adlı bir olay görmeniz gerekir.
 
-    Aşağıdaki ekran görüntüsünde, Visual Studio 2015 güncelleştirme 1 ' dir.
+    Aşağıdaki ekran görüntüsü, Visual Studio 2015 güncelleştirme 1 ' dir.
 
     ![IntelliTrace&#45;güncelleştirme 1](../debugger/media/intellitrace-update1.png "IntelliTrace-güncelleştirme 1")
 
 3. Ayrıntılarını genişletmek için olayı seçin.
 
-    Aşağıdaki ekran görüntüsünde, Visual Studio 2015 güncelleştirme 1 ' dir.
+    Aşağıdaki ekran görüntüsü, Visual Studio 2015 güncelleştirme 1 ' dir.
 
-    ![IntelliTraceUpdate1&#45;SingleEvent](../debugger/media/intellitraceupdate1-singleevent.png "IntelliTraceUpdate1 SingleEvent")
+    ![IntelliTraceUpdate1&#45;SingleEvent](../debugger/media/intellitraceupdate1-singleevent.png "IntelliTraceUpdate1-SingleEvent")
 
-    Dosyayı açmak için yol adı bağlantısını seçebilirsiniz. Tam yol adı kullanılabilir değilse, **açık dosya** iletişim kutusu görüntülenir.
+    Dosya yolu bağlantısını seçerek dosyayı açabilirsiniz. Tam yol adı kullanılabilir değilse, **Dosya Aç** iletişim kutusu görüntülenir.
 
-    Tıklayın **etkinleştirmek geçmiş hata ayıklama**, hangi ayarlar Hata Ayıklayıcı'nın bağlam seçili olay ne zaman zaman toplanan, gösteren geçmiş verileri **çağrı yığını**, **Yereller** ve diğer windows hata ayıklayıcı katılan. Kaynak kodu varsa, incelemeniz Visual Studio işaretçiyi kaynak penceresinde karşılık gelen koda taşır.
+    Hata **ayıklamayı etkinleştir**' e tıklayarak hata ayıklayıcının bağlamını seçili olayın toplandığı zamana ayarlar, **çağrı yığınında**geçmiş verileri, **Yereller** ve diğer katılan hata ayıklayıcı pencerelerini gösterir. Kaynak kodu kullanılabiliyorsa, Visual Studio bunu incelemenize olanak sağlamak için işaretçiyi kaynak penceresinde karşılık gelen koda taşıdır.
 
-    Aşağıdaki ekran görüntüsünde, Visual Studio 2015 güncelleştirme 1 ' dir.
+    Aşağıdaki ekran görüntüsü, Visual Studio 2015 güncelleştirme 1 ' dir.
 
     ![HistoricalDebugging&#45;güncelleştirme 1](../debugger/media/historicaldebugging-update1.png "HistoricalDebugging-güncelleştirme 1")
 
-4. Hatayı bulamadıysanız, hataya diğer olayları İnceleme deneyin. İşlev çağrılarında gezinebilirsiniz girmek, IntelliTrace çağrı bilgileri kaydetmesini sağlayabilirsiniz.
+4. Hatayı bulamazsanız, hataya en önde gelen diğer olayları incelemeyi deneyin. Ayrıca, işlev çağrıları arasında ilerlemek için IntelliTrace kayıt çağrı bilgilerine sahip olabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
-Bazı gelişmiş özellikleri IntelliTrace geçmiş hata ayıklama ile kullanabilirsiniz:
+Geçmiş hata ayıklama ile IntelliTrace 'in gelişmiş özelliklerinden bazılarını kullanabilirsiniz:
 
-- Anlık görüntüleri görüntülemek için bkz: [IntelliTrace kullanarak önceki uygulama durumlarını İnceleme](../debugger/view-historical-application-state.md)
-- Değişkenleri incelemek ve koda gitmek öğrenmek için bkz: [geçmiş hata ayıklama ile uygulamanızı denetleyin](../debugger/historical-debugging-inspect-app.md)
+- Anlık görüntüleri görüntülemek için bkz. [IntelliTrace kullanarak önceki uygulama durumlarını İnceleme](../debugger/view-historical-application-state.md)
+- Değişkenleri İnceleme ve koda gitme hakkında bilgi edinmek için bkz. [geçmiş hata ayıklama ile uygulamanızı İnceleme](../debugger/historical-debugging-inspect-app.md)

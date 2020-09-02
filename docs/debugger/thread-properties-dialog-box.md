@@ -1,5 +1,5 @@
 ---
-title: İş parçacığı Özellikleri iletişim kutusu | Microsoft Docs
+title: İş parçacığı özellikleri Iletişim kutusu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,29 +12,29 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 371314bff934fdceeb301f61e976224034333559
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62929710"
 ---
 # <a name="thread-properties-dialog-box"></a>İş Parçacığı Özellikleri İletişim Kutusu
-Belirli bir iş parçacığı hakkında daha fazla bu iletişim kutusu bulma kullanın. Bu iletişim kutusunu görüntülemek için odağı taşıyın. bir [iş parçacıkları görünümü](../debugger/threads-view.md) penceresi veya açık [iletiler görünümünü](../debugger/messages-view.md) ve bir ileti genişletin. Herhangi bir iş parçacığı düğüm ağaçta seçin ve ardından **özellikleri** gelen **görünümü** menüsü.
+Belirli bir iş parçacığı hakkında daha fazla bilgi edinmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı bir [Iş parçacığı görünümü](../debugger/threads-view.md) penceresine taşıyın veya [iletiler görünümü](../debugger/messages-view.md) ' ni açın ve bir ileti genişletin. Ağaçta herhangi bir iş parçacığı düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
 
- **Genel** sekmedir yalnızca sekmesi görüntülenir. Bu sekme değiştirilmiş bir sürümünü Windows 98 ve Windows 95 işletim sistemlerinde görüntülenir.
+ **Genel** sekmesi, tek bir sekmede görüntülenir. Windows 98 ve Windows 95 işletim sistemlerinde, bu sekmenin değiştirilmiş bir sürümü görüntülenir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [Genel sekmesi, iş parçacığı Özellikleri iletişim kutusu](../debugger/general-tab-thread-properties-dialog-box.md) Seçili iş parçacığı hakkında daha fazla bilgi için bu iletişim kutusunu kullanın.
+ [Genel sekmesi, Iş parçacığı özellikleri Iletişim kutusu](../debugger/general-tab-thread-properties-dialog-box.md) Seçilen iş parçacığı hakkında daha fazla bilgi edinmek için bu iletişim kutusunu kullanın.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [İş parçacığı arama iletişim kutusu](../debugger/thread-search-dialog-box.md) iş parçacıkları görünümünde belirli bir iş parçacığı için düğüm bulmak için kullanılır.
+ [Iş parçacığı arama Iletişim kutusu](../debugger/thread-search-dialog-box.md) Iş parçacıkları görünümünde belirli bir iş parçacığının düğümünü bulmak için kullanılır.
 
- [Spy ++ başvurusu](../debugger/spy-increment-reference.md) her Spy ++ menü ve iletişim kutusunu açıklayan bölümleri içerir.
+ [Spy + + başvurusu](../debugger/spy-increment-reference.md) Her bir Spy + + menü ve iletişim kutusunu açıklayan bölümler içerir.
 
- [İş parçacıkları görünümünde iş parçacığı arama](../debugger/how-to-search-for-a-thread-in-threads-view.md) belirli bir iş parçacığını Bul iş parçacıkları Görünümü'nde açıklanmaktadır.
+ İş [parçacıkları görünümünde Iş parçacığı arama](../debugger/how-to-search-for-a-thread-in-threads-view.md) Iş parçacıkları görünümünde belirli bir iş parçacığının nasıl bulunacağını açıklar.
 
- [İş Parçacıkları görünümü](../debugger/threads-view.md) etkin iş parçacığı ağaç görünümünü görüntüler.
+ [Iş parçacıkları görünümü](../debugger/threads-view.md) Etkin iş parçacıklarının ağaç görünümünü görüntüler.
 
- [Spy ++ görünümleri](../debugger/spy-increment-views.md) Spy ++ ağaç görünümlerini windows, iletileri, süreçleri ve iş parçacıkları açıklar.
+ [Spy + + görünümleri](../debugger/spy-increment-views.md) Windows, ileti, işlem ve iş parçacıklarının Spy + + ağaç görünümlerini açıklar.
 
- [Spy ++ kullanma](../debugger/using-spy-increment.md) Spy ++ araç tanıtır ve nasıl kullanılacağını açıklar.
+ [Spy + + kullanma](../debugger/using-spy-increment.md) Spy + + aracını tanıtır ve nasıl kullanılabileceğini açıklar.

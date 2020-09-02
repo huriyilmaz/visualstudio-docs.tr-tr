@@ -1,5 +1,5 @@
 ---
-title: Menü komutlarını görüntüleme | Microsoft Docs
+title: Menü komutlarını görüntüle | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,19 +11,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2cbfbfb5ee11711b36d20d808cef22b42bcc43b5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62929620"
 ---
 # <a name="view-menu-commands"></a>Görünüm Menü Komutları
-**Görünümü** menü komutları Spy ++ denetlemek için kullanıcı arabirimi sağlar.
+**Görünüm** menüsü, Spy + + Kullanıcı arabirimini denetlemeye yönelik komutlar sağlar.
 
- **Yazı tipi** açılır **yazı tipi** iletişim kutusu, geçerli Spy ++ görünümü kullanmak için bir yazı tipi seçebileceğiniz.
+ **Yazı tipi** Geçerli Spy + + görünümünde kullanmak üzere yazı tipi seçebileceğiniz **yazı tipi** iletişim kutusunu açar.
 
- **Araç çubuğu** gizler veya araç çubuğunu görüntüler.
+ **Araç çubuğu** Araç çubuğunu gizler veya görüntüler.
 
- **Durum çubuğu** gizler veya durum çubuğu görüntüler.
+ **Durum çubuğu** Durum çubuğunu gizler veya görüntüler.
 
- **Özellikleri** açılır **özellikleri** etkin görünüm için iletişim kutusu.
+ **Özellikler** Etkin görünüm için **Özellikler** iletişim kutusunu açar.

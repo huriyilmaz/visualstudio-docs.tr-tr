@@ -1,5 +1,5 @@
 ---
-title: Stiller sekmesi, pencere Özellikleri iletişim kutusu | Microsoft Docs
+title: Stiller sekmesi, pencere özellikleri Iletişim kutusu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,18 +11,18 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 581ad210e5e8b11fec35e2171f4e8c4b5553baa5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62929673"
 ---
 # <a name="styles-tab-window-properties-dialog-box"></a>Stiller Sekmesi, Pencere Özellikleri İletişim Kutusu
-Kullanım **stilleri** Seçilen pencereyi uygulanan alan stilleri göstermek için sekmesinde. Görüntülenecek [pencere Özellikleri iletişim kutusu](../debugger/window-properties-dialog-box.md), odağı Taşı [Windows görünümü](../debugger/windows-view.md) penceresi. Herhangi bir pencere düğüm ağaçta seçin ve ardından **özellikleri** gelen **görünümü** menüsü.
+Seçili pencereye uygulanan stilleri göstermek için **Stiller** sekmesini kullanın. [Pencere özellikleri Iletişim kutusunu](../debugger/window-properties-dialog-box.md)görüntülemek Için odağı [Windows görünümü](../debugger/windows-view.md) penceresine taşıyın. Ağaçta herhangi bir pencere düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
 
- Aşağıdaki ayarlar kullanılabilir **stilleri** sekmesinde:
+ **Stiller** sekmesinde aşağıdaki ayarlar kullanılabilir:
 
 |Giriş|Açıklama|
 |-----------|-----------------|
-|**Pencere stilleri**|Pencere bir birleşimini kodları stil ve stilleri kontrol.|
-|**Genişletilmiş stiller**|Genişletilmiş pencere stili kodları birleşimi.|
+|**Pencere stilleri**|Varsa pencere stil kodlarının ve denetim stillerinin birleşimi.|
+|**Genişletilmiş stiller**|Genişletilmiş pencere stil kodlarının birleşimi.|
