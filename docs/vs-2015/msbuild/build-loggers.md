@@ -65,7 +65,7 @@ MSBuild /nologo /noconsolelogger /logger:SimpleLogger.dll /verbosity:Detailed
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Açıklama  
  Aşağıdaki örnek, günlükçü için kodun tamamını içerir.  
   
 ### <a name="code"></a>Kod  
@@ -75,7 +75,7 @@ MSBuild /nologo /noconsolelogger /logger:SimpleLogger.dll /verbosity:Detailed
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Açıklama  
  Aşağıdaki örnek, günlüğü konsol penceresinde görüntülemek yerine bir dosyaya yazan bir günlükçü nasıl uygulanacağını gösterir.  
   
 ### <a name="code"></a>Kod  

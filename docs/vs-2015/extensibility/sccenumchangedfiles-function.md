@@ -1,5 +1,5 @@
 ---
-title: SccEnumChangedFiles işlevi | Microsoft Docs
+title: SccEnumChangedFiles Işlevi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 00ef98c93f02aa8e8a1b4ea53f1998d0ab6713a9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200123"
 ---
 # <a name="sccenumchangedfiles-function"></a>SccEnumChangedFiles İşlevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu işlev yerel dosyaların listesini göz önünde bulundurulduğunda, hangi dosyaların kaynak kod denetimi veritabanında karşılık gelen sürümlerinden farklı olduğunu belirler.  
+Yerel dosyaların listesi verildiğinde, bu işlev kaynak kodu denetim veritabanındaki ilgili sürümlerden farklı olan dosyaları belirler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 SCCRTN SccEnumChangedFiles(  
@@ -38,22 +38,22 @@ SCCRTN SccEnumChangedFiles(
   
 #### <a name="parameters"></a>Parametreler  
  pContext  
- [in] Kaynak Denetimi Eklentisi bağlam işaretçisi.  
+ 'ndaki Kaynak denetimi eklentisi bağlam işaretçisi.  
   
- hWnd  
- [in] Kaynak Denetimi Eklentisi sağladığı herhangi bir iletişim kutusu için bir üst öğe olarak kullanabileceğiniz IDE penceresi için bir tanıtıcı.  
+ lendiği  
+ 'ndaki Kaynak denetimi eklentisinin, sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi için bir işleyici.  
   
  cFiles  
- [in] Belirtilen dosya adları sayısını `lpFileNames` dizisi. Ayrıca boyutunu belirtir `plIsFileDifferent` dizisi.  
+ 'ndaki Dizide belirtilen dosya adı sayısı `lpFileNames` . Ayrıca dizinin boyutunu belirtir `plIsFileDifferent` .  
   
- lpFileNames  
- [in] Denetlenecek yerel dosya adları dizisi.  
+ lpDosyaAdı  
+ 'ndaki Denetlenecek yerel dosya adları dizisi.  
   
- plIsFileDifferent  
- [out içinde] Her dosya farkı durumunu belirten değerleri dizisi (dizisi en az olmalıdır `cFiles` girişleri). NonZero dosyanın farklı olduğu anlamına gelir.  
+ Plisfilefarklı  
+ [in, out] Her dosyanın fark durumunu gösteren değerler dizisi (dizi en az girişe sahip olmalıdır `cFiles` ). Sıfır dışında, dosyanın farklı olduğu anlamına gelir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Kaynak Denetimi Eklentisi uygulanması bu işlev, aşağıdaki değerlerden birini döndürmesi beklenir:  
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  

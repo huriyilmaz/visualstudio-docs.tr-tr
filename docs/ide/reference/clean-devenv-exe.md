@@ -14,59 +14,59 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ac184f25d79a47814fee52b99bce1cddce247fc5
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75570472"
 ---
 # <a name="clean-devenvexe"></a>/Clean (devenv.exe)
 
-Tüm ara dosyaları ve çıktı dizinlerini temizler.
+Tüm ara dosyaları ve çıkış dizinlerini temizler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```shell
 devenv SolutionName /Clean [Config [/Project ProjName [/ProjectConfig ProjConfigName]] [/Out OutputFilename]]
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
 - *SolutionName*
 
   Gereklidir. Çözüm dosyasının tam yolu ve adı.
 
-- *Config*
+- *Kurulumunun*
 
-  İsteğe bağlı. *SolutionName'de* `Debug` adı `Release`geçen çözüm için ara dosyaları temizlemek için yapılandırma (örneğin veya) Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir `Debug|Win32`(örneğin, ). Bu bağımsız değişken belirtilmemişse`""`veya boş bir dize ise ( ), araç çözümün etkin yapılandırmasını kullanır.
+  İsteğe bağlı. `Debug` `Release` *SolutionName*içinde adlı çözüme yönelik ara dosyaları temizlemek için yapılandırma (veya gibi). Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32` ). Bu bağımsız değişken belirtilmemişse veya boş bir dize ( `""` ) ise, araç çözümün etkin yapılandırmasını kullanır.
 
-- `/Project`*ProjName*
+- `/Project` *ProjName*
 
-  İsteğe bağlı. Çözüm içindeki proje dosyasının yolu ve adı. Projenin görüntü adını veya *ÇözümAdı* klasöründen proje dosyasına göreli bir yol girebilirsiniz. Proje dosyasının tam yolunu ve adını da girebilirsiniz.
+  İsteğe bağlı. Çözüm içindeki bir proje dosyasının yolu ve adı. Projenin görünen adını veya *SolutionName* klasöründen proje dosyasına göreli bir yol girebilirsiniz. Proje dosyasının tam yolunu ve adını da girebilirsiniz.
 
-- `/ProjectConfig`*ProjConfigName*
+- `/ProjectConfig`*Projconfigname*
 
-  İsteğe bağlı. Projenin yapı yapılandırma adı (örneğin `Debug` `Release`veya) `/Project` adlandırılmış temizlik yaparken kullanılacak. Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir `Debug|Win32`(örneğin, ). Bu anahtar belirtilirse, *Config* bağımsız değişkenini geçersiz kılar.
+  İsteğe bağlı. `Debug`Adlandırılmış dosyanın temizlenmesi sırasında kullanılacak projenin derleme yapılandırma adı (veya gibi `Release` ) `/Project` . Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32` ). Bu anahtar belirtilmişse, *yapılandırma* bağımsız değişkenini geçersiz kılar.
 
 - `/Out`*OutputFilename*
 
-  İsteğe bağlı. Aracın çıktısını göndermek istediğiniz bir dosyanın adı. Dosya zaten varsa, araç çıktıyı dosyanın sonuna ekler.
+  İsteğe bağlı. Aracın çıkışını göndermek istediğiniz dosyanın adı. Dosya zaten varsa, araç çıktıyı dosyanın sonuna ekler.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu anahtar, IDE içindeki **Çözüm Temizleme** menüsü komutuyla aynı işlevi görür.
+Bu anahtar, IDE içindeki **Çözümü Temizle** menü komutuyla aynı işlevi yapar.
 
-Çift tırnak işaretlerine boşluklar içeren dizeleri ekleyin.
+Boşluk içeren dizeleri çift tırnak işaretleri içine alın.
 
-Hatalar da dahil olmak üzere temizlik ve bina oluşturma yaparken özet bilgiler **Komut** penceresinde veya [/Out](out-devenv-exe.md) anahtarıyla belirtilen herhangi bir günlük dosyasında görüntülenebilir.
+Temizleme ve oluşturma sırasında hatalar dahil, **komut** penceresinde veya [/Out](out-devenv-exe.md) anahtarıyla belirtilen herhangi bir günlük dosyasında görüntülenebilecek Özet bilgiler.
 
-`/Project` Anahtar belirtilmemişse, *FileName* proje dosyası olarak belirtilmiş olsa bile, çözümdeki tüm projelerde temizleme eylemi yapılır.
+`/Project`Anahtar belirtilmezse, *dosya adı* bir proje dosyası olarak belirtilmiş olsa bile, çözüm içindeki tüm projeler üzerinde Temizleme eylemi yapılır.
 
 ## <a name="example"></a>Örnek
 
-İlk örnek, çözüm `MySolution` dosyasında belirtilen varsayılan yapılandırmayı kullanarak çözümü temizler.
+İlk örnek çözüm `MySolution` dosyasında belirtilen varsayılan yapılandırmayı kullanarak çözümü temizler.
 
-İkinci örnek, proje `CSharpWinApp`yapı yapılandırmasını `Debug` kullanarak `MySolution`projeyi temizler.
+İkinci örnek, `CSharpWinApp` `Debug` içindeki proje derleme yapılandırması kullanılarak projeyi temizler `MySolution` .
 
 ```shell
 devenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /Clean
@@ -77,6 +77,6 @@ devenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /Clean "Debug" /pr
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md)
-- [/Yapı (devenv.exe)](../../ide/reference/build-devenv-exe.md)
+- [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md)
 - [/Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)
 - [/Out (devenv.exe)](../../ide/reference/out-devenv-exe.md)

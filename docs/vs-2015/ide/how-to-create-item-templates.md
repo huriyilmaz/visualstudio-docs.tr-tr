@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c9edc79002a4a2d7c2fe135d7eb4669f5f010599
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668072"
 ---
 # <a name="how-to-create-item-templates"></a>Nasıl Yapılır: Öğe Şablonları Oluşturma
@@ -26,7 +26,7 @@ ms.locfileid: "72668072"
 
 Bu konunun [ilk yordamındaki](#to-add-a-custom-project-item-template-to-the-add-new-item-dialog-box) adımlarda, **şablonu dışarı aktarma** Sihirbazı 'nı kullanarak bir öğe şablonu oluşturma işlemi gösterilir. Şablonunuz birden çok dosyadan oluşu, bkz. [nasıl yapılır: birden çok dosya öğesi şablonları oluşturma](../ide/how-to-create-multi-file-item-templates.md).
 
- Sihirbaz, temel şablonu oluşturmanız için çok sayıda iş yapar, ancak çoğu durumda, şablonu verdikten sonra. vstemplate dosyasını el ile değiştirmeniz gerekir. Örneğin, bir [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulama projesi için öğenin **Yeni öğe Ekle** iletişim kutusunda görünmesini istiyorsanız birkaç ek adım gerçekleştirmeniz gerekir. Bu konudaki [ikinci yordam](#to-enable-the-item-template-to-be-used-in-a-store-project) , bu görevi gerçekleştirmenize yardımcı olur.
+ Sihirbaz, temel şablonu oluşturmanız için çok sayıda iş yapar, ancak çoğu durumda, şablonu verdikten sonra. vstemplate dosyasını el ile değiştirmeniz gerekir. Örneğin, bir uygulama projesi için öğenin **Yeni öğe Ekle** iletişim kutusunda görünmesini istiyorsanız [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] birkaç ek adım gerçekleştirmeniz gerekir. Bu konudaki [ikinci yordam](#to-enable-the-item-template-to-be-used-in-a-store-project) , bu görevi gerçekleştirmenize yardımcı olur.
 
  Bazı durumlarda, sıfırdan elle el ile bir öğe şablonu oluşturmanız gerekebilir. [Üçüncü yordamda](#to-enable-templates-for-specific-project-sub-types) bunun nasıl yapılacağı gösterilmektedir.
 
@@ -34,7 +34,7 @@ Bu konunun [ilk yordamındaki](#to-add-a-custom-project-item-template-to-the-add
 
 ### <a name="to-add-a-custom-project-item-template-to-the-add-new-item-dialog-box"></a>Yeni öğe Ekle iletişim kutusuna özel bir proje öğesi şablonu eklemek için
 
-1. @No__t_0 bir proje oluşturun veya açın.
+1. İçinde bir proje oluşturun veya açın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 2. Projeye bir öğe ekleyin ve isterseniz dosyayı değiştirin.
 
@@ -50,24 +50,24 @@ Bu konunun [ilk yordamındaki](#to-add-a-custom-project-item-template-to-the-add
 
 8. Simge dosya adı, önizleme resmi, şablon adı ve şablon açıklaması yazın ve **son**' a tıklayın.
 
-     Şablon dosyaları bir. zip dosyasına eklenir ve iletişim kutusunda belirttiğiniz herhangi bir dizini kopyalamıştır. Varsayılan konum **... \Users \\ < Kullanıcı adı \> \K\studio \<Version >**
+     Şablon dosyaları bir. zip dosyasına eklenir ve iletişim kutusunda belirttiğiniz herhangi bir dizini kopyalamıştır. Varsayılan konum **... \Users \\<Kullanıcı adı \> \, Studio \ olarak \<Version> aktarılmış şablonlar \\ ** klasörü.
 
     > [!WARNING]
-    > Visual Studio 'nun önceki sürümlerinde varsayılan konum **... \Users \\ < Kullanıcı adı \> \K\studio \<Version > \Templates\ıtemtemplates**.
+    > Visual Studio 'nun önceki sürümlerinde varsayılan konum **... \Users \\<username \> \<Version> \Templates\ıtemtemplates**.
 
 ### <a name="to-enable-the-item-template-to-be-used-in-a-store-project"></a>Bir mağaza projesinde kullanılacak öğe şablonunu etkinleştirmek için
 
 1. Bir öğe şablonunu dışarı aktarmak için yukarıdaki yordamdaki adımları izleyin.
 
-2. . Vstemplate dosyasını. zip dosyasından ' a kopyalanmış olan. zip dosyasından ayıklayın. \Users \\*UserName*\Sk\studio *Version*\Templates\ıtemtemplates \ (veya **My My Templates**) klasöründedir.
+2. . Vstemplate dosyasını. zip dosyasından ' a kopyalanmış olan. zip dosyasından ayıklayın. \Users \\ *Kullanıcı adı*\K\studio *Version*\templates\ıtemtemplates \ (veya **ihraç edilecek şablonlar**) klasörü.
 
 3. Visual Studio 'da. vstemplate dosyasını açın.
 
-4. Windows 8.1 bir mağaza C# projesi için. vstemplate dosyasında, açma ve kapatma `<TemplateData>` etiketi: `<TemplateGroupID>WinRT-Managed</TemplateGroupID>` IÇINDE aşağıdaki XML 'i ekleyin.
+4. Bir Windows 8.1 Mağazası C# projesi için. vstemplate dosyasında, açılış ve kapanış etiketi içinde aşağıdaki XML 'i ekleyin `<TemplateData>` : `<TemplateGroupID>WinRT-Managed</TemplateGroupID>` .
 
-    Windows 8.1 C++ bir mağaza projesi `WinRT-Native-6.3` değerini kullanır. Windows 10 ve diğer proje türleri için bkz. [TemplateGroupID öğesi (Visual Studio şablonları)](../extensibility/templategroupid-element-visual-studio-templates.md).
+    C++ Windows 8.1 deposu projesi bir değeri kullanır `WinRT-Native-6.3` . Windows 10 ve diğer proje türleri için bkz. [TemplateGroupID öğesi (Visual Studio şablonları)](../extensibility/templategroupid-element-visual-studio-templates.md).
 
-    Aşağıdaki örnek, bir. vstemplate dosyasının, XML `<TemplateGroupID>WinRT-Managed</TemplateGroupID>` satırı eklendikten sonra tüm içeriğini gösterir. Bu örnek C# projelere özeldir. Diğer dili ve proje türlerini belirtmek için \<ProjectType > ve [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)> öğelerini \< değiştirebilirsiniz.
+    Aşağıdaki örnek, XML satırı eklendikten sonra bir. vstemplate dosyasının tüm içeriğini gösterir `<TemplateGroupID>WinRT-Managed</TemplateGroupID>` . Bu örnek C# projelerine özgüdür. \<ProjectType> \< [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)> Diğer dil ve proje türlerini belirtmek için ve öğelerini değiştirebilirsiniz.
 
    ```xml
    <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
@@ -92,11 +92,11 @@ Bu konunun [ilk yordamındaki](#to-add-a-custom-project-item-template-to-the-add
 
 5. Visual Studio 'da. vstemplate dosyasını kaydedin ve kapatın.
 
-6. . Vstemplate dosyasını kopyalayıp içinde bulunan. zip dosyasına geri yapıştırın. \Users \\*UserName*\K\studio *Version*\Templates\ıtemtemplates \ Folder.
+6. . Vstemplate dosyasını kopyalayıp içinde bulunan. zip dosyasına geri yapıştırın. \Users \\ *Kullanıcı adı*\K\studio *Version*\templates\ıtemtemplates \ Folder.
 
     **Dosya Kopyala** iletişim kutusu görüntülenirse, **Kopyala ve Değiştir** seçeneğini belirleyin.
 
-   Artık, **Yeni öğe Ekle** iletişim kutusunu kullanarak bu şablona dayalı bir öğeyi bir [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] projesine ekleyebilirsiniz.
+   Artık, [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] **Yeni öğe Ekle** iletişim kutusunu kullanarak bu şablona dayalı bir öğeyi projeye ekleyebilirsiniz.
 
    Parametre adları hakkında daha fazla bilgi için bkz. [şablon parametreleri](../ide/template-parameters.md).
 
@@ -155,7 +155,7 @@ Bu konunun [ilk yordamındaki](#to-add-a-custom-project-item-template-to-the-add
 
 7. Windows Gezgini 'nde, şablonunuza dahil etmek istediğiniz dosyaları seçin, seçime sağ tıklayın, Gönder ' e tıklayın ve ardından sıkıştırılmış (daraltılmış) klasör ' e tıklayın. Seçtiğiniz dosyalar bir. zip dosyasında sıkıştırılır.
 
-8. . Zip dosyasını kopyalayın ve Kullanıcı öğesi şablonu konumuna yapıştırın. Visual Studio 2015 ' de varsayılan dizin.. \Users \\ < Kullanıcı adı \> \K\studio 2015 \ Templates\ıtemtemplates \\. Daha fazla bilgi için bkz. nasıl yapılır: proje ve öğe şablonlarını bulma ve düzenleme.
+8. . Zip dosyasını kopyalayın ve Kullanıcı öğesi şablonu konumuna yapıştırın. Visual Studio 2015 ' de varsayılan dizin.. \Users \\<username \> \studio 2015 \ templates\ıtemtemplates \\ . Daha fazla bilgi için bkz. nasıl yapılır: proje ve öğe şablonlarını bulma ve düzenleme.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md) [nasıl yapılır: birden çok dosya öğesi şablonları oluşturma](../ide/how-to-create-multi-file-item-templates.md) [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)

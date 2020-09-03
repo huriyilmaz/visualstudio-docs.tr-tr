@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5bc8946d62f47291a6e0e3f26032589bfdf0de16
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669358"
 ---
 # <a name="xml-snippets"></a>XML Kod Parçacıkları
@@ -22,7 +22,7 @@ ms.locfileid: "72669358"
 XML Düzenleyicisi, XML dosyalarını daha hızlı bir şekilde oluşturmanıza olanak sağlayan *XML parçacıkları*adlı bir özellik sunar. XML parçacıklarını dosyalarınıza ekleyerek yeniden kullanabilirsiniz. XML şeması tanım dili (XSD) şemasına göre XML verileri de oluşturabilirsiniz.
 
 ## <a name="reusable-xml-snippets"></a>Yeniden kullanılabilir XML parçacıkları
- XML Düzenleyicisi, bazı ortak görevleri kapsayan çok sayıda kod parçacığı içerir. Bu sayede XML dosyalarını daha kolay bir şekilde oluşturabilirsiniz. Örneğin, bir XML şeması yazıyorsanız, "karmaşık tür dizisi öğesi" ve "basit tür öğesi" parçacıkları kullanılarak dosyanıza aşağıdaki XML metni eklenir. Daha sonra `name` değerini gereksinimlerinize uyacak şekilde değiştirirsiniz.
+ XML Düzenleyicisi, bazı ortak görevleri kapsayan çok sayıda kod parçacığı içerir. Bu sayede XML dosyalarını daha kolay bir şekilde oluşturabilirsiniz. Örneğin, bir XML şeması yazıyorsanız, "karmaşık tür dizisi öğesi" ve "basit tür öğesi" parçacıkları kullanılarak dosyanıza aşağıdaki XML metni eklenir. Daha sonra `name` değeri gereksinimlerinize uyacak şekilde değiştirirsiniz.
 
 ```
 <xs:element name="name">
@@ -48,7 +48,7 @@ XML Düzenleyicisi, XML dosyalarını daha hızlı bir şekilde oluşturmanıza 
  Daha fazla bilgi için bkz. [nasıl yapılır: XML ŞEMASıNDAN XML parçacığı oluşturma](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md).
 
 ## <a name="create-new-xml-snippets"></a>Yeni XML parçacıkları oluşturma
- @No__t_0 Visual Studio 'da bulunan kod parçacıklarına ek olarak, kendi XML kod parçacıklarını da oluşturabilir ve kullanabilirsiniz.
+ Visual Studio 'da varsayılan olarak bulunan kod parçacıklarının yanı sıra [!INCLUDE[msCoName](../includes/msconame-md.md)] kendı XML kod parçacıklarınızı da oluşturabilir ve kullanabilirsiniz.
 
  Daha fazla bilgi için bkz. [nasıl yapılır: XML parçacıkları oluşturma](../xml-tools/how-to-create-xml-snippets.md).
 

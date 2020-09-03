@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir kitaplıktaki sembolleri tanımlama | Microsoft Docs'
+title: 'Nasıl yapılır: kitaplıkta sembolleri belirleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 22
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f154c63940189f1a6035246fb7f72ec27be677f5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68191872"
 ---
-# <a name="how-to-identify-symbols-in-a-library"></a>Nasıl yapılır: Bir Kitaplıktaki Sembolleri Tanımlama
+# <a name="how-to-identify-symbols-in-a-library"></a>Nasıl Yapılır: Bir Kitaplıktaki Sembolleri Tanımlama
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Sembol tarama araçlarını hiyerarşik görünümleri simgeleri görüntüler. Simgeler, ad alanları, nesneler, sınıflar, sınıf üyeleri ve diğer dil öğelerini temsil eder.  
+Sembol tarama araçları, simgelerin hiyerarşik görünümlerini görüntüler. Semboller ad alanlarını, nesneleri, sınıfları, sınıf üyelerini ve diğer dil öğelerini temsil eder.  
   
- Hiyerarşideki her bir simge için simge kitaplığı tarafından geçirilen Gezinti bilgileri belirlenebilir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] aşağıdaki arabirimleri aracılığıyla Nesne Yöneticisi:  
+ Hiyerarşideki her bir sembol, aşağıdaki arabirimler aracılığıyla sembol kitaplığı tarafından nesne yöneticisine geçirilen gezinti bilgileriyle tanımlanabilir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] :  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo>  
   
@@ -31,11 +31,11 @@ Sembol tarama araçlarını hiyerarşik görünümleri simgeleri görüntüler. 
   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumNavInfoNodes>.  
   
- Hiyerarşideki simgenin konumunu sembol ayırır. Belirli bir simgeye gitmek sembol tarama araçlarını sağlar. Simgeyi benzersiz, tam yolunu konumunu belirler. Her öğe yolunda bir düğümdür. Yolu, üst düzey düğüm ile başlar ve belirli bir sembolün ile sona erer. Örneğin, M1 yöntemi C1 sınıfın bir üyesidir ve C1 N1 ad alanında ise, tam M1 yöntemin N1 yoludur. C1. M1. Bu yol üç düğümü içerir: N1, C1 ve M1.  
+ Hiyerarşide sembolün konumu bir sembolü ayırır. Sembol tarama araçlarının belirli bir simgeye gitmesini sağlar. Simgenin benzersiz ve tam yolu, konumu belirler. Yoldaki her öğe bir düğümdür. Yol, en üst düzey düğümle başlar ve belirli bir simgeyle biter. Örneğin, M1 yöntemi C1 sınıfının bir üyesi ise ve C1 N1 ad alanında ise, M1 yönteminin tam yolu N1 ' dir. =. M1. Bu yol üç düğüm içerir: N1, C1 ve M1.  
   
- Gezinti bilgileri sağlayan [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Nesne Yöneticisi'ni bulun, seçin ve tutmak için hiyerarşi içinde simgeleri seçili. Bir tarama aracını başka gezinme sağlar. Kullanırken **Nesne Tarayıcısı** sembolleri göz atmak için bir [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] proje, bir yöntem sağ tıklatın ve Başlat **çağrı tarayıcısı** yöntemi çağrısı grafikte görüntülenecek aracı.  
+ Gezinti bilgileri, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] nesne yöneticisinin hiyerarşide sembolleri bulmasını, seçmesini ve seçili halde tutmayı sağlar. Bir gözatma aracından diğerine gezinmeye izin verir. Bir projedeki simgelere gözatabilmeniz için **nesne tarayıcısı** kullanırken, yöntemi bir [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] çağrı grafiğinde göstermek için bir yönteme sağ tıklayıp **çağrı tarayıcısı** aracını başlatabilirsiniz.  
   
- İki tür simge konumu açıklar. Kurallı biçimi tam yolun simgenin temel alır. Bu hiyerarşi simgesinin benzersiz bir konumu temsil eder. Sembol tarama aracının bağımsızdır. Kurallı biçimi bilgi almak için [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] nesnesi Yöneticisi çağrıları <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> yöntemi. Sunu formun içinde belirli bir sembol Tarama Aracı simgenin konumunu açıklar. Simgenin konumunu hierarchicy diğer simgeler konumunu göredir. Belirli bir sembol, kurallı tek yolu ancak birkaç sunu yolu olabilir. Örneğin, C1 sınıfı, C2 sınıfından devralınır ve N1 ad alanındaki sınıflar **Nesne Tarayıcısı** aşağıdaki hiyerarşik ağaç görüntüler:  
+ Sembol konumunu iki form tanımlıyor. Kurallı form, simgenin tam yolunu temel alır. Hiyerarşide sembolün benzersiz bir konumunu temsil eder. Sembol tarama aracından bağımsızdır. Kurallı form bilgilerini elde etmek için, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] nesne Yöneticisi yöntemini çağırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> . Sunum Formu, belirli bir sembol tarama aracı içindeki simgenin konumunu açıklar. Simgenin konumu, hiyerarşik içindeki diğer sembollerin konumlarına göre değişir. Verilen sembolün çeşitli sunum yolları olabilir, ancak yalnızca bir kurallı yol olabilir. Örneğin, C1 sınıfı C2 sınıfından devralınmışsa ve her iki sınıf de N1 ad alanında yer alıyorsa, **nesne tarayıcısı** aşağıdaki hiyerarşik ağacı görüntüler:  
   
 ```  
 N1  
@@ -48,17 +48,17 @@ N1
   
 ```  
   
- Bu örnekte, C2 sınıfı kurallı yolunu, N1 + C2 şeklindedir. C2 sunu yolunu C1 ve "Tabanları ve arabirimleri" düğümleri içerir: N1 + C1 + "tabanları ve arabirimleri" + C2.  
+ Bu örnekte, C2 sınıfının kurallı yolu N1 + C2 ' dir. C2 sunum yolu C1 ve "temeller ve arabirimler" düğümleri içerir: N1 + C1 + "temeller ve arabirimler" + C2.  
   
- Nesne manager çağrılarını sunu form bilgi almak için <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A> yöntemi.  
+ Sunum formu bilgilerini almak için, nesne Yöneticisi <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A> yöntemini çağırır.  
   
-## <a name="identifying-a-symbol-in-the-hierarchy"></a>Hiyerarşideki bir simge tanımlama  
+## <a name="identifying-a-symbol-in-the-hierarchy"></a>Hiyerarşide sembol tanımlama  
   
-#### <a name="to-obtain-canonical-and-presentation-forms-information"></a>Kurallı edinme ve sunu forms bilgileri  
+#### <a name="to-obtain-canonical-and-presentation-forms-information"></a>Kurallı ve sunum formları bilgilerini elde etmek için  
   
-1. Uygulama <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> yöntemi.  
+1. Yöntemini uygulayın <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> .  
   
-     Nesne yöneticisine kurallı simge yolunda bulunan düğüm listesi elde etmek için bu yöntemi çağırır.  
+     Nesne Yöneticisi, simgenin kurallı yolunda yer alan düğümlerin listesini almak için bu yöntemi çağırır.  
   
     ```vb  
     Public Function EnumCanonicalNodes(ByRef ppEnum As Microsoft.VisualStudio.Shell.Interop.IVsEnumNavInfoNodes) As Integer  
@@ -79,11 +79,11 @@ N1
   
     ```  
   
-2. Uygulama <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A> yöntemi.  
+2. Yöntemini uygulayın <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A> .  
   
-     Nesne yöneticisine sembol sunu yolunda bulunan düğüm listesi elde etmek için bu yöntemi çağırır.  
+     Nesne Yöneticisi, simgenin sunum yolunda yer alan düğümlerin listesini almak için bu yöntemi çağırır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Sembol tarama araçlarını destekleme](../../extensibility/internals/supporting-symbol-browsing-tools.md)   
- [Nasıl yapılır: Nesne yöneticisine kitaplık kaydetme](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)   
- [Nasıl yapılır: Kitaplık Tarafından Sağlanan Sembollerin Listelerini Nesne Yöneticisine Sunma](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)
+ [Nasıl yapılır: bir kitaplığı nesne yöneticisiyle kaydetme](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)   
+ [Nasıl Yapılır: Kitaplık Tarafından Sağlanan Sembollerin Listelerini Nesne Yöneticisine Sunma](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)

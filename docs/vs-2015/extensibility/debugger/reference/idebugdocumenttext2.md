@@ -13,46 +13,46 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2e81aaccd3af692f4a7e0f708685dbea4a44d5c6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200163"
 ---
 # <a name="idebugdocumenttext2"></a>IDebugDocumentText2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu arabirim, bir metin belgesi temsil eder.  
+Bu arabirim bir metin belgesini temsil eder.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugDocumentText2 : IDebugDocument2  
 ```  
   
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar  
- Metin biçiminde sağlaması gerekir kaynak kodu olduğunda, hata ayıklama altyapısı (DE) Bu arabirim uygular. Bir DE kullanılıyorsa, bu en sık karşılaşılan durum olduğundan [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) arabirimi, bu da uygulamanız gerekir `IDebugDocumentText2` arabirimi.  
+## <a name="notes-for-implementers"></a>Implemenonun notları  
+ Bir hata ayıklama altyapısı (DE), sağlaması gereken kaynak kodu metin biçiminde olduğunda bu arabirimi uygular. Bu en tipik durum olduğu için, [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) arabirimini de uygularsa, arabirimi de uygulamalıdır `IDebugDocumentText2` .  
   
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar  
- Kullanım `QueryInterface` bu arabirimden elde etmek için yöntemi bir `IDebugDocument2` arabirimi.  
+ `QueryInterface`Bu arabirimi bir arabirimden elde etmek için yöntemini kullanın `IDebugDocument2` .  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
- Yöntemlere ek olarak `IDebugDocument2` arabirimi bu arabirim, aşağıdaki yöntemleri uygular:  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
+ Bu arabirim, arabirimindeki yöntemlere ek olarak `IDebugDocument2` aşağıdaki yöntemleri uygular:  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetSize](../../../extensibility/debugger/reference/idebugdocumenttext2-getsize.md)|Belgedeki bu konumda metin boyutunu alır.|  
-|[GetText](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)|Belge belirtilen konumda metin alır.|  
+|[GetSize](../../../extensibility/debugger/reference/idebugdocumenttext2-getsize.md)|Belgedeki bu konumdaki metnin boyutunu alır.|  
+|[GetText](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)|Belgedeki belirtilen konumdan metni alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu arabirimi uygulayan bir nesne de uygulamalıdır <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer> arabirim, hangi kaynakları <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint> için arabirim bir [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md) nesne.  
+ Bu arabirimi uygulayan bir nesne <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer> , <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint> bir [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md) nesnesinin arabirimini sağlayan arabirimini de uygulamalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)   

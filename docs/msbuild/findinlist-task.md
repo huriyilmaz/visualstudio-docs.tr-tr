@@ -1,5 +1,5 @@
 ---
-title: Findinlist Görev | Microsoft Dokümanlar
+title: FindInList görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,32 +17,32 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 915265a775f572467ad1296499bdd3201adc1f8b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77634155"
 ---
 # <a name="findinlist-task"></a>FindInList görevi
 
-Belirtilen bir listede, eşleşen madde spec olan bir öğe bulur.
+Belirtilen listede, eşleşen itemspec 'e sahip bir öğe bulur.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda [FindInList görevin](../msbuild/findinlist-task.md)parametreleri açıklanmaktadır.
+ Aşağıdaki tabloda, [Findinlist görevinin](../msbuild/findinlist-task.md)parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`CaseSensitive`|İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer, `true`arama büyük/küçük harf duyarlıise; aksi takdirde, öyle değildir. Varsayılan değer. `true`|
-|`FindLastMatch`|İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer `true`, son maç dönmek; aksi takdirde, ilk eşleşmeyi geri dönün. Varsayılan değer. `false`|
-|`ItemFound`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` salt okunur çıktı parametresi.<br /><br /> Listede bulunan ilk eşleşen öğe varsa.|
-|`ItemSpecToFind`|Gerekli `String` parametre.<br /><br /> Aranacak öğe spec.|
-|`List`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Öğe spec için arama yapmak için liste.|
-|`MatchFileNameOnly`|İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer, `true`itemspec sadece dosya adı bölümü ne eşleşirse; aksi takdirde, tüm itemspec karşı maç. Varsayılan değer. `true`|
+|`CaseSensitive`|İsteğe bağlı `Boolean` parametre.<br /><br /> `true`Arama büyük/küçük harfe duyarlıdır; Aksi takdirde, değildir. Varsayılan değer `true` .|
+|`FindLastMatch`|İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer `true` , son eşleşmeyi döndürür; Aksi takdirde, ilk eşleşmeyi döndürün. Varsayılan değer `false` .|
+|`ItemFound`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` salt okunurdur çıkış parametresi.<br /><br /> Listede bulunan ilk eşleşen öğe (varsa).|
+|`ItemSpecToFind`|Gerekli `String` parametre.<br /><br /> Arama yapılacak itemspec.|
+|`List`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> İtemspec 'in aranacağı liste.|
+|`MatchFileNameOnly`|İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer `true` , itemspec 'in yalnızca dosya adı bölümüyle eşleşir; Aksi takdirde, tüm itemspec ile eşleştirin. Varsayılan değer `true` .|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
+ Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

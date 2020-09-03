@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5c11c952223854ff1b4b963e24615e7abe831496
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669872"
 ---
 # <a name="deploy-a-layer-model-extension"></a>Katman modeli uzantısı dağıtma
@@ -29,9 +29,9 @@ Visual Studio 'nun diğer kullanıcıları, Visual Studio kullanarak oluşturdu�
 
 #### <a name="to-install-the-extension"></a>Uzantıyı yüklemek için
 
-1. **Kaynak. vsix. manifest**dosyasını içeren projede, dosya gezgini 'nde **\\ ' \\** açın.
+1. **Kaynak. vsix. manifest**dosyasını içeren projede, dosya Gezgini 'nde **açık \\ \\ bin*** öğesini açın.
 
-2. **@No__t_1. vsix** dosyasını, uzantıyı yüklemek istediğiniz bilgisayara kopyalayın.
+2. ** \* . Vsix** dosyasını uzantıyı yüklemek istediğiniz bilgisayara kopyalayın.
 
 3. Hedef bilgisayarda, Windows Gezgini 'nde *. vsix dosyasına çift tıklayın.
 
@@ -44,9 +44,9 @@ Visual Studio 'nun diğer kullanıcıları, Visual Studio kullanarak oluşturdu�
 2. Uzantının adına tıklayın ve ardından **Kaldır**' a tıklayın.
 
 ## <a name="installing-an-extension-on-a-team-foundation-build-server"></a>Team Foundation yapı sunucusuna Uzantı yükleme
- [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] sunucularında normalde Visual Studio yüklü değildir ve bu nedenle VSıX 'i çift tıklayarak yükleyemezsiniz. @No__t_0 yüklemesi, bir VSıX uzantısının çalışmasına izin veren bazı bileşenleri içerir, ancak uzantıyı el ile yüklemeniz gerekir.
+ [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] sunucularda normalde Visual Studio yüklü değildir ve bu nedenle VSıX 'i çift tıklayarak yükleyemezsiniz. Yüklemesi, [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] BIR VSIX uzantısının çalışmasına izin veren bazı bileşenleri içerir, ancak uzantıyı el ile yüklemeniz gerekir.
 
-#### <a name="to-install-your-layer-extension-on-a-includeesprbuildincludesesprbuild-mdmd-server"></a>Katman uzantınızı [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] sunucusuna yüklemek için
+#### <a name="to-install-your-layer-extension-on-a-esprbuild-server"></a>Katman uzantınızı bir sunucusuna yüklemek için [!INCLUDE[esprbuild](../includes/esprbuild-md.md)]
 
 1. **. Vsix** dosyalarını geliştirme bilgisayarınızdan [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] bilgisayara kopyalayın.
 
@@ -56,11 +56,11 @@ Visual Studio 'nun diğer kullanıcıları, Visual Studio kullanarak oluşturdu�
 
          %ProgramFiles%\Microsoft Visual Studio [sürüm] \Common7\IDE\Extensions\Microsoft
 
-    - Yalnızca [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] çalıştıran ağ hizmetine yüklemek için:
+    - Yalnızca çalıştıran ağ hizmetine yüklemek için [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] :
 
          %WinDir%\ServiceProfiles\NetworkService\AppData\Local\Microsoft\VisualStudio \\ [sürüm] \Extensions\Microsoft
 
-    - @No__t_0 belirli bir kullanıcı olarak etkileşimli modda çalışacak şekilde yapılandırdıysanız, yalnızca bu kullanıcı için yükleyebilirsiniz:
+    - [!INCLUDE[esprbuild](../includes/esprbuild-md.md)]Belirli bir kullanıcı olarak etkileşimli modda çalışacak şekilde yapılandırdıysanız, yalnızca bu kullanıcı için yükleyebilirsiniz:
 
          %LocalAppData%\Microsoft\VisualStudio \\ [sürüm] \Extensions\Microsoft
 
@@ -75,4 +75,4 @@ Visual Studio 'nun diğer kullanıcıları, Visual Studio kullanarak oluşturdu�
 
     3. . Zip dosyasını silme
 
-3. @No__t_0 yeniden başlatın.
+3. Yeniden başlatın [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] .

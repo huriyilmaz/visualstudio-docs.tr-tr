@@ -18,17 +18,17 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: b703d3ccc6ffbd5e2449a1768071b930f606f37f
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85282000"
 ---
 # <a name="insert-new-records-into-a-database"></a>Veritabanına yeni kayıtlar ekleme
 
 Yeni kayıtları bir veritabanına eklemek için, `TableAdapter.Update` yöntemini veya TableAdapter DBDirect yöntemlerinden birini (özellikle `TableAdapter.Insert` yöntemi) kullanabilirsiniz. Daha fazla bilgi için bkz. [TableAdapter](../data-tools/create-and-configure-tableadapters.md).
 
-Uygulamanız TableAdapters kullanmıyorsa, <xref:System.Data.SqlClient.SqlCommand> veritabanınızdaki yeni kayıtları eklemek için komut nesnelerini (örneğin,) kullanabilirsiniz.
+Uygulamanız TableAdapters kullanmıyorsa,  <xref:System.Data.SqlClient.SqlCommand> veritabanınızdaki yeni kayıtları eklemek için komut nesnelerini (örneğin,) kullanabilirsiniz.
 
 Uygulamanız verileri depolamak için veri kümeleri kullanıyorsa `TableAdapter.Update` yöntemini kullanın. `Update`Yöntemi tüm değişiklikleri (güncelleştirmeler, ekler ve siler) veritabanına gönderir.
 

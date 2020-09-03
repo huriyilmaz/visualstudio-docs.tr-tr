@@ -1,7 +1,7 @@
 ---
-title: Visual Studio, adım 5, kimlik doğrulama Django öğretici öğrenin
+title: Visual Studio 'da Docgo öğreticisini öğrenin, 5. adım, kimlik doğrulama
 titleSuffix: ''
-description: Visual Studio projeleri bağlamında Django temellerinin bir walkthrough, Özellikle Django Web Project şablonları tarafından sağlanan kimlik doğrulama özellikleri.
+description: Visual Studio projeleri bağlamında, özellikle de Docgo Web projesi şablonları tarafından sağlandığı şekilde kimlik doğrulama özellikleri olan Docgo hakkında bir anlatım.
 ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -12,36 +12,36 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: bdc76b0a7b9d3f74da77b317faf31dae83706f04
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62957891"
 ---
-# <a name="step-5-authenticate-users-in-django"></a>Adım 5: Django'daki kullanıcıları doğrulama
+# <a name="step-5-authenticate-users-in-django"></a>5. Adım: Docgo 'da kullanıcıların kimliğini doğrulama
 
-**Önceki adım: [Tam Django Web Projesi şablonu kullanın](learn-django-in-visual-studio-step-04-full-django-project-template.md)**
+**Önceki adım: [tam Docgo Web proje şablonunu kullanma](learn-django-in-visual-studio-step-04-full-django-project-template.md)**
 
-Kimlik doğrulama web uygulamaları için ortak bir gereksinim olduğundan, "Django Web Project" şablonu temel bir kimlik doğrulama akışı içerir. (Bu öğreticinin 6. Django proje şablonlarından herhangi birini kullanırken, Visual Studio Django projesinin *settings.py*kimlik doğrulama için gerekli tüm modülleri içerir.
+Kimlik doğrulaması Web uygulamaları için yaygın bir gereksinimdir, "Docgo Web projesi" şablonu temel bir kimlik doğrulama akışı içerir. (Bu öğreticinin 6. adımında açıklanan "Docgo Web projesini yoklamalar" şablonu aynı akışı da içerir.) Docgo proje şablonlarından herhangi birini kullanırken, Visual Studio Docgo projesinin *Settings.py*kimlik doğrulaması için gerekli tüm modülleri içerir.
 
-Bu adımda öğrenmek:
+Bu adımda şunları öğreneceksiniz:
 
 > [!div class="checklist"]
-> - Visual Studio şablonlarında sağlanan kimlik doğrulama akışını niçin kullanırsınız (adım 5-1)
+> - Visual Studio şablonlarında sunulan kimlik doğrulama akışını kullanma (adım 5-1)
 
-## <a name="step-5-1-use-the-authentication-flow"></a>Adım 5-1: Kimlik doğrulama akışını kullanma
+## <a name="step-5-1-use-the-authentication-flow"></a>Adım 5-1: kimlik doğrulama akışını kullanma
 
-Aşağıdaki adımlar kimlik doğrulama akışını çalıştırın ve projenin ilgili bölümlerini açıklar:
+Aşağıdaki adımlar, kimlik doğrulama akışını ve projenin dahil olduğu bölümleri anlatmaktadır:
 
-1. Bir süper kullanıcı (yönetici) hesabı oluşturmak için proje kökündeki *readme.html* dosyasındaki yönergeleri zaten izlemediyseniz, bunu şimdi yapın.
+1. Zaten bir süper kullanıcı (yönetici) hesabı oluşturmak için proje kökündeki *readme.html* dosyasındaki yönergeleri izlediyseniz, şimdi bunu yapın.
 
-1. **Hata Ayıklama** > Başlat Hata**Ayıklama** **(F5)** kullanarak Visual Studio'dan uygulamayı çalıştırın. Uygulama tarayıcıda göründüğünde, **Oturum Açma'nın** gezinme çubuğunun sağ üst tarafında göründüğünü gözlemleyin.
+1. Visual Studio 'dan **hata ayıklama**  >  **başlatma hata ayıklamayı** (**F5**) kullanarak uygulamayı çalıştırın. Uygulama tarayıcıda göründüğünde, gezinti çubuğunun sağ üst köşesinde görüntülenen **günlük** ' i gözlemleyin.
 
-    ![Django Web Project uygulama sayfasında oturum açma denetimi](media/django/step05-login-control.png)
+    ![Docgo Web projesi uygulaması sayfasında oturum açma denetimi](media/django/step05-login-control.png)
 
-1. *templates/app/layout.html* açın ve `<div class="navbar ...>` öğenin etiketi `{% include app/loginpartial.html %}`içerdiğini gözlemleyin. Etiket, `{% include %}` Django'nun cazip sistemine, içerdiği şablondaki bu noktada dahil edilen dosyanın içeriğini çekmesini bildirir.
+1. *Templates/App/layout.html* ' i açın ve `<div class="navbar ...>` öğesinin etiketi içerdiğini gözlemleyin `{% include app/loginpartial.html %}` . `{% include %}`Etiketi, Docgo 'nun şablon oluşturma sisteminin, içerilen şablonun bu noktasında eklenen dosyanın içeriğini çekmesini sağlar.
 
-1. *templates/app/loginpartial.html* açın ve kullanıcının kimlik `{% if user.is_authenticated %}` doğrulaması `{% else %}` olup olmadığına bağlı olarak farklı Kullanıcı Arabirimi öğelerini işlemek için bir etiketle birlikte koşullu etiketi nasıl kullandığını gözlemleyin:
+1. *Şablonlar/App/loginpartial.html* ' i açın ve `{% if user.is_authenticated %}` `{% else %}` kullanıcının kimliği doğrulandığına bağlı olarak farklı kullanıcı arabirimi öğelerini işlemek için bir etiketle birlikte koşullu etiketi nasıl kullandığını gözlemleyin:
 
     ```html
     {% if user.is_authenticated %}
@@ -62,7 +62,7 @@ Aşağıdaki adımlar kimlik doğrulama akışını çalıştırın ve projenin 
     {% endif %}
     ```
 
-1. Uygulamayı ilk başlattığınızda hiçbir kullanıcının kimliği doğrulandığından, bu şablon kodu yalnızca göreli "oturum açma" yolunun "oturum açma" bağlantısını işler. *urls.py* belirtildiği gibi (önceki bölümde gösterildiği gibi), bu rota `django.contrib.auth.views.login` görünüme eşlenir. Bu görünüm aşağıdaki verileri alır:
+1. Uygulamayı ilk başlattığınızda hiçbir kullanıcının kimliği doğrulanmadığı için, bu şablon kodu yalnızca "oturum aç" göreli yoluna "oturum aç" bağlantısını işler. *URLs.py* ' de belirtildiği gibi (önceki bölümde gösterildiği gibi), bu yol `django.contrib.auth.views.login` görünüme eşlenir. Bu görünüm aşağıdaki verileri alır:
 
     ```python
     {
@@ -76,7 +76,7 @@ Aşağıdaki adımlar kimlik doğrulama akışını çalıştırın ve projenin 
     }
     ```
 
-    Burada, `template_name` oturum açma sayfası için şablonu tanımlar, bu durumda *templates/app/login.html.* Özellik, `extra_context` şablona verilen varsayılan bağlam verilerine eklenir. Son `authentication_form` olarak, oturum açma ile kullanılacak bir form sınıfı belirtir; şablonda `form` nesne olarak görünür. Varsayılan değer `AuthenticationForm` (from); `django.contrib.auth.views` Visual Studio proje şablonu bunun yerine uygulamanın *forms.py* dosyasında tanımlanan formu kullanır:
+    Burada, `template_name` oturum açma sayfasının şablonunu, bu durumda *Templates/app/login.html*olarak tanımlar. `extra_context`Özelliği, şablona verilen varsayılan bağlam verilerine eklenir. Son olarak, `authentication_form` oturum açmayla birlikte kullanılacak bir form sınıfı belirtir; şablonda nesne olarak görünür `form` . Varsayılan değer `AuthenticationForm` (from `django.contrib.auth.views` ); bunun yerine Visual Studio proje şablonu, uygulamanın *Forms.py* dosyasında tanımlanan formu kullanır:
 
     ```python
     from django import forms
@@ -95,9 +95,9 @@ Aşağıdaki adımlar kimlik doğrulama akışını çalıştırın ve projenin 
                                        'placeholder':'Password'}))
     ```
 
-    Gördüğünüz gibi, bu form sınıfı yer `AuthenticationForm` tutucu metin eklemek için kullanıcı adı ve parola alanlarını türetir ve özellikle geçersiz kılar. Visual Studio şablonu, parola gücü doğrulama ekleme gibi formu özelleştirmek istediğiniz varsayımıüzerine bu açık kodu içerir.
+    Görebileceğiniz gibi, bu form sınıfı öğesinden türetilir `AuthenticationForm` ve özel olarak yer tutucu metni eklemek için Kullanıcı adı ve parola alanlarını geçersiz kılar. Visual Studio şablonu, bu açık kodu, formu özelleştirmek isteyebileceğiniz, örneğin parola gücü doğrulaması ekleme gibi bir şekilde içerir.
 
-1. Giriş sayfasına gidince, uygulama *login.html* şablonuna işlenir. Değişkenler `{{ form.username }}` ve `{{ form.password }}` `CharField` formları işlemek `BootstrapAuthenticationForm`. Ayrıca doğrulama hatalarını gösteren yerleşik bir bölüm ve bu hizmetleri eklemeyi seçerseniz sosyal oturum açmalar için hazır bir öğe de vardır.
+1. Oturum açma sayfasına gittiğinizde, uygulama *login.html* şablonunu işler. Değişkenleri `{{ form.username }}` ve `{{ form.password }}` `CharField` içindeki formları işleme `BootstrapAuthenticationForm` . Ayrıca, bu hizmetleri eklemeyi seçerseniz, doğrulama hatalarını göstermek için yerleşik bir bölüm ve sosyal oturumlar için hazır bir öğe vardır.
 
     ```html
     {% extends "app/layout.html" %}
@@ -144,19 +144,19 @@ Aşağıdaki adımlar kimlik doğrulama akışını çalıştırın ve projenin 
     {% endblock %}
     ```
 
-1. Formu gönderdiğinizde, Django kimlik bilgilerinizin (süper kullanıcının kimlik bilgileri gibi) kimliğini doğrulamaya çalışır. Kimlik doğrulama başarısız olursa, geçerli sayfada `form.errors` kalır, ancak doğru olarak ayarlanır. Kimlik doğrulaması başarılı olursa, Django bu durumda ana sayfa `<input type="hidden" name="next" value="/" />`olan "sonraki" alandaki göreli URL'ye gider (`/`).
+1. Formu gönderdiğinizde, Docgo kimlik bilgilerinizi (süper kullanıcının kimlik bilgileri gibi) doğrulamaya çalışır. Kimlik doğrulaması başarısız olursa, geçerli sayfada kalır, ancak `form.errors` doğru olarak ayarlanır. Kimlik doğrulaması başarılı olursa, Docgo "sonraki" alanındaki ilgili URL 'ye gider, `<input type="hidden" name="next" value="/" />` Bu durumda giriş sayfası ( `/` ) olur.
 
-1. Şimdi, ana sayfa yeniden işlendiğinde, `user.is_authenticated` *loginpartial.html* şablonu işlendiğinde özellik doğrudur. Sonuç olarak, bir **Merhaba (kullanıcı adı)** iletisi görürsünüz ve **oturumu kapatın.** Kimlik doğrulamayı denetlemek için uygulamanın diğer bölümlerinde kullanabilirsiniz. `user.is_authenticated`
+1. Artık, giriş sayfası tekrar işlendiğinde, `user.is_authenticated` *loginpartial.html* şablonu işlendiğinde özelliği true olur. Sonuç olarak, bir **Merhaba (Kullanıcı adı)** iletisi görürsünüz ve **Oturumu kapatın**. `user.is_authenticated`Kimlik doğrulamasını denetlemek için uygulamanın diğer bölümlerinde öğesini kullanabilirsiniz.
 
-    ![Merhaba mesaj ve Django Web Project uygulama sayfasında giriş kontrolü](media/django/step05-logoff-control.png)
+    ![Docgo Web projesi uygulaması sayfasında Merhaba ileti ve oturum kapatma denetimi](media/django/step05-logoff-control.png)
 
-1. Kimlik doğrulaması yapılan kullanıcının belirli kaynaklara erişmeye yetkili olup olmadığını denetlemek için veritabanınızdan kullanıcıya özel izinler almanız gerekir. Daha fazla bilgi için Bkz. [Django kimlik doğrulama sistemini (Django](https://docs.djangoproject.com/en/2.0/topics/auth/default/#permissions-and-authorization) dokümanları) kullanma.
+1. Kimliği doğrulanmış kullanıcının belirli kaynaklara erişme yetkisine sahip olup olmadığını denetlemek için, veritabanınıza kullanıcıya özgü izinleri almanız gerekir. Daha fazla bilgi için bkz. [docgo kimlik doğrulama sistemini kullanma](https://docs.djangoproject.com/en/2.0/topics/auth/default/#permissions-and-authorization) (docgo belgeleri).
 
-1. Süper kullanıcı veya yönetici, özellikle, göreli URL'leri "/admin/" ve "/admin/doc/" kullanarak yerleşik Django yönetici arabirimlerine erişmeye yetkilidir. Bu arabirimleri etkinleştirmek için aşağıdakileri yapın:
+1. Özellikle süper kullanıcı veya yönetici, "/admin/" ve "/admin/doc/" göreli URL 'Leri kullanılarak yerleşik Docgo yönetici arabirimlerine erişme yetkisine sahiptir. Bu arabirimleri etkinleştirmek için aşağıdakileri yapın:
 
-    1. Docutils Python paketini ortamınıza yükleyin. Bunu yapmanın harika bir yolu *gereksinimleri.txt* dosyasına "docutils" eklemektir, sonra **Solution Explorer,** projeyi genişletmek, **Python Ortamları** düğümünü genişletmek, sonra sağ kullandığınız ortama tıklayın **requirements.txt**seçin .
+    1. Docutils Python paketini ortamınıza yükler. Bunu yapmanın harika bir yolu, *requirements.txt* dosyanıza "docutils" eklemek, ardından **Çözüm Gezgini**, projeyi genişletmeniz, **Python ortamları** düğümünü genişletmeniz ve ardından requirements.txtbir SELECT **yüklemesi **kullandığınız ortama sağ tıklamanız gerekir.
 
-    1. Django projesinin *urls.py* açın ve varsayılan yorumları aşağıdaki girişlerden kaldırın:
+    1. Docgo projesinin *URLs.py* açın ve aşağıdaki girişlerden varsayılan açıklamaları kaldırın:
 
         ```python
         from django.conf.urls import include
@@ -171,13 +171,13 @@ Aşağıdaki adımlar kimlik doğrulama akışını çalıştırın ve projenin 
         ]
         ```
 
-    1. Django projesinin *settings.py* dosyasında, koleksiyona `INSTALLED_APPS` gidin `'django.contrib.admindocs'`ve ekleyin.
+    1. Docgo projesinin *Settings.py* dosyasında, `INSTALLED_APPS` koleksiyona gidin ve ekleyin `'django.contrib.admindocs'` .
 
-    1. Uygulamayı yeniden başlattığınızda , "/admin/" ve "/admin/doc/" adreslerine gidebilir ve ek kullanıcı hesapları oluşturma gibi görevleri gerçekleştirebilirsiniz.
+    1. Uygulamayı yeniden başlattığınızda, "/admin/" ve "/admin/doc/" adresine giderek ek kullanıcı hesapları oluşturma gibi görevleri gerçekleştirebilirsiniz.
 
-        ![Django yönetici arayüzü](media/django/step05-administrator-interface.png)
+        ![Docgo yönetici arabirimi](media/django/step05-administrator-interface.png)
 
-1. Kimlik doğrulama akışının son bölümü kapalı gündür. *Loginpartial.html'de*de görebileceğiniz gibi, **Oturum kapatma** bağlantısı, yerleşik görünüm `django.contrib.auth.views.logout`tarafından işlenen göreli URL "/login"e bir POST yapar. Bu görünüm herhangi bir UI görüntülenmez ve yalnızca ana sayfaya doğru (urls.py "^logout$" deseni *için* gösterildiği gibi) gezinir. Bir oturum kapatma sayfası görüntülemek istiyorsanız, önce "template_name" özelliği eklemek ve "next_page" özelliğini kaldırmak için URL deseni aşağıdaki gibi değiştirin:
+1. Kimlik doğrulama akışının son bölümü günlüğe kaydediliyor. *loginpartial.html*'de görebileceğiniz gibi, **oturum kapatma** bağlantısı, yerleşik görünüm tarafından işlenen GÖRELI URL 'ye bir gönderi ("/Login") yapar `django.contrib.auth.views.logout` . Bu görünüm hiçbir Kullanıcı arabirimini göstermez ve yalnızca giriş sayfasına ("^ Logout $" deseninin *URLs.py* gösterildiği gibi) gider. Bir oturum kapatma sayfası göstermek istiyorsanız, önce URL deseninin "template_name" özelliği eklemek ve "next_page" özelliğini kaldırmak için aşağıdaki şekilde değiştirin:
 
     ```python
     url(r'^logout$',
@@ -189,7 +189,7 @@ Aşağıdaki adımlar kimlik doğrulama akışını çalıştırın ve projenin 
         name='logout')
     ```
 
-    Ardından aşağıdaki (minimal) içeriklerle *templates/app/loggedoff.html* oluşturun:
+    Ardından aşağıdaki (minimum) içerikle *Şablonlar/App/loggedoff.html* oluşturun:
 
     ```html
     {% extends "app/layout.html" %}
@@ -198,22 +198,22 @@ Aşağıdaki adımlar kimlik doğrulama akışını çalıştırın ve projenin 
     {% endblock %}
     ```
 
-    Sonuç aşağıdaki gibi görünür:
+    Sonuç şu şekilde görünür:
 
-    ![Sayfa dan günlüğe eklendi](media/django/step05-logged-off-page.png)
+    ![Oturumu açılmış sayfa eklendi](media/django/step05-logged-off-page.png)
 
-1. Tüm işiniz bittiğinde, sunucuyu durdurun ve değişikliklerinizi bir kez daha kaynak denetimine bağla.
+1. İşiniz bittiğinde, sunucuyu durdurun ve değişikliklerinizi kaynak denetimine yeniden uygulayın.
 
-### <a name="question-what-is-the-purpose-of-the--csrf_token--tag-that-appears-in-the-form-elements"></a>Soru: Form \<\> öğelerinde görünen {% csrf_token %} etiketinin amacı nedir?
+### <a name="question-what-is-the-purpose-of-the--csrf_token--tag-that-appears-in-the-form-elements"></a>Soru: öğelerde görüntülenen {% csrf_token%} etiketinin amacı nedir \<form\> ?
 
-Cevap: `{% csrf_token %}` Etiket, Django'nun yerleşik [çapraz site isteği sahteciliği (csrf) koruması](https://docs.djangoproject.com/en/2.0/ref/csrf/) (Django dokümanları) içerir. Bu etiketi genellikle form gibi POST, PUT veya DELETE istek yöntemlerini içeren herhangi bir öğeye eklersiniz. Şablon oluşturma işlevi`render`( ) sonra gerekli koruma ekler.
+Cevap: `{% csrf_token %}` etiket docgo 'nun yerleşik [siteler arası istek sahteciliğini önleme (CSRF) koruması](https://docs.djangoproject.com/en/2.0/ref/csrf/) (docgo belgeleri) içerir. Bu etiketi genellikle form gibi POST, PUT veya DELETE istek yöntemlerini içeren herhangi bir öğeye eklersiniz. Şablon işleme işlevi ( `render` ) gerekli korumayı ekler.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!div class="nextstepaction"]
-> [Anketler Django Web Projesi şablonu kullanın](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md)
+> [Docgo Web proje şablonunu Yoklat ' i kullanın](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md)
 
-## <a name="go-deeper"></a>Daha derine inin
+## <a name="go-deeper"></a>Daha derin git
 
-- [Django'da kullanıcı kimlik doğrulaması](https://docs.djangoproject.com/en/2.0/topics/auth/) (docs.djangoproject.com)
-- GitHub'da Öğretici kaynak kodu: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)
+- [Docgo 'Da Kullanıcı kimlik doğrulaması](https://docs.djangoproject.com/en/2.0/topics/auth/) (docs.djangoproject.com)
+- GitHub 'daki öğretici kaynak kodu: [Microsoft/Python-Sample-vs-Learning-docgo](https://github.com/Microsoft/python-sample-vs-learning-django)

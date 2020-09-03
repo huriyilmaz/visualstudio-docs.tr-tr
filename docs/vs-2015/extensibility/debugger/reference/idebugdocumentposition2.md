@@ -13,47 +13,47 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5398d94733bf2ae4c5fe82daa4df0839857b72a6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200240"
 ---
 # <a name="idebugdocumentposition2"></a>IDebugDocumentPosition2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu arabirim, kaynak dosyada soyut bir konumu temsil eder.  
+Bu arabirim, kaynak dosyadaki bir soyut konumu temsil eder.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugDocumentPosition2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar  
- Visual Studio, genellikle bu arabirimi uygular. Kendi kaynak kodu sağlamalısınız, hata ayıklama altyapısı (DE) da bu arabirimi uygulayan (ne DE uygular olarak [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) arabirimi).  
+## <a name="notes-for-implementers"></a>Implemenonun notları  
+ Visual Studio genellikle bu arabirimi uygular. Bir hata ayıklama altyapısı (DE), aynı zamanda kendi kaynak kodunu sağlaması gerekiyorsa ( [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) arabirimini uyguluyorsa olduğu gibi) bu arabirimi de uygular.  
   
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar  
- Bu arabirim için bağımsız değişken olarak geçirilen [EnumCodeContexts](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md). Ayrıca bir parçası olarak sağlanan bir [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) birleşim (özellikle bir [BP_LOCATION_CODE_FILE_LINE](../../../extensibility/debugger/reference/bp-location-code-file-line.md) yapısı) sırayla parçası olan [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) yapısı Bu, bir bekleyen kesme noktasının oluşturulurken kullanılır.  
+ Bu arabirim, [Enumcodebağlamları](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md)için bir bağımsız değişken olarak geçirilir. Ayrıca, bekleyen bir kesme noktası oluşturmak için kullanılan [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) yapısının parçası olan bir [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) birleşimin (özellikle de bir [BP_LOCATION_CODE_FILE_LINE](../../../extensibility/debugger/reference/bp-location-code-file-line.md) yapısı) bir parçası olarak da sağlanır.  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugDocumentPosition2`.  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugDocumentPosition2` .  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetFileName](../../../extensibility/debugger/reference/idebugdocumentposition2-getfilename.md)|Bu belge konumu içeren kaynak dosyasının dosya adını alır.|  
-|[GetDocument](../../../extensibility/debugger/reference/idebugdocumentposition2-getdocument.md)|İçeren belge alır.|  
-|[IsPositionInDocument](../../../extensibility/debugger/reference/idebugdocumentposition2-ispositionindocument.md)|Bu konum verilen belgedeki dahil olup olmadığını belirler.|  
-|[GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)|Aralık, bu belgenin konumunu alır.|  
+|[GetFileName](../../../extensibility/debugger/reference/idebugdocumentposition2-getfilename.md)|Bu belge konumunu içeren kaynak dosyanın dosya adını alır.|  
+|[GetDocument](../../../extensibility/debugger/reference/idebugdocumentposition2-getdocument.md)|İçeren belgeyi alır.|  
+|[IsPositionInDocument](../../../extensibility/debugger/reference/idebugdocumentposition2-ispositionindocument.md)|Bu konumun verilen belgede içerildiğini belirler.|  
+|[GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)|Bu belge konumunun aralığını alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [EnumCodeContexts](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md)   
+ [Enumcodebağlamları](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [BP_LOCATION_CODE_FILE_LINE](../../../extensibility/debugger/reference/bp-location-code-file-line.md)

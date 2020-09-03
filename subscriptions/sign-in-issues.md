@@ -8,10 +8,10 @@ ms.date: 03/11/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde oturum açarken meydana çıkabilecek sorunlar hakkında bilgi edinin
 ms.openlocfilehash: 5d8a71115cd1a1aa7d850945806c22a64e7721cc
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88801886"
 ---
 # <a name="issues-signing-in-to-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde oturum açma sorunları
@@ -21,7 +21,7 @@ Visual Studio aboneliğinizi kullanmak için önce oturum açmalısınız.  Abon
 E-posta etki alanı Azure AD 'de yapılandırıldığında, iş/okul e-posta adresi kullanarak yeni bir kişisel Microsoft hesabı (MSA) oluşturma olanağına artık izin verilmez. Bu ne anlama geliyor? Kuruluşunuz Microsoft 'un Azure AD 'ye bağlı Microsoft 365 veya diğer iş hizmetlerini kullanıyorsa ve Azure AD kiracınıza bir etki alanı adı eklediyseniz, kullanıcılar artık etki alanındaki bir e-posta adresini kullanarak yeni bir kişisel Microsoft hesabı oluşturamayacak.
 
 ### <a name="why-was-this-change-made"></a>Bu değişiklik neden yapıldı?
-Kullanıcı adı olarak iş adresi olan bir kişisel Microsoft hesabına sahip olmak, son kullanıcılar ve BT departmanlarına benzer sorunlarla karşılaşır. Örnek:
+Kullanıcı adı olarak iş adresi olan bir kişisel Microsoft hesabına sahip olmak, son kullanıcılar ve BT departmanlarına benzer sorunlarla karşılaşır. Örneğin:
 - Kullanıcılar kendi kişisel Microsoft hesabı, iş belgelerini OneDrive 'a kaydederken uyumlu olduğunu düşünebilir.
 - Bir kuruluştan ayrılan kullanıcılar genellikle iş e-posta adreslerine erişimi kaybeder. Kullanıcılar, parolalarını unutduklarında kendi kişisel Microsoft hesabı geri yükleyemeyebilir. Çevirme tarafı, BT departmanının parolalarını sıfırlamasına ve eski çalışanların kişisel hesabına alabilirler.
 - BT departmanlarının hesap sahipliğine ve güvenliğine ilişkin yanlış bir anlamı vardır. Ancak kullanıcıların, iş e-posta adreslerine yalnızca bir kez bir kod gidiş dönüş yapması ve bu hesabın hesabını gelecekte dilediğiniz zaman yeniden adlandırabilmeleri gerekir.

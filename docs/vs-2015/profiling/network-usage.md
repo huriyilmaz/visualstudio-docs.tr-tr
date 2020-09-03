@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 20f7003bbcd319a6a8487d496697d3dcd0b7a18a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548427"
 ---
 # <a name="network-usage"></a>Ağ Kullanımı
@@ -43,7 +43,7 @@ Visual Studio **ağ** Tanılama Aracı, [Windows. Web. http API 'si](https://msd
   
    ![Ağ penceresi](../profiling/media/network-fullwindow.png "NETWORK_FullWindow")  
   
-## <a name="analyzing-data"></a>Verileri çözümleme  
+## <a name="analyzing-data"></a>Verileri analiz etme  
  Uygulamanızın çalıştığı sırada veya uygulama kapatıldıktan sonra bile, Özet görünümünde görünen ağ işlemlerinden herhangi birini seçerek yakalanan HTTP trafiğini çözümleyebilirsiniz.  
   
  **Ağ** Özeti Görünümü, uygulamanızın çalıştırıldığı her bir ağ işleminin verilerini gösterir. Listeyi sıralamak için bir sütun üst bilgisi seçin ya da **Içerik türü** filtre görünümünde görüntülenecek içerik türlerini seçin.  
@@ -54,12 +54,12 @@ Visual Studio **ağ** Tanılama Aracı, [Windows. Web. http API 'si](https://msd
   
  ![Ağ aracı ayrıntıları bölmesi](../profiling/media/network-detailsviewpane.png "NETWORK_DetailsViewPane")  
   
-|Name|Description|  
+|Ad|Açıklama|  
 |-|-|  
-|**Üst Bilgiler**|Olayın istek üstbilgileri hakkında bilgi.|  
+|**Üst bilgiler**|Olayın istek üstbilgileri hakkında bilgi.|  
 |**Gövde**|İstek ve yanıt yükü verileri.|  
 |**Parametreler**|Sorgu dizesi parametre adları ve değerleri.|  
-|**Çerezler**|Yanıt ve istek tanımlama bilgisi verileri.|  
+|**Özgü**|Yanıt ve istek tanımlama bilgisi verileri.|  
 |**Zamanlama**|Seçilen kaynakları alırken aşamaların bir grafiği.|  
   
  Ağ **Özet** çubuğu, herhangi bir noktada görüntülenen ağ işlemlerinin sayısını, ne kadar veri aktarıldığını, ne kadar zaman aktarılacağını ve kaç hatanın (4xx veya 5xx yanıtı) görünür olduğunu gösterir.  

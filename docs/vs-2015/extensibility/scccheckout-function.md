@@ -1,5 +1,5 @@
 ---
-title: SccCheckout işlevi | Microsoft Docs
+title: SccCheckout Işlevi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f23290ebfadd1b6e3d34f808d5ea0ccccbb3c319
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200160"
 ---
 # <a name="scccheckout-function"></a>SccCheckout İşlevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tam olarak nitelenmiş dosya adlarının bir listesini göz önünde bulundurulduğunda, bu işlev bunları yerel sürücüye kullanıma. Açıklama kullanıma alınan tüm dosyalar için geçerlidir. Açıklama bağımsız değişken olabilir bir `null` dize.  
+Tam nitelikli dosya adlarının listesi verildiğinde, bu işlev bunları yerel sürücüye iade eder. Yorum, kullanıma alınan tüm dosyalar için geçerlidir. Açıklama bağımsız değişkeni bir dize olabilir `null` .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 SCCRTN SccCheckout (  
@@ -40,41 +40,41 @@ SCCRTN SccCheckout (
   
 #### <a name="parameters"></a>Parametreler  
  pvContext  
- [in] Kaynak Denetimi Eklentisi bağlam yapısı.  
+ 'ndaki Kaynak denetimi eklentisi bağlam yapısı.  
   
- hWnd  
- [in] Kaynak Denetimi Eklentisi sağladığı herhangi bir iletişim kutusu için bir üst öğe olarak kullanabileceğiniz IDE penceresi için bir tanıtıcı.  
+ lendiği  
+ 'ndaki Kaynak denetimi eklentisinin, sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi için bir işleyici.  
   
- nFiles  
- [in] Kullanıma alınması için seçilen dosya sayısı.  
+ Nkarşıya  
+ 'ndaki Kullanıma almak için seçilen dosya sayısı.  
   
- lpFileNames  
- [in] Dosya kullanıma alınması tam yerel yol adları dizisi.  
+ lpDosyaAdı  
+ 'ndaki Kullanıma alınan dosyaların tam nitelikli yerel yol adları dizisi.  
   
- lpComment  
- [in] Seçili dosyaları kullanıma alınmış uygulanması için açıklama.  
+ lpComment açıklaması  
+ 'ndaki Kullanıma alınan seçili dosyaların her birine uygulanacak yorum.  
   
  fOptions  
- [in] Komut bayrakları (bkz [kullanılan bit bayrakları tarafından belirli komutları](../extensibility/bitflags-used-by-specific-commands.md)).  
+ 'ndaki Komut bayrakları (bkz. [belirli komutlar tarafından kullanılan Bitflags](../extensibility/bitflags-used-by-specific-commands.md)).  
   
  pvOptions  
- [in] Kaynak denetimi fişi özel seçenekleri.  
+ 'ndaki Kaynak denetimi eklentisi özel seçenekleri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Kaynak Denetimi Eklentisi uygulanması bu işlev, aşağıdaki değerlerden birini döndürmesi beklenir:  
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |SCC_OK|Kullanıma alma başarılı oldu.|  
 |SCC_E_FILENOTCONTROLLED|Seçili dosya kaynak kodu denetimi altında değil.|  
-|SCC_E_ACCESSFAILURE|Kaynak denetim sistemi, ağ veya çakışma sorunları nedeniyle muhtemelen erişilirken sorun oluştu. Bir yeniden deneme önerilir.|  
-|SCC_E_NOTAUTHORIZED|Kullanıcı bu işlemi gerçekleştirmek için izin verilmiyor.|  
-|SCC_E_NONSPECIFICERROR|Belirli olmayan hata oluştu. Dosya kullanıma alındı değil.|  
-|SCC_E_ALREADYCHECKEDOUT|Kullanıcının kullanıma alınmış dosyası zaten var.|  
-|SCC_E_FILEISLOCKED|Yeni sürümler oluşturulması yasaklanması dosyası kilitli.|  
-|SCC_E_FILEOUTEXCLUSIVE|Başka bir kullanıcı, bu dosya bir özel kullanıma alma yapmıştır.|  
+|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya çekişme sorunlarından dolayı kaynak denetim sistemine erişirken bir sorun oluştu. Yeniden deneme önerilir.|  
+|SCC_E_NOTAUTHORIZED|Kullanıcının bu işlemi gerçekleştirmesine izin verilmiyor.|  
+|SCC_E_NONSPECIFICERROR|Özel olmayan hata. Dosya kullanıma alınamadı.|  
+|SCC_E_ALREADYCHECKEDOUT|Kullanıcının dosyası zaten kullanıma alındı.|  
+|SCC_E_FILEISLOCKED|Dosya kilitli ve yeni sürümlerin oluşturulmasını yasaklıyor.|  
+|SCC_E_FILEOUTEXCLUSIVE|Başka bir Kullanıcı bu dosyada özel kullanıma alma işlemi yapmış.|  
 |SCC_I_OPERATIONCANCELED|İşlem tamamlanmadan önce iptal edildi.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kaynak Denetimi Eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)   
+ [Kaynak denetimi eklentisi API Işlevleri](../extensibility/source-control-plug-in-api-functions.md)   
  [Özel Komutlar Tarafından Kullanılan Bit Bayrakları](../extensibility/bitflags-used-by-specific-commands.md)

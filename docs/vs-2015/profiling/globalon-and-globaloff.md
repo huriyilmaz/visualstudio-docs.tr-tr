@@ -46,7 +46,7 @@ VSPerfCmd.exe {Launch:AppName|Attach:PID} /{GlobalOff|GlobalOn}[Options]
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- Hiçbiri  
+ Yok  
   
 ## <a name="valid-options"></a>Geçerli seçenekler  
  **GlobalOn** ve **globaloff** , aşağıdaki seçenekleri de içeren komut satırlarında belirtilebilir.  

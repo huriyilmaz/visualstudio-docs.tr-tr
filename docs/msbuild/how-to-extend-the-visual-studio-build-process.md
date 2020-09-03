@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ac3bebc0a64f814e71e7b5ab30282a70fd7eb85e
-ms.sourcegitcommit: d293c0e3e9cc71bd4117b6dfd22990d52964addc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88041044"
 ---
 # <a name="how-to-extend-the-visual-studio-build-process"></a>Nasıl yapılır: Visual Studio derleme işlemini genişletme
@@ -58,10 +58,10 @@ Ortak hedefler, yapı işlemindeki ana hedeflerden önce ve sonra çağrılan bi
 
 Aşağıdaki tabloda, güvenle geçersiz kılabileceğiniz ortak hedeflerin tüm hedefleri gösterilmektedir.
 
-|Hedef adı|Description|
+|Hedef adı|Açıklama|
 |-----------------|-----------------|
 |`BeforeCompile`, `AfterCompile`|Bu hedeflerden birine eklenen görevler, temel derlemeden önce veya sonra çalışır. Çoğu özelleştirme, bu iki hedefin birinde yapılır.|
-|`BeforeBuild`, `AfterBuild`|Bu hedeflerden birine eklenen görevler, derlemede bulunan her şeyin öncesinde veya sonrasında çalışır. **Note:**  `BeforeBuild`Ve `AfterBuild` hedefleri çoğu proje dosyasının sonundaki açıklamalarda zaten tanımlanmıştır. Bu, proje dosyanıza kolayca ve oluşturma sonrası olayları kolayca eklemenize olanak tanır.|
+|`BeforeBuild`, `AfterBuild`|Bu hedeflerden birine eklenen görevler, derlemede bulunan her şeyin öncesinde veya sonrasında çalışır. **Note:**  `BeforeBuild` Ve `AfterBuild` hedefleri çoğu proje dosyasının sonundaki açıklamalarda zaten tanımlanmıştır. Bu, proje dosyanıza kolayca ve oluşturma sonrası olayları kolayca eklemenize olanak tanır.|
 |`BeforeRebuild`, `AfterRebuild`|Bu hedeflerden birine eklenen görevler, çekirdek yeniden oluşturma işlevselliği çağrılmadan önce veya sonra çalışır. *Microsoft. Common. targets* içindeki hedef yürütmenin sırası: `BeforeRebuild` , `Clean` , `Build` , ve sonra `AfterRebuild` .|
 |`BeforeClean`, `AfterClean`|Bu hedeflerden birine eklenen görevler, çekirdek Temizleme işlevselliği çağrılmadan önce veya sonra çalışır.|
 |`BeforePublish`, `AfterPublish`|Bu hedeflerden birine eklenen görevler, çekirdek yayımlama işlevselliği çağrılmadan önce veya sonra çalışır.|
@@ -162,7 +162,7 @@ Proje dosyalarınızı içeri aktarma projeleri, yaptığınız özelleştirmele
 
 ### <a name="commonly-overridden-dependson-properties"></a>Yaygın olarak geçersiz kılınan Bağımlıdson özellikleri
 
-|Özellik adı|Description|
+|Özellik adı|Açıklama|
 |-------------------|-----------------|
 |`BuildDependsOn`|Tüm derleme işleminden önce veya sonra özel hedefler eklemek istiyorsanız geçersiz kılınacak özellik.|
 |`CleanDependsOn`|Özel yapı sürecinizden çıktıyı temizlemek istiyorsanız geçersiz kılınacak özellik.|

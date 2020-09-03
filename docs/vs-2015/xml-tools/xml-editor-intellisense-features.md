@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9cd10f9eb0e2899394788c3b19348892837426db
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669461"
 ---
 # <a name="xml-editor-intellisense-features"></a>XML Düzenleyicisi IntelliSense Özellikleri
@@ -22,15 +22,15 @@ ms.locfileid: "72669461"
 XML Düzenleyicisi, Visual Studio 'da sağlanan diğer dil düzenleyicilerle karşılaştırılabilir tam IntelliSense özellikleri sağlar. Bu bölümde, IntelliSense 'i XML şeması tanım dili (XSD) ve XSLT belgeleriyle nasıl kullanabileceğiniz açıklanmaktadır.
 
 ## <a name="intellisense-in-an-xsd-document"></a>XSD belgesinde IntelliSense
- Bir şema belgeyle ilişkilendirildikten sonra, `"<"` her seferinde beklenen öğelerin açılan listesini alır veya XML Düzenleyicisi araç çubuğundaki bir **nesne üye listesini görüntüle** düğmesine tıklayabilirsiniz. Şemaları XML belgeleriyle ilişkilendirme hakkında daha fazla bilgi için bkz. [XML belge doğrulaması](../xml-tools/xml-document-validation.md).
+ Bir şema belgeyle ilişkilendirildikten sonra, her yazdığınızda beklenen öğelerin açılan listesini alır `"<"` veya XML Düzenleyicisi araç çubuğundaki bir **nesne üye listesini görüntüle** düğmesine tıklayabilirsiniz. Şemaları XML belgeleriyle ilişkilendirme hakkında daha fazla bilgi için bkz. [XML belge doğrulaması](../xml-tools/xml-document-validation.md).
 
  Başlangıç etiketinin içinden boşluk yazdığınızda, geçerli öğeye eklenebilen tüm öznitelikleri gösteren bir açılan liste da alırsınız.
 
- Bir öznitelik değeri için `"="` yazdığınızda veya değerin açılış tırnak işareti söz konusu öznitelik için olası değerlerin listesini de alırsınız. Değerler yalnızca şema `xsd:enumeration` modelleri aracılığıyla numaralandırılmış değerler sağlıyorsa veya öznitelik bir `Boolean` türü ise sağlanır. Bilinen dil kodlarının IntelliSense listesi, `xml:lang` veya `xsd:language` türetilen `simpleType` için de sağlanır. Bilinen `targetNamespace` değerlerinin IntelliSense listesi, ad alanı bildirimleri için verilmiştir.
+ `"="`Bir öznitelik değeri veya değer için açılış tırnak işareti yazdığınızda, bu öznitelik için olası değerlerin listesini de alırsınız. Değerler yalnızca şema, modellerle numaralandırılmış değerler sağlıyorsa `xsd:enumeration` veya öznitelik bir tür ise sağlanır `Boolean` . Veya ' den türetilen bir IntelliSense, bilinen dil kodlarının bir listesi için de sağlanır `xml:lang` `simpleType` `xsd:language` . Bilinen değerlerin IntelliSense listesi `targetNamespace` , ad alanı bildirimleri için verilmiştir.
 
- Öğe bir `simpleType` ise başlangıç etiketini kapatmak için `">"` yazdığınızda, olası değerlerin bir IntelliSense listesi de sağlanır. Öğelerin davranışı, önceki paragrafta açıklanan özniteliklerin davranışına benzerdir.
+ Bir IntelliSense, `">"` öğe bir ise başlangıç etiketini kapatmak için yazdığınızda, olası değerlerin bir IntelliSense listesi de sağlanır `simpleType` . Öğelerin davranışı, önceki paragrafta açıklanan özniteliklerin davranışına benzerdir.
 
- Araç Ipuçları Ayrıca bu IntelliSense listelerinde, ilişkili şemada bulunan `xsd:annotation` ve `xsd:documentation` bilgilerine göre de görünür.
+ Araç Ipuçları, bu IntelliSense listelerinde `xsd:annotation` `xsd:documentation` , ilişkili şemada bulunan ve bulunan bilgiler temelinde de görüntülenir.
 
 ## <a name="intellisense-in-an-xslt-document"></a>XSLT belgesinde IntelliSense
  XSLT belgenize adlandırılmış bir şablon veya öznitelik ekledikten sonra, aşağıdakini eklemek için IntelliSense 'i kullanabilirsiniz:
@@ -66,7 +66,7 @@ XML Düzenleyicisi, Visual Studio 'da sağlanan diğer dil düzenleyicilerle kar
 
  Benzer şekilde, XML Düzenleyicisi sizin için otomatik olarak aşağıdaki XML sözdizimini de ekler:
 
-- Bir işleme yönergesini sonlandır: `?>`
+- Bir işleme yönergesini sonlandır:  `?>`
 
 - CDATA bloğunu sonlandır: `]]>`
 
@@ -76,7 +76,7 @@ XML Düzenleyicisi, Visual Studio 'da sağlanan diğer dil düzenleyicilerle kar
 
   Bir IntelliSense listesinden nitelenmiş bir ad alanı veya öznitelik seçerseniz ve bu öğenin veya özniteliğin ad alanı henüz kapsamda değilse, XML Düzenleyicisi de bir ad alanı bildirimi ekleyebilme özelliğine sahiptir.
 
-  Örneğin, bir IntelliSense listesinden `e:Book` öğesini seçerseniz, önekinin, belgede bildirilmemiş `http://books` ad alanına bağlandığı, XML Düzenleyicisi sizin için gerekli olan ad alanı bildirimini ekler. Elde edilen XML metni aşağıda verilmiştir:
+  Örneğin, `e:Book` önekin belgede bildirilmemiş ad alanına bağlandığı IntelliSense listesinden öğesini seçerseniz `http://books` , XML Düzenleyicisi sizin için gerekli olan ad alanı bildirimini ekler. Elde edilen XML metni aşağıda verilmiştir:
 
   `<e:Book xmlns:e="http://books"`
 
@@ -87,7 +87,7 @@ XML Düzenleyicisi, Visual Studio 'da sağlanan diğer dil düzenleyicilerle kar
 
 - Eşleşen başlangıç ve bitiş etiketleri.
 
-- Herhangi bir çift "\<" veya ">" açılı ayraçlar.
+- Herhangi bir " \<" or "> " açılı ayraç çifti.
 
 - Yorumların başlangıcı ve sonu.
 
@@ -104,7 +104,7 @@ XML Düzenleyicisi, Visual Studio 'da sağlanan diğer dil düzenleyicilerle kar
 
  **Çeşitli** sayfasının **Otomatik Ekle** bölümü aşağıdaki davranışı denetler:
 
-|Name|Açıklama|
+|Ad|Açıklama|
 |----------|-----------------|
 |Etiketleri kapat|Yeni öğeler için kapatma etiketleri ekler.|
 |Öznitelik teklifleri|Yeni bir öznitelik adı girdiğinizde öznitelik değeri tırnakları ekler.|

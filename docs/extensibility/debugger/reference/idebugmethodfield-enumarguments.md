@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::EnumArguments | Microsoft Dokümanlar
+title: 'IDebugMethodField:: EnumArguments | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: adbb1ea4c9172a5f1cee877d04b81aed938bf7a5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727256"
 ---
 # <a name="idebugmethodfieldenumarguments"></a>IDebugMethodField::EnumArguments
-Yöntemi çağırmak için gereken her bağımsız değişkenin türü için bir sayısallaştırıcı oluşturur.
+Yöntemi çağırmak için gereken her bir bağımsız değişkenin türü için bir Numaralandırıcı oluşturur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT EnumArguments( 
@@ -41,15 +41,15 @@ int EnumArguments(
 
 ## <a name="parameters"></a>Parametreler
 `ppParams`\
-[çıkış] Bağımsız değişken türleri listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Bağımsız değişken yoksa null değeri döndürür.
+dışı Bağımsız değişken türleri listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Bağımsız değişken yoksa null değeri döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, bağımsız değişken yoksa S_FALSE S_OK döndürür veya döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK döndürür veya bağımsız değişken yoksa S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Her öğe, her parametrenin türlerini temsil eden bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesidir. Her parametrenin türü hakkında bilgi almak için [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) yöntemini arayın.
+ Her öğe, her parametrenin türünü temsil eden bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesidir. Her parametrenin türü hakkında bilgi almak için [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) yöntemini çağırın.
 
- Parametrenin adı türle birlikte gerekiyorsa, [EnumParametreler](../../../extensibility/debugger/reference/idebugmethodfield-enumparameters.md) yöntemini arayın.
+ Parametresinin adı ile birlikte gerekiyorsa, [Trsarameters](../../../extensibility/debugger/reference/idebugmethodfield-enumparameters.md) yöntemini çağırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

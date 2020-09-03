@@ -10,18 +10,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 39a16a200bbc057288ae2741e7d504566b0368e1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667148"
 ---
 # <a name="typed-vs-untyped-datasets"></a>Yazılan ve yazılmayan veri kümelerinin karşılaştırması
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Türü belirtilmiş veri kümesi, ilk olarak temel <xref:System.Data.DataSet> sınıfından türetilmiş bir veri kümesidir ve sonra yeni ve türü kesin belirlenmiş bir veri kümesi sınıfı oluşturmak için bir. xsd dosyasında depolanan **veri kümesi Tasarımcısı**bilgileri kullanır. Şemadan alınan bilgiler (tablolar, sütunlar, vb.) oluşturulup ilk sınıf nesne ve özellik kümesi olarak bu yeni veri kümesi sınıfına derlenir. Türü belirtilmiş bir veri kümesi taban <xref:System.Data.DataSet> sınıfından devraldığından, türü belirtilmiş sınıf <xref:System.Data.DataSet> sınıfının tüm işlevlerini varsayar ve bir <xref:System.Data.DataSet> sınıfının örneğini parametre olarak alan yöntemlerle birlikte kullanılabilir.
+Türü belirtilmiş veri kümesi, ilk olarak temel sınıftan türetilmiş bir veri kümesidir <xref:System.Data.DataSet> ve sonra yeni ve türü kesin belirlenmiş bir veri kümesi sınıfı oluşturmak için bir. xsd dosyasında depolanan **veri kümesi Tasarımcısı**bilgileri kullanır. Şemadan alınan bilgiler (tablolar, sütunlar, vb.) oluşturulup ilk sınıf nesne ve özellik kümesi olarak bu yeni veri kümesi sınıfına derlenir. Türü belirtilmiş bir veri kümesi temel sınıftan devraldığı için <xref:System.Data.DataSet> , yazılan sınıf sınıfın tüm işlevselliğini varsayar <xref:System.Data.DataSet> ve bir sınıfın örneğini bir parametre olarak alan yöntemlerle birlikte kullanılabilir <xref:System.Data.DataSet> .
 
- Bunun aksine, türsüz bir veri kümesinin karşılık gelen yerleşik bir şeması yoktur. Türü belirtilmiş bir veri kümesinde olduğu gibi, türsüz bir veri kümesi tablo, sütun vb. içerir, ancak bunlar yalnızca koleksiyonlar olarak sunulur. (Ancak, tablo ve diğer veri öğelerini türsüz bir veri kümesinde el ile oluşturduktan sonra, veri kümesinin <xref:System.Data.DataSet.WriteXmlSchema%2A> yöntemini kullanarak veri kümesinin yapısını şema olarak dışarı aktarabilirsiniz.)
+ Bunun aksine, türsüz bir veri kümesinin karşılık gelen yerleşik bir şeması yoktur. Türü belirtilmiş bir veri kümesinde olduğu gibi, türsüz bir veri kümesi tablo, sütun vb. içerir, ancak bunlar yalnızca koleksiyonlar olarak sunulur. (Ancak, tablo ve diğer veri öğelerini türsüz bir veri kümesinde el ile oluşturduktan sonra, veri kümesinin yapısını bir şema olarak DataSet 'in metodunu kullanarak dışarı aktarabilirsiniz <xref:System.Data.DataSet.WriteXmlSchema%2A> .)
 
 ## <a name="contrasting-data-access-in-typed-and-untyped-datasets"></a>Türü belirtilmiş ve türsüz veri kümelerinde veri erişimini karşıt olarak
  Türü belirtilmiş bir veri kümesinin sınıfının, özelliklerinin tablo ve sütunların gerçek adlarını aldığı bir nesne modeli vardır. Örneğin, türü belirtilmiş bir veri kümesiyle çalışıyorsanız, aşağıdaki gibi bir kod kullanarak bir sütuna başvurabilirsiniz:
@@ -34,7 +34,7 @@ Türü belirtilmiş veri kümesi, ilk olarak temel <xref:System.Data.DataSet> s�
  [!code-csharp[VbRaddataDatasets#5](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataDatasets/CS/Form1.cs#5)]
  [!code-vb[VbRaddataDatasets#5](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataDatasets/VB/Form1.vb#5)]
 
- Yazılan erişim yalnızca daha kolay okunabilir, ancak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **kod düzenleyicisinde**IntelliSense tarafından tam olarak desteklenir. İle çalışmanın yanı sıra, yazılan veri kümesinin sözdizimi, derleme zamanında tür denetlemesi sağlar ve veri kümesi üyelerine değer atarken hata olasılığını büyük ölçüde azaltır. @No__t_0 sınıfınıza bir sütunun adını değiştirip uygulamanızı derlerseniz, derleme hatası alırsınız. **Görev listesi**yapı hatasına çift tıklayarak, eski sütun adına başvuruda bulunan satır veya kod satırlarına doğrudan gidebilirsiniz. Yazılan bir veri kümesindeki tablo ve sütunlara erişim çalışma zamanında daha hızlı bir şekilde erişim, çalışma zamanında koleksiyonlar aracılığıyla değil, derleme zamanında belirlendiği için de biraz daha hızlıdır.
+ Yazılan erişim yalnızca daha kolay okunabilir, ancak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **kod düzenleyicisinde**IntelliSense tarafından tam olarak desteklenir. İle çalışmanın yanı sıra, yazılan veri kümesinin sözdizimi, derleme zamanında tür denetlemesi sağlar ve veri kümesi üyelerine değer atarken hata olasılığını büyük ölçüde azaltır. Sınıfınıza bir sütunun adını değiştirip <xref:System.Data.DataSet> uygulamanızı derlerseniz, derleme hatası alırsınız. **Görev listesi**yapı hatasına çift tıklayarak, eski sütun adına başvuruda bulunan satır veya kod satırlarına doğrudan gidebilirsiniz. Yazılan bir veri kümesindeki tablo ve sütunlara erişim çalışma zamanında daha hızlı bir şekilde erişim, çalışma zamanında koleksiyonlar aracılığıyla değil, derleme zamanında belirlendiği için de biraz daha hızlıdır.
 
  Yazılan veri kümelerinde birçok avantaj olsa da, türsüz bir veri kümesi çeşitli koşullarda yararlı olur. En belirgin senaryo, veri kümesi için kullanılabilir şema olmadığında olur. Bu durum, örneğin, uygulamanız veri kümesi döndüren bir bileşenle etkileşiyorsa, ancak yapısının ne olduğu konusunda bilgi sahibi değilseniz bu durum oluşabilir. Benzer şekilde, statik, öngörülebilir bir yapıya sahip olmayan verilerle çalışırken zamanlar da vardır. Bu durumda, yazılan veri kümesi sınıfını veri yapısındaki her değişiklik ile yeniden oluşturmanız gerektiğinden, türü belirtilmiş bir veri kümesi kullanılması pratik değildir.
 

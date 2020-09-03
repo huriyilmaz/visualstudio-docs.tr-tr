@@ -8,10 +8,10 @@ ms.date: 03/26/2020
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerine dahil Power BI Pro aboneliği hakkında bilgi edinin.
 ms.openlocfilehash: 9a16e827c45e600ff3b5edc8579b5941aa80ca90
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88801691"
 ---
 # <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Power BI Pro

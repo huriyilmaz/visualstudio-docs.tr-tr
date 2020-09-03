@@ -11,51 +11,51 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f4a8a9879bce6d91448bb4f29b842328ab56bb97
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200605"
 ---
 # <a name="debugging-tasks"></a>Hata Ayıklama Görevleri
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir programda hata ayıklamak için onu başlatan gerekir ve bir hata ayıklama altyapısı (DE) bağlı gerekir, aksi takdirde DE daha önce başlatılan bir program için'e bağlı olması gerekir. Bağlandıktan sonra DE bazı başlangıç olayları oluşturmanız gerekir. Yanıt olarak, hata ayıklama paketi IDE içinde ayarlanan kesme noktaları bağlama dener. Programı ilişkili bir kesme noktasına ulaştığında, durdurur ve kullanıcı girdisini bekler.  
+Bir programda hata ayıklamak için, başlatılmalıdır ve buna bir hata ayıklama altyapısı (DE) eklenmelidir, aksi takdirde DE daha önce başlatılmış bir programa eklenmelidir. İliştirildikten sonra, belirli başlangıç olaylarını üretmelidir. Yanıt olarak, hata ayıklama paketi IDE 'de ayarlanan kesme noktalarını bağlamaya çalışır. Program, bağlantılı bir kesme noktasına rastarsa, durdurur ve Kullanıcı girişini bekler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Güvenlik Sorunları](../../extensibility/debugger/security-issues.md)  
- Bir programda hata ayıklamak için gerekli olan güvenlik adımlar açıklanmaktadır.  
+ [Güvenlik sorunları](../../extensibility/debugger/security-issues.md)  
+ Bir programın hatalarını ayıklamak için gereken güvenlik adımlarını açıklar.  
   
  [Program Başlatma](../../extensibility/debugger/launching-a-program.md)  
- Programı başlatmak için işletim sistemini çağıran bir DE belirleme konusunda adım adım yönergeler sağlar.  
+ Programı başlatmak için işletim sistemini çağıran bir DE belirtme hakkında adım adım yönergeler sağlar.  
   
  [Doğrudan Programa Ekleme](../../extensibility/debugger/attaching-directly-to-a-program.md)  
- Bir programda zaten çalışan bir işlemde hata ayıklamak için kullanılan işlem açıklanır.  
+ Zaten çalışmakta olan bir işlemdeki programda hata ayıklamak için kullanılan süreci açıklar.  
   
  [Başlatmadan Sonra Başlangıç Olaylarını Gönderme](../../extensibility/debugger/sending-startup-events-after-a-launch.md)  
- Program kendi ana giriş noktasıdır ve hata ayıklama için hazır olana kadar DE programa ekledikten sonra gerçekleşecek olaylar listeler.  
+ Program ana giriş noktasına gelene ve hata ayıklama için hazırlanana kadar,, programa eklendikten sonra gerçekleşmekte olan olayları listeler.  
   
  [Yürütme Denetimi](../../extensibility/debugger/control-of-execution.md)  
- Açıklayan nasıl DE genellikle bir giriş noktası olayı, bir yük tamamlama olayı veya koşullara bağlı olarak bir durdurma olay gönderir.  
+ , Koşullara bağlı olarak genellikle bir giriş noktası olayını, yük-tam olayı veya durdurma olayını nasıl göndereceğini açıklar.  
   
  [Kesme Noktaları Bağlama](../../extensibility/debugger/binding-breakpoints.md)  
- Nasıl, kullanıcı bir kesme noktası ayarlar, IDE istek formulates ve kesme noktası oluşturmak için hata ayıklama oturumu ister açıklar.  
+ Kullanıcı bir kesme noktası ayarladıysanız, IDE 'nin isteği nasıl oluşturup hata ayıklama oturumunda kesme noktası oluşturmasını isteyip isteyebileceğinizi açıklar.  
   
  [İfadeleri Değerlendirme](../../extensibility/debugger/evaluating-expressions.md)  
- İfadeler nasıl oluşturulduğunu ve bir ifade değerlendirildiğinde ne olacağını açıklar.  
+ İfadelerin nasıl oluşturulduğunu ve bir ifadenin değerlendirildiği zaman ne olacağını açıklar.  
   
  [Verileri Görselleştirme ve Görüntüleme](../../extensibility/debugger/visualizing-and-viewing-data.md)  
- Tür görselleştiricileri ve özel görüntüleyiciler (EE) ifade değerlendiricisi tarafından nasıl desteklendiği anlatılır.  
+ Tür görselleştiricilerinin ve özel görüntüleyicilerin ifade değerlendirici (EE) tarafından nasıl desteklendiği açıklanmaktadır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Hata Ayıklayıcı Kavramları](../../extensibility/debugger/debugger-concepts.md)  
- Hata ayıklama ana mimari kavramlarını açıklar.  
+ Ana hata ayıklama mimarisi kavramlarını açıklar.  
   
  [Hata Ayıklayıcı Bileşenleri](../../extensibility/debugger/debugger-components.md)  
- DE EE ve sembol işleyici (SH) Visual Studio hata ayıklama Bileşenleri'ne genel bakış sağlar.  
+ Visual Studio hata ayıklama bileşenlerine genel bir bakış sağlar. Bu, DE, EE ve symbol işleyicisini (SH) içerir.  
   
  [Hata Ayıklayıcı Bağlamları](../../extensibility/debugger/debugger-contexts.md)  
- Nasıl DE aynı anda kod, belgeler ve ifade değerlendirme bağlamı içinde çalıştığı açıklanmaktadır. , Her üç bağlamları, konumu, konum veya değerlendirme için ilgili açıklar.  
+ Aynı anda kod, belge ve ifade değerlendirme bağlamlarının içinde nasıl çalıştığını açıklar. Üç bağlamın her biri için, bu konuyla ilgili konum, konum veya değerlendirmeyi açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlarken](../../extensibility/debugger/getting-started-with-debugger-extensibility.md)

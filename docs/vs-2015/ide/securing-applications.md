@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c590c88894c930f04caf0f7e8afd4eee298f077a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669942"
 ---
 # <a name="securing-applications"></a>Uygulamalarının Güvenliğini Sağlama
@@ -27,9 +27,9 @@ ms.locfileid: "72669942"
 ## <a name="general-security-considerations"></a>Genel güvenlik konuları
  Her dilin kendi güvenlik konuları ve zorlukları vardır.
 
- [En Iyi güvenlik uygulamaları](https://msdn.microsoft.com/library/86acaccf-cdb4-4517-bd58-553618e3ec42) Visual C++üzerinde çalışırken kullanılabilen güvenlik özellikleri ve uygulamalar hakkında bilgi sağlar.
+ [En Iyi güvenlik uygulamaları](https://msdn.microsoft.com/library/86acaccf-cdb4-4517-bd58-553618e3ec42) Visual C++ çalışırken kullanılabilen güvenlik özellikleri ve uygulamalar hakkında bilgi sağlar.
 
- [DERLEMEDE DEĞIL: güvenlik ve programlama (C# ve Visual Basic)](https://msdn.microsoft.com/227e2863-cf09-4c28-9611-bcd82be5e994) , Visual Basic ve C# geliştiricilere yönelik en önemli üç güvenlik kaygılarıyla ilgili bilgiler sağlar: ayrıcalıklar, Web uygulamaları ve Visual Studio Kurulumu.
+ [Derlemede değil: güvenlik ve programlama (C# ve Visual Basic)](https://msdn.microsoft.com/227e2863-cf09-4c28-9611-bcd82be5e994) Visual Basic ve C# geliştiricileri için en önemli üç güvenlik kaygılarıyla ilgili bilgiler sağlar: ayrıcalıklar, Web uygulamaları ve Visual Studio Kurulumu.
 
 ## <a name="securing-mobile-applications"></a>Mobil uygulamaların güvenliğini sağlama
  Mobil cihazların popülerliği arttıkça, bu cihazlardaki bilgilerin ve verilerin güvenliği daha önemli hale gelir.
@@ -57,4 +57,4 @@ ms.locfileid: "72669942"
  [Windows Forms güvenliği](https://msdn.microsoft.com/library/932d438a-5285-46d8-a958-8c93d0ad6cae) Windows Forms güvenlik uygulamasına genel bir bakış sağlar.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Security](../ide/security-in-visual-studio.md)
+ [Güvenlik](../ide/security-in-visual-studio.md)

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 115c0e733716994ba463eada938f8ff908612d0f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547764"
 ---
 # <a name="ca2116-aptca-methods-should-only-call-aptca-methods"></a>CA2116: APTCA metotları yalnızca APTCA metotlarını çağırmalıdır
@@ -40,9 +40,9 @@ ms.locfileid: "85547764"
 
  APTCA özniteliği tam olarak güvenilen bir derlemede olduğunda ve derleme kodu, kısmen güvenilen çağıranlara izin verilmeyen başka bir derlemede yürüttüğünde, bir güvenlik açığından yararlanma olasılığı vardır. İki yöntem `M1` ve `M2` aşağıdaki koşulları karşılıyorsa, kötü amaçlı arayanlar, `M1` koruduğu örtük tam güven bağlantısı talebini atlamak için yöntemini kullanabilir `M2` :
 
-- `M1`, APTCA özniteliğine sahip tam güvenilir bir derlemede bildirildiği ortak bir yöntemdir.
+- `M1` , APTCA özniteliğine sahip tam güvenilir bir derlemede bildirildiği ortak bir yöntemdir.
 
-- `M1`derleme dışında bir yöntemi çağırır `M2` `M1` .
+- `M1` derleme dışında bir yöntemi çağırır `M2` `M1` .
 
 - `M2`derlemesinin APTCA özniteliği yok ve bu nedenle, kısmen güvenilen çağıranlar adına veya tarafından yürütülmemelidir.
 

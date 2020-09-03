@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericParamField::GetOwner | Microsoft Dokümanlar
+title: 'Idebuggenericparamfield:: GetOwner | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +14,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 040b8cf21cda1a0634c1c423516109b1ef214f01
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727866"
 ---
 # <a name="idebuggenericparamfieldgetowner"></a>IDebugGenericParamField::GetOwner
 Bu genel parametrenin türünü veya yöntem sahibini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetOwner(
@@ -39,13 +39,13 @@ int GetOwner(
 
 ## <a name="parameters"></a>Parametreler
 `ppOwner`\
-[çıkış] Bu genel parametrenin sahibi olan [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesini döndürür.
+dışı Bu genel parametreye sahip [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) arabirimini ortaya çıkaran bir **CDebugGenericParamFieldType** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, [ıdebuggenericparamfield](../../../extensibility/debugger/reference/idebuggenericparamfield.md) arabirimini kullanıma sunan bir **cdebuggenericparamtcobject** için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugGenericParamFieldType::GetOwner(IDebugField** ppOwner)

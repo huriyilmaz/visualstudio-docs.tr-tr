@@ -116,7 +116,7 @@
           href: servers-visual-studio-sdk.md
         - name: Bağlantı Noktası Sağlayıcıları
           href: port-suppliers.md
-        - name: Bağlantı Noktaları
+        - name: Bağlantı noktaları
           href: ports.md
         - name: İşlemler
           href: processes.md
@@ -128,7 +128,7 @@
           href: threads.md
         - name: Yığın Çerçeveleri
           href: stack-frames.md
-        - name: Modüller
+        - name: Modül
           href: modules.md
         - name: Kesme Noktaları (Visual Studio SDK)
           href: breakpoints-visual-studio-sdk.md

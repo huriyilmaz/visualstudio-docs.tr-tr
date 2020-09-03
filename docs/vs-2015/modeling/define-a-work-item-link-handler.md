@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 380aaa5bed1e30c549334bc004ea38e3f0bdb762
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669931"
 ---
 # <a name="define-a-work-item-link-handler"></a>İş öğesi bağlantı işleyicisi tanımlama
@@ -36,7 +36,7 @@ Kullanıcı bir UML model öğesi ve bir iş öğesi arasında bağlantı oluşt
 
     1. **Dosya** menüsünde, **Yeni**, **Proje**' yi seçin.
 
-    2. **Yüklü şablonlar**altında, **görsel C#**  veya **Visual Basic**' i genişletin, ardından Orta sütundaki **sınıf kitaplığı**' na tıklayın.
+    2. **Yüklü şablonlar**altında **Visual C#** veya **Visual Basic**' i genişletin, ardından Orta sütundaki **sınıf kitaplığı**' na tıklayın.
 
     3. Yeni bir çözüm oluşturmak mı yoksa zaten açtığınız bir VSıX çözümüne bir bileşen eklemek mi istediğinizi belirtmek için **çözüm** ayarlayın.
 
@@ -46,7 +46,7 @@ Kullanıcı bir UML model öğesi ve bir iş öğesi arasında bağlantı oluşt
 
     1. **Çözüm Gezgini**, çözümün kısayol menüsünde, **Ekle**, **Yeni proje**' yi seçin.
 
-    2. **Yüklü şablonlar**altında,  **C# görsel** veya **Visual Basic**' ı genişletin, ardından **genişletilebilirlik**' i seçin. Orta sütunda **VSIX projesi**' ni seçin.
+    2. **Yüklü şablonlar**altında **Visual C#** veya **Visual Basic**' i genişletin, ardından **genişletilebilirlik**' i seçin. Orta sütunda **VSIX projesi**' ni seçin.
 
 3. VSıX projesini çözümün başlangıç projesi olarak ayarlayın.
 
@@ -60,17 +60,17 @@ Kullanıcı bir UML model öğesi ve bir iş öğesi arasında bağlantı oluşt
 
     3. **Varlıklar** sekmesinde **Yeni**' yi seçin ve iletişim kutusunda, şunu ayarlayın:
 
-         @No__t_1**MEF bileşeni** **yazın**
+         **Tür**  =  **MEF bileşeni**
 
-         **Kaynak**  = **geçerli çözümdeki bir proje**
+         **Kaynak**  =  **Geçerli çözümdeki bir proje**
 
-         *Sınıf kitaplığı projenizden* **Proje**  = 
+         **Proje**  =  *Sınıf kitaplığı projeniz*
 
 ## <a name="defining-the-work-item-link-handler"></a>Iş öğesi bağlantı Işleyicisini tanımlama
  Sınıf kitaplığı projesinde aşağıdaki görevlerin tümünü gerçekleştirin.
 
 ### <a name="project-references"></a>Proje Başvuruları
- Aşağıdaki [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)] derlemelerini projenizin başvurularına ekleyin:
+ Aşağıdaki [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)] derlemeleri projenizin başvurularına ekleyin:
 
  `Microsoft.TeamFoundation.WorkItemTracking.Client.dll`
 
@@ -82,16 +82,16 @@ Kullanıcı bir UML model öğesi ve bir iş öğesi arasında bağlantı oluşt
 
  `System.ComponentModel.Composition`
 
- `System.Drawing`-örnek kod tarafından kullanılır
+ `System.Drawing` -örnek kod tarafından kullanılır
 
- **Başvuru Ekle** iletişim kutusunun **.net** sekmesi altında bu başvurulardan birini bulamazsanız, \Program Files\Microsoft Visual Studio [Version] \Common7\IDE\PrivateAssemblies \\ Içinde bulmak için, tarayıcı sekmesini kullanın.
+ **Başvuru Ekle** iletişim kutusunun **.net** sekmesi altında bu başvurulardan birini bulamazsanız, \Program Files\Microsoft Visual Studio [Version] \Common7\IDE\PrivateAssemblies içinde bulmak için gözden geçirme sekmesini kullanın \\ .
 
 ### <a name="import-the-work-item-namespace"></a>Iş öğesi ad alanını içeri aktarma
- @No__t_0 proje **başvurularında**, aşağıdaki derlemelere başvurular ekleyin:
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Proje **başvurularında**, aşağıdaki derlemelere başvurular ekleyin:
 
-- Microsoft. TeamFoundation. WorkItemTracking. Client. dll
+- Microsoft.TeamFoundation.WorkItemTracking.Client.dll
 
-- Microsoft. VisualStudio. TeamFoundation. WorkItemTracking. dll
+- Microsoft.VisualStudio.TeamFoundation.WorkItemTracking.dll
 
   Program kodunuzda aşağıdaki ad alanlarını içeri aktarın:
 
@@ -158,11 +158,11 @@ namespace WorkItems
 
 1. **F5**tuşuna basın veya **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat**' ı seçin.
 
-     Deneysel bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneği başlar.
+     Deneysel bir örneği [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] başlar.
 
      **Sorun giderme**: yeni bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] başlamazsa, VSIX projesinin çözümün başlangıç projesi olarak ayarlandığından emin olun.
 
-2. Deneysel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], bir modelleme projesi açın veya oluşturun ve bir modelleme diyagramı açın veya oluşturun.
+2. Deneysel içinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , bir modelleme projesi açın veya oluşturun ve bir modelleme diyagramı açın veya oluşturun.
 
 3. UML sınıfı gibi bir model öğesi oluşturun ve adını ayarlayın.
 
@@ -174,24 +174,24 @@ namespace WorkItems
 
          Yeni bir iş öğesi formu açılır.
 
-5. Önceki bölümde örnek kodu kullandıysanız, çalışma öğesi başlığının model öğesiyle aynı olduğunu doğrulayın. Bu, `OnWorkItemCreated()` çalıştığını gösterir.
+5. Önceki bölümde örnek kodu kullandıysanız, çalışma öğesi başlığının model öğesiyle aynı olduğunu doğrulayın. Bu `OnWorkItemCreated()` , çalıştığını gösterir.
 
 6. Formu doldurun, iş öğesini kaydedin ve kapatın.
 
-7. İş öğesinin artık kırmızı renkte olduğunu doğrulayın. Bu, örnek kodda `OnWorkItemLinked()` gösterir.
+7. İş öğesinin artık kırmızı renkte olduğunu doğrulayın. Bu `OnWorkItemLinked()` örnek kodda gösterilmektedir.
 
      **Sorun giderme**: işleyici yöntemleri çalıştırılmadığından aşağıdakileri doğrulayın:
 
     - Sınıf kitaplığı projesi, VSıX projesindeki **kaynak. Extensions. manifest** içindeki **IÇERIK** listesinde bir MEF bileşeni olarak listelenir.
 
-    - Doğru `Export` özniteliği işleyici sınıfına iliştirilir ve sınıf `ILinkedWorkItemExtension` uygular.
+    - Doğru `Export` öznitelik işleyici sınıfına iliştirilir ve sınıfı uygular `ILinkedWorkItemExtension` .
 
     - Tüm `Import` ve `Export` özniteliklerinin parametreleri geçerlidir.
 
 ## <a name="about-the-work-item-handler-code"></a>Iş öğesi Işleyici kodu hakkında
 
 ### <a name="listening-for-new-work-items"></a>Yeni Iş öğeleri için dinleme
- `OnWorkItemCreated`, Kullanıcı model öğelerine bağlanacak yeni bir iş öğesi oluşturmayı seçtiğinde çağrılır. Kodunuz iş öğesi alanlarını başlatabilir. Daha sonra iş öğesi kullanıcıya sunulur, alanları güncelleştirebilir ve iş öğesini kaydedebilir. Bir model öğesine bağlantı, iş öğesi başarılı bir şekilde kaydedilene kadar oluşturulmaz.
+ `OnWorkItemCreated` Kullanıcı model öğelerine bağlanacak yeni bir iş öğesi oluşturmayı seçtiğinde çağrılır. Kodunuz iş öğesi alanlarını başlatabilir. Daha sonra iş öğesi kullanıcıya sunulur, alanları güncelleştirebilir ve iş öğesini kaydedebilir. Bir model öğesine bağlantı, iş öğesi başarılı bir şekilde kaydedilene kadar oluşturulmaz.
 
 ```
 public void OnWorkItemCreated(
@@ -206,7 +206,7 @@ public void OnWorkItemCreated(
 ```
 
 ### <a name="listening-for-link-creation"></a>Bağlantı oluşturma için dinleme
- `OnWorkItemLinked`, bir bağlantı oluşturulduktan hemen sonra çağrılır. Bağlantının yeni bir iş öğesine mi yoksa varolan bir öğeye mi ait olduğu çağrılır. Her iş öğesi için bir kez çağrılır.
+ `OnWorkItemLinked` bir bağlantı oluşturulduktan hemen sonra çağrılır. Bağlantının yeni bir iş öğesine mi yoksa varolan bir öğeye mi ait olduğu çağrılır. Her iş öğesi için bir kez çağrılır.
 
 ```
 public void OnWorkItemLinked
@@ -221,10 +221,10 @@ public void OnWorkItemLinked
 ```
 
 > [!NOTE]
-> Bu örneği yapmak için, `System.Drawing.dll` bir proje başvurusu eklemeniz ve `Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation` ad alanını içeri aktarmanız gerekir. Ancak, bu eklemeler `OnWorkItemLinked` diğer uygulamaları için gerekli değildir.
+> Bu örneği yapmak için, ' a bir proje başvurusu eklemeniz `System.Drawing.dll` ve ad alanını içeri aktarmanız gerekir `Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation` . Ancak, bu eklemeler diğer uygulamaları için gerekli değildir `OnWorkItemLinked` .
 
 ### <a name="listening-for-link-removal"></a>Bağlantı kaldırma için dinleme
- `OnWorkItemRemoved`, silinen her iş öğesi bağlantısından hemen önce çağrılır. Bir model öğesi silinirse tüm bağlantıları kaldırılır.
+ `OnWorkItemRemoved` , silinen her iş öğesi bağlantısından hemen önce çağrılır. Bir model öğesi silinirse tüm bağlantıları kaldırılır.
 
 ```
 public void OnWorkItemRemoved
@@ -237,9 +237,9 @@ public void OnWorkItemRemoved
 
  Aşağıdaki örneği kullanmak için, bu .NET derlemelerini projenizin başvurularına ekleyin:
 
-- Microsoft. TeamFoundation. Client. dll
+- Microsoft.TeamFoundation.Client.dll
 
-- Microsoft. TeamFoundation. WorkItemTracking. Client. dll
+- Microsoft.TeamFoundation.WorkItemTracking.Client.dll
 
 ```
 
@@ -273,7 +273,7 @@ element.AddReference(ReferenceConstants.WorkItem, linkString, true);
 
 ```
 
- @No__t_0 biçimi:
+ Biçimi `linkString` :
 
  `string.Format(@"%{0}\{1}#{1}${2}", tfServer, projectCollection, RepositoryGuid, workItem.Id);`
 
@@ -283,9 +283,9 @@ element.AddReference(ReferenceConstants.WorkItem, linkString, true);
 
    `http://tfServer:8080/tfs/projectCollection`
 
-   @No__t_0, büyük/küçük harf açısından önemlidir.
+   Büyük/küçük harf önemlidir `projectCollection` .
 
-- `RepositoryGuid` TFS bağlantısından elde edilebilir:
+- `RepositoryGuid` TFS bağlantınızdan elde edilebilir:
 
   ```csharp
   TfsTeamProjectCollection tpc = TfsTeamProjectCollectionFactory...;

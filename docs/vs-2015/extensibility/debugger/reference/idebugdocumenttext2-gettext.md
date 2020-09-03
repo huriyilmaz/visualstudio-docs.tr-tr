@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText2::GetText | Microsoft Docs
+title: 'IDebugDocumentText2:: GetText | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 066c2c025fe7b1c83fb30cb3a0e1a7b61d8c2c41
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200176"
 ---
 # <a name="idebugdocumenttext2gettext"></a>IDebugDocumentText2::GetText
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Belge belirtilen konumda metin alır.  
+Belgedeki belirtilen konumdan metni alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetText(   
@@ -46,22 +46,22 @@ int GetText( 
   
 #### <a name="parameters"></a>Parametreler  
  `pos`  
- [in] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) alınacak metnin konumunu belirten yapısı.  
+ 'ndaki Alınacak metnin konumunu gösteren [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) yapısı.  
   
  `cMaxChars`  
- [in] Alınacak metnin karakter sayısı.  
+ 'ndaki Alınacak metnin en fazla karakter sayısı.  
   
  `pText`  
- [out içinde] İstenen metin ile doldurulacak olan arabellek için işaretçi. Bu arabelleğin en az içermesi `cMaxChars` geniş karakterlerin sayısı.  
+ [in, out] İstenen metinle doldurulacak bir arabelleğin işaretçisi. Bu arabelleğin en az `cMaxChars` sayıda karakter içermesi gerekir.  
   
  `pcNumChars`  
- [out] Gerçekte alınan karakter sayısını döndürür.  
+ dışı Gerçekten alınan karakter sayısını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek nasıl bu yöntem C# ' tan çağrılabilir gösterir.  
+ Bu örnek, bu yöntemin C# ' den nasıl çağrılabilecek olduğunu gösterir.  
   
 ```csharp  
 using System.Runtime.Interop.Services;  

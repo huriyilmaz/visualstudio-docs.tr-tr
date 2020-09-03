@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryContext2::Ekle | Microsoft Dokümanlar
+title: 'IDebugMemoryContext2:: Add | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,16 +17,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a21fa2ec6d48bb1d6bf17bbc0d2ebf0d90a25a9f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727476"
 ---
 # <a name="idebugmemorycontext2add"></a>IDebugMemoryContext2::Add
 Geçerli içeriğe belirtilen değeri ekler ve yeni bir bağlam döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT Add( 
@@ -44,18 +44,18 @@ int Add(
 
 ## <a name="parameters"></a>Parametreler
 `dwCount`\
-[içinde] Geçerli içeriğe eklenecek değer.
+'ndaki Geçerli bağlama eklenecek değer.
 
 `ppMemCxt`\
-[çıkış] Yeni bir [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) nesnesi döndürür.
+dışı Yeni bir [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bellek bağlamı bir adrestir, bu nedenle adrese değer eklemek yeni bir bağlam arabirimi gerektiren yeni bir adres üretir.
+ Bellek bağlamı bir adrestir, bu nedenle bir adrese değer eklemek yeni bir bağlam arabirimi gerektiren yeni bir adres oluşturur.
 
- Bu yöntem, ortaya çıkan adres bu bağlamla ilişkili bellek alanının dışında olsa bile, her zaman yeni bir bağlam oluşturmalıdır. Bunun tek istisnası, yeni bağlam için bellek ayrılamazsa `ppMemCxt` veya null bir değerse (bir hatadır).
+ Bu yöntem, sonuçta elde edilen adres bu içerikle ilişkili bellek alanının dışında olsa bile her zaman yeni bir bağlam üretmelidir. Bunun tek istisnası, yeni bağlam için bellek ayrılamaz veya `ppMemCxt` null bir değer (bir hatadır) ise olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

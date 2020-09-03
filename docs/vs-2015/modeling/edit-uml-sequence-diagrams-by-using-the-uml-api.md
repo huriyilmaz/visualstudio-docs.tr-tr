@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cbc7a6ce7edede6759c0562df1e524d932f62b91
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669707"
 ---
 # <a name="edit-uml-sequence-diagrams-by-using-the-uml-api"></a>UML API kullanarak sıralama diyagramlarını düzenleme
@@ -30,7 +30,7 @@ Etkileşim, yaşam çizgileri kümesi arasındaki bir ileti dizisidir. Bir etkil
 ## <a name="basic-code"></a>Temel kod
 
 ### <a name="namespace-imports"></a>Ad alanı içeri aktarmaları
- Aşağıdaki `using` deyimlerini dahil etmeniz gerekir:
+ Aşağıdaki deyimleri dahil etmeniz gerekir `using` :
 
 ```
 using Microsoft.VisualStudio.Uml.Classes;
@@ -72,12 +72,12 @@ public class MySequenceDiagramCommand : ICommandExtension
 ```
 
 ### <a name="generated-and-uml-sequence-diagrams"></a>Oluşturulan ve UML sıralı diyagramlar
- İki tür sıralı diyagram vardır: bir UML modelleme projesinde el ile oluşturulan ve program kodundan oluşturulmuş olanlar. Sahip olduğunuz sıralı diyagramı saptamak için `UmlMode` özelliğini kullanın.
+ İki tür sıralı diyagram vardır: bir UML modelleme projesinde el ile oluşturulan ve program kodundan oluşturulmuş olanlar. `UmlMode`Sahip olduğunuz sıralı diyagramı saptamak için özelliğini kullanın.
 
 > [!NOTE]
 > Bu özellik yalnızca Visual Studio 2013 ve önceki sürümleri kullanılarak koddan oluşturulan dizi diyagramları için false döndürür. Bu, 2013 ve öncesinden geçirilen kod tarafından oluşturulan sıralı diyagramlar içerir. Visual Studio 'nun bu sürümü, yeni sıralı diyagramlar oluşturmayı desteklemez.
 
- Örneğin, UML sıralı diyagramlarda yalnızca görünür olan bir menü komutu oluşturmak istiyorsanız `QueryStatus()` yöntemi aşağıdaki ifadeyi içerebilir:
+ Örneğin, UML sıralı diyagramlarda yalnızca görünür olan bir menü komutu yapmak istiyorsanız, `QueryStatus()` yöntemi aşağıdaki ifadeyi içerebilir:
 
 ```
 command.Enabled = command.Visible =
@@ -118,13 +118,13 @@ public void Execute (IMenuCommand command)
 ## <a name="updating-an-interaction-and-its-layout"></a>Bir etkileşimi ve onun yerleşimini güncelleştirme
  Bir etkileşimi güncelleştirdiğinizde, aşağıdaki yöntemlerden birini kullanarak kendi yerleşimini güncelleştirerek işleminizi her zaman sonlandırın:
 
-- `ISequenceDiagram.UpdateShapePositions()`, yakın zamanda eklenen veya taşınan şekillerin ve onların komşu şekillerinin konumlarını ayarlar.
+- `ISequenceDiagram.UpdateShapePositions()` Son eklenen veya taşınan şekillerin ve onların komşu şekillerinin konumlarını ayarlar.
 
-- `ISequenceDiagram.Layout([SequenceDiagramLayoutKinds])` tüm diyagramı yeniden çizer. Yaşam çizgilerini, iletileri veya her ikisini de yeniden konumlandırmayı belirtmek için parametresini kullanabilirsiniz.
+- `ISequenceDiagram.Layout([SequenceDiagramLayoutKinds])` Tüm diyagramı yeniden çizer. Yaşam çizgilerini, iletileri veya her ikisini de yeniden konumlandırmayı belirtmek için parametresini kullanabilirsiniz.
 
   Yeni öğeler eklediğinizde veya varolan öğeleri taşırken bu özellikle önemlidir. Bu işlemlerden birini gerçekleştirene kadar diyagramda doğru konumlarda yer olmayacaktır. Bir dizi değişikliğin sonunda bu işlemlerden birini yalnızca bir kez çağırmanız gerekir.
 
-  Komutunuz sonrasında geri alma gerçekleştiren kullanıcıyı kullanmaktan kaçınmak için, değişikliklerinizi ve son `Layout()` veya `UpdateShapePositions()` işlemlerini kapsamak üzere bir `ILinkedUndoTransaction` kullanın. Örneğin:
+  Komutunuz sonrasında geri alma gerçekleştiren kullanıcıyı kullanmaktan kaçınmak için, bir kullanarak `ILinkedUndoTransaction` değişikliklerinizi ve son `Layout()` veya `UpdateShapePositions()` işlemleri alın. Örneğin:
 
 ```
 using (ILinkedUndoTransaction transaction = LinkedUndoContext.BeginTransaction("create loop"))
@@ -135,7 +135,7 @@ using (ILinkedUndoTransaction transaction = LinkedUndoContext.BeginTransaction("
 }
 ```
 
- @No__t_0 kullanmak için bu bildirimi sınıfınıza yapmanız gerekir:
+ Kullanmak için `ILinkedUndoTransaction` , bu bildirimi sınıfınıza yapmanız gerekir:
 
 ```
 [Import] ILinkedUndoContext LinkedUndoContext { get; set; }
@@ -163,7 +163,7 @@ foreach (IConnectableElement part in
 }
 ```
 
- Alternatif olarak, etkileşim rastgele bir nesne kümesini gösteriyorsa, etkileşim içinde bir özellik veya başka `IConnectableElement` oluşturabilirsiniz:
+ Alternatif olarak, etkileşim rastgele bir nesne kümesini gösteriyorsa, etkileşim içinde bir özellik veya başka bir özellik oluşturabilirsiniz `IConnectableElement` :
 
 ```
 ILifeline lifeline = interaction.CreateLifeline();
@@ -242,9 +242,9 @@ cf.CreateInteractionOperand(cf.Operands.Last(), true);
 ```
 
 ## <a name="troubleshooting"></a>Sorun giderme
- Değişiklikler bir `UpdateShapePositions()` veya `Layout()` işlemiyle tamamlanmazsa, şekiller yanlış konumlarda görüntülenir.
+ Değişiklikler bir veya işlemle tamamlanmazsa, şekiller yanlış konumlarda görüntülenir `UpdateShapePositions()` `Layout()` .
 
- Birçok diğer sorun, ekleme noktalarının yanlış hizalanmış olmasından kaynaklanır, böylece yeni iletiler veya parçalar diğerlerinden daha fazla çapraz olmalıdır. Belirtiler hiçbir değişikliğin gerçekleştirilmeyeceğini veya bir özel durum atılır. @No__t_0 veya `Layout()` işlemi gerçekleştirilene kadar özel durum oluşmayabilir.
+ Birçok diğer sorun, ekleme noktalarının yanlış hizalanmış olmasından kaynaklanır, böylece yeni iletiler veya parçalar diğerlerinden daha fazla çapraz olmalıdır. Belirtiler hiçbir değişikliğin gerçekleştirilmeyeceğini veya bir özel durum atılır. Ya da işlem tamamlanana kadar özel durum oluşmayabilir `UpdateShapePositions()` `Layout()` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

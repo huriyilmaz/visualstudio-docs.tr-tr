@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6d2c52d6db6ca3001712a692a1de059834c975ae
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88801717"
 ---
 # <a name="publish-an-application-to-azure-app-service-by-importing-publish-settings-in-visual-studio"></a>Visual Studio 'da yayımlama ayarlarını içeri aktararak uygulama Azure App Service yayımlayın
@@ -35,7 +35,7 @@ Yayımlama ayarları dosyası (* \* . publishsettings*), Visual Studio 'da oluş
 > [!NOTE]
 > Visual Studio yayımlama profilini (* \* . pubxml* dosyası) bir Visual Studio yüklemesinden diğerine kopyalamanız gerekiyorsa, yönetilen proje türleri için * \\<ProjectName \> \Properties\PublishProfiles* klasöründe yayımlama profilini * \<profilename\> . pubxml*bulabilirsiniz. Web siteleri için *\ App_Data* klasörü altına bakın. Yayımlama profilleri MSBuild XML dosyalarıdır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 ::: moniker range=">=vs-2019"
 

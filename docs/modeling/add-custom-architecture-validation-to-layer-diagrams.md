@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 98482eed6c1ed5a8ac2e3bbb7b5ada6af9517c1d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546932"
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>Bağımlılık diyagramlarına özel mimari doğrulaması ekleme
@@ -125,7 +125,7 @@ Katman Doğrulayıcıları, komutlar ve diğer uzantıları içeren bir VSıX ol
 
 9. VSıX 'i Visual Studio 'nun ana örneğine veya başka bir bilgisayara yüklemek için VSıX projesinin **bin** dizininde **. vsix** dosyasını bulun. VSıX 'i yüklemek istediğiniz bilgisayara kopyalayın. Windows Gezgini 'nde VSıX dosyasına çift tıklayın.
 
-## <a name="programming-validation"></a><a name="programming"></a>Programlama doğrulaması
+## <a name="programming-validation"></a><a name="programming"></a> Programlama doğrulaması
 
 Katman doğrulama uzantısı tanımlamak için aşağıdaki özelliklere sahip bir sınıf tanımlarsınız:
 
@@ -194,7 +194,7 @@ Her bir düğüm ve her bağlantı, temsil ettiği öğe veya ilişki türünü 
 
 Katmanların koddaki öğelere olan bağlantıları "temsil" kategorisine sahiptir.
 
-## <a name="debugging-validation"></a><a name="debugging"></a>Hata ayıklama doğrulaması
+## <a name="debugging-validation"></a><a name="debugging"></a> Hata ayıklama doğrulaması
 
 Katman doğrulama uzantınızdaki hataları ayıklamak için CTRL + F5 tuşlarına basın. Visual Studio 'nun deneysel bir örneği açılır. Bu örnekte, bir katman modeli açın veya oluşturun. Bu modelin, kodla ilişkilendirilmesi ve en az bir bağımlılığı olması gerekir.
 
@@ -226,7 +226,7 @@ CTRL + F5 tuşuna basarak (**hata ayıklama olmadan Başlat**) deneysel örneği
 
 Doğrulama uzantınızı, uygun bir Visual Studio sürümünün yüklü olduğu bir bilgisayara yüklemek için hedef bilgisayarda VSıX dosyasını açın.
 
-## <a name="example-code"></a><a name="example"></a>Örnek kod
+## <a name="example-code"></a><a name="example"></a> Örnek kod
 
 ```csharp
 using System;

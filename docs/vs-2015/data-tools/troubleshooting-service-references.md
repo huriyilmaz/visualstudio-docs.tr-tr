@@ -18,24 +18,24 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 60f06aa64cf6a6b96f0c4d610fba1d20b794c55f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667211"
 ---
 # <a name="troubleshooting-service-references"></a>Hizmet Başvurularında Sorun Giderme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-Bu konuda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] veya [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] başvurularıyla çalışırken oluşabilecek yaygın sorunlar listelenmektedir.
+Bu konu, [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] içinde veya başvurularıyla çalışırken oluşabilecek yaygın sorunları listeler [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 ## <a name="error-returning-data-from-a-service"></a>Hizmetten veri döndürme hatası
- Bir hizmetten bir `DataSet` veya `DataTable` döndürdüğünüzde, "gelen iletiler için en büyük boyut kotası aşıldı" özel durumunu alabilirsiniz. Varsayılan olarak bazı bağlamaların `MaxReceivedMessageSize` özelliği, hizmet reddi saldırılarına maruz kalma olasılığını sınırlamak için görece küçük bir değere ayarlanır. Özel durumu engellemek için bu değeri artırabilirsiniz.
+ Bir `DataSet` hizmetten veya bir hizmetten geri döndüğünüzde `DataTable` , "gelen iletiler için en büyük boyut kotası aşıldı" özel durumunu alabilirsiniz. Varsayılan olarak, `MaxReceivedMessageSize` bazı bağlamaların özelliği, hizmet reddi saldırılarına maruz kalma olasılığını sınırlamak için görece küçük bir değere ayarlanır. Özel durumu engellemek için bu değeri artırabilirsiniz.
 
  Bu hatayı onarmak için:
 
-1. **Çözüm Gezgini**, açmak için App. config dosyasına çift tıklayın.
+1. **Çözüm Gezgini**, açmak için app.config dosyasına çift tıklayın.
 
-2. @No__t_0 özelliğini bulun ve daha büyük bir değerle değiştirin.
+2. Özelliği bulun `MaxReceivedMessageSize` ve daha büyük bir değerle değiştirin.
 
 ## <a name="cannot-find-a-service-in-my-solution"></a>Çözümünüzde bir hizmet bulunamıyor
  **Hizmet başvuruları Ekle** Iletişim kutusunda **bul** düğmesine tıkladığınızda, çözümdeki BIR veya daha fazla WCF hizmet kitaplığı projesi Hizmetler listesinde görünmez. Bu, çözüme bir hizmet kitaplığı eklendiyse ancak henüz derlenmemişse meydana gelebilir.
@@ -54,12 +54,12 @@ Bu konuda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [!INCLUDE[vsindigo](../in
 2. **Başlangıç seçenekleri** sekmesinde, **NTLM kimlik doğrulaması** onay kutusunu temizleyin.
 
     > [!NOTE]
-    > Yalnızca WCF hizmetleri içeren Web siteleri için NTLM kimlik doğrulamasını kapatmanız gerekir. WCF Hizmetleri için güvenlik, Web. config dosyasındaki yapılandırma üzerinden yönetilir. Bu, NTLM kimlik doğrulamasını gereksiz hale getirir.
+    > Yalnızca WCF hizmetleri içeren Web siteleri için NTLM kimlik doğrulamasını kapatmanız gerekir. WCF Hizmetleri için güvenlik, web.config dosyasındaki yapılandırma üzerinden yönetilir. Bu, NTLM kimlik doğrulamasını gereksiz hale getirir.
 
 ## <a name="access-level-for-generated-classes-setting-has-no-effect"></a>Oluşturulan sınıflar için erişim düzeyi ayarı etkisizdir
- **Hizmet başvurularını Yapılandır** Iletişim kutusunda **iç** veya **arkadaş** olarak **oluşturulan sınıflar için erişim düzeyi** seçeneğinin ayarlanması her zaman çalışmayabilir. İletişim kutusunda seçenek ayarlanmış gibi görünse de, elde edilen destek sınıfları bir `Public` erişim düzeyiyle oluşturulacaktır.
+ **Hizmet başvurularını Yapılandır** Iletişim kutusunda **iç** veya **arkadaş** olarak **oluşturulan sınıflar için erişim düzeyi** seçeneğinin ayarlanması her zaman çalışmayabilir. İletişim kutusunda seçenek ayarlanmış gibi görünse de, elde edilen destek sınıfları bir erişim düzeyiyle oluşturulacaktır `Public` .
 
- Bu, <xref:System.Xml.Serialization.XmlSerializer> kullanılarak serileştirilenler gibi belirli türlerin bilinen bir sınırlamasıdır.
+ Bu, kullanılarak serileştirilenler gibi belirli türlerin bilinen bir sınırlamasıdır <xref:System.Xml.Serialization.XmlSerializer> .
 
 ## <a name="error-debugging-service-code"></a>Hizmet kodunda hata ayıklama hatası
  İstemci kodundan bir WCF hizmeti için kod içine adımlayın, eksik simgelerle ilgili bir hata alabilirsiniz. Bu, çözümünüzün parçası olan bir hizmet çözümden taşındığında veya kaldırıldığında gerçekleşebilir.
@@ -70,7 +70,7 @@ Bu konuda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [!INCLUDE[vsindigo](../in
 
  Bu hatayı onarmak için, hizmet projesini el ile yeniden oluşturmanız gerekir:
 
-1. **Araçlar** menüsünde **Seçenekler**' e tıklayın.
+1. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.
 
 2. **Seçenekler** iletişim kutusunda, **Projeler ve çözümler**' i genişletin ve ardından **genel**' i seçin.
 
@@ -85,7 +85,7 @@ Bu konuda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [!INCLUDE[vsindigo](../in
 7. WCF hizmeti projesini yeniden derlemek için **Derle** menüsünde **yeniden derle** ' ye tıklayın.
 
 ## <a name="wcf-data-services-do-not-display-in-the-browser"></a>WCF Veri Hizmetleri tarayıcıda gösterme
- Bir [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] verilerin XML temsilini görüntülemeye çalıştığında, Internet Explorer verileri bir RSS akışı olarak yanlış yorumlayabilir. RSS akışlarını görüntüleme seçeneğinin devre dışı bırakıldığından emin olmalısınız.
+ Internet Explorer verilerin bir XML temsilini görüntülemeye çalıştığında [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] verileri BIR RSS akışı olarak yanlış yorumlayabilir. RSS akışlarını görüntüleme seçeneğinin devre dışı bırakıldığından emin olmalısınız.
 
  Bu hatayı onarmak için RSS akışlarını devre dışı bırakın:
 

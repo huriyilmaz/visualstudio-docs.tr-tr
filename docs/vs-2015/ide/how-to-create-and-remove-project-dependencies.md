@@ -19,10 +19,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a1403beccdb6bf9b938787f62cb3da2e5bb5c259
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668128"
 ---
 # <a name="how-to-create-and-remove-project-dependencies"></a>Nasıl Yapılır: Proje Bağımlılıklarını Oluşturma ve Kaldırma
@@ -63,4 +63,4 @@ Birden fazla proje içeren bir çözüm oluştururken, diğer projeler tarafınd
 4. **Bağlı** alanında, bu projenin artık bağımlılıkları olmayan diğer projelerin yanındaki onay kutularını temizleyin.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Visual Studio 'Da projeler ve çözümler oluşturma ve Temizleme](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md) [](../ide/compiling-and-building-in-visual-studio.md) [derleme yapılandırmalarını anlama](../ide/understanding-build-configurations.md) [nib nasıl yapılır: proje özelliklerini ve yapılandırma ayarlarını değiştirme](https://msdn.microsoft.com/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [Visual Studio 'Da projeler ve çözümler oluşturma ve Temizleme](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md) [Compiling and Building](../ide/compiling-and-building-in-visual-studio.md) [derleme yapılandırmalarını anlama](../ide/understanding-build-configurations.md) [nib nasıl yapılır: proje özelliklerini ve yapılandırma ayarlarını değiştirme](https://msdn.microsoft.com/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)

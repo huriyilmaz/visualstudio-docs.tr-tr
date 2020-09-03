@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4b25b47b5b711f09334501ed21abf06cb66402b1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669735"
 ---
 # <a name="domain-path-syntax"></a>Etki Alanı Yolu Sözdizimi
@@ -37,7 +37,7 @@ DSL tanımları bir modeldeki belirli öğeleri bulmak için XPath benzeri bir s
 
  Eğik çizgi, bir yolun söz dizimini ayırır. Her yol segmenti, bir öğeden bir bağlantı (bir ilişkinin örneği) veya bir öğe bağlantısı olan bir atlama olur. Yol kesimleri genellikle çiftler halinde görünür. Bir yol kesimi bir öğeden bir bağlantıyı bir atlama temsil eder ve sonraki kesim, diğer uçtaki öğesine olan bağlantılardan bir atlama temsil eder. (Herhangi bir bağlantı, bir ilişkinin kendisinin kaynağı veya hedefi de olabilir).
 
- Öğe-bağlantı atlama için kullandığınız ad, rol `Property Name` değeridir. Öğe bağlantısı atlaması için kullandığınız ad, hedef rol adıdır.
+ Öğe-bağlantı atlama için kullandığınız ad, rolün değeridir `Property Name` . Öğe bağlantısı atlaması için kullandığınız ad, hedef rol adıdır.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Modelleri, Sınıfları ve İlişkileri Anlama](../modeling/understanding-models-classes-and-relationships.md)

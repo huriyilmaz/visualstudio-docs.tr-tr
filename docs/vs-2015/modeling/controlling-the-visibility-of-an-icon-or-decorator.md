@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 49cecff999e0155209ba58c20c0d623b15d63698
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667823"
 ---
 # <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>Bir Simgenin veya Dekoratörün Görünürlüğünü Denetleme
@@ -62,13 +62,13 @@ ms.locfileid: "72667823"
 
 1. Etki alanı sınıfına hesaplanmış bir etki alanı özelliği ekleyin. **Özellikler** penceresinde aşağıdaki değerleri ayarlayın:
 
-     **Igözatılabilen =** `False` **-Bu, özelliği kullanıcıdan gizler**
+     **Isgözatılabilen =** `False` **-Bu, özelliği kullanıcıdan gizler**    
 
-     **Tür =** `Calculated` **-Bu, değerini hesaplayan kodu sağlayacaksınız** .
+     **Tür =** `Calculated` **-Bu, değerini hesaplayan kodu sağlayacaksınız demektir**    
 
      Örnek, **Dekoratorcontrol** **adı**
 
-     **Tür**  =  `Boolean`
+     **Türüyle** = `Boolean`
 
      Daha fazla bilgi için bkz. [hesaplanan ve özel depolama özellikleri](../modeling/calculated-and-custom-storage-properties.md).
 
@@ -80,7 +80,7 @@ ms.locfileid: "72667823"
 
     3. **Filter özelliğinde**, denetim özelliği **dekoratorcontrol**' u seçin.
 
-    4. **Görünürlük girişleri**altında `True` girin.
+    4. **Görünürlük girişleri**altında girin `True` .
 
 3. Çözüm Gezgini araç çubuğunda **Tüm Şablonları Dönüştür** ' e tıklayın.
 

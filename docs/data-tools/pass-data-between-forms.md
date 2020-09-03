@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 198eb09cabe16c72415520aa493a3395cdbf6d48
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281883"
 ---
 # <a name="pass-data-between-forms"></a>Formlar arasında veri geçirme
@@ -47,7 +47,7 @@ Bu izlenecek yolda gösterilen görevler şunlardır:
 
 - Formlar arasında veri geçirme.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 

@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e70039f361ac3410a8ddcccb0f139d8bdcb32ed9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668086"
 ---
 # <a name="how-to-create-multi-file-item-templates"></a>Nasıl Yapılır: Çok Dosyalı Şablonlar Oluşturma
@@ -31,13 +31,13 @@ ms.locfileid: "72668086"
 
 - Form için gömülü kaynakları içeren bir. resx dosyası.
 
-  Birden çok dosya öğesi şablonları, öğe [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] oluşturulduğunda doğru dosya adı uzantılarının kullanıldığından emin olmak için parametreler gerektirir. **Şablon dışarı aktarma** Sihirbazı 'nı kullanarak bir öğe şablonu oluşturursanız, bu parametreler otomatik olarak oluşturulur ve başka bir Düzenle gerekli değildir. Aşağıdaki adımlarda, doğru dosya adı uzantılarının oluşturulduğundan emin olmak için parametrelerin nasıl kullanılacağı açıklanmaktadır.
+  Çoklu dosya öğesi şablonları, öğesinde öğe oluşturulduğunda doğru dosya adı uzantılarının kullanıldığından emin olmak için parametreler gerektirir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . **Şablon dışarı aktarma** Sihirbazı 'nı kullanarak bir öğe şablonu oluşturursanız, bu parametreler otomatik olarak oluşturulur ve başka bir Düzenle gerekli değildir. Aşağıdaki adımlarda, doğru dosya adı uzantılarının oluşturulduğundan emin olmak için parametrelerin nasıl kullanılacağı açıklanmaktadır.
 
 ### <a name="to-manually-create-a-multi-file-item-template"></a>Birden çok dosya öğesi şablonunu el ile oluşturmak için
 
 1. Tek dosya öğe şablonu oluşturacağınız için öğe şablonunu oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: öğe şablonları oluşturma](../ide/how-to-create-item-templates.md).
 
-2. Her `ProjectItem` öğesine `TargetFileName` öznitelikleri ekleyin. @No__t_0 özniteliklerinin değerlerini $fileinputname $ olarak ayarlayın. *FileExtension*, burada *FileExtension* , şablonda yer alan dosyanın dosya adı uzantısıdır. Örneğin:
+2. `TargetFileName`Her öğeye öznitelik ekleyin `ProjectItem` . `TargetFileName`Özniteliklerin değerlerini $fileinputname $ olarak ayarlayın.* FileExtension*, burada *FileExtension* , şablonda yer alan dosyanın dosya adı uzantısıdır. Örneğin:
 
     ```
     <ProjectItem TargetFileName="$fileinputname$.vb">
@@ -55,7 +55,7 @@ ms.locfileid: "72668086"
 
 3. Şablonunuza dahil edilecek dosyaları seçin, seçime sağ tıklayın, **Gönder ' e**tıklayın ve ardından **Sıkıştırılmış (daraltılmış) klasör**' e tıklayın. Seçtiğiniz dosyalar bir. zip dosyasında sıkıştırılır.
 
-4. . Zip dosyasını Kullanıcı öğesi şablonu konumuna yerleştirin. Varsayılan olarak dizin, \K\studio *Version*\Templates\ıtemtemplates \\. Daha fazla bilgi için bkz. [nasıl yapılır: şablonları bulma ve düzenleme](../ide/how-to-locate-and-organize-project-and-item-templates.md).
+4. . Zip dosyasını Kullanıcı öğesi şablonu konumuna yerleştirin. Varsayılan olarak, dizin, \K\studio *sürümü*\ \\ Daha fazla bilgi için bkz. [nasıl yapılır: şablonları bulma ve düzenleme](../ide/how-to-locate-and-organize-project-and-item-templates.md).
 
 ## <a name="example"></a>Örnek
  Aşağıdaki örnekte bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Windows Forms şablonu gösterilmektedir. Bu şablonu temel alan bir öğe oluşturulduğunda, oluşturulan üç dosyanın adları **Yeni öğe Ekle** iletişim kutusuna girilen adla eşleşir.

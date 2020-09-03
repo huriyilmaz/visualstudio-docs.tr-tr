@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1b65f2279270be0d5baef16d6d06e35a7fb0b854
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669535"
 ---
 # <a name="walkthrough-using-xslt-intellisense"></a>İzlenecek Yol: XSLT IntelliSense Kullanma
@@ -47,22 +47,22 @@ Bu izlenecek yol, bazı özniteliklerin değerlerini otomatik olarak tamamlamak 
     </xsl:stylesheet>
     ```
 
-2. @No__t_0 sonra imlecinizi yerleştirip ENTER tuşuna basın. Sonra aşağıdaki `xsl:call-template` öğesini yazmaya başlayın:
+2. Sonra imlecinizi yerleştirip `<xsl:template name="msg23" match="msg23">` ENTER tuşuna basın. Ardından aşağıdaki öğeyi yazmaya başlayın `xsl:call-template` :
 
     ```
     <xsl:call-template name="localized-message">
     </xsl:call-template>
     ```
 
-     Şablon adları listesi, yazarken `xsl:call-template` öğesinin `name=""` özniteliğinde görüntülenir.
+     Şablon adları listesi, `name=""` `xsl:call-template` sizin yazarken öğesinin özniteliğinde görüntülenir.
 
-3. @No__t_0 sonra imlecinizi yerleştirip ENTER tuşuna basın. Sonra aşağıdaki `xsl:with-param` öğesini yazmaya başlayın:
+3. Sonra imlecinizi yerleştirip `<xsl:call-template name="localized-message">` ENTER tuşuna basın. Ardından aşağıdaki öğeyi yazmaya başlayın `xsl:with-param` :
 
     ```
     <xsl:with-param name="msgcode">msg23</xsl:with-param>
     ```
 
-     Parametre adlarının listesi, `xsl:with-param` öğesinin `name=""` özniteliğinde görüntülenir.
+     Parametre adlarının listesi, `name=""` öğesinin özniteliğinde görüntülenir `xsl:with-param` .
 
 ### <a name="to-use-intellisense-in-the-mode-attribute-of-an-xslapply-templates-element"></a>Bir xsl: apply-templates öğesinin mode özniteliğinde IntelliSense kullanmak için
 
@@ -113,13 +113,13 @@ Bu izlenecek yol, bazı özniteliklerin değerlerini otomatik olarak tamamlamak 
     </xsl:stylesheet>
     ```
 
-2. @No__t_0 sonra imlecinizi yerleştirip ENTER tuşuna basın. Sonra aşağıdaki `xsl: apply-templates` öğesini yazmaya başlayın:
+2. Sonra imlecinizi yerleştirip `<xsl:apply-templates select="phone" />` ENTER tuşuna basın. Ardından aşağıdaki öğeyi yazmaya başlayın `xsl: apply-templates` :
 
     ```
     <xsl:apply-templates select="phone"  mode="accountNumber">
     ```
 
-     Şablon modlarının listesi, `xsl:apply-templates` öğesinin `mode=""` özniteliğinde görüntülenir.
+     Şablon modlarının listesi, `mode=""` öğesinin özniteliğinde görüntülenir `xsl:apply-templates` .
 
 ### <a name="to-use-intellisense-in-the-stylesheet-prefix-and-result-prefix-attributes-of-an-xslnamespace-alias-element"></a>IntelliSense 'in stil sayfası-önek ve sonuç-önek öznitelikleri içinde bir xsl: Namespace-Alias öğesi
 
@@ -154,13 +154,13 @@ Bu izlenecek yol, bazı özniteliklerin değerlerini otomatik olarak tamamlamak 
     </xsl:stylesheet>
     ```
 
-2. @No__t_0 sonra imlecinizi yerleştirip ENTER tuşuna basın. Sonra aşağıdaki `xsl:namespace-alias` öğesini yazmaya başlayın:
+2. Sonra imlecinizi yerleştirip `<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:alt="http://www.w3.org/1999/XSL/Transform-alternate" version="1.0">` ENTER tuşuna basın. Ardından aşağıdaki öğeyi yazmaya başlayın `xsl:namespace-alias` :
 
     ```
     <xsl:namespace-alias stylesheet-prefix="alt" result-prefix="xsl"/>
     ```
 
-     Ön eklerin listesinin, `xsl:namespace-alias` öğesinin `stylesheet-prefix` ve `result-prefix` özniteliklerinde görünmediğine dikkat edin.
+     Ön eklerin listesinin `stylesheet-prefix` öğesi ve özniteliklerinde görüntülendiğine dikkat edin `result-prefix` `xsl:namespace-alias` .
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [XML Düzenleyicisi IntelliSense Özellikleri](../xml-tools/xml-editor-intellisense-features.md)

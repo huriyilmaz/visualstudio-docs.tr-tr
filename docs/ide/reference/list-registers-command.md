@@ -15,16 +15,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e87b10a7827b5365b507abb2c72a21506e59c19e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75568691"
 ---
 # <a name="list-registers-command"></a>Yazmaçları Listele Komutu
-Seçili kayıtların değerini görüntüler ve göstermek için kayıt listesini değiştirmenize olanak tanır.
+Seçili yazmaçların değerini görüntüler ve gösterilecek kayıt listesini değiştirmenize izin verir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cmd
 Debug.ListRegisters [/Display [{register|registerGroup}...]] [/List]
@@ -33,9 +33,9 @@ Debug.ListRegisters [/Display [{register|registerGroup}...]] [/List]
 ```
 
 ## <a name="switches"></a>Anahtarlar
-/Görüntüle`register` [{&#124;`registerGroup`}...]
+/Display [{ `register`&#124;`registerGroup` }...]
 
-Belirtilen `register` veya `registerGroup`. değerlerini görüntüler Hayır `register` veya `registerGroup` belirtilmişse, varsayılan kayıt listesi görüntülenir. Anahtar belirtilmemişse, davranış aynıdır. Örnek:
+Belirtilen veya değerlerini görüntüler `register` `registerGroup` . `register`Veya `registerGroup` belirtilmemişse, varsayılan kayıt listesi görüntülenir. Anahtar belirtilmemişse, davranış aynıdır. Örneğin:
 
 `Debug.ListRegisters /Display eax`
 
@@ -43,23 +43,23 @@ eşdeğerdir
 
 `Debug.ListRegisters eax`
 
-/Liste
+/List
 
 Listedeki tüm kayıt gruplarını görüntüler.
 
-/İzle`register` [{ `registerGroup`&#124;}...]
+/Watch [{ `register`&#124;`registerGroup` }...]
 
-Listeye bir `register` veya `registerGroup` daha fazla değer veya değer ekler.
+Listeye bir veya daha fazla `register` veya `registerGroup` değer ekler.
 
-/İzlemeiz`register` [{ `registerGroup`&#124;}...]
+/Unwatch [{ `register`&#124;`registerGroup` }...]
 
-Bir veya daha `register` `registerGroup` fazla değeri veya değerleri listeden kaldırır.
+Listeden bir veya daha fazla `register` veya `registerGroup` değeri kaldırır.
 
 ## <a name="remarks"></a>Açıklamalar
-Takma ad, `r` '' `Debug.ListRegisters`yerine kullanılabilir.
+Diğer ad, yerine `r` kullanılabilir `Debug.ListRegisters` .
 
 ## <a name="example"></a>Örnek
-Bu örnek, `Debug.ListRegisters` kayıt `r` grubunun `Flags`değerlerini görüntülemek için takma ad kullanır.
+Bu örnek, `Debug.ListRegisters` `r` yazmaç grubunun değerlerini göstermek için diğer adı kullanır `Flags` .
 
 ```cmd
 r /Display Flags
@@ -67,6 +67,6 @@ r /Display Flags
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
+- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
 - [Hata Ayıklama Temelleri: Yazmaçlar Penceresi](../../debugger/debugging-basics-registers-window.md)
 - [Nasıl Yapılır: Yazmaçlar Penceresini Kullanma](../../debugger/how-to-use-the-registers-window.md)

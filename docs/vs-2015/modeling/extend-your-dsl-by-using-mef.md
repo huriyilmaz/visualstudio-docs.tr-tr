@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d3257acde8d3c62aca64e3401ec18134601973e5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669641"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>MEF kullanarak DSL'nizi genişletme
@@ -104,13 +104,13 @@ Managed Extensibility Framework (MEF) kullanarak, etki alanına özgü dili (DSL
    <Include href="MefExtension\CommandExtensionVSCT.vsct"/>
    ```
 
-    Varolan `<Include>` yönergesinden sonra satırı ekleyin.
+    Varolan yönergeden sonra satırı ekleyin `<Include>` .
 
 4. `Open DslDefinition.dsl.`
 
 5. DSL Gezgini ' nde **Editor\validation**' ı seçin.
 
-6. Özellikler penceresi, **...** adlı özelliklerden en az birinin `true` olduğundan emin olun.
+6. Özellikler penceresi, **...** adlı özelliklerden en az birinin kullandığından emin olun `true` .
 
 7. Çözüm Gezgini araç çubuğunda **Tüm Şablonları Dönüştür**' e tıklayın.
 
@@ -118,36 +118,36 @@ Managed Extensibility Framework (MEF) kullanarak, etki alanına özgü dili (DSL
 
 8. Hala çalıştığını doğrulamak için çözümü derleyin ve çalıştırın.
 
-   DSL 'niz artık MEF etkin. Menü komutlarını, hareket işleyicilerini ve doğrulama kısıtlamalarını MEF uzantıları olarak yazabilirsiniz. Bu uzantıları DSL çözümünüze diğer özel kodla birlikte yazabilirsiniz. Ayrıca, siz veya diğer geliştiriciler DSL 'yi genişleten ayrı [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantıları yazabilir.
+   DSL 'niz artık MEF etkin. Menü komutlarını, hareket işleyicilerini ve doğrulama kısıtlamalarını MEF uzantıları olarak yazabilirsiniz. Bu uzantıları DSL çözümünüze diğer özel kodla birlikte yazabilirsiniz. Ayrıca, siz veya diğer geliştiriciler DSL 'yi genişleten ayrı [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Uzantılar yazabilir.
 
 ## <a name="creating-an-extension-for-a-mef-enabled-dsl"></a>MEF etkin DSL için uzantı oluşturma
- Kendiniz veya başka biri tarafından oluşturulan MEF özellikli bir DSL 'ye erişiminiz varsa, bunun için Uzantılar yazabilirsiniz. Uzantılar, menü komutları, hareket işleyicileri veya doğrulama kısıtlamaları eklemek için kullanılabilir. Bu uzantıları yazmak için bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantısı (VSıX) çözümü kullanırsınız. Çözüm iki bölümden oluşur: kod derlemesini oluşturan bir sınıf kitaplığı projesi ve derlemeyi paketleyen bir VSıX projesi.
+ Kendiniz veya başka biri tarafından oluşturulan MEF özellikli bir DSL 'ye erişiminiz varsa, bunun için Uzantılar yazabilirsiniz. Uzantılar, menü komutları, hareket işleyicileri veya doğrulama kısıtlamaları eklemek için kullanılabilir. Bu uzantıları yazmak için bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Uzantı (VSIX) çözümü kullanırsınız. Çözüm iki bölümden oluşur: kod derlemesini oluşturan bir sınıf kitaplığı projesi ve derlemeyi paketleyen bir VSıX projesi.
 
 #### <a name="to-create-a-dsl-extension-vsix"></a>DSL uzantısı VSıX oluşturmak için
 
-1. Yeni bir sınıf kitaplığı projesi oluşturun. Bunu yapmak için, **Yeni proje** iletişim kutusunda **Visual Basic** veya  **C# görsel** ' i seçin ve ardından **sınıf kitaplığı**' nı seçin.
+1. Yeni bir sınıf kitaplığı projesi oluşturun. Bunu yapmak için, **Yeni proje** iletişim kutusunda **Visual Basic** veya **Visual C#** ' yi seçin ve ardından **sınıf kitaplığı**' nı seçin.
 
 2. Yeni sınıf kitaplığı projesinde, DSL derlemesine bir başvuru ekleyin.
 
-   - Bu derleme genellikle "ile biten bir ada sahiptir. DSL. dll ".
+   - Bu derleme genellikle ".Dsl.dll" ile biten bir ada sahiptir.
 
-   - DSL projesine erişiminiz varsa, derleme dosyasını **\\bin \\ Dizin dsl bulabilirsiniz \***
+   - DSL projesine erişiminiz varsa, derleme dosyasını Dizin **DSL \\ bin \\ \* ** altında bulabilirsiniz.
 
    - DSL VSıX dosyasına erişiminiz varsa, VSıX dosyasının dosya adı uzantısını ". zip" olarak değiştirerek derlemeyi bulabilirsiniz. . Zip dosyasını sıkıştırmasını açın.
 
 3. Aşağıdaki .NET derlemelerine başvuruları ekleyin:
 
-   - Microsoft. VisualStudio. modellemesi. SDK. 11.0. dll
+   - Microsoft.VisualStudio.Modeling.Sdk.11.0.dll
 
-   - Microsoft. VisualStudio. modellemesi. SDK. diyagramlar. 11.0. dll
+   - Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0.dll
 
-   - Microsoft. VisualStudio. modellemesi. SDK. Shell. 11.0. dll
+   - Microsoft.VisualStudio.Modeling.Sdk.Shell.11.0.dll
 
    - System.ComponentModel.Composition.dll
 
-   - System. Windows. Forms. dll
+   - System.Windows.Forms.dll
 
-4. Aynı çözümde bir VSıX projesi oluşturun. Bunu yapmak için **Yeni proje** iletişim kutusunda **Visual Basic** veya **görsel C#** ' i genişletin, **genişletilebilirlik**' i ve **VSIX projesi**' ni seçin.
+4. Aynı çözümde bir VSıX projesi oluşturun. Bunu yapmak için **Yeni proje** iletişim kutusunda **Visual Basic** veya **Visual C#**' yi genişletin, **genişletilebilirlik**' i ve **VSIX projesi**' ni seçin.
 
 5. Çözüm Gezgini, VSıX projesine sağ tıklayın ve ardından **Başlangıç projesi olarak ayarla**' ya tıklayın.
 
@@ -159,25 +159,25 @@ Managed Extensibility Framework (MEF) kullanarak, etki alanına özgü dili (DSL
 
    1. **Source. Extension. valtmanifest**Içinde **Başvuru Ekle** ' ye tıklayın.
 
-   2. İletişim kutusunda **Yük Ekle** ' ye tıklayın ve ardından dsl dosyasının VSIX dosyasını bulun. VSıX dosyası, **DslPackage \\bin \\ \*** 'da DSL çözümünde oluşturulmuştur.
+   2. İletişim kutusunda **Yük Ekle** ' ye tıklayın ve ardından dsl dosyasının VSIX dosyasını bulun. VSıX dosyası, **DslPackage \\ bin \\ \* **' de DSL çözümünde yerleşiktir.
 
        Bu, kullanıcıların DSL 'yi ve uzantınızı aynı anda yüklemesine olanak tanır. Kullanıcı DSL 'yi zaten yüklemiştir, yalnızca uzantınızın yüklenmesi gerekir.
 
-9. **Kaynak. Extension. valtmanifest**'in diğer alanlarını gözden geçirin ve güncelleştirin. **Sürümleri Seç** ' e tıklayın ve doğru [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sürümlerinin ayarlandığını doğrulayın.
+9. **Kaynak. Extension. valtmanifest**'in diğer alanlarını gözden geçirin ve güncelleştirin. **Sürümleri Seç** ' e tıklayın ve doğru [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sürümlerin ayarlandığını doğrulayın.
 
 10. Sınıf kitaplığı projesine kod ekleyin. Bir sonraki bölümdeki örnekleri kılavuz olarak kullanın.
 
      İstediğiniz sayıda komut, hareket ve doğrulama sınıfı ekleyebilirsiniz.
 
-11. Uzantıyı test etmek için **F5**'e basın. @No__t_0 deneysel örneğinde, DSL 'nin örnek bir dosyasını oluşturun veya açın.
+11. Uzantıyı test etmek için **F5**'e basın. Deneysel örneğinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , DSL 'nin örnek bir dosyasını oluşturun veya açın.
 
 ## <a name="writing-mef-extensions-for-dsls"></a>DSLs için MEF uzantıları yazılıyor
  Ayrı bir DSL uzantısı çözümünün derleme kodu projesinde uzantı yazabilirsiniz. Ayrıca, DSL 'nin bir parçası olarak komutları, hareketleri ve doğrulama kodunu yazmak için uygun bir yol olarak DslPackage projenizde MEF kullanabilirsiniz.
 
 ### <a name="menu-commands"></a>Menü Komutları
- Bir menü komutu yazmak için <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> uygulayan bir sınıf tanımlayın ve bu sınıfa, *dsl `CommandExtension` ADLı DSL içinde* tanımlanan özniteliğe önek ekleyin. Birden fazla menü komut sınıfı yazabilirsiniz.
+ Bir menü komutu yazmak için, bir sınıfı, uygulayan <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> ve DSL ADLı DSL adında tanımlanmış olan özniteliğe önek olarak tanımlayın *YourDsl* `CommandExtension` . Birden fazla menü komut sınıfı yazabilirsiniz.
 
- `QueryStatus()`, kullanıcı diyagrama sağ tıkladığı zaman çağrılır. Geçerli seçimi inceleyerek, komutun ne zaman geçerli olduğunu göstermek için `command.Enabled` ayarlaması gerekir.
+ `QueryStatus()` kullanıcının diyagrama sağ tıkladığı her zaman çağrılır. Geçerli seçimi incelemelidir ve `command.Enabled` komutun ne zaman geçerli olduğunu belirtecek şekilde ayarlanmalıdır.
 
 ```
 using System.ComponentModel.Composition;
@@ -245,7 +245,7 @@ namespace MyMefExtension
 ```
 
 ### <a name="gesture-handlers"></a>Hareket Işleyicileri
- Bir hareket işleyicisi, diyagram üzerinde her yerden, iç veya dış [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sürüklenen nesneler ile ilgilenebilirler. Aşağıdaki örnek, kullanıcının Windows Gezgini 'ndeki dosyaları diyagram üzerine sürükleyebilmenizi sağlar. Dosya adlarını içeren öğeleri oluşturur.
+ Bir hareket işleyicisi, diyagramda, içinde veya dışında herhangi bir yere sürüklenen nesneler ile başa geçirilebilirler [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Aşağıdaki örnek, kullanıcının Windows Gezgini 'ndeki dosyaları diyagram üzerine sürükleyebilmenizi sağlar. Dosya adlarını içeren öğeleri oluşturur.
 
  Diğer DSL modellerinden ve UML modellerinden sürüklerle başa çıkmak için işleyiciler yazabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: sürükle ve bırak Işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md).
 
@@ -322,7 +322,7 @@ namespace MefExtension
 ```
 
 ### <a name="validation-constraints"></a>Doğrulama kısıtlamaları
- Doğrulama yöntemleri DSL tarafından oluşturulan `ValidationExtension` özniteliği tarafından ve ayrıca <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> tarafından işaretlenir. Yöntemi bir öznitelik tarafından işaretlenmemiş herhangi bir sınıfta bulunabilir.
+ Doğrulama yöntemleri `ValidationExtension` DSL tarafından oluşturulan öznitelik tarafından ve ayrıca tarafından işaretlenir <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> . Yöntemi bir öznitelik tarafından işaretlenmemiş herhangi bir sınıfta bulunabilir.
 
  Daha fazla bilgi için bkz. [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md).
 

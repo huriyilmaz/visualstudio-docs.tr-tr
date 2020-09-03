@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyProvider::GetPropertyProxy | Microsoft Docs
+title: 'IPropertyProxyProvider:: GetPropertyProxy | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: cc505799a0ea7571ccff41057ba9852018ddbb3e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68199470"
 ---
 # <a name="ipropertyproxyprovidergetpropertyproxy"></a>IPropertyProxyProvider::GetPropertyProxy
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Özelliği proxy arabirimi için belirtilen ara sunucu kimliğini alır.  
+Belirtilen proxy KIMLIĞI için özellik proxy arabirimini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetPropertyProxy(  
@@ -42,16 +42,16 @@ int GetPropertyProxy(
   
 #### <a name="parameters"></a>Parametreler  
  `dwID`  
- [in] İstenen özellik proxy kimliği.  
+ 'ndaki İstenen özellik proxy 'sinin KIMLIĞI.  
   
  `proxy`  
- [out] Döndürür bir [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) nesne.  
+ dışı Bir [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dış tür görselleştiricileri desteklemek için bu yöntem genellikle çağrısı iletir [GetPropertyProxy](../../../extensibility/debugger/reference/ieevisualizerservice-getpropertyproxy.md) yöntemi. Bkz: [Visualizing ve verileri görüntüleme](../../../extensibility/debugger/visualizing-and-viewing-data.md) ayrıntılı IEEVisualizerService nasıl elde edilir.  
+ Dış tür görselleştiricileri desteklemek için, bu yöntem genellikle [GetPropertyProxy](../../../extensibility/debugger/reference/ieevisualizerservice-getpropertyproxy.md) metoduna çağrıyı iletir. Ieevisualizerhizmeti 'nin nasıl elde edilildiği hakkında ayrıntılı bilgi için bkz. [verileri görselleştirme ve görüntüleme](../../../extensibility/debugger/visualizing-and-viewing-data.md) .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IPropertyProxyProvider](../../../extensibility/debugger/reference/ipropertyproxyprovider.md)   

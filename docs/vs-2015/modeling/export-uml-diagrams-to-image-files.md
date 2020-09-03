@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c095291cd02d591d9e493601b598a63c1ccb6f5b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669662"
 ---
 # <a name="export-uml-diagrams-to-image-files"></a>UML diyagramlarını görüntü dosyalarına aktarma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_0 bir UML belgeyi program denetimindeki bir görüntüye dışarı aktarabilirsiniz. Örneğin, bunu otomatik belge oluşturma 'nın bir parçası olarak yapmak isteyebilirsiniz.
+Bir UML belgeyi içinden [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] program denetimi altında olan bir görüntüye dışarı aktarabilirsiniz. Örneğin, bunu otomatik belge oluşturma 'nın bir parçası olarak yapmak isteyebilirsiniz.
 
  Bir belgeyi bir görüntüye el ile dışarı aktarmak istiyorsanız, şekilleri kopyalayıp Word gibi başka programlara yapıştırabilirsiniz. Belgeleri XPS biçimine de yazdırabilirsiniz. Daha fazla bilgi için bkz. [diyagramları görüntü olarak dışarı aktarma](../modeling/export-diagrams-as-images.md).
 
@@ -29,7 +29,7 @@ ms.locfileid: "72669662"
 > [!NOTE]
 > Bu kodun bir menü komutu olarak çalışmasını sağlamak için, onu bir MEF bileşenine eklemeniz gerekir. Daha fazla bilgi için bkz. [Modelleme Diyagramında Menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
 
- Kod ilk olarak, temel alınan uygulamanın <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> almak için [IShape. GetObject](/previous-versions/ee789371(v=vs.140)) 'i kullanır. Bu türün bir yöntemi <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.CreateBitmap%2A> vardır.
+ Kod ilk olarak, temel alınan uygulamayı almak için [IShape. GetObject](/previous-versions/ee789371(v=vs.140)) ' i kullanır <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> . Bu tür bir yöntemi içerir <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.CreateBitmap%2A> .
 
 ```
 namespace SaveToImage

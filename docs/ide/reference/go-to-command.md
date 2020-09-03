@@ -14,31 +14,31 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 535906d8b8d7f8ba0c2984d22ceead18a0d47c2d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75569211"
 ---
 # <a name="go-to-command"></a>Git Komutu
-İmleci belirtilen satıra taşır.
+İmleci belirtilen satıra kaydırır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cmd
 Edit.GoTo [linenumber]
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 `linenumber`\
-İsteğe bağlı. Gidilen satır ın sayısını temsil eden bir sonda.
+İsteğe bağlı. Gidilecek satırın numarasını temsil eden bir tamsayı.
 
 ## <a name="remarks"></a>Açıklamalar
-Satır numaralandırma bir'de başlar. Değeri birden `linenumber` azsa, ilk satır görüntülenir. Değeri son `linenumber` satırın sayısından büyükse, son satır görüntülenir.
+Satır numaralandırması bir kerede başlar. Değeri `linenumber` bir değerinden küçükse, ilk satır görüntülenir. Değeri, `linenumber` son satırın sayısından büyükse, son satır görüntülenir.
 
-Bir `linenumber` değer belirtilmemişse, **Satıra Git** iletişim kutusu görüntülenir.
+İçin bir değer `linenumber` belirtilmemişse, **satıra git** iletişim kutusu görüntülenir.
 
-Bu komutun diğer adı GoToLn'dur.
+Bu komutun diğer adı Sayfayln 'dir.
 
 ## <a name="example"></a>Örnek
 
@@ -48,7 +48,7 @@ Bu komutun diğer adı GoToLn'dur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
-- [Komut Penceresi](../../ide/reference/command-window.md)
-- [Bul/Komut Kutusu](../../ide/find-command-box.md)
+- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Komut penceresi](../../ide/reference/command-window.md)
+- [Bul/komut kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

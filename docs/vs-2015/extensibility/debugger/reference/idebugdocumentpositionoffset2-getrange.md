@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentPositionOffset2::GetRange | Microsoft Docs
+title: 'IDebugDocumentPositionOffset2:: GetRange | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,18 +11,18 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a028a2c88fe44aa6a117ddb81cff5788eec1732e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200235"
 ---
 # <a name="idebugdocumentpositionoffset2getrange"></a>IDebugDocumentPositionOffset2::GetRange
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Geçerli belge konumunu aralığını alır.  
+Geçerli belge konumunun aralığını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetRange(  
@@ -40,23 +40,23 @@ public int GetRange(
   
 #### <a name="parameters"></a>Parametreler  
  `pdwBegOffset`  
- [out içinde] Aralık için başlangıç konumu uzaklığı. Bu bilgiler gerekli değildir, bu parametre null bir değere ayarlayın.  
+ [in, out] Aralığın başlangıç konumunun konumu. Bu bilgi gerekmiyorsa bu parametreyi null değeri olarak ayarlayın.  
   
  `pdwEndOffset`  
- [out içinde] Aralığın bitiş konumu için uzaklık. Bu bilgiler gerekli değildir, bu parametre null bir değere ayarlayın.  
+ [in, out] Aralığın bitiş konumunun konumu. Bu bilgi gerekmiyorsa bu parametreyi null değeri olarak ayarlayın.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir konum kesme noktası için bir belge konumda belirtilen aralık gerçekten kod katkıda bulunan bir deyim için önceden aramak için hata ayıklama altyapısı (DE) kullanılır. Örneğin, aşağıdaki kodu düşünün:  
+ Bir konum kesme noktası için bir belge konumunda belirtilen Aralık, aslında koda katkıda bulunan bir ifadenin önünde aramak için hata ayıklama altyapısı (DE) tarafından kullanılır. Örneğin, aşağıdaki kodu göz önünde bulundurun:  
   
 ```  
 Line 5: // comment  
 Line 6: x = 1;  
 ```  
   
- Satır 5 kod hata ayıklaması yapılan programa katkıda bulunur. 5\. satırda bir kesme noktası ayarlar hata ayıklayıcı belirli bir miktar kod katkıda bulunan ilk satır için ileriye doğru arama için DE isterse, hata ayıklayıcı bir kesme noktası burada doğru yerleştirilebileceği ek aday satırları içeren bir aralık belirtmeniz gerekir. Bir kesme noktası kabul edebilecek bir satırı bulunan kadar DE ardından İleri bu satırlar arama.  
+ 5. satır hata ayıklamakta olan programa kod vermez. 5. satırda kesme noktasını ayarlayan hata ayıklayıcı, kod katkıda bulunan ilk satır için belirli bir miktarı ileri doğru aramak isterse, hata ayıklayıcı, bir kesme noktasının doğru şekilde yerleştirilebileceği ek aday çizgileri içeren bir Aralık belirler. Ayrıca, bir kesme noktası kabul edebilecek bir çizgi bulunana kadar bu satırlarda ileriye doğru arama yapılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugDocumentPositionOffset2](../../../extensibility/debugger/reference/idebugdocumentpositionoffset2.md)   

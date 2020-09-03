@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 258fc138f032d34e57df69386b6849fc3a0650a0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547595"
 ---
 # <a name="define-validation-constraints-for-uml-models"></a>UML modelleri için doğrulama kısıtlamaları tanımlama
@@ -178,7 +178,7 @@ using Microsoft.VisualStudio.Uml.Classes;
     }
     ```
 
-## <a name="executing-a-validation-constraint"></a><a name="Executing"></a>Doğrulama kısıtlaması yürütülüyor
+## <a name="executing-a-validation-constraint"></a><a name="Executing"></a> Doğrulama kısıtlaması yürütülüyor
  Test amaçları için doğrulama yöntemlerinizi hata ayıklama modunda yürütün.
 
 #### <a name="to-test-the-validation-constraint"></a>Doğrulama kısıtlamasını test etmek için
@@ -191,7 +191,7 @@ using Microsoft.VisualStudio.Uml.Classes;
 
     - Birden çok projeniz varsa, VSıX projesinin çözümün başlangıç projesi olarak ayarlandığından emin olun.
 
-    - Çözüm Gezgini, başlangıç veya yalnızca projenin kısayol menüsünde **Özellikler**' i seçin. Proje özellikleri düzenleyicisinde **Hata Ayıkla** sekmesini seçin. **dış program Başlat** alanındaki dizenin, genellikle tam yol adı olduğundan emin olun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] :
+    - Çözüm Gezgini, başlangıç veya yalnızca projenin kısayol menüsünde **Özellikler**' i seçin. Proje özellikleri düzenleyicisinde **Hata Ayıkla** sekmesini seçin. **Dış program Başlat** alanındaki dizenin, genellikle tam yol adı olduğundan emin olun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] :
 
          `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
@@ -215,11 +215,11 @@ using Microsoft.VisualStudio.Uml.Classes;
 
     - Doğru `Export` ve `ValidationMethod` öznitelikleri doğrulama yöntemlerine iliştirilir.
 
-    - `ValidationCategories.Menu`, özniteliği için bağımsız değişkenine dahildir `ValidationMethod` ve MANTıKSAL OR (&#124;) kullanılarak diğer değerlerle birlikte oluşturulur.
+    - `ValidationCategories.Menu` , özniteliği için bağımsız değişkenine dahildir `ValidationMethod` ve MANTıKSAL OR (&#124;) kullanılarak diğer değerlerle birlikte oluşturulur.
 
     - Tüm `Import` ve `Export` özniteliklerinin parametreleri geçerlidir.
 
-## <a name="evaluating-the-constraint"></a><a name="Implementing"></a>Kısıtlama değerlendiriliyor
+## <a name="evaluating-the-constraint"></a><a name="Implementing"></a> Kısıtlama değerlendiriliyor
  Doğrulama yöntemi, uygulamak istediğiniz doğrulama kısıtlamasının doğru mi yoksa yanlış mi olduğunu belirlemelidir. True ise, hiçbir şey yapmaz. Yanlış ise, parametre tarafından sunulan yöntemleri kullanarak bir hata bildirmeli `ValidationContext` .
 
 > [!NOTE]
@@ -259,7 +259,7 @@ public void ValidateSomething
 |İmza|Description|
 |-|-|
 |`[Export(typeof(System.Action <ValidationContext, object>))]`|Yöntemi, Managed Extensibility Framework (MEF) kullanarak doğrulama kısıtlaması olarak tanımlar.|
-|`[ValidationMethod (ValidationCategories.Menu)]`|Doğrulamanın gerçekleştirileceği zaman belirtir. Birden fazla seçeneği birleştirmek istiyorsanız bit düzeyinde OR (&#124;) kullanın.<br /><br /> `Menu`= Doğrula menüsü tarafından çağırılır.<br /><br /> `Save`= modeli kaydederken çağrılır.<br /><br /> `Open`= modeli açma sırasında çağrılır. `Load`= modeli kaydederken çağrılır, ancak bir nedeni için kullanıcıyı, modeli yeniden açmak mümkün olmayabileceğini uyarır. Model ayrıştırıldıktan önce yükleme sırasında da çağırılır.|
+|`[ValidationMethod (ValidationCategories.Menu)]`|Doğrulamanın gerçekleştirileceği zaman belirtir. Birden fazla seçeneği birleştirmek istiyorsanız bit düzeyinde OR (&#124;) kullanın.<br /><br /> `Menu` = Doğrula menüsü tarafından çağırılır.<br /><br /> `Save` = modeli kaydederken çağrılır.<br /><br /> `Open` = modeli açma sırasında çağrılır. `Load` = modeli kaydederken çağrılır, ancak bir nedeni için kullanıcıyı, modeli yeniden açmak mümkün olmayabileceğini uyarır. Model ayrıştırıldıktan önce yükleme sırasında da çağırılır.|
 |`public void ValidateSomething`<br /><br /> `(ValidationContext context,`<br /><br /> `IElement element)`|İkinci parametreyi, `IElement` kısıtlamasının uygulanmasını istediğiniz öğe türüne göre değiştirin. Kısıtlama yöntemi belirtilen türdeki tüm öğelerde çağrılacaktır.<br /><br /> Yöntemin adı önemli değildir.|
 
  İkinci parametrede farklı türlerle istediğiniz kadar çok doğrulama yöntemi tanımlayabilirsiniz. Doğrulama çağrıldığında her bir doğrulama yöntemi parametre türüne uyan her model öğesinde çağrılır.
@@ -271,9 +271,9 @@ public void ValidateSomething
 
 - `"error string"`[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]hata listesi görünür
 
-- `errorCode`hatanın benzersiz tanımlayıcısı olması gereken bir dizedir
+- `errorCode` hatanın benzersiz tanımlayıcısı olması gereken bir dizedir
 
-- `elementsWithError`modeldeki öğeleri tanımlar. Kullanıcı hata raporuna çift tıkladığında, bu öğeyi temsil eden şekil seçilir.
+- `elementsWithError` modeldeki öğeleri tanımlar. Kullanıcı hata raporuna çift tıkladığında, bu öğeyi temsil eden şekil seçilir.
 
   `LogError(),``LogWarning()`ve `LogMessage()` iletileri hata listesinin farklı bölümlerine yerleştirebilirsiniz.
 
@@ -349,7 +349,7 @@ IUseCase useCase = useCaseShape.Element;
 context.LogError(... , usecase);
 ```
 
-### <a name="coordinating-multiple-validations"></a><a name="ContextCache"></a>Birden çok doğrulamayı koordine etme
+### <a name="coordinating-multiple-validations"></a><a name="ContextCache"></a> Birden çok doğrulamayı koordine etme
  Doğrulama çağrıldığında, örneğin bir diyagram menüsünden Kullanıcı tarafından her bir doğrulama yöntemi her bir model öğesine uygulanır. Bu, doğrulama çerçevesinin tek bir çağrısında aynı yöntemin farklı öğelere birçok kez uygulanabileceğini gösterir.
 
  Bu, öğeler arasındaki ilişkilerle ilgilenen doğrulamalar için bir sorun gösterir. Örneğin, ' den başlayan bir doğrulama yazabilir, bir kullanım örneği ve bir döngü olmadığını doğrulamak için **dahil etme** ilişkilerinden geçiş yapabilirsiniz. Ancak yöntem, çok sayıda **ekleme** bağlantısı olan bir modelde her kullanım örneğine uygulandığında, modelin aynı alanlarının tekrar tekrar işlenmesi olasıdır.
@@ -363,7 +363,7 @@ context.LogError(... , usecase);
 |`context.GetValue<T>(name)`|Bir değer alın.|
 |`Context.GetValue<T>()`|Belirtilen türde bir değer alır.|
 
-## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a>Uzantı yükleme ve kaldırma
+## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a> Uzantı yükleme ve kaldırma
  Bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] uzantıyı, hem kendi bilgisayarınıza hem de diğer bilgisayarlara yükleyebilirsiniz.
 
 #### <a name="to-install-an-extension"></a>Uzantı yüklemek için
@@ -396,7 +396,7 @@ context.LogError(... , usecase);
 
    *% LocalAppData%* **\microsoft\visualstudio \\ [sürüm] \Extensions**
 
-## <a name="example"></a><a name="Example"></a>Örneğinde
+## <a name="example"></a><a name="Example"></a> Örneğinde
  Bu örnek, öğeler arasındaki bağımlılık ilişkisindeki döngüleri bulur.
 
  Her ikisini de Kaydet ve Doğrula menü komutunda doğrular.

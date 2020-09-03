@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericParamField::GetNameOfFormalParam | Microsoft Dokümanlar
+title: 'Idebuggenericparamfield:: GetNameOfFormalParam | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +15,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 03fb76b96804df900e21b0f91b9c5ba599449cf5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727964"
 ---
 # <a name="idebuggenericparamfieldgetnameofformalparam"></a>IDebugGenericParamField::GetNameOfFormalParam
 Bu genel parametrenin adını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetNameOfFormalParam (
@@ -40,13 +40,13 @@ int GetNameOfFormalParam (
 
 ## <a name="parameters"></a>Parametreler
 `pbstrName`\
-[çıkış] Bu genel parametrenin adı.
+dışı Bu genel parametrenin adı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) arabirimini ortaya çıkaran bir **CDebugGenericParamFieldType** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, [ıdebuggenericparamfield](../../../extensibility/debugger/reference/idebuggenericparamfield.md) arabirimini kullanıma sunan bir **cdebuggenericparamtcobject** için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugGenericParamFieldType::GetNameOfFormalParam(BSTR *pbstrName)

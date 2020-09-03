@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ffa2b0fd8cab35fc73031d3ead8a5803558c2c07
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667949"
 ---
 # <a name="how-to-exclude-projects-from-a-build"></a>Nasıl yapılır: Derlemeden Projeleri Hariç Tutma
@@ -43,7 +43,7 @@ Bir çözümü, içerdiği tüm projeleri oluşturmadan oluşturabilirsiniz. Ör
 
 1. Menü çubuğunda, **Configuration Manager** **Oluştur**' u seçin.
 
-2. **Etkin çözüm yapılandırması** listesinde **\<New >** ' ni seçin.
+2. **Etkin çözüm yapılandırması** listesinde, öğesini seçin **\<New>** .
 
 3. **Ad** kutusuna çözüm yapılandırması için bir ad girin.
 

@@ -10,18 +10,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c0ae3dd206953e728175f4479920861295feae00
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200297"
 ---
 # <a name="vsgdbgvsgdbg-destructor"></a>VsgDbg::~VsgDbg (Yok Edici)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Örneğini yok eder `VsgDbg` sınıfı. Grafik bilgilerini etkin bir şekilde kaydedilen, grafik günlük dosyasını sonlandırılır ve ve etkin bir şekilde grafik bilgilerini yakalama sırasında kullanılan kaynaklar serbest bırakılır.  
+Sınıfının bir örneğini yok eder `VsgDbg` . Grafik bilgileri etkin bir şekilde kaydedildiyse, grafik günlük dosyası sonlandırılır ve kapatılır ve grafik bilgilerini etkin bir şekilde yakalarken kullanılan kaynaklar serbest bırakılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 ~VsgDbg();  

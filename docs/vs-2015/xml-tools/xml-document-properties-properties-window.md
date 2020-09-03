@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f620cc2bd189dccf067c6276f760d21cde5cf05e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669513"
 ---
 # <a name="xml-document-properties-properties-window"></a>XML Belge Özellikleri, Özellik Penceresi
@@ -26,19 +26,19 @@ ms.locfileid: "72669513"
 
  **Kodlama** Dosya için karakter kodlaması. Bu özelliğin değiştirilmesi, XML bildiriminde kodlama özniteliğini de değiştirir ve tam tersi de geçerlidir. Yeni kodlama dosyayı kaydettiğinizde dosyayı kodlamak için kullanılacaktır.
 
- **Giriş** XSLT stil sayfasıyla ilişkili giriş belgesi. **Showxslt output** komutu tarafından kullanılır. Bir belge, gezinme ( **...** ) düğmesi kullanılarak seçilebilir.
+ **Giriş** XSLT stil sayfasıyla ilişkili giriş belgesi. **Showxslt output** komutu tarafından kullanılır. Bir belge, gezinme (**...**) düğmesi kullanılarak seçilebilir.
 
  Bu özellik yalnızca düzenleyici penceresinde şu anda etkin olan bir XSLT dosyası olduğunda görülebilir.
 
  **Çıkış** Bir XML belgesi dönüştürülürken oluşturulan dosya.
 
- Bir dosya belirtilmemişse, dosya uzantısını belirleyen `xsl:output` öğesindeki `method` özniteliğe göre varsayılan bir dosya adı oluşturulur. Varsayılan dosya, geçerli kullanıcının geçici dizininde bulunur.
+ Bir dosya belirtilmemişse, `method` `xsl:output` dosya uzantısını belirleyen öğesindeki özniteliği temel alarak varsayılan bir dosya adı oluşturulur. Varsayılan dosya, geçerli kullanıcının geçici dizininde bulunur.
 
  **Şemalar** Doğrulama için kullanılacak şemalar. Düğme, kullanılacak şemaları seçmek için kullanılabilecek **xsd şemaları** iletişim kutusunu açar.
 
  Ayrıca, şemaların yolunu da girebilirsiniz. Birden çok şema belirtilirse, her şema yolunun çift tırnak içine alınması gerekir.
 
- **Stil sayfası** **XSLT çıkışını göster** komutu kullanıldığında belgeyi dönüştürmek IÇIN kullanılan XSLT dosyası. **XSLT çıkışını göster** komutu kullanıldığında bu alan boşsa, düzenleyici belgenin `xml-stylesheet` işleme yönergesinde belirtilen değeri kullanır veya dosya adını ister.
+ **Stil sayfası** **XSLT çıkışını göster** komutu kullanıldığında belgeyi dönüştürmek IÇIN kullanılan XSLT dosyası. **XSLT çıkışını göster** komutu kullanıldığında bu alan boşsa, düzenleyici `xml-stylesheet` belgenin işleme yönergesinde belirtilen değeri kullanır veya dosya adını ister.
 
  XSLT dosyasını düzenlenirken, bu özellik **XSLT çıktısını göster** veya **XSLT** 'yi görüntüle komutu seçildiğinde farklı bir stil sayfasının kullanılması gerektiğini belirtmek için kullanılabilir. Örneğin, bir üst stil sayfasına dahil olan bir stil sayfasını düzenlediğinizde bunu yapmak isteyebilirsiniz.
 
