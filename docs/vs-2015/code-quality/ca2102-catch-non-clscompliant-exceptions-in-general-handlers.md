@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: e2335b6d2bc3a5e99f0e6de1afefac4f42de0501
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85521309"
 ---
 # <a name="ca2102-catch-non-clscompliant-exceptions-in-general-handlers"></a>CA2102: CLSCompliant olmayan özel durumları genel işleyiciler içinde yakalayın
@@ -37,9 +37,9 @@ ms.locfileid: "85521309"
 ## <a name="rule-description"></a>Kural Tanımı
  <xref:System.Exception>Tüm ortak dil belirtimi (CLS) uyumlu özel durumlarını yakalayan bir catch bloğu. Ancak, CLS uyumlu olmayan özel durumları yakalamaz. CLS uyumlu olmayan özel durumlar yerel koddan veya Microsoft ara dili (MSIL) derleyicisi tarafından oluşturulan yönetilen koddan oluşturulabilir. C# ve [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] derleyicilerin CLS uyumlu olmayan özel durumların atılamayacağını ve [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] CLS uyumlu olmayan özel durumları yakalamayacağını unutmayın. Catch bloğunun amacı tüm özel durumları işlemek ise, aşağıdaki genel catch bloğu sözdizimini kullanın.
 
-- Þ`catch {}`
+- Þ `catch {}`
 
-- C++: `catch(...) {}` veya`catch(Object^) {}`
+- C++: `catch(...) {}` veya `catch(Object^) {}`
 
   İşlenmemiş CLS uyumlu olmayan bir özel durum, önceden izin verilen izinler catch bloğunda kaldırıldığında bir güvenlik sorunu haline gelir. CLS uyumlu olmayan özel durumlar yakalanmadığı için, CLS uyumlu olmayan bir özel durum oluşturan kötü niyetli bir yöntem yükseltilmiş izinlerle çalıştırılabilir.
 

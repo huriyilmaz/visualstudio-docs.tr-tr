@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: abd175e2ebc69fc21481aeeee9f5da76d1c40109
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202451"
 ---
 # <a name="average-cpu-utilization"></a>Ortalama CPU Kullanımı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Profilli işlemin işleminin süresi için sistemin mantıksal çekirdek ortalama kullanımını gösterir. Graf, belirli bir zamanda hangi belirli çekirdek etkindir göstermez. Örneğin, iki çekirdek her belirli bir süre için % 50 kapasitesine çalıştırıyorsanız, bu görünüm kullanılan bir mantıksal çekirdek gösterilir.  
+İşlem süresince sistemin mantıksal çekirdekleri için profili oluşturulan işlemin ortalama kullanımını gösterir. Grafik, belirli bir zamanda hangi belirli çekirdeğin etkin olduğunu göstermez. Örneğin, her biri belirli bir süre için %50 kapasitesinde iki çekirdek çalışıyorsa, bu görünümde kullanılan bir mantıksal çekirdek gösterilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Çekirdekler görünümü](../profiling/cores-view.md)   

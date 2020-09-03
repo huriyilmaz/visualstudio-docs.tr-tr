@@ -1,5 +1,5 @@
 ---
-title: Uzantı yayımlamak | Microsoft Docs
+title: Uzantı yayımlama | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,89 +12,89 @@ caps.latest.revision: 21
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5238274d66296a21e15b47d1a090ab01c1a1299d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68201977"
 ---
-# <a name="walkthrough-publishing-a-visual-studio-extension"></a>İzlenecek yol: Visual Studio Uzantısı Yayımlama
+# <a name="walkthrough-publishing-a-visual-studio-extension"></a>İzlenecek Yol: Visual Studio Uzantısı Yayımlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Not**: Visual Studio Galerisi, Visual Studio Market tarafından değiştirilmektedir. Ayrıntılar için bu konunun en son sürümüne bakın.
+**Note**: Visual Studio Galerisi Visual Studio Market değiştiriliyor. Ayrıntılar için bu konunun en son sürümüne bakın.
 
-Bu izlenecek yol, Visual Studio uzantısı için Visual Studio Galerisine yayımlama gösterilmektedir. Uzantınızı Galerisine eklediğinizde, geliştiriciler kullanabilir **Uzantılar ve güncelleştirmeler** için yeni ve güncelleştirilmiş uzantıları var gidin.
+Bu izlenecek yol, Visual Studio uzantısının Visual Studio Galerisine nasıl yayımlanacağını göstermektedir. Uzantınızı galeriye eklediğinizde, geliştiriciler **uzantıları ve güncelleştirmeleri** kullanarak yeni ve güncelleştirilmiş uzantılara gözatabilirler.
 
-## <a name="prerequisites"></a>Önkoşullar
- Bu izlenecek yolda takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
+## <a name="prerequisites"></a>Ön koşullar
+ Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
 
-## <a name="create-a-visual-studio-extension"></a>Visual Studio uzantısı oluşturun
- Bu durumda bir varsayılan VSPackage uzantısı kullanacağız, ancak aynı adımları her uzantı türü için geçerlidir.
+## <a name="create-a-visual-studio-extension"></a>Visual Studio uzantısı oluşturma
+ Bu durumda, varsayılan VSPackage uzantısını kullanacağız, ancak aynı adımlar her uzantı türü için geçerli olur.
 
-1. C# ' adlı bir VSPackage'ı oluşturma `TestPublishing` olan bir menü komutu. Daha fazla bilgi için [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
+1. Bir menü komutu olan adlı C# adlı bir VSPackage oluşturun `TestPublishing` . Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
 
-## <a name="test-the-extension"></a>Uzantıyı test etmek
- Uzantı dağıtmadan önce yapı ve Visual Studio'nun deneysel örneğinde doğru şekilde yüklendiğinden emin olmak için test edin.
+## <a name="test-the-extension"></a>Uzantıyı test etme
+ Uzantıyı dağıtmadan önce, Visual Studio 'nun deneysel örneğine doğru yüklendiğinden emin olmak için oluşturun ve test edin.
 
-1. Visual Studio'da hata ayıklama başlatılamıyor. Visual Studio deneysel örneği açılacak.
+1. Visual Studio 'da hata ayıklamayı başlatın. Visual Studio 'nun deneysel bir örneğini açmak için.
 
-2. Deneysel örneğinde Git **Araçları** menüsüne ve ardından **Uzantı Yöneticisi**. TestPublishing uzantısı, Orta bölmede görünür olmalıdır ve etkinleştirilmesi.
+2. Deneysel örnekte, **Araçlar** menüsüne gidin ve **Uzantı Yöneticisi**' ne tıklayın. TestPublishing uzantısı, Orta bölmede görünmelidir ve etkinleştirilmelidir.
 
-3. Üzerinde **Araçları** menüsünde, test komut gördüğünüzden emin olun.
+3. **Araçlar** menüsünde, test komutunu görtığınızdan emin olun.
 
-## <a name="publish-the-extension-to-the-visual-studio-gallery"></a>Uzantısı için Visual Studio Galerisine yayımlama
- Artık uzantı Visual Studio Galerisi'nde yayımlayabilirsiniz.
+## <a name="publish-the-extension-to-the-visual-studio-gallery"></a>Uzantıyı Visual Studio Galerisine yayımlayın
+ Artık uzantıyı Visual Studio Galerisi ' ne yayımlayabilirsiniz.
 
-1. Uzantınızı sürümü oluşturulan ve güncel olduğundan emin olun.
+1. Uzantınızın yayın sürümünü derlediğinizden ve güncel olduğundan emin olun.
 
-2. Bir web tarayıcısında açın [Visual Studio Market](https://marketplace.visualstudio.com/) Web sitesi.
+2. Bir Web tarayıcısında [Visual Studio Market](https://marketplace.visualstudio.com/) Web sitesini açın.
 
-3. Sağ üst köşede **SIGN IN**.
+3. Sağ üst köşede **oturum aç**' a tıklayın.
 
-4. Oturum açmak için Microsoft hesabınızı kullanın. Bir Microsoft hesabınız yoksa bir bu noktada oluşturabilirsiniz.
+4. Oturum açmak için Microsoft hesabı kullanın. Bir Microsoft hesabı yoksa, bu noktada bir tane oluşturabilirsiniz.
 
 5. **Karşıya Yükle**'ye tıklayın.
 
-6. İçinde **1. adım: Uzantı türü**seçin **aracı** ve ardından **sonraki**.
+6. **Adım 1: uzantı türü**' nde **araç** ' i seçin ve ardından **İleri**' ye tıklayın.
 
-7. İçinde **2. adım: Karşıya yükleme**, doğrudan Visual Studio Galeri'ye yükleyin ya da yalnızca kendi Web sitesine bir bağlantı eklemek seçebilirsiniz. Bu örnekte **my aracı yüklemek istediğiniz**. **Denetiminizi seçin** kutusu görüntülenir. Tıklayın **Gözat** ve ardından TestPublish.vsix projenin \bin\Release klasörü seçin.           **İleri**'ye tıklayın.
+7. **2. Adım: karşıya yükleme**' de, doğrudan Visual Studio Galerisine yüklemeyi seçebilir veya yalnızca kendi web sitenizin bağlantısını ekleyebilirsiniz. Bu durumda, **aracımı karşıya yüklemek istiyorum**' u seçin. **Denetiminizi Seç** kutusu görüntülenir. **Göz at** ' a tıklayın ve ardından projenin \Bin\release klasöründe TestPublish. vsix ' yi seçin. **İleri**’ye tıklayın.
 
-8. İçinde **3. adım: Temel bilgileri**, source.extension.vsixmanifest dosyası alanları görüntülenir. Uygun bir seçin **kategori** ve ekleme **etiketleri** uzantınızı bulmalarına yardımcı olmak için. Daha ayrıntılı Özet ve Açıklama (Açıklama 280 en az karakter uzunluğunda olmalıdır) eklemek isteyebilirsiniz. Bırakın **uzantı türü** olarak **Microsoft uzantısı** ve **maliyet kategorisi** olarak **deneme**.
+8. **3. Adım: temel bilgiler**, kaynak. Extension. valtmanifest dosyasındaki alanlar görüntülenir. Kullanıcılarınızın uzantınızı bulmasına yardımcı olmak için uygun bir **Kategori** seçin ve **Etiketler** ekleyin. Daha ayrıntılı bir Özet ve açıklama eklemek isteyebilirsiniz (açıklama en az 280 karakter uzunluğunda olmalıdır). **Uzantı türünü** **Microsoft uzantısı** ve **Maliyet kategorisi** olarak **deneme**olarak bırakın.
 
-9. Sayfanın alt kısmındaki Katkı Sözleşmesi'ni okuyun ve kontrol **kabul ediyorum**.
+9. Sayfanın alt kısmındaki katkı anlaşmasını okuyun ve **kabul**ediyorum ' a bakın.
 
-10. Tıklayın **katkı oluşturma**. Bu, uzantınızın Visual Studio Galerisi'nde sayfanın henüz yayımlanmadı, bir iletiyle üzerinde olacaktır sayfasını görüntüler.
+10. **Katkı oluştur**' a tıklayın. Bu, uzantınızın Visual Studio galerisinde, sayfanın henüz yayımlanmadığı bir iletiyle birlikte sahip olacağı sayfayı görüntüler.
 
-11. Tıklayın **yayımlama**.
+11. **Yayımla**’ya tıklayın.
 
-12. Visual Studio Galerisi Uzantınız için arama yapın. Listenin TestPublish uzantısı görüntülenmesi gerekir.
+12. Uzantınızın Visual Studio Galerisinde arama yapın. TestPublish uzantısının listesi görünmelidir.
 
-## <a name="install-the-extension-from-the-visual-studio-gallery"></a>Visual Studio Gallery'den uzantıyı yükleme
- Uzantı yayımlandıktan sonra Visual Studio'da yükleyin ve test etmek.
+## <a name="install-the-extension-from-the-visual-studio-gallery"></a>Uzantıyı Visual Studio galerisinden yükler
+ Artık uzantı yayımlandığına göre, Visual Studio 'Ya yükleyip test edin.
 
-1. Visual Studio'da üzerinde **Araçları** menüsünü tıklatın **Uzantılar ve güncelleştirmeler**.
+1. Visual Studio 'da, **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler**' e tıklayın.
 
-2. Tıklayın **çevrimiçi** ve sonra TestPublish için arama yapın. Listenin TestPublish uzantısı görüntülenmesi gerekir.
+2. **Çevrimiçi** ' e tıklayın ve ardından TestPublish için arama yapın. TestPublish uzantısının listesi görünmelidir.
 
-3. **İndir**'e tıklayın. Uzantısı yüklendikten sonra tıklayın **yükleme**.
+3. **İndir**'e tıklayın. Uzantı indirildikten sonra, **yükler**' e tıklayın.
 
-4. Yüklemeyi tamamlamak için Visual Studio'yu yeniden başlatın.
+4. Yüklemeyi gerçekleştirmek için, Visual Studio 'Yu yeniden başlatın.
 
-## <a name="removing-the-extension"></a>Uzantıyı kaldırma
- Uzantı, Visual Studio Galerisi ve bilgisayarınızdan kaldırabilirsiniz.
+## <a name="removing-the-extension"></a>Uzantı kaldırılıyor
+ Uzantıyı Visual Studio galerisinden ve bilgisayarınızdan kaldırabilirsiniz.
 
-#### <a name="to-remove-the-extension-from-the-visual-studio-gallery"></a>Visual Studio Gallery'den uzantıyı kaldırmak için
+#### <a name="to-remove-the-extension-from-the-visual-studio-gallery"></a>Uzantıyı Visual Studio galerisinden kaldırmak için
 
-1. Açık [Visual Studio Market](https://marketplace.visualstudio.com/) Web sitesi.
+1. [Visual Studio Market](https://marketplace.visualstudio.com/) Web sitesini açın.
 
-2. Sağ üst köşede **My Extenions**. TestPublish listesi görüntülenir.
+2. Sağ üst köşedeki **uzantı seçenekleri**' ne tıklayın. TestPublish listesi görüntülenir.
 
-3. Tıklayın **Sil**.
+3. **Sil**'e tıklayın.
 
 #### <a name="to-remove-the-extension-from-your-computer"></a>Uzantıyı bilgisayarınızdan kaldırmak için
 
-1. Visual Studio'da üzerinde **Araçları** menüsünde tıklatın **Uzantı Yöneticisi**.
+1. Visual Studio 'da, **Araçlar** menüsünde **Uzantı Yöneticisi**' ne tıklayın.
 
-2. TestPublish seçin ve ardından **kaldırma**.
+2. TestPublish ' ı seçin ve ardından **Kaldır**' a tıklayın.
 
-3. Kaldırma işlemini tamamlamak için Visual Studio'yu yeniden başlatın.
+3. Kaldırma işlemini gerçekleştirmek için Visual Studio 'Yu yeniden başlatın.

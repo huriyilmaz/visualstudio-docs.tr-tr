@@ -13,18 +13,18 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: bd25a3cb5b2d074e989b47f33513e05538868759
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203045"
 ---
-# <a name="fieldmodifiers"></a>FIELD_MODIFIERS
+# <a name="field_modifiers"></a>FIELD_MODIFIERS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 Alan türü için değiştiriciler belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_FIELD_MODIFIERS {   
@@ -105,96 +105,96 @@ public enum enum_FIELD_MODIFIERS {
   
 ## <a name="members"></a>Üyeler  
  FIELD_MOD_ACCESS_TYPE  
- Alan erişilemez gösterir.  
+ Alana erişilemediğini belirtir.  
   
  FIELD_MOD_ACCESS_PUBLIC  
- Alan genel erişime sahip olduğunu gösterir.  
+ Alanın genel erişimi olduğunu gösterir.  
   
  FIELD_MOD_ACCESS_PROTECTED  
- Alan Korumalı Erişim olduğunu gösterir.  
+ Alanın korumalı erişimi olduğunu gösterir.  
   
  FIELD_MOD_ACCESS_PRIVATE  
- Alan özel erişimi olduğunu gösterir.  
+ Alanın özel erişimi olduğunu gösterir.  
   
  FIELD_MOD_NOMODIFIERS  
- Alanın hiçbir değiştiricilere sahip olduğunu gösterir.  
+ Alanda değiştiriciler olmadığını gösterir.  
   
  FIELD_MOD_STATIC  
- Alanı statik olduğunu gösterir.  
+ Alanın statik olduğunu gösterir.  
   
  FIELD_MOD_CONSTANT  
- Alan bir sabit olduğunu gösterir.  
+ Alanın bir sabit olduğunu gösterir.  
   
  FIELD_MOD_TRANSIENT  
- Alan geçici olduğunu gösterir.  
+ Alanın geçici olduğunu gösterir.  
   
  FIELD_MOD_VOLATILE  
- Alan geçici olduğunu gösterir.  
+ Alanın geçici olduğunu gösterir.  
   
  FIELD_MOD_ABSTRACT  
- Alan soyut olduğunu gösterir.  
+ Alanın soyut olduğunu gösterir.  
   
  FIELD_MOD_NATIVE  
- Alan yerel olduğunu gösterir.  
+ Alanın yerel olduğunu gösterir.  
   
  FIELD_MOD_SYNCHRONIZED  
- Alan eşitlendiğini gösterir.  
+ Alanın eşitleneceğini belirtir.  
   
  FIELD_MOD_VIRTUAL  
- Alan sanal olduğunu gösterir.  
+ Alanın sanal olduğunu gösterir.  
   
  FIELD_MOD_INTERFACE  
- Alan bir arabirim olduğunu gösterir.  
+ Alanın bir arabirim olduğunu gösterir.  
   
  FIELD_MOD_FINAL  
  Alanın son olduğunu gösterir.  
   
  FIELD_MOD_SENTINEL  
- Alanın bir sentinel olduğunu gösterir.  
+ Alanın Sentinel olduğunu gösterir.  
   
  FIELD_MOD_INNERCLASS  
  Alanın bir iç sınıf olduğunu gösterir.  
   
  FIELD_TYPE_OPTIONAL  
- Bu alan isteğe bağlı olduğunu gösterir.  
+ Alanın isteğe bağlı olduğunu gösterir.  
   
  FIELD_MOD_BYREF  
- Alanın başvuru bağımsız değişkeni olduğunu gösterir. Bu, özellikle yöntem bağımsız olur.  
+ Alanın bir başvuru bağımsız değişkeni olduğunu gösterir. Bu özel olarak Yöntem bağımsız değişkenleri içindir.  
   
  FIELD_MOD_HIDDEN  
- Alanı gizli veya başka bir bağlamda sunulan olduğunu gösterir. Örneğin, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] statik yerel öğeler.  
+ Alanın gizlenmesi gerektiğini veya başka bir bağlamda sunulmasını belirtir; Örneğin, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] statik Yereller.  
   
  FIELD_MOD_MARSHALASOBJECT  
- Alan bir nesne ile temsil ettiğini gösteren bir `IUnknown` arabirimi.  
+ Alanın arabirime sahip bir nesneyi temsil ettiğini belirtir `IUnknown` .  
   
  FIELD_MOD_SPECIAL_NAME  
- Alan özel bir adı, örneğin, sahip olduğunu gösterir `.ctor` bir oluşturucu için ([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] yalnızca).  
+ Alanın `.ctor` bir Oluşturucu (yalnızca) için özel bir ada sahip olduğunu gösterir [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .  
   
  FIELD_MOD_HIDEBYSIG  
- Alana sahip olduğunu gösterir `Overloads` uygulanmış anahtar sözcüğü ([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] yalnızca).  
+ Alanın `Overloads` kendisine uygulanmış anahtar sözcüğü olduğunu belirtir ( [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] yalnızca).  
   
  FIELD_MOD_WRITEONLY  
- Alanın salt yazılır olduğunu gösterir. Bu değer yer almayan `FIELD_MOD_ALL`gibi yalnızca bu tür salt yazılır alanlar İşlev değerlendirmesi için kullanılır. Bir kullanıcı için açıkça kaldırmasını `FIELD_MOD_WRITEONLY` alanları.  
+ Alanın salt yazılır olduğunu gösterir. Yalnızca bu `FIELD_MOD_ALL` tür salt yazılır alanların kullanımı işlev değerlendirmesi için olduğundan, bu değer öğesine dahil değildir. Kullanıcının alanları açıkça istemesi gerekir `FIELD_MOD_WRITEONLY` .  
   
  FIELD_MOD_ACCESS_MASK  
  Alan erişimi için bir maske gösterir.  
   
  FIELD_MOD_MASK  
- Alan değiştiricilerini için bir maske gösterir.  
+ Alan değiştiricileri için bir maske gösterir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İçin kullanılan `dwModifiers` üyesi [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) yapısı.  
+ `dwModifiers` [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) yapısının üyesi için kullanılır.  
   
- Bu değerleri de geçirilen [EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md) belirli alanlar için filtre uygulamak için yöntemi.  
+ Bu değerler, belirli alanları filtrelemek için [EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md) yöntemine de geçirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: sh.h  
+ Üstbilgi: SH. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)   
  [EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md)

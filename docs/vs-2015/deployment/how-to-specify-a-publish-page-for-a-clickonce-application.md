@@ -19,48 +19,48 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 63356c6eb423ddead54290cc11c865a5102f55f2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202166"
 ---
 # <a name="how-to-specify-a-publish-page-for-a-clickonce-application"></a>Nasıl yapılır: ClickOnce Uygulaması için bir Yayımlama Sayfası Belirtme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yayımlama sırasında bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] varsayılan bir Web sayfası (publish.htm) oluşturulur ve uygulama ile birlikte yayımlanan uygulama. Bu sayfaya uygulaması, uygulama ve/veya tüm önkoşulları yüklemek için bir bağlantı ve açıklayan bir Yardım konusu için bir bağlantı adını içeren [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. **Yayımla Sayfası** projeniz için özellik, Web sayfası için bir ad belirtmenize olanak sağlar, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama.  
+Bir uygulamayı yayımlarken [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] , uygulama ile birlikte varsayılan bir Web sayfası (publish.htm) oluşturulup yayımlanır. Bu sayfa, uygulamanın adını, uygulamayı yüklemeye yönelik bağlantıyı ve/veya önkoşulları ve bir Yardım konusunun bağlantısını içerir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] . Projeniz için **Yayımla sayfası** özelliği, uygulamanız için Web sayfası için bir ad belirtmenizi sağlar [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] .  
   
- Sonraki yayımladığınızda, yayımlama sayfasında belirtilen sonra yayımlama konumuna kopyalanır; yeniden yayımlarsanız yazılmaz. Sayfa görünümünü özelleştirmek istiyorsanız, değişikliklerinizi kaybetmek hakkında endişelenmeden bunu yapabilirsiniz. Daha fazla bilgi için [nasıl yapılır: ClickOnce Varsayılan Web sayfasını özelleştirme](../deployment/how-to-customize-the-default-web-page-for-a-clickonce-application.md).  
+ Yayımla sayfası belirtilmişse, bir sonraki yayımladıktan sonra yayımlama konumuna kopyalanacaktır; yeniden yayımladığınızda üzerine yazılmaz. Sayfanın görünümünü özelleştirmek istiyorsanız, değişikliklerinizi kaybetme hakkında endişelenmeden bunu yapabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce varsayılan Web sayfasını özelleştirme](../deployment/how-to-customize-the-default-web-page-for-a-clickonce-application.md).  
   
- **Yayımla Sayfası** özellik ayarlanabilir **yayımlama seçeneği** iletişim kutusu, erişilebilir **Yayımla** bölmesinde **Proje Tasarımcısı**.  
+ **Yayımla sayfası** özelliği, **Proje Tasarımcısı**' nın **Yayımla** bölmesinden erişilebilen **Yayımla Seçenekleri** iletişim kutusunda ayarlanabilir.  
   
-### <a name="to-specify-a-custom-web-page-for-a-clickonce-application"></a>ClickOnce uygulaması için özel bir Web sayfasını belirtmek için  
+### <a name="to-specify-a-custom-web-page-for-a-clickonce-application"></a>ClickOnce uygulaması için özel bir Web sayfası belirtmek için  
   
-1. Seçili bir projeyle **Çözüm Gezgini**, **proje** menüsünü tıklatın **özellikleri**.  
+1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.  
   
-2. Seçin **Yayımla** bölmesi.  
+2. **Yayımla** bölmesini seçin.  
   
-3. Tıklayın **seçenekleri** açmak için düğmeyi **yayımlama seçeneği** iletişim kutusu.  
+3. **Yayımla Seçenekleri** iletişim kutusunu açmak için **Seçenekler** düğmesine tıklayın.  
   
-4. Tıklayın **dağıtım**.  
+4. **Dağıtım**' ye tıklayın.  
   
-5. İçinde **yayımlama seçeneği** iletişim kutusunda, emin olun **sonra açık dağıtım web sayfasını yayımlama** onay kutusu seçildiğinde (varsayılan olarak seçili).  
+5. **Yayımla Seçenekleri** iletişim kutusunda, Yayımla ' nın **ardından dağıtım Web sayfasını aç** onay kutusunun seçili olduğundan emin olun (varsayılan olarak seçilmelidir).  
   
-6. İçinde **dağıtım web sayfasını:** kutusuna Web sayfası için bir ad girin ve ardından **Tamam**.  
+6. **Dağıtım Web sayfası:** kutusuna Web sayfanızın adını girin ve ardından **Tamam**' a tıklayın.  
   
-### <a name="to-prevent-the-publish-page-from-launching-each-time-you-publish"></a>Yayımlama sayfasında her yayımlama işleminde başlamasını engellemek için  
+### <a name="to-prevent-the-publish-page-from-launching-each-time-you-publish"></a>Yayımla sayfasının her yayımlaışınızda başlatılmasını engellemek için  
   
-1. Seçili bir projeyle **Çözüm Gezgini**, **proje** menüsünü tıklatın **özellikleri**.  
+1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.  
   
-2. Seçin **Yayımla** bölmesi.  
+2. **Yayımla** bölmesini seçin.  
   
-3. Tıklayın **seçenekleri** açmak için düğmeyi **yayımlama seçeneği** iletişim kutusu.  
+3. **Yayımla Seçenekleri** iletişim kutusunu açmak için **Seçenekler** düğmesine tıklayın.  
   
-4. Tıklayın **dağıtım**.  
+4. **Dağıtım**' ye tıklayın.  
   
-5. İçinde **yayımlama seçeneği** iletişim kutusu, NET **sonra açık dağıtım web sayfasını yayımlama** onay kutusu.  
+5. **Yayımla Seçenekleri** iletişim kutusunda, **yayımlamadan sonra dağıtım Web sayfasını aç** onay kutusunu temizleyin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md)   
- [Nasıl yapılır: Yayımlama Sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
+ [Nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
  [Nasıl yapılır: ClickOnce Varsayılan Web Sayfasını Özelleştirme](../deployment/how-to-customize-the-default-web-page-for-a-clickonce-application.md)

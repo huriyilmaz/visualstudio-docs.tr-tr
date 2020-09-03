@@ -1,5 +1,5 @@
 ---
-title: '6\. Adım: çıkarma sorunu ekleme | Microsoft Docs'
+title: '6. Adım: çıkarma sorunu ekleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8ec0bdd3ebae52158c5631a880e63ee0f3a455de
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671708"
 ---
-# <a name="step-6-add-a-subtraction-problem"></a>6\. Adım: Çıkarma Problemi Ekleme
+# <a name="step-6-add-a-subtraction-problem"></a>6. Adım: Çıkarma Problemi Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu öğreticinin altıncı bölümünde, bir çıkarma sorunu ekleyecek ve aşağıdaki görevlerin nasıl gerçekleştirileceğini öğreneceksiniz:
@@ -38,34 +38,34 @@ Bu öğreticinin altıncı bölümünde, bir çıkarma sorunu ekleyecek ve aşa�
 
      Yeni tamsayı değişkenlerinin adları —**eksilen** ve **çıkarılan**— programlama terimleridir. Çıkarılan numara için aritmetik olarak geleneksel adlara sahiptir (çıkarılan) ve çıkarılan çıkarılan sayı (minuend). Aradaki fark, çıkarılan 'in eksi. Programınız değişkenler, denetimler, bileşenler veya yöntemler için özel adlar gerektirmediğinden diğer adları kullanabilirsiniz. Adları basamakla başlatma gibi kuralları izlemeniz gerekir, ancak genellikle x1, X2, X3 ve x4 gibi adları kullanabilirsiniz. Ancak, genel adlar kodun okunmasını zorlaştırabilir ve sorunları neredeyse olanaksız hale getirir. Değişken adlarını benzersiz ve yararlı tutmak için, bu öğreticide daha sonra çarpma (çoğullıve × çarpanı = ürün) ve bölüm (bölünen ÷ bölen = bölüm) için geleneksel adları kullanacaksınız.
 
-     Sonra, çıkarma sorunu için rastgele değerler sağlamak üzere `StartTheQuiz()` yöntemini değiştirirsiniz.
+     Daha sonra, `StartTheQuiz()` çıkarma sorunu için rastgele değerler sağlamak üzere metodunu değiştirirsiniz.
 
 2. "Çıkarma sorununu doldur" açıklamasında sonra aşağıdaki kodu ekleyin.
 
      [!code-csharp[VbExpressTutorial3Step5_6#13](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step5_6/cs/form1.cs#13)]
      [!code-vb[VbExpressTutorial3Step5_6#13](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step5_6/vb/form1.vb#13)]
 
-     Çıkarma sorununa yönelik olumsuz yanıtları engellemek için, bu kod, `Random` sınıfının `Next()` yöntemini ek sorunun nasıl yaptığından biraz farklı şekilde kullanır. @No__t_0 yöntemine iki değer verdiğinizde, ilk değerden büyük veya ona eşit ve ikinciden küçük bir rastgele sayı seçer. Aşağıdaki kod, 1 ile 100 arasında rastgele bir sayı seçer ve eksilen değişkeninde depolar.
+     Çıkarma sorununa yönelik olumsuz yanıtları engellemek için, bu kod, `Next()` `Random` ek sorunun nasıl yaptığından farklı olarak sınıfının yöntemini kullanır. `Next()`Yönteme iki değer verdiğinizde, ilk değerden büyük veya buna eşit ve ikinciden küçük bir rastgele sayı seçer. Aşağıdaki kod, 1 ile 100 arasında rastgele bir sayı seçer ve eksilen değişkeninde depolar.
 
      [!code-csharp[VbExpressTutorial3Step5_6#21](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step5_6/cs/form1.cs#21)]
      [!code-vb[VbExpressTutorial3Step5_6#21](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step5_6/vb/form1.vb#21)]
 
-     Bu öğreticide daha önce "rasgeleizer" olarak adlandırdığınız `Random` sınıfının `Next()` yöntemini birçok şekilde çağırabilirsiniz. Birden fazla yoldan çağırabileceğiniz Yöntemler aşırı yüklenmiş olarak adlandırılır ve IntelliSense 'i kullanarak bunları keşfedebilirsiniz. @No__t_0 yöntemi için IntelliSense penceresinin araç ipucunda tekrar bakın.
+     `Next()` `Random` Bu öğreticide daha önce "rasgeleizer" olarak adlandırdığınız sınıfının yöntemini birden çok şekilde çağırabilirsiniz. Birden fazla yoldan çağırabileceğiniz Yöntemler aşırı yüklenmiş olarak adlandırılır ve IntelliSense 'i kullanarak bunları keşfedebilirsiniz. Yöntemi için IntelliSense penceresinin araç ipucunda bir daha göz atın `Next()` .
 
      ![IntelliSense penceresi araç ipucu](../ide/media/express-overloads.png "Express_Overloads") IntelliSense penceresi araç ipucu
 
-     Araç İpucu **(+ 2 aşırı yükleme**) gösterir. bu, `Next()` yöntemini iki farklı şekilde çağırabilmeniz anlamına gelir. Aşırı yüklemeler farklı sayılar veya bağımsız değişken türleri içerir, böylece bir diğerinden biraz farklı çalışırlar. Örneğin, bir yöntem tek bir tamsayı bağımsız değişkeni alabilir, ancak aşırı yüklerinden biri tamsayı ve dize alabilir. Ne yapmak istediğinize bağlı olarak doğru aşırı yüklemeyi seçersiniz. Kodu `StartTheQuiz()` yöntemine eklediğinizde, `randomizer.Next(` girersiniz hemen sonra IntelliSense penceresinde daha fazla bilgi görüntülenir. Aşağıdaki çizimde gösterildiği gibi, aşırı yüklemeler arasında geçiş yapmak için yukarı ok ve aşağı ok tuşlarını seçin.
+     Araç İpucu **(+ 2 aşırı yükleme**) gösterir. Bu, `Next()` yöntemi iki farklı şekilde çağırabilmeniz anlamına gelir. Aşırı yüklemeler farklı sayılar veya bağımsız değişken türleri içerir, böylece bir diğerinden biraz farklı çalışırlar. Örneğin, bir yöntem tek bir tamsayı bağımsız değişkeni alabilir, ancak aşırı yüklerinden biri tamsayı ve dize alabilir. Ne yapmak istediğinize bağlı olarak doğru aşırı yüklemeyi seçersiniz. Kodu `StartTheQuiz()` yöntemine eklediğinizde, girdiğiniz anda IntelliSense penceresinde daha fazla bilgi görüntülenir `randomizer.Next(` . Aşağıdaki çizimde gösterildiği gibi, aşırı yüklemeler arasında geçiş yapmak için yukarı ok ve aşağı ok tuşlarını seçin.
 
-     ![IntelliSense 'de Next&#40; &#41; yöntemi için aşırı yükleme](../ide/media/express-nextoverload.png "Express_NextOverload") IntelliSense 'de Next () yöntemi için aşırı yükleme
+     ![IntelliSense 'de Next&#40;&#41; yöntemi Için aşırı yükleme](../ide/media/express-nextoverload.png "Express_NextOverload") IntelliSense 'de Next () yöntemi için aşırı yükleme
 
      Bu durumda, en düşük ve en yüksek değerleri belirtebileceğiniz için son aşırı yüklemeyi seçmek istersiniz.
 
-3. Doğru çıkarma yanıtını denetlemek için `CheckTheAnswer()` yöntemini değiştirin.
+3. `CheckTheAnswer()`Doğru çıkarma yanıtını denetlemek için yöntemini değiştirin.
 
      [!code-csharp[VbExpressTutorial3Step5_6#14](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step5_6/cs/form1.cs#14)]
      [!code-vb[VbExpressTutorial3Step5_6#14](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step5_6/vb/form1.vb#14)]
 
-     Görselde C#, `&&` `logical and` işleçtir. Visual Basic, denk işleç `AndAlso`. Bu işleçler, "addend1 ve addend2 toplamının Sum NumericUpDown değerine eşit olup olmadığını ve eksilen eksi çıkarılan değerinin fark NumericUpDown değerine eşit olup olmadığını gösterir. @No__t_0 yöntemi, yalnızca toplama ve çıkarma sorunlarına verilen yanıtların ikisi de doğru olduğunda `true` döndürür.
+     Visual C# ' de `&&` `logical and` işleçtir. Visual Basic ' de, eşdeğer işleç ' dir `AndAlso` . Bu işleçler, "addend1 ve addend2 toplamının Sum NumericUpDown değerine eşit olup olmadığını ve eksilen eksi çıkarılan değerinin fark NumericUpDown değerine eşit olup olmadığını gösterir. `CheckTheAnswer()`Yöntemi, `true` yalnızca toplama ve çıkarma sorunlarına verilen yanıtların ikisi de doğru olduğunda döndürülür.
 
 4. Zamanlayıcının Tick olay işleyicisinin son bölümünü aşağıdaki kodla değiştirin, böylece zaman aşımı olduğunda doğru yanıtı dolduracaktır.
 

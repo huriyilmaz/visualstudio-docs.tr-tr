@@ -15,19 +15,19 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e093abd5e836bcb7ee236979c00d574a07ecfd3d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202353"
 ---
 # <a name="getting-started-with-the-debugger"></a>Hata Ayıklayıcısını Kullanmaya Başlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio hata ayıklayıcısını kolayca herhangi bir dilde kullanılabilir. Burada basit bir C# programı hata ayıklama göstereceğiz, ancak C++ ve JavaScript gibi diğer dillerde kod için aynı adımları uygulayabilirsiniz.  
+Visual Studio hata ayıklayıcısı, herhangi bir dilde kolayca kullanılabilir. Burada basit bir C# programında hata ayıklamanın nasıl yapılacağını göstereceğiz, ancak C++ ve JavaScript gibi diğer dillerdeki koda aynı adımları uygulayabilirsiniz.  
   
-## <a name="BKMK_Start_debugging_a_VS_project"></a> Temel C# projesinde hata ayıklama  
- Bir basit C# konsol uygulaması ile başlayalım (**dosya / yeni / Project**, ardından **Visual C#** seçip **konsol uygulaması**). Hiçbir zaman önce Visual Studio çalıştıysanız bkz [izlenecek yol: Basit bir uygulama oluşturma](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md). **Ana** yöntemi yalnızca 1, 10 kez bir tamsayı değişkenine ekler ve sonucu konsola yazdırır:  
+## <a name="debug-a-basic-c-project"></a><a name="BKMK_Start_debugging_a_VS_project"></a> Temel C# projesinde hata ayıklama  
+ Basit bir C# konsol uygulaması (**dosya/yeni/proje**) ile başlayalım, sonra **Visual C#** ' yi seçip **konsol uygulaması**' nı seçin. Daha önce Visual Studio ile hiç çalıştıysanız, bkz. [Izlenecek yol: basit bir uygulama oluşturma](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md). **Main** yöntemi yalnızca 10 kez bir tamsayı değişkenine 1 ekler ve sonucu konsola yazdırır:  
   
 ```csharp  
 static void Main(string[] args)  
@@ -41,37 +41,37 @@ static void Main(string[] args)
 }  
 ```  
   
- Bu kod yapısı'nda **hata ayıklama** yapılandırma. Bu yapılandırma varsayılan olarak ayarlanır. Yapılandırmaları hakkında daha fazla bilgi için bkz. [derleme yapılandırmalarını anlama](../ide/understanding-build-configurations.md).  
+ **Hata ayıklama** yapılandırmasında bu kodu derleyin. Bu yapılandırma varsayılan olarak ayarlanır. Yapılandırma hakkında daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../ide/understanding-build-configurations.md).  
   
- Bu kod hata ayıklayıcıda tıklayarak çalıştırın **hata ayıklama / hata ayıklamayı Başlat** (veya **Başlat** araç çubuğunda veya **F5**). Uygulamayı gerçekten her şeyi konsol penceresinde olup olmadığını yazdırıldığı bildiremez şekilde neredeyse anında çıkılması gerekiyor.  
+ Hata ayıklama **/hata ayıklamayı Başlat** ' a tıklayarak bu kodu hata ayıklayıcıda çalıştırın (ya da araç çubuğundan veya **F5**' i **başlatın** ). Uygulamanın neredeyse hemen çıkması gerekir, bu nedenle konsol penceresinde herhangi bir şeyin yazdırılıp yazdırılmadığını söylenemez.  
   
- Konsol penceresinde bir kesme noktası ayarlamak ve önceden Adımlama görmek için yürütme yeterince durdurabilirsiniz. Bir kesme noktası ayarlamak için imlecinizi koymak `Console.WriteLine` satır ve tıklayın **hata ayıklama / yeni kesme noktası / işlev kesme noktası**, ya da aynı satırda sol kenar boşluğunda tıklamanız yeterlidir. Kesme noktasına şu şekilde görünmelidir:  
+ Bir kesme noktası ayarlayıp daha sonra ilerleyerek konsol penceresini görmek için yeterince uzun bir yürütme durdurabilirsiniz. Bir kesme noktası ayarlamak için imlecinizi `Console.WriteLine` satıra koyun ve **Hata Ayıkla/yeni kesme noktası/Işlev kesme noktası**' na tıklayın veya aynı satırdaki sol kenar boşluğuna tıklayın. Kesme noktası şöyle görünmelidir:  
   
- ![Bir kesme noktası ayarlamak](../debugger/media/getstartedbreakpoint.png "GetStartedBreakpoint")  
+ ![Kesme noktası ayarlama](../debugger/media/getstartedbreakpoint.png "GetStartedBreakpoint")  
   
- Kesme noktaları hakkında daha fazla bilgi için bkz: [kullanılarak kesme noktaları](../debugger/using-breakpoints.md).  
+ Kesme noktaları hakkında daha fazla bilgi için bkz. [kesme noktaları kullanma](../debugger/using-breakpoints.md).  
   
-## <a name="BKMK_Inspect_Variables"></a> Değişkenleri İnceleme  
- Genellikle hata ayıklama, belirli bir noktada beklediğiniz değer içermeyen değişkenleri bulma içerir. Değişkenleri inceleyebilirsiniz yollardan bazılarını göstereceğiz.  
+## <a name="inspect-variables"></a><a name="BKMK_Inspect_Variables"></a> Değişkenleri İncele  
+ Genellikle hata ayıklama işlemi, belirli bir noktada beklediğinizi değerleri içermeyen değişkenleri bulmayı içerir. Değişkenleri inceleyebileceğiniz bazı yolları göstereceğiz.  
   
- Hata ayıklamayı yeniden başlatın. Yürütmeyi durdurur önce `Console.WriteLine` kodu yürütür. Önceden ilerlemeye tarafından yürütülecek neden olabilir (tıklayın **hata ayıklama / adım üzerinden** veya **F10**). Bu durumda, seçtiğiniz **içine adımla** (**F11**) ve aynı sonucu; edinmiş fark daha sonra açıklayacağız. Yöntemin son küme ayracı ile satır açık sarı. Konsol penceresine bakın. Görmelisiniz **10**.  
+ Hata ayıklamayı yeniden başlatın. Yürütme, `Console.WriteLine` kod yürütmeden önce duraklar. Devam ederek yürütülmesine neden olabilirsiniz ( **Hata Ayıkla/Step Over** veya **F10**' e tıklayın). Bu durumda, **adımla** (**F11**) ve aynı sonucu elde edebilirsiniz; daha sonra bu farkı açıklayacağız. Metodun son küme ayracı ile çizgi, sarı bir şekilde açılmalıdır. Konsol penceresine bakın. **10**görmeniz gerekir.  
   
- Üzerine gelerek **testInt** değişkenin geçerli değeri bir veri ipucunda görüntülemek için.  
+ Bir veri ipucunda geçerli değeri görüntülemek için **testInt** değişkeninin üzerine gelebilmeniz gerekir.  
   
- ![DBG&#95;Temelleri&#95;veri&#95;ipuçları](../debugger/media/dbg-basics-data-tips.png "DBG_Basics_Data_Tips")  
+ ![DBG&#95;&#95;verileri&#95;Ipuçları](../debugger/media/dbg-basics-data-tips.png "DBG_Basics_Data_Tips")  
   
- Yalnızca kod penceresi görmeniz gerekir **Otolar**, **Yereller**, ve **Watch** windows. Bu windows zaman yürütme değişkenlerin geçerli değerleri gösterir. Her iki **Otolar** ve **Yereller** windows show **testInt** değeriyle **10**.  
+ Kod penceresinin hemen altında, **oto**, **Yereller**ve **Gözcü** pencerelerini görmeniz gerekir. Bu pencereler, yürütme sırasında değişkenlerin geçerli değerlerini gösterir. Hem **oto** hem de **Yereller** Windows, **testint** 'i **10**değeriyle gösterir.  
   
- ![Hata ayıklama sırasında otomatik değişkenler penceresi](../debugger/media/getstartedwindows.png "GetStartedWindows")  
+ ![Hata ayıklanırken oto penceresi](../debugger/media/getstartedwindows.png "GetStartedWindows")  
   
- Bu windows hakkında daha fazla bilgi için bkz: [Otolar ve yerel öğeler Windows](../debugger/autos-and-locals-windows.md).  
+ Bu pencereler hakkında daha fazla bilgi için bkz. [oto ve Yereller pencereleri](../debugger/autos-and-locals-windows.md).  
   
- Değişken değeri programı aracılığıyla inceleyeceğiz olarak nasıl değiştiğini görelim. Bir kesme noktası ayarlamak `testInt += 1;` satır ve hata ayıklamayı yeniden başlatın. Durumunda olduklarını görmüş olmalısınız **testInt** içinde **Yereller** ve **Otolar** Windows **0**, ve **miyim** olan**1**. Devam hata ayıklama (**hata ayıklama / Continue**, veya **devam** araç çubuğunda veya **F5**), gördüğünüz gibi değerini **testInt** değişikliklerini **1**, ardından **2**ve benzeri. Bu değişiklikler arama yorgun aldığınızda kesme noktasını Kaldır (**hata ayıklama / geçiş kesme noktası**, veya kenar boşluğunda tıklayın) ve hata ayıklamaya devam et. Tüm kesme noktalarını kaldırmak istiyorsanız, tıklayın **hata ayıklama / tüm kesme noktalarını Sil**, veya **CTRL + SHIFT + F9**, tıklatıp **Evet** soran iletişim kutusunda **bunu Tüm kesme noktalarını kaldırmak istiyor?** .  
+ Programda yürüyoruz, değişken değerinin nasıl değişeceğiz. Satırda bir kesme noktası ayarlayın `testInt += 1;` ve hata ayıklamayı yeniden başlatın. **TestInt** ' ın **Yereller** ve **oto** pencerelerinde **0**olduğunu ve **1** **olduğunu görmeniz** gerekir. Hata ayıklamaya devam ettiğinizde (**Hata Ayıkla/devam**et **veya araç çubuğunda ya** da **F5**), **testInt** değerinin **1**, sonra **2**vb. değişikliklerinin olduğunu görebilirsiniz. Bu değişikliklere baktıktan sonra, kesme noktasını kaldırın (**hata ayıklama/kesme noktası**veya kenar boşluğunda tıklatın) ve hata ayıklamaya devam edin. Tüm kesme noktalarını kaldırmak istiyorsanız, **hata ayıkla/tüm kesme noktalarını Sil**' e tıklayın veya **CTRL + SHIFT + F9**tuşlarına basın ve **tüm kesme noktalarını kaldırmak**isteyip istemediğinizi soran iletişim kutusunda **Evet** ' e tıklayın.  
   
-## <a name="stepping-into-and-over-function-calls"></a>İçine ve işlev çağrıları üzerinden Adımlama  
- Hata ayıklayıcı deyimi-tarafından-deyiminde kod yürütebilir (**içine adımla**) veya hata ayıklayıcı işlevleri atlar sırasında kod yürütebilir (**Step Over**) kod içinde (daha fazla ilgi için hızlı bir şekilde almak için işlev kodunu hala yürütülür). Her iki yöntemde de aynı hata ayıklama oturumu arasında geçiş yapabilirsiniz.  
+## <a name="stepping-into-and-over-function-calls"></a>Işlev çağrılarına adımla ve bunların üzerinde Adımlama  
+ Hata ayıklayıcı ifadede (**adımla**) bir kod yürütebilir veya hata ayıklayıcı işlevleri atlarken **(işlev**kodu hala yürütülür) kodu yürütebilir (işlev kodu hala yürütülür). Aynı hata ayıklama oturumunda her iki yöntem arasında geçiş yapabilirsiniz.  
   
- Arasındaki farkı görmek için **içine adımla** ve **Step Over**, başka bir yöntem tarafından çağrılan bir yöntem eklemek ihtiyacımız. C# uygulaması için bir yöntem ekleyin ve ana yöntemi çağırın. Kod aşağıdaki gibi görünmelidir:  
+ **Adımla** ve **adımla**arasındaki farkı görmek için, başka bir yöntem tarafından çağrılan bir yöntem eklememiz gerekir. C# uygulamasına bir yöntem ekleyin ve bunu Main yönteminden çağırın. Kod şuna benzemelidir:  
   
 ```csharp  
 static void Main(string[] args)  
@@ -86,10 +86,10 @@ private static void Method1()
 }  
 ```  
   
- Bir kesme noktası ayarlamak `Method1();` Main yöntemine çağrı ve hata ayıklamaya başlayın. Yürütmeyi keserse tıklayın **hata ayıklama / adımla** (veya **içine adımla** araç çubuğunda veya **F11**). Yürütme sonlarında yeniden ilk küme ayracı Method1() içinde:  
+ Main yöntemindeki çağrıda bir kesme noktası ayarlayın `Method1();` ve hata ayıklamayı başlatın. Yürütme molalarından **Hata Ayıkla/adımla** **' ya tıklayın (ya da** araç çubuğundaki veya **F11**). Method1 () içindeki ilk küme ayracından yürütme sonları yeniden kesilir:  
   
- ![Kodun içine Adımlama](../debugger/media/getstartedstepinto.png "GetStartedStepInto")  
+ ![Koda adımla](../debugger/media/getstartedstepinto.png "GetStartedStepInto")  
   
- Hata ayıklamayı durdurmak ve yeniden başlatın ve yürütme kesme noktasında kesildiğinde **hata ayıklama / adım üzerinden** (veya **Step Over** araç çubuğunda veya **F10**). Yürütmeyi keser yeniden adresindeki `Console.WriteLine("end");`.  
+ Hata ayıklamayı durdurun ve yeniden başlatın ve kesme noktasında yürütme kesildiğinde **Hata Ayıkla/adımla** **(ya da araç çubuğunda veya** **F10**) seçeneğine tıklayın. Yürütme molaları yeniden `Console.WriteLine("end");` .  
   
- Hata ayıklayıcısı ile kod gezinme hakkında daha fazla bilgi edinmek istiyorsanız bkz [hata ayıklayıcısı ile kodlarda gezinme](../debugger/navigating-through-code-with-the-debugger.md).
+ Hata ayıklayıcıyla kod gezinme hakkında daha fazla bilgi edinmek istiyorsanız, bkz. [hata ayıklayıcıyla kod aracılığıyla gezinme](../debugger/navigating-through-code-with-the-debugger.md).

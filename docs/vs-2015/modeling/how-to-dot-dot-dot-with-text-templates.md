@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c55c7a277d3f38b36367008ae6393f58c9c9a2c2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671623"
 ---
 # <a name="how-to--with-text-templates"></a>Nasıl yapılır ... Metin Şablonları ile
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_0 metin şablonları, herhangi bir türde metin oluşturmanın yararlı bir yolunu sağlar. Metin şablonlarını, uygulamanızın bir parçası olarak çalışma zamanında metin oluşturmak için ve tasarım zamanında proje kodunuzun bazılarını oluşturmak için kullanabilirsiniz. Bu konu, en sık sorulan "Nasıl yaparım?...?" öğesini özetler. UL.
+İçindeki metin şablonları, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] herhangi bir türde metin oluşturmanın yararlı bir yolunu sağlar. Metin şablonlarını, uygulamanızın bir parçası olarak çalışma zamanında metin oluşturmak için ve tasarım zamanında proje kodunuzun bazılarını oluşturmak için kullanabilirsiniz. Bu konu, en sık sorulan "Nasıl yaparım?...?" öğesini özetler. UL.
 
  Bu konu başlığında, madde işaretlerinin önünde bulunan birden çok yanıt alternatif önerilerdir.
 
@@ -33,25 +33,25 @@ ms.locfileid: "72671623"
 - Metin şablonlarından kod dosyalarından bazılarını oluşturun. Daha fazla bilgi için bkz. [T4 Metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md) ve [şablon yazmaya başlamak için en iyi yol nedir?](#starting).
 
 ### <a name="generate-files-at-run-time-passing-data-into-the-template"></a>Çalışma zamanında dosyalar oluşturma, verileri şablona geçirme
- Çalışma zamanında Uygulamam, standart metin ve verilerin bir karışımını içeren raporlar gibi metin dosyaları oluşturur. Yüzlerce `write` deyimi yazmaktan kaçınmak istiyorum.
+ Çalışma zamanında Uygulamam, standart metin ve verilerin bir karışımını içeren raporlar gibi metin dosyaları oluşturur. Yüzlerce deyim yazmaktan kaçınmak istiyorum `write` .
 
 - Projenize bir çalışma zamanı metin şablonu ekleyin. Bu şablon, kodunuzda metin oluşturmak için oluşturabileceğiniz ve kullanabileceğiniz bir sınıf oluşturur. Oluşturucu parametrelerinde verileri buna geçirebilirsiniz. Daha fazla bilgi için bkz. [T4 metin şablonlarıyla çalışma zamanı metin üretimi](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
-- Yalnızca çalışma zamanında kullanılabilir olan şablonlardan oluşturmak istiyorsanız standart metin şablonlarını kullanabilirsiniz. @No__t_0 uzantısı yazıyorsanız, metin şablonu oluşturma hizmetini çağırabilirsiniz. Daha fazla bilgi için bkz. [BIR vs uzantısında metin dönüştürmeyi çağırma](../modeling/invoking-text-transformation-in-a-vs-extension.md). Diğer bağlamlarda, metin şablonu oluşturma altyapısını kullanabilirsiniz. Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>.
+- Yalnızca çalışma zamanında kullanılabilir olan şablonlardan oluşturmak istiyorsanız standart metin şablonlarını kullanabilirsiniz. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Uzantı yazıyorsanız, metin şablonu oluşturma hizmetini çağırabilirsiniz. Daha fazla bilgi için bkz. [BIR vs uzantısında metin dönüştürmeyi çağırma](../modeling/invoking-text-transformation-in-a-vs-extension.md). Diğer bağlamlarda, metin şablonu oluşturma altyapısını kullanabilirsiniz. Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>.
 
-     Parametreleri bu şablonlara geçirmek için \< # @parameter # > yönergesini kullanın. Daha fazla bilgi için bkz. [T4 parametre yönergesi](../modeling/t4-parameter-directive.md).
+     \<#@parameter#>Parametreleri bu şablonlara geçirmek için yönergesini kullanın. Daha fazla bilgi için bkz. [T4 parametre yönergesi](../modeling/t4-parameter-directive.md).
 
 ### <a name="read-another-project-file-from-a-template"></a>Şablondan başka bir proje dosyası okuma
- Aynı [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projesinden bir dosyayı şablonuyla okumak için:
+ Şablonla aynı projeden bir dosya okumak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] :
 
-- @No__t_1 yönergesine `hostSpecific="true"` ekleyin.
+- `hostSpecific="true"` `<#@template#>` Yönergeye ekleyin.
 
-     Kodunuzda, dosyanın tam yolunu almak için `this.Host.ResolvePath(filename)` kullanın.
+     Kodunuzda, `this.Host.ResolvePath(filename)` dosyanın tam yolunu almak için kullanın.
 
 ### <a name="invoke-methods-from-a-template"></a>Bir şablondan Yöntemler çağırma
- Yöntemler zaten mevcutsa (örneğin, standart [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sınıflarında):
+ Yöntemler zaten mevcutsa (örneğin, standart [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sınıflarda):
 
-- Derlemeyi yüklemek için \< # @assembly # > yönergesini kullanın ve \< # @import # > kullanarak ad alanı bağlamını ayarlayın. Daha fazla bilgi için bkz. [T4 Içeri aktarma yönergesi](../modeling/t4-import-directive.md).
+- \<#@assembly#>Derlemeyi yüklemek için yönergesini kullanın ve \<#@import#> ad alanı bağlamını ayarlamak için kullanın. Daha fazla bilgi için bkz. [T4 Içeri aktarma yönergesi](../modeling/t4-import-directive.md).
 
    Aynı derleme ve içeri aktarma yönergeleri kümesini sıklıkla kullanıyorsanız, bir yönerge işlemcisi yazmayı düşünün. Her şablonda, derlemeleri ve model dosyalarını yükleyebilir ve ad alanı bağlamını ayarlayabilen yönerge işlemcisini çağırabilirsiniz. Daha fazla bilgi için bkz. [özel T4 metin şablonu yönerge Işlemcileri oluşturma](../modeling/creating-custom-t4-text-template-directive-processors.md).
 
@@ -59,13 +59,13 @@ ms.locfileid: "72671623"
 
 - Çalışma zamanı metin şablonu yazıyorsanız, çalışma zamanı metin şablonunuzu aynı ada sahip kısmi bir sınıf tanımı yazın. Bu sınıfa ek yöntemleri ekleyin.
 
-- Yöntemleri, özellikleri ve özel sınıfları bildirebilmeniz için bir sınıf özelliği denetim bloğu `<#+ ... #>` yazın. Metin şablonu derlendiğinde, bir sınıfa dönüştürülür. Standart denetim blokları `<#...#>` ve metin tek bir yönteme dönüştürülür ve sınıf özelliği blokları ayrı Üyeler olarak eklenir. Daha fazla bilgi için bkz. [metin şablonu denetim blokları](../modeling/text-template-control-blocks.md).
+- `<#+ ... #>`Yöntemler, Özellikler ve özel sınıflar bildirebilmeniz için bir sınıf özelliği denetim bloğu yazın. Metin şablonu derlendiğinde, bir sınıfa dönüştürülür. Standart denetim blokları `<#...#>` ve metin tek bir yönteme dönüştürülür ve sınıf özelliği blokları ayrı Üyeler olarak eklenir. Daha fazla bilgi için bkz. [metin şablonu denetim blokları](../modeling/text-template-control-blocks.md).
 
    Sınıf özellikleri olarak tanımlanan Yöntemler, katıştırılmış metin blokları da içerebilir.
 
-   Sınıf özelliklerini bir veya daha fazla şablon dosyasında `<#@include#>` kullanabileceğiniz ayrı bir dosyaya yerleştirmeyi düşünün.
+   Sınıf özelliklerini `<#@include#>` bir veya daha fazla şablon dosyasında kullanabileceğiniz ayrı bir dosyaya yerleştirmeyi düşünün.
 
-- Yöntemleri ayrı bir derlemede (sınıf kitaplığı) yazın ve bunları şablonınızdan çağırın. Derlemeyi yüklemek için `<#@assembly#>` yönergesini kullanın ve ad alanı bağlamını ayarlamak için `<#@import#>`. Hata ayıklarken derlemeyi yeniden derlemek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] durdurmanız ve yeniden başlatmanız gerekebilir. Daha fazla bilgi için bkz. [T4 metin şablonu yönergeleri](../modeling/t4-text-template-directives.md).
+- Yöntemleri ayrı bir derlemede (sınıf kitaplığı) yazın ve bunları şablonınızdan çağırın. `<#@assembly#>`Derlemeyi yüklemek ve `<#@import#>` ad alanı bağlamını ayarlamak için yönergesini kullanın. Hata ayıklarken derlemeyi yeniden derlemek için durdurmanız ve yeniden başlatmanız gerekebilir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. [T4 metin şablonu yönergeleri](../modeling/t4-text-template-directives.md).
 
 ### <a name="generate-many-files-from-one-model-schema"></a>Bir model şemasından birçok dosya oluştur
  Genellikle aynı XML veya veritabanı şemasına sahip modellerden dosya oluşturursanız:
@@ -86,8 +86,8 @@ ms.locfileid: "72671623"
 
      Daha fazla bilgi için bkz. [uygulamanız için modeller oluşturma](../modeling/create-models-for-your-app.md) ve [bir UML modelinden dosya oluşturma](../modeling/generate-files-from-a-uml-model.md).
 
-### <a name="get-data-from-includevsprvsincludesvsprvs-mdmd"></a>@No__t_0 veri al
- @No__t_0 içinde sunulan hizmetleri kullanmak için `hostSpecific` özniteliğini ayarlayıp `EnvDTE` derlemesini yükleyin. Örneğin:
+### <a name="get-data-from-vsprvs"></a>Veri Al [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
+ İçinde sağlanmış hizmetleri kullanmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , `hostSpecific` özniteliğini ayarlayıp `EnvDTE` derlemeyi yükleyin. Örneğin:
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -108,11 +108,11 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 
 ## <a name="more-general-questions"></a>Daha genel sorular
 
-### <a name="starting"></a>Metin şablonu yazmaya başlamak için en iyi yol nedir?
+### <a name="what-is-the-best-way-to-start-writing-a-text-template"></a><a name="starting"></a> Metin şablonu yazmaya başlamak için en iyi yol nedir?
 
 1. Oluşturulan dosyanın belirli bir örneğini yazın.
 
-2. @No__t_0 yönergesini ve giriş dosyasını veya modeli yüklemek için gereken yönergeleri ve kodu ekleyerek bir metin şablonuna açın.
+2. `<#@template #>`Yönergesini ve giriş dosyasını veya modeli yüklemek için gereken yönergeleri ve kodu ekleyerek bir metin şablonuna açın.
 
 3. Dosya bölümlerini aşamalı olarak ifade ve kod blokları ile değiştirin.
 
@@ -133,4 +133,4 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 
 ### <a name="what-is-t4"></a>"T4" nedir?
 
-- Burada açıklanan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] metin şablonu özellikleri için başka bir ad. Yayımlanmamış önceki sürüm, "metin şablonu dönüştürme" kısaltması idi.
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Burada açıklanan metin şablonu özellikleri için başka bir ad. Yayımlanmamış önceki sürüm, "metin şablonu dönüştürme" kısaltması idi.

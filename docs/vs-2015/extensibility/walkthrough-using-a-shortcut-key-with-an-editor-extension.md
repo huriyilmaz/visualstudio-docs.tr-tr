@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Bir düzenleyici uzantısı ile kısayol tuşu kullanma | Microsoft Docs'
+title: 'İzlenecek yol: bir düzenleyici uzantısıyla kısayol tuşu kullanma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,48 +11,48 @@ caps.latest.revision: 33
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5c9cb20bafa552c47a2f599d12e6b66fdb2bde59
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68201941"
 ---
-# <a name="walkthrough-using-a-shortcut-key-with-an-editor-extension"></a>İzlenecek yol: Düzenleyici Uzantısı ile Kısayol Tuşu Kullanma
+# <a name="walkthrough-using-a-shortcut-key-with-an-editor-extension"></a>İzlenecek Yol: Düzenleyici Uzantısı ile Kısayol Tuşu Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kısayol tuşları için düzenleyici uzantı yanıt verebilir. Aşağıdaki örneklerde, bir kısayol tuşu kullanarak görünüm kenarlığı metin görünümü ekleme işlemi gösterilmektedir. Bu izlenecek yol, Görünüm penceresi kenarlığı Düzenleyicisi şablonunu temel alıyorsa ve kenarlığı kullanarak eklemek imkan + karakter.  
+Düzenleyici uzantıdaki kısayol tuşlarına yanıt verebilirsiniz. Aşağıdaki izlenecek yol, bir kısayol tuşu kullanarak bir metin görünümüne Görünüm kenarlığı nasıl ekleneceğini gösterir. Bu izlenecek yol, görünüm penceresinin kenarlığı düzenleyici şablonunu temel alır ve + karakterini kullanarak kenarlığı eklemenize olanak tanır.  
   
-## <a name="prerequisites"></a>Önkoşullar  
- Visual Studio 2015'ten başlayarak, size Visual Studio SDK İndirme Merkezi'nden yüklemeyin. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için [Visual Studio SDK'sını yükleme](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Ön koşullar  
+ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-managed-extensibility-framework-mef-project"></a>Yönetilen Genişletilebilirlik Çerçevesi (MEF) proje oluşturma  
+## <a name="creating-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) projesi oluşturma  
   
-1. Bir C# VSIX projesi oluşturun. (İçinde **yeni proje** iletişim kutusunda **Visual C# / genişletilebilirlik**, ardından **VSIX projesi**.) Çözüm adı `KeyBindingTest`.  
+1. C# VSıX projesi oluşturun. ( **Yeni proje** iletişim kutusunda, **Visual C#/genişletilebilirliği**, sonra **VSIX projesi**' ni seçin.) Çözümü adlandırın `KeyBindingTest` .  
   
-2. Bir düzenleyici metin kenarlığı öğe şablonu projeye ekleyin ve adlandırın `KeyBindingTest`. Daha fazla bilgi için [bir düzenleyici öğesi şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+2. Projeye bir düzenleyici metni kenarlığı öğe şablonu ekleyin ve bunu adlandırın `KeyBindingTest` . Daha fazla bilgi için bkz. [bir düzenleyici öğe şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
   
-3. Aşağıdaki başvuruları ekleyin ve ayarlama **CopyLocal** için `false`:  
+3. Aşağıdaki başvuruları ekleyin ve **CopyLocal** öğesini şu şekilde ayarlayın `false` :  
   
-    Microsoft.VisualStudio.Editor  
+    Microsoft. VisualStudio. Editor  
   
-    Microsoft.VisualStudio.OLE.Interop  
+    Microsoft. VisualStudio. OLE. Interop  
   
-    Microsoft.VisualStudio.Shell.14.0  
+    Microsoft. VisualStudio. Shell. 14.0  
   
-    Microsoft.VisualStudio.TextManager.Interop  
+    Microsoft. VisualStudio. TextManager. Interop  
   
-   KeyBindingTest sınıf dosyasında PurpleCornerBox için sınıf adını değiştirin. Görüntülenen ampul sol kenar boşluğunda uygun bir değişiklik yapmak için kullanın. Oluşturucu içinde kenarlığı katmandan adını değiştirmek **KeyBindingTest** için **PurpleCornerBox**:  
+   KeyBindingTest sınıfı dosyasında, sınıf adını Purpleköşeli kutusu olarak değiştirin. Diğer uygun değişiklikleri yapmak için sol kenar boşluğunda görünen ampul ' i kullanın. Oluşturucunun içinde, kenarlığı katmanının adını **KeyBindingTest** öğesinden **purpleucu kutusuna**değiştirin:  
   
 ```csharp  
 this.layer = view.GetAdornmentLayer("PurpleCornerBox");  
 ```  
   
-## <a name="defining-the-command-filter"></a>Komut filtre tanımlama  
- Komut filtre uygulamasıdır <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>, hangi işleme komut kenarlığı oluşturarak.  
+## <a name="defining-the-command-filter"></a>Komut filtresini tanımlama  
+ Komut filtresi, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> kenarlığı örneğini oluşturarak komutu işleyen öğesinin bir uygulamasıdır.  
   
-1. Bir sınıf dosyası ekleyin ve adlandırın `KeyBindingCommandFilter`.  
+1. Bir sınıf dosyası ekleyin ve adlandırın `KeyBindingCommandFilter` .  
   
-2. Aşağıdaki using deyimlerini.  
+2. Aşağıdaki using deyimlerini ekleyin.  
   
     ```csharp  
     using System;  
@@ -63,13 +63,13 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
   
     ```  
   
-3. KeyBindingCommandFilter adlı sınıfını alması gerektiğini <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>.  
+3. KeyBindingCommandFilter adlı sınıf öğesinden devralması gerekir <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> .  
   
     ```csharp  
     internal class KeyBindingCommandFilter : IOleCommandTarget  
     ```  
   
-4. Metin görünümü için özel alanlar, sonraki komutu komut zinciri ve komut filtresi zaten eklenmiş olup olmadığını göstermek için bir bayrak ekleyin.  
+4. Metin görünümü için özel alanlar, komut zincirindeki bir sonraki komut ve komut filtresinin zaten eklenip eklenmeyeceğini temsil eden bir bayrak ekleyin.  
   
     ```csharp  
     private IWpfTextView m_textView;  
@@ -78,7 +78,7 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
     internal bool m_adorned;  
     ```  
   
-5. Metin görünümünü ayarlayan bir oluşturucu ekleyin.  
+5. Metin görünümünü ayarlayan bir Oluşturucu ekleyin.  
   
     ```csharp  
     public KeyBindingCommandFilter(IWpfTextView textView)  
@@ -88,7 +88,7 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
     }  
     ```  
   
-6. Uygulama `QueryStatus()` yöntemini aşağıdaki şekilde.  
+6. `QueryStatus()`Yöntemini aşağıdaki şekilde uygulayın.  
   
     ```vb  
     int IOleCommandTarget.QueryStatus(ref Guid pguidCmdGroup, uint cCmds, OLECMD[] prgCmds, IntPtr pCmdText)  
@@ -97,7 +97,7 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
     }  
     ```  
   
-7. Uygulama `Exec()` , BT'nin mor kutusu görünümüne ekler için yöntemi bir + karakter türü.  
+7. `Exec()`Bir + karakteri yazıldığında görünüme mor bir kutu eklemek için yöntemini uygulayın.  
   
     ```csharp  
     int IOleCommandTarget.Exec(ref Guid pguidCmdGroup, uint nCmdID, uint nCmdexecopt, IntPtr pvaIn, IntPtr pvaOut)  
@@ -121,10 +121,10 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
   
     ```  
   
-## <a name="adding-the-command-filter"></a>Komut filtre ekleme  
- Kenarlığı sağlayıcısı için metin görünümü bir komutu filtresi eklemeniz gerekiyor. Bu örnekte, sağlayıcı uygulayan <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> metni görünümü oluşturma olayları dinleyecek şekilde. Bu kenarlığı sağlayıcısı ayrıca kenarlığı Z-sıralamasını tanımlar kenarlığı katmanı dışa aktarır.  
+## <a name="adding-the-command-filter"></a>Komut filtresi ekleme  
+ Kenarlığı sağlayıcının metin görünümüne bir komut filtresi eklemesi gerekir. Bu örnekte sağlayıcı, <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> metin görünümü oluşturma olaylarını dinlemek için uygular. Bu kenarlığı sağlayıcısı ayrıca kenarlığı 'in Z düzenini tanımlayan kenarlığı katmanını dışarı aktarır.  
   
-1. KeyBindingTestTextViewCreationListener dosyasına aşağıdakileri ekleyin using deyimlerini:  
+1. KeyBindingTestTextViewCreationListener dosyasında aşağıdaki using deyimlerini ekleyin:  
   
     ```csharp  
     using System;  
@@ -139,7 +139,7 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
   
     ```  
   
-2. Kenarlığı katman tanımında AdornmentLayer adını değiştirmek **KeyBindingTest** için **PurpleCornerBox**.  
+2. Kenarlığı katman tanımında, Donnmentlayer adını **KeyBindingTest** öğesinden **Purpleköşeli kutusuna**değiştirin.  
   
     ```csharp  
     [Export(typeof(AdornmentLayerDefinition))]  
@@ -148,7 +148,7 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
     public AdornmentLayerDefinition editorAdornmentLayer;  
     ```  
   
-3. Metin görünümü bağdaştırıcısı almak için aktarmalısınız <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>.  
+3. Metin görünümü bağdaştırıcısını almak için, öğesini içeri aktarmanız gerekir <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService> .  
   
     ```csharp  
     [Import(typeof(IVsEditorAdaptersFactoryService))]  
@@ -156,7 +156,7 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
   
     ```  
   
-4. Değişiklik <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> olan ekler için yöntemi `KeyBindingCommandFilter`.  
+4. <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A>Yöntemi, eklemesi için değiştirin `KeyBindingCommandFilter` .  
   
     ```csharp  
     public void TextViewCreated(IWpfTextView textView)  
@@ -165,7 +165,7 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
     }  
     ```  
   
-5. `AddCommandFilter` İşleyicisi metin view bağdaştırıcısı alır ve komut filtre ekler.  
+5. `AddCommandFilter`İşleyici, metin görünümü bağdaştırıcısını alır ve komut filtresini ekler.  
   
     ```csharp  
     void AddCommandFilter(IWpfTextView textView, KeyBindingCommandFilter commandFilter)  
@@ -189,10 +189,10 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
     }  
     ```  
   
-## <a name="making-the-adornment-appear-on-every-line"></a>Kenarlığı yaparak her satırında görünür  
- Her karakteri özgün kenarlığı görünen bir metin dosyasındaki ' bir'. Yanıt '+' karakter olarak kenarlığı eklenecek kodu değiştirdik, yalnızca satırda kenarlığı ekler burada '+' yazılır. Bir kez daha kenarlığı görüntülenir, böylece kenarlığı kod Değiştirebiliriz her 'bir'.  
+## <a name="making-the-adornment-appear-on-every-line"></a>Kenarlığı her satırda görünür hale getirme  
+ Özgün kenarlığı, metin dosyasındaki her ' a ' karakteriyle görüldü. Artık kodu, ' + ' karakterine yanıt olarak kenarlığı eklemek üzere değiştirdiğimiz için, kenarlığı yalnızca ' + ' karakterinin yazıldığı satıra eklenir. Kenarlığı kodunu, her ' a ' üzerinde daha fazla kenarlığı bir kez daha görünecek şekilde değiştirebiliriz.  
   
- 'Bir' karakteri donatmak için görünümdeki tüm satırların yinelemek için CreateVisuals() yöntemi KeyBindingTest.cs dosyasında değiştirin.  
+ KeyBindingTest.cs dosyasında, ' a ' karakterini süslemek için görünümdeki tüm satırlarda yinelemek üzere Creategörselleri () yöntemini değiştirin.  
   
 ```csharp  
 private void CreateVisuals(ITextViewLine line)  
@@ -236,10 +236,10 @@ private void CreateVisuals(ITextViewLine line)
 }  
 ```  
   
-## <a name="building-and-testing-the-code"></a>Oluşturma ve kod test etme  
+## <a name="building-and-testing-the-code"></a>Kodu derleme ve test etme  
   
-1. KeyBindingTest Çözümü derleyin ve deneysel örneğinde çalıştırın.  
+1. KeyBindingTest çözümünü derleyin ve deneysel örnekte çalıştırın.  
   
-2. Oluşturun veya bir metin dosyası açın. Karakter içeren bazı sözcükleri yazın 'a', Anahtar'a tıklayın ve metin görünümünü herhangi bir yerindeki +.  
+2. Bir metin dosyası oluşturun veya açın. ' A ' karakterini içeren bazı sözcükler yazın ve ardından metin görünümünde her yere + yazın.  
   
-     Mor kare dosyasındaki 'bir' her bir karakter görünmelidir.
+     Dosyadaki her ' a ' karakteriyle mor bir kare görünmelidir.

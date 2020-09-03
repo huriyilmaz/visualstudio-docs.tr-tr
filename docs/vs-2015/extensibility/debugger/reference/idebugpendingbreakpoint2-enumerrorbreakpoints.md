@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::EnumErrorBreakpoints | Microsoft Docs
+title: 'IDebugPendingBreakpoint2:: Enumerrorkesmenoktaları | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,18 +14,18 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f9cac8b19e6281b8993e84d13ae60138ddaeac89
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68201080"
 ---
 # <a name="idebugpendingbreakpoint2enumerrorbreakpoints"></a>IDebugPendingBreakpoint2::EnumErrorBreakpoints
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu bekleyen kesme noktasından sonuçlanan tüm hata kesme noktaları listesini alır.  
+Bu bekleyen kesme noktasından kaynaklanan tüm hata kesme noktalarının listesini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT EnumErrorBreakpoints(   
@@ -43,16 +43,16 @@ int EnumErrorBreakpoints( 
   
 #### <a name="parameters"></a>Parametreler  
  `bpErrorType`  
- [in] Değerleri birleşimi [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) numaralandırmak için hata türünü seçer sabit listesi.  
+ 'ndaki [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) Numaralandırmadaki, Numaralandırılacak hataların türünü seçen değerlerin bir birleşimi.  
   
  `ppEnum`  
- [out] Döndürür bir [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) listesini içeren nesne [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) nesneleri.  
+ dışı [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) nesnelerinin bir listesini Içeren bir [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Döndürür `E_BP_DELETED` kesme noktası silinmiş olması durumunda.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. `E_BP_DELETED`Kesme noktasının silinip silinmediğini döndürür.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CPendingBreakpoint` gösteren nesne [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimi.  
+ Aşağıdaki örnek, `CPendingBreakpoint` [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimini kullanıma sunan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.  
   
 ```cpp#  
 HRESULT CPendingBreakpoint::EnumErrorBreakpoints(  
