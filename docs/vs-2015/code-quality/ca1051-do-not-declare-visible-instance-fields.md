@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 076ce3858774d44e2d6c4c25205ced74b7a41bf0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85539769"
 ---
 # <a name="ca1051-do-not-declare-visible-instance-fields"></a>CA1051: Görünür örnek alanlarını bildirmeyin
@@ -47,7 +47,7 @@ ms.locfileid: "85539769"
  Bu kuraldan uyarıyı bastırmayın. Dışarıdan görünen alanlar, özelliklerde kullanılamayan avantajlar sağlamaz. Ayrıca, ortak alanlar [bağlantı taleplerine](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)karşı korunamaz. Bkz. [CA2112: güvenli türler alanları kullanıma sunmamalıdır](../code-quality/ca2112-secured-types-should-not-expose-fields.md).
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, `BadPublicInstanceFields` Bu kuralı ihlal eden bir türü () gösterir. `GoodPublicInstanceFields`düzeltilen kodu gösterir.
+ Aşağıdaki örnek, `BadPublicInstanceFields` Bu kuralı ihlal eden bir türü () gösterir. `GoodPublicInstanceFields` düzeltilen kodu gösterir.
 
  [!code-csharp[FxCop.Design.TypesPublicInstanceFields#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.TypesPublicInstanceFields/cs/FxCop.Design.TypesPublicInstanceFields.cs#1)]
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetMemoryBytes | Microsoft Dokümanlar
+title: 'IDebugProperty2:: GetMemoryBytes | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7d13fa3821a6d7bf861cd160a5588d0788b92243
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721472"
 ---
 # <a name="idebugproperty2getmemorybytes"></a>IDebugProperty2::GetMemoryBytes
 Bir özelliğin değerini oluşturan bellek baytlarını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetMemoryBytes ( 
@@ -41,10 +41,10 @@ int GetMemoryBytes ( 
 
 ## <a name="parameters"></a>Parametreler
 `ppMemoryBytes`\
-[çıkış] Özelliğin değerini içeren belleği almak için kullanılabilecek bir [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) nesnesi döndürür.
+dışı Özelliğin değerini içeren belleği almak için kullanılabilecek bir [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde hata kodu döndürür. Alınacak `S_GETMEMORYBYTES_NO_MEMORY_BYTES` bellek baytları yoksa döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür. `S_GETMEMORYBYTES_NO_MEMORY_BYTES`Alınacak bellek baytı yoksa döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

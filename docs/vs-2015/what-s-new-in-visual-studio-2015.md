@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5bdfae6235e7efb833eca0b87631af9204b4a678
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86387115"
 ---
 # <a name="what39s-new-in-visual-studio-2015"></a>Visual Studio 2015 ' deki yenilikler&#39;
@@ -73,7 +73,7 @@ Visual Studio ALM 'deki pek çok geliştirme ve yeni özellik hakkında daha faz
  Bu [Evrensel Windows uygulamalarını](https://msdn.microsoft.com/library/dn975273.aspx)oluşturmak Için C#, Visual Basic, C++ veya JavaScript kullanın.
 
 ### <a name="web"></a>Web
- ASP.NET 5, MVC, WebAPI ve SignalR için önemli bir güncelleştirmedir ve Windows, Mac ve Linux üzerinde çalışır.  ASP.NET 5, modern bulut tabanlı uygulamalar oluşturmaya yönelik yalın ve birleştirilebilir bir .NET yığını sunmak için baştan sona tasarlanmıştır. Visual Studio 2015 araçları, Bower ve Grönlama gibi popüler web geliştirme araçlarıyla daha yakından tümleşiktir. Başlamak için [net Web geliştirme ve araçlar bloguna](https://devblogs.microsoft.com/aspnet/)ait çok sayıda blog gönderisine bakın.
+ ASP.NET 5, MVC, WebAPI ve SignalR için önemli bir güncelleştirmedir ve Windows, Mac ve Linux üzerinde çalışır.  ASP.NET 5, modern bulut tabanlı uygulamalar oluşturmaya yönelik yalın ve birleştirilebilir bir .NET yığını sunmak için baştan sona tasarlanmıştır. Visual Studio 2015 araçları, Bower ve Grönlama gibi popüler web geliştirme araçlarıyla daha yakından tümleşiktir. Başlamak için  [net Web geliştirme ve araçlar bloguna](https://devblogs.microsoft.com/aspnet/)ait çok sayıda blog gönderisine bakın.
 
 ### <a name="classic-desktop-and-windows-store"></a>Klasik Masaüstü ve Windows Mağazası
  Visual Studio 2015, klasik masaüstü ve Windows Mağazası geliştirmeyi desteklemeye devam etmektedir. Windows geliştikçe, Visual Studio onunla birlikte gelişir.  Visual Studio 2015 ' de, .NET için kitaplıklar ve dillerin yanı sıra C++ ' ın tüm Windows sürümleri için geçerli olan önemli geliştirmeleri yaptı.

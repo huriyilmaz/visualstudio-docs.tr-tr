@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2630402e03d1256f63e542818a9066745206d2c5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672757"
 ---
 # <a name="list-memory-command"></a>Belleği Listele Komutu
@@ -27,24 +27,24 @@ ms.locfileid: "72672757"
 
 Belirtilen bellek aralığının içeriğini görüntüler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]
 [/Hex|Signed|Unsigned] [expression]
 ```
 
-## <a name="arguments"></a>Arguments
- Isteğe bağlı `expression`. Belleği görüntülemeye başlamak için gereken bellek adresi.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `expression` Seçim. Belleği görüntülemeye başlamak için gereken bellek adresi.
 
 ## <a name="switches"></a>Anahtarlar
- /ANSI&#124;Unicode isteğe bağlı. Belleği, ANSI veya Unicode bellek baytlarına karşılık gelen karakterler olarak görüntüler.
+ /ANSI&#124;Unicode Isteğe bağlı. Belleği, ANSI veya Unicode bellek baytlarına karşılık gelen karakterler olarak görüntüler.
 
- /Count: Isteğe bağlı `number`. @No__t_0 başlayarak, kaç baytlık bellek gösterileceğini belirler.
+ /Count: `number` isteğe bağlı. ' Den başlayarak, kaç baytlık bellek gösterileceğini belirler `expression` .
 
- /Format: Isteğe bağlı `formattype`. **Bellek penceresinde bellek** bilgilerini görüntülemek için biçim türü; OneByte, TwoBytes, on bayt, sekizinci TBytes, float (32-bit) veya Double (64-bit) olabilir. OneByte kullanılıyorsa `/Unicode` kullanılamaz.
+ /Format: `formattype` isteğe bağlı. **Bellek penceresinde bellek** bilgilerini görüntülemek için biçim türü; OneByte, TwoBytes, on bayt, sekizinci TBytes, float (32-bit) veya Double (64-bit) olabilir. Eğer OneByte kullanılıyorsa `/Unicode` kullanılamaz.
 
- /Hex&#124;Imzalı&#124;işaretsiz isteğe bağlı. Sayıları görüntüleme biçimini belirtir: imzalı, işaretsiz veya onaltılı olarak.
+ /Hex&#124;Imzalı&#124;Işaretsiz Isteğe bağlı. Sayıları görüntüleme biçimini belirtir: imzalı, işaretsiz veya onaltılı olarak.
 
 ## <a name="remarks"></a>Açıklamalar
  Tüm anahtarlarla birlikte bir **hata ayıklama. ListMemory** komutu yazmak yerine, belirtilen değerlere bazı anahtarlar önceden ayarlanmış şekilde, önceden tanımlanmış diğer adlar kullanılarak komutu çağırabilirsiniz. Örneğin, şunu girmek yerine:
@@ -61,7 +61,7 @@ Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]
 
  **Debug. ListMemory** komutu için kullanılabilir diğer adların listesi aşağıdadır:
 
-|Alias|Komut ve anahtarlar|
+|Diğer ad|Komut ve anahtarlar|
 |-----------|--------------------------|
 |**TID**|Debug. ListMemory|
 |**kapattığımda**|Debug. ListMemory/ANSI|

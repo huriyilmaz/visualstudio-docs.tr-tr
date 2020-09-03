@@ -12,31 +12,31 @@ caps.latest.revision: 24
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 28fc1155279ec624cea576b5a70a25800d4ff837
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204417"
 ---
 # <a name="extending-the-status-bar"></a>Durum Çubuğunu Genişletme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-IDE'nin en altında Visual Studio durum çubuğunda, bilgilerini görüntülemek için kullanabilirsiniz.  
+Bilgileri göstermek için IDE 'nin altındaki Visual Studio durum çubuğunu kullanabilirsiniz.  
   
- Durum çubuğu genişlettiğinizde, bilgileri ve kullanıcı Arabirimi dört bölgede görüntüleyebilirsiniz: geri bildirim bölge, ilerleme çubuğu, animasyon bölge ve tasarımcı bölge. Geri bildirim bölge, metni görüntülemek ve görüntülenen metni vurgulayın olanak tanır. İlerleme çubuğu, dosya kaydetme gibi kısa süreli işlemler için artımlı ilerleme durumunu gösterir. Animasyon bölge uzun süre çalışan işlemler veya bir çözümde birden çok proje derleme gibi belirsiz uzunluğu işlemi için bir sürekli döngüye animasyon görüntüler. Ve İmleç konumuna satır ve sütun sayısını Tasarımcı bölgenizi görebilirsiniz.  
+ Durum çubuğunu genişlettiğinizde, bilgileri ve Kullanıcı arabirimini dört bölgede görüntüleyebilirsiniz: geri bildirim bölgesi, ilerleme çubuğu, animasyon bölgesi ve tasarımcı bölgesi. Geri bildirim bölgesi, metin görüntülemenizi ve görüntülenen metni vurgulamanızı sağlar. İlerleme çubuğu, bir dosyayı kaydetme gibi kısa süreli işlemler için artımlı ilerlemeyi gösterir. Animasyon bölgesi, bir çözümde birden çok proje oluşturmak gibi uzun süre çalışan işlemler veya belirlenmeyen uzunluktaki işlem için sürekli olarak kıvrımlı bir animasyon görüntüler. Ve tasarımcı bölgesi, imleç konumunun satır ve sütun numarasını gösterir.  
   
- Durum çubuğunu kullanarak alabilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbar> arabirimi (gelen <xref:Microsoft.VisualStudio.Shell.Interop.SVsStatusbar> hizmeti). Ayrıca, herhangi bir nesne üzerinde bir pencere çerçevesi tarihli bir durum çubuğu istemci nesnesi olarak uygulayarak kaydedebilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> arabirimi. Bir pencere etkin olduğunda, Visual Studio için bu penceredeki tarihli nesneyi sorgular `IVsStatusbarUser` arabirimi. Bulunursa, çağırır, <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> yöntemi döndürülen arabirim ve nesnenin durum çubuğunda bu yöntem içinde güncelleştirebilirsiniz. Belge windows, örneğin, kullanabileceğiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> etkin olduklarında Tasarımcı bölgede bilgilerini güncelleştirmek için yöntemi.  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbar>Arabirimi (hizmetten) kullanarak durum çubuğunu alabilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.SVsStatusbar> . Ayrıca, bir pencere çerçevesinde yer alan herhangi bir nesne, arabirimini uygulayarak bir durum çubuğu istemci nesnesi olarak kayıt yapabilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> . Her pencere etkinleştirildiğinde, Visual Studio bu pencerede arabirim için nesneyi sorgular `IVsStatusbarUser` . Bulunursa, <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> döndürülen arabirimde yöntemini çağırır ve nesne durum çubuğunu bu yöntemin içinden güncelleştirebilir. Belge pencereleri, örneğin, <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> etkin hale geldiğinde tasarımcı bölgesindeki bilgileri güncelleştirmek için yöntemini kullanabilir.  
   
- Aşağıdaki yordamlar, bir VSIX projesi oluşturun ve bir özel menü komutu ekleme anladığınızı varsayar. Bilgi için [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).  
+ Aşağıdaki yordamlarda, bir VSıX projesi oluşturma ve özel bir menü komutu ekleme işlemlerinin nasıl yapılacağı varsayılmaktadır. Daha fazla bilgi için, bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).  
   
 ## <a name="modifying-the-status-bar"></a>Durum çubuğunu değiştirme  
- Bu yordamı ayarlayın ve mesaj alın, statik metin görüntülemek ve geri bildirim bölgesindeki durum çubuğunda görüntülenen metni vurgulama gösterilmektedir.  
+ Bu yordamda, metin ayarlama ve alma, statik metin görüntüleme ve durum çubuğunun geri bildirim bölgesinde görüntülenen metni vurgulamanın nasıl yapılacağı gösterilir.  
   
-#### <a name="reading-and-writing-to-the-status-bar"></a>Okuma ve yazma için durum çubuğu  
+#### <a name="reading-and-writing-to-the-status-bar"></a>Durum çubuğunu okuma ve yazma  
   
-1. Adlı bir VSIX projesi oluşturun **TestStatusBarExtension** ve adlı bir menü komutu eklemek **TestStatusBarCommand**.  
+1. **TestStatusBarExtension** ADLı bir VSIX projesi oluşturun ve **TestStatusBarCommand**adlı bir menü komutu ekleyin.  
   
-2. TestStatusBarCommand.cs içinde komut işleyicisi yöntemi (MenuItemCallback) kodu aşağıdakiyle değiştirin:  
+2. TestStatusBarCommand.cs içinde, komut işleyici yöntemi kodunu (Menuıitemcallback) aşağıdaki ile değiştirin:  
   
     ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -70,17 +70,17 @@ IDE'nin en altında Visual Studio durum çubuğunda, bilgilerini görüntülemek
     }  
     ```  
   
-3. Kodu derlemek ve hata ayıklamaya başlayın.  
+3. Kodu derleyin ve hata ayıklamayı başlatın.  
   
-4. Açık **Araçları** Visual Studio'nun Deneysel örneğinin menü. Tıklayın **çağırma TestStatusBarCommand** düğmesi.  
+4. Visual Studio 'nun Deneysel örneğindeki **Araçlar** menüsünü açın. **Invoke TestStatusBarCommand** düğmesine tıklayın.  
   
-     Durumunda olduklarını görmüş olmalısınız durum çubuğunda şimdi okuma metin **"Yalnızca durum çubuğuna yazdığımız."** ' i tıklatın ve görüntülenen ileti kutusunda aynı metni içerir.  
+     Durum çubuğundaki metnin şimdi **"durum çubuğuna yazdığımız"** okuduğunu görürsünüz. ve görüntülenen ileti kutusu aynı metne sahiptir.  
   
-#### <a name="updating-the-progress-bar"></a>İlerleme çubuğu güncelleştiriliyor  
+#### <a name="updating-the-progress-bar"></a>İlerleme çubuğunu güncelleştirme  
   
-1. Bu yordamda başlatmak ve ilerleme çubuğunu güncellemek nasıl göstereceğiz.  
+1. Bu yordamda ilerleme çubuğunun nasıl başlatılacağını ve güncelleştirilmesini göstereceğiz.  
   
-2. TestStatusBarCommand.cs dosyasını açın ve MenuItemCallback yöntemini aşağıdaki kodla değiştirin:  
+2. TestStatusBarCommand.cs dosyasını açın ve Menuıitemcallback metodunu şu kodla değiştirin:  
   
     ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -104,21 +104,21 @@ IDE'nin en altında Visual Studio durum çubuğunda, bilgilerini görüntülemek
     }  
     ```  
   
-3. Kodu derlemek ve hata ayıklamaya başlayın.  
+3. Kodu derleyin ve hata ayıklamayı başlatın.  
   
-4. Açık **Araçları** Visual Studio'nun Deneysel örneğinin menü. Tıklayın **çağırma TestStatusBarCommand** düğmesi.  
+4. Visual Studio 'nun Deneysel örneğindeki **Araçlar** menüsünü açın. **Çağır TestStatusBarCommand** düğmesine tıklayın.  
   
-     Durumunda olduklarını görmüş olmalısınız durum çubuğunda şimdi okuma metin **"ilerleme çubuğunun yazılıyor."** Ayrıca, her saniye için 20 saniye güncelleştirilmesi ilerleme çubuğu görürsünüz. Bundan sonra durum çubuğunu ve ilerleme çubuğu temizlenir.  
+     Durum çubuğundaki metnin şimdi **"ilerleme çubuğuna yazma** " işlemini okuduğunu görmeniz gerekir. Ayrıca, 20 saniye boyunca ilerleme çubuğunun her saniye güncelleştirilmesini görmeniz gerekir. Durum çubuğu ve ilerleme çubuğu temizlenmeden sonra.  
   
-#### <a name="displaying-an-animation"></a>Bir animasyon görüntüleme  
+#### <a name="displaying-an-animation"></a>Animasyon görüntüleme  
   
-1. Durum çubuğunu gösterir ya da bir döngü animasyon uzun süreli bir işlemi (örneğin, bir çözümde birden çok proje derleme) görüntüler. Bu animasyonu görmüyorsanız doğru olduğundan emin olun **Araçlar / Seçenekler** ayarları:  
+1. Durum çubuğu, uzun süre çalışan bir işlem (örneğin, bir çözümde birden çok proje oluşturma) gösteren bir döngü animasyonu görüntüler. Bu animasyonu görmüyorsanız, doğru **Araçlar/Seçenekler** ayarlarına sahip olduğunuzdan emin olun:  
   
-     Git **Araçlar/Seçenekler / genel** işaretini kaldırın ve sekme **başarımına dayalı görsel deneyimi otomatik olarak ayarla**. Ardından alt seçeneği işaretleyin **zengin istemci görsel deneyimini etkinleştir**. Artık Visual Studio'nun Deneysel Örneğinizde proje oluşturduğunuzda, animasyon görebilmek için olmalıdır.  
+     **Araçlar/Seçenekler/genel** sekmesine gidin ve **Istemci performansına bağlı olarak görsel deneyimi otomatik olarak ayarla**seçeneğinin işaretini kaldırın. Ardından **zengin istemci görsel deneyimini etkinleştir**alt seçeneğini işaretleyin. Şimdi Visual Studio 'nun deneysel örneğinde projeyi derlediğinizde animasyonu görebilmeniz gerekir.  
   
-     Bu yordamda bir proje veya çözüm oluşturmaya temsil eden standart bir Visual Studio animasyon görüntüleriz.  
+     Bu yordamda, bir proje veya çözüm oluşturmayı temsil eden standart Visual Studio animasyonunu görüntüliyoruz.  
   
-2. TestStatusBarCommand.cs dosyasını açın ve MenuItemCallback yöntemini aşağıdaki kodla değiştirin:  
+2. TestStatusBarCommand.cs dosyasını açın ve Menuıitemcallback metodunu şu kodla değiştirin:  
   
     ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -139,8 +139,8 @@ IDE'nin en altında Visual Studio durum çubuğunda, bilgilerini görüntülemek
     }  
     ```  
   
-3. Kodu derlemek ve hata ayıklamaya başlayın.  
+3. Kodu derleyin ve hata ayıklamayı başlatın.  
   
-4. Açık **Araçları** tıklayın ve Visual Studio deneysel örneğinde menüde **çağırma TestStatusBarCommand**.  
+4. Visual Studio 'nun Deneysel örneğindeki **Araçlar** menüsünü açın ve **TestStatusBarCommand çağır**' a tıklayın.  
   
-     İleti kutusu gördüğünüzde, ayrıca durum çubuğunda bir animasyon sağda görmeniz gerekir. İleti kutusu kapatırken animasyon kaybolur.
+     İleti kutusunu gördüğünüzde, en sağdaki durum çubuğunda animasyonu de görmeniz gerekir. İleti kutusunu kapatmak için animasyon kaybolur.

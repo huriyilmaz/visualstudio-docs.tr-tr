@@ -11,42 +11,42 @@ caps.latest.revision: 20
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 65a03a8dc741ec86aca3137f49cd753722ede215
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204562"
 ---
 # <a name="enumerators"></a>Numaralandırıcılar
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu bölümde, kaynak denetimi eklentisi hakkında bilmeniz gereken kaynak denetimi eklentisi API Numaralandırıcı veri türlerini listeler.  
+Bu bölüm, kaynak denetimi eklentisinin hakkında bilgi sahibi olması gereken kaynak denetimi eklentisi API 'sindeki Numaralandırıcı veri türlerini listeler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Komut Kodu](../extensibility/command-code-enumerator.md)  
- Seçeneklerini numaralandırır [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md) ve [SccPopulateList](../extensibility/sccpopulatelist-function.md) işlevleri.  
+ [Sccgetcommandooptıons](../extensibility/sccgetcommandoptions-function.md) ve [SccPopulateList](../extensibility/sccpopulatelist-function.md) işlevlerinin seçeneklerini numaralandırır.  
   
  [İleti](../extensibility/message-enumerator.md)  
- Yazdırma geri çağırma için kullanılan bayrakları numaralandırır [LPTEXTOUTPROC](../extensibility/lptextoutproc.md).  
+ PRINT callback, [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)için kullanılan bayrakları numaralandırır.  
   
  [Dosya Durumu Kodu](../extensibility/file-status-code-enumerator.md)  
- Kaynak denetimi altındaki bir dosyayı durumunu belirten adlandırılmış sabit değerleri içerir.  
+ Kaynak denetimi altındaki bir dosyanın durumunu belirten adlandırılmış sabit değerleri içerir.  
   
  [Dizin Durumu Kodu](../extensibility/directory-status-code-enumerator.md)  
- Kaynak denetimi altında bir dizin durumunu belirten adlandırılmış sabit değerleri içerir.  
+ Kaynak denetimi altındaki bir dizinin durumunu belirten adlandırılmış sabit değerleri içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Kaynak Denetimi Eklentisi Oluşturma](../extensibility/internals/creating-a-source-control-plug-in.md)  
- Kaynak Denetimi Eklentisi SDK tanımlar ve dahil edilen kaynaklar açıklanır.  
+ Kaynak denetimi eklentisi SDK 'sını tanımlar ve dahil edilen kaynakları açıklar.  
   
  [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md)  
- Verilen komutu için Gelişmiş Seçenekleri kullanıcıya sorar.  
+ Kullanıcıdan verilen komutla ilgili gelişmiş seçenekleri ister.  
   
  [SccPopulateList](../extensibility/sccpopulatelist-function.md)  
- Bunların geçerli durum için dosyaların listesini inceler. Ayrıca, kullandığı `pfnPopulate` işlevi bir dosya için ölçüt eşleşmediğinde çağrıyı yapana bunu bildirmesi `nCommand`.  
+ Geçerli durumları için dosya listesini inceler. Ayrıca, `pfnPopulate` bir dosya ile ilgili ölçütlerle eşleşmediği zaman, çağrıyı yapana bildirmek için işlevini kullanır `nCommand` .  
   
  [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)  
- Tarafından kullanılan geri çağırma işlevi açıklar [SccOpenProject](../extensibility/sccopenproject-function.md) kaynak denetimi eklentisi IDE üzerinden alınan iletileri görüntülemek için.  
+ IDE aracılığıyla kaynak denetimi eklentisindeki iletileri göstermek için [SccOpenProject](../extensibility/sccopenproject-function.md) tarafından kullanılan geri çağırma işlevini açıklar.  
   
  [Kaynak Denetimi Eklentileri](../extensibility/source-control-plug-ins.md)  
- Kaynak Denetimi Eklentisi API içindeki tüm öğelerin tam listesini sağlar.
+ Kaynak denetimi eklentisi API 'sindeki tüm öğelerin tam bir listesini sağlar.

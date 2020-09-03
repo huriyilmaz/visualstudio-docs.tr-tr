@@ -10,14 +10,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2d1bbb18a9015b52b3d65cb8f8fd02674693abc0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659134"
 ---
-# <a name="how-to-set-breakpoints-in-workflows"></a>Nasıl yapılır: Iş akışlarında kesme noktalarını ayarlama
-@No__t_0 kullandığınızda, grafik iş akışlarınızda Visual Basic veya C# kod içinde yaptığınız gibi kesme noktaları belirleyebilirsiniz. Beklenen şekilde, iş akışı yürütmesi, ayarladığınız her kesme noktasında durmaktadır.
+# <a name="how-to-set-breakpoints-in-workflows"></a>Nasıl Yapılır: İş Akışlarında Kesme Noktası Ayarlama
+Kullanırken [!INCLUDE[wfd1](../includes/wfd1-md.md)] , grafik iş akışlarınızda Visual Basic veya C# kodunda yaptığınız gibi kesme noktaları ayarlayabilirsiniz. Beklenen şekilde, iş akışı yürütmesi, ayarladığınız her kesme noktasında durmaktadır.
 
  Kesme noktasında üç durum vardır: *bekleyen*, *bağlantılı*ve *hata*. Bir kesme noktası ayarladığınızda, beklemede olur ve düz kırmızı simgeyle temsil edilir. Çalışma zamanı, iş akışı türünü yüklemiştir, bu, bağlanır olur. Kesme noktası için geçerli olmayan bir etkinlik adı gibi yanlış bir biçim belirtirseniz, bir hata penceresi görüntülenir. Kesme noktası, kesme noktası penceresine hala eklenir, ancak küçük bir "x" ile işaretlenir.
 

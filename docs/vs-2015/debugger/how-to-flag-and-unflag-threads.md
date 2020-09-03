@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İş parçacıklarını bayrakla işaretleme ve bayrak | Microsoft Docs'
+title: 'Nasıl yapılır: Iş parçacıklarını bayrak ve işaretini kaldır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -17,49 +17,49 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b6d6a49dd9b90172686a90d92e6b630dd70b5cf0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68189437"
 ---
-# <a name="how-to-flag-and-unflag-threads"></a>Nasıl yapılır: İş Parçacıklarında Bayrak Ekleme ve Bayrağı Kaldırma
+# <a name="how-to-flag-and-unflag-threads"></a>Nasıl Yapılır: İş Parçacıklarını Bayrakla İşaretleme ve İşareti Geri Alma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir simge ile işaretleyerek özel dikkat vermek istediğiniz bir iş parçacığı işaretleyebilirsiniz **iş parçacıkları**, **Paralel Yığınlar**, **paralel izleme**, ve **GPU İş parçacığı** windows. Başkalarının bayraklı iş parçacıklarını diğer iş parçacıklarından ayırt etmek ve bu simgeyi yardımcı olabilir.  
+**Iş parçacıklarında**, **paralel yığınlarda**, **paralel**bildirimde ve **GPU iş parçacıkları** penceresinde bir simge ile işaretleyerek özel dikkat sağlamak istediğiniz bir iş parçacığına bayrak atayabilirsiniz. Bu simge, ve diğer iş parçacıklarından işaretlenen iş parçacıklarını ayırt etmenize yardımcı olabilir.  
   
- Bayraklı iş parçacıklarını ayrıca Al, özel olarak değerlendirilmesi **iş parçacığı** listesini **hata ayıklama konumu** araç çubuğu. Bu liste tüm iş parçacıkları veya yalnızca bayraklı iş parçacıklarını gösterebilirsiniz. Bir iş parçacığı bayrak olduğunda **iş parçacığı** listesi yalnızca bayraklı iş parçacıklarını gösterecek şekilde otomatik olarak geçer, ancak geçiş yapabilirsiniz tüm iş parçacıklarının uygun şekilde geri gösterilecek.  
+ Bayraklı iş parçacıkları Ayrıca **hata ayıklama konumu** araç çubuğunda **iş parçacığı** listesinde özel bir işlem alır. Bu liste, tüm iş parçacıklarını veya yalnızca bayraklı iş parçacıklarını gösterebilir. Bir iş parçacığını bayrakla belirlediğinizde, **Iş parçacığı** listesi otomatik olarak yalnızca bayraklı iş parçacıklarını gösterecek şekilde geçer, ancak tüm iş parçacıklarını uygun şekilde göstermek için geri dönebilirsiniz.  
   
-### <a name="to-flag-or-unflag-a-thread-by-using-the-threads-window"></a>İş parçacıkları penceresini kullanarak bir iş parçacığını işaretleme veya işaretini kaldırma için  
+### <a name="to-flag-or-unflag-a-thread-by-using-the-threads-window"></a>İş parçacığı penceresini kullanarak bir iş parçacığına bayrak eklemek veya bayrak kaldırmak için  
   
-- İçinde **iş parçacıkları** penceresinde ilgilendiğiniz iş parçacığı bulup seçmek veya bayrağını temizlemek için bayrak simgesine tıklayın.  
+- **Iş parçacıkları** penceresinde ilgilendiğiniz iş parçacığını bulun ve bayrağı seçmek veya temizlemek için bayrak simgesine tıklayın.  
   
-### <a name="to-unflag-all-threads"></a>İçin tüm iş parçacıklarının işaretini kaldır  
+### <a name="to-unflag-all-threads"></a>Tüm iş parçacıklarının bayrağını kaldır  
   
-- İçinde **iş parçacıkları** penceresinde herhangi bir iş parçacığı sağ tıklayın ve ardından **tüm iş parçacıklarını bayrakla**.  
+- **Iş parçacıkları** penceresinde, herhangi bir iş parçacığına sağ tıklayın ve sonra **Tüm Iş parçacıklarının bayrağını kaldır**' a tıklayın.  
   
-### <a name="to-display-only-flagged-threads"></a>Yalnızca bayraklı iş parçacıklarını görüntülemek için  
+### <a name="to-display-only-flagged-threads"></a>Yalnızca bayraklı iş parçacıklarını göstermek için  
   
 - Hata ayıklama penceresinde bayrak düğmesini seçin.  
   
-### <a name="to-flag-just-my-code"></a>Bayrak yalnızca kendi kodum  
+### <a name="to-flag-just-my-code"></a>Yalnızca kendi kodum işaretlemek için  
   
-1. Üst kısmındaki araç çubuğunda **iş parçacıkları** penceresi, bayrak simgesine tıklayın.  
+1. **Iş parçacıkları** penceresinin en üstündeki araç çubuğunda, bayrak simgesine tıklayın.  
   
-2. Aşağı açılan listesinde, tıklayın **bayrağı yalnızca benim kodum**.  
+2. Aşağı açılan listede, **yalnızca kendi kodum işaretle**' ye tıklayın.  
   
-### <a name="to-flag-threads-that-are-associated-with-selected-modules"></a>Seçili modüller ile ilişkili iş parçacıklarını için  
+### <a name="to-flag-threads-that-are-associated-with-selected-modules"></a>Seçili modüllerle ilişkili iş parçacıklarını işaretlemek için  
   
-1. Araç çubuğunda **iş parçacıkları** penceresi, bayrak simgesine tıklayın.  
+1. **Iş parçacıkları** penceresinin araç çubuğunda bayrak simgesine tıklayın.  
   
-2. Aşağı açılan listesinde, tıklayın **bayrak Özel Modül Seçimi**.  
+2. Açılan listede, **özel modül seçimini işaretle**' ye tıklayın.  
   
-3. İçinde **modülleri seçin** iletişim kutusunda, istediğiniz modülleri seçin.  
+3. **Modül Seç** iletişim kutusunda, istediğiniz modülleri seçin.  
   
-4. (İsteğe bağlı) İçinde **arama** belirli modüller için aranacak bir dize olarak yazın.  
+4. Seçim **Arama** kutusuna belirli modülleri aramak için bir dize yazın.  
   
-5. **Tamam**'ı tıklatın.  
+5. **Tamam**’a tıklayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çok iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [İzlenecek yol: Çok İş Parçacıklı Uygulamada Hata Ayıklama](../debugger/walkthrough-debugging-a-multithreaded-application.md)
+ [Çok Iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
+ [İzlenecek Yol: Çok İş Parçacıklı Uygulamada Hata Ayıklama](../debugger/walkthrough-debugging-a-multithreaded-application.md)

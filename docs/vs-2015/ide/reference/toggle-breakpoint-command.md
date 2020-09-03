@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 25c9a22db7ae136068ec374f874453dbd4a7c4b3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658612"
 ---
 # <a name="toggle-breakpoint-command"></a>Kesim Noktasını Değiştir Komutu
@@ -27,14 +27,14 @@ ms.locfileid: "72658612"
 
 Dosyadaki geçerli konumda, geçerli durumuna bağlı olarak, kesme noktasını açar veya kapatır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Debug.ToggleBreakpoint [text]
 ```
 
-## <a name="arguments"></a>Arguments
- Isteğe bağlı `text`. Metin belirtilirse, satır adlandırılmış bir kesme noktası olarak işaretlenir. Aksi takdirde, çizgi adlandırılmamış bir kesme noktası olarak işaretlenir ve bu, F9 tuşuna bastığınızda ne olacağı ile benzerdir.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `text` Seçim. Metin belirtilirse, satır adlandırılmış bir kesme noktası olarak işaretlenir. Aksi takdirde, çizgi adlandırılmamış bir kesme noktası olarak işaretlenir ve bu, F9 tuşuna bastığınızda ne olacağı ile benzerdir.
 
 ## <a name="example"></a>Örnek
  Aşağıdaki örnek, geçerli kesme noktasına geçiş yapar.

@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_lengthlocals | Microsoft Docs
+title: 'IDiaStackFrame:: get_lengthLocals | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 364783f2287c363b82cf84bdc0e441e82307598e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190555"
 ---
-# <a name="idiastackframegetlengthlocals"></a>IDiaStackFrame::get_lengthLocals
+# <a name="idiastackframeget_lengthlocals"></a>IDiaStackFrame::get_lengthLocals
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Yerel değişkenler yığına itildi bayt sayısını alır.  
+Yığına gönderilen yerel değişkenlerin bayt sayısını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_lengthLocals (   
@@ -35,10 +35,10 @@ HRESULT get_lengthLocals ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Yerel değişkenlerin bayt sayısını döndürür.  
+ dışı Yerel değişkenlerin bayt sayısını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` özelliği desteklenmiyorsa. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Özelliğin desteklenip desteklenmediğini döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

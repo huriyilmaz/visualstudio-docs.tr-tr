@@ -1,5 +1,5 @@
 ---
-title: Idiaenumstackframes::Next | Microsoft Docs
+title: 'IDiaEnumStackFrames:: Next | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1c66e8b281f27e13a1176dd32f21856367e5f1ac
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68189736"
 ---
 # <a name="idiaenumstackframesnext"></a>IDiaEnumStackFrames::Next
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Yığın çerçeve öğelerin belirtilen bir sayı sabit listesi dizisinden alır.  
+Sabit Listesi dizisinden belirtilen sayıda yığın çerçevesi öğesi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Next(   
@@ -37,17 +37,17 @@ HRESULT Next( 
   
 #### <a name="parameters"></a>Parametreler  
  celt  
- [in] Alınacak Numaralandırıcı stackframe öğeleri sayısı.  
+ 'ndaki Alınacak numaralandırıcıdaki StackFrame öğelerinin sayısı.  
   
- http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp  
- [out] İstenen ile doldurulacak bir dizi [Idiastackframe](../../debugger/debug-interface-access/idiastackframe.md) nesneleri.  
+ rgelt  
+ dışı İstenen [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) nesneleriyle doldurulacak bir dizi.  
   
- pceltFetched  
- [out] Yığın çerçeve öğeleri getirilen bir numaralandırıcı döndürür.  
+ Pceltfettiz  
+ dışı Getirilen Numaralandırıcı içindeki yığın çerçevesi öğelerinin sayısını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa daha fazla yığın çerçevesi yok. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla yığın çerçevesi yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiaenumstackframes](../../debugger/debug-interface-access/idiaenumstackframes.md)   
+ [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)   
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

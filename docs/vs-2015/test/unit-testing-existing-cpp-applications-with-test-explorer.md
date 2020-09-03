@@ -9,10 +9,10 @@ caps.latest.revision: 13
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 68bff8dbe2d0e5d85c8b18eeafaeaad06ba3982e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540081"
 ---
 # <a name="unit-testing-existing-c-applications-with-test-explorer"></a>Test Gezgini ile mevcut C++ uygulamalarında birim testi
@@ -49,7 +49,7 @@ Mevcut bir uygulamayı değiştirmeden önce, birim testlerle iyi bir kapsama sa
 
 ## <a name="creating-the-tests"></a>Testleri oluşturma
 
-### <a name="to-change-the-code-under-test-to-a-static-library"></a><a name="staticLink"></a>Test altındaki kodu statik bir kitaplığa değiştirmek için
+### <a name="to-change-the-code-under-test-to-a-static-library"></a><a name="staticLink"></a> Test altındaki kodu statik bir kitaplığa değiştirmek için
 
 - Testlerinizin test edilen bir proje tarafından dışarıya aktarılmamış üyeleri kullanması gerekiyorsa ve test altındaki proje dinamik bir kitaplık olarak derlendiğinden, onu statik bir kitaplığa dönüştürmeyi düşünün.
 
@@ -61,7 +61,7 @@ Mevcut bir uygulamayı değiştirmeden önce, birim testlerle iyi bir kapsama sa
 
   [Testleri nesne veya kitaplık dosyalarına bağlama](#objectRef)yordamıyla devam edin.
 
-### <a name="to-reference-exported-functions-from-the-test-project"></a><a name="projectRef"></a>Test projesinden aktarılmış işlevlere başvurmak için
+### <a name="to-reference-exported-functions-from-the-test-project"></a><a name="projectRef"></a> Test projesinden aktarılmış işlevlere başvurmak için
 
 - Test edilen bir proje test etmek istediğiniz işlevleri dışa aktardığında, test projesinden kod projesine bir başvuru ekleyebilirsiniz.
 
@@ -85,7 +85,7 @@ Mevcut bir uygulamayı değiştirmeden önce, birim testlerle iyi bir kapsama sa
 
   [Birim testlerini yazmaya](#addTests)gidin.
 
-### <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="objectRef"></a>Testleri nesne veya kitaplık dosyalarına bağlamak için
+### <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="objectRef"></a> Testleri nesne veya kitaplık dosyalarına bağlamak için
 
 - Test edilen kod test etmek istediğiniz işlevleri dışa aktarmadığından, Output **. obj** veya **. lib** dosyasını test projesinin bağımlılıklarına ekleyebilirsiniz.
 
@@ -109,7 +109,7 @@ Mevcut bir uygulamayı değiştirmeden önce, birim testlerle iyi bir kapsama sa
 
   [Birim testlerini yazmaya](#addTests)gidin.
 
-### <a name="to-add-unit-tests-in-the-same-project"></a><a name="sameProject"></a>Aynı projeye birim testleri eklemek için
+### <a name="to-add-unit-tests-in-the-same-project"></a><a name="sameProject"></a> Aynı projeye birim testleri eklemek için
 
 1. Ürün kodu proje özelliklerini, birim testi için gereken üst bilgileri ve kitaplık dosyalarını içerecek şekilde değiştirin.
 
@@ -130,7 +130,7 @@ Mevcut bir uygulamayı değiştirmeden önce, birim testlerle iyi bir kapsama sa
 
    [Birim testlerini yazmaya](#addTests)gidin.
 
-## <a name="writing-the-unit-tests"></a><a name="addTests"></a>Birim testlerini yazma
+## <a name="writing-the-unit-tests"></a><a name="addTests"></a> Birim testlerini yazma
 
 1. Her birim test kodu dosyasında, `#include` test edilen projenin üst bilgileri için bir ifade ekleyin.
 

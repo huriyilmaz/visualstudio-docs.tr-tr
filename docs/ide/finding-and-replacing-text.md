@@ -1,5 +1,5 @@
 ---
-title: Metni bulma ve değiştirme ve çok yönlü seçim
+title: Metin bul ve Değiştir ve çok şapka seçimi
 ms.date: 08/14/2018
 ms.topic: conceptual
 f1_keywords:
@@ -31,109 +31,109 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ffc31a0d0e2b6878b5dd5173a35ce4f538e135be
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75590351"
 ---
 # <a name="find-and-replace-text"></a>Metin bulma ve değiştirme
 
-Visual Studio düzenleyicisinde Metni Bul ve [Değiştir](#find-and-replace-control) **(Ctrl**+**F** veya **Ctrl**+**H)** veya [Dosyalarda Bul/Değiştir](#find-in-files-and-replace-in-files) **(Ctrl**+**Shift**+**F** veya **Ctrl**+**Shift**+**H)** kullanarak metni bulabilir ve değiştirebilirsiniz. Ayrıca, *[çok noktalı seçimi](#multi-caret-selection)* kullanarak yalnızca *bazı* desen örneklerini bulabilir ve değiştirebilirsiniz.
+[Bul ve Değiştir](#find-and-replace-control) (**CTRL** + **F** veya **CTRL** + **H**) veya [dosyalarda Bul/Değiştir '](#find-in-files-and-replace-in-files) i kullanarak Visual Studio düzenleyicisinde metin bulabilir ve değiştirebilirsiniz (**CTRL** + **SHIFT** + **F** veya **CTRL** + **SHIFT** + **H**). Ayrıca, *[Çoklu şapka seçimini](#multi-caret-selection)* kullanarak bir düzenin yalnızca *bazı* örneklerini bulabilir ve değiştirebilirsiniz.
 
 > [!TIP]
-> Değişkenler ve yöntemler gibi kod sembollerini yeniden adarıyorsanız, bunları bul-değiştir'i kullanmaktan daha iyi *[bir şekilde yeniden düzenlemeniz](../ide/reference/rename.md)* daha iyidir. Refactoring akıllıdır ve kapsamı anlar, oysa bul-değiştir ve bul tüm örnekleri körü körüne değiştirir.
+> Değişkenler ve yöntemler gibi kod sembollerini yeniden adlandırıyorsanız, bul ve Değiştir ' i kullanmaya kıyasla yeniden *[düzenleme](../ide/reference/rename.md)* daha iyidir. Yeniden düzenleme akıllı ve anlamıştır, ancak bul ve Değiştir, tüm örneklerin yerini alır.
 
-Bul ve değiştir işlevleri düzenleyicide, **Sonuçları Bul** pencereleri gibi diğer metin tabanlı pencerelerde, XAML tasarımcısı ve Windows Forms tasarımcısı gibi tasarımcı pencerelerinde ve araç pencerelerinde kullanılabilir.
+Bul ve Değiştir işlevleri, düzenleyicide, XAML Tasarımcısı ve Windows Forms tasarımcı gibi tasarımcı pencereleri ve araç pencereleri gibi çeşitli metin tabanlı **pencereler için düzenleyicide** bulunur.
 
-Aramaları geçerli belgeye, geçerli çözüme veya özel bir klasör kümesine kapsamda sürebilirsiniz. Ayrıca, çok dosyalı aramalar için bir dosya adı uzantıları kümesi de belirtebilirsiniz. .NET [normal ifadeleri](../ide/using-regular-expressions-in-visual-studio.md)kullanarak arama sözdizimini özelleştirin.
+Aramaları geçerli belge, geçerli çözüm veya özel bir klasör kümesiyle kapsamını belirleyebilirsiniz. Ayrıca, çok dosya aramaları için bir dosya adı uzantıları kümesi de belirtebilirsiniz. .NET [normal ifadelerini](../ide/using-regular-expressions-in-visual-studio.md)kullanarak arama sözdizimini özelleştirin.
 
 > [!TIP]
-> [Bul/Komut](../ide/find-command-box.md) kutusu araç çubuğu denetimi olarak kullanılabilir, ancak varsayılan olarak görünmez. **Bul/Komut** kutusunu görüntülemek için **Standart** araç çubuğunda **Ekle veya Kaldır Düğmeleri'ni** seçin ve ardından **Bul'u**seçin.
+> [Bul/komut](../ide/find-command-box.md) kutusu, bir araç çubuğu denetimi olarak kullanılabilir, ancak varsayılan olarak görünmez. **Bul/komut** kutusunu göstermek için **standart** araç çubuğunda **Düğme Ekle veya Kaldır** ' ı seçin ve ardından **bul**' u seçin.
 
-## <a name="find-and-replace-control"></a>Denetimi Bul ve Değiştir
+## <a name="find-and-replace-control"></a>Bul ve Değiştir denetimi
 
-- Geçerli dosyada bir dize *bulmak* için kısayol olarak **Ctrl**+**F** tuşuna basın.
-- Geçerli dosyadaki bir dizeyi *bulmak ve değiştirmek* için kısayol olarak **Ctrl**+**H** tuşuna basın.
+- **Ctrl** + Geçerli dosyada bir dize *bulmak* için kısayol olarak Ctrl**F** tuşlarına basın.
+- **Ctrl** + Geçerli dosyadaki bir dizeyi *bulmak ve değiştirmek* için kısayol olarak Ctrl**H** tuşuna basın.
 
-**Bul ve Değiştir** denetimi kod düzenleyicipenceresinin sağ üst köşesinde görünür. Geçerli belgedeki verilen arama dizesinin her oluşumunu hemen vurgular. **Sonrakini Bul** düğmesini veya arama denetimindeki **Öncekileri Bul** düğmesini seçerek bir oluşumdan diğerine gidebilirsiniz.
+**Bul ve Değiştir** denetimi, kod Düzenleyicisi penceresinin sağ üst köşesinde görüntülenir. Geçerli belgede verilen arama dizesinin her oluşumunu anında vurgular. Arama denetimindeki **Sonrakini Bul** düğmesini veya **Öncekini Bul** düğmesini seçerek bir örnekten diğerine gidebilirsiniz.
 
-![Visual Studio'da Bul ve Değiştir](media/find-and-replace-box.png)
+![Visual Studio 'da bul ve Değiştir](media/find-and-replace-box.png)
 
-**Metin** kutusunubul'un yanındaki düğmeyi seçerek değiştirme seçeneklerine erişebilirsiniz. Aynı anda bir değişiklik yapmak için, Metin Kutusunu **Değiştir'in** yanındaki **İleri'yi Değiştir** düğmesini seçin. Tüm eşleşmeleri değiştirmek için **Tümünü Değiştir** düğmesini seçin.
+**Bul** metin kutusunun yanındaki düğmeyi seçerek değiştirme seçeneklerine erişebilirsiniz. Tek seferde bir değiştirme yapmak için, **Değiştir** metin kutusunun yanındaki **Sonrakini Değiştir** düğmesini seçin. Tüm eşleşmeleri değiştirmek için **Tümünü Değiştir** düğmesini seçin.
 
-Eşleşmeler için vurgu rengini değiştirmek için **Araçlar** menüsünü seçin, **Seçenekler'i**seçin ve ardından **Çevre'yi**seçin ve Yazı Tipleri **ve Renkler'i**seçin. Liste **için Göster ayarlarında** Metin **Düzenleyici'yi**seçin ve ardından **Öğeleri Görüntüle** listesinde **Vurgula (Uzantı)** seçin.
+Eşleşmelerin vurgu rengini değiştirmek için, **Araçlar** menüsünü seçin, **Seçenekler**' i seçin ve ardından **ortam**' ı seçin ve **yazı tipleri ve renkler**' i seçin. **Ayarları göster** listesinde, **metin düzenleyici**' yi seçin ve ardından **öğeleri görüntüle** listesinde, **vurgu bul (uzantı)** öğesini seçin.
 
-### <a name="search-tool-windows"></a>Araç pencerelerini ara
+### <a name="search-tool-windows"></a>Arama aracı pencereleri
 
-**Ctrl+F**tuşuna basarak **Bul** > **ve Değiştir'i** seçerek, **Çıktı** pencereleri ve **Sonuçları Bul** pencereleri gibi kod veya metin pencerelerinde **Bul** denetimini kullanabilirsiniz.
+Bul ve Değiştir Windows ve **sonuçları bul** **pencereleri gibi bir** kod veya metin penceresinde **bul** denetimini, bul **Düzenle**  >  **'** yi seçerek veya **CTRL + F**tuşlarına basarak kullanabilirsiniz.
 
-Bazı araç pencerelerinde **Bul** denetiminin bir sürümü de mevcuttur. Örneğin, arama kutusuna metin girerek **Araç Kutusu** penceresindeki denetimler listesini filtreleyebilirsiniz. İçeriklerini aramanıza olanak tanıyan diğer araç pencereleri çözüm **gezgini,** **Özellikler** penceresi ve **Takım Gezgini'ni**içerir.
+**Bul** denetiminin bir sürümü de bazı araç pencereleri için de kullanılabilir. Örneğin, arama kutusuna metin girerek **araç kutusu** penceresindeki denetim listesini filtreleyebilirsiniz. İçeriklerini aramanıza izin veren diğer araç pencereleri **Çözüm Gezgini**, **özellikler** penceresi ve **Takım Gezgini**içerir.
 
-## <a name="find-in-files-and-replace-in-files"></a>Dosyalarda Bul ve Dosyalarda Değiştir
+## <a name="find-in-files-and-replace-in-files"></a>Dosyalarda bulma ve dosyalardaki değiştirme
 
-- Birden çok dosyada bir dize *bulmak* için kısayol olarak **Ctrl**+**Shift**+**F** tuşuna basın.
-- Birden çok dosyadaki bir dizeyi *bulmak ve değiştirmek* için kısayol olarak **Ctrl**+**Shift**+**H** tuşuna basın.
+- **Ctrl** + **Shift** + Birden çok dosyada dize *bulmak* için CTRL SHIFT**F** kısayolunu kısayol olarak basın.
+- **Ctrl** + **Shift** + Birden çok dosyada bir dizeyi *bulmak ve değiştirmek* için kısayol olarak CTRL SHIFT**H** tuşuna basın.
 
-**Dosyalarda Bul/Değiştir** **denetimi** gibi çalışır, ancak aramanız için bir kapsam tanımlayabilirsiniz. Yalnızca düzenleyicideki geçerli açık dosyayı aramakla birlikte, tüm açık belgeleri, tüm çözümü, geçerli projeyi ve seçili klasör kümelerini de arayabilirsiniz. Dosya adı uzantısına göre de arama yapabilirsiniz. **Dosyalarda Bul/Değiştir** iletişim kutusuna erişmek **için, Edit** menüsünde **Bul ve Değiştir'i** seçin (veya **Ctrl**+**Shift**+**F**tuşuna basın).
+**Dosyalarınızda Bul/Değiştir** , **Bul ve Değiştir** denetimi gibi çalışarak, aramanız için bir kapsam tanımlayabilmeniz gerekir. Yalnızca düzenleyicideki geçerli açık dosyada arama yapabilir, ancak tüm açık belgeler, tüm çözüm, geçerli proje ve seçili klasör kümelerini de arayabilirsiniz. Dosya adı uzantısına göre de arama yapabilirsiniz. **Dosyalarda Bul/Değiştir** iletişim kutusuna erişmek için, **Düzenle** menüsünde **Bul ve Değiştir** ' i seçin (veya **CTRL** + **SHIFT** + **F**tuşlarına basın).
 
-![Visual Studio'da Dosyaları Bul](media/find-in-files-box.png)
+![Visual Studio 'da dosyalarda bul](media/find-in-files-box.png)
 
-### <a name="find-results"></a>Sonuçları Bul
+### <a name="find-results"></a>Sonuçları bul
 
-**Tümünü Bul'u**seçtiğinizde, **Sonuçları Bul** penceresi açılır ve aramanızın eşleşmelerini listeler. Listede bir sonuç seçilmesi ilişkili dosyayı görüntüler ve eşleşmeyi vurgular. Dosya düzenleme için zaten açık değilse, sekenin sağ tarafındaki bir önizleme sekmesinde açılır. **Sonuçları** Bul listesinde arama yapmak için **Bul** denetimini kullanabilirsiniz.
+**Tümünü Bul**' u seçtiğinizde, bir **sonuçları bul** penceresi açılır ve aramanızın eşleşmeleri listelenir. Listede bir sonuç seçildiğinde ilişkili dosya görüntülenir ve eşleşme vurgulanır. Dosya zaten düzenlenmek üzere açık değilse, sekme alanının sağ tarafındaki bir önizleme sekmesinde açılır. **Bul denetimini,** **sonuçları bul** listesinde aramak için kullanabilirsiniz.
 
 ### <a name="create-custom-search-folder-sets"></a>Özel arama klasörü kümeleri oluşturma
 
-**Arama Klasörleri Seç** düğmesini **(...** gibi görünüyor) **kutusunun** yanındaki arama kapsamını belirleyebilirsiniz. Arama **Klasörleri Seç** iletişim kutusunda, aranacak bir klasör kümesi belirleyebilir ve daha sonra yeniden kullanabilmek için belirtimi kaydedebilirsiniz.
+Arama **yeri** kutusunun yanındaki arama **klasörlerini Seç** düğmesini ( **.**..) seçerek bir arama kapsamı tanımlayabilirsiniz. **Arama klasörlerini Seç** iletişim kutusunda, aranacak bir klasör kümesi belirtebilir ve daha sonra yeniden kullanabilmeniz için belirtimi kaydedebilirsiniz.
 
 > [!TIP]
-> Uzak bir makinenin sürücüsünün yerel makinenize eşlenemesini yaptımysa, uzak makinede aramak için klasörler belirtebilirsiniz.
+> Uzak makinenin sürücüsünü yerel makinenize eşleştirdiyseniz, uzak makinede arama yapmak için klasörler belirtebilirsiniz.
 
 ### <a name="create-custom-component-sets"></a>Özel bileşen kümeleri oluşturma
 
-**Kutudaki Bak'ın** yanındaki Özel Bileşen **Setini Edit** düğmesini seçerek bileşen kümelerini arama kapsamınız olarak tanımlayabilirsiniz. Yüklü .NET veya COM bileşenlerini, çözümünüze dahil olan Visual Studio projelerini veya herhangi bir derleme veya tür kitaplığını (*.dll*, *.tlb*, *.olb*, *.exe*, veya *.ocx)* belirtebilirsiniz. Başvuruları aramak için **başvurulardaki Bak** kutusunu seçin.
+Arama **yeri** kutusunun yanındaki **özel bileşen kümesini Düzenle** düğmesini seçerek, bileşen kümelerini arama kapsamınız olarak tanımlayabilirsiniz. Yüklü .NET veya COM bileşenlerini, çözümünüze dahil olan Visual Studio projelerini veya herhangi bir derlemeyi ya da tür kitaplığını (*. dll*, *. tlb*, *. olb*, *. exe*veya *. ocx*) belirtebilirsiniz. Başvuruları aramak için **başvurularda ara** kutusunu seçin.
 
-## <a name="multi-caret-selection"></a>Çok bakımlı seçim
+## <a name="multi-caret-selection"></a>Çoklu giriş işareti seçimi
 
 > [!NOTE]
-> Bu bölüm Windows'daki Visual Studio için geçerlidir. Mac için Visual Studio için [Blok seçimine](/visualstudio/mac/block-selection)bakın.
+> Bu bölüm Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [blok seçimi](/visualstudio/mac/block-selection).
 
-**Visual Studio 2017 sürümü 15.8 tanıtıldı**
+**Visual Studio 2017 sürüm 15,8 ' de tanıtılan**
 
-Aynı ediyi aynı anda iki veya daha fazla yerde yapmak için *çok noktalı seçimi* kullanın. Örneğin, aynı metni ekleyebilir veya aynı anda birden çok konumda varolan metni değiştirebilirsiniz.
+Aynı düzenlemeyi aynı anda iki veya daha fazla yerde yapmak için *Çoklu giriş işareti seçimini* kullanın. Örneğin, aynı metni ekleyebilir veya aynı anda birden fazla konumda varolan metni değiştirebilirsiniz.
 
-Aşağıdaki ekran görüntüsünde, `-0000` üç konumda seçilir; kullanıcı **Sil**tuşuna baslarsa, üç seçim de silinir:
+Aşağıdaki ekran görüntüsünde, `-0000` üç konumda seçilidir; Kullanıcı **Sil**' i basarsa, üç seçim de silinir:
 
-![Visual Studio'daki bir XML dosyasında çok noktalı seçim](media/multi-caret-selection.png)
+![Visual Studio 'da bir XML dosyasında çoklu giriş işareti seçimi](media/multi-caret-selection.png)
 
-Birden çok basamak seçmek için, her zamanki gibi ilk metin seçimini tıklatın veya yapın ve ardından her ek konumda metni tıklatırken veya seçerken **Alt** tuşuna basın. Ayrıca, eşleşen metni ek seçimler olarak otomatik olarak ekleyebilir veya her satırda aynı şekilde düzenlemek için bir metin kutusu seçebilirsiniz.
+Birden çok Evcil hayvan seçmek için her zamanki gibi ilk metin seçimini tıklatın veya seçin, sonra da her bir ek konumda metin ' i tıklattığınızda veya seçerken **alt** tuşuna basın. Ayrıca, eşleşen metni ek seçimler olarak otomatik olarak ekleyebilir veya her satırda aynı şekilde düzenlenecek metin kutusunu seçebilirsiniz.
 
 > [!TIP]
-> Fare için değiştirici tuşu olarak **Alt'ı** seçtiyseniz, **Araçlar** > Da Tanıma Git**seçeneğini**tıklattıysanız, çok bakımlı seçim devre dışı bırakılır.
+> Fare tıklaması için değiştirici tuşu olarak **alt** öğesini seçtiyseniz **Araçlar**seçeneklerinde tanıma git ' e tıklayın  >  **Options**, çoklu şapka seçimi devre dışıdır.
 
 ### <a name="commands"></a>Komutlar
 
-Çok yönlü seçim davranışları için aşağıdaki tuşları ve eylemleri kullanın:
+Çoklu giriş işareti seçim davranışları için aşağıdaki anahtarları ve eylemleri kullanın:
 
 |Kısayol|Eylem|
 |-|-|
-|**Ctrl**+**Alt** + tıklayın|İkincil bir caret ekleme|
-|**Ctrl**+**Alt** + çift tıklatma|İkincil sözcük seçimi ekleme|
-|**Ctrl**+**Alt** + tıklayın + sürükle|İkincil seçim ekleme|
-|**Shift**+**Alt**+**.**|Bir sonraki eşleşen metni seçim olarak ekleme|
-|**Ctrl**+**Shift**+**Alt**+**,**|Tüm eşleşen metni seçim olarak ekleme|
-|**Shift**+**Alt**+**,**|Seçilen son oluşumu kaldırma|
-|**Ctrl**+**Shift**+**Alt**+**.**|Sonraki eşleşen oluşumu atla|
-|**Alt** + tıklayın|Kutu seçimi ekleme|
-|**Esc** veya tıklayın|Tüm seçimleri temizle|
+|**CTRL** + **Alt** + tıklama|İkincil giriş işareti ekleme|
+|**CTRL** + **Alt** + çift tıklama|İkincil sözcük seçimi ekleme|
+|**CTRL** + **Alt** + tıklatıp + sürükleyin|İkincil bir seçim ekleyin|
+|**SHIFT** + **Alt** + **.**|Sonraki eşleşen metni seçim olarak ekle|
+|**CTRL** + **SHIFT** + **Alt** + **,**|Tüm eşleşen metni seçimler olarak ekle|
+|**SHIFT** + **Alt** + **,**|Son seçili oluşumu kaldır|
+|**CTRL** + **SHIFT** + **Alt** + **.**|Sonraki eşleşen oluşumu atla|
+|**Alt** + tıklama|Kutu seçimi Ekle|
+|**ESC** veya tıklama|Tüm Seçimleri Temizle|
 
-Komutlardan bazıları **Birden Çok Bakım**altında **Edit** menüsünde de mevcuttur:
+Bazı komutlardan biri de **düzenleme** menüsünde, **birden çok sepetin**altında bulunur:
 
-![Visual Studio'da birden fazla carets fly-out menü](media/edit-menu-multiple-carets.png)
+![Visual Studio 'da çoklu Evcil hayvan uçarak çıkış menüsü](media/edit-menu-multiple-carets.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'da düzenli ifadeler kullanma](../ide/using-regular-expressions-in-visual-studio.md)
-- [Visual Studio'da refactor kodu](../ide/refactoring-in-visual-studio.md)
-- [Blok seçimi (Mac için Visual Studio)](/visualstudio/mac/block-selection)
+- [Visual Studio 'da normal ifadeler kullanma](../ide/using-regular-expressions-in-visual-studio.md)
+- [Visual Studio 'da kodu yeniden düzenleme](../ide/refactoring-in-visual-studio.md)
+- [Seçimi engelle (Mac için Visual Studio)](/visualstudio/mac/block-selection)

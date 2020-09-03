@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 1fc548f5e051be878382d81bd040accbb13e9755
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548128"
 ---
 # <a name="how-to-set-performance-data-file-name-options"></a>Nasıl yapılır: Performans veri dosyası adlandırma seçeneklerini ayarlama
@@ -39,7 +39,7 @@ Performans oturumunun Özellikler iletişim kutusunun **genel** sayfasında herh
 
 3. **Rapor**' ın altında, aşağıdaki ayarlardan birini değiştirin:
 
-    |Name|Description|
+    |Ad|Açıklama|
     |-|-|
     |**Rapor konumu**|Profil oluşturma veri dosyalarını depolamak için bir dizin belirtin.|
     |**Rapor adı**|Dosyalar için bir temel ad belirtin.|

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramProvider2::GetProviderProcessData | Microsoft Dokümanlar
+title: 'IDebugProgramProvider2:: GetProviderProcessData | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4e958900307f5f7915f58679709c88f80c2abfc9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721833"
 ---
 # <a name="idebugprogramprovider2getproviderprocessdata"></a>IDebugProgramProvider2::GetProviderProcessData
-Belirli bir işlemden çalışan programların listesini alır.
+Belirli bir işlemden çalışan programların bir listesini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetProviderProcessData(
@@ -49,32 +49,32 @@ int GetProviderProcessData(
 
 ## <a name="parameters"></a>Parametreler
 `Flags`\
-[içinde] [numaralandırma PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) gelen bayrakların bir kombinasyonu. Aşağıdaki bayraklar bu çağrı için tipiktir:
+'ndaki [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) numaralandırmasındaki bayrakların birleşimi. Aşağıdaki bayraklar bu çağrı için tipik olarak verilmiştir:
 
 |Bayrak|Açıklama|
 |----------|-----------------|
-|`PFLAG_REMOTE_PORT`|Arayan uzak makinede çalışıyor.|
-|`PFLAG_DEBUGGEE`|Arayan şu anda debugged ediliyor (marshalling hakkında ek bilgiler her düğüm için döndürülür).|
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|Arayan, hata ayıklama tarafından başlatıldığı ancak başlatılmamasA da iliştirilmiş.|
-|`PFLAG_GET_PROGRAM_NODES`|Arayan, döndürülecek program düğümlerinin listesini istiyor.|
+|`PFLAG_REMOTE_PORT`|Çağıran uzak makinede çalışıyor.|
+|`PFLAG_DEBUGGEE`|Çağıranın Şu anda hata ayıklaması yapılıyor (her düğüm için sıralama ile ilgili ek bilgiler döndürülecek).|
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|Çağıran, hata ayıklayıcı tarafından eklenmiş ancak başlatılmamış.|
+|`PFLAG_GET_PROGRAM_NODES`|Arayan program düğümlerinin bir listesini döndürülmesini istiyor.|
 
 `pPort`\
-[içinde] Arama işleminin devam eden bağlantı noktası.
+'ndaki Çağıran işlemin üzerinde çalıştığı bağlantı noktası.
 
 `processId`\
-[içinde] Söz konusu programı içeren işlemin kimliğini tutan [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) bir yapı.
+'ndaki Söz konusu programı içeren işlemin KIMLIĞINI tutan bir [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) yapısı.
 
 `EngineFilter`\
-[içinde] Bu işlemi hata ayıklamak için atanan hata ayıklama motorları için bir dizi GUID (bunlar, sağlanan motorların desteğine göre gerçekte döndürülen programları filtrelemek için kullanılır; motor belirtilmemişse, tüm programlar döndürülür).
+'ndaki Bu işlemde hata ayıklamak için atanan hata ayıklama altyapılarının GUID dizisi (Bunlar, sağlanan altyapıların ne kadar destek olduğuna göre gerçekten döndürülen programları filtrelemek için kullanılır; hiçbir altyapı belirtilmemişse, tüm programlar döndürülür).
 
 `pProcess`\
-[çıkış] İstenen bilgilerle doldurulmuş [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) bir yapı.
+dışı İstenen bilgilerle doldurulmuş bir [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) yapısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem normalde bu işlemde çalışan programların listesini almak için bir işlem tarafından çağrılır. Döndürülen bilgiler [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesnelerinin listesidir.
+ Bu yöntem, normalde bu işlemde çalışan programların listesini almak için bir işlem tarafından çağırılır. Döndürülen bilgi, [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesnelerinin bir listesidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)

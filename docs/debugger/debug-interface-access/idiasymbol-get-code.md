@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b34714ccd23929d4aaa3ea734fc80941d04103dd
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85464095"
 ---
 # <a name="idiasymbolget_code"></a>IDiaSymbol::get_code
@@ -33,7 +33,7 @@ HRESULT get_code ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE`Simgenin bir kod adresine başvuruyorsa, aksi takdirde döndürür `FALSE` .
+dışı `TRUE` Simgenin bir kod adresine başvuruyorsa, aksi takdirde döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
@@ -43,7 +43,7 @@ dışı `TRUE`Simgenin bir kod adresine başvuruyorsa, aksi takdirde döndürür
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Açıklama|
+|Gereksinim|Description|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 7.0|

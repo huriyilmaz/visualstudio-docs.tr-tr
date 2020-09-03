@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 6a4a4e2e6990772b50568043c4d18ff29248571d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547894"
 ---
 # <a name="ca1009-declare-event-handlers-correctly"></a>CA1009: Olay işleyicileri doğru olarak bildirin
@@ -47,7 +47,7 @@ ms.locfileid: "85547894"
  Bu kuraldan uyarıyı bastırmayın.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, olayları işlemeye uygun bir temsilciyi gösterir. Bu olay işleyicisi tarafından çağrılabilen Yöntemler, tasarım yönergelerine göre belirtilen imzaya uyum sağlayabilir. `AlarmEventHandler`temsilcinin tür adıdır. `AlarmEventArgs`, olay verileri için temel sınıftan türetilir <xref:System.EventArgs> ve uyarı olay verilerini barındırır.
+ Aşağıdaki örnek, olayları işlemeye uygun bir temsilciyi gösterir. Bu olay işleyicisi tarafından çağrılabilen Yöntemler, tasarım yönergelerine göre belirtilen imzaya uyum sağlayabilir. `AlarmEventHandler` temsilcinin tür adıdır. `AlarmEventArgs` , olay verileri için temel sınıftan türetilir <xref:System.EventArgs> ve uyarı olay verilerini barındırır.
 
  [!code-cpp[FxCop.Design.EventsTwoParams#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Design.EventsTwoParams/cpp/FxCop.Design.EventsTwoParams.cpp#1)]
  [!code-csharp[FxCop.Design.EventsTwoParams#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.EventsTwoParams/cs/FxCop.Design.EventsTwoParams.cs#1)]

@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 78bd0143ee2584bcabb5e8ed4946818ee2590789
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85286706"
 ---
 # <a name="manage-test-controllers-and-test-agents"></a>Test denetleyicilerini ve test aracılarını yönetme
@@ -117,7 +117,7 @@ Test denetleyicisi bir projeye kayıtlı değilse, bu adımları izleyin.
 3. **Aracılar** bölmesinde, test Aracısı adını seçin. Aracı hala çevrimiçiyse, çevrimdışı ' ı seçin **.** Kaldırmak için **Kaldır**' ı seçin.
 
    > [!NOTE]
-   > Test aracısının kaldırılması, bunu test denetleyicisi ile ilişkilendirir. Test aracısını tamamen kaldırmak için, test aracısı bilgisayarındaki **Programlar ve Özellikler** denetim masasını kullanın.
+   > Test aracısının kaldırılması, bunu test denetleyicisi ile ilişkilendirir. Test aracısını tamamen kaldırmak için, test aracısı bilgisayarındaki  **Programlar ve Özellikler** denetim masasını kullanın.
 
 ::: moniker range="vs-2017"
 Test denetleyicisi bir proje ile kayıtlıysa, Microsoft Test Yöneticisi kullanarak aracıyı kaldırın.

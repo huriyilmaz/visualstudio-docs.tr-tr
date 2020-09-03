@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsymbols::Next | Microsoft Docs
+title: 'IDiaEnumSymbols:: Next | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cdea32ece50e83c046a67399a0d5f36410edb9a1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68189699"
 ---
 # <a name="idiaenumsymbolsnext"></a>IDiaEnumSymbols::Next
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Belirtilen bir numaralandırma sıralı sembolleri sayısını alır.  
+Sabit Listesi dizisinde belirtilen sayıda sembol alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Next (   
@@ -37,16 +37,16 @@ HRESULT Next ( 
   
 #### <a name="parameters"></a>Parametreler  
  celt  
- [in] Alınacak Numaralandırıcı sembolleri sayısı.  
+ 'ndaki Numaralandırıcıda alınacak olan simgelerin sayısı.  
   
- http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp  
- [out] İle doldurulacak bir dizi [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) istenen simgeleri temsil eden nesneleri.  
+ rgelt  
+ dışı İstenen sembolleri temsil eden [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesneleriyle doldurulacak bir dizi.  
   
- pceltFetched  
- [out] Simgelerin sayısını getirilen bir numaralandırıcı döndürür.  
+ Pceltfettiz  
+ dışı Getirilen Numaralandırıcı içindeki simgelerin sayısını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` daha fazla sembol varsa. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla sembol yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="example"></a>Örnek  
   
@@ -58,6 +58,6 @@ pEnum->Next( 1, &pSym, &celt );
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiaenumsymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)   
- [Idiasession::findlinesbylinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)   
+ [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)   
+ [IDiaSession:: findLinesByLinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

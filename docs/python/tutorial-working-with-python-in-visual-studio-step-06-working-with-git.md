@@ -1,7 +1,7 @@
 ---
-title: Python Visual Studio öğretici adım 6, Git ile çalışmak
+title: Visual Studio 'da Python eğitim 6. adım, git ile çalışma
 titleSuffix: ''
-description: Visual Studio'daki Python'un Visual Studio'daki temel walkthrough'unun 6.
+description: Visual Studio 'nun git ile ilgili özelliklerini kapsayan, Visual Studio 'da Python 'un temel bir anlatımın 6. adımı.
 ms.date: 01/28/2019
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -12,66 +12,66 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: cd8ebd706d9228d23eb5d5ce3b1429063bae55e5
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72289711"
 ---
-# <a name="step-6-work-with-git"></a>Adım 6: Git ile çalışın
+# <a name="step-6-work-with-git"></a>6. Adım: git ile çalışma
 
-**Önceki adım: [Paketleri yükleyin ve Python ortamınızı yönetin](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)**
+**Önceki adım: [paket yükleyip Python ortamınızı yönetme](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)**
 
-Visual Studio, GitHub ve Azure Depoları gibi hizmetlerdeki yerel Git depoları ve uzak depolarla doğrudan entegrasyon sağlar. Tümleştirme, bir depoyu klonlamayı, değişiklikler gerçekleştirmeyi ve şubeleri yönetmeyi içerir.
+Visual Studio, GitHub ve Azure Repos gibi hizmetlerde yerel Git depoları ve uzak depolarla doğrudan tümleştirme sağlar. Tümleştirme, bir depoyu klonlamak, değişiklikleri yürütmek ve dalları yönetmek içerir.
 
-Bu makalede, varolan bir proje için yerel bir Git deposu oluşturma ve Visual Studio'nun Git ile ilgili bazı özelliklerine alışma temel bir genel bakış sağlar.
+Bu makalede, var olan bir proje için yerel bir git deposu oluşturmaya yönelik temel bir genel bakış ve Visual Studio 'nun git ile ilgili özelliklerinden bazıları alıştırarak.
 
-1. Önceki [adımdaki](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)proje gibi Visual Studio'da açık olan bir projeyle çözüme sağ tıklayın ve **Kaynak Denetimine Çözüm Ekle'yi**seçin. Visual Studio, proje kodunuzu içeren yerel bir Git deposu oluşturur.
+1. [Önceki adımdaki](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)proje gibi Visual Studio 'da açık bir proje ile çözüme sağ tıklayın ve **kaynak denetimine çözüm Ekle**' yi seçin. Visual Studio, proje kodunuzu içeren bir yerel Git deposu oluşturur.
 
-1. Visual Studio, projenin Git deposunda yönetildiğini algıladığında Git ile ilgili denetimler Visual Studio penceresinin sağ alt köşesinde görünür. Denetimler bekleyen commits, değişiklikleri, deponun adını ve dalı gösterir. Ek bilgileri görmek için denetimlerin üzerine titretin.
+1. Visual Studio projenin bir git deposunda yönetildiğini algıladığında git ile ilgili denetimler, Visual Studio penceresinin sağ alt köşesinde görüntülenir. Denetimler bekleyen işlemeler, değişiklikler, deponun adı ve dalı gösterir. Ek bilgi görmek için denetimlerin üzerine gelin.
 
-    ![Visual Studio penceresinde git denetimi üzerinde gezinirken ek bilgiler görüntülenir](media/working-with-git-01.png)
+    ![Visual Studio penceresinde git denetiminin üzerine gelindiğinde ek bilgiler görüntülenir](media/working-with-git-01.png)
 
-1. Yeni bir depo oluşturduğunuzda veya Git denetimlerinden herhangi birini seçtiğinizde, Visual Studio **Team Explorer** penceresini açar. (Ekibi**Gezgini'ni** **Görüntüle** > menüsü komutuyla istediğiniz zaman pencereyi açabilirsiniz.) Pencere, **Takım Gezgini** üstbilgisindeki açılır pencereyi kullanarak geçiş yaptığınız üç ana bölmeye sahiptir. Yayımlama işlemleri sağlayan **Eşitleme** bölmesi, **Push** denetimini (yukarı ok simgesi) seçtiğinizde de görünür:
+1. Yeni bir depo oluşturduğunuzda veya git denetimlerinden birini seçtiğinizde, Visual Studio **Takım Gezgini** penceresini açar. (Pencereyi herhangi bir zamanda **görünümü**  >  ile açabilirsiniz. **Takım Gezgini** menü komutu.) Pencerede, **Takım Gezgini** üstbilgisindeki açılan pencereyi kullanma arasında geçiş yaptığınız üç ana bölme bulunur. Yayımlama işlemleri sağlayan **eşitleme** bölmesi, **anında iletme** denetimini seçtiğinizde de görünür (yukarı ok simgesi):
 
-    ![Yerel bir depo oluşturduktan sonra Visual Studio'da Team Explorer](media/working-with-git-02.png)
+    ![Yerel bir depo oluşturduktan sonra Visual Studio 'da Takım Gezgini](media/working-with-git-02.png)
 
-1. İşlenmemiş değişiklikleri gözden geçirmek ve istendiğinde işlemek için **Değişiklikler'i** (veya kalem simgesiyle Git denetimini) seçin.
+1. Kaydedilmemiş değişiklikleri gözden geçirmek ve istediğiniz zaman yürütmek için **değişiklikleri** (veya kurşun kalem simgesiyle git denetimini) seçin.
 
-    ![Visual Studio'da Takım Gezgini taahhüt edilmemiş değişiklikleri gösteriyor](media/working-with-git-03.png)
+    ![Kaydedilmemiş değişiklikleri gösteren Visual Studio Takım Gezgini](media/working-with-git-03.png)
 
-    Bu dosya için diff görünümü açmak için **Değişiklikler** listesindeki bir dosyayı çift tıklatın:
+    Bu dosya için bir fark görünümü açmak için **değişiklikler** listesinde bir dosyaya çift tıklayın:
 
-    ![Dosyadaki değişiklikler için Diff görünümü](media/working-with-git-05.png)
+    ![Dosyadaki değişiklikler için fark görünümü](media/working-with-git-05.png)
 
-1. Dalları incelemek ve birleştirme ve yeniden temel işlemleri gerçekleştirmek için **Dallar'ı** (veya bir şube adı olan Git denetimini) seçin:
+1. Dalları incelemek ve birleştirme ve yeniden temellendirme işlemlerini gerçekleştirmek için **dalları** (veya bir dal adına sahip git denetimini) seçin:
 
-    ![Görsel Stüdyo'da Şubeleri Gösteren Takım Gezgini](media/working-with-git-04.png)
+    ![Dalları gösteren Visual Studio 'da Takım Gezgini](media/working-with-git-04.png)
 
-1. Depo adı (Önceki görüntüdeki**CosineWave)** ile Git denetimini seçen **Team Explorer,** hızla tamamen başka bir depoya geçebileceğiniz bir **Connect** arabirimi gösterir.
+1. Depo adı (önceki görüntüde**CosineWave** ) ile git denetimi seçilerek, **Takım Gezgini** , başka bir depoya hızla geçiş yapmak için kullanabileceğiniz bir **bağlantı** arabirimi gösterir.
 
-1. Yerel bir depo kullanırken, taahhüt edilen değişiklikler doğrudan depoya gider. Uzak bir depoya bağlıysanız, Takım Gezgini'ndeki açılır başlığı **Team Explorer**seçin, **Eşitleme** bölümüne geçmek için **Eşitle'yi** seçin ve burada sunulan **Çekme** ve **Getir** komutlarıyla çalışın.
+1. Yerel bir depo kullanılırken, kaydedilen değişiklikler doğrudan depoya gider. Uzak bir depoya bağlıysanız, **Takım Gezgini**' deki aşağı açılan üstbilgiyi seçin, **eşitleme** bölümüne geçmek için **Eşitle** ' yi seçin ve **çekme** ve **getirme** komutlarıyla birlikte çalışın.
 
-## <a name="go-deeper"></a>Daha derine inin
+## <a name="go-deeper"></a>Daha derin git
 
-Uzaktan Git deposundan bir proje oluşturmanın kısa bir bölümü [için, Bkz. Quickstart: Visual Studio'da Python kodunun deposunu klonlayın.](quickstart-03-python-in-visual-studio-project-from-repository.md)
+Uzak bir git deposundan bir proje oluşturmaya yönelik kısa bir anlatım için bkz. [hızlı başlangıç: Visual Studio 'Da Python kodu deposunu kopyalama](quickstart-03-python-in-visual-studio-project-from-repository.md).
 
-Birleştirme çakışmalarını işleme, kodu çekme istekleriyle gözden geçirme, yeniden basing ve dallar arasında kiraz toplama değişiklikleri dahil olmak üzere çok daha kapsamlı bir öğretici için [bkz.](/azure/devops/repos/git/gitquickstart)
+Birleştirme çakışmalarını işleme, çekme istekleri ile kodu gözden geçirme, yeniden temellendirme ve dallar arasındaki değişiklikleri seçme gibi daha kapsamlı bir öğretici için bkz. [Git ile çalışmaya başlama ve Azure Repos](/azure/devops/repos/git/gitquickstart).
 
-## <a name="tutorial-review"></a>Öğretici inceleme
+## <a name="tutorial-review"></a>Öğretici incelemesi
 
-Visual Studio Python bu öğretici tamamladıktan için tebrikler. Bu öğreticide nasıl öğrenebilirsiniz:
+Tebrikler, Visual Studio 'da Python 'da bu öğreticiyi tamamlama. Bu öğreticide nasıl yapılacağını öğrendiniz:
 
-- Projeler oluşturun ve projenin içeriğini görüntüleyin.
+- Proje oluşturun ve projenin içeriğini görüntüleyin.
 - Kod düzenleyicisini kullanın ve bir proje çalıştırın.
-- Yeni kod geliştirmek ve bu kodu kolayca düzenleyiciye kopyalamak için **Etkileşimli** pencereyi kullanın.
-- Visual Studio hata ayıklama da tamamlanmış bir program çalıştırın.
-- Paketleri yükleyin ve Python ortamlarını yönetin.
-- Git deposunda kodla çalışın.
+- Yeni kod geliştirmek ve bu kodu düzenleyiciye kolayca kopyalamak için **etkileşimli** pencereyi kullanın.
+- Visual Studio hata ayıklayıcısında tamamlanmış bir programı çalıştırın.
+- Paket yükleyip Python ortamlarını yönetin.
+- Git deposundaki kodla çalışın.
 
-Buradan, aşağıdaki makaleler de dahil olmak üzere Kavramlar ve Nasıl Yapılacağını rehberleri inceleyin:
+Buradan, aşağıdaki makaleler dahil olmak üzere kavramları ve nasıl yapılır kılavuzlarını keşfedebilirsiniz:
 
 - [Python için C++ uzantısı oluşturma](working-with-c-cpp-python-in-visual-studio.md)
 - [Azure App Service’e yayımlama](publishing-python-web-applications-to-azure-from-visual-studio.md)
-- [Profil oluşturma](profiling-python-code-in-visual-studio.md)
+- [Profil Oluşturma](profiling-python-code-in-visual-studio.md)
 - [Birim testi](unit-testing-python-in-visual-studio.md)

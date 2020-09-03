@@ -1,6 +1,6 @@
 ---
-title: Veri Bilimi ve Analitik Uygulamalar iş yükü
-description: Bu Visual Studio iş yükü Python, F#, ve Anaconda dahil olmak üzere kendi çalışma zamanı dağıtımları bir araya getiriyor. (R ayrıca visual studio 2017'ye dahildir.)
+title: Veri bilimi ve analitik uygulamalar iş yükü
+description: "Bu Visual Studio iş yükü, Anaconda dahil olmak üzere Python, F # ve ilgili çalışma zamanı dağıtımlarını birlikte getirir. (R yalnızca Visual Studio 2017 ' de de bulunur.)"
 ms.date: 02/28/2019
 ms.topic: overview
 author: JoshuaPartlow
@@ -10,35 +10,35 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 44906d70be05891fe52096adec2f61f2261b5db5
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "70154887"
 ---
-# <a name="install-data-science-support-in-visual-studio"></a>Visual Studio'da veri bilimi desteği yükleyin
+# <a name="install-data-science-support-in-visual-studio"></a>Visual Studio 'da veri bilimi desteğini yükler
 
-Visual Studio yükleyicisi aracılığıyla seçtiğiniz ve yüklediğiniz Veri Bilimi ve Analitik Uygulamalar iş yükü, çeşitli dilleri ve bunların çalışma zamanı dağıtımlarını bir araya getirir:
+Visual Studio yükleyicisi aracılığıyla seçtiğiniz ve yüklediğiniz veri bilimi ve analitik uygulamalar iş yükü, birkaç dili ve ilgili çalışma zamanı dağıtımlarını birlikte getirir:
 
 ::: moniker range="vs-2017"
 - [Python ve Anaconda](../python/overview-of-python-tools-for-visual-studio.md)
-- [.NET çerçevesi ile F#](/dotnet/fsharp/)
-- [R ve Microsoft R İstemci](../rtvs/index.md)
+- [.NET Framework ile F #](/dotnet/fsharp/)
+- [R ve Microsoft R Client](../rtvs/index.md)
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 - [Python](../python/overview-of-python-tools-for-visual-studio.md)
-- [.NET çerçevesi ile F#](/dotnet/fsharp/)
+- [.NET Framework ile F #](/dotnet/fsharp/)
 ::: moniker-end
 
-![Visual Studio yükleyicisinde Veri Bilimi ve Analitik Uygulamaları iş yükü](media/workload/data-science-workload.png)
+![Visual Studio yükleyicisinde veri bilimi ve analitik uygulamalar iş yükü](media/workload/data-science-workload.png)
 
 ::: moniker range="vs-2017"
-Python ve R, veri bilimi için kullanılan birincil komut dosyası dillerinden ikisidir. Her iki dilde de öğrenmesi kolaydır ve zengin bir paket ekosistemi tarafından desteklenir. Bu paketler veri toplama, temizleme, model eğitimi, dağıtım ve çizim gibi çok çeşitli senaryoları ele alır. F# aynı zamanda çok çeşitli veri işleme görevleri için uygun olan güçlü bir işlevsel ilk .NET dilidir.
+Python ve R, veri bilimi için kullanılan birincil komut dosyası dillerinin ikikleridir. Her iki dilin de öğrenilmesi kolaydır ve bu paketlerin zengin ekosistemi tarafından desteklenir. Bu paketler, veri alma, Temizleme, model eğitimi, dağıtım ve çizim gibi çok çeşitli senaryolar ele alıalardır. F #, çok çeşitli veri işleme görevlerine uygun olan güçlü bir işlevsel ilk .NET dilidir.
 ::: moniker-end
 
 ::: moniker range="vs-2019"
-Python, veri bilimi için kullanılan birincil bir komut dosyası dilidir. Python öğrenmesi kolaydır ve zengin bir paket ekosistemi tarafından desteklenir. Bu paketler veri toplama, temizleme, model eğitimi, dağıtım ve çizim gibi çok çeşitli senaryoları ele alır. F# aynı zamanda çok çeşitli veri işleme görevleri için uygun olan güçlü bir işlevsel ilk .NET dilidir. (R dili için [Azure Dizüstü Bilgisayarları](https://notebooks.azure.com)öneririz.)
+Python, veri bilimi için kullanılan birincil bir komut dosyası dilidir. Python kolayca öğrenilmesi ve paketlerin zengin ekosistemi tarafından desteklenilmesi kolaydır. Bu paketler, veri alma, Temizleme, model eğitimi, dağıtım ve çizim gibi çok çeşitli senaryolar ele alıalardır. F #, çok çeşitli veri işleme görevlerine uygun olan güçlü bir işlevsel ilk .NET dilidir. ( [Azure Notebooks](https://notebooks.azure.com)önerdiğimiz R dili için.)
 ::: moniker-end
 
 <!--Note link on the image because this one is large -->
@@ -46,51 +46,51 @@ Python, veri bilimi için kullanılan birincil bir komut dosyası dilidir. Pytho
 
 ## <a name="workload-options"></a>İş yükü seçenekleri
 
-Varsayılan olarak, iş yükü, Visual Studio yük leyicisindeki iş yükü için özet bölümünde değiştirebileceğiniz aşağıdaki seçenekleri yükler:
+Varsayılan olarak, iş yükü, Visual Studio yükleyicisindeki iş yükünün Özet bölümünde değiştirebileceğiniz aşağıdaki seçenekleri yüklenir:
 
 ::: moniker range="vs-2019"
-- F# masaüstü dil desteği
+- F # masaüstü dil desteği
 - Python:
   - Python dil desteği
   - Python web desteği
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-- F# dil desteği
+- F # dil desteği
 - Python:
   - Python dil desteği
-  - [Anaconda3 64-bit](https://www.continuum.io), kapsamlı veri bilimi kitaplıkları ve python yorumlayıcısı içeren bir Python dağıtım.
+  - [Anaconda3 64-bit](https://www.continuum.io), kapsamlı veri bilimi kitaplıkları ve bir Python yorumlayıcı Içeren bir Python.
   - Python web desteği
-  - Cookiecutter şablon desteği
-- R:
+  - Cookiecutter şablonu desteği
+- Sağ
   - R dil desteği
   - R geliştirme araçları için çalışma zamanı desteği
-  - [Microsoft R İstemci](/machine-learning-server/r-client/what-is-microsoft-r-client) (Microsoft'un, tek düğümveya kümelerde daha hızlı hesaplama için ScaleR kitaplıklarına sahip tam uyumlu, topluluk destekli R yorumlayıcısı. Ayrıca [CRAN](https://cran.r-project.org/)herhangi bir R kullanabilirsiniz .)
+  - [Microsoft R Client](/machine-learning-server/r-client/what-is-microsoft-r-client) (Microsoft 'un, tek düğümlerde veya kümelerde daha hızlı hesaplama Için ScaleR kitaplıklarıyla tamamen uyumlu, topluluk tarafından desteklenen R yorumlayıcısı. [Cran](https://cran.r-project.org/)'ın herhangi bir R 'yi de kullanabilirsiniz.)
 ::: moniker-end
 
 ## <a name="sql-server-integration"></a>SQL Server tümleştirmesi
 
 ::: moniker range="vs-2017"
-SQL Server, doğrudan SQL Server içinde gelişmiş analizler yapmak için hem Python hem de R'yi kullanmayı destekler. R desteği SQL Server 2016 ve sonrası ile birlikte verilir; Python desteği SQL Server 2017 CTP 2.0 ve sonraki yıllarda kullanılabilir.
+SQL Server, doğrudan SQL Server içinde gelişmiş analizler yapmak için Python ve R kullanımını destekler. R desteği SQL Server 2016 ve üzeri sürümlerde bulunur; Python desteği SQL Server 2017 CTP 2,0 ve üzeri sürümlerde kullanılabilir.
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
-SQL Server, Python'u kullanarak doğrudan SQL Server içinde gelişmiş analizler yapmayı destekler. Python desteği SQL Server 2017 CTP 2.0 ve sonraki yıllarda kullanılabilir.
+SQL Server, doğrudan SQL Server içinde gelişmiş analizler yapmak için Python kullanmayı destekler. Python desteği SQL Server 2017 CTP 2,0 ve üzeri sürümlerde kullanılabilir.
 ::: moniker-end
 
-Verilerinizin zaten bulunduğu yerde kodunuzu çalıştırarak aşağıdaki avantajlardan yararlanırsınız:
+Verilerinizin zaten yaşadığı kodunuzu çalıştırarak aşağıdaki avantajlardan yararlanabilirsiniz:
 
-- **Veri hareketinin ortadan kaldırılması**: Verileri veritabanından uygulamanıza veya modelinize taşımak yerine, veritabanında uygulamalar oluşturabilirsiniz. Bu özellik, güvenlik, uyumluluk, yönetişim, bütünlük ve büyük miktarda verinin taşınmasıyla ilgili benzer konuların önündeki engelleri ortadan kaldırır. İstemci makinesinin belleğine sığamayan veri kümelerini de tüketebilirsiniz.
+- **Veri hareketini eleme**: veritabanından uygulamanıza veya modelinize veri taşımak yerine, veritabanında uygulamalar oluşturabilirsiniz. Bu özellik güvenlik, uyumluluk, idare, bütünlük ve çok miktarda veri taşıma ile ilgili benzer sorunların bir ana bilgisayarının sınırlamalarını ortadan kaldırır. Ayrıca, bir istemci makine belleğine sığmayan veri kümelerini de kullanabilirsiniz.
 
-- **Kolay dağıtım**: Bir modeli hazır hale aldıktan sonra, onu üretime dağıtmak basit bir t-SQL komut dosyasına yerleştirmektir. Herhangi bir dilde yazılmış herhangi bir SQL istemci uygulaması daha sonra saklanan yordam çağrısı ile modelleri ve istihbarat yararlanabilir. Belirli bir dil tümleştirmesi gerekli değildir.
+- **Kolay dağıtım**: bir modeli hazırladıktan sonra, bunu üretime dağıtmak T-SQL betiğine eklemek için basit bir işlemdir. Herhangi bir dilde yazılmış herhangi bir SQL istemci uygulaması, saklı yordam çağrısı aracılığıyla modellerden ve zekadan faydalanabilir. Belirli bir dil tümleştirmeleri gerekli değildir.
 
-- **Kurumsal düzeyde performans ve ölçek**: SQL Server'ın bellek içi tablo ve sütun deposu dizinleri gibi gelişmiş özelliklerini RevoScale paketlerindeki yüksek performanslı ölçeklenebilir API'lerle kullanabilirsiniz. Veri hareketinin ortadan kaldırılması, verileriniz büyüdükçe veya uygulamanın performansını artırmak istediğinizde istemci bellek kısıtlamalarından kaçınmanız anlamına da gelir.
+- **Kurumsal düzeyde performans ve ölçek**: bellek içi tablo ve sütun depolama dizinleri gibi SQL Server gelişmiş özelliklerini, iptal edilmiş paketlerde yüksek performanslı ölçeklenebilir API 'ler ile kullanabilirsiniz. Veri taşımayı eleme, verileriniz büyüdükçe istemci Bellek kısıtlamalarından kaçınmanıza ya da uygulamanın performansını artırmak istediğinizde anlamına gelir.
 
-- **Zengin genişletilebilirlik**: SQL Server'da büyük miktarda veri üzerinde derin öğrenme ve AI uygulamaları oluşturmak için EN son açık kaynak paketlerinden herhangi birini yükleyebilir ve çalıştırabilirsiniz. SQL Server'a paket yüklemek, yerel makinenize paket yüklemek kadar kolaydır.
+- **Zengin genişletilebilirlik**: SQL Server çok büyük miktarlarda veri üzerinde derin öğrenme ve AI uygulamaları oluşturmak için SQL Server ' deki en son açık kaynak paketlerini yükleyebilir ve çalıştırabilirsiniz. SQL Server bir paketi yükleme, yerel makinenize bir paket yüklemek kadar basittir.
 
-- **Ek ücret ödemeden geniş kullanılabilirlik**: Language entegrasyonları, Express sürümü de dahil olmak üzere SQL Server 2017 ve sonraki tüm sürümlerinde kullanılabilir.
+- **Ek ücret ödemeden geniş kullanılabilirlik**: dil tümleştirmeleri, Express sürümü de dahil olmak üzere tüm SQL Server 2017 ve üzeri sürümlerde kullanılabilir.
 
-SQL Server tümleştirmesi'nden tam olarak yararlanmak için Visual Studio yükleyicisini kullanarak Sql **Server Veri Araçları** seçeneğiyle Veri depolama ve iş yükünü **yükleyin.** İkinci seçenek SQL IntelliSense, sözdizimi vurgulama ve dağıtım sağlar.
+SQL Server tümleştirmesinin tam avantajlarından yararlanabilmek için, Visual Studio yükleyicisi 'ni kullanarak **veri depolama ve işleme** iş yükünü **SQL Server veri araçları** seçeneğiyle birlikte gerçekleştirin. İkinci seçenek SQL IntelliSense, söz dizimi vurgulaması ve dağıtımı mümkün bir şekilde sunar.
 
 ![Veri depolama ve işleme iş yükü](media/workload/data-storage-workload.png) &nbsp;&nbsp;&nbsp;&nbsp; ![Veri depolama ve işleme iş yükü seçenekleri](media/workload/data-storage-workload-options.png)
 
@@ -98,17 +98,17 @@ Daha fazla bilgi için:
 
 ::: moniker range="vs-2017"
 - [SQL Server ve R ile çalışma](../rtvs/integrating-sql-server-with-r.md)
-- [SQL Server 2016'da R ile Veritabanı İçi Gelişmiş Analitik (blog)](https://blogs.technet.microsoft.com/dataplatforminsider/2016/03/29/in-database-advanced-analytics-with-r-in-sql-server-2016/)
+- [SQL Server 2016 ' de R ile veritabanı içi gelişmiş analiz (blog)](https://blogs.technet.microsoft.com/dataplatforminsider/2016/03/29/in-database-advanced-analytics-with-r-in-sql-server-2016/)
 ::: moniker-end
-- [Python IN SQL Server 2017: gelişmiş veritabanı içi makine öğrenimi (blog)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
+- [SQL Server 2017 ' de Python: Gelişmiş veritabanı içi makine öğrenimi (blog)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
 
-## <a name="additional-services-and-sdks"></a>Ek hizmetler ve SDK'lar
+## <a name="additional-services-and-sdks"></a>Ek hizmetler ve SDK 'lar
 
-Veri Bilimi ve Analitik Uygulamaları'ndaki iş yükünün yanı sıra, Azure Notebook hizmeti ve Python için Azure SDK de veri bilimi için yararlıdır.
+Veri bilimi ve analitik uygulamalar iş yükündeki yeniliklere ek olarak, Azure Notebooks hizmeti ve Python için Azure SDK, veri bilimi için de yardımcı olur.
 
-Python için Azure SDK, Windows, Mac ve Linux'ta çalışan uygulamalardan Microsoft Azure hizmetlerini tüketmeyi ve yönetmeyi kolaylaştırır. Daha fazla bilgi için [Python için Azure SDK'ya](/azure/python/)bakın.
+Python için Azure SDK, Windows, Mac ve Linux üzerinde çalışan uygulamalardan Microsoft Azure hizmetlerini kolayca kullanmanıza ve yönetmenize olanak sağlar. Daha fazla bilgi için bkz. [Python Için Azure SDK](/azure/python/).
 
-Azure Dizüstü Bilgisayarlar (şu anda önizlemede) Microsoft Azure'da bulutta çalışan Jupyter dizüstü bilgisayarlara ücretsiz çevrimiçi erişim sağlar. Hizmet, başlamak için Python, R ve F# örnek not defterlerini içerir. [notebooks.azure.com'ı ziyaret edin.](https://notebooks.azure.com/)
+Azure Notebooks (Şu anda önizlemede), Microsoft Azure bulutta çalışan jupi not defterlerine ücretsiz çevrimiçi erişim sağlar. Hizmet, başlamanıza başlamak için Python, R ve F # ' daki örnek not defterlerini içerir. [Notebooks.Azure.com](https://notebooks.azure.com/)adresini ziyaret edin.
 
 <!--Note link on the image because this one is large -->
-[![R örneğine Giriş ile Azure Dizüstü Bilgisayarekranlarının ekran görüntüleri](media/workload/data-science-workload-notebooks.png)](media/workload/data-science-workload-notebooks.png#lightbox)
+[![R örneğine giriş ile Azure Notebooks ekran görüntüleri](media/workload/data-science-workload-notebooks.png)](media/workload/data-science-workload-notebooks.png#lightbox)

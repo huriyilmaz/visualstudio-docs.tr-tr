@@ -14,16 +14,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e2ad067adf79a2a7d08c6a45e7c205480621abf4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658952"
 ---
 # <a name="legacy-designer-for-windows-workflow-foundation-ui-help"></a>Windows Workflow Foundation Kullanıcı Arabirimi Yardımı için Eski Tasarımcı
-Bu bölüm, [!INCLUDE[vs2010](../includes/vs2010-md.md)] eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] için bağlama duyarlı Yardım konularını içerir. @No__t_0 veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedeflemek gerektiğinde eski tasarımcıyı kullanın.
+Bu bölüm, eski sürümünde bağlama duyarlı Yardım konularını içerir [!INCLUDE[wfd1](../includes/wfd1-md.md)] [!INCLUDE[vs2010](../includes/vs2010-md.md)] . Veya ' i hedeflemek istediğinizde eski tasarımcıyı kullanın [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
- Bu konulara, eski bir [!INCLUDE[wfd2](../includes/wfd2-md.md)] iletişim kutusu açık olduğunda **F1** tuşuna basarak [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] kullanıcı arabiriminden erişebilirsiniz.
+ Bu konulara, [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] eski bir iletişim kutusu açık olduğunda **F1** tuşuna basarak kullanıcı arabiriminden erişebilirsiniz [!INCLUDE[wfd2](../includes/wfd2-md.md)] .
 
 ## <a name="in-this-section"></a>Bu Bölümde
  [Bir Etkinliğin Özelliğine Bağla İletişim Kutusu (Eski)](../workflow-designer/bind-to-an-activity-s-property-dialog-box-legacy.md)

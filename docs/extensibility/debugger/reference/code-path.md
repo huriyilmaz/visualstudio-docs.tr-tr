@@ -1,5 +1,5 @@
 ---
-title: CODE_PATH | Microsoft Dokümanlar
+title: CODE_PATH | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: d3148b75e56b61ee545c6bc82b972c13572199af
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737670"
 ---
 # <a name="code_path"></a>CODE_PATH
-Bir yöntem veya işlev çağrısı açıklar.
+Bir yöntem veya işlev çağrısını açıklar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct tagCODE_PATH { 
@@ -46,17 +46,17 @@ public struct CODE_PATH {
 Kod yolunun adı.
 
 `pCode`\
-Kodda bir işleve adım atacağını tanımlayan [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi.
+Kodda bir işlevin içine adımlamak için kodun nerede olduğunu tanımlayan [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı bir işleve adım atma uygulamak için kullanılır. [EnumCodePaths,](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md) programdaki geçerli konumdan gelen tüm çağrıları debugged olarak döndürür. Bu yapı böyle bir çağrıyı temsil eder.
+Bu yapı, bir işleve adımlamayı uygulamak için kullanılır. [EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md) , hata ayıklamakta olan programın geçerli konumundaki tüm çağrıları döndürür. Bu yapı, bu tür bir çağrıyı temsil eder.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

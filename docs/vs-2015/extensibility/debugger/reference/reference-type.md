@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 509c0bc4547ca057c39a6c07ba8ccbe63743b914
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204901"
 ---
-# <a name="referencetype"></a>REFERENCE_TYPE
+# <a name="reference_type"></a>REFERENCE_TYPE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 Başvuru türünü belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_REFERENCE_TYPE {   
@@ -43,24 +43,24 @@ public enum enum_REFERENCE_TYPE { 
   
 ## <a name="members"></a>Üyeler  
  REF_TYPE_WEAK  
- Zayıf bir başvuru belirtir. İle birleştirilemez `REF_TYPE_STRONG`.  
+ Zayıf bir başvuruyu belirtir. İle birleştirilemez `REF_TYPE_STRONG` .  
   
  REF_TYPE_STRONG  
- Güçlü bir başvuru belirtir. İle birleştirilemez `REF_TYPE_WEAK`.  
+ Güçlü bir başvuru belirtir. İle birleştirilemez `REF_TYPE_WEAK` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- Olarak kullanılan `dwRefType` üyesi [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapısı.  
+ `dwRefType` [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapısının üyesi olarak kullanılır.  
   
- Bir parametre olarak geçirilen [SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md) yöntemi.  
+ [Setreferencetype](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md) metoduna parametre olarak geçirildi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)   
  [SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md)

@@ -1,5 +1,5 @@
 ---
-title: DEBUG_ADDRESS | Microsoft Dokümanlar
+title: DEBUG_ADDRESS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fe778ba3ed80930a4cd7b4fa1170f286b3ccf6ec
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737517"
 ---
 # <a name="debug_address"></a>DEBUG_ADDRESS
 Bu yapı bir adresi temsil eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _tagDEBUG_ADDRESS {
@@ -47,26 +47,26 @@ public struct DEBUG_ADDRESS {
 
 ## <a name="members"></a>Üyeler
 `ulAppDomainID`\
-İşlem kimliği.
+İşlem KIMLIĞI.
 
 `guidModule`\
-Bu adresi içeren modülün GUID'i.
+Bu adresi içeren modülün GUID 'SI.
 
 `tokClass`\
 Bu adresin sınıfını veya türünü tanımlayan belirteç.
 
 > [!NOTE]
-> Bu değer bir sembol sağlayıcısına özgüdür ve bu nedenle sınıf türü için tanımlayıcı olmaktan başka genel bir anlamı yoktur.
+> Bu değer bir sembol sağlayıcısına özeldir ve bu nedenle, bir sınıf türü için tanımlayıcı olarak değil genel anlamı yoktur.
 
 `addr`\
-Tek tek adres türlerini açıklayan yapıların birliğini içeren [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) bir yapı. Değer. `addr``dwKind` birliğin [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) nasıl yorumlanacağıADDRESS_KIND numaralandırmadan gelir.
+Tek tek adres türlerini açıklayan yapıların birleşimini içeren [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) yapısı. Değer `addr` .`dwKind` , birleşimin nasıl yorumlanacağını açıklayan [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) numaralandırmasından gelir.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı doldurulmak üzere [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) yöntemine geçirilir.
+Bu yapı, doldurulacak [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) yöntemine geçirilir.
 
-**Uyarı [Yalnızca C++]**
+**Uyarı [yalnızca C++]**
 
-Null `addr.dwKind` `ADDRESS_KIND_METADATA_LOCAL` değeri `addr.addr.addrLocal.pLocal` değilse, belirteç işaretçisini `Release` aramanız gerekir:
+`addr.dwKind`İse `ADDRESS_KIND_METADATA_LOCAL` ve `addr.addr.addrLocal.pLocal` null bir değer değilse, `Release` belirteç işaretçisi üzerinde çağırmanız gerekir:
 
 ```
 if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL && addr.addr.addrLocal.pLocal != NULL)
@@ -76,11 +76,11 @@ if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL && addr.addr.addrLocal.pLocal != 
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: sh.h
+Üstbilgi: SH. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

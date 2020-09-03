@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsourcefiles::Item | Microsoft Docs
+title: 'IDiaEnumSourceFiles:: Item | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 62dce70d3ebf05694b453d13e1f11529dd21e8ce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68189778"
 ---
 # <a name="idiaenumsourcefilesitem"></a>IDiaEnumSourceFiles::Item
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir kaynak dosyası kullanarak bir dizini alır.  
+Bir dizin aracılığıyla bir kaynak dosyası alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Item (   
@@ -36,14 +36,14 @@ HRESULT Item ( 
   
 #### <a name="parameters"></a>Parametreler  
  dizin  
- [in] Dizin [Idiasourcefile](../../debugger/debug-interface-access/idiasourcefile.md) alınacak nesne. İçin 0 aralığındaki dizinidir `count`-1, burada `count` tarafından döndürülen [Idiaenumsourcefiles::get_Count](../../debugger/debug-interface-access/idiaenumsourcefiles-get-count.md) yöntemi.  
+ 'ndaki Alınacak [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) nesnesinin dizini. Dizin 0 `count` -1 aralığında, burada `count` [IDiaEnumSourceFiles:: get_Count](../../debugger/debug-interface-access/idiaenumsourcefiles-get-count.md) yöntemi tarafından döndürülür.  
   
  Kaynakdosya  
- [out] Döndürür bir [Idiasourcefile](../../debugger/debug-interface-access/idiasourcefile.md) istenen kaynak dosyasını temsil eden nesne.  
+ dışı İstenen kaynak dosyayı temsil eden bir [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiaenumsourcefiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)   
+ [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)   
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)
