@@ -1,5 +1,5 @@
 ---
-title: IDebugModOpt::GetModOpts | Microsoft Dokümanlar
+title: 'Idebugmodopt:: GetModOpts | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +15,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5ab870db3ae3517b60bebd4815e4530f6035b327
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727056"
 ---
 # <a name="idebugmodoptgetmodopts"></a>IDebugModOpt::GetModOpts
-İsteğe bağlı değiştiriciler listesini alır.
+İsteğe bağlı değiştiricilerin bir listesini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetModOpts(
@@ -44,16 +44,16 @@ int GetModOpts(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-[içinde] Döndürülecek öğe sayısı.
+'ndaki Döndürülecek öğe sayısı.
 
 `rgelt`\
-[çıkış] Seçenekleri içeren bir dizi döndürür.
+dışı Seçenekleri içeren bir dizi döndürür.
 
 `pceltFetched`\
-[içinde, dışarı] `rgelt` Dizide döndürülen öğe sayısı.
+[in, out] Dizide döndürülen öğe sayısı `rgelt` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugModOpt](../../../extensibility/debugger/reference/idebugmodopt.md)

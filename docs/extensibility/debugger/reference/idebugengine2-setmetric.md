@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::SetMetric | Microsoft Dokümanlar
+title: 'IDebugEngine2:: SetMetric | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: caada8db1791d94e7a9632394cd4659bf8cec3a0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80730900"
 ---
 # <a name="idebugengine2setmetric"></a>IDebugEngine2::SetMetric
-Bu yöntem, metrik olarak bilinen bir kayıt defteri değeri ayarlar.
+Bu yöntem, ölçüm olarak bilinen bir kayıt defteri değerini ayarlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT SetMetric(
@@ -43,16 +43,16 @@ int SetMetric(
 
 ## <a name="parameters"></a>Parametreler
 `pszMetric`\
-[içinde] Metrik adı.
+'ndaki Ölçüm adı.
 
 `varValue`\
-[içinde] Metrik değeri belirtir.
+'ndaki Ölçüm değerini belirtir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Metrik, hata ayıklama altyapısının davranışını değiştirmek veya desteklenen işlevselliğin reklamını yapmak için kullanılan bir kayıt defteri değeridir. Bu yöntem, çağrıyı Hata Ayıklama işlevi [için SDK Yardımcılarının](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) `SetMetric`uygun formuna iletebilir.
+ Ölçüm, bir hata ayıklama altyapısının davranışını değiştirmek veya desteklenen işlevselliği tanıtmak için kullanılan bir kayıt defteri değeridir. Bu yöntem, çağrıyı [hata ayıklama işlevi Için SDK yardımcılarını](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) uygun biçimine iletebilir `SetMetric` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

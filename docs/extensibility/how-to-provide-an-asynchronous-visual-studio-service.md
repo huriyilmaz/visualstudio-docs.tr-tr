@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ad178bf93e49c3d695c1ebd0a5d4f6b151175953
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905734"
 ---
 # <a name="how-to-provide-an-asynchronous-visual-studio-service"></a>Nasıl yapılır: zaman uyumsuz bir Visual Studio hizmeti sağlama
@@ -130,7 +130,7 @@ public sealed class TestAsyncPackage : AsyncPackage
     }
 
     ```
-    Bu hizmeti bu paketin dışında görünür yapmak için, yükseltme bayrağı değerini son parametre olarak *true* olarak ayarlayın:`this.AddService(typeof(STextWriterService), CreateTextWriterService, true);`
+    Bu hizmeti bu paketin dışında görünür yapmak için, yükseltme bayrağı değerini son parametre olarak *true* olarak ayarlayın:  `this.AddService(typeof(STextWriterService), CreateTextWriterService, true);`
 
 2. *Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll*bir başvuru ekleyin.
 

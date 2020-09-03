@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::IsReadOnly | Microsoft Dokümanlar
+title: 'IDebugObject:: IsReadOnly | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 19546550f916e9d42adf634b0d85958ce9697d28
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726418"
 ---
 # <a name="idebugobjectisreadonly"></a>IDebugObject::IsReadOnly
-Bu nesnenin salt okunur olup olmadığını belirler.
+Bu nesnenin salt okunurdur belirler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT IsReadOnly( 
@@ -41,13 +41,13 @@ int IsReadOnly(
 
 ## <a name="parameters"></a>Parametreler
 `pfIsReadOnly`\
-[çıkış] Bu nesne salt`TRUE`okunursa sıfır olmayan ( ) döndürür; aksi takdirde,`FALSE`sıfır () döndürür.
+dışı `TRUE`Bu nesne salt okunurdur sıfır olmayan () döndürür; Aksi takdirde, sıfır ( `FALSE` ) döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Salt okunur bir nesneoluşturulduktan sonra değerini değiştiremez.
+ Salt okunurdur bir nesne, oluşturulduktan sonra değeri değiştirilemez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

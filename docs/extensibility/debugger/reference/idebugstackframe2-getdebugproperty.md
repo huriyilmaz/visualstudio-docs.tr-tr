@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetDebugProperty | Microsoft Dokümanlar
+title: 'IDebugStackFrame2:: GetDebugProperty | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: aa98107ada265d232647d27b4050b507d4581df7
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719786"
 ---
 # <a name="idebugstackframe2getdebugproperty"></a>IDebugStackFrame2::GetDebugProperty
 Yığın çerçevesinin özelliklerinin açıklamasını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetDebugProperty ( 
@@ -41,13 +41,13 @@ int GetDebugProperty ( 
 
 ## <a name="parameters"></a>Parametreler
 `ppDebugProp`\
-[çıkış] Bu yığın çerçevesinin özelliklerini açıklayan bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesi döndürür.
+dışı Bu yığın çerçevesinin özelliklerini açıklayan bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) yöntemini uygun filtrelerle çağırmak, yığın çerçevesiyle ilişkili yerel değişkenleri, yöntem parametrelerini, kayıtları ve "bu" işaretçisini alabilir.
+ [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) yönteminin uygun filtrelerle çağrılması, yerel değişkenleri, yöntem parametrelerini, Yazmaçları ve yığın çerçevesiyle ilişkili "This" işaretçisini alabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

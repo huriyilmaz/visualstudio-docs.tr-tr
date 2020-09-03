@@ -10,10 +10,10 @@ author: kraigb
 ms.author: kraigb
 manager: jillfra
 ms.openlocfilehash: 288fb24c9c1c4ddee1cb59a968e717531e274af1
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74300590"
 ---
 # <a name="getting-started-with-ptvs-building-a-website-in-azure"></a>PTVS Kullanmaya Başlarken: Azure’da Web Sitesi Oluşturma
@@ -29,7 +29,7 @@ Azure 'da bir Python web sitesi oluşturmaya hemen başlayın.
   
  Visual Studio 'ya ve oluşturduğunuz projeye geri dönün.  Çözüm Gezgini proje düğümünü seçin, sağ işaretçi düğmesini seçin ve Yayımla ' yı seçin.  Azure aboneliğiniz varsa, sitelerinizi buradan yönetmek için iletişim kutusunda Microsoft Azure Web siteleri ' ne tıklayabilirsiniz.  Bu kılavuzda, az önce indirdiğiniz yayımlama profilini içeri aktarmak için Içeri Aktar ' ı seçin.  Yayımlama profilinde gerekli tüm bilgiler bulunduğundan, Yayımla ' yı seçebilirsiniz.  Birkaç saniye içinde yeni bir tarayıcı penceresi açılır ve siteniz Azure bulutu 'nda canlı olarak barındırılır.  
   
- Basit Web siteleri kolaydır, ancak Azure 'daki daha önemli Web uygulamaları hakkında daha fazla bilgi için, bu kanaldaki diğer kişilere (Başlarken veya derinlemesine bakış videonun sağ üst köşesinde bulunan bağlantı) ve aşağıdaki [gibi ayrıntılı bilgiler](https://www.youtube.com/watch?v=WG3pGmoo8nE&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=10) için bkz.  
+ Basit Web siteleri kolaydır, ancak Azure 'daki daha önemli Web uygulamaları hakkında daha fazla bilgi için, bu kanaldaki diğer kişilere (Başlarken veya derinlemesine bakış videonun sağ üst köşesinde bulunan bağlantı) ve aşağıdaki [gibi ayrıntılı bilgiler](https://www.youtube.com/watch?v=WG3pGmoo8nE&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=10) için bkz..  
   
  Bu yönergeleri, çok kısa bir [youtube videosunda](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6)izleyebilirsiniz.  
   

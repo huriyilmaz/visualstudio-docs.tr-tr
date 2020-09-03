@@ -10,14 +10,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6d6cca9a4a98c4afcffa8322acb75a4cef8a7527
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75565870"
 ---
 # <a name="the-text-template-transformation-process"></a>Metin Şablonu Dönüştürme Süreci
-Metin şablonu dönüştürme işlemi, girdi olarak bir metin şablonu dosyası alır ve çıktı olarak yeni bir metin dosyası oluşturur. Örneğin, Visual Basic veya C# kod oluşturmak için metin şablonlarını kullanabilir veya bir HTML raporu oluşturabilirsiniz.
+Metin şablonu dönüştürme işlemi, girdi olarak bir metin şablonu dosyası alır ve çıktı olarak yeni bir metin dosyası oluşturur. Örneğin, Visual Basic veya C# kodu oluşturmak için metin şablonlarını kullanabilir veya bir HTML raporu oluşturabilirsiniz.
 
  Bu işlemin parçası olan üç bileşen: motor, ana bilgisayar ve yönerge işlemcileri. Motor işlemi denetler; çıktı dosyasını oluşturmak için konak ve yönerge işlemcisi ile etkileşime girer. Ana bilgisayar, ortam ile dosya ve derleme bulma gibi herhangi bir etkileşim sağlar. Yönerge işlemcisi, bir XML dosyasından veya bir veritabanından veri okuma gibi işlevler ekler.
 
@@ -27,7 +27,7 @@ Metin şablonu dönüştürme işlemi, girdi olarak bir metin şablonu dosyası 
 
 |Bileşen|Açıklama|Özelleştirilebilir (Evet/Hayır)|
 |-|-|-|
-|Altyapısı|Motor bileşeni, metin şablonu dönüştürme işlemini denetler|Hayır.|
+|Altyapı|Motor bileşeni, metin şablonu dönüştürme işlemini denetler|Hayır.|
 |Konak|Konak, motor ve Kullanıcı ortamı arasındaki arabirimdir. Visual Studio, metin dönüştürme sürecinin bir konağından oluşur.|Evet. Özel bir ana bilgisayar yazabilirsiniz.|
 |Yönerge Işlemcileri|Yönerge işlemcileri, metin şablonlarındaki yönergeleri işleyen sınıflardır. Giriş kaynağından bir metin şablonuna veri sağlamak için yönergelerini kullanabilirsiniz.|Evet. Özel yönerge işlemcileri yazabilirsiniz|
 
@@ -56,8 +56,8 @@ Metin şablonu dönüştürme işlemi, girdi olarak bir metin şablonu dosyası 
 
  Yönerge işlemcisi bir veya daha fazla yönerge işleyebilir. Bir şablonu dönüştürdüğünüzde, şablonunuzda yönergeler ile ilgilenebilmeniz için bir yönerge işlemcisi yüklemiş olmanız gerekir.
 
- Yönergeler oluşturulan dönüştürme sınıfına kod ekleyerek çalışır. Bir metin şablonundan yönergeleri çağırabilirsiniz ve altyapı oluşturulan dönüştürme sınıfını oluşturduğunda tüm yönerge çağrılarını işler. Bir yönergeyi başarıyla çağırdığınızda, metin şablonunuzda yazdığınız kodun geri kalanı, yönergesinin sağladığı işlevselliğe bağlı olabilir. Örneğin, şablonunuzda `import` yönergesine aşağıdaki çağrıyı yapabilirsiniz:
+ Yönergeler oluşturulan dönüştürme sınıfına kod ekleyerek çalışır. Bir metin şablonundan yönergeleri çağırabilirsiniz ve altyapı oluşturulan dönüştürme sınıfını oluşturduğunda tüm yönerge çağrılarını işler. Bir yönergeyi başarıyla çağırdığınızda, metin şablonunuzda yazdığınız kodun geri kalanı, yönergesinin sağladığı işlevselliğe bağlı olabilir. Örneğin, şablonunuzda yönerge için aşağıdaki çağrıyı yapabilirsiniz `import` :
 
  `<#@ import namespace="System.Text" #>`
 
- Standart yönerge işlemcisi bunu, oluşturulan dönüştürme sınıfındaki bir `using` ifadesine dönüştürür. Daha sonra şablon kodunuzun geri kalanında `StringBuilder` sınıfını `System.Text.StringBuilder`olarak nitelemeden kullanabilirsiniz.
+ Standart yönerge işlemcisi bunu `using` , oluşturulan dönüştürme sınıfındaki bir deyime dönüştürür. Daha sonra `StringBuilder` sınıfını olarak nitelemeden şablon kodunuzun geri kalanında da kullanabilirsiniz `System.Text.StringBuilder` .

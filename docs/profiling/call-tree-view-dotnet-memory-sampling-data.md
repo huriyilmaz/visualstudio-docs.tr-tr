@@ -1,5 +1,5 @@
 ---
-title: Çağrı Ağacı Görünümü - .NET Bellek Örnekleme Verileri | Microsoft Dokümanlar
+title: Çağrı ağacı görünümü-.NET Bellek Örnekleme verileri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,46 +12,46 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: 76ea78f37cbc8c5e2b6df900aa0e3f320346300a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74779772"
 ---
-# <a name="call-tree-view---net-memory-sampling-data"></a>Çağrı Ağacı görünümü - .NET bellek örnekleme verileri
-Çağrı Ağacı görünümü, profilli uygulamada geçen işlev yürütme yollarını görüntüler. Ağacın kökü, uygulamaya veya bileşene giriş noktasıdır. Her işlev düğümü, adlandırdığı tüm işlevleri ve bu işlev çağrıları yla ilgili .NET bellek ayırma verilerini listeler.
+# <a name="call-tree-view---net-memory-sampling-data"></a>Çağrı ağacı görünümü-.NET Bellek Örnekleme verileri
+Çağrı ağacı görünümü, profili oluşturulmuş uygulamada geçen işlev yürütme yollarını görüntüler. Ağacın kökü, uygulamanın veya bileşenin giriş noktasıdır. Her işlev düğümü, çağırdığı tüm işlevleri ve bu işlev çağrıları hakkındaki .NET bellek ayırma verilerini listeler.
 
- Çağrı Ağacı görünümündeki değerler, çağrı ağacındaki üst işlev tarafından çağrılan işlev örnekleri içindir. Yüzde değerleri, işlev örneği değeri profil oluşturma çalışmasındaki ayırmaların toplam sayısı veya boyutuyla karşılaştırılarak hesaplanır.
+ Çağrı ağacı görünümündeki değerler, çağrı ağacındaki üst işlev tarafından çağrılan işlev örneklerine yöneliktir. Yüzde değerleri, işlev örneği değeri, profil oluşturma çalıştırmasında toplam sayı veya ayırma boyutuyla karşılaştırılarak hesaplanır.
 
-## <a name="highlight-the-execution-hot-path"></a>Yürütme sıcak yolunu vurgulayın
- Çağrı Ağacı görünümü, en büyük veya en çok bellek nesnesini oluşturan işlemin veya işlevin yürütme yolunu genişletebilir ve vurgulayabilir. En etkin yolu görüntülemek için, işlemi veya işlevi sağ tıklatın ve ardından **Sıcak Yolu Genişlet'i**tıklatın.
+## <a name="highlight-the-execution-hot-path"></a>Yürütme etkin yolunu Vurgula
+ Çağrı ağacı görünümü, en büyük veya en fazla bellek nesnelerini oluşturan işlemin veya işlevin yürütme yolunu genişletebilir ve vurgulayabilir. En etkin yolu göstermek için, işlem veya işleve sağ tıklayın ve ardından **etkin yolu genişlet**' e tıklayın.
 
-## <a name="set-the-call-tree-root-node"></a>Çağrı Ağacı kök düğümünü ayarlama
- Profil oluşturma çalışmasındaki her işlem kök düğüm olarak görüntülenir. Çağrı Ağacı görünümünün başlangıç düğümünü farklı bir düğüme ayarlamak için, başlangıç düğümü olarak ayarlamak istediğiniz düğümü sağ tıklatın ve **Root'u ayarla'yı**seçin.
+## <a name="set-the-call-tree-root-node"></a>Çağrı ağacı kök düğümünü ayarla
+ Profil oluşturma çalıştırmasında her işlem kök düğüm olarak görüntülenir. Çağrı ağacı görünümünün başlangıç düğümünü farklı bir düğüme ayarlamak için, başlangıç düğümü olarak ayarlamak istediğiniz düğüme sağ tıklayın ve **kökü ayarla**' yı seçin.
 
- Kök düğümünü ayarladığınızda, seçili düğümün alt ağacı dışında görünümdeki diğer tüm girişleri ortadan kaldırırsınız. Kök düğümünü görüntülediğiniz düğüme geri sıfırlayabilirsiniz; Çağrı Ağacı Görünümü penceresinde sağ tıklatın ve **Root'u Sıfırla'yı**seçin.
+ Kök düğümü ayarladığınızda, seçili düğümün alt ağacı hariç diğer tüm girişleri görünümden ortadan kaldırabilirsiniz. Kök düğümü, görüntülemekte olduğunuz düğüme geri sıfırlayabilirsiniz; Çağrı Ağacı Görünümü penceresine sağ tıklayın ve **kökü Sıfırla**' yı seçin.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**İşlem Kimliği**|Profil oluşturma çalışmasının işlem kimliği (PID).|
-|**İşlem Adı**|Sürecin adı.|
-|**Modül Adı**|İşleviçeren modülün adı.|
-|**Modül Yolu**|İşleviçeren modülün yolu.|
+|**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
+|**İşlem adı**|Sürecin adı.|
+|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül yolu**|İşlevi içeren modülün yolu.|
 |**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
-|**Fonksiyon Adı**|İşlevin tam nitelikli adı.|
-|**Fonksiyon Satır Numarası**|Kaynak dosyadaki bu işlevin başlangıcının satır numarası.|
-|**Fonksiyon Adresi**|Fonksiyonun adresi.|
-|**Düzey**|Çağrı ağacındaki işlevin derinliği.|
-|**Kapsayıcı Tahsisatlar**|Çağrı ağacındaki üst işlev tarafından çağrılan bu işlevin örnekleri tarafından ayrılan nesnelerin sayısı. Bu sayı, alt işlevler tarafından yapılan ayırmaları içerir.|
-|**Kapsayıcı Tahsisler %**|Profil oluşturma çalışmasında oluşturulan tüm nesnelerin yüzdesi, bu işlevin kapsayıcı ayırmalarıydı.|
-|**Özel Tahsisler**|Çağrı ağacındaki üst işlev tarafından çağrılan bu işlevin örnekleri tarafından ayrılan nesnelerin sayısı. Bu sayı, alt işlevler tarafından yapılan ayırmaları içermez.|
-|**Özel Tahsisatlar %**|Çağrı ağacındaki üst işlev tarafından çağrılan işlev örneklerinin özel ayırmaları olan profil oluşturma çalışmasında oluşturulan tüm nesnelerin yüzdesi.|
-|**Dahil Baytlar**|Çağrı ağacındaki üst işlev tarafından çağrılan bu işlevin örnekleri tarafından ayrılan bellekteki bayt sayısı. Bu sayı, alt işlevler tarafından yapılan ayırmaları içerir.|
-|**Dahil Bayt %**|Profil oluşturma çalışmasında ayrılan ve bu işlevin kapsayıcı ayırmaları olan tüm bellek baytlarının yüzdesi.|
-|**Özel Baytlar**|Çağrı ağacındaki üst işlev tarafından çağrılan bu işlevin örnekleri tarafından ayrılan bellekteki bayt sayısı. Bu sayı, alt işlevler tarafından yapılan ayırmaları içermez.|
-|**Özel Bayt %**|Profil oluşturma çalışmasında ayrılan ve bu işlevin özel ayırmaları olan tüm bellek baytlarının yüzdesi.|
+|**İşlev adı**|İşlevin tam adı.|
+|**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
+|**İşlev adresi**|İşlevin adresi.|
+|**Düzeyde**|Çağrı ağacındaki işlevin derinliği.|
+|**Kapsamlı ayırmalar**|Çağrı ağacındaki üst işlev tarafından çağrılan bu işlevin örnekleri tarafından ayrılan nesne sayısı. Bu sayı, alt işlevler tarafından yapılan ayırmaları içerir.|
+|**Kapsamlı ayırmalar%**|Bu işlevin kapsamlı ayırmaları olan profil oluşturma çalıştırmasında oluşturulan tüm nesnelerin yüzdesi.|
+|**Dışlamalı ayırmalar**|Çağrı ağacındaki üst işlev tarafından çağrılan bu işlevin örnekleri tarafından ayrılan nesne sayısı. Bu sayı alt işlevler tarafından yapılan ayırmaları içermez.|
+|**Dışlamalı ayırmalar%**|Profil oluşturma çalıştırmasında oluşturulan, çağrı ağacındaki üst işlev tarafından çağrılan işlev örneklerinin özel ayırmaları olan tüm nesnelerin yüzdesi.|
+|**Kapsamlı baytlar**|Bu işlevin, çağrı ağacındaki üst işlev tarafından çağrılan örnekleri tarafından ayrılan bayt sayısı. Bu sayı, alt işlevler tarafından yapılan ayırmaları içerir.|
+|**Dahil edilen baytlar%**|Bu işlevin kapsamlı ayırmaları olan profil oluşturma çalıştırmasında ayrılan tüm bellek baytlarının yüzdesi.|
+|**Dışlamalı baytlar**|Bu işlevin, çağrı ağacındaki üst işlev tarafından çağrılan örnekleri tarafından ayrılan bayt sayısı. Bu sayı alt işlevler tarafından yapılan ayırmaları içermez.|
+|**Dışlamalı bayt yüzdesi**|Bu işlevin özel ayırmaları olan profil oluşturma çalıştırmasında ayrılan tüm bellek baytlarının yüzdesi.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çağrı Ağacı görünümü - enstrümantasyon](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)
-- [Çağrı Ağacı görünümü](../profiling/call-tree-view-sampling-data.md)
-- [Çağrı Ağacı görünümü](../profiling/call-tree-view-instrumentation-data.md)
+- [Çağrı ağacı görünümü-izleme](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)
+- [Çağrı ağacı görünümü](../profiling/call-tree-view-sampling-data.md)
+- [Çağrı ağacı görünümü](../profiling/call-tree-view-instrumentation-data.md)

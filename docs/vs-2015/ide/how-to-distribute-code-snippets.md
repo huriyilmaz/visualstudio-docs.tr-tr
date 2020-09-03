@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e1a692ee29ea9d43e1a0a4fbed5c52934d69256d
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77476979"
 ---
 # <a name="how-to-distribute-code-snippets"></a>Nasıl Yapılır: Kod Parçacıklarını Dağıtma
@@ -28,7 +28,7 @@ Yalnızca kod parçacıklarını Arkadaşlarınıza verebilir ve kod parçacıkl
 ## <a name="setting-up-the-extension"></a>Uzantıyı ayarlama
  Bu yordamda, [Izlenecek yol: kod parçacığı oluşturma](../ide/walkthrough-creating-a-code-snippet.md)bölümünde oluşturulan Merhaba Dünya kod parçacığını kullanacağız. . Kod parçacığı metnini sağlayacağız, bu yüzden geri dönüp bir tane yapmanız gerekmez.
 
-1. **Testparçacığında**adlı yenı bir VSIX projesi oluşturun. (**Dosya/yeni/proje/görsel C# (veya Visual Basic/genişletilebilirlik**)
+1. **Testparçacığında**adlı yenı bir VSIX projesi oluşturun. (**Dosya/yeni/proje/Visual C# (veya Visual Basic/genişletilebilirlik**)
 
 2. **Testparçacığının** projesinde yenı bir XML dosyası ekleyin ve bu dosyayı **vbcodeparçacığın. parçacığını**çağırın. İçeriği aşağıdaki kodla değiştirin:
 
@@ -90,13 +90,13 @@ Yalnızca kod parçacıklarını Arkadaşlarınıza verebilir ve kod parçacıkl
 
 1. Artık kod parçacığının Visual Studio 'nun deneysel örneğinde çalıştığından emin olabilirsiniz. Deneysel örnek, Visual Studio 'nun kod yazmak için kullandığınız bir ikinci kopyasıdır. Geliştirme ortamınızı etkilemeden bir uzantı üzerinde çalışmanıza olanak sağlar.
 
-2. Projeyi oluşturmak ve hata ayıklamaya başlayın. Visual Studio 'nun ikinci bir örneği görünmelidir.
+2. Projeyi derleyin ve hata ayıklamayı başlatın. Visual Studio 'nun ikinci bir örneği görünmelidir.
 
 3. Deneysel örnekte, **Araçlar/kod parçacıkları Yöneticisi** ' ne gidin ve **dili** **temel**olarak ayarlayın. Bir klasörden birine merhaba Worldvb görmeniz gerekir ve Merhaba Worldvb kod parçacığını görmek için klasörü genişletmeniz gerekir.
 
 4. Kod parçacığını test edin. Deneysel örnekte, bir Visual Basic projesi açın ve kod dosyalarından birini açın. İmlecinizi kodda bir yere yerleştirin, sağ tıklayın ve bağlam menüsünde kod **parçacığı Ekle**' yi seçin.
 
-5. Bir klasörden biri olarak Merhaba Worldvb görmeniz gerekir. Çift tıklatın. Açılan bir **ekleme kod parçacığı görmeniz gerekir >:** bir açılır **Merhaba**çalışma parçacığı. Merhaba Worldvb açılan listesine tıklayın. Dosyasına aşağıdaki satırı eklendiğini görmeniz gerekir:
+5. Bir klasörden biri olarak Merhaba Worldvb görmeniz gerekir. Çift tıklayın. Açılan bir **ekleme kod parçacığı görmeniz gerekir >: ** bir açılır **Merhaba**çalışma parçacığı. Merhaba Worldvb açılan listesine tıklayın. Dosyasına aşağıdaki satırı eklendiğini görmeniz gerekir:
 
     ```vb
     Console.WriteLine("Hello, World!")

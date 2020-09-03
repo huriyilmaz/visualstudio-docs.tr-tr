@@ -19,16 +19,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5726e964a0db2fae1b902f54a14e206dbc03a148
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77477006"
 ---
 # <a name="how-to-enable-debugging-for-aspnet-applications"></a>Nasıl Yapılır: ASP.NET Uygulamaları için Hata Ayıklamayı Etkinleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Hata ayıklamayı etkinleştirmek için, bunu **Proje özellikleri** sayfasında ve uygulamanın Web. config dosyasında etkinleştirmeniz gerekir.  
+Hata ayıklamayı etkinleştirmek için, bunu **Proje özellikleri** sayfasında ve uygulamanın web.config dosyasında etkinleştirmeniz gerekir.  
   
 > [!NOTE]  
 > Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](/previous-versions/zbhkx167(v=vs.140)).  
@@ -48,7 +48,7 @@ Hata ayıklamayı etkinleştirmek için, bunu **Proje özellikleri** sayfasında
     > [!NOTE]  
     > Ancak, bir Web tarayıcısı kullanarak dosyaya uzaktan erişemezsiniz. Güvenlik nedenleriyle, [!INCLUDE[vstecasp](../includes/vstecasp-md.md)], Microsoft IIS'i Web.config dosyalarına doğrudan tarayıcı erişimini engellemeye yardımcı olacak şekilde yapılandırır. Bir tarayıcı kullanarak bir yapılandırma dosyasına erişmeye çalışırsanız, HTTP erişim hatası 403 (yasak) alırsınız.  
   
-2. Web.config bir XML dosyasıdır ve bu yüzden etiketlerle işaretlenmiş iç içe yerleştirilmiş bölümler içerir. `configuration/system.web/compilation` öğesini bulun. Derleme ögesi yoksa, onu oluşturun.  
+2. Web.config bir XML dosyasıdır ve bu yüzden etiketlerle işaretlenmiş iç içe yerleştirilmiş bölümler içerir. Öğesini bulun `configuration/system.web/compilation` . Derleme ögesi yoksa, onu oluşturun.  
   
 3. `compilation` öğesi bir `debug` özniteliği içermiyorsa, özniteliği öğeye ekleyin.  
   
@@ -79,11 +79,11 @@ Web.config dosyası, aşağıdaki örnek gibi görünmelidir. Yapılandırma ve 
 ```  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
-[!INCLUDE[vstecasp](../includes/vstecasp-md.md)], Web. config dosyalarında yapılan değişiklikleri otomatik olarak algılar ve yeni yapılandırma ayarlarını uygular. Değişikliklerin etkili olması için bilgisayarı yeniden başlatmanız veya IIS sunucusunu yeniden başlatmanız gerekmez.  
+[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web.config dosyalarda yapılan değişiklikleri otomatik olarak algılar ve yeni yapılandırma ayarlarını uygular. Değişikliklerin etkili olması için bilgisayarı yeniden başlatmanız veya IIS sunucusunu yeniden başlatmanız gerekmez.  
   
-Bir Web sitesi birden çok sanal dizin ve alt dizinler içerebilir ve her birinde Web.config dosyaları bulunabilir. [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] uygulamalar, URL yolundaki daha yüksek düzeylerdeki Web. config dosyalarından ayarları devralınır. Hiyerarşik yapılandırma dosyaları, aynı anda çeşitli [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] uygulamalarının ayarlarını değiştirmenize olanak tanır, örneğin hiyerarşide onun altındaki tüm uygulamalar için. Ancak, `debug`, hiyerarşide daha düşük bir dosyada ayarlanırsa, daha yüksek değeri geçersiz kılar.  
+Bir Web sitesi birden çok sanal dizin ve alt dizinler içerebilir ve her birinde Web.config dosyaları bulunabilir. [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] uygulamalar, URL yolundaki daha yüksek düzeylerdeki Web.config dosyalarından ayarları devralınır. Hiyerarşik yapılandırma dosyaları, aynı anda çeşitli [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] uygulamalarının ayarlarını değiştirmenize olanak tanır, örneğin hiyerarşide onun altındaki tüm uygulamalar için. Ancak, `debug`, hiyerarşide daha düşük bir dosyada ayarlanırsa, daha yüksek değeri geçersiz kılar.  
   
-Örneğin, `www.microsoft.com/aaa/Web.config``debug="true"` belirtebilirsiniz ve AAA klasöründeki ya da aaa 'ın herhangi bir alt klasöründeki herhangi bir uygulama bu ayarı devralmasını sağlayacaktır. [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] uygulamanız `www.microsoft.com/aaa/bbb`ise, bu ayarı, `www.microsoft.com/aaa/ccc`, `www.microsoft.com/aaa/ddd`, vb. ' deki tüm [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] uygulamaları olacak şekilde devralınır. Tek istisna durum, bu uygulamalardan biri kendi alt Web.config dosyasını kullanarak ayarı geçersiz kılarsa söz konusudur.  
+Örneğin, `debug="true"` içinde belirtebilirsiniz `www.microsoft.com/aaa/Web.config` ve AAA klasöründeki ya da aaa 'ın herhangi bir alt klasöründeki herhangi bir uygulama bu ayarı devralmasını sağlayacaktır. Bu nedenle, [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] uygulamanız ' de ise,, vb `www.microsoft.com/aaa/bbb` . gibi bu ayarı devralınır [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] `www.microsoft.com/aaa/ccc` `www.microsoft.com/aaa/ddd` . Tek istisna durum, bu uygulamalardan biri kendi alt Web.config dosyasını kullanarak ayarı geçersiz kılarsa söz konusudur.  
   
 Hata ayıklama modunu etkinleştirme, [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] uygulamanızın performansını önemli ölçüde etkiler. Bir yayınlama uygulaması dağıtmadan veya performans ölçümleri gerçekleştirmeden önce, hata ayıklama modunu devre dışı bırakmayı unutmayın.  
   

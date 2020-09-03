@@ -10,18 +10,18 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 32c01401eda8fb1bbe2bdcfc2950a51b968e98b7
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76114909"
 ---
 # <a name="the-dsltexttransform-command"></a>DslTextTransform Komutu
-DslTextTransform. cmd, TextTransform. exe ' yi çağıran ve ortak seçeneklerle çalıştıran bir betiktir. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] projelerinizin gecelik bir derlemesini otomatikleştirmek için DslTextTransformation. cmd ' de kullanabilirsiniz. Daha fazla bilgi için bkz. [TextTransform yardımcı programıyla dosya oluşturma](../modeling/generating-files-with-the-texttransform-utility.md).
+DslTextTransform. cmd TextTransform.exe çağıran ve bunu ortak seçeneklerle çalıştıran bir betiktir. Projelerinize yönelik gecelik bir derlemeyi otomatik hale getirmek için DslTextTransformation. cmd ' de kullanabilirsiniz [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] . Daha fazla bilgi için bkz. [TextTransform yardımcı programıyla dosya oluşturma](../modeling/generating-files-with-the-texttransform-utility.md).
 
  DslTextTransform. cmd aşağıdaki dizinde bulunur:
 
- **\<Visual Studio SDK yükleme yolu > \VisualStudioIntegration\Tools\Bin**
+ **\<Visual Studio SDK Installation Path>\VisualStudioIntegration\Tools\Bin**
 
  DslTextTransform. cmd ' ye giriş olarak aşağıdaki bağımsız değişkenleri belirtebilirsiniz:
 
@@ -31,4 +31,4 @@ DslTextTransform. cmd, TextTransform. exe ' yi çağıran ve ortak seçeneklerle
 
 - Metin şablonu dosyasının konumu.
 
-  DslTextTransform. cmd varsayılan yönerge işlemcileri ve derlemeleri kullanarak belirtilen metin şablonu dosyasını işler. Özel yönerge işlemcileri oluşturursanız, TextTransform. exe ' yi çağıran kendi toplu iş dosyanızı oluşturabilirsiniz. Bu toplu iş dosyasında derlemelerinizi ve ilişkili özel yönerge işlemcilerini belirtebilirsiniz.
+  DslTextTransform. cmd varsayılan yönerge işlemcileri ve derlemeleri kullanarak belirtilen metin şablonu dosyasını işler. Özel yönerge işlemcileri oluşturursanız, TextTransform.exe çağıran kendi toplu iş dosyanızı oluşturabilirsiniz. Bu toplu iş dosyasında derlemelerinizi ve ilişkili özel yönerge işlemcilerini belirtebilirsiniz.

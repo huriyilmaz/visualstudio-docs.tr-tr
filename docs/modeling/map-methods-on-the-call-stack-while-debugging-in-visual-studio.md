@@ -29,10 +29,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e1638b16eea9bfa20962359f0b63a7415915d0fc
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532710"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>Visual Studio'da hata ayıklarken çağrı yığınında eşleştirme yöntemleri
@@ -41,7 +41,7 @@ Hata ayıklarken çağrı yığınını görsel olarak izlemek için bir kod har
 
  ![Kod Eşlemlerde çağrı yığınları ile hata ayıklama](../debugger/media/debuggermap_overview.png)
 
- Gerekenler:
+ Şunlara ihtiyacınız var:
 
  ::: moniker range="vs-2017"
 
@@ -75,7 +75,7 @@ Hata ayıklarken çağrı yığınını görsel olarak izlemek için bir kod har
 
   Kod eşlemeleriyle çalışırken kullanabileceğiniz komutların ve eylemlerin ayrıntıları için bkz. [kod haritalarını inceleyin ve yeniden düzenleyin](../modeling/browse-and-rearrange-code-maps.md).
 
-## <a name="map-the-call-stack"></a><a name="MapStack"></a>Çağrı yığınını eşleme
+## <a name="map-the-call-stack"></a><a name="MapStack"></a> Çağrı yığınını eşleme
 
 1. Hata ayıklamayı başlatın. (Klavye: **F5**)
 
@@ -89,19 +89,19 @@ Hata ayıklarken çağrı yığınını görsel olarak izlemek için bir kod har
 
      Hata ayıklamaya devam ederken harita otomatik olarak güncelleştirilecek. Bkz. [sonraki çağrı yığını ile eşlemeyi güncelleştirme](#UpdateMap).
 
-## <a name="make-notes-about-the-code"></a><a name="MakeNotes"></a>Kodla ilgili notlar alın
+## <a name="make-notes-about-the-code"></a><a name="MakeNotes"></a> Kodla ilgili notlar alın
 
  Kodda neler olduğunu izlemek için açıklamalar ekleyin. Açıklamaya yeni bir satır eklemek için **SHIFT + Return**tuşlarına basın.
 
  ![Kod eşlemesinde çağrı yığınına Açıklama Ekle](../debugger/media/debuggermap_addcomment.png)
 
-## <a name="update-the-map-with-the-next-call-stack"></a><a name="UpdateMap"></a>Sonraki çağrı yığını ile Haritayı güncelleştirme
+## <a name="update-the-map-with-the-next-call-stack"></a><a name="UpdateMap"></a> Sonraki çağrı yığını ile Haritayı güncelleştirme
 
  Uygulamanızı sonraki kesme noktasına kadar çalıştırın veya bir işleve adımlayın. Eşleme yeni bir çağrı yığını ekler.
 
  ![Sonraki çağrı yığını ile kod haritasını Güncelleştir](../debugger/media/debuggermap_addclearcallstack.png)
 
-## <a name="add-related-code-to-the-map"></a><a name="AddRelatedCode"></a>Haritaya ilgili kod ekleme
+## <a name="add-related-code-to-the-map"></a><a name="AddRelatedCode"></a> Haritaya ilgili kod ekleme
 
  Artık bir haritanız var. ne kadar ileri? C# veya Visual Basic çalışıyorsanız, kodda neler olduğunu izlemek için alanlar, Özellikler ve diğer yöntemler gibi öğeleri ekleyin.
 
@@ -126,7 +126,7 @@ Hata ayıklarken çağrı yığınını görsel olarak izlemek için bir kod har
 
  ![Çağrı yığını kod eşlemesinde bir alan kullanan Yöntemler](../debugger/media/debuggermap_foundallreferences.png)
 
-## <a name="find-bugs-using-the-map"></a><a name="FindBugs"></a>Haritayı kullanarak hataları bulma
+## <a name="find-bugs-using-the-map"></a><a name="FindBugs"></a> Haritayı kullanarak hataları bulma
 
  Kodunuzu görselleştirmeniz, hataları daha hızlı şekilde bulmanıza yardımcı olabilir. Örneğin, bir çizim programında bir hata araştırdığınızı varsayalım. Bir çizgi çizip geri almayı denediğinizde, başka bir çizgi çizinceye kadar hiçbir şey olmaz.
 
@@ -140,7 +140,7 @@ Hata ayıklarken çağrı yığınını görsel olarak izlemek için bir kod har
 
  ![Kod eşlemesinde çağrı yığınına yeni yöntem çağrısı Ekle](../debugger/media/debuggermap_addnewcallforrepaint.png)
 
-## <a name="q--a"></a><a name="QA"></a>SORU-CEVAP &
+## <a name="q--a"></a><a name="QA"></a> SORU-CEVAP &
 
 - **Tüm çağrılar haritada görünmez. Kaydol?**
 

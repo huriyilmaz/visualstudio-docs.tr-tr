@@ -8,10 +8,10 @@ ms.date: 04/17/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen Visual Studio IDE 'yi indirme ve yükleme hakkında bilgi edinin.
 ms.openlocfilehash: b5c47c6b484d5b74f31ab8569f3895ae9ce0f984
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904438"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Visual Studio 2019 avantajı
@@ -42,7 +42,7 @@ IDE 'yi indirmek için:
    > [!div class="mx-imgBorder"]
    > ![Visual Studio Enterprise özelleştirme](_img/vs-ide-experience/vs-ide-customize-install-cropped.png)
 
-10. **Install**'a tıklayın.
+10. **Yükle**'ye tıklayın.
 
 11. Yükleme tamamlandığında, yüklemeyi değiştirme veya Visual Studio 'Yu başlatma seçeneğine sahip olacaksınız.  Başlamak için **Başlat** ' a tıklayın.  Birden çok sürüm yüklüyse, bunlar listelenir.
     > [!div class="mx-imgBorder"]
@@ -62,12 +62,12 @@ IDE 'yi indirmek için:
 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Yes          |
-| GitHub Enterprise ile Visual Studio Enterprise   | VL | Kullanılabilir       |  Yes          |
-| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                       | Kullanılabilir                                                            |  Yes          |
-| GitHub Enterprise ile Visual Studio Professional | VL   | Kullanılabilir              |  Yes          |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir                                             |  Yes         |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              |  Yok          |
+| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Evet          |
+| GitHub Enterprise ile Visual Studio Enterprise   | VL | Kullanılabilir       |  Evet          |
+| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                       | Kullanılabilir                                                            |  Evet          |
+| GitHub Enterprise ile Visual Studio Professional | VL   | Kullanılabilir              |  Evet          |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir                                             |  Evet         |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              |  YOK          |
 
 <sup>1</sup>  *şunları Içerir: for SATıL (NFR), Visual Studio Endüstri ortağı (vsıp), Microsoft iş ortağı ağı (MPN), FTE, mct Software & Services Geliştirici, BizSpark, Imagine, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD).  Dışlar: MCT Software & Hizmetleri.*
 
@@ -78,7 +78,7 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.vi
 
 ## <a name="support-resources"></a>Destek kaynakları
 - Visual Studio IDE ile ilgili yardıma ihtiyacınız var, şu kaynaklara göz atın:
-  - Teknik destek:[https://visualstudio.microsoft.com/support/](https://visualstudio.microsoft.com/support/)
+  - Teknik destek: [https://visualstudio.microsoft.com/support/](https://visualstudio.microsoft.com/support/)
   - [Belgeler](/visualstudio/)
 - Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
 

@@ -8,10 +8,10 @@ ms.date: 06/23/2020
 ms.topic: how-to
 description: Abonelik yönetim portalına yeni aylık Visual Studio abonelikleri satın alma hakkında bilgi edinin
 ms.openlocfilehash: 778a3adbc9ca2117b0328a10d52904921bd0b80c
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904705"
 ---
 # <a name="add-new-monthly-visual-studio-subscriptions-to-the-subscriptions-administration-portal"></a>Yeni aylık Visual Studio aboneliklerini abonelikler yönetim portalına ekleme
@@ -24,7 +24,7 @@ Aylık abonelikler ekleme adımları, kuruluşunuzun zaten sahip olduğu aboneli
 - Toplu Lisanslama aracılığıyla elde edilen abonelikler için zaten bir yöneticiyseniz, ancak daha önce bu aylık abonelikler eklenmemiş veya daha önce eklenmediyse, bunları aşağıda belirtilen adımları kullanarak eklemeniz gerekir.
 
 ## <a name="how-to-add-monthly-subscriptions"></a>Aylık abonelikler ekleme
-1. Konumundaki abonelikler yönetim portalında oturum açın<https://manage.visualstudio.com>
+1. Konumundaki abonelikler yönetim portalında oturum açın <https://manage.visualstudio.com>
 1. **Aboneleri Yönet** sekmesinde **Yeni anlaşma** açılan ' yı seçin. 
 1. Açılan kutudan **yeni aylık abonelikler** seçin
    > [!div class="mx-imgBorder"]

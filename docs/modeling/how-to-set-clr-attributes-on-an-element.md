@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ebda963bf1afa55fa8d7f98774c72a75d242ceef
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532463"
 ---
 # <a name="how-to-set-clr-attributes-on-an-element"></a>Nasıl yapılır: Bir Öğede CLR Özniteliklerini Ayarlama
@@ -35,7 +35,7 @@ ms.locfileid: "85532463"
 
 5. **Ad özelliği** sütununda, örneğin, uygun bir ad yazın `MyString` .
 
-6. **Tamam**'a tıklayın.
+6. **Tamam**’a tıklayın.
 
      **Özel öznitelikler** özelliği artık özniteliği aşağıdaki biçimde görüntüler:
 

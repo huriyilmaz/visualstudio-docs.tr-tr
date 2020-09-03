@@ -10,17 +10,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d7820d56bcb266e8361f36cb5350475f31445800
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85284768"
 ---
 # <a name="how-to-build-multiple-configurations-in-a-single-build-request"></a>Nasıl yapılır: tek bir yapı isteğinde birden çok yapılandırma oluşturma
 
 **Batch derlemesi** iletişim kutusunu kullanarak, tek bir IDE eylemiyle birden çok veya daha fazla proje türü oluşturabilirsiniz. Ancak, aynı anda birden çok yapı yapılandırmasında aşağıdaki proje türlerini derleyebilirsiniz:
 
-1. [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]JavaScript kullanarak Windows için oluşturulmuş uygulamalar.
+1. [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] JavaScript kullanarak Windows için oluşturulmuş uygulamalar.
 
 2. Tüm Visual Basic projeleri.
 

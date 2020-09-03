@@ -1,7 +1,7 @@
 ---
-title: Visual Studio Test Aracısı 2017 iş yükü ve bileşen ilikleri
+title: Visual Studio Test Aracısı 2017 iş yükü ve bileşen kimlikleri
 titleSuffix: ''
-description: Otomatik testleri ve yükleme testlerini uzaktan çalıştırmak için Visual Studio iş yükünü ve bileşen bilgisayarlarını kullanma
+description: Otomatikleştirilmiş testleri çalıştırmak ve testleri uzaktan yüklemek için Visual Studio iş yükünü ve bileşen kimliklerini kullanma
 keywords: ''
 author: ornellaalt
 ms.author: ornella
@@ -11,28 +11,28 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
 ms.openlocfilehash: e3dda1867ee4f54588456c668639e51652d7f8e1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76158913"
 ---
 ## <a name="test-agent"></a>Test Aracısı
 
-**Kimlik Numarası:** Microsoft.VisualStudio.Workload.TestAgent
+**Kimliği:** Microsoft. VisualStudio. Workload. TestAgent
 
-**Açıklama:** Otomatik testlerin ve yükleme testlerinin uzaktan çalıştırAn
+**Açıklama:** Otomatikleştirilmiş testleri çalıştırmayı ve testleri uzaktan yüklemeyi destekler
 
-### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından dahil edilen bileşenler
+### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen Kimliği | Adı | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
-Microsoft.VisualStudio.ComponentGroup.TestTools.TestAgent | Test Aracısı temel özellikleri | 15.0.27019.1 | Gerekli
+Microsoft. VisualStudio. ComponentGroup. TestTools. TestAgent | Test Aracısı temel özellikleri | 15.0.27019.1 | Gerekli
 
-## <a name="unaffiliated-components"></a>Bağlı olmayan bileşenler
+## <a name="unaffiliated-components"></a>Bağlantılı olmayan bileşenler
 
-Bunlar, iş yüküne dahil olmayan, ancak tek bir bileşen olarak seçilebilen bileşenlerdir.
+Bunlar herhangi bir iş yüküne dahil olmayan, ancak tek bir bileşen olarak seçilebilir olan bileşenlerdir.
 
-Bileşen Kimliği | Adı | Sürüm
+Bileşen KIMLIĞI | Name | Sürüm
 --- | --- | ---
 yok | yok | yok

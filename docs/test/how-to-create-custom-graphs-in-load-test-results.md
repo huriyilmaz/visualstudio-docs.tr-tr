@@ -10,10 +10,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1cc9c5bab7601a62bacfbbb155227bd5b632f93a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287811"
 ---
 # <a name="how-to-create-custom-graphs-in-load-test-results"></a>Nasıl yapılır: yük testi sonuçlarında özel grafikler oluşturma
@@ -28,7 +28,7 @@ Yük testi çalışırken veya çalışmayı bitirdikten sonra aşağıdaki yord
 
 1. **Yük testi** araç çubuğunda **yeni grafik Ekle**' yi seçin.
 
-     \-veya
+     \- veya
 
      **Yük Testi Çözümleyicisi**' nde, **Sayaçlar** paneline veya bir grafiğe sağ tıklayın ve ardından **Grafik Ekle**' yi seçin.
 

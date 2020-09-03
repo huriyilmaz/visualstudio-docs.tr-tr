@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 29dac6cca7936dde8be2ebc57366f6370b8bcbc6
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904944"
 ---
 # <a name="walkthrough-create-an-sdk-using-javascript"></a>İzlenecek yol: JavaScript kullanarak SDK oluşturma
@@ -27,7 +27,7 @@ Bu izlenecek yol, Visual Studio uzantısı (VSıX) olarak basit bir matematik SD
 ## <a name="prerequisites"></a>Önkoşullar
  Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
 
-## <a name="to-create-the-simplemathvsix-extension-sdk-project"></a><a name="createSimpleMathVSIX"></a>SimpleMathVSIX Extension SDK projesini oluşturmak için
+## <a name="to-create-the-simplemathvsix-extension-sdk-project"></a><a name="createSimpleMathVSIX"></a> SimpleMathVSIX Extension SDK projesini oluşturmak için
 
 1. Menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
 
@@ -136,9 +136,9 @@ Bu izlenecek yol, Visual Studio uzantısı (VSıX) olarak basit bir matematik SD
 
 20. **Yükleme düğmesini seçin** ve yüklemenin tamamlanmasını sağlayın.
 
-21. Visual Studio'yu yeniden başlatın.
+21. Visual Studio’yu yeniden başlatın.
 
-## <a name="to-create-a-sample-app-that-uses-the-sdk"></a><a name="createSampleApp"></a>SDK 'Yı kullanan bir örnek uygulama oluşturmak için
+## <a name="to-create-a-sample-app-that-uses-the-sdk"></a><a name="createSampleApp"></a> SDK 'Yı kullanan bir örnek uygulama oluşturmak için
 
 1. Menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
 
