@@ -1,5 +1,5 @@
 ---
-title: MSBuild 'in projeleri nasıl oluşturur
+title: MSBuild nasıl proje oluşturur
 ms.date: 05/18/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,13 +10,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c3c1cdc4738f60301435932b3700f14377f12172
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85290685"
 ---
-# <a name="how-msbuild-builds-projects"></a>MSBuild 'in projeleri nasıl oluşturur
+# <a name="how-msbuild-builds-projects"></a>MSBuild nasıl proje oluşturur
 
 MSBuild gerçekten nasıl çalışır? Bu makalede, MSBuild 'in proje dosyalarınızı nasıl işleyeceği, Visual Studio 'dan veya bir komut satırından veya betikten nasıl işlem yapılacağını öğreneceksiniz. MSBuild 'in nasıl çalıştığını bilmek, sorunları daha iyi tanılamanıza ve derleme işleminizi daha iyi özelleştirmenize yardımcı olabilir. Bu makalede, derleme süreci açıklanmakta ve büyük ölçüde tüm proje türleri için uygulanabilir.
 
@@ -113,7 +113,7 @@ MSBuild 'in ele aldığı iki kod yolu vardır, normal bir, burada açıklanmı�
 
 Bireysel projeler, diğer projelere öğeler aracılığıyla bağımlılığını belirler `ProjectReference` . Yığının en üstündeki bir proje oluşturmaya başladığında, `ResolveProjectReferences` ortak hedef dosyalarında tanımlanmış standart bir hedef olan hedefin çalıştırıldığı noktaya ulaşır.
 
-`ResolveProjectReferences`çıkışları almak için öğelerin girişleri ile MSBuild görevini çağırır `ProjectReference` . `ProjectReference`Öğeler gibi yerel öğelere dönüştürülür `Reference` . Geçerli projenin MSBuild yürütme aşaması, yürütme aşaması başvurulan projeyi işlemeye başladığında duraklar. (değerlendirme aşaması gerektiği şekilde yapılır). Başvurulan proje yalnızca bağımlı projeyi oluşturmaya başladıktan sonra oluşturulur ve bu sayede proje oluşturan projeler ağacı oluşturulur.
+`ResolveProjectReferences` çıkışları almak için öğelerin girişleri ile MSBuild görevini çağırır `ProjectReference` . `ProjectReference`Öğeler gibi yerel öğelere dönüştürülür `Reference` . Geçerli projenin MSBuild yürütme aşaması, yürütme aşaması başvurulan projeyi işlemeye başladığında duraklar. (değerlendirme aşaması gerektiği şekilde yapılır). Başvurulan proje yalnızca bağımlı projeyi oluşturmaya başladıktan sonra oluşturulur ve bu sayede proje oluşturan projeler ağacı oluşturulur.
 
 Visual Studio, çözüm (. sln) dosyalarında proje bağımlılıkları oluşturulmasına olanak sağlar. Bağımlılıklar çözüm dosyasında belirtilir ve yalnızca bir çözüm oluşturulurken veya Visual Studio içinde oluşturulurken dikkate alınır. Tek bir proje oluşturuyorsanız, bu bağımlılık türü yok sayılır. Çözüm başvuruları öğelere MSBuild tarafından dönüştürülür `ProjectReference` ve bundan sonra aynı şekilde işlenir.
 
@@ -155,7 +155,7 @@ Uygulamasında, *Microsoft. Common. targets* , *Microsoft. Common. CurrentVersio
       Returns="@(TargetPathWithTargetPlatformMoniker)" />
 ```
 
-`BeforeBuild`ve `AfterBuild` uzantı noktalardır. Bunlar *Microsoft. Common. CurrentVersion. targets* dosyasında boştur, ancak projeler, `BeforeBuild` `AfterBuild` ana yapı işleminden önce veya sonra gerçekleştirilmesi gereken görevlerle kendi ve hedeflerini sağlayabilir. `AfterBuild`, hiçbir işlem yapılmadan önce çalıştırılır, `Build` çünkü `AfterBuild` `DependsOn` Hedefteki özniteliğinde görünür `Build` , ancak bundan sonra gerçekleşir `CoreBuild` .
+`BeforeBuild` ve `AfterBuild` uzantı noktalardır. Bunlar *Microsoft. Common. CurrentVersion. targets* dosyasında boştur, ancak projeler, `BeforeBuild` `AfterBuild` ana yapı işleminden önce veya sonra gerçekleştirilmesi gereken görevlerle kendi ve hedeflerini sağlayabilir. `AfterBuild` , hiçbir işlem yapılmadan önce çalıştırılır, `Build` çünkü `AfterBuild` `DependsOn` Hedefteki özniteliğinde görünür `Build` , ancak bundan sonra gerçekleşir `CoreBuild` .
 
 `CoreBuild`Hedef, derleme araçlarına yapılan çağrıları aşağıda gösterildiği gibi içerir:
 

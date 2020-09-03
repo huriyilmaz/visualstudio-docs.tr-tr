@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 16d55c4e729a39f46b4b038490e92f7cb43bf98d
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84182878"
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Visual Studio 'da anlık görüntü hata ayıklaması için sorun giderme ve bilinen sorunlar
@@ -37,7 +37,7 @@ Bu hata, Visual Studio tarafından Azure 'a verilen REST çağrısının geçers
 * Visual Studio kişiselleştirme hesabınızın, iliştirmekte olduğunuz Azure aboneliğine ve kaynağa yönelik izinlere sahip olduğundan emin olun. Bunu belirlemenin hızlı bir yolu, **hata ayıklama**  >  **iliştirme Snapshot Debugger** iletişim kutusunda kaynağın kullanılabilir olup olmadığını denetlemiyor...  >  **Azure kaynağı**  >  **Mevcut**' ı veya bulut Gezgini ' ni seçin.
 * Bu hata devam ederse, bu makalenin başlangıcında açıklanan geri bildirim kanallarından birini kullanın.
 
-App Service kimlik doğrulaması/yetkilendirme 'yi (EasyAuth) etkinleştirdiyseniz, çağrı yığını hata iletisinde LaunchAgentAsync ile bir 401 hatasıyla karşılaşabilirsiniz. **İsteğin kimliği doğrulanmamış olduğunda gerçekleştirilecek eylemin** , Azure Portal **anonim isteklere izin ver (eylem yok)** olarak ayarlandığı ve D:\Home\sites\wwwroot içinde aşağıdaki içeriğe sahip bir Authorization. JSON sağlamak üzere ayarlandığından emin olun. 
+App Service kimlik doğrulaması/yetkilendirme 'yi (EasyAuth) etkinleştirdiyseniz, çağrı yığını hata iletisinde LaunchAgentAsync ile bir 401 hatasıyla karşılaşabilirsiniz. **İsteğin kimliği doğrulanmamış olduğunda gerçekleştirilecek eylemin** , Azure Portal **anonim isteklere izin ver (eylem yok)** olarak ayarlandığı ve D:\Home\sites\wwwroot içinde aşağıdaki içeriğe sahip bir authorization.jssağlayacak şekilde ayarlandığından emin olun. 
 
 ```
 {
@@ -59,7 +59,7 @@ App Service kimlik doğrulaması/yetkilendirme 'yi (EasyAuth) etkinleştirdiysen
 }
 ```
 
-İlk yol, **[IdentityProvider] Ile oturum**açmaya benzer şekilde uygulama etki alanınızı etkin bir şekilde korur. İkinci yol, snapshotdebugger 'ın önceden yüklenmiş site uzantısı App Service için *etkinleştirilmişse, snapshotdebugger tanılama aracısını başlatma* ön tanımlı eylemini gerçekleştiren, Snapshotdebugger agentlaunch uç noktasını kimlik doğrulama dışında kullanıma sunar. Authorization. JSON yapılandırması hakkında daha fazla bilgi için lütfen bkz. [URL Yetkilendirme kuralları](https://azure.github.io/AppService/2016/11/17/URL-Authorization-Rules.html).
+İlk yol, **[IdentityProvider] Ile oturum**açmaya benzer şekilde uygulama etki alanınızı etkin bir şekilde korur. İkinci yol, snapshotdebugger 'ın önceden yüklenmiş site uzantısı App Service için *etkinleştirilmişse, snapshotdebugger tanılama aracısını başlatma* ön tanımlı eylemini gerçekleştiren, Snapshotdebugger agentlaunch uç noktasını kimlik doğrulama dışında kullanıma sunar. Yapılandırma authorization.jshakkında daha fazla bilgi için lütfen bkz. [URL Yetkilendirme kuralları](https://azure.github.io/AppService/2016/11/17/URL-Authorization-Rules.html).
 
 ### <a name="403-forbidden"></a>(403) yasak
 
@@ -214,14 +214,14 @@ Aracı günlükleri aşağıdaki konumlarda bulunabilir:
 İzleme günlükleri aşağıdaki konumlarda bulunabilir:
 
 - Uygulama Hizmetleri:
-  - Hata günlüğü, D:\Home\LogFiles\eventlog.xml dosyasına otomatik olarak gönderilir, olaylar `<Provider Name="Instrumentation Engine" />` veya "üretim kesme noktaları" ile işaretlenir
+  - Hata günlüğü D:\Home\LogFiles\eventlog.xml otomatik olarak gönderilir, olaylar `<Provider Name="Instrumentation Engine" />` veya "üretim kesme noktaları" ile işaretlenir
 - VM/VMSS:
   - SANAL makinenizde oturum açın ve Olay Görüntüleyicisi açın.
   - Aşağıdaki görünümü açın: *Windows günlükleri uygulama>*.
   - *Üretim kesme noktalarını* veya *Izleme altyapısını*kullanarak *geçerli günlüğü* *olay kaynağına* göre filtreleyin.
 - AKS
-  - İzleme altyapısı günlüğü/t MP/diag/log.txt (DockerFile içinde MicrosoftInstrumentationEngine_FileLogPath ayarla)
-  - /Tmp/diag/shLog.txt konumundaki üretim kesme noktası günlüğü
+  - İzleme altyapısı günlük/t MP/diag/log.txt (DockerFile içinde MicrosoftInstrumentationEngine_FileLogPath ayarla)
+  - /Tmp/diag/shLog.txt 'de üretim kesme noktası günlüğü
 
 ## <a name="known-issues"></a>Bilinen Sorunlar
 
@@ -237,7 +237,7 @@ Anlık görüntü hata ayıklaması ve Application Insights, site işlemine yük
 
 - App Service içinde bir [dağıtım yuvası](/azure/app-service/web-sites-staged-publishing) oluşturun ve sitenizi yuvaya dağıtın.
 - Visual Studio 'daki bulut Gezgini 'nden veya Azure portal, bu yuvayı üretim ile değiştirin.
-- Yuva sitesini durdurun. Bu, tüm örneklerden site W3wp. exe işlemini sonlandırmak birkaç saniye sürer.
+- Yuva sitesini durdurun. Bu, tüm örneklerden site w3wp.exe işlemini sonlandırmak birkaç saniye sürer.
 - Yuva sitesi uzantısını kudu sitesinden veya Azure portal (*App Service dikey pencere > geliştirme araçları > uzantıları > güncelleştirme*) yükseltin.
 - Yuva sitesini başlatın. Yeniden ısınma için siteyi ziyaret etmenizi öneririz.
 - Yuvayı üretim ile değiştirin.

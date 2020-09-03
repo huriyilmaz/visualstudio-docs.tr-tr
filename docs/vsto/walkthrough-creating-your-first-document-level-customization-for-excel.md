@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8d45461c7dab250cd43d7a25d8693658c7b8e164
-ms.sourcegitcommit: 3ba2968a4b44643482aadad4d50e1a55bb36b136
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74566975"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-excel"></a>İzlenecek yol: Excel için ilk belge düzeyi özelleştirmeyi oluşturma
@@ -41,7 +41,7 @@ ms.locfileid: "74566975"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
@@ -49,15 +49,15 @@ ms.locfileid: "74566975"
 
 - [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] veya [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].
 
-## <a name="create-the-project"></a>Projeyi oluşturma
+## <a name="create-the-project"></a>Proje oluşturma
 
 ### <a name="to-create-a-new-excel-workbook-project-in-visual-studio"></a>Visual Studio 'da yeni bir Excel çalışma kitabı projesi oluşturmak için
 
-1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]başlatın.
+1. Başlatın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
 ::: moniker range="vs-2017"
-3. Şablonlar bölmesinde, **Visual C#**  veya **Visual Basic**öğesini genişletin ve ardından **Office/SharePoint**' i genişletin.
+3. Şablonlar bölmesinde, **Visual C#** veya **Visual Basic**' i genişletin ve ardından **Office/SharePoint**' i genişletin.
 
 4. Genişletilmiş **Office/SharePoint** düğümü altında **VSTO eklentileri** düğümünü seçin.
 
@@ -65,7 +65,7 @@ ms.locfileid: "74566975"
 
 6. **Ad** kutusuna **FirstWorkbookCustomization**yazın.
 
-7. **Tamam**'a tıklayın.
+7. **Tamam**’a tıklayın.
 
 8. **Office projesi için Visual Studio Araçları** **Yeni belge oluştur** ' u seçin ve **Tamam**' ı tıklatın.
 ::: moniker-end
@@ -74,23 +74,23 @@ ms.locfileid: "74566975"
 
      [!INCLUDE[new-project-dialog-search](../vsto/includes/new-project-dialog-search-md.md)]
 
-4. **İleri**'ye tıklayın.
+4. **İleri**’ye tıklayın.
 
 5. **Yeni projenizi yapılandırma** Iletişim kutusundaki **ad** kutusuna **FirstWorkbookCustomization** yazın ve **Oluştur**' a tıklayın.
 
 6. **Office projesi için Visual Studio Araçları** **Yeni belge oluştur** ' u seçin ve **Tamam**' ı tıklatın.
 ::: moniker-end
-   - [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **FirstWorkbookCustomization** projesi oluşturur ve aşağıdaki dosyaları projeye ekler.
+   - [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**FirstWorkbookCustomization** projesini oluşturur ve aşağıdaki dosyaları projeye ekler.
 
    - *FirstWorkbookCustomization*. xlsx-projedeki Excel çalışma kitabını temsil eder. Tüm çalışma sayfalarını ve grafikleri içerir.
 
-   - Sayfa1 (Visual Basic için *. vb* dosyası veya Visual C#için *. cs* dosyası)-çalışma kitabındaki ilk çalışma sayfasına yönelik tasarım yüzeyi ve kodu sağlayan bir çalışma sayfası. Daha fazla bilgi için bkz. [çalışma sayfası konak öğesi](../vsto/worksheet-host-item.md).
+   - Sayfa1 (Visual C# için Visual Basic veya *. cs* dosyası için *. vb* dosyası)-çalışma kitabındaki ilk çalışma sayfasına yönelik tasarım yüzeyi ve kodu sağlayan bir çalışma sayfası. Daha fazla bilgi için bkz. [çalışma sayfası konak öğesi](../vsto/worksheet-host-item.md).
 
-   - Sheet2 (Visual C#için Visual Basic veya *. cs* dosyası için *. vb* dosyası)-çalışma kitabındaki ikinci çalışma sayfasına yönelik tasarım yüzeyi ve kodu sağlayan bir çalışma sayfası.
+   - Sheet2 (Visual C# için Visual Basic veya *. cs* dosyası için *. vb* dosyası)-çalışma kitabındaki ikinci çalışma sayfasına yönelik tasarım yüzeyi ve kodu sağlayan bir çalışma sayfası.
 
-   - Sheet3 (Visual Basic için *. vb* dosyası veya Visual C#için *. cs* dosyası)-çalışma kitabındaki üçüncü çalışma sayfasına yönelik tasarım yüzeyi ve kodu sağlayan bir çalışma sayfası.
+   - Sheet3 (Visual C# için Visual Basic veya *. cs* dosyası için *. vb* dosyası)-çalışma kitabındaki üçüncü çalışma sayfasına yönelik tasarım yüzeyi ve kodu sağlayan bir çalışma sayfası.
 
-   - ThisWorkbook (Visual Basic için *. vb* dosyası veya Visual C#için *. cs* dosyası)-tasarım yüzeyini ve çalışma kitabı düzeyi özelleştirmeleri için kodu içerir. Daha fazla bilgi için bkz. [çalışma kitabı konak öğesi](../vsto/workbook-host-item.md).
+   - ThisWorkbook (Visual Basic için *. vb* dosyası veya Visual C# için *. cs* dosyası)-tasarım yüzeyini ve çalışma kitabı düzeyi özelleştirmeleri için kodu içerir. Daha fazla bilgi için bkz. [çalışma kitabı konak öğesi](../vsto/workbook-host-item.md).
 
      Sheet1 kod dosyası tasarımcıda otomatik olarak açılır.
 
@@ -104,7 +104,7 @@ ms.locfileid: "74566975"
 
 2. **Çözüm Gezgini**, **Sheet1** kod dosyasına sağ tıklayın ve **Görünüm Tasarımcısı**' na tıklayın.
 
-     \- veya-
+     \- veya
 
      **Çözüm Gezgini**, **Sheet1** kod dosyasına çift tıklayın.
 
@@ -125,9 +125,9 @@ ms.locfileid: "74566975"
 
  Ardından, Sheet1 kod dosyasına kod ekleyin. Yeni kod, çalışma kitabına ikinci bir metin satırı eklemek için Excel nesne modelini kullanır. Varsayılan olarak, Sheet1 kod dosyası aşağıdaki oluşturulan kodu içerir:
 
-- Çalışma sayfasının programlama modelini temsil eden ve Excel 'in nesne modeline erişim sağlayan `Sheet1` sınıfının kısmi tanımıdır. Daha fazla bilgi için, [çalışma sayfası konak öğesi](../vsto/worksheet-host-item.md) ve [Word nesne modeline genel bakış](../vsto/word-object-model-overview.md). `Sheet1` sınıfının geri kalanı, değiştirmemeniz gereken gizli bir kod dosyasında tanımlanır.
+- `Sheet1`Çalışma sayfasının programlama modelini temsil eden ve Excel 'in nesne modeline erişim sağlayan sınıfının kısmi bir tanımı. Daha fazla bilgi için, [çalışma sayfası konak öğesi](../vsto/worksheet-host-item.md) ve [Word nesne modeline genel bakış](../vsto/word-object-model-overview.md). Sınıfın geri kalanı, `Sheet1` değiştirmemelisiniz bir gizli kod dosyasında tanımlanır.
 
-- `Sheet1_Startup` ve `Sheet1_Shutdown` olay işleyicileri. Bu olay işleyicileri, Excel özelleştirmeyi yüklerken ve kaldırdığınızda çağrılır. Bu olay işleyicilerini, yüklendiğinde özelleştirmenizi başlatmak ve özelleştirildiyse özelleştirme tarafından kullanılan kaynakları temizlemek için kullanın. Daha fazla bilgi için bkz. [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md).
+- `Sheet1_Startup`Ve `Sheet1_Shutdown` olay işleyicileri. Bu olay işleyicileri, Excel özelleştirmeyi yüklerken ve kaldırdığınızda çağrılır. Bu olay işleyicilerini, yüklendiğinde özelleştirmenizi başlatmak ve özelleştirildiyse özelleştirme tarafından kullanılan kaynakları temizlemek için kullanın. Daha fazla bilgi için bkz. [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md).
 
 ### <a name="to-add-a-second-line-of-text-to-the-worksheet-by-using-code"></a>Kodu kullanarak çalışma sayfasına ikinci bir metin satırı eklemek için
 
@@ -135,7 +135,7 @@ ms.locfileid: "74566975"
 
      Kod dosyası Visual Studio 'da açılır.
 
-2. `Sheet1_Startup` olay işleyicisini aşağıdaki kodla değiştirin. Sayfa1 açıldığında, bu kod çalışma sayfasına ikinci bir metin satırı ekler.
+2. `Sheet1_Startup`Olay işleyicisini aşağıdaki kodla değiştirin. Sayfa1 açıldığında, bu kod çalışma sayfasına ikinci bir metin satırı ekler.
 
      [!code-csharp[Trin_ExcelWorkbookTutorial#1](../vsto/codesnippet/CSharp/Trin_ExcelWorkbookTutorial/Sheet1.cs#1)]
      [!code-vb[Trin_ExcelWorkbookTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ExcelWorkbookTutorial/Sheet1.vb#1)]
@@ -184,7 +184,7 @@ ms.locfileid: "74566975"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Office çözümleri geliştirmesine genel &#40;bakış VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
+- [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
 - [Excel çözümleri](../vsto/excel-solutions.md)
 - [Program belge düzeyi özelleştirmeleri](../vsto/programming-document-level-customizations.md)
 - [Excel nesne modeline genel bakış](../vsto/excel-object-model-overview.md)

@@ -21,34 +21,34 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: af6c0d88dd230bee768641905e200f1f47749d77
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77629592"
 ---
 # <a name="supported-code-changes-c"></a>Desteklenen Kod Değişiklikleri (C++)
-Projeler için C++ Düzenle ve devam et çoğu kod değişikliği türünü işler. Ancak, bazı değişiklikler program yürütmesi sırasında uygulanamaz. Bu değişiklikleri uygulamak için yürütmeyi durdurmanız ve kodun yeni bir sürümünü oluşturmanız gerekir.
+C++ projeleri için Düzenle ve devam et çoğu kod değişikliği türünü işler. Ancak, bazı değişiklikler program yürütmesi sırasında uygulanamaz. Bu değişiklikleri uygulamak için yürütmeyi durdurmanız ve kodun yeni bir sürümünü oluşturmanız gerekir.
 
- Visual Studio C++ 'da Düzenle ve devam et ile çalışma hakkında bilgi için bkz. [Düzenle ve devamC++et ()](../debugger/edit-and-continue-visual-cpp.md) .
+ Visual Studio 'da C++ için Düzenle ve devam et ile çalışma hakkında bilgi için bkz. [düzenleme ve devam etme (C++)](../debugger/edit-and-continue-visual-cpp.md) .
 
-## <a name="BKMK_Requirements"></a>Gereklilik
-### <a name="build-settings-project--properties"></a>Derleme ayarları (Proje > Özellikleri):
-  1. **C/C++ > Genel > hata ayıklama bilgileri biçimi**: Düzenle ve devam et için program veritabanı (`/ZI`)
-  2. **C/C++ > kod oluşturma > en az yeniden derlemeyi etkinleştir**: Evet (`/Gm`)
-  3. **Bağlayıcı > genel > artımlı bağlamayı etkinleştir**: evet (`/INCREMENTAL`)
+## <a name="requirements"></a><a name="BKMK_Requirements"></a> Gereklilik
+### <a name="build-settings-project--properties"></a>Derleme ayarları (proje > özellikleri):
+  1. **C/C++ > genel > hata ayıklama bilgisi biçimi**: Düzenle ve devam et Için program veritabanı ( `/ZI` )
+  2. **C/C++ > kod oluşturma > en az yeniden derlemeyi etkinleştir**: Evet ( `/Gm` )
+  3. **Bağlayıcı > genel > artımlı bağlamayı etkinleştir**: Evet ( `/INCREMENTAL` )
 
-     Uyumsuz bağlayıcı ayarlarının (örneğin, `/SAFESEH`veya `/OPT:`...) derleme sırasında uyarı _LNK4075_ neden olması gerekir.  
+     Uyumsuz bağlayıcı ayarlarının ( `/SAFESEH` veya... `/OPT:` ), derleme sırasında uyarı _LNK4075_ neden olması gerekir.  
      Örnek: `LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/OPT:ICF' specification`
 
-### <a name="debugger-settings-debug--options--general"></a>Hata ayıklayıcı ayarları (hata ayıklama > Seçenekler > Genel):
+### <a name="debugger-settings-debug--options--general"></a>Hata ayıklayıcı ayarları (hata ayıklama > seçenekler > genel):
   - Yerel Düzenle ve devam et 'i etkinleştir
 
      Uyumsuz derleyici veya bağlayıcı ayarları, düzenleme ve devam etme sırasında hataya neden olur.  
      Örnek: `Edit and Continue : error  : ‘file.cpp’ in ‘MyApp.exe’ was not compiled with Edit and Continue enabled. Ensure that the file is compiled with the Program Database for Edit and Continue (/ZI) option.`
 
-## <a name="BKMK_Unsupported_changes"></a>Desteklenmeyen değişiklikler
- Aşağıdaki C/C++ değişiklikler hata ayıklama oturumu sırasında uygulanamaz. Bu değişikliklerden herhangi birini yapar ve ardından kod değişikliklerini uygulamaya çalışırsanız **Çıkış** penceresinde bir hata veya uyarı iletisi görüntülenir.
+## <a name="unsupported-changes"></a><a name="BKMK_Unsupported_changes"></a> Desteklenmeyen değişiklikler
+ Aşağıdaki C/C++ değişiklikleri hata ayıklama oturumu sırasında uygulanamaz. Bu değişikliklerden herhangi birini yapar ve ardından kod değişikliklerini uygulamaya çalışırsanız **Çıkış** penceresinde bir hata veya uyarı iletisi görüntülenir.
 
 - Genel veya statik verilerde çoğu değişiklik.
 
@@ -78,14 +78,14 @@ Projeler için C++ Düzenle ve devam et çoğu kod değişikliği türünü işl
 
 - Düzenle ve devam et, statik kitaplıkları güncelleştirmez. Statik kitaplıkta değişiklik yaparsanız, yürütme eski sürümle devam eder ve uyarı verilmez.
 
-## <a name="BKMK_Unsupported_scenarios"></a>Desteklenmeyen senaryolar
- Aşağıdaki hata ayıklama senaryolarında C/C++ için Düzenle ve devam et kullanılamaz:
+## <a name="unsupported-scenarios"></a><a name="BKMK_Unsupported_scenarios"></a> Desteklenmeyen senaryolar
+ C/C++ için Düzenle ve devam et aşağıdaki hata ayıklama senaryolarında kullanılamaz:
 
 - /Zo ile derlenen yerel uygulamalarda hata ayıklama [(Iyileştirilmiş hata ayıklamayı geliştirme)](/cpp/build/reference/zo-enhance-optimized-debugging)
 
-- Visual Studio 'nun Visual Studio 2015 güncelleştirme 1 ' den önceki sürümlerinde UWP uygulamalarında veya bileşenlerinde hata ayıklaması yapın. Visual Studio 2015 güncelleştirme 1 ' den başlayarak, artık `/bigobj` anahtarıyla `/ZI` derleyici anahtarını desteklediğinden C++ , UWP uygulamalarında Düzenle ve devam et ' i kullanabilirsiniz. Ayrıca, `/FASTLINK` anahtarıyla derlenen ikili dosyalarla Düzenle ve devam et ' i kullanabilirsiniz.
+- Visual Studio 'nun Visual Studio 2015 güncelleştirme 1 ' den önceki sürümlerinde UWP uygulamalarında veya bileşenlerinde hata ayıklaması yapın. Visual Studio 2015 güncelleştirme 1 ' den başlayarak, artık `/ZI` anahtar ile derleyici anahtarını desteklediğinden, UWP C++ uygulamalarında ve DirectX uygulamalarında Düzenle ve devam et ' i kullanabilirsiniz  `/bigobj` . Ayrıca, anahtarla derlenen ikili dosyalarla Düzenle ve devam et ' i de kullanabilirsiniz `/FASTLINK` .
 
-- 8/8.1 Mağaza uygulamalarında hata ayıklama. Bu projeler VC 120 araç takımını ve C/C++ `/bigobj` anahtarını kullanır. `/bigobj` Düzenle ve devam et yalnızca VC 140 araç takımı 'nda desteklenir.
+- 8/8.1 Mağaza uygulamalarında hata ayıklama. Bu projeler VC 120 araç takımını ve C/C++ anahtarını kullanır `/bigobj` . Düzenle ve devam et `/bigobj` yalnızca VC 140 araç takımı 'nda desteklenir.
 
 - Windows 98 ' de hata ayıklama.
 
@@ -105,15 +105,15 @@ Projeler için C++ Düzenle ve devam et çoğu kod değişikliği türünü işl
 
 - Derleme hataları nedeniyle yeni bir sürüm derlenemedi sonra kodunuzun eski bir sürümünde hata ayıklama işlemi başarısız oldu.
 
-- Özel bir derleyici (*CL. exe*) yolu kullanma. Güvenlik nedenleriyle, düzenleme ve devam etme sırasında bir dosyanın yeniden derlenmesi için, Visual Studio her zaman yüklü derleyiciyi kullanır. Özel bir derleyici yolu kullanıyorsanız (örneğin, `*.props` dosyanızdaki özel bir `$(ExecutablePath)` değişken aracılığıyla), bir uyarı görüntülenir ve Visual Studio aynı sürüm/mimarinin yüklü derleyicisini kullanmaya geri döner.
+- Özel bir derleyici (*cl.exe*) yolu kullanma. Güvenlik nedenleriyle, düzenleme ve devam etme sırasında bir dosyanın yeniden derlenmesi için, Visual Studio her zaman yüklü derleyiciyi kullanır. Özel bir derleyici yolu kullanıyorsanız (örneğin, dosyanızda özel bir `$(ExecutablePath)` değişken aracılığıyla `*.props` ), bir uyarı görüntülenir ve Visual Studio aynı sürüm/mimarinin yüklü derleyicisini kullanmaya geri döner.
 
-- FASTBuild derleme sistemi. FASTBuild Şu anda "En düşük yeniden oluşturma (`/Gm`)" derleyici anahtarıyla uyumlu değildir ve bu nedenle Düzenle ve devam et desteklenmez.
+- FASTBuild derleme sistemi. FASTBuild Şu anda "En düşük yeniden oluşturma ( `/Gm` )" derleyici anahtarıyla uyumlu değil ve Düzenle ve devam et desteklenmez.
 
 - Eski mimariler/VC araç kümeleri. VC 140 araç takımı ile, varsayılan hata ayıklayıcı hem x86 hem de x64 uygulamalarına göre Düzenle ve devam et ' i destekler. Eski araç kümeleri yalnızca x86 uygulamalarını destekler. VC 120 ' den eski araç kümeleri, Düzenle ve devam et ' i kullanmak için "_hata ayıklama > seçeneklerini > genel >_ yerel uyumluluk modunu kullan" seçeneğini işaretleyerek eski hata ayıklayıcısını kullanmalıdır.
 
-## <a name="BKMK_Linking_limitations"></a>Bağlama sınırlamaları
+## <a name="linking-limitations"></a><a name="BKMK_Linking_limitations"></a> Bağlama sınırlamaları
 
-### <a name="BKMK_Linker_options_that_disable_Edit_and_Continue"></a>Düzenle ve devam et özelliğini devre dışı bırakan bağlayıcı seçenekleri
+### <a name="linker-options-that-disable-edit-and-continue"></a><a name="BKMK_Linker_options_that_disable_Edit_and_Continue"></a> Düzenle ve devam et özelliğini devre dışı bırakan bağlayıcı seçenekleri
  Aşağıdaki bağlayıcı seçenekleri Düzenle ve devam et devre dışı bırak:
 
 - **/OPT: ref**, **/OPT: ICF**veya **/ıncresetting** ayarları ayarı devre dışı bırakır ve şu uyarıyla devam et:  
@@ -124,7 +124,7 @@ Projeler için C++ Düzenle ve devam et çoğu kod değişikliği türünü işl
 
 - Program veritabanı (. pdb) dosyasının oluşturulmasını engelleyen herhangi bir seçeneğin ayarlanması, düzenlemeyi devre dışı bırakır ve belirli bir uyarı olmadan devam eder.
 
-### <a name="BKMK_Auto_relinking_limitations"></a>Otomatik yeniden bağlama sınırlamaları
+### <a name="auto-relinking-limitations"></a><a name="BKMK_Auto_relinking_limitations"></a> Otomatik yeniden bağlama sınırlamaları
  Varsayılan olarak, Düzenle ve devam et, programınızı bir hata ayıklama oturumunun sonunda, güncel bir çalıştırılabilir dosya oluşturacak şekilde yeniden bağlar.
 
  Özgün derleme konumundan başka bir konumdan hata ayıklaması yapıyorsanız, Düzenle ve devam et programınızı yeniden bağlanamaz. Bir ileti, el ile yeniden oluşturmanız gerektiğini söyler.
@@ -141,7 +141,7 @@ Projeler için C++ Düzenle ve devam et çoğu kod değişikliği türünü işl
 
 3. **Hata ayıklamadan sonra kod değişikliklerini yeniden bağla** onay kutusunu temizleyin.
 
-## <a name="BKMK_Precompiled_header_limitations"></a>Ön derlenmiş üstbilgi sınırlamaları
+## <a name="precompiled-header-limitations"></a><a name="BKMK_Precompiled_header_limitations"></a> Ön derlenmiş üstbilgi sınırlamaları
  Varsayılan olarak, Düzenle ve devam et, kod değişikliklerinin işlenmesini hızlandırmak için arka planda önceden derlenmiş üst bilgileri yükler ve işler. Önceden derlenmiş üst bilgilerin yüklenmesi, sınırlı RAM 'e sahip bir makinede derlerken bir sorun olabilecek fiziksel belleğin ayrılmasını gerektirir. Hata ayıklarken kullanılabilir fiziksel bellek miktarını öğrenmek için Windows Görev Yöneticisi 'Ni kullanarak bir sorun olup olmadığını belirleyebilirsiniz. Bu miktar önceden derlenmiş başlıklarınızın boyutundan fazlaysa, Düzenle ve devam et bir sorun olmaz. Miktar, önceden derlenmiş başlıklarınızın boyutundan küçükse, Düzenle ' yi ve arka planda önceden derlenmiş üst bilgileri yüklemeye devam et ' i engelleyebilirsiniz.
 
  **Önceden derlenmiş üstbilgilerin Düzenle ve devam et için arka planda yüklemesini devre dışı bırakmak için**
@@ -152,16 +152,16 @@ Projeler için C++ Düzenle ve devam et çoğu kod değişikliği türünü işl
 
 3. **Önceden derlemeye Izin ver** onay kutusunu temizleyin.
 
-## <a name="BKMK_IDL_attribute_limitations"></a>IDL özniteliği sınırlamaları
+## <a name="idl-attribute-limitations"></a><a name="BKMK_IDL_attribute_limitations"></a> IDL özniteliği sınırlamaları
  Düzenle ve devam et, arabirim tanımı (IDL) dosyalarını yeniden oluşturmaz. Bu nedenle, hata ayıklarken IDL özniteliklerinde yapılan değişiklikler yansıtılmayacaktır. IDL özniteliklerinin değişikliklerinin sonucunu görmek için, hata ayıklamayı durdurup uygulamanızı yeniden oluşturmanız gerekir. Düzenle ve devam et, IDL öznitelikleri değiştiyse bir hata veya uyarı oluşturmaz. Daha fazla bilgi için bkz. [IDL öznitelikleri](/cpp/windows/idl-attributes).
 
-## <a name="BKMK_Diagnosing_issues"></a>Sorunları tanılama
+## <a name="diagnosing-issues"></a><a name="BKMK_Diagnosing_issues"></a> Sorunları tanılama
  Senaryonuz yukarıda bahsedilen koşullara uymuyorsa, aşağıdaki DWORD kayıt defteri değerini ayarlayarak daha fazla ayrıntı toplayabilirsiniz:
  1. Bir Geliştirici Komut İstemi açın.
  2. Şu komutu çalıştırın:  
      `VsRegEdit.exe set “C:\Program Files (x86)\Microsoft Visual Studio\[Version]\[YOUR EDITION]” HKCU Debugger NativeEncDiagnosticLoggingLevel DWORD 1`
 
- Bir hata ayıklama oturumunun başlangıcında bu değerin ayarlanması, çeşitli düzenleme bileşenlerinin **Çıkış Penceresi** > **hata ayıklama** bölmesine ayrıntılı günlük kaydı yapmaya neden olur.
+ Bir hata ayıklama oturumunun başlangıcında bu değerin ayarlanması, düzenleme ve **Çıkış penceresi**  >  **hata ayıklama** bölmesine ayrıntılı günlük kaydı yapmaya devam eden çeşitli bileşenlere neden olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Düzenle ve devam etC++()](../debugger/edit-and-continue-visual-cpp.md)
+- [Düzenle ve Devam Et (C++)](../debugger/edit-and-continue-visual-cpp.md)

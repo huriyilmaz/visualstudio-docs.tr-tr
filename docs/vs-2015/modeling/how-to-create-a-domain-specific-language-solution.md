@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 227838334067d33c8a50c81d3a3c013c6baee356
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533087"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>Nasıl yapılır: Etki Alanına Özgü Dil Çözümü Oluşturma
@@ -50,7 +50,7 @@ ms.locfileid: "85533087"
 
    4. **Alana özgü dil Tasarımcısı**' ye tıklayın.
 
-   5. **Ad** kutusuna çözüm için bir ad yazın. **Tamam**'a tıklayın.
+   5. **Ad** kutusuna çözüm için bir ad yazın. **Tamam**’a tıklayın.
 
        **Alana özgü dil Tasarımcısı Sihirbazı** görüntülenir.
 
@@ -78,7 +78,7 @@ ms.locfileid: "85533087"
    > [!NOTE]
    > Güvenilmeyen kaynaklardan metin şablonlarını çalıştıracağınızı belirten bir ileti görürseniz, **Tamam**' a tıklayın. Bu iletiyi tekrar görünmeyecek şekilde ayarlayabilirsiniz.
 
-## <a name="the-dsl-designer-wizard-pages"></a><a name="settings"></a>DSL Tasarımcısı Sihirbazı sayfaları
+## <a name="the-dsl-designer-wizard-pages"></a><a name="settings"></a> DSL Tasarımcısı Sihirbazı sayfaları
  Birçok alandan birini varsayılan değerlerinden farklı bırakabilirsiniz. Ancak, dosya uzantısı alanını ayarladığınızdan emin olun.
 
 ### <a name="solution-settings-page"></a>Çözüm ayarları sayfası
@@ -100,11 +100,11 @@ Yeni bir dosya uzantısı yazın.
 
 - Farklı bir dosya uzantısı yazın.
 
-     \-veya
+     \- veya
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Deneysel örneği sıfırlayın. Bu, daha önce oluşturduğunuz tüm DSLs 'lerin kaydını siler. **Başlat** menüsünde, **tüm programlar**, **Microsoft Visual Studio 2010 SDK**ve **araçlar**' a tıklayın ve ardından **Microsoft Visual Studio 2010 Deneysel örneğini sıfırlayın**. Yeniden kullanmak istediğiniz tüm diğer DSLs 'leri yeniden oluşturabilirsiniz.
 
-     \-veya
+     \- veya
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Bu dosya uzantısını kullanan bir uzantı bilgisayarınızda tamamen yüklüyse, kaldırın. **Araçlar** menüsünde, **Uzantı Yöneticisi**' ne tıklayın.
 

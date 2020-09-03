@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c1bd4c4ab15364e9e2ac8e189fcde01f65244b7a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85289202"
 ---
 # <a name="msbuild"></a>MSBuild
@@ -70,7 +70,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
  Aşağıdaki bölümlerde MSBuild proje dosyası biçiminin bazı temel öğeleri açıklanır. Temel proje dosyası oluşturma hakkında bir öğretici için, bkz. [Izlenecek yol: bir MSBuild proje dosyası sıfırdan oluşturma](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md).
 
-### <a name="properties"></a><a name="BKMK_Properties"></a>Özelliklerinin
+### <a name="properties"></a><a name="BKMK_Properties"></a> Özelliklerinin
 
  Özellikler, yapıları yapılandırmak için kullanılabilen anahtar/değer çiftlerini temsil eder. Özellikler, bir [PropertyGroup](../msbuild/propertygroup-element-msbuild.md) öğesinin alt öğesi olarak özelliğin adına sahip bir öğe oluşturularak belirtilir. Örneğin, aşağıdaki kod, değeri olan adlı bir özellik oluşturur `BuildDir` `Build` .
 
@@ -90,7 +90,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
  Özellikler hakkında daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
 
-### <a name="items"></a><a name="BKMK_Items"></a>Öğeler
+### <a name="items"></a><a name="BKMK_Items"></a> Öğeler
 
  Öğeler, derleme sistemine giriş ve genellikle dosyaları temsil eder. Öğeler, Kullanıcı tanımlı öğe adlarına göre öğe türlerine göre gruplandırılır. Bu öğe türleri, oluşturma işleminin adımlarını gerçekleştirmek için bireysel öğeleri kullanan görevler için parametre olarak kullanılabilir.
 
@@ -116,7 +116,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
  Öğeler joker karakterler kullanılarak bildirilebilecek ve daha gelişmiş derleme senaryoları için ek meta veriler içerebilir. Öğeler hakkında daha fazla bilgi için bkz. [Items](../msbuild/msbuild-items.md).
 
-### <a name="tasks"></a><a name="BKMK_Tasks"></a>Görevlerinize
+### <a name="tasks"></a><a name="BKMK_Tasks"></a> Görevlerinize
 
  Görevler, MSBuild projelerinin derleme işlemlerini gerçekleştirmek için kullandığı yürütülebilir kod birimleridir. Örneğin, bir görev giriş dosyalarını derleyebilir veya bir dış araç çalıştırabilir. Görevler yeniden kullanılabilir ve farklı projelerde farklı geliştiriciler tarafından paylaşılabilir.
 
@@ -134,7 +134,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
  Görevler hakkında daha fazla bilgi için bkz. [Görevler](../msbuild/msbuild-tasks.md).
 
-### <a name="targets"></a><a name="BKMK_Targets"></a>Lerden
+### <a name="targets"></a><a name="BKMK_Targets"></a> Lerden
 
  Hedefleri belirli bir sırada gruplar ve proje dosyasının bölümlerini yapı işlemine giriş noktası olarak kullanıma sunar. Hedefler, okunabilirliği artırmak ve genişletmeye izin vermek için genellikle mantıksal bölümler halinde gruplandırılır. Derleme adımlarının hedeflere bölünmesi, bu kod bölümünü her hedefe kopyalamadan, diğer hedeflerden derleme işleminin bir parçasını çağırmanıza olanak sağlar. Örneğin, yapı işlemine bazı giriş noktaları oluşturulması gerekiyorsa, başvuruları oluşturan bir hedef oluşturabilir ve bu hedefi, gereken her giriş noktasından çalıştırabilirsiniz.
 
@@ -154,11 +154,11 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
 ## <a name="use-msbuild-in-visual-studio"></a>Visual Studio 'da MSBuild 'i kullanma
 
- Visual Studio, yönetilen projeler hakkında yapı bilgilerini depolamak için MSBuild proje dosyası biçimini kullanır. Visual Studio arabirimi kullanılarak eklenen veya değiştirilen proje ayarları, içinde yansıtılır *. \* *her proje için oluşturulan proj dosyası. Visual Studio yönetilen projeler oluşturmak için MSBuild 'in barındırılan bir örneğini kullanır. Bu, yönetilen bir projenin Visual Studio 'da veya bir komut isteminde (Visual Studio yüklü olmasa bile) derolabileceği ve sonuçların aynı olacağı anlamına gelir.
+ Visual Studio, yönetilen projeler hakkında yapı bilgilerini depolamak için MSBuild proje dosyası biçimini kullanır. Visual Studio arabirimi kullanılarak eklenen veya değiştirilen proje ayarları, içinde yansıtılır *. \* * her proje için oluşturulan proj dosyası. Visual Studio yönetilen projeler oluşturmak için MSBuild 'in barındırılan bir örneğini kullanır. Bu, yönetilen bir projenin Visual Studio 'da veya bir komut isteminde (Visual Studio yüklü olmasa bile) derolabileceği ve sonuçların aynı olacağı anlamına gelir.
 
  Visual Studio 'da MSBuild 'i kullanma hakkında bir öğretici için bkz. [Izlenecek yol: MSBuild kullanma](../msbuild/walkthrough-using-msbuild.md).
 
-## <a name="multitargeting"></a><a name="BKMK_Multitargeting"></a>Çoklu sürüm desteği
+## <a name="multitargeting"></a><a name="BKMK_Multitargeting"></a> Çoklu sürüm desteği
 
  Visual Studio 'yu kullanarak, .NET Framework çeşitli sürümlerinden herhangi birini çalıştırmak için bir uygulamayı derleyebilirsiniz. Örneğin, bir uygulamayı 32 bit platformda .NET Framework 2,0 ' de çalışacak şekilde derleyebilir ve aynı uygulamayı bir 64-bit platformunda .NET Framework 4,5 üzerinde çalışacak şekilde derleyebilirsiniz. Birden fazla çerçeveye derleme yeteneği Çoklu hedefleme olarak adlandırılır.
 
@@ -181,16 +181,16 @@ Daha fazla bilgi için bkz. [Çoklu hedefleme](../msbuild/msbuild-multitargeting
 | Başlık | Açıklama |
 | - | - |
 | [İzlenecek yol: Sıfırdan MSBuild proje dosyası oluşturma](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md) | Yalnızca bir metin düzenleyicisi kullanarak basit bir proje dosyasının artımlı olarak nasıl oluşturulacağını gösterir. |
-| [İzlenecek Yol: MSBuild Kullanma](../msbuild/walkthrough-using-msbuild.md) | MSBuild 'in yapı taşlarını tanıtır ve Visual Studio IDE 'yi kapatmadan MSBuild projelerinin nasıl yazılacağını, değiştirileceğini ve hata ayıklacağınızı gösterir. |
+| [İzlenecek yol: MSBuild Kullanma](../msbuild/walkthrough-using-msbuild.md) | MSBuild 'in yapı taşlarını tanıtır ve Visual Studio IDE 'yi kapatmadan MSBuild projelerinin nasıl yazılacağını, değiştirileceğini ve hata ayıklacağınızı gösterir. |
 | [MSBuild kavramları](../msbuild/msbuild-concepts.md) | MSBuild: özellikler, öğeler, hedefler ve görevler için dört bina bloğunu gösterir. |
-| [Öğeleri](../msbuild/msbuild-items.md) | MSBuild dosya biçiminin arkasındaki genel kavramları ve parçaların birbirine nasıl uyduğunu açıklar. |
+| [Öğeler](../msbuild/msbuild-items.md) | MSBuild dosya biçiminin arkasındaki genel kavramları ve parçaların birbirine nasıl uyduğunu açıklar. |
 | [MSBuild özellikleri](../msbuild/msbuild-properties.md) | Özellikleri ve özellik koleksiyonlarını tanıtır. Özellikler, yapıları yapılandırmak için kullanılabilen anahtar/değer çiftleridir. |
-| [Lerden](../msbuild/msbuild-targets.md) | Görevlerin belirli bir sırada nasıl gruplandırılacağını ve derleme işleminin bölümlerinin komut satırında çağrılacağını etkinleştirir. |
+| [Targets](../msbuild/msbuild-targets.md) | Görevlerin belirli bir sırada nasıl gruplandırılacağını ve derleme işleminin bölümlerinin komut satırında çağrılacağını etkinleştirir. |
 | [Görevler](../msbuild/msbuild-tasks.md) | Atomik derleme işlemleri gerçekleştirmek için MSBuild tarafından kullanılabilecek bir yürütülebilir kod birimi oluşturmayı gösterir. |
 | [Koşullar](../msbuild/msbuild-conditions.md) | `Condition`Bir MSBuild öğesinde özniteliğin nasıl kullanılacağını açıklar. |
 | [Gelişmiş kavramlar](../msbuild/msbuild-advanced-concepts.md) | Toplu işleme, dönüşümler gerçekleştirme, Çoklu hedefleme ve diğer gelişmiş teknikleri gösterir. |
 | [MSBuild'de Günlük Kaydı](../msbuild/logging-in-msbuild.md) | Oluşturma olaylarının, iletilerinin ve hatalarının nasıl günlüğe alınacağını açıklar. |
-| [MSBuild 'in projeleri nasıl oluşturur](build-process-overview.md) | MSBuild içinde kullanılan iç derleme işlemini açıklar |
+| [MSBuild nasıl proje oluşturur](build-process-overview.md) | MSBuild içinde kullanılan iç derleme işlemini açıklar |
 | [Ek Kaynaklar](https://social.msdn.microsoft.com/forums/vstudio/home?forum=msbuild) | MSBuild hakkında daha fazla bilgi için topluluk ve destek kaynaklarını listeler. |
 
 ## <a name="reference"></a>Başvuru

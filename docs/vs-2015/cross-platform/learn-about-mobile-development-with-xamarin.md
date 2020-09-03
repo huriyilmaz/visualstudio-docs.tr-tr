@@ -7,10 +7,10 @@ caps.latest.revision: 14
 ms.author: crdun
 manager: crdun
 ms.openlocfilehash: a362bd4eef2a48667c67c03e940e213fc960418b
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75919013"
 ---
 # <a name="learn-about-mobile-development-with-xamarin"></a>Xamarin ile mobil geliştirme hakkında bilgi edinin
@@ -28,7 +28,7 @@ Bu konu, Xamarin ile platformlar arası mobil uygulamalar geliştirmeyi anlaman�
   
 1. [Xamarin Ile Visual Studio 'daki Mobile Apps](https://www.visualstudio.com/explore/xamarin-vs) (VisualStudio.com) Xamarin 'in birincil özelliklerinin çok kısa bir özetini sağlar.  
   
-2. [Visual Studio C# ](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2015-Final-Release-Event/Building-cross-platform-mobile-apps-using-C-and-Visual-Studio-2015) (Channel9, 15m16s) kullanarak ve Xamarin Evangelist, James Montemagno Ile platformlar arası Mobile Apps oluşturma. İlk üç dakika, bir Xamarin genel bakıştır ve ardından kod gösterileri izler.  
+2. [C# ve Visual Studio kullanarak platformlar arası Mobile Apps oluşturma](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2015-Final-Release-Event/Building-cross-platform-mobile-apps-using-C-and-Visual-Studio-2015) (Channel9, 15m16s), Xamarin Evangelist, James Montemagno. İlk üç dakika, bir Xamarin genel bakıştır ve ardından kod gösterileri izler.  
   
 ## <a name="essentials-overview-of-the-visual-studio-and-xamarin-environment"></a>Essentials: Visual Studio ve Xamarin ortamına genel bakış  
  *5-15 dakika*  
@@ -55,7 +55,7 @@ Bu konu, Xamarin ile platformlar arası mobil uygulamalar geliştirmeyi anlaman�
   
  Xamarin Native ile her hedef platform için ayrı kullanıcı arabirimi kodu yazarsınız: iOS, Android ve Windows.  Bu yaklaşımda platforma özgü API 'lere doğrudan erişim sahibi olursunuz ve bu, platform başına özelleştirilmiş bir kullanıcı arabirimi deneyimine izin verir.  Ayrıca, ilgili Kullanıcı arabirimini oluşturmaya yardımcı olmak üzere her platform için yerel tasarımcı ve denetimlere tam erişime sahip olursunuz.  
   
- Xamarin. Forms, taşınabilir bir sınıf kitaplığındaki tüm platformlar için paylaşılan bir UI katmanı yazmanıza imkan tanıyan genelleştirilmiş bir API kümesi sağlar.  Xamarin. Forms, yerel bir görünüm sağlamak için her bir hedef platformda yerel denetimler oluşturur.  Xamarin. Forms ile tasarımcı kullanmak yerine, ve XAML kullanarak C# Kullanıcı arabiriminizi derleyebilirsiniz.  
+ Xamarin. Forms, taşınabilir bir sınıf kitaplığındaki tüm platformlar için paylaşılan bir UI katmanı yazmanıza imkan tanıyan genelleştirilmiş bir API kümesi sağlar.  Xamarin. Forms, yerel bir görünüm sağlamak için her bir hedef platformda yerel denetimler oluşturur.  Xamarin. Forms ile tasarımcı kullanmak yerine C# ve XAML kullanarak Kullanıcı arabiriminizi derleyebilirsiniz.  
   
  En baştan gerçekleştirilecek yaklaşımı belirlemeniz gerekmez; uygulamalar, Xamarin Native ve Xamarin. Forms öğelerinin bir birleşimi kullanılarak uygulanabilir:  
   
@@ -71,7 +71,7 @@ Bu konu, Xamarin ile platformlar arası mobil uygulamalar geliştirmeyi anlaman�
   
 1. [Xamarin. Forms](/xamarin/xamarin-forms/) (Xamarin.com), Xamarin. Forms ve yerel UI katmanlarının (yani, Xamarin. IOS ve Xamarin. Android) genel bir genel bakış ve olumlu yönleri sağlar.  
   
-2. James Montemagno 'ın video [Xamarin. Forms: Native iOS, Android & & xaml Ile C# Windows uygulamaları](https://channel9.msdn.com/events/Visual-Studio/Connect-event-2015/704) (Channel9, 13m3s), başka bir genel bakış sağlar ve tanıtımlar için izlemeye devam edebilirsiniz.  
+2. James Montemagno 'nun video [Xamarin. Forms adlı ilk üç dakika: Yerel iOS, Android & C# & xaml](https://channel9.msdn.com/events/Visual-Studio/Connect-event-2015/704) (Channel9, 13m3s) ile Windows uygulamaları başka bir genel bakış sunar ve tanıtımlar için izlemeye devam edebilirsiniz.  
   
 3. Seçim [Xamarin. Forms 'A giriş](/xamarin/get-started/quickstarts/deepdive?pivots=windows) (Xamarin.com)  
   
@@ -94,7 +94,7 @@ Bu konu, Xamarin ile platformlar arası mobil uygulamalar geliştirmeyi anlaman�
   
 3. **Microsoft 'un Windows Phone öykünücüsü.** Daha fazla bilgi edinmek için [Windows Phone 8 için Windows Phone öykünücüsü](https://msdn.microsoft.com/library/dn632391.aspx)makalesini okuyun.  
   
-## <a name="components"></a>Daha derin bakış: Xamarin bileşenleri  
+## <a name="deeper-dive-xamarin-components"></a><a name="components"></a> Daha derin bakış: Xamarin bileşenleri  
  *10 dakika*  
   
- Xamarin bileşenleri aracılığıyla Xamarin uygulamaları için çok sayıda genişletilmiş özellik mevcuttur. Ek kullanıcı arabirimi denetimleri, kimlik doğrulaması, Microsoft Azure gibi çeşitli bulut hizmetleri ve çok daha fazlası için bileşenleri içeren [http://components.xamarin.com/](/xamarin/cross-platform/troubleshooting/component-nuget?tabs=windows)' de indirilebilir şekilde kullanılabilecek tam kataloğu bulabilirsiniz.
+ Xamarin bileşenleri aracılığıyla Xamarin uygulamaları için çok sayıda genişletilmiş özellik mevcuttur. [http://components.xamarin.com/](/xamarin/cross-platform/troubleshooting/component-nuget?tabs=windows)Ek UI denetimleri, kimlik doğrulama, Microsoft Azure gibi çeşitli bulut hizmetleri ve çok daha fazlası için bileşenleri içeren, ' ın indirileceği tam kataloğu bulabilirsiniz.

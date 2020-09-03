@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: c07c3257b8df0e671941ae08bc3738350e017a8a
-ms.sourcegitcommit: 3ba2968a4b44643482aadad4d50e1a55bb36b136
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74567015"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-word"></a>İzlenecek yol: Word için ilk belge düzeyi özelleştirmeyi oluşturma
@@ -41,7 +41,7 @@ ms.locfileid: "74567015"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
@@ -49,15 +49,15 @@ ms.locfileid: "74567015"
 
 - Microsoft Word
 
-## <a name="create-the-project"></a>Projeyi oluşturma
+## <a name="create-the-project"></a>Proje oluşturma
 
 ### <a name="to-create-a-new-word-document-project-in-visual-studio"></a>Visual Studio 'da yeni bir Word belgesi projesi oluşturmak için
 
-1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]başlatın.
+1. Başlatın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
 ::: moniker range="vs-2017"
-3. Şablonlar bölmesinde, **Visual C#**  veya **Visual Basic**öğesini genişletin ve ardından **Office/SharePoint**' i genişletin.
+3. Şablonlar bölmesinde, **Visual C#** veya **Visual Basic**' i genişletin ve ardından **Office/SharePoint**' i genişletin.
 
 4. Genişletilmiş **Office/SharePoint** düğümü altında **VSTO eklentileri** düğümünü seçin.
 
@@ -65,7 +65,7 @@ ms.locfileid: "74567015"
 
 6. **Ad** kutusuna **FirstDocumentCustomization**yazın.
 
-7. **Tamam**'a tıklayın.
+7. **Tamam**’a tıklayın.
 
 8. **Office projesi için Visual Studio Araçları** **Yeni belge oluştur** ' u seçin ve **Tamam**' ı tıklatın.
 ::: moniker-end
@@ -74,13 +74,13 @@ ms.locfileid: "74567015"
 
      [!INCLUDE[new-project-dialog-search](../vsto/includes/new-project-dialog-search-md.md)]
 
-4. **İleri**'ye tıklayın.
+4. **İleri**’ye tıklayın.
 
 5. **Yeni projenizi yapılandırma** Iletişim kutusundaki **ad** kutusuna **FirstWorkbookCustomization** yazın ve **Oluştur**' a tıklayın.
 
 6. **Office projesi için Visual Studio Araçları** **Yeni belge oluştur** ' u seçin ve **Tamam**' ı tıklatın.
 ::: moniker-end
-   - [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **FirstDocumentCustomization** projesini oluşturur ve **FirstDocumentCustomization** belgesini ve ThisDocument kod dosyasını projeye ekler. **FirstDocumentCustomization** belgesi tasarımcıda otomatik olarak açılır.
+   - [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**FirstDocumentCustomization** projesini oluşturur ve **FirstDocumentCustomization** belgesini ve ThisDocument kod dosyasını projeye ekler. **FirstDocumentCustomization** belgesi tasarımcıda otomatik olarak açılır.
 
 ## <a name="close-and-reopen-the-document-in-the-designer"></a>Tasarımcıdaki belgeyi kapatın ve yeniden açın
 
@@ -92,7 +92,7 @@ ms.locfileid: "74567015"
 
 2. **Çözüm Gezgini**, **ThisDocument** kod dosyasına sağ tıklayın ve **Görünüm Tasarımcısı**' na tıklayın.
 
-     \- veya-
+     \- veya
 
      **Çözüm Gezgini**, **ThisDocument** kod dosyasına çift tıklayın.
 
@@ -110,9 +110,9 @@ ms.locfileid: "74567015"
 
  Ardından, ThisDocument kod dosyasına kod ekleyin. Yeni kod, metnin ikinci paragrafını belgeye eklemek için Word nesne modelini kullanır. Varsayılan olarak, ThisDocument kod dosyası aşağıdaki oluşturulan kodu içerir:
 
-- Belgenin programlama modelini temsil eden ve Word nesne modeline erişim sağlayan `ThisDocument` sınıfının kısmi tanımıdır. Daha fazla bilgi için bkz. [belge konak öğesi](../vsto/document-host-item.md) ve [Word nesne modeline genel bakış](../vsto/word-object-model-overview.md). `ThisDocument` sınıfının geri kalanı, değiştirmemeniz gereken gizli bir kod dosyasında tanımlanır.
+- `ThisDocument`Belgenin programlama modelini temsil eden ve Word nesne modeline erişim sağlayan sınıfının kısmi bir tanımı. Daha fazla bilgi için bkz. [belge konak öğesi](../vsto/document-host-item.md) ve [Word nesne modeline genel bakış](../vsto/word-object-model-overview.md). Sınıfın geri kalanı, `ThisDocument` değiştirmemelisiniz bir gizli kod dosyasında tanımlanır.
 
-- `ThisDocument_Startup` ve `ThisDocument_Shutdown` olay işleyicileri. Bu olay işleyicileri belge açılıp kapatıldığında çağrılır. Belge açıldığında özelleştirmenizin başlatılması ve belge kapatıldığında özelleştirme tarafından kullanılan kaynakları temizlemek için bu olay işleyicilerini kullanın. Daha fazla bilgi için bkz. [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md).
+- `ThisDocument_Startup`Ve `ThisDocument_Shutdown` olay işleyicileri. Bu olay işleyicileri belge açılıp kapatıldığında çağrılır. Belge açıldığında özelleştirmenizin başlatılması ve belge kapatıldığında özelleştirme tarafından kullanılan kaynakları temizlemek için bu olay işleyicilerini kullanın. Daha fazla bilgi için bkz. [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md).
 
 ### <a name="to-add-a-second-paragraph-of-text-to-the-document-by-using-code"></a>Kodu kullanarak belgeye ikinci bir metin paragrafı eklemek için
 
@@ -120,13 +120,13 @@ ms.locfileid: "74567015"
 
      Kod dosyası Visual Studio 'da açılır.
 
-2. `ThisDocument_Startup` olay işleyicisini aşağıdaki kodla değiştirin. Belge açıldığında, bu kod bir metnin ikinci paragrafını belgeye ekler.
+2. `ThisDocument_Startup`Olay işleyicisini aşağıdaki kodla değiştirin. Belge açıldığında, bu kod bir metnin ikinci paragrafını belgeye ekler.
 
      [!code-vb[Trin_WordDocumentTutorial#1](../vsto/codesnippet/VisualBasic/FirstDocumentCustomization/ThisDocument.vb#1)]
      [!code-csharp[Trin_WordDocumentTutorial#1](../vsto/codesnippet/CSharp/FirstDocumentCustomization/ThisDocument.cs#1)]
 
     > [!NOTE]
-    > Bu kod, <xref:Microsoft.Office.Tools.Word.Document.Paragraphs%2A> özelliğindeki ilk paragrafa erişmek için 1 dizin değerini kullanır. Visual Basic ve görsede C# 0 tabanlı diziler kullanılmasına karşın, Word nesne modelindeki çoğu koleksiyonun alt dizi sınırları 1 ' dir. Daha fazla bilgi için bkz. [Office çözümlerinde kod yazma](../vsto/writing-code-in-office-solutions.md).
+    > Bu kod, özelliğindeki ilk paragrafa erişmek için 1 dizin değerini kullanır <xref:Microsoft.Office.Tools.Word.Document.Paragraphs%2A> . Visual Basic ve Visual C# 0 tabanlı diziler kullanmasına karşın, Word nesne modelindeki çoğu koleksiyonun alt dizi sınırları 1 ' dir. Daha fazla bilgi için bkz. [Office çözümlerinde kod yazma](../vsto/writing-code-in-office-solutions.md).
 
 ## <a name="test-the-project"></a>Projeyi test etme
 
@@ -172,7 +172,7 @@ ms.locfileid: "74567015"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Office çözümleri geliştirmesine genel &#40;bakış VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
+- [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
 - [Word çözümleri](../vsto/word-solutions.md)
 - [Program belge düzeyi özelleştirmeleri](../vsto/programming-document-level-customizations.md)
 - [Word nesne modeline genel bakış](../vsto/word-object-model-overview.md)

@@ -1,6 +1,6 @@
 ---
-title: Visual Studio'nun erişilebilirlik özellikleri
-description: Engelli kişiler de dahil olmak üzere, hem Windows işletim sistemini hem de Visual Studio geliştirici paketini herkes için daha erişilebilir hale getirmeye yardımcı olan erişilebilirlik özellikleri ve yardımcı programlar hakkında daha fazla bilgi edinin.
+title: Visual Studio 'nun erişilebilirlik özellikleri
+description: Windows işletim sistemi ve Visual Studio Geliştirici paketini Engelli kişiler de dahil herkes için daha erişilebilir hale getirmenize yardımcı olan erişilebilirlik özellikleri ve yardımcı programları hakkında daha fazla bilgi edinin.
 ms.date: 08/23/2019
 ms.topic: conceptual
 ms.prod: visual-studio-windows
@@ -15,48 +15,48 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 99831638219481d7db331f2a4429fffce58ecc96
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76113793"
 ---
-# <a name="accessibility-features-of-visual-studio"></a>Visual Studio'nun erişilebilirlik özellikleri
+# <a name="accessibility-features-of-visual-studio"></a>Visual Studio 'nun erişilebilirlik özellikleri
 
-Windows'daki erişilebilirlik özellikleri ve yardımcı programlarının yanı sıra, aşağıdaki özellikler Visual Studio'yu engelli kişiler için daha erişilebilir hale getirir:
+Windows 'daki erişilebilirlik özelliklerine ve yardımcı programlarına ek olarak, aşağıdaki özellikler Visual Studio 'Yu Engelli kişiler için daha erişilebilir hale getirir:
 
 - Araç çubuğu düğmesi ve metin büyütme
 
-- Editörlerde metin boyutu seçenekleri
+- Düzenleyicilerde metin boyutu seçenekleri
 
-- Editörlerde renk özelleştirme
+- Düzenleyicilerde renk özelleştirmesi
 
-- Klavye kısayol özelleştirme
+- Klavye kısayolu özelleştirmesi
 
-- Yöntem ve parametreler için otomatik tamamlama
+- Yöntemler ve parametreler için otomatik tamamlama
 
 > [!NOTE]
-> Bu konu Windows'daki Visual Studio için geçerlidir. Mac için Visual Studio [için, Mac için Visual Studio için Erişilebilirlik'e](/visualstudio/mac/accessibility)bakın.
+> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio Için erişilebilirlik](/visualstudio/mac/accessibility).
 
 Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
 
-- [Nasıl yapılı: IDE erişilebilirlik seçeneklerini ayarlama](../../ide/reference/how-to-set-ide-accessibility-options.md)
+- [Nasıl yapılır: IDE erişilebilirlik seçeneklerini ayarlama](../../ide/reference/how-to-set-ide-accessibility-options.md)
 
-- [Nasıl yapılır: Klavyeyi yalnızca](../../ide/reference/how-to-use-the-keyboard-exclusively.md)
+- [Nasıl yapılır: klavyeyi özel olarak kullanma](../../ide/reference/how-to-use-the-keyboard-exclusively.md)
 
 - [Varsayılan klavye kısayolları](../../ide/default-keyboard-shortcuts-in-visual-studio.md)
 
 - [Erişilebilirlik ipuçları ve püf noktaları](../../ide/reference/accessibility-tips-and-tricks.md)
 
-- [Nasıl yapılı: Yazı tiplerini ve renklerini değiştirme](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)
+- [Nasıl yapılır: yazı tiplerini ve renkleri değiştirme](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)
 
 > [!IMPORTANT]
-> Bu sayfadaki bilgiler yalnızca ABD'de Microsoft ürünlerini lisanslayan kullanıcılar için geçerli olabilir. Bu ürünü ABD dışında elde ettiyseniz, Microsoft destek hizmetleri telefon numaraları ve adreslerinin listesi için [Microsoft Erişilebilirlik](https://www.microsoft.com/accessibility/) web sitesini ziyaret edin. Bu sayfada açıklanan ürün ve hizmet türünün bölgenizde bulunup bulunmadığını öğrenmek için yan kuruluşunuzla iletişime geçebilirsiniz. Erişilebilirlik hakkındaki bilgiler diğer dillerde de kullanılabilir.
+> Bu sayfadaki bilgiler yalnızca Birleşik Devletler Microsoft ürünlerini lisanslayan kullanıcılar için geçerlidir. Bu ürünü Birleşik Devletler dışında aldıysanız, Microsoft Destek Hizmetleri telefon numaralarının ve adreslerinin bir listesi için [Microsoft Erişilebilirlik](https://www.microsoft.com/accessibility/) Web sitesini ziyaret edin. Bu sayfada açıklanan ürün ve hizmet türlerinin bölgenizde kullanılabilir olup olmadığını öğrenmek için yan kuruluşuna başvurabilirsiniz. Erişilebilirlik hakkında bilgiler de diğer dillerde kullanılabilir.
 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> En son erişilebilirlik güncelleştirmeleri hakkında daha fazla bilgi edinmek için [Visual Studio 2017 sürüm 15.3 blog gönderisinde Erişilebilirlik geliştirmelerine](https://devblogs.microsoft.com/visualstudio/accessibility-improvements-in-visual-studio-2017-version-15-3/) bakın.
+> Son erişilebilirlik güncelleştirmeleri hakkında daha fazla bilgi edinmek için [Visual Studio 2017 sürüm 15,3](https://devblogs.microsoft.com/visualstudio/accessibility-improvements-in-visual-studio-2017-version-15-3/) blog gönderisine bakın.
 
 ::: moniker-end
 

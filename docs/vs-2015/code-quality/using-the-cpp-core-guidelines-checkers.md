@@ -10,10 +10,10 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: fffa4cec6a2bd7a340b90776ac20dc486f28045b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84173580"
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>C++ Temel Yönergeleri denetleyicilerini kullanma
@@ -96,7 +96,7 @@ int main()
 **rojects\CoreCheckExample\Debug\CoreCheckExample.pdb (tam PDB)**  
 **c:\users\username\k\studio 2015 \ projelericorecheckexample\coreche**  
 **ckexample\corecheckexample.exe (6): Warning C26494: ' ARR ' değişkeni bir unınitializ**  
-**Ed. her zaman bir nesne başlatın. (Type. 5: https: \/ /Go.Microsoft.com/fwlink/p/?link**  
+**Konik. Her zaman bir nesne başlatın. (Type. 5: https: \/ /Go.Microsoft.com/fwlink/p/?link**  
 **ID = 620421)**  
 **c:\users\username\k\studio 2015 \ projelericorecheckexample\coreche**  
 **ckexample\corecheckexample.exe (7): uyarı C26485: Ifade ' ARR ': hiçbir dizi yok**  

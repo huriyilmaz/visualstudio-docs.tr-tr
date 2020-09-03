@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - aspnet
 ms.openlocfilehash: cd2b787fe546b9c53332fcdc548d3da829759755
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84173921"
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>Uzak IIS bilgisayarında uzaktan hata ayıklama ASP.NET
@@ -68,7 +68,7 @@ Bu makalede, Windows Server 'da IIS 'nin temel yapılandırmasını ayarlama ve 
 
 2. *HomeController.cs* dosyasını açın ve yönteminde bir kesme noktası ayarlayın `About()` .
 
-## <a name="install-and-configure-iis-on-windows-server"></a><a name="bkmk_configureIIS"></a>Windows Server 'da IIS 'yi yükleyip yapılandırma
+## <a name="install-and-configure-iis-on-windows-server"></a><a name="bkmk_configureIIS"></a> Windows Server 'da IIS 'yi yükleyip yapılandırma
 
 [!INCLUDE [remote-debugger-install-iis-role](../debugger/includes/remote-debugger-install-iis-role.md)]
 
@@ -83,7 +83,7 @@ Internet Explorer 'da artırılmış güvenlik yapılandırması etkinse (varsay
 
 Yazılımı indirdiğinizde, çeşitli web sitesi betikleri ve kaynakları yüklemek için izin verme istekleri alabilirsiniz. Bu kaynaklardan bazıları gerekli değildir, ancak işlemi basitleştirmek için istendiğinde **Ekle** ' ye tıklayın.
 
-## <a name="install-aspnet-45-on-windows-server"></a><a name="BKMK_deploy_asp_net"></a>Windows Server 'da ASP.NET 4,5 'yi yükler
+## <a name="install-aspnet-45-on-windows-server"></a><a name="BKMK_deploy_asp_net"></a> Windows Server 'da ASP.NET 4,5 'yi yükler
 
 IIS üzerinde ASP.NET yüklemek için daha ayrıntılı bilgi isterseniz bkz. [ASP.NET 3,5 ve ASP.NET 4,5 kullanarak ııs 8,0](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45).
 
@@ -96,7 +96,7 @@ IIS üzerinde ASP.NET yüklemek için daha ayrıntılı bilgi isterseniz bkz. [A
     > [!NOTE]
     > Windows Server 2008 R2 kullanıyorsanız, bu komutu kullanmak yerine ASP.NET 4 ' ü yükleyebilirsiniz:
 
-     **C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ aspnet_regiis. exe-IR**
+     **C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe-IR**
 
 2. Sistemi yeniden başlatın (veya **net stop was/y** ' i yürütün ve ardından sistem yolunda bir değişiklik yapmak için bir komut isteminden net **start w3svc** ' i çalıştırın).
 
@@ -132,7 +132,7 @@ Uygulama başarıyla dağıtıldıktan sonra otomatik olarak başlamalıdır. Uy
 1. **Ayarlar** iletişim kutusunda, **İleri**' ye tıklayarak hata ayıklamayı etkinleştirin, **hata ayıklama** yapılandırması ' nı seçin ve ardından **dosya yayımlama** seçenekleri altında **Hedefteki ek dosyaları Kaldır** ' ı seçin.
 
     > [!IMPORTANT]
-    > Bir yayın yapılandırması seçerseniz, ' ı yayımladığınızda *Web. config* dosyasında hata ayıklamayı devre dışı bırakabilirsiniz.
+    > Bir yayın yapılandırması seçerseniz, ' ı yayımladığınızda *web.config* dosyasında hata ayıklamayı devre dışı bırakabilirsiniz.
 
 1. **Kaydet** ' e tıklayın ve uygulamayı yeniden yayımlayın.
 
@@ -140,7 +140,7 @@ Uygulama başarıyla dağıtıldıktan sonra otomatik olarak başlamalıdır. Uy
 
 Uygulamayı PowerShell, RoboCopy kullanarak IIS 'e kopyalamak istiyorsanız veya dosyaları el ile kopyalamak istiyorsanız uygulamanızı dağıtmak için bu seçeneği kullanabilirsiniz.
 
-### <a name="configure-the-aspnet-web-site-on-the-windows-server-computer"></a><a name="BKMK_deploy_asp_net"></a>Windows Server bilgisayarında ASP.NET Web sitesini yapılandırma
+### <a name="configure-the-aspnet-web-site-on-the-windows-server-computer"></a><a name="BKMK_deploy_asp_net"></a> Windows Server bilgisayarında ASP.NET Web sitesini yapılandırma
 
 1. Windows Gezgini 'ni açın ve daha sonra ASP.NET projesini dağıtacağınız yeni bir klasör oluşturun, **C:\publish**.
 
@@ -162,7 +162,7 @@ Uygulamayı PowerShell, RoboCopy kullanarak IIS 'e kopyalamak istiyorsanız veya
 
 Ayrıca, dosya sistemini veya diğer araçları kullanarak uygulamayı yayımlayabilir ve dağıtabilirsiniz.
 
-1. (ASP.NET 4.5.2) Web. config dosyasının doğru .NET sürümünü listelediğinden emin olun.  Örneğin, ASP.NET 4.5.2 'yi hedefliyorsanız, bu sürümün Web. config dosyasında listelendiğinden emin olun.
+1. (ASP.NET 4.5.2) web.config dosyasında .NET sürümünün doğru olduğundan emin olun.  Örneğin, ASP.NET 4.5.2 ' i hedefliyorsanız, bu sürümün web.config listelendiğinden emin olun.
 
     ```xml
     <system.web>
@@ -179,13 +179,13 @@ Ayrıca, dosya sistemini veya diğer araçları kullanarak uygulamayı yayımlay
 
 [!INCLUDE [remote-debugger-deploy-app-local](../debugger/includes/remote-debugger-deploy-app-local.md)]
 
-## <a name="download-and-install-the-remote-tools-on-windows-server"></a><a name="BKMK_msvsmon"></a>Windows Server 'da uzak araçları indirme ve yükleme
+## <a name="download-and-install-the-remote-tools-on-windows-server"></a><a name="BKMK_msvsmon"></a> Windows Server 'da uzak araçları indirme ve yükleme
 
 Visual Studio sürümünüz ile eşleşen uzak araçların sürümünü indirin.
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 
-## <a name="set-up-the-remote-debugger-on-windows-server"></a><a name="BKMK_setup"></a>Windows Server 'da uzaktan hata ayıklayıcı 'yı ayarlama
+## <a name="set-up-the-remote-debugger-on-windows-server"></a><a name="BKMK_setup"></a> Windows Server 'da uzaktan hata ayıklayıcı 'yı ayarlama
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
@@ -194,7 +194,7 @@ Visual Studio sürümünüz ile eşleşen uzak araçların sürümünü indirin.
 
 Uzaktan hata ayıklayıcıyı bir hizmet olarak çalıştırma hakkında bilgi için bkz. [Uzaktan hata ayıklayıcıyı bir hizmet olarak çalıştırma](../debugger/remote-debugging.md#bkmk_configureService).
 
-## <a name="attach-to-the-aspnet-application-from-the-visual-studio-computer"></a><a name="BKMK_attach"></a>Visual Studio bilgisayarından ASP.NET uygulamasına iliştirme
+## <a name="attach-to-the-aspnet-application-from-the-visual-studio-computer"></a><a name="BKMK_attach"></a> Visual Studio bilgisayarından ASP.NET uygulamasına iliştirme
 
 1. Visual Studio bilgisayarında, hata ayıklamaya çalıştığınız çözümü açın (Bu makaledeki adımları takip ediyorsanız,**Myaspapp** ).
 2. Visual Studio 'da, **Işleme eklemek > hata ayıkla** ' ya tıklayın (Ctrl + Alt + P).
@@ -221,9 +221,9 @@ Uzaktan hata ayıklayıcıyı bir hizmet olarak çalıştırma hakkında bilgi i
 
 5. **Tüm kullanıcıların süreçlerini göster**' i işaretleyin.
 
-6. ASP.NET 4,5 için hızlı bir şekilde **W3wp. exe** ' yi bulmak için bir işlem adının ilk harfini yazın.
+6. ASP.NET 4,5 için **w3wp.exe** hızlı bir şekilde bulmak için işlem adının ilk harfini yazın.
 
-    **W3wp. exe**' yi gösteren birden çok Işlem varsa **Kullanıcı adı** sütununu kontrol edin. Bazı senaryolarda, **Kullanıcı adı** sütunu **IIS APPPOOL\DefaultAppPool**gibi uygulama havuzu adınızı gösterir. Uygulama havuzunu görürseniz doğru süreci belirlemenin kolay bir yolu, hata ayıklamak istediğiniz uygulama örneği için yeni bir adlandırılmış uygulama havuzu oluşturmak ve ardından bunu **Kullanıcı adı** sütununda kolayca bulabilirsiniz.
+    **w3wp.exe**gösteren birden çok işlem varsa, **Kullanıcı adı** sütununu kontrol edin. Bazı senaryolarda, **Kullanıcı adı** sütunu **IIS APPPOOL\DefaultAppPool**gibi uygulama havuzu adınızı gösterir. Uygulama havuzunu görürseniz doğru süreci belirlemenin kolay bir yolu, hata ayıklamak istediğiniz uygulama örneği için yeni bir adlandırılmış uygulama havuzu oluşturmak ve ardından bunu **Kullanıcı adı** sütununda kolayca bulabilirsiniz.
 
     ::: moniker range=">=vs-2019"
     ![RemoteDBG_AttachToProcess](../debugger/media/vs-2019/remotedbg-attachtoprocess.png "RemoteDBG_AttachToProcess")
@@ -241,7 +241,7 @@ Uzaktan hata ayıklayıcıyı bir hizmet olarak çalıştırma hakkında bilgi i
 
     Kesme noktası Visual Studio 'da isabet almalıdır.
 
-## <a name="troubleshooting-open-required-ports-on-windows-server"></a><a name="bkmk_openports"></a>Sorun giderme: gerekli bağlantı noktalarını Windows Server 'da aç
+## <a name="troubleshooting-open-required-ports-on-windows-server"></a><a name="bkmk_openports"></a> Sorun giderme: gerekli bağlantı noktalarını Windows Server 'da aç
 
 Çoğu kurulumda, gerekli bağlantı noktaları ASP.NET ve uzaktan hata ayıklayıcı yüklemesi tarafından açılır. Ancak, bağlantı noktalarının açık olduğunu doğrulamanız gerekebilir.
 

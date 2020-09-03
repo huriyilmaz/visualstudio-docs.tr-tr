@@ -11,26 +11,26 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 04f0a3bb70dbab31e0faa5c38caac9b54c6154fe
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76114781"
 ---
 # <a name="initialize-correlation-dialog-box"></a>Bağıntıyı Başlat İletişim Kutusu
 
-Bir <xref:System.ServiceModel.Activities.InitializeCorrelation> etkinliğinin <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> özelliğini düzenlemek için İş Akışı Tasarımcısı **bağıntı Başlat** iletişim kutusu kullanılır. Daha fazla bilgi için bkz. [ınitialkaydedilmiş ilişki](../workflow-designer/initializecorrelation-activity-designer.md).
+Bir etkinliğin özelliğini düzenlemek için İş Akışı Tasarımcısı **bağıntı Başlat** iletişim kutusu kullanılır <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> <xref:System.ServiceModel.Activities.InitializeCorrelation> . Daha fazla bilgi için bkz. [ınitialkaydedilmiş ilişki](../workflow-designer/initializecorrelation-activity-designer.md).
 
 Aşağıdaki tabloda **bağıntı Başlat** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır:
 
-|Arabirim Öğesi|Açıklama|
+|Arabirim Öğesi|Description|
 |-|-----------------|
-|**Bağıntı**|Başlatılacak bağıntı <xref:System.ServiceModel.Activities.CorrelationHandle>.|
-|**Başlatma tarihi**|Başlatılacak verileri içeren bir anahtar/değer çifti. Bu değer <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> özelliğine karşılık gelir. Geçerli bir anahtar/değer çifti örneği, OrderID adlı bir değişkenle eşleştirilmiş "OrderID" adlı bir anahtardır.|
+|**Correlation (Bağıntı)** |<xref:System.ServiceModel.Activities.CorrelationHandle>Başlatılacak bağıntı.|
+|**Başlatma tarihi**|Başlatılacak verileri içeren bir anahtar/değer çifti. Bu değer özelliğine karşılık gelir <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> . Geçerli bir anahtar/değer çifti örneği, OrderID adlı bir değişkenle eşleştirilmiş "OrderID" adlı bir anahtardır.|
 
 ## <a name="to-launch-the-initialize-correlation-dialog-box"></a>Bağıntıyı Başlat iletişim kutusunu başlatmak için
 
-**Initialkaydedilmiş ilişki** Etkinlik tasarımcısında **görüntüle** ' ye tıklayın veya iş akışı Tasarımcısı bir <xref:System.ServiceModel.Activities.InitializeCorrelation> etkinliği seçin. Ardından, özellik kılavuzundaki <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> özelliğinin yanındaki üç nokta düğmesine tıklayın.
+**Initialkaydedilmiş ilişki** Etkinlik tasarımcısında **görüntüle** ' ye tıklayın veya iş akışı Tasarımcısı bir <xref:System.ServiceModel.Activities.InitializeCorrelation> etkinlik seçin. Sonra özellik kılavuzundaki özelliğin yanındaki üç nokta düğmesine tıklayın <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

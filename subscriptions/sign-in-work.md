@@ -8,10 +8,10 @@ ms.date: 03/11/2020
 ms.topic: how-to
 description: İş veya okul hesabınızla Visual Studio aboneliğinizde nasıl oturum kullanabileceğinizi öğrenin.
 ms.openlocfilehash: 74007dbca34294b580c1dacac7a8fef0da883f9b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85906127"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-work-or-school-account"></a>İş veya okul hesabınızla Visual Studio abonelikleriniz üzerinde oturum açma 
@@ -57,7 +57,7 @@ Ayrıca, şu anda seçili aboneliğinizi sağ üst köşede, Kullanıcı adını
     - Bir yol başarısız olursa, diğerini deneyin.  Abonelik yöneticileri aboneliğinizi değiştirmiş olabilir.
 
 5. Parolanızı girin.
-6. **Oturum aç**' a tıklayın.
+6. **Oturum aç**’a tıklayın.
 7. Bu noktada, "avantajlar" sayfası görüntülenmelidir.
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular

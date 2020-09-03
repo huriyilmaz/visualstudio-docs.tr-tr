@@ -26,10 +26,10 @@ ms.author: jillfra
 manager: jillfra
 robots: noindex,nofollow
 ms.openlocfilehash: 33b97050f04fd23a9fa3b6c3c641faa5dfe4802f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651054"
 ---
 # <a name="create-a-sql-database-by-using-a-designer"></a>Tasarımcı kullanarak SQL veritabanı oluşturma
@@ -47,16 +47,16 @@ SQL Server Express LocalDB 'de yerel bir veritabanı dosyası oluşturmak ve gü
 
 - [Tabloları verilerle doldurma](../data-tools/create-a-sql-database-by-using-a-designer.md#BKMK_Populating)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yolu tamamlamak için SQL Server Veri Araçları yüklü olduğundan emin olun. **Görünüm** menüsünde **SQL Server Nesne Gezgini**görmeniz gerekir. Bu yoksa, **Program Ekle veya Kaldır**'a gidin, **Visual Studio 2015**' e tıklayın, **değiştir**' i seçin ve **SQL Server veri araçları**yanındaki kutuyu seçin.
 
-## <a name="BKMK_CreateNewSQLDB"></a>Bir proje ve yerel veritabanı dosyası oluşturma
+## <a name="create-a-project-and-a-local-database-file"></a><a name="BKMK_CreateNewSQLDB"></a> Bir proje ve yerel veritabanı dosyası oluşturma
 
 #### <a name="to-create-a-project-and-a-database-file"></a>Bir proje ve yerel veritabanı dosyası oluşturmak için
 
-1. @No__t_0 adında bir Windows Forms projesi oluşturun.
+1. Adında bir Windows Forms projesi oluşturun `SampleDatabaseWalkthrough` .
 
-2. Menü çubuğunda, **proje**  > **Yeni öğe Ekle**' yi seçin.
+2. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
 
 3. Öğe şablonları listesinde, aşağı kaydırın ve **hizmet tabanlı veritabanı**' nı seçin.
 
@@ -64,7 +64,7 @@ SQL Server Express LocalDB 'de yerel bir veritabanı dosyası oluşturmak ve gü
 
 4. Veritabanını **SampleDatabase**olarak adlandırın ve ardından **Ekle** düğmesini seçin.
 
-5. **Veri kaynakları** penceresi açık değilse, SHIFT + alt + D tuşlarını seçerek veya menü çubuğunda,**diğer Windows**  > **veri kaynaklarını** **görüntüle**  >  ' yi seçerek açın.
+5. **Veri kaynakları** penceresi açık değilse, SHIFT + alt + D tuşlarını seçerek veya menü çubuğunda **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçerek açın.
 
 6. **Veri kaynakları** penceresinde **Yeni veri kaynağı Ekle** bağlantısını seçin.
 
@@ -72,11 +72,11 @@ SQL Server Express LocalDB 'de yerel bir veritabanı dosyası oluşturmak ve gü
 
    Veritabanı için özellikler penceresini açarak bağlantı dizesini ve birincil .mdf dosyasının konumunu görüntüleyebilirsiniz. Veritabanı dosyasının proje klasöründe olduğunu görürsünüz.
 
-- Bu pencere zaten açık değilse, Visual Studio 'da**SQL Server Nesne Gezgini**  >  **görüntüle** ' yi seçin. **Veri bağlantıları** düğümünü genişleterek, SampleDatabase. mdf kısayol menüsünü açarak ve ardından **Özellikler**' i seçerek Özellikler penceresini açın.
+- **View**  >  Bu pencere zaten açık değilse, Visual Studio 'da görüntüle**SQL Server Nesne Gezgini** ' yi seçin. **Veri bağlantıları** düğümünü genişleterek, SampleDatabase. mdf kısayol menüsünü açarak ve ardından **Özellikler**' i seçerek Özellikler penceresini açın.
 
-- Alternatif olarak, bu pencere zaten açık değilse,  > **Sunucu Gezgini** **görüntüle** seçeneğini belirleyebilirsiniz. **Veri bağlantıları** düğümünü genişleterek Özellikler penceresini açın. SampleDatabase. mdf için kısayol menüsünü açın ve ardından **Özellikler**' i seçin.
+- Alternatif olarak, **View**  >  Bu pencere zaten açık değilse**Sunucu Gezgini**görüntüle ' yi seçebilirsiniz. **Veri bağlantıları** düğümünü genişleterek Özellikler penceresini açın. SampleDatabase. mdf için kısayol menüsünü açın ve ardından **Özellikler**' i seçin.
 
-## <a name="BKMK_CreateNewTbls"></a>Tablolar, sütunlar, birincil anahtarlar ve yabancı anahtarlar oluşturma
+## <a name="create-tables-columns-primary-keys-and-foreign-keys"></a><a name="BKMK_CreateNewTbls"></a> Tablolar, sütunlar, birincil anahtarlar ve yabancı anahtarlar oluşturma
  Bu bölümde birkaç tablo, her tabloda bir birincil anahtar ve birkaç örnek veri satırı oluşturacaksınız. Sonraki izlenecek yolda, bu bilgilerin uygulamada nasıl görüneceği hakkında bir fikir elde edeceksiniz. Ayrıca, bir tablodaki kayıtların diğer tablodaki kayıtlara nasıl karşılık gelebileceğini belirtmek için yabancı anahtar da oluşturacaksınız.
 
 #### <a name="to-create-the-customers-table"></a>Müşteriler tablosu oluşturmak için
@@ -96,7 +96,7 @@ SQL Server Express LocalDB 'de yerel bir veritabanı dosyası oluşturmak ve gü
     |`ContactName`|`nvarchar (50)`|True (seçili)|
     |`Phone`|`nvarchar (24)`|True (seçili)|
 
-4. @No__t_0 satırı için kısayol menüsünü açın ve ardından **birincil anahtarı ayarla**' yı seçin.
+4. Satır için kısayol menüsünü açın `CustomerID` ve ardından **birincil anahtarı ayarla**' yı seçin.
 
 5. Varsayılan satır için kısayol menüsünü açın ve **Sil**' i seçin.
 
@@ -147,7 +147,7 @@ SQL Server Express LocalDB 'de yerel bir veritabanı dosyası oluşturmak ve gü
 
      ![Tablo Tasarımcısı yabancı anahtar ekleme](../data-tools/media/foreignkey.png "Yabancıanahtar")
 
-2. Görüntülenen metin kutusunda **ToTable** öğesini `Customers` değiştirin.
+2. Görüntülenen metin kutusunda **ToTable** öğesini ile değiştirin `Customers` .
 
 3. T-SQL bölmesinde, son satırı aşağıdaki örnekle eşleşecek şekilde güncelleştirin:
 
@@ -161,7 +161,7 @@ SQL Server Express LocalDB 'de yerel bir veritabanı dosyası oluşturmak ve gü
 
      Değişiklikleriniz yerel veritabanı dosyasına kaydedildi.
 
-## <a name="BKMK_Populating"></a>Tabloları verilerle doldurma
+## <a name="populate-the-tables-with-data"></a><a name="BKMK_Populating"></a> Tabloları verilerle doldurma
 
 #### <a name="to-populate-the-tables-with-data"></a>Tabloları veriyle doldurmak için
 
@@ -182,9 +182,9 @@ SQL Server Express LocalDB 'de yerel bir veritabanı dosyası oluşturmak ve gü
     > [!IMPORTANT]
     > Tüm sipariş kimlikleri ve sipariş miktarlarının tam sayılar olduğundan ve her müşteri kimliğinin Müşteriler tablosunun CustomerID sütununda belirttiğiniz bir değerle eşleştiğinden emin olun.
 
-7. Menü çubuğunda **dosya**  > **Tümünü Kaydet**' i seçin.
+7. Menü çubuğunda **Dosya**  >  **Tümünü Kaydet**' i seçin.
 
-8. Menü çubuğunda **dosya**  > **çözümü kapat**' ı seçin.
+8. Menü çubuğunda **Dosya**  >  **Kapat çözüm**' ü seçin.
 
     > [!NOTE]
     > En iyi uygulama yöntemi olarak, az önce oluşturduğunuz veritabanı dosyasını kopyalayarak ve daha sonra kopyayı diğer bir konuma yapıştırarak ya da kopyaya başka bir ad vererek yedekleyebilirsiniz.

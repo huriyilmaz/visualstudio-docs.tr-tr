@@ -1,5 +1,5 @@
 ---
-title: Tasarım Zamanında Montajları Çözme | Microsoft Dokümanlar
+title: Tasarım zamanında derlemeleri çözme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,33 +11,33 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 69f5ba2627e2d659665fa0bd3fbf706f9cad5573
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77632569"
 ---
-# <a name="resolve-assemblies-at-design-time"></a>Tasarım zamanında montajları çözme
+# <a name="resolve-assemblies-at-design-time"></a>Tasarım zamanında derlemeleri çözümleyin
 
-**Başvuru Ekle** iletişim kutusunun **.NET** sekmesi aracılığıyla bir derlemeye başvuru eklediğinizde, başvuru bir ara başvuru derlemesine işaret; diğer bir şey, tüm tür ve imza bilgilerini içeren, ancak herhangi bir kod içermemesi gereken bir derlemedir. .NET sekmesi, **.NET** Framework'deki çalışma zamanı derlemelerine karşılık gelen başvuru derlemelerini listeler. Ayrıca, üçüncü şahıslar tarafından kullanılan kayıtlı AssemblyFoldersEx klasörlerinde çalışma zamanı derlemelerine karşılık gelen başvuru derlemelerini listeler.
+Başvuru **Ekle** iletişim kutusunun **.net** sekmesi aracılığıyla bir derlemeye başvuru eklediğinizde, başvuru bir ara başvuru derlemesine işaret eder; diğer bir deyişle, tüm tür ve imza bilgilerini içeren, ancak herhangi bir kod içermesi gerekmeyen bir derlemedir. **.Net** sekmesi .NET Framework çalışma zamanı derlemelerine karşılık gelen başvuru derlemelerini listeler. Ayrıca, üçüncü taraflar tarafından kullanılan kayıtlı AssemblyFoldersEx klasörlerindeki çalışma zamanı derlemelerine karşılık gelen başvuru derlemelerini listeler.
 
-## <a name="multi-targeting"></a>Çok hedefleme
+## <a name="multi-targeting"></a>Çoklu hedefleme
 
- Visual Studio, .NET Framework'ün birden çok sürümünde çalışan .NET Framework sürümlerini hedeflemenizi sağlar. Yeni bir .NET Framework sürümü yayımlandığında, Framework bir hedefleme paketi kullanılarak yüklenebilir ve visual studio'da otomatik olarak hedef olarak gösterilebilir.
+ Visual Studio, .NET Framework birden çok sürümünde çalışan .NET Framework sürümlerini hedeflemenizi sağlar. Yeni bir .NET Framework sürümü yayınlandığında, Framework bir hedefleme paketi kullanılarak yüklenebilir ve Visual Studio 'da otomatik olarak bir hedef olarak görünür.
 
-## <a name="how-type-resolution-works"></a>Tür çözünürlüğü nasıl çalışır?
+## <a name="how-type-resolution-works"></a>Tür çözümlemenin çalışması
 
- Çalışma zamanında, CLR GAC, *depo gözü* dizini ve herhangi bir sondalama yollarına bakarak derlemedeki türleri çözer. Bu füzyon yükleyici tarafından işlenir. Ama füzyon yükleyicisi ne aradığını nasıl biliyor? Uygulamanın ne zaman oluşturulduğuna göre tasarım zamanında yapılan bir çözünürlüğe bağlıdır.
+ Çalışma zamanında, CLR GAC 'ye, *bin* dizinine ve herhangi bir yoklama yoluna bakarak derlemedeki türleri çözümler. Bu, Fusion yükleyicisi tarafından işlenir. Ancak, Fusion yükleyici ne aradıklarını nasıl bilir? Bu, uygulama yapılandırıldığında tasarım zamanında yapılan bir çözüme bağlıdır.
 
- Yapı sırasında derleyici başvuru derlemelerini kullanarak uygulama türlerini çözer. .NET Framework sürümlerinde 2.0, 3.0, 3.5, 4, 4.5 ve 4.5.1 sürümlerinde,.NET Framework yüklendiğinde başvuru derlemeleri yüklenir.
+ Derleme sırasında derleyici, başvuru derlemelerini kullanarak uygulama türlerini çözümler. .NET Framework sürümleri 2,0, 3,0, 3,5, 4, 4,5 ve 4.5.1 sürümlerinde, .NET Framework yüklendiğinde başvuru derlemeleri yüklenir.
 
- Referans derlemeleri, .NET Framework SDK'nın ilgili sürümüyle birlikte gönderen hedefleme paketi tarafından sağlanır. Çerçeve'nin kendisi yalnızca çalışma zamanı derlemelerini sağlar. Uygulamaları oluşturmak için hem .NET Framework'u hem de ilgili .NET Framework SDK'yı yüklemeniz gerekir.
+ Başvuru derlemeleri, .NET Framework SDK 'nın ilgili sürümüyle birlikte gelen hedefleme paketi tarafından sağlanır. Framework yalnızca çalışma zamanı derlemelerini sağlar. Uygulama derlemek için hem .NET Framework hem de karşılık gelen .NET Framework SDK 'sını yüklemeniz gerekir.
 
- Belirli bir .NET Framework hedeflediğinizde, yapı sistemi hedefleme paketindeki başvuru derlemelerini kullanarak tüm türleri çözer. Çalışma zamanında, füzyon yükleyici genellikle GAC bulunan çalışma zamanı derlemeleri, bu aynı türleri çözer.
+ Belirli bir .NET Framework hedeflediğinizde, yapı sistemi hedefleme paketindeki başvuru derlemelerini kullanarak tüm türleri çözümler. Çalışma zamanında Fusion yükleyici, genellikle GAC 'de bulunan çalışma zamanı Derlemeleriyle aynı türleri çözümler.
 
- Başvuru derlemeleri kullanılamıyorsa, yapı sistemi çalışma zamanı derlemelerini kullanarak derleme türlerini çözer. GAC'deki çalışma zamanı derlemeleri küçük sürüm numaralarıyla ayırt edilmeyince, çözüm yanlış derlemeye yapılsa da mümkündür. Bu durum, örneğin.NET Framework sürüm 3.5'te tanıtılan yeni bir yöntem, sürüm 3.0'ı hedeflenirken başvurulursa olabilir. Yapı başarılı olur ve uygulama yapı makinesinde çalışır, ancak sürüm 3.5 yüklü olmayan bir makineye dağıtıldığında başarısız olur.
+ Başvuru derlemeleri kullanılamıyorsa, derleme sistemi, derleme türlerini çalışma zamanı derlemelerini kullanarak çözer. GAC 'deki çalışma zamanı derlemeleri alt sürüm numaralarına göre ayırt olmadığından, yanlış derlemeye çözümlemenin yapılması mümkündür. Bu durum örneğin, 3,5 sürümü ' de sunulan yeni bir yönteme, sürüm 3,0 .NET Framework ' i hedeflerken başvuruluyorsa meydana gelebilir. Yapı başarılı olur ve uygulama derleme makinesinde çalışır, ancak sürüm 3,5 yüklü olmayan bir makineye dağıtıldığında başarısız olur.
 
- Artık .NET Framework SDK ile birlikte gelen hedefleme paketi, yeniden dağıtım (redist) listesi olarak adlandırılan Framework'ün bu sürümündeki tüm çalışma zamanı derlemelerinin bir listesini içerir ve yapı sisteminin türleri yanlış olana karşı çözmesini imkansız hale getirir. derleme sürümü.
+ Artık .NET Framework SDK ile birlikte sunulan hedefleme paketi, bu çerçevenin bu sürümündeki çalışma zamanı derlemelerinin tümünün bir listesini içerir. yeniden dağıtım (Redist) listesi denir ve derleme sisteminin derlemeleri yanlış sürüme karşı çözümlemesini olanaksız hale getirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Gelişmiş kavramlar](../msbuild/msbuild-advanced-concepts.md)

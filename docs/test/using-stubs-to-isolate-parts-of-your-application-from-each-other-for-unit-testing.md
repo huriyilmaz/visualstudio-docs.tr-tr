@@ -11,10 +11,10 @@ dev_langs:
 - CSharp
 - VB
 ms.openlocfilehash: 1d66dcd0a59edfbfb199a68f81ecebe608afccb1
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85289059"
 ---
 # <a name="use-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>Birim testi için uygulamanızın parçalarını birbirinden yalıtmak üzere saplamalar kullanma
@@ -338,7 +338,7 @@ stub.ValueSet = (value) => i = value;
 
 Bir özelliğin ayarlayıcısı ya da alıcısı için saplama yöntemleri sağlamazsanız, Fakes, saplama özelliğinin basit bir değişken gibi çalışması için değerleri depolayan bir saplama oluşturur.
 
-### <a name="events"></a>Olaylar
+### <a name="events"></a>Ekinlikler
 
 Olaylar, temsilci alanları olarak sunulur. Sonuç olarak herhangi bir saptama olayı, olay yedekleme alanını çağırarak basitçe yükseltilebilir. Saplama için aşağıdaki arabirimi ele alalım:
 

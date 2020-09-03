@@ -12,13 +12,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6d7c72d1da270220144cd5e6167ebecb66462ba9
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85289280"
 ---
-# <a name="msbuild-batching"></a>MSBuild Toplu işleme
+# <a name="msbuild-batching"></a>MSBuild toplu işleme
 
 MSBuild öğe listelerini, öğe meta verilerine göre farklı kategorilere veya toplu işlerle böler ve her Batch ile bir kez bir hedef veya görev çalıştırır.
 
@@ -113,7 +113,7 @@ Hem hedef toplu işleme hem de görev toplu işleme ile, toplu işler bağımsı
   </Target>
 ```
 
-Çıkış şöyle olur:
+Çıktı şu şekildedir:
 
 ```output
 Target DemoIndependentBatches:
@@ -163,7 +163,7 @@ B\3.stub
     </Target>
 ```
 
-Çıkış şöyle olur:
+Çıktı şu şekildedir:
 
 ```output
 Test1:
@@ -191,7 +191,7 @@ Test1:
     </Target>
 ```
 
-Çıkış şöyle olur:
+Çıktı şu şekildedir:
 
 ```output
 Test1:

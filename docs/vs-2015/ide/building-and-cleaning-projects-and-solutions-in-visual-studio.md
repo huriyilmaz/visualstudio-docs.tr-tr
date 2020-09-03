@@ -24,10 +24,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 15f2817b6fd0aee312ff41af218d01ad80bc785e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72620564"
 ---
 # <a name="building-and-cleaning-projects-and-solutions-in-visual-studio"></a>Visual Studio'da Projeler ve Çözümler Oluşturma ve Temizleme
@@ -75,15 +75,15 @@ Bu konudaki yordamları kullanarak bir çözümde proje veya proje öğelerinden
 
     Bu onay kutusu seçildiğinde, aşağıdaki adımlardan birini gerçekleştirdiğinizde yalnızca geçerli başlangıç projesi ve bağımlılıkları oluşturulur:
 
-   - Menü çubuğunda **hata ayıkla**  >  hata**ayıklamayı Başlat** (F5) öğesini seçin.
+   - Menü çubuğunda **hata**  >  **ayıklamayı Başlat hata** Ayıkla (F5) öğesini seçin.
 
-   - Menü çubuğunda **derleme**  > **Build Solution** (CTRL + SHIFT + B) öğesini seçin.
+   - Menü **çubuğunda Build**  >  **Build Solution** (CTRL + SHIFT + B) öğesini seçin.
 
-     Bu onay kutusu Temizlenmişken, önceki komutlardan birini çalıştırdığınızda tüm projeler, bağımlılıkları ve çözüm dosyaları oluşturulur. Varsayılan olarak, bu onay kutusu temizlenir.
+     Bu onay kutusu Temizlenmişken, önceki komutlardan birini çalıştırdığınızda tüm projeler, bağımlılıkları ve çözüm dosyaları oluşturulur. Varsayılan olarak bu onay kutusu işaretli değildir.
 
-## <a name="to-build-only-the-selected-visual-c-project"></a>Yalnızca seçilen görsel C++ projeyi oluşturmak için
+## <a name="to-build-only-the-selected-visual-c-project"></a>Yalnızca seçili Visual C++ projesi oluşturmak için
 
-1. Bir [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] projesi seçin ve ardından menü çubuğunda **Yapı**, **yalnızca proje**ve aşağıdaki komutlardan birini seçin:
+1. Bir [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] proje seçin ve ardından menü çubuğunda **Yapı**, **yalnızca proje**ve aşağıdaki komutlardan birini seçin:
 
    - **Yalnızca** *ProjectName* oluştur
 
@@ -93,9 +93,9 @@ Bu konudaki yordamları kullanarak bir çözümde proje veya proje öğelerinden
 
    - **Salt bağlantı yalnızca** *ProjectName*
 
-     Bu komutlar, herhangi bir proje bağımlılığı veya çözüm dosyası oluşturmadan, yeniden oluşturmaya, temizlemeye veya bağlamaya gerek kalmadan yalnızca seçtiğiniz [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] projesi için geçerlidir. @No__t_0 sürümünüze bağlı olarak **yalnızca proje** alt menüsünde daha fazla komut bulunabilir.
+     Bu komutlar [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] , herhangi bir proje bağımlılığı veya çözüm dosyası oluşturmadan, yeniden oluşturmaya, temizlemeye veya bağlamaya gerek kalmadan yalnızca seçtiğiniz proje için geçerlidir. Sürümünüze bağlı olarak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , **yalnızca proje** alt menüsünde daha fazla komut bulunabilir.
 
-## <a name="to-compile-multiple-c-project-items"></a>Birden çok C++ Proje öğesini derlemek için
+## <a name="to-compile-multiple-c-project-items"></a>Birden çok C++ proje öğesi derlemek için
 
 1. **Çözüm Gezgini**, derlenebilecek eylemler olabilecek birden çok dosya seçin, bu dosyalardan biri için kısayol menüsünü açın ve **Derle**' yi seçin.
 
@@ -110,4 +110,4 @@ Bu konudaki yordamları kullanarak bir çözümde proje veya proje öğelerinden
     - Ctrl + Break tuşlarını seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [Nasıl yapılır: derleme günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma](../ide/how-to-view-save-and-configure-build-log-files.md) yapı [günlüklerini](../msbuild/obtaining-build-logs-with-msbuild.md) derleme [ve oluşturma](../ide/compiling-and-building-in-visual-studio.md) derleme [yapılandırmalarının](../ide/understanding-build-configurations.md) [hata ayıklama ve yayın proje yapılandırma](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e) [C/C++ oluşturma başvurusu ](https://msdn.microsoft.com/library/100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d) [Devenv komut satırı anahtarları](../ide/reference/devenv-command-line-switches.md) [ve projeleri](../ide/solutions-and-projects-in-visual-studio.md)
+ [Nasıl yapılır: derleme günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma](../ide/how-to-view-save-and-configure-build-log-files.md) yapı [günlüklerini](../msbuild/obtaining-build-logs-with-msbuild.md) derleme [ve oluşturma derleme](../ide/compiling-and-building-in-visual-studio.md) [yapılandırmalarının](../ide/understanding-build-configurations.md) [hata ayıklama ve yayınlama proje yapılandırmalarının](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e) [C/C++ derleme başvurusu](https://msdn.microsoft.com/library/100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d) [Devenv komut satırı anahtarları](../ide/reference/devenv-command-line-switches.md) [çözümler ve projeler](../ide/solutions-and-projects-in-visual-studio.md)

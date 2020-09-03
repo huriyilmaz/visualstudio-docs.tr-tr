@@ -1,63 +1,63 @@
 ---
-title: 'Nasıl yapılır: Arka planda VSPackage AsyncPackage sayfanızdaki | Microsoft Docs'
+title: 'Nasıl yapılır: arka planda VSPackages yüklemek için AsyncPackage kullanma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.topic: conceptual
 ms.assetid: dedf0173-197e-4258-ae5a-807eb3abc952
 caps.latest.revision: 9
 ms.author: gregvanl
 ms.openlocfilehash: f59838913ed3f9bc6679336393f6db9181291e3d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204033"
 ---
-# <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>Nasıl yapılır: AsyncPackage Kullanarak Arka Planda VSPackage Yükleme
+# <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>Nasıl Yapılır: AsyncPackage Kullanarak Arka Planda VSPackage Yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yükleme ve VS paket başlatma disk g/ç neden olabilir. Böyle g/ç UI iş parçacığı üzerinde olursa bu yanıt hızını sorunlarına yol açabilir. Bunu ele almak için Visual Studio 2015 kullanıma sunulan <xref:Microsoft.VisualStudio.Shell.AsyncPackage> paketi yükleme arka plan iş parçacığında sağlayan sınıf.  
+VS paketini yükleme ve başlatma, disk g/ç ile sonuçlanabilir. Bu tür g/ç, UI iş parçacığında gerçekleşdiğinde, yanıt hızı sorunlarına yol açabilir. Visual Studio 2015,  <xref:Microsoft.VisualStudio.Shell.AsyncPackage> bir arka plan iş parçacığında paket yüklemeyi sağlayan sınıfı kullanıma sunmuştur.  
   
-## <a name="creating-an-asyncpackage"></a>Bir sınıfta oluşturma  
- Bir VSIX projesi oluşturarak başlayın (**dosya / yeni / Project / Visual C# / genişletilebilirlik / VSIX projesi**) ve bir VSPackage'ı projeye ekleniyor (projeye sağ tıklayın ve **Ekle/yeni öğe / C# öğesi/genişletilebilirlik/Visual Studio Paketi**). Ardından, hizmetlerinizi oluşturup bu hizmetler, pakete ekleyin.  
+## <a name="creating-an-asyncpackage"></a>AsyncPackage oluşturma  
+ Bir VSıX projesi (**dosya/yeni/proje/Visual C#/genişletilebilirlik/VSIX projesi**) oluşturarak başlayabilir ve projeye bir VSPackage ekleyebilirsiniz (projeye sağ tıklayın ve **Ekle/yeni öğe/C# öğesi/genişletilebilirlik/Visual Studio paketi**). Daha sonra hizmetlerinizi oluşturabilir ve bu hizmetleri paketinize ekleyebilirsiniz.  
   
-1. Paketten türetilen <xref:Microsoft.VisualStudio.Shell.AsyncPackage>.  
+1. Paketini öğesinden türet <xref:Microsoft.VisualStudio.Shell.AsyncPackage> .  
   
-2. Hizmetleri sorgulamak, yüklemek, paket neden olabilir sağlıyorsanız:  
+2. Sorgusu, paketinizin yüklenmesine neden olabilecek hizmetler sağlıyorsanız:  
   
-    Visual Studio için paketinizi arka planda yükleme için güvenli olduğunu belirtmek için ve bu davranışı geri çevirmek için <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> ayarlamalısınız **AllowsBackgroundLoading** özelliği true olarak öznitelik Oluşturucusu.  
+    Paketinizin arka plan yüklemesi için güvenli olduğunu ve bu davranışı kabul etmek için, Visual Studio 'ya, <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> öznitelik oluşturucusunda **Allowsbackgroundyükleme** özelliğini true olarak ayarlamanız gerekir.  
   
    ```csharp  
    [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]  
   
    ```  
   
-    Visual Studio için hizmetinizde bir arka plan iş parçacığı oluşturmak güvenli olduğunu belirtmek için ayarlamalısınız <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttributeBase.IsAsyncQueryable%2A> özelliği true olarak <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> Oluşturucusu.  
+    Visual Studio 'Nun, bir arka plan iş parçacığında hizmetinizin örneğini oluşturmak için güvenli olduğunu belirtmek üzere, <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttributeBase.IsAsyncQueryable%2A> oluşturucuda özelliği true olarak ayarlamanız gerekir <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> .  
   
    ```csharp  
    [ProvideService(typeof(SMyTestService), IsAsyncQueryable = true)]  
   
    ```  
   
-3. UI bağlamı yüklenen sonra belirtmeniz gerekir **PackageAutoLoadFlags.BackgroundLoad** için <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> bayrak değeri (0x2) paketinizin otomatik yükle giriş değeri olarak yazılamaz veya okunamaz.  
+3. Kullanıcı arabirimi bağlamları aracılığıyla yüklüyorsanız, paketinizin otomatik yük girişinin değeri olarak yazılmış bayraklarda, veya değeri (0x2) için **Packageotoloadflags. BackgroundLoad** değerini belirtmeniz gerekir <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> .  
   
    ```csharp  
    [ProvideAutoLoad(UIContextGuid, PackageAutoLoadFlags.BackgroundLoad)]  
   
    ```  
   
-4. Zaman uyumsuz başlatma iş yapmak için varsa, geçersiz kılmalıdır <xref:Microsoft.VisualStudio.Shell.AsyncPackage.InitializeAsync%2A>. Kaldırma **Initialize()** VSIX şablonuyla sağlanan yöntemi. ( **Initialize()** yönteminde **AsyncPackage** korumalı). Herhangi birini kullanabilmeniz için <xref:Microsoft.VisualStudio.Shell.AsyncPackage.AddService%2A> paketiniz için zaman uyumsuz bir hizmet eklemek için yöntemleri.  
+4. Yapılacak zaman uyumsuz başlatma çalışmadıysanız, öğesini geçersiz kılmanız gerekir <xref:Microsoft.VisualStudio.Shell.AsyncPackage.InitializeAsync%2A> . VSıX şablonu tarafından sunulan **Initialize ()** yöntemini kaldırın. ( **Asyncpackage** içindeki **Initialize ()** yöntemi mühürlü). <xref:Microsoft.VisualStudio.Shell.AsyncPackage.AddService%2A>Paketinize zaman uyumsuz hizmetler eklemek için herhangi bir yöntemi kullanabilirsiniz.  
   
-    NOT: Çağrılacak **temel. InitializeAsync()** , kaynak kodunuzu değiştirebilirsiniz:  
+    NOTE: **base.InitializeAsync ()** çağırmak için, kaynak kodunuzu şu şekilde değiştirebilirsiniz:  
   
    ```csharp  
    await base.InitializeAsync(cancellationToken, progress);  
    ```  
   
-5. RPC (yordam çağrısı kaldırmak) yapmamak için zaman uyumsuz başlatma kodunuzdan ilgileniriz gerekir (içinde **InitializeAsync**). Çağırdığınızda bu oluşabilir <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> doğrudan veya dolaylı olarak.  Eşitleme yükleri gerekli olduğunda, UI iş parçacığı kullanan engeller <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory>. Varsayılan engelleme modelini RPC devre dışı bırakır. Bu, zaman uyumsuz görevleri bir RPC kullanmayı denerseniz, kullanıcı Arabirimi iş parçacığı kendisi, paketi yüklemek bekleyen ise, kilitlenme, anlamına gelir. Kodunuzu UI iş parçacığına benzer bir şey kullanarak gerekirse sıralamakta genel alternatiftir **birleştirilebilir görev fabrikasını**'s <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A> veya bir RPC kullanmaz başka bir mekanizma.  Kullanmayın **ThreadHelper.Generic.Invoke** veya genellikle UI iş parçacığına almak için bekliyor çağıran iş parçacığını engeller.  
+5. Zaman uyumsuz başlatma kodınızdan ( **ınitializtem eşitlemesi**) RPC (yordam çağrısını Kaldır) yapmayın. Bunlar doğrudan veya dolaylı olarak çağırdığınızda meydana gelebilir <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> .  Eşitleme yükleri gerektiğinde, UI iş parçacığı kullanımını engeller <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> . Varsayılan engelleme modeli, RPC 'yi devre dışı bırakır. Yani, zaman uyumsuz görevlerinize bir RPC kullanmaya çalışırsanız, UI iş parçacığının kendisi paketinizin yüklenmesini bekliyorsa kilitlenirsiniz. Genel alternatif, birlikte bulunan **görev fabrikasının** <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A> veya RPC kullanmayan başka bir mekanizmaya benzer şekilde, gerekirse, kodunuzu kullanıcı arabirimi iş parçacığına sıralayamaz.  **ThreadHelper. Generic. Invoke** kullanmayın veya genellikle UI iş parçacığına alınması bekleyen çağıran iş parçacığını engelleyin.  
   
-    NOT: Kullanmaktan kaçınmalısınız **GetService** veya **QueryService** içinde **InitializeAsync** yöntemi. Bu kullanmanız gerekiyorsa, kullanıcı Arabirimi iş parçacığına geçmeniz gerekir. Alternatif kullanmaktır <xref:Microsoft.VisualStudio.Shell.AsyncServiceProvider.GetServiceAsync%2A> gelen, **AsyncPackage** (için atama tarafından <xref:Microsoft.VisualStudio.Shell.Interop.IAsyncServiceProvider>.)  
+    NOTE: **ınitialsensync** yönteminde **GetService** veya **QueryService** kullanmaktan kaçının. Bunları kullanmanız gerekiyorsa, önce UI iş parçacığına geçmeniz gerekir. Alternatif, <xref:Microsoft.VisualStudio.Shell.AsyncServiceProvider.GetServiceAsync%2A> **asyncpackage** 'ten (' ye aktararak <xref:Microsoft.VisualStudio.Shell.Interop.IAsyncServiceProvider> ) kullanmaktır.  
   
-   C#: Bir sınıfta oluşturun:  
+   C#: Asyncpackage oluşturma:  
   
 ```csharp  
 [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]       
@@ -72,29 +72,29 @@ public sealed class TestPackage : AsyncPackage
 }  
 ```  
   
-## <a name="convert-an-existing-vspackage-to-asyncpackage"></a>Mevcut bir VSPackage AsyncPackage için Dönüştür  
- İşin çoğunu yeni oluşturma aynıdır **AsyncPackage**. 1 ile 5 yukarıdaki adımları izlemeniz gerekir. Aşağıdakilere çok dikkatli olması gerekir:  
+## <a name="convert-an-existing-vspackage-to-asyncpackage"></a>Mevcut bir VSPackage 'ı AsyncPackage 'e Dönüştür  
+ İşin büyük bölümü, yeni bir **Asyncpackage**oluşturma ile aynıdır. Yukarıdaki 1 ile 5 arasındaki adımları izlemeniz gerekir. Ayrıca, aşağıdakiler için de daha fazla dikkatli olmanız gerekir:  
   
-1. Kaldırmayı unutmayın **başlatmak** geçersiz kılma paketinizdeki vardı.  
+1. Paketinizin sahip olduğunuz **başlatma** geçersiz kılmayı kaldırmayı unutmayın.  
   
-2. Kilitlenmeler kaçının: Olabilir, kodunuzda artık bir arka plan iş parçacığında gerçekleştirilmesi RPC gizli. Bir RPC yapıyorsanız emin olmanız gerekir (örneğin **GetService**), ana iş parçacığı (1) ya da geç yapmanız veya var (2) zaman uyumsuz bir API sürümünü kullanın (örneğin **Asyncpackage'dan**).  
+2. Kilitlenmeleri önleyin: kodunuzda, bir arka plan iş parçacığında gerçekleşen gizli RPC 'ler olabilir. Bir RPC (ör. **GetService**) yapıyorsanız, ana iş parçacığına (1) geçiş yapmak ya da (2) varsa API 'nin zaman uyumsuz sürümünü kullanmanız gerekir (ör. **GetServiceAsync**).  
   
-3. Çok sık iş parçacıkları arasında geçiş. Arka plan iş parçacığında oluşabilir iş yerelleştirmek deneyin. Bu yükleme süresini azaltır.  
+3. İş parçacıkları arasında çok sık geçiş yapma. Bir arka plan iş parçacığında gerçekleşebilirler işi yerelleştirmeye çalışın. Bu, yükleme süresini azaltır.  
   
-## <a name="querying-services-from-asyncpackage"></a>AsyncPackage hizmetlerinden sorgulama  
- Bir **AsyncPackage** olabilir veya zaman uyumsuz olarak bağlı olarak çağıran yüklenmeyebilir. Örneğin,  
+## <a name="querying-services-from-asyncpackage"></a>AsyncPackage Hizmetleri sorgulanıyor  
+ Bir **Asyncpackage** , çağırana bağlı olarak zaman uyumsuz olarak olabilir veya yüklenmeyebilir. Örneğin,  
   
-- Çağıranın çağrılırsa **GetService** veya **QueryService** (hem zaman uyumlu API) veya  
+- Çağıran, **GetService** veya **QueryService** (her Ikisi de zaman uyumlu API) olarak adlandırıldığında veya  
   
-- Çağıranın çağrılırsa **IVsShell::LoadPackage** (veya **IVsShell5::LoadPackageWithContext**) veya  
+- Çağıran **IVsShell:: LoadPackage** (veya **IVsShell5:: LoadPackageWithContext**) olarak adlandırıldığında veya  
   
-- Yükleme kullanıcı Arabirimi bağlam tarafından tetiklenir, ancak UI bağlamı mekanizması, zaman uyumsuz olarak yükleyebilirsiniz belirtmedi  
+- Yük bir kullanıcı arabirimi bağlamı tarafından tetiklenir, ancak kullanıcı arabirimi bağlam mekanizmasını sizin tarafınızdan zaman uyumsuz olarak yükleyemeyeceğini belirtmedi  
   
-  Ardından, paket zaman uyumlu olarak yüklenir.  
+  ardından, paketiniz zaman uyumlu olarak yüklenir.  
   
-  UI iş parçacığı için söz konusu iş tamamlama engellenecek olsa paketinizi hala bir fırsat (zaman uyumsuz başlangıç aşamasında) UI iş parçacığından, çalışmaya olduğuna dikkat edin. Çağıranın kullanıyorsa **IAsyncServiceProvider** hizmetiniz için zaman uyumsuz olarak sorgu için sonra yükleme ve başlatma zaman uyumsuz olarak bunlar yok hemen engelleme elde edilen görev nesnesinde varsayılarak yapılır.  
+  Paketinizin Kullanıcı arabirimi iş parçacığı devre dışı bırakmak için bir fırsata (zaman uyumsuz başlatma aşamasında) hala bir fırsat olduğuna, ancak kullanıcı arabirimi iş parçacığı söz konusu çalışmanın tamamlanmasına izin verdiğine unutmayın. Çağıran, hizmetinize yönelik zaman uyumsuz sorgu için **ıasyncserviceprovider** kullanıyorsa, yükleme ve başlatma zaman uyumsuz olarak elde edilen görev nesnesi üzerinde engellenmeyecektir.  
   
-  C#: Hizmet zaman uyumsuz olarak sorgulayıp nasıl:  
+  C#: hizmeti zaman uyumsuz olarak sorgulama:  
   
 ```csharp  
 using Microsoft.VisualStudio.Shell;   

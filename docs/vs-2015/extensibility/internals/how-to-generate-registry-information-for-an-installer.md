@@ -13,19 +13,19 @@ caps.latest.revision: 20
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: df6ef440202057bb8e0612af0987782fa281c952
-ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75944245"
 ---
-# <a name="how-to-generate-registry-information-for-an-installer"></a>Nasıl yapılır: bir yükleyici için kayıt defteri bilgileri oluşturma
+# <a name="how-to-generate-registry-information-for-an-installer"></a>Nasıl Yapılır: Bir Yükleyicinin Kayıt Defteri Bilgilerini Oluşturma
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-RegPkg. exe yardımcı programı, yönetilen VSPackage için bir kayıt bildirimi oluşturmak üzere kullanılabilir. Bildirim bir Windows Installer Kurulum paketine eklenebilir. RegPkg Ayrıca, [WINDOWS Installer XML araç takımını](https://documentation.help/WiX-Toolset/index.html)temel alan bir kurulum kaynak dosyasına eklenebilecek bir dosya oluşturabilir.
+RegPkg.exe yardımcı programı, yönetilen bir VSPackage için bir kayıt bildirimi oluşturmak üzere kullanılabilir. Bildirim bir Windows Installer Kurulum paketine eklenebilir. RegPkg Ayrıca, [WINDOWS Installer XML araç takımını](https://documentation.help/WiX-Toolset/index.html)temel alan bir kurulum kaynak dosyasına eklenebilecek bir dosya oluşturabilir.
   
 > [!IMPORTANT]
-> RegPkg, geliştirme sisteminize özgü yol adları oluşturur. bu nedenle, RegPkg 'i her kullandığınızda çıktıyı, uygun Windows Installer biçimlendirilen özellikleri kullanacak şekilde düzenlemeniz gerekir. Örneğin, ınprocserver32 değeri **[SystemFolder] Mscoree. dll** olmalıdır ve yolların **[#filekey]** ve **[$componentkey]** kullanması gerekir. Çıktının bu şekilde ayarlanması, farklı bir sürücüde veya farklı bir dizinde, yerelleştirilmiş dizin adlarında ve kullanıcıların seçelebilecek yollarla Windows 'un yüklü olduğu bilgisayarları destekler. Daha fazla bilgi için bkz. Windows Installer SDK 'sında [biçimlendirme](https://msdn.microsoft.com/library/default.asp?url=/library/msi/setup/formatted.asp) . Geliştirme sistem yollarınız için RegPkg kurallarını izlerseniz — Örneğin, File_ dosya*adı*: form dosya kimlikleri — daha az değişiklik yapmanız gerekir.  
+> RegPkg, geliştirme sisteminize özgü yol adları oluşturur. bu nedenle, RegPkg 'i her kullandığınızda çıktıyı, uygun Windows Installer biçimlendirilen özellikleri kullanacak şekilde düzenlemeniz gerekir. Örneğin, ınprocserver32 değeri **[SystemFolder] mscoree.dll** ve yolların **[#filekey]** ve **[$componentkey]** kullanması gerekir. Çıktının bu şekilde ayarlanması, farklı bir sürücüde veya farklı bir dizinde, yerelleştirilmiş dizin adlarında ve kullanıcıların seçelebilecek yollarla Windows 'un yüklü olduğu bilgisayarları destekler. Daha fazla bilgi için bkz. Windows Installer SDK 'sında [biçimlendirme](https://msdn.microsoft.com/library/default.asp?url=/library/msi/setup/formatted.asp) . Geliştirme sistem yollarınız için RegPkg kurallarını izlerseniz — Örneğin, File_ dosya*adı*: form dosya kimlikleri — daha az değişiklik yapmanız gerekir.  
   
 ### <a name="to-create-a-registration-manifest"></a>Kayıt bildirimi oluşturmak için  
   
@@ -183,5 +183,5 @@ RegPkg. exe yardımcı programı, yönetilen VSPackage için bir kayıt bildirim
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [VSPackages  kaydediliyor](registering-vspackages.md)  
+ [VSPackages 'yi kaydetme](registering-vspackages.md)   
  [VSPackage’lar](../../extensibility/internals/vspackages.md)

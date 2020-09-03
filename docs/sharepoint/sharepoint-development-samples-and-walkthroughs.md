@@ -14,9 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 39f4d52b8a94409abeffb7cc9ce2329e463cf8bd
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015799"
 ---
 # <a name="sharepoint-development-samples-and-walkthroughs"></a>SharePoint geliştirme örnekleri ve izlenecek yollar
@@ -26,7 +27,7 @@ ms.locfileid: "86015799"
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|Konu başlığı|Description|
+|Konu|Description|
 |-----------|-----------------|
 |[SharePoint geliştirme örnekleri](../sharepoint/sharepoint-development-samples.md)|Visual Studio 'da SharePoint geliştirme araçlarının nasıl kullanılacağını gösteren örnek uygulamaları açıklar.|
 |[SharePoint geliştirme talimatları](../sharepoint/sharepoint-development-walkthroughs.md)|Visual Studio 'da SharePoint geliştirme araçlarına giriş sağlayan adım adım kılavuzların listesini görüntüler.|

@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6f235108c63eb063f0ddcd495385bd3325581332
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85289020"
 ---
 # <a name="item-element-msbuild"></a>Item öğesi (MSBuild)
@@ -83,19 +83,19 @@ Ancak, `Version` meta verileri aşağıdaki sözdiziminde olduğu gibi bir özni
 
 ### <a name="child-elements"></a>Alt öğeleri
 
-|Öğe|Description|
+|Öğe|Açıklama|
 |-------------|-----------------|
 |[ItemMetadata](../msbuild/itemmetadata-element-msbuild.md)|Öğe meta veri değerini içeren Kullanıcı tanımlı öğe meta verileri anahtarı. Bir öğede sıfır veya daha fazla `ItemMetadata` öğe olabilir.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
-|Öğe|Description|
+|Öğe|Açıklama|
 |-------------|-----------------|
 |[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|Öğeler için gruplandırma öğesi.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-`Item`öğeler Yapı sistemine giriş tanımlar ve Kullanıcı tanımlı koleksiyon adlarına göre öğe koleksiyonları halinde gruplandırılır. Bu öğe koleksiyonları, yapı işlemi adımlarını gerçekleştirmek için koleksiyonlardaki ayrı öğeleri kullanan [Görevler](../msbuild/msbuild-tasks.md)için parametre olarak kullanılabilir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).
+`Item` öğeler Yapı sistemine giriş tanımlar ve Kullanıcı tanımlı koleksiyon adlarına göre öğe koleksiyonları halinde gruplandırılır. Bu öğe koleksiyonları, yapı işlemi adımlarını gerçekleştirmek için koleksiyonlardaki ayrı öğeleri kullanan [Görevler](../msbuild/msbuild-tasks.md)için parametre olarak kullanılabilir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).
 
 @ () Gösterimini kullanmak \<myType> , türünde öğelerin bir koleksiyonun \<myType> noktalı virgülle ayrılmış bir dize listesine genişletilmesini ve bir parametreye geçirilmesini sağlar. Parametresi tür ise `string` , parametrenin değeri noktalı virgülle ayırarak öğelerin listesidir. Parametresi bir dizeler diziyse ( `string[]` ), her öğe noktalı virgül konumunu temel alarak diziye eklenir. Görev parametresi tür ise <xref:Microsoft.Build.Framework.ITaskItem> `[]` , bu değer, eklenen tüm meta verilerle birlikte öğe koleksiyonunun içeriğidir. Noktalı virgül dışında bir karakter kullanarak her öğeyi sınırlandırmak için @ ( \<myType> , ' \<separator> ') sözdizimini kullanın.
 
@@ -126,7 +126,7 @@ Aşağıdaki kod örneği, `Update` bir glob aracılığıyla eklenen *somefile.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğeleri](../msbuild/msbuild-items.md)
-- [Ortak MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)
+- [Öğeler](../msbuild/msbuild-items.md)
+- [Yaygın MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)
 - [MSBuild özellikleri](../msbuild/msbuild-properties.md)
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)

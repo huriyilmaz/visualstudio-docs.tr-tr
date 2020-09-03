@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5a06222c86ece31b18749394cf4590eedc4822f2
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536415"
 ---
 # <a name="using-the-microsoft-monitoring-agent-c-visual-basic"></a>Microsoft Monitoring Agent kullanma (C#, Visual Basic)
@@ -32,11 +32,11 @@ ms.locfileid: "85536415"
 
 3. [3. Adım: kayıtlı olayları kaydetme](#SaveEvents)
 
-## <a name="step-1-set-up-microsoft-monitoring-agent"></a><a name="SetUpMonitoring"></a>1. Adım: Microsoft Monitoring Agent ayarlama
+## <a name="step-1-set-up-microsoft-monitoring-agent"></a><a name="SetUpMonitoring"></a> 1. Adım: Microsoft Monitoring Agent ayarlama
 
  Uygulamanızı değiştirmeden yerel izleme yapmak için web sunucunuz üzerinde bağımsız aracıyı ayarlayın. System Center 2012 kullanıyorsanız bkz. [yükleme Microsoft Monitoring Agent](/previous-versions/system-center/system-center-2012-R2/dn465156(v=sc.12)).
 
-### <a name="set-up-the-standalone-agent"></a><a name="SetUpStandaloneMMA"></a>Tek başına aracıyı ayarlama
+### <a name="set-up-the-standalone-agent"></a><a name="SetUpStandaloneMMA"></a> Tek başına aracıyı ayarlama
 
 1. Şunlardan emin olun:
 
@@ -65,7 +65,7 @@ ms.locfileid: "85536415"
 
 ### <a name="q--a"></a>Soru-Cevap
 
-#### <a name="q-what-if-i-have-windows-powershell-20"></a><a name="PowerShell2"></a>S: Windows PowerShell 2,0 varsa ne yapmalıyım?
+#### <a name="q-what-if-i-have-windows-powershell-20"></a><a name="PowerShell2"></a> S: Windows PowerShell 2,0 varsa ne yapmalıyım?
  Y **:** PowerShell 3,0 kullanmanızı kesinlikle öneririz. Aksi halde, PowerShell'i her çalıştırdığınızda Microsoft İzleme Aracısı PowerShell cmdlet'lerini içeri aktarmanız gerekir. Ayrıca, indirilebilen Yardım içeriğine de erişiminiz olmayacaktır.
 
 1. Yönetici olarak bir **Windows PowerShell** veya **Windows PowerShell ISE** komut istemi penceresi açın.
@@ -76,7 +76,7 @@ ms.locfileid: "85536415"
 
 3. En son yardım içeriğini almak için [TechNet sitesini ziyaret edin](https://technet.microsoft.com/systemcenter/default) .
 
-#### <a name="q-how-do-i-set-up-permissions-for-the-application-pool"></a><a name="FullPermissionsITLog"></a>S: uygulama havuzu için izinleri ayarla Nasıl yaparım??
+#### <a name="q-how-do-i-set-up-permissions-for-the-application-pool"></a><a name="FullPermissionsITLog"></a> S: uygulama havuzu için izinleri ayarla Nasıl yaparım??
  Y **:** Windows **ıccacls** komutunu kullanın veya Windows Gezgini (veya dosya Gezgini) kullanın. Örneğin:
 
 - Windows **ıccacls** komutuyla izinleri ayarlamak için:
@@ -107,7 +107,7 @@ ms.locfileid: "85536415"
 
   7. Uygulama havuzunun **okuma & yürütme** izinlerine sahip olduğundan emin olun.
 
-## <a name="step-2-start-monitoring-your-app"></a><a name="MonitorEvents"></a>2. Adım: uygulamanızı izlemeye başlama
+## <a name="step-2-start-monitoring-your-app"></a><a name="MonitorEvents"></a> 2. Adım: uygulamanızı izlemeye başlama
  Uygulamanızı izlemeye başlamak için Windows PowerShell [Start-WebApplicationMonitoring](/previous-versions/system-center/powershell/system-center-2012-r2/dn472749(v=sc.20)) komutunu kullanın. System Center 2012 kullanıyorsanız bkz. [Microsoft Monitoring Agent Web uygulamalarını izleme](https://technet.microsoft.com/library/dn465157.aspx).
 
 1. Web sunucunuzda, yönetici olarak bir **Windows PowerShell** veya **Windows PowerShell ISE** komut istemi penceresi açın.
@@ -132,7 +132,7 @@ ms.locfileid: "85536415"
 
      ![MMA onayı ile izlemeyi Başlat](../debugger/media/ffr_powershellstartmonitoringconfirmation.png "FFR_PowerShellStartMonitoringConfirmation")
 
-    |Name|Description|
+    |Ad|Açıklama|
     |-|-|
     |*"\<appName>"*|IIS içinde web sitesinin yolunu ve web uygulamasının adını belirtin. İsterseniz IIS yolunu da ekleyebilirsiniz.<br /><br /> *" \<IISWebsiteName> \\<ııswebappname \> "*<br /><br /> -veya-<br /><br /> **"IIS: \ siteler** * \\<ııswebsitename \> \\<iiswebappname \> "*<br /><br /> Bu yolu IIS Yöneticisi'nde bulabilirsiniz. Örneğin:<br /><br /> ![IIS Web sitesi ve Web uygulaması yolu](../debugger/media/ffr_iismanager.png "FFR_IISManager")<br /><br /> [Get-website](https://technet.microsoft.com/library/ee807832.aspx) ve [Get WebApplication](https://technet.microsoft.com/library/ee790554.aspx) komutlarını da kullanabilirsiniz.|
     |*\<monitoringMode>*|İzleme modunu belirtin:<br /><br /> <ul><li>**İzleme**: özel durum olayları ve performans olayları hakkında en az ayrıntıları kaydedin. Bu mod varsayılan toplama planını kullanır.</li><li>**Trace**: belirtilen koleksiyon planını kullanarak işlev düzeyi ayrıntılarını kaydedin veya SharePoint 2010 ve SharePoint 2013 uygulamalarını izleyin. Bu mod, uygulamanızın daha yavaş çalışmasına neden olabilir.<br /><br /> <ul><li>[S: uygulama havuzu için izinleri ayarla Nasıl yaparım??](#FullPermissionsITLog)</li><li>[S: uygulamamı yavaşlatmadan en çok veriyi almak Nasıl yaparım??](#Minimizing)</li></ul><br />     Bu örnek, bir SharePoint sitesi üzerindeki SharePoint uygulaması için olayları kaydeder:<br /><br />     **Start-WebApplicationMonitoring "FabrikamSharePointSite\FabrikamSharePointApp" Trace "C:\Program Files\Microsoft Monitoring Agent\Agent\IntelliTraceCollector\collection_plan.ASP.NET.default.xml" "C:\IntelliTraceLogs"**</li><li>**Özel**: belirtilen özel toplama planını kullanarak özel ayrıntıları kaydedin. İzleme başladıktan sonra toplama planını değiştirirseniz izlemeyi yeniden başlatmanız gerekir.</li></ul>|
@@ -146,7 +146,7 @@ ms.locfileid: "85536415"
 
 ### <a name="q--a"></a>Soru-Cevap
 
-#### <a name="q-how-do-i-get-the-most-data-without-slowing-down-my-app"></a><a name="Minimizing"></a>S: uygulamamı yavaşlatmadan en çok veriyi almak Nasıl yaparım??
+#### <a name="q-how-do-i-get-the-most-data-without-slowing-down-my-app"></a><a name="Minimizing"></a> S: uygulamamı yavaşlatmadan en çok veriyi almak Nasıl yaparım??
  Y **:** Microsoft Monitoring Agent, çok sayıda veri toplayabilir ve toplamayı seçtiğiniz verilere ve bu verileri nasıl topladığınıza bağlı olarak uygulamanızın performansını etkiler. Uygulamanızı yavaşlatmadan en çok veriyi almanın bazı yolları aşağıda verilmiştir:
 
 - Web uygulamaları ve SharePoint uygulamaları için, aracı belirtilen uygulama havuzunu paylaşan her uygulama için veri kaydeder. Bu aynı uygulama havuzunu paylaşan herhangi bir uygulamayı, toplamayı tek bir uygulamanın modüllerine kısıtlamanıza rağmen yavaşlatabilir. Diğer uygulamaları yavaşlatmayı önlemek için, her uygulamayı kendi uygulama havuzunda barındırın.
@@ -228,7 +228,7 @@ Y **:** Performansla ilgili etkileri azaltmak için, aracı yalnızca şu değer
 
 Aracı `id`, `Employee.Id` ve `Employee.Name` değerlerini ve `Employee` yönteminden döndürülen `AlterEmployee` nesnesini kaydeder. Ancak aracı `Address` nesnesi hakkında, nesnenin null olup olmadığı dışında bilgi kaydetmez. Aracı, ayrıca, `AlterEmployee` yöntemindeki yerel değişkenlerle ilgili olarak, diğer yöntemler bu yerel değişkenleri parametre olarak kullanıp onların yöntem parametresi olarak kaydedilmesini sağlamadığı sürece, veri kaydetmez.
 
-## <a name="step-3-save-recorded-events"></a><a name="SaveEvents"></a>3. Adım: kayıtlı olayları kaydetme
+## <a name="step-3-save-recorded-events"></a><a name="SaveEvents"></a> 3. Adım: kayıtlı olayları kaydetme
  Bir hata veya performans sorunu bulduğunuzda, kayıtlı olayları bir IntelliTrace günlüğüne kaydedin. Aracı günlüğü yalnızca olay kaydettiyse oluşturur. System Center 2012 kullanıyorsanız bkz. [Microsoft Monitoring Agent Web uygulamalarını izleme](https://technet.microsoft.com/library/dn465157.aspx).
 
 ### <a name="save-recorded-events-but-continue-monitoring"></a>Kayıtlı olayları kaydedip izlemeye devam etme
@@ -240,7 +240,7 @@ Aracı `id`, `Employee.Id` ve `Employee.Name` değerlerini ve `Employee` yöntem
 
     **Checkpoint-WebApplicationMonitoring** *" \<IISWebsiteName> \\<ııswebappname \> "*
 
-    \-veya
+    \- veya
 
     **Checkpoint-WebApplicationMonitoring "IIS: \ Sites** * \\<ııswebsitename \> \\<iiswebappname \> "*
 
@@ -270,7 +270,7 @@ Aracı `id`, `Employee.Id` ve `Employee.Name` değerlerini ve `Employee` yöntem
 
     **Stop-WebApplicationMonitoring** *" \<IISWebsiteName> \\<ııswebappname \> "*
 
-    \-veya
+    \- veya
 
     **Stop-WebApplicationMonitoring "IIS: \ Sites** * \\<ııswebsitename \> \\<iiswebappname \> "*
 
@@ -282,7 +282,7 @@ Aracı `id`, `Employee.Id` ve `Employee.Name` değerlerini ve `Employee` yöntem
 
     **PS C: \\>Stop-WebApplicationMonitoring "Fabrikam\iFabrikamFiber.Web"**
 
-    \-veya
+    \- veya
 
     **PS C: \\>Stop-WebApplicationMonitoring "IIS: \ sites\Fabrikam\FabrikamFiber.Web"**
 

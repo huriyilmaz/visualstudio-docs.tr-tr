@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a585aa64fec565a58a3af245ff3d3beaa9dc8af3
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84173934"
 ---
 # <a name="design-warnings"></a>Tasarım uyarıları
@@ -27,7 +27,7 @@ Tasarım uyarıları [.NET Framework Tasarım yönergelerine](/dotnet/standard/d
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-| Kural | Açıklama |
+| Kural | Description |
 | - | - |
 | [CA1000: Genel türlerde statik üyeler belirtme](../code-quality/ca1000.md) | Genel türün statik üyesi çağrıldığında tür bağımsız değişkeni tür için belirlenmelidir. Destek çıkarımı desteklenmeyen genel örnek üyesi çağrıldığında tür bağımsız değişkeni üye için belirlenmelidir. Bu iki durumda tür bağımsız değişkenini belirleyen sözdizimi farklıdır ve kolaylıkla karıştırılır. |
 | [CA1001: Atılabilen alanlara sahip türler atılabilir olmalıdır](../code-quality/ca1001.md) | Bir sınıf, System. IDisposable türünde bir örnek alanı bildirir ve uygular ve sınıf IDisposable uygulamaz. IDisposable alanını derleyen sınıf, yönetilmeyen kaynağı dolaylı yoldan sahiplenir ve IDisposable arayüzünü uygulamalıdır. |
@@ -93,6 +93,6 @@ Tasarım uyarıları [.NET Framework Tasarım yönergelerine](/dotnet/standard/d
 | [CA1066: Equals’ı geçersiz kılarken IEquatable uygulayın](../code-quality/ca1066.md) | Değer türü yöntemi geçersiz kılar <xref:System.Object.Equals%2A> , ancak uygulamaz <xref:System.IEquatable%601> . |
 | [CA1067: IEquatable uygularken Equals’ı geçersiz kılın](../code-quality/ca1067.md) | Bir tür uygular <xref:System.IEquatable%601> , ancak metodunu geçersiz kılmaz <xref:System.Object.Equals%2A> . |
 | [CA1068: CancellationToken parametreleri en sonda olmalıdır](../code-quality/ca1068.md) | Bir yöntem, son parametre olmayan CancellationToken parametresine sahiptir. |
-| [CA1069: Numaralandırmalar yinelenen değerlere sahip olmamalıdır](../code-quality/ca1069.md) | Bir numaralandırma, aynı sabit değere açıkça atanmış birden çok üyeye sahiptir. |
-| [CA1070: olay alanlarını sanal olarak bildirme](../code-quality/ca1070.md) | [Alan benzeri bir olay](/dotnet/csharp/language-reference/language-specification/classes#field-like-events) sanal olarak bildirildi. |
+| [CA1069: Sabit listeleri yinelenen değerlere sahip olmamalıdır](../code-quality/ca1069.md) | Bir numaralandırma, aynı sabit değere açıkça atanmış birden çok üyeye sahiptir. |
+| [CA1070: Olay alanlarını sanal olarak bildirme](../code-quality/ca1070.md) | [Alan benzeri bir olay](/dotnet/csharp/language-reference/language-specification/classes#field-like-events) sanal olarak bildirildi. |
 | [CA2210: Derlemelerin geçerli tanımlayıcı adları olmalıdır](../code-quality/ca2210.md) | Güçlü ad oynanmış derlemeyi bilmeden yükleyerek istemcileri korur. Güçlü adı olmayan derlemeler oldukça sınırlı sayıda senaryo dışında kullanılmamalıdır. Düzgün imzalanmamış derlemeleri paylaşırsanız veya dağıtırsanız, derleme aslı bozuabilir, ortak dil çalışma zamanı derlemeyi yükleyemeyebilir veya kullanıcı kendi bilgisayarındaki doğrulamayı devre dışı bırakabilir. |

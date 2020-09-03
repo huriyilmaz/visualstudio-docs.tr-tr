@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ed93d852e385a6130cd37b0f66c99b4f0ab467bc
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586808"
 ---
 # <a name="concurrency-visualizer-sdk"></a>Eşzamanlılık Görselleştiricisi SDK
@@ -50,7 +50,7 @@ C#, Visual Basic ve diğer yönetilen kodda, [işaretçiler](/previous-versions/
     ```
 
 ### <a name="c"></a>C++
- C++ ' da, bir [marker_series Class](../profiling/marker-series-class.md) nesnesi oluşturun ve işlevleri çağırmak için kullanın.  `marker_series` Sınıfı; işaretçiler oluşturmak için üç işlev, [marker_series:: write_flag yöntemi](../profiling/marker-series-write-flag-method.md), [marker_series:: write_message yöntemini](../profiling/marker-series-write-message-method.md)ve [marker_series:: write_alert yöntemini](../profiling/marker-series-write-alert-method.md)sunar.
+ C++ ' da, bir [marker_series Class](../profiling/marker-series-class.md) nesnesi oluşturun ve işlevleri çağırmak için kullanın.  `marker_series`Sınıfı; işaretçiler oluşturmak için üç işlev, [marker_series:: write_flag yöntemi](../profiling/marker-series-write-flag-method.md), [marker_series:: write_message yöntemini](../profiling/marker-series-write-message-method.md)ve [marker_series:: write_alert yöntemini](../profiling/marker-series-write-alert-method.md)sunar.
 
 ##### <a name="to-add-sdk-support-to-a-c-or-c-project"></a>C++ veya C projesine SDK desteği eklemek için
 
@@ -58,7 +58,7 @@ C#, Visual Basic ve diğer yönetilen kodda, [işaretçiler](/previous-versions/
 
 2. SDK 'ya erişmek istediğiniz projeyi seçin ve ardından **Seçili proje IÇIN SDK Ekle** düğmesini seçin.
 
-3. C++ için dahil `cvmarkersobj.h`edin. C için dahil `cvmarkers.h`edin.
+3. C++ için dahil edin `cvmarkersobj.h` . C için dahil edin `cvmarkers.h` .
 
 4. Kodunuza bir using deyimleri ekleyin.
 
@@ -84,7 +84,7 @@ C#, Visual Basic ve diğer yönetilen kodda, [işaretçiler](/previous-versions/
 
 #### <a name="to-use-a-new-marker-provider-in-a-c-or-c-project"></a>C++ veya C projesinde yeni bir işaretleyici sağlayıcı kullanmak için
 
-1. PCV_PROVIDER başlatmak `CvInitProvider` için işlevini kullanın. Oluşturucu bir GUID * ve PCV_PROVIDER\*alır.
+1. `CvInitProvider`PCV_PROVIDER başlatmak için işlevini kullanın. Oluşturucu bir GUID * ve PCV_PROVIDER alır \* .
 
 2. Sağlayıcıyı kaydetmek için [Gelişmiş ayarlar](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) iletişim kutusunu açın. **İşaretleyiciler** sekmesini seçin ve ardından **Yeni Sağlayıcı Ekle** düğmesini seçin. Bu iletişim kutusunda, sağlayıcıyı oluşturmak için kullanılan GUID 'yi ve sağlayıcının açıklamasını girin.
 
@@ -113,7 +113,7 @@ C#, Visual Basic ve diğer yönetilen kodda, [işaretçiler](/previous-versions/
 
 #### <a name="to-use-a-marker-series-in-a-c-project"></a>Bir C projesinde işaretleyici serisini kullanmak için
 
-1. PCV_MARKERSERIES oluşturmak `CvCreateMarkerSeries` için işlevini kullanın.
+1. `CvCreateMarkerSeries`PCV_MARKERSERIES oluşturmak için işlevini kullanın.
 
     ```cpp
     PCV_MARKERSERIES series;

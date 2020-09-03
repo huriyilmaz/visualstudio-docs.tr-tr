@@ -15,10 +15,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 936c6b2ee9e05d059c09c2aa074829b35b6ca5fd
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287993"
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>Nasıl yapılır: veri temelli birim testi oluşturma
@@ -152,7 +152,7 @@ Bağlantı dizeleri veri kaynağı türünün türüne bağlıdır, ancak veri s
 
 ### <a name="use-testcontextdatarow-to-access-the-data"></a>Verilere erişmek için TestContext. DataRow kullanın
 
-Tablodaki verilere erişmek için `AddIntegersData` `TestContext.DataRow` Dizin oluşturucuyu kullanın. `DataRow`bir <xref:System.Data.DataRow> nesnedir, bu nedenle sütun değerlerini dizin veya sütun adlarına göre alın. Değerler nesneler olarak döndürüldüğünden, bunları uygun türe dönüştürün:
+Tablodaki verilere erişmek için `AddIntegersData` `TestContext.DataRow` Dizin oluşturucuyu kullanın. `DataRow` bir <xref:System.Data.DataRow> nesnedir, bu nedenle sütun değerlerini dizin veya sütun adlarına göre alın. Değerler nesneler olarak döndürüldüğünden, bunları uygun türe dönüştürün:
 
 ```csharp
 int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);

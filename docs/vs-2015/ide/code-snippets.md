@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5b41b6e4d4a7635b32edb5697c89ecb1249fb9da
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72619723"
 ---
 # <a name="code-snippets"></a>Kod Parçacıkları
@@ -32,9 +32,9 @@ ms.locfileid: "72619723"
 Kod parçacıkları, bağlam menüsü komutu veya kısayol tuşlarının birleşimini kullanarak bir kod dosyasına eklenebilen yeniden kullanılabilir kod bloklarında yer alabilir. Genellikle try-finally veya if-else blokları gibi yaygın olarak kullanılan kod blokları içerirler, ancak tüm sınıfları veya yöntemleri eklemek için kullanılabilirler.
 
 ## <a name="expansion-snippets-and-surround-with-snippets"></a>Genişleme parçacıkları ve surround-kod parçacıkları
- Visual Studio 'da, belirtilen bir ekleme noktasına eklenen ve bir kod parçacığı kısayolunun yanı sıra (yalnızca ve yalnızca) kod parçacığı kısayolunu ve birlikte çevrelemeyi (C# yalnızca ve C++ yalnızca) içerebilen bir kod parçacığı olan iki tür kod parçacığı vardır.
+ Visual Studio 'da, belirtilen bir ekleme noktasına eklenen ve kod parçacığı kısayolunun yanı sıra bir kod parçacığı kısayolunun (yalnızca C# ve C++) yerini alacak şekilde iki tür kod parçacığı vardır: genişletme parçacıkları.
 
- Bir ekleme kod parçacığına bir örnek: C# tryf kısayolunun bir try-finally bloğu eklemek için kullanılır:
+ Ekleme kod parçacığına bir örnek: C# ' de, try-finally bloğu eklemek için tryf kısayolunun kullanılması:
 
 ```
 try
@@ -48,9 +48,9 @@ finally
 
 ```
 
- Kod penceresinin bağlam menüsünde kod **parçacığı Ekle** ' ye tıklayıp ardından **görsel C#** ' i yazıp `tryf`, sonra sekme yazıp `tryf` yazıp sekme + SEKME tuşlarına basarak bu parçacığı ekleyebilirsiniz.
+ Kod penceresinin bağlam menüsünde kod **parçacığı Ekle** ' ye tıklayıp sonra **Visual C#**' a, sonra `tryf` da YAZıP sekme `tryf` tuşuna basarak veya sekme + Tab tuşlarına basarak bu kod parçacığını ekleyebilirsiniz.
 
- Kısayol `if` C++ , bir ekleme kod parçacığı ya da surround olarak kod parçacığı olarak kullanılabilir. Bir kod satırı seçerseniz (örneğin `return FALSE;`) **ve ardından** **ile Çevrele**' ye tıklarsanız, kod parçacığı satır etrafında genişletilir:
+ Bir surround-kod parçacığı ile bir örnek: C++ ' da, `if` ekleme parçacığı ya da bir surround olarak kod parçacığı olarak kullanılabilir. Bir kod satırı seçer (örneğin `return FALSE;` ) ve ardından **Ile Çevrele**' ye tıklarsanız, parçacık satır etrafında **if**genişletilir:
 
 ```
 if (true)
@@ -61,7 +61,7 @@ if (true)
 ```
 
 ## <a name="snippet-replacement-parameters"></a>Kod parçacığı değiştirme parametreleri
- Kod parçacıkları, yazmakta olduğunuz kesin kodu sığdırmak için değiştirmeniz gereken yer tutucuları olan değiştirme parametrelerini içerebilir. Önceki örnekte `true`, uygun koşulla değiştireceğiniz bir değiştirme parametresidir. Yaptığınız değişiklik, kod parçacığında aynı değiştirme parametresinin her örneği için yinelenir.
+ Kod parçacıkları, yazmakta olduğunuz kesin kodu sığdırmak için değiştirmeniz gereken yer tutucuları olan değiştirme parametrelerini içerebilir. Önceki örnekte `true` , uygun koşulla değiştireceğiniz bir değiştirme parametresidir. Yaptığınız değişiklik, kod parçacığında aynı değiştirme parametresinin her örneği için yinelenir.
 
  Örneğin, Visual Basic bir özelliği ekleyen bir kod parçacığı vardır. Kod penceresinin bağlam menüsünde **parçacığı Ekle** ' ye tıklayın, ardından **kod desenleri**, **Özellikler, yordamlar, olaylar**ve bir özellik tanımlayın. Aşağıdaki kod eklenir:
 
@@ -78,7 +78,7 @@ End Property
 
 ```
 
- @No__t_0 `m_property` olarak değiştirirseniz `newPropertyValue` her örneği değiştirilir. Özellik bildiriminde `Int` `String` değiştirirseniz, set yöntemindeki değer de `Int` olarak değiştirilir.
+ `newPropertyValue`' A geçiş yaparsanız `m_property` , her örneği `newPropertyValue` değiştirilir. `String` `Int` Özelliğini özellik bildiriminde olarak değiştirirseniz, set yöntemindeki değer de olarak değiştirilir `Int` .
 
 ## <a name="code-snippet-manager"></a>Kod parçacığı Yöneticisi
  **Araçlar/kod parçacıkları Yöneticisi**' ne tıklayarak şu anda yüklü olan tüm kod parçacıklarını ve disk üzerindeki konumlarını görebilirsiniz. Kod parçacıkları dile göre görüntülenir.
@@ -86,4 +86,4 @@ End Property
  **Kod parçacıkları Yöneticisi** Iletişim kutusunda **ekleme** ve **kaldırma** düğmeleri ile kod parçacığı dizinleri ekleyebilir ve kaldırabilirsiniz. Bağımsız kod parçacıkları eklemek için **Içeri aktar** düğmesini kullanın.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Izlenecek yol: kod parçacığı oluşturma](../ide/walkthrough-creating-a-code-snippet.md) [nasıl yapılır:](../ide/how-to-distribute-code-snippets.md) kod parçacıkları [Ile ilgili en iyi yöntemleri](../ide/best-practices-for-using-code-snippets.md) dağıtma kod parçacıkları [sorun giderme parçacıkları](../ide/troubleshooting-snippets.md) [görsel C# kod parçacıkları](../ide/visual-csharp-code-snippets.md) [görsel C++ kod parçacıkları](../ide/visual-cpp-code-snippets.md) [Kod parçacıkları şema başvurusu](../ide/code-snippets-schema-reference.md)
+ [Izlenecek yol: kod parçacığı oluşturma](../ide/walkthrough-creating-a-code-snippet.md) [nasıl yapılır:](../ide/how-to-distribute-code-snippets.md) kod parçacıkları [Için en iyi](../ide/best-practices-for-using-code-snippets.md) kod parçacıkları dağıtım kod parçacıkları [sorun giderme parçacıkları](../ide/troubleshooting-snippets.md) [Visual C# kod parçacıkları](../ide/visual-csharp-code-snippets.md) [Visual C++ kod](../ide/visual-cpp-code-snippets.md) parçacıkları [kod parçacıkları şema başvurusu](../ide/code-snippets-schema-reference.md)

@@ -9,166 +9,166 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8f20fdb4cd809e422bc33535f3143b45db99842f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633349"
 ---
 # <a name="msbuild-glossary"></a>MSBuild sözlüğü
 
-Bu terimler, Microsoft Build Engine (MSBuild) ve bileşenlerini tanımlamak için kullanılır.
+Bu terimler Microsoft Build Engine (MSBuild) ve bileşenlerini tanımlamakta kullanılır.
 
 ## <a name="glossary"></a>Sözlük
 
-AssemblyFoldersEx\
-Üçüncü taraf satıcıların, tasarım süresi çözümlemesi referans derlemeleri bulmak için bakabilecekleri çerçevenin destekledikleri her sürümü için yollar depoladıkları bir kayıt defteri konumu.
+AssemblyFoldersEx
+Üçüncü taraf satıcıların, tasarım zamanı çözümlemenin başvuru derlemelerini bulmak için nerede görünebileceği, desteklediği her bir sürüm için yolları depolayacağı bir kayıt defteri konumu.
 
-toplu iş\
-Toplu İşlem, maddeleri madde meta verilerine göre *toplu iş*olarak bilinen farklı kategorilere bölmek ve her bir toplu iş parçasını kullanarak bir hedefi veya görevi bir kez çalıştırmak anlamına gelir. Toplu İşlem, for-loop yapısının MSBuild eşdeğeridir. Daha fazla bilgi için [Toplu İşlem'e](../msbuild/msbuild-batching.md)bakın.
+işlem
+Toplu işleme öğeleri, öğe meta verileri temelinde *toplu*iş olarak bilinen farklı kategorilere bölmek ve sonra her toplu işi kullanarak bir kez hedef veya görev çalıştırmak anlamına gelir. Toplu işleme, for--Loop yapısının MSBuild eşdeğeridir. Daha fazla bilgi için bkz. [toplu](../msbuild/msbuild-batching.md)işlem.
 
-yapı kapsamı\
-Yapı kapsamı, örneğin, bir proje ve çoklu proje yapısında oluşturulan tüm alt projeler tarafından görülebilir bir genel özellik olan bir MSBuild nesnesini açıklar.
+Yapı kapsamı \
+Yapı kapsamı, bir proje için ve çok projeli bir derlemede oluşturulan herhangi bir alt proje için görünebilir olan genel bir özellik gibi bir MSBuild nesnesini tanımlar.
 
-çocuk projesi\
-*Projeye bak, çocuk.*
+alt proje \
+Bkz. *Proje, alt*.
 
-durum\
-Birçok MSBuild öğesi koşullu olarak tanımlanabilir; diğer bir `Condition` deyişle, öznitelik öğede görünür. Koşullu öğelerin içeriği, koşul değerlendirilmesi `true`sürece yoksayılır. Daha fazla bilgi için [Koşullar'a](../msbuild/msbuild-conditions.md)bakın.
+koşul
+Birçok MSBuild öğesi koşullu olarak tanımlanabilir; diğer bir deyişle, `Condition` özniteliği öğesinde görüntülenir. Koşul olarak değerlendirilmediği takdirde koşullu öğelerin içeriği yoksayılır `true` . Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).
 
-tanım, öğe\
-*Madde tanımına*bakın.
+Tanım, öğe \
+*Öğe tanımına*bakın.
 
-öğeyi yayıyorum\
-Yapının yürütme aşamasında, öğeler özniteliği olan `Output` `ItemName` alt öğeleri olan görevler tarafından oluşturulabilir veya değiştirilebilir. Görevin yeni öğeleri "yayıştırmak" olduğu söylenir.
+öğeyi yay \
+Bir yapılandırmanın yürütme aşamasında, öğeleri özniteliği olan alt öğeleri olan görevler tarafından oluşturulabilir veya değiştirilebilir `Output` `ItemName` . Görev, yeni öğeleri "yayma" olarak kabul edilir.
 
-özellik yayıyorum\
-Yapının yürütme aşamasında, özellikler öznitelik sahibi `Output` `PropertyName` alt öğeleri olan görevler tarafından oluşturulabilir veya değiştirilebilir. Görevin yeni mülkü "yayıştırmak" olduğu söylenir.
+özelliği göster \
+Bir yapı yürütme aşamasında özellikler, özniteliği olan alt öğeleri olan görevler tarafından oluşturulabilir veya değiştirilebilir `Output` `PropertyName` . Görev, yeni özelliği "yayma" olarak kabul edilir.
 
-değerlendirme aşaması\
-Değerlendirme, proje oluşturmanın ilk aşamasıdır. Tüm özellikler ve öğeler projede göründükleri sırada değerlendirilir. İthal edilen projeler, projede karşılaşılan gibi değerlendirilir. Hedefler ve görevler yürütme aşamasına kadar çalıştırılmez ve beyan ettikleri veya yayacakları özellikler veya öğeler değerlendirme sırasında yoksayılır.
+değerlendirme aşaması \
+Değerlendirme, proje derlemesinin ilk aşamasıdır. Tüm özellikler ve öğeler, projede göründükleri sırayla değerlendirilir. İçeri aktarılan projeler, projede karşılaştığı şekilde değerlendirilir. Hedefler ve görevler, yürütme aşamasına kadar çalışmaz ve bildirildikleri ya da yayma işlemleri değerlendirme sırasında yok sayılır.
 
-yürütme aşaması\
-Yürütme, proje oluşturmanın ikinci aşamasıdır. Seçili hedefler oluşturulur ve görevler çalıştırılır. Özellikler ve öğeler, değerlendirme değerlerine göre oluşturulabilir veya değiştirilebilir.
+yürütme aşaması \
+Yürütme, proje derlemesinin ikinci aşamasıdır. Seçilen hedefler oluşturulur ve görevler çalıştırılır. Özellikler ve öğeler, değerlendirme değerleriyle karşılaştırıldığında oluşturulabilir veya değiştirilebilir.
 
-fonksiyonu, özellik\
-*Bkz. özellik işlevi.*
+işlev, özellik \
+Bkz. *Özellik işlevi*.
 
-fonksiyonu, öğe\
-Madde işlevine bakın.
+işlev, öğe \
+Bkz. öğe işlevi.
 
-öğe\
-Öğeler yapı sistemine girer ve öğe adlarına göre madde türlerine gruplanır. Öğeler genellikle dosyaları temsil. Maddeler ait oldukları madde türüne göre adlandırıldıklarına göre, *terimler madde* ve *madde değeri* birbirinin yerine kullanılabilir. Daha fazla bilgi için [Öğeler'e](../msbuild/msbuild-items.md)bakın.
+maddesinin
+Öğeler, derleme sistemine giriş ve öğe adlarına göre öğe türlerine göre gruplandırılır. Öğeler genellikle dosyaları temsil eder. Öğeler ait oldukları öğe türüne göre adlandırıldıklarından, hüküm *öğesi* ve *öğe değeri* birbirlerinin yerine kullanılabilir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).
 
-madde tanımı\
-Madde tanım grupları, herhangi bir madde türüne varsayılan meta veri ekleyen madde tanımları içerir. İyi bilinen meta veriler gibi, varsayılan meta veriler de belirtilen madde türünün tüm öğeleriyle ilişkilidir. Varsayılan meta veriler, madde tanımında açıkça geçersiz kılınabilir. Daha fazla bilgi için [Madde tanımlarına](../msbuild/item-definitions.md)bakın.
+öğe tanımı \
+Öğe tanımı grupları herhangi bir öğe türüne varsayılan meta veri ekleyen öğe tanımlarını içerir. İyi bilinen meta veriler gibi, varsayılan meta veriler belirtilen öğe türünün tüm öğeleriyle ilişkilendirilir. Varsayılan meta veriler, bir öğe tanımında açıkça geçersiz kılınabilir. Daha fazla bilgi için bkz. [öğe tanımları](../msbuild/item-definitions.md).
 
-öğe fonksiyonu\
-Öğe işlevleri projedeki öğeler hakkında bilgi alır. Bu işlevler Distinct() öğelerini almayı kolaylaştırır ve öğeler arasında döngü yapmaktan daha hızlıdır. Öğe yollarını ve dizeleri işlemek için işlevler vardır. Daha fazla bilgi için [Öğe işlevlerine](../msbuild/item-functions.md)bakın.
+öğe işlevi \
+Öğe işlevleri, projedeki öğeler hakkında bilgi alır. Bu işlevler ayrı () öğeleri almayı basitleştirir ve öğeler aracılığıyla döngüden daha hızlıdır. Öğe yollarını ve dizeleri işlemek için işlevler vardır. Daha fazla bilgi için bkz. [öğe işlevleri](../msbuild/item-functions.md).
 
-öğe meta data\
+öğe meta verileri \
 Bkz. *meta veriler, öğe*.
 
-öğe türü\
-Madde türleri, görevler için parametre olarak kullanılabilecek öğelerin listeleri olarak adlandırılır. Görevler, yapı işleminin adımlarını gerçekleştirmek için madde değerlerini kullanır. Daha fazla bilgi için [Öğeler'e](../msbuild/msbuild-items.md)bakın.
+öğe türü \
+Öğe türleri, görevler için parametre olarak kullanılabilecek öğelerin adlandırılmış listeleridir. Görevler, yapı işleminin adımlarını gerçekleştirmek için öğe değerlerini kullanır. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).
 
-meta veri, öğe\
-Madde meta verileri, bir öğeyle ilişkili ad değeri çiftleri topluluğudur. Meta veriler öğe için açıklayıcı bilgiler sağlar ve iyi bilinen meta veriler dışında isteğe bağlıdır. Daha fazla bilgi için [Öğeler'e](../msbuild/msbuild-items.md)bakın.
+meta veri, öğe \
+Öğe meta verileri bir öğeyle ilişkili ad-değer çiftleri koleksiyonudur. Meta veriler, öğe için açıklayıcı bilgiler sağlar ve iyi bilinen meta veriler dışında isteğe bağlıdır. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).
 
-meta veriler, iyi bilinen\
-İyi bilinen meta veriler, önceden tanımlanmış bir değer kullanılarak başharfe bürünen salt okunur öğe meta verileridir. İyi bilinen meta veriler, dosyaya başvuran bir öğe için açıklayıcı bilgiler sağlar. Örneğin, tanınmış meta verilerin değeri başvurulan `FullPath` dosyanın tam yoludur. Daha fazla bilgi için [Öğeler'e](../msbuild/msbuild-items.md)bakın.
+meta veriler, iyi bilinen \
+İyi bilinen meta veriler önceden tanımlanmış bir değer kullanılarak başlatılan salt okunurdur. İyi bilinen meta veriler, bir dosyaya başvuran bir öğe için açıklayıcı bilgiler sağlar. Örneğin, adlı iyi bilinen meta verilerin değeri, `FullPath` başvurulan dosyanın tam yoludur. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).
 
-çoklu hedefleme\
-MsBuild ve Visual Studio birçok farklı CLR ve çerçeveleri hedef bir uygulama veya montaj projesi için yeteneği.
+çoklu sürüm desteği
+Bir uygulama veya derleme projesinin, MSBuild 'den ve Visual Studio 'dan birçok farklı CLR 'nin ve çerçevesini hedefleyebilme özelliği.
 
-profili\
-Tam çerçevenin bir alt kümesi. Bu, bir makineye karşıdan yüklenmeleri gereken miktarı en aza indirmek için kullanılır.
+profilinizi
+Tam Framework 'ün bir alt kümesi. Bu, bir makineye indirilmesi gereken miktarı en aza indirmek için kullanılır.
 
-proje dosyası\
-Proje dosyası, yapıyı denetleyen MSBuild komut dosyası içerir. Proje dosyaları genellikle *proj*ile biten bir dosya uzantısı var , *.csproj* veya *.vbproj*gibi . Proje dosyaları özellik ve hedef dosyaları içe aktarabilir.
+Proje dosyası \
+Proje dosyası, derlemeyi denetleyen MSBuild betiğini içerir. Proje dosyaları genellikle *. csproj* veya *. vbproj*gibi *proj*ile biten bir dosya uzantısına sahiptir. Proje dosyaları, özellik dosyalarını ve hedef dosyaları içeri aktarabilir.
 
-özellik\
-Özellik, yapı işlemini denetlemek için kullanılan anahtar değer çiftidir. Daha fazla bilgi için [MSBuild özelliklerine](../msbuild/msbuild-properties.md)bakın.
+özelliði
+Özellik, yapı işlemini denetlemek için kullanılan bir anahtar-değer çiftidir. Daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
 
-mülkiyet, çevre\
-Ortam özelliği, aynı ada sahip bir sistem ortamı değişkeninin değerine otomatik olarak başharflenen bir özelliktir. Daha fazla bilgi için [MSBuild özelliklerine](../msbuild/msbuild-properties.md)bakın.
+Özellik, ortam \
+Ortam özelliği, aynı ada sahip bir sistem ortam değişkeninin değerine otomatik olarak başlatılan bir özelliktir. Daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
 
-özellik dosyası\
-Özellik dosyası, çoğunlukla özellik grupları ve yapıya kılavuz öğe gruplarını içeren bir proje dosyasıdır. Sözleşmeye göre, bu dosya uzantısı *.props*vardır. Özellik dosyaları genellikle ilişkili proje dosyalarının başında alınır.
+Özellik dosyası \
+Özellik dosyası, derleme kılavuzunu oluşturan genellikle özellik gruplarını ve öğe gruplarını içeren bir proje dosyasıdır. Kurala göre, *. props*dosya uzantısına sahiptir. Özellik dosyaları genellikle ilişkili proje dosyalarının başlangıcında içeri aktarılır.
 
-özellik, fonksiyon\
-Özellik işlevi, MSBuild komut dosyalarını değerlendirmek için kullanılabilecek bir sistem özelliği veya yöntemidir. Özellik yöntemleri, sistem zamanını okumak, dizeleri karşılaştırmak, normal ifadeleri eşleştirmek ve diğer eylemleri gerçekleştirmek için kullanılabilir. Daha fazla bilgi için [Bkz. Özellik işlevleri.](../msbuild/property-functions.md)
+Özellik, işlev \
+Özellik işlevi, MSBuild betiklerini değerlendirmek için kullanılabilen bir sistem özelliğidir veya yöntemidir. Özellik yöntemleri, sistem saatini okumak, dizeleri karşılaştırmak, normal ifadelerle eşleştirmek ve diğer işlemleri gerçekleştirmek için kullanılabilir. Daha fazla bilgi için bkz. [özellik işlevleri](../msbuild/property-functions.md).
 
-özellik fonksiyonu, iç içe\
-Özellik işlevleri daha karmaşık işlevler oluşturmak için birleştirilebilir. Örneğin,
+Özellik işlevi, iç içe geçmiş \
+Özellik işlevleri, daha karmaşık işlevler oluşturmak için birleştirilebilir. Örneğin,
 
  `$([MSBuild]::BitwiseAnd(32,   $([System.IO.File]::GetAttributes(tempFile))))`
 
-Daha fazla bilgi için [Bkz. Özellik işlevleri.](../msbuild/property-functions.md)
+Daha fazla bilgi için bkz. [özellik işlevleri](../msbuild/property-functions.md).
 
-mülkiyet, küresel\
-Genel özellik, yapı işlemini denetlemek için kullanılan anahtar değer çiftidir. Genel özellikler komut isteminde veya BIR `Properties` [MSBuild görevinin](../msbuild/msbuild-task.md)özniteliği kullanılarak ayarlanır ve yapının değerlendirme aşamasında değiştirilemez. Daha fazla bilgi için [MSBuild özelliklerine](../msbuild/msbuild-properties.md)bakın.
+Özellik, Genel \
+Genel özellik, yapı işlemini denetlemek için kullanılan bir anahtar-değer çiftidir. Genel Özellikler bir komut isteminde veya bir `Properties` [MSBuild görevinin](../msbuild/msbuild-task.md)özniteliği kullanılarak ayarlanır ve bir yapılandırmanın değerlendirme aşamasında değiştirilemez. Daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
 
-özellik, yerel\
-Yerel özellik, yapı işlemini denetlemek için kullanılan anahtar değer çiftidir. Bu terim yalnızca genel bir özellik olmayan bir özelliği ayırt etmek için kullanılır.
+Özellik, yerel \
+Yerel bir özellik, yapı işlemini denetlemek için kullanılan bir anahtar-değer çiftidir. Bu terim yalnızca genel özellik olmayan bir özelliği ayırt etmek için kullanılır.
 
-mülkiyet, kayıt defteri\
-Kayıt defteri özelliği, sistem kayıt defteri alt anahtarının değerini okuyan özel bir sözdizimi kullanılarak ayarlanan bir değere sahiptir. Daha fazla bilgi için [MSBuild özelliklerine](../msbuild/msbuild-properties.md)bakın.
+Özellik, kayıt defteri \
+Bir kayıt defteri özelliğinin bir sistem kayıt defteri alt anahtarının değerini okuyan özel bir sözdizimi kullanılarak ayarlanan bir değeri vardır. Daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
 
-mülkiyet, ayrılmış\
-Ayrılmış özellik, yapı işlemini denetlemek için kullanılan anahtar değer çiftidir. Ayrılmış özellikler otomatik olarak önceden tanımlanmış değerlere başolarak başlanır. Daha fazla bilgi için [MSBuild özelliklerine](../msbuild/msbuild-properties.md)bakın.
+Özellik, ayrılmış \
+Ayrılmış bir özellik, yapı işlemini denetlemek için kullanılan bir anahtar-değer çiftidir. Ayrılmış Özellikler otomatik olarak önceden tanımlanmış değerler olarak başlatılır. Daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
 
-proje kapsamı\
-Proje kapsamı, yalnızca içeren proje dosyasında ve içe aktardığı tüm projelerde görülebilen bir MSBuild nesnesini (örneğin, yerel bir özellik) açıklar.
+Proje-kapsam \
+Proje kapsamı, örneğin, yalnızca içeren proje dosyasında ve içeri aktardığı herhangi bir projede görünür olan yerel bir özellik gibi bir MSBuild nesnesini tanımlar.
 
-proje, çocuk\
-Bir alt proje, proje oluşturma sırasında MSBuild görevi tarafından oluşturulur. Bu yeni proje, MSBuild görevini içeren hedefi içeren veya içe alan projenin bir alt nedenidir. Öznitelik tarafından `Properties` değiştirilmediği sürece, alt proje ana projenin genel özelliklerini devralır.
+Proje, alt öğe \
+Bir alt proje, proje derlemesi sırasında MSBuild görevi tarafından oluşturulur. Bu yeni proje, MSBuild görevini içeren hedefi içeren veya içeri aktaran projenin bir alt öğesidir. Alt proje, öznitelik tarafından değiştirilmedikleri takdirde üst projenin genel özelliklerini devralır `Properties` .
 
-redist listesi\
-Yeniden dağıtım listesi: belirli bir çerçeveye karşılık gelen derlemeler listesi.
+Redist listesi \
+Yeniden dağıtım listesi: belirli bir çerçeveye karşılık gelen derlemelerin listesi.
 
-referans derleme\
-Bir uygulama oluşturmak için tasarım süresi içinde kullanılan bir derleme. Bir başvuru derlemesi, gerçek kodu ve özel arabirimleri ondan kaldırarak yalnızca meta verileri ve ortak arabirimleri bırakabilir.
+başvuru derlemesi \
+Tasarım zamanı sırasında bir uygulama oluşturmak için kullanılan bir derleme. Bir başvuru derlemesi, gerçek kod ve özel arabirimlerin kaldırılmasına ve yalnızca meta verileri ve genel arabirimleri terk edebilir.
 
-kayıt özelliği\
-Bkz. *mülkiyet, kayıt defteri.*
+kayıt defteri özelliği \
+Bkz. *özellik, kayıt defteri*.
 
-hedef\
-Hedef, görevleri belirli bir sırada gruplaştırır ve proje dosyasının bölümlerini yapı işlemine giriş noktası olarak ortaya çıkarır. Daha fazla bilgi için [Bkz. Hedefler.](../msbuild/msbuild-targets.md)
+hedef
+Hedef, görevleri belirli bir sırada gruplandırır ve proje dosyasının bölümlerini yapı işlemine giriş noktası olarak gösterir. Daha fazla bilgi için bkz. [hedefler](../msbuild/msbuild-targets.md).
 
-hedef, bina\
-Hedefe bak, koşuyor.
+hedef, derleme \
+Bkz. hedef, çalışıyor.
 
-hedef, değerlendirme\
-Artımlı derleme nedeniyle, hedefler özellikleri ve öğeleri olası değişiklikler için analiz edilmelidir. Hedef atlansa bile, bu değişiklikler yapılmalıdır. Bir hedefi değerlendirmek, bu çözümlemesi gerçekleştirmek ve bu değişiklikleri yapmak anlamına gelir. Daha fazla bilgi için [Bkz. Artımlı yapılar.](../msbuild/incremental-builds.md)
+hedef, değerlendirme \
+Artımlı derleme nedeniyle, hedefler Özellikler ve öğelerde olası değişiklikler için çözümlenmelidir. Hedef atlansa bile, bu değişikliklerin yapılması gerekir. Bir hedefin değerlendirilmesi, bu çözümlemenin gerçekleştirilmesi ve bu değişikliklerin yapılması anlamına gelir. Daha fazla bilgi için bkz. [Artımlı derlemeler](../msbuild/incremental-builds.md).
 
-hedef, yürütme\
-Bir hedefi yürütmek, hedefi değerlendirmek ve koşulsuz veya koşulları doğru olarak değerlendirilen tüm görevleri yürütmek anlamına gelir. Artımlı derleme sırasında, hedefler atlanabilir veya yürütülebilir, ancak her zaman değerlendirilir. Daha fazla bilgi için, hedef, değerlendirme bakın.
+hedef, yürütülüyor \
+Bir hedefin yürütülmesi, bir koşulu değerlendirmek ve koşulsız tüm görevleri yürütmek ya da koşullarını doğru olarak değerlendirmek anlamına gelir. Artımlı derleme sırasında hedefler atlanabilir veya Yürütülebilirler, ancak her zaman değerlendirilir. Daha fazla bilgi için bkz. hedef, değerlendirme.
 
-hedef, çalışan\
-Yanlışı değerlendiren bir koşula sahip bir hedef çalıştırılmez, yani yapı üzerinde hiçbir etkisi yoktur. Çalıştırılan hedefler yürütülür veya atlanır. Her iki durumda da hedef değerlendirilir. Daha fazla bilgi için, hedef, değerlendirme bakın.
+hedef, çalışıyor \
+False olarak değerlendirilen bir koşula sahip bir hedef çalıştırılmadı, diğer bir deyişle, derleme üzerinde hiçbir etkisi yoktur. Çalıştırılan hedefler yürütülür ya da atlanır. Her iki durumda da hedef değerlendirilir. Daha fazla bilgi için bkz. hedef, değerlendirme.
 
-hedef, atlama\
-Artımlı derleme tüm çıktı dosyalarının güncel olduğunu belirlerse, hedef atlanır, yani hedef değerlendirilir, ancak hedef içindeki görevler yürütülmez. Daha fazla bilgi için, hedef, değerlendirme bakın.
+hedef, atlanıyor \
+Artımlı derleme tüm çıkış dosyalarının güncel olduğunu belirlerse, hedef atlanır, yani hedef değerlendirilir, ancak hedef içindeki görevler yürütülmez. Daha fazla bilgi için bkz. hedef, değerlendirme.
 
-hedef çerçeve lakabı\
-Çerçeveyi açıklayan bir ad (örneğin. NETFramework, Silverlight, vb. sürüm ve hedeflemek istediğiniz profil (İstemci, Sunucu, vb.)
+hedef çerçeve bilinen adı \
+Framework tanımlayan bir ad (örneğin,. NETFramework, Silverlight, vb.), sürüm ve hedeflemek istediğiniz profil (Istemci, sunucu vb.).
 
-hedefleme paketi\
-Belirli bir çerçeveyle dağıtılan derlemelerin listesi ve bu çerçeve için başvuru derlemeleri kümesi.
+hedeflenen paket \
+Belirli bir çerçeve ile dağıtılan derlemelerin listesi ve bu çerçeve için başvuru derlemeleri kümesi.
 
-hedefler dosyası\
-Hedefler dosyası, çoğunlukla hedefleri ve yapıyı yönlendiren görevleri içeren bir proje dosyasıdır. Sözleşmeye göre, dosya uzantısı *.targets*vardır. Hedef dosyalar genellikle ilişkili proje dosyalarının sonunda alınır.
+Hedef dosya \
+Hedef dosya, genellikle derlemeyi rehberlik eden hedefleri ve görevleri içeren bir proje dosyasıdır. Kurala göre, *. targets*dosya uzantısına sahiptir. Hedef dosyalar genellikle ilişkili proje dosyalarının sonuna aktarılır.
 
-görev\
-Görevler, MSBuild projelerinin yapı işlemleri gerçekleştirmek için kullandığı yürütülebilir kod birimleridir. Örneğin, bir görev giriş dosyalarını derleyebilir veya harici bir araç çalıştırabilir. Daha fazla bilgi için [Görevler'e](../msbuild/msbuild-tasks.md)bakın.
+görevinin
+Görevler, MSBuild projelerinin derleme işlemlerini gerçekleştirmek için kullandığı yürütülebilir kod birimleridir. Örneğin, bir görev giriş dosyalarını derleyebilir veya bir dış araç çalıştırabilir. Daha fazla bilgi için bkz. [Görevler](../msbuild/msbuild-tasks.md).
 
-dönüştürme\
-Dönüştürme, bir öğe koleksiyonunun diğerine bire bir dönüştürülmesidir. Bir projenin madde koleksiyonlarını dönüştürmesini etkinleştirmeye ek olarak, dönüştürme, bir hedefin girdi ve çıktıları arasında doğrudan eşleme tanımlamasını sağlar. Daha fazla bilgi için [Transforms'a](../msbuild/msbuild-transforms.md)bakın.
+Dönüşümler
+Dönüşüm, bir öğe koleksiyonunun diğerine bire bir dönüştürmedir. Bir dönüştürme, öğe koleksiyonlarını dönüştürmek için bir projenin etkinleştirilmesinin yanı sıra, bir hedefin giriş ve çıkışları arasında doğrudan eşlemeyi belirlemesine olanak sağlar. Daha fazla bilgi için bkz. [dönüşümler](../msbuild/msbuild-transforms.md).
 
-iyi bilinen meta veriler\
-Bkz. *meta veriler, iyi bilinen.*
+iyi bilinen meta veriler \
+Bkz. *meta veriler, iyi bilinen*.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Msbuild](../msbuild/msbuild.md)
+- [MSBUILD](../msbuild/msbuild.md)

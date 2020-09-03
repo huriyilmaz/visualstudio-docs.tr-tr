@@ -14,13 +14,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 7abca9e9141fdc8d4540e8a38e9579862fc540f1
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015302"
 ---
 # <a name="how-to-import-a-master-page-or-theme"></a>Nasıl yapılır: bir ana sayfa veya temayı Içeri aktarma
-  SharePoint sitenizde sayfalara, ana sayfalar ve Temalar oluşturup kullanarak tutarlı bir görünüm verebilirsiniz. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Bu öğeler için şablon sağlamıyor, ancak bunları SharePoint Designer 'da oluşturabilir ve sonra içine aktarabilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. Microsoft Web sitesinde [yapı taşı: sayfalar ve Kullanıcı arabirimi](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)) .
+  SharePoint sitenizde sayfalara, ana sayfalar ve Temalar oluşturup kullanarak tutarlı bir görünüm verebilirsiniz. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Bu öğeler için şablon sağlamıyor, ancak bunları SharePoint Designer 'da oluşturabilir ve sonra içine aktarabilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. Microsoft Web sitesinde [yapı taşı: sayfalar ve Kullanıcı arabirimi](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)) .
 
 ### <a name="to-import-a-master-page-or-theme"></a>Ana sayfa veya temayı içeri aktarmak için
 

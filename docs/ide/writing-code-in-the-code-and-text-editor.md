@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6cf1cdbebab5d59091454e340b567eef7430efd3
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532632"
 ---
 # <a name="features-of-the-code-editor"></a>Kod düzenleyicisinin özellikleri
@@ -32,7 +32,7 @@ Farklı Visual Studio dilleri farklı özellik kümeleri sunar ve bazı durumlar
 
 ## <a name="editor-features"></a>Düzenleyici özellikleri
 
-|Özellik|Description|
+|Özellik|Açıklama|
 |-|-|
 |Sözdizimi renklendirme|Kod ve biçimlendirme dosyalarının bazı sözdizimi öğeleri, bunları ayırt etmek için farklı renklendirilir. Örneğin, ( `using` C# ve Visual Basic gibi) anahtar kelimeleri `Imports` bir renktedir, ancak türler ( `Console` ve gibi `Uri` ) başka bir renktir. Diğer sözdizimi öğeleri de, dize sabit değerleri ve açıklamalar gibi renklendirilmiştir. C++, diğer belirteçlerin yanı sıra türler, numaralandırmalar ve makroları birbirinden ayırt etmek için renk kullanır.<br /><br /> Her tür için varsayılan rengi görebilir ve **Araçlar** menüsünden açabileceğiniz [yazı tipleri ve renkler, ortam, Seçenekler iletişim kutusunda](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)herhangi bir belirli bir söz dizimi öğesi için rengi değiştirebilirsiniz.|
 |Hata ve uyarı Işaretleri|Kod eklerken ve çözümünüzü oluştururken, kodunuzda görüntülenen (a) farklı renkli dalgalı alt çizgiler (dalgalı çizgiler olarak bilinir) veya (b) açık bulbs görebilirsiniz. Red dalgalı çizgiler, sözdizimi hatalarını ifade eder, mavi derleyici hatalarını, yeşil bir uyarı gösterir ve mor diğer hata türlerini gösterir. [Hızlı eylemler](../ide/quick-actions.md) sorunlara yönelik düzeltmeler önerir ve düzeltmenin uygulanmasını kolaylaştırır.<br /><br /> Her bir hata için varsayılan rengi ve **araç**  >  **seçenekleri**  >  **ortam**  >  **yazı tipleri ve renkler** iletişim kutusunda bir uyarı dalgalı çizgi ' yi görürsünüz. **Sözdizimi hatası**, **derleyici hatası**, **Uyarı**ve **diğer hata**olup olmadığına bakın.|
@@ -50,7 +50,7 @@ Farklı Visual Studio dilleri farklı özellik kümeleri sunar ve bazı durumlar
 
 **Edit**  >  Araç çubuğundaki**Gelişmiş** Özellikleri Düzenle menüsünde birçok gelişmiş özellik bulabilirsiniz. Tüm kod dosyası türlerinde bu özelliklerin hepsi kullanılamaz.
 
-|Özellik|Description|
+|Özellik|Açıklama|
 |-|-|
 |Belgeyi Biçimlendir|Kod satırlarının uygun girintisini ayarlar ve küme ayraçlarını belgedeki satırlara ayırmak için taşımayın.|
 |Biçim Seçimi|Kod satırlarının doğru girintilenmesini ayarlar ve küme ayraçlarını seçimdeki satırlara ayırmak için taşımayın.|

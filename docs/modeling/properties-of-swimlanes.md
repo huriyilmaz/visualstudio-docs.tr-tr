@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0cceeacab44f17eb30184c90f1128b8d2c3528bb
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76115361"
 ---
 # <a name="properties-of-swimlanes"></a>Kulvarların Özellikleri
@@ -28,28 +28,28 @@ Bir diyagrama kulvarlar ekleyebilirsiniz. Kulvarlar bir diyagramı dikey veya ya
 |Gövde dolgusu rengi|Kulvar gövdesinin dolgusunun rengi.|Beyaz|
 |Üst bilgi dolgusu rengi|Kulvar üst bilgisi için olan Fill Color.|Koyu gri|
 |Ayırıcı rengi|Ayırıcı çizginin rengi.|Açık gri|
-|Ayırıcı çizgisi stili|Ayırıcı çizginin stili (`Solid`, `Dash`, `Dot`, `DashDot`, `DashDotDot`veya `Custom`).|`Dash`|
-|Ayırıcı kalınlığı|İnç cinsinden Ayırıcı çizginin kalınlığı.|0.03125|
-|Metin rengi|Bu Kulvar ile ilişkilendirilen metin Dekoratörleri için kullanılan renk.|Siyah|
-|Erişim değiştiricisi|Sınıfın erişim düzeyi (`public` veya `internal`).|Ortak|
-|Özel Öznitelikler|Bu kulvara oluşturulan kod sınıfına öznitelikler eklemek için kullanılır.|\<yok >|
-|Double türevi üretir|`True`, hem temel sınıf hem de kısmi bir sınıf (geçersiz kılmaları kullanarak özelleştirmeyi desteklemek için) oluşturulur. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|False|
-|Özel Oluşturucusu vardır|`True`, kaynak kodda özel bir Oluşturucu sağlanacaktır. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|False|
-|Devralma değiştiricisi|Kulvar 'ten oluşturulan kaynak kodu sınıfının devralım türünü açıklar (`none`, `abstract` veya `sealed`).|yok|
+|Ayırıcı çizgisi stili|Ayırıcı çizginin stili ( `Solid` , `Dash` ,, `Dot` `DashDot` , `DashDotDot` veya `Custom` ).|`Dash`|
+|Ayırıcı kalınlığı|İnç cinsinden Ayırıcı çizginin kalınlığı.|0,03125|
+|Metin rengi|Bu Kulvar ile ilişkilendirilen metin Dekoratörleri için kullanılan renk.|Siyahi|
+|Erişim değiştiricisi|Sınıfın erişim düzeyi ( `public` veya `internal` ).|Genel|
+|Özel Öznitelikler|Bu kulvara oluşturulan kod sınıfına öznitelikler eklemek için kullanılır.|\<none>|
+|Double türevi üretir|Eğer `True` bir temel sınıf ve kısmi bir sınıf (geçersiz kılmaları özelleştirmeyi desteklemek için) oluşturulur. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|Yanlış|
+|Özel Oluşturucusu vardır|İse `True` , kaynak kodda özel bir Oluşturucu sağlanacaktır. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|Yanlış|
+|Devralma değiştiricisi|Kulvardan (veya) oluşturulan kaynak kodu sınıfının devralım türünü açıklar `none` `abstract` `sealed` .|yok|
 |Temel kulvar|Bu kulvarın temel sınıfı.|(yok)|
 |Name|Bu kulvarın adı.|Geçerli ad|
-|Ad alanı|Bu Kulvar ile bağlantılı ad alanı.|Geçerli ad alanı|
-|Araç ipucu türü|Araç ipucu nasıl tanımlanır (`fixed`, `variable`veya `none`). `fixed`, `Fixed Tooltip Text` özelliğinin değeri kullanılır; `variable`, araç ipucu özel kodda tanımlanır.|\<yok >|
-|Notlar|Bu Kulvar ile ilişkili resmi olmayan notlar.|\<yok >|
+|Ad Alanı|Bu Kulvar ile bağlantılı ad alanı.|Geçerli ad alanı|
+|Araç ipucu türü|Araç ipucu nasıl tanımlanır ( `fixed` , `variable` , veya `none` ). `fixed`Daha sonra `Fixed Tooltip Text` özelliğin değeri kullanılır; varsa `variable` , araç ipucu özel kodda tanımlanır.|\<none>|
+|Notlar|Bu Kulvar ile ilişkili resmi olmayan notlar.|\<none>|
 |Hizalama|Yatay veya dikey hizalama.|Dikey|
 |Başlangıç yüksekliği|Bu kulvarın inç cinsinden başlangıç yüksekliği. Yalnızca yatay kulvarlar için geçerlidir.|0|
 |Başlangıç genişliği|Bu kulvarın inç cinsinden başlangıç genişliği. Yalnızca dikey kulvarlar için geçerlidir.|0|
-|Metin rengini gösterir|`True`, Kullanıcı oluşturulan Tasarımcıda bir Kulvar rengini ayarlayabilir. Bunu ayarlamak için kulvar şekline sağ tıklayın ve **gösterilen Ekle**' ye tıklayın.|False|
-|Açıklama|Oluşturulan tasarımcıyı belgelemek için kullanılır.|\<yok >|
-|Görünen Ad|Bu Kulvar sınıfına başvurmak için oluşturulan tasarımcıda görüntülenecek ad.|\<yok >|
-|Düzeltilen araç Ipucu metni|Sabit bir araç ipucu için kullanılan metin.|\<yok >|
-|Help anahtar sözcüğü|Bu Kulvar için F1 yardımını dizine eklemek için kullanılan anahtar sözcük.|\<yok >|
+|Metin rengini gösterir|İse `True` , Kullanıcı oluşturulan Tasarımcıda bir Kulvar rengini ayarlayabilir. Bunu ayarlamak için kulvar şekline sağ tıklayın ve **gösterilen Ekle**' ye tıklayın.|Yanlış|
+|Description|Oluşturulan tasarımcıyı belgelemek için kullanılır.|\<none>|
+|Görünen Ad|Bu Kulvar sınıfına başvurmak için oluşturulan tasarımcıda görüntülenecek ad.|\<none>|
+|Düzeltilen araç Ipucu metni|Sabit bir araç ipucu için kullanılan metin.|\<none>|
+|Help anahtar sözcüğü|Bu Kulvar için F1 yardımını dizine eklemek için kullanılan anahtar sözcük.|\<none>|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

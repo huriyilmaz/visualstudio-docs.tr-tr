@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 24e9d76e959c0c05abe3ac48f5c4d43afecec47a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532736"
 ---
 # <a name="function-details-view"></a>İşlev Ayrıntıları Görünümü
@@ -87,14 +87,14 @@ ms.locfileid: "85532736"
 ### <a name="sampling"></a>Örnekleme  
  Aşağıdaki tabloda, örnekleme yöntemi kullanılarak toplanan profil oluşturma verileri için performans ölçümü listesindeki değerler açıklanmaktadır.  
   
-|Metric|Açıklama|
+|Ölçüm|Açıklama|
 |-|-|  
 |**Kapsamlı örnekler (toplanan örnekler)**|-Çağıran bir işlev için, seçilen işlev bu çağıran işlev tarafından çağrıldığında toplanan örnek sayısı.<br />-Işlev gövdesi için, seçilen işlev kendi kodunu yürütürken toplanan örnek sayısı.<br />-Çağrılan bir işlev için, seçilen işlevden gelen bir çağrı nedeniyle çağrılan işlev yürütülerek toplanan örneklerin sayısı.|  
   
 ### <a name="instrumentation"></a>İzleme  
  Aşağıdaki tabloda, izleme yöntemi kullanılarak toplanan profil oluşturma verileri için performans ölçümü listesindeki değerler açıklanmaktadır.  
   
-|Metric|Açıklama|  
+|Ölçüm|Açıklama|  
 |-|-|  
 |**Geçen kapsamlı süre (geçen süre)**|Geçen süre, işletim sistemine yapılan çağrılarında bağlam anahtarları ve giriş/çıkış işlemleri gibi harcanan süreyi içerir.<br /><br /> - **Çağırma işlevi**için, işlev tarafından çağrılan seçili işlevin örneklerinin yürütülmesi için harcanan geçen süre miktarı. Seçilen işlev tarafından çağrılan işlevlerde harcanan süre dahildir.<br />- **Işlev gövdesi**için, seçilen işlevin kodunu yürütmek için harcanan geçen sürenin toplam miktarı. Çağrılan işlevlerde harcanan süre dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örneklerini yürütmek için harcanan süre. Toplam, işlevin çağrıldığı işlevlerde harcanan süreyi içerir. Seçilen işlev tarafından çağrılan işlevlerde harcanan süre dahildir.|  
 |**Uygulama kapsamlı süresi (uygulama saati)**|Uygulama saati, bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrılarda harcanan zamanı içermez.<br /><br /> - **Çağırma işlevi**için, işlev tarafından çağrılan seçili işlevin örneklerini yürütmek için harcanan uygulama zamanı miktarı. Seçilen işlev tarafından çağrılan işlevlerde harcanan süre dahildir.<br />- **Işlev gövdesi**için, seçilen işlevin kodunu yürütmek için harcanan toplam uygulama zamanı miktarı. Çağrılan işlevlerde harcanan süre dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örneklerini yürütmek için harcanan tutar. Toplam, işlevin çağrıldığı işlevlerde harcanan süreyi içerir.|  
@@ -102,7 +102,7 @@ ms.locfileid: "85532736"
 ### <a name="net-memory"></a>.NET belleği  
  Aşağıdaki tabloda, .NET bellek profili oluşturma yöntemi kullanılarak toplanan profil oluşturma verileri için performans ölçümü listesindeki değerler açıklanmaktadır.  
   
-|Metric|Açıklama|  
+|Ölçüm|Açıklama|  
 |-|-|  
 |**Kapsamlı ayırmalar (ayırmalar)**|-Çağıran bir **işlev**için, işlevin çağrıldığı seçili işlevin örnekleri tarafından ayrılan nesne sayısı. Bu sayı, seçilen işlevin çağırdığı işlevler tarafından ayrılan nesneleri içerir.<br />- **Işlev gövdesi**için, kendi kodunu yürütürken seçili işlev tarafından ayrılan nesne sayısı. Seçili işlev tarafından çağrılan işlevlerde ayrılan nesneler dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örnekleri tarafından ayrılan nesne sayısı. Bu sayı, işlevin çağırdığı işlevler tarafından ayrılan nesneleri içerir.|  
 |**Kapsamlı baytlar (bayt)**|-Çağıran bir **işlev**için, işlevin çağırdığı seçili işlevin örnekleri tarafından ayrılan bayt sayısı. Bu sayı, seçilen işlevin çağırdığı işlevler tarafından ayrılan baytları içerir.<br />- **Işlev gövdesi**için, seçili işlev tarafından ayrılan ve kendi kodunu yürütürken ayrılan toplam bayt sayısı. Seçilen işlev tarafından çağrılan işlevlerde ayrılan baytlar dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örnekleri tarafından ayrılan bayt sayısı. Bu sayı, işlevin çağırdığı işlevler tarafından ayrılan baytları içerir.|  
@@ -110,7 +110,7 @@ ms.locfileid: "85532736"
 ### <a name="concurrency"></a>Eşzamanlılık  
  Aşağıdaki tabloda eşzamanlılık yöntemi kullanılarak toplanan profil oluşturma verileri için performans ölçümü listesindeki değerler açıklanmaktadır.  
   
-|Metric|Açıklama|  
+|Ölçüm|Açıklama|  
 |-|-|  
 |**Kapsamlı çekişme (çekişmeler)**|-Çağıran bir **işlev**için, işlevin çağrıldığı seçili işlevin örneklerinde gerçekleşen kaynak çekişmesi olayları sayısı. Bu sayı, seçilen işlevin çağrılan işlevlerde çekişme olaylarını içerir.<br />- **Işlev gövdesi**için, işlev kendi kodunu yürütürken gerçekleşen çekişme olaylarının toplam sayısı. Seçili işlev tarafından çağrılan işlevlerde gerçekleşen çekişmeler dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örneklerinde gerçekleşen çekişme olayları sayısı. Bu sayı, işlev çağrılan işlevlerde oluşan çekişme olaylarını içerir.|  
 |**Kapsamlı engellenme süresi (engellenme süresi)**|-Çağıran bir işlev için, işlevin çağrıldığı seçili işlevin örnekleri için kaynak çekişmede harcanan zaman. Süre, seçilen işlevin çağrıldığı işlevlerde engellenme süresini içerir.<br />- **Işlev gövdesi**için, işlev kendi kodunu yürütürken oluşan çekişme olaylarında harcanan toplam süre. Seçilen işlevin çağrıldığı işlevlerde oluşan çekişmeler dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlevin çağrılan işlevin örnekleri için kaynak çekişmede harcanan zaman. Süre, işlevin çağrıldığı işlevlerde oluşan engellenme süresini içerir.|

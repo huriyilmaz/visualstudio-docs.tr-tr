@@ -38,7 +38,7 @@ Bu izlenecek yol, bir sınıf kitaplığında özelleştirilmiş bir *kural küm
 
 - Kod analizini çalıştırın ve kural kümesi özelleştirme davranışının nasıl çalıştığını görün.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] , veya [!INCLUDE[vsPro](../includes/vspro-md.md)]
 

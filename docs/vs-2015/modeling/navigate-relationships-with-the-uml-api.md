@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8d54964cc74422d34ae6c6df489d02768e6d4bbd
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918253"
 ---
 # <a name="navigate-relationships-with-the-uml-api"></a>UML API ile ilişkilerde gezinme
@@ -26,7 +26,7 @@ Bir model, farklı ilişki türlerine göre birbirine bağlanmış öğelerden o
 ## <a name="traversing-relationships"></a>Çapraz geçiş geçişi
 
 ### <a name="any-relationship"></a>Herhangi bir ilişki
- Belirtilen öğeye bağlı tüm öğeleri bulmak için `GetRelatedElements<T>()` kullanın. Tüm türlerdeki ilişkilerle çapraz geçiş yapmak için `T` `IRelationship` ayarlayın veya yalnızca o tür çapraz geçiş yapmak için `IAssociation` gibi daha belirli bir tür kullanın.
+ `GetRelatedElements<T>()`Belirtilen öğeye bağlı tüm öğeleri bulmak için kullanın. `T` `IRelationship` Her türlü tür ilişkilerine çapraz geçiş yapmak için olarak ayarlayın veya `IAssociation` yalnızca o tür için geçiş yapmak için gibi daha belirli bir tür kullanın.
 
 ```
 IElement anElement;
@@ -37,7 +37,7 @@ Context.CurrentDiagram.SelectShapes (
 
 ```
 
- Bir öğeye bağlı tüm ilişkileri bulmak için `GetRelatedLinks<T>()` kullanın.
+ `GetRelatedLinks<T>()`Bir öğeye bağlı tüm ilişkileri bulmak için kullanın.
 
 ```
 // Process all relationships connected to an element.
@@ -152,7 +152,7 @@ IEnumerable<IUseCase>GetIncludingCases(this IUseCase usecase);
 ```
 
 ## <a name="enumerating-relationships"></a>Ilişkiler numaralandırılıyor
- UML modelinin birden çok değer döndüren tüm özellikleri IEnumerable < > arabirimine uygun. Bu, [LINQ sorgu ifadelerini](/dotnet/csharp/linq/index) ve **System. LINQ** ad alanında tanımlanan genişletme yöntemlerini kullanabileceğiniz anlamına gelir.
+ UML modelinin birden çok değer döndüren tüm özellikleri IEnumerable<> arabirimine uygun. Bu, [LINQ sorgu ifadelerini](/dotnet/csharp/linq/index) ve **System. LINQ** ad alanında tanımlanan genişletme yöntemlerini kullanabileceğiniz anlamına gelir.
 
  Örneğin:
 

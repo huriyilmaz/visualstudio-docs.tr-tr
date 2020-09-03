@@ -1,5 +1,5 @@
 ---
-title: Aksi Takdirde Eleman (MSBuild) | Microsoft Dokümanlar
+title: Otherwise öğesi (MSBuild) | Microsoft Docs
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -19,19 +19,24 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 384886ad4292661648f5cbfde1a583d8d75b1c03
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633050"
 ---
-# <a name="otherwise-element-msbuild"></a>Aksi takdirde eleman (MSBuild)
+# <a name="otherwise-element-msbuild"></a>Otherwise öğesi (MSBuild)
 
-Tüm `When` öğelerin koşulları değerlendirirse `false`ve yalnızca.
+Yalnızca tüm öğelerin koşulları değerlendirmesi durumunda yürütülecek kod bloğunu belirtir `When` `false` .
 
- \<Proje \<> \< \<>'> Ne Zaman> Seçin ... \<Aksi \<takdirde>> seçin ...
+ \<Project> \<Choose>
+ \<When>
+ \<Choose>
+... \<Otherwise>
+ \<Choose>
+...
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Otherwise>
@@ -53,25 +58,25 @@ Tüm `When` öğelerin koşulları değerlendirirse `false`ve yalnızca.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Seçin:](../msbuild/choose-element-msbuild.md)|İsteğe bağlı öğe.<br /><br /> Yürütülecek bir kod bölümünü seçmek için alt öğeleri değerlendirir. Bir `Otherwise` öğede sıfır `Choose` veya daha fazla öğe olabilir.|
-|[ıtemgroup](../msbuild/itemgroup-element-msbuild.md)|İsteğe bağlı öğe.<br /><br /> Kullanıcı tanımlı [Öğe](../msbuild/item-element-msbuild.md) öğeleri kümesi içerir. Bir `Otherwise` öğede sıfır `ItemGroup` veya daha fazla öğe olabilir.|
-|[Propertygroup](../msbuild/propertygroup-element-msbuild.md)|İsteğe bağlı öğe.<br /><br /> Kullanıcı tanımlı [Özellik](../msbuild/property-element-msbuild.md) öğeleri kümesi içerir. Bir `Otherwise` öğede sıfır `PropertyGroup` veya daha fazla öğe olabilir.|
+|[Seçin:](../msbuild/choose-element-msbuild.md)|İsteğe bağlı öğe.<br /><br /> , Çalıştırılacak kodun bir bölümünü seçmek için alt öğeleri değerlendirir. Öğesinde sıfır veya daha fazla `Choose` öğe olabilir `Otherwise` .|
+|[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|İsteğe bağlı öğe.<br /><br /> Kullanıcı tanımlı [öğe](../msbuild/item-element-msbuild.md) öğeleri kümesi içerir. Öğesinde sıfır veya daha fazla `ItemGroup` öğe olabilir `Otherwise` .|
+|[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|İsteğe bağlı öğe.<br /><br /> Kullanıcı tanımlı [özellik](../msbuild/property-element-msbuild.md) öğeleri kümesi içerir. Öğesinde sıfır veya daha fazla `PropertyGroup` öğe olabilir `Otherwise` .|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Seçin:](../msbuild/choose-element-msbuild.md)|Yürütülecek bir kod bölümünü seçmek için alt öğeleri değerlendirir.|
+|[Seçin:](../msbuild/choose-element-msbuild.md)|, Çalıştırılacak kodun bir bölümünü seçmek için alt öğeleri değerlendirir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Bir öğede `Otherwise` yalnızca bir `Choose` öğe olabilir ve bu son öğe olmalıdır.
+ Öğesinde yalnızca bir öğe olabilir `Otherwise` `Choose` ve en son öğe olmalıdır.
 
- `Choose`, `When`ve `Otherwise` öğeler, olası alternatifler bir dizi yürütmek için kod bir bölümünü seçmek için bir yol sağlamak için birlikte kullanılır. Daha fazla bilgi için [Koşullu yapılara](../msbuild/msbuild-conditional-constructs.md)bakın.
+ `Choose`, `When` , Ve `Otherwise` öğeleri bir dizi olası alternatifden daha fazla yürütmek üzere kodun bir bölümünü seçmek için bir yol sağlamak üzere birlikte kullanılır. Daha fazla bilgi için bkz. [koşullu yapılar](../msbuild/msbuild-conditional-constructs.md).
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki proje, `Choose` ayarlanacak öğelerdeki özellik değerleri `When` kümesini seçmek için öğeyi kullanır. Her `Condition` iki `When` öğenin öznitelikleri `false`değerlendirirse, `Otherwise` öğedeki özellik değerleri ayarlanır.
+ Aşağıdaki proje, `Choose` öğesini ayarlanacak öğelerde hangi özellik değerleri kümesini belirlemek için öğesini kullanır `When` . `Condition`Her iki öğenin öznitelikleri `When` olarak değerlendirilir `false` , öğesindeki özellik değerleri `Otherwise` ayarlanır.
 
 ```xml
 <Project

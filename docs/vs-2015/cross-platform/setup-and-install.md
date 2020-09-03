@@ -7,16 +7,16 @@ caps.latest.revision: 19
 ms.author: crdun
 manager: crdun
 ms.openlocfilehash: dbdeeab49da1a63562bb9a4188a264a8d3d99da2
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75917042"
 ---
 # <a name="setup-and-install"></a>Kurulum ve yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Xamarin kullanarak ortak C#bir/.NET kod tabanından yerel IOS, Android ve Windows uygulamaları derlemek için şunlar gerekir:  
+Xamarin kullanarak ortak bir C#/.NET kod tabanından Yerel iOS, Android ve Windows uygulamaları derlemek için şunlar gerekir:  
   
 - Windows ve Android uygulamalarıyla çalışma için: Visual Studio 2015 ve Xamarin 4 yüklü bir Windows geliştirme bilgisayarı (aşağıdaki nota bakın). (Ayrıca, [doğrudan Xamarin install](https://developer.xamarin.com/guides/cross-platform/getting_started/requirements/#install) (Xamarin.com) yönergelerini izleyerek Visual Studio 2013 de kullanabilirsiniz.)   
   
@@ -37,7 +37,7 @@ Bu kurulumu yaptıktan ve yükledikten sonra Xamarin kullanarak sorunlarla karş
   
 - [Mac Kurulumu (Apple KIMLIĞI, Xcode ve Xamarin)](#mac)  
   
-## <a name="prereq"></a>Önkoşulların önkoşulları  
+## <a name="pre-requisites"></a><a name="prereq"></a> Önkoşulların önkoşulları  
   
 1. Windows ve Android 'i hedeflemek için:  
   
@@ -51,9 +51,9 @@ Bu kurulumu yaptıktan ve yükledikten sonra Xamarin kullanarak sorunlarla karş
   
     1. OS x 10.10.5 veya üstünü çalıştıran (Xcode 7,1 için gereklidir), OS X Yosemite ile ağa bağlı bir Mac veya Mac mini.  
   
-    1. Birincil geliştirme ortamınız olarak bir Windows (7 +) bilgisayarında Visual Studio kullanırken, ağ bağlantılı bir Mac yalnızca iOS uygulamalarını derlemek ve hata ayıklamak, iOS simülatörü veya tethered cihazlarına eklemek ve Visual Studio 'da film şeridi tasarımcısını kullanmak için gereklidir. Kullanıcı arabirimini tasarlama. Daha eski Mac modelleri bu ikincil rol için tamamen yeterlidir.  
+    1. Birincil geliştirme ortamınız olarak bir Windows (7 +) bilgisayarında Visual Studio kullanırken, ağ bağlantılı bir Mac yalnızca iOS uygulamalarını derlemek ve hata ayıklamak, iOS simülatörü veya tethered cihazlarına eklemek ve Kullanıcı arabirimini tasarlamak için Visual Studio 'daki görsel taslak tasarımcısını kullanmak için gereklidir. Daha eski Mac modelleri bu ikincil rol için tamamen yeterlidir.  
   
-## <a name="windows"></a>Windows kurulumu (Visual Studio ve Xamarin)  
+## <a name="windows-setup-visual-studio-and-xamarin"></a><a name="windows"></a> Windows kurulumu (Visual Studio ve Xamarin)  
   
 > [!TIP]
 > Bu yönergeler Visual Studio 2015 için geçerlidir. Xamarin 'i Visual Studio 2013 kullanmak için (güncelleştirme 2 gereklidir), [doğrudan Xamarin install](https://developer.xamarin.com/guides/cross-platform/getting_started/requirements/#install) (Xamarin.com) yönergelerini izleyin.  
@@ -68,17 +68,17 @@ Bu kurulumu yaptıktan ve yükledikten sonra Xamarin kullanarak sorunlarla karş
   
 3. Aşağıdaki kutuları işaretleyin:  
   
-   1. **Platformlar arası mobil geliştirme > C#/.net (Xamarin)** . Ayrıca, ortak araçlar ve yazılım geliştirme setleri altında çeşitli Android araçları da otomatik olarak seçilecek. Bu seçenek ayrıca var olan Xamarin yüklemesini de güncelleştirmelidir.  
+   1. **Platformlar arası mobil geliştirme > C#/.net (Xamarin)**. Ayrıca, ortak araçlar ve yazılım geliştirme setleri altında çeşitli Android araçları da otomatik olarak seçilecek. Bu seçenek ayrıca var olan Xamarin yüklemesini de güncelleştirmelidir.  
   
-        ![Platformlar arası&#45;mobil geliştirme altında Xamarin seçeneğini belirleyin](../cross-platform/media/cross-plat-xamarin-setup-2.png "Çapraz Plat Xamarin Kurulum 2")  
+        ![&#45;platformlar arası Platform mobil geliştirme altında Xamarin seçeneğini belirleyin](../cross-platform/media/cross-plat-xamarin-setup-2.png "Çapraz Plat Xamarin Kurulum 2")  
   
-   2. Windows 8 + için: **platformlar arası mobil geliştirme > Android için Microsoft Visual Studio öykünücüsü**. Note: bir Windows 7 veya daha önceki bir bilgisayar kullanıyorsanız veya Windows 'u bir Mac üzerinde çalıştırıyorsanız, bunun *işaretinin kaldırıldığından*emin olun. 5\. adımdan sonra "Windows bilgisayarlarda Öykünücüler hakkında" bölümüne bakın. Ayrıca, yalnızca fiziksel Android cihazlarda hata ayıklamak istiyorsanız bu seçeneği işaretlenmemiş olarak bırakabilirsiniz.  
+   2. Windows 8 + için: **platformlar arası mobil geliştirme > Android için Microsoft Visual Studio öykünücüsü**. Note: bir Windows 7 veya daha önceki bir bilgisayar kullanıyorsanız veya Windows 'u bir Mac üzerinde çalıştırıyorsanız, bunun *işaretinin kaldırıldığından*emin olun. 5. adımdan sonra "Windows bilgisayarlarda Öykünücüler hakkında" bölümüne bakın. Ayrıca, yalnızca fiziksel Android cihazlarda hata ayıklamak istiyorsanız bu seçeneği işaretlenmemiş olarak bırakabilirsiniz.  
   
    3. Seçim Windows cihazlarını hedeflemeyi planlıyorsanız **Windows ve Web geliştirme > Evrensel Windows uygulaması geliştirme araçları** ve/veya **Windows 8.1 ve Windows Phone 8.0/8.1 araçları**' nı da denetleyin. Bunlar, indirmesi daha uzun sürecek olan öykünücü görüntülerini yüklemeye yönelik seçenekleri içerir; daha sonra eklemek için her zaman Visual Studio yükleyicisi 'ne dönebilirsiniz.  
   
 4. Install düğmesine tıklayın ve işlemin çalışmasına izin verin. Bu işlem biraz zaman alabilir, bu sırada Mac kurulum yönergelerine devam edebilir ve [Xamarin ile mobil geliştirme hakkında bilgi edinebilirsiniz](../cross-platform/learn-about-mobile-development-with-xamarin.md).  
   
-5. Yükleme tamamlandıktan sonra Visual Studio 'Yu başlatın ve istenirse Microsoft hesabı ile oturum açın (Bu, Windows ile kullandığınız hesaptır). Daha sonra, **> > Xamarin** veya **tools > > > Seçenekler**aracılığıyla **Xamarin güncelleştirmelerini kontrol** edin.  
+5. Yükleme tamamlandıktan sonra Visual Studio 'Yu başlatın ve istenirse Microsoft hesabı ile oturum açın (Bu, Windows ile kullandığınız hesaptır). Daha sonra, **> > Xamarin** veya **tools > > > seçenekler**aracılığıyla **Xamarin güncelleştirmelerini kontrol** edin.  
   
     ![Visual Studio seçeneklerinde Xamarin güncelleştirmelerini denetleme](../cross-platform/media/cross-plat-xamarin-setup-3.png "Çapraz Plat Xamarin kurulumu 3")  
   
@@ -89,13 +89,13 @@ Bu kurulumu yaptıktan ve yükledikten sonra Xamarin kullanarak sorunlarla karş
       
 6. Windows 7 ve önceki sürümlerde veya bir Mac üzerinde Windows 'u çalıştırmak için fiziksel cihazlarınız yoksa [Android SDK öykünücüsü](https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/debug-on-emulator/android-sdk-emulator/) kullanın. Aşağıdaki nota bakın.  
   
-   **Windows bilgisayarlarda Öykünücüler hakkında bilgi:** Her seferinde yalnızca bir sanallaştırma teknolojisini desteklediği için, yalnızca bir geliştirme bilgisayarında kullanılması en iyisidir. Hyper-V (Android için Visual Studio öykünücüsü ve Windows Phone öykünücüsü tarafından kullanılır), sanal kutu (Genymotion tarafından kullanılan) ve Intel HAXM (Android SDK öykünücü tarafından kullanılan) için üç ana virtualtıs teknolojisi vardır. Hyper-V ve sanal kutu arasındaki çeşitli sorunlar nedeniyle, belirli bir bilgisayarda yalnızca bir tür öykünücüleri kullanmak en iyisidir. bu nedenle, Yukarıdaki öneriler, Windows 8 ve üzeri bilgisayarlarda Hyper-V ' d i ve Windows 7 ve daha önceki sürümlerde Intel HAXM öykünücüleri ve ne zaman Windows 'u bir Mac üzerinde çalıştırma.  
+   **Windows bilgisayarlarda Öykünücüler hakkında bilgi:** Her seferinde yalnızca bir sanallaştırma teknolojisini desteklediği için, yalnızca bir geliştirme bilgisayarında kullanılması en iyisidir. Hyper-V (Android için Visual Studio öykünücüsü ve Windows Phone öykünücüsü tarafından kullanılır), sanal kutu (Genymotion tarafından kullanılan) ve Intel HAXM (Android SDK öykünücü tarafından kullanılan) için üç ana virtualtıs teknolojisi vardır. Hyper-V ve sanal kutu arasındaki çeşitli sorunlar nedeniyle, belirli bir bilgisayarda yalnızca bir tür öykünücüleri kullanmak en iyisidir. bu nedenle, Yukarıdaki öneriler, Windows 8 ve üzeri bilgisayarlarda Hyper-V ' y i ve Windows 7 ve daha önceki sürümlerde Intel HAXM öykünücüleri ve Windows 'un bir Mac üzerinde çalıştırıldığı durumlarda kullanılır.  
   
-## <a name="mac"></a>Mac Kurulumu (Apple KIMLIĞI, Xcode ve Xamarin)  
+## <a name="mac-setup-apple-id-xcode-and-xamarin"></a><a name="mac"></a> Mac Kurulumu (Apple KIMLIĞI, Xcode ve Xamarin)  
   
-1. Henüz bir tane yoksa [https://appleid.apple.com](https://appleid.apple.com/) ücretsiz BIR Apple Kimliği oluşturun. Bu, Xcode 'a yükleme ve oturum açmada gereklidir.  
+1. Henüz bir tane yoksa, ücretsiz bir Apple KIMLIĞI oluşturun [https://appleid.apple.com](https://appleid.apple.com/) . Bu, Xcode 'a yükleme ve oturum açmada gereklidir.  
   
-2. [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/)'Den Xcode indirin ve yükleyin ve Apple Kimliğinizi, [Hesabınızı Xcode 'a ekleme](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/AddingYourAccounttoXcode/AddingYourAccounttoXcode.html#//apple_ref/doc/uid/TP40013839-CH40-SW1) (Apple.com) bölümünde açıklandığı gibi ekleyin.  
+2. Xcode ' u indirip yükleyin ve  [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/) Apple Kimliğinizi, [Hesabınızı Xcode 'a ekleme](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/AddingYourAccounttoXcode/AddingYourAccounttoXcode.html#//apple_ref/doc/uid/TP40013839-CH40-SW1) (Apple.com) bölümünde açıklandığı gibi ekleyin.  
   
 3. [Xamarin. iOS (Xamarin.com) yükleme ve yapılandırma](/xamarin/ios/get-started/installation/mac) yönergelerini izleyerek Xamarin 'i indirin ve yükleyin.  
   

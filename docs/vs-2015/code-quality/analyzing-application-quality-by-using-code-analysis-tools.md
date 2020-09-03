@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: f8ec0706530cd61653d44533654cf453d25eb42e
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75919067"
 ---
 # <a name="analyzing-application-quality-by-using-code-analysis-tools"></a>Kod Analiz Araçları ile Uygulama Kalitesini Analiz Etme
@@ -27,7 +27,7 @@ ms.locfileid: "75919067"
 
 Bu bölümde, yönetilen kod [kalitesini analiz etme](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md) yönetilen kod Için Visual Studio kod analizi, Microsoft .NET Framework Tasarım yönergelerine göre ayarlanan programlama ve tasarım kurallarının ihlalleri gibi yönetilen derlemeler hakkında bilgi sağlar. Uyarı iletileri ilgili programlama ve tasarım sorunlarını belirler ve mümkünse sorunun nasıl düzeltileceğini gösteren bilgileri sağlar.
 
- [Kod analizini kullanarakC++ c/Code kalitesini analiz etme](../code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis.md) c/C++ Code Analysis Tool, geliştiriciler c/C++ kaynak kodundaki olası hatalar hakkında bilgi sağlar. Araç tarafından bildirilen yaygın kodlama hataları, arabellek taşmaları, Başlatılmamış bellek, null işaretçi başvurusu ve bellek ve kaynak sızıntılarını içerir.
+ [Kod analizini kullanarak C/C++ kod kalitesini analiz etme](../code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis.md) C/C++ Kod Analizi Aracı, geliştiriciler için C/C++ kaynak kodundaki olası arızaların bilgilerini sağlar. Araç tarafından bildirilen yaygın kodlama hataları, arabellek taşmaları, Başlatılmamış bellek, null işaretçi başvurusu ve bellek ve kaynak sızıntılarını içerir.
 
  [Kod analizi kurallarını gruplandırmak Için kural kümeleri kullanma](../code-quality/using-rule-sets-to-group-code-analysis-rules.md) Projenize uygulanacak *kural kümelerini* seçin ve oluşturun.
 
@@ -38,7 +38,7 @@ Bu bölümde, yönetilen kod [kalitesini analiz etme](../code-quality/analyzing-
 ### <a name="code-analysis-for-drivers"></a>Sürücüler için kod analizi
  Kod analizi araçları, sürücü kaynak kodunu sistematik olarak çözümleyerek sürücünüzün kararlılığını ve güvenilirliğini artırmaya yardımcı olabilir.
 
- [Kod analizi araçlarını kullanarak sürücü kalitesini analiz etme](/windows-hardware/drivers/devtest/tools-for-verifying-drivers) Sürücüler için kod analizi, C ve C++ programlarındaki temel kodlama hatalarını algılayan derleme zamanı statik doğrulama aracıdır ve (birincil) çekirdek modu sürücü kodundaki hataları algılamak için tasarlanan özel bir modül içerir. Statik Sürücü Doğrulayıcısı (SDV), Windows çekirdek modu sürücülerinin kaynak kodunu sistematik olarak analiz eden bir statik doğrulama aracıdır. SDV, sürücünün Windows işletim sistemi çekirdekle doğru şekilde etkileşime sahip olup olmadığını belirler.
+ [Kod analizi araçlarını kullanarak sürücü kalitesini analiz etme](/windows-hardware/drivers/devtest/tools-for-verifying-drivers) Sürücüler için kod analizi, C ve C++ programlarındaki temel kodlama hatalarını algılayan ve (birincil olarak) çekirdek modu sürücü kodundaki hataları algılamak için tasarlanan özel bir modül içeren derleme zamanı statik doğrulama aracıdır. Statik Sürücü Doğrulayıcısı (SDV), Windows çekirdek modu sürücülerinin kaynak kodunu sistematik olarak analiz eden bir statik doğrulama aracıdır. SDV, sürücünün Windows işletim sistemi çekirdekle doğru şekilde etkileşime sahip olup olmadığını belirler.
 
  [Sürücüler Için kod analizi uyarıları](/windows-hardware/drivers/devtest/prefast-for-drivers-warnings) Sürücü kodunda olası bir hata algılandığında, sürücüler için kod analizinin rapor veren uyarıları açıklar.
 

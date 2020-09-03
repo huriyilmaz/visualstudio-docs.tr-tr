@@ -14,9 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 0f1a512218c3c1b7af179cfaba3e231a90941fe0
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015060"
 ---
 # <a name="create-site-definitions-for-sharepoint"></a>SharePoint için site tanımları oluşturma
@@ -33,7 +34,7 @@ ms.locfileid: "86015060"
 ## <a name="site-definition-project-components"></a>Site tanımı proje bileşenleri
  Bir site tanımı çözümü oluşturduğunuzda, aşağıdaki varsayılan dosyalar **SiteDefinition** düğümüne eklenir.
 
-|Dosya Adı|Description|
+|Dosya Adı|Açıklama|
 |---------------|-----------------|
 |*default. aspx*|Yeni SharePoint sitesi için varsayılan ASPX giriş sayfası.|
 |*onet.xml*|Yeni sitenin yapılandırmasını, site tanımı şablonunun bileşenlerini ve varsayılan davranışı belirtir. Bu ayarlar, etkin olan içerik türleri, varsayılan liste görünümleri, belge şablonu dosyaları ve sitede bulunan Web bölümleri gibi öznitelikleri içerebilir. Varsayılan olarak, `Modules` bölümünde SharePoint sitesine eklenecek dosyalar ve bunların nasıl yapılandırıldığı listelenir.|
@@ -45,7 +46,7 @@ ms.locfileid: "86015060"
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[İzlenecek yol: Temel bir Site Tanımı Projesi Oluşturma](../sharepoint/walkthrough-create-a-basic-site-definition-project.md)|İçinde temel bir site tanımı projesinin oluşturulmasına adım adım yol gösterir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|
+|[İzlenecek yol: Temel Site Tanımı Projesi Oluşturma](../sharepoint/walkthrough-create-a-basic-site-definition-project.md)|İçinde temel bir site tanımı projesinin oluşturulmasına adım adım yol gösterir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|
 |[Nasıl yapılır: özel site tanımı ve yapılandırması oluşturma](/previous-versions/office/developer/sharepoint-2010/ms454677(v=office.14))|SharePoint 'te, var olan bir site tanımını kopyalayarak ve sonra kopyayı değiştirerek özel bir site tanımı oluşturmayı açıklar.|
 |[*WebTemp.xml*](/previous-versions/office/developer/sharepoint-2010/ms447717(v=office.14))|**Yeni SharePoint sitesi** sayfasının **şablon seçimi** bölümünde kullanılabilir olan site tanımlarını belirten özgün dosyayı tanımlar.|
 |[SharePoint çözümlerini yerelleştirin](../sharepoint/localizing-sharepoint-solutions.md)|SharePoint çözümlerinizin genel kullanım için nasıl hazırlanacağını açıklar.|

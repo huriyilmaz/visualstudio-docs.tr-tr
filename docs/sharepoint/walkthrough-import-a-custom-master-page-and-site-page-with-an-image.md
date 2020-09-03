@@ -14,9 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 311124b2e0b81e70c4c2a7b40754207e6c66b749
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015684"
 ---
 # <a name="walkthrough-import-a-custom-master-page-and-site-page-with-an-image"></a>İzlenecek yol: bir görüntü ile özel ana sayfa ve site sayfasını Içeri aktarma
@@ -149,7 +150,7 @@ ms.locfileid: "86015684"
 
 2. **İçeri aktarılacak öğeleri seçin** sayfasında, **tür** sütunundaki **Modül** altında, içeri aktarma için yalnızca aşağıdaki tablodaki dosyalar için onay kutularını seçin.
 
-   | Dosya Adı | Description |
+   | Dosya Adı | Açıklama |
    |------------------------|-----------------------------------------------|
    | \_catalogsmasterpage\_ | Özel Ana sayfa. |
    | images_ | SharePoint dosya sistemindeki görüntü dosyası. |

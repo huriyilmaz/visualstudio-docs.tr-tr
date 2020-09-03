@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 72ea0c562bb9c2a8050fc1365fac19df20232f80
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918363"
 ---
 # <a name="integrate-uml-models-with-other-models-and-tools"></a>UML modellerini diğer modeller ve araçlarla tümleştirme
@@ -36,7 +36,7 @@ UML öğesinde, diğer UML öğelerine, dosyalara veya diğer nesnelere yönelik
 
    Stereotip ve özellikleri Özellikler penceresi kullanıcıya görünür.
 
-   Bu uzantıyı dağıtmak için, profil tanımını ve uzantı kodunu tek bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantısında paketlemeyi caksınız.
+   Bu uzantıyı dağıtmak için profil tanımını ve uzantı kodunu tek bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantıda paketedersiniz.
 
    Daha fazla bilgi için bkz. [UML genişletmek için profil tanımlama](../modeling/define-a-profile-to-extend-uml.md).
 

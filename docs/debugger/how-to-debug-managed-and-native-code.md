@@ -16,10 +16,10 @@ ms.workload:
 - dotnet
 - cplusplus
 ms.openlocfilehash: 9f3fd94f8c294dce81bc69011e7d6f5fdd505325
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84182644"
 ---
 # <a name="tutorial-debug-c-and-c-in-the-same-debugging-session"></a>Öğretici: aynı hata ayıklama oturumunda C# ve C++ hatalarını ayıklama
@@ -38,7 +38,7 @@ Bu öğreticide şunları yapacaksınız:
 > * Yönetilen uygulamadaki bir kesme noktasına isabet edin
 > * Yerel koda adımla
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Aşağıdaki iş yükleriyle Visual Studio yüklü olmalıdır:
 - **C++ ile masaüstü geliştirme**
@@ -171,7 +171,7 @@ Visual Studio yüklü, ancak ihtiyacınız olan iş yüklerine sahip değilseniz
     }
     ```
 
-1. Yeni kodda, içindeki dosya yolunu `[DllImport]` Dosya yolunuzla, yeni oluşturduğunuz *Mixed_Mode_Debugging. dll* ile değiştirin. İpuçları için kod yorumu bölümüne bakın. *Kullanıcı adı* yer tutucusunu değiştirdiğinizden emin olun.
+1. Yeni kodda, içindeki dosya yolunu `[DllImport]` Dosya yolunuzla yeni oluşturduğunuz *Mixed_Mode_Debugging.dll* değiştirin. İpuçları için kod yorumu bölümüne bakın. *Kullanıcı adı* yer tutucusunu değiştirdiğinizden emin olun.
 
 1. Dosya **File**  >  **Kaydet program.cs** seçin veya **Ctrl** + dosyayı kaydetmek için CTRL**S** tuşuna basın.
 
@@ -187,14 +187,14 @@ Visual Studio yüklü, ancak ihtiyacınız olan iş yüklerine sahip değilseniz
 
 ### <a name="to-configure-mixed-mode-debugging-for-a-net-core-app"></a>.NET Core uygulaması için karışık modda hata ayıklamayı yapılandırmak için
 
-Visual Studio 'nun çoğu Visual Studio 2017 sürümünden itibaren, bir .NET Core uygulamasında yerel kod için karışık modda hata ayıklamayı etkinleştirmek üzere proje özellikleri yerine *Launchsettings. JSON* dosyasını kullanmanız gerekir. Bu özelliğe yönelik kullanıcı arabirimi güncelleştirmelerini izlemek için bu [GitHub sorununa](https://github.com/dotnet/project-system/issues/1125)bakın.
+Visual Studio 'nun çoğu Visual Studio 2017 sürümünden itibaren, bir .NET Core uygulamasında yerel kod için karışık modda hata ayıklamayı etkinleştirmek amacıyla proje özellikleri yerine *launchSettings.jsdosya üzerinde* kullanmanız gerekir. Bu özelliğe yönelik kullanıcı arabirimi güncelleştirmelerini izlemek için bu [GitHub sorununa](https://github.com/dotnet/project-system/issues/1125)bakın.
 
-1. **Çözüm Gezgini**, **Özellikler**' i genişletin ve *launchsettings. JSON* dosyasını açın.
+1. **Çözüm Gezgini**, **Özellikler**' i genişletin velaunchSettings.jsdosya *üzerinde* açın.
 
    >[!NOTE]
-   >Varsayılan olarak, *Launchsettings. JSON* , *C:\users\username\source\repos\ Mixed_Mode_Calling_App \properties*dizininde bulunur. *Launchsettings. JSON* yoksa, **Çözüm Gezgini** **Mixed_Mode_Calling_App** projesi seçin ve ardından **Özellikler** simgesini seçin ya da projeye sağ tıklayıp **Özellikler**' i seçin. **Hata ayıklama** sekmesinde geçici bir değişiklik yapın ve projeyi derleyin. Bu işlem bir *Launchsettings. JSON* dosyası oluşturur. **Hata ayıklama** sekmesinde yaptığınız değişikliği tekrar alın.
+   >Varsayılan olarak, *launchSettings.js* , *C:\users\username\source\repos\ Mixed_Mode_Calling_App \properties*dizininde bulunur. *launchSettings.json* yoksa, **Çözüm Gezgini** ' de **Mixed_Mode_Calling_App** projeyi seçin ve ardından **Özellikler** simgesini seçin ya da projeye sağ tıklayıp **Özellikler**' i seçin. **Hata ayıklama** sekmesinde geçici bir değişiklik yapın ve projeyi derleyin. Bu, dosyasında bir *launchSettings.js* oluşturur. **Hata ayıklama** sekmesinde yaptığınız değişikliği tekrar alın.
 
-1. *Launchsettings. JSON* dosyasında aşağıdaki satırı ekleyin:
+1. *launchsettings.js* dosyadaki şu satırı ekleyin:
 
     ```csharp
     "nativeDebugging": true

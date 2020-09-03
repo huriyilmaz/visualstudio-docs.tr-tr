@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 6ea5931c77e267bc6065693be1ae144c250ce6df
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536234"
 ---
 # <a name="manifest-from-resources"></a>Manifest from Resources
@@ -31,7 +31,7 @@ Manifest from Resources Aracı, görüntü kaynakları (. png veya. xaml dosyala
 |/Assembly|Yönetilen derlemenin adı (uzantıyı hariç) veya kaynakları barındıran yerel derlemenin çalışma zamanı yolu (bildirimin çalışma zamanı konumuna göre).|Gerekli|
 |/MANIFEST|Oluşturulan. ımagemanifest dosyasına verilecek ad. Bu, dosyayı farklı bir konumda oluşturmak için mutlak veya göreli bir yol da içerebilir. Varsayılan ad, derleme adıyla eşleşir.<br /><br /> Varsayılan: \<Current Directory> \\<Assembly \> . ımagemanifest|İsteğe Bağlı|
 |/Gudname|Oluşturulan Bildirimdeki tüm görüntülerin GUID simgesine verilecek ad.<br /><br /> Varsayılan: AssetsGuid|İsteğe Bağlı|
-|/rootPath|Yönetilen kaynak URI 'Leri oluşturmadan önce atılması gereken kök yolu. (Bu bayrak, aracın göreli URI yolunu yanlış aldığı ve kaynakların yüklemede başarısız olmasına neden olan durumlarda yardımcı olur.)<br /><br /> Varsayılanını\<Current Directory>|İsteğe Bağlı|
+|/rootPath|Yönetilen kaynak URI 'Leri oluşturmadan önce atılması gereken kök yolu. (Bu bayrak, aracın göreli URI yolunu yanlış aldığı ve kaynakların yüklemede başarısız olmasına neden olan durumlarda yardımcı olur.)<br /><br /> Varsayılanını \<Current Directory>|İsteğe Bağlı|
 |/recursive|Bu bayrak ayarlandığında, araç,/Resources bağımsız değişkenindeki herhangi bir dizini yinelemeli olarak arayacak şekilde bildirir. Bu bayrağın atlanması, en üst düzey dizin aramasına neden olur.|İsteğe Bağlı|
 |/isNative|Derleme bağımsız değişkeni bir yerel derleme için yol olduğunda bu bayrağı ayarlayın. Derleme bağımsız değişkeni yönetilen bir derlemenin adı olduğunda bu bayrağı atlayın. (Bu bayrak hakkında daha fazla bilgi için Notlar bölümüne bakın.)|İsteğe Bağlı|
 |/NewGuid 'ler|Bu bayrak ayarlandığında, araç, mevcut bildirimden birini birleştirmek yerine görüntülerin GUID sembolü için yeni bir değer oluşturmasını söyler.|İsteğe Bağlı|

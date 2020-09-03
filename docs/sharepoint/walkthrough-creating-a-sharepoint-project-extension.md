@@ -15,9 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 5df10e2da9e6b4c31894dce0669e9aa0e580b92f
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015073"
 ---
 # <a name="walkthrough-create-a-sharepoint-project-extension"></a>İzlenecek yol: SharePoint Proje uzantısı oluşturma
@@ -39,7 +40,7 @@ ms.locfileid: "86015073"
 
 - Proje özelliğini hata ayıklama ve test etme.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yolu tamamlamak için geliştirme bilgisayarında aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)], SharePoint ve ' nin desteklenen sürümleri [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
@@ -82,7 +83,7 @@ ms.locfileid: "86015073"
 
 4. **Ad** kutusuna **ProjectExtension**yazın ve **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]çözüme **ProjectExtension** projesini ekler ve varsayılan Class1 kod dosyasını açar.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] çözüme **ProjectExtension** projesini ekler ve varsayılan Class1 kod dosyasını açar.
 
 5. Class1 kod dosyasını projeden silin.
 
@@ -127,7 +128,7 @@ ms.locfileid: "86015073"
 
 1. **Çözüm Gezgini**, Source. Extension. valtmanifest dosyası için kısayol menüsünü açın ve **Aç** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]dosyayı bildirim tasarımcısında açar. **Meta veriler** sekmesinde görüntülenen bilgiler **Uzantılar ve güncelleştirmeler**' de görünür. Tüm VSıX paketleri. valtmanifest dosyası uzantısını gerektirir. Bu dosya hakkında daha fazla bilgi için bkz. [VSIX uzantı şeması 1,0 başvurusu](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] dosyayı bildirim tasarımcısında açar. **Meta veriler** sekmesinde görüntülenen bilgiler **Uzantılar ve güncelleştirmeler**' de görünür. Tüm VSıX paketleri. valtmanifest dosyası uzantısını gerektirir. Bu dosya hakkında daha fazla bilgi için bkz. [VSIX uzantı şeması 1,0 başvurusu](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).
 
 2. **Ürün adı** kutusuna **özel proje özelliği**girin.
 
@@ -171,7 +172,7 @@ ms.locfileid: "86015073"
 
 2. **F5** tuşunu seçerek veya menü çubuğunda hata ayıklama **Debug**  >  **Başlat hata**Ayıkla ' yı seçerek projenizin hata ayıklama derlemesini başlatın.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]uzantıyı%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom Project Property\1.0 dizinine yükleyerek deneysel bir örneğini başlatır [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] uzantıyı%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom Project Property\1.0 dizinine yükleyerek deneysel bir örneğini başlatır [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 3. Deneysel örneğinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bir Grup çözümü için bir SharePoint projesi oluşturun ve sihirbazdaki diğer değerler için varsayılan değerleri kullanın.
 
