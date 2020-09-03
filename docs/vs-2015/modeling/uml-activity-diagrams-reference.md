@@ -21,10 +21,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 960e9469290bca42abd252d497c2ce72e62e41a4
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85531540"
 ---
 # <a name="uml-activity-diagrams-reference"></a>UML Etkinlik Diyagramları: Başvuru
@@ -56,7 +56,7 @@ Bir *etkinlik diyagramı* , bir dizi eylem aracılığıyla iş akışı olarak 
 
  ![Basit bir denetim akışı](../modeling/media/uml-actovsimple.png "UML_ActOvSimple")
 
-|**Şeklinin**|**Dosyalarında**|**Açıklama ve ana Özellikler**|
+|**Şekil**|**Öğe**|**Açıklama ve ana Özellikler**|
 |-|-|-|
 |1|**Eylem**|Etkinliğin Kullanıcı veya yazılımın bir görevi gerçekleştirdiği bir adım.<br /><br /> Eylem, tüm gelen akışlara bir belirteç ulaştığında başlayabilir. Bu tamamlandığında, tüm giden akışlara belirteç gönderilir.<br /><br /> -   **Gövde** -eylemi ayrıntılı olarak belirtir.<br />-   **Dil** -Gövdedeki ifadenin dili.<br />-   **Yerel Postconditions** -yürütme sona erdiğinde karşılanması gereken kısıtlamalar. Eylem tarafından elde edilen hedef.<br />-   **Yerel ön koşullar** -yürütme başlamadan önce karşılanması gereken kısıtlamalar.|
 |2|**Denetim akışı**|Eylemler arasındaki denetim akışını gösteren bir bağlayıcı. Diyagramı yorumlamak için bir belirtecin bir eylemden sonrakine akmasını düşünün.<br /><br /> Bir denetim akışı oluşturmak için **bağlayıcı** aracını kullanın.|
@@ -76,21 +76,21 @@ Bir *etkinlik diyagramı* , bir dizi eylem aracılığıyla iş akışı olarak 
 
  ![Eşzamanlı akışı gösteren etkinlik diyagramı](../modeling/media/uml-actovconcurrent.png "UML_ActovConcurrent")
 
-|**Şeklinin**|**Dosyalarında**|**Açıklama**|
+|**Şekil**|**Öğe**|**Açıklama**|
 |-|-|-|
 |11|**Çatal düğümü**|Tek bir akışı eşzamanlı akışlara böler. Her gelen belirteç, giden bağlayıcıda bir belirteç üretir.|
 |12|**Düğüm Birleştir**|Eşzamanlı akışları tek bir akışta birleştirir. Her gelen akış için bekleyen bir belirteç olduğunda, çıktıda bir belirteç oluşturulur.|
 |13|**Sinyal gönderme eylemi**|Başka bir etkinliğe veya aynı etkinlik içindeki eşzamanlı bir iş parçacığına ileti veya sinyal gönderen bir eylem. İletinin türü ve içeriği, eylemin başlığı tarafından kapsanır veya ek açıklamalarda belirtilir.<br /><br /> Eylem, bir nesne akışında veya giriş sabitinde (16) eyleme geçirilebilen, sinyalde veri gönderebilir.|
 |14|**Olay kabul etme eylemi**|Eyleme devam etmeden önce bir ileti veya sinyal bekleyen bir eylem. Eylemin alabileceği ileti türü, başlık tarafından ima edilir veya ek açıklamalarda belirtilir.<br /><br /> Eylemin gelen denetim akışı yoksa, ileti her aldığında bir belirteç üretir.<br /><br /> Eylem, bir nesne akışına veya çıkış iğnesine (17) geçirilebilen, sinyalde veri alabilir.<br /><br /> -   **IsUnmarshall** -true ise, birkaç tür çıkış PIN 'i olabilir ve veriler bunlar üzerinde sıradan çıkar. Yanlış ise, tüm veriler bir PIN üzerinde görünür.|
 
-### <a name="data-flows"></a><a name="DataFlow"></a>Veri akışları
+### <a name="data-flows"></a><a name="DataFlow"></a> Veri akışları
  Verilerin akışını bir eylemden diğerine tanımlayabilirsiniz. Bu bölümde kullanılan öğeler hakkında daha fazla bilgi için, bir etkinlik diyagramı çizmek için Konu Kılavuzu konusunun veri akışları çizme bölümüne bakın.
 
  ![Veri akışını gösteren etkinlik diyagramı](../modeling/media/uml-actovdata.png "UML_ActOvData")
 
-|**Şeklinin**|**Dosyalarında**|**Açıklama**|
+|**Şekil**|**Öğe**|**Açıklama**|
 |-|-|-|
-|15|**Nesne düğümü**|Bir akış üzerinde geçen verileri temsil eder.<br /><br /> -   **Sıralama** -birden çok belirteç nasıl depolanır.<br />-   **Seçim** -bir işlemi çağırır, bu, verileri filtreleyerek başka bir diyagramda tanımlanabilir.<br />-   **Üst sınır** -0 verilerin akış üzerinde doğrudan geçmesi gerektiğini gösterir; \*verilerin akışta depolanabileceğini belirtir.<br />-   **Tür** -depolanan ve aktarılan nesnelerin türü.|
+|15|**Nesne düğümü**|Bir akış üzerinde geçen verileri temsil eder.<br /><br /> -   **Sıralama** -birden çok belirteç nasıl depolanır.<br />-   **Seçim** -bir işlemi çağırır, bu, verileri filtreleyerek başka bir diyagramda tanımlanabilir.<br />-   **Üst sınır** -0 verilerin akış üzerinde doğrudan geçmesi gerektiğini gösterir; \* verilerin akışta depolanabileceğini belirtir.<br />-   **Tür** -depolanan ve aktarılan nesnelerin türü.|
 |16|**Giriş PIN 'ı**|Bir eylemin yürütüldüğünde alabileceği verileri temsil eder.<br /><br /> -   **Tür** -aktarılan nesnelerin türü.|
 |17|**Çıkış Iğnesi**|Bir eylemin yürütüldüğünde oluşturduğu verileri temsil eder.<br /><br /> -   **Tür** -aktarılan nesnelerin türü.|
 |18|**Etkinlik parametresi düğümü**|Etkinlik tarafından verilerin alınabileceği veya üretilebileceği bir nesne düğümü.<br /><br /> Diyagram tarafından temsil edilen etkinlik başka bir etkinlikten çağrıldığında veya diyagramda bir işlem ya da işlev açıklandığı zaman kullanılır.<br /><br /> -   **Tür** -aktarılan nesnelerin türü.|

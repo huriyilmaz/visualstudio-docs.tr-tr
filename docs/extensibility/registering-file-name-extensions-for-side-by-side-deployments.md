@@ -1,5 +1,5 @@
 ---
-title: Yan Yana Dağıtımlar için Dosya Adı Uzantılarını Kaydetme | Microsoft Dokümanlar
+title: Yan yana dağıtımlar için dosya adı uzantılarını kaydetme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,23 +11,23 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 6717625a44b48a25d293f68d01cd9fa3c7c24853
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701547"
 ---
 # <a name="register-file-name-extensions-for-side-by-side-deployments"></a>Yan yana dağıtımlar için dosya adı uzantılarını kaydetme
-Yan yana dağıtılan VSPackages için, dosyaları doğru sürümüyle ilişkilendirmek için dosya adı uzantılarını [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]kaydetmeniz gerekir. Sürüme özel bir dosya adı uzantısı kullanmadığınız sürece, kayıt kullanıcıların projenizi ve [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]proje öğesi dosyalarınızı uygun sürümünde açmalarını sağlar.
+Yan yana bir ortamda dağıtılan VSPackages 'ler için, dosyaları doğru sürümü ile ilişkilendirmek üzere dosya adı uzantılarını kaydetmeniz gerekir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Sürüme özgü bir dosya adı uzantısı kullanmıyorsanız, kayıt, kullanıcıların projenizi ve proje öğesi dosyalarını uygun sürümünde açmasına olanak sağlar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
 ## <a name="in-this-section"></a>Bu bölümde
-- [Dosya adı uzantıları hakkında](../extensibility/about-file-name-extensions.md) Dosya adı uzantılarının nasıl kaydolduğunu tartışır.
+- [Dosya adı uzantıları hakkında](../extensibility/about-file-name-extensions.md) Dosya adı uzantılarının nasıl kaydedildiğini açıklar.
 
-- [Dosya adı uzantıları için dosya işleyicileri belirtin](../extensibility/specifying-file-handlers-for-file-name-extensions.md) Belirli bir dosya adı uzantısını açabilecek, bunları ve benzeri uygulamaları nasıl kaydedebileceğihakkında bilgi sağlar.
+- [Dosya adı uzantıları için dosya Işleyicileri belirtin](../extensibility/specifying-file-handlers-for-file-name-extensions.md) Belirli bir dosya adı uzantısını açan, düzenleyebilen ve bu uygulamaların nasıl kaydedileceği hakkında bilgi sağlar.
 
-- [Dosya adı uzantıları için fiilleri kaydetme](../extensibility/registering-verbs-for-file-name-extensions.md) Fiillerin nasıl kaydedilenini tartışır.
+- [Dosya adı uzantıları için fiilleri kaydetme](../extensibility/registering-verbs-for-file-name-extensions.md) Fiillerin nasıl kaydedileceği açıklanmaktadır.
 
-- [Yan yana dosya ilişkilendirmelerini yönetme](../extensibility/managing-side-by-side-file-associations.md) Bir dosyayı açmak için belirli bir sürümün [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] çağrılması gereken yan yana yüklemelerin nasıl işleyeceğini tartışır.
+- [Yan yana dosya Ilişkilendirmelerini yönetme](../extensibility/managing-side-by-side-file-associations.md) Belirli bir sürümünün [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir dosyayı açmak için çağrılması gereken yan yana yüklemelerin nasıl işleneceğini açıklar.
 
 ## <a name="related-sections"></a>İlgili bölümler
-- [Visual Studio'nun birden fazla versiyonunu destekleyin](../extensibility/supporting-multiple-versions-of-visual-studio.md) Geliştirme [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ve son kullanıcılara dağıtım sırasında VSPackage'ınızın birden çok sürümü ve VSPackage ile ilgili sorunları açıklar.
+- [Visual Studio 'nun birden çok sürümünü destekleme](../extensibility/supporting-multiple-versions-of-visual-studio.md) Uygulamasının, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] son kullanıcılara geliştirme ve dağıtım sırasında birden fazla sürümü ve VSPackage ile ilgili sorunları açıklar.

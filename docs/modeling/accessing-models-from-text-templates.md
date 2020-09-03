@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a66f160d25ccacbdaaaf2238dfc738ade4a4200f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85531475"
 ---
 # <a name="access-models-from-text-templates"></a>Metin şablonlarından modellere erişin
@@ -61,7 +61,7 @@ Here is a list of elements in the model:
 
 - Kod parçalarının yazıldığı dil C# ' dir, ancak herhangi bir türde metin oluşturabilirsiniz. Ayrıca, [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] özelliğini yönergesine ekleyerek kodu yazabilirsiniz `language="VB"` `template` .
 
-- Şablonda hata ayıklamak için `debug="true"` `template` yönergeye ekleyin. Bir özel durum oluşursa, şablon Visual Studio 'nun başka bir örneğinde açılır. Kodda belirli bir noktada hata ayıklayıcıya bölmek istiyorsanız, ifadesini ekleyin`System.Diagnostics.Debugger.Break();`
+- Şablonda hata ayıklamak için `debug="true"` `template` yönergeye ekleyin. Bir özel durum oluşursa, şablon Visual Studio 'nun başka bir örneğinde açılır. Kodda belirli bir noktada hata ayıklayıcıya bölmek istiyorsanız, ifadesini ekleyin `System.Diagnostics.Debugger.Break();`
 
    Daha fazla bilgi için bkz. [T4 metin şablonunda hata ayıklama](../modeling/debugging-a-t4-text-template.md).
 
@@ -95,7 +95,7 @@ Here is a list of elements in the model:
 
    Bir hata bulunursa, hatalar penceresinde raporlanır ve sonuç dosyası bir hata mesajı içerecektir.
 
-## <a name="accessing-multiple-models-from-a-text-template"></a><a name="Multiple"></a>Metin şablonundan birden çok modele erişme
+## <a name="accessing-multiple-models-from-a-text-template"></a><a name="Multiple"></a> Metin şablonundan birden çok modele erişme
 
 > [!NOTE]
 > Bu yöntem, aynı şablonda birden çok modeli okumanızı sağlar, ancak ModelBus başvurularını desteklemez. ModelBus başvuruları tarafından birbirine bağlanmış modelleri okumak için, bkz. [bir metin şablonunda Visual Studio ModelBus kullanma](../modeling/using-visual-studio-modelbus-in-a-text-template.md).
@@ -172,7 +172,7 @@ For Each element As ExampleElement In Me.WorkModel.Elements
 #>
 ```
 
- `LoopSplitter.tt`çağırır `LoopTemplate.t4` ve sonuç dosyayı segmentlerine böler. Modeli okumadığından bu şablonun modelleme şablonu olması gerekmez.
+ `LoopSplitter.tt` çağırır `LoopTemplate.t4` ve sonuç dosyayı segmentlerine böler. Modeli okumadığından bu şablonun modelleme şablonu olması gerekmez.
 
 ```
 <#@ template hostspecific="true" language="C#" #>

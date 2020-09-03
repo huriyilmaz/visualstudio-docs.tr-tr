@@ -13,18 +13,18 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 77e4701d3d8ec54fd37d6483f55b10a28af65b15
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194055"
 ---
 # <a name="popdirlistfunc"></a>POPDIRLISTFUNC
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu, verilen bir geri çağırma işlevini [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) işleviyle dizinleri ve (isteğe bağlı olarak), kaynak denetimi altında olduğunu öğrenmek için dosya adları topluluğu.  
+Bu, bir dizin koleksiyonunu ve (isteğe bağlı olarak) dosya adlarını güncelleştirmek için, kaynak denetimi altında olduğunu öğrenmek üzere [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) işlevine verilen bir geri çağırma işlevidir.  
   
- `POPDIRLISTFUNC` Yalnızca dizin ve dosya adları için geri çağırma'nin çağrılabilir (verilen listedeki `SccPopulateDirList` işlevi) olan gerçekten kaynak denetimi altında.  
+ `POPDIRLISTFUNC`Geri çağırma yalnızca kaynak denetimi altındaki dizinler ve dosya adları (işleve verilen listede) için çağrılmalıdır `SccPopulateDirList` .  
   
 ## <a name="signature"></a>İmza  
   
@@ -38,27 +38,27 @@ typedef BOOL (*POPDIRLISTFUNC)(
   
 ## <a name="parameters"></a>Parametreler  
  pvCallerData  
- [in] Verilen kullanıcı değeri [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md).  
+ 'ndaki [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)için Kullanıcı değeri verildi.  
   
- bKlasör  
- [in] `TRUE` varsa adın `lpDirectoryOrFileName` bir dizin; Aksi takdirde adı bir dosya adıdır.  
+ bFolder  
+ [in] `TRUE` içindeki ad `lpDirectoryOrFileName` bir dizin ise, ad bir dosya adıdır.  
   
  lpDirectoryOrFileName  
- [in] Kaynak kodu denetimi altında dizin veya dosya adı tam yerel yolu.  
+ 'ndaki Kaynak kodu denetimi altında bir dizin veya dosya adının tam yerel yolu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- IDE uygun hata kodu döndürür:  
+ IDE, uygun bir hata kodu döndürür:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |SCC_OK|İşleme devam edin.|  
 |SCC_I_OPERATIONCANCELED|İşlemeyi durdur.|  
-|SCC_E_xxx|Herhangi bir uygun kaynak denetimi hata işleme durdurmanız gerekir.|  
+|SCC_E_xxx|Uygun kaynak denetimi hatası işlemeyi durdurmalıdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa `fOptions` parametresinin `SccPopulateDirList` işlevi içeren `SCC_PDL_INCLUDEFILES` liste büyük bir olasılıkla dosya adları ve bunun yanı sıra dizin adları içerir bayrağı.  
+ `fOptions` `SccPopulateDirList` İşlevin parametresi `SCC_PDL_INCLUDEFILES` bayrağını içeriyorsa, liste büyük olasılıkla dosya adlarının yanı sıra dizin adlarını da içerir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [IDE tarafından uygulanan geri çağırma işlevleri](../extensibility/callback-functions-implemented-by-the-ide.md)   
+ [IDE tarafından uygulanan geri çağırma Işlevleri](../extensibility/callback-functions-implemented-by-the-ide.md)   
  [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)   
  [Hata Kodları](../extensibility/error-codes.md)

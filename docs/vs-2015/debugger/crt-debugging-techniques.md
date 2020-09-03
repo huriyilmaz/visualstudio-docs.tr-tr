@@ -1,5 +1,5 @@
 ---
-title: CRT hata ayıklama tekniklerine | Microsoft Docs
+title: CRT hata ayıklama teknikleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -22,39 +22,39 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a69defe75b80ef1f395931017dfc942398ca2710
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161487"
 ---
 # <a name="crt-debugging-techniques"></a>CRT Hata Ayıklama Teknikleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-C çalışma zamanı kitaplığı kullanan bir programı hata ayıklaması yapıyorsanız, bu hata ayıklama teknikleri yararlı olabilir.  
+C çalışma zamanı kitaplığını kullanan bir programda hata ayıklaması yapıyorsanız, bu hata ayıklama teknikleri yararlı olabilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [CRT Hata Ayıklama Kitaplığı Kullanımı](../debugger/crt-debug-library-use.md)  
  C çalışma zamanı kitaplığı tarafından sağlanan hata ayıklama desteğini açıklar ve araçlara erişmek için yönergeler sağlar.  
   
  [Raporlama Makroları](../debugger/macros-for-reporting.md)  
- Hakkında bilgi sağlar **_RPTn** ve **_RPTFn** makroları (CRTDBG içinde tanımlanır. Kullanımını değiştirin H) `printf` hata ayıklama için deyimleri.  
+ **_RPTn** ve **_RPTFn** makroları hakkında bilgi sağlar (Crtdbg içinde tanımlanır. H), `printf` hata ayıklama için deyimlerin kullanımını değiştirir.  
   
  [Öbek Atama İşlevleri Hata Ayıklama Sürümleri](../debugger/debug-versions-of-heap-allocation-functions.md)  
- Yığın ayırma işlevleri dahil olmak üzere, özel hata ayıklama sürümlerini açıklar: CRT çağrıları, açıkça çağırma avantajları nasıl eşlendiğini nasıl önleneceğini dönüştürme, istemci bloklar ayırmaları ayrı türlerini ve tanımlamayarak _ sonuçlarını izleme HATA AYIKLAMA.  
+ Yığın ayırma işlevlerinin özel hata ayıklama sürümlerini açıklar; Örneğin, CRT haritaları nasıl çağırır, bunları açıkça çağırma avantajları, dönüştürme nasıl önlenir, istemci bloklarının içindeki ayrı ayırma türlerini izleme ve _DEBUG tanımlamama sonuçları.  
   
  [CRT Hata Ayıklama Öbeği Ayrıntıları](../debugger/crt-debug-heap-details.md)  
- Bellek yönetimi ve hata ayıklama yığın, blok türlerine bağlantılar kullanarak hata ayıklama öbek, öbek durumu raporlama işlevleri ve yığın ayırma isteklerini izleme hata ayıklama yığınında sağlar.  
+ Bellek yönetimine ve hata ayıklama yığınına, hata ayıklama yığınından blok türlerine, hata ayıklama yığınını, yığın durumu raporlama işlevlerine ve yığın ayırma isteklerini izlemeye yönelik bağlantılar sağlar.  
   
  [Hata Ayıklama Kanca İşlevi Yazma](../debugger/debug-hook-function-writing.md)  
- İstemci engelleme listeleri bağlantılar, İşlevler, atama kanca işlevleri, atama kancaları ve CRT bellek ayırmaları ve kanca işlevlerini raporlama bağlayın.  
+ İstemci blok kanca işlevleri, ayırma kanca işlevleri, ayırma kancaları ve CRT bellek ayırmaları ve rapor kanca işlevleri bağlantılarını listeler.  
   
  [CRT Kitaplığını Kullanarak Bellek Sızıntılarını Bulma](../debugger/finding-memory-leaks-using-the-crt-library.md)  
- Algılama ve hata ayıklayıcı ve C çalışma zamanı kitaplığını kullanarak bellek sızıntılarını ayırma teknikleri kapsar.  
+ Hata ayıklayıcı ve C çalışma zamanı kitaplığını kullanarak bellek sızıntılarını algılama ve yalıtma tekniklerini ele alır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)  
- Bazı yaygın hata ayıklama sorunları ve C ve C++ uygulamaları için teknikleri açıklar.  
+ C ve C++ uygulamaları için bazı yaygın hata ayıklama sorunlarını ve tekniklerini açıklar.  
   
- [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)  
+ [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)  
  Daha güvenli hata ayıklama için öneriler sağlar.

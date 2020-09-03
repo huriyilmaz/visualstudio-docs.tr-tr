@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetNameFromToken | Microsoft Docs
+title: 'IDebugComPlusSymbolProvider:: GetNameFromToken | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 94cca3ebf25c86579ce601d614618ff431629af7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194699"
 ---
 # <a name="idebugcomplussymbolprovidergetnamefromtoken"></a>IDebugComPlusSymbolProvider::GetNameFromToken
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Belirtilen meta veri nesnesi, verilen belirteçle ilişkili adı döndürür.  
+Belirtilen belirteçle ilişkili, meta veri nesnesi verilen adı döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetNameFromToken (  
@@ -43,19 +43,19 @@ int GetNameFromToken (
   
 #### <a name="parameters"></a>Parametreler  
  `pMetadataImport`  
- [in] Meta veri bilgilerini içeren nesne.  
+ 'ndaki Meta veri bilgilerini içeren nesne.  
   
  `dwToken`  
- [in] Belirteç adı.  
+ 'ndaki Adlandırılacak belirteç.  
   
  `pbstrName`  
- [out] Belirtece karşılık gelen ad.  
+ dışı Belirtece karşılık gelen ad.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **CDebugSymbolProvider** gösteren nesne [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimi.  
+ Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::GetNameFromToken(  

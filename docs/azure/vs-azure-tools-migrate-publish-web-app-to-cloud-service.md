@@ -10,10 +10,10 @@ ms.topic: how-to
 ms.date: 11/10/2017
 ms.author: ghogen
 ms.openlocfilehash: c95c96815872c259cab761d8b4af36141f866dbd
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85280563"
 ---
 # <a name="how-to-migrate-and-publish-a-web-application-to-an-azure-cloud-service-from-visual-studio"></a>Nasıl yapılır: bir Web uygulamasını Visual Studio 'dan Azure bulut hizmeti 'ne geçirme ve yayımlama
@@ -79,8 +79,8 @@ Aşağıdaki tabloda, uygulamayı Azure 'da başlatma ile ilgili ayrıntılar ve
 | Web uygulaması türü | Azure 'da çalıştırma |
 | --- | --- |
 | ASP.NET Web uygulaması<br/>(MVC 2, MVC 3, MVC 4 dahil) | **Azure etkinlik günlüğü**için **dağıtım** sekmesinde URL 'yi seçin. |
-| ASP.NET boş Web uygulaması | Uygulamanızda varsayılan bir sayfanız varsa `.aspx` , **Azure etkinlik günlüğü**için **dağıtım** sekmesinden URL 'yi seçin. Farklı bir sayfaya gitmek için, tarayıcıda aşağıdaki formun URL 'sini girin:`<deployment_url>/<page_name>.aspx` |
-| WCF hizmeti uygulaması<br/>WCF İş Akışı Hizmeti Uygulaması | `.svc`WCF hizmeti projeniz için başlangıç sayfası olarak dosyayı ayarlayın. Sonra şuraya gidin`<deployment_url>/<service_file>.svc` |
+| ASP.NET boş Web uygulaması | Uygulamanızda varsayılan bir sayfanız varsa `.aspx` , **Azure etkinlik günlüğü**için **dağıtım** sekmesinden URL 'yi seçin. Farklı bir sayfaya gitmek için, tarayıcıda aşağıdaki formun URL 'sini girin: `<deployment_url>/<page_name>.aspx` |
+| WCF hizmeti uygulaması<br/>WCF İş Akışı Hizmeti Uygulaması | `.svc`WCF hizmeti projeniz için başlangıç sayfası olarak dosyayı ayarlayın. Sonra şuraya gidin `<deployment_url>/<service_file>.svc` |
 | ASP.NET dinamik varlıkları<br/>ASP.NET dinamik veri LINQ to SQL | Bağlantı dizesini, sonraki bölümde açıklandığı gibi güncelleştirin. Sonra öğesine gidin `<deployment_url>/<page_name>.aspx` . LINQ to SQL için bir Azure SQL veritabanı kullanmanız gerekir. |
 
 ## <a name="update-a-connection-string-for-aspnet-dynamic-entities"></a>ASP.NET dinamik varlıkları için bağlantı dizesini güncelleştirme

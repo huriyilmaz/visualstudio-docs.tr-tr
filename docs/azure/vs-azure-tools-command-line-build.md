@@ -10,10 +10,10 @@ ms.topic: how-to
 ms.date: 03/05/2017
 ms.author: ghogen
 ms.openlocfilehash: 179737f7a4a55fd6111338363ad6668a43689205
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85280771"
 ---
 # <a name="building-azure-projects-from-the-command-line"></a>Komut satırından Azure projeleri oluşturma

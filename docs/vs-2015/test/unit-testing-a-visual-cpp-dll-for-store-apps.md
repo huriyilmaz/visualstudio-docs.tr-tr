@@ -1,5 +1,5 @@
 ---
-title: Mağaza uygulamaları için bir C++ Visual dll 'yi test etme Microsoft Docs
+title: Mağaza uygulamaları için Visual C++ DLL 'i birim testi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-test
@@ -10,22 +10,22 @@ author: alexhomer1
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9d5f86eb40e1401f98a4c66d0b971fb006762cc1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659701"
 ---
-# <a name="unit-testing-a-visual-c-dll-for-store-apps"></a>Mağaza uygulamaları için bir C++ Visual dll ile birim testi
+# <a name="unit-testing-a-visual-c-dll-for-store-apps"></a>Mağaza uygulamaları için Visual C++ DLL 'i birim testi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu konu, Windows Mağazası uygulamaları için bir C++ dll için birim testleri oluşturmanın bir yolunu açıklar. RooterLib dll, belirli bir sayının karekökünü hesaplayan bir işlev uygulayarak, ana bilgisayardan sınır teorisi olan her bir yöntemi gösterir. DLL daha sonra bir Windows Mağazası uygulamasına dahil edilebilir ve bu da Kullanıcı matematik ile yapılabilecek eğlenceli şeyleri gösterir.
+Bu konu, Windows Mağazası uygulamaları için bir C++ DLL 'SI için birim testleri oluşturmanın bir yolunu açıklar. RooterLib DLL, belirli bir sayının kare kökünü tahmin eden bir işlev uygulayarak, ana bilgisayardan sınır teorisi ercesini gösterir. DLL daha sonra bir Windows Mağazası uygulamasına dahil edilebilir ve bu da Kullanıcı matematik ile yapılabilecek eğlenceli şeyleri gösterir.
 
  Bu konu, geliştirme aşamasında ilk adım olarak birim testi kullanmayı gösterir. Bu yaklaşımda, önce test ettiğiniz sistemde belirli bir davranışı doğrulayan bir test yöntemi yazar ve ardından testi geçiren kodu yazarsınız. Aşağıdaki yordamların sırasıyla değişiklik yaparak, test etmek istediğiniz kodu yazmak ve ardından birim testlerini yazmak için bu stratejiyi ters çevirebilirsiniz.
 
- Bu konu ayrıca, tek bir Visual Studio çözümü ve test etmek istediğiniz birim testleri ve DLL için ayrı projeler oluşturur. Birim testlerini doğrudan DLL projesine da dahil edebilir veya birim testleri ve için ayrı çözümler oluşturabilirsiniz. Dosyasını. Hangi yapının kullanılacağı hakkında ipuçları için bkz. [var olan C++ uygulamalara birim testleri ekleme](../test/unit-testing-existing-cpp-applications-with-test-explorer.md) .
+ Bu konu ayrıca, tek bir Visual Studio çözümü ve test etmek istediğiniz birim testleri ve DLL için ayrı projeler oluşturur. Birim testlerini doğrudan DLL projesine da dahil edebilir veya birim testleri ve için ayrı çözümler oluşturabilirsiniz. Dosyasını. Hangi yapının kullanılacağı hakkında ipuçları için bkz. [var olan C++ uygulamalarına birim testleri ekleme](../test/unit-testing-existing-cpp-applications-with-test-explorer.md) .
 
-## <a name="BKMK_In_this_topic"></a>Bu konuda
+## <a name="in-this-topic"></a><a name="BKMK_In_this_topic"></a> Bu konuda
  Bu konu size aşağıdaki görevleri gerçekleştirir:
 
  [Çözüm ve birim testi projesi oluşturma](#BKMK_Create_the_solution_and_the_unit_test_project)
@@ -42,15 +42,15 @@ Bu konu, Windows Mağazası uygulamaları için bir C++ dll için birim testleri
 
  [Testleri değiştirmeden kodu yeniden düzenleme](#BKMK_Refactor_the_code_without_changing_tests)
 
-## <a name="BKMK_Create_the_solution_and_the_unit_test_project"></a>Çözüm ve birim testi projesi oluşturma
+## <a name="create-the-solution-and-the-unit-test-project"></a><a name="BKMK_Create_the_solution_and_the_unit_test_project"></a> Çözüm ve birim testi projesi oluşturma
 
 1. **Dosya** menüsünde **Yeni**' yi ve ardından **Yeni proje**' yi seçin.
 
-2. Yeni proje iletişim kutusunda, **yüklü**' ı genişletin, ardından **görsel C++**  ' i genişletin ve **Windows Mağazası**' nı seçin Ardından, proje şablonları listesinden **birim testi kitaplığı (Windows Mağazası uygulamaları)** öğesini seçin.
+2. Yeni proje iletişim kutusunda, **yüklü**' ı genişletin ve ardından **Visual C++** ' ı genişletin ve **Windows Mağazası**' nı seçin Ardından, proje şablonları listesinden **birim testi kitaplığı (Windows Mağazası uygulamaları)** öğesini seçin.
 
-     ![C&#43; &#43; birim testi kitaplığı oluşturma](../test/media/ute-cpp-windows-unittestlib-create.png "UTE_Cpp_windows_UnitTestLib_Create")
+     ![C&#43;&#43; birim testi kitaplığı oluşturma](../test/media/ute-cpp-windows-unittestlib-create.png "UTE_Cpp_windows_UnitTestLib_Create")
 
-3. Projeyi `RooterLibTests` olarak adlandırın; konumu belirtin; çözümü adlandırın `RooterLib`; ve **çözüm için dizin oluşturma** ' nın işaretli olduğundan emin olun.
+3. Projeyi adlandırın; `RooterLibTests` konumu belirtin; çözümü adlandırın; `RooterLib` **çözüm için dizin oluştur** ' un işaretli olduğundan emin olun.
 
      ![Çözüm ve proje adını ve konumunu belirtin](../test/media/ute-cpp-windows-unittestlib-createspecs.png "UTE_Cpp_windows_UnitTestLib_CreateSpecs")
 
@@ -58,17 +58,17 @@ Bu konu, Windows Mağazası uygulamaları için bir C++ dll için birim testleri
 
      ![UnitTest1. cpp](../test/media/ute-cpp-windows-unittest1-cpp.png "UTE_Cpp_windows_unittest1_cpp")
 
-     Aşağıdakilere dikkat edin:
+     Şunlara dikkat edin:
 
-    - Her test `TEST_METHOD(YourTestName){...}` kullanılarak tanımlanır.
+    - Her test kullanılarak tanımlanır `TEST_METHOD(YourTestName){...}` .
 
          Geleneksel bir işlev imzası yazmanız gerekmez. İmza, makro TEST_METHOD tarafından oluşturulur. Makro, void döndüren bir örnek işlevi oluşturur. Ayrıca test yöntemiyle ilgili bilgileri döndüren statik bir işlev oluşturur. Bu bilgiler, test Gezgini 'nin yöntemi bulmasını sağlar.
 
-    - Test yöntemleri `TEST_CLASS(YourClassName){...}` kullanılarak sınıflar halinde gruplandırılır.
+    - Test yöntemleri kullanılarak sınıflar halinde gruplandırılır `TEST_CLASS(YourClassName){...}` .
 
          Testler çalıştırıldığında, her bir test sınıfının bir örneği oluşturulur. Test yöntemleri belirtilmemiş bir sırada çağırılır. Her modül, sınıf veya yöntemden önce ve sonra çağrılan özel yöntemler tanımlayabilirsiniz. Daha fazla bilgi için MSDN Kitaplığı 'nda [Microsoft. VisualStudio. TestTools. CppUnitTestFramework kullanma](../test/using-microsoft-visualstudio-testtools-cppunittestframework.md) konusuna bakın.
 
-## <a name="BKMK_Verify_that_the_tests_run_in_Test_Explorer"></a>Test Gezgini 'nde testlerin çalıştırıldığını doğrulama
+## <a name="verify-that-the-tests-run-in-test-explorer"></a><a name="BKMK_Verify_that_the_tests_run_in_Test_Explorer"></a> Test Gezgini 'nde testlerin çalıştırıldığını doğrulama
 
 1. Bir test kodu ekleyin:
 
@@ -79,7 +79,7 @@ Bu konu, Windows Mağazası uygulamaları için bir C++ dll için birim testleri
     }
     ```
 
-     @No__t_0 sınıfının, test yöntemlerinde sonuçları doğrulamak için kullanabileceğiniz çeşitli statik yöntemler sağladığını unutmayın.
+     `Assert`Sınıfının, test yöntemlerinde sonuçları doğrulamak için kullanabileceğiniz çeşitli statik yöntemler sağladığını unutmayın.
 
 2. **Test** menüsünde **Çalıştır** ' ı ve ardından **Tümünü Çalıştır**' ı seçin.
 
@@ -87,7 +87,7 @@ Bu konu, Windows Mağazası uygulamaları için bir C++ dll için birim testleri
 
      ![Test Gezgini](../test/media/ute-cpp-testexplorer-testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")
 
-## <a name="BKMK_Add_the_DLL_project_to_the_solution"></a>Çözüme DLL projesi ekleme
+## <a name="add-the-dll-project-to-the-solution"></a><a name="BKMK_Add_the_DLL_project_to_the_solution"></a> Çözüme DLL projesi ekleme
 
 1. Çözüm Gezgini, çözüm adını seçin. Kısayol menüsünde **Ekle**' yi ve ardından **Yeni Proje Ekle**' yi seçin.
 
@@ -117,19 +117,19 @@ Bu konu, Windows Mağazası uygulamaları için bir C++ dll için birim testleri
     };
     ```
 
-     Açıklamalar IDEF bloğunu yalnızca dll geliştiricisi için değil, projesinde DLL 'ye başvuran herkese da açıklamaktadır. DLL 'nin proje özelliklerini kullanarak komut satırına ROOTERLIB_EXPORTS sembolünü ekleyebilirsiniz.
+     Açıklamalar IDEF bloğunu yalnızca dll geliştiricisi için değil, projesinde DLL 'ye başvuran herkese da açıklamaktadır. DLL 'nin proje özelliklerini kullanarak ROOTERLIB_EXPORTS sembolünü komut satırına ekleyebilirsiniz.
 
-     @No__t_0 sınıfı bir Oluşturucu ve `SqareRoot` tahmin aracı metodunu bildirir.
+     `CRooterLib`Sınıfı bir Oluşturucu ve `SqareRoot` tahmin aracı metodunu bildirir.
 
-4. Komut satırına ROOTERLIB_EXPORTS sembolünü ekleyin.
+4. ROOTERLIB_EXPORTS sembolünü komut satırına ekleyin.
 
     1. Çözüm Gezgini, **RooterLib** projesini seçin ve sonra kısayol menüsünden **Özellikler** ' i seçin.
 
          ![Önişlemci sembol tanımı ekleme](../test/media/ute-cpp-windows-addpreprocessorsymbol.png "UTE_Cpp_windows_AddPreprocessorSymbol")
 
-    2. RooterLib Özellik sayfası iletişim kutusunda **yapılandırma özellikleri**' ni genişletin **C++** ve **Önişlemci**' yi seçin.
+    2. RooterLib Özellik sayfası iletişim kutusunda **yapılandırma özellikleri**' ni genişletin, **C++** ' ı genişletin ve **Önişlemci**' yi seçin.
 
-    3. **@No__t_1Edit seçin...** ön **işlemci tanımları** listesinden > ve sonra Önişlemci tanımları iletişim kutusuna `ROOTERLIB_EXPORTS` ekleyin.
+    3. Ön **\<Edit...>** **işlemci tanımları** listesinden öğesini seçin ve ardından ön `ROOTERLIB_EXPORTS` işlemci tanımları iletişim kutusuna ekleyin.
 
 5. Belirtilen işlevlerin minimal uygulamalarını ekleyin. **RooterLib. cpp** ' i açın ve aşağıdaki kodu ekleyin:
 
@@ -147,7 +147,7 @@ Bu konu, Windows Mağazası uygulamaları için bir C++ dll için birim testleri
 
     ```
 
-## <a name="BKMK_Couple_the_test_project_to_the_dll_project"></a>DLL projesine test projesi için birkaç
+## <a name="couple-the-test-project-to-the-dll-project"></a><a name="BKMK_Couple_the_test_project_to_the_dll_project"></a> DLL projesine test projesi için birkaç
 
 1. RooterLib öğesini RooterLibTests projesine ekleyin.
 
@@ -163,7 +163,7 @@ Bu konu, Windows Mağazası uygulamaları için bir C++ dll için birim testleri
 
    1. **UnitTest1. cpp**öğesini açın.
 
-   2. Bu kodu `#include "CppUnitTest.h"` satırı altına ekleyin:
+   2. Bu kodu satırın altına ekleyin `#include "CppUnitTest.h"` :
 
        ```cpp
        #include "..\RooterLib\RooterLib.h"
@@ -190,7 +190,7 @@ Bu konu, Windows Mağazası uygulamaları için bir C++ dll için birim testleri
 
    ```
 
-4. Çözümü oluşturun.
+4. Çözümü derleyin.
 
     Yeni test, test Gezgini 'nde, **çalıştırma testleri** düğümünde görünür.
 
@@ -200,7 +200,7 @@ Bu konu, Windows Mağazası uygulamaları için bir C++ dll için birim testleri
 
    Test ve kod projelerini ayarlamış ve kod projesindeki işlevleri çalıştıran testleri çalıştıracağınızı doğruladınız. Artık gerçek testleri ve kodu yazmaya başlayabilirsiniz.
 
-## <a name="BKMK_Iteratively_augment_the_tests_and_make_them_pass"></a>Testleri tekrarlayarak ve geçiş yapın
+## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="BKMK_Iteratively_augment_the_tests_and_make_them_pass"></a> Testleri tekrarlayarak ve geçiş yapın
 
 1. Yeni bir test ekleyin:
 
@@ -261,7 +261,7 @@ Bu konu, Windows Mağazası uygulamaları için bir C++ dll için birim testleri
 > [!TIP]
 > Her seferinde bir test ekleyerek kod geliştirin. Her yinelemeden sonra tüm testlerin başarılı olduğundan emin olun.
 
-## <a name="BKMK_Debug_a_failing_test"></a>Başarısız bir testte hata ayıkla
+## <a name="debug-a-failing-test"></a><a name="BKMK_Debug_a_failing_test"></a> Başarısız bir testte hata ayıkla
 
 1. **UnitTest1. cpp**öğesine başka bir test ekleyin:
 
@@ -303,7 +303,7 @@ Bu konu, Windows Mağazası uygulamaları için bir C++ dll için birim testleri
 
 3. Testin neden başarısız olduğunu görmek için, işlevi adım adım inceleyin:
 
-   1. @No__t_0 işlevinin başlangıcında bir kesme noktası ayarlayın.
+   1. İşlevin başlangıcında bir kesme noktası ayarlayın `SquareRoot` .
 
    2. Başarısız testin kısayol menüsünde, **Seçili testlerin hatalarını ayıkla**' yı seçin.
 
@@ -331,9 +331,9 @@ Bu konu, Windows Mağazası uygulamaları için bir C++ dll için birim testleri
 
    ![Tüm testler geçer](../test/media/ute-ult-alltestspass.png "UTE_ULT_AllTestsPass")
 
-## <a name="BKMK_Refactor_the_code_without_changing_tests"></a>Testleri değiştirmeden kodu yeniden düzenleme
+## <a name="refactor-the-code-without-changing-tests"></a><a name="BKMK_Refactor_the_code_without_changing_tests"></a> Testleri değiştirmeden kodu yeniden düzenleme
 
-1. @No__t_0 işlevinde merkezi hesaplamayı kolaylaştırın:
+1. İşlevde merkezi hesaplamayı basitleştirme `SquareRoot` :
 
     ```
     // old code
