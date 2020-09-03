@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericFieldDefinition::GetFormalTypeParams | Microsoft Docs
+title: 'Idebuggenericfielddefinition:: GetFormalTypeParams | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2e4595cd8a93c266d0eb70e91b8ab8ca8aeb8cb5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180833"
 ---
 # <a name="idebuggenericfielddefinitiongetformaltypeparams"></a>IDebugGenericFieldDefinition::GetFormalTypeParams
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Parametre sayısı belirtilen tür parametreleri alır.  
+Parametre sayısı verilen tür parametrelerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetFormalTypeParams(  
@@ -43,19 +43,19 @@ int GetFormalTypeParams(
   
 #### <a name="parameters"></a>Parametreler  
  `cParams`  
- [in] Parametre sayısı.  
+ 'ndaki Parametre sayısı.  
   
  `ppParams`  
- [out] Tür parametreleri dizisi.  
+ dışı Parametre türü dizisi.  
   
  `pcParams`  
- [out içinde] Parametre sayısı `ppParams` dizisi.  
+ [in, out] Dizideki parametre sayısı `ppParams` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tür parametreleri sırayla soldan sağa döndür. Örneğin, sözlük\<K, V > IDebugFormalGenericParameters {K, V} döndürür.  
+ Tür parametrelerini soldan sağa doğru sırayla döndürün. Örneğin, sözlük \<K,V> IDebugFormalGenericParameters {K, V} döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

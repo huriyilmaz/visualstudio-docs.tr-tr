@@ -10,54 +10,54 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1455c67c3cb6d8dc99aeab91a7bfa63cce009c51
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75590806"
 ---
-# <a name="use-the-graphs-view-legend-to-analyze-load-tests"></a>Yük testlerini analiz etmek için Grafikler görünüm göstergesini kullanma
+# <a name="use-the-graphs-view-legend-to-analyze-load-tests"></a>Yük testlerini çözümlemek için grafik görünümü göstergesini kullanın
 
-Yük Testi Çözümleyicisinin Grafikler görünümü, şu anda seçili grafikle ilişkili her performans sayacı için bilgi görüntüleyen bir gösterge paneli içerir.
+Yük Testi Çözümleyicisi 'nin grafik görünümü, seçili grafik ile ilişkili her performans sayacı için bilgileri görüntüleyen bir gösterge paneli içerir.
 
-![Grafikler görünüm göstergesi](../test/media/load_viewlegend.png)
+![Grafik görünümü göstergesi](../test/media/load_viewlegend.png)
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Aşağıdaki bilgiler gösterge içinde yer almaktadır:
+Aşağıdaki bilgiler gösterge içinde bulunur:
 
-- **Grafikte göster:** **Kullanıcı yükü** veya **Hatalar/Sn**gibi belirli bir sayaç için satırın grafikte çizilip çizilemediğini belirtmek için onay kutularını kullanın. Çizginin grafikte çizilmesini istiyorsanız bir onay kutusu seçin. Çizim satırını grafikten kaldırmak için bir onay kutusunu temizleyin. Bir çizim satırı kaldırıldığında, sayaç istatistikleri göstergede görüntüalmaya devam edin.
+- **Grafikte göster:** Grafik üzerinde **Kullanıcı yükleme** veya **hatalar/sn**gibi belirli bir sayaca ait çizginin çizilip çizilmeyeceğini belirtmek için onay kutularını kullanın. Çizginin grafikte çizilmesini istiyorsanız onay kutusunu işaretleyin. Çizim çizgisini grafikten kaldırmak için onay kutusunu temizleyin. Bir çizim çizgisi kaldırıldığında, sayacın istatistikleri göstergede görüntülenmeye devam eder.
 
-- **Aralık:** Bu sütun, performans sayacının y ekseni aralığını görüntüler. Varsayılan olarak, örnek veri aralığı değiştikçe bu değer otomatik olarak ayarlanır. Otomatik olarak ayarlanmış bir aralık her zaman Max değerinden 10 daha büyük bir sonraki güç olacaktır; bu on olumsuz güçler içerir. Grafik, her biri farklı bir aralıkta olan çeşitli sayaçlar içerebilir. Bu nedenle, y ekseni belirli bir aralıkla etiketlenmez, ancak bunun yerine her sayaç için toplam aralığın yüzdesini temsil eden 0-100 değerleri ile etiketlenir. Örneğin, 1000 aralığı olan bir sayaç için, y ekseninde 60'lık bir veri noktası sayaç için 600 değerine karşılık gelir.
-
-    > [!NOTE]
-    > Aralığı belirli bir değere kilitleyerek otomatik aralık değeri ayarını kapatabilirsiniz. Aralık kilitlendiğinde, aralığı aşan değerler grafiğin üst kısmında belirttiğiniz en yüksek değer olarak görüntülenir. Aralığı belirli bir değerde kilitlemek için **Çizim Seçenekleri** iletişim kutusunu kullanın.
-
-- **Sayaç:** **Sayaç,** **Örnek,** **Kategori**ve **Bilgisayar** adlı dört sütun birlikte performans sayacını benzersiz olarak tanımlar.
-
-- **Renk:** **Renk** sütunu, performans sayacı için çizilen çizginin rengini ve çizgi stilini gösterir. Grafikteki performans sayacının rengini veya satır stilini değiştirmek için **Çizim Seçenekleri** iletişim kutusunu kullanın. **Çizim Seçenekleri** iletişim kutusu, göstergenin kısayol menüsünden kullanılabilir.
-
-- **İstatistikler:** **Min**, **Max**, **Avg** ve **Son** sütunlar performans sayacı için ilgili istatistikleri gösterir. Bu değerler, grafiğin görünür bölgesinde görüntülenen verilere karşılık gelir. Örneğin, bir çalışma bölgesine yakınlaştırırsanız, gösterge istatistikleri yalnızca yakınlaştırılmış alan için değerleri yansıtır. "Son" sütunu, en son tamamlanan örnekleme aralığındaki performans sayacının değeridir.
+- **Aralık:** Bu sütun, performans sayacının y ekseni aralığını görüntüler. Varsayılan olarak, bu değer örnek veri değişikliği aralığı olarak otomatik olarak ayarlar. Otomatik olarak ayarlanmış bir Aralık, her zaman 10 ' un en büyük değerden sonraki kuvveti olacaktır; Bu, 10 ' un negatif üslerini içerir. Grafik, her biri farklı aralığa sahip çeşitli sayaçlar içerebilir. Bu nedenle, y ekseni belirli bir aralıkla etiketlenemez, ancak bunun yerine her sayaç için toplam aralığın yüzdesini temsil eden 0-100 değerleriyle etiketlidir. Örneğin, 1000 aralığına sahip bir sayaç için y ekseninde 60 veri noktası sayaç için bir 600 değerine karşılık gelir.
 
     > [!NOTE]
-    > Son sütun yalnızca Yük Testi Çözümleyicisi'nin Göstergesi'nde yük testi çalışırken görüntülenir.
+    > Aralığı belirli bir değere kilitleyerek otomatik Aralık değer ayarlamayı devre dışı bırakabilirsiniz. Aralık kilitlendiğinde, aralığı aşan tüm değerler grafiğin en üstünde belirttiğiniz en büyük değer olarak görüntülenir. Aralığı belirli bir değerde kilitlemek için **Çizim seçenekleri** iletişim kutusunu kullanın.
 
-     Daha fazla bilgi için [bkz: Grafiğin bir bölgesini yakınlaştırın.](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)
+- **Sayaç:** **Sayaç**, **örnek**, **Kategori**ve **bilgisayar** adlı dört sütun, performans sayacını benzersiz şekilde tanımlar.
 
-Göstergede bir öğe seçmek aşağıdakileri yapar:
+- **Renk:** **Renk** sütunu, performans sayacı için çizilen çizginin rengini ve çizgi stilini gösterir. Grafikteki bir performans sayacının rengini veya çizgi stilini değiştirmek için **Çizim seçenekleri** iletişim kutusunu kullanın. **Çizim seçenekleri** iletişim kutusu, göstergenin kısayol menüsünden kullanılabilir.
 
-- Öğenin hem göstergeden hem de grafikten kaldırılmasını sağlar. Öğeyi sağ tıklatın ve **Sil'i**seçin veya **Sil** tuşuna basın.
+- **İstatistikler:** **Min**, **Max**, **AVG** ve **Last** sütunları, performans sayacı için ilgili istatistikleri gösterir. Bu değerler, grafiğin görünür bölgesinde görüntülenen verilere karşılık gelir. Örneğin, bir çalıştırmanın bir bölgesine yakınlaştırırsanız, gösterge istatistikleri yalnızca yakınlaştırılmış alanın değerlerini yansıtır. "Son" sütun, en son tamamlanan Örnekleme aralığındaki performans sayacının değeridir.
 
-- Grafikte çizilen çizgiyi vurgular.
+    > [!NOTE]
+    > Son sütun, yük testi çalışırken yalnızca Yük Testi Çözümleyicisi 'nin göstergesinde görüntülenir.
 
-- Veri ızgarasının seçili öğenin verilerini görüntülemesine neden olur.
+     Daha fazla bilgi için bkz. [nasıl yapılır: grafiğin bir bölgesini yakınlaştırma](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md).
 
-- Sayaç için **Çizim Seçenekleri** iletişim kutusuna erişmenizi sağlar.
+Göstergedeki bir öğenin seçilmesi şunları yapar:
+
+- Öğenin hem göstergeden hem de grafikten kaldırılmasına izin verir. Öğeye sağ tıklayın ve **Sil**' i seçin ya da **Sil** tuşuna basın.
+
+- Grafikteki çizili çizgiyi vurgular.
+
+- Veri kılavuzunun seçili öğe için verileri görüntülemesine neden olur.
+
+- Sayacın **Çizim seçenekleri** iletişim kutusuna erişmenizi sağlar.
 
 > [!TIP]
-> **Yük Testi Çözümleyici** araç çubuğunda **Grafik Seçenekleri açılır** düğmesini kullanabilir ve grafik görünümüyle ilişkili **Gösterge** panelini göstermek veya gizlemek için **Göstergegöster'i** seçebilirsiniz.
+> **Yük Testi Çözümleyicisi** araç çubuğunda **grafik seçenekleri açılan** düğmesini kullanabilir ve grafik görünümüyle ilişkili **gösterge** panelini göstermek veya gizlemek için **Göstergeyi Göster** ' i seçebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapilir: Grafiğin bir bölgesini yakınlaştırın](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)
-- [Grafikler görünümünde yük testi sonuçlarını analiz edin](../test/analyze-load-test-results-in-the-graphs-view.md)
+- [Nasıl yapılır: grafiğin bir bölgesine yakınlaştırma](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)
+- [Grafik görünümünde Yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-in-the-graphs-view.md)

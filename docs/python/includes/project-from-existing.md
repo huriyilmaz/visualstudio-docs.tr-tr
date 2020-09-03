@@ -1,28 +1,28 @@
 ---
 ms.topic: include
 ms.openlocfilehash: 47c390fbc7a6f84c25d4bde0317985bd149cae2f
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "68159594"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89323661"
 ---
-1. Visual Studio'u başlatın ve **Dosya** > **Yeni** > **Projesi'ni**seçin.
+1. Visual Studio 'yu başlatın ve **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
 
-1. Yeni **Proje** iletişim kutusunda "Python" araması yapın, **Varolan Python kodu şablonunu** seçin, projeye bir ad ve konum verin ve **Tamam'ı**seçin.
+1. **Yeni proje** iletişim kutusunda, "Python" araması yapın, **var olan Python kod** şablonundan öğesini seçin, projeye bir ad ve konum verin ve **Tamam**' ı seçin.
 
-1. Görünen sihirbazda, varolan kodunuza giden yolu ayarlayın, dosya türleri için bir filtre ayarlayın ve projenizin gerektirdiği arama yollarını belirtin ve **ardından İleri'yi**seçin. Arama yollarının ne olduğunu bilmiyorsanız, alanı boş bırakın.
+1. Görüntülenen sihirbazda, mevcut kodunuzun yolunu ayarlayın, dosya türleri için bir filtre ayarlayın ve projenizin gerektirdiği arama yollarını belirtin ve ardından **İleri**' yi seçin. Hangi arama yollarının olduğunu bilmiyorsanız, bu alanı boş bırakın.
 
-    ![Mevcut Koddan Yeni Proje, adım 1](../media/projects-from-existing-1.png)
+    ![Mevcut koddan yeni proje, 1. adım](../media/projects-from-existing-1.png)
 
-1. Bir sonraki iletişim kutusunda, projeniz için başlangıç dosyasını seçin ve **İleri'yi**seçin. (İstenirse, bir ortam seçin; aksi takdirde varsayılanları kabul edin.) İletişim kutusunun yalnızca kök klasöründeki dosyaları gösterdiğini unutmayın; istediğiniz dosya bir alt klasördeyse, başlangıç dosyasını boş bırakın ve daha sonra **Solution Explorer'da** ayarlayın (aşağıda açıklanmıştır).
+1. Sonraki iletişim kutusunda, projeniz için başlangıç dosyasını seçin ve **İleri**' yi seçin. (İsterseniz, bir ortam seçin; Aksi takdirde Varsayılanları kabul edin.) İletişim kutusunun yalnızca kök klasördeki dosyaları gösterdiğini unutmayın; istediğiniz dosya bir alt klasördeyse, başlangıç dosyasını boş bırakın ve daha sonra **Çözüm Gezgini** (aşağıda açıklanmıştır) ' de ayarlayın.
 
-    ![Mevcut Koddan Yeni Proje, adım 2](../media/projects-from-existing-2.png)
+    ![Mevcut koddan yeni proje, adım 2](../media/projects-from-existing-2.png)
 
-1. Proje dosyasını kaydetmek için konumu seçin (diskte *.pyproj* dosyasıdır). Varsa, sanal ortamların otomatik algılamasını da ekleyebilir ve projeyi farklı web çerçeveleri için özelleştirebilirsiniz. Bu seçeneklerden emin değilseniz, bunları varsayılanlara göre ayarlayın.
+1. Proje dosyasının kaydedileceği konumu seçin (diskte bir *. pyproj* dosyası). Uygulanabiliyorsa, sanal ortamların otomatik olarak algılanmasını ve farklı Web çerçeveleri için de proje özelleştirmeyi de dahil edebilirsiniz. Bu seçeneklerden emin değilseniz, bunları varsayılan değerlere ayarlayın.
 
-    ![Mevcut Koddan Yeni Proje, adım 3](../media/projects-from-existing-3.png)
+    ![Mevcut koddan yeni proje, adım 3](../media/projects-from-existing-3.png)
 
-1. Finish ve Visual **Studio'yu** seçin projeyi oluşturur ve **Solution Explorer'da**açar. *.pyproj* dosyasını başka bir yere taşımak istiyorsanız, **Solution Explorer'da** dosyayı seçin ve **Dosya** > **Yı Künye'yi**seçin. Bu eylem, projedeki dosya başvurularını güncelleştirir, ancak kod dosyalarını taşımaz.
+1. **Son** ' u seçin ve Visual Studio projeyi oluşturur ve **Çözüm Gezgini**açar. *. Pyproj* dosyasını başka bir yere taşımak istiyorsanız **Çözüm Gezgini** seçin ve **Dosya**  >  **farklı kaydet**' i seçin. Bu eylem projedeki dosya başvurularını güncelleştirir, ancak herhangi bir kod dosyasını taşımaz.
 
-1. Farklı bir başlangıç dosyası ayarlamak **için, Dosyayı Solution Explorer'da**bulun , sağ tıklatın ve **Başlangıç Dosyası olarak ayarla'yı**seçin.
+1. Farklı bir başlangıç dosyası ayarlamak için **Çözüm Gezgini**dosyasında dosyayı bulun, sağ tıklayın ve **başlangıç dosyası olarak ayarla**' yı seçin.

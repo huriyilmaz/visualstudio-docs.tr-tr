@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 65f8703597d6297afde6e2685594784fdd1d755c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672839"
 ---
 # <a name="api-reference-for-modeling-sdk-for-visual-studio"></a>Visual Studio için Modelleme SDK'sı için API Başvurusu
@@ -26,7 +26,7 @@ Visual Studio görselleştirme ve modelleme SDK 'Sı, etki alanına özgü dille
 
  Bu bölüm, "Microsoft. VisualStudio. Modellendirme" ile başlayan adlara sahip ad alanları için başvuru malzemeleri içerir.
 
-|Ad Alanı|İçerik|
+|Ad Alanı|Content|
 |---------------|-------------|
 |<xref:Microsoft.VisualStudio.Modeling?displayProperty=fullName>|Bir DSL içinde tanımladığınız tüm etki alanı sınıflarının temel sınıfı olan ModelElement gibi sınıflar.|
 |<xref:Microsoft.VisualStudio.Modeling.Design?displayProperty=fullName>|DSL tanımının bir kısmını oluşturan sınıflar.|
@@ -42,9 +42,9 @@ Visual Studio görselleştirme ve modelleme SDK 'Sı, etki alanına özgü dille
 |[Microsoft. VisualStudio. modelle tümleştirme](/previous-versions/ee904412(v=vs.140))|Farklı modelleri tümleştirmenize yardımcı olan ModelBus API 'SI.|
 |[Microsoft. VisualStudio. modelle Integration. Picker](/previous-versions/ee904394(v=vs.140))|Kullanıcıların ModelBus başvuruları oluşturmak için modeller ve öğelere gezinmelerini sağlayan iletişim kutusu.|
 |`Microsoft.VisualStudio.Modeling.Integration.Picker.Hosting`|Seçici hizmeti.|
-|[Microsoft. VisualStudio. modelle Integration. Shell](/previous-versions/ee869435(v=vs.140))|@No__t_0 için ModelBus bağdaştırıcı çerçevesi.|
+|[Microsoft. VisualStudio. modelle Integration. Shell](/previous-versions/ee869435(v=vs.140))|İçin ModelBus bağdaştırıcı çerçevesi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .|
 |[Microsoft. VisualStudio. modelle Integration. Shell. Picker](/previous-versions/ee886769(v=vs.140))|Kullanıcıların ModelBus başvuruları oluşturmak için modeller ve öğelere gezinmelerini sağlayan Seçici iletişim kutusu.|
-|<xref:Microsoft.VisualStudio.Modeling.Shell?displayProperty=fullName>|DSLs ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] arasındaki arabirim.|
+|<xref:Microsoft.VisualStudio.Modeling.Shell?displayProperty=fullName>|DSLs ve arasında arabirim [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .|
 |<xref:Microsoft.VisualStudio.Modeling.Shell.ExtensionEnablement?displayProperty=fullName>|Kısayol (bağlam) menü komutları tanımlamanızı sağlar.|
 |<xref:Microsoft.VisualStudio.Modeling.Validation?displayProperty=fullName>|Doğrulama kısıtlamalarını tanımlamanızı sağlar.|
 

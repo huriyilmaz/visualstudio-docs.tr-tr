@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: d87cc57b31e63ae7aafa53c335df2b56f86a0409
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658095"
 ---
 # <a name="how-to-enable-and-disable-automatic-code-analysis-for-managed-code"></a>Nasıl yapılır: Yönetilen Kod İçin Otomatik Kod Çözümlemesini Etkinleştirme ve Devre Dışı Bırakma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kod analizini, her bir yönetilen kod projesi derlemeden önce çalışacak şekilde yapılandırabilirsiniz. Her bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] yapılandırması için farklı kod analizi özellikleri ayarlayabilirsiniz.
+Kod analizini, her bir yönetilen kod projesi derlemeden önce çalışacak şekilde yapılandırabilirsiniz. Her yapılandırma için farklı kod analizi özellikleri ayarlayabilirsiniz [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] .
 
 ### <a name="to-enable-or-disable-automatic-code-analysis"></a>Otomatik Kod analizini etkinleştirmek veya devre dışı bırakmak için
 

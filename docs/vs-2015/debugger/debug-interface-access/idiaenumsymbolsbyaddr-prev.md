@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsymbolsbyaddr::prev | Microsoft Docs
+title: IDiaEnumSymbolsByAddr::P Rev | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f7a5debb0ffccffed4077c367d5b008a2a2a7cc2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68189636"
 ---
 # <a name="idiaenumsymbolsbyaddrprev"></a>IDiaEnumSymbolsByAddr::Prev
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Önceki simgeleri sırayla adresine göre alır.  
+Önceki sembolleri sırasıyla adrese göre alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Prev (   
@@ -37,20 +37,20 @@ HRESULT Prev ( 
   
 #### <a name="parameters"></a>Parametreler  
  celt  
- [in] Alınacak Numaralandırıcı sembolleri sayısı.  
+ 'ndaki Numaralandırıcıda alınacak olan simgelerin sayısı.  
   
- http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp  
- [out] İle doldurulacak bir dizi [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) istenen simgeleri temsil eden nesneleri.  
+ rgelt  
+ dışı İstenen sembolleri temsil eden [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesneleriyle doldurulacak bir dizi.  
   
- pceltFetched  
- [out] Simgelerin sayısını getirilen bir numaralandırıcı döndürür.  
+ Pceltfettiz  
+ dışı Getirilen Numaralandırıcı içindeki simgelerin sayısını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` önceki sembol varsa. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Önceki semboller yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, numaralandırıcı konumu alınan öğelerin sayısı ile güncelleştirir.  
+ Bu yöntem, Numaralandırıcı konumunu getirilen öğe sayısına göre güncelleştirir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiaenumsymbolsbyaddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)   
+ [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

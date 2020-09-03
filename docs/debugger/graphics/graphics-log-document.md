@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6d9bdfdb23d199c50b8d7ec6520964043dee8aa6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72735528"
 ---
 # <a name="graphics-log-document"></a>Grafik Günlük Belgesi
@@ -40,7 +40,7 @@ Grafik günlüğü belgesi, uygulamanız bir grafik Tanılama oturumu altında �
 - Grafik günlüğü belgesinin en üst kısmında, işleme hedefi çıktısından istediğiniz pikseli seçin. Bir piksel seçildiğinde, seçilen pikselle ilgili ayrıntılı bilgileri görüntülemek için **Grafik piksel geçmişi** penceresini kullanabilirsiniz. Daha fazla bilgi için bkz. [piksel geçmişi](graphics-pixel-history.md).
 
 ## <a name="playback-machine"></a>Kayıttan yürütme makinesi
- **Çerçeve listesinin** sağ üst köşesinde da bir **oynatma makinesi**de görüntülenir. Kayıttan yürütme makinesi, daha sonraki bir grafik tanılama oturumunda grafik olaylarını bir grafik günlük dosyasından çalmak için kullanılan bir makine veya cihazdır. Yakalanan olayları çalmak için geliştirme makineniz yerine farklı bir cihaz kullanarak, sorunun gerçekleştiği yürütme ortamını daha doğru bir şekilde yeniden oluşturabilirsiniz — örneğin, farklı grafik donanımına veya sürücülere sahip bir makine kullanabilirsiniz geliştirme makinenizin kullandığından veya ARM tabanlı Windows RT tablet veya Windows Phone cihazı gibi diğer cihaz türleri.
+ **Çerçeve listesinin** sağ üst köşesinde da bir **oynatma makinesi**de görüntülenir. Kayıttan yürütme makinesi, daha sonraki bir grafik tanılama oturumunda grafik olaylarını bir grafik günlük dosyasından çalmak için kullanılan bir makine veya cihazdır. Yakalanan olayları çalmak için geliştirme makineniz yerine farklı bir cihaz kullanarak, sorunun gerçekleştiği yürütme ortamını daha doğru şekilde yeniden oluşturabilirsiniz — örneğin, geliştirme makinenizin kullandığı farklı grafik donanımına veya sürücülerine sahip olan bir makineyi veya ARM tabanlı Windows RT tablet veya Windows Phone cihazı gibi diğer cihaz türlerini kullanabilirsiniz.
 
  Kayıttan yürütme makinesi belirtme hakkında daha fazla bilgi için bkz. [nasıl yapılır: grafik tanılama kayıttan yürütme makinesini değiştirme](how-to-change-the-graphics-diagnostics-playback-machine.md).
 
@@ -65,15 +65,15 @@ Grafik günlüğü belgesi, uygulamanız bir grafik Tanılama oturumu altında �
 |--------------|-----------------|
 |**Açıklama**|Görüntü bağdaştırıcısı açıklama dizesi.|
 |**Görüntüleme belleği**|Grafik bağdaştırıcısında yüklü bellek miktarı.|
-|**Sürücü adı**|Grafik bağdaştırıcı sürücüsünün adı.|
-|**Sürücü sürümü**|Grafik bağdaştırıcı sürücüsünün sürümü.|
+|**Sürücü Adı**|Grafik bağdaştırıcı sürücüsünün adı.|
+|**Sürücü Sürümü**|Grafik bağdaştırıcı sürücüsünün sürümü.|
 |**Ad**|Grafik bağdaştırıcısının adı.|
 
  **Deneme dosyası** Yakalama oturumuyla ilişkili olan deneme dosyası hakkındaki bilgileri listeler.
 
 |Özellik|Açıklama|
 |--------------|-----------------|
-|**Yolun**|. Vsglog dosyasının yolu. **Note:**  Eski yakalama altında bu özellik kullanılmaz.|
+|**Yol**|. Vsglog dosyasının yolu. **Note:**  Eski yakalama altında bu özellik kullanılmaz.|
 
  **Modül bilgileri** Yakalama oturumu sırasında uygulama tarafından yüklenen dinamik bağlantı kitaplıklarının (dll 'Ler) adını ve sürümünü listeler.
 
@@ -83,8 +83,8 @@ Grafik günlüğü belgesi, uygulamanız bir grafik Tanılama oturumu altında �
 |--------------|-----------------|
 |**Bellek**|Bilgisayarda yüklü olan bellek miktarı.|
 |**İşletim sistemi mimarisi**|İşletim sisteminin hedef CPU mimarisi.|
-|**İşletim sistemi sürümü**|İşletim sistemi sürümü.|
-|**İsiyle**|Bilgisayarda yüklü olan işlemci.|
+|**İşletim Sistemi Sürümü**|İşletim sistemi sürümü.|
+|**İşlemci**|Bilgisayarda yüklü olan işlemci.|
 |**Hedef uygulama mimarisi**|Uygulamanın hedef CPU mimarisi. Bu, **Işletim sistemi mimarisinden**farklı olabilir.|
 
  **Hedef uygulama** Yakalama oturumunun konusu olan uygulamayla ilgili bilgileri listeler.
@@ -92,18 +92,18 @@ Grafik günlüğü belgesi, uygulamanız bir grafik Tanılama oturumu altında �
 |Özellik|Açıklama|
 |--------------|-----------------|
 |**Son değiştirilme tarihi/saati**|Uygulamanın oluşturulduğu tarih ve saat.|
-|**Yolun**|Uygulamanın yolu.|
-|**İşlem KIMLIĞI**|Uygulamaya verilen işlem KIMLIĞI.|
+|**Yol**|Uygulamanın yolu.|
+|**İşlem Kimliği**|Uygulamaya verilen işlem KIMLIĞI.|
 |**Sürüm**|Uygulama sürümü.|
 
  **VSG günlük dosyası** Grafik günlüğü belgesi hakkındaki bilgileri listeler.
 
 | Özellik | Açıklama |
 |------------------------| - |
-| **Oluşturan** | Grafik günlüğü belgesini oluşturan uygulamanın adı. Örneğin, yakalama oturumu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] başlatıldığında (el ile yakalama), bu özelliğin değeri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. |
+| **Oluşturan:** | Grafik günlüğü belgesini oluşturan uygulamanın adı. Örneğin, yakalama oturumunun başlatıldığı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (el ile yakalama), bu özelliğin değeri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . |
 | **Oturum başlangıç saati** | Yakalama oturumunun başladığı tarih ve saat. |
-| **Boyutla** | Grafik günlüğü belgesinin boyutu. |
+| **Boyut** | Grafik günlüğü belgesinin boyutu. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek Yol: Köşe Gölgeleme Nedeniyle Nesnelerin Eksikliği](walkthrough-missing-objects-due-to-vertex-shading.md)
-- [İzlenecek Yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama](walkthrough-debugging-rendering-errors-due-to-shading.md)
+- [İzlenecek yol: Köşe Gölgeleme Nedeniyle Eksik Nesneler](walkthrough-missing-objects-due-to-vertex-shading.md)
+- [İzlenecek yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama](walkthrough-debugging-rendering-errors-due-to-shading.md)

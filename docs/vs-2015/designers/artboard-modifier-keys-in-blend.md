@@ -10,18 +10,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2cdd069e8b17bcc26e067e0927ceef8cd9b1125a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658003"
 ---
-# <a name="artboard-modifier-keys-in-blend"></a>Blend 'de çalışma yüzeyi değiştirici tuşları
+# <a name="artboard-modifier-keys-in-blend"></a>Blend’de çalışma yüzeyi değiştirici tuşları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bazı klavye kısayolları ilişkili menü öğelerine sahip değildir, bu da [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] Kullanıcı arabirimini kullanarak bunları keşfedemeyeceğiniz anlamına gelir. Aşağıdaki tabloda, bir nesneyi değiştirme gibi bir eylemi değiştiren kısayollar listelenmektedir.
 
-|Bu eylemi yapmak için|Bunu yapın|
+|Bu eylemi gerçekleştirmek için|Bunu yapın|
 |-----------------------|-------------|
 |Farklı bir araç seçili kaldığı sürece geçici olarak **seçim** aracını seçin (Bu, **Araçlar** panelinde bir şeyi tıklattığınızda, **seçim** aracı ve diğerleri arasında ileri ve geri giderek)|CTRL tuşunu basılı tutun|
 |**Seçim** aracı seçiliyken seçili nesneleri Sürükle|Ok tuşlarına basın|

@@ -1,5 +1,5 @@
 ---
-title: 'Hızlı başlangıç: C için kod analizi-C++ | Microsoft Docs'
+title: 'Hızlı başlangıç: C için kod analizi-C + + | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -13,16 +13,16 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: e9db06ec0748ce4499afb423fac03886cd763301
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77278488"
 ---
 # <a name="quick-start-code-analysis-for-cc"></a>Hızlı Başlangıç: C/C++ İçin Kod Analizi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kod analizini, C veya C++ Code 'da düzenli olarak çalıştırarak uygulamanızın kalitesini artırabilirsiniz. Bu, yaygın sorunları, iyi programlama uygulaması ihlallerini veya test aracılığıyla bulmanın zor olduğu kusurları bulmanıza yardımcı olabilir. Geçerli olan, ancak yine de siz veya kodunuzu kullanan diğer kişilerin sorunlarına neden olabilir, belirli bir kod desenleri için Kod Analizi arar çünkü kod çözümleme uyarıları derleyici hataları ve Uyarıları farklılık gösterir.  
+Kod analizini düzenli olarak C veya C++ kodunda çalıştırarak uygulamanızın kalitesini artırabilirsiniz. Bu, yaygın sorunları, iyi programlama uygulaması ihlallerini veya test aracılığıyla bulmanın zor olduğu kusurları bulmanıza yardımcı olabilir. Kod Analizi, derleyici hatalarından ve uyarılarından farklıdır, ancak sizin için veya kodunuzu kullanan diğer kişiler için hala sorun oluşturabilir.  
   
 ## <a name="in-this-topic"></a>Bu konuda  
   
@@ -38,7 +38,7 @@ Kod analizini, C veya C++ Code 'da düzenli olarak çalıştırarak uygulamanız
   
 - [Kod analizi sonuçlarını arama ve filtreleme](../code-quality/quick-start-code-analysis-for-c-cpp.md#BKMK_Search)  
   
-## <a name="BKMK_ConfigureRuleSets"></a>Bir proje için kural kümelerini yapılandırma  
+## <a name="configure-rule-sets-for-a-project"></a><a name="BKMK_ConfigureRuleSets"></a> Bir proje için kural kümelerini yapılandırma  
   
 1. **Çözüm Gezgini**, proje adı için kısayol menüsünü açın ve ardından **Özellikler**' i seçin.  
   
@@ -46,10 +46,10 @@ Kod analizini, C veya C++ Code 'da düzenli olarak çalıştırarak uygulamanız
   
     1. **Yapılandırma** ve **Platform** listelerinde, derleme yapılandırması ve hedef platform ' u seçin.  
   
-    2. Varsayılan olarak, Kod Analizi uyarıları otomatik olarak dış araçları tarafından oluşturulan kodu raporlamaz. Oluşturulan koddan gelen uyarıları görüntülemek için, **oluşturulan koddan sonuçları bastır** onay kutusunun işaretini kaldırın.  
+    2. Varsayılan olarak, kod analizi dış araçlar tarafından otomatik olarak oluşturulan koddan uyarı raporlamaz. Oluşturulan koddan gelen uyarıları görüntülemek için, **oluşturulan koddan sonuçları bastır** onay kutusunun işaretini kaldırın.  
   
         > [!NOTE]
-        > Bu seçenek hataları ve Uyarıları formları ve şablonlar görüntülendiğinde kod çözümleme hataları ve Uyarıları üretilen koddan gelen engellemez. Bir form veya şablon için kaynak kodu görüntüleyebilir ve bakımını yapabilirsiniz.  
+        > Bu seçenek, hatalar ve uyarılar formlarda ve şablonlarda görüntülendiğinde, kod analizi hatalarını ve üretilen koddan gelen uyarıları göstermez. Bir form veya şablon için kaynak kodu görüntüleyebilir ve bakımını yapabilirsiniz.  
   
 3. Projenin seçili yapılandırma kullanılarak oluşturulduğu her seferinde Kod analizini çalıştırmak için, **derlemede C/C++ Için kod analizini etkinleştir** onay kutusunu seçin. Ayrıca, **Çözümle** menüsünü açıp *ProjectName* **üzerinde Kod analizini Çalıştır '** ı seçerek Kod analizini el ile de çalıştırabilirsiniz.  
   
@@ -57,7 +57,7 @@ Kod analizini, C veya C++ Code 'da düzenli olarak çalıştırarak uygulamanız
   
     - Kullanmak istediğiniz kural kümesini seçin.  
   
-    - **\<gözatmaya seç...** listede olmayan mevcut bir özel kural kümesini belirtmek için >.  
+    - **\<Browse...>** Listede olmayan mevcut bir özel kural kümesini belirtmeyi seçin.  
   
     - Özel bir kural kümesi tanımlayın.  
   
@@ -66,12 +66,12 @@ Kod analizini, C veya C++ Code 'da düzenli olarak çalıştırarak uygulamanız
 ### <a name="standard-cc-rule-sets"></a>Standart C/C++ kural kümeleri  
  Visual Studio yerel kod için iki standart kural kümesi içerir:  
   
-|Kural kümesi|Açıklama|  
+|Kural kümesi|Description|  
 |--------------|-----------------|  
 |Microsoft yerel en düşük önerilen kurallar|Bu kural kümesi, olası güvenlik delikleri ve uygulama kilitlenmeleri dahil olmak üzere yerel kodunuzda en kritik sorunlara odaklanır. Bu kural kümesini yerel projeleriniz için oluşturduğunuz herhangi bir özel kural kümesine dahil etmelisiniz.|  
 |Microsoft yerel önerilen kurallar|Bu kural kümesi, çok çeşitli sorunları ele alır. Microsoft yerel en düşük önerilen kuralların tüm kurallarını içerir.|  
   
-## <a name="BKMK_Run"></a>Kod analizini Çalıştır  
+## <a name="run-code-analysis"></a><a name="BKMK_Run"></a> Kod analizini Çalıştır  
  Proje özellikleri sayfalarının kod analizi sayfasında, Kod analizini projenizi her oluşturduğunuzda çalışacak şekilde yapılandırabilirsiniz. Ayrıca, Kod analizini el ile de çalıştırabilirsiniz.  
   
  Bir çözümde Kod Analizi çalıştırmak için:  
@@ -84,20 +84,20 @@ Kod analizini, C veya C++ Code 'da düzenli olarak çalıştırarak uygulamanız
   
 - **Yapı** menüsünde, *Proje adı* **üzerinde Kod analizini Çalıştır** ' ı seçin.  
   
-  Proje veya çözüm derlenir ve kod analizi çalışır. Sonuçları Kod Analizi penceresinde görünür.  
+  Proje veya çözüm derlenir ve kod analizi çalışır. Sonuçlar Kod Analizi penceresinde görünür.  
   
-## <a name="BKMK_Analyze"></a>Kod Analizi uyarılarını çözümleyin ve çözümleyin  
- Belirli bir uyarıyı çözümlemek için Kod Analizi penceresi içinde uyarı başlığı seçin. Uyarı, sorunla ilgili ek bilgileri görüntüleyecek şekilde genişler. Mümkün olduğunda, kod analizi uyarıya yol gösteren satır numaralarını ve analiz mantığını görüntüler. Soruna yönelik olası çözümler dahil olmak üzere uyarı hakkında ayrıntılı bilgi için, ileti için MSND kitaplığındaki yardım konusunu göstermek üzere uyarı kimliğini seçin.  
+## <a name="analyze-and-resolve-code-analysis-warnings"></a><a name="BKMK_Analyze"></a> Kod Analizi uyarılarını çözümleyin ve çözümleyin  
+ Belirli bir uyarıyı çözümlemek için, Kod Analizi penceresinde uyarının başlığını seçin. Uyarı, sorunla ilgili ek bilgileri görüntüleyecek şekilde genişler. Mümkün olduğunda, kod analizi uyarıya yol gösteren satır numaralarını ve analiz mantığını görüntüler. Soruna yönelik olası çözümler dahil olmak üzere uyarı hakkında ayrıntılı bilgi için, ileti için MSND kitaplığındaki yardım konusunu göstermek üzere uyarı kimliğini seçin.  
   
- Bir uyarı genişlettiğinizde, Visual Studio Kod Düzenleyicisi'nde uyarıya yol açan kod satırının vurgulanır.  
+ Bir uyarı genişlettiğinizde, uyarıya neden olan kod satırı, Visual Studio kod Düzenleyicisi 'nde vurgulanır.  
   
- Sorun anladıktan sonra kodunuzu çözebilirsiniz. Ardından uyarı artık Kod Analizi penceresi açılır ve düzeltmenizi henüz yeni uyarılar ortaya emin olmak için kod analizini yeniden çalıştırın.  
+ Sorunu anladıktan sonra kodunuzda çözebilirsiniz. Daha sonra uyarının Kod Analizi penceresinde göründüğünden ve düzelmenizin yeni uyarılar gerçekleştirmediğinden emin olmak için kod analizini yeniden çalıştırın.  
   
 > [!TIP]
-> Kod analizinden kaynaklanan Kod Analizi penceresi yeniden çalıştırabilirsiniz. **Çözümle** düğmesini seçin ve analizin kapsamını seçin. Seçilen proje veya çözümün tamamını üzerinde analiz yeniden çalıştırabilirsiniz.  
+> Kod Analizi penceresinden Kod analizini yeniden çalıştırabilirsiniz. **Çözümle** düğmesini seçin ve analizin kapsamını seçin. Çözümlemeyi çözümün tamamında veya seçili bir projede yeniden çalıştırabilirsiniz.  
   
-## <a name="BKMK_Suppress"></a>Kod Analizi uyarılarını gizleme  
- Kod Analizi uyarısı düzeltmemeyi ne zaman karar verebilirsiniz zamanlar vardır. Uyarı çözümleme sorunu kodunuzun tüm gerçek uygulamasında ortaya çıkacağını olasılık ile ilgili çok fazla değiştirilemeyen gerektirir karar verebilirsiniz. Veya uyarıda kullanılan analiz belirli bir içerik için uygun olduğunu düşündüğünüz. Artık Kod Analizi penceresinde görünecekleri bireysel uyarıları gösterilmemesini sağlayabilirsiniz.  
+## <a name="suppressing-code-analysis-warnings"></a><a name="BKMK_Suppress"></a> Kod Analizi uyarılarını gizleme  
+ Kod Analizi uyarısının düzeltilmeyeceğine karar verirken zamanlar olabilir. Uyarı çözmenin, kodunuzun gerçek hayatta herhangi bir uygulamada ortaya çıkması olasılığa göre çok fazla kaynak gerektirir. Ya da uyarıda kullanılan çözümlemenin belirli bir bağlam için uygun olmadığından emin olabilirsiniz. Kod Analizi penceresinde artık görünmemek için tek tek uyarıları bastırın.  
   
  Bir uyarıyı bastırmak için:  
   
@@ -107,9 +107,9 @@ Kod analizini, C veya C++ Code 'da düzenli olarak çalıştırarak uygulamanız
   
 3. **Iletiyi Gizle** ' yi ve ardından **kaynak '** ı seçin.  
   
-   İletiyi gizleme, kod satırı için uyarıyı gösteren `#pragma warning (disable:`*Warnıngıd*`)` ekler.  
+   Bir iletinin gizlenmesi `#pragma warning (disable:` *WarningId* `)` , kod satırıyla ilgili uyarıyı belirten warnıngıd öğesini ekler.  
   
-## <a name="BKMK_Creating_work_items_for_code_analysis_warnings"></a>Kod Analizi uyarıları için iş öğeleri oluşturma  
+## <a name="creating-work-items-for-code-analysis-warnings"></a><a name="BKMK_Creating_work_items_for_code_analysis_warnings"></a> Kod Analizi uyarıları için iş öğeleri oluşturma  
  Visual Studio içinden hataları günlüğe kaydetmek için çalışma öğesi izleme özelliğini kullanabilirsiniz. Bu özelliği kullanmak için bir Team Foundation Server örneğine bağlanmanız gerekir.  
   
  **Bir veya daha fazla C/C++ kod uyarısı için bir iş öğesi oluşturmak için**  
@@ -122,8 +122,8 @@ Kod analizini, C veya C++ Code 'da düzenli olarak çalıştırarak uygulamanız
   
 4. Ek bilgileri ekleyin ve sonra **Iş öğesini kaydet**' i seçin.  
   
-## <a name="BKMK_Search"></a>Kod analizi sonuçlarını arama ve filtreleme  
- Uzun listesi uyarı iletilerini arayabilir ve çoklu proje çözümlerinde uyarıları filtreleyebilirsiniz.  
+## <a name="searching-and-filtering-code-analysis-results"></a><a name="BKMK_Search"></a> Kod analizi sonuçlarını arama ve filtreleme  
+ Uyarı iletilerinin uzun listelerinde arama yapabilir ve çok projeli çözümlerde uyarıları filtreleyebilirsiniz.  
   
 1. **Uyarıları başlığa veya uyarı kimliğine göre filtrelemek için**: **filtre** metin kutusuna anahtar sözcüğünü girin.  
   

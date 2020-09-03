@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::DetachDebugger_V7 | Microsoft Dokümanlar
+title: IDebugProgramNode2::D etachDebugger_V7 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,18 +16,18 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 925f1b07662ece35d21f9b647681bc898428c4c7
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80722113"
 ---
 # <a name="idebugprogramnode2detachdebugger_v7"></a>IDebugProgramNode2::DetachDebugger_V7
 
 > [!Note]
-> Kaldırıl -mış. KULLANMAYıN.
+> Kullanım dışı. KULLANMAYıN.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 HRESULT DetachDebugger_V7 (
@@ -41,14 +41,14 @@ int DetachDebugger_V7 ();
 
 ## <a name="return-value"></a>Dönüş Değeri
 
-Bir uygulama her `E_NOTIMPL`zaman dönmelidir.
+Bir uygulama her zaman döndürmelidir `E_NOTIMPL` .
 
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> Visual Studio 2005 itibariyle, bu yöntem artık kullanılmaz ve her zaman geri dönmelidir. `E_NOTIMPL`
+> Visual Studio 2005 itibariyle, bu yöntem artık kullanılmamaktadır ve her zaman döndürmelidir `E_NOTIMPL` .
 
-Hata ayıklama beklenmedik bir şekilde ayrıldığında bu yöntem çağrılır. Bu yöntem çağrıldığında, DE programı kullanıcı ondan ayrılmış gibi devam etmelidir. Başka hata ayıklama olayı gönderilmemelidir. Program hata ayıklama başka bir örnekten takılabilir bir durumda olmalıdır.
+Bu yöntem, hata ayıklayıcı beklenmedik bir şekilde çıktığında çağrılır. Bu yöntem çağrıldığında, Kullanıcı onu ayırmış olsa da programı sürdürmelidir. Daha fazla hata ayıklama olayı gönderilmemelidir. Program, hata ayıklayıcının başka bir örneğinden iliştirilebileceği bir durumda olmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -18,26 +18,26 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 942850e776cdd493afaad56b782b417db2040625
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72673097"
 ---
 # <a name="add-code-to-tableadapters-in-n-tier-applications"></a>N katmanlı uygulamalarda TableAdapter’lara kod ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_1 için kısmi bir sınıf dosyası oluşturarak ve ona kod ekleyerek bir `TableAdapter` işlevselliğini genişletebilirsiniz ( *DataSetName*'e kod eklemek yerine). DataSet. Designer dosyası). Kısmi sınıflar, belirli bir sınıfın kodunu birden çok fiziksel dosyaya bölünecek şekilde etkinleştirir. Daha fazla bilgi için bkz. [kısmi](https://msdn.microsoft.com/library/7adaef80-f435-46e1-970a-269fff63b448) veya [kısmi (tür)](https://msdn.microsoft.com/library/27320743-a22e-4c7b-b0b3-53afe3607334).
+`TableAdapter`' A yönelik kısmi bir sınıf dosyası oluşturarak `TableAdapter` ve ona kod ekleyerek ( *DataSetName*'e kod eklemek yerine) işlevselliğini genişletebilirsiniz. DataSet. Designer dosyası). Kısmi sınıflar, belirli bir sınıfın kodunu birden çok fiziksel dosyaya bölünecek şekilde etkinleştirir. Daha fazla bilgi için bkz. [kısmi](https://msdn.microsoft.com/library/7adaef80-f435-46e1-970a-269fff63b448) veya [kısmi (tür)](https://msdn.microsoft.com/library/27320743-a22e-4c7b-b0b3-53afe3607334).
 
- @No__t_0 tanımlayan kod, `TableAdapter` her değişiklik yapıldığında oluşturulur. Bu kod ayrıca, `TableAdapter` yapılandırmasını değiştiren herhangi bir sihirbazın çalıştırılması sırasında değişiklik yapıldığında da oluşturulur. @No__t_0 yeniden oluşturma sırasında kodunuzun silinmesini engellemek için, `TableAdapter` kısmi sınıf dosyasına kod ekleyin.
+ Öğesini tanımlayan kod, üzerinde `TableAdapter` her değişiklik yapılışında oluşturulur `TableAdapter` . Bu kod ayrıca, yapılandırmasını değiştiren herhangi bir sihirbazın çalıştırılması sırasında değişiklik yapıldığında da oluşturulur `TableAdapter` . Yeniden oluşturma sırasında kodunuzun silinmesini engellemek için, `TableAdapter` öğesinin kısmi sınıf dosyasına kod ekleyin `TableAdapter` .
 
- Varsayılan olarak, veri kümesini ve `TableAdapter` kodunu ayırdıktan sonra sonuç, her projedeki ayrı bir sınıf dosyasıdır. Özgün projenin *DataSetName*adlı bir dosyası vardır. Designer. vb (veya *DataSetName*. Designer.cs) `TableAdapter` kodu içerir. **DataSet projesi** özelliğinde belirtilen proje, *DataSetName*adlı bir dosya içerir. DataSet. Designer. vb (veya *DataSetName*. DataSet.Designer.cs) veri kümesi kodunu içerir.
-
-> [!NOTE]
-> Veri kümelerini ve `TableAdapter`s ayırdığınızda ( **DataSet proje** özelliğini ayarlayarak), projedeki mevcut kısmi veri kümesi sınıfları otomatik olarak taşınmaz. Mevcut veri kümesi kısmi sınıflarının veri kümesi projesine el ile taşınması gerekir.
+ Varsayılan olarak, veri kümesini ve kodu ayırdıktan sonra `TableAdapter` sonuç, her projedeki ayrı bir sınıf dosyasıdır. Özgün projenin *DataSetName*adlı bir dosyası vardır. Designer. vb (veya *DataSetName*. Designer.cs) `TableAdapter` kodu içerir. **DataSet projesi** özelliğinde belirtilen proje, *DataSetName*adlı bir dosya içerir. DataSet. Designer. vb (veya *DataSetName*. DataSet.Designer.cs) veri kümesi kodunu içerir.
 
 > [!NOTE]
-> Veri kümesi Tasarımcısı, doğrulama gerektiğinde <xref:System.Data.DataTable.ColumnChanging> ve <xref:System.Data.DataTable.RowChanging> olay işleyicileri oluşturmak için işlevsellik sağlar. Daha fazla bilgi için bkz. [n katmanlı bir veri kümesine doğrulama ekleme](../data-tools/add-validation-to-an-n-tier-dataset.md).
+> Veri kümelerini ve öğeleri ayırdığınızda `TableAdapter` ( **veri kümesi proje** özelliğini ayarlayarak), projedeki mevcut kısmi veri kümesi sınıfları otomatik olarak taşınmaz. Mevcut veri kümesi kısmi sınıflarının veri kümesi projesine el ile taşınması gerekir.
+
+> [!NOTE]
+> Veri kümesi Tasarımcısı, <xref:System.Data.DataTable.ColumnChanging> doğrulama gerektiğinde oluşturma ve <xref:System.Data.DataTable.RowChanging> olay işleyicileri için işlevsellik sağlar. Daha fazla bilgi için bkz. [n katmanlı bir veri kümesine doğrulama ekleme](../data-tools/add-validation-to-an-n-tier-dataset.md).
 
  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
@@ -47,13 +47,13 @@ ms.locfileid: "72673097"
 
 2. Veri kümesini açmak için **. xsd** dosyasına çift tıklayın.
 
-3. Kodu eklemek istediğiniz `TableAdapter` sağ tıklatın ve ardından**kodu görüntüle**' yi seçin.
+3. `TableAdapter`Kodu eklemek istediğiniz öğesine sağ tıklayın ve ardından**kodu görüntüle**' yi seçin.
 
      Kod düzenleyicisinde kısmi bir sınıf oluşturulur ve açılır.
 
 4. Kısmi sınıf bildiriminin içine kod ekleyin.
 
-5. Aşağıdaki örnek, `NorthwindDataSet` `CustomersTableAdapter` kodun nereye ekleneceğini gösterir:
+5. Aşağıdaki örnek, içindeki içine kodunun nereye ekleneceğini göstermektedir `CustomersTableAdapter` `NorthwindDataSet` :
 
     ```vb
     Partial Public Class CustomersTableAdapter

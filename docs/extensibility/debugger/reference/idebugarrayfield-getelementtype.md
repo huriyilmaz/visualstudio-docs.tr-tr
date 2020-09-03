@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayField::GetElementType | Microsoft Dokümanlar
+title: 'Ihata ayıklama Garrayfield:: GetElementType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 3870f28ffb62239d0a092093d28c83d25e92bd31
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736337"
 ---
 # <a name="idebugarrayfieldgetelementtype"></a>IDebugArrayField::GetElementType
 Dizideki öğe türünü alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetElementType( 
@@ -41,13 +41,13 @@ int GetElementType(
 
 ## <a name="parameters"></a>Parametreler
 `ppType`\
-[çıkış] Öğe türünü açıklayan bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi döndürür.
+dışı Öğe türünü açıklayan bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md) nesnesi, dizinin tüm öğelerinin aynı türde olduğunu varsayar.
+ [Ihata ayıklama Garrayfield](../../../extensibility/debugger/reference/idebugarrayfield.md) nesnesi, dizideki tüm öğelerin aynı türde olduğunu varsayar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)

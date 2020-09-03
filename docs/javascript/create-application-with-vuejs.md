@@ -13,10 +13,10 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: e16b09a165421d36c67dad1fc657fd36846cd382
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85285172"
 ---
 # <a name="create-a-vuejs-application-using-nodejs-tools-for-visual-studio"></a>Visual Studio için Node.js araçları 'nı kullanarak Vue.js uygulaması oluşturma
@@ -29,7 +29,7 @@ Aşağıdaki yeni özellikler, Visual Studio 'da uygulama geliştirmeyi Vue.js d
 * `lang` *. Vue* dosyalarındaki özniteliğin tanınması
 * Vue.js proje ve dosya şablonları
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * Visual Studio 2017 sürüm 15,8 veya sonraki bir sürümün yüklü olması ve **Node.js geliştirme** iş yüküne sahip olmanız gerekir.
 
@@ -181,8 +181,8 @@ cd ../
 
 ## <a name="limitations"></a>Sınırlamalar
 
-* `lang`öznitelik yalnızca JavaScript ve TypeScript dillerini destekler. Kabul edilen değerler şunlardır: JS, JSX, TS ve TSX.
-* `lang`öznitelik, şablon veya stil etiketleriyle çalışmıyor.
+* `lang` öznitelik yalnızca JavaScript ve TypeScript dillerini destekler. Kabul edilen değerler şunlardır: JS, JSX, TS ve TSX.
+* `lang` öznitelik, şablon veya stil etiketleriyle çalışmıyor.
 * *. Vue* dosyalarında hata ayıklama betiği blokları, ön işlenmiş doğası nedeniyle desteklenmiyor.
 * TypeScript *. Vue* dosyalarını modüller olarak tanımıyor. TypeScript 'e nasıl göründüğünü söylemek için aşağıdaki gibi bir kod içeren bir dosyaya ihtiyacınız vardır *. Vue* -CLI 3,0 şablonu bu dosyayı zaten içeriyor).
 

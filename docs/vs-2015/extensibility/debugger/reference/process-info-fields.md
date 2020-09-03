@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7700670774dcb38b054cf28275f64c0c3046f741
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205034"
 ---
-# <a name="processinfofields"></a>PROCESS_INFO_FIELDS
+# <a name="process_info_fields"></a>PROCESS_INFO_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Hangi tür bilgiler almak için bir işlem için belirtilen.  
+Bir işlem için hangi tür bilgilerin alınması belirtildi.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_PROCESS_INFO_FIELDS {   
@@ -57,46 +57,46 @@ public enum enum_PROCESS_INFO_FIELDS { 
   
 ## <a name="members"></a>Üyeler  
  PIF_FILE_NAME  
- Başlat/kullanım `bstrFileName` alanını [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) yapısı.  
+ `bstrFileName` [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) yapısının alanını başlatın/kullanın.  
   
  PIF_BASE_NAME  
- Başlat/kullanım `bstrBaseName` alanını `PROCESS_INFO` yapısı.  
+ Yapının alanını başlatın/kullanın `bstrBaseName` `PROCESS_INFO` .  
   
  PIF_TITLE  
- Başlat/kullanım `bstrTitle` alanını `PROCESS_INFO` yapısı.  
+ Yapının alanını başlatın/kullanın `bstrTitle` `PROCESS_INFO` .  
   
  PIF_PROCESS_ID  
- Başlat/kullanım `ProcessId` alanını `PROCESS_INFO` yapısı.  
+ Yapının alanını başlatın/kullanın `ProcessId` `PROCESS_INFO` .  
   
  PIF_SESSION_ID  
- Başlat/kullanım `dwSessionId` alanını `PROCESS_INFO` yapısı.  
+ Yapının alanını başlatın/kullanın `dwSessionId` `PROCESS_INFO` .  
   
  PIF_ATTACHED_SESSION_NAME  
- Başlat/kullanım `bstrAttachedSessionName` alanını `PROCESS_INFO` yapısı.  
+ Yapının alanını başlatın/kullanın `bstrAttachedSessionName` `PROCESS_INFO` .  
   
  PIF_CREATION_TIME  
- Başlat/kullanım `CreationTime` alanını `PROCESS_INFO` yapısı.  
+ Yapının alanını başlatın/kullanın `CreationTime` `PROCESS_INFO` .  
   
  PIF_FLAGS  
- Başlat/kullanım `Flags` alanını `PROCESS_INFO` yapısı.  
+ Yapının alanını başlatın/kullanın `Flags` `PROCESS_INFO` .  
   
  PIF_ALL  
  Tüm alanları doldurur.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Geçirilen [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) hangi alanları göstermek için yöntemi [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) yapısı olan başlatılacak.  
+ [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) yapısının hangi alanlarının başlatıldığını göstermek Için [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) yöntemine geçirilir.  
   
- Ayrıca kullanılan `Fields` alanını `PROCESS_INFO` yapısı hangi alanların kullanılan ve geçerli olduğunu belirtmek için.  
+ Ayrıca `Fields` , `PROCESS_INFO` hangi alanların kullanıldığını ve geçerli olduğunu göstermek için yapının alanında kullanılır.  
   
- Bu bayrak bit düzeyinde ile birleştirilebilir `OR`.  
+ Bu bayraklar bit düzeyinde birleştirilebilir `OR` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)

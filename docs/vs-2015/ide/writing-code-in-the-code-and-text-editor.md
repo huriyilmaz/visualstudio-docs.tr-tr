@@ -61,10 +61,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: aa647d8a8d52588481d18347cb3400141978bd20
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548037"
 ---
 # <a name="writing-code-in-the-code-and-text-editor"></a>Kod ve Metin Düzenleyici'de Kod Yazma
@@ -82,7 +82,7 @@ Visual Studio Düzenleyicisi, kodunuzu yazmanızı ve yönetmenizi kolaylaştır
 
 ## <a name="editor-features"></a>Düzenleyici Özellikleri
 
-|Özellik|Description|
+|Özellik|Açıklama|
 |-|-|
 |Sözdizimi renklendirme|Kod ve biçimlendirme dosyalarının bazı sözdizimi öğeleri, bunları ayırt etmek için farklı renklendirilir. Örneğin, ( `using` C# ve Visual Basic gibi) anahtar kelimeleri `Imports` bir renktedir, ancak türler ( `Console` ve gibi `Uri` ) başka bir renktir. Diğer sözdizimi öğeleri de, dize sabit değerleri ve açıklamalar gibi renklendirilmiştir. C++, diğer belirteçlerin yanı sıra türler, numaralandırmalar ve makroları birbirinden ayırt etmek için renk kullanır.<br /><br /> Her tür için varsayılan rengi görebilir ve **Araçlar** menüsünden açabileceğiniz [yazı tipleri ve renkler, ortam, Seçenekler iletişim kutusunda](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)herhangi bir belirli bir söz dizimi öğesi için rengi değiştirebilirsiniz.|
 |Hata ve uyarı Işaretleri|Kod eklerken ve çözümünüzü oluştururken, kodunuzda görüntülenen (a) farklı renkli dalgalı alt çizgiler (dalgalı çizgiler olarak bilinir) veya (b) açık bulbs görebilirsiniz. Red dalgalı çizgiler, sözdizimi hatalarını ifade eder, mavi derleyici hatalarını, yeşil bir uyarı gösterir ve mor diğer hata türlerini gösterir. [Hafif bulbs](../ide/perform-quick-actions-with-light-bulbs.md) , sorunlara yönelik düzeltmeler önerir ve düzeltmenin uygulanmasını kolaylaştırır.<br /><br /> **Araçlar/Seçenekler/ortam/yazı tipleri ve renkler** iletişim kutusunda her bir hata ve uyarı dalgalı çizgi için varsayılan rengi görebilirsiniz. **Sözdizimi hatası**, **derleyici hatası**, **Uyarı**ve **diğer hata**olup olmadığına bakın.|
@@ -98,7 +98,7 @@ Visual Studio Düzenleyicisi, kodunuzu yazmanızı ve yönetmenizi kolaylaştır
 ## <a name="advanced-editing-features"></a>Gelişmiş Özellikleri Düzenle
  **Düzenleme/Gelişmiş** alt menüsünde birçok gelişmiş özellik bulabilirsiniz. Bu özelliklerin hepsi tüm kod dosyası türleri için kullanılamaz.
 
-|Özellik|Description|
+|Özellik|Açıklama|
 |-|-|
 |Belgeyi Biçimlendir|Kod satırlarının uygun girintisini ayarlar ve küme ayraçlarını belgedeki satırlara ayırmak için taşımayın.|
 |Biçim Seçimi|Kod satırlarının doğru girintilenmesini ayarlar ve küme ayraçlarını seçimdeki satırlara ayırmak için taşımayın.|
@@ -126,9 +126,9 @@ Visual Studio Düzenleyicisi, kodunuzu yazmanızı ve yönetmenizi kolaylaştır
 
  Aşağıdaki komutlar koda özgü gezinti yöntemleridir:
 
-|Komut|Description|
+|Komut|Açıklama|
 |-|-|
-|Git\<line number>|(**Düzenle/git** veya CTRL + G): etkin belgedeki belirli bir satır numarasına gider.|
+|Git \<line number>|(**Düzenle/git** veya CTRL + G): etkin belgedeki belirli bir satır numarasına gider.|
 |Şuraya gidin|(**Düzenle/git** veya CTRL +,): etkin çözümde bir sembol veya dosya bulur. Bir sorgudan uygun bir eşleşen sonuçlar kümesi seçmenize yardımcı olur. Simgenin anahtar sözcüklere bölmek için ortası küçük harf ve alt çizgi karakterlerini kullanarak bir sembolde bulunan anahtar sözcükleri arayabilirsiniz.|
 |Tüm Başvuruları Bul|(bağlam menüsü): çözümdeki seçili öğenin tüm başvurularını bulur.|
 |Tanıma Git|(bağlam menüsü veya F12): seçili öğenin tanımını bulur.|
@@ -206,7 +206,7 @@ Kodunuzun uzun adlara sahip olması durumunda bu özellik özellikle faydalıdı
 
 - [Üretkenlik Ipuçları](../ide/productivity-tips-for-visual-studio.md)
 
-- [IntelliSense Kullanma](../ide/using-intellisense.md)
+- [IntelliSense kullanma](../ide/using-intellisense.md)
 
 - [Düzenleyiciyi Özelleştirme](../ide/customizing-the-editor.md)
 

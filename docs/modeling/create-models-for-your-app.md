@@ -22,21 +22,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b7015583fef2323e3c53b8e786c9e8a529e0fab6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75590533"
 ---
 # <a name="create-models-for-your-app"></a>Uygulamanız için model oluşturma
 
-Modelleme diyagramları kodunuz ve yazılım sisteminizin desteklemesi gereken kullanıcı gereksinimleriniz hakkındaki fikirleri anlamanıza, belirtmenize ve tartışmanıza yardımcı olur.
+Modelleme diyagramları, kodunuz ve yazılım sisteminizin desteklemesi gereken kullanıcı gereksinimleri hakkındaki fikirleri anlamanıza, açıklığa kavuşturmanıza ve iletmeye yardımcı olur.
 
 Visual Studio 'nun hangi sürümlerinin her diyagram türünü desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 Bir sistemin veya varolan kodun mimarisini görselleştirmek için aşağıdaki diyagramları oluşturun:
 
-|**Çizimindeki**|**Gösterilir**|
+|**Diyagram**|**Diziler**|
 |-|-|
 |[Bağımlılık Diyagramları: Yönergeler](../modeling/layer-diagrams-guidelines.md)<br /><br /> [Bağımlılık Diyagramları: Başvuru](../modeling/layer-diagrams-reference.md)|Sistemin üst düzey mimarisi|
 |Kod eşlemeleri<br /><br /> [Çözümlerinizdeki bağımlılıkları eşleme](../modeling/map-dependencies-across-your-solutions.md)<br /><br /> [Kod haritası çözümleyicilerini kullanarak olası sorunları bulma](../modeling/find-potential-problems-using-code-map-analyzers.md)|Mevcut koddaki bağımlılıklar ve diğer ilişkiler|
@@ -44,7 +44,7 @@ Bir sistemin veya varolan kodun mimarisini görselleştirmek için aşağıdaki 
 
 ## <a name="related-tasks"></a>İlgili görevler
 
-|**Konu**|**Görev**|
+|**İlerde**|**Görev**|
 |-|-|
 |[Kodu görselleştirme](../modeling/visualize-code.md)|Bilmediğiniz kodu daha iyi anlamak için kod haritaları ve bağımlılık diyagramları oluşturun.|
 |[Kullanıcı gereksinimlerini modelleme](../modeling/model-user-requirements.md)|Kullanıcıların ihtiyaçlarını netleştirmek ve iletmek için modeller kullanın.|

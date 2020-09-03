@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField::GetStringFromValue | Microsoft Docs
+title: 'Ihata ayıklama Genumfield:: GetStringFromValue | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ecdd60c363e30afbe4c61e8e18660a17a06a5ce8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188993"
 ---
 # <a name="idebugenumfieldgetstringfromvalue"></a>IDebugEnumField::GetStringFromValue
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu yöntem, değeri verilen numaralandırma sabiti adını alır.  
+Bu yöntem, sabit listesi sabitinin adını değeri verilen olarak alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetStringFromValue(  
@@ -42,16 +42,16 @@ int GetStringFromValue(
   
 #### <a name="parameters"></a>Parametreler  
  `value`  
- [in] Alınacağı adı numaralandırma sabit değeri.  
+ 'ndaki Numaralandırma sabitinin adının alınacağı değer.  
   
  `pbstrValue`  
- [out] Sabit listesi sabitinin adı döndürür.  
+ dışı Sabit Listesi sabitinin adını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` değeri ilişkili adı yok ya da bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` değerin ilişkili bir adı yoksa veya bir hata kodu döndürürse döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İlk numaralandırmada tanımlanan adla aynı değeri ile ilişkili birden fazla adı varsa, döndürülür.  
+ Aynı değerle ilişkili birden fazla ad varsa, numaralandırmada tanımlanan ilk ad döndürülür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)

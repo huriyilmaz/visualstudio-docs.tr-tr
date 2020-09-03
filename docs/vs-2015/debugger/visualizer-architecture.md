@@ -1,5 +1,5 @@
 ---
-title: Görselleştirici mimarisi | Microsoft Docs
+title: Görselleştiricisi mimarisi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,82 +15,82 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 82dd990a44984d2e3cc1c84244fbe07ea519fdfc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68189026"
 ---
 # <a name="visualizer-architecture"></a>Görselleştirici Mimarisi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Hata ayıklama görselleştiricisi mimarisini iki bölümden oluşur:  
+Bir hata ayıklayıcı görselleştiricisi mimarisi iki bölümden oluşur:  
   
-- *Hata ayıklayıcı, yan* Visual Studio hata ayıklayıcısı içinde çalıştırır. Hata ayıklayıcı tarafı kodunu oluşturup, görselleştiricisi için kullanıcı arabirimini görüntüler.  
+- *Hata ayıklayıcı tarafı* Visual Studio hata ayıklayıcısı içinde çalışır. Hata ayıklayıcı tarafı kodu, görselleştiriciniz için Kullanıcı arabirimini oluşturur ve görüntüler.  
   
-- *Hata ayıklanan yan* Visual Studio hata ayıklama işlemi içinde çalıştırılan ( *hata ayıklanan*).  
+- Hata *ayıklanan yan* Işlem Visual Studio 'da çalışıyor (hata *ayıklanan*).  
   
-  Görselleştirici görüntülenecek hata ayıklayıcıyı etkinleştiren bir hata ayıklayıcı bileşendir (*görselleştirme*) anlamlı, anlaşılır bir form veri nesnesinde içeriği. Veri nesnesinin de düzenleme bazı görselleştiriciler destekler. Özel görselleştiriciler yazarak, kendi özel veri türlerini işlemek için hata ayıklayıcı genişletebilirsiniz.  
+  Görselleştirici, hata ayıklayıcının bir veri nesnesinin içeriğini anlamlı, anlaşılır bir biçimde görüntülemesini (*görselleştirmesini*) sağlayan bir hata ayıklayıcı bileşenidir. Bazı Görselleştiriciler veri nesnesini de düzenlemenizi destekler. Özel Görselleştiriciler yazarak, hata ayıklayıcıyı kendi özel veri türlerinizi işleyecek şekilde genişletebilirsiniz.  
   
-  Veri nesnesi görünür için hata ayıklama işlemi içinde bulunduğu ( *hata ayıklanan* işlem). İçinde Visual Studio hata ayıklayıcı işlemi verileri görüntüleyecek kullanıcı arabirimi oluşturulur:  
+  Görselleştirilebilen veri nesnesi hata ayıkladığınız işlem içinde (hata *ayıklanan* işlem) bulunuyor. Verileri görüntüleyen kullanıcı arabirimi, Visual Studio hata ayıklayıcı işlemi içinde oluşturulur:  
   
-|Hata ayıklayıcı işleme|Hata ayıklanan işlem|  
+|Hata ayıklayıcı Işlemi|Hata ayıklanan Işlem|  
 |----------------------|----------------------|  
-|Kullanıcı Arabirimi (DataTips, İzleme penceresinde QuickWatch) hata ayıklayıcı|Görselleştirilmiş için veri nesnesi|  
+|Hata ayıklayıcı kullanıcı arabirimi (DataTips, Gözcü penceresi, hızlı Izleme)|Görselleştirilebilen veri nesnesi|  
   
- Veri nesnesi içinde hata ayıklayıcı arabirim görselleştirmek için iki işlem arasında iletişim kurmak için kod gerekir. Sonuç olarak, Görselleştirici mimarisi iki bölümden oluşur: *hata ayıklayıcı, yan* kod ve *hata ayıklanan yan* kod.  
+ Hata ayıklayıcı arabirimindeki veri nesnesini görselleştirmek için, iki işlem arasında iletişim kurmak üzere koda ihtiyacınız vardır. Sonuç olarak, görselleştiricisi mimarisi iki bölümden oluşur: *hata ayıklayıcı tarafı* kodu ve hata *ayıklanan yüz* kodu.  
   
- Hata ayıklayıcı tarafı kod, hata ayıklayıcı arabiriminden bir DataTip İzle penceresine veya QuickWatch gibi çağrılabilir, kendi kullanıcı arabirimi oluşturur. Görselleştirici arabirimi kullanılarak oluşturulan <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer> sınıfı ve <xref:Microsoft.VisualStudio.DebuggerVisualizers.IDialogVisualizerService> arabirimi. Tüm Görselleştirici API'leri, DialogDebuggerVisualizer ve IDialogVisualizerService bulunan gibi <xref:Microsoft.VisualStudio.DebuggerVisualizers> ad alanı.  
+ Hata ayıklayıcı tarafı kodu, veri Ipucu, Gözcü penceresi veya QuickWatch gibi hata ayıklayıcı arabiriminden çağrılabilecek kendi Kullanıcı arabirimini oluşturur. Görselleştiricisi arabirimi <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer> sınıfı ve arabirimi kullanılarak oluşturulur <xref:Microsoft.VisualStudio.DebuggerVisualizers.IDialogVisualizerService> . Tüm Görselleştirici API 'Leri gibi, DialogDebuggerVisualizer ve ıdialogvisualizerhizmeti <xref:Microsoft.VisualStudio.DebuggerVisualizers> ad alanında bulunur.  
   
-|Hata ayıklayıcı yan|Hata ayıklanan yan|  
+|Hata ayıklayıcı tarafı|Hata ayıklanan kenar|  
 |-------------------|-------------------|  
-|DialogDebuggerVisualizer sınıfı<br /><br /> IDialogVisualizerService arabirimi|Veri nesnesi|  
+|DialogDebuggerVisualizer sınıfı<br /><br /> Idalogvisualizerservice arabirimi|Veri nesnesi|  
   
- Kullanıcı arabirimi hata ayıklayıcı tarafta var olan bir nesne sağlayıcısı, görselleştirilmiş verileri alır:  
+ Kullanıcı arabirimi, hata ayıklayıcı tarafında bulunan bir nesne sağlayıcısından görselleştirilebilen verileri alır:  
   
-|Hata ayıklayıcı yan|Hata ayıklanan yan|  
+|Hata ayıklayıcı tarafı|Hata ayıklanan kenar|  
 |-------------------|-------------------|  
-|DialogDebuggerVisualizer sınıfı<br /><br /> IDialogVisualizerService arabirimi|Veri nesnesi|  
-|Sağlayıcı nesnesi (uygulayan <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider>)||  
+|DialogDebuggerVisualizer sınıfı<br /><br /> Idalogvisualizerservice arabirimi|Veri nesnesi|  
+|Nesne sağlayıcısı (uygular <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider> )||  
   
- Nesne kaynağı olarak adlandırılan hata ayıklanan taraftaki karşılık gelen nesne vardır:  
+ Hata ayıklanan tarafta nesne kaynağı olarak adlandırılan karşılık gelen bir nesne vardır:  
   
-|Hata ayıklayıcı yan|Hata ayıklanan yan|  
+|Hata ayıklayıcı tarafı|Hata ayıklanan kenar|  
 |-------------------|-------------------|  
-|DialogDebuggerVisualizer sınıfı<br /><br /> IDialogVisualizerService arabirimi|Veri nesnesi|  
-|Sağlayıcı nesnesi (uygulayan <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider>)|Kaynak nesne (türetilen <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource>)|  
+|DialogDebuggerVisualizer sınıfı<br /><br /> Idalogvisualizerservice arabirimi|Veri nesnesi|  
+|Nesne sağlayıcısı (uygular <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider> )|Nesne kaynağı (türetilen <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> )|  
   
- Nesne sağlayıcı görselleştiricisi UI görselleştirilmiş nesne verileri sağlar. Nesne sağlayıcı nesne kaynak nesne verilerini alır. Nesne sağlayıcısı ve nesne kaynak nesne verilerini hata ayıklayıcı yan debugee tarafı arasındaki iletişim kurmak için API'leri sağlar.  
+ Nesne sağlayıcısı, görselleştiricisi Kullanıcı arabirimine görselleştirilebilen nesne verileri sağlar. Nesne sağlayıcısı nesne kaynağından nesne verilerini alır. Nesne sağlayıcısı ve nesne kaynağı, hata ayıklayıcı tarafı ve hata ayıklama tarafı arasındaki nesne verilerini iletmek için API 'Ler sağlar.  
   
- Her Görselleştirici görünür için veri nesnesi almanız gerekir. Aşağıdaki tabloda, nesne kaynağı ve nesne sağlayıcısı bu amaçla kullanabileceğiniz ilgili API'leri gösterir:  
+ Her Görselleştirici görselleştirilebilen veri nesnesini almalıdır. Aşağıdaki tabloda, nesne sağlayıcısının ve nesne kaynağının bu amaçla kullandığı ilgili API 'Ler gösterilmektedir:  
   
 |Nesne sağlayıcısı|Nesne kaynağı|  
 |---------------------|-------------------|  
 |<xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A><br /><br /> —veya—<br /><br /> <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A>|<xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.GetData%2A>|  
   
- Bildirim ya da nesne sağlayıcıyı kullanabilirsiniz <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A> veya <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A>. Her iki API çağrısı sonuçlanıyor <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.GetData%2A> nesne kaynak. Bir çağrı <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.GetData%2A?displayProperty=fullName> dolduran bir [System.IO.Stream] ()<!-- TODO: review code entity reference <xref:assetId:///System.IO.Stream?qualifyHint=False&amp;autoUpgrade=True>  -->), görselleştirilmekte olan nesnedeki bir seri hala getirilmiş biçimini temsil eder.  
+ Nesne sağlayıcısının veya kullanmasına dikkat edin <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A> <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A> . API, nesne kaynağında çağrısına neden olur <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.GetData%2A> . <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.GetData%2A?displayProperty=fullName>[System. IO. Stream] içinde dolgulara yönelik çağrı (<!-- TODO: review code entity reference <xref:assetId:///System.IO.Stream?qualifyHint=False&amp;autoUpgrade=True>  -->), görselleştirilen nesnenin seri hale getirilmiş formunu temsil eder.  
   
- <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A?displayProperty=fullName> Forma ardından, oluşturduğunuz kullanıcı arabiriminde görüntüleyebilen geri nesne, verileri seri durumdan çıkarır <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer>. <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A?displayProperty=fullName> bir ham verileri doldurur. <!-- TODO: review code entity reference <xref:assetId:///System.IO.Stream?qualifyHint=False&amp;autoUpgrade=True>  -->, hangi kendiniz seri durumdan gerekir. <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A?displayProperty=fullName> çalışan çağırarak <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A?displayProperty=fullName> serileştirilmiş almak için <!-- TODO: review code entity reference <xref:assetId:///System.IO.Stream?qualifyHint=False&amp;autoUpgrade=True>  -->, verileri seri durumdan çıkarılırken. Kullanım <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A?displayProperty=fullName> zaman nesnesi tarafından .NET seri hale getirilebilir değil ve özel serileştirme gerektirir. Bu durumda, geçersiz kılmalısınız <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.Serialize%2A?displayProperty=fullName> yöntemi.  
+ <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A?displayProperty=fullName> daha sonra, ile oluşturduğunuz Kullanıcı arabiriminde görüntülenebilecek verileri nesne biçimine geri çıkarır <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer> . <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A?displayProperty=fullName> verileri ham olarak doldurur <!-- TODO: review code entity reference <xref:assetId:///System.IO.Stream?qualifyHint=False&amp;autoUpgrade=True>  -->, kendi kendinize seri durumdan çıkarmalısınız. <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A?displayProperty=fullName><xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A?displayProperty=fullName>seri hale getirmek için çağırarak <!-- TODO: review code entity reference <xref:assetId:///System.IO.Stream?qualifyHint=False&amp;autoUpgrade=True>  -->ve sonra verilerin serisini kaldırma. <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A?displayProperty=fullName>Nesne .NET tarafından serileştirilebilir olmadığında ve özel serileştirme gerektirdiğinde kullanın. Bu durumda, yöntemini de geçersiz kılmanız gerekir <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.Serialize%2A?displayProperty=fullName> .  
   
- Oluşturmakta olduğunuz, salt okunur Görselleştirici, tek yönlü iletişimi <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A> veya <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A> yeterlidir. Veri nesnelerini düzenleme destekleyen Görselleştirici oluşturuyorsanız, bunu daha yapmanız gerekir. Nesne kaynak nesne sağlayıcısından bir veri nesnesi de gönderebilmesi için olması gerekir. Aşağıdaki tabloda, bu amaç için kullanılan nesne kaynak API'leri ve nesne sağlayıcı gösterilmektedir:  
+ Salt okunurdur ve ile tek yönlü bir iletişim oluşturuyorsanız, <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A> veya <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A> yeterlidir. Veri nesnelerini düzenlemenizi destekleyen bir Görselleştirici oluşturuyorsanız, daha fazla yapmanız gerekir. Nesne sağlayıcısından bir veri nesnesini ayrıca nesne kaynağına geri gönderebilmelisiniz. Aşağıdaki tabloda, bu amaçla kullanılan nesne sağlayıcısı ve nesne kaynağı API 'Leri gösterilmektedir:  
   
 |Nesne sağlayıcısı|Nesne kaynağı|  
 |---------------------|-------------------|  
 |<xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.ReplaceData%2A><br /><br /> —veya—<br /><br /> <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.ReplaceObject%2A>|<xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.CreateReplacementObject%2A>|  
   
- Yeniden nesne sağlayıcı kullanabileceğiniz iki API olduğuna dikkat edin. Veriler her zaman gönderilir nesne sağlayıcısından nesnesi kaynağı olarak bir <!-- TODO: review code entity reference <xref:assetId:///System.IO.Stream?qualifyHint=False&amp;autoUpgrade=True>  -->, ancak <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.ReplaceData%2A> nesnede seri hale getirme gerektiren bir <!-- TODO: review code entity reference <xref:assetId:///System.IO.Stream?qualifyHint=False&amp;autoUpgrade=True>  --> kendiniz.  
+ Bir kez, nesne sağlayıcısının kullanabileceği iki API olduğuna dikkat edin. Veriler her zaman nesne sağlayıcısından nesne kaynağına bir olarak gönderilir <!-- TODO: review code entity reference <xref:assetId:///System.IO.Stream?qualifyHint=False&amp;autoUpgrade=True>  -->, ancak <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.ReplaceData%2A> nesneyi bir <!-- TODO: review code entity reference <xref:assetId:///System.IO.Stream?qualifyHint=False&amp;autoUpgrade=True>  --> başınıza.  
   
- <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.ReplaceObject%2A> sağlarsanız, nesne bir içine serileştiren bir <!-- TODO: review code entity reference <xref:assetId:///System.IO.Stream?qualifyHint=False&amp;autoUpgrade=True>  -->, sonra çağıran <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.ReplaceData%2A> göndermek için <!-- TODO: review code entity reference <xref:assetId:///System.IO.Stream?qualifyHint=False&amp;autoUpgrade=True>  --> için <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.CreateReplacementObject%2A>.  
+ <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.ReplaceObject%2A> sağladığınız bir nesneyi alır, <!-- TODO: review code entity reference <xref:assetId:///System.IO.Stream?qualifyHint=False&amp;autoUpgrade=True>  -->, ardından şunu <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.ReplaceData%2A> göndermek için çağırır <!-- TODO: review code entity reference <xref:assetId:///System.IO.Stream?qualifyHint=False&amp;autoUpgrade=True>  --> <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.CreateReplacementObject%2A>.  
   
- Replace yöntemlerden birini kullanarak yeni bir veri nesnesi, görselleştirilmekte olan nesnedeki yerini alan hatası ayıklanana oluşturur. Orijinal nesnenin içeriğini değiştirme olmadan değiştirmek istiyorsanız, aşağıdaki tabloda gösterilen aktarımı yöntemlerden birini kullanın. Bu API'ler, görselleştirilmekte olan nesnedeki değiştirmeden, aynı zamanda, her iki yönde veri aktarımı:  
+ Replace yöntemlerinden birinin kullanılması, hata ayıklanan içinde görselleştirilen nesnenin yerini alan yeni bir veri nesnesi oluşturur. Özgün nesnenin içeriğini değiştirmeden değiştirmek istiyorsanız, aşağıdaki tabloda gösterilen aktarım yöntemlerinden birini kullanın. Bu API 'Ler, görselleştirilebilen nesneyi değiştirmeden, verileri aynı anda her iki yönde de aktarır:  
   
 |Nesne sağlayıcısı|Nesne kaynağı|  
 |---------------------|-------------------|  
 |<xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferData%2A><br /><br /> —veya—<br /><br /> <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferObject%2A>|<xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.TransferData%2A>|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Görselleştirici yazma](../debugger/how-to-write-a-visualizer.md)   
- [İzlenecek yol: C# ile Görselleştirici yazma](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)   
- [İzlenecek yol: Visual Basic'de Görselleştirici yazma](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)   
- [İzlenecek yol: Visual Basic'de Görselleştirici yazma](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)   
+ [Nasıl yapılır: Görselleştirici Yazma](../debugger/how-to-write-a-visualizer.md)   
+ [İzlenecek yol: C 'de Görselleştirici Yazma #](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)   
+ [İzlenecek yol: Visual Basic görselleştiricisi yazma](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)   
+ [İzlenecek yol: Visual Basic görselleştiricisi yazma](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)   
  [Görselleştirici Güvenlik Konuları](../debugger/visualizer-security-considerations.md)

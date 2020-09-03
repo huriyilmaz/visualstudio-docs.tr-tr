@@ -13,10 +13,10 @@ caps.latest.revision: 34
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3f669c4dcfb91579ac50270914112cd6388e2743
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547985"
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>İzlenecek Yol: Bir Veri Kaynağı Tanımlamak için Yapılandırma Dosyası Kullanma
@@ -55,7 +55,7 @@ Bu izlenecek yol, birim testi için bir app.config dosyasında tanımlanan bir v
 
 3. **Uygulama yapılandırma dosyası** şablonunu seçin ve **Ekle**' ye tıklayın.
 
-## <a name="define-a-custom-configuration-section"></a><a name="DefineCustomConfigurationSection"></a>Özel yapılandırma bölümü tanımlama
+## <a name="define-a-custom-configuration-section"></a><a name="DefineCustomConfigurationSection"></a> Özel yapılandırma bölümü tanımlama
  app.config dosyasını inceleyin. En azından XML bildirimi ve bir kök öğesi içerir.
 
 #### <a name="to-add-the-custom-configuration-section-to-the-appconfig-file"></a>app.config dosyasına özel yapılandırma bölümünü eklemek için
@@ -64,7 +64,7 @@ Bu izlenecek yol, birim testi için bir app.config dosyasında tanımlanan bir v
 
 2. Öğesi içinde `configSections` , bir öğesi oluşturun `section` .
 
-3. `section`Öğesinde adlı bir öznitelik ekleyin `name` ve ona eşit bir değer atayın `microsoft.visualstudio.testtools` . Adlı başka bir öznitelik ekleyin `type` ve şuna eşit bir değer atayın`Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`
+3. `section`Öğesinde adlı bir öznitelik ekleyin `name` ve ona eşit bir değer atayın `microsoft.visualstudio.testtools` . Adlı başka bir öznitelik ekleyin `type` ve şuna eşit bir değer atayın `Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`
 
    `section`Öğesi şuna benzemelidir:
 
@@ -114,11 +114,11 @@ Bu izlenecek yol, birim testi için bir app.config dosyasında tanımlanan bir v
 
 - `name`<xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute>hangi veri kaynağının kullanılacağını belirtmek için tarafından kullanılan kimliği tanımlar.
 
-- `connectionString`önceki bağlantı dizelerini tanımlama bölümünde oluşturulan bağlantı dizesini tanımlar.
+- `connectionString` önceki bağlantı dizelerini tanımlama bölümünde oluşturulan bağlantı dizesini tanımlar.
 
-- `dataTableName`Testte kullanılacak verileri tutan tabloyu veya sayfayı tanımlar.
+- `dataTableName` Testte kullanılacak verileri tutan tabloyu veya sayfayı tanımlar.
 
-- `dataAccessMethod`veri kaynağındaki veri değerlerine erişim tekniğini tanımlar.
+- `dataAccessMethod` veri kaynağındaki veri değerlerine erişim tekniğini tanımlar.
 
   Bu bölümde, bir birim testinde kullanılacak iki veri kaynağı tanımlayacaksınız.
 

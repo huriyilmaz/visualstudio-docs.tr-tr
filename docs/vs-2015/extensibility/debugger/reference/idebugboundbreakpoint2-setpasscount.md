@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::SetPassCount | Microsoft Docs
+title: 'IDebugBoundBreakpoint2:: SetPassCount | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,18 +14,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9711ae6d9048b1de953d8a090b8e11b22c640345
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156173"
 ---
 # <a name="idebugboundbreakpoint2setpasscount"></a>IDebugBoundBreakpoint2::SetPassCount
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu bağlı Kesme noktasının ile ilişkili parola sayısı değiştirir veya ayarlar.  
+Bu ilişkili kesme noktasıyla ilişkili geçiş sayısını ayarlar veya değiştirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT SetPassCount(   
@@ -41,15 +41,15 @@ int SetPassCount( 
   
 #### <a name="parameters"></a>Parametreler  
  `bpPassCount`  
- [in] [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) yapısını parola sayısını belirtir.  
+ 'ndaki Geçiş sayısını belirten [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) yapısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Döndürür `E_BP_DELETED` bağlı Kesme noktasının nesnenin durumu ayarlanırsa `BPS_DELETED` (parçası [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) sabit listesi).  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. , `E_BP_DELETED` Bağlantılı kesme noktası nesnesinin durumunun `BPS_DELETED` ( [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) sabit listesinin parçası) olarak ayarlanmış olup olmadığını döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kesme noktasının ne zaman tetiklenir parola sayısını belirler. İsabet sayısı ve geçerli geçişi çağrılarak alınabilir [GetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-gethitcount.md) yöntemi.  
+ Pass Count, kesme noktasının ne zaman harekete geçirildiğinde belirlenir. Geçerli pass veya hit Count, [GetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-gethitcount.md) metodu çağırarak elde edilebilir.  
   
- Daha önce bu kesme noktası ile ilişkili tüm geçiş sayısı kaybolur.  
+ Daha önce bu kesme noktasıyla ilişkili olan tüm geçiş sayısı kaybolur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   

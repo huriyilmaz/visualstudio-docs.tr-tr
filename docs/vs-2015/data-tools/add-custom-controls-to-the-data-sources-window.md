@@ -24,10 +24,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 402e62602d99492730d3094965e76964cd5f8218
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72673089"
 ---
 # <a name="add-custom-controls-to-the-data-sources-window"></a>Veri kaynakları penceresine özel denetimler ekleme
@@ -40,7 +40,7 @@ Veriye dayalı bir denetim oluşturmak için **veri kaynakları** penceresinden 
 > [!NOTE]
 > Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya sürümüne bağlı olarak yardım bölümünde açıklananlardan farklı bir durum içerebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları**' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
-## <a name="customizinglist"></a>Veri türü için bağlanabilir denetimlerin listesini özelleştirme
+## <a name="customize-the-list-of-bindable-controls-for-a-data-type"></a><a name="customizinglist"></a> Veri türü için bağlanabilir denetimlerin listesini özelleştirme
  **Veri kaynakları** penceresinde belirli bir veri türüne sahip öğeler için kullanılabilir denetimler listesine denetim eklemek veya kaldırmak için aşağıdaki adımları gerçekleştirin.
 
 #### <a name="to-select-the-controls-to-be-listed-for-a-data-type"></a>Bir veri türü için listelenecek denetimleri seçmek için
@@ -68,13 +68,13 @@ Veriye dayalı bir denetim oluşturmak için **veri kaynakları** penceresinden 
     > [!NOTE]
     > Seçmek istediğiniz denetim **ilişkili denetimler** kutusunda görünmezse, denetimi listeye eklemeniz gerekir. Daha fazla bilgi için, bkz. [bir veri türü Için Ilişkili denetimler listesine denetim ekleme](#addingcontrols).
 
-6. **Tamam**'a tıklayın.
+6. **Tamam**’a tıklayın.
 
 7. **Veri kaynakları** penceresinde, yalnızca bir veya daha fazla denetimi ilişkilendirdiğiniz veri türünün bir öğesine tıklayın ve sonra öğenin açılan menüsüne tıklayın.
 
      **İlişkili denetimler** kutusunda seçtiğiniz denetimler artık öğenin açılan menüsünde görüntülenir.
 
-## <a name="addingcontrols"></a>Bir veri türü için ilişkili denetimlerin listesine addcontrols
+## <a name="addcontrols-to-the-list-of-associated-controls-for-a-data-type"></a><a name="addingcontrols"></a> Bir veri türü için ilişkili denetimlerin listesine addcontrols
  Bir denetimi veri türüyle ilişkilendirmek istiyorsanız, ancak denetim **ilişkili denetimler** kutusunda görünmüyorsa, denetimi listeye eklemeniz gerekir. Denetim geçerli çözümde veya başvurulan bir derlemede bulunmalıdır. Ayrıca **araç kutusunda**da kullanılabilir olmalıdır ve denetimin veri bağlama davranışını belirten bir özniteliği olmalıdır.
 
 #### <a name="to-add-controls-to-the-list-of-associated-controls"></a>İlişkili denetimler listesine denetim eklemek için
@@ -85,11 +85,11 @@ Veriye dayalı bir denetim oluşturmak için **veri kaynakları** penceresinden 
 
     |Öznitelik|Açıklama|
     |---------------|-----------------|
-    |<xref:System.ComponentModel.DefaultBindingPropertyAttribute>|Bu özniteliği, <xref:System.Windows.Forms.TextBox> gibi verilerin tek bir sütununu (veya özelliğini) görüntüleyen basit denetimlerde uygulayın.|
-    |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|Bu özniteliği, <xref:System.Windows.Forms.DataGridView> gibi verilerin listesini (veya tablolarını) görüntüleyen denetimlerde uygulayın.|
-    |<xref:System.ComponentModel.LookupBindingPropertiesAttribute>|Bu özniteliği, verilerin listelerini (veya tablolarını) görüntüleyen denetimlerde uygulayın, ancak aynı zamanda tek bir sütun veya Özellik (<xref:System.Windows.Forms.ComboBox> gibi) sunmalıdır.|
+    |<xref:System.ComponentModel.DefaultBindingPropertyAttribute>|Bu özniteliği, gibi verilerin tek bir sütununu (veya özelliğini) görüntüleyen basit denetimlerde uygulayın <xref:System.Windows.Forms.TextBox> .|
+    |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|Bu özniteliği, gibi verilerin listesini (veya tabloları) görüntüleyen denetimlerde uygulayın <xref:System.Windows.Forms.DataGridView> .|
+    |<xref:System.ComponentModel.LookupBindingPropertiesAttribute>|Bu özniteliği, verilerin listelerini (veya tablolarını) görüntüleyen denetimlerde uygulayın, ancak aynı zamanda tek bir sütun veya bir özelliği (örneğin,) sunmalıdır <xref:System.Windows.Forms.ComboBox> .|
 
-2. Windows Forms için, **Seçenekler** Iletişim kutusunda **veri UI özelleştirmesi** sayfasını açın. Ya da WPF için **Denetim Bağlamayı Özelleştir** iletişim kutusunu açın. Daha fazla bilgi için, bkz. [veri türü Için bağlanabilir denetimlerin listesini özelleştirme](#customizinglist).
+2. Windows Forms için,      **Seçenekler** Iletişim kutusunda **veri UI özelleştirmesi** sayfasını açın. Ya da WPF için **Denetim Bağlamayı Özelleştir** iletişim kutusunu açın. Daha fazla bilgi için, bkz. [veri türü Için bağlanabilir denetimlerin listesini özelleştirme](#customizinglist).
 
 3. **İlişkili denetimler** kutusunda, **araç** kutusuna yeni eklediğiniz denetim artık görünmelidir.
 

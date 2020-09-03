@@ -1,5 +1,5 @@
 ---
-title: Kaynak Kontrol Plug-in Mimarisi | Microsoft Dokümanlar
+title: Kaynak denetimi eklentisi mimarisi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,30 +11,30 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: f549ad2c4ee456860a08fbf20ccda813934a8582
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80705105"
 ---
 # <a name="source-control-plug-in-architecture"></a>Kaynak Denetimi Eklentisi Mimarisi
-Bir kaynak denetim eklentisi uygulayarak ve takarak tümleşik geliştirme ortamına [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (IDE) kaynak denetimi desteği ekleyebilirsiniz. IDE, iyi tanımlanmış Kaynak Kontrol Eklentisi API'si aracılığıyla kaynak kontrol eklentisine bağlanır. IDE, araç çubukları ve menü komutlarından oluşan bir kullanıcı arabirimi (UI) sağlayarak kaynak denetim sisteminin sürüm denetim özelliklerini ortaya çıkarır. Kaynak denetimi eklentisi kaynak denetimi işlevini uygular.
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Kaynak denetimi eklentisini uygulayarak ve ekleyerek tümleşik geliştirme ortamına (IDE) kaynak denetimi desteği ekleyebilirsiniz. IDE, kaynak denetimi eklentisine, iyi tanımlanmış kaynak denetimi eklentisi API 'SI aracılığıyla bağlanır. IDE, araç çubukları ve menü komutlarından oluşan bir kullanıcı arabirimi (UI) sağlayarak kaynak denetim sisteminin sürüm denetim özelliklerini kullanıma sunar. Kaynak denetimi eklentisi, kaynak denetimi işlevini uygular.
 
-## <a name="source-control-plug-in-resources"></a>Kaynak Kontrol Eklentisi Kaynakları
- Kaynak Denetimi Eklentisi, sürüm uygulamanızın oluşturulmasına ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE'ye bağlanmasına yardımcı olacak kaynaklar sağlar. Kaynak Denetim Eklentisi, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE'ye entegre edilebilmek için bir kaynak denetim eklentisi tarafından uygulanması gereken API belirtimini içerir. Ayrıca, Kaynak Denetim Eklentisi API ile uyumlu temel işlevlerin uygulanmasını gösteren bir iskelet kaynak kontrol eklentisi uygulayan bir kod örneği (C++'da yazılır) içerir.
+## <a name="source-control-plug-in-resources"></a>Kaynak denetimi eklentisi kaynakları
+ Kaynak denetimi eklentisi, sürüm oluşturma uygulamanızı oluşturmaya ve IDE 'ye bağlamaya yardımcı olmak için kaynak sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Kaynak denetimi eklentisi, IDE ile tümleştirilebilmesi için bir kaynak denetimi eklentisi tarafından uygulanması gereken API belirtimini içerir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Ayrıca, kaynak denetimi eklentisi API 'siyle uyumlu işlevlerin uygulanmasını gösteren bir iskelet kaynak denetimi eklentisi uygulayan bir kod örneği (C++ dilinde yazılmıştır) de bulunur.
 
- Kaynak Denetimi Eklentisi API belirtimi, Kaynak Denetimi Eklentisi API'sına uygun olarak uygulanan gerekli fonksiyonlar kümesiyle bir kaynak denetimi DLL oluşturursanız, istediğiniz kaynak kontrol sisteminden yararlanmanızı sağlar.
+ Kaynak denetimi eklentisi API 'si belirtimi, kaynak denetimi eklentisi API 'sine uygun olarak uygulanan gerekli işlevler kümesiyle bir kaynak denetimi DLL 'SI oluşturursanız, tercih ettiğiniz herhangi bir kaynak denetimi sisteminden yararlanmanızı sağlar.
 
 ## <a name="components"></a>Bileşenler
- Diyagramdaki Kaynak Denetim Bağdaştırıcı Paketi, kullanıcının kaynak denetim işlemi isteğini kaynak denetim eklentisi tarafından desteklenen bir işlev çağrısına çeviren IDE bileşenidir. Bunun olabilmesi için, IDE ve kaynak denetim eklentisinin Bilgileri IDE ile eklenti arasında ileri geri aktaran etkili bir iletişim kutusuna sahip olması gerekir. Bu iletişimin gerçekleşmesi için her ikisinin de aynı dili konuşması gerekir. Bu belgede özetlenen Kaynak Denetimi Eklentisi API'si bu değişim için ortak kelime dağarcığıdır.
+ Diyagramdaki kaynak denetim bağdaştırıcısı paketi, kullanıcının kaynak denetim işlemi isteğini kaynak denetimi eklentisi tarafından desteklenen bir işlev çağrısına çeviren IDE 'nin bileşenidir. Bunun gerçekleşmesi için IDE ve kaynak denetimi eklentisinin, IDE ve eklenti arasında bilgileri geri ve ileri geçiren etkin bir iletişim kutusu olmalıdır. Bu iletişim kutusunun gerçekleşmesi için, her ikisi de aynı dili konuşmalıdır. Bu belgede özetlenen kaynak denetimi eklentisi API 'SI, bu Exchange için ortak bir sözlük.
 
- ![Kaynak Kodu Kontrol Mimarisi Diyagramı](../../extensibility/internals/media/vs_sccsdk_plug_in_arch.gif "vs_sccsdk_plug_in_arch") VS ve kaynak kontrol eklentisi arasındaki etkileşimi gösteren Mimari Diyagramı
+ ![Kaynak kodu denetim mimarisi diyagramı](../../extensibility/internals/media/vs_sccsdk_plug_in_arch.gif "vs_sccsdk_plug_in_arch") VS ve kaynak denetimi eklentisi arasındaki etkileşimi gösteren mimari diyagramı
 
- Mimari diyagramda gösterildiği gibi, diyagramda VS kabuğu olarak etiketlenen [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kabuk, kullanıcının çalışma projelerini ve düzenleyiciler ve Çözüm Gezgini gibi ilişkili bileşenleri barındırıyor. Kaynak Kontrol Bağdaştırıcı Paketi, IDE ile kaynak kontrol eklentisi arasındaki etkileşimi işler. Kaynak Kontrol Bağdaştırıcı Paketi kendi kaynak denetimi kullanıcı kullanıcı aracını sağlar. Bir kaynak denetim işleminin kapsamını başlatmak ve tanımlamak için kullanıcının etkileşimde olduğu üst düzey kullanıcı dır.
+ Mimari diyagramında gösterildiği gibi, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] DIYAGRAMDA vs kabuğu olarak etiketlenmiş olan kabuk, kullanıcının çalışma projelerini ve düzenleyici ve Çözüm Gezgini gibi ilişkili bileşenleri barındırır. Kaynak denetim bağdaştırıcısı paketi IDE ve kaynak denetimi eklentisi arasındaki etkileşimi işler. Kaynak denetim bağdaştırıcısı paketi kendi kaynak denetimi kullanıcı arabirimini sağlar. Bu, kullanıcının bir kaynak denetimi işleminin kapsamını başlatmak ve tanımlamak için etkileşimde bulunduğu en üst düzey Kullanıcı arabirimindedir.
 
- Kaynak denetim eklentisi, şekilde gösterildiği gibi iki bölümden oluşabilecek kendi ui'sine sahip olabilir. "Satıcı AraBirimi" etiketli kutu, kaynak denetimi eklentisi oluşturucusu olarak sağladığınız özel kullanıcı arabirimi öğelerini temsil eder. Bunlar, kullanıcı gelişmiş bir kaynak denetim işlemi çağırdığında doğrudan kaynak denetim eklentisi tarafından görüntülenir. "Yardımcı UI" etiketli kutu, IDE aracılığıyla dolaylı olarak çağrılan bir kaynak denetimi eklentisi ui özelliği kümesidir. Kaynak denetimi eklentisi, IDE tarafından sağlanan özel geri arama işlevleri aracılığıyla UI ile ilgili iletileri IDE'ye geçirir. Yardımcı Kullanıcı Aracı, IDE ile daha sorunsuz bir tümleştirmeyi (genellikle **Gelişmiş** bir düğme nin kullanımı yoluyla) kolaylaştırır ve böylece daha birleşik bir son kullanıcı deneyimi sağlar.
+ Kaynak denetimi eklentisi kendi Kullanıcı arabirimine sahip olabilir ve bu, şekilde gösterildiği gibi iki bölümden oluşabilir. "Satıcı Kullanıcı arabirimi" etiketli kutu, kaynak denetimi eklentisi Oluşturucu olarak sağladığınız özel kullanıcı arabirimi öğelerini temsil eder. Bunlar, Kullanıcı Gelişmiş bir kaynak denetimi işlemini çağırdığında doğrudan kaynak denetimi eklentisi tarafından görüntülenir. "Yardımcı UI" etiketli kutu, IDE aracılığıyla dolaylı olarak çağrılan bir kaynak denetimi eklentisi Kullanıcı arabirimi özellikleri kümesidir. Kaynak denetimi eklentisi, IDE tarafından sunulan özel geri çağırma işlevleri aracılığıyla UI ile ilgili iletileri IDE 'ye geçirir. Yardımcı Kullanıcı arabirimi IDE ile daha sorunsuz bir tümleştirme sağlar (genellikle **Gelişmiş** bir düğme kullanılarak) ve bu sayede daha birleştirilmiş bir son kullanıcı deneyimi sağlar.
 
- Bir kaynak denetim eklentisi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kabukta ve sonuç olarak Kaynak Denetim Bağdaştırıcı Paketi'nde veya IDE tarafından sağlanan kaynak denetimi ui'sinde değişiklik yapamaz. Son kullanıcı için tümleşik bir deneyime katkıda bulunan çeşitli Kaynak Denetimi Eklentisi API işlevlerinin uygulanması yoluyla sunulan esnekliği maksimum düzeyde kullanmalıdır. Kaynak Denetimi Eklentisi API belgelerinin başvuru bölümü, bazı gelişmiş kaynak denetimi eklentisi özelliklerine ilişkin bilgileri içerir. Bu özelliklerden yararlanmak için kaynak denetim eklentisinin başlatma sırasında gelişmiş yeteneklerini IDE'ye bildirmesi ve her yetenek için belirli gelişmiş işlevleri uygulaması gerekir.
+ Kaynak denetimi eklentisi, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kabukta değişiklik yapamaz ve sonuç olarak kaynak denetim bağdaştırıcı paketine ya da IDE tarafından sağlanmış kaynak denetimi kullanıcı arabirimine sahip olamaz. Son Kullanıcı için tümleşik bir deneyime katkıda bulunan çeşitli kaynak denetimi eklentisi API işlevlerinin uygulanmasıyla sunulan esnekliği en fazla kullanması gerekir. Kaynak denetimi eklentisi API 'SI belgelerinin başvuru bölümü, bazı gelişmiş kaynak denetimi eklentisi özellikleri için bilgiler içerir. Bu özelliklerden yararlanmak için, kaynak denetimi eklentisinin başlatma sırasında IDE 'ye gelişmiş yeteneklerini bildirmesi ve her bir özellik için belirli gelişmiş işlevleri uygulaması gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentileri](../../extensibility/source-control-plug-ins.md)

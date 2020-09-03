@@ -14,10 +14,10 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: 187ca5ea0d0232e0ca8b99165e77ee265b81e801
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85285094"
 ---
 # <a name="develop-javascript-and-typescript-code-in-visual-studio-without-solutions-or-projects"></a>Visual Studio 'da çözüm veya proje olmadan JavaScript ve TypeScript kodu geliştirme
@@ -37,7 +37,7 @@ Açtığınız klasör bir *package.js* dosyası içeriyorsa, NPM 'ye özgü bir
 
 Kısayol menüsünde, NPM tarafından yüklenen paketleri, [NPM paketlerini](npm-package-management.md) bir proje dosyası kullanırken yönettiğiniz şekilde yönetebilirsiniz.
 
-Ayrıca, menü Ayrıca `scripts` *üzerindepackage.js*öğesinde tanımlanan betikleri çalıştırmanıza de olanak tanır. Bu betikler, ortam değişkeninde kullanılabilir Node.js sürümünü kullanacaktır `PATH` . Betikler yeni bir pencerede çalışır. Bu, derleme veya çalıştırma betikleri çalıştırmak için harika bir yoldur.
+Ayrıca, menü Ayrıca `scripts` * üzerindepackage.js*öğesinde tanımlanan betikleri çalıştırmanıza de olanak tanır. Bu betikler, ortam değişkeninde kullanılabilir Node.js sürümünü kullanacaktır `PATH` . Betikler yeni bir pencerede çalışır. Bu, derleme veya çalıştırma betikleri çalıştırmak için harika bir yoldur.
 
 ## <a name="build-and-debug"></a>Derleme ve hata ayıklama
 
@@ -54,7 +54,7 @@ Klasörde mevcut bir *tsconfig.js* yoksa, bu dosyayı derleyip hata ayıklamanı
 > [!NOTE]
 > TypeScript kodu oluştururken ' de yüklü en yeni sürümü kullanıyoruz `C:\Program Files (x86)\Microsoft SDKs\TypeScript` .
 
-Klasörde mevcut bir *tsconfig.js* varsa, bu TypeScript dosyasında hata ayıklamak üzere bir menü komutu görmek Için bir TypeScript dosyasına sağ tıklayabilirsiniz. Seçeneği yalnızca `outFile` *üzerindetsconfig.js*belirtilmemişse görüntülenir. Eğer `outFile` belirtilmişse, *üzerindetsconfig.js* sağ tıklayıp doğru seçeneği belirleyerek bu dosyada hata ayıklayabilirsiniz. Bu `tsconfig.json` Dosya Ayrıca, derleyici seçeneklerini belirtmenize izin veren bir yapı seçeneği sağlar.
+Klasörde mevcut bir *tsconfig.js* varsa, bu TypeScript dosyasında hata ayıklamak üzere bir menü komutu görmek Için bir TypeScript dosyasına sağ tıklayabilirsiniz. Seçeneği yalnızca `outFile` * üzerindetsconfig.js*belirtilmemişse görüntülenir. Eğer `outFile` belirtilmişse, * üzerindetsconfig.js* sağ tıklayıp doğru seçeneği belirleyerek bu dosyada hata ayıklayabilirsiniz. Bu `tsconfig.json` Dosya Ayrıca, derleyici seçeneklerini belirtmenize izin veren bir yapı seçeneği sağlar.
 
 > [!NOTE]
 > *tsconfig.js* hakkında daha fazla bilgi Için [tsconfig.jsTypeScript el kitabı sayfasında](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)hakkında daha fazla bilgi edinebilirsiniz.

@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryBytes2::ReadAt | Microsoft Docs
+title: 'IDebugMemoryBytes2:: ReadAt | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,18 +14,18 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f10dc6e9e00e2b7f66722f3c89b74bb14e45fdbe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180585"
 ---
 # <a name="idebugmemorybytes2readat"></a>IDebugMemoryBytes2::ReadAt
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Belirli bir konumda itibaren bayt dizisini okur.  
+Belirli bir konumdan başlayarak bir bayt dizisini okur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT ReadAt(   
@@ -49,31 +49,31 @@ int ReadAt(
   
 #### <a name="parameters"></a>Parametreler  
  `pStartContext`  
- [in] [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) nesnesini bayt okumaya başlayacağı konumu belirtir.  
+ 'ndaki Bayt okuma başlangıcını belirten [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) nesnesi.  
   
  `dwCount`  
- [in] Okunacak bayt sayısı. Ayrıca belirtir `rgbMemory` dizisi.  
+ 'ndaki Okunacak bayt sayısı. Ayrıca, dizi uzunluğunu belirtir `rgbMemory` .  
   
  `rgbMemory`  
- [out içinde] Bayt ile doldurulmuş dizi gerçekten okuyun.  
+ [in, out] Dizi, gerçekten okunan baytlarla doldurulmuştur.  
   
  `pdwRead`  
- [out] Aslında okumak bitişik baytların sayısını döndürür.  
+ dışı Gerçekten okunan bitişik bayt sayısını döndürür.  
   
  `pdwUnreadable`  
- [out içinde] Okunamaz bayt sayısını döndürür. İstemci in okunamaz bayt sayısı uninterested ise null değeri olabilir.  
+ [in, out] Okunamayan bayt sayısını döndürür. İstemci okunamaz bayt sayısıyla ilgileniyorsa, null bir değer olabilir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- 100 bayt istenir ve ilk 50 okunabilir, sonraki 20 okunamaz ve kalan 30 okunabilir varsa, bu yöntemi döndürür:  
+ 100 bayt isteniyorsa ve ilk 50 okunabilir ise, sonraki 20 okunamaz ve kalan 30 okunabilir, bu yöntem şunu döndürür:  
   
  *`pdwRead` = 50  
   
  *`pdwUnreadable` = 20  
   
- Bu durumda, çünkü `*pdwRead + *pdwUnreadable < dwCount`, arayan istenen özgün 100 kalan 30 bayt okuma için ek bir çağrı yapmanız gerekir ve [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) geçirilen nesne `pStartContext` parametresi Gelişmiş 70.  
+ Bu durumda, `*pdwRead + *pdwUnreadable < dwCount` çağıranın özgün 100 kalan 30 baytını okumak için ek bir çağrı yapması ve parametreye geçirilen [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) nesnesinin `pStartContext` 70 tarafından ileri düzey olması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)   

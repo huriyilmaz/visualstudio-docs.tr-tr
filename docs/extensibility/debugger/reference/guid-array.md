@@ -1,5 +1,5 @@
 ---
-title: GUID_ARRAY | Microsoft Dokümanlar
+title: GUID_ARRAY | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +14,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: e163674b5622146ef1a270920dc7458dce2e3993
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736649"
 ---
 # <a name="guid_array"></a>GUID_ARRAY
-Kullanılabilir hata ayıklama motorları için bir dizi benzersiz tanımlayıcıyı açıklar.
+Kullanılabilir hata ayıklama motorları için benzersiz tanımlayıcıların dizisini açıklar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct tagGUID_ARRAY
@@ -49,14 +49,14 @@ Dizideki benzersiz tanımlayıcıların sayısı.
 Benzersiz tanımlayıcılar içeren dizi.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı [GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md) yöntemi ile döndürülür.
+Bu yapı [GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md) yöntemi tarafından döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: Msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

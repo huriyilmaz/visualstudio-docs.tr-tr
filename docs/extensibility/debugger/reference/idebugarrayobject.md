@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject | Microsoft Dokümanlar
+title: Ihata ayıklama Garrayobject | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,50 +13,50 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 709273b89d89759163acb725220d1092d33ad72f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736218"
 ---
 # <a name="idebugarrayobject"></a>IDebugArrayObject
 > [!IMPORTANT]
-> Visual Studio 2015'te ifade değerlendiricilerinin bu şekilde uygulanması amortismana uymaktadır. CLR ifade değerlendiricilerinin uygulanması hakkında bilgi için lütfen [CLR İfade Değerlendiriciler](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [Yönetilen İfade Değerlendirici Örneği'ne](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)bakın.
+> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Bu arabirim bir dizi nesnesi temsil eder.
+ Bu arabirim bir dizi nesnesini temsil eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugArrayObject : IDebugObject
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- İfade değerlendiricisi bir diziyi temsil etmek için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ İfade değerlendirici bu arabirimi bir diziyi temsil etmek için uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Nesne bir diziyi temsil ediyorsa, [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) arabirimi [QueryInterface'i](/cpp/atl/queryinterface) kullanarak bu arabirimi elde edebilir.
+ Nesne bir diziyi temsil ediyorsa, [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) arabirimi bu arabirimi [QueryInterface](/cpp/atl/queryinterface) kullanarak elde edebilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
- `IDebugObject` Arabirimdeki yöntemlere ek olarak, `IDebugArrayObject` arabirimde aşağıdaki yöntemler uygulanır.
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+ Arabirimindeki yöntemlere ek olarak `IDebugObject` , arabiriminde aşağıdaki yöntemler uygulanır `IDebugArrayObject` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
 |[GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md)|Dizideki öğelerin sayısını alır.|
 |[GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md)|Dizinin bir öğesini alır.|
 |[GetElements](../../../extensibility/debugger/reference/idebugarrayobject-getelements.md)|Dizinin tüm öğelerini alır.|
-|[GetRank](../../../extensibility/debugger/reference/idebugarrayobject-getrank.md)|Dizinin sıralamasını alır.|
+|[GetRank](../../../extensibility/debugger/reference/idebugarrayobject-getrank.md)|Dizinin derecesini alır.|
 |[GetDimensions](../../../extensibility/debugger/reference/idebugarrayobject-getdimensions.md)|Dizinin boyutlarını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bir ifade değerlendiricisi, ayrışma ağacındaki dizileri temsil etmek için bu arabirimi kullanır.
+ Bir ifade değerlendirici, bir ayrıştırma ağacındaki dizileri göstermek için bu arabirimi kullanır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: ee.h
+ Üstbilgi: ee. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

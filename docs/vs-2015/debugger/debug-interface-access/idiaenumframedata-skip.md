@@ -1,5 +1,5 @@
 ---
-title: Idiaenumframedata::Skip | Microsoft Docs
+title: 'IDiaEnumFrameData:: Skip | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ff8b58f6d36e9ce9759e2672f7e438bc0019fc1e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179503"
 ---
 # <a name="idiaenumframedataskip"></a>IDiaEnumFrameData::Skip
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Belirtilen sayıda bir numaralandırma sıralı çerçeve veri öğeleri atlar.  
+Bir numaralandırma dizisindeki belirtilen sayıda çerçeve verisi öğesini atlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Skip (   
@@ -35,10 +35,10 @@ HRESULT Skip ( 
   
 #### <a name="parameters"></a>Parametreler  
  celt  
- [in] Veri öğeleri atlamak için sabit listesi sırası çerçeve sayısı.  
+ 'ndaki Atlanacak numaralandırma dizisindeki çerçeve verisi öğelerinin sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` atlamak için daha fazla kayıt varsa.  
+ Başarılı olursa, öğesini döndürür `S_OK` ; Aksi takdirde, `S_FALSE` atlanacak daha fazla kayıt yoksa döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)

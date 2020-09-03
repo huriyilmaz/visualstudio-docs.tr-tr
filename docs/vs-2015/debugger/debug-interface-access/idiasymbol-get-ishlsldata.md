@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_isHLSLData | Microsoft Docs
+title: 'IDiaSymbol:: get_isHLSLData | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,18 +12,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: fd67253ffeb266ba1d700b7271e95e9e40c736ce
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155891"
 ---
-# <a name="idiasymbolgetishlsldata"></a>IDiaSymbol::get_isHLSLData
+# <a name="idiasymbolget_ishlsldata"></a>IDiaSymbol::get_isHLSLData
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu sembol üst düzey gölgelendirici dili (HLSL) veri temsil edip etmediğini belirtir.  
+Bu sembolün yüksek düzey gölgelendirici dili (HLSL) verilerini temsil edip etmediğini belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT get_isHLSLData(   
@@ -32,10 +32,10 @@ HRESULT get_isHLSLData(
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Bir işaretçi bir `BOOL` bu sembol HLSL veri temsil edip etmediğini belirtir.  
+ dışı `BOOL` Bu sembolün HLSL verilerini temsil edip etmediğini belirten bir işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

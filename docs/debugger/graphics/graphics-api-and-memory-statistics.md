@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fa808e76e6655c5d57108c923b19794d0398b80c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72735571"
 ---
 # <a name="graphics-api-and-memory-statistics"></a>Grafik API 'SI ve bellek Istatistikleri
@@ -36,7 +36,7 @@ Bu araç, grafik sürücüsünün bir çerçevede oluşturduğunuz kaynaklar iç
 
 ![Bellek Istatistikleri](media/gfx_diag_memory_statistics.png)
 
-**GPU ayırma** sütunu **olay sütununda görüntülenen olay tarafından** kullanılan bellek miktarını görüntüler.  Ayrıca, seçilen olaya ait [kaynak geçmişini](graphics-event-list.md#resource-history) görüntülemek için, izleme simgesini ![watch simgesini ](media/gfx_watch.png) seçebilirsiniz.
+**GPU ayırma** sütunu **olay sütununda görüntülenen olay tarafından** kullanılan bellek miktarını görüntüler.  Ayrıca, ![ ](media/gfx_watch.png) Seçilen olaya ait [kaynak geçmişini](graphics-event-list.md#resource-history) görüntülemek için izleme simgesi izle simgesini de seçebilirsiniz.
 
 API Istatistikleri aracında olduğu gibi, tüm verileri daha fazla analiz için Excel gibi bir tabloya yapıştırılabilecek CSV olarak kopyalamak için pencereye sağ tıklayabilirsiniz.
 

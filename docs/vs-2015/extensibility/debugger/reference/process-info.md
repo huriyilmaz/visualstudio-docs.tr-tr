@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9ab05d85b55fd293b648603f067d135f703aff5e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205014"
 ---
-# <a name="processinfo"></a>PROCESS_INFO
+# <a name="process_info"></a>PROCESS_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bir işlem hakkında bilgi içerir.  
+Bir işlem hakkındaki bilgileri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct tagPROCESS_INFO {   
@@ -56,41 +56,41 @@ public struct PROCESS_INFO { 
   
 ## <a name="members"></a>Üyeler  
  Alanlar  
- Bayraklarının bir birleşimi [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) hangi alanların doldurulmuş belirten sabit listesi.  
+ [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) Numaralandırmadaki, doldurulacak alanları belirten bayrakların birleşimi.  
   
  bstrFileName  
- İşlemi tam yol adı. Arama eşdeğer [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) yöntemi parametresi ile `GN_FILENAME`.  
+ İşlemin tam yol adı. Parametresiyle [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) metodunu çağırmaya eşdeğerdir `GN_FILENAME` .  
   
  bstrBaseName  
- Uzantı işleminin ve dosya adı. Arama eşdeğer `IDebugProcess2::Getname` yöntemi parametresi ile `GN_BASENAME`.  
+ İşlemin dosya adı ve uzantısı. `IDebugProcess2::Getname`Yöntemi parametresiyle çağırma ile eşdeğerdir `GN_BASENAME` .  
   
  bstrTitle  
- Varsa işlemin başlığı. Arama eşdeğer `IDebugProcess2::Getname` yöntemi parametresi ile `GN_TITLE`.  
+ Bir varsa, işlemin başlığı. `IDebugProcess2::Getname`Yöntemi parametresiyle çağırma ile eşdeğerdir `GN_TITLE` .  
   
- İşlem kimliği  
- [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) işlemi tanımlayan yapısı. Arama eşdeğer [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md) yöntemi.  
+ Işlem  
+ İşlemi tanımlayan [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) yapısı. [Getphysicalprocessıd](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md) yöntemini çağırmaya eşdeğerdir.  
   
- dwSessionId  
- Bu işlem çalışan hata ayıklama oturumu tanımlayıcısı.  
+ Dwsessionıd  
+ Bu işlemin üzerinde çalıştığı hata ayıklama oturumunun tanımlayıcısı.  
   
- bstrAttachedSessionName  
- Ekli oturumun adı. Arama eşdeğer [GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md) yöntemi.  
+ Bstrattachedoturumadı  
+ Eklenen oturum adı. [Getattachedoturumadı](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md) yöntemini çağırmaya eşdeğerdir.  
   
  CreationTime  
- İşlem oluşturulduğu zaman.  
+ İşlemin oluşturulduğu zaman.  
   
  Bayraklar  
- Bayraklarının bir birleşimi [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md) işlem özelliklerini belirten sabit listesi.  
+ İşlemin özelliklerini belirten [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md) Numaralandırmadaki bayrakların birleşimi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapı geçirilir [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) yöntemi burada da doldurulur.  
+ Bu yapı, doldurulduğu [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) yöntemine geçirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılar ve birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)   
@@ -98,5 +98,5 @@ public struct PROCESS_INFO { 
  [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)   
  [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)   
- [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)   
+ [Getphysicalprocessıd](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)   
  [GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)

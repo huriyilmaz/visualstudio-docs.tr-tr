@@ -1,5 +1,5 @@
 ---
-title: CvCreateMarkerSeriesWithCodePageA işlevi | Microsoft Docs
+title: CvCreateMarkerSeriesWithCodePageA Işlevi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 635a872372ab775eceb00854a616884f3fc19fef
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155527"
 ---
 # <a name="cvcreatemarkerserieswithcodepagea-function"></a>CvCreateMarkerSeriesWithCodePageA İşlevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Belirtilen sağlayıcı ve belirtilen kod sayfası için işaretçisi oluşturur. Bu işlev, açıkça işaret API ANSI işlevleri tarafından yazılan metin için kod sayfası belirtmek için kullanılabilir. İzleme yakalanan ve daha sonra farklı yerel ayarlar/dilleri ile farklı makinelerde analiz durumda kod sayfası ayarlanması yararlı olabilir. Varsayılan olarak, kod sayfası GetACP() işlevi tarafından döndürülen kullanılır.  
+Belirli bir sağlayıcı ve belirtilen kod sayfası için işaretleyici serisi oluşturur. Bu işlev, işaret API 'SI işlevleri tarafından yazılan metin için kod sayfasını açıkça belirtmek üzere kullanılabilir. Kod sayfasının ayarlanması, izlemenin yakalanıp farklı yerel ayarlara/dile sahip farklı makinelerde çözümlenme olasılığına karşı yararlı olabilir. Varsayılan olarak, GetACP () işlevi tarafından döndürülen kod sayfası kullanılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```  
 HRESULT CvCreateMarkerSeriesWithCodePageA(  
@@ -38,22 +38,22 @@ HRESULT CvCreateMarkerSeriesWithCodePageA(
   
 #### <a name="parameters"></a>Parametreler  
  `pProvider`  
- Cvınitprovider tarafından önceden başlatılan sağlayıcı nesnesi. NULL olamaz.  
+ Sağlayıcı nesnesi daha önce CvInitProvider tarafından başlatıldı. NULL olamaz.  
   
  `pSeriesName`  
- İşaret seri adı. NULL olamaz, ancak boş dizeye izin verilir.  
+ İşaretleyici seri adı. NULL olamaz, ancak boş dizeye izin verilir.  
   
  `nTextCodePage`  
  Geçerli kod sayfası.  
   
  `ppMarkerSeries`  
- İşaret serisi bağlam depolayacak bir çıkış değişkeni adresi. NULL olamaz.  
+ İşaretleyici serisi bağlamını depolayacak bir çıktı değişkeninin adresi. NULL olamaz.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK işaret serisi başarıyla oluşturulduğunda veya hata kodu var. durumda tüm hatalar. Hata koşulu denetleyen için başarılı/başarısız makroları kullanın.  
+ İşaretleyici serisi başarıyla oluşturulduğunda S_OK veya herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** cvmarkers.h  
+ **Üst bilgi:** cvişaretleyiciler. h  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C++ Kitaplık Başvurusu](../profiling/cpp-library-reference.md)
+ [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)

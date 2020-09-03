@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8745acd9af9009a7206eada7ffb64f95759e8399
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85286199"
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Visual Studio Uzantıları Geliştirmeye Başlama
@@ -63,7 +63,7 @@ Uygulamada, en çok kişilerin genişletmek istediği özelliklerin komutlar, me
 
 - [Visual Studio Yalıtılmış Kabuğu](https://visualstudio.microsoft.com/vs/older-downloads/isolated-shell/)
 
-## <a name="what-project-templates-are-provided-by-the-vssdk"></a><a name="BKMK_ProjectTemplate"></a>VSSDK tarafından hangi proje şablonları sağlanmaktadır?
+## <a name="what-project-templates-are-provided-by-the-vssdk"></a><a name="BKMK_ProjectTemplate"></a> VSSDK tarafından hangi proje şablonları sağlanmaktadır?
  İki ana uzantı türü VSPackages ve MEF uzantılarıdır. Genel olarak, VSPackage uzantıları, komutları, araç pencerelerini ve projeleri kullanan veya genişleten uzantılar için kullanılır. MEF uzantıları, Visual Studio Düzenleyicisi 'ni genişletmek veya özelleştirmek için kullanılır.
 
  Visual C# ve Visual Basic uzantıları için, VSSDK, menü komutları, araç pencereleri ve Düzenleyici uzantıları oluşturan yeni öğe şablonlarıyla birlikte kullanabileceğiniz boş bir VSıX proje şablonu sağlar. Bu şablonu, diğer kullanıcılara dağıtmak üzere proje şablonlarını, kod parçacıklarını ve diğer yapıtları paketlemek için de kullanabilirsiniz.

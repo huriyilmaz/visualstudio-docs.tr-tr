@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Interop Montajları Kullanma | Microsoft Dokümanlar
+title: Visual Studio birlikte çalışma derlemelerini kullanma | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,52 +13,52 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 5926b2cce217565c889c7ef2eeef877691101ed6
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80704129"
 ---
 # <a name="using-visual-studio-interop-assemblies"></a>Visual Studio Birlikte Çalışma Bütünleştirilmiş Kodlarını Kullanma
-Visual Studio interop derlemeleri, yönetilen uygulamaların Visual Studio genişletilebilirliğini sağlayan COM arabirimlerine erişmesine olanak tanır. Düz COM arabirimleri ve interop sürümleri arasında bazı farklılıklar vardır. Örneğin, HRESULTs genellikle int değerleri olarak temsil edilir ve özel durumlar olarak aynı şekilde ele alınması gerekir ve parametreler (özellikle dışarı parametreleri) farklı tedavi edilir.
+Visual Studio birlikte çalışma derlemeleri, yönetilen uygulamaların Visual Studio genişletilebilirlik sağlayan COM arabirimlerine erişmesine izin verir. Basit COM arabirimleri ve birlikte çalışma sürümleri arasında bazı farklılıklar vardır. Örneğin, HRESULTs genellikle int değerleri olarak temsil edilir ve özel durumlarla aynı şekilde işlenmelidir ve parametreler (özellikle de çıkış parametreleri) farklı şekilde değerlendirilir.
 
-## <a name="handling-hresults-returned-to-managed-code-from-com"></a>COM'dan Yönetilen Koda Dönen HRESULT'ların İşlemi
- Yönetilen koddan COM arabirimi çağırdığınızda, HRESULT değerini inceleyin ve gerekirse bir özel durum atın. Sınıf, <xref:Microsoft.VisualStudio.ErrorHandler> ona <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> geçen HRESULT'In değerine bağlı olarak com özel durumu atan yöntemi içerir.
+## <a name="handling-hresults-returned-to-managed-code-from-com"></a>COM 'dan yönetilen koda döndürülen HRESULTs işleme
+ Yönetilen koddan bir COM arabirimini çağırdığınızda, HRESULT değerini inceleyin ve gerekirse bir özel durum oluşturun. <xref:Microsoft.VisualStudio.ErrorHandler>Sınıfı, <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> kendısıne geçirilen HRESULT değerine bağlı olarak bir com özel durumu oluşturan yöntemini içerir.
 
- Varsayılan olarak, <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> değeri sıfırdan az olan bir HRESULT geçirildiğinde bir özel durum atar. Bu tür HRESULTs kabul edilebilir değerler ve hiçbir istisna atılması gereken durumlarda, <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> ek HRESULTS değerleri değerleri test edildikten sonra geçirilmelidir. Test edilen HRESULT açıkça geçirilen herhangi bir <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>HRESULT değerleriyle eşleşirse, hiçbir istisna atılmaz.
+ Varsayılan olarak, <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> sıfırdan küçük bir değere sahip BIR HRESULT geçirildiğinde bir özel durum oluşturur. Bu tür Hsonuçların kabul edilebilir değerler olduğu ve hiçbir özel durum oluşturulması gereken durumlarda, <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> değerler test edildikten sonra ek HSONUÇLARıN değerlerinin geçirilmesi gerekir. Test edilmekte olan HRESULT, açıkça geçirilen herhangi bir HRESULT değeri ile eşleşiyorsa <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> , hiçbir özel durum oluşturulmaz.
 
 > [!NOTE]
-> Sınıf, <xref:Microsoft.VisualStudio.VSConstants> örneğin <xref:Microsoft.VisualStudio.VSConstants.S_OK> <xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL>ortak HRESULTS ve , [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] <xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA> ve HRESULTS, örneğin ve <xref:Microsoft.VisualStudio.VSConstants.VS_E_UNSUPPORTEDFORMAT>. <xref:Microsoft.VisualStudio.VSConstants>ayrıca COM'daki <xref:Microsoft.VisualStudio.ErrorHandler.Succeeded%2A> BAŞARILI ve <xref:Microsoft.VisualStudio.ErrorHandler.Failed%2A> BAŞARILI makrolara karşılık gelen ve yöntemler sağlar.
+> Sınıfı, ve gibi <xref:Microsoft.VisualStudio.VSConstants> ortak HRESULTS için sabitler içerir, örneğin, ve <xref:Microsoft.VisualStudio.VSConstants.S_OK> <xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL> [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] <xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA> <xref:Microsoft.VisualStudio.VSConstants.VS_E_UNSUPPORTEDFORMAT> . <xref:Microsoft.VisualStudio.VSConstants> Ayrıca, <xref:Microsoft.VisualStudio.ErrorHandler.Succeeded%2A> <xref:Microsoft.VisualStudio.ErrorHandler.Failed%2A> com 'daki başarılı ve başarısız makrolara karşılık gelen ve yöntemlerini de sağlar.
 
- Örneğin, kabul edilebilir bir iade <xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL> değeri olan ancak sıfırdan küçük başka bir HRESULT'in bir hatayı temsil ettiği aşağıdaki işlev çağrısını düşünün.
+ Örneğin, <xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL> kabul edilebilir bir dönüş değeri olan, ancak sıfırdan küçük DIĞER HRESULT bir hatayı temsil eden aşağıdaki işlev çağrısını göz önünde bulundurun.
 
  [!code-vb[VSSDKHRESULTInformation#1](../../extensibility/internals/codesnippet/VisualBasic/using-visual-studio-interop-assemblies_1.vb)]
  [!code-csharp[VSSDKHRESULTInformation#1](../../extensibility/internals/codesnippet/CSharp/using-visual-studio-interop-assemblies_1.cs)]
 
- Birden fazla kabul edilebilir iade değeri varsa, ek HRESULT değerleri sadece çağrıda <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>listeye eklenebilir .
+ Birden fazla kabul edilebilir dönüş değeri varsa, ek HRESULT değerleri yalnızca öğesine yapılan çağrının listesine eklenebilir <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> .
 
  [!code-vb[VSSDKHRESULTInformation#2](../../extensibility/internals/codesnippet/VisualBasic/using-visual-studio-interop-assemblies_2.vb)]
  [!code-csharp[VSSDKHRESULTInformation#2](../../extensibility/internals/codesnippet/CSharp/using-visual-studio-interop-assemblies_2.cs)]
 
-## <a name="returning-hresults-to-com-from-managed-code"></a>Yönetilen Koddan HRESULTS'in COM'a döndürülme
- Özel durum oluşmazsa, yönetilen <xref:Microsoft.VisualStudio.VSConstants.S_OK> kod onu çağıran COM işlevine geri döner. COM interop, yönetilen kodda güçlü bir şekilde yazılan genel özel durumları destekler. Örneğin, kabul edilemez `null` bir bağımsız değişken <xref:System.ArgumentNullException>alan bir yöntem .
+## <a name="returning-hresults-to-com-from-managed-code"></a>Yönetilen koddan COM 'a HRESULTS döndürme
+ Özel durum oluşursa, yönetilen kod <xref:Microsoft.VisualStudio.VSConstants.S_OK> onu ÇAĞıRAN com işlevine geri döner. COM birlikte çalışması, yönetilen kodda kesin olarak belirlenmiş ortak özel durumları destekler. Örneğin, kabul edilemez bir bağımsız değişken alan bir yöntem `null` bir oluşturur <xref:System.ArgumentNullException> .
 
- Hangi özel durumu atacağınız emin değilseniz, ancak COM'a dönmek istediğiniz HRESULT'ı biliyorsanız, uygun bir özel durum atmak için <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> yöntemi kullanabilirsiniz. Bu, örneğin standart olmayan bir hatayla bile <xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA>çalışır. <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>güçlü bir şekilde yazılan bir özel durum için geçirilen HRESULT haritasını çıkarma girişimleri. Yapamıyorsa, bunun yerine genel bir COM özel durum atar. Nihai sonuç, yönetilen <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> koddan geçtiğiniz HRESULT'in onu çağıran COM işlevine döndürülmesidir.
-
-> [!NOTE]
-> Özel durumlar performansı tehlikeye atmaktadır ve anormal program koşullarını belirtmek için tasarlanmıştır. Sık sık oluşan koşullar, atılan bir özel durum yerine satır içinde işlenmelidir.
-
-## <a name="iunknown-parameters-passed-as-type-void"></a>IBilinmeyen parametreler IType void olarak geçti**
- COM arabiriminde tür `void **` olarak tanımlanan ancak interop montaj yöntemi `[``iid_is``]` prototipinde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tanımlanan [out] parametrelerine bakın.
-
- Bazen, com arabirimi `IUnknown` bir nesne oluşturur ve COM arabirimi daha sonra türü `void **`olarak geçer. Değişken IDL'de [out] olarak tanımlanırsa, `IUnknown` nesne `AddRef` yöntemle referans sayılır, çünkü bu arabirimler özellikle önemlidir. Nesne doğru şekilde işlenmezse bellek sızıntısı oluşur.
+ Hangi özel durumun oluşturulması gerektiğini, ancak COM 'a geri dönmek istediğiniz HRESULT 'yi biliyorsanız, <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> uygun bir özel durum oluşturmak için yöntemini kullanabilirsiniz. Bu, standart dışı bir hata ile (örneğin,) birlikte kullanılır <xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA> . <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> kendisine geçirilen HRESULT 'yi kesin türü belirtilmiş bir özel durumla eşlemeye çalışır. Değilse, bunun yerine genel bir COM özel durumu oluşturur. Nihai sonuç, <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> yönetilen koddan kendisine GEÇIRDIĞINIZ HRESULT, ÇAĞıRAN com işlevine döndürülür.
 
 > [!NOTE]
-> COM `IUnknown` arabirimi tarafından oluşturulan ve [out] değişkeninde döndürülen bir nesne, açıkça serbest bırakılmadığı takdirde bellek sızıntısına neden olur.
+> Özel durumların performansı tehlikeye alınır ve anormal program koşullarını göstermek için tasarlanmıştır. Genellikle oluşan koşulların, oluşturulan özel durum yerine satır içi olarak işlenmesi gerekir.
 
- Bu tür nesneleri işleyen yönetilen <xref:System.IntPtr> yöntemler bir `IUnknown` nesneye işaretçi <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> olarak ele almalı ve nesneyi elde etmek için yöntemi çağırmalıdır. Arayan daha sonra uygun olan türe iade değerini atmalıdır. Nesneye artık gerek kalmadığında, nesneyi serbest bırakmak için arayın. <xref:System.Runtime.InteropServices.Marshal.Release%2A>
+## <a name="iunknown-parameters-passed-as-type-void"></a>IUnknown parametreleri void * * türü olarak geçildi
+ COM arabiriminde tür olarak tanımlanan `void **` , ancak `[``iid_is``]` [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] birlikte çalışma derleme yöntemi prototipi içinde olarak tanımlanan [out] parametrelerini arayın.
 
- Aşağıdaki <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.QueryViewInterface%2A> yöntem arama ve nesneyi `IUnknown` doğru işleme bir örnektir:
+ Bazen bir COM arabirimi bir nesne oluşturur `IUnknown` ve com arabirimi bunu tür olarak geçirir `void **` . Bu arabirimler özellikle önemlidir çünkü değişken IDL içinde [out] olarak tanımlanmışsa, `IUnknown` nesne, yöntemiyle başvuruya göre sayılır `AddRef` . Nesne doğru işlenmediğinde bir bellek sızıntısı oluşur.
+
+> [!NOTE]
+> `IUnknown`Com arabirimi tarafından oluşturulan ve bir [out] değişkeninde döndürülen bir nesne, açıkça yayınlanmadıysa bellek sızıntısına neden olur.
+
+ Bu tür nesneleri işleyen yönetilen yöntemler <xref:System.IntPtr> bir nesnenin işaretçisi olarak değerlendirilir `IUnknown` ve <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> nesneyi elde etmek için yöntemini çağırır. Çağıran, dönüş değerini uygun türe göre saçmalıdır. Nesne artık gerekli olmadığında, <xref:System.Runtime.InteropServices.Marshal.Release%2A> serbest bırakmak için çağırın.
+
+ Aşağıda <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.QueryViewInterface%2A> yöntemi çağırma ve nesneyi doğru işleme örneği verilmiştir `IUnknown` :
 
 ```
 MyClass myclass;
@@ -85,7 +85,7 @@ else
 ```
 
 > [!NOTE]
-> Aşağıdaki yöntemlerin nesne `IUnknown` işaretçileri türü <xref:System.IntPtr>olarak geçtiği bilinmektedir. Bu bölümde açıklandığı gibi bunları ele alın.
+> Aşağıdaki yöntemlerin `IUnknown` nesne işaretçilerini tür olarak geçirmesi bilinmektedir <xref:System.IntPtr> . Bu bölümde açıklandığı gibi işleyin.
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>
 
@@ -99,36 +99,36 @@ else
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2.get_CfgType%2A>
 
-## <a name="optional-out-parameters"></a>İsteğe bağlı [out] Parametreleri
- COM arabiriminde [çıkış] veri türü`int`(, , `object`vb.) olarak tanımlanan, ancak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] interop montaj yöntemi prototipinde aynı veri türündeki diziler olarak tanımlanan parametreleri arayın.
+## <a name="optional-out-parameters"></a>İsteğe bağlı [out] Parametreler
+ COM arabiriminde [out] veri türü (,, vb.) olarak tanımlanan parametreleri arayın `int` `object` , ancak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] birlikte çalışma derleme yöntemi prototipde aynı veri türünde diziler olarak tanımlanır.
 
- Bazı COM arabirimleri, <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgs%2A>örneğin, [dışarı] parametreleri isteğe bağlı olarak ele. Bir nesne gerekli değilse, bu COM `null` arabirimleri [out] nesnesini oluşturmak yerine bu parametrenin değeri olarak bir işaretçi döndürer. Bu tasarım gereğidir. Bu arabirimler `null` için işaretçiler VSPackage'ın doğru davranışının bir parçası olarak kabul edilir ve hiçbir hata döndürülür.
+ Gibi bazı COM arabirimleri, <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgs%2A> [out] parametrelerini isteğe bağlı olarak değerlendirir. Bir nesne gerekli değilse, bu COM arabirimleri `null` [out] nesnesini oluşturmak yerine bu parametrenin değeri olarak bir işaretçi döndürür. Bu tasarım gereğidir. Bu arabirimler için `null` işaretçiler, VSPackage 'ın doğru davranışının bir parçası olarak kabul edilir ve hiçbir hata döndürülmez.
 
- CLR bir [out] parametresinin değerinin bulunmasına `null`izin vermeyince, bu arabirimlerin tasarlanmış davranışının bir parçası doğrudan yönetilen kod içinde kullanılamaz. ClR [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] `null` dizilerin geçişine izin verdiğinden, etkilenen arabirimler için interop derleme yöntemleri, ilgili parametreleri dizi olarak tanımlayarak sorunu çözer.
+ CLR bir [out] parametresinin değerine izin vermediğinden `null` , bu arabirimlerin tasarlanan davranışının bir kısmı yönetilen kod içinde doğrudan kullanılamaz. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Etkilenen arabirimlerin birlikte çalışma derleme yöntemleri, clr 'nin dizi geçişine izin verdiğinden ilgili parametreleri diziler olarak tanımlayarak soruna geçici olarak çalışır `null` .
 
- Döndürülecek bir şey olmadığında, `null` bu yöntemlerin yönetilen uygulamaları parametreye bir dizi koymalıdır. Aksi takdirde, doğru türde tek öğeli bir dizi oluşturun ve diziye iade değeri koyun.
+ Bu yöntemlerin yönetilen uygulamaları döndürülecek bir şey olmadığında `null` parametreye bir dizi koymalıdır. Aksi takdirde, doğru türde tek öğeli bir dizi oluşturun ve dönüş değerini diziye koyun.
 
- İsteğe bağlı [çıkış] parametreleri olan arabirimlerden bilgi alan yönetilen yöntemler parametreyi bir dizi olarak alır. Dizinin ilk öğesinin değerini incelemen izniniz. `null`Değilse, ilk öğeyi orijinal parametreyonmuş gibi davranın.
+ İsteğe bağlı [out] parametrelerine sahip arabirimlerden bilgi alan yönetilen yöntemler, parametreyi bir dizi olarak alır. Yalnızca dizinin ilk öğesinin değerini inceleyin. Değilse `null` , ilk öğeyi özgün parametresi gibi değerlendirin.
 
-## <a name="passing-constants-in-pointer-parameters"></a>İşaretçi Parametrelerinde Sabitleri Geçirme
- COM arabiriminde [in] işaretçileri olarak tanımlanan, ancak <xref:System.IntPtr> [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] interop derleme yöntemi prototipinde bir tür olarak tanımlanan parametreleri arayın.
+## <a name="passing-constants-in-pointer-parameters"></a>Işaretçi parametrelerinde sabitleri geçirme
+ COM arabiriminde [in] işaretçileri olarak tanımlanan, ancak <xref:System.IntPtr> [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] birlikte çalışma derleme yöntemi prototipte bir tür olarak tanımlanmış parametreleri arayın.
 
- Benzer bir sorun, com arabirimi nesne işaretçisi yerine 0, -1 veya -2 gibi özel bir değerden geçtiğinde oluşur. Bunun [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]aksine, CLR sabitlerin nesne olarak döküme izin vermez. Bunun yerine, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] interop derlemesi parametreyi bir <xref:System.IntPtr> tür olarak tanımlar.
+ Bir COM arabirimi bir nesne işaretçisi yerine 0,-1 veya-2 gibi özel bir değer geçirdiğinde benzer bir sorun oluşur. Farklı olarak [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] , clr sabitler nesne olarak atama yapmasına izin vermez. Bunun yerine, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] birlikte çalışma derlemesi parametreyi bir tür olarak tanımlar <xref:System.IntPtr> .
 
- Bu yöntemlerin yönetilen <xref:System.IntPtr> uygulamaları, sınıfın bir nesne den `int` `void *` veya tamsayı sabitinden, uygun şekilde bir <xref:System.IntPtr> nesne veya tamsayı sabiti oluşturmak için hem de oluşturuculara sahip olması gerçeğinden yararlanmalıdır.
+ Bu yöntemlerin yönetilen uygulamaları, bir <xref:System.IntPtr> `int` `void *` <xref:System.IntPtr> nesneden veya bir tamsayı sabitinden (uygun şekilde) oluşturmak için, sınıfın hem hem de oluşturuculara sahip olduğundan emin olmalıdır.
 
- Bu tür <xref:System.IntPtr> parametreleri alan yönetilen <xref:System.IntPtr> yöntemler, sonuçları işlemek için tür dönüştürme işleçlerini kullanmalıdır. Önce <xref:System.IntPtr> dönüştürün `int` ve ilgili tümsekli sabitlere karşı test edin. Hiçbir değer eşleşmiyorsa, gerekli türdeki bir nesneye dönüştürün ve devam edin.
+ Bu türün parametrelerini alan yönetilen yöntemler, <xref:System.IntPtr> <xref:System.IntPtr> sonuçları işlemek için tür dönüştürme işleçlerini kullanmalıdır. Önce öğesini <xref:System.IntPtr> öğesine dönüştürüp `int` ilgili tamsayı sabitlerine göre test edin. Hiçbir değer eşleşmezse, gerekli türdeki bir nesneye dönüştürün ve devam edin.
 
- Bunun örnekleri için <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> bkz. <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenSpecificEditor%2A>
+ Bunun örnekleri için bkz <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenSpecificEditor%2A> . ve.
 
-## <a name="ole-return-values-passed-as-out-parameters"></a>OLE İade Değerleri [out] Parametreleri Olarak Geçti
- COM arabiriminde `retval` geri dönüş değeri olan, ancak `int` bir geri dönüş değeri ne var, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve interop derleme yöntemi prototipinde ek [out] dizi parametresi olan yöntemleri arayın. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Interop montaj yöntemi prototipleri COM arabirim yöntemlerine göre bir parametreye sahip olduğundan, bu yöntemlerin özel işleme gerektirdiği açıktır.
+## <a name="ole-return-values-passed-as-out-parameters"></a>OLE dönüş değerleri [out] parametresi olarak geçirildi
+ `retval`Com arabiriminde dönüş değeri olan, ancak `int` [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] birlikte çalışabilirlik derleme yöntemi prototipinin bir dönüş değerine ve ek [out] dizi parametresine sahip olan yöntemleri arayın. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Birlikte çalışma bütünleştirilmiş kod yöntemi prototiptürleri com arabirimi yöntemlerinden daha fazla parametre içerdiğinden, bu yöntemlerin özel bir işleme gerektirmesinin açık olması gerekir.
 
- OLE etkinliğiyle ilgili birçok COM arabirimi, OLE durumu yla ilgili `retval` bilgileri arabirimin geri dönüş değerinde depolanan arama programına geri gönderir. İade değeri kullanmak yerine, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] karşılık gelen interop derleme yöntemleri bilgileri [out] dizi parametresinde depolanan arama programına geri gönderir.
+ OLE etkinliğiyle ilgilenen birçok COM arabirimi, OLE durumu hakkında bilgileri arabirimin dönüş değerinde depolanan çağıran programa geri gönderir `retval` . Bir dönüş değeri kullanmak yerine, karşılık gelen [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] birlikte çalışma derleme yöntemleri, bilgileri bir [out] dizi parametresinde depolanan çağıran programa geri gönderir.
 
- Bu yöntemlerin yönetilen uygulamaları[out] parametresi ile aynı türde tek bir öğe dizisi oluşturmalı ve parametreye koymalıdır. Dizi öğesinin değeri uygun COM `retval`ile aynı olmalıdır.
+ Bu yöntemlerin yönetilen uygulamaları, [out] parametresiyle aynı türde tek öğeli bir dizi oluşturmalı ve bu parametreyi parametreye koymalıdır. Dizi öğesinin değeri uygun COM ile aynı olmalıdır `retval` .
 
- Bu tür arabirimleri çağıran yönetilen yöntemler, [out] dizisinden ilk öğeyi çekmelidir. Bu öğe, ilgili COM arabiriminden bir `retval` geri dönüş değeri gibi davranılabilir.
+ Bu türün arabirimlerini çağıran yönetilen yöntemler, ilk öğeyi [out] dizisinin dışına çekmelidir. Bu öğe `retval` , karşılık gelen com arabiriminden bir dönüş değeri gibi kabul edilebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yönetilmeyen Kod ile Birlikte Çalışma](/dotnet/framework/interop/index)

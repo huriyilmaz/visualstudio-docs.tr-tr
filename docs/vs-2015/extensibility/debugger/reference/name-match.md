@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 742328802af7097fa0c48c82b35688ed0784ce34
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205174"
 ---
-# <a name="namematch"></a>NAME_MATCH
+# <a name="name_match"></a>NAME_MATCH
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Adları eşleşen servis talebi seçeneğini seçer.  
+Eşleşen adlara yönelik Case seçeneğini belirler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef enum {   
@@ -47,13 +47,13 @@ public enum NameMatchOptions { 
  Hiçbir seçenek belirtilmedi.  
   
  nmCaseSensitive  
- Eşleştirilecek adların büyük küçük harfe duyarlı olup olmadığını gösterir.  
+ Eşleştirilecek adların büyük/küçük harfe duyarlı olduğunu gösterir.  
   
  nmCaseInsensitive  
- Eşleştirilecek adları büyük/küçük harfe olmadığını gösterir.  
+ Eşleştirilecek adların büyük/küçük harfe duyarlı olmadığını gösterir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bağımsız değişken olarak aşağıdaki yöntemlere geçilen:  
+ Aşağıdaki yöntemlere bir bağımsız değişken olarak geçirilir:  
   
 - [GetTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-gettypebyname.md)  
   
@@ -64,15 +64,15 @@ public enum NameMatchOptions { 
 - [GetMethodFieldsByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getmethodfieldsbyname.md)  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: sh.h  
+ Üstbilgi: SH. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-gettypebyname.md)   
- [GetClassTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getclasstypebyname.md)   
+ [Getclassttypeınfo](../../../extensibility/debugger/reference/idebugsymbolprovider-getclasstypebyname.md)   
  [EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md)   
  [GetMethodFieldsByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getmethodfieldsbyname.md)

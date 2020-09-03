@@ -1,5 +1,5 @@
 ---
-title: -LCıD (devenv. exe) | Microsoft Docs
+title: -LCıD (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: badb88abdf4b3ffd6140cb587b2b0add20630925
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672696"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
@@ -29,26 +29,26 @@ ms.locfileid: "72672696"
 
 Metin, para birimi ve tümleşik geliştirme ortamı (IDE) içindeki diğer değerler için kullanılan varsayılan dili ayarlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 devenv {/LCID|/l} LocaleID
 ```
 
-## <a name="arguments"></a>Arguments
- `LocaleID` gerekiyor. Belirttiğiniz dilin LCıD (Yerel KIMLIK).
+## <a name="arguments"></a>Bağımsız değişkenler
+ `LocaleID` Gerekli. Belirttiğiniz dilin LCıD (Yerel KIMLIK).
 
 ## <a name="remarks"></a>Açıklamalar
  IDE 'yi yükler ve ortam için varsayılan doğal dili ayarlar. Bu değişiklik oturumlar arasında kalıcı hale getirilir ve IDE 'deki **Seçenekler** Iletişim kutusunda **ortam** seçeneklerinin **Uluslararası ayarlar** bölmesinde yansıtılır.
 
  Belirtilen dil kullanıcının sisteminde yoksa,/LCıD anahtarı yok sayılır.
 
- Aşağıdaki tabloda [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] tarafından desteklenen dillerin LCID 'leri listelenmiştir.
+ Aşağıdaki tabloda tarafından desteklenen dillerin LCID 'Ler listelenmiştir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .
 
 |Dil|LCID|
 |--------------|----------|
-|ve|2052|
-|seçenekleri yerine|1028|
+|Basitleştirilmiş Çince|2052|
+|Geleneksel Çince|1028|
 |İngilizce|1033|
 |Fransızca|1036|
 |Almanca|1031|

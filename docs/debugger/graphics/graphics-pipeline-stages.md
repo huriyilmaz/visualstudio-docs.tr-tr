@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1d697313289bbf00234764cc04603b7bc256f174
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72735474"
 ---
 # <a name="graphics-pipeline-stages"></a>Grafik Ardışık Düzen Aşamaları
@@ -63,14 +63,14 @@ Grafik ardışık düzen Aşamaları penceresi, tek bir çizim çağrısının D
  Ardışık düzen aşamaları penceresinde, giriş derleyici çıkışı bir tel çerçeve modeli olarak görselleştirilir. Sonuca daha yakından bakmak için **grafik ardışık düzen aşamaları** penceresinde **giriş assembler** ' yı seçin. böylece, Model Düzenleyicisi 'ni kullanarak tam 3B olarak birleştirilmiş köşeleri görüntüleyin.
 
 > [!NOTE]
-> @No__t_0 anlam, giriş assembler çıktısında yoksa, **giriş assembler** aşamasında hiçbir şey görüntülenmez.
+> Eğer `POSITION` Input assembler çıktısında anlam yoksa, **giriş assembler** aşamasında hiçbir şey görüntülenmez.
 
  **Köşe gölgelendiricisi** Köşe gölgelendirici aşaması, genellikle dönüşüm, kaplama ve aydınlatma gibi işlemleri gerçekleştirerek köşeleri işler. Köşe gölgelendiriciler, giriş olarak aldıkları köşeleri aynı sayıda oluşturur.
 
  Ardışık düzen aşamaları penceresinde, köşe gölgelendirici çıkışı bir tel çerçeve tarama görüntüsü olarak görselleştirilir. Sonuca daha yakından bakmak için **grafik ardışık düzen aşamaları** penceresinde **köşe gölgelendiricisi** ' ni seçerek görüntü düzenleyicisinde işlenen köşeleri görüntüleyin.
 
 > [!NOTE]
-> @No__t_0 veya `SV_POSITION` semantiği köşe gölgelendirici çıktısında yoksa, **köşe gölgelendirici** aşamasında hiçbir şey görüntülenmez.
+> Ya da `POSITION` `SV_POSITION` semantiği köşe gölgelendirici çıktısında yoksa, **köşe gölgelendirici** aşamasında hiçbir şey görüntülenmez.
 
  **Kabuk gölgelendirici** (yalnızca Direct3D 11 ve Direct3D 12) kabuk gölgelendirici aşaması, çizgi, üçgen veya dörtlü gibi düşük sıralı bir yüzeyi tanımlayan denetim noktalarını işler. Çıktı olarak, sabit işlev mozaik döşeme aşamasına geçirilen daha yüksek sıralı bir geometri düzeltme eki ve düzeltme eki sabitleri üretir.
 
@@ -114,5 +114,5 @@ Grafik ardışık düzen Aşamaları penceresi, tek bir çizim çağrısının D
  ![Köşe gölgelendirici aşaması sonuç önizleme](media/gfx_diag_vertex_shader_preview.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek Yol: Köşe Gölgeleme Nedeniyle Nesnelerin Eksikliği](walkthrough-missing-objects-due-to-vertex-shading.md)
-- [İzlenecek Yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama](walkthrough-debugging-rendering-errors-due-to-shading.md)
+- [İzlenecek yol: Köşe Gölgeleme Nedeniyle Eksik Nesneler](walkthrough-missing-objects-due-to-vertex-shading.md)
+- [İzlenecek yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama](walkthrough-debugging-rendering-errors-due-to-shading.md)

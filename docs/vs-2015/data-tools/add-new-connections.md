@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 44146613fb43b6fc4269741ba09b94629f888d5f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72673081"
 ---
 # <a name="add-new-connections"></a>Yeni bağlantı ekleme
@@ -23,7 +23,7 @@ Bir veritabanı veya hizmetle bağlantınızı test edebilir ve **Sunucu Gezgini
 
  Sunucu Gezgini, Visual Studio 'da varsayılan olarak yüklenir. Bağlantıları test etmek ve SQL Server veritabanlarını, ADO.NET sağlayıcısı yüklü diğer veritabanlarını ve bazı Azure hizmetlerini görüntülemek için kullanılabilir. Ayrıca sistem performans sayaçları, olay günlükleri ve ileti kuyrukları gibi alt düzey nesneleri gösterir. Bir veri kaynağının ADO.NET sağlayıcısı yoksa, burada gösterilmez, ancak programlı olarak bağlanarak Visual Studio 'dan kullanmaya devam edebilirsiniz.
 
- Cloud Explorer Visual Studio**galerisi** > **çevrimiçi**  >  **Araçlar**  > **Uzantılar ve Güncelleştirmeler ' i** seçerek bu pencereyi Visual Studio uzantısı olarak el ile yükler. , Azure hizmetlerine yönelik keşfetmeye ve bağlamaya yönelik özel işlevler sağlar.
+ Cloud Explorer, **Araçlar**  >  **Uzantılar ve güncelleştirmeler**  >  **çevrimiçi**  >  **Visual Studio Galerisi**' ni seçerek bu pencereyi Visual Studio uzantısı olarak el ile yükler. , Azure hizmetlerine yönelik keşfetmeye ve bağlamaya yönelik özel işlevler sağlar.
 
  SQL Server Veri Araçları ve **Görünüm** menüsü altında görünür SQL Server Nesne Gezgini. Burada görmüyorsanız, Denetim Masası 'ndaki **Programlar ve Özellikler** ' e gidin, Visual Studio ' yı bulun ve ardından SQL Server veri araçları onay kutusunu seçtikten sonra yükleyiciyi yeniden çalıştırmak için **Değiştir** ' i seçin. SQL veritabanlarını görüntülemek için **SQL Server Nesne Gezgini** kullanın (bir ADO.NET sağlayıcısı varsa), yeni veritabanları oluşturun, şemaları değiştirin, saklı yordamlar oluşturun, bağlantı dizelerini alın, verileri görüntüleyin ve daha fazlasını yapın. ADO.NET sağlayıcısı yüklü olmayan SQL veritabanları burada gösterilmez, ancak yine de bunlara programlı olarak bağlanabilirsiniz.
 

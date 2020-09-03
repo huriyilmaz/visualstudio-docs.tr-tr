@@ -1,5 +1,5 @@
 ---
-title: 'Test Alanı 3: Onay dışarı geri alma | Microsoft Docs'
+title: 'Test alanı 3: kullanıma alma-kullanıma almayı geri alma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,126 +14,126 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ab4389c936b71ba8ccbb21b22d0a5e533282026d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155997"
 ---
-# <a name="test-area-3-check-outundo-checkout"></a>Test Alanı 3: Kullanıma almayı geri al / gözden geçirin
+# <a name="test-area-3-check-outundo-checkout"></a>Test alanı 3: kullanıma almayı denetle/geri al
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu kaynak denetimi eklentisi test alanı sürüm deposu düzenleme ve geri döndürülüyor öğelerinden kapsar **kullanıma** ve **kullanıma almayı geri al** komutları.  
+Bu kaynak denetimi eklentisi test alanı **, kullanıma alma ve** **geri alma** komutlarını kullanarak sürüm deposundan öğeleri düzenlemenizi ve geri döndürmeyi içerir.  
   
- **Kullanıma**: Sürüm deposu olarak bir öğeyi kullanıma işaretleri okuma/yazma için yerel kopyayı değiştirir.  
+ Kullanıma **alma**: Sürüm deposundaki bir öğeyi kullanıma alınmış olarak işaretler, Yerel kopyayı okuma/yazma olarak değiştirir.  
   
- **Kullanıma almayı geri al**: Sürüm deposu olarak bir öğe iade işaretleri (Seçenekler) bağlı olarak kullanıma almadan önce yerel kopyasına geri döner.  
+ **Kullanıma almayı geri al**: Sürüm deposundaki bir öğeyi iade edildi olarak işaretler, kullanıma almadan önce yerel kopyayı duruma döndürür (seçeneklere bağlı olarak).  
   
-## <a name="command-menu-access"></a>Komut menü erişimi  
- Aşağıdaki [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] tümleşik geliştirme ortamı menüsü yolları test durumlarında kullanılır.  
+## <a name="command-menu-access"></a>Komut menüsü erişimi  
+ Aşağıdaki [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tümleşik geliştirme ortamı menü yolları test durumlarında kullanılır.  
   
 ##### <a name="check-out"></a>Kontrol etme:  
   
-- **Dosya**, **kaynak denetimi**, **kullanıma**.  
+- **Dosya**, **kaynak denetimi**, kullanıma **alma**.  
   
-- **Dosya**, **kullanıma**.  
+- **Dosya**, kullanıma **alma**.  
   
-- Kısayol menüsünde, **kullanıma**.  
+- Kısayol menüsü, kullanıma **alma**.  
   
-- Kullanıma almayı geri al: **Dosya**, **kaynak denetimi**, **geri alma**.  
+- Kullanıma almayı geri al: **Dosya**, **kaynak denetimi**, **kullanıma almayı geri alma**.  
   
-## <a name="common-expected-behavior"></a>Ortak beklenen davranışı  
+## <a name="common-expected-behavior"></a>Yaygın beklenen davranış  
   
-- İşlem teslim sonra hedef dosyaların ve/veya klasörleri sürüm deposuna kullanıma olarak işaretlenir.  
+- Kullanıma alma işleminden sonra, hedef dosya ve/veya klasörler sürüm deposunda kullanıma alınmış olarak işaretlenir.  
   
-- Sürüm deposu kullanıma alma için doğru kullanıcı öznitelikleri.  
+- Sürüm deposu, kullanıma alma işlemini doğru kullanıcıya göre öznitelikler.  
   
-- Kullanıma alma tarih ve saat (kullanıcı ayarlarını) doğrudur.  
+- Kullanıma almanın saat ve saati doğru (kullanıcının ayarlarına göre).  
   
-## <a name="test-cases"></a>Test çalışmaları  
- Kullanıma alma/geri almayı test alanı için belirli test çalışmaları aşağıda verilmiştir.  
+## <a name="test-cases"></a>Test Çalışmaları  
+ Kullanıma alma/geri alma test alanı için belirli test çalışmaları aşağıda verilmiştir.  
   
-### <a name="case-3a-check-out"></a>Büyük/küçük harf 3a: Kullanıma Al  
- Bu bölümde, kullanıma komut işlemi ele alınmaktadır.  
+### <a name="case-3a-check-out"></a>Case 3A: kullanıma alma  
+ Bu bölüm, kullanıma alma komutunun işlemine odaklanır.  
   
-|Eylem|Test adımları|Beklenen sonuçları doğrulamak için|  
+|Eylem|Test adımları|Doğrulanacak beklenen sonuçlar|  
 |------------|----------------|--------------------------------|  
-|Denetleme kullanıma özel (COE) istemci projesi|1.  Bir istemci projesi oluşturun.<br />2.  Çözüm kaynak denetimine ekleyin.<br />3.  Tüm projeyi özel kontrol (**dosya**, **kullanıma**).|Kullanıma gerçekleşir.|  
-|Bir dosya sisteminde veya yerel IIS Web projesi özel olarak kullanıma al (COE) denetleyin|1.  Dosya Paylaşımı için Web sunucusu bağlantısını Ayarla **Araçları**, **seçenekleri**, **projeleri**, **Web ayarları**.<br />2.  Web projesi oluşturun.<br />3.  Çözüm kaynak denetimine ekleyin.<br />4.  Tüm projeyi özel kontrol (**dosya**, **kaynak denetimi**, **kullanıma**).|Kullanıma gerçekleşir.|  
-|Çözüm Öğeleri bir çözümde (diğer dosyaları işlemek için yeni yöntem) göz atın|1.  Boş bir çözüm oluşturun.<br />2.  Çözüm kaynak denetimine ekleyin.<br />3.  Çözümü denetleyin.<br />4.  Birkaç çözüm öğeleri ekleyin.<br />5.  Yeni eklenen öğelerde denetleyin.<br />6.  Birden çok çözüm öğeleri seçin.<br />7.  Seçili öğeleri kullanıma (kısayol menüsünde, **kullanıma**).|Seçilen dosyalar kullanıma alındı.|  
-|Denetleme kullanıma yerel (test eklentisi bu özelliğin destekliyorsa) sürümü|1.  1. kullanıcı: Bir istemci projesi oluşturun.<br />2.  1. kullanıcı: Çözüm kaynak denetimine ekleyin.<br />3.  2. kullanıcı: Çözümü kaynak denetiminden başka bir konuma açın.<br />4.  2. kullanıcı: Dosyasını gözden geçirin.<br />5.  2. kullanıcı: Dosyayı değiştirin.<br />6.  2. kullanıcı: Dosyayı iade edin.<br />7.  1. kullanıcı: Dosyanın yerel sürümü kullanıma alma (denetleyin **yerel sürüm kullanıma** seçeneğinde Gelişmiş **kullanıma** iletişim kutusunda).|Dosyanın yerel sürümü kullanıma alınır.<br /><br /> Kullanıcı 1 dosyasına değişiklikler 2 kullanıcı tarafından uygulanmaz.|  
+|Bir istemci projesi için özel (COE) özel kullanıma alma|1. bir istemci projesi oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. tüm projeyi özel olarak inceleyin (**Dosya**, kullanıma **alma**).|Kullanıma alma işlemi gerçekleşir.|  
+|Dosya sistemine veya yerel IIS Web projesine özel olarak (COE) göz atın|1. **Araçlar**, **Seçenekler**, **Projeler**, **Web ayarları**'ndaki dosya paylaşımıyla Web sunucusu bağlantısını ayarlayın.<br />2. bir Web projesi oluşturun.<br />3. çözümü kaynak denetimine ekleyin.<br />4. tüm projeyi özel olarak inceleyin (**Dosya**, **kaynak denetimi**, kullanıma **alma**).|Kullanıma alma işlemi gerçekleşir.|  
+|Çözümdeki çözüm öğelerine göz atın (diğer dosyaları işlemek için yeni yöntem)|1. boş bir çözüm oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. çözüme göz atın.<br />4. birkaç çözüm öğesi ekleyin.<br />5. yeni eklenen tüm öğeleri iade edin.<br />6. birden çok çözüm öğesi seçin.<br />7. seçili öğelere (kısayol menüsü, kullanıma **alma**) göz atın.|Seçilen dosyalar kullanıma alındı.|  
+|Yerel sürümü kullanıma alma (test altındaki eklenti bu özelliği destekliyorsa)|1. Kullanıcı 1: bir istemci projesi oluşturun.<br />2. Kullanıcı 1: çözümü kaynak denetimine ekleyin.<br />3. Kullanıcı 2: çözümü kaynak denetiminden başka bir konuma açın.<br />4. Kullanıcı 2: bir dosyaya göz atın.<br />5. Kullanıcı 2: dosyayı değiştirin.<br />6. Kullanıcı 2: dosyayı Iade edin.<br />7. Kullanıcı 1: dosyanın yerel sürümünü Inceleyin **(kullanıma alma iletişim kutusunda** **yerel sürümü kullanıma** alma Gelişmiş seçeneğini işaretleyin).|Dosyanın yerel sürümü kullanıma alındı.<br /><br /> Kullanıcı 2 ' ye göre değişiklikler Kullanıcı 1 dosyasına uygulanmaz.|  
   
-### <a name="case-3b-disconnected-check-out"></a>Büyük/küçük harf 3b: Bağlantısı kesilen kullanıma alma  
- Bağlantı kesik moddayken çalışan kullanıcıların belirli bir düzeyde doğrudan bir sürüm deposuna bağlı olmayan sürekli kaynak denetimi desteği sağlar. Bu, kayıtlı çözüm ve projeler ilgili tüm bilgileri yerel olarak önbelleğe alarak gerçekleştirilir.  
+### <a name="case-3b-disconnected-check-out"></a>Durum 3B: bağlantısı kesilen kullanıma alma  
+ Bağlantısı kesik modda çalışan, bir sürüm deposuna doğrudan eklenmedikleri zaman, kullanıcıların bazı devam eden kaynak denetimi desteğine sahip olmasına olanak sağlar. Bu, kayıtlı çözüm ve projelerle ilgili tüm ilgili bilgileri yerel olarak önbelleğe alarak yapılır.  
   
- Yalnızca özel kullanıma alma işlemleri için kaynak denetim deposunda bağlıyken ortaya çıkabilir. Paylaşılan kullanıma alma işlemleri, bağlı veya bağlantısı kesilmiş herhangi bir zamanda gerçekleşebilir. Bu nedenle, sürüm Mağazası'ndan yalnızca bağlı değilken **kullanıma denetleyin paylaşılan** (komut etkin COS). Bağlı değilken **kullanıma almayı geri al** kullanıcı tarafından yapılan değişiklikleri değiştirmek için eski sürümü alınamadığından devre dışı bırakıldı.  
+ Dışlamalı kullanıma alma işlemleri yalnızca kaynak denetim deposuna bağlıyken gerçekleşebilir. Paylaşılan kullanıma alma işlemleri, bağlı veya bağlantısı kesik olsun, herhangi bir zamanda gerçekleşebilir. Bu nedenle, sürüm deposu bağlantısı kesildiğinde yalnızca **paylaşılan kullanıma alma** (cos) komutu etkin olur. Bağlantısı kesildiğinde, Kullanıcı tarafından yapılan değişiklikleri değiştirmek için eski sürüm alınamadığından **kullanıma** alma işlemi devre dışı bırakıldı.  
   
- Kullanıcı sürümüne bağlandığında depolamak, kullanıma alma durumunu tüm kayıtlı çözümler ve projeler eşitlenir. Kullanıcı yürüttü kullanıma alma için gerekli güncelleştirmeleri deposuna yapar. Eşitleme gerçekleşen sonra kullanıcı (bağlı) normal şekilde çalışmaya devam edebilir.  
+ Kullanıcı sürüm deposuna yeniden bağlandığında, tüm kayıtlı çözümlerin ve projelerin teslim alma durumları eşitlenir. Bu, kullanıcının gerçekleştirdiği kullanıma alma işlemleri için depoya gereken güncelleştirmeleri yapar. Eşitleme yapıldıktan sonra, Kullanıcı normal (bağlı) olarak çalışmaya devam edebilir.  
   
 #### <a name="expected-behavior"></a>Beklenen davranış  
   
-- Kullanamazsınız **kullanıma özel kontrol** sürüm Mağazası'ndan bağlı değilken komutu.  
+- Sürüm deposu bağlantısı kesildiğinde özel olarak kullanıma **alma** komutu kullanılamaz.  
   
-- Kullanamazsınız **kullanıma almayı geri al** sürüm Mağazası'ndan bağlı değilken komutu.  
+- Sürüm deposu bağlantısı kesildiğinde **geri al kullanıma** alma komutu kullanılamaz.  
   
-- **Paylaşılan kullanıma** komut çalışır.  
+- **Paylaşılan kullanıma alma** komutu işe yarar.  
   
-|Eylem|Test adımları|Beklenen sonuçları doğrulamak için|  
+|Eylem|Test adımları|Doğrulanacak beklenen sonuçlar|  
 |------------|----------------|--------------------------------|  
-|Bağlı değilken dosyasını gözden geçirin ve ardından eşitleme için Bağlan|1.  Kaynak denetimini Değiştir iletişim kutusunu kullanarak bir denetimli proje bağlantısını kes (**dosya**, **kaynak denetimi**, **değişiklik kaynak etkilenen sistemin tüm denetimini**l).<br />2.  Bir dosyayı gözden geçirin.<br />3.  (Uyarı iletişim kutusunda bağlantısı kesildi) kullanıma tıklayın.<br />4.  Dosyayı düzenleyin.<br />5.  Kaynak denetimini Değiştir iletişim kutusunu kullanarak bağlanın.<br />6.  Düzenlenen dosyasının en son sürümünü alın.|Ortak beklenen davranışı|  
+|Bağlantı kesildiğinde, bir dosyaya göz atın ve eşitleme için bağlanın|1. kaynak denetimini Değiştir iletişim kutusunu (**Dosya**, **kaynak denetimi**, **değiştirme kaynağı Contro**l) kullanarak denetimli bir projenin bağlantısını kesin.<br />2. bir dosyayı denetleyin.<br />3. uyarı iletişim kutusunda kullanıma alma (bağlantısı kesildi) seçeneğine tıklayın.<br />4. dosyayı düzenleyin.<br />5. kaynak denetimini Değiştir iletişim kutusunu kullanarak bağlanın.<br />6. düzenlenmiş dosyanın en son sürümünü alın.|Yaygın beklenen davranış|  
   
-### <a name="case-3c-query-editquery-save-qeqs"></a>Durum 3c: Sorgu düzenleme/sorgu kaydetme (QEQS)  
- Kaynak denetimi altındaki öğeler düzenlemeler, değişiklikleri izlenir ve kullanıcıların bir kolayca yardımcı olmak için kaydeder dosyalarına yönetin. "İade" denetimli bir öğeyi düzenlendiğinde QEQS girişimi Düzenle durdurur ve düzenlemek için dosyayı kullanıma alın, istediği kullanıcıya sorar. Yapılandırmanıza bağlı olarak **Araçları**, **seçenekleri** ayarları, kullanıcı olduğunu denetlemek için zorunlu ya da dosyayı teslim düzenlemek için veya bellekte kopya Düzenle ve daha sonra kullanıma de izin verilir. Kullanıcının **Araçları**, **seçenekleri** ayar iletişim kutusu kullanıma görüntülemek ve hemen kullanıma iade için ayarlı değil ve ardından, düzenleme kullanıcının yaptığı gibi dosyayı otomatik olarak, mümkün olduğunda denetler.  
+### <a name="case-3c-query-editquery-save-qeqs"></a>Durum 3c: sorgu düzenleme/sorgu kaydetme (QEQS)  
+ Kaynak denetimindeki öğeler, kullanıcıların dosyalarını kolayca yönetmesine yardımcı olmak için düzenlemeler, değişiklikler ve kaydetme işlemleri için izlenir. "İade edildi" olan denetimli bir öğe düzenlendiğinde, QEQS denenen düzenlemeyi karşılar ve dosyayı düzenlemek için dosyayı kullanıma almak isterse kullanıcıyı ister. **Araçlara**, **seçenek** ayarlarına bağlı olarak, Kullanıcı, düzenlemek için dosyayı kullanıma alabilir veya bellekte bir kopyayı düzenleme ve daha sonra kullanıma alma izni verilebilir. Kullanıcının **araçları**, **Seçenekler** ayarı kullanıma alma iletişim kutusunu göstermek ve yalnızca kullanıma almak için ayarlanmamışsa, Kullanıcı düzenleme yaptığında dosya, mümkün olduğunda otomatik olarak kontrol eder.  
   
 #### <a name="expected-behavior"></a>Beklenen davranış  
   
-- İşlem teslim sonra hedef dosyaların ve/veya klasörleri sürüm deposuna kullanıma olarak işaretlenir.  
+- Kullanıma alma işleminden sonra, hedef dosya ve/veya klasörler sürüm deposunda kullanıma alınmış olarak işaretlenir.  
   
-- Sürüm deposu kullanıma için doğru kullanıcı öznitelikleri.  
+- Sürüm deposu, doğru kullanıcıya kullanıma alma özniteliklerini düzeltir.  
   
-- (Kullanıcı ayarlarını) göz atın, tarih ve saat doğrudur.  
+- Kullanıma alma saatinin saati ve tarihi doğrudur (kullanıcının ayarlarına göre).  
   
-- Hedef dosya veya klasörün yerel kopyayı yazılabilir.  
+- Hedef dosyanın veya klasörün yerel kopyası yazılabilir.  
   
-|Eylem|Test adımları|Beklenen sonuçları doğrulamak için|  
+|Eylem|Test adımları|Doğrulanacak beklenen sonuçlar|  
 |------------|----------------|--------------------------------|  
-|İade metin dosyasını düzenleyin|1.  Bir metin dosyasını içeren yeni bir proje oluşturun.<br />2.  Çözüm kaynak denetimine ekleyin.<br />3.  Ayarlama **Araçları**, **seçenekleri**, **kaynak denetimi**, **dosyalarının salt okunur sırasında disk üzerinde düzenlenmesine izin ver** için işaretlenmemiş.<br />4.  Ayarlama **Araçları**, **seçenekleri**, **kaynak denetimi**, **kullanıma sor** içinde **dosyaları iade düzenlenenalındığında** birleşik giriş kutusu.<br />5.  Ayarlama **Araçları**, **seçenekleri**, **kaynak denetimi**, **kullanıma sor** içinde **iade, dosyalarıkaydedilir** birleşik giriş kutusu.<br />6.  Metin Dosyası Düzenleyicisi'nde açın, yeni bir metin dosyasına yazmak çalışır. Bu adım başarılı olursa, sonraki adıma geçin.<br />7.  Tıklayın **iptal** içinde **düzenleme için kullanıma** iletişim kutusu. Bu adım başarılı olursa, sonraki adıma geçin.<br />8.  Ayarlama **Araçları**, **seçenekleri**, **kaynak denetimi**, **dosyalarının salt okunur sırasında disk üzerinde düzenlenmesine izin ver** için işaretlenmiş.<br />9. Proje Dosyası Düzenleyicisi'nde açın, yeni bir metin dosyasında yazın girişimi. Bu adım başarılı olursa, sonraki adıma geçin.<br />10. Tıklayın **Düzenle** içinde **düzenleme için kullanıma** iletişim kutusu. Bu adım başarılı olursa, sonraki adıma geçin.<br />11. Metin dosyasını düzenleyin ve kaydetmeyi deneyin.|`Result of step 6:`<br /><br /> Düzenle iletişim kutusu görünür göz atın.<br /><br /> `Result of step 7:`<br /><br /> Dosya değiştirilmez.<br /><br /> `Result of step 9:`<br /><br /> Düzenle iletişim kutusu görünür göz atın.<br /><br /> `Result of step 10:`<br /><br /> Bellek proje dosyasında düzenleyebilirsiniz.<br /><br /> `Result of step 11:`<br /><br /> Kaydetme kullanıma üzerinde Kaydet iletişim kutusu görünür.|  
-|İade edildiğinde bir çözüm dosyası Düzenle|Altında açıklandığı gibi adımları test ancak bir metin dosyasını değiştirmek yerine, çözüm çözüm özellikleri değiştirerek değiştirme yineleyin.|Önceki test aynı|  
-|İade edildiğinde bir proje dosyasını Düzenle|Önceki açıklanan adımları test ancak bir metin dosyası değiştirmek yerine proje özelliklerini değiştirerek proje değiştirme yineleyin.|Önceki test ile aynıdır.|  
+|İade edilen metin dosyasını Düzenle|1. bir metin dosyası içeren yeni bir proje oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. **Araçlar**, **Seçenekler**, **kaynak denetimi**, **diskte salt okuma açıkken dosyaların düzenlenmesine izin ver** seçeneğini işaretsiz olarak ayarlayın.<br />4. **Araçlar**, **Seçenekler**, **kaynak denetimi**, **İade edilen dosyalarda** kullanıma **alma için sor** Birleşik giriş kutusunu ayarlayın.<br />5. **Araçlar**, **Seçenekler**, **kaynak denetimi**, iade **edilmiş dosyalar kaydedildiğinde** açılan kutuda kullanıma **alma isteminde bulun** .<br />6. metin dosyasını düzenleyicide açın, dosyaya yeni metin yazma girişiminde bulunuldu. Bu adım başarılı olursa sonraki adımla devam edin.<br />7. **düzenleme için kullanıma alma** Iletişim kutusunda **iptal 'e** tıklayın. Bu adım başarılı olursa sonraki adımla devam edin.<br />8. **Araçlar**, **Seçenekler**, **kaynak denetimi**, **diskteki salt okuma sırasında dosyaların düzenlenmesine izin ver** seçeneğini belirleyin.<br />9. proje dosyasını düzenleyicide açın, dosyaya yeni metin yazma girişimi yapın. Bu adım başarılı olursa sonraki adımla devam edin.<br />10. **düzenleme için kullanıma alma** Iletişim kutusunda **Düzenle** ' ye tıklayın. Bu adım başarılı olursa sonraki adımla devam edin.<br />11. metin dosyasını düzenleyin ve kaydetmeyi deneyin.|`Result of step 6:`<br /><br /> Düzenleme için kullanıma alma iletişim kutusu görüntülenir.<br /><br /> `Result of step 7:`<br /><br /> Dosya değiştirilmez.<br /><br /> `Result of step 9:`<br /><br /> Düzenleme için kullanıma alma iletişim kutusu görüntülenir.<br /><br /> `Result of step 10:`<br /><br /> Proje dosyasını bellekte düzenleyebilirsiniz.<br /><br /> `Result of step 11:`<br /><br /> Kaydetme sırasında, kaydetme sırasında kullanıma alma iletişim kutusu görüntülenir.|  
+|İade edilen bir çözüm dosyasını düzenleme|Önceki testte açıklanan adımları yineleyin, ancak bir metin dosyasını değiştirmek yerine çözüm özelliklerini değiştirerek çözümü değiştirin.|Önceki testle aynı|  
+|İade edilmiş bir proje dosyasını düzenleme|Önceki testte açıklanan adımları yineleyin, ancak bir metin dosyasını değiştirmek yerine proje özelliklerini değiştirerek projeyi değiştirin.|Önceki testle aynı.|  
   
-### <a name="case-3d-silent-check-out"></a>Case 3d: Sessiz kullanıma alma  
- Bu senaryolar alt alanı kapsar kullanıma burada **kullanıma** iletişim kutusu, kullanıcı görünmez **Araçları**, **seçenekleri**, **kaynak denetim ayarları** .  
+### <a name="case-3d-silent-check-out"></a>Durum 3B: sessiz kullanıma alma  
+ Bu alt alan, kullanıma **alma** iletişim kutusunun Kullanıcı **araçları**, **Seçenekler**, **kaynak denetimi ayarları**başına görünmediğinden, kullanıma alma senaryolarını ele alır.  
   
 #### <a name="expected-behavior"></a>Beklenen davranış  
   
-- İşlem teslim sonra hedef dosyaların ve/veya klasörleri sürüm deposuna kullanıma olarak işaretlenir.  
+- Kullanıma alma işleminden sonra, hedef dosya ve/veya klasörler sürüm deposunda kullanıma alınmış olarak işaretlenir.  
   
-- Sürüm deposu kullanıma için doğru kullanıcı öznitelikleri.  
+- Sürüm deposu, doğru kullanıcıya kullanıma alma özniteliklerini düzeltir.  
   
-- Göz atın, tarih ve saat (kullanıcı ayarlarını) doğru.  
+- Kullanıma alma işlemi için saat ve Tarih doğrudur (kullanıcının ayarlarına göre).  
   
-- Hedef dosya veya klasörün yerel kopyayı yazılabilir.  
+- Hedef dosyanın veya klasörün yerel kopyası yazılabilir.  
   
-|Eylem|Test adımları|Beklenen sonuçları doğrulamak için|  
+|Eylem|Test adımları|Doğrulanacak beklenen sonuçlar|  
 |------------|----------------|--------------------------------|  
-|Bir dosya için sessiz kullanıma alma|1.  Ayarlama **Araçları**, **seçenekleri**, **kaynak denetimi** için **kullanıma alma dosyaları otomatik olarak düzenleme**.<br />2.  Yeni bir proje, bir dosya oluşturun.<br />3.  Çözüm kaynak denetimine ekleyin.<br />4.  Dosyasını gözden geçirin.|Dosya kullanıma sessizce (kullanıcı Arabirimi).|  
-|Bir proje için sessiz kullanıma alma|1.  Ayarlama **Araçları**, **seçenekleri**, **kaynak denetimi** için **kullanıma alma dosyaları otomatik olarak düzenleme**.<br />2.  Yeni bir proje oluşturun.<br />3.  Çözüm kaynak denetimine ekleyin.<br />4.  Projeyi kontrol edin.|Dosya kullanıma sessizce (kullanıcı Arabirimi).|  
+|Dosya için sessiz kullanıma alma|1. **dosyaları düzenleme sırasında otomatik olarak kullanıma**almak için **Araçlar**, **Seçenekler**, **kaynak denetimi** ayarlayın.<br />2. bir dosya ile yeni bir proje oluşturun.<br />3. çözümü kaynak denetimine ekleyin.<br />4. dosyaya göz atın.|Dosya sessizce kullanıma alındı (Kullanıcı arabirimi yok).|  
+|Bir proje için sessiz kullanıma alma|1. **dosyaları düzenleme sırasında otomatik olarak kullanıma**almak için **Araçlar**, **Seçenekler**, **kaynak denetimi** ayarlayın.<br />2. yeni bir proje oluşturun.<br />3. çözümü kaynak denetimine ekleyin.<br />4. projeye göz atın.|Dosya sessizce kullanıma alındı (Kullanıcı arabirimi yok).|  
   
-### <a name="case-3e-undo-check-out"></a>Büyük/küçük harf 3e: Kullanıma almayı geri al  
- **Kullanıma Al** bir dosyanın durumu kontrol iptal etmek ve dosya üzerinde yaptığınız değişiklikleri iade önlemek için kullanılır.  
+### <a name="case-3e-undo-check-out"></a>Durum 3e: kullanıma almayı geri alma  
+ Kullanıma **almayı geri alma** , bir dosyanın kullanıma alınmış durumunu iptal etmek ve dosyada yapılan değişiklikleri iade etmeyi önlemek için kullanılır.  
   
 #### <a name="expected-behavior"></a>Beklenen davranış  
   
-- Kullanıcının varsayılan alan **yerel sürümü kullanıma alma** ayarı. Yerel sürüm kullanıma denetlemek kullanıcı tarafından seçmiş, her zaman kullanıma aldığınız sürümle geri dönmek için geri alma için varsayılan değer yoktur.  
+- Varsayılan değer, kullanıcının **yerel sürümü kullanıma alma** ayarına bağlıdır. Kullanıcı yerel sürümü kullanıma almayı seçtiyseniz, geri alma için varsayılan değer her zaman kullanıma alınan sürüme döndürülür.  
   
-- Simgeleri geri almayı kabul ettiğiniz andan **Çözüm Gezgini** etkilenen güncelleştirilen dosyaları ve öğesi kaldırılır **Bekleyen İadeler** penceresi.  
+- Geri alma işlemini kabul etmenizden sonra, **Çözüm Gezgini** simgeler etkilenen dosyalar için güncellenir ve öğe **bekleyen checkins** penceresinden kaldırılır.  
   
-|Eylem|Test adımları|Beklenen sonuçları doğrulamak için|  
+|Eylem|Test adımları|Doğrulanacak beklenen sonuçlar|  
 |------------|----------------|--------------------------------|  
-|Özel olarak kullanıma tek bir dosyayı kullanıma almayı geri al|1.  Bir istemci projesi oluşturun.<br />2.  Çözüm kaynak denetimine ekleyin.<br />3.  Bir dosyayı kullanıma özel kontrol edin.<br />4.  Dosyayı değiştirin.<br />5.  Kullanıma almayı geri al (**dosya**, **kaynak denetimi**, **geri alma**).|Ortak beklenen bir davranış.|  
-|Paylaşılan denetlenir tek bir dosyayı kullanıma almayı geri al|1.  Bir istemci projesi oluşturun.<br />2.  Çözüm kaynak denetimine ekleyin.<br />3.  Paylaşılan bir dosyasını gözden geçirin.<br />4.  Dosyayı değiştirin.<br />5.  Kullanıma almayı geri al (**dosya**, **kaynak denetimi**, **geri alma**).|Ortak beklenen bir davranış.|  
-|Dosyalar projeye ekledikten sonra proje kullanıma almayı geri al|1.  Yeni bir proje oluşturun ve kaynak denetimine ekleyin.<br />2.  Projeyi kontrol edin.<br />3.  Bir dosyayı projeye ekleyin.<br />4.  Projeyi kullanıma almayı geri al.|Çözüm Gezgini'nde projeye eklenen dosya kaldırılır.<br /><br /> Proje artık kullanıma alındı.|  
-|Projeden dosyaları sildikten sonra proje kullanıma almayı geri al|1.  Yeni bir proje oluşturun ve kaynak denetimine ekleyin.<br />2.  Projeyi kontrol edin.<br />3.  Bir dosyayı projeden silin.<br />4.  Projeyi kullanıma almayı geri al.|Silinen dosya Çözüm Gezgini'nde projeye altında görünür.<br /><br /> Proje artık kullanıma alındı.|  
+|Özel olarak kullanıma alınan tek bir dosyayı kullanıma almayı geri alma|1. bir istemci projesi oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. özel olarak bir dosyaya göz atın.<br />4. dosyayı değiştirin.<br />5. kullanıma almayı geri alın (**Dosya**, **kaynak denetimi**, **kullanıma almayı geri al**).|Ortak beklenen davranış.|  
+|Paylaşılan kullanıma alınan tek bir dosyayı kullanıma almayı geri alma|1. bir istemci projesi oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. paylaşılan bir dosyaya göz atın.<br />4. dosyayı değiştirin.<br />5. kullanıma almayı geri alın (**Dosya**, **kaynak denetimi**, **kullanıma almayı geri al**).|Ortak beklenen davranış.|  
+|Dosya (ler) projeye eklendikten sonra bir projeyi kullanıma almayı geri al|1. yeni bir proje oluşturun ve kaynak denetimine ekleyin.<br />2. projeye göz atın.<br />3. projeye bir dosya ekleyin.<br />4. projeyi kullanıma almayı geri alın.|Eklenen dosya Çözüm Gezgini projeden kaldırılır.<br /><br /> Proje artık kullanıma alınmamış.|  
+|Dosyaları projeden sildikten sonra bir projeyi kullanıma almayı geri al|1. yeni bir proje oluşturun ve kaynak denetimine ekleyin.<br />2. projeye göz atın.<br />3. bir dosyayı projeden silin.<br />4. projeyi kullanıma almayı geri alın.|Silinen dosya Çözüm Gezgini içindeki projenin altında görüntülenir.<br /><br /> Proje artık kullanıma alınmamış.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Kaynak Denetimi Eklentileri için Test Kılavuzu](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

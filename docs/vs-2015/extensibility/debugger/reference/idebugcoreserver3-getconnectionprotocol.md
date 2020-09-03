@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::GetConnectionProtocol | Microsoft Docs
+title: 'IDebugCoreServer3:: GetConnectionProtocol | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0572cdb622da2425cf21cd925e3022611861f2b2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205247"
 ---
 # <a name="idebugcoreserver3getconnectionprotocol"></a>IDebugCoreServer3::GetConnectionProtocol
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Hata ayıklama paketi ile sunucu arasında iletişim kurmak için kullanılan protokolü belirten bir değer döndürür.  
+Sunucu ile hata ayıklama paketi arasında iletişim kurmak için kullanılan protokolü gösteren bir değer döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetConnectionProtocol(  
@@ -40,10 +40,10 @@ int GetConnectionProtocol(
   
 #### <a name="parameters"></a>Parametreler  
  `pProtocol`  
- [out] Değerlerinden birini döndürür [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md) sabit listesi.  
+ dışı [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md) numaralandırmasındaki değerlerden birini döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)   

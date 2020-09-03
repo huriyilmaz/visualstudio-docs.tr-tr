@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İşaretlenmiş ikilileri yeniden Yerleştir | Microsoft Docs'
+title: 'Nasıl yapılır: Işaretlenmiş Ikililerin konumunu değiştirme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -17,30 +17,30 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 00b39b91b0a776438199d1df3c212cb9fe40f338
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155513"
 ---
-# <a name="how-to-relocate-instrumented-binaries"></a>Nasıl yapılır: İşaretlenmiş İkili Dosyaları Yeniden Yerleştirme
+# <a name="how-to-relocate-instrumented-binaries"></a>Nasıl yapılır: Araç Haline Getirilmiş İkili Dosyaları Yeniden Konumlandırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İzleme sırasında araştırmaları uygulama performansını ölçmek için ikili olarak eklenir. İşaretlenmiş ikilileri yeniden Yerleştir seçerek özgün ikilinin bir kopyası işaretlenir ve belirtilen konuma yerleştirin. Bu seçenek, özgün ikiliyi yeniden adlandırmak için profil oluşturucu istemiyorsanız yararlıdır. İkili konumlandırıldı değil, ikili dosya özgün sürümle üzerine yazılır.  
+İzleme sırasında, uygulama performansını ölçmek için, yoklamalar ikiliye eklenir. İşaretlenmiş ikilinin yeniden konumlandırmaya seçerek, özgün ikilinin bir kopyası işaretlenir ve belirtilen konuma konur. Profil oluşturucunun özgün ikilinizi yeniden adlandırmasına istemiyorsanız bu seçenek faydalıdır. İkili yeniden konumlandırılıp, ikilinin orijinal sürümünün üzerine yazılır.  
   
  **Gereksinimler**  
   
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
-### <a name="to-relocate-instrumented-binary"></a>İzleme eklenmiş ikili dışında yeniden konumlandırmakta  
+### <a name="to-relocate-instrumented-binary"></a>İşaretlenmiş ikilinin yerini değiştirmek için  
   
-1. İçinde **performans Gezgini**performans oturumu sağ tıklayın ve ardından **özellikleri**.  
+1. **Performans Gezgini**, performans oturumuna sağ tıklayın ve ardından **Özellikler**' e tıklayın.  
   
-2. İçinde **özellik sayfaları**, tıklayın **ikili** özellikleri.  
+2. **Özellik sayfalarında** **ikili** Özellikler ' e tıklayın.  
   
-3. Seçin **işaretlenmiş ikilileri yeniden Yerleştir** onay kutusu.  
+3. **İşaretlenmiş ikilileri Yeniden Konumlandır** onay kutusunu seçin.  
   
-4. İzleme eklenmiş ikili dosya konumunu belirtin.  
+4. Belgelenmiş ikili için konumu belirtin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md)   

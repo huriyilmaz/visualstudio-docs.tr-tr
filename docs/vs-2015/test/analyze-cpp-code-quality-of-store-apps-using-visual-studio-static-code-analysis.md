@@ -1,5 +1,5 @@
 ---
-title: C++Statik kod analizi Mağaza uygulamaları
+title: C++ statik kod analizi Mağaza uygulamaları
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-test
@@ -12,23 +12,23 @@ author: alexhomer1
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c20fe8bccdf48cf307dda72a085b3c2a72f1d0cf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672718"
 ---
-# <a name="analyze-c-code-quality-of-store-apps-using-visual-studio-static-code-analysis"></a>Visual C++ Studio statik Kod analizini kullanarak Mağaza uygulamalarının kod kalitesini analiz etme
+# <a name="analyze-c-code-quality-of-store-apps-using-visual-studio-static-code-analysis"></a>Visual Studio statik Kod analizini kullanarak C++ kod kalitesini depolama uygulamaları çözümleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content.exe "windows_and_phone_content")
+Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content.png "windows_and_phone_content")
 
  Visual Studio Express sürümlerinde Kod Analizi Aracı, bir dizi yaygın sorun ve iyi programlama uygulaması ihlalleri için kodunuzu inceler. Kod Analizi, derleyici hatalarından ve uyarılarından farklıdır, ancak sizin için veya kodunuzu kullanan diğer kişiler için hala sorun oluşturabilir. Kod Analizi, kodunuzda test aracılığıyla keşfedilmesi zor olan kusurları da bulabilir. Geliştirme işleminiz sırasında kod analizi aracını düzenli aralıklarla çalıştırmak, tamamlanmış uygulamanızın kalitesini artırabilir.
 
 > [!NOTE]
 > Visual Studio Ultimate, Visual Studio Premium ve Visual Studio Professional, kod analizi araçlarının tüm işlevselliğini kullanabilirsiniz. Bkz. MSDN kitaplığındaki [kod analizi araçlarını kullanarak uygulama kalitesini analiz etme](https://msdn.microsoft.com/library/dd264897.aspx) .
 
-## <a name="BKMK_Run"></a>Kod analizini çalıştırma
+## <a name="running-code-analysis"></a><a name="BKMK_Run"></a> Kod analizini çalıştırma
  Visual Studio Çözümünüzde kod analizini çalıştırmak için:
 
 - **Build** menüsünde, **çözüm üzerinde Kod analizini Çalıştır**' ı seçin.
@@ -37,13 +37,13 @@ Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content
 
 1. Çözüm Gezgini ' de proje adını seçin ve ardından **Özellikler**' i seçin.
 
-2. Proje özelliği sayfasında, **Kod Analizi** ' ni seçin ve ardından **derleme üzerinde C/C++ Kod analizini etkinleştir**' i seçin.
+2. Proje özelliği sayfasında, **Kod Analizi** ' ni seçin ve ardından **derlemede C/C++ Için kod analizini etkinleştir**' i seçin.
 
    Çözüm derlenir ve kod analizi çalışır. Sonuçlar Kod Analizi penceresinde görünür.
 
    ![Kod Analizi penceresi](../test/media/ca-cpp-collapsed.png "CA_CPP_Collapsed")
 
-## <a name="BKMK_Analyze"></a>Kod Analizi uyarılarını çözümleme ve çözme
+## <a name="analyzing-and-resolving-code-analysis-warnings"></a><a name="BKMK_Analyze"></a> Kod Analizi uyarılarını çözümleme ve çözme
  Belirli bir uyarıyı çözümlemek için, Kod Analizi penceresinde uyarının başlığını seçin. Uyarı, sorunla ilgili ayrıntılı bilgileri görüntüleyecek şekilde genişler. Mümkün olduğunda, kod analizi uyarıya yol gösteren satır numarasını ve analiz mantığını görüntüler.
 
  ![Genişletilmiş kod analizi uyarısı](../test/media/ca-cpp-expanded-callout.png "CA_CPP_Expanded_Callout")
@@ -57,7 +57,7 @@ Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content
 > [!TIP]
 > Kod Analizi penceresinden Kod analizini yeniden çalıştırabilirsiniz. **Çözümle** düğmesini seçin ve ardından analizin kapsamını seçin. Çözümlemeyi çözümün tamamında veya seçili bir projede yeniden çalıştırabilirsiniz.
 
-## <a name="BKMK_Suppress"></a>Kod Analizi uyarılarını gizleme
+## <a name="suppressing-code-analysis-warnings"></a><a name="BKMK_Suppress"></a> Kod Analizi uyarılarını gizleme
  Kod Analizi uyarısının düzeltilmeyeceğine karar verirken zamanlar olabilir. Uyarı çözmenin, kodunuzun gerçek hayatta herhangi bir uygulamada ortaya çıkması olasılığa göre çok fazla kaynak gerektirir. Ya da uyarıda kullanılan çözümlemenin belirli bir bağlam için uygun olmadığından emin olabilirsiniz. Kod Analizi penceresinde artık görünmemek için tek tek uyarıları bastırın.
 
  Bir uyarıyı bastırmak için:
@@ -68,17 +68,17 @@ Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content
 
 3. **Iletiyi bastırın** ve ardından **kaynak '** ı seçin.
 
-   İletiyi gizleme, kod satırı için uyarıyı gösteren `#pragma(warning:`*Warnıngıd* `)` ekler.
+   Bir iletinin gizlenmesi `#pragma(warning:` *WarningId* `)` , kod satırıyla ilgili uyarıyı belirten warnıngıd öğesini ekler.
 
-## <a name="BKMK_Search"></a>Kod analizi sonuçlarını arama ve filtreleme
+## <a name="searching-and-filtering-code-analysis-results"></a><a name="BKMK_Search"></a> Kod analizi sonuçlarını arama ve filtreleme
  Uyarı iletilerinin uzun listelerinde arama yapabilir ve çok projeli çözümlerde uyarıları filtreleyebilirsiniz.
 
  ![Kod Analizi penceresinde arama ve filtreleme](../test/media/ca-searchfilter.png "CA_SearchFilter")
 
-## <a name="Warnings"></a>C++ kod analizi uyarıları
- Kod Analizi kod için C++ aşağıdaki uyarıları oluşturur:
+## <a name="c-code-analysis-warnings"></a><a name="Warnings"></a> C++ kod analizi uyarıları
+ Kod Analizi, C++ kodu için aşağıdaki uyarıları oluşturur:
 
-|                                      Kural                                      |                                                  Açıklama                                                  |
+|                                      Kural                                      |                                                  Description                                                  |
 |--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
 |                       [C6001](../code-quality/c6001.md)                        |                                          Başlatılmamış belleği kullanma                                           |
 |                       [C6011](../code-quality/c6011.md)                        |                                          Null Işaretçisinin başvurusu                                           |
@@ -147,13 +147,13 @@ Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content
 |                      [C28182](../code-quality/c28182.md)                       |         NULL işaretçiyle başvuruluyor. İşaretçi, başka bir işaretçi ile aynı NULL değeri içeriyor.          |
 |                      [C28202](../code-quality/c28202.md)                       |                                    Statik olmayan üyeye geçersiz başvuru                                     |
 |                      [C28203](../code-quality/c28203.md)                       |                                     Sınıf üyesine belirsiz başvuru.                                      |
-|                      [C28205](../code-quality/c28205.md)                       |                           geçersiz bağlamda kullanılan \_Success \_ veya \_On_failure \_                            |
+|                      [C28205](../code-quality/c28205.md)                       |                           \_\_ \_ \_ Geçersiz bağlamda kullanılan başarılı veya On_failure                            |
 |                      [C28206](../code-quality/c28206.md)                       |                                   Sol işlenen bir yapıya işaret ediyor, '-> ' kullanın                                   |
 |                      [C28207](../code-quality/c28207.md)                       |                                       Sol işlenen bir struct, '. ' kullanın                                       |
-|                      [C28210](../code-quality/c28210.md)                       |                 __On_failure bağlamının ek açıklamaları açık bir ön bağlamda olmamalıdır                  |
+|                      [C28210](../code-quality/c28210.md)                       |                 __On_failure bağlamı için ek açıklamalar açık bir ön bağlamda olmamalıdır                  |
 |                      [C28211](../code-quality/c28211.md)                       |                                 SAL_context için beklenen statik bağlam adı                                  |
 |                      [C28212](../code-quality/c28212.md)                       |                                  Ek açıklama için beklenen işaretçi ifadesi                                   |
-|                      [C28213](../code-quality/c28213.md)                       | @No__t_0Use_decl_annotations \_ ek açıklaması, önceki bir bildirime göre başvurulmadan başvurmak için kullanılmalıdır. |
+|                      [C28213](../code-quality/c28213.md)                       | \_Use_decl_annotations \_ ek açıklaması, değişiklik yapılmadan önceki bir bildirime başvurmak için kullanılmalıdır. |
 |                      [C28214](../code-quality/c28214.md)                       |                                   Öznitelik parametresi adları P1 olmalıdır... P9 olmalıdır                                   |
 |                      [C28215](../code-quality/c28215.md)                       |                    Typedüzeltmesini zaten bir tür düzeltmesine sahip olan bir parametreye uygulanamaz                    |
 |                      [C28216](../code-quality/c28216.md)                       |        CheckReturn ek açıklaması yalnızca belirli işlev parametresi için Sonkoşulları için geçerlidir.         |
@@ -162,7 +162,7 @@ Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content
 |                      [C28219](../code-quality/c28219.md)                       |                 Ek açıklamada parametre ek açıklaması için beklenen numaralandırma üyesi                 |
 |                      [C28220](../code-quality/c28220.md)                       |                  Ek açıklamada parametre ek açıklaması için beklenen tamsayı ifadesi                   |
 |                      [C28221](../code-quality/c28221.md)                       |                        Ek açıklamada parametre için beklenen dize ifadesi                         |
-|                      [C28222](../code-quality/c28222.md)                       |                               ek açıklama için __yes, \__no veya \__maybe bekleniyor                               |
+|                      [C28222](../code-quality/c28222.md)                       |                               \_ek açıklama için __yes, _No veya \_ _maybe bekleniyor                               |
 |                      [C28223](../code-quality/c28223.md)                       |                       Ek açıklama, parametre için beklenen belirteç/tanımlayıcı bulunamadı                        |
 |                      [C28224](../code-quality/c28224.md)                       |                                        Ek açıklama parametre gerektiriyor                                         |
 |                      [C28225](../code-quality/c28225.md)                       |                     Ek açıklamada gerekli parametrelerin doğru sayısı bulunamadı                      |
@@ -189,28 +189,28 @@ Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content
 |                      [C28251](../code-quality/c28251.md)                       |                       İşlev için tutarsız ek açıklama: Bu örnekte hata var.                       |
 |                      [C28252](../code-quality/c28252.md)                       |           İşlev için tutarsız ek açıklama: parametre bu örnekteki başka bir ek açıklamaya sahip.           |
 |                      [C28253](../code-quality/c28253.md)                       |           İşlev için tutarsız ek açıklama: parametre bu örnekteki başka bir ek açıklamaya sahip.           |
-|                      [C28254](../code-quality/c28254.md)                       |                               ek açıklamalarda dynamic_cast < > () desteklenmiyor                                |
+|                      [C28254](../code-quality/c28254.md)                       |                               dynamic_cast<> () ek açıklamalarda desteklenmez                                |
 |                      [C28262](../code-quality/c28262.md)                       |                    Ek açıklama için işlevde bir sözdizimi hatası bulundu                     |
 |                      [C28263](../code-quality/c28263.md)                       |                 Iç ek açıklamanın koşullu ek açıklamasında söz dizimi hatası bulundu                 |
 |                      [C28267](../code-quality/c28267.md)                       |                    Ek açıklamalarda bir söz dizimi hatası bulundu.                    |
 |                      [C28272](../code-quality/c28272.md)                       |      İşlevi için ek açıklama, incelenirken parametresi, işlev bildirimiyle tutarsız      |
 |                      [C28273](../code-quality/c28273.md)                       |                    İşlev için, ipuçları işlev bildirimiyle tutarsız                     |
-|                      [C28275](../code-quality/c28275.md)                       |                                   @No__t_0Macro_value \_ parametresi null                                    |
+|                      [C28275](../code-quality/c28275.md)                       |                                   \_Macro_value parametresi \_ null                                    |
 |                      [C28279](../code-quality/c28279.md)                       |                           Sembol için, eşleşen bir ' End ' olmadan bir ' begin' bulundu                            |
 |                      [C28280](../code-quality/c28280.md)                       |                           Sembol için, eşleşen bir ' begin' olmadan bir ' End ' bulundu                           |
 |                      [C28282](../code-quality/c28282.md)                       |                                    Biçim dizeleri ön koşullarda olmalıdır                                    |
 |                      [C28285](../code-quality/c28285.md)                       |                                    İşlev için, parametrede söz dizimi hatası                                    |
 |                      [C28286](../code-quality/c28286.md)                       |                                    İşlev için, sonda yakınında sözdizimi hatası                                    |
-|                      [C28287](../code-quality/c28287.md)                       |                İşlev için \_At \_ () ek açıklamasında söz dizimi hatası (Tanınmayan parametre adı)                |
-|                      [C28288](../code-quality/c28288.md)                       |                  İşlev için \_At \_ () ek açıklamasında söz dizimi hatası (geçersiz parametre adı)                   |
+|                      [C28287](../code-quality/c28287.md)                       |                İşlev için, \_ at \_ () ek açıklamasında söz dizimi hatası (Tanınmayan parametre adı)                |
+|                      [C28288](../code-quality/c28288.md)                       |                  İşlev için, \_ at \_ () ek açıklamasında söz dizimi hatası (geçersiz parametre adı)                   |
 |                      [C28289](../code-quality/c28289.md)                       |                İşlev için: ReadableTo veya WritableTo parametre olarak bir limit-spec içermiyordu                |
 |                      [C28290](../code-quality/c28290.md)                       |           işlev için ek açıklama, gerçek parametre sayısından daha fazla dışlar içeriyor            |
 |                      [C28291](../code-quality/c28291.md)                       |                        deref düzey 0 ' da null/NotNull Post işlevi için anlamsız bir küçüktür.                        |
 |                      [C28300](../code-quality/c28300.md)                       |                            İşleç için uyumsuz türlerin ifade işlenenleri                             |
 |                      [C28301](../code-quality/c28301.md)                       |                               İşlevin ilk bildirimi için ek açıklama yok.                               |
-|                      [C28302](../code-quality/c28302.md)                       |                             Ek açıklamada bir ek \_Deref \_ işleci bulundu.                              |
-|                      [C28303](../code-quality/c28303.md)                       |                           Ek açıklamada belirsiz bir \_Deref \_ işleci bulundu.                            |
-|                      [C28304](../code-quality/c28304.md)                       |                     Belirtece uygulanmış, uygun olmayan bir \_Notref \_ işleci bulundu.                      |
+|                      [C28302](../code-quality/c28302.md)                       |                             \_Ek açıklamada ek bir deref \_ işleci bulundu.                              |
+|                      [C28303](../code-quality/c28303.md)                       |                           \_Ek açıklamada belirsiz bir deref \_ işleci bulundu.                            |
+|                      [C28304](../code-quality/c28304.md)                       |                     Belirtece hatalı yerleştirilmiş \_ Notref \_ işleci bulundu.                      |
 |                      [C28305](../code-quality/c28305.md)                       |                                Belirteç ayrıştırılırken bir hata bulundu.                                 |
 |                      [C28350](../code-quality/c28350.md)                       |                  Ek açıklama koşullu olarak uygulanabilir olmayan bir durum tanımlar.                   |
 |                      [C28351](../code-quality/c28351.md)                       |         Ek açıklama, koşulda bir dinamik değerin (bir değişken) kullanılamayacağını açıklar.          |

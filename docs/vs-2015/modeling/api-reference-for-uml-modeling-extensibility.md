@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e48bf723b8b1cb77cc1f7f4de9cfb562caccde84
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672802"
 ---
 # <a name="api-reference-for-uml-modeling-extensibility"></a>UML Genişletilebilirlik Modellemesi için API Başvurusu
@@ -25,12 +25,12 @@ ms.locfileid: "72672802"
 
 Visual Studio ile oluşturduğunuz modelleri okumak ve değiştirmek için program kodu yazabilirsiniz. API başvurusu, bu konuda size yardımcı olacak belirli sınıflar hakkında bilgi sağlar. Daha fazla görev yönelimli bilgi için [UML modellerini ve diyagramlarını genişletme](../modeling/extend-uml-models-and-diagrams.md)altındaki konulara bakın. Hangi Visual Studio sürümlerini UML modellerini desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-## <a name="assemblies"></a>Bütünleştirilmiş kodlar
+## <a name="assemblies"></a>Bütünleştirilmiş Kodlar
 
-|Derleme|Bunu yapmanıza izin verir|
+|Bütünleştirilmiş Kod|Bunu yapmanıza izin verir|
 |--------------|--------------------------------|
-|Microsoft. VisualStudio. Uml. Interfaces. dll|-IUseCase, IAssociation gibi model öğelerini okuyun ve değiştirin.<br />-Öğeler arasındaki ilişkilere gidin.<br /><br /> Ad alanları ve türler, UML belirtiminde tanımlananlara karşılık gelir.|
-|Microsoft. VisualStudio. mimari Turetools. Extensibility. dll|-Model öğelerinin yeni örneklerini oluşturma<br />-Erişim ve şekilleri ve diyagramları değiştirme.|
+|Microsoft.VisualStudio.Uml.Interfaces.dll|-IUseCase, IAssociation gibi model öğelerini okuyun ve değiştirin.<br />-Öğeler arasındaki ilişkilere gidin.<br /><br /> Ad alanları ve türler, UML belirtiminde tanımlananlara karşılık gelir.|
+|Microsoft.VisualStudio.ArchitectureTools.Extensibility.dll|-Model öğelerinin yeni örneklerini oluşturma<br />-Erişim ve şekilleri ve diyagramları değiştirme.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Visual Studio Için modelleme SDK 'sı IÇIN](../modeling/api-reference-for-modeling-sdk-for-visual-studio.md) [UML modellerini ve Diyagramları Genişletme](../modeling/extend-uml-models-and-diagrams.md) API başvurusu

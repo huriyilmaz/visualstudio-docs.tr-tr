@@ -1,5 +1,5 @@
 ---
-title: FRAMEINFO_FLAGS | Microsoft Dokümanlar
+title: FRAMEINFO_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 3510726400623c5ddf3e7a4d58a4903763b91245
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736807"
 ---
 # <a name="frameinfo_flags"></a>FRAMEINFO_FLAGS
-Yığın çerçevesi nesnesi hakkında alınacak bilgileri belirtir.
+Yığın çerçeve nesnesi hakkında alınacak bilgileri belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_FRAMEINFO_FLAGS {
@@ -102,70 +102,70 @@ public enum enum_FRAMEINFO_FLAGS {
 
 ## <a name="fields"></a>Alanlar
 `FIF_FUNCNAME`\
-`m_bstrFuncName` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `m_bstrFuncName` .
 
 `FIF_RETURNTYPE`\
-`m_bstrReturnType` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `m_bstrReturnType` .
 
 `FIF_ARGS`\
-`m_bstrArgs` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `m_bstrArgs` .
 
 `FIF_LANGUAGE`\
-`m_bstrLanguage` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `m_bstrLanguage` .
 
 `FIF_MODULE`\
-`m_bstrModule` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `m_bstrModule` .
 
 `FIF_STACKRANGE`\
-Initialize/use `m_addrMin` the `m_addrMax` ve (stack range) alanları.
+`m_addrMin`Ve `m_addrMax` (yığın aralığı) alanlarını başlatın/kullanın.
 
 `FIF_FRAME`\
-`m_pFrame` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `m_pFrame` .
 
 `FIF_DEBUGINFO`\
-`m_fHasDebugInfo` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `m_fHasDebugInfo` .
 
 `FIF_STALECODE`\
-`m_fStaleCode` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `m_fStaleCode` .
 
 `FIF_ANNOTATEDFRAME`\
-`m_fAnnotatedFrame` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `m_fAnnotatedFrame` .
 
 `FIF_DEBUG_MODULEP`\
-`m_pModule` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `m_pModule` .
 
 `FIF_FUNCNAME_FORMAT`\
-Işlev adını biçimlendirin. Sonuç `m_bstrFunName` alanında döndürülür ve başka alan doldurulur.
+İşlev adını biçimlendirir. Sonuç `m_bstrFunName` alanda döndürülür ve başka hiçbir alan doldurulmaz.
 
 `FIF_FUNCNAME_RETURNTYPE`\
-`m_bstrFuncName` Alana dönüş türünü ekler.
+Alana dönüş türünü ekler `m_bstrFuncName` .
 
 `FIF_FUNCNAME_ARGS`\
 Bağımsız değişkenleri `m_bstrFuncName` alana ekler.
 
 `FIF_FUNCNAME_LANGUAGE`\
-`m_bstrFuncName` Dili alana ekler.
+Alana dili ekler `m_bstrFuncName` .
 
 `FIF_FUNCNAME_MODULE`\
-Modül adını alana `m_bstrFuncName` ekler.
+Alana modül adını ekler `m_bstrFuncName` .
 
 `FIF_FUNCNAME_LINES`\
-`m_bstrFuncName` Alana satır sayısını ekler.
+Alana satır sayısını ekler `m_bstrFuncName` .
 
 `FIF_FUNCNAME_OFFSET`\
-Belirtilmişse, satırın `m_bstrFuncName` `FIF_FUNCNAME_LINES` başlangıcından itibaren bayt cinsinden mahsup edilen ofset alana ekler. `FIF_FUNCNAME_LINES` Belirtilmemişse veya satır numaraları yoksa, işlevin başlangıcından itibaren mahsup tonlarını baytlara ekler.
+`m_bstrFuncName`Belirtilirse, satırın başından itibaren bayt cinsinden değeri ekler `FIF_FUNCNAME_LINES` . `FIF_FUNCNAME_LINES`Belirtilmezse veya satır numaraları yoksa, işlevin başından itibaren bayt cinsinden sapmayı ekler.
 
 `FIF_FUNCNAME_ARGS_TYPES`\
-Her işlev bağımsız değişkeninin `m_bstrFuncName` türünü alana ekler.
+Her işlev bağımsız değişkeninin türünü `m_bstrFuncName` alana ekler.
 
 `FIF_FUNCNAME_ARGS_NAMES`\
-Her işlev bağımsız değişkeninin `m_bstrFuncName` adını alana ekler.
+Her işlev bağımsız değişkeninin adını `m_bstrFuncName` alana ekler.
 
 `FIF_FUNCNAME_ARGS_VALUES`\
-Her işlev bağımsız değişkeninin `m_bstrFuncName` değerini alana ekler.
+Her işlev bağımsız değişkeninin değerini `m_bstrFuncName` alana ekler.
 
 `FIF_FUNCNAME_ARGS_ALL`\
-`m_bstrFuncName` Alana tüm bağımsız değişkenlerin türünü, adını ve değerini ekler.
+Tüm bağımsız değişkenlerin türünü, adını ve değerini `m_bstrFuncName` alana ekler.
 
 `FIF_ARGS_TYPES`\
 Bağımsız değişken türleri alınır ve biçimlendirilir.
@@ -180,34 +180,34 @@ Bağımsız değişken değerleri alınır ve biçimlendirilir.
 Tüm bağımsız değişkenlerin türünü, adını ve değerini alın ve biçimlendirin.
 
 `FIF_ARGS_NOFORMAT`\
-Bağımsız değişkenlerin biçimlendirilmediğini belirtir (örneğin, bağımsız değişken listesinin etrafına açılış ve kapatma parantezleri eklemeyin veya bağımsız değişkenler arasında ayırıcı eklemeyin).
+Bağımsız değişkenlerin biçimlendirilmediğini belirtir (örneğin, bağımsız değişken listesi etrafına açılış ve kapanış parantezleri eklemeyin ve bağımsız değişkenler arasında bir ayırıcı ekleyin).
 
 `FIF_ARGS_NO_FUNC_EVAL`\
-Bağımsız değişken değerlerini alırken işlev (özellik) değerlendirmesinin kullanılmaması gerektiğini belirtir.
+Bağımsız değişken değerleri alınırken işlev (özellik) değerlendirmesinin kullanılmayacağını belirtir.
 
 `FIF_FILTER_NON_USER_CODE`\
-Hata ayıklama altyapısı, kullanıcı olmayan kod çerçevelerine dahil edilmemek için filtreleme yapmaktır.
+Hata ayıklama altyapısı Kullanıcı olmayan kod çerçevelerini filtreleyerek dahil edilmez.
 
 `FIF_ARGS_NO_TOSTRING`\
-İşlev `ToString()` bağımsız değişkenlerini döndürürken işlev değerlendirmesine veya biçimlendirmeye izin vermeyin.
+`ToString()`İşlev bağımsız değişkenlerini döndürürken işlev değerlendirmesine veya biçimlendirmeye izin vermeyin.
 
 `FIF_DESIGN_TIME_EXPR_EVAL`\
 Çerçeve bilgileri barındırma işlemi yerine barındırılan uygulama etki alanından alınmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu bayraklar, [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) yapısında veya yapılarında hangi alanların başlatılması gerektiğini belirtmek için [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) ve [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) yöntemlerine geçirilir.
+Bu bayraklar, [frameInfo](../../../extensibility/debugger/reference/frameinfo.md) yapısında veya yapılarında hangi alanların başlatıldığını göstermek Için [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) ve [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) yöntemlerine geçirilir.
 
-Bu bayraklar, [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) yapısının hangi alanlarının kullanıldığını belirtmek için de kullanılır ve yapı döndürüldüğünde geçerlidir. Bu değerler biraz ile `OR`birleştirilebilir.
+Bu bayraklar Ayrıca, [frameInfo](../../../extensibility/debugger/reference/frameinfo.md) yapısının hangi alanlarının kullanıldığını ve yapı döndürüldüğünde geçerli olduğunu göstermek için de kullanılır. Bu değerler, bit düzeyinde birleştirilebilir `OR` .
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)
 - [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)
 - [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md)

@@ -1,51 +1,52 @@
 ---
-title: IDebugManagedObject::SetFromManagedObject | Microsoft Docs
-ms.date: 11/04/2016
+title: 'IDebugManagedObject:: SetFromManagedObject | Microsoft Docs'
+ms.date: 11/15/2016
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-sdk
 ms.topic: reference
 f1_keywords:
 - IDebugManagedObject::SetFromManagedObject
 helpviewer_keywords:
 - IDebugManagedObject::SetFromManagedObject method
 ms.assetid: 8700ee8d-2704-4580-bccc-046837a24edd
-author: gregvanl
+caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
-ms.workload:
-- vssdk
 ms.openlocfilehash: 5fa81c34f18d6f1d3980da8d53c65f5ef58c05f3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180596"
 ---
 # <a name="idebugmanagedobjectsetfrommanagedobject"></a>IDebugManagedObject::SetFromManagedObject
-Bir parametre olarak sağlanan değer sınıfının örneğini değer sınıf nesnesini örneğinin değerini ayarlar.
+[!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-## <a name="syntax"></a>Sözdizimi
-
-```cpp
-HRESULT SetFromManagedObject( 
-   IUnknown* pManagedObject
-);
-```
-
-```csharp
-int SetFromManagedObject(
-   object pManagedObject
-);
-```
-
-#### <a name="parameters"></a>Parametreler
- `pManagedObject`
-
- [in] Yeni değer içeren yönetilen nesneyi temsil eden arabirim.
-
-## <a name="return-value"></a>Dönüş Değeri
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.
-
-## <a name="remarks"></a>Açıklamalar
- Bu yöntem tarafından temsil edilen yönetilen nesneyi değiştirmek için kullanılan [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) nesne.
-
-## <a name="see-also"></a>Ayrıca Bkz.
-- [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)
+Parametre olarak sunulan değer sınıfının örneğinden değer sınıfı nesnesinin örneğinin değerini ayarlar.  
+  
+## <a name="syntax"></a>Söz dizimi  
+  
+```cpp#  
+HRESULT SetFromManagedObject(   
+   IUnknown* pManagedObject  
+);  
+```  
+  
+```csharp  
+int SetFromManagedObject(  
+   object pManagedObject  
+);  
+```  
+  
+#### <a name="parameters"></a>Parametreler  
+ `pManagedObject`  
+ 'ndaki Yeni değeri içeren yönetilen nesneyi temsil eden bir arabirim.  
+  
+## <a name="return-value"></a>Dönüş Değeri  
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.  
+  
+## <a name="remarks"></a>Açıklamalar  
+ Bu yöntem, yönetilen nesneyi [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) nesnesi tarafından temsil edildiği şekilde değiştirmek için kullanılır.  
+  
+## <a name="see-also"></a>Ayrıca Bkz.  
+ [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)

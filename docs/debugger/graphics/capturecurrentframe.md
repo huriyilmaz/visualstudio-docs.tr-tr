@@ -9,26 +9,26 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b9967d776845088e707035c7b1c56855ac80af82
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72736130"
 ---
 # <a name="capturecurrentframe"></a>CaptureCurrentFrame
 Geçerli çerçevenin kalan kısmını grafik günlük dosyasına yakalar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```C++
 void CaptureCurrentFrame();
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- Şu anda başka bir yakalama devam ediyorsa — `BeginCapture` işlevi tarafından başlatılan yakalama gibi), yakalama tamamlanır ve grafik günlüğüne ayrı bir çerçeve olarak kaydedilir. Daha sonra, grafik tanılama, aynı zamanda farklı bir çerçeve olarak kaydedilen geçerli çerçevenin kalanını yakalamaya başlar. Geçerli çerçevenin bitişi, var olan bir çağrı tarafından işaretlenmiş.
+ Başka bir yakalama devam ediyorsa (işlev tarafından başlatılan yakalama gibi `BeginCapture` ), yakalama tamamlanır ve grafik günlüğüne ayrı bir çerçeve olarak kaydedilir. Daha sonra, grafik tanılama, aynı zamanda farklı bir çerçeve olarak kaydedilen geçerli çerçevenin kalanını yakalamaya başlar. Geçerli çerçevenin bitişi, var olan bir çağrı tarafından işaretlenmiş.
 
- Bir çerçeveyi yakalamak için, uygulamanızı grafik bilgilerini yakalamak ve kaydetmek üzere hazırlamanız gerekir — Yani, `CaptureCurrentFrame` çağırmadan önce `VsgDbg` sınıfının bir örneğinden [Init](init.md) olarak adlandırmanız gerekir.
+ Bir çerçeveyi yakalamak için, uygulamanızı grafik bilgilerini yakalamak ve kaydetmek üzere hazırlamanız gerekir — diğer bir deyişle, çağrılmadan önce sınıfın bir örneğini [başlatma](init.md) olarak adlandırmanız gerekir `VsgDbg` `CaptureCurrentFrame` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Init](init.md)
+- [Dengeleyici](init.md)
 - [BeginCapture](begincapture.md)

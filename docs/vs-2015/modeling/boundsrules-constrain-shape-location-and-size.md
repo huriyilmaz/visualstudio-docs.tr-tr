@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7d660189ede0848216eb44d6ef49fe9c93a06ec8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672724"
 ---
 # <a name="boundsrules-constrain-shape-location-and-size"></a>BoundsRules Şekil Konumunu ve Boyutunu Kısıtlamama
@@ -25,7 +25,7 @@ ms.locfileid: "72672724"
 
  Aşağıdaki örnek, dikdörtgen bir şekli sabit boyutun yatay veya dikey bir çubuğu olacak şekilde kısıtlar. Kullanıcı köşeleri veya kenarları sürüklediğinde, ana hat yükseklik ve genişlik için izin verilen iki yapılandırma arasında ters döndürülür.
 
- Sınır kuralı <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules> türetilmiş bir sınıftır. Şekil içinde kuralın bir örneği oluşturulur:
+ Sınır kuralı, öğesinden türetilmiş bir sınıftır <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules> . Şekil içinde kuralın bir örneği oluşturulur:
 
 ```
 using Microsoft.VisualStudio.Modeling.Diagrams; ...
@@ -68,4 +68,4 @@ public class BarBoundsRule: BoundsRules
  İsterseniz hem konum hem de boyutun kısıtlandığına dikkat edin.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [değişikliklere yanıt verme ve değişiklikleri yayma](../modeling/responding-to-and-propagating-changes.md) <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules>
+ <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules> [Değişikliklere Yanıt Verme ve Değişiklikleri Yayma](../modeling/responding-to-and-propagating-changes.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramPublisher2::PublishProgram | Microsoft Dokümanlar
+title: IDebugProgramPublisher2::P ublishProgram | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 20de162bdc3be2cc4771c9746b13c40a1e140a96
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721678"
 ---
 # <a name="idebugprogrampublisher2publishprogram"></a>IDebugProgramPublisher2::PublishProgram
-Bu yöntem, hata ayıklama motorları (DEs) ve oturum hata ayıklama yöneticisi için bir program kullanılabilir hale getirir.
+Bu yöntem, bir programı hata ayıklama motorları (DEs) ve oturum hata ayıklama Yöneticisi için kullanılabilir hale getirir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT PublishProgram(
@@ -45,19 +45,19 @@ int PublishProgram(
 
 ## <a name="parameters"></a>Parametreler
 `Engines`\
-[içinde] Bu programı başlatabilen veya ekleyen D'ler için bir dizi GUID.
+'ndaki Bu programı başlatabileceği veya bu programa ekleyebileceğiniz DEs için GUID dizisi.
 
 `szFriendlyName`\
-[içinde] Programın dostu adı (bu kullanıcıya sunulan menülerde veya iletişim lerde görünür).
+'ndaki Program için kolay ad (Bu, kullanıcıya sunulan menülerde veya iletişim kutularında görünür).
 
 `pDebuggeeInterface`\
-[içinde] `IUnknown` program için arayüz (bu değer programı benzersiz tanımlamak için bir çerez olarak kullanılır; bu aynı değer programı "yayımlamamak" için kullanılır)
+[in] `IUnknown` program arabirimi (Bu değer programı benzersiz bir şekilde tanımlamak için bir tanımlama bilgisi olarak kullanılır; Bu aynı değer programı "yayımdan kaldırmak" için kullanılır)
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir programı hata ayıklama için artık kullanılamıyor yapmak için [Yayımlama Programı'nı](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)arayın.
+ Bir programı artık hata ayıklama için kullanılamaz hale getirmek için, [UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)' ı çağırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)
