@@ -1,5 +1,5 @@
 ---
-title: Hata ayıklama, Seçenekler iletişim kutusu | Microsoft Docs
+title: Hata ayıklama, Seçenekler Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -26,16 +26,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0b1ab0f4875dcafc14b4b9fb8d3922d26e394c22
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190478"
 ---
 # <a name="debugging-options-dialog-box"></a>Hata Ayıklama, Seçenekler İletişim Kutusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Hata ayıklama** klasörü içinde **seçenekleri** iletişim kutusunda **Araçları** menüsünde, hata ayıklayıcı belirtmenize olanak verir sayfalarda araç seçenekleri sağlar.  
+**Hata ayıklama** klasörü, **Araçlar** menüsündeki **Seçenekler** iletişim kutusunda, hata ayıklayıcı araç seçeneklerini belirtmenizi sağlayan aşağıdaki sayfaları sağlar.  
   
 - [Genel, Hata Ayıklama, Seçenekler İletişim Kutusu](../debugger/general-debugging-options-dialog-box.md)  
   
@@ -43,9 +43,9 @@ ms.locfileid: "68190478"
   
 - [Çıkış Penceresi, Hata Ayıklama, Seçenekler İletişim Kutusu](../debugger/output-window-debugging-options-dialog-box.md)  
   
-- [Simgeler, hata ayıklama, Seçenekler iletişim kutusu](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
+- [Semboller, hata ayıklama, Seçenekler Iletişim kutusu](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)   
- [Visual Studio'da hata ayıklama](../debugger/debugging-in-visual-studio.md)   
- [Kullanıcı arabirim başvurusunda hata ayıklama](../debugger/debugging-user-interface-reference.md)
+ [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)   
+ [Visual Studio 'da hata ayıklama](../debugger/debugging-in-visual-studio.md)   
+ [Kullanıcı Arabirim Başvurusunda Hata Ayıklama](../debugger/debugging-user-interface-reference.md)

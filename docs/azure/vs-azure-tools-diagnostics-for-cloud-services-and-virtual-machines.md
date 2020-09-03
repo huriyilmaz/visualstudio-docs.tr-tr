@@ -9,10 +9,10 @@ ms.workload: azure-vs
 ms.date: 06/28/2018
 ms.author: mikejo
 ms.openlocfilehash: d8da94fc7b4735198eafa33edfe72cba0eb1ea59
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72911861"
 ---
 # <a name="set-up-diagnostics-for-azure-cloud-services-and-virtual-machines"></a>Azure Cloud Services ve sanal makineler için tanılamayı ayarlama
@@ -28,14 +28,14 @@ Azure Tanılama ayarlamak için aşağıdaki seçeneklerden birini kullanabilirs
 ## <a name="azure-sdk-26-diagnostics-changes"></a>Azure SDK 2,6 tanılama değişiklikleri
 Aşağıdaki değişiklikler, Visual Studio 'da Azure SDK 2,6 ve üzeri projeler için geçerlidir:
 
-* Yerel öykünücü artık tanılamayı desteklemektedir. Bu, tanılama verilerini toplayabileceğiniz ve Visual Studio 'da geliştirme ve test yaparken uygulamanızın doğru izlemeleri oluşturduğundan emin olmanızı sağlayan anlamına gelir. Azure depolama öykünücüsünü kullanarak Visual Studio 'da bulut hizmeti projenizi çalıştırırken, bağlantı dizesi `UseDevelopmentStorage=true` tanılama veri toplamayı etkinleştirir. Tüm Tanılama verileri, geliştirme depolama depolama hesabında toplanır.
-* Tanılama depolama hesabı bağlantı dizesi `Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString`, hizmet yapılandırma (. cscfg) dosyasında depolanır. Azure SDK 2,5 ' de tanılama depolama hesabı, Diagnostics. wadcfgx dosyasında belirtilir.
+* Yerel öykünücü artık tanılamayı desteklemektedir. Bu, tanılama verilerini toplayabileceğiniz ve Visual Studio 'da geliştirme ve test yaparken uygulamanızın doğru izlemeleri oluşturduğundan emin olmanızı sağlayan anlamına gelir. `UseDevelopmentStorage=true`Azure Storage öykünücüsü ' nü kullanarak, Visual Studio 'da bulut hizmeti projenizi çalıştırırken, bağlantı dizesi tanılama veri toplamayı etkinleştirir. Tüm Tanılama verileri, geliştirme depolama depolama hesabında toplanır.
+* Tanılama depolama hesabı bağlantı dizesi, `Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString` hizmet yapılandırma (. cscfg) dosyasında depolanır. Azure SDK 2,5 ' de tanılama depolama hesabı, Diagnostics. wadcfgx dosyasında belirtilir.
 
 Bağlantı dizesi, Azure SDK 2,6 ve üzeri sürümlerde Azure SDK 2,4 ve önceki sürümlerde bazı önemli yollarla farklı çalışır:
 
 * Azure SDK 2,4 ve önceki sürümlerde, bağlantı dizesi, tanılama günlüklerini aktarmaya yönelik depolama hesabı bilgilerini almak için tanılama eklentisi tarafından bir çalışma zamanı olarak kullanılır.
 * Azure SDK 2,6 ve sonraki sürümlerinde, Visual Studio, yayımlama sırasında uygun depolama hesabı bilgileriyle Azure Tanılama uzantısını ayarlamak için tanılama bağlantı dizesini kullanır. Visual Studio 'Nun yayımlama sırasında kullandığı farklı hizmet yapılandırmalarına yönelik farklı depolama hesapları tanımlamak için bağlantı dizesini kullanabilirsiniz. Ancak, tanılama eklentisi Azure SDK 2,5 sonrasında kullanılamadığından,. cscfg dosyası kendisi için tanılama uzantısını ayarlayamayabilir. Uzantıyı Visual Studio veya PowerShell gibi araçları kullanarak ayrı olarak ayarlamanız gerekir.
-* PowerShell kullanarak tanılama uzantısını ayarlama sürecini basitleştirmek için, Visual Studio 'daki paket çıktısı her rolün tanılama uzantısının ortak yapılandırma XML 'sini içerir. Visual Studio, genel yapılandırmadaki depolama hesabı bilgilerini doldurmak için tanılama bağlantı dizesini kullanır. Ortak yapılandırma dosyaları uzantılar klasöründe oluşturulur. Ortak yapılandırma dosyaları, PaaSDiagnostics adlandırma düzenlerini kullanır. rol adı\>&lt;. PubConfig. xml. Herhangi bir PowerShell tabanlı dağıtımlar, her yapılandırmayı bir rolle eşlemek için bu kalıbı kullanabilir.
+* PowerShell kullanarak tanılama uzantısını ayarlama sürecini basitleştirmek için, Visual Studio 'daki paket çıktısı her rolün tanılama uzantısının ortak yapılandırma XML 'sini içerir. Visual Studio, genel yapılandırmadaki depolama hesabı bilgilerini doldurmak için tanılama bağlantı dizesini kullanır. Ortak yapılandırma dosyaları uzantılar klasöründe oluşturulur. Ortak yapılandırma dosyaları, PaaSDiagnostics adlandırma düzenlerini kullanır. &lt; rol adı \>.PubConfig.xml. Herhangi bir PowerShell tabanlı dağıtımlar, her yapılandırmayı bir rolle eşlemek için bu kalıbı kullanabilir.
 * [Azure Portal](https://portal.azure.com) , tanılama verilerine erişmek için. cscfg dosyasındaki bağlantı dizesini kullanır. Veriler **izleme** sekmesinde görüntülenir. Bağlantı dizesi, hizmeti portalda ayrıntılı izleme verilerini gösterecek şekilde ayarlamak için gereklidir.
 
 ## <a name="migrate-projects-to-azure-sdk-26-and-later"></a>Projeleri Azure SDK 2,6 ve üzeri sürümlere geçirme
@@ -43,13 +43,13 @@ Azure SDK 2,5 ' den Azure SDK 2,6 veya sonraki bir sürüme geçirdiğinizde,. w
 
 ### <a name="how-visual-studio-determines-the-diagnostics-storage-account"></a>Visual Studio 'Nun tanılama depolama hesabını nasıl belirlediği
 * . Cscfg dosyasında bir tanılama bağlantı dizesi belirtilmişse, Visual Studio bunu yayınlama sırasında ve paketleme sırasında ortak yapılandırma XML dosyalarını oluşturduğunda, tanılama uzantısını ayarlamak için kullanır.
-* . Cscfg dosyasında bir tanılama bağlantı dizesi belirtilmemişse, Visual Studio yayımlamak için tanılama uzantısını ayarlamak ve ortak yapılandırma XML 'i oluşturmak için. wadcfgx dosyasında belirtilen depolama hesabını kullanmaya geri döner Paketleme sırasında dosyalar.
+* . Cscfg dosyasında bir tanılama bağlantı dizesi belirtilmemişse, Visual Studio, yayımlama için tanılama uzantısını ayarlamak ve paketleme sırasında ortak yapılandırma XML dosyalarını oluşturmak için. wadcfgx dosyasında belirtilen depolama hesabını kullanmaya geri döner.
 * . Cscfg dosyasındaki tanılama bağlantı dizesi. wadcfgx dosyasındaki depolama hesabından önceliklidir. . Cscfg dosyasında bir tanılama bağlantı dizesi belirtilirse, Visual Studio bu bağlantı dizesini kullanır ve. wadcfgx içindeki depolama hesabını yoksayar.
 
 ### <a name="what-does-the-update-development-storage-connection-strings-check-box-do"></a>"Geliştirme depolama bağlantı dizelerini güncelleştir..." onay kutusu yapılsın mı?
-Microsoft Azure onay kutusu **Microsoft Azure depolama hesabı kimlik bilgileriyle tanılama ve önbelleğe alma Için güncelleştirme geliştirme depolama bağlantı dizeleri** , herhangi bir geliştirme depolama hesabı bağlantısını güncelleştirmenin kolay bir yoludur Yayımlama sırasında belirttiğiniz Azure depolama hesabı ile dizeler.
+**Microsoft Azure 'de yayımlarken Microsoft Azure depolama hesabı kimlik bilgileriyle tanılama ve önbelleğe alma Için güncelleştirme geliştirme depolama bağlantı dizeleri** , yayımlama sırasında belirttiğiniz Azure depolama hesabı ile tüm geliştirme depolama hesabı bağlantı dizelerini güncelleştirmenin kolay bir yoludur.
 
-Örneğin, bu onay kutusunu seçerseniz ve tanılama bağlantı dizesi `UseDevelopmentStorage=true`belirtiyorsa, projeyi Azure 'da yayımladığınızda, Visual Studio tanılama bağlantı dizesini otomatik olarak ' de belirttiğiniz depolama hesabıyla güncelleştirir. Yayımlama Sihirbazı. Ancak, tanılama bağlantı dizesi olarak gerçek bir depolama hesabı belirtilmişse, bunun yerine bu hesap kullanılır.
+Örneğin, bu onay kutusunu seçerseniz ve tanılama bağlantı dizesi belirtiyorsa `UseDevelopmentStorage=true` , projeyi Azure 'da yayımladığınızda, Visual Studio otomatik olarak tanılama bağlantı dizesini Yayımla sihirbazında belirttiğiniz depolama hesabıyla güncelleştirir. Ancak, tanılama bağlantı dizesi olarak gerçek bir depolama hesabı belirtilmişse, bunun yerine bu hesap kullanılır.
 
 ## <a name="diagnostics-functionality-differences-in-azure-sdk-24-and-earlier-vs-azure-sdk-25-and-later"></a>Azure SDK 2,4 ve önceki sürümlerinde ve Azure SDK 2,5 ve üzeri ile tanılama işlevselliği farklılıkları
 Projenizi Azure SDK 2,4 ve önceki sürümlerden Azure SDK 2,5 veya sonraki bir sürüme yükseltiyorsanız aşağıdaki tanılama işlevselliği farklarını aklınızda bulundurun:
@@ -77,7 +77,7 @@ Visual Studio 'da, dağıtımdan önce hizmet öykünücüsünde hizmeti çalı�
 
     ![Depolama hesabı iletişim kutusu](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC796662.png)
 
-   * **Microsoft Azure depolama öykünücüsü**' nü seçerseniz bağlantı dizesi `UseDevelopmentStorage=true`olarak ayarlanır.
+   * **Microsoft Azure depolama öykünücüsü**' nü seçerseniz bağlantı dizesi olarak ayarlanır `UseDevelopmentStorage=true` .
    * **Aboneliğinizi**seçerseniz, kullanmak istediğiniz Azure aboneliğini seçip hesap adını girebilirsiniz. Azure aboneliklerinizi yönetmek için **hesapları Yönet**' i seçin.
    * **El ile girilen kimlik bilgilerini**seçerseniz, kullanmak istediğiniz Azure hesabının adını ve anahtarını girin.
 5. **Tanılama yapılandırması** iletişim kutusunu görüntülemek için **Yapılandır**' ı seçin. **Genel** ve **günlük dizinleri**hariç her sekme, toplayacağınız bir tanılama veri kaynağını temsil eder. Varsayılan **genel** sekmesi aşağıdaki tanılama veri toplama seçeneklerini sunar: **Yalnızca hatalar**, **tüm bilgiler**ve **özel plan**. Yalnızca varsayılan **hatalar** seçeneği, uyarıları veya izleme iletilerini aktarmadığı için en az depolama alanı miktarını kullanır. **Tüm bilgi** seçeneği en çok bilgiyi aktarır, en çok depolama alanını kullanır ve bu nedenle en pahalı seçenektir.
@@ -89,7 +89,7 @@ Visual Studio 'da, dağıtımdan önce hizmet öykünücüsünde hizmeti çalı�
     ![Azure tanılama ve yapılandırmasını etkinleştirme](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC758144.png)
 6. Bu örnekte, toplanan verileri özelleştirebilmeniz için **özel plan** seçeneğini belirleyin.
 7. **Disk KOTASı MB olarak** kutusunda, tanılama verileri için depolama hesabınızda ne kadar alan ayrılacağını belirleyebilirsiniz. Varsayılan değeri değiştirebilir veya kabul edebilirsiniz.
-8. Toplamak istediğiniz tanılama verilerinin her bir sekmesinde **\<günlük türünün aktarımını etkinleştir\>** onay kutusunu seçin. Örneğin, uygulama günlüklerini toplamak istiyorsanız **, uygulama günlükleri sekmesinde** **uygulama günlüklerinin aktarımını etkinleştir** onay kutusunu seçin. Ayrıca, her bir tanılama veri türü için gereken diğer bilgileri de belirtin. Her bir sekmeye ait yapılandırma bilgileri için, bu makalenin ilerleyen bölümlerinde **Tanılama veri kaynaklarını ayarlama** bölümüne bakın.
+8. Toplamak istediğiniz tanılama verilerinin her sekmesinde, **aktarımını \<log type\> Etkinleştir** onay kutusunu seçin. Örneğin, uygulama günlüklerini toplamak istiyorsanız **, uygulama günlükleri sekmesinde** **uygulama günlüklerinin aktarımını etkinleştir** onay kutusunu seçin. Ayrıca, her bir tanılama veri türü için gereken diğer bilgileri de belirtin. Her bir sekmeye ait yapılandırma bilgileri için, bu makalenin ilerleyen bölümlerinde **Tanılama veri kaynaklarını ayarlama** bölümüne bakın.
 9. İstediğiniz tüm tanılama verilerinin toplanmasını etkinleştirdikten sonra **Tamam**' ı seçin.
 10. Azure bulut hizmeti projenizi her zamanki gibi Visual Studio 'da çalıştırın. Uygulamanızı kullanırken, etkinleştirdiğiniz günlük bilgileri belirttiğiniz Azure depolama hesabına kaydedilir.
 
@@ -121,7 +121,7 @@ Visual Studio 'da Azure sanal makineleri için tanılama verileri toplayabilirsi
     Varsayılan sekmesi olan **genel**, aşağıdaki tanılama veri toplama seçeneklerini sunar: **Yalnızca hatalar**, **tüm bilgiler**ve **özel plan**. Varsayılan seçenek olan **Yalnızca hatalar**, uyarıları veya izleme iletilerini aktarmadığından en az depolama alanı miktarını alır. **Tüm bilgiler** seçeneği, en fazla bilgiyi aktarır ve bu nedenle depolama açısından en pahalı seçenektir.
 7. Bu örnekte, toplanan verileri özelleştirebilmeniz için **özel plan** seçeneğini belirleyin.
 8. **MB cinsinden disk kotası** kutusunda, tanılama verileri için depolama hesabınızda ne kadar alan tahsis etmek istediğinizi belirtir. İsterseniz varsayılan değeri değiştirebilirsiniz.
-9. Toplamak istediğiniz tanılama verilerinin her sekmesinde, **\<günlük türünün aktarımını etkinleştir\>** onay kutusunu seçin.
+9. Toplamak istediğiniz tanılama verilerinin her sekmesinde, onay kutusunun **aktarımını \<log type\> Etkinleştir** ' i seçin.
 
     Örneğin, uygulama günlüklerini toplamak istiyorsanız **uygulama** günlükleri sekmesinde **uygulama günlüklerinin aktarımını etkinleştir** onay kutusunu seçin. Ayrıca, her bir tanılama veri türü için gereken diğer bilgileri de belirtin. Her bir sekmeye ait yapılandırma bilgileri için, bu makalenin ilerleyen bölümlerinde **Tanılama veri kaynaklarını ayarlama** bölümüne bakın.
 10. İstediğiniz tüm tanılama verilerinin toplanmasını etkinleştirdikten sonra **Tamam**' ı seçin.
@@ -144,9 +144,9 @@ Windows olay günlüklerini yakalamak için **Windows olay günlüklerinin aktar
 
 ![Olay günlükleri](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC796664.png)
 
-Azure SDK 2,6 veya sonraki bir sürümünü kullanıyorsanız ve özel bir veri kaynağı belirtmek istiyorsanız, **\<veri kaynağı adı\>** metin kutusuna girin ve ardından **Ekle**' yi seçin. Veri kaynağı Diagnostics. cfcfg dosyasına eklenir.
+Azure SDK 2,6 veya sonraki bir sürümünü kullanıyorsanız ve özel bir veri kaynağı belirtmek istiyorsanız, **\<Data source name\>** metin kutusuna girin ve ardından **Ekle**' yi seçin. Veri kaynağı Diagnostics. cfcfg dosyasına eklenir.
 
-Azure SDK 2,5 kullanıyorsanız ve özel bir veri kaynağı belirtmek istiyorsanız, bunu aşağıdaki örnekte olduğu gibi Diagnostics. wadcfgx dosyasının `WindowsEventLog` bölümüne ekleyebilirsiniz:
+Azure SDK 2,5 kullanıyorsanız ve özel bir veri kaynağı belirtmek istiyorsanız, bunu `WindowsEventLog` Aşağıdaki örnekte olduğu gibi Diagnostics. wadcfgx dosyasının bölümüne ekleyebilirsiniz:
 
 ```xml
 <WindowsEventLog scheduledTransferPeriod="PT1M">
@@ -187,12 +187,12 @@ Olaylar, belirttiğiniz olay kaynaklarından ve olay bildirimlerinden yakalanır
 
 ETW çerçevesi, [System. Diagnostics. aspx](https://msdn.microsoft.com/library/system.diagnostics(v=vs.110)) ad alanındaki sınıflar aracılığıyla ASP.net desteklenir. Standart [System. Diagnostics. aspx](https://msdn.microsoft.com/library/system.diagnostics(v=vs.110)) sınıflarını devralan ve genişleten Microsoft. WindowsAzure. Diagnostics ad alanı, Azure ortamında bir günlük oluşturma çerçevesi olarak [System. Diagnostics. aspx](https://msdn.microsoft.com/library/system.diagnostics(v=vs.110)) kullanımını mümkün kılar. Daha fazla bilgi için bkz. [Microsoft Azure 'da günlüğe kaydetme ve izleme denetimi yapın](https://msdn.microsoft.com/magazine/ff714589.aspx) ve [Azure Cloud Services ve sanal makinelerde tanılamayı etkinleştirin](/azure/cloud-services/cloud-services-dotnet-diagnostics).
 
-### <a name="crash-dumps"></a>Kilitlenme dökümleri
+### <a name="crash-dumps"></a>Kilitlenme bilgi dökümleri
 Bir rol örneğinin çöktüğü hakkında bilgi yakalamak için **kilitlenme dökümlerinin aktarımını etkinleştir** onay kutusunu seçin. (ASP.NET çoğu özel durumu işleyeceğinden, bu genellikle yalnızca çalışan rolleri için yararlıdır.) Kilitlenme dökümlerinde ayrılan depolama alanı yüzdesini artırmak veya azaltmak için **Dizin kotası (%)** değerini değiştirin. Kilitlenme dökümlerinin depolandığı depolama kapsayıcısını değiştirebilir ve **tam** ya da **mini** döküm yakalamak isteyip istemediğinizi seçebilirsiniz.
 
 Şu anda izlenmekte olan süreçler bir sonraki ekran görüntüsünde listelenmiştir. Yakalamak istediğiniz işlemlerin onay kutularını seçin. Listeye başka bir işlem eklemek için işlem adını girip **Işlem Ekle**' yi seçin.
 
-![Kilitlenme dökümleri](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC766026.png)
+![Kilitlenme bilgi dökümleri](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC766026.png)
 
 Daha fazla bilgi için bkz. [Microsoft Azure 'da günlüğe kaydetme ve izleme denetimi alma](https://msdn.microsoft.com/magazine/ff714589.aspx) ve [Bölüm 4: özel günlük bileşenleri ve Azure Tanılama 1,3 değişiklikleri Microsoft Azure tanılama](https://www.red-gate.com/simple-talk/cloud/platform-as-a-service/microsoft-azure-diagnostics-part-4-custom-logging-components-and-azure-diagnostics-1.3-changes/).
 
@@ -216,14 +216,14 @@ Bir bulut hizmeti veya sanal makine için tanılama verilerini topladıktan sonr
     Bulut Gezgini ' nde veya Sunucu Gezgini, dağıtımla ilişkili depolama hesabını açın.
 3. Tablo görüntüleyicisinde tanılama tablolarını açın ve ardından topladığınız verileri gözden geçirin. IIS günlükleri ve özel Günlükler için bir blob kapsayıcısı açabilirsiniz. Aşağıdaki tabloda, farklı günlük dosyaları için verileri içeren tablolar veya blob kapsayıcıları listelenmektedir. Bu günlük dosyası için verilere ek olarak, tablo girişleri **Eventtickcount**, **DeploymentId**, **rol**ve **roleınstance**, verileri hangi sanal makine ve rolün oluşturulduğunu belirlemenize yardımcı olur.
 
-   | Tanılama verileri | Açıklama | Konum |
+   | Tanılama verileri | Description | Konum |
    | --- | --- | --- |
    | Uygulama günlükleri |**System. Diagnostics. Trace** sınıfının yöntemlerini çağırarak kodunuzun oluşturduğu Günlükler. |WADLogsTable |
    | Olay günlükleri |Sanal makinelerdeki Windows olay günlüklerinden alınan veriler. Windows, bilgileri bu günlüklerde depolar, ancak uygulamalar ve hizmetler, hataları veya günlük bilgilerini raporlamak için günlükleri de kullanır. |WADWindowsEventLogsTable |
    | Performans sayaçları |Sanal makinede bulunan herhangi bir performans sayacı üzerinde veri toplayabilirsiniz. İşletim sistemi, bellek kullanımı ve işlemci zamanı gibi birçok istatistiği içeren performans sayaçlarını sağlar. |WADPerformanceCountersTable |
    | Altyapı günlükleri |Tanılama altyapısının kendisinden oluşturulan Günlükler. |WADDiagnosticInfrastructureLogsTable |
    | IIS günlükleri |Web isteklerini kaydeden Günlükler. Bulut hizmetiniz önemli miktarda trafik alırsa, bu Günlükler uzun olabilir. Bu verileri yalnızca ihtiyacınız olduğunda toplamak ve depolamak iyi bir fikirdir. |Başarısız-istek günlüklerini, bu dağıtım, rol ve örnek için bir yol altında wad-IIS-failedreqlogs altında bulunan BLOB kapsayıcısında bulabilirsiniz. Tüm günlükleri wad-IIS-LogFiles altında bulabilirsiniz. Her bir dosyanın girişleri Waddizinler tablosunda yapılır. |
-   | Kilitlenme dökümleri |Bulut hizmetinizin işleminin (genellikle bir çalışan rolü) ikili görüntülerini sağlar. |WAD-Crush-blob kapsayıcısı dökümünü alır |
+   | Kilitlenme bilgi dökümleri |Bulut hizmetinizin işleminin (genellikle bir çalışan rolü) ikili görüntülerini sağlar. |WAD-Crush-blob kapsayıcısı dökümünü alır |
    | Özel günlük dosyaları |Önceden tanımlamış olduğunuz verilerin günlükleri. |Depolama hesabınızdaki özel günlük dosyalarının konumunu kod içinde belirtebilirsiniz. Örneğin, özel bir blob kapsayıcısı belirtebilirsiniz. |
 4. Herhangi bir türün verileri kesilmişse, bu veri türü için arabelleği artırmayı deneyebilir veya sanal makineden depolama hesabınıza veri aktarımları arasındaki aralığı kısaltaştırın.
 5. Seçim Genel depolama maliyetlerini azaltmak için depolama hesabından verileri her zaman temizleyin.
@@ -248,7 +248,7 @@ Zaten çalışmakta olan bir bulut hizmetiyle ilgili bir sorunu araştırıyorsa
 ### <a name="to-set-up-diagnostics-for-a-running-cloud-service"></a>Çalışan bir bulut hizmeti için tanılamayı ayarlamak için
 1. Sunucu Gezgini ' de, **Cloud Services** düğümünü genişletin ve ardından araştırmak istediğiniz rolü veya örneği (ya da her ikisini) bulmak için düğüm listesini genişletin.
 
-    ![Tanılamayı yapılandırma](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC748913.png)
+    ![Tanılama yapılandırma](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC748913.png)
 2. Örnek düğümü veya rol düğümünün kısayol menüsünde, **tanılama ayarlarını Güncelleştir**' i seçin ve ardından toplamak istediğiniz tanılama ayarlarını seçin.
 
     Yapılandırma ayarları hakkında daha fazla bilgi için bu makaledeki **Tanılama veri kaynaklarını ayarlama** bölümüne bakın. Tanılama verilerini görüntüleme hakkında daha fazla bilgi için bu makaledeki **tanılama verilerini görüntüleyin** bölümüne bakın.
@@ -258,7 +258,7 @@ Zaten çalışmakta olan bir bulut hizmetiyle ilgili bir sorunu araştırıyorsa
 ## <a name="troubleshoot-azure-cloud-service-issues"></a>Azure bulut hizmeti sorunlarını giderme
 Bulut hizmeti projelerinizle ilgili sorunlar yaşıyorsanız ("meşgul" durumunda kalmış olan bir rol ya da bir iç sunucu hatası oluşturursa, sorunu tanılamak ve onarmak için kullanabileceğiniz araçlar ve teknikler vardır. Yaygın sorunların ve çözümlerin belirli örnekleri için ve bu hataları tanılamak ve onarmak üzere kullanabileceğiniz kavram ve araçlara genel bir bakış için bkz. [Azure PaaS işlem Tanılama verileri](https://blogs.msdn.microsoft.com/kwill/2013/08/09/windows-azure-paas-compute-diagnostics-data/).
 
-## <a name="q--a"></a>soru-cevap &
+## <a name="q--a"></a>Soru-Cevap
 **Arabellek boyutu nedir ve ne kadar çok olmalıdır?**
 
 Her bir sanal makine örneğinde, kotalar, yerel dosya sisteminde ne kadar tanılama verisi depolanabileceğini sınırlandırır. Ayrıca, kullanılabilir her bir tanılama verileri türü için bir arabellek boyutu belirtirsiniz. Bu arabellek boyutu, bu tür veriler için tek bir kota gibi davranır. Genel kotayı ve kalan bellek miktarını öğrenmek için tanılama veri türü iletişim kutusunun alt bölümüne bakın. Daha büyük arabellekler veya daha fazla veri türü belirtirseniz, genel kotayı değiştireceksiniz. Diagnostics. wadcfg veya. wadcfgx yapılandırma dosyasını değiştirerek genel kotayı değiştirebilirsiniz. Tanılama verileri, uygulamanızın verileriyle aynı dosya sisteminde depolanır. Uygulamanız büyük miktarda disk alanı kullanıyorsa, genel tanılama kotasını artırmanız gerekmez.
@@ -281,11 +281,11 @@ Varsayılan ayarlar (**günlük düzeyi** **hata**olarak ayarlanır ve **aktarı
 
 **Nasıl yaparım? başarısız-istek günlükleri IIS 'den toplansın mı?**
 
-IIS, varsayılan olarak başarısız-istek günlüklerini toplamaz. IIS 'yi, Web rolünüzün Web. config dosyasını düzenleyerek başarısız istek günlüklerini toplayacak şekilde ayarlayabilirsiniz.
+IIS, varsayılan olarak başarısız-istek günlüklerini toplamaz. Web rolünüzün web.config dosyasını düzenleyerek, IIS 'yi başarısız istek günlüklerini toplayacak şekilde ayarlayabilirsiniz.
 
 **OnStart gibi RoleEntryPoint yöntemlerinden izleme bilgileri alamıyorum. Ne oldu?**
 
-**Roleentrypoint** yöntemleri IIS 'de değil WAIISHost. exe bağlamında çağırılır. Web. config dosyasındaki, normalde izlemeyi sağlayan yapılandırma bilgileri uygulanmaz. Bu sorunu çözmek için web rolü projenize bir. config dosyası ekleyin ve dosyayı **Roleentrypoint** kodunu içeren çıkış derlemesiyle eşleşecek şekilde adlandırın. Varsayılan Web rolü projesinde,. config dosyasının adı WAIISHost. exe. config olmalıdır. Aşağıdaki satırları bu dosyaya ekleyin:
+**Roleentrypoint** yöntemleri IIS 'de değil WAIISHost.exe bağlamında çağrılır. Normal olarak izlemeyi sağlayan web.config içindeki yapılandırma bilgileri uygulanmaz. Bu sorunu çözmek için web rolü projenize bir. config dosyası ekleyin ve dosyayı **Roleentrypoint** kodunu içeren çıkış derlemesiyle eşleşecek şekilde adlandırın. Varsayılan Web rolü projesinde,. config dosyasının adı WAIISHost.exe.config olmalıdır. Aşağıdaki satırları bu dosyaya ekleyin:
 
 ```xml
 <system.diagnostics>

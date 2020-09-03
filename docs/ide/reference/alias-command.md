@@ -17,59 +17,59 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 031f1a4bab1acee3f3d0999b17c0b607f7808df9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75596911"
 ---
 # <a name="alias-command"></a>Diğer Ad Komutu
-Tam bir komut, tam komut ve bağımsız değişkenler veya başka bir takma ad için yeni bir takma ad oluşturur.
+Tüm komut, komut ve bağımsız değişkenler ya da başka bir diğer ad için yeni bir diğer ad oluşturur.
 
 > [!TIP]
-> Bağımsız `>alias` değişkenolmadan yazma, geçerli takma ad listesini ve tanımlarını görüntüler.
+> `>alias`Bağımsız değişken olmadan yazmak, diğer adların ve tanımlarının geçerli listesini görüntüler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cmd
 Tools.Alias [/delete] [/reset] [aliasname] [aliasstring]
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 `aliasname`\
-İsteğe bağlı. Yeni takma adın adı. Hiçbir `aliasname`değer için sağlanmışsa, geçerli diğer adların ve tanımlarının listesi görüntülenir.
+İsteğe bağlı. Yeni diğer ad için ad. İçin hiçbir değer sağlanmazsa `aliasname` , geçerli diğer adların ve tanımlarının bir listesi görüntülenir.
 
 `aliasstring`\
-İsteğe bağlı. Tam komut adı veya varolan diğer ad ve diğer ad olarak oluşturmak istediğiniz parametreler. Belirtilen diğer ad görüntüler `aliasstring`için diğer ad adı ve diğer ad dizesi için hiçbir değer sağlanmışsa.
+İsteğe bağlı. Tüm komut adı veya var olan diğer ad ve diğer ad olarak oluşturmak istediğiniz parametreler. İçin değer sağlanmazsa `aliasstring` , belirtilen diğer ad için diğer ad ve diğer ad dizesi görüntülenir.
 
 ## <a name="switches"></a>Anahtarlar
-/silme veya /del veya /d\
-İsteğe bağlı. Belirtilen diğer adı siler ve otomatik tamamlamadan kaldırır.
+/DELETE veya/del&lt ya da/d\
+İsteğe bağlı. Belirtilen diğer adı siler ve otomatik tamamlamayı kaldırır.
 
-/sıfırlama\
-İsteğe bağlı. Önceden tanımlanmış diğer adların listesini özgün ayarlarına sıfırlar. Diğer bir arada, önceden tanımlanmış tüm diğer adları geri yükler ve kullanıcı tanımlı tüm diğer adları kaldırır.
+/Reset süpürmeden
+İsteğe bağlı. Önceden tanımlanmış diğer adların listesini orijinal ayarlarına sıfırlar. Diğer bir deyişle, önceden tanımlanmış tüm diğer adları geri yükler ve Kullanıcı tanımlı tüm diğer adları kaldırır.
 
 ## <a name="remarks"></a>Açıklamalar
-Takma adlar komutları temsil ettiğiiçin, komut satırının başında yer almalıdır.
+Diğer adlar komutları temsil ettiğinden, bunlar komut satırının başlangıcında bulunmalıdır.
 
-Bu komutu verirken, diğer adlardan sonra değil, komuttan hemen sonra anahtarları eklemeniz gerekir, aksi takdirde anahtarın kendisi diğer ad dizesinin bir parçası olarak eklenecektir.
+Bu komutu verirken, diğer adlarla değil, anahtardan hemen sonra gelen anahtarları eklemeniz gerekir, aksi takdirde anahtar, diğer ad dizesinin bir parçası olarak dahil edilir.
 
-Anahtar, `/reset` takma adlar geri yüklenmeden önce onay ister. Hiçbir kısa formu `/reset`.
+Bu `/reset` anahtar, diğer adlar geri yüklenmeden önce onay ister. İçin kısa bir biçim yoktur `/reset` .
 
 ## <a name="examples"></a>Örnekler
-Bu örnek, `upper`tam komut Edit.MakeUpperCase için yeni bir takma ad oluşturur.
+Bu örnek, `upper` tüm komut Edit. Makebüyük komutu için yeni bir diğer ad oluşturur.
 
 ```cmd
 >Tools.Alias upper Edit.MakeUpperCase
 ```
 
-Bu örnek, `upper`diğer adı siler.
+Bu örnek, diğer adı siler, `upper` .
 
 ```cmd
 >Tools.alias /delete upper
 ```
 
-Bu örnek, geçerli tüm diğer adların ve tanımların bir listesini görüntüler.
+Bu örnek, tüm geçerli diğer adlar ve tanımlar listesini görüntüler.
 
 ```cmd
 >Tools.Alias
@@ -77,7 +77,7 @@ Bu örnek, geçerli tüm diğer adların ve tanımların bir listesini görünt�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
-- [Komut Penceresi](../../ide/reference/command-window.md)
-- [Bul/Komut Kutusu](../../ide/find-command-box.md)
+- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Komut penceresi](../../ide/reference/command-window.md)
+- [Bul/komut kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

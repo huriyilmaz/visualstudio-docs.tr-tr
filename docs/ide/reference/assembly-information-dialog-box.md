@@ -13,57 +13,57 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ae70a2bf989b73dedc5becaac6f4b49bd0108730
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595793"
 ---
 # <a name="assembly-information-dialog-box"></a>Derleme Bilgileri iletişim kutusu
 
-Derleme Bilgileri iletişim kutusu, .NET Framework global derleme özniteliklerinin, projenizle otomatik olarak oluşturulan AssemblyInfo dosyasında depolanan değerlerini belirtmek için kullanılır. Solution Explorer'da, AssemblyInfo dosyası Visual Basic projeleri için **Projem** düğümünde bulunur (görüntülemek için **Tüm dosyaları göster'i** tıklatın). C# projeleri için **Özellikler**altında yer alır. Daha fazla bilgi için [Öznitelikler (C#)](/dotnet/csharp/programming-guide/concepts/attributes/index)'ye bakın.
+Derleme bilgileri iletişim kutusu, projeniz ile otomatik olarak oluşturulan AssemblyInfo dosyasında depolanan .NET Framework genel derleme özniteliklerinin değerlerini belirtmek için kullanılır. Çözüm Gezgini, AssemblyInfo dosyası, Visual Basic projeleri için **projem** düğümünden bulunur (görüntülemek için **tüm dosyaları göster** ' e tıklayın). C# projeleri için **Özellikler**altında bulunur. Daha fazla bilgi için bkz. [öznitelikler (C#)](/dotnet/csharp/programming-guide/concepts/attributes/index).
 
-Bu iletişim kutusuna erişmek için Çözüm **Gezgini'nde**bir proje düğümü seçin ve ardından **Proje** menüsünde **Özellikler'i**seçin. **Uygulama** **sayfasında, Montaj Bilgileri** düğmesini seçin.
+Bu iletişim kutusuna erişmek için **Çözüm Gezgini**' de bir proje düğümü seçin ve ardından **Proje** menüsünde **Özellikler**' i seçin. **Uygulama** sayfasında, **derleme bilgileri** düğmesini seçin.
 
 ## <a name="uielement-list"></a>UIElement listesi
 
-**Başlık**\
-Derleme bildirimi için bir başlık belirtir. Karşılık <xref:System.Reflection.AssemblyTitleAttribute>gelir.
+**Başlığın**\
+Bütünleştirilmiş kod bildirimi için bir başlık belirtir. Öğesine karşılık gelir <xref:System.Reflection.AssemblyTitleAttribute> .
 
-**Açıklama**\
-Derleme bildirimi için isteğe bağlı bir açıklama belirtir. Karşılık <xref:System.Reflection.AssemblyDescriptionAttribute>gelir.
+**Açıklaması**\
+Derleme bildirimi için isteğe bağlı bir açıklama belirtir. Öğesine karşılık gelir <xref:System.Reflection.AssemblyDescriptionAttribute> .
 
-**Şirket**\
-Montaj bildirimi için bir şirket adı belirtir. Karşılık <xref:System.Reflection.AssemblyCompanyAttribute>gelir.
+**Şirketlerin**\
+Bütünleştirilmiş kod bildirimi için bir şirket adı belirtir. Öğesine karşılık gelir <xref:System.Reflection.AssemblyCompanyAttribute> .
 
-Kayıt defterinde Şirket için varsayılan değeri ayarlayabilir veya değiştirebilirsiniz. Windows sürümünüze bağlı olarak **Bilgisayar\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion** veya **Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion** tuşu altında **Kayıtlı Kuruluş** değerini arayın.
+Şirket için varsayılan değeri kayıt defterinde ayarlayabilir veya değiştirebilirsiniz. Windows sürümünüze bağlı olarak, **\ HKEY_LOCAL_MACHINE \SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion** veya **Computer \ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows Nt\currentversion** anahtarındaki **RegisteredOrganization** değerini arayın.
 
-**Ürün**\
-Montaj bildirimi için bir ürün adı belirtir. Karşılık <xref:System.Reflection.AssemblyProductAttribute>gelir.
+**Ürünüyle**\
+Derleme bildirimi için bir ürün adı belirtir. Öğesine karşılık gelir <xref:System.Reflection.AssemblyProductAttribute> .
 
-**Telif hakkı**\
-Derleme bildirimi için bir telif hakkı bildirimi belirtir. Karşılık <xref:System.Reflection.AssemblyCopyrightAttribute>gelir.
+**Yaptırımlar**\
+Derleme bildirimi için bir telif hakkı bildirimi belirtir. Öğesine karşılık gelir <xref:System.Reflection.AssemblyCopyrightAttribute> .
 
-**Marka**\
-Derleme manifestosu için bir ticari marka belirtir. Karşılık <xref:System.Reflection.AssemblyTrademarkAttribute>gelir.
+**Dır**\
+Derleme bildirimi için bir ticari marka belirtir. Öğesine karşılık gelir <xref:System.Reflection.AssemblyTrademarkAttribute> .
 
-**Montaj Sürümü**\
-Derlemenin sürümünü belirtir. Karşılık <xref:System.Reflection.AssemblyVersionAttribute>gelir.
+**Derleme sürümü**\
+Derlemenin sürümünü belirtir. Öğesine karşılık gelir <xref:System.Reflection.AssemblyVersionAttribute> .
 
-**Dosya Sürümü**\
-Derleyiciye Win32 dosya sürümü kaynağı için belirli bir sürümü kullanmasını söyleyen bir sürüm numarası belirtir. Karşılık <xref:System.Reflection.AssemblyFileVersionAttribute>gelir.
+**Dosya sürümü**\
+Derleyiciye Win32 dosya sürümü kaynağı için belirli bir sürüm kullanmasını yönlendiren bir sürüm numarası belirtir. Öğesine karşılık gelir <xref:System.Reflection.AssemblyFileVersionAttribute> .
 
-**Guıd**\
-Derlemeyi tanımlayan benzersiz bir GUID. Bir proje oluşturduğunuzda, Visual Studio derleme için bir GUID oluşturur. Karşılık <xref:System.Guid>gelir.
+**'INI**\
+Derlemeyi tanımlayan benzersiz bir GUID. Bir proje oluşturduğunuzda, Visual Studio derleme için bir GUID oluşturur. Öğesine karşılık gelir <xref:System.Guid> .
 
-**Tarafsız Dil**\
-Derlemenin hangi kültürü desteklediğini belirtir. Karşılık <xref:System.Resources.NeutralResourcesLanguageAttribute>gelir. Varsayılan **değer (Yok)** olur.
+**Nötr dil**\
+Derlemenin desteklediği kültürü belirtir. Öğesine karşılık gelir <xref:System.Resources.NeutralResourcesLanguageAttribute> . Varsayılan değer **(yok)**.
 
-**DerlemeYI COM-Görünür yapma**\
-Derlemedeki türlerin COM için kullanılabilir olup olmayacağını belirtir. Karşılık <xref:System.Runtime.InteropServices.ComVisibleAttribute>gelir.
+**Derlemeyi COM-görünür yap**\
+Derlemedeki türlerin COM tarafından kullanılabilir olup olmayacağını belirtir. Öğesine karşılık gelir <xref:System.Runtime.InteropServices.ComVisibleAttribute> .
 
 > [!NOTE]
-> .NET Framework sınıf kitaplığında bir NuGet paketi oluştururken bu özellikleri ayarlama hakkında daha fazla bilgi [için](/nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework#configure-project-properties-for-the-package)bkz.
+> Bir .NET Framework sınıf kitaplığında bir NuGet paketi oluştururken bu özellikleri ayarlama hakkında daha fazla bilgi için bkz. [paket için proje özelliklerini yapılandırma](/nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework#configure-project-properties-for-the-package).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

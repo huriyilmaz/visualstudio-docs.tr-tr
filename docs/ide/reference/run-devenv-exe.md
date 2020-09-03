@@ -16,47 +16,47 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7468fbd6422248f2f15bf74e70cdf9c5bee849c3
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75593635"
 ---
 # <a name="run-devenvexe"></a>/Run (devenv.exe)
 
-Belirtilen projeyi veya çözümü derler ve çalıştırır.
+Belirtilen proje veya çözümü derler ve çalıştırır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```shell
 devenv {/Run|/R} {SolutionName|ProjectName} [/Out OutputFilename]
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
 - *SolutionName*
 
-  Çözüm dosyasının tam yolu ve adı.
+  Bir çözüm dosyasının tam yolu ve adı.
 
-- *Projeadı*
+- *ProjectName*
 
-  Proje dosyasının tam yolu ve adı.
+  Bir proje dosyasının tam yolu ve adı.
 
 - `/Out`*OutputFilename*
 
-  İsteğe bağlı. Aracın çıktısını göndermek istediğiniz bir dosyanın adı. Dosya zaten varsa, araç çıktıyı dosyanın sonuna ekler.
+  İsteğe bağlı. Aracın çıkışını göndermek istediğiniz dosyanın adı. Dosya zaten varsa, araç çıktıyı dosyanın sonuna ekler.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Etkin çözüm yapılandırması için belirtilen ayarlara göre belirtilen projeyi veya çözümü derler ve çalıştırır. Bu anahtar IDE'yi başlatır ve proje veya çözüm çalışma tamamlandıktan sonra etkin bırakır.
+Belirtilen proje veya çözümü, etkin çözüm yapılandırması için belirtilen ayarlara göre derler ve çalıştırır. Bu anahtar, IDE 'yi başlatır ve proje veya çözüm çalışmayı tamamladıktan sonra etkin bırakır.
 
-- Çift tırnak işaretlerine boşluklar içeren dizeleri ekleyin.
+- Boşluk içeren dizeleri çift tırnak işaretleri içine alın.
 
-- Hatalar da dahil olmak üzere özet bilgiler **Komut** penceresinde veya `/Out` anahtarla belirtilen herhangi bir günlük dosyasında görüntülenebilir.
+- Hatalar da dahil olmak üzere Özet bilgiler, **komut** penceresinde veya anahtarla belirtilen herhangi bir günlük dosyasında görüntülenebilir `/Out` .
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, `MySolution` etkin dağıtım yapılandırmasını kullanarak çözümü çalıştırır.
+Bu örnekte, `MySolution` etkin dağıtım yapılandırması kullanılarak çözüm çalıştırılır.
 
 ```shell
 devenv /run "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
@@ -66,6 +66,6 @@ devenv /run "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
 
 - [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md)
 - [/Runexit (devenv.exe)](../../ide/reference/runexit-devenv-exe.md)
-- [/Yapı (devenv.exe)](../../ide/reference/build-devenv-exe.md)
+- [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md)
 - [/Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)
 - [/Out (devenv.exe)](../../ide/reference/out-devenv-exe.md)

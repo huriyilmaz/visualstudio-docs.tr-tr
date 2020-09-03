@@ -11,39 +11,39 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9ff457523024db49502ae982a390d9a7be6ba9dd
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595910"
 ---
-# <a name="accounts-environment-options-dialog-box"></a>Hesaplar, Çevre, Seçenekler iletişim kutusu
+# <a name="accounts-environment-options-dialog-box"></a>Hesaplar, ortam, Seçenekler iletişim kutusu
 
-Visual Studio'da oturum açmanız için kullandığınız hesaplarla ilgili çeşitli seçenekler ayarlamak için bu sayfayı kullanın.
+Visual Studio 'da oturum açmak için kullandığınız hesaplarla ilgili çeşitli seçenekleri ayarlamak için bu sayfayı kullanın.
 
 ## <a name="personalization-account"></a>Kişiselleştirme hesabı
 
-### <a name="synchronize-settings-across-devices"></a>Ayarları cihazlar arasında eşitleme
+### <a name="synchronize-settings-across-devices"></a>Ayarları cihazlar arasında eşitler
 
-Ayarlarınızı birden çok makine arasında eşitleyip eşitlemeyeceğinizi belirtmek için bu seçeneği kullanın. Daha fazla bilgi için [Senkronize ayarlara](../../ide/synchronized-settings-in-visual-studio.md)bakın.
+Ayarlarınızı birden çok makine arasında eşitleyip eşitleyemeyeceğinizi belirtmek için bu seçeneği kullanın. Daha fazla bilgi için bkz. [Eşitlenmiş Ayarlar](../../ide/synchronized-settings-in-visual-studio.md).
 
-### <a name="enable-device-code-flow"></a>Aygıt kodu akışını etkinleştirme
+### <a name="enable-device-code-flow"></a>Cihaz kod akışını etkinleştir
 
-Bu seçenek seçildiğinde, **Dosya** > **Hesabı Ayarları** sayfasında hesap **ekle'yi** seçtiğinizde Visual Studio'nun davranışı değişir. **Hesap sayfanızda Oturum Aç'ı** görmek yerine, size oturum açmak için bir URL ve oturum açmak için bir web tarayıcısına yapıştıracak bir kod veren bir iletişim kutusu sunulur. Bu seçenek, Visual Studio'da düzenli olarak oturum açamadığınız durumlarda (örneğin, Internet Explorer'ın eski bir sürümünü kullanıyorsanız veya güvenlik duvarınız erişimi kısıtlıyorsa) yararlıdır. Daha fazla bilgi için bkz: [Birden çok kullanıcı hesabıyla çalışma.](../work-with-multiple-user-accounts.md#add-an-account-using-device-code-flow)
+Bu seçenek belirlendiğinde, **Dosya**hesabı ayarları sayfasında **bir hesap ekle** ' yi seçtiğinizde Visual Studio 'nun davranışı değişir  >  **Account Settings** . **Hesabınız Için oturum açma** SAYFASıNDA bir URL ve bir Web tarayıcısına yapıştırmanız için bir kod sağlayan bir iletişim kutusu görüntülenir. Bu seçenek, Visual Studio 'da düzenli olarak oturum açamazsınız, örneğin, Internet Explorer 'ın eski bir sürümünü kullanıyorsanız veya güvenlik duvarınız erişimi kısıtlarsa yararlıdır. Daha fazla bilgi için bkz. [birden çok kullanıcı hesabıyla çalışma](../work-with-multiple-user-accounts.md#add-an-account-using-device-code-flow).
 
 ## <a name="registered-azure-clouds"></a>Kayıtlı Azure bulutları
 
-Bu bölümde, Visual Studio'da oturum açtırmak için kullandığınız hesaplardan biri veya birkaçı aracılığıyla erişebildiğiniz Azure bulut örnekleri gösterilmektedir. Örneğin, şirketinizin veri merkezinde özel bir Azure örneğine erişiminiz olabilir. Veya Azure China 21 Vianet veya Azure ABD Hükümeti gibi azure'un egemen veya devlet tarafından bir örneğine erişebilirsiniz. Genel Azure bulut örneği listede varsayılan olarak görünür ve bunu kaldıramazsınız.
+Bu bölümde, Visual Studio 'da oturum açmak için kullandığınız bir veya daha fazla hesaptan erişiminiz olan Azure bulut örnekleri gösterilmektedir. Örneğin, şirketinizin veri merkezinde Azure 'un özel bir örneğine erişiminiz olabilir. Veya Azure Çin 21 Vianet veya Azure ABD kamu gibi Azure 'un bir bağımsız veya kamu örneğine erişiminiz olabilir. Genel Azure bulut örneği listede varsayılan olarak görünür ve kaldıramazsınız.
 
-**Ekle** düğmesini seçerek ek bir Azure bulutu kaydedin. **Yeni Azure Bulutu Ekle** iletişim kutusu, bağlanabileceğiniz birkaç tanınmış Azure bulut örneğini listeler veya URL'yi özel bir Azure bitiş noktasına girebilirsiniz.
+**Ekle** düğmesini seçerek ek bir Azure bulutu kaydedin. **Yeni Azure bulutu Ekle** iletişim kutusu, bağlantı kurmak için kullanabileceğiniz birkaç Iyi bilinen Azure bulut örneğini listeler veya özel bir Azure uç noktasına URL 'yi girebilirsiniz.
 
-![Yeni Azure bulut örneği ekleme](media/add-new-azure-cloud.png)
+![Yeni Azure bulut örneği Ekle](media/add-new-azure-cloud.png)
 
-Ek bir Azure bulutu kaydettikten sonra, Visual Studio'da oturum açtığınızda hangi Azure bulutunda oturum açtırabileceğinizi seçebilirsiniz.
+Ek bir Azure bulutu kaydettikten sonra, Visual Studio 'da oturum açtığınızda hangi Azure bulutunun oturum açmasını istediğinizi seçebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ayarları birden çok bilgisayarda eşitleme](../synchronized-settings-in-visual-studio.md)
+- [Birden çok bilgisayar üzerinde ayarları eşitler](../synchronized-settings-in-visual-studio.md)
 - [Visual Studio’da oturum açma](../signing-in-to-visual-studio.md)
 - [Birden çok kullanıcı hesabıyla çalışma](../work-with-multiple-user-accounts.md)
 - [Ortam ayarları](../environment-settings.md)

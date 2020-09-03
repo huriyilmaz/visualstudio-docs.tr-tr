@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7ab846d1d7121d0c36c4187d937330d2ade52eb1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75594597"
 ---
 # <a name="invoke-text-transformation-in-a-visual-studio-extension"></a>Visual Studio uzantısında metin dönüştürmeyi çağırma
@@ -36,11 +36,11 @@ string result = t4.ProcessTemplate(filePath, System.IO.File.ReadAllText(filePath
 
 ## <a name="pass-parameters-to-the-template"></a>Parametreleri şablona geçir
 
- Parametreleri şablona geçirebilirsiniz. Şablon içinde, `<#@parameter#>` yönergesini kullanarak parametre değerlerini alabilirsiniz.
+ Parametreleri şablona geçirebilirsiniz. Şablon içinde, yönergesini kullanarak parametre değerlerini alabilirsiniz `<#@parameter#>` .
 
- Parametre türü için, seri hale getirilebilen veya sıralanabilen bir tür kullanmalısınız. Diğer bir deyişle, tür <xref:System.SerializableAttribute>ile bildirilmelidir veya <xref:System.MarshalByRefObject>türetilmesi gerekir. Bu kısıtlama gereklidir çünkü metin şablonu ayrı bir AppDomain içinde yürütülür. **System. String** ve **System. Int32** gibi tüm yerleşik türler seri hale getirilebilir.
+ Parametre türü için, seri hale getirilebilen veya sıralanabilen bir tür kullanmalısınız. Diğer bir deyişle, türü ile bildirilmelidir <xref:System.SerializableAttribute> veya ' den türetilmiş olmalıdır <xref:System.MarshalByRefObject> . Bu kısıtlama gereklidir çünkü metin şablonu ayrı bir AppDomain içinde yürütülür. **System. String** ve **System. Int32** gibi tüm yerleşik türler seri hale getirilebilir.
 
- Parametre değerlerini geçirmek için, çağıran kod `Session` sözlüğünde ya da <xref:System.Runtime.Remoting.Messaging.CallContext>bir değer yerleştirebilir.
+ Parametre değerlerini geçirmek için, çağıran kod, sözlükte ya da içinde değer yerleştirebilir `Session` <xref:System.Runtime.Remoting.Messaging.CallContext> .
 
  Aşağıdaki örnek bir kısa test şablonunu dönüştürmek için her iki yöntemi kullanmaktadır:
 
@@ -79,7 +79,7 @@ string result = t4.ProcessTemplate("",
 
 İşlem sırasında ortaya çıkan hatalar Visual Studio hata penceresinde görüntülenir. Ayrıca, [ITextTemplatingCallback](/previous-versions/visualstudio/visual-studio-2012/bb932397(v=vs.110))uygulayan bir geri çağırma belirterek hatalarla ilgili bildirim alabilirsiniz.
 
-Sonuç dizesini bir dosyaya yazmak istiyorsanız, şablondaki `<#@output#>` yönergesinde hangi dosya uzantısının ve kodlamasının belirtildiklerini bilmeniz gerekebilir. Bu bilgiler, geri çağırmanıza da geçirilir. Daha fazla bilgi için bkz. [T4 çıkış yönergesi](../modeling/t4-output-directive.md).
+Sonuç dizesini bir dosyaya yazmak istiyorsanız, şablondaki yönergede hangi dosya uzantısının ve kodlamasının belirtildiklerini bilmeniz gerekebilir `<#@output#>` . Bu bilgiler, geri çağırmanıza da geçirilir. Daha fazla bilgi için bkz. [T4 çıkış yönergesi](../modeling/t4-output-directive.md).
 
 ```csharp
 void ProcessMyTemplate(string MyTemplateFile)
@@ -130,16 +130,16 @@ Kod, şuna benzer bir şablon dosyasıyla test edilebilir:
 Sample text.
 ```
 
-Derleyici Uyarısı, Visual Studio hata penceresinde görünür ve ayrıca `ErrorCallback`bir çağrı oluşturur.
+Derleyici Uyarısı, Visual Studio hata penceresinde görünür ve ayrıca öğesine bir çağrı oluşturur `ErrorCallback` .
 
 ## <a name="reference-parameters"></a>Başvuru parametreleri
 
-<xref:System.MarshalByRefObject>türetilmiş bir parametre sınıfını kullanarak değerleri bir metin şablonundan geçirebilirsiniz.
+Öğesinden türetilmiş bir parametre sınıfını kullanarak değerleri bir metin şablonundan geçirebilirsiniz <xref:System.MarshalByRefObject> .
 
-## <a name="related-articles"></a>İlgili makaleler
+## <a name="related-articles"></a>İlgili makaleler:
 
-Önceden işlenmiş bir metin şablonundan metin oluşturmak için: oluşturulan sınıfın `TransformText()` yöntemini çağırın. Daha fazla bilgi için bkz. [T4 metin şablonlarıyla çalışma zamanı metin üretimi](../modeling/run-time-text-generation-with-t4-text-templates.md).
+Önceden işlenmiş bir metin şablonundan metin oluşturmak için: `TransformText()` oluşturulan sınıfın yöntemini çağırın. Daha fazla bilgi için bkz. [T4 metin şablonlarıyla çalışma zamanı metin üretimi](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
-Visual Studio uzantısı dışında metin oluşturmak için: özel bir konak tanımlayın. Daha fazla bilgi için [özel konak kullanarak metin şablonlarını işleme](../modeling/processing-text-templates-by-using-a-custom-host.md).
+Visual Studio uzantısı dışında metin oluşturmak için: özel bir konak tanımlayın. Daha fazla bilgi için bkz. [özel bir konak kullanarak metin şablonlarını işleme](../modeling/processing-text-templates-by-using-a-custom-host.md).
 
 Daha sonra derlenebilecek ve yürütülebilecek kaynak kodu oluşturmak için: [ıtextşablon](/previous-versions/visualstudio/visual-studio-2012/bb932392(v=vs.110))oluşturma 'Nın [PreprocessTemplate](/previous-versions/visualstudio/visual-studio-2012/ee844321(v=vs.110)) metodunu çağırın.

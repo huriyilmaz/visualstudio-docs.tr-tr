@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::EnumConstructors | Microsoft Docs
+title: 'IDebugClassField:: Enumoluşturucular | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: cd93f4867221f0b42f91fe1f96b8a8b464bf5aa9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68191042"
 ---
 # <a name="idebugclassfieldenumconstructors"></a>IDebugClassField::EnumConstructors
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu sınıf için oluşturucuları için bir numaralandırıcı oluşturur.  
+Bu sınıf için oluşturucular için bir Numaralandırıcı oluşturur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT EnumConstructors(   
@@ -42,18 +42,18 @@ int EnumConstructors(
   
 #### <a name="parameters"></a>Parametreler  
  `cMatch`  
- [in] Bir değer [CONSTRUCTOR_ENUM](../../../extensibility/debugger/reference/constructor-enum.md) oluşturucular için sabit listesi türünü belirten sabit listesi.  
+ 'ndaki Sabit listesi için oluşturucuların türünü belirten [CONSTRUCTOR_ENUM](../../../extensibility/debugger/reference/constructor-enum.md) Numaralandırmadaki bir değer.  
   
  `ppEnum`  
- [out] Döndürür bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) oluşturucular listesini temsil eden nesne. Hiç Oluşturucusu yoksa null değeri döndürür.  
+ dışı Oluşturucuların listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Oluşturucu yoksa null değeri döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür veya hiç Oluşturucusu varsa S_FALSE döndürür. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, S_OK döndürür veya Oluşturucu yoksa S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her öğenin sabit bir [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) Oluşturucu yöntemi tanımlayan nesne.  
+ Sabit listesinin her öğesi bir Oluşturucu yöntemini açıklayan bir [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) nesnesidir.  
   
- Oluşturucular listesi, genellikle derleyici tarafından sağlanan varsayılan oluşturucular içermez.  
+ Oluşturucuların listesi genellikle derleyicinin sağladığı varsayılan oluşturucuları içermez.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)   

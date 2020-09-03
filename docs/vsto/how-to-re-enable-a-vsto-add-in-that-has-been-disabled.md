@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 3575e119f4da3ca3050a28243104fb4773089cf3
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541264"
 ---
 # <a name="how-to-re-enable-a-vsto-add-in-that-has-been-disabled"></a>Nasıl yapılır: devre dışı bırakılmış bir VSTO eklentisini yeniden etkinleştirme
@@ -47,7 +47,7 @@ ms.locfileid: "85541264"
 
 6. VSTO eklentisini seçin ve **Etkinleştir**' e tıklayın.
 
-7. **Kapat**' a tıklayın.
+7. **Kapat**’a tıklayın.
 
 ## <a name="soft-disabled-vsto-add-ins"></a>Geçici olarak devre dışı VSTO eklentileri
  Bir VSTO eklentisi uygulamanın beklenmedik şekilde kapatılmasına neden olmayan bir hata ürettiğinden, geçici devre dışı bırakma gerçekleşebilir. Örneğin, bir uygulama, olay işleyicisi yürütülürken işlenmeyen bir özel durum oluşturursa, VSTO eklentisini geçici olarak devre dışı bırakabilir <xref:Microsoft.Office.Tools.AddIn.Startup> .
@@ -71,7 +71,7 @@ ms.locfileid: "85541264"
 
 6. **Com eklentileri** iletişim kutusunda, devre DıŞı bırakılmış VSTO eklentisinin yanındaki onay kutusunu işaretleyin.
 
-7. **Tamam**'a tıklayın.
+7. **Tamam**’a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office çözümleri oluşturma](../vsto/building-office-solutions.md)

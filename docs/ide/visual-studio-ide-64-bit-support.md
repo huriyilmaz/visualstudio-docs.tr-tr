@@ -1,5 +1,5 @@
 ---
-title: 64 bit destek
+title: 64 bit desteği
 ms.date: 02/21/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,25 +12,25 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e3cd670eed61f510998599276e3a44fc7647777b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75594142"
 ---
-# <a name="visual-studio-ide-64-bit-support"></a>Visual Studio IDE 64-Bit desteği
+# <a name="visual-studio-ide-64-bit-support"></a>Visual Studio IDE 64 bit desteği
 
-Visual Studio, uygulamalarınızı 64 bit platformlar da dahil olmak üzere farklı platformları hedeflayacak şekilde ayarlamanızı sağlar. Visual Studio'da 64 bit platform desteği hakkında daha fazla bilgi için [64 bit uygulamalara](/dotnet/framework/64-bit-apps)bakın.
+Visual Studio, uygulamalarınızı 64 bitlik platformlar dahil farklı platformları hedefleyecek şekilde ayarlamanıza olanak sağlar. Visual Studio 'da 64 bit platform desteği hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](/dotnet/framework/64-bit-apps).
 
-## <a name="deploy-a-64-bit-application"></a>64 bit uygulama dağıtma
+## <a name="deploy-a-64-bit-application"></a>64 bitlik bir uygulama dağıtma
 
-[64 bit uygulamalar için ön koşulları dağıtın,](../deployment/deploying-prerequisites-for-64-bit-applications.md) 64 bit uygulamanın yüklenmesi için ön koşul olarak kullanabileceğiniz yeniden dağıtılabilir leri listeler.
+[64 bit uygulamalar Için dağıtım önkoşulları](../deployment/deploying-prerequisites-for-64-bit-applications.md) , 64 bitlik bir uygulamanın yüklenmesi için ön koşullar olarak kullanabileceğiniz yeniden dağıtılabilir listeler.
 
-## <a name="configure-projects-as-64-bit-applications"></a>Projeleri 64 bit uygulama olarak yapılandırma
+## <a name="configure-projects-as-64-bit-applications"></a>Projeleri 64 bitlik uygulamalar olarak yapılandırma
 
-[Nasıl yapılır: Projeleri hedef platformlara](../ide/how-to-configure-projects-to-target-platforms.md) yapılandırıştırmak, 64 bit uygulama olarak oluşturulacak projeleri yapılandırmayı tartışır.
+[Nasıl yapılır: projeleri hedef platformlar Için yapılandırma](../ide/how-to-configure-projects-to-target-platforms.md) , projelerin 64 bitlik uygulamalar olarak derlenme yapılandırmasını açıklar.
 
-## <a name="debug-a-64-bit-application"></a>64 bit uygulama hata ayıklama
+## <a name="debug-a-64-bit-application"></a>64 bitlik bir uygulamada hata ayıklama
 
-- [Hata ayıklama 64 bit uygulamaları](../debugger/debug-64-bit-applications.md)
+- [Hata ayıklama 64-bit uygulamalar](../debugger/debug-64-bit-applications.md)
 - [Döküm dosyalarını kullanma](../debugger/using-dump-files.md)
