@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::Ekle | Microsoft Dokümanlar
+title: 'IDebugProcess2:: Attach | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fb6ea896285c784021402400597ba168f6ccf716
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724186"
 ---
 # <a name="idebugprocess2attach"></a>IDebugProcess2::Attach
-Oturum hata ayıklama yöneticisini (SDM) işleme bağlar.
+Oturum hata ayıklama yöneticisini (SDM) işleme iliştirir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT Attach( 
@@ -47,30 +47,30 @@ int Attach( 
 
 ## <a name="parameters"></a>Parametreler
 `pCallback`\
-[içinde] Hata ayıklama olay bildirimi için kullanılan bir [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) nesnesi.
+'ndaki Hata ayıklama olayı bildiriminde kullanılan bir [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) nesnesi.
 
 `rgguidSpecificEngines`\
-[içinde] İşlemde çalışan programları hata ayıklamak için kullanılacak hata ayıklama motorları guids bir dizi. Bu parametre null değeri olabilir. Ayrıntılar için Açıklamalar'a bakın.
+'ndaki İşlemde çalışan programlarda hata ayıklaması yapmak için kullanılacak hata ayıklama altyapısının GUID dizisi. Bu parametre null bir değer olabilir. Ayrıntılar için bkz. açıklamalar.
 
 `celtSpecificEngines`\
-[içinde] `rgguidSpecificEngines` Dizideki hata ayıklama motorlarının sayısı ve `rghrEngineAttach` dizinin boyutu.
+'ndaki Dizideki hata ayıklama altyapısının sayısı `rgguidSpecificEngines` ve `rghrEngineAttach` dizinin boyutu.
 
 `rghrEngineAttach`\
-[içinde, dışarı] Hata ayıklama motorları tarafından döndürülen bir dizi HRESULT kodu. Bu dizinin boyutu `celtSpecificEngines` parametrede belirtilir. Her kod genellikle `S_OK` ya `S_ATTACH_DEFERRED`da . İkincisi, DE'nin şu anda hiçbir programa bağlı olmadığını gösterir.
+[in, out] Hata ayıklama altyapılarının döndürdüğü bir HRESULT kodları dizisi. Bu dizinin boyutu `celtSpecificEngines` parametresinde belirtilir. Her kod genellikle ya da `S_OK` olur `S_ATTACH_DEFERRED` . İkincisi, aynı anda hiçbir program için DE bağlı olduğunu gösterir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür. Aşağıdaki tablo diğer olası değerleri gösterir.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. Aşağıdaki tabloda olası diğer değerler gösterilmektedir.
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`E_ATTACH_DEBUGGER_ALREADY_ATTACHED`|Belirtilen işlem hata ayıklama işlemine zaten bağlı.|
-|`E_ATTACH_DEBUGGEE_PROCESS_SECURITY_VIOLATION`|Ekleme işlemi sırasında bir güvenlik ihlali oluştu.|
-|`E_ATTACH_CANNOT_ATTACH_TO_DESKTOP`|Bir masaüstü işlemi hata ayıklama eklenemez.|
+|`E_ATTACH_DEBUGGER_ALREADY_ATTACHED`|Belirtilen işlem hata ayıklayıcıya zaten eklenmiş.|
+|`E_ATTACH_DEBUGGEE_PROCESS_SECURITY_VIOLATION`|İliştirme yordamı sırasında bir güvenlik ihlali oluştu.|
+|`E_ATTACH_CANNOT_ATTACH_TO_DESKTOP`|Bir masaüstü işlemi hata ayıklayıcıya eklenemiyor.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bir işleme iliştirilmesi, `rgguidSpecificEngines` dizide belirtilen hata ayıklama motorları (DE) tarafından debubed ilerleyebilir bu işlemde çalışan tüm programlara SDM bağlanır. Parametreyi `rgguidSpecificEngines` null değerine ayarlayın `GUID_NULL` veya işlemdeki tüm programlara eklemek üzere diziye ekleyin.
+ Bir işleme iliştirme, SDM 'yi dizide belirtilen hata ayıklama altyapıları (DE) tarafından ayıklanabilecek bu işlemde çalışan tüm programlara iliştirir `rgguidSpecificEngines` . `rgguidSpecificEngines`Parametresini null bir değer olarak ayarlayın veya `GUID_NULL` işlemdeki tüm programlara eklemek için diziye dahil edin.
 
- İşlemde oluşan tüm hata ayıklama olayları verilen [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) nesnesine gönderilir. SDM bu yöntemi aradığında bu `IDebugEventCallback2` nesne sağlanır.
+ İşlemde oluşan tüm hata ayıklama olayları verilen [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) nesnesine gönderilir. `IDebugEventCallback2`SDM Bu yöntemi çağırdığında bu nesne sağlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

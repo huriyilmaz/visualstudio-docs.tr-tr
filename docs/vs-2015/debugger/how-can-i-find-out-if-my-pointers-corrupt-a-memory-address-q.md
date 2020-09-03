@@ -1,5 +1,5 @@
 ---
-title: Kendi İşaretçilerimin Bellek Adresini Bozup Bozmadığını Nasıl Anlarım? | Microsoft Docs
+title: Kendi İşaretçilerimin Bellek Adresini Bozup Bozmadığını Nasıl Anlarım? | Microsoft Belgeleri
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -23,30 +23,30 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1d4f23b885b2e72e53d288946df18e038d9d956d
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77476776"
 ---
 # <a name="how-can-i-find-out-if-my-pointers-corrupt-a-memory-address"></a>Kendi İşaretçilerimin Bellek Adresini Bozup Bozmadığını Nasıl Anlarım?
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Sorun Açıklaması  
- İşaretçilerimden birinin 0x00408000 adresinde belleği bozabileceğini düşünüyorum. Nasıl öğrenebilirim orada neler olduğunu kullanıma?  
+ İşaretçilerimin bir birinin 0x00408000 adresindeki belleği bozuyor olabileceğini düşünüyorum. Ne olduğunu öğrenmek için ne olduğunu nasıl anlarım?  
   
 ## <a name="solution"></a>Çözüm  
   
-#### <a name="check-for-heap-corruption"></a>Yığın bozulmasını denetleme  
+#### <a name="check-for-heap-corruption"></a>Yığın bozulmasını denetle  
   
-- Çoğu Bellek Bozulması gerçekten Öbek Bozulması nedeniyledir ' dir. Genel bayraklar yardımcı programı'nı (gflags.exe) veya pageheap.exe'yi kullanmayı deneyin. Bkz. [Gflags ve PageHeap](/windows-hardware/drivers/debugger/gflags-and-pageheap) ve [bir Microsoft Visual C++ projesindeki bellek hatalarını algılamak için PageHeap yardımcı programını kullanma](https://support.microsoft.com/help/264471/how-to-use-the-pageheap-utility-to-detect-memory-errors-in-a-microsoft).
+- Çoğu bellek bozulması aslında yığın bozulması nedeniyle olur. Genel Bayraklar yardımcı programını (gflags.exe) veya pageheap.exe kullanmayı deneyin. [Microsoft Visual C++ projesindeki bellek hatalarını algılamak Için](https://support.microsoft.com/help/264471/how-to-use-the-pageheap-utility-to-detect-memory-errors-in-a-microsoft) [Gflags ve PageHeap](/windows-hardware/drivers/debugger/gflags-and-pageheap) ve PageHeap yardımcı programını kullanma bölümüne bakın.
   
-#### <a name="to-find-where-the-memory-address-is-modified"></a>Bellek adresinin nerede değiştirildiğini bulmak için  
+#### <a name="to-find-where-the-memory-address-is-modified"></a>Bellek adresinin değiştirildiğini bulmak için  
   
-1. 0x00408000 veri kesme noktası ayarlayın. Bkz. [veri değişikliği kesme noktası ayarlama ( C++ yalnızca yerel)](../debugger/using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus_only).  
+1. 0x00408000 konumunda bir veri kesme noktası ayarlayın. Bkz. [veri değişikliği kesme noktası ayarlama (yalnızca yerel C++)](../debugger/using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus_only).  
   
 2. Kesme noktasına ulaştığınızda, 0x00408000 ' dan başlayan bellek içeriğini görüntülemek için **bellek** penceresini kullanın. Daha fazla bilgi için bkz. [bellek pencereleri](../debugger/memory-windows.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yerel kod sss  hatalarını ayıklama](../debugger/debugging-native-code-faqs.md)  
+ [Yerel kod SSS hatalarını ayıklama](../debugger/debugging-native-code-faqs.md)   
  [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::EnumCodePaths | Microsoft Dokümanlar
+title: 'IDebugProgram2:: EnumCodePaths | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b99651811cedbdb8ec0eca5b766e6d75651dd5d7
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723038"
 ---
 # <a name="idebugprogram2enumcodepaths"></a>IDebugProgram2::EnumCodePaths
-Kaynak dosyadaki belirli bir konumun kod yollarının listesini alır.
+Kaynak dosyadaki belirli bir konum için kod yollarının listesini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT EnumCodePaths( 
@@ -51,28 +51,28 @@ int EnumCodePaths( 
 
 ## <a name="parameters"></a>Parametreler
 `pszHint`\
-[içinde] IDE'deki **Kaynak** veya **Sökme** görünümünde imlecin altındaki sözcük.
+'ndaki IDE 'deki **kaynak** veya **ayrıştırma** görünümünde imlecin altında bulunan sözcük.
 
 `pStart`\
-[içinde] Geçerli kod bağlamını temsil eden bir [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi.
+'ndaki Geçerli kod bağlamını temsil eden bir [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi.
 
 `pFrame`\
-[içinde] Geçerli kesme noktasıyla ilişkili yığın çerçevesini temsil eden bir [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) nesnesi.
+'ndaki Geçerli kesme noktasıyla ilişkili yığın çerçevesini temsil eden bir [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) nesnesi.
 
 `fSource`\
-[içinde] **Kaynak** görünümünde sıfır olmayan (`FALSE``TRUE`) veya () ise **Sökme** görünümünde.
+'ndaki Kaynak görünümünde sıfır olmayan ( `TRUE` ) **Source** veya `FALSE` **ayrıştırma** görünümünde sıfır ().
 
 `ppEnum`\
-[çıkış] Kod yollarının listesini içeren bir [IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md) nesnesi döndürür.
+dışı Kod yollarının bir listesini içeren bir [IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md) nesnesi döndürür.
 
 `ppSafety`\
-[çıkış] Seçilen kod yolunun atlanması durumunda kesme noktası olarak ayarlanacak ek bir kod bağlamını temsil eden bir [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi döndürür. Bu, örneğin kısa devreboolean ifadesinde gerçekleşebilir.
+dışı Seçilen kod yolunun atlanması durumunda kesme noktası olarak ayarlanacak ek kod bağlamını temsil eden bir [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi döndürür. Örneğin, kısa devre dışı olarak kabul edilen bir Boole ifadesi söz konusu olduğunda bu durum oluşabilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Kod yolu, programın yürütülmesinde geçerli noktaya ulaşmak için çağrılan bir yöntem veya işlevin adını açıklar. Kod yollarının listesi çağrı yığınını temsil eder.
+ Kod yolu, programın yürütüldüğü geçerli noktaya ulaşmak için çağrılan bir yöntemin veya işlevin adını tanımlar. Kod yollarının listesi çağrı yığınını temsil eder.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

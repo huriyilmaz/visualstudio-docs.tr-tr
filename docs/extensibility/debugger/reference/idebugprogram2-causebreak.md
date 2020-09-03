@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::CauseBreak | Microsoft Dokümanlar
+title: 'IDebugProgram2:: CauseBreak | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: e96db32d7ba5a01f89530623c949500a265cdb60
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723104"
 ---
 # <a name="idebugprogram2causebreak"></a>IDebugProgram2::CauseBreak
-İş iş parçacığıbir sonraki çalışma çalıştığında programın yürütmeyi durdurmasını ister.
+İş parçacıklarından birinin bir sonraki çalıştırılışında programın yürütmeyi durdurmasını ister.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 HRESULT CauseBreak( 
@@ -38,12 +38,12 @@ int CauseBreak();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Program sonraki bu yöntemden sonra kod çalıştırmak için çalışır çağrıldığında bir [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) olay gönderilir.
+ Program bir sonraki kodu bu yöntemden sonra çalıştırmaya çalıştığında bir [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) olayı gönderilir.
 
- Bu yöntem, yöntemmutlaka programın durdurmak için beklemeden hemen döner olduğu asynchronous olduğunu.
+ Bu yöntem, yönteminin programın durdurulmasını beklemeden hemen döndürdüğü zaman uyumsuzdur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

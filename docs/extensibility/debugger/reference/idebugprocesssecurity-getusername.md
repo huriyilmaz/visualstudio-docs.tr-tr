@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessSecurity::GetUserName | Microsoft Dokümanlar
+title: 'Idebugprocesssecurity:: GetUserName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +14,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ef00a0b7489c3e5cb709520546f3d3f26c8a4eba
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723250"
 ---
 # <a name="idebugprocesssecuritygetusername"></a>IDebugProcessSecurity::GetUserName
-Kullanıcı adını bağlantı noktası tedarikçisinden alır.
+Bağlantı noktası tedarikçiden Kullanıcı adını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetUserName(
@@ -39,13 +39,13 @@ int GetUserName (
 
 ## <a name="parameters"></a>Parametreler
 `pbstrUserName`\
-[çıkış] Kullanıcı adını içeren bir dize.
+dışı Kullanıcı adını içeren bir dize.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Yöntem başarılı olursa, döndürür. `S_OK` Aksi takdirde bir hata kodu döndürür.
+ Yöntem başarılı olursa, döndürür `S_OK` . Aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- `GetUserName`**İşleme Ekle** iletişim kutusunun **Kullanıcı Adı** sütununda görüntülenen kullanıcı adını döndürür. **İşleme Ekle** iletişim kutusunu görüntülemek [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] için, tümleşik geliştirme ortamında (IDE) **Araçlar** menüsünde **İşleme Ekle'yi** tıklatın.
+ `GetUserName`**Işleme İliştir** Iletişim kutusunun **Kullanıcı adı** sütununda görüntülenen kullanıcı adını döndürür. **Işleme İliştir** iletişim kutusunu görüntülemek için tümleşik geliştirme ORTAMıNDAKI (IDE) **Araçlar** menüsünde **İşleme İliştir** ' e tıklayın [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcessSecurity](../../../extensibility/debugger/reference/idebugprocesssecurity.md)

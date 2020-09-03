@@ -1,5 +1,5 @@
 ---
-title: IDebugPrimitiveTypeField::GetPrimitiveType | Microsoft Dokümanlar
+title: 'Idebugprimitivettypeınfo alanı:: GetPrimitiveType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +15,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a66c7c2e312795fa4303c8702e70cd509536de98
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724286"
 ---
 # <a name="idebugprimitivetypefieldgetprimitivetype"></a>IDebugPrimitiveTypeField::GetPrimitiveType
-Bu alanla ilişkili ilkel türü alır.
+Bu alanla ilişkili temel türü alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetPrimitiveType (
@@ -40,10 +40,10 @@ int GetPrimitiveType (
 
 ## <a name="parameters"></a>Parametreler
 `pdwType`\
-[çıkış] İlkel türü temsil eden [CorElementType Numaralandırma'dan](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) gelen değer.
+dışı Temel türü temsil eden [CorElementType numaralandırmasındaki](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) değer.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, döner. `S_FALSE`
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde döndürür `S_FALSE` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPrimitiveTypeField](../../../extensibility/debugger/reference/idebugprimitivetypefield.md)

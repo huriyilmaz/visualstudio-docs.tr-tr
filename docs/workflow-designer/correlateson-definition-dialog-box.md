@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8d2db5bbfa4f34d86d3bf20cfe6bcc42b3dc00d0
-ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86876131"
 ---
 # <a name="correlateson-definition-dialog-box"></a>CorrelatesOn Tanımı İletişim Kutusu
@@ -25,7 +25,7 @@ Etkinlikler arasındaki bağıntı, <xref:System.ServiceModel.Activities.Receive
 
 Aşağıdaki tabloda **CorrelatesOn** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır.
 
-|Arabirim Öğesi|Açıklama|
+|Arabirim Öğesi|Description|
 |-|-----------------|
 |**CorrelatesWith**|<xref:System.ServiceModel.Activities.CorrelationHandle>İletiyi uygun iş akışı örneğine yönlendirmek için kullanılır.|
 |**XPath sorguları**|Gelen iletilerden bağıntı verilerini ayıklamak için kullanılan sorguları içeren bir anahtar/değer çifti. Bu değer özelliğine karşılık gelir <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> . XPath sorguları bir nesnesi içinde bulunur <xref:System.ServiceModel.MessageQuerySet> .|

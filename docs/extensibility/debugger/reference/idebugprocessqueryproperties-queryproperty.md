@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessQueryProperties::QueryProperty | Microsoft Dokümanlar
+title: 'Idebugprocessqueryproperties:: QueryProperty | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +14,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b190d7ed1d3690be898334270bbd1d16584b81a7
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723291"
 ---
 # <a name="idebugprocessquerypropertiesqueryproperty"></a>IDebugProcessQueryProperties::QueryProperty
-Bu yöntem, hata ayıklama işleminin belirli bir özellik değerini sorgular.
+Bu yöntem, hata ayıklama işleminin belirtilen özellik değerini sorgular.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT QueryProperty(
@@ -39,7 +39,7 @@ int QueryProperty(
 
 ## <a name="parameters"></a>Parametreler
 `dwPropType`\
-[içinde] Sorgulanmış özelliğin tanımı. Değerler şunlardır:
+'ndaki Sorgulanan özelliğin tanımı. Değerler şunlardır:
 
 - PROCESS_PROPERTY_COMMAND_LINE = 1
 
@@ -48,10 +48,10 @@ int QueryProperty(
 - PROCESS_PROPERTY_ENVIRONMENT_VARIABLES = 3
 
 `pvarPropValue`\
-[çıkış] Özelliğin değeri.
+dışı Özelliğin değeri.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
  Bu yöntem nadiren kullanılır.

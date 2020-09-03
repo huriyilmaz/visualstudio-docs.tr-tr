@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8384b35583517a832763f5229d2b526ca10190ad
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541251"
 ---
 # <a name="how-to-update-a-data-source-with-data-from-a-host-control"></a>Nasıl yapılır: bir konak denetimindeki verilerle veri kaynağını güncelleştirme

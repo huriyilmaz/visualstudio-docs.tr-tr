@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessSecurity::QueryCanSafelyAttach | Microsoft Dokümanlar
+title: 'Idebugprocesssecurity:: QueryCanSafelyAttach | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +14,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: e03ccbb7761802401239768c54f4ea5b36ab86bf
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723203"
 ---
 # <a name="idebugprocesssecurityquerycansafelyattach"></a>IDebugProcessSecurity::QueryCanSafelyAttach
-Bu yöntem, bağlantı noktası tedarikçisinin kullanıcı güvenli olmayan bir işleme bağlanmadan önce bir uyarı görüntülemesine olanak tanır.
+Bu yöntem, kullanıcının güvenli olmayan bir işleme iliştirmadan önce bağlantı noktası sağlayıcısı 'nın bir uyarı görüntülemesine olanak tanır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 HRESULT QueryCanSafelyAttach();
@@ -34,13 +34,13 @@ int QueryCanSafelyAttach();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- İade değerleri aşağıdaki gibidir:
+ Dönüş değerleri aşağıdaki gibidir:
 
-- `S_OK`: İşleme takmak güvenlidir ve hiçbir uyarı iletişim kutusu gösterilmez.
+- `S_OK`: İşleme ekleme güvenlidir ve hiçbir uyarı iletişim kutusu gösterilmez.
 
-- `S_FALSE`: Takmak bir güvenlik sorunu olabilir ve uyarı içeren bir iletişim kutusu gösterilir.
+- `S_FALSE`: Ekleme bir güvenlik sorunu ve uyarı içeren bir iletişim kutusu gösterilir.
 
-- `FAILURE`: İşleme bağlanmak başarısız olur.
+- `FAILURE`: İşleme ekleme başarısız oluyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcessSecurity](../../../extensibility/debugger/reference/idebugprocesssecurity.md)

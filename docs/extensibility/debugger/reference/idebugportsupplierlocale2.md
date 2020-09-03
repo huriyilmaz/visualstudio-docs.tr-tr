@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplierLocale2 | Microsoft Dokümanlar
+title: IDebugPortSupplierLocale2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,37 +11,37 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 98444ca60937d40262c92d89b8a6c48ed1a0b7ef
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724292"
 ---
 # <a name="idebugportsupplierlocale2"></a>IDebugPortSupplierLocale2
-Liman tedarikçisi için yerel destek sağlar.
+Bir bağlantı noktası sağlayıcısı için yerel ayar desteği sağlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugPortSupplierLocale2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Özel bir bağlantı noktası tedarikçisi, yerel birimi ayarlamak için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Özel bir bağlantı noktası sağlayıcısı bu arabirimi yerel ayarı ayarlamak için uygular.
 
 ## <a name="methods"></a>Yöntemler
- Aşağıdaki tabloda **IDebugPortSupplierLocale2**yöntemleri ni göstermektedir.
+ Aşağıdaki tabloda **IDebugPortSupplierLocale2**yöntemleri gösterilmektedir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Setlocale](../../../extensibility/debugger/reference/idebugportsupplierlocale2-setlocale.md)|Bağlantı noktası tedarikçisinin yerel ayarını ayarlar.|
+|[SetLocale](../../../extensibility/debugger/reference/idebugportsupplierlocale2-setlocale.md)|Bağlantı noktası sağlayıcısı için yerel ayarı ayarlar.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: Portpriv.h
+ Üstbilgi: Portprıv. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

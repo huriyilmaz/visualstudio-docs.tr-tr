@@ -8,73 +8,73 @@ manager: markl
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8c43c48a797619f86f81e219e31ccf2afab5ba87
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77279319"
 ---
 # <a name="configure-a-c-project-for-intellisense"></a>IntelliSense için bir C++ projesi yapılandırma
 
-Bazı durumlarda, IntelliSense'in düzgün çalışması için C++ projenizi el ile yapılandırmanız gerekebilir. MSBuild projeleri için (.vcxproj dosyalarına dayalı), proje özelliklerindeki ayarları ayarlayabilirsiniz. MSBuild olmayan projeler için, projenin kök dizinindeki CppProperties.json dosyasındaki ayarları ayarlarsınız. Bazı durumlarda, IntelliSense'in makro tanımlarını anlamasına yardımcı olmak için bir ipucu dosyası oluşturmanız gerekebilir. Visual Studio IDE, IntelliSense sorunlarını belirlemenize ve düzeltmenize yardımcı olur.
+Bazı durumlarda, IntelliSense 'in düzgün şekilde çalışmasını sağlamak için C++ projenizi el ile yapılandırmanız gerekebilir. MSBuild projeleri için (. vcxproj dosyalarını temel alan), proje özelliklerindeki ayarları ayarlayabilirsiniz. MSBuild olmayan projeler için, projenin kök dizinindeki CppProperties.jsdosyadaki ayarları ayarlayabilirsiniz. Bazı durumlarda, IntelliSense 'in Makro tanımlarını anlamalarına yardımcı olmak için bir ipucu dosyası oluşturmanız gerekebilir. Visual Studio IDE, IntelliSense sorunlarını belirlemenize ve düzeltmenize yardımcı olur.
 
-## <a name="single-file-intellisense"></a>Tek dosyalı IntelliSense
+## <a name="single-file-intellisense"></a>Tek dosya IntelliSense
 
-Bir projeye dahil olmayan bir dosyayı açtığınızda, Visual Studio bazı IntelliSense desteği sağlar, ancak varsayılan olarak hiçbir hata squiggles gösterilir. Gezinti **Çubuğu** Çeşitli Dosyalar diyorsa, bu büyük olasılıkla neden yanlış kod altında hata squiggles görmüyorsanız açıklar, ya da neden bir önişlemci makro tanımlı değil. *Miscellaneous Files*
+Bir projeye dahil olmayan bir dosyayı açtığınızda, Visual Studio bazı IntelliSense desteği sağlar ancak varsayılan olarak hiçbir hata dalgalı çizgiler gösterilmez. **Gezinti çubuğu** *çeşitli dosyalar*yazmazsa, büyük olasılıkla hatalı kod altında hata dalgalı çizgiler görmediğiniz veya bir Önişlemci makrosunun neden tanımlanmadığı açıklanmaktadır.
 
-## <a name="check-the-error-list"></a>Hata Listesini Kontrol Et
+## <a name="check-the-error-list"></a>Hata Listesi denetleyin
 
-Bir dosya tek dosya modunda açık değilse ve IntelliSense doğru çalışmıyorsa, ilk kontrol edilen yer Hata Listesi penceresidir. Geçerli kaynak dosyadaki tüm IntelliSense hatalarını, dahil edilen tüm üstbilgi dosyalarıyla birlikte görmek için açılır kapıda **Build + IntelliSense'i** seçin:
+Bir dosya tek dosya modunda açılmadığından ve IntelliSense düzgün çalışmıyorsa, denetlenecek ilk yer Hata Listesi penceresidir. Geçerli kaynak dosyanın tüm IntelliSense hatalarını tüm dahil edilen üstbilgi dosyalarıyla birlikte görmek için açılan listede **Oluştur + IntelliSense** ' i seçin:
 
-![VC++ Hata Listesinde IntelliSense](media/vcpp-intellisense-error-list.png)
+![Hata Listesi 'de VC + + IntelliSense](media/vcpp-intellisense-error-list.png)
 
-IntelliSense en fazla 1000 hata üretir. Kaynak dosya tarafından eklenen üstbilgi dosyalarında 1000'den fazla hata varsa, kaynak dosya kaynak dosyanın en başında yalnızca tek bir hata hatası gösterir.
+IntelliSense en fazla 1000 hata üretir. Kaynak dosyanın içerdiği üst bilgi dosyalarında 1000 üzerinde hata varsa, kaynak dosya kaynak dosyanın en başında yalnızca tek bir hata dalgalı çizgi gösterir.
 
-## <a name="ensure-include-paths-are-correct"></a>#include yollarının doğru olduğundan emin olun
+## <a name="ensure-include-paths-are-correct"></a>#İnclude yollarının doğru olduğundan emin olun
 
 ### <a name="msbuild-projects"></a>MSBuild projeleri
 
-Yapılarınızı Visual Studio IDE'nin dışında çalıştırıyorsanız ve yapılarınızın başarılı olması ancak IntelliSense yanlışsa, komut satırınızın bir veya daha fazla yapılandırma için proje ayarlarıyla eşitlenmemiş olması mümkündür. **Solution Explorer'daki** proje düğümüne sağ tıklayın ve tüm **#include** yollarının geçerli yapılandırma ve platform için doğru olduğundan emin olun. Yollar tüm yapılandırmalarda ve platformlarda aynıysa, **Tüm yapılandırmaları** ve tüm **platformları** seçebilir ve yolların doğru olduğunu doğrulayabilirsiniz.
+Yapılarınızı Visual Studio IDE dışında çalıştırırsanız, yapılarınız başarılı oluyor ancak IntelliSense yanlış ise, komut satırlarınızın bir veya daha fazla yapılandırmanın proje ayarlarıyla eşitlenmesi mümkündür. **Çözüm Gezgini** ' de proje düğümüne sağ tıklayın ve tüm **#include** yollarının geçerli yapılandırma ve platform için doğru olduğundan emin olun. Yollar tüm yapılandırmalarda ve platformlarda aynıysa, **tüm yapılandırma** ve **tüm platformlar** ' ı seçip yolların doğru olduğunu doğrulayabilirsiniz.
 
-![VC++ Dizinleri Dahil Et](media/vcpp-intellisense-include-paths.png)
+![VC + + Içerme dizinleri](media/vcpp-intellisense-include-paths.png)
 
-**VC_IncludePath**gibi yapı makroları için geçerli değerleri görmek için Dizinleri Ekle satırını seçin ve sağdaki açılır dosyayı tıklatın. Ardından ** \<>'yı edit'i** seçin ve **Makrolar** düğmesine tıklayın.
+**VC_IncludePath**gibi derleme makrolarının geçerli değerlerini görmek Için Dizin Ekle satırını seçin ve sağdaki aşağı açılan listeye tıklayın. Sonra **\<Edit>** **makrolar** düğmesini seçin ve tıklayın.
 
 ### <a name="makefile-projects"></a>Derleme görevleri dosyası projeleri
 
-NMake proje şablonunu temel alan Makefile projeleri için sol bölmede **NMake'i** seçin ve ardından **IntelliSense** kategorisi altında **arama yolunu ekle'yi** seçin:
+NMake proje şablonunu temel alan derleme görevleri dosyası projeleri için sol bölmeden **NMAKE** ' i seçin ve ardından **IntelliSense** kategorisi altında **arama yolunu dahil et** ' i seçin:
 
-![Makefile projesi yolları içerir](media/vcpp-intellisense-makefile-include-paths.png)
+![Makefile projesi içerme yolları](media/vcpp-intellisense-makefile-include-paths.png)
 
 ### <a name="open-folder-projects"></a>Klasörü Aç projeleri
 
-CMake projeleri için, CMakeLists.txt'deki tüm yapılandırmalar için #include yollarının doğru şekilde belirtildiğinden emin olun. Diğer proje türleri cppProperties.json dosyası gerektirebilir. Daha fazla bilgi için [CppProperties.json ile IntelliSense'i Yapılandırın.](/cpp/build/open-folder-projects-cpp#configure-code-navigation-with-cpppropertiesjson) Dosyada tanımlanan her yapılandırma için yolların doğru olduğundan emin olun.
+CMake projeleri için, CMakeLists.txt tüm yapılandırmalarda #include yollarının doğru belirtildiğinden emin olun. Diğer proje türleri dosyasında bir CppProperties.jsgerektirebilir. Daha fazla bilgi için bkz. [IntelliSense 'i CppProperties.jsIle yapılandırma](/cpp/build/open-folder-projects-cpp#configure-code-navigation-with-cpppropertiesjson). Yolun, dosyada tanımlanan her yapılandırma için doğru olduğundan emin olun.
 
-CppProperties.json dosyasında sözdizimi hatası varsa, etkilenen dosyalardaki IntelliSense yanlış olacaktır. Visual Studio hatayı Çıkış Penceresinde görüntüler.
+Dosyadaki CppProperties.jsbir sözdizimi hatası varsa, etkilenen dosyalardaki IntelliSense yanlış olur. Visual Studio Çıkış Penceresi hatayı görüntüler.
 
-## <a name="tag-parser-issues"></a>Etiket parser sorunları
+## <a name="tag-parser-issues"></a>Ayrıştırıcı sorunlarını etiketleme
 
-Etiket parser tarama ve gezinme için kullanılan bir "bulanık" C ++ parser olduğunu. Çok hızlıdır ancak her kod yapısını tamamen kavramaya çalışmaz.
+Etiket ayrıştırıcısı, göz atmak ve gezinmek için kullanılan "benzer" bir C++ ayrıştırıcısıdır. Bu çok hızlıdır, ancak her kod yapısını tamamen anlarsınız.
 
-Örneğin, önişlemci makrolarını değerlendirmez ve bu nedenle bunları yoğun olarak kullanan kodu yanlış ayrışdırabilir. Tag Parser yabancı bir kod yapısıyla karşılaştığında, tüm kod bölgesini atlayabilir.
+Örneğin, Önişlemci makrolarını değerlendirmez ve bu nedenle, büyük bir kullanım kullanan kodu yanlış bir şekilde ayrıştırılabilir. Etiket ayrıştırıcısı tanıdık bir kod yapısı ile karşılaştığında, bu kod bölgesinin tamamını atlayabilir.
 
-Bu sorunun Visual Studio'da ortaya çıkmasının iki yaygın yolu vardır:
+Bu sorunun Visual Studio 'da bildirimlerinin iki genel yolu vardır:
 
-1. Gezinti Çubuğu en içteki makroyu gösteriyorsa, geçerli işlev tanımı atlandı:
+1. Gezinti çubuğu bir en içteki makroyu gösteriyorsa, geçerli işlev tanımı atlandı:
 
-   ![Etiket parser fonksiyon tanımı atlar](media/vcpp-intellisense-tag-parser-macro.png)
+   ![Etiket ayrıştırıcısı işlev tanımını atlıyor](media/vcpp-intellisense-tag-parser-macro.png)
 
-1. IDE, zaten tanımlanmış bir işlev için işlev tanımı oluşturmayı teklif eder:
+1. IDE, zaten tanımlanmış olan bir işlev için bir işlev tanımı oluşturmayı önerir:
 
-   ![Etiket parser varolan işlevi tanımlamak için sunuyor](media/vcpp-intellisense-tag-parser-function.png)
+   ![Bir ayrıştırıcının varolan işlevi tanımlamasını sağlayan etiketi](media/vcpp-intellisense-tag-parser-function.png)
 
-Bu tür sorunları gidermek için, çözüm dizininizin köküne **cpp.ipucu** adlı bir dosya ekleyin. Daha fazla bilgi için [İpucu Dosyaları'na](/cpp/build/reference/hint-files)bakın.
+Bu tür sorunları onarmak için, çözüm dizininizin köküne **cpp. İpucu** adlı bir dosya ekleyin. Daha fazla bilgi için bkz. [Ipucu dosyaları](/cpp/build/reference/hint-files).
 
-Etiket parser hataları **Hata Listesi** penceresinde görünür.
+Etiket Ayrıştırıcı hataları **hata listesi** penceresinde görüntülenir.
 
-## <a name="validate-project-settings-with-diagnostic-logging"></a>Tanılama günlüğe kaydetme ile proje ayarlarını doğrulama
+## <a name="validate-project-settings-with-diagnostic-logging"></a>Tanılama günlüğü ile proje ayarlarını doğrulama
 
-IntelliSense derleyicisinin Yolları Ve Önİşleme İşlemci makroları dahil olmak üzere doğru derleyici seçeneklerini kullanıp kullanmadığını kontrol etmek için, **Araçlar > Seçenekleri > Metin Düzenleyicisi > C/C++ > Advanced > Diagnostic Logging'de**IntelliSense komut satırlarının Tanısal Günlüğe Kaydetme'yi açın. **Günlük Günlemesini** Doğru'ya, Günlük **Düzeyini** 5'e (en ayrıntılı) ve **Günlük Filtresini** 8'e (IntelliSense günlüğe kaydetme) ayarla.
+IntelliSense derleyicisinin Içerme ve Önişlemci makroları dahil doğru derleyici seçeneklerini kullanıp kullanmadığını denetlemek için **araçlar > seçenekler > metin düzenleyicisi > C/C++ > gelişmiş > tanılama günlüğü**' nde IntelliSense komut satırlarının tanılama günlüğünü açın. Günlüğe **kaydetmeyi doğru** , **günlük düzeyini** 5 ' e (en ayrıntılı) ve **günlük filtresini** 8 ' e (IntelliSense günlüğü) ayarlayın.
 
 Çıkış Penceresi artık IntelliSense derleyicisine geçirilen komut satırlarını gösterir. Örnek çıktı aşağıdaki gibidir:
 
@@ -93,21 +93,21 @@ IntelliSense derleyicisinin Yolları Ve Önİşleme İşlemci makroları dahil o
 /Yustdafx.h
 ```
 
-Bu bilgiler, IntelliSense'in neden yanlış bilgi sağladığını anlamanıza yardımcı olabilir. Örneğin, projenizin Ekle dizini **$(MyVariable)\Include**ve tanılama günlüğü gösterir **/I\Include** yolu olarak içeriyorsa, bu **$(MyVariable)** değerlendirilmediği ve son dahil yolundan kaldırıldığı anlamına gelir.
+Bu bilgiler, IntelliSense 'in neden yanlış bilgi sağladığını anlamanıza yardımcı olabilir. Örneğin, projenizin Içerme dizini **$ (MyVariable) \ Include**değerini içeriyorsa ve tanılama günlüğünde **/I\ınclude** öğesini içerme yolu olarak gösteriyorsa, **$ (MyVariable)** öğesinin değerlendirilmediği ve son içerme yolundan kaldırıldığı anlamına gelir.
 
-## <a name="about-the-intellisense-build"></a>IntelliSense yapısı hakkında
+## <a name="about-the-intellisense-build"></a>IntelliSense derlemesi hakkında
 
-Visual Studio, tüm IntelliSense özelliklerine güç veren veritabanını oluşturmak ve korumak için özel bir C++ derleyicisi kullanır. IntelliSense veritabanını kodla senkronize tutmak için Visual Studio, proje ayarlarında veya kaynak dosyalarında yapılan bazı değişikliklere yanıt olarak yalnızca Arka plan görevleri olarak intelliSense oluşturmayı otomatik olarak başlatır.
+Visual Studio, tüm IntelliSense özelliklerini destekleyen veritabanını oluşturmak ve sürdürmek için adanmış bir C++ derleyicisi kullanır. IntelliSense veritabanını kodla eşitlenmiş halde tutmak için, Visual Studio yalnızca IntelliSense tarafından otomatik olarak başlatılır; proje ayarlarında veya kaynak dosyalarında yapılan belirli değişikliklere yanıt olarak yalnızca IntelliSense için arka plan görevleri olarak oluşturulur.
 
-Ancak, bazı durumlarda Visual Studio, IntelliSense veritabanını zamanında güncelleştiremeyebilir. Örneğin, **git çekme** veya **git ödeme** komutunu çalıştırdığınızda, Visual Studio'nun dosyalardaki değişiklikleri algılaması bir saat kadar sürebilir. **Solution Explorer'daki** proje düğümüne sağ tıklayarak ve **Rescan Solution'ı**seçerek çözümdeki tüm dosyaların rescan'ını zorlayabilirsiniz.
+Ancak, bazı durumlarda Visual Studio IntelliSense veritabanını zamanında güncelleştirmeyebilir. Örneğin, **git pull** veya **Git Checkout** komutunu çalıştırdığınızda, dosyalardaki değişikliklerin algılanması için Visual Studio bir saate kadar zaman alabilir. **Çözüm Gezgini** ' de proje düğümüne sağ tıklayıp **çözümü yeniden Tara**' yı seçerek, bir Çözümdeki tüm dosyaları yeniden taramaya zorlayabilirsiniz.
 
-## <a name="troubleshooting-intellisense-build-failures"></a>Sorun Giderme IntelliSense yapı hataları
+## <a name="troubleshooting-intellisense-build-failures"></a>IntelliSense derleme hatalarıyla ilgili sorunları giderme
 
-Bir IntelliSense yapı ikili üretmek değil, ama yine de başarısız olabilir. Hatanın olası nedenlerinden biri özel .props veya .targets dosyalarıdır. Visual Studio 2017 sürüm 15.6 ve sonraki sürümlerinde, IntelliSense'in yalnızca yapı hataları Çıktı penceresine kaydedilir. Bunları görmek için, **Çözüm'den** **Çözüme**çıkış göster'i ayarlayın:
+Bir IntelliSense derlemesi ikili dosyaları oluşturmaz, ancak yine de başarısız olabilir. Hatanın olası nedenlerinden biri Custom. props veya. targets dosyalarıdır. Visual Studio 2017 sürüm 15,6 ve sonrasında, yalnızca IntelliSense derleme hataları çıkış penceresine kaydedilir. Bunları görmek için, **çıktıyı ' den** **çözüme**göster ' i ayarlayın:
 
 ![Çözüm hataları için çıkış penceresi](media/vcpp-intellisense-output-window.png)
 
-Hata iletisi, tasarım zamanı izlemeetkinleştirmenizi sağlayabilir:
+Hata iletisi, tasarım zamanı izlemeyi etkinleştirmenizi isteyebilir:
 
 ```output
 error: Designtime build failed for project 'E:\src\MyProject\MyProject.vcxproj',
@@ -116,9 +116,9 @@ Set environment variable TRACEDESIGNTIME=true and restart
 Visual Studio to investigate.
 ```
 
-Çevre değişkeni TRACEDESIGNTIME'ı doğru olarak ayarlar ve Visual Studio'yu yeniden başlatırsanız, %TEMP% dizininde yapı hatasını tanılamaya yardımcı olabilecek bir günlük dosyası görürsünüz.
+TRACEDESIGNTIME ortam değişkenini true olarak ayarlarsanız ve Visual Studio 'Yu yeniden başlatırsanız,% TEMP% dizininde, derleme hatasının tanılanmasına yardımcı olabilecek bir günlük dosyası görürsünüz.
 
-TRACEDESIGNTIME ortamı değişkeni hakkında daha fazla bilgi edinmek için [Roslyn](https://github.com/dotnet/roslyn/wiki/Diagnosing-Project-System-Build-Errors) ve [Ortak Proje Sistemi'ne](https://github.com/dotnet/project-system/blob/master/docs/design-time-builds.md)bakın. Bu makalelerdeki bilgiler C++ projeleri için önemlidir.
+TRACEDESIGNTIME ortam değişkeni hakkında daha fazla bilgi edinmek için bkz. [Roslyn](https://github.com/dotnet/roslyn/wiki/Diagnosing-Project-System-Build-Errors) ve [ortak proje sistemi](https://github.com/dotnet/project-system/blob/master/docs/design-time-builds.md). Bu makalelerdeki bilgiler, C++ projeleri için geçerlidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

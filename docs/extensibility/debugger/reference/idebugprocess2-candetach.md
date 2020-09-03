@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::CanDetach | Microsoft Dokümanlar
+title: 'IDebugProcess2:: CanDetach | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2bfb7b7b586f9c8b86e75d453389525c61a63bc4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724178"
 ---
 # <a name="idebugprocess2candetach"></a>IDebugProcess2::CanDetach
-Oturum hata ayıklama yöneticisinin (SDM) işlemi ayırıp ayıramayacağına karar vetir.
+Oturum hata ayıklama yöneticisinin (SDM) işlemi ayırabileceğini belirler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 HRESULT CanDetach(
@@ -38,7 +38,7 @@ int CanDetach();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK.` `S_FALSE` hata ayıklama işleminden ayıramıyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, `S_OK.` `S_FALSE` hata ayıklayıcı işlemden ayıramaması halinde döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [CanDetach](../../../extensibility/debugger/reference/idebugprogram2-candetach.md)
