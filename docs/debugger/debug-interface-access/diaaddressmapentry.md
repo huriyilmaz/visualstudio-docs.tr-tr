@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8cae8159c893229f02e9598e932d7bc19efc2f4a
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85468681"
 ---
 # <a name="diaaddressmapentry"></a>DiaAddressMapEntry
@@ -32,9 +32,9 @@ struct DiaAddressMapEntry {
 ```
 
 ## <a name="elements"></a>Öğeler
-`rva`A görüntüsündeki göreli bir sanal adres (RVA).
+`rva` A görüntüsündeki göreli bir sanal adres (RVA).
 
-`rvaTo`Göreli sanal adres `rva` B görüntüsünde eşlenir.
+`rvaTo` Göreli sanal adres `rva` B görüntüsünde eşlenir.
 
 ## <a name="remarks"></a>Açıklamalar
 Adres eşlemesi, bir görüntü düzeninden (A) diğerine (B) bir çeviri sağlar. `DiaAddressMapEntry`Sıralanmış bir yapı dizisi `rva` bir adres haritasını tanımlar.

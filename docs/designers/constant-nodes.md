@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6868a5dc7cbace1d061c43cd507d32c271436a26
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769307"
 ---
 # <a name="constant-nodes"></a>Sabit düğümler
@@ -29,19 +29,19 @@ Her piksel gölgelendirici örneği yalnızca bir sabit değer kümesi alırsa v
 
 |Node|Ayrıntılar|Özellikler|
 |----------|-------------|----------------|
-|**Kamera vektörü**|Dünya alanındaki geçerli pikselden kameraya genişleyen vektör.<br /><br /> Bunu, dünya alanındaki yansımaları hesaplamak için kullanabilirsiniz.<br /><br /> **Çıktı**<br /><br /> `Output`: `float3`<br /> Geçerli pikselden kameraya olan vektör.|Hiçbiri|
+|**Kamera vektörü**|Dünya alanındaki geçerli pikselden kameraya genişleyen vektör.<br /><br /> Bunu, dünya alanındaki yansımaları hesaplamak için kullanabilirsiniz.<br /><br /> **Çıktı**<br /><br /> `Output`: `float3`<br /> Geçerli pikselden kameraya olan vektör.|Yok|
 |**Renk sabiti**|Sabit bir renk değeri.<br /><br /> **Çıktı**<br /><br /> `Output`: `float4`<br /> Renk değeri.|**Çıktı**<br /> Renk değeri.|
 |**Sabit**|Sabit bir skaler değer.<br /><br /> **Çıktı**<br /><br /> `Output`: `float`<br /> Skaler değer.|**Çıktı**<br /> Skaler değer.|
 |**2B sabit**|İki bileşenden oluşan vektör sabiti.<br /><br /> **Çıktı**<br /><br /> `Output`: `float2`<br /> Vektör değeri.|**Çıktı**<br /> Vektör değeri.|
 |**3B sabiti**|Üç bileşenden oluşan bir vektör sabiti.<br /><br /> **Çıktı**<br /><br /> `Output`: `float3`<br /> Vektör değeri.|**Çıktı**<br /> Vektör değeri.|
 |**4D sabiti**|Dört bileşenden oluşan vektör sabiti.<br /><br /> **Çıktı**<br /><br /> `Output`: `float4`<br /> Renk değeri.|**Çıktı**<br /> Vektör değeri.|
-|**Normalleştirilmiş konum**|Normalleştirilmiş cihaz koordinatları olarak ifade edilen geçerli pikselin konumu.<br /><br /> X koordinatı ve y koordinatı [-1, 1] aralığında değerler içeriyor, z koordinatı [0, 1] aralığında bir değere sahip ve w bileşeni görünüm alanındaki nokta derinliği değerini içeriyor; w normalleştirilemez.<br /><br /> **Çıktı**<br /><br /> `Output`: `float4`<br /> Geçerli pikselin konumu.|Hiçbiri|
-|**Nokta rengi**|Malzeme dağıtma rengi ve köşe rengi özniteliklerinin bir birleşimi olan geçerli pikselin dağıtma rengi.<br /><br /> **Çıktı**<br /><br /> `Output`: `float4`<br /> Geçerli pikselin dağıtma rengi.|Hiçbiri|
-|**Nokta derinliği**|Görünüm alanındaki geçerli pikselin derinliği.<br /><br /> **Çıktı**<br /><br /> `Output`: `float`<br /> Geçerli pikselin derinliği.|Hiçbiri|
-|**Normalleştirilmiş nokta derinliği**|Normalleştirilmiş cihaz koordinatlarında ifade edilen geçerli pikselin derinliği.<br /><br /> Sonucun [0, 1] aralığında bir değeri vardır.<br /><br /> **Çıktı**<br /><br /> `Output`: `float`<br /> Geçerli pikselin derinliği.|Hiçbiri|
-|**Ekran konumu**|Geçerli pikselin ekran koordinatları olarak ifade edilen konumu.<br /><br /> Ekran koordinatları geçerli görünüm penceresini temel alır. X ve y bileşenleri ekran koordinatlarını içerir, z bileşeni bir [0, 1] aralığına normalleştirilmiş derinliği içerir ve w bileşeni görünüm alanındaki derinlik değerini içerir.<br /><br /> **Çıktı**<br /><br /> `Output`: `float4`<br /> Geçerli pikselin konumu.|Hiçbiri|
-|**Yüzey normal**|Nesne alanında geçerli pikselin yüzey normal.<br /><br /> Bunu, nesne alanındaki aydınlatma katkılarını ve yansımaları hesaplamak için kullanabilirsiniz.<br /><br /> **Çıktı**<br /><br /> `Output`: `float3`<br /> Geçerli pikselin yüzey normal.|Hiçbiri|
-|**Teğet alanı kamera vektörü**|Teğet alanında geçerli pikselden kameraya genişleyen vektör.<br /><br /> Bu alanı, tanjant alanındaki yansımaları hesaplamak için kullanabilirsiniz.<br /><br /> **Çıktı**<br /><br /> `Output`: `float3`<br /> Geçerli pikselden kameraya olan vektör.|Hiçbiri|
-|**Teğet boşluk ışığı yönü**|Işığın, geçerli pikselin teğet alanındaki bir ışık kaynağından saçıldığı yönü tanımlayan vektör.<br /><br /> Bu bunu, tanjant alanında aydınlatma ve yansımalı katkıları hesaplamak için kullanabilirsiniz.<br /><br /> **Çıktıların**<br /><br /> `Output`: `float3`<br /> Geçerli pikselden bir ışık kaynağına vektör.|Hiçbiri|
-|**Dünya normal**|Dünya alanındaki geçerli pikselin yüzey normal.<br /><br /> Bunu, dünya alanındaki aydınlatma katlamalarını ve yansımaları hesaplamak için kullanabilirsiniz.<br /><br /> **Çıktı**<br /><br /> `Output`: `float3`<br /> Geçerli pikselin yüzey normal.|Hiçbiri|
-|**Dünya konumu**|Dünya alanındaki geçerli pikselin konumu.<br /><br /> **Çıktı**<br /><br /> `Output`: `float4`<br /> Geçerli pikselin konumu.|Hiçbiri|
+|**Normalleştirilmiş konum**|Normalleştirilmiş cihaz koordinatları olarak ifade edilen geçerli pikselin konumu.<br /><br /> X koordinatı ve y koordinatı [-1, 1] aralığında değerler içeriyor, z koordinatı [0, 1] aralığında bir değere sahip ve w bileşeni görünüm alanındaki nokta derinliği değerini içeriyor; w normalleştirilemez.<br /><br /> **Çıktı**<br /><br /> `Output`: `float4`<br /> Geçerli pikselin konumu.|Yok|
+|**Nokta rengi**|Malzeme dağıtma rengi ve köşe rengi özniteliklerinin bir birleşimi olan geçerli pikselin dağıtma rengi.<br /><br /> **Çıktı**<br /><br /> `Output`: `float4`<br /> Geçerli pikselin dağıtma rengi.|Yok|
+|**Nokta derinliği**|Görünüm alanındaki geçerli pikselin derinliği.<br /><br /> **Çıktı**<br /><br /> `Output`: `float`<br /> Geçerli pikselin derinliği.|Yok|
+|**Normalleştirilmiş nokta derinliği**|Normalleştirilmiş cihaz koordinatlarında ifade edilen geçerli pikselin derinliği.<br /><br /> Sonucun [0, 1] aralığında bir değeri vardır.<br /><br /> **Çıktı**<br /><br /> `Output`: `float`<br /> Geçerli pikselin derinliği.|Yok|
+|**Ekran konumu**|Geçerli pikselin ekran koordinatları olarak ifade edilen konumu.<br /><br /> Ekran koordinatları geçerli görünüm penceresini temel alır. X ve y bileşenleri ekran koordinatlarını içerir, z bileşeni bir [0, 1] aralığına normalleştirilmiş derinliği içerir ve w bileşeni görünüm alanındaki derinlik değerini içerir.<br /><br /> **Çıktı**<br /><br /> `Output`: `float4`<br /> Geçerli pikselin konumu.|Yok|
+|**Yüzey normal**|Nesne alanında geçerli pikselin yüzey normal.<br /><br /> Bunu, nesne alanındaki aydınlatma katkılarını ve yansımaları hesaplamak için kullanabilirsiniz.<br /><br /> **Çıktı**<br /><br /> `Output`: `float3`<br /> Geçerli pikselin yüzey normal.|Yok|
+|**Teğet alanı kamera vektörü**|Teğet alanında geçerli pikselden kameraya genişleyen vektör.<br /><br /> Bu alanı, tanjant alanındaki yansımaları hesaplamak için kullanabilirsiniz.<br /><br /> **Çıktı**<br /><br /> `Output`: `float3`<br /> Geçerli pikselden kameraya olan vektör.|Yok|
+|**Teğet boşluk ışığı yönü**|Işığın, geçerli pikselin teğet alanındaki bir ışık kaynağından saçıldığı yönü tanımlayan vektör.<br /><br /> Bu bunu, tanjant alanında aydınlatma ve yansımalı katkıları hesaplamak için kullanabilirsiniz.<br /><br /> **Çıktıların**<br /><br /> `Output`: `float3`<br /> Geçerli pikselden bir ışık kaynağına vektör.|Yok|
+|**Dünya normal**|Dünya alanındaki geçerli pikselin yüzey normal.<br /><br /> Bunu, dünya alanındaki aydınlatma katlamalarını ve yansımaları hesaplamak için kullanabilirsiniz.<br /><br /> **Çıktı**<br /><br /> `Output`: `float3`<br /> Geçerli pikselin yüzey normal.|Yok|
+|**Dünya konumu**|Dünya alanındaki geçerli pikselin konumu.<br /><br /> **Çıktı**<br /><br /> `Output`: `float4`<br /> Geçerli pikselin konumu.|Yok|
