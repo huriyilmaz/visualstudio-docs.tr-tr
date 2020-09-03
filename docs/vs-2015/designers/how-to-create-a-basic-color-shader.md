@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 90f27e2359954e56a5b3d86bfc31883d4f29c44d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664581"
 ---
 # <a name="how-to-create-a-basic-color-shader"></a>Nasıl Yapılır: Temel Renk Gölgelendiricisi Oluşturma
@@ -46,14 +46,14 @@ Bu belge, bir düz renk gölgelendiricisi oluşturmak için Gölgelendirici Tasa
 
 4. **Renk sabiti** düğümü için bir renk değeri belirtin. **Renk sabiti** düğümünü seçmek için **seçim** aracını kullanın ve ardından **Özellikler** penceresinde, **Çıkış** özelliği ' nde bir renk değeri belirtin. Turuncu için bir değer (1,0, 0,5, 0,2, 1,0) belirtin.
 
-5. Renkli sabiti son renge bağlayın. Bağlantıları oluşturmak için, renk sabiti düğümünün **RGB** terminalini **son renk** düğümünün **RGB** **terminaline** taşıyın ve ardından **renk sabiti** düğümünün **Alfa** terminalini **Alpha** 'a taşıyın **son renk** düğümünün terminali. Bu bağlantılar, son rengi önceki adımda tanımlanan renk sabitine ayarlar.
+5. Renkli sabiti son renge bağlayın. Bağlantıları oluşturmak için, **renk sabiti** düğümünün **RGB** terminalini **son renk** düğümünün **RGB** terminaline taşıyın ve ardından renk sabiti düğümünün **Alfa** terminalini **son renk** düğümünün **Alfa** **terminaline** taşıyın. Bu bağlantılar, son rengi önceki adımda tanımlanan renk sabitine ayarlar.
 
    Aşağıdaki çizimde, tamamlanmış gölgelendirici grafiği ve bir küpe uygulanan gölgelendirici önizlemesi gösterilmektedir.
 
 > [!NOTE]
 > Çizimde, gölgelendirici efektini daha iyi göstermek için turuncu bir renk belirtildi.
 
- ![Gölgelendirici Grafiği ve bunun sonucu 3&#45;D modelde](../designers/media/digit-flat-color-effect.png "Basamak-düz renkli efekt")
+ ![Gölgelendirici Grafiği ve bunun sonucu 3&#45;D modeli](../designers/media/digit-flat-color-effect.png "Basamak-düz renkli efekt")
 
  Bazı biçimler bazı gölgelendiriciler için daha iyi önizleme sağlayabilir. Gölgelendirici tasarımcısında gölgelendiricilerin önizlemesi hakkında daha fazla bilgi için bkz. [Gölgelendirici Tasarımcısı](../designers/shader-designer.md).
 

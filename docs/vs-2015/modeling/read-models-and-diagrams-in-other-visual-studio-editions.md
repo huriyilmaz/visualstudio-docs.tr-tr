@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a6a7c944eb3d5378ad0fc1542b90ad182f7eb976
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671284"
 ---
 # <a name="read-models-and-diagrams-in-other-visual-studio-editions"></a>Diğer Visual Studio sürümlerindeki modelleri ve diyagramları okuma
@@ -28,7 +28,7 @@ Model oluşturmayı desteklemeyen bir Visual Studio sürümünde model açtığ�
 ## <a name="obtaining-access-to-a-model-and-diagrams"></a>Model ve diyagramlara erişim sağlama
  Bir UML diyagramını veya katman diyagramını okumak için öncelikle Visual Studio 'Yu kullanarak modelleme projesini açın ve sonra diyagramı içinde açın.
 
- Bu nedenle, bir UML diyagramını veya katman diyagramını okumak istiyorsanız, oluşturulduğu modelleme projesine de erişiminizin olması gerekir. Bunu, projeye [!INCLUDE[esprscc](../includes/esprscc-md.md)] erişerek ya da proje dosyalarının bir kopyasını alarak yapabilirsiniz.
+ Bu nedenle, bir UML diyagramını veya katman diyagramını okumak istiyorsanız, oluşturulduğu modelleme projesine de erişiminizin olması gerekir. Bunu, projeye erişerek [!INCLUDE[esprscc](../includes/esprscc-md.md)] ya da proje dosyalarının bir kopyasını alarak yapabilirsiniz.
 
 > [!NOTE]
 > Bu, koddan oluşturulan kod haritaları ve .NET sınıf diyagramları için geçerlidir. Bu diyagramlar, modelleme projesinden bağımsız olarak görüntülenebilir.
@@ -38,7 +38,7 @@ Model oluşturmayı desteklemeyen bir Visual Studio sürümünde model açtığ�
 - Okumak istediğiniz diyagram için iki Diyagram dosyası; örneğin, **MyDiagram. classdiagram ve MyDiagram. classdiagram. Layout**.
 
     > [!NOTE]
-    > Katman diyagramlarında, _MyDiagram_ **. layerdiagram. suppressions**adlı dosyaya da sahip olmanız gerekir.
+    > Katman diyagramlarında, _MyDiagram_**. layerdiagram. suppressions**adlı dosyaya da sahip olmanız gerekir.
 
 - Modelleme proje dosyası (**MyModel. modelproj**)
 
@@ -55,7 +55,7 @@ Model oluşturmayı desteklemeyen bir Visual Studio sürümünde model açtığ�
 
   Bu değişiklikleri kaydedebilirsiniz. Değişikliklerinizi diğer kullanıcılara görünür yapmak istiyorsanız, en azından güncelleştirilmiş **. Layout** dosyalarını göndermeniz gerekir.
 
-## <a name="RelatedTopics"></a>İlgili konular
+## <a name="related-topics"></a><a name="RelatedTopics"></a> İlgili konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|

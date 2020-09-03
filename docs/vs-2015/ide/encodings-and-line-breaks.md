@@ -19,10 +19,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2e1b13cc101ea4d7609633fd9c11bf87946d7b7d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665733"
 ---
 # <a name="encodings-and-line-breaks"></a>Kodlamalar ve Satır Sonları
@@ -31,7 +31,7 @@ ms.locfileid: "72665733"
 Visual Studio 'da istediğiniz satır sonu karakterlerinin türünü öğrenmek için **Dosya/Gelişmiş kaydetme seçenekleri** ayarlarını kullanabilirsiniz. Aynı ayarlarla bir dosyanın kodlamasını de değiştirebilirsiniz.
 
 > [!NOTE]
-> Belirli türde geliştirme ayarlarına sahipseniz (Visual Basic, F#Web geliştirme) menüde **Gelişmiş Kaydet seçeneklerini** göremeyebilirsiniz. Ayarlarınızı değiştirmek için (örneğin, genel), **Araçlar/içeri ve dışarı aktarma ayarları**' nı açın. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> Belirli türde geliştirme ayarlarına sahipseniz (Visual Basic, F #, Web geliştirme) menüde **Gelişmiş Kaydet seçeneklerini** göremeyebilirsiniz. Ayarlarınızı değiştirmek için (örneğin, genel), **Araçlar/içeri ve dışarı aktarma ayarları**' nı açın. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
  Visual Studio 'da aşağıdaki karakterler satır sonları olarak yorumlanır:
 

@@ -19,10 +19,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7924201f4cf58e1066434707a8453b0fe1913bc6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670730"
 ---
 # <a name="how-to-sign-application-and-deployment-manifests"></a>Nasıl Yapılır: Uygulama ve Dağıtım Bildirimlerini İmzalama
@@ -37,11 +37,11 @@ ClickOnce dağıtımını kullanarak bir uygulama yayımlamak istiyorsanız, uyg
  Anahtar dosyaları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: genel-özel anahtar çifti oluşturma](https://msdn.microsoft.com/library/05026813-f3bd-4d7c-9e0b-fc588eb3d114).
 
 > [!NOTE]
-> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], yalnızca. pfx uzantılı kişisel bilgi değişimi (PFX) anahtar dosyalarını destekler. Ancak, proje özelliklerinin **imzalama** sayfasında **depodan Seç** ' i tıklatarak geçerli kullanıcının Windows sertifika deposundan diğer sertifika türlerini seçebilirsiniz.
+> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yalnızca. pfx uzantılı kişisel bilgi değişimi (PFX) anahtar dosyalarını destekler. Ancak, proje özelliklerinin **imzalama** sayfasında **depodan Seç** ' i tıklatarak geçerli kullanıcının Windows sertifika deposundan diğer sertifika türlerini seçebilirsiniz.
 
 ### <a name="to-sign-application-and-deployment-manifests-using-a-certificate"></a>Uygulama ve dağıtım bildirimlerini bir sertifika kullanarak imzalamak için
 
-1. Proje özellikleri penceresine gidin ( **Çözüm Gezgini** proje düğümüne sağ tıklayın ve **Özellikler**' i seçin veya **Hızlı Başlat** penceresine **Proje ÖZELLIKLERI** yazın veya Çözüm Gezgini içinde alt + ENTER tuşlarına basınpencere). **İmzalama** sekmesinde **ClickOnce bildirimlerini imzala** onay kutusunu seçin.
+1. Proje özellikleri penceresine gidin ( **Çözüm Gezgini** proje düğümüne sağ tıklayın ve **Özellikler**' i seçin veya **Hızlı Başlat** penceresine **Proje özellikleri** yazın veya **Çözüm Gezgini** penceresinin içinde alt + ENTER ' a basın. **İmzalama** sekmesinde **ClickOnce bildirimlerini imzala** onay kutusunu seçin.
 
 2. **Mağazadan Seç** düğmesine tıklayın.
 

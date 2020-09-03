@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 093cc277fa1cbe1915099fd9663fc1ccb797ca3a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671175"
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>DSL Kitaplığı Kullanarak DSL'ler Arasında Sınıfları Paylaşma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Görselleştirme ve modelleme SDK [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], başka bir DSL 'ye aktarabileceğiniz tamamlanmamış bir DSL tanımı oluşturabilirsiniz. Bu, benzer modellerin ortak parçalarını çarpanlara katmanızı sağlar.
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Görselleştirme ve modelleme SDK 'sında, başka BIR DSL 'ye aktarabileceğiniz tamamlanmamış BIR DSL tanımı oluşturabilirsiniz. Bu, benzer modellerin ortak parçalarını çarpanlara katmanızı sağlar.
 
 ## <a name="creating-and-using-dsl-libraries"></a>DSL kitaplıklarını oluşturma ve kullanma
 
@@ -35,7 +35,7 @@ Görselleştirme ve modelleme SDK [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], 
 
      İçeri aktarıcılar tarafından kullanılabilecek bir ilişki tanımlamak için iki etki alanı sınıfı oluşturun ve aralarında ilişki oluşturun.
 
-     Etki alanı sınıflarının **Devralma değiştiricisini** `Abstract` olarak ayarlamayı düşünün.
+     Etki alanı sınıflarının **Devralma değiştiricisini** olarak ayarlamayı düşünün `Abstract` .
 
 3. DSL Gezgini ' nde tanımladığınız öğeleri (bağlantı oluşturucular gibi) ekleyebilirsiniz.
 
@@ -43,9 +43,9 @@ Görselleştirme ve modelleme SDK [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], 
 
 5. **Tüm Şablonları Dönüştür**' e tıklayın.
 
-6. Projeyi oluşturun.
+6. Projeyi derleyin.
 
-7. Diğer kişilerin kullanması için DSL dağıtırken, hem derlenen derleme (DLL) hem de dosya `DslDefinition.dsl` sağlamanız gerekir. Derlenen derlemeyi `Dsl\bin\*` altında bir klasörde bulabilirsiniz
+7. Diğer kişilerin kullanması için DSL dağıtırken, hem derlenen derleme (DLL) hem de dosya sağlamanız gerekir `DslDefinition.dsl` . Derlenen derlemeyi, altındaki bir klasörde bulabilirsiniz `Dsl\bin\*`
 
 #### <a name="to-import-a-dsl-library"></a>DSL kitaplığını içeri aktarmak için
 
@@ -61,7 +61,7 @@ Görselleştirme ve modelleme SDK [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], 
 
 5. DSL kitaplığı projesi tarafından oluşturulan derlemeye (DLL) bir başvuru olan DSL projesine ekleyin.
 
-6. Çözümü oluşturun.
+6. Çözümü derleyin.
 
    DSL kitaplığı, diğer kitaplıkları içeri aktarabilir. Bir kitaplığı içeri aktardığınızda, içeri aktarmaları de otomatik olarak DSL Gezgini 'nde görünür.
 

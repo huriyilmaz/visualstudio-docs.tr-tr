@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a4659efef9b233284a593fecd5c8404cb2650b0c
-ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88893274"
 ---
 # <a name="customize-a-rule-set"></a>Bir kural kümesini özelleştirme
@@ -51,7 +51,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 4. Kural kümesi düzenleyicisinde kuralları göstermek için **Aç** ' ı seçin.
 
 > [!NOTE]
-> .NET Core veya .NET Standard projeniz varsa, **Kod Analizi** özelliği sekmesi bulunmadığından işlem biraz farklıdır. [önceden tanımlanmış bir kural kümesini projenize kopyalamak ve etkin kural kümesi olarak ayarlamak](analyzer-rule-sets.md)için adımları izleyin. Bir kural kümesi üzerinden kopyaladıktan sonra, [bunu Visual Studio kural kümesi düzenleyicisinde](working-in-the-code-analysis-rule-set-editor.md) **Çözüm Gezgini**açarak düzenleyebilirsiniz.
+> .NET Core veya .NET Standard projeniz varsa, **Kod Analizi** Özellik sekmesi olmadığından işlem biraz farklıdır. [Önceden tanımlanmış bir kural kümesini projenize kopyalamak ve etkin kural kümesi olarak ayarlamak](analyzer-rule-sets.md)için adımları izleyin. Bir kural kümesi üzerinden kopyaladıktan sonra, [bunu Visual Studio kural kümesi düzenleyicisinde](working-in-the-code-analysis-rule-set-editor.md) **Çözüm Gezgini**açarak düzenleyebilirsiniz.
 
 ## <a name="create-a-new-rule-set"></a>Yeni bir kural kümesi oluştur
 

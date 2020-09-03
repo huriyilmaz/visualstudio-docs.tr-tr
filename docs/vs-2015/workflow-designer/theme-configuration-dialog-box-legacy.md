@@ -30,7 +30,7 @@ Bu konuda, eski ' deki **Tema yapılandırması** iletişim kutusunun nasıl kul
 
  Aşağıdaki tabloda **Tema yapılandırması** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır.
 
-|Arabirim Öğesi|Description|
+|Arabirim Öğesi|Açıklama|
 |----------------|-----------------|
 |**Tema adı:**|[Temalar, iş akışı Tasarımcısı, Seçenekler Iletişim kutusu (eski)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md)içinde temayı tanımlayan ad. Yeni Temalar için değiştirilebilir bir ad oluşturulur.|
 |**Tema konumu:**|Tema dosyasının dosya adı ve yolu. Oluşturulan Tema adına göre yeni temalar için bir değiştirilebilir dosya adı oluşturulur. Oluşturulan tema adını değiştirirseniz, dosya adını tema adıyla eşleşecek şekilde değiştirmek isteyebilirsiniz.|
