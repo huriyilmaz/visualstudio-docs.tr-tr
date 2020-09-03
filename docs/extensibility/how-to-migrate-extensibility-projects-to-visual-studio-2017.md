@@ -10,10 +10,10 @@ ms.workload:
 - vssdk
 monikerRange: vs-2017
 ms.openlocfilehash: 37f7259c1133ea51e004b5f6b2061427ff71dea0
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905848"
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>Nasıl yapılır: genişletilebilirlik projelerini Visual Studio 2017 'ye geçirme
@@ -124,8 +124,8 @@ Visual Studio 'nun deneysel örneğinde uzantınızın hatalarını ayıklamak i
   * İçeriği kolayca görüntülemek için *. vsix* *. zip* olarak yeniden adlandırın.
 * Üç dosya olup olmadığını denetleyin:
   * *Extension. valtmanifest*
-  * *Üzerindemanifest.js*
-  * *Üzerindecatalog.js*
+  * * Üzerindemanifest.js*
+  * * Üzerindecatalog.js*
 
 ## <a name="check-when-all-required-prerequisites-are-installed"></a>Gerekli tüm önkoşulların yüklü olup olmadığını denetle
 

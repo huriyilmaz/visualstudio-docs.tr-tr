@@ -1,5 +1,5 @@
 ---
-title: Arama menü komutları | Microsoft Docs
+title: Arama menüsü komutları | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,22 +12,22 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 96fae66c85af80bf45b81a768a858eb696021c5c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203167"
 ---
 # <a name="search-menu-commands"></a>Arama Menü Komutları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Arama** menü komutları, belirli windows için aranacak sağlar.  
+**Arama** menüsü, belirli pencereleri aramak için komutlar sağlar.  
   
- **Pencere/işlem/iş parçacığı/ileti Bul**  
- Açılır **penceresi**/**işlem**/**iş parçacığı**/**MessageSearch** iletişim kutusu kullanabileceğiniz **FinderTool** veya arama ölçütlerini belirtin.  
+ **Pencere/Işlem/Iş parçacığı/Ileti bul**  
+ **Window** / **Process** / **Thread** / **FinderTool** 'u kullanabileceğiniz veya arama ölçütlerini belirtebileceğiniz pencere işlem iş parçacığı**MessageSearch** iletişim kutusunu açar.  
   
  **Sonrakini Bul**  
- Geçerli görünümde eşleşen bir sonraki pencereye, işlem, iş parçacığı veya iletinin arar. Yalnızca benzersiz olmayan geçerli arama sonucu olduğunda bu menü öğesini (ve ilgili araç çubuğu düğmesi) kullanılabilir.  
+ Sonraki eşleşen pencere, süreç, iş parçacığı veya ileti için geçerli görünümü arar. Bu menü öğesi (ve ilgili araç çubuğu düğmesi) yalnızca benzersiz olmayan geçerli bir arama sonucu olduğunda kullanılabilir.  
   
  **Öncekini Bul**  
- Geçerli görünümde eşleşen bir önceki pencereye, işlem, iş parçacığı veya iletinin arar. Yalnızca benzersiz olmayan geçerli arama sonucu olduğunda bu menü öğesini (ve ilgili araç çubuğu düğmesi) kullanılabilir.
+ Önceki eşleşen pencere, süreç, iş parçacığı veya ileti için geçerli görünümü arar. Bu menü öğesi (ve ilgili araç çubuğu düğmesi) yalnızca benzersiz olmayan geçerli bir arama sonucu olduğunda kullanılabilir.

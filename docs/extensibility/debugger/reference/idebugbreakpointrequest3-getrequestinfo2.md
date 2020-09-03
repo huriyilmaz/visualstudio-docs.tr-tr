@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointRequest3::GetRequestInfo2 | Microsoft Dokümanlar
+title: 'IDebugBreakpointRequest3:: GetRequestInfo2 | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f5febf664da9cd69dbd88b70056d9eac953bf581
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734843"
 ---
 # <a name="idebugbreakpointrequest3getrequestinfo2"></a>IDebugBreakpointRequest3::GetRequestInfo2
-Bu yöntem, bu kesme noktası isteğini açıklayan kesme noktası isteği bilgilerini alır.
+Bu yöntem, bu kesme noktası isteğini açıklayan kesme noktası istek bilgilerini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetRequestInfo2(
@@ -43,16 +43,16 @@ int GetRequestInfo2(
 
 ## <a name="parameters"></a>Parametreler
 `dwFields`\
-[içinde] Hangi alanların doldurulmasını belirleyen [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) numaralandırmadan gelen `pBPRequestInfo` bayrakların birleşimi.
+'ndaki [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) Numaralandırmadaki, doldurulacak alanları belirleyen bayrakların birleşimi `pBPRequestInfo` .
 
 `bBPRequestInfo`\
-[çıkış] Doldurulacak [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) yapı.
+dışı Doldurulacak [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) yapısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu istekte [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) yönteminden döndürülenden daha fazla bilgi vardır.
+ Bu istekte [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) yönteminden döndürülenden daha fazla bilgi var.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBreakpointRequest3](../../../extensibility/debugger/reference/idebugbreakpointrequest3.md)

@@ -9,10 +9,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 64b69ba926e3c978efa60bd9946da94d846c383f
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288409"
 ---
 # <a name="how-to-analyze-what-virtual-users-are-doing-during-a-load-test-using-the-virtual-user-activity-chart"></a>Nasıl yapılır: Sanal Kullanıcı Etkinlik grafiğini kullanarak yük testi sırasında sanal kullanıcıların ne yaptığını çözümleme
@@ -51,7 +51,7 @@ Aşağıdaki yordamlarda, **Sanal Kullanıcı Etkinlik grafiğinin**nasıl gör�
 
    - **URL** (bir test veya işlemde görüntülenmez)
 
-   - **Sonuç**
+   - **Sonucu**
 
    - **Tarayıcı** (bir test veya işlemde görüntülenmez)
 
@@ -99,7 +99,7 @@ Aşağıdaki yordamlarda, **Sanal Kullanıcı Etkinlik grafiğinin**nasıl gör�
    - **Hatalı sonuçları göster** Hata ayıklamada yardımcı olabilecek hatalar içeren sonuçları görüntüler.
 
      > [!NOTE]
-     > **Sonuçları hatalara göre göster** düğümü altında listelenen hata türlerinin listesi, **Web performans test sonuçları Görüntüleyicisi** araç çubuğundaki **Tablolar** düğmesi seçilerek daha sonra araştırılır. Daha fazla bilgi için bkz. [Tablolar görünümünde Yük testi sonuçlarını ve hatalarını çözümleme](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+     > **Sonuçları hatalara göre göster** düğümü altında listelenen hata türlerinin listesi, **Web performans test sonuçları Görüntüleyicisi** araç çubuğundaki **Tablolar** düğmesi seçilerek daha sonra araştırılır. Daha fazla bilgi için bkz.  [Tablolar görünümünde Yük testi sonuçlarını ve hatalarını çözümleme](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
 
      **Sanal Kullanıcı etkinliği grafiği** buna uygun şekilde güncelleştirilir.
 

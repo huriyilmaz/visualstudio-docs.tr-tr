@@ -17,17 +17,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 53bbfbca975625a8f56f7519a15ac1670b94861b
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76115281"
 ---
 # <a name="working-with-the-dsl-definition-diagram"></a>DSL Tanım Diyagramı ile Çalışma
-[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] tanımının diyagramı, etki alanına özgü dili tanımlamaya yönelik önemli bir araçtır. Etki alanı modelinize öğeler ekleyebilir ve diyagramda ilişkiler tanımlayabilir ve diyagramın yerleşimini daha okunabilir hale getirmek için değiştirebilirsiniz.
+Bir tanımın diyagramı, [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] etki alanına özgü dili tanımlamaya yönelik önemli bir araçtır. Etki alanı modelinize öğeler ekleyebilir ve diyagramda ilişkiler tanımlayabilir ve diyagramın yerleşimini daha okunabilir hale getirmek için değiştirebilirsiniz.
 
 ## <a name="the-layout-of-the-diagram"></a>Diyagramın düzeni
- [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] tanım diyagramında iki bölüm, **sınıflar ve ilişkiler** bölümü ve **diyagram öğeleri** bölümü vardır. **Sınıflar ve ilişkiler** bölümü, etki alanı sınıflarını, etki alanı ilişkilerini ve devralmayı görüntüler. **Diyagram öğeleri** bölümünde şekil sınıfları, bağlayıcı sınıfları, kulvar sınıfları ve oluşturulan tasarımcı diyagramı görüntülenir.
+ [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]Tanım diyagramında iki bölüm, **sınıflar ve ilişkiler** bölümü ve **diyagram öğeleri** bölümü vardır. **Sınıflar ve ilişkiler** bölümü, etki alanı sınıflarını, etki alanı ilişkilerini ve devralmayı görüntüler. **Diyagram öğeleri** bölümünde şekil sınıfları, bağlayıcı sınıfları, kulvar sınıfları ve oluşturulan tasarımcı diyagramı görüntülenir.
 
  Etki alanı sınıfları **sınıflar ve ilişkiler** bölümlerinde birden çok konumda görünebilir. Bir etki alanı sınıfı tanımı, diğer etki alanı sınıflarının temel sınıfı ise devralma ağacını ve ekleme veya başvuru ilişkilerinin kaynağı ise bir ilişki ağacını görüntüler. Etki alanı sınıfı yer tutucuları ekleme veya başvuru ilişkilerinin hedefleri olarak görünür. Varsayılan olarak, yer tutucu öğeleri, **etki alanı özellikleri** bölmesi daraltılmış olarak görüntülenir. Devralma veya başvuru ilişkilerini göstermez.
 
@@ -72,4 +72,4 @@ ms.locfileid: "76115281"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

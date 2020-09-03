@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointChecksumRequest2::GetChecksum | Microsoft Dokümanlar
+title: 'IDebugBreakpointChecksumRequest2:: GetChecksum | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +14,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 6fe1d2828f15b295f42c7fd756f2ffc407a632c9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735178"
 ---
 # <a name="idebugbreakpointchecksumrequest2getchecksum"></a>IDebugBreakpointChecksumRequest2::GetChecksum
-Kullanılacak checksum algoritmasının benzersiz tanımlayıcısı verilen bir kesme noktası isteği için belge denetimleri alır.
+Kullanılacak sağlama toplamı algoritmasının benzersiz tanımlayıcısı verilen kesme noktası isteği için belge sağlama toplamını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetChecksum(
@@ -41,16 +41,16 @@ public int GetChecksum(
 
 ## <a name="parameters"></a>Parametreler
 `guidAlgorithm`\
-[içinde] Checksum algoritmasının benzersiz tanımlayıcısı.
+'ndaki Sağlama algoritmasının benzersiz tanıtıcısı.
 
 `pChecksumData`\
-[çıkış] Kesme noktası isteği için belge checksum.
+dışı Kesme noktası isteği için belge sağlama toplamı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, bağlı olmak üzere olan bir belgenin checksum'unun UI'den biriyle eşleşip eşleşmediğini kontrol eden bir işlev gösterir.
+Aşağıdaki örnek, bir belgenin, bağlanmak üzere olan, kullanıcı arabiriminden eşleşen sağlama toplamı olup olmadığını denetleyen bir işlevi gösterir.
 
 ```cpp
 bool CDebugProgram::DoChecksumsMatch(CDebugPendingBreakpoint *pPending, CDebugCodeContext *pContext)

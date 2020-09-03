@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 824feee64f928dc837a379aeb539daaa5ba0d1db
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905582"
 ---
 # <a name="how-to-use-the-activity-log"></a>Nasıl yapılır: etkinlik günlüğünü kullanma
@@ -38,7 +38,7 @@ VSPackages, etkinlik günlüğüne ileti yazabilir. Bu özellik, perakende ortam
         "Called for: {0}", this.ToString()));
     ```
 
-     Bu kod, <xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog> hizmeti alır ve bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> arabirime yayınlar. <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog.LogEntry%2A>geçerli kültürel bağlamını kullanarak etkinlik günlüğüne bir bilgilendirme girişi yazar.
+     Bu kod, <xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog> hizmeti alır ve bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> arabirime yayınlar. <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog.LogEntry%2A> geçerli kültürel bağlamını kullanarak etkinlik günlüğüne bir bilgilendirme girişi yazar.
 
 2. VSPackage yüklendiğinde (genellikle bir komut çağrıldığında veya pencere açıldığında), metin etkinlik günlüğüne yazılır.
 

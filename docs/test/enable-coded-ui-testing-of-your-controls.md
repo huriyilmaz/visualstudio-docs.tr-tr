@@ -8,10 +8,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: d94c68a660201b0a8767b1405fcd4399cdf6d660
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288695"
 ---
 # <a name="enable-coded-ui-testing-of-your-controls"></a>Denetimlerinizin kodlanmış UI testlerini etkinleştirme
@@ -124,7 +124,7 @@ Kayıt ve kayıttan yürütme ve Özellik doğrulama için temel desteği uygula
 
 1. <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.GetControlSupportLevel%2A?displayProperty=fullName>Derlemelerinizin denetiminiz ve alt öğeleri için denetime özgü destek sağladığını belirtmek için geçersiz kılın.
 
-1. Öğesinin kalan soyut yöntemlerini geçersiz kıl<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider?displayProperty=fullName>
+1. Öğesinin kalan soyut yöntemlerini geçersiz kıl <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider?displayProperty=fullName>
 
 1. Öğesinden türetilmiş bir uzantı paketi sınıfı ekleyin <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage> .
 

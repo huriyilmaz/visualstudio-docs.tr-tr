@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointRequest3 | Microsoft Dokümanlar
+title: IDebugBreakpointRequest3 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,43 +13,43 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 505b0c0b05fa0f14578d770abec6c43ed6b80b01
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734825"
 ---
 # <a name="idebugbreakpointrequest3"></a>IDebugBreakpointRequest3
-Bu arabirim, herhangi bir kesme noktası oluşturmak ve bağlamak için gereken bilgileri temsil eder. [Bu IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)bir uzantısıdır.
+Bu arabirim, herhangi bir kesme noktası türü oluşturmak ve bağlamak için gereken bilgileri temsil eder. Bu bir [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)uzantısıdır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugBreakpointRequest3 : IDebugBreakpointRequest2
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Oturum hata ayıklama yöneticisi (SDM) genellikle bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Oturum hata ayıklama Yöneticisi (SDM), bu arabirimi genellikle uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Hata ayıklama altyapısı (DE) [CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md)için bir çağrı alınan IDebugBreakpointRequest2 arabiriminde [QueryInterface](/cpp/atl/queryinterface) arayarak bu arayüze erişir.
+ Hata ayıklama altyapısı (DE), [CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md)çağrısında alınan IDebugBreakpointRequest2 arabirimine [QueryInterface](/cpp/atl/queryinterface) çağırarak bu arabirime erişir.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
- [IDebugBreakpointRequest2'den](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)devralınan yöntemlere ek `IDebugBreakpointRequest3` olarak, arabirim aşağıdaki yöntemi ortaya çıkarır.
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+ [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)öğesinden devralınan yöntemlere ek olarak, `IDebugBreakpointRequest3` arabirimi aşağıdaki yöntemi kullanıma sunar.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md)|Bu kesme noktası isteğini açıklayan kesme noktası isteği bilgilerini alır.|
+|[GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md)|Bu kesme noktası isteğini açıklayan kesme noktası istek bilgilerini alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu arabirim, [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) yapısı aracılığıyla DE'ye ek bilgi sağlamak için kullanılır. Bu ek bilgiler DE'nin satıcı kimliğini (GUID biçiminde), bir izleme noktasının adını ve kesme noktası kısıtlamasının adını içerir.
+ Bu arabirim, [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) yapısıyla aynı bilgilere ek bilgi sağlamak için kullanılır. Bu ek bilgiler, satıcı KIMLIĞINI (bir GUID biçiminde), izleneme noktasının adını ve bir kesme noktası kısıtlamasının adını içerir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)

@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0f20d9679bb0eb726c594ab75fd7a04bc821b97d
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74300531"
 ---
 # <a name="more-debugging-features"></a>Daha Fazla Hata Ayıklama Özelliği
@@ -41,13 +41,13 @@ Bu bölüm, Visual Studio hata ayıklayıcısı ile kullanabileceğiniz ek özel
  [Tam Zamanında Hata Ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md)  
  Visual Studio dışında çalışırken bir program çöktüğünde hata ayıklayıcıyı otomatik olarak başlabilen tam zamanında hata ayıklamayı açıklar.  
   
- [İzlenecek Yol: Tasarım Zamanında Hata Ayıklama](../debugger/walkthrough-debugging-at-design-time.md)  
+ [İzlenecek yol: tasarım zamanında hata ayıklama](../debugger/walkthrough-debugging-at-design-time.md)  
  Uygulamanız çalışmadığı sırada bir işlevi veya alt yordamı yürütmek için Visual Studio komut penceresini nasıl kullanacağınızı gösterir. 
   
  [Düzenle ve Devam Et](../debugger/edit-and-continue.md)  
- Programınız kesme modundayken kaynak kodunuzu değiştirmenize ve hata ayıklama oturumunu sonlandırmanıza gerek kalmadan bu değişiklikleri uygulayıp programınızı yeniden oluşturmanıza olanak sağlayan bir araç olan Düzenle ve devam et ' i açıklar ve bu işlemi etkinleştirme veya devre dışı bırakma hakkında yönergeler sağlar. Özellik.  
+ Programınız kesme modundayken kaynak kodunuzu değiştirmenizi ve bu değişiklikleri hata ayıklama oturumunu sonlandırmanıza gerek kalmadan uygulamanızı, sonra da bu özelliği etkinleştirme veya devre dışı bırakma hakkında yönergeler sağlayan bir araç olan Düzenle ve devam et ' i açıklar.  
   
  [Döküm dosyalarını kullanma](../debugger/using-dump-files.md) Kaydetme ve açma yönergeleri dahil olmak üzere döküm dosyalarını açıklar. Döküm dosyaları, genellikle kilitlenmeden sonra zaman içinde programın durumunun bir anlık görüntüsünü içerir. Programınızı kaynak dosyaları veya pdb 'leri yüklü olmayan bir makinede test ederseniz, kilitlenme oluştuğunda bir döküm dosyası kaydedebilir ve kaynak dosyaları ve PDB 'leri olan derleme makinesindeki kilitlenmenin hatalarını ayıklamak için döküm dosyasını kullanabilirsiniz. 
   
- [Nasıl Yapılır: Gizli Hata Ayıklayıcısı Komutlarını Geri Yükleme](../debugger/how-to-restore-hidden-debugger-commands.md)  
+ [Nasıl Yapılır: Gizli Hata Ayıklayıcı Komutlarını Geri Yükleme](../debugger/how-to-restore-hidden-debugger-commands.md)  
  Hata ayıklayıcı komutlarının, IDE varsayılan ayarları tarafından gizlenen görünür hale getirme işlemini açıklar.

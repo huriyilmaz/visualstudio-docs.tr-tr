@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::GetDebugReason | Microsoft Docs
+title: 'IDebugProcess3:: GetDebugReason | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6223f72530b549e087511a3f26b7b864972a4dd6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202856"
 ---
 # <a name="idebugprocess3getdebugreason"></a>IDebugProcess3::GetDebugReason
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu yöntem, hata ayıklama işlemi başlatıldı nedeni döndürür.  
+Bu yöntem, hata ayıklama için işlemin başlatılma nedenini döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetDebugReason(  
@@ -40,10 +40,10 @@ int GetDebugReason(
   
 #### <a name="parameters"></a>Parametreler  
  `pReason`  
- [out] Bir değer döndürür [DEBUG_REASON](../../../extensibility/debugger/reference/debug-reason.md) sabit listesi.  
+ dışı [DEBUG_REASON](../../../extensibility/debugger/reference/debug-reason.md) numaralandırmasından bir değer döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   

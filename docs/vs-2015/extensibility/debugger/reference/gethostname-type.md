@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b3f7d09e29489dac0598b9558df595aedd0c5d61
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203054"
 ---
-# <a name="gethostnametype"></a>GETHOSTNAME_TYPE
+# <a name="gethostname_type"></a>GETHOSTNAME_TYPE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Ana bilgisayar adı türünü belirtir.  
+Ana bilgisayar adının türünü belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_GETHOSTNAME_TYPE {   
@@ -43,21 +43,21 @@ public enum enum_GETHOSTNAME_TYPE { 
   
 ## <a name="members"></a>Üyeler  
  GHN_FRIENDLY_NAME  
- Ana bilgisayarın kolay bir ad belirtir.  
+ Konağın kolay adını belirtir.  
   
  GHN_FILE_NAME  
- Ana bilgisayar dosya adını belirtir.  
+ Konağın bir dosya adını belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu değerleri bir bağımsız değişken olarak geçirilen [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) farklı biçimlerde bir ana bilgisayar adı almak için yöntemi.  
+ Bu değerler, farklı biçimlerde bir ana bilgisayar adı almak için [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) yöntemine bir bağımsız değişken olarak geçirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md)

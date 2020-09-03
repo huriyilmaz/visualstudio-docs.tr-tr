@@ -12,10 +12,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d0983967d42c6daa89b9a690b93fb97872e98603
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288266"
 ---
 # <a name="how-to-collect-intellitrace-data-to-help-debug-difficult-issues"></a>Nasıl yapılır: hata ayıklama zor sorunlarını gidermek için IntelliTrace verilerini toplama
@@ -81,7 +81,7 @@ Bu yordamdaki adımları gerçekleştirmeden önce, Visual Studio 'dan test ayar
     > [!WARNING]
     > IntelliTrace verilerini toplamayı etkinleştirirseniz, kod kapsamı verilerinin toplanması işe alınacaktır.
 
-5. **Genel** sekmesini seçin. **IntelliTrace olayları yalnızca** test yaparken performans üzerinde en az etkisi olan önemli Tanılama olaylarını kaydetmek için seçin.
+5. **Genel** sekmesini seçin. **IntelliTrace olaylarını yalnızca** test yaparken performans üzerinde en az etkisi olan önemli Tanılama olaylarını kaydetmek için seçin.
 
      -veya-
 
@@ -89,7 +89,7 @@ Bu yordamdaki adımları gerçekleştirmeden önce, Visual Studio 'dan test ayar
 
 6. Internet Information Services çalıştıran ASP.NET uygulamanızdan veri toplamak için **Internet Information Services üzerinde çalışan ASP.net uygulamalardan veri topla**' yı seçin. Web sunucusu rolünde Test Aracınızı ayarlayın ve yapılandırın. Bkz. [test aracılarını yükleyip yapılandırma](../test/lab-management/install-configure-test-agents.md).
 
-7. **Modüller** sekmesini seçin. **aşağıdakiler hariç tüm modüllerden veri topla** ' yı seçin ve modül listesine eklemek için **Ekle** ' yi kullanın ve bir modülü kaldırmak için **kaldırın** . Bu seçenek, belirttiğiniz modüller dışında sistemde çalışan tüm modülleri dahil etmenizi sağlar.
+7. **Modüller** sekmesini seçin. Aşağıdakilerden birini **hariç tüm modüllerden veri topla** ' yı seçin ve modül listesine eklemek için **Ekle** ' yi kullanın ve bir modülü kaldırmak için öğesini **kaldırın** . Bu seçenek, belirttiğiniz modüller dışında sistemde çalışan tüm modülleri dahil etmenizi sağlar.
 
      -veya-
 
@@ -98,13 +98,13 @@ Bu yordamdaki adımları gerçekleştirmeden önce, Visual Studio 'dan test ayar
     > [!NOTE]
     > Mümkünse, izlemek istediğiniz belirli süreçler ' ı seçin. Bu, en iyi performans için önerilir.
 
-8. **İşlemler** sekmesini seçin. **aşağıdakiler hariç tüm işlemlerden veri topla** ' yı seçin ve Işlemler listesine eklemek için **Ekle** ' yi kullanın ve bir işlemi kaldırmak için öğesini **kaldırın** . Bu seçenek, belirttiğiniz süreçler hariç sistemde çalışan tüm işlemlerin dahil etmenize olanak tanır.
+8. **Süreçler** sekmesini seçin. **Aşağıdakiler hariç tüm işlemlerden veri topla** ' yı seçin ve işlem listesine eklemek için **Ekle** ' yi ve bir işlemi kaldırmak için **Kaldır** ' ı kullanın. Bu seçenek, belirttiğiniz süreçler hariç sistemde çalışan tüm işlemlerin dahil etmenize olanak tanır.
 
      -veya-
 
      **Yalnızca belirtilen işlemlerden veri topla** ' yı seçin ve işlem listesine eklemek için **Ekle** ' yi ve bir işlemi kaldırmak için **Kaldır** ' ı kullanın. Bu seçenek tam olarak istediğiniz işlemi belirtmenizi sağlar.
 
-9. Seçim **IntelliTrace olayları** sekmesini seçin. Tanılama olaylarını topladığınızda dahil etmek veya hariç tutmak Istediğiniz her IntelliTrace olay kategorisini seçin veya temizleyin.
+9. Seçim **IntelliTrace olayları** sekmesini seçin. Tanılama olaylarını topladığınızda dahil etmek veya hariç tutmak istediğiniz her IntelliTrace olay kategorisini seçin veya temizleyin.
 
 10. Seçim Her IntelliTrace olay kategorisini genişletin ve IntelliTrace olaylarına dahil etmek veya dışlamak istediğiniz her bir olayı seçin veya temizleyin.
 

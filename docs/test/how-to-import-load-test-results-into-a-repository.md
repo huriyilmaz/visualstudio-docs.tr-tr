@@ -12,10 +12,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f8f0ec6b9f1a5664ac898e525420ec2cc374f5ad
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287746"
 ---
 # <a name="how-to-import-load-test-results-into-a-repository"></a>Nasıl yapılır: yük testi sonuçlarını depoya aktarma
@@ -44,7 +44,7 @@ Yük testi sonuçlarını, **yük test sonuçları aç ve Yönet** iletişim kut
 
 5. **Dosya adı** kutusunda, arşivlenmiş bir test sonuçları dosyasının adını yazın ve **Aç**' ı seçin.
 
-     \-veya
+     \- veya
 
      Dosyasına gidin ve **Aç**' ı seçin.
 

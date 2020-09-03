@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 331722df4749ca59241259e13c3b387d8303b69f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74300506"
 ---
 # <a name="graphics-frame-analysis"></a>Grafik Çerçeve Analizi
@@ -26,7 +26,7 @@ Direct3D oyununuzun veya uygulamanızın işleme performansını çözümlemek v
 > [!IMPORTANT]
 > Grafik Çözümleyicisi, Windows 10 dahil desteklenen platformlarda Direct3D 11 kullanan uygulamalar için çerçeve analizini destekler. Çerçeve Analizi, Direct3D 12 kullanan uygulamalar için şu anda desteklenmiyor.  
   
-## <a name="frame-analysis"></a>Çerçeve analizi  
+## <a name="frame-analysis"></a>Çerçeve Analizi  
  Çerçeve Analizi, tanılama amaçları doğrultusunda bir grafik günlük dosyasında yakalanan bilgilerin aynısını kullanır, ancak bunun yerine işleme performansını özetlemek için kullanır. Performans bilgileri yakalama sırasında günlüğe kaydedilmez; Bunun yerine, performans bilgileri daha sonra çerçeve analizi sırasında, zamanlama olayları ve çerçeve oynatılırken istatistikler toplanarak oluşturulur. Bu yaklaşımda, yakalama sırasında performans bilgilerinin kaydedilmesinin çeşitli avantajları vardır:  
   
 - Çerçeve Analizi, performans özetinin istatistiksel olarak ses düzeyine sahip olduğundan emin olmak için aynı karenin birden çok playmasına ait sonuçları Ortalama alabilir.  
@@ -74,10 +74,10 @@ Direct3D oyununuzun veya uygulamanızın işleme performansını çözümlemek v
 ### <a name="timeline-and-summary-table"></a>Zaman çizelgesi ve Özet tablosu  
  Varsayılan olarak, zaman çizelgesi ve Özet tablosu görüntülenir ve diğer bölümler daraltılmıştır.  
   
-#### <a name="timeline"></a>'Ndeki  
+#### <a name="timeline"></a>Zaman çizelgesi  
  Zaman çizelgesi, birbirine göre çizilen çağrı zamanlamalarıyla ilgili genel bakışı gösterir. Daha büyük çubuklar uzun çizimli saatlere karşılık geldiğinden, çerçeveye en pahalı çizim çağrılarını hızlı bir şekilde bulmak için bunu kullanabilirsiniz. Yakalanan çerçeve çok fazla sayıda çizim çağrısı içerdiğinde, birden çok çizim çağrısı, uzunluğu bu çizim çağrılarının toplamı olan bir çubukta birleştirilir.  
   
- ![Zaman çizelgesi, çizilen&#45;çağrı maliyetlerini gösterir.](../debugger/media/pix-frame-analysis-timeline.png "pix_frame_analysis_timeline")  
+ ![Zaman çizelgesinde, arama maliyetlerini&#45;çiz gösterilmektedir.](../debugger/media/pix-frame-analysis-timeline.png "pix_frame_analysis_timeline")  
   
  Çubuğa karşılık gelen çizim çağrısı olayını görmek için işaretçiyi bir çubuğa taşıyabilirsiniz. Çubuğun seçilmesi olay listesinin bu olayla eşitlenmesine neden olur.  
   
@@ -91,7 +91,7 @@ Direct3D oyununuzun veya uygulamanızın işleme performansını çözümlemek v
  Taban çizgisinin mutlak zaman zamanlamasının ve işleme varyantlarınızın göreli zamanlaması, aslında birden çok çalıştırmanın ortalamasını alır (varsayılan olarak, 5 ' tir. Bu ortalama, zamanlama verilerinin güvenilir ve tutarlı olmasını sağlamaya yardımcı olur. Çizim araması ve işleme çeşidinin sonuçları oluşturulduğunda gözlemlendiği minimum, maksimum, ortalama ve ortanca zamanlama değerlerini incelemek için işaretçiyi tablodaki her bir hücreye taşıyabilirsiniz. Taban çizgisi zamanlaması da görüntülenir.  
   
 #### <a name="hot-draw-calls"></a>"Sık erişimli" çizim çağrıları  
- Genel işleme zamanının daha büyük bir oranını kullanan veya kaçınılabilen nedenlerle alışılmadık yavaş olabilecek çizim çağrılarına dikkat çekmek için, bu "sık erişimli" çizim çağrılarını içeren satır, kendi temel zamanlaması birden fazla olduğunda kırmızıya gölgeli çerçevede bulunan tüm çizim çağrılarının ortalama temel zamanından daha uzun standart sapma.  
+ Genel işleme zamanının daha büyük bir oranını kullanan veya kaçınılabilen nedenlerle alışılmadık yavaş olabilecek çizim çağrılarına dikkat çekmek için, bu "sık erişimli" çizim çağrılarını içeren satır, kendi temel zamanlaması, çerçevedeki tüm çizim çağrılarının ortalama temel zamanından daha uzun bir standart sapma olduğunda kırmızıya gölgeli olur.  
   
  ![Bu DrawIndexed çağrısı, sıcak ve soğuk varilara sahiptir.](../debugger/media/pix-frame-analysis-hot-calls.png "pix_frame_analysis_hot_calls")  
   
@@ -134,12 +134,12 @@ Direct3D oyununuzun veya uygulamanızın işleme performansını çözümlemek v
   
  Hatalar genellikle Çerçeve Analizi uygulamasında hata olduğunu, bir sürücüde hata olduğunu, donanım desteğinin eksik olduğunu ve bu dosyanın geçici olarak denenmeyeceğini ve uygulamanın kayıttan yürütme tarafından desteklenmeyen bir şeyi gerçekleştirmeye çalıştığını gösterir.  
   
-### <a name="retries"></a>Yeniden Denemeler  
+### <a name="retries"></a>Yeniden deneme sayısı  
  GPU, Çerçeve Analizi sırasında bir güç durumu geçişine geçtiğinde, GPU clockspeed değiştiği ve bu nedenle göreli zamanlama sonuçlarını geçersiz kıldığı için etkilenen analiz geçişinin yeniden denenmesi gerekir.  
   
  Çerçeve Analizi, yeniden deneme sayısını 10 ' a sınırlandırır. Platformunuzun güç yönetimi veya zaman sınırlaması varsa, bu durum, yeniden deneme sınırını aştığından çerçeve analizinin başarısız olmasına ve bir hata raporlayamemesine neden olabilir. Platformun güç yönetimini sıfırlayarak ve platform bunu etkinleştirmişse daha az agresif hale getirerek bu sorunu azaltabilirsiniz.  
   
-## <a name="HardwareSupport"></a>Donanım desteği  
+## <a name="hardware-support"></a><a name="HardwareSupport"></a> Donanım desteği  
   
 ### <a name="timestamps-and-occlusion-queries"></a>Zaman damgaları ve occlusiyon sorguları  
  Zaman damgaları, çerçeve analizini destekleyen tüm platformlarda desteklenir. Desteklenen piksellerin (piksel), özellik düzeyi 9,2 veya üstünü destekleyen platformlarda desteklenmesinin derinlemesine olması için derinlik occlusiyon sorguları.  
@@ -161,14 +161,14 @@ Direct3D oyununuzun veya uygulamanızın işleme performansını çözümlemek v
 > [!NOTE]
 > GPU donanım sayaçları, donanım kaynakları olduğundan, her bir işleme varyantı için tüm donanım sayaçları kümesini toplamak için birden çok geçiş gerçekleştirebilir. Sonuç olarak, GPU sayaçlarının toplandığı sıra belirtilmemiş olur.  
   
-### <a name="windows-phone"></a>Windows Phone  
+### <a name="windows-phone"></a>Windows telefon  
  Zaman damgaları, occlusiyon sorguları ve GPU donanım sayaçları yalnızca başlangıçta Windows Phone 8,1 ile birlikte gelen Windows Phone handsets 'de desteklenir. Çerçeve Analizi, grafik günlük dosyasının kayıttan oynamasını gerektirir. Başlangıçta Windows Phone 8 ile gönderilen Windows Phone el kümeleri, Windows Phone 8,1 ' e güncelleştirilmiş el kümeleri için bile çerçeve analizini desteklemez.  
   
 ## <a name="unsupported-scenarios"></a>Desteklenmeyen senaryolar  
  Çerçeve analizini kullanmanın belirli yolları desteklenmez veya yalnızca kötü bir fikir olur.  
   
 ### <a name="warp"></a>SıÇRAMA  
- Çerçeve Analizi, gerçek donanımda işleme performansının profilini oluşturmak ve bu performansı geliştirmek için kullanılmak üzere tasarlanmıştır. WARP cihazlarında çerçeve analizini çalıştırma engellenmez — Windows Phone öykünücü, WARP üzerinde çalışır, ancak yüksek kaliteli bir CPU üzerinde çalışan WARP en düşük özellikli modern GPU 'lara eşit olduğundan ve çarpmanın performansı değişebildiğinden, genellikle bir adım daha düşüktür. büyük ölçüde üzerinde çalıştığı belirli bir CPU 'ya göre değişir.  
+ Çerçeve Analizi, gerçek donanımda işleme performansının profilini oluşturmak ve bu performansı geliştirmek için kullanılmak üzere tasarlanmıştır. WARP cihazlarında çerçeve analizini çalıştırma engellenmez — Windows Phone öykünücü, WARP üzerinde çalışır, ancak yüksek kaliteli bir CPU üzerinde çalışan WARP en düşük özellikli modern GPU 'lara eşit olduğundan ve bu genellikle bir adım adım daha yavaş olduğundan, bir üst uç CPU üzerinde çalışan WARP, en az özellikli modern GPU 'lara daha yavaştır ve bu da üzerinde çalıştığı belirli bir CPU 'ya göre büyük ölçüde farklılık gösterebilir.  
   
 ### <a name="playback-of-high-feature-level-captures-on-down-level-devices"></a>Alt düzey cihazlarda yüksek özellik düzeyinde yakalamaları kayıttan yürütme  
  Grafik Çözümleyicisi 'nde, kayıttan yürütme makinesinden daha yüksek bir özellik düzeyi kullanan bir grafik günlük dosyası oynatdığınızda, otomatik olarak ÇARPMADAN geri döner. Çerçeve analizinde, açıkça ÇARPMADAN geri dönmez ve bir hata oluşturur — WARP, Direct3D uygulamanızın doğruluğunu incelemek için yararlıdır, ancak performansını inceleme konusunda değildir.  
@@ -182,20 +182,20 @@ Direct3D oyununuzun veya uygulamanızın işleme performansını çözümlemek v
 > [!NOTE]
 > Bu yalnızca, özellik düzeylerini değil, kullanmakta olduğunuz Direct3D API çağrıları için geçerlidir. Direct3D 11, Direct3D 11,1 veya Direct3D 11,2 API 'sini kullandığınız sürece, istediğiniz özellik düzeyini kullanabilirsiniz ve çerçeve analizi de çalışır.  
   
-## <a name="Variants"></a>Değişken  
- Çerçeve analizine ait her değişiklik, oynatma sırasında bir karenin işlenme şeklini *değişken*olarak bilinir. Çerçeve analizinin incelediği çeşitler, uygulamanızın işleme performansını veya görsel kalitesini geliştirmek için yapabileceğiniz yaygın, görece kolay değişikliklere karşılık gelir, örneğin dokuların boyutunu azaltma, doku sıkıştırması kullanma ya da etkinleştirme farklı türlerde kenar yumuşatma. Çeşitler, uygulamanızın normal işleme bağlamını ve parametrelerini geçersiz kılar. Özet:  
+## <a name="variants"></a><a name="Variants"></a> Değişken  
+ Çerçeve analizine ait her değişiklik, oynatma sırasında bir karenin işlenme şeklini *değişken*olarak bilinir. Çerçeve analizinin incelediği çeşitler, uygulamanızın işleme performansını veya görsel kalitesini geliştirmek için yapabileceğiniz yaygın, oldukça kolay değişikliklere karşılık gelir. Örneğin, dokuların boyutunu azaltarak, doku sıkıştırmayı kullanarak veya farklı türlerde kenar yumuşatma sağlayabilirsiniz. Çeşitler, uygulamanızın normal işleme bağlamını ve parametrelerini geçersiz kılar. Özet:  
   
-|Varyantı|Açıklama|  
+|Değişken|Description|  
 |-------------|-----------------|  
 |**1x1 Görünüm penceresi boyutu**|Tüm işleme hedeflerindeki Görünüm penceresi boyutunu 1x1 piksele düşürür.<br /><br /> Daha fazla bilgi için bkz. [1x1 Görünüm penceresi boyut varyantı](../debugger/1x1-viewport-size-variant.md)|  
 |**0x MSAA**|Tüm işleme hedeflerinde çok örnekli kenar yumuşatmayı (MSAA) devre dışı bırakır.<br /><br /> Daha fazla bilgi için bkz. [0x/2x/4X MSAA çeşitleri](../debugger/0x-2x-4x-msaa-variants.md)|  
 |**2x MSAA**|Tüm işleme hedeflerinde 2x çoklu örnek kenar yumuşatma (MSAA) etkinleştirilir.<br /><br /> Daha fazla bilgi için bkz. [0x/2x/4X MSAA çeşitleri](../debugger/0x-2x-4x-msaa-variants.md)|  
 |**4X MSAA**|Tüm işleme hedeflerinde 4X çoklu örnek kenar yumuşatma (MSAA) etkinleştirilir.<br /><br /> Daha fazla bilgi için bkz. [0x/2x/4X MSAA çeşitleri](../debugger/0x-2x-4x-msaa-variants.md)|  
-|**Nokta dokusu filtrelemesi**|Uygun tüm doku örnekleri için filtreleme modunu `DXD11_FILTER_MIN_MAG_MIP_POINT` (işaret doku filtrelemesi) olarak ayarlar.<br /><br /> Daha fazla bilgi için bkz. [Point, Bilinear, trilinear ve Anısotropıc doku filtreleme çeşitleri](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
-|**Bilinear doku filtreleme**|Uygun tüm doku örnekleri için filtreleme modunu `DXD11_FILTER_MIN_MAG_LINEAR_MIP_POINT` (Bilinear doku filtrelemesi) olarak ayarlar.<br /><br /> Daha fazla bilgi için bkz. [Point, Bilinear, trilinear ve Anısotropıc doku filtreleme çeşitleri](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
-|**Trilinear doku filtrelemesi**|Uygun tüm doku örnekleri için filtreleme modunu `DXD11_FILTER_MIN_MAG_MIP_LINEAR` (trilinear doku filtrelemesi) olarak ayarlar.<br /><br /> Daha fazla bilgi için bkz. [Point, Bilinear, trilinear ve Anısotropıc doku filtreleme çeşitleri](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
-|**Anısotropıc doku filtrelemesi**|Filtreleme modunu `DXD11_FILTER_ANISOTROPIC` olarak ayarlar ve uygun tüm doku örnekleri için `16` (16X anısotropıc doku filtrelemesi) `MaxAnisotropy`.<br /><br /> Daha fazla bilgi için bkz. [Point, Bilinear, trilinear ve Anısotropıc doku filtreleme çeşitleri](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
-|**16bpp Işleme hedefi biçimi**|Tüm işleme hedefleri ve biriktirme arabellekleri için piksel biçimini `DXGI_FORMAT_B5G6R5_UNORM` (16bpp, 565 biçim) olarak ayarlar.<br /><br /> Daha fazla bilgi için bkz. [16bpp Işleme hedefi biçim değişkeni](../debugger/16bpp-render-target-format-variant.md)|  
+|**Nokta dokusu filtrelemesi**|`DXD11_FILTER_MIN_MAG_MIP_POINT`Uygun tüm doku örnekleri için filtreleme modunu (işaret dokusu filtrelemesi) olarak ayarlar.<br /><br /> Daha fazla bilgi için bkz. [Point, Bilinear, trilinear ve Anısotropıc doku filtreleme çeşitleri](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
+|**Bilinear doku filtreleme**|`DXD11_FILTER_MIN_MAG_LINEAR_MIP_POINT`Uygun tüm doku örnekleri için filtreleme modunu (Bilinear doku filtrelemesi) olarak ayarlar.<br /><br /> Daha fazla bilgi için bkz. [Point, Bilinear, trilinear ve Anısotropıc doku filtreleme çeşitleri](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
+|**Trilinear doku filtrelemesi**|`DXD11_FILTER_MIN_MAG_MIP_LINEAR`Uygun tüm doku örnekleri için filtreleme modunu (trınear doku filtrelemesi) olarak ayarlar.<br /><br /> Daha fazla bilgi için bkz. [Point, Bilinear, trilinear ve Anısotropıc doku filtreleme çeşitleri](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
+|**Anısotropıc doku filtrelemesi**|`DXD11_FILTER_ANISOTROPIC` `MaxAnisotropy` `16` Uygun tüm doku örnekleri için filtreleme modunu ve (16X anısotropıc doku filtrelemesi) olarak ayarlar.<br /><br /> Daha fazla bilgi için bkz. [Point, Bilinear, trilinear ve Anısotropıc doku filtreleme çeşitleri](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
+|**16bpp Işleme hedefi biçimi**|`DXGI_FORMAT_B5G6R5_UNORM`Tüm işleme hedefleri ve biriktirme arabellekleri için piksel biçimini (16bpp, 565 biçim) olarak ayarlar.<br /><br /> Daha fazla bilgi için bkz. [16bpp Işleme hedefi biçim değişkeni](../debugger/16bpp-render-target-format-variant.md)|  
 |**MİP eşleme oluşturma**|İşleme hedefi olmayan tüm dokulerde MIP haritalarını etkinleştirebilir.<br /><br /> Daha fazla bilgi için bkz. [MİP eşleme oluşturma varyantı](../debugger/mip-map-generation-variant.md).|  
 |**Yarım doku boyutları**|İşleme hedefi olmayan tüm dokuların doku boyutlarını her boyuttaki orijinal boyutunun yarısını azaltır. Örneğin, 256x128 dokusu 128x64 texiksel 'e indirgenir.<br /><br /> Daha fazla bilgi için bkz. [Yarı/çeyrek doku boyutları varyantı](../debugger/half-quarter-texture-dimensions-variant.md).|  
 |**Çeyrek doku boyutları**|İşleme hedefi olmayan tüm dokuların doku boyutlarını her boyuttaki orijinal boyutunun üç ayda azaltır. Örneğin, 256x128 dokusunu 64x32 Doka 'ya düşürülemez.<br /><br /> Daha fazla bilgi için bkz. [Yarı/çeyrek doku boyutları varyantı](../debugger/half-quarter-texture-dimensions-variant.md).|  

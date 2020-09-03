@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetThread | Microsoft Dokümanlar
+title: 'IDebugStackFrame2:: GetThread | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 31c8b3477ffe7561e065b680e9047946e7058471
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719657"
 ---
 # <a name="idebugstackframe2getthread"></a>IDebugStackFrame2::GetThread
-Yığın çerçevesi ile ilişkili iş parçacığı alır.
+Yığın çerçevesiyle ilişkili iş parçacığını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetThread ( 
@@ -41,10 +41,10 @@ int GetThread ( 
 
 ## <a name="parameters"></a>Parametreler
 `ppThread`\
-[çıkış] İş parçacığı temsil eden bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi döndürür.
+dışı İş parçacığını temsil eden bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

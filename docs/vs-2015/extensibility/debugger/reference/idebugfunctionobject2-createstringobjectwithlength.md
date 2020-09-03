@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject2::CreateStringObjectWithLength | Microsoft Docs
+title: 'IDebugFunctionObject2:: CreateStringObjectWithLength | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d915cd4a447e0a6eee51d8fa31ec994c68759e52
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202984"
 ---
 # <a name="idebugfunctionobject2createstringobjectwithlength"></a>IDebugFunctionObject2::CreateStringObjectWithLength
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Belirtilen uzunlukta bir dize nesnesi oluşturur.  
+Belirtilen uzunluğa sahip bir dize nesnesi oluşturur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT CreateStringObjectWithLength (  
@@ -43,16 +43,16 @@ int CreateStringObjectWithLength (
   
 #### <a name="parameters"></a>Parametreler  
  `pcstrString`  
- [in] Dize nesnesi için dize değeri.  
+ 'ndaki Dize nesnesi için dize değeri.  
   
  `uiLength`  
- [in] Dize bayt cinsinden uzunluğu.  
+ 'ndaki Dizenin bayt cinsinden uzunluğu.  
   
  `ppObject`  
- [out] Döndürür bir [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) yeni oluşturulan bir dize nesnesini temsil eden nesne.  
+ dışı Yeni oluşturulan dize nesnesini temsil eden bir [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugFunctionObject2](../../../extensibility/debugger/reference/idebugfunctionobject2.md)
