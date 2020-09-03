@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8397c9c06e5c0778b8ff70947ee4040c84cca3e8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656195"
 ---
-# <a name="sample-xsd-file-simple-schema"></a>Örnek XSD dosyası: basit şema
+# <a name="sample-xsd-file-simple-schema"></a>Örnek XSD Dosyası: Basit Şema
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Aşağıdaki XSD dosyası, XSD şema Tasarımcısı belgelerindeki çeşitli örneklerde kullanılır. Bu dosya basit bir satın alma Siparişi şemadır.

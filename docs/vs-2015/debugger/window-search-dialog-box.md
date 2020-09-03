@@ -1,5 +1,5 @@
 ---
-title: Pencere arama iletişim kutusu | Microsoft Docs
+title: Pencere arama Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,57 +12,57 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 72405ced4348228432bc7cf75d135e317a3fd833
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185321"
 ---
 # <a name="window-search-dialog-box"></a>Pencere Arama İletişim Kutusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bulmak ve belirli bir pencere içinde düğümü seçmek için bu iletişim kutusunu kullanın [Windows görünümü](../debugger/windows-view.md). Bu iletişim kutusunu görüntülemek için Windows görünüm penceresine odağı Taşı. Ardından **Bul penceresi** gelen **arama** menüsü.  
+[Windows görünümünde](../debugger/windows-view.md)belirli bir pencerenin düğümünü bulmak ve seçmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı Windows Görünümü penceresine taşıyın. Ardından **arama** menüsünden **pencereyi bul** ' u seçin.  
   
- Kullanabileceğiniz **Bulucu Aracı** veya bir pencere seçmek için Pencere işleyicisi girebilir, veya pencere başlığını ve sınıfı tarafından tanımlayın.  
+ Bir pencere seçmek için **Bulucu aracını** kullanabilir veya pencere tanıtıcısını girebilir ya da pencereyi açıklamalı alt yazı ve sınıfa göre tanımlayabilirsiniz.  
   
  Aşağıdaki ayarlar kullanılabilir:  
   
- **Bulucu Aracı**  
- Bir pencere seçmek için kullanılan sürükle ve bırak aracı.  
+ **Bulucu aracı**  
+ Sürükleme ve bırakma aracı bir pencere seçmek için kullanılır.  
   
- **Spy ++ Gizle**  
- Spy ++ sonuçların kaldırır ve çıktığında **WindowSearch** iletişim kutusu, diğer uygulamalar üzerinde görünür.  
+ **Spy + + gizle**  
+ Ana Spy + + penceresini kaldırır ve **WindowSearch** iletişim kutusunu diğer uygulamalarınızın üstünde görünür bırakır.  
   
- **Tanıtıcı**  
- Aranacak benzersiz kimliği penceresinin.  
+ **Tutamaçlardan**  
+ Arama yapılacak pencerenin benzersiz KIMLIĞI.  
   
- **Resim yazısı**  
- Pencere resim yazısı, Aranacak metin.  
+ **Başlık**  
+ Aranacak pencere başlığı içindeki metin.  
   
- **Sınıfı**  
- Aranacak pencere sınıfı.  
+ **Sınıf**  
+ Aranacak pencerenin sınıfı.  
   
  **Arama yönü yukarı veya aşağı**  
- Search'ün ilk yönü.  
+ Aramanın ilk yönü.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows görünümünde pencere arama](../debugger/how-to-search-for-a-window-in-windows-view.md)  
- Windows görünümünde belirli bir pencere Bul açıklanmaktadır.  
+ Windows görünümünde belirli bir pencerenin nasıl bulunacağını açıklar.  
   
  [Pencereler Görünümü](../debugger/windows-view.md)  
- Kullanılabilir windows ve denetimleri ağaç görünümünü görüntüler.  
+ Kullanılabilir pencerelerin ve denetimlerin ağaç görünümünü görüntüler.  
   
  [Spy++ Görünümleri](../debugger/spy-increment-views.md)  
- Spy ++ ağaç görünümlerini windows, iletileri, süreçleri ve iş parçacıkları açıklar.  
+ Windows, ileti, işlem ve iş parçacıklarının Spy + + ağaç görünümlerini açıklar.  
   
- [Spy++ kullanma](../debugger/using-spy-increment.md)  
- Spy ++ araç tanıtır ve nasıl kullanılacağını açıklar.  
+ [Spy++ Kullanma](../debugger/using-spy-increment.md)  
+ Spy + + aracını tanıtır ve nasıl kullanılabileceğini açıklar.  
   
  [Pencere Bul İletişim Kutusu](../debugger/find-window-dialog-box.md)  
- Özellikleri veya belirli bir pencere iletileri görüntülemek için kullanılır.  
+ Belirli bir penceredeki özellikleri veya iletileri görüntülemek için kullanılır.  
   
  [Pencere Özellikleri İletişim Kutusu](../debugger/window-properties-dialog-box.md)  
- Windows görünümünde seçilen bir pencere özelliklerini görüntülemek için kullanılır.  
+ Windows görünümü 'nde seçilen pencerenin özelliklerini görüntülemek için kullanılır.  
   
  [Spy++ Başvurusu](../debugger/spy-increment-reference.md)  
- Her Spy ++ menü ve iletişim kutusunu tanımlayan bölümler içerir.
+ Her bir Spy + + menü ve iletişim kutusunu açıklayan bölümler içerir.

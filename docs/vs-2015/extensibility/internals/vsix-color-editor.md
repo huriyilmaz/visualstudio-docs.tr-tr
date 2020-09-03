@@ -7,10 +7,10 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ea5695c41b19cbd77c56a63f22b52fca5ee6f1eb
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74295440"
 ---
 # <a name="vsix-color-editor"></a>VSIX Renk Düzenleyicisi
@@ -55,7 +55,7 @@ Visual Studio uzantısı renk düzenleyici Aracı, Visual Studio için özel ren
   
    **1. Adım: yeni renk belirteçleri için kategori ve belirteç adlarını belirleme.**  
   
-   Bir Vscrengi için tercih edilen adlandırma şeması **[Category] [UI Type] [State]** . Boş olduğu için Vscrengnames içinde "Color" sözcüğünü kullanmayın.  
+   Bir Vscrengi için tercih edilen adlandırma şeması **[Category] [UI Type] [State]**. Boş olduğu için Vscrengnames içinde "Color" sözcüğünü kullanmayın.  
   
    Kategori adları mantıksal gruplandırmaları sağlar ve mümkün olduğunca dar olarak tanımlanmalıdır. Örneğin, tek bir araç penceresinin adı bir kategori adı olabilir, ancak tüm iş birimi veya proje ekibinin adı değildir. Girişlerin kategorilere gruplandırılması, aynı ada sahip renkler arasında karışıklık oluşmasını önlemeye yardımcı olur.  
   
@@ -65,7 +65,7 @@ Visual Studio uzantısı renk düzenleyici Aracı, Visual Studio için özel ren
   
    Bazı yaygın durum adları şunlardır:  
   
-- Active  
+- Etkin  
   
 - Etkin değil  
   
@@ -73,9 +73,9 @@ Visual Studio uzantısı renk düzenleyici Aracı, Visual Studio için özel ren
   
 - MouseDown  
   
-- Seçildi  
+- Seçili  
   
-- Diğinize  
+- Odaklı  
   
   Liste öğesi denetiminin bölümleri için birkaç belirteç adı örnekleri:  
   
@@ -135,11 +135,11 @@ Visual Studio uzantısı renk düzenleyici Aracı, Visual Studio için özel ren
   
   ![VSıX renk Düzenleyicisi pkgdef](../../extensibility/internals/media/vsix-color-editor-pkgdef.png "VSıX renk Düzenleyicisi pkgdef")  
   
-  Visual Studio uzantısı renk düzenleyicisinde, WPF tabanlı kullanıcı arabirimindeki özel renklere erişmek için kullanılan kodu görüntülemek için Dosya > kaynak kodunu görüntüle ' yi seçin.  
+  Visual Studio uzantısı renk düzenleyicisinde, WPF tabanlı kullanıcı arabirimindeki özel renklere erişmek için kullanılan kodu görüntülemek için dosya > kaynak kodunu görüntüle ' yi seçin.  
   
   ![VSıX renk düzenleyici kaynak kodu Görüntüleyici](../../extensibility/internals/media/vsix-color-editor-resource-code-viewer.png "VSıX renk düzenleyici kaynak kodu Görüntüleyici")  
   
-  Bu kodu projedeki statik bir sınıfa ekleyin. **ThemeResourceKey** türünü kullanmak Için projeye **Microsoft. VisualStudio. Shell.\<VSVersion > 0. dll** ' ye bir başvuru eklenmelidir.  
+  Bu kodu projedeki statik bir sınıfa ekleyin. **ThemeResourceKey** türünü kullanmak Için projeye **Microsoft. VisualStudio. Shell. \<VSVersion>.0.dll** başvurusunun eklenmesi gerekir.  
   
 ```csharp  
 namespace MyCustomColors  
@@ -190,7 +190,7 @@ namespace MyCustomColors
 ## <a name="notes"></a>Notlar  
  Bu araç, önceden var olan Visual Studio temaları için özel renkler oluşturmak veya özel bir Visual Studio temasının renklerini düzenlemede kullanılmak üzere tasarlanmıştır. Tüm özel Visual Studio temaları oluşturmak için Visual Studio uzantıları Galerisi ' nden [Visual Studio Color teması Düzenleyicisi uzantısını](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.VisualStudio2015ColorThemeEditor) indirin.  
   
-## <a name="sample-output"></a>Örnek Çıkış  
+## <a name="sample-output"></a>Örnek Çıktı  
  **XML renk çıkışı**  
   
  Araç tarafından oluşturulan. xml dosyası şuna benzer olacaktır:  
@@ -238,7 +238,7 @@ namespace MyCustomColors
   
 ```  
   
- **C#kaynak anahtarları sarmalayıcısı**  
+ **C# kaynak anahtarları sarmalayıcısı**  
   
  Araç tarafından oluşturulan renk kaynak anahtarları şuna benzer olacaktır:  
   

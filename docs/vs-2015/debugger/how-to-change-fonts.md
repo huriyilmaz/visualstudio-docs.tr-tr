@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yazı tiplerini değiştirme | Microsoft Docs'
+title: 'Nasıl yapılır: yazı tiplerini değiştirme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,28 +12,28 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a5aafed36dd9e011cef34391aa3b87027257b91d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185182"
 ---
 # <a name="how-to-change-fonts"></a>Nasıl yapılır: Yazı Tiplerini Değiştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yazı tipini, yazı tipi stili ve yazı tipi boyutu Spy ++ windows için değiştirebilirsiniz.  
+Spy + + Windows için yazı tipi, yazı tipi stili ve yazı tipi boyutunu değiştirebilirsiniz.  
   
 ### <a name="to-change-font-options"></a>Yazı tipi seçeneklerini değiştirmek için  
   
-1. Gelen **görünümü** menüsünde seçin **yazı tipi**.  
+1. **Görünüm** menüsünde **yazı tipi**' ni seçin.  
   
-2. Yazı tipini, yazı tipi stili ve yazı tipi boyutu seçin.  
+2. Yazı tipi, yazı tipi stili ve yazı tipi boyutu seçin.  
   
-3. **Tamam**'ı tıklatın.  
+3. **Tamam**’a tıklayın.  
   
-   Seçme **varsayılan olarak yazı tipi Kaydet** bu yazı tipini kullanmak tüm Spy ++ pencerelerine neden olur.  
+   **Yazı tipini varsayılan olarak kaydet** seçeneğinin belirlenmesi, gelecekteki tüm Spy + + pencerelerinin bu yazı tipini kullanmasına neden olur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Spy ++ kullanma](../debugger/using-spy-increment.md)   
- [Spy ++ görünümleri](../debugger/spy-increment-views.md)   
+ [Spy + + kullanma](../debugger/using-spy-increment.md)   
+ [Spy + + görünümleri](../debugger/spy-increment-views.md)   
  [Spy++ Başvurusu](../debugger/spy-increment-reference.md)

@@ -8,10 +8,10 @@ ms.date: 06/24/2020
 ms.topic: how-to
 description: Enterprise için Microsoft 365 uygulamalar hakkında bilgi edinin ve bunları yükler
 ms.openlocfilehash: eb9f87273cbd8439f5053f60411e41fac41e4161
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88800820"
 ---
 # <a name="microsoft-365-apps-for-enterprise-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Enterprise için Microsoft 365 uygulamalar
@@ -57,12 +57,12 @@ Kurumsal abonelik için Microsoft 365 uygulamalarınızı etkinleştirme işlemi
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standart)   | VL, Azure, perakende| Kullanılabilir       |  Yes          |
 | GitHub Enterprise ile Visual Studio Enterprise  | VL | Kullanılabilir       |  Yes          |
-| Visual Studio Enterprise (Standart)   | NFR<sup>1</sup> | Kullanılamaz       |  YOK          |
-| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılamaz                                                            |  YOK          |
-| GitHub Enterprise ile Visual Studio Professional | VL | Kullanılamaz         |  YOK          |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                             |  YOK          |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              |  YOK          |
-| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | YOK |
+| Visual Studio Enterprise (Standart)   | NFR<sup>1</sup> | Kullanılamaz       |  Yok          |
+| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılamaz                                                            |  Yok          |
+| GitHub Enterprise ile Visual Studio Professional | VL | Kullanılamaz         |  Yok          |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                             |  Yok          |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              |  Yok          |
+| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |
 |  |
 
 <sup>1</sup>  *şunları Içerir: for SATıL (NFR), Visual Studio Endüstri ortağı (vsıp), Microsoft iş ortağı ağı (MPN), FTE, mct Software & Services Geliştirici, BizSpark, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), mct Software & Services, ımagine, Microsoft iş ortağı ağı.*

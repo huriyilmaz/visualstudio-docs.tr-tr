@@ -13,19 +13,19 @@ caps.latest.revision: 55
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6192eb5583e7d0bc37518e995aacccad643cc9ec
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850343"
 ---
-# <a name="walkthrough-creating-a-basic-isolated-shell-application"></a>İzlenecek yol: temel yalıtılmış bir kabuk uygulaması oluşturma
+# <a name="walkthrough-creating-a-basic-isolated-shell-application"></a>İzlenecek yol: Temel Yalıtılmış Kabuk Uygulaması Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu izlenecek yol, yalıtılmış bir kabuk çözümünün nasıl oluşturulduğunu, yardım hakkında araç penceresini özelleştirmeyi ve yalıtılmış Kabuğu yükleyen bir kurulum programı oluşturmayı gösterir.  
   
-## <a name="prerequisites"></a>Prerequisites  
- Bu izlenecek yolda takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için [Visual Studio SDK](../extensibility/visual-studio-sdk.md). Yalıtılmış Kabuğu dağıtmak için, Visual Studio Kabuğu (yalıtılmış) yeniden dağıtılabilir paketini de kullanmanız gerekir.  
+## <a name="prerequisites"></a>Ön koşullar  
+ Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md). Yalıtılmış Kabuğu dağıtmak için, Visual Studio Kabuğu (yalıtılmış) yeniden dağıtılabilir paketini de kullanmanız gerekir.  
   
 ## <a name="creating-an-isolated-shell-solution"></a>Yalıtılmış Kabuk çözümü oluşturma  
  Bu bölümde, yalıtılmış bir kabuk çözümü oluşturmak için Visual Studio Kabuğu yalıtılmış proje şablonunun nasıl kullanılacağı gösterilmektedir. Çözüm aşağıdaki projeleri içerir:  
@@ -44,7 +44,7 @@ Bu izlenecek yol, yalıtılmış bir kabuk çözümünün nasıl oluşturulduğu
   
 2. **Yeni proje** penceresinde **diğer proje türleri** ' ni ve ardından **genişletilebilirlik**' i genişletin. **Visual Studio Kabuğu yalıtılmış** proje şablonunu seçin.  
   
-3. Projeyi `MyVSShellStub` adlandırın ve bir konum belirtin. **Çözüm için dizin oluşturma** 'nın işaretli olduğundan emin olun ve ardından **Tamam**' a tıklayın.  
+3. Projeyi adlandırın `MyVSShellStub` ve bir konum belirtin. **Çözüm için dizin oluşturma** 'nın işaretli olduğundan emin olun ve ardından **Tamam**' a tıklayın.  
   
      Yeni çözüm **Çözüm Gezgini**görüntülenir.  
   
@@ -59,27 +59,27 @@ Bu izlenecek yol, yalıtılmış bir kabuk çözümünün nasıl oluşturulduğu
   
 1. MyVSShellStub projesinde \Shell Customization\MyVSShellStub.Application.pkgdef. öğesini açın.  
   
-2. `AppName` öğesi değerini **"AppName" = "Fabrikam Music Düzenleyicisi"** olarak değiştirin  
+2. `AppName`Öğe değerini **"AppName" = "Fabrikam Music Düzenleyicisi"** olarak değiştirin  
   
 3. Uygulama simgesini değiştirmek için, \MyVSShellStub\MyVSShellStub\MyVSShellStub\ dizinine farklı bir simge kopyalayın. Mevcut ApplicationIcon. ico dosyasını ApplicationIcon1. ico olarak yeniden adlandırın. Yeni dosyayı ApplicationIcon. ico olarak yeniden adlandırın.  
   
-4. Çözümü derleyin ve hata ayıklamaya başlayın. Yalıtılmış Kabuk IDE belirir. Başlık çubuğu, **fabrikam Music Düzenleyicisi**sözcüklerinin yanında yeni simgenizi içerir.  
+4. Çözümü oluşturun ve hata ayıklamayı başlatın. Yalıtılmış Kabuk IDE belirir. Başlık çubuğu, **fabrikam Music Düzenleyicisi**sözcüklerinin yanında yeni simgenizi içerir.  
   
 ## <a name="customizing-the-default-web-browser-home-page"></a>Varsayılan Web tarayıcısı giriş sayfasını özelleştirme  
  Bu bölümde, paket tanımı dosyasını değiştirerek **Web tarayıcısı** penceresinin varsayılan giriş sayfasının nasıl değiştirileceği gösterilmektedir.  
   
 #### <a name="to-customize-the-default-web-browser-home-page"></a>Varsayılan Web tarayıcısı giriş sayfasını özelleştirmek için  
   
-1. MyVSShellStub. Application. pkgdef dosyasında `DefaultHomePage` öğesi değerini "<https://www.microsoft.com>" olarak değiştirin.  
+1. MyVSShellStub. Application. pkgdef dosyasında, `DefaultHomePage` öğe değerini "" olarak değiştirin <https://www.microsoft.com> .  
   
 2. MyVSShellStub projesini yeniden derleyin.  
   
-3. Çözümü derleyin ve hata ayıklamaya başlayın.  
+3. Çözümü oluşturun ve hata ayıklamayı başlatın.  
   
 4. **Görünüm/diğer pencereler**' de **Web tarayıcısı**' na tıklayın. **Web tarayıcısı** penceresi, Microsoft Corporation giriş sayfasını görüntüler.  
   
 ## <a name="removing-the-print-command"></a>Print komutunu kaldırma  
- Yalıtılmış bir kabuk Kullanıcı arabirimi projesindeki. vsct dosyası `<Define name=No_`*öğesi*`>`bir bildirim kümesinden oluşur; burada *öğe* , standart Visual Studio menülerinin ve komutlarının biridir.  
+ Yalıtılmış bir kabuk Kullanıcı arabirimi projesindeki. vsct dosyası form öğesinin bir bildirim kümesinden oluşur; `<Define name=No_` *Element* `>` burada *öğe* standart Visual Studio menülerinin ve komutlarının biridir.  
   
  Bir bildirimin açıklama kaldırmazsa, bu menü veya komut yalıtılmış kabuktan çıkarılır. Buna karşılık, bir bildirime açıklama eklendiğinde, menü veya komut yalıtılmış kabuğa dahil edilir.  
   
@@ -115,7 +115,7 @@ Bu izlenecek yol, yalıtılmış bir kabuk çözümünün nasıl oluşturulduğu
   
 2. Aşağıdaki satırın açıklamasını kaldırın:  
   
-     [$RootKey $ \Packages\\{87569308-4813-40a0-9cd0-d7a30838ca3f}]  
+     [$RootKey $ \Packages \\ {87569308-4813-40a0-9cd0-d7a30838ca3f}]  
   
 3. Çözümü yeniden derleyin ve yalıtılmış kabukta hata ayıklamayı başlatın. Bir XML dosyası açın, örneğin, \MyVSShellStub\MyVSShellStub\MyVSShellStubUI\MyVSShellStubUI.vsct. Dosyadaki XML anahtar kelimelerin renklendirilmediğinden ve bir satırdaki "<" yazarak XML araç ipuçları getirmediğinden emin olun.  
   
@@ -126,7 +126,7 @@ Bu izlenecek yol, yalıtılmış bir kabuk çözümünün nasıl oluşturulduğu
   
 1. Şirket adı, telif hakkı bilgileri, ürün sürümü ve ürün açıklaması, \Properties\AssemblyInfo.cs dosyasındaki MyVSShellStub. AboutBoxPackage projesinde bulunur. Bu dosyayı açın.  
   
-2. `AssemblyCompany` değerini **fabrikam**, `AssemblyProduct` ve `AssemblyTitle` değerlerini **fabrikam Music Düzenleyicisi**olarak değiştirin ve `AssemblyCopyright` değeri **telif hakkı © fabrikam 2015**:  
+2. Fabrikam `AssemblyCompany` 2015 © değeri **fabrikam**, `AssemblyProduct` ve değerlerini fabrikam `AssemblyTitle` **Music Düzenleyicisi**olarak değiştirin ve `AssemblyCopyright` **telif hakkı**değeri:  
   
     ```  
     [assembly: AssemblyTitle("Fabrikam Music Editor")]  
@@ -139,15 +139,15 @@ Bu izlenecek yol, yalıtılmış bir kabuk çözümünün nasıl oluşturulduğu
     [assembly: AssemblyCopyright("Copyright © Fabrikam 2015”)]  
     ```  
   
-3. Ürünün açıklamasını eklemek için `AssemblyDescription` değerini **fabrikam Music Düzenleyicisi 'nin açıklamasıyla değiştirin.** :  
+3. Ürünün açıklamasını eklemek için, `AssemblyDescription` değeri **fabrikam Music Düzenleyicisi 'nin açıklamasıyla değiştirin.**:  
   
     ```  
     [assembly: AssemblyDescription("The description of Fabrikam Music editor.”)]  
     ```  
   
-4. Hata ayıklamayı Başlat ve yalıtılmış Kabuk uygulamasında **Yardım/hakkında** kutusunu açın. Değiştirilen dizeleri görmeniz gerekir. Yardım/hakkında kutusunun başlığı, AssemblyInfo.cs ' deki `AssemblyTitle` değeriyle aynıdır.  
+4. Hata ayıklamayı Başlat ve yalıtılmış Kabuk uygulamasında **Yardım/hakkında** kutusunu açın. Değiştirilen dizeleri görmeniz gerekir. Yardım/hakkında kutusunun başlığı, `AssemblyTitle` AssemblyInfo.cs ' deki değerle aynıdır.  
   
-5. **Yardım/hakkında** kutusunun kendi özellikleri MyVSShellStub. Aboutboxpackage\aboutboxpackage.xml dosyasında bulunur. Yardım/hakkında kutusunun genişliğini değiştirmek için `AboutDialogStyle` bloğuna gidin ve `Width` özelliğini 200 olarak ayarlayın:  
+5. **Yardım/hakkında** kutusunun kendi özellikleri MyVSShellStub. Aboutboxpackage\aboutboxpackage.xml dosyasında bulunur. Yardım/hakkında kutusunun genişliğini değiştirmek için, `AboutDialogStyle` bloğa gidin ve `Width` özelliği 200 olarak ayarlayın:  
   
     ```  
     <Style x:Key="AboutDialogStyle" TargetType="Window">  
@@ -178,7 +178,7 @@ Bu izlenecek yol, yalıtılmış bir kabuk çözümünün nasıl oluşturulduğu
   
 1. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın ve ardından **Yeni Proje Ekle**' ye tıklayın.  
   
-2. **Yeni proje** iletişim kutusunda, **diğer proje türleri** ' ni genişletin ve ardından **Kurulum ve dağıtım**' ı seçin. InstallShield şablonunu seçin. Yeni proje `MySetup` adlandırın ve ardından **Tamam**' a tıklayın.  
+2. **Yeni proje** iletişim kutusunda, **diğer proje türleri** ' ni genişletin ve ardından **Kurulum ve dağıtım**' ı seçin. InstallShield şablonunu seçin. Yeni projeyi adlandırın `MySetup` ve ardından **Tamam**' a tıklayın.  
   
 3. InstallShield Limited Edition zaten yüklüyse, sonraki adımla devam edin.  
   
@@ -202,11 +202,11 @@ Bu izlenecek yol, yalıtılmış bir kabuk çözümünün nasıl oluşturulduğu
   
 4. **Dosya Ekle** düğmesini seçin. **Dosya Ekle** iletişim kutusunda, **MyVSShellStub\Release** klasöründen aşağıdaki dosyaları ekleyin:  
   
-    1. MyVSShellStub. exe. config  
+    1. MyVSShellStub.exe.config  
   
-    2. DebuggerProxy. dll  
+    2. DebuggerProxy.dll  
   
-    3. DebuggerProxy. dll. manifest  
+    3. DebuggerProxy.dll. manifest  
   
     4. MyVSShellStub. pkgdef  
   
@@ -214,9 +214,9 @@ Bu izlenecek yol, yalıtılmış bir kabuk çözümünün nasıl oluşturulduğu
   
     6. MyVSShellStub. winprf  
   
-    7. Splash. bmp  
+    7. Splash.bmp  
   
-5. **Proje çıktıları Ekle** düğmesine tıklayın ve **MyVSShellStub/birincil çıkış**ekleyin. **Tamam**'ı tıklatın.  
+5. **Proje çıktıları Ekle** düğmesine tıklayın ve **MyVSShellStub/birincil çıkış**ekleyin. **Tamam**’a tıklayın.  
   
 6. Sol bölmede, **hedef bilgisayar**altında **fabrikam musıc DÜZENLEYICISI [INSTALLDİR]** düğümüne sağ tıklayın ve **Uzantılar**adlı **Yeni bir klasör** ekleyin.  
   
@@ -248,15 +248,15 @@ Bu izlenecek yol, yalıtılmış bir kabuk çözümünün nasıl oluşturulduğu
   
 18. **Ne bulmak istiyorsunuz?** bölmesinde, açılan listeden **kayıt defteri girişi** ' ni seçin ve **İleri**' ye tıklayın.  
   
-19. **Nasıl aramak istiyorsunuz?** bölmesinde kayıt defteri kökü olarak **HKEY_LOCAL_MACHINE** ' yi seçin. 64 bit sistemler için **SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** veya 32-bit sistemler için **SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** girin ve kayıt defteri değeri olarak **Install** yazın. **İleri**'ye tıklayın.  
+19. **Nasıl aramak istiyorsunuz?** bölmesinde kayıt defteri kökü olarak **HKEY_LOCAL_MACHINE** ' yi seçin. 64 bit sistemler için **SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** veya 32-bit sistemler için **SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** girin ve kayıt defteri değeri olarak **Install** yazın. **İleri**’ye tıklayın.  
   
 20. Bu **değerle ne yapmak istiyorsunuz?** bölmesine, **Bu ürünün yüklenmesi için Visual Studio 2015 yalıtılmış Kabuk yeniden dağıtılabilir gereklidir.** görüntülenecek metin ve **son**' a tıklayın.  
   
 21. Kurulum projesini oluşturmak için yalıtılmış Kabuk çözümünü yeniden derleyin.  
   
-     Setup. exe dosyasını aşağıdaki klasörde bulabilirsiniz:  
+     setup.exe dosyasını aşağıdaki klasörde bulabilirsiniz:  
   
      \MyVSShellStub\MySetup\MySetup\Express\SingleImage\DiskImages\DISK1  
   
 ## <a name="testing-the-installation-program"></a>Yükleme programını test etme  
- Kurulumu test etmek için Setup. exe dosyasını farklı bir bilgisayara kopyalayın ve kurulum yürütülebilirini çalıştırın. Yalıtılmış kabuk uygulamasını çalıştırabilmelisiniz.
+ Kurulumu test etmek için setup.exe dosyasını farklı bir bilgisayara kopyalayın ve kurulum yürütülebilirini çalıştırın. Yalıtılmış kabuk uygulamasını çalıştırabilmelisiniz.

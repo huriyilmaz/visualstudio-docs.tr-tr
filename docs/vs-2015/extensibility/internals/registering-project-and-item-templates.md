@@ -15,21 +15,21 @@ caps.latest.revision: 28
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a06e7a292d960e675ad4b0de97499557542fef1c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185830"
 ---
 # <a name="registering-project-and-item-templates"></a>Proje ve Öğe Şablonlarını Kaydetme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Proje türleri, kendi proje ve proje öğesi şablonları bulunduğu yere dizinleri kaydetmeniz gerekir. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] gösterilecek belirlemek için proje türleri ile ilişkili kayıt bilgileri kullanır **Yeni Proje Ekle** ve **Yeni Öğe Ekle** iletişim kutuları.  
+Proje türleri, proje ve proje öğesi şablonlarının bulunduğu dizinleri kaydetmelidir. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , **Yeni Proje Ekle** ve **Yeni öğe Ekle** iletişim kutularında nelerin gösterileceğini belirlemek için proje türleriniz ile ilişkili kayıt bilgilerini kullanır.  
   
- Şablonlar hakkında daha fazla bilgi için bkz. [ekleme proje ve proje öğesi şablonları](../../extensibility/internals/adding-project-and-project-item-templates.md).  
+ Şablonlar hakkında daha fazla bilgi için bkz. [Proje ve proje öğesi şablonları ekleme](../../extensibility/internals/adding-project-and-project-item-templates.md).  
   
-## <a name="registry-entries-for-projects"></a>Projeleri için kayıt defteri girişleri  
- Aşağıdaki örnekler hkey_local_machıne\software\microsoft\visualstudio altında kayıt defteri girdilerini\\<*sürüm*>. Eşlik eden tabloları örneklerde kullanılan öğeleri açıklamaktadır.  
+## <a name="registry-entries-for-projects"></a>Projeler için kayıt defteri girişleri  
+ Aşağıdaki örneklerde HKEY_LOCAL_MACHINE \software\microsoft\visualstudio \\ < *Sürüm*> altında kayıt defteri girişleri gösterilmektedir. Eşlik eden tablolar örneklerde kullanılan öğeleri açıklar.  
   
 ```  
 [Projects\{ProjectGUID}]  
@@ -41,13 +41,13 @@ Proje türleri, kendi proje ve proje öğesi şablonları bulunduğu yere dizinl
   
 |Ad|Tür|Açıklama|  
 |----------|----------|-----------------|  
-|@|REG_SZ|Bu tür projeler varsayılan adı.|  
-|DisplayName|REG_SZ|Uydu DLL alınacak adı kaynak Kimliğini paketleri altında kayıtlı.|  
-|Paket|REG_SZ|Sınıf kimliği paket paketleri altında kayıtlı.|  
-|ProjectTemplatesDir|REG_SZ|Proje şablonu dosyaları varsayılan yolu. Proje şablonu dosyaları tarafından görüntülenen **yeni proje** şablonu.|  
+|@|REG_SZ|Bu türden projelerin varsayılan adı.|  
+|DisplayName|REG_SZ|Paketler altında kayıtlı olan uydu DLL 'sinden alınacak adın kaynak KIMLIĞI.|  
+|Paket|REG_SZ|Paketler altına kayıtlı paketin sınıf KIMLIĞI.|  
+|ProjectTemplates dir|REG_SZ|Proje şablonu dosyalarının varsayılan yolu. Proje şablonu dosyaları **Yeni proje** şablonu tarafından görüntülenir.|  
   
 ### <a name="registering-item-templates"></a>Öğe şablonlarını kaydetme  
- Öğe şablonları depoladığınız directory kaydetmeniz gerekir.  
+ Öğe şablonlarını depoladığınız dizini kaydetmeniz gerekir.  
   
 ```  
 [Projects\{ProjectGUID}\AddItemTemplates\TemplateDirs\{VSPackageGUID}\1]  
@@ -59,19 +59,19 @@ Proje türleri, kendi proje ve proje öğesi şablonları bulunduğu yere dizinl
   
 |Ad|Tür|Açıklama|  
 |----------|----------|-----------------|  
-|@|REG_SZ|Öğe Ekle şablonları için kaynak kimliği.|  
-|TemplatesDir|REG_SZ|Yolu için iletişim kutusunda görüntülenen proje öğelerinin **Yeni Öğe Ekle** Sihirbazı.|  
-|TemplatesLocalizedSubDir|REG_SZ|Kaynak Kimliği TemplatesDir alt adlarıyla bir dize, yerelleştirilmiş şablonları tutar. Çünkü [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] yükleri dize kaynağını Uydu DLL'leri, varsa, her bir uydu DLL farklı yerelleştirilmiş alt adı içerebilir.|  
-|SortPriority|REG_DWORD|Ayarlama, şablon içinde görüntülenme sırasını belirleyen SortPriority **Yeni Öğe Ekle** iletişim kutusu. Daha büyük SortPriority değerleri daha önce şablon listesinde görünür.|  
+|@|REG_SZ|Öğe şablonları eklemek için kaynak KIMLIĞI.|  
+|Templates dizini|REG_SZ|**Yeni öğe Ekle** sihirbazının iletişim kutusunda görünen proje öğelerinin yolu.|  
+|Templates Localizedsubdir|REG_SZ|Yerelleştirilmiş şablonları tutan Templates dizini 'nin alt dizinini isimeden bir dizenin kaynak KIMLIĞI. , [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Varsa, uydu dll 'lerinden dize kaynağını yükler, her uydu dll farklı bir yerelleştirilmiş alt dizin adı içerebilir.|  
+|SortPriority|REG_DWORD|**Yeni öğe Ekle** iletişim kutusunda Şablonların gösterileceği sırayı yönetmek Için SortPriority ayarlayın. Daha önce şablon listesinde daha büyük SortPriority değerleri görünür.|  
   
-### <a name="registering-file-filters"></a>Dosya filtreleri kaydediliyor  
- İsteğe bağlı olarak, filtre kaydedebilirsiniz, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] dosya adları için istediğinde kullanır. Örneğin, [!INCLUDE[csprcs](../../includes/csprcs-md.md)] filtre **açık dosya** iletişim kutusudur:  
+### <a name="registering-file-filters"></a>Dosya filtrelerini kaydetme  
+ İsteğe bağlı olarak, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] dosya adlarını sorulduğunda kullanan filtreleri kaydedebilirsiniz. Örneğin, [!INCLUDE[csprcs](../../includes/csprcs-md.md)] **Dosya Aç** iletişim kutusu için filtre:  
   
- **Visual C# dosyaları (\*.cs,\*.resx,\*.settings,\*.xsd,\*.wsdl);\*. cs,\*.resx,\*.settings,\*.xsd,\*.wsdl)**  
+ **Visual C# dosyaları ( \* . cs, \* . resx, \* . Settings, \* . xsd, \* . wsdl); \* . CS, \* . resx, \* . Settings, \* . xsd, \* . wsdl)**  
   
- Birden çok filtre kaydını desteklemek için her bir filtrenin hkey_local_machıne\software\microsoft\visualstudio altında kendi alt kayıtlı\\<*sürüm*> \Projects\\{ \< *ProjectGUID*>} \Filters\\<*alt*>. Alt anahtar adı isteğe bağlıdır; [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] alt anahtarının adı yoksayar ve yalnızca değerlerini kullanır.  
+ Birden çok filtrenin kaydedilmesini desteklemek için, her bir filtre HKEY_LOCAL_MACHINE \software\microsoft\visualstudio \\ < *sürümü*> \projects \\ { \<*ProjectGUID*> } \filters \\ < *AltAnahtar*> altında kendi alt anahtarına kaydedilir. Alt anahtar adı rastgele; [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] alt anahtarın adını yoksayar ve yalnızca kendi değerlerini kullanır.  
   
- Bir filtre bayrakları, aşağıdaki tabloda gösterilen ayarlayarak kullanılır bağlamları denetleyebilirsiniz. Filtre Ayarla herhangi bir bayrağı yoksa, ortak filtrelere sonra listelenecektir **varolan öğeyi Ekle** iletişim kutusu ve **açık dosya** iletişim kutusu, ancak kullanılmaz **dosyalarda Bul**  iletişim kutusu.  
+ Aşağıdaki tabloda gösterilen bayraklar ayarlanarak bir filtrenin kullanıldığı bağlamların denetimini yapabilirsiniz. Bir filtrenin bayrak ayarlanmamışsa, **Varolan öğe Ekle** iletişim kutusunda ve **Dosya Aç** iletişim kutusunda ortak filtrelerden sonra listelenir, ancak **dosyalarda bul** iletişim kutusunda kullanılmaz.  
   
 ```  
 [Projects\{ProjectGUID}\Filters\MyLanguageFilter]  
@@ -86,40 +86,40 @@ Proje türleri, kendi proje ve proje öğesi şablonları bulunduğu yere dizinl
   
 |Ad|Tür|Açıklama|  
 |----------|----------|-----------------|  
-|CommonFindFilesFilter|REG_DWORD|Filtreye ortak filtrelerden birini yapar **dosyalarda Bul** iletişim kutusu. Ortak filtreler gibi yaygın olarak işaretlenmemiş filtreleri önce Filtre listesinde listelenir.|  
-|CommonOpenFilesFilter|REG_DWORD|Filtreye ortak filtrelerden birini yapar **açık dosya** iletişim kutusu. Ortak filtreler gibi yaygın olarak işaretlenmemiş filtreleri önce Filtre listesinde listelenir.|  
-|FindInFilesFilter|REG_DWORD|Ortak filtrelere sonra filtre listeleri **dosyalarda Bul** iletişim kutusu.|  
-|NotOpenFileFilter|REG_DWORD|Filtre olarak kullanılmayacağını gösterir **açık dosya** iletişim kutusu.|  
-|NotAddExistingItemFilter|REG_DWORD|Filtre olarak kullanılmayacağını gösterir **varolan öğeyi Ekle** iletişim kutusu.|  
-|SortPriority|REG_DWORD|Filtreler görüntülenme sırasını belirleyen SortPriority ayarlayın. Daha büyük SortPriority değerleri daha önce Filtre listesinde görünür.|  
+|Commonfindfilesfiltresi|REG_DWORD|**Dosyalarda bul** iletişim kutusunda ortak filtrelerden birine filtre uygular. Ortak filtreler, filtreler ortak olarak işaretlenmeden önce filtre listesinde listelenir.|  
+|Commonopenfilesfiltresi|REG_DWORD|**Dosya Aç** iletişim kutusunda ortak filtrelerden birine filtre uygular. Ortak filtreler, filtreler ortak olarak işaretlenmeden önce filtre listesinde listelenir.|  
+|Finınfilesfiltresi|REG_DWORD|**Dosyalarda bul** iletişim kutusunda ortak filtrelerden sonra filtreyi listeler.|  
+|NotOpenFileFilter|REG_DWORD|Filtrenin **Dosya Aç** iletişim kutusunda kullanılmadığını gösterir.|  
+|Notaddexistingıtemfilter|REG_DWORD|Filtrenin **Varolan öğe Ekle** iletişim kutusunda kullanılmadığını gösterir.|  
+|SortPriority|REG_DWORD|Filtrelerin gösterileceği sırayı yönetmek için SortPriority ayarlayın. Daha büyük SortPriority değerleri, daha önce filtre listesinde görünür.|  
   
 ## <a name="directory-structure"></a>Dizin yapısı  
- Konum tümleşik geliştirme ortamı (IDE) üzerinden kayıtlı olduğu sürece VSPackages şablon dosyaları ve klasörleri herhangi bir yerel veya uzak bir diskte yerleştirebilirsiniz. Ancak, kuruluş kolaylığı için ürün uygulamasının yükleme yolu altında aşağıdaki dizin yapısını öneririz.  
+ VSPackages, konum tümleşik geliştirme ortamı (IDE) ile kaydedildiği sürece, şablon dosyalarını ve klasörlerini yerel veya uzak bir diskte herhangi bir yere yerleştirebilir. Ancak kuruluş kolaylığı için, ürününüzün yükleme yolu altında aşağıdaki dizin yapısını öneririz.  
   
- \Templates  
+ \ Şablonlar  
   
- \Projects (proje şablonları içerir)  
+ \Projects (proje şablonlarını içerir)  
   
- \Applications  
+ \ Uygulamalar  
   
- \Components  
+ \ Bileşenler  
   
  \ ...  
   
- \ProjectItems (proje öğeleri içerir)  
+ \Projectıtems (proje öğelerini içerir)  
   
  \Class  
   
- \Form  
+ \ Form  
   
- \Web Sayfası  
+ \Web sayfası  
   
- \HelperFiles (çok dosyalı proje öğelerinde kullanılan dosyaları içerir)  
+ \ Helperfiles (birden çok dosya proje öğelerinde kullanılan dosyaları içerir)  
   
  \WizardFiles  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Proje ve proje öğesi şablonları ekleme](../../extensibility/internals/adding-project-and-project-item-templates.md)   
- [Sihirbazlar](../../extensibility/internals/wizards.md)   
- [Uygulamaları yerelleştirme](../../ide/localizing-applications.md)   
+ ['Nı](../../extensibility/internals/wizards.md)   
+ [Uygulamaları Yerelleştirme](../../ide/localizing-applications.md)   
  [Genişletme Projeleri için Genellikle Kullanılan Nesnelerin CATID’leri](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)

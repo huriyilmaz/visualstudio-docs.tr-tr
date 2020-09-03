@@ -1,5 +1,5 @@
 ---
-title: 'Hata &#39;: proje&#39; &#39;projesindeki&#39; bağımlılık dosyası, bağımlılık &#39;dosyası&#39; ile çakışacağından çalıştırma dizinine kopyalanamıyor | Microsoft Docs'
+title: 'Hata: &#39;&#39; proje &#39;proje&#39;, bağımlılık &#39;dosyası ile çakışacağından çalıştırma dizinine kopyalanamıyor. | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -12,13 +12,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5d4fd45741585aaf82c82257999b40d6257e82d9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656043"
 ---
-# <a name="error-the-dependency-39file39-in-project-39project39-cannot-be-copied-to-the-run-directory-because-it-would-conflict-with-dependency-39file39"></a>Hata: &#39;proje&#39; &#39;projesindeki&#39; bağımlılık dosyası, bağımlılık &#39;dosyası ile çakışacağından çalıştırma dizinine kopyalanamıyor&#39;
+# <a name="error-the-dependency-39file39-in-project-39project39-cannot-be-copied-to-the-run-directory-because-it-would-conflict-with-dependency-39file39"></a>Hata: &#39;&#39; proje &#39;proje&#39;, bağımlılık &#39;dosyası ile çakışacağından çalıştırma dizinine kopyalanamıyor&#39;
 Başvurular arasında bir çakışma var; uygulamanın çalışması için bin dizinine Kopyalanmakta olan aynı dosya adına sahip birden çok farklı bağımlılık. Bağımlılıkların hiçbiri birincil başvuru olmadığından çalıştırma dizini çakışmayı çözümleyemiyor.
 
  Bu hata, yapılandırmanın başarısız olmasına neden olur.
@@ -29,7 +29,7 @@ Başvurular arasında bir çakışma var; uygulamanın çalışması için bin d
 
 - Derlemelerden birini projenizin doğrudan başvurusuyla yapın. Bu yaklaşımın olası bir dezavantajı, seçtiğiniz derlemenin başvurulan derlemenin başka bir sürümünü gerektiren derlemelerle birlikte çalışmak için garanti edilmez.
 
-     \- veya-
+     \- veya
 
 - Derlemenin her iki kopyasının de tanımlayıcı olarak adlandırılmış olduğundan ve genel derleme önbelleğinde bulunduğundan emin olun. Bu, derlemeleri bin dizinine kopyalama gereksinimini ortadan kaldırır.
 

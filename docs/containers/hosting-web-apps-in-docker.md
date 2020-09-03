@@ -10,10 +10,10 @@ ms.technology: vs-azure
 ms.date: 03/14/2019
 ms.author: ghogen
 ms.openlocfilehash: 4626b64f5e733fec049d56dfe53407cc0fe31566
-ms.sourcegitcommit: 2c26d6e6f2a5c56ae5102cdded7b02f2d0fd686c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88168714"
 ---
 # <a name="deploy-an-aspnet-container-to-a-container-registry-using-visual-studio"></a>Visual Studio kullanarak kapsayıcı kayıt defterine ASP.NET kapsayıcısı dağıtma

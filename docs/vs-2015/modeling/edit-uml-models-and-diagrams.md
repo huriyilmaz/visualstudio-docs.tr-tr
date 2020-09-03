@@ -22,10 +22,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 00ac30cc7e9ee3aff0dd64f015a4b4954972c09a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74295526"
 ---
 # <a name="edit-uml-models-and-diagrams"></a>UML modellerini ve diyagramları düzenleme
@@ -61,7 +61,7 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
 - [UML tasarımcılarını genişletme](#extensions)
 
-## <a name="Views"></a>UML diyagramları bir UML modelinin görünümleridir
+## <a name="uml-diagrams-are-views-of-a-uml-model"></a><a name="Views"></a> UML diyagramları bir UML modelinin görünümleridir
  UML diyagramlarını yalnızca modelleme projelerinde oluşturabilir ve kullanabilirsiniz. Diyagram ve proje oluşturma hakkında daha fazla bilgi için bkz. [UML modelleme projeleri ve diyagramları oluşturma](../modeling/create-uml-modeling-projects-and-diagrams.md).
 
 - Modelleme projesi tek bir UML modeli içerir. Projedeki her UML diyagram, UML modelinin bir görünümüdür.
@@ -72,7 +72,7 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
 - Herhangi bir diyagramı kaydettiğinizde, Visual Studio tüm modeli, tüm diyagramlarını ve modelleme proje dosyasını kaydeder.
 
-## <a name="Creating"></a>UML modelleme diyagramları oluşturma
+## <a name="creating-uml-modeling-diagrams"></a><a name="Creating"></a> UML modelleme diyagramları oluşturma
 
 1. Visual Studio 'daki **mimari** menüsünde **Yeni UML veya katman diyagramı**' na tıklayın.
 
@@ -91,7 +91,7 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
   Modelleme projelerinin nasıl yönetileceği hakkında daha fazla bilgi için bkz. [UML modelleme projeleri ve diyagramları oluşturma](../modeling/create-uml-modeling-projects-and-diagrams.md).
 
-## <a name="Drawing"></a>UML modelleme diyagramlarını çizme
+## <a name="drawing-uml-modeling-diagrams"></a><a name="Drawing"></a> UML modelleme diyagramlarını çizme
  Modelleme diyagramı, ilişkilerle bağlantılı model öğelerinin koleksiyonunu görüntüler. Her öğe bir şekil olarak görüntülenir ve her ilişki iki şekil arasında bağlayıcı olarak görüntülenir.
 
  Biri öğe ve ilişkiler için olmak üzere iki tür araç vardır. Örneğin, UML sınıf diyagramı araç kutusunda **sınıf** bir öğe aracıdır ve **ilişkilendirme** bir ilişki aracıdır.
@@ -117,7 +117,7 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
    Bazı tür diyagramlarda basit şekiller de çizebilirsiniz. Bu şekiller modelin bir parçası değildir, ancak bunları diyagramın bölümlerine dikkat çekmek veya farklı alanlara bölmek için kullanabilirsiniz.
 
-## <a name="Editing"></a>Şekilleri ve bağlayıcıları Düzenle
+## <a name="editing-shapes-and-connectors"></a><a name="Editing"></a> Şekilleri ve bağlayıcıları Düzenle
  Bir şekli yeniden boyutlandırdığınızda veya renklendirip bir bağlayıcıyı yeniden yönlendirçalıştığınızda, temel alınan model üzerinde hiçbir etkisi olmaz. Ancak, diyagramda veya UML Model Gezgininde bir şekli yeniden adlandırdığınızda, karşılık gelen öğe UML Model Gezgini 'nde ve bu öğeyi sunan diğer diyagramlarda yeniden adlandırılır.
 
 > [!NOTE]
@@ -136,11 +136,11 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
 #### <a name="to-move-one-end-of-a-connector-to-another-shape"></a>Bağlayıcının bir ucunu başka bir şekle taşımak için
 
-1. Aşağıdakilerden birini yapın:
+1. Şunlardan birini yapın:
 
    - **CTRL** tuşuna basın ve bitişi taşıyın.
 
-     \- veya-
+     \- veya
 
    - Bağlayıcıya sağ tıklayın ve ardından **yeniden bağlan**' a tıklayın.
 
@@ -158,22 +158,22 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
 - Fare tekerleğini döndürürken **CTRL** tuşuna basın ve basılı tutun.
 
-     \- veya-
+     \- veya
 
 - **CTRL + SHIFT**tuşlarına basın ve basılı tutun, ardından sol veya sağ fare düğmesine tıklayın.
 
-     \- veya-
+     \- veya
 
-- **Mimari tasarımcıları** araç çubuğunda artı işaretine ( **+** ) veya eksi işaretine ( **-** ) tıklayın veya bir yakınlaştırma düzeyi seçin.
+- **Mimari tasarımcıları** araç çubuğunda artı işaretine ( **+** ) veya eksi işaretine () tıklayın ya da **-** bir yakınlaştırma düzeyi seçin.
 
-## <a name="Searching"></a>Diyagramda arama
+## <a name="searching-in-a-diagram"></a><a name="Searching"></a> Diyagramda arama
  Hızlı Bul işlevi, bir diyagramdaki öğeleri bulur. **Şu görünümü geçerli belgeye**ayarlamanız gerekir **:**
 
 #### <a name="to-search-for-text-in-a-modeling-diagram"></a>Modelleme diyagramında metin aramak için
 
 1. **CTRL + F**tuşlarına basın.
 
-     \- veya-
+     \- veya
 
      **Düzenle** menüsünde **Bul ve Değiştir**' ın üzerine gelin ve **hızlı bul**' a tıklayın.
 
@@ -185,7 +185,7 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
     > [!NOTE]
     > Bulmak istediğiniz metin daraltılmış bir şekil içindeyse, şekil vurgulanacaktır. Şekli genişletin ve sonra **Sonrakini Bul** ' a tıklayın.
 
-## <a name="Undo"></a>Modeldeki değişiklikleri geri alma
+## <a name="undoing-changes-to-the-model"></a><a name="Undo"></a> Modeldeki değişiklikleri geri alma
  **Düzenleme** menüsündeki **geri al** ve **Yinele** komutlarını kullanarak modelde ve diyagramlarda yaptığınız değişiklikleri geri alabilir ve yineleyebilirsiniz.
 
  **Her modelleme projesinin tek bir değişiklik yığını vardır.** Modelde ve diyagramlarda yaptığınız tüm değişiklikler bu yığında tutulur. Yığın aynı zamanda bir diyagramdan diğerine odaklanılmış değişiklikler içerir. Undo komutu bu yığındaki değişiklikleri tersine çevirir.
@@ -198,7 +198,7 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
  **Bir diyagramın kaydedilmeden kapatılması, bekleeceğiniz etkiye sahip olmayabilir.** Bazı değişiklikler yapar ve sonra bir diyagramı kaydetmeden kapatırsanız, değişiklikleriniz yine de modelde korunacaktır. Bunu kaydetmeden yapmak istiyorsanız modelin tamamını kapatmanız önerilir.
 
-## <a name="Sharing"></a>Diyagramlar arasında öğeleri paylaşma
+## <a name="sharing-elements-between-diagrams"></a><a name="Sharing"></a> Diyagramlar arasında öğeleri paylaşma
  Bir model öğesinin belirli bir örneğini diyagramlarda birden çok kez görünmesini sağlayabilirsiniz. Bu sınıflar, arabirimler, bileşenler, kullanım örnekleri ve aktörler için geçerlidir.
 
  Farklı diyagramlarda farklı ilişki gruplarını göstermek istiyorsanız bu yararlı olur. Örneğin, bir diyagramda müşteri ve adres sınıfları arasındaki ilişkilendirmeleri gösterebilirsiniz. Başka bir diyagramda, adres sınıfını posta alanıyla ilişkisi ile yeniden gösterebilirsiniz.
@@ -234,7 +234,7 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 > [!NOTE]
 > Bir ilişki tarafından zaten bağlı olan iki model öğesinin diyagram görünümlerine eklerseniz, ilişkinin bir görünümü diyagramda da görünür. Bu görünümü yalnızca diyagramdan bir öğe kaldırarak veya modelden ilişkiyi silerek silebilirsiniz.
 
-## <a name="Copying"></a>Öğeleri ve Ilgili öğelerin gruplarını kopyalama
+## <a name="copying-elements-and-groups-of-related-elements"></a><a name="Copying"></a> Öğeleri ve Ilgili öğelerin gruplarını kopyalama
  Model öğelerini kopyalayabilir ve yapıştırabilirsiniz ve öğeleri arasındaki ilişkilerle birlikte öğe gruplarını kopyalayabilir ve yapıştırabilirsiniz.
 
 > [!NOTE]
@@ -270,7 +270,7 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
    Çözüm Gezgini kopyalayıp yapıştırarak bir diyagramı çoğaltamaz.
 
-## <a name="Deleting"></a>Model öğesi veya görünümlerini silme
+## <a name="deleting-a-model-element-or-its-views"></a><a name="Deleting"></a> Model öğesi veya görünümlerini silme
  Bazı tür öğeler, özellikle sınıflandırıcılar, modelden silinmeksizin diyagramdan kaldırılabilir. Sınıflandırıcılar, sınıf diyagramlarında, bileşen diyagramlarında ve kullanım örneği diyagramlarında görüntülenen ana öğelerdir. Birden fazla diyagramda görünebilirler. Bu öğe türleri için iki ayrı komut vardır: **diyagramdan kaldırın** ve **modelden silin**.
 
  Bunun aksine, diyagramdan bir ilişkiyi sildiğinizde her zaman modelden silersiniz.
@@ -282,7 +282,7 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
 - Diyagramdaki öğesine sağ tıklayın ve ardından **diyagramdan kaldır**' a tıklayın.
 
-  \- veya-
+  \- veya
 
 - Diyagramdaki öğesine tıklayın ve ardından **Delete** tuşuna basın.
 
@@ -307,7 +307,7 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
      İlişki modelden silinir ve üzerinde göründüğü her diyagramdan silinir.
 
-## <a name="presentation"></a>Sunu için bir diyagram hazırlama
+## <a name="preparing-a-diagram-for-presentation"></a><a name="presentation"></a> Sunu için bir diyagram hazırlama
  Aşağıdaki özellikler, diyagramınızın belirli bölümlerine dikkat çekmenize, açıklamalar eklemenize veya bir diyagramı ilgilendiğiniz farklı alanlara böetmenize yardımcı olur.
 
 - Bir diyagramın herhangi bir bölümünü Word, PowerPoint veya başka bir belgeye kopyalayabilirsiniz. İstediğiniz şekilleri ve bağlayıcıları seçin, sağ tıklayın ve ardından **Kopyala**' ya tıklayın.
@@ -323,7 +323,7 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 ### <a name="to-export-a-diagram-as-an-image"></a>Bir diyagramı görüntü olarak dışarı aktarmak için
  Daha fazla bilgi için bkz. [diyagramları görüntü olarak dışarı aktarma](../modeling/export-diagrams-as-images.md).
 
-## <a name="extensions"></a>UML tasarımcılarını genişletme
+## <a name="extending-the-uml-designers"></a><a name="extensions"></a> UML tasarımcılarını genişletme
  UML araçlarına yeni işlevler ekleyebilir ve diyagram gösterimini kendi gereksinimlerinize uyarlayabilirsiniz. Daha fazla bilgi için bkz. [UML modellerini ve Diyagramları Genişletme](../modeling/extend-uml-models-and-diagrams.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.

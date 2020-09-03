@@ -1,5 +1,5 @@
 ---
-title: IDebugPropertyCreateEvent2 | Microsoft Dokümanlar
+title: IDebugPropertyCreateEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,43 +13,43 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 84d8fcb4375f29820b51752ac3fdebbd04f06f80
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80720922"
 ---
 # <a name="idebugpropertycreateevent2"></a>IDebugPropertyCreateEvent2
-Bu arabirim, hata ayıklama altyapısı (DE) tarafından, belirli bir belgeyle ilişkili bir özellik oluşturduğunda oturum hata ayıklama yöneticisine (SDM) gönderilir.
+Bu arabirim, belirli bir belgeyle ilişkili bir özellik oluşturduğunda hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama Yöneticisi 'ne (SDM) gönderilir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugPropertyCreateEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- DE, bir özelliğin oluşturulduğunu bildirmek için bu arabirimi uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi bu arabirimle aynı nesne üzerinde uygulanmalıdır. SDM `IDebugEvent2` [arabirime](/cpp/atl/queryinterface) erişmek için QueryInterface kullanır. De yüklenen veya oluşturulmuş bir komut dosyası ile ilişkili bir özellik oluşturdu ve bu komut dosyası IDE görünmesi gerekiyorsa bu arabirim uygulanır.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Bu, bir özelliğin oluşturulduğunu raporlamak için DE bu arabirimi uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabiriminin bu arabirimle aynı nesne üzerinde uygulanması gerekir. SDM, arabirime erişmek için [QueryInterface](/cpp/atl/queryinterface) kullanır `IDebugEvent2` . Bu arabirim, yüklenmiş veya oluşturulmuş bir komut dosyasıyla ilişkili bir özellik oluşturulduysa ve bu betiğin IDE 'de görünmesi gerekiyorsa uygulanır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- DE oluşturur ve oluşturulan bir özellik bildirmek için bu olay nesnesi gönderir. Olay, debugged olan programa iliştirildiğinde SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri arama işlevi kullanılarak gönderilir.
+ Aynı şekilde, bir özelliğin oluşturulduğunu raporlamak için bu olay nesnesini oluşturur ve gönderir. Olay, ayıklanmakta olan programa eklendiği zaman SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) callback işlevi kullanılarak gönderilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
- Aşağıdaki tablo arabirimin yöntemini `IDebugPropertyCreateEvent2` gösterir.
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+ Aşağıdaki tabloda arabirimin yöntemi gösterilmektedir `IDebugPropertyCreateEvent2` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetDebugProperty](../../../extensibility/debugger/reference/idebugpropertycreateevent2-getdebugproperty.md)|Yeni mülkü alır.|
+|[GetDebugProperty](../../../extensibility/debugger/reference/idebugpropertycreateevent2-getdebugproperty.md)|Yeni özelliği alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bir özelliğin bununla ilişkili belirli bir belgesi veya komut dosyası varsa, DE bu olayı Belgenin adı ile **Komut Dosyası Belgeleri** penceresini güncelleştirmek için SDM'ye gönderebilir. SDM, [IUnknown](/cpp/atl/iunknown) işaretçisi `guidDocument` içeren bir `VARIANT` işaretçi almak için bağımsız değişkenle [GetExtendedInfo'yu](../../../extensibility/debugger/reference/idebugproperty2-getextendedinfo.md) arayacaktır. SDM, **Komut Dosyası Belgeleri** penceresini güncelleştirmek için kullanılan [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) arabirimini almak için bu işaretçide [QueryInterface'i](/cpp/atl/queryinterface) arayacaktır.
+ Bir özelliğe ilişkili belirli bir belge veya komut dosyası varsa, bu olayı belgenin adıyla birlikte **betik belgeleri** penceresini GÜNCELLEŞTIRMEK için SDM 'ye gönderebilir. SDM, [GetExtendedInfo](../../../extensibility/debugger/reference/idebugproperty2-getextendedinfo.md) `guidDocument` bir `VARIANT` [IUnknown](/cpp/atl/iunknown) göstergesi içeren bir alma Işlemi için geıda deınfo öğesini bağımsız değişkenle çağırır. SDM, **betik belgeleri** penceresini güncelleştirmek Için kullanılan [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) arabirimini almak Için bu işaretçi üzerinde [QueryInterface](/cpp/atl/queryinterface) 'i çağırır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

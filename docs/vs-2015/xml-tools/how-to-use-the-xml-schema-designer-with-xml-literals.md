@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a9e82cf8387756cb4a4abe8b4c41d082485cdcdc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656287"
 ---
-# <a name="how-to-use-the-xml-schema-designer-with-xml-literals"></a>Nasıl yapılır: XML şema tasarımcısını XML değişmez değerleri ile kullanma
+# <a name="how-to-use-the-xml-schema-designer-with-xml-literals"></a>Nasıl Yapılır: XML Şema Tasarımcısını XML Değişmez Değerleri ile Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu konu, bir Visual Basic projesindeki bir XML sabit değeri ile ilişkili bir şemanın nasıl görüntüleneceğini açıklamaktadır.
@@ -25,7 +25,7 @@ Bu konu, bir Visual Basic projesindeki bir XML sabit değeri ile ilişkili bir �
 
 1. Visual Studio 2010 ' i başlatın.
 
-2. **Dosya** menüsünde **Yeni**' yi ve ardından **Proje**' yi seçin. **Yeni proje** iletişim kutusu görüntülenir. **Proje türleri**Için **diğer diller '** i seçin ve ardından **Visual Basic**' yi seçin. **Şablonlar**Için konsol uygulaması ' nı seçin. Ardından **ad** alanına `XMLLiterals` ve **konum** alanına proje konumunu yazın. **Tamam**'a tıklayın.
+2. **Dosya** menüsünde **Yeni**' yi ve ardından **Proje**' yi seçin. **Yeni Proje** iletişim kutusu görünür. **Proje türleri**Için **diğer diller '** i seçin ve ardından **Visual Basic**' yi seçin. **Şablonlar**Için konsol uygulaması ' nı seçin. Ardından `XMLLiterals` **ad** alanını ve **konum** alanına proje konumunu yazın. **Tamam**’a tıklayın.
 
      Yeni poject oluşturulur. Xmlsabit değerler projesi bir Visual Basic kaynak dosyası (Module1. vb) içerir.
 

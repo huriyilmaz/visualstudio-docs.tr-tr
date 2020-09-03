@@ -12,25 +12,25 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 028ad25495ba01d9763c8bec3bbb9c4480d72ff8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185356"
 ---
 # <a name="threads"></a>İş Parçacıkları
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Hata ayıklayıcı mimarisi bakımından bir **iş parçacığı**:  
+Hata ayıklayıcı mimarisi açısından **iş parçacığı**:  
   
-- Temel hesaplama birimidir. Bir iş parçacığı bağlamı içinde kendi yönergeler tek bir kod bağlamdan sonraki taşıma, bir tek bir çağrı yığınının sıralı olarak yürütür.  
+- , Temel hesaplama birimidir. Bir iş parçacığı, kendi talimatlarını tek bir çağrı yığınının bağlamı içinde yürütür ve bir kod bağlamından sonrakine taşınır.  
   
-- Kendisi ve bunu, çalıştığı adlı, askıya ve sürdürüldü program tanımlayabilirsiniz. Bir iş parçacığı, ayrıca kendi ilişkili yığın çerçevelerini numaralandırabilirsiniz ve bazı koşullar altında başka bir yığın çerçevesine taşınabilir. Bir yığın çerçevesi bağlamında göz önünde bulundurulduğunda, bir iş parçacığı, ilişkili mantıksal iş parçacığı varsa döndürebilir. Bir iş parçacığı IDE iş parçacıkları penceresinde görüntülenen bir askıya alma sayımı gibi özellikleri vardır.  
+- Kendisini ve üzerinde çalıştığı programı tanımlayabilir ve adlandırılabilir, askıda olabilir ve devam edebilir. Bir iş parçacığı ayrıca ilişkili yığın çerçevelerini de numaralandırabilirler ve bazı koşullar altında başka bir yığın çerçevesine taşınabilir. Yığın çerçevesinin bağlamı verildiğinde bir iş parçacığı, varsa ilişkili mantıksal iş parçacığını döndürebilir. Bir iş parçacığında, IDE 'nin Iş parçacıkları penceresinde görüntülenebilen bir askıya alma sayısı gibi özellikler vardır.  
   
-- Tarafından temsil edilen bir [IDebugThread2](../../extensibility/debugger/reference/idebugthread2.md) arabirimi, genellikle bir hata ayıklama altyapısı (DE) veya bir programı yürütme söz konusu kümelerdeki sanal makine tarafından oluşturuldu.  
+- , Genellikle bir program yürütmenin sonucu olarak bir hata ayıklama altyapısı (DE) veya sanal makine tarafından oluşturulan bir [IDebugThread2](../../extensibility/debugger/reference/idebugthread2.md) arabirimi tarafından temsil edilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Programlar](../../extensibility/debugger/programs.md)   
+ [Programlarınız](../../extensibility/debugger/programs.md)   
  [Yığın çerçeveleri](../../extensibility/debugger/stack-frames.md)   
  [Hata ayıklama altyapısı](../../extensibility/debugger/debug-engine.md)   
  [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md)   

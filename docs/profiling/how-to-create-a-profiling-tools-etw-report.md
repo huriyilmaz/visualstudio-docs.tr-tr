@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 5fe610ea87c492e0bf562fe00145c3abaf76b8ef
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85520633"
 ---
 # <a name="how-to-create-a-profiling-tools-etw-report"></a>Nasıl yapılır: profil oluşturma araçları ETW raporu oluşturma
@@ -34,7 +34,7 @@ Windows için olay Izleme (ETW) raporu, Profil Oluşturma Araçları bir perform
 
      *Araçları yolu* **VSPerfReport** *vspfile*  **/summary: ETW [/XML]**
 
-    |Öğe|Description|
+    |Öğe|Açıklama|
     |-|-|
     |*Araçları yolu*|Profil Oluşturma Araçları yardımcı programının yolu. Daha fazla bilgi için bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).|
     |*VSPFile*|Profil oluşturma verileri (.* VSP* veya. *vsps*) dosyasýný. Tam ve kısmi yollar kabul edilir.|

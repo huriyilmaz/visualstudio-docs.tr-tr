@@ -10,16 +10,16 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 1aeeb7e0a9061d72a07b718acde70b00dfcbba89
-ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88144681"
 ---
 # <a name="profiling-tools-usage-rules"></a>Profil Araçları Kullanım Kuralları
 Profil Oluşturma Araçları Kullanım kategorisindeki performans kuralları, verileri en etkili şekilde toplamak için profil oluşturucunun kullanılmasına yönelik rehberlik sağlar.
 
-| Kural | Açıklama |
+| Kural | Description |
 | - | - |
 | [DA0002: VSPerfCorProf.dll eksik](../profiling/da0002-vsperfcorprof-dll-is-missing.md) | Komut satırı profili oluşturma, .NET Framework ikililer için tamamlanmamış veriler içerebilir. Bu durum doğru ortam değişkenlerini ayarlamamasından kaynaklanıyor olabilir. |
 | [DA0003: Pek çok çekirdek örneği](../profiling/da0003-many-kernel-samples.md) | Hedef ikilinin yürütülmesi dışında oluşan birçok profil oluşturma örneği kaydedildi. Daha doğru veri toplamak için, izleme yöntemini kullanmayı düşünün. |

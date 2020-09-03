@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d30564c11951d6ffec420c6a2ea95c41695de3dd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656243"
 ---
 # <a name="miscellaneous-xml-text-editor-options-dialog-box"></a>Diğer, XML, Metin Düzenleyici, Seçenekler İletişim Kutusu
@@ -29,7 +29,7 @@ Bu iletişim kutusu, XML Düzenleyicisi için otomatik tamamlama ve şema ayarla
 
  Boş bir öğenin tamamlanması otomatik tamamlama ayarına bağlı değildir. Boş bir öğeyi her zaman bir ters eğik çizgi (/) yazarak Otomatik Tamamla yapabilirsiniz.
 
- **Öznitelik teklifleri** XML öznitelikleri yazarken, düzenleyici `=" "` karakterleri ekler ve giriş işaretini (^) çift tırnak içine yerleştirir.
+ **Öznitelik teklifleri** XML öznitelikleri yazarken, düzenleyici karakterleri ekler ve giriş `=" "` işaretini (^) çift tırnak içine yerleştirir.
 
  Varsayılan olarak seçilidir.
 
@@ -52,7 +52,7 @@ Bu iletişim kutusu, XML Düzenleyicisi için otomatik tamamlama ve şema ayarla
  Varsayılan olarak seçilidir.
 
 ## <a name="caching"></a>Önbelleğe Alma
- **Şemalar** Şema önbelleğinin konumunu belirtir. Tarayıcı düğmesi ( **...** ) geçerli şema önbellek konumundaki **Dizin tarama** iletişim kutusunu açar. Farklı bir dizin seçebilir veya iletişim kutusunda bir klasörü seçebilir, sağ tıklayıp **Aç** ' ı seçerek dizinde neleri bulabilirsiniz.
+ **Şemalar** Şema önbelleğinin konumunu belirtir. Tarayıcı düğmesi (**...**) geçerli şema önbellek konumundaki **Dizin tarama** iletişim kutusunu açar. Farklı bir dizin seçebilir veya iletişim kutusunda bir klasörü seçebilir, sağ tıklayıp **Aç** ' ı seçerek dizinde neleri bulabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [XML belgesi özellikleri, Özellikler penceresi](../xml-tools/xml-document-properties-properties-window.md) [XML Düzenleyicisi bileşenleri](../xml-tools/xml-editor-components.md)

@@ -20,18 +20,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c5c4d5fc73660c97bcb69957a93d2ff08f64e31c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655457"
 ---
 # <a name="save-data-to-a-database-multiple-tables"></a>Bir veritabanına (birden çok tablo) veri kaydetme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Uygulama geliştirmenin en yaygın senaryolarından biri, verileri bir Windows uygulamasında form üzerinde göstermek, verileri düzenlemek ve güncelleştirilmiş verileri veritabanına geri göndermek için kullanılır. Bu izlenecek yol, iki ilişkili tablodaki verileri görüntüleyen ve kayıtları nasıl düzenleydiğini ve değişiklikleri veritabanına geri kaydetmeyi gösteren bir form oluşturur. Bu örnekte, Northwind örnek veritabanındaki `Customers` ve `Orders` tabloları kullanılmaktadır.
+Uygulama geliştirmenin en yaygın senaryolarından biri, verileri bir Windows uygulamasında form üzerinde göstermek, verileri düzenlemek ve güncelleştirilmiş verileri veritabanına geri göndermek için kullanılır. Bu izlenecek yol, iki ilişkili tablodaki verileri görüntüleyen ve kayıtları nasıl düzenleydiğini ve değişiklikleri veritabanına geri kaydetmeyi gösteren bir form oluşturur. Bu örnekte, `Customers` `Orders` Northwind örnek veritabanındaki ve tabloları kullanılmaktadır.
 
- Bir TableAdapter 'ın `Update` yöntemini çağırarak, uygulamanızdaki verileri veritabanına geri kaydedebilirsiniz. Tabloları **veri kaynakları** penceresinden bir form üzerine sürüklediğinizde, verileri kaydetmek için gereken kod otomatik olarak eklenir. Bir forma eklenen ek tablolar, bu kodun el ile eklenmesini gerektirir. Bu izlenecek yol, birden fazla tablodan güncelleştirmeleri kaydetmek için nasıl kod ekleneceğini gösterir.
+ Bir TableAdapter metodunu çağırarak, uygulamanızdaki verileri veritabanına geri kaydedebilirsiniz `Update` . Tabloları **veri kaynakları** penceresinden bir form üzerine sürüklediğinizde, verileri kaydetmek için gereken kod otomatik olarak eklenir. Bir forma eklenen ek tablolar, bu kodun el ile eklenmesini gerektirir. Bu izlenecek yol, birden fazla tablodan güncelleştirmeleri kaydetmek için nasıl kod ekleneceğini gösterir.
 
 > [!NOTE]
 > Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya kullandığınız sürüme bağlı olarak yardım bölümünde açıklananlardan farklı bir durum içerebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
@@ -50,7 +50,7 @@ Uygulama geliştirmenin en yaygın senaryolarından biri, verileri bir Windows u
 
 - Veri kümesindeki güncelleştirilmiş verileri veritabanına geri göndermek için kodu değiştirme.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yolu tamamlamak için şunlar gerekir:
 
 - Northwind örnek veritabanına erişim.
@@ -62,7 +62,7 @@ Uygulama geliştirmenin en yaygın senaryolarından biri, verileri bir Windows u
 
 1. **Dosya** menüsünde Yeni bir proje oluşturun.
 
-2. Projeyi `UpdateMultipleTablesWalkthrough` olarak adlandırın.
+2. Projeyi adlandırın `UpdateMultipleTablesWalkthrough` .
 
 3. **Windows uygulaması**' nı seçin ve ardından **Tamam**' ı seçin. Daha fazla bilgi için bkz. [Istemci uygulamaları](https://msdn.microsoft.com/library/2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68).
 
@@ -83,7 +83,7 @@ Uygulama geliştirmenin en yaygın senaryolarından biri, verileri bir Windows u
 
     - Northwind örnek veritabanıyla kurulan veri bağlantısı aşağı açılan listede kullanılabilir durumdaysa bunu seçin.
 
-         veya
+         -veya-
 
     - **Yeni bağlantı** ' yı seçerek **Bağlantı Ekle/Değiştir** iletişim kutusunu açın.
 
@@ -98,7 +98,7 @@ Uygulama geliştirmenin en yaygın senaryolarından biri, verileri bir Windows u
      **NorthwindDataSet** , projenize eklenir ve tablolar **veri kaynakları** penceresinde görüntülenir.
 
 ## <a name="set-the-controls-to-be-created"></a>Oluşturulacak denetimleri ayarlayın
- Bu izlenecek yol için `Customers` tablosundaki veriler, verilerin ayrı denetimlerde görüntülendiği bir **Ayrıntılar** düzeninde yer aldığı yerdir. @No__t_0 tablodaki veriler, <xref:System.Windows.Forms.DataGridView> denetiminde görüntülenen **kılavuz** düzenidir.
+ Bu kılavuzda, tablodaki veriler, `Customers` verilerin tek tek denetimlerde görüntülendiği bir **Ayrıntılar** düzeninde yer verilir. Tablodaki veriler, `Orders` denetimde görüntülenen **kılavuz** düzenidir <xref:System.Windows.Forms.DataGridView> .
 
 #### <a name="to-set-the-drop-type-for-the-items-in-the-data-sources-window"></a>Veri kaynakları penceresinde öğelerin bırakma türünü ayarlamak için
 
@@ -113,26 +113,26 @@ Uygulama geliştirmenin en yaygın senaryolarından biri, verileri bir Windows u
 
 1. Ana **müşteriler** düğümünü **veri kaynakları** penceresinden **Form1**üzerine sürükleyin.
 
-     Açıklayıcı etiketlere sahip veriye bağlı denetimler, formda gezinmek için bir araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) ile birlikte görüntülenir. Bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
+     Açıklayıcı etiketlere sahip veriye bağlı denetimler, formda gezinmek için bir araç şeridinde () birlikte görüntülenir <xref:System.Windows.Forms.BindingNavigator> . Bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
 
 2. İlgili **siparişler** düğümünü **veri kaynakları** penceresinden **Form1**üzerine sürükleyin.
 
     > [!NOTE]
     > İlişkili **siparişler** düğümü, **Faks** sütununun altında bulunur ve **müşteriler** düğümünün bir alt düğümüdür.
 
-     Kayıtlar üzerinde gezinmek için bir <xref:System.Windows.Forms.DataGridView> denetimi ve araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) formda görüntülenir. Bir OrdersTableAdapter ve <xref:System.Windows.Forms.BindingSource> bileşen tepsisinde görünür.
+     <xref:System.Windows.Forms.DataGridView>Kayıtlar üzerinde gezinmek için bir denetim ve araç şeridi ( <xref:System.Windows.Forms.BindingNavigator> ) formda görüntülenir. Bir OrdersTableAdapter ve <xref:System.Windows.Forms.BindingSource> bileşen tepsisinde görünür.
 
 ## <a name="addcode-to-update-the-database"></a>Veritabanını güncelleştirmek için AddCode
- **Müşteriler** ve **siparişler** TableAdapters `Update` yöntemlerini çağırarak veritabanını güncelleştirebilirsiniz. Varsayılan olarak, <xref:System.Windows.Forms.BindingNavigator> **Kaydet** düğmesine yönelik bir olay işleyicisi, güncelleştirmeleri veritabanına göndermek için formun koduna eklenir. Bu yordam, güncelleştirmeleri doğru sırada göndermek için kodu değiştirir. Bu, başvurusal bütünlük hataları oluşturma olasılığını ortadan kaldırır. Kod ayrıca, bir try-catch bloğunda güncelleştirme çağrısını sarmalayarak hata işleme uygular. Kodu uygulamanızın gereksinimlerine uyacak şekilde değiştirebilirsiniz.
+ `Update` **Müşteriler** ve **siparişler** TableAdapters yöntemlerini çağırarak veritabanını güncelleştirebilirsiniz. Varsayılan olarak, ' ın **Kaydet** düğmesine ait bir olay işleyicisi, <xref:System.Windows.Forms.BindingNavigator> güncelleştirmeleri veritabanına göndermek için formun koduna eklenir. Bu yordam, güncelleştirmeleri doğru sırada göndermek için kodu değiştirir. Bu, başvurusal bütünlük hataları oluşturma olasılığını ortadan kaldırır. Kod ayrıca, bir try-catch bloğunda güncelleştirme çağrısını sarmalayarak hata işleme uygular. Kodu uygulamanızın gereksinimlerine uyacak şekilde değiştirebilirsiniz.
 
 > [!NOTE]
 > Netlik için bu izlenecek yol bir işlem kullanmaz. Ancak, iki veya daha fazla ilişkili tabloyu güncelleştiriyorsanız, tüm güncelleştirme mantığını bir işlem içine dahil edin. İşlem, herhangi bir değişiklik kaydedilmeden önce bir veritabanında yapılan tüm değişikliklerin başarılı olmasını sağlayan bir işlemdir. Daha fazla bilgi için bkz. [işlemler ve eşzamanlılık](https://msdn.microsoft.com/library/f46570de-9e50-4fe6-8710-a8c31fa8569b).
 
 #### <a name="to-add-update-logic-to-the-application"></a>Uygulamaya güncelleştirme mantığı eklemek için
 
-1. @No__t_1 **Kaydet** düğmesini seçin. Bu, kod düzenleyicisini `bindingNavigatorSaveItem_Click` olay işleyicisine açar.
+1. Üzerinde **Kaydet** düğmesini seçin <xref:System.Windows.Forms.BindingNavigator> . Bu, kod düzenleyicisini `bindingNavigatorSaveItem_Click` olay işleyicisine açar.
 
-2. Olay işleyicisindeki kodu, ilgili TableAdapters `Update` yöntemlerini çağırmak için değiştirin. Aşağıdaki kod ilk olarak her bir <xref:System.Data.DataRowState> (<xref:System.Data.DataRowState>, <xref:System.Data.DataRowState> ve <xref:System.Data.DataRowState>) güncelleştirilmiş bilgileri tutmak için üç geçici veri tablosu oluşturur. Sonra güncelleştirmeler doğru sırada çalıştırılır. Kod aşağıdaki gibi görünmelidir:
+2. Olay işleyicisindeki kodu, `Update` Ilgili TableAdapters yöntemlerini çağırmak için değiştirin. Aşağıdaki kod, her bir <xref:System.Data.DataRowState> ( <xref:System.Data.DataRowState> , <xref:System.Data.DataRowState> , ve) için güncelleştirilmiş bilgileri tutmak üzere üç geçici veri tablosu oluşturur <xref:System.Data.DataRowState> . Sonra güncelleştirmeler doğru sırada çalıştırılır. Kod aşağıdaki gibi görünmelidir:
 
      [!code-csharp[VbRaddataSaving#10](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form4.cs#10)]
      [!code-vb[VbRaddataSaving#10](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form4.vb#10)]

@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ebc8f4f6c17af54f4dfdcfc0d0d05c5da9d2d88b
-ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88114082"
 ---
 # <a name="composite-patterns-for-visual-studio"></a>Visual Studio İçin Bileşik Desenler
@@ -28,7 +28,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 
 - [Dokunma girişi](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_TouchInput)
 
-## <a name="data-visualization"></a><a name="BKMK_DataVisualization"></a>Veri görselleştirme
+## <a name="data-visualization"></a><a name="BKMK_DataVisualization"></a> Veri görselleştirme
 
 ### <a name="overview"></a>Genel Bakış
  Grafikler, karar almanın geliştirilmesine yönelik verileri toplamanın ve görselleştirmenin görsel bir yoludur. Kullanıcıların çok fazla veri ile karşılaştığı, ne kadar önemli olduğunu ve ne tür bir eyleme ihtiyaç duydularını görbilecekleri çok büyük bir anlamı olan kullanıcılar.
@@ -68,7 +68,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 
 ### <a name="other-charting-considerations"></a>Diğer grafik konuları
 
-#### <a name="color"></a>Color (Renk)
+#### <a name="color"></a>Color
  Visual Studio 'da kullanılmak üzere tanımlanan belirli bir grafik renkleri paleti vardır. Palet, renk değişimlerinin ana türleri için erişilebilir ve renklerin çok dar dilimleri olarak kullanılması durumunda bile renk yapılabilir. Bu renkleri, Kullanıcı arabiriminizdeki herhangi bir grafik veya grafik türü için herhangi bir bileşimde kullanabilirsiniz. Birçok farklı renge ihtiyacınız yoksa yedi rengin hepsini kullanmanız gerekmez. Bu renkler herhangi bir ön plan öğeleriyle kullanılmak üzere tasarlanmamıştır, bu nedenle metin veya glifleri bu renklerin üzerine yerleştirmeyin. Bu kuleler, **araçlar > seçenekleri** altında (bkz. [son kullanıcılar için renkleri gösterme](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ExposingColorsForEndUsers)) sabit kodlanmış ve Kullanıcı özelleştirmesine açık olmalıdır.
 
 |Basılı|Onaltılık|RGB|
@@ -81,7 +81,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 |![Renk örneği 79D7F2](../../extensibility/ux-guidelines/media/0711_79d7f2.png "0711_79D7F2")|#79D7F2|121.215.242|
 |![B5B5B5 örneği](../../extensibility/ux-guidelines/media/0711_b5b5b5.png "0711_B5B5B5")|#B5B5B5|181.181.181|
 
-## <a name="on-object-ui-and-peeking"></a><a name="BKMK_OnObjectUI"></a>Nesne üzerinde kullanıcı arabirimi ve göz atma
+## <a name="on-object-ui-and-peeking"></a><a name="BKMK_OnObjectUI"></a> Nesne üzerinde kullanıcı arabirimi ve göz atma
  Bu bölüm, kod Özeti Görünümü olarak da bilinen, Visual Studio 'ya özgü bir nesne Kullanıcı arabirimi türü olarak göz atma bağlamı sağlar.
 
 ### <a name="overview"></a>Genel Bakış
@@ -247,7 +247,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 
 - Düzenleme veya davet eden kullanıcı etkileşimi gibi görünen bir içeriği **hiçbir** şekilde gösterme. Bu davranış, imleci ayrıntı içeriğinin üzerine taşımaya çalışırlarsa, bir araç ipucu için standart davranış, imleç onu üreten ana içerik üzerinde olmadığında hemen yok etmek üzere, kullanıcıların bu davranışı ortaya çıkar.
 
-## <a name="selection-models"></a><a name="BKMK_SelectionModels"></a>Seçim modelleri
+## <a name="selection-models"></a><a name="BKMK_SelectionModels"></a> Seçim modelleri
 
 ### <a name="overview"></a>Genel Bakış
  Seçim modeli, Kullanıcı arabirimi içinde ilgilendiğiniz bir veya daha fazla nesnede işlemleri göstermek ve onaylamak için kullanılan mekanizmadır. Bu konu başlığı altında, Visual Studio belge düzenleyicilerinde seçim etkileşimi desenleri ele alınmaktadır: metin düzenleyicileri, tasarım yüzeyleri ve modelleme yüzeyleri.
@@ -325,7 +325,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 
 #### <a name="mouse-interaction"></a>Fare etkileşimi
 
-|Giriş|Sonuç|
+|Girdi|Sonuç|
 |-----------|------------|
 |Seçilmemiş bir nesneye tıklayın|Nesneyi seçer ve nesne yeniden boyutlandırılabilir ise kesikli çizgi ve seçim tutamaçları görüntüler.|
 |Seçili bir nesneye tıklayın|Nesne destekliyorsa, yerinde düzenlemesini etkinleştirir. Nesnenin dışına tıklamak yerinde Düzenle modunu devre dışı bırakır.|
@@ -340,7 +340,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 
 #### <a name="keyboard-interaction"></a>Klavye etkileşimi
 
-|Giriş|Sonuç|
+|Girdi|Sonuç|
 |-----------|------------|
 |Tab|Odak göstergesini düzenleyicideki nesnelerin mantıksal sıralaması arasında kaydırır. Bu, **TabIndex** (veya eşdeğeri) özellik değerine, nesne oluşturma sırasına ve düzenleyicinin genel amacına bağlı olarak soldan sağa veya yukarıdan aşağıya doğru olabilir. SHIFT + TAB odak göstergesinin yönünü tersine çevirir.|
 |Boşluk çubuğu|Tuş vuruşu korunurken kaydırma modunu etkinleştirir. Görünüm penceresinin konumunu kaydırmak için ek fare girişi gerekir.|
@@ -360,7 +360,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 #### <a name="graphical-containers"></a>Grafik kapsayıcıları
  Grafik düzenleyicileri, bazı durumlarda Windows Forms panel denetimi veya HTML Tasarımcısı içindeki kılavuz düzen denetimi gibi diğer grafik nesneleri için kapsayıcılar sağlar. Düzenleyiciniz diğer grafik nesneleri için kapsayıcılar sağlıyorsa, şu seçim modelinin yalnızca kapsayıcı için kullanılması gerekir (kapsayıcıdaki nesneler, yukarıda açıklandığı gibi standart modeli izler):
 
-|Giriş|Sonuç|
+|Girdi|Sonuç|
 |-----------|------------|
 |Kapsayıcıya tek tıklama|Kapsanan nesnelerden hiçbirini doğrudan seçmeden kapsayıcı nesnesini seçer. Kapsayıcı, standart fare ve klavye girişi (yukarıda açıklandığı gibi) ile taşınabilir ve/veya yeniden boyutlandırılabilir. Kapsanan nesneler kapsayıcıya göre taşınır, ancak aynı zamanda doğrudan seçilmedikleri takdirde içerilen nesneler yeniden boyutlandırılmaz.|
 |Kapsayıcının sınır bölgesinin üzerine gelme|Kapsayıcının taşınabileceğini belirten, fareyi taşıma imlecine dönüştürür.|
@@ -390,7 +390,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 
  **İki ikincil seçim içeren birincil seçim**
 
-#### <a name="graphical-object-selection-appearance"></a><a name="BKMK_GraphicalObjectSelectionAppearance"></a>Grafik nesnesi seçim görünümü
+#### <a name="graphical-object-selection-appearance"></a><a name="BKMK_GraphicalObjectSelectionAppearance"></a> Grafik nesnesi seçim görünümü
  Seçim tutamaçları, nesnenin sınırlayıcı kutusunun etrafında dikdörtgen bir düzende çizilmiş kareler. Aşağıdaki grafik, bir grafik nesnesinin tanıtıcı, boyutlandırma ve yerinde düzenlenme görünümü ile sahip olduğu çeşitli durumların örneklerini gösterir. Tanıtıcıların boyutu, **getsystemölçümlerini** API kullanılarak pencere kenarlığına ve Edge ölçümlerine bağlı olmalıdır.
 
 | Durum | Görünüm | Görsel Ayrıntılar |
@@ -420,7 +420,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 ##### <a name="renaming"></a>Adlandırıl
  Ağaçtaki düğümler yeniden adlandırmayı destekliyorsa, yeniden adlandırma işlemi yerinde yapılmalıdır. Yerinde işlem, Visual Studio 'daki tüm ağaç denetimlerinde standart olmalıdır. Yerinde değiştirme modunu hemen etkinleştiren, Kullanıcı girişini kabul etmeye izin veren, düğüm adının tamamını kapsayan metin seçimiyle birlikte yeniden adlandırma komutu sağlayın. Düğüm bir dosyayı temsil ediyorsa, dosya adı uzantıyı içermelidir. Seçim vurgusu, uzantının değil yalnızca dosya adının gövdesini içermelidir.
 
-|Giriş|Sonuç|
+|Girdi|Sonuç|
 |-----------|------------|
 |Enter tuşu|Yeniden adlandırma işlemini kaydeder|
 |ESC tuşu|Yeniden adlandırma işlemini iptal eder|
@@ -471,7 +471,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 
 - F2 tuşu, şu anda seçili olan hücre için yerinde düzenlemeleri etkinleştirir.
 
-## <a name="persistence-and-saving-settings"></a><a name="BKMK_PersistenceAndSavingSettings"></a>Kalıcılık ve kaydetme ayarları
+## <a name="persistence-and-saving-settings"></a><a name="BKMK_PersistenceAndSavingSettings"></a> Kalıcılık ve kaydetme ayarları
 
 ### <a name="overview"></a>Genel Bakış
  Visual Studio 'daki her yazılım bileşeni genellikle kendi durumu ve kalıcılığına karşı sorumludur, ancak Visual Studio, ayarları pencere boyutları ve pozisyonları gibi bazı durumlarda otomatik olarak kaydeder. Aşağıdaki tabloda, otomatik olarak kaydedilen ayarların bir birleşimi ve açık bir Kullanıcı ya da programlanmış eylem yapılması gereken ayarlar verilmiştir.
@@ -506,7 +506,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 #### <a name="profile-specific-layouts"></a>Profile özgü düzenler
  Her profil, belirli bir geliştirici personbuna tanıdık bir şekilde düzenlenmiş (Visual C++ geliştiricilerin IDE 'nin sol tarafında **Çözüm Gezgini** görmeyi beklediği, ancak C# geliştiricileri sağ tarafta **Çözüm Gezgini** görmeyi beklediği) araç penceresi düzenlerini içerir. Profile özgü pencere düzenleri, Kullanıcı başlangıçta bir profil seçtikten sonra yüklenir. Bir paket yazarı, kullanıcının pencere yapılandırmasına yaptığı değişikliklerin kalıcı hale gelmesini sağlamak için müşterinin deneyimine en uygun pencere yerleşimini belirlemelidir.
 
-## <a name="touch-input"></a><a name="BKMK_TouchInput"></a>Dokunma girişi
+## <a name="touch-input"></a><a name="BKMK_TouchInput"></a> Dokunma girişi
  Kullanıcılar, dokunmatik cihazlarda Microsoft geliştirme ürünlerini giderek daha fazla kullanmaktadır. Ancak, dokunmatik cihazlarda geliştirme araçlarını kullanmayı zorlaştırmaya yönelik engelleri vardır. Kullanıcılar, ürünlerimizi güvenilir ve kesin bir dokunmatik deneyim sağlayacak şekilde beklecektir. Bu yönergelerin amacı, Visual Studio ve ilgili ürünler arasında tutarlı bir dokunmatik deneyim dahil etmek ve bunlara yönelik dokunma özellikleri hakkında kararlara bilgi almaktır.
 
 ### <a name="levels-of-experience"></a>Deneyim düzeyleri
