@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e88dc1318e29ddf35073b78218eb113fe8952aac
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769653"
 ---
 # <a name="set-radix-command"></a>Sayı Tabanını Ayarla Komutu
@@ -30,7 +30,7 @@ Debug.SetRadix [10 | 16 | hex | dec]
 ```
 
 ## <a name="arguments"></a>Bağımsız değişkenler
-`10`veya `16` veya `hex` veya`dec`
+`10` veya `16` veya `hex` veya `dec`
 
 İsteğe bağlı. Ondalık (10 veya Dec) ya da onaltılı (16 veya onaltılı) anlamına gelir. Bir bağımsız değişken atlanırsa, geçerli taban değeri döndürülür.
 

@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a393afa3346b42786ff352dc0c2d48ea6c8b1152
-ms.sourcegitcommit: 3ef987e99616c3eecf4731bf5ac89e16238e68aa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88639386"
 ---
 # <a name="msbuild-command-line-reference"></a>MSBuild komut satırı başvurusu
@@ -38,13 +38,13 @@ MSBuild.exe [Switches] [ProjectFile]
 
 ## <a name="arguments"></a>Bağımsız değişkenler
 
-|Bağımsız Değişken|Açıklama|
+|Bağımsız Değişken|Description|
 |--------------|-----------------|
 |`ProjectFile`|Belirttiğiniz proje dosyasında hedefleri oluşturur. Proje dosyası belirtmezseniz, MSBuild, *proj* içinde sonlanan ve bu dosyayı kullanan bir dosya adı uzantısı için geçerli çalışma dizinini arar. Ayrıca, bu bağımsız değişken için bir Visual Studio çözüm dosyası da belirtebilirsiniz.|
 
 ## <a name="switches"></a>Anahtarlar
 
-|Anahtar|Kısa biçim|Açıklama|
+|Anahtar|Kısa biçim|Description|
 |------------|----------------|-----------------|
 |-detailedSummary|-DS|Oluşturulan yapılandırmaların ve düğümlerin nasıl zamanlandıkları hakkında derleme günlüğünün sonundaki ayrıntılı bilgileri göster.|
 |-graphBuild [: `True` veya `False` ]|-Graf [: `True` or `False` ]|MSBuild 'in bir proje grafiği oluşturmasına ve oluşturmasına neden olur. Bir Graph oluşturmak, form bağımlılıklarına proje başvurularını tanımlamayı içerir. Bu grafiği oluşturmak, geleneksel MSBuild zamanlamasından farklı olarak, bunlara başvuran projelerden önce proje başvuruları oluşturmaya çalışıyor. MSBuild 16 veya üzerini gerektirir.|
@@ -74,7 +74,7 @@ MSBuild.exe [Switches] [ProjectFile]
 
 ### <a name="switches-for-loggers"></a>Günlükçüler için anahtarlar
 
-|Anahtar|Kısa biçim|Açıklama|
+|Anahtar|Kısa biçim|Description|
 |------------|----------------|-----------------|
 |-Binarygünlükçü [: [LogFile =]`output.binlog`<br/>[; ProjectImports = [None, embed, ZipFile]]]|-BL|Tüm derleme olaylarını sıkıştırılmış bir ikili dosyaya serileştirir. Varsayılan olarak, dosya geçerli dizindir ve *MSBuild. binlog*olarak adlandırılır. İkili günlük, daha sonra metin günlüklerini yeniden oluşturmak ve diğer çözümleme araçları tarafından kullanılmak üzere kullanılabilecek yapı işleminin ayrıntılı bir açıklamasıdır. İkili günlük genellikle en ayrıntılı metin Tanılama düzeyi günlüğünden 10-20X küçüktür, ancak daha fazla bilgi içerir.<br /><br />İkili günlükçü, derleme sırasında karşılaşılan tüm içeri aktarılan projeler ve hedef dosyalar dahil olmak üzere proje dosyalarının kaynak metnini varsayılan olarak toplar. İsteğe bağlı `ProjectImports` anahtar, bu davranışı denetler:<br /><br /> -   **Projectımports = None**. Proje içeri aktarmaları toplanmaz.<br /> -   **Projectimports = embed**. Proje içeri aktarmalarını günlük dosyasına ekleyin (varsayılan).<br /> -   **Projectımports = ZipFile**. Proje dosyalarını, * \<output> * \<output> ikili günlük dosyası adıyla aynı ada sahip.projectimports.zipkaydedin.<br /><br />Projectımports için varsayılan ayar ekleme ' dir.<br />**Not**: günlükçü, *. cs*, *. cpp* vb. gibi MSBuild olmayan kaynak dosyaları toplanmaz.<br />Bir *. binlog* dosyası, bir proje/çözüm yerine bir bağımsız değişken olarak *msbuild.exe* ileterek "çalınabilir". Diğer Günlükçüler, ilk derleme gerçekleşenler gibi günlük dosyasında yer alan bilgileri alır. İkili günlük ve kullanımları hakkında daha fazla bilgiyi şurada bulabilirsiniz: https://github.com/Microsoft/msbuild/wiki/Binary-Log <br /><br />**Örnekler**:<br /> -   `-bl`<br /> -    `-bl:output.binlog`<br /> -   `-bl:output.binlog;ProjectImports=None`<br /> -   `-bl:output.binlog;ProjectImports=ZipFile`<br /> -   `-bl:..\..\custom.binlog`<br /> -   `-binaryLogger`|
 |-consoleLoggerParameters:<br /><br /> `parameters`|-CLP:`parameters`|Konsol penceresinde yapı bilgilerini görüntüleyen konsol günlükçüsü ' ne belirttiğiniz parametreleri geçirin. Aşağıdaki parametreleri belirtebilirsiniz:<br /><br /> -   **Performanslı**. Görevler, hedefler ve projelerde harcanan zamanı gösterir.<br />-   **Özet**. Hata ve uyarı özetini sonda görüntüleyin.<br />-   **Nosummary**. Hata ve uyarı özetini sonda gösterme.<br />-   **ErrorsOnly**. Yalnızca hataları göster.<br />-   **Warningsonly**. Yalnızca uyarıları göster.<br />-   **Noitelicpropertylist**. Ayrıntı düzeyi olarak ayarlanırsa her proje derlemesinin başlangıcında görünecek öğe ve özelliklerin listesini gösterme `diagnostic` .<br />-   **Showcommandline**. `TaskCommandLineEvent`İletileri göster.<br />-   **Showtimestamp**. Herhangi bir iletinin öneki olarak zaman damgasını gösterir.<br />-   **Showweventıd**. Her başlatılan olay, tamamlanan olay ve ileti için olay KIMLIĞINI görüntüleyin.<br />-   **ForceNoAlign**. Metni konsol arabelleğinin boyutuna hizalayın.<br />-   **Disableconsolecolor**. Tüm günlük mesajları için varsayılan Konsol renklerini kullanın.<br />-   **Disablemplogging**. Çok işlemcili modda çalışırken çıktının çok işlemcili günlük stilini devre dışı bırakın.<br />-   **Enablemplogging**. Çok işlemcili modda çalışırken bile çok işlemcili günlük stilini etkinleştirin. Bu günlük oluşturma stili varsayılan olarak açık olur.<br />-   **Ayrıntı düzeyi**. Bu günlükçü için **-ayrıntı** ayarını geçersiz kılın.<br /><br /> Aşağıdaki örnekte gösterildiği gibi, birden çok parametreyi ayırmak için noktalı virgül kullanın:<br /><br /> `-consoleloggerparameters:PerformanceSummary;NoSummary -verbosity:minimal`<br/><br/> Varsayılan konsol günlükçüsü normal ayrıntı düzeyine sahiptir ve bir içerir `Summary` .|

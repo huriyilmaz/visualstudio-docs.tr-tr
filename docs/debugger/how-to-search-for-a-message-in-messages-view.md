@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7145732ef635d550aa883603b0f56090eb6d1278
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349321"
 ---
 # <a name="how-to-search-for-a-message-in-messages-view"></a>Nasıl Yapılır: İletiler Görünümünde İleti Arama
@@ -47,6 +47,6 @@ ms.locfileid: "85349321"
 
 5. Aramanın ilk yönü için **yukarı** veya **aşağı** seçeneğini belirleyin.
 
-6. **Tamam**'a tıklayın.
+6. **Tamam**’a tıklayın.
 
    Eşleşen bir ileti bulunursa, Iletiler görünümü penceresinde vurgulanır. Bkz. [Iletiler görünümü](../debugger/messages-view.md).

@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ed9ceb57f49d8c08b75aa140e45a0f4268f4336c
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769604"
 ---
 # <a name="fullclassname-element-visual-studio-template-wizard-extension"></a>FullClassName Öğesi (Visual Studio Şablon Sihirbazı uzantısı)
@@ -53,7 +53,7 @@ Arabirimi uygulayan sınıfın tam adı `IWizard` .
  Bu metin, arabirimini uygulayan sınıfı belirtir `IWizard` . Belirtilen sınıf, [derleme](../extensibility/assembly-element-visual-studio-template-wizard-extension.md) öğesi tarafından belirtilen derlemede bulunmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
- `FullClassName`, öğesinin gerekli bir alt öğesidir `WizardExtension` .
+ `FullClassName` , öğesinin gerekli bir alt öğesidir `WizardExtension` .
 
 ## <a name="example"></a>Örnek
  Aşağıdaki örnek, bir Windows uygulaması için Standart proje şablonu meta verilerini gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .

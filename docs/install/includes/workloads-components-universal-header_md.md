@@ -7,17 +7,17 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
 ms.openlocfilehash: 040a168f45afff9111426aac57cafc32a05c1b12
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79437496"
 ---
-Bu sayfadaki tablolar, Visual Studio'yu komut satırından yüklemek için kullanabileceğiniz veya VSIX bildiriminde bağımlılık olarak belirtebileceğiniz künyeleri listeler. Visual Studio'ya güncellemeler yayınladığımızda ek bileşenler ekleyeceğiz.
+Bu sayfadaki tablolarda, komut satırından Visual Studio 'Yu yüklemek için kullanabileceğiniz veya VSıX bildiriminde bir bağımlılık olarak belirtebileceğiniz kimlikler listelenmektedir. Visual Studio güncelleştirmelerini yayınlarız, ek bileşenler ekleyeceğiz.
 
-Ayrıca sayfa hakkında aşağıdaki leri unutmayın:
+Ayrıca, sayfa hakkında aşağıdakilere de göz önünde bulabilirsiniz:
 
-* Her iş yükünün kendi bölümü vardır ve ardından iş yükü kimliği ve iş yükü için kullanılabilir bileşenlerin bir tablosu vardır.
-* Varsayılan olarak, iş yükünü yüklediğinizde **Gerekli** bileşenler yüklenir.
-* İsterseniz, **Önerilen** ve **İsteğe Bağlı** bileşenleri de yükleyebilirsiniz.
-* Ayrıca, herhangi bir iş yüküne bağlı olmayan ek bileşenleri listeleyen bir bölüm ekledik.
+* Her iş yükü kendi bölümüne sahiptir ve iş yükü KIMLIĞI ve iş yükü için kullanılabilir bileşenlerin bir tablosu gelir.
+* Varsayılan olarak, **gerekli** bileşenler iş yükünü yüklediğinizde yüklenir.
+* Seçeneğini belirlerseniz, **Önerilen** ve **isteğe bağlı** bileşenleri de yükleyebilirsiniz.
+* Ayrıca, herhangi bir iş yükü ile bağlantılı olmayan ek bileşenleri listeleyen bir bölüm ekledik.

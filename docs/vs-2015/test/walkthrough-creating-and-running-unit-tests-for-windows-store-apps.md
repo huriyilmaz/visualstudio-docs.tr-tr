@@ -14,19 +14,19 @@ caps.latest.revision: 23
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f5e62fe83d644b577d7d0a5f87312642f438c490
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851178"
 ---
 # <a name="walkthrough-creating-and-running-unit-tests-for-windows-store-apps"></a>İzlenecek yol: Windows Mağazası Uygulamaları için Birim Testleri Oluşturma ve Çalıştırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio, birim testi yönetilen [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulamaları için destek içerir ve Visual C#, Visual Basic ve Visual C++için birim test kitaplığı şablonları içerir.
+Visual Studio, yönetilen uygulamaları birim testi için destekler [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] ve Visual C#, Visual Basic ve Visual C++ birim test kitaplığı şablonları içerir.
 
 > [!TIP]
-> [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulamaları geliştirme hakkında daha fazla bilgi için bkz. [Windows Mağazası uygulamalarını](https://msdn.microsoft.com/windows/apps/br211386.aspx)kullanmaya başlama.
+> Uygulama geliştirme hakkında daha fazla bilgi için [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] bkz. [Windows Mağazası uygulamalarını](https://msdn.microsoft.com/windows/apps/br211386.aspx)kullanmaya başlama.
 
  Visual Studio aşağıdaki birim testi işlevini sağlar:
 
@@ -38,59 +38,59 @@ Visual Studio, birim testi yönetilen [!INCLUDE[win8_appname_long](../includes/w
 
 - [Birim testlerini çalıştırma](#CreateAndRunUnitTestWin8Tailored_Run)
 
-  Aşağıdaki yordamlarda, yönetilen Windows 8 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulaması için birim testleri oluşturma, çalıştırma ve hata ayıklama adımları açıklanır.
+  Aşağıdaki yordamlarda, yönetilen Windows 8 uygulaması için birim testleri oluşturma, çalıştırma ve hata ayıklama adımları açıklanır [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] .
 
-## <a name="prerequisites"></a>Prerequisites
- {1&gt;Visual Studio&lt;1}
+## <a name="prerequisites"></a>Ön koşullar
+ Visual Studio
 
-## <a name="CreateAndRunUnitTestWin8Tailored_Create"></a>Birim testi projeleri oluşturma
+## <a name="create-unit-test-projects"></a><a name="CreateAndRunUnitTestWin8Tailored_Create"></a> Birim testi projeleri oluşturma
 
 #### <a name="to-create-a-unit-test-project-for-a-windows-store-app"></a>Bir Windows Mağazası uygulaması için birim testi projesi oluşturmak için
 
-1. Gelen **dosya** menüsünde seçin **yeni proje**.
+1. **Dosya** menüsünden **Yeni proje**' yi seçin.
 
      Yeni proje iletişim kutusu görüntülenir.
 
-2. Şablonlar ' ın altında, birim testi oluşturmak istediğiniz programlama dilini seçin ve ardından ilişkili [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] birim testi kitaplığı ' nı seçin. Örneğin, **görsel C#**  ' i seçin, ardından **Windows Mağazası**' nı seçin ve ardından **birim testi kitaplığı (Windows Mağazası uygulamaları)** öğesini seçin.
+2. Şablonlar altında birim testi oluşturmak istediğiniz programlama dilini seçin ve ardından ilişkili [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] birim testi kitaplığını seçin. Örneğin, **Visual C#** ' yi seçin, ardından **Windows Mağazası**' nı seçin ve ardından **birim testi kitaplığı (Windows Mağazası uygulamaları)** öğesini seçin.
 
     > [!NOTE]
-    > Visual Studio, Visual C#, Visual Basic ve görsel C++için birim testi kitaplığı şablonları içerir.
+    > Visual Studio, Visual C#, Visual Basic ve Visual C++ birim testi kitaplığı şablonları içerir.
 
-3. Seçim **Ad** metin kutusuna [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)]birim testi projesi için kullanmak istediğiniz adı girin.
+3. Seçim **Ad** metin kutusuna, birim testi projesi için kullanmak istediğiniz adı girin [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] .
 
 4. Seçim Projeyi **konum** metin kutusuna girerek oluşturmak istediğiniz yolu değiştirin veya **Araştır** düğmesini seçin.
 
-5. (İsteğe bağlı) İçinde **çözüm** ad metin kutusunda, çözümünüz için kullanmak istediğiniz ismi girin.
+5. Seçim **Çözüm** adı metin kutusuna çözümünüz için kullanmak istediğiniz adı girin.
 
-6. Bırakın **çözüm için dizin oluştur** seçeneği seçili ve seçin **Tamam** düğmesi.
+6. **Çözüm için dizin oluştur** seçeneğini seçili bırakın ve **Tamam** düğmesini seçin.
 
      ![Özel birim testi kitaplığı](../test/media/unit-test-win8-1.png "Unit_Test_Win8_1")
 
-     Çözüm Gezgini yeni [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)]birim testi projem ile doldurulmuştur ve kod Düzenleyicisi, UnitTest1 başlıklı varsayılan birim testini görüntüler.
+     Çözüm Gezgini yeni [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] birim testi projem ile doldurulur ve kod Düzenleyicisi UnitTest1 başlıklı varsayılan birim testini görüntüler.
 
      ![Yeni özel birim testi projesi](../test/media/unit-test-win8-unittestexplorer-newprojectcreated.png "Unit_Test_Win8_UnitTestExplorer_NewProjectCreated")
 
-## <a name="CreateAndRunUnitTestWin8Tailored_Manifest"></a>Birim testi projesinin bildirimini düzenleme
+## <a name="edit-the-manifest-for-the-unit-test-project"></a><a name="CreateAndRunUnitTestWin8Tailored_Manifest"></a> Birim testi projesinin bildirimini düzenleme
  Uygulamayı çalıştırmak için gerekli özellikleri sağlamak üzere birim test projesi bildiriminin düzenlenmesi gerekebilir.
 
 #### <a name="to-edit-the-unit-test-projects-windows-store-application-manifest-file"></a>Birim testi projesinin Windows Mağazası uygulaması bildirim dosyasını düzenlemek için
 
-1. Çözüm Gezgini yeni [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] birim testi projesinde Package. appxmanifest dosyasına sağ tıklayın ve **Aç**' ı seçin.
+1. Çözüm Gezgini, yeni [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] birim testi projesinde Package. appxmanifest dosyasına sağ tıklayın ve **Aç**' ı seçin.
 
      Bildirim Tasarımcısı düzenlenmek üzere görüntülenir.
 
 2. Bildirim tasarımcısında **yetenekler** sekmesini seçin.
 
-3. Listenin altında **özellikleri**, birim sınamanız ve kod gereken yetenekleri seçin sahip sınamanız. Örneğin, **Internet** birim testi ve test ettiği kodun onay kutusu İnternet'e erişme özelliği olması gerekir.
+3. **Özellikleri**altındaki listede, birim testiniz için gereken özellikleri ve test eden kodu seçin. Örneğin, birim testinin ihtiyacı varsa ve test edilmiş kodun internet 'e erişme yeteneğine sahip olması gerekiyorsa **Internet** onay kutusunu seçin.
 
     > [!NOTE]
-    > Seçtiğiniz yetenekler yalnızca [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] birim testinin düzgün çalışması için gerekli olan özellikleri içermelidir. Bu özelliklerde, test edilen [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulamasının bir parçası olmayan ve genellikle test altındaki [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)]uygulaması için belirtilen yeteneklerin bir alt kümesi olması gereken özellikleri içermesi gerekmez.
+    > Seçtiğiniz yetenekler yalnızca [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] birim testinin doğru çalışması için gerekli olan özellikleri içermelidir. Bu özelliklerde, [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] test edilen uygulamanın bir parçası olmayan ve genellikle test altındaki uygulama için belirtilen yeteneklerin bir alt kümesi olması gereken özellikleri içermesi gerekmez [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] .
 
      Bildirim Tasarımcısı hakkında daha fazla bilgi için bkz. [bildirim tasarımcısını kullanarak Windows 8.1 uygulama paketi yapılandırma](https://msdn.microsoft.com/library/24c58b7f-9c6d-41c3-b385-c1e8497d5b2d).
 
      ![Birim testi bildirimi](../test/media/unit-test-win8.png "Unit_Test_Win8_")
 
-## <a name="CreateAndRunUnitTestWin8Tailored_Code"></a>Birim testini kodlayın
+## <a name="code-the-unit-test"></a><a name="CreateAndRunUnitTestWin8Tailored_Code"></a> Birim testini kodlayın
 
 #### <a name="to-code-the-unit-test-for-a-windows-store-app"></a>Windows Mağazası uygulaması için birim testini kodlayın
 
@@ -98,20 +98,20 @@ Visual Studio, birim testi yönetilen [!INCLUDE[win8_appname_long](../includes/w
 
      Daha fazla bilgi için MSDN Kitaplığı 'ndaki [onaylama sınıflarını kullanma](https://msdn.microsoft.com/library/ms182530.aspx) bölümüne bakın.
 
-## <a name="CreateAndRunUnitTestWin8Tailored_Run"></a>Birim testlerini çalıştırma
+## <a name="run-unit-tests"></a><a name="CreateAndRunUnitTestWin8Tailored_Run"></a> Birim testlerini çalıştırma
 
-#### <a name="to-build-the-solution-and-run-the-unit-test-using-test-explorer"></a>Çözümü derleyin ve Test Gezgini'ni kullanarak birim testini çalıştırmak için
+#### <a name="to-build-the-solution-and-run-the-unit-test-using-test-explorer"></a>Çözümü oluşturmak ve test Gezgini 'ni kullanarak birim testini çalıştırmak için
 
-1. Üzerinde **Test** menüsünde seçin **Windows**ve ardından **Test Gezgini**.
+1. **Test** menüsünde **Windows**' u ve ardından **Test Gezgini**' ni seçin.
 
      Test Gezgini, testiniz listelenmeden görüntülenir.
 
-2. Gelen **derleme** menüsünde seçin **Çözümü Derle**.
+2. **Build** menüsünde **Build Solution**öğesini seçin.
 
-     Birim testiniz artık listelenir.
+     Birim testiniz şimdi listelendi.
 
     > [!NOTE]
-    > Test Gezgini'nde birim testleri listesini güncelleme çözümünü oluşturmanız gerekir.
+    > Test Gezgini 'nde birim testlerinin listesini güncelleştirmek için çözümü derlemeniz gerekir.
 
     > [!WARNING]
     > Visual Studio bilinen sorun: test projesini oluşturmadan önce test Gezgini 'ni açmanız gerekir.
@@ -119,16 +119,16 @@ Visual Studio, birim testi yönetilen [!INCLUDE[win8_appname_long](../includes/w
 3. Test Gezgini ' nde, oluşturduğunuz birim testini seçin.
 
     > [!TIP]
-    > Test Gezgini kaynak koda bir bağlantı yanındaki sağlar **kaynak:** .
+    > Test Gezgini, **Kaynak:**' ın yanında kaynak koda bir bağlantı sağlar.
 
-4. Seçin **çalıştırması**.
+4. **Tümünü Çalıştır**' ı seçin.
 
-     ![Birim testi Gezgini &#45; çalışma birimi testi](../test/media/unit-test-win8-unittestexplorer-contextmenurun.png "Unit_Test_Win8_UnitTestExplorer_ContextMenuRun")
+     ![Birim testi Gezgini &#45; birim testi Çalıştır](../test/media/unit-test-win8-unittestexplorer-contextmenurun.png "Unit_Test_Win8_UnitTestExplorer_ContextMenuRun")
 
     > [!TIP]
-    > Explorer'da listelenen bir veya daha fazla birim testleri seçebilir ve ardından sağ tıklatın ve seçin **seçili Testleri Çalıştır**.
+    > Gezgin 'de listelenen bir veya daha fazla birim testi seçebilir ve sağ tıklayıp **Seçili Testleri Çalıştır**' ı seçebilirsiniz.
     >
-    >  Ayrıca, seçebileceğiniz **seçilen Testlerde Hata Ayıkla**, **açık Test**ve **özellikleri** seçeneği.
+    >  Ayrıca, **Seçili testlerin hatalarını ayıklamayı**, **testi açmayı**ve **Özellikler** seçeneğini kullanmayı seçebilirsiniz.
     >
     >  ![Birim test Gezgini &#45; UNI test bağlam menüsü](../test/media/unit-test-win8-unittestexplorer-contextmenu.png "Unit_Test_Win8_UnitTestExplorer_ContextMenu")
 

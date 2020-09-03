@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bf039695f342d58cd70a9859d73932e3a0100e01
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664099"
 ---
 # <a name="walkthrough-creating-a-realistic-3-d-billiard-ball"></a>İzlenecek yol: Gerçekçi bir 3B Bilardo Topu Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu izlenecek yol, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] gölgelendirici tasarımcısını ve görüntü düzenleyicisini kullanarak gerçekçi 3-b milbdo topu oluşturmayı gösterir. Milbdo topu 3-b görünümü, çeşitli gölgelendirici tekniklerini uygun doku kaynaklarıyla birleştirerek elde edilir.
+Bu izlenecek yol, içindeki gölgelendirici tasarımcısını ve görüntü düzenleyicisini kullanarak gerçekçi bir 3-b milbido topu oluşturmayı gösterir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Milbdo topu 3-b görünümü, çeşitli gölgelendirici tekniklerini uygun doku kaynaklarıyla birleştirerek elde edilir.
 
  Bu belge Şu etkinlikleri gösterir:
 
@@ -31,14 +31,14 @@ Bu izlenecek yol, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] gölgelendirici t
 
 - Ortamı yansıtarak alan hissi oluşturma.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Bu yönergeyi tamamlamak için aşağıdaki bileşenler ve beceriler gereklidir:
 
 - Haziran 2010 DirectX SDK 'sına dahil edilen DirectX doku aracı gibi dokuları bir küp haritasına dönüştürmek için bir araç.
 
-- @No__t_0 resim Düzenleyicisi ile benzerlik.
+- İçindeki görüntü düzenleyiciyle benzerlik [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
-- @No__t_0 gölgelendirici tasarımcısıyla benzerlik.
+- İçindeki gölgelendirici tasarımcısıyla benzerlik [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 ## <a name="creating-the-basic-appearance-with-shape-and-texture"></a>Şekil ve doku ile temel görünüm oluşturma
  BİLGİSAYAR grafiklerde, en temel görünüm öğeleri şekil ve renklerdir. Bir bilgisayar simülasyonu içinde, gerçek dünya nesnesinin şeklini temsil etmek için 3-b modeli kullanılması yaygındır. Renk ayrıntısı daha sonra doku eşlemesi kullanılarak modelin yüzeyine uygulanır.
@@ -51,7 +51,7 @@ Bu izlenecek yol, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] gölgelendirici t
 
 - Gölgelendirici Tasarımcısı araç çubuğunda **Sphere Ile Önizleme** ' yi seçin.
 
-  Sonraki adımda, modele doku uygulayan bir gölgelendirici programı oluşturacaksınız, ancak öncelikle kullanabileceğiniz bir doku oluşturmanız gerekir. Bu izlenecek yol, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bir parçası olan görüntü düzenleyicisini kullanarak dokuyu oluşturmayı gösterir, ancak dokuyu uygun bir biçimde kaydedebilen herhangi bir görüntü düzenleyicisini kullanabilirsiniz.
+  Sonraki adımda, modele doku uygulayan bir gölgelendirici programı oluşturacaksınız, ancak öncelikle kullanabileceğiniz bir doku oluşturmanız gerekir. Bu izlenecek yol, bir parçası olan görüntü düzenleyicisini kullanarak dokuyu oluşturmayı gösterir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , ancak dokuyu uygun bir biçimde kaydedebilen herhangi bir görüntü düzenleyicisini kullanabilirsiniz.
 
   **Özellikler** penceresinin ve **araç kutusunun** görüntülendiğinden emin olun.
 
@@ -117,7 +117,7 @@ Bu izlenecek yol, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] gölgelendirici t
 ## <a name="enhancing-the-basic-appearance-with-specular-highlights"></a>Yansımalı vurgularla temel görünümü geliştirme
  Lambert aydınlatma modeli, yalnızca doku gölgelendiricide bulunmayan şekil ve boyutun anlamlı olmasını sağlar. Ancak, milbdo topunun hala biraz görünümü vardır.
 
- Gerçek bir mildo topu genellikle ışığın bir kısmını yansıtan parlak bir sontır. Bu yansıtılan ışığın bazıları, bir yüzeyin yansıtma özelliklerinin benzetimini yaparak yansımalı vurgularda sonuçlanır. Son özelliklere bağlı olarak, vurgular yerelleştirilmiş veya geniş, yoğun veya hafif olabilir. Bu yansımalı yansımalar, bir ışık kaynağı, yüzey yönü ve kamera konumu arasındaki ilişki kullanılarak modellenir; Yani, yüzey yönü doğrudan açık kaynağı doğrudan bir öğesine yansıtsa vurgu en yoğun Kamera ve doğrudan yansıma daha az olduğunda daha az yoğun olur.
+ Gerçek bir mildo topu genellikle ışığın bir kısmını yansıtan parlak bir sontır. Bu yansıtılan ışığın bazıları, bir yüzeyin yansıtma özelliklerinin benzetimini yaparak yansımalı vurgularda sonuçlanır. Son özelliklere bağlı olarak, vurgular yerelleştirilmiş veya geniş, yoğun veya hafif olabilir. Bu yansımalı yansımalar, bir ışık kaynağı, yüzey yönü ve kamera konumu arasındaki ilişki kullanılarak modellenir; Yani, yüzey yönü doğrudan kameraya yansıtıldığınızda vurgu en yoğun olur ve yansıma daha az doğrudan olduğunda daha az yoğun olur.
 
  Phong aydınlatma modeli, önceki paragrafta açıklandığı gibi yansımalı vurguları dahil etmek için Lambert aydınlatma modeli üzerinde oluşturulur. Milbdo topu, daha ilgi çekici bir görünüm elde eden bir sanal bitiş sağlamak için, gölgelendirici için Phong aydınlatma modelini ekleyebilirsiniz.
 
@@ -138,7 +138,7 @@ Bu izlenecek yol, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] gölgelendirici t
 ## <a name="creating-a-sense-of-space-by-reflecting-the-environment"></a>Ortamı yansıtarak alan hissi oluşturma
  Lekelsel açıktonlar uygulandıktan sonra, milbdo topu oldukça ikna edici görünüyor. Doğru şekil, doğru boyama işi ve sağ bitiş. Ancak, milbdo topunun, ortamının bir parçası gibi daha fazla görünmesini sağlayacak bir teknik de daha vardır.
 
- Gerçek bir milyardo topu yakından incelerseniz parlak yüzeyinin yalnızca yansımalı vurgular sergilemediğini, ancak dünyanın her yerindeki dünyanın bir görüntüsünü daha da yansıttığını görebilirsiniz. Bu yansımanın benzetimini, bir doku olarak ortamın bir görüntüsünü kullanarak ve her pikselin son rengini belirleyebilmek için modelin kendi dokusuyla birleştirerek benzeleyebilirsiniz. İstediğiniz bitiş türüne bağlı olarak, yansıma dokusunun daha fazlasını veya daha azını, gölgelendirici geri kalanı ile birlikte birleştirebilirsiniz. Örneğin, bir yansıtma gibi yüksek bir yansıtıcı yüzeyi taklit eden bir gölgelendirici yalnızca yansıma dokusunu kullanabilir, ancak milde bir bilardo topu gibi daha hafif bir yansımaya benzetim yapan bir gölgelendirici, yansıtmanın yalnızca küçük bir bölümünü birleştirebilirler Gölgelendirici hesaplamasının geri kalanı ile birlikte dokun değeri.
+ Gerçek bir milyardo topu yakından incelerseniz parlak yüzeyinin yalnızca yansımalı vurgular sergilemediğini, ancak dünyanın her yerindeki dünyanın bir görüntüsünü daha da yansıttığını görebilirsiniz. Bu yansımanın benzetimini, bir doku olarak ortamın bir görüntüsünü kullanarak ve her pikselin son rengini belirleyebilmek için modelin kendi dokusuyla birleştirerek benzeleyebilirsiniz. İstediğiniz bitiş türüne bağlı olarak, yansıma dokusunun daha fazlasını veya daha azını, gölgelendirici geri kalanı ile birlikte birleştirebilirsiniz. Örneğin, bir yansıtma gibi yüksek oranda yansıtmalı bir yüzeyi taklit eden bir gölgelendirici yalnızca yansıma dokusunu kullanabilir, ancak bir milde bulunan bir bilardo topu gibi daha hafif bir yansımaya benzetim yapan bir gölgelendirici, yalnızca yansıma dokusunun değerinin küçük bir kısmını, gölgelendirici hesaplamasının geri kalanı ile birleştirebilirler.
 
  Tabii ki, yansıtılan görüntüyü modelin doku haritasını uyguladığınız şekilde modele uygulamanız yeterlidir. Bunu yaptıysanız, dünyanın yansıması, yansıma kendisine tutkallanır gibi mildo topu ile hareket edecektir. Bir yansıma herhangi bir yönden gelebileceğinden, herhangi bir açıda yansıma eşleme değeri sağlamak için bir yol ve yansıma haritasını dünyaya göre yönlendirmeye tutmanın bir yolu vardır. Bu gereksinimleri karşılamak için, küpün yüzlerini oluşturmak üzere düzenlenmiş altı doku sağlayan, *küp Haritası*adı verilen özel bir doku eşlemi türü kullanabilirsiniz. Bu küpün içinden bir doku değeri bulmak için herhangi bir yöne işaret edebilirsiniz. Küpün her tarafındaki dokular ortamın görüntülerini içeriyorsa, küpün yüzeyinde doğru konumu örnekleyerek herhangi bir yansımanın benzetimini yapabilirsiniz. Kübü dünyaya hizalı tutarak ortamın doğru bir yansımasını alırsınız. Küpün örneklendiği yeri tespit etmek için, kameranın yüzeyini yalnızca nesnenin yüzeyi dışına hesaplayıp 3-b doku koordinatları olarak kullanırsınız. Küp haritalarını bu şekilde kullanmak, *ortam eşleme*olarak bilinen yaygın bir tekniktir.
 

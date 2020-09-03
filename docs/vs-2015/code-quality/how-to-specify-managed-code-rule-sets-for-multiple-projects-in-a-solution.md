@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: e5333f6133dd3fd56077c14d6e56cd6fdada4404
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656417"
 ---
 # <a name="how-to-specify-managed-code-rule-sets-for-multiple-projects-in-a-solution"></a>Nasıl Yapılır: Bir Çözümde Birden Çok Proje İçin Yönetilen Kod Kural Kümesi Belirtme
@@ -28,7 +28,7 @@ Varsayılan olarak, bir çözümün tüm yönetilen projelerine, Microsoft 'un �
 
 ### <a name="to-specify-a-rule-set-for-multiple-projects-in-a-managed-code--solution"></a>Yönetilen kod çözümünde birden çok proje için kural kümesi belirtme
 
-1. @No__t_0. [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] veya [!INCLUDE[vsPro](../includes/vspro-md.md)] çözümü açın.
+1. İçinde [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] . [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]veya [!INCLUDE[vsPro](../includes/vspro-md.md)] çözümü açın.
 
 2. **Çözümle** menüsünde, **çözüm Için kod analizini Yapılandır**' ı tıklatın.
 

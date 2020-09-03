@@ -10,23 +10,23 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 004f079576b792fb76d596ee8ebac3f6f96f316e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656628"
 ---
-# <a name="how-to-add-a-new-item-to-a-workflow-project"></a>Nasıl yapılır: bir Iş akışı projesine yeni öğe ekleme
-Bir iş akışı projesi oluşturduktan sonra, iş akışı etkinliklerini, tasarımcıları ve diğer tanıdık [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] öğelerini projenize ekleyebilirsiniz.
+# <a name="how-to-add-a-new-item-to-a-workflow-project"></a>Nasıl Yapılır: Bir İş Akışı Projesine Yeni Öğe Ekleme
+Bir iş akışı projesi oluşturduktan sonra, iş akışı etkinliklerini, tasarımcıları ve diğer tanıdık [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] öğeleri projenize ekleyebilirsiniz.
 
- Aşağıdaki tabloda, bir iş akışı projesine ekleyebileceğiniz [!INCLUDE[wf](../includes/wf-md.md)] öğeleri listelenmektedir.
+ Aşağıdaki tabloda, [!INCLUDE[wf](../includes/wf-md.md)] bir iş akışı projesine ekleyebileceğiniz öğeler listelenmektedir.
 
-|Name|Açıklama|
+|Ad|Açıklama|
 |----------|-----------------|
-|Etkinlik|Diğer etkinliklerden oluşan etkinlik. Bu öğenin seçilmesi, yeni bir proje için **etkinlik kitaplığı** şablonunu seçerken elde ettiğiniz xaml dosyasını projeye ekler. Bu yordamda [!INCLUDE[crabout](../includes/crabout-md.md)] bkz. [nasıl yapılır: etkinlik kitaplığı oluşturma](../workflow-designer/how-to-create-an-activity-library.md).|
-|Etkinlik Tasarımcısı|Bir etkinliğin tasarım zamanı deneyimini özelleştirmek için bir tasarımcı. Bu öğe seçildiğinde, yeni bir proje için **etkinlik Tasarımcısı kitaplık** şablonunu seçerken elde ettiğiniz dosyalar projeye eklenir. Bu yordamda [!INCLUDE[crabout](../includes/crabout-md.md)] bkz. [nasıl yapılır: etkinlik Tasarımcısı kitaplığı oluşturma](../workflow-designer/how-to-create-an-activity-designer-library.md).|
-|Kod etkinliği|Yürütme mantığı kod olarak yazılmış bir etkinlik. @No__t_0 yöntemi geçersiz kılmasına sahip bir kaynak kodu dosyası sizin için zaten oluşturulmuştur.|
-|WCF Iş akışı hizmeti|İş akışı etkinlikleri kullanılarak oluşturulan bir [!INCLUDE[indigo2](../includes/indigo2-md.md)] hizmeti. Bu öğe seçildiğinde, yeni bir proje için **WCF Iş akışı hizmeti uygulama** şablonunu seçerken elde ettiğiniz dosyalar projeye eklenir. Bu yordamda [!INCLUDE[crabout](../includes/crabout-md.md)] bkz. [nasıl yapılır: WCF Iş akışı hizmeti uygulaması oluşturma](../workflow-designer/how-to-create-a-wcf-workflow-service-application.md).|
+|Etkinlik|Diğer etkinliklerden oluşan etkinlik. Bu öğenin seçilmesi, yeni bir proje için **etkinlik kitaplığı** şablonunu seçerken elde ettiğiniz xaml dosyasını projeye ekler. [!INCLUDE[crabout](../includes/crabout-md.md)] Bu yordamda bkz. [nasıl yapılır: etkinlik kitaplığı oluşturma](../workflow-designer/how-to-create-an-activity-library.md).|
+|Etkinlik Tasarımcısı|Bir etkinliğin tasarım zamanı deneyimini özelleştirmek için bir tasarımcı. Bu öğe seçildiğinde, yeni bir proje için **etkinlik Tasarımcısı kitaplık** şablonunu seçerken elde ettiğiniz dosyalar projeye eklenir. [!INCLUDE[crabout](../includes/crabout-md.md)] Bu yordamda bkz. [nasıl yapılır: etkinlik Tasarımcısı kitaplığı oluşturma](../workflow-designer/how-to-create-an-activity-designer-library.md).|
+|Kod etkinliği|Yürütme mantığı kod olarak yazılmış bir etkinlik. Metodu için geçersiz kılma içeren bir kaynak kodu dosyası <xref:System.Activities.CodeActivity.Execute%2A> zaten oluşturuldu.|
+|WCF Iş akışı hizmeti|[!INCLUDE[indigo2](../includes/indigo2-md.md)]İş akışı etkinlikleri kullanılarak oluşturulan bir hizmet. Bu öğe seçildiğinde, yeni bir proje için **WCF Iş akışı hizmeti uygulama** şablonunu seçerken elde ettiğiniz dosyalar projeye eklenir. [!INCLUDE[crabout](../includes/crabout-md.md)] Bu yordamda bkz. [nasıl yapılır: WCF Iş akışı hizmeti uygulaması oluşturma](../workflow-designer/how-to-create-a-wcf-workflow-service-application.md).|
 
 ### <a name="to-add-a-new-item-to-a-workflow-project"></a>Bir iş akışı projesine yeni bir öğe eklemek için
 

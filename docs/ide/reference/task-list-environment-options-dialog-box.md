@@ -23,45 +23,45 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e28b3b9c3fe4d6e89228dc18ba8b98aa5e0d2e76
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80233123"
 ---
-# <a name="options-dialog-box-environment--task-list"></a>Seçenekler iletişim kutusu: \> Çevre Görev Listesi
+# <a name="options-dialog-box-environment--task-list"></a>Seçenekler iletişim kutusu: ortam \> görev listesi
 
-Bu Seçenekler sayfası, **Görev Listesi** anımsatıcıları oluşturan yorum belirteçlerini eklemenize, silmenize ve değiştirmenize olanak tanır. Bu ayarları görüntülemek için **Araçlar** menüsünden **Seçenekler'i** seçin, **Ortam** klasörünü genişletin ve **Görev Listesi'ni**seçin.
+Bu seçenekler sayfası **görev listesi** anımsatıcılar üreten açıklama belirteçlerini eklemenize, silmenizi ve değiştirmenize olanak sağlar. Bu ayarları göstermek için, **Araçlar** menüsünden **Seçenekler** ' i seçin, **ortam** klasörünü genişletin ve **görev listesi**' yi seçin.
 
-## <a name="task-list-tokens"></a>Görev Listesi Belirteçleri
+## <a name="task-list-tokens"></a>Görev Listesi belirteçleri
 
-Metni **Belirteç listesinden**bir belirteçle başlayan kodunuza bir yorum eklediğinizde, **Görev Listesi,** dosya düzenleme için açıldığında yorumunuzu yeni giriş olarak görüntüler. Doğrudan kodunızdaki yorum satırına atlamak için **Görev Listesi** girişini tıklatın. Daha fazla bilgi için [görev listesini kullanma'ya](../../ide/using-the-task-list.md)bakın.
+Kodunuza, metni **belirteç listesindeki**bir belirteçle başlayan bir açıklama eklediğinizde **görev listesi** , dosya düzenlenmek üzere her açıldığında yorumlarınızı yeni giriş olarak görüntüler. Kodunuzda yorum satırına doğrudan geçmek için bir **görev listesi** girdisine tıklayın. Daha fazla bilgi için [görev listesi kullanma](../../ide/using-the-task-list.md)konusuna bakın.
 
-Belirteç Listesi\
-Belirteçlerin listesini görüntüler ve özel belirteçler eklemenize veya kaldırmanıza olanak tanır. Yorum belirteçleri C# ve C++'da büyük/küçük harf duyarlıdır, ancak Visual Basic'te değildir.
-
-> [!NOTE]
-> İstenilen belirteci tam olarak belirteç listesinde göründüğü gibi yazmazsanız, bir açıklama görevi **Görev Listesi'nde**görüntülenmez.
-
-Öncelik\
-Seçili belirteci (düşük, normal veya yüksek) kullanan görevlerin önceliğini ayarlar. Bu belirteçle başlayan görev **açıklamalarına, Görev Listesi'nde**otomatik olarak atanan öncelik atanır.
-
-İsim\
-Belirteç dizesini buraya girin ve ardından dizeyi belirteç listesine eklemek için **Ekle'yi** tıklatın.
-
-Ekle\
-Yeni bir **Ad**girdiğinizde etkin. **Ad** ve **Öncelik** alanlarında girilen değerleri kullanarak yeni bir belirteç dizesi eklemek için tıklatın.
-
-Silme\
-Seçilen belirteç listesini silmek için tıklatın. Varsayılan yorum belirteci silemezsiniz.
-
-Değiştir\
-**Ad** ve **Öncelik** alanlarına girilen değerleri kullanarak varolan bir belirteçte değişiklik yapmak için tıklatın.
+Belirteç listesi \
+Belirteçlerin bir listesini görüntüler ve özel belirteçler eklemenize veya kaldırmanıza olanak sağlar. Açıklama belirteçleri C# ve C++ için büyük/küçük harfe duyarlıdır, ancak Visual Basic değildir.
 
 > [!NOTE]
-> Varsayılan yorum belirteciyeniden adlandıramaz veya silemezsiniz, ancak öncelik düzeyini değiştirebilirsiniz.
+> İstenen belirteci, belirteç listesinde göründüğü şekilde tam olarak yazmazsanız, **görev listesi**bir yorum görevi görüntülenmez.
+
+Priority
+Seçili belirteci kullanan görevlerin önceliğini ayarlar (düşük, normal veya yüksek). Bu belirteçle başlayan görev açıklamaları **görev listesi**' de belirlenen önceliğe otomatik olarak atanır.
+
+Ada
+Belirteç dizesini buraya girin ve ardından **Ekle** ' ye tıklayarak dizeyi belirteç listesine ekleyin.
+
+Ekleyemiyorum
+Yeni bir **ad**girdiğinizde etkindir. **Ad** ve **Öncelik** alanlarına girilen değerleri kullanarak yeni bir belirteç dizesi eklemek için tıklayın.
+
+Silmeli
+Seçili belirteci belirteç listesinden silmek için tıklayın. Varsayılan açıklama belirtecini silemezsiniz.
+
+Değişebilir
+**Ad** ve **Öncelik** alanlarına girilen değerleri kullanarak var olan bir belirteçte değişiklik yapmak için tıklayın.
+
+> [!NOTE]
+> Varsayılan açıklama belirtecini yeniden adlandıramaz veya silemezsiniz, ancak öncelik düzeyini değiştirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Görev Listesini Kullanma](../../ide/using-the-task-list.md)
-- [Kodda Yer İşaretleri Ayarlama](../../ide/setting-bookmarks-in-code.md)
+- [Koddaki yer Imlerini ayarla](../../ide/setting-bookmarks-in-code.md)

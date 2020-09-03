@@ -1,5 +1,5 @@
 ---
-title: Idiadatasource::loaddatafrompdb | Microsoft Docs
+title: 'IDiaDataSource:: loadDataFromPdb | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 60b842e90c12d9a0bf07672380d24c8bacf71407
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198613"
 ---
 # <a name="idiadatasourceloaddatafrompdb"></a>IDiaDataSource::loadDataFromPdb
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Açılır ve hata ayıklama veri kaynağı olarak bir program veritabanı (.pdb) dosyası hazırlar.  
+Bir program veritabanı (. pdb) dosyasını açıp hata ayıklama veri kaynağı olarak hazırlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT loadDataFromPdb (  
@@ -35,26 +35,26 @@ HRESULT loadDataFromPdb (
   
 #### <a name="parameters"></a>Parametreler  
  pdbPath  
- [in] .Pdb dosyasının yolu.  
+ 'ndaki . Pdb dosyasının yolu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Aşağıdaki tabloda, bu yöntem olası dönüş değerleri gösterir.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. Aşağıdaki tabloda bu yöntem için olası dönüş değerleri gösterilmektedir.  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|E_PDB_NOT_FOUND|Dosya açılamadı veya dosya biçimi geçersiz olduğunu belirledi.|  
-|E_PDB_FORMAT|Bir dosya biçimi geçersiz erişme girişiminde bulunuldu.|  
+|E_PDB_NOT_FOUND|Dosya açılamadı veya dosyanın biçimi geçersiz olduğundan belirlendi.|  
+|E_PDB_FORMAT|Eski biçimdeki bir dosyaya erişme girişiminde bulunuldu.|  
 |E_INVALIDARG|Geçersiz parametre.|  
 |E_UNEXPECTED|Veri kaynağı zaten hazırlandı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem doğrudan .pdb dosyasından hata ayıklama verileri yükler.  
+ Bu yöntem, hata ayıklama verilerini doğrudan bir. pdb dosyasından yükler.  
   
- Belirli bir ölçüte göre .pdb dosyasını doğrulamak için kullanın [Idiadatasource::loadandvalidatedatafrompdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md) yöntemi.  
+ . Pdb dosyasını belirli ölçütlere karşı doğrulamak için [IDiaDataSource:: loadAndValidateDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md) metodunu kullanın.  
   
- (Bir geri dönüş mekanizması) veri yükleme işlemi için erişmek için kullandığı [Idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) yöntemi.  
+ Veri yükleme işlemine (bir geri çağırma mekanizması aracılığıyla) erişim kazanmak için [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metodunu kullanın.  
   
- Doğrudan bellekten bir .pdb dosyası yüklemek için kullanın [Idiadatasource::loaddatafromıstream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md) yöntemi.  
+ Bir. pdb dosyasını doğrudan bellekten yüklemek için [IDiaDataSource:: Loaddatafromistreaı](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md) metodunu kullanın.  
   
 ## <a name="example"></a>Örnek  
   
@@ -67,7 +67,7 @@ if (FAILED(hr))
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiadatasource](../../debugger/debug-interface-access/idiadatasource.md)   
- [Idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)   
- [Idiadatasource::loadandvalidatedatafrompdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)   
+ [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)   
+ [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)   
+ [IDiaDataSource:: loadAndValidateDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)   
  [IDiaDataSource::loadDataFromIStream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md)

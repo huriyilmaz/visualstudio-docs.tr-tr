@@ -10,19 +10,19 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: dc13bb3c27507070d829ce9a9600de983e273f43
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656676"
 ---
 # <a name="flowchart-activity-designers"></a>Flowchart Etkinlik Tasarımcıları
-[!INCLUDE[wfd1](../includes/wfd1-md.md)], iş akışlarınızı oluştururken kullanabileceğiniz, sistem tarafından sağlanmış bir dizi etkinliği içerir. Bu bölüm, bir iş akışı içindeki akış çizelgeleriyle yönetmek için kullanılan sistem tarafından sağlanmış etkinlikleri içerir. Aşağıdaki konular bu etkinlikleri anlatmaktadır ve bunların nasıl kullanılacağına ilişkin yönergeler sağlar.
+[!INCLUDE[wfd1](../includes/wfd1-md.md)] , iş akışlarınızı oluştururken kullanabileceğiniz bir dizi sistem tarafından sağlanmış etkinlik içerir. Bu bölüm, bir iş akışı içindeki akış çizelgeleriyle yönetmek için kullanılan sistem tarafından sağlanmış etkinlikleri içerir. Aşağıdaki konular bu etkinlikleri anlatmaktadır ve bunların nasıl kullanılacağına ilişkin yönergeler sağlar.
 
 ## <a name="in-this-section"></a>Bu Bölümde
  **Karmaşık akış denetimlerini tanımlayan ve yöneten iş akışları oluşturmak için kullanılan** [akış çizelgesi](../workflow-designer/flowchart-activity-designer.md) .  [Flowkarar](../workflow-designer/flowdecision-activity-designer.md) Belirtilen koşulun karşılanıp karşılanmadığını temel alarak, denetimin iki alternatifden birine akışı için bir dal sağlar.
 
- [FlowSwitch \<T >](../workflow-designer/flowswitch-t-activity-designer.md) İki alternatif dal gerektiğinde, eşleşme ölçütüne göre denetim akışı için dallandırma sağlar.
+ [FlowSwitch \<T> ](../workflow-designer/flowswitch-t-activity-designer.md) İki alternatif dal gerektiğinde, eşleşme ölçütüne göre denetim akışı için dallandırma sağlar.
 
 ## <a name="reference"></a>Başvuru
  <xref:System.Activities.Activity>
@@ -36,11 +36,11 @@ ms.locfileid: "72656676"
 ## <a name="related-sections"></a>İlgili Bölümler
  Diğer etkinlik tasarımcıları türleri için aşağıdaki konulara bakın.
 
- [Denetim Akışı](../workflow-designer/control-flow-activity-designers.md)
+ [Denetim akışı](../workflow-designer/control-flow-activity-designers.md)
 
  [Etkinlik Tasarımcılarını kullanma](../workflow-designer/using-the-activity-designers.md)
 
- [Messaging](../workflow-designer/messaging-activity-designers.md)
+ [Mesajlaşma](../workflow-designer/messaging-activity-designers.md)
 
  [Çalışma Zamanı](../workflow-designer/runtime-activity-designers.md)
 
@@ -50,4 +50,4 @@ ms.locfileid: "72656676"
 
  [Koleksiyon](../workflow-designer/collection-activity-designers.md)
 
- [Hata İşleme](../workflow-designer/error-handling-activity-designers.md)
+ [Hata Işleme](../workflow-designer/error-handling-activity-designers.md)

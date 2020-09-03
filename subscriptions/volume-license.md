@@ -1,29 +1,29 @@
 ---
-title: Toplu Lisans müşterileri için Yönetim Portalına Erişim | Microsoft Dokümanlar
+title: Toplu lisans müşterileri için yönetim portalına erişme | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 7aaa4727-00ef-41dc-937d-8d46973aaf56
 ms.date: 03/03/2020
 ms.topic: conceptual
-description: Toplu Lisans sözleşmelerindeki yöneticilerin Visual Studio abonelikleri Yönetim Portalı'na nasıl erişebileceğini öğrenin
+description: Toplu lisans sözleşmeleriyle ilgili yöneticilerin Visual Studio abonelikleri yönetim portalına nasıl erişebileceğinizi öğrenin
 ms.openlocfilehash: 2fd2ab46100cc8c7f968b35e6ae0103092e4e684
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80233137"
 ---
-# <a name="accessing-the-administration-portal-as-an-admin-on-a-volume-license-agreement"></a>Toplu Lisans sözleşmesinde Yönetici Olarak İdare Portalına Erişim
+# <a name="accessing-the-administration-portal-as-an-admin-on-a-volume-license-agreement"></a>Toplu lisans sözleşmesinde yönetici olarak yönetim portalına erişme
 
-Kuruluşunuzun sözleşmesinde birincil veya bildirimle ilgili kişi sizseniz, Toplu Lisans lama sözleşmenizi ayarladığınızda portala otomatik olarak erişim sağlanacaktır. Portalda oturum açmanızı isteyecek bir sistem tarafından tetiklenen hoş geldiniz e-postası alırsınız. E-posta, portalda oturum açacak hangi e-posta adresini kullanacağımı gösterir. 
+Kuruluşunuzun anlaşmasıyla ilgili birincil veya bildirimler varsa, toplu lisans sözleşmenizin kurulması sırasında portala otomatik olarak erişim sağlanır. Portalda oturum açmanızı isteyen sistem tarafından tetiklenen bir hoş geldiniz e-postası alacaksınız. E-posta, portalda oturum açmak için kullanılacak e-posta adresini gösterir. 
 
    > [!div class="mx-imgBorder"]
-   > ![Toplu Lisans yönetici bildirimi](_img/volume-license/super-admin-notice-2020.png)
+   > ![Toplu lisans yönetici bildirimi](_img/volume-license/super-admin-notice-2020.png)
 
-Oturum açtıktan sonra, otomatik olarak süper yönetici olarak ayarlanırsınız ve abonelikleri ve diğer yöneticileri yönetmeye başlayabilirsiniz. Süper yöneticiler ve yöneticiler arasındaki farklar hakkında bilgi [için, yönetici rolleri](admin-roles.md)hakkındaki makalemize bir göz atın.
+Oturum açtıktan sonra otomatik olarak süper yönetici olarak ayarlanır ve abonelikleri ve diğer yöneticileri yönetmeye başlayabilirsiniz. Süper Yöneticiler ve yöneticiler arasındaki farklar hakkında daha fazla bilgi için, [yönetici rolleri](admin-roles.md)hakkındaki makalemize göz atın.
 
-Bu, Kurumsal sözleşmeler, Kurumsal abonelikler, Select, Select Plus, Open, Open License, Govt. ve Akademik anlaşmalar dahil ancak bunlarla sınırlı olmamak üzere tüm Toplu Lisanslama sözleşmesi türleri için geçerlidir. 
+Bu, aşağıdakiler dahil ancak bunlarla sınırlı olmamak üzere tüm toplu lisanslama sözleşmesi türleri için geçerlidir: Kurumsal Anlaşmalar, kurumsal abonelikler, seçme, artı, açık, Açık Lisans, govt. ve akademik anlaşmalar. 
 
 ## <a name="resources"></a>Kaynaklar
 - [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
@@ -35,6 +35,6 @@ Bu, Kurumsal sözleşmeler, Kurumsal abonelikler, Select, Select Plus, Open, Ope
 - [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- Abonelikleri nasıl [ataysüreceğinizi](assign-license.md) öğrenin
-- Tüm [abonelik avantajları](https://visualstudio.microsoft.com/vs/benefits/) hakkında daha fazla bilgi edinin
+- [Aboneliklerin nasıl atanacağını](assign-license.md) öğrenin
+- [Abonelik avantajlarının](https://visualstudio.microsoft.com/vs/benefits/) tam aralığı hakkında daha fazla bilgi edinin
 - [Anlaşma tercihlerini belirleme](admin-prefs.md) 

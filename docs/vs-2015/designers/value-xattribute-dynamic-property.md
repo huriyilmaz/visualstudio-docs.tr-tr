@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e9a31b4c4182ed67a3e67d3c25c2c5ccf50e083f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664058"
 ---
 # <a name="value-xattribute-dynamic-property"></a>Değer (XAttribute dinamik özelliği)
@@ -25,23 +25,23 @@ ms.locfileid: "72664058"
 
 XML özniteliğinin değerini alır veya ayarlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 attrib.Value
 ```
 
 ## <a name="property-valuereturn-value"></a>Özellik Değeri/Dönüş Değeri
- Bu özniteliğin değerini içeren bir <xref:System.String>.
+ <xref:System.String>Bu özniteliğin değerini içeren bir.
 
-## <a name="exceptions"></a>Özel Durumlar
+## <a name="exceptions"></a>Özel durumlar
 
 |Özel durum türü|Koşul|
 |--------------------|---------------|
-|<xref:System.ArgumentNullException>|Ayarlanırken, `value` `null`.|
+|<xref:System.ArgumentNullException>|Ayarlanırken,, `value` olur `null` .|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu özellik, <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> sınıfının <xref:System.Xml.Linq.XAttribute.Value%2A> özelliğine eşdeğerdir, ancak bu dinamik özellik değişiklik bildirimlerini de destekler.
+ Bu özellik, <xref:System.Xml.Linq.XAttribute.Value%2A> sınıfının özelliğine eşdeğerdir <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> , ancak bu dinamik özellik değişiklik bildirimlerini de destekler.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName> [XAttribute sınıfı dinamik özellikler](../designers/xattribute-class-dynamic-properties.md) [özniteliği](../designers/attribute-xelement-dynamic-property.md)
+ <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName>[XAttribute sınıfı dinamik özellikler](../designers/xattribute-class-dynamic-properties.md) [özniteliği](../designers/attribute-xelement-dynamic-property.md)

@@ -16,16 +16,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: abd8f8e9ee35c234a79af74199b11d5491e6fbee
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851628"
 ---
 # <a name="quick-launch-environment-options-dialog-box"></a>Hızlı Başlatma, Ortam, Seçenekler İletişim Kutusu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Seçenekler, şablonlar, menüler gibi IDE varlıkları için eylemleri hızlıca aramak ve yürütmek üzere **Hızlı Başlat** ' ı kullanabilirsiniz. Kodu ve sembolleri aramak için **Hızlı başlatma** kullanamazsınız. **Hızlı Başlat** arama kutusu, menü çubuğunun sağ üst köşesinde bulunur ve CTRL + Q tuşları seçilerek erişilebilir. Arama dizenizi kutuya girmeniz yeterlidir. İçeren dizeleri aramak için @, Kullan ”@@”.
+Seçenekler, şablonlar, menüler gibi IDE varlıkları için eylemleri hızlıca aramak ve yürütmek üzere **Hızlı Başlat** ' ı kullanabilirsiniz. Kodu ve sembolleri aramak için **Hızlı başlatma** kullanamazsınız. **Hızlı Başlat** arama kutusu, menü çubuğunun sağ üst köşesinde bulunur ve CTRL + Q tuşları seçilerek erişilebilir. Arama dizenizi kutuya girmeniz yeterlidir. @ İçeren dizeleri aramak için ' @ @ ' kullanın.
 
  **Hızlı başlatma** , Visual Studio 'yu yüklediğinizde varsayılan olarak etkindir. Menü çubuğunda **Araçlar**, **Seçenekler**' i seçerek **hızlı başlatmayı** gösterebilir veya gizleyebilirsiniz. **Ortamlar** düğümünü genişletin ve **Hızlı Başlat**' ı seçin. **Hızlı başlatmayı etkinleştir** onay kutusunu seçin veya temizleyin. Ayrıca, bu sayfada arama kategorilerini etkinleştirebilir veya devre dışı bırakabilirsiniz.
 
@@ -45,7 +45,7 @@ Seçenekler, şablonlar, menüler gibi IDE varlıkları için eylemleri hızlıc
 > **Seçenekler** Iletişim kutusundaki **genel**, **klavye** sayfasında kısayol tuşlarını değiştirebilirsiniz.
 
 ## <a name="show-previous-results"></a>Önceki sonuçları göster
- Varsayılan olarak, girdiğiniz arama terimi arama oturumları arasında kalıcı olmaz. Arama dizesi bir terim arıyorsanız, imleci **Hızlı başlatma** alanının dışına taşıyın ve ardından geri dönün. Arama sonuçlarını sürdürmek için **Seçenekler** iletişim kutusuna gidin, **Hızlı Başlat**' ı seçin ve ardından **Hızlı başlatma etkinleştirildiğinde önceki aramadan arama sonuçlarını göster** ' i seçin. seçin. Bir sonraki sefer bir arama yaptığınızda hızlı başlatma alanını bırakın ve geri dönüp, hızlı başlatma en son kullanılan arama terimini korur ve ayrıca arama sonuçlarını gösterir.
+ Varsayılan olarak, girdiğiniz arama terimi arama oturumları arasında kalıcı olmaz. Arama dizesi bir terim arıyorsanız, imleci **Hızlı başlatma** alanının dışına taşıyın ve ardından geri dönün. Arama sonuçlarını sürdürmek için **Seçenekler** iletişim kutusuna gidin, **Hızlı Başlat**' ı seçin ve ardından **Hızlı başlatma etkinleştirildiğinde önceki aramadan arama sonuçlarını göster** ' i seçin. onay kutusunu işaretleyin. Bir sonraki sefer bir arama yaptığınızda hızlı başlatma alanını bırakın ve geri dönüp, hızlı başlatma en son kullanılan arama terimini korur ve ayrıca arama sonuçlarını gösterir.
 
  **Hızlı başlatma**kullanmaya yönelik en son ipuçları ve püf noktaları için bkz. [Visual Studio blogu](https://blogs.msdn.com/b/visualstudio/).
 

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5c382813d1f6fb2372ccc78ade6d14404fb1751c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664216"
 ---
 # <a name="model-editor-examples"></a>Model Düzenleyici Örnekleri
@@ -25,7 +25,7 @@ Belgenin bu bölümündeki makaleler, model düzenleyicisini nasıl kullanabilec
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Nasıl Yapılır: Temel 3B Model Oluşturma](../designers/how-to-create-a-basic-3-d-model.md)|Temel 3-b modelinin nasıl oluşturulacağını açıklar.|
-|[Nasıl Yapılır: 3B Modelin Pivot Noktasını Değiştirme](../designers/how-to-modify-the-pivot-point-of-a-3-d-model.md)|3B modelin pivot noktasını ve ölçeğini değiştirmeyi açıklar.|
-|[Nasıl Yapılır: 3B Arazi Modeli Oluşturma](../designers/how-to-model-3-d-terrain.md)|Temel yatay sahnenin nasıl oluşturulacağını açıklar.|
-|[Nasıl Yapılır. 3B Modele Gölgelendirici Uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md)|3B modele nasıl gölgelendirici uygulanacağını açıklar.|
+|[Nasıl yapılır: temel 3B model oluşturma](../designers/how-to-create-a-basic-3-d-model.md)|Temel 3-b modelinin nasıl oluşturulacağını açıklar.|
+|[Nasıl yapılır: 3B modelin pivot noktasını değiştirme](../designers/how-to-modify-the-pivot-point-of-a-3-d-model.md)|3B modelin pivot noktasını ve ölçeğini değiştirmeyi açıklar.|
+|[Nasıl Yapılır: Model 3B Arazi](../designers/how-to-model-3-d-terrain.md)|Temel yatay sahnenin nasıl oluşturulacağını açıklar.|
+|[Nasıl yapılır: 3B modele gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md)|3B modele nasıl gölgelendirici uygulanacağını açıklar.|

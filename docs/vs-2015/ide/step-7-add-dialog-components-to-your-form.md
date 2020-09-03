@@ -1,5 +1,5 @@
 ---
-title: '7\. Adım: formunuza Iletişim kutusu bileşenleri ekleme | Microsoft Docs'
+title: '7. Adım: formunuza Iletişim kutusu bileşenleri ekleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,20 +10,20 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 40b90096f768a7dd836507c83dff935261a99a25
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851135"
 ---
-# <a name="step-7-add-dialog-components-to-your-form"></a>7\. Adım: Formunuza İletişim Kutusu Bileşenleri Ekleme
+# <a name="step-7-add-dialog-components-to-your-form"></a>7. Adım: Formunuza İletişim Kutusu Bileşenleri Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Programınızın resim dosyalarını açmasını ve bir arka plan rengi seçmesini etkinleştirmek için, bu adımda formunuza bir **OpenFileDialog** bileşeni ve bir **ColorDialog** bileşeni eklersiniz.
 
  Bir bileşen, bazı yollarla denetim gibidir. Formunuza bir bileşen eklemek için araç kutusunu kullanın ve **Özellikler penceresini kullanarak özelliklerini ayarlarsınız** . Ancak, bir denetimin aksine formunuza bir bileşen eklemek, kullanıcının formda görebileceği görünür bir öğe eklemez. Bunun yerine, kodla tetikleyebileceğiniz belirli davranışları sağlar. Bu, bir **Dosya Aç** iletişim kutusu açan bir bileşendir.
 
- ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 3](https://msdn.microsoft.com/vbasic/gg315354.aspx) veya [öğretici 1: video 3 ' te C# resim görüntüleyici oluşturma](https://msdn.microsoft.com/vcsharp/gg278411.aspx). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
+ ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 3](https://msdn.microsoft.com/vbasic/gg315354.aspx) veya [öğretici 1: C# içinde resim görüntüleyici oluşturma-video 3](https://msdn.microsoft.com/vcsharp/gg278411.aspx). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
 
 ### <a name="to-add-dialog-components-to-your-form"></a>Formunuza iletişim kutusu bileşenleri eklemek için
 
