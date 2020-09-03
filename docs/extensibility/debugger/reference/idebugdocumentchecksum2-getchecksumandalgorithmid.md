@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentChecksum2::GetChecksumAndAlgorithmId | Microsoft Dokümanlar
+title: 'IDebugDocumentChecksum2:: GetChecksumAndAlgorithmId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +15,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c26d5b9c2c45fd1ce932fc1108e4f77f2508cb31
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80731935"
 ---
 # <a name="idebugdocumentchecksum2getchecksumandalgorithmid"></a>IDebugDocumentChecksum2::GetChecksumAndAlgorithmId
-Kullanılacak maksimum bayt sayısı verilen belge denetimini ve algoritma tanımlayıcısını alır.
+Belge sağlama toplamını ve algoritma tanımlayıcısını, en fazla kullanılacak bayt sayısını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetChecksumAndAlgorithmId(
@@ -46,22 +46,22 @@ public int GetChecksumAndAlgorithmId(
 
 ## <a name="parameters"></a>Parametreler
 `pRetVal`\
-[çıkış] Checksum algoritması için benzersiz tanımlayıcı.
+dışı Sağlama algoritması için benzersiz tanımlayıcı.
 
 `cMaxBytes`\
-[içinde] Çekler için kullanılacak maksimum bayt sayısı.
+'ndaki Sağlama toplamı için kullanılacak en fazla bayt sayısı.
 
 `pChecksum`\
-[çıkış] Çeklerin değeri.
+dışı Sağlama toplamı değeri.
 
 `pcNumBytes`\
-[çıkış] Checksum için kullanılan bayt gerçek sayısı.
+dışı Sağlama toplamı için kullanılan gerçek bayt sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, bir belge için checksum ve algoritma almak için bu yöntemi kullanır.
+Aşağıdaki örnek, bir belge için sağlama toplamı ve algoritmayı almak üzere bu yöntemi kullanır.
 
 ```cpp
 HRESULT CDebugCodeContext::GetDocumentChecksumAndAlgorithmId(GUID *pguidAlgorithm, BYTE **ppChecksum, ULONG *pcNumBytes)

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4600f27f62d6e840041a65b4128df128e4d36873
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659527"
 ---
 # <a name="list-modules-command"></a>Modülleri Listele Komutu
@@ -27,7 +27,7 @@ ms.locfileid: "72659527"
 
 Geçerli işlem için modülleri listeler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Debug.ListModules [/Address:yes|no] [/Name:yes|no] [/Order:yes|no]
@@ -36,23 +36,23 @@ Debug.ListModules [/Address:yes|no] [/Name:yes|no] [/Order:yes|no]
 ```
 
 #### <a name="parameters"></a>Parametreler
- /Address: Isteğe bağlı `yes|no`. Modüllerin bellek adreslerinin gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `yes`.
+ /Address: `yes|no` isteğe bağlı. Modüllerin bellek adreslerinin gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `yes` .
 
- /Name: Isteğe bağlı `yes|no`. Modüllerin adlarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `yes`.
+ /Name: `yes|no` isteğe bağlı. Modüllerin adlarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `yes` .
 
- /Order: Isteğe bağlı `yes|no`. Modüllerin sırasının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no`.
+ /Order: `yes|no` isteğe bağlı. Modüllerin sırasının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no` .
 
- /Path: `yes|no` Isteğe bağlı. Modüllerin yollarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `yes`.
+ /Path: `yes|no` isteğe bağlı. Modüllerin yollarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `yes` .
 
- /Process: Isteğe bağlı `yes|no`. Modül işlemlerinin gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no`.
+ /Process: `yes|no` isteğe bağlı. Modül işlemlerinin gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no` .
 
- /SymbolFile: Isteğe bağlı `yes|no`. Modüllerin sembol dosyalarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no`.
+ /SymbolFile: `yes|no` isteğe bağlı. Modüllerin sembol dosyalarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no` .
 
- /SymbolStatus: Isteğe bağlı `yes|no`. Modüllerin sembol durumlarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `yes`.
+ /SymbolStatus: `yes|no` isteğe bağlı. Modüllerin sembol durumlarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `yes` .
 
- /Timestamp: Isteğe bağlı `yes|no`. Modüllerin zaman damgalarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no`.
+ /Timestamp: `yes|no` isteğe bağlı. Modüllerin zaman damgalarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no` .
 
- /Version: Isteğe bağlı `yes|no`. Modüllerin sürümlerinin gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no`.
+ /Version: `yes|no` isteğe bağlı. Modüllerin sürümlerinin gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no` .
 
 ## <a name="remarks"></a>Açıklamalar
 

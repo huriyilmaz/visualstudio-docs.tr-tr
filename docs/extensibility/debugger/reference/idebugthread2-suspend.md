@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::Askıya | Microsoft Dokümanlar
+title: 'IDebugThread2:: Suspend | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 74a7dd5dc69effbd46986eff963de3e740d9aa8e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718644"
 ---
 # <a name="idebugthread2suspend"></a>IDebugThread2::Suspend
-İş parçacığı askıya alınır.
+Bir iş parçacığını askıya alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT Suspend ( 
@@ -41,15 +41,15 @@ HRESULT Suspend ( 
 
 ## <a name="parameters"></a>Parametreler
 `pdwSuspendCount`\
-[çıkış] Askıya alma işleminden sonra askıya alma sayısını döndürür.
+dışı Askıya alma işleminden sonra askıda kalma sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yönteme yapılan her çağrı, askıya alma sayısını 0'ın üzerine yükselir. Bu askıya alma **sayısı, İş Parçacıkları** hata ayıklama penceresinde görüntülenir.
+ Bu yönteme yapılan her çağrı 0 ' dan sonraki askıya alma sayısını artırır. Bu askıya alma sayısı, **Iş parçacıkları** hata ayıklama penceresinde görüntülenir.
 
- Bu yönteme yapılan her çağrı [için, Özgeçmiş](../../../extensibility/debugger/reference/idebugthread2-resume.md) yöntemine daha sonra bir çağrı olması gerekir.
+ Bu yönteme yapılan her çağrı için, daha sonra [sürdürülmesi](../../../extensibility/debugger/reference/idebugthread2-resume.md) yöntemine bir çağrı olmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

@@ -12,22 +12,22 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 689ae78a5409a37fa6251044172f9108f296235b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68206112"
 ---
 # <a name="messages-menu-commands"></a>İletiler Menü Komutları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**İletileri** menü, ileti görüntülemeleri denetlemek için komutları sağlar.  
+**İletiler** menüsü, ileti görünümlerini denetlemek için komutlar sağlar.  
   
  **Günlüğü Başlat/Durdur**  
- Başlatır veya ileti görünümü durdurur.  
+ İleti görünümünü başlatır veya sonlandırır.  
   
- **Günlük Seçenekleri**  
- Açılır **MessageOptions** iletişim kutusu, ileti arama ölçütleri belirtebileceğiniz.  
+ **Günlük Kaydı Seçenekleri**  
+ İleti arama ölçütlerini belirtebileceğiniz **MessageOptions** iletişim kutusunu açar.  
   
  **Günlüğü Temizle**  
- Etkin iletiler görünümünü içeriğini temizler.
+ Etkin Iletiler görünümünün içeriğini temizler.

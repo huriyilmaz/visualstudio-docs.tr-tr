@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3b3dfc40b8489e774572b5ac157ebdaec9c71ad5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659224"
 ---
 # <a name="working-with-domain-specific-language-solutions"></a>Etki Alanına Özgü Dil Çözümleriyle Çalışma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümü kullanılarak, etki alanına özgü dil (DSL) oluşturulur. Bu bölüm, çözümü ayarlama ve özelleştirme hakkında bilgi sağlar.
+Bir çözüm kullanılarak, etki alanına özgü dil (DSL) oluşturulur [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Bu bölüm, çözümü ayarlama ve özelleştirme hakkında bilgi sağlar.
 
 ## <a name="in-this-section"></a>Bu Bölümdekiler
  [Etki alanına özgü diller hakkında](../modeling/about-domain-specific-languages.md) DSLs geliştirmeyi ve bunların nasıl uygulanacağını açıklar.

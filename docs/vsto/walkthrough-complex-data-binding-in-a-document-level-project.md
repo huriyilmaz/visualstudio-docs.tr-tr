@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Belge düzeyi projede karmaşık veri bağlama'
+title: 'İzlenecek yol: belge düzeyi projede karmaşık veri bağlama'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,214 +16,214 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 026dc77573bbedce7882f9b3cceab049ef1066e4
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67692351"
 ---
-# <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>İzlenecek yol: Belge düzeyi projede karmaşık veri bağlama
-  Bu izlenecek yol, bir belge düzeyi projede karmaşık veri bağlama ilişkin temel bilgileri gösterir. Alanları Northwind SQL Server veritabanındaki birden çok hücre Microsoft Office Excel çalışma sayfasındaki bağlayabilirsiniz.
+# <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>İzlenecek yol: belge düzeyi projede karmaşık veri bağlama
+  Bu izlenecek yol, belge düzeyindeki bir projede karmaşık veri bağlamanın temellerini gösterir. Microsoft Office Excel çalışma sayfasındaki birden çok hücreyi Northwind SQL Server veritabanındaki alanlara bağlayabilirsiniz.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Veri kaynağı, çalışma kitabı projenize ekleme.
+- Çalışma kitabı projenize veri kaynağı ekleme.
 
-- Çalışma sayfasına verilere bağlı denetimler ekleme.
+- Çalışma sayfasına veriye dayalı denetimler ekleme.
 
 - Veri değişiklikleri veritabanına geri kaydediliyor.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
 - [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] veya [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].
 
-- SQL Server Northwind örnek veritabanı ile bir sunucu erişim.
+- Northwind SQL Server örnek veritabanıyla bir sunucuya erişim.
 
-- SQL Server veritabanına yazma ve okuma izni.
+- SQL Server veritabanına okuma ve yazma izinleri.
 
 ## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
- İlk adım, bir Excel çalışma kitabı projesi oluşturmaktır.
+ İlk adım bir Excel çalışma kitabı projesi oluşturmaktır.
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Adlı bir Excel çalışma kitabı projesi oluşturun **karmaşık veri bağlaması**. Sihirbazda **yeni belge oluşturma**.
+1. **Karmaşık veri bağlamamı**adlı bir Excel çalışma kitabı projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin.
 
-     Daha fazla bilgi için [nasıl yapılır: Visual Studio'da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+     Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve ekler **karmaşık veri bağlaması** için proje **Çözüm Gezgini**.
+     Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **karmaşık veri bağlama** projesini **Çözüm Gezgini**ekler.
 
-## <a name="create-the-data-source"></a>Veri kaynağı oluşturma
- Kullanım **veri kaynakları** penceresinin bir türü belirtilmiş veri kümesi projenize ekleyin.
+## <a name="create-the-data-source"></a>Veri kaynağını oluşturma
+ Projenize türü belirtilmiş bir veri kümesi eklemek için **veri kaynakları** penceresini kullanın.
 
 ### <a name="to-create-the-data-source"></a>Veri kaynağı oluşturmak için
 
-1. Varsa **veri kaynakları** penceresi görünür değilse, bunu, menü çubuğundan seçme görüntüleyebilir **görünümü** > **diğer Windows**  >   **Veri kaynakları**.
+1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda, **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçerek bunu görüntüleyin.
 
-2. Seçin **yeni veri kaynağı Ekle** başlatmak için **veri kaynağı Yapılandırma Sihirbazı**.
+2. **Veri kaynağı Yapılandırma Sihirbazı 'nı**başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
-3. Seçin **veritabanı** ve ardından **sonraki**.
+3. **Veritabanı** ' nı seçin ve ardından **İleri**' ye tıklayın.
 
-4. Northwind örnek SQL Server veritabanıyla kurulan veri bağlantısı seçin veya yeni bir bağlantı kullanarak eklemek **yeni bağlantı** düğmesi.
+4. Northwind örnek SQL Server veritabanına yönelik bir veri bağlantısı seçin veya **Yeni bağlantı** düğmesini kullanarak yeni bir bağlantı ekleyin.
 
-5. Bağlantı seçili veya oluşturulduktan sonra tıklayın **sonraki**.
+5. Bir bağlantı seçildikten veya oluşturulduktan sonra **İleri**' ye tıklayın.
 
-6. Seçili olduğunda görüntüleyeceği bağlantı kaydetme seçeneğini ve ardından temizlemek **sonraki**.
+6. Seçildiğinde bağlantıyı kaydetme seçeneğini temizleyin ve ardından **İleri**' ye tıklayın.
 
-7. Genişletin **tabloları** düğümünde **veritabanı nesnelerinin** penceresi.
+7. **Veritabanı nesneleri** penceresinde **Tablolar** düğümünü genişletin.
 
-8. Yanındaki onay kutusunu işaretleyin **çalışanlar** tablo.
+8. **Çalışanlar** tablosunun yanındaki onay kutusunu işaretleyin.
 
 9. **Son**'a tıklayın.
 
-   Sihirbaz ekler **çalışanlar** tablo **veri kaynakları** penceresi. Projenize görünür olan bir türü belirtilmiş veri kümesi de ekler **Çözüm Gezgini**.
+   Sihirbaz, **çalışanlar** tablosunu **veri kaynakları** penceresine ekler. Ayrıca, projenize **Çözüm Gezgini**görünür bir veri kümesi de ekler.
 
 ## <a name="add-controls-to-the-worksheet"></a>Çalışma sayfasına denetimler ekleme
- Bir çalışma sayfası görüntüler **çalışanlar** çalışma kitabını açtığınızda tablo. Kullanıcılar, verilerde değişiklik yapabilir ve ardından bir düğmeye tıklayarak bu değişiklikleri veritabanına geri kaydedin mümkün olacaktır.
+ Çalışma kitabı açıldığında, çalışma sayfasında **çalışanlar** tablosu görüntülenir. Kullanıcılar verilerde değişiklik yapabilirler ve ardından bir düğmeye tıklayarak bu değişiklikleri veritabanına geri kaydedebilecektir.
 
- Çalışma tablosuna otomatik olarak bağlamak için ekleyebileceğiniz bir <xref:Microsoft.Office.Tools.Excel.ListObject> çalışma sayfasından denetimine **veri kaynakları** penceresi. Kullanıcı değişiklikleri kaydetmek için seçeneği vermek için ekleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu**.
+ Çalışma sayfasını tabloya otomatik olarak bağlamak için <xref:Microsoft.Office.Tools.Excel.ListObject> **veri kaynakları** penceresinden çalışma sayfasına bir denetim ekleyebilirsiniz. Kullanıcıya değişiklikleri kaydetme seçeneğini vermek için <xref:System.Windows.Forms.Button> **araç kutusundan**bir denetim ekleyin.
 
 #### <a name="to-add-a-list-object"></a>Bir liste nesnesi eklemek için
 
-1. Doğrulayın **My karmaşık veri Binding.xlsx** Visual Studio tasarımcıda açık çalışma kitabı ile **Sayfa1** görüntülenir.
+1. **Karmaşık veri Binding.xlsx** çalışma kitabının, **Sheet1** görüntülenirken Visual Studio tasarımcısında açık olduğunu doğrulayın.
 
-2. Açık **veri kaynakları** penceresi ve select **çalışanlar** düğümü.
+2. **Veri kaynakları** penceresini açın ve **çalışanlar** düğümünü seçin.
 
-3. Görüntülenen açılan oka tıklayın.
+3. Görüntülenen aşağı açılan oka tıklayın.
 
-4. Seçin **ListObject** aşağı açılan listesinde.
+4. Açılan listede **ListObject** ' i seçin.
 
-5. Sürükleme **çalışanlar** hücre tabloya **A6**.
+5. **Çalışanlar** tablosunu **a6**hücresine sürükleyin.
 
-     A <xref:Microsoft.Office.Tools.Excel.ListObject> adlı Denetim `EmployeesListObject` hücresinde oluşturulan **A6**. Aynı anda bir <xref:System.Windows.Forms.BindingSource> adlı `EmployeesBindingSource`, bir tablo bağdaştırıcısı ve <xref:System.Data.DataSet> örnek projeye eklenir. Denetimin bağlı <xref:System.Windows.Forms.BindingSource>, sırayla bağlı <xref:System.Data.DataSet> örneği.
+     <xref:Microsoft.Office.Tools.Excel.ListObject>A6 hücresinde adlı bir denetim `EmployeesListObject` oluşturulur. **A6** Aynı zamanda, <xref:System.Windows.Forms.BindingSource> adlandırılmış `EmployeesBindingSource` , bir tablo bağdaştırıcısı ve <xref:System.Data.DataSet> projeye bir örnek eklenir. Denetim öğesine bağlanır <xref:System.Windows.Forms.BindingSource> , bu da <xref:System.Data.DataSet> örneğe bağlanır.
 
-### <a name="to-add-a-button"></a>Bir düğme eklemek için
+### <a name="to-add-a-button"></a>Düğme eklemek için
 
-1. Gelen **ortak denetimleri** sekmesinde **araç kutusu**, ekleme bir <xref:System.Windows.Forms.Button> hücre denetimi **A4** çalışma sayfası.
+1. **Araç kutusunun** **ortak denetimler** sekmesinden, <xref:System.Windows.Forms.Button> çalışma sayfasının **a4** hücresine bir denetim ekleyin.
 
-   Sonraki adım çalışma sayfası açıldığında düğmeye metin eklemektir.
+   Bir sonraki adım, çalışma sayfası açıldığında düğmeye metin eklemektir.
 
-## <a name="initialize-the-control"></a>Denetimi başlatmak
- Düğmeye metin eklemek <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> olay işleyicisi.
+## <a name="initialize-the-control"></a>Denetimi başlatma
+ <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup>Olay işleyicisindeki düğmeye metin ekleyin.
 
 ### <a name="to-initialize-the-control"></a>Denetimi başlatmak için
 
-1. İçinde **Çözüm Gezgini**, sağ **Sheet1.vb** veya **Sheet1.cs**ve ardından **Kodu Görüntüle** kısayol menüsünde.
+1. **Çözüm Gezgini**, **Sheet1. vb** veya **Sheet1.cs**öğesine sağ tıklayın ve ardından kısayol menüsünde **kodu görüntüle** ' ye tıklayın.
 
-2. Aşağıdaki kodu ekleyin `Sheet1_Startup` b metnini ayarlamak için yöntemi`utton`.
+2. `Sheet1_Startup`B için metin ayarlamak üzere yöntemine aşağıdaki kodu ekleyin `utton` .
 
     [!code-csharp[Trin_VstcoreDataExcel#8](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#8)]
     [!code-vb[Trin_VstcoreDataExcel#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb#8)]
 
-3. Yalnızca C# için eklemek için bir olay işleyicisi <xref:System.Windows.Forms.Control.Click> olaya `Sheet1_Startup` yöntemi.
+3. Yalnızca C# için, yöntemine olay için bir olay işleyicisi ekleyin <xref:System.Windows.Forms.Control.Click> `Sheet1_Startup` .
 
     [!code-csharp[Trin_VstcoreDataExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#9)]
 
-   Şimdi işlemek için kod ekleyin <xref:System.Windows.Forms.Control.Click> düğmesinin olayı.
+   Şimdi düğmenin olayını işlemek için kod ekleyin <xref:System.Windows.Forms.Control.Click> .
 
-## <a name="save-changes-to-the-database"></a>Değişiklikleri veritabanına kaydetmek
- Herhangi bir değişiklik yapılmıştır açıkça veritabanına geri kaydedilene kadar yalnızca yerel veri kümesindeki verileri yok.
+## <a name="save-changes-to-the-database"></a>Değişiklikleri veritabanına kaydet
+ Verilerde yapılan tüm değişiklikler, açıkça veritabanına geri kaydedilinceye kadar yalnızca yerel veri kümesinde bulunur.
 
 ### <a name="to-save-changes-to-the-database"></a>Değişiklikleri veritabanına kaydetmek için
 
-1. İçin bir olay işleyicisi ekleme <xref:System.Windows.Forms.Control.Click> olayı `button`ve veritabanına geri kümesinde yapılan tüm değişiklikleri kaydetmek için aşağıdaki kodu ekleyin.
+1. Olayı için bir olay işleyicisi ekleyin <xref:System.Windows.Forms.Control.Click> `button` ve veri kümesinde yapılan tüm değişiklikleri veritabanına geri kaydetmek için aşağıdaki kodu ekleyin.
 
      [!code-csharp[Trin_VstcoreDataExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#10)]
      [!code-vb[Trin_VstcoreDataExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb#10)]
 
 ## <a name="test-the-application"></a>Uygulamayı test etme
- Artık verilerin beklendiği gibi göründüğünü ve liste nesnesi verileri işleyebileceğiniz doğrulamak için çalışma kitabınızı test edebilirsiniz.
+ Artık, verilerin beklendiği gibi göründüğünü ve liste nesnesindeki verileri işleyebildiğinizi doğrulamak için çalışma kitabınızı test edebilirsiniz.
 
 ### <a name="to-test-the-data-binding"></a>Veri bağlamayı test etmek için
 
-- Tuşuna **F5**.
+- **F5**tuşuna basın.
 
-     Çalışma kitabınızı açtığında, liste nesnesi verilerle doldurulmuş doğrulayın **çalışanlar** tablo.
+     Çalışma kitabı açıldığında, liste nesnesinin **çalışanlar** tablosundan alınan verilerle doldurulduğunu doğrulayın.
 
 ### <a name="to-modify-data"></a>Verileri değiştirmek için
 
-1. Bir hücreyi tıklatın **B7**, adı içermelidir **doğan**.
+1. **Etikan**adını Içermesi gereken **B7**hücresini tıklatın.
 
-2. Adı **Anderson**ve tuşuna **Enter**.
+2. **Anderson**adını yazın ve **ENTER**tuşuna basın.
 
-### <a name="to-modify-a-column-header"></a>Bir sütun başlığını değiştirme
+### <a name="to-modify-a-column-header"></a>Bir sütun üst bilgisini değiştirmek için
 
-1. Sütun başlığını içeren hücreyi tıklatın **LastName**.
+1. **Soyadı**sütun başlığını içeren hücreye tıklayın.
 
-2. Tür **Soyadı**iki sözcükleri arasına bir boşluk içeren ve tuşuna **Enter**.
+2. İki sözcükten oluşan bir boşluk da dahil olmak üzere **Soyadı**yazın ve ardından **ENTER**tuşuna basın.
 
 ### <a name="to-save-data"></a>Verileri kaydetmek için
 
-1. Tıklayın **Kaydet** çalışma sayfasında.
+1. Çalışma sayfasında **Kaydet** ' e tıklayın.
 
-2. Excel'den çıkın. Tıklayın **Hayır** yaptığınız değişiklikleri kaydetmek isteyip istemediğiniz sorulduğunda.
+2. Excel 'den çıkın. Yaptığınız değişiklikleri kaydetmek isteyip istemediğiniz sorulduğunda **Hayır** ' a tıklayın.
 
-3. Tuşuna **F5** projeyi yeniden çalıştırın.
+3. Projeyi yeniden çalıştırmak için **F5** 'e basın.
 
-     Liste nesnesinin verilerle doldurulmuş **çalışanlar** tablo.
+     Liste nesnesi, **çalışanlar** tablosundan alınan verilerle doldurulur.
 
-4. Dikkat hücresindeki **B7** hala **Anderson**, veri olduğu yapılan ve veritabanına kaydedilmiş değiştirin. Sütun üst bilgisine **LastName** geri özgün biçimlerinde boşluk, çünkü sütun üst bilgisine veritabanına bağlı değil ve çalışma sayfası için yaptığınız değişiklikleri kaydetmedi değiştirildi.
+4. **B7** hücresindeki adın hala **Anderson**olduğunu ve bu durumda, yaptığınız ve veritabanına geri kaydettiğiniz veri değişikliği olduğunu unutmayın. Sütun üst bilgisi veritabanına bağlanmadığından ve çalışma sayfasında yaptığınız değişiklikleri kaydetmediyseniz, **LastName** sütunu, boşluk olmadan özgün biçimine geri değiştirilmiştir.
 
-### <a name="to-add-new-rows"></a>Yeni satır eklemek için
+### <a name="to-add-new-rows"></a>Yeni satırlar eklemek için
 
 1. Liste nesnesi içinde bir hücre seçin.
 
-    Bir yıldız işareti ile listenin en yeni bir satır görüntülenir ( **\*** ) ilk hücreye yeni bir satır.
+    Yeni satırın ilk hücresinde bir yıldız işareti () ile listenin en altında yeni bir satır görüntülenir **\*** .
 
-2. Aşağıdaki bilgileri boş satır ekleyin.
+2. Aşağıdaki bilgileri boş satıra ekleyin.
 
-   |EmployeeID|LastName|FirstName|Başlık|
+   |Çalışan Kimliği|LastName|FirstName|Başlık|
    |----------------|--------------|---------------|-----------|
    |10|Aslan|Halil|Satış Yöneticisi|
 
 ### <a name="to-delete-rows"></a>Satırları silmek için
 
-- Sayısı 16 (satır 16) en sol tarafında çalışma sağ tıklayın ve ardından **Sil**.
+- Çalışma sayfasının sol tarafında bulunan 16 ' ya (satır 16) sağ tıklayın ve ardından **Sil**' e tıklayın.
 
-### <a name="to-sort-the-rows-in-the-list"></a>Listedeki satırlar sıralamak için
-
-1. Listenin içinde bir hücre seçin.
-
-     Her bir sütun başlığına ok düğmelerini görünür.
-
-2. Ok düğmesi **Soyadı** sütun başlığı.
-
-3. Tıklayın **Sıralama artan**.
-
-     Satır son adlarına göre alfabetik olarak sıralanır.
-
-### <a name="to-filter-information"></a>Filtre bilgilerine
+### <a name="to-sort-the-rows-in-the-list"></a>Listedeki satırları sıralamak için
 
 1. Listenin içinde bir hücre seçin.
 
-2. Ok düğmesi **başlık** sütun başlığı.
+     Her sütun üstbilgisinde ok düğmeleri görünür.
 
-3. Tıklayın **satış temsilcisi**.
+2. **Son ad** sütun üstbilgisindeki ok düğmesine tıklayın.
 
-     Liste içeren satırları gösterir **satış temsilcisine** içinde **başlık** sütun.
+3. **Artan sıralama**' ya tıklayın.
 
-4. Ok düğmesi **başlık** sütun başlığını tekrar.
+     Satırlar, son adlara göre alfabetik olarak sıralanır.
 
-5. Tıklayın **(Tümü)** .
+### <a name="to-filter-information"></a>Bilgileri filtrelemek için
 
-     Filtre kaldırılır ve tüm satırların görünmesini.
+1. Listenin içinde bir hücre seçin.
+
+2. **Başlık** sütunu üstbilgisindeki ok düğmesine tıklayın.
+
+3. **Satış temsilcisi**' ne tıklayın.
+
+     Liste yalnızca **başlık** sütununda **satış temsilcisi** olan satırları gösterir.
+
+4. **Başlık** sütun üstbilgisindeki ok düğmesine tekrar tıklayın.
+
+5. **(Tümü)** seçeneğine tıklayın.
+
+     Filtreleme kaldırılır ve tüm satırlar görüntülenir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Bu izlenecek yol, bir tablo, Liste nesnesine bir veritabanında bağlama hakkındaki temel bilgileri gösterir. Sonraki gelebilir bazı görevler aşağıda verilmiştir:
+ Bu izlenecek yol, bir veritabanındaki tabloyu bir liste nesnesine bağlamanın temellerini gösterir. Daha sonra gelebilecek bazı görevler şunlardır:
 
-- Böylece çevrimdışı kullanılabilir verileri önbelleğe alın. Daha fazla bilgi için [nasıl yapılır: Çevrimdışı veya sunucuda kullanmak için verileri önbelleğe](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md).
+- Çevrimdışı kullanılabilmesi için verileri önbelleğe alma. Daha fazla bilgi için bkz. [nasıl yapılır: çevrimdışı kullanım için verileri önbelleğe alma veya bir sunucu üzerinde](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md).
 
-- Çözümü dağıtın. Daha fazla bilgi için [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md).
+- Çözümü dağıtın. Daha fazla bilgi için bkz. [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md).
 
-- Bir alan ve tablo arasında bir ana/ayrıntı ilişkisi oluşturun. Daha fazla bilgi için [izlenecek yol: Önbellekteki veri kümesini kullanarak bir ana ayrıntı ilişkisi oluşturma](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md).
+- Bir alanla tablo arasında ana/ayrıntı ilişkisi oluşturun. Daha fazla bilgi için bkz. [Izlenecek yol: önbelleğe alınmış bir veri kümesini kullanarak ana ayrıntı Ilişkisi oluşturma](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Office çözümlerindeki veriler](../vsto/data-in-office-solutions.md)
-- [İzlenecek yol: Belge düzeyi projede basit veri bağlama](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)
+- [İzlenecek yol: belge düzeyi projede basit veri bağlama](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)

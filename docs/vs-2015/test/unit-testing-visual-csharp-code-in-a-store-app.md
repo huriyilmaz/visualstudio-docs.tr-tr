@@ -1,5 +1,5 @@
 ---
-title: Bir mağaza uygulamasındaki C# Visual Code 'u birim testi | Microsoft Docs
+title: Bir mağaza uygulamasında Visual C# kodu için birim testi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-test
@@ -10,16 +10,16 @@ author: alexhomer1
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 81876493d48407549237ed626fc6ec5d2175fcd7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659600"
 ---
-# <a name="unit-testing-visual-c-code-in-a-store-app"></a>Bir mağaza uygulamasındaki C# görsel kod ile birim testi
+# <a name="unit-testing-visual-c-code-in-a-store-app"></a>Bir mağaza uygulamasındaki Visual C# kodunu birim testi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu konuda, bir Windows Mağazası uygulamasında bir görsel C# sınıf için birim testleri oluşturmanın bir yolu açıklanmaktadır. Rooter sınıfı, belirli bir sayının kare kökünü tahmini hesaplayan bir işlev uygulayarak, sınır teorisi 'nin depolarından oluşan eru sayısını gösterir. Bu uygulama daha sonra bu işlevi kullanarak bir kullanıcıyı matematik ile yapılabilecek eğlenceli şeyleri gösterir.
+Bu konuda, bir Windows Mağazası uygulamasında bir Visual C# sınıfı için birim testleri oluşturmanın bir yolu açıklanmaktadır. Rooter sınıfı, belirli bir sayının kare kökünü tahmini hesaplayan bir işlev uygulayarak, sınır teorisi 'nin depolarından oluşan eru sayısını gösterir. Bu uygulama daha sonra bu işlevi kullanarak bir kullanıcıyı matematik ile yapılabilecek eğlenceli şeyleri gösterir.
 
  Bu konuda, geliştirme sürecinde ilk adım olarak birim testinin nasıl kullanılacağı gösterilmektedir. Bu yaklaşımda, önce test ettiğiniz sistemde belirli bir davranışı doğrulayan bir test yöntemi yazar ve ardından testi geçiren kodu yazarsınız. Aşağıdaki yordamların sırasıyla değişiklik yaparak, test etmek istediğiniz kodu yazmak ve ardından birim testlerini yazmak için bu stratejiyi ters çevirebilirsiniz.
 
@@ -34,7 +34,7 @@ Bu konuda, bir Windows Mağazası uygulamasında bir görsel C# sınıf için bi
 >
 >   Daha fazla bilgi için bkz. MSDN kitaplığındaki [birim testlerini kullanarak kodu doğrulama](https://msdn.microsoft.com/library/dd264975.aspx) .
 
-## <a name="BKMK_In_this_topic"></a>Bu konuda
+## <a name="in-this-topic"></a><a name="BKMK_In_this_topic"></a> Bu konuda
  [Çözüm ve birim testi projesi oluşturma](#BKMK_Create_the_solution_and_the_unit_test_project)
 
  [Test Gezgini 'nde testlerin çalıştırıldığını doğrulama](#BKMK_Verify_that_the_tests_run_in_Test_Explorer)
@@ -49,17 +49,17 @@ Bu konuda, bir Windows Mağazası uygulamasında bir görsel C# sınıf için bi
 
  [Kodu yeniden düzenleme](#BKMK_Refactor_the_code_)
 
-## <a name="BKMK_Create_the_solution_and_the_unit_test_project"></a>Çözüm ve birim testi projesi oluşturma
+## <a name="create-the-solution-and-the-unit-test-project"></a><a name="BKMK_Create_the_solution_and_the_unit_test_project"></a> Çözüm ve birim testi projesi oluşturma
 
 1. **Dosya** menüsünde **Yeni**' yi ve ardından **Yeni proje**' yi seçin.
 
-2. **Yeni proje** iletişim kutusunda, **yüklü**' ı genişletin, ardından  **C# görsel** ' i genişletin ve **Windows Mağazası**' nı seçin. Ardından proje şablonları listesinden **boş uygulama** ' yı seçin.
+2. **Yeni proje** iletişim kutusunda, **yüklü**' ı genişletin, sonra **Visual C#** ' yi genişletin ve **Windows Mağazası**' nı seçin. Ardından proje şablonları listesinden **boş uygulama** ' yı seçin.
 
-3. Projeyi `Maths` adlandırın ve **çözüm için dizin oluştur** ' un seçili olduğundan emin olun.
+3. Projeyi adlandırın `Maths` ve **çözüm Için dizin oluştur** ' un seçili olduğundan emin olun.
 
 4. Çözüm Gezgini, çözüm adını seçin, kısayol menüsünden **Ekle** ' yi seçin ve ardından **Yeni proje**' yi seçin.
 
-5. **Yeni proje** iletişim kutusunda, **yüklü**' ı genişletin, ardından  **C# görsel** ' i genişletin ve **Windows Mağazası** ' nı seçin. Ardından, proje şablonları listesinden **birim testi kitaplığı (Windows Mağazası uygulamaları)** öğesini seçin.
+5. **Yeni proje** iletişim kutusunda, **yüklü**' ı genişletin, sonra **Visual C#** ' yi genişletin ve **Windows Mağazası** ' nı seçin. Ardından, proje şablonları listesinden **birim testi kitaplığı (Windows Mağazası uygulamaları)** öğesini seçin.
 
      ![Birim testi projesi oluşturma](../test/media/ute-cs-windows-createunittestproject.png "UTE_Cs_windows_CreateUnitTestProject")
 
@@ -87,19 +87,19 @@ Bu konuda, bir Windows Mağazası uygulamasında bir görsel C# sınıf için bi
 
     ```
 
-     Aşağıdakilere dikkat edin:
+     Şunlara dikkat edin:
 
-    1. Her test `[TestMethod]` kullanılarak tanımlanır. Test metodu void döndürmelidir ve herhangi bir parametreye sahip olamaz.
+    1. Her test, kullanılarak tanımlanır `[TestMethod]` . Test metodu void döndürmelidir ve herhangi bir parametreye sahip olamaz.
 
-    2. Test yöntemleri `[TestClass]` özniteliğiyle donatılmış bir sınıfta olmalıdır.
+    2. Test yöntemleri, özniteliğiyle donatılmış bir sınıfta olmalıdır `[TestClass]` .
 
          Testler çalıştırıldığında, her bir test sınıfının bir örneği oluşturulur. Test yöntemleri belirtilmemiş bir sırada çağırılır.
 
     3. Her modül, sınıf veya yöntemden önce ve sonra çağrılan özel yöntemler tanımlayabilirsiniz. Daha fazla bilgi için, MSDN Kitaplığı 'ndaki [birim testlerinde Microsoft. VisualStudio. TestTools. UnitTesting üyelerini kullanma](../test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md) konusuna bakın.
 
-## <a name="BKMK_Verify_that_the_tests_run_in_Test_Explorer"></a>Test Gezgini 'nde testlerin çalıştırıldığını doğrulama
+## <a name="verify-that-the-tests-run-in-test-explorer"></a><a name="BKMK_Verify_that_the_tests_run_in_Test_Explorer"></a> Test Gezgini 'nde testlerin çalıştırıldığını doğrulama
 
-1. **UnitTest1.cs** dosyasının `TestMethod1` bir test kodu ekleyin:
+1. UnitTest1.cs dosyasına bazı test kodu ekleyin `TestMethod1` : **UnitTest1.cs**
 
     ```csharp
 
@@ -111,7 +111,7 @@ Bu konuda, bir Windows Mağazası uygulamasında bir görsel C# sınıf için bi
 
     ```
 
-     @No__t_0 sınıfının, test yöntemlerinde sonuçları doğrulamak için kullanabileceğiniz çeşitli statik yöntemler sağladığını unutmayın.
+     `Assert`Sınıfının, test yöntemlerinde sonuçları doğrulamak için kullanabileceğiniz çeşitli statik yöntemler sağladığını unutmayın.
 
 2. **Test** menüsünde **Çalıştır** ' ı ve ardından **Tümünü Çalıştır**' ı seçin.
 
@@ -119,11 +119,11 @@ Bu konuda, bir Windows Mağazası uygulamasında bir görsel C# sınıf için bi
 
      ![Test Gezgini](../test/media/ute-cpp-testexplorer-testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")
 
-## <a name="BKMK_Add_the_Rooter_class_to_the_Maths_project"></a>Rooter sınıfını Maon projesine ekleyin
+## <a name="add-the-rooter-class-to-the-maths-project"></a><a name="BKMK_Add_the_Rooter_class_to_the_Maths_project"></a> Rooter sınıfını Maon projesine ekleyin
 
 1. Çözüm Gezgini ' de, **Maaltı** proje adını seçin. Kısayol menüsünde, **Ekle**' yi ve ardından **sınıf**' ı seçin.
 
-2. Sınıf dosyasını `Rooter.cs` olarak adlandırın
+2. Sınıf dosyasını adlandırın `Rooter.cs`
 
 3. Aşağıdaki kodu Rooter sınıfı **Rooter.cs** dosyasına ekleyin:
 
@@ -141,11 +141,11 @@ Bu konuda, bir Windows Mağazası uygulamasında bir görsel C# sınıf için bi
 
     ```
 
-     @No__t_0 sınıfı bir Oluşturucu ve `SqareRoot` tahmin aracı metodunu bildirir.
+     `Rooter`Sınıfı bir Oluşturucu ve `SqareRoot` tahmin aracı metodunu bildirir.
 
-4. @No__t_0 yöntemi yalnızca en az bir uygulama, test kurulumunun temel yapısını test etmek için yeterlidir.
+4. `SqareRoot`Yöntemi yalnızca en az bir uygulama, test kurulumunun temel yapısını test etmek için yeterlidir.
 
-## <a name="BKMK_Couple_the_test_project_to_the_app_project"></a>Test projesini uygulama projesine birkaç
+## <a name="couple-the-test-project-to-the-app-project"></a><a name="BKMK_Couple_the_test_project_to_the_app_project"></a> Test projesini uygulama projesine birkaç
 
 1. RooterTests projesine, Masekiz uygulamasına bir başvuru ekleyin.
 
@@ -159,7 +159,7 @@ Bu konuda, bir Windows Mağazası uygulamasında bir görsel C# sınıf için bi
 
    1. **UnitTest1.cs**'i açın.
 
-   2. Bu kodu `using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;` satırı altına ekleyin:
+   2. Bu kodu satırın altına ekleyin `using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;` :
 
        ```csharp
        using Maths;
@@ -180,7 +180,7 @@ Bu konuda, bir Windows Mağazası uygulamasında bir görsel C# sınıf için bi
 
    ```
 
-4. Çözümü oluşturun.
+4. Çözümü derleyin.
 
     Yeni test, test Gezgini 'nde, **çalıştırma testleri** düğümünde görünür.
 
@@ -190,7 +190,7 @@ Bu konuda, bir Windows Mağazası uygulamasında bir görsel C# sınıf için bi
 
    Test ve kod projelerini ayarlamış ve kod projesindeki işlevleri çalıştıran testleri çalıştıracağınızı doğruladınız. Artık gerçek testleri ve kodu yazmaya başlayabilirsiniz.
 
-## <a name="BKMK_Iteratively_augment_the_tests_and_make_them_pass"></a>Testleri tekrarlayarak ve geçiş yapın
+## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="BKMK_Iteratively_augment_the_tests_and_make_them_pass"></a> Testleri tekrarlayarak ve geçiş yapın
 
 1. Yeni bir test ekleyin:
 
@@ -224,7 +224,7 @@ Bu konuda, bir Windows Mağazası uygulamasında bir görsel C# sınıf için bi
     > [!TIP]
     > Yazdıktan hemen sonra, her testin başarısız olduğunu doğrulayın. Bu, hiç başarısız olmayan bir testi yazmanın kolay bir hata yaşamadan kaçınmanıza yardımcı olur.
 
-4. Yeni testin başarılı olması için test kapsamındaki kodu geliştirin. **Rooter.cs** 'deki `SqareRoot` işlevini şu şekilde değiştirin:
+4. Yeni testin başarılı olması için test kapsamındaki kodu geliştirin. `SqareRoot` **Rooter.cs** içindeki işlevi şu şekilde değiştirin:
 
     ```csharp
     public double SquareRoot(double x)
@@ -249,7 +249,7 @@ Bu konuda, bir Windows Mağazası uygulamasında bir görsel C# sınıf için bi
 > [!TIP]
 > Her seferinde bir test ekleyerek kod geliştirin. Her yinelemeden sonra tüm testlerin başarılı olduğundan emin olun.
 
-## <a name="BKMK_Debug_a_failing_test"></a>Başarısız bir testte hata ayıkla
+## <a name="debug-a-failing-test"></a><a name="BKMK_Debug_a_failing_test"></a> Başarısız bir testte hata ayıkla
 
 1. **UnitTest1.cs**'e başka bir test ekleyin:
 
@@ -292,7 +292,7 @@ Bu konuda, bir Windows Mağazası uygulamasında bir görsel C# sınıf için bi
 
 3. Testin neden başarısız olduğunu görmek için, işlevi adım adım inceleyin:
 
-   1. @No__t_0 işlevinin başlangıcında bir kesme noktası ayarlayın.
+   1. İşlevin başlangıcında bir kesme noktası ayarlayın `SquareRoot` .
 
    2. Başarısız testin kısayol menüsünde, **Seçili testlerin hatalarını ayıkla**' yı seçin.
 
@@ -316,7 +316,7 @@ Bu konuda, bir Windows Mağazası uygulamasında bir görsel C# sınıf için bi
 
    ![Tüm testler geçer](../test/media/ute-ult-alltestspass.png "UTE_ULT_AllTestsPass")
 
-## <a name="BKMK_Refactor_the_code_"></a>Kodu yeniden düzenleme
+## <a name="refactor-the-code"></a><a name="BKMK_Refactor_the_code_"></a> Kodu yeniden düzenleme
  **SquareRoot işlevindeki merkezi hesaplamayı kolaylaştırın.**
 
 1. Sonuç uygulamasını değiştirme
@@ -336,7 +336,7 @@ Bu konuda, bir Windows Mağazası uygulamasında bir görsel C# sınıf için bi
 
  **Yinelenen kodu kaldırmak için test kodunu yeniden düzenleyin.**
 
- @No__t_0 yönteminin, `Assert` yönteminde kullanılan tolerans değişkeninin paydasını sabit olarak kodyacağını unutmayın. Aynı tolerans hesaplamasını kullanan ek testler eklemeyi planlıyorsanız, sabit kodlanmış değerin birden çok konumda kullanılması hatalara yol açabilir.
+ `RangeTest`Yönteminin yönteminde kullanılan tolerans değişkeninin paydasını sabit olarak kodyacağını unutmayın `Assert` . Aynı tolerans hesaplamasını kullanan ek testler eklemeyi planlıyorsanız, sabit kodlanmış değerin birden çok konumda kullanılması hatalara yol açabilir.
 
 1. Tolerans değerini hesaplamak için Unit1Test sınıfına özel bir yöntem ekleyin ve sonra bunun yerine bu yöntemi çağırın.
 
@@ -365,4 +365,4 @@ Bu konuda, bir Windows Mağazası uygulamasında bir görsel C# sınıf için bi
 2. Yeniden düzenlenmiş yöntemini sınamak için **Tümünü Çalıştır** ' ı seçin ve bir hata sunmadığınızdan emin olun.
 
 > [!NOTE]
-> Test sınıfına bir yardımcı yöntemi eklemek için, yöntemine `[TestMethod]` özniteliğini eklemeyin. Test Gezgini çalıştırılacak yöntemi kaydetmez.
+> Bir test sınıfına bir yardımcı yöntemi eklemek için, `[TestMethod]` metoduna özniteliği eklemeyin. Test Gezgini çalıştırılacak yöntemi kaydetmez.

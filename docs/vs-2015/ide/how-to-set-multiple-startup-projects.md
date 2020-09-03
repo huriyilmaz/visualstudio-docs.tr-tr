@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f751ef8ecc884c0e0b338d70f9e198fdc07807cb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660135"
 ---
 # <a name="how-to-set-multiple-startup-projects"></a>Nasıl Yapılır: Çoklu Başlangıç Projesi Ayarlama
@@ -27,7 +27,7 @@ Visual Studio, hata ayıklayıcıyı başlattığınızda birden çok projenin n
 
 1. **Çözüm Gezgini**çözümü (çok üst düğüm) seçin. Bağlam menüsünü almak için düğüme sağ tıklayın.
 
-2. **Özellikler**' i seçin. **Çözüm Özellik sayfaları** iletişim kutusu açılır.
+2. **Özellikler**’i seçin. **Çözüm Özellik sayfaları** iletişim kutusu açılır.
 
 3. **Ortak özellikler** düğümünü genişletin ve **Başlangıç projesi**' ne tıklayın.
 

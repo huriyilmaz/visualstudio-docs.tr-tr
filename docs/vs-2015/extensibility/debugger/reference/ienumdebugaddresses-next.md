@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugAddresses::Next | Microsoft Docs
+title: 'IEnumDebugAddresses:: Next | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1275fe1f1daaa8bd512251480e7c87a71512523e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68191986"
 ---
 # <a name="ienumdebugaddressesnext"></a>IEnumDebugAddresses::Next
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu yöntem, sabit listesinden alınmış sonraki öğe kümesini döndürür.  
+Bu yöntem, Numaralandırmadaki öğelerin bir sonraki kümesini döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Next(  
@@ -44,16 +44,16 @@ int Next(
   
 #### <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Alınacak öğelerin sayısı. Ayrıca en büyük boyutunu belirtir `rgelt` dizisi.  
+ 'ndaki Alınacak öğe sayısı. Ayrıca, dizinin en büyük boyutunu belirtir `rgelt` .  
   
  `rgelt`  
- [out içinde] Dizi [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) doldurulacak öğeleri.  
+ [in, out] Doldurulacak [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) öğelerinin dizisi.  
   
  `pceltFetched`  
- [out] Gerçekte döndürülen öğe sayısını döndürür `rgelt`.  
+ dışı İçinde gerçekten döndürülen öğelerin sayısını döndürür `rgelt` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` istenen öğelerin sayısından daha az döndürülebilen; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`İstenen sayıda öğeden daha az döndürülüp döndürülmeyeceğini döndürür; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)   

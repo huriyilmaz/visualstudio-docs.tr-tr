@@ -1,5 +1,5 @@
 ---
-title: 'Hata: Karışık mod hata ayıklama için işlemler, yalnızca Microsoft .NET Framework 4 kullanılırken desteklenir x64 veya büyük | Microsoft Docs'
+title: 'Hata: x64 işlemlerine yönelik karışık modda hata ayıklama yalnızca Microsoft .NET Framework 4 veya daha yenisi kullanılırken desteklenir | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -17,24 +17,24 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 190a6e890ce31ce2aa66ff474bb9e4b1976a6c46
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67824004"
 ---
 # <a name="error-mixed-mode-debugging-for-x64-processes-is-supported-only-when-using-microsoft-net-framework-4-or-greater"></a>Hata: x64 işlemleri için karışık modda hata ayıklama yalnızca Microsoft .NET Framework 4 veya daha yenisi kullanılırken desteklenir
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir 64-bit işlem içinde karma yerel ve yönetilen kodda hata ayıklamak için olmalıdır [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürüm 4. İle 64-bit işlemlerinin karışık mod hata ayıklama [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürümleri daha önce 4 desteklenmez.  
+64 bitlik bir işlemde karışık yerel ve yönetilen kodda hata ayıklamak için sürüm 4 ' e sahip olmanız gerekir [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] . 4 ' ten önceki sürümlere sahip 64 bit işlemlerdeki karışık modda hata ayıklama [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] desteklenmez.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
 - Aşağıdaki adımlardan birini uygulayın:  
   
-  - Yükseltme, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürüm 4.  
+  - Sürümünüzü [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürüm 4 ' e yükseltin.  
 
-  - Hata ayıklama için uygulamanızın bir 32-bit sürümünü oluşturun.  
+  - Hata ayıklama için uygulamanızın 32 bitlik bir sürümünü oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Cihazda uzak araçları ayarlama](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c)

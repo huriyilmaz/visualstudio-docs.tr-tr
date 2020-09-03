@@ -16,15 +16,15 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: a5d6309818c251b9101b1345450ef66f3fc8f1f8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75586802"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-lookup-data-binding"></a>Arama veri bağlama modelini destekleyen bir Windows Forms kullanıcı denetimi oluşturma
 
-Windows Forms verileri görüntülerken, **araç kutusundan**var olan denetimleri seçebilir veya uygulamanız standart denetimlerde kullanılamayan işlevselliği gerektiriyorsa özel denetimleri yazabilirsiniz. Bu izlenecek yol, <xref:System.ComponentModel.LookupBindingPropertiesAttribute>uygulayan bir denetimin nasıl oluşturulacağını gösterir. <xref:System.ComponentModel.LookupBindingPropertiesAttribute> uygulayan denetimler, verilere bağlanabilen üç özellik içerebilir. Bu tür denetimler <xref:System.Windows.Forms.ComboBox>benzerdir.
+Windows Forms verileri görüntülerken, **araç kutusundan**var olan denetimleri seçebilir veya uygulamanız standart denetimlerde kullanılamayan işlevselliği gerektiriyorsa özel denetimleri yazabilirsiniz. Bu izlenecek yol, uygulayan bir denetimin nasıl oluşturulacağını gösterir <xref:System.ComponentModel.LookupBindingPropertiesAttribute> . ' İ uygulayan denetimler, <xref:System.ComponentModel.LookupBindingPropertiesAttribute> verilere bağlanabilen üç özellik içerebilir. Bu tür denetimler öğesine benzerdir <xref:System.Windows.Forms.ComboBox> .
 
 Denetim yazma hakkında daha fazla bilgi için bkz. [tasarım zamanında Windows Forms denetimleri geliştirme](/dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time).
 
@@ -32,11 +32,11 @@ Veri bağlama senaryolarında kullanım denetimleri yazma sırasında, aşağıd
 
 |Veri bağlama özniteliği kullanımı|
 | - |
-|Verilerin tek bir sütununu (veya özelliği) görüntüleyen <xref:System.Windows.Forms.TextBox>gibi basit denetimlerde <xref:System.ComponentModel.DefaultBindingPropertyAttribute> uygulayın. Daha fazla bilgi için bkz. [basit veri bağlamayı destekleyen Windows Forms Kullanıcı denetimi oluşturma](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md).|
-|Denetimlerin listesini (veya tabloları) görüntüleyen <xref:System.Windows.Forms.DataGridView>gibi denetimlerde <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> uygulayın. Daha fazla bilgi için bkz. [karmaşık veri bağlamayı destekleyen Windows Forms Kullanıcı denetimi oluşturma](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md).|
-|<xref:System.ComponentModel.LookupBindingPropertiesAttribute>, verilerin listelerini (veya tabloları) görüntüleyen, ancak tek bir sütun veya özellik sunmanız gereken <xref:System.Windows.Forms.ComboBox>gibi denetimlerde uygulayın. (Bu işlem Bu izlenecek yol sayfasında açıklanmaktadır.)|
+|<xref:System.ComponentModel.DefaultBindingPropertyAttribute> <xref:System.Windows.Forms.TextBox> Verilerin tek bir sütununu (veya özelliğini) görüntüleyen bir gibi basit denetimleri uygulayın. Daha fazla bilgi için bkz. [basit veri bağlamayı destekleyen Windows Forms Kullanıcı denetimi oluşturma](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md).|
+|<xref:System.ComponentModel.ComplexBindingPropertiesAttribute> <xref:System.Windows.Forms.DataGridView> Verilerin listelerini (veya tabloları) görüntüleyen, gibi denetimleri uygulayın. Daha fazla bilgi için bkz. [karmaşık veri bağlamayı destekleyen Windows Forms Kullanıcı denetimi oluşturma](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md).|
+|<xref:System.ComponentModel.LookupBindingPropertiesAttribute> <xref:System.Windows.Forms.ComboBox> Verilerin listelerini (veya tabloları) görüntüleyen, ancak aynı zamanda tek bir sütun veya özellik sunmanız gereken denetimleri ' de uygulayın. (Bu işlem Bu izlenecek yol sayfasında açıklanmaktadır.)|
 
-Bu izlenecek yol, iki tablodaki verilere bağlanan bir arama denetimi oluşturur. Bu örnekte, Northwind örnek veritabanındaki `Customers` ve `Orders` tabloları kullanılmaktadır. Arama denetimi `Orders` tablosundan `CustomerID` alanına bağlanır. `Customers` tablosundan `CompanyName` aramak için bu değeri kullanır.
+Bu izlenecek yol, iki tablodaki verilere bağlanan bir arama denetimi oluşturur. Bu örnekte, `Customers` `Orders` Northwind örnek veritabanındaki ve tabloları kullanılmaktadır. Arama denetimi, `CustomerID` tablodaki alana bağlanır `Orders` . Tablodan aramak için bu değeri kullanır `CompanyName` `Customers` .
 
 Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
@@ -46,7 +46,7 @@ Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
 - Kullanıcı denetimini görsel olarak tasarlayın.
 
-- `LookupBindingProperty` özniteliğini uygulayın.
+- Özniteliğini uygulayın `LookupBindingProperty` .
 
 - **Veri kaynağı yapılandırma** Sihirbazı ile bir veri kümesi oluşturun.
 
@@ -54,7 +54,7 @@ Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
 - Yeni denetimdeki verileri göstermek için bir form oluşturun.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
@@ -68,7 +68,7 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
     2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
 
-    3. T-SQL betiği sorgu düzenleyiciye yapıştırın ve ardından **yürütme** düğmesi.
+    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **Çalıştır** düğmesini seçin.
 
        Kısa bir süre sonra sorgu çalışmayı sonlandırır ve Northwind veritabanı oluşturulur.
 
@@ -76,9 +76,9 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 İlk adım **Windows Forms bir uygulama** projesi oluşturmaktır.
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni** > **projesi**' ni seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
 
-2. Sol bölmedeki **görsel C#**  veya **Visual Basic** ' i genişletin ve ardından **Windows Masaüstü**' nü seçin.
+2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü**' nü seçin.
 
 3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
@@ -92,30 +92,30 @@ Bu izlenecek yol, **Kullanıcı denetiminden**bir arama denetimi oluşturur, bu 
 
 1. **Proje** menüsünden **Kullanıcı denetimi Ekle**' yi seçin.
 
-2. **Ad** alanına `LookupBox` yazın ve ardından **Ekle**' ye tıklayın.
+2. `LookupBox` **Ad** alanına yazın ve ardından **Ekle**' ye tıklayın.
 
      **LookupBox** denetimi **Çözüm Gezgini**eklenir ve tasarımcıda açılır.
 
 ## <a name="design-the-lookupbox-control"></a>LookupBox denetimini tasarlama
 
-LookupBox denetimini tasarlamak için, **araç kutusundan** bir <xref:System.Windows.Forms.ComboBox> Kullanıcı denetiminin tasarım yüzeyine sürükleyin.
+LookupBox denetimini tasarlamak için, <xref:System.Windows.Forms.ComboBox> **araç kutusundan** bir öğesini Kullanıcı denetiminin tasarım yüzeyine sürükleyin.
 
 ## <a name="add-the-required-data-binding-attribute"></a>Gerekli veri bağlama özniteliğini ekleyin
 
-Veri bağlamayı destekleyen arama denetimleri için <xref:System.ComponentModel.LookupBindingPropertiesAttribute>uygulayabilirsiniz.
+Veri bağlamayı destekleyen arama denetimleri için, uygulamasını uygulayabilirsiniz <xref:System.ComponentModel.LookupBindingPropertiesAttribute> .
 
 1. **LookupBox** denetimini kod görünümüne geçirin. ( **Görünüm** menüsünde **kod**öğesini seçin.)
 
-2. `LookupBox` kodundaki kodu aşağıdaki kodla değiştirin:
+2. İçindeki kodu aşağıdaki gibi değiştirin `LookupBox` :
 
      [!code-vb[VbRaddataDisplaying#5](../data-tools/codesnippet/VisualBasic/create-a-windows-forms-user-control-that-supports-lookup-data-binding_1.vb)]
      [!code-csharp[VbRaddataDisplaying#5](../data-tools/codesnippet/CSharp/create-a-windows-forms-user-control-that-supports-lookup-data-binding_1.cs)]
 
-3. Gelen **derleme** menüsünde seçin **Çözümü Derle**.
+3. **Build** menüsünde **Build Solution**öğesini seçin.
 
 ## <a name="create-a-data-source-from-your-database"></a>Veritabanınızdan bir veri kaynağı oluşturun
 
-Bu adım, Northwind örnek veritabanındaki `Customers` ve `Orders` tablolarına göre **veri kaynağı yapılandırma** Sihirbazı 'nı kullanarak bir veri kaynağı oluşturur.
+Bu adım, **Data Source Configuration** `Customers` `Orders` Northwind örnek veritabanındaki ve tabloları temel alan veri kaynağı Yapılandırma Sihirbazı 'nı kullanarak bir veri kaynağı oluşturur.
 
 1. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
 
@@ -135,9 +135,9 @@ Bu adım, Northwind örnek veritabanındaki `Customers` ve `Orders` tablolarına
 
 7. **Veritabanı nesnelerinizi seçin** sayfasında **Tablolar** düğümünü genişletin.
 
-8. `Customers` ve `Orders` tablolarını seçip **son**' a tıklayın.
+8. `Customers`Ve tablolarını seçip `Orders` **son**' a tıklayın.
 
-     **NorthwindDataSet** , projenize eklenir ve `Customers` ve `Orders` tabloları **veri kaynakları** penceresinde görünür.
+     **NorthwindDataSet** , projenize eklenir ve `Customers` `Orders` Tablolar **veri kaynakları** penceresinde görünür.
 
 ## <a name="set-the-customerid-column-of-the-orders-table-to-use-the-lookupbox-control"></a>LookupBox denetimini kullanmak için Orders tablosunun CustomerID sütununu ayarlayın
 
@@ -155,7 +155,7 @@ Bu adım, Northwind örnek veritabanındaki `Customers` ve `Orders` tablolarına
 
 6. **Veri Kullanıcı arabirimi özelleştirme seçenekleri** Iletişim kutusunda **Ilişkili denetimler** listesinden **LookupBox** ' ı seçin.
 
-7. **Tamam**'ı tıklatın.
+7. **Tamam**’a tıklayın.
 
 8. **MüşteriNo** sütunundaki açılan oka tıklayın ve **LookupBox**' ı seçin.
 
@@ -163,19 +163,19 @@ Bu adım, Northwind örnek veritabanındaki `Customers` ve `Orders` tablolarına
 
 Veri **kaynakları** penceresinden **Form1**üzerine sürükleyerek veri bağlantılı denetimleri oluşturabilirsiniz.
 
-Windows formunda veriye bağlı denetimler oluşturmak için, **siparişler** düğümünü **veri kaynakları** penceresinden Windows form üzerine sürükleyin ve **arama kutusu** denetiminin verileri `CustomerID` sütununda göstermek için kullanıldığını doğrulayın.
+Windows formunda veriye bağlı denetimler oluşturmak için, **siparişler** düğümünü **veri kaynakları** penceresinden Windows form üzerine sürükleyin ve **LookupBox** denetiminin sütunda verileri göstermek için kullanıldığını doğrulayın `CustomerID` .
 
 ## <a name="bind-the-control-to-look-up-companyname-from-the-customers-table"></a>Müşteriler tablosundan ara CompanyName 'e denetim bağlama
 
 Arama bağlamalarını ayarlamak için **veri kaynakları** penceresinde ana **müşteriler** düğümünü seçin ve **Form1'in**içindeki **CustomerIDLookupBox** içindeki Birleşik giriş kutusuna sürükleyin.
 
-Bu, `Orders` tablosundan `CustomerID` değerini koruyarak `Customers` tablosundan `CompanyName` göstermek üzere veri bağlamayı ayarlar.
+Bu, tablodaki değeri koruyarak, tablosundan görüntülenecek veri bağlamayı ayarlar `CompanyName` `Customers` `CustomerID` `Orders` .
 
-## <a name="run-the-application"></a>Uygulamayı çalıştırın
+## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
 - Uygulamayı çalıştırmak için **F5**'e basın.
 
-- Bazı kayıtlar arasında ilerleyin ve `CompanyName` `LookupBox` denetiminde göründüğünü doğrulayın.
+- Bazı kayıtlar arasında ilerleyin ve `CompanyName` `LookupBox` denetimin denetimde göründüğünü doğrulayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

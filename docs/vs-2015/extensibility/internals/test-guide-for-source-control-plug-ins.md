@@ -1,5 +1,5 @@
 ---
-title: Test kaynak denetimi eklentileri için Kılavuzu | Microsoft Docs
+title: Kaynak denetimi eklentileri için test Kılavuzu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -15,97 +15,97 @@ caps.latest.revision: 27
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6790e61eddc81045bb168028ee7aeef7a0492e3c
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67825742"
 ---
 # <a name="test-guide-for-source-control-plug-ins"></a>Kaynak Denetimi Eklentileri için Test Kılavuzu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu bölümde, kaynak denetimi eklentisi ile test etmek için yönergeler sağlanmaktadır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Test en yaygın alanlara ek olarak bazı sorunlu olabilecek daha karmaşık alanları kapsamlı bir bakış sağlanır. Bu genel bakış, test çalışmalarının kapsamlı bir liste olarak tasarlanmamıştır.  
+Bu bölüm, kaynak denetimi eklentisini ile test etmek için rehberlik sağlar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . En yaygın test alanlarının kapsamlı bir genel bakışı ve sorunlu olabilecek daha karmaşık alanlardan bazıları sağlanır. Bu genel bakış, test çalışmalarının ayrıntılı bir listesi olmak üzere tasarlanmamıştır.  
   
 > [!NOTE]
-> Bazı hata düzeltmeleri ve geliştirmeleri en son [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE, var olan kaynak denetimi daha önce önceki sürümlerini kullanırken karşılaşılan değil eklentileri ile ilgili sorunlar ortaya [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Hiçbir eklenti için önceki sürümden itibaren yapılan değişiklikler olsa bile, var olan kaynak denetimi eklentisi Bu bölümde, numaralandırılan alanlarda test önemle tavsiye edilir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+> En son IDE için bazı hata düzeltmeleri ve geliştirmeleri, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] önceki sürümleri kullanılırken daha önce karşılaşılan mevcut kaynak denetimi eklentileriyle ilgili sorunları ortaya çıkarabilir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Önceki sürümünden bu yana eklentide hiçbir değişiklik yapılmasa bile, bu bölümde numaralandırılan alanlara mevcut kaynak denetimi eklentisini test etmeniz önemle tavsiye edilir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
-## <a name="common-preparation"></a>Ortak hazırlama  
- Bir makine [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ve yüklü, hedef kaynak denetimi eklentisi gereklidir. Benzer şekilde yapılandırılmış bir ikinci makine, açık kaynak denetimi testlerden bazıları için kullanılabilir.  
+## <a name="common-preparation"></a>Ortak hazırlık  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Ve hedef kaynak denetimi eklentisinin yüklü olduğu bir makine gerekir. Benzer şekilde yapılandırılmış ikinci bir makine, kaynak denetimi testlerinde bazı açık bir şekilde kullanılabilir.  
   
-## <a name="definition-of-terms"></a>Koşulları tanımı  
- Bu test Kılavuzu amacıyla aşağıdaki terim tanımları kullanın:  
+## <a name="definition-of-terms"></a>Koşulların tanımı  
+ Bu test kılavuzunun amacı için aşağıdaki terim tanımlarını kullanın:  
   
  İstemci projesi  
- Herhangi bir proje türü kullanılabilir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kaynak denetimi tümleştirmesini destekleyen (örneğin, [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], [!INCLUDE[csprcs](../../includes/csprcs-md.md)], veya [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)]).  
+ Kaynak denetimi tümleştirmesini destekleyen ' de bulunan herhangi bir proje türü [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] (örneğin, [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , [!INCLUDE[csprcs](../../includes/csprcs-md.md)] veya [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] ).  
   
  Web projesi  
- Web projeleri dört tür vardır: Dosya sistemi, yerel IIS, uzak sitelerin ve FTP.  
+ Dört tür Web projesi vardır: dosya sistemi, yerel IIS, uzak siteler ve FTP.  
   
-- Dosya sistemi projeleri bir yerel yolda oluşturulur, ancak dahili olarak bir UNC yolu erişilen ve istemci projeleri gibi IDE içinde kaynak denetimi altında yerleştirilmiş olarak yüklenmesi için Internet Information Services (IIS) gerektirmez.  
+- Dosya sistemi projeleri yerel bir yol üzerinde oluşturulur, ancak bir UNC yolu aracılığıyla dahili olarak erişildiği için Internet Information Services (IIS) yüklenmesini gerektirmez ve kaynak denetimi altına, istemci projeleri gibi IDE içinden yerleştirilebilecek.  
   
-- Yerel IIS projeleri aynı makineye yüklenir ve erişilen IIS yerel makineye işaret eden bir URL ile çalışın.  
+- Yerel IIS projeleri, aynı makinede yüklü olan ve yerel makineye işaret eden bir URL ile erişilen IIS ile çalışır.  
   
-- Uzak siteleri projeleri aynı zamanda bir IIS hizmetleri altında oluşturulan, ancak IIS sunucu makinesinde ve değil, kaynak denetimi altında yerleştirilmiş içinde [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE.  
+- Uzak siteler de bir IIS Hizmetleri altında oluşturulur, ancak bunlar, IDE 'nin içinden değil, IIS sunucu makinesine kaynak denetimi altına yerleştirilir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
-- FTP projeleri uzak bir FTP sunucusu üzerinden erişilen ancak kaynak denetimi altında yerleştirilemez.  
+- FTP projelerine uzak bir FTP sunucusu üzerinden erişilir, ancak bunlar kaynak denetimi altına yerleştirilemez.  
   
-  Liste  
-  Çözüm veya projeyi kaynak denetimi altında için başka bir terim.  
+  Sayıyor  
+  Kaynak denetimi altındaki çözüm veya proje için başka bir terim.  
   
-  Sürüm Store  
-  Kaynak Denetimi Eklentisi API aracılığıyla erişilen kaynak denetimi veritabanı.  
+  Sürüm deposu  
+  Kaynak denetimi eklentisi API 'SI üzerinden erişilmekte olan kaynak denetim veritabanı.  
   
-## <a name="test-areas-covered-in-this-section"></a>Bu bölümde yer alan test alanlarını  
+## <a name="test-areas-covered-in-this-section"></a>Bu bölümde kapsanan test bölgeleri  
   
 - [Test Alanı 1: Kaynak Denetimine Ekleme/Kaynak Denetiminden Açma](../../extensibility/internals/test-area-1-add-to-open-from-source-control.md)  
   
-  - Büyük/küçük harf 1a: Kaynak Denetimine Çözüm Ekle  
+  - Durum 1a: kaynak denetimine çözüm ekleme  
 
-  - Büyük/küçük harf 1b: Açık çözüm kaynak denetimi  
+  - Durum 1B: kaynak denetiminden çözüm aç  
 
-  - Durum 1c: Kaynak denetiminden çözüm ekleyin  
+  - Case 1C: kaynak denetiminden çözüm ekleme  
 
 - [Test Alanı 2: Kaynak Denetiminden Alma](../../extensibility/internals/test-area-2-get-from-source-control.md)  
   
 - [Test Alanı 3: Kullanıma Alma/Kullanıma Almayı Geri Alma](../../extensibility/internals/test-area-3-check-out-undo-checkout.md)  
   
-  - 3\. durum: Kullanıma almayı geri al / gözden geçirin  
+  - Durum 3: kullanıma almayı denetleme/geri alma  
 
-  - Büyük/küçük harf 3a: Kullanıma Al  
+  - Case 3A: kullanıma alma  
 
-  - Büyük/küçük harf 3b: Bağlantısı kesilen kullanıma alma  
+  - Durum 3B: bağlantısı kesik teslim alma  
 
-  - Durum 3c: Sorgu düzenleme/sorgu kaydetme (QEQS)  
+  - Durum 3c: sorgu düzenleme/sorgu kaydetme (QEQS)  
 
-  - Case 3d: Sessiz kullanıma alma  
+  - Durum 3B: sessiz kullanıma alma  
 
-  - Büyük/küçük harf 3e: Kullanıma almayı geri al  
+  - Durum 3e: kullanıma almayı geri alma  
   
 - [Test Alanı 4: İade Etme](../../extensibility/internals/test-area-4-check-in.md)  
   
-  - Büyük/küçük harf 4a: Değiştirilen öğeler  
+  - Durum 4A: değiştirilen öğeler  
 
-  - Büyük/küçük harf 4b: Dosya ekleme  
+  - Durum 4B: dosya ekleme  
 
-  - 4c. durum: Ekleme projeleri  
+  - Durum 4c: proje ekleme  
   
 - [Test Alanı 5: Kaynak Denetimini Değiştirme](../../extensibility/internals/test-area-5-change-source-control.md)  
   
-  - Büyük/küçük harf 5a: bağlama  
+  - Case 5A: bağlama  
 
-  - Büyük/küçük harf 5b: Bağlamayı Kaldır  
+  - Case 5B: ciltten çıkar  
 
-  - Durum 5c: yeniden bağlayın  
+  - Case 5c: yeniden bağlama  
 
-- [Test Alanı 6: Silme](../../extensibility/internals/test-area-6-delete.md)  
+- [Test Alanı 6: Sil](../../extensibility/internals/test-area-6-delete.md)  
 
-- [Test Alanı 7: Paylaşma](../../extensibility/internals/test-area-7-share.md)  
+- [Test Alanı 7: Paylaş](../../extensibility/internals/test-area-7-share.md)  
 
 - [Test Alanı 8: Eklenti Değiştirme](../../extensibility/internals/test-area-8-plug-in-switching.md)  
 
-  - Büyük/küçük harf 8a: Otomatik değiştirme  
+  - Case 8A: Otomatik değişiklik  
 
-  - Büyük/küçük harf 8b: Çözüm tabanlı Değiştir  
+  - Durum 8B: çözüm tabanlı değişiklik  
 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Kaynak Denetimi Eklentileri](../../extensibility/source-control-plug-ins.md)

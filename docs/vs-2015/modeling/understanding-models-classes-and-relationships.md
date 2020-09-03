@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5426c6f8e9c4a932430a0c3bd3df6d98400c3562
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659553"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>Modelleri, Sınıfları ve İlişkileri Anlama
@@ -26,7 +26,7 @@ Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodlar
  Bu konuda, DSL tanımının merkezi özellikleri açıklanmaktadır.
 
 ## <a name="the-dsl-definition"></a>DSL tanımı
- @No__t_0 açtığınızda, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pencereniz aşağıdaki resme benzer.
+ Açtığınızda `Dsl\DslDefinition.dsl` , [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pencereniz aşağıdaki resme benzer.
 
  ![DSL Tasarımcısı](../modeling/media/dsl-designer.png "dsl_designer")
 
@@ -120,7 +120,7 @@ Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodlar
 
  Modelin XML gösteriminde, iki öğe arasındaki bir başvuru bağlantısı, *bilinen adlar* kullanılarak temsil edilir. Diğer bir deyişle, adlar modeldeki her öğeyi benzersiz bir şekilde tanımlayan adlardır. Her model öğesi için XML düğümü, ilişkinin adını ve diğer öğenin bilinen adını belirten bir düğüm içerir.
 
-## <a name="roles"></a>Lerdir
+## <a name="roles"></a>Roller
  Her etki alanı ilişkisinde, bir kaynak rol ve bir hedef rol olmak üzere iki rol bulunur.
 
  Aşağıdaki resimde, **Yayımcı** etki alanı sınıfı ve **PublisherCatalog** etki alanı ilişkisi arasındaki çizgi, kaynak roldür. Etki alanı ilişkisi ve **Albüm** etki alanı sınıfı arasındaki çizgi hedef roldür.
@@ -132,11 +132,11 @@ Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodlar
  Bir DSL tanımında ilişki oluşturduğunuzda, özellik ve ilişki adlarına varsayılan değerler verilir. Ancak, bunları değiştirebilirsiniz.
 
 ## <a name="multiplicities"></a>Çeşitlilimler
- Çoğullılıklar, bir etki alanı ilişkisinde kaç öğenin aynı role sahip olduğunu belirtir. Örnekte, **Katalog** rolünde bulunan sıfır-çok (0.. \*) çoğulluk ayarı, **Yayımcı** etki alanı sınıfının herhangi bir örneğinin, vermek Istediğiniz kadar çok sayıda **PublisherCatalog** ilişki bağlantısına sahip olduğunu belirtir.
+ Çoğullılıklar, bir etki alanı ilişkisinde kaç öğenin aynı role sahip olduğunu belirtir. Örnekte, Katalog rolünde bulunan sıfırdan çok (0.. \* ) çoğulluk ayarı, **Yayımcı** etki alanı **Catalog** sınıfının herhangi bir örneğinin, vermek istediğiniz kadar çok **PublisherCatalog** ilişki bağlantılarına sahip olduğunu belirtir.
 
- Diyagram üzerine yazarak veya **Özellikler** penceresindeki `Multiplicity` özelliğini değiştirerek bir rolün çoğulluğu yapılandırın. Aşağıdaki tabloda bu özelliğin ayarları açıklanmaktadır.
+ Diyagram üzerine yazarak veya `Multiplicity` **Özellikler** penceresinde özelliğini değiştirerek bir rolün çoğulluğu yapılandırın. Aşağıdaki tabloda bu özelliğin ayarları açıklanmaktadır.
 
-|Çokluk türü|Açıklama|
+|Çokluk türü|Description|
 |-----------------------|-----------------|
 |0.. * (sıfırdan fazla)|Alan sınıfının her örneği, ilişkinin birden fazla örneğine veya ilişkinin örneklerine sahip olabilir.|
 |0.. 1 (sıfır-bir)|Alan sınıfının her örneği, ilişkinin birden fazla örneğine veya ilişkinin örneklerine sahip olamaz.|

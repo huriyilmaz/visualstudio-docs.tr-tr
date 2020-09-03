@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9e6626faa09f1e38506c2d205d13caa9a3707fc0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659461"
 ---
 # <a name="update-a-uml-model-from-a-background-thread"></a>Bir UML modelini arka plan iş parçacığı aracılığıyla güncelleştirme
@@ -23,7 +23,7 @@ Bazen bir arka plan iş parçacığında modelde değişiklik yapmak faydalı ol
 
  Ancak, UML mağazasının iş parçacığı güvenli olmadığı farkında olmalısınız. Aşağıdaki önlemler önemlidir:
 
-- Bir modele veya diyagrama yönelik her güncelleştirme, Kullanıcı arabirimi (UI) iş parçacığında yapılmalıdır. Kullanıcı arabirimi iş parçacığının gerçek güncelleştirmeleri gerçekleştirmesini sağlamak için arka plan iş parçacığı <xref:System.Windows.Forms.Control.Invoke%2A> veya `Dispatcher.` <xref:System.Windows.Threading.Dispatcher.Invoke%2A> kullanmalıdır.
+- Bir modele veya diyagrama yönelik her güncelleştirme, Kullanıcı arabirimi (UI) iş parçacığında yapılmalıdır. <xref:System.Windows.Forms.Control.Invoke%2A> `Dispatcher.` <xref:System.Windows.Threading.Dispatcher.Invoke%2A> UI iş parçacığının gerçek güncelleştirmeleri gerçekleştirmesi için arka plan iş parçacığının kullanılması gerekir.
 
 - Bir dizi değişikliği tek bir işlemde gruplandırdıysanız, işlem devam ederken kullanıcının modeli düzenlemesini engellemeniz önerilir. Aksi takdirde, Kullanıcı tarafından yapılan tüm düzenlemeler aynı işlemin bir parçası olur. Kullanıcının kalıcı iletişim kutusunu göstererek değişiklik yapmasını engelleyebilirsiniz. İsterseniz, iletişim kutusunda bir Iptal düğmesi sağlayabilirsiniz. Kullanıcı değişiklikleri yaptığı şekilde görebilir.
 
@@ -32,7 +32,7 @@ Bazen bir arka plan iş parçacığında modelde değişiklik yapmak faydalı ol
 
 #### <a name="to-run-the-example"></a>Örneği çalıştırmak için
 
-1. [Modelleme Diyagramında Menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md)bölümünde C# açıklandığı gibi bir projede bir komut işleyicisi oluşturun.
+1. [Modelleme Diyagramında Menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md)bölümünde açıklandığı gibi bir C# projesinde komut işleyicisi oluşturun.
 
 2. Projenin bu derlemelere başvurular içerdiğinden emin olun:
 
@@ -50,13 +50,13 @@ Bazen bir arka plan iş parçacığında modelde değişiklik yapmak faydalı ol
 
 3. Projeye **ProgressForm**adlı bir Windows formu ekleyin. Güncelleştirmelerin devam ettiğini belirten bir ileti görüntülenmelidir. Başka bir denetime sahip olmak zorunda değildir.
 
-4. Adım 7 C# ' den sonra gösterilen kodu içeren bir dosya ekleyin.
+4. Adım 7 ' den sonra gösterilen kodu içeren bir C# dosyası ekleyin.
 
 5. Projeyi derleyin ve çalıştırın.
 
-    @No__t_0 yeni bir örneği, deneysel modda başlayacaktır.
+    Yeni bir örneği [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] deneysel modda başlayacaktır.
 
-6. @No__t_0 deneysel örneğinde UML sınıf diyagramı oluşturun veya açın.
+6. Deneysel örneğinde bir UML sınıf diyagramı oluşturun veya açın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 7. UML sınıf diyagramında herhangi bir yere sağ tıklayın ve **bırkaç UML sınıfı Ekle**' ye tıklayın.
 
@@ -185,7 +185,7 @@ namespace BackgroundThreadProgressUI // CHANGE TO YOUR NAMESPACE
 
  `DiagramView uiThreadHolder = context.CurrentDiagram.GetObject<Diagram>().ActiveDiagramView;`
 
- Kullanıcı arabirimi iş parçacığında işlemleri gerçekleştirmek için `uiThreadHolder.Invoke()` kullanabilirsiniz.
+ `uiThreadHolder.Invoke()`Kullanıcı arabirimi iş parçacığında işlemleri gerçekleştirmek için kullanabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  Modelleme diyagramında bir [menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md) [Modelleme diyagramında hareket işleyicisi tanımlama](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)

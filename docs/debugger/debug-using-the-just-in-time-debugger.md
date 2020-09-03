@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 40b6a0e43a8d0980615087c946e5dd14deef1b0b
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350582"
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Visual Studio 'da tam zamanında hata ayıklayıcı kullanarak hata ayıklayın
@@ -26,7 +26,7 @@ Tam zamanında hata ayıklama Windows Masaüstü uygulamaları için geçerlidir
 > [!TIP]
 > Yalnızca tam zamanında hata ayıklayıcı iletişim kutusunun görüntülenmesini durdurmak istiyorsanız ancak Visual Studio yüklü değilse, [tam zamanında hata ayıklayıcıyı devre dışı bırakma](../debugger/just-in-time-debugging-in-visual-studio.md)konusuna bakın. Visual Studio yüklüyse, [Windows kayıt defterinden tam zamanında hata ayıklamayı devre dışı bırakmanız](#disable-just-in-time-debugging-from-the-windows-registry)gerekebilir.
 
-## <a name="enable-or-disable-just-in-time-debugging-in-visual-studio"></a><a name="BKMK_Enabling"></a>Visual Studio 'da tam zamanında hata ayıklamayı etkinleştirme veya devre dışı bırakma
+## <a name="enable-or-disable-just-in-time-debugging-in-visual-studio"></a><a name="BKMK_Enabling"></a> Visual Studio 'da tam zamanında hata ayıklamayı etkinleştirme veya devre dışı bırakma
 
 >[!NOTE]
 >Tam zamanında hata ayıklamayı etkinleştirmek veya devre dışı bırakmak için, Visual Studio 'Yu yönetici olarak çalıştırıyor olmanız gerekir. Tam zamanında hata ayıklamayı etkinleştirmek veya devre dışı bırakmak bir kayıt defteri anahtarı ayarlar ve bu anahtarı değiştirmek için yönetici ayrıcalıkları gerekebilir. Visual Studio 'Yu yönetici olarak açmak için, Visual Studio uygulamasına sağ tıklayın ve **yönetici olarak çalıştır**' ı seçin.
@@ -147,7 +147,7 @@ Bu noktada hata ayıklamayı başlatabilirsiniz. Gerçek bir uygulamada hata ay�
 > [!CAUTION]
 > Uygulamanız güvenilmeyen kod içeriyorsa, hata ayıklamaya devam edip etmeyeceğine karar vermenize olanak sağlayan bir güvenlik uyarısı iletişim kutusu görüntülenir. Hata ayıklamaya devam etmeden önce koda güvenip güvenmeyeceğinizi belirleyin. Kodu kendiniz yazdınız mı? Uygulama uzak bir makinede çalışıyorsa, işlemin adını tanıyor musunuz? Uygulama yerel olarak çalışıyorsa, bilgisayarınızda kötü amaçlı kod çalıştırma olasılığını göz önünde bulundurun. Kodun güvenilir olduğuna karar verirseniz **Tamam**' ı seçin. Aksi takdirde **iptal**' i seçin.
 
-## <a name="troubleshoot-just-in-time-debugging"></a><a name="jit_errors"></a>Tam zamanında hata ayıklama sorunlarını giderme
+## <a name="troubleshoot-just-in-time-debugging"></a><a name="jit_errors"></a> Tam zamanında hata ayıklama sorunlarını giderme
 
 Visual Studio 'da etkinleştirilmiş olsa bile, bir uygulama kilitlenirse tam zamanında hata ayıklama başlamadığında:
 

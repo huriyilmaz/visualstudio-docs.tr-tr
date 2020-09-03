@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetThreadProperties | Microsoft Dokümanlar
+title: 'IDebugThread2:: GetThreadProperties | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f7f81f4b60dfda21ce59ad73076785a37b767873
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718696"
 ---
 # <a name="idebugthread2getthreadproperties"></a>IDebugThread2::GetThreadProperties
-Bu iş parçacığı açıklayan özellikleri alır.
+Bu iş parçacığını tanımlayan özellikleri alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetThreadProperties (
@@ -43,16 +43,16 @@ int GetThreadProperties (
 
 ## <a name="parameters"></a>Parametreler
 `dwFields`\
-[içinde] Hangi alanların doldurulmasını belirleyen [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) numaralandırmadan gelen `ptp` bayrakların birleşimi.
+'ndaki [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) Numaralandırmadaki, doldurulacak alanları belirleyen bayrakların bir birleşimi `ptp` .
 
 `ptp`\
-[içinde, dışarı] İş parçacığının özellikleriyle doldurulmuş bir [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) yapısı.
+[in, out] İş parçacığının özellikleriyle doldurulmuş bir [Threadproperties](../../../extensibility/debugger/reference/threadproperties.md) yapısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yöntemden döndürülen bilgiler genellikle **İş Parçacıkları** hata ayıklama penceresinde gösterilir.
+Bu yöntemden döndürülen bilgiler genellikle **Iş parçacıkları** hata ayıklama penceresinde gösterilir.
 
 ## <a name="example"></a>Örnek
 Aşağıdaki örnek, `CProgram` [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.

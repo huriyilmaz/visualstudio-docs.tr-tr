@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 460277670d76ddcc1001ba2d6060107ea405601e
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350530"
 ---
 # <a name="debugging-a-data-bound-activex-control"></a>Veri Bağımlı ActiveX Denetiminde Hata Ayıklama
@@ -36,4 +36,4 @@ Bir veri kaynağı denetimine bağlanacak bir ActiveX denetimi geliştiriyorsan�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [COM ve ActiveX Hata Ayıklaması](../debugger/com-and-activex-debugging.md)
-- [ActiveX Denetimleri](/cpp/mfc/activex-controls)
+- [ActiveX denetimleri](/cpp/mfc/activex-controls)
