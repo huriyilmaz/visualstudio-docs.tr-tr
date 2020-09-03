@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a495a566f78ceb2b89f8e2070837f038da352a4d
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918875"
 ---
 # <a name="define-a-profile-to-extend-uml"></a>UML’yi genişletmek için profil tanımlama
@@ -41,27 +41,27 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
 > [!NOTE]
 > Bir profilin stereotiplerini düzenlemekte olduğunuz bir modele uygularsanız ve sonra modeli diğer kişilerle paylaşıyorsanız, aynı profili kendi bilgisayarlarına yüklemelidir. Aksi takdirde, kullandığınız stereotiplerin görmeyecektir.
 
- Profil genellikle daha büyük bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] uzantısının bir parçasıdır. Örneğin, bir modelin bazı parçalarını koda çeviren bir komut tanımlayabilirsiniz. Kullanıcıların çevirmek istedikleri paketlere uygulanması gereken bir profil tanımlayabilirsiniz. Yeni komutlarınızı profille birlikte tek bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] uzantısında dağıtırsınız.
+ Profil genellikle daha büyük bir uzantının bir parçasıdır [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] . Örneğin, bir modelin bazı parçalarını koda çeviren bir komut tanımlayabilirsiniz. Kullanıcıların çevirmek istedikleri paketlere uygulanması gereken bir profil tanımlayabilirsiniz. Yeni komutlarınızı profille birlikte tek bir uzantıya dağıtırsınız [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] .
 
  Ayrıca, bir profilin yerelleştirilmiş türevlerini de tanımlayabilirsiniz. Uzantınızı yükleyen kullanıcılar kendi kültürüne uygun olan değişkeni görebilir.
 
-## <a name="DefineProfile"></a>Profil tanımlama
+## <a name="how-to-define-a-profile"></a><a name="DefineProfile"></a> Profil tanımlama
 
 #### <a name="to-define-a-uml-profile"></a>Bir UML profili tanımlamak için
 
-1. `.profile`dosya adı uzantısına sahip yeni bir XML dosyası oluşturun.
+1. Dosya adı uzantısına sahip yeni bir XML dosyası oluşturun `.profile` .
 
 2. [Bir profilin yapısında](#Schema)açıklanan yönergelere göre stereotip tanımları ekleyin.
 
-3. Profili bir Visual Studio uzantısına (`.vsix` dosyasına) ekleyin. Profiliniz için yeni bir uzantı oluşturabilir ya da profili mevcut bir uzantıya ekleyebilirsiniz.
+3. Profili bir Visual Studio uzantısına ( `.vsix` dosya) ekleyin. Profiliniz için yeni bir uzantı oluşturabilir ya da profili mevcut bir uzantıya ekleyebilirsiniz.
 
      [Bir Visual Studio uzantısına profil ekleme](#AddProfile)başlıklı sonraki bölüme bakın.
 
 4. Uzantıyı bilgisayarınıza yükler.
 
-    1. `.vsix`dosya adı uzantısına sahip uzantı dosyasına çift tıklayın.
+    1. Dosya adı uzantısına sahip uzantı dosyasına çift tıklayın `.vsix` .
 
-    2. Visual Studio'yu yeniden başlatın.
+    2. Visual Studio’yu yeniden başlatın.
 
 5. Profilin yüklü olduğunu doğrulayın.
 
@@ -73,9 +73,9 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
 
     4. Profiliniz bu stereotip için ek özellikler tanımlıyorsa, bunları görmek için stereotip özelliğini genişletin.
 
-6. Uzantı dosyasını, bilgisayarlarına yüklemek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] diğer kullanıcılarına gönderin.
+6. Uzantı dosyasını bilgisayarlarına yüklemek için diğer kullanıcılarına gönderin [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
-## <a name="AddProfile"></a>Visual Studio uzantısına profil ekleme
+## <a name="how-to-add-a-profile-to-a-visual-studio-extension"></a><a name="AddProfile"></a> Visual Studio uzantısına profil ekleme
  Bir profil yüklemek ve diğer kullanıcılara göndermenize izin vermek için, profili bir Visual Studio uzantısına eklemeniz gerekir. Daha fazla bilgi için bkz. [Visual Studio uzantılarını dağıtma](https://msdn.microsoft.com/library/dd393694(VS.100).aspx).
 
 #### <a name="to-define-a-profile-in-a-new-visual-studio-extension"></a>Yeni bir Visual Studio uzantısında bir profil tanımlamak için
@@ -83,11 +83,11 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
 1. Visual Studio uzantı projesi oluşturun.
 
    > [!NOTE]
-   > Bu yordamı kullanmak için [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] yüklemiş olmanız gerekir.
+   > [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]Bu yordamı kullanmak için yüklemiş olmanız gerekir.
 
    1. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
 
-   2. **Yeni proje** iletişim kutusunda, **yüklü şablonlar**altında, **görsel C#** ' i, **genişletilebilirlik**' i ve **VSIX projesi**' ne tıklayın. Proje adını ayarlayın ve **Tamam**' a tıklayın.
+   2. **Yeni proje** iletişim kutusunda, **yüklü şablonlar**altında **Visual C#**' yi genişletin, **genişletilebilirlik**' e ve **VSIX projesi**' ne tıklayın. Proje adını ayarlayın ve **Tamam**' a tıklayın.
 
 2. Profilinizi projeye ekleyin.
 
@@ -99,21 +99,21 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
 
    2. Özellikler penceresi, **Çıkış Dizinine Kopyala** özelliğini **her zaman Kopyala**olarak ayarlayın.
 
-4. Çözüm Gezgini ' de `source.extension.vsixmanifest`açın.
+4. Çözüm Gezgini ' de, öğesini açın `source.extension.vsixmanifest` .
 
     Dosya uzantı bildirim düzenleyicisinde açılır.
 
 5. **Varlıklar** sayfasında, profili açıklayan bir satır ekleyin:
 
-   - **Yeni**'yi tıklatın. **Yeni varlık Ekle** iletişim kutusundaki alanları aşağıdaki gibi ayarlayın.
+   - **Yeni**' ye tıklayın. **Yeni varlık Ekle** iletişim kutusundaki alanları aşağıdaki gibi ayarlayın.
 
-   - **Türü** `Microsoft.VisualStudio.UmlProfile` olarak ayarla
+   - **Tür** olarak ayarla`Microsoft.VisualStudio.UmlProfile`
 
         Bu, açılan Seçimlerinizden biri değildir. Bu adı klavyeden girin.
 
-   - **Dosya sisteminde dosya** ' ya tıklayın ve profil dosyanızın adını seçin, örneğin `MyProfile.profile`
+   - **Dosya sisteminde dosya** ' ya tıklayın ve profil dosyanızın adını seçin, örneğin`MyProfile.profile`
 
-6. Projeyi oluşturun.
+6. Projeyi derleyin.
 
 7. **Profilde hata ayıklamak Için**F5 'e basın.
 
@@ -121,27 +121,27 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
 
 8. **Dağıtım için VSıX 'i ayıklamak için**
 
-   1. Windows Gezgini 'nde, **. vsix** dosyasını bulmak için, **\ \Bin\debug** veya. **\bin\Release** klasörünü açın. Bu bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] uzantısı dosyasıdır. Bu, bilgisayarınıza yüklenebilir ve diğer Visual Studio kullanıcılarına gönderilebilir.
+   1. Windows Gezgini 'nde, **. vsix** dosyasını bulmak için, **\ \Bin\debug** veya. **\bin\Release** klasörünü açın. Bu bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] uzantı dosyasıdır. Bu, bilgisayarınıza yüklenebilir ve diğer Visual Studio kullanıcılarına gönderilebilir.
 
    2. Uzantıyı yüklemek için:
 
-       1. `.vsix` dosyasına çift tıklayın. Visual Studio Uzantı Yükleyicisi başlatılır.
+       1. Dosyaya çift tıklayın `.vsix` . Visual Studio Uzantı Yükleyicisi başlatılır.
 
        2. Çalıştıran tüm Visual Studio örneklerini yeniden başlatın.
 
-   [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]yüklemediyseniz, küçük uzantılar için aşağıdaki alternatif yordam kullanılabilir.
+   ' İ yüklemediyseniz, küçük uzantılar için aşağıdaki alternatif yordam kullanılabilir [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] .
 
 #### <a name="to-define-a-profile-extension-without-using-visual-studio-sdk"></a>Visual Studio SDK kullanmadan bir profil uzantısı tanımlamak için
 
 1. Aşağıdaki üç dosyayı içeren bir Windows dizini oluşturun:
 
-    - *Yourprofile* `.profile`
+    - *Yourprofile*`.profile`
 
     - `extension.vsixmanifest`
 
-    - `[Content_Types].xml`, bu adı köşeli ayraç ile burada gösterildiği gibi yazın
+    - `[Content_Types].xml` -Bu adı köşeli ayraç ile burada gösterildiği gibi yazın
 
-2. `[Content_Types].xml` aşağıdaki metni içerecek şekilde düzenleyin. Her dosya adı uzantısı için bir giriş içerdiğine dikkat edin.
+2. `[Content_Types].xml`Aşağıdaki metni içerecek şekilde düzenleyin. Her dosya adı uzantısı için bir giriş içerdiğine dikkat edin.
 
     ```
     <?xml version="1.0" encoding="utf-8"?>
@@ -151,9 +151,9 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
     </Types>
     ```
 
-3. Mevcut bir `extension.vsixmanifest` kopyalayın ve bir XML Düzenleyicisi ile düzenleyin. KIMLIĞI, adı ve Içerik düğümlerini değiştirin.
+3. Var olan bir `extension.vsixmanifest` dosyayı kopyalayın ve BIR XML Düzenleyicisi ile düzenleyin. KIMLIĞI, adı ve Içerik düğümlerini değiştirin.
 
-    - Bu dizinde `extension.vsixmanifest` bir örnek bulabilirsiniz:
+    - Bu dizinde bir örnek bulabilirsiniz `extension.vsixmanifest` :
 
          *sürücü* **: \Program Files\Microsoft Visual Studio [sürüm] \Common7\IDE\Extensions\Microsoft\Architecture Tools\UmlProfiles**
 
@@ -170,19 +170,19 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
 
      Windows Gezgini 'nde üç dosyayı seçin, sağ tıklayın, **Gönder**' in üzerine gelin ve ardından **Sıkıştırılmış (daraltılmış) klasör**' e tıklayın.
 
-5. Daraltılmış dosyayı yeniden adlandırıp `.zip` dosya adı uzantısını `.vsix`olarak değiştirin.
+5. Daraltılmış dosyayı yeniden adlandırın ve dosya adı uzantısını `.zip` olarak değiştirin `.vsix` .
 
-6. Profili, Visual Studio 'nun uygun sürümleriyle herhangi bir bilgisayara yüklemek için `.vsix` dosyasına çift tıklayın.
+6. Profili, Visual Studio 'nun uygun sürümleriyle herhangi bir bilgisayara yüklemek için dosyasına çift tıklayın `.vsix` .
 
 #### <a name="to-install-a-uml-profile-from-a-visual-studio-extension"></a>Bir Visual Studio uzantısı 'ndan bir UML profili yüklemek için
 
-1. Windows Gezgini 'nde `.vsix` dosyasına çift tıklayın veya Visual Studio içinde açın.
+1. `.vsix`Windows Gezgini 'nde dosyaya çift tıklayın veya Visual Studio içinde açın.
 
 2. Görüntülenen iletişim kutusunda, **yüklensin** ' e tıklayın.
 
 3. Uzantıyı kaldırmak veya geçici olarak devre dışı bırakmak için, **Araçlar** menüsünden **Uzantılar ve güncelleştirmeler** ' i açın.
 
-## <a name="Localized"></a>Yerelleştirilmiş profilleri tanımlama
+## <a name="how-to-define-localized-profiles"></a><a name="Localized"></a> Yerelleştirilmiş profilleri tanımlama
  Farklı kültürler ve diller için farklı profiller tanımlayabilir ve bunların tümünü aynı uzantıya paketleyebilirsiniz. Bir Kullanıcı uzantınızı yüklediğinde, kültürü için tanımladığınız profili görürler.
 
  Her zaman bir varsayılan profil sağlamanız gerekir. Kullanıcının kültürü için bir profil tanımlamadıysanız, varsayılan profili görürler.
@@ -196,11 +196,11 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
     > [!NOTE]
     > Uzantıyı bir Visual Studio uzantısı projesi kullanarak oluşturuyorsanız, projeye yeni bir klasör eklemek için Çözüm Gezgini kullanın.
 
-3. Yeni dizinin adını, yerelleştirilmiş kültürün (Bulgarca için `bg` veya Fransızca için `fr`) ISO kısa kodu olarak değiştirin. `fr-CA`gibi belirli bir kültürün değil, genellikle iki harf olan bağımsız bir kültür kodu kullanmanız gerekir. Kültür kodları hakkında daha fazla bilgi için, kültür kodlarının tamamen bir listesini sağlayan [CultureInfo. Getkültürleri yöntemine](https://msdn.microsoft.com/library/system.globalization.cultureinfo.getcultures(VS.100).aspx)bakın.
+3. Yeni dizinin adını, Bulgarca veya Fransızca gibi yerelleştirilmiş kültürün ISO kısa kodu olarak değiştirin `bg` `fr` . Gibi belirli bir kültür değil, genellikle iki harf olmak üzere bağımsız bir kültür kodu kullanmanız gerekir `fr-CA` . Kültür kodları hakkında daha fazla bilgi için, kültür kodlarının tamamen bir listesini sağlayan [CultureInfo. Getkültürleri yöntemine](https://msdn.microsoft.com/library/system.globalization.cultureinfo.getcultures(VS.100).aspx)bakın.
 
 4. Varsayılan profilinizin bir kopyasını yeni dizine ekleyin. Dosya adını değiştirmeyin.
 
-     Örnek bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] uzantısı klasörü, bir `.vsix` dosyasına oluşturulmadan veya sıkıştırılmadan önce, aşağıdaki klasörleri ve dosyaları içerir:
+     Örnek [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] bir uzantı klasörü, bir dosyaya oluşturulmadan veya sıkıştırılmadan önce, `.vsix` aşağıdaki klasörleri ve dosyaları içerir:
 
      `extension.vsixmanifest`
 
@@ -211,21 +211,21 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
      `de\MyProfile.profile`
 
     > [!NOTE]
-    > Profillerin yerelleştirilmiş sürümlerine başvuru `extension.vsixmanifest` içine eklememelisiniz. Kopyalanan profil dosyaları üst klasördeki profille aynı ada sahip olmalıdır.
+    > `extension.vsixmanifest`Profillerin yerelleştirilmiş sürümlerine bir başvuruya eklememelisiniz. Kopyalanan profil dosyaları üst klasördeki profille aynı ada sahip olmalıdır.
 
-5. `displayName` öznitelikleri gibi, kullanıcıya görünür olacak tüm parçaları hedef dile çevirerek profilin yeni kopyasını düzenleyin.
+5. Profilin yeni kopyasını düzenleyerek, Kullanıcı tarafından görünür olacak tüm parçalar hedef dile, örneğin `displayName` öznitelikler gibi.
 
 6. İstediğiniz sayıda kültür için ek kültür klasörleri ve yerelleştirilmiş profiller oluşturabilirsiniz.
 
 7. Uzantı projesini oluşturarak ya da önceki bölümlerde açıklandığı gibi tüm dosyaları sıkıştırarak Visual Studio uzantısı oluşturun.
 
-## <a name="Schema"></a>Bir profilin yapısı
+## <a name="the-structure-of-a-profile"></a><a name="Schema"></a> Bir profilin yapısı
 
  Profil dosyalarını düzenlemenize yardımcı olması için `.xsd` dosyasını içine yükleyebilirsiniz:
 
  **%ProgramFiles%\Microsoft Visual Studio [sürüm] \Xml\Schemas**
 
- Bu bölüm bir örnek C# olarak profili kullanır. Tüm profil tanımı şu şekilde görülebilir:
+ Bu bölüm örnek olarak C# profilini kullanır. Tüm profil tanımı şu şekilde görülebilir:
 
  *sürücü* **: \Program Files\Microsoft Visual Studio [Version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\umlprofiles\csharp.exe**
 
@@ -248,18 +248,18 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
 ```
 
 > [!NOTE]
-> `name` adlı öznitelik boşluk veya noktalama işareti içermemelidir. Kullanıcı arabiriminde görünen `displayName`özniteliği geçerli bir XML dizesi olmalıdır.
+> Çağrılan öznitelik `name` boşluk veya noktalama işareti içermemelidir. `displayName`Kullanıcı arabiriminde görünen özniteliği geçerli BIR XML dizesi olmalıdır.
 
  Her profil üç ana bölüm içerir. Ters sırada bunlar aşağıdaki gibidir:
 
-- `<propertyTypes>`-stereotipler bölümünde tanımlanan özellikler için kullanılan türlerin listesi.
+- `<propertyTypes>` -Stereotipler bölümünde tanımlanan özellikler için kullanılan türlerin listesi.
 
-- `<metaclasses>`-Bu profildeki stereotiplerin uygulandığı, IClass, IInterface, IOperation, IDependency gibi model öğe türlerinin listesi.
+- `<metaclasses>` -Bu profildeki stereotiplerin uygulandığı, IClass, IInterface, IOperation, IDependency gibi model öğe türlerinin listesi.
 
-- `<stereotypes>`-stereotip tanımları. Her tanım, hedef model öğesine eklenen özelliklerin adlarını ve türlerini içerir.
+- `<stereotypes>` -stereotip tanımları. Her tanım, hedef model öğesine eklenen özelliklerin adlarını ve türlerini içerir.
 
 #### <a name="property-types"></a>Özellik Türleri
- `<propertyTypes>` bölümü, `<stereotypes>` bölümündeki özellikler için kullanılan türlerin bir listesini bildirir. İki tür özellik türü vardır: dış ve sabit listesi.
+ `<propertyTypes>`Bölümü bölümünde özellikler için kullanılan türlerin bir listesini bildirir `<stereotypes>` . İki tür özellik türü vardır: dış ve sabit listesi.
 
  Dış tür, standart bir .NET türünün tam nitelikli adını bildirir:
 
@@ -279,7 +279,7 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
 ```
 
 #### <a name="metaclasses"></a>Metaclasses
- `<metaclasses>` bölümü, bu profildeki stereotiplerin tanımlanbileceği model öğesi türlerinin bir listesidir:
+ `<metaclasses>`Bölüm, bu profildeki stereotiplerin tanımlanbileceği model öğesi türlerinin bir listesidir:
 
 ```
 <metaclass
@@ -293,13 +293,13 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
  Meta sınıflar olarak kullanabileceğiniz model öğesi ve ilişki türlerinin tam listesi için bkz. [model öğe türleri](#Elements).
 
 #### <a name="stereotype-definition"></a>Stereotip tanımı
- `<stereotypes>` bölümü bir veya daha fazla stereotip tanımı içerir:
+ `<stereotypes>`Bölüm bir veya daha fazla stereotip tanımı içerir:
 
 ```
 <stereotype name="CSharpClass" displayName="C# Class"> ...
 ```
 
- Her stereotip, uygulanabilecek bir veya daha fazla model öğesi ya da ilişki türlerini listeler. Tüm türetilmiş türlerini dahil etmek için temel türün adına izin verebilirsiniz. Örneğin, `Microsoft.VisualStudio.Uml.Classes.IType`belirtirseniz, stereotip `IClass`, `IInterface`, `IEnumeration`ve diğer birçok öğe türü için uygulanabilir.
+ Her stereotip, uygulanabilecek bir veya daha fazla model öğesi ya da ilişki türlerini listeler. Tüm türetilmiş türlerini dahil etmek için temel türün adına izin verebilirsiniz. Örneğin, öğesini belirtirseniz, stereotip,, `Microsoft.VisualStudio.Uml.Classes.IType` `IClass` `IInterface` `IEnumeration` ve diğer birçok öğe türü için uygulanabilir.
 
 ```
 <metaclasses>
@@ -308,12 +308,12 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
 </metaclasses>
 ```
 
- `metaclassMoniker` `name` özniteliği, `<metaClasses>` bölümündeki bir öğenin bağlantı öğesidir.
+ `name`Özniteliği, `metaclassMoniker` bölümündeki bir öğenin bağlantıdır `<metaClasses>` .
 
 > [!NOTE]
-> Bilinen ad adının `/yourProfileName/`ile başlaması gerekir, burada `yourProfileName` profilin `name` özniteliğinde tanımlanmıştır (Bu örnekteki "CSharpProfile"). Bilinen ad, Metaclasses bölümündeki girdilerden birinin adıyla biter.
+> Bilinen ad adı `/yourProfileName/` , `yourProfileName` `name` (Bu örnekte "CSharpProfile") profil özniteliğinde tanımlandığı, ile başlamalıdır. Bilinen ad, Metaclasses bölümündeki girdilerden birinin adıyla biter.
 
- Her stereotip, uygulandığı herhangi bir model öğesine eklediği sıfır veya daha fazla özelliği listeleyebilir. `<propertyType>`, `<propertyTypes>` bölümünde tanımlanan türlerden birine bir bağlantı içerir. Bağlantı, bir `<enumerationType>`başvurmak için bir `<externalType>,` ya da bir `<enumerationTypeMoniker>` başvurmak üzere bir `<externalTypeMoniker>` olmalıdır. Yine, bağlantı profilinizin adıyla başlar.
+ Her stereotip, uygulandığı herhangi bir model öğesine eklediği sıfır veya daha fazla özelliği listeleyebilir. , `<propertyType>` Bölümünde tanımlanan türlerden birine bir bağlantı içerir `<propertyTypes>` . Bağlantı, bir veya öğesine başvurmak için bir `<externalTypeMoniker>` `<externalType>,` veya bir içermelidir `<enumerationTypeMoniker>` `<enumerationType>` . Yine, bağlantı profilinizin adıyla başlar.
 
 ```
   <properties>
@@ -336,7 +336,7 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
 </stereotype>
 ```
 
-## <a name="Elements"></a>Model öğe türleri
+## <a name="model-element-types"></a><a name="Elements"></a> Model öğe türleri
  Stereotipleri tanımlayabilmeniz gereken türler kümesi [UML model öğe türlerinde](../modeling/uml-model-element-types.md)listelenmiştir.
 
 ## <a name="troubleshooting"></a>Sorun giderme
@@ -348,22 +348,22 @@ Profilinizi bir paket veya modelde seçmeniz gerekir. Stereotipler daha sonra pa
 
 2. Her bir bilinen ad adının/profileName/nodeName. biçimde olduğundan emin olun ProfileName, kök profili düğümündeki ad özniteliğinin değeridir. Düğüme, bir Metaclass, externalType veya enumerationType ad özniteliğinin değeridir.
 
-3. Sözdiziminin burada açıklandığı gibi olduğundan ve _sürücüde_gösterildiği gibi **: \Program Files\Microsoft Visual Studio [Version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\UmlProfiles\\** .
+3. Sözdiziminin burada açıklandığı gibi ve _sürücüde_gösterildiği gibi olduğundan emin olun **: \Program Files\Microsoft Visual Studio [Version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\UmlProfiles \\ **.
 
-4. Hatalı uzantıyı kaldırın. Üzerinde **Araçları** menüsünü tıklatın **Uzantılar ve güncelleştirmeler**.
+4. Hatalı uzantıyı kaldırın. **Araçlar** menüsünde **Uzantılar ve Güncelleştirmeler**’e tıklayın.
 
    - Uzantı görünmezse bir sonraki öğeye bakın.
 
-5. VSıX dosyasını yeniden oluşturun ve yeniden yüklemek için Windows Gezgini 'nde açın. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]yeniden başlatın.
+5. VSıX dosyasını yeniden oluşturun ve yeniden yüklemek için Windows Gezgini 'nde açın. Yeniden başlatın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
    Uzantı, Uzantı Yöneticisi 'nde görünmez, ancak yeniden yüklemeye çalıştığınızda aşağıdaki ileti görüntülenir: **uzantı zaten tüm ilgili ürünlere yüklenmiş.**
-   1. Uzantı dosyasını *LocalAppData*\microsoft\visualstudio\\[Version] \ Extensions\ alt klasöründen Kaldır
+   1. Uzantı dosyasını *LocalAppData*\microsoft\visualstudio \\ [Version] \ extensions\ alt klasöründen Kaldır
 
    - *LocalAppData*görmek Için, Windows Gezgini klasör seçeneklerinin Görünüm sekmesinde gizli dosyaları ve klasörleri göster ' i ayarlamanız gerekir.
 
-   - *LocalAppData* , genellikle C:\Users\\*UserName*\appdata\local\ konumunda
+   - *LocalAppData* genellikle C:\Users \\ *Kullanıcı adı*\appdata\local\ ' de
 
-6. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]yeniden başlatın.
+6. Yeniden başlatın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [UML model öğelerine stereotipler ekleme](../modeling/add-stereotypes-to-uml-model-elements.md) [modellerinizi PROFILLER ve](../modeling/customize-your-model-with-profiles-and-stereotypes.md) bir [UML modeli için standart stereotiplerle](../modeling/standard-stereotypes-for-uml-models.md) özelleştirme

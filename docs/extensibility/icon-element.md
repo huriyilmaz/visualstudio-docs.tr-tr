@@ -1,5 +1,5 @@
 ---
-title: Simge Öğesi | Microsoft Dokümanlar
+title: Icon öğesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +12,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: cf4f8a69e565620007fba4b9970ce96bb1513995
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80710515"
 ---
-# <a name="icon-element"></a>Simge öğesi
-Simge etiketinin kılavuz özelliği, tanımlı bir bit eşleninin guid'idir. Öznitelik `id` bitmap şeritteki yuvayı seçer. Bu öğe isteğe bağlıdır. Bu öğe **guidOfficeIcon:msotcidNoIcon** değeri dahil değilse ima edilecektir.
+# <a name="icon-element"></a>Icon öğesi
+Simge etiketinin GUID özniteliği, tanımlı bir bit eşlemin GUID 'sidir. `id`Özniteliği, bit eşlem şeridinde yuva seçer. Bu öğe isteğe bağlıdır. Bu öğe GuidOfficeIcon değerini içeriyorsa, **Msotcıdnoıcon** dahil edilir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Icon guid="guidImages" id="bmpPic1" />
@@ -34,8 +34,8 @@ Simge etiketinin kılavuz özelliği, tanımlı bir bit eşleninin guid'idir. Ö
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Guıd|Gereklidir. Tanımlı bit eşleminin guid.|
-|id|Gereklidir. Bitmap şeridindeki yuvayı seçer.|
+|guid|Gereklidir. Tanımlı bir bit eşlemin GUID 'si.|
+|kimlik|Gereklidir. Bit eşlem şeridinde yuva seçer.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -50,4 +50,4 @@ Simge etiketinin kılavuz özelliği, tanımlı bir bit eşleninin guid'idir. Ö
 |[Düğmeler öğesi](../extensibility/buttons-element.md)||
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio komut tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

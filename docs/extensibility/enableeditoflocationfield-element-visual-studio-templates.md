@@ -1,5 +1,5 @@
 ---
-title: EnableEditOfLocationField Element (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: EnableEditOfLocationField öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -12,18 +12,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0e15e2f5c070b8a8c565497c6ba3fc6490b87591
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80712002"
 ---
 # <a name="enableeditoflocationfield-element-visual-studio-templates"></a>EnableEditOfLocationField öğesi (Visual Studio şablonları)
-Kullanıcının konum alanını edinip bulalıp kullanaamayacağı belirtilir.
+Kullanıcının konum alanını düzenleyip düzenleyebiliyorsanız belirtir.
 
- \<VSTemplate \<> ŞablonVeri> \<EnableEditOfLocationField>
+ \<VSTemplate> \<TemplateData>
+ \<EnableEditOfLocationField>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <EnableEditOfLocationField> true/false </EnableEditOfLocationField>
@@ -33,29 +34,29 @@ Kullanıcının konum alanını edinip bulalıp kullanaamayacağı belirtilir.
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
 ### <a name="attributes"></a>Öznitelikler
- None
+ Hiçbiri
 
 ### <a name="child-elements"></a>Alt öğeleri
- None
+ Hiçbiri
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırın ve Yeni **Proje'de** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleyeceğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Metin, `true` `false`kullanıcının **Yeni Proje** iletişim kutusundaki **Konum** metin kutusunu düzenlemesine gerek olup olmadığını belirten olmalıdır.
+ Metin ya da `true` `false` kullanıcının **Yeni proje** iletişim kutusunda **konum** metin kutusunu düzenleyip düzenleyemeyeceğini belirten bir veya daha fazla olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
- `EnableEditOfLocationField`isteğe bağlı bir unsurdur. Varsayılan `true`değer, kullanıcının **Yeni Proje** iletişim kutusundaki **Konum** metin kutusundaki değeri düzenlemesine olanak tanır.
+ `EnableEditOfLocationField` isteğe bağlı bir öğedir. Varsayılan değer `true` , kullanıcının **Yeni proje** iletişim kutusundaki **konum** metin kutusunda bulunan değeri düzenlemesine izin verir.
 
- Yeni **Proje** iletişim kutusunda, **Konum** metin kutusu yeni bir projenin kaydedildiği dizini belirtir.
+ **Yeni proje** Iletişim kutusunda **konum** metin kutusu yeni projenin kaydedildiği dizini belirtir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows uygulamasının meta verileri gösteriş verilmiştir.
+ Aşağıdaki örnek, bir Windows uygulaması için meta verileri gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -84,5 +85,5 @@ Kullanıcının konum alanını edinip bulalıp kullanaamayacağı belirtilir.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
-- [Proje ve madde şablonları oluşturma](../ide/creating-project-and-item-templates.md)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

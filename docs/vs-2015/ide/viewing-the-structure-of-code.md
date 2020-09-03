@@ -29,10 +29,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1a860fbb88bb15786fad5fdf277f8f65b245056b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545021"
 ---
 # <a name="viewing-the-structure-of-code"></a>Kod Yapısını Görüntüleme
@@ -57,7 +57,7 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 > [!NOTE]
 > Visual Studio sürümü ve kullandığınız ayarlar IDE 'deki özellikleri etkileyebilir. Bu konu başlığı altında açıklananlardan farklı olabilirler.
 
-## <a name="class-view-visual-basic-c-c"></a><a name="BKMK_ClassView"></a>Sınıf Görünümü (Visual Basic, C#, C++)
+## <a name="class-view-visual-basic-c-c"></a><a name="BKMK_ClassView"></a> Sınıf Görünümü (Visual Basic, C#, C++)
  **Sınıf görünümü** , **Çözüm Gezgini** bir parçası olarak ve ayrı bir pencerede gösterilir. **Sınıf görünümü** pencere, bir uygulamanın öğelerini görüntüler. Üstteki bölmede ad alanları, türler, arabirimler, numaralandırmalar ve sınıflar görüntülenir ve alt bölmede üst bölmede seçilen türe ait Üyeler görüntülenir. Bu pencereyi kullanarak, kaynak kodundaki üye tanımlarına (veya öğe çözümünüz dışında tanımlanmışsa **nesne tarayıcısı** taşıyabilirsiniz) geçebilirsiniz.
 
  **Sınıf görünümü**öğelerini görüntülemek için bir proje derlemek zorunda değilsiniz. Projenizdeki kodu değiştirirken pencere yenilenir.
@@ -69,7 +69,7 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 ### <a name="class-view-toolbar"></a>Sınıf Görünümü araç çubuğu
  Sınıf Görünümü araç çubuğu aşağıdaki komutları içerir.
 
-|Komut|Description|
+|Komut|Açıklama|
 |-|-|
 |**Yeni klasör**|Sık kullanılan öğeleri düzenleyebileceğiniz bir sanal klasör veya alt klasör oluşturur. Bunlar, etkin çözüm (. suo) dosyasına kaydedilir. Kodunuzda bir öğeyi yeniden adlandırdıktan veya sildikten sonra, bir sanal klasörde hata düğümü olarak görünebilir. Bu sorunu düzeltmek için, hata düğümünü silin. Bir öğeyi yeniden adlandırdıysanız proje hiyerarşisinden klasörü yeniden klasöre taşıyabilirsiniz.|
 |**Geri**|Daha önce seçilen öğeye gider.|
@@ -79,7 +79,7 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 ### <a name="class-view-settings"></a>Sınıf Görünümü ayarları
  Araç çubuğundaki **Sınıf Görünümü ayarları** düğmesi aşağıdaki ayarlara sahiptir.
 
-|Name|Description|
+|Ad|Açıklama|
 |-|-|
 |**Temel türleri göster**|Temel türler görüntülenir.|
 |**Türetilmiş türleri göster**|Türetilmiş türler görüntülenir.|
@@ -94,7 +94,7 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 ### <a name="class-view-shortcut-menu"></a>Sınıf Görünümü kısayol menüsü
  **Sınıf görünümü** kısayol menüsü, seçilen proje türüne bağlı olarak aşağıdaki komutları içerebilir.
 
-|Komut|Description|
+|Komut|Açıklama|
 |-|-|
 |**Tanıma Git**|Öğe açık projede tanımlanmamışsa, kaynak kodundaki veya **nesne tarayıcısı**içindeki öğenin tanımını bulur.|
 |**Tanıma gözatatıon**|**Nesne tarayıcısı**seçili öğeyi görüntüler.|
@@ -110,7 +110,7 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 |**Başvuruya git**|Varsa, kaynak kodundaki tür veya üyenin başvurusunu görüntüler.|
 |**Çağrı hiyerarşisini görüntüle**|Seçilen yöntemi **çağrı hiyerarşisi** penceresinde görüntüler.|
 
-## <a name="call-hierarchy-visual-basic-c-c"></a><a name="BKMK_CallHierarchy"></a>Çağrı hiyerarşisi (Visual Basic, C#, C++)
+## <a name="call-hierarchy-visual-basic-c-c"></a><a name="BKMK_CallHierarchy"></a> Çağrı hiyerarşisi (Visual Basic, C#, C++)
  **Çağrı hiyerarşisi** penceresi, belirli bir yöntemin (veya özelliğin veya oluşturucunun) nerede çağrıldığını gösterir ve bu yöntemden çağrılan yöntemleri listeler. Belirli bir kapsamdaki Yöntemler arasında arayan/çağrılan ilişkilerini gösteren çağrı grafiğinin birden çok düzeyini görüntüleyebilirsiniz.
 
  **Çağrı hiyerarşisi** penceresini bir Yöntem (veya özellik veya Oluşturucu) seçerek ve ardından kısayol menüsünde **sınıf hiyerarşisini görüntüle** ' yi seçerek görüntüleyebilirsiniz. Ekran aşağıdaki resme benzemelidir.
@@ -125,7 +125,7 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 
  **Çağrı hiyerarşisi** penceresindeki kısayol menüsü aşağıdaki komutları içerir.
 
-|Komut|Description|
+|Komut|Açıklama|
 |-|-|
 |**Yeni kök olarak ekle**|Seçili düğümü yeni bir kök düğüm olarak ekler.|
 |**Kökü Kaldır**|Seçili kök düğümü ağaç görünümü bölmesinden kaldırır.|
@@ -134,7 +134,7 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 |**Kopyala**|Seçili düğümü kopyalar (alt düğümlerini değil).|
 |**Yenile**|Bilgileri yeniler.|
 
-## <a name="object-browser"></a><a name="BKMK_ObjectBrowser"></a>Nesne Tarayıcısı
+## <a name="object-browser"></a><a name="BKMK_ObjectBrowser"></a> Nesne Tarayıcısı
  **Nesne tarayıcısı** , projelerinizdeki kodun açıklamalarını görüntüler.
 
  **Nesne tarayıcısı**görüntülemek istediklerinizi filtreleyebilirsiniz. Pencerenin üst kısmındaki aşağı açılan listeyi kullanarak aşağıdaki seçenekler arasından seçim yapabilirsiniz:
@@ -160,7 +160,7 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 ### <a name="object-browser-settings"></a>Nesne Tarayıcısı ayarları
  Araç çubuğundaki **nesne tarayıcısı ayarları** düğmesini kullanarak, aşağıdaki görünümlerden birini belirtebilirsiniz.
 
-|Name|Description|
+|Ad|Açıklama|
 |-|-|
 |**Ad alanlarını görüntüle**|Sol bölmedeki fiziksel kapsayıcılar yerine ad alanlarını görüntüler. Birden fazla fiziksel kapsayıcıda depolanan ad alanları birleştirilir.|
 |**Kapsayıcıları görüntüle**|Sol bölmedeki ad alanları yerine fiziksel kapsayıcıları görüntüler. **Ad alanlarını** ve **Görünüm kapsayıcılarını** görüntüleme birbirini dışlamalı ayarlar.|
@@ -177,7 +177,7 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 ### <a name="object-browser-shortcut-menu-commands"></a>Nesne Tarayıcısı kısayol menü komutları
  **Nesne tarayıcısı** kısayol menüsünde, seçilen öğenin türüne bağlı olarak aşağıdaki komutlar bulunabilir.
 
-|Komut|Description|
+|Komut|Açıklama|
 |-|-|
 |**Tanıma gözatatıon**|Seçili öğenin birincil düğümünü gösterir.|
 |**Tüm Başvuruları Bul**|Şu anda seçili olan nesne öğesini bulur ve sonuçları **Bul sonuçları** penceresinde görüntüler.|
@@ -193,7 +193,7 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 |**Başvuruya git**|Varsa, kaynak kodundaki tür veya üyenin başvurusunu görüntüler.|
 |**Çağrı hiyerarşisini görüntüle**|Seçilen yöntemi **çağrı hiyerarşisi** penceresinde görüntüler.|
 
-## <a name="code-definition-window-c-c"></a><a name="BKMK_CodeDefinition"></a>Kod tanımı penceresi (C#, C++)
+## <a name="code-definition-window-c-c"></a><a name="BKMK_CodeDefinition"></a> Kod tanımı penceresi (C#, C++)
  **Kod tanımı** penceresi, etkin projedeki seçili bir türün veya üyenin tanımını görüntüler. Tür veya üye kod düzenleyicisinde veya bir kod görünümü penceresinde seçilebilir.
 
  Bu pencere salt okunurdur, ancak içinde kesme noktaları veya yer işaretleri ayarlayabilirsiniz. Görüntülenmiş tanımı değiştirmek için kısayol menüsünde **tanımı Düzenle** ' yi seçin. Bu, kaynak dosyayı kod düzenleyicisinde açar ve ekleme noktasını tanımın başladığı satıra taşıdır.
@@ -201,7 +201,7 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 ### <a name="code-definition-shortcut-menu"></a>Kod tanımı kısayol menüsü
  **Kod tanımı** penceresindeki kısayol menüsü, programlama diline bağlı olarak aşağıdaki komutları içerebilir.
 
-|Komut|Description|
+|Komut|Açıklama|
 |-|-|
 |**Birim testleri oluşturma**|Seçili öğe için birim testleri oluşturur.|
 |**Sıralı diyagram oluştur**|Bir yöntem seçildiğinde, bir sıralı diyagram oluşturur.|

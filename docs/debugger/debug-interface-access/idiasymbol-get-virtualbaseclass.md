@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 859a8d7696cf1b1ebc3932f41713a988558efd96
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461464"
 ---
 # <a name="idiasymbolget_virtualbaseclass"></a>IDiaSymbol::get_virtualBaseClass
@@ -33,7 +33,7 @@ HRESULT get_virtualBaseClass ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE`Kullanıcı tanımlı veri türünün bir sanal temel sınıf olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .
+dışı `TRUE` Kullanıcı tanımlı veri türünün bir sanal temel sınıf olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.

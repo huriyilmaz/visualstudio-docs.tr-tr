@@ -1,5 +1,5 @@
 ---
-title: Dosya Durum Kodu KodLayıcı | Microsoft Dokümanlar
+title: Dosya durum kodu numaralandırıcısı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,16 +14,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 184c8686ea184aea2cbd0a64873718cbe72f7615
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711447"
 ---
-# <a name="file-status-code-enumerator"></a>Dosya durum kodu sayısallaştırıcı
-Yerumerator `SccStatus` kaynak denetim sisteminde bir dosyanın durumunu belirten adlı sabit değerler içerir. Bu numaralandırma [SccQueryInfo](../extensibility/sccqueryinfo-function.md) ve `POPLISTFUNC` geri arama işlevi tarafından kullanılır (ayrıntılar için [POPLISTFUNC'a](../extensibility/poplistfunc.md) bakın).
+# <a name="file-status-code-enumerator"></a>Dosya durum kodu numaralandırıcısı
+`SccStatus`Numaralandırıcı, kaynak denetim sistemindeki bir dosyanın durumunu belirten adlandırılmış sabit değerler içeriyor. Bu numaralandırma, [SccQueryInfo](../extensibility/sccqueryinfo-function.md) ve callback işlevi tarafından kullanılır `POPLISTFUNC` (Ayrıntılar Için bkz. [poplistfunc](../extensibility/poplistfunc.md) ).
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 enum SccStatus {
@@ -49,43 +49,43 @@ enum SccStatus {
 ```
 
 ## <a name="members"></a>Üyeler
- SCC_STATUS_INVALID Durum elde edilemedi; buna güvenmeyin.
+ SCC_STATUS_INVALID durumu alınamadı; Bu uygulamayı kullanmayın.
 
- SCC_STATUS_NOTCONTROLLED Dosya kaynak denetimi altında değildir.
+ SCC_STATUS_NOTCONTROLLED dosya kaynak denetimi altında değil.
 
- SCC_STATUS_CONTROLLED Dosya kaynak denetimi altındadır.
+ SCC_STATUS_CONTROLLED dosya kaynak denetimi altında.
 
- SCC_STATUS_CHECKEDOUT Yerel diskte geçerli kullanıcı tarafından kullanıma alındı.
+ SCC_STATUS_CHECKEDOUT yerel diskteki geçerli kullanıcı tarafından kullanıma alındı.
 
- SCC_STATUS_OUTOTHER Dosyası başka bir kullanıcı tarafından kullanıma alındı.
+ SCC_STATUS_OUTOTHER dosya başka bir kullanıcı tarafından kullanıma alındı.
 
- SCC_STATUS_OUTEXCLUSIVE Dosyası yalnızca kullanıma alındı.
+ SCC_STATUS_OUTEXCLUSIVE dosya özel olarak kullanıma alındı.
 
- SCC_STATUS_OUTMULTIPLE Dosyası birden fazla kullanıcı tarafından kullanıma alındı.
+ SCC_STATUS_OUTMULTIPLE dosya birden fazla kullanıcı tarafından kullanıma alındı.
 
- SCC_STATUS_OUTOFDATE Dosya en son değil.
+ SCC_STATUS_OUTOFDATE dosya en güncel değil.
 
- SCC_STATUS_DELETED Dosyası projeden silindi.
+ SCC_STATUS_DELETED dosya projeden silindi.
 
- SCC_STATUS_LOCKED Dosya kilitli; başka sürümizin verilmemektedir.
+ SCC_STATUS_LOCKED dosya kilitli; daha fazla sürüm izni yok.
 
- SCC_STATUS_MERGED Dosyası birleştirilmiştir, ancak henüz düzeltilmedi/doğrulanmadı.
+ SCC_STATUS_MERGED dosya birleştirildi ancak henüz düzeltilmedi/doğrulanmadı.
 
- SCC_STATUS_SHARED Dosyası projeler arasında paylaşılır.
+ SCC_STATUS_SHARED dosya projeler arasında paylaşılır.
 
- SCC_STATUS_PINNED Dosya açık bir sürümle paylaşılır.
+ SCC_STATUS_PINNED dosya açık bir sürümle paylaşılıyor.
 
- SCC_STATUS_MODIFIED Dosyası değiştirildi/kırıldı/ihlal edildi.
+ SCC_STATUS_MODIFIED Dosya değiştirilmiş/bozuk/ihlal edildi.
 
- SCC_STATUS_OUTBYUSER Dosya geçerli kullanıcı tarafından kullanıma alındı.
+ SCC_STATUS_OUTBYUSER dosya geçerli kullanıcı tarafından kullanıma alındı.
 
- SCC_STATUS_NOMERGE Dosyası hiçbir zaman birleştirilebilir ve GET'den önce kaydedilmesi gerekmez.
+ SCC_STATUS_NOMERGE dosya hiçbir şekilde birleştirilemez ve bir GET öncesinde kaydedilmemelidir.
 
- SCC_STATUS_RESERVED_1 dahili kullanım için ayrılmıştır.
+ SCC_STATUS_RESERVED_1 iç kullanım için ayrılmıştır.
 
- SCC_STATUS_RESERVED_2 dahili kullanım için ayrılmıştır.
+ SCC_STATUS_RESERVED_2 iç kullanım için ayrılmıştır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak kontrol eklentileri](../extensibility/source-control-plug-ins.md)
+- [Kaynak denetimi eklentileri](../extensibility/source-control-plug-ins.md)
 - [SccQueryInfo](../extensibility/sccqueryinfo-function.md)
 - [POPLISTFUNC](../extensibility/poplistfunc.md)

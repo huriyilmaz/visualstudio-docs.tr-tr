@@ -1,5 +1,5 @@
 ---
-title: Proje Özelliklerini Alma | Microsoft Dokümanlar
+title: Proje özelliklerini alma | Microsoft Docs
 ms.date: 3/16/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,31 +12,31 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9ddfd48827bc762c9189f9b7600cfe9200e5c866
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711406"
 ---
-# <a name="get-project-properties"></a>Proje özelliklerini alma
+# <a name="get-project-properties"></a>Proje özelliklerini al
 
-Bu gözden geçirme, proje özelliklerini bir araç penceresinde nasıl görüntülenebildiğini gösterir.
+Bu izlenecek yol, bir araç penceresinde proje özelliklerinin nasıl görüntüleneceğini gösterir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-Visual Studio 2015'ten itibaren Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak yer almaktadır. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için Visual [Studio SDK'yı yükleyin.](../extensibility/installing-the-visual-studio-sdk.md)
+Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
-### <a name="to-create-a-vsix-project-and-add-a-tool-window"></a>VSIX Projesi oluşturmak ve bir araç penceresi eklemek için
+### <a name="to-create-a-vsix-project-and-add-a-tool-window"></a>Bir VSıX projesi oluşturmak ve araç penceresi eklemek için
 
-1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSIX dağıtım projesiyle başlar. Adlı `ProjectPropertiesExtension` [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir VSIX projesi oluşturun. "vsix" aramasını yaparak **VSIX** proje şablonunu Yeni Proje iletişim kutusunda bulabilirsiniz.
+1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSıX dağıtım projesiyle başlar. Adlı bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX projesi oluşturun `ProjectPropertiesExtension` . "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
 
-2. Özel Araç Penceresi öğesi şablonu ekleyerek `ProjectPropertiesToolWindow`bir araç penceresi ekleyin. Çözüm **Gezgini'nde**proje düğümüne sağ tıklayın ve**Yeni Öğe** **Ekle'yi** > seçin. Yeni **Öğe Ekle iletişim kutusunda,** **Visual C# Items** > **Extensibility'e** gidin ve **Özel Araç Penceresi'ni**seçin. İletişim kutusunun altındaki **Ad** alanında, dosya adını ' `ProjectPropertiesToolWindow.cs`da ' olarak değiştirin Özel bir araç penceresi oluşturma hakkında daha fazla bilgi için [bkz.](../extensibility/creating-an-extension-with-a-tool-window.md)
+2. Adlı özel bir araç penceresi öğe şablonu ekleyerek bir araç penceresi ekleyin `ProjectPropertiesToolWindow` . **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle iletişim kutusunda**, **Visual C# öğeleri**  >  **genişletilebilirliği** ' ne gidin ve **özel araç penceresi**' ni seçin. İletişim kutusunun alt kısmındaki **ad** alanında, dosya adını olarak değiştirin `ProjectPropertiesToolWindow.cs` . Özel bir araç penceresi oluşturma hakkında daha fazla bilgi için bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
 
-3. Çözümü oluşturun ve hatasız derlediğini doğrulayın.
+3. Çözümü oluşturun ve hata olmadan derlendiğini doğrulayın.
 
-### <a name="to-display-project-properties-in-a-tool-window"></a>Proje özelliklerini bir araç penceresinde görüntülemek için
+### <a name="to-display-project-properties-in-a-tool-window"></a>Proje özelliklerini bir araç penceresinde görüntüleme
 
-1. ProjectPropertiesToolWindowCommand.cs dosyasına, yönergeleri kullanarak aşağıdaki yönergeleri ekleyin.
+1. ProjectPropertiesToolWindowCommand.cs dosyasında, aşağıdaki using yönergelerini ekleyin.
 
     ```csharp
     using EnvDTE;
@@ -44,9 +44,9 @@ Visual Studio 2015'ten itibaren Visual Studio SDK'yı indirme merkezinden yükle
 
     ```
 
-2. *ProjectPropertiesToolWindowControl.xaml'da*varolan düğmeyi kaldırın ve Araç Kutusundan bir TreeView ekleyin. Ayrıca ProjectPropertiesToolWindowControl.xaml.cs *dosyasından* tıklama olay işleyicisi kaldırabilirsiniz.
+2. *ProjectPropertiesToolWindowControl. xaml*dosyasında, var olan düğmeyi kaldırın ve araç kutusundan bir TreeView ekleyin. Ayrıca, Click olay işleyicisini *ProjectPropertiesToolWindowControl.xaml.cs* dosyasından kaldırabilirsiniz.
 
-3. *ProjectPropertiesToolWindowCommand.cs,* projeyi `ShowToolWindow()` açmak ve özelliklerini okumak için yöntemi kullanın, ardından özellikleri TreeView'a ekleyin. ShowToolWindow için kod aşağıdaki gibi görünmelidir:
+3. *ProjectPropertiesToolWindowCommand.cs*içinde, `ShowToolWindow()` projeyi açmak ve özelliklerini okumak için yöntemini kullanın, sonra özellikleri TreeView öğesine ekleyin. ShowToolWindow için kod aşağıdaki gibi görünmelidir:
 
     ```csharp
     private void ShowToolWindow(object sender, EventArgs e)
@@ -93,10 +93,10 @@ Visual Studio 2015'ten itibaren Visual Studio SDK'yı indirme merkezinden yükle
     }
     ```
 
-4. Projeyi oluşturun ve hata ayıklamaya başlayın. Deneysel örnek görünmelidir.
+4. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnek görünmelidir.
 
-5. Deneysel örnekte, bir proje açın.
+5. Deneysel örnekte bir proje açın.
 
-6. **Görünüm** > **Diğer Windows'da** **ProjectPropertiesToolWindow'u**tıklatın.
+6. **View**  >  **Diğer pencereleri** görüntüle ' de **ProjectPropertiesToolWindow**' ye tıklayın.
 
-  Takım penceresindeki ağaç denetimini ilk projenin adı ve tüm proje özellikleriyle birlikte görmeniz gerekir.
+  Araç penceresinde ağaç denetimini, ilk projenin adı ve tüm proje özellikleri ile birlikte görmeniz gerekir.

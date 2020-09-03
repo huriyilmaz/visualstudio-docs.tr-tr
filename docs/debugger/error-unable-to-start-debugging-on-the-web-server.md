@@ -27,10 +27,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 00d27dafd5e44b058cff05b3c478322e45242b3c
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85460045"
 ---
 # <a name="error-unable-to-start-debugging-on-the-web-server"></a>Hata: Web Sunucusunda Hata Ayıklama Başlatılamıyor
@@ -54,32 +54,32 @@ Genellikle, bu hata bir hata veya yapılandırma değişikliği gerçekleştiği
 - [Yaygın yapılandırma hataları için yardıma bakın. Web sayfasını hata ayıklayıcı dışında çalıştırmak daha fazla bilgi sağlayabilir.](#see_help)
 - [İşlem desteklenmiyor. Bilinmeyen hata: *ErrorNumber*](#operation_not_supported)
 
-## <a name="iis-does-not-list-a-website-that-matches-the-launch-url"></a><a name="IISlist"></a>IIS, başlatma URL 'siyle eşleşen bir Web sitesi listelemez
+## <a name="iis-does-not-list-a-website-that-matches-the-launch-url"></a><a name="IISlist"></a> IIS, başlatma URL 'siyle eşleşen bir Web sitesi listelemez
 
 - Visual Studio 'Yu yönetici olarak yeniden başlatın ve hata ayıklamayı yeniden deneyin. (Bazı ASP.NET hata ayıklama senaryoları yükseltilmiş ayrıcalıklar gerektirir.)
 
     Visual Studio 'yu her zaman yönetici olarak çalışacak şekilde yapılandırmak için Visual Studio kısayol simgesine sağ tıklayıp **özellikler > gelişmiş**' i seçip, her zaman yönetici olarak Çalıştır ' ı seçebilirsiniz.
 
-## <a name="the-web-server-is-not-configured-correctly"></a><a name="web_server_config"></a>Web sunucusu doğru yapılandırılmamış
+## <a name="the-web-server-is-not-configured-correctly"></a><a name="web_server_config"></a> Web sunucusu doğru yapılandırılmamış
 
 - Bkz. [hata: Web sunucusu doğru yapılandırılmamış](../debugger/error-the-web-server-is-not-configured-correctly.md).
 
-## <a name="unable-to-connect-to-the-webserver"></a><a name="unabletoconnect"></a>Web sunucusuna bağlanılamıyor
+## <a name="unable-to-connect-to-the-webserver"></a><a name="unabletoconnect"></a> Web sunucusuna bağlanılamıyor
 
 - Visual Studio 'Yu ve Web sunucusunu aynı makinede çalıştırıyor ve **F5** 'i kullanarak hata ayıklamanıza mi ( **işleme iliştirme**yerine)? Proje özelliklerinizi açın ve projenin doğru Web sunucusuna bağlanmak ve URL 'YI başlatmak için yapılandırıldığından emin olun. (Proje türüne bağlı olarak **hata ayıklama >** **Web > sunucuları veya özellikleri > Özellikler** açın. Web Forms bir proje için, **Özellik sayfaları ' nı > Başlat seçenekler > Server**' ı açın.)
 
 - Aksi takdirde, uygulama havuzunuzu yeniden başlatın ve ardından IIS 'yi sıfırlayın. Daha fazla bilgi için bkz. [IIS yapılandırmanızı denetleme](#vxtbshttpservererrorsthingstocheck).
 
-## <a name="the-web-server-did-not-respond-in-a-timely-manner"></a><a name="webservertimeout"></a>Web sunucusu zamanında yanıt vermedi
+## <a name="the-web-server-did-not-respond-in-a-timely-manner"></a><a name="webservertimeout"></a> Web sunucusu zamanında yanıt vermedi
 
 - IIS 'yi sıfırlayın ve hata ayıklamayı yeniden deneyin. Birden çok hata ayıklayıcı örneği IIS işlemine iliştirilebilir; bir sıfırlama bunları sonlandırır. Daha fazla bilgi için bkz. [IIS yapılandırmanızı denetleme](#vxtbshttpservererrorsthingstocheck).
 
-## <a name="the-microsoft-visual-studio-remote-debugging-monitormsvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a><a name="msvsmon"></a>Microsoft Visual Studio uzaktan hata ayıklama İzleyicisi (msvsmon.exe) uzak bilgisayarda çalışıyor görünmüyor
+## <a name="the-microsoft-visual-studio-remote-debugging-monitormsvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a><a name="msvsmon"></a> Microsoft Visual Studio uzaktan hata ayıklama İzleyicisi (msvsmon.exe) uzak bilgisayarda çalışıyor görünmüyor
 
 - Uzak makinede hata ayıklaması yapıyorsanız, ' [nin yüklü olduğundan ve uzaktan hata ayıklayıcı 'nın çalıştığından](../debugger/remote-debugging.md)emin olun. İleti bir güvenlik duvarıyla karşılaşırsanız, özellikle de üçüncü taraf güvenlik duvarı kullanıyorsanız [güvenlik duvarında doğru bağlantı noktalarının](../debugger/remote-debugger-port-assignments.md) açık olduğundan emin olun.
 - Bir HOSTS dosyası kullanıyorsanız doğru yapılandırıldığından emin olun. Örneğin, **F5** kullanarak hata ayıklama ( **işlemek için iliştirme**yerine), ana bilgisayar dosyasının proje özelliklerinizi, **Özellikler > Web > Servers** veya **Properties > hata ayıkla**, proje türüne bağlı olarak aynı proje URL 'sini içermesi gerekir.
 
-## <a name="the-remote-server-returned-an-error"></a><a name="server_error"></a>Uzak sunucu bir hata döndürdü
+## <a name="the-remote-server-returned-an-error"></a><a name="server_error"></a> Uzak sunucu bir hata döndürdü
 
 Hata kodları ve ek bilgiler için [IIS günlük dosyanızı](https://support.microsoft.com/help/943891/the-http-status-code-in-iis-7-0--iis-7-5--and-iis-8-0) ve bu IIS 7 [blog gönderisini](https://blogs.iis.net/tomkmvp/troubleshoot-a-403)denetleyin.
 
@@ -88,12 +88,12 @@ Buna ek olarak, bazı yaygın hata kodları ve birkaç öneri de bulunur.
 - (503) sunucu kullanılamıyor. Uygulama havuzu bir hata veya yapılandırma değişikliği nedeniyle durdurulmuş olabilir. Uygulama havuzunu yeniden başlatın.
 - (404) bulunamadı. Uygulama havuzunun doğru ASP.NET sürümü için yapılandırıldığından emin olun.
 
-## <a name="could-not-start-aspnet-debugging"></a><a name="aspnet"></a>ASP.NET hata ayıklaması başlatılamadı
+## <a name="could-not-start-aspnet-debugging"></a><a name="aspnet"></a> ASP.NET hata ayıklaması başlatılamadı
 
 - Uygulama havuzunu yeniden başlatın ve IIS 'yi sıfırlayın. Daha fazla bilgi için bkz. [IIS yapılandırmanızı denetleme](#vxtbshttpservererrorsthingstocheck).
 - URL yeniden yazar yapıyorsanız, URL 'YI yeniden vererek temel web.config test edin. [IIS yapılandırmanızı kontrol](#vxtbshttpservererrorsthingstocheck)eden URL yeniden yazma modülü hakkındaki **nota** bakın.
 
-## <a name="the-debugger-cannot-connect-to-the-remote-computer"></a><a name="cannot_connect"></a>Hata ayıklayıcı uzak bilgisayara bağlanamıyor
+## <a name="the-debugger-cannot-connect-to-the-remote-computer"></a><a name="cannot_connect"></a> Hata ayıklayıcı uzak bilgisayara bağlanamıyor
 
 Yerel olarak hata ayıklaması yapıyorsanız, Visual Studio 'da proje özelliklerinizi açın ve projenin doğru Web sunucusuna ve URL 'ye bağlanacak şekilde yapılandırıldığından emin olun. (Proje türüne bağlı olarak **hata ayıklama >** **Web > sunucuları veya özellikleri > Özellikler** açın.)
 
@@ -101,17 +101,17 @@ Bu hata, Visual Studio 32 bitlik bir uygulama olduğu için yerel olarak hata ay
 
 Ayrıca, bir HOSTS dosyası kullanıyorsanız doğru yapılandırıldığından emin olun. Örneğin, ana bilgisayar dosyasının, proje gereksinimlerinize bağlı olarak, **hata ayıklama >** **Web > sunucuları** veya ÖZELLIKLERI > aynı proje URL 'sini içermesi gerekir.
 
-## <a name="see-help-for-common-configuration-errors-running-the-webpage-outside-of-the-debugger-may-provide-further-information"></a><a name="see_help"></a>Yaygın yapılandırma hataları için yardıma bakın. Web sayfasını hata ayıklayıcı dışında çalıştırmak daha fazla bilgi sağlayabilir.
+## <a name="see-help-for-common-configuration-errors-running-the-webpage-outside-of-the-debugger-may-provide-further-information"></a><a name="see_help"></a> Yaygın yapılandırma hataları için yardıma bakın. Web sayfasını hata ayıklayıcı dışında çalıştırmak daha fazla bilgi sağlayabilir.
 
 - Visual Studio ve Web sunucusunu aynı makinede çalıştırıyor musunuz? Proje özelliklerinizi açın ve projenin doğru Web sunucusuna bağlanmak ve URL 'YI başlatmak için yapılandırıldığından emin olun. (Proje türüne bağlı olarak **hata ayıklama >** **Web > sunucuları veya özellikleri > Özellikler** açın.)
 
 - Bu işe çalışmazsa veya uzaktan hata ayıklaması yapıyorsanız, [IIS yapılandırmanızı denetleme](#vxtbshttpservererrorsthingstocheck)bölümündeki adımları uygulayın.
 
-## <a name="operation-not-supported-unknown-error-errornumber"></a><a name="operation_not_supported"></a>İşlem desteklenmiyor. Bilinmeyen hata: *ErrorNumber*
+## <a name="operation-not-supported-unknown-error-errornumber"></a><a name="operation_not_supported"></a> İşlem desteklenmiyor. Bilinmeyen hata: *ErrorNumber*
 
 URL yeniden yazar yapıyorsanız, URL 'YI yeniden vererek temel web.config test edin. [IIS yapılandırmanızı kontrol](#vxtbshttpservererrorsthingstocheck)eden URL yeniden yazma modülü hakkındaki **nota** bakın.
 
-## <a name="check-your-iis-configuration"></a><a name="vxtbshttpservererrorsthingstocheck"></a>IIS yapılandırmanızı denetleyin
+## <a name="check-your-iis-configuration"></a><a name="vxtbshttpservererrorsthingstocheck"></a> IIS yapılandırmanızı denetleyin
 
 Sorunu çözmek için buradaki adımları ayrıntılandırdıktan sonra ve hata ayıklamayı yeniden denemeden önce, IIS 'yi de sıfırlamanız gerekebilir. Bunu, yükseltilmiş bir komut istemi açıp yazarak yapabilirsiniz `iisreset` .
 

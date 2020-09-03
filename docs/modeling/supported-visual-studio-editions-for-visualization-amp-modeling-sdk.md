@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3be233ce8730879c2f0406ec9cc180685992c6bf
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544943"
 ---
 # <a name="supported-visual-studio-editions-for-visualization--modeling-sdk"></a>Görselleştirme ve Modelleme SDK’sı için Desteklenen Visual Studio Sürümleri
@@ -35,7 +35,7 @@ Bir DSL tanımlamak için aşağıdaki bileşenleri yüklemiş olmanız gerekir:
 
 ## <a name="deployment-editions"></a>Dağıtım sürümleri
 
-[!INCLUDE[dsl](../modeling/includes/dsl_md.md)], oluşturduğunuz alana özgü dillerin dağıtımı için aşağıdaki konfigürasyonları destekler:
+[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] , oluşturduğunuz alana özgü dillerin dağıtımı için aşağıdaki konfigürasyonları destekler:
 
 - Visual Studio Enterprise
 

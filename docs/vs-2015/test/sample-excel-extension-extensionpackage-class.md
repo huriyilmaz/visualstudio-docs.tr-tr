@@ -9,16 +9,16 @@ caps.latest.revision: 11
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a1c1f4c746fa505b50bab9caa7a516a2abc77f69
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672204"
 ---
 # <a name="sample-excel-extension-extensionpackage-class"></a>Örnek Excel Uzantısı: ExtensionPackage Sınıfı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu sınıf <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage> sınıfını genişletir ve bir [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] çalışma sayfasını test eden kodlanmış UI testi için giriş noktası sağlar.
+Bu sınıf, <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage> sınıfını genişletir ve bir çalışma sayfasını test eden KODLANMıŞ UI testi için giriş noktası sağlar [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .
 
 ## <a name="assembly-attribute"></a>Derleme özniteliği
  Dosya, derlemeyi bir UI test uzantısı olarak tanımlayan bir derleme özniteliğiyle başlar.
@@ -36,7 +36,7 @@ Bu sınıf <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensi
  Bu sınıfta, uzantısı ve derlemeyi tanımlamak ve tanımlamak için kodlanmış UI test çerçevesi tarafından kullanılan değerler sağlayan özellikler vardır. Daha fazla bilgi için bkz. kod açıklamaları.
 
 ## <a name="getservice-method"></a>GetService yöntemi
- @No__t_0 yöntemi, her nesnenin temel sınıfı tarafından tanımlanan şekilde teknoloji yöneticisine, özellik sağlayıcısına ve eylem filtresine erişim kazanmak için kodlanmış UI test çerçevesi tarafından kullanılan tek giriş noktasıdır.
+ <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage.GetService%2A>Yöntemi, KODLANMıŞ UI test çerçevesi tarafından, her nesne için temel sınıf tarafından tanımlanan şekilde teknoloji yöneticisine, özellik sağlayıcısına ve eylem filtresine erişim kazanmak için kullanılan tek giriş noktasıdır.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Microsoft Excel 'ı desteklemek Için KODLANMıŞ UI testlerini ve eylem kayıtlarını genişletme](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md) <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>
+ <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage> [Kodlanmış Kullanıcı Arabirimi Testlerini ve Eylem Kayıtlarını Microsoft Excel'i Desteklemek için Genişletme](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)

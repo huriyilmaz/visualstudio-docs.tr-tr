@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ef79d1be0b88ecdafa8691189bbc95291a6417ed
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544995"
 ---
 # <a name="define-and-install-a-modeling-extension"></a>Modelleme uzantısı tanımlama ve yükleme
@@ -84,7 +84,7 @@ Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsin
 ## <a name="developing-the-component"></a>Bileşen geliştirme
  Bir menü komutu veya hareket işleyicisi gibi her bir bileşen için ayrı bir işleyici tanımlamanız gerekir. Aynı sınıf kitaplığı projesine çeşitli işleyiciler yerleştirebilirsiniz. Aşağıdaki tabloda farklı tür işleyici özetlenmektedir.
 
-|Uzantı türü|Konu başlığı|Her bileşenin genellikle nasıl bildirildiği|
+|Uzantı türü|Konu|Her bileşenin genellikle nasıl bildirildiği|
 |--------------------|-----------|----------------------------------------------|
 |Menü komutu|[Modelleme diyagramında menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md)|`[ClassDesignerExtension]`<br /><br /> `// or other diagram types`<br /><br /> `[Export(typeof(ICommandExtension))]`<br /><br /> `public class MyCommand : ICommandExtension`<br /><br /> `{...`|
 |Sürükleyip bırakma veya çift tıklama|[Modelleme diyagramında hareket işleyicisi tanımlama](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)|`[ClassDesignerExtension]`<br /><br /> `// or other diagram types`<br /><br /> `[Export(typeof(IGestureExtension))]`<br /><br /> `public class MyGesture : IGestureExtension`<br /><br /> `{...`|
@@ -109,7 +109,7 @@ Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsin
 
 3. **Hata ayıklama olmadan Başlat** ' ı kullandıysanız, ancak hata ayıklayıcıyı kullanmak Istiyorsanız, Visual Studio 'nun ana örneğine dönün. **Hata Ayıkla** menüsünde, **İşleme İliştir ' e**tıklayın. İletişim kutusunda, **devenv**program adına sahip, Visual Studio 'nun Deneysel örneğini seçin.
 
-## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a>Uzantı yükleme ve kaldırma
+## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a> Uzantı yükleme ve kaldırma
  Uzantınızı kendi bilgisayarınızda veya diğer bilgisayarlarda Visual Studio 'nun ana örneğinde çalıştırmak için aşağıdaki adımları gerçekleştirin.
 
 1. Bilgisayarınızda, uzantı projeniz tarafından oluşturulan **. vsix** dosyasını bulun.

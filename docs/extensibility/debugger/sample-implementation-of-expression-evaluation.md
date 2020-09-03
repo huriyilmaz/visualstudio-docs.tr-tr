@@ -1,5 +1,5 @@
 ---
-title: İfade Değerlendirme Örnek Uygulaması | Microsoft Dokümanlar
+title: Ifade değerlendirmesinin örnek uygulama | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,31 +13,31 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: cf994a61ed9283463cd01aa468018f6acce5e209
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713108"
 ---
-# <a name="sample-implementation-of-expression-evaluation"></a>İfade değerlendirmesinin örnek uygulanması
+# <a name="sample-implementation-of-expression-evaluation"></a>İfade değerlendirmesinin örnek uygulama
 > [!IMPORTANT]
-> Visual Studio 2015'te ifade değerlendiricilerinin bu şekilde uygulanması amortismana uymaktadır. CLR ifade değerlendiricilerinin uygulanması hakkında bilgi [için, bkz.](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) [Managed expression evaluator Sample](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)
+> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- **Watch** penceresi ifadesi için Visual Studio, Bir [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) nesnesi oluşturmak için [ParseText'i](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) çağırır. `IDebugExpressionContext2::ParseText`bir ifade değerlendiricisi (EE) anında alır ve Bir [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md) nesnealmak için [Parse](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) çağırır.
+ Bir **Gözcü** penceresi ifadesi Için, Visual Studio bir [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) nesnesi üretmek için [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) 'i çağırır. `IDebugExpressionContext2::ParseText`bir ifade değerlendirici (EE) oluşturur ve bir [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md) nesnesi almak için [ayrıştırmayı](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) çağırır.
 
- Aşağıdaki `IDebugExpressionEvaluator::Parse` görevleri gerçekleştirir:
+ `IDebugExpressionEvaluator::Parse`Aşağıdaki görevleri gerçekleştirir:
 
-1. [Yalnızca C++ ] Hataları aramak için ifadeyi parses.
+1. [Yalnızca C++] Hataları bulmak için ifadeyi ayrıştırır.
 
-2. Arabirimi çalıştıran ve `CParsedExpression` ayrıştırılacak ifadeyi sınıfta depolayan bir sınıfı (bu örnekte çağrıldı) anında alatır. `IDebugParsedExpression`
+2. Arabirimini çalıştıran bir sınıfı ( `CParsedExpression` Bu örnekte çağırılır) başlatır `IDebugParsedExpression` ve ayrıştırılacak ifade sınıfta depolar.
 
-3. `CParsedExpression` Nesneden `IDebugParsedExpression` arabirimi döndürür.
+3. `IDebugParsedExpression`Nesneden arabirimi döndürür `CParsedExpression` .
 
 > [!NOTE]
-> Aşağıdaki örneklerde ve MyCEE örneğinde, ifade değerlendiricisi ayrıştayı değerlendirmeden ayırmaz.
+> Aşağıdaki örneklerde ve MyCEE örneğinde, ifade değerlendirici, ayrıştırmayı değerlendirmeden ayıramaz.
 
 ## <a name="managed-code"></a>Yönetilen kod
- Aşağıdaki kod yönetilen `IDebugExpressionEvaluator::Parse` kodda bir uygulama gösterir. Yöntemin bu sürümü, ayrıştırma kodu da aynı anda değerlendirildiği için Ayrıştırmayı [EvaluateSync'e](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) erteler [(bkz.](../../extensibility/debugger/evaluating-a-watch-expression.md)
+ Aşağıdaki kod, yönetilen kodda uygulamasının bir uygulamasını gösterir `IDebugExpressionEvaluator::Parse` . Bu yöntemin bu sürümü, ayrıştırma kodu olarak [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) için ayrıştırma için de aynı anda değerlendirilir (bkz. [bir gözcü ifadesini değerlendir](../../extensibility/debugger/evaluating-a-watch-expression.md)).
 
 ```csharp
 namespace EEMC
@@ -64,7 +64,7 @@ namespace EEMC
 ```
 
 ## <a name="unmanaged-code"></a>Yönetilmeyen kod
-Aşağıdaki kod yönetilmeyen `IDebugExpressionEvaluator::Parse` kod bir uygulamadır. Bu yöntem, `Parse`ifadeyi ayrışdırmak ve hataları denetlemek için bir yardımcı işlev çağırır, ancak bu yöntem ortaya çıkan değeri yoksa. Resmi değerlendirme, ifade değerlendirilirken ayrıştırıldığı [Sync'e](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) ertelenir [(bkz.](../../extensibility/debugger/evaluating-a-watch-expression.md)
+Aşağıdaki kod, yönetilmeyen kodda bir uygulamasıdır `IDebugExpressionEvaluator::Parse` . Bu yöntem, `Parse` ifadeyi ayrıştırmak ve hataları denetlemek için bir yardımcı işlevi çağırır, ancak bu yöntem elde edilen değeri yoksayar. Biçimsel değerlendirme, ifadenin değerlendirildiği sırada ayrıştırıldığında (bkz. [bir gözcü Ifadesini değerlendir](../../extensibility/debugger/evaluating-a-watch-expression.md)) [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) olarak ertelenir.
 
 ```cpp
 STDMETHODIMP CExpressionEvaluator::Parse(
@@ -108,5 +108,5 @@ STDMETHODIMP CExpressionEvaluator::Parse(
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzleme penceresi ifadesini değerlendirme](../../extensibility/debugger/evaluating-a-watch-window-expression.md)
-- [Bir Watch ifadesini değerlendirme](../../extensibility/debugger/evaluating-a-watch-expression.md)
+- [izleme penceresi ifadesini değerlendir](../../extensibility/debugger/evaluating-a-watch-window-expression.md)
+- [Bir gözcü ifadesini değerlendir](../../extensibility/debugger/evaluating-a-watch-expression.md)

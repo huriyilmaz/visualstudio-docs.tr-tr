@@ -1,5 +1,5 @@
 ---
-title: Açıklama Öğesi (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: Description öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -12,18 +12,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 2ea10b43662d2818792dbc57aeac09a056cb63ce
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80712254"
 ---
-# <a name="description-element-visual-studio-templates"></a>Açıklama öğesi (Visual Studio şablonları)
-**Yeni Proje** veya **Yeni Öğe Ekle** iletişim kutusunda görünen şablonun açıklamasını belirtir.
+# <a name="description-element-visual-studio-templates"></a>Description öğesi (Visual Studio şablonları)
+**Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda göründüğü haliyle şablonun açıklamasını belirtir.
 
- \<VSTemplate \<> ŞablonVeri> \<Açıklama>
+ \<VSTemplate> \<TemplateData>
+ \<Description>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <Description>
@@ -42,8 +43,8 @@ ms.locfileid: "80712254"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Package`|Gelişmiş kullanıcı senaryoları için isteğe bağlı öznitelik.<br /><br /> Visual Studio paket kimliğini belirten bir GUID.|
-|`ID`|Gelişmiş kullanıcı senaryoları için isteğe bağlı öznitelik.<br /><br /> Visual Studio kaynak kimliğini belirtir.|
+|`Package`|Gelişmiş Kullanıcı senaryoları için isteğe bağlı öznitelik.<br /><br /> Visual Studio paket KIMLIĞINI belirten bir GUID.|
+|`ID`|Gelişmiş Kullanıcı senaryoları için isteğe bağlı öznitelik.<br /><br /> Visual Studio kaynak KIMLIĞINI belirtir.|
 
 ### <a name="child-elements"></a>Alt öğeleri
  Yok.
@@ -52,18 +53,18 @@ ms.locfileid: "80712254"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırın ve Yeni **Proje'de** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleyeceğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
- Öznitelikleri `Package` ve `ID` öznitelikleri kullanılmadığı sürece bir metin değeri gereklidir.
+ `Package`Ve `ID` öznitelikleri kullanılmamışsa metin değeri gereklidir.
 
- Metin şablonun açıklamasını sağlar.
+ Metin, şablonun bir açıklamasını sağlar.
 
 ## <a name="remarks"></a>Açıklamalar
- `Description`öğenin gerekli bir `TemplateData` alt öğedir.
+ `Description` , öğesinin gerekli bir alt öğesidir `TemplateData` .
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] uygulama için proje şablonu için meta verileri gösterir.
+ Aşağıdaki örnek, bir uygulama için bir proje şablonu meta verilerini gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -90,5 +91,5 @@ ms.locfileid: "80712254"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
-- [Proje ve madde şablonları oluşturma](../ide/creating-project-and-item-templates.md)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

@@ -11,34 +11,34 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3cb73a674e702d54f970c5dea7ec051f100382c9
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76114757"
 ---
 # <a name="rethrow-activity-designer"></a>Rethrow Etkinlik Tasarımcısı
 
-**Rethrow** etkinlik Tasarımcısı <xref:System.Activities.Statements.Rethrow> etkinlik oluşturmak ve yapılandırmak için kullanılır.
+**Rethrow** etkinlik Tasarımcısı, etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.Rethrow> .
 
 ## <a name="the-rethrow-activity"></a>Rethrow etkinliği
 
-<xref:System.Activities.Statements.Rethrow> etkinliği daha önce oluşturulan bir özel durum oluşturur. Bu etkinlik, <xref:System.Activities.Statements.TryCatch> etkinliğinde yalnızca bir <xref:System.Activities.Statements.Catch> işleyicisinde kullanılabilir.
+<xref:System.Activities.Statements.Rethrow>Etkinlik daha önce oluşturulan bir özel durum oluşturur. Bu etkinlik yalnızca <xref:System.Activities.Statements.Catch> etkinlikteki bir işleyicide kullanılabilir <xref:System.Activities.Statements.TryCatch> .
 
 ### <a name="use-the-rethrow-activity-designer"></a>ReThrow etkinlik tasarımcısını kullanma
 
-**Araç kutusunun** **hata Işleme** kategorisindeki **Rethrow** etkinlik tasarımcısına erişin. **Rethrow** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, her durumda (örneğin, <xref:System.Activities.Statements.Sequence>gibi) iş akışı Tasarımcısı yüzeyine bırakılabilir. Etkinlik Tasarımcısı ' nın atılması, varsayılan olarak throw **DisplayName** ile bir <xref:System.Activities.Statements.Rethrow> etkinliği oluşturur. <xref:System.Activities.Activity.DisplayName%2A> değeri **Rethrow** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir.
+**Araç kutusunun** **hata Işleme** kategorisindeki **Rethrow** etkinlik tasarımcısına erişin. **Rethrow** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, örneğin içinde olduğu gibi etkinliklerin genellikle yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . Etkinlik Tasarımcısı ' nın atılması, <xref:System.Activities.Statements.Rethrow> throw öğesinin varsayılan **DisplayName** değeriyle bir etkinlik oluşturur. <xref:System.Activities.Activity.DisplayName%2A>Değer **Rethrow** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir.
 
 ### <a name="the-rethrow-properties"></a>Rethrow özellikleri
 
-Aşağıdaki tabloda <xref:System.Activities.Statements.Rethrow> özellikleri gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır:
+Aşağıdaki tabloda <xref:System.Activities.Statements.Rethrow> Özellikler gösterilmektedir ve tasarımcıda nasıl kullanıldıkları açıklanmıştır:
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.Rethrow> etkinliğinin isteğe bağlı kolay adını belirtir. Varsayılan değer Rethrow ' dir.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin isteğe bağlı kolay adını belirtir <xref:System.Activities.Statements.Rethrow> . Varsayılan değer Rethrow ' dir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Koleksiyon](../workflow-designer/collection-activity-designers.md)
-- [Throw](../workflow-designer/throw-activity-designer.md)
+- [Yaratır](../workflow-designer/throw-activity-designer.md)
 - [TryCatch](../workflow-designer/trycatch-activity-designer.md)

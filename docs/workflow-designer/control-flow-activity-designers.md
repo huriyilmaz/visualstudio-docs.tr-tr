@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 84f9de21dbf0529823690effb4285b63a3b226fa
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76114677"
 ---
 # <a name="control-flow-activity-designers"></a>Akış Etkinliği Tasarımcılarını denetleme
@@ -51,7 +51,7 @@ Diğer etkinlik tasarımcıları türleri için aşağıdaki konulara bakın:
 
  [Akış Çizelgesi](../workflow-designer/flowchart-activity-designers.md)
 
- [Messaging](../workflow-designer/messaging-activity-designers.md)
+ [Mesajlaşma](../workflow-designer/messaging-activity-designers.md)
 
  [Çalışma Zamanı](../workflow-designer/runtime-activity-designers.md)
 
@@ -61,7 +61,7 @@ Diğer etkinlik tasarımcıları türleri için aşağıdaki konulara bakın:
 
  [Koleksiyon](../workflow-designer/collection-activity-designers.md)
 
- [Hata İşleme](../workflow-designer/error-handling-activity-designers.md)
+ [Hata Işleme](../workflow-designer/error-handling-activity-designers.md)
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 

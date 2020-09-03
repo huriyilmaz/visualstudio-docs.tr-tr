@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 350b43741ec7e5646eefce225ecd157b6781ada1
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85328428"
 ---
 # <a name="get-started-with-wpf"></a>WPF kullanmaya başlama
@@ -23,9 +23,9 @@ Bu bölümde WPF ile çalışmaya başlamanıza yardımcı olan konular yer alı
 
 ## <a name="where-should-i-start"></a>Nereden başlamalıyım?
 
-|Özne|Makaleler|
+|Konu|Makaleler|
 |-|-|
-|Hemen hızlı bir şekilde geçmek istiyorum...|[İzlenecek Yol: İlk WPF masaüstü uygulamam](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)|
+|Hemen hızlı bir şekilde geçmek istiyorum...|[İzlenecek yol: İlk WPF masaüstü uygulamam](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)|
 |XAML tasarım araçlarını karşılaştırmak istiyorum...|[Visual Studio ve Visual Studio için Blend XAML tasarlama](../xaml-tools/designing-xaml-in-visual-studio.md)|
 |.NET ile yeni misiniz?|[.NET kılavuzu](/dotnet/standard/)<br /><br />[Uygulama Temelleri](/dotnet/standard/application-essentials)<br /><br />[Visual C ile çalışmaya başlama #](../ide/quickstart-csharp-console.md)|
 |WPF hakkında daha fazla bilgi ver...|[WPF’ye genel bakış](/dotnet/framework/wpf/introduction-to-wpf)<br /><br />[XAML 'ye Genel Bakış (WPF)](/dotnet/framework/wpf/advanced/xaml-overview-wpf)<br /><br />[Denetimler](/dotnet/framework/wpf/controls/)<br /><br />[Veri bağlamaya genel bakış](/dotnet/desktop-wpf/data/data-binding-overview)<br /><br />[LINQ to XML ile WPF verilerini bağlama](/dotnet/framework/wpf/data/wpf-data-binding-with-linq-to-xml-overview)|

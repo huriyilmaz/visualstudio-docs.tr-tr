@@ -13,115 +13,115 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 33302a4a686d80621cc64ee018371a2d03ea30ee
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76114723"
 ---
-# <a name="configuring-warnings-in-visual-basic"></a>Visual Basic'te uyarıları yapılandırma
+# <a name="configuring-warnings-in-visual-basic"></a>Visual Basic uyarıları yapılandırma
 
-Derleyici, [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] çalışma zamanı hatalarına neden olabilecek kodla ilgili bir dizi uyarı içerir. Daha az hata ile daha temiz, daha hızlı, daha iyi kod yazmak için bu bilgileri kullanabilirsiniz. Örneğin, derleyici, kullanıcı atanmamış bir nesne değişkeninin üyesini çağırmaya, iade değerini ayarlamadan bir işlevden `Try` dönmeye veya özel durumları yakalamak için mantıkta hatalariçeren bir bloğu yürütmeye çalıştığında bir uyarı oluşturur.
+[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]Derleyici, çalışma zamanı hatalarına neden olabilecek kodla ilgili bir uyarı kümesi içerir. Daha az hata ile temizleyici, daha hızlı ve daha iyi kod yazmak için bu bilgileri kullanabilirsiniz. Örneğin, Kullanıcı atanmamış bir nesne değişkeninin bir üyesini çağırmayı denediğinde bir uyarı oluşturur, dönüş değerini ayarlamadan bir işlevden geri dönüş veya `Try` özel durumları yakalamak için mantığdaki hatalarla bir blok yürütmez.
 
-Bazen derleyici, kullanıcının olası hataları tahmin etmek yerine eldeki göreve odaklanabilmesi için kullanıcı adına ekstra mantık sağlar. Derlemenin sağladığı [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]ek mantığı sınırlamak için , Option [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] **Strict'in** önceki sürümlerinde kullanılmıştır. Uyarıları yapılandırmak, bu mantığı tek tek uyarılar düzeyinde daha ayrıntılı bir şekilde sınırlamanızı sağlar.
+Bazen derleyici Kullanıcı adına ek mantık sağlar, böylece Kullanıcı, benimsemeyi bekleme olası hatalar yerine her seferinde bir göreve odaklanabilir. Önceki sürümlerinde [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] , derleyicinin sağladığı ek mantığı sınırlamak Için **Strict seçeneği** kullanılmıştır [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] . Uyarıları yapılandırmak, bu mantığı bireysel uyarıların düzeyinde daha ayrıntılı bir şekilde sınırlamanıza olanak tanır.
 
-Projenizi özelleştirmek ve diğer uyarıları hataya dönüştürürken uygulamanızla ilgili olmayan bazı uyarıları kapatmak isteyebilirsiniz. Bu sayfa, tek tek uyarıların nasıl açIlip kapatılabildiğini açıklar.
+Projenizi özelleştirmek ve diğer uyarıları hatalara karşı yaparken uygulamanız için gerekli olan bazı uyarıları kapatmak isteyebilirsiniz. Bu sayfada, tek tek uyarıların nasıl kapatılacağı ve kapatılacağı açıklanmaktadır.
 
 ## <a name="turning-warnings-off-and-on"></a>Uyarıları kapatma ve açma
-Uyarıları yapılandırmanın iki farklı yolu vardır: **Bunları Proje Tasarımcısı'nı**kullanarak yapılandırabilirsiniz veya **/warnaserror** ve **/nowarn** derleyici seçeneklerini kullanabilirsiniz.
+Uyarıları yapılandırmanın iki farklı yolu vardır: **Proje tasarımcısını**kullanarak bunları yapılandırabilir veya **/warnaserror** ve **/nowarn** derleyici seçeneklerini kullanabilirsiniz.
 
-**Proje Tasarımcısı** sayfasının **Derle** sekmesi uyarıları açıp kapatmanızı sağlar. Tüm uyarıları devre dışı kalmak için **Tüm Uyarıları Devre Dışı Atla** onay kutusunu seçin; tüm uyarıları hata olarak ele almak için **Tüm Uyarıları Hata Olarak Ele'i** seçin. Bazı bireysel uyarılar, görüntülenen tabloda istenildiği gibi hata veya uyarı olarak değiştirilebilir.
+**Proje Tasarımcısı** sayfasının **Derle** sekmesi, uyarıları açıp kapatmanızı sağlar. Tüm uyarıları devre dışı bırakmak için **tüm uyarıları devre dışı bırak** onay kutusunu seçin; Tüm uyarıları hata olarak değerlendirmek için **tüm uyarıları hata olarak değerlendir** ' i seçin. Bazı ayrı uyarılar, görüntülenmiş tabloda istendiği gibi hata veya uyarı olarak değiştirilebilir.
 
-**Seçenek Katı** **Kapalı**ayarlandığında, **Seçenek Sıkı** ilgili uyarılar birbirinden bağımsız olarak tedavi edilemez. **Seçenek Katı** A.B.D. olarak ayarlandığında, ilişkili uyarılar durumları ne olursa olsun hata olarak kabul edilir. **On** **Option Strict** komut satırı derleyicisinde belirterek `/optionstrict:custom` **Özel** olarak ayarlandığında, **Seçenek Katı** uyarıları bağımsız olarak veya kapalı olarak değiştirilebilir.
+**Option Strict** **devre dışı**olarak ayarlandığında, kesin ilgili uyarı **seçeneği** birbirinden bağımsız olarak kabul edilemez. **Option Strict** **Açık**olarak ayarlandığında, ilişkili uyarılar, durumu ne olduğuna bakılmaksızın hata olarak değerlendirilir. **Option Strict** **Custom** `/optionstrict:custom` , komut satırı derleyicisinde belirtilerek özel olarak ayarlandığında, **kesin** uyarılar bağımsız olarak açık veya kapalı olabilir.
 
-Derleyicinin **/warnaserror** komut satırı seçeneği, uyarıların hata olarak kabul edilip edilmeyeceğini belirtmek için de kullanılabilir. Bu seçene, + veya -kullanarak hangi uyarıların hata veya uyarı olarak ele alınması gerektiğini belirtmek için virgül lesınırlı bir liste ekleyebilirsiniz. Aşağıdaki tabloda olası seçenekler ayrıntılı olarak anlatılır.
+Derleyicinin **/warnaserror** komut satırı seçeneği, uyarıların hata olarak değerlendirilip değerlendirilmeyeceğini belirtmek için de kullanılabilir. + Veya-kullanarak hangi uyarıların hata veya uyarı olarak değerlendirileceğini belirtmek için bu seçeneğe virgülle ayrılmış bir liste ekleyebilirsiniz. Aşağıdaki tabloda olası seçenekler ayrıntılı olarak verilmiştir.
 
 |Komut satırı araçları|Belirler|
 | - |---------------|
-|`/warnaserror+`|Tüm uyarıları hata olarak değerlendirin|
-|`/warnsaserror`-|Uyarıları hata olarak ele alamayın. Bu varsayılandır.|
-|`/warnaserror+:<warning list` `>`|Belirli uyarıları, virgülle sınırlandırılmış liste r'deki hata kimlik numarasına göre listelenen hatalar olarak değerlendirin.|
-|`/warnaserror-:<warning list>`|Belirli uyarıları, virgülle sınırlandırılmış bir listede hata kimliği numarasına göre listelenen hatalar olarak ele almaz.|
-|`/nowarn`|Uyarıları bildirmeyin.|
-|`/nowarn:<warning list>`|Virgülle sınırlandırılmış lar listesinde hata kimlik numarasına göre listelenen belirtilen uyarıları bildirmeyin.|
+|`/warnaserror+`|Tüm uyarıları hata olarak değerlendir|
+|`/warnsaserror`-|Hata olarak uyarı olarak davranmayın. Bu varsayılan seçenektir.|
+|`/warnaserror+:<warning list` `>`|Belirli uyarıları, virgülle ayrılmış bir liste r içinde kendi hata KIMLIĞI numarası ile listelenmiş hata olarak değerlendirin.|
+|`/warnaserror-:<warning list>`|Belirli uyarıları hata olarak değerlendirmeyin ve hata KIMLIK numarası, virgülle ayrılmış bir liste ile listelenir.|
+|`/nowarn`|Uyarı bildirme.|
+|`/nowarn:<warning list>`|Belirtilen uyarıları, kendi hata KIMLIĞI numarasına göre, virgülle ayrılmış bir listede bildirmeyin.|
 
-Uyarı listesi, belirli uyarıları açmak veya kapatmak için komut satırı seçenekleriyle kullanılabilen hata olarak kabul edilmesi gereken uyarıların hata kimlik numaralarını içerir. Uyarı listesi geçersiz bir sayı içeriyorsa, bir hata bildirilir.
+Uyarı listesi, belirli uyarıları açmak veya kapatmak için komut satırı seçenekleriyle kullanılabilecek, hata olarak değerlendirilmesi gereken uyarıların hata KIMLIĞI numaralarını içerir. Uyarı listesi geçersiz bir sayı içeriyorsa, bir hata bildirilir.
 
 ## <a name="examples"></a>Örnekler
-Komut satırı bağımsız değişkenlerinin örnekleribu tablo, her bağımsız değişkenin ne yaptığını açıklar.
+Komut satırı bağımsız değişkenlerinin Bu örnek tablosu, her bir bağımsız değişkenin ne yaptığını açıklar.
 
-|Bağımsız Değişken|Açıklama|
+|Bağımsız Değişken|Description|
 |--------------|-----------------|
 |`vbc /warnaserror`|Tüm uyarıların hata sayılması gerektiğini belirtir.|
-|`vbc /warnaserror:42024`|42024 uyarısı bir hata olarak kabul edilmelidir belirtir.|
-|`vbc /warnaserror:42024,42025`|42024 ve 42025 uyarılarının hata olarak ele alınması gerektiğini belirtir.|
-|`vbc /nowarn`|Hiçbir uyarı bildirilmesi gerektiğini belirtir.|
-|`vbc /nowarn:42024`|42024 uyarısı bildirilmemelidir.|
-|`vbc /nowarn:42024,42025`|42024 ve 42025 uyarılarının bildirilmemesi gerektiğini belirtir.|
+|`vbc /warnaserror:42024`|Uyarı 42024 ' nin hata olarak değerlendirilip değerlendirilmeyeceğini belirtir.|
+|`vbc /warnaserror:42024,42025`|Uyarı 42024 ve 42025 ' nin hata olarak değerlendirilip değerlendirilmeyeceğini belirtir.|
+|`vbc /nowarn`|Hiçbir uyarı raporlanmamalıdır.|
+|`vbc /nowarn:42024`|Uyarı 42024 bildirilmemelidir.|
+|`vbc /nowarn:42024,42025`|Uyarı 42024 ve 42025 ' nin bildirilmemelidir.|
 
 ## <a name="types-of-warnings"></a>Uyarı türleri
-Aşağıda, hata olarak ele almak isteyebileceğiniz uyarıların bir listesi verilmiştir.
+Hata olarak değerlendirmek isteyebileceğiniz uyarıların listesi aşağıda verilmiştir.
 
 ### <a name="implicit-conversion-warning"></a>Örtük dönüştürme uyarısı
-Örtülü dönüştürme örnekleri için oluşturulur. `&` İşleç kullanırken içsel sayısal türden bir dize örtük dönüşümleri içermezler. Yeni projeler için varsayılan değer kapalıdır.
+Örtük dönüştürme örnekleri için oluşturulur. İşleci kullanılırken, iç sayısal türden bir dizeye örtük dönüştürmeler eklemeyin `&` . Yeni projeler için varsayılan değer kapalıdır.
 
-Kimlik Numarası: 42016
+KIMLIK: 42016
 
-### <a name="late-bound-method-invocation-and-overload-resolution-warning"></a>Geç bağlı yöntem çağırma ve aşırı yük çözünürlüğü uyarısı
+### <a name="late-bound-method-invocation-and-overload-resolution-warning"></a>Geç bağlantılı Yöntem çağırma ve aşırı yükleme çözümleme uyarısı
 Geç bağlama örnekleri için oluşturulur. Yeni projeler için varsayılan değer kapalıdır.
 
-Kimlik Numarası: 42017
+KIMLIK: 42017
 
-### <a name="operands-of-type-object-warnings"></a>'Nesne' uyarılarının operands
-**Seçenek Katı Açık'ta** `Object` bir hata oluşturacak tür operands oluştuğunda oluşturulan. Yeni projeler için varsayılan değer açıktır.
+### <a name="operands-of-type-object-warnings"></a>' Object ' uyarı türünde işlenenler
+Tür işlenenleri oluştuğunda üretilir ve `Object` **Option Strict On**ile bir hata oluşturur. Yeni projeler için varsayılan değer açık.
 
-Kimlik Numarası: 42018 ve 42019
+KIMLIK: 42018 ve 42019
 
-### <a name="declarations-require-as-clause-warnings"></a>Bildirimler 'As' yan tümcesi uyarıları gerektirir
-`As` Bir yan tümcesi olmayan bir değişken, işlev veya özellik **bildirimi, Katı Seçenek Açık'ta**bir hata oluşturmuş sayılsa oluşturulur. Kendilerine atanmış bir türü olmayan değişkenlerin türü `Object`olduğu varsayılır. Yeni projeler için varsayılan değer açıktır.
+### <a name="declarations-require-as-clause-warnings"></a>Bildirimler ' As ' yan tümce uyarıları gerektirir
+Bir yan tümce olmayan bir değişken, işlev veya özellik bildirimi, `As` **Option Strict On**ile bir hata oluşturacaksa oluşturulur. Kendisine atanmış bir türü olmayan değişkenlerin tür olduğu varsayılır `Object` . Yeni projeler için varsayılan değer açık.
 
-ID: 42020 (değişken beyan), 42021 (fonksiyon bildirimi) ve 42022 (özellik bildirimi).
+KIMLIK: 42020 (değişken bildirimi), 42021 (işlev bildirimi) ve 42022 (özellik bildirimi).
 
-### <a name="possible-null-reference-exception-warnings"></a>Olası null referans özel durum uyarıları
-Bir değer atanmadan önce bir değişken kullanıldığında oluşturulur. Yeni projeler için varsayılan değer açıktır.
+### <a name="possible-null-reference-exception-warnings"></a>Olası boş başvuru özel durum uyarıları
+Bir değere atanmadan önce bir değişken kullanıldığında oluşturulur. Yeni projeler için varsayılan değer açık.
 
-Kimlik Numarası: 42104, 42030
+KIMLIK: 42104, 42030
 
 ### <a name="unused-local-variable-warning"></a>Kullanılmayan yerel değişken uyarısı
-Yerel bir değişken bildirildiğinde ancak hiç atıfta bulunulmadığunda oluşturulur. Varsayılan değer açıktır.
+Yerel bir değişken bildirildiği ancak hiçbir zaman başvurduğu zaman üretilir. Varsayılan değer açık.
 
-Kimlik Numarası: 42024
+KIMLIK: 42024
 
-### <a name="access-of-shared-member-through-instance-variable-warning"></a>Örnek değişken uyarısı ile paylaşılan üyenin erişimi
-Paylaşılan bir üyeye bir örnek aracılığıyla erişirken oluşturulan yan etkiler olabilir veya paylaşılan bir üyeye bir örnek değişkeni üzerinden erişme ifadesinin sağ tarafı değildir veya parametre olarak geçiriliyor. Yeni projeler için varsayılan değer açıktır.
+### <a name="access-of-shared-member-through-instance-variable-warning"></a>Örnek değişkeni aracılığıyla paylaşılan üyeye erişim Uyarısı
+Bir örnek üzerinden paylaşılan bir üyeye erişilirken oluşturulan, yan etkileri olabilir veya bir örnek değişken aracılığıyla paylaşılan bir üyeye erişildiğinde bir ifadenin sağ tarafı değildir veya bir parametre olarak geçirilir. Yeni projeler için varsayılan değer açık.
 
-Kimlik Numarası: 42025
+KIMLIK: 42025
 
-### <a name="recursive-operator-or-property-access-warnings"></a>Özyinelemeli operatör veya özellik erişim uyarıları
-Bir yordamın gövdesi tanımlandığı işleç veya özelliği kullandığında oluşturulur. Yeni projeler için varsayılan değer açıktır.
+### <a name="recursive-operator-or-property-access-warnings"></a>Özyinelemeli işleç veya özellik erişimi uyarıları
+Bir yordamın gövdesi, içinde tanımlanan işleç veya özelliği kullandığında oluşturulur. Yeni projeler için varsayılan değer açık.
 
-ID: 42004 (operatör), 42026 (özellik)
+KIMLIK: 42004 (işleç), 42026 (özellik)
 
-### <a name="function-or-operator-without-return-value-warning"></a>İade değeri uyarısı olmadan işlev veya işleç
-İşlev veya işleci belirtilen bir iade değeri yoksa oluşturulur. Bu, işleçle `Set` aynı ada sahip örtülü yerel değişkene bir atlayıp içerir. Yeni projeler için varsayılan değer açıktır.
+### <a name="function-or-operator-without-return-value-warning"></a>Dönüş değeri olmayan işlev veya işleç uyarısı
+İşlevin veya işlecin belirtilen bir dönüş değeri olmadığında üretilir. Bu, `Set` işlevle aynı ada sahip örtük yerel değişkene bir ile atlama içerir. Yeni projeler için varsayılan değer açık.
 
-ID: 42105 (fonksiyon), 42016 (operatör)
+KIMLIK: 42105 (işlev), 42016 (işleç)
 
-### <a name="overloads-modifier-used-in-a-module-warning"></a>Modül uyarısında kullanılan aşırı yükleyici
-`Overloads` Bir `Module`' de kullanıldığında oluşturulur. Yeni projeler için varsayılan değer açıktır.
+### <a name="overloads-modifier-used-in-a-module-warning"></a>Modül uyarısında kullanılan aşırı yükleme değiştiricisi
+`Overloads`Bir içinde kullanıldığında oluşturulur `Module` . Yeni projeler için varsayılan değer açık.
 
-Kimlik Numarası: 42028
+KIMLIK: 42028
 
-### <a name="duplicate-or-overlapping-catch-blocks-warnings"></a>Yinelenen veya çakışan yakalama blokları uyarıları
-Tanımlanan diğer `Catch` `Catch` bloklar ile ilişkisi nedeniyle bir bloka hiçbir zaman ulaşılamediğinde oluşturulur. Yeni projeler için varsayılan değer açıktır.
+### <a name="duplicate-or-overlapping-catch-blocks-warnings"></a>Yinelenen veya çakışan catch blokları uyarıları
+`Catch`Tanımlı diğer bloklarla ilişkili olduğundan hiçbir zaman bir bloğa ulaşılmadığında oluşturulur `Catch` . Yeni projeler için varsayılan değer açık.
 
-Kimlik Numarası: 42029, 42031
+KIMLIK: 42029, 42031
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata türleri](/dotnet/visual-basic/programming-guide/language-features/error-types)
-- [Deneyin... Yakalamak... Son olarak deyimi](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement)
+- [Deneyin... Yakala... Finally ekstresi](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement)
 - [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn)
 - [/warnaserror (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/warnaserror)
-- [Derleme sayfası, Proje Tasarımcısı (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)
+- [Derleme sayfası, proje Tasarımcısı (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)
 - [Varsayılan olarak kapalı olan derleyici uyarıları](/cpp/preprocessor/compiler-warnings-that-are-off-by-default)

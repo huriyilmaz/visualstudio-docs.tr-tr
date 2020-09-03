@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b2fafbb25d52df6082736431727222c788d73476
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461219"
 ---
 # <a name="locationtype"></a>LocationType
@@ -42,29 +42,29 @@ enum LocationType {
 ```
 
 ## <a name="elements"></a>Öğeler
-`LocIsNull`Konum bilgileri kullanılamıyor.
+`LocIsNull` Konum bilgileri kullanılamıyor.
 
-`LocIsStatic`Konum statiktir.
+`LocIsStatic` Konum statiktir.
 
-`LocIsTLS`Konum, iş parçacığı yerel depolama alanında.
+`LocIsTLS` Konum, iş parçacığı yerel depolama alanında.
 
-`LocIsRegRel`Konum, kayıt göreli.
+`LocIsRegRel` Konum, kayıt göreli.
 
-`LocIsThisRel`Konum `this` -göreli.
+`LocIsThisRel` Konum `this` -göreli.
 
-`LocIsEnregistered`Konum bir yazmaç içinde.
+`LocIsEnregistered` Konum bir yazmaç içinde.
 
-`LocIsBitField`Konum bir bit alanıdır.
+`LocIsBitField` Konum bir bit alanıdır.
 
-`LocIsSlot`Konum bir Microsoft ara dil (MSIL) yuvadır.
+`LocIsSlot` Konum bir Microsoft ara dil (MSIL) yuvadır.
 
-`LocIsIlRel`Konum MSIL ile ilişkilidir.
+`LocIsIlRel` Konum MSIL ile ilişkilidir.
 
-`LocInMetaData`Konum meta verilerde.
+`LocInMetaData` Konum meta verilerde.
 
-`LocIsConstant`Konum sabit bir değerde.
+`LocIsConstant` Konum sabit bir değerde.
 
-`LocTypeMax`Bu Numaralandırmadaki konum türlerinin sayısı.
+`LocTypeMax` Bu Numaralandırmadaki konum türlerinin sayısı.
 
 ## <a name="remarks"></a>Açıklamalar
 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) arabirimi için kullanılabilen özellikler simgenin görüntü dosyası içindeki konumuna bağlıdır. Daha fazla bilgi için bkz. [sembol konumları](../../debugger/debug-interface-access/symbol-locations.md).

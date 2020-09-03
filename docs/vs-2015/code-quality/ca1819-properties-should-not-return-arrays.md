@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: a96d2164cbd6c03cb0d191b2d0c3c4607468209c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545333"
 ---
 # <a name="ca1819-properties-should-not-return-arrays"></a>CA1819: Özellikler diziler döndürmemelidir
@@ -46,7 +46,7 @@ ms.locfileid: "85545333"
 
 ## <a name="example-violation"></a>Örnek Ihlali
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki örnek, bu kuralı ihlal eden bir özelliği gösterir.
 
 ### <a name="code"></a>Kod
@@ -58,7 +58,7 @@ ms.locfileid: "85545333"
 
 ## <a name="change-the-property-to-a-method-example"></a>Özelliği bir yöntem örneği olarak değiştirin
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki örnek, özelliğini bir yöntemi ile değiştirerek ihlalin düzeltir.
 
 ### <a name="code"></a>Kod
@@ -67,7 +67,7 @@ ms.locfileid: "85545333"
 
 ## <a name="return-a-collection-example"></a>Bir koleksiyon örneği döndürün
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki örnek, özelliği bir
 
  <xref:System.Collections.ObjectModel.ReadOnlyCollection%601?displayProperty=fullName>.
@@ -78,7 +78,7 @@ ms.locfileid: "85545333"
 
 ## <a name="allowing-users-to-modify-a-property"></a>Kullanıcıların bir özelliği değiştirmesine izin verme
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Sınıfın tüketicisi bir özelliği değiştirmesine izin vermek isteyebilirsiniz. Aşağıdaki örnek, bu kuralı ihlal eden bir okuma/yazma özelliği gösterir.
 
 ### <a name="code"></a>Kod

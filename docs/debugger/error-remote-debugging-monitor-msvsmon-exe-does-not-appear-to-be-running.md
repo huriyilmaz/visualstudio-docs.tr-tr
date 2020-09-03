@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6ba7fb30bcb5ac04a823b4ba654382ac23a966fe
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85460617"
 ---
 # <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a>Hata: Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi (MSVSMON.EXE) uzak bilgisayar üzerinde çalışıyor görünmüyor.
@@ -70,7 +70,7 @@ Bu hata iletisi, Visual Studio 'nun uzak bilgisayarda doğru Visual Studio Uzakt
  Uzaktan hata ayıklamayı farklı bir zamanda yapmanız veya ağdaki çalışmayı farklı bir süre için yeniden zamanlamanız gerekebilir.
 
 ## <a name="more-help"></a>Daha fazla yardım
- Komut satırı anahtarları dahil olmak üzere daha fazla uzaktan hata ayıklayıcı yardımı almak için, uzaktan hata ayıklayıcı penceresinde **yardım > kullanımı** ' na tıklayın. Açık değilse, aşağıdaki satırı bir **Dosya Gezgini** penceresine kopyalayarak Web sayfasına bakabilirsiniz. ( \<Visual Studio installation directory> Visual Studio yüklemenizin konumuyla değiştirmeniz gerekir.)
+ Komut satırı anahtarları dahil olmak üzere daha fazla uzaktan hata ayıklayıcı yardımı almak için, uzaktan hata ayıklayıcı penceresinde **yardım > kullanımı** ' na tıklayın. Açık değilse, aşağıdaki satırı bir  **Dosya Gezgini** penceresine kopyalayarak Web sayfasına bakabilirsiniz. ( \<Visual Studio installation directory> Visual Studio yüklemenizin konumuyla değiştirmeniz gerekir.)
 
  res:// *\<Visual Studio installation directory>* \Common7\IDE\Remote% 20Debugger\x64\msvsmon.exe/help.htm
 

@@ -1,5 +1,5 @@
 ---
-title: GuidSymbol Öğesi | Microsoft Dokümanlar
+title: GuidSymbol öğesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +12,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 59068a9ac9f952b5370681b3684ce4234354afc9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711121"
 ---
 # <a name="guidsymbol-element"></a>GuidSymbol öğesi
-Öğe, `GuidSymbol` bir menüyü, grubu veya komutu temsil eden GUID:ID çiftinin GUID'sini içerir. Kimlik, öğedeki `IDSymbol` bir öğeden gelir. `GuidSymbol` Öğe, `GuidSymbol` öznitelikte `name` `value` bulunan GUID için uygun bir ad sağlayan bir özniteliğe sahiptir.
+`GuidSymbol`Öğesi, bir menü, Grup veya komutu temsil eden GUID: ID ÇIFTININ GUID 'sini içerir. KIMLIĞI `IDSymbol` , öğesindeki bir öğeden gelir `GuidSymbol` . `GuidSymbol`Öğesi, `name` özniteliğinde yer alan GUID için kolay bir ad sağlayan bir özniteliğe sahiptir `value` .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <GuidSymbol name="guidMyCommandSet" value="{xxxxxxxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx}">
@@ -37,23 +37,23 @@ ms.locfileid: "80711121"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|ad|Gereklidir. GUID sembolünün adı.|
-|value|Gereklidir. GUID sembolünün GUID'i.|
+|name|Gereklidir. GUID sembolünün adı.|
+|değer|Gereklidir. GUID sembolünün GUID 'SI.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[IDSymbol öğesi](../extensibility/idsymbol-element.md)|Bir menüyü, grubu veya komutu temsil eden GUID:ID çiftinin kimliğini içerir.|
+|[IDSymbol öğesi](../extensibility/idsymbol-element.md)|Bir menü, Grup veya komutu temsil eden GUID: ID çiftinin KIMLIĞINI içerir.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Semboller öğesi](../extensibility/symbols-element.md)|Öğeleri `GuidSymbol` *.vsct* dosyasında grupla.|
+|[Symbols öğesi](../extensibility/symbols-element.md)|`GuidSymbol` *. Vsct* dosyasındaki öğeleri gruplandırır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Genellikle, bir *.vsct* dosyası `GuidSymbol` `Symbols` bölümünde üç öğe içerir, biri paketin kendisi için, biri komut kümesi için (paketin sunduğu menüler, gruplar ve komutların toplanması) ve diğeri düğmeler ve diğer görsel bileşenler için simgeler sağlayan bit eşlemleri için. Belirli `IDSymbol` `GuidSymbol` bir öğedeki her öğenin benzersiz `value`bir öğesi olmalıdır. Ancak, `IDSymbol` aynı değerlere sahip öğeler, farklı ebeveynleri olduğu sürece bir pakette bulunabilir.
+ Genellikle, bir *. vsct* dosyası kendi bölümünde, biri paketin kendisi için, biri `GuidSymbol` `Symbols` komut kümesi için (menülerin, grupların ve paketin kullanılabilir hale getiren komutlar koleksiyonu) ve düğmeler ve diğer görsel bileşenlere simgeler sağlayan bit eşlemler için olmak üzere üç öğesi içerir. `IDSymbol`Verilen bir öğe içindeki her öğenin `GuidSymbol` benzersiz olması gerekir `value` . Ancak, `IDSymbol` aynı değerlere sahip öğeler farklı üst öğeleri oldukları sürece bir pakette bulunabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio komut tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

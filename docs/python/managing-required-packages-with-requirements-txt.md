@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 9179ca2b77e7a6d3ae5b5dffded06524114a0f8d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544124"
 ---
 # <a name="manage-required-packages-with-requirementstxt"></a>Gerekli paketleri requirements.txt ile yönetme
@@ -27,9 +27,9 @@ Teknik olarak, gereksinimleri izlemek için herhangi bir dosya adı kullanılabi
 
     ![requirements.txt şuradan yüklensin](media/environments/environments-requirements-txt-install.png)
 
-- Bağımlılıkları bir sanal ortama yüklemek istiyorsanız önce bu ortamı oluşturup etkinleştirin, ardından **requirements.txt'Den Install** komutunu kullanın. Sanal ortam oluşturma hakkında daha fazla bilgi için bkz. [sanal ortamları kullanma](selecting-a-python-environment-for-a-project.md#use-virtual-environments).
+- Bağımlılıkları bir sanal ortama yüklemek istiyorsanız önce bu ortamı oluşturup etkinleştirin, ardından **requirements.txt'Den Install ** komutunu kullanın. Sanal ortam oluşturma hakkında daha fazla bilgi için bkz. [sanal ortamları kullanma](selecting-a-python-environment-for-a-project.md#use-virtual-environments).
 
-- Bir ortama zaten gerekli olan tüm paketler varsa, **Çözüm Gezgini** bu ortama sağ tıklayıp gerekli dosyayı oluşturmak Için **requirements.txtoluştur** ' u seçebilirsiniz. Dosya zaten varsa, güncelleştirme hakkında bir istem görünür:
+- Bir ortama zaten gerekli olan tüm paketler varsa, **Çözüm Gezgini** bu ortama sağ tıklayıp gerekli dosyayı oluşturmak Için **requirements.txtoluştur ** ' u seçebilirsiniz. Dosya zaten varsa, güncelleştirme hakkında bir istem görünür:
 
     ![requirements.txt seçeneklerini Güncelleştir](media/environments/environments-requirements-txt-replace.png)
 

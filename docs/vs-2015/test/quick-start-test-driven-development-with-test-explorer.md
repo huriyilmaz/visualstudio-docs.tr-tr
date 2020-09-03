@@ -9,10 +9,10 @@ caps.latest.revision: 17
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: eae08427e9ec61c34a98f3581355909317b69559
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672255"
 ---
 # <a name="quick-start-test-driven-development-with-test-explorer"></a>Hızlı Başlangıç: Test Gezgini ile Test Güdümlü Geliştirme
@@ -39,13 +39,13 @@ Geliştirmede birçok artımlı adım sayesinde kodunuzun düzgün çalışması
 
    1. Bir test projesi oluşturun.
 
-        **Yeni proje** iletişim kutusunda **Visual Basic**, **C#görsel**veya **görsel C++** ' i genişletin ve ardından **Test**' i seçin.
+        **Yeni proje** iletişim kutusunda **Visual Basic**, **Visual C#** veya **Visual C++**' i genişletin ve ardından **Test**' i seçin.
 
         **Birim testi projesi**seçin.
 
-   2. Her birim testini bir yöntem olarak yazın. Her test yönteminin `[TestMethod]` özniteliğiyle ön eki.
+   2. Her birim testini bir yöntem olarak yazın. Özniteliği ile her test yönteminin ön eki `[TestMethod]` .
 
-2. Bireysel testlerin herhangi bir sırada çalıştırılmasını engelleyen bir bağımlılığı yoksa, araç çubuğundaki ![Ute&#95;paralellicon&#45;küçük](../test/media/ute-parallelicon-small.png "UTE_parallelicon-küçük") geçiş düğmesi ile paralel test yürütmeyi etkinleştirin. Bu, tüm testleri çalıştırmak için harcanan süreyi önemli ölçüde azaltabilir.
+2. Bireysel testlerin herhangi bir sırada çalıştırılmasını engelleyen bir bağımlılığı yoksa, araç çubuğunda sırasıyla ![&#95;parallelicon&#45;küçük](../test/media/ute-parallelicon-small.png "UTE_parallelicon-küçük") iki durumlu düğmesiyle paralel test yürütmeyi etkinleştirin. Bu, tüm testleri çalıştırmak için harcanan süreyi önemli ölçüde azaltabilir.
 
 3. Menü çubuğunda, **Test**, **birim testlerini Çalıştır**, **Tüm testler**' i seçin.
 
@@ -67,16 +67,16 @@ Geliştirmede birçok artımlı adım sayesinde kodunuzun düzgün çalışması
 > [!NOTE]
 > Hiç test yoksa, test Gezgini 'ni kullanmakta olduğunuz test çerçevesine bağlamak için bir bağdaştırıcı yüklediğinizden emin olun. Daha fazla bilgi için bkz. [farklı bir test çerçevesi kullanma](/visualstudio/test/getting-started-with-unit-testing#use-a-third-party-test-framework).
 
-## <a name="walkthrough"></a>İzlenecek yol: bir yöntem geliştirmek için birim testlerini kullanma
- Bu izlenecek yol, Microsoft birim testi çerçevesini C# kullanarak test edilmiş bir yöntemin nasıl geliştirileceğini göstermektedir. Diğer dillere kolayca uyarlayabilir ve NUnit gibi diğer test çerçevelerini kullanabilirsiniz. Daha fazla bilgi için bkz. [farklı bir test çerçevesi kullanma](/visualstudio/test/getting-started-with-unit-testing#use-a-third-party-test-framework).
+## <a name="walkthrough-using-unit-tests-to-develop-a-method"></a><a name="walkthrough"></a> İzlenecek yol: bir yöntem geliştirmek için birim testlerini kullanma
+ Bu izlenecek yol, Microsoft birim testi çerçevesini kullanarak C# ' de test edilmiş bir yöntemin nasıl geliştirileceğini göstermektedir. Diğer dillere kolayca uyarlayabilir ve NUnit gibi diğer test çerçevelerini kullanabilirsiniz. Daha fazla bilgi için bkz. [farklı bir test çerçevesi kullanma](/visualstudio/test/getting-started-with-unit-testing#use-a-third-party-test-framework).
 
 #### <a name="creating-the-test-and-method"></a>Test ve yöntem oluşturma
 
-1. Görsel C# sınıf kitaplığı projesi oluşturun. Bu proje, teslim etmek istediğimiz kodu içerecektir. Bu örnekte, `MyMath` olarak adlandırılmıştır.
+1. Visual C# sınıf kitaplığı projesi oluşturun. Bu proje, teslim etmek istediğimiz kodu içerecektir. Bu örnekte, adlandırılır `MyMath` .
 
 2. Bir test projesi oluşturun.
 
-   - **Yeni proje** iletişim kutusunda **görsel C#** ' i ve **Test** ' i seçin ve ardından **birim testi projesi**' ni seçin.
+   - **Yeni proje** Iletişim kutusunda **Visual C#**' ı seçin, **Test** edin ve ardından **birim testi projesi**' ni seçin.
 
         ![Yeni kod ve test projeleri](../test/media/unittestexplorerwalk1.png "UnitTestExplorerWalk1")
 
@@ -102,11 +102,11 @@ Geliştirmede birçok artımlı adım sayesinde kodunuzun düzgün çalışması
 
 4. Testten yöntemi oluşturun.
 
-   1. İmleci `Rooter` yerleştirip kısayol menüsünde **Oluştur**, **yeni tür**' i seçin.
+   1. İmleci üzerine getirin `Rooter` ve ardından kısayol menüsünde **Oluştur**, **yeni tür**' i seçin.
 
-   2. **Yeni tür oluştur** iletişim kutusunda, **projeyi** sınıf kitaplığı projesi olarak ayarlayın. Bu örnekte, `MyMath`.
+   2. **Yeni tür oluştur** iletişim kutusunda, **projeyi** sınıf kitaplığı projesi olarak ayarlayın. Bu örnekte bu değer `MyMath`’dur.
 
-   3. İmleci `SquareRoot` yerleştirip kısayol menüsünde **Oluştur**, **Yöntem saplaması**' nı seçin.
+   3. İmleci üzerine getirin `SquareRoot` ve ardından kısayol menüsünde **Oluştur**, **Yöntem saplaması**' nı seçin.
 
 5. Birim testini çalıştırın.
 
@@ -130,7 +130,7 @@ Geliştirmede birçok artımlı adım sayesinde kodunuzun düzgün çalışması
 
 #### <a name="after-every-change-make-all-the-tests-pass"></a>Her değişiklikten sonra tüm testlerin geçişini yapın
 
-1. @No__t_0, `SquareRoot` kodunu geliştirebilirsiniz:
+1. İçinde `MyMath\Rooter.cs` , şu kodu geliştirebilirsiniz `SquareRoot` :
 
     ```csharp
     public double SquareRoot(double input)
@@ -186,7 +186,7 @@ Geliştirmede birçok artımlı adım sayesinde kodunuzun düzgün çalışması
 
      Başarısızlık noktasını bulmak için, başarısız testi seçin ve ardından Test Gezgini 'nin alt bölümünde, **yığın izlemenin**en üstteki öğesini seçin.
 
-3. Neyin yanlış olabileceğini görmek için test kapsamındaki yöntemi inceleyin. @No__t_0 sınıfında kodu yeniden yazın:
+3. Neyin yanlış olabileceğini görmek için test kapsamındaki yöntemi inceleyin. `MyMath.Rooter`Sınıfında, kodu yeniden yazın:
 
     ```
     public double SquareRoot(double input)

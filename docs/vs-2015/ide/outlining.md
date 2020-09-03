@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 907d075f597799edd582c9f2bae693eac92c0b2c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544969"
 ---
 # <a name="outlining"></a>Anahat Oluşturma
@@ -49,6 +49,6 @@ Bir kod bölgesini daraltarak bir, bir artı işareti (+) altında görünmesi i
 |Geçerli gizlemeyi durdur|(CTRL + M, CTRL + U)-Şu anda seçili olan Kullanıcı tanımlı bölgenin ana hat bilgilerini kaldırır. Visual Basic ' de kullanılamaz.|
 |Tanımlara Daralt|(CTRL + M, CTRL + O)-tüm türlerin üyelerini daraltır.|
 |Engellemeyi daralt:\<logical boundary>|(Visual C++) İşlevde ekleme noktasını içeren bir bölgeyi daraltır. Örneğin, ekleme noktası bir döngü içinde yer alıyorsa, döngü gizlenir.|
-|İçindeki hepsini daralt:\<logical structures>|(Visual C++) İşlev içindeki tüm yapıları daraltır.|
+|İçindeki hepsini daralt: \<logical structures>|(Visual C++) İşlev içindeki tüm yapıları daraltır.|
 
  Genişletmek veya daraltmak istediğiniz metin bölgelerini tanımlamak için Visual Studio SDK 'sını de kullanabilirsiniz. Bkz. [Izlenecek yol: Ana hat](../extensibility/walkthrough-outlining.md).

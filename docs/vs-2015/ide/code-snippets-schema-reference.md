@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 67bc1a18b4e4cbfdf69fe917c0d0fdff09832983
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545034"
 ---
 # <a name="code-snippets-schema-reference"></a>Kod Parçacıkları Şema Başvurusu
@@ -41,7 +41,7 @@ IntelliSense kod parçacıkları ile uygulamanıza eklenmeye hazırlanan öncede
 |[Function öğesi](../ide/code-snippets-schema-reference.md#function)|[Nesne öğesi](../ide/code-snippets-schema-reference.md#object)|[URL öğesi](../ide/code-snippets-schema-reference.md#url)|
 |[Header öğesi](../ide/code-snippets-schema-reference.md#header)|[Reference öğesi](../ide/code-snippets-schema-reference.md#reference)||
 
-## <a name="assembly-element"></a><a name="assembly"></a>Assembly öğesi
+## <a name="assembly-element"></a><a name="assembly"></a> Assembly öğesi
  Kod parçacığının başvurduğu derlemenin adını belirtir.
 
 > [!NOTE]
@@ -55,13 +55,13 @@ IntelliSense kod parçacıkları ile uygulamanıza eklenmeye hazırlanan öncede
 </Assembly>
 ```
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Reference öğesi](../ide/code-snippets-schema-reference.md#reference)|Kod parçacığının gerek duyduğu derleme başvuruları hakkındaki bilgileri içerir.|
 
  Bir metin değeri gereklidir. Bu metin, kod parçacığının başvurduğu derlemeyi belirtir.
 
-## <a name="author-element"></a><a name="author"></a>Author öğesi
+## <a name="author-element"></a><a name="author"></a> Author öğesi
  Kod parçacığı yazarının adını belirtir. **Kod parçacıkları Yöneticisi** , kod parçacığının öğesinde depolanan adı görüntüler `Author` .
 
 ```xml
@@ -71,16 +71,16 @@ IntelliSense kod parçacıkları ile uygulamanıza eklenmeye hazırlanan öncede
 
 ```
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Header öğesi](../ide/code-snippets-schema-reference.md#header)|Kod parçacığı hakkında genel bilgiler içerir.|
 
  Bir metin değeri gereklidir. Bu metin kod parçacığının yazarını belirtir.
 
-## <a name="code-element"></a><a name="code"></a>Kod öğesi
+## <a name="code-element"></a><a name="code"></a> Kod öğesi
  Kısa kod blokları için bir kapsayıcı sağlar.
 
- Şu öğenin metninde kullanılabilecek iki ayrılmış sözcük vardır `Code` : `$end$` ve `$selected$` . `$end$`kod parçacığı eklendikten sonra imlecin yerleştirileceği konumu işaretler. `$selected$`belgede, çağrıldığında kod parçacığına eklenecek metni temsil eder. Örneğin, şunları içeren bir kod parçacığı verilmiştir:
+ Şu öğenin metninde kullanılabilecek iki ayrılmış sözcük vardır `Code` : `$end$` ve `$selected$` . `$end$` kod parçacığı eklendikten sonra imlecin yerleştirileceği konumu işaretler. `$selected$` belgede, çağrıldığında kod parçacığına eklenecek metni temsil eder. Örneğin, şunları içeren bir kod parçacığı verilmiştir:
 
 ```xml
 $selected$ is a great color.
@@ -122,7 +122,7 @@ is a great color. I love Blue.
 |`Kind`|İsteğe bağlı öznitelik. Kod parçacığının içerdiği kod türünü ve kod parçacığının derlenmesi için bir kod parçacığının araya eklenmesi gereken konumu belirtir. Kullanılabilir değerler,, `method body` , `method decl` `type decl` `file` ve `any` .|
 |`Language`|Gerekli öznitelik. Kod parçacığının dilini belirtir.|
 
-|Tür Öznitelik Değeri|Açıklama|
+|Tür Öznitelik Değeri|Description|
 |--------------------------|-----------------|
 |`method body`|Kod parçacığının bir yöntem gövdesi olduğunu ve bu nedenle, bir yöntem bildiriminin içine eklenmesi gerektiğini belirtir.|
 |`method decl`|Kod parçacığının bir yöntem olduğunu ve bu nedenle, bir sınıf veya modül içine eklenmesi gerektiğini belirtir.|
@@ -130,7 +130,7 @@ is a great color. I love Blue.
 |`file`|Kod parçacığının eksiksiz bir kod dosyası olduğunu belirtir. Bu kod parçacıkları tek başına bir kod dosyasının içine veya bir ad alanının içine eklenebilir.|
 |`any`|Kod parçacığının istenen yere eklenebileceğini belirtir. Bu etiket, açıklamalar gibi içeriğe bağımlı kod parçacıkları için kullanılır.|
 
-|Dil Özniteliği Değeri|Açıklama|
+|Dil Özniteliği Değeri|Description|
 |------------------------------|-----------------|
 |`VB`|Bir Visual Basic kod parçacığını tanımlar.|
 |`CSharp`|Bir C# kod parçacığını tanımlar.|
@@ -140,13 +140,13 @@ is a great color. I love Blue.
 |`SQL`|Bir SQL kod parçacığını tanımlar.|
 |`HTML`|Bir HTML kod parçacığını tanımlar.|
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Kod parçacığı öğesi](../ide/code-snippets-schema-reference.md#snippet)|Kod parçacığı için başvuruları, içeri aktarımları, bildirimleri ve kodu içerir.|
 
  Bir metin değeri gereklidir. Bu metin, bu kod parçacığı bir projeye eklendiğinde kullanabileceğiniz değişmez değerler ve nesnelerle birlikte kodu belirtir.
 
-## <a name="codesnippet-element"></a><a name="codesnippet"></a>Codeparçacığının öğesi
+## <a name="codesnippet-element"></a><a name="codesnippet"></a> Codeparçacığının öğesi
  Visual Studio kod dosyalarına ekleyebileceğiniz bir başlık ve birden fazla IntelliSense Kod Parçacığı belirtmenizi sağlar.
 
 ```xml
@@ -161,16 +161,16 @@ is a great color. I love Blue.
 |---------------|-----------------|
 |`Format`|Gerekli öznitelik. Kod parçacığının şema sürümünü belirtir. Format özniteliği, her "x"in sürüm numarasına ait sayısal bir değeri temsil ettiği x.x.x sözdiziminde bir dize olmalıdır. Visual Studio, anlamayan özniteliklere sahip kod parçacıklarını yoksayacak `Format` .|
 
-|Alt Öğe|Açıklama|
+|Alt Öğe|Description|
 |-------------------|-----------------|
 |[Header öğesi](../ide/code-snippets-schema-reference.md#header)|Gerekli öğe. Kod parçacığı hakkında genel bilgiler içerir. Kod parçacığında tam olarak bir `Header` öğe olmalıdır.|
 |[Kod parçacığı öğesi](../ide/code-snippets-schema-reference.md#snippet)|Gerekli öğe. Visual Studio tarafından eklenecek kodu içerir. Kod parçacığında tam olarak bir `Snippet` öğe olmalıdır.|
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Codeparçacıklar öğesi](../ide/code-snippets-schema-reference.md#codesnippets)|Kod parçacığı XML şemasının kök öğesi.|
 
-## <a name="codesnippets-element"></a><a name="codesnippets"></a>Codeparçacıklar öğesi
+## <a name="codesnippets-element"></a><a name="codesnippets"></a> Codeparçacıklar öğesi
  [Kod parçacığı öğesi](../ide/code-snippets-schema-reference.md#codesnippet)öğelerini gruplandırır. `CodeSnippets`Öğesi, kod parçacığı XML şemasının kök öğesidir.
 
 ```xml
@@ -180,11 +180,11 @@ is a great color. I love Blue.
 
 ```
 
-|Alt Öğe|Açıklama|
+|Alt Öğe|Description|
 |-------------------|-----------------|
 |[Codeparçacığının öğesi](../ide/code-snippets-schema-reference.md#codesnippet)|İsteğe bağlı öğe. Tüm kod parçacığı verisi için üst öğe. Öğesinde sıfır veya daha fazla `CodeSnippet` öğe olabilir `CodeSnippets` .|
 
-## <a name="declarations-element"></a><a name="declarations"></a>Bildirimleri öğesi
+## <a name="declarations-element"></a><a name="declarations"></a> Bildirimleri öğesi
  Bir kod parçacığının düzenleyebileceğiniz bölümlerini oluşturan değişmez değerleri ve nesneleri belirtir.
 
 ```xml
@@ -195,16 +195,16 @@ is a great color. I love Blue.
 
 ```
 
-|Alt Öğe|Açıklama|
+|Alt Öğe|Description|
 |-------------------|-----------------|
 |[Literal Öğesi](../ide/code-snippets-schema-reference.md#literal)|İsteğe bağlı öğe. Kod parçacığının düzenleme yapabileceğiniz değişmez değerlerini tanımlar. Öğesinde sıfır veya daha fazla `Literal` öğe olabilir `Declarations` .|
 |[Nesne öğesi](../ide/code-snippets-schema-reference.md#object)|İsteğe bağlı öğe. Kod parçacığının düzenleme yapabileceğiniz nesnelerini tanımlar. Öğesinde sıfır veya daha fazla `Object` öğe olabilir `Declarations` .|
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Kod parçacığı öğesi](../ide/code-snippets-schema-reference.md#snippet)|Kod parçacığı için başvuruları, içeri aktarımları, bildirimleri ve kodu içerir.|
 
-## <a name="default-element"></a><a name="default"></a>Varsayılan öğe
+## <a name="default-element"></a><a name="default"></a> Varsayılan öğe
  Bir IntelliSense Kod Parçacığı için değişmez değerin veya nesnenin varsayılan değerini belirtir.
 
 ```xml
@@ -214,14 +214,14 @@ is a great color. I love Blue.
 
 ```
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Literal Öğesi](../ide/code-snippets-schema-reference.md#literal)|Kod parçacığının düzenleme yapabileceğiniz değişmez değer alanlarını tanımlar.|
 |[Nesne öğesi](../ide/code-snippets-schema-reference.md#object)|Kod parçacığının düzenleme yapabileceğiniz nesne alanlarını tanımlar.|
 
  Bir metin değeri gereklidir. Bu metin, düzenleyebileceğiniz kod parçacığı alanlarını dolduran değişmez değerin veya nesnenin varsayılan değerini belirtir.
 
-## <a name="description-element"></a><a name="description"></a>Description öğesi
+## <a name="description-element"></a><a name="description"></a> Description öğesi
  Bir IntelliSense Kod Parçacığı'nın içeriği hakkında açıklayıcı bilgileri belirtir.
 
 ```xml
@@ -230,13 +230,13 @@ is a great color. I love Blue.
 </Description>
 ```
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Header öğesi](../ide/code-snippets-schema-reference.md#header)|Kod parçacığı hakkında genel bilgiler içerir.|
 
  Bir metin değeri gereklidir. Bu metin kod parçacığını tanımlar.
 
-## <a name="function-element"></a><a name="function"></a>Function öğesi
+## <a name="function-element"></a><a name="function"></a> Function öğesi
  Değişmez değer veya nesne Visual Studio'da odağa geldiğinde yürütülecek bir işlevi belirtir.
 
 > [!NOTE]
@@ -248,14 +248,14 @@ is a great color. I love Blue.
 </Function>
 ```
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Literal Öğesi](../ide/code-snippets-schema-reference.md#literal)|Kod parçacığının düzenleme yapabileceğiniz değişmez değer alanlarını tanımlar.|
 |[Nesne öğesi](../ide/code-snippets-schema-reference.md#object)|Kod parçacığının düzenleme yapabileceğiniz nesne alanlarını tanımlar.|
 
  Bir metin değeri gereklidir. Bu metin, değişmez değer veya nesne alanı Visual Studio'da odağa geldiğinde yürütülecek bir işlevi belirtir.
 
-## <a name="header-element"></a><a name="header"></a>Header öğesi
+## <a name="header-element"></a><a name="header"></a> Header öğesi
  IntelliSense Kod Parçacığı hakkında genel bilgileri belirtir.
 
 ```xml
@@ -271,7 +271,7 @@ is a great color. I love Blue.
 
 ```
 
-|Alt Öğe|Açıklama|
+|Alt Öğe|Description|
 |-------------------|-----------------|
 |[Author öğesi](../ide/code-snippets-schema-reference.md#author)|İsteğe bağlı öğe. Kod parçacığını yazan kişinin veya şirketin adı. Bir öğede sıfır veya bir `Author` öğe olabilir `Header` .|
 |[Description öğesi](../ide/code-snippets-schema-reference.md#description)|İsteğe bağlı öğe. Kod parçacığının açıklaması. Bir öğede sıfır veya bir `Description` öğe olabilir `Header` .|
@@ -281,11 +281,11 @@ is a great color. I love Blue.
 |[SnippetTypes öğesi](../ide/code-snippets-schema-reference.md#snippettypes)|İsteğe bağlı öğe. `SnippetType`Öğeleri gruplandırır. Bir öğede sıfır veya bir `SnippetTypes` öğe olabilir `Header` . Hiçbir `SnippetTypes` öğe yoksa, kod parçacığı her zaman geçerlidir.|
 |[Title öğesi](../ide/code-snippets-schema-reference.md#title)|Gerekli öğe. Kod parçacığının kolay adı. Öğesinde tam olarak bir `Title` öğe olmalıdır `Header` .|
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Codeparçacığının öğesi](../ide/code-snippets-schema-reference.md#codesnippet)|Tüm kod parçacığı verisi için üst öğe.|
 
-## <a name="helpurl-element"></a><a name="helpurl"></a>HelpUrl öğesi
+## <a name="helpurl-element"></a><a name="helpurl"></a> HelpUrl öğesi
  Bir kod parçacığı hakkında daha fazla bilgi sağlayan URL'yi belirtir.
 
 > [!NOTE]
@@ -298,13 +298,13 @@ is a great color. I love Blue.
 
 ```
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Header öğesi](../ide/code-snippets-schema-reference.md#header)|Kod parçacığı hakkında genel bilgiler içerir.|
 
  Metin değeri isteğe bağlıdır. Bu metin, kod parçacığı hakkında daha fazla bilgi için ziyaret edilmesi gereken URL'yi belirtir.
 
-## <a name="id-element"></a><a name="id"></a>ID öğesi
+## <a name="id-element"></a><a name="id"></a> ID öğesi
  Or öğesi için benzersiz bir tanımlayıcı `Literal` belirtir `Object` . Aynı kod parçacığında iki değişmez değer veya nesne, öğelerinde aynı metin değerine sahip olamaz `ID` . Değişmez değer ve nesneler, `ID` bitiş değeri olan bir öğe içeremez. Değer `$end$` ayrılmıştır ve kod parçacığı eklendikten sonra imlecin yerleştirileceği konumu işaretlemek için kullanılır.
 
 ```xml
@@ -314,14 +314,14 @@ is a great color. I love Blue.
 
 ```
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Literal Öğesi](../ide/code-snippets-schema-reference.md#literal)|Kod parçacığının düzenleme yapabileceğiniz değişmez değer alanlarını tanımlar.|
 |[Nesne öğesi](../ide/code-snippets-schema-reference.md#object)|Kod parçacığının düzenleme yapabileceğiniz nesne alanlarını tanımlar.|
 
  Bir metin değeri gereklidir. Bu metin, nesne veya değişmez değer için benzersiz tanımlayıcıyı belirtir.
 
-## <a name="import-element"></a><a name="import"></a>İçeri aktarma öğesi
+## <a name="import-element"></a><a name="import"></a> İçeri aktarma öğesi
  Bir IntelliSense Kod Parçacığı tarafından kullanılan içeri aktarılan ad alanlarını belirtir.
 
 > [!NOTE]
@@ -334,15 +334,15 @@ is a great color. I love Blue.
 
 ```
 
-|Alt Öğe|Açıklama|
+|Alt Öğe|Description|
 |-------------------|-----------------|
 |[Namespace öğesi](../ide/code-snippets-schema-reference.md#namespace)|Gerekli öğe. Kod parçacığı tarafından kullanılan ad alanını belirtir. Öğesinde tam olarak bir `Namespace` öğe olmalıdır `Import` .|
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Imports öğesi](../ide/code-snippets-schema-reference.md#imports)|Öğe **Içeri aktarma** öğeleri için gruplandırma öğesi.|
 
-## <a name="imports-element"></a><a name="imports"></a>Imports öğesi
+## <a name="imports-element"></a><a name="imports"></a> Imports öğesi
  Tek tek `Import` öğeleri gruplandırır.
 
 > [!NOTE]
@@ -354,15 +354,15 @@ is a great color. I love Blue.
 <Imports>
 ```
 
-|Alt Öğe|Açıklama|
+|Alt Öğe|Description|
 |-------------------|-----------------|
 |[İçeri aktarma öğesi](../ide/code-snippets-schema-reference.md#import)|İsteğe bağlı öğe. Kod parçacığı için içeri aktarılan ad alanlarını içerir. Bir öğede sıfır veya daha fazla **Içeri aktarma** öğesi olabilir `Imports` .|
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Kod parçacığı öğesi](../ide/code-snippets-schema-reference.md#snippet)|Kod parçacığı için başvuruları, içeri aktarımları, bildirimleri ve kodu içerir.|
 
-## <a name="keyword-element"></a><a name="keyword"></a>Anahtar sözcük öğesi
+## <a name="keyword-element"></a><a name="keyword"></a> Anahtar sözcük öğesi
  Kod parçacığı için özel bir anahtar sözcük belirtir. Kod parçacığı anahtar sözcükleri Visual Studio tarafından kullanılır ve çevrimiçi içerik sağlayıcılarının aramaya veya kategorilere ayırmaya yönelik özel anahtar sözcükler eklemek için kullandıkları standart bir yöntemi temsil eder.
 
 ```xml
@@ -371,13 +371,13 @@ is a great color. I love Blue.
 </Keyword>
 ```
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Keywords öğesi](../ide/code-snippets-schema-reference.md#keywords)|Tek tek `Keyword` öğeleri gruplandırır.|
 
  Bir metin değeri gereklidir. Kod parçacığı için anahtar sözcük.
 
-## <a name="keywords-element"></a><a name="keywords"></a>Keywords öğesi
+## <a name="keywords-element"></a><a name="keywords"></a> Keywords öğesi
  Tek tek `Keyword` öğeleri gruplandırır. Kod parçacığı anahtar sözcükleri Visual Studio tarafından kullanılır ve çevrimiçi içerik sağlayıcılarının aramaya veya kategorilere ayırmaya yönelik özel anahtar sözcükler eklemek için kullandıkları standart bir yöntemi temsil eder
 
 ```xml
@@ -387,18 +387,18 @@ is a great color. I love Blue.
 <Keywords>
 ```
 
-|Alt Öğe|Açıklama|
+|Alt Öğe|Description|
 |-------------------|-----------------|
 |[Anahtar sözcük öğesi](../ide/code-snippets-schema-reference.md#keyword)|İsteğe bağlı öğe. Kod parçacığı için tek tek anahtar sözcükleri içerir. Öğesinde sıfır veya daha fazla `Keyword` öğe olabilir `Keywords` .|
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Header öğesi](../ide/code-snippets-schema-reference.md#header)|Kod parçacığı hakkında genel bilgiler içerir.|
 
-## <a name="literal-element"></a><a name="literal"></a>Literal öğesi
+## <a name="literal-element"></a><a name="literal"></a> Literal öğesi
  Kod parçacığının düzenleme yapabileceğiniz değişmez değerlerini tanımlar. `Literal`Öğesi, tamamen kod parçacığında yer alan kod parçasının yerini belirlemek için kullanılır, ancak büyük olasılıkla koda eklendikten sonra özelleştirilmeyecektir. Örneğin, değişmez değer dizeleri, sayısal değerler ve bazı değişken adları değişmez değer olarak bildirilmelidir.
 
- Sabit değerler ve nesneler, seçili veya son değeri olan bir **ID** öğesi içeremez. Değer, `$selected$` çağrıldığında, çağrıldığında kod parçacığına eklenecek metni temsil eder. `$end$`kod parçacığı eklendikten sonra imlecin yerleştirileceği konumu işaretler.
+ Sabit değerler ve nesneler, seçili veya son değeri olan bir **ID** öğesi içeremez. Değer, `$selected$` çağrıldığında, çağrıldığında kod parçacığına eklenecek metni temsil eder. `$end$` kod parçacığı eklendikten sonra imlecin yerleştirileceği konumu işaretler.
 
 ```xml
 <Literal Editable="true/false">
@@ -413,18 +413,18 @@ is a great color. I love Blue.
 |---------------|-----------------|
 |`Editable`|İsteğe bağlı `Boolean` öznitelik. Kod parçacığı eklendikten sonra değişmez değerde düzenleme yapıp yapamayacağınızı belirtir. Bu özniteliğin varsayılan değeri `true` .|
 
-|Alt Öğe|Açıklama|
+|Alt Öğe|Description|
 |-------------------|-----------------|
 |[Varsayılan öğe](../ide/code-snippets-schema-reference.md#default)|Gerekli öğe. Kod parçacığını eklediğinizde değişmez değerin alacağı varsayılan değeri belirtir. Öğesinde tam olarak bir `Default` öğe olmalıdır `Literal` .|
 |[Function öğesi](../ide/code-snippets-schema-reference.md#function)|İsteğe bağlı öğe. Değişmez değer Visual Studio'da odağa geldiğinde yürütülecek bir işlevi belirtir. Bir öğede sıfır veya bir `Function` öğe olabilir `Literal` .|
 |[ID öğesi](../ide/code-snippets-schema-reference.md#id)|Gerekli öğe. Değişmez değer için benzersiz bir tanımlayıcı belirtir. Öğesinde tam olarak bir `ID` öğe olmalıdır `Literal` .|
 |[ToolTip öğesi](../ide/code-snippets-schema-reference.md#tooltip)|İsteğe bağlı öğe. Değişmez değerin beklenen değerini ve kullanımını açıklar. Öğesinde sıfır veya bir **araç ipucu** öğesi olabilir `Literal` .|
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Bildirimleri öğesi](../ide/code-snippets-schema-reference.md#declarations)|Kod parçacığının düzenleme yapabileceğiniz değişmez değerlerini ve nesnelerini içerir.|
 
-## <a name="namespace-element"></a><a name="namespace"></a>Namespace öğesi
+## <a name="namespace-element"></a><a name="namespace"></a> Namespace öğesi
  Kod parçacığının derlenip çalışması için içeri aktarılması gereken ad alanını belirtir. Öğesinde belirtilen ad alanı, `Namespace` `Imports` zaten yoksa kodun başındaki bir ifadeye otomatik olarak eklenir.
 
 > [!NOTE]
@@ -436,13 +436,13 @@ is a great color. I love Blue.
 </Namespace>
 ```
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[İçeri aktarma öğesi](../ide/code-snippets-schema-reference.md#import)|Belirtilen ad alanını içeri aktarır.|
 
  Bir metin değeri gereklidir. Bu metin, kod parçacığının içeri aktarıldığını varsaydığı bir ad alanını belirtir.
 
-## <a name="object-element"></a><a name="object"></a>Nesne öğesi
+## <a name="object-element"></a><a name="object"></a> Nesne öğesi
  Kod parçacığının düzenleme yapabileceğiniz nesnelerini tanımlar. `Object`Öğesi, kod parçacığı için gereken ancak büyük olasılıkla kod parçacığı dışında tanımlanmış bir öğeyi tanımlamak için kullanılır. Örneğin, Windows Forms denetimleri, ASP.NET denetimleri, nesne örnekleri ve tür örnekleri nesne olarak bildirilmelidir. Nesne bildirimleri öğesi ile gerçekleştirilen bir tür belirtilmesini gerektirir `Type` .
 
 ```xml
@@ -459,7 +459,7 @@ is a great color. I love Blue.
 |---------------|-----------------|
 |`Editable`|İsteğe bağlı `Boolean` öznitelik. Kod parçacığı eklendikten sonra değişmez değerde düzenleme yapıp yapamayacağınızı belirtir. Bu özniteliğin varsayılan değeri `true` .|
 
-|Alt Öğe|Açıklama|
+|Alt Öğe|Description|
 |-------------------|-----------------|
 |[Varsayılan öğe](../ide/code-snippets-schema-reference.md#default)|Gerekli öğe. Kod parçacığını eklediğinizde değişmez değerin alacağı varsayılan değeri belirtir. Öğesinde tam olarak bir `Default` öğe olmalıdır `Literal` .|
 |[Function öğesi](../ide/code-snippets-schema-reference.md#function)|İsteğe bağlı öğe. Değişmez değer Visual Studio'da odağa geldiğinde yürütülecek bir işlevi belirtir. Bir öğede sıfır veya bir `Function` öğe olabilir `Literal` .|
@@ -467,11 +467,11 @@ is a great color. I love Blue.
 |[ToolTip öğesi](../ide/code-snippets-schema-reference.md#tooltip)|İsteğe bağlı öğe. Değişmez değerin beklenen değerini ve kullanımını açıklar. Öğesinde sıfır veya bir **araç ipucu** öğesi olabilir `Literal` .|
 |[Type öğesi](../ide/code-snippets-schema-reference.md#type)|Gerekli öğe. Nesnenin türünü belirtir. Öğesinde tam olarak bir `Type` öğe olmalıdır `Object` .|
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Bildirimleri öğesi](../ide/code-snippets-schema-reference.md#declarations)|Kod parçacığının düzenleme yapabileceğiniz değişmez değerlerini ve nesnelerini içerir.|
 
-## <a name="reference-element"></a><a name="reference"></a>Reference öğesi
+## <a name="reference-element"></a><a name="reference"></a> Reference öğesi
  Kod parçacığının gerek duyduğu derleme başvuruları hakkındaki bilgileri belirtir.
 
 > [!NOTE]
@@ -484,16 +484,16 @@ is a great color. I love Blue.
 </Reference>
 ```
 
-|Alt Öğe|Açıklama|
+|Alt Öğe|Description|
 |-------------------|-----------------|
 |[Assembly öğesi](../ide/code-snippets-schema-reference.md#assembly)|Gerekli öğe. Kod parçacığının başvurduğu derlemenin adını içerir. Öğesinde tam olarak bir `Assembly` öğe olmalıdır `Reference` .|
 |[URL öğesi](../ide/code-snippets-schema-reference.md#url)|İsteğe bağlı öğe. Başvurulan derleme hakkında daha fazla bilgi sağlayan bir URL içerir. Bir öğede sıfır veya bir `Url` öğe olabilir `Reference` .|
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[References öğesi](../ide/code-snippets-schema-reference.md#references)|Öğeleri için gruplandırma öğesi `Reference` .|
 
-## <a name="references-element"></a><a name="references"></a>References öğesi
+## <a name="references-element"></a><a name="references"></a> References öğesi
  Tek tek `Reference` öğeleri gruplandırır.
 
 > [!NOTE]
@@ -505,15 +505,15 @@ is a great color. I love Blue.
 </References>
 ```
 
-|Alt Öğe|Açıklama|
+|Alt Öğe|Description|
 |-------------------|-----------------|
 |[Reference öğesi](../ide/code-snippets-schema-reference.md#reference)|İsteğe bağlı öğe. Kod parçacığı için derleme başvuruları hakkındaki bilgileri içerir. Öğesinde sıfır veya daha fazla `Reference` öğe olabilir `References` .|
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Kod parçacığı öğesi](../ide/code-snippets-schema-reference.md#snippet)|Kod parçacığı için başvuruları, içeri aktarımları, bildirimleri ve kodu içerir.|
 
-## <a name="shortcut-element"></a><a name="shortcut"></a>Shortcut öğesi
+## <a name="shortcut-element"></a><a name="shortcut"></a> Shortcut öğesi
  Kod parçacığını eklemek için kullanılan kısayol metnini belirtir. Bir öğenin metin değeri `Shortcut` yalnızca alfasayısal karakter, kısa çizgi (-) ve alt çizgi (_) içerebilir.
 
 > [!CAUTION]
@@ -525,13 +525,13 @@ is a great color. I love Blue.
 </Shortcut>
 ```
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Header öğesi](../ide/code-snippets-schema-reference.md#header)|Kod parçacığı hakkında genel bilgiler içerir.|
 
  Metin değeri isteğe bağlıdır. Bu metin, kod parçacığını eklemek için bir kısayol olarak kullanılır.
 
-## <a name="snippet-element"></a><a name="snippet"></a>Kod parçacığı öğesi
+## <a name="snippet-element"></a><a name="snippet"></a> Kod parçacığı öğesi
  Kod parçacığı için başvuruları, içeri aktarımları, bildirimleri ve kodu belirtir.
 
 ```xml
@@ -544,18 +544,18 @@ is a great color. I love Blue.
 
 ```
 
-|Alt Öğe|Açıklama|
+|Alt Öğe|Description|
 |-------------------|-----------------|
 |[Code Öğesi](../ide/code-snippets-schema-reference.md#code)|Gerekli öğe. Bir belge dosyasına eklemek istediğiniz kodu belirtir. Öğesinde tam olarak bir `Code` öğe olmalıdır `Snippet` .|
 |[Bildirimleri öğesi](../ide/code-snippets-schema-reference.md#declarations)|İsteğe bağlı öğe. Bir kod parçacığının düzenleyebileceğiniz bölümlerini oluşturan değişmez değerleri ve nesneleri belirtir. Bir öğede sıfır veya bir `Declarations` öğe olabilir `Snippet` .|
 |[Imports öğesi](../ide/code-snippets-schema-reference.md#imports)|İsteğe bağlı öğe. Tek tek `Import` öğeleri gruplandırır. Bir öğede sıfır veya bir `Imports` öğe olabilir `Snippet` .|
 ||İsteğe bağlı öğe. Tek tek `Reference` öğeleri gruplandırır. Bir öğede sıfır veya bir `References` öğe olabilir `Snippet` .|
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Codeparçacığının öğesi](../ide/code-snippets-schema-reference.md#codesnippet)|Visual Studio kod dosyalarına ekleyebileceğiniz bir başlık ve birden fazla IntelliSense Kod Parçacığı belirtmenizi sağlar.|
 
-## <a name="snippettype-element"></a><a name="snippettype"></a>SnippetType Öğesi
+## <a name="snippettype-element"></a><a name="snippettype"></a> SnippetType Öğesi
  Visual Studio'nun kod parçacığını nasıl eklediğini belirtir.
 
 ```xml
@@ -564,7 +564,7 @@ is a great color. I love Blue.
 <SnippetType>
 ```
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[SnippetTypes öğesi](../ide/code-snippets-schema-reference.md#snippettypes)|`SnippetType`Öğeleri gruplandırır.|
 
@@ -574,9 +574,9 @@ is a great color. I love Blue.
 
 - `Expansion`: kod parçacığının imlece eklenmesine izin verir.
 
-- `Refactoring`: Visual C# yeniden düzenlemesi sırasında kod parçacığının kullanıldığını belirtir. `Refactoring`özel kod parçacıkları içinde kullanılamaz.
+- `Refactoring`: Visual C# yeniden düzenlemesi sırasında kod parçacığının kullanıldığını belirtir. `Refactoring` özel kod parçacıkları içinde kullanılamaz.
 
-## <a name="snippettypes-element"></a><a name="snippettypes"></a>SnippetTypes öğesi
+## <a name="snippettypes-element"></a><a name="snippettypes"></a> SnippetTypes öğesi
  Tek tek `SnippetType` öğeleri gruplandırır. `SnippetTypes`Öğe yoksa, kod parçacığı kodda herhangi bir yere eklenebilir.
 
 ```xml
@@ -586,15 +586,15 @@ is a great color. I love Blue.
 <SnippetTypes>
 ```
 
-|Alt Öğe|Açıklama|
+|Alt Öğe|Description|
 |-------------------|-----------------|
 |[SnippetType Öğesi](../ide/code-snippets-schema-reference.md#snippettype)|İsteğe bağlı öğe. Visual Studio'nun kod parçacığını kodun içine nasıl eklediğini belirtir. Öğesinde sıfır veya daha fazla `SnippetType` öğe olabilir `SnippetTypes` .|
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Header öğesi](../ide/code-snippets-schema-reference.md#header)|Kod parçacığı hakkında genel bilgiler belirtir.|
 
-## <a name="title-element"></a><a name="title"></a>Title öğesi
+## <a name="title-element"></a><a name="title"></a> Title öğesi
  Kod parçacığı için başlığı belirtir. Kod parçacığının öğesinde depolanan başlık kod `Title` **parçacığı seçicisinde** ve kod parçacığı Içindeki açıklama kod **parçacıkları yöneticisinde**görüntülenir.
 
 ```xml
@@ -603,13 +603,13 @@ is a great color. I love Blue.
 <Title>
 ```
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Header öğesi](../ide/code-snippets-schema-reference.md#header)|Kod parçacığı hakkında genel bilgiler belirtir.|
 
  Bir metin değeri gereklidir. Bu metin kod parçacığının başlığını belirtir.
 
-## <a name="tooltip-element"></a><a name="tooltip"></a>ToolTip öğesi
+## <a name="tooltip-element"></a><a name="tooltip"></a> ToolTip öğesi
  Kod parçacığındaki bir değişmez değerin veya nesnenin beklenen değerini ve kullanımını açıklar; Visual Studio, kod parçacığını bir projeye eklerken ToolTip öğesinde bunu görüntüler. ToolTip metni, kod parçacığı eklendikten sonra değişmez değerin veya nesnenin üzerine fare geldiğinde görüntülenir.
 
 ```xml
@@ -618,14 +618,14 @@ is a great color. I love Blue.
 </ToolTip>
 ```
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Literal Öğesi](../ide/code-snippets-schema-reference.md#literal)|Kod parçacığının düzenleme yapabileceğiniz değişmez değer alanlarını tanımlar.|
 |[Nesne öğesi](../ide/code-snippets-schema-reference.md#object)|Kod parçacığının düzenleme yapabileceğiniz nesne alanlarını tanımlar.|
 
  Bir metin değeri gereklidir. Bu metin, kod parçacığındaki nesne veya değişmez değer ile ilişkilendirilecek ToolTip açıklamasını belirtir.
 
-## <a name="type-element"></a><a name="type"></a>Type öğesi
+## <a name="type-element"></a><a name="type"></a> Type öğesi
  Nesnenin türünü belirtir. `Object`Öğesi, kod parçacığı için gereken ancak büyük olasılıkla kod parçacığı dışında tanımlanmış bir öğeyi tanımlamak için kullanılır. Örneğin, Windows Forms denetimleri, ASP.NET denetimleri, nesne örnekleri ve tür örnekleri nesne olarak bildirilmelidir. Nesne bildirimleri öğesi ile gerçekleştirilen bir tür belirtilmesini gerektirir `Type` .
 
 ```xml
@@ -634,13 +634,13 @@ is a great color. I love Blue.
 </Type>
 ```
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Nesne öğesi](../ide/code-snippets-schema-reference.md#object)|Kod parçacığının düzenleme yapabileceğiniz nesne alanlarını tanımlar.|
 
  Bir metin değeri gereklidir. Bu metin nesnenin türünü belirtir.
 
-## <a name="url-element"></a><a name="url"></a>URL öğesi
+## <a name="url-element"></a><a name="url"></a> URL öğesi
  Başvurulan derleme hakkında daha fazla bilgi sağlayan bir URL'yi belirtir.
 
 > [!NOTE]
@@ -652,7 +652,7 @@ is a great color. I love Blue.
 </Url>
 ```
 
-|Üst Öğe|Açıklama|
+|Üst Öğe|Description|
 |--------------------|-----------------|
 |[Reference öğesi](../ide/code-snippets-schema-reference.md#reference)|Kod parçacığının gerek duyduğu derleme başvurularını belirtir.|
 

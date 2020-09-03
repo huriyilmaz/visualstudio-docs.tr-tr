@@ -1,5 +1,5 @@
 ---
-title: Visual Studio'nun Diğer Bölümlerini Genişletme | Microsoft Dokümanlar
+title: Visual Studio 'nun diğer kısımlarını genişletme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,40 +11,40 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3c9076fbba822a1dfcff1ef13294ebd4dcafd9e9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711763"
 ---
-# <a name="extend-other-parts-of-visual-studio"></a>Visual Studio'nun diğer bölümlerini genişletin
+# <a name="extend-other-parts-of-visual-studio"></a>Visual Studio 'nun diğer kısımlarını genişletme
 
-Visual Studio UI'nin genişletebileceğiniz daha birçok bölümü vardır. Burada size sadece birkaç ı gösteriyoruz.
+Visual Studio Kullanıcı arabiriminin genişletebilmeniz için daha birçok bölümü vardır. Burada yalnızca birkaç tane gösterilmektedir.
 
-## <a name="create-a-vspackage"></a>VSPackage Oluşturma
+## <a name="create-a-vspackage"></a>VSPackage oluşturma
 
-Visual Studio Extensibility temel yapı taşları VSPackages vardır.  VSPackage nasıl ekleyeceğinizi öğrenin: [VSPackage ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-vspackage.md)
+Visual Studio genişletilebilirliğine yönelik temel yapı taşları VSPackages 'dir.  VSPackage ekleme hakkında bilgi edinin: [VSPackage ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-vspackage.md)
 
-## <a name="extend-the-toolbox"></a>Araç Kutusunu Genişlet
+## <a name="extend-the-toolbox"></a>Araç kutusunu genişletme
 
-Araç Kutusuna yeni denetimler ve diğer öğelerin nasıl ekleyeceğinizi ve Toolbox işlevininasıl kullanacağınızı öğrenin:
+Araç kutusuna yeni denetimler ve diğer öğeler eklemeyi ve araç kutusu işlevselliğinin nasıl kullanılacağını öğrenin:
 
-- [WPF Araç Kutusu Denetimi Oluşturma](../extensibility/creating-a-wpf-toolbox-control.md)
+- [WPF araç kutusu denetimi oluşturma](../extensibility/creating-a-wpf-toolbox-control.md)
 
-- [Windows Forms Araç Kutusu Denetimi Oluşturma](../extensibility/creating-a-windows-forms-toolbox-control.md)
+- [Windows Forms araç kutusu denetimi oluşturma](../extensibility/creating-a-windows-forms-toolbox-control.md)
 
 ## <a name="extend-the-status-bar"></a>Durum çubuğunu genişletme
 
-Durum çubuğuna ve ilerleme çubuğuna nasıl okuyup yazacaklarınızı ve animasyonları ve diğer diğer UI'yi nasıl sağlayacağınıöğrenin: [Durum çubuğunu genişletin.](../extensibility/extending-the-status-bar.md)
+Durum çubuğunu ve ilerleme çubuğunu okumayı ve yazmayı, animasyonları ve diğer Kullanıcı arabirimini nasıl sağlayacağınızı öğrenin: [durum çubuğunu genişletme](../extensibility/extending-the-status-bar.md).
 
 ::: moniker range="vs-2017"
 
-## <a name="create-custom-start-pages"></a>Özel Başlangıç Sayfaları Oluşturma
+## <a name="create-custom-start-pages"></a>Özel başlangıç sayfaları oluşturma
 
-Sıfırdan veya indirilebilir bir başlangıç sayfası örneğinden kendi başlangıç sayfanızı nasıl yapacağınızı öğrenin: [Özel bir Başlangıç Sayfası oluşturun.](../extensibility/creating-a-custom-start-page.md)
+Kendi başlangıç sayfanızı sıfırdan veya indirilebilir bir başlangıç sayfasından nasıl yapacağınızı öğrenin örnek: [özel başlangıç sayfası oluşturma](../extensibility/creating-a-custom-start-page.md).
 
 ::: moniker-end
 
-## <a name="write-to-the-activity-log"></a>Etkinlik günlüğüne yazma
+## <a name="write-to-the-activity-log"></a>Etkinlik günlüğüne yaz
 
-Etkinlik Günlüğüne nasıl yazılanın: [Nasıl yazılır: Etkinlik günlüğünü kullanın.](../extensibility/how-to-use-the-activity-log.md)
+Etkinlik günlüğüne yazmayı öğrenin: [nasıl yapılır: etkinlik günlüğünü kullanma](../extensibility/how-to-use-the-activity-log.md).

@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b003fcbd1b38eb5dc919b7f4f361e0b56b585f08
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461226"
 ---
 # <a name="lexical-hierarchy-of-symbol-types"></a>Simge Türlerinin Sözcük Hiyerarşisi
@@ -24,10 +24,10 @@ Aşağıdaki tabloda, sözcük temelli hiyerarşide sembol türleri gösterilmek
 
 ## <a name="symbol-types"></a>Sembol türleri
 
-|Sembol türü|Açıklama|
+|Sembol türü|Description|
 |-----------------|-----------------|
 |[Ek Açıklama](../../debugger/debug-interface-access/annotation.md)|Program kodunda açıklamalı bir konum belirtir.|
-|[Engelleyin](../../debugger/debug-interface-access/block.md)|İşlevlerde iç içe kapsamları belirtir.|
+|[Block](../../debugger/debug-interface-access/block.md)|İşlevlerde iç içe kapsamları belirtir.|
 |`Compiland`|`compiland`. Exe dosyasına bağlı bir bağlantı belirtir.|
 |[CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)|Ek compiland ayrıntılarının yüklenmesi gereken compiland verilerini belirtir ve bu nedenle alınacak çalışma zamanı ek yüküne neden olur.|
 |[CompilandEnv](../../debugger/debug-interface-access/compilandenv.md)|Compiland derlemesi için önemli olan ek ortam değişkenlerini belirtir.|

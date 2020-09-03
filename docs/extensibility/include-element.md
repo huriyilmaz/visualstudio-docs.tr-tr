@@ -1,5 +1,5 @@
 ---
-title: Öğe Ekle | Microsoft Dokümanlar
+title: Include öğesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,16 +14,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 7ea89185d28be2816a690d867dbb3eccbb739e04
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80710356"
 ---
-# <a name="include-element"></a>Öğe ekle
-Ekle öğesi, verilen dosyada bulunabilecek bir dosyayı, geçerli dosyaya ekleme yolunu belirtir.  Tanımlanan tüm semboller ve türler derlenen sonucun bir parçası olur.
+# <a name="include-element"></a>Include öğesi
+Include öğesi, geçerli dosyaya eklenmek üzere sağlanan içerme yolunda konumlanan bir dosyayı belirtir.  Tanımlanan tüm semboller ve türler, derlenen sonucun bir parçası olacak.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```csharp
 <Include href="stdidcmd.h" />
@@ -36,8 +36,8 @@ Ekle öğesi, verilen dosyada bulunabilecek bir dosyayı, geçerli dosyaya eklem
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Href|Gereklidir. Üstbilgi dosyasına giden yol:<br /><br /> href="stdidcmd.h"|
-|Koşul|İsteğe bağlı. Bkz. [Koşullu Öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|değerini|Gereklidir. Üst bilgi dosyasının yolu:<br /><br /> href = "Stdidcmd. h"|
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -49,7 +49,7 @@ Ekle öğesi, verilen dosyada bulunabilecek bir dosyayı, geçerli dosyaya eklem
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[CommandTable öğesi](../extensibility/commandtable-element.md)|Bir VSPackage'In IDE'ye sağladığı komutları (yani menü öğeleri, menüler, araç çubukları ve açılan kutular) temsil eden tüm öğeleri tanımlar.|
+|[CommandTable öğesi](../extensibility/commandtable-element.md)|Bir VSPackage 'ın IDE 'ye sağladığı komutları (menü öğeleri, menüler, araç çubukları ve Birleşik giriş kutuları) temsil eden tüm öğeleri tanımlar.|
 
 ## <a name="example"></a>Örnek
 
@@ -58,4 +58,4 @@ Ekle öğesi, verilen dosyada bulunabilecek bir dosyayı, geçerli dosyaya eklem
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio komut tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

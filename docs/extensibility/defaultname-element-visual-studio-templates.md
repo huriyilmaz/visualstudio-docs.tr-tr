@@ -1,5 +1,5 @@
 ---
-title: DefaultName Öğesi (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: DefaultName öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,18 +14,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 92bd29824cf1d3b91a7bdaa7220479c583ad0f23
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80712313"
 ---
 # <a name="defaultname-element-visual-studio-templates"></a>DefaultName öğesi (Visual Studio şablonları)
-Visual Studio proje sisteminin proje veya öğe için oluşturulduğunda oluşturacağı adı belirtir.
+Visual Studio proje sisteminin oluşturulduğu sırada proje veya öğe için üretekullanacağı adı belirtir.
 
- \<VSTemplate \<> ŞablonVeri> \<DefaultName>
+ \<VSTemplate> \<TemplateData>
+ \<DefaultName>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <DefaultName>
@@ -46,24 +47,24 @@ Visual Studio proje sisteminin proje veya öğe için oluşturulduğunda oluştu
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırın ve Yeni **Proje'de** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleyeceğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Bu metin, projenin veya öğenin varsayılan adını belirtir.
+ Bu metin projenin veya öğenin varsayılan adını belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
- `DefaultName`isteğe bağlı bir unsurdur.
+ `DefaultName` isteğe bağlı bir öğedir.
 
- Projeler için bu öğe, projeyi diskte depolayan dizinin adını belirtir. Öğeler için, kaynak dosyanın dosya adını belirtir.
+ Projeler için bu öğe, projeyi diskte depolayan dizinin adını belirtir. Öğeler için kaynak dosyanın dosya adını belirtir.
 
- Bir proje veya öğe oluşturduğunuzda, **Yeni Proje** iletişim kutusundan veya **Yeni Öğe Ekle** iletişim kutusundan kullanılabilen **Ad** seçeneğini kullanarak varsayılan adı değiştirebilirsiniz.
+ Bir proje veya öğe oluşturduğunuzda, varsayılan adı, **Yeni proje** iletişim kutusundan veya **Yeni öğe Ekle** iletişim kutusundan erişilebilen **ad** seçeneğini kullanarak değiştirebilirsiniz.
 
- Proje sisteminin proje veya öğe için varsayılan adı oluşturmasını istemiyorsanız, [AşağıdakiLeri Varsayılan Ad](../extensibility/providedefaultname-element-visual-studio-templates.md) öğesine `False`ayarlayın.
+ Proje sisteminin proje veya öğe için varsayılan adı oluşturmasını istemiyorsanız, [ProvideDefaultName](../extensibility/providedefaultname-element-visual-studio-templates.md) öğesini olarak ayarlayın `False` .
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] sınıfın standart madde şablonu için meta veriler gösterilmektedir.
+ Aşağıdaki örnek, bir sınıf için standart öğe şablonu meta verilerini gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
 
 ```
 <VSTemplate Type="Item" Version="3.0.0"
@@ -82,5 +83,5 @@ Visual Studio proje sisteminin proje veya öğe için oluşturulduğunda oluştu
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
-- [Proje ve madde şablonları oluşturma](../ide/creating-project-and-item-templates.md)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

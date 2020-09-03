@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: a292b37a50bbf667fa5b23f18879cd79c3f76805
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85292110"
 ---
 Barındırma sunucuları için Web Dağıtımı 3,6, kullanıcı arabiriminden yayımlama ayarları dosyası oluşturulmasına olanak tanıyan ek yapılandırma özellikleri sağlar.
@@ -24,7 +24,7 @@ Barındırma sunucuları için Web Dağıtımı 3,6, kullanıcı arabiriminden y
 
     Yayımlama ayarları dosyasının oluşturulmasını sağlamak için betikler ve araçlar gereklidir.
 
-4. Seçim **Denetim masası > sistem ve güvenlik > yönetim araçları > Hizmetleri**' ni açarak Web dağıtımı doğru şekilde çalıştığını doğrulayın ve aşağıdakileri yaptığınızdan emin olun:
+4. Seçim  **Denetim masası > sistem ve güvenlik > yönetim araçları > Hizmetleri**' ni açarak Web dağıtımı doğru şekilde çalıştığını doğrulayın ve aşağıdakileri yaptığınızdan emin olun:
 
     * **Web Deployment Agent hizmeti** çalışıyor (hizmet adı eski sürümlerde farklı).
 
@@ -32,4 +32,4 @@ Barındırma sunucuları için Web Dağıtımı 3,6, kullanıcı arabiriminden y
 
     Aracı hizmetlerinden biri çalışmıyorsa, **Web Deployment Agent hizmetini**yeniden başlatın.
 
-    Web Deployment Agent hizmeti hiç yoksa, **Denetim masası > programlar > bir programı Kaldır ' a**gidin, **Microsoft Web dağıtımı \<version> **bulun. Yüklemeyi **değiştirmeyi** seçin ve Web dağıtımı bileşenleri için **yerel sabit diske yüklenediğinizden** emin olun. Değişiklik yükleme adımlarını doldurun.
+    Web Deployment Agent hizmeti hiç yoksa, **Denetim masası > programlar > bir programı Kaldır ' a**gidin, **Microsoft Web dağıtımı \<version> **bulun. Yüklemeyi **değiştirmeyi** seçin ve Web dağıtımı bileşenleri için  **yerel sabit diske yüklenediğinizden** emin olun. Değişiklik yükleme adımlarını doldurun.

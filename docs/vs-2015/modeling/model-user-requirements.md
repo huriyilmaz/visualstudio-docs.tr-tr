@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a94a4bd479c3ad48efe44d3a92e91dc3a050efcd
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918266"
 ---
 # <a name="model-user-requirements"></a>Kullanıcı gereksinimlerini modelleme
@@ -51,7 +51,7 @@ Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınız�
 ## <a name="common-tasks"></a>Ortak Görevler
  Kullanıcıların gereksinimlerinin birkaç farklı görünümünü oluşturabilirsiniz.  Her görünüm belirli bir bilgi türü sağlar.  Bu görünümleri oluşturduğunuzda sıklıkla bir tane diğerine taşımak en iyisidir. Herhangi bir görünümden başlayabilirsiniz.
 
-|Diyagram veya belge|Gereksinimler modelinde neleri açıklar|Bölüm|
+|Diyagram veya belge|Gereksinimler modelinde neleri açıklar|Section|
 |-------------------------|-----------------------------------------------|-------------|
 |Kullanım örneği diyagramı|Sistemi kim ve bununla ne yaptığını kullanır.|[Sisteminizin nasıl kullanıldığını açıklama](#UseCases)|
 |Kavramsal sınıf diyagramı|Gereksinimleri anlatmak için kullanılan türlerin sözlüğü; Sistem arabiriminde görünen türler.|[Gereksinimleri tanımlamak için kullanılan terimleri tanımlama](#RequirementsClasses)|
@@ -62,7 +62,7 @@ Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınız�
 
  Diyagram türlerinin çoğunun başka amaçlar için de kullanılabileceğini unutmayın. Diyagram türlerine genel bir bakış için bkz. [uygulamanız için model oluşturma](../modeling/create-models-for-your-app.md). Diyagram çizme hakkında temel bilgiler için bkz. [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md).
 
-## <a name="UseCases"></a>Sisteminizin nasıl kullanıldığını açıklama
+## <a name="describing-how-your-system-is-used"></a><a name="UseCases"></a> Sisteminizin nasıl kullanıldığını açıklama
  Sistemi kimin kullandığını ve ne için kullandıkları hakkında açıklama için kullanım örneği diyagramları oluşturun. Kullanım örneği, bir sistem kullanıcısının hedefini ve hedefe ulaşmak için gerçekleştirdikleri yordamı temsil eder.
 
  Örnek olarak, bir çevrimiçi yemek satışı sistemi, müşterilerin bir menüden öğe seçmesine izin vermelidir ve bu, restoranların menüyü güncelleştirmesine izin vermelidir. Bunu, kullanım durumu diyagramında özetleyebilirsiniz:
@@ -93,7 +93,7 @@ Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınız�
 |Kullanım durumu diyagramındaki öğeler|[UML Kullanım Durumu Diyagramları: Başvuru](../modeling/uml-use-case-diagrams-reference.md)|
 |Kullanım çalışmalarından kod geliştirme|[Uygulama mimarinizi modelleme](../modeling/model-your-app-s-architecture.md)|
 
-## <a name="RequirementsClasses"></a>Gereksinimleri tanımlamak için kullanılan terimleri tanımlama
+## <a name="defining-terms-used-to-describe-requirements"></a><a name="RequirementsClasses"></a> Gereksinimleri tanımlamak için kullanılan terimleri tanımlama
  Aşağıdaki amaçlar için kullanılan iş kavramlarının tutarlı bir sözlüğünü geliştirmenize yardımcı olması için UML sınıf diyagramlarını kullanabilirsiniz:
 
 - Kullanıcıların, sistemin çalıştığı işletmeyi tartışın.
@@ -122,7 +122,7 @@ Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınız�
 
   Kavramsal sınıf modeli, sisteminizin iş mantığının açıklanbileceği temel sözlük oluşturabilir. Ancak, uygulamanızın performans, dağıtım, esneklik ve diğer etkenler gibi sorunları düşünmesi gerektiğinden, yazılım içindeki sınıflar genellikle kavramsal modelden çok daha karmaşıktır. Kavramsal sınıfın birçok farklı uygulaması, tek bir sistemde sıklıkla bulunur.
 
-  Örneğin, siparişler XML, SQL, HTML ve C# farklı sistem parçaları ve parçalar arasındaki farklı arabirimlerde gösterilebilir. Bir sipariş ve menü arasındaki ilişki, kod içindeki C# başvurular, bir veritabanındaki ILIŞKILER veya XML içindeki çapraz başvuru kimlikleri gibi birçok farklı yolla gösterilebilir. Ancak, bu farklılıklara rağmen kavramsal model, yazılımın her bölümünde doğru olan önemli bilgileri sağlar. Örnekteki sınıf diyagramı bize her uygulamada, her bir siparişle ilişkili yalnızca bir menü olacağını söyler.
+  Örneğin, siparişler, sistemin farklı bölümlerinde ve parçalar arasındaki farklı arabirimlerde XML, SQL, HTML ve C# ile gösterilebilir. Bir sipariş ve menü arasındaki ilişki, C# kodu içindeki başvurular, bir veritabanındaki ilişkiler veya XML içindeki çapraz başvuru kimlikleri gibi birçok farklı yolla gösterilebilir. Ancak, bu farklılıklara rağmen kavramsal model, yazılımın her bölümünde doğru olan önemli bilgileri sağlar. Örnekteki sınıf diyagramı bize her uygulamada, her bir siparişle ilişkili yalnızca bir menü olacağını söyler.
 
   Gereksinimler sınıf diyagramı çizme takımınıza yardımcı olur:
 
@@ -140,7 +140,7 @@ Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınız�
 
  Kavramsal bir sınıf diyagramında, genellikle gezinmelerin gezinebilmesini sağlamak için, ilişkilerin oklara yerleştirileceğini göstermek yararlı değildir. Bunun nedeni, diyagramın bir uygulamayı temsil etmez. İlişkilendirmeler gerçek dünya nesneleri arasındaki ilişkileri temsil eder.
 
-## <a name="BusinessRules"></a>Iş kurallarını gösterme
+## <a name="showing-business-rules"></a><a name="BusinessRules"></a> Iş kurallarını gösterme
  İş kuralı, belirli bir kullanım örneği ile ilişkilendirilmemiş ve sistem genelinde gözlenecek bir gereksinimdir.
 
  Birçok iş kuralı, kavramsal sınıflar arasındaki ilişkilerdeki kısıtlamalardır. Bu *statik iş kurallarını* , kavramsal sınıf diyagramında ilgili sınıflarla ilişkili açıklamalar olarak yazabilirsiniz. Örneğin:
@@ -161,7 +161,7 @@ Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınız�
 |Kavramsal sınıf diyagramındaki öğeler|[UML Sınıf Diyagramları: Başvuru](../modeling/uml-class-diagrams-reference.md)|
 |İş kurallarına uygun kod geliştirme|[Uygulama mimarinizi modelleme](../modeling/model-your-app-s-architecture.md)|
 
-## <a name="QoSRequirements"></a>Hizmet gereksinimlerinin kalitesini açıklama
+## <a name="describing-quality-of-service-requirements"></a><a name="QoSRequirements"></a> Hizmet gereksinimlerinin kalitesini açıklama
  Hizmet gereksinimi kalitesi için çeşitli kategoriler vardır. Bunlar aşağıdakileri içerir:
 
 - Performans
@@ -185,7 +185,7 @@ Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınız�
 |Kullanım örneklerine ek belgeler iliştirme|[Kullanım örneğini belgelere ve diyagramlara bağlama](../modeling/link-a-use-case-to-documents-and-diagrams.md)|
 |Hizmet gereksinimlerinin kalitesi ile ilgili kod geliştirme|[Uygulama mimarinizi modelleme](../modeling/model-your-app-s-architecture.md)|
 
-## <a name="Workflow"></a>Kullanıcılar ve sisteminiz arasındaki iş akışını gösterme
+## <a name="showing-work-flow-between-users-and-your-system"></a><a name="Workflow"></a> Kullanıcılar ve sisteminiz arasındaki iş akışını gösterme
  Farklı kullanım örnekleri arasındaki iş akışını göstermek için bir etkinlik diyagramı kullanabilirsiniz. Kullanıcılara, hem sistemle hem de dışında gerçekleştirdiği ana görevleri gösteren bir etkinlik diyagramı çizerek bir gereksinim modeline başlamak sık sık yararlıdır.
 
  Örneğin:
@@ -206,7 +206,7 @@ Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınız�
 |Etkinlik diyagramındaki öğeler|[UML Etkinlik Diyagramları: Başvuru](../modeling/uml-activity-diagrams-reference.md)|
 |Etkinlik Diyagramlarından Kod geliştirme|[Uygulama mimarinizi modelleme](../modeling/model-your-app-s-architecture.md)|
 
-## <a name="Sequences"></a>Kullanıcılar ve sisteminiz arasındaki etkileşimleri gösterme
+## <a name="showing-interactions-between-users-and-your-system"></a><a name="Sequences"></a> Kullanıcılar ve sisteminiz arasındaki etkileşimleri gösterme
  Sistem ve dış aktörler arasında veya sisteminizin bölümleri arasında ileti değişimi göstermek için sıralı diyagram kullanabilirsiniz. Bu, etkileşimlerin sırasını çok açık bir şekilde gösteren kullanım örneği içindeki adımların bir görünümünü sağlar. Sıralı diyagramlar özellikle, bir kullanım durumunda birkaç etkileşen taraf olduğu ve sisteminizin bir API 'nin bulunduğu yerlerde yararlıdır.
 
  Örneğin:

@@ -1,5 +1,5 @@
 ---
-title: Özellikleri, Görev Listesini, Çıktıyı, Seçenekleri pencerelerini genişletme
+title: Özellikleri, Görev Listesi, çıktıyı ve seçenekler pencerelerini genişletme
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,40 +16,40 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: db14068c97ff6868f5fb73c9ddd790020e99e7c8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711629"
 ---
-# <a name="extend-the-properties-task-list-output-and-options-windows"></a>Özellikleri, Görev Listesini, Çıktıyı ve Seçenekleri genişletme
-Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, araç pencereniz hakkındaki bilgileri yeni bir **Seçenekler** sayfasına ve **Özellikler** sayfasındaki yeni bir ayara nasıl entegre edilebildiğini ve **görev listesi** ve **çıktı** pencerelerine nasıl yazılanın caiz olduğunu gösterir.
+# <a name="extend-the-properties-task-list-output-and-options-windows"></a>Özellikleri, Görev Listesi, çıktıyı ve seçenekler pencerelerini genişletme
+Visual Studio 'daki herhangi bir araç penceresine erişebilirsiniz. Bu izlenecek yol, araç pencerenize ilişkin bilgilerin yeni bir **Seçenekler** sayfası ve **Özellikler** sayfasında yeni bir ayar ve ayrıca **görev listesi** ve **Çıkış** pencerelerinin nasıl yazılacağı gösterilmektedir.
 
-## <a name="prerequisites"></a>Ön koşullar
- Visual Studio 2015'ten itibaren Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak yer almaktadır. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için Visual [Studio SDK'yı yükleyin.](../extensibility/installing-the-visual-studio-sdk.md)
+## <a name="prerequisites"></a>Önkoşullar
+ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-an-extension-with-a-tool-window"></a>Araç penceresi ile uzantı oluşturma
 
-1. VSIX şablonu kullanarak **TodoList** adında bir proje oluşturun ve **TodoWindow**adlı özel bir araç penceresi öğesi şablonu ekleyin.
+1. VSıX şablonunu kullanarak **ToDoList** adlı bir proje oluşturun ve **todowinde**adlı özel bir araç penceresi öğesi şablonu ekleyin.
 
     > [!NOTE]
-    > Araç penceresi yle uzantı oluşturma hakkında daha fazla bilgi için [bkz.](../extensibility/creating-an-extension-with-a-tool-window.md)
+    > Araç penceresiyle uzantı oluşturma hakkında daha fazla bilgi için bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
 
 ## <a name="set-up-the-tool-window"></a>Araç penceresini ayarlama
- Yeni bir ToDo öğesi yazacak bir TextBox, listeye yeni öğeyi eklemek için bir Düğme ve listedeki öğeleri görüntülemek için bir ListBox ekleyin.
+ Yeni bir ToDo öğesi yazmak için bir TextBox, listeye yeni öğe eklemek için bir düğme ve listede öğeleri göstermek için bir liste kutusu ekleyin.
 
-1. *TodoWindow.xaml'da,* Button, TextBox ve StackPanel denetimlerini UserControl'den silin.
+1. *Todowinet. xaml*Içinde, UserControl 'daki düğme, metin kutusu ve StackPanel denetimlerini silin.
 
     > [!NOTE]
-    > Bu, daha sonraki bir adımda yeniden kullanacağınız **button1_Click** olay işleyicisini silmez.
+    > Bu, sonraki bir adımda yeniden kullanacağınız **Button1_Click** olay işleyicisini silmez.
 
-2. **Araç Kutusu'nun** **Tüm WPF Denetimleri** bölümünden, **Bir Tuval** denetimini ızgaraya sürükleyin.
+2. **Araç kutusunun** **tüm WPF denetimleri** bölümünden bir **tuval** denetimini kılavuza sürükleyin.
 
-3. **TextBox,** **Düğme**ve **ListBox'ı** Tuvale sürükleyin. Öğeleri TextBox ve Düğme aynı düzeyde olacak şekilde düzenleyin ve ListBox aşağıdaki resimde olduğu gibi altlarındaki pencerenin geri kalanını doldurur.
+3. Bir **TextBox**, **düğme**ve bir **liste** kutusunu tuvale sürükleyin. Alt metin ve düğmenin aynı düzeyde olması için öğeleri düzenleyin ve liste kutusu aşağıdaki resimde olduğu gibi pencerenin geri kalanını doldurur.
 
-     ![Bitmiş Takım Penceresi](../extensibility/media/t5-toolwindow.png "T5-Araç Penceresi")
+     ![Tamamlanmış araç penceresi](../extensibility/media/t5-toolwindow.png "T5-ToolWindow")
 
-4. XAML bölmesinde Düğme'yi bulun ve İçerik özelliğini **Ekle**olarak ayarlayın. Bir `Click="button1_Click"` öznitelik ekleyerek düğme olay işleyicisini Düğme denetimine yeniden bağlayın. Tuval bloğu aşağıdaki gibi görünmelidir:
+4. XAML bölmesinde, düğmesini bulun ve Içerik özelliğini **Ekle**olarak ayarlayın. Düğme olay işleyicisini bir öznitelik ekleyerek düğme denetimine yeniden bağlayın `Click="button1_Click"` . Tuval bloğunun şuna benzer olması gerekir:
 
     ```xml
     <Canvas HorizontalAlignment="Left" Width="306">
@@ -59,15 +59,15 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     </Canvas>
     ```
 
-### <a name="customize-the-constructor"></a>Oluşturucuyu özelleştirin
+### <a name="customize-the-constructor"></a>Oluşturucuyu özelleştirme
 
-1. *TodoWindowControl.xaml.cs* dosyasına aşağıdaki yönergeleri ekleyin:
+1. *TodoWindowControl.xaml.cs* dosyasında, aşağıdaki using yönergesini ekleyin:
 
     ```csharp
     using System;
     ```
 
-2. TodoWindow'a genel bir başvuru ekleyin ve TodoWindowControl oluşturucusu todoWindow parametresi almak zorunda. Kod şu na benzemelidir:
+2. Turuna bir genel başvuru ekleyin ve TodoWindowControl oluşturucusunun bir todowinde parametresi alın. Kod şöyle görünmelidir:
 
     ```csharp
     public TodoWindow parent;
@@ -79,7 +79,7 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     }
     ```
 
-3. *TodoWindow.cs,* TodoWindowControl oluşturucuyu TodoWindow parametresini içerecek şekilde değiştirin. Kod şu na benzemelidir:
+3. *TodoWindow.cs*' de TodoWindowControl oluşturucusunu todowıningparameter ' ı içerecek şekilde değiştirin. Kod şöyle görünmelidir:
 
     ```csharp
     public TodoWindow() : base(null)
@@ -93,9 +93,9 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     ```
 
 ## <a name="create-an-options-page"></a>Seçenekler sayfası oluşturma
- Kullanıcıların araç penceresinin ayarlarını değiştirebilmesi için **Seçenekler** iletişim kutusunda bir sayfa sağlayabilirsiniz. Seçenekler sayfası oluşturmak, hem seçenekleri açıklayan bir sınıf hem de *TodoListPackage.cs* veya *TodoListPackage.vb* dosyasındaki bir girişi gerektirir.
+ Kullanıcıların araç penceresi için ayarları değiştirebilmeleri için **Seçenekler** iletişim kutusuna bir sayfa sağlayabilirsiniz. Seçenekler sayfası oluşturmak, hem seçenekleri hem de *TodoListPackage.cs* veya *TodoListPackage. vb* dosyasındaki bir girişi açıklayan bir sınıf gerektirir.
 
-1. Adlı sınıf `ToolsOptions.cs`ekle. Sınıfın `ToolsOptions` devralını <xref:Microsoft.VisualStudio.Shell.DialogPage>yaratın.
+1. Adlı bir sınıf ekleyin `ToolsOptions.cs` . `ToolsOptions`Sınıfın devralmasını sağlayın <xref:Microsoft.VisualStudio.Shell.DialogPage> .
 
    ```csharp
    class ToolsOptions : DialogPage
@@ -103,13 +103,13 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
    }
    ```
 
-2. Yönergeyi kullanarak aşağıdakileri ekleyin:
+2. Aşağıdaki using yönergesini ekleyin:
 
    ```csharp
    using Microsoft.VisualStudio.Shell;
    ```
 
-3. Bu gözden geçirme deki Seçenekler sayfası DaysAhead adında yalnızca bir seçenek sağlar. `ToolsOptions` **daysAhead** adlı özel bir alan ve sınıfa **DaysAhead** adlı bir özellik ekleyin:
+3. Bu izlenecek yolda bulunan Seçenekler sayfası, yalnızca DaysAhead adlı bir seçenek sağlar. **Daysahead** adlı bir özel alan ve sınıfa **daysahead** adlı bir özellik ekleyin `ToolsOptions` :
 
    ```csharp
    private double daysAhead;
@@ -121,36 +121,36 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
    }
    ```
 
-   Şimdi projeyi bu Seçenekler sayfasından haberdar etmek zorundasınız.
+   Artık projeyi bu seçenekler sayfasından haberdar etmeniz gerekir.
 
-### <a name="make-the-options-page-available-to-users"></a>Seçenekler sayfasını kullanıcıların kullanımına sun
+### <a name="make-the-options-page-available-to-users"></a>Seçenekler sayfasını kullanıcılar için kullanılabilir hale getirin
 
-1. *TodoWindowPackage.cs,* `TodoWindowPackage` sınıfa <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> bir ekleyin:
+1. *TodoWindowPackage.cs*' de sınıfına bir ekleyin <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> `TodoWindowPackage` :
 
     ```csharp
     [ProvideOptionPage(typeof(ToolsOptions), "ToDo", "General", 101, 106, true)]
     ```
 
-2. ProvideOptionPage oluşturucuya ilk parametre, daha önce `ToolsOptions`oluşturduğunuz sınıfın türüdür. İkinci parametre, "ToDo", **Seçenekler** iletişim kutusundaki kategorinin adıdır. Üçüncü parametre olan "Genel", **Seçenekler** iletişim kutusunun Seçenekler sayfasının bulunacağı alt kategorisinin adıdır. Sonraki iki parametre dizeleri için kaynak disleri; birincisi kategorinin adı, ikincisi ise alt kategorinin adıdır. Son parametre, bu sayfaya otomasyon kullanılarak erişilip erişilemeyeceğini belirler.
+2. ProvideOptionPage oluşturucusuna ilk parametresi `ToolsOptions` , daha önce oluşturduğunuz sınıfın türüdür. İkinci parametre olan "ToDo", **Seçenekler** iletişim kutusundaki kategorinin adıdır. Üçüncü parametre olan "genel", Seçenekler sayfasının kullanılabildiği **Seçenekler** iletişim kutusunun alt kategori adıdır. Sonraki iki parametre dizeler için kaynak kimlikleridir; Birincisi kategorinin adı, ikincisi ise alt kategorinin adıdır. Son parametresi, bu sayfaya Otomasyon kullanılarak erişip erişemeyeceğini belirler.
 
-     Bir kullanıcı Seçenekler sayfanızı açtığında, aşağıdaki resme benzemesi gerekir.
+     Bir Kullanıcı seçenekler sayfanızı açtığında, aşağıdaki resme benzemelidir.
 
-     ![Seçenekler Sayfası](../extensibility/media/t5optionspage.gif "T5OptionsPage")
+     ![Seçenekler sayfası](../extensibility/media/t5optionspage.gif "T5OptionsPage")
 
-     **ToDo** kategorisine ve **Genel**alt kategoriye dikkat edin.
+     Kategori **Todo** ve alt kategori **genel**' i fark edin.
 
-## <a name="make-data-available-to-the-properties-window"></a>Verileri Özellikler penceresinde kullanılabilir hale getirme
- ToDo listesi bilgilerini, Yapılacaklar listesindeki `TodoItem` tek tek öğeler le ilgili bilgileri depolayan adlandırılmış bir sınıf oluşturarak kullanılabilir hale getirebilirsiniz.
+## <a name="make-data-available-to-the-properties-window"></a>Özellikler penceresi verileri kullanılabilir hale getirme
+ Yapılacaklar `TodoItem` listesindeki ayrı öğeler hakkında bilgi depolayan adlı bir sınıf oluşturarak yapılacaklar listesi bilgilerini kullanılabilir hale getirebilirsiniz.
 
-1. Adlı sınıf `TodoItem.cs`ekle.
+1. Adlı bir sınıf ekleyin `TodoItem.cs` .
 
-     Araç penceresi kullanıcılar tarafından kullanılabilir olduğunda, ListBox'taki öğeler TodoItems tarafından temsil edilir. Kullanıcı ListBox'ta bu öğelerden birini seçtiğinde, **Özellikler** penceresi öğe yle ilgili bilgileri görüntüler.
+     Araç penceresi kullanıcılar için kullanılabilir olduğunda, ListBox 'daki öğeler Todoıtems tarafından temsil edilir. Kullanıcı ListBox 'daki bu öğelerden birini seçtiğinde, **Özellikler** penceresi öğe hakkındaki bilgileri görüntüler.
 
-     **Özellikleri** penceresinde veri kullanılabilir hale getirmek için, iki özel öznitelikleri `Description` olan `Category`ortak özellikleri içine veri açın ve . `Description`**Özellikler** penceresinin alt kısmında görünen metindir. `Category`**Özellikler** penceresi **Kategorilere Ayrılgı** görünümünde görüntülendiğinde özelliğin nerede görünacağını belirler. Aşağıdaki resimde, **Özellikler** penceresi **Kategorilere** Ayrılgörünümünde, **ToDo Alanları** kategorisindeki **Ad** özelliği seçilir ve **Ad** özelliğinin açıklaması pencerenin alt kısmında görüntülenir.
+     Verileri **Özellikler** penceresinde kullanılabilir hale getirmek için, verileri iki özel özniteliğe sahip ortak özelliklere, `Description` ve `Category` . `Description` , **Özellikler** penceresinin alt kısmında görüntülenen metindir. `Category`**Kategori** görünümünde **Özellikler** penceresi görüntülendiğinde özelliğin nerede görüneceğini belirler. Aşağıdaki resimde **Özellikler** penceresi **kategorize** edilmiş görünümdeyseniz, **ToDo alanları** kategorisindeki **Name** özelliği seçilir ve **ad** özelliğinin açıklaması pencerenin alt kısmında görüntülenir.
 
-     ![Özellikler Penceresi](../extensibility/media/t5properties.png "T5Özellikleri")
+     ![Özellikler penceresi](../extensibility/media/t5properties.png "T5Properties")
 
-2. *Yönergeleri kullanarak TodoItem.cs* dosyasını kullanarak aşağıdakileri ekleyin.
+2. Aşağıdaki yönergeleri kullanarak *TodoItem.cs* dosyasını ekleyin.
 
     ```csharp
     using System.ComponentModel;
@@ -158,7 +158,7 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     using Microsoft.VisualStudio.Shell.Interop;
     ```
 
-3. Sınıf `public` bildirimine erişim değiştiricisini ekleyin.
+3. `public`Sınıf bildirimine erişim değiştiricisini ekleyin.
 
     ```csharp
     public class TodoItem
@@ -166,7 +166,7 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     }
     ```
 
-     İki özelliği ekleyin `Name` `DueDate`ve . Yaparız `UpdateList()` ve `CheckForErrors()` sonra.
+     İki özelliği ve ' ı `Name` ekleyin `DueDate` . `UpdateList()`Ve sonraki bir sürümünü yapacağız `CheckForErrors()` .
 
     ```csharp
     public class TodoItem
@@ -201,7 +201,7 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     }
     ```
 
-4. Kullanıcı denetimine özel bir başvuru ekleyin. Bu Yapılacak Lar öğesinin kullanıcı denetimini ve adını alan bir oluşturucu ekleyin. Değerini bulmak için, `daysAhead`Seçenekler sayfa özelliği alır.
+4. Kullanıcı denetimine özel bir başvuru ekleyin. Bu ToDo öğesinin kullanıcı denetimini ve adını alan bir Oluşturucu ekleyin. Değerini bulmak için `daysAhead` , Seçenekler sayfası özelliğini alır.
 
     ```csharp
     private TodoWindowControl parent;
@@ -230,7 +230,7 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     }
     ```
 
-5. `TodoItem` Sınıfın örnekleri ListBox'ta depolanacağı ve ListBox `ToString` işlevi çağıracağı `ToString` için, işlevi aşırı yüklemeniz gerekir. Aşağıdaki kodu *TodoItem.cs,* oluşturucusonra ve sınıfın sonundan önce ekleyin.
+5. `TodoItem`Sınıfın örnekleri ListBox 'da depolanacaksa ve ListBox işlevi çağıracağından `ToString` , işlevi aşırı yüklemelisiniz `ToString` . Oluşturucudan sonra ve sınıfın sonundan önce, *TodoItem.cs*için aşağıdaki kodu ekleyin.
 
     ```csharp
     public override string ToString()
@@ -239,7 +239,7 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     }
     ```
 
-6. *TodoWindowControl.xaml.cs,* `TodoWindowControl` sınıfa saplama yöntemleri ni `CheckForError` `UpdateList` ve yöntemleri ekleyin. ProcessDialogChar'dan sonra ve dosyanın bitiminden önce koyun.
+6. *TodoWindowControl.xaml.cs*' de, `TodoWindowControl` ve yöntemlerinin sınıfına saplama yöntemleri ekleyin `CheckForError` `UpdateList` . Bunları ProcessDialogChar 'dan sonra ve dosyanın sonundan önce koyun.
 
     ```csharp
     public void CheckForErrors()
@@ -250,14 +250,14 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     }
     ```
 
-     Yöntem, `CheckForError` üst nesnede aynı ada sahip bir yöntem çağırır ve bu yöntem herhangi bir hata oluştu olup olmadığını denetler ve bunları doğru şekilde işler. Yöntem, `UpdateList` listenin üst denetiminde güncellenir; yöntem, bu `Name` sınıftaki `DueDate` özellikler değiştiğinde çağrılır. Bunlar daha sonra uygulanacak.
+     `CheckForError`Yöntemi, üst nesnede aynı ada sahip bir yöntemi çağırır ve bu yöntem herhangi bir hata olup olmadığını kontrol eder ve doğru şekilde işler. `UpdateList`Yöntemi üst denetimdeki ListBox 'ı güncelleştirir; yöntemi `Name` `DueDate` Bu sınıftaki ve Özellikler değiştiğinde çağrılır. Bunlar daha sonra uygulanacaktır.
 
-## <a name="integrate-into-the-properties-window"></a>Özellikler penceresine tümleştirme
- Şimdi **Özellikler** penceresine bağlı olacak ListBox, yöneten kodu yazın.
+## <a name="integrate-into-the-properties-window"></a>Özellikler penceresi tümleştirme
+ Şimdi **Özellikler** penceresine bağlı olan ListBox 'ı yöneten kodu yazın.
 
- TextBox'ı okumak, Bir TodoItem oluşturmak ve ListBox'a ekler için düğme tıklama işleyicisini değiştirmeniz gerekir.
+ TextBox 'ı okumak için düğme tıklayını değiştirmeniz, bir TodoItem oluşturmanız ve onu ListBox 'a eklemesi gerekir.
 
-1. Varolan `button1_Click` işlevi yeni bir TodoItem oluşturan ve ListBox'a ekleyen kodla değiştirin. Daha `TrackSelection()`sonra tanımlanacak olan çağrıyı çağırır.
+1. Var olan `button1_Click` işlevi yeni bir TodoItem oluşturan kodla değiştirin ve ListBox 'a ekler. Bu `TrackSelection()` , daha sonra tanımlanacak çağrı yapılır.
 
     ```csharp
     private void button1_Click(object sender, RoutedEventArgs e)
@@ -272,9 +272,9 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     }
     ```
 
-2. Tasarım görünümünde ListBox denetimini seçin. **Özellikler** penceresinde Olay **işleyicileri** düğmesini tıklatın ve **Seçim Değiştirildi** olayını bulun. Metin kutusunu **listBox_SelectionChanged**ile doldurun. Bunu yapmak, SelectionChanged işleyicisi için bir saplama ekler ve onu olaya atar.
+2. Tasarım görünümü ListBox denetimini seçin. **Özellikler** penceresinde **olay işleyiciler** düğmesine tıklayın ve **SelectionChanged** olayını bulun. **ListBox_SelectionChanged**metin kutusunu girin. Bunu yapmak, SelectionChanged işleyicisi için bir saplama ekler ve bunu olaya atar.
 
-3. Yöntemi `TrackSelection()` uygulayın. Hizmetleri almanız <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> gerektiğinden, TodoWindowControl <xref:Microsoft.VisualStudio.Shell.WindowPane.GetService%2A> tarafından erişilebilir hale getirmeniz gerekir. <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> `TodoWindow` sınıfına aşağıdaki yöntemi ekleyin:
+3. Yöntemini uygulayın `TrackSelection()` . Hizmetleri almanız gerektiğinden <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> , <xref:Microsoft.VisualStudio.Shell.WindowPane.GetService%2A> TodoWindowControl tarafından erişilebilir yapmanız gerekir. `TodoWindow` sınıfına aşağıdaki yöntemi ekleyin:
 
     ```
     internal object GetVsService(Type service)
@@ -283,7 +283,7 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     }
     ```
 
-4. *TodoWindowControl.xaml.cs*için yönergeleri kullanarak aşağıdakileri ekleyin:
+4. Aşağıdaki using yönergelerini *TodoWindowControl.xaml.cs*öğesine ekleyin:
 
     ```csharp
     using System.Runtime.InteropServices;
@@ -292,7 +292,7 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     using Microsoft.VisualStudio.Shell;
     ```
 
-5. Seçilen işleyiciyi aşağıdaki gibi doldurun:
+5. SelectionChanged işleyicisini aşağıdaki gibi girin:
 
     ```
     private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -301,7 +301,7 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     }
     ```
 
-6. Şimdi, **Özellikler** penceresi ile tümleştirme sağlayacak TrackSelection işlevini doldurun. Bu işlev, kullanıcı ListBox'a bir öğe eklediğinde veya ListBox'taki bir öğeyi tıklattığında çağrılır. ListBox'ın içeriğini Bir SelectionContainer'a ekler ve SelectionContainer'ı <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> **Özellikler** penceresinin olay işleyicisine geçirir. TrackSelection hizmeti, kullanıcı arabiriminde (UI) seçili nesneleri izler ve özelliklerini görüntüler
+6. Şimdi, **Özellikler** penceresiyle tümleştirme sağlayan TrackSelection işlevini doldurmanız gerekir. Bu işlev, Kullanıcı ListBox 'a bir öğe eklediğinde ya da ListBox içindeki bir öğeye tıkladığı zaman çağrılır. ListBox 'ın içeriğini bir SelectionContainer öğesine ekler ve SelectionContainer öğesini **Özellikler** penceresinin <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> olay işleyicisine geçirir. TrackSelection hizmeti kullanıcı arabirimindeki (UI) seçili nesneleri izler ve özelliklerini görüntüler
 
     ```csharp
     private SelectionContainer mySelContainer;
@@ -349,9 +349,9 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     }
     ```
 
-     **Artık Özellikler** penceresinin kullanabileceği bir sınıfa sahip olduğunuza göre, **Özellikler** penceresini araç penceresiyle tümleştirebilirsiniz. Kullanıcı araç penceresindeki ListBox'taki bir öğeyi tıklattığında, **Özellikler** penceresi buna göre güncelleştirilmelidir. Benzer şekilde, kullanıcı **Özellikler** penceresinde bir ToDo öğesini değiştirdiğinde, ilişkili öğenin güncelleştirilmelidir.
+     Artık **Özellikler** penceresinin kullanabileceği bir sınıfınız olduğuna göre, **Özellikler** penceresini araç penceresi ile tümleştirebilirsiniz. Kullanıcı araç penceresindeki ListBox içindeki bir öğeye tıkladığında **Özellikler** penceresi uygun şekilde güncellenmelidir. Benzer şekilde, Kullanıcı **Özellikler** penceresinde bir Todo öğesini değiştirdiğinde ilişkili öğe güncellenmelidir.
 
-7. Şimdi, TodoWindowControl.xaml.cs UpdateList işlev kodunun geri kalanını *ekleyin.* ListBox'tan değiştirilmiş TodoItem'i düşürmeli ve yeniden eklemelidir.
+7. Şimdi, *TodoWindowControl.xaml.cs*Içindeki UpdateList işlev kodunun geri kalanını ekleyin. Değiştirilen TodoItem, ListBox ' dan bırakması ve yeniden eklemesi gerekir.
 
     ```csharp
     public void UpdateList(TodoItem item)
@@ -363,20 +363,20 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     }
     ```
 
-8. Kodunuzu test edin. Projeyi oluşturun ve hata ayıklamaya başlayın. Deneysel örnek görünmelidir.
+8. Kodunuzu test edin. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnek görünmelidir.
 
-9. **Araç** > **Seçenekleri** sayfasını açın. Sol bölmede ToDo kategorisini görmelisiniz. Kategoriler alfabetik olarak listelenir, bu nedenle Ts altına bakın.
+9. **Araçlar**  >  **Seçenekler** sayfasını açın. Sol bölmede ToDo kategorisini görmeniz gerekir. Kategoriler alfabetik olarak listelendiğinde, TS 'nin altına bakın.
 
-10. **Todo** seçenekleri sayfasında, **0**olarak `DaysAhead` ayarlanmış özelliği görmeniz gerekir. **2**olarak değiştirin.
+10. **Todo** seçenekleri sayfasında, `DaysAhead` özelliğinin **0**olarak ayarlandığını görmeniz gerekir. **2**olarak değiştirin.
 
-11. Görünüm **/ Diğer Windows** menüsünde, **TodoWindow'u**açın. Metin kutusuna **Bitiş Tarihi** yazın ve **Ekle'yi**tıklatın.
+11. **Görünüm/diğer pencereler** menüsünde, **todowinde**' yi açın. Metin kutusuna **EndDate** yazın ve **Ekle**' ye tıklayın.
 
-12. Liste kutusunda, bugünden iki gün sonra bir tarih görmeniz gerekir.
+12. Liste kutusunda bugünden sonraki iki gün sonra bir tarih görmeniz gerekir.
 
-## <a name="add-text-to-the-output-window-and-items-to-the-task-list"></a>Çıktı penceresine metin ve Görev Listesine öğeler ekleme
- Görev **Listesi**için, Görev türünde yeni bir nesne oluşturursunuz ve ardından bu `Add` Görev nesnesini yöntemini çağırarak **Görev Listesi'ne** eklersiniz. **Çıktı** penceresine yazmak için, `GetPane` bir bölme nesnesi elde etmek için `OutputString` yöntemini çağırırsınız ve sonra bölme nesnesinin yöntemini çağırırsınız.
+## <a name="add-text-to-the-output-window-and-items-to-the-task-list"></a>Çıkış penceresine ve öğeleri Görev Listesi metin ekleme
+ **Görev listesi**Için, görev türünde yeni bir nesne oluşturun ve sonra metodunu çağırarak bu görev nesnesini **görev listesi** ekleyin `Add` . **Çıkış** penceresine yazmak için, `GetPane` bir bölme nesnesi elde etmek üzere yöntemini çağırır ve ardından `OutputString` bölme nesnesinin yöntemini çağırabilirsiniz.
 
-1. *TodoWindowControl.xaml.cs,* `button1_Click` yöntemde, **Çıkış** penceresinin **Genel** bölmesini almak için kod ekleyin (varsayılan dır) ve ona yazın. Yöntem şöyle görünmelidir:
+1. *TodoWindowControl.xaml.cs*' de, `button1_Click` yöntemi Içinde **Çıkış** penceresinin **genel** bölmesini (varsayılan olan) almak ve ona yazmak için kod ekleyin. Yöntem şöyle görünmelidir:
 
     ```csharp
     private void button1_Click(object sender, EventArgs e)
@@ -403,7 +403,7 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     }
     ```
 
-2. Görev Listesi'ne öğe eklemek için, TodoWindowControl sınıfına iç içe bir sınıf eklemek için a'nın olması gerekir. İç içe geçen <xref:Microsoft.VisualStudio.Shell.TaskProvider>sınıfın. `TodoWindowControl` Sınıfın sonuna aşağıdaki kodu ekleyin.
+2. Görev Listesi öğe eklemek için, TodoWindowControl sınıfına iç içe bir sınıf eklemeniz gerekir. İç içe sınıfın türetilmesi gerekir <xref:Microsoft.VisualStudio.Shell.TaskProvider> . Sınıfının sonuna aşağıdaki kodu ekleyin `TodoWindowControl` .
 
     ```csharp
     [Guid("72de1eAD-a00c-4f57-bff7-57edb162d0be")]
@@ -416,7 +416,7 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     }
     ```
 
-3. Sonraki `TodoTaskProvider` `TodoWindowControl` sınıfa özel bir `CreateProvider()` başvuru ve bir yöntem ekleyin. Kod şu na benzemelidir:
+3. Sonra sınıfına bir özel başvuru `TodoTaskProvider` ve yöntemine bir `CreateProvider()` Yöntem ekleyin `TodoWindowControl` . Kod şöyle görünmelidir:
 
     ```csharp
     private TodoWindowTaskProvider taskProvider;
@@ -430,7 +430,7 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     }
     ```
 
-4. Görev `ClearError()`Listesini temizleyen ve `ReportError()`Görev Listesi'ne bir giriş ekleyen `TodoWindowControl` sınıfa ekle.
+4. `ClearError()`Görev listesi, ve `ReportError()` görev listesi bir girişi bir giriş ekleyen bir öğesine ekleyin `TodoWindowControl` .
 
     ```csharp
     private void ClearError()
@@ -462,7 +462,7 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
     }
     ```
 
-5. Şimdi aşağıdaki `CheckForErrors` gibi yöntemi uygulayın.
+5. Şimdi `CheckForErrors` yöntemi aşağıdaki şekilde uygulayın.
 
     ```csharp
     public void CheckForErrors()
@@ -480,28 +480,28 @@ Visual Studio'daki herhangi bir araç penceresine erişebilirsiniz. Bu izim, ara
 
 ## <a name="try-it-out"></a>Deneyin
 
-1. Projeyi oluşturun ve hata ayıklamaya başlayın. Deneysel örnek görüntülenir.
+1. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnek görüntülenir.
 
-2. **TodoWindow'u** açın (**Diğer Windows** > **TodoWindow'u****Görüntüle** > ).
+2. **Turun** (**View**  >  **diğer pencereleri**görüntüle) öğesini açın  >  **TodoWindow**.
 
-3. Metin kutusuna bir şey yazın ve sonra **Ekle'yi**tıklatın.
+3. Metin kutusuna bir şey yazın ve ardından **Ekle**' ye tıklayın.
 
-     Bugünden 2 gün sonra vade tarihi liste kutusuna eklenir. Hiçbir hata oluşturulmaz ve **Görev Listesi** **(Görev Listesini****Görüntüle)** > girişi olmamalıdır.
+     Son Tarih, bugün liste kutusuna eklendikten sonra 2 gün sonra. Hiçbir hata oluşturulmaz ve **görev listesi** (**Görünüm**  >  **görev listesi**) hiç giriş içermemelidir.
 
-4. Şimdi **Araçlar** > **Seçenekleri** > **Yapılacaklar** sayfasındaki ayarı **2'den** **0'a**değiştirin.
+4. Şimdi **Araçlar**  >  **seçenekleri**  >  **Todo** sayfasındaki ayarı **2** ' den **0**' a geri değiştirin.
 
-5. **TodoWindow'a** başka bir şey yazın ve sonra yeniden **Ekle'yi** tıklatın. Bu, bir hatayı ve görev **listesindeki**bir girişi tetikler.
+5. **Turun** içine başka bir şey yazın ve sonra yeniden **Ekle** ' ye tıklayın. Bu, bir hatayı ve ayrıca **görev listesi**bir girdiyi tetikler.
 
-     Öğeleri eklediğinizde, başlangıç tarihi şimdi artı 2 gün olarak ayarlanır.
+     Öğe eklerken, başlangıç tarihi ve 2 gün olarak ayarlanır.
 
-6. **Görünüm** menüsünde Çıktı penceresini açmak için **Çıktı'yı** tıklatın. **Output**
+6. **Görünüm** menüsünde **Çıkış** ' a tıklayarak **Çıkış** penceresini açın.
 
-     Her öğe eklediğinizde, **Görev Listesi** bölmesinde bir iletinin görüntülendiğine dikkat edin.
+     Her öğe eklediğinizde **görev listesi** bölmesinde bir ileti görüntülenir.
 
-7. ListBox'taki öğelerden birini tıklatın.
+7. ListBox 'daki öğelerden birine tıklayın.
 
-     **Özellikler** penceresi maddenin iki özelliğini görüntüler.
+     **Özellikler** penceresi, öğe için iki özelliği görüntüler.
 
-8. Özelliklerden birini değiştirin ve **Enter**tuşuna basın.
+8. Özelliklerden birini değiştirin ve ardından **ENTER**tuşuna basın.
 
-     Öğe ListBox'ta güncelleştirilir.
+     Öğe ListBox 'da güncelleştirilir.

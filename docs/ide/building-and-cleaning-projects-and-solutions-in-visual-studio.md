@@ -24,101 +24,101 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b1cf71abb19f6d4a3a459b4e5559e536f18f41c8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76114561"
 ---
-# <a name="build-and-clean-projects-and-solutions-in-visual-studio"></a>Visual Studio'da projeler ve çözümler oluşturun ve temizleyin
+# <a name="build-and-clean-projects-and-solutions-in-visual-studio"></a>Visual Studio 'da projeler ve çözümler oluşturma ve Temizleme
 
-Bu konudaki yordamları kullanarak, bir çözümdeki projelerin veya proje öğelerinin tamamını veya bazılarını oluşturabilir, yeniden oluşturabilir veya temizleyebilirsiniz. Adım adım öğretici için [Walkthrough: Building a application](../ide/walkthrough-building-an-application.md)'a bakın.
-
-> [!NOTE]
-> Bu konu Windows'daki Visual Studio için geçerlidir. Mac için Visual Studio [için, Mac için Visual Studio'da Build ve clean projects ve solutions adresine](/visualstudio/mac/building-and-cleaning-projects-and-solutions)bakın.
+Bu konudaki yordamları kullanarak bir çözümde proje veya proje öğelerinden tümünü veya bir kısmını oluşturabilir, yeniden oluşturabilir veya temizleyebilirsiniz. Adım adım bir öğretici için bkz. [Izlenecek yol: uygulama oluşturma](../ide/walkthrough-building-an-application.md).
 
 > [!NOTE]
-> Visual Studio'nun sürümünüzdeki UI, etkin ayarlarınıza bağlı olarak bu konunun açıkladığı ndan farklı olabilir. Ayarlarınızı değiştirmek için, örneğin **Genel** veya **Görsel C++** ayarlarını değiştirmek **için, Araçlar** > **İçe Ve Dışa Aktar Ayarlarını**seçin ve ardından **tüm ayarları sıfırla'yı**seçin.
+> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio içindeki proje ve çözümleri oluşturma ve Temizleme](/visualstudio/mac/building-and-cleaning-projects-and-solutions).
 
-## <a name="to-build-rebuild-or-clean-an-entire-solution"></a>Tüm çözümü oluşturmak, yeniden oluşturmak veya temizlemek için
+> [!NOTE]
+> Visual Studio sürümünüzde Kullanıcı arabirimi, etkin ayarlarınıza bağlı olarak bu konunun açıklanana kadar farklılık gösterebilir. Ayarlarınızı değiştirmek (örneğin, **genel** veya **Visual C++** ayarları) için **Araçlar**  >  **içeri ve dışarı aktarma ayarları**' nı seçin ve ardından **tüm ayarları Sıfırla**' yı seçin.
 
-1. **Solution**Explorer'da, çözümü seçin veya açın.
+## <a name="to-build-rebuild-or-clean-an-entire-solution"></a>Tüm çözümü derlemek, yeniden derlemek veya temizlemek için
 
-2. Menü çubuğunda **Oluştur'u**seçin ve ardından aşağıdaki komutlardan birini seçin:
+1. **Çözüm Gezgini**, çözümü seçin veya açın.
 
-    - Yalnızca en son yapılana göre değişen proje dosyalarını ve bileşenlerini derlemek için **Çözüm Oluştur** veya **Oluştur'u** seçin.
+2. Menü çubuğunda, **Oluştur**' u seçin ve ardından aşağıdaki komutlardan birini seçin:
+
+    - Yalnızca en son derlemeden bu yana değiştirilen proje dosyalarını ve bileşenlerini derlemek için **Build** veya **Build Solution** öğesini seçin.
 
         > [!NOTE]
-        > Bir çözüm birden fazla proje içerdiğinde **Yapı** komutu **Çözüm Oluştur** olur.
+        > Bir çözüm birden fazla proje içerdiğinde **Build** komutu **derleme çözümü** haline gelir.
 
-    - Çözümü "temizlemek" için **Çözümü Yeniden Oluştur'u** seçin ve ardından tüm proje dosyalarını ve bileşenlerini oluşturun.
+    - Çözümü "temizlemek" için **çözümü yeniden oluştur** ' u seçin ve ardından tüm proje dosyaları ve bileşenleri oluşturun.
 
-    - Ara ve çıktı dosyalarını silmek için **Çözüm'i** Temizle'yi seçin. Yalnızca proje ve bileşen dosyaları bırakıldığında, ara ve çıktı dosyalarının yeni örnekleri oluşturulabilir.
+    - Tüm ara ve çıkış dosyalarını silmek için **Çözümü Temizle** ' yi seçin. Yalnızca proje ve bileşen dosyaları solda, ara ve çıkış dosyalarının yeni örnekleri derlenebilir.
 
-## <a name="to-build-or-rebuild-a-single-project"></a>Tek bir proje oluşturmak veya yeniden oluşturmak için
+## <a name="to-build-or-rebuild-a-single-project"></a>Tek bir projeyi derlemek veya yeniden derlemek için
 
-1. **Çözüm Gezgini'nde**projeyi seçin veya açın.
+1. **Çözüm Gezgini**, projeyi seçin veya açın.
 
-2. Menü çubuğunda, **Oluştur'u**seçin ve ardından ProjectName **Oluştur** veya *ProjectName'i* Yeniden **Oluştur'u** *ProjectName*seçin.
+2. Menü çubuğunda **Oluştur**' u seçin ve sonra *ProjectName* **Derle** veya *ProjectName*öğesini **yeniden oluştur** ' u seçin.
 
-    - Yalnızca en son yapılana göre değişen proje bileşenlerini oluşturmak için *ProjectName* **Oluştur'u** seçin.
+    - Yalnızca en son derlemeden bu yana değiştirilen proje bileşenlerini derlemek için **Build** *ProjectName* öğesini seçin.
 
-    - *Projeyi* "temizlemek" için **ProjectName'i yeniden oluşturun** ve ardından proje dosyalarını ve tüm proje bileşenlerini oluşturun.
+    - Projeyi "temizlemek" için *ProjectName* **yeniden derle** öğesini seçin ve proje dosyalarını ve tüm proje bileşenlerini derleyin.
 
 ## <a name="to-build-only-the-startup-project-and-its-dependencies"></a>Yalnızca başlangıç projesini ve bağımlılıklarını oluşturmak için
 
-1. Menü çubuğunda **Araç** > **Seçenekleri'ni**seçin.
+1. Menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin.
 
-2. **Seçenekler** iletişim kutusunda, Projeler **ve Çözümler** düğümlerini genişletin ve ardından **Yap ve Çalıştır** sayfasını seçin.
+2. **Seçenekler** iletişim kutusunda, **Projeler ve çözümler** düğümünü genişletin ve ardından **Oluştur ve Çalıştır** sayfasını seçin.
 
-     **Projeler** >  **Oluştur ve Çalıştır** > **Seçenekleri** iletişim kutusu açılır.
+     Projeleri ve çözümleri **oluşturma ve çalıştırma**  >  **Projects and Solutions**  >  **seçenekleri** iletişim kutusu açılır.
 
-3. Çalıştır onay kutusunda **Ki Tek başlangıç projeleri ve bağımlılıkları** oluşturun' u seçin.
+3. **Yalnızca oluşturma başlangıç projelerini ve çalıştırılan bağımlılıkları Çalıştır** onay kutusunu seçin.
 
      Bu onay kutusu seçildiğinde, aşağıdaki adımlardan birini gerçekleştirdiğinizde yalnızca geçerli başlangıç projesi ve bağımlılıkları oluşturulur:
 
-    - Menü çubuğunda **Hata Ayıklama** > **Başlat** **(F5)** seçeneğini belirleyin.
+    - Menü çubuğunda **Hata Ayıkla**  >  **Başlat** (**F5**) öğesini seçin.
 
-    - Menü çubuğunda **Yapı** > **Çözüm** **(Ctrl**+**Shift**+**B)** seçeneğini belirleyin.
+    - Menü **çubuğunda Build**  >  **Build Solution** (**CTRL** + **Shift** + **B**) öğesini seçin.
 
-    Bu onay kutusu temizlendiğinde, önceki komutlardan birini çalıştırdığınızda tüm projeler, bunların bağımlılıkları ve çözüm dosyaları oluşturulur. Varsayılan olarak bu onay kutusu işaretli değildir.
+    Bu onay kutusu Temizlenmişken, önceki komutlardan birini çalıştırdığınızda tüm projeler, bağımlılıkları ve çözüm dosyaları oluşturulur. Varsayılan olarak bu onay kutusu işaretli değildir.
 
-## <a name="to-build-only-the-selected-visual-c-project"></a>Yalnızca seçili Visual C++ projesini oluşturmak için
+## <a name="to-build-only-the-selected-visual-c-project"></a>Yalnızca seçili Visual C++ projesi oluşturmak için
 
-Bir [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] proje seçin ve ardından menü çubuğunda Yalnızca **Project'i Oluştur'u** > **Project Only**ve aşağıdaki komutlardan birini seçin:
+Bir [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] proje seçin ve ardından menü çubuğunda **Build**  >  **yalnızca proje**oluştur ' u ve aşağıdaki komutlardan birini seçin:
 
-- **Yalnızca** *Proje Adı* Oluştur
+- **Yalnızca** *ProjectName* oluştur
 
-- **Yalnızca** *Proje Adını* Yeniden Oluştur
+- **Yalnızca** *ProjectName* öğesini yeniden derle
 
-- Yalnızca *Proje Adını* **Temizle**
+- **Yalnızca** *ProjectName* 'i temizle
 
-- **Bağlantı Sadece** *Proje Adı*
+- **Salt bağlantı yalnızca** *ProjectName*
 
-Bu komutlar yalnızca, [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] proje bağımlılıklarını veya çözüm dosyalarını oluşturmadan, yeniden oluşturmadan, temizlemeden veya bağlamadan seçtiğiniz proje için geçerlidir. Sürümünüze bağlı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]olarak, **Yalnızca Project** alt menüsü daha fazla komut içerebilir.
+Bu komutlar [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] , herhangi bir proje bağımlılığı veya çözüm dosyası oluşturmadan, yeniden oluşturmaya, temizlemeye veya bağlamaya gerek kalmadan yalnızca seçtiğiniz proje için geçerlidir. Sürümünüze bağlı olarak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , **yalnızca proje** alt menüsünde daha fazla komut bulunabilir.
 
 ## <a name="to-compile-multiple-c-project-items"></a>Birden çok C++ proje öğesi derlemek için
 
-**Çözüm Gezgini'nde,** derlenebilecek birden çok dosya seçin, bu dosyalardan biri için kısayol menüsünü açın ve ardından **Derle'i**seçin.
+**Çözüm Gezgini**, derlenebilecek eylemler olabilecek birden çok dosya seçin, bu dosyalardan biri için kısayol menüsünü açın ve **Derle**' yi seçin.
 
-Dosyaların bağımlılıkları varsa, dosyalar bağımlılık sırasına göre derlenir. Dosyaları derlediğinizde kullanılamayan önceden derlenmiş bir üstbilgi gerektiriyorsa derleme işlemi başarısız olur. Derleme işlemi geçerli etkin çözüm yapılandırmasını kullanır.
+Dosyaların bağımlılıkları varsa, dosyalar bağımlılık sırasıyla derlenir. Dosyalar derlerken kullanılamayan bir ön derlenmiş üstbilgi gerektiriyorsa, derleme işlemi başarısız olur. Derleme işlemi geçerli etkin çözüm yapılandırmasını kullanır.
 
-## <a name="to-stop-a-build"></a>Bir yapıyı durdurmak için
+## <a name="to-stop-a-build"></a>Bir derlemeyi durdurmak için
 
 Aşağıdaki adımlardan birini gerçekleştirin:
 
-- Menü çubuğunda **İptal Yap'ı** > **Cancel**seçin.
+- Menü çubuğunda, **derleme**  >  **iptali**' ni seçin.
 
-- **Ctrl**+**Break**tuşuna basın.
+- **CTRL** + **Kes**'e basın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılsın: Yapı günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma](../ide/how-to-view-save-and-configure-build-log-files.md)
-- [Yapı günlükleri edinme](../msbuild/obtaining-build-logs-with-msbuild.md)
-- [Derleme ve bina](../ide/compiling-and-building-in-visual-studio.md)
+- [Nasıl yapılır: derleme günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma](../ide/how-to-view-save-and-configure-build-log-files.md)
+- [Derleme günlükleri alma](../msbuild/obtaining-build-logs-with-msbuild.md)
+- [Derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md)
 - [Yapı yapılandırmalarını anlama](../ide/understanding-build-configurations.md)
 - [Nasıl yapılır: Hata ayıklama ve dağıtım yapılandırmalarını ayarlama](../debugger/how-to-set-debug-and-release-configurations.md)
-- [C/C++ bina referansı](/cpp/build/reference/c-cpp-building-reference)
+- [C/C++ oluşturma başvurusu](/cpp/build/reference/c-cpp-building-reference)
 - [Devenv komut satırı anahtarları](../ide/reference/devenv-command-line-switches.md)
 - [Çözümler ve projeler](../ide/solutions-and-projects-in-visual-studio.md)
-- [Projeler ve çözümler oluşturun ve temizleyin (Mac için Visual Studio)](/visualstudio/mac/building-and-cleaning-projects-and-solutions)
+- [Projeleri ve çözümleri oluşturma ve Temizleme (Mac için Visual Studio)](/visualstudio/mac/building-and-cleaning-projects-and-solutions)

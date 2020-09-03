@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 90eeaefd8784be3e381c72dd452a23c56e0df47d
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461037"
 ---
 # <a name="thunk"></a>Dönüştürücü
@@ -52,11 +52,11 @@ Her biri `thunk` bir etiketi tarafından tanımlanır `SymTagThunk` .
 |[IDiaSymbol::get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)|`DWORD`|[THUNK_ORDINAL numaralandırması](../../debugger/debug-interface-access/thunk-ordinal.md)tarafından tanımlanan dönüştürücü türü.|
 |[IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)|`IDiaSymbol*`|Bu dönüştürücü türü (yalnızca DIA SDK V 8.0 veya üzeri).|
 |[IDiaSymbol::get_typeId](../../debugger/debug-interface-access/idiasymbol-get-typeid.md)|`DWORD`|Tür sembolünün KIMLIĞI (yalnızca DIA SDK V 8.0 veya üzeri).|
-|[IDiaSymbol::get_unalignedType](../../debugger/debug-interface-access/idiasymbol-get-unalignedtype.md)|`BOOL`|`TRUE`dönüştürücü hizalanmazsa (yalnızca DIA SDK V 8.0 veya üzeri),|
-|[IDiaSymbol::get_virtual](../../debugger/debug-interface-access/idiasymbol-get-virtual.md)|`BOOL`|`TRUE`dönüştürücü sanal ise (yalnızca DIA SDK V 8.0 veya üzeri sürümlerde).|
+|[IDiaSymbol::get_unalignedType](../../debugger/debug-interface-access/idiasymbol-get-unalignedtype.md)|`BOOL`|`TRUE` dönüştürücü hizalanmazsa (yalnızca DIA SDK V 8.0 veya üzeri),|
+|[IDiaSymbol::get_virtual](../../debugger/debug-interface-access/idiasymbol-get-virtual.md)|`BOOL`|`TRUE` dönüştürücü sanal ise (yalnızca DIA SDK V 8.0 veya üzeri sürümlerde).|
 |[IDiaSymbol::get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md)|`ULONGLONG`|Bu dönüştürücü için yürütülebilir görüntü içinde konum.|
 |[IDiaSymbol::get_virtualBaseOffset](../../debugger/debug-interface-access/idiasymbol-get-virtualbaseoffset.md)|`DWORD`|Sanal tablodaki Bu dönüştürücü için fark (yalnızca DIA SDK V 8.0 veya üzeri).|
-|[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|`BOOL`|`TRUE`dönüştürücü geçici olarak işaretlenmişse (yalnızca DIA SDK V 8.0 veya üzeri sürümlerde).|
+|[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|`BOOL`|`TRUE` dönüştürücü geçici olarak işaretlenmişse (yalnızca DIA SDK V 8.0 veya üzeri sürümlerde).|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Simge Türlerinin Sözcük Hiyerarşisi](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)

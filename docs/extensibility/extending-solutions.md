@@ -1,5 +1,5 @@
 ---
-title: Genişletme Çözümleri | Microsoft Dokümanlar
+title: Çözümleri genişletme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 5cb60183-2a87-4551-a19f-c7c4e65d60c0
@@ -9,18 +9,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 40a9591418dd3d2fb53bee29dfb8192a368e4047
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711721"
 ---
-# <a name="extend-solutions"></a>Çözümleri genişletin
-Çözüm, bir uygulama oluşturmak için birlikte çalışan bir veya daha fazla projenin gruplandırmasıdır.
+# <a name="extend-solutions"></a>Çözümleri genişletme
+Bir çözüm, bir uygulama oluşturmak için birlikte çalışan bir veya daha fazla projenin gruplandırmasıdır.
 
 ## <a name="in-this-section"></a>Bu bölümde
- Aşağıdaki izlenebilirlik, çözümleri genişletmenin bazı yollarını gösterir.
+ Aşağıdaki izlenecek yollarda, çözümlerini genişletebilmeniz için bazı yollar gösterilmektedir.
 
-1. [Solution Explorer filtresini genişletin,](../extensibility/extending-the-solution-explorer-filter.md) Çözüm Gezgini'nin görüntüleyişlerine nasıl filtre uygulanış edilir.
+1. [Çözüm Gezgini filtresini genişletmek](../extensibility/extending-the-solution-explorer-filter.md) Çözüm Gezgini ne şekilde filtreleneceğini açıklar.
 
-2. [Bir çözümde proje yüklemeyi yönetmek,](../extensibility/managing-project-loading-in-a-solution.md) kullanıcı bir çözüm yüklediğinde performansı artırmak için proje yüklemesinin nasıl yönetilecek olduğunu açıklar.
+2. [Bir çözümde proje yüklemeyi yönetme](../extensibility/managing-project-loading-in-a-solution.md) Kullanıcı bir çözüm yüklediğinde performansı artırmak için proje yükleme 'nin nasıl yönetileceğini açıklar.

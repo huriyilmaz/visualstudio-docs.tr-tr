@@ -9,10 +9,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: ad4698fe469176ae8ed590c44b4efbb4ccf39de2
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545060"
 ---
 # <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351: Bozuk Şifreleme Algoritmaları Kullanmayın
@@ -38,9 +38,9 @@ ms.locfileid: "85545060"
 
  Şifreleme algoritmaları için:
 
-- <xref:System.Security.Cryptography.DES>şifreleme, bir günden kısa bir sürede deneme yanılma olabilecek küçük bir anahtar boyutu içeriyor.
+- <xref:System.Security.Cryptography.DES> şifreleme, bir günden kısa bir sürede deneme yanılma olabilecek küçük bir anahtar boyutu içeriyor.
 
-- <xref:System.Security.Cryptography.RC2>şifreleme, saldırganın tüm anahtar değerleri arasında matematik ilişkileri bulduğu ilgili anahtar saldırılarına açıktır.
+- <xref:System.Security.Cryptography.RC2> şifreleme, saldırganın tüm anahtar değerleri arasında matematik ilişkileri bulduğu ilgili anahtar saldırılarına açıktır.
 
   Bu kural, kaynak kodundaki yukarıdaki şifreleme işlevlerinden herhangi birini bulduğunda tetiklenir ve kullanıcıya bir uyarı oluşturur.
 

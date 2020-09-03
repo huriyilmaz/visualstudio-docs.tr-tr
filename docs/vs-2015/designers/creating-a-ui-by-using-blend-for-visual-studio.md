@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1a65f42dafca696bfa638964b825410b576d4845
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544293"
 ---
 # <a name="creating-a-ui-by-using-blend-for-visual-studio"></a>Visual Studio için Blend’i kullanarak kullanıcı arabirimi oluşturma
@@ -40,7 +40,7 @@ Visual Studio için Blend XAML tabanlı Windows Masaüstü, Web, [Windows Phone]
 
 - [Özellikler panelinin turu](#Properties)
 
-## <a name="tour-of-the-tools-panel"></a><a name="Tools"></a>Araçlar paneli turu
+## <a name="tour-of-the-tools-panel"></a><a name="Tools"></a> Araçlar paneli turu
  Uygulamanızdaki nesneleri oluşturmak ve değiştirmek için Visual Studio için Blend **Araçlar** panelini kullanabilirsiniz. Nesneleri bir araç seçip çalışma yüzeyinde farenizle çizerek bir araç seçerek oluşturursunuz.
 
  ![Araçlar paneli](../designers/media/blend5toolspanel.png "Blend5Toolspanel")
@@ -56,12 +56,12 @@ Visual Studio için Blend XAML tabanlı Windows Masaüstü, Web, [Windows Phone]
 
  **Kısa bir video izleyin:** [araç çubuğunun](https://www.youtube.com/watch?v=VkdUJcvoo54&list=PLBDF977B2F1DAB358&index=4) ![yüklü özelliklerini yapılandırın](../designers/media/bldadminconsoleinitialconfigicon.PNG "Bldadminconsoleınitialconfigıcon") .
 
-## <a name="tour-of-the-assets-panel"></a><a name="Assets"></a>Varlıklar paneli turu
+## <a name="tour-of-the-assets-panel"></a><a name="Assets"></a> Varlıklar paneli turu
  Visual Studio 'daki **araç kutusuna** benzer şekilde, **varlıklar** panelinde tüm denetimleri bulabilirsiniz. Denetimlere ek olarak, **varlıklar** panelinde stiller, medya, davranışlar ve efektler dahil olmak üzere çalışma yüzeyinizi ekleyebileceğiniz her şeyi bulabilirsiniz.
 
  ![Varlıklar paneli](../designers/media/blend5-assets-panel.png "Blend5_Assets_panel")
 
-|Görüntü|Açıklama|
+|Görüntü|Description|
 |-|-|
 |![](../designers/media/b1-1.png "B1_1")|**Arama kutusu** Varlık listesini filtrelemek için **arama** kutusuna yazın.|
 |![](../designers/media/b1-2.png "B1_2")|**Kılavuz modu ve liste modu** **Kılavuz modu** görünümü Ile varlıkların **liste modu** görünümü arasında geçiş yapın.|
@@ -69,12 +69,12 @@ Visual Studio için Blend XAML tabanlı Windows Masaüstü, Web, [Windows Phone]
 |![](../designers/media/b1-4.png "B1_4")|**Stiller** Kaynak sözlüğünde bulunan tüm stilleri görüntüleyin.|
 |![](../designers/media/b1-5.png "B1_5")|**Açıklama** Seçili varlıklar kategorisi veya alt kategorisinin açıklamasını görüntüleyin.|
 
-## <a name="tour-of-the-objects-and-timeline-panel"></a><a name="Objects"></a>Nesneler ve Zaman Çizelgesi paneli turu
+## <a name="tour-of-the-objects-and-timeline-panel"></a><a name="Objects"></a> Nesneler ve Zaman Çizelgesi paneli turu
  Çalışma yüzeyinizdeki nesneleri düzenlemek ve isterseniz bunlara animasyon uygulamak için bu paneli kullanın.
 
  ![Animasyon modundaki nesne ve zaman çizelgesi paneli](../designers/media/b5-object-timeline-animation.png "b5_object_timeline_animation")
 
-|Görüntü|Açıklama|
+|Görüntü|Description|
 |-|-|
 |![](../designers/media/b1-1.png "B1_1")|**Nesne görünümü** Bir belgenin görsel ağacını görüntüleyin. Farklı ayrıntı düzeylerinde ayrıntıya gidebilirsiniz. Çalışma yüzeyinde daha fazla nesne düzenlemek için Katmanlar da ekleyebilirsiniz. Böylece bunları bir grup olarak kilitleyebilir ve gizleyebilirsiniz.|
 |![](../designers/media/b1-2.png "B1_2")|**Kayıt modu göstergesi** Özellik değişikliklerini bir zaman çizelgesinde kayıt yapıp görmeyeceğinizi öğrenin.|
@@ -93,7 +93,7 @@ Visual Studio için Blend XAML tabanlı Windows Masaüstü, Web, [Windows Phone]
 |![](../designers/media/b1-15.png "B1_15")|**Zaman çizelgesi yakınlaştırma** Zaman çizelgesinin yakınlaştırma çözünürlüğünü ayarlayın. Yakınlaştırma bir animasyonu daha ayrıntılı düzenlemenize izin verir ve uzaklaştırmaysa daha uzun süreler boyunca neler olduğuna ilişkin daha kapsamlı bir özet gösterir. Yakınlaştırma yapar, ancak zaman içinde istediğiniz konumunda bir ana kare ayarlayamazsınız, yaslama çözünürlüğünün yeterince yüksek olarak ayarlandığını doğrulayın.|
 |![Belirtme çizgisi 16](../designers/media/b5-label-16.png "b5_label_16")|**Zaman çizelgesi bileşim alanı** Zaman çizelgesini görüntüleyin ve sürükleyerek veya kısayol menülerini kullanarak ana kareleri taşıyın.|
 
-## <a name="tour-of-the-properties-panel"></a><a name="Properties"></a>Özellikler panelinin turu
+## <a name="tour-of-the-properties-panel"></a><a name="Properties"></a> Özellikler panelinin turu
  Bir nesnenin özelliklerini görüntülemek ve değiştirmek için bu paneli kullanın. Bunları doğrudan çalışma yüzeyinde da ayarlayabilirsiniz. Bunu yaparsanız, özellik değişiklikleri **Özellikler** panelinde yansıtılır.
 
  ![Özellikler paneli](../designers/media/blend5-properties-panel.png "Blend5_properties_panel")
@@ -113,7 +113,7 @@ Visual Studio için Blend XAML tabanlı Windows Masaüstü, Web, [Windows Phone]
 |                                 ![](../designers/media/b1-9.png "B1_9")                                 |                                                         **Arama kutusu** Özellikleri arayın. **Arama** kutusuna yazarak görüntülenen özellikleri filtreleyin.                                                          |
 | ![](../designers/media/97fa60b9-0caf-4387-9225-b57510d32209.png "97fa60b9-0caf-4387-9225-b57510d32209") |                                **Fırça Düzenleyicisi sekmeleri** Bir fırça Düzenleyicisi seçmek için kullanın. **Fırça**, **düz renk fırçası**, **gradyan fırçası**, **kutucuk fırçası**veya **fırça kaynağı**seçeneklerinden birini belirleyebilirsiniz.                                |
 |                                ![](../designers/media/b1-11.png "B1_11")                                |                                    **Renk kaynakları** Farklı özelliklere tam olarak aynı rengi uygulayın. **Renk kaynakları** sekmesi, **yerel kaynakları** ve **sistem kaynaklarını**içerir.                                    |
-|                                ![](../designers/media/b1-12.png "B1_12")                                |                                                 **RGB renk alanı** **R**, **G**veya **B** (kırmızı, yeşil, mavi) sayı düzenleyicilerinin değerlerini ayarlayarak rengi değiştirin.                                                  |
+|                                ![](../designers/media/b1-12.png "B1_12")                                |                                                 **RGB renk alanı** **R**,  **G**veya **B** (kırmızı, yeşil, mavi) sayı düzenleyicilerinin değerlerini ayarlayarak rengi değiştirin.                                                  |
 |                                ![](../designers/media/b1-13.png "B1_13")                                |                                                                        **Alfa kanalı** ' **Nin yanında bulunan**sayı düzenleyicisini kullanarak alfa değerini değiştirin.                                                                        |
 | ![](../designers/media/d839d12c-07a1-4127-a830-4a8e7069f4fe.png "d839d12c-07a1-4127-a830-4a8e7069f4fe") |                                       **Rengi kaynağa Dönüştür** Seçili rengi bir renk kaynağına dönüştürün. Renk kaynakları sekmesine tıkladığınızda renk kaynakları kullanılabilir.                                        |
 |                                ![](../designers/media/b1-15.png "B1_15")                                |                                                                                 **Onaltılık değer** Görüntülenecek rengin onaltılık değerini görüntüleyin.                                                                                 |

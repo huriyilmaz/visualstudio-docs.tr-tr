@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e19ce48a8716952f53a1caa6a44fd5ba3d817f4e
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461352"
 ---
 # <a name="idiasymbolgetsrclineontypedefn"></a>IDiaSymbol::getSrcLineOnTypeDefn
@@ -30,7 +30,7 @@ HRESULT getSrcLineOnTypeDefn(
 #### <a name="parameters"></a>Parametreler
  `ppResult`
 
-dışı `IDiaLineNumber`Kullanıcı tanımlı olan kaynak dosyayı ve satır numarasını içeren bir nesne.
+dışı `IDiaLineNumber` Kullanıcı tanımlı olan kaynak dosyayı ve satır numarasını içeren bir nesne.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.

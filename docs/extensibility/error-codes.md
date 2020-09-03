@@ -1,5 +1,5 @@
 ---
-title: Hata Kodları | Microsoft Dokümanlar
+title: Hata kodları | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,58 +13,58 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 34072f6ddbd632f83dd308c6cb63427e02bb110b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711835"
 ---
 # <a name="error-codes"></a>Hata kodları
-Kaynak Denetimi Eklentisi API işlevi bir hata döndürdüğünde, aşağıdaki hata kodlarından biri olması beklenir. Tüm hatalar negatif, uyarılar veya bilgilendirme hata kodları pozitif ve başarı 0'dır.
+Bir kaynak denetimi eklentisi API işlevi bir hata döndürdüğünde, aşağıdaki hata kodlarından biri olması beklenir. Tüm hatalar negatif, uyarılar veya bilgilendirici hata kodları pozitif ve başarılı 0 ' dır.
 
 |Hata Kodu|Değer|Açıklama|
 |----------------|-----------|-----------------|
-|`SCC_I_SHARESUBPROJOK`|7|Eklenti, kaynak denetiminden dosya eklemeyi iki adımda destekler. Daha fazla bilgi için Bkz. [SccSetOption.](../extensibility/sccsetoption-function.md)|
-|`SCC_I_FILEDIFFERS`|6|Yerel dosya kaynak denetim veritabanındaki dosyadan farklıdır (örneğin, [SccDiff](../extensibility/sccdiff-function.md) bu değeri döndürebilir).|
-|`SCC_I_RELOADFILE`|5|Yerel dosya kaynak denetimi işlemi sırasında değiştirildi; IDE mümkünse dosyayı yeniden yüklemelidir.|
+|`SCC_I_SHARESUBPROJOK`|7|Eklenti, iki adımda kaynak denetiminden dosya eklemeyi destekler. Daha fazla bilgi için bkz. [SccSetOption](../extensibility/sccsetoption-function.md).|
+|`SCC_I_FILEDIFFERS`|6|Yerel dosya, kaynak denetim veritabanındaki dosyadan farklı (örneğin, [SccDiff](../extensibility/sccdiff-function.md) bu değeri döndürebilir).|
+|`SCC_I_RELOADFILE`|5|Kaynak denetim işlemi sırasında yerel dosya değiştirildi; Mümkünse, IDE dosyayı yeniden yüklemeli.|
 |`SCC_I_FILENOTAFFECTED`|4|Dosya etkilenmez.|
-|`SCC_I_PROJECTCREATED`|3|Proje kaynak denetim işlemi sırasında oluşturuldu (örneğin, bayrak belirtildiğinde [SccOpenProject'e](../extensibility/sccopenproject-function.md) yapılan bir çağrı sırasında). `SCC_OP_CREATEIFNEW`|
-|`SCC_I_OPERATIONCANCELED`|2|Operasyon iptal edildi.|
-|`SCC_I_ADV_SUPPORT`|1|Eklenti, belirtilen komut için gelişmiş seçenekleri destekler. Daha fazla bilgi için Bkz. [SccGetCommandOptions.](../extensibility/sccgetcommandoptions-function.md)|
+|`SCC_I_PROJECTCREATED`|3|Proje, kaynak denetim işlemi sırasında oluşturulmuştur (örneğin, flag belirtildiğinde bir [SccOpenProject](../extensibility/sccopenproject-function.md) çağrısı sırasında `SCC_OP_CREATEIFNEW` ).|
+|`SCC_I_OPERATIONCANCELED`|2|İşlem iptal edildi.|
+|`SCC_I_ADV_SUPPORT`|1|Eklenti, belirtilen komut için gelişmiş seçenekleri destekler. Daha fazla bilgi için bkz. [Sccgetcommandoseçenekler](../extensibility/sccgetcommandoptions-function.md).|
 |`SCC_OK`|0|Başarılı.|
 |`SCC_E_INITIALIZEFAILED`|-1|Hata: başlatma başarısız oldu.|
 |`SCC_E_UNKNOWNPROJECT`|-2|Hata: proje bilinmiyor.|
 |`SCC_E_COULDNOTCREATEPROJECT`|-3|Hata: proje oluşturulamadı.|
-|`SCC_E_NOTCHECKEDOUT`|-4|Hata: dosya kullanıma alınmadı.|
+|`SCC_E_NOTCHECKEDOUT`|-4|Hata: dosya kullanıma alınmamış.|
 |`SCC_E_ALREADYCHECKEDOUT`|-5|Hata: dosya zaten kullanıma alındı.|
 |`SCC_E_FILEISLOCKED`|-6|Hata: dosya kilitli.|
-|`SCC_E_FILEOUTEXCLUSIVE`|-7|Hata: dosya yalnızca kullanıma alındı.|
-|`SCC_E_ACCESSFAILURE`|-8|Kaynak denetim sistemine erişmede büyük olasılıkla ağ veya çekişme sorunları nedeniyle bir sorun vardı. Yeniden deneme önerilir.|
-|`SCC_E_CHECKINCONFLICT`|-9|Hata: Iade sırasında bir çakışma oluştu.|
+|`SCC_E_FILEOUTEXCLUSIVE`|-7|Hata: dosya özel olarak kullanıma alındı.|
+|`SCC_E_ACCESSFAILURE`|-8|Büyük olasılıkla ağ veya çekişme sorunlarından dolayı kaynak denetim sistemine erişirken bir sorun oluştu. Yeniden deneme önerilir.|
+|`SCC_E_CHECKINCONFLICT`|-9|Hata: iade sırasında bir çakışma oluştu.|
 |`SCC_E_FILEALREADYEXISTS`|-10|Hata: dosya zaten var.|
 |`SCC_E_FILENOTCONTROLLED`|-11|Hata: dosya kaynak denetimi altında değil.|
 |`SCC_E_FILEISCHECKEDOUT`|-12|Hata: dosya kullanıma alındı.|
-|`SCC_E_NOSPECIFIEDVERSION`|-13|Hata: belirtilen bir sürüm yok.|
+|`SCC_E_NOSPECIFIEDVERSION`|-13|Hata: belirtilen sürüm yok.|
 |`SCC_E_OPNOTSUPPORTED`|-14|Hata: işlem desteklenmiyor.|
-|`SCC_E_NONSPECIFICERROR`|-15|Nonspecific hata.|
+|`SCC_E_NONSPECIFICERROR`|-15|Özel olmayan hata.|
 |`SCC_E_OPNOTPERFORMED`|-16|Hata, işlem gerçekleştirilmedi.|
-|`SCC_E_TYPENOTSUPPORTED`|-17|Hata: dosyanın türü, örneğin, ikili, kaynak kodu denetim sistemi tarafından desteklenmez.|
-|`SCC_E_VERIFYMERGE`|-18|Dosya otomatik olarak birleştirilmiştir, ancak kullanıcı doğrulaması beklemede olduğu için denetlenmemiştir.|
-|`SCC_E_FIXMERGE`|-19|Dosya otomatik olarak birleştirilmiştir, ancak el ile çözülmesi gereken bir birleştirme çakışması nedeniyle iade edilmemiştir.|
-|`SCC_E_SHELLFAILURE`|-20|Kabuk arızası nedeniyle hata.|
-|`SCC_E_INVALIDUSER`|-21|Hata: kullanıcı geçersizdir.|
+|`SCC_E_TYPENOTSUPPORTED`|-17|Hata: dosyanın türü, örneğin binary, kaynak kodu denetim sistemi tarafından desteklenmiyor.|
+|`SCC_E_VERIFYMERGE`|-18|Dosya otomatik olarak birleştirildi ancak kullanıcı doğrulaması beklemede olduğundan denetlenmedi.|
+|`SCC_E_FIXMERGE`|-19|Dosya otomatik olarak birleştirildi, ancak el ile çözümlenmesi gereken bir birleştirme çakışması nedeniyle iade edilmedi.|
+|`SCC_E_SHELLFAILURE`|-20|Bir kabuk hatası nedeniyle hata oluştu.|
+|`SCC_E_INVALIDUSER`|-21|Hata: Kullanıcı geçersiz.|
 |`SCC_E_PROJECTALREADYOPEN`|-22|Hata: proje zaten açık.|
 |`SCC_E_PROJSYNTAXERR`|-23|Proje sözdizimi hatası.|
-|`SCC_E_INVALIDFILEPATH`|-24|Hata: dosya yolu geçersizdir.|
+|`SCC_E_INVALIDFILEPATH`|-24|Hata: dosya yolu geçersiz.|
 |`SCC_E_PROJNOTOPEN`|-25|Hata: proje açık değil.|
-|`SCC_E_NOTAUTHORIZED`|-26|Hata: Kullanıcının bu işlemi gerçekleştirme yetkisi yoktur.|
-|`SCC_E_FILESYNTAXERR`|-27|Sözdizimi hatası dosyala.|
+|`SCC_E_NOTAUTHORIZED`|-26|Hata: kullanıcının bu işlemi gerçekleştirme yetkisi yok.|
+|`SCC_E_FILESYNTAXERR`|-27|Dosya sözdizimi hatası.|
 |`SCC_E_FILENOTEXIST`|-28|Hata, yerel dosya yok.|
-|`SCC_E_CONNECTIONFAILURE`|-29|Hata: bir bağlantı hatası oluştu.|
+|`SCC_E_CONNECTIONFAILURE`|-29|Hata: bağlantı hatası oluştu.|
 |`SCC_E_UNKNOWNERROR`|-30|Bilinmeyen hata.|
-|`SCC_E_BACKGROUNDGETINPROGRESS`|-31|Arka plan alma işlemi şu anda devam ediyor.|
+|`SCC_E_BACKGROUNDGETINPROGRESS`|-31|Arka plan al işlemi şu anda devam ediyor.|
 
-## <a name="macros-provided-for-quick-checking"></a>Hızlı kontrol için sağlanan makrolar
+## <a name="macros-provided-for-quick-checking"></a>Hızlı denetim için girilen makrolar
 
 ```cpp
 IS_SCC_ERROR(rtn) (((rtn) < 0) ? TRUE : FALSE)
@@ -73,11 +73,11 @@ IS_SCC_WARNING(rtn) (((rtn) > 0) ? TRUE : FALSE)
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- Tüm Kaynak Denetimi Eklentisi API işlevleri [(SccAdd](../extensibility/sccadd-function.md), [SccCheckin](../extensibility/scccheckin-function.md)ve [SccDiff](../extensibility/sccdiff-function.md)hariç) bağımsız değişkenler çalışma klasöründe yoksa geçirilen yerel dosyalar başarılı olması beklenir. Örneğin, IDE çalışma klasöründe bulunmayan ancak kaynak denetim sisteminde bulunan bir dosyada [SccCheckout](../extensibility/scccheckout-function.md) veya [SccUncheckout'a](../extensibility/sccuncheckout-function.md) çağrı verebilir. Bu çağrı başarılı olur. Yalnızca çalışma klasöründe veya kaynak denetim sisteminde dosya olmadığında, başarısız olması beklenen işlevdir.
+ Bağımsız değişken olarak geçirilen yerel dosyalar çalışma klasöründe yoksa, tüm kaynak denetimi eklentisi API işlevlerinin ( [SccAdd](../extensibility/sccadd-function.md), [SccCheckin](../extensibility/scccheckin-function.md)ve [SccDiff](../extensibility/sccdiff-function.md)hariç) başarılı olması beklenir. Örneğin, IDE, çalışma klasöründe olmayan ancak kaynak denetim sisteminde bulunan bir dosya üzerinde [SccCheckout](../extensibility/scccheckout-function.md) veya [SccUncheckout](../extensibility/sccuncheckout-function.md) çağrısı verebilir. Bu çağrı başarılı olur. Yalnızca çalışma klasöründe veya kaynak denetimi sisteminde bir dosya olmadığında hata olması beklenen işlevdir.
 
- Çalışma klasöründeki `SccAdd` `SccCheckin`dosya yoksa, `SCC_E_FILENOTEXIST` özellikle döndürme gibi belirli işlevler ve bu işlevler olmalıdır. İşlevler kaynak denetim sisteminde geçerli bir dosya adı üzerinde çalışıyorsa, çalışma dosyası yoksa diğer işlevlerin başarılı olması beklenir.
+ Ve gibi bazı işlevler, `SccAdd` `SccCheckin` `SCC_E_FILENOTEXIST` çalışma klasöründeki dosya mevcut olmadığında özel olarak döndürmelidir. Çalışma dosyası mevcut olmadığında, işlevler kaynak denetimi sisteminde geçerli bir dosya adı üzerinde çalışıyorsa, diğer işlevlerin başarılı olması beklenir.
 
- Kaynak denetimi eklentisi, bazı işlem sırasında dosyayı salt okunur olarak işaretlemiş olsa bile, çalışma klasöründeki bir dosyadaki ayrıcalıklarla ilgili hiçbir varsayımda bulunmamalıdır. Çalışma klasöründeki bir dosya, eklentinin denetimi dışında taşınabilir, silinebilir ve değiştirilebilir.
+ Eklenti, bir işlem sırasında dosyayı salt okunurdur olarak işaretlemiş olsa bile, kaynak denetimi eklentisinin çalışma klasöründeki bir dosyadaki ayrıcalıklarla ilgili varsayımsız olmaması gerekir. Çalışma klasöründeki bir dosya, eklenti denetiminin dışında taşınabilir, silinebilir ve değiştirilebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak kontrol eklentileri](../extensibility/source-control-plug-ins.md)
+- [Kaynak denetimi eklentileri](../extensibility/source-control-plug-ins.md)
