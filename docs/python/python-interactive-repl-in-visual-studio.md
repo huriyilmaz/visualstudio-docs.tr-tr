@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 9608f273683865be767a44dd8f1d66106b97b7e0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533555"
 ---
 # <a name="work-with-the-python-interactive-window"></a>Python etkileşimli penceresiyle çalışma
@@ -25,9 +25,9 @@ Visual Studio, Python ortamlarınızın her biri için etkileşimli bir okuma-de
 
 Visual Studio 'nun aralarından seçim yapabileceğiniz çeşitli Python REPL modları vardır:
 
-| REPL | Açıklama | Düzenleniyor | Hata Ayıklama | Görüntüler |
+| REPL | Description | Düzenleniyor | Hata Ayıklama | Görüntüler |
 | --- | --- | --- | --- | --- |
-| Standart | Varsayılan REPL, Python 'a doğrudan konuşuyor | Standart Düzen (çok satırlı, vb.). | Evet, ile`$attach` | No |
+| Standart | Varsayılan REPL, Python 'a doğrudan konuşuyor | Standart Düzen (çok satırlı, vb.). | Evet, ile `$attach` | No |
 | Hata ayıklama | Varsayılan REPL, hata ayıklamanın Python işlemini | Standart Düzen | Yalnızca hata ayıklama | No |
 | IPython | REPL, IPython arka ucu ile konuşuyor | IPython komutları, Pylab kolaylığı | No | Evet, REPL içinde satır içi |
 | IPython w/o Pylab | REPL, IPython arka ucu ile konuşuyor | Standart IPython | No | Evet, pencereyi ayır |
@@ -73,7 +73,7 @@ Son olarak, dosyadaki kodu seçebilir ve aşağıda açıklanan [ **etkileşimli
 
 <a name="meta-commands"></a>**Etkileşimli** pencere ayrıca çeşitli meta komutları destekler. Tüm meta komutları ile başlar `$` ve `$help` meta komutlarının bir listesini almak ve `$help <command>` belirli bir komutun kullanım ayrıntılarını almak için yazabilirsiniz.
 
-| Meta-komut | Açıklama |
+| Meta-komut | Description |
 | --- | --- |
 | `$$` | Oturumunuz genelinde kod yorumu için yararlı olan bir açıklama ekler. |
 | `$attach` | Hata ayıklamayı etkinleştirmek için Visual Studio hata ayıklayıcısını REPL pencere sürecine iliştirir. |

@@ -1,5 +1,5 @@
 ---
-title: Belge Konumu | Microsoft Dokümanlar
+title: Belge konumu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,24 +11,24 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 19b88ead19e4578adb7c151a681583120cf2ec17
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738909"
 ---
 # <a name="document-position"></a>Belge konumu
-Hata [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ayıklamada, *belge konumu:*
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Hata ayıklama sırasında bir *belge konumu*:
 
-- IDE tarafından bilinen bir kaynak dosyadaki pozisyonun soyutlamasını sağlar. Günümüzde çoğu dil için belge konumu kaynak dosyadaki bir konum olarak düşünülebilir.
+- IDE olarak bilinen bir kaynak dosyasındaki konumun bir soyutlamasını sağlar. Günümüzde çoğu dil için bir belge konumu kaynak dosyada konum olarak düşünülebilir.
 
-- Kaynak belgedeki bir konumu hata ayıklama altyapısına açıklar.
+- Bir kaynak belgede hata ayıklama altyapısına bir konum tanımlar.
 
-- [IDebugDocumentPosition2](../../extensibility/debugger/reference/idebugdocumentposition2.md) arabirimi tarafından uygulanır.
+- , Bir [IDebugDocumentPosition2](../../extensibility/debugger/reference/idebugdocumentposition2.md) arabirimi tarafından uygulanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kod bağlamı](../../extensibility/debugger/code-context.md)
 - [Belge bağlamı](../../extensibility/debugger/document-context.md)
-- [Sembol sağlayıcı](../../extensibility/debugger/symbol-provider.md)
-- [Sembol sağlayıcı Arayüzleri](../../extensibility/debugger/reference/symbol-provider-interfaces.md)
-- [Hata ayıklama bağlamları](../../extensibility/debugger/debugger-contexts.md)
+- [Sembol sağlayıcısı](../../extensibility/debugger/symbol-provider.md)
+- [Sembol sağlayıcısı arabirimleri](../../extensibility/debugger/reference/symbol-provider-interfaces.md)
+- [Hata ayıklayıcı bağlamları](../../extensibility/debugger/debugger-contexts.md)

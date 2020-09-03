@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: eff09fb8f4423560c4681c94507d909f5864c69e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545242"
 ---
 # <a name="ca2233-operations-should-not-overflow"></a>CA2233: İşleçler taşmamalıdır
@@ -46,8 +46,8 @@ ms.locfileid: "85545242"
 
 ## <a name="example-of-a-violation"></a>Ihlalin örneği
 
-### <a name="description"></a>Açıklama
- Aşağıdaki örnekteki bir yöntem, bu kuralı ihlal eden bir tamsayıyı yönetir. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]Bu, tetiklenmesi için tamsayı taşmasını **Kaldır** seçeneğinin devre dışı olmasını gerektirir.
+### <a name="description"></a>Description
+ Aşağıdaki örnekteki bir yöntem, bu kuralı ihlal eden bir tamsayıyı yönetir. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Bu, tetiklenmesi için tamsayı taşmasını **Kaldır** seçeneğinin devre dışı olmasını gerektirir.
 
 ### <a name="code"></a>Kod
  [!code-csharp[FxCop.Usage.OperationOverflow#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OperationOverflow/cs/FxCop.Usage.OperationOverflow.cs#1)]
@@ -85,7 +85,7 @@ End Sub
 
 ## <a name="fix-with-input-parameter-validation"></a>Giriş parametresi doğrulaması ile onarma
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki örnek, girişin değerini doğrulayarak önceki ihlalin düzeltir.
 
 ### <a name="code"></a>Kod
@@ -94,7 +94,7 @@ End Sub
 
 ## <a name="fix-with-a-checked-block"></a>Denetlenen bir blok ile onarma
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki örnek, işlemi işaretli bir blokta sarmalayarak önceki ihlalin düzeltir. İşlem bir taşmaya neden oluyorsa, bir <xref:System.OverflowException?displayProperty=fullName> oluşturulur.
 
  İşaretli blokların ' de desteklenmediğini unutmayın [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .

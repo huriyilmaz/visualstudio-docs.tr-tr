@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8aa29fca9905c9f1ed056949eec64ad967323462
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544852"
 ---
 # <a name="how-to-expose-code-to-vba-in-a-visual-basic-project"></a>Nasıl yapılır: Visual Basic projesindeki kodu VBA 'de kullanıma sunma
@@ -36,7 +36,7 @@ ms.locfileid: "85544852"
 
 - [Konak öğesi sınıfında olmayan kodu açığa çıkarın](#NonHostItem)
 
-## <a name="expose-code-in-a-host-item-class"></a><a name="HostItemCode"></a>Kodu bir konak öğesi sınıfında kullanıma sunma
+## <a name="expose-code-in-a-host-item-class"></a><a name="HostItemCode"></a> Kodu bir konak öğesi sınıfında kullanıma sunma
  VBA kodunu bir konak öğesi sınıfında Visual Basic kodu çağırmak üzere etkinleştirmek için, konak öğesinin **EnableVbaCallers** özelliğini **true**olarak ayarlayın.
 
  Bir konak öğesi sınıfının bir yöntemini kullanıma sunma ve sonra bunu VBA 'dan çağırma hakkında yönergeler için bkz. [Izlenecek yol: Visual Basic PROJESINDEKI VBA 'dan kod çağırma](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md). Konak öğeleri hakkında daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
@@ -71,7 +71,7 @@ ms.locfileid: "85544852"
 
 6. Projeyi derleyin.
 
-## <a name="expose-code-that-is-not-in-a-host-item-class"></a><a name="NonHostItem"></a>Konak öğesi sınıfında olmayan kodu açığa çıkarın
+## <a name="expose-code-that-is-not-in-a-host-item-class"></a><a name="NonHostItem"></a> Konak öğesi sınıfında olmayan kodu açığa çıkarın
  VBA kodunu bir konak öğesi sınıfında olmayan Visual Basic kodu çağırmak üzere etkinleştirmek için kodu VBA 'da görünür olacak şekilde değiştirin.
 
 ### <a name="to-expose-code-that-is-not-in-a-host-item-class-to-vba"></a>Konak öğesi sınıfında olmayan kodu VBA 'ya göstermek için

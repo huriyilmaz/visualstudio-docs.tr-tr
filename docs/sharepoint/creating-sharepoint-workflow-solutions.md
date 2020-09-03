@@ -21,14 +21,15 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 2c787009577735213437140513ec095f81c3f43b
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015283"
 ---
 # <a name="create-sharepoint-workflow-solutions"></a>SharePoint iş akışı çözümleri oluşturma
 
-[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]bir SharePoint Web sitesindeki belgelerin yaşam döngüsünü ve liste öğelerini yöneten özel iş akışları oluşturmanıza yardımcı olacak araçlar sağlar. Belirtilen öğeler bir tasarımcı, etkinlik denetimleri kümesi ve gerekli derleme başvuruları içerir. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Ayrıca, iş akışlarını oluşturmaya ve yapılandırmaya yardımcı olması için **SharePoint Özelleştirme Sihirbazı**'nı da içerir.
+[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bir SharePoint Web sitesindeki belgelerin yaşam döngüsünü ve liste öğelerini yöneten özel iş akışları oluşturmanıza yardımcı olacak araçlar sağlar. Belirtilen öğeler bir tasarımcı, etkinlik denetimleri kümesi ve gerekli derleme başvuruları içerir. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Ayrıca, iş akışlarını oluşturmaya ve yapılandırmaya yardımcı olması için **SharePoint Özelleştirme Sihirbazı**'nı da içerir.
 
 SharePoint hakkında daha fazla bilgi için bkz. [Microsoft SharePoint ürünleri ve teknolojileri](/sharepoint/dev/).
 
@@ -121,12 +122,12 @@ SharePoint hakkında daha fazla bilgi için bkz. [Microsoft SharePoint ürünler
  Ayrıca, SharePoint kitaplığındaki veya listesindeki bir öğenin özelliklerini kullanarak kullanıcılardan bilgi toplayabilirsiniz. Ana kod dosyası (Workflow1.cs veya Workflow1. vb), adlı Microsoft. SharePoint. Workflow. SPWorkflowActivationProperties. WorkflowProperties sınıfının bir örneğini bildirir `workflowProperties` . `workflowProperties`Kod içindeki kitaplığın veya listenin özelliklerine erişmek için nesnesini kullanın. Bir örnek için bkz. [Izlenecek yol: SharePoint iş akışı çözümü oluşturma ve hata ayıklama](../sharepoint/walkthrough-creating-and-debugging-a-sharepoint-workflow-solution.md).
 
 ## <a name="debug-a-sharepoint-workflow-template"></a>SharePoint iş akışı şablonunda hata ayıklama
- SharePoint iş akışı projesinde hata ayıkladığınızda, diğer [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Web tabanlı projelerde hata ayıklaması yapabilirsiniz. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Hata ayıklayıcıyı başlattığınızda, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **SharePoint Özelleştirme Sihirbazı** 'nda belirttiğiniz ayarları kullanarak uygun SharePoint Web sitesini açın ve iş akışı şablonunu uygun kitaplık veya listeyle otomatik olarak ilişkilendirin. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Ayrıca, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] hata ayıklayıcıyı [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] *w3wp.exe*adlı işleme iliştirir.
+ SharePoint iş akışı projesinde hata ayıkladığınızda, diğer [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Web tabanlı projelerde hata ayıklaması yapabilirsiniz. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Hata ayıklayıcıyı başlattığınızda, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **SharePoint Özelleştirme Sihirbazı** 'nda belirttiğiniz ayarları kullanarak uygun SharePoint Web sitesini açın ve iş akışı şablonunu uygun kitaplık veya listeyle otomatik olarak ilişkilendirin. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Ayrıca, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] hata ayıklayıcıyı [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] *w3wp.exe*adlı işleme iliştirir.
 
  İş akışını test etmek için el ile başlatmanız gerekir. Daha fazla bilgi için [SharePoint Çözümlerinde hata ayıklama](../sharepoint/debugging-sharepoint-solutions.md)konusunun "hata ayıklama iş akışları" bölümüne bakın. Web uygulaması hata ayıklaması hakkında daha fazla bilgi için [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bkz. [hata ayıklama Web uygulamaları ve betiği](../debugger/how-to-enable-debugging-for-aspnet-applications.md).
 
 ## <a name="deploy-a-sharepoint-workflow-template"></a>SharePoint iş akışı şablonu dağıtma
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint iş akışı projeleri, tıpkı diğer [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint projeleri gibi dağıtılır. Daha fazla bilgi için bkz. [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md).
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint iş akışı projeleri, tıpkı diğer [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint projeleri gibi dağıtılır. Daha fazla bilgi için bkz. [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md).
 
 ## <a name="import-globally-reusable-workflows"></a>Genel yeniden kullanılabilir iş akışlarını içeri aktar
  SharePoint Designer, siteye özgü yeniden kullanılabilir iş akışları oluşturmanın yanı sıra, herhangi bir SharePoint sitesi tarafından kullanılabilecek iş akışları olan *küresel olarak yeniden kullanılabilir iş akışları*oluşturmanıza olanak sağlar. ' Deki yeniden kullanılabilir yeniden kullanılabilir Iş akışı projesi, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] genel olarak kullanılabilir iş akışlarını içeri aktarmaz Ancak, genel olarak yeniden kullanılabilir bir iş akışını yeniden kullanılabilir bir iş akışına dönüştürmek ya da iş akışını Dönüştürülmeyen bir bildirim temelli iş akışı olarak içeri aktarmak için SharePoint Designer 'ı kullanabilirsiniz. Daha fazla bilgi için bkz. [mevcut bir SharePoint sitesinden öğeleri Içeri aktarma](../sharepoint/importing-items-from-an-existing-sharepoint-site.md).

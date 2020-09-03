@@ -1,5 +1,5 @@
 ---
-title: AD_PROCESS_ID | Microsoft Dokümanlar
+title: AD_PROCESS_ID | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 96a834725f1cf5b14f12a4c1554e67477768ef23
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738172"
 ---
 # <a name="ad_process_id"></a>AD_PROCESS_ID
-Sistem kimliği veya GUID olabilecek işlem kimliğini belirtir.
+Bir sistem KIMLIĞI ya da bir GUID olabilecek işlem KIMLIĞINI belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _AD_PROCESS_ID {
@@ -49,18 +49,18 @@ public struct AD_PROCESS_ID {
 
 ## <a name="members"></a>Üyeler
 `ProcessIdType`\
-[AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md) numaralandırmadan, `ProcessId` birliğin nasıl yorumlanacağı (veya yönetilen kod için yapının hangi üyesinin erişilen) belirtilmesine neden olan değer.
+[AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md) numaralandırmasından, birleşimin nasıl yorumlanacağı `ProcessId` (veya yönetilen kod için, hangi yapının erişim üyesinin) belirtileceği belirten bir değer.
 
 `dwProcessId`\
-Sistemden bir değer olarak işlem kimliği.
+Sistemden bir değer olarak işlem KIMLIĞI.
 
 `guidProcessId`\
-GUID olarak işlem kimliği.
+GUID olarak işlem KIMLIĞI.
 
-dwUnused Dolgu.
+Dwkullanılmamış doldurma.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı aşağıdaki yöntemlere aktarılır:
+Bu yapı aşağıdaki yöntemlere geçirilir:
 
 - [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)
 
@@ -77,11 +77,11 @@ Ve aşağıdaki yöntemlerden döndürülür:
 - [GetHostId](../../../extensibility/debugger/reference/idebugprogramhost2-gethostid.md)
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

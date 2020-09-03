@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8ff5eb9baf0fa1eecdb1921d6281fd0a9400d7c2
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85462800"
 ---
 # <a name="idiasymbolget_noreturn"></a>IDiaSymbol::get_noReturn
@@ -33,7 +33,7 @@ HRESULT get_noReturn(
 #### <a name="parameters"></a>Parametreler
  pFlag
 
-dışı `TRUE`İşlevin özniteliği ile hiçbir şekilde döndürülmediği olarak bildirilirse, `noreturn` Aksi takdirde döndürür `FALSE` .
+dışı `TRUE` İşlevin özniteliği ile hiçbir şekilde döndürülmediği olarak bildirilirse, `noreturn` Aksi takdirde döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
@@ -43,7 +43,7 @@ dışı `TRUE`İşlevin özniteliği ile hiçbir şekilde döndürülmediği ola
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Açıklama|
+|Gereksinim|Description|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|

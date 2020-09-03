@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b9c9ab66d2885137e9c470f577996ab861b554d5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671904"
 ---
 # <a name="open-solution-command"></a>Çözümü Aç Komutu
@@ -26,16 +26,16 @@ ms.locfileid: "72671904"
 
 Mevcut bir çözümü açar ve diğer açık çözümleri kapatıyor.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 File.OpenSolution filename
 ```
 
-## <a name="arguments"></a>Arguments
- `Filename` gerekiyor. Açılacak çözümün tam yolu ve dosya adı.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `Filename` Gerekli. Açılacak çözümün tam yolu ve dosya adı.
 
- @No__t_0 bağımsız değişkeninin sözdizimi, boşluk içeren yolların tırnak işaretleri kullanmasını gerektirir.
+ Bağımsız değişkeninin sözdizimi, `filename` boşluk içeren yolların tırnak işaretleri kullanmasını gerektirir.
 
 ## <a name="remarks"></a>Açıklamalar
  Otomatik tamamlama, yazarken doğru yolu ve dosya adını bulmaya çalışır.
