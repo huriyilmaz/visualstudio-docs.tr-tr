@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 45db262b6bf7843a3893c5d60f0b6eaea5fcb70b
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71254569"
 ---
 # <a name="associate-a-form-region-with-an-outlook-message-class"></a>Form bölgesini Outlook ileti sınıfıyla ilişkilendirme
@@ -45,7 +45,7 @@ ms.locfileid: "71254569"
  Özel ileti sınıflarının adlarını da belirtebilirsiniz. Özel ileti sınıfları, Outlook 'ta tanımladığınız özel formları tanımlar.
 
 > [!NOTE]
-> Değiştirme ve değiştirme form bölgelerinde yeni bir özel ileti sınıfı adı belirtebilirsiniz. Mevcut bir özel formun ileti sınıfı adını kullanmanız gerekmez. Özel ileti sınıfının adı benzersiz olmalıdır. Adın benzersiz olduğundan emin olmanın bir yolu, aşağıdakine benzer bir adlandırma kuralı kullanmaktır: \<*Standardmessageclassname*>. *Şirket >* . \< Messageclassname > (örneğin: `IPM.Note.Contoso.MyMessageClass`). \<
+> Değiştirme ve değiştirme form bölgelerinde yeni bir özel ileti sınıfı adı belirtebilirsiniz. Mevcut bir özel formun ileti sınıfı adını kullanmanız gerekmez. Özel ileti sınıfının adı benzersiz olmalıdır. Adın benzersiz olduğundan emin olmanın bir yolu aşağıdakine benzer bir adlandırma kuralı kullanmaktır: \<*StandardMessageClassName*> . \<*Company*> .\<*MessageClassName*> (örneğin: `IPM.Note.Contoso.MyMessageClass` ).
 
 ## <a name="associate-a-form-region-with-an-outlook-message-class"></a>Form bölgesini Outlook ileti sınıfıyla ilişkilendirme
  Form bölgesini ileti sınıfıyla ilişkilendirmenin iki yolu vardır:
@@ -57,19 +57,19 @@ ms.locfileid: "71254569"
 ### <a name="use-the-new-outlook-form-region-wizard"></a>Yeni Outlook form bölgesi Sihirbazı 'nı kullanma
  **Yeni Outlook form bölgesi** Sihirbazı ' nın son sayfasında, standart ileti sınıfları ' nı seçebilir ve form bölgesiyle ilişkilendirmek istediğiniz özel ileti sınıflarının adlarını yazabilirsiniz.
 
- Form bölgesi formun tamamını veya formun varsayılan sayfasını değiştirecek şekilde tasarlanmışsa standart ileti sınıfları kullanılamaz. Yalnızca bir forma yeni bir sayfa ekleyen veya formun alt kısmına eklenen formlar için standart ileti sınıfı adlarını belirtebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Outlook eklenti projesine](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)form bölgesi ekleme.
+ Form bölgesi formun tamamını veya formun varsayılan sayfasını değiştirecek şekilde tasarlanmışsa standart ileti sınıfları kullanılamaz. Yalnızca bir forma yeni bir sayfa ekleyen veya formun alt kısmına eklenen formlar için standart ileti sınıfı adlarını belirtebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Outlook eklenti projesine form bölgesi ekleme](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md).
 
  Bir veya daha fazla özel ileti sınıfı eklemek için, **Bu form bölgesini hangi özel ileti sınıflarının görüntüleyeceği?** kutusunu yazın.
 
  Yazdığınız adlar aşağıdaki kılavuzlarla uyumlu olmalıdır:
 
-- Tam olarak nitelenmiş ileti sınıfı adını kullanın (örneğin: IPM. Note. contoso ").
+- Tam olarak nitelenmiş ileti sınıfı adını kullanın (örneğin: "ıPM. Note. contoso ").
 
 - Birden çok ileti sınıfı adını ayırmak için noktalı virgül kullanın.
 
 - "IPM" gibi standart Outlook ileti sınıflarını eklemeyin. Note "veya" ıPM. İletişim kurun. Yalnızca "ıPM" gibi özel ileti sınıflarını dahil edin. Note. contoso ".
 
-- Temel ileti sınıfını kendi belirtmeyin (örneğin: "IPM").
+- Temel ileti sınıfını kendi belirtmeyin (örneğin: "ıPM").
 
 - Her ileti sınıfı adı için 256 karakteri aşmayın.
 
@@ -83,20 +83,20 @@ ms.locfileid: "71254569"
 ### <a name="apply-class-attributes"></a>Sınıf özniteliklerini Uygula
  **Yeni Outlook form bölgesi** Sihirbazı 'nı tamamladıktan sonra bir form bölgesini Outlook ileti sınıfıyla ilişkilendirebilirsiniz. Bunu yapmak için, öznitelikleri form bölgesi fabrikası sınıfına uygulayın.
 
- Aşağıdaki örnek, adlı <xref:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute> `myFormRegion`bir form bölgesi fabrikası sınıfına uygulanmış olan iki özniteliği gösterir. İlk öznitelik, form bölgesini posta iletisi formu için standart bir ileti sınıfıyla ilişkilendirir. İkinci öznitelik, form bölgesini adlı `IPM.Task.Contoso`özel bir ileti sınıfıyla ilişkilendirir.
+ Aşağıdaki örnek, <xref:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute> adlı bir form bölgesi fabrikası sınıfına uygulanmış olan iki özniteliği gösterir `myFormRegion` . İlk öznitelik, form bölgesini posta iletisi formu için standart bir ileti sınıfıyla ilişkilendirir. İkinci öznitelik, form bölgesini adlı özel bir ileti sınıfıyla ilişkilendirir `IPM.Task.Contoso` .
 
  [!code-vb[Trin_Outlook_FR_Attributes#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Attributes/FormRegion1.vb#1)]
  [!code-csharp[Trin_Outlook_FR_Attributes#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Attributes/FormRegion1.cs#1)]
 
  Öznitelikler aşağıdaki kılavuzlarla uyumlu olmalıdır:
 
-- Özel ileti sınıfları için tam olarak nitelenmiş ileti sınıfı adını kullanın (örneğin: IPM. Note. contoso ").
+- Özel ileti sınıfları için tam olarak nitelenmiş ileti sınıfı adını kullanın (örneğin: "ıPM. Note. contoso ").
 
-- Temel ileti sınıfını kendi belirtmeyin (örneğin: "IPM").
+- Temel ileti sınıfını kendi belirtmeyin (örneğin: "ıPM").
 
 - Her ileti sınıfı adı için 256 karakteri aşmayın.
 
-- Form bölgesi formun tamamını veya formun varsayılan sayfasını değiştirirse standart ileti sınıflarının adlarını eklemeyin. Yalnızca bir forma yeni bir sayfa ekleyen veya formun alt kısmına eklenen formlar için standart ileti sınıfı adlarını belirtebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Outlook eklenti projesine](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)form bölgesi ekleme.
+- Form bölgesi formun tamamını veya formun varsayılan sayfasını değiştirirse standart ileti sınıflarının adlarını eklemeyin. Yalnızca bir forma yeni bir sayfa ekleyen veya formun alt kısmına eklenen formlar için standart ileti sınıfı adlarını belirtebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Outlook eklenti projesine form bölgesi ekleme](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md).
 
   Visual Studio, projeyi oluştururken ileti sınıfı adlarının biçimini doğrular.
 

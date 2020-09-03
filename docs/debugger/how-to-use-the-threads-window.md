@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 33375a8970638765d02a94e6e3e9cd8afc1a0fe7
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85348658"
 ---
 # <a name="walkthrough-debug-a-multithreaded-app-using-the-threads-window-c-visual-basic-c"></a>İzlenecek yol: Iş parçacıkları penceresini kullanarak çok iş parçacıklı bir uygulamada hata ayıklama (C#, Visual Basic, C++)
@@ -168,7 +168,7 @@ Ayrıca, kısayol menüsünden bir satıra sağ tıklayıp **bayrak**, bayrağı
 - İş parçacığı adını değiştirmenize olanak sağlayan **yeniden adlandırma**.
 - Komutları [dondurma ve çözme](#bkmk_freeze) .
 
-## <a name="freeze-and-thaw-thread-execution"></a><a name="bkmk_freeze"></a>İş parçacığı yürütmeyi dondurma ve çözme
+## <a name="freeze-and-thaw-thread-execution"></a><a name="bkmk_freeze"></a> İş parçacığı yürütmeyi dondurma ve çözme
 
 İş parçacıklarının iş gerçekleştirdiği sırayı denetlemek için iş parçacıklarını dondurabilir ve çözme ya da askıya alabilir ve devam ettirebilirsiniz. İş parçacıklarını dondurma ve çözme, Kilitlenmeler ve yarış koşulları gibi eşzamanlılık sorunlarını çözmenize yardımcı olabilir.
 

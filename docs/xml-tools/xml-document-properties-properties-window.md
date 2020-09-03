@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1b21f4435737597136e1ac4a4dd8651decaf4c65
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592431"
 ---
 # <a name="xml-document-properties-properties-window"></a>XML belgesi özellikleri, Özellikler penceresi
@@ -26,19 +26,19 @@ ms.locfileid: "75592431"
 
 Dosya için karakter kodlaması. Bu özelliğin değiştirilmesi, XML bildiriminde kodlama özniteliğini de değiştirir ve tam tersi de geçerlidir. Yeni kodlama dosyayı kaydettiğinizde dosyayı kodlamak için kullanılır.
 
-**Giriş**
+**Girdi**
 
-XSLT stil sayfasıyla ilişkili giriş belgesi. **Başlangıç XSLT** komutları tarafından kullanılır, örneğin, **XML** > , **XSLT 'yi hata ayıklama olmadan başlatır**. Bir belge, gezinme ( **...** ) düğmesi kullanılarak seçilebilir.
+XSLT stil sayfasıyla ilişkili giriş belgesi. **Başlangıç XSLT** komutları tarafından kullanılır, örneğin, **XML**,  >  **hata ayıklama olmadan XSLT Başlat**. Bir belge, gezinme (**...**) düğmesi kullanılarak seçilebilir.
 
 Bu özellik yalnızca düzenleyicide bir XSLT dosyası açıkken görünür.
 
-**Output**
+**Çıktı**
 
 Bir XML belgesi dönüştürülürken oluşturulan dosya.
 
-Bir dosya belirtilmemişse, dosya uzantısını belirleyen `xsl:output` öğesindeki `method` özniteliğe göre varsayılan bir dosya adı oluşturulur. Varsayılan dosya, geçerli kullanıcının geçici dizininde bulunur.
+Bir dosya belirtilmemişse, varsayılan dosya adı öğe üzerindeki özniteliği temel alınarak oluşturulur ve `method` `xsl:output` Bu dosya uzantısını belirler. Varsayılan dosya, geçerli kullanıcının geçici dizininde bulunur.
 
-**Şemaları**
+**Şemalar**
 
 Doğrulama için kullanılacak şemalar. Düğme, kullanılacak şemaları seçmek için kullanılabilecek **xsd şemaları** iletişim kutusunu açar.
 
@@ -46,7 +46,7 @@ Ayrıca, şemaların yolunu da girebilirsiniz. Birden çok şema belirtilirse, h
 
 **Larýnda**
 
-**XSLT hata ayıklamayı Başlat** ve **XSLT 'yi hata ayıklama komutları olmadan Başlat** kullanıldığında BELGEYI dönüştürmek için kullanılan XSLT dosyası kullanılır. Bu alan boşsa, düzenleyici belgenin `xml-stylesheet` işleme yönergesinde belirtilen değeri kullanır veya bir dosya adı ister.
+**XSLT hata ayıklamayı Başlat** ve **XSLT 'yi hata ayıklama komutları olmadan Başlat** kullanıldığında BELGEYI dönüştürmek için kullanılan XSLT dosyası kullanılır. Bu alan boşsa, düzenleyici `xml-stylesheet` belgenin işleme yönergesinde belirtilen değeri kullanır veya bir dosya adı ister.
 
 XSLT dosyası düzenlenirken, bu özellik, **XSLT hata ayıklamayı Başlat** veya **XSLT 'yi hata ayıklama komutu olmadan Başlat** seçiliyken farklı bir stil sayfasının kullanılması gerektiğini belirtmek için kullanılabilir. Örneğin, bir üst stil sayfasına dahil olan bir stil sayfasını düzenlediğinizde bunu yapmak isteyebilirsiniz.
 

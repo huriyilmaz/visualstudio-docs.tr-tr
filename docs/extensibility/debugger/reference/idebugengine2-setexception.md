@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::SetException | Microsoft Dokümanlar
+title: 'IDebugEngine2:: SetException | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7398db3c15c58821e05eff839a1022276401d569
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80730941"
 ---
 # <a name="idebugengine2setexception"></a>IDebugEngine2::SetException
-Hata ayıklama altyapısının (DE) belirli bir özel durumu nasıl işlemesi gerektiğini belirtir.
+Hata ayıklama altyapısının (DE) belirli bir özel durumu nasıl işleyeceğini belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT SetException( 
@@ -41,13 +41,13 @@ int SetException( 
 
 ## <a name="parameters"></a>Parametreler
 `pException`\
-[içinde] Özel durumu ve nasıl hata ayıklama açıklayan [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) bir yapı.
+'ndaki Özel durumu ve nasıl hata ayıklaması yapıldığını açıklayan [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) yapısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir DE ilk şans, ikinci şans, ya da hiç bir özel durum üreten programı durdurmak için talimat olabilir.
+ Bir DE, birinci şans, ikinci şans veya hiç olmadığı için bir özel durum oluşturan programın durdurulması için bir DE talimat verebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

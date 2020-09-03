@@ -26,16 +26,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bab5b86856029615231d908f1e523bb3d42583aa
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662621"
 ---
 # <a name="working-with-classes-and-other-types-class-designer"></a>Sınıflarla ve Diğer Türlerle Çalışma (Sınıf Tasarımcısı)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 'da Sınıf Tasarımcısı oluşturduğunuz ve düzenlediğiniz zaman en iyi şekilde ilgilendiğiniz sınıflar ve türlere daha kolay bir şekilde odaklanın. Visual C# .net, Visual Basic .NET veya C++ Code ile daha görsel bir şekilde çalışmak için sınıf diyagramlarını kullanın.
+Visual Studio 'da Sınıf Tasarımcısı oluşturduğunuz ve düzenlediğiniz zaman en iyi şekilde ilgilendiğiniz sınıflar ve türlere daha kolay bir şekilde odaklanın. Visual C# .NET, Visual Basic .NET veya C++ kodunuzla daha görsel bir şekilde çalışmak için sınıf diyagramlarını kullanın.
 
 ## <a name="in-this-section"></a>Bu Bölümde
  [Sınıf Diyagramları ile Çalışma (Sınıf Tasarımcısı)](../ide/working-with-class-diagrams-class-designer.md)

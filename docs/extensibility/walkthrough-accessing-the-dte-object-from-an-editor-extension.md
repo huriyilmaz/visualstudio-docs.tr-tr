@@ -1,5 +1,5 @@
 ---
-title: DTE Nesnesi'ne bir düzenleyici uzantısından erişin
+title: Bir düzenleyici uzantısından DTE nesnesine erişme
 ms.date: 04/24/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,48 +11,48 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: e37bdb21b7c8132f0dfb166d19e03d36e838245d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80697652"
 ---
-# <a name="walkthrough-access-the-dte-object-from-an-editor-extension"></a>Walkthrough: DTE nesnesini bir düzenleyici uzantısından erişin
+# <a name="walkthrough-access-the-dte-object-from-an-editor-extension"></a>İzlenecek yol: bir düzenleyici uzantısından DTE nesnesine erişme
 
-VSPackages'te, <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> yöntemi DTE nesnesinin türüyle arayarak DTE nesnesini alabilirsiniz. Yönetilen Genişletilebilirlik Çerçevesi (MEF) uzantılarında, <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> yöntemi bir tür .'le <xref:EnvDTE.DTE>içe aktarıp çağırabilirsiniz.
+VSPackages içinde, öğesini DTE nesnesi türüyle çağırarak DTE nesnesini alabilirsiniz <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> . Managed Extensibility Framework (MEF) uzantılarında, öğesini içeri aktarabilir <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> ve sonra <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> bir türüyle çağırabilirsiniz <xref:EnvDTE.DTE> .
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-Bu izlenmeyi takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için [Visual Studio SDK'ya](../extensibility/visual-studio-sdk.md)bakın.
+Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
 
-## <a name="get-the-dte-object"></a>DTE nesnesini alın
+## <a name="get-the-dte-object"></a>DTE nesnesini Al
 
-1. Bir C# VSIX projesi oluşturun ve **DTETest**adını. Bir **Düzenleyici Sınıflandırıcı** öğe şablonu ekleyin ve **dTETest**adını.
+1. Bir C# VSıX projesi oluşturun ve **Dtetest**olarak adlandırın. Bir **Düzenleyici sınıflandırıcı** öğe şablonu ekleyin ve **dtetest**olarak adlandırın.
 
-   Daha fazla bilgi için [bkz.](../extensibility/creating-an-extension-with-an-editor-item-template.md)
+   Daha fazla bilgi için bkz. [bir düzenleyici öğe şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md).
 
 ::: moniker range=">=vs-2019"
 
-2. Projeye aşağıdaki derleme başvurularını ekleyin:
+2. Aşağıdaki derleme başvurularını projeye ekleyin:
 
-    - Microsoft.VisualStudio.Shell.Framework
-    - Microsoft.VisualStudio.Shell.Immutable.10.0
+    - Microsoft. VisualStudio. Shell. Framework
+    - Microsoft. VisualStudio. Shell. sabit. 10.0
 
-3. *DTETestProvider.cs* dosyasına aşağıdaki `using` yönergeleri ekleyin:
+3. *DTETestProvider.cs* dosyasında aşağıdaki `using` yönergeleri ekleyin:
 
     ```csharp
     using EnvDTE;
     using Microsoft.VisualStudio.Shell;
     ```
 
-4. `DTETestProvider` Sınıfta, bir <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>.
+4. `DTETestProvider`Sınıfında bir alın <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> .
 
     ```csharp
     [Import]
     internal SVsServiceProvider ServiceProvider = null;
     ```
 
-5. `GetClassifier()` Yöntemde, deyimden `return` önce aşağıdaki kodu ekleyin:
+5. Yönteminde, `GetClassifier()` aşağıdaki kodu `return` deyimden önce ekleyin:
 
     ```csharp
    ThreadHelper.ThrowIfNotOnUIThread();
@@ -63,26 +63,26 @@ Bu izlenmeyi takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha f
 
 ::: moniker range="vs-2017"
 
-2. Projeye aşağıdaki derleme başvurularını ekleyin:
+2. Aşağıdaki derleme başvurularını projeye ekleyin:
 
-   - Envdte
-   - Microsoft.VisualStudio.Shell.Framework
+   - EnvDTE
+   - Microsoft. VisualStudio. Shell. Framework
 
-3. *DTETestProvider.cs* dosyasına aşağıdaki `using` yönergeleri ekleyin:
+3. *DTETestProvider.cs* dosyasında aşağıdaki `using` yönergeleri ekleyin:
 
     ```csharp
     using EnvDTE;
     using Microsoft.VisualStudio.Shell;
     ```
 
-4. `DTETestProvider` Sınıfta, bir <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>.
+4. `DTETestProvider`Sınıfında bir alın <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> .
 
     ```csharp
     [Import]
     internal SVsServiceProvider ServiceProvider = null;
     ```
 
-5. `GetClassifier()` Yöntemde, deyimden `return` önce aşağıdaki kodu ekleyin:
+5. Yönteminde, `GetClassifier()` aşağıdaki kodu `return` deyimden önce ekleyin:
 
     ```csharp
    DTE dte = (DTE)ServiceProvider.GetService(typeof(DTE));
@@ -92,5 +92,5 @@ Bu izlenmeyi takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha f
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dil hizmeti ve editör uzantı noktaları](../extensibility/language-service-and-editor-extension-points.md)
+- [Dil hizmeti ve Düzenleyici uzantı noktaları](../extensibility/language-service-and-editor-extension-points.md)
 - [DTE kullanarak Visual Studio’yu Başlatma](launch-visual-studio-dte.md)

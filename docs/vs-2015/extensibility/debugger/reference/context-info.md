@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f4e8c1b438cd2fa2721e81f055695e5836c26d12
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179946"
 ---
-# <a name="contextinfo"></a>CONTEXT_INFO
+# <a name="context_info"></a>CONTEXT_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu yapı, bellek bağlamı veya kod bağlamı açıklar.  
+Bu yapı bir bellek bağlamını veya kod bağlamını açıklar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _tagCONTEXT_INFO {   
@@ -52,37 +52,37 @@ public struct CONTEXT_INFO {
   
 ## <a name="members"></a>Üyeler  
  dwFields  
- He bayraklarının bir birleşimi [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) hangi alanların doldurulmuş belirten numaralandırma<strong>.</strong>  
+ [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) Numaralandırmadaki, doldurulacak alanları belirten bayrakların bir birleşimi<strong>.</strong>  
   
- bstrModuleUrl  
- Bağlam bulunduğu modülünün adı.  
+ bstrModuleUrl 'Si  
+ Bağlamın bulunduğu modülün adı.  
   
- bstrFunction  
- Bağlam bulunduğu işlevi adı.  
+ bstrFunction Işlevi  
+ Bağlamın bulunduğu işlevin adı.  
   
- posFunctionOffset  
- A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) kod bağlamı ile ilişkili işlevi satır ve sütun uzaklığı tanımlayan yapısı.  
+ Posfunctionkayması  
+ Kod bağlamı ile ilişkili işlevin satır ve sütun sapmasını tanımlayan [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) yapısı.  
   
  bstrAddress  
- Belirtilen bağlamda bulunduğu kod adresi.  
+ Verilen bağlamın bulunduğu koddaki adres.  
   
  bstrAddressOffset  
- Belirtilen bağlamda bulunduğu kod adres uzaklığı.  
+ Verilen bağlamın bulunduğu koddaki adresin konumu.  
   
  bstrAddressAbsolute  
- Belirtilen bağlamda bulunduğu bellek mutlak bir adres.  
+ Belirtilen bağlamın bulunduğu bellekteki mutlak adres.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapı çağrısından döndürülen [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) yöntemi.  
+ Bu yapı [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) yöntemine yapılan çağrıdan döndürülür.  
   
- Bu yapı için genel kullanım support biri olan bir **bellek** hata ayıklama penceresine.  
+ Bu yapının tipik kullanımı, **bellek** hata ayıklama penceresi desteğidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılar ve birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)   

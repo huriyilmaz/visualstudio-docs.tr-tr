@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4cf86dd39e010424b25916deec8cdebd23ee1c1b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592379"
 ---
 # <a name="xml-schema-designer-workspace-views"></a>XML şema Tasarımcısı çalışma alanı görünümleri
@@ -47,4 +47,4 @@ Görünümleri değiştirmek için aşağıdakilerden birini kullanın:
 
 - Başlangıç görünümü sayfasındaki filigranlar veya boş Içerik modeli görünümündeki veya grafik görünümündeki filigranlar.
 
-- Kısayol tuşları: başlangıç görünümü için **ctrl**+**1** , grafik görünümü için **CTRL**+**2** ve içerik modeli görünümü için **CTRL**+**3** .
+- Kısayol tuşları **Ctrl**: + Başlangıç görünümü için CTRL**1** , **Ctrl** + grafik görünümü için CTRL**2** ve **Ctrl** + içerik modeli görünümü için CTRL**3** .

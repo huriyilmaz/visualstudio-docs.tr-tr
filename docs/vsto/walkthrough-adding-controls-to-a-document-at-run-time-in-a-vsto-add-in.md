@@ -16,14 +16,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 9e8cde57ece3774e94f923387e1a8f7ca71cf797
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71254166"
 ---
-# <a name="walkthrough-add-controls-to-a-document-at-run-time-in-a-vsto-add-in"></a>İzlenecek yol: Bir VSTO eklentisinin çalışma zamanında belgeye denetim ekleme
-  Bir VSTO eklentisi kullanarak herhangi bir açık Microsoft Office Word belgesine denetim ekleyebilirsiniz. Bu izlenecek yol, kullanıcıların bir belgeye <xref:Microsoft.Office.Tools.Word.Controls.Button> veya bir <xref:Microsoft.Office.Tools.Word.RichTextContentControl> belge eklemesine olanak tanımak için şerit 'in nasıl kullanılacağını gösterir.
+# <a name="walkthrough-add-controls-to-a-document-at-run-time-in-a-vsto-add-in"></a>İzlenecek yol: bir VSTO eklentisinin çalışma zamanında belgeye denetim ekleme
+  Bir VSTO eklentisi kullanarak herhangi bir açık Microsoft Office Word belgesine denetim ekleyebilirsiniz. Bu izlenecek yol, kullanıcıların bir <xref:Microsoft.Office.Tools.Word.Controls.Button> belgeye veya bir belge eklemesine olanak tanımak için şerit 'in nasıl kullanılacağını gösterir <xref:Microsoft.Office.Tools.Word.RichTextContentControl> .
 
  **Uygulama hedefi:** Bu konudaki bilgiler Word 2010 için VSTO eklentisi projelerine yöneliktir. Daha fazla bilgi edinmek için bkz. [Office Uygulaması ve Proje Türüne Göre Kullanılabilen Özellikler](../vsto/features-available-by-office-application-and-project-type.md).
 
@@ -44,16 +44,16 @@ ms.locfileid: "71254166"
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
-- [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)]veya [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].
+- [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] veya [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].
 
 ## <a name="create-a-new-word-add-in-project"></a>Yeni bir Word eklentisi projesi oluştur
  Bir Word VSTO eklentisi projesi oluşturarak başlayın.
 
 ### <a name="to-create-a-new-word-vsto-add-in-project"></a>Yeni bir Word VSTO eklentisi projesi oluşturmak için
 
-1. Word için, **WordDynamicControls**ADLı bir VSTO eklenti projesi oluşturun. Daha fazla bilgi için [nasıl yapılır: Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)'da Office projeleri oluşturun.
+1. Word için, **WordDynamicControls**ADLı bir VSTO eklenti projesi oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-2. **Microsoft. Office. Tools. Word. v 4.0. Utilities. dll** derlemesine bir başvuru ekleyin. Bu izlenecek yolda daha sonra belgeye Windows Forms bir denetim eklemek için bu başvuru gerekir.
+2. **Microsoft.Office.Tools.Word.v4.0.Utilities.dll** derlemesine bir başvuru ekleyin. Bu izlenecek yolda daha sonra belgeye Windows Forms bir denetim eklemek için bu başvuru gerekir.
 
 ## <a name="provide-a-ui-to-add-controls-to-a-document"></a>Belgeye denetim eklemek için bir kullanıcı arabirimi sağlama
  Word 'deki Şerite özel bir sekme ekleyin. Kullanıcılar bir belgeye denetim eklemek için sekmedeki onay kutularını seçebilir.
@@ -81,75 +81,75 @@ ms.locfileid: "71254166"
    | Özellik | Değer |
    |-----------|-----------------------|
    | **Ad** | **addButtonCheckBox** |
-   | **Etiket** | **Düğme Ekle** |
+   | **Etiketle** | **Düğme Ekle** |
 
 9. **Group1**öğesine ikinci bir onay kutusu ekleyin ve ardından aşağıdaki özellikleri değiştirin.
 
    | Özellik | Değer |
    |-----------|---------------------------|
    | **Ad** | **addRichTextCheckBox** |
-   | **Etiket** | **Zengin metin denetimi ekleme** |
+   | **Etiketle** | **Zengin metin denetimi ekleme** |
 
 10. Şerit Tasarımcısı ' nda, **Ekle düğmesine**çift tıklayın.
 
-     **Düğme Ekle** onay kutusunun olayişleyicisikoddüzenleyicisindeaçılır.<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click>
+     <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click> **Düğme Ekle** onay kutusunun olay işleyicisi kod düzenleyicisinde açılır.
 
 11. Şerit Tasarımcısına dönün ve **zengin metin denetimi Ekle**' ye çift tıklayın.
 
-     **Zengin metin denetimi Ekle** onay kutusunun olayişleyicisi,koddüzenleyicisindeaçılır.<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click>
+     <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click> **Zengin metin denetimi Ekle** onay kutusunun olay Işleyicisi, kod düzenleyicisinde açılır.
 
     Bu izlenecek yolda daha sonra, etkin belgede denetim eklemek ve kaldırmak için bu olay işleyicilerine kod ekleyeceksiniz.
 
 ## <a name="add-and-remove-controls-on-the-active-document"></a>Etkin belgede denetim ekleme ve kaldırma
- VSTO eklenti kodunda, bir denetim ekleyebilmeniz için etkin belgeyi bir <xref:Microsoft.Office.Tools.Word.Document> *konak öğesine* dönüştürmeniz gerekir. Office çözümlerinde, yönetilen denetimler yalnızca, denetimler için kapsayıcılar olarak davranan konak öğelerine eklenebilir. VSTO eklenti projelerinde, konak öğeleri `GetVstoObject` yöntemi kullanılarak çalışma zamanında oluşturulabilir.
+ VSTO eklenti kodunda, bir denetim ekleyebilmeniz için etkin belgeyi bir <xref:Microsoft.Office.Tools.Word.Document> *konak öğesine* dönüştürmeniz gerekir. Office çözümlerinde, yönetilen denetimler yalnızca, denetimler için kapsayıcılar olarak davranan konak öğelerine eklenebilir. VSTO eklenti projelerinde, konak öğeleri yöntemi kullanılarak çalışma zamanında oluşturulabilir `GetVstoObject` .
 
- Etkin belgeyi eklemek veya `ThisAddIn` <xref:Microsoft.Office.Tools.Word.Controls.Button> kaldırmak <xref:Microsoft.Office.Tools.Word.RichTextContentControl> için çağrılabilecek sınıfa Yöntemler ekleyin. Bu izlenecek yolda daha sonra Şeritteki onay kutularının <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click> olay işleyicilerinden bu yöntemleri çağıracaksınız.
+ `ThisAddIn`Etkin belgeyi eklemek veya kaldırmak için çağrılabilecek sınıfa Yöntemler ekleyin <xref:Microsoft.Office.Tools.Word.Controls.Button> <xref:Microsoft.Office.Tools.Word.RichTextContentControl> . Bu izlenecek yolda daha sonra <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click> Şeritteki onay kutularının olay işleyicilerinden bu yöntemleri çağıracaksınız.
 
 ### <a name="to-add-and-remove-controls-on-the-active-document"></a>Etkin belgede denetim ekleme ve kaldırma
 
 1. **Çözüm Gezgini**, dosyayı kod düzenleyicisinde açmak için *ThisAddIn.cs* veya *ThisAddIn. vb* öğesine çift tıklayın.
 
-2. `ThisAddIn` Sınıfına aşağıdaki kodu ekleyin. Bu kod, <xref:Microsoft.Office.Tools.Word.Controls.Button> belgeye <xref:Microsoft.Office.Tools.Word.RichTextContentControl> eklenecek denetimleri temsil eden nesneler bildirir.
+2. Sınıfına aşağıdaki kodu ekleyin `ThisAddIn` . Bu kod, <xref:Microsoft.Office.Tools.Word.Controls.Button> <xref:Microsoft.Office.Tools.Word.RichTextContentControl> belgeye eklenecek denetimleri temsil eden nesneler bildirir.
 
      [!code-vb[Trin_WordAddInDynamicControlsWalkthrough#1](../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb#1)]
      [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#1](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs#1)]
 
-3. `ThisAddIn` Sınıfına aşağıdaki yöntemi ekleyin. Kullanıcı Şeritteki **Düğme Ekle** onay kutusuna tıkladığında, onay kutusu seçiliyse, bu yöntem belgedeki geçerli seçime <xref:Microsoft.Office.Tools.Word.Controls.Button> ekler veya onay kutusunun işareti kaldırılmışsa kaldırır. <xref:Microsoft.Office.Tools.Word.Controls.Button>
+3. Sınıfına aşağıdaki yöntemi ekleyin `ThisAddIn` . Kullanıcı Şeritteki **Düğme Ekle** onay kutusuna tıkladığında, <xref:Microsoft.Office.Tools.Word.Controls.Button> onay kutusu seçiliyse, bu yöntem belgedeki geçerli seçime ekler veya <xref:Microsoft.Office.Tools.Word.Controls.Button> onay kutusunun işareti kaldırılmışsa kaldırır.
 
      [!code-vb[Trin_WordAddInDynamicControlsWalkthrough#2](../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb#2)]
      [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#2](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs#2)]
 
-4. `ThisAddIn` Sınıfına aşağıdaki yöntemi ekleyin. Kullanıcı Şeritteki **zengin metin denetimi Ekle** onay kutusuna tıkladığında, onay kutusu seçili olduğunda bu yöntem belgedeki geçerli seçime <xref:Microsoft.Office.Tools.Word.RichTextContentControl> ekler veya onay kutusunun işareti kaldırılmışsa kaldırır. <xref:Microsoft.Office.Tools.Word.RichTextContentControl>
+4. Sınıfına aşağıdaki yöntemi ekleyin `ThisAddIn` . Kullanıcı Şeritteki **zengin metin denetimi Ekle** onay kutusuna tıkladığında, <xref:Microsoft.Office.Tools.Word.RichTextContentControl> onay kutusu seçili olduğunda bu yöntem belgedeki geçerli seçime ekler veya <xref:Microsoft.Office.Tools.Word.RichTextContentControl> onay kutusunun işareti kaldırılmışsa kaldırır.
 
      [!code-vb[Trin_WordAddInDynamicControlsWalkthrough#3](../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb#3)]
      [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#3](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs#3)]
 
 ## <a name="remove-the-button-control-when-the-document-is-saved"></a>Belge kaydedildiğinde düğme denetimini kaldır
- Windows Forms denetimleri belge kaydedilip kapatıldığında kalıcı olmaz. Ancak, her denetim için bir ActiveX sarmalayıcı belgede kalır ve belge yeniden açıldığında bu sarmalayıcının kenarlığı son kullanıcılar tarafından görülebilir. VSTO eklentilerinde dinamik olarak oluşturulan Windows Forms denetimlerini temizlemek için birkaç yol vardır. Bu kılavuzda, belge kaydedildiğinde <xref:Microsoft.Office.Tools.Word.Controls.Button> denetimi programlı bir şekilde kaldırırsınız.
+ Windows Forms denetimleri belge kaydedilip kapatıldığında kalıcı olmaz. Ancak, her denetim için bir ActiveX sarmalayıcı belgede kalır ve belge yeniden açıldığında bu sarmalayıcının kenarlığı son kullanıcılar tarafından görülebilir. VSTO eklentilerinde dinamik olarak oluşturulan Windows Forms denetimlerini temizlemek için birkaç yol vardır. Bu kılavuzda, belge kaydedildiğinde denetimi programlı bir şekilde kaldırırsınız <xref:Microsoft.Office.Tools.Word.Controls.Button> .
 
 ### <a name="to-remove-the-button-control-when-the-document-is-saved"></a>Belge kaydedildiğinde düğme denetimini kaldırmak için
 
-1. *ThisAddIn.cs* veya *ThisAddIn. vb* kod dosyasında `ThisAddIn` sınıfına aşağıdaki yöntemi ekleyin. Bu yöntem, <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> olay için bir olay işleyicisidir. Kaydedilen belgenin kendisiyle ilişkili bir <xref:Microsoft.Office.Tools.Word.Document> konak öğesi varsa, olay işleyicisi konak öğesini alır ve varsa <xref:Microsoft.Office.Tools.Word.Controls.Button> denetimi kaldırır.
+1. *ThisAddIn.cs* veya *ThisAddIn. vb* kod dosyasında sınıfına aşağıdaki yöntemi ekleyin `ThisAddIn` . Bu yöntem, olay için bir olay işleyicisidir <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> . Kaydedilen belgenin <xref:Microsoft.Office.Tools.Word.Document> kendisiyle ilişkili bir konak öğesi varsa, olay işleyicisi konak öğesini alır ve varsa <xref:Microsoft.Office.Tools.Word.Controls.Button> denetimi kaldırır.
 
      [!code-vb[Trin_WordAddInDynamicControlsWalkthrough#4](../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb#4)]
      [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#4](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs#4)]
 
-2. İçinde C#, `ThisAddIn_Startup` olay işleyicisine aşağıdaki kodu ekleyin. Olay işleyicisini C# `Application_DocumentBeforeSave` olaylabağlamakiçinbukod'degereklidir.<xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave>
+2. C# ' de, olay işleyicisine aşağıdaki kodu ekleyin `ThisAddIn_Startup` . Olay işleyicisini olayla bağlamak Için C# dilinde bu kod gereklidir `Application_DocumentBeforeSave` <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> .
 
      [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#5](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs#5)]
 
 ## <a name="add-and-remove-controls-when-the-user-clicks-the-check-boxes-on-the-ribbon"></a>Kullanıcı Şeritteki onay kutularına tıkladığında denetimleri Ekle ve Kaldır
- Son olarak, belgeye <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click> denetim eklemek veya kaldırmak için şerit 'e eklediğiniz onay kutularının olay işleyicilerini değiştirin.
+ Son olarak, <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click> belgeye denetim eklemek veya kaldırmak için şerit 'e eklediğiniz onay kutularının olay işleyicilerini değiştirin.
 
 ### <a name="to-add-or-remove-controls-when-the-user-clicks-the-check-boxes-on-the-ribbon"></a>Kullanıcı Şeritteki onay kutularına tıkladığında denetim eklemek veya kaldırmak için
 
-1. *MyRibbon.cs* veya *MyRibbon. vb* kod dosyasında, oluşturulan `addButtonCheckBox_Click` ve `addRichTextCheckBox_Click` olay işleyicilerini aşağıdaki kodla değiştirin. Bu kod, `ToggleButtonOnDocument` Bu izlenecek yolda daha önce `ThisAddIn` sınıfa eklediğiniz `ToggleRichTextControlOnDocument` ve yöntemlerini çağırmak için bu olay işleyicilerini yeniden tanımlar.
+1. *MyRibbon.cs* veya *MyRibbon. vb* kod dosyasında, oluşturulan `addButtonCheckBox_Click` ve `addRichTextCheckBox_Click` olay işleyicilerini aşağıdaki kodla değiştirin. Bu kod, bu `ToggleButtonOnDocument` `ToggleRichTextControlOnDocument` `ThisAddIn` izlenecek yolda daha önce sınıfa eklediğiniz ve yöntemlerini çağırmak için bu olay işleyicilerini yeniden tanımlar.
 
      [!code-vb[Trin_WordAddInDynamicControlsWalkthrough#6](../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/MyRibbon.vb#6)]
      [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#6](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/MyRibbon.cs#6)]
 
 ## <a name="test-the-solution"></a>Çözümü test etme
- Şeritteki özel sekmeden seçerek belgeye denetimler ekleyin. Belgeyi <xref:Microsoft.Office.Tools.Word.Controls.Button> kaydettiğinizde denetim kaldırılır.
+ Şeritteki özel sekmeden seçerek belgeye denetimler ekleyin. Belgeyi kaydettiğinizde <xref:Microsoft.Office.Tools.Word.Controls.Button> denetim kaldırılır.
 
 ### <a name="to-test-the-solution"></a>Çözümü test etmek için.
 
@@ -180,7 +180,7 @@ ms.locfileid: "71254166"
 
 - Çalışma zamanında bir belgeye birçok farklı denetim türünün nasıl ekleneceğini ve belgeyi yeniden açtığınızda denetimleri yeniden oluşturmayı gösteren bir örnek için, bkz. [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md): Word eklentisi dinamik denetimleri örneği.
 
-- Excel için VSTO eklentisini kullanarak çalışma sayfasına nasıl denetim ekleneceğini gösteren bir izlenecek yol için bkz [. İzlenecek yol: Çalışma zamanında VSTO eklenti projesindeki](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md)çalışma sayfasına denetimler ekleyin.
+- Excel için VSTO eklentisini kullanarak çalışma sayfasına nasıl denetim ekleneceğini gösteren bir izlenecek yol için bkz. [Izlenecek yol: çalışma ZAMANıNDA VSTO eklenti projesindeki denetimleri ekleme](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Word çözümleri](../vsto/word-solutions.md)

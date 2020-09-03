@@ -11,16 +11,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 094cb590d5b2a3bf062916985bfc61b1cf76d365
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904401"
 ---
 # <a name="walkthrough-use-a-shortcut-key-with-an-editor-extension"></a>İzlenecek yol: bir düzenleyici uzantısıyla kısayol tuşu kullanma
 Düzenleyici uzantıdaki kısayol tuşlarına yanıt verebilirsiniz. Aşağıdaki izlenecek yol, bir kısayol tuşu kullanarak bir metin görünümüne Görünüm kenarlığı nasıl ekleneceğini gösterir. Bu izlenecek yol, görünüm penceresinin kenarlığı düzenleyici şablonunu temel alır ve + karakterini kullanarak kenarlığı eklemenize olanak tanır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) projesi oluşturma

@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cb71196dfbaf371e66131bf1e4b22584d3dbf0c3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592873"
 ---
 # <a name="graph-view"></a>Grafik görünümü
@@ -55,8 +55,8 @@ Aşağıdaki tabloda, grafik görünümü tasarım yüzeyindeki tüm düğümler
 |**Seçimi çalışma alanından Tümünü Kaldır**|Çalışma alanından ve tasarım yüzeyinden seçilmemiş düğümleri kaldırır.|
 |**Diyagramı görüntü olarak dışarı aktar**|Tasarım yüzeyini bir XPS dosyasına kaydeder.|
 |**Tümünü Seç**|Tasarım yüzeyinde tüm düğümleri seçer.|
-|**Kodu görüntüle**|XML düzenleyicisinde Seçili düğümü içeren dosyayı açar. XML **şeması Gezgini** 'nde seçilen öğe, XML düzenleyicisinde de seçilidir.|
-|**Özellik Penceresi**|**Özellikler** penceresini açar (zaten açık değilse). Bu pencere, düğüm hakkındaki bilgileri görüntüler.|
+|**Kodu Görüntüle**|XML düzenleyicisinde Seçili düğümü içeren dosyayı açar. XML **şeması Gezgini** 'nde seçilen öğe, XML düzenleyicisinde de seçilidir.|
+|**Özellikler penceresi**|**Özellikler** penceresini açar (zaten açık değilse). Bu pencere, düğüm hakkındaki bilgileri görüntüler.|
 
 Yukarıda açıklanan ortak seçeneklere ek olarak, genel öğelerin bağlam menüsü de aşağıdaki seçeneklere sahiptir:
 
@@ -101,16 +101,16 @@ Grafik görünümü etkinken aşağıdaki XSD araç çubuğu düğmeleri etkinle
 
 |Seçenek|Açıklama|
 |-|-----------------|
-|**Başlangıç görünümünü göster**|[Başlangıç görünümüne](../xml-tools/start-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl**+**1**.|
-|**Içerik modeli görünümünü göster**|[Içerik modeli görünümüne](../xml-tools/content-model-view.md)geçiş yapar. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl**+**2**.|
-|**Graf görünümünü göster**|[Grafik görünümüne](../xml-tools/graph-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl**+**3**.|
+|**Başlangıç görünümünü göster**|[Başlangıç görünümüne](../xml-tools/start-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **1**.|
+|**Içerik modeli görünümünü göster**|[Içerik modeli görünümüne](../xml-tools/content-model-view.md)geçiş yapar. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **2**.|
+|**Graf görünümünü göster**|[Grafik görünümüne](../xml-tools/graph-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **3**.|
 |**Çalışma alanını temizle**|Çalışma alanını ve tasarım yüzeyini temizler.|
 |**Çalışma alanından Kaldır**|Seçili düğümleri çalışma alanından ve tasarım yüzeyinden kaldırır.|
 |**Seçimi çalışma alanından Tümünü Kaldır**|Çalışma alanından ve tasarım yüzeyinden seçilmemiş düğümleri kaldırır. Bu seçenek, Içerik modeli görünümünde ve grafik görünümünde etkinleştirilir.|
-|**Soldan sağa**|Grafik görünümündeki düzeni düğümlerin soldan sağa hiyerarşik gösterimine dönüştürür. Bu seçeneğe, klavye kısayolu: **Alt**+**sağ ok**kullanılarak erişilebilir.|
-|**Sağdan sola**|Grafik görünümündeki düzeni düğümlerin sağdan sola hiyerarşik gösterimine dönüştürür. Bu seçeneğe klavye kısayolu kullanılarak erişilebilir: **Alt**+**sol ok**.|
-|**Yukarıdan aşağıya**|Grafik görünümündeki düzeni düğümlerin üst-alt hiyerarşik gösterimine dönüştürür. Bu seçeneğe klavye kısayolu kullanılarak erişilebilir: **alt**+**aşağı ok**.|
-|**Aşağıdan yukarıya**|Grafik görünümündeki düzeni düğümlerin aşağıdan yukarıya hiyerarşik gösterimine dönüştürür. Bu seçeneğe, klavye kısayolu: **Alt**+**yukarı ok**kullanılarak erişilebilir.|
+|**Soldan sağa**|Grafik görünümündeki düzeni düğümlerin soldan sağa hiyerarşik gösterimine dönüştürür. Bu seçeneğe, klavye kısayolu: **alt** + **sağ ok**kullanılarak erişilebilir.|
+|**Sağdan sola**|Grafik görünümündeki düzeni düğümlerin sağdan sola hiyerarşik gösterimine dönüştürür. Bu seçeneğe klavye kısayolu kullanılarak erişilebilir: **alt** + **sol ok**.|
+|**Yukarıdan aşağıya**|Grafik görünümündeki düzeni düğümlerin üst-alt hiyerarşik gösterimine dönüştürür. Bu seçeneğe klavye kısayolu kullanılarak erişilebilir: **alt** + **aşağı ok**.|
+|**Aşağıdan yukarıya**|Grafik görünümündeki düzeni düğümlerin aşağıdan yukarıya hiyerarşik gösterimine dönüştürür. Bu seçeneğe, klavye kısayolu: **alt** + **yukarı ok**kullanılarak erişilebilir.|
 
 ## <a name="panscroll"></a>Kaydır/KAYDIR
 
@@ -126,7 +126,7 @@ Geri Al/Yinele özelliği, aşağıdaki eylemler için grafik görünümünde et
 
 - Tek veya birden çok düğüm siliniyor.
 
-## <a name="zoom"></a>Yakınlaştır
+## <a name="zoom"></a>Zoom
 
 Yakınlaştırma, grafik görünümünün sağ alt köşesinde bulunur.
 

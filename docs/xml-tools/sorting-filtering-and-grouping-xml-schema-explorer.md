@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cd288171cd8713e6b403f71a4eee6ba09d3f6ea9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592522"
 ---
 # <a name="sorting-filtering-and-grouping-xml-schema-explorer"></a>Sıralama, filtreleme ve gruplandırma (XML şema Gezgini)
@@ -27,7 +27,7 @@ Aşağıdaki filtre seçenekleri kullanılabilir. Varsayılan olarak, **ad alanl
 
 - **Şema dosyalarını göster**.
 
-- Oluşturucuları **göster (Sequence/Choice/All)** .
+- Oluşturucuları **göster (Sequence/Choice/All)**.
 
 ## <a name="sorting-options"></a>Sıralama seçenekleri
 
@@ -43,33 +43,33 @@ Aşağıdaki sıralama seçenekleri kullanılabilir. Varsayılan değer **türe 
 
 **Türe göre sırala** seçeneği belirlendiğinde, genel düğümler aşağıdaki sırada sıralanır. Daha sonra düğümler her grup içinde alfabetik olarak sıralanır.
 
-1. düğümleri `import`.
+1. `import` düğümlerini.
 
-2. düğümleri `include`.
+2. `include` düğümlerini.
 
-3. düğümleri `redefine`.
+3. `redefine` düğümlerini.
 
-4. düğümleri `attribute`.
+4. `attribute` düğümlerini.
 
-5. düğümleri `attributeGroup`.
+5. `attributeGroup` düğümlerini.
 
-6. düğümleri `complexType`.
+6. `complexType` düğümlerini.
 
-7. düğümleri `simpleType`.
+7. `simpleType` düğümlerini.
 
-8. düğümleri `element`.
+8. `element` düğümlerini.
 
-9. düğümleri `group`.
+9. `group` düğümlerini.
 
 ### <a name="sort-by-name"></a>Ada göre sırala
 
 **Ada göre sırala** seçeneği belirlendiğinde, genel düğümler aşağıdaki sıraya göre sıralanır:
 
-1. düğümleri `import` (ad alanlarının alfabetik sırasıyla).
+1. `import` düğümler (ad alanlarının alfabetik sırasıyla).
 
-2. düğümler `include` (`schemaLocation` özniteliklerinin alfabetik sırasıyla).
+2. `include` düğümler (özniteliklerin alfabetik sırasına göre `schemaLocation` ).
 
-3. düğümler `redefine` (`schemaLocation` özniteliklerinin alfabetik sırasıyla).
+3. `redefine` düğümler (özniteliklerin alfabetik sırasına göre `schemaLocation` ).
 
 4. Alfabetik sırada diğer genel düğümler.
 

@@ -1,5 +1,5 @@
 ---
-title: JIT iyileştirmesi ve hata ayıklama | Microsoft Docs
+title: JıT Iyileştirme ve hata ayıklama | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,27 +18,27 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 56b010a01ccd7e40e696653e13dd7c972c97a9cb
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65690531"
 ---
 # <a name="jit-optimization-and-debugging"></a>JIT İyileştirmesi ve Hata Ayıklaması
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yönetilen bir uygulamada hata ayıklaması yaparken [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] just-in-time (JIT) kod iyileştirme varsayılan olarak gizler. En iyi duruma getirme, JIT gizleme en iyileştirilmemiş kod hata ayıklaması yaptığınız anlamına gelir. Kod optimize, ancak hata ayıklama deneyiminiz çok daha kapsamlı için biraz daha yavaş çalışır. En iyi duruma getirilmiş kodun hatalarının ayıklanması daha zordur ve yalnızca, en iyi duruma getirilmiş kodda oluşan, ancak getirilmemiş sürümde üretilemeyen bir hatayla karşılaşırsanız önerilir.  
+Yönetilen bir uygulamada hata ayıklarken, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Varsayılan olarak tam zamanında (JIT) kodun iyileştirmesini bastırır. JıT iyileştirmesini gizleme, en iyi duruma getirilmemiş koddan hata ayıklaması yaptığınız anlamına gelir. Kod, iyileştirilmediği için biraz daha yavaş çalışır, ancak hata ayıklama deneyiminiz çok daha geniş. İyileştirilmiş kodda hata ayıklama işlemi daha zordur ve yalnızca iyileştirilmiş kodda oluşan ancak en iyi duruma getirilmemiş sürümde yeniden oluşturulamayacağından bir hata yaşarsanız önerilir.  
   
- JIT iyileştirmesini kontrol edilir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] tarafından **yüklemesinde JIT iyileştirmesini Modül yükleme** seçeneği. Bu seçeneği bulabilirsiniz **genel** altındaki **hata ayıklama** düğümünde **seçenekleri** iletişim kutusu.  
+ JıT iyileştirmesi, modül yüklemesinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **JIT Iyileştirmesini bastır** seçeneğinde içinde denetlenir. Bu seçeneği, **Seçenekler** Iletişim kutusundaki **hata ayıklama** düğümünün altındaki **genel** sayfasında bulabilirsiniz.  
   
- Silerseniz **yüklemesinde JIT iyileştirmesini Modül yükleme** seçeneği, en iyi duruma getirilmiş JIT kodunun hatalarını ayıklayabilirsiniz, ancak en iyi duruma getirilmiş kodun kaynak kodunu eşleşmediğinden hata ayıklama yeteneğiniz sınırlı olabilir. Sonuç olarak, windows gibi hata ayıklayıcı **Yereller** ve **Otolar** penceresi durumda olmayan optimize edilmiş kodda hata ayıkladığınız zamanki kadar çok bilgi görüntülenemeyebilir.  
+ **Modül YÜKLEMESINDE JIT iyileştirmesini önle** seçeneğini temizlerseniz, iyileştirilmiş JIT kodunda hata ayıklaması yapabilirsiniz, ancak en iyi duruma getirilmiş kod Kaynak kodla eşleşmediğinden hata ayıklama olanağınız sınırlı olabilir. Sonuç olarak, **Yereller** ve **oto** 'ler penceresi gibi hata ayıklayıcı pencereleri, en iyi duruma getirilmemiş koddan hata ayıklaması yaptığınız için çok daha fazla bilgi görüntülemeyebilir.  
   
- Yalnızca kendi kodum ile hata ayıklamada başka bir önemli fark oluşur. Yalnızca kendi kodum ile hata ayıklaması yapıyorsanız, hata ayıklama sırasında görüntülenmemelidir kullanıcı olmayan kodun duruma getirilmiş kodu hata ayıklayıcı değerlendirir. En iyi duruma getirilmiş JIT kodunun ayıklıyorsanız, sonuç olarak, büyük olasılıkla Just My Code'u devre dışı bırakmak istediğiniz. Daha fazla bilgi için [Adımlamayı yalnızca kendi kodum kısıtlama](../debugger/just-my-code.md#BKMK_Enable_or_disable_Just_My_Code).  
+ Diğer önemli fark, Yalnızca kendi kodum ile hata ayıklamaya karşı ilgilidir. Yalnızca kendi kodum ile hata ayıklaması yapıyorsanız, hata ayıklayıcı iyileştirilmiş kodu kullanıcı olmayan kod olarak değerlendirir ve hata ayıklarken görüntülenmemelidir. Sonuç olarak, JıT ile iyileştirilmiş kodda hata ayıklaması yapıyorsanız muhtemelen Yalnızca kendi kodum kapatmak istersiniz. Daha fazla bilgi için bkz.  [yalnızca kendi kodum adımlamayı kısıtla](../debugger/just-my-code.md#BKMK_Enable_or_disable_Just_My_Code).  
   
- Unutmayın **yüklemesinde JIT iyileştirmesini Modül yükleme** seçeneği modüller yüklendiğinde kodun iyileştirme bastırır. Zaten çalışan bir işleme eklerseniz, önceden yüklenmiş, JIT olarak derlenmiş ve en iyi duruma getirilmiş kod içeriyor olabilir. **Yüklemesinde JIT iyileştirmesini Modül yükleme** seçeneği üzerinde hiçbir etkisi, bu kodların siz ekledikten sonra yüklenen modülleri etkiler. Ayrıca, **yüklemesinde JIT iyileştirmesini Modül yükleme** seçeneği, NGEN ile oluşturulan WinForms.dll gibi modülleri, etkilemez.  
+ **Modül yükleme SEÇENEĞINDE JIT iyileştirmesini gösterme** seçeneğinin modüller yüklendiğinde kodun iyileştirmesini bastırır olduğunu unutmayın. Zaten çalışmakta olan bir işleme eklerseniz, önceden yüklenmiş, JıT olarak derlenen ve optimize edilmiş bir kod içerebilir. **Modül YÜKLEMESINDE JIT iyileştirmesini gösterme** seçeneğinin Bu kod üzerinde hiçbir etkisi yoktur, ancak iliştirdikten sonra yüklenen modülleri etkiler. Ayrıca, modül yüklemesinde **JIT iyileştirmesini bastır** SEÇENEĞI, Ngen ile oluşturulan WinForms.dll gibi modülleri etkilemez.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yönetilen kodda hata ayıklama](../debugger/debugging-managed-code.md)   
- [Hata ayıklayıcısı ile kodlarda gezinme](../debugger/navigating-through-code-with-the-debugger.md)   
- [Çalıştırma işlemleri iliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
- [Yönetilen Yürütme İşlemi](https://msdn.microsoft.com/library/476b03dc-2b12-49a7-b067-41caeaa2f533)
+ [Hata ayıklayıcı ile kod arasında gezinme](../debugger/navigating-through-code-with-the-debugger.md)   
+ [Çalışan Işlemlere iliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
+ [Yönetilen yürütme Işlemi](https://msdn.microsoft.com/library/476b03dc-2b12-49a7-b067-41caeaa2f533)

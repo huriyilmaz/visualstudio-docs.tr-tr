@@ -1,5 +1,5 @@
 ---
-title: Hata ayıklama ve uyarı iletişim kutuları | Microsoft Docs
+title: Hata ayıklama hataları ve uyarı Iletişim kutuları | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -23,16 +23,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 337341547891d87b577756350cbb71e13dd230ae
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65691191"
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>Hataları Ayıklama ve Uyarı İletişim Kutuları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Hataları aşağıda verilmiştir ve iletişim kutuları, uygulamanızın hata ayıklama sırasında karşılaşabileceğiniz uyarı.  
+Uygulamanızda hata ayıklarken karşılaşabileceğiniz hatalar ve uyarı iletişim kutuları aşağıda verilmiştir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Onaylama Başarısız İletişim Kutusu](../debugger/assertion-failed-dialog-box.md)  
@@ -43,13 +43,13 @@ Hataları aşağıda verilmiştir ve iletişim kutuları, uygulamanızın hata a
   
  [Hata Ayıklama Oturumu İçin Yürütülebilir İletişim Kutusu](../debugger/executable-for-debugging-session-dialog-box.md)  
   
- [Kod değişiklikleri iletişim kutusu uygulanamadı](../debugger/edit-and-continue-dialog-box-cpp.md)  
+ [Kod değişiklikleri uygulanamadı Iletişim kutusu](../debugger/edit-and-continue-dialog-box-cpp.md)  
   
  [Microsoft Visual Studio Hata Ayıklayıcısı (Özel Durum Oluştu) İletişim Kutusu](../debugger/microsoft-visual-studio-debugger-exception-thrown-dialog-box.md)  
   
- [Geçerli konum iletişim kutusu için kaynak kodu yok](../debugger/no-source-available.md)  
+ [Geçerli konum Iletişim kutusu için kullanılabilir kaynak kodu yok](../debugger/no-source-available.md)  
   
- [Simgesel bilgiler iletişim kutusu](https://msdn.microsoft.com/18de4888-9cca-4059-a165-48b135fee4c9)  
+ [Sembolik bilgi yok Iletişim kutusu](https://msdn.microsoft.com/18de4888-9cca-4059-a165-48b135fee4c9)  
   
  [Belirsizliği Çöz İletişim Kutusu](../debugger/resolve-ambiguity-dialog-box.md)  
   
@@ -57,17 +57,17 @@ Hataları aşağıda verilmiştir ve iletişim kutuları, uygulamanızın hata a
   
  [Makineye bağlanılamıyor](../debugger/error-unable-to-connect-to-the-machine-name-the-machine-cannot-be-found-on-the-network.md)  
   
- [Hata: Sistemde Çekirdek Hata Ayıklayıcı Etkinleştirildiğinden Hata Ayıklama Mümkün Değil](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)  
+ [Hata: sistemde bir çekirdek hata ayıklayıcısı etkinleştirildiğinden hata ayıklama mümkün değil](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Betik ve Web hata ayıklama: Hatalar ve Sorun Giderme](../debugger/debugging-web-applications-errors-and-troubleshooting.md)  
+ [Betik ve Web 'de hata ayıklama: hatalar ve sorun giderme](../debugger/debugging-web-applications-errors-and-troubleshooting.md)  
   
  [Uzaktan hata ayıklama hataları](../debugger/remote-debugging-errors-and-troubleshooting.md)  
   
- [Ekleme hataları](https://msdn.microsoft.com/2820d904-a068-4fcb-bbfb-bbbe5195d6ae)  
+ [Hata Ekle](https://msdn.microsoft.com/2820d904-a068-4fcb-bbfb-bbbe5195d6ae)  
   
- [SQL hata ayıklama Kurulumu sorunlarını giderme](https://msdn.microsoft.com/b3ec8303-4c0d-449c-8d19-4932c1d820a7)  
+ [SQL hata ayıklama kurulumu sorunlarını giderme](https://msdn.microsoft.com/b3ec8303-4c0d-449c-8d19-4932c1d820a7)  
   
- [Visual C++ hata ayıklama SSS](../debugger/debugging-native-code-faqs.md)  
+ [SSS Visual C++ hata ayıklama](../debugger/debugging-native-code-faqs.md)  
   
- [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
+ [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)

@@ -1,5 +1,5 @@
 ---
-title: Windows Installer ile VSPackage yükleme | Microsoft Docs
+title: Windows Installer Ile VSPackages yükleme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,53 +12,53 @@ caps.latest.revision: 31
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 35942f6babf18967e11f268ef0412acb4cc8edf7
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65687474"
 ---
 # <a name="installing-vspackages-with-windows-installer"></a>Windows Installer ile VSPackage Yükleme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-İçinde VSPackage'ı tümleştirme [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] daha fazlasını bir kullanıcının bilgisayarına dosyaları kopyalama gerektirir. VSPackage'nın yükleyici gerekir VSPackage'ı ve onun bağımlı dosyaları yüklemek ve kaydettirmek ve bunları tümleştirmek [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. VSPackage'ı bir simge görüntülemek gibi tümleştirme özellikleri yararlanabilirsiniz [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] tanıtım ekran ve hakkında kutusu.  
+VSPackage ile tümleştirme, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] dosyaları yalnızca bir kullanıcının bilgisayarına kopyalamaktan daha fazlasını gerektirir. VSPackage yükleyicinizin VSPackage ve bağımlı dosyalarını yüklemesi ve bunları kaydedip tümleştirmeleri gerekir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . VSPackage, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Giriş ekranında ve hakkında iletişim kutusunda bir simge görüntüleme gibi tümleştirme özelliklerinden yararlanabilir.  
   
- Microsoft Windows Installer dosyaları, VSPackage'ları dağıtmak için önerilen yoldur. Kullanımı kolay Windows Installer paketleri tarafından desteklenen tüm Windows işletim sistemlerinde çalışabilir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Daha fazla bilgi için [Windows Installer](https://msdn.microsoft.com/121be21b-b916-43e2-8f10-8b080516d2a0).  
+ Microsoft Windows Installer dosyalar, VSPackages 'leri dağıtmak için önerilen yoldur. Kullanımı kolay Windows Installer paketleri tarafından desteklenen herhangi bir Windows işletim sisteminde çalışabilir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. [Windows Installer](https://msdn.microsoft.com/121be21b-b916-43e2-8f10-8b080516d2a0).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Temel Windows Installer Bilgileri](../../extensibility/internals/windows-installer-basics.md)  
  Windows Installer genel bir bakış sağlar.  
   
  [VSPackage Kurulum Senaryoları](../../extensibility/internals/vspackage-setup-scenarios.md)  
- Yan yana yüklemeleri, her iki VSPackages destekleyebilir farklı yolları açıklanmaktadır ve [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ Hem VSPackages hem de ' ın yan yana yüklemelerini destekleyebilen farklı yollarını açıklar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
  [Windows Installer Paketi Yazma](../../extensibility/internals/authoring-a-windows-installer-package.md)  
- Yükleyicilerini uygulayın doğru bir şekilde yüklemek ve VSPackages uygulamasına tümleştirmek için tipik adımları genel bir bakış sağlar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ Standart adım yükleyicilerinin, VSPackages 'ı doğru şekilde yüklemek ve bütünleştirmek için izlediği bir genel bakış sunar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
  [Sistem Gereksinimlerini Algılama](../../extensibility/internals/detecting-system-requirements.md)  
- Bir yükleyici nasıl algılayabilir açıklar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ve bileşenleri ve iptal VSPackage gereksinimler karşılanmazsa ayarlayın.  
+ Bir yükleyicinin [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , VSPackage gereksinimlerine uyulmazsa, onun bileşenlerini algılayıp ve kurulumu iptal edip edebildiğini açıklar.  
   
  [Bileşen Yönetimi](../../extensibility/internals/component-management.md)  
- Önceki ürün sürümleri bütünlüğünü bir yükleyici geliştirme konusunda anlatılmaktadır.  
+ Önceki ürün sürümlerinin bütünlüğünü koruyacak bir yükleyicinin nasıl geliştirileceği açıklanır.  
   
  [VSPackage için Yükleme Dizinini Seçme](../../extensibility/internals/choosing-the-installation-directory-for-a-vspackage.md)  
- VSPackage bulmak için seçenekler özetlenmektedir.  
+ VSPackages bulma seçeneklerini özetler.  
   
  [VSPackage Kaydı](../../extensibility/internals/vspackage-registration.md)  
- VSPackage yükleme sırasında nasıl kayıtlı açıklanır ve kendi kendine kayıt neden hatalı bir uygulamadır.  
+ VSPackages 'ın yükleme sırasında nasıl kaydedildiğini ve kendi kendine kaydın nasıl kötü bir fikir olduğunu açıklar.  
   
  [Proje Türlerini Dağıtma](../../extensibility/internals/deploying-project-types.md)  
- Yönetilen kod proje türleri için yeni proje türü Toplayıcısı'nı kullanmayı açıklar.  
+ Yönetilen kod proje türleri için yeni proje türü toplayıcısı 'nın nasıl kullanılacağını açıklar.  
   
- [Nasıl yapılır: Yükleyicinin Kayıt Defteri Bilgilerini Oluşturma](../../extensibility/internals/how-to-generate-registry-information-for-an-installer.md)  
- Yönetilen bir VSPackage için bir kayıt bildirim oluşturmak üzere RegPkg.exe kullanmayı açıklar.  
+ [Nasıl Yapılır: Bir Yükleyicinin Kayıt Defteri Bilgilerini Oluşturma](../../extensibility/internals/how-to-generate-registry-information-for-an-installer.md)  
+ Yönetilen bir VSPackage için kayıt bildirimi oluşturmak üzere RegPkg.exe nasıl kullanılacağını açıklar.  
   
  [Yükleme Sonrasında çalıştırılması Gereken Komutlar](../../extensibility/internals/commands-that-must-be-run-after-installation.md)  
- VSPackage'ları ile tümleştirme için yükleme sonrası komutları çalıştırılması açıklanmaktadır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ VSPackages ile tümleştirme için yükleme sonrası komutlarının nasıl çalıştırılacağını açıklar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
  [Windows Installer ile VSPackage Kaldırma](../../extensibility/internals/uninstalling-a-vspackage-with-windows-installer.md)  
- Kullanıcılar, VSPackage'ı kaldırdığınızda, yükleyici gerçekleştirmeniz gereken adımlar açıklanmaktadır.  
+ Kullanıcılar VSPackage 'ı kaldırırken yükleyicinizin gerçekleştirmesi gereken adımları açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [VSPackage yükleme](../../misc/installing-vspackages.md)  
- Nasıl oluşturacağınızı ve VSPackages yükleyin ve birden çok sürümü çalıştıran kullanıcılar desteklemek nasıl ele alır, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] aynı anda.
+ [VSPackages yükleme](../../misc/installing-vspackages.md)  
+ VSPackages oluşturma ve yüklemeyi ve aynı anda birden çok sürümünü çalıştıran kullanıcıları desteklemeyi açıklar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .

@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bb72acf2db63e54da8a1ee001d2abfaa30850fc3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592886"
 ---
 # <a name="debugger-user-interface-xslt"></a>Hata ayıklayıcı kullanıcı arabirimi (XSLT)
@@ -33,13 +33,13 @@ Bu sütun, geçerli kapsamdaki tüm yerel değişkenlerin adlarını içerir. D�
 
 Bu sütunda her bir değişken tarafından içerilen değer gösterilir. Öznitelik, işleme yönergesi, açıklama, metin ve CData düğümleri, düğümün metin değerini görüntüler. Ad alanı düğümleri ad alanı URI 'sini görüntüler.
 
-**Türü**
+**Tür**
 
 Bu sütun, **ad** sütununda listelenen her değişkenin veri türünü tanımlar.
 
 Yereller penceresi ayrıca XSLT dönüşümünün bağlamını izleyen önceden tanımlanmış bağlam değişkenlerini de görüntüler. Aşağıdaki tabloda XSLT hata ayıklayıcısı tarafından kullanılan önceden tanımlanmış bağlam değişkenleri açıklanmaktadır.
 
-|Name|Açıklama|
+|Ad|Açıklama|
 |-|-----------------|
 |`last()`|Bağlam boyutu.|
 |`position()`|Bağlam düğümünün bağlam boyutuna göre konumu veya dizin numarası.|
@@ -64,7 +64,7 @@ Kesme noktaları penceresi geçerli projede ayarlanan tüm kesme noktalarını g
 
 Kesme noktaları penceresi diğer Visual Studio hata ayıklayıcıları ile aynı şekilde davranır.
 
-## <a name="watch-window"></a>İzleme penceresi
+## <a name="watch-window"></a>Gözcü penceresi
 
 İzleme penceresi değişkenleri değerlendirmek için kullanılır. Değişkenlerin değerlerini de değiştirebilirsiniz.
 
@@ -82,13 +82,13 @@ Listenin en üstünde yer aldığı bir öğeyi tıklatmak, XSLT yürütme dalı
 
 ## <a name="quickwatch-dialog-box"></a>QuickWatch iletişim kutusu
 
-**Hızlı izleme** iletişim kutusu, XPath 1,0 ifadelerini değerlendirmek için kullanılır. Bağlam düğümü (Yerel öğeler penceresinden `self::node()` düğümü), XPath ifadesinin yürütülmesi için bağlam sağlar. XPath ifadesinin yürütülmesi sonucu izleme penceresi görüntülenir.
+**Hızlı izleme** iletişim kutusu, XPath 1,0 ifadelerini değerlendirmek için kullanılır. Bağlam düğümü ( `self::node()` Yereller penceresinden düğüm) XPath ifadesinin yürütülmesi için bağlam sağlar. XPath ifadesinin yürütülmesi sonucu izleme penceresi görüntülenir.
 
 Aşağıdaki listede XPath ifade değerlendirmesi kısıtlamaları açıklanmaktadır:
 
 - Yalnızca yerleşik XPath işlevlerine izin verilir.
 
-- `document()` ve `key()` gibi yerleşik XSLT işlevlerine izin verilmez.
+- Ve gibi yerleşik XSLT işlevlerine `document()` `key()` izin verilmez.
 
 - Kullanıcı tanımlı işlevlere izin verilmiyor.
 

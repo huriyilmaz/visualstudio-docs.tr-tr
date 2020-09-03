@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yayımlama Sihirbazını kullanarak ClickOnce uygulaması yayımlama | Microsoft Docs'
+title: 'Nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -19,86 +19,86 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7ff519416d874462a86f7e615822d15139fc4726
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65697632"
 ---
 # <a name="how-to-publish-a-clickonce-application-using-the-publish-wizard"></a>Nasıl yapılır: Yayımlama Sihirbazını Kullanarak ClickOnce Uygulaması Yayımlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir ClickOnce uygulamasını kullanıcılar tarafından kullanılabilmesi için bir dosya paylaşımı veya yolu, FTP sunucusu veya çıkarılabilir medya yayımlamanız gerekir. Uygulama Yayımlama Sihirbazı'nı kullanarak yayınlayabilirsiniz; yayımlama ile ilgili ek özellikler kullanılabilir **Yayımla** sayfasının **Proje Tasarımcısı**. Daha fazla bilgi için [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md).  
+ClickOnce uygulamasını kullanıcılar için kullanılabilir hale getirmek için, dosyayı bir dosya paylaşımında veya yolda, FTP sunucusunda veya çıkarılabilir medyada yayımlamanız gerekir. Uygulamayı Yayımlama Sihirbazı 'nı kullanarak yayımlayabilirsiniz; Yayımlama ile ilgili ek özellikler, **Proje Tasarımcısı**' nın **Yayımla** sayfasında bulunabilir. Daha fazla bilgi için bkz. [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md).  
   
- Yayımlama Sihirbazı'nı çalıştırmadan önce yayınlama özelliklerini uygun şekilde ayarlamanız gerekir. ClickOnce uygulamanızı imzalamak için bir anahtar belirlemek istiyorsanız, örneğin, vb. yapabileceğiniz **imzalama** sayfasının **Proje Tasarımcısı**. Daha fazla bilgi için [ClickOnce uygulamalarının güvenliğini sağlama](../deployment/securing-clickonce-applications.md).  
-  
-> [!NOTE]
-> ClickOnce kullanarak bir uygulamanın birden fazla sürüm yüklediğinizde, yükleme uygulamanın önceki sürümlerini belirttiğiniz yayımlama konum arşivinde adlı bir klasöre taşır. Yükleme dizini temizler önceki sürümünden önceki sürümleri bu şekilde korur arşivleme.  
+ Yayımlama Sihirbazı 'nı çalıştırmadan önce, yayımlama özelliklerini uygun şekilde ayarlamanız gerekir. Örneğin, ClickOnce uygulamanızı imzalamak için bir anahtar belirlemek isterseniz, bunu **Proje Tasarımcısı**' nın **imzalama** sayfasında yapabilirsiniz. Daha fazla bilgi için bkz. [ClickOnce uygulamalarının güvenliğini sağlama](../deployment/securing-clickonce-applications.md).  
   
 > [!NOTE]
-> İletişim kutuları ve menü komutları gördüğünüz açıklanana Yardım'da, etkin ayarlarınıza ve sürüm bağlı olarak farklı olabilir. Ayarlarınızı değiştirmek için tıklayın **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+> ClickOnce kullanarak bir uygulamanın birden fazla sürümünü yüklediğinizde yükleme, uygulamanın önceki sürümlerini belirttiğiniz Yayımla konumundaki arşiv adlı bir klasöre taşır. Önceki sürümlerin bu şekilde arşivlenmesi, yükleme dizinini önceki sürümden klasörlerin temizlenmesini önler.  
   
-### <a name="to-publish-to-a-file-share-or-path"></a>Bir dosya paylaşımı ya da yolu yayımlamak için  
+> [!NOTE]
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya sürümüne bağlı olarak yardım bölümünde açıklananlardan farklı bir durum içerebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' na tıklayın. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-1. İçinde **Çözüm Gezgini**, uygulama projesini seçin.  
+### <a name="to-publish-to-a-file-share-or-path"></a>Bir dosya paylaşımında veya yolda yayımlamak için  
   
-2. Üzerinde **derleme** menüsünde tıklatın **Yayımla**`Projectname`.  
+1. **Çözüm Gezgini**, uygulama projesini seçin.  
   
-    Yayınla Sihirbazı görüntülenir.  
+2. **Build** menüsünde Yayımla ' ya tıklayın **Publish** `Projectname` .  
   
-3. İçinde **nerede uygulamayı yayımlamak istiyorsunuz?** sayfasında, geçerli bir FTP sunucusu adresi ya da gösterilen biçimlerden birini kullanarak geçerli dosya yolu girin ve ardından **sonraki**.  
+    Yayımla Sihirbazı görüntülenir.  
   
-4. İçinde **nasıl kullanıcılar uygulamayı yükleyecek?** sayfasında, kullanıcıların nereye uygulamayı yüklemek için konumu seçin:  
+3. **Uygulamayı nerede yayınlamak istiyorsunuz?** sayfasında, gösterilen biçimlerden birini kullanarak GEÇERLI bir FTP sunucu adresi veya geçerli bir dosya yolu girin ve ardından **İleri**' ye tıklayın.  
   
-   - Kullanıcılar Web sitesinden yükleyecekse tıklayın **Web sitesinden** ve önceki adımda girilen dosya yoluna karşılık gelen URL'yi girin. **İleri**'ye tıklayın. (Yayımlama konumu olarak bir FTP adresi belirttiğinizde bu seçenek genellikle kullanılır. FTP üzerinden doğrudan indirme desteklenmiyor. Bu nedenle, bir URL girmeniz gerekir.)  
+4. **Kullanıcılar uygulamayı nasıl yükleyecek?** sayfasında, kullanıcıların uygulamayı yüklemek Için gidecene konum olacağını seçin:  
   
-   - Kullanıcılar, uygulamayı doğrudan dosya paylaşımından yükleyecekse tıklayın **UNC yolu veya dosya paylaşımı**ve ardından **sonraki**. (Bu form c:\deploy\myapp konumlarını yayımlamak için veya \\\server\myapp.)  
+   - Kullanıcılar bir Web sitesinden yükleyeceksiniz, **bir Web sitesinden** öğesine tıklayın ve önceki adımda girilen dosya yoluna karşılık gelen bir URL girin. **İleri**’ye tıklayın. (Bu seçenek genellikle yayımlama konumu olarak bir FTP adresi belirttiğinizde kullanılır. FTP 'den doğrudan indirme desteklenmez. Bu nedenle, buraya bir URL girmeniz gerekir.)  
   
-   - Kullanıcılar çıkarılabilir medyadan yükleyecekse tıklayın **CD-ROM veya DVD-ROM**ve ardından **sonraki**.  
+   - Kullanıcılar uygulamayı doğrudan dosya paylaşımından yükleya, **UNC yolu veya dosya paylaşımından**öğesine tıklayın ve ardından **İleri**' ye tıklayın. (Bu, c:\deploy\myapp veya \\ \server\myappbiçiminde yayımlama konumları içindir.)  
   
-5. Üzerinde **uygulama çevrimdışı kullanılabilir mi?** sayfasında, uygun seçeneği tıklayın:  
+   - Kullanıcılar çıkarılabilir medyadan yüklenecektir, **CD-ROM veya DVD-ROM**' d a n ' ye ve ardından **İleri**' ye tıklayın.  
   
-   - Çalıştırılacak uygulamanın etkinleştirmek istiyorsanız, kullanıcı bağlantısı kesilmiş ağdan, tıklayın **Evet, bu uygulama çevrimiçi veya çevrimdışı kullanılabilir mi**. Bir kısayol **Başlat** menüsünde uygulama için oluşturulur.  
+5. **Uygulama çevrimdışı kullanılabilir mi?** sayfasında, uygun seçeneğe tıklayın:  
   
-   - Uygulamayı doğrudan yayınlama konumundan çalıştırmak isterseniz **Hayır, bu uygulama yalnızca çevrimiçi kullanılabilir**. Bir kısayol **Başlat** menü oluşturulmayacak.  
+   - Kullanıcının ağ bağlantısı kesildiğinde uygulamanın çalıştırılmasını etkinleştirmek istiyorsanız, **Evet, bu uygulama çevrimiçi veya çevrimdışı kullanılabilir olacaktır**. Uygulama için **Başlat** menüsünde bir kısayol oluşturulur.  
   
-     Devam etmek için **İleri** 'ye tıklayın.  
+   - Uygulamayı doğrudan yayımlama konumundan çalıştırmak istiyorsanız Hayır ' a tıklayın **, bu uygulama yalnızca çevrimiçi olarak kullanılabilir**. **Başlat** menüsünde bir kısayol oluşturulmayacak.  
   
-6. Tıklayın **son** uygulamayı yayınlamak için.  
+     Devam etmek için **İleri**'ye tıklayın.  
   
-    Yayımlama durumu, durum bildirim alanında görüntülenir.  
+6. Uygulamayı yayımlamak için **son** ' a tıklayın.  
   
-### <a name="to-publish-to-a-cd-rom-or-dvd-rom"></a>Bir CD-ROM veya DVD-ROM yayımlamak için  
+    Yayımlama durumu durum bildirim alanında görüntülenir.  
   
-1. İçinde **Çözüm Gezgini**, uygulama projesine sağ tıklayıp **özellikleri**.  
+### <a name="to-publish-to-a-cd-rom-or-dvd-rom"></a>Bir CD-ROM veya DVD-ROM ' d e yayımlamak için  
   
-    **Proje Tasarımcısı** görünür.  
+1. **Çözüm Gezgini**, uygulama projesine sağ tıklayın ve **Özellikler**' e tıklayın.  
   
-2. Tıklayın **Yayımla** açmak için sekmesinde **Yayımla** sayfasını **Proje Tasarımcısı**, tıklatıp **Yayımlama Sihirbazı** düğmesi.  
+    **Proje Tasarımcısı** görüntülenir.  
   
-    Yayınla Sihirbazı görüntülenir.  
+2. **Yayımla sekmesine tıklayarak** **Proje tasarımcısında** **Yayımla** sayfasını açın ve **Yayımla Sihirbazı** düğmesine tıklayın.  
   
-3. İçinde **nerede uygulamayı yayımlamak istiyorsunuz?** sayfasında, dosya yolunu veya FTP konumu burada uygulama yayımlanacak, örneğin d:\deploy girin. Ardından **sonraki** devam etmek için.  
+    Yayımla Sihirbazı görüntülenir.  
   
-4. Üzerinde **nasıl kullanıcılar uygulamayı yükleyecek?** sayfasında, gelen bir **CD-ROM veya DVD-ROM**ve ardından **sonraki**.  
+3. **Uygulamayı nerede yayınlamak istiyorsunuz?** sayfasında, uygulamanın yayımlanacağı dosya yolunu veya FTP konumunu girin, örneğin d:\deploy. Sonra devam etmek için **İleri** ' ye tıklayın.  
   
-   > [!NOTE]
-   > Yüklemenin otomatik olarak çalışmasını istiyorsanız, CD-ROM'dan eklenir sürücüsüne açık **Yayımla** sayfasını **Proje Tasarımcısı** tıklatıp **seçenekleri** düğmesini ve ardından **yayımlama seçeneği** seçin **için CD yüklemeleri, CD takıldığında Kurulumu otomatik olarak Başlat**.  
-  
-5. Uygulamanızı CD-ROM üzerinde dağıtırsanız, güncelleştirmeleri bir Web sitesinden sağlamak isteyebilirsiniz. İçinde **burada Uygulama Güncelleştirmeleri denetle?** sayfasında, güncelleştirme bir seçeneği belirleyin:  
-  
-   - Uygulama güncelleştirmeleri denetleyecekse, tıklayın **uygulama aşağıdaki konumdan güncelleştirmelerini denetleyecek** ve burada güncelleştirmeleri denetleyecekse konumu girin. Bu, bir dosya konumu, Web sitesi veya FTP sunucusu olabilir.  
-  
-   - Uygulama güncelleştirmeleri denetlemeyecekse, tıklayın **uygulama güncelleştirmeleri denetlemeyecek**.  
-  
-     Devam etmek için **İleri** 'ye tıklayın.  
-  
-6. Tıklayın **son** uygulamayı yayınlamak için.  
-  
-    Yayımlama durumu, durum bildirim alanında görüntülenir.  
+4. **Kullanıcılar uygulamayı nasıl yükleyecek?** sayfasında, **CD-ROM veya DVD-ROM**' d a n ' ye tıklayın ve ardından **İleri**' ye tıklayın.  
   
    > [!NOTE]
-   > Yayınlama tamamlandıktan sonra CD-ROM veya DVD-ROM medyaya dosyaları belirttiğiniz konuma kopyalamak için DVD-Rewriter adım 3 ya da CD-Rewriter kullanmanız gerekecektir.  
+   > CD-ROM sürücüye takıldığında yüklemenin otomatik olarak çalışmasını istiyorsanız, **Proje Tasarımcısı** ' nda **Yayımla** sayfasını açın ve **Seçenekler** düğmesine tıklayın ve ardından **Yayımlama seçenekleri** sihirbazında, CD **takıldığında kurulumu otomatik olarak Başlat**' ı seçin.  
+  
+5. Uygulamanızı CD-ROM ' d e dağıtırsanız, bir Web sitesinden güncelleştirme sağlamak isteyebilirsiniz. **Uygulamanın güncelleştirmeleri denetlemesi nerede?** sayfasında, bir güncelleştirme seçeneği belirleyin:  
+  
+   - Uygulama güncelleştirmeleri denetliklendiriirse, **uygulama aşağıdaki konumdan güncelleştirmeleri denetler** ve güncelleştirmelerin nakledileceği konumu girer. Bu bir dosya konumu, Web sitesi veya FTP sunucusu olabilir.  
+  
+   - Uygulama güncelleştirmeleri denet, **uygulama güncelleştirmeleri denetmeyecektir**öğesine tıklayın.  
+  
+     Devam etmek için **İleri**'ye tıklayın.  
+  
+6. Uygulamayı yayımlamak için **son** ' a tıklayın.  
+  
+    Yayımlama durumu durum bildirim alanında görüntülenir.  
+  
+   > [!NOTE]
+   > Yayımlama işlemi tamamlandıktan sonra dosyaları adım 3 ' te belirtilen konumdan CD-ROM veya DVD-ROM medyasına kopyalamak için bir CD-Rewriter veya DVD-Rewriter kullanmanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ClickOnce güvenliği ve dağıtımı](../deployment/clickonce-security-and-deployment.md)   

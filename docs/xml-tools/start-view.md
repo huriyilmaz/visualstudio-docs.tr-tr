@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f05c3023a246ba193c98cb1b01984a54fdaa0ebb
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592535"
 ---
 # <a name="start-view"></a>Başlangıç Görünümü
@@ -23,7 +23,7 @@ Başlangıç görünümü iki ana bölüm, *filigran* ve **şema kümesi ayrınt
 
 ![XML şema Tasarımcısı başlangıç görünümü](../xml-tools/media/xsddesigner_startview.gif)
 
-## <a name="watermark"></a>Filigran
+## <a name="watermark"></a>Filigr
 
 Filigran bölmesi, tüm XSD Designer görünümleri, XML Düzenleyicisi ve **XML şema Gezgini**bağlantılarının bir listesini içerir. Şema kümesinde hatalar varsa, listenin sonunda aşağıdaki metin görüntülenir: "küme içindeki hataları görüntülemek ve onarmak için Hata Listesi kullanın."
 
@@ -41,9 +41,9 @@ Başlangıç görünümü etkinken, XSD Tasarımcı araç çubuğunda aşağıda
 
 |Seçenek|Açıklama|
 |-|-----------------|
-|**Başlangıç görünümünü göster**|Başlangıç görünümüne geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl**+**1**.|
-|**Içerik modeli görünümünü göster**|Içerik modeli görünümüne geçiş yapar. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl**+**2**.|
-|**Graf görünümünü göster**|Grafik görünümüne geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl**+**3**.|
+|**Başlangıç görünümünü göster**|Başlangıç görünümüne geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **1**.|
+|**Içerik modeli görünümünü göster**|Içerik modeli görünümüne geçiş yapar. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **2**.|
+|**Graf görünümünü göster**|Grafik görünümüne geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **3**.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

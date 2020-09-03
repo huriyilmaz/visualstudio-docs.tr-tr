@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4af506da822a7f8e38a8952d7c1d0d15fc1995d2
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85468555"
 ---
 # <a name="idiaaddressmapset_addressmap"></a>IDiaAddressMap::set_addressMap
@@ -43,7 +43,7 @@ HRESULT set_addressMap ( 
 
  `imagetoSymbols`
 
-[in] `TRUE` `data`parametresi yeni görüntü düzeninden özgün düzene (hata ayıklama sembolleri tarafından açıklandığı gibi) bir harita tanımlıyorsa. `FALSE`, `data` özgün düzenden alınan yeni görüntü düzenine bir haritadır.
+[in] `TRUE` `data` parametresi yeni görüntü düzeninden özgün düzene (hata ayıklama sembolleri tarafından açıklandığı gibi) bir harita tanımlıyorsa. `FALSE` , `data` özgün düzenden alınan yeni görüntü düzenine bir haritadır.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.

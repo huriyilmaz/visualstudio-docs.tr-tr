@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineCreateEvent2::GetEngine | Microsoft Docs
+title: 'IDebugEngineCreateEvent2:: GetEngine | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 714aadbcdaf84f0d971fc499be8339234471b24f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195765"
 ---
 # <a name="idebugenginecreateevent2getengine"></a>IDebugEngineCreateEvent2::GetEngine
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Yeni oluşturulan hata ayıklama altyapısı (DE) temsil eden nesnesini alır.  
+Yeni oluşturulan hata ayıklama altyapısını (DE) temsil eden nesneyi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetEngine(   
@@ -40,10 +40,10 @@ int GetEngine( 
   
 #### <a name="parameters"></a>Parametreler  
  `pEngine`  
- [out] Döndürür bir [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) yeni oluşturulan DE temsil eden nesne.  
+ dışı Yeni oluşturulan DE öğesini temsil eden bir [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugEngineCreateEvent2](../../../extensibility/debugger/reference/idebugenginecreateevent2.md)   

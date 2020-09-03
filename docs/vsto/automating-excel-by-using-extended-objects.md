@@ -21,14 +21,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 65734f5397bae8c35fb8e312041d0600b8fa84e9
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71254340"
 ---
 # <a name="automate-excel-by-using-extended-objects"></a>Genişletilmiş nesneleri kullanarak Excel 'i otomatikleştirme
-  Visual Studio 'da Excel çözümleri geliştirirken, çözümlerinizde *konak öğelerini* ve *konak denetimini*kullanabilirsiniz. Bunlar, <xref:Microsoft.Office.Interop.Excel.Worksheet> ve <xref:Microsoft.Office.Interop.Excel.Range> nesneleri gibi, Excel nesne modelinde (yani, Excel için birincil birlikte çalışma derlemesi tarafından sunulan nesne modelinde) belirli yaygın kullanılan nesneleri genişleten nesnelerdir. Genişletilmiş nesneler, temel aldığı Excel nesneleri gibi davranır, ancak nesnelere yeni olaylar ve veri bağlama özellikleri gibi ek özellikler ekler.
+  Visual Studio 'da Excel çözümleri geliştirirken, çözümlerinizde *konak öğelerini* ve *konak denetimini*kullanabilirsiniz. Bunlar, ve nesneleri gibi, Excel nesne modelinde (yani, Excel için birincil birlikte çalışma derlemesi tarafından sunulan nesne modelinde) belirli yaygın kullanılan nesneleri genişleten nesnelerdir <xref:Microsoft.Office.Interop.Excel.Worksheet> <xref:Microsoft.Office.Interop.Excel.Range> . Genişletilmiş nesneler, temel aldığı Excel nesneleri gibi davranır, ancak nesnelere yeni olaylar ve veri bağlama özellikleri gibi ek özellikler ekler.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
@@ -45,7 +45,7 @@ ms.locfileid: "71254340"
 
      Tasarım zamanında, Microsoft Office Excel belge düzeyi özelleştirme projenizde yeni bir sayfa olarak bir grafik sayfası eklediğinizde, Visual Studio otomatik olarak bir <xref:Microsoft.Office.Tools.Excel.ChartSheet> konak öğesi oluşturur.
 
-     Bir <xref:Microsoft.Office.Tools.Excel.ChartSheet> konak öğesi Excel 'deki bir çalışma sayfası olsa da, grafik sayfasına herhangi bir denetim ekleyemezsiniz. Grafik içeren bir çalışma sayfasında diğer denetimlere sahip olmak istiyorsanız, bir grafik sayfası kullanmayın. Bunun yerine, <xref:Microsoft.Office.Tools.Excel.Chart> konak denetimini kullanarak bir grafiği çalışma sayfasına katıştırılmış nesne olarak yerleştirebilirsiniz. Daha fazla bilgi için bkz. [Chart Control](../vsto/chart-control.md).
+     Bir <xref:Microsoft.Office.Tools.Excel.ChartSheet> konak öğesi Excel 'deki bir çalışma sayfası olsa da, grafik sayfasına herhangi bir denetim ekleyemezsiniz. Grafik içeren bir çalışma sayfasında diğer denetimlere sahip olmak istiyorsanız, bir grafik sayfası kullanmayın. Bunun yerine, konak denetimini kullanarak bir grafiği çalışma sayfasına katıştırılmış nesne olarak yerleştirebilirsiniz <xref:Microsoft.Office.Tools.Excel.Chart> . Daha fazla bilgi için bkz. [Chart Control](../vsto/chart-control.md).
 
 ## <a name="excel-host-controls"></a>Excel konak denetimleri
  Excel için, çalışma kitaplarını ve çalışma sayfalarını oluşturmanıza, düzenlemenize ve otomatikleştirmenize yardımcı olan birkaç konak denetimi vardır. Bu konak denetimleri, yerel Excel nesne modelindeki karşılıkları olmayan olaylar ve veri bağlama özellikleri sağlar.
@@ -62,15 +62,15 @@ ms.locfileid: "71254340"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl yapılır: ListObject denetimlerini verilerle Doldur](../vsto/how-to-fill-listobject-controls-with-data.md)
-- [Nasıl yapılır: Çalışma sayfalarına Grafik denetimleri ekleme](../vsto/how-to-add-chart-controls-to-worksheets.md)
-- [Nasıl yapılır: Çalışma sayfalarına ListObject denetimleri ekleme](../vsto/how-to-add-listobject-controls-to-worksheets.md)
-- [Nasıl yapılır: Çalışma sayfalarına NamedRange denetimleri ekleme](../vsto/how-to-add-namedrange-controls-to-worksheets.md)
-- [Nasıl yapılır: Çalışma sayfalarına XMLMappedRange denetimleri ekleme](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)
-- [Nasıl yapılır: NamedRange denetimlerini yeniden boyutlandır](../vsto/how-to-resize-namedrange-controls.md)
-- [Nasıl yapılır: ListObject denetimlerini yeniden boyutlandır](../vsto/how-to-resize-listobject-controls.md)
+- [Nasıl yapılır: çalışma sayfalarına Grafik denetimleri ekleme](../vsto/how-to-add-chart-controls-to-worksheets.md)
+- [Nasıl yapılır: çalışma sayfalarına ListObject denetimleri ekleme](../vsto/how-to-add-listobject-controls-to-worksheets.md)
+- [Nasıl yapılır: çalışma sayfalarına NamedRange denetimleri ekleme](../vsto/how-to-add-namedrange-controls-to-worksheets.md)
+- [Nasıl yapılır: çalışma sayfalarına XMLMappedRange denetimleri ekleme](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)
+- [Nasıl yapılır: NamedRange denetimlerinin boyutunu değiştirme](../vsto/how-to-resize-namedrange-controls.md)
+- [Nasıl yapılır: ListObject denetimlerini yeniden boyutlandırma](../vsto/how-to-resize-listobject-controls.md)
 - [Nasıl yapılır: ListObject denetimine yeni bir satır eklendiğinde verileri doğrulama](../vsto/how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control.md)
 - [Nasıl yapılır: ListObject sütunlarını verilerle eşleme](../vsto/how-to-map-listobject-columns-to-data.md)
-- [İzlenecek yol: NamedRange denetiminin olaylarına karşı program](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)
+- [İzlenecek yol: NamedRange denetimi olaylarına karşı programlama](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)
 - [VSTO Eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını çalışma zamanında genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
 - [Office belgelerindeki denetimler](../vsto/controls-on-office-documents.md)
 - [Çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)

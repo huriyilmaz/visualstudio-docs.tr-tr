@@ -1,5 +1,5 @@
 ---
-title: Türleri görsel tasarımcıların gösterme | Microsoft Docs
+title: Türleri görsel tasarımcılara sunma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,40 +13,40 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f4d6c0e163b751f1873fdb941e85c273dcc4fde5
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65691197"
 ---
 # <a name="exposing-types-to-visual-designers"></a>Türleri Görsel Tasarımcıların Kullanımına Sunma
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] sınıfı ve tür tanımlarını tasarım zamanında bir görsel tasarımcı görüntülemek için erişiminiz olmalıdır. Geçerli proje (başvurular ve bunların bağımlılıklarını) tam bağımlılık kümesini içeren derlemeler önceden tanımlanmış kümesinden sınıfları yüklenir. Görsel tasarımcılar için gerekli erişim sınıfları ve özel araçları tarafından oluşturulan dosyaları içinde tanımlanan türler için de olabilir.  
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] görsel bir tasarımcıyı göstermek için tasarım zamanında sınıf ve tür tanımlarına erişimi olmalıdır. Sınıflar, geçerli projenin tüm bağımlılık kümesini (başvurular artı bunların bağımlılıkları) içeren önceden tanımlanmış bir derleme kümesinden yüklenir. Görsel tasarımcılarının özel araçlar tarafından oluşturulan dosyalarda tanımlanan sınıflara ve türlere erişmesi de gerekebilir.  
   
- [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Ve [!INCLUDE[csprcs](../../includes/csprcs-md.md)] proje sistemleri üretilen sınıfları ve türleri, geçici taşınabilir erişmek için destek sağlar yürütülebilir dosyalar (geçici PEs). Böylece türleri Bu derlemelerden yüklenmedi ve tasarımcılar, kullanıma sunulan özel bir araç tarafından oluşturulan herhangi bir dosya geçici bir bütünleştirilmiş kod içine derlenmiş. Her özel aracın çıktısının ayrı bir geçici PE derlenir ve başarısı veya başarısızlığı geçici bu derleme yalnızca olup olmadığını oluşturulan dosyanın derlenebilir üzerinde bağlıdır. Bir proje, bir bütün olarak oluşturulamayabilir olsa da, tek tek geçici PEs tasarımcılar, kullanılabilir olabilir.  
+ [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]Ve [!INCLUDE[csprcs](../../includes/csprcs-md.md)] Proje sistemleri, geçici taşınabilir yürütülebilir dosyalar (geçici pes) aracılığıyla oluşturulan sınıflara ve türlere erişim desteği sağlar. Özel bir araç tarafından oluşturulan herhangi bir dosya, türlerin bu derlemelerden yüklenebilmesi ve tasarımcılara sunulanabilmesi için geçici bir derlemeye derlenebilir. Her bir özel aracın çıkışı ayrı bir geçici PE 'de derlenir ve bu geçici derlemenin başarısı veya başarısızlığı, yalnızca oluşturulan dosyanın derlenebilir olup olmamasına bağlıdır. Bir proje bir bütün olarak derlenmese de, tek tek geçici PEs tasarımcı tarafından kullanılabilir olmaya devam edebilir.  
   
- Bu değişiklikler özel aracın çalıştırmanın sonuçlarını olması koşuluyla proje sistemi bir özel aracı çıkış dosyasına değişiklikleri izlemek için tam destek sağlar. Özel aracın her çalıştırıldığında yeni bir geçici PE oluşturulur ve tasarımcılar, uygun bildirimler gönderilir.  
+ Proje sistemi, özel bir aracın çıkış dosyasında yapılan değişiklikleri izlemek için tam destek sağlar, bu değişiklikler özel aracı çalıştırmanın sonucudur. Özel araç her çalıştırıldığında, yeni bir geçici PE oluşturulur ve uygun bildirimler tasarımcılara gönderilir.  
   
 > [!NOTE]
-> Geçici program oluşturma yürütülebilir dosyası arka planda gerektiğinden, derleme başarısız olursa hata kullanıcıya raporlanır.  
+> Geçici program yürütülebilir oluşturma dosyası arka planda yapıldığından, derleme başarısız olursa kullanıcıya herhangi bir hata bildirilmemiştir.  
   
- Geçici PE destekten yararlanın özel araçlar, aşağıdaki kurallara uymalıdır:  
+ Geçici PE desteğinden faydalanan özel araçlar aşağıdaki kurallara uymalıdır:  
   
-- `GeneratesDesignTimeSource` 1 olarak kayıt defterinde ayarlamanız gerekir.  
+- `GeneratesDesignTimeSource` kayıt defterinde 1 olarak ayarlanmalıdır.  
   
-     Hiçbir programı yürütülebilir dosyanın derleme, bu ayar olmadan gerçekleşir.  
+     Bu ayar olmadan hiçbir program yürütülebilir dosya derlemesi gerçekleşmez.  
   
-- Oluşturulan kodun genel proje ayarı aynı dilde olması gerekir.  
+- Oluşturulan kod, genel proje ayarıyla aynı dilde olmalıdır.  
   
-     Geçici PE ne özel araç istenen uzantı olarak raporlar bağımsız olarak derlenir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> koşuluyla `GeneratesDesignTimeSource` kayıt defterinde 1 olarak ayarlanır. Uzantısı .vb veya .cs .jsl olması gerekmez; Bu uzantıyı olabilir.  
+     Geçici PE, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> `GeneratesDesignTimeSource` kayıt defterinde 1 olarak ayarlanan istenen uzantı olarak özel araç raporlarından bağımsız olarak derlenir. Uzantının. vb,. cs veya. jsl; olması gerekmez. herhangi bir uzantı olabilir.  
   
-- Özel araç tarafından oluşturulan kodu geçerli olması gerekir ve kendi yalnızca başvuruları projedeki mevcut kümesini kullanarak zaman derlemelisiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A> tamamlandıktan yürütülüyor.  
+- Özel araç tarafından oluşturulan kod geçerli olmalıdır ve yalnızca, yürütme tamamlandığında projede bulunan başvuruların kümesi kullanılarak derlenmelidir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A> .  
   
-     Geçici PE derlendiğinde, özel araç çıktısı için derleyici sağlanan yalnızca kaynak dosyası değil. Bu nedenle, bir geçici PE kullanan özel bir araç, diğer dosyalar projesinde bağımsız olarak derlenebilir Çıkış dosyalarını oluşturmanız gerekir.  
+     Geçici bir PE derlendiğinde, derleyiciye sunulan tek kaynak dosya özel araç çıktıdır. Bu nedenle, geçici bir PE kullanan özel bir araç, projedeki diğer dosyalardan bağımsız olarak derlenebilecek çıkış dosyaları üretmelidir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [BuildManager nesnesine giriş](https://msdn.microsoft.com/50080ec2-c1c9-412c-98ef-18d7f895e7fa)   
- [Tek dosya oluşturucular ekleme](../../extensibility/internals/implementing-single-file-generators.md)   
- [Bir projenin varsayılan Namespace belirleme](../../misc/determining-the-default-namespace-of-a-project.md)   
+ [Tek dosya oluşturucularını uygulama](../../extensibility/internals/implementing-single-file-generators.md)   
+ [Projenin varsayılan ad alanını belirleme](../../misc/determining-the-default-namespace-of-a-project.md)   
  [Tek Dosya Oluşturucuları Kaydetme](../../extensibility/internals/registering-single-file-generators.md)

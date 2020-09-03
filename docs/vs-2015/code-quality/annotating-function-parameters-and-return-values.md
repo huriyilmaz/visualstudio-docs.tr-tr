@@ -127,10 +127,10 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 71854388f3fb1c5eaea7d40ed2757af9cecacf1a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543812"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>İşlev Parametrelerini ve Dönüş Değerlerini Açıklama
@@ -187,7 +187,7 @@ Bu makalede basit işlev parametreleri için ek açıklamaların tipik kullanım
   
      `typedef _Null_terminated_ wchar_t *PWSTR; void MyStringCopy(_Out_writes_ (size) PWSTR p1,    _In_ size_t size,    _In_ PWSTR p2);`  
   
-     Bu örnekte, çağıran öğesi için bir arabellek sağlar `size` `p1` .  `MyStringCopy`Bu öğelerin bazılarını geçerli hale getirir. Daha da önemlisi, `_Null_terminated_` üzerindeki ek açıklama, `PWSTR` `p1` durum sonrası için null olarak sonlandırılmış anlamına gelir.  Bu şekilde, geçerli öğe sayısı hala iyi tanımlanmış, ancak belirli bir öğe sayısı gerekli değildir.  
+     Bu örnekte, çağıran öğesi için bir arabellek sağlar `size` `p1` .  `MyStringCopy` Bu öğelerin bazılarını geçerli hale getirir. Daha da önemlisi, `_Null_terminated_` üzerindeki ek açıklama, `PWSTR` `p1` durum sonrası için null olarak sonlandırılmış anlamına gelir.  Bu şekilde, geçerli öğe sayısı hala iyi tanımlanmış, ancak belirli bir öğe sayısı gerekli değildir.  
   
      `_bytes_`Değişken, boyutu öğeler yerine bayt olarak verir. Bunu yalnızca boyut öğe olarak ifade edilemez ' i kullanın.  Örneğin, `char` dizeler `_bytes_` yalnızca kullanan benzer bir işlev ise değişkeni kullanır `wchar_t` .  
   

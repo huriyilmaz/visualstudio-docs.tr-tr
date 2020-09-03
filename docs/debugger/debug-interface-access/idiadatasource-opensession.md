@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b49c90374975865edcac8a94c504e1fa991d711a
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85468506"
 ---
 # <a name="idiadatasourceopensession"></a>IDiaDataSource::openSession
@@ -47,7 +47,7 @@ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürü
 ## <a name="remarks"></a>Açıklamalar
 Bu yöntem bir veri kaynağı için bir [IDiaSession](../../debugger/debug-interface-access/idiasession.md) nesnesi açar.
 
-`IDiaSession`nesneler veri kaynağına sorguları uygular. Bir oturum, her hata ayıklama sembolleri kümesi için bir adres alanını yönetir. Veri kaynağı sembolleri tarafından tanımlanan. exe veya. dll dosyası birden çok adres aralığında etkin ise (örneğin, birden çok işlem yüklendiği için), her bir adres aralığı için bir oturum kullanılmalıdır.
+`IDiaSession` nesneler veri kaynağına sorguları uygular. Bir oturum, her hata ayıklama sembolleri kümesi için bir adres alanını yönetir. Veri kaynağı sembolleri tarafından tanımlanan. exe veya. dll dosyası birden çok adres aralığında etkin ise (örneğin, birden çok işlem yüklendiği için), her bir adres aralığı için bir oturum kullanılmalıdır.
 
 ## <a name="example"></a>Örnek
 
@@ -62,6 +62,6 @@ if (FAILED(hr))
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)
-- [Genel bakış](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)
+- [Genel Bakış](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [.Pdb Dosyasını Sorgulama](../../debugger/debug-interface-access/querying-the-dot-pdb-file.md)

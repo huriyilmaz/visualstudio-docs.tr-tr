@@ -21,29 +21,29 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f98b99a31d9215d661879aa7fa52d4b671024496
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72738162"
 ---
 # <a name="debugging-native-code"></a>Yerel Kodda Hata Ayıklama
 Bu bölümde, yerel uygulamalar için bazı yaygın hata ayıklama sorunları ve teknikleri ele alınmaktadır. Bu bölümde ele alınan teknikler, üst düzey tekniklerdir. Visual Studio hata ayıklayıcısını kullanmanın mekanizması için bkz. [ilk olarak hata ayıklayıcıya](../debugger/debugger-feature-tour.md)bakın.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [Nasıl yapılır: Iyileştirilmiş kodda hata ayıklama](../debugger/how-to-debug-optimized-code.md) , Özel olarak en iyi duruma getirilmiş kodda hata ayıklama için ipuçları, hata ayıklama ve sürüm yapılandırmalarının varsayılan iyileştirme ayarları ve yalnızca iyileştirilmiş kodda görünen hataları bulmaya yönelik ipuçları sağlar (açılıyor Hata ayıklama yapı yapılandırmasında iyileştirme).
+ [Nasıl yapılır: Iyileştirilmiş kodda hata ayıklama](../debugger/how-to-debug-optimized-code.md) En iyi duruma getirilmiş kodda hata ayıklama için ipuçları, özellikle de programın en iyi duruma getirilmiş bir sürümünde hata ayıklamanızın yanı sıra hata ayıklama ve sürüm yapılandırmalarının varsayılan iyileştirme ayarlarını ve yalnızca iyileştirilmiş kodda (bir hata ayıklama yapı yapılandırmasında en iyi duruma getirmeyi etkinleştirerek) görünen hataları bulmaya yönelik ipuçları verir.
 
- [DebugBreak ve __debugbreak](../debugger/debugbreak-and-debugbreak.md) Win32 `DebugBreak` işlevini açıklar ve Platform SDK 'sında başvuru konusuna bir bağlantı sağlar. Ayrıca `__debugbreak` iç öğesini açıklar.
+ [DebugBreak ve __debugbreak](../debugger/debugbreak-and-debugbreak.md) Win32 işlevini açıklar `DebugBreak` ve Platform SDK 'sında başvuru konusuna bir bağlantı sağlar. Ayrıca, iç öğesini açıklar `__debugbreak` .
 
- [C/C++ ](../debugger/c-cpp-assertions.md) onaylar Onaylama deyimlerini, bunların nasıl çalıştığını, bunları kullanmanın avantajlarını (mantık hatalarını yakalama, bir işlemin sonuçlarını kontrol etmeyi ve hata koşullarını test etmeyi), `_DEBUG` ile etkileşimini ve [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] desteklenen onayların türlerini açıklar.
+ [C/C++ Onayları](../debugger/c-cpp-assertions.md) Onaylama deyimlerini, bunların nasıl çalıştığını, bunları kullanmanın avantajlarını (mantık hatalarını yakalama, bir işlemin sonuçlarını kontrol etmeyi ve hata koşullarını test etmeyi), ile etkileşimini `_DEBUG` ve ' de desteklenen onayların türlerini açıklar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
  [Nasıl yapılır: satır Içi derleme kodunda hata ayıklama](../debugger/how-to-debug-inline-assembly-code.md) Kayıt içeriğini görüntülemek ve bu pencereler hakkındaki konuların bağlantılarını sağlamak üzere derleme yönergelerini ve Yazmaçları penceresini görüntülemek için ayrıştırma penceresini kullanma hakkında kısa yönergeler sağlar.
 
  [MFC hata ayıklama teknikleri](../debugger/mfc-debugging-techniques.md) MFC programları için hata ayıklama tekniklerine bağlantı sağlar: afxDebugBreak, Izleme makrosu, MFC 'de bellek sızıntılarını algılama, MFC onayları ve MFC hata ayıklama derlemeleri boyutunu azaltma.
 
- [CRT hata ayıklama teknikleri](../debugger/crt-debugging-techniques.md) CRT hata ayıklama kitaplığı, raporlama makroları, malloc ve _malloc_dbg arasındaki farklılıklar, hata ayıklama kanca işlevleri ve CRT hata ayıklama yığını gibi C çalışma zamanı kitaplığı için hata ayıklama tekniklerine bağlantı sağlar.
+ [CRT hata ayıklama teknikleri](../debugger/crt-debugging-techniques.md) CRT hata ayıklama kitaplığı, raporlama için makrolar, malloc ve _malloc_dbg arasındaki farklılıklar, hata ayıklama kanca işlevleri yazma ve CRT hata ayıklama yığını gibi, C çalışma zamanı kitaplığı için hata ayıklama tekniklerine bağlantı sağlar.
 
- [Yerel kod SSS hatalarını ayıklama](../debugger/debugging-native-code-faqs.md) Programlarda hata ayıklama C++ hakkında sık sorulan soruların yanıtlarını sağlar
+ [Yerel kod SSS hatalarını ayıklama](../debugger/debugging-native-code-faqs.md) C++ programlarında hata ayıklama hakkında sık sorulan soruların yanıtlarını sağlar
 
  [Com ve ActiveX hata ayıklaması](../debugger/com-and-activex-debugging.md) Com ve ActiveX hata ayıklaması için kullanabileceğiniz araçlar da dahil olmak üzere COM ve ActiveX uygulamalarının hatalarını ayıklama hakkında bilgi sağlar.
 
@@ -52,7 +52,7 @@ Bu bölümde, yerel uygulamalar için bazı yaygın hata ayıklama sorunları ve
  [Izlenecek yol: paralel uygulamada hata ayıklama](../debugger/walkthrough-debugging-a-parallel-application.md) Paralel bir uygulamada hata ayıklamak için **paralel görevler** ve **Paralel Yığınlar** araç pencerelerinin nasıl kullanılacağını açıklar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [Projeleri hata ayıklamaya C++ hazırlama](../debugger/debugging-preparation-visual-cpp-project-types.md) C++ proje şablonları tarafından oluşturulan yerel proje türlerinde hata ayıklama yapılacağını betimleyen konuların bağlantılarını sağlar.
+ [C++ projelerinde hata ayıklamaya hazırlanma](../debugger/debugging-preparation-visual-cpp-project-types.md) C++ proje şablonları tarafından oluşturulan yerel proje türlerinde hata ayıklamanın nasıl yapılacağını betimleyen konuların bağlantılarını sağlar.
 
  [DLL projelerinde hata ayıklama](../debugger/debugging-dll-projects.md) Yerel ve yönetilen DLL 'Lerde hata ayıklama hakkında bilgi sağlar.
 
@@ -60,5 +60,5 @@ Bu bölümde, yerel uygulamalar için bazı yaygın hata ayıklama sorunları ve
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
-- [Visual Studio’da hata ayıklama](../debugger/index.yml)
+- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Visual Studio'da Hata Ayıklama](../debugger/index.yml)

@@ -9,10 +9,10 @@ ms.workload:
 - multiple
 author: TerryGLee
 ms.openlocfilehash: 77d1318dbdb23516902523e9c7865dad781cb06b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75593043"
 ---
 # <a name="unsupported-debugging-scenarios-in-the-workflow-designer"></a>İş Akışı Tasarımcısında desteklenmeyen hata ayıklama senaryoları
@@ -29,7 +29,7 @@ ms.locfileid: "75593043"
 
 - Windows Workflow Foundation (WF) daha önceki sürümlerinde oluşturulan iş akışları .NET Framework 4 veya sonraki sürümlerde ayıklanamaz.
 
-- Kesme noktaları, etkinlikler veya <xref:System.Activities.Statements.Flowchart> düğümleri arasındaki bağlantılarda tanımlanamaz.
+- Kesme noktaları, etkinlikler veya düğümler arasındaki bağlantılarda tanımlanamaz <xref:System.Activities.Statements.Flowchart> .
 
 - Pano hata ayıklama sırasında kullanılamaz.
 
@@ -49,8 +49,8 @@ ms.locfileid: "75593043"
 
   - İşlev
 
-  - Veri
+  - Veriler
 
-  - İşlem
+  - İşleme
 
   - Ayrıştırılmış koda git

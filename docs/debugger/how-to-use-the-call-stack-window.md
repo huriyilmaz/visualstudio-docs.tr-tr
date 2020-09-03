@@ -30,10 +30,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: aa91807459ea5c2d8f576891d0eafc35336347bc
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85348750"
 ---
 # <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-debugger"></a>Çağrı yığınını görüntüleyin ve hata ayıklayıcıda çağrı yığını penceresini kullanın
@@ -66,7 +66,7 @@ Kullanıcı dışı kod, [yalnızca kendi kodum](../debugger/just-my-code.md) et
 
 `[<External Code>]`
 
-## <a name="switch-to-another-stack-frame-change-the-debugger-context"></a><a name="bkmk_switch"></a>Başka bir yığın çerçevesine geç (hata ayıklayıcı bağlamını değiştirin)
+## <a name="switch-to-another-stack-frame-change-the-debugger-context"></a><a name="bkmk_switch"></a> Başka bir yığın çerçevesine geç (hata ayıklayıcı bağlamını değiştirin)
 
 1. **Çağrı yığını** penceresinde, kod ve verilerini görüntülemek istediğiniz yığın çerçevesine sağ tıklayın.
 
@@ -110,7 +110,7 @@ Visual Studio Enterprise (yalnızca) ' de, hata ayıklarken çağrı yığını 
 
 - **Çağrı yığını** penceresine sağ tıklayıp **göster \<**_the information that you want_**> **' i ayarlayın veya temizleyin.
 
-## <a name="load-symbols-for-a-module-c-c-visual-basic-f"></a><a name="bkmk_symbols"></a>Modül için yükleme sembolleri (C#, C++, Visual Basic, F #)
+## <a name="load-symbols-for-a-module-c-c-visual-basic-f"></a><a name="bkmk_symbols"></a> Modül için yükleme sembolleri (C#, C++, Visual Basic, F #)
 
 **Çağrı yığını** penceresinde, şu anda yüklü sembolleri olmayan kod için hata ayıklama sembolleri yükleyebilirsiniz. Bu semboller .NET veya Microsoft ortak sembol sunucularından indirilen sistem sembolleri veya hata ayıkladığınız bilgisayardaki bir sembol yolundaki semboller olabilir.
 

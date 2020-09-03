@@ -19,10 +19,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1edb7ceae1ba187b01b92d64ca33d41d83364e72
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662381"
 ---
 # <a name="options-text-editor-basic-visual-basic"></a>Seçenekler, Metin Düzenleyici, Temel (Visual Basic)
@@ -30,7 +30,7 @@ ms.locfileid: "72662381"
 
 **Seçenekler** (**Araçlar** menüsü) iletişim kutusunun **metin düzenleyici** klasörünün **temel** klasöründe **vb 'ye özgü** Özellik sayfası aşağıdaki özellikleri içerir:
 
- **Son yapıların otomatik eklenmesi** Örneğin, bir yordam bildiriminin ilk satırı, `Sub Main—`and ENTER tuşuna bastığınızda, metin düzenleyici eşleşen bir `End Sub` satırı ekler. Benzer şekilde, bir [for](https://msdn.microsoft.com/library/f5fc0d51-67ce-4c36-9f09-31c9a91c94e9) döngüsü eklerseniz, metin düzenleyici eşleşen bir `Next` ifadesini ekler. Bu seçenek belirlendiğinde, kod Düzenleyicisi bitiş yapısını otomatik olarak ekler.
+ **Son yapıların otomatik eklenmesi** Örneğin, bir yordam bildiriminin ilk satırını yazın `Sub Main—` ve ENTER tuşuna basarsanız, metin düzenleyici eşleşen bir `End Sub` satır ekler. Benzer şekilde, bir [for](https://msdn.microsoft.com/library/f5fc0d51-67ce-4c36-9f09-31c9a91c94e9) döngüsü eklerseniz, metin düzenleyici eşleşen bir `Next` ifade ekler. Bu seçenek belirlendiğinde, kod Düzenleyicisi bitiş yapısını otomatik olarak ekler.
 
  **Kodu düzgün listeleme (yeniden biçimlendirme)** Metin düzenleyici, kodunuzu uygun şekilde yeniden biçimlendirir. Bu seçenek belirlendiğinde, kod Düzenleyicisi şu şekilde olur:
 
@@ -38,7 +38,7 @@ ms.locfileid: "72662381"
 
 - Büyük/küçük anahtar sözcükler, değişkenler ve nesneler doğru durumda
 
-- @No__t_1 bildirimine eksik `Then` ekleme
+- Deyime eksik ekleme `Then` `If...Then`
 
 - İşlev çağrılarına parantez Ekle
 
@@ -50,7 +50,7 @@ ms.locfileid: "72662381"
 
   **Anahat oluşturma modunu etkinleştir** Kod düzenleyicisinde bir dosya açtığınızda, belgeyi anahat modunda görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [anahat oluşturma](../../ide/outlining.md) . Bu seçenek belirlendiğinde, bir dosyayı açtığınızda anahat oluşturma özelliği etkinleştirilir.
 
-  **Arabirim ve MustOverride üyelerinin otomatik olarak eklenmesi** Bir sınıf için bir `Implements` ifadesini veya bir `Inherits` ifadesini kaydettiğinizde, metin düzenleyici sırasıyla uygulanması veya geçersiz kılınabilmesi gereken Üyeler için prototipler ekler.
+  **Arabirim ve MustOverride üyelerinin otomatik olarak eklenmesi** `Implements` Bir sınıf için bir ifadeyi veya bir `Inherits` ifadeyi kaydettiğinizde, metin düzenleyici sırasıyla uygulanması veya geçersiz kılınabilmesi gereken Üyeler için prototipler ekler.
 
   **Yordam satırı ayırıcılarını göster** Metin Düzenleyicisi, yordamların görsel kapsamını gösterir. Aşağıdaki tabloda listelenen konumlarda projenizin. vb kaynak dosyalarında bir çizgi çizilir:
 
@@ -62,7 +62,7 @@ ms.locfileid: "72662381"
 
  **Hata düzeltme önerilerini etkinleştir** Metin Düzenleyicisi ortak hatalara çözümler önerebilir ve daha sonra kodunuza uygulanan uygun düzeltmeyi seçmenizi sağlayabilir.
 
- **Başvuruların ve anahtar sözcüklerin vurgulanmasını etkinleştir** Metin Düzenleyicisi, bir simgenin tüm örneklerini veya `If..Then`, `While...End While` veya `Try...Catch...Finally` gibi bir yan tümcedeki tüm anahtar sözcükleri vurgulayabilir. CTRL + SHIFT + aşağı ok veya CTRL + SHIFT + yukarı ok tuşlarına basarak vurgulanan başvurular veya anahtar sözcükler arasında gezinebilirsiniz.
+ **Başvuruların ve anahtar sözcüklerin vurgulanmasını etkinleştir** Metin Düzenleyicisi, veya gibi bir yan tümcedeki bir sembolün veya tüm anahtar sözcüklerin tüm örneklerini vurgulayabilir `If..Then` `While...End While` `Try...Catch...Finally` . CTRL + SHIFT + aşağı ok veya CTRL + SHIFT + yukarı ok tuşlarına basarak vurgulanan başvurular veya anahtar sözcükler arasında gezinebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Genel, ortam, Seçenekler Iletişim kutusu](../../ide/reference/general-environment-options-dialog-box.md) [seçenekleri, metin düzenleyici, tüm diller, sekmeler](../../ide/reference/options-text-editor-all-languages-tabs.md)

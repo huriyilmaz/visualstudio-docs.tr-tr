@@ -11,34 +11,34 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 650082ab0e4f8576b7028b8011c88bf5d93b2afd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75593102"
 ---
 # <a name="throw-activity-designer"></a>Throw Etkinlik Tasarımcısı
 
-**Throw** etkinlik Tasarımcısı <xref:System.Activities.Statements.Throw> etkinlik oluşturmak ve yapılandırmak için kullanılır.
+**Throw** etkinlik Tasarımcısı, etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.Throw> .
 
 ## <a name="the-throw-activity"></a>Throw etkinliği
 
-<xref:System.Activities.Statements.Throw> etkinliği bir özel durum oluşturur.
+<xref:System.Activities.Statements.Throw>Etkinlik bir özel durum oluşturur.
 
 ### <a name="using-the-throw-activity-designer"></a>Throw etkinlik tasarımcısını kullanma
 
 **Araç kutusunun** **hata işleme** kategorisindeki **throw** etkinlik tasarımcısına erişin.
 
-**Throw** etkinlik Tasarımcısı **araç kutusundan** sürüklenip İş Akışı Tasarımcısı yüzeyine, örneğin <xref:System.Activities.Statements.Sequence>içinde olduğu gibi, her yerde bırakılmış olarak bırakılabilir. Bu, varsayılan throw **DisplayName** 'i olan bir <xref:System.Activities.Statements.Throw> etkinliği oluşturur. <xref:System.Activities.Activity.DisplayName%2A> değeri, **throw** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir. <xref:System.Activities.Statements.Throw.Exception%2A> özelliği, özellik kılavuzunda düzenlenmelidir.
+**Throw** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, içindeki gibi etkinliklerin genellikle yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . Bu <xref:System.Activities.Statements.Throw> , throw öğesinin varsayılan **DisplayName** ile bir etkinlik oluşturur. <xref:System.Activities.Activity.DisplayName%2A>Değer, **throw** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir. Özellik, özellik <xref:System.Activities.Statements.Throw.Exception%2A> kılavuzunda düzenlenmelidir.
 
 ### <a name="the-throw-properties"></a>Throw özellikleri
 
-Aşağıdaki tabloda <xref:System.Activities.Statements.Throw> özellikleri gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır.
+Aşağıdaki tabloda <xref:System.Activities.Statements.Throw> Özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.Throw> etkinliğinin isteğe bağlı kolay adını belirtir. Varsayılan değer throw ' dir.|
-|<xref:System.Activities.Statements.Throw.Exception%2A>|Doğru|Throw özel durumu. Bu özel durum <xref:System.Exception>türetmelidir. Özel durumu belirtmek için, özellik kılavuzuna bir Visual Basic ifadesi yazın.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin isteğe bağlı kolay adını belirtir <xref:System.Activities.Statements.Throw> . Varsayılan değer throw ' dir.|
+|<xref:System.Activities.Statements.Throw.Exception%2A>|Doğru|Throw özel durumu. Bu özel durumun türevi olması gerekir <xref:System.Exception> . Özel durumu belirtmek için, özellik kılavuzuna bir Visual Basic ifadesi yazın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

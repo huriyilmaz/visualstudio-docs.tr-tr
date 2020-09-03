@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Kod değişikliklerini durdurma | Microsoft Docs'
+title: 'Nasıl yapılır: kod değişikliklerini durdurma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -21,28 +21,28 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 739538d82a478f182c06de0e34b13f8a1bd2b2e0
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65690056"
 ---
-# <a name="how-to-stop-code-changes"></a>Nasıl yapılır: Kod değişikliklerini durdurma
+# <a name="how-to-stop-code-changes"></a>Nasıl Yapılır: Kod Değişikliklerini Durdurma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Düzenle ve devam ederken kod değişikliklerini uygulama sürecinde, işlemi durdurabilirsiniz.  
+Düzenle ve devam et, kod değişikliklerini uygulama sürecinde olduğunda, işlemi durdurabilirsiniz.  
   
 > [!CAUTION]
-> Yönetilen kodda kod değişikliklerini durdurma beklenmeyen sonuçlara neden olabilir. Yönetilen kodda kod değişikliklerini durdurma gerek seyrek olduğundan yönetilen kod için değişiklikler uygulanırken normal olarak bir hızlı işlemdir.  
+> Yönetilen koddaki kod değişikliklerinin durdurulması beklenmeyen sonuçlar verebilir. Yönetilen koda yapılan değişiklikleri uygulamak normalde hızlı bir işlemdir. bu nedenle, Yönetilen koddaki kod değişikliklerini durdurmanız nadiren gerekir.  
   
-### <a name="to-stop-applying-code-changes"></a>Kod değişiklikleri uygulanırken durdurmak için  
+### <a name="to-stop-applying-code-changes"></a>Kod değişikliklerini uygulamayı durdurmak için  
   
-- Seçin **kod değişikliklerini uygulamayı Durdur'u** gelen **hata ayıklama** menüsü.  
+- **Hata ayıklama** menüsünden **kod değişikliklerini uygulamayı durdur** ' ı seçin.  
   
-  Bu menü öğesi, yalnızca kod değişiklikleri uygulanıyor bile görülebilir.  
+  Bu menü öğesi yalnızca kod değişiklikleri uygulanırken görülebilir.  
   
-  Bu seçeneği seçerseniz, hiçbir kod değişikliği kabul edilir.  
+  Bu seçeneği belirlerseniz, kod değişikliklerinden hiçbiri yürütülmedi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Düzenle ve devam et](../debugger/edit-and-continue.md)   
- [Düzenle ve devam et, hata ayıklama, Seçenekler iletişim kutusu](https://msdn.microsoft.com/library/009d225f-ef65-463f-a146-e4c518f86103)
+ [Düzenle ve devam et, hata ayıklama, Seçenekler Iletişim kutusu](https://msdn.microsoft.com/library/009d225f-ef65-463f-a146-e4c518f86103)
