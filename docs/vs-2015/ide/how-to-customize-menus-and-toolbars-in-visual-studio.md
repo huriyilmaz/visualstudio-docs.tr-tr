@@ -29,10 +29,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 500debe6faa62079c6a93185bac409e7a3bf2813
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667999"
 ---
 # <a name="how-to-customize-menus-and-toolbars-in-visual-studio"></a>Nasıl Yapılır: Visual Studio'da Menüleri ve Araç Çubuklarını Özelleştirme
@@ -53,7 +53,7 @@ Araç çubuklarını ve menü çubuğundaki menüleri ekleyip kaldırmanın yan�
 
 - [Menüyü veya araç çubuğunu sıfırlama](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#bkmk_reset)
 
-## <a name="bkmk_addmenu"></a>Menü çubuğuna menü ekleme, kaldırma veya taşıma
+## <a name="adding-removing-or-moving-a-menu-on-the-menu-bar"></a><a name="bkmk_addmenu"></a> Menü çubuğuna menü ekleme, kaldırma veya taşıma
 
 1. Menü çubuğunda **Araçlar**, **Özelleştir**' i seçin.
 
@@ -69,7 +69,7 @@ Araç çubuklarını ve menü çubuğundaki menüleri ekleyip kaldırmanın yan�
 
     - Menü çubuğundaki menüyü taşımak için, **denetimler** listesinden menüyü seçin ve ardından **Yukarı taşı** veya **aşağı taşı** düğmesini seçin.
 
-## <a name="bkmk_addtoolbar"></a>Araç çubuğunu ekleme, kaldırma veya taşıma
+## <a name="adding-removing-or-moving-a-toolbar"></a><a name="bkmk_addtoolbar"></a> Araç çubuğunu ekleme, kaldırma veya taşıma
 
 1. Menü çubuğunda **Araçlar**, **Özelleştir**' i seçin.
 
@@ -93,7 +93,7 @@ Araç çubuklarını ve menü çubuğundaki menüleri ekleyip kaldırmanın yan�
         > [!NOTE]
         > Araç çubuklarının kullanılabilirliğini ve erişilebilirliğini geliştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: IDE erişilebilirlik seçeneklerini ayarlama](../ide/reference/how-to-set-ide-accessibility-options.md).
 
-## <a name="bkmk_customize"></a>Menüyü veya araç çubuğunu özelleştirme
+## <a name="customizing-a-menu-or-a-toolbar"></a><a name="bkmk_customize"></a> Menüyü veya araç çubuğunu özelleştirme
 
 1. Menü çubuğunda **Araçlar**, **Özelleştir**' i seçin.
 
@@ -115,7 +115,7 @@ Araç çubuklarını ve menü çubuğundaki menüleri ekleyip kaldırmanın yan�
 
     - Komutları gruplara ayırmak için, **denetimler** listesinde bir komut seçin, **Seçimi Değiştir** düğmesini seçin ve açılan menüden **bir Grup Başlat** ' ı seçin.
 
-## <a name="bkmk_reset"></a>Menüyü veya araç çubuğunu sıfırlama
+## <a name="resetting-a-menu-or-a-toolbar"></a><a name="bkmk_reset"></a> Menüyü veya araç çubuğunu sıfırlama
 
 1. Menü çubuğunda **Araçlar**, **Özelleştir**' i seçin.
 

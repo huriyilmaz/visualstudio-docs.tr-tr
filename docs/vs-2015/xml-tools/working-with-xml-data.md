@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a1692403d61c99febd30fe3829e5fadd7dd1c51a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669508"
 ---
 # <a name="working-with-xml-data"></a>XML Verileriyle Çalışma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-XML ve ilgili teknolojiler, verilerin [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio 'da işlendiği şekilde büyük bir rol oynar. Visual Studio, XML, XSLT ve XML şemaları ile çalışmayı kolaylaştıran araçlar ve özellikler içerir.
+XML ve ilgili teknolojiler, verilerin Visual Studio 'da işlendiği şekilde büyük bir rol oynar [!INCLUDE[msCoName](../includes/msconame-md.md)] . Visual Studio, XML, XSLT ve XML şemaları ile çalışmayı kolaylaştıran araçlar ve özellikler içerir.
 
 ## <a name="xml-editor"></a>XML Düzenleyicisi
  XML Düzenleyicisi, XML belgelerini düzenlemek için kullanılır. Tam XML 1,0 sözdizimi denetimi, yazarken şema doğrulama, renk kodlaması ve IntelliSense sağlar. Bir şema veya belge türü tanımı sağlanmışsa, IntelliSense tarafından izin verilen öğeleri ve öznitelikleri listelemek için kullanılır.

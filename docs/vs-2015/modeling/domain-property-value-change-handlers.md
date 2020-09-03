@@ -12,21 +12,21 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 69ebcc264eb3caa68fa0dfd2998613a7c9037b2e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669778"
 ---
 # <a name="domain-property-value-change-handlers"></a>Etki Alanı Özellik Değeri Değişiklik İşleyicileri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Etki alanına özgü bir dilde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], bir etki alanı özelliğinin değeri değiştiğinde, `OnValueChanging()` ve `OnValueChanged()` yöntemleri etki alanı özelliği işleyicisinde çağrılır. Değişikliğe yanıt vermek için bu yöntemleri geçersiz kılabilirsiniz.
+Etki alanına [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] özgü bir dilde, bir etki alanı özelliğinin değeri değiştiğinde, `OnValueChanging()` ve `OnValueChanged()` yöntemleri etki alanı özelliği işleyicisinde çağrılır. Değişikliğe yanıt vermek için bu yöntemleri geçersiz kılabilirsiniz.
 
 ## <a name="overriding-the-property-handler-methods"></a>Özellik Işleyici yöntemlerini geçersiz kılma
  Etki alanına özgü dilinizin her etki alanı özelliği, üst etki alanı sınıfının içinde iç içe yerleştirilmiş bir sınıf tarafından işlenir. Adı *PropertyName*propertyhandler biçimini izler. Bu özellik işleyicisi sınıfını **Dsl\generated Code\DomainClasses.cs**dosyasında inceleyebilirsiniz. Sınıfında, `OnValueChanging()` değer değiştirilmeden hemen önce çağrılır ve `OnValueChanged()` değer değiştirildikten hemen sonra çağrılır.
 
- Örneğin, `Text` adlı bir dize etki alanı özelliği ve `TextLengthCount` adlı bir tamsayı özelliği olan `Comment` adlı bir etki alanı sınıfınız olduğunu varsayalım. @No__t_0 her zaman `Text` dizesinin uzunluğunu içermesine neden olmak için aşağıdaki kodu DSL projesindeki ayrı bir dosyaya yazabilirsiniz:
+ Örneğin, adında bir `Comment` dize alanı özelliği ve adlı bir tamsayı özelliği olan adlı bir etki alanı sınıfınız olduğunu varsayalım `Text` `TextLengthCount` . `TextLengthCount`Her zaman dize uzunluğunu içermesine neden olmak için `Text` aşağıdaki kodu DSL projesindeki ayrı bir dosyaya yazabilirsiniz:
 
 ```
 // Domain Class "Comment":
@@ -61,9 +61,9 @@ public partial class Comment
 
 - Hesaplanan ve özel depolama alanı özelliklerinde OnValueChanged ve OnValueChanging yöntemleri yok.
 
-- Yeni değeri değiştirmek için bir değişiklik işleyicisi kullanamazsınız. Bunu yapmak istiyorsanız, örneğin değeri belirli bir aralıkla kısıtlamak için bir `ChangeRule` tanımlayın.
+- Yeni değeri değiştirmek için bir değişiklik işleyicisi kullanamazsınız. Bunu yapmak istiyorsanız, örneğin değeri belirli bir aralığa kısıtlamak için bir tanımlayın `ChangeRule` .
 
-- Bir ilişkinin rolünü temsil eden bir özelliğe değişiklik işleyicisi ekleyemezsiniz. Bunun yerine, ilişki sınıfında bir `AddRule` ve bir `DeleteRule` tanımlayın. Bu kurallar, bağlantılar oluşturulduğunda veya değiştirildiğinde tetiklenir. Daha fazla bilgi için bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).
+- Bir ilişkinin rolünü temsil eden bir özelliğe değişiklik işleyicisi ekleyemezsiniz. Bunun yerine, `AddRule` ilişki sınıfında bir ve bir tanımlayın `DeleteRule` . Bu kurallar, bağlantılar oluşturulduğunda veya değiştirildiğinde tetiklenir. Daha fazla bilgi için bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).
 
 ### <a name="changes-in-and-out-of-the-store"></a>Mağaza içindeki ve çıkan değişiklikler
  Özellik işleyici yöntemleri değişikliği Başlatan işlemin içinde çağırılır. Bu nedenle, yeni bir işlem açmadan mağazada daha fazla değişiklik yapabilirsiniz. Değişiklikleriniz ek işleyici çağrılarına neden olabilirler.
@@ -99,7 +99,7 @@ if (newValue > 10)
 
  Bunun yerine, türetilmiş özelliği hesaplanmış bir özellik olarak tanımlamayı düşünebilirsiniz. Bu durumda, özelliği kendi kendine depolamayı içermez ve değeri her gerektiğinde değerlendirilir. Daha fazla bilgi için bkz. [hesaplanan ve özel depolama özellikleri](../modeling/calculated-and-custom-storage-properties.md).
 
- Önceki örnek yerine, `TextLengthCount` **türü** alanını DSL tanımında **hesaplanacak** şekilde ayarlayabilirsiniz. Bu etki alanı özelliği için kendi **Get** yönteminizi sağlarsınız. **Get** yöntemi `Text` dizesinin geçerli uzunluğunu döndürür.
+ Önceki örnek yerine, ' nin **tür** alanını `TextLengthCount` DSL tanımında **hesaplanacak** şekilde ayarlayabilirsiniz. Bu etki alanı özelliği için kendi **Get** yönteminizi sağlarsınız. **Get** yöntemi, dizenin geçerli uzunluğunu döndürür `Text` .
 
  Ancak, hesaplanan özelliklerin potansiyel bir dezavantajı, ifadenin değeri her kullanıldığında, bir performans sorunu oluşturabilecek şekilde değerlendirilmesidir. Ayrıca, bir hesaplanmış özellikte OnValueChanging () ve OnValueChanged () yoktur.
 
@@ -144,8 +144,8 @@ public partial class MyDomainModel
 
 ## <a name="example"></a>Örnek
 
-### <a name="description"></a>Açıklama
- Aşağıdaki örnek, bir etki alanı özelliğinin özellik işleyicisini geçersiz kılar ve `ExampleElement` alan sınıfı için bir özellik değiştiğinde kullanıcıya bildirir.
+### <a name="description"></a>Description
+ Aşağıdaki örnek, bir etki alanı özelliğinin özellik işleyicisini geçersiz kılar ve etki alanı sınıfı için bir özellik değiştiğinde kullanıcıya bildirir `ExampleElement` .
 
 ### <a name="code"></a>Kod
 

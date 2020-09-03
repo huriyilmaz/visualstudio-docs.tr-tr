@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryContext2::Karşılaştır | Microsoft Dokümanlar
+title: 'IDebugMemoryContext2:: Compare | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,16 +17,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4b2551f8554d96186b90a1eed97a5a48ec5f0405
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727497"
 ---
 # <a name="idebugmemorycontext2compare"></a>IDebugMemoryContext2::Compare
-Bellek bağlamını, verilen dizideki her bağlamla karşılaştırma bayraklarıyla gösterilen şekilde karşılaştırır ve eşleşen ilk bağlamın dizinini döndürer.
+, Eşleşen ilk bağlamın bir dizinini döndürürken, belirtilen dizide bulunan her bir bağlamla bellek bağlamını karşılaştırır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT Compare( 
@@ -48,22 +48,22 @@ int Compare(
 
 ## <a name="parameters"></a>Parametreler
 `compare`\
-[içinde] Karşılaştırma türünü belirleyen [CONTEXT_COMPARE](../../../extensibility/debugger/reference/context-compare.md) numaralandırma değeri.
+'ndaki [CONTEXT_COMPARE](../../../extensibility/debugger/reference/context-compare.md) numaralandırmasından karşılaştırma türünü belirleyen bir değer.
 
 `rgpMemoryContextSet`\
-[içinde] Karşılaştırılması gereken [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) nesnelerine yapılan bir dizi başvuru.
+'ndaki Karşılaştırılacak [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) nesnelerine başvuru dizisi.
 
 `dwMemoryContextSetLen`\
-[içinde] `rgpMemoryContextSet` Dizideki bağlam ların sayısı.
+'ndaki Dizideki bağlamların sayısı `rgpMemoryContextSet` .
 
 `pdwMemoryContext`\
-[çıkış] Karşılaştırmayı tatmin eden ilk bellek bağlamının dizinini döndürür.
+dışı Karşılaştırmayı karşılayan ilk bellek bağlamının dizinini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür. İki `E_COMPARE_CANNOT_COMPARE` bağlam karşılaştırılamıyorsa döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. `E_COMPARE_CANNOT_COMPARE`İki bağlamlar karşılaştırılamamışsa döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Hata ayıklama altyapısı (DE) karşılaştırmalar her türlü desteklemek zorunda değildir, `CONTEXT_EQUAL` `CONTEXT_LESS_THAN`ancak `CONTEXT_GREATER_THAN` `CONTEXT_SAME_SCOPE`en az desteklemesi gerekir , , ve .
+ Bir hata ayıklama altyapısının (de) tüm karşılaştırma türlerini desteklemesi gerekmez, ancak en az `CONTEXT_EQUAL` , ve ' ı desteklemesi gerekir `CONTEXT_LESS_THAN` `CONTEXT_GREATER_THAN` `CONTEXT_SAME_SCOPE` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

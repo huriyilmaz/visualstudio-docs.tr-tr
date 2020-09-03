@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 487105350fe5c62a9451bccc5713c6506c76bf1f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669697"
 ---
 # <a name="embedding-a-diagram-in-a-windows-form"></a>Windows Forms'a Diyagram Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_0 penceresinde görünen bir Windows denetimine DSL diyagramı ekleyebilirsiniz.
+Bir DSL diyagramını pencerede görüntülenen bir Windows denetimine ekleyebilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 ## <a name="embedding-a-diagram"></a>Diyagram katıştırma
 
@@ -75,7 +75,7 @@ ms.locfileid: "72669697"
 
 #### <a name="updating-the-form-using-store-events"></a>Mağaza olaylarını kullanarak formu güncelleştirme
 
-1. Form tasarımcısında `listBox1` adlı bir **ListBox** ekleyin. Bu, modeldeki öğelerin bir listesini görüntüler. *Mağaza olayları*kullanılarak modeliyle eşitlenmiş olarak tutulur. Daha fazla bilgi için bkz. [olay Işleyicileri değişiklikleri model dışında yayma](../modeling/event-handlers-propagate-changes-outside-the-model.md).
+1. Form tasarımcısında adlı bir **ListBox** ekleyin `listBox1` . Bu, modeldeki öğelerin bir listesini görüntüler. *Mağaza olayları*kullanılarak modeliyle eşitlenmiş olarak tutulur. Daha fazla bilgi için bkz. [olay Işleyicileri değişiklikleri model dışında yayma](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
 2. Özel kod dosyasında, DocView sınıfına yönelik diğer yöntemleri geçersiz kılın:
 
@@ -149,7 +149,7 @@ ms.locfileid: "72669697"
 
     ```
 
-4. DSL 'yi test etmek için F5 tuşuna basın ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] deneysel örneğinde, örnek bir model dosyası açın.
+4. DSL 'yi test etmek için F5 tuşuna basın ve deneysel örneğinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , örnek bir model dosyası açın.
 
      Liste kutusunda modeldeki öğelerin bir listesi gösterildiğine ve herhangi bir ekleme veya silme işleminden sonra, geri alma ve yineleme sonrasında doğru olduğundan emin olun.
 

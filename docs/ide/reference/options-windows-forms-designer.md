@@ -1,5 +1,5 @@
 ---
-title: Seçenekler, Windows Formlar Tasarımcısı, Genel
+title: Seçenekler, Windows Form Tasarımcısı, genel
 ms.date: 08/09/2019
 ms.topic: reference
 f1_keywords:
@@ -11,51 +11,51 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 2a72b27dc2277501d0e0957c8b89b551f4d6852d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75568067"
 ---
-# <a name="options-dialog-box-windows-forms-designer"></a>Seçenekler iletişim kutusu: Windows Forms Designer
+# <a name="options-dialog-box-windows-forms-designer"></a>Seçenekler iletişim kutusu: Windows Form Tasarımcısı
 
-Windows Forms Designer seçenekleri sayfası, Visual Studio'daki Windows Forms Designer'ın ızgaraları ve diğer özellikleri için tercihleri ayarlamanızı sağlar. **Araçlar** menüsünden **Seçenekler** iletişim kutusunu açın.
+Windows Form Tasarımcısı seçenekleri sayfası, Visual Studio 'daki Windows Form Tasarımcısı kılavuzlar ve diğer özellikler için tercihleri ayarlamanıza olanak sağlar. **Araçlar** menüsünden **Seçenekler** iletişim kutusunu açın.
 
-## <a name="code-generation-settings"></a>Kod Oluşturma Ayarları
+## <a name="code-generation-settings"></a>Kod oluşturma ayarları
 
-**Optimize Edilmiş Kod Oluşturma**\
-En iyi duruma getirilmiş kod oluşturmayı sağlar. Bazı denetimler bu modla uyumlu olmayabilir. Bu değişikliğin etkili olabilmesi için Visual Studio'nun kapatılması ve yeniden açılması gerekir.
+**İyileştirilmiş kod oluşturma**\
+İyileştirilmiş kod oluşturmayı sunar. Bazı denetimler bu modla uyumlu olmayabilir. Bu değişikliğin etkili olması için Visual Studio 'Nun kapatılıp yeniden açılması gerekir.
 
-## <a name="high-dpi-support"></a>Yüksek DPI Desteği
+## <a name="high-dpi-support"></a>Yüksek DPı desteği
 
-**DPI Ölçekleme Bildirimleri**\
-Visual Studio'yı %100 ölçeklemeyle yeniden başlatabilen bir iletiyi Windows Form Tasarımcısı'nda gösterin. Daha fazla bilgi için [Visual Studio'da DPI bilinirliğini devre dışı dışı](/dotnet/framework/winforms/disable-dpi-awareness-visual-studio)kınla.
+**DPı ölçeklendirme bildirimleri**\
+Windows form tasarımcısında, Visual Studio 'Yu %100 ölçeklendirmeyle yeniden başlatabileceği bir ileti gösterin. Daha fazla bilgi için bkz. [Visual Studio 'DA DPI tanımayı devre dışı bırakma](/dotnet/framework/winforms/disable-dpi-awareness-visual-studio).
 
-## <a name="layout-settings"></a>Düzen Ayarları
+## <a name="layout-settings"></a>Düzen ayarları
 
-**Varsayılan Grid Hücre Boyutu**\
-Pikseller halinde, tasarımcıdaki yatay ve dikey ızgaralar arasındaki aralığı ayarlar. Varsayılan boyut 8, 8'dir. Maksimum boyut 200, 200.
+**Varsayılan Kılavuz hücre boyutu**\
+Tasarımcıda yatay ve dikey kılavuz çizgileri arasındaki boşluğu piksel cinsinden ayarlar. Varsayılan boyut 8, 8 ' dir. En büyük boyut 200, 200 ' dir.
 
-**Düzen Modu**\
-Düzen için kullanılacak hizalama sistemini belirtir. SnapToGrid veya Snaplines'i seçebilirsiniz.
+**Düzen modu**\
+Düzen için kullanılacak hizalama sistemini belirtir. SnapToGrid veya snaplines seçeneklerinden birini belirleyebilirsiniz.
 
-**Izgarayı Göster**\
-Tasarımcıların boyutlandırma ızgarasını gösterip göstermediğini belirtir. Varsayılan olarak, ızgara açıktır.
+**Kılavuzu göster**\
+Tasarımcıların boyutlandırma kılavuzunu görüntüleyip görüntülememediğini belirtir. Varsayılan olarak, kılavuz açık olur.
 
-**Izgara yaslama**\
-Tasarımcıların nesneleri ve denetimleri ızgaraya tutturup tutturmayacağını belirler. Başka bir deyişle, tasarımcıdaki öğelerin yeniden boyutlandırılması ve hareketi, bu özellik açık olduğunda GridSize artışla sınırlandırılmıştır. SnapToGrid'in açık olması, kullanıcı arabiriminin çeşitli yönlerini tam olarak hizalamayı kolaylaştırır, ancak denetimleri yerleştirebilmek için özgürlüğü sınırlar. Varsayılan olarak, SnapToGrid açık.
+**Kılavuza yasla**\
+Tasarımcıların nesneleri ve denetimleri kılavuza yapışıp uydurmayacağını belirler. Diğer bir deyişle, tasarımcıda öğelerin yeniden boyutlandırılması ve taşınması, bu özellik açık olduğunda GridSize artıcıyla sınırlıdır. SnapToGrid 'in açık olması, Kullanıcı arabiriminin çeşitli yönlerini kesin bir şekilde yerleştirmeyi kolaylaştırır, ancak bir denetimin yerleştirebileceği özgürlüğü kısıtlar. Varsayılan olarak, SnapToGrid açıktır.
 
-## <a name="object-bound-smart-tag-settings"></a>Nesne Ciltli Akıllı Etiket Ayarları
+## <a name="object-bound-smart-tag-settings"></a>Nesne ile bağlantılı akıllı etiket ayarları
 
-**Akıllı Etiketleri Otomatik Olarak Aç**\
-Denetimlerin ve bileşenlerin akıllı etiketleri gösterip göstermediğini belirler. Tüm denetimler ve bileşenler akıllı etiketleri desteklemez.
+**Akıllı etiketleri otomatik olarak aç**\
+Denetimlerin ve bileşenlerin Akıllı Etiketler görüntüleyip görüntülemediğini belirler. Tüm denetimler ve bileşenler akıllı etiketleri desteklemez.
 
 ## <a name="refactoring"></a>Yeniden Düzenle
 
-**Yeniden Adlandırma'da Yeniden Düzenlemeyi Etkinleştir**\
-Özellikler penceresinden veya Belge Anahat penceresinden bir bileşeni yeniden `true`adlandırdığınızda, yeniden adlandırma işlemi gerçekleştirilir.
+**Yeniden adlandırma sırasında yeniden düzenlemeyi etkinleştir**\
+Olarak ayarlandığında `true` , Özellikler penceresi veya belge anahattı penceresinden bir bileşeni yeniden adlandırdığınızda yeniden adlandırma yeniden düzenleme işlemi gerçekleştirilir.
 
 ## <a name="toolbox"></a>Araç Kutusu
 
-**Araç Kutusunu Otomatik Olarak Doldur**\
-Araç Kutusu penceresinin proje tarafından oluşturulmuş bileşenler ve denetimlerle otomatik olarak doldurulup doldurulmadığını belirler.
+**Araç kutusunu otomatik olarak doldur**\
+Araç kutusu penceresinin, proje tarafından oluşturulan bileşenler ve denetimlerle otomatik olarak doldurulup doldurulmayacağını belirler.

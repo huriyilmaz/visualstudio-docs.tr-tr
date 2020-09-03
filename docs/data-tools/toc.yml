@@ -1,4 +1,4 @@
-- name: Genel bakış
+- name: Genel Bakış
   href: accessing-data-in-visual-studio.md
 - name: Öğreticiler
   items:
@@ -20,7 +20,7 @@
       href: visual-studio-data-tools-for-dotnet.md
     - name: Entity Framework araçları
       href: entity-data-model-tools-in-visual-studio.md
-    - name: DataSets
+    - name: Veri Kümeleri
       items:
         - name: Veri Kümesi araçları
           href: dataset-tools-in-visual-studio.md
@@ -36,7 +36,7 @@
       href: n-tier-data-applications-overview.md
 - name: Nasıl yapılır kılavuzları
   items:
-    - name: Veritabanı Oluşturma
+    - name: Veritabanı oluşturma
       href: create-a-sql-database-by-using-a-designer.md
     - name: Bağlantılar
       items:
@@ -50,7 +50,7 @@
       href: add-new-data-sources.md
     - name: LINQ to SQL araçları
       items:
-        - name: Genel bakış
+        - name: Genel Bakış
           displayName: LINQ to SQL tools
           href: linq-to-sql-tools-in-visual-studio2.md
         - name: Bir DataContext metodunun dönüş türünü değiştirme
@@ -105,7 +105,7 @@
           href: validate-data-in-datasets.md
         - name: Verileri yeniden veritabanına kaydetme
           items:
-            - name: Genel bakış
+            - name: Genel Bakış
               displayName: Save data to database
               href: save-data-back-to-the-database.md
             - name: Veritabanına yeni kayıtlar ekleme

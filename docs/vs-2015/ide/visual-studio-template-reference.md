@@ -13,23 +13,23 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8a3e522d7c38a7f2d8b3c1614aa66bcf840e16ff
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666567"
 ---
 # <a name="visual-studio-template-reference"></a>Visual Studio Şablon Başvurusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Aşağıdaki bağlantılar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] proje ve öğe şablonlarının farklı yönleri hakkında başvuru bilgileri sağlar.
+Aşağıdaki bağlantılar, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Proje ve öğe şablonlarının farklı yönleri hakkında başvuru bilgileri sağlar.
 
 ## <a name="in-this-section"></a>Bu Bölümde
  [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md) . Vstemplate dosyalarında kullanılan XML öğelerini açıklar.
 
  [Şablon parametreleri](../ide/template-parameters.md) Proje ve öğe şablonları için kullanılabilen parametreleri açıklar.
 
- <xref:Microsoft.VisualStudio.TemplateWizard>, <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> arabirimini ve ilgili türleri açıklar.
+ <xref:Microsoft.VisualStudio.TemplateWizard><xref:Microsoft.VisualStudio.TemplateWizard.IWizard>Arabirimi ve ilgili türleri açıklar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
  [Nasıl Yapılır: Proje Şablonları Oluşturma](../ide/how-to-create-project-templates.md)

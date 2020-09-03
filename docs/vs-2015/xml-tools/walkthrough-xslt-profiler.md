@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f7ee6665aea98edf7cb701f5fdfe07d293887bac
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669534"
 ---
 # <a name="walkthrough-xslt-profiler"></a>İzlenecek Yol: XSLT Profil Oluşturucusu
@@ -21,7 +21,7 @@ ms.locfileid: "72669534"
 
 XSLT Profiler, XSLT kodundaki performansla ilgili sorunları ölçmenize, değerlendirmenize ve hedefleyecek ayrıntılı XSLT performans raporları oluşturur. XSLT Profiler, XSL ve XSLT stil sayfası iyileştirmeleri için yararlı ipuçları içerir. En yüksek performansı talep eden XSLT uygulamaları için bu araç gerekli olabilir.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Aşağıdaki izlenecek yol için Visual Studio 2010 and.NET Framework sürüm 4,0 gerekir. XSLT Profiler yalnızca Profil Oluşturma Araçları yüklü Microsoft Visual Studio Team System ile kullanılabilir.
 
 ### <a name="create-the-performance-report"></a>Performans raporu oluşturma
@@ -64,7 +64,7 @@ XSLT Profiler, XSLT kodundaki performansla ilgili sorunları ölçmenize, değer
 
     - **Dışlamalı uygulama süresi**
 
-    - **Çağrı sayısı**
+    - **Çağrı Sayısı**
 
 5. Tüm zaman sütunları mutlak değerlerde ve yüzdede görüntülenir. **Dışlamalı** terim, bu işlevin yürütülmesi sırasında çağrılan diğer işlevler tarafından harcanan sürenin dışlayarak yürütülmesi için harcanan toplam süreyi ifade eder.
 
@@ -82,7 +82,7 @@ XSLT Profiler, XSLT kodundaki performansla ilgili sorunları ölçmenize, değer
 
     - **Tarafından çağrılan işlevler** : belirli bir işlev tarafından çağrılan tüm işlevler, görünümün alt bölümünde listelenir.
 
-3. @No__t_0 adlı bir işlev görünümün orta kısmında görünürse, `SyncToNavigator` işlevi çağıran tüm işlevler, görünümün en üst kısmında görünür ve `SyncToNavigator` tarafından çağrılan tüm işlevler görünümün alt bölümünde görünür.
+3. Adında bir işlev, `SyncToNavigator` görünümün orta kısmında görünürse, işlevi çağıran tüm işlevler `SyncToNavigator` görünümün en üst kısmında görünür ve tarafından çağrılan tüm işlevler `SyncToNavigator` görünümün alt bölümünde görünür.
 
 4. Görünümün orta bölümündeki işlevini, görünümün diğer iki bölümünde listelenen işlevlerden herhangi birine çift tıklayarak değiştirebilirsiniz. Daha sonra Görünüm, değişiklikleri otomatik olarak yansıtacak şekilde güncelleştirilir.
 

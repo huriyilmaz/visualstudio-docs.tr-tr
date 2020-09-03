@@ -11,10 +11,10 @@ manager: crdun
 ms.workload:
 - multiple
 ms.openlocfilehash: 0e0f589ae3c6daa48a9bea6d8a0b561d7b8de337
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88801600"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio 'da platformlar arası mobil geliştirme
@@ -31,7 +31,7 @@ Bir oyun veya derinlikli grafik uygulaması oluşturmak istiyorsanız, Unity iç
 
 Xamarin için Visual Studio Araçları, aynı çözümde Android, iOS ve Windows 'u hedefleyebilir, kod ve hatta Kullanıcı arabirimini de kullanabilirsiniz.
 
-|**Daha fazla bilgi**|
+|**Daha fazla bilgi edinin**|
 |--------------------|
 |[Visual Studio 'yu](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com) yükler|
 |[Visual Studio 'Da Xamarin hakkında bilgi edinin](https://visualstudio.microsoft.com/xamarin/) (VisualStudio.com)|
@@ -64,7 +64,7 @@ Xamarin için Visual Studio Araçları, aynı çözümde Android, iOS ve Windows
 
  Kodunuzu paylaşılan bir proje, taşınabilir bir sınıf kitaplığı projesi veya her ikisini kullanarak paylaşabilirsiniz. Bazı kodların paylaşılan bir projede en iyi şekilde uyduğunu fark edebilirsiniz ve bazı kodlar taşınabilir bir sınıf kitaplığı projesi içinde daha anlamlı hale gelir.
 
-|**Daha fazla bilgi**|
+|**Daha fazla bilgi edinin**|
 |--------------------|
 |[Kod seçeneklerini paylaşma](/xamarin/cross-platform/app-fundamentals/code-sharing/) (Xamarin) |
 |[.NET ile kod paylaşma seçenekleri](/dotnet/standard/cross-platform/) |
@@ -77,7 +77,7 @@ Xamarin için Visual Studio Araçları, aynı çözümde Android, iOS ve Windows
 
  Evrensel Windows Platformu (UWP) uygulama projesi şablonuyla başlayın. Sayfalarınızı görsel olarak tasarlayın ve sonra çeşitli cihaz türleri için nasıl göründüğünü görmek için bunları bir önizleme penceresinde açın. Bir sayfada bir sayfanın nasıl göründüğünü beğenmezseniz, ekran boyutu, çözünürlüğü veya yatay veya dikey mod gibi çeşitli yönlerin daha iyi sığması için sayfayı en iyi hale getirebilirsiniz. Tüm bunları, Visual Studio 'da sezgisel araç pencerelerini ve kolayca erişilebilen menü seçeneklerini kullanarak yapabilirsiniz. Uygulamanızı çalıştırmaya ve kodunuzda ilerlemenize hazırsanız, **Standart** araç çubuğunda bulunan bir açılan listede farklı cihaz türleri için cihaz öykünücülerini ve simülatörleri tümünü bulacaksınız.
 
-|**Daha fazla bilgi**|
+|**Daha fazla bilgi edinin**|
 |--------------------|
 |[Evrensel Windows Platformu giriş](/windows/uwp/get-started/universal-application-platform-guide)|
 |[İlk uygulamanızı oluşturma](/windows/uwp/get-started/your-first-app)|
@@ -106,7 +106,7 @@ Xamarin için Visual Studio Araçları, aynı çözümde Android, iOS ve Windows
 
  Evrensel Windows Platformu (UWP) uygulamaları oluşturmaya yönelik proje şablonları, Visual Studio 'da kullanılmaya devam etmektedir, ancak yalnızca Windows cihazlarını hedeflemesini planlıyorsanız bunları kullanabilirsiniz. Android ve iOS 'ı daha sonra hedeflemek isterseniz, kodunuzun her zaman bir Cordova projesine bağlantı noktası oluşturabilirsiniz.
 
-|**Daha fazla bilgi**|
+|**Daha fazla bilgi edinin**|
 |--------------------|
 |[Visual Studio 'yu](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com) yükler|
 |[Apache Cordova için Visual Studio Araçları kullanmaya başlama](/visualstudio/cross-platform/tools-for-cordova/)|
@@ -138,7 +138,7 @@ Xamarin için Visual Studio Araçları, aynı çözümde Android, iOS ve Windows
 
  Bu kitaplıklara kod yazarken, Android ve Windows platformlarının yerel API 'Lerini araştırmak için IntelliSense 'i kullanabilirsiniz. Bu kitaplık projeleri Visual Studio hata ayıklayıcıyla tamamen tümleşiktir; böylece kesme noktaları ayarlayabilir, kod içinde adım adım ilerleyerek ve hata ayıklayıcının tüm gelişmiş özelliklerini kullanarak sorunları bulabilir ve giderebilmenizi sağlayabilirsiniz.
 
-|**Daha fazla bilgi**|
+|**Daha fazla bilgi edinin**|
 |--------------------|
 |[Visual Studio 'Yu indirin](https://visualstudio.microsoft.com/downloads/) (VisualStudio.com)|
 |[C++ ile platformlar arası mobil geliştirmeyi yükleme](/cpp/cross-platform/install-visual-cpp-for-cross-platform-mobile-development)|
@@ -157,7 +157,7 @@ Xamarin için Visual Studio Araçları, aynı çözümde Android, iOS ve Windows
 
  Unity için Visual Studio Araçları (VSTU) ile, Visual Studio 'Yu kullanarak C# dilinde oyun ve düzenleyici betikleri yazabilir ve ardından hataları bulmak ve onarmak için güçlü hata ayıklayıcıyı kullanabilirsiniz. VSTU 'nın en son sürümü Unity 2018,1 için destek sağlar ve Unity 'nin ShaderLab gölgelendirici dili için sözdizimi renklendirme, Unity ile daha zengin hata ayıklama ve tek davranış Sihirbazı için geliştirilmiş kod oluşturma ile daha iyi eşitleme içerir. VSTU Ayrıca Unity proje dosyalarınızı, konsol iletilerinizi ve oyununuzu Visual Studio 'ya başlatabilmenizi sağlayarak, kod yazarken Unity düzenleyicisine geçiş yapmayı daha az zaman harcamanıza olanak tanır.
 
-|**Daha fazla bilgi**|
+|**Daha fazla bilgi edinin**|
 |--------------------|
 |[Visual Studio ile Unity oyunları oluşturma hakkında daha fazla bilgi edinin](https://visualstudio.microsoft.com/vs/features/game-development/#tab-4b0d0be8de5f65564ad)|
 |[Unity için Visual Studio Araçları hakkında daha fazla bilgi edinin](../cross-platform/visual-studio-tools-for-unity.md) |

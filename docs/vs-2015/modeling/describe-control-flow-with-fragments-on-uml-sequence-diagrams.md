@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 40f48891107c2eb3250b6b050e00c3650812d386
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669810"
 ---
 # <a name="describe-control-flow-with-fragments-on-uml-sequence-diagrams"></a>Denetim akışını UML sıralı diyagramlarında parçalarla açıklama
@@ -102,31 +102,31 @@ UML sıralı diyagramında, *Birleşik parçalar* döngüleri, dalları ve diğe
     > [!NOTE]
     > Farklı türlerde Birleşik parçaların farklı özellikleri vardır.
 
-## <a name="KindsOfFragment"></a>Birleşik parça türleri
+## <a name="kinds-of-combined-fragment"></a><a name="KindsOfFragment"></a> Birleşik parça türleri
 
 ### <a name="fragments-describing-control-flow"></a>Denetim akışını açıklayan parçalar
  Basit bir sıra diyagramı yalnızca bir adet tipik sırayı gösterir. Farklı durumlarda gerçekleşebileceği çeşitlemeleri anlatmak için aşağıdaki Birleşik parça türlerini kullanabilirsiniz.
 
-|Parça türü|Açıklama|
+|Parça türü|Description|
 |-------------------|-----------------|
 |**Et**|İsteğe bağlı. Gerçekleşebilen veya gerçekleşmeyecek bir diziyi barındırır. Koruma, altında gerçekleştiği koşulu belirtebilirsiniz.|
 |**Alternatif**|Alternatif ileti dizilerini içeren parçaların bir listesini içerir. Her gün yalnızca bir sıra oluşur.<br /><br /> Her parçaya, hangi koşulun çalıştırılacağını göstermek için bir koruyucu koyabilirsiniz. Diğer bir koruyucu **, başka bir** koruyucu doğru değilse çalışması gereken bir parçayı gösterir. Tüm korumalara yanlışı varsa ve **başka**bir yoksa, parçaların hiçbiri yürütülür.|
 |**Gerçekleştirmek**|Parça birkaç kez yinelenir. Koruma sırasında tekrarlanacak koşulu belirtebilirsiniz.<br /><br /> Döngü Birleşik parçaları **Min** ve **Max**özelliklerine sahiptir; bu, parçanın tekrarlanma sürebileceği en düşük ve en yüksek sayıyı gösterir. Varsayılan değer kısıtlama değildir.|
 |**Sonundan**|Bu parça yürütülürse, sıranın geri kalanı terk edilir. Break 'in gerçekleşeceği koşulu belirtmek için Guard 'ı kullanabilirsiniz.|
 |**İ**|Dir. Parçalardaki olaylar araya eklenebilir.|
-|**Başlatma**|Bir par veya Seq parçası içinde kullanılır. Bu parçadaki iletilerin diğer iletilerle birlikte aralanmamış olması gerektiğini gösterir.|
+|**Kritik**|Bir par veya Seq parçası içinde kullanılır. Bu parçadaki iletilerin diğer iletilerle birlikte aralanmamış olması gerektiğini gösterir.|
 |**Sıra**|İki veya daha fazla işlenen parçası var. Aynı yaşam çizgisini içeren iletiler parçalar sırasıyla gerçekleşmelidir. Aynı yaşam çizgilerini içermeyen, farklı parçalardan iletiler paralel olarak eklenebilir.|
-|**Sert**|İki veya daha fazla işlenen parçası var. Parçalar verilen sırada gerçekleşmelidir.|
+|**Katı**|İki veya daha fazla işlenen parçası var. Parçalar verilen sırada gerçekleşmelidir.|
 
 ### <a name="fragments-about-how-to-interpret-the-sequence"></a>Sıranın nasıl yorumlanacağı hakkında parçalar
  Varsayılan olarak, sıralı diyagram, gerçekleşebileceğini bir dizi mesaj bildirir. Çalışan sistemde, diyagramda göstermeyi seçmediğiniz başka iletiler olabilir.
 
  Bu yorumu değiştirmek için aşağıdaki parça türleri kullanılabilir.
 
-|Parça türü|Açıklama|
+|Parça türü|Description|
 |-------------------|-----------------|
 |**Seçmeyi**|Bu parçanın açıkladığı iletilerin bir listesini belirtir. Diğer iletiler çalışan sistemde gerçekleşebilir, ancak bu açıklamanın amaçları için önemli değildir.<br /><br /> **Iletileri messages** özelliğine yazın.|
-|**Yoksay**|Bu parçanın betimleyen iletilerinin listesi. Bunlar çalışan sistemde gerçekleşebilir, ancak bu açıklamanın amaçları için önemli değildir.<br /><br /> **Iletileri messages** özelliğine yazın.|
+|**Yoksayma**|Bu parçanın betimleyen iletilerinin listesi. Bunlar çalışan sistemde gerçekleşebilir, ancak bu açıklamanın amaçları için önemli değildir.<br /><br /> **Iletileri messages** özelliğine yazın.|
 |**Vermediğini**|İşlenen parçası yalnızca geçerli dizileri belirtir. Genellikle bir dikkate alma veya yoksayma parçası içinde kullanılır.|
 |**Neg**|Bu parçada gösterilen sıra gerçekleşmemelidir. Genellikle bir dikkate alma veya yoksayma parçası içinde kullanılır.|
 

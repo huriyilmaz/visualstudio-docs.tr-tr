@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 657bb91295134352fb00649ad06f59e34593c578
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669911"
 ---
 # <a name="define-packages-and-namespaces"></a>Paketleri ve ad alanlarını tanımlama
@@ -47,18 +47,18 @@ Visual Studio 'da, bir *paket* sınıflar, kullanım örnekleri ve BILEŞENLER g
 
  [Paketlerin özellikleri](#Properties)
 
-## <a name="Namespaces"></a>Öznitelikleri
+## <a name="namespaces"></a><a name="Namespaces"></a> Öznitelikleri
  Paketler, çalışmayı farklı alanlara ayırmak için faydalıdır. Her paket, farklı paketlerde tanımlanmış adların birbirleriyle çakışmaması için bir ad alanı tanımlar.
 
- Her öğenin tam ad özelliği, ait olduğu paketin tam adı ve öğenin kendi adı gelir. Örneğin, paketiniz `MyPackage` çağrılırsa, paket içindeki bir sınıf `MyPackage::MyClass` gibi nitelikli bir ada sahip olur. Her öğe bir model içinde bulunduğundan, her nitelikli ad modelin adıyla başlar.
+ Her öğenin tam ad özelliği, ait olduğu paketin tam adı ve öğenin kendi adı gelir. Örneğin, paketiniz çağrılırsa `MyPackage` , paket içindeki bir sınıf gibi nitelikli bir ada sahip olur `MyPackage::MyClass` . Her öğe bir model içinde bulunduğundan, her nitelikli ad modelin adıyla başlar.
 
  Model ayrıca bir ad alanını tanımlar, böylece bir modeldeki her öğenin tam adı modelin adıyla başlar.
 
- Diğer model öğeleri de ad alanlarını tanımlar. Örneğin, bir işlem üst sınıfı tarafından tanımlanan ad alanına ait olduğundan, tam adı `MyModel ::MyPackage ::MyClass ::MyOperation` gibidir. Aynı şekilde, bir eylem, üst etkinliği tarafından tanımlanan ad alanına aittir.
+ Diğer model öğeleri de ad alanlarını tanımlar. Örneğin, bir işlem kendi üst sınıfı tarafından tanımlanan ad alanına ait olduğundan, tam adı benzer olur `MyModel ::MyPackage ::MyClass ::MyOperation` . Aynı şekilde, bir eylem, üst etkinliği tarafından tanımlanan ad alanına aittir.
 
  Paketler kapsayıcılardır. Bir paketi taşırsanız veya silerseniz, sınıflar, paketler ve içinde tanımlanan diğer şeyler da taşınır veya silinir. Aynı, ad alanlarını tanımlayan diğer öğelerin aynısını de doğrudur.
 
-## <a name="Packages"></a>Paketleri oluşturma ve görüntüleme
+## <a name="creating-and-viewing-packages"></a><a name="Packages"></a> Paketleri oluşturma ve görüntüleme
  Bir UML sınıf diyagramında veya UML Model Gezgini ' nde bir paket oluşturabilirsiniz.
 
 #### <a name="to-create-a-package-in-a-uml-class-diagram"></a>UML sınıf diyagramında bir paket oluşturmak için
@@ -97,7 +97,7 @@ Visual Studio 'da, bir *paket* sınıflar, kullanım örnekleri ve BILEŞENLER g
     > [!NOTE]
     > Bu, paketin bu diyagramda bir görünümünü oluşturur. Paketin içerdiği tüm öğeleri göstermesi gerekmez. Bir paketin tüm içeriğini gördiğinizden emin olmak için UML Model Gezgini ' nde görüntüleyin.
 
-## <a name="Elements"></a>Paketler içinde model öğeleri oluşturma
+## <a name="creating-model-elements-inside-packages"></a><a name="Elements"></a> Paketler içinde model öğeleri oluşturma
  Model öğelerini bir paketin içine yerleştirebileceğiniz dört yol vardır:
 
 - UML Model Gezgini 'nde bir pakete yeni bir öğe ekleyin.
@@ -155,7 +155,7 @@ Visual Studio 'da, bir *paket* sınıflar, kullanım örnekleri ve BILEŞENLER g
 
     - **UML Model Gezgini**' nde her öğe paketin altında görünür.
 
-## <a name="Moving"></a>Öğeleri paketlerin içine ve dışına taşıma
+## <a name="moving-elements-into-and-out-of-packages"></a><a name="Moving"></a> Öğeleri paketlerin içine ve dışına taşıma
  Bir veya daha fazla öğeyi bir paketin içine veya dışına taşıyabilirsiniz.
 
  Bir paketi taşırsanız, içindeki her şey onunla birlikte taşınır.
@@ -166,7 +166,7 @@ Visual Studio 'da, bir *paket* sınıflar, kullanım örnekleri ve BILEŞENLER g
 
      Öğenin tam adı, yeni sahip olduğu paketi veya modeli gösterecek şekilde değişir.
 
-     \- veya-
+     \- veya
 
 - Bir sınıf diyagramında, öğeyi bir paket şekline sürükleyin.
 
@@ -175,7 +175,7 @@ Visual Studio 'da, bir *paket* sınıflar, kullanım örnekleri ve BILEŞENLER g
     > [!NOTE]
     > Bir öğeyi bir paketin dışına diyagramın boş bir kısmına sürüklerseniz, sahibi olan paket değişmez. Bu, paketlerin kendilerini göstermek zorunda kalmadan çeşitli paketlerin öğelerini gösteren bir diyagram yapmanızı sağlar.
 
-## <a name="Pasting"></a>Öğeleri bir pakete yapıştırma
+## <a name="pasting-elements-into-a-package"></a><a name="Pasting"></a> Öğeleri bir pakete yapıştırma
  Bir öğeyi pakete yapıştırabilirsiniz. Bir ilgili öğe grubunu bir pakete yapıştırırsanız, aralarındaki ilişkiler de yapıştırılacak.
 
 #### <a name="to-paste-elements-into-a-package-on-a-uml-class-diagram"></a>UML sınıf diyagramı 'ndaki bir pakete öğe yapıştırmak için
@@ -187,31 +187,31 @@ Visual Studio 'da, bir *paket* sınıflar, kullanım örnekleri ve BILEŞENLER g
     > [!NOTE]
     > Paket farklı bir diyagramda olabilir.
 
-## <a name="Import"></a>Paketler arasındaki Ilişkileri içeri aktarma
+## <a name="import-relationships-between-packages"></a><a name="Import"></a> Paketler arasındaki Ilişkileri içeri aktarma
  **İçeri** aktarma aracını kullanarak paketler arasında bir içeri aktarma ilişkisi tanımlayabilirsiniz.
 
  İçeri aktarma, içeri aktarılan pakette tanımlanan ve ilişkinin ok sonundaki öğeler olan öğelerin içeri aktarma paketinde etkin bir şekilde tanımlandığı anlamına gelir. Görünürlüğü **paket** olarak tanımlanan tüm öğeler içeri aktarma paketinde de görünür olacaktır.
 
  İçeri aktarma ilişkilerinde döngüler oluşturmaktan kaçının.
 
-## <a name="References"></a>Bir ad alanından diğerine başvurular
+## <a name="references-from-one-namespace-to-another"></a><a name="References"></a> Bir ad alanından diğerine başvurular
  Bir paketin başka bir öğesine bir öğesine başvurmak istiyorsanız, öğenin tam adını kullanmanız gerekir.
 
- Örneğin, Package `SalesCommon` `CustomerAddress` tür tanımladığını varsayın. Başka bir pakette `RestaurantSales`, müşteri adresi türünde bir özniteliğe sahip `MealOrder` bir tür tanımlamak istiyorsunuz. İki seçeneğiniz vardır:
+ Örneğin, paketin `SalesCommon` türü tanımlıyor olduğunu varsayalım `CustomerAddress` . Başka bir pakette, `RestaurantSales` `MealOrder` Müşteri adresi türünde bir özniteliğe sahip bir tür tanımlamak istiyorsunuz. İki seçeneğiniz vardır:
 
-- @No__t_0 tam adı kullanarak özniteliğin türünü belirtin. Bunu yalnızca, `CustomerAddress` **görünürlük** özelliği **ortak**olarak ayarlandıysa yapmanız gerekir.
+- Tam nitelikli adı kullanarak özniteliğin türünü belirtin `SalesCommon::CustomerAddress` . Bunu yalnızca `CustomerAddress` **görünürlük** özelliği **ortak**olarak ayarlandıysa yapmanız gerekir.
 
-- @No__t_0 paketinden `SalesCommon` paketine bir Içeri aktarma ilişkisi oluşturun. Daha sonra, tam adını kullanmadan `CustomerAddress` kullanabilirsiniz.
+- Paketten pakete bir Içeri aktarma ilişkisi oluşturun `RestaurantSales` `SalesCommon` . Daha sonra `CustomerAddress` tam adını kullanmadan kullanabilirsiniz.
 
-## <a name="Properties"></a>Paketlerin özellikleri
+## <a name="properties-of-packages"></a><a name="Properties"></a> Paketlerin özellikleri
  Her paket aşağıdaki özelliklere sahiptir. Özellikleri görmek için, bir diyagramda veya UML Model Gezgini ' nde pakete sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
 |Özellik|Varsayılan değer|Açıklama|
 |--------------|-------------------|-----------------|
 |**Ad**|(yeni bir ad)|Paket adı. Diyagramda veya Özellikler penceresi değiştirebilirsiniz.|
 |**Tam ad**|*Container* :: *Package adı*|Tam ad, bu paketi içeren paketin veya modelin adı. Daha fazla bilgi için bkz. [ad alanları](#Namespaces).|
-|**Lerinize**|olmamalıdır|Bu pakete bağlı profillerin listesi. Bu profiller, paket içindeki öğelere uygulanabilen stereotipler sağlar. Daha fazla bilgi için bkz. [modelinize profiller ve Stereotipler Ile özelleştirme](../modeling/customize-your-model-with-profiles-and-stereotypes.md).|
-|**Görünürlük**|**Public**|Paketin üst paketinin dışında görünürlüğü.|
+|**Profiller**|olmamalıdır|Bu pakete bağlı profillerin listesi. Bu profiller, paket içindeki öğelere uygulanabilen stereotipler sağlar. Daha fazla bilgi için bkz. [modelinize profiller ve Stereotipler Ile özelleştirme](../modeling/customize-your-model-with-profiles-and-stereotypes.md).|
+|**Görünürlük**|**Geneldir**|Paketin üst paketinin dışında görünürlüğü.|
 |**İş öğeleri**|olmamalıdır|Bağlantılı iş öğelerinin listesi. Daha fazla bilgi için bkz. [model öğelerini ve iş öğelerini bağlama](../modeling/link-model-elements-and-work-items.md).|
 |**Tanım konumu**|(bir ad)|Paketin ayrıntılarının depolandığı dosya adı. Dosyalar **ModelDefinition** proje klasörünün içindedir. Bu bilgiler, kaynak denetimi amacıyla yararlı olabilir.|
 |**Açıklama**|olmamalıdır|Paketin açıklaması.|

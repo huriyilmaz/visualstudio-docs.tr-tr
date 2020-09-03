@@ -1,5 +1,5 @@
 ---
-title: OluşturmaTrustInfo Görev | Microsoft Dokümanlar
+title: GenerateTrustInfo görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,31 +17,31 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e84007c9a10618c6d757a36debe58c272302fa3e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77634038"
 ---
 # <a name="generatetrustinfo-task"></a>GenerateTrustInfo görevi
 
-Temel bildirimden ve `TargetZone` `ExcludedPermissions` parametrelerden uygulama güvenini oluşturur.
+Temel bildirimden ve ve parametrelerinden uygulama güvenini oluşturur `TargetZone` `ExcludedPermissions` .
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda görevparametreleri `GenerateTrustInfo` açıklanmaktadır.
+ Aşağıdaki tablo, görevin parametrelerini açıklar `GenerateTrustInfo` .
 
 |Parametre|Açıklama|
 |---------------|-----------------|
 |`ApplicationDependencies`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Bağımlı derlemeleri belirtir.|
 |`BaseManifest`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Uygulama güvenini oluşturmak için temel bildirimi belirtir.|
-|`ExcludedPermissions`|İsteğe bağlı `String` parametre.<br /><br /> Bölge varsayılan izin kümesinin dışında bırakılacak bir veya daha fazla yarı sütunayrılmış izin kimlik değerlerini belirtir.|
-|`TargetZone`|İsteğe bağlı `String` parametre.<br /><br /> Makine ilkesinden elde edilen bir bölge varsayılan izin kümesini belirtir.|
-|`TrustInfoFile`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> çıkış parametresi.<br /><br /> Uygulama güvenlik güven bilgilerini içeren dosyayı belirtir.|
+|`ExcludedPermissions`|İsteğe bağlı `String` parametre.<br /><br /> Bölge varsayılan izin kümesinden dışlanacak bir veya daha fazla noktalı virgülle ayrılmış izin kimliği değeri belirtir.|
+|`TargetZone`|İsteğe bağlı `String` parametre.<br /><br /> Makine ilkesinden alınan bölge varsayılan izin kümesini belirtir.|
+|`TrustInfoFile`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> çıkış parametresi.<br /><br /> Uygulama güvenlik güveni bilgilerini içeren dosyayı belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Tabloda listelenen parametrelere sahip olmanın yanı sıra, bu görev <xref:Microsoft.Build.Tasks.TaskExtension> sınıftan devralınan parametreleri de devralır. <xref:Microsoft.Build.Utilities.Task> Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
+ Bu görev, tabloda listelenen parametrelere sahip olmanın yanı sıra sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

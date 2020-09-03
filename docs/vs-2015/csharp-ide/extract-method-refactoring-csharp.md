@@ -1,5 +1,5 @@
 ---
-title: Ayıklama yöntemi yeniden düzenlemesiC#() | Microsoft Docs
+title: Ayıklama yöntemi yeniden düzenlemesi (C#) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6e6d5e7913a7433fd4b30da490f33dd614c3e2b2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667538"
 ---
 # <a name="extract-method-refactoring-c"></a>Ayıklama Yöntemi Yeniden Düzenlemesi (C#)
@@ -44,7 +44,7 @@ ms.locfileid: "72667538"
 
 ### <a name="to-use-extract-method"></a>Extract metodunu kullanmak için
 
-1. @No__t_0 adlı bir konsol uygulaması oluşturun ve `Program` aşağıdaki örnek kodla değiştirin.
+1. Adlı bir konsol uygulaması oluşturun `ExtractMethod` ve ardından `Program` Aşağıdaki örnek kodla değiştirin.
 
     ```csharp
     class A
@@ -82,11 +82,11 @@ ms.locfileid: "72667538"
 
      Ayrıca, seçili koda sağ tıklayıp yeniden **Düzenle**' yi işaret edin ve sonra **ayıklama yöntemi** Iletişim kutusunu göstermek için **yöntemi Ayıkla** ' yı tıklayabilirsiniz.
 
-4. Yeni yöntem için yeni yöntem **adı** kutusunda `CircleArea` gibi bir ad belirtin.
+4. Yeni yöntem için `CircleArea` **yeni yöntem adı** kutusuna bir ad belirtin.
 
      Yeni yöntem imzasının önizlemesi, **Önizleme yöntemi imzası**altında görüntülenir.
 
-5. **Tamam**'a tıklayın.
+5. **Tamam**’a tıklayın.
 
 ## <a name="remarks"></a>Açıklamalar
  **Extract metodu** komutunu kullandığınızda, yeni yöntem kaynak üyenin aynı sınıfa sonra eklenir.
@@ -95,7 +95,7 @@ ms.locfileid: "72667538"
  Sınıf kısmi bir tür ise, **ayıklama yöntemi** kaynak üyenin hemen sonrasında yeni yöntemi oluşturur. **Extract yöntemi** , yeni yöntemdeki kod tarafından hiçbir örnek veriye başvurulmuyorsa bir statik yöntem oluşturan yeni yöntemin imzasını belirler.
 
 ## <a name="generic-type-parameters"></a>Genel Tür Parametreleri
- Kısıtlanmış olmayan bir genel tür parametresine sahip olan bir yöntemi ayıkladığınızda, kendisine bir değer atanmamışsa, oluşturulan kod bu parametreye `ref` değiştiricisini eklemez. Ayıklanan Yöntem, genel tür bağımsız değişkeni olarak başvuru türlerini destekleyecektir, `ref` değiştiricisini Yöntem imzasında parametreye el ile eklemeniz gerekir.
+ Kısıtlanmış olmayan bir genel tür parametresine sahip olan bir yöntemi ayıkladığınızda, `ref` kendisine bir değer atanmadığı takdirde, oluşturulan kod bu parametreye değiştiricisini eklemez. Ayıklanan Yöntem, genel tür bağımsız değişkeni olarak başvuru türlerini destekleyecektir, `ref` değiştiricisini Yöntem imzasında parametreye el ile eklemeniz gerekir.
 
 ## <a name="anonymous-methods"></a>Anonim Yöntemler
  Anonim yöntemin dışında bildirildiği veya başvurulan yerel bir değişkene başvuru içeren bir anonim metodun bir parçasını çıkarmaya çalışırsanız, Visual Studio olası semantik değişiklikler hakkında sizi uyarır.

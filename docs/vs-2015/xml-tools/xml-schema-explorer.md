@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5e9f61c56dd7ff2a9c6c19afc20ed279a7fdf855
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669370"
 ---
 # <a name="xml-schema-explorer"></a>XML Şema Gezgini
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-XML şema Gezgini, XML şeması tanım dili (XSD) şemaları ile çalışmanıza olanak tanımak için Microsoft Visual Studio ve XML Düzenleyicisi ile tümleşiktir. Bir XML şema dosyası açtığınızda, **şema kümesi** düğümü xml şema Gezgini 'nde görünür. Hedef dosyanız için dahil edilen, içeri aktarılan veya yeniden tanımlanmış şemaların yanı sıra bir `include` veya `import` bildirimiyle başvurulan tüm dosyalar da XML şema Gezgini 'nde görünür.
+XML şema Gezgini, XML şeması tanım dili (XSD) şemaları ile çalışmanıza olanak tanımak için Microsoft Visual Studio ve XML Düzenleyicisi ile tümleşiktir. Bir XML şema dosyası açtığınızda, **şema kümesi** düğümü xml şema Gezgini 'nde görünür. Hedef dosyanız için dahil edilen, içeri aktarılan veya yeniden tanımlanmış şemaların yanı sıra bir veya ifadesiyle başvurulan tüm dosyalar `include` `import` da XML şema Gezgini 'nde görünür.
 
  XML şeması Gezgini şunları yapmanızı sağlar:
 
@@ -47,7 +47,7 @@ XML şema Gezgini, XML şeması tanım dili (XSD) şemaları ile çalışmanıza
 
 - XML şeması Gezgini ' ne bir. xsd dosyasıyla ilişkilendirilmiş Visual Basic XML sabit değeri olan bir. vb dosyasından erişebilirsiniz. XML şeması Gezgininde şema kümesini görmek için, XML sabit değerinde bir xml düğümüne veya bir XML ad alanı içeri aktarma öğesine sağ tıklayın ve **şema Gezgini 'Nde göster** komutunu seçin. Daha fazla bilgi için bkz. xml [şema Gezgini Ile xml sabit değerlerini tümleştirme](../xml-tools/integration-of-xml-literals-with-xml-schema-explorer.md).
 
-## <a name="tree-view"></a>Ağaç görünümü
+## <a name="tree-view"></a>Ağacı Görünümü
  XML şeması Gezgini, önceden derlenmiş şema kümesi bilgilerini bir ağaç yapısında görüntüler. Ağaç yapısı aşağıdaki gibi düzenlenmiştir:
 
 - En üst düzeyde, şema kümesi düğümüdür.
@@ -56,7 +56,7 @@ XML şema Gezgini, XML şeması tanım dili (XSD) şemaları ile çalışmanıza
 
 - Üçüncü düzey dosyaları içerir.
 
-- Dördüncü düzey genel düğümleri içerir. Bu öğe, gruplar, karmaşık türler, basit türler, öznitelikler, öznitelik grupları ve `include`, `import` ve `redefine` deyimlerini içerebilir.
+- Dördüncü düzey genel düğümleri içerir. Bu öğe, gruplar, karmaşık türler, basit türler, öznitelikler, öznitelik grupları, ve `include` , `import` ve `redefine` deyimleri içerebilir.
 
   Aşağıda bir ağaç yapısına örnek verilmiştir:
 
@@ -69,7 +69,7 @@ XML şema Gezgini, XML şeması tanım dili (XSD) şemaları ile çalışmanıza
 
 - Bir düğümü etkinleştirmek, bu düğümün tanımlandığı dosyayı açar (dosya zaten açık değilse) ve dosyadaki düğümü seçer.
 
-- Bir dosya düğümünü etkinleştirmek seçili dosyayı açar (zaten açık değilse) ve `<schema>` düğümünü vurgular.
+- Bir dosya düğümünü etkinleştirmek seçili dosyayı açar (zaten açık değilse) ve `<schema>` düğümü vurgular.
 
 - Bir SchemaSet veya Namespace düğümünü etkinleştirmek hiçbir şey yapmaz.
 
@@ -86,7 +86,7 @@ XML şema Gezgini, XML şeması tanım dili (XSD) şemaları ile çalışmanıza
 
 - [Sıralama, Filtreleme ve Gruplandırma](../xml-tools/sorting-filtering-and-grouping-xml-schema-explorer.md)
 
-- [Bağlam Menüleri](../xml-tools/context-menus-xml-schema-explorer.md)
+- [Bağlam menüleri](../xml-tools/context-menus-xml-schema-explorer.md)
 
 - [XML Değişmez Değerlerinin XML Şeması Gezgini ile Tümleştirilmesi](../xml-tools/integration-of-xml-literals-with-xml-schema-explorer.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Uygulama dağıtımının önkoşulları | Microsoft Docs
+title: Uygulama dağıtımı önkoşulları | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -20,68 +20,68 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8206e199acc3ccb76cf89603d48bed0173129218
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66746056"
 ---
 # <a name="application-deployment-prerequisites"></a>Uygulama dağıtımının önkoşulları
 
-Uygulamanızı yüklemek ve başarılı bir şekilde çalıştırılması için sağlamak için ilk uygulamanızı hedef bilgisayara bağımlı olduğu tüm bileşenleri yükleyin. Örneğin, çoğu uygulama kullanılarak oluşturulan [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .NET Framework üzerinde bağımlılık vardır. Bu durumda, uygulama yüklenmeden önce doğru ortak dil çalışma zamanı sürümünü hedef bilgisayarda mevcut olması gerekir.
+Uygulamanızın başarıyla yüklenip çalışması için, önce uygulamanızın hedef bilgisayara bağlı olduğu tüm bileşenleri yüklemeniz gerekir. Örneğin, kullanılarak oluşturulan çoğu uygulamanın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .NET Framework bağımlılığı vardır. Bu durumda, uygulama yüklenmeden önce, hedef bilgisayarda ortak dil çalışma zamanının doğru sürümünün mevcut olması gerekir.
 
- Önkoşullar seçebileceğiniz **Önkoşullar iletişim kutusu** ve .NET Framework ve herhangi diğer redistributable yüklemenizin bir parçası yükleyin. Bu yöntem olarak da bilinen *önyükleme*. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] adlı bir Windows yürütülebilir bir program oluşturur *Setup.exe*olarak da bilinen bir *önyükleyici*. Önyükleyici, uygulama çalışmadan önce bu önkoşulları yüklemek için sorumludur. Bu Önkoşullar seçme hakkında daha fazla bilgi için bkz. [Önkoşullar iletişim kutusu](../ide/reference/prerequisites-dialog-box.md).
+ **Önkoşullar Iletişim kutusunda** bu önkoşulları seçebilir ve .NET Framework ve diğer yeniden dağıtılabilir ' ı yüklemenizin bir parçası olarak yükleyebilirsiniz. Bu uygulama *önyükleme*olarak bilinir. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]*önyükleyici*olarak da bilinen *Setup.exe*adlı bir Windows yürütülebilir programı oluşturur. Önyükleyici, uygulamanız çalışmadan önce bu önkoşulları yüklemekten sorumludur. Bu önkoşulları seçme hakkında daha fazla bilgi için bkz. [Önkoşullar iletişim kutusu](../ide/reference/prerequisites-dialog-box.md).
 
- Her bir önyükleyici paketi önkoşuldur. Bir önyükleyici paketi, dizin ve dosyaların önkoşulları nasıl yüklendiğini açıklayan bildirim dosyalarını içeren bir gruptur. İçinde uygulama önkoşulları listelenmiyorsa **önkoşul iletişim kutusu**, özel önyükleyici paketleri oluşturma ve bunları Visual Studio'ya ekleyin. Önkoşullarda seçip **Önkoşullar iletişim kutusu**. Daha fazla bilgi için [önyükleyici paketleri oluşturma](../deployment/creating-bootstrapper-packages.md).
+ Her önkoşul bir önyükleyici paketidir. Önyükleyici paketi, önkoşulların nasıl yükleneceğini tanımlayan bildirim dosyalarını içeren bir dizin ve dosya grubudur. Uygulama önkoşulları **Önkoşul Iletişim kutusunda**listelenmiyorsa, özel önyükleyici paketleri oluşturabilir ve bunları Visual Studio 'ya ekleyebilirsiniz. Ardından **Önkoşullar Iletişim kutusunda**önkoşulları seçebilirsiniz. Daha fazla bilgi için bkz. [önyükleyici paketleri oluşturma](../deployment/creating-bootstrapper-packages.md).
 
- Varsayılan olarak, ClickOnce dağıtım için önyükleniyor etkinleştirilir. ClickOnce dağıtımı için oluşturulan önyükleyici imzalanır. Bir bileşen için önyüklemeyi devre dışı bırakabilirsiniz, ancak yalnızca, eminseniz bileşeni doğru sürümü zaten tüm hedef bilgisayarlarda yüklü.
+ Varsayılan olarak, önyükleme ClickOnce dağıtımı için etkinleştirilmiştir. ClickOnce dağıtımı için oluşturulan önyükleyici imzalanır. Bir bileşen için önyükleyiciyi devre dışı bırakabilirsiniz, ancak yalnızca bileşenin doğru sürümünün tüm hedef bilgisayarlarda zaten yüklü olduğundan eminseniz.
 
 ## <a name="bootstrapping-and-clickonce-deployment"></a>Önyükleme ve ClickOnce dağıtımı
- Bir istemci bilgisayarda, bir uygulamayı yüklemeden önce [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] inceler istemciye, uygulama bildiriminde belirtilen gereksinimlere sahip olduğundan emin olun. Bu, aşağıdaki gereksinimleri şunlardır:
+ Bir uygulamayı istemci bilgisayara yüklemeden önce, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama bildiriminde belirtilen gereksinimlere sahip olduğundan emin olmak için istemciyi inceler. Bunlar aşağıdaki gereksinimleri içerir:
 
-- Bir derleme bağımlılığı uygulama bildiriminde belirtilen ortak dil çalışma zamanı sürümü gerekli en düşük.
+- Uygulama bildiriminde derleme bağımlılığı olarak belirtilen ortak dil çalışma zamanının gerekli en düşük sürümü.
 
-- Gerekli en düşük sürümü Windows işletim sistemi, uygulamanın gerektirdiği belirtilen uygulama bildirimi kullanarak `<osVersionInfo>` öğesi. (Bkz [ \<bağımlılık > öğesi](../deployment/dependency-element-clickonce-application.md).)
+- Uygulamayı kullanan uygulama bildiriminde belirtilen şekilde uygulamanın gerektirdiği Windows işletim sisteminin gerekli en düşük sürümü `<osVersionInfo>` . (Bkz. [ \<dependency> öğesi](../deployment/dependency-element-clickonce-application.md).)
 
-- Derleme bildiriminde derleme bağımlılık bildirimi tarafından belirtilen genel derleme önbelleğinde (GAC), önceden yüklenmiş tüm derlemeleri en düşük sürümü.
+- Derleme bildiriminde derleme bağımlılığı bildirimleri tarafından belirtildiği gibi, genel derleme önbelleğinde (GAC) önceden yüklenmiş olması gereken tüm derlemelerin en düşük sürümü.
 
-  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] eksik Önkoşullar algılayabilir ve bir önyükleyici kullanarak önkoşulları yükleyebilirsiniz. Daha fazla bilgi için [nasıl yapılır: ClickOnce uygulamasıyla Önkoşulları Yükleme](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md).
+  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] eksik önkoşulları algılayabilir ve bir önyükleyici kullanarak önkoşulları yükleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce uygulaması ile önkoşulları yüklemek](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md).
 
 > [!NOTE]
-> Bildirimleri gibi araçları tarafından oluşturulan değerleri değiştirmek için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ve *MageUI.exe*, uygulama bildirimi bir metin düzenleyicisinde düzenleyin ve ardından uygulama ve dağıtım bildirimlerini yeniden imzalama gerekiyor. Daha fazla bilgi için [nasıl yapılır: Uygulama ve dağıtım bildirimlerini yeniden imzalama](../deployment/how-to-re-sign-application-and-deployment-manifests.md).
+> VeMageUI.exegibi araçlar tarafından oluşturulan bildirimlerde değerleri değiştirmek için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , uygulama bildirimini * *bir metin düzenleyicisinde düzenlemeniz ve ardından hem uygulama hem de dağıtım bildirimlerini yeniden imzalamanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: uygulama ve dağıtım bildirimlerini yeniden imzalama](../deployment/how-to-re-sign-application-and-deployment-manifests.md).
 
- Uygulamanızı dağıtmak için Visual Studio ve ClickOnce kullanırsanız, varsayılan olarak seçili önyükleyici paketleri çözümdeki .NET Framework sürümü bağlıdır. Ancak, hedef .NET Framework sürümünü değiştirirseniz seçeneklerinde güncelleştirmeniz gerekir **Önkoşullar iletişim kutusu** el ile.
+ Uygulamanızı dağıtmak için Visual Studio ve ClickOnce kullanıyorsanız, varsayılan olarak seçilen önyükleyici paketleri çözümdeki .NET Framework sürümüne göre değişir. Ancak, hedef .NET Framework sürümünü değiştirirseniz, **Önkoşullar Iletişim kutusundaki** seçenekleri el ile güncelleştirmeniz gerekir.
 
-|Hedef .NET Framework'ü|Seçilen önyükleyici paketleri|
+|Hedef .NET Framework|Seçili önyükleyici paketleri|
 |---------------------------|------------------------------------|
 |.NET Framework 4 İstemci Profili|.NET Framework 4 İstemci Profili<br /><br /> Windows Installer 3.1|
 |.NET Framework 4|.NET Framework 4<br /><br /> Windows Installer 3.1|
 
- İle [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtım *Publish.htm* sayfası tarafından oluşturulan [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Yayımlama Sihirbazı ya da yalnızca uygulama yükleyen bir bağlantı noktaları veya hem uygulama hem de zamanlama yükler Bağla bileşenleri.
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Dağıtım ile, Yayımlama Sihirbazı tarafından oluşturulan *Publish.htm* sayfası [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , yalnızca uygulamayı yükleyen bir bağlantıya ya da hem uygulamayı hem de önyüklendi bileşenlerini yükleyen bir bağlantıya işaret eder.
 
- Visual Studio'da ClickOnce Yayımlama Sihirbazı'nı veya yayımlama sayfasını kullanarak önyükleyici oluşturursanız *Setup.exe* otomatik olarak imzalanır. Ancak, müşterinizin sertifika önyükleyici imzalamak için kullanmak istiyorsanız, dosya daha sonra oturum açabilirsiniz.
+ Önyükleyici 'yi ClickOnce Yayımlama Sihirbazı 'Nı veya Visual Studio 'daki Yayımla sayfasını kullanarak oluşturursanız, *Setup.exe* otomatik olarak imzalanır. Ancak, önyükleyici imzalamak için müşterinizin sertifikasını kullanmak istiyorsanız, dosyayı daha sonra imzalayabilirsiniz.
 
 ## <a name="bootstrapping-and-msbuild"></a>Önyükleme ve MSBuild
- Kullanmıyorsanız, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], ancak bunun yerine uygulamalarınızın komut satırında derleyin, oluşturabileceğiniz [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Microsoft Build Engine (MSBuild) görevini kullanarak uygulama önyükleniyor. Daha fazla bilgi için [GenerateBootstrapper görevi](../msbuild/generatebootstrapper-task.md).
+ Kullanmıyorsanız [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ve komut satırında uygulamalarınızı derlerseniz, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] önyükleme uygulamasını bir Microsoft Build Engine (MSBuild) görevi kullanarak oluşturabilirsiniz. Daha fazla bilgi için bkz. [GenerateBootstrapper görevi](../msbuild/generatebootstrapper-task.md).
 
- Önyükleme alternatif olarak, önceden bir elektronik yazılım dağıtım sistemi Microsoft Systems Management Server (SMS) gibi kullanarak bileşenleri dağıtabilirsiniz.
+ Önyükleme için alternatif olarak, Microsoft Systems Management Server (SMS) gibi bir elektronik yazılım dağıtım sistemini kullanarak bileşenleri önceden dağıtabilirsiniz.
 
 ## <a name="bootstrapper-setupexe-command-line-arguments"></a>Önyükleyici (Setup.exe) komut satırı bağımsız değişkenleri
- *Setup.exe* tarafından oluşturulan [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ve MSBuild görevleri, aşağıdaki komut satırı bağımsız değişkenleri kümesini destekler. Diğer bağımsız değişkenleri uygulama yükleyicisine iletilir.
+ Ve MSBuild görevleri tarafından oluşturulan *Setup.exe* [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] aşağıdaki komut satırı bağımsız değişkenleri kümesini destekler. Diğer bağımsız değişkenler uygulama yükleyicisine iletilir.
 
- Önyükleyici seçenekleri değiştirirseniz, işaretsiz önyükleyici değiştirmek ve önyükleyici dosya daha sonra oturum açın.
+ Herhangi bir önyükleyici seçeneğini değiştirirseniz, imzasız önyükleyici ' yi değiştirmeli ve ardından önyükleyici dosyasını daha sonra imzalamanız gerekir.
 
-| komut satırı bağımsız değişkeni | Açıklama |
+| Komut satırı bağımsız değişkeni | Açıklama |
 | - | - |
-| **-?, -h, - Yardım** | Yardım iletişim kutusunu görüntüler. |
-| **-url, - componentsurl** | Saklı URL'yi ve bu kurulum bileşenleri URL'sini gösterir. |
-| **-url=** `location` | URL'sini ayarlar burada *Setup.exe* arar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama. |
-| **-componentsurl =** `location` | URL'sini ayarlar burada *Setup.exe* .NET Framework gibi bağımlılıklar için görünür. |
-| **-homesite=** `true` **&#124;** `false` | Zaman `true`, satıcının sitesinden tercih edilen konum bağımlılıkları indirir. Bu ayar geçersiz kılar **- componentsurl** ayarı. Zaman `false`, tarafından belirtilen URL'den bağımlılıkları indirir **- componentsurl**. |
+| **-?,-h,-yardım** | Bir yardım iletişim kutusu görüntüler. |
+| **-URL,-ComponentsUrl** | Bu kurulum için depolanan URL ve bileşen URL 'sini gösterir. |
+| **-URL =**`location` | *Setup.exe* uygulama için BAKACAĞı URL 'yi ayarlar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . |
+| **-ComponentsUrl =**`location` | *Setup.exe* , .NET Framework gibi bağımlılıklara BAKACAĞı URL 'yi ayarlar. |
+| **-HomeSite =** `true` **&#124;**`false` | Ne zaman `true` , bağımlılıkları satıcının sitesindeki tercih edilen konumdan indirir. Bu ayar **-ComponentsUrl** ayarını geçersiz kılar. Ne zaman `false` , bağımlılıklarını **-ComponentsUrl**tarafından belirtilen URL 'den indirir. |
 
 ## <a name="operating-system-support"></a>İşletim sistemi desteği
- Sınırlı işlevsellikle sağladıkları düşük bakım sunucu ortamı olarak Visual Studio önyükleyicisi Windows Server 2008 Sunucu Çekirdeği veya Windows Server 2008 R2 Server Core üzerinde desteklenmiyor. Örneğin, Sunucu Çekirdeği yükleme seçeneği, yalnızca tam .NET Framework'e bağlı Visual Studio özellikleri çalıştırılamaz .NET Framework 3.5 Sunucu Çekirdeği profilin destekler.
+ Windows Server 2008 Server Core veya Windows Server 2008 R2 Server Core üzerinde, sınırlı işlevlere sahip düşük bakım sunucusu ortamı sağladıkları için Visual Studio önyükleyici desteklenmez. Örneğin, Sunucu Çekirdeği yükleme seçeneği yalnızca .NET Framework 3,5 sunucu çekirdeği profilini destekler ve bu, tam .NET Framework bağlı olan Visual Studio özelliklerini çalıştıraamaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ClickOnce dağıtım stratejisini seçin](../deployment/choosing-a-clickonce-deployment-strategy.md)
+- [ClickOnce dağıtım stratejisini seçme](../deployment/choosing-a-clickonce-deployment-strategy.md)
 - [ClickOnce güvenliği ve dağıtımı](../deployment/clickonce-security-and-deployment.md)

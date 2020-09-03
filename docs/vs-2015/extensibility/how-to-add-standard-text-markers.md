@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Standart metin işaretçileri ekleyin | Microsoft Docs'
+title: 'Nasıl yapılır: standart metin Işaretçileri ekleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,45 +11,45 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 912d5d7a225520fc825d832bf73f5cfc733a9486
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436013"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64780707"
 ---
-# <a name="how-to-add-standard-text-markers"></a>Nasıl yapılır: Standart metin işaretçileri Ekle
+# <a name="how-to-add-standard-text-markers"></a>Nasıl Yapılır: Standart Metin İşaretçileri Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İle sağlanan varsayılan metin işaretçisi türleri oluşturmak için aşağıdaki yordamı kullanın. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çekirdek Düzenleyici.  
+Çekirdek düzenleyiciyle birlikte sunulan varsayılan metin işaretçisi türlerinden birini oluşturmak için aşağıdaki yordamı kullanın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
-### <a name="to-create-a-text-marker"></a>Bir metin işaretçisi oluşturmak için  
+### <a name="to-create-a-text-marker"></a>Metin işaretçisi oluşturmak için  
   
-1. Kullanmanıza bağlı olarak, bir veya iki boyutlu koordinat sistemi, çağrı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.CreateLineMarker%2A> yöntemi veya <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream.CreateStreamMarker%2A> yöntemini yeni bir metin işaretçisi.  
+1. Bir veya iki boyutlu koordinat sistemi kullanıp kullandığınıza bağlı olarak, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.CreateLineMarker%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream.CreateStreamMarker%2A> Yeni bir metin işaretleyicisi oluşturmak için yöntemini veya yöntemini çağırın.  
   
-     Bu yöntem çağrısında bir işaret türü bir işaretçi üzerinde oluşturmak için metin aralığı belirtin ve bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> arabirimi. Bu yöntem, ardından yeni oluşturulan metin işaretçisi için bir işaretçi döndürür. İşaretçi türleri verilerinden alınır <xref:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE> sabit listesi. Belirtin bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> işaret olayları hakkında bilgi sahibi olmak istiyorsanız, arabirim.  
+     Bu yöntem çağrısında bir işaret türü, işaretçiyi üzerinde işaret oluşturmak için bir metin aralığı ve bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> arabirim belirtin. Bu yöntem daha sonra yeni oluşturulan metin işaretleyicisine bir işaretçi döndürür. İşaret türleri <xref:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE> numaralandırmasından alınır. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient>İşaret olaylarının bilgilendirilmek istiyorsanız bir arabirim belirtin.  
   
     > [!NOTE]
-    > Ana kullanıcı Arabirimi iş parçacığı üzerinde yalnızca metin işaretçileri oluşturun. Çekirdek düzenleyici metin işaretçileri oluşturmak için metin arabelleği içeriğine kullanır ve metin arabelleğini iş parçacığı güvenli değildir.  
+    > Yalnızca ana kullanıcı arabirimi iş parçacığında metin işaretleyicileri oluşturun. Çekirdek Düzenleyici, metin işaretçilerinin oluşturulması için metin arabelleğinin içeriğine bağımlıdır ve metin arabelleği iş parçacığı güvenli değildir.  
   
 ## <a name="adding-a-custom-command"></a>Özel komut ekleme  
- Uygulama `IVsTextMarkerClient` arabirimi ve bir işaretçi kendisine işaretten itibaren sağlayarak işaret davranışını çeşitli şekillerde geliştirir. İlk olarak, bu, işaretçinizi için ipuçları sağlar ve komutları yürütmek için sağlar. Bu ayrıca, tek tek işaretçileri için olay bildirimleri alması ve özel bağlam menüsü işaret oluşturmak için sağlar. İşaret bağlam menüsüne bir özel komut eklemek için aşağıdaki yordamı kullanın.  
+ Arabirimi uygulamak `IVsTextMarkerClient` ve işaretçiden buna bir işaretçi sağlamak, işaret davranışını birkaç şekilde geliştirir. İlk olarak, bu, markmeniz ve komutları yürütmek için ipuçları sağlamanıza olanak tanır. Bu Ayrıca, ayrı işaretçiler için olay bildirimleri almanızı ve işaret üzerinde özel bağlam menüsü oluşturmayı sağlar. İşaretleyici bağlam menüsüne özel bir komut eklemek için aşağıdaki yordamı kullanın.  
   
-#### <a name="to-add-a-custom-command-to-the-context-menu"></a>Bağlam menüsüne özel komut ekleme  
+#### <a name="to-add-a-custom-command-to-the-context-menu"></a>Bağlam menüsüne özel bir komut eklemek için  
   
-1. Bağlam menüsü görüntülenmeden önce ortam çağırır <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.GetMarkerCommandInfo%2A> yöntemi ve metin işaretçisi için bir işaretçi sorundan geçişleri ve bağlam menüsünden komut öğe sayısı.  
+1. Bağlam menüsü görüntülenmeden önce, ortam <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.GetMarkerCommandInfo%2A> yöntemini çağırır ve etkilenen metin işaretçisi için bir işaretçi ve bağlam menüsündeki komut öğesi numarasını geçirir.  
   
-     Örneğin, kesme noktası özgü komutlar bağlam menüsünde yer **kesme noktasını Kaldır** aracılığıyla **yeni kesme noktası**, aşağıdaki ekran görüntüsünde gösterildiği.  
+     Örneğin, bağlam menüsündeki kesme noktasına özgü komutlar, aşağıdaki ekran görüntüsünde gösterildiği gibi **Yeni kesme**noktası aracılığıyla **kesme noktasını kaldır** ' ı içerir.  
   
-     ![İşaretli bağlam menüsü](../extensibility/media/vsmarkercontextmenu.gif "vsMarkercontextmenu")  
+     ![İşaret bağlam menüsü](../extensibility/media/vsmarkercontextmenu.gif "vsMarkercontextmenu")  
   
-2. Özel komut adını tanımlayan bir metin geri geçirin. Örneğin, **kesme noktasını Kaldır** bu ortamı zaten sağlamadı özel komut olabilir. Ayrıca geri geçirdiğiniz komutu desteklenen, kullanılabilir ve etkin olup ve/veya açık-kapalı Değiştir. Ortam, özel komut bağlam menüsü doğru şekilde görüntülemek için bu bilgileri kullanır.  
+2. Özel komutun adını belirten bir metin geri geçirin. Örneğin, ortam zaten sağlamıyorsa, **kesme noktasını kaldır** özel bir komut olabilir. Ayrıca komutun desteklenip desteklenmediğini, kullanılabildiğini ve etkin olduğunu ve/veya bir açık geçiş seçeneğini de geri geçirirsiniz. Ortam bu bilgileri, bağlam menüsündeki özel komutu doğru şekilde göstermek için kullanır.  
   
-3. Ortam çağrıları komutu yürütmek için <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.ExecMarkerCommand%2A> yöntemi, metin işaretçisi ve bağlam menüsünden Seçili komut sayısı için bir işaretçi geçirme.  
+3. Komutu yürütmek için, ortam <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.ExecMarkerCommand%2A> yöntemini çağırarak metin işaretine bir işaretçi ve bağlam menüsünden seçilen komutun numarasını geçer.  
   
-     Metin işaretçisi hangi eylemleri belirler, özel bir komut yürütmek için bu çağrı bu bilgileri kullanın.  
+     Bu çağrıdan özel komutunuz metin işaretçisinin herhangi bir eylemini yürütmek için bu çağrıdan bu bilgileri kullanın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Metin işaretçileri eski API'si ile kullanma](../extensibility/using-text-markers-with-the-legacy-api.md)   
- [Nasıl yapılır: Uygulama hata işaretçileri](../extensibility/how-to-implement-error-markers.md)   
- [Nasıl yapılır: Özel metin işaretçileri oluşturma](../extensibility/how-to-create-custom-text-markers.md)   
- [Nasıl yapılır: Metin İşaretçileri Kullanma](../extensibility/how-to-use-text-markers.md)
+ [Eski API ile metin Işaretleyicileri kullanma](../extensibility/using-text-markers-with-the-legacy-api.md)   
+ [Nasıl yapılır: hata Işaretleyicileri uygulama](../extensibility/how-to-implement-error-markers.md)   
+ [Nasıl yapılır: özel metin Işaretçileri oluşturma](../extensibility/how-to-create-custom-text-markers.md)   
+ [Nasıl Yapılır: Metin İşaretçileri Kullanma](../extensibility/how-to-use-text-markers.md)

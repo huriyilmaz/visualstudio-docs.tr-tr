@@ -17,74 +17,74 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6fc02c11a4ebceea431fc06a1bd1cfdb1063097d
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67823531"
 ---
 # <a name="supported-code-changes-c"></a>Desteklenen Kod Değişiklikleri (C#)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Düzenle ve devam et, metot gövdeleri içinde kod değişiklikleri çoğu türde işler. Metot gövdeleri dışında çoğu değişiklikleri ve metot gövdeleri içindeki bazı değişiklikler, ancak hata ayıklama sırasında uygulanamaz. Desteklenmeyen bu değişiklikleri uygulamak için hata ayıklamayı durdurmak ve kod yeni bir sürümle yeniden başlatmanız gerekir.  
+Düzenle ve devam et, yöntem gövdelerinde birçok kod değişikliği türünü işler. Ancak Yöntem gövdelerinin dışındaki değişiklikler ve Yöntem gövdelerinin içindeki birkaç değişiklik, hata ayıklama sırasında uygulanamaz. Bu desteklenmeyen değişiklikleri uygulamak için, hata ayıklamayı durdurmanız ve kodun yeni bir sürümüyle yeniden başlatmanız gerekir.  
   
- Aşağıdaki değişiklikler, C# kodu için hata ayıklama oturumu sırasında uygulanamaz:  
+ Hata ayıklama oturumu sırasında C# koduna aşağıdaki değişiklikler uygulanamaz:  
   
-- Geçerli deyimi veya herhangi bir etkin deyim yapılan değişiklikler.  
+- Geçerli ifadede veya diğer etkin deyimdeki değişiklikler.  
   
-     Etkin deyimleri için geçerli durumunu almak için çağrılan işlevler çağrı yığını üzerinde herhangi bir deyim ekleyin.  
+     Etkin deyimler, geçerli ifadeye ulaşmak için çağrılan çağrı yığınında işlevlerde tüm deyimleri içerir.  
   
-     Geçerli deyimi kaynak penceresinde sarı arka plan olarak işaretlenir. Diğer etkin deyimleri gölgeli bir arka plan işaretlenir ve salt okunurdur. Bu varsayılan renkleri değiştirilebilir **seçenekleri** iletişim kutusu.  
+     Geçerli ifade, kaynak pencerede sarı bir arka plan ile işaretlendi. Diğer etkin deyimler gölgeli bir arka plan ile işaretlenir ve salt okunurdur. Bu varsayılan renkler **Seçenekler** iletişim kutusunda değiştirilebilir.  
   
-- İmza türü değiştiriliyor.  
+- Bir türün imzasını değiştirme.  
   
-- Önce yakalanmayan bir değişken yakalayan bir anonim yöntem ekleniyor.  
+- Daha önce yakalanamayan bir değişkeni yakalayan anonim bir yöntem ekleme.  
   
-- Ekleme, kaldırma veya değiştirme.  
+- Öznitelikleri ekleme, kaldırma veya değiştirme.  
   
-- Ekleme, kaldırma veya değiştirme `using` yönergeleri.  
+- Yönergeler ekleme, kaldırma veya değiştirme `using` .  
   
-- Ekleme bir `foreach`, `using`, veya `lock` etkin bir deyim etrafındaki.  
+- `foreach` `using` `lock` Etkin deyimin etrafına, veya çevresine ekleniyor.  
   
 ## <a name="unsafe-code"></a>Güvenli olmayan kod  
- Güvenli olmayan kod değişiklikleri başka bir kısıtlama ile güvenli kod değişiklikleri onunla aynı sınırlamalara sahiptir: Düzenle ve devam et değişiklikleri içeren bir yöntemi içinde güvenli olmayan kod desteklemiyor `stackalloc` işleci.  
+ Güvenli olmayan koddaki değişiklikler, güvenli koddaki değişikliklerle aynı sınırlamalara sahiptir ve bir ek kısıtlamadır: Düzenle ve devam et işleci içeren bir yöntem içinde çıkış olmayan güvenli olmayan koddaki değişiklikleri desteklemez `stackalloc` .  
   
-## <a name="exceptions"></a>Özel Durumlar  
- Düzenle ve devam et değişiklikleri destekler `catch` ve `finally` ekleme dışında engelleyen bir `catch` veya `finally` blok etkin bir deyim etrafındaki izin verilmiyor.  
+## <a name="exceptions"></a>Özel durumlar  
+ Düzenle ve devam et `catch` `finally` , `catch` `finally` etkin deyimin etrafında bir veya blok eklenmesine izin verilmediğinden, ve bloklara yapılan değişiklikleri destekler.  
   
 ## <a name="unsupported-scenarios"></a>Desteklenmeyen Senaryolar  
- Düzenle ve devam et hata ayıklama aşağıdaki senaryolarda kullanılabilir değil:  
+ Düzenle ve devam et aşağıdaki hata ayıklama senaryolarında kullanılamaz:  
   
-- Bazı durumlarda LINQ kodda hata ayıklama. Daha fazla bilgi için [LINQ hata ayıklama](../debugger/debugging-linq.md).  
+- Bazı durumlarda LINQ kodunda hata ayıklama. Daha fazla bilgi için bkz. [LINQ hata ayıklama](../debugger/debugging-linq.md).  
   
-  - Önce yakalanmayan bir değişken yakalama.  
+  - Daha önce yakalanamayan bir değişken yakalama.  
 
-  - Sorgu ifadesi türünün değiştirilmesi (örneğin, a ='ı seçin > Yeni seçme {A = bir};)  
+  - Sorgu ifadesinin türü değiştiriliyor (örn. bir = seçin> yeni {A = a} seçin;)  
 
-  - Kaldırma bir `where` , etkin bir deyim içerir.  
+  - Etkin bir `where` ifade içeren bir öğesini kaldırma.  
 
-  - Kaldırma bir `let` , etkin bir deyim içerir.  
+  - Etkin bir `let` ifade içeren bir öğesini kaldırma.  
 
-  - Kaldırma bir `join` , etkin bir deyim içerir.  
+  - Etkin bir `join` ifade içeren bir öğesini kaldırma.  
 
-  - Kaldırma bir `orderby` , etkin bir deyim içerir.  
+  - Etkin bir `orderby` ifade içeren bir öğesini kaldırma.  
   
-- Karma mod (yerel/yönetilen) hata ayıklama.  
+- Karışık mod (Yerel/yönetilen) hata ayıklama.  
   
-- SQL hata ayıklama.  
+- SQL hata ayıklaması.  
   
-- Bir Dr hata ayıklama. Watson dökümü.  
+- Dr. Watson dökümünü hata ayıklama.  
   
-- İşlenmeyen bir özel durumdan sonra kod düzenleme, "**işlenmemiş özel durumlarda çağrı yığınını geriye doğru izleme**" seçeneği belirlenmez.  
+- İşlenmemiş bir özel durumdan sonra kodu düzenlemeyle, "**işlenmemiş özel durumlarla çağrı yığınını geriye doğru izleme**" seçeneği seçili değildir.  
   
-- Katıştırılmış çalışma zamanı uygulama hata ayıklama.  
+- Gömülü çalışma zamanı uygulamasında hata ayıklama.  
   
-- Sahip bir uygulamada hata ayıklama **ekleme** seçerek uygulamayı çalıştırmak yerine **Başlat** gelen **hata ayıklama** menüsü.  
+- **Hata ayıklama** menüsünden **başla** ' yı seçerek uygulamayı çalıştırmak yerine **öğesine** eklenen bir uygulamada hata ayıklama.  
   
-- En iyi duruma getirilmiş kodda hata ayıklama.  
+- İyileştirilmiş kodda hata ayıklama.  
   
-- Derleme hataları nedeniyle oluşturmak yeni bir sürüm başarısız olduktan sonra kodunuzu eski bir sürümü hata ayıklama.  
+- Derleme hataları nedeniyle yeni bir sürüm derlenemedi sonra kodunuzun eski bir sürümünde hata ayıklama işlemi başarısız oldu.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Düzenle ve devam et (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)   
- [Nasıl yapılır: Düzenle ve Devam Et’i Kullanma (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)
+ [Nasıl Yapılır: Düzenle ve Devam Et'i Kullanma (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)

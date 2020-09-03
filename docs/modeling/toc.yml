@@ -81,7 +81,7 @@
       href: add-custom-properties-to-layer-diagrams.md
 - name: Visual Studio için Modelleme SDK'sı - Etki Alanına Özgü Diller
   items:
-    - name: Genel bakış
+    - name: Genel Bakış
       displayName: Modeling SDK for Visual Studio
       href: modeling-sdk-for-visual-studio-domain-specific-languages.md
     - name: Alana Özgü Dilleri Kullanmaya Başlama
@@ -214,7 +214,7 @@
           href: updating-shapes-and-connectors-to-reflect-the-model.md
     - name: Alana Özgü Dilden Kod Oluşturma
       items:
-        - name: Genel bakış
+        - name: Genel Bakış
           displayName: Generate Code from a Domain-Specific Language
           href: generating-code-from-a-domain-specific-language.md
         - name: Metin Şablonlarından Modellere Erişme
@@ -270,7 +270,7 @@
       href: api-reference-for-modeling-sdk-for-visual-studio.md
 - name: Kod Oluşturma ve T4 Metin Şablonları
   items:
-    - name: Genel bakış
+    - name: Genel Bakış
       displayName: Code Generation and T4 Text Templates
       href: code-generation-and-t4-text-templates.md
     - name: T4 Metin Şablonları Kullanarak Tasarım Zamanı Kodu Oluşturma
@@ -289,7 +289,7 @@
       href: run-time-text-generation-with-t4-text-templates.md
     - name: T4 Metin Şablonu Yazma
       items:
-        - name: Genel bakış
+        - name: Genel Bakış
           displayName: Write a T4 Text Template
           href: writing-a-t4-text-template.md
         - name: T4 Metin Şablonu Yönergeleri

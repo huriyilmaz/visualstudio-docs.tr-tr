@@ -512,9 +512,9 @@
               href: registering-verbs-for-file-name-extensions.md
             - name: Yan Yana Dosya İlişkilendirmelerini Yönetme
               href: managing-side-by-side-file-associations.md
-- name: Arşivleme
+- name: Arşiv
   items:
-    - name: Arşivleme
+    - name: Arşiv
       href: archive.md
     - name: Düzenleyicideki Eski Arabirimler
       items:
@@ -898,7 +898,7 @@
   items:
     - name: Yazılık Geliştirme Seti Oluşturma
       href: creating-a-software-development-kit.md
-    - name: 'C# veya Visual Basic Kullanarak SDK Oluşturma'
+    - name: C# veya Visual Basic Kullanarak SDK Oluşturma
       href: walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md
     - name: C++ Kullanarak SDK Oluşturma
       href: walkthrough-creating-an-sdk-using-cpp.md

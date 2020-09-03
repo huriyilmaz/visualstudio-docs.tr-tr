@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 14c8b88d295d1a11fd68841c45233ac7edc04c22
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669667"
 ---
 # <a name="export-diagrams-as-images"></a>Diyagramları görüntü olarak dışarı aktarma
@@ -45,7 +45,7 @@ Visual Studio 'da, modelleme diyagramlarını salt okunurdur, kullanıcılar ya 
 
 2. **Ad** listesinde, **Microsoft XPS Belge Yazıcısı**' nı seçin ve ardından **Tamam**' a tıklayın.
 
-3. **Dosyayı farklı kaydet** iletişim kutusunda, dosyayı bir **XPS belgesi (\*. XPS)** dosyası olarak kaydedin.
+3. **Dosyayı farklı kaydet** iletişim kutusunda, dosyayı bir **XPS belgesi ( \* . XPS)** dosyası olarak kaydedin.
 
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği
 

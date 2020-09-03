@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 6df882d50d0c1d052191246605af856743ffdf3d
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88249189"
 ---
 # <a name="how-to-configure-live-code-analysis-scope-for-managed-code"></a>Nasıl yapılır: yönetilen kod için canlı kod analizi kapsamını yapılandırma
@@ -43,7 +43,7 @@ Varsayılan olarak, Visual Studio 'da _açılan_ tüm dosyalar için tanılama '
 
 ## <a name="custom-analysis-scope"></a>Özel analiz kapsamı
 
-Her bir arka plan analizinin varsayılan kapsamı, çoğu müşteri senaryosu ve çözümü için en iyi kullanıcı deneyimi, işlevselliği ve performansı için ayarlanmıştır. Ancak, müşterilerin arka plan analizini azaltmak veya artırmak üzere bu kapsamı özelleştirmek isteyebileceğiniz durumlar vardır. Örnek:
+Her bir arka plan analizinin varsayılan kapsamı, çoğu müşteri senaryosu ve çözümü için en iyi kullanıcı deneyimi, işlevselliği ve performansı için ayarlanmıştır. Ancak, müşterilerin arka plan analizini azaltmak veya artırmak üzere bu kapsamı özelleştirmek isteyebileceğiniz durumlar vardır. Örneğin:
 
 - Güç tasarrufu modu: kullanıcılar dizüstü pille çalışıyorsa, daha uzun pil ömrü için güç tüketimini en aza indirmek isteyebilir. Bu senaryoda, arka plan analizini en aza indirmek istiyoruz.
 - İsteğe bağlı kod analizi: kullanıcılar gerçek zamanlı çözümleyici yürütmeyi kapatmayı ve isteğe bağlı kod analizini el ile çalıştırmayı tercih ediyorsanız, arka plan analizini en aza indirmek istedikleri olur. Bkz. [nasıl yapılır: isteğe bağlı kod analizini el ile çalıştırma](./how-to-run-code-analysis-manually-for-managed-code.md).

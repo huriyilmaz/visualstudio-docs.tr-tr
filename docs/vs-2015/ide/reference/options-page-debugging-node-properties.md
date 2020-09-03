@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 10537fb64e6ae0ebbe185024b76442704437e273
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668836"
 ---
 # <a name="options-page-debugging-node-properties"></a>Seçenekler Sayfası, Hata Ayıklama Düğümü Özellikleri
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Aşağıdaki tablolarda, **Seçenekler** iletişim kutusunun `DTE.Properties("Debugging", <Property Page>)` **hata ayıklama** kategorisiyle ilişkili sayfalar (veya özellikler koleksiyonlar) açıklanır.
+Aşağıdaki tablolarda, Seçenekler iletişim kutusunun **hata ayıklama** kategorisiyle ilişkili sayfalar (veya özellikler koleksiyonlar) açıklanır `DTE.Properties("Debugging", <Property Page>)` . **Options**
 
 ## <a name="general"></a>Genel
  `DTE.Properties("Debugging", "General")`
@@ -34,11 +34,11 @@ Aşağıdaki tablolarda, **Seçenekler** iletişim kutusunun `DTE.Properties("De
 |EnableBreakpointFilters|Get/Set (Boole)|Kesme noktası filtrelemesinin etkinleştirilip etkinleştirilmeyeceğini belirler.|
 |EnableExceptionAssistant|Get/Set (Boole)|Özel durum Yardımcısı 'Nın yönetilen özel durumlar için kullanılıp kullanılmayacağını belirler.|
 |Unwınbir Callstack|Get/Set (Boole)|Hata ayıklayıcının işlenmeyen bir özel durum için çağrı yığınını geri kullanıp kullanmadığını belirler.|
-|Enableadatmycode|Get/Set (Boole)|Visual Basic kodu için Yalnızca kendi kodum etkinleştirilip etkinleştirilmediğini C# belirler.|
+|Enableadatmycode|Get/Set (Boole)|Yalnızca kendi kodum C# ve Visual Basic kodu için etkinleştirilip etkinleştirilmeyeceğini belirler.|
 |ShowAllMembers|Get/Set (Boole)|Kullanıcı olmayan nesneler için, hata ayıklayıcının tüm nesne üyelerini değişkenler penceresinde görüntüleyip görüntülemediğini belirler. Yalnızca kendi kodum etkinleştirilmediği takdirde bu seçeneğin hiçbir etkisi yoktur.|
 |WarnIfNoUserCode|Get/Set (Boole)|Kullanıcı, Kullanıcı kodu olmayan bir işleme iliştirmeye çalıştığında hata ayıklayıcının bir uyarı yayıp yaymayacağını belirler. Yalnızca kendi kodum etkinleştirilmediği takdirde bu seçeneğin hiçbir etkisi yoktur.|
 |Enablepropertyedeğerleme|Get/Set (Boole)|Hata ayıklayıcının Yönetilen koddaki özellikleri ve örtük işlev çağrılarını otomatik olarak değerlendirme yapılıp yapılmayacağını belirler.|
-|CallStringConversion|Get/Set (Boole)|Hata ayıklayıcının, değişkenler penceresinde nesnelerde bir dize dönüştürme işlevini örtülü olarak çağırmayacağını belirler. Bu seçenek yalnızca ve C# JScript kodu için geçerlidir.|
+|CallStringConversion|Get/Set (Boole)|Hata ayıklayıcının, değişkenler penceresinde nesnelerde bir dize dönüştürme işlevini örtülü olarak çağırmayacağını belirler. Bu seçenek yalnızca C# ve JScript kodu için geçerlidir.|
 |EnableSourceServer|Get/Set (Boole)|Hata ayıklayıcının bir kaynak sunucudan koda erişip erişemeyeceğini belirler.|
 |PrintSourceServerDiagnostics|Get/Set (Boole)|Çıkış penceresinin, kaynak sunucuyla ilgili tanılama iletilerini gösterilip gösterilmeyeceğini belirler. Kaynak sunucu erişimi etkinleştirilmediği takdirde bu seçeneğin hiçbir etkisi yoktur.|
 |HighlightEntireLine|Get/Set (Boole)|Hata ayıklayıcının kesme noktaları ve geçerli ifade için bir satırın tamamını vurgulamayabileceğini belirler.|
@@ -81,4 +81,4 @@ Aşağıdaki tablolarda, **Seçenekler** iletişim kutusunun `DTE.Properties("De
 |EnableRPC|Get/Set (Boole)|Hata ayıklayıcının COM uzak yordam çağrılarına erişip erişemeyeceğini belirler.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- Seçenekler sayfa [seçenekleri sayfası, yazı tipleri ve renkler düğüm özellikleri](../../ide/reference/options-page-fonts-and-colors-node-properties.md) [Seçenekler sayfası, metin düzenleyici düğümü özellikleri](../../ide/reference/options-page-text-editor-node-properties.md) genel, hata ayıklama, Seçenekler Iletişim kutusu [üzerindeki özellik öğelerinin adlarını belirleyen](https://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa) [seçenek ayarlarını denetleme](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d) [ ](../../debugger/general-debugging-options-dialog-box.md) [Düzenle ve devam et, hata ayıklama, Seçenekler iletişim kutusu](https://msdn.microsoft.com/library/009d225f-ef65-463f-a146-e4c518f86103) [tam zamanında, hata ayıklama, Seçenekler iletişim kutusu](../../debugger/just-in-time-debugging-options-dialog-box.md)
+ Seçenekler sayfa seçenekleri sayfasında [özellik öğelerinin adlarını belirleyen](https://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa) [seçenek ayarlarını denetleme](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d) [sayfası, yazı tipleri ve renkler düğüm özellikleri](../../ide/reference/options-page-fonts-and-colors-node-properties.md) [Seçenekler sayfası, metin düzenleyici düğümü özellikleri](../../ide/reference/options-page-text-editor-node-properties.md) [Genel, hata ayıklama, Seçenekler iletişim kutusu](../../debugger/general-debugging-options-dialog-box.md) [düzenleme ve devam etme](https://msdn.microsoft.com/library/009d225f-ef65-463f-a146-e4c518f86103) , hata ayıklama, Seçenekler iletişim kutusu [tam zamanında, hata ayıklama, Seçenekler iletişim kutusu](../../debugger/just-in-time-debugging-options-dialog-box.md)

@@ -1,5 +1,5 @@
 ---
-title: '1\. Adım: proje oluşturma ve formunuza etiketler ekleme | Microsoft Docs'
+title: '1. Adım: proje oluşturma ve formunuza etiketler ekleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2a13d96d8932a3a9e4628f2d0e67a28869252c95
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667357"
 ---
-# <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>1\. Adım: Proje Oluşturma ve Formunuza Etiketler Ekleme
+# <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>1. Adım: Proje Oluşturma ve Formunuza Etiketler Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etiketler, bir düğme ve diğer denetimler eklersiniz. Eklediğiniz her denetim için de Özellikler ayarlarsınız. Proje formu, denetimleri ve (öğreticide daha sonra) kodu içerecektir. Düğme, testi başlatır, Etiketler test sorunlarını gösterir ve diğer denetimler, test yanıtlarını ve testi tamamlaması için kalan süreyi gösterir.
@@ -28,7 +28,7 @@ Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etik
 
 1. Menü çubuğunda **Dosya**, **Yeni**, **Proje**' yi seçin.
 
-2. **Yüklü şablonlar** listesinde ya da **C#** **Visual Basic**seçin.
+2. **Yüklü şablonlar** listesinde, **C#** veya **Visual Basic**seçin.
 
 3. Şablon listesinde **Windows Forms uygulama** şablonunu seçin, **Math test**olarak adlandırın ve ardından **Tamam** düğmesini seçin.
 
@@ -48,7 +48,7 @@ Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etik
 
 ### <a name="to-create-the-time-remaining-box"></a>Kalan süre kutusunu oluşturmak için
 
-1. Araç kutusundan bir **etiket** denetimi ekleyin ve sonra **(Name)** özelliğinin değerini `timeLabel` olarak ayarlayın.
+1. Araç kutusundan bir **etiket** denetimi ekleyin ve sonra **(Name)** özelliğinin değerini olarak ayarlayın `timeLabel` .
 
      Bu etiket, sağ üst köşede, test içinde kalan saniye sayısını gösteren bir kutu olur.
 

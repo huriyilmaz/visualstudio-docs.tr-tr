@@ -13,18 +13,18 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 74694c903040b278ed8864b46756cac66381405a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445015"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64789136"
 ---
-# <a name="dbgattribflags"></a>DBG_ATTRIB_FLAGS
+# <a name="dbg_attrib_flags"></a>DBG_ATTRIB_FLAGS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Çeşitli özniteliklerini açıklayan bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) veya [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) arabirimi. Üyesi [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapısı.  
+Bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) veya [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) arabirimi için çeşitli öznitelikleri açıklar. [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapısının üyesi.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 #define DBG_ATTRIB_NONE                 0x0000000000000000,  
@@ -166,155 +166,155 @@ public const int DBG_ATTRIB_MULTI_CUSTOM_VIEWERS = 0x0001000000000000
   
 ## <a name="members"></a>Üyeler  
  DBG_ATTRIB_NONE  
- Öznitelikleri gösterir.  
+ Öznitelik olmadığını gösterir.  
   
  DBG_ATTRIB_ALL  
  Tüm öznitelikleri gösterir.  
   
  DBG_ATTRIB_OBJ_IS_EXPANDABLE  
- Başvuru veya özelliğin alt sahip olduğunu gösterir.  
+ Başvurunun veya özelliğin alt öğe olduğunu gösterir.  
   
  DBG_ATTRIB_OBJ_HAS_ID  
- Bu nesne için bir kimlik oluşturulduğunu gösterir.  
+ Bu nesne için bir KIMLIK oluşturulduğunu gösterir.  
   
  DBG_ATTRIB_OBJ_CAN_HAVE_ID  
- Bu nesne için bir kimlik oluşturulması gerektiğini belirtir.  
+ Bu nesne için bir KIMLIK oluşturulup oluşturuamayacağını gösterir.  
   
  DBG_ATTRIB_VALUE_READONLY  
- Değer salt okunur olduğunu gösterir.  
+ Değerin salt okunurdur olduğunu gösterir.  
   
  DBG_ATTRIB_VALUE_ERROR  
  Değerin bir hata olduğunu gösterir.  
   
  DBG_ATTRIB_VALUE_SIDE_EFFECT  
- Değerlendirme bir yan etkisi olduğunu gösterir.  
+ Değerlendirmenin bir yan etkiye sahip olduğunu gösterir.  
   
  DBG_ATTRIB_OVERLOADED_CONTAINER  
- Bu özellik gerçekten aşırı kapsayıcısı olduğunu gösterir.  
+ Bu özelliğin gerçekten aşırı yükleme kapsayıcısı olduğunu gösterir.  
   
  DBG_ATTRIB_VALUE_BOOLEAN  
- Belirten değer `DEBUG_PROPERTY_INFO::bstrValue` Boolean.  
+ İçindeki değerin Boole olduğunu gösterir `DEBUG_PROPERTY_INFO::bstrValue` .  
   
  DBG_ATTRIB_VALUE_BOOLEAN_TRUE  
- Belirten değer `DEBUG_PROPERTY_INFO::bstrValue` Boolean ve `TRUE`.  
+ İçindeki değerinin `DEBUG_PROPERTY_INFO::bstrValue` Boolean ve olduğunu gösterir `TRUE` .  
   
  DBG_ATTRIB_VALUE_INVALID  
- Belirten değer `DEBUG_PROPERTY_INFO::bstrValue` geçerli değil.  
+ İçindeki değerin geçerli olmadığını gösterir `DEBUG_PROPERTY_INFO::bstrValue` .  
   
  DBG_ATTRIB_VALUE_NAT  
- Belirten değer `DEBUG_PROPERTY_INFO::bstrValue` olan "*bir şey*" (NAT). NAT, ertelenmiş kurgusal özel durumları belirten bir kayıt bayrağı Intel 64-bit işlemciler açıklar.  
+ İçindeki değerin `DEBUG_PROPERTY_INFO::bstrValue` "*bir şey değil*" (NAT) olduğunu gösterir. NAT, ertelenmiş öngörülebilir özel durumları belirten Intel 64-bit işlemcilerde bir kayıt bayrağını açıklar.  
   
  DBG_ATTRIB_VALUE_AUTOEXPANDED  
- Belirten değer `DEBUG_PROPERTY_INFO::bstrValue` muhtemelen otomatik genişletilmiş olmuştur.  
+ İçindeki değerin, `DEBUG_PROPERTY_INFO::bstrValue` büyük olasılıkla otomatik olarak genişletildiğini gösterir.  
   
  DBG_ATTRIB_VALUE_TIMEOUT  
- Değerlendirme zaman aşımına uğradı olduğunu gösterir.  
+ Bir değerlendirmenin zaman aşımına uğradığını gösterir.  
   
  DBG_ATTRIB_VALUE_RAW_STRING  
- Belirten değer `DEBUG_PROPERTY_INFO::bstrValue` işlenmemiş bir dize temsil edilir.  
+ İçindeki değerin `DEBUG_PROPERTY_INFO::bstrValue` bir ham dizeyle temsil edilebilir olduğunu gösterir.  
   
  DBG_ATTRIB_VALUE_CUSTOM_VIEWER  
- Bu özellik en az bir özel Görüntüleyici ile ilişkili olduğunu gösterir.  
+ Bu özelliğe ilişkili en az bir özel Görüntüleyici olduğunu gösterir.  
   
  DBG_ATTRIB_ACCESS_NONE  
- Ne sahip bir nesne belirtir `public`, `private`, ne de `protected` erişim yazın.  
+ Değil `public` , `private` , veya erişimi olmayan bir nesneyi gösterir `protected` .  
   
  DBG_ATTRIB_ACCESS_PUBLIC  
- Genel erişimi olan bir nesne belirtir.  
+ Ortak erişime sahip bir nesneyi gösterir.  
   
  DBG_ATTRIB_ACCESS_PRIVATE  
- Özel erişimi olan bir nesne belirtir.  
+ Özel erişimi olan bir nesneyi gösterir.  
   
  DBG_ATTRIB_ACCESS_PROTECTED  
- Korumalı Erişim bir nesne belirtir.  
+ Korumalı erişimi olan bir nesneyi gösterir.  
   
  DBG_ATTRIB_ACCESS_FINAL  
- Son erişimi olan bir nesne belirtir.  
+ Son erişimi olan bir nesneyi gösterir.  
   
  DBG_ATTRIB_ACCESS_ALL  
- Erişim öznitelikleri ayıklamak için maske `DBG_ATTRIB_FLAGS`.  
+ Erişim özniteliklerini Ayıklanacak maske `DBG_ATTRIB_FLAGS` .  
   
  DBG_ATTRIB_STORAGE_NONE  
- Belirtilen depolama tür olduğunu gösterir.  
+ Hiçbir depolama türü belirtilmemiş olduğunu gösterir.  
   
  DBG_ATTRIB_STORAGE_GLOBAL  
- Genel depolama gösterir.  
+ Genel depolamayı gösterir.  
   
  DBG_ATTRIB_STORAGE_STATIC  
- Statik depolama gösterir.  
+ Statik depolamayı gösterir.  
   
  DBG_ATTRIB_STORAGE_REGISTER  
- Kayıt defterinde depolama gösterir.  
+ Kayıttaki depolamayı gösterir.  
   
  DBG_ATTRIB_STORAGE_ALL  
- Depolama öznitelikleri ayıklamak için maske `DBG_ATTRIB_FLAGS`.  
+ Depolama özniteliklerini Ayıklanacak maske `DBG_ATTRIB_FLAGS` .  
   
  DBG_ATTRIB_TYPE_NONE  
- Herhangi bir tür değiştiricisi olduğunu gösterir.  
+ Tür değiştiricisi olmadığını gösterir.  
   
  DBG_ATTRIB_TYPE_VIRTUAL  
- Nesne türü sanal olduğunu gösterir.  
+ Nesne türünün sanal olduğunu gösterir.  
   
  DBG_ATTRIB_TYPE_CONSTANT  
- Nesne türü sabit olduğunu gösterir.  
+ Nesne türünün sabit olduğunu gösterir.  
   
  DBG_ATTRIB_TYPE_SYNCHRONIZED  
- Nesne türü eşitlendiğini gösterir.  
+ Nesne türünün eşitlendiğini gösterir.  
   
  DBG_ATTRIB_TYPE_VOLATILE  
- Geçici nesnenin türü olduğunu gösterir.  
+ Nesne türünün geçici olduğunu gösterir.  
   
  DBG_ATTRIB_TYPE_ALL  
- Maskesi türü öznitelikleri ayıklanacak `DBG_ATTRIB_FLAGS`.  
+ Tür özniteliklerinin ayıklanacağı maske `DBG_ATTRIB_FLAGS` .  
   
  DBG_ATTRIB_DATA  
- Bu nesne bir veri alanı olduğunu gösterir.  
+ Bu nesnenin bir veri alanı olduğunu gösterir.  
   
  DBG_ATTRIB_METHOD  
- Bu nesne bir yöntem olduğunu gösterir.  
+ Bu nesnenin bir yöntem olduğunu gösterir.  
   
  DBG_ATTRIB_PROPERTY  
  Bu nesnenin bir özellik olduğunu gösterir.  
   
  DBG_ATTRIB_CLASS  
- Bu nesne bir sınıf olduğunu gösterir.  
+ Bu nesnenin bir sınıf olduğunu belirtir.  
   
  DBG_ATTRIB_BASECLASS  
- Bu nesne bir temel sınıf olduğunu gösterir.  
+ Bu nesnenin bir temel sınıf olduğunu gösterir.  
   
  DBG_ATTRIB_INTERFACE  
- Bu nesne bir arabirim olduğunu gösterir.  
+ Bu nesnenin bir arabirim olduğunu gösterir.  
   
  DBG_ATTRIB_INNERCLASS  
- Bu nesne bir iç sınıf olduğunu gösterir.  
+ Bu nesnenin bir iç sınıf olduğunu gösterir.  
   
  DBG_ATTRIB_MOSTDERIVED  
- Bu nesne olduğunu gösterir '*en çok türetilen*'. Terim "*en çok türetilen*" gerçek nesnenin türünü ve kendi başvuru türünde değil anlamına gelir.  
+ Bu nesnenin '*en-türetilmiş*' olduğunu gösterir. "*En-türetilmiş*" terimi, başvurusunun türü değil, nesnenin gerçek türü anlamına gelir.  
   
  DBG_ATTRIB_CHILD_ALL  
- Maskesi gösterir `DBG_ATTRIB_DATA` aracılığıyla `DBG_ATTRIB_MOSTDERIVED`.  
+ İle maskesini belirtir `DBG_ATTRIB_DATA` `DBG_ATTRIB_MOSTDERIVED` .  
   
  DBG_ATTRIB_MULTI_CUSTOM_VIEWERS  
- Nesne birden çok özel görüntüleyiciler ilişkili olduğunu gösterir.  
+ Nesnenin kendisiyle ilişkili birden çok özel görüntüleyiciyle olduğunu gösterir.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
-> Bu numaralandırma değerleri için C# derlemesinde gerçekten tanımlanmamış. Bunun yerine, kaynak dosyanız için tanımları kopyalamanız gerekir.  
+> Bu Numaralandırmadaki değerler gerçekte C# derlemesinde tanımlanmamıştır. Bunun yerine, tanımları kaynak dosyanıza kopyalamanız gerekir.  
   
- Bu bayraklar ayrıca bir nesne, örneğin, alt bağımsız değişkeni olarak geçirildiğinde filtrelemek için kullanılan [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md). Değerleri ile bit düzeyinde birleştirilebilir `OR`.  
+ Bu bayraklar Ayrıca bir nesnenin alt öğelerini filtrelemek için kullanılır, örneğin, [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)'a bağımsız değişken olarak geçirildiğinde. Değerler bit düzeyinde birleştirilebilir `OR` .  
   
- `DBG_ATTRIB_VALUE_CUSTOM_VIEWER` Bayrağı için bir gösterimi olan [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] edinme [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) alanından arabirim [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) arabirimi ve çağrı [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) özel görüntüleyiciler listesi.  
+ `DBG_ATTRIB_VALUE_CUSTOM_VIEWER`Bayrak, [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) arabiriminden [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimini elde etmek ve özel görüntüleyicilerin listesi için [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) öğesini çağırmak için bir belirtidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)   

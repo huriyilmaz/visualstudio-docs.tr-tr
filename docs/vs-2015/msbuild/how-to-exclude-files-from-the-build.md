@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Dosyaları derlemeden dışlama | Microsoft Docs'
+title: 'Nasıl yapılır: derlemeden Dosya dışlama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -14,19 +14,19 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d7aac21e1ee4d77453808090fc37a3fccaf77e1d
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67821608"
 ---
-# <a name="how-to-exclude-files-from-the-build"></a>Nasıl yapılır: Dosyaları Derlemeden Dışlama
+# <a name="how-to-exclude-files-from-the-build"></a>Nasıl Yapılır: Dosyaları Derlemeden Dışlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir proje dosyasında tüm dosyaları bir derleme için girdi olarak bir dizin veya iç içe geçmiş bir dizinler kümesi eklemek için joker karakterler kullanabilirsiniz. Ancak, bir dosya dizinine veya bir dizin, iç içe geçmiş bir derleme için giriş olarak dahil etmek istemediğiniz dizinler kümesi olabilir. Açıkça girişleri listesinden söz konusu dosya veya dizin dışlayabilirsiniz. Ayrıca olabilir bir dosyayı yalnızca belirli koşullar altında dahil etmek istediğiniz bir proje. Bir yapı içinde bir dosya dahil koşullar açıkça bildirebilirsiniz.  
+Bir proje dosyasında, bir derleme için giriş olarak bir dizindeki veya iç içe geçmiş bir dizin kümesindeki tüm dosyaları dahil etmek için joker karakterler kullanabilirsiniz. Ancak, dizinde bir dosya veya bir derleme için giriş olarak dahil etmek istemediğiniz, iç içe geçmiş bir dizin kümesinde tek bir dizin olabilir. Bu dosya veya dizini giriş listesinden açıkça dışlayabilirsiniz. Ayrıca, bir projede yalnızca belirli koşullara dahil etmek istediğiniz bir dosya olabilir. Bir derlemede bir dosyanın dahil olduğu koşulları açık bir şekilde bildirebilirsiniz.  
   
-## <a name="excluding-a-file-or-directory-from-the-inputs-for-a-build"></a>Bir dosya veya dizin, bir derleme için girişler hariç  
- Öğe bir derleme için giriş dosyaları listeleridir. Dahil etmek istediğiniz öğeleri ayrı ayrı veya kullanarak bir grup olarak bildirilen `Include` özniteliği. Örneğin:  
+## <a name="excluding-a-file-or-directory-from-the-inputs-for-a-build"></a>Bir derleme için girişlerden bir dosya veya dizin dışlama  
+ Öğe listeleri, bir derleme için giriş dosyalarıdır. Dahil etmek istediğiniz öğeler ayrı olarak ya da özniteliğini kullanan bir grup olarak belirtilir `Include` . Örneğin:  
   
 ```  
 <CSFile Include="Form1.cs"/>  
@@ -35,39 +35,39 @@ Bir proje dosyasında tüm dosyaları bir derleme için girdi olarak bir dizin v
 <JPGFile Include="Images\**\*.jpg"/>  
 ```  
   
- Tüm dosyaları bir derleme için girdi olarak bir dizin veya iç içe geçmiş bir dizinler kümesi eklemek için joker karakterler kullanılıyorsa bir veya daha fazla dosya dizinine veya bir dizinde olabilir dahil etmek istemediğiniz dizinleri iç içe bir dizi. Bir öğeyi öğesi listesinden dışlamak için kullanmak `Exclude` özniteliği.  
+ Bir derleme için giriş olarak bir dizindeki veya iç içe geçmiş bir dizin kümesinde bulunan tüm dosyaları dahil etmek için joker karakterler kullandıysanız, dizinde bir veya daha fazla dosya veya dahil etmek istemediğiniz bir dizin kümesi içindeki bir dizin olabilir. Öğe listesinden bir öğeyi dışlamak için `Exclude` özniteliğini kullanın.  
   
-#### <a name="to-include-all-cs-or-vb-files-except-form2"></a>Form2 dışındaki tüm .cs veya .vb dosyaları eklemek için  
+#### <a name="to-include-all-cs-or-vb-files-except-form2"></a>Form2 dışında tüm. cs veya. vb dosyalarını dahil etmek için  
   
-- Aşağıdakilerden birini kullanın `Include` ve `Exclude` öznitelikleri:  
+- Aşağıdakilerden birini `Include` ve `Exclude` öznitelikleri kullanın:  
   
     ```  
     <CSFile Include="*.cs" Exclude="Form2.cs"/>  
     ```  
   
-     \- veya -  
+     \- veya  
   
     ```  
     <VBFile Include="*.vb" Exclude="Form2.vb"/>  
     ```  
   
-#### <a name="to-include-all-cs-or-vb-files-except-form2-and-form3"></a>Form2 ve Form3 hariç tüm .cs veya .vb dosya eklemek için  
+#### <a name="to-include-all-cs-or-vb-files-except-form2-and-form3"></a>Form2 ve Form3 dışında tüm. cs veya. vb dosyalarını dahil etmek için  
   
-- Aşağıdakilerden birini kullanın `Include` ve `Exclude` öznitelikleri:  
+- Aşağıdakilerden birini `Include` ve `Exclude` öznitelikleri kullanın:  
   
     ```  
     <CSFile Include="*.cs" Exclude="Form2.cs;Form3.cs"/>  
     ```  
   
-     \- veya -  
+     \- veya  
   
     ```  
     <VBFile Include="*.vb" Exclude="Form2.vb;Form3.vb"/>  
     ```  
   
-#### <a name="to-include-all-jpg-files-in-subdirectories-of-the-images-directory-except-those-in-the-version2-directory"></a>Alt dizinlerdeki görüntüleri dizinin Version2 dizin hariç tüm .jpg dosyaları eklemek için  
+#### <a name="to-include-all-jpg-files-in-subdirectories-of-the-images-directory-except-those-in-the-version2-directory"></a>Tüm. jpg dosyalarını Version2 dizininde bulunanlar hariç görüntüler dizininin alt dizinlerinde dahil etmek için  
   
-- Aşağıdaki `Include` ve `Exclude` öznitelikleri:  
+- Aşağıdaki `Include` ve özniteliklerini kullanın `Exclude` :  
   
     ```  
     <JPGFile  
@@ -76,14 +76,14 @@ Bir proje dosyasında tüm dosyaları bir derleme için girdi olarak bir dizin v
     ```  
   
     > [!NOTE]
-    > Her iki öznitelik yolunu belirtmeniz gerekir. İçinde dosya konumlarını belirtme mutlak yol kullanıyorsanız `Include` özniteliği içinde mutlak bir yol da kullanmanız gerekir `Exclude` göreli bir yol kullanır; öznitelik `Include` özniteliği, göreli bir yol kullanmalısınız`Exclude`özniteliği.  
+    > Her iki öznitelik için de yolu belirtmeniz gerekir. Özniteliğinde dosya konumlarını belirtmek için mutlak bir yol kullanırsanız `Include` , özniteliğinde mutlak bir yol da kullanmanız gerekir `Exclude` ; öznitelikte göreli bir yol kullanırsanız `Include` , özniteliğinde göreli bir yol da kullanmanız gerekir `Exclude` .  
   
-## <a name="using-conditions-to-exclude-a-file-or-directory-from-the-inputs-for-a-build"></a>Girişler, bir dosya veya dizin, bir derleme için hariç tutmak için koşul kullanma  
- Dahil etmek istediğiniz öğeleri varsa, örneğin, hata ayıklama derlemesi ancak bir yayın yapısı kullanabileceğiniz `Condition` öğesi dahil edileceği koşullarda belirtmek için özniteliği.  
+## <a name="using-conditions-to-exclude-a-file-or-directory-from-the-inputs-for-a-build"></a>Bir dosya veya dizini bir yapı girişlerinden dışlamak için koşulları kullanma  
+ Dahil etmek istediğiniz öğeler varsa, örneğin, bir hata ayıklama derlemesinde, ancak bir yayın derlemesi değil, `Condition` öğenin hangi koşullarda ekleneceğini belirtmek için özniteliğini kullanabilirsiniz.  
   
-#### <a name="to-include-the-file-formulavb-only-in-release-builds"></a>Yalnızca sürüm yapılarında Formula.vb dosya eklemek için  
+#### <a name="to-include-the-file-formulavb-only-in-release-builds"></a>Yalnızca sürüm yapılarında. vb dosyasını eklemek için  
   
-- Kullanım bir `Condition` özniteliği aşağıdakine benzer:  
+- `Condition`Aşağıdakine benzer bir öznitelik kullanın:  
   
     ```  
     <Compile  
@@ -92,7 +92,7 @@ Bir proje dosyasında tüm dosyaları bir derleme için girdi olarak bir dizin v
     ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, tüm dizinde Form2.cs dışında .cs dosyaları ile bir proje oluşturur.  
+ Aşağıdaki kod örneği, Form2.cs hariç olmak üzere dizindeki tüm. cs dosyalarını içeren bir proje oluşturur.  
   
 ```  
 <Project DefaultTargets="Compile"  
@@ -126,5 +126,5 @@ Bir proje dosyasında tüm dosyaları bir derleme için girdi olarak bir dizin v
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Öğeleri](../msbuild/msbuild-items.md)   
- [MSBuild](msbuild.md) [nasıl yapılır: Derlenecek Dosyaları Seçme](../msbuild/how-to-select-the-files-to-build.md)
+ [Öğeler](../msbuild/msbuild-items.md)   
+ [MSBuild](msbuild.md) [nasıl yapılır: derlenecek dosyaları seçme](../msbuild/how-to-select-the-files-to-build.md)

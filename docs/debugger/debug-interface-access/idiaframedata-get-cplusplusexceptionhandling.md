@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b23221b9b1efcfb4b13e5713b94a8acb4bf86a29
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85467402"
 ---
 # <a name="idiaframedataget_cplusplusexceptionhandling"></a>IDiaFrameData::get_cplusplusExceptionHandling
@@ -33,7 +33,7 @@ HRESULT get_cplusplusExceptionHandling ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE`C++ özel durum işleme etkinse döndürür; Aksi takdirde, döndürür `FALSE` .
+dışı `TRUE` C++ özel durum işleme etkinse döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.

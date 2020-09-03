@@ -18,13 +18,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bb46d3bf7096d0a7e14ce3926514d946d7536e2d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668111"
 ---
-# <a name="how-to-create-associations-between-types-class-designer"></a>Nasıl yapılır: türler arasında Ilişkilendirme oluşturma (Sınıf Tasarımcısı)
+# <a name="how-to-create-associations-between-types-class-designer"></a>Nasıl Yapılır: Türler Arasında İlişkilendirme Oluşturma (Sınıf Tasarımcısı)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Sınıf Tasarımcısı'nda ilişkilendirme çizgileri, bir diyagramdaki sınıfların nasıl ilişkili olduğunu gösterir. İlişkilendirme çizgisi, projenizdeki başka bir sınıfın özellik veya alan türü olan bir sınıfı temsil eder. İlişkilendirme çizgileri genellikle, projenizdeki sınıflar arasında en önemli ilişkileri göstermek için kullanılır.
@@ -46,7 +46,7 @@ Sınıf Tasarımcısı'nda ilişkilendirme çizgileri, bir diyagramdaki sınıfl
 
 - Diyagram yüzeyinde ilişkilendirme çizgisinin etiketine tıklayın ve etiketi düzenleyin.
 
-  \- veya-
+  \- veya
 
 1. İlişkilendirme olarak gösterilen özelliği içeren şekle tıklayın.
 

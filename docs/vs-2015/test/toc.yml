@@ -132,7 +132,7 @@
                   href: sample-excel-extension-technologymanager-class.md
                 - name: PropertyProvider Sınıfı
                   href: sample-excel-extension-propertyprovider-class.md
-                - name: Öğe Sınıfları
+                - name: Element Sınıfları
                   href: sample-excel-extension-element-classes.md
                 - name: ActionFilter Sınıfı
                   href: sample-excel-extension-actionfilter-class.md
@@ -158,7 +158,7 @@
               href: create-and-run-unit-tests-for-a-store-app-in-visual-studio.md
             - name: C++ DLL birim testi
               href: unit-testing-a-visual-cpp-dll-for-store-apps.md
-            - name: 'C# birim testi sınıfı'
+            - name: C# birim testi sınıfı
               href: unit-testing-visual-csharp-code-in-a-store-app.md
             - name: Test Gezgini ile birim testleri çalıştırma
               href: run-unit-tests-for-store-apps-in-visual-studio.md
@@ -166,7 +166,7 @@
           items:
             - name: Statik kod analizi kullanarak kod kalitesini analiz etme
               href: analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md
-            - name: 'Visual Basic ve C# kod kalitesini analiz etme'
+            - name: Visual Basic ve C# kod kalitesini analiz etme
               href: analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md
             - name: C++ kod kalitesini analiz etme
               href: analyze-cpp-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md

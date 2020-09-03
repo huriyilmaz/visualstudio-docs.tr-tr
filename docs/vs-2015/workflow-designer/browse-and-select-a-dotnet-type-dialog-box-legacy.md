@@ -14,14 +14,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1e5045a62d0a654af968d50e0c309bcf8104b5cc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668983"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box-legacy"></a>.NET Türüne Gözat ve Seç İletişim Kutusu (Eski)
-Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] **.NET türünü görüntüle ve Seç** iletişim kutusunun nasıl kullanılacağı açıklanmaktadır. @No__t_1 veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedeflemek gerektiğinde eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] kullanın.
+Bu konu başlığı altında, eski ' deki **bir .NET türü ve seçme** iletişim kutusunun nasıl kullanılacağı açıklanmaktadır [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Ya da ' i hedefliyorsanız, eski kullanın [!INCLUDE[wfd2](../includes/wfd2-md.md)] [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  **Özellikler** penceresinde, başvurulan bir derlemede .NET Framework türü alan Özellikler ' i seçtiğinizde, özelliğin metin kutusunun sonunda bir üç nokta **[...]** belirir. **[...]** Tıklandığında, **bir .NET türü görüntüle ve Seç** iletişim kutusu açılır. Bu iletişim kutusunda, başvurulan derlemelerin ağaç görünümünden bir tür seçebilirsiniz. Örneğin, etkinlik tasarımcısını kullanırken, **Özellikler** penceresinde, başvurulan derlemeler ağacından bir etkinlik için başka bir temel sınıf seçmek üzere **temel sınıf** üç nokta ( **...]** simgesini tıklatın.
 
@@ -30,7 +30,7 @@ Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] **.N
 |Arabirim Öğesi|Açıklama|
 |----------------|-----------------|
 |**Tür adı:**|Şu anda seçili olan türün adı.|
-|**Türüyle**|Sol bölmede başvurulan derlemelerin ağaç görünümü görüntülenir. Sağ bölmede, sol bölmede seçilen başvurulan derlemeden seçim için kullanılabilen türler görüntülenir.|
+|**Tür**|Sol bölmede başvurulan derlemelerin ağaç görünümü görüntülenir. Sağ bölmede, sol bölmede seçilen başvurulan derlemeden seçim için kullanılabilen türler görüntülenir.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Eski Etkinlik Tasarımcısını Kullanma](../workflow-designer/using-the-legacy-activity-designer.md)

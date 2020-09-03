@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c344d996c70012ef1516fa2bebe52394739bea35
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85768580"
 ---
 # <a name="extend-menus-and-commands"></a>Menüleri ve komutları Genişlet
@@ -41,7 +41,7 @@ Komutlar, Visual Studio 'ya eylemler ve işlemler eklemenize olanak sağlar. Ço
 
 - [Menü komutlarına simgeler ekleme](../extensibility/adding-icons-to-menu-commands.md) Hem araç çubuğunda hem de menüsünde bir komuta bir simgenin nasıl ekleneceğini açıklar.
 
-- [Menü komutunun metnini değiştirme](../extensibility/changing-the-text-of-a-menu-command.md) `TextChanges`Bir menü öğesinin dinamik olarak değiştirilmesini sağlamak için bayrağın kullanımını açıklar.
+- [Menü komutunun metnini değiştirme](../extensibility/changing-the-text-of-a-menu-command.md) `TextChanges` Bir menü öğesinin dinamik olarak değiştirilmesini sağlamak için bayrağın kullanımını açıklar.
 
 - [Komutun görünümünü değiştirme](../extensibility/changing-the-appearance-of-a-command.md) Bir komutun dinamik olarak nasıl etkinleştirileceğini veya devre dışı bırakılacağını açıklar.
 
