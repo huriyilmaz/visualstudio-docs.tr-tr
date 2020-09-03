@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetAddressesFromContext | Microsoft Dokümanlar
+title: 'IDebugSymbolProvider:: GetAddressesFromContext | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7cf7599cf0fc37c16467c29c2b432f1f58b172fe
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719438"
 ---
 # <a name="idebugsymbolprovidergetaddressesfromcontext"></a>IDebugSymbolProvider::GetAddressesFromContext
-Bu yöntem, belge bağlamını hata ayıklama adresleri dizisine eşler.
+Bu yöntem bir belge bağlamını bir hata ayıklama adresleri dizisiyle eşler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetAddressesFromContext( 
@@ -47,24 +47,24 @@ int GetAddressesFromContext(
 
 ## <a name="parameters"></a>Parametreler
 `pDocContext`\
-[içinde] Belge bağlamı.
+'ndaki Belge bağlamı.
 
 `fStatmentOnly`\
-[içinde] TRUE ise, hata ayıklama adreslerini tek bir ifadeyle sınırlar.
+'ndaki TRUE ise, hata ayıklama adreslerini tek bir deyimle sınırlandırır.
 
 `ppEnumBegAddresses`\
-[çıkış] Bu deyim veya satırla ilişkili başlangıç hata ayıklama adresleri için bir sayısalatör döndürür.
+dışı Bu deyimle veya satırla ilişkili başlangıç hata ayıklama adresleri için bir Numaralandırıcı döndürür.
 
 `ppEnumEndAddresses`\
-[çıkış] Bu deyim veya satırla ilişkili son hata ayıklama adresleri için bir [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md) kayıt dışı verir.
+dışı Bu deyimle veya satırla ilişkili bitiş hata ayıklama adresleri için bir [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md) numaralandırıcısı döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Belge bağlamı genellikle bir dizi kaynak satırı gösterir. Bu yöntem, bu satırlarla ilişkili başlangıç ve bitiş hata ayıklama adreslerini sağlar. Bazı diller, birden çok satırı veya birden fazla deyim içeren satırları kapsayan ifadelere izin verir. Bu yöntem, hata ayıklama adreslerini tek bir deyimle sınırlamak için bir bayrak sağlar.
+ Belge bağlamı genellikle kaynak satır aralığını gösterir. Bu yöntem, bu satırlarla ilişkili hata ayıklama adreslerini başlatma ve sonlandırma sağlar. Bazı diller birden çok satırı kapsayan deyimlere veya birden fazla deyim içeren satırlara izin verir. Bu yöntem, hata ayıklama adreslerini tek bir deyimle sınırlamak için bir bayrak sağlar.
 
- Şablonlarda olduğu gibi tek bir ifadenin birden çok hata gideri adresi olması mümkündür.
+ Tek bir deyimin, şablonlar söz konusu olduğunda olduğu gibi birden çok hata ayıklama adresi olması mümkündür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

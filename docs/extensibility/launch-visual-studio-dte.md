@@ -9,31 +9,31 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3217835571ac659ac2cef2b46cb45a1c02ba2584
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80703038"
 ---
 # <a name="launch-visual-studio-using-dte"></a>DTE kullanarak Visual Studio’yu Başlatma
 
-Visual Studio 2017 ile başlayan Visual Studio'yu DTE kullanarak başlatma mekanizması Visual Studio'nun önceki sürümlerini piyasaya sürmekten farklıdır. Visual Studio 2017 ve daha sonra büyük sürümlerin yan yana yüklemelerini desteklediği için bu değişiklik gereklidir (örneğin, bir önizleme ve sürüm sürümünüyan yana yükleyebilirsiniz).
+Visual Studio 2017 ' den itibaren, DTE 'yi kullanarak Visual Studio 'Yu başlatma mekanizması, Visual Studio 'nun önceki sürümlerini başlatmaya farklıdır. Visual Studio 2017 ve üzeri, ana sürümlerin yan yana yüklemelerini desteklediğinden bu değişiklik gereklidir (örneğin, bir önizleme ve bir sürüm sürümü yan yana yüklü olabilir).
 
-Bu makalenin geri kalanı, Visual Studio 2019'u DTE kullanarak başlatmak için kullanabileceğiniz kodu gösterir.
+Bu makalenin geri kalanında, Visual Studio 2019 ' i DTE kullanarak başlatmak için kullanabileceğiniz kod gösterilmektedir.
 
 ## <a name="set-up-the-project"></a>Projeyi ayarlama
 
-Başlatma kodunu nişiş olarak görmek için aşağıdaki adımları izleyerek bir proje oluşturun.
+Başlatma kodunu çalıştırmak için, aşağıdaki adımları izleyerek bir proje oluşturun.
 
-1. .NET Framework için yeni bir **Konsol Uygulaması** projesi oluşturun.
+1. .NET Framework için yeni bir **konsol uygulaması** projesi oluşturun.
 
-2. [Microsoft.VisualStudio.Setup.Configuration.Interop](https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/) NuGet paketini yükleyin ve derlemeye bir başvuru ekleyin.
+2. [Microsoft.VisualStudio.Setup.Configurmayı yükler. Birlikte çalışabilirlik](https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/) NuGet paketi ve derlemeye bir başvuru ekleyin.
 
-3. EnvDTE'ye bir başvuru ekleyin.
+3. EnvDTE öğesine bir başvuru ekleyin.
 
-4. *Program.cs* dosyasına izleyen [örnek kodu](#example-code) yapıştırın.
+4. Aşağıdaki [örnek kodu](#example-code) *program.cs* dosyasına yapıştırın.
 
-5. Programı çalıştırmak için **F5** tuşuna basın. Program çıkmadan önce Visual Studio 2019'u açık görmelisiniz.
+5. Programı çalıştırmak için **F5** tuşuna basın. Program çıkmadan önce Visual Studio 2019 açık ' i görmeniz gerekir.
 
 ## <a name="example-code"></a>Örnek kod
 
@@ -188,4 +188,4 @@ namespace ConsoleLauncherApp
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio’yu Bulma](locating-visual-studio.md)
-- [Walkthrough: DTE nesnesini bir düzenleyici uzantısından erişin](walkthrough-accessing-the-dte-object-from-an-editor-extension.md)
+- [İzlenecek yol: bir düzenleyici uzantısından DTE nesnesine erişme](walkthrough-accessing-the-dte-object-from-an-editor-extension.md)

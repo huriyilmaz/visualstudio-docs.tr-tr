@@ -1,5 +1,5 @@
 ---
-title: Web Sitesi Desteği | Microsoft Dokümanlar
+title: Web sitesi desteği | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +11,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 22047ad1b0709cefa200656e61f8e0d39ace94c9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80703437"
 ---
 # <a name="web-site-support"></a>Web Sitesi Desteği
-Web sitesi proje sistemi, Web projeleri oluşturan bir proje sistemidir. Web projeleri sırayla Web uygulamaları oluşturur. Bir Web sitesi projesi, ilişkili kodu olan her Web sayfası için bir yürütülebilir dosya oluşturur. /App_Code klasöründeki kaynak kod dosyalarından ek yürütülebilir dosyalar oluşturulur.
+Web sitesi proje sistemi, Web projeleri oluşturan bir proje sistemidir. Web projeleri Web uygulamaları oluşturur. Bir Web sitesi projesi, ilişkili kodu olan her bir Web sayfası için bir yürütülebilir dosya oluşturur. Ek yürütülebilir dosyalar/App_Code klasöründeki kaynak kod dosyalarından oluşturulur.
 
- Web sitesi proje sistemleri, varolan bir proje sistemine şablonlar ve kayıt öznitelikleri eklenerek oluşturulur. Bu özniteliklerden biri dil için IntelliSense sağlayıcısını seçer. IntelliSense sağlayıcısı uygulaması, önbelleğe alınmayan akıllı bir Web sayfası istendiğinde başvuruları işler ve dil derleyicisini çağırır.
+ Web sitesi proje sistemleri, var olan bir proje sistemine şablonlar ve kayıt öznitelikleri eklenerek oluşturulur. Bu özniteliklerden biri, dilin IntelliSense sağlayıcısını seçer. IntelliSense sağlayıcı uygulama, önbelleğe alınan bir akıllı Web sayfası istendiğinde, başvuruları işler ve dil derleyicisini çağırır.
 
- Web sayfalarını derlemek için kullanılan dil [!INCLUDE[vstecasp](../../code-quality/includes/vstecasp_md.md)]derleyicisi ' ne kaydedilmelidir. [ \<Derleyiciyi](/dotnet/framework/configure-apps/file-schema/compiler/compiler-element) aşağıdaki örnekte olduğu gibi, derleyiciyi kaydetmek için web.config dosyasındaki derleyici> Öğesi'ni kullanabilirsiniz:
+ Web sayfalarını derlemek için kullanılan dil derleyicisinin ile kayıtlı olması gerekir [!INCLUDE[vstecasp](../../code-quality/includes/vstecasp_md.md)] . Aşağıdaki örnekte olduğu gibi, derleyicisini kaydetmek için bir Web.config dosyasındaki [ \<compiler> öğesini](/dotnet/framework/configure-apps/file-schema/compiler/compiler-element) kullanabilirsiniz:
 
 ```
 <system.codedom>  <compilers>    <compiler language="py;IronPython" extension=".py"       type="IronPython.CodeDom.PythonProvider, IronPython,       Version=1.0.2391.18146, Culture=neutral,       PublicKeyToken=b03f5f7f11d50a3a" />  </compilers></system.codedom>
@@ -35,9 +35,9 @@ Web sitesi proje sistemi, Web projeleri oluşturan bir proje sistemidir. Web pro
 
 - [Web Sitesi Destek Öznitelikleri](../../extensibility/internals/web-site-support-attributes.md)
 
- Bir Web sitesi projesini [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve [!INCLUDE[vstecasp](../../code-quality/includes/vstecasp_md.md)].
+ Bir Web sitesi projesini ve ' a bağlayan kayıt özniteliklerini gösterir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vstecasp](../../code-quality/includes/vstecasp_md.md)] .
 
 ## <a name="related-sections"></a>İlgili Bölümler
 - [Web Projeleri](../../extensibility/internals/web-projects.md)
 
- İki tür Web projesine, Web sitesi projelerine ve Web uygulama projelerine genel bir bakış sunar.
+ İki tür web projesine, Web sitesi projelerine ve Web uygulaması projelerine genel bir bakış sunar.

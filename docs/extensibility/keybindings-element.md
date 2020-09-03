@@ -1,5 +1,5 @@
 ---
-title: KeyBindings Öğesi | Microsoft Dokümanlar
+title: KeyBindings öğesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,16 +14,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: df1720286007d8f6acf073c21f5b2dcc8486782c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80703137"
 ---
 # <a name="keybindings-element"></a>KeyBindings öğesi
-KeyBindings öğesi, KeyBinding öğelerini ve diğer KeyBindings gruplandırmalarını gruplandırmayı gruplar.
+KeyBindings öğesi, anahtar bağlama öğelerini ve diğer KeyBindings gruplandırmaları gruplandırır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <KeyBindings>
@@ -39,14 +39,14 @@ KeyBindings öğesi, KeyBinding öğelerini ve diğer KeyBindings gruplandırmal
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[AnahtarBağlama öğesi](../extensibility/keybinding-element.md)|Komutlar için klavye kısayollarını belirtir.|
-|[Anahtar Bağlamalar](../extensibility/keybindings-element.md)|Anahtar Bağlama öğelerini ve diğer KeyBindings gruplandırmalarını gruplandırmayı grupla.|
+|[KeyBinding öğesi](../extensibility/keybinding-element.md)|Komutlar için klavye kısayollarını belirler.|
+|[KeyBindings](../extensibility/keybindings-element.md)|Anahtar bağlama öğelerini ve diğer KeyBindings gruplandırmaları gruplandırır.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
@@ -66,5 +66,5 @@ KeyBindings öğesi, KeyBinding öğelerini ve diğer KeyBindings gruplandırmal
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [AnahtarBağlama öğesi](../extensibility/keybinding-element.md)
-- [Visual Studio komut tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [KeyBinding öğesi](../extensibility/keybinding-element.md)
+- [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

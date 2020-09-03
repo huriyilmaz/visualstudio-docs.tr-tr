@@ -12,17 +12,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2abb209943ff14969f71ebdca6982020f30a5d47
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75590208"
 ---
 # <a name="modeling-sdk-for-visual-studio---domain-specific-languages"></a>Visual Studio için Modelleme SDK'sı - Etki Alanına Özgü Diller
 
-Visual Studio için modelleme SDK'sını kullanarak Visual Studio ile tümleştirebileceğiniz model tabanlı güçlü geliştirme araçları oluşturabilirsiniz. Aynı şekilde, bir veya daha fazla model tanımı oluşturabilir ve bir araç kümesiyle tümleştirebilirsiniz.
+Visual Studio için modelleme SDK 'sını kullanarak, Visual Studio ile tümleştirebileceğinizi güçlü model tabanlı geliştirme araçları oluşturabilirsiniz. Aynı şekilde, bir veya daha fazla model tanımı oluşturabilir ve bir araç kümesiyle tümleştirebilirsiniz.
 
-MSDK'nın merkezinde, iş alanınızdaki kavramları göstermek için oluşturabileceğiniz bir model tanımı bulunur. Araçlar, bir grafiksel görünüm, kod ve diğer yapıtları, modeli dönüştürmek için komutlar oluşturulacak özelliği ve kod ve Visual Studio'daki diğer nesnelerle etkileşme yeteneği gibi çeşitli modeliyle çevreleyebilirsiniz. Modeli geliştirirken, geliştirmenizin merkezine yerleştirilen güçlü bir araç kümesi oluşturmak için onu diğer modellerle birleştirebilirsiniz.
+MSDK'nın merkezinde, iş alanınızdaki kavramları göstermek için oluşturabileceğiniz bir model tanımı bulunur. Modeli diagrammatik görünüm, kod ve diğer yapıtlar oluşturma özelliği, modeli dönüştürme komutları ve Visual Studio 'da kod ve diğer nesnelerle etkileşim kurma gibi çeşitli araçlarla çevreleyebilirsiniz. Modeli geliştirirken, geliştirmenizin merkezine yerleştirilen güçlü bir araç kümesi oluşturmak için onu diğer modellerle birleştirebilirsiniz.
 
 MSDK, etki alanına özgü dil (DSL) biçiminde bir modeli hızlı bir şekilde geliştirmenize olanak sağlar. Graf gösterimli bir şema veya soyut sözdizimi tanımlamak için özelleştirilmiş bir düzenleyici kullanarak başlarsanız. Bu tanımından, VMSDK şunları oluşturur:
 

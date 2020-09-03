@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0c09e45250ad95d50d5d2cd0ca2753a70bb95748
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75590247"
 ---
 # <a name="model-user-requirements"></a>Kullanıcı gereksinimlerini modelleme
@@ -44,11 +44,11 @@ Bir gereksinim modeli, kullanıcıları veya temsilcileriyle tartışmalara odak
 > [!NOTE]
 > Bu konularda, "sistem", geliştirmekte olduğunuz sistem veya uygulama anlamına gelir. Birçok yazılım ve donanım bileşeninin büyük bir koleksiyonu olabilir; ya da tek bir uygulama; veya daha büyük bir sistem içindeki bir yazılım bileşenidir. Her durumda, gereksinimler modeli, bir kullanıcı arabirimi veya API aracılığıyla sisteminizin dışından görülebilen davranışı açıklar.
 
-## <a name="common-tasks"></a>Ortak görevler
+## <a name="common-tasks"></a>Genel görevler
 
 Kullanıcıların gereksinimlerinin birkaç farklı görünümünü oluşturabilirsiniz.  Her görünüm belirli bir bilgi türü sağlar.  Bu görünümleri oluşturduğunuzda sıklıkla bir tane diğerine taşımak en iyisidir. Herhangi bir görünümden başlayabilirsiniz.
 
-|Diyagram veya belge|Gereksinimler modelinde neleri açıklar|Bölüm|
+|Diyagram veya belge|Gereksinimler modelinde neleri açıklar|Section|
 |-|-|-|
 |Kavramsal sınıf diyagramı|Gereksinimleri anlatmak için kullanılan türlerin sözlüğü; Sistem arabiriminde görünen türler.||
 |Ek belgeler veya iş öğeleri|Performans, güvenlik, kullanılabilirlik ve güvenilirlik ölçütleri.|[Hizmet gereksinimlerinin kalitesini açıklama](#QoSRequirements)|
@@ -56,7 +56,7 @@ Kullanıcıların gereksinimlerinin birkaç farklı görünümünü oluşturabil
 
 Diyagram türlerinin çoğunun başka amaçlar için de kullanılabileceğini unutmayın. Diyagram türlerine genel bir bakış için bkz. [uygulamanız için model oluşturma](../modeling/create-models-for-your-app.md).
 
-## <a name="BusinessRules"></a>Iş kurallarını gösterme
+## <a name="showing-business-rules"></a><a name="BusinessRules"></a> Iş kurallarını gösterme
 
 İş kuralı, belirli bir kullanım örneği ile ilişkilendirilmemiş ve sistem genelinde gözlenecek bir gereksinimdir.
 
@@ -76,7 +76,7 @@ Aşağıdaki konularda daha fazla bilgi sağlanmaktadır:
 |-|-|
 |İş kurallarına uygun kod geliştirme|[Uygulama mimarinizi modelleme](../modeling/model-your-app-s-architecture.md)|
 
-## <a name="QoSRequirements"></a>Hizmet gereksinimlerinin kalitesini açıklama
+## <a name="describing-quality-of-service-requirements"></a><a name="QoSRequirements"></a> Hizmet gereksinimlerinin kalitesini açıklama
 
 Hizmet gereksinimi kalitesi için çeşitli kategoriler vardır. Bunlar aşağıdakileri içerir:
 

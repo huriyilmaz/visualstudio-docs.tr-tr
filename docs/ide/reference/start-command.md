@@ -14,31 +14,31 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f6138c4cff33f0b2a4211439a01a058da59da811
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75590286"
 ---
 # <a name="start-command"></a>Başlat Komutu
-Başlangıç projesihatasını ayıklama başlar.
+Başlangıç projesinde hata ayıklamaya başlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cmd
 Debug.Start [address]
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 `address`
 
-İsteğe bağlı. Programın yürütmeyi askıya aldığı adres, kaynak kodundaki bir kesme noktasına benzer. Bu bağımsız değişken yalnızca hata ayıklama modunda geçerlidir.
+İsteğe bağlı. Kaynak kodundaki bir kesme noktasına benzer şekilde programın yürütmeyi askıya aldığı adres. Bu bağımsız değişken yalnızca hata ayıklama modunda geçerlidir.
 
 ## <a name="remarks"></a>Açıklamalar
-**Başlat** komutu yürütüldüğünde, belirtilen adrese bir RunToCursor işlemi gerçekleştirir.
+Çalıştırıldığında **Başlat** komutu, belirtilen adrese bir RunToCursor işlemi gerçekleştirir.
 
 ## <a name="example"></a>Örnek
-Bu örnek hata ayıklama yı başlatır ve oluşan tüm özel durumları yoksa.
+Bu örnek, hata ayıklayıcıyı başlatır ve oluşan tüm özel durumları yoksayar.
 
 ```cmd
 >Debug.Start
@@ -46,7 +46,7 @@ Bu örnek hata ayıklama yı başlatır ve oluşan tüm özel durumları yoksa.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
-- [Komut Penceresi](../../ide/reference/command-window.md)
-- [Bul/Komut Kutusu](../../ide/find-command-box.md)
+- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Komut penceresi](../../ide/reference/command-window.md)
+- [Bul/komut kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

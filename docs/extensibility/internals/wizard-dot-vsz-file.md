@@ -1,5 +1,5 @@
 ---
-title: Sihirbaz (. Vsz) Dosya | Microsoft Dokümanlar
+title: Sihirbaz (. Vsz) dosyası | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,19 +13,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0fedf409c0ca320c054ddf1cc16318d08d25463a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80703319"
 ---
 # <a name="wizard-vsz-file"></a>Sihirbaz (.Vsz) Dosyası
 
-Tümleşik geliştirme ortamı (IDE), sihirbazları başlatmak için .vsz dosyalarını kullanır. Bu .vsz dosyaları, IDE'nin hangi sihirbazı arayacağını ve sihirbaza hangi bilgileri aktarılabilmek için kullandığı bilgileri içerir.
+Tümleşik geliştirme ortamı (IDE), sihirbazları başlatmak için. vsz dosyalarını kullanır. Bu. vsz dosyaları, hangi sihirbazın çağrılacağını ve sihirbaza hangi bilgilerin geçirileceğini belirlemek için IDE 'nin kullandığı bilgileri içerir.
 
-.vsz dosyası, .ini biçimli ve bölümü olmayan bir metin dosyasının sürümüdür. IDE tarafından bilinen bilgiler dosyanın başında saklanır. Bu, IDE'nin çağırdığı sihirbaz la .vsz dosyasındaki parametreler arasında IDE'ye geçirilecek bir bağlantı sağlar. Dosyanın geri kalanı sihirbaza özgü ve IDE tarafından toplanacak ve belirli sihirbaza geçirilecek parametreler sağlar.
+. Vsz dosyası, bölümü olmayan. ini biçimli bir metin dosyasının sürümüdür. IDE tarafından bilinen bilgiler dosyanın başında depolanır. Bu, IDE 'nin çağırdığı sihirbaz ve IDE 'ye geçirilecek. vsz dosyasındaki parametreler arasında bir bağlantı sağlar. Dosyanın geri kalanı sihirbaza özgü ve IDE tarafından toplanacak ve belirli sihirbaza geçirilecek parametreler sağlar.
 
-Aşağıdaki örnekte .vsz dosyasının içeriği gösterilmektedir.
+Aşağıdaki örnek bir. vsz dosyasının içeriğini gösterir.
 
 ```
 VSWizard 8.0
@@ -34,17 +34,17 @@ Param="WIZARDNAME = Wizard One"
 Param="WIZARDUI = FALSE"
 ```
 
-.vsz dosyasındaki parçalar aşağıda veda edileb'dir.
+. Vsz dosyasındaki parçalar aşağıda verilmiştir.
 
-|Bölüm|Açıklama|
+|Bölüm|Description|
 |----------|-----------------|
-|Vswizard|Dosyadaki ilk parametre şablon dosyası biçiminin sürüm numarasıdır. Bu sürüm numarası 6.0, 7.0, 7.1 veya 8.0 olmalıdır. Diğer sayılar başlatılamaz ve Geçersiz Biçim hatasına neden olur.|
-|Sihirbazı|Bu alan, sihirbazın OLE ProgID'ini veya alternatif olarak IDE tarafından oluşturulan sihirbazın CLSID'sinin GUID dizesini içerir.|
-|Param|Bu parçalar isteğe bağlıdır. Gerektiği kadar ekleyebilirsiniz.|
+|VSWizard|Dosyadaki ilk parametre, şablon dosya biçiminin sürüm numarasıdır. Bu sürüm numarası 6,0, 7,0, 7,1 veya 8,0 olmalıdır. Diğer sayılar başlatılamaz ve geçersiz biçim hatasına neden olabilir.|
+|Ekleme|Bu alan, sihirbazın OLE ProgID 'sini veya alternatif olarak IDE tarafından birlikte oluşturulan sihirbazın CLSID 'inin GUID dize gösterimini içerir.|
+|Param|Bu parçalar isteğe bağlıdır. Gereken kadar çok sayıda ekleyebilirsiniz.|
 
-Parametreler ,.vsz dosyasının sihirbaza ek özel parametreleri geçirmesini sağlar. Her değer sihirbaza varyantları bir dizi bir dize öğesi olarak geçirilir. Daha fazla bilgi için [Özel Parametreler'e](../../extensibility/internals/custom-parameters.md)bakın.
+Parametreler,. vsz dosyasını Sihirbaza ek özel parametreler geçirecek şekilde etkinleştirir. Her değer, sihirbaza bir varyant dizisinde dize öğesi olarak geçirilir. Daha fazla bilgi için bkz. [özel parametreler](../../extensibility/internals/custom-parameters.md).
 
-.vsz dosyanıza varsayılan yerel kimlik eklemek `FALLBACK_LCID`için, xxxx'in yerel kimliği olduğu =xxxx'i (örneğin İngilizce için 1033) belirtin. Parametre tanımlandığında, `FALLBACK_LCID` geçerli kimlik bulunamazsa sihirbaz sağlanan geri dönüş yerel kimliğini kullanır.
+. Vsz dosyanıza varsayılan bir yerel ayar KIMLIĞI eklemek için, `FALLBACK_LCID` = xxxx belirtin; burada xxxx yerel ayar kimliği, örneğin, İngilizce için 1033. `FALLBACK_LCID`Parametre tanımlandığında, sihirbaz, GEÇERLI kimlik bulunamazsa, sağlanan geri dönüş yerel ayar kimliğini kullanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: Anahtar Bağlama Elemanı | Microsoft Dokümanlar
+title: KeyBinding öğesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,18 +12,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b458e70a9a85c11707c50da2e16e3aa73f51bc12
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80703138"
 ---
-# <a name="keybinding-element"></a>AnahtarBağlama öğesi
-KeyBinding öğesi komutlar için klavye kısayollarını belirtir.
+# <a name="keybinding-element"></a>KeyBinding öğesi
+KeyBinding öğesi komutların klavye kısayollarını belirler.
 
- Komutların hem tek hem de çift anahtar bağlamaları bunlarla ilişkili olabilir. Tek bir anahtar bağlama örneği **Kaydet** komutu için **Ctrl**+**S'dir.** Çift anahtar bağlamaları bir komutu tetiklemek için art arda iki anahtar birleşimleri gerektirir. Çift anahtar bağlama bir örnek <strong>Ctrl*+</strong>K<strong>+</strong><strong>,</strong>Ctrl K** bir yer imi ayarlamak tır.
+ Komutlarda kendileriyle ilişkilendirilmiş tek ve çift anahtar bağlamaları bulunabilir. **Ctrl** + **S** **Kaydet** komutu için tek tuşla bağlama bir örnektir. Çift anahtar bağlamaları bir komutun tetiklenmesi için iki ardışık anahtar kombinasyonu gerektirir. Bir yer işareti ayarlamak için <strong>CTRL *+</strong> k<strong>,</strong>CTRL <strong>+</strong> k** ikili anahtar bağlamasının bir örneğidir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <Keybinding guid="MyGuid" id="MyId" Editor="MyEditor" key1="B" key2="x" mod1="Control" mod2="Alt" />
@@ -36,15 +36,15 @@ KeyBinding öğesi komutlar için klavye kısayollarını belirtir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Guıd|Gereklidir.|
-|id|Gereklidir.|
-|düzenleyici|Gereklidir. Düzenleyici GUID, bu klavye kısayolu etkin olacak düzenleme bağlamını gösterir. Genel bağlama kapsamı değeri "guidVSStd97"dir.|
-|key1|Gereklidir. Geçerli değerler tüm tiplenebilir alfanümerikve ayrıca 0x ve [VK_constants](/windows/desktop/inputdev/virtual-key-codes)öncesinde iki basamaklı hekzadesmal değerleri içerir.|
-|mod1|İsteğe bağlı. **Ctrl,** **Alt**ve **Shift'in** herhangi bir birleşimi boşlukla ayrılmıştır.|
-|key2|İsteğe bağlı. Geçerli değerler tüm tiplenebilir alfanümerikve ayrıca 0x ve [VK_constants](/windows/desktop/inputdev/virtual-key-codes)öncesinde iki basamaklı hekzadesmal değerleri içerir.|
-|mod2|İsteğe bağlı. **Ctrl,** **Alt**ve **Shift'in** herhangi bir birleşimi boşlukla ayrılmıştır.|
+|guid|Gereklidir.|
+|kimlik|Gereklidir.|
+|düzenleyici|Gereklidir. Düzenleyici GUID 'SI, bu klavye kısayolunun etkin olacağı düzenleme bağlamını gösterir. Genel bağlama kapsamı değeri "guidVSStd97" değeridir.|
+|key1|Gereklidir. Geçerli değerler, tüm tyıılabilen alfasayısal değerleri ve bundan önce 0x ve [VK_constants](/windows/desktop/inputdev/virtual-key-codes)olan iki basamaklı onaltılık değerler içerir.|
+|mod1|İsteğe bağlı. Boşluğa göre ayrılan **CTRL**, **alt**ve **SHIFT** 'in herhangi bir birleşimi.|
+|key2|İsteğe bağlı. Geçerli değerler, tüm tyıılabilen alfasayısal değerleri ve bundan önce 0x ve [VK_constants](/windows/desktop/inputdev/virtual-key-codes)olan iki basamaklı onaltılık değerler içerir.|
+|mod2|İsteğe bağlı. Boşluğa göre ayrılan **CTRL**, **alt**ve **SHIFT** 'in herhangi bir birleşimi.|
 |öykünücü|İsteğe bağlı.|
-|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -57,7 +57,7 @@ KeyBinding öğesi komutlar için klavye kısayollarını belirtir.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[KeyBindings öğesi](../extensibility/keybindings-element.md)|Anahtar Bağlama öğelerini ve diğer KeyBindings gruplandırmalarını gruplandırmayı grupla.|
+|[KeyBindings öğesi](../extensibility/keybindings-element.md)|Anahtar bağlama öğelerini ve diğer KeyBindings gruplandırmaları gruplandırır.|
 
 ## <a name="example"></a>Örnek
 
@@ -72,4 +72,4 @@ KeyBinding öğesi komutlar için klavye kısayollarını belirtir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [KeyBindings öğesi](../extensibility/keybindings-element.md)
-- [Visual Studio komut tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
