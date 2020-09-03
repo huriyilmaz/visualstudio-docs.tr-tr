@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 6cceca336403bdd8907cf0e28e36387eb25a2402
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281792"
 ---
 # <a name="read-xml-data-into-a-dataset"></a>Bir veri kümesinin içine XML verileri okuma
@@ -141,9 +141,9 @@ Bu uygulama için Kullanıcı arabirimi aşağıdakilerden oluşur:
     |-------------|--------------|-------------|
     |`TextBox1`|**Multiline**|`true`|
     ||**Çubuklarını**|**Dikey**|
-    |`Button1`|**Adı**|`ReadXmlButton`|
+    |`Button1`|**Ad**|`ReadXmlButton`|
     ||**Metin**|`Read XML`|
-    |`Button2`|**Adı**|`ShowSchemaButton`|
+    |`Button2`|**Ad**|`ShowSchemaButton`|
     ||**Metin**|`Show Schema`|
 
 ## <a name="create-the-dataset-that-receives-the-xml-data"></a>XML verilerini alan veri kümesini oluşturma

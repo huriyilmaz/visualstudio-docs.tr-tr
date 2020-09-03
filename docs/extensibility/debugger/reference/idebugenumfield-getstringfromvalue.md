@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField::GetStringFromValue | Microsoft Dokümanlar
+title: 'Ihata ayıklama Genumfield:: GetStringFromValue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5de59c573f7e233ea2aacb0dfa38826051c59373
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80730291"
 ---
 # <a name="idebugenumfieldgetstringfromvalue"></a>IDebugEnumField::GetStringFromValue
-Bu yöntem değeri göz önüne alındığında numaralandırma sabitinin adını alır.
+Bu yöntem, sabit listesi sabitinin adını değeri verilen olarak alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetStringFromValue(
@@ -43,13 +43,13 @@ int GetStringFromValue(
 
 ## <a name="parameters"></a>Parametreler
 `value`\
-[içinde] Numaralandırma sabitinin adını almak için gereken değer.
+'ndaki Numaralandırma sabitinin adının alınacağı değer.
 
 `pbstrValue`\
-[çıkış] Numaralandırma sabitinin adını verir.
+dışı Sabit Listesi sabitinin adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, `S_FALSE` değerilişkili bir adı yoksa veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` değerin ilişkili bir adı yoksa veya bir hata kodu döndürürse döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
  Aynı değerle ilişkili birden fazla ad varsa, numaralandırmada tanımlanan ilk ad döndürülür.

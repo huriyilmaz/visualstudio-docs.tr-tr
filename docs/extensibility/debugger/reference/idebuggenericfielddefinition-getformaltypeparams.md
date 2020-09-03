@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericFieldDefinition::GetFormalTypeParams | Microsoft Dokümanlar
+title: 'Idebuggenericfielddefinition:: GetFormalTypeParams | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +15,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4926d94e4ba032f3ff10ca8fdf7027ac6f6e751c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728251"
 ---
 # <a name="idebuggenericfielddefinitiongetformaltypeparams"></a>IDebugGenericFieldDefinition::GetFormalTypeParams
 Parametre sayısı verilen tür parametrelerini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetFormalTypeParams(
@@ -44,19 +44,19 @@ int GetFormalTypeParams(
 
 ## <a name="parameters"></a>Parametreler
 `cParams`\
-[içinde] Parametrelerin sayısı.
+'ndaki Parametre sayısı.
 
 `ppParams`\
-[çıkış] Tür parametreleri dizisi.
+dışı Parametre türü dizisi.
 
 `pcParams`\
-[içinde, dışarı] Dizideki `ppParams` parametre sayısı.
+[in, out] Dizideki parametre sayısı `ppParams` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Tür parametrelerini soldan sağa sırayla döndürün. Örneğin, K,V> Sözlük\<IDebugFormalGenericParameters {K,V} döndürür.
+ Tür parametrelerini soldan sağa doğru sırayla döndürün. Örneğin, sözlük \<K,V> IDebugFormalGenericParameters {K, V} döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

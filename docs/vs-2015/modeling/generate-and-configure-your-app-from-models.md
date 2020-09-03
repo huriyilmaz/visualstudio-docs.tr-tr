@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2ea9e28c55b608235d49096e4ef99cd30081eda0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666172"
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>Uygulamanızı modeller aracılığıyla oluşturma ve yapılandırma
@@ -24,7 +24,7 @@ Bir modelden uygulamanızın parçalarını oluşturabilir veya yapılandırabil
  Model, gereksinimleri doğrudan koddan daha fazla temsil eder. Uygulamanın davranışını doğrudan modelden türeterek, kodu güncelleştirerek değiştirilen gereksinimlere çok daha hızlı ve güvenilir bir şekilde yanıt verebilirsiniz. Türetmenin ayarlanması için bazı ilk işler gerekli olsa da, gereksinimlerde değişiklikler veya ürünün çeşitli türevlerini yapmayı düşünüyorsanız bu yatırım döndürülür.
 
 ## <a name="generating-the-code-of-your-application-from-a-model"></a>Bir modelden uygulamanızın kodunu oluşturma
- Kod oluşturmanın en kolay yolu, metin şablonlarını kullanmaktır. Aynı [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümünde, modeli tutabilmeniz için kod oluşturabilirsiniz. Daha fazla bilgi için bkz.:
+ Kod oluşturmanın en kolay yolu, metin şablonlarını kullanmaktır. Aynı [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümde, modeli tutabilmeniz için kod oluşturabilirsiniz. Daha fazla bilgi için bkz.
 
 - [T4 Metin Şablonları Kullanarak Tasarım Zamanı Kodu Oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 
@@ -41,7 +41,7 @@ Bir modelden uygulamanızın parçalarını oluşturabilir veya yapılandırabil
   Ancak, var olan bir uygulamayla başlatırsanız, model tarafından yönetilen farklı davranışları birbirinden bağımsız olarak farklılaştırabilmeleri için ayırmak üzere çok sayıda yeniden düzenleme gerektiğini fark edebilirsiniz. Projenizin maliyetini tahmin ettiğinizde uygulamanın bu yönünü değerlendirmenizi öneririz.
 
 ## <a name="configuring-your-application-from-a-model"></a>Uygulamanızı bir modelden yapılandırma
- Çalışma zamanında uygulamanızın davranışını değiştirmek istiyorsanız, uygulama derlenmesinden önce kaynak kodu oluşturan kod oluşturmayı kullanamazsınız. Bunun yerine, uygulamanızı UML veya DSL modelini okumak ve davranışını buna göre değiştirmek için tasarlayabilirsiniz. Daha fazla bilgi için bkz.:
+ Çalışma zamanında uygulamanızın davranışını değiştirmek istiyorsanız, uygulama derlenmesinden önce kaynak kodu oluşturan kod oluşturmayı kullanamazsınız. Bunun yerine, uygulamanızı UML veya DSL modelini okumak ve davranışını buna göre değiştirmek için tasarlayabilirsiniz. Daha fazla bilgi için bkz.
 
 - [Program kodundaki UML modelini okuma](../modeling/read-a-uml-model-in-program-code.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bağlantılı geri alma yönetimi | Microsoft Docs'
+title: 'Nasıl yapılır: bağlı geri alma yönetimini kullanma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,30 +11,30 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 67d0d173909b8cdfe2eaf0d56aa5c99c437d5ad8
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441552"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64795512"
 ---
-# <a name="how-to-use-linked-undo-management"></a>Nasıl yapılır: Bağlantılı geri alma Yönetimi'ni kullanın
+# <a name="how-to-use-linked-undo-management"></a>Nasıl Yapılır: Bağlantılı Geri Alma Yönetimini Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bağlantılı geri alma, kullanıcının aynı anda birden fazla dosya aynı düzenlemeleri geri izin verir. Örneğin, bir üstbilgi dosyası ve bir Visual C++ dosya gibi birden fazla program dosyaları arasında eş zamanlı metin değişiklikleri olan bir bağlantılı geri alma işlemi. Bağlantılı geri alma özelliği, geri alma yöneticisi, ortam uygulamasına oluşturulur ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager> , bu özelliği ile düzenleme olanak tanır. Bağlantılı geri alma birlikte tek bir geri alma birimi olarak kabul edilmesi için ayrı geri alma yığınlarını bağlayabilirsiniz bir üst geri alma birimi tarafından uygulanır. Kullanarak bağlantılı geri alma yordamı aşağıdaki bölümde ayrıntılı olarak verilmiştir.  
+Bağlı geri alma, kullanıcının birden çok dosyada aynı düzenlemeleri aynı anda geri almasına izin verir. Örneğin, bir üstbilgi dosyası ve bir Visual C++ dosyası gibi birden çok program dosyasında eşzamanlı metin değişiklikleri, bağlantılı bir geri alma işlemi olur. Bağlı geri alma özelliği, ortamın geri alma Yöneticisi uygulamasında yerleşiktir ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager> Bu özelliği değiştirmenize olanak sağlar. Bağlı geri alma, tek bir geri alma birimi olarak değerlendirilecek şekilde ayrı geri alma yığınları birbirine bağlayabileceğiniz bir üst geri alma birimi tarafından uygulanır. Bağlı geri alma kullanma yordamı aşağıdaki bölümde ayrıntılı olarak verilmiştir.  
   
-### <a name="to-use-linked-undo"></a>Bağlantılı geri alma kullanmak için  
+### <a name="to-use-linked-undo"></a>Bağlı geri almayı kullanmak için  
   
-1. Çağrı `QueryService` üzerinde `SVsLinkedUndoManager` işaretçisi almak için `IVsLinkedUndoTransactionManager`.  
+1. `QueryService`' `SVsLinkedUndoManager` A bir işaretçi almak için öğesini çağırın `IVsLinkedUndoTransactionManager` .  
   
-2. Çağırarak ilk ana bağlantılı geri alma birimi oluşturma <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager.OpenLinkedUndo%2A>. Bu, bir dizi bağlantılı geri alma yığınlar halinde gruplanması geri alma yığınlarını başlangıç noktasını ayarlar. İçinde `OpenLinkedUndo` yöntemi de gerekecek bağlantılı geri alma katı veya katı olmayan olmasını isteyip istemediğinizi belirtin. Katı olmayan bağlantılı geri alma davranışı ile bağlantılı geri alma eşdüzey belgelerin bazılarına kapatabilirsiniz ve diğer bağlı bırakın geri eşdüzey kendi yığınlarından üzerinde hala anlamına gelir. Katı bağlantılı geri alma davranışını bağlantılı geri alma eşdüzey yığın birlikte ya da hiç geri alınması gerektiğini belirtir. Sonraki bağlantılı geri alma yığınlarını çağırarak ekleme [IOleUndoManager::Add](/windows/desktop/api/ocidl/nf-ocidl-ioleundomanager-add) yöntemi.  
+2. Çağırarak ilk üst bağlantılı geri alma birimini oluşturun <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager.OpenLinkedUndo%2A> . Bu, geri alma yığınları kümesi için başlangıç noktasını, bağlantılı geri alma yığınlarıyla gruplandırılacak şekilde ayarlar. Yönteminde, `OpenLinkedUndo` bağlantılı geri alma 'nın katı mi yoksa katı olmayan mı olacağını da belirtmeniz gerekir. Kesin olmayan bağlantılı geri alma davranışı, bağlı geri alma eşdüzey öğelerinin bazı belgelerinin kapatılacağını ve yine de yığınlarındaki diğer bağlı geri alma eşdeğerlerini bırakabilmesini sağlayabilir. Kesin bağlantılı geri alma davranışı, tüm bağlı geri alma eşdüzey yığınlarının birlikte geri alınması veya hiç olmaması gerektiğini belirtir. [IOleUndoManager:: Add](/windows/desktop/api/ocidl/nf-ocidl-ioleundomanager-add) metodunu çağırarak sonraki bağlantılı geri alma yığınlarını ekleyin.  
   
-3. Çağrı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager.CloseLinkedUndo%2A> geri almak için tüm bağlantılı geri alma birimi olarak yedekleyin.  
+3. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager.CloseLinkedUndo%2A>Bağlı geri alma birimlerinin tümünü bir tane olarak geri almak için çağırın.  
   
     > [!NOTE]
-    > Bir düzenleyicide bağlantılı geri alma Yönetimi uygulamak için geri alma yönetim ekleyin. Bağlantılı geri alma yönetimini uygulama ile ilgili daha fazla bilgi için bkz: [nasıl yapılır: Uygulama geri alma Yönetim](../extensibility/how-to-implement-undo-management.md).  
+    > Bağlı geri alma yönetimini bir düzenleyicide uygulamak için, geri alma yönetimi ekleyin. Bağlı geri alma yönetimini uygulama hakkında daha fazla bilgi için bkz. [nasıl yapılır: geri alma yönetimini](../extensibility/how-to-implement-undo-management.md)uygulama.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompoundAction>   
  [IOleParentUndoUnit](/windows/desktop/api/ocidl/nn-ocidl-ioleparentundounit)   
  [IOleUndoUnit](/windows/desktop/api/ocidl/nn-ocidl-ioleundounit)   
- [Nasıl yapılır: Geri Alma Yönetimi Uygulama](../extensibility/how-to-implement-undo-management.md)
+ [Nasıl Yapılır: Geri Alma Yönetimini Uygulama](../extensibility/how-to-implement-undo-management.md)

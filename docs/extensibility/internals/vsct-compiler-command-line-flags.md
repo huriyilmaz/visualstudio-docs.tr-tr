@@ -1,5 +1,5 @@
 ---
-title: VSCT Derleyici Komut Satırı Bayrakları | Microsoft Dokümanlar
+title: VSCT derleyici komut satırı bayrakları | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +12,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: e4ee29710049453c3163c366eccf96e257b6028d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80703963"
 ---
 # <a name="vsct-compiler-command-line-flags"></a>VSCT Derleyici Komut Satırı Bayrakları
-Visual Studio Komut Tablosu (VSCT) derleyicisi .vsct dosyalarının başarılı bir şekilde derlemesini sağlamak için komut satırı anahtarları sağlar.
+Visual Studio komut tablosu (VSCT) derleyicisi,. vsct dosyalarının başarıyla derlemesini sağlamak için komut satırı anahtarları sağlar.
 
-## <a name="command-line-parameters"></a>Komut Satırı Parametreleri
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Komut** penceresinden temel VSCT yardımını görüntülemek için *Visual Studio SDK yükleme yoluna*\VisualStudioIntegration\Tools\Bin\ klasörüne gidin ve yazın:
+## <a name="command-line-parameters"></a>Komut satırı parametreleri
+ Temel VSCT yardımını bir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **komut** penceresinden görüntülemek IÇIN *Visual Studio SDK yükleme yolu*\VisualStudioIntegration\Tools\Bin\ klasörüne gidin ve şunu yazın:
 
 ```
 vsct /?
@@ -50,29 +50,29 @@ Syntax: vsct <infile> [<outfile>] [-S[symbols file]] [-D<preprocessor-define>]*
 ```
 
 > [!NOTE]
-> - (tire) ve / (ileri eğik çizgi) karakterleri komut satırı parametrelerini belirtmek için kabul edilen gösterimdir.
+> -(Dash) ve/(eğik çizgi) karakterleri, komut satırı parametrelerini belirten kabul edilen simgedir.
 
- Kabul edilebilir bayraklar ve ne anlama geldiğini aşağıdaki gibidir.
+ Kabul edilebilir bayraklar ve anlamları aşağıda verilmiştir.
 
-|Anahtar|Açıklama|
+|Anahtar|Description|
 |------------|-----------------|
-|-D|Tanımlanmış ek semboller belirtin.|
-|-I|Dosya başvurularını çözerken kullanılması gereken ek dahil yolları belirtin.|
-|-L|<xref:System.Globalization.CultureInfo> Kültür adını belirtin, örneğin "en-US".|
-|-E|Komut öğeleri için belirtilen ad alanına C# nesneleri yonu, ardından [C&#124;H&#124;N]:*dosya adı*nerede C = C#, H = C++ üstbilgi, N = namespace. C# için ad alanı gereklidir.|
-|-v|Verbose çıkışı.|
+|-D|Ek tanımlanmış sembolleri belirtin.|
+|-I|Dosya başvurularını çözümlerken kullanılması gereken ek ekleme yollarını belirtin.|
+|-L|<xref:System.Globalization.CultureInfo>Kültür adını (örneğin, "en-US") belirtin.|
+|-E|C# nesnelerini, komut öğeleri için belirtilen ad alanında, izleyen [C&#124;H&#124;N]:*filename*WHERE C = C#, H = C++ üstbilgisi, N = Namespace. C# için ad alanı gereklidir.|
+|-v|Ayrıntılı çıkış.|
 
- -L anahtarı derleyiciye, verilen <xref:System.Globalization.CultureInfo> kültür adına karşılık gelen ikili .cto dosyasını oluşturmak için bir dize grubu seçmesini bildirir. Belirtilen kültür adı,.vsct dosyasındaki bir veya daha fazla [Strings Öğesinin](../../extensibility/strings-element.md) Dil özniteliğiyle eşleşmelidir. Bir Strings öğesi nin Dil özniteliği yoksa, içeren [CommandTable Öğesi'nden](../../extensibility/commandtable-element.md)devralır.
+ -L anahtarı derleyiciye, belirtilen kültür adına karşılık gelen binary. CTO dosyasını oluşturmak için bir dize grubu seçmesini söyler <xref:System.Globalization.CultureInfo> . Belirtilen kültür adı,. vsct dosyasındaki bir veya daha fazla [dize öğesinin](../../extensibility/strings-element.md) dil özniteliğiyle eşleşmelidir. Bir dizeler öğesinin Language özniteliği yoksa, kapsayan [CommandTable öğesinden](../../extensibility/commandtable-element.md)devralınır.
 
- Bir .vsct dosyasında birden çok String öğesi olabilir ve her birinin farklı bir Dil özniteliği olabilir. Küreselleşme, VSCT derleyicisinin birden çok kez çalıştırılması ve her kültür adı için -L anahtarının değiştirilmesiyle sağlanır.
+ Bir. vsct dosyası birden çok dizeler öğesine sahip olabilir ve her birinin farklı bir Language özniteliği olabilir. Genelleştirme, VSCT derleyicisini birden çok kez çalıştırıp her kültür adı için-L anahtarını değiştirerek elde edilir.
 
- -L anahtarı tarafından verilen kültür adı, herhangi bir Strings öğesinin Dil özniteliğiyle eşleşmiyorsa, derleyici bölgeyle değil, dile eşleşmeye çalışır. Örneğin, "en-US" bulunamıyorsa, derleyici bunun yerine "en" dener. Aksi takdirde, işletim sisteminin geçerli kültürünü deneyecektir. Aksi takdirde, bulduğu ilk Strings öğesini derler.
+ -L anahtarı tarafından verilen kültür adı herhangi bir dizeler öğesinin dil özniteliğiyle eşleşmiyorsa, derleyici, bölgeyi değil, dili eşleştirmeye çalışır. Örneğin, "en-US" bulunamazsa, derleyici bunun yerine "en" i dener. Bu, işletim sisteminin geçerli kültürünü deneyiyor. Bu, bulduğu ilk dizeler öğesini derler.
 
- -E anahtarı, komut tablosu tarafından kullanılan sembolleri içeren C stili bir üstbilgi dosyası yaçmak veya komut sembolleri için nesneler içeren bir C# dosyası yontmak için kullanılabilir.
+ -E anahtarı, komut tablosu tarafından kullanılan sembolleri içeren C stili bir üst bilgi dosyasını veya komut sembolleri için nesneleri içeren bir C# dosyası yayarak kullanılabilir.
 
- -D ve-I anahtarları, aynı ada sahip Cl.exe C önişlemci bayraklarının sözdizimine sahiptir. -X=Y biçimine sahip D tanımları, XML tabanlı \<Tanımlı>'nin özniteliklerinin genişletilmesinde `Condition` kullanılır. -Ben>, \< \<Extern> ve \<Bitmap> dosya başvuruları dahil çözmek için kullanılan yolları içerir. Daha fazla bilgi için [VSCT XML Şema Başvurusu'na](../../extensibility/vsct-xml-schema-reference.md)bakın.
+ -D ve-I anahtarları aynı ada sahip Cl.exe C Önişlemci bayraklarının sözdizimine sahiptir. X = Y biçiminde olan-D tanımları, özniteliklerdeki XML tabanlı testlerin genişletilmesi için kullanılır \<Defined> `Condition` . -İ içerme yolları \<Include> , çözümlemek \<Extern> ve \<Bitmap> Dosya başvuruları için kullanılır. Daha fazla bilgi için bkz. [VSCT XML Schema başvurusu](../../extensibility/vsct-xml-schema-reference.md).
 
- VSCT derleyicisi, önceden oluşturulmuş bir ikili dosyayı da derleyebilir. Bunu yapmak için, dosya \<> için ikili bir dosya kaynağı.   İkili dosya VSCT derleyicisi tarafından üretilmiştirsa, sembolleri zaten gömülü olacak ve \<çıktının Semboller> bölümünde sembolik adlarla çıktı üretecektir. İkili CTC derleyicisi tarafından üretildiyse, çıktı gerçek GUID'leri ve dislerini içerir. Ctc.exe'nin geçerli sürümleri tarafından üretilen *.ctsym dosyası ikili giriş dosyasıyla aynı klasördeyse, semboller bu dosyadan yüklenir ve çıktı için kullanılır.
+ VSCT derleyicisi daha önce oluşturulmuş bir ikili dosyayı da derlemeyi bozabilir. Bunu yapmak için, için bir ikili dosya sağlayın \<infile> .   İkili dosya VSCT derleyicisi tarafından üretildiyse, sembolleri zaten katıştırılır ve çıktının bir bölümünde sembolik adlarla çıktı üretir \<Symbols> . İkili dosya CTC derleyicisi tarafından üretildiyse, çıktı gerçek GUID 'Leri ve kimlikleri içerir. Geçerli Ctc.exe sürümleri tarafından üretilen *. ctsyd dosyası ikili giriş dosyasıyla aynı klasörsluysa, semboller bu dosyadan yüklenir ve çıkış için kullanılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio Komut Tablosu (.Vsct) Dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

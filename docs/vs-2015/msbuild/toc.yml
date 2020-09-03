@@ -56,9 +56,9 @@
                   href: writealltlogs.md
                 - name: WriteContextTLogs
                   href: writecontexttlogs.md
-        - name: Hedefler
+        - name: Targets
           items:
-            - name: Hedefler
+            - name: Targets
               href: msbuild-targets.md
             - name: Hedef Derleme Sırası
               href: target-build-order.md
@@ -104,15 +104,15 @@
       items:
         - name: Gelişmiş Kavramlar
           href: msbuild-advanced-concepts.md
-        - name: Toplu işleme
+        - name: Toplu İşleme
           items:
-            - name: Toplu işleme
+            - name: Toplu İşleme
               href: msbuild-batching.md
             - name: Toplu Görev İşlemede Öğe Meta Verileri
               href: item-metadata-in-task-batching.md
             - name: Toplu Hedef İşlemede Öğe Meta Verileri
               href: item-metadata-in-target-batching.md
-        - name: Dönüşümler
+        - name: Dönüştürmeler
           href: msbuild-transforms.md
         - name: Visual Studio Tümleştirmesi
           items:
@@ -156,13 +156,13 @@
                   href: how-to-configure-targets-and-tasks.md
             - name: .NET Framework Hedefleme Hatalarının Sorunlarını Giderme
               href: troubleshooting-dotnet-framework-targeting-errors.md
-        - name: En İyi Yöntemler
+        - name: En İyi Uygulamalar
           href: msbuild-best-practices.md
     - name: MSBuild'de Günlük Kaydı
       items:
         - name: MSBuild'de Günlük Kaydı
           href: logging-in-msbuild.md
-        - name: Yapı Günlükleri Alma
+        - name: Derleme Günlüklerini Alma
           href: obtaining-build-logs-with-msbuild.md
         - name: Günlükçüleri Derleme
           href: build-loggers.md
@@ -394,7 +394,7 @@
           href: common-msbuild-project-items.md
         - name: Komut Satırı Başvurusu
           href: msbuild-command-line-reference.md
-        - name: .Targets Dosyaları
+        - name: Targets Dosyaları
           href: msbuild-dot-targets-files.md
         - name: Tanınmış Öğe Meta Verisi
           href: msbuild-well-known-item-metadata.md
@@ -406,7 +406,7 @@
           items:
             - name: WPF MSBuild Başvurusu
               href: wpf-msbuild-reference.md
-            - name: .Targets Dosyaları
+            - name: Targets Dosyaları
               href: wpf-dot-targets-files.md
             - name: Görev Başvurusu
               items:

@@ -1,5 +1,5 @@
 ---
-title: '@No__t_0property Name &gt; özelliği silinemiyor | Microsoft Docs'
+title: Özellik &lt; özelliği adı &gt; silinemiyor | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: aca36919cb4c82d6ca76e0f3eecbbacd48cde768
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667248"
 ---
-# <a name="the-property-ltproperty-namegt-cannot-be-deleted"></a>@No__t_0property Name &gt; özelliği silinemiyor
+# <a name="the-property-ltproperty-namegt-cannot-be-deleted"></a>Özellik &lt; özelliği adı &gt; silinemiyor
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_1class adı > ve \<class adı arasındaki devralma için ayrıştırıcı özelliği olarak ayarlandığından \<property ad > özelliği silinemiyor >
+\<property name>Ve arasında devralmanın ayrıştırıcı özelliği olarak ayarlandığı için özellik silinemiyor \<class name>\<class name>
 
  Seçilen özellik, hata iletisinde belirtilen sınıflar arasındaki devralma için **ayrıştırıcı özelliği** olarak ayarlanır. Veri sınıfları arasında devralma yapılandırmasına katılımları halinde Özellikler silinemez.
 

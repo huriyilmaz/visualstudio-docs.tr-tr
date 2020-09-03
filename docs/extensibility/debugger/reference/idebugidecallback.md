@@ -1,5 +1,5 @@
 ---
-title: IDebugIDECallback | Microsoft Dokümanlar
+title: IDebugIDECallback | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,40 +11,40 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 585ff354cef9686097325ea4dea25cd08c4cbb1b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727833"
 ---
 # <a name="idebugidecallback"></a>IDebugIDECallback
 > [!IMPORTANT]
-> Visual Studio 2015'te ifade değerlendiricilerinin bu şekilde uygulanması amortismana uymaktadır. CLR ifade değerlendiricilerinin uygulanması hakkında bilgi için lütfen [CLR İfade Değerlendiriciler](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [Yönetilen İfade Değerlendirici Örneği'ne](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)bakın.
+> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Bir ifade değerlendiricisinin (EE) hata ayıklayıcının çıkış penceresinde bir ileti görüntülemesini sağlar.
+ Bir ifade değerlendiricisi (EE) hata ayıklayıcının çıkış penceresinde bir ileti görüntülemesini sağlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugIDECallback : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Bu geri çağırma yönetilen hata ayıklama altyapısı tarafından uygulanır.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Bu geri çağırma, yönetilen hata ayıklama altyapısı tarafından uygulanır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Hata ayıklayıcının çıkış penceresine çıktı göndermek için bir ifade değerlendirici tarafından tüketilebilir.
+ Hata ayıklayıcının çıkış penceresine çıkış göndermek için bir ifade değerlendirici tarafından tüketilebilir.
 
 ## <a name="methods"></a>Yöntemler
  Bu arabirim aşağıdaki yöntemi uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Görüntülü İleti](../../../extensibility/debugger/reference/idebugidecallback-displaymessage.md)|Belirtilen ileti dizesini hata ayıklamanın çıkış penceresine gönderir.|
+|[DisplayMessage](../../../extensibility/debugger/reference/idebugidecallback-displaymessage.md)|Belirtilen ileti dizesini hata ayıklayıcının çıkış penceresine gönderir.|
 
 ## <a name="requirements"></a>Gereksinimler
- Başlık: Ee.h
+ Üstbilgi: ee. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll

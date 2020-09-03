@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 438f84a172c7e0a2d0dc957c578adc568a46495f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668152"
 ---
 # <a name="how-to-create-a-nullable-type-class-designer"></a>Nasıl Yapılır: Boş Değer Atanabilir Tür Oluşturma (Sınıf Tasarımcısı)
@@ -24,19 +24,19 @@ ms.locfileid: "72668152"
 
 Belirli değer türlerinde her zaman tanımlı bir değer yoktur (veya gerekli değildir). Bu, veritabanlarında yaygın bir uygulamadır ve bazı alanlara hiçbir değer atanmayabilir. Örneğin, henüz bir değer atanmadığını belirtmek için bir veritabanı alanına null değer atayabilirsiniz.
 
- Null *yapılabilir bir tür* , genişlettiğinizi, bu tür için tipik değer aralığını ve aynı zamanda null bir değer olacak şekilde genişlettiğinizi belirten bir değer türüdür. Örneğin, null yapılabilir \<Int32 > olarak da bilinen null olabilen `Int32`,-2147483648 ile 2147483647 arasında herhangi bir değer atanabilir veya null bir değer atanabilir. Null yapılabilir \<bool > `True`, `False` veya null değerler atanabilir (hiç bir değer yoktur).
+ Null *yapılabilir bir tür* , genişlettiğinizi, bu tür için tipik değer aralığını ve aynı zamanda null bir değer olacak şekilde genişlettiğinizi belirten bir değer türüdür. Örneğin, null yapılabilir `Int32` olarak da bilinen null olabilen bir \<Int32> değeri,-2147483648 ile 2147483647 arasında herhangi bir değer atanabilir veya null bir değer atanabilir. Null yapılabilir, \<bool> ya da null değer atanabilir (hiç bir `True` `False` değer yoktur).
 
- Null yapılabilir türler <xref:System.Nullable%601> yapısının örnekleridir. Null yapılabilir bir türdeki her bir örnek, `HasValue` ve `Value` iki ortak salt okunurdur.
+ Null yapılabilir türler <xref:System.Nullable%601> yapının örnekleridir. Null yapılabilir bir türdeki her bir örnek, iki ortak salt okuma özelliği içerir `HasValue` ve `Value` :
 
-- `HasValue` `bool` türündedir ve değişkenin tanımlanmış bir değer içerip içermediğini gösterir. `True`, değişkenin null olmayan bir değer içerdiği anlamına gelir. @No__t_0 veya `if (y != null)` gibi bir ifade kullanarak tanımlanmış bir değer için test edebilirsiniz.
+- `HasValue` türündedir `bool` ve değişkenin tanımlanmış bir değer içerip içermediğini gösterir. `True` değişkenin null olmayan bir değer içerdiği anlamına gelir. Veya gibi bir ifade kullanarak tanımlanmış bir değer için test edebilirsiniz `if (x.HasValue)` `if (y != null)` .
 
-- `Value`, temel alınan türle aynı türde. @No__t_0 `True`, `Value` anlamlı bir değer içerir. @No__t_0 `False`, `Value` erişimi geçersiz bir işlem özel durumu oluşturur.
+- `Value` , temel alınan türle aynı türde. `HasValue`İse `True` , `Value` anlamlı bir değer içerir. `HasValue`İse `False` , erişim `Value` geçersiz bir işlem özel durumu oluşturur.
 
-  Varsayılan olarak, bir değişkeni null yapılabilir bir tür olarak bildirdiğinizde, temel alınan değer türünün varsayılan değeri dışında tanımlı bir değer (`HasValue` `False`) yoktur.
+  Varsayılan olarak, bir değişkeni null yapılabilir bir tür olarak bildirdiğinizde, `HasValue` `False` temel alınan değer türünün varsayılan değerinden başka bir tanımlı değer (yani) yoktur.
 
   Sınıf Tasarımcısı, temel alınan türünü gösterdiği gibi, null yapılabilir bir tür görüntüler.
 
-  Görsel C#olarak null yapılabilir türler hakkında daha fazla bilgi için bkz. [Nullable türler](https://msdn.microsoft.com/library/e473cb01-28ca-42be-9cea-f717055d72c6). Visual Basic null yapılabilir türler hakkında daha fazla bilgi için bkz. [Nullable değer türleri](https://msdn.microsoft.com/library/9ac3b602-6f96-4e6d-96f7-cd4e81c468a6).
+  Visual C# ' de Nullable türler hakkında daha fazla bilgi için bkz. [Nullable türler](https://msdn.microsoft.com/library/e473cb01-28ca-42be-9cea-f717055d72c6). Visual Basic null yapılabilir türler hakkında daha fazla bilgi için bkz. [Nullable değer türleri](https://msdn.microsoft.com/library/9ac3b602-6f96-4e6d-96f7-cd4e81c468a6).
 
   [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
@@ -82,4 +82,4 @@ Belirli değer türlerinde her zaman tanımlı bir değer yoktur (veya gerekli d
 5. Sınıf şekline sağ tıklayın ve **Sınıf Ayrıntıları**' na tıklayın. **Sınıf Ayrıntıları** penceresinde yeni türün özelliklerini görüntüleyebilir veya değiştirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- Nullable [türler kullanarak](https://msdn.microsoft.com/library/0bacbe72-ce15-4b14-83e1-9c14e6380c28) [null yapılabilir türler](https://msdn.microsoft.com/library/e473cb01-28ca-42be-9cea-f717055d72c6) <xref:System.Nullable%601> [nasıl yapılır: null yapılabilir tür](https://msdn.microsoft.com/library/d4b67ee2-66e8-40c1-ae9d-545d32c71387) [Nullable değer türlerini](https://msdn.microsoft.com/library/9ac3b602-6f96-4e6d-96f7-cd4e81c468a6) belirleme
+ <xref:System.Nullable%601>[Nullable türler kullanan](https://msdn.microsoft.com/library/0bacbe72-ce15-4b14-83e1-9c14e6380c28) [null yapılabilir türler](https://msdn.microsoft.com/library/e473cb01-28ca-42be-9cea-f717055d72c6) [nasıl yapılır: null yapılabilir tür](https://msdn.microsoft.com/library/d4b67ee2-66e8-40c1-ae9d-545d32c71387) [Nullable değer türlerini](https://msdn.microsoft.com/library/9ac3b602-6f96-4e6d-96f7-cd4e81c468a6) belirleme

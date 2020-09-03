@@ -1,5 +1,5 @@
 ---
-title: Çevrimdışı Yardım belgeleri
+title: Çevrimdışı yardım belgeleri
 ms.date: 11/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -20,79 +20,79 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9c9c9bf7e6447f222b63ad9a07c0e27ce4567374
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67824871"
 ---
 # <a name="microsoft-help-viewer"></a>Microsoft Yardım Görüntüleyicisi
 
-Yükleme ve Microsoft Yardım Görüntüleyicisi'ni kullanarak yerel bilgisayarınızda çeşitli ürün ve teknolojiler için içerik görüntüleyin. Bu ürünler, Visual Studio, .NET, dil başvurusu, SQL Server ve Windows geliştirme içerir. Yardım Görüntüleyicisi yapmanızı sağlar:
+Microsoft Yardım Görüntüleyicisi kullanarak, yerel bilgisayarınızdaki çeşitli ürün ve teknolojilerin içeriğini yükleyebilir ve görüntüleyebilirsiniz. Bu ürünler Visual Studio, .NET, dil başvurusu, SQL Server ve Windows geliştirme içerir. Yardım Görüntüleyicisi şunları yapmanızı sağlar:
 
-- Kitaplar olarak da adlandırılır, içerik kümelerini indirin. Bu, "Çevrimdışı" çalışma ve belgelerine erişime sahip olmaya devam etmeniz gerekiyorsa sizin için yararlı olabilir.
+- Kitap olarak da adlandırılan içerik kümelerini indirin. Bu, "çevrimdışı" çalışmanız ve belgelere erişiminizin olması gerektiğinde yararlı olabilir.
 
-- İçindekiler tablosu, arama ve göz atma ile başlığa göre konuları bulmak.
+- İçindekiler tablosuna göz atarak ve arama yaparak konu başlığına göre konular bulun.
 
-- Dizin içindeki konuları arayın.
+- Dizinde bulunan konuları arama.
 
-- Tam metin aramasını kullanarak bilgileri bulun.
+- Tam metin aramasını kullanarak bilgi bulun.
 
-- Görünüm, yer işareti ve yazdırma konuları.
+- Konuları görüntüleyin, yer işaretini ve yazdırın.
 
-Yardım Görüntüleyicisi'ni yüklemek için bkz [Microsoft Yardım Görüntüleyicisi'ni yükleme](../help-viewer/installation.md). Çevrimiçi Git yerine Yardım Görüntüleyici Yardım konuları okumaya başlamak için **yardımcı** Visual Studio'da, menü seçip **Yardım tercihini Ayarla** > **Yardım Görüntüleyicisi'nde başlatın** .
+Yardım Görüntüleyicisi 'ni yüklemek için bkz. [Microsoft Yardım Görüntüleyicisi yüklemesi](../help-viewer/installation.md). Çevrimiçi değil yardım görüntüleyicisinde yardım konularını okumaya başlamak için Visual Studio 'daki **Yardım** menüsüne gidin ve Yardım Görüntüleyicisi 'nde **Yardım tercihi**  >  **Başlat**' ı seçin.
 
 > [!TIP]
-> Bir PDF sürümünü indirmek için internet bağlantısı olmadığında yerel olarak, görüntüleyebilmesi içerik indirmek için başka bir yolu var. Docs.microsoft.com'da birçok belge kümeleri İçindekiler (Bu TOC için tüm makaleleri içeren bir PDF dosyasını indirmek için TOC) altındaki bir bağlantı içerir.
+> Bir internet bağlantınızın PDF sürümünü indirileceği sırada görüntüleyebilmeniz için içeriği yerel olarak indirmenin bir başka yolu. Docs.microsoft.com üzerinde birçok belge kümesi, içindekiler tablosunun (TOC) alt kısmına bir bağlantı içerir ve bu TOC 'nin tüm makalelerini içeren bir PDF dosyasını indirir.
 >
-> ![PDF için Visual Studio belgelerini indirin](media/overview/download-pdf.png)
+> ![Visual Studio belgeleri için PDF 'YI indirin](media/overview/download-pdf.png)
 
 ## <a name="help-viewer-tour"></a>Yardım Görüntüleyicisi turu
 
-Gezinme sekmeleri, yüklü içeriği görüntüleyebilir konu sekmesi veya sekmelerinde kullanarak yüklü içerikte bilgileri bulmak ve kullanarak içeriği yönetebilirsiniz **içeriği Yönet** sekmesi. Ayrıca, araç çubuğundaki düğmeleri kullanarak ek görevleri gerçekleştirmek ve pencerenin sağ alt köşesinde ek bilgiler bulabilirsiniz.
+Gezinti sekmelerini kullanarak yüklü içerikte bilgi bulabilir, konu sekmesinde veya sekmelerde yüklü içeriği görüntüleyebilir ve **Içeriği Yönet** sekmesini kullanarak içeriği yönetebilirsiniz. Ayrıca, araç çubuğundaki düğmeleri kullanarak ek görevler gerçekleştirebilir ve pencerenin sağ alt köşesinde ek bilgiler bulabilirsiniz.
 
-### <a name="navigation-tabs"></a>Gezinme sekmeleri
+### <a name="navigation-tabs"></a>Gezinti sekmeleri
 
 |Tab|Açıklama|
 |---|-----------|
-|İçindekiler|Yüklü içeriği hiyerarşi (İçindekiler tablosu) olarak görüntüler. Görünen başlıklar için filtre uygulamak üzere ölçütler belirtebilirsiniz.|
-|Dizin|Dizini oluşturulan terimler alfabetik bir listesini görüntüler. Dizin arama, girdiler için filtre uygulamak üzere ölçütler belirleyebilir ve bu dizin girdileri içeren veya belirttiğiniz metni içeren başlangıç gerektirir.|
-|Sık Kullanılanlar|"Sık kullanılan" konuları seçerek yapabilecekleriniz **Sık Kullanılanlara Ekle** düğmesi ve konular bu sekmede görünür. **Geçmişi** bölümü en son görüntülediğiniz konuların listesini görüntüler.|
-|Ara|Kod ve konu başlıkları da dahil olmak üzere herhangi bir içerik koşulların arayabileceğiniz bir metin kutusu sağlar.|
+|İçindekiler|Yüklü içeriği hiyerarşi (İçindekiler tablosu) olarak görüntüler. Görüntülenen başlıkları filtrelemek için ölçüt belirtebilirsiniz.|
+|Dizin oluşturma|Dizinli terimlerin alfabetik bir listesini görüntüler. Dizinde arama yapabilir, girişleri filtrelemek için ölçütler belirtebilir ve dizin girişlerinin belirttiğiniz metni içermesini veya kullanmaya başlamasını isteyebilirsiniz.|
+|Sık Kullanılanlar|**Sık Kullanılanlara Ekle** düğmesini seçerek "sık kullanılan" konuları ve bu sekmede görünen konuları seçebilirsiniz. **Geçmiş** bölümü, son zamanlarda görüntülediğiniz konuların listesini görüntüler.|
+|Arayın|Kodda, kod ve konu başlıkları dahil olmak üzere her yerde şartlar araygeçirebileceğiniz bir metin kutusu sağlar.|
 
-### <a name="view-topics"></a>Görünüm konuları
+### <a name="view-topics"></a>Konuları görüntüle
 
-Her konu kendi sekmede görünür ve aynı anda birden çok konu açabilirsiniz.
+Her konu kendi sekmesinde görünür ve aynı anda birden çok konu açabilirsiniz.
 
-### <a name="manage-content"></a>İçeriği Yönet
+### <a name="manage-content"></a>İçeriği yönetme
 
-Yükleme, güncelleştirme, taşıma ve içerik kullanarak silme **içeriği Yönet** sekmesi. Sekmenin üstünde, kullandığınız **yükleme kaynağı** denetimi kitapları bir ağ konumundan veya diskten ya da URI yüklenip yüklenmeyeceğini belirtin. **Yerel depo yolu** kutusunda burada kitapları yerel bilgisayarda yüklü ve seçerek bunları farklı bir konuma taşıyabilirsiniz gösterir **taşıma** düğmesi.
+İçeriği **Yönet** sekmesini kullanarak içeriği yükleyebilir, güncelleştirebilir, taşıyabilir ve silebilirsiniz. Sekmenin en üstünde, bir ağ konumundan veya bir diskten ya da URI 'den kitap yükleme yapılıp yapılmayacağını belirtmek için **yükleme kaynak** denetimini kullanabilirsiniz. **Yerel depo yolu** kutusu, kitapların yerel bilgisayarda yüklü olduğu yeri gösterir ve **Taşı** düğmesini seçerek bunları farklı bir konuma taşıyabilirsiniz.
 
-İçerik listesi hangi kitapları yükleyebilir veya zaten yüklediyseniz, bir güncelleştirme kullanıma hazır ve her bir kitabın ne kadar büyük olduğunu gösterir. Yüklediğinizde veya bir veya daha fazla kitap uygun olanını kaldırmak **Ekle** veya **Kaldır** bağlantılar ve ardından **güncelleştirme** düğmesini **bekleyen değişiklikleri** bölmesi. Yüklemiş olduğunuz herhangi bir kitap için güncelleştirme mevcutsa seçerek içeriği yenileyebilirsiniz **şimdi indirmek için buraya tıklayın** pencerenin alt kısmındaki bağlantı. Ayrıca, ek kitaplar yüklediğinizde güncelleştirmeler mevcutsa tüm yüklü kitaplar yenilenir.
+İçerik listesi, hangi kitaplar yükleyebileceğiniz veya zaten yüklü olduğunu, bir güncelleştirmenin kullanılabilir olup olmadığını ve her kitabın ne kadar büyük olduğunu gösterir. İlgili **ekleme** veya **kaldırma** bağlantılarını seçerek ve ardından **bekleyen değişiklikler** bölmesinin altındaki **Güncelleştir** düğmesini seçerek bir veya daha fazla kitap yükleyebilir veya kaldırabilirsiniz. Zaten yüklemiş olduğunuz tüm kitaplar için güncelleştirmeler varsa, pencerenin alt kısmındaki **Şimdi indirmek için buraya tıklayın** bağlantısını seçerek bu içeriği yenileyebilirsiniz. Ayrıca, ek kitaplar yüklediğinizde güncelleştirmeler varsa, yüklenen tüm kitaplar yenilenir.
 
 > [!NOTE]
-> İşlevselliğini **içeriği Yönet** sekmesi Yardım Görüntüleyici Yöneticisi bu özellikleri devre dışı bırakmışsa veya internet erişimi varsa farklı olabilir.
+> **Içerik yönetme** sekmesinin Işlevselliği, Yardım Görüntüleyicisi Yöneticisi bu özellikleri devre dışı bıraktığında veya kullanılabilir internet erişimi yoksa farklılık gösterebilir.
 
 ### <a name="toolbar-buttons"></a>Araç çubuğu düğmeleri
 
-Araç çubuğunda **Yardım Görüntüleyici** penceresi şu düğmeleri içerir:
+**Yardım Görüntüleyici** penceresindeki araç çubuğu aşağıdaki düğmeleri içerir:
 
-- **İçindekilerde konuyu Göster** düğmede konusundaki konumunu **içeriği** sekmesi.
+- **İçindekiler bölümünde konuyu göster** düğmesi, **İçindekiler** sekmesindeki konunun konumunu gösterir.
 
-- **Sık Kullanılanlara Ekle** düğmesi etkin konuyu ekler **Sık Kullanılanlar** sekmesi.
+- **Sık Kullanılanlara Ekle** düğmesi, etkin konuyu **Sık Kullanılanlar** sekmesine ekler.
 
-- **Konuda Bul** düğmesi etkin konudaki arama metnini vurgular.
+- **Konuda bul** düğmesi etkin konudaki arama metnini vurgular.
 
-- **Yazdırma** düğme yazdırır veya etkin konunun önizlemesini gösterir.
+- **Yazdır** düğmesi, etkin konunun önizlemesini yazdırır veya görüntüler.
 
-- **Görüntüleyici seçenekleri** düğmesi ne kadar büyük metin görünür, kaç arama sonuçları döndürmek için geçmiş ve çevrimiçi güncelleştirmelerin denetlenip denetlenmeyeceğini göstermek için ne kadar konunun gibi ayarlarını görüntüler.
+- **Görüntüleyici seçenekleri** düğmesi, metnin ne kadar büyük göründüğünü, kaç arama sonucunun geri dönediğini, geçmişteki kaç konunun gösterileceğini ve güncelleştirmelerin çevrimiçi olup olmadığını denetlemek gibi ayarları görüntüler.
 
-- **İçeriği Yönet** düğmesi **içeriği Yönet** sekmesini etkinleştirir.
+- **Içeriği Yönet** düğmesi **İçeriği Yönet** sekmesini etkin hale getirir.
 
-- Sağ taraftaki küçük üçgen, konu sekmelerini de içeren sekmelerin bir listesini açar ve **içeriği Yönet** sekmesi. Etkin sekmede yapmak için sekmesinde ad seçebilirsiniz.
+- Sağ taraftaki küçük üçgen, konu sekmeleri ve **Içeriği Yönet** sekmesini içeren bir sekme listesi açılır. Etkin sekme yapmak için bir sekme adı seçebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Microsoft Yardım Görüntüleyicisi'ni yükleme](../help-viewer/installation.md)
+- [Microsoft Yardım Görüntüleyicisi yükleme](../help-viewer/installation.md)
 - [Yardım Görüntüleyicisi Yönetici Kılavuzu](../help-viewer/administrator-guide.md)
-- [Yerel içeriği yükleme ve yönetme](../help-viewer/install-manage-local-content.md)
+- [Yerel içerik yükleyip yönetme](../help-viewer/install-manage-local-content.md)

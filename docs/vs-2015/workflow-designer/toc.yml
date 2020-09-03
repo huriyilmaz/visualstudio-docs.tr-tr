@@ -62,7 +62,7 @@
               href: pickbranch-activity-designer.md
             - name: Sequence
               href: sequence-activity-designer.md
-            - name: Switch\<T>
+            - name: Anahtar\<T>
               href: switch-t-activity-designer.md
             - name: While
               href: while-activity-designer.md
@@ -88,27 +88,27 @@
               href: finalstate-activity-designer.md
             - name: Transition
               href: transition-activity-designer.md
-        - name: İleti
+        - name: Mesajlaşma
           items:
-            - name: İleti
+            - name: Mesajlaşma
               href: messaging-activity-designers.md
             - name: CorrelationScope
               href: correlationscope-activity-designer.md
             - name: InitializeCorrelation
               href: initializecorrelation-activity-designer.md
-            - name: Receive
+            - name: Al
               href: receive-activity-designer.md
             - name: ReceiveAndSendReply
               href: receiveandsendreply-template-designer.md
-            - name: Send
+            - name: Gönder
               href: send-activity-designer.md
             - name: SendAndReceiveReply
               href: sendandreceivereply-template-designer.md
             - name: TransactedReceiveScope
               href: transactedreceivescope-activity-designer.md
-        - name: Çalışma zamanı
+        - name: Çalışma Zamanı
           items:
-            - name: Çalışma zamanı
+            - name: Çalışma Zamanı
               href: runtime-activity-designers.md
             - name: Persist
               href: persist-activity-designer.md
@@ -118,7 +118,7 @@
           items:
             - name: Temel Türler
               href: primitives-activity-designers.md
-            - name: Assign
+            - name: Ata
               href: assign-activity-designer.md
             - name: Gecikme
               href: delay-activity-designer.md

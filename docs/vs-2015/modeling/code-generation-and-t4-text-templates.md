@@ -18,16 +18,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1f34422dfd47efdce9bf837f923da0e139a13398
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667916"
 ---
 # <a name="code-generation-and-t4-text-templates"></a>Kod Oluşturma ve T4 Metin Şablonları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_0, *T4 metin şablonu* metin dosyası oluşturabilen metin blokları ve denetim mantığının bir karışımından oluşur. Denetim mantığı [!INCLUDE[csprcs](../includes/csprcs-md.md)] veya [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] program kodunun parçaları olarak yazılmıştır. Visual Studio 2015 güncelleştirme 2 ve sonrasında, T4 şablonları yönergelerinden C# sürüm 6,0 özelliklerini kullanabilirsiniz. Oluşturulan dosya, bir Web sayfası veya bir kaynak dosyası gibi herhangi bir türde metin veya herhangi bir dilde program kaynak kodu olabilir.
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]' De, bir *T4 metin şablonu* , metin dosyası oluşturabilen bir metin blokları ve Denetim mantığı karışımından oluşur. Denetim mantığı, veya içindeki program kodu parçaları olarak yazılır [!INCLUDE[csprcs](../includes/csprcs-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] . Visual Studio 2015 güncelleştirme 2 ve sonrasında, T4 şablonları yönergelerinde C# sürüm 6,0 özelliklerini kullanabilirsiniz. Oluşturulan dosya, bir Web sayfası veya bir kaynak dosyası gibi herhangi bir türde metin veya herhangi bir dilde program kaynak kodu olabilir.
 
  İki tür T4 metin şablonu vardır:
 
@@ -51,14 +51,14 @@ string webResponseText = new MyTemplate().TransformText();
 
 ```
 
- Uygulamanız, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yüklü olmayan bir bilgisayarda çalışabilir.
+ Uygulamanız, yüklü olmayan bir bilgisayarda çalışabilir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
  Çalışma zamanı şablonu oluşturmak için projenize **önceden işlenmiş bir metin şablonu** dosyası ekleyin. Alternatif olarak, düz metin dosyası ekleyebilir ve **özel araç** özelliğini **Texttemplatingfileönişlemci**olarak ayarlayabilirsiniz.
 
  Daha fazla bilgi için bkz. [T4 metin şablonlarıyla çalışma zamanı metin üretimi](../modeling/run-time-text-generation-with-t4-text-templates.md). Şablonların sözdizimi hakkında daha fazla bilgi için bkz. [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md).
 
- **Tasarım zamanı T4 Metin şablonları** , kaynak kodun ve uygulamanızın diğer kaynaklarının bir kısmını tanımlamak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yürütülür.
-Genellikle, tek bir giriş dosyası veya veritabanındaki verileri okuyan çeşitli şablonlar kullanır ve `.cs`, `.vb` veya diğer kaynak dosyalarından bazılarını oluşturabilirsiniz. Her şablon bir dosya oluşturur. @No__t_0 veya [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] içinde yürütülürler.
+ **Tasarım zamanı T4 Metin şablonları** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , kaynak kodun ve uygulamanızın diğer kaynaklarının bir kısmını tanımlamak için içinde yürütülür.
+Genellikle, tek bir giriş dosyası veya veritabanındaki verileri okuyan çeşitli şablonlar kullanır ve bazı `.cs` , `.vb` veya diğer kaynak dosyalarından bazılarını oluşturabilirsiniz. Her şablon bir dosya oluşturur. Veya içinde yürütülür [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .
 
  Örneğin, giriş verileriniz bir XML dosyası yapılandırma verileri olabilir. Geliştirme sırasında XML dosyasını düzenlediğinizde metin şablonları, uygulama kodunun bir parçasını yeniden oluşturacak. Şablonlardan biri aşağıdaki örneğe benzeyebilir:
 
@@ -75,7 +75,7 @@ namespace Fabrikam.<#= configurationData.SelectSingleNode("jobName").Value #>
 
 ```
 
- XML dosyasındaki değerlere bağlı olarak, oluşturulan `.cs` dosyası aşağıdakine benzer:
+ XML dosyasındaki değerlere bağlı olarak, oluşturulan `.cs` dosya aşağıdakine benzer:
 
 ```
 namespace Fabrikam.FirstJob
@@ -102,7 +102,7 @@ namespace Fabrikam.FirstJob
 
  [T4 Metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md) Bir modelden kod ve diğer kaynakların oluşturulması, modeli güncelleştirerek uygulamanızı güncelleştirmenizi sağlar.
 
- [Derleme Işleminde kod üretimi](../modeling/code-generation-in-a-build-process.md) Görselleştirme ve modelleme SDK [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yüklediyseniz, oluşturulan yazılımın modeldeki değişikliklerle güncel kalmasını sağlayabilirsiniz.
+ [Derleme Işleminde kod üretimi](../modeling/code-generation-in-a-build-process.md) [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Görselleştirme ve modelleme SDK 'sını yüklediyseniz, oluşturulan yazılımın modeldeki değişikliklerle güncel kalmasını sağlayabilirsiniz.
 
  [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md) Metin şablonu dosyasının sözdizimi.
 

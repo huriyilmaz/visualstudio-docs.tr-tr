@@ -1,5 +1,5 @@
 ---
-title: IDebugExceptionEvent2::GetExceptionDescription | Microsoft Dokümanlar
+title: 'IDebugExceptionEvent2:: GetExceptionDescription | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7a6ea64540eaeef5ec258bc54b118b3a0600584c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729841"
 ---
 # <a name="idebugexceptionevent2getexceptiondescription"></a>IDebugExceptionEvent2::GetExceptionDescription
-Özel durum görüntülenebilir bir açıklama alır.
+Özel durumun görüntülenebilen bir açıklamasını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetExceptionDescription( 
@@ -41,13 +41,13 @@ int GetExceptionDescription( 
 
 ## <a name="parameters"></a>Parametreler
 `pbstrDescription`\
-[çıkış] Özel durum görüntülenebilir bir açıklama verir.
+dışı Özel durumun görüntülenebilen bir açıklamasını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntemden döndürülen dize genellikle özel durum adıdır ve özel durum oluştuğunda **Çıkış** penceresinde gösterilir.
+ Bu yöntemden döndürülen dize genellikle özel durumun adıdır ve özel durum oluştuğunda **Çıkış** penceresinde gösterilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)

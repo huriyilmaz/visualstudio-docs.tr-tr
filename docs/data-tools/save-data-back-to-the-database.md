@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 493637f81df15fadf65d6c7d90e980e322919b13
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281753"
 ---
 # <a name="save-data-back-to-the-database"></a>Verileri yeniden veritabanına kaydetme
@@ -41,7 +41,7 @@ Veri kümesi tablolarını bir Windows form veya XAML sayfasında denetimlere ve
 
 TableAdapters hakkında bilgi sahibiyseniz, doğrudan bu konulardan birine atlayabilirsiniz:
 
-|Konu başlığı|Description|
+|Konu|Description|
 |-----------|-----------------|
 |[Veritabanına yeni kayıtlar ekleme](../data-tools/insert-new-records-into-a-database.md)|TableAdapters veya komut nesnelerini kullanarak güncelleştirmeleri ve eklemeleri gerçekleştirme|
 |[TableAdapter kullanarak verileri güncelleştirme](../data-tools/update-data-by-using-a-tableadapter.md)|TableAdapters ile güncelleştirme gerçekleştirme|
@@ -162,7 +162,7 @@ Bir veri kümesindeki her kaydı güncelleştirmeme yaygın bir uygulamadır. Ö
 
 `GetChanges`Veri tablosunun () ya da veri kümesinin () yöntemini kullanarak değiştirilen kayıtların alt kümelerini oluşturabilirsiniz <xref:System.Data.DataTable.GetChanges%2A> <xref:System.Data.DataSet.GetChanges%2A> . Veri tablosu için yöntemini çağırırsanız, yalnızca değiştirilen kayıtlarla tablonun bir kopyasını döndürür. Benzer şekilde, yöntemi veri kümesinde çağırırsanız, içinde yalnızca değiştirilmiş kayıtları olan yeni bir veri kümesi alırsınız.
 
-`GetChanges`tek başına değiştirilen tüm kayıtları döndürür. Buna karşılık, istenen <xref:System.Data.DataRowState> bir parametre olarak yöntemine bir parametre olarak geçirerek `GetChanges` , hangi değiştirilen kayıtların hangi alt kümesini istediğinizi belirtebilirsiniz: yeni eklenen kayıtlar, silinmek üzere işaretlenmiş kayıtlar, ya da değiştirilen kayıtlar.
+`GetChanges` tek başına değiştirilen tüm kayıtları döndürür. Buna karşılık, istenen <xref:System.Data.DataRowState> bir parametre olarak yöntemine bir parametre olarak geçirerek `GetChanges` , hangi değiştirilen kayıtların hangi alt kümesini istediğinizi belirtebilirsiniz: yeni eklenen kayıtlar, silinmek üzere işaretlenmiş kayıtlar, ya da değiştirilen kayıtlar.
 
 Değiştirilen kayıtların bir alt kümesini almak, kayıtları işlemek için başka bir bileşene göndermek istediğinizde faydalıdır. Veri kümesinin tamamını göndermek yerine, yalnızca bileşenin ihtiyaç duyacağı kayıtları alarak diğer bileşenle iletişim yükünü azaltabilirsiniz.
 

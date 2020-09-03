@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d9a5a29cd63f9d51f86d41d2f0f5986a77666318
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666873"
 ---
 # <a name="log-command-window-output-command"></a>Command penceresi çıktısı günlüğü tut komutu
@@ -26,14 +26,14 @@ ms.locfileid: "72666873"
 
 **Komut** penceresinden tüm giriş ve çıkışları bir dosyaya kopyalar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Tools.LogCommandWindowOutput [filename] [/on|/off] [/overwrite]
 ```
 
-## <a name="arguments"></a>Arguments
- Isteğe bağlı `filename`. Günlük dosyasının adı. Varsayılan olarak, dosya kullanıcının profil klasöründe oluşturulur. Dosya adı zaten varsa, günlük varolan dosyanın sonuna eklenir. Dosya belirtilmemişse, belirtilen son dosya kullanılır. Önceki bir dosya mevcut değilse, komut satırı. log adlı varsayılan bir günlük dosyası oluşturulur.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `filename` Seçim. Günlük dosyasının adı. Varsayılan olarak, dosya kullanıcının profil klasöründe oluşturulur. Dosya adı zaten varsa, günlük varolan dosyanın sonuna eklenir. Dosya belirtilmemişse, belirtilen son dosya kullanılır. Önceki bir dosya mevcut değilse, komut satırı. log adlı varsayılan bir günlük dosyası oluşturulur.
 
 > [!TIP]
 > Günlük dosyasının kaydedildiği konumu değiştirmek için, yolun herhangi bir boşluk içermesi durumunda tırnak işaretleriyle çevrelenen dosyanın tam yolunu girin.
@@ -43,7 +43,7 @@ Tools.LogCommandWindowOutput [filename] [/on|/off] [/overwrite]
 
  /off Isteğe bağlı. **Komut** penceresi için günlüğü sonlandırır.
 
- /overwrite Isteğe bağlı. @No__t_0 bağımsız değişkeninde belirtilen dosya varolan bir dosyayla eşleşiyorsa, dosyanın üzerine yazılır.
+ /overwrite Isteğe bağlı. `filename`Bağımsız değişkende belirtilen dosya varolan bir dosyayla eşleşiyorsa, dosyanın üzerine yazılır.
 
 ## <a name="remarks"></a>Açıklamalar
  Dosya belirtilmemişse, komut satırı. log dosyası varsayılan olarak oluşturulur. Varsayılan olarak, bu komutun diğer adı günlüğe kaydedilir.

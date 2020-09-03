@@ -1,5 +1,5 @@
 ---
-title: Soyut bir sınıf uygulama
+title: Soyut sınıf uygulama
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -8,66 +8,66 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 6fcfdc06a055df28159f9d1ddc440aaf113f3264
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75568912"
 ---
-# <a name="implement-an-abstract-class-in-visual-studio"></a>Visual Studio'da soyut bir sınıf uygulayın
+# <a name="implement-an-abstract-class-in-visual-studio"></a>Visual Studio 'da bir soyut sınıf uygulama
 
-Bu kod oluşturma için geçerlidir:
+Bu kod üretimi için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** Soyut bir sınıf uygulamak için gereken kodu hemen oluşturmanıza olanak tanır.
+**Ne:** Soyut bir sınıf uygulamak için gereken kodu hemen oluşturmanıza olanak sağlar.
 
-**Ne zaman:** Soyut bir sınıftan miras almak istiyorsunuz.
+**Ne zaman:** Bir soyut sınıftan devralması istiyorsunuz.
 
 **Neden:** Tüm soyut üyeleri tek tek el ile uygulayabilirsiniz, ancak bu özellik tüm yöntem imzalarını otomatik olarak oluşturur.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi, soyut bir sınıftan devraldığınızı ancak gerekli tüm üyeleri uygulamadığınızı gösteren kırmızı bir dalgalı ğın olduğu çizgiye yerleştirin.
+1. İmlecinizi, soyut bir sınıftan devralındığını, ancak gerekli tüm üyeleri uygulamadığını belirten kırmızı bir dalgalı çizgi olan çizgiye yerleştirin.
 
    - C#:
 
-       ![Vurgulanan kod C #](media/abstract-highlight-cs.png)
+       ![Vurgulanmış kod C #](media/abstract-highlight-cs.png)
 
    - Visual Basic:
 
        ![Vurgulanan kod VB](media/abstract-highlight-vb.png)
 
-2. Ardından, aşağıdakilerden birini yapın:
+2. Sonra, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
+      - **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
    - **Fare**
-      - Hızlı Eylemler ve **Yeniden Faktörler** menüsünü sağ tıklatın ve seçin.
-      - Kırmızı dalgalı üzerinde hover ve tıklayın ![hata ampul](media/error-bulb.png) görünen simge.
-      - &nbsp; ![hata ampul](media/error-bulb.png) metin imleci kırmızı dalgalı çizgide yse sol kenar boşluğunda görünen simge.
+      - Sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
+      - Kırmızı dalgalı çizgi üzerine gelin ve ![ampul hatası](media/error-bulb.png) görüntülenen simge.
+      - Sağ üst köşedeki ![ampul hatası](media/error-bulb.png) Sol kenar boşluğunda, metin imleci kırmızı dalgalı çizgi ile zaten varsa görüntülenen simge.
 
-   ![Sınıf önizlemesini uygulama](media/abstract-preview-cs.png)
+   ![Sınıf önizlemesini Uygula](media/abstract-preview-cs.png)
 
-3. Açılan menüden **Soyut Sınıfı Uygula'yı** seçin.
+3. Açılan menüden **soyut sınıf Uygula** ' yı seçin.
 
    > [!TIP]
-   > - Seçiminizi yapmadan önce yapılacak [tüm değişiklikleri görmek için](../../ide/preview-changes.md) önizleme penceresinin altındaki Önizleme **değişiklikleri** bağlantısını kullanın.
-   > - Özet sınıftan devralan birden çok sınıf arasında uygun yöntem imzaları oluşturmak için önizleme penceresinin altındaki **Belge,** **Proje**ve **Çözüm** bağlantılarını kullanın.
+   > - Seçiminizi yapmadan önce yapılacak [tüm değişiklikleri görmek için](../../ide/preview-changes.md) Önizleme penceresinin altındaki **Değişiklikleri Önizle** bağlantısını kullanın.
+   > - Özet sınıftan devraldığı birden çok sınıfta doğru yöntem imzalarını oluşturmak için Önizleme penceresinin altındaki **belge**, **Proje**ve **çözüm** bağlantılarını kullanın.
 
-   Soyut yöntem imzaları oluşturulur ve uygulanmaya hazırdır.
+   Soyut yöntem imzaları oluşturulur ve uygulanmaya hazırlanın.
 
    - C#:
 
-       ![C sınıfı sonucunu uygulama #](media/abstract-result-cs.png)
+       ![Sınıf sonucu C 'yi Uygula #](media/abstract-result-cs.png)
 
    - Visual Basic:
 
-       ![Sınıf sonucunu vb uygulayın](media/abstract-result-vb.png)
+       ![Sınıf sonucunu Uygula VB](media/abstract-result-vb.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod Oluşturma](../code-generation-in-visual-studio.md)
+- [Kod oluşturma](../code-generation-in-visual-studio.md)
 - [Değişiklikleri Önizleme](../../ide/preview-changes.md)

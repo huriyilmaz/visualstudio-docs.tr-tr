@@ -1,5 +1,5 @@
 ---
-title: IDebugInterceptExceptionCompleteEvent2::GetInterceptCookie | Microsoft Dokümanlar
+title: 'IDebugInterceptExceptionCompleteEvent2:: Getyakatcookie | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 9065c0b7868efaeb70c10a3ab921a8764694662e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727784"
 ---
 # <a name="idebuginterceptexceptioncompleteevent2getinterceptcookie"></a>IDebugInterceptExceptionCompleteEvent2::GetInterceptCookie
-Yakalanan bir özel durum işlendiğinde çağrılır.
+Yakalanamayan bir özel durum işlenirken çağırılır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetInterceptCookie(
@@ -41,13 +41,13 @@ int GetInterceptCookie(
 
 ## <a name="parameters"></a>Parametreler
 `pqwCookie`\
-[çıkış] Ele geçirilen özel durumla ilişkili benzersiz değer.
+dışı Yakalanamayan özel durumla ilişkili benzersiz değer.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) yöntemi ele geçirilen bir özel durum işleme tamamlandıktan sonra, [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md) olay gönderir. İşleyici, özel `GetInterceptCookie` durumla ilişkili benzersiz değeri `InterceptCurrentException` (yönteme geçirilen aynı değer) almak için yöntemi kullanabilir.
+ [Yakatcurrentexception](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) yöntemi, ele geçirilebilecek bir özel durumun işlenmesini tamamladıktan sonra, [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md) olayını gönderir. İşleyici `GetInterceptCookie` yöntemini özel durumla ilişkili benzersiz değeri almak için kullanabilir (yönteme geçirilen değer aynı değer `InterceptCurrentException` ).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)

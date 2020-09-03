@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryContext2::GetInfo | Microsoft Dokümanlar
+title: 'IDebugMemoryContext2:: GetInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,16 +17,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c190710afc9231662fa12c5552d6f73e0268b643
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727470"
 ---
 # <a name="idebugmemorycontext2getinfo"></a>IDebugMemoryContext2::GetInfo
-Bağlamı açıklayan [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) bir yapı alır.
+Bağlamını açıklayan [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) yapısını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetInfo( 
@@ -44,13 +44,13 @@ int GetInfo(
 
 ## <a name="parameters"></a>Parametreler
 `dwFields`\
-[içinde] [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) yapının hangi alanlarının doldurulup dolduruleceğini gösteren [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) numaralandırmadan gelen bayrakların birleşimi.
+'ndaki [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) numaralandırmadaki, [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) yapısının hangi alanlarının doldurulacağını belirten bayrakların bir birleşimi.
 
 `pInfo`\
-[içinde, dışarı] Doldurulan `CONTEXT_INFO` yapı.
+[in, out] `CONTEXT_INFO` Doldurulmuş yapı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

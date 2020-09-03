@@ -1,5 +1,5 @@
 ---
-title: Parametreleri Kaldır yeniden düzenlemesiC#() | Microsoft Docs
+title: Parametreleri Kaldır yeniden düzenlemesi (C#) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 40c373c3575f007952143e29c8dfc2cfac3d080f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667487"
 ---
 # <a name="remove-parameters-refactoring-c"></a>Parametreleri Kaldır Yeniden Düzenlemesi (C#)
@@ -29,14 +29,14 @@ ms.locfileid: "72667487"
 
 `Remove Parameters` Yöntemler, Dizin oluşturucular veya temsilcilerden parametreleri kaldırmanın kolay bir yolunu sağlayan bir yeniden düzenleme işlemidir. Parametreleri Kaldır bildirimi değiştirir; üyenin çağrıldığı herhangi bir konumda, parametresi yeni bildirimi yansıtacak şekilde kaldırılır.
 
- Önce imleci bir yöntem, Dizin Oluşturucu veya temsilci üzerinde konumlandırarak parametreleri Kaldır işlemini gerçekleştirirsiniz. İmleç konumdayken, kaldır `Parameters` işlemini çağırmak için yeniden **Düzenle** menüsüne tıklayın, klavye kısayoluna basın veya kısayol menüsünden komutu seçin.
+ Önce imleci bir yöntem, Dizin Oluşturucu veya temsilci üzerinde konumlandırarak parametreleri Kaldır işlemini gerçekleştirirsiniz. İmleç konumdayken, kaldır işlemini çağırmak için yeniden `Parameters` **Düzenle** menüsüne tıklayın, klavye kısayoluna basın veya kısayol menüsünden komutu seçin.
 
 > [!NOTE]
 > Genişletme yöntemindeki ilk parametreyi kaldıramazsınız.
 
 ### <a name="to-remove-parameters"></a>Parametreleri kaldırmak için
 
-1. @No__t_0 adlı bir konsol uygulaması oluşturun ve `Program` aşağıdaki kodla değiştirin.
+1. Adlı bir konsol uygulaması oluşturun `RemoveParameters` ve ardından `Program` aşağıdaki kodla değiştirin.
 
     ```csharp
     class A
@@ -55,7 +55,7 @@ ms.locfileid: "72667487"
     }
     ```
 
-2. İmleci yöntem bildiriminde ya da yöntem çağrısında `A` yöntemine yerleştirin.
+2. İmleci Yöntem `A` bildiriminde ya da yöntem çağrısında yerleştirin.
 
 3. Yeniden **Düzenle** **menüsünden parametreleri Kaldır iletişim kutusunu** göstermek için **parametreleri Kaldır** ' ı seçin.
 
@@ -63,9 +63,9 @@ ms.locfileid: "72667487"
 
      Ayrıca, imleci sağ tıklayıp yeniden **Düzenle**' nin üzerine gelin **ve parametreleri Kaldır iletişim kutusunu** göstermek için **parametreleri Kaldır** ' a tıklayabilirsiniz.
 
-4. **Parametreler** alanını kullanarak imleci `int i` konuma konumlandırın ve sonra **Kaldır**' a tıklayın.
+4. **Parametreler** alanını kullanarak imleci üzerine konumlandırın `int i` ve sonra **Kaldır**' a tıklayın.
 
-5. **Tamam**'a tıklayın.
+5. **Tamam**’a tıklayın.
 
 6. **Önizleme değişiklikleri — parametreleri Kaldır** Iletişim kutusunda **Uygula**' ya tıklayın.
 
@@ -81,13 +81,13 @@ ms.locfileid: "72667487"
 MyMethod(param1++, param2);
 ```
 
- to
+ şöyle değiştirin:
 
 ```csharp
 MyMethod(param2);
 ```
 
- yeniden düzenleme işlemi tarafından `param1` artırılmayacak.
+ yeniden düzenleme işlemi tarafından `param1` arttırılmayacak.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Yeniden Düzenleme (C#)](../csharp-ide/refactoring-csharp.md)

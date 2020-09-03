@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5ea066aa31cbc1f6408ee55c92a5ca761608f534
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667822"
 ---
 # <a name="create-elements-and-relationships-in-uml-models"></a>UML modellerinde öğe ve ilişki oluşturma
@@ -26,14 +26,14 @@ Visual Studio uzantısı için program kodunda, öğe ve ilişki oluşturabilir 
 ## <a name="create-a-model-element"></a>Model öğesi oluşturma
 
 ### <a name="namespace-imports"></a>Ad alanı Içeri aktarmaları
- Aşağıdaki `using` deyimlerini dahil etmeniz gerekir.
+ Aşağıdaki deyimleri dahil etmeniz gerekir `using` .
 
  Oluşturma yöntemleri, bu ad alanında uzantı yöntemleri olarak tanımlanmıştır:
 
  `using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;`
 
 ### <a name="obtain-the-owner-of-the-element-you-want-to-create"></a>Oluşturmak istediğiniz öğenin sahibini edinin
- Model, her öğenin model kökü dışında bir sahibe sahip olması için tek bir ağaç oluşturur. Model kökü, bir `IPackage` türü `IModel` türüdür.
+ Model, her öğenin model kökü dışında bir sahibe sahip olması için tek bir ağaç oluşturur. Model kökü, türü olan türüdür `IModel` `IPackage` .
 
  Belirli bir diyagramda görüntülenecek bir öğe oluşturuyorsanız (örneğin, kullanıcının geçerli diyagramı), genellikle onu bu diyagrama bağlı pakette oluşturmanız gerekir. Örneğin:
 
@@ -52,7 +52,7 @@ IPackage linkedPackage = Context.CurrentDiagram.Element as IPackage;
 |`ILifeline, IMessage, ICombinedFragment`|`IInteraction`|
 
 ### <a name="invoke-the-create-method-on-the-owner"></a>Sahibe oluşturma yöntemini çağır
- Yöntem adı şu biçimdedir: `Create`*Ownedtype* `()`. Örneğin:
+ Yöntem adı şu biçimdedir: `Create` *ownedtype* `()` . Örneğin:
 
 ```
 IUseCase usecase1 = linkedPackage.CreateUseCase();
@@ -60,7 +60,7 @@ IUseCase usecase1 = linkedPackage.CreateUseCase();
 
  Bazı türlerin özellikle sıralı diyagramlarda daha karmaşık oluşturma yöntemleri vardır. Bkz. [UML API kullanarak UML sıra diyagramlarını düzenleme](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md).
 
- Bazı öğe türleri için, `SetOwner(newOwner)` kullanarak bir öğenin sahibini ömrü boyunca değiştirebilirsiniz.
+ Bazı öğe türleri için, kullanarak bir öğenin sahibini ömrü boyunca değiştirebilirsiniz `SetOwner(newOwner)` .
 
 ### <a name="set-the-name-and-other-properties"></a>Adı ve diğer özellikleri ayarlama
 
@@ -100,7 +100,7 @@ using Microsoft.VisualStudio.Uml.Extensions;
     association .Name = "Observes";
     ```
 
-4. İlişkinin her ucunun özelliklerini ayarlayın. Her zaman iki `MemberEnds` vardır. Örneğin:
+4. İlişkinin her ucunun özelliklerini ayarlayın. Her zaman iki vardır `MemberEnds` . Örneğin:
 
     ```
     association .MemberEnds[0].Name = "subject";   // role name

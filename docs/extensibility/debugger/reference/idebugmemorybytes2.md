@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryBytes2 | Microsoft Dokümanlar
+title: IDebugMemoryBytes2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,47 +13,47 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 56cb234e2295c5c9c08c2a2e9271e1c173524875
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727509"
 ---
 # <a name="idebugmemorybytes2"></a>IDebugMemoryBytes2
-Bu arabirim bellek baytlarını temsil eder.
+Bu arabirim, bellek baytlarını temsil eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugMemoryBytes2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Hata ayıklama altyapısı (DE) bellekteki baytları temsil etmek için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Hata ayıklama altyapısı (DE), bellekteki baytları temsil etmek için bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-- [GetMemoryBytes,](../../../extensibility/debugger/reference/idebugprogram2-getmemorybytes.md) sistem belleği erişimi sağlamak için bu arabirimi döndürür. [GetMemoryBytes](../../../extensibility/debugger/reference/idebugproperty2-getmemorybytes.md) ve [GetMemoryBytes](../../../extensibility/debugger/reference/idebugreference2-getmemorybytes.md) bir nesnenin bayterişim sağlamak için bu arabirimi döndürün.
+- [Getmemorybytes](../../../extensibility/debugger/reference/idebugprogram2-getmemorybytes.md) , sistem belleğine erişim sağlamak için bu arabirimi döndürür. [Getmemorybytes](../../../extensibility/debugger/reference/idebugproperty2-getmemorybytes.md) ve [getmemorybytes](../../../extensibility/debugger/reference/idebugreference2-getmemorybytes.md) , bir nesnenin baytlarına erişim sağlamak için bu arabirimi döndürür.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
- Aşağıdaki tabloda `IDebugMemoryBytes2`.
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugMemoryBytes2` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
 |[ReadAt](../../../extensibility/debugger/reference/idebugmemorybytes2-readat.md)|Belirli bir konumdan başlayarak bir bayt dizisini okur.|
-|[WriteAt](../../../extensibility/debugger/reference/idebugmemorybytes2-writeat.md)|'den `dwCount` `pStartContext`başlayarak bayt yazar.|
-|[GetSize](../../../extensibility/debugger/reference/idebugmemorybytes2-getsize.md)|Bu arabirim tarafından temsil edilen belleğin boyutunu baytolarak alır.|
+|[WriteAt](../../../extensibility/debugger/reference/idebugmemorybytes2-writeat.md)|`dwCount`Bayttan itibaren bayt Yazar `pStartContext` .|
+|[GetSize](../../../extensibility/debugger/reference/idebugmemorybytes2-getsize.md)|Bu arabirim tarafından temsil edilen belleğin bayt cinsinden boyutunu alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Özellikler için, bir diziyi temsil eden bir `IDebugMemoryBytes2` [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) arabirimi, bu dizideki değerlere erişmek için bir arabirim sağlar.
+ Özellikler için bir diziyi temsil eden bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) arabirimi, `IDebugMemoryBytes2` Bu dizideki değerlere erişmek için bir arabirim sağlar.
 
- Visual Studio'nun **Memory View'ı** [GetMemoryBytes'ı](../../../extensibility/debugger/reference/idebugprogram2-getmemorybytes.md) sistem belleğine erişmek için bir `IDebugMemoryBytes2` arayüz almak için çağırır. Erişilecek adres, bellek görünümüne adres olarak girilen ifadeyi ayrıştırarak ve `IDebugProperty2` arabirim almak için [EvaluateSync'i](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) kullanarak ayrıştırılmış ifadeyi değerlendirerek elde edilir. [GetMemoryContext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md) için yapılan bir çağrı, bellek adresini açıklayan [IDebugMemoryContext2'yi](../../../extensibility/debugger/reference/idebugmemorycontext2.md) döndürür. Bu bellek bağlamı daha sonra [ReadAt](../../../extensibility/debugger/reference/idebugmemorybytes2-readat.md) ve [WriteAt'a](../../../extensibility/debugger/reference/idebugmemorybytes2-writeat.md)aktarılır.
+ Visual Studio 'nun **bellek görünümü** , sistem belleğine erişim için bir arabirim almak üzere [getmemorybytes](../../../extensibility/debugger/reference/idebugprogram2-getmemorybytes.md) çağırır `IDebugMemoryBytes2` . Erişilecek adres, bellek görünümüne adres olarak girilen ifadeyi ayrıştırarak ve ardından bir arabirim almak için [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) kullanılarak ayrıştırılmış ifade değerlendirilirken elde edilir `IDebugProperty2` . [Getmemorycontext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md) çağrısı, bellek adresini açıklayan [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) döndürür. Bu bellek bağlamı daha sonra [ReadAt](../../../extensibility/debugger/reference/idebugmemorybytes2-readat.md) ve [WriteAt](../../../extensibility/debugger/reference/idebugmemorybytes2-writeat.md)'a geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 2d58462b90039e14ae98fe450812ca4cfdb6cbbd
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88801587"
 ---
 # <a name="use-the-cookiecutter-extension"></a>Cookiecutter uzantısını kullanma
@@ -98,7 +98,7 @@ Bu işleme üzerinde, Visual Studio 'ya özgü (ve Cookiecutter CLı tarafından
 | Özellik | Açıklama |
 | --- | --- |
 | Etiketle | Değişken için, değişkenin adı yerine düzenleyicinin üzerinde ne göründüğünü belirtir. |
-| Açıklama | Bu değişken için varsayılan değer yerine, düzenleme denetiminde görünen araç ipucunu belirtir. |
+| Description | Bu değişken için varsayılan değer yerine, düzenleme denetiminde görünen araç ipucunu belirtir. |
 | URL | Etiketi, URL 'YI gösteren bir araç ipucuyla birlikte köprü haline geçirir. Köprü seçildiğinde kullanıcının varsayılan tarayıcısı Bu URL 'ye açılır. |
 | Seçici | Bir değişken için düzenleyicinin özelleştirilmesine izin verir. Şu seçiciler Şu anda desteklenmektedir:<ul><li>`string`: Standart metin kutusu, dizeler için varsayılan.</li><li>`list`: Standart Birleşik giriş kutusu, listeler için varsayılan.</li><li>`yesno`: `y` Dizeler için ve arasında seçim yapabileceğiniz Birleşik giriş kutusu `n` .</li><li>`odbcConnection`: Bir veritabanı bağlantısı iletişim kutusu getiren **...** düğmesini içeren metin kutusu.</li></ul> |
 
@@ -170,7 +170,7 @@ Bir bağımsız değişken iletmeniz gerekmiyorsa, boş bir dize bırakın veya 
 ]
 ```
 
-Birden çok bağımsız değişken için bir dizi kullanın. Anahtarlar için anahtarı ve değerini ayrı bağımsız değişkenlere böler ve uygun tırnak içine kullanın. Örnek:
+Birden çok bağımsız değişken için bir dizi kullanın. Anahtarlar için anahtarı ve değerini ayrı bağımsız değişkenlere böler ve uygun tırnak içine kullanın. Örneğin:
 
 ```json
 "_visual_studio_post_cmds": [

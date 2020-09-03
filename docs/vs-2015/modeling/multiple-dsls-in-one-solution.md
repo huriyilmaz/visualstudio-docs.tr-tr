@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9a3b35e05108db879b365b9cafc39cacdf843397
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668562"
 ---
 # <a name="multiple-dsls-in-one-solution"></a>Bir Çözümde Birden Çok DSL
@@ -27,7 +27,7 @@ Birden çok DSLs 'yi tek bir çözümün parçası olarak paketleyebilir, böyle
 
 1. İki veya daha fazla DSL çözümü ve bir VSıX projesi oluşturun ve tüm projeleri tek bir çözüme ekleyin.
 
-   - Yeni bir VSIX projesi oluşturmak için: **Yeni proje** iletişim kutusunda, **görsel C#** , **genişletilebilirlik**, **VSIX projesi**' ni seçin.
+   - Yeni bir VSıX projesi oluşturmak için: **Yeni proje** iletişim kutusunda, **Visual C#**, **genişletilebilirlik**, **VSIX projesi**' ni seçin.
 
    - VSıX çözüm dizininde iki veya daha fazla DSL çözümü oluşturun.
 
@@ -35,9 +35,9 @@ Birden çok DSLs 'yi tek bir çözümün parçası olarak paketleyebilir, böyle
 
         Her bir DSL 'yi farklı bir dosya adı uzantısıyla oluşturduğunuzdan emin olun.
 
-   - **DSL** ve **DslPackage** projelerinin adlarını farklı olacak şekilde değiştirin. Örneğin: `Dsl1`, `DslPackage1`, `Dsl2`, `DslPackage2`.
+   - **DSL** ve **DslPackage** projelerinin adlarını farklı olacak şekilde değiştirin. Örneğin: `Dsl1` ,, `DslPackage1` `Dsl2` , `DslPackage2` .
 
-   - Her **DslPackage \* \ Source.Extension.tt**, bu satırı doğru DSL projesi adına güncelleştirin:
+   - Her **DslPackage \* \ Source.Extension.tt**içinde, bu satırı doğru DSL projesi adına güncelleştirin:
 
         `string dslProjectName = "Dsl2";`
 
@@ -47,19 +47,19 @@ Birden çok DSLs 'yi tek bir çözümün parçası olarak paketleyebilir, böyle
 
 2. DSLs 'lerin VSıX bildirimlerini birleştirin:
 
-   1. _Yourvaltıproject_ **\Source.Extension.manifest**açın.
+   1. _Yourvaltıproject_**\Source.Extension.manifest**açın.
 
    2. Her DSL için **Içerik Ekle** ve Ekle ' yi seçin:
 
-       - bir **MEF bileşeni** olarak proje `Dsl*`
+       - `Dsl*`**MEF bileşeni** olarak proje
 
-       - bir **MEF bileşeni** olarak proje `DslPackage*`
+       - `DslPackage*`**MEF bileşeni** olarak proje
 
-       - projeyi **vs paketi** olarak `DslPackage*`
+       - `DslPackage*`**vs paketi** olarak proje
 
-3. Çözümü oluşturun.
+3. Çözümü derleyin.
 
-   Elde edilen VSıX her iki DSLs 'i de yükleyecek. F5 'i kullanarak bunları test edebilir veya **\\ \*. vsix**' _yi dağıtabilirsiniz._
+   Elde edilen VSıX her iki DSLs 'i de yükleyecek. F5 'i kullanarak bunları test edebilir veya _Yourvaltproject_**\Bin\Debug \\ \* . vsix**' yi dağıtabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Visual Studio ModelBus Ile modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md) [: sürükle ve bırak Işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md) [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md)

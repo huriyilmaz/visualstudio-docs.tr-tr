@@ -1,5 +1,5 @@
 ---
-title: IDebugErrorBreakpointResolution2::GetBreakpointType | Microsoft Dokümanlar
+title: 'IDebugErrorBreakpointResolution2:: GetBreakpointType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f933baed55216054ecfec3b3b4c29f15da652ba4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80730055"
 ---
 # <a name="idebugerrorbreakpointresolution2getbreakpointtype"></a>IDebugErrorBreakpointResolution2::GetBreakpointType
 Kesme noktası türünü alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetBreakpointType(
@@ -41,16 +41,16 @@ int GetBreakpointType(
 
 ## <a name="parameters"></a>Parametreler
 `pBPType`\
-[çıkış] Kesme noktası türünü açıklayan [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) numaralandırmadan bir değer verir.
+dışı [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) numaralandırmasından kesme noktası türünü açıklayan bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yöntem, bağlamayı başaramayan kesme noktası türünü döndürür ve böylece bir hata kesme noktası olayı gerektirir.
+Bu yöntem, bağlanamayacak başarısız olan kesme noktasının türünü döndürür ve bu nedenle hata kesme noktası olayı gerektirir.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, `CDebugErrorBreakpointResolution` [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) arabirimini ortaya çıkaran basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, `CDebugErrorBreakpointResolution` [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) arabirimini kullanıma sunan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```
 HRESULT CDebugErrorBreakpointResolution::GetBreakpointType(BP_TYPE* pBPType)

@@ -12,10 +12,10 @@ ms.workload:
 - data-science
 - azure
 ms.openlocfilehash: 9a3aee5dc1c2d1272c3814fa6cfb2561f6cb4564
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88801314"
 ---
 # <a name="publishing-to-azure-app-service-on-windows"></a>Windows üzerinde Azure App Service yayımlama
@@ -30,7 +30,7 @@ Yayımlama işlemi, Visual Studio 2017 ve üzeri ve Visual Studio 2015 arasında
 > [!Note]
 > Visual Studio 2015 ile Visual Studio 2017 ve üzeri değişikliklerle ilgili değişiklikler hakkında daha fazla bilgi için bkz. [visual 2017 Studio 'Da Azure 'Da yayımlama](https://devblogs.microsoft.com/python/publish-to-azure-in-vs-2017/), blog gönderisi.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Bu izlenecek yol için, şişe, Flask veya Docgo çerçevelerini temel alan bir Web uygulaması projesine ihtiyacınız vardır. Henüz bir projeniz yoksa ve yayımlama işlemini denemek istiyorsanız, aşağıdaki gibi basit bir test projesi oluşturun:
 

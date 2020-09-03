@@ -1,7 +1,7 @@
 - name: Visual Studio ile Azure Geliştirme
   href: index.yml
   expanded: true
-- name: Azure'a Yayımlama
+- name: Azure’da Yayımlama
   expanded: true
   items:
     - name: Bulut hizmeti yayımlama

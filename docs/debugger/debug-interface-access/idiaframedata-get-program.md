@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d5a9f25c3913519b50131ec5860e127bef3ddc11
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85467269"
 ---
 # <a name="idiaframedataget_program"></a>IDiaFrameData::get_program
@@ -39,7 +39,7 @@ dışı Program dizesini döndürür.
  Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Program dizesi, bir prolog oluşturmak için yorumlanan bir makro dizisidir. Örneğin, tipik bir yığın çerçevesi Program dizesini kullanabilir `"$T0 $ebp = $eip $T0 4 + ^ = $ebp $T0 ^ = $esp $T0 8 + ="` . Biçim, işleçlerin işlenenleri izlediği ters Lehçe gösterimidir. `T0`yığında geçici bir değişkeni temsil eder. Bu örnek aşağıdaki adımları gerçekleştirir:
+ Program dizesi, bir prolog oluşturmak için yorumlanan bir makro dizisidir. Örneğin, tipik bir yığın çerçevesi Program dizesini kullanabilir `"$T0 $ebp = $eip $T0 4 + ^ = $ebp $T0 ^ = $esp $T0 8 + ="` . Biçim, işleçlerin işlenenleri izlediği ters Lehçe gösterimidir. `T0` yığında geçici bir değişkeni temsil eder. Bu örnek aşağıdaki adımları gerçekleştirir:
 
 1. Kayıt içeriğini içine taşıyın `ebp` `T0` .
 

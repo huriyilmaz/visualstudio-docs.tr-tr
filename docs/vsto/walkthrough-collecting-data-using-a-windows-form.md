@@ -29,7 +29,7 @@ ms.locfileid: "64789837"
 
  Bu izlenecek yol, Excel için belge düzeyindeki bir projeyi özellikle kullanıyor olsa da, izlenecek yol tarafından gösterilen kavramlar diğer Office projeleri için geçerlidir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "64789837"
      [!code-csharp[Trin_VstcoreProgrammingCollectingData#3](../vsto/codesnippet/CSharp/WinFormInputCS/GetInputString.cs#3)]
      [!code-vb[Trin_VstcoreProgrammingCollectingData#3](../vsto/codesnippet/VisualBasic/WinFormInput/GetInputString.vb#3)]
 
-## <a name="test"></a>Test etme
+## <a name="test"></a>Test et
  Artık projeyi çalıştırabilirsiniz. Windows formu görünür ve giriş çalışma sayfasında görünür.
 
 ### <a name="to-test-your-workbook"></a>Çalışma kitabınızı test etmek için

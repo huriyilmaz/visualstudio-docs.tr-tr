@@ -1,5 +1,5 @@
 ---
-title: IDebugMessageEvent2::GetMessage | Microsoft Dokümanlar
+title: 'IDebugMessageEvent2:: GetMessage | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,16 +17,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 819b796a656f0ef8775fbb1c9e800e3019b81729
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727402"
 ---
 # <a name="idebugmessageevent2getmessage"></a>IDebugMessageEvent2::GetMessage
-İletinin görüntülenmesini alır.
+Görüntülenecek iletiyi alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetMessage( 
@@ -50,22 +50,22 @@ int GetMessage( 
 
 ## <a name="parameters"></a>Parametreler
 `pMessageType`\
-[çıkış] İleti türünü açıklayan [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md) numaralandırmasından bir değer döndürür.
+dışı İleti türünü açıklayan [MessageType](../../../extensibility/debugger/reference/messagetype.md) numaralandırmasından bir değer döndürür.
 
 `pbstrMessage`\
-[çıkış] İletiyi döndürür.
+dışı İletiyi döndürür.
 
 `pdwType`\
-[çıkış] Win32 `MessageBox` işlevinin kurallarını kullanarak iletitürünü döndürür. Ayrıntılar için [AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox) işlevine bakın.
+dışı Win32 işlevinin kurallarını kullanarak iletinin türünü döndürür `MessageBox` . Ayrıntılar için bkz. [AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox) işlevi.
 
 `pbstrHelpFileName`\
-[içinde, dışarı] Yardım dosyası adını döndürür. Yardım dosyası yoksa null (C++) veya boş (C#) değeri olabilir.
+[in, out] Yardım dosyası adını döndürür. Yardım dosyası yoksa null (C++) veya boş (C#) değeri olabilir.
 
 `pdwHelpId`\
-[içinde, dışarı] Yardım tanımlayıcısını döndürür. Bu iletiyle ilişkili bir yardım yoksa 0 olabilir.
+[in, out] Yardım tanımlayıcısını döndürür. Bu iletiyle ilişkili bir yardım yoksa 0 olabilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md)

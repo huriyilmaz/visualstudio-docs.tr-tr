@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1de155b71e82bb7561030cae2e1d0d4d777c9586
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668069"
 ---
 # <a name="how-to-create-multi-project-templates"></a>Nasıl Yapılır: Birden Çok Proje Şablonu Oluşturma
@@ -49,14 +49,14 @@ Birden fazla projeli şablonlar, iki veya daha fazla proje için kapsayıcı ola
 
   Çoklu proje şablonu için kök. vstemplate dosyası, tek projeli bir şablondan aşağıdaki yollarla farklılık gösterir:
 
-- @No__t_1 öğesinin `Type` özniteliği `ProjectGroup` değerini içerir. Örneğin:
+- `Type` `VSTemplate` Öğesinin özniteliği değeri içerir `ProjectGroup` . Örneğin:
 
   ```
   <VSTemplate Version="2.0.0" Type="ProjectGroup"
       xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   ```
 
-- @No__t_0 öğesi, dahil edilen projelerin. vstemplate dosyalarının yollarını tanımlayan bir veya daha fazla `ProjectTemplateLink` öğesi olan bir `ProjectCollection` öğesi içeriyor. Örneğin:
+- `TemplateContent`Öğesi, `ProjectCollection` `ProjectTemplateLink` dahil edilen projelerin. vstemplate dosyalarının yollarını tanımlayan bir veya daha fazla öğesi olan bir öğesi içerir. Örneğin:
 
   ```
   <TemplateContent>
@@ -73,9 +73,9 @@ Birden fazla projeli şablonlar, iki veya daha fazla proje için kapsayıcı ola
 
   Çoklu proje şablonları da normal şablonlardan farklı şekilde davranır. Çoklu proje şablonları aşağıdaki benzersiz özelliklere sahiptir:
 
-- Çoklu Proje şablonundaki ayrı projelere **Yeni proje** iletişim kutusu tarafından adlar atanamaz. Bunun yerine, her projenin adını belirtmek için `ProjectTemplateLink` öğesindeki `ProjectName` özniteliğini kullanın. Daha fazla bilgi için aşağıdaki bölümdeki ilk örneğe bakın.
+- Çoklu Proje şablonundaki ayrı projelere **Yeni proje** iletişim kutusu tarafından adlar atanamaz. Bunun yerine, `ProjectName` `ProjectTemplateLink` her proje için adı belirtmek üzere öğesindeki özniteliğini kullanın. Daha fazla bilgi için aşağıdaki bölümdeki ilk örneğe bakın.
 
-- Çoklu proje şablonları farklı dillerde yazılmış projeleri içerebilir, ancak tüm şablon yalnızca bir kategoriye `ProjectType` öğesi kullanılarak yerleştirilebilir.
+- Çoklu proje şablonları farklı dillerde yazılmış projeleri içerebilir, ancak tüm şablon yalnızca bir kategoriye eklenebilir `ProjectType` .
 
 ### <a name="to-create-a-multi-project-template"></a>Çoklu proje şablonu oluşturmak için
 
@@ -87,10 +87,10 @@ Birden fazla projeli şablonlar, iki veya daha fazla proje için kapsayıcı ola
 
 4. Şablonunuza dahil edilecek dosya ve klasörleri seçin, seçime sağ tıklayın, **Gönder ' e**tıklayın ve ardından **Sıkıştırılmış (daraltılmış) klasör**' e tıklayın. Dosyalar ve klasörler bir. zip dosyasında sıkıştırılır.
 
-5. . Zip şablonu dosyasını [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] proje şablonu dizinine koyun. Bu dizin, varsayılan olarak, \Bstudio *sürümü*\ Templates\projecttemplates \\.
+5. . Zip şablon dosyasını [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] proje şablonu dizinine yerleştirin. Bu dizin, varsayılan olarak, \K\studio *sürümü*\ Templates\projecttemplates şeklindedir \\ .
 
 ## <a name="example"></a>Örnek
- Bu örnek, temel bir çoklu proje kök. vstemplate dosyasını gösterir. Bu örnekte, şablon iki proje içerir, `My Windows Application` ve `My Class Library`. @No__t_1 öğesindeki `ProjectName` özniteliği, bu projeyi atamak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] adını ayarlar. @No__t_0 özniteliği yoksa,. vstemplate dosyasının adı proje adı olarak kullanılır.
+ Bu örnek, temel bir çoklu proje kök. vstemplate dosyasını gösterir. Bu örnekte, şablon iki proje içerir `My Windows Application` ve `My Class Library` . `ProjectName`Öğesi üzerindeki özniteliği, `ProjectTemplateLink` [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Bu projeyi atamak için adını ayarlar. `ProjectName`Özniteliği yoksa,. vstemplate dosyasının adı proje adı olarak kullanılır.
 
 ```
 <VSTemplate Version="2.0.0" Type="ProjectGroup"
@@ -115,7 +115,7 @@ Birden fazla projeli şablonlar, iki veya daha fazla proje için kapsayıcı ola
 ```
 
 ## <a name="example"></a>Örnek
- Bu örnek, projeleri iki gruba bölmek için `SolutionFolder` öğesini kullanır, `Math Classes` ve `Graphics Classes`. Şablon, her bir çözüm klasörüne yerleştirilmiş dört proje içerir.
+ Bu örnek, `SolutionFolder` projelerini iki gruba bölmek için öğesini kullanır `Math Classes` ve `Graphics Classes` . Şablon, her bir çözüm klasörüne yerleştirilmiş dört proje içerir.
 
 ```
 <VSTemplate Version="2.0.0" Type="ProjectGroup"
@@ -150,4 +150,4 @@ Birden fazla projeli şablonlar, iki veya daha fazla proje için kapsayıcı ola
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md) [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md) [nasıl yapılır: proje şablonları oluşturma](../ide/how-to-create-project-templates.md) [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md) [SolutionFolder öğesi (Visual Studio şablonları)](../extensibility/solutionfolder-element-visual-studio-templates.md) [ ProjectTemplateLink öğesi (Visual Studio şablonları)](../extensibility/projecttemplatelink-element-visual-studio-templates.md)
+ [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md) [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md) [nasıl yapılır: proje şablonları oluşturma](../ide/how-to-create-project-templates.md) [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md) [SolutionFolder öğesi (Visual Studio şablonları)](../extensibility/solutionfolder-element-visual-studio-templates.md) [ProjectTemplateLink öğesi (Visual Studio şablonları)](../extensibility/projecttemplatelink-element-visual-studio-templates.md)

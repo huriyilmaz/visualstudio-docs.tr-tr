@@ -1,5 +1,5 @@
 ---
-title: IDebugExceptionEvent2::PassToDebuggee | Microsoft Dokümanlar
+title: IDebugExceptionEvent2::P Asstodebugayıklanan | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: aec6f460295b59b2b5455b83d5b0be554bca24fa
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729836"
 ---
 # <a name="idebugexceptionevent2passtodebuggee"></a>IDebugExceptionEvent2::PassToDebuggee
-Özel durum, yürütme devam ederken çıkarılan programa geçirilip geçirilmeyeceğini veya özel durum atılıp atılmayacağını belirtir.
+Yürütmenin devam ettiğinde veya özel durumun atıldığında hata ayıklamakta olan programa özel durumun geçirilip geçirilmeyeceğini belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT PassToDebuggee(
@@ -41,17 +41,17 @@ int PassToDebuggee(
 
 ## <a name="parameters"></a>Parametreler
 `fPass`\
-[içinde] Nonzero`TRUE`( ) özel durum yürütme devam ederken debugged programa geçirilmelidir, ya da sıfır (`FALSE`) özel durum atılmalıdır.
+'ndaki `TRUE`Özel durumun, yürütme devam ettiğinde hata ayıklamakta olan programa geçirilmesi gerekiyorsa sıfır olmayan () veya `FALSE` özel durumun atılmalıdır.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntemi çağırmak aslında herhangi bir kodun debugged olan programda yürütülmesine neden olmaz. Arama yalnızca bir sonraki kod yürütme için devlet ayarlamaktır. Örneğin, [CanPassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md) yöntemine yapılan `S_OK` aramalar [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)ile birlikte geri dönebilir.`dwState` alan olarak `EXCEPTION_STOP_SECOND_CHANCE`ayarlanır.
+ Bu yöntemin çağrılması, aslında hata ayıklamakta olan programda hiçbir kodun yürütülmesine neden olmaz. Çağrı yalnızca sonraki kod yürütmesinin durumunu ayarlamak içindir. Örneğin, [Canpasstodebugayıklanan](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md) metoduna yapılan çağrılar `S_OK` [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)döndürebilir.`dwState` alan olarak ayarlanır `EXCEPTION_STOP_SECOND_CHANCE` .
 
- [IDE, IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md) olayını alabilir ve [Continue](../../../extensibility/debugger/reference/idebugprogram2-continue.md) yöntemini arayabilir. Hata ayıklama altyapısı (DE) `PassToDebuggee` yöntemi çağrılmazsa, servis talebi işlemek için varsayılan bir davranış olmalıdır.
+ IDE [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md) olayını alabilir ve [Continue](../../../extensibility/debugger/reference/idebugprogram2-continue.md) metodunu çağırabilir. Hata ayıklama altyapısının (DE), yöntem çağrılmaması durumunda durumu işlemek için varsayılan bir davranışı olmalıdır `PassToDebuggee` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)
 - [CanPassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md)
-- [Devam](../../../extensibility/debugger/reference/idebugprogram2-continue.md)
+- [Devam et](../../../extensibility/debugger/reference/idebugprogram2-continue.md)

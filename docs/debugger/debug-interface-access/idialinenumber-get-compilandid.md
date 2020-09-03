@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4989e8f5436b9da842e7a72173a73aced8591c25
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85466919"
 ---
 # <a name="idialinenumberget_compilandid"></a>IDiaLineNumber::get_compilandId
@@ -33,7 +33,7 @@ HRESULT get_compilandId ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `DWORD`Bu satıra katkıda bulunan compiland için benzersiz tanımlayıcıyı içeren döndürür.
+dışı `DWORD` Bu satıra katkıda bulunan compiland için benzersiz tanımlayıcıyı içeren döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.

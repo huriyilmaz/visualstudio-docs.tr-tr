@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 23dba7b7c29c05b55af2c461f36bdaa4b46b948f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667730"
 ---
 # <a name="code-metrics-values"></a>Kod Ölçüm Değerleri
@@ -26,18 +26,18 @@ ms.locfileid: "72667730"
 Kod ölçümleri, geliştiricilerin geliştirdikleri koda daha iyi Öngörüler sağlayan bir yazılım ölçüleri kümesidir. Geliştiriciler kod ölçümlerinden yararlanarak hangi türlerin ve/veya yöntemlerin yeniden çalışması gerektiğini veya daha kapsamlı olarak test edildiğini anlayabilirler. Geliştirme ekipleri potansiyel riskleri tanımlayabilir, projenin geçerli durumunu anlayabilir ve yazılım geliştirme sırasında ilerleme durumunu izleyebilir.
 
 ## <a name="software-measurements"></a>Yazılım ölçümleri
- Aşağıdaki listede [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hesapladığı kod ölçümleri sonuçları gösterilmektedir:
+ Aşağıdaki listede, şunları hesaplayan kod ölçümleri sonuçları gösterilmektedir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] :
 
 - Bakım **dizini** : kodu korumak için göreli kolaylıklar temsil eden 0 ile 100 arasında bir dizin değeri hesaplar. Yüksek bir değer, daha iyi bakım anlamına gelir. Renk kodlu derecelendirmeler kodunuzda sorun noktaları hızlı bir şekilde belirlemek için kullanılabilir. Yeşil derecelendirme 20 ile 100 arasındadır ve kodun iyi bakım yaptığını gösterir. Sarı bir derecelendirme 10 ile 19 arasındadır ve kodun oldukça sürdürülebilir olduğunu gösterir. Kırmızı bir derecelendirme 0 ile 9 arasında bir derecelendirmesidir ve düşük bakım olduğunu gösterir.
 
 - **Döngüsel karmaşıklığı** – kodun yapısal karmaşıklığını ölçer. Program akışındaki farklı kod yollarının sayısı hesaplanarak oluşturulur. Karmaşık denetim akışına sahip bir program, iyi kod kapsamı elde etmek için daha fazla test gerektirecektir ve daha az sürdürülebilir olur.
 
     > [!NOTE]
-    > Bazı durumlarda [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] bir yöntem için döngüsel karmaşıklığı hesaplama, önceki sürümlerden farklıdır. Daha fazla bilgi için bkz. [Kod ölçümleri sorunlarını gidermek](../code-quality/troubleshooting-code-metrics-issues.md)Için "Visual Studio 2010 kod karmaşıklığı hesaplamalarında yapılan değişiklikler" bölümüne bakın.
+    > Bazı durumlarda, içindeki bir yöntemi için döngüsel karmaşıklığının hesaplanması [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] önceki sürümlerden farklıdır. Daha fazla bilgi için bkz. [Kod ölçümleri sorunlarını gidermek](../code-quality/troubleshooting-code-metrics-issues.md)Için "Visual Studio 2010 kod karmaşıklığı hesaplamalarında yapılan değişiklikler" bölümüne bakın.
 
 - **Devralma derinliği** – sınıf hiyerarşisinin köküne genişleyen sınıf tanımlarının sayısını belirtir. Hiyerarşinin daha derin olması, belirli yöntemlerin ve alanların nerede tanımlandığını veya/ve yeniden tanımlanmasını anlamak için daha zor olabilir.
 
-- **Sınıf** bağlantısı: parametreler, yerel değişkenler, dönüş türleri, Yöntem çağrıları, genel veya şablon örneklemeleri, temel sınıflar, arabirim uygulamaları, dış türlerde tanımlı alanlar ve öznitelik aracılığıyla, benzersiz sınıflara yapılan eşlenmeyi ölçer düzenlemenin. İyi yazılım tasarımı, türlerin ve yöntemlerin yüksek düzeyde ve düşük bir eşlencede sahip olması gerektiğini belirler. Yüksek bağlantı, diğer türler üzerinde birçok bağımlılığı nedeniyle yeniden kullanılması zor olan bir tasarımın olduğunu gösterir.
+- **Sınıf** bağlantısı: parametreler, yerel değişkenler, dönüş türleri, Yöntem çağrıları, genel veya şablon örneklemeleri, temel sınıflar, arabirim uygulamaları, dış türlerde tanımlı alanlar ve öznitelik dekorasyonu aracılığıyla, benzersiz sınıflara yapılan eşlenmeyi ölçer. İyi yazılım tasarımı, türlerin ve yöntemlerin yüksek düzeyde ve düşük bir eşlencede sahip olması gerektiğini belirler. Yüksek bağlantı, diğer türler üzerinde birçok bağımlılığı nedeniyle yeniden kullanılması zor olan bir tasarımın olduğunu gösterir.
 
 - **Kod satırları** – koddaki yaklaşık satır sayısını gösterir. Sayı, Il kodunu temel alır ve bu nedenle kaynak kodu dosyasındaki tam satır sayısı değildir. Çok yüksek bir sayı, bir tür veya yöntemin çok fazla iş gerçekleştirmeye çalıştığını ve bölünmesi gerektiğini gösterebilir. Ayrıca tür veya yöntemin sürdürmek zor olabileceğini de gösterebilir.
 

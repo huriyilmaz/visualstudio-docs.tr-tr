@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3eb5afbbe688c15f429054d50210a68769173e73
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88801860"
 ---
 # <a name="add-a-menu-to-the-visual-studio-menu-bar"></a>Visual Studio menü çubuğuna bir menü ekleyin
@@ -33,7 +33,7 @@ Bu yönergeyi tamamlayarak, bir komut içeren **Test menüsü** adlı bir menü 
 > Visual Studio 2019 ' den başlayarak, uzantılara göre katkıda bulunulan üst düzey menüler **Uzantılar** menüsüne yerleştirilir.
 :::moniker-end
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 

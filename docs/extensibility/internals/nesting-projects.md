@@ -1,5 +1,5 @@
 ---
-title: İç içe geçme projeleri | Microsoft Dokümanlar
+title: Projeleri iç içe geçirme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,23 +14,23 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 814780fa8e7e57a022a75b2e09115cfa55a1b8be
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80707026"
 ---
 # <a name="nesting-projects"></a>Projeleri İç İçe Geçirme
-VS Paketinizi kullanan kurumsal uygulama geliştiricileri, proje iç [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] *içe geçmeyi*kullanarak benzer proje türlerini rahatlıkla gruplaştırabilir. Örneğin, Kurumsal Şablon projesi, projeleri kategorilere gruplandırmak için iç içe yönelik projeleri kullanır. İş cephesi projeleri, Web UI projeleri ve benzeri tek bir kategoride gruplandırılır.
+VS paketinizi kullanan kurumsal uygulama geliştiricileri, içindeki [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] *proje iç içe geçme*kullanarak benzer proje türlerini kolayca gruplandırabilir. Örneğin, kurumsal şablon proje, projeleri kategoriler halinde gruplamak için iç içe geçmiş projeleri kullanır. İş façlade projeleri, Web UI projeleri vb. bir kategoride birlikte gruplandırılır.
 
- Bu senaryoda, geliştirici programlı olarak sınırlar sağlayabilse de, geliştiricinin her ana proje altında yuvalayabileceği proje sayısı için bir sınır yoktur. Bu gruplandırma türü de özyinelemeli yapılabilir, bu durumda alt proje yle aynı türdeki projeler çocuğun altına iç içe çekilebilir ve bu da ebeveynin bir alt projesidir.
+ Bu senaryoda, geliştirici program aracılığıyla sınırları sağlayabilse de, geliştiricinin her bir üst projenin altına iç içe geçirebilmesine rağmen proje sayısı için bir sınır yoktur. Bu gruplandırma türü de özyinelemeli hale getirilebilir. Bu durumda, bir alt proje ile aynı türdeki projelerin alt öğesi olmak üzere alt öğesi olmak üzere alt öğe altında iç içe yerleştirilenebilir.
 
- Proje iç içe geçme, .'ın [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]içsel bir parçası değildir. Alt projeler içinde iç içe ve alt proje iç içe etkinleştirmek için kodu yazmanız gerekir. Ana proje, proje iç içe geçirme uygulamak için gereken kodu içeren kendi GUID'si ile oluşturulan ve kaydedilmiş özel bir VSPackage veya proje türüdür.
+ İçe geçmiş proje iç parçası değildir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . İç içe geçme ve alt proje iç içe geçme özelliğini etkinleştirmek için kodu yazmanız gerekir. Üst proje, özel bir VSPackage veya proje türü oluşturup, proje iç içe geçirilmesi için gerekli kodu içeren kendi GUID 'sine sahip oluşturulup kaydedilir.
 
- İç [içe geçirilmiş projeleri](../../extensibility/internals/how-to-implement-nested-projects.md)uygulama: Projeler nasıl iç içe geçirilir hakkında bir örnek bulabilirsiniz.
+ [Nasıl yapılır: iç içe Projeler uygulama](../../extensibility/internals/how-to-implement-nested-projects.md)bölümünde proje iç içe geçme hakkında bir örnek bulabilirsiniz.
 
 ## <a name="nested-projects-example"></a>İç içe projeler örneği
- ![İç Içe Projeler Çözümü](../../extensibility/internals/media/vsnestedprojects.gif "vsNestedProjects") İç içe projeler örneği
+ ![Iç Içe projeler çözümü](../../extensibility/internals/media/vsnestedprojects.gif "vsNestedProjects") İç içe projeler örneği
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İç İçe Projeleri Kaldırma ve Yeniden Yükleme Konusunda Dikkat Edilmesi Gerekenler](../../extensibility/internals/considerations-for-unloading-and-reloading-nested-projects.md)
@@ -38,6 +38,6 @@ VS Paketinizi kullanan kurumsal uygulama geliştiricileri, proje iç [!INCLUDE[v
 - [Proje ve Öğe Şablonlarını Kaydetme](../../extensibility/internals/registering-project-and-item-templates.md)
 - [İç içe Projeler için Komut İşlemesi Uygulama](../../extensibility/internals/implementing-command-handling-for-nested-projects.md)
 - [İç içe Projeler için AddItem İletişim Kutusunu Filtreleme](../../extensibility/internals/filtering-the-additem-dialog-box-for-nested-projects.md)
-- [Denetim Listesi: Yeni Proje Türleri Oluşturma](../../extensibility/internals/checklist-creating-new-project-types.md)
+- [Yapılacaklar listesi: Yeni Proje Türleri Oluşturma](../../extensibility/internals/checklist-creating-new-project-types.md)
 - [Bağlam Parametreleri](../../extensibility/internals/context-parameters.md)
 - [Sihirbaz (.Vsz) Dosyası](../../extensibility/internals/wizard-dot-vsz-file.md)

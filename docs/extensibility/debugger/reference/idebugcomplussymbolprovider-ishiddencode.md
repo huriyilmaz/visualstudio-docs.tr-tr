@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::IsHiddenCode | Microsoft Dokümanlar
+title: 'IDebugComPlusSymbolProvider:: ıshiddencode | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +14,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: d1ede1cbd8c2a69d45a8c653aa97d0bfb618f821
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733671"
 ---
 # <a name="idebugcomplussymbolproviderishiddencode"></a>IDebugComPlusSymbolProvider::IsHiddenCode
-Belirtilen hata ayıklama adresindeki kodun gizli olup olmadığını belirler.
+Belirtilen hata ayıklayıcı adresindeki kodun gizli olup olmadığını belirler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT IsHiddenCode(
@@ -39,13 +39,13 @@ int IsHiddenCode(
 
 ## <a name="parameters"></a>Parametreler
 `pAddress`\
-[içinde] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi tarafından temsil edilen hata ayıklama adresi.
+'ndaki Bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi tarafından temsil edilen hata ayıklama adresi.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Kod gizliyse, döndürür; `S_OK` aksi takdirde, döner. `S_FALSE`
+Kod gizliyse, öğesini döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` .
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini ortaya çıkaran bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::IsHiddenCode(

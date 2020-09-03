@@ -10,21 +10,21 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a696123551c24fd0d14fecde67826cf14f88826f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668644"
 ---
-# <a name="how-to-debug-xaml-with-the-workflow-designer"></a>Nasıl yapılır: İş Akışı Tasarımcısı ile XAML hatalarını ayıklama
-İş akışları XAML bakımından tanımlanmıştır. İş akışının Kullanıcı arabirimi temsili, iş akışını tanımlayan XAML ağacının üzerine kurulmuştur. Hata ayıklama deneyimi [!INCLUDE[wfd1](../includes/wfd1-md.md)] hata ayıklama iş akışlarıyla benzerdir. Örneğin, XAML hatalarını ayıklarken, Yereller, izle ve iş parçacıkları Windows [!INCLUDE[wfd2](../includes/wfd2-md.md)] hata ayıklamayla aynı şekilde çalışır. Ayrıca, XAML hata ayıklaması sırasında çağrı yığını görünümü, iş akışı için yürütme akışının satır tabanlı hiyerarşik görünümüdür.
+# <a name="how-to-debug-xaml-with-the-workflow-designer"></a>Nasıl Yapılır: İş Akışı Tasarımcısı ile XAML Hatalarını Ayıklama
+İş akışları XAML bakımından tanımlanmıştır. İş akışının Kullanıcı arabirimi temsili, iş akışını tanımlayan XAML ağacının üzerine kurulmuştur. Hata ayıklama deneyimi, içindeki iş akışlarının hata ayıklamasına benzer [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Örneğin, XAML hatalarını ayıklarken, Yereller, izle ve iş parçacıkları Windows [!INCLUDE[wfd2](../includes/wfd2-md.md)] hata ayıklamayla aynı şekilde çalışır. Ayrıca, XAML hata ayıklaması sırasında çağrı yığını görünümü, iş akışı için yürütme akışının satır tabanlı hiyerarşik görünümüdür.
 
 > [!NOTE]
 > Bir iş akışı için XAML, etkinliklerle aynı derlemede bulunuyorsa, sınıf adlarının derleme kısmı dahil edilmez. Sınıf (etkinlik) adlarının bu kısmı olmadan XAML çalışma zamanında yüklenemez. Ana projeyle aynı ad alanında etkinlik tanımlamanız önerilmez; Aksi takdirde, XAML, tasarımcıda düzenlendikten sonra el ile düzenlenmelidir.
 
 ### <a name="to-debug-workflow-xaml"></a>Workflow XAML hatalarını ayıklamak için
 
-1. @No__t_0 bir iş akışı veya etkinlik projesi açın.
+1. İçinde bir iş akışı veya etkinlik projesi açın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 2. [Nasıl yapılır: Iş akışlarında kesme noktalarını ayarlama](../workflow-designer/how-to-set-breakpoints-in-workflows.md)bölümünde açıklandığı gibi, hata ayıklamak istediğiniz etkinlik veya etkinliklerde bir kesme noktası ayarlayın.
 

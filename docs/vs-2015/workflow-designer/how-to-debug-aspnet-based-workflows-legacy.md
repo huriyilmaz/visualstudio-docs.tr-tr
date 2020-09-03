@@ -15,20 +15,20 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f3bed38f5229cb489f663878759517480b48302c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668664"
 ---
-# <a name="how-to-debug-aspnet-based-workflows-legacy"></a>Nasıl yapılır: ASP.NET tabanlı Iş akışlarında hata ayıklama (eski)
-Bu konuda, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedefleyen [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] tabanlı [!INCLUDE[wf](../includes/wf-md.md)] uygulamalarının hatalarını ayıklama işlemini açıklar.
+# <a name="how-to-debug-aspnet-based-workflows-legacy"></a>Nasıl Yapılır: ASP.NET Tabanlı İş Akışlarında Hata Ayıklama (Eski)
+Bu konu, [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] [!INCLUDE[wf](../includes/wf-md.md)] [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] eski sürümünde veya öğesini hedefleyen hata ayıklama tabanlı uygulamaların nasıl yapılacağını açıklar [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] [!INCLUDE[wfd1](../includes/wfd1-md.md)] .
 
  İş akışının barındırıldığı işleme ekleyerek, Web hizmeti olarak yayınlanan ASP.NET veya eski iş akışlarında başlatılan eski iş akışlarında hata ayıklayabilirsiniz.
 
 ### <a name="to-debug-an-aspnet-based-workflow"></a>ASP.NET tabanlı bir iş akışında hata ayıklamak için
 
-1. Web. config dosyasında **Debug = true** ayarlayarak ASP.NET uygulaması için hata ayıklamayı etkinleştirin.
+1. web.config dosyasında **Debug = true** ayarlayarak ASP.NET uygulaması için hata ayıklamayı etkinleştirin.
 
 2. İş akışı kitaplığını başlangıç projesi olarak ayarlayın ve iş akışında kesme noktaları ayarlayın.
 
@@ -38,7 +38,7 @@ Bu konuda, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] [!INCLUDE[netfx35_long]
 
 5. **Kullanılabilir işlemler** listesinden iliştirilecek işlemi seçin.
 
-     İş akışının barındırıldığı W3wp. exe, webdev. webserver veya aspnet_wp işlemine iliştirin.
+     İş akışının barındırıldığı w3wp.exe, webdev. webserver veya aspnet_wp işlemine iliştirin.
 
 6. **Ekle** metin kutusunun yanındaki **Seç** ' e tıklayın.
 
@@ -46,7 +46,7 @@ Bu konuda, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] [!INCLUDE[netfx35_long]
 
 7. **Bu kod türlerini hata ayıkla** ' yı seçin ve **iş akışını**seçin.
 
-8. **Tamam**'a tıklayın.
+8. **Tamam**’a tıklayın.
 
 9. **Ekle**' ye tıklayın.
 

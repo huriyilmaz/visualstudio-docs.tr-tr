@@ -8,10 +8,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 03619582a30893c161c44c880a0d9cf6c9766d0b
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85768763"
 ---
 # <a name="windows-forms-designer-overview"></a>Windows Form Tasarımcısı’na genel bakış
@@ -42,4 +42,4 @@ Tasarımcı kullanarak şunları yapabilirsiniz:
 - [Windows Forms Kullanıcı girişi](/dotnet/framework/winforms/user-input-in-windows-forms)
 - [Windows Forms veri bağlama](/dotnet/framework/winforms/windows-forms-data-binding)
 - [Windows Forms uygulamalarını geliştirin](/dotnet/framework/winforms/advanced/)
-- <xref:System.Windows.Forms?displayProperty=fullName>API başvurusu
+- <xref:System.Windows.Forms?displayProperty=fullName> API başvurusu

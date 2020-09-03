@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericFieldInstance::GetTypeArguments | Microsoft Dokümanlar
+title: 'Idebuggenericfieldınstance:: GetTypeArguments | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +15,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c41a3f314f641ed4bff116959b6d70f0a5fb9dcb
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728186"
 ---
 # <a name="idebuggenericfieldinstancegettypearguments"></a>IDebugGenericFieldInstance::GetTypeArguments
-Bu örnek için tür parametre bağımsız değişkenlerini alır.
+Bu örnek için tür parametresi bağımsız değişkenlerini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetTypeArguments(
@@ -44,16 +44,16 @@ int GetTypeArguments(
 
 ## <a name="parameters"></a>Parametreler
 `cArgs`\
-[içinde] Tür parametrelerinin sayısı.
+'ndaki Tür parametrelerinin sayısı.
 
 `ppArgs`\
-[çıkış] Bir dizi tür parametresini döndürür.
+dışı Parametre türünde bir dizi döndürür.
 
 `pcArgs`\
-[içinde, dışarı] Dizideki `ppArgs` üye sayısı.
+[in, out] Dizideki üye sayısı `ppArgs` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugGenericFieldInstance](../../../extensibility/debugger/reference/idebuggenericfieldinstance.md)

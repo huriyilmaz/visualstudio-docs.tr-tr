@@ -1,5 +1,5 @@
 ---
-title: Eski Dil Hizmetinde Gezinti Çubuğu desteği | Microsoft Dokümanlar
+title: Eski dil hizmetinde gezinti çubuğu desteği | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,22 +12,22 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: f86dabb0594b1e33c45808efb387fcbe313e3de3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80704856"
 ---
 # <a name="support-for-the-navigation-bar-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Gezinti Çubuğu için Destek
-Düzenleyici görünümünün üst kısmındaki Gezinti çubuğu dosyadaki türleri ve üyeleri görüntüler. Türler sol açılır açılır da, üyeler sağ açılır da gösterilir. Kullanıcı bir tür seçtiğinde, bakıcı türün ilk satırına yerleştirilir. Kullanıcı bir üye seçtiğinde, bakıcı üyenin tanımına yerleştirilir. Açılan kutular, bakımın geçerli konumunu yansıtacak şekilde güncelleştirilir.
+Düzenleyici görünümünün en üstündeki gezinti çubuğu, dosyadaki türleri ve üyeleri görüntüler. Türler sol açılır kutuda gösterilir ve Üyeler sağ tarafta gösterilir. Kullanıcı bir tür seçtiğinde, giriş işareti, türün ilk satırına yerleştirilir. Kullanıcı bir üye seçtiğinde, giriş işareti üyenin tanımına yerleştirilir. Açılan kutular, giriş işaretinin geçerli konumunu yansıtacak şekilde güncelleştirilir.
 
-## <a name="displaying-and-updating-the-navigation-bar"></a>Gezinti çubuğunu görüntüleme ve güncelleme
- Gezinti çubuğunu desteklemek için sınıftan <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> bir sınıf türetmeniz ve <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> yöntemi uygulamanız gerekir. Dil hizmetinize bir kod penceresi verildiğinde, taban <xref:Microsoft.VisualStudio.Package.LanguageService> sınıf, <xref:Microsoft.VisualStudio.Package.CodeWindowManager>kod penceresini <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow> temsil eden nesneyi içeren , anlık olarak Nesne <xref:Microsoft.VisualStudio.Package.CodeWindowManager> daha sonra yeni <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> bir nesne verilir. <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A> Yöntem bir <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> nesne alır. Sınıfınızın <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> bir örneğini döndürecekseniz, iç listeleri doldurmak için metodunuzu <xref:Microsoft.VisualStudio.Package.CodeWindowManager> <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> çağırır ve nesnenizi <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] açılır çubuk yöneticisine geçirir. Açılan çubuk yöneticisi, sırayla, iki <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.SetDropdownBar%2A> açılır <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> çubuğu tutan <xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBar> nesneyi oluşturmak için nesnenizdeki yöntemi çağırır.
+## <a name="displaying-and-updating-the-navigation-bar"></a>Gezinti çubuğunu görüntüleme ve güncelleştirme
+ Gezinti çubuğunu desteklemek için, sınıfından bir sınıf türetmeniz <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> ve metodunu uygulamanız gerekir <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> . Dil hizmetinize bir kod penceresi verildiğinde, temel <xref:Microsoft.VisualStudio.Package.LanguageService> sınıf, <xref:Microsoft.VisualStudio.Package.CodeWindowManager> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow> kod penceresini temsil eden nesneyi içeren öğesini başlatır. <xref:Microsoft.VisualStudio.Package.CodeWindowManager>Daha sonra nesnesine yeni bir nesne verilir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> . <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A>Yöntemi bir nesnesi alır <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> . Sınıfınızın bir örneğini döndürürler, <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> <xref:Microsoft.VisualStudio.Package.CodeWindowManager> <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> iç listeleri doldurmak için yönteminizi çağırır ve <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> nesneyi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] açılan çubuk yöneticisine geçirir. Açılan çubuk Yöneticisi, sırasıyla, <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.SetDropdownBar%2A> <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> iki açılan çubuğu içeren nesneyi oluşturmak için nesneniz üzerindeki yöntemi çağırır <xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBar> .
 
- Caret hareket ettiğinde, <xref:Microsoft.VisualStudio.Package.LanguageService.OnIdle%2A> yöntem <xref:Microsoft.VisualStudio.Package.LanguageService.OnCaretMoved%2A> yöntemi çağırır. Temel <xref:Microsoft.VisualStudio.Package.LanguageService.OnCaretMoved%2A> yöntem, <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> Gezinti çubuğunun durumunu güncelleştirmek için sınıfınızdaki <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> yöntemi çağırır. Bu yönteme <xref:Microsoft.VisualStudio.Package.DropDownMember> bir nesne kümesi geçersiniz. Her nesne açılır bir girişi temsil eder.
+ Giriş işareti değiştiğinde <xref:Microsoft.VisualStudio.Package.LanguageService.OnIdle%2A> Yöntemi yöntemini çağırır <xref:Microsoft.VisualStudio.Package.LanguageService.OnCaretMoved%2A> . Taban <xref:Microsoft.VisualStudio.Package.LanguageService.OnCaretMoved%2A> yöntemi, <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> gezinti çubuğunun durumunu güncelleştirmek için sınıfınıza yöntemi çağırır. <xref:Microsoft.VisualStudio.Package.DropDownMember>Bu yönteme bir nesne kümesi geçirirsiniz. Her nesne açılan kutudan bir girişi temsil eder.
 
-## <a name="the-contents-of-the-navigation-bar"></a>Gezinti Çubuğu'nun İçeriği
- Gezinti çubuğu genellikle bir tür listesi ve üye listesi içerir. Türlerin listesi, geçerli kaynak dosyada bulunan tüm türleri içerir. Tür adları tam ad alanı bilgilerini içerir. Aşağıda iki türü olan C# kodu örneği verilmiştir:
+## <a name="the-contents-of-the-navigation-bar"></a>Gezinti çubuğunun Içeriği
+ Gezinti çubuğu genellikle türlerin bir listesini ve üye listesini içerir. Türlerin listesi, geçerli kaynak dosyada bulunan tüm türleri içerir. Tür adları, tüm ad alanı bilgilerini içerir. Aşağıda iki tür içeren C# kodu örneği verilmiştir:
 
 ```csharp
 namespace TestLanguagePackage
@@ -44,48 +44,48 @@ namespace TestLanguagePackage
 }
 ```
 
- Tür listesi görüntülenir `TestLanguagePackage.TestLanguageService` `TestLanguagePackage.TestLanguageService.Tokens`ve .
+ Tür listesi `TestLanguagePackage.TestLanguageService` ve görüntülenir `TestLanguagePackage.TestLanguageService.Tokens` .
 
- Üyeler listesi, türler listesinde seçilen türün kullanılabilir üyelerini görüntüler. Yukarıdaki kod örneğini `TestLanguagePackage.TestLanguageService` kullanarak, seçilen tür ise, üye listesi özel `tokens` `serviceName`üyeleri ve . İç yapı `Token` görüntülenmez.
+ Üyeler listesi, türler listesinde seçilen türün kullanılabilir üyelerini görüntüler. Yukarıdaki kod örneğini kullanarak, `TestLanguagePackage.TestLanguageService` Seçilen türdür, Üyeler listesi özel üyeleri `tokens` ve içerir `serviceName` . İç yapı `Token` gösterilmez.
 
- Bir üyenin adını kalın yapmak için üye listesini uygulayabilirsiniz. Üyeler, bakıcının şu anda konumlandırıldığı kapsamda olmadıklarını belirten gri renkte metin olarak da görüntülenebilir.
+ Giriş işaretinin içine yerleştirildiğinde bir üyenin adını kalın hale getirmek için Üyeler listesini uygulayabilirsiniz. Üyeler ayrıca, giriş işaretinin Şu anda konumlandırılmış olduğu kapsam içinde olmadığını belirten gri renkte görüntülenebilir.
 
-## <a name="enabling-support-for-the-navigation-bar"></a>Gezinti Çubuğu için Desteği Etkinleştirme
- Gezinti çubuğu için desteği etkinleştirmek için `ShowDropdownBarOption` `true`özniteliğin <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> parametresini . Bu parametre <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ShowNavigationBar%2A> özelliği ayarlar. Gezinti çubuğunu desteklemek için, <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A> <xref:Microsoft.VisualStudio.Package.LanguageService> sınıfta yöntemde nesne uygulamanız gerekir.
+## <a name="enabling-support-for-the-navigation-bar"></a>Gezinti çubuğu desteğini etkinleştirme
+ Gezinti çubuğu desteğini etkinleştirmek için `ShowDropdownBarOption` özniteliğinin parametresini olarak ayarlamanız gerekir <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> `true` . Bu parametre, <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ShowNavigationBar%2A> özelliği ayarlar. Gezinti çubuğunu desteklemek için, <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> nesnesini <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A> sınıfındaki yönteminde uygulamanız gerekir <xref:Microsoft.VisualStudio.Package.LanguageService> .
 
- Yöntemin <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A> uygulanmasında, özellik <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ShowNavigationBar%2A> `true`ayarlanmışsa, bir <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> nesneyi döndürebilirsiniz. Nesneyi döndürmezseniz, Gezinti çubuğu görüntülenmez.
+ <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A>Yöntemi uygulamanızda, <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ShowNavigationBar%2A> özelliği olarak ayarlandıysa `true` , bir <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> nesnesi döndürebilirsiniz. Nesneyi döndürmeyin gezinti çubuğu görüntülenmez.
 
- Gezinti çubuğunu gösterme seçeneği kullanıcı tarafından ayarlanabilir, bu nedenle düzenleyici görünümü açıkken bu denetimin sıfırlanabilmesi mümkündür. Değişiklik gerçekleşmeden önce kullanıcının düzenleyici penceresini kapatıp yeniden açması gerekir.
+ Gezinti çubuğunu gösterme seçeneği Kullanıcı tarafından ayarlanabilir, bu nedenle düzenleyici görünümü açıkken bu denetimin sıfırlanması mümkündür. Değişiklik gerçekleşmeden önce kullanıcının düzenleyici penceresini kapatması ve yeniden kapatması gerekir.
 
-## <a name="implementing-support-for-the-navigation-bar"></a>Gezinti Çubuğu için Destek Uygulama
- Yöntem, <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> iki liste (her açılır bırakma için bir tane) ve her listedeki geçerli seçimi temsil eden iki değer alır. Listeler ve seçim değerleri güncelleştirilebilir ve <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> bu durumda `true` yöntemin listelerin değiştiğini belirtmek için döndürülmesi gerekir.
+## <a name="implementing-support-for-the-navigation-bar"></a>Gezinti çubuğu için destek uygulama
+ <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>Yöntemi iki liste alır (her açılan liste için bir tane) ve her listedeki geçerli seçimi temsil eden iki değer. Listeler ve seçim değerleri güncelleştirilebilirler, bu durumda <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> yöntemin, `true` listelerin değiştiğini göstermek için döndürmesi gerekir.
 
- Tür açılır bırakma daki seçim değişiklikleri olarak, üye listesi yeni türü yansıtacak şekilde güncelleştirilmelidir. Üye listesinde gösterilenler aşağıdakilerden biri olabilir:
+ Türler açılan listesinde seçim değiştikçe, Üyeler listesinin yeni türü yansıtacak şekilde güncelleştirilmeleri gerekir. Üyeler listesinde gösterilen özellikler aşağıdakilerden biri olabilir:
 
-- Geçerli türe ait üye listesi.
+- Geçerli türe ait üyelerin listesi.
 
-- Tüm üyeler kaynak dosyada kullanılabilir, ancak geçerli türde olmayan tüm üyeler gri-out metin görüntülenir. Kullanıcı gri renkteki üyeleri seçebilir, böylece hızlı gezinme için kullanılabilir, ancak renk şu anda seçili türün bir parçası olmadıklarını gösterir.
+- Kaynak dosyada bulunan tüm Üyeler, ancak mevcut türde olmayan tüm Üyeler gri renkte gösterilir. Kullanıcı yine de gri olan üyeleri seçebilir, bu nedenle hızlı gezinme için kullanılabilirler, ancak renk, seçili türün bir parçası olmadığını gösterir.
 
-  Yöntemin <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> uygulanması genellikle aşağıdaki adımları gerçekleştirir:
+  <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>Yönteminin uygulanması genellikle aşağıdaki adımları gerçekleştirir:
 
-1. Kaynak dosya için geçerli bildirimlerin listesini alın.
+1. Kaynak dosya için geçerli bildirimlerin bir listesini alın.
 
-     Listeleri doldurmanın birkaç yolu vardır. Bir yaklaşım, <xref:Microsoft.VisualStudio.Package.LanguageService> tüm bildirimlerin listesini döndüren özel <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> bir ayrıştırmak nedeni ile yöntemi çağıran sınıfın sürümünde özel bir yöntem oluşturmaktır. Başka bir yaklaşım, <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> yöntemi özel <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> ayrışdırman nedeni ile doğrudan yöntemden aramak olabilir. Üçüncü bir yaklaşım, <xref:Microsoft.VisualStudio.Package.AuthoringScope> <xref:Microsoft.VisualStudio.Package.LanguageService> sınıftaki son tam ayrıştma işlemiyle döndürülen sınıftaki bildirimleri <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> önbelleğe almak ve bunu yöntemden almak olabilir.
+     Listeleri doldurmanız için çeşitli yollar vardır. Tek bir yaklaşım, <xref:Microsoft.VisualStudio.Package.LanguageService> <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> tüm bildirimlerin listesini döndüren özel bir ayrıştırma nedeni ile yöntemini çağıran sınıfının sürümünde özel bir yöntem oluşturmaktır. Başka bir yaklaşım, <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> yöntemi <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> özel ayrıştırma nedenine doğrudan yönteminden çağırmak olabilir. Üçüncü bir yaklaşım, <xref:Microsoft.VisualStudio.Package.AuthoringScope> sınıftaki son tam Ayrıştırma işleminin döndürdüğü sınıftaki bildirimleri önbelleğe almak <xref:Microsoft.VisualStudio.Package.LanguageService> ve bu yöntemi yönteminden elde etmek olabilir <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> .
 
-2. Türlerin listesini doldurveya güncelleştirin.
+2. Türlerin listesini doldurun veya güncelleştirin.
 
-     Türlistesinin içeriği, kaynak değiştiğinde veya geçerli bakım konumuna göre türlerin metin stilini değiştirmeyi seçtiyseniz güncelleştirilebilir. Bu konumun <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> yönteme geçirildiğini unutmayın.
+     Kaynak değiştiğinde ya da türlerin metin stilini geçerli giriş işareti konumuna göre değiştirmeyi seçtiyseniz türler listesinin içeriği güncelleştirilemeyebilir. Bu konumun yöntemine geçtiğini unutmayın <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> .
 
-3. Geçerli bakım konumuna göre türler listesinde seçilecek türü belirleyin.
+3. Geçerli giriş işareti konumuna göre türler listesinde seçilecek türü belirleyin.
 
-     Geçerli caret konumunu içeren türü bulmak için adım 1'de alınan bildirimleri arayabilir ve ardından dizinlerini türlistesine belirlemek için bu türiçin tür ler listesini arayabilirsiniz.
+     1. adımda elde edilen bildirimlerinde, geçerli giriş işareti konumunu kapsayan türü bulmak için arama yapabilir ve sonra bu türün Dizin türlerini türler listesine eklemek için türler listesinde arama yapabilirsiniz.
 
-4. Seçilen türe göre üye listesini doldurveya güncelleştirin.
+4. Seçilen türe göre üye listesini doldurun veya güncelleştirin.
 
-     Üyeler listesi, **Üyeler** açılır listesinde şu anda görüntülenenleri yansıtır. Kaynak değiştiyse veya yalnızca seçili türdeki üyeleri görüntülüyorsanız ve seçili tür değiştiyse, üye listesinin içeriğinin güncellenmesi gerekebilir. Kaynak dosyadaki tüm üyeleri görüntülemeyi seçerseniz, şu anda seçili tür değiştiyse, listedeki her üyenin metin stilinin güncelleştirilmesi gerekir.
+     Üyeler listesi, **Üyeler** açılan listesinde o anda görüntülendiklerinizi yansıtır. Kaynak değiştirilirse veya yalnızca seçilen türün üyelerini görüntülüyorsanız ve seçilen tür değiştiyse, Üyeler listesinin içeriğinin güncellenmesi gerekebilir. Kaynak dosyadaki tüm üyeleri görüntülemeyi seçerseniz, şu anda seçili olan tür değiştiyse listedeki her üyenin metin stillendirme güncelleştirilmesi gerekir.
 
-5. Geçerli caret konumuna göre üye listesinde seçilecek üyeyi belirleyin.
+5. Geçerli giriş işareti konumuna göre üye listesinde seçilecek üyeyi belirleyin.
 
-     Geçerli caret pozisyonunu içeren üye için adım 1'de alınan bildirimleri arayın, ardından üye listesine dizinini belirlemek için o üyenin üye listesini arayın.
+     Geçerli giriş işareti konumunu içeren üye için adım 1 ' de edinilen bildirimlerinde arama yapın, ardından üye listesinde bu üyenin üyelerini bulmak için üye listesini arayın.
 
-6. Listelerde veya her iki listedeki seçimlerde değişiklik yapıldıysa geri döndürün. `true`
+6. `true`Listelerde veya her iki listedeki seçimlerde herhangi bir değişiklik yapılırsa döndürün.

@@ -1,5 +1,5 @@
 ---
-title: Proje Modelleme | Microsoft Dokümanlar
+title: Proje modelleme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,18 +12,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c1ac89baf5bc7582d3430532938a5e5a0c35a4c0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80706548"
 ---
 # <a name="project-modeling"></a>Proje Modelleme
-Projeniz için otomasyon sağlamanın bir sonraki adımı standart proje <xref:EnvDTE.Projects> nesnelerini uygulamaktır: ve `ProjectItems` koleksiyonlar; `Project` ve <xref:EnvDTE.ProjectItem> nesneler; ve uygulamanıza özgü kalan nesneler. Bu standart nesneler Dteinternal.h dosyasında tanımlanır. Standart nesnelerin uygulanması BscPrj örneğinde sağlanır. Bu sınıfları, diğer proje türlerinden gelen proje nesneleriyle yan yana duran kendi standart proje nesnelerinizi oluşturmak için model olarak kullanabilirsiniz.
+Projeniz için Otomasyon sağlamanın bir sonraki adımı, Standart proje nesneleri: <xref:EnvDTE.Projects> ve koleksiyonları; ve `ProjectItems` `Project` <xref:EnvDTE.ProjectItem> nesneleri ve geri kalan nesneleri uygulamanıza özel olarak uygulamaktır. Bu standart nesneler Dteınternal. h dosyasında tanımlanmıştır. BscPrj örneğinde standart nesneler için bir uygulama verilmiştir. Bu sınıfları, diğer proje türlerindeki proje nesneleriyle yan yana olan kendi standart proje nesnelerinizi oluşturmak için modeller olarak kullanabilirsiniz.
 
- Bir otomasyon tüketicisi, çözümde`<UniqueProjName>")` belirli <xref:EnvDTE.ProjectItems> `n`bir proje elde etmek için n'nin bir dizin numarası olduğu yerde (" ve ( ) arama <xref:EnvDTE.Solution>yapabilmeyi varsar. Bu otomasyon çağrısının yapılması, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.GetProperty%2A> ortamın uygun proje hiyerarşisini aramasına, VSITEMID_ROOT ItemID parametresi olarak geçmesine ve VSHPROPID parametresi olarak VSHPROPID_ExtObject neden olur. `IVsHierarchy::GetProperty`uyguladığınız `IDispatch` çekirdek `Project` arabirimi sağlayan otomasyon nesnesine bir işaretçi döndürür.
+ Bir Otomasyon tüketicisi, <xref:EnvDTE.Solution> (" `<UniqueProjName>")` ve <xref:EnvDTE.ProjectItems> ( `n` ). burada n, çözümde belirli bir projeyi almak için bir dizin numarası olarak çağrı yapabilecektir. Bu Otomasyon çağrısını yapmak <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.GetProperty%2A> , ortamın uygun proje hiyerarşisinde çağrı yapmasına, VSITEMID_ROOT ItemId parametresi olarak VSHPROPID_ExtObject ve VSHPROPID parametresi olarak. `IVsHierarchy::GetProperty``IDispatch`uygulamış olduğunuz çekirdek arabirimini sağlayan Automation nesnesine bir işaretçi döndürür `Project` .
 
- Aşağıdaki sözdizimi `IVsHierarchy::GetProperty`.
+ Aşağıdaki sözdizimi aşağıda verilmiştir `IVsHierarchy::GetProperty` .
 
  `HRESULT GetProperty (`
 
@@ -35,7 +35,7 @@ Projeniz için otomasyon sağlamanın bir sonraki adımı standart proje <xref:E
 
  `);`
 
- Projeler iç içe geçme yi barındırır ve proje öğeleri grupları oluşturmak için koleksiyonları kullanır. Hiyerarşi şuna benziyor.
+ Projeler, proje öğelerinin gruplarını oluşturmak için iç içe ve koleksiyonları kullanır. Hiyerarşi şuna benzer.
 
 ```
 Projects
@@ -44,13 +44,13 @@ Projects
           |- ProjectItem (single object) or ProjectItems (another collection)
 ```
 
- İç içe geçme, <xref:EnvDTE.ProjectItem> bir <xref:EnvDTE.ProjectItems> `ProjectItems` koleksiyonun iç içe geçen nesneleri içerebileceğinden, nesnenin aynı anda toplanabileceği anlamına gelir. Temel Proje örneği bu iç içe geçmeyi göstermez. Nesneyi `Project` uygulayarak, genel otomasyon modelinin tasarımını karakterize eden ağaç benzeri yapıya katılırsınız.
+ İç içe geçme, bir <xref:EnvDTE.ProjectItem> <xref:EnvDTE.ProjectItems> `ProjectItems` koleksiyonun iç içe geçmiş nesneleri içerebildiğinden, bir nesnenin aynı anda koleksiyon olabileceği anlamına gelir. Temel proje örneği bu iç içe geçme göstermez. `Project`Nesnesini uygulayarak, genel otomasyon modelinin tasarımını gösteren ağaç benzeri yapıya katılırsanız.
 
- Proje otomasyonu aşağıdaki diyagramdaki yolu izler.
+ Proje Otomasyonu aşağıdaki diyagramdaki yolu izler.
 
- ![Visual Studio Proje Nesneleri](../../extensibility/internals/media/projectobjects.gif "ProjectObjects") Proje otomasyonu
+ ![Visual Studio proje nesneleri](../../extensibility/internals/media/projectobjects.gif "ProjectObjects") Proje Otomasyonu
 
- Bir `Project` nesne uygulamazsanız, ortam yine de `Project` yalnızca projenin adını içeren genel bir nesne döndürecektir.
+ Bir nesne gerçekleştirmeyin `Project` , ortam hala `Project` yalnızca projenin adını içeren genel bir nesne döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:EnvDTE.Projects>

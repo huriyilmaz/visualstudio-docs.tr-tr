@@ -1,23 +1,23 @@
 ---
 ms.openlocfilehash: 0170c6ed655ce54e2dbadf57341dff56616186ec
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68205724"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89326323"
 ---
 > [!WARNING]
-> Mevcut bir rol için tanılama etkinleştirdiğinizde, paket dağıtıldığında zaten ayarlamış olduğunuz herhangi bir uzantısı devre dışı bırakıldı. Bu güncelleştirmeler şunlardır:
+> Mevcut bir rol için tanılamayı etkinleştirdiğinizde, Paket dağıtıldığında, ayarlamış olduğunuz tüm uzantılar devre dışı bırakılır. Bu güncelleştirmeler şunlardır:
 >
-> * Microsoft İzleme Aracısı tanılamaları
-> * Microsoft Azure güvenlik izleme
-> * Microsoft kötü amaçlı yazılımdan koruma                 
-> * Microsoft İzleme Aracısı
+> * Microsoft Monitoring Agent tanılama
+> * Microsoft Azure Güvenlik Izleme
+> * Microsoft Kötü Amaçlı Yazılımdan Korunma                 
+> * Microsoft Monitoring Agent
 > * Microsoft Service Profiler Aracısı      
 > * Windows Azure etki alanı uzantısı        
-> * Windows Azure tanılama uzantısı   
+> * Windows Azure Tanılama uzantısı   
 > * Windows Azure Uzak Masaüstü uzantısı
-> * Windows Azure günlük Toplayıcı
+> * Windows Azure Günlük Toplayıcısı
 >
-> Rol güncelleştirildi dağıttıktan sonra Azure portal veya PowerShell aracılığıyla uzantılarınızı sıfırlayabilirsiniz.
+> Güncelleştirilmiş rolü dağıttıktan sonra uzantılarınızı Azure portal veya PowerShell aracılığıyla sıfırlayabilirsiniz.
 >
