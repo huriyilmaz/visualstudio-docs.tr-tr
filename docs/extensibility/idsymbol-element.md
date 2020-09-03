@@ -1,5 +1,5 @@
 ---
-title: IDSymbol Öğesi | Microsoft Dokümanlar
+title: IDSymbol öğesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +12,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d02a26a6874165738d917a14986d16d142c01915
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80710371"
 ---
 # <a name="idsymbol-element"></a>IDSymbol öğesi
-Öğe, `IDSymbol` bir menüyü, grubu veya komutu temsil eden GUID:ID çiftinin kimliğini içerir. GUID ana `GuidSymbol` öğeden gelir. Öğe, `IDSymbol` öznitelikte `name` `value` bulunan kimlik için uygun bir ad sağlayan bir özniteliğe sahiptir.
+`IDSymbol`Öğesi, bir menü, Grup veya komutu temsil eden GUID: ID ÇIFTININ kimliğini içerir. GUID üst `GuidSymbol` öğeden gelir. `IDSymbol`Öğesi, `name` özniteliğinde yer alan ID için kolay bir ad sağlayan bir özniteliğe sahiptir `value` .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <IDSymbol name=ElementName value="0x0010" />
@@ -34,8 +34,8 @@ ms.locfileid: "80710371"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|ad|Gereklidir. Kimlik sembolünün adı.|
-|value|Gereklidir. Kimlik simgesinin sayısal kimlik değeri.|
+|name|Gereklidir. KIMLIK sembolünün adı.|
+|değer|Gereklidir. KIMLIK sembolünün sayısal KIMLIK değeri.|
 
 ### <a name="child-elements"></a>Alt öğeleri
  Yok.
@@ -44,10 +44,10 @@ ms.locfileid: "80710371"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[GuidSymbol öğesi](../extensibility/guidsymbol-element.md)|Bir menüyü, grubu veya komutu temsil eden GUID:ID çiftinin GUID'ini içerir. Öğeleri `IDSymbol` grupla.|
+|[GuidSymbol öğesi](../extensibility/guidsymbol-element.md)|Bir menü, Grup veya komutu temsil eden GUID: ID çiftinin GUID 'sini içerir. `IDSymbol`Öğeleri gruplandırır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Belirli `IDSymbol` `GuidSymbol` bir öğedeki her öğenin benzersiz `value`bir öğesi olmalıdır. Ancak, `IDSymbol` aynı değerlere sahip öğeler, farklı ebeveynleri olduğu sürece bir pakette bulunabilir.
+ `IDSymbol`Verilen bir öğe içindeki her öğenin `GuidSymbol` benzersiz olması gerekir `value` . Ancak, `IDSymbol` aynı değerlere sahip öğeler farklı üst öğeleri oldukları sürece bir pakette bulunabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio komut tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

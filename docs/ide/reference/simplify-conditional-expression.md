@@ -1,5 +1,5 @@
 ---
-title: Koşullu ifadeyi Basitleştir
+title: Koşullu ifadeyi basitleştirme
 ms.date: 06/08/2020
 ms.topic: reference
 author: mikadumont
@@ -10,10 +10,10 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: d0571c01217441d4a39fbfe6fb58ccfe95fd0c5a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85290619"
 ---
 # <a name="simplify-conditional-expression-refactoring"></a>Koşullu ifade yeniden düzenlemeyi basitleştirme
@@ -36,7 +36,7 @@ Bu yeniden düzenleme için geçerlidir:
 
 3. **Koşullu Ifadeyi Basitleştir** ' i seçin
 
-    ![Koşullu ifadeyi Basitleştir](media/simplify-conditional-expression.png)
+    ![Koşullu ifadeyi basitleştirme](media/simplify-conditional-expression.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

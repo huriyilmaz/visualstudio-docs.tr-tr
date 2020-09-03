@@ -9,10 +9,10 @@ caps.latest.revision: 12
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d4ccf10f3ce085aa8f0275c40644f1a109616daf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672144"
 ---
 # <a name="set-a-unique-automation-property-for-windows-store-controls-for-testing"></a>Test yapma amacıyla Windows Mağazası Denetimleri için Benzersiz Otomasyon Özelliği ayarlama
@@ -34,7 +34,7 @@ XAML tabanlı Windows Mağazası uygulamanız için kodlanmış UI testlerini ç
 
 ## <a name="use-methods-to-assign-a-unique-automation-property"></a>Benzersiz bir Otomasyon özelliği atamak için yöntemleri kullanma
 
-### <a name="UniquePropertyWindowsStoreControlsStaticXAML"></a>Statik XAML tanımı
+### <a name="static-xaml-definition"></a><a name="UniquePropertyWindowsStoreControlsStaticXAML"></a> Statik XAML tanımı
  XAML dosyanızda tanımlanan bir denetim için benzersiz bir Otomasyon özelliği belirtmek için, aşağıdaki örneklerde gösterildiği gibi AutomationProperties. AutomationId veya AutomationProperties.Name öğesini örtük veya açık olarak ayarlayabilirsiniz. Bu değerlerden birini ayarlamak, kodlanmış UI testi veya eylem kaydı oluştururken denetimi tanımlamak için kullanılabilen benzersiz bir Otomasyon özelliği sağlar.
 
  **Özelliği örtük olarak ayarlayın**
@@ -68,10 +68,10 @@ XAML tabanlı Windows Mağazası uygulamanız için kodlanmış UI testlerini ç
 <Button AutomationProperties.Name="ButtonY" Height="31" HorizontalAlignment="Left" Margin="23,76,0,0" VerticalAlignment="Top" Width="140" Click="ButtonY_Click" />
 ```
 
-### <a name="UniquePropertyWindowsStoreControlsExpressionBlend"></a>Visual Studio veya Visual Studio için Blend kullanarak benzersiz Otomasyon özellikleri atama
+### <a name="assign-unique-automation-properties-using-visual-studio-or-blend-for-visual-studio"></a><a name="UniquePropertyWindowsStoreControlsExpressionBlend"></a> Visual Studio veya Visual Studio için Blend kullanarak benzersiz Otomasyon özellikleri atama
  Düğmeler, liste kutuları, Birleşik giriş kutuları ve metin kutuları gibi etkileşimli öğelere benzersiz adlar atamak için Visual Studio veya Visual Studio için Blend kullanabilirsiniz. Bu, denetimin AutomationProperties.Name için benzersiz bir değer sağlar.
 
- **Visual Studio:** **Araçlar** menüsünde **Seçenekler** ' in üzerine gelin ve ardından **metin Düzenleyicisi**, sonra **xaml**ve son ' u seçin.
+ **Visual Studio:** **Araçlar** menüsünde **Seçenekler** ' in üzerine gelin ve ardından **metin Düzenleyicisi**, sonra **xaml**ve son ' u seçin **Miscellaneous**.
 
  **Oluşturma sırasında etkileşimli öğeleri otomatik olarak Adlandır** ' ı seçin ve **Tamam**' ı seçin.
 
@@ -94,7 +94,7 @@ XAML tabanlı Windows Mağazası uygulamanız için kodlanmış UI testlerini ç
 
  ![Projeyi, etkileşimli öğeleri adlandırmak üzere ayarla](../test/media/cuit-windowsstoreproeprty-blend-2.png "CUIT_WindowsStoreProeprty_Blend_2")
 
-### <a name="UniquePropertyWindowsStoreControlsDataTemplate"></a>Veri şablonu kullanma
+### <a name="use-a-data-template"></a><a name="UniquePropertyWindowsStoreControlsDataTemplate"></a> Veri şablonu kullanma
  Aşağıdaki XAML 'yi kullanarak bir liste kutusundaki değerleri değişkenlere bağlamak için ItemTemplate kullanarak basit bir şablon tanımlayabilirsiniz.
 
 ```xaml
@@ -157,7 +157,7 @@ public override string ToString()
 
 ```
 
-### <a name="UniquePropertyWindowsStoreControlsControlTemplate"></a>Denetim şablonu kullanma
+### <a name="use-a-control-template"></a><a name="UniquePropertyWindowsStoreControlsControlTemplate"></a> Denetim şablonu kullanma
  Belirli bir türün her örneğinin, kodda tanımlandığında benzersiz bir Otomasyon özelliği elde edebilmesi için bir denetim şablonu kullanabilirsiniz. AutomationProperty öğesinin denetim örneğindeki benzersiz bir KIMLIĞE bağlaması için şablonu oluşturmanız gerekir. Aşağıdaki XAML, bu bağlamayı bir denetim şablonuyla oluşturmak için bir yaklaşımı gösterir.
 
 ```xaml
@@ -185,7 +185,7 @@ public override string ToString()
 <Button Content=”Button2” Style="{StaticResource MyButton}" Width="140"/>
 ```
 
-### <a name="UniquePropertyWindowsStoreControlsDynamicControls"></a>Dinamik denetimler
+### <a name="dynamic-controls"></a><a name="UniquePropertyWindowsStoreControlsDynamicControls"></a> Dinamik denetimler
  Kodunuzda dinamik olarak veya XAML dosyalarındaki şablonlar aracılığıyla oluşturulan denetimleriniz varsa, denetimin Içerik veya ad özelliklerini ayarlamanız gerekir. Bu, her dinamik denetimin benzersiz bir Otomasyon özelliğine sahip olduğundan emin olmanızı sağlar. Örneğin, bir liste öğesini seçtiğinizde gösterilmesi gereken bir onay kutusu varsa, bu özellikleri burada gösterildiği gibi ayarlayabilirsiniz:
 
 ```csharp

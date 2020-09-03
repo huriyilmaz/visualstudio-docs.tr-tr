@@ -8,10 +8,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 9171afdc6fe5ca65a8ba2bcae81fe255981cdae6
-ms.sourcegitcommit: 8217b2ff48028f43c05c5590a293d358897c8651
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86475997"
 ---
 # <a name="customize-code-coverage-analysis"></a>Kod kapsamı analizini özelleştirme
@@ -112,7 +112,7 @@ Aşağıdaki tabloda, derlemelerin ve üyelerin kod kapsamından içerme veya d�
 | PublicKeyToken | İmzalı derlemeleri ortak anahtar belirteci ile eşleştirir. |
 | Kaynak | Öğelerin tanımlandıkları kaynak dosyanın yol adına göre eşleşir. |
 | Öznitelik | Belirtilen özniteliğine sahip öğeleri eşleştirir. Özniteliğin tam adını belirtin, örneğin `<Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>` .<br/><br/>Özniteliğini hariç tutdıysanız,,, <xref:System.Runtime.CompilerServices.CompilerGeneratedAttribute> ve otomatik uygulanan özellikler gibi dil özelliklerini kullanan kod, `async` `await` `yield return` kod kapsamı analizinden hariç tutulur. Gerçekten üretilen kodu hariç tutmak için, yalnızca özniteliğini hariç tutun <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> . |
-| İşlev | Parametre listesi de dahil olmak üzere tam olarak nitelenmiş ad ile yordamları, işlevleri veya yöntemleri eşleştirir. Ayrıca, bir [normal ifade](#regular-expressions)kullanarak adın bir bölümünü de eşleştirebilirsiniz.<br/><br/>Örnekler:<br/><br/>`Fabrikam.Math.LocalMath.SquareRoot(double);`Þ<br/><br/>`Fabrikam::Math::LocalMath::SquareRoot(double)`C++ |
+| İşlev | Parametre listesi de dahil olmak üzere tam olarak nitelenmiş ad ile yordamları, işlevleri veya yöntemleri eşleştirir. Ayrıca, bir [normal ifade](#regular-expressions)kullanarak adın bir bölümünü de eşleştirebilirsiniz.<br/><br/>Örnekler:<br/><br/>`Fabrikam.Math.LocalMath.SquareRoot(double);` Þ<br/><br/>`Fabrikam::Math::LocalMath::SquareRoot(double)` C++ |
 
 ### <a name="regular-expressions"></a>Normal ifadeler
 
@@ -124,7 +124,7 @@ Dahil etme ve hariç tutma düğümleri, joker karakterlerle aynı olmayan norma
 
 - ** \\ ( \\ )** parantezle eşleşir "()"
 
-- **\\\\**bir dosya yolu sınırlayıcısı ile eşleşir " \\ "
+- **\\\\** bir dosya yolu sınırlayıcısı ile eşleşir " \\ "
 
 - **^** dizenin başlangıcını eşleştirir
 

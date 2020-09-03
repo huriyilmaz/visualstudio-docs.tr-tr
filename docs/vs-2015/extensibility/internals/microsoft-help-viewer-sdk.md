@@ -9,10 +9,10 @@ caps.latest.revision: 34
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3f7cbe9606b73741e1e59eb14f40cb277052944a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545086"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Yardım Görüntüleyicisi SDK’sı
@@ -132,17 +132,17 @@ Bu makale, Visual Studio Yardım Görüntüleyicisi tümleştiricileri için aş
 
  Konunun başlık ve alt bilgisini dahil değil), sayfa bağlantıları, bir not bölümü, daraltılabilir alan, kod parçacığı ve dile özgü metnin bir bölümünü içerir.  Sunulma konusunun bu alanlarla ilgili bilgiler için bkz. marka bölümü.
 
-1. Konu başlığı etiketi ekleyin:`<div class="title">Contoso Topic 4</div>`
+1. Konu başlığı etiketi ekleyin:  `<div class="title">Contoso Topic 4</div>`
 
-2. Bir dekont bölümü ekleyin:`<div class="alert"> add your table tag and text </div>`
+2. Bir dekont bölümü ekleyin: `<div class="alert"> add your table tag and text </div>`
 
-3. Daraltılabilir bir alan ekleyin:`<CollapsibleArea Expanded="1" Title="Collapsible Area Test Heading"> add text  </CollapsibleArea>`
+3. Daraltılabilir bir alan ekleyin:  `<CollapsibleArea Expanded="1" Title="Collapsible Area Test Heading"> add text  </CollapsibleArea>`
 
-4. Kod parçacığı ekleyin:`<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" > a block of code </CodeSnippet>`
+4. Kod parçacığı ekleyin:  `<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" > a block of code </CodeSnippet>`
 
-5. Kod diline özgü metin ekleme: `<LanguageSpecificText devLangcs="CS" devLangvb="VB" devLangcpp="C++" devLangnu="F#" />` devLangnu = diğer dilleri girmenize izin verir. Örneğin, devLangnu = "FORTRAN" kod parçacığı DisplayLanguage = FORTRAN olduğunda FORTRAN öğesini görüntüler.
+5. Kod diline özgü metin ekleme:  `<LanguageSpecificText devLangcs="CS" devLangvb="VB" devLangcpp="C++" devLangnu="F#" />` devLangnu = diğer dilleri girmenize izin verir. Örneğin, devLangnu = "FORTRAN" kod parçacığı DisplayLanguage = FORTRAN olduğunda FORTRAN öğesini görüntüler.
 
-6. Sayfa bağlantıları ekle:`<a href="ms-xhelp://?Id=ContosoTopic1">Main Topic</a>`
+6. Sayfa bağlantıları ekle: `<a href="ms-xhelp://?Id=ContosoTopic1">Main Topic</a>`
 
 > [!NOTE]
 > Note: desteklenmeyen yeni "görüntüleme dili" (örnek, F #, COBOL, FORTRAN) için kod parçacığında tek renkli olacak kod renklendirme.
@@ -350,7 +350,7 @@ some F# code
 
   Aşağıdaki tabloda, köşeli ayraçlar arasında görünen tüm dizeler, tanınan bir değerle değiştirilmelidir. Örneğin, \<meta name="Microsoft.Help.Locale" content="[language code]" /> "[Language Code]", "en-US" gibi bir değer ile değiştirilmelidir.
 
-|Özellik (HTML temsili)|Açıklama|
+|Özellik (HTML temsili)|Description|
 |--------------------------------------|-----------------|
 |\< meta name="Microsoft.Help.Locale" content="[language-code]" />|Bu konu için bir yerel ayar ayarlar. Bu etiket bir konu başlığında kullanılıyorsa, yalnızca bir kez kullanılması gerekir ve diğer Microsoft Yardım etiketlerinin üzerine eklenmelidir. Bu etiket kullanılmazsa, konunun gövde metni, belirtilen ürün yerel ayarıyla ilişkili sözcük kesici kullanılarak dizinlenir; Aksi halde, en-US sözcük kesici kullanılır. Bu etiket, ıSOC RFC 4646 ' e uygundur. Microsoft Yardım 'ın doğru şekilde çalıştığından emin olmak için, genel dil özniteliği yerine bu özelliği kullanın.|
 |\< meta name="Microsoft.Help.TopicLocale" content="[language-code]" />|Diğer yerel ayarlar da kullanıldığında, bu konu için bir yerel ayar ayarlar. Bu etiket bir konu başlığında kullanılıyorsa, yalnızca bir kez kullanılmalıdır. Katalog birden fazla dilde içerik içerdiğinde bu etiketi kullanın. Bir katalogdaki birden çok konu aynı KIMLIĞE sahip olabilir, ancak her birinin benzersiz bir Topılocale belirtmesi gerekir. Kataloğun yerel ayarıyla eşleşen bir Topılocale belirten konu, içindekiler tablosunda görüntülenen konudur. Ancak, konunun tüm dil sürümleri arama sonuçlarında görüntülenir.|
@@ -436,14 +436,14 @@ some F# code
 
 Özellik: **CollapsibleArea** Use: Expand içerik denetim metnini Genişlet
 
-|**Dosyalarında**|**Değer**|
+|**Öğe**|**Değer**|
 |-|-|
 |ExpandText|Genişlet|
 |CollapseText|Daralt|
 
 Özellik:**codeparçacığının** kullanımı: kod parçacığı denetim metni.  Note: "bölünmez" boşluk ile kod parçacığı içeriği, boşluk olarak değiştirilecek.
 
-|**Dosyalarında**|**Değer**|
+|**Öğe**|**Değer**|
 |-|-|
 |CopyToClipboard|Panoya kopyala|
 |ViewColorizedText|Renklendirilmiş görüntüleme|
@@ -453,9 +453,9 @@ some F# code
 
 Özellik: **geri bildirim, altbilgi ve amblem** kullanımı: müşterinin, e-posta ile geçerli konu hakkında geri bildirim sağlaması Için bir geri bildirim denetimi sağlar.  İçerik için telif hakkı metni.  Logo tanımı.
 
-|**Dosyalarında**|**Değer (Bu dizeler, içerik benimseme gereksinimini karşılayacak şekilde değiştirilebilir.)**|
+|**Öğe**|**Değer (Bu dizeler, içerik benimseme gereksinimini karşılayacak şekilde değiştirilebilir.)**|
 |-|-|
-|Yaptırımlar|© 2013 Microsoft Corporation. Tüm hakları saklıdır.|
+|Yaptırımlar|© 2013 Microsoft Corporation. All rights reserved.|
 |SendFeedback|\<a href="{0}" {1}>\</a>Bu konuda Microsoft 'A geri bildirim gönderin.|
 |FeedbackLink||
 |Logo başlığı|[!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]|
@@ -464,7 +464,7 @@ some F# code
 
 Özellik: **vazgeçme** kullanımı: makine çevirisi Içeriği için bir büyük/küçük harfe özgü bildirimler kümesi.
 
-|**Dosyalarında**|**Değer**|
+|**Öğe**|**Değer**|
 |-|-|
 |MT_Editable|Bu makale makine çevirisi yapıldı. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin.|
 |MT_NonEditable|Bu makale makine çevirisi yapıldı. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin.|
@@ -475,7 +475,7 @@ some F# code
 
 Özellik: **LinkTable** kullanımı: çevrimiçi konu bağlantıları desteği
 
-|**Dosyalarında**|**Değer**|
+|**Öğe**|**Değer**|
 |-|-|
 |LinkTableTitle|Tablo bağla|
 |Topicenulınktext|\</a>Bilgisayarınızda mevcut olan bu konunun İngilizce sürümünü görüntüleyin.|
@@ -484,7 +484,7 @@ some F# code
 
 Özellik: **video ses denetimi** kullanımı: video içeriği için öğeleri ve metni görüntüleme
 
-|**Dosyalarında**|**Değer**|
+|**Öğe**|**Değer**|
 |-|-|
 |MultiMediaNotSupported|İçeriği desteklemek için Internet Explorer 9 veya üzeri yüklü olmalıdır {0} .|
 |VideoText|videoyu görüntüleme|
@@ -494,7 +494,7 @@ some F# code
 
 Özellik: **yüklü Içerik yüklenmedi denetim** kullanımı: contentnotinstalled.htm işleme Için kullanılan metin öğeleri (dizeler)
 
-|**Dosyalarında**|**Değer**|
+|**Öğe**|**Değer**|
 |-|-|
 |Contentnotınstalınstalınstalde başlığı|Bilgisayarınızda içerik bulunamadı.|
 |Contentnotınstalınstaldownloadcontenttext|\<p>İçeriği bilgisayarınıza indirmek için \<a href="{0}" {1}> Yönet sekmesine tıklayın \</a> .\</p>|
@@ -502,7 +502,7 @@ some F# code
 
 Özellik: **konu bulunamadı denetim** kullanımı: topicnotfound.htm işleme Için kullanılan metin öğeleri (dizeler)
 
-|**Dosyalarında**|**Değer**|
+|**Öğe**|**Değer**|
 |-|-|
 |Topınotfoundtitle|İstenen konu bilgisayarınızda bulunamıyor.|
 |Topınotfoundviewonlinetext|\<p>İstediğiniz konu bilgisayarınızda bulunamadı, ancak \<a href="{0}" {1}> konuyu çevrimiçi olarak görebilirsiniz \</a> .\</p>|
@@ -511,14 +511,14 @@ some F# code
 
 Özellik: **Konu bozuk denetim** kullanımı: topiccorrupted.htm işleme Için kullanılan metin öğeleri (dizeler)
 
-|**Dosyalarında**|**Değer**|
+|**Öğe**|**Değer**|
 |-|-|
 |Topıbozuk Tedtitle|İstenen konu gösterilemiyor.|
 |Topıboztedviewonlinetext|\<p>Yardım Görüntüleyicisi istenen konuyu görüntüleyemiyor. Konunun içeriğinde veya temeldeki sistem bağımlılığında bir hata olabilir.\</p>|
 
 Özellik: **giriş sayfası denetim** kullanımı: Yardım Görüntüleyicisi üst düzey düğüm içeriğinin görüntülenmesini destekleyen metin.
 
-|**Dosyalarında**|**Değer**|
+|**Öğe**|**Değer**|
 |-|-|
 |HomePageTitle|Yardım Görüntüleyicisi giriş sayfası|
 |Homepagetanıtımı|\<p>Microsoft araçları, ürünleri, teknolojileri ve hizmetleri kullanan herkese yönelik önemli bir bilgi kaynağı olan Microsoft Yardım Görüntüleyicisi hoş geldiniz. Yardım Görüntüleyicisi, nasıl yapılır ve başvuru bilgilerine, örnek koda, teknik makalelere ve daha fazlasına erişmenizi sağlar. İhtiyacınız olan içeriği bulmak için içindekiler tablosuna göz atarak tam metin aramasını kullanın veya anahtar sözcük dizinini kullanarak içerik üzerinde gezinin.\</p>|
@@ -540,7 +540,7 @@ some F# code
 |Tanımlama bilgisi değerlerini ayarlama ve edinme|getCookie, setCookie||
 |Devralınan üye|changeMembersLabel|Devralınan üyeyi Genişlet/Daralt|
 |Selfmarkalı = false olduğunda|onLoad|Bir yazdırma isteği olup olmadığını denetlemek için sorgu dizesini okuyun.  Tüm kod parçacıklarını Kullanıcı tarafından tercih edilen sekmesine odaklamak için ayarlayın.  Bu bir yazdırma isteği ise, isPrinterFriendly değerini true olarak ayarlayın. Yüksek karşıtlık modunu denetleyin.|
-|Kod parçacığı|addSpecificTextLanguageTagSet||
+|Kod Parçacığı|addSpecificTextLanguageTagSet||
 ||Getındexfromdevlang||
 ||Değişiklik sekmesi||
 ||setCodesnippetLang||
@@ -569,25 +569,25 @@ some F# code
 
  Marka paketi, içerik kullanıcılarına yardımcı olmak üzere anahtar bilgilerini iletişim için senaryoları destekleyen bir dizi HTM dosyası içerir. Örneğin, hangi içerik kümelerinin yükleneceğini açıklayan bir bölüm ve yerel konu başlıklarında konular bulunamadığında kullanıcıya söyleyen sayfalar. Bu HTM dosyaları her ürün için değiştirilebilir.  ISO kabuğu satıcıları, varsayılan marka paketini alabilir ve bu sayfaların davranışını ve içeriğini, ihtiyacını pakete göre değiştirebilir.  Bu dosyalar, marka etiketlerinin branding.xml dosyasından ilgili içeriği alması için kendi marka paketine başvurur.
 
-|**Dosya**|**Kullanma**|**Görünen Içerik kaynağı**|
+|**Dosya**|**Kullanırsınız**|**Görünen Içerik kaynağı**|
 |-|-|-|
 |homepage.htm|Bu, şu anda yüklü olan içeriği görüntüleyen ve kullanıcıya içerik hakkında sunmanız gereken diğer tüm iletileri gösteren bir sayfasıdır.  Bu dosya, "Microsoft.Help.Id" content = "-1" ek meta veri özniteliğine sahiptir ve bu içeriği TOC yerel içeriğinin üst kısmına koyar.||
-||<META_HOME_PAGE_TITLE_ADD/>|Branding.xml, etiket\<HomePageTitle>|
-||<HOME_PAGE_INTRODUCTION_SECTION_ADD/>|Branding.xml, etiket\<HomePageIntroduction>|
-||<HOME_PAGE_CONTENT_INSTALL_SECTION_ADD/>|Branding.xml, etiket\<HomePageContentInstallText>|
-||<HOME_PAGE_BOOKS_INSTALLED_SECTION_ADD/>|Başlık bölümü Branding.xml etiket \<HomePageInstalledBooks> , hiçbir kitap yüklü olmadığında uygulamadan oluşturulan veriler \<HomePageNoBooksInstalled> .|
+||<META_HOME_PAGE_TITLE_ADD/>|Branding.xml, etiket \<HomePageTitle>|
+||<HOME_PAGE_INTRODUCTION_SECTION_ADD/>|Branding.xml, etiket \<HomePageIntroduction>|
+||<HOME_PAGE_CONTENT_INSTALL_SECTION_ADD/>|Branding.xml, etiket \<HomePageContentInstallText>|
+||<HOME_PAGE_BOOKS_INSTALLED_SECTION_ADD/>|Başlık bölümü Branding.xml etiket \<HomePageInstalledBooks> , hiçbir kitap yüklü olmadığında uygulamadan oluşturulan veriler  \<HomePageNoBooksInstalled> .|
 ||<HOME_PAGE_SETTINGS_SECTION_ADD/>|Başlık bölümü Branding.xml etiketi \<HomePageHelpSettings> , Bölüm metni \<HomePageHelpSettingsText> .|
 |topiccorrupted.htm|Yerel küme içinde bir konu mevcut olduğunda, ancak bazı nedenlerle görüntülenemiyor (bozuk içerik).||
-||<META_TOPIC_CORRUPTED_TITLE_ADD/>|Branding.xml, etiket\<TopicCorruptedTitle>|
-||<TOPIC_CORRUPTED_SECTION_ADD/>|Branding.xml, etiket\<TopicCorruptedViewOnlineText>|
+||<META_TOPIC_CORRUPTED_TITLE_ADD/>|Branding.xml, etiket \<TopicCorruptedTitle>|
+||<TOPIC_CORRUPTED_SECTION_ADD/>|Branding.xml, etiket \<TopicCorruptedViewOnlineText>|
 |topicnotfound.htm|Bir konu, yerel içerik kümesinde bulunamadığında veya çevrimiçi olarak kullanılabilir||
-||<META_TOPIC_NOT_FOUND_TITLE_ADD/>|Branding.xml, etiket\<TopicNotFoundTitle>|
-||<META_TOPIC_NOT_FOUND_ID_ADD/>|Branding.xml, etiket\<TopicNotFoundViewOnlineText> + \<TopicNotFoundDownloadContentText>|
-||<TOPIC_NOT_FOUND_SECTION_ADD/>|Branding.xml, etiket\<TopicNotFoundText>|
+||<META_TOPIC_NOT_FOUND_TITLE_ADD/>|Branding.xml, etiket \<TopicNotFoundTitle>|
+||<META_TOPIC_NOT_FOUND_ID_ADD/>|Branding.xml, etiket \<TopicNotFoundViewOnlineText> + \<TopicNotFoundDownloadContentText>|
+||<TOPIC_NOT_FOUND_SECTION_ADD/>|Branding.xml, etiket \<TopicNotFoundText>|
 |contentnotinstalled.htm|Ürün için yerel içerik yüklü olmadığında.||
-||<META_CONTENT_NOT_INSTALLED_TITLE_ADD/>|Branding.xml, etiket\<ContentNotInstalledTitle>|
-||<META_CONTENT_NOT_INSTALLED_ID_ADD/>|Branding.xml, etiket\<ContentNotInstalledDownloadContentText>|
-||<CONTENT_NOT_INSTALLED_SECTION_ADD/>|Branding.xml, etiket\<ContentNotInstalledText>|
+||<META_CONTENT_NOT_INSTALLED_TITLE_ADD/>|Branding.xml, etiket \<ContentNotInstalledTitle>|
+||<META_CONTENT_NOT_INSTALLED_ID_ADD/>|Branding.xml, etiket \<ContentNotInstalledDownloadContentText>|
+||<CONTENT_NOT_INSTALLED_SECTION_ADD/>|Branding.xml, etiket \<ContentNotInstalledText>|
 
  **CSS dosyaları**
 
@@ -603,7 +603,7 @@ some F# code
 
   Visual Studio içeriği, Visual Studio logosunun yanı sıra diğer grafikleri de görüntüler.  Visual Studio Yardım Görüntüleyicisi markalama paketindeki grafik dosyalarının tüm listesi aşağıda gösterilmiştir.
 
-|**Dosya**|**Kullanma**|**Örnekler**|
+|**Dosya**|**Kullanırsınız**|**Örnekler**|
 |-|-|-|
 |clear.gif|Daraltılabilir alanı işlemek için kullanılır||
 |footer_slice.gif|Alt bilgi sunumu||
@@ -710,7 +710,7 @@ some F# code
 
 2. [Yalıtılmış Kabuk yeniden dağıtım Visual Studio 2013](https://aka.ms/VS2013/IsoShell-LP/all)
 
-   **Genel bakış**
+   **Genel Bakış**
 
    [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]Kabuk, [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] bir uygulamayı temel alan IDE 'nin bir sürümüdür. Bu tür uygulamalar, oluşturduğunuz uzantılarla birlikte yalıtılmış Kabuğu içerir. Uzantıları derlemek için SDK 'ya dahil olan yalıtılmış Kabuk proje şablonlarını kullanın [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] .
 
@@ -747,9 +747,9 @@ some F# code
 
   Yalıtılmış Kabuk uzantısı oluşturmak için:
 
-1. Visual Studio 'da, **Dosya**altında **Yeni proje**' yi seçin, **diğer proje türleri** altında **genişletilebilirlik**' i seçin ve ardından **Visual Studio Kabuğu yalıtılmış**' i seçin. Projeyi, `ContosoHelpShell` Visual Studio yalıtılmış Kabuk şablonunu temel alan bir genişletilebilirlik projesi oluşturacak şekilde adlandırın.
+1. Visual Studio 'da, **Dosya**altında **Yeni proje**' yi seçin, **diğer proje türleri** altında **genişletilebilirlik**' i seçin ve ardından  **Visual Studio Kabuğu yalıtılmış**' i seçin. Projeyi, `ContosoHelpShell` Visual Studio yalıtılmış Kabuk şablonunu temel alan bir genişletilebilirlik projesi oluşturacak şekilde adlandırın.
 
-2. Çözüm Gezgini, ContosoHelpShellUI projesinde, kaynak dosyaları klasöründe ApplicationCommands. vsct öğesini açın. Bu satırın açıklama olarak belirlendiğinden emin olun ("No_Help" araması yapın):`<!-- <define name=“No_HelpMenuCommands”/> -->`
+2. Çözüm Gezgini, ContosoHelpShellUI projesinde, kaynak dosyaları klasöründe ApplicationCommands. vsct öğesini açın. Bu satırın açıklama olarak belirlendiğinden emin olun ("No_Help" araması yapın): `<!-- <define name=“No_HelpMenuCommands”/> -->`
 
 3. **Hata ayıklamayı**derlemek ve çalıştırmak için F5 tuşunu seçin. Yalıtılmış Kabuk IDE 'nin deneysel örneğinde **Yardım** menüsünü seçin. **Görünüm yardım**, **Yardım Içeriği ekleme ve kaldırma**ve **Yardım tercihi** komutlarının göründüğünden emin olun.
 
@@ -814,7 +814,7 @@ some F# code
 
      C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio12
 
-     [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]Tümleşik Kabuk:
+     [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] Tümleşik Kabuk:
 
      C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio12en-US
 

@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: b03521023ea0b4d92bd3125f256d2230de9bba03
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541355"
 ---
 # <a name="how-to-protect-parts-of-documents-by-using-content-controls"></a>Nasıl yapılır: içerik denetimlerini kullanarak belge parçalarını koruma
@@ -34,7 +34,7 @@ ms.locfileid: "85541355"
 
   [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="protect-a-content-control"></a><a name="EditDeleteControl"></a>İçerik denetimini koruma
+## <a name="protect-a-content-control"></a><a name="EditDeleteControl"></a> İçerik denetimini koruma
  Tasarım zamanında veya çalışma zamanında, belge düzeyindeki bir projede denetimin özelliklerini ayarlayarak kullanıcıların bir içerik denetimini düzenlemesini veya silmesini engelleyebilirsiniz.
 
  Ayrıca, bir VSTO eklenti projesi kullanarak çalışma zamanında belgeye eklediğiniz içerik denetimlerini de koruyabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Word belgelerine içerik denetimleri ekleme](../vsto/how-to-add-content-controls-to-word-documents.md).
@@ -49,7 +49,7 @@ ms.locfileid: "85541355"
 
     - Kullanıcıların denetimi silmesini engellemek için **LockContentControl** öğesini **true**olarak ayarlayın.
 
-3. **Tamam**'a tıklayın.
+3. **Tamam**’a tıklayın.
 
 ### <a name="to-protect-a-content-control-at-run-time"></a>Çalışma zamanında bir içerik denetimini korumak için
 

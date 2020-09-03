@@ -8,10 +8,10 @@ ms.date: 03/09/2020
 ms.topic: conceptual
 description: Visual Studio abonelikleri için yazılım indirmelerinde ürün kullanılabilirliği hakkında bilgi edinin
 ms.openlocfilehash: 27950fa2a4589ee5068e7d5f294f651132c229ea
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86387219"
 ---
 # <a name="product-availability-for-software-downloads-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Yazılım İndirmeleri için ürün kullanılabilirliği

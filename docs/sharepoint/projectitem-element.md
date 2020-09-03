@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 44fc1b918960f0268d916ccfa560f118cea47144
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536883"
 ---
 # <a name="projectitem-element"></a>ProjectItem öğesi
@@ -50,7 +50,7 @@ ms.locfileid: "85536883"
 |**FeatureReceiverClass**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Bu SharePoint proje öğesi için bir özellik alıcısı sınıfının tam adı. Özellik alıcıları hakkında daha fazla bilgi için bkz. [Proje Öğelerinde Paketleme ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md).|
 |**FeatureReceiverAssembly**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Bu SharePoint proje öğesi için bir özellik alıcısı tanımlayan bir derlemenin tam adını belirtir. Özellik alıcıları hakkında daha fazla bilgi için bkz. [Proje Öğelerinde Paketleme ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md). Tam derleme adları hakkında daha fazla bilgi için bkz. [derleme adları](/dotnet/framework/app-domains/assembly-names).|
 |**SupportedTrustLevels**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Bu SharePoint proje öğesinin desteklediği güven düzeylerini belirtir. Bu değer şu dizelerden biri olabilir: korumalı, FullTrust veya ALL. All değeri hem korumalı hem de FullTrust belirler.<br /><br /> Özel bir SharePoint proje öğesi türünde, bu özniteliğin değeri, yöntemi uygulamanızda özelliği atadığınız değere karşılık gelir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedTrustLevels%2A> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> . Bu öznitelik için farklı bir değer belirtirseniz, Visual Studio, özellikte belirttiğiniz güven düzeyini belirtecek şekilde değerin üzerine yazar <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedTrustLevels%2A> .|
-|**SupportedDeploymentScopes**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Bu SharePoint proje öğesinin desteklediği dağıtım kapsamlarını belirtir. Bu değer, şu dizelerden birini veya daha fazlasını içeren, virgülle ayrılmış bir dizedir: Farm, site, Web, WebApplication veya Package. Örneğin, `Web, Site`<br /><br /> Özel bir SharePoint proje öğesi türünde, bu özniteliğin değeri, yöntemi uygulamanızda özelliği atadığınız değere karşılık gelir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes%2A> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> . Bu öznitelik için farklı bir değer belirtirseniz, Visual Studio, özellikte belirttiğiniz güven düzeyini belirtecek şekilde değerin üzerine yazar <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes%2A> .|
+|**SupportedDeploymentScopes**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Bu SharePoint proje öğesinin desteklediği dağıtım kapsamlarını belirtir. Bu değer, şu dizelerden birini veya daha fazlasını içeren, virgülle ayrılmış bir dizedir: Farm, site, Web, WebApplication veya Package. Örnek: `Web, Site`<br /><br /> Özel bir SharePoint proje öğesi türünde, bu özniteliğin değeri, yöntemi uygulamanızda özelliği atadığınız değere karşılık gelir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes%2A> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> . Bu öznitelik için farklı bir değer belirtirseniz, Visual Studio, özellikte belirttiğiniz güven düzeyini belirtecek şekilde değerin üzerine yazar <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes%2A> .|
 |**Tür**|Gerekli **xs: String** özniteliği.<br /><br /> SharePoint proje öğesi için tanımlayıcı. Özel bir SharePoint proje öğesi türünde, tanımlayıcı öğesine geçirdiğiniz dizedir <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute> . Daha fazla bilgi için bkz. [nasıl yapılır: bir SharePoint proje öğesi türü tanımlama](../sharepoint/how-to-define-a-sharepoint-project-item-type.md).<br /><br /> Visual Studio 'Ya dahil olan yerleşik SharePoint proje öğeleri için tanımlayıcıların listesi için bkz. [SharePoint proje öğelerini genişletme](../sharepoint/extending-sharepoint-project-items.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
@@ -73,7 +73,7 @@ ms.locfileid: "85536883"
 |**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
 |**Şema adı**|SharePoint proje öğesi şeması|
 |**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
-|**Boş olabilir**|No|
+|**Boş olabilir**|Hayır|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 [SharePoint proje öğesi şeması rseference](../sharepoint/sharepoint-project-item-schema-reference.md)

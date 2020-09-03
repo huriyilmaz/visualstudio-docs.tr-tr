@@ -1,5 +1,5 @@
 ---
-title: Otomasyon Modeline Katkıda Bulunmak | Microsoft Dokümanlar
+title: Otomasyon modeline katkıda bulunma | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,59 +11,59 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d660edc740229c3e91b99e1f59eb37b4e9312098
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80709265"
 ---
-# <a name="contribute-to-the-automation-model"></a>Otomasyon modeline katkıda bulunmak
-Visual Studio, ortamı özelleştirmek için bir dizi otomasyon arabirimi sağlar. Otomasyon modeli, son kullanıcıların Visual Studio eklentileri ve uzantıları oluşturmasını sağlayan nesne modelidir.
+# <a name="contribute-to-the-automation-model"></a>Otomasyon modeline katkıda bulunma
+Visual Studio, ortamı özelleştirmek için bir Otomasyon arabirimleri kümesi sağlar. Otomasyon modeli, son kullanıcıların Visual Studio eklentileri ve uzantıları oluşturmalarına olanak tanıyan nesne modelidir.
 
- Buna ek olarak, bir VSPackage geliştiricisi olarak otomasyon modeline katkıda bulunmanız uygundur; bunu yaparak, VSPackage'ınızın son kullanıcılarının eklentiler oluşturmasını ve genellikle VSPackage'ınızı 'de [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]kullandıklarında tutarlı bir kullanıcı modeli deneyimi sağlamasını sağlarsınız.
+ Ayrıca, Otomasyon modeline katkıda bulunmak için bir VSPackage geliştiricisi olarak size uygundur; Bunu yaparak, VSPackage 'ın son kullanıcılarını eklenti oluşturmak ve genellikle VSPackage 'ı kullandıklarında tutarlı bir kullanıcı modeli deneyimi sağlamak için etkinleştirirsiniz [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
- Son kullanıcı deneyimini tutarlı kılmak için, VSPackage'ınızı tasarlarken bir dizi yönergeye uyabilirsiniz, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]böylece VSPackage'ınız için otomasyon modeli fikirleri takip edebilirsiniz.
+ Son Kullanıcı deneyimini tutarlı hale getirmek için VSPackage 'ı tasarlarken bir dizi yönerge izleyerek VSPackage için otomasyon modelinin içindeki fikirleri takip edebilirsiniz [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
 ## <a name="in-this-section"></a>Bu bölümde
 - [Otomasyon modeline genel bakış](../../extensibility/internals/automation-model-overview.md)
 
- Otomasyon modelini, ortak ortamın ana yönlerini kontrol eden ilgili nesne grupları olarak tanımlar. Bu nesne kümesi otomasyon modelinin diyagramında resmedilmiştir.
+ , Ortak ortamın ana modellerini denetleyen ilgili nesne grupları olarak otomasyon modelini tanımlar. Bu nesne kümesi, otomasyon modeli diyagramında görüntülenir.
 
-- [VSPackages için otomasyon sağlayın](../../extensibility/internals/providing-automation-for-vspackages.md)
+- [VSPackages için Otomasyon sağlama](../../extensibility/internals/providing-automation-for-vspackages.md)
 
- VSPackage'ınız için otomasyon sağlamanın iki ana yolunu tartışır.
+ VSPackage için Otomasyon sağlamanın iki ana yolunu açıklar.
 
-- [Proje nesnelerini açığa çıkarma](../../extensibility/internals/exposing-project-objects.md)
+- [Proje nesnelerini kullanıma sunma](../../extensibility/internals/exposing-project-objects.md)
 
- VSPackage'a özgü nesneler oluşturmak için adım adım yönergeler sağlar.
+ VSPackage 'a özgü nesneler oluşturmak için adım adım yönergeler sağlar.
 
 - [Proje modelleme](../../extensibility/internals/project-modeling.md)
 
- Yeni proje türünüz için otomasyon oluşturmak için gereken standart proje nesnelerini açıklar ve proje otomasyonunun izlediği yolu gösterir. Bu konu aynı zamanda sınıflar için bildirimlerin ve uygulama listeleri sağlar.
+ Yeni proje türü için Otomasyon oluşturmak için gereken standart proje nesnelerini açıklar ve proje otomasyonunun izlediği yolu gösterir. Bu konu ayrıca sınıflar için bildirimlerin ve uygulamanın listelerinin listesini de sağlar.
 
-- [Olayları açığa çıkarma](../../extensibility/internals/exposing-events-in-the-visual-studio-sdk.md)
+- [Olayları kullanıma sunma](../../extensibility/internals/exposing-events-in-the-visual-studio-sdk.md)
 
- Otomasyon modeliniz için etkinlik oluşturmak için adım adım yönergeler sağlar.
+ Otomasyon modelinize yönelik olay oluşturmaya yönelik adım adım yönergeler sağlar.
 
-- [Seçenekler sayfaları için otomasyon desteği](../../extensibility/internals/automation-support-for-options-pages.md)
+- [Seçenekler sayfaları için Otomasyon desteği](../../extensibility/internals/automation-support-for-options-pages.md)
 
- Nesneyi genişleterek Araç menüsündeki VSPackage'ın özel **Seçenekler** iletişim kutusunun **Tool** özelliklerini desteklemek için `DTE.Properties` bir otomasyon nesnesinin nasıl döndürüleceklerini açıklar.
+ Nesneyi genişleterek **araç** menüsündeki bir VSPackage 'ın özel **Seçenekler** iletişim kutusunun destekleme özelliklerini desteklemek için bir Otomasyon nesnesi döndürmeyi açıklar `DTE.Properties` .
 
-- [Kod için otomasyon sağlayın](../../extensibility/internals/providing-automation-for-code.md)
+- [Kod için Otomasyon sağlama](../../extensibility/internals/providing-automation-for-code.md)
 
- Kodunuz için bir otomasyon modeli oluşturmanın gerekli olmadığını açıklar. Ancak, kod modelleri içine anlayışlı bilgi sağlayan bu konuda bir bağlantı sağlanır.
+ Kodunuz için bir otomasyon modeli oluşturmanın gerekli olmadığı açıklanır. Ancak, bu konuda kod modellerine öngörülü bilgiler sağlayan bir bağlantı sağlanmıştır.
 
-- [Nasıl yapilir: Windows için otomasyon sağlama](../../extensibility/internals/how-to-provide-automation-for-windows.md)
+- [Nasıl yapılır: Windows için Otomasyon sağlama](../../extensibility/internals/how-to-provide-automation-for-windows.md)
 
- Otomasyon sağlamanın, bir pencerede otomasyon nesnelerini kullanılabilir hale getirmek istediğinizde iyi bir fikir olduğunu ve ortamın hazır bir otomasyon nesnesi sağlamadığını açıklar. Takım pencereleri ve belge pencereleri için otomasyonu tartışır.
+ Otomasyon nesnelerini bir pencerede kullanılabilir hale getirmek istediğinizde ve ortam zaten hazır bir Otomasyon nesnesi sağlamıyorsa, Otomasyonu sağlamanın iyi bir fikir olduğunu açıklar. Araç pencereleri ve belge pencereleri için Otomasyonu açıklar.
 
 - [Otomasyon modelini kullanma](../../extensibility/internals/using-the-automation-model.md)
 
- Otomasyon tüketicisinin ilk proje otomasyon nesnelerini nasıl elde ettiğini gösteren iki kod örneği sağlar.
+ , Bir Otomasyon tüketicisinin ilk proje otomasyon nesnelerini nasıl alacağını gösteren iki kod örneği sağlar.
 
-- [Yapılandırma ve SelectedItem nesneleri için otomasyon](../../extensibility/internals/automation-for-configuration-and-selecteditem-objects.md)
+- [Yapılandırma ve Selecteditıtem nesneleri için Otomasyon](../../extensibility/internals/automation-for-configuration-and-selecteditem-objects.md)
 
- Yapılandırma ve SelectedItems nesneleri için otomasyon hakkında bilgi sağlar.
+ Yapılandırma ve Selectedilıtems nesneleri için Otomasyon hakkında bilgi sağlar.
 
 ## <a name="reference"></a>Başvuru
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>VSPackage'ın DTE otomasyon nesnesi modeline nasıl katıldığını gösteren bir kod örneği sağlar. Parametreleri, iade değerlerini ve seçili açıklamaları listeler.
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> Bir VSPackage 'ın DTE Otomasyon nesne modeline nasıl katıldığını gösteren bir kod örneği sağlar. Parametreleri, dönüş değerlerini ve seçili açıklamaları listeler.

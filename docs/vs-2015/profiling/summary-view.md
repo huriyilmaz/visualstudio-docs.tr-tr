@@ -17,10 +17,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f4346b0e7459ee3c78669ab9178555370ffac16d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545515"
 ---
 # <a name="summary-view"></a>Özet Görünümü
@@ -47,7 +47,7 @@ ms.locfileid: "85545515"
 ## <a name="report"></a>Rapor  
  Farklı görünümleri açmak ve raporu karşılaştırmak, kaydetmek veya filtrelemek için rapor listesindeki bağlantılar ' a tıklayabilirsiniz. Liste, zaman çizelgesi grafiğinin sağında bulunur.  
   
-|Name|Açıklama|  
+|Ad|Açıklama|  
 |-|-|  
 |**Kırpılmış çağrı ağacını göster**|Çağrı ağacı görünümünde en pahalı yürütme yollarını görüntüler. Daha fazla bilgi için bkz. [çağrı ağacı görünümü](../profiling/call-tree-view.md).|  
 |**Etkin çizgileri göster**|, İzleme yöntemi kullanılarak toplanan profil oluşturma verileri için kullanılamaz. Satırlar görünümünde en pahalı kaynak kodu satırlarını görüntüler. Daha fazla bilgi için bkz. [çizgiler görünümü](../profiling/lines-view.md).|  

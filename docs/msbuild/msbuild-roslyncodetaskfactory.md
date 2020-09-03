@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9a1f606ed9e3d42d9f57cb941ee9518c1abfbc47
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85289215"
 ---
 # <a name="msbuild-inline-tasks-with-roslyncodetaskfactory"></a>RoslynCodeTaskFactory ile MSBuild satır içi görevleri
@@ -64,7 +64,7 @@ Görevin kalan öğeleri `DoNothing` boştur ve bir satır içi görevin sıras�
 
 - `Using`Öğesi, erişmek istediğiniz ad alanlarını listeler. Bu, `Using` Visual C# içindeki ifadeye benzer. `Namespace`Öznitelik, dahil edilecek ad alanını belirtir.
 
-`Reference`ve `Using` öğeleri dilden bağımsız değildir. Satır içi görevler desteklenen .NET CodeDom dillerinin herhangi birinde yazılabilir (örneğin, Visual Basic veya Visual C#).
+`Reference` ve `Using` öğeleri dilden bağımsız değildir. Satır içi görevler desteklenen .NET CodeDom dillerinin herhangi birinde yazılabilir (örneğin, Visual Basic veya Visual C#).
 
 > [!NOTE]
 > Öğesi tarafından içerilen öğeler, `Task` Bu durumda kod görev fabrikası olan görev fabrikasına özeldir.
@@ -140,11 +140,11 @@ HelloWorld *. targets*adlı bir dosyaya HelloWorld görevini kaydedebilir ve ard
 
 Parametrelerde bu özniteliklerin bir veya daha fazlası olabilir:
 
-- `Required`, varsayılan olarak bir isteğe bağlı özniteliktir `false` . `true`Daha sonra parametresi zorunludur ve görev çağrılmadan önce bir değer verilmelidir.
+- `Required` , varsayılan olarak bir isteğe bağlı özniteliktir `false` . `true`Daha sonra parametresi zorunludur ve görev çağrılmadan önce bir değer verilmelidir.
 
-- `ParameterType`, varsayılan olarak bir isteğe bağlı özniteliktir `System.String` . System. Convert. ChangeType kullanarak bir öğe ya da bir dizeden dönüştürülebilen bir değer olan herhangi bir tamamen nitelenmiş türe ayarlanabilir. (Başka bir deyişle, bir dış görevden ve bu bilgisayardan geçirilebilecek herhangi bir tür.)
+- `ParameterType` , varsayılan olarak bir isteğe bağlı özniteliktir `System.String` . System. Convert. ChangeType kullanarak bir öğe ya da bir dizeden dönüştürülebilen bir değer olan herhangi bir tamamen nitelenmiş türe ayarlanabilir. (Başka bir deyişle, bir dış görevden ve bu bilgisayardan geçirilebilecek herhangi bir tür.)
 
-- `Output`, varsayılan olarak bir isteğe bağlı özniteliktir `false` . İse `true` , Execute yönteminden dönmeden önce parametreye bir değer verilmelidir.
+- `Output` , varsayılan olarak bir isteğe bağlı özniteliktir `false` . İse `true` , Execute yönteminden dönmeden önce parametreye bir değer verilmelidir.
 
 Örneğin,
 
@@ -158,11 +158,11 @@ Parametrelerde bu özniteliklerin bir veya daha fazlası olabilir:
 
 Şu üç parametreyi tanımlar:
 
-- `Expression`, System. String türünde gerekli bir giriş parametresidir.
+- `Expression` , System. String türünde gerekli bir giriş parametresidir.
 
-- `Files`gerekli bir öğe listesi giriş parametresidir.
+- `Files` gerekli bir öğe listesi giriş parametresidir.
 
-- `Tally`, System. Int32 türünde bir çıkış parametresidir.
+- `Tally` , System. Int32 türünde bir çıkış parametresidir.
 
 `Code`Öğesinde `Type` veya özniteliği varsa `Fragment` `Method` , özellikler her parametre için otomatik olarak oluşturulur.  RoslynCodeTaskFactory içinde, `Code` öğesinin özniteliği varsa, `Type` `Class` `ParameterGroup` kaynak koddan çıkarıldığından (bunun farklılığı `CodeTaskFactory` ), öğesini belirtmeniz gerekmez. Aksi halde, özellikler, görev kaynak kodunda açıkça bildirilmelidir ve parametre tanımlarıyla tam olarak eşleşmesi gerekir.
 
@@ -261,7 +261,7 @@ Bu satır içi görevler, yolları birleştirebilir ve dosya adını alabilir.
 
 ## <a name="provide-backward-compatibility"></a>Geriye dönük uyumluluk sağla
 
-`RoslynCodeTaskFactory`İlk olarak MSBuild sürüm 15,8 ' de kullanıma sunuldu. Visual Studio 'nun önceki sürümlerini ve MSBuild 'i desteklemek istediğiniz bir durumunuz olduğunu varsayalım, ancak `RoslynCodeTaskFactory` `CodeTaskFactory` was, ancak aynı derleme betiğini kullanmak istiyorsunuz. `Choose` `$(MSBuildVersion)` `RoslynCodeTaskFactory` Aşağıdaki örnekte olduğu gibi, veya için geri dönmeksizin derleme zamanına karar vermek üzere özelliğini kullanan bir yapı kullanabilirsiniz `CodeTaskFactory` :
+`RoslynCodeTaskFactory` İlk olarak MSBuild sürüm 15,8 ' de kullanıma sunuldu. Visual Studio 'nun önceki sürümlerini ve MSBuild 'i desteklemek istediğiniz bir durumunuz olduğunu varsayalım, ancak `RoslynCodeTaskFactory` `CodeTaskFactory` was, ancak aynı derleme betiğini kullanmak istiyorsunuz. `Choose` `$(MSBuildVersion)` `RoslynCodeTaskFactory` Aşağıdaki örnekte olduğu gibi, veya için geri dönmeksizin derleme zamanına karar vermek üzere özelliğini kullanan bir yapı kullanabilirsiniz `CodeTaskFactory` :
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

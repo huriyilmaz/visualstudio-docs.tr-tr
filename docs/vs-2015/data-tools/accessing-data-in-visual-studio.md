@@ -23,10 +23,10 @@ ms.author: jillfra
 manager: jillfra
 robots: noindex,nofollow
 ms.openlocfilehash: 78d950b777d866835ef516c4910180b21de295e9
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545008"
 ---
 # <a name="accessing-data-in-visual-studio"></a>Visual Studio'da verilere erişime
@@ -86,7 +86,7 @@ Visual Studio 'da, her bir biçimde, bir yerel makinede, yerel bir ağda veya bi
 ### <a name="net-languages"></a>.NET dilleri
  .NET Core dahil olmak üzere tüm .NET veri erişimleri, hem ilişkisel hem de ilişkisel olmayan her türlü veri kaynağına erişim için bir arabirim tanımlayan bir sınıf kümesi olan ADO.NET tabanlıdır. Visual Studio, veritabanlarına bağlanmanıza, verileri işlemenizi ve verileri kullanıcıya sunmanıza yardımcı olmak üzere ADO.NET ile çalışan çeşitli araçlara ve tasarımcılara sahiptir. Bu bölümdeki belgelerde, bu araçların nasıl kullanılacağı açıklanmaktadır. Ayrıca doğrudan ADO.NET komut nesnelerine karşı programlayabilirsiniz. ADO.NET API 'Lerini doğrudan çağırma hakkında daha fazla bilgi için MSDN Kitaplığı 'nda [ADO.net](https://msdn.microsoft.com/library/e80y5yhx\(v=vs.110\).aspx) bölümüne bakın.
 
- Özellikle ASP.NET ile ilgili veri erişimi belgeleri için bkz. ASP.NET sitesindeki [verilerle çalışma](/aspnet/web-forms/overview/presenting-and-managing-data/) . ASP.NET MVC ile Entity Framework kullanmaya yönelik bir öğretici için bkz. [MVC 5 kullanarak Entity Framework 6 Code First](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)kullanmaya başlama.
+ Özellikle ASP.NET ile ilgili veri erişimi belgeleri için bkz. ASP.NET sitesindeki  [verilerle çalışma](/aspnet/web-forms/overview/presenting-and-managing-data/) . ASP.NET MVC ile Entity Framework kullanmaya yönelik bir öğretici için bkz. [MVC 5 kullanarak Entity Framework 6 Code First](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)kullanmaya başlama.
 
  C# veya Visual Basic Evrensel Windows Platformu (UWP) uygulamaları, Azure depolama ve diğer Azure hizmetlerine erişmek için .NET için Microsoft Azure SDK kullanabilir. Windows. Web. HttpClient sınıfı, herhangi bir yeniden iletişim hizmeti ile iletişime izin verebilir. Daha fazla bilgi için bkz. [Windows. Web. http kullanarak http sunucusuna bağlanma](https://msdn.microsoft.com/library/windows/apps/dn469430.aspx).
 
@@ -118,13 +118,13 @@ Visual Studio 'da, her bir biçimde, bir yerel makinede, yerel bir ağda veya bi
 #### <a name="data-modeling"></a>Veri modelleme
  Visual Studio, C++ için bir ORM katmanı sağlamıyor.  [ODB](https://www.codesynthesis.com/products/odb/) , C++ için popüler bir açık kaynaklı ORM 'dir.
 
- Eski Visual C++ veri erişimi teknolojileri hakkında daha fazla bilgi için bkz. [veri erişimi](https://msdn.microsoft.com/library/a9455752-39c4-4457-b14e-197772d3df0b)
+ Eski Visual C++ veri erişimi teknolojileri hakkında daha fazla bilgi için bkz.  [veri erişimi](https://msdn.microsoft.com/library/a9455752-39c4-4457-b14e-197772d3df0b)
 
 ### <a name="javascript"></a>JavaScript
  [Visual Studio 'Da JavaScript](https://msdn.microsoft.com/library/hh334522.aspx) , platformlar arası uygulamalar, UWP uygulamaları, bulut Hizmetleri, Web siteleri ve Web uygulamaları oluşturmak için birinci sınıf bir dildir. En sevdiğiniz JavaScript kitaplıklarını ve veritabanı ürünlerini yüklemek için Visual Studio içinden Bower, Grsıt, Gulp, NPM ve NuGet kullanabilirsiniz. [Azure Web sitesinden](https://azure.microsoft.com/)SDK 'Ları indirerek Azure depolama ve hizmetlere bağlanın.  Edge.js, sunucu tarafı JavaScript 'ı (Node.js) ADO.NET veri kaynaklarına bağlayan bir kitaplıktır.
 
 ### <a name="python"></a>Python
- Cponthon veya IronPython (.NET) uygulamaları oluşturmak için en sevdiğiniz Python çerçevesiyle birlikte [Visual Studio için Python araçları](http://microsoft.github.io/PTVS/) ' i de yüklersiniz.  Visual Studio için Python Araçları Web sitesinde Azure 'da [Dmongo ve SQL veritabanı](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure), Azure 'da [Dmongo ve MySQL](https://github.com/Microsoft/PTVS/wiki/Django-and-MySQL-on-Azure) ve Azure 'Daki [şişe ve MongoDB](https://github.com/Microsoft/PTVS/wiki/Bottle-and-MongoDB-on-Azure)gibi veri bağlama konusunda çeşitli öğreticiler vardır.
+ Cponthon veya IronPython (.NET) uygulamaları oluşturmak için en sevdiğiniz Python çerçevesiyle birlikte  [Visual Studio için Python araçları](http://microsoft.github.io/PTVS/) ' i de yüklersiniz.  Visual Studio için Python Araçları Web sitesinde Azure 'da [Dmongo ve SQL veritabanı](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure), Azure 'da [Dmongo ve MySQL](https://github.com/Microsoft/PTVS/wiki/Django-and-MySQL-on-Azure) ve Azure 'Daki [şişe ve MongoDB](https://github.com/Microsoft/PTVS/wiki/Bottle-and-MongoDB-on-Azure)gibi veri bağlama konusunda çeşitli öğreticiler vardır.
 
 ## <a name="in-this-section"></a>Bu bölümde
  [Veritabanı sistemlerini, araçları ve örnekleri yükleme](../data-tools/installing-database-systems-tools-and-samples.md) Veritabanı ürünlerinin ve bunları destekleyen Visual Studio uzantılarının veya sürücülerin nasıl alınacağını ve deneme ve öğrenme amaçlarıyla örnek veritabanlarının nerede bulunacağını açıklar.
@@ -144,7 +144,7 @@ Visual Studio 'da, her bir biçimde, bir yerel makinede, yerel bir ağda veya bi
 
  [ADO.NET Entity Framework](https://msdn.microsoft.com/data/ef) Geliştiricilerin doğrudan ilişkisel bir veritabanına karşı kavramsal bir modelde programlama yapmasına izin veren veri uygulamalarının nasıl oluşturulacağını açıklar.
 
- [WCF Veri Hizmetleri 4,5](https://msdn.microsoft.com/library/73d2bec3-7c92-4110-b905-11bb0462357a) [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)]Web 'de veya [Açık Veri Protokolü 'Nü (OData)](https://www.odata.org/)uygulayan bir intranette veri hizmetleri dağıtmak için ' nin nasıl kullanılacağını açıklar.
+ [WCF Veri Hizmetleri 4,5](https://msdn.microsoft.com/library/73d2bec3-7c92-4110-b905-11bb0462357a) [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] Web 'de veya [Açık Veri Protokolü 'Nü (OData)](https://www.odata.org/)uygulayan bir intranette veri hizmetleri dağıtmak için ' nin nasıl kullanılacağını açıklar.
 
  [Office çözümlerindeki veriler](https://msdn.microsoft.com/library/8478c095-864b-4ed3-8a70-1fc19b411c6a) Office çözümlerinde verilerin nasıl çalıştığını açıklayan konulara bağlantılar içerir. Burada şema tabanlı programlama, verileri önbelleğe alma ve sunucu tarafında veri erişimi hakkında bilgiler bulunur.
 

@@ -1,5 +1,5 @@
 ---
-title: Yürütme Kontrolü ve Devlet Değerlendirmesi | Microsoft Dokümanlar
+title: Yürütme denetimi ve durum değerlendirmesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,22 +12,22 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: dc76ae97e8baa6ce78dd4d565109d6a19e2051e2
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738745"
 ---
-# <a name="execution-control-and-state-evaluation"></a>Yürütme kontrolü ve durum değerlendirmesi
-Bir uygulamanın hata ayıklama işlevlerine adım atma, kesme noktalarında durdurma ve yürütmeye devam gibi yürütme denetimi özelliklerinin uygulanmasını gerektirir. Visual Studio hata ayıklama, yürütme denetimini hata ayıklama bileşenleri arasında gönderilen olaylara dayandırıyor.
+# <a name="execution-control-and-state-evaluation"></a>Yürütme denetimi ve durum değerlendirmesi
+Bir uygulamada hata ayıklamak, bu tür yürütme denetimi özelliklerinin işlevleri üzerinde Adımlama, kesme noktalarında durdurulması ve yürütmeye devam edilmesi için uygulanması gerekir. Visual Studio hata ayıklama, hata ayıklayıcı bileşenleri arasında gönderilen olaylar üzerinde yürütme denetimini temel alır.
 
 ## <a name="in-this-section"></a>Bu bölümde
- [Program kontrolü](../../extensibility/debugger/program-control.md) Program düzeyinde oluşan aşağıdaki yordamları listeler: bir sonraki deyimi ayarlama, yürütme, adım atma, devam etme, askıya alma ve devam etme.
+ [Program denetimi](../../extensibility/debugger/program-control.md) Program düzeyinde gerçekleşen aşağıdaki yordamları listeler: sonraki ifadeyi ayarlama, yürütme, adımla, devam etme, askıya alma ve sürdürme.
 
- [Kesme noktası ile ilgili yöntemler](../../extensibility/debugger/breakpoint-related-methods.md) Visual Studio'nun desteklediği bağlı ve bekleyen kesme noktaları türlerini tanımlar.
+ [Kesme noktası ile ilgili yöntemler](../../extensibility/debugger/breakpoint-related-methods.md) Visual Studio tarafından desteklenen kesme noktası türlerini ve ilgili sınırı tanımlar.
 
- [Çağrı yığını değerlendirmesi](../../extensibility/debugger/call-stack-evaluation.md) Kesme modunda çağrı yığınının yığın çerçevelerinin görüntülenmesini sağlayan yöntemlerin uygulanmasını tartışır.
+ [Çağrı yığını değerlendirmesi](../../extensibility/debugger/call-stack-evaluation.md) Kesme modu sırasında çağrı yığınının yığın çerçevelerini görüntülemeye izin veren yöntemlerin uygulanmasını açıklar.
 
- [İfade değerlendirmesi](../../extensibility/debugger/expression-evaluation-visual-studio-debugging-sdk.md) Hata ayıklama altyapısının (DE), ifade değerlendirme (EE) ve oturum hata ayıklama yöneticisinin IDE pencerelerinden birine girilen bir ifadenin ayrıştırma ve değerlendirilmesinde nasıl rol aldığını açıklar.
+ [İfade değerlendirmesi](../../extensibility/debugger/expression-evaluation-visual-studio-debugging-sdk.md) Hata ayıklama altyapısı (DE), ifade değerlendirmesi (EE) ve oturum hata ayıklama Yöneticisi 'nin IDE 'nin bir Windows 'a girilen bir ifadenin ayrıştırılmasına ve hesaplanmasına nasıl dahil olduğunu açıklar.
 
- [Olayları kontrol edin](../../extensibility/debugger/control-events.md) Programın kontrollü yürütülmesi sırasında olayları göndermek için kullanılan arabirimi tartışır.
+ [Denetim olayları](../../extensibility/debugger/control-events.md) Programın denetlenen yürütmesi sırasında olayları göndermek için kullanılan arabirimi açıklar.

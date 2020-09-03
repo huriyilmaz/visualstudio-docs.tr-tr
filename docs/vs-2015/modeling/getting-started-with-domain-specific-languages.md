@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6fe720b380133d15f9bc60485896d4b7acbf2c4b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543201"
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>Etki Alanına Özgü Dillerle Çalışmaya Başlama
@@ -56,7 +56,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
     ![DSL oluştur iletişim kutusu](../modeling/media/create-dsldialog.png "Create_DSLDialog")
 
-4. **Ad** kutusuna **FamilyTree**yazın. **Tamam**'a tıklayın.
+4. **Ad** kutusuna **FamilyTree**yazın. **Tamam**’a tıklayın.
 
     **Etki alanına özgü dil Sihirbazı** açılır ve şablon DSL çözümlerinin listesini görüntüler.
 
@@ -94,7 +94,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
 - **DslPackage projesi** Bu proje, DSL örneklerinin ' de açılıp düzenlenmesine izin veren kodu içerir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
-## <a name="running-the-dsl"></a><a name="Debugging"></a>DSL 'yi çalıştırma
+## <a name="running-the-dsl"></a><a name="Debugging"></a> DSL 'yi çalıştırma
  DSL çözümünü, oluşturduktan hemen sonra çalıştırabilirsiniz. Daha sonra, her değişiklikten sonra çözümü yeniden çalıştırarak DSL tanımını kademeli olarak değiştirebilirsiniz.
 
 #### <a name="to-experiment-with-the-dsl"></a>DSL 'yi denemek için
@@ -112,7 +112,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
 3. Deneysel örneğinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , **Çözüm Gezgini** **Test** adlı model dosyasını açın.
 
-    \-veya
+    \- veya
 
     Hata ayıklama projesine sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **öğe**' ye tıklayın. **Öğe Ekle** iletişim kutusunda, DSL 'nizin dosya türünü seçin.
 
@@ -162,7 +162,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
 3. **Çözüm Gezgini**araç çubuğundan **Tüm Şablonları Dönüştür** ' e tıklayın.
 
-    \-veya
+    \- veya
 
     Yeniden oluşturmak istediğiniz şablonlara sağ tıklayın ve ardından **özel araç Çalıştır**' a tıklayın.
 
@@ -383,7 +383,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
  Daha fazla bilgi için bkz. [etki alanına özgü dil çözümlerini dağıtma](../modeling/deploying-domain-specific-language-solutions.md).
 
-## <a name="removing-old-experimental-dsls"></a><a name="Reset"></a>Eski deneysel DSLs 'ler kaldırılıyor
+## <a name="removing-old-experimental-dsls"></a><a name="Reset"></a> Eski deneysel DSLs 'ler kaldırılıyor
  Artık istemediğiniz deneysel DSLs 'Leri oluşturduysanız deneysel örneği sıfırlayarak bunları bilgisayarınızdan kaldırabilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
  Bu, bilgisayarınızdan tüm deneysel DSLs 'Leri ve diğer deneysel uzantıları kaldırır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Bunlar hata ayıklama modunda yürütülen uzantılardır.

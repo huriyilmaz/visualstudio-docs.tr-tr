@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e5ab97f3db8e5d44aa649455c313a5681ed93c8c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543396"
 ---
 # <a name="analyze-cpu-usage"></a>CPU kullanımını analiz etme
@@ -59,19 +59,19 @@ Tanılama raporu, en yüksekten en düşüğe kadar **toplam CPU**'ya göre sır
 Visual Studio 2019 ' den başlayarak, çağrı ağacı görünümünde CPU 'nun en yüksek yüzdesini kullanan işlev çağrılarını görmek için **etkin yolu genişlet** ve **etkin yolu göster** düğmelerini tıklayabilirsiniz.
 ::: moniker-end
 
-### <a name="cpu-usage-data-columns"></a><a name="BKMK_Call_tree_data_columns"></a>CPU kullanım verileri sütunları
+### <a name="cpu-usage-data-columns"></a><a name="BKMK_Call_tree_data_columns"></a> CPU kullanım verileri sütunları
 
-|Name|Description|
+|Ad|Açıklama|
 |-|-|
 |**Toplam CPU [Birim,%]**|![Toplam% veri denklemi](../profiling/media/cpu_use_wt_totalpercentequation.png "CPU_USE_WT_TotalPercentEquation")<br /><br /> İşlev çağrıları tarafından kullanılan milisaniye ve CPU yüzdesi ve işlev tarafından çağrılan işlevler, seçili zaman aralığında. Bu, bir zaman aralığındaki toplam CPU etkinliğini toplam kullanılabilir CPU ile karşılaştıran **CPU kullanımı** zaman çizelgesi grafiğinden farklıdır.|
 |**Self CPU [Birim,%]**|![Kendi kendine denklemi](../profiling/media/cpu_use_wt_selflpercentequation.png "CPU_USE_WT_SelflPercentEquation")<br /><br /> İşlev tarafından çağrılan işlevler hariç olmak üzere seçilen zaman aralığındaki işleve yapılan çağrılar tarafından kullanılan milisaniye ve CPU yüzdesi.|
 |**Modül**|İşlevi içeren modülün adı.
 
-### <a name="the-cpu-usage-call-tree"></a><a name="BKMK_The_CPU_Usage_call_tree"></a>CPU kullanımı çağrı ağacı
+### <a name="the-cpu-usage-call-tree"></a><a name="BKMK_The_CPU_Usage_call_tree"></a> CPU kullanımı çağrı ağacı
 
 Çağrı ağacını görüntülemek için, rapordaki üst düğümü seçin. **CPU kullanımı** sayfası **arayan/çağrılan** görünümüne açılır. **Geçerli görünüm** açılır listesinde, **çağrı ağacı**' nı seçin.
 
-#### <a name="call-tree-structure"></a><a name="BKMK_Call_tree_structure"></a>Çağrı ağacı yapısı
+#### <a name="call-tree-structure"></a><a name="BKMK_Call_tree_structure"></a> Çağrı ağacı yapısı
 
 ::: moniker range=">=vs-2019"
 ![Çağrı ağacı yapısı](../profiling/media/vs-2019/cpu-use-wt-getmaxnumbercalltree-annotated.png "Çağrı ağacı yapısı")
@@ -87,7 +87,7 @@ Visual Studio 2019 ' den başlayarak, çağrı ağacı görünümünde CPU 'nun 
 |![3. Adım](../profiling/media/procguid_3.png "ProcGuid_3")|İkinci düzey düğümün alt öğeleri, ikinci düzey sistem ve Framework kodu tarafından çağrılan veya oluşturulan kullanıcı kodu yöntemleri ve zaman uyumsuz yordamlardır.|
 |![4. adım](../profiling/media/procguid_4.png "ProcGuid_4")|Bir metodun alt düğümleri yalnızca üst metodun çağrılarına ait verilere sahiptir. **Dış kodu göster** devre dışı bırakıldığında, uygulama yöntemleri bir **[Dış kod]** düğümü de içerebilir.|
 
-#### <a name="external-code"></a><a name="BKMK_External_Code"></a>Dış kod
+#### <a name="external-code"></a><a name="BKMK_External_Code"></a> Dış kod
 
 Kodunuz tarafından yürütülen System ve Framework işlevlerine *dış kod*denir. Dış kod işlevleri uygulamayı başlatıp durdurur, Kullanıcı arabirimini çizer, iş parçacığı denetimi yapın ve uygulamaya diğer alt düzey hizmetler sağlar. Çoğu durumda, dış kodla ilgilenmiyorsanız, CPU kullanım çağrısı ağacı bir Kullanıcı yönteminin dış işlevlerini tek bir **[Dış kod]** düğümüne toplar.
 
@@ -108,7 +108,7 @@ Aradığınız bir işlev adını bulmak için arama kutusunu kullanın. Seçili
 ![İç içe geçmiş dış kodu arayın](../profiling/media/cpu_use_wt_showexternalcodetoowide_found.png "İç içe geçmiş dış kodu arayın")
 ::: moniker-end
 
-### <a name="asynchronous-functions-in-the-cpu-usage-call-tree"></a><a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a>CPU kullanım çağrısı ağacındaki zaman uyumsuz işlevler
+### <a name="asynchronous-functions-in-the-cpu-usage-call-tree"></a><a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a> CPU kullanım çağrısı ağacındaki zaman uyumsuz işlevler
 
  Derleyici zaman uyumsuz bir yöntemle karşılaştığında, yöntemin yürütmesini denetlemek için gizli bir sınıf oluşturur. Kavramsal olarak, sınıfı bir durum makinedir. Sınıfında, özgün yöntemleri zaman uyumsuz olarak çağıran ve geri çağırmalar, Zamanlayıcı ve yineleyiciler çalıştırmak için gereken derleyici tarafından üretilmiş işlevler bulunur. Bir üst yöntem özgün yöntemi çağırdığında, derleyici yöntemi üst öğenin yürütme bağlamından kaldırır ve gizli sınıf yöntemlerini uygulama yürütmeyi denetleyen sistem ve çerçeve kodu bağlamında çalıştırır. Zaman uyumsuz yöntemler çoğunlukla, her zaman bir veya daha fazla farklı iş parçacığında yürütülürler. Bu kod, ağacın üst düğümünün hemen altındaki **[Dış kod]** düğümünün alt öğeleri olarak **CPU kullanım** çağrısı ağacında görüntülenir.
 
@@ -120,8 +120,8 @@ Oluşturulan yöntemleri genişleterek neler olduğunu gösterebilirsiniz:
 
 ![Genişletilmiş zaman uyumsuz düğüm](media/cpu_use_wt_getmaxnumberasync_expandedcalltree.png "Genişletilmiş zaman uyumsuz düğüm")
 
-- `MainPage::GetMaxNumberAsyncButton_Click`yalnızca görev değerlerinin bir listesini yönetir, sonuçların maksimum sayısını hesaplar ve çıktıyı görüntüler.
+- `MainPage::GetMaxNumberAsyncButton_Click` yalnızca görev değerlerinin bir listesini yönetir, sonuçların maksimum sayısını hesaplar ve çıktıyı görüntüler.
 
-- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext`çağrıyı kaydırmak için gereken 48 görevlerini zamanlamak ve başlatmak için gereken etkinliği gösterir `GetNumberAsync` .
+- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext` çağrıyı kaydırmak için gereken 48 görevlerini zamanlamak ve başlatmak için gereken etkinliği gösterir `GetNumberAsync` .
 
-- `MainPage::<GetNumberAsync>b__b`çağıran görevlerin etkinliğini gösterir `GetNumber` .
+- `MainPage::<GetNumberAsync>b__b` çağıran görevlerin etkinliğini gösterir `GetNumber` .

@@ -17,30 +17,30 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3557e830ba90b1e9f32b01c344867c5370e7425c
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586187"
 ---
 # <a name="additional-resources-for-msbuild"></a>MSBuild için Ek Kaynaklar
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Aşağıdaki Web siteleri ve forumları, ile [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]çalışırken sık sorulan soruların yanıtlarını bulmanıza yardımcı olabilir.  
+Aşağıdaki Web siteleri ve forumları, ile çalışırken sık sorulan soruların yanıtlarını bulmanıza yardımcı olabilir [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
 ## <a name="microsoft-resources"></a>Microsoft Kaynakları  
   
 ### <a name="on-the-web"></a>Web'de  
  [MSBuild Channel 9 Web sitesi](https://channel9.msdn.com/tags/MSBuild/)  
- Web üzerindeki diğer [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] sitelerle ilgili bilgiler ve bağlantılar içerir.  
+ [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]Web üzerindeki diğer sitelerle ilgili bilgiler ve bağlantılar içerir [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
  [MSBuild ekip blogu](https://blogs.msdn.com/b/msbuild/)  
- [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] Ürün ekibi tarafından yazılan bilgileri, bağlantıları ve güncelleştirmeleri içerir.  
+ Ürün ekibi tarafından yazılan bilgileri, bağlantıları ve güncelleştirmeleri içerir [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
  [Visual Studio MSBuild Forumu](https://social.msdn.microsoft.com/forums/en-US/msbuild/threads/)  
- İçin [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]ayrılmış bir topluluk Forumu.  
+ İçin ayrılmış bir topluluk Forumu [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [MSBUILD](msbuild.md)   
  [MSBuild kavramları](../msbuild/msbuild-concepts.md)   
- [MSBuild Başvurusu](../msbuild/msbuild-reference.md)
+ [MSBuild başvurusu](../msbuild/msbuild-reference.md)

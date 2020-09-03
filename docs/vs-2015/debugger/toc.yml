@@ -28,7 +28,7 @@
                   href: format-specifiers-in-cpp.md
                 - name: Bağlam İşleci (C++)
                   href: context-operator-cpp.md
-                - name: 'C# içindeki Biçim Belirticileri'
+                - name: C# içindeki Biçim Belirticileri
                   href: format-specifiers-in-csharp.md
                 - name: Sözde Değişkenler
                   href: pseudovariables.md
@@ -118,7 +118,7 @@
                   href: enabling-debug-features-in-visual-cpp-d-debug.md
             - name: Web Projeleri Özellik Sayfası Ayarları
               href: property-pages-settings-for-web-projects.md
-            - name: 'C# Hata Ayıklama Yapılandırması Proje Ayarları'
+            - name: C# Hata Ayıklama Yapılandırması Proje Ayarları
               href: project-settings-for-csharp-debug-configurations.md
             - name: Visual Basic Hata Ayıklama Yapılandırması Proje Ayarları
               href: project-settings-for-a-visual-basic-debug-configuration.md
@@ -170,7 +170,7 @@
                   href: how-to-write-a-visualizer.md
                 - name: Görselleştirici Mimarisi
                   href: visualizer-architecture.md
-                - name: 'C# Dilinde Görselleştirici Yazma'
+                - name: C# Dilinde Görselleştirici Yazma
                   href: walkthrough-writing-a-visualizer-in-csharp.md
                 - name: Visual Basic'te Görselleştirici Yazma
                   href: walkthrough-writing-a-visualizer-in-visual-basic.md
@@ -204,13 +204,13 @@
               href: edit-and-continue-visual-cpp.md
             - name: Desteklenen Kod Değişiklikleri (C++)
               href: supported-code-changes-cpp.md
-        - name: 'Düzenle ve Devam Et (Visual C#)'
+        - name: Düzenle ve Devam Et (Visual C#)
           items:
-            - name: 'Düzenle ve Devam Et (Visual C#)'
+            - name: Düzenle ve Devam Et (Visual C#)
               href: edit-and-continue-visual-csharp.md
-            - name: 'Düzenle ve Devam Et’i kullanma (C#)'
+            - name: Düzenle ve Devam Et’i kullanma (C#)
               href: how-to-use-edit-and-continue-csharp.md
-            - name: 'Desteklenen Kod Değişiklikleri (C#)'
+            - name: Desteklenen Kod Değişiklikleri (C#)
               href: supported-code-changes-csharp.md
         - name: Düzenle ve Devam Et (Visual Basic)
           items:
@@ -220,7 +220,7 @@
               href: how-to-apply-edits-in-break-mode-with-edit-and-continue.md
             - name: Visual Basic Düzenle ve Devam Et'de Desteklenmeyen Düzenlemeler
               href: unsupported-edits-in-visual-basic-edit-and-continue.md
-        - name: 'Düzenle ve Devam Et F#''de Desteklenmez'
+        - name: Düzenle ve Devam Et F#'de Desteklenmez
           href: edit-and-continue-not-supported-for-f-hash.md
     - name: Döküm Dosyalarını Kullanma
       items:
@@ -400,11 +400,11 @@
               href: start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md
             - name: Visual Studio için Blend'de XAML hatalarını ayıklama
               href: debug-xaml-in-blend.md
-            - name: 'Bir hata ayıklama oturumunda gezinme (Xaml ve C#)'
+            - name: Bir hata ayıklama oturumunda gezinme (Xaml ve C#)
               items:
-                - name: 'Bir hata ayıklama oturumunda gezinme (Xaml ve C#)'
+                - name: Bir hata ayıklama oturumunda gezinme (Xaml ve C#)
                   href: navigate-a-debugging-session-in-visual-studio-xaml-and-csharp.md
-                - name: 'Hata ayıklayıcı gezintisi örnek kodu (Xaml ve C#)'
+                - name: Hata ayıklayıcı gezintisi örnek kodu (Xaml ve C#)
                   href: debugger-navigation-sample-code-xaml-and-csharp.md
             - name: 'Windows Mağazası için askıya alma, sürdürme ve arka plan olaylarını tetikleme)'
               href: how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md
@@ -454,7 +454,7 @@
               href: how-to-use-the-wpf-tree-visualizer.md
             - name: WPF İzleme Bilgilerini Görüntüleme
               href: how-to-display-wpf-trace-information.md
-        - name: 'F# Hata Ayıklama'
+        - name: F# Hata Ayıklama
           href: debugging-f-hash.md
     - name: Yerel Kodda Hata Ayıklama
       items:

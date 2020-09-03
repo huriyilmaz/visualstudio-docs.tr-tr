@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 99caf87000ea9df9260e8926eee4c7136bc9b848
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72985488"
 ---
 # <a name="walkthrough-complex-data-binding-in-vsto-add-in-project"></a>İzlenecek yol: VSTO eklenti projesinde karmaşık veri bağlama
@@ -28,20 +28,20 @@ ms.locfileid: "72985488"
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Çalışma zamanında çalışma sayfasına <xref:Microsoft.Office.Tools.Excel.ListObject> denetimi ekleme.
+- <xref:Microsoft.Office.Tools.Excel.ListObject>Çalışma zamanında çalışma sayfasına denetim ekleme.
 
-- Denetimi bir veri kümesinin örneğine bağlayan <xref:System.Windows.Forms.BindingSource> oluşturma.
+- Denetimi bir <xref:System.Windows.Forms.BindingSource> veri kümesinin örneğine bağlayan bir oluşturma.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
 - [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] veya [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].
 
-- `AdventureWorksLT` örnek veritabanının eklendiği SQL Server 2005 veya SQL Server 2005 Express 'in çalışan bir örneğine erişim. `AdventureWorksLT` veritabanını [SQL Server örnekleri GitHub deposundan](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)indirebilirsiniz. Veritabanı ekleme hakkında daha fazla bilgi için aşağıdaki konulara bakın:
+- Örnek veritabanının eklendiği SQL Server 2005 veya SQL Server 2005 Express 'in çalışan bir örneğine erişim `AdventureWorksLT` . `AdventureWorksLT`Veritabanını [SQL Server örnekleri GitHub deposundan](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)indirebilirsiniz. Veritabanı ekleme hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
   - SQL Server Management Studio veya SQL Server Management Studio Express kullanarak bir veritabanı eklemek için bkz. [nasıl yapılır: veritabanı iliştirme (SQL Server Management Studio)](/sql/relational-databases/databases/attach-a-database).
 
@@ -52,24 +52,24 @@ ms.locfileid: "72985488"
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Visual Basic veya C#kullanarak **bir veritabanından çalışma sayfası doldurma**adlı bir Excel VSTO eklentisi projesi oluşturun.
+1. Visual Basic veya C# kullanarak **bir veritabanından çalışma sayfası doldurma**adlı BIR Excel VSTO eklentisi projesi oluşturun.
 
      Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio `ThisAddIn.vb` veya `ThisAddIn.cs` dosyasını açar ve **çalışma sayfalarını bir veritabanı** projesinden **Çözüm Gezgini**ekler.
+     Visual Studio, `ThisAddIn.vb` veya `ThisAddIn.cs` dosyasını açar ve **çalışma sayfalarını bir veritabanı** projesinden **Çözüm Gezgini**doldurma ekler.
 
 ## <a name="create-a-data-source"></a>Veri kaynağı oluşturma
  Projenize türü belirtilmiş bir veri kümesi eklemek için **veri kaynakları** penceresini kullanın.
 
 ### <a name="to-add-a-typed-dataset-to-the-project"></a>Projeye türü belirtilmiş bir veri kümesi eklemek için
 
-1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda, **diğer Windows** > **veri kaynaklarını** **görüntüle** > ' yi seçerek görüntüleyin.
+1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda, **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçerek bunu görüntüleyin.
 
 2. **Veri kaynağı Yapılandırma Sihirbazı 'nı**başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
 3. **Veritabanı**' na ve ardından **İleri**' ye tıklayın.
 
-4. `AdventureWorksLT` veritabanıyla bağlantı varsa, bu bağlantıyı seçin ve **İleri**' ye tıklayın.
+4. Veritabanına var olan bir bağlantınız varsa `AdventureWorksLT` , bu bağlantıyı seçin ve **İleri**' ye tıklayın.
 
     Aksi takdirde, **Yeni bağlantı**' ya tıklayın ve yeni bağlantıyı oluşturmak Için **bağlantı ekle** iletişim kutusunu kullanın. Daha fazla bilgi için bkz. [yeni bağlantılar ekleme](../data-tools/add-new-connections.md).
 
@@ -81,25 +81,25 @@ ms.locfileid: "72985488"
 
     *AdventureWorksLTDataSet. xsd* dosyası **Çözüm Gezgini**eklenir. Bu dosya aşağıdaki öğeleri tanımlar:
 
-   - `AdventureWorksLTDataSet`adlı türü belirtilmiş bir veri kümesi. Bu veri kümesi AdventureWorksLT veritabanındaki **Address (SalesLT)** tablosunun içeriğini temsil eder.
+   - Adında bir türü belirtilmiş veri kümesi `AdventureWorksLTDataSet` . Bu veri kümesi AdventureWorksLT veritabanındaki **Address (SalesLT)** tablosunun içeriğini temsil eder.
 
-   - `AddressTableAdapter`adlı bir TableAdapter. Bu TableAdapter, `AdventureWorksLTDataSet`veri okumak ve yazmak için kullanılabilir. Daha fazla bilgi için bkz. [TableAdapter Overview](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).
+   - Adında bir TableAdapter `AddressTableAdapter` . Bu TableAdapter, içindeki verileri okumak ve yazmak için kullanılabilir `AdventureWorksLTDataSet` . Daha fazla bilgi için bkz. [TableAdapter Overview](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).
 
      Bu iki nesneyi daha sonra Bu izlenecek yolda kullanacaksınız.
 
 ## <a name="create-controls-and-bind-controls-to-data"></a>Denetim oluşturma ve verilere denetim bağlama
- Bu izlenecek yol için, <xref:Microsoft.Office.Tools.Excel.ListObject> denetimi kullanıcı çalışma kitabını açtığında seçtiğiniz tablodaki tüm verileri görüntüler. Liste nesnesi, denetimi veritabanına bağlamak için bir <xref:System.Windows.Forms.BindingSource> kullanır.
+ Bu izlenecek yol için <xref:Microsoft.Office.Tools.Excel.ListObject> Denetim, Kullanıcı çalışma kitabını açtığında seçtiğiniz tablodaki tüm verileri görüntüler. Liste nesnesi, <xref:System.Windows.Forms.BindingSource> denetimi veritabanına bağlamak için bir kullanır.
 
  Verilere yönelik bağlama denetimleri hakkında daha fazla bilgi için bkz. [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md).
 
 ### <a name="to-add-the-list-object-dataset-and-table-adapter"></a>Liste nesnesini, veri kümesini ve tablo bağdaştırıcısını eklemek için
 
-1. `ThisAddIn` sınıfında, `AdventureWorksLTDataSet` veri kümesinin `Address` tablosunu göstermek için aşağıdaki denetimleri bildirin.
+1. `ThisAddIn`Sınıfında, `Address` veri kümesinin tablosunu göstermek için aşağıdaki denetimleri bildirin `AdventureWorksLTDataSet` .
 
      [!code-csharp[Trin_ExcelAddInDatabase#1](../vsto/codesnippet/CSharp/Trin_ExcelAddInDatabase_O12/ThisAddIn.cs#1)]
      [!code-vb[Trin_ExcelAddInDatabase#1](../vsto/codesnippet/VisualBasic/Trin_ExcelAddInDatabase_O12/ThisAddIn.vb#1)]
 
-2. `ThisAddIn_Startup` yönteminde, veri kümesini başlatmak ve veri kümesini `AdventureWorksLTDataSet` veri kümesindeki bilgilerle doldurmanız için aşağıdaki kodu ekleyin.
+2. `ThisAddIn_Startup`Yönteminde, veri kümesini başlatmak ve veri kümesini veri kümesindeki bilgilerle doldurmanız için aşağıdaki kodu ekleyin `AdventureWorksLTDataSet` .
 
      [!code-csharp[Trin_ExcelAddInDatabase#2](../vsto/codesnippet/CSharp/Trin_ExcelAddInDatabase_O12/ThisAddIn.cs#2)]
      [!code-vb[Trin_ExcelAddInDatabase#2](../vsto/codesnippet/VisualBasic/Trin_ExcelAddInDatabase_O12/ThisAddIn.vb#2)]
@@ -109,24 +109,24 @@ ms.locfileid: "72985488"
      [!code-csharp[Trin_ExcelAddInDatabase#3](../vsto/codesnippet/CSharp/Trin_ExcelAddInDatabase_O12/ThisAddIn.cs#3)]
      [!code-vb[Trin_ExcelAddInDatabase#3](../vsto/codesnippet/VisualBasic/Trin_ExcelAddInDatabase_O12/ThisAddIn.vb#3)]
 
-4. Aralık oluşturun ve <xref:Microsoft.Office.Tools.Excel.ListObject> denetimini ekleyin.
+4. Bir Aralık oluşturun ve denetimi ekleyin <xref:Microsoft.Office.Tools.Excel.ListObject> .
 
      [!code-csharp[Trin_ExcelAddInDatabase#4](../vsto/codesnippet/CSharp/Trin_ExcelAddInDatabase_O12/ThisAddIn.cs#4)]
      [!code-vb[Trin_ExcelAddInDatabase#4](../vsto/codesnippet/VisualBasic/Trin_ExcelAddInDatabase_O12/ThisAddIn.vb#4)]
 
-5. Liste nesnesini <xref:System.Windows.Forms.BindingSource>kullanarak `AdventureWorksLTDataSet` bağlayın. Liste nesnesine bağlamak istediğiniz sütunların adlarını geçirin.
+5. ' İ kullanarak liste nesnesini bağlayın `AdventureWorksLTDataSet` <xref:System.Windows.Forms.BindingSource> . Liste nesnesine bağlamak istediğiniz sütunların adlarını geçirin.
 
      [!code-csharp[Trin_ExcelAddInDatabase#5](../vsto/codesnippet/CSharp/Trin_ExcelAddInDatabase_O12/ThisAddIn.cs#5)]
      [!code-vb[Trin_ExcelAddInDatabase#5](../vsto/codesnippet/VisualBasic/Trin_ExcelAddInDatabase_O12/ThisAddIn.vb#5)]
 
 ## <a name="test-the-add-in"></a>Eklentiyi test etme
- Excel 'i açtığınızda <xref:Microsoft.Office.Tools.Excel.ListObject> denetim, verileri `AdventureWorksLTDataSet` veri kümesinin `Address` tablosundan görüntüler.
+ Excel 'i açtığınızda <xref:Microsoft.Office.Tools.Excel.ListObject> Denetim, veri `Address` kümesinin tablosundaki verileri görüntüler `AdventureWorksLTDataSet` .
 
 ### <a name="to-test-the-vsto-add-in"></a>VSTO eklentisini test etmek için
 
 - **F5**tuşuna basın.
 
-     Çalışma sayfasında `addressListObject` adlı bir <xref:Microsoft.Office.Tools.Excel.ListObject> denetimi oluşturulur. Aynı zamanda, `adventureWorksLTDataSet` adlı bir veri kümesi nesnesi ve `addressBindingSource` adlı bir <xref:System.Windows.Forms.BindingSource> projeye eklenir. <xref:Microsoft.Office.Tools.Excel.ListObject> <xref:System.Windows.Forms.BindingSource>bağlanır, bu da DataSet nesnesine bağlanır.
+     <xref:Microsoft.Office.Tools.Excel.ListObject>Çalışma sayfasında adlı bir denetim `addressListObject` oluşturulur. Aynı zamanda, adlı ve adlı bir veri kümesi nesnesi `adventureWorksLTDataSet` <xref:System.Windows.Forms.BindingSource> `addressBindingSource` projeye eklenir. , <xref:Microsoft.Office.Tools.Excel.ListObject> ' A bağlanır ve <xref:System.Windows.Forms.BindingSource> veri kümesi nesnesine bağlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

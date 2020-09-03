@@ -48,7 +48,7 @@ HRESULT get_isMSILNetmodule(
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|Gereksinim|Description|  
+|Gereksinim|Açıklama|  
 |-----------------|-----------------|  
 |Üst bilgi|dia2. h|  
 |Sürüm:|DIA SDK v 8.0|  

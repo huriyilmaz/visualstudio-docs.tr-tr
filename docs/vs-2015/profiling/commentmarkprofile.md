@@ -13,10 +13,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 750ce3cbcae593aee315998ec8b205a71e004d41
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543058"
 ---
 # <a name="commentmarkprofile"></a>CommentMarkProfile
@@ -44,7 +44,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
 ## <a name="property-valuereturn-value"></a>Özellik Değeri/Dönüş Değeri  
  İşlev, **PROFILE_COMMAND_STATUS** numaralandırma kullanılarak başarılı veya başarısız olduğunu gösterir. Dönüş değeri aşağıdakilerden biri olabilir:  
   
-|Sının|Açıklama|  
+|Sının|Description|  
 |----------------|-----------------|  
 |MARK_ERROR_MARKER_RESERVED|Parametre 0 ' dan küçük veya buna eşit. Bu değerler ayrılmıştır. İşaret ve açıklama kaydedilmez.|  
 |MARK_ERROR_MODE_NEVER|Profil oluşturma modu, işlev çağrıldığında hiçbir zaman olarak ayarlanmıştır. İşaret ve açıklama kaydedilmez.|  
@@ -70,7 +70,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
 |Öğe|Değer|  
 |-|-|  
 |**Üst bilgi**|VSPerf. h dahil et|  
-|**Kitaplık**|VSPerf. lib kullanın|  
+|**Kitaplığı**|VSPerf. lib kullanın|  
 |**Unicode**|`CommentMarkProfileW`(Unicode) ve `CommentMarkProfileA` (ANSI) olarak uygulanır.|  
   
 ## <a name="example"></a>Örnek  

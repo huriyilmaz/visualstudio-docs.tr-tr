@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: da102a8968bc3e29091f6b4b58ee6ef78c6c3fb3
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85462255"
 ---
 # <a name="compilanddetails"></a>CompilandDetails
-Compiland bilgileri, bir `SymTagCompiland` etiketle (düşük ayrıntı) ve bir `SymTagCompilandDetails` etiketle (yüksek ayrıntı) simgeler arasında bölünür. `SymTagCompilandDetails`bir sembol ile kullanılamayan compiland hakkında çok fazla bilgi sağlar `SymTagCompiland` .
+Compiland bilgileri, bir `SymTagCompiland` etiketle (düşük ayrıntı) ve bir `SymTagCompilandDetails` etiketle (yüksek ayrıntı) simgeler arasında bölünür. `SymTagCompilandDetails` bir sembol ile kullanılamayan compiland hakkında çok fazla bilgi sağlar `SymTagCompiland` .
 
 ## <a name="properties"></a>Özellikler
  Aşağıdaki tabloda, bu sembol türü için geçerli olan özellikler gösterilmektedir.
@@ -31,17 +31,17 @@ Compiland bilgileri, bir `SymTagCompiland` etiketle (düşük ayrıntı) ve bir 
 |[IDiaSymbol::get_backEndMajor](../../debugger/debug-interface-access/idiasymbol-get-backendmajor.md)|`DWORD`|Derleyicinin arka uç ana sürüm numarası.|
 |[IDiaSymbol::get_backEndMinor](../../debugger/debug-interface-access/idiasymbol-get-backendminor.md)|`DWORD`|Derleyicinin arka uç alt sürüm numarası.|
 |[IDiaSymbol::get_compilerName](../../debugger/debug-interface-access/idiasymbol-get-compilername.md)|`BSTR`|Bu compiland üreten derleyicinin adı (yalnızca DIA SDK V 8.0 veya üzeri).|
-|[IDiaSymbol::get_editAndContinueEnabled](../../debugger/debug-interface-access/idiasymbol-get-editandcontinueenabled.md)|`BOOL`|`TRUE`derlemede Düzenle ve devam et etkinse.|
+|[IDiaSymbol::get_editAndContinueEnabled](../../debugger/debug-interface-access/idiasymbol-get-editandcontinueenabled.md)|`BOOL`|`TRUE` derlemede Düzenle ve devam et etkinse.|
 |[IDiaSymbol::get_frontEndBuild](../../debugger/debug-interface-access/idiasymbol-get-frontendbuild.md)|`DWORD`|Derleyicinin ön uç derleme numarası.|
 |[IDiaSymbol::get_frontEndMajor](../../debugger/debug-interface-access/idiasymbol-get-frontendmajor.md)|`DWORD`|Derleyicinin ön uç büyük sürüm numarası.|
 |[IDiaSymbol::get_frontEndMinor](../../debugger/debug-interface-access/idiasymbol-get-frontendminor.md)|`DWORD`|Derleyicinin ön uç alt sürüm numarası.|
-|[IDiaSymbol::get_hasDebugInfo](../../debugger/debug-interface-access/idiasymbol-get-hasdebuginfo.md)|`BOOL`|`TRUE`Bu compiland hata ayıklama bilgilerine sahipse (yalnızca DIA SDK V 8.0 veya üzeri sürümlerde).|
-|[IDiaSymbol::get_hasManagedCode](../../debugger/debug-interface-access/idiasymbol-get-hasmanagedcode.md)|`BOOL`|`TRUE`Bu compiland, yönetilen kod içeriyorsa (yalnızca DIA SDK v 8.0 veya üzeri).|
-|[IDiaSymbol::get_hasSecurityChecks](../../debugger/debug-interface-access/idiasymbol-get-hassecuritychecks.md)|`BOOL`|`TRUE`compiland, [/GS (arabellek güvenlik denetimi)](/cpp/build/reference/gs-buffer-security-check) derleyici anahtarıyla derlenmişse (yalnızca DIA SDK v 8.0 veya üzeri sürümlerde).|
-|[IDiaSymbol::get_isCVTCIL](../../debugger/debug-interface-access/idiasymbol-get-iscvtcil.md)|`BOOL`|`TRUE`compiland ortak ara dil (CıL) kodundan yerel koda dönüştürülmüşse.|
-|[IDiaSymbol::get_isDataAligned](../../debugger/debug-interface-access/idiasymbol-get-isdataaligned.md)|`BOOL`|`TRUE`Kullanıcı tanımlı türler (UDT) belirli bir bellek sınırına hizalanmışsa (yalnızca DIA SDK V 8.0 veya üzeri).|
-|[IDiaSymbol::get_isHotpatchable](../../debugger/debug-interface-access/idiasymbol-get-ishotpatchable.md)|`BOOL`|`TRUE`compiland, [/hotpatch (düzeltme eki uygulanabilir görüntü oluşturma)](/cpp/build/reference/hotpatch-create-hotpatchable-image) derleyici anahtarı (yalnızca DIA SDK v 8.0 veya üzeri) ile derlenmişse.|
-|[IDiaSymbol::get_isLTCG](../../debugger/debug-interface-access/idiasymbol-get-isltcg.md)|`BOOL`|`TRUE`compiland, [/LTCG (bağlama zamanı kodu oluşturma)](/cpp/build/reference/ltcg-link-time-code-generation) derleyicisi anahtarıyla derlenmişse (yalnızca DIA SDK v 8.0 veya üzeri sürümlerde).|
+|[IDiaSymbol::get_hasDebugInfo](../../debugger/debug-interface-access/idiasymbol-get-hasdebuginfo.md)|`BOOL`|`TRUE` Bu compiland hata ayıklama bilgilerine sahipse (yalnızca DIA SDK V 8.0 veya üzeri sürümlerde).|
+|[IDiaSymbol::get_hasManagedCode](../../debugger/debug-interface-access/idiasymbol-get-hasmanagedcode.md)|`BOOL`|`TRUE` Bu compiland, yönetilen kod içeriyorsa (yalnızca DIA SDK v 8.0 veya üzeri).|
+|[IDiaSymbol::get_hasSecurityChecks](../../debugger/debug-interface-access/idiasymbol-get-hassecuritychecks.md)|`BOOL`|`TRUE` compiland, [/GS (arabellek güvenlik denetimi)](/cpp/build/reference/gs-buffer-security-check) derleyici anahtarıyla derlenmişse (yalnızca DIA SDK v 8.0 veya üzeri sürümlerde).|
+|[IDiaSymbol::get_isCVTCIL](../../debugger/debug-interface-access/idiasymbol-get-iscvtcil.md)|`BOOL`|`TRUE` compiland ortak ara dil (CıL) kodundan yerel koda dönüştürülmüşse.|
+|[IDiaSymbol::get_isDataAligned](../../debugger/debug-interface-access/idiasymbol-get-isdataaligned.md)|`BOOL`|`TRUE` Kullanıcı tanımlı türler (UDT) belirli bir bellek sınırına hizalanmışsa (yalnızca DIA SDK V 8.0 veya üzeri).|
+|[IDiaSymbol::get_isHotpatchable](../../debugger/debug-interface-access/idiasymbol-get-ishotpatchable.md)|`BOOL`|`TRUE` compiland, [/hotpatch (düzeltme eki uygulanabilir görüntü oluşturma)](/cpp/build/reference/hotpatch-create-hotpatchable-image) derleyici anahtarı (yalnızca DIA SDK v 8.0 veya üzeri) ile derlenmişse.|
+|[IDiaSymbol::get_isLTCG](../../debugger/debug-interface-access/idiasymbol-get-isltcg.md)|`BOOL`|`TRUE` compiland, [/LTCG (bağlama zamanı kodu oluşturma)](/cpp/build/reference/ltcg-link-time-code-generation) derleyicisi anahtarıyla derlenmişse (yalnızca DIA SDK v 8.0 veya üzeri sürümlerde).|
 |[IDiaSymbol::get_isMSILNetmodule](../../debugger/debug-interface-access/idiasymbol-get-ismsilnetmodule.md)|`BOOL`|Compiland bir Microsoft ara dili (MSIL) modülüdür (yalnızca DIA SDK v 8.0 veya üzeri sürümlerde) TRUE.|
 |[IDiaSymbol::get_language](../../debugger/debug-interface-access/idiasymbol-get-language.md)|`DWORD`|Kaynak kodu dili.|
 |[IDiaSymbol::get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|`IDiaSymbol*`|Compiland sembolü.|

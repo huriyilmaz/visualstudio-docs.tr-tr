@@ -26,10 +26,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 210606af0f200d49b639d323456f85e0a7becd06
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543682"
 ---
 # <a name="view-the-structure-of-code-using-different-tool-windows"></a>Farklı araç pencerelerini kullanarak kodun yapısını görüntüleme
@@ -54,7 +54,7 @@ Projeniz kaynak kodu denetimine iade edildiğinde, her **sınıf görünümü** 
 
 **Sınıf görünümü** araç çubuğu aşağıdaki komutları içerir:
 
-|Name|Description|
+|Ad|Açıklama|
 |-|-|
 |**Yeni klasör**|Sık kullanılan öğeleri düzenleyebileceğiniz bir sanal klasör veya alt klasör oluşturur. Bunlar, etkin çözüm (*. suo*) dosyasına kaydedilir. Kodunuzda bir öğeyi yeniden adlandırdıktan veya sildikten sonra, bir sanal klasörde hata düğümü olarak görünebilir. Bu sorunu düzeltmek için, hata düğümünü silin. Bir öğeyi yeniden adlandırdıysanız proje hiyerarşisinden klasörü yeniden klasöre taşıyabilirsiniz.|
 |**Geri**|Daha önce seçilen öğeye gider.|
@@ -65,7 +65,7 @@ Projeniz kaynak kodu denetimine iade edildiğinde, her **sınıf görünümü** 
 
 Araç çubuğundaki **Sınıf Görünümü ayarları** düğmesi aşağıdaki ayarlara sahiptir:
 
-|Name|Description|
+|Ad|Açıklama|
 |-|-|
 |**Temel türleri göster**|Temel türler görüntülenir.|
 |**Proje başvurularını göster**|Proje başvuruları görüntülenir.|
@@ -80,7 +80,7 @@ Araç çubuğundaki **Sınıf Görünümü ayarları** düğmesi aşağıdaki ay
 
 **Sınıf görünümü** ' deki kısayol (veya sağ tıklama) menüsünde, seçilen proje türüne bağlı olarak aşağıdaki komutlar bulunabilir:
 
-|Name|Description|
+|Ad|Açıklama|
 |-|-|
 |**Tanıma Git**|Öğe açık projede tanımlanmamışsa, kaynak kodundaki veya **nesne tarayıcısı**içindeki öğenin tanımını bulur.|
 |**Tanıma gözatatıon**|**Nesne tarayıcısı**seçili öğeyi görüntüler.|
@@ -112,7 +112,7 @@ Ana bölmede, yöntemine ve yönteminden yapılan çağrılar görüntülenir ve
 
 **Çağrı hiyerarşisi** penceresindeki kısayol menüsü aşağıdaki komutları içerir:
 
-|Name|Description|
+|Ad|Açıklama|
 |-|-|
 |**Yeni kök olarak ekle**|Seçili düğümü yeni bir kök düğüm olarak ekler.|
 |**Kökü Kaldır**|Seçili kök düğümü ağaç görünümü bölmesinden kaldırır.|
@@ -121,7 +121,7 @@ Ana bölmede, yöntemine ve yönteminden yapılan çağrılar görüntülenir ve
 |**Kopyala**|Seçili düğümü kopyalar (alt düğümleri değil).|
 |**Yenile**|Bilgileri yeniler.|
 
-## <a name="object-browser"></a><a name="BKMK_ObjectBrowser"></a>Nesne Tarayıcısı
+## <a name="object-browser"></a><a name="BKMK_ObjectBrowser"></a> Nesne Tarayıcısı
 
 **Nesne tarayıcısı** penceresinde, projelerinizdeki kodun açıklamaları görüntülenir.
 
@@ -151,7 +151,7 @@ Bir öğeyi (derleme, ad alanı, tür veya üye) seçerek ve araç çubuğundaki
 
 Araç çubuğundaki **nesne tarayıcısı ayarları** düğmesini kullanarak, aşağıdaki görünümlerden birini belirtebilirsiniz:
 
-|Name|Description|
+|Ad|Açıklama|
 |-|-|
 |**Ad alanlarını görüntüle**|Sol bölmedeki fiziksel kapsayıcılar yerine ad alanlarını görüntüler. Birden fazla fiziksel kapsayıcıda depolanan ad alanları birleştirilir.|
 |**Kapsayıcıları görüntüle**|Sol bölmedeki ad alanları yerine fiziksel kapsayıcıları görüntüler. **Ad alanlarını** ve **Görünüm kapsayıcılarını** görüntüleme birbirini dışlamalı ayarlar.|
@@ -168,7 +168,7 @@ Araç çubuğundaki **nesne tarayıcısı ayarları** düğmesini kullanarak, a�
 
 **Nesne tarayıcısı** ' deki kısayol (veya sağ tıklama) menüsünde, seçilen öğe türüne bağlı olarak aşağıdaki komutlar bulunabilir:
 
-|Name|Description|
+|Ad|Açıklama|
 |-|-|
 |**Tanıma gözatatıon**|Seçili öğenin birincil düğümünü gösterir.|
 |**Tüm Başvuruları Bul**|Şu anda seçili olan nesne öğesini bulur ve sonuçları **Bul sonuçları** penceresinde görüntüler.|
@@ -197,7 +197,7 @@ Bu pencere salt okunurdur, ancak içinde kesme noktaları veya yer işaretleri a
 
 **Kod tanımı** penceresindeki kısayol (veya sağ tıklama) menüsünde aşağıdaki komutlar bulunabilir:
 
-|Name|Description|
+|Ad|Açıklama|
 |-|-|
 |**Hızlı Eylemler ve Yeniden Düzenlemeler**||
 |**Yeniden Adlandır**||

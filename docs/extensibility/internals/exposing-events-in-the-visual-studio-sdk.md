@@ -1,5 +1,5 @@
 ---
-title: Görsel Stüdyo SDK'da Olayları Ortaya Çıkarmak | Microsoft Dokümanlar
+title: Visual Studio SDK 'da olayları gösterme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,68 +12,68 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 48f1e0ea0dcd07bbc26fc89d5c61a6a5941d4727
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80708483"
 ---
-# <a name="expose-events-in-the-visual-studio-sdk"></a>Görsel Stüdyo SDK'daki olayları ortaya çıkarma
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]otomasyon u kullanarak olayları kaynak sağlar. Projeler ve proje öğeleri için etkinlik kaynağı yapmanızı öneririz.
+# <a name="expose-events-in-the-visual-studio-sdk"></a>Visual Studio SDK 'da olayları kullanıma sunma
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Otomasyonu kullanarak olayları kaynak yapmanızı sağlar. Projeler ve proje öğeleri için olayları kaynak yapmanızı öneririz.
 
- Olaylar otomasyon tüketicileri tarafından <xref:EnvDTE.DTEClass.Events%2A> nesneden <xref:EnvDTE.DTEClass.GetObject%2A> veya (örneğin) `GetObject("EventObjectName")`alınır. Ortam, `IDispatch::Invoke` bir olayı `DISPATCH_METHOD` `DISPATCH_PROPERTYGET` döndürmek için bayrakları veya bayrakları kullanarak çağırır.
+ Olaylar, Otomasyon tüketicileri tarafından <xref:EnvDTE.DTEClass.Events%2A> nesnesinden veya <xref:EnvDTE.DTEClass.GetObject%2A> (örneğin, `GetObject("EventObjectName")` ) alınır. Ortam `IDispatch::Invoke` , `DISPATCH_METHOD` `DISPATCH_PROPERTYGET` bir olayı döndürmek için veya bayraklarını kullanarak çağırır.
 
- Aşağıdaki işlem, VSPackage'a özgü olayların nasıl döndürüldiyi açıklar.
+ Aşağıdaki işlem, VSPackage 'a özgü olayların nasıl döndürüleceğini açıklar.
 
-1. Ortam başlar.
+1. Ortam başlatılır.
 
-2. Tüm VSPackages'ın **Otomasyon**, Otomasyon **Etkinlikleri**ve **AutomationProperties** anahtarları altındaki tüm değer adlarını kayıt defterinden okur ve bu adları bir tabloda saklar.
+2. Tüm VSPackages 'in **Otomasyon**, **AutomationEvents**ve **AutomationProperties** anahtarlarının altındaki tüm değer adlarını kayıt defterinden okur ve bu adları bir tabloda depolar.
 
-3. Bu örnekte bir otomasyon `DTE.Events.AutomationProjectsEvents` tüketicisi çağırır veya `DTE.Events.AutomationProjectItemsEvents`.
+3. Otomasyon tüketicisi, bu örnekte veya ' de çağırır `DTE.Events.AutomationProjectsEvents` `DTE.Events.AutomationProjectItemsEvents` .
 
-4. Ortam, tablodaki dize parametresini bulur ve ilgili VSPackage'ı yükler.
+4. Ortam, tablodaki dize parametresini bulur ve karşılık gelen VSPackage 'ı yükler.
 
-5. Ortam, çağrıda <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> geçen adı kullanarak yöntemi çağırır; bu `AutomationProjectsEvents` örnekte, `AutomationProjectItemsEvents`ya da .
+5. Ortam, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> çağrıya geçirilen adı kullanarak yöntemini çağırır; Bu örnekte `AutomationProjectsEvents` veya `AutomationProjectItemsEvents` .
 
-6. VSPackage gibi `get_AutomationProjectsEvents` yöntemleri olan bir kök nesne `get_AutomationProjectItemEvents` oluşturur ve sonra nesneye bir IDispatch işaretçisi döndürür.
+6. VSPackage, ve gibi yöntemlere sahip bir kök nesnesi oluşturur `get_AutomationProjectsEvents` `get_AutomationProjectItemEvents` ve ardından nesneye bir IDispatch işaretçisi döndürür.
 
-7. Ortam, otomasyon çağrısına aktarılan ada göre uygun yöntemi çağırır.
+7. Ortam, Otomasyon çağrısına geçirilen ada göre uygun yöntemi çağırır.
 
-8. Yöntem, `get_` hem `IConnectionPointContainer` arabirimi hem de `IConnectionPoint` arabirimi uygulayan ve nesneye bir `IDispatchpointer` alet döndüren başka bir IDispatch tabanlı olay nesnesi oluşturur.
+8. `get_`Yöntemi, hem arabirimini hem de `IConnectionPointContainer` arabirimini uygulayan `IConnectionPoint` ve nesnesine döndüren başka bir IDispatch tabanlı olay nesnesi oluşturur `IDispatchpointer` .
 
-   Bir olayı otomasyon kullanarak ortaya çıkarmak <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> için, kayıt defterine eklediğiniz dizeleri yanıtlamalı ve izlemeniz gerekir. Temel Proje örneğinde, dizeleri *BscProjectsEvents* ve *BscProjectItemsEvents*vardır.
+   Otomasyonu kullanarak bir olayı göstermek için, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> kayıt defterine eklediğiniz dizeleri yanıtlamanız ve bunları izlemeniz gerekir. Temel proje örneğinde dizeler *BscProjectsEvents* ve *BscProjectItemsEvents*' dir.
 
-## <a name="registry-entries-from-the-basic-project-sample"></a>Temel Proje örneğinden kayıt defteri girişleri
- Bu bölümde, kayıt defterine otomasyon olay değerlerinin nereye eklendiği gösterilmektedir.
+## <a name="registry-entries-from-the-basic-project-sample"></a>Temel proje örneğindeki kayıt defteri girişleri
+ Bu bölümde, kayıt defterine Otomasyon olay değerlerinin ekleneceği yer gösterilmektedir.
 
- **[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0\Paketler\\<PkgGUID\>\AutomationEvents]**
+ **[HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\8.0\Packages \\<PkgGUID \> \Automationevents]**
 
- **AutomationProjectEvents** = `AutomationProjectEvents` Nesneyi döndürür.
+ **AutomationProjectEvents** = nesnesini döndürür `AutomationProjectEvents` .
 
- **AutomationProjectItemEvents** = `AutomationProjectItemsEvents` Nesneyi döndürür.
+ **AutomationProjectItemEvents** = nesnesini döndürür `AutomationProjectItemsEvents` .
 
-|Adı|Tür|Aralık|Açıklama|
+|Ad|Tür|Aralık|Description|
 |----------|----------|-----------|-----------------|
 |Varsayılan (@)|REG_SZ|Kullanılmıyor|Kullanılmıyor. Belgeler için veri alanını kullanabilirsiniz.|
-|*OtomasyonProjelerEtkinlikler*|REG_SZ|Olay nesnenizin adı.|Yalnızca anahtar adı alakalıdır. Belgeler için veri alanını kullanabilirsiniz.<br /><br /> Bu örnek Temel Proje örneğinden gelir.|
-|*OtomasyonProjeItem Etkinlikleri*|REG_SZ|Olay nesnenizin adı|Yalnızca anahtar adı alakalıdır. Belgeler için veri alanını kullanabilirsiniz.<br /><br /> Bu örnek Temel Proje örneğinden gelir.|
+|*AutomationProjectsEvents*|REG_SZ|Olay nesnenizin adı.|Yalnızca anahtar adı ilgili. Belgeler için veri alanını kullanabilirsiniz.<br /><br /> Bu örnek, temel proje örneğinden gelir.|
+|*AutomationProjectItemEvents*|REG_SZ|Olay nesnenizin adı|Yalnızca anahtar adı ilgili. Belgeler için veri alanını kullanabilirsiniz.<br /><br /> Bu örnek, temel proje örneğinden gelir.|
 
- Olay nesneleriniz herhangi biri bir otomasyon tüketicisi tarafından istendiğinde, VSPackage'ınızın desteklediği herhangi bir olay için yöntemleri olan bir kök nesne oluşturun. Ortam bu nesne `get_` üzerinde uygun yöntemi çağırır. Örneğin, çağrıldığında, `DTE.Events.AutomationProjectsEvents` `get_AutomationProjectsEvents` kök nesneüzerindeki yöntem çağrılır.
+ Olay nesnelerinizin herhangi biri bir Otomasyon tüketicisi tarafından istendiğinde, VSPackage 'ın desteklediği herhangi bir olay için yöntemler içeren bir kök nesnesi oluşturun. Ortam, `get_` Bu nesne üzerinde uygun yöntemi çağırır. Örneğin, çağrılırsa, `DTE.Events.AutomationProjectsEvents` `get_AutomationProjectsEvents` kök nesnesindeki yöntem çağrılır.
 
- ![Visual Studio proje etkinlikleri](../../extensibility/internals/media/projectevents.gif "Proje Etkinlikleri") Etkinlikler için otomasyon modeli
+ ![Visual Studio proje olayları](../../extensibility/internals/media/projectevents.gif "ProjectEvents") Olaylar için otomasyon modeli
 
- Sınıf `CProjectEventsContainer` *BscProjectsEvents*için kaynak nesneyi `CProjectItemsEventsContainer` temsil eder ve *BscProjectItemsEvents*için kaynak nesnetemsil eder.
+ Sınıfı `CProjectEventsContainer` *BscProjectsEvents*için kaynak nesnesini temsil eder ve `CProjectItemsEventsContainer` *BscProjectItemsEvents*için kaynak nesnesini temsil eder.
 
- Çoğu durumda, çoğu olay nesnesi bir filtre nesnesi aldığı için her olay isteği için yeni bir nesne döndürmeniz gerekir. Olayınızı ateşlediğinizde, olay işleyicisinin çağrıldığını doğrulamak için bu filtreyi denetleyin.
+ Çoğu durumda, çoğu olay nesnesi bir filtre nesnesi alıp, her olay isteği için yeni bir nesne döndürmelidir. Olaylarınızı ateşleyerek, olay işleyicisinin çağrıldığından emin olmak için bu filtreyi kontrol edin.
 
- *AutomationEvents.h* ve *AutomationEvents.cpp* aşağıdaki tabloda sınıfların beyanlarını ve uygulamalarını içerir.
+ *AutomationEvents. h* ve *AutomationEvents. cpp* aşağıdaki tablodaki sınıfların bildirimlerini ve uygulamalarını içerir.
 
 |Sınıf|Açıklama|
 |-----------|-----------------|
-|`CAutomationEvents`|Nesneden alınan bir olay kök `DTE.Events` nesnesi uygular.|
-|`CProjectsEventsContainer` ve `CProjectItemsEventsContainer`|İlgili olayları ateşleyen olay kaynağı nesneleri uygulayın.|
+|`CAutomationEvents`|Nesnesinden alınan bir olay kök nesnesi uygular `DTE.Events` .|
+|`CProjectsEventsContainer` ve `CProjectItemsEventsContainer`|Karşılık gelen olayları harekete alan olay kaynağı nesnelerini uygulayın.|
 
- Aşağıdaki kod örneği, bir olay nesnesi isteğine nasıl yanıt verilebildiğini gösterir.
+ Aşağıdaki kod örneği bir olay nesnesi için bir isteğin nasıl yanıtlanacağını göstermektedir.
 
 ```cpp
 STDMETHODIMP CVsPackage::GetAutomationObject(
@@ -104,9 +104,9 @@ STDMETHODIMP CVsPackage::GetAutomationObject(
 }
 ```
 
- Yukarıdaki kodda, `g_wszAutomationProjects` proje koleksiyonunuzun adı *(FigProjects*), `g_wszAutomationProjectsEvents` ( `g_wszAutomationProjectItemsEvents` *FigProjectsEvents*) ve (*FigProjectItemEvents*) VSPackage uygulamanızdan kaynaklanan proje olaylarının ve proje öğeleri etkinliklerinin adlarıdır.
+ Yukarıdaki kodda, ( `g_wszAutomationProjects` *FigProjects*figprojectsevents) proje koleksiyonunuzun adı ve `g_wszAutomationProjectsEvents` *FigProjectsEvents* `g_wszAutomationProjectItemsEvents` (*FigProjectItemEvents*), VSPackage uygulamanızdan kaynaklaştırılmış proje olayları ve proje öğeleri olaylarının adlarıdır.
 
- Olay nesneleri aynı merkezi konumdan, `DTE.Events` nesne alınır. Bu şekilde, son kullanıcıbelirli bir olayı bulmak için tüm nesne modeline göz atmak zorunda kalmaması için tüm olay nesneleri birlikte gruplandırılır. Bu, sistem genelindeki olaylar için kendi kodunuzu uygulamanızı gerektirmek yerine, belirli VSPackage nesnelerinizi sağlamanıza da olanak tanır. Ancak, arabiriminiz `ProjectItem` için bir olay bulması gereken son kullanıcı için, bu olay nesnesinin nereden alındığı hemen açık değildir.
+ Olay nesneleri aynı merkezi konumdan alınır, `DTE.Events` nesnesi. Bu şekilde, bir son kullanıcının belirli bir olayı bulmak için tüm nesne modeline gözatmasına sahip olmaması için tüm olay nesneleri birlikte gruplandırılır. Bu Ayrıca, sistem genelinde olaylar için kendi kodunuzu uygulamanızı gerektirmek yerine, belirli VSPackage nesnelerinizi sağlamanıza olanak tanır. Bununla birlikte, arabiriminiz için bir olay bulması gereken son kullanıcı için, `ProjectItem` olay nesnesinin alındığı yerden hemen net değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>

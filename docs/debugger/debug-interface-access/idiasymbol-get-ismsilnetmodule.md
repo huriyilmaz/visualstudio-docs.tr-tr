@@ -46,7 +46,7 @@ dışı `TRUE` Modül MSIL ise döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|

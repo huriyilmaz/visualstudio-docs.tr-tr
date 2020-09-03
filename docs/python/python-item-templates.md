@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 528606356c2d976de71ab2c0317a1a0236d2e63f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533399"
 ---
 # <a name="python-item-templates"></a>Python öğe şablonları
@@ -34,7 +34,7 @@ Aşağıdaki tablo, bir Python projesindeki her öğe şablonunun etkisini kısa
 | **Python paketi** | Bir * \_ \_ init \_ \_ . Kopyala* dosyası içeren bir klasör. |
 | **Python birim testi** | Çerçeve tabanlı tek bir birim testine sahip bir *. Kopyala* dosyası `unittest` , `unittest.main()` dosyadaki testleri çalıştırmak için çağrısı ile birlikte. |
 | **HTML sayfası** | Ve öğeden oluşan basit sayfa yapısına sahip bir *. html* dosyası `<head>` `<body>` . |
-| **JavaScript** | Boş bir *. js* dosyası. |
+| **JavaScript** | Boş bir  *. js* dosyası. |
 | **Stil sayfası** | İçin boş bir stil içeren bir *. css* dosyası `body` . |
 | **Metin dosyası** | Boş bir *. txt* dosyası. |
 | **Docgo 1,9 uygulaması**<br/>**Docgo 1,4 uygulaması** | [Visual Studio 'Da Docgo hakkında bilgi edinin](learn-django-in-visual-studio-step-02-create-an-app.md#step-2-1-create-an-app-with-a-default-structure) bölümünde açıklandığı gibi bir docgo uygulamasının temel dosyalarını içeren bir klasör, docgo 1,9 için 2-2. adıma bakın. Docgo 1,4 için, *geçişler* klasörü, *admin.py* dosyası ve *Apps.py* dosyası dahil değildir. |

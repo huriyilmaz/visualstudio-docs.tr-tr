@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d345d532c29931577edbe0441003cc80b069e335
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85289150"
 ---
 # <a name="walkthrough-create-an-inline-task"></a>İzlenecek yol: satır içi görev oluşturma
@@ -240,11 +240,11 @@ Görevleri oluşturmak ve çalıştırmak için, Visual Studio ve **Visual Studi
 
    Bu kod, RegX adlı bir satır içi görevi tanımlar ve bu üç parametreye sahiptir:
 
-- `Expression`, eşleştirilecek normal ifade olan bir değere sahip gerekli bir dize giriş parametresidir. Bu örnekte, ifade "public" veya "Protected" kelimelerle eşleşir.
+- `Expression` , eşleştirilecek normal ifade olan bir değere sahip gerekli bir dize giriş parametresidir. Bu örnekte, ifade "public" veya "Protected" kelimelerle eşleşir.
 
-- `Files`, eşleşme için aranacak dosyaların listesi olan bir değere sahip gerekli bir öğe listesi giriş parametresidir. Bu örnekte, `Files` `Compile` Proje kaynak dosyalarını listeleyen öğesine ayarlanır.
+- `Files` , eşleşme için aranacak dosyaların listesi olan bir değere sahip gerekli bir öğe listesi giriş parametresidir. Bu örnekte, `Files` `Compile` Proje kaynak dosyalarını listeleyen öğesine ayarlanır.
 
-- `Result`, normal ifadeyle eşleşen içeriği olan dosyaların listesi olan bir çıkış parametresidir.
+- `Result` , normal ifadeyle eşleşen içeriği olan dosyaların listesi olan bir çıkış parametresidir.
 
   Giriş parametrelerinin değeri, TestBuild hedefi RegX görevini çalıştırdığında ayarlanır. RegX görevi her dosyayı okur ve normal ifadeyle eşleşen dosyaların listesini döndürür. Bu liste, `Result` MSBuild öğesi olarak yayılan çıkış parametresi olarak döndürülür `MatchedFiles` .
 
@@ -266,6 +266,6 @@ Görevleri oluşturmak ve çalıştırmak için, Visual Studio ve **Visual Studi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Satır içi görevler](../msbuild/msbuild-inline-tasks.md)
+- [Satır içi görevleri](../msbuild/msbuild-inline-tasks.md)
 - [Görevler](../msbuild/msbuild-tasks.md)
-- [Lerden](../msbuild/msbuild-targets.md)
+- [Targets](../msbuild/msbuild-targets.md)

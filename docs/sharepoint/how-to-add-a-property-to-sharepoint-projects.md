@@ -15,9 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: eb72b0546b504e2df1a7e93ea9d4def350143d1d
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015924"
 ---
 # <a name="how-to-add-a-property-to-sharepoint-projects"></a>Nasıl yapılır: SharePoint projelerine özellik ekleme
@@ -44,9 +45,9 @@ ms.locfileid: "86015924"
 
  Özellik değerlerinde değişiklikleri kalıcı hale getirmek için, özellikler için **ayarlanan** erişimciler aşağıdaki API 'leri kullanır:
 
-- `CustomUserFileProperty`, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.ProjectUserFileData%2A> değerini proje Kullanıcı seçenek dosyasına kaydetmek için özelliğini kullanır.
+- `CustomUserFileProperty` , <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.ProjectUserFileData%2A> değerini proje Kullanıcı seçenek dosyasına kaydetmek için özelliğini kullanır.
 
-- `CustomProjectFileProperty`, <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetPropertyValue%2A> değerini proje dosyasına kaydetmek için yöntemini kullanır.
+- `CustomProjectFileProperty` , <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetPropertyValue%2A> değerini proje dosyasına kaydetmek için yöntemini kullanır.
 
   Bu dosyalardaki kalıcı veriler hakkında daha fazla bilgi için bkz. [SharePoint proje sisteminin uzantılarında verileri kaydetme](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md).
 

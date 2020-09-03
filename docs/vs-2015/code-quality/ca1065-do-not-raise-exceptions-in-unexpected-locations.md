@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: ddfc95d27179f48aef9444819cc0437a3143d5a0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85539262"
 ---
 # <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065: Beklenmeyen konumlarda özel durum harekete geçirmeyin
@@ -65,24 +65,24 @@ ms.locfileid: "85539262"
 
  Aşağıdaki özel durumların bir özellik Get yönteminden yapılmasına izin verilir:
 
-- <xref:System.InvalidOperationException?displayProperty=fullName>ve tüm türetme (dahil <xref:System.ObjectDisposedException?displayProperty=fullName> )
+- <xref:System.InvalidOperationException?displayProperty=fullName> ve tüm türetme (dahil <xref:System.ObjectDisposedException?displayProperty=fullName> )
 
-- <xref:System.NotSupportedException?displayProperty=fullName>ve tüm türetme
+- <xref:System.NotSupportedException?displayProperty=fullName> ve tüm türetme
 
-- <xref:System.ArgumentException?displayProperty=fullName>(yalnızca dizinli Get 'ten)
+- <xref:System.ArgumentException?displayProperty=fullName> (yalnızca dizinli Get 'ten)
 
-- <xref:System.Collections.Generic.KeyNotFoundException>(yalnızca dizinli Get 'ten)
+- <xref:System.Collections.Generic.KeyNotFoundException> (yalnızca dizinli Get 'ten)
 
 ### <a name="event-accessor-methods"></a>Olay erişimci yöntemleri
  Olay erişimcileri özel durum oluşturmaz basit işlemler olmalıdır. Olay işleyicisi eklemeyi veya kaldırmayı denediğinizde bir olay özel durum oluşturmaz.
 
  Aşağıdaki özel durumların bir olay accesveya bir olay aracılığıyla yapılmasına izin verilir:
 
-- <xref:System.InvalidOperationException?displayProperty=fullName>ve tüm türetme (dahil <xref:System.ObjectDisposedException?displayProperty=fullName> )
+- <xref:System.InvalidOperationException?displayProperty=fullName> ve tüm türetme (dahil <xref:System.ObjectDisposedException?displayProperty=fullName> )
 
-- <xref:System.NotSupportedException?displayProperty=fullName>ve tüm türetme
+- <xref:System.NotSupportedException?displayProperty=fullName> ve tüm türetme
 
-- <xref:System.ArgumentException>ve türetme
+- <xref:System.ArgumentException> ve türetme
 
 ### <a name="equals-methods"></a>Eşittir yöntemleri
  Aşağıdaki **eşittir** yöntemleri özel durum oluşturmaz:

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 99596442f3aef9e4cb2d890438d29b96cdf4f083
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671916"
 ---
 # <a name="open-project-command"></a>Proje Aç Komutu
@@ -27,16 +27,16 @@ ms.locfileid: "72671916"
 
 Mevcut bir projeyi açar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 File.OpenProject filename
 ```
 
-## <a name="arguments"></a>Arguments
- `filename` gerekiyor. Açılacak projenin tam yolu ve dosya adı.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `filename` Gerekli. Açılacak projenin tam yolu ve dosya adı.
 
- @No__t_0 bağımsız değişkeninin sözdizimi, boşluk içeren yolların tırnak işaretleri kullanmasını gerektirir.
+ Bağımsız değişkeninin sözdizimi, `filename` boşluk içeren yolların tırnak işaretleri kullanmasını gerektirir.
 
 ## <a name="remarks"></a>Açıklamalar
  Otomatik tamamlama, yazarken doğru yolu ve dosya adını bulmaya çalışır.
@@ -44,7 +44,7 @@ File.OpenProject filename
  Hata ayıklanırken bu komut kullanılamaz.
 
 ## <a name="example"></a>Örnek
- Bu örnekte, test1 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] projesi açılır.
+ Bu örnek [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , test1 projesini açar.
 
 ```
 >File.OpenProject "C:\My Projects\Test1\Test1.vbproj"

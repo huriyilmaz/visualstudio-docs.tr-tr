@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 25720f31c721cae44ed5425631a86b3a41bf475e
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84180551"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-visual-basic"></a>İzlenecek Yol: Visual Basic'de Görselleştirici Yazma
@@ -48,7 +48,7 @@ Görselleştiricisi kodu, hata ayıklayıcı tarafından okunacak bir DLL 'ye ye
 
 2. Sınıf kitaplığı için, gibi uygun bir ad yazın `MyFirstVisualizer` ve ardından **Oluştur** veya **Tamam**' a tıklayın.
 
-   Sınıf kitaplığını oluşturduktan sonra, burada tanımlanan sınıfları kullanabilmeniz için Microsoft. VisualStudio. Debuggervisuallıyer. DLL ' e bir başvuru eklemeniz gerekir. Ancak ilk olarak, projenize anlamlı bir ad verirsiniz.
+   Sınıf kitaplığını oluşturduktan sonra, burada tanımlanan sınıfları kullanabilmeniz için Microsoft.VisualStudio.DebuggerVisualizers.DLL bir başvuru eklemeniz gerekir. Ancak ilk olarak, projenize anlamlı bir ad verirsiniz.
 
 ### <a name="to-rename-class1vb-and-add-microsoftvisualstudiodebuggervisualizers"></a>Class1. vb ' i yeniden adlandırmak ve Microsoft. VisualStudio. Debuggervisualiciler eklemek için
 
@@ -57,15 +57,15 @@ Görselleştiricisi kodu, hata ayıklayıcı tarafından okunacak bir DLL 'ye ye
 2. Name. vb olan adı DebuggerSide. vb gibi bir anlamlı olacak şekilde değiştirin.
 
    > [!NOTE]
-   > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]DebuggerSide. vb içindeki sınıf bildirimini yeni dosya adıyla eşleşecek şekilde otomatik olarak değiştirir.
+   > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] DebuggerSide. vb içindeki sınıf bildirimini yeni dosya adıyla eşleşecek şekilde otomatik olarak değiştirir.
 
 3. **Çözüm Gezgini**, **ilk görselleştiricisi**' e sağ tıklayın ve kısayol menüsünde **Başvuru Ekle**' ye tıklayın.
 
-4. **Başvuru Ekle** iletişim kutusunda, **Araştır** sekmesinde, **Araştır** ' ı seçin ve Microsoft. VisualStudio. debuggervisualiciler. dll dosyasını bulun.
+4. **Başvuru Ekle** iletişim kutusunda, **Araştır** sekmesinde, **araştır** ' ı seçin ve Microsoft.VisualStudio.DebuggerVisualizers.DLL bulun.
 
     DLL 'yi, Visual Studio 'nun yükleme dizininin * \<Visual Studio Install Directory> \Common7\IDE\PublicAssemblies* alt dizininde bulabilirsiniz.
 
-5. **Tamam**'a tıklayın.
+5. **Tamam**’a tıklayın.
 
 6. DebuggerSide. vb içinde, aşağıdaki deyimi `Imports` deyimlere ekleyin:
 
@@ -91,7 +91,7 @@ Görselleştiricisi kodu, hata ayıklayıcı tarafından okunacak bir DLL 'ye ye
    Inherits DialogDebuggerVisualizer
    ```
 
-   `DialogDebuggerVisualizer`, geçersiz kılmanız gereken tek bir soyut yöntemi vardır `Show` .
+   `DialogDebuggerVisualizer` , geçersiz kılmanız gereken tek bir soyut yöntemi vardır `Show` .
 
 ### <a name="to-override-the-dialogdebuggervisualizershow-method"></a>DialogDebuggerVisualizer. Show metodunu geçersiz kılmak için
 
@@ -109,11 +109,11 @@ Görselleştiricisi kodu, hata ayıklayıcı tarafından okunacak bir DLL 'ye ye
 
 1. **Çözüm Gezgini**' de, **Başvurular**' a sağ tıklayın ve kısayol menüsünde **Başvuru Ekle**' ye tıklayın.
 
-2. **Başvuru Ekle** iletişim kutusunda, **Araştır** sekmesinde, **Araştır**' ı seçin ve System. Windows. Forms. dll dosyasını bulun.
+2. **Başvuru Ekle** iletişim kutusunda, **Araştır** sekmesinde, **araştır**' ı seçin ve System.Windows.Forms.DLL bulun.
 
     DLL 'yi *C:\Windows\Microsoft.NET\Framework\v4.0.30319*içinde bulabilirsiniz.
 
-3. **Tamam**'a tıklayın.
+3. **Tamam**’a tıklayın.
 
 4. DebuggerSide.cs ' de, aşağıdaki deyimi `Imports` deyimlere ekleyin:
 
@@ -190,13 +190,13 @@ Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ay�
 
 2. **Başvuru Ekle** iletişim kutusunda, **Araştır** sekmesinde, Microsoft. VisualStudio. debuggervisualiciler ' ı tıklatın.
 
-3. **Tamam**'a tıklayın.
+3. **Tamam**’a tıklayın.
 
 4. **MyTestConsole**' a sağ tıklayın ve ardından **Başvuru Ekle** ' ye tıklayın.
 
 5. **Başvuru Ekle** iletişim kutusunda, **Projeler** sekmesine tıklayın ve ardından myfirstgörselleştirici ' ı seçin.
 
-6. **Tamam**'a tıklayın.
+6. **Tamam**’a tıklayın.
 
 ## <a name="finish-your-test-harness-and-test-your-visualizer"></a>Test ortamınızı tamamlayın ve Görselleştiriciyi test edin
  Şimdi, test bandı sona ermesini sağlayacak kodu ekleyeceksiniz.

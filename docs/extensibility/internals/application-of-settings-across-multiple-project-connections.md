@@ -1,5 +1,5 @@
 ---
-title: Birden Çok Proje Bağlantısı Arasında Ayarların Uygulanması | Microsoft Dokümanlar
+title: Birden çok proje bağlantısı arasında ayarların uygulaması | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,28 +11,28 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: bcaed0f7f2380dd36bcbffd776839025fe9efa16
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80710054"
 ---
-# <a name="application-of-settings-across-multiple-project-connections"></a>Ayarların birden çok proje bağlantısı arasında uygulanması
-Kaynak Denetimi Eklentisi API Sürüm 1.2 kullanılarak oluşturulmuş bir kaynak denetim eklentisi, aynı kaynak denetimi işlemini birden çok proje veya birden çok bağlantı bağlamında yürütmek için bir toplu iş leyebilir. Toplu iş, kullanıcı deneyiminden gereksiz, proje başına iletişim kutularını ortadan kaldırmak için kullanılabilir.
+# <a name="application-of-settings-across-multiple-project-connections"></a>Birden çok proje bağlantısı üzerindeki ayarların uygulaması
+Kaynak denetimi eklentisi API sürümü 1,2 kullanılarak oluşturulan bir kaynak denetimi eklentisi, birden fazla proje veya birden çok bağlantı bağlamı arasında aynı kaynak denetimi işlemini yürütmek için bir toplu işlem kullanabilir. Toplu işler, Kullanıcı deneyiminden proje başına gereksiz iletişim kutularını ortadan kaldırmak için kullanılabilir.
 
- Bir kullanıcı Kaynak Denetimi Eklentisi API Sürüm 1.1 (örneğin, farklı dosya paylaşım lı makinelerde iki web projesi) kullanılarak oluşturulmuş bir kaynak denetim eklentisinde birden fazla bağlantıya ait birden çok öğe seçer ve bunları denetlerse, kullanıcı aynı iletişim kutusunu tekrar tekrar görür. IDE her bağlantı bağlamı için durumunu sıfırladığı için, kullanıcı iletişim kutusundaki Tüm onay **kutusuna Uygula'yı** tıklatsa bile bu senaryo oluşur.
+ Kullanıcı, kaynak denetimi eklentisi API sürümü 1,1 (örneğin, farklı dosya paylaşma makinelerinde iki Web projesi) kullanılarak oluşturulan bir kaynak denetim eklentisinde birden fazla bağlantıya ait birden çok öğeyi seçerse, Kullanıcı aynı iletişim kutusunu sürekli olarak görür. Bu senaryo, Kullanıcı iletişim kutusundaki **Tümüne Uygula** onay kutusuna tıksa bıle, IDE her bir bağlantı bağlamı için durumunu sıfırladığında meydana gelir.
 
 ## <a name="new-capability-flag"></a>Yeni yetenek bayrağı
- İşlev, `SccBeginBatch` `SCC_CAP_BATCH` bir toplu iş işleminin devam ettiğini belirtmek için bayrağı ayarlar.
+ `SccBeginBatch`İşlevi, `SCC_CAP_BATCH` bir toplu işlemin devam ettiğini göstermek için bayrağı ayarlar.
 
 ## <a name="new-functions"></a>Yeni işlevler
-Aşağıdaki yeni işlevler toplu işleyişi destekler:
+Aşağıdaki yeni işlevler Batch işlemini destekler:
 
 - [SccBeginBatch](../../extensibility/sccbeginbatch-function.md)
 
 - [SccEndBatch](../../extensibility/sccendbatch-function.md)
 
-İşlev `SCCBeginBatch` bir kaynak denetim işlemleri grubu başlatır. İşlev `SccEndBatch` grubu kapatır. Gruplar iç içe geçmeyebilir.
+`SCCBeginBatch`İşlevi, kaynak denetimi işlemleri grubunu başlatır. `SccEndBatch`İşlev grubu kapatır. Gruplar iç içe olamaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak Denetimi Eklentisi API Sürüm 1.2'deki yenilikler](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)
+- [Kaynak denetimi eklentisi API sürümü 1,2 ' deki yenilikler](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)
