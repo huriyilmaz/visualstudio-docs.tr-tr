@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3f88e4781115fa7a5fac54826304ab32472eeefb
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905362"
 ---
 # <a name="how-to-install-a-source-control-plug-in"></a>Nasıl yapılır: kaynak denetimi eklentisi yüklemesi
@@ -28,7 +28,7 @@ Kaynak denetimi eklentisi oluşturma üç adımdan oluşur:
 3. Uygun kayıt defteri girdilerini yaparak DLL 'yi kaydettirin.
 
 ## <a name="integration-with-visual-studio"></a>Visual Studio ile Tümleştirme
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Kaynak denetimi eklentisi API 'sine uygun kaynak denetimi eklentilerini destekler.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Kaynak denetimi eklentisi API 'sine uygun kaynak denetimi eklentilerini destekler.
 
 ### <a name="register-the-source-control-plug-in"></a>Kaynak denetimi eklentisini kaydetme
  Çalışan bir tümleşik geliştirme ortamı (IDE) kaynak denetim sistemine çağrı yapmadan önce, önce API 'YI dışarı aktaran kaynak denetimi eklentisi DLL 'sini bulmalıdır.

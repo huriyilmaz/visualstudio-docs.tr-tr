@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3b1ac3c147962b943499172435c3f601115d36a9
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905345"
 ---
 # <a name="how-to-implement-nested-projects"></a>Nasıl yapılır: iç içe Projeler uygulama
@@ -37,7 +37,7 @@ ms.locfileid: "85905345"
 
 4. Üst proje, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AddVirtualProject%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AddVirtualProjectEx%2A> alt projelerinin her birinde yöntemini veya yöntemini çağırır.
 
-     <xref:Microsoft.VisualStudio.Shell.Interop.__VSADDVPFLAGS> `AddVirtualProject` Sanal (iç içe) projenin proje penceresine eklenmesi, derlemeden hariç tutulması, kaynak kodu denetimine eklenmesi ve bu şekilde devam etmesi gerektiğini göstermek için yöntemine geçiş yapabilirsiniz. `VSADDVPFLAGS`iç içe geçmiş projenin görünürlüğünü denetlemenize ve bununla hangi işlevlerin ilişkilendirildiğini belirtebilmenizi sağlar.
+     <xref:Microsoft.VisualStudio.Shell.Interop.__VSADDVPFLAGS> `AddVirtualProject` Sanal (iç içe) projenin proje penceresine eklenmesi, derlemeden hariç tutulması, kaynak kodu denetimine eklenmesi ve bu şekilde devam etmesi gerektiğini göstermek için yöntemine geçiş yapabilirsiniz. `VSADDVPFLAGS` iç içe geçmiş projenin görünürlüğünü denetlemenize ve bununla hangi işlevlerin ilişkilendirildiğini belirtebilmenizi sağlar.
 
      Üst projenin proje dosyasında depolanan bir proje GUID 'SI olan önceden varolan bir alt projeyi yeniden yüklerseniz, ana proje çağırır `AddVirtualProjectEx` . Ve arasındaki tek fark `AddVirtualProject` , `AddVirtualProjectEX` `AddVirtualProjectEX` üst projenin `guidProjectID` etkinleştirilecek <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProjectOfGuid%2A> ve doğru çalışması için alt projenin örnek başına bir örnek belirtmesini sağlayan bir parametreye sahiptir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProjectOfProjref%2A> .
 
@@ -45,7 +45,7 @@ ms.locfileid: "85905345"
 
 5. IDE, <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.OpenChildren> üst projenin her bir alt projesinde yöntemini çağırır.
 
-     `IVsParentProject`Projeleri iç içe aktarmak istiyorsanız üst projenin uygulanması gerekir. Ancak üst proje, `QueryInterface` `IVsParentProject` altında üst projelere sahip olsa bile hiçbir şekilde hiçbir şekilde çağırılmaz. Çözümü öğesine yapılan çağrıyı işler `IVsParentProject` ve uygulanmışsa, `OpenChildren` iç içe projeler oluşturmak için çağırır. `AddVirtualProjectEX`her zaman öğesinden çağırılır `OpenChildren` . Hiyerarşi oluşturma olaylarını sırasıyla tutmak için asla ana proje tarafından çağrılmamalıdır.
+     `IVsParentProject`Projeleri iç içe aktarmak istiyorsanız üst projenin uygulanması gerekir. Ancak üst proje, `QueryInterface` `IVsParentProject` altında üst projelere sahip olsa bile hiçbir şekilde hiçbir şekilde çağırılmaz. Çözümü öğesine yapılan çağrıyı işler `IVsParentProject` ve uygulanmışsa, `OpenChildren` iç içe projeler oluşturmak için çağırır. `AddVirtualProjectEX` her zaman öğesinden çağırılır `OpenChildren` . Hiyerarşi oluşturma olaylarını sırasıyla tutmak için asla ana proje tarafından çağrılmamalıdır.
 
 6. IDE, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A> yöntemi alt projede çağırır.
 
@@ -56,7 +56,7 @@ ms.locfileid: "85905345"
      Zaten yoksa, üst proje çağırarak her iç içe proje için bir GUID oluşturur `CoCreateGuid` .
 
     > [!NOTE]
-    > `CoCreateGuid`, bir GUID oluşturulduğunda çağrılan bir COM API 'sidir. Daha fazla bilgi için `CoCreateGuid` MSDN Kitaplığı 'ndaki ve GUID 'ler bölümüne bakın.
+    > `CoCreateGuid` , bir GUID oluşturulduğunda çağrılan bir COM API 'sidir. Daha fazla bilgi için `CoCreateGuid` MSDN Kitaplığı 'ndaki ve GUID 'ler bölümüne bakın.
 
      Üst proje, bu GUID 'yi proje dosyasında, IDE 'de bir sonraki sefer açıldığında elde edilecek şekilde depolar. `AddVirtualProjectEX`Alt proje için öğesini almak üzere öğesinin çağrılması ile ilgili daha fazla bilgi için bkz `guidProjectID` . 4. adım.
 

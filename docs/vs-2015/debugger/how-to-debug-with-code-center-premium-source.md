@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Kod Merkezi birincil kaynağı ile hata ayıklama | Microsoft Docs'
+title: 'Nasıl yapılır: Kod Merkezi Premium kaynağıyla hata ayıklama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,128 +18,128 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: db9a3e08e14e7fadca6df9e32361c0b042f565e9
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438327"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64783485"
 ---
-# <a name="how-to-debug-with-code-center-premium-source"></a>Nasıl yapılır: Kod Merkezi birincil kaynağı ile hata ayıklama
+# <a name="how-to-debug-with-code-center-premium-source"></a>Nasıl Yapılır: Kod Merkezi Birincil Kaynağı ile Hata Ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İle [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] hata ayıklayıcı, Microsoft MSDN Kod Merkezi birincil güvenli paylaşılan kaynaktan hata ayıklaması yapabilirsiniz.  
+[!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]Hata ayıklayıcı ile, MICROSOFT MSDN Code Center Premium 'da güvenli paylaşılan kaynakta hata ayıklaması yapabilirsiniz.  
   
- Bu konu başlığı altında ayarlamak ve Visual Studio'da kod merkezi birincil kaynak kodunda hata ayıklamak açıklanmaktadır.  
+ Bu konu başlığında, Visual Studio 'da kod Merkezi Premium kaynak kodu ayarlama ve hata ayıklama işlemlerinin nasıl yapılacağı açıklanmaktadır.  
   
-### <a name="to-prepare-for-debugging-with-code-center-premium"></a>Kod Merkezi birincil ile hata ayıklama için hazırlamak için  
+### <a name="to-prepare-for-debugging-with-code-center-premium"></a>Kod Merkezi Premium ile hata ayıklamaya hazırlanmak için  
   
-1. Akıllı kart okuyucu bağlanmak ve paylaşılan kaynak girişimi aldığınız kart ekleyin.  
+1. Akıllı kart okuyucunuzu bağlayın ve paylaşılan kaynak girişiminizden aldığınız kartı ekleyin.  
   
-2. Visual Studio'yu başlatın.  
+2. Visual Studio 'Yu başlatın.  
   
-3. Üzerinde **Araçları** menüsünü tıklatın **seçenekleri**.  
+3. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.  
   
-4. İçinde **seçenekleri** açık iletişim kutusunu **hata ayıklama** düğüm ve tıklatın **genel**.  
+4. **Seçenekler** iletişim kutusunda, **hata ayıklama** düğümünü açın ve **genel**' e tıklayın.  
   
-5. NET **yalnızca benim kodumu etkinleştir (sadece yönetilen)** onay kutusu.  
+5. **Yalnızca kendi kodum etkinleştir (yalnızca yönetilen)** onay kutusunu temizleyin.  
   
-6. Seçin **kaynak sunucusu desteğini etkinleştir**.  
+6. **Kaynak sunucu desteğini etkinleştir**' i seçin.  
   
-7. NET **özgün sürümle kaynak dosyaların uyuşmasını gerektir**.  
+7. **Kaynak dosyalarının özgün sürümle tam olarak eşleşmesini gerektir**seçimini kaldırın.  
   
-8. Altında **hata ayıklama** düğümünü tıklatın **sembolleri**.  
+8. **Hata ayıklama** düğümü altında **semboller**' e tıklayın.  
   
-9. İçinde **sembol dosyası (.pdb) konumlar** kutusunun işaretini kaldırın **Microsoft Server sembolleri** onay kutusunu işaretleyin ve aşağıdaki konumlardan ekleyin:  
+9. **Sembol dosyası (. pdb) konumları** kutusunda, **Microsoft sunucu sembolleri** onay kutusunu temizleyin ve aşağıdaki konumları ekleyin:  
   
      `https://codepremium.msdn.microsoft.com/symbols`  
   
      `src=https://codepremium.msdn.microsoft.com/source/Visual%20Studio%202010/SP1/`  
   
    > [!NOTE]
-   > Eğik yazdığınızdan emin olun<strong>/</strong> yolun sonuna.  
+   > Yolun sonuna sonundaki eğik çizgiyi eklediğinizden emin olun <strong>/</strong> .  
   
-     Bu konumlar, bu sembolleri ilk yüklenmesini sağlamak için listenin en üstüne taşıyın.  
+     Bu simgelerin önce yüklendiğinden emin olmak için bu konumları listenin en üstüne taşıyın.  
   
    > [!NOTE]
-   > Yüklenen ilk konumları olmasını sağlamak Bu kod merkezi birincil konumlar listelenmesi gerekir. Visual Studio 2010'da, yukarıdaki herhangi bir sunucuya taşınamaz **Microsoft sembol sunucuları** onay kutusunu temizlemeniz gerekir neden olan giriş.  
+   > Bu kod Merkezi Premium konumlarının önce, yüklenen ilk konum olmaları için önce listelenmesi gerekir. Visual Studio 2010 ' de, **Microsoft symbol Servers** girişinin üzerinde herhangi bir sunucuyu taşıyamazsınız, bu nedenle onay kutusunu temizlemeniz gerekir.  
    > 
-   >  Sembolleri Microsoft hata ayıklama oturumu sırasında sembolleri için şunu yapın:  
+   >  Hata ayıklama oturumu sırasında Microsoft sembollerine sembolleri yüklemek için şunu yapın:  
    > 
-   > 1. Üzerinde **hata ayıklama** menüsünde seçin **Windows** seçip **modülleri**.  
-   >    2.  Semboller için istediğiniz modülü seçin ve ardından kısayol menüsünü açın. Seçin **sembolleri şuradan Yükle** seçip **Microsoft sembol sunucuları**.  
+   > 1. **Hata Ayıkla** menüsünde **Windows** ' u ve ardından **modüller**' i seçin.  
+   >    2.  Sembolleri istediğiniz modülü seçin ve ardından kısayol menüsünü açın. **Sembolleri yükle** ' yi seçin ve ardından **Microsoft sembol sunucuları**' nı seçin.  
   
-10. İçinde **sembolleri sembol sunucularından bu dizindeki önbellek** kutusunda, bir konum girin `C:\symbols` burada kod merkezi birincil önbellek simgeleri. Semboller önbelleğe alma, hata ayıklama sırasında performansını önemli ölçüde artırabilir.  
+10. **Bu dizindeki sembol sunucularından önbellek sembolleri** kutusunda, `C:\symbols` Code Center Premium 'un sembolleri önbelleğe geçirebileceği gibi bir konum girin. Önbelleğe alma sembolleri, hata ayıklama sırasında performansı önemli ölçüde iyileştirebilir.  
   
-     Kaynak kodu ile hata ayıklama sorunlarla karşılaşırsanız [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bu yordamı tamamladıktan sonra daha önce önbelleğe alınmış ve eski sembol dosyaları için Önbellek konumunu denetleyin. Güncel olmayan sembol dosyalarını kaldırın.  
+     Bu yordamı tamamladıktan sonra kaynak kodu hata ayıklaması yaşarsanız [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , daha önce önbelleğe alınmış ve eski sembol dosyaları için önbellek konumunuzu denetleyin. Güncel olmayan sembol dosyalarını kaldırın.  
   
-11. **Tamam**'ı tıklatın.  
+11. **Tamam**’a tıklayın.  
   
-12. Yeniden [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ayarlarını kalıcı olmasını sağlamak için.  
+12. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Ayarların kalıcı olduğundan emin olmak için yeniden başlatın.  
   
-### <a name="to-debug-your-source-code-using-attach-to-process"></a>İşleme İliştir kullanarak kaynak kodunuz hata ayıklamak için  
+### <a name="to-debug-your-source-code-using-attach-to-process"></a>Işleme Iliştir kullanarak kaynak kodunuzda hata ayıklamak için  
   
-1. Akıllı kart okuyucu bağlanmak ve paylaşılan kaynak girişimi aldığınız kart ekleyin.  
+1. Akıllı kart okuyucunuzu bağlayın ve paylaşılan kaynak girişiminizden aldığınız kartı ekleyin.  
   
-2. Visual Studio'yu başlatın.  
+2. Visual Studio 'Yu başlatın.  
   
 3. Visual Studio projenizi açın.  
   
-4. Üzerinde **Araçları** menüsünü tıklatın **iliştirme**.  
+4. **Araçlar** menüsünde, **İşleme İliştir ' e**tıklayın.  
   
-5. İçinde **iliştirme** iletişim kutusu, tıklayın **seçin**.  
+5. **Işleme İliştir** Iletişim kutusunda **Seç**' e tıklayın.  
   
-6. İçinde **kod türünü seç** iletişim kutusunun **bu tür kodlarda algılamak**seçin **yerel**, **yönetilen**, ve **yönetilen () v4.0)**.  
+6. **Kod türünü seç** iletişim kutusunda, **Bu kod türlerini Algıla**altında **Yerel**, **yönetilen**ve **yönetilen (v 4.0)** seçeneğini belirleyin.  
   
-7. Tıklayın **Tamam** kapatmak için **kod türünü seç** iletişim kutusu.  
+7. **Kod türünü seç** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
   
-8. İçinde **kullanılabilir işlemler** kutusunda, hata ayıklamak istediğiniz işlemi seçin.  
+8. **Kullanılabilir işlemler** kutusunda, hata ayıklamak istediğiniz işlemi seçin.  
   
-9. Tıklayın **ekleme**.  
+9. **Ekle**' ye tıklayın.  
   
-10. Sertifikanızı onaylamanız istendiğinde, tıklayın **Tamam**. Ardından PIN'İNİZİ girin. Kod Merkezi birincil kullanım koşullarını kabul, siz istenirse kullanılır.  
+10. Sertifikanızı onaylamanız istendiğinde, **Tamam**' a tıklayın. Sonra PIN 'inizi girin. İstenirse, kod Merkezi Premium için kullanım koşullarını kabul edin.  
   
-     Semboller indiriliyor, çok sayıda ağ hızına bağlı olarak zaman alabilir. Tüm semboller başarıyla indirildi, durum çubuğunu gösterir.  
+     Simgeleri indirme, ağ hızına bağlı olarak çok zaman alabilir. Durum çubuğu, tüm simgelerin başarıyla indirildiğine işaret eder.  
   
-11. Çözümünüzdeki tüm yönetilen projeleri için ek adımları yineleyin.  
+11. Çözümünüzdeki tüm yönetilen projeler için iliştirme adımlarını yineleyin.  
   
-### <a name="to-debug-source-code-from-an-existing-solution"></a>Varolan bir çözüm kaynak kodundan hata ayıklamak için  
+### <a name="to-debug-source-code-from-an-existing-solution"></a>Mevcut bir çözümden kaynak kodunda hata ayıklamak için  
   
-1. İçinde **Çözüm Gezgini**, çözüm için kısayol menüsünü açın ve ardından **özellikleri**.  
+1. **Çözüm Gezgini**, çözüm için kısayol menüsünü açın ve ardından **Özellikler**' i seçin.  
   
-2. Çözüm özellik sayfaları iletişim kutusunda seçin **kaynak dosyalarında Hata Ayıkla** içinde **ortak özellikler** düğümü.  
+2. Çözüm Özellik sayfaları iletişim kutusunda, **ortak özellikler** düğümünde **Hata Ayıkla kaynak dosyaları** ' nı seçin.  
   
-3. Şu konuma ekleme **kaynak dosyaları içeren dizinler** listesi:  
+3. **Kaynak dosyaları Içeren dizinlere** aşağıdaki konumu ekleyin:  
   
     `https://codepremium.msdn.microsoft.com/source/Visual%20Studio%202010/SP1/`  
   
    > [!NOTE]
-   > Eğik yazdığınızdan emin olun<strong>/</strong> yolun sonuna.  
+   > Yolun sonuna sonundaki eğik çizgiyi eklediğinizden emin olun <strong>/</strong> .  
   
-4. Çözümünüzdeki her yönetilen proje için aşağıdakileri yapın  
+4. Çözümünüzdeki yönetilen her proje için aşağıdakileri yapın  
   
-   1. Çözüm Gezgini'nde, proje için kısayol menüsünü açın ve ardından **özellikleri**.  
+   1. Çözüm Gezgini ' de, proje için kısayol menüsünü açın ve ardından **Özellikler**' i seçin.  
   
-   2. Seçin **hata ayıklama** seçip **unmanged kod hata ayıklamayı**.  
+   2. **Hata Ayıkla** ' yı seçin ve ardından yönetilmeyen **kod hata ayıklamayı etkinleştir**' i seçin.  
   
-### <a name="to-debug-your-solution-with-code-center-premium-source"></a>Çözümünüzü kod merkezi birincil kaynağı ile hata ayıklamak için  
+### <a name="to-debug-your-solution-with-code-center-premium-source"></a>Code Center Premium kaynağıyla çözümünüzde hata ayıklamak için  
   
-1. İçinde `Package` sınıfı, paket Oluşturucu bir kesme noktası ayarlayın.  
+1. `Package`Sınıfınıza paket oluşturucusunda bir kesme noktası ayarlayın.  
   
-2. İçinde `Debug` menüsünü tıklatın **hata ayıklamayı Başlat**.  
+2. `Debug`Menüsünde, **hata ayıklamayı Başlat**' a tıklayın.  
   
-3. Paket oluşturucu içinde kesme noktasına ulaştığınızda, Git **çağrı yığını** penceresini açın ve sonra simgeler, yüklemek istediğiniz derlemenin yığın çerçevesi sağ tıklayın **yük sembolleri**.  
+3. Paket oluşturucusunda kesme noktasına ulaştığınızda, **çağrı yığını** penceresine gidin ve sembolleri yüklemek istediğiniz derlemenin yığın çerçevesini sağ tıklatın ve ardından **sembolleri yükle**' ye tıklayın.  
   
-     Kaynak yüklemek için çağrı çerçevesi çift tıklayın.  
+     Kaynağı yüklemek için çağrı çerçevesine çift tıklayın.  
   
-### <a name="to-browse-source-code-on-code-center-premium"></a>Kod Merkezi birincil kaynak koduna gidin  
+### <a name="to-browse-source-code-on-code-center-premium"></a>Kod Merkezi Premium 'da kaynak koda gitmek için  
   
-1. Akıllı kart okuyucu bağlanmak ve paylaşılan kaynak girişimi aldığınız kart ekleyin.  
+1. Akıllı kart okuyucunuzu bağlayın ve paylaşılan kaynak girişiminizden aldığınız kartı ekleyin.  
   
-2. Internet Explorer başlatma aşağıdaki URL'yi girin: `https://codepremium.msdn.microsoft.com`  
+2. Internet Explorer 'ı başlatın aşağıdaki URL 'YI girin: `https://codepremium.msdn.microsoft.com`  
   
-3. İstediğiniz kaynak bulmak için Gözat'ı tıklatın.  
+3. İstediğiniz kaynağı bulmak için gidin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)   
- [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)   
- [Kod Merkezi birincil](https://www.microsoft.com/en-us/sharedsource/code-center-premium.aspx)
+ [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)   
+ [Kod Merkezi Premium](https://www.microsoft.com/en-us/sharedsource/code-center-premium.aspx)

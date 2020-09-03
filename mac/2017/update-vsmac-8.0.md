@@ -1,6 +1,6 @@
 ---
-title: Mac için Visual Studio'nun güncellenmesi
-description: Mac için Visual Studio'yu en yeni sürüme güncelleme talimatları.
+title: Mac için Visual Studio güncelleştiriliyor
+description: En yeni sürüme Mac için Visual Studio güncelleştirme yönergeleri.
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 06/20/2018
@@ -8,26 +8,26 @@ ms.technology: vs-ide-install
 ms.assetid: BC836802-CC65-41F7-BAEC-A42AED0371A9
 hide_comments: false
 ms.openlocfilehash: 092cf0c8794d143a6e563183fdea96fd5e6cf8cc
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74985152"
 ---
-# <a name="update-visual-studio-2017-for-mac-version-7-to-visual-studio-2019-for-mac-version-80"></a>Mac için Visual Studio 2017'yi (sürüm 7) Mac için Visual Studio 2019'a güncelleyin (sürüm 8.0)
+# <a name="update-visual-studio-2017-for-mac-version-7-to-visual-studio-2019-for-mac-version-80"></a>Mac için Visual Studio 2017 (sürüm 7) güncelleştirme Mac için Visual Studio 2019 (sürüm 8,0)
 
-Mac için Visual Studio 2019 birçok yeni geliştirme getiriyor: yepyeni bir C# editörü, yeni bir başlangıç deneyimi, birden fazla örnek için destek ve Xamarin, Unity ve .NET Core geliştiricileri için yeni geliştirmeler. Mac 2019 için Visual Studio'da yer alan her şey hakkında daha fazla bilgi için aşağıdaki blog gönderilerine göz atın:
+Mac için Visual Studio 2019, birçok yeni geliştirme sunar: yepyeni bir C# Düzenleyicisi, yeni bir başlangıç deneyimi, birden çok örnek için destek ve Xamarin, Unity ve .NET Core geliştiricileri için yeni geliştirmeler geliştirme. Mac için Visual Studio 2019 ' ye dahil olan her şey hakkında daha fazla bilgi için aşağıdaki blog gönderilerine göz atın:
 
-- [Mac için Visual Studio 2019 artık kullanıma sunuldu](https://devblogs.microsoft.com/visualstudio/visual-studio-2019-for-mac-is-now-available/)
-- [Visual Studio 2019 Mac sürüm 8.1 için artık kullanılabilir (ve 8.2 için bir Önizleme)](https://devblogs.microsoft.com/visualstudio/visual-studio-2019-for-mac-version-8-1-is-now-available-and-a-preview-for-8-2/)
+- [Mac için Visual Studio 2019 artık kullanılabilir](https://devblogs.microsoft.com/visualstudio/visual-studio-2019-for-mac-is-now-available/)
+- [Mac için Visual Studio 2019 sürüm 8,1 artık kullanılabilir (ve 8,2 için Önizleme)](https://devblogs.microsoft.com/visualstudio/visual-studio-2019-for-mac-version-8-1-is-now-available-and-a-preview-for-8-2/)
 
 > [!IMPORTANT]
-> Visual Studio 2017 ile Mac **sürüm 7.7.3**için bilinen bir sorun vardır , burada güncelleme sürekli "Hata alma güncelleştirme bilgileri" gösterecektir. Bu durumda, [Mac için Visual Studio'yu indirin](https://visualstudio.microsoft.com/vs/mac/) ve Mac için Visual Studio 2019'u [yüklemek](/visualstudio/mac/installation?view=vsmac-2019) için aşağıdaki adımları izleyin. Bunun Mac için mevcut Visual Studio 2017 örneğinin üzerine yazacağını unutmayın.
+> Mac için Visual Studio 2017 **sürüm 7.7.3**ile ilgili bilinen bir sorun vardır. burada Güncelleştirici, "güncelleştirme bilgilerini alma hatası" olarak görünür. Bu durumda [Mac için Visual Studio indirin](https://visualstudio.microsoft.com/vs/mac/) ve Mac Için Visual Studio 2019 ['yi yükleme](/visualstudio/mac/installation?view=vsmac-2019) adımlarını izleyin. Bunun var olan Mac için Visual Studio 2017 örneğinizin üzerine yazyacağını unutmayın.
 
-En son sürümü almak için Visual Studio > **Güncellemeler için Kontrol'e**göz atarak [güncelleyiciyi](/visualstudio/mac/update?view=vsmac-2017) kullanabilirsiniz...
+En son sürümü almak için, [Güncelleştirici](/visualstudio/mac/update?view=vsmac-2017) ' i Visual Studio 'ya göz atarak kullanabilirsiniz **> güncelleştirmeleri denetle...**:
 
-![güncelleyici iletişim kutusu](media/update-vsmac-updater.png)
+![Güncelleştirici iletişim kutusu](media/update-vsmac-updater.png)
 
-Veya, updateer ile ilgili sorunlar yaşıyorsanız veya sorun yaşıyorsanız, yepyeni 2019 yükleyicisini [indirin](https://visualstudio.microsoft.com/vs/mac/) ve hızlı bir şekilde çalışmaya başlayabilirsiniz:
+Ya da Güncelleştirici ile ilgili sorun yaşıyorsanız, yeni 2019 yükleyicisini [indirin](https://visualstudio.microsoft.com/vs/mac/) ve hızlıca çalışmaya başlayın:
 
-![kurulum ekranı](media/update-vsmac-installer.png)
+![yükleme ekranı](media/update-vsmac-installer.png)

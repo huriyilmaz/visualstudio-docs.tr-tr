@@ -18,25 +18,25 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: e05bd9173b83ec3303a058dcf61ea48a7ef7675c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438582"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64785943"
 ---
 # <a name="walkthrough-create-a-custom-tab-by-using-ribbon-xml"></a>İzlenecek yol: Şerit XML kullanarak özel sekme oluşturma
-  Bu izlenecek yol kullanarak özel bir Şerit sekmesi oluşturma işlemini gösterir **Ribbon (XML)** öğesi.
+  Bu izlenecek yol, **Şerit (XML)** öğesini kullanarak nasıl özel Şerit sekmesinin oluşturulduğunu gösterir.
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Düğmeleri ekleme **eklentileri** sekmesi. **Eklentileri** sekmedir Şerit XML dosyasında tanımlanan varsayılan bir sekme.
+- **Eklentiler** sekmesine düğmeler ekleme. **Eklentiler** sekmesi, Şerit XML dosyasında tanımlanan varsayılan sekmedir.
 
-- Düğmeleri kullanarak Microsoft Office Word'ü Otomatikleştirme **eklentileri** sekmesi.
+- **Eklentiler** sekmesindeki düğmeleri kullanarak Microsoft Office Word 'ü otomatikleştirme.
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
@@ -45,47 +45,47 @@ ms.locfileid: "63438582"
 
 - Microsoft Word.
 
-## <a name="create-the-project"></a>Projeyi oluşturma
- İlk adım, bir sözcük VSTO eklentisi projesi oluşturmaktır. Daha sonra özelleştireceğim **eklentileri** bu belgenin sekmesi.
+## <a name="create-the-project"></a>Proje oluşturma
+ İlk adım, bir Word VSTO eklenti projesi oluşturmaktır. Daha sonra bu belgenin **Eklentiler** sekmesini özelleştireceğinizi göreceksiniz.
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Oluşturma bir **Word eklentisi** adlı proje **MyRibbonAddIn**.
+1. **MyRibbonAddIn**adlı bir **Word eklenti** projesi oluşturun.
 
-     Daha fazla bilgi için [nasıl yapılır: Visual Studio'da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+     Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] açılır **ThisAddIn.cs** veya **ThisAddIn.vb** ekler ve kod dosyası **MyRibbonAddIn** için proje **Çözüm Gezgini**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**ThisAddIn.cs** veya **ThisAddIn. vb** kod dosyasını açar ve **Çözüm Gezgini** **MyRibbonAddIn** projesini ekler.
 
-## <a name="create-the-vsto-add-ins-tab"></a>VSTO eklentileri sekmesi oluştur
- Oluşturmak için **eklentileri** sekmesinde, ekleme bir **Ribbon (XML)** projenize öğesi. Bu kılavuzda daha sonra bu sekmeye bazı düğmeler ekleyeceksiniz.
+## <a name="create-the-vsto-add-ins-tab"></a>VSTO eklentileri sekmesini oluşturma
+ **Eklentiler** sekmesini oluşturmak için, projenize bir **Şerit (XML)** öğesi ekleyin. Bu izlenecek yolda daha sonra bu sekmeye bazı düğmeler ekleyeceksiniz.
 
-### <a name="to-create-the-add-ins-tab"></a>Eklentiler sekmesi oluşturma
+### <a name="to-create-the-add-ins-tab"></a>Eklentiler sekmesini oluşturmak için
 
-1. Üzerinde **proje** menüsünü tıklatın **Yeni Öğe Ekle**.
+1. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
 
-2. İçinde **Yeni Öğe Ekle** iletişim kutusunda **Ribbon (XML)** .
+2. **Yeni öğe Ekle** Iletişim kutusunda **Şerit (XML)** öğesini seçin.
 
-3. Yeni Şeridin adını değiştirmek **MyRibbon**, tıklatıp **Ekle**.
+3. Yeni şeridin adını **MyRibbon**olarak değiştirin ve **Ekle**' ye tıklayın.
 
-     **MyRibbon.cs** veya **MyRibbon.vb** dosyası tasarımcıda açılır. Adlı bir XML dosyası **MyRibbon.xml** de projenize eklenir.
+     **MyRibbon.cs** veya **MyRibbon. vb** dosyası tasarımcıda açılır. **MyRibbon.xml** ADLı bir XML dosyası projenize de eklenir.
 
-4. İçinde **Çözüm Gezgini**, sağ **ThisAddIn.cs** veya **ThisAddIn.vb**ve ardından **Kodu Görüntüle**.
+4. **Çözüm Gezgini**, **ThisAddin.cs** veya **ThisAddIn. vb**öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
-5. Aşağıdaki kodu ekleyin **ThisAddIn** sınıfı. Bu kodu geçersiz kılmalar `CreateRibbonExtensibilityObject` Office uygulamasına sınıf yöntemi ve Şerit XML döndürür.
+5. Aşağıdaki kodu **ThisAddIn** sınıfına ekleyin. Bu kod, yöntemini geçersiz kılar `CreateRibbonExtensibilityObject` ve ŞERIT XML sınıfını Office uygulamasına döndürür.
 
      [!code-csharp[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs#1)]
      [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb#1)]
 
-6. İçinde **Çözüm Gezgini**, sağ **MyRibbonAddIn** proje ve ardından **yapı**. Projenin hatasız oluşturulduğunu doğrulayın.
+6. **Çözüm Gezgini**, **MyRibbonAddIn** projesine sağ tıklayın ve ardından **Oluştur**' a tıklayın. Projenin hata olmadan yapılandırıldığını doğrulayın.
 
-## <a name="add-buttons-to-the-add-ins-tab"></a>Add-Ins sekmesine düğme ekleme
- Bu VSTO eklentisi için kullanıcıların etkin belgeye Demirbaş metni ve belirli bir tablo eklemek için bir yol sağlamak olmaktır. Kullanıcı arabirimini sağlamak için iki düğme ekleyin **eklentileri** Ribbon XML dosyasını değiştirerek sekmesi. Bu kılavuzda daha sonra geri çağırma yöntemleri düğmelerinin tanımlayacaksınız. Ribbon XML dosyasındaki hakkında daha fazla bilgi için bkz: [Ribbon XML](../vsto/ribbon-xml.md).
+## <a name="add-buttons-to-the-add-ins-tab"></a>Eklentiler sekmesine düğme ekleme
+ Bu VSTO eklentisinin hedefi, kullanıcılara ortak metin ve belirli bir tabloyu etkin belgeye eklemek için bir yol vermektir. Kullanıcı arabirimini sağlamak için, Şerit XML dosyasını değiştirerek **Eklentiler** sekmesine iki düğme ekleyin. Bu izlenecek yolda daha sonra düğmeler için geri çağırma yöntemleri tanımlayacaksınız. Şerit XML dosyası hakkında daha fazla bilgi için bkz. [RIBBON XML](../vsto/ribbon-xml.md).
 
-### <a name="to-add-buttons-to-the-add-ins-tab"></a>Add-Ins sekmesine düğme eklemek için
+### <a name="to-add-buttons-to-the-add-ins-tab"></a>Eklentiler sekmesine düğme eklemek için
 
-1. İçinde **Çözüm Gezgini**, sağ **MyRibbon.xml** ve ardından **açık**.
+1. **Çözüm Gezgini**' de, **MyRibbon.xml** ' a sağ tıklayın ve sonra **Aç**' a tıklayın.
 
-2. Öğesinin içeriğini değiştirin **sekmesini** şu XML ile öğesi. Bu XML etiketi varsayılan denetim grubunun değişiklikleri **içerik**, ve etiketleri ile iki yeni düğmeler ekler **metni Ekle** ve **Tablo Ekle**.
+2. **Tab** öğesinin IÇERIĞINI aşağıdaki XML ile değiştirin. Bu XML, varsayılan denetim grubunun etiketini **içerik**olarak değiştirir ve Etiketler **metin ekle** ve **Tablo Ekle**şeklinde iki yeni düğme ekler.
 
     ```xml
     <tab idMso="TabAddIns">
@@ -100,61 +100,61 @@ ms.locfileid: "63438582"
     </tab>
     ```
 
-## <a name="automate-the-document-by-using-the-buttons"></a>Belge düğmeleri kullanarak otomatik hale getirin.
- Eklemelisiniz `onAction` için geri çağırma yöntemleri **metni Ekle** ve **Tablo Ekle** kullanıcı bunları tıkladığında eylemleri gerçekleştirmek için düğmeler. Şerit denetimleri için geri çağırma yöntemleri hakkında daha fazla bilgi için bkz. [Ribbon XML](../vsto/ribbon-xml.md).
+## <a name="automate-the-document-by-using-the-buttons"></a>Düğmeleri kullanarak belgeyi otomatikleştirin
+ `onAction`Kullanıcı bu kullanıcılara tıkladığında eylemler gerçekleştirmek Için **metin ekle** ve **Tablo Ekle** düğmeleri için geri çağırma yöntemleri eklemeniz gerekir. Şerit denetimleri için geri çağırma yöntemleri hakkında daha fazla bilgi için bkz. [RIBBON XML](../vsto/ribbon-xml.md).
 
-### <a name="to-add-callback-methods-for-the-buttons"></a>Düğme için geri çağırma yöntemleri eklemek için
+### <a name="to-add-callback-methods-for-the-buttons"></a>Düğmelere geri çağırma yöntemleri eklemek için
 
-1. İçinde **Çözüm Gezgini**, sağ **MyRibbon.cs** veya **MyRibbon.vb**ve ardından **açık**.
+1. **Çözüm Gezgini**' de, **MyRibbon.cs** veya **MyRibbon. vb**öğesine sağ tıklayın ve sonra **Aç**' a tıklayın.
 
-2. Üstüne aşağıdaki kodu ekleyin **MyRibbon.cs** veya **MyRibbon.vb** dosya. Bu kod için bir diğer ad oluşturur <xref:Microsoft.Office.Interop.Word> ad alanı.
+2. Aşağıdaki kodu **MyRibbon.cs** veya **MyRibbon. vb** dosyasının en üstüne ekleyin. Bu kod, ad alanı için bir diğer ad oluşturur <xref:Microsoft.Office.Interop.Word> .
 
      [!code-csharp[Trin_RibbonButtons#1](../vsto/codesnippet/CSharp/Trin_RibbonButtons/MyRibbon.cs#1)]
      [!code-vb[Trin_RibbonButtons#1](../vsto/codesnippet/VisualBasic/Trin_RibbonButtons/MyRibbon.vb#1)]
 
-3. Aşağıdaki yöntemi ekleyin `MyRibbon` sınıfı. Bunun için bir geri çağırma yöntemi olan **metni Ekle** geçerli imleç konumu etkin belge dizesi düğme.
+3. Sınıfına aşağıdaki yöntemi ekleyin `MyRibbon` . Bu, imlecin geçerli konumundaki etkin belgeye bir dize ekleyen **metin ekle** düğmesi için bir geri çağırma yöntemidir.
 
      [!code-csharp[Trin_Ribbon_Custom_Tab_XML#2](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.cs#2)]
      [!code-vb[Trin_Ribbon_Custom_Tab_XML#2](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.vb#2)]
 
-4. Aşağıdaki yöntemi ekleyin `MyRibbon` sınıfı. Bunun için bir geri çağırma yöntemi olan **Tablo Ekle** etkin belge geçerli imleç konumu için bir tablo ekler düğmesi.
+4. Sınıfına aşağıdaki yöntemi ekleyin `MyRibbon` . Bu, imlecin geçerli konumundaki etkin belgeye tablo ekleyen **Tablo Ekle** düğmesi için bir geri çağırma yöntemidir.
 
      [!code-csharp[Trin_Ribbon_Custom_Tab_XML#3](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.cs#3)]
      [!code-vb[Trin_Ribbon_Custom_Tab_XML#3](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.vb#3)]
 
-## <a name="testing-the-vsto-add-in"></a>VSTO eklentisi test etme
- Proje, Word açar ve adlı sekmede çalıştırdığınızda **eklentileri** Şerit üzerinde görünür. Tıklayın **metni Ekle** ve **Tablo Ekle** düğmelerini **eklentileri** kodu test etmek için sekmesinde.
+## <a name="testing-the-vsto-add-in"></a>VSTO eklentisini test etme
+ Projeyi çalıştırdığınızda, Word açılır ve şeritte **Eklentiler adlı sekme** görünür. Kodu test etmek için **Eklentiler** sekmesindeki **metin ekle** ve **Tablo Ekle** düğmelerine tıklayın.
 
-### <a name="to-test-your-vsto-add-in"></a>VSTO eklenti test etmek için
+### <a name="to-test-your-vsto-add-in"></a>VSTO eklentisini test etmek için
 
-1. Tuşuna **F5** projeyi çalıştırın.
+1. Projenizi çalıştırmak için **F5** tuşuna basın.
 
-2. Onaylayın **eklentileri** sekmedir Şerit üzerinde görünür.
+2. Şeritte **Eklentiler sekmesinin görünür** olduğunu onaylayın.
 
-3. Tıklayın **eklentileri** sekmesi.
+3. **Eklentiler** sekmesine tıklayın.
 
-4. Onaylayın **içerik** grubudur Şerit üzerinde görünür.
+4. **İçerik** grubunun şeritte görünür olduğunu doğrulayın.
 
-5. Tıklayın **metni Ekle** düğmesine **içerik** grubu.
+5. **İçerik** grubundaki **metin ekle** düğmesine tıklayın.
 
-     Bir dize, geçerli imleç konumu konumundaki belgeye eklenir.
+     İmlecin geçerli konumundaki belgeye bir dize eklenir.
 
-6. Tıklayın **Tablo Ekle** düğmesine **içerik** grubu.
+6. **İçerik** grubundaki **Tablo Ekle** düğmesine tıklayın.
 
-     Tablo, geçerli imleç konumu konumundaki belgeye eklenir.
+     İmlecin geçerli konumundaki belgeye bir tablo eklenir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Aşağıdaki konulardan Office UI özelleştirme hakkında daha fazla bilgi edinebilirsiniz:
+ Aşağıdaki konulardan Office Kullanıcı arabirimini özelleştirme hakkında daha fazla bilgi edinebilirsiniz:
 
-- Farklı bir Office uygulamasının Şerit özelleştirin. Şeridi özelleştirme destekleyen uygulamalar hakkında daha fazla bilgi için bkz. [Şerite Genel Bakış](../vsto/ribbon-overview.md).
+- Farklı bir Office uygulamasının şeridini özelleştirin. Şeriti özelleştirmeyi destekleyen uygulamalar hakkında daha fazla bilgi için bkz. [Şerit 'e genel bakış](../vsto/ribbon-overview.md).
 
-- Şerit Tasarımcısını kullanarak bir Office uygulamasının Şerit özelleştirin. Daha fazla bilgi için [Şerit Tasarımcısı](../vsto/ribbon-designer.md).
+- Şerit Tasarımcısını kullanarak bir Office uygulamasının şeridini özelleştirin. Daha fazla bilgi için bkz. [Şerit Tasarımcısı](../vsto/ribbon-designer.md).
 
-- Özel Eylemler bölmesi oluşturun. Daha fazla bilgi için [Eylemler bölmesine genel bakış](../vsto/actions-pane-overview.md).
+- Özel Eylemler bölmesi oluşturun. Daha fazla bilgi için bkz. [eylemler bölmesine genel bakış](../vsto/actions-pane-overview.md).
 
-- Outlook Form bölgeleri kullanarak Microsoft Office Outlook kullanıcı arabirimini özelleştirme. Daha fazla bilgi için [izlenecek yol: Outlook form bölgesi tasarlama](../vsto/walkthrough-designing-an-outlook-form-region.md).
+- Outlook form bölgelerini kullanarak Outlook Microsoft Office Kullanıcı arabirimini özelleştirin. Daha fazla bilgi için bkz. [Izlenecek yol: Outlook form bölgesi tasarlama](../vsto/walkthrough-designing-an-outlook-form-region.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Şerite Genel Bakış](../vsto/ribbon-overview.md)
+- [Şerite genel bakış](../vsto/ribbon-overview.md)
 - [Şerit XML](../vsto/ribbon-xml.md)
 - [İzlenecek yol: Şerit Tasarımcısını kullanarak özel sekme oluşturma](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)

@@ -8,10 +8,10 @@ ms.date: 07/22/2020
 ms.topic: conceptual
 description: Azure DevOps 'u bir Visual Studio abonesi olarak nasıl kullanabileceğinizi anlayın.
 ms.openlocfilehash: 9f715cf5b9bd0278073b4a5f19a0f0a4f6a7a423
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88801080"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio aboneleri için Azure DevOps avantajları
@@ -30,12 +30,12 @@ Azure DevOps 'da, Visual Studio aboneliğinizi veya [Alternatif kimliğinizi](vs
 ## <a name="eligibility"></a>Önceliği
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, seçili NFR<sup>1</sup>  | Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans, kendinden barındırılan paralel işler [daha fazla bilgi](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)     |  Yes          |
-| GitHub Enterprise ile Visual Studio Enterprise   | VL| Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans, kendinden barındırılan paralel işler [daha fazla bilgi](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops) |  Yes          |
-| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                        | Azure Boards & depoları (temel<sup>2</sup>) [daha fazla bilgi](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)                                                            |  Yes          |
-| GitHub Enterprise ile Visual Studio Professional | VL| Azure Boards & depoları (temel<sup>2</sup>)  [daha fazla bilgi](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)                                                            |  Yes          |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans [daha fazla bilgi edinin](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)                                             |  Yes          |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans [daha fazla bilgi edinin](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)                                             |  Yes          |
+| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, seçili NFR<sup>1</sup>  | Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans, kendinden barındırılan paralel işler [daha fazla bilgi](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)     |  Evet          |
+| GitHub Enterprise ile Visual Studio Enterprise   | VL| Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans, kendinden barındırılan paralel işler [daha fazla bilgi](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops) |  Evet          |
+| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                        | Azure Boards & depoları (temel<sup>2</sup>) [daha fazla bilgi](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)                                                            |  Evet          |
+| GitHub Enterprise ile Visual Studio Professional | VL| Azure Boards & depoları (temel<sup>2</sup>)  [daha fazla bilgi](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)                                                            |  Evet          |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans [daha fazla bilgi edinin](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)                                             |  Evet          |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans [daha fazla bilgi edinin](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)                                             |  Evet          |
 ||
 
 <sup>1</sup>  *şunları Içerir: for SATıM (NFR), en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), Visual Studio Endüstri ortağı (vsıp), Microsoft iş ortağı ağı (Enterprise), BIZSPARK, mct Software & Services Geliştirici, FTE. Dışlar: MCT yazılım & Hizmetleri, Imagine.*

@@ -8,13 +8,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7533c205b95b016c43bd2eef614b4c2825596e74
-ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85835660"
 ---
-# <a name="walkthrough-capturing-graphics-information-programmatically"></a>İzlenecek Yol: Grafik Bilgilerini Programla Yakalama
+# <a name="walkthrough-capturing-graphics-information-programmatically"></a>İzlenecek yol: Grafik Bilgilerini Program Aracılığıyla Yakalama
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Direct3D uygulamasından grafik bilgilerini programlı bir şekilde yakalamak için grafik tanılama kullanabilirsiniz.
 
 Programlı yakalama, gibi senaryolarda faydalıdır:
@@ -25,7 +25,7 @@ Programlı yakalama, gibi senaryolarda faydalıdır:
 
 - `CaptureCurrentFrame`Bir işleme sorunu, el ile test sırasında tahmin etmek ve yakalamak zor olduğunda, ancak çalışma zamanında uygulamanın durumu hakkında bilgiler kullanılarak programlı bir şekilde tahmin edilebilir.
 
-## <a name="programmatic-capture-in-windows-10"></a><a name="CaptureDX11_2"></a>Windows 10 ' da programlı yakalama
+## <a name="programmatic-capture-in-windows-10"></a><a name="CaptureDX11_2"></a> Windows 10 ' da programlı yakalama
 Bu izlenecek yolda, güçlü yakalama yöntemini kullanan Windows 10 ' da DirectX 11,2 API kullanan uygulamalarda Programlı yakalama gösterilmektedir.
 
 Bu bölümde bu görevlerin nasıl yapılacağı gösterilmektedir:
@@ -115,6 +115,6 @@ Bu kılavuzda grafik bilgilerinin programlı bir şekilde nasıl yakalanacağı 
 - Grafik Tanılama araçlarını kullanarak yakalanan grafik bilgilerini çözümlemeyi öğrenin. Bkz. [genel bakış](overview-of-visual-studio-graphics-diagnostics.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek Yol: Grafik Bilgilerini Yakalama](walkthrough-capturing-graphics-information.md)
+- [İzlenecek yol: Grafik Bilgilerini Yakalama](walkthrough-capturing-graphics-information.md)
 - [Grafik Bilgilerini Yakalama](capturing-graphics-information.md)
 - [Komut Satırı Yakalama Aracı](command-line-capture-tool.md)

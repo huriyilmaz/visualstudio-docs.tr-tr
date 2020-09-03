@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 1752efb5be1828f62703e1fe1a1130b37ff80503
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534933"
 ---
 # <a name="ca1403-auto-layout-types-should-not-be-com-visible"></a>CA1403: Otomatik yerleşim türleri COM görünebilir olmamalıdır
@@ -36,7 +36,7 @@ ms.locfileid: "85534933"
  Bileşen nesne modeli (COM) görünür değer türü, <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=fullName> olarak ayarlanmış özniteliğiyle işaretlenir <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=fullName> .
 
 ## <a name="rule-description"></a>Kural Tanımı
- <xref:System.Runtime.InteropServices.LayoutKind>Düzen türleri ortak dil çalışma zamanı tarafından yönetilir. Bu türlerin düzeni, belirli bir düzeni bekleyen COM istemcilerini kesen .NET Framework sürümleri arasında değişebilir. <xref:System.Runtime.InteropServices.StructLayoutAttribute>Özniteliği belirtilmemişse, C#, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ve C++ derleyicilerinin <xref:System.Runtime.InteropServices.LayoutKind> değer türlerinin yerleşimini belirttiğine unutmayın.
+ <xref:System.Runtime.InteropServices.LayoutKind> Düzen türleri ortak dil çalışma zamanı tarafından yönetilir. Bu türlerin düzeni, belirli bir düzeni bekleyen COM istemcilerini kesen .NET Framework sürümleri arasında değişebilir. <xref:System.Runtime.InteropServices.StructLayoutAttribute>Özniteliği belirtilmemişse, C#, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ve C++ derleyicilerinin <xref:System.Runtime.InteropServices.LayoutKind> değer türlerinin yerleşimini belirttiğine unutmayın.
 
  Aksi belirtilmedikçe genel olmayan genel türler COM 'a görünür; Tüm ortak ve genel türler COM 'da görünmez. Ancak, hatalı pozitif sonuçları azaltmak için bu kural, türün COM görünürlüğünü açık bir şekilde ifade etmek için gereklidir; kapsayan bütünleştirilmiş kod, olarak ayarlanmış olarak işaretlenmelidir <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> `false` ve türü <xref:System.Runtime.InteropServices.ComVisibleAttribute> olarak kümesiyle işaretlenmelidir `true` .
 

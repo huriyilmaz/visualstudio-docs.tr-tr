@@ -1,5 +1,5 @@
 ---
-title: RemoveDir Görevi | Microsoft Dokümanlar
+title: RemoveDir Görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,32 +19,32 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 26a6feeca7c89a67e7dd51bd0a1f99a182ffac59
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77632803"
 ---
 # <a name="removedir-task"></a>RemoveDir görevi
 
-Belirtilen dizinleri ve tüm dosya larını ve alt dizinlerini kaldırır.
+Belirtilen dizinleri ve tüm dosyalarını ve alt dizinlerini kaldırır.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda görevparametreleri `RemoveDir` açıklanmaktadır.
+ Aşağıdaki tablo, görevin parametrelerini açıklar `RemoveDir` .
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`Directories`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Silmek için dizinleri belirtir.|
-|`RemovedDirectories`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Başarıyla silinen dizinleri içerir.|
+|`Directories`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Silinecek dizinleri belirtir.|
+|`RemovedDirectories`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Başarıyla silinen dizinleri içerir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
+ Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, ve `OutputDirectory` `DebugDirectory` özellikleri tarafından belirtilen dizinleri kaldırır. Bu yollar proje dizinine göre değerlendirilir.
+ Aşağıdaki örnek, ve özellikleri tarafından belirtilen dizinleri kaldırır `OutputDirectory` `DebugDirectory` . Bu yollar proje dizinine göreli olarak değerlendirilir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2005">

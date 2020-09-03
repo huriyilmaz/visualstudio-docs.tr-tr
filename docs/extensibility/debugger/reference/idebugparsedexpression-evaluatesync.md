@@ -1,5 +1,5 @@
 ---
-title: IDebugParsedExpression::Sync | Microsoft Dokümanlar
+title: 'IDebugParsedExpression:: EvaluateSync | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 1f00b209ff5f91d160e89f5f55ad966fbe9e6414
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726012"
 ---
 # <a name="idebugparsedexpressionevaluatesync"></a>IDebugParsedExpression::EvaluateSync
-Bu yöntem ayrışmış ifadeyi değerlendirir ve isteğe bağlı olarak sonucu başka bir veri türüne atar.
+Bu yöntem ayrıştırılmış ifadeyi değerlendirir ve isteğe bağlı olarak sonucu başka bir veri türüne yayınlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT EvaluateSync( 
@@ -53,31 +53,31 @@ int EvaluateSync(
 
 ## <a name="parameters"></a>Parametreler
 `dwEvalFlags`\
-[içinde] İfadenin nasıl değerlendirileceğini kontrol eden [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) sabitlerinin birleşimi.
+'ndaki İfadenin nasıl değerlendirileceğini denetleyen [Evalflags](../../../extensibility/debugger/reference/evalflags.md) sabitlerinin bir birleşimi.
 
 `dwTimeout`\
-[içinde] Bu yöntemden dönmeden önce beklemek için milisaniye cinsinden en büyük süreyi belirtir. Süresiz beklemek için kullanın. `INFINITE`
+'ndaki Bu yöntemden dönmeden önce beklenecek en uzun süreyi milisaniye olarak belirtir. `INFINITE`Sonsuza kadar beklemek için kullanın.
 
 `pSymbolProvider`\
-[içinde] [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) arabirimi olarak ifade edilen sembol sağlayıcısı.
+'ndaki Bir [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) arabirimi olarak ifade edilen sembol sağlayıcısı.
 
 `pAddress`\
-[içinde] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi olarak ifade edilen bir yöntem içindeki geçerli yürütme konumu.
+'ndaki Bir yöntem içinde bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi olarak ifade edilen geçerli yürütme konumu.
 
 `pBinder`\
-[içinde] Bağlayıcı, bir [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) arabirimi olarak ifade edilir.
+'ndaki [Idebugciltçi](../../../extensibility/debugger/reference/idebugbinder.md) arabirimi olarak ifade edilen cilt.
 
 `bstrResultType`\
-[içinde] Sonucun döküm olması gereken tür. Bu bağımsız değişken null bir değer olabilir.
+'ndaki Sonucun türüne dönüştürülmesi gereken tür. Bu bağımsız değişken null bir değer olabilir.
 
 `ppResult`\
-[çıkış] Değerlendirme sonuçlarını temsil eden [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) arabirimini döndürür.
+dışı Değerlendirmenin sonuçlarını temsil eden [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) arabirimini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- İfade değerlendirme `pAddress`bağlamı, içeren yöntemi belirlemeyi ve ifadedeki sembollerin değerini belirlemek için dil kapsam kurallarını kullanmayı mümkün kılan tarafından verilir.
+ İfade değerlendirme bağlamı tarafından verilir; Bu, `pAddress` kapsayan yöntemi belirlemeyi ve sonra, ifadedeki simgelerin değerini belirlemek için dil kapsamı kurallarını kullanmayı mümkün kılar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

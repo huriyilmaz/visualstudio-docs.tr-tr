@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerField | Microsoft Dokümanlar
+title: Ihata ayıklama Gpoınterfield | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,43 +13,43 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a69797cc513b96c364f0357f22788fc9bcd65657
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725598"
 ---
 # <a name="idebugpointerfield"></a>IDebugPointerField
 Bu arabirim bir işaretçi türünü temsil eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugPointerField : IDebugContainerField
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Sembol sağlayıcı, bir işaretçiyi temsil etmek için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Sembol sağlayıcısı bu arabirimi bir işaretçiyi temsil etmek için uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) dönerse `FIELD_TYPE_POINTER` [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabiriminden bu arabirimi elde etmek için [QueryInterface'i](/cpp/atl/queryinterface) kullanın.
+ Bu arabirimi, [Getkinleştirilen d](../../../extensibility/debugger/reference/idebugfield-getkind.md) döndürürse [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabiriminden elde etmek için [QueryInterface](/cpp/atl/queryinterface) kullanın `FIELD_TYPE_POINTER` .
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasına göre yöntemler
- Bu arabirim, `IDebugField` arabirimlerdeki `IDebugContainerField` yöntemlere ek olarak aşağıdaki yöntemi uygular:
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+ `IDebugField`Ve arayüzlerindeki yöntemlere ek olarak `IDebugContainerField` , bu arabirim aşağıdaki yöntemi uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
 |[GetDereferencedField](../../../extensibility/debugger/reference/idebugpointerfield-getdereferencedfield.md)|İşaretçinin hedefini açıklayan bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) döndürür.|
 
 ## <a name="remarks"></a>Açıklamalar
- C/C++'da, dizi gösterimi ile kullanılırsa işaretçi kapsayıcı olabilir. Örneğin, verilen `char *pString` `pString` , işaretçi türü `char`vardır. `pString[3]`bu kapsayıcının dördüncü öğesine `char` başvuran bir işaretçi olan bir kapsayıcı türüvardır.
+ C/C++ ' da, bir işaretçi dizi gösterimi ile kullanılıyorsa bir kapsayıcı olabilir. Örneğin, verilen `char *pString` , `pString` için bir işaretçi türüne sahiptir `char` . `pString[3]` , `char` o kapsayıcının dördüncü öğesine başvuran bir işaretçi olan bir kapsayıcı türüne sahiptir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: sh.h
+ Üstbilgi: SH. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Sembol Sağlayıcısı Arabirimleri](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)

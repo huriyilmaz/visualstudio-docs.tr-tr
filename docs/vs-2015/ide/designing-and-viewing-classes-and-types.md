@@ -18,16 +18,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6cfedaa51ef62b5a9519a7aef23b942d6c1e5f6a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665777"
 ---
 # <a name="designing-and-viewing-classes-and-types"></a>Sınıfları ve Türleri Tasarlama ve Görüntüleme (Sınıf Tasarımcısı)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 'da Sınıf Tasarımcısı kodunuzda sınıfları ve diğer türleri tasarlayın, görselleştirin ve yeniden düzenleyin. Sınıf diyagramlarını kullanarak Visual C# .net, Visual Basic .NET veya C++ Project 'te sınıflar oluşturup düzenleyin, proje yapınızı daha iyi anlayın veya kodunuzu yeniden düzenleyin.
+Visual Studio 'da Sınıf Tasarımcısı kodunuzda sınıfları ve diğer türleri tasarlayın, görselleştirin ve yeniden düzenleyin. Visual C# .NET, Visual Basic .NET veya C++ projenizdeki sınıfları oluşturmak ve düzenlemek için sınıf diyagramlarını kullanın, proje yapınızı daha iyi anlayın veya kodunuzu yeniden düzenleyin.
 
  Sınıf diyagramlarıyla yapabilecekleriniz hakkında daha fazla bilgi edinebilirsiniz:
 
@@ -53,6 +53,6 @@ Visual Studio 'da Sınıf Tasarımcısı kodunuzda sınıfları ve diğer türle
  [Sınıf Tasarımcısı Hataları Hakkında Ek Bilgiler](../ide/additional-information-about-class-designer-errors.md)
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [Kod Yazma](../ide/writing-code-in-the-code-and-text-editor.md)
+ [Kod yazma](../ide/writing-code-in-the-code-and-text-editor.md)
 
  [Çözümlerinizdeki bağımlılıkları eşleme](../modeling/map-dependencies-across-your-solutions.md)

@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 68cbd19b65eb25405dc994100baf4fddeef9479d
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350465"
 ---
 # <a name="getting-started-with-visual-studio-graphics-diagnostics"></a>Visual Studio Grafik Tanılama’ya Başlarken
@@ -28,7 +28,7 @@ Bu bölümde Grafik Tanılama ilk kez kullanmaya hazırlarsınız, sonra Direct3
 
  Grafik araçları 'nı yükleme hakkında bilgi için bkz. [Windows 10 Için grafik araçları 'Nı yükleme](#InstallGraphicsTools).
 
-## <a name="install-graphics-tools-for-windows-10"></a><a name="InstallGraphicsTools"></a>Windows 10 için grafik araçları 'nı yükler
+## <a name="install-graphics-tools-for-windows-10"></a><a name="InstallGraphicsTools"></a> Windows 10 için grafik araçları 'nı yükler
  Windows 10 ' da, Grafik Tanılama altyapısı, *grafik araçları*adlı Windows 'un isteğe bağlı bir özelliği tarafından sağlanır. Yakalanan uygulamanın Windows 'un önceki bir sürümünü veya hangi Direct3D sürümünü kullandığını bağımsız olarak Windows 10 ' da grafik bilgilerini yakalamak ve oynatmak için bu özellik gereklidir. Grafik araçları özelliğini bir süre önce yüklemeyi seçebilirsiniz; Aksi takdirde, Visual Studio 'dan Grafik Tanılama oturumu ilk kez başlattığınızda isteğe bağlı olarak yüklenir.
 
 #### <a name="to-install-graphics-tools-for-windows-10"></a>Windows 10 için grafik araçları 'nı yüklemek için

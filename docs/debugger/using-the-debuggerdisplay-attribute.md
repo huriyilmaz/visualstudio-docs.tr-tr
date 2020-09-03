@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2387c5e9a920f0811a65ca400d8da48aa81dccd3
-ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85418788"
 ---
 # <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>Hata ayıklayıcıya DebuggerDisplay özniteliği kullanarak neyin gösterileceğini söyleyin (C#, Visual Basic, F #, C++/CLı)
@@ -42,7 +42,7 @@ Aşağıdaki tabloda, özniteliğin bazı olası kullanımları `DebuggerDisplay
 |`[DebuggerDisplay("x = {x} y = {y}")]`<br /><br /> Alanlar ve içeren bir tür üzerinde `x` kullanılır `y` .|`x = 5 y = 18`|
 |`[DebuggerDisplay("String value is {getString()}")]`Parametre sözdizimi diller arasında farklılık gösterebilir. Bu nedenle, dikkatli bir şekilde kullanın.|`String value is [5, 6, 6]`|
 
-`DebuggerDisplay`adlandırılmış parametreleri de kabul edebilir.
+`DebuggerDisplay` adlandırılmış parametreleri de kabul edebilir.
 
 |Parametreler|Amaç|
 |----------------|-------------|
@@ -96,7 +96,7 @@ public sealed class MyClass
 ## <a name="example"></a>Örnek
 Aşağıdaki kod örneği `DebuggerDisplay` , ve ile birlikte nasıl kullanılacağını göstermektedir `DebuggerBrowseable` `DebuggerTypeProxy` . **İzleme** penceresi gibi bir hata ayıklayıcı değişkenleri penceresinde görüntülendiğinde şuna benzer bir genişletme oluşturur:
 
-|**Adı**|**Değer**|**Tür**|
+|**Ad**|**Değer**|**Tür**|
 |--------------|---------------|--------------|
 |Anahtar|ünden|nesne {String}|
 |Değer|3|nesne {int}|

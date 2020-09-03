@@ -1,5 +1,5 @@
 ---
-title: VSIX bildirim Tasarımcısı | Microsoft Docs
+title: VSıX bildirim Tasarımcısı | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -15,30 +15,30 @@ caps.latest.revision: 21
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 450d306718906c3b76bf05982594045e7fd215f0
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63387563"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64807424"
 ---
 # <a name="vsix-manifest-designer"></a>VSIX Bildirim Tasarımcısı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio uzantısı için yükleme davranışı ayarlayan bir VSIX paket bildirim dosyası, değiştirir.  
+Bir Visual Studio uzantısı için yükleme davranışını ayarlayan bir VSıX paketi bildirim dosyasını değiştirir.  
   
- **VSIX bildirim Tasarımcısı** temel alınan VSIX şemaya eşler. Her şema öğesi, karşılık gelen bir denetim Tasarımcısı'nda kullanarak ayarlayabilirsiniz. Şeması hakkında daha fazla bilgi için bkz. [VSIX Uzantı Şeması 2.0 başvurusu](../extensibility/vsix-extension-schema-2-0-reference.md).  
+ **VSIX bildirim Tasarımcısı** , temel alınan VSIX şemasına eşlenir. Şemadaki her öğe, tasarımcıda karşılık gelen bir denetim kullanılarak ayarlanabilir. Şema hakkında daha fazla bilgi için bkz. [VSIX uzantı şeması 2,0 başvurusu](../extensibility/vsix-extension-schema-2-0-reference.md).  
   
- Açmak için **VSIX bildirim Tasarımcısı**, source.extension.vsixmanifest dosyasını **Çözüm Gezgini**, dosyasını açın. Bildirim Tasarımcısı dosyayı geçerli XML içermiyorsa açılmaz.  
+ **VSIX bildirim tasarımcısını**açmak için **Çözüm Gezgini**bir kaynak. Extension. valtmanifest dosyası bulun ve dosyayı açın. Dosya geçerli XML içermiyorsa, bildirim Tasarımcısı açılmaz.  
   
 > [!NOTE]
-> Paketi oluşturulduğunda Source.extension.vsixmanifest extension.vsixmanifest çıkışı yapılır.  
+> Kaynak. Extension. valtmanifest, paket oluşturulduğunda. valtmanifest uzantısına çıktıdır.  
   
 ## <a name="uielement-list"></a>UIElement Listesi  
- **VSIX bildirim Tasarımcısı** şemanın en üst düzey bu öğelere karşılık gelen dört bölüm içerir:  
+ **VSIX bildirim Tasarımcısı** , şemanın bu üst düzey öğelerine karşılık gelen dört bölüm içerir:  
   
 - Meta Veriler  
   
-- Hedefleri yükle  
+- Hedefleri yükler  
   
 - Varlıklar  
   
@@ -46,110 +46,110 @@ Visual Studio uzantısı için yükleme davranışı ayarlayan bir VSIX paket bi
   
   Başlık alanı aşağıdaki denetimleri içerir.  
   
-  **Ürün adı**  
-  Uzantı adı açıklar.  
+  **Ürün Adı**  
+  Uzantı adını açıklar.  
   
   **Ürün Kimliği**  
   Bu paket için benzersiz kimlik bilgilerini belirtir.  
   
-  **Yazar**  
-  Uzantı yazarının adını belirtir.  
+  **Yazma**  
+  Uzantının yazarının adını belirtir.  
   
   **Sürüm**  
-  Uzantısı sürüm numarasını belirtir.  
+  Uzantının sürüm numarasını belirtir.  
   
-  **Meta verileri** sekmesi aşağıdaki denetimleri içerir.  
+  **Meta veri** sekmesi aşağıdaki denetimleri içerir.  
   
   **Açıklama**  
-  Görüntülenecek uzantı metin açıklamasını sağlar **Uzantı Yöneticisi**.  
+  Uzantı **Yöneticisi**'nde görüntülenmek üzere uzantının metin açıklamasını sağlar.  
   
   **Dil**  
-  Bildirim metinsel verilere karşılık gelen paket varsayılan dilini belirtir. `Language` Özniteliği aşağıdaki ortak dil çalışma zamanı (CLR) yerel kod kurala için kaynak grupları, örneğin, en-us, en, fr-fr. Varsayılan olarak, nötr değerdir; Bu, paketi tüm Visual Studio dili sürümünde çalışacağı anlamına gelir.  
+  Bildirimde bulunan metin verilerine karşılık gelen paket için varsayılan dili belirtir. `Language`Öznitelik, kaynak derlemeler için ortak dil çalışma zamanı (CLR) yerel ayar kodu kuralını izler, örneğin, en-US, en, fr-fr. Varsayılan olarak değer tarafsız; Bu, paketin Visual Studio 'nun herhangi bir dil sürümünde çalışacağı anlamına gelir.  
   
   **Lisans**  
-  Var olan kullanıcı lisansı içeren metin dosyası belirtir.  
+  Varsa, Kullanıcı lisansını içeren metin dosyasını belirtir.  
   
-  **Simgesi**  
-  Görüntülenecek bir simge içeren grafik dosyası (.png, .bmp, .jpeg, .ico) belirtir **Uzantı Yöneticisi**, varsa bir simge. Simge görüntüsü 32 x 32 piksel olmalıdır veya bu boyutlara yeniden boyutlandırılır. Simge yok belirtilirse, **Uzantı Yöneticisi** varsayılan bir simge kullanılır.  
+  **Simg**  
+  Bir simge varsa **Uzantı Yöneticisi**'nde görüntülenecek simgeyi içeren grafik dosyasını (. png,. bmp,. jpeg,. ico) belirtir. Simge resminin 32x32 piksel olması veya bu boyutlara yeniden boyutlandırılması gerekir. Hiçbir simge belirtilmemişse, **Uzantı Yöneticisi** varsayılan bir simge kullanır.  
   
-  **Önizleme görüntüsü**  
-  Görüntülenecek önizleme görüntüsünü içeren grafik dosyası (.png, .bmp, .jpeg, .ico) belirtir **Uzantı Yöneticisi**, bir önizleme görüntüsü varsa. Önizleme görüntüsü 200 x 200 piksel olmalıdır. Hiçbir önizleme görüntüsü belirtilirse, **Uzantı Yöneticisi** varsayılan bir görüntü kullanır.  
+  **Önizleme resmi**  
+  Bir önizleme görüntüsü varsa, **Uzantı Yöneticisi**'nde görüntülenecek önizleme görüntüsünü içeren grafik dosyasını (. png,. bmp,. jpeg,. ico) belirtir. Önizleme resmi 200x200 piksel olmalıdır. Hiçbir önizleme görüntüsü belirtilmediyse, **Uzantı Yöneticisi** varsayılan bir görüntü kullanır.  
   
   **Etiketler**  
-  Arama ipuçları için kullanılacak metni etiketleri ekler.  
+  Arama ipuçları için kullanılacak metin etiketleri ekler.  
   
   **Sürüm Notları**  
-  Sürüm Notları'nı içeren bir dosya (.txt, .rtf) belirtir. Ayrıca sürüm notlarını görüntüleyen bir Web sitesinin URL'sini alır.  
+  Sürüm notlarını içeren bir dosyayı (. txt,. rtf) belirtir. Ayrıca sürüm notlarını görüntüleyen bir Web sitesinin URL 'sini alır.  
   
-  **Başlangıç Kılavuzu**  
-  İçeriğin veya uzantısı VSIX paketinde kullanma hakkında bilgi içeren bir dosya (.txt, .rtf) belirtir. Bu kılavuz, uzantı yüklemesi tamamlandığında görünür. Ayrıca Kılavuzu görüntüleyen bir Web sitesinin URL'sini alır.  
+  **Başlarken Kılavuzu**  
+  Uzantıyı veya VSıX paketindeki içeriği kullanma hakkında bilgi içeren bir dosyayı (. txt,. rtf) belirtir. Bu kılavuz, uzantı yüklemesi tamamlandığında görüntülenir. Ayrıca, kılavuzunu görüntüleyen bir Web sitesinin URL 'sini de alır.  
   
-  **Daha fazla bilgi URL'si**  
-  Ürün hakkında ek bilgi içeren bir Web sitesinin URL'sini belirtir.  
+  **Daha fazla bilgi URL 'SI**  
+  Ürünle ilgili ek bilgi içeren bir Web sitesinin URL 'sini belirtir.  
   
-  **Hedefleri Yükle** sekmesi aşağıdaki denetimleri içerir.  
+  **Hedefleri yükler** sekmesi aşağıdaki denetimleri içerir.  
   
-  **Yükleme türü**  
-  Listeler **Visual Studio Uzantısı** ve **uzantı SDK'sı** yükleme türlerini hedefleyin. Seçenekler, seçtiğiniz türüne bağlı olarak farklılık gösterir.  
+  **Yüklemenin türü**  
+  **Visual Studio uzantısı** ve **Uzantı SDK 'sını** hedef yükleme türleri olarak listeler. Seçenekler, seçtiğiniz türe göre farklılık gösterir.  
   
   **Visual Studio uzantısı**  
-  Listeler **InstallationTarget** öğeleri nasıl paket yüklenebilir ve bu uzantı Visual Studio ürünleri yüklenebilir. Her ürün adı ve sürüm veya sürüm aralığına göre ayrı olarak tanımlanır.  Ürün listesine, değiştirilebilir ve silindi. Ad ve bir ürün sürümüne karşılık gelen **kimliği** ve **sürüm** ilişkili öznitelikleri **InstallationTarget** öğesi.  
+  Paketin nasıl yüklenebileceğini ve bu uzantının hangi Visual Studio ürünlerine yüklenebileceğini açıklayan **ınstalyüklemi hedef** öğelerini listeler. Her ürün, ad ve sürüm veya sürüm aralığıyla ayrı olarak tanımlanır.  Ürünler listeye eklenebilir, değiştirilebilir ve silinebilir. Bir ürünün adı ve sürümü, ilişkili **ınstaltarget** öğesinin **kimlik** ve **Sürüm** özniteliklerine karşılık gelir.  
   
-  **Sürüm aralığı** olduğundan [12.0, 14.0] ve aşağıdaki gösterim kullanır:  
+  **Sürüm aralığı** [12,0, 14,0] ve aşağıdaki gösterimi kullanır:  
   
-- [– dahil olan en düşük sürüm  
+- [– en düşük sürüm dahil  
   
-- ] – dahil olan en yüksek sürüm  
+- ] – en yüksek sürüm dahil  
   
-- (-özel en düşük sürüm  
+- (-en düşük sürüm dışlamalı  
   
-- ) – özel en yüksek sürüm  
+- ) – en yüksek sürüm dışlamalı  
   
-- Tek sürüm # - yalnızca belirtilen sürüm  
+- Tek sürüm #-yalnızca belirtilen sürüm  
   
-  **Uzantı SDK'sı**  
-  Belirli bir ürün ve sürümünüz için kapsamlı olmayan genel bir yükleme belirtir. **Hedef Platform tanımlayıcısı** "hedeflediğiniz Windows," gibi bir platform. **Hedef Platform sürümü** gibi 8.0, hedef platform sürümü. **SDK adı** ve **SDK sürümü** adı ve SDK'sı sürüm numarasını sırasıyla.  
+  **Uzantı SDK 'Sı**  
+  Belirli bir ürün ve sürüm kapsamındaki genel yüklemeyi belirtir. **Hedef platform tanımlayıcısı** , hedeflediğiniz "Windows" gibi bir platformdur. **Hedef platform sürümü** , hedef platformunuzun 8,0 gibi sürümüdür. SDK **adı** ve **SDK sürümü** , SDK 'nın sırasıyla adı ve sürüm numarasıdır.  
   
-  **Bu VSIX tüm kullanıcılar için yüklenir (yüklemede bir yükseltme gerektirir)** onay kutusu  
-  Bu onay kutusu seçili değilse, bu uzantı tüm kullanıcılar için yüklenir; Aksi takdirde, yalnızca geçerli kullanıcı için yüklenir.  
+  **Bu VSIX tüm kullanıcılar için yüklendi (yükleme sırasında yükseltme gerektirir)** onay kutusu  
+  Bu onay kutusu işaretliyse, bu uzantı tüm kullanıcılar için yüklenir; Aksi takdirde, yalnızca geçerli kullanıcı için yüklenir.  
   
-  **Bu VSIX yüklü Windows Installer tarafından** onay kutusu  
-  Bu onay kutusu seçili değilse, Windows Installer (.msi dosyası); Bu uzantı yüklü Aksi takdirde, tipik VSIX paketi (.vsix dosyası) yüklenir.  
+  **Bu vsıx Windows Installer tarafından yüklendi** onay kutusu  
+  Bu onay kutusu işaretliyse, bu uzantı Windows Installer (. msi dosyası) tarafından yüklenir; Aksi halde, tipik bir VSıX paketi (. VSIX dosyası) olarak yüklenir.  
   
   **Varlıklar** sekmesi aşağıdaki denetimleri içerir.  
   
   **Varlıkların listesi**  
-  Uzantı veya içerik öğeleri tanımlayan varlık öğeleri listeler bu yüzeyleri paketi. Kaynak, türü ve yol tarafından ayrı ayrı her bir uzantı veya içerik öğesi listelenir. Uzantıları ve içerik öğeleri listesine, değiştirilebilir ve silindi. Bir uzantı veya içerik öğenin yolu ve türünü karşılık gelen `Type` ve `Path` ilişkili öznitelikleri `Asset` öğesi. Aşağıdaki türleri bilinmektedir:  
+  Bu paketin yüzeylerinin uzantısını veya içerik öğelerini tanımlayan varlık öğelerini listeler. Her uzantı veya içerik öğesi, kaynak, tür ve yol tarafından ayrı olarak listelenir. Uzantılar ve içerik öğeleri listeye eklenebilir, değiştirilebilir ve silinebilir. Uzantı veya içerik öğesinin türü ve yolu `Type` `Path` ilişkili öğenin ve özniteliklerine karşılık gelir `Asset` . Aşağıdaki türler bilinmektedir:  
   
-- Microsoft.VisualStudio.Package  
+- Microsoft. VisualStudio. Package  
   
-- Microsoft.VisualStudio.MefComponent  
+- Microsoft. VisualStudio. MefComponent  
   
-- Microsoft.VisualStudio.ToolboxControl  
+- Microsoft. VisualStudio. ToolboxControl  
   
-- Microsoft.VisualStudio.Samples  
+- Microsoft. VisualStudio. Samples  
   
-- Microsoft.VisualStudio.ProjectTemplate  
+- Microsoft. VisualStudio. ProjectTemplate  
   
-- Microsoft.VisualStudio.ItemTemplate  
+- Microsoft. VisualStudio. ItemTemplate  
   
-- Microsoft.VisualStudio.Assembly  
+- Microsoft. VisualStudio. Assembly  
   
-- Microsoft.ExtensionSDK  
+- Microsoft. ExtensionSDK  
   
-  Ekleme veya düzenleme bir varlık için varlık mevcut çözümde bir proje veya dosya dosya sistemi ve projenin adı olup olmadığını varlık türünü belirtmeniz gerekir. Katıştırılmış kaydedileceği klasörün adını belirtebilirsiniz.  
+  Bir varlık eklemek veya düzenlemek için varlık türünü, varlığın geçerli çözümde bir proje mi yoksa dosya sistemindeki bir dosya ve projenin adını da belirtmeniz gerekir. Ayrıca, içine katıştırılacak klasörün adını da belirtebilirsiniz.  
   
-  Ayrıca, kendi türlerinizi oluşturmak ve bunları benzersiz adlar verin.  
+  Ayrıca kendi türlerinizi oluşturabilir ve bunlara benzersiz adlar verebilirsiniz.  
   
-  **Bağımlılıkları** sekmesi aşağıdaki denetimleri içerir.  
+  **Bağımlılıklar** sekmesi aşağıdaki denetimleri içerir.  
   
-  **Adı, kaynak ve sürüm aralığı**  
-  Bu paket, bağlı olduğu diğer paketleri olan bu paket bağımlılık öğelerini listeler. Bir bağımlılık paket belirtilirse, bu paketi yüklemeden önce yüklenmelidir; Aksi takdirde, bu paketi yüklemeniz gerekir.  
+  **Ad, kaynak ve sürüm aralığı**  
+  Bu paketin bağımlı olduğu diğer paketler olan bu paketin bağımlılık öğelerini listeler. Bir bağımlılık paketi belirtilmişse, bu paket yüklenmeden önce yüklenmesi gerekir; Aksi takdirde, bu paketin yüklemesi gerekir.  
   
-  Bağımlılık paketlerini tanımlayıcı adı, sürüm aralığı, kaynak ve nasıl çözümlenmesi bağımlılığı olduğunu tarafından belirtilir. Her bağımlılık paket adı, sürümü ve kaynak tarafından ayrı ayrı listelenir. Bağımlılık paketlerini listeye eklenen, değiştirilebilir ve silindi.  
+  Bağımlılık paketleri tanımlayıcı, ad, sürüm aralığı, kaynak ve bağımlılığın nasıl çözümleneceği ile belirtilir. Her bağımlılık paketi, ad, sürüm ve kaynak tarafından ayrı olarak listelenir. Bağımlılık paketleri listeye eklenebilir, değiştirilebilir ve silinebilir.  
   
-  Tanımlayıcı eşleşmelidir `ID` bağımlılık paket meta özniteliği. Kaynak bir proje geçerli çözüme, şu anda yüklü bir uzantı veya bir dosya olabilir. **Nasıl Çözüldü bağımlılığıdır** ayarı, göreli yolun iç içe geçmiş bir paketin veya bağımlılık için indirme konumunu URL'si olabilir. Kimlik, sürüm ve bağımlılık paketinin çözümleme karşılık `Id`, `Version`, ve `Location` ilişkili öznitelikleri `Dependency` öğesi.  
+  Tanımlayıcının, `ID` bağımlılık paketi meta verilerinin özniteliğiyle eşleşmesi gerekir. Kaynak, geçerli çözümdeki bir proje, şu anda yüklü bir uzantı veya bir dosya olabilir. **Bağımlılık çözümlenmiş** ayarı, iç içe geçmiş bir paketin göreli yolu veya bağımlılık için karşıdan yükleme konumunun URL 'si olabilir. Bağımlılık paketinin KIMLIĞI, sürümü ve çözümü `Id` , `Version` ilişkili öğenin, ve özniteliklerine karşılık gelir `Location` `Dependency` .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [VSIX Uzantı Şeması 2.0 başvurusu](../extensibility/vsix-extension-schema-2-0-reference.md)   
+ [VSıX uzantı Şeması 2,0 başvurusu](../extensibility/vsix-extension-schema-2-0-reference.md)   
  [Bir VSIX Paketinin Anatomisi](../extensibility/anatomy-of-a-vsix-package.md)

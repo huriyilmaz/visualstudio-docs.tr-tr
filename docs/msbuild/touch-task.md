@@ -1,5 +1,5 @@
 ---
-title: Dokunmatik Görev | Microsoft Dokümanlar
+title: Dokunma görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,35 +19,35 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 873783196a3eebdaca9cc4278b091e084c1488b0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77631659"
 ---
 # <a name="touch-task"></a>Dokunma görevi
 
-Dosyaların erişim ve değişiklik saatlerini ayarlar.
+Dosyaların erişim ve değiştirme zamanlarını ayarlar.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda görevparametreleri `Touch` açıklanmaktadır.
+ Aşağıdaki tablo, görevin parametrelerini açıklar `Touch` .
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`AlwaysCreate`|İsteğe bağlı `Boolean` parametre.<br /><br /> , `true`zaten var olmayan dosyaları oluşturursa.|
-|`Files`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Dokunulacak dosyaların toplanmasını belirtir.|
-|`ForceTouch`|İsteğe bağlı `Boolean` parametre.<br /><br /> Dosyalar `true`salt okunur olsa bile dosya dokunuşunu zorlarsa.|
-|`Time`|İsteğe bağlı `String` parametre.<br /><br /> Geçerli saat dışında bir zaman belirtir. <xref:System.DateTime.Parse%2A> Biçim, yöntem tarafından kabul edilebilir bir biçim olmalıdır.|
-|`TouchedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Başarıyla dokunulan öğelerin koleksiyonunu içerir.|
+|`AlwaysCreate`|İsteğe bağlı `Boolean` parametre.<br /><br /> Varsa `true` , önceden mevcut olmayan dosyaları oluşturur.|
+|`Files`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Dokunarak dosya koleksiyonunu belirtir.|
+|`ForceTouch`|İsteğe bağlı `Boolean` parametre.<br /><br /> Varsa `true` , dosyalar salt okunurdur olsa bile bir dosya dokunmayı zorlar.|
+|`Time`|İsteğe bağlı `String` parametre.<br /><br /> Geçerli saatten farklı bir saat belirtir. Biçim, yöntemi için kabul edilebilir bir biçim olmalıdır <xref:System.DateTime.Parse%2A> .|
+|`TouchedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Başarıyla dokunmayan öğelerin koleksiyonunu içerir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
+ Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, `Touch` `Files` madde koleksiyonunda belirtilen dosyaların erişim ve değişiklik sürelerini değiştirmek için görevi kullanır ve `FilesTouched` madde koleksiyonuna başarıyla dokunulan dosyaların listesini koyar.
+ Aşağıdaki örnek, `Touch` öğe koleksiyonunda belirtilen dosyaların erişim ve değiştirme zamanlarını değiştirmek için görevini kullanır `Files` ve başarıyla dokunulmayan dosyaları `FilesTouched` öğe koleksiyonuna koyar.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

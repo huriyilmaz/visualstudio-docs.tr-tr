@@ -17,16 +17,16 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: 02ce09aebae0d6e5225ba1cdfa7484aa887135fd
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88247636"
 ---
 # <a name="visual-studio-enterprise-guide"></a>Visual Studio Enterprise kılavuzu
 Şirket Visual Studio 'da çalışır durumdayken zamandan tasarruf ediyorsanız, buradan başlayın. Bu kurumsal kılavuz, Visual Studio 'Yu ortak kurumsal senaryolarda yüklemenize ve güncelleştirmenize yardımcı olabilecek ipuçları ve daha fazla yardıma ihtiyacınız varsa bir sorunu nasıl bildirebileceğinizi öğrenmek içerir. 
 
-## <a name="get-started"></a>başlarken 
+## <a name="get-started"></a>Kullanmaya başlayın 
 Ağa bağlı ve çevrimdışı ortamlarda Visual Studio 'Yu kuruluşunuza dağıtmayı öğrenin. 
 
 - **Ağ ortamlarında kurumsal dağıtım seçeneklerini anlayın**. [Visual Studio Yönetici Kılavuzu](visual-studio-administrator-guide.md) , sistem yöneticileri için senaryo tabanlı yönergeler sağlar. 

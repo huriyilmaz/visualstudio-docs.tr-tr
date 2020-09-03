@@ -37,7 +37,7 @@ ms.locfileid: "74779889"
 
  Yönetilen kod için, profil oluşturucu API 'Leri *Microsoft.VisualStudio.Profiler.dll*. Bu DLL *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools* dizininde bulunur. 64 bitlik uygulamalar için, klasör *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\x64*' dir. Daha fazla bilgi için bkz. [Profil Oluşturucu](/previous-versions/ms242704(v=vs.140)).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yol, geliştirme ortamınızın tercih ettiğiniz hata ayıklama ve örnekleme işlemini destekleyecek şekilde yapılandırıldığını varsayar. Aşağıdaki konular, bu önkoşullara genel bir bakış sağlar:
 
 - [Nasıl yapılır: koleksiyon yöntemleri seçme](../profiling/how-to-choose-collection-methods.md)

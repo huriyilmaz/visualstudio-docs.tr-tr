@@ -1,5 +1,5 @@
 ---
-title: Unzip Görev | Microsoft Dokümanlar
+title: Sıkıştırılmış görev | Microsoft Docs
 ms.date: 11/04/2016
 ms.reviewer: ''
 ms.suite: ''
@@ -23,37 +23,37 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d331fda05e8655be0536a1e83d8309ae8c060b1f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77631516"
 ---
-# <a name="unzip-task"></a>Zip'i açma görevi
+# <a name="unzip-task"></a>Unzip görevi
 
-Bir *.zip* arşivini belirtilen konuma ait olarak unzips.
+Belirtilen konuma bir *. zip* arşivi olarak UnZIP.
 
 >[!NOTE]
->Görev `Unzip` yalnızca MSBuild 15.8 ve üzeri kullanılabilir.
+>`Unzip`Görev yalnızca MSBuild 15,8 ve üzeri sürümlerde kullanılabilir.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda görevparametreleri `Unzip` açıklanmaktadır.
+ Aşağıdaki tablo, görevin parametrelerini açıklar `Unzip` .
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`DestinationFolder`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametre<br /><br /> Dosyanın zip'ini açmak için hedef klasörü belirtir.|
-|`OverwriteReadOnlyFiles`|İsteğe bağlı `Boolean` parametre.<br /><br /> Yalnızca `true`okunan dosyaların üzerine yazarsa. Varsayılan `false`değer.|
-|`SkipUnchangedFiles`|İsteğe bağlı `Boolean` parametre.<br /><br /> Değiştirilirse, `true`gün dönümlerini atlar. Varsayılan `true`değer. `Unzip` görevi, dosyalar aynı boyuta ve aynı son değiştirme tarihine sahipse bu dosyaları değişmemiş kabul eder.|
-|`SourceFiles`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Bir veya daha fazla dosyanın zip'i açmayı belirtir. Birden çok dosya belirtirken, aynı klasöre sırayla fermuarsız.|
+|`DestinationFolder`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametre<br /><br /> Dosyanın sıkıştırmasını açmak için hedef klasörü belirtir.|
+|`OverwriteReadOnlyFiles`|İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , salt yazılır dosyaların üzerine yazar. Varsayılan olarak olur `false` .|
+|`SkipUnchangedFiles`|İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , değiştirilmemiş dosyaları yok etmek için atlar. Varsayılan olarak olur `true` . `Unzip` görevi, dosyalar aynı boyuta ve aynı son değiştirme tarihine sahipse bu dosyaları değişmemiş kabul eder.|
+|`SourceFiles`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Sıkıştırmayı açmak için bir veya daha fazla dosyayı belirtir. Birden çok dosya belirtirken aynı klasöre göre sıkıştırıldı.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
+ Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, bir arşivin fermuarını alır ve salt okunur dosyaların üzerine yazar.
+ Aşağıdaki örnek, bir arşivi kaldırır ve salt okunurdur dosyanın üzerine yazar.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

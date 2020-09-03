@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::IsEncOutdated | Microsoft Dokümanlar
+title: 'IDebugObject2:: ısencoutte | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a90ff97b87ec2abaab87dfece5b2a2ac1cabb28c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726108"
 ---
 # <a name="idebugobject2isencoutdated"></a>IDebugObject2::IsEncOutdated
-Bu yöntem, bu nesnenin veya üst kapsayıcının Edit ve Continue durumunun güncel olup olmadığını belirler. Özel bir ifade değerlendiricisi bu yöntemi `E_NOTIMPL`uygulamaz ve her zaman döndürür.
+Bu yöntem, bu nesnenin veya üst kapsayıcının düzenleme ve devam etme durumunun güncel olup olmadığını belirler. Özel bir ifade değerlendirici bu yöntemi uygulamaz ve her zaman döndürülür `E_NOTIMPL` .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT IsEncOutdated(
@@ -41,13 +41,13 @@ int IsEncOutdated(
 
 ## <a name="parameters"></a>Parametreler
 `pfEncOutdated`\
-[çıkış] Sıfırsız`TRUE`( ) Edit ve Continue durumu güncel`FALSE`değilse, sıfır ( ) değilse.
+dışı `TRUE`Düzenle ve devam et durumu güncel değilse sıfır (), değilse sıfır () olur `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 > [!NOTE]
-> Özel bir ifade değerlendiricisi her zaman dönmelidir. `E_NOTIMPL`
+> Özel bir ifade değerlendirici her zaman döndürmelidir `E_NOTIMPL` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

@@ -22,10 +22,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: ce0084d6bf734ee8a9de63b0cf3da73504b0d4e4
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88800950"
 ---
 # <a name="office-and-sharepoint-development-in-visual-studio"></a>Visual Studio 'da Office ve SharePoint geliştirme
@@ -82,7 +82,7 @@ ms.locfileid: "88800950"
 |SharePoint eklentisi veya SharePoint çözümünün oluşturulup oluşturulmayacağını seçin.|[SharePoint eklentileri ve SharePoint çözümleri arasında karar verme](/sharepoint/dev/general-development/sharepoint-server-application-lifecycle-management)|
 
 ## <a name="create-a-vsto-add-in"></a><a name="Add-ins"></a> VSTO eklentisi oluşturma
- Office 2007 veya Office 2010 ' i hedeflemek ya da Office 2013 ve Office 2016 ' i Office eklentileriyle mümkün olduğunca fazla genişletmek için bir VSTO eklentisi oluşturun. VSTO eklentileri yalnızca masaüstünde çalışır. Kullanıcıların VSTO Eklentilerini yüklemeleri gerekir, bu yüzden genellikle dağıtımı ve desteği daha zordur.  Ancak, VSTO eklentisi Office ile daha yakından tümleştirilebilir. Örneğin, Office şeridine sekmeler ve denetimler ekleyebilir ve belge birleştirme ya da grafikleri değiştirme gibi gelişmiş otomasyon görevleri gerçekleştirebilirsiniz. Office nesneleriyle etkileşim kurmak için .NET Framework yararlanabilir ve C# ve Visual Basic kullanabilirsiniz.
+ Office 2007 veya Office 2010 ' i hedeflemek veya Office 2013 ve Office 2016 ' i Office eklentileriyle mümkün olduğunca fazla genişletmek için bir VSTO eklentisi oluşturun. VSTO eklentileri yalnızca masaüstünde çalışır. Kullanıcıların VSTO Eklentilerini yüklemeleri gerekir, bu yüzden genellikle dağıtımı ve desteği daha zordur.  Ancak, VSTO eklentisi Office ile daha yakından tümleştirilebilir. Örneğin, Office şeridine sekmeler ve denetimler ekleyebilir ve belge birleştirme ya da grafikleri değiştirme gibi gelişmiş otomasyon görevleri gerçekleştirebilirsiniz. Office nesneleriyle etkileşim kurmak için .NET Framework yararlanabilir ve C# ve Visual Basic kullanabilirsiniz.
 
  VSTO eklentisinin neler yapabileceğini bir örnek aşağıda bulabilirsiniz. Bu VSTO eklentisi, Şerit denetimleri, özel bir görev bölmesi ve bir iletişim kutusunu PowerPoint 'e ekler.
 

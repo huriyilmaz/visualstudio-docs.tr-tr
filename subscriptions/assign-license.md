@@ -8,10 +8,10 @@ ms.date: 03/02/2020
 ms.topic: conceptual
 description: Yöneticilerin abonelere nasıl lisans atayabileceği hakkında bilgi edinin
 ms.openlocfilehash: aa3c219a605b552ea1c4b785ff8fb1f92edf04ac
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88249472"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalı 'nda lisans atama

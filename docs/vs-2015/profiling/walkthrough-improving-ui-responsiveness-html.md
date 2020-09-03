@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: UI yanıtlama hızı (HTML) geliştirme | Microsoft Docs'
+title: 'İzlenecek yol: UI yanıt hızını geliştirme (HTML) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -20,29 +20,29 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7224dc1ddcffc203c930a3ead01c2f541af2122f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433167"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64792885"
 ---
-# <a name="walkthrough-improving-ui-responsiveness-html"></a>İzlenecek yol: UI yanıtlama hızı (HTML) geliştirme
+# <a name="walkthrough-improving-ui-responsiveness-html"></a>İzlenecek yol: Kullanıcı arabirimi yanıt hızını geliştirme (HTML)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu izlenecek yol, tanımlamak ve kullanarak bir performans sorunu düzeltme sürecinde müşteri adayları [HTML kullanıcı Arabirimi yanıtlama hızı Profil Oluşturucusu](../profiling/html-ui-responsiveness.md). Profil Oluşturucu, JavaScript kullanarak Visual Studio için Windows evrensel ve Windows Store uygulamalarında kullanılabilir. Bu senaryoda, DOM öğeleri çok sık güncelleştiren bir performans testi uygulaması oluşturma ve tanımlamak ve bu sorunu çözmek için Profiler'ı kullanın.  
+Bu izlenecek yol, [HTML UI yanıtlama hızı profil oluşturucuyu](../profiling/html-ui-responsiveness.md)kullanarak bir performans sorununu belirleme ve düzeltme sürecinde size yol gösterir. Profil Oluşturucu, JavaScript kullanan Windows Evrensel ve Windows Mağazası uygulamaları için Visual Studio 'da kullanılabilir. Bu senaryoda, DOM öğelerini çok sık güncelleştiren bir performans testi uygulaması oluşturur ve bu sorunu tanımlamak ve gidermek için profil oluşturucuyu kullanırsınız.  
   
-### <a name="creating-and-running-the-performance-test-app"></a>Uygulama oluşturma ve çalıştırma performans testi  
+### <a name="creating-and-running-the-performance-test-app"></a>Performans testi uygulaması oluşturma ve çalıştırma  
   
-1. Visual Studio'da yeni bir Windows Evrensel JavaScript projesi oluşturun. (Seçmek **dosya / yeni / Project**. Seçin **JavaScript** sol bölmede ve ardından **Windows**, **Windows 10**, ardından da **Evrensel**, veya  **Windows Phone**.  
+1. Visual Studio 'da yeni bir Windows Evrensel JavaScript projesi oluşturun. ( **Dosya/yeni/proje**' yi seçin. Sol bölmedeki **JavaScript** ' i seçin ve ardından **Windows**, **windows 10**, **evrensel**veya **Windows Phone**' yi seçin.  
   
 2. > [!IMPORTANT]
-    > Bu konu başlığında gösterilen Tanılama sonuçları için bir Windows 8 uygulaması gösterilmektedir.  
+    > Bu konuda gösterilen Tanılama sonuçları bir Windows 8 uygulaması için gösterilmiştir.  
   
-3. Orta bölmede gibi boş proje şablonlarından birini seçin **boş uygulama**.  
+3. Orta bölmedeki boş bir **uygulama**gibi boş proje şablonlarından birini seçin.  
   
-4. İçinde **adı** gibi bir ad belirtin, kutusunda `JS_Perf_Tester`ve ardından **Tamam**.  
+4. **Ad** kutusunda, gibi bir ad belirtin `JS_Perf_Tester` ve ardından **Tamam**' ı seçin.  
   
-5. İçinde **Çözüm Gezgini**default.html açın ve arasına aşağıdaki kodu yapıştırın \<gövdesi > etiketleri:  
+5. **Çözüm Gezgini**, default.html 'yi açın ve aşağıdaki kodu Etiketler arasına yapıştırın \<body> :  
   
     ```html  
     <div class="wrapper">  
@@ -50,7 +50,7 @@ Bu izlenecek yol, tanımlamak ve kullanarak bir performans sorunu düzeltme sür
     </div>  
     ```  
   
-6. Default.css açın ve aşağıdaki CSS kodunu ekleyin:  
+6. Default. css ' i açın ve aşağıdaki CSS kodunu ekleyin:  
   
     ```css  
     #content {  
@@ -59,7 +59,7 @@ Bu izlenecek yol, tanımlamak ve kullanarak bir performans sorunu düzeltme sür
     }  
     ```  
   
-7. Default.js açın ve tüm kodu şu kodla değiştirin:  
+7. default.js açın ve tüm kodu şu kodla değiştirin:  
   
     ```javascript  
     (function () {  
@@ -148,67 +148,67 @@ Bu izlenecek yol, tanımlamak ve kullanarak bir performans sorunu düzeltme sür
   
     ```  
   
-8. Hata ayıklamayı başlatmak için F5 tuşuna basın. Doğrulayın **değerleri için bekleyen** düğmesi sayfada görüntülenir.  
+8. Hata ayıklamayı başlatmak için F5 tuşunu seçin. Sayfada **değer bekleniyor** düğmesinin göründüğünü doğrulayın.  
   
-9. Seçin **değerleri için bekleyen** ve düğme metni ve renk yaklaşık saniyede bir kez güncelleştirmesini doğrulayın. Bu tasarım gereğidir.  
+9. **Değer bekleniyor** ' i seçin ve düğme metninin ve renginin saniyede yaklaşık olarak bir kez güncelleştirilmesini doğrulayın. Bu tasarım gereğidir.  
   
-10. Visual Studio'ya dönün (Alt + Sekme) geçin ve sonra hata ayıklamayı durdurmak için Shift + F5'i seçin.  
+10. Visual Studio 'ya geri dönün (Alt + Tab) ve ardından hata ayıklamayı durdurmak için SHIFT + F5 ' i seçin.  
   
-     Uygulamanın çalıştığını doğruladıktan sonra profil oluşturucuyu kullanarak performansı inceleyebilirsiniz.  
+     Uygulamanın çalışıp çalışmadığını doğruladığınıza göre, profil oluşturucuyu kullanarak performansını inceleyebilirsiniz.  
   
-### <a name="analyzing-performance-data"></a>Performans verilerini çözümleme  
+### <a name="analyzing-performance-data"></a>Performans verilerinin analizi  
   
-1. Üzerinde **hata ayıklama** araç penceresindeki **hata ayıklamayı Başlat** listesinde, Windows Phone Öykünücüleri birini seçin veya **simülatör**.  
+1. **Hata** ayıklama araç çubuğunda, **hata ayıklamayı başlat** listesinde, Windows Phone Öykünücüden veya **benzeticisinde**birini seçin.  
   
-2. Üzerinde **hata ayıklama** menüsünde seçin **performans ve tanılama**.  
+2. **Hata Ayıkla** menüsünde **performans ve tanılama**' yı seçin.  
   
-3. İçinde **kullanılabilir Araçları**, seçin **HTML UI yanıtlama hızı**ve ardından **Başlat**.  
+3. **Kullanılabilir araçlar**' da **HTML UI yanıtlama hızı**' nı seçin ve ardından **Başlat**' ı seçin.  
   
-    Bu öğreticide, profil oluşturucu için başlangıç projesi iliştirmekte. Yüklü bir uygulama için profil oluşturucu ekleme gibi diğer seçenekleri hakkında daha fazla bilgi için bkz. [HTML UI yanıtlama hızı](../profiling/html-ui-responsiveness.md).  
+    Bu öğreticide, profil oluşturucuyu başlangıç projesine iliştirirsiniz. Profil oluşturucuyu yüklü bir uygulamaya ekleme gibi diğer seçenekler hakkında bilgi için bkz. [HTML UI yanıt hızı](../profiling/html-ui-responsiveness.md).  
   
-    Profil Oluşturucu başlattığınızda, Vsetwcollector.exe'yi çalıştırmak için izninizi isteyen bir kullanıcı hesabı denetimi görebilirsiniz. Seçin **Evet**.  
+    Profil oluşturucuyu başlattığınızda, VsEtwCollector.exe çalıştırmak için izninizi isteyen bir kullanıcı hesabı denetimi görebilirsiniz. **Evet**' i seçin.  
   
-4. Çalışan uygulamada seçin **değerleri için bekleyen** ve yaklaşık 10 saniye bekleyin. Düğme metni ve renk yaklaşık saniyede bir kez güncelleştirmesini doğrulayın.  
+4. Çalışan uygulamada, **değer bekleniyor** ' i seçin ve 10 saniye bekleyin. Düğme metninin ve renginin saniye başına yaklaşık bir kez güncelleştirilmesini doğrulayın.  
   
-5. Çalışan uygulamayı, Visual Studio (Alt + Sekme) geçin.  
+5. Çalışan uygulamadan, Visual Studio 'ya geçin (Alt + Tab).  
   
-6. Seçin **koleksiyonu Durdur**.  
+6. **Toplamayı durdur**' ı seçin.  
   
-    Profil Oluşturucu, Visual Studio'da yeni bir sekmede bilgileri görüntüler. CPU kullanımı ve görsel üretilen iş (FPS) veri bakın, bazı eğilimleri kolayca belirleyebilirsiniz:  
+    Profiler, bilgileri Visual Studio 'da yeni bir sekmede görüntüler. CPU kullanımı ve görsel işleme (FPS) verilerine baktığınızda, kolayca birkaç eğilim tanımlayabilirsiniz:  
   
-   - CPU kullanımı artırır önemli ölçüde yaklaşık 3 saniye sonra (ne zaman bastığınız **değerleri için bekleyen** düğme) ve bu noktadan itibaren olaylar (betik, stil ve işleme olayları tutarlı karışık) Temizle desenini gösterir.  
+   - CPU kullanımı yaklaşık 3 saniye sonra ( **değerler Için bekleniyor** düğmesine basıldığında) önemli ölçüde artar ve bu noktadan itibaren açık bir olay (komut dosyası, stil ve işleme olayları karışımı) gösterir.  
   
-   - Görsel üretilen iş değil etkilenen ve adresindeki 60 FPS kalır (diğer bir deyişle, bırakılan çerçeve yok).  
+   - Görsel işleme etkilenmez ve FPS boyunca 60 konumunda kalır (yani, bırakılan çerçeve yoktur).  
   
-     CPU kullanım grafiği, yüksek etkinlik bu dönemde uygulamanın ne yaptığını bulmak için tipik bir bölümünü bakalım.  
+     Bu yüksek etkinlik döneminde uygulamanın ne yaptığını öğrenmek için CPU kullanımı grafiğinin tipik bir bölümüne bakalım.  
   
-7. CPU kullanım grafiği ortasında bir iki ikinci bölümü seçin (ya da'a tıklayın ve Sürükle veya sekme ve ok tuşlarını kullanın). Aşağıdaki çizimde, bir seçim yaptıktan sonra CPU kullanım grafiği gösterir. Paylaşılmayan seçimi alandır.  
+7. CPU kullanım grafiğinin ortasında bir-iki saniyelik bir bölüm seçin (tıklayın-ve-sürükleyin ya da sekme ve ok tuşlarını kullanın). Aşağıdaki çizimde, bir seçim yaptıktan sonra CPU kullanımı grafiği gösterilmektedir. Paylaşılmayan alan seçimdir.  
   
     ![CPU kullanım grafiği](../profiling/media/js-htmlviz-app-cpu.png "JS_HTMLViz_App_CPU")  
   
-8. Seçin **yakınlaştırmak**.  
+8. **Yakınlaştır '** ı seçin.  
   
-    Seçilen süre içinde daha fazla ayrıntı göstermek için grafiğin değişiklikler. Aşağıdaki çizim, yakınlaştırma sonra CPU kullanım grafiği gösterir. (Belirli verileri farklılık gösterebilir, ancak genel düzen görünür olacaktır.)  
+    Grafik, seçili süreyi daha ayrıntılı gösterecek şekilde değişir. Aşağıdaki çizimde yakınlaştırdıktan sonra CPU kullanım grafiği gösterilmektedir. (Belirli veriler farklılık gösterebilir, ancak genel desenler görünür olur.)  
   
-    ![Görünüm uzaklaştırılacağını](../profiling/media/js-htmlviz-app-zoom.png "JS_HTMLViz_App_Zoom")  
+    ![Görünümde yakınlaştırılmış](../profiling/media/js-htmlviz-app-zoom.png "JS_HTMLViz_App_Zoom")  
   
-    Zaman Çizelgesi ayrıntılarını alt bölmede, seçilen süre için ayrıntıları örneği gösterilmektedir.  
+    Alt bölmedeki zaman çizelgesi ayrıntıları, seçilen döneme ilişkin ayrıntıların bir örneğini gösterir.  
   
-    ![Zaman Çizelgesi ayrıntıları](../profiling/media/js-htmlviz-app-details.png "JS_HTMLViz_App_Details")  
+    ![Zaman çizelgesi ayrıntıları](../profiling/media/js-htmlviz-app-details.png "JS_HTMLViz_App_Details")  
   
-    CPU kullanım grafiği görünür eğilimler olayları zaman çizelgesi ayrıntıları onaylayın: çok kısa süreler boyunca gerçekleşen olayların vardır. Zaman Çizelgesi Ayrıntıları görünümü, bu olayların olduğunu gösterir. `Timer`, `Layout`, ve `Paint` olayları.  
+    Zaman çizelgesi ayrıntılarında bulunan olaylar, CPU kullanım grafiğinde görünür eğilimleri onaylayın: kısa süreler boyunca gerçekleşen çok sayıda olay vardır. Zaman çizelgesi Ayrıntıları görünümü bu olayların `Timer` , `Layout` ve olaylarının olduğunu gösterir `Paint` .  
   
-9. Bağlam menüsünü kullanın (veya sağ tıklayın) birini `Timer` alt bölmede, olayları ve **olaya filtre**. Aşağıda ayrıntıları örneği biri için gösterilmektedir `Timer` uygulamasını test etme olayları.  
+9. Bağlam menüsünü kullanın (veya alt bölmedeki olaylardan birini sağ tıklayın) `Timer` ve **olaya filtrele**' yi seçin. Aşağıdaki çizimde, bu test uygulamasındaki olaylardan biri için tipik bir ayrıntı örneği gösterilmektedir `Timer` .  
   
-     ![Timer event](../profiling/media/js-htmlviz-app-timer.png "JS_HTMLViz_App_Timer")  
+     ![Süreölçer olayı](../profiling/media/js-htmlviz-app-timer.png "JS_HTMLViz_App_Timer")  
   
-     Veriler bilgiler çeşitli öğrendiğiniz kayıtlar. Örneğin:  
+     Verilerden farklı bir olgu olabilir. Örneğin:  
   
-    - Her `Timer` olay, bir komut dosyası olay olarak tanımlamak için renk kodlu bir çağrı içerir `document.createElement`stil hesaplama ve çağrı çizgidir `style.backgroundColor` ve `appendChild()`.  
+    - Her `Timer` olay, bir komut dosyası olayı olarak tanımlamak için Color kodlamalı, öğesine bir çağrı `document.createElement` ve ardından bir stil hesaplaması ve ve çağrısı içerir `style.backgroundColor` `appendChild()` .  
   
-    - Seçili kısa süre içinde (yaklaşık iki saniye), çok sayıda vardır `Timer`, `Layout`, ve `Paint` gerçekleşen olayları. `Timer` Olaylar meydana uygulamayı çalıştırıp seçin sonra görünüşte açıktır saniye başına tek bir güncelleştirme çok daha sık **değerleri için bekleyen** düğmesi.  
+    - Kısa zaman aralığında (yaklaşık olarak iki saniye), çok sayıda, ve daha fazla etkinlik gerçekleşirken vardır `Timer` `Layout` `Paint` . `Timer`Olaylar, uygulamayı çalıştırdıktan ve **değer bekleniyor** düğmesini seçtikten sonra bir saniyede bir güncelleştirmeden çok daha sık meydana gelir.  
   
-10. Araştırmak için anonim işlev bağlantısını için aşağıdakilerden birini seçin. `Timer` alt sol bölmesinde olayları. Aşağıdaki işlev içinde default.js açar:  
+10. Araştırmak için, `Timer` sol alt bölmedeki olaylardan biri için anonim işlevin bağlantısını seçin. Aşağıdaki işlev default.js açılır:  
   
     ```javascript  
     function update() {  
@@ -221,11 +221,11 @@ Bu izlenecek yol, tanımlamak ve kullanarak bir performans sorunu düzeltme sür
     }  
     ```  
   
-     Bu özyinelemeli işlev çağıran bir döngü ayarlar `setValues()` düğmeyi kullanıcı arabiriminde güncelleştiren işlevi. Profil oluşturucuyu farklı Zamanlayıcı olayları inceleyerek, en olduğunu fark veya Zamanlayıcı olayların tümünü neden bu koddan, büyük olasılıkla sorun burada kaynaklanan görünecek şekilde, çok sık çalışıyor.  
+     Bu özyinelemeli işlev, `setValues()` Kullanıcı arabirimindeki düğmeyi güncelleştiren işlevi çağıran bir döngü ayarlar. Profil Oluşturucu 'daki farklı süreölçer olaylarını inceleyerek, bu kodun en çok veya tüm Süreölçer olayları sonucu olduğunu fark edersiniz. bu nedenle, sorun burada oluşur.  
   
-### <a name="fixing-the-performance-issue"></a>Performans sorunu düzeltme  
+### <a name="fixing-the-performance-issue"></a>Performans sorunu düzeltiliyor  
   
-1. Değiştirin `update()` işlevi aşağıdaki kod ile:  
+1. `update()`İşlevi şu kodla değiştirin:  
   
     ```javascript  
     function update() {  
@@ -238,9 +238,9 @@ Bu izlenecek yol, tanımlamak ve kullanarak bir performans sorunu düzeltme sür
     }  
     ```  
   
-     Kodun düzeltilmiş bu sürümü, varsayılan gecikme değerini kullanımını kaynaklanan kod, önceki sürümünden atlandı 1000 milisaniyeden kısa gecikme içerir. Profil Oluşturucu verileri, varsayılan değer sıfır milisaniye neden olduğunu görünür `setValues()` işlevi çok sık çalıştırmak.  
+     Bu kodun düzeltilen sürümü, kodun önceki sürümünden atlanan 1000 milisaniyelik bir gecikme içerir ve varsayılan bir gecikme değeri kullanılmasına neden olur. Profil Oluşturucu verilerinden, varsayılan değerin sıfır milisaniyelik olduğunu, bu da `setValues()` işlevin çok sık çalışmasına neden olur.  
   
-2. HTML kullanıcı Arabirimi yanıtlama hızı profil oluşturucuyu yeniden çalıştırın ve CPU kullanım grafiği denetleyin. Aşırı olayları kalkar ve CPU kullanımı, sıfıra yakın için bıraktı bulabilirsiniz. Düzeltildi!  
+2. HTML UI yanıtlama hızı profil oluşturucuyu yeniden çalıştırın ve CPU kullanımı grafiğini kontrol edin. Aşırı olayların geçmiş olduğunu ve CPU kullanımının yaklaşık sıfıra yakın olduğunu fark edersiniz. Düzenle!  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [HTML kullanıcı arabirimi yanıt hızı](../profiling/html-ui-responsiveness.md)

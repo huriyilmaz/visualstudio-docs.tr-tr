@@ -17,22 +17,22 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 75120b2f09c2eba3254a1b94e78875d8130c5225
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666129"
 ---
 # <a name="generate-code-from-uml-class-diagrams"></a>UML sınıf diyagramları aracılığıyla kod oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 'da C# UML Sınıf Diyagramlarından Visual .NET kodu oluşturmak Için **kod üret** komutunu kullanın. Varsayılan olarak, komut seçtiğiniz her UML türü için bir C# türü oluşturur. Kod oluşturan metin şablonlarını değiştirerek veya kopyalayarak bu davranışı değiştirebilir ve genişletebilirsiniz. Modelinizdeki farklı paketlerde bulunan türler için farklı davranış belirtebilirsiniz.
+Visual Studio 'da UML Sınıf Diyagramlarından Visual C# .NET kodu oluşturmak için **kod üret** komutunu kullanın. Varsayılan olarak, komut seçtiğiniz her UML türü için bir C# türü oluşturur. Kod oluşturan metin şablonlarını değiştirerek veya kopyalayarak bu davranışı değiştirebilir ve genişletebilirsiniz. Modelinizdeki farklı paketlerde bulunan türler için farklı davranış belirtebilirsiniz.
 
  **Kod oluştur** komutu özellikle kullanıcının öğe seçiminden kod oluşturmaya ve her UML sınıfı ya da başka bir öğe için bir dosya oluşturmaya uygundur. Örneğin, ekran görüntüsü iki UML sınıfından oluşturulmuş iki C# dosyası gösterir.
 
  Alternatif olarak, oluşturulan dosyaların UML öğeleriyle 1:1 ilişkisi olmadığı bir kod oluşturmak istiyorsanız, **Tüm Şablonları Dönüştür** komutuyla çağrılan metin şablonları yazmayı düşünebilirsiniz. Bu yöntem hakkında daha fazla bilgi için bkz. [UML modelden dosya oluşturma](../modeling/generate-files-from-a-uml-model.md).
 
- ![UML sınıf diyagramı ve üretilen C&#35; sınıfı dosyaları.](../modeling/media/oob-gencode1.png "oob_GenCode1")
+ ![UML sınıf diyagramı ve oluşturulan C&#35; sınıf dosyaları.](../modeling/media/oob-gencode1.png "oob_GenCode1")
 
  Visual Studio 'da UML sınıf diyagramları hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
@@ -71,28 +71,28 @@ Visual Studio 'da C# UML Sınıf Diyagramlarından Visual .NET kodu oluşturmak 
 
    Bazı doğrulama testleri, C#'ye çevrilebilmesini sağlamak için modele uygulanır. Bu testler başarısız olursa, bir hata iletisi görüntülenir ve kod oluşturma gerçekleştirilemez. Doğrulama menü komutu oluşturduysanız, doğrulama komutunuzun başarısız olduğu herhangi bir öğe için kod oluşturulmaz. Daha fazla bilgi için bkz. [UML modelleri için doğrulama kısıtlamaları tanımlama](../modeling/define-validation-constraints-for-uml-models.md).
 
-## <a name="default"></a>Varsayılan kod oluşturma dönüşümleri
+## <a name="default-code-generation-transforms"></a><a name="default"></a> Varsayılan kod oluşturma dönüşümleri
  Bu bölüm, komutu özelleştirmediğiniz takdirde **kod oluştur** komutu tarafından üretilen sonuçları özetler. Daha fazla bilgi için bkz. [kod Oluştur komutunu özelleştirme](#custom).
 
 - UML modelinde seçtiğiniz her tür için bir C# türü oluşturulur. Her tür, **GeneratedCode** klasörünün altında ayrı bir kod dosyasına yerleştirilir.
 
 - UML türü bir paket içinde yer alıyorsa, oluşturulan C# türü bir ad alanı içine yerleştirilir ve dosya ad alanıyla aynı ada sahip bir klasörde oluşturulur.
 
-- UML C# sınıfının her `Attribute` için bir özellik oluşturulur.
+- Bir UML sınıfının her biri için bir C# özelliği oluşturulur `Attribute` .
 
-- Bir C# UML türünün her `Operation` için bir yöntem oluşturulur.
+- Bir UML türü için C# yöntemi oluşturulur `Operation` .
 
 - Sınıfın katıldığı her gezilebilir ilişkilendirme için bir C# alanı oluşturulur.
 
   Her UML türüne bir stereotip ekleyerek, oluşturulan C# türünün daha fazla özelliğini denetleyebilirsiniz.
 
-|**Bu C# türü oluşturmak için**|**Bu UML türünü çiz**|**Bu stereotipi Uygula**|
+|**Bu C# türünü oluşturmak için**|**Bu UML türünü çiz**|**Bu stereotipi Uygula**|
 |---------------------------------|----------------------------|-------------------------------|
-|örneği|örneği|\<none > veya<br /><br /> C# sınıfı|
-|Arabirim|Arabirim|\<none > veya<br /><br /> C# arabirimi|
-|Sabit Listesi|Sabit Listesi|\<none > veya<br /><br /> C# sabit listesi|
-|Temsilci|örneği|C# temsilcisi|
-|Yapı|örneği|C# yapısı|
+|Sınıf|Sınıf|\<none> veya<br /><br /> C# sınıfı|
+|Arabirim|Arabirim|\<none> veya<br /><br /> C# arabirimi|
+|Sabit Listesi|Sabit Listesi|\<none> veya<br /><br /> C# sabit listesi|
+|Temsilci|Sınıf|C# temsilcisi|
+|Yapı|Sınıf|C# yapısı|
 
 #### <a name="to-set-a-stereotype-on-a-type-or-other-element"></a>Bir türde veya başka bir öğede bir stereotip ayarlamak için
 
@@ -101,18 +101,18 @@ Visual Studio 'da C# UML Sınıf Diyagramlarından Visual .NET kodu oluşturmak 
 2. **Özellikler** penceresinde, **Stereotipler** özelliğindeki açılan oku seçin ve ardından uygulamak istediğiniz stereotipin onay kutusunu seçin.
 
    > [!TIP]
-   > C# stereotipleri görünmezse, ilgilendiğiniz model öğelerini içeren model veya paket için C# Profilini etkinleştirin. **UML Model Gezgini**'nde modelin paketini veya kökünü seçin. Ardından **Özellikler** penceresinde **profil**' i seçin ve ardından C# profili etkinleştirin.
+   > C# stereotipleri görünmezse, ilgilendiğiniz model öğelerini içeren model veya paket için C# Profilini etkinleştirin. **UML Model Gezgini**'nde modelin paketini veya kökünü seçin. Ardından **Özellikler** penceresinde **profil**' i seçin ve ardından C# profilini etkinleştirin.
 
 3. Ayarlayabileceğiniz ek özellikleri görmek için **Stereotipler** özelliğini genişletin.
 
-   Türlerin, özniteliklerin, işlemlerin ve ilişkilerin **Açıklama** özellikleri, oluşturulan koddaki açıklamalara `<summary>` yazılır. Türlere bağlı açıklama öğeleri `<remarks>` açıklamalara yazılır.
+   Türlerin, özniteliklerin, işlemlerin ve ilişkilerin **Açıklama** özellikleri, `<summary>` oluşturulan koddaki açıklamalara yazılır. Türlere bağlı açıklama öğeleri `<remarks>` açıklamalara yazılır.
 
 ## <a name="varying-the-generated-code"></a>Oluşturulan kodu değiştirme
- Oluşturulan kod her türün, özniteliğin veya işlemin özelliklerine göre değişir. Örneğin, bir sınıfın **abstract** özelliğini true olarak ayarlarsanız, oluşturulan sınıfta `abstract` anahtar sözcüğü görüntülenir. Bir özniteliğin **çokluğunu** **0.. \*** olarak ayarlarsanız, oluşturulan özelliğin bir `IEnumerable<>` türü olacaktır.
+ Oluşturulan kod her türün, özniteliğin veya işlemin özelliklerine göre değişir. Örneğin, bir sınıfın **abstract** özelliğini true olarak ayarlarsanız `abstract` anahtar sözcüğü oluşturulan sınıfta görüntülenir. Bir özniteliğin **çokluğunu** **0. \* .** olarak ayarlarsanız, oluşturulan özelliğin `IEnumerable<>` türü olur.
 
- Ayrıca, her stereotip ayarlayabileceğiniz çeşitli ek özellikler sağlar. Bu değerler için C# kodunda uygun anahtar sözcüklere çevrilir. Örneğin, bir sınıf üzerinde özellik `Is Static` ayarlarsanız, C# sınıf `static` olur.
+ Ayrıca, her stereotip ayarlayabileceğiniz çeşitli ek özellikler sağlar. Bu değerler için C# kodunda uygun anahtar sözcüklere çevrilir. Örneğin, özelliğini `Is Static` bir sınıf üzerinde ayarlarsanız, C# sınıfı olur `static` .
 
- Bu ek özellikleri ayarlamak için diyagramda sınıfı veya diğer öğeyi seçin. Özellikler penceresi, **Stereotipler**' ı genişletin ve sonra C# stereotipi (  **C# sınıf**gibi) genişletin.  Sınıflar için bu ek özellikler şunlardır:
+ Bu ek özellikleri ayarlamak için diyagramda sınıfı veya diğer öğeyi seçin. Özellikler penceresi, **Stereotipler**' ı genişletin ve ardından C# **sınıfı**gibi c# stereotipini genişletin.  Sınıflar için bu ek özellikler şunlardır:
 
 - CLR Öznitelikleri
 
@@ -126,7 +126,7 @@ Visual Studio 'da C# UML Sınıf Diyagramlarından Visual .NET kodu oluşturmak 
 
   Her öznitelik ve işlemde ayarlayabileceğiniz stereotip özellikleri de vardır. Yeni bir öznitelik üzerinde Özellikler görmüyorsanız, **kod üret**' i çalıştırın.
 
-## <a name="custom"></a>Kod Oluştur komutunu özelleştirme
+## <a name="customizing-the-generate-code-command"></a><a name="custom"></a> Kod Oluştur komutunu özelleştirme
  **Kod oluştur** komutu, model öğelerinizi bir metin şablonları kümesi kullanarak dönüştürerek işe yarar. Metin şablonları hakkında daha fazla bilgi için bkz. [kod oluşturma ve T4 Metin şablonları](../modeling/code-generation-and-t4-text-templates.md).
 
  Şablonlar bir *metin şablonu bağlamaları*kümesinde belirtilir. Bir metin şablonu bağlaması hangi şablonun uygulanacağını, oluşturulan çıktının nereye yerleştirileceğini ve **kod oluştur** komutunun diğer parametrelerini belirtir.
@@ -150,13 +150,13 @@ Visual Studio 'da C# UML Sınıf Diyagramlarından Visual .NET kodu oluşturmak 
 
 1. **UML Model Gezgini**' nde bir model öğesi için kısayol menüsünü açın ve ardından **Özellikler**' i seçin. Genellikle, metin şablon bağlamalarını bir pakete veya modelin köküne eklersiniz.
 
-2. **Özellikler** penceresinde, **metin şablonu bağlamaları** özelliğindeki üç nokta düğmesini ( **[...]** ) seçin.
+2. **Özellikler** penceresinde, **metin şablonu bağlamaları** özelliğindeki üç nokta düğmesini (**[...]**) seçin.
 
     **Metin şablonu bağlamaları** iletişim kutusu görüntülenir.
 
 3. Yeni bir metin şablonu bağlaması oluşturmak için **Ekle** ' yi seçin.
 
-    \- veya-
+    \- veya
 
     Düzenlemek için varolan bir bağlamayı seçin.
 
@@ -164,18 +164,18 @@ Visual Studio 'da C# UML Sınıf Diyagramlarından Visual .NET kodu oluşturmak 
 
 4. İletişim kutusunda, metin şablon bağlamasının özelliklerini ayarlayın.
 
-   |    **Özelliði**    |                                                                                                                                                                                                                                                                                                                    **Açıklama**                                                                                                                                                                                                                                                                                                                    |
+   |    **Özellik**    |                                                                                                                                                                                                                                                                                                                    **Açıklama**                                                                                                                                                                                                                                                                                                                    |
    |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |        Name        |                                                                                                                                                                                                                                                  Bu bağlama için bir ad. Kapsayan bir paketten veya modelden devralınan bir bağlamayı geçersiz kılmak için geçersiz kılmak istediğiniz bağlamayla aynı adı kullanın.                                                                                                                                                                                                                                                  |
    |     Üzerine yaz      |                                                                                                                                                                                                                                                                                                      True ise, varolan tüm kodların üzerine yazılır.                                                                                                                                                                                                                                                                                                       |
-   |    Hedef Adı     | Oluşturulan dosyanın adı.<br /><br /> Bu dizeye `{Name}` veya `{Owner.Name}` gibi ifadeler ekleyebilirsiniz. Örneğin, `{Owner.Name}_{Name}` yazabilirsiniz. İfade, model öğesi üzerinde değerlendirilir. Yöntemlerin değil, öğelerin özelliklerini kullanabilir. Hangi özelliklerin kullanılabileceğini öğrenmek için **Microsoft. VisualStudio. Uml. \*** içindeki türlerin özelliklerine bakın. \* \*Important: \* \* `{Name}` veya `{Owner.Name}` yalnızca **hedef adı** özelliğinde kullanılabilir. Oluşturulan sınıfın adını değiştirmek için şablonu değiştirmeniz gerekir. Daha fazla bilgi için bkz. [metin şablonu yazma](#writing). |
-   |    Proje Yolu    |                                                                      Dönüşümün çıkış dosyalarını içerecek [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projenin yolunu belirtir. Yeni bir proje oluşturmak için yazılan değerleri kullanın. Varolan bir projeyi seçmek için üç nokta düğmesini ( **[...]** ) seçin.<br /><br /> Yoksa yeni bir proje oluşturulacaktır. Bu bir C# sınıf kitaplığı projesi olacaktır.<br /><br /> Bunu yapmak için projeyi doğrudan yazmanız gerekir. %ProgramFiles% veya %LocalAppData% gibi ortam değişkeni makrolarını dahil edebilirsiniz.                                                                       |
-   |  Hedef Dizin  |                                                                                          Hedef dosyanın oluşturulduğu klasör. Yol, proje klasörüyle ilişkilidir.<br /><br /> Kapsayıcı paketlerin adlarına karşılık gelen bir yol eklemek için `{PackageStructure}` ifadesini kullanabilirsiniz. Varsayılan değer `\GeneratedCode\{PackageStructure}` şeklindedir. %TEMP% veya %HomePath% gibi ortam değişkenlerini de ekleyebilirsiniz. **Önemli:** `{PackageStructure}` yalnızca **hedef dizin** özelliğinde kullanılabilir.                                                                                          |
+   |    Hedef Adı     | Oluşturulan dosyanın adı.<br /><br /> Bu dizeye veya gibi ifadeler ekleyebilirsiniz `{Name}` `{Owner.Name}` . Örneğin, şunu yazabilirsiniz: `{Owner.Name}_{Name}` . İfade, model öğesi üzerinde değerlendirilir. Yöntemlerin değil, öğelerin özelliklerini kullanabilir. Hangi özelliklerin kullanılabileceğini öğrenmek için **Microsoft. VisualStudio. UML \* **içindeki türlerin özelliklerine bakın. \*\*Önemli: \* \* `{Name}` veya `{Owner.Name}` yalnızca **hedef adı** özelliğinde kullanılabilir.   Oluşturulan sınıfın adını değiştirmek için şablonu değiştirmeniz gerekir. Daha fazla bilgi için bkz. [metin şablonu yazma](#writing). |
+   |    Proje Yolu    |                                                                      [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Dönüşümün çıkış dosyalarını içerecek projenin yolunu belirtir. Yeni bir proje oluşturmak için yazılan değerleri kullanın. Varolan bir projeyi seçmek için üç nokta düğmesini (**[...]**) seçin.<br /><br /> Yoksa yeni bir proje oluşturulacaktır. Bu bir C# sınıf kitaplığı projesi olacaktır.<br /><br /> Bunu yapmak için projeyi doğrudan yazmanız gerekir. %ProgramFiles% veya %LocalAppData% gibi ortam değişkeni makrolarını dahil edebilirsiniz.                                                                       |
+   |  Hedef Dizin  |                                                                                          Hedef dosyanın oluşturulduğu klasör. Yol, proje klasörüyle ilişkilidir.<br /><br /> `{PackageStructure}`İfadeyi, kapsayan paketlerin adlarına karşılık gelen bir yol eklemek için kullanabilirsiniz. Varsayılan değer: `\GeneratedCode\{PackageStructure}`. %TEMP% veya %HomePath% gibi ortam değişkenlerini de ekleyebilirsiniz. **Önemli:** `{PackageStructure}` yalnızca **hedef dizin** özelliğinde kullanılabilir.                                                                                            |
    | Şablon Dosya Yolu |                                                                                                                                                           Dönüşümü gerçekleştirecek şablon.<br /><br /> Sağlanan şablonları kullanabilir veya kendi şablonunuzu oluşturabilirsiniz. Sağlanan şablonları aşağıdaki konumda bulabilirsiniz:<br /><br /> …\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Architecture Tools\Extensibility\Templates\Text\                                                                                                                                                           |
 
 5. Bir öğeye istediğiniz kadar bağlama ekleyebilirsiniz.
 
-## <a name="writing"></a>Metin şablonu yazma
+## <a name="writing-a-text-template"></a><a name="writing"></a> Metin şablonu yazma
  Kendi metin şablonlarınızı yazabilirsiniz. Metin şablonları, program kodu veya başka tür bir metin dosyası oluşturabilirsiniz.
 
  Standart şablonların kopyalarını değiştirerek başlamanızı öneririz. Şablonları aşağıdaki konumlardan kopyalayabilirsiniz:
@@ -192,9 +192,9 @@ Visual Studio 'da C# UML Sınıf Diyagramlarından Visual .NET kodu oluşturmak 
 
   `<#@ Modeling ElementType="Microsoft.VisualStudio.Uml.Classes.IClass" Processor="ModelingProcessor" #>`
 
-  @No__t_0 özniteliği, bu şablonun uygulandığı UML öğe türünü tanımlar.
+  `ElementType`Öznitelik, bu şablonun UYGULANDıĞı UML öğe türünü tanımlar.
 
-  Şablonda `this`, aşağıdaki özelliklere sahip geçici bir sınıfa aittir:
+  Şablonda, `this` aşağıdaki özelliklere sahip geçici bir sınıfa aittir:
 
 - `Element` = şablonun uygulandığı UML [IElement](/previous-versions/dd516035(v=vs.140)) .
 
@@ -210,27 +210,27 @@ Visual Studio 'da C# UML Sınıf Diyagramlarından Visual .NET kodu oluşturmak 
 
 - `Session`: <xref:Microsoft.VisualStudio.TextTemplating.TextTemplatingSession>.
 
-- `Store`: <xref:Microsoft.VisualStudio.Modeling.Store>. Bu, UML ModelStore'un uygulandığı Görselleştirme ve Modelleme SDK Deposudur. UML [IModelStore](/previous-versions/ee789385(v=vs.140))'u almak için `this.Element.GetModelStore()` kullanın.
+- `Store`: <xref:Microsoft.VisualStudio.Modeling.Store>. Bu, UML ModelStore'un uygulandığı Görselleştirme ve Modelleme SDK Deposudur. UML [IModelStore](/previous-versions/ee789385(v=vs.140))'u almak için kullanın `this.Element.GetModelStore()` .
 
   Metin şablonu yazarken aşağıdaki noktaları yararlı bulabilirsiniz. Bu bilgiler, [kod oluşturma ve T4 Metin şablonlarında](../modeling/code-generation-and-t4-text-templates.md)ayrıntılı olarak açıklanmıştır.
 
-- @No__t_0 yönergesinde sonucun dosya adı uzantısını ayarlayabilirsiniz. Her metin şablonunda bir `Output` yönergesi gereklidir.
+- Bu sonucun dosya adı uzantısını `Output` yönergesinde ayarlayabilirsiniz. `Output`Her metin şablonunda bir yönerge gereklidir.
 
 - Bazı derlemelere şablon tarafından otomatik olarak başvurulur. Bu derlemeler, örneğin System.dll ve Microsoft.VisualStudio.Uml.Interfaces.dll'yi içerir.
 
-   Oluşturulan program kodunuzda diğer derlemeleri kullanmak için bir `Assembly` yönergesi kullanmanız gerekir. Örneğin:
+   Oluşturulan program kodunuzda diğer derlemeleri kullanmak için bir yönergesi kullanmanız gerekir `Assembly` . Örneğin:
 
    `<#@ Assembly Name="%ProgramFiles%\Microsoft Visual Studio 12.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.ArchitectureTools.Extensibility.dll" #>`
 
-- @No__t_0 gibi bazı ad alanları, program kodunuza otomatik olarak içeri aktarılır. Diğer ad alanları için `Import` yönergesini `using` deyiminizde kullandığınız şekilde kullanabilirsiniz. Örneğin:
+- Gibi bazı ad alanları `System` , program kodunuza otomatik olarak içeri aktarılır. Diğer ad alanları için, `Import` yönergesini bir ifadesini kullandığınız şekilde kullanabilirsiniz `using` . Örneğin:
 
    `<#@ Import Namespace="Microsoft.VisualStudio.Uml.Classes" #>`
 
    `<#@ Import Namespace="Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml" #>`
 
-- Başka bir dosyanın metnine başvurmak için `Include` yönergesini kullanın.
+- `Include`Başka bir dosyanın metnine başvurmak için yönergesini kullanın.
 
-- Şablon `<# ... #>` parantez içine alınmış parçalar **kod oluştur** komutu tarafından yürütülür. Şablonun bu parantezlerin dışında kalan bölümleri sonuç dosyasına kopyalanır. Oluşturulan kod ile oluşturulan metni ayırt etmek çok önemlidir. Oluşturulan metin herhangi bir dilde olabilir.
+- Köşeli ayraçlar içine alınmış olan şablon bölümleri `<# ... #>` **kod oluştur** komutu tarafından yürütülür. Şablonun bu parantezlerin dışında kalan bölümleri sonuç dosyasına kopyalanır. Oluşturulan kod ile oluşturulan metni ayırt etmek çok önemlidir. Oluşturulan metin herhangi bir dilde olabilir.
 
 - `<#= Expressions #>` değerlendirilir ve dizelere dönüştürülür.
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::GetValue | Microsoft Dokümanlar
+title: 'IDebugObject:: GetValue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 45d555cbea6bf8239ef4527ba982072e17532af4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726545"
 ---
 # <a name="idebugobjectgetvalue"></a>IDebugObject::GetValue
-Nesnenin değerini ardışık bayt serisi olarak alır.
+Nesnenin değerini ardışık bir bayt dizisi olarak alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetValue( 
@@ -43,16 +43,16 @@ int GetValue(
 
 ## <a name="parameters"></a>Parametreler
 `pValue`\
-[içinde, dışarı] Nesnenin değerini temsil eden ardışık bayt dizisiyle doldurulmuş bir dizi.
+[in, out] Nesnenin değerini temsil eden ardışık bir bayt serisi ile doldurulmuş dizi.
 
 `nSize`\
-[içinde] Getirilen maksimum bayt sayısı.
+'ndaki Getirilecek en fazla bayt sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- [GetSize](../../../extensibility/debugger/reference/idebugobject-getsize.md) yöntemini arayarak getirilebilecek toplam değer bayt sayısını alın.
+ [GetSize](../../../extensibility/debugger/reference/idebugobject-getsize.md) yöntemi çağırarak getirilen toplam değer baytı sayısını alır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

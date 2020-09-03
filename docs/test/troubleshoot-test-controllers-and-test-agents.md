@@ -1,5 +1,5 @@
 ---
-title: Sorun Giderme Test Denetleyicileri ve Test Aracıları
+title: Test denetleyicileri ve test aracılarında sorun giderme
 ms.date: 10/20/2016
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -12,38 +12,38 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 51d7e15ec71eec7134dfc49b3515385970e593a0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75565961"
 ---
-# <a name="strategies-for-troubleshooting-test-controllers-and-test-agents-in-load-tests"></a>Yük testlerinde test denetleyicileri ve test aracıları sorun giderme stratejileri
+# <a name="strategies-for-troubleshooting-test-controllers-and-test-agents-in-load-tests"></a>Yük testlerinde test denetleyicileri ve test aracılarında sorun giderme stratejileri
 
-Bu makalede, Visual Studio'da test denetleyicileri ve test aracıları ile çalışırken karşılaşabileceğiniz bazı sık karşılaşılan sorunlar ele alınmaktadır.
+Bu makalede, Visual Studio 'da test denetleyicileri ve test aracılarıyla çalışırken karşılaşabileceğiniz bazı yaygın sorunlar ele alınmaktadır.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="unable-to-collect-performance-counters-on-test-agent-computer"></a>Test aracısı bilgisayarında performans sayaçları toplanamıyor
+## <a name="unable-to-collect-performance-counters-on-test-agent-computer"></a>Test Aracısı bilgisayarında performans sayaçları toplanamıyor
 
-Bir yük testi çalıştırdığınızda, bir test aracısı bilgisayara bağlanmaya ve performans sayaçları toplamaya çalıştığınızda hatalar alabilirsiniz. Uzaktan Kayıt Defteri hizmeti, uzak bir bilgisayara performans sayacı verileri sağlamakla sorumlu hizmettir. Bazı işletim sistemlerinde, Uzaktan Kayıt Defteri hizmeti otomatik olarak başlatılamıyor. Bu sorunu gidermek için Uzaktan Kayıt Defteri hizmetini el ile başlatın.
+Bir yük testi çalıştırdığınızda, bir test aracısı bilgisayarına bağlanmayı ve performans sayaçlarını toplamayı denediğinizde hatalar alabilirsiniz. Uzak kayıt defteri hizmeti, uzak bir bilgisayara performans sayacı verileri sağlamaktan sorumlu hizmettir. Bazı işletim sistemlerinde, uzak kayıt defteri hizmeti otomatik olarak başlatılmaz. Bu sorunu gidermek için, uzak kayıt defteri hizmetini el ile başlatın.
 
 > [!NOTE]
-> **Denetim Masası'ndan** Uzaktan Kayıt Defteri hizmetine erişebilirsiniz. **Yönetim Araçları'nı** seçin ve **ardından Hizmetler'i**seçin.
+> **Denetim Masası** 'Ndaki uzak kayıt defteri hizmetine erişebilirsiniz. **Yönetim Araçları** ' nı ve ardından **Hizmetler**' i seçin.
 
-Bu sorunun bir diğer nedeni de performans sayaçlarını okumak için yeterli izinlere sahip olmadığınızdır. Yerel test çalıştırmaları için, testi çalıştıran kullanıcının hesabı nın Power Users grubunun bir üyesi veya daha yüksek olması veya Performans İzleyicisi Kullanıcıları grubunun bir üyesi olması gerekir. Uzaktan test çalıştırmaları için, denetleyicinin Güç Kullanıcıları grubunun bir üyesi olması gerektiği gibi veya daha yüksek olması veya Performans Monitörü Kullanıcıları grubunun bir üyesi olması gerektiği şekilde çalışacak şekilde yapılandırıldığı hesap.
+Bu sorunun başka bir nedeni, performans sayaçlarını okumak için yeterli izinlere sahip değilsiniz. Yerel test çalıştırmaları için, testi çalıştıran kullanıcının hesabı, Power Users grubunun ya da daha üst bir grubun üyesi ya da Performance Monitor Users grubunun bir üyesi olmalıdır. Uzaktan test çalıştırmaları için, denetleyicinin çalışacak şekilde yapılandırıldığı hesabın, Power Users grubunun veya üzeri bir grubun üyesi olması veya Performance Monitor Users grubunun bir üyesi olması gerekir.
 
-## <a name="set-the-logging-level-on-a-test-controller-computer"></a>Test denetleyicibilgisayarında günlüğe kaydetme düzeyini ayarlama
+## <a name="set-the-logging-level-on-a-test-controller-computer"></a>Bir test denetleyicisi bilgisayarında günlüğe kaydetme düzeyini ayarlama
 
-Test denetleyicibilgisayarındaki günlüğe kaydetme düzeyini denetleyebilirsiniz. Bu, bir ortamda yük testi çalıştırırken bir sorunu tanılamaya çalışırken yararlıdır.
+Bir test denetleyicisi bilgisayarında günlüğe kaydetme düzeyini denetleyebilirsiniz. Bu, bir ortamda yük testi çalıştırırken bir sorunu tanılamaya çalışırken yararlıdır.
 
-### <a name="to-set-the-logging-level-on-a-test-controller-computer"></a>Test denetleyicibilgisayarında günlüğe kaydetme düzeyini ayarlamak için
+### <a name="to-set-the-logging-level-on-a-test-controller-computer"></a>Bir test denetleyicisi bilgisayarında günlüğe kaydetme düzeyini ayarlamak için
 
-1. Test denetleyici hizmetini durdurun. Komut isteminde, `net stop vsttcontroller`yazın.
+1. Test denetleyicisi hizmetini durdurun. Komut isteminde yazın `net stop vsttcontroller` .
 
-2. *QTController.exe.config*dosyasını açın. Bu dosya denetleyici yükleme dizininde yer alır.
+2. *QTController.exe.config*dosyasını açın. Bu dosya, denetleyici yükleme dizininde bulunur.
 
-3. Dosyanın `EqtTraceLevel` sistem tanılama bölümündeki anahtarın girişini düzenle. Kodunuz buna benzemelidir:
+3. `EqtTraceLevel`Dosyanın sistem tanılama bölümünde anahtar için girişi düzenleyin. Kodunuz şuna benzemelidir:
 
     ```xml
     <system.diagnostics>
@@ -66,56 +66,56 @@ Test denetleyicibilgisayarındaki günlüğe kaydetme düzeyini denetleyebilirsi
 
 4. Dosyayı kaydedin.
 
-5. Denetleyici hizmetini başlatın. Komut isteminde, `net start vsttcontroller`yazın.
+5. Denetleyici hizmetini başlatın. Komut isteminde yazın `net start vsttcontroller` .
 
-Bu, test denetleyicisi, test aracısı hizmeti ve test aracısı işlemi için geçerlidir. Sorunları tanılarken, her üç işlemde de günlüğe kaydetmeyi etkinleştirmek yararlıdır. Günlüğe kaydetme düzeyini ayarlama yordamı, test denetleyicisi için daha önce belirtildiği gibi, her üç işlem için aynıdır. Test aracısı hizmeti ve aracı işlemi için günlüğe kaydetme düzeylerini ayarlamak için aşağıdaki yapılandırma dosyalarını kullanın:
+Bu, test denetleyicisi, test Aracısı hizmeti ve test Aracısı işlemi için geçerlidir. Sorunları tanılarken, her üç işlemde günlüğe kaydetmeyi etkinleştirmek yararlı olur. Günlüğe kaydetme düzeyini ayarlama yordamı, test denetleyicisi için daha önce belirtildiği gibi, üç işlem için de aynıdır. Test Aracısı hizmeti ve aracı işleminin günlük düzeylerini ayarlamak için aşağıdaki yapılandırma dosyalarını kullanın:
 
-- *QTController.exe.config* Conttoller servisi
+- *QTController.exe.config* Contentoller hizmeti
 
-- *QTAgentService.exe.config* Ajan servisi
+- *QTAgentService.exe.config* Aracı hizmeti
 
-- *QTDCAgent(32).exe.config* 32 bit mimari için aracı veri bağdaştırıcısı işlemi.
+- *QTDCAgent (32) .exe.config* 32 bitlik mimari için aracı veri bağdaştırıcısı işlemi.
 
-- *QTDCAgent(64).exe.config* 64 bit mimari için aracı veri bağdaştırıcısı işlemi.
+- *QTDCAgent (64) .exe.config* 64 bitlik mimari için aracı veri bağdaştırıcısı işlemi.
 
-- *QTAgent(32).exe.config* 32 bit mimari için aracı test işlemi.
+- *QTAgent (32) .exe.config* 32 bitlik mimari için aracı test işlemi.
 
-- *QTAgent(64).exe.config* 64 bit mimari için aracı test işlemi.
+- *QTAgent (64) .exe.config* 64 bitlik mimari için aracı test işlemi.
 
-## <a name="bind-a-test-controller-to-a-network-adapter"></a>Test denetleyicisini ağ bağdaştırıcısına bağlama
+## <a name="bind-a-test-controller-to-a-network-adapter"></a>Bir ağ bağdaştırıcısına bir test denetleyicisi bağlama
 
-Bir test aracısı ayarlamaya çalıştığınızda, aşağıdaki hatayı alabilirsiniz:
+Bir test aracısı ayarlamaya çalıştığınızda şu hatayı alabilirsiniz:
 
-**Hata 8110. Belirtilen denetleyici bilgisayara bağlanamıyor veya denetleyici nesnesine erişemiyor.**
+**Hata 8110. Belirtilen denetleyici bilgisayara bağlanılamıyor veya denetleyici nesnesine erişilemiyor.**
 
-Bu hata, test denetleyicisinin birden fazla ağ bağdaştırıcısı olan bir bilgisayara yüklenerek ortaya çıkabilir.
+Bu hata, test denetleyicisinin birden fazla ağ bağdaştırıcısı olan bir bilgisayara yüklenmesi nedeniyle oluşabilir.
 
 > [!NOTE]
-> Test aracılarını başarılı bir şekilde yüklemek ve bir testi çalıştırmayı denemeden bu sorunu görmemek de mümkündür.
+> Test aracılarını başarıyla yüklemek de mümkündür ve test çalıştırmayı deneene kadar bu sorunu görmez.
 
-Bu hatayı gidermek için test denetleyicisini ağ bağdaştırıcılarından birine bağlamanız gerekir. `BindTo` Özelliği test denetleyicisine ayarlamanız ve ardından test aracısını değiştirerek test aracısını ad yerine IP adresine göre başvurmanız gerekir. Adımlar aşağıdaki yordamlarda sağlanmıştır.
+Bu hatayı onarmak için, test denetleyicisini ağ bağdaştırıcılarından birine bağlamanız gerekir. `BindTo`Test denetleyicisindeki özelliği ayarlamanız ve ardından test aracısını ad yerıne IP adresine göre test denetleyicisine başvuracak şekilde değiştirmeniz gerekir. Adımları aşağıdaki yordamlarda verilmiştir.
 
-### <a name="to-obtain-the-ip-address-of-the-network-adapter"></a>Ağ bağdaştırıcısının IP adresini elde etmek için
+### <a name="to-obtain-the-ip-address-of-the-network-adapter"></a>Ağ bağdaştırıcısının IP adresini almak için
 
-1. **Başlat'ı**seçin ve ardından **Çalıştır'ı**seçin.
+1. **Başlat**' ı ve ardından **Çalıştır**' ı seçin.
 
      **Çalıştır** iletişim kutusu görüntülenir.
 
-2. Yazın `cmd` ve sonra **Tamam'ı**seçin.
+2. Yazın `cmd` ve ardından **Tamam**' ı seçin.
 
      Bir komut istemi açılır.
 
 3. `ipconfig /all` yazın.
 
-     Ağ bağdaştırıcılarınızın IP adresleri görüntülenir. Denetleyicinizi bağlamak istediğiniz ağ bağdaştırıcısının IP adresini kaydedin.
+     Ağ bağdaştırıcılarınız için IP adresleri görüntülenir. Denetleyicinizi bağlamak istediğiniz ağ bağdaştırıcısının IP adresini kaydedin.
 
-### <a name="to-bind-a-test-controller-to-a-network-adapter"></a>Test denetleyicisini ağ bağdaştırıcısına bağlamak için
+### <a name="to-bind-a-test-controller-to-a-network-adapter"></a>Bir test denetleyicisini bir ağ bağdaştırıcısına bağlamak için
 
-1. Test denetleyici hizmetini durdurun. Komut isteminde, `net stop vsttcontroller`yazın.
+1. Test denetleyicisi hizmetini durdurun. Komut isteminde yazın `net stop vsttcontroller` .
 
-2. *QTController.exe.config*dosyasını açın. Bu dosya *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE*içinde bulunmaktadır.
+2. *QTController.exe.config*dosyasını açın. Bu dosya *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE*konumunda bulunuyor.
 
-3. Özellik için uygulama `BindTo` ayarlarına bir giriş ekleyin. Denetleyiciyi bağlamak istediğiniz ağ bağdaştırıcısının IP adresini belirtin. Kodunuz buna benzemelidir:
+3. Uygulama ayarlarına özelliği için bir giriş ekleyin `BindTo` . Denetleyiciyi bağlamak istediğiniz ağ bağdaştırıcısının IP adresini belirtin. Kodunuz şuna benzemelidir:
 
     ```xml
     <appSettings>
@@ -131,13 +131,13 @@ Bu hatayı gidermek için test denetleyicisini ağ bağdaştırıcılarından bi
 
 4. Dosyayı kaydedin.
 
-5. Test denetleyici hizmetini başlatın. Komut isteminde, `net start vsttcontroller`yazın.
+5. Test denetleyicisi hizmetini başlatın. Komut isteminde yazın `net start vsttcontroller` .
 
-### <a name="to-connect-a-test-agent-to-a-bound-controller"></a>Test aracısını bağlı bir denetleyiciye bağlamak için
+### <a name="to-connect-a-test-agent-to-a-bound-controller"></a>Bir test aracısını bir bağlama denetleyicisine bağlamak için
 
-- Test aracısı yüklemesini yeniden çalıştırın. Bu kez, test denetleyicisi adı yerine test denetleyicisinin IP adresini belirtin.
+- Test Aracısı yüklemesini yeniden çalıştırın. Bu kez, test denetleyicisi adı yerine test denetleyicisinin IP adresini belirtin.
 
-Bu, test denetleyicisi, test aracısı hizmeti ve test aracısı işlemi için geçerlidir. Özellik, `BindTo` birden fazla ağ bağdaştırıcısı olan bir bilgisayarda çalışan her işlem için ayarlanmalıdır. Özelliği ayarlama yordamı, test denetleyicisi `BindTo` için daha önce belirtildiği gibi, her üç işlem için aynıdır. Test aracısı hizmeti ve test aracısı işlemi için günlük düzeylerini ayarlamak için, [test denetleyicisi bilgisayarında günlük düzeyini](#set-the-logging-level-on-a-test-controller-computer)ayarla'da listelenen yapılandırma dosyalarını kullanın.
+Bu, test denetleyicisi, test Aracısı hizmeti ve test Aracısı işlemi için geçerlidir. Özelliği, birden `BindTo` fazla ağ bağdaştırıcısı olan bir bilgisayarda çalışan her işlem için ayarlanmalıdır. Özelliği ayarlama yordamı, `BindTo` Test denetleyicisi için daha önce belirtildiği gibi, üç işlem için de aynıdır. Test Aracısı hizmeti ve test aracısı işleminin günlük düzeylerini ayarlamak için, [bir test denetleyicisi bilgisayarında günlüğe kaydetme düzeyini ayarla](#set-the-logging-level-on-a-test-controller-computer)bölümünde listelenen yapılandırma dosyalarını kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

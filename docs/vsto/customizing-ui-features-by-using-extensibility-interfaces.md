@@ -1,5 +1,5 @@
 ---
-title: Genişletilebilirlik arabirimlerini kullanarak kullanıcı Arabirimi özelliklerini özelleştirme
+title: Genişletilebilirlik arabirimlerini kullanarak Kullanıcı arabirimi özelliklerini özelleştirme
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -21,65 +21,65 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: d28c9456afdc60b1bddadf759ec3090ba37f2040
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445485"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64783497"
 ---
-# <a name="customize-ui-features-by-using-extensibility-interfaces"></a>Genişletilebilirlik arabirimlerini kullanarak kullanıcı Arabirimi özelliklerini özelleştirme
-  Visual Studio'da Office geliştirme araçları, sınıflar ve VSTO eklentisi içinde özel görev bölmeleri, Şerit özelleştirmeleri ve Outlook form bölgeleri oluşturma kullanıldıklarında birçok uygulama ayrıntıları işleyen tasarımcılar sağlar. Ancak, aynı zamanda uygulayabileceğiniz *genişletilebilirlik arabirimi* her özel gereksinimleriniz varsa, kendiniz özelliği.
+# <a name="customize-ui-features-by-using-extensibility-interfaces"></a>Genişletilebilirlik arabirimlerini kullanarak Kullanıcı arabirimi özelliklerini özelleştirme
+  Visual Studio 'daki Office geliştirme araçları, bir VSTO eklentisi içinde özel görev bölmeleri, Şerit özelleştirmeleri ve Outlook form bölgeleri oluşturmak için kullandığınızda birçok uygulama ayrıntılarını işleyen sınıflar ve tasarımcılar sağlar. Ancak, özel gereksinimleriniz varsa, her bir özellik için *genişletilebilirlik arabirimini* de uygulayabilirsiniz.
 
  [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]
 
-## <a name="overview-of-extensibility-interfaces"></a>Genişletilebilirlik arabirimleri genel bakış
- Microsoft Office, COM, VSTO eklentileri şeridinde gibi belirli özellikleri özelleştirmek için uygulayabileceğiniz genişletilebilirlik arabirimleri kümesi tanımlar. Bu arabirimler, erişim sağladıkları özellikler üzerinde tam denetim sağlar. Ancak, bu arabirimleri uygulayan yönetilen kodda COM birlikte çalışabilirlik biraz bilgi gerektirir. Bazı durumlarda, bu arabirimlerin programlama modeli ayrıca .NET Framework için alışkın oldukları geliştiriciler için kullanımı kolay değildir.
+## <a name="overview-of-extensibility-interfaces"></a>Genişletilebilirlik arabirimlerine genel bakış
+ Microsoft Office, COM VSTO eklentilerinin Şerit gibi belirli özellikleri özelleştirmek için uygulayabileceği bir genişletilebilirlik arabirimleri kümesi tanımlar. Bu arabirimler, erişimi sağladıkları Özellikler üzerinde tam denetim sağlar. Ancak, bu arabirimlerin uygulanması yönetilen kodda COM birlikte çalışabilirlik hakkında bilgi gerektirir. Bazı durumlarda, bu arabirimlerin programlama modeli .NET Framework alışkın olan geliştiriciler için de sezgisel değildir.
 
- Bir VSTO eklentisi Visual Studio'da Office proje şablonları kullanarak oluşturduğunuzda, Şerit gibi özellikleri özelleştirmek için genişletilebilirlik arabirimleri uygulayan gerekmez. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Sizin için bu arabirimlerini uygular. Bunun yerine, daha sezgisel sınıflar ve Visual Studio tarafından sağlanan tasarımcılar kullanabilirsiniz. Ancak, isterseniz genişletilebilirlik arabirimleri doğrudan, VSTO eklenti yine de uygulayabilirsiniz.
+ Visual Studio 'da Office proje şablonlarını kullanarak bir VSTO eklentisi oluşturduğunuzda, şerit gibi özellikleri özelleştirmek için genişletilebilirlik arabirimlerini uygulamanız gerekmez. , [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Bu arabirimleri sizin için uygular. Bunun yerine, Visual Studio tarafından sunulan daha sezgisel sınıflar ve tasarımcılar kullanabilirsiniz. Bununla birlikte, isterseniz doğrudan VSTO eklentilerinizde genişletilebilirlik arabirimlerini de uygulayabilirsiniz.
 
- Sınıflar ve Visual Studio bu özellikler için sağladığı tasarımcılar hakkında daha fazla bilgi için bkz: [özel görev bölmeleri](../vsto/custom-task-panes.md), [Şerit Tasarımcısı](../vsto/ribbon-designer.md), ve [oluşturma Outlook form bölgeleri](../vsto/creating-outlook-form-regions.md).
+ Visual Studio 'nun bu özellikler için sağladığı sınıflar ve tasarımcılar hakkında daha fazla bilgi için bkz. [özel görev bölmeleri](../vsto/custom-task-panes.md), [Şerit Tasarımcısı](../vsto/ribbon-designer.md)ve [Outlook form bölgeleri oluşturma](../vsto/creating-outlook-form-regions.md).
 
-## <a name="extensibility-interfaces-you-can-implement-in-a-vsto-add-in"></a>Bir VSTO eklenti uygulayabileceğiniz genişletilebilirlik arabirimleri
- Aşağıdaki tabloda, uygulayabileceğiniz genişletilebilirlik arabirimleri ve bunları destekleyen uygulamaları listeler.
+## <a name="extensibility-interfaces-you-can-implement-in-a-vsto-add-in"></a>VSTO eklentisi içinde uygulayabileceğiniz genişletilebilirlik arabirimleri
+ Aşağıdaki tabloda uygulayabileceğiniz genişletilebilirlik arabirimleri ve bunları destekleyen uygulamalar listelenmektedir.
 
 |Arabirim|Açıklama|Uygulamalar|
 |---------------|-----------------|------------------|
-|<xref:Microsoft.Office.Core.IRibbonExtensibility>|Şerit kullanıcı arabirimini özelleştirmek için bu arabirimi uygulayın. **Not:**  Ekleyebileceğiniz bir **Ribbon (XML)** varsayılan oluşturmak için bir proje öğesine <xref:Microsoft.Office.Core.IRibbonExtensibility> VSTO eklenti uygulamasında. Daha fazla bilgi için [Ribbon XML](../vsto/ribbon-xml.md).|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> InfoPath 2010<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Project<br /><br /> Visio<br /><br /> Word|
-|<xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>|Özel görev bölmesi oluşturmak için bu arabirimi uygulayın.|Excel<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Word|
+|<xref:Microsoft.Office.Core.IRibbonExtensibility>|Şerit kullanıcı arabirimini özelleştirmek için bu arabirimi uygulayın. **Note:**  VSTO eklentiinizdeki varsayılan bir uygulama oluşturmak için bir projeye **Şerit (XML)** öğesi ekleyebilirsiniz <xref:Microsoft.Office.Core.IRibbonExtensibility> . Daha fazla bilgi için bkz. [ŞERIT XML](../vsto/ribbon-xml.md).|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> InfoPath 2010<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Project<br /><br /> Visio<br /><br /> Word|
+|<xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>|Özel bir görev bölmesi oluşturmak için bu arabirimi uygulayın.|Excel<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Word|
 |<xref:Microsoft.Office.Interop.Outlook.FormRegionStartup>|Outlook form bölgesi oluşturmak için bu arabirimi uygulayın.|Outlook|
 
- Microsoft Office tarafından gibi tanımlanan diğer genişletilebilirlik arabirimleri vardır <xref:Microsoft.Office.Core.IBlogExtensibility>, <xref:Microsoft.Office.Core.EncryptionProvider>, ve <xref:Microsoft.Office.Core.SignatureProvider>. Visual Studio içinde bir VSTO Office proje şablonları kullanılarak oluşturulmuş eklentisi bu arabirimleri uygulayan desteklemez.
+ ,, Ve gibi Microsoft Office tarafından tanımlanan diğer birçok genişletilebilirlik arabirimi vardır <xref:Microsoft.Office.Core.IBlogExtensibility> <xref:Microsoft.Office.Core.EncryptionProvider> <xref:Microsoft.Office.Core.SignatureProvider> . Visual Studio, Office proje şablonları kullanılarak oluşturulan bir VSTO eklentisinin bu arabirimlerin uygulanmasının kullanılmasını desteklemez.
 
-## <a name="use-extensibility-interfaces"></a>Genişletilebilirlik arabirimlerini kullanın
- Genişletilebilirlik arabirimini kullanarak bir kullanıcı Arabirimi özelliğinin özelleştirmek için VSTO eklentisi projeleri uygun arabirim uygular. Ardından, geçersiz kılma <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> arabirimi uygulayan sınıf örneği döndürmek için yöntemi.
+## <a name="use-extensibility-interfaces"></a>Genişletilebilirlik arabirimlerini kullanma
+ Bir kullanıcı arabirimi özelliğini bir genişletilebilirlik arabirimi kullanarak özelleştirmek için, VSTO eklenti projenizde uygun arabirimi uygulayın. Ardından, <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> arabirimini uygulayan sınıfının bir örneğini döndürmek için yöntemini geçersiz kılın.
 
- Nasıl uygulayacağınızı gösteren bir örnek uygulama için <xref:Microsoft.Office.Core.IRibbonExtensibility>, <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>, ve <xref:Microsoft.Office.Interop.Outlook.FormRegionStartup> VSTO eklentisi, Outlook için genel arabirimlerde UI Manager örnekte bkz [Office geliştirme örnekleri](../vsto/office-development-samples.md).
+ <xref:Microsoft.Office.Core.IRibbonExtensibility>Outlook için BIR VSTO eklentisinin, ve arabirimlerinin nasıl uygulanacağını gösteren örnek bir uygulama için <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer> <xref:Microsoft.Office.Interop.Outlook.FormRegionStartup> bkz. [Office geliştirme örneklerinde](../vsto/office-development-samples.md)UI Yöneticisi örneği.
 
 ### <a name="example-of-implementing-an-extensibility-interface"></a>Genişletilebilirlik arabirimi uygulama örneği
- Aşağıdaki kod örneği basit bir uygulamasını gösterir <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer> özel görev bölmesi oluşturmak için arabirim. Bu örnek, iki sınıf tanımlar:
+ Aşağıdaki kod örneği, <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer> özel bir görev bölmesi oluşturmak için arabirimin basit bir uygulamasını gösterir. Bu örnek iki sınıfı tanımlar:
 
-- `TaskPaneHelper` Sınıfının Implements <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer> oluşturmak ve bir özel görev bölmesini görüntülemek için.
+- `TaskPaneHelper`Sınıfı, <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer> özel bir görev bölmesi oluşturup göstermek için uygular.
 
-- `TaskPaneUI` Sınıfı görev bölmesinin kullanıcı Arabirimi sağlar. Özniteliklerini `TaskPaneUI` sınıfı sınıfı sınıfı bulmak Microsoft Office uygulamaları sağlayan COM görünür hale. Bu örnekte, boş bir kullanıcı Arabirimi olan <xref:System.Windows.Forms.UserControl>, ancak kodu değiştirerek denetimler ekleyebilirsiniz.
+- `TaskPaneUI`Sınıfı, görev bölmesinin kullanıcı arabirimini sağlar. Sınıfının öznitelikleri, `TaskPaneUI` sınıfı com 'a görünür hale getirir ve bu, Microsoft Office uygulamaların sınıfı bulmasını sağlar. Bu örnekte, Kullanıcı arabirimi boştur <xref:System.Windows.Forms.UserControl> , ancak kodu değiştirerek denetimler ekleyebilirsiniz.
 
   > [!NOTE]
-  > Kullanıma sunmak için `TaskPaneUI` sınıfı, COM de ayarlamanız gerekir **kaydetme COM birlikte çalışması için** proje özelliği.
+  > `TaskPaneUI`Sınıfı com 'a sunmak için, proje Için **REGISTER for com Interop** özelliğini de ayarlamanız gerekir.
 
   [!code-vb[Trin_SimpleExtensibilityInterface#1](../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb#1)]
   [!code-csharp[Trin_SimpleExtensibilityInterface#1](../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs#1)]
 
-  Uygulama hakkında daha fazla bilgi için <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>, bkz: [2007 Office sistemi içinde özel görev bölmeleri oluşturma](/previous-versions/office/developer/office-2007/aa338197(v=office.12)) Microsoft Office belgelerinde.
+  Uygulama hakkında daha fazla bilgi için <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer> , Microsoft Office belgelerindeki [2007 Office sisteminde özel görev bölmeleri oluşturma](/previous-versions/office/developer/office-2007/aa338197(v=office.12)) bölümüne bakın.
 
-### <a name="example-of-overriding-the-requestservice-method"></a>Örnek RequestService yöntemini geçersiz kılma
- Aşağıdaki kod örneğinde nasıl geçersiz kılınacağını gösterir <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> örneği döndürülecek yöntemi `TaskPaneHelper` önceki kod örneğinde bir sınıftan. Değerini denetler *serviceGuid* hangi arabirim istenen ve ardından bu arabirimi uygulayan bir nesne döndürür belirlemek için parametre.
+### <a name="example-of-overriding-the-requestservice-method"></a>RequestService metodunu geçersiz kılma örneği
+ Aşağıdaki kod örneği, <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> önceki kod örneğinden sınıfının bir örneğini döndürmek için yönteminin nasıl geçersiz kılınacağını göstermektedir `TaskPaneHelper` . Hangi arabirimin istendiğini öğrenmek için *serviceGuid* parametresinin değerini denetler ve ardından bu arabirimi uygulayan bir nesne döndürür.
 
  [!code-vb[Trin_SimpleExtensibilityInterface#2](../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb#2)]
  [!code-csharp[Trin_SimpleExtensibilityInterface#2](../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs#2)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)
-- [VSTO eklentilerini programlama](../vsto/programming-vsto-add-ins.md)
+- [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md)
 - [Office çözümleri geliştirme](../vsto/developing-office-solutions.md)
-- [VSTO eklentilerinde diğer Office Çözümlerinden kod arama](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)
-- [Nasıl yapılır: Visual Studio'da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md)
+- [Diğer Office çözümlerindeki VSTO eklentilerindeki kodu çağırma](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)
+- [Nasıl yapılır: Visual Studio 'da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md)
 - [VSTO Eklentileri Mimarisi](../vsto/architecture-of-vsto-add-ins.md)

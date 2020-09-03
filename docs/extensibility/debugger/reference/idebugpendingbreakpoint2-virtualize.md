@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::Virtualize | Microsoft Dokümanlar
+title: 'IDebugPendingBreakpoint2:: Sanallaştır | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,16 +17,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7ad5aac997cf694a7cf8fa887ae63fbef54ca07f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725660"
 ---
 # <a name="idebugpendingbreakpoint2virtualize"></a>IDebugPendingBreakpoint2::Virtualize
-Bekleyen bu kesme noktasının sanallaştırılmış durumunu geçiştir. Bekleyen bir kesme noktası sanallaştırıldığında, hata ayıklama altyapısı programa her yeni kod yüklendiğinde onu bağlamayı dener.
+Bu bekleyen kesme noktasının sanallaştırılmış durumuna geçiş yapar. Bekleyen bir kesme noktası sanallaştırılmış olduğunda, hata ayıklama altyapısı, programa her yeni kod yüklendiğinde bağlamayı dener.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT Virtualize(
@@ -42,16 +42,16 @@ int Virtualize(
 
 ## <a name="parameters"></a>Parametreler
 `fVirtualize`\
-[içinde] Bekleyen kesme noktasını`TRUE`sanallaştırmak için sıfıra`FALSE`() veya sanallaştırmayı kapatmak için sıfıra ( ) ayarlayın.
+'ndaki `TRUE`Sanallaştırmayı devre dışı bırakmak için bekleyen kesme noktasını sanallaştırmak için () sıfır olmayan () olarak ayarlayın `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür. Kesme `E_BP_DELETED` noktası silinmişse döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. `E_BP_DELETED`Kesme noktasının silinip silinmediğini döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Kod her yüklendiğinde sanallaştırılmış bir kesme noktası bağlanır.
+Her kod yüklendiğinde sanallaştırılmış bir kesme noktası bağlanır.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, `CPendingBreakpoint` [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimini ortaya çıkaran basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, `CPendingBreakpoint` [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimini kullanıma sunan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CPendingBreakpoint::Virtualize(BOOL fVirtualize)

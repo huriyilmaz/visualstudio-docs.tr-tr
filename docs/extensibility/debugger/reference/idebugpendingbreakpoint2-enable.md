@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::Etkinleştir | Microsoft Dokümanlar
+title: 'IDebugPendingBreakpoint2:: Enable | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,16 +17,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f796aef9533e3861a870b0a0543ae6b4aeb11de1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725896"
 ---
 # <a name="idebugpendingbreakpoint2enable"></a>IDebugPendingBreakpoint2::Enable
-Bekleyen kesme noktasının etkin durumunu geçişe savuruyor.
+Bekleyen kesme noktasının etkin durumunu değiştirir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT Enable(
@@ -42,18 +42,18 @@ int Enable(
 
 ## <a name="parameters"></a>Parametreler
 `fEnable`\
-[içinde] Bekleyen bir kesme`TRUE`noktasını etkinleştirmek için sıfıra () veya devre dışı bırakılabilmek için sıfıra (`FALSE`) ayarlayın.
+'ndaki `TRUE`Bekleyen bir kesme noktasını etkinleştirmek için () sıfır dışında (), devre dışı bırakmak için sıfır () olarak ayarlayın `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür. Kesme `E_BP_DELETED` noktası silinmişse döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. `E_BP_DELETED`Kesme noktasının silinip silinmediğini döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Bekleyen bir kesme noktası etkinleştirildiğinde veya devre dışı bırakıldığında, ondan bağlanan tüm kesme noktaları aynı duruma ayarlanır.
+Bekleyen bir kesme noktası etkinleştirildiğinde veya devre dışı bırakıldığında, onunla bağlantılı tüm kesme noktaları aynı duruma ayarlanır.
 
-Kesme noktası zaten etkin veya devre dışı bırakılmış olsa bile, bu yöntem gerektiği kadar çağrılabilir.
+Kesme noktası zaten etkinleştirilmiş veya devre dışı bırakılmış olsa bile, bu yöntem gerektiği kadar çok kez çağrılabilir.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, `CPendingBreakpoint` [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimini ortaya çıkaran basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, `CPendingBreakpoint` [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimini kullanıma sunan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CPendingBreakpoint::Enable(BOOL fEnable)

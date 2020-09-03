@@ -1,5 +1,5 @@
 ---
-title: ResolveNonMSBuildProjectOutput Görev | Microsoft Dokümanlar
+title: ResolveNonMSBuildProjectOutput görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,30 +17,30 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 604ed91d32140c3b037e6ddef21e996f72ef8439
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77632582"
 ---
 # <a name="resolvenonmsbuildprojectoutput-task"></a>ResolveNonMSBuildProjectOutput görevi
 
-MSBuild olmayan proje başvuruları için çıktı dosyalarını belirler.
+MSBuild olmayan proje başvuruları için çıkış dosyalarını belirler.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda görevparametreleri `ResolveNonMSBuildProjectOutput` açıklanmaktadır.
+ Aşağıdaki tablo, görevin parametrelerini açıklar `ResolveNonMSBuildProjectOutput` .
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`PreresolvedProjectOutputs`|İsteğe bağlı `String` parametre.<br /><br /> Çözülmüş proje çıktılarını içeren bir XML dizesi belirtir.|
+|`PreresolvedProjectOutputs`|İsteğe bağlı `String` parametre.<br /><br /> Çözümlenen proje çıkışlarını içeren bir XML dizesi belirtir.|
 |`ProjectReferences`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Proje başvurularını belirtir.|
-|`ResolvedOutputPaths`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Çözülmüş başvuru yollarının listesini içerir (ve özgün proje başvuru özniteliklerini korur).|
-|`UnresolvedProjectReferences`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Önceden çözümlenmiş çıktılar listesini kullanarak çözülemeyen proje başvuru öğelerinin listesini içerir.<br /><br /> Visual Studio yalnızca MSBuild olmayan projeleri önceden çözdüğünden, bu listedeki proje başvurularının MSBuild biçiminde olduğu anlamına gelir.|
+|`ResolvedOutputPaths`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Çözümlenen başvuru yollarının listesini içerir (ve özgün proje başvuru özniteliklerini korur).|
+|`UnresolvedProjectReferences`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Geri alınan çıkış listesi kullanılarak çözülemeyen proje başvuru öğelerinin listesini içerir.<br /><br /> Visual Studio yalnızca MSBuild olmayan projeler ön eki olduğundan, bu listedeki proje başvurularının MSBuild biçiminde olduğu anlamına gelir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Tabloda listelenen parametrelere sahip olmanın yanı sıra, bu görev <xref:Microsoft.Build.Tasks.TaskExtension> sınıftan devralınan parametreleri de devralır. <xref:Microsoft.Build.Utilities.Task> Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
+ Bu görev, tabloda listelenen parametrelere sahip olmanın yanı sıra sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

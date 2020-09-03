@@ -35,7 +35,7 @@ ms.locfileid: "64790938"
 |------------------------|----------------------|----------------------|  
 |Hata ayıklama|\<Debug Win32 settings>|\<Debug Win64 settings>|  
 |Yayınla|\<Release Win32 settings>|\<Release Win64 settings>|  
-|MyConfig|Yok|\<MyConfig Win64 settings>|  
+|MyConfig|YOK|\<MyConfig Win64 settings>|  
   
 > [!NOTE]
 > Hedeflenmediğiniz proje Win32 'yi desteklemiyorsa "Win32" platformunu dışlayan bir "MyConfig" çözüm yapılandırması oluşturamazsınız.  

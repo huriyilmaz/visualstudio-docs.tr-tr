@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::SetValue | Microsoft Dokümanlar
+title: 'IDebugObject:: SetValue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 9e4652eb3c77a1871063dfa71b464fb1f7c43f94
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726362"
 ---
 # <a name="idebugobjectsetvalue"></a>IDebugObject::SetValue
-Nesnenin değerini ardışık bayt serisinden ayarlar.
+Nesnenin değerini ardışık bir bayt dizisinden ayarlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT SetValue( 
@@ -43,16 +43,16 @@ int SetValue(
 
 ## <a name="parameters"></a>Parametreler
 `pValue`\
-[içinde] Yeni değeri temsil eden bir dizi bayt.
+'ndaki Yeni değeri temsil eden bir bayt dizisi.
 
 `nSize`\
-[içinde] Baytlar'daki değerin boyutu.
+'ndaki Değerin bayt cinsinden boyutu.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Dizideki değerler, varolan herhangi bir değerin yerine bu [Hata Ayıklama Nesnesi](../../../extensibility/debugger/reference/idebugobject.md) nesnesine kopyalanır. Yeni değerin boyutu varolan değerden daha büyük veya daha küçük olabilir. Bu `IDebugObject` null bir başvuru olamaz.
+ Dizideki değerler bu [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesnesine kopyalanır ve var olan tüm değerleri değiştirir. Yeni değerin boyutu mevcut değerden daha büyük veya daha küçük olabilir. Bu `IDebugObject` bir null başvuru olamaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

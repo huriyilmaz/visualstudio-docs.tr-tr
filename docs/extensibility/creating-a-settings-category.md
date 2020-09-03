@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 03d50ca998efa034b1d4392c1fb7cecb8de8ed06
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904019"
 ---
 # <a name="create-a-settings-category"></a>Ayarlar kategorisi oluşturma
@@ -96,7 +96,7 @@ Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasını
 
 3. Sol bölmedeki ağaç görünümünde, **kategorim** ' ı genişletin ve ardından **kılavuz sayfam**' ı tıklatın.
 
-4. **OptionFloat** değerini 3,1416 ve **OptionInteger** değerlerini 12 olarak değiştirin. **Tamam**'a tıklayın.
+4. **OptionFloat** değerini 3,1416 ve **OptionInteger** değerlerini 12 olarak değiştirin. **Tamam**’a tıklayın.
 
 5. **Araçlar** menüsünde **Içeri ve dışarı aktarma ayarları**' na tıklayın.
 
@@ -137,7 +137,7 @@ Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasını
 
 11. Ayarları değiştirmeden ayarlar dosyasını kapatın.
 
-12. **Araçlar** menüsünde **Seçenekler**' i tıklatın, **kategorim**' ı genişletin, **kılavuz** Sayfam ' ı tıklatın ve ardından **OptionFloat** değerini 1,0 ve **OptionInteger** olarak 1 olarak değiştirin. **Tamam**'a tıklayın.
+12. **Araçlar** menüsünde **Seçenekler**' i tıklatın, **kategorim**' ı genişletin, **kılavuz** Sayfam ' ı tıklatın ve ardından **OptionFloat** değerini 1,0 ve **OptionInteger** olarak 1 olarak değiştirin. **Tamam**’a tıklayın.
 
 13. **Araçlar** menüsünde **Içeri ve dışarı aktarma ayarları**' na tıklayın, **Seçili ortam ayarlarını içeri aktar**' ı seçin ve ardından **İleri**' ye tıklayın.
 

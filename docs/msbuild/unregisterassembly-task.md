@@ -1,5 +1,5 @@
 ---
-title: Kayıt DışıMontaj Görevi | Microsoft Dokümanlar
+title: UnregisterAssembly görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,35 +19,35 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2f8cddcf9bf0632914d1a6de1cc904dbf0f173e6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77631503"
 ---
 # <a name="unregisterassembly-task"></a>UnregisterAssembly görevi
 
-Com interop amaçları için belirtilen derlemeleri kayıt dışı kalır. [RegisterAssembly görevinin](../msbuild/registerassembly-task.md)tersini gerçekleştirir.
+Belirtilen derlemelerin COM birlikte çalışma amacıyla kaydını siler. [RegisterAssembly görevinin](../msbuild/registerassembly-task.md)ters işlemini gerçekleştirir.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda görevparametreleri `UnregisterAssembly` açıklanmaktadır.
+ Aşağıdaki tablo, görevin parametrelerini açıklar `UnregisterAssembly` .
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`Assemblies`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Derlemelerin kayıtsız olacağını belirtir.|
-|`AssemblyListFile`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> `RegisterAssembly` Görev ve `UnregisterAssembly` görev arasındaki durum hakkında bilgi içerir. Bu, görevin göreve kaydolmayan bir derlemeyi silmeye `RegisterAssembly` çalışmasından engeller.<br /><br /> Bu parametre `Assemblies` belirtilirse, `TypeLibFiles` parametreler ve parametreler yoksayılır.|
-|`TypeLibFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Belirtilen tür kitaplığını belirtilen derlemeden kaydeder. **Not:**  Bu parametre yalnızca tür kitaplığı dosya adı derleme adından farklıysa gereklidir.|
+|`Assemblies`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Kaydı kaldırılacak derlemeleri belirtir.|
+|`AssemblyListFile`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Görev ve görev arasındaki durum hakkındaki bilgileri içerir `RegisterAssembly` `UnregisterAssembly` . Bu, görevin, görevde kaydettirilemedi bir derlemenin kaydını silmeye çalışmasını önler `RegisterAssembly` .<br /><br /> Bu parametre belirtilmişse, `Assemblies` ve `TypeLibFiles` parametreleri yok sayılır.|
+|`TypeLibFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Belirtilen bütünleştirilmiş koddan belirtilen tür kitaplığının kaydını siler. **Note:**  Bu parametre yalnızca tür kitaplığı dosya adı derleme adından farklıysa gereklidir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Bu görevin başarılı olaması için derlemenin bulunması gerekmez. Var olmayan bir derlemenin kaydını kaldırmaya çalışırsanız, görev bir uyarıyla başarılı olur. Bu, derleme kaydını kayıt defterinden kaldırmak için bu görevin işi olduğundan oluşur. Derleme yoksa, kayıt defterinde değildir ve bu nedenle, görev başarılı oldu.
+ Bu görevin başarılı olabilmesi için derlemenin mevcut olması gerekmez. Mevcut olmayan bir derlemenin kaydını silmeye çalışırsanız, görev bir uyarıyla başarılı olur. Bu durum, kayıt defterinden derleme kaydını kaldırmak için bu görevin bir işi olduğu için oluşur. Derleme yoksa, kayıt defterinde değildir ve bu nedenle görev başarılı olur.
 
- Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension> <xref:System.MarshalByRefObject> devralınan sınıftan parametreleri devralır. <xref:Microsoft.Build.Utilities.Task> Sınıf, `MarshalByRefObject` sınıfla aynı işlevselliği sağlar, ancak kendi uygulama etki alanında anında kullanılabilir.
+ Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension> <xref:System.MarshalByRefObject> . `MarshalByRefObject`Sınıfı sınıfla aynı işlevselliği sağlar <xref:Microsoft.Build.Utilities.Task> , ancak kendi uygulama etki alanında oluşturulabilir.
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, `UnregisterAssembly` varsa, ve `OutputPath` `FileName` özellikleri tarafından belirtilen yolda derleme yi boşaltmak için görevi kullanır.
+ Aşağıdaki örnek, varsa, `UnregisterAssembly` ve özellikleri tarafından belirtilen yoldaki derlemenin kaydını silmek için görevini kullanır `OutputPath` `FileName` .
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

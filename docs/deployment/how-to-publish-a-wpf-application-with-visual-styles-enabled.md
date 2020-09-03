@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 21c94cc7ab97070b138cbae108c617094faf09b5
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382217"
 ---
 # <a name="how-to-publish-a-wpf-application-with-visual-styles-enabled"></a>Nasıl yapılır: görsel stiller etkinken WPF uygulaması yayımlama
@@ -119,7 +119,7 @@ Görsel stiller, Kullanıcı tarafından seçilen temaya göre değişiklik yapm
    > - Çözüm şu dizinde bulunur: `%UserProfile%\Documents\Visual Studio 2010\Projects\` .
    >
    > - Çözüm şu dizine yayımlandı: `%UserProfile%\Documents\Visual Studio 2010\Projects\publish` .
-   > - Yayımlanan uygulama dosyalarının en son sürümü aşağıdaki dizinde bulunur:`%UserProfile%\Documents\Visual Studio 2010\Projects\publish\Application Files\WPFApp_1_0_0_0`
+   > - Yayımlanan uygulama dosyalarının en son sürümü aşağıdaki dizinde bulunur: `%UserProfile%\Documents\Visual Studio 2010\Projects\publish\Application Files\WPFApp_1_0_0_0`
    >
    > Yukarıda açıklanan ad veya dizin konumlarını kullanmak zorunda değilsiniz. Yukarıda açıklanan ad ve konumlar yalnızca çözümünüzü yayımlamak için gereken adımları göstermek için kullanılır.
 

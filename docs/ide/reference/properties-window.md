@@ -21,67 +21,67 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d1be1d4fa9f1b088547bb21dfb64254209783d7e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75565714"
 ---
 # <a name="properties-window"></a>Özellik penceresi
 
-Düzenleyiciler de ve tasarımcılarda bulunan seçili nesnelerin tasarım zamanı özelliklerini ve olaylarını görüntülemek ve değiştirmek için bu pencereyi kullanın. Dosya, proje ve çözüm özelliklerini de lemek ve görüntülemek için **Özellikler** penceresini de kullanabilirsiniz. **Görünüm** menüsünde **Özellikler** Penceresi'ni bulabilirsiniz. Ayrıca **F4** tuşuna basarak veya arama kutusuna **Özellikler** yazarak açabilirsiniz.
+Düzenleyicilerde ve tasarımcılarda bulunan seçili nesnelerin tasarım zamanı özelliklerini ve olaylarını görüntülemek ve değiştirmek için bu pencereyi kullanın. Ayrıca, dosya, proje ve çözüm özelliklerini düzenlemek ve görüntülemek için **Özellikler** penceresini de kullanabilirsiniz. **Özellikler** penceresini **Görünüm** menüsünde bulabilirsiniz. Ayrıca, **F4** tuşuna basarak veya arama kutusuna **Özellikler** yazarak da açabilirsiniz.
 
-**Özellikler** penceresi, belirli bir özelliğin gereksinimlerine bağlı olarak farklı türde düzenleme alanları görüntüler. Bu edit alanları, özel düzenleyici iletişim kutularına bağlantılar, açılan listeler ve düzenleyicileri içerir. Gri renkle gösterilen özellikler salt okunur.
+**Özellikler** penceresi, belirli bir özelliğin ihtiyaçlarına bağlı olarak farklı türlerde Düzenle alanları görüntüler. Bu düzenleme alanları, düzenleme kutularını, açılan listeleri ve özel Düzenleyici iletişim kutularına bağlantıları içerir. Gri renkte gösterilen özellikler salt okunurdur.
 
 ## <a name="uielement-list"></a>UIElement Listesi
 
-Nesne adı\
-Şu anda seçili nesneyi veya nesneleri listeler. Yalnızca etkin düzenleyici veya tasarımcıdan gelen nesneler görünür. Birden çok nesne seçtiğinizde, yalnızca tüm seçili nesneleriçin ortak özellikler görünür.
+Nesne adı \
+Şu anda seçili olan nesneyi veya nesneleri listeler. Yalnızca etkin düzenleyici veya tasarımcı nesneleri görünür. Birden çok nesne seçtiğinizde yalnızca seçili tüm nesneler için ortak olan özellikler görünür.
 
-Kategorize edildi\
-Seçili nesnenin tüm özelliklerini ve özellik değerlerini kategoriye göre listeler. Görünür özelliklerin sayısını azaltmak için bir kategoriyi daraltabilirsiniz. Bir kategoriyi genişletdiğinizde veya daralttğınızda, kategori adının solunda bir artı (+) veya eksi (-) görürsünüz. Kategoriler alfabetik olarak listelenir.
+Sınıflandır
+Seçili nesne için tüm özellikleri ve özellik değerlerini kategoriye göre listeler. Görünür özelliklerin sayısını azaltmak için bir kategoriyi daraltabilirsiniz. Bir kategoriyi genişlettikten veya daralttığınızda, kategori adının solunda bir artı (+) veya eksi (-) görürsünüz. Kategoriler alfabetik olarak listelenir.
 
-Alfabetik\
-Seçili nesneler için tüm tasarım zamanı özelliklerini ve olaylarını alfabetik olarak sıralar. Küçülmemiş bir özelliği yeniden sağlamak için hücreyi sağdaki nesle tıklayın ve değişiklikleri girin.
+Göre
+Alfabetik olarak, seçilen nesneler için tüm tasarım zamanı özelliklerini ve olaylarını sıralar. Soluk olmayan bir özelliği düzenlemek için, sağ tarafındaki hücreyi tıklatın ve değişiklikleri girin.
 
-Özellik Sayfaları\
-Seçili öğe için **Özellik Sayfaları** iletişim kutusunu veya **Proje Tasarımcısını** görüntüler. Özellik Sayfaları, **Özellikler** penceresinde bulunan özelliklerin aynısı veya üst kümesi olan bir alt küme görüntüler. Projenizin etkin yapılandırması ile ilgili özellikleri görüntülemek ve düzenlemek için bu düğmeyi kullanın.
+Özellik sayfaları \
+Seçili öğe için **Özellik sayfaları** iletişim kutusunu veya **Proje Tasarımcısı** ' nı görüntüler. Özellik sayfaları, **Özellikler** penceresinde kullanılabilen özelliklerin bir alt kümesini, aynısını veya bir üst kümesini görüntüler. Projenizin etkin yapılandırmasıyla ilgili özellikleri görüntülemek ve düzenlemek için bu düğmeyi kullanın.
 
-Özellikler\
-Bir nesnenin özelliklerini görüntüler. Birçok nesne de **Özellikler** penceresi kullanılarak görüntülenebilir olaylar var.
+Özelliklerinin
+Bir nesnenin özelliklerini görüntüler. Birçok nesnenin aynı zamanda **Özellikler** penceresi kullanılarak görüntülenebilen olayları vardır.
 
-Özellik Kaynağına Göre Sırala\
-Devralma, uygulanan stiller ve bağlamalar gibi kaynakları göre grupları. Yalnızca tasarımcıda XAML dosyaları düzenlerken kullanılabilir.
+Özellik kaynağına göre sırala \
+Devralma, uygulanan stiller ve bağlamalar gibi, kaynağa göre özellikleri gruplandırır. Yalnızca tasarımcıda XAML dosyaları düzenlenirken kullanılabilir.
 
-Olaylar\
-Bir nesneiçin olayları görüntüler.
-
-> [!NOTE]
-> Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca bir form veya denetim [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] tasarımcısı proje bağlamında etkin olduğunda kullanılabilir. XAML dosyalarını düzenlerken, olaylar özellikler penceresinin ayrı bir sekmesinde görünür.
-
-İletiler\
-Tüm Windows iletilerini listeler. Seçili sınıf için sağlanan iletiler için belirtilen işleyici işlevlerieklemenize veya silmenize olanak tanır.
+Olayları
+Bir nesne için olayları görüntüler.
 
 > [!NOTE]
-> Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca **Sınıf Görünümü** proje [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] bağlamında etkin pencere olduğunda kullanılabilir.
+> Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca bir form veya denetim Tasarımcısı bir proje bağlamında etkin olduğunda kullanılabilir [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] . XAML dosyaları düzenlenirken, olaylar Özellikler penceresinin ayrı bir sekmesinde görünür.
 
-Geçersiz kılmalar\
-Seçili sınıfın tüm sanal işlevlerini listeler ve geçersiz kılma işlevleri eklemenize veya silmenize olanak tanır.
-
-> [!NOTE]
-> Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca **Sınıf Görünümü** proje [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] bağlamında etkin pencere olduğunda kullanılabilir.
-
-Açıklama bölmesi\
-Özellik türünü ve özelliğin kısa bir açıklamasını gösterir. Kısayol menüsündeki Açıklama komutunu kullanarak özelliğin açıklamasını kapatıp açabilirsiniz.
+İletilerine
+Tüm Windows iletilerini listeler. Seçili sınıf için belirtilen işlemler için belirtilen işleyici işlevlerini eklemenize veya silmesine izin verir.
 
 > [!NOTE]
-> Bu **Özellikler** penceresi araç çubuğu denetimi, tasarımcıda XAML dosyaları düzenlerken kullanılamaz.
+> Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca **sınıf görünümü** bir proje bağlamında etkin pencere olduğunda kullanılabilir [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] .
 
-Küçük resim görünümü\
-Tasarımcıda XAML dosyaları düzenlerken şu anda seçili öğenin görsel bir gösterimini gösterir.
+Kılma
+Seçilen sınıf için tüm sanal işlevleri listeler ve geçersiz kılma işlevlerini eklemenize veya kaldırmanıza olanak sağlar.
 
-Arama\
-Tasarımcıda XAML dosyaları düzenlerken özellikler ve olaylar için bir Arama işlevi sağlar. Arama kutusu kısmi sözcük aramalarına yanıt verir ve siz yazarken arama sonuçlarını güncelleştirir.
+> [!NOTE]
+> Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca **sınıf görünümü** bir proje bağlamında etkin pencere olduğunda kullanılabilir [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] .
+
+Açıklama bölmesi \
+Özelliğin türünü ve kısa bir açıklamasını gösterir. Özelliğin açıklamasını, kısayol menüsünde Açıklama komutunu kullanarak ve üzerinde açabilirsiniz.
+
+> [!NOTE]
+> Bu **Özellikler** penceresi araç çubuğu denetimi, tasarımcıda XAML dosyaları düzenlenirken kullanılamaz.
+
+Küçük resim görünümü \
+Tasarımcıda XAML dosyaları düzenlenirken Şu anda seçili olan öğenin görsel temsilini gösterir.
+
+Aramanız
+Tasarımcıda XAML dosyaları düzenlenirken Özellikler ve olaylar için bir arama işlevi sağlar. Arama kutusu, siz yazarken kısmi sözcük aramalarına ve güncelleştirmelerin arama sonuçlarına yanıt verir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

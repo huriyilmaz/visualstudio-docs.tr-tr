@@ -23,10 +23,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d00327315b98c4b55797187c59db3a81ee351fb0
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350348"
 ---
 # <a name="how-can-i-find-out-who-is-passing-a-wrong-parameter-value"></a>Kimin Yanlış Parametre Değeri Geçirdiğini Nasıl Bulabilirim?
@@ -53,5 +53,5 @@ ms.locfileid: "85350348"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yerel Kod Hata Ayıklaması SSS](../debugger/debugging-native-code-faqs.md)
-- [Kesme Noktaları](https://msdn.microsoft.com/library/fe4eedc1-71aa-4928-962f-0912c334d583)
+- [Kesme noktaları](https://msdn.microsoft.com/library/fe4eedc1-71aa-4928-962f-0912c334d583)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

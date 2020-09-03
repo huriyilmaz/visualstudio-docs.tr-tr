@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::GetField | Microsoft Dokümanlar
+title: 'IDebugObject2:: GetField | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f0cd44b655669adec6722bf85223f786210d37de
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726213"
 ---
 # <a name="idebugobject2getfield"></a>IDebugObject2::GetField
 Bu nesnenin türünü alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetField(
@@ -41,10 +41,10 @@ int GetField(
 
 ## <a name="parameters"></a>Parametreler
 `ppField`\
-[çıkış] Null değeri değilse bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi döndürür.
+dışı Null değer değilse bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
  Bir alan nesnenin türünü açıklar.

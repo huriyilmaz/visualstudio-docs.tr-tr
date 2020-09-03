@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 392c4be60f2285edb986d5ca7a1cf4a2202e03c7
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905034"
 ---
 # <a name="walkthrough-create-a-view-adornment-commands-and-settings-column-guides"></a>İzlenecek yol: Görünüm kenarlığı, komutlar ve ayarlar oluşturma (sütun Kılavuzu)
@@ -31,7 +31,7 @@ Bu izlenecek yolda şunları yapabilirsiniz:
   > [!NOTE]
   > Bu kılavuzda, Visual Studio Uzantı şablonları tarafından oluşturulan birkaç dosyaya büyük miktarda kod yapıştırırsınız. Ancak yakında Bu izlenecek yol, diğer uzantı örnekleriyle GitHub 'daki tamamlanmış bir çözüme başvuracaktır. Tamamlanan kod, generictemplate simgeleri kullanmak yerine gerçek komut simgelerine sahip olan biraz farklıdır.
 
-## <a name="get-started"></a>Kullanmaya başlayın
+## <a name="get-started"></a>başlarken
 Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="set-up-the-solution"></a>Çözümü ayarlama
@@ -1201,7 +1201,7 @@ private int GetApplicableColumn(EventArgs e)
 
 ```
 
-`GetCurrentEditorColumn`kodun bir görünümünü almak için biraz şey yapmanız gerekebilir <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> .  , Ve ile izleyebilirsiniz `GetActiveTextView` , `GetActiveView` `GetTextViewFromVsTextView` bunun nasıl yapılacağını görebilirsiniz. Aşağıdaki kod, geçerli seçim ile başlayıp sonra seçimin çerçevesini alarak ve sonra da <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData> IVsTextView öğesinden bir görünüm ana bilgisayarı ve son olarak IWpfTextView 'dan elde edilecek şekilde soyutlanarak ilgili koddur.
+`GetCurrentEditorColumn` kodun bir görünümünü almak için biraz şey yapmanız gerekebilir <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> .  , Ve ile izleyebilirsiniz `GetActiveTextView` , `GetActiveView` `GetTextViewFromVsTextView` bunun nasıl yapılacağını görebilirsiniz. Aşağıdaki kod, geçerli seçim ile başlayıp sonra seçimin çerçevesini alarak ve sonra da <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData> IVsTextView öğesinden bir görünüm ana bilgisayarı ve son olarak IWpfTextView 'dan elde edilecek şekilde soyutlanarak ilgili koddur.
 
 ```csharp
    IVsMonitorSelection selection =

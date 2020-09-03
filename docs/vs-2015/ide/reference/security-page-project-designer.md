@@ -20,20 +20,20 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 768b0d43d8e6b52781e3f2dc2029e0b96b3a6548
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665531"
 ---
 # <a name="security-page-project-designer"></a>Güvenlik Sayfası, Proje Tasarımcısı
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-**Proje Tasarımcısı** 'nın **güvenlik** sayfası, [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] dağıtımı kullanılarak dağıtılan uygulamalar için kod erişimi güvenlik ayarlarını yapılandırmak üzere kullanılır. Daha fazla bilgi için bkz. [ClickOnce uygulamaları Için kod erişimi güvenliği](../../deployment/code-access-security-for-clickonce-applications.md).
+**Proje Tasarımcısı** 'nın **güvenlik** sayfası, dağıtım kullanılarak dağıtılan uygulamalar için kod erişimi güvenlik ayarlarını yapılandırmak üzere kullanılır [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] . Daha fazla bilgi için bkz. [ClickOnce uygulamaları Için kod erişimi güvenliği](../../deployment/code-access-security-for-clickonce-applications.md).
 
  **Güvenlik** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümüne tıklayın ve ardından **Proje** menüsünde **Özellikler**' e tıklayın. **Proje Tasarımcısı** göründüğünde, **güvenlik** sekmesine tıklayın.
 
-## <a name="security-settings"></a>Güvenlik ayarları
+## <a name="security-settings"></a>Güvenlik Ayarları
  **ClickOnce güvenlik ayarlarını etkinleştir** Tasarım zamanında güvenlik ayarlarının etkinleştirilip etkinleştirilmeyeceğini belirler. Bu seçenek silinirse, **güvenlik** sayfasındaki diğer tüm seçenekler kullanılamaz.
 
 > [!NOTE]
@@ -65,5 +65,5 @@ ms.locfileid: "72665531"
  **Gelişmiş** Kısıtlanmış izinlerle uygulamada hata ayıklamaya yönelik ayarları yapılandırmak için kullanılan [Gelişmiş güvenlik ayarları Iletişim kutusunu](../../ide/reference/advanced-security-settings-dialog-box.md)açar. Bu ayarlar hata ayıklama sırasında denetlenir ve izin özel durumları, uygulamanızın bir bölgede tanımlı olandan daha fazla izne ihtiyacı olabileceğini gösterir.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.Security.Permissions.WebBrowserPermission><xref:System.Security.Permissions.MediaPermission>
- [ClickOnce uygulamaları Için kod erişimi güvenliği](../../deployment/code-access-security-for-clickonce-applications.md) [nasıl yapılır: ClickOnce güvenlik ayarlarını etkinleştirme](../../deployment/how-to-enable-clickonce-security-settings.md) nasıl yapılır [: ClickOnce uygulaması için bir güvenlik bölgesi ayarlama](../../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md) nasıl yapılır: [ClickOnce uygulaması için özel izinleri ayarlama](../../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md) [nasıl yapılır: Kısıtlanmış Izinlerle ClickOnce uygulamasında hata ayıklama](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md) [ClickOnce güvenliği ve dağıtımı](../../deployment/clickonce-security-and-deployment.md) [Proje özellikleri başvuru](../../ide/reference/project-properties-reference.md) [Gelişmiş güvenlik ayarları iletişim kutusu](../../ide/reference/advanced-security-settings-dialog-box.md)
+ <xref:System.Security.Permissions.WebBrowserPermission> <xref:System.Security.Permissions.MediaPermission>
+ [ClickOnce uygulamaları Için kod erişimi güvenliği](../../deployment/code-access-security-for-clickonce-applications.md) [nasıl yapılır: ClickOnce güvenlik ayarlarını etkinleştirme](../../deployment/how-to-enable-clickonce-security-settings.md) nasıl yapılır: ClickOnce uygulaması Için bir [güvenlik bölgesi ayarlama](../../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md) nasıl yapılır: bir [ClickOnce uygulaması Için](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md) [özel izinleri ayarlama](../../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md) [ClickOnce güvenliği ve dağıtım](../../deployment/clickonce-security-and-deployment.md) [projesi özellikleri başvuru](../../ide/reference/project-properties-reference.md) [Gelişmiş güvenlik ayarları iletişim kutusu](../../ide/reference/advanced-security-settings-dialog-box.md)
