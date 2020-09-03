@@ -24,10 +24,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2135183a474e29229d941bbd47af8d6abc263e49
-ms.sourcegitcommit: 30a810f39c06958c79505773f052e96b982e5d5b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87546084"
 ---
 # <a name="customize-window-layouts-in-visual-studio"></a>Visual Studio 'da pencere düzenlerini özelleştirme
@@ -38,7 +38,7 @@ Ayrıca, özel bir düzen yazıp kaydedebilir ve sonra tek bir komutla birlikte 
 
 ## <a name="tool-and-document-windows"></a>Araç ve belge pencereleri
 
-IDE 'nin iki temel pencere türü, *araç* penceresi ve *belge pencereleri*vardır. Araç pencereleri **Çözüm Gezgini**, **Sunucu Gezgini**, **Çıkış penceresi**, **hata listesi**, tasarımcılar, hata ayıklayıcı pencereleri vb. içerir. Belge pencereleri, kaynak kodu dosyalarını, rastgele metin dosyalarını, yapılandırma dosyalarını vb. içerir. Araç pencereleri, başlık çubuğuna göre yeniden boyutlandırılabilir ve sürüklenebilir. Belge pencereleri sekmesine göre sürüklenebilir. penceredeki diğer seçenekleri ayarlamak için sekmeye veya başlık çubuğuna sağ tıklayın.
+IDE 'nin iki temel pencere türü, *araç* penceresi ve *belge pencereleri*vardır. Araç pencereleri **Çözüm Gezgini**, **Sunucu Gezgini**, **Çıkış penceresi**, **hata listesi**, tasarımcılar, hata ayıklayıcı pencereleri vb. içerir. Belge pencereleri, kaynak kodu dosyalarını, rastgele metin dosyalarını, yapılandırma dosyalarını vb. içerir. Araç pencereleri, başlık çubuğuna göre yeniden boyutlandırılabilir ve sürüklenebilir. Belge pencereleri, sekmesine göre sürüklenebilir. Penceredeki diğer seçenekleri ayarlamak için sekmeye veya başlık çubuğuna sağ tıklayın.
 
 **Pencere** menüsü IDE 'deki yerleştirme, kayan ve gizleme seçeneklerini gösterir. Belirli bir pencereyle ilgili ek seçenekleri görmek için pencere sekmesine veya başlık çubuğuna sağ tıklayın. Belirli araç pencerelerinin aynı anda birden fazla örneğini görüntüleyebilirsiniz. Örneğin, birden fazla Web tarayıcısı penceresi görüntüleyebilir ve **pencere** menüsünde **yeni pencere** ' yi seçerek bazı araç pencerelerinin ek örneklerini oluşturabilirsiniz.
 
@@ -52,7 +52,7 @@ Düzeninizi birkaç farklı şekilde düzenlemek için sekmeleri kullanabilirsin
 
 #### <a name="preview-tab-document-windows"></a>Önizleme sekmesi (belge pencereleri)
 
-**Önizleme** sekmesinde, dosyaları açmadan düzenleyicide görüntüleyebilirsiniz. Dosyalara tıkladığınızda hata ayıklama sırasında ve bir aramanın sonuçlarına göz **atarken, dosyaları** **Çözüm Gezgini**seçerek önizleyebilirsiniz, bu dosyaları görüntüleyebilirsiniz. Önizleme dosyaları belge sekmesi alanının sağ tarafındaki bir sekmede görüntülenir. Dosyayı değiştirirseniz veya **Aç**seçeneğini belirlerseniz dosya düzenlenmek üzere açılır.
+**Önizleme** sekmesinde, dosyaları açmadan düzenleyicide görüntüleyebilirsiniz. Dosyalara tıkladığınızda hata ayıklama sırasında ve bir aramanın sonuçlarına göz **atarken, dosyaları** **Çözüm Gezgini**seçerek önizleyebilirsiniz, bu dosyaları görüntüleyebilirsiniz. Önizleme dosyaları belge sekmesi alanının sağ tarafındaki bir sekmede görüntülenir. Dosyayı değiştirirseniz veya  **Aç**seçeneğini belirlerseniz dosya düzenlenmek üzere açılır.
 
 ::: moniker range="vs-2019"
 

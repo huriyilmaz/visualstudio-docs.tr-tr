@@ -2,17 +2,17 @@
 title: Teknik destek avantajı
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 2e0fd8bb-8f20-487c-b350-b8fde405ea5e
-ms.date: 03/26/2020
+ms.date: 09/02/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinizle birlikte sunulan teknik destek avantajını nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: 247a2b9d4649aae6f3a32a6156e2f9558c481e68
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.openlocfilehash: 3081836b94fbc5fdda277d694086acc18db6eb44
+ms.sourcegitcommit: 1d74273a50ede5a90d9d64372d93aad357daef42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86387297"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89365852"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde teknik destek avantajını etkinleştirin ve kullanın
 Visual Studio aboneliklerinde teknik destek avantajı, hala [destek yaşam döngüsünün](https://support.microsoft.com/lifecycle/search)temel destek aşamasında olan ürünlere yönelik **Üretim dışı ortamlarda** onarım sorunlarını çözmeye yöneliktir. Visual Studio Enterprise standart ve yıllık bulut abonelikleri dört olay alır, Visual Studio Professional ancak standart ve yıllık bulut abonelikleri, avantajı etkinleştirmede 1 yıla kadar olmak üzere iki olay alır. Abonelik geçerli olduğunda avantajı etkinleştirme gerçekleşmelidir.
@@ -31,6 +31,9 @@ Visual Studio IDE ve Azure DevOps Server gibi Geliştirici Araçları, Visual St
 Visual Studio aboneliklerinden indirilen geliştirici olmayan ürünler (SQL, Windows, SharePoint gibi) yalnızca temel destek için uygundur. Bu ürünler yalnızca uygulamaları tasarlamak, geliştirmek, test etmek veya göstermek için geliştirme ortamları için lisanslanır. Bu ürünler üretim ortamları için lisanslanmaz.
 
 Ürün düzeyi açıklamaları: **kullanılamayan destek planlarını**genişletin. **Belirtilen ürüne (kod: 8) destek için destek planı kullanılmıyorsa**, destek sözleşmeniz seçtiğiniz ürün sürümü için kullanılamaz.
+
+> [!IMPORTANT]
+> Belirtilen destek olayları, onarım desteği içindir.  Microsoft ekipleri, Microsoft Office, Microsoft SharePoint veya Microsoft Outlook ile ilgili kodlama/geliştirme sorunlarıyla ilgili yardım için kullanılamayabilir
 
 ## <a name="how-to-activate-the-benefit"></a>Avantajı etkinleştirme
 1. Git ' e gidin <https://my.visualstudio.com/Benefits> , destek bölümüne gidin ve teknik destek kutucuğunda **etkinleştirmek için sohbet**' e tıklayın.
@@ -112,12 +115,12 @@ Azure ile ilgili sorunlar için Visual Studio aboneliğiniz teknik destek avanta
 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | 4 olay       |  Yes|
-| GitHub Enterprise ile Visual Studio Enterprise | VL | 4 olay       |  Yes|
-| Visual Studio Professional (Standart) | VL, Azure, perakende, seçili NFR<sup>2</sup>                                        | 2 olay                                                          |Yes         |
-| GitHub Enterprise ile Visual Studio Professional | VL                                     | 2 olay                                                          |Yes         |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | 2 olay                                             |  Yes         |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | 2 olay                                               | Yes         |
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | 4 olay       |  Evet|
+| GitHub Enterprise ile Visual Studio Enterprise | VL | 4 olay       |  Evet|
+| Visual Studio Professional (Standart) | VL, Azure, perakende, seçili NFR<sup>2</sup>                                        | 2 olay                                                          |Evet         |
+| GitHub Enterprise ile Visual Studio Professional | VL                                     | 2 olay                                                          |Evet         |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | 2 olay                                             |  Evet         |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | 2 olay                                               | Evet         |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|
 ||
 

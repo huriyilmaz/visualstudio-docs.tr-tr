@@ -2,17 +2,17 @@
 title: Visual Studio aboneliklerinde pluralalallavantajı | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
-ms.date: 04/20/2020
+ms.date: 08/04/2020
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerine dahil edilen Pluralsel eğitim aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: f06b2bb8d2151255cb606fd3dcb8344b1fb37411
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 85001d4473e504bd149a1cd1402a9f4dd01f2a13
+ms.sourcegitcommit: 1d74273a50ede5a90d9d64372d93aad357daef42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/02/2020
-ms.locfileid: "87375904"
+ms.locfileid: "89365914"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde pluralalsel eğitim avantajları
 
@@ -23,35 +23,49 @@ Aşağıdaki tabloda, her bir Visual Studio abonelik türü için Pluralalsel ab
  Sahip oldukları aboneliğin türüne bağlı olarak, daha önce bir Visual Studio aboneliği aracılığıyla sunulan bir Pluralsel aboneliği kullanan tüm aboneler, yeni Pluralalsel avantaj tekliflerini kullanabilecek. Ek Plurun eğitim avantajını kullanmaya uygun değilseniz, pluralali Web sitesinde avantajı etkinleştirmeye çalıştığınızda bir bildirim alırsınız.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
-1. Aboneliğinizi etkinleştirmek için ' a bağlanın [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) ve profesyonel geliştirme bölümünde bulunan Pluralans avantajı kutucuğunda **kod al** bağlantısına tıklayın.
+1. Aboneliğinizi etkinleştirmek için, ' a bağlanın [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) ve Plurun avantajı kutucuğunda **Etkinleştir** bağlantısına tıklayın.  Görüntülenecek kutucukların listesini daraltmak için bir grup filtresi seçebilirsiniz.  Pluraltarın, profesyonel geliştirme avantajları grubunda bulunur.
    > [!div class="mx-imgBorder"]
-   > ![Pluralaltim avantajı kutucuğu](_img/vs-pluralsight/vs-pluralsight-6month-tile.png)
-   >
-   > [!IMPORTANT]
-   > Pluralaltim avantajı kutucuğunda "kodu al" bağlantısına tıkladığınızda aşağıdaki iletiyi alabilirsiniz:
-   >
-   > **"Lütfen unutmayın: Visual Studio aboneliğiniz aracılığıyla daha önce farklı bir Pluralsel teklif etkinleştirdiyseniz, bu kod yeni bir Pluralalsel hesap oluşturmanıza imkan vermeyebilir."**
+   > ![Pluralaltim avantajı kutucuğu](_img/vs-pluralsight/vs-pluralsight-tile.png "Avantajınızı talep etmek için etkinleştir 'e tıklayın")
 
-2. Kupon kodunun başarıyla alındığını belirten bir bildirim alırsınız.  **Etkinleştir**' e tıklayın.
-
-3. Visual Studio aboneliğinize dahil olan avantajdan dolayı Pluralalsel sayfasına yönlendirilirsiniz.
+1. Visual Studio aboneliğinize dahil olan avantajdan dolayı Pluralalsel sayfasına yönlendirilirsiniz.
    - Formda istenen iletişim bilgilerini sağlayın
-   - Kullanım koşullarını ve gizlilik ilkesini kabul etmek için onay kutusuna tıklayın
-   - Kabul ediyorum ' a tıklayın **, avantajı etkinleştirin**.
+   - Kullanım koşullarını kabul etmek için onay kutusuna tıklayın
+   - Kullan **' a**tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Pluralaltim avantajınızı etkinleştirme](_img/vs-pluralsight/vs-pluralsight-create-account.png)
+   > ![Pluralali kaydı](_img/vs-pluralsight/vs-pluralsight-registration.png "Kayıt formunu doldurun, koşulları kabul etmek için onay kutusuna tıklayın ve ardından kullan ' a tıklayın.")
 
-5. Hesabınızı kurmak biraz zaman alabilir.  Bu işlem tamamlandıktan sonra sayfada bir onay görürsünüz ve oturum açma bilgilerinizi içeren bir e-posta alırsınız.  E-posta, hesabı oluştururken belirttiğiniz diğer ada gönderilir.  İletiyi bulmakta sorun yaşıyorsanız, önemsiz veya istenmeyen posta klasörlerinizi denetlediğinizden emin olun.
+   > [!NOTE]
+   > Kayıt sayfası birkaç dakika sonra dolar.  Sayfa süresi dolmadan önce kayıt işlemini tamamlamazsanız, sayfada Pluralalaltim kutucuğuna dönün <https://my.visualstudio.com/benefits> ve yeniden **Etkinleştir** ' e tıklayın. 
+
+1. Hesabınızı kurmak biraz zaman alabilir.  Bu işlem tamamlandıktan sonra sayfada bir onay görürsünüz ve oturum açma bilgilerinizi içeren bir e-posta alırsınız.  E-posta, hesabı oluştururken belirttiğiniz diğer ada gönderilir.  İletiyi bulmakta sorun yaşıyorsanız, önemsiz veya istenmeyen posta klasörlerinizi denetlediğinizden emin olun.
 
    > [!NOTE]
    > Hesabınız yeni teklifleri kullanmaya uygun değilse, aldığınız e-posta uygun olmadığından hesabınızı oluştururken bir sorun olduğunu açıklacaktır.  Ayrıca, Pluraltarın destek ekibine başvurabileceğiniz, hesabınız hakkında sahip olduğunuz soruları yanıtlayabilen bilgiler de içerir.
-   
 
-6. Hesabınız başarıyla oluşturulduktan sonra aldığınız e-posta, Kullanıcı adınızı içerir ve bir parola oluşturmanızı ister.  Parolanızı sağlayın, onaylamak için yeniden girin ve **Pluralali Için oturum aç**' a tıklayın.
+1. **Parolayı ayarla**' ya tıklayın.
 
-7. Hoş geldiniz e-postasında ve yeni oluşturduğunuz parolada belirtilen kullanıcı adını girip **oturum aç**' a tıklayın.
+1. **Yeni parola** alanına istediğiniz parolayı girin, **Parolayı Onayla** alanına bir kez daha girin ve **Kaydet**' e tıklayın.
 
-8. İşte bu kadar!  Artık binlerce Pluralaltim kursu ile öğrenmeye başlamaya hazırsınız!
+1. İşte bu kadar!  Artık binlerce Pluralaltim kursu ile öğrenmeye başlamaya hazırsınız!
+
+## <a name="status-of-your-pluralsight-subscription"></a>Pluralalaltim aboneliğinizin durumu
+Pluralalsel avantajınızı etkinleştirdikten sonra, Visual Studio abonelikleri portalındaki kutucuğun görünümü, aboneliğinizin durumunu izlemenize yardımcı olacak şekilde değişir.  
+
+### <a name="while-your-subscription-is-active"></a>Aboneliğiniz etkin olsa da
+"Etkinleştir" düğmesi yerine artık, tıklandıklarında, oturum açabilmeniz ve eğitimle devam edebilmeniz için doğrudan Pluralsel portala doğrudan götürecektir.  
+
+Kutucuğun en üstündeki plurali başlığı altında, Pluralalmi aboneliğinizde ne kadar zaman kaldığını görüntüleyen bir metin görürsünüz.  Aboneliğiniz süresi dolan 60 gün içinde olduğunda, metin aylar yerine kalan gün sayısını görüntüleyecek şekilde değişir.  
+
+Kutucuğun en altında, Pluralsyon aboneliğinizin hem etkinleştirme tarihini hem de sona erme tarihini gösteren bir metin görürsünüz.
+
+   > [!div class="mx-imgBorder"]
+   > ![Etkinleştirmeden sonra pluralalaltim kutucuğu](_img/vs-pluralsight/vs-pluralsight-activated.png "Etkinleştirmede sonra kutucuk, aboneliğinizdeki kalan gün sayısını, sona erme tarihi ve Pluralaltim portalının bağlantısını görüntüler.")
+
+### <a name="when-your-subscription-expires"></a>Aboneliğinizin süresi dolarsa
+Pluraltarın aboneliğinizin süresi dolarsa, durum "0 gün kaldı" olarak değişir ve Pluralali portalının bağlantısı kaldırılır. Ayrıca, aboneliğin etkinleştirildiği tarihi ve zaman aşımına uğradığı tarihi görmeye devam edersiniz.  
+   > [!div class="mx-imgBorder"]
+   > ![Süre sonundan sonra pluralalaltim kutucuğu](_img/vs-pluralsight/vs-pluralsight-expired.png "Süre dolduktan sonra, Pluralaltarın bağlantısı kaldırılır ve aboneliğin etkin olduğu tarihler kutucuğun altında görünür.")
+
 
 ## <a name="eligibility"></a>Önceliği
 
@@ -83,6 +97,9 @@ Y: tüm Visual Studio Enterprise abonelikler, pluralalalalalalalalalal  Aboneli�
 
 ### <a name="q-do-i-have-access-to-any-customized-learning--playlists-or-channels"></a>S: özelleştirilmiş bir öğrenme çalma listelerine veya kanala erişimim var mı?
 C: Evet. Visual Studio abonesi olarak, Pluralsel eğitim avantajın bir parçası olarak öne çıkan roller, öğrenme yolları ve özel kanallar (çalma listeleri) için erişim elde edersiniz. Öne çıkan içerikler Microsoft ve Plurali tarafından özel olarak kaldırılmıştır ve ilgilendiğiniz önemli alanlarda öğrenmeye yöneliktir. Pluralalsel <https://my.visualstudio.com/benefits> giriş sayfanızdaki bu ve diğer içeriklere erişebilmek Için Visual Studio abonelik portalınız aracılığıyla Pluralalsel avantajınızı etkinleştirin.
+
+### <a name="q-the-pluralsight-tile-doesnt-have-an-activate-link-how-can-i-activate-the-benefit"></a>S: Pluralalaltim kutucuğunda "etkinleştir" bağlantısı yoktur. Avantajı nasıl etkinleştirebilirim?
+Y: tam görüş avantajınızı zaten etkinleştirdiyseniz, "etkinleştir" bağlantısının, sizi Pluralali için oturum açma sayfasına götüren bir bağlantıyla değiştirirsiniz.  Ayrıca, avantajın etkinleştirildiği tarihi ve aboneliğinizde ne kadar zaman kaldığını gösteren bilgileri de görürsünüz.  Zaten bir abonelik kullandıysanız, başka birini etkinleştiremeyeceksiniz.
 
 ### <a name="q-what-happens-when-my-pluralsight-subscription-runs-out"></a>S: Pluralm aboneliğim çalıştırıldığında ne olur?
 Y: ücretsiz çoğul aboneliğin sonunda, doğrudan Pluraldan bir abonelik satın almayı tercih edebilirsiniz.  Tam Ayrıntılar için lütfen [Pluralali](https://www.pluralsight.com) ile iletişime geçin.

@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e890a3d595b98276883c7e75547bb7edb338ca55
-ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87507995"
 ---
 # <a name="first-look-at-profiling-tools"></a>Profil oluşturma araçlarına ilk bakış
@@ -89,7 +89,7 @@ Ok bağlantılarından birini seçtiğinizde, yığının fark görünümü veri
 
 **Bellek kullanımı** görünümünde, sol taraftaki bağlantıya tıklarsanız, yığın görünümü nesne sayısına göre düzenlenir; belirli bir türün en fazla sayıyı arttığı nesneler en üstte gösterilir ( **Count diff** sütununa göre sıralanır).
 
-## <a name="profile-release-builds-without-the-debugger"></a><a name="post_mortem"></a>Hata ayıklayıcı olmadan yayın derlemelerini profili
+## <a name="profile-release-builds-without-the-debugger"></a><a name="post_mortem"></a> Hata ayıklayıcı olmadan yayın derlemelerini profili
 
 CPU kullanımı ve bellek kullanımı gibi profil oluşturma araçları, hata ayıklayıcıyla kullanılabilir (önceki bölümlere bakın) veya **yayın** yapıları için analiz sağlamak üzere tasarlanan performans profil oluşturucuyu kullanarak profil oluşturma araçları 'nı çalıştırabilirsiniz. Performans Profiler 'da, uygulama çalışırken tanılama bilgilerini toplayabilir ve ardından uygulama durdurulduktan sonra toplanan bilgileri inceleyebilirsiniz. Bu farklı yaklaşımlar hakkında daha fazla bilgi için bkz. [hata ayıklayıcı ile veya olmadan profil oluşturma araçlarını çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md). Performans profil oluşturucusu 'nda [.NET nesne ayırma aracı](../profiling/dotnet-alloc-tool.md) gibi ek araçlar da mevcuttur.
 
@@ -204,7 +204,7 @@ Aşağıda, Visual Studio tekliflerinin farklı araçları ve bunları kullanabi
 |----------------------|---------------------|-------------|-------------|
 |[PerfTips](../profiling/perftips.md)|evet|evet|evet|
 |[CPU Kullanımı](../profiling/cpu-usage.md)|evet|evet|evet|
-|[Bellek kullanımı](../profiling/memory-usage.md)|evet|evet|evet|
+|[Bellek Kullanımı](../profiling/memory-usage.md)|evet|evet|evet|
 |[.NET nesne ayırma](../profiling/dotnet-alloc-tool.md)|Evet (yalnızca .NET)|evet|evet|
 |[GPU Kullanımı](/visualstudio/debugger/graphics/gpu-usage)|evet|evet|hayır|
 |[Uygulama Zaman Çizelgesi](../profiling/application-timeline.md)|evet|evet|hayır|
@@ -219,7 +219,7 @@ Aşağıda, Visual Studio tekliflerinin farklı araçları ve bunları kullanabi
 |Performans aracı|Windows masaüstü|UWP|ASP.NET/ASP.NET Core|
 |----------------------|---------------------|-------------|-------------|
 |[CPU Kullanımı](../profiling/cpu-usage.md)|evet|evet|evet|
-|[Bellek kullanımı](../profiling/memory-usage.md)|evet|evet|evet|
+|[Bellek Kullanımı](../profiling/memory-usage.md)|evet|evet|evet|
 |[GPU Kullanımı](/visualstudio/debugger/graphics/gpu-usage)|evet|evet|hayır|
 |[Uygulama Zaman Çizelgesi](../profiling/application-timeline.md)|evet|evet|hayır|
 |[PerfTips](../profiling/perftips.md)|evet|XAML için Evet, HTML için Hayır|evet|

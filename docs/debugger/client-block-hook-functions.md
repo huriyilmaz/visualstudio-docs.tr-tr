@@ -22,24 +22,24 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5b7b0ef177922f09239c8925ced1ca013e966c0e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72745714"
 ---
 # <a name="client-block-hook-functions"></a>İstemci Blok Kanca İşlevleri
-@No__t_0 blokları içinde depolanan verilerin içeriğini doğrulamak veya raporlamak istiyorsanız, bu amaçla özel olarak bir işlev yazabilirsiniz. Yazdığınız işlev, CRTDBG içinde tanımlandığı şekilde aşağıdakine benzer bir prototipi içermelidir. Olsun
+Bloklar halinde depolanan verilerin içeriğini doğrulamak veya raporlamak isterseniz `_CLIENT_BLOCK` , bu amaçla özel olarak bir işlev yazabilirsiniz. Yazdığınız işlev, CRTDBG içinde tanımlandığı şekilde aşağıdakine benzer bir prototipi içermelidir. Olsun
 
 ```cpp
 void YourClientDump(void *, size_t)
 ```
 
- Diğer bir deyişle, kanca işleviniz, ayırma bloğunun başlangıcına, ayırma boyutunu belirten bir **size_t** türü değeriyle birlikte **void** bir işaretçi kabul etmelidir ve `void` döndürür. Bunun dışında, içeriği size ait.
+ Diğer bir deyişle, kanca işleviniz, ayırma bloğunun başlangıcına, ayırma boyutunu belirten bir **size_t** tür değeriyle birlikte bir **void** işaretçisi kabul etmelidir ve döndürülür `void` . Bunun dışında, içeriği size ait.
 
- [_Crtsetdumpclient](/cpp/c-runtime-library/reference/crtsetdumpclient)kullanarak kanca işlevinizi yükledikten sonra, `_CLIENT_BLOCK` bir blok her döküşinizde çağrılır. Daha sonra, döküklerden oluşan tür veya alt türü hakkında bilgi almak için [_Crtreportblocktype](/cpp/c-runtime-library/reference/crtreportblocktype) kullanabilirsiniz.
+ [_CrtSetDumpClient](/cpp/c-runtime-library/reference/crtsetdumpclient)kullanarak kanca işlevinizi yükledikten sonra, bir `_CLIENT_BLOCK` blok her döküşinizde çağrılacaktır. Daha sonra, dökübir blok türü veya alt türü hakkında bilgi almak için [_CrtReportBlockType](/cpp/c-runtime-library/reference/crtreportblocktype) kullanabilirsiniz.
 
- @No__t_0 'e geçirdiğiniz işlevinizin işaretçisi, CRTDBG içinde tanımlanan **_CRT_DUMP_CLIENT**türüdür. Olsun
+ İşlevinizin geçirdiğiniz işaretçi, `_CrtSetDumpClient` CRTDBG içinde tanımlandığı gibi **_CRT_DUMP_CLIENT**türündedir. Olsun
 
 ```cpp
 typedef void (__cdecl *_CRT_DUMP_CLIENT)

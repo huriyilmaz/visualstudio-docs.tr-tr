@@ -9,10 +9,10 @@ ms.topic: conceptual
 robots: noindex, nofollow
 description: Bağlı Microsoft hesaplarıyla ve Azure Active Directory kimliklerle çalışmayı öğrenin
 ms.openlocfilehash: f7b2cad08eb94b15e35015db7e8ac3fe084a00ea
-ms.sourcegitcommit: 78face15e71c305a2146358df51f8f1fefe3388f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87805624"
 ---
 # <a name="how-to-use-connected-identities-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde bağlı kimlikler kullanma
@@ -24,7 +24,7 @@ Kuruluşlar, aboneliklerin otomatik yönetimi için geliştirilmiş güvenlik ve
 Yöneticiniz MSA ve Azure AD kimliklerinizi bağladığında, MSA yerine Azure AD Kimliğiniz ile Visual Studio aboneliğinize erişmeye başlamasını sağlayan bir e-posta alırsınız. 
 
 ## <a name="how-to-access-benefits-using-azure-ad-identities"></a>Azure AD kimlikleri kullanarak avantajlara erişme
-Yöneticiniz, MSA 'ı Azure AD kimliğinize bağladıktan sonra Azure AD https://my.visualstudio.com kimlik bilgilerinizi kullanarak Azure AD 'yi kullanan avantajlara erişmeniz için abone portalında oturum açmanız gerekir.  Bunlara
+Yöneticiniz, MSA 'ı Azure AD kimliğinize bağladıktan sonra Azure AD https://my.visualstudio.com kimlik bilgilerinizi kullanarak Azure AD 'yi kullanan avantajlara erişmeniz için abone portalında oturum açmanız gerekir.  Bu güncelleştirmeler şunlardır:
 - Visual Studio IDE
 - Azure DevOps
 - Azure DevTest bireysel kredisi

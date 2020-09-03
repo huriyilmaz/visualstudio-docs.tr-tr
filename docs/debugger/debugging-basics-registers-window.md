@@ -18,17 +18,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4deaf03013b6e28ea02e6ec7412bd23a05f1b87e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72738258"
 ---
-# <a name="about-the-registers-window-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio 'daki Yazmaçları penceresi hakkında (C#, C++, Visual Basic,) F#
+# <a name="about-the-registers-window-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio 'da Yazmaçları penceresi hakkında (C#, C++, Visual Basic, F #)
 
 **Yazmaçları** penceresi yalnızca, **Seçenekler** Iletişim kutusunda, **hata ayıklama** düğümünde adres düzeyi hata ayıklama etkinse kullanılabilir.
 
- Yazmaçları, işlemcinin etkin bir şekilde çalıştığı küçük veri parçalarını depolamak için kullanılan bir işlemci (CPU) içindeki özel konumlardır. Kaynak kodu derlemek veya yorumlamak, verileri bellekten kayıtlara taşıdığınızda ve gerektiğinde yeniden geri alan yönergeler oluşturur. Kayıt içindeki verilere erişmek, bellekteki verilere erişirken çok hızlıdır. bu nedenle, işlemcinin verileri bir kasada bulundurmasına ve bu işlem, işlemcinin kayıtları sürekli olarak yüklemesini ve kaldırmayı gerektiren koddan daha hızlı bir şekilde çalışmasına olanak tanır. Derleyicinin verileri Yazmaçlarda tutmasını ve diğer iyileştirmeler gerçekleştirmesini kolaylaştırmak için, genel değişkenleri kullanmaktan kaçının ve yerel değişkenlere mümkün olduğunca güvenmelisiniz. Bu şekilde yazılan kod, başvurunun doğru yere sahip olduğu söylenir. C/C++gibi bazı dillerde, programcılar bir yazmaç değişkeni bildirebilir, bu da derleyiciye değişkeni her zaman bir kasada tutmaya en iyi şekilde denemesini söyler. Daha fazla bilgi için bkz. [register anahtar sözcüğü](https://msdn.microsoft.com/library/5b66905a-2f7f-4918-bb55-5e66d4bc50f9).
+ Yazmaçları, işlemcinin etkin bir şekilde çalıştığı küçük veri parçalarını depolamak için kullanılan bir işlemci (CPU) içindeki özel konumlardır. Kaynak kodu derlemek veya yorumlamak, verileri bellekten kayıtlara taşıdığınızda ve gerektiğinde yeniden geri alan yönergeler oluşturur. Kayıt içindeki verilere erişmek, bellekteki verilere erişirken çok hızlıdır. bu nedenle, işlemcinin verileri bir kasada bulundurmasına ve bu işlem, işlemcinin kayıtları sürekli olarak yüklemesini ve kaldırmayı gerektiren koddan daha hızlı bir şekilde çalışmasına olanak tanır. Derleyicinin verileri Yazmaçlarda tutmasını ve diğer iyileştirmeler gerçekleştirmesini kolaylaştırmak için, genel değişkenleri kullanmaktan kaçının ve yerel değişkenlere mümkün olduğunca güvenmelisiniz. Bu şekilde yazılan kod, başvurunun doğru yere sahip olduğu söylenir. C/C++ gibi bazı dillerde, programcılar bir yazmaç değişkeni bildirebilir, bu da derleyiciye değişkeni her zaman bir kasada tutmak için en iyi şekilde denemesini söyler. Daha fazla bilgi için bkz. [register anahtar sözcüğü](https://msdn.microsoft.com/library/5b66905a-2f7f-4918-bb55-5e66d4bc50f9).
 
  Yazmaçları iki türe ayrılabilir: genel amaçlı ve özel amaç. Genel amaçlı kayıt kayıtları, iki sayı ekleme veya bir dizideki bir öğeye başvurma gibi genel işlemlere yönelik verileri tutar. Özel amaçlı kayıtların belirli amaçları ve özelleştirilmiş anlamları vardır. İyi bir örnek, işlemcinin programın çağrı yığınını izlemek için kullandığı yığın işaretçisi kayıt örneğidir. Bir programcı olarak, büyük olasılıkla yığın işaretçisini doğrudan işlemeyecektir. Ancak, yığın işaretçisi olmadığında, işlemcinin bir işlev çağrısının sonunda nereye dönebileceklerini bilmez hale getirmediği için, programınızın düzgün çalışması önemlidir.
 
@@ -40,9 +40,9 @@ ms.locfileid: "72738258"
 
  **Yazmaçları** penceresini görüntüleme hakkında daha fazla bilgi için, bkz. [Yazmaçları penceresini kullanma](../debugger/how-to-use-the-registers-window.md).
 
- **Kayıt** penceresine baktığınızda, `EAX = 003110D8` gibi girdileri görürsünüz.
+ **Kayıt** penceresine baktığınızda gibi girdileri görürsünüz `EAX = 003110D8` .
 
- @No__t_0 işaretinin solundaki simge, kayıt adı, `EAX`, bu durumda. @No__t_0 işaretinin sağındaki sayı, kayıt içeriğini temsil eder.
+ İşaretin solundaki simge, `=` kayıt adıdır, `EAX` Bu durumda. İşaretin sağ tarafındaki sayı, `=` kayıt içeriğini temsil eder.
 
  **Yazmaçları** penceresi yalnızca bir kaydın içeriğini görüntülemenizi sağlar. Yerel kodda kesme modundayken, bir kaydın içeriğine tıklayıp değeri düzenleyebilirsiniz. Bu, rastgele yapmanız gereken bir şey değildir. Düzenlemekte olduğunuz kaydı ve içerdiği verileri anlamadığınız takdirde, daha az düzenlemenin sonucu, bir program kilitlenmesi veya başka bir istenmeyen sonuç olabilir. Ne yazık ki, çeşitli Intel ve Intel uyumlu işlemcilerin kayıt kümelerinin ayrıntılı bir açıklaması, bu kısa giriş kapsamına çok daha fazla gidiyor.
 
@@ -54,16 +54,16 @@ Dağınıklığı azaltmak için, **Yazmaçları** penceresi kayıtları gruplar
 
 Intel x86 işlemciler için, **Yazmaçları** penceresinde aşağıdaki bayrakları görebilirsiniz. Bir hata ayıklama oturumu sırasında bu bayrakları da düzenleyebilirsiniz.
 
-|bayrağıyla|Değer ayarla|
+|Bayrak|Değer ayarla|
 |-|-|
 |Taşma|OV = 1|
 |Yön|YUKARı = 1|
 |İsteği|EI = 1|
-|İmzalayabilirsiniz|PL = 1|
-|Sıfırlama|ZR = 1|
+|İşaret|PL = 1|
+|Sıfır|ZR = 1|
 |Yardımcı taşıma|AC = 1|
-|Eşlik|PE = 1|
-|Sürdür|CY = 1|
+|Parity|PE = 1|
+|Sonraki basamağa geçirme|CY = 1|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl Yapılır: Yazmaçlar Penceresini Kullanma](../debugger/how-to-use-the-registers-window.md)

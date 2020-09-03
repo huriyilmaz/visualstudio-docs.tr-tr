@@ -20,10 +20,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dcdaf083462b75485449cae05894681e2bb5c900
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72738386"
 ---
 # <a name="tools-to-debug-threads-and-processes-in-visual-studio"></a>Visual Studio 'da iş parçacıklarında ve işlemlerde hata ayıklama araçları
@@ -35,16 +35,16 @@ ms.locfileid: "72738386"
 
  Kusursuz paralel işleme her zaman mümkün değildir. İş parçacıkları bazen eşitlenmelidir. Bir iş parçacığının bir sonucu başka bir iş parçacığından beklemek zorunda kalabilir veya bir iş parçacığının başka bir iş parçacığının kullandığı bir kaynağa özel erişime ihtiyacı olabilir. Eşitleme sorunları, çok iş parçacıklı uygulamalardaki hataların yaygın bir nedendir. Bazen iş parçacıkları hiçbir zaman kullanılamayan bir kaynağı bekliyor olabilir. Bu, *kilitlenme*adlı bir koşula neden olur.
 
- @No__t_0 hata ayıklayıcı, iş parçacıkları ve süreçlerinde hata ayıklamak için güçlü ancak kullanımı kolay araçlar sağlar.
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Hata ayıklayıcı, iş parçacıkları ve süreçlerinde hata ayıklamak için güçlü ancak kullanımı kolay araçlar sağlar.
 
 ## <a name="tools-and-features"></a>Araçlar ve Özellikler
-@No__t_0 kullanmanız gereken araçlar, hata ayıklamaya çalıştığınız kodun türüne bağlıdır:
+' De kullanmanız gereken araçlar, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hata ayıklamaya çalıştığınız kodun türüne bağlıdır:
 
 - İşlemler için, birincil Araçlar **Işleme İliştir** iletişim kutusu, **Işlemler** penceresi ve **hata ayıklama konumu** araç çubuğudur.
 
 - İş parçacıkları için, hata ayıklama için birincil Araçlar **Iş parçacıkları** penceresidir, kaynak pencereleri, **Paralel Yığınlar** penceresi, **paralel Izleme** penceresi ve **hata ayıklama konumu** araç çubuğudur.
 
-- [Görev paralel kitaplığı (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)içindeki <xref:System.Threading.Tasks.Task> kullanan kod için [Eşzamanlılık çalışma zamanı](/cpp/parallel/concrt/concurrency-runtime/) (yerel kod), çok iş parçacıklı uygulamalarda hata ayıklamaya yönelik birincil Araçlar **Paralel Yığınlar** penceresi, **paralel izleme** pencere ve **Görevler** penceresi ( **Görevler** penceresi de JavaScript Promise nesnesini destekler).
+- <xref:System.Threading.Tasks.Task> [Görev paralel KITAPLıĞı (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl), [Eşzamanlılık çalışma zamanı](/cpp/parallel/concrt/concurrency-runtime/) (yerel kod), çok iş parçacıklı uygulamalarda hata ayıklamaya yönelik birincil Araçlar **Paralel Yığınlar** penceresi, **paralel Izleme** penceresi ve **Görevler** penceresi ( **Görevler** penceresi JavaScript Promise nesnesini de destekler) öğesini kullanan kod için.
 
 - GPU 'daki iş parçacıkları hata ayıklaması için, birincil araç **GPU Iş parçacıkları** Windows.
 
@@ -59,11 +59,11 @@ ms.locfileid: "72738386"
 |**Hata ayıklama konumu** araç çubuğu|-Geçerli işlem<br />-Uygulamayı askıya alma<br />-Uygulamayı sürdürür<br />-Uygulamayı askıya alma ve kapatma<br />-Geçerli iş parçacığı<br />-Geçerli iş parçacığı bayrak durumunu değiştirme<br />-Yalnızca bayraklı iş parçacıklarını göster<br />-Yalnızca geçerli işlemi göster<br />-Geçerli yığın çerçevesi|-Başka bir işleme geçiş yap<br />-Uygulamayı askıya alma, sürdürme veya kapatma<br />-Geçerli işlemde başka bir iş parçacığına geçiş yap<br />-Geçerli iş parçacığında başka bir yığın çerçevesine geçiş yap<br />-Geçerli iş parçacıklarını işaretle veya bayrak kaldır<br />-Yalnızca bayraklı iş parçacıklarını göster<br />-Yalnızca geçerli işlemi göster|
 |**Paralel Yığınlar** penceresi|-Birden çok iş parçacığı için yığınları tek bir pencerede çağırın.<br />-Her iş parçacığı için etkin yığın çerçevesi.<br />-Her bir yöntem için çağıranlar ve Callet 'ler.|-Belirtilen iş parçacıklarını filtrele<br />-Görevler görünümüne geç<br />-Bir iş parçacığını işaretle veya bayrak kaldır<br />-Yakınlaştır|
 |**Paralel izleme** penceresi|-Özel dikkat etmek istediğiniz bir iş parçacığını işaretlemek için kullanabileceğiniz bayrak sütunu.<br />-Bir okun seçili çerçeveyi gösterdiği çerçeve sütunu.<br />-Makine, işlem, kutucuk, görev ve iş parçacığını görüntüleyebilen yapılandırılabilir bir sütun.|-Bir iş parçacığını işaretle veya bayrak kaldır<br />-Yalnızca bayraklı iş parçacıklarını göster<br />-Kare değiştirme<br />-Bir sütunu sıralama<br />-Grup iş parçacıkları<br />-İş parçacıklarını dondurma veya çözme<br />-Paralel izleme penceresi verileri dışarı aktarma|
-|**Görevler** penceresi|-Görev KIMLIĞI, görev durumu (zamanlanmış, çalışan, bekleme, kilitli) ve göreve atanan iş parçacığı gibi <xref:System.Threading.Tasks.Task> nesneleri hakkındaki bilgileri görüntüleyin.<br />-Çağrı yığınında geçerli konum.<br />-Temsilci oluşturma zamanında göreve geçildi|-Geçerli göreve geçiş yap<br />-Bir görevi işaretle veya bayrak kaldır<br />-Bir görevi dondurma veya çözme|
+|**Görevler** penceresi|- <xref:System.Threading.Tasks.Task> Görev kimliği, görev durumu (zamanlanmış, çalışan, bekleme, kilitli) ve göreve atanan iş parçacığını içeren nesneler hakkında bilgileri görüntüleyin.<br />-Çağrı yığınında geçerli konum.<br />-Temsilci oluşturma zamanında göreve geçildi|-Geçerli göreve geçiş yap<br />-Bir görevi işaretle veya bayrak kaldır<br />-Bir görevi dondurma veya çözme|
 |**GPU Iş parçacıkları** penceresi|-Özel dikkat etmek istediğiniz bir iş parçacığını işaretlemek için kullanabileceğiniz bayrak sütunu.<br />-Sarı okun geçerli iş parçacığını gösterdiği geçerli iş parçacığı sütunu.<br />-Aynı konumdaki iş parçacığı sayısını görüntüleyen **Iş parçacığı sayısı** sütunu.<br />-Her iş parçacığı grubunun bulunduğu kod satırını görüntüleyen **satır** sütunu.<br />-Her iş parçacığı grubunun bulunduğu yönerge adresini görüntüleyen **Adres** sütunu.<br />-Adresin kodundaki konum olan **Location** sütunu.<br />-İş parçacığının etkin veya engellenmiş olduğunu gösteren **durum** sütunu.<br />-Satırdaki iş parçacıkları için döşeme dizinini gösteren **döşeme** sütunu.|-Farklı bir iş parçacığına geçiş yapın<br />-Belirli bir kutucuğu ve iş parçacığını görüntüleme<br />-Bir sütunu görüntüleme veya gizleme<br />-Sütuna göre sırala<br />-Grup iş parçacıkları<br />-İş parçacıklarını dondurma veya çözme<br />-Bir iş parçacığını işaretle veya bayrak kaldır<br />-Yalnızca bayraklı iş parçacıklarını göster|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çalıştırma İşlemine İliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
-- [Çok İş Parçacıklı Uygulamaların Hatalarını Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Çok İş Parçacıklı Uygulamalarda Hata Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [GPU Kodunda Hata Ayıklama](../debugger/debugging-gpu-code.md)
