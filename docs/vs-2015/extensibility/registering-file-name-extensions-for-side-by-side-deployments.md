@@ -11,30 +11,30 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 354b91dd1282df9726c1ee9c47f610b0dfdd9c1a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68163694"
 ---
 # <a name="registering-file-name-extensions-for-side-by-side-deployments"></a>Yan Yana Dağıtım için Dosya Adı Uzantılarını Kaydetme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yan yana bir ortamda dağıtılan Vspackage'lar için dosyaları doğru sürümü ile ilişkilendirilecek dosya adı uzantıları kaydetmelisiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Sürüme özgü dosya adı uzantısı kullanmıyorsanız, kayıt, kullanıcıların projenizi açın ve proje öğesi dosyaları uygun sürümünü de olanak tanır. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+Yan yana bir ortamda dağıtılan VSPackages 'ler için, dosyaları doğru sürümü ile ilişkilendirmek üzere dosya adı uzantılarını kaydetmeniz gerekir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Sürüme özgü bir dosya adı uzantısı kullanmıyorsanız, kayıt, kullanıcıların projenizi ve proje öğesi dosyalarını uygun sürümünde açmasına olanak sağlar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Dosya Adı Uzantıları Hakkında](../extensibility/about-file-name-extensions.md)  
- Dosya adı uzantıları nasıl kayıtlı açıklanır.  
+ Dosya adı uzantılarının nasıl kaydedildiğini açıklar.  
   
  [Dosya Adı Uzantıları için Dosya İşleyicileri Belirtme](../extensibility/specifying-file-handlers-for-file-name-extensions.md)  
- Açmak için uygulamalar, düzenleme ve benzeri, belirli bir dosya adı uzantısı kaydetme hakkında bilgi sağlar.  
+ Belirli bir dosya adı uzantısını açan, düzenleyebilen ve bu uygulamaların nasıl kaydedileceği hakkında bilgi sağlar.  
   
  [Dosya Adı Uzantıları için Fiil Kaydetme](../extensibility/registering-verbs-for-file-name-extensions.md)  
- Fiil kaydetme anlatılmaktadır.  
+ Fiillerin nasıl kaydedileceği açıklanmaktadır.  
   
  [Yan Yana Dosya İlişkilendirmelerini Yönetme](../extensibility/managing-side-by-side-file-associations.md)  
- Yan yana yüklemeleri, nasıl ele alınacağını açıklar belirli bir sürümü [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bir dosyayı açmak için çağrılmalıdır.  
+ Belirli bir sürümünün [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bir dosyayı açmak için çağrılması gereken yan yana yüklemelerin nasıl işleneceğini açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Visual Studio'nun Birden Çok Sürümünü Destekleme](../extensibility/supporting-multiple-versions-of-visual-studio.md)  
- Birden çok sürümleri için ilgili sorunlar açıklanmaktadır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ve geliştirme ve son kullanıcıların dağıtım sırasında VSPackage'ı.
+ Uygulamasının, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] son kullanıcılara geliştirme ve dağıtım sırasında birden fazla sürümü ve VSPackage ile ilgili sorunları açıklar.

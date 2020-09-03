@@ -9,48 +9,48 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 110cbbb01f5b86d462a9a5f196735fd4d477fb10
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75589870"
 ---
 # <a name="work-with-textures-and-images"></a>Dokularla ve görüntülerle çalışma
 
-Visual Studio'daki Görüntü Düzenleyicisi'ni dokular ve görüntüler oluşturmak ve değiştirmek için kullanabilirsiniz. Image Editor, DirectX uygulama geliştirmede kullanılanlar gibi zengin doku ve görüntü biçimlerini destekler.
+Dokuları ve görüntüleri oluşturmak ve değiştirmek için Visual Studio 'daki görüntü düzenleyicisini kullanabilirsiniz. Görüntü Düzenleyicisi, DirectX uygulama geliştirmede kullanılanlarla benzer zengin doku ve görüntü biçimlerini destekler.
 
 > [!NOTE]
-> Görüntü Düzenleyicisi, simgeler veya imleçler gibi düşük renkli görüntüleri desteklemez. Bu tür görüntüler oluşturmak veya değiştirmek [için, simgeler (C++) için Görüntü Düzenleyicisi'ni](/cpp/windows/image-editor-for-icons)kullanın.
+> Görüntü Düzenleyicisi, simgeler veya imleçler gibi düşük renkli görüntüleri desteklemez. Bu tür resimleri oluşturmak veya değiştirmek için, [simgeler Için görüntü düzenleyicisini kullanın (C++)](/cpp/windows/image-editor-for-icons).
 
 ## <a name="textures-and-images"></a>Dokular ve görüntüler
 
-Dokular ve görüntüler, temel düzeyde, grafik uygulamalarında görsel ayrıntı sağlamak için kullanılan veri tablolarıdır. Bir dokunun veya görüntünün sağladığı ayrıntı türü nasıl kullanıldığına bağlıdır, ancak renk örnekleri, alfa (saydamlık) değerleri, yüzey normalleri ve yükseklik değerleri sık karşılaşılan örneklerdir. Doku ve görüntü arasındaki temel fark, bir dokunun şeklin bir temsili ile birlikte kullanılması gerektiğidir (genellikle 3B model— tam bir nesneyi veya sahneyi ifade etmek için), ancak görüntü genellikle nesne nin veya sahnenin tek başına bir temsilidir.
+Dokular ve görüntüler, temel düzeyde, yalnızca grafik uygulamalarında görsel ayrıntı sağlamak için kullanılan veri tablolarından oluşur. Bir dokunun veya görüntünün sağladığı ayrıntı türü, nasıl kullanıldığına bağlıdır, ancak renk örnekleri, Alfa (saydamlık) değerleri, yüzey Normals ve yükseklik değerleri ortak örnektir. Bir doku ve görüntü arasındaki birincil fark, bir dokunun bir şeklin temsili ile birlikte kullanılması (genellikle 3B model), tam bir nesne veya sahneyi ifade etmek için, ancak bir görüntü genellikle nesnenin veya sahnenin tek başına gösterimidir.
 
-Herhangi bir doku kodlanabilir ve bir doku tutar veri türüne ortogonal bir dizi şekilde sıkıştırılmış, ya da boyutsallık veya doku "şekil" için. Ancak, farklı kodlama ve sıkıştırma yöntemleri farklı veri türleri için daha iyi sonuçlar verir.
+Herhangi bir doku, bir dokusunun tuttuğu verilerin türüne veya dokunun boyut veya "şekline" göre birbirine dik bir şekilde kodlanabilir ve sıkıştırılabilir. Ancak, farklı kodlama ve sıkıştırma yöntemleri farklı veri türleri için daha iyi sonuçlar verir.
 
-Dokuları ve görüntüleri diğer görüntü düzenleyicilerine benzer şekilde oluşturmak ve değiştirmek için Görüntü Düzenleyicisi'ni kullanabilirsiniz. Image Editor ayrıca 3D grafiklerle kullanılmak üzere mipmapping ve diğer özellikleri sağlar ve DirectX'in desteklediği yüksek sıkıştırılmış, donanım hızlandırılmış doku biçimlerinin çoğunu destekler.
+Görüntü düzenleyicisini, diğer resim düzenleyicilerine benzeyen dokular ve görüntüler oluşturmak ve değiştirmek için kullanabilirsiniz. Görüntü Düzenleyicisi Ayrıca, 3B grafiklerle kullanılmak üzere mı eşlemesi ve diğer özellikler sağlar ve DirectX 'in desteklediği, yüksek oranda sıkıştırılmış, donanım hızlandırmalı doku biçimlerinin çoğunu destekler.
 
-Yaygın doku türleri şunlardır:
+Yaygın dokuların türleri şunlardır:
 
 ### <a name="texture-maps"></a>Doku haritaları
 
-Doku eşlemleri, tek, iki veya üç boyutlu matris olarak düzenlenmiş renk değerleri içerir. Bunlar etkilenen nesne üzerinde renk ayrıntısı sağlamak için kullanılır. Renkler genellikle RGB (kırmızı, yeşil, mavi) renk kanalları kullanılarak kodlanır ve saydamlığı temsil eden dördüncü bir kanal olan alfa içerebilir. Daha az yaygın olarak, renkler başka bir renk düzeninde kodlanabilir veya dördüncü kanal alfa dışında veri içerebilir(örneğin, yükseklik).
+Doku haritaları bir, iki veya üç boyutlu matris olarak düzenlenmiş renk değerleri içerir. Etkilenen nesnede renk ayrıntısı sağlamak için kullanılır. Renkler genellikle RGB (kırmızı, yeşil, mavi) renk kanalları kullanılarak kodlanır ve saydamlığı temsil eden bir dördüncü kanal olan Alpha içerebilir. Daha az yaygın olarak, renkler başka bir renk düzeninde kodlanamaz veya dördüncü kanal Alfa dışında bir veri içerebilir — Örneğin, yükseklik.
 
 ### <a name="normal-maps"></a>Normal haritalar
 
-Normal haritalar yüzey normalleri içerir. Bunlar etkilenen nesne üzerinde aydınlatma ayrıntısı sağlamak için kullanılır. Normaller genellikle vektörün x, y ve z boyutlarını depolamak için kırmızı, yeşil ve mavi renk bileşenleri kullanılarak kodlanır. Ancak, diğer kodlamalar var-örneğin, kutupsal koordinatları dayalı kodlamalar.
+Normal haritalar Yüzey normalleri içerir. Etkilenen nesne üzerinde aydınlatma ayrıntısı sağlamak için kullanılırlar. Normaller genellikle, vektör 'in x, y ve z boyutlarını depolamak için kırmızı, yeşil ve mavi renk bileşenleri kullanılarak kodlanır. Bununla birlikte, diğer kodlamalar vardır; örneğin, kutupsal koordinatları temel alan kodlamalar.
 
 ### <a name="height-maps"></a>Yükseklik haritaları
 
-Yükseklik haritaları yükseklik alanı verilerini içerir. İstenilen etkiyi hesaplamak için gölgeli kodu kullanarak etkilenen nesne üzerinde geometrik ayrıntı biçimi sağlamak veya arazi üretimi gibi kullanımlar için veri noktaları sağlamak için kullanılırlar. Yükseklik değerleri genellikle bir dokuda bir kanal kullanılarak kodlanır.
+Yükseklik haritaları, yükseklik alanı verileri içerir. Bunlar, istenen etkiyi hesaplamak için gölgelendirici kodu kullanılarak veya teryağmm gibi kullanımlar için veri noktaları sağlamak üzere, etkilenen nesnede geometrik ayrıntı formu sağlamak için kullanılır. Yükseklik değerleri, bir dokusundaki bir kanal kullanılarak yaygın olarak kodlanır.
 
 ### <a name="cube-maps"></a>Küp haritaları
 
-Küp eşlemleri farklı veri türleri (örneğin, renkler veya normaller) içerebilir, ancak küpün yüzlerinde altı doku olarak düzenlenir. Bu nedenle, küp haritaları doku koordinatları sağlayarak değil, kökeni küpün merkezi olan bir vektör sağlayarak örneklenir; örnek, vektörün küple kesiştiği noktada alınır. Küp eşlemleri yansımaları hesaplamak için kullanılabilecek ortamın yaklaşık bir kısmını sağlamak için kullanılır—bu *ortam eşleme*olarak bilinir —veya temel, iki boyutlu dokulardan daha az distorsiyona sahip küresel nesnelere doku sağlamak için kullanılır.
+Küp haritaları, farklı veri türleri içerebilir — Örneğin, renkler veya normaller —, ancak küpün yüzlerinde altı doku olarak düzenlenir. Bu nedenle, küp haritaları doku koordinatları sağlayarak örneklenmez, ancak kaynağı küpün ortası olan bir vektör sağlayarak; örnek, vector öğesinin kübü kesiştiği noktada alınır. Küp haritaları, yansıma gibi yansımaları hesaplamak için kullanılabilecek ortamın yaklaşık bir kısmını sağlamak için kullanılır. Bu, *ortam eşleme*olarak bilinir — ya da temel kıyasla daha az deformasyonu olan küresel nesnelere doku sağlamak için, iki boyutlu dokuların sağlayabildiği bir değer sağlar.
 
 ## <a name="related-topics"></a>İlgili konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Görüntü Düzenleyici](../designers/image-editor.md)|Dokular ve görüntülerle çalışmak için Görüntü Düzenleyicisi'nin nasıl kullanılacağını açıklar.|
-|[Resim Düzenleyiciörnekleri](../designers/how-to-create-a-basic-texture.md)|Ortak görüntü işleme görevlerini gerçekleştirmek için Görüntü Düzenleyicisi'nin nasıl kullanılacağını gösteren konulara bağlantılar sağlar.|
+|[Görüntü Düzenleyicisi](../designers/image-editor.md)|Dokularla ve görüntülerle çalışmak için görüntü düzenleyicisinin nasıl kullanılacağını açıklar.|
+|[Görüntü Düzenleyicisi örnekleri](../designers/how-to-create-a-basic-texture.md)|Ortak görüntü işleme görevlerini gerçekleştirmek için görüntü düzenleyicisinin nasıl kullanılacağını gösteren konuların bağlantılarını sağlar.|

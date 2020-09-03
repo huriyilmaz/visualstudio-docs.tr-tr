@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib::get_uninitializeddata | Microsoft Docs
+title: 'IDiaSectionContrib:: get_uninitializedData | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2ee0f9dd959d22d064ef2a1f86bae7789179ed3c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68151855"
 ---
-# <a name="idiasectioncontribgetuninitializeddata"></a>IDiaSectionContrib::get_uninitializedData
+# <a name="idiasectioncontribget_uninitializeddata"></a>IDiaSectionContrib::get_uninitializedData
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bölüm başlatılmamış veri içerip içermediğini gösteren bir bayrak alır.  
+Bölümün başlatılmamış verileri içerip içermediğini gösteren bir bayrak alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_uninitializedData (   
@@ -35,10 +35,10 @@ HRESULT get_uninitializedData ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Döndürür `TRUE` bölüm başlatılmamış veri içeriyorsa döndürür, aksi takdirde, `FALSE`.  
+ dışı `TRUE` Bölüm başlatılmamış veriler içeriyorsa döndürür; Aksi takdirde, döndürür `FALSE` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

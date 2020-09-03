@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::GetMemoryContext | Microsoft Docs
+title: 'IDebugObject:: GetMemoryContext | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5e69e5a77e93df2d338eb7d2e7114129ea9ac8d1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162458"
 ---
 # <a name="idebugobjectgetmemorycontext"></a>IDebugObject::GetMemoryContext
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Nesne değeri adresini temsil eden bellek bağlamını alır.  
+Nesnenin değerinin adresini temsil eden bellek bağlamını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetMemoryContext(   
@@ -40,13 +40,13 @@ int GetMemoryContext(
   
 #### <a name="parameters"></a>Parametreler  
  `pContext`  
- [out] Döndürür bir [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) nesnenin değerini adresini temsil eden nesne.  
+ dışı Nesnenin değerinin adresini temsil eden bir [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu tarafından temsil edilen değeri adresini döndürülen bellek bağlam belirten [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesne.  
+ Döndürülen bellek bağlamı, bu [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesnesi tarafından temsil edilen değerin adresini belirtir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

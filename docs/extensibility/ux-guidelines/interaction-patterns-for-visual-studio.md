@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 5cbfeef3352e4abd03e12cc6b228cea8a8c124a6
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84184412"
 ---
 # <a name="interaction-patterns-for-visual-studio"></a>Visual Studio İçin Etkileşim Desenleri
@@ -23,7 +23,7 @@ ms.locfileid: "84184412"
 
 ### <a name="visual-studio-client-pattern-types"></a>Visual Studio Istemci model türleri
 
-|Model türü|Açıklama|Örnekler|
+|Model türü|Description|Örnekler|
 |------------------|-----------------|--------------|
 |**Uygulama düzeyi desenleri**|Uygulamada ortak olan üst düzey desenler, uygulama bağlamını belirleme veya görüntüleme, ve bunlar içinde bileşik ve Denetim desenleri içeren|-Araç pencereleri<br />-Belge pencereleri|
 |**Bileşik desenler**|Uygulama desenleri arasında yayılabilen ortak desenler veya ayrı bir yapılandırmadaki çeşitli denetimlerden oluşan tanınan bir desen|-Geçişi görüntüle<br />-Liste oluşturucular<br />-Verileri görüntüleme<br />-Bildirimler<br />-Doğrulama<br />-Seçim modelleri|

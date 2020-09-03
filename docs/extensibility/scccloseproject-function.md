@@ -1,5 +1,5 @@
 ---
-title: SccCloseProject Fonksiyonu | Microsoft Dokümanlar
+title: SccCloseProject Işlevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 71df385bc0cf42c2437abfd117c2f84bda5b5432
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701055"
 ---
-# <a name="scccloseproject-function"></a>SccCloseProject fonksiyonu
-Bu işlev, belirli bir oturumun sonunu işaretleyerek projeyi kapatır.
+# <a name="scccloseproject-function"></a>SccCloseProject işlevi
+Bu işlev, belirli bir oturumun sonuna işaret eden bir projeyi kapatır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 SCCRTN SccCloseProject (
@@ -31,22 +31,22 @@ SCCRTN SccCloseProject (
 ```
 
 ### <a name="parameters"></a>Parametreler
- pvContext Kaynak denetimi eklentisi bağlam yapısı.
+ Kaynak denetimi eklentisi bağlam yapısını pvContext.
 
 ## <a name="return-value"></a>Döndürülen değer
- Bu işlevin kaynak denetim eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |SCC_OK|Proje başarıyla kapatıldı.|
 |SCC_E_PROJNOTOPEN|Şu anda açık proje yok.|
-|SCC_E_NOTAUTHORIZED|Kullanıcının bu işlemi gerçekleştirmesine izin verilmez.|
-|SCC_E_NONSPECIFICERROR|Nonspesifik bir hata.|
+|SCC_E_NOTAUTHORIZED|Kullanıcının bu işlemi gerçekleştirmesine izin verilmiyor.|
+|SCC_E_NONSPECIFICERROR|Özel olmayan hata.|
 
 ## <a name="remarks"></a>Açıklamalar
- [SccOpenProject](../extensibility/sccopenproject-function.md) her zaman bu işlevden önce çağrılır. Bu işleve yapılan bir çağrı, daha `SccOpenProject` sonra kaynak denetim sistemine olan bağlantıyı tamamen sona erdirebilen işlev veya [SccUninitialize'ye](../extensibility/sccuninitialize-function.md)yapılan bir çağrı yla takip edilir.
+ [SccOpenProject](../extensibility/sccopenproject-function.md) her zaman bu işlevden önce çağırılır. Daha sonra bu işleve yapılan bir çağrı, sonra, `SccOpenProject` kaynak denetim sistemine olan bağlantıyı tamamen sonlandıran işlev veya [Sccunınitialize](../extensibility/sccuninitialize-function.md)çağrısı tarafından izlenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak kontrol eklentisi API fonksiyonları](../extensibility/source-control-plug-in-api-functions.md)
+- [Kaynak denetimi eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)
 - [SccOpenProject](../extensibility/sccopenproject-function.md)
 - [SccInitialize](../extensibility/sccinitialize-function.md)

@@ -14,9 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: ebd7d500767e896ce9576a3d007a4357b9c5281c
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86014640"
 ---
 # <a name="walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension"></a>İzlenecek yol: Sunucu Gezgini uzantısında SharePoint istemci nesne modelini çağırma
@@ -37,7 +38,7 @@ ms.locfileid: "86014640"
 > [!NOTE]
 > Bu kılavuzda oluşturduğunuz uzantı, [Izlenecek yol: Sunucu Gezgini Web bölümlerini göstermek Için genişletin](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md). Bu izlenecek yol SharePoint Server nesne modelini kullanır, ancak bu izlenecek yol, istemci nesne modelini kullanarak aynı görevleri gerçekleştirir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yolu tamamlamak için geliştirme bilgisayarında aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Windows, SharePoint ve Visual Studio 'nun desteklenen sürümleri.
@@ -92,7 +93,7 @@ ms.locfileid: "86014640"
 
 5. **Ad** kutusuna **WebPartNodeExtension**yazın ve **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]çözüme bir **WebPartNodeExtension** projesi ekler ve varsayılan Class1 kod dosyasını açar.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] çözüme bir **WebPartNodeExtension** projesi ekler ve varsayılan Class1 kod dosyasını açar.
 
 6. Class1 kod dosyasını projeden silin.
 

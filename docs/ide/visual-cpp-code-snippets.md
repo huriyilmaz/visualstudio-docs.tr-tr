@@ -1,5 +1,5 @@
 ---
-title: Görsel C++ kod parçacıkları
+title: Visual C++ kod parçacıkları
 ms.date: 11/04/2016
 ms.topic: reference
 author: corob-msft
@@ -10,29 +10,29 @@ dev_langs:
 ms.workload:
 - cplusplus
 ms.openlocfilehash: db6ea1e233d32872322926a4d75b847ee6a49ba3
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77277835"
 ---
-# <a name="visual-c-code-snippets"></a>Görsel C++ kod parçacıkları
+# <a name="visual-c-code-snippets"></a>Visual C++ kod parçacıkları
 
-Visual Studio'da, C++ kod dosyalarınıza sık kullanılan kod eklemek için kod parçacıklarını kullanabilirsiniz. Genel olarak, kod parçacıklarını C#'dakiyle aynı şekilde kullanabilirsiniz, ancak varsayılan kod parçacıkları kümesi farklıdır.
+Visual Studio 'da, C++ kod dosyalarınıza yaygın olarak kullanılan kodu eklemek için kod parçacıklarını kullanabilirsiniz. Genel olarak, kod parçacıklarını C# ile aynı şekilde kullanabilirsiniz, ancak varsayılan kod parçacıkları kümesi farklıdır.
 
-Kodunuzdaki belirli bir konuma bir kod parçacığı ekleyebilir (ekleme) veya bazı seçili kodu kod parçacığıyla çevreleyebilirsiniz.
+Kodunuzda belirli bir konuma (ekleme) bir kod parçacığı ekleyebilir veya seçili bir kodu kod parçacığı ile çevreleyin.
 
-## <a name="insert-a-code-snippet"></a>Kod snippet ekleme
+## <a name="insert-a-code-snippet"></a>Kod parçacığı Ekle
 
-Bir kod parçacığı eklemek için, bir C++ kod dosyası *(.cpp* veya *.h)* açın, dosyanın içinde bir yere tıklayın ve aşağıdakilerden birini yapın:
+Bir kod parçacığı eklemek için bir C++ kod dosyası (*. cpp* veya *. h*) açın, dosyanın içinde herhangi bir yere tıklayın ve aşağıdakilerden birini yapın:
 
-- Bağlam menüsünü almak için sağ tıklatın ve **Snippet Ekle'yi** seçin
+- Bağlam menüsünü almak için sağ tıklayın ve **kod parçacığı Ekle** ' yi seçin.
 
-- **Edit / IntelliSense** menüsünde **Snippet Ekle'yi** seçin
+- **Düzenle/IntelliSense** menüsünde **kod parçacığı Ekle** ' yi seçin.
 
-- Kısayol tuşlarını kullanın: **Ctrl**+**K**+**X**
+- Kısayol tuşlarını kullanın: **CTRL** + **K** + **X**
 
-**#if**ile başlayan seçeneklerin listesini görmelisiniz. **#if**seçtiğinizde, dosyaya eklenen aşağıdaki kodu görmeniz gerekir:
+**#İf**başlayan seçeneklerin bir listesini görmeniz gerekir. **#İf**' yi seçtiğinizde, dosyaya aşağıdaki kodun eklendiğini görmeniz gerekir:
 
 ```cpp
 #if 0
@@ -40,19 +40,19 @@ Bir kod parçacığı eklemek için, bir C++ kod dosyası *(.cpp* veya *.h)* aç
 #endif // 0
 ```
 
-Daha sonra doğru koşul ile **0** değiştirebilirsiniz.
+Daha sonra **0** değerini doğru koşulla değiştirebilirsiniz.
 
-## <a name="use-a-code-snippet-to-surround-selected-code"></a>Seçili kodu çevreleyen bir kod parçacığı kullanma
+## <a name="use-a-code-snippet-to-surround-selected-code"></a>Seçilen kodu çevrelemek için bir kod parçacığı kullanın
 
-Seçili kodu çevreleyen bir kod parçacığı kullanmak için bir satır (veya birden çok satır) seçin ve aşağıdakilerden birini yapın:
+Seçilen kodu çevrelemek için bir kod parçacığı kullanmak için bir satır (veya birden çok satır) seçin ve aşağıdakilerden birini yapın:
 
-- Bağlam menüsünü almak için sağ tıklatın ve **Surround With'i** seçin
+- Bağlam menüsünü almak için sağ tıklayın ve şununla **Çevrele** ' yi seçin
 
-- **IntelliSense'i** **Edit** > menüsünden **Surround With'i** seçin
+- **Edit**  >  **IntelliSense** düzenleme menüsünde **Şununla Çevrele** ' yi seçin
 
-- Klavye kullanarak, **ctrl**+**K**+**S** tuşuna basın
+- Klavye kullanarak, şunu bas: **CTRL** + **K** + **S**
 
-**#if'ı**seçin. Şunun gibi bir görüntüyle karşılaşacaksınız:
+**#İf**seçin. Şuna benzer bir şey görmeniz gerekir:
 
 ```cpp
 #if 0
@@ -60,17 +60,17 @@ Seçili kodu çevreleyen bir kod parçacığı kullanmak için bir satır (veya 
 #endif // 0
 ```
 
-Daha sonra doğru koşul ile 0 değiştirebilirsiniz.
+Daha sonra 0 değerini doğru koşulla değiştirebilirsiniz.
 
-## <a name="where-can-i-find-a-complete-list-of-the-c-code-snippets"></a>C++ kod parçacıklarının tam listesini nerede bulabilirim?
+## <a name="where-can-i-find-a-complete-list-of-the-c-code-snippets"></a>C++ kod parçacıklarının tamamen bir listesini nerede bulabilirim?
 
-**Kod Parçacıkları Yöneticisi'ne** giderek **(Araçlar** menüsünde) C++ kod parçacıklarının tam listesini bulabilir ve **Dili** **Visual C++** olarak ayarlayabilirsiniz. Aşağıdaki pencerede **Visual C++**'yı genişletin. Tüm C++ kod parçacıklarının adlarını alfabetik sırada görmelisiniz.
+C++ kod parçacıklarının tüm listesini **kod parçacıkları Yöneticisi** ' ne giderek ( **Araçlar** menüsünde) ve **dili** **Visual C++** olarak ayarlayarak bulabilirsiniz. Aşağıdaki pencerede **Visual C++**' ı genişletin. Tüm C++ kod parçacıklarının adlarını alfabetik sırada görmeniz gerekir.
 
-Çoğu kod parçacıklarının adları kendi kendini açıklar, ancak bazı adlar kafa karıştırıcı olabilir.
+Çoğu kod parçacıklarının adı kendi kendine açıklayıcıdır, ancak bazı adlar kafa karıştırıcı olabilir.
 
-## <a name="class-vs-classi"></a>Sınıf ve classi
+## <a name="class-vs-classi"></a>Sınıf ve classı karşılaştırması
 
-**Sınıf** parçacığı, kurucu ve yıkıcının tanımlarının sınıfın dışında yer aldığı uygun varsayılan oluşturucu ve yıkıcı ile adlandırılmış `MyClass`bir sınıfın tanımını sağlar:
+**Sınıf** parçacığı, `MyClass` uygun varsayılan Oluşturucu ve yıkıcısı ile adlı bir sınıfın tanımını sağlar; burada Oluşturucu ve yıkıcının tanımlarının sınıfın dışında bulunduğu yer vardır:
 
 ```cpp
 class MyClass
@@ -92,7 +92,7 @@ MyClass::~MyClass()
 }
 ```
 
-**Classi** kodu snippet de adlı `MyClass`bir sınıfın tanımını sağlar, ancak varsayılan oluşturucu ve yıkıcı sınıf tanımı içinde tanımlanır:
+**Classı** kod parçacığı ayrıca adlı bir sınıfın tanımını da sağlar `MyClass` , ancak varsayılan Oluşturucu ve yıkıcısı sınıf tanımı içinde tanımlanmıştır:
 
 ```cpp
 class MyClass
@@ -111,11 +111,11 @@ private:
 };
 ```
 
-## <a name="for-vs-forr-vs-rfor"></a>vs forr vs rfor için
+## <a name="for-vs-forr-vs-rfor"></a>vs. öğrencilerinize vs rfor için
 
-Farklı `for` döngüler sağlayan parçacıklar **için** üç farklı vardır.
+Farklı türlerde döngüler sağlayan kod parçacıkları **için** üç farklı vardır `for` .
 
-**Rfor** snippet döngü (bağlantı) için [bir aralık tabanlı](/cpp/cpp/range-based-for-statement-cpp) sağlar. Bu yapı dizin tabanlı `for` döngüler yerine tercih edilir.
+**Rfor** kod parçacığı, [Aralık tabanlı](/cpp/cpp/range-based-for-statement-cpp) bir for döngüsü (bağlantı) sağlar. Bu yapı, dizin tabanlı `for` Döngülerde tercih edilir.
 
 ```cpp
 for (auto& i : v)
@@ -124,7 +124,7 @@ for (auto& i : v)
 }
 ```
 
-**For** snippet, `for` koşulun bir nesnenin uzunluğuna (in) `size_t`dayandığı bir döngü sağlar.
+**For** kod parçacığında, `for` koşulun bir nesnenin uzunluğuna (içindeki) göre kullanıldığı bir döngü sağlar `size_t` .
 
 ```cpp
 for (size_t i = 0; i < length; i++)
@@ -133,7 +133,7 @@ for (size_t i = 0; i < length; i++)
 }
 ```
 
-**Forr** snippet, koşulun bir nesnenin uzunluğuna (tamsayılarda) dayandığı bir ters `for` döngü sağlar.
+**Öğrencilerinize** kod parçacığı, `for` koşulun bir nesnenin uzunluğuna (tamsayı cinsinden) dayanmakta olduğu ters bir döngü sağlar.
 
 ```cpp
 for (int i = length - 1; i >= 0; i--)
@@ -144,7 +144,7 @@ for (int i = length - 1; i >= 0; i--)
 
 ## <a name="the-destructor-snippet-"></a>Yıkıcı parçacığı (~)
 
-Yıkıcı parçacığı (**~**) farklı bağlamlarda farklı davranışlar gösterir. Bu parçacığı bir sınıfın içine eklerseniz, o sınıf için bir yıkıcı sağlar. Örneğin, aşağıdaki kod verilmiştir:
+Yıkıcı parçacığı ( **~** ) farklı bağlamlarda farklı davranışlar gösterir. Bu kod parçacığını bir sınıfın içine eklerseniz, bu sınıf için bir yıkıcı sağlar. Örneğin, aşağıdaki kod verildiğinde:
 
 ```cpp
 class SomeClass {
@@ -152,7 +152,7 @@ class SomeClass {
 };
 ```
 
-Yıkıcı parçacığı eklerseniz, aşağıdakiler için `SomeClass`bir yıkıcı sağlar:
+Yıkıcı parçacığı eklerseniz, için bir yıkıcı sağlar `SomeClass` :
 
 ```cpp
 class SomeClass {
@@ -163,7 +163,7 @@ class SomeClass {
 };
 ```
 
-Yıkıcı parçacığı bir sınıfın dışına eklemeye çalışırsanız, yer tutucu adı olan bir yıkıcı sağlar:
+Yıkıcı parçacığı bir sınıfın dışında eklemeye çalışırsanız, yer tutucu adına sahip bir yıkıcı sağlar:
 
 ```cpp
 ~TypeNamePlaceholder()

@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetNamespacesUsedAtAddress | Microsoft Dokümanlar
+title: 'IDebugSymbolProvider:: GetNamespacesUsedAtAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: bcf3578dc16c5c771233e1b5a9f348e375f21aad
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719215"
 ---
 # <a name="idebugsymbolprovidergetnamespacesusedataddress"></a>IDebugSymbolProvider::GetNamespacesUsedAtAddress
-Bu yöntem, hata ayıklama adresiyle ilişkili ad alanları için bir sayısallaştırıcı oluşturur.
+Bu yöntem, hata ayıklama adresiyle ilişkili ad alanları için bir Numaralandırıcı oluşturur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetNamespacesUsedAtAddress( 
@@ -43,16 +43,16 @@ int GetNamespacesUsedAtAddress(
 
 ## <a name="parameters"></a>Parametreler
 `pAddress`\
-[içinde] Hata ayıklama adresi.
+'ndaki Hata ayıklama adresi.
 
 `ppEnum`\
-[çıkış] Ad alanları için bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) sayısallaştırıcı döndürür.
+dışı Ad alanları için bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) numaralandırıcısı döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Belirli bir hata ayıklama adresiyle ilişkili birkaç ad alanı (örneğin, `using` iç içe olan ad alanları veya birden çok deyim) olabilir.
+ Belirli bir hata ayıklama adresiyle ilişkili, iç içe geçmiş ad alanları veya birden çok deyim gibi birkaç ad alanı olabilir `using` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

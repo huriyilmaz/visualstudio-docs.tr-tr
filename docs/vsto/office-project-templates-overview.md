@@ -31,29 +31,29 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: d83b04795386cfec80a8a309a9a84da04f6df105
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68926596"
 ---
 # <a name="office-project-templates-overview"></a>Office proje şablonlarına genel bakış
   Visual Studio 'daki Microsoft Office geliştirici araçları, aşağıdaki türlerde Office çözümlerini oluşturmaya yönelik proje şablonları içerir:
 
-- [Belge düzeyi özelleştirmeleri](#DocLevel)
+- [Belge düzeyinde özelleştirmeler](#DocLevel)
 
 - [VSTO eklentileri](#AppLevel)
 
-  Bu tür Office çözümlerinin ayrıntılı bir karşılaştırması için bkz. [Office çözümleri geliştirmesine genel &#40;bakış VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
+  Bu tür Office çözümlerinin ayrıntılı bir karşılaştırması için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
 
-  Office proje şablonları, **Visual C#**  ve **Visual Basic** dil düğümlerinin **Office** düğümü altındaki **Yeni proje** iletişim kutusunda kullanılabilir. Her şablon, derleme başvuruları ve hata ayıklama ayarları dahil olmak üzere, hedef uygulamaya uygun yapılandırmaya sahip bir proje oluşturur.
+  Office proje şablonları, **Yeni proje** iletişim kutusunda, **Visual C#** ve **Visual Basic** dil düğümlerinin **Office** düğümü altında bulunur. Her şablon, derleme başvuruları ve hata ayıklama ayarları dahil olmak üzere, hedef uygulamaya uygun yapılandırmaya sahip bir proje oluşturur.
 
   Her proje, belirli bir çözüm türü üzerinde çalışmaya başlamanızı sağlayacak dosyaları ve kodu sunar. Her bir proje için üretilen kod, başlangıç ve kapatma olayı işleyicilerini içerir. Yüklendiğinde çözümünüzü başlatmak ve kaldırıldığında çözümünüzü temizlemek için, bu olay işleyicilerine kod ekleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio ortamında Office projeleri](../vsto/office-projects-in-the-visual-studio-environment.md) ve [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md).
 
 > [!NOTE]
 > Office geliştirme araçları Visual Studio'nun belirli sürümlerinde yer alır. Daha fazla bilgi için bkz. [Office çözümleri geliştirmek için bir bilgisayarı yapılandırma](../vsto/configuring-a-computer-to-develop-office-solutions.md).
 
-## <a name="DocLevel"></a>Belge düzeyi özelleştirmeleri
+## <a name="document-level-customizations"></a><a name="DocLevel"></a> Belge düzeyi özelleştirmeleri
  **Yeni proje** Iletişim kutusundaki **Office** düğümü, Word ve Excel için belge düzeyi özelleştirmeleri oluşturmaya başlamanızı sağlamak üzere aşağıdaki proje şablonlarını sağlar:
 
 - **Word 2013 ve 2016 VSTO belgesi**
@@ -77,7 +77,7 @@ ms.locfileid: "68926596"
   Word Şablonu ve Excel Şablonu proje şablonları, Word Belgesi ve Excel Çalışma Kitabı proje şablonlarıyla aynı şekilde davranır. Bununla birlikte, Word Şablonu ve Excel Şablonu proje şablonları, kullanıcıların çözümünüzdeki özelleştirilmiş şablonun yeni yerel belge veya çalışma kitabı kopyalarını oluşturmasını kolaylaştırır. Çözümünüzdeki özellikler, kullanıcının şablondan oluşturduğu yeni belgeden kullanılabilir.
 
 > [!NOTE]
-> Yönetilen kod uzantılarına başvuran Word şablonları genel VSTO eklentileri olarak kullanılamaz. Şablon Word'ün Başlangıç dizininden yüklenirse, derleme çağrılmaz. Daha fazla bilgi için bkz. [Genel şablonlar ve Excel eklentilerinin (. xla dosyaları) sınırlamaları](#Limitations).
+> Yönetilen kod uzantılarına başvuran Word şablonları genel VSTO eklentileri olarak kullanılamaz. Şablon Word Başlangıç dizininden yüklenirse derleme çağrılmaz. Daha fazla bilgi için bkz. [Genel şablonlar ve Excel eklentilerinin (. xla dosyaları) sınırlamaları](#Limitations).
 
  Bu proje türleriyle çalışmaya başlama hakkında bilgi için aşağıdaki konulara bakın:
 
@@ -91,7 +91,7 @@ ms.locfileid: "68926596"
 
 - [İzlenecek yol: Excel için ilk belge düzeyi özelleştirmeyi oluşturma](../vsto/walkthrough-creating-your-first-document-level-customization-for-excel.md)
 
-## <a name="AppLevel"></a>VSTO eklentileri
+## <a name="vsto-add-ins"></a><a name="AppLevel"></a> VSTO eklentileri
  **Yeni proje** Iletişim kutusundaki **Office/SHAREPOINT** düğümü, VSTO eklentileri oluşturmaya başlamanızı sağlamak için aşağıdaki proje şablonlarını sağlar.
 
 - **Excel 2013 ve 2016 VSTO eklentisi**
@@ -136,7 +136,7 @@ ms.locfileid: "68926596"
 
 - [İzlenecek yol: PowerPoint için ilk VSTO eklentisini oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-powerpoint.md)
 
-- [İzlenecek yol: Proje için ilk VSTO eklentisini oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-project.md)
+- [İzlenecek yol: proje için ilk VSTO eklentisini oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-project.md)
 
 - [İzlenecek yol: Word için ilk VSTO eklentisini oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-word.md)
 
@@ -157,14 +157,14 @@ ms.locfileid: "68926596"
 |Kullanıcılar, salt okunur olmadığı sürece belgeyi açıp değiştirebilir. Kaydedilen tüm değişiklikler özgün belgede tutulur.|Kullanıcılar yeni bir belge olarak yerel kopya oluşturmak üzere şablonu açabilir. Özel izinler verilmediği sürece özgün belgede değişiklik yapamazlar.|
 |Açıldığında, belge <xref:Microsoft.Office.Tools.Word.Document.Open> olayını oluşturur.|Açıldığında, şablon <xref:Microsoft.Office.Tools.Word.Document.New> olayını oluşturur.|
 
-## <a name="Limitations"></a>Genel şablonlar ve Excel eklentilerinin (. xla dosyaları) sınırlamaları
+## <a name="limitations-of-global-templates-and-excel-add-ins-xla-files"></a><a name="Limitations"></a> Genel şablonlar ve Excel eklentilerinin (. xla dosyaları) sınırlamaları
  Belgeler, çalışma kitapları ve şablonlar, genel şablonlar veya Excel VSTO eklentileri (. xla dosyaları) olarak doğru çalışmayabilir.
 
 ## <a name="word-templates"></a>Word şablonları
  Bir Microsoft Office Word şablonunun yönetilen kod uzantıları varsa, şablonun bir genel şablon olarak iliştirilmesi veya Word'ün başlangıç dizininden yüklenmesi durumunda proje derlemesi çağrılmaz. Ayrıca belge, bir Office çözümünün parçası olan şablonun biçimini tanımaz.
 
 ## <a name="excel-add-ins-xla-files"></a>Excel eklentileri (. xla dosyaları)
- Excel VSTO eklentisi ( *. xla* dosyası) oluşturmaya yönelik bir Office projesi yok. Bir çalışma kitabını .xla dosyası olarak kaydetmek mümkündür, ancak bu desteklenen bir işlem değildir ve önerilmez. Yönetilen kod uzantılarına sahip bir çalışma kitabını **Microsoft Office Excel eklentisi (\*. xla)** dosyası olarak kaydederseniz, başka bir çalışma kitabına uygulamak için **Eklentiler** iletişim kutusunda bunu seçebilirsiniz. Bazı durumlarda, VSTO eklentisi uygulandıktan sonra kodunuz hedef çalışma kitabında çalışır, ancak bu tür Office çözümünün kullanılması desteklenmez.
+ Excel VSTO eklentisi (*. xla* dosyası) oluşturmaya yönelik bir Office projesi yok. Bir çalışma kitabını .xla dosyası olarak kaydetmek mümkündür, ancak bu desteklenen bir işlem değildir ve önerilmez. Yönetilen kod uzantılarına sahip bir çalışma kitabını **Microsoft Office Excel eklentisi ( \* . xla)** dosyası olarak kaydederseniz, başka bir çalışma kitabına uygulamak için **Eklentiler** iletişim kutusunda bunu seçebilirsiniz. Bazı durumlarda, VSTO eklentisi uygulandıktan sonra kodunuz hedef çalışma kitabında çalışır, ancak bu tür Office çözümünün kullanılması desteklenmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)

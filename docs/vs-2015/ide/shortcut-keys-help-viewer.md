@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c04ef8f015b081e29891d7439b783e3851376210
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85531554"
 ---
 # <a name="shortcut-keys-help-viewer"></a>Kısayol Tuşları (Yardım Görüntüleyicisi)
@@ -44,28 +44,28 @@ Aşağıdaki tablodaki kısayol tuşlarını kullanarak Microsoft Yardım Görü
 |Gezginlerini|Alt + F<br /><br /> -VEYA-<br /><br /> Ctrl + Shift + F|**Sık Kullanılanlar** sekmesini görüntüleyin.|
 |Gezginlerini|Alt + S<br /><br /> -VEYA-<br /><br /> CTRL + E<br /><br /> -VEYA-<br /><br /> Ctrl + Shift + S|**Arama** sekmesini görüntüleyin.|
 |Gezginlerini|Alt + M<br /><br /> -VEYA-<br /><br /> CTRL + SHIFT + d|**Içeriği Yönet** sekmesini görüntüleyin.|
-|Konu başlığı|Kısayol menü tuşu<br /><br /> OR<br /><br /> Shift + F10|Geçerli UI öğesi için kısayol menüsünü görüntüler.|
-|Konu başlığı|Yukarı Ok|Belgenin başlangıcına doğru her seferinde bir satır başı kaydırın.|
-|Konu başlığı|Aşağı Ok|Tek seferde belgenin sonuna doğru ilerleyin.|
-|Konu başlığı|Page Up|Belgenin başlangıcına doğru her seferinde bir ekran kaydırın.|
-|Konu başlığı|Page Down|Belgenin sonuna doğru bir ekran kaydırmak için bir seferde bir ekran.|
-|Konu başlığı|Giriş Sayfası|Belgenin başlangıcına gidin.|
-|Konu başlığı|End|Belgenin sonuna taşı.|
-|Konu başlığı|CTRL + F|Bu sayfada arama metni bulun.|
-|Konu başlığı|F5|Geçerli sayfayı yenileyin.|
-|Konu başlığı|CTRL + P|Geçerli sayfayı yazdır.|
-|Konu başlığı|Ctrl + F2|Geçerli sayfanın baskı önizlemesini görüntüleyin.|
-|Konu başlığı|F4|Geçerli sayfa için **Özellikler** iletişim kutusunu görüntüleyin.|
-|Konu başlığı|CTRL + T|Ön planda başka bir içerik sekmesi açın.|
-|Konu başlığı|CTRL + tıklama|Ön planda yeni bir sekmede bağlantı açın.|
-|Konu başlığı|Ctrl + Sekme|Sekmelerin arasından soldan sağa geçiş yapın.|
-|Konu başlığı|CTRL + SHIFT + TAB|Sekmeler arasında sağdan sola geçiş yapın.|
-|Konu başlığı|CTRL + W|Geçerli sekmeyi kapatın.|
-|Konu başlığı|CTRL + *sayı*|*Sayının* 1 ile 9 arasında olduğu belirli bir sekmeye geçin ve hangi sekmenin sırada olduğunu gösterir.|
-|Konu başlığı|Ctrl + Alt + F4|Diğer içerik sekmelerini kapatın.|
-|Konu başlığı|CTRL + SHIFT + artı Işareti|Yakınlaştırmayı %10 oranında arttırın.|
-|Konu başlığı|CTRL + eksi Işareti|%10 oranında yakınlaştırmayı azalt.|
-|Konu başlığı|CTRL + 0 (sıfır)|Yakınlaştırmayı %100 olarak değiştirin.|
+|Konu|Kısayol menü tuşu<br /><br /> VEYA<br /><br /> Shift + F10|Geçerli UI öğesi için kısayol menüsünü görüntüler.|
+|Konu|Yukarı Ok|Belgenin başlangıcına doğru her seferinde bir satır başı kaydırın.|
+|Konu|Aşağı Ok|Tek seferde belgenin sonuna doğru ilerleyin.|
+|Konu|Page Up|Belgenin başlangıcına doğru her seferinde bir ekran kaydırın.|
+|Konu|Page Down|Belgenin sonuna doğru bir ekran kaydırmak için bir seferde bir ekran.|
+|Konu|Giriş Sayfası|Belgenin başlangıcına gidin.|
+|Konu|End|Belgenin sonuna taşı.|
+|Konu|CTRL + F|Bu sayfada arama metni bulun.|
+|Konu|F5|Geçerli sayfayı yenileyin.|
+|Konu|CTRL + P|Geçerli sayfayı yazdır.|
+|Konu|Ctrl + F2|Geçerli sayfanın baskı önizlemesini görüntüleyin.|
+|Konu|F4|Geçerli sayfa için **Özellikler** iletişim kutusunu görüntüleyin.|
+|Konu|CTRL + T|Ön planda başka bir içerik sekmesi açın.|
+|Konu|CTRL + tıklama|Ön planda yeni bir sekmede bağlantı açın.|
+|Konu|Ctrl + Sekme|Sekmelerin arasından soldan sağa geçiş yapın.|
+|Konu|CTRL + SHIFT + TAB|Sekmeler arasında sağdan sola geçiş yapın.|
+|Konu|CTRL + W|Geçerli sekmeyi kapatın.|
+|Konu|CTRL + *sayı*|*Sayının* 1 ile 9 arasında olduğu belirli bir sekmeye geçin ve hangi sekmenin sırada olduğunu gösterir.|
+|Konu|Ctrl + Alt + F4|Diğer içerik sekmelerini kapatın.|
+|Konu|CTRL + SHIFT + artı Işareti|Yakınlaştırmayı %10 oranında arttırın.|
+|Konu|CTRL + eksi Işareti|%10 oranında yakınlaştırmayı azalt.|
+|Konu|CTRL + 0 (sıfır)|Yakınlaştırmayı %100 olarak değiştirin.|
 |Dizin oluşturma|Tab|Anahtar sözcük girdisinden anahtar sözcük listesine kaydır.|
 |Dizin oluşturma|CTRL + K|Belirttiğiniz anahtar sözcüğü içeren girişleri ve belirttiğiniz anahtar sözcüğü ile başlayan girdileri gösterme arasında geçiş yapın.|
 |Sık Kullanılanlar|CTRL + SHIFT + del|Göz atma geçmişinizi temizleyin.|

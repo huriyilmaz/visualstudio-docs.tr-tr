@@ -10,16 +10,16 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: ac78ffb3455940cf2379af44ff5c2bc5870dc684
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532008"
 ---
 # <a name="net-framework-usage-performance-rules"></a>.NET Framework kullanımı performans kuralları
 The.NET Framework kullanım kategorisindeki performans kuralları, en iyi duruma getirilebilen ve ayrıca performans sorunları araştırılan çöp toplama ve kilit çekişmesi gibi daha genel kullanım düzenlerini tanımlayan belirli yöntemleri belirler.
 
-|Kural|Açıklama|
+|Kural|Description|
 |-|-|
 |[DA0001: Birleştirmeler için StringBuilder kullanma](../profiling/da0001-use-stringbuilder-for-concatenations.md)|İçin yapılan çağrılar <xref:System.String.Concat(System.String,System.String)?displayProperty=fullName> , profil oluşturma verilerinin önemli bir orandır. <xref:System.Text.StringBuilder>Birden çok kesimden dizeler oluşturmak için sınıfını kullanmayı düşünün.|
 |[DA0005: Sık kullanılan GC2 koleksiyonları](../profiling/da0005-frequent-gc2-collections.md)|2. nesil atık toplamada, görece yüksek sayıda .NET bellek nesnesi geri kazanılır. Çok fazla sayıda kısa süreli nesne, 1. nesil toplandıktan sonra bellek yönetiminin maliyeti kolayca aşırı olabilir.|

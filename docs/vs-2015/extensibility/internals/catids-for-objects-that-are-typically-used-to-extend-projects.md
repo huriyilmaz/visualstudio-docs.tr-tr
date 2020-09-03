@@ -1,5 +1,5 @@
 ---
-title: Projeleri için genellikle kullanılan nesnelerin Catıdlerini | Microsoft Docs
+title: Projeleri genişletmek için genellikle kullanılan nesneler için CATIDs | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,28 +13,28 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1cf5bd504bb5f7090dc07bea32e73333c0f182d0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162090"
 ---
 # <a name="catids-for-objects-that-are-typically-used-to-extend-projects"></a>Genişletme Projeleri için Genellikle Kullanılan Nesnelerin CATID’leri
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Aşağıdaki tabloda genişletmek için kullanılan Catıdlerini `Project` ve `ProjectItem` Otomasyon nesneleri için [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], [!INCLUDE[csprcs](../../includes/csprcs-md.md)], ve [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] projeleri. Bu Catıdlerini VSLangProj.olb içinde tanımlanır.  
+Aşağıdaki tabloda `Project` `ProjectItem` [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , ve projeleri için nesneleri genişletmek ve otomasyon Için kullanılan catids listelenmiştir [!INCLUDE[csprcs](../../includes/csprcs-md.md)] [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] . Bu CATIDs, VSLangProj. olb içinde tanımlanmıştır.  
   
-## <a name="listing-of-catids"></a>Catıdlerini listesi  
+## <a name="listing-of-catids"></a>CATIDs listesi  
   
-|Ad|GUID|  
+|Name|GUID|  
 |----------|----------|  
 |<xref:VSLangProj.PrjCATID.prjCATIDProject>|{610D4614-D0D5-11D2-8599-006097C68E81}|  
 |<xref:VSLangProj.PrjCATID.prjCATIDProjectItem>|{610D4615-D0D5-11D2-8599-006097C68E81}|  
   
-## <a name="visual-basic-catids"></a>Visual Basic Catıdlerini  
- Aşağıdaki tabloda genişletmek için kullanılan Catıdlerini [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] nesneleri göz atın. Bunlar tüm VSLangProj.olb içinde tanımlanır.  
+## <a name="visual-basic-catids"></a>Visual Basic CATIDs  
+ Aşağıdaki tabloda, tarama nesnelerini genişletmek için kullanılan CATIDs listelenmiştir [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Hepsi VSLangProj. olb içinde tanımlanmıştır.  
   
-|Ad|GUID|  
+|Name|GUID|  
 |----------|----------|  
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDVBProjectBrowseObject>|{E0FDC879-C32A-4751-A3D3-0B3824BD575F}|  
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDVBProjectConfigBrowseObject>|{67F8DD11-14EB-489b-87F0-F01C52AF3870}|  
@@ -42,10 +42,10 @@ Aşağıdaki tabloda genişletmek için kullanılan Catıdlerini `Project` ve `P
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDVBFolderBrowseObject>|{932DC619-2EAA-4192-B7E6-3D15AD31DF49}|  
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDVBReferenceBrowseObject>|{2289B812-8191-4e81-B7B3-174045AB0CB5}|  
   
-## <a name="visual-c-catids"></a>Visual C# Catıdlerini  
- Aşağıdaki Catıdlerini genişletmek için kullanılan [!INCLUDE[csprcs](../../includes/csprcs-md.md)] nesneleri göz atın. Bunlar tüm VSLangProj.olb içinde tanımlanır.  
+## <a name="visual-c-catids"></a>Visual C# CATIDs  
+ Aşağıdaki CATIDs 'Ler, gezinme nesnelerini genişletmek için kullanılabilir [!INCLUDE[csprcs](../../includes/csprcs-md.md)] . Hepsi VSLangProj. olb içinde tanımlanmıştır.  
   
-|Ad|GUID|  
+|Name|GUID|  
 |----------|----------|  
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDCSharpProjectBrowseObject>|{4EF9F003-DE95-4d60-96B0-212979F2A857}|  
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDCSharpProjectConfigBrowseObject>|{A12CE10A-227F-4963-ADB6-3A43388513CA}|  
@@ -53,16 +53,16 @@ Aşağıdaki tabloda genişletmek için kullanılan Catıdlerini `Project` ve `P
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDCSharpFolderBrowseObject>|{914FE278-054A-45DB-BF9E-5F22484CC84C}|  
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDCSharpReferenceBrowseObject>|{2F0FA3B8-C855-4a4e-95A5-CB45C67D6C27}|  
   
-## <a name="c-catids"></a>C++ Catıdlerini  
- Aşağıdaki [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] proje sistemi içindeki tür kitaplıklarında Catıdlerini gösterilmez [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 2003 ve bu proje nesnelerini genişletmek istediğinizde kodunuzda eklenmesi gerekir. Tür kitaplıkları sonraki sürümlerinde bu Catıdlerini dahil edilecek [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+## <a name="c-catids"></a>C++ CATIDs  
+ Aşağıdaki [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] Proje sistemi CATIDs, .net 2003 ' deki tür kitaplıklarında gösterilmez [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ve bu proje nesnelerini genişletmek istediğiniz her seferinde kodunuza dahil edilmemelidir. Bu CATIDs, daha sonraki sürümlerindeki tür kitaplıklarına dahil edilir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
-|Ad|GUID|  
+|Name|GUID|  
 |----------|----------|  
 |`CVCProjectNode`|{EE8299CB-19B6-4f20-ABEA-E1FD9A33B683}|  
 |`CVCFolderNode`|{EE8299CA-19B6-4f20-ABEA-E1FD9A33B683}|  
 |`CVCFileNode`|{EE8299C9-19B6-4f20-ABEA-E1FD9A33B683}|  
   
- Aşağıdaki kod örneği, kodunuzda bu Catıdlerini program gösterilmiştir.  
+ Aşağıdaki kod örneği, kodunuzda bu CATIDs 'nin nasıl çalıştığını gösterir.  
   
 ```  
 const LPOLESTR CVCProjectNode::s_wszCATID = L"{EE8299CB-19B6-4f20-ABEA-E1FD9A33B683}";  
@@ -70,16 +70,16 @@ const LPOLESTR CVCFolderNode::s_wszCATID = L"{EE8299CA-19B6-4f20-ABEA-E1FD9A33B6
 const LPOLESTR CVCFileNode::s_wszCATID = L"{EE8299C9-19B6-4f20-ABEA-E1FD9A33B683}";  
 ```  
   
- Aşağıdaki [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] proje sistemi Catıdlerini de gösterilmez tür kitaplıklarında, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 2003 ve bu proje nesnelerini genişletmek istediğinizde kodunuzda eklenmesi gerekir. Yalnızca bu Catıdlerini kullanılabilir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 2003 ve sonraki sürümlerinde kullanılabilir olmayacak [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ Aşağıdaki [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] Proje sistemi kasaları ayrıca .net 2003 ' deki tür kitaplıklarında gösterilmez [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ve bu proje nesnelerini genişletmek istediğiniz her seferinde kodunuza dahil edilmemelidir. Bu CATIDs yalnızca .NET 2003 ' de kullanılabilir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ve sonraki sürümlerinde kullanılamaz [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
-|Ad|GUID|  
+|Name|GUID|  
 |----------|----------|  
 |`CVCAssemblyReferenceNode` **:**|{FE8299C9-19B6-4f20-ABEA-E1FD9A33B683}|  
 |`CVCProjectReferenceNode`|{593DCFCE-20A7-48e4-ACA1-49ADE9049887}|  
 |`CVCActiveXReferenceNode`|{9E8182D3-C60A-44f4-A74B-14C90EF9CACE}|  
 |`CVCReferences`|{FE8299CA-19B6-4f20-ABEA-E1FD9A33B683}|  
   
- Aşağıdaki kod örneği, kodunuzda bu Catıdlerini programı gösterilmektedir:  
+ Aşağıdaki kod örneği, kodunuzda bu CATIDs 'nin nasıl programlanacağını göstermektedir:  
   
 ```  
 const LPOLESTR CVCAssemblyReferenceNode::s_wszCATID = L"{FE8299C9-19B6-4f20-ABEA-E1FD9A33B683}";  
@@ -88,7 +88,7 @@ const LPOLESTR CVCActiveXReferenceNode::s_wszCATID = L"{9E8182D3-C60A-44f4-A74B-
 const LPOLESTR CVCReferences::s_wszCATID = L"{FE8299CA-19B6-4f20-ABEA-E1FD9A33B683}";  
 ```  
   
- GUID'lerini [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ve [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] proje türleri, aşağıdaki tabloda gösterilmiştir.  
+ [!INCLUDE[csprcs](../../includes/csprcs-md.md)]Ve proje türleri Için GUID 'ler [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Aşağıdaki tabloda gösterilmiştir.  
   
 |Proje türü|GUID|  
 |------------------|----------|  

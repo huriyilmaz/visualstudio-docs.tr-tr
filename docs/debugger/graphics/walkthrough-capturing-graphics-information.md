@@ -9,14 +9,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: aab86d42cd158ad64ebb16497b8d2d9f5a7002df
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72734734"
 ---
-# <a name="walkthrough-capturing-graphics-information"></a>İzlenecek Yol: Grafik Bilgilerini Yakalama
-Bu izlenecek yol, grafik bilgilerini Direct3D uygulamasından el ile yakalamak için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Grafik Tanılama nasıl kullanacağınızı gösterir.
+# <a name="walkthrough-capturing-graphics-information"></a>İzlenecek yol: Grafik Bilgilerini Yakalama
+Bu izlenecek yol, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] grafik bilgilerini Direct3D uygulamasından el ile yakalamak için grafik tanılama nasıl kullanacağınızı gösterir.
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
@@ -29,7 +29,7 @@ Bu izlenecek yol, grafik bilgilerini Direct3D uygulamasından el ile yakalamak i
 
 #### <a name="to-enable-the-capture-of-graphics-information-after-a-project-or-solution-is-loaded"></a>Bir proje veya çözüm yüklendikten sonra grafik bilgilerinin yakalanmasını etkinleştirmek için
 
-1. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]' de, grafik bilgilerini yakalamak istediğiniz uygulama için bir proje veya çözüm dosyası yükleyin.
+1. İçinde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , grafik bilgilerini yakalamak istediğiniz uygulama için bir proje veya çözüm dosyası yükleyin.
 
 2. Grafik Tanılama araç çubuğunda **Tanılamayı Başlat**' ı seçin.
 
@@ -47,7 +47,7 @@ Bu izlenecek yol, grafik bilgilerini Direct3D uygulamasından el ile yakalamak i
 
 - Grafik Tanılama araç çubuğunda **yakala** düğmesini seçin. ![Grafik yakalama düğmesi simgesi](media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")
 
-   veya
+   -veya-
 
    Uygulamadaki uygulamayla birlikte **PRINT Screen**tuşuna basın.
 

@@ -5,13 +5,13 @@ ms.topic: include
 author: eross-msft
 ms.author: lizross
 ms.openlocfilehash: a54f66e1ad84e8498b13ce2316158705bfb1b4c5
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68286190"
 ---
 > [!NOTE]
-> Bu makalede, kişisel verilerin cihazdan veya hizmetten nasıl silinebileceğine ilişkin adımlar sağlanmıştır ve GDPR kapsamındaki yükümlülüklerinizin desteklenmesi için kullanılabilir. GDPR hakkında genel bilgi arıyorsanız, [Hizmet Güven Portalı'nın](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted)GDPR bölümüne bakın.
+> Bu makalede, cihaz veya hizmetten kişisel verileri silme adımları sağlanır ve GDPR kapsamındaki yükümlülüklerinizi desteklemek için de kullanılabilir. GDPR hakkındaki genel bilgileri arıyorsanız, [hizmet güven PORTALıNıN](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted)GDPR bölümüne bakın.
 
-[//]: # (22.05.2018: Bu dosya yetim kalsa bile silme.)
+[//]: # (5/22/2018: Bu dosya yalnız bırakılmış olabilir, ancak silmeyin.)

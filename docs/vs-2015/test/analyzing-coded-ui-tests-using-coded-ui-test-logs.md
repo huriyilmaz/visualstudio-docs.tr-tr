@@ -9,10 +9,10 @@ caps.latest.revision: 15
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d3ebb18aaff78d9782b6210e25bcd697d21c8570
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660763"
 ---
 # <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>Kodlanmış UI Test Günlüklerini Kullanarak Kodlanmış UI Testlerini Çözümleme
@@ -20,41 +20,41 @@ ms.locfileid: "72660763"
 
 Kodlanmış UI test günlükleri, kodlanmış UI test çalışmalarınız hakkında önemli bilgileri filtreleyip kaydeder.
 
- **Requirements**
+ **Gereksinimler**
 
 - Visual Studio Enterprise
 
 ## <a name="why-should-i-do-this"></a>Neden bunu yapmam gerekir?
  Günlükler, hata ayıklama sorunlarını hızla sağlayan bir biçimde sunulur.
 
-## <a name="how-do-i-do-this"></a>Nasıl yaparım? bunu yapmak istiyor musunuz?
+## <a name="how-do-i-do-this"></a>Bunu nasıl yapabilirim?
 
-### <a name="step-1-enable-logging"></a>1\. Adım: günlüğü etkinleştirme
+### <a name="step-1-enable-logging"></a>1. Adım: günlüğü etkinleştirme
  Senaryonuza bağlı olarak, günlüğü etkinleştirmek için aşağıdaki yöntemlerden birini kullanın.
 
-- Test projesinde App. config dosyası bulunmayan .NET Framework sürüm 4 ' ü hedefleyin
+- Test projesinde App.config dosyası bulunmayan hedef .NET Framework sürüm 4
 
-  - **QTAgent32_40. exe. config** dosyasını açın.
+  - **QTAgent32_40.exe.config** dosyasını açın.
 
-    Varsayılan olarak, bu dosya **\<drvie >: \Program Files (x86) \Microsoft Visual Studio 12.0 \ Common7\IDE**konumunda bulunur.
-
-    EqtTraceLevel değerini istediğiniz günlük düzeyi ile değiştirin.
-
-    Dosyayı kaydedin.
-
-- Test projesinde App. config dosyası bulunmayan .NET Framework sürüm 4,5 hedef
-
-  - **QTAgent32. exe. config** dosyasını açın.
-
-    Varsayılan olarak, bu dosya **\<drvie >: \Program Files (x86) \Microsoft Visual Studio 12.0 \ Common7\IDE**konumunda bulunur.
+    Bu dosya varsayılan olarak ** \<drvie> : \Program Files (x86) \Microsoft Visual Studio 12.0 \ Common7\IDE**konumunda bulunur.
 
     EqtTraceLevel değerini istediğiniz günlük düzeyi ile değiştirin.
 
     Dosyayı kaydedin.
 
-- Test projesinde bulunan App. config dosyası
+- Test projesinde App.config dosyası bulunmayan .NET Framework sürüm 4,5 hedef
 
-  - Projedeki App. config dosyasını açın.
+  - **QTAgent32.exe.config** dosyasını açın.
+
+    Bu dosya varsayılan olarak ** \<drvie> : \Program Files (x86) \Microsoft Visual Studio 12.0 \ Common7\IDE**konumunda bulunur.
+
+    EqtTraceLevel değerini istediğiniz günlük düzeyi ile değiştirin.
+
+    Dosyayı kaydedin.
+
+- Test projesinde mevcut App.config dosyası
+
+  - Projede App.config dosyası açın.
 
     Yapılandırma düğümü altına aşağıdaki kodu ekleyin:
 
@@ -64,8 +64,8 @@ Kodlanmış UI test günlükleri, kodlanmış UI test çalışmalarınız hakkı
 
   - <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.LoggerOverrideState%2A> = HtmlLoggerState. AllActionSnapshot;
 
-### <a name="step-2-run-your-coded-ui-test-and-view-the-log"></a>2\. Adım: kodlanmış UI testinizi çalıştırma ve günlüğü görüntüleme
- **QTAgent32. exe. config** dosyasında yapılan değişikliklerle KODLANMıŞ bir UI testi çalıştırdığınızda, test Gezgini sonuçlarında bir çıkış bağlantısı olduğunu görürsünüz. Günlük dosyaları yalnızca testiniz başarısız olduğunda değil, izleme düzeyi "verbose" olarak ayarlandığında başarılı testler için de oluşturulur.
+### <a name="step-2-run-your-coded-ui-test-and-view-the-log"></a>2. Adım: kodlanmış UI testinizi çalıştırma ve günlüğü görüntüleme
+ **QTAgent32.exe.config** dosyadaki değişikliklerle birlikte KODLANMıŞ bir UI testi çalıştırdığınızda, test Gezgini sonuçlarında bir çıkış bağlantısı olduğunu görürsünüz. Günlük dosyaları yalnızca testiniz başarısız olduğunda değil, izleme düzeyi "verbose" olarak ayarlandığında başarılı testler için de oluşturulur.
 
 1. **Test** menüsünde **Windows** ' u ve ardından **Test Gezgini**' ni seçin.
 
@@ -86,13 +86,13 @@ Kodlanmış UI test günlükleri, kodlanmış UI test çalışmalarınız hakkı
 
      ![Kodlanmış UI testinin sonuçları ve çıkış bağlantıları](../test/media/cuit-htmlactionlog2.png "CUIT_HTMLActionLog2")
 
-5. UITestActionLog. HTML bağlantısını seçin.
+5. UITestActionLog.html bağlantısını seçin.
 
      Günlük, Web tarayıcınızda görüntülenir.
 
      ![Kodlanmış UI testi günlük dosyası](../test/media/cuit-htmlactionlog3.png "CUIT_HTMLActionLog3")
 
-## <a name="q--a"></a>soru-cevap &
+## <a name="q--a"></a>Soru-Cevap
 
 ### <a name="q-what-happened-to-the-enablehtmllogger-key"></a>S: Enablehtmlgünlükçü anahtarına ne oldu?
  Visual Studio 'nun önceki sürümlerinde, kodlanmış UI testinde HTML günlükçüsü etkinleştirmek için iki yapılandırma ayarı daha vardı:

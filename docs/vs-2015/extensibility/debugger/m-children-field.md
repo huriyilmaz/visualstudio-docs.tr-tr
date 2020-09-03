@@ -11,33 +11,33 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 749b7a8da2cbdf8377e7f2e1fcb39787e2f42303
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149055"
 ---
-# <a name="mchildren-field"></a>m_children Alanı
+# <a name="m_children-field"></a>m_children Alanı
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu göreve kaydedilmiş alt görevlerin listesi.  
+Bu görevle kaydedilen alt görevlerin listesi.  
   
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll içinde)  
+ **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll)  
   
- .NET Framework'den bu iç üye erişemediği için aşağıdaki söz dizimini ortak Ara dil (CIL) sağlanır.  
+ Bu iç üyeye .NET Framework erişemediği için, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 .field public class System.Collections.Generic.List`1<class System.Threading.Tasks.Task> m_children  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Görev yürütülürken, görevi yürüten iş parçacığı bu dizinin erişmelidir.  
+ Görev çalışırken, yalnızca görevi yürüten iş parçacığının bu diziye erişmesi gerekir.  
   
- Görev tamamlandıysa, bunlar olmayan herhangi bir şey eklemek veya herhangi bir şey kaldırın sürece diğer iş parçacıkları Bu alan erişebilirsiniz.  
+ Görev tamamlanırsa, diğer iş parçacıkları buna hiçbir şey eklemedikleri veya bundan herhangi bir şeyi kaldırabildiği sürece bu alana erişebilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ContingentProperties Sınıfı](../../extensibility/debugger/contingentproperties-class-internal-members.md)

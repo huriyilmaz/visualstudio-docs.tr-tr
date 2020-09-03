@@ -1,5 +1,5 @@
 ---
-title: IDebugEventCallback2::Event | Microsoft Docs
+title: 'IDebugEventCallback2:: Event | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 37462b5f274ca6e6c2a4a2feb4083ea94ea2f066
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68163980"
 ---
 # <a name="idebugeventcallback2event"></a>IDebugEventCallback2::Event
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Hata ayıklama olaylarını bildirim gönderir.  
+Hata ayıklama olaylarının bildirimini gönderir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Event(   
@@ -52,33 +52,33 @@ int Event( 
   
 #### <a name="parameters"></a>Parametreler  
  `pEngine`  
- [in] Bir [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) bu olayı gönderirken hata ayıklama altyapısı (DE) temsil eden nesne. Bir DE out bu parametreyi doldurmak için gereklidir.  
+ 'ndaki Bu olayı gönderen hata ayıklama altyapısını (DE) temsil eden bir [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) nesnesi. Bu parametreyi doldurması için DE gereklidir.  
   
  `pProcess`  
- [in] Bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) olayın gerçekleştiği işlemini temsil eden nesne. Bu parametre oturum hata ayıklama Yöneticisi (SDM) tarafından doldurulur. Bir DE, bu parametre için null değeri her zaman geçirir.  
+ 'ndaki Olayın gerçekleştiği işlemi temsil eden bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) nesnesi. Bu parametre, oturum hata ayıklama Yöneticisi (SDM) tarafından doldurulur. Bir DE Bu parametre için her zaman null bir değer geçirir.  
   
  `pProgram`  
- [in] Bir [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) programın bu olay gerçekleştiği temsil eden nesne. Çoğu olaylar için bu parametre null bir değer değil.  
+ 'ndaki Bu olayın gerçekleştiği programı temsil eden bir [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesi. Çoğu olay için bu parametre null değer değildir.  
   
  `pThread`  
- [in] Bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) bu olay gerçekleştiği iş parçacığını temsil eden nesne. Olayları durdurmak için yığın çerçevesinin bu parametresinden alındıkça Bu parametre bir null değer olamaz.  
+ 'ndaki Bu olayın gerçekleştiği iş parçacığını temsil eden bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi. Olayları durdurma için bu parametre, yığın çerçevesi bu parametreden elde edilen bir null değer olamaz.  
   
  `pEvent`  
- [in] Bir [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) hata ayıklama olayı temsil eden nesne.  
+ 'ndaki Hata ayıklama olayını temsil eden bir [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) nesnesi.  
   
  `riidEvent`  
- [in] Hangi olay arabirimi almak için tanımlayan GUID `pEvent` parametresi.  
+ 'ndaki Parametresinden hangi olay arabiriminin alınacağını tanımlayan GUID `pEvent` .  
   
  `dwAttrib`  
- [in] Bayraklarının bir birleşimi [EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md) sabit listesi.  
+ 'ndaki [EventAttributes](../../../extensibility/debugger/reference/eventattributes.md) numaralandırmasındaki bayrakların birleşimi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem çağrılırken `dwAttrib` parametresi, döndürülen değer eşleşmelidir [GetAttributes](../../../extensibility/debugger/reference/idebugevent2-getattributes.md) olay nesne üzerinde adlandırıldığı gibi yöntemi geçirilen `pEvent` parametresi.  
+ Bu yöntemi çağırırken `dwAttrib` parametresi, parametresi içinde geçirilen olay nesnesi üzerinde çağrılan şekilde [GetAttributes](../../../extensibility/debugger/reference/idebugevent2-getattributes.md) yönteminden döndürülen değerle eşleşmelidir `pEvent` .  
   
- Bir olay zaman uyumsuz olup olmamasına bakılmaksızın tüm hata ayıklama olayları zaman uyumsuz olarak gönderilir. Bir DE bu yöntemini çağırdığında, yalnızca olay alındı olmadığını dönüş değeri olay olup olmadığını işlendi, göstermez. Aslında, bu yöntem döndürüldüğünde çoğu durumda, olay işlenmedi.  
+ Tüm hata ayıklama olayları, bir olayın zaman uyumsuz olup olmamasına bakılmaksızın zaman uyumsuz olarak gönderilir. Bu yöntemi çağırdığında, dönüş değeri olayın işlenip işlenmeyeceğini, yalnızca olayın alınıp alınmayacağını göstermez. Aslında, çoğu durumda, bu yöntem döndüğünde olay işlenmemiştir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)   

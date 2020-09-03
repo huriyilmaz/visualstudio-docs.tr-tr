@@ -13,50 +13,50 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6114a31701e5abc4714f315b4e4f1ecf022c401c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68163820"
 ---
 # <a name="idebugeventcallback2"></a>IDebugEventCallback2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu arabirim, hata ayıklama altyapısı (DE) oturum hata ayıklama Yöneticisi (SDM) hata ayıklama olayları göndermek için kullanılır.  
+Bu arabirim hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama yöneticisini (SDM) göndermek için kullanılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugEventCallback2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar  
- [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] bir hata ayıklama altyapısı olaylarını almak için bu arabirimi uygular.  
+## <a name="notes-for-implementers"></a>Implemenonun notları  
+ [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] bir hata ayıklama altyapısından olay almak için bu arabirimi uygular.  
   
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar  
- SDM çağırdığında bir hata ayıklama altyapısı genellikle bu arabirimin aldığı [iliştirme](../../../extensibility/debugger/reference/idebugprogram2-attach.md), [iliştirme](../../../extensibility/debugger/reference/idebugengine2-attach.md), veya [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md). Hata ayıklama altyapısı, çağırarak SDM için olaylar gönderir [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md).  
+ Bir hata ayıklama altyapısı genellikle bu arabirimi, SDM [iliştirme](../../../extensibility/debugger/reference/idebugprogram2-attach.md), [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)veya [launchaskıya alındı](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)olarak çağırdığında alır. Hata ayıklama altyapısı, [olayı](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)çağırarak SDM 'ye olay gönderir.  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugEventCallback2`.  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugEventCallback2` .  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)|SDM olaylarına hata ayıklama bildirim gönderir.|  
+|[Olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)|Hata ayıklama olaylarının SDM 'ye bildirimini gönderir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ancak [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) ve [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) , aldıkları belirtin bir `IDebugEventCallback2` arabirim, bu durumda değildir ve arabirim işaretçisi, null değeri her zaman olur. Bunun yerine, hata ayıklama altyapısı kullanmalısınız `IDebugEventCallback2` çağrısında alınan arabirimi [iliştirme](../../../extensibility/debugger/reference/idebugprogram2-attach.md), [Ekle](../../../extensibility/debugger/reference/idebugengine2-attach.md), veya [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md).  
+ [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) ve [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) bir arabirim alıp belirttikleri halde, `IDebugEventCallback2` Bu durum değildir ve arabirim işaretçisi her zaman bir null değer olacaktır. Bunun yerine, hata ayıklama altyapısının, `IDebugEventCallback2` [Attach](../../../extensibility/debugger/reference/idebugprogram2-attach.md), [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)veya [launchaskıya alındı](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)çağrısında alınan arabirimini kullanması gerekir.  
   
- Bir paket uyguluyorsa [IDebugEventCallback](../../../extensibility/debugger/reference/idebugeventcallback2.md) yönetilen kodda kesinlikle önerilir, <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> çağrılabilir geçirilen çeşitli arabirimlerindeki [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md).  
+ Bir paket yönetilen kodda [ıınfo Geventcallback](../../../extensibility/debugger/reference/idebugeventcallback2.md) uygularsa, <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> [olaya](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)geçirilen çeşitli arabirimlerde çağrılması önemle tavsiye edilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)   
- [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)   
+ [Çekirdek arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)   
+ [Launchaskıya alındı](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)   
  [Ekleme](../../../extensibility/debugger/reference/idebugprogram2-attach.md)   
- [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)
+ [İliştir](../../../extensibility/debugger/reference/idebugengine2-attach.md)

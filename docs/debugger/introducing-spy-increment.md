@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4d04b2e9e04e1f2b952baadbdf0cca32cc3b301b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72731815"
 ---
 # <a name="introducing-spy"></a>Spy++'a Giriş
@@ -37,14 +37,14 @@ Spy + + aşağıdaki görevleri gerçekleştirmenize olanak tanır:
   Çeşitli Spy + + Windows 'da, sık kullanılan komutların kısayol menüsünü göstermek için sağ tıklayabilirsiniz. Hangi komutların görüntüleneceği, işaretçinin bulunduğu yere bağlıdır. Örneğin, pencere görünümünde bir girdiye sağ tıklarsanız ve seçilen pencere görünür durumdaysa, kısayol menüsünde **Vurgula** ' ya tıklamak, Seçili pencerenin kenarlığının daha kolay konumlandırılabilir olması için Flash olarak yanıp sönebilmesini sağlar.
 
 > [!NOTE]
-> Spy + +: PView gibi, süreçler ve iş parçacıkları ve DDESPY hakkındaki ayrıntıları gösteren iki farklı yardımcı program vardır. Dinamik veri değişimi (DDE) iletilerini izlemenize olanak tanıyan EXE.
+> Spy + +: PView gibi, süreçler ve iş parçacıklarının ayrıntılarını gösteren ve DDESPY.EXE dinamik veri değişimi (DDE) iletilerini izlemenize olanak tanıyan iki diğer yardımcı program vardır.
 
 ## <a name="64-bit-operating-systems"></a>64 bit Işletim sistemleri
- Spy + + uygulamasının iki sürümü vardır. Spy + + (spyxx. exe) adlı ilk sürüm, 32 bitlik bir işlemde çalışan bir pencereye gönderilen iletileri görüntüleyecek şekilde tasarlanmıştır. Örneğin, Visual Studio 32 bitlik bir işlemde çalışır. Bu nedenle, **Çözüm Gezgini**gönderilen iletileri göstermek için Spy + + kullanabilirsiniz. Visual Studio 'da çoğu derleme için varsayılan yapılandırma, 32 bitlik bir işlemde çalıştırmak olduğundan, Spy + + ' un bu ilk sürümü, [gerekli bileşenler yüklenmişse](../debugger/how-to-start-spy-increment.md)Visual Studio 'daki **Araçlar** menüsünde kullanılabilir olan bir sürümdür.
+ Spy + + uygulamasının iki sürümü vardır. Spy + + (spyxx.exe) adlı ilk sürüm, 32 bitlik bir işlemde çalışan bir pencereye gönderilen iletileri görüntüleyecek şekilde tasarlanmıştır. Örneğin, Visual Studio 32 bitlik bir işlemde çalışır. Bu nedenle, **Çözüm Gezgini**gönderilen iletileri göstermek için Spy + + kullanabilirsiniz. Visual Studio 'da çoğu derleme için varsayılan yapılandırma, 32 bitlik bir işlemde çalıştırmak olduğundan, Spy + + ' un bu ilk sürümü, [gerekli bileşenler yüklenmişse](../debugger/how-to-start-spy-increment.md)Visual Studio 'daki **Araçlar** menüsünde kullanılabilir olan bir sürümdür.
 
- Spy + + (64-bit) (spyxx_amd64. exe) adlı ikinci sürüm, 64 bit işlemde çalışan bir pencereye gönderilen iletileri görüntüleyecek şekilde tasarlanmıştır. Örneğin, 64 bitlik bir işletim sisteminde Not defteri, 64 bit süreçte çalışır. Bu nedenle, Notepad 'e gönderilen iletileri göstermek için Spy + + (64-bit) kullanabilirsiniz. Spy + + (64-bit) genellikle içinde bulunur
+ Spy + + (64-bit) (spyxx_amd64.exe) adlı ikinci sürüm, 64 bit işlemde çalışan bir pencereye gönderilen iletileri görüntüleyecek şekilde tasarlanmıştır. Örneğin, 64 bitlik bir işletim sisteminde Not defteri, 64 bit süreçte çalışır. Bu nedenle, Notepad 'e gönderilen iletileri göstermek için Spy + + (64-bit) kullanabilirsiniz. Spy + + (64-bit) genellikle içinde bulunur
 
- .. \\*Visual Studio yükleme klasörü*\Common7\Tools\spyxx_amd64.exe.
+ ..\\ *Visual Studio yükleme klasörü*\Common7\Tools\spyxx_amd64.exe.
 
  Doğrudan komut satırından Spy + + ' ın her iki sürümünü de çalıştırabilirsiniz.
 
@@ -52,7 +52,7 @@ Spy + + aşağıdaki görevleri gerçekleştirmenize olanak tanır:
 > Spy + + (64-bit) dosya adı "AMD" içerse de, tüm x64 Windows işletim sistemlerinde çalışır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Spy++ hizmetini başlatma](../debugger/how-to-start-spy-increment.md)
-- [Spy++ kullanma](../debugger/using-spy-increment.md)
+- [Nasıl Yapılır: Spy++ Hizmetini Başlatma](../debugger/how-to-start-spy-increment.md)
+- [Spy++ Kullanma](../debugger/using-spy-increment.md)
 - [Spy++ Görünümleri](../debugger/spy-increment-views.md)
 - [Spy++ Başvurusu](../debugger/spy-increment-reference.md)

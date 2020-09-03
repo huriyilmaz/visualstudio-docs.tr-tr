@@ -1,5 +1,5 @@
 ---
-title: Proje sistemlerini genişletmeye yönelik IDE tanımlı komutlar | Microsoft Docs
+title: Proje sistemlerini genişletmek için IDE tanımlı komutlar | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,66 +12,66 @@ caps.latest.revision: 20
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3b5de061449844b87d60d7a700b1e1c22e1e1282
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195030"
 ---
 # <a name="ide-defined-commands-for-extending-project-systems"></a>Proje Sistemlerini Genişletmeye Yönelik IDE Tanımlı Komutlar
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Proje sistemleri genişletmek istediğinizde, komutları ve komut grupları tarafından sağlanan [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE.  
+Proje sistemlerini genişletmek istediğinizde, IDE tarafından sunulan komutları ve komut gruplarını kullanabilirsiniz [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
- Aşağıdaki bölümlerde proje sistemleri genişletmek için kullanışlı olan komut öğeleri listelenir.  
+ Aşağıdaki bölümlerde, özellikle proje sistemlerini genişletmek için yararlı olan komut öğeleri listelenmektedir.  
   
 ## <a name="command-menus"></a>Komut menüleri  
- Aşağıdaki tablo, bir proje genişletici çağırma üst düzey komutların koymak için yararlı konumlar komut menüleri gösterir.  
+ Aşağıdaki tabloda, bir proje genişletici 'i çağıran üst düzey komutları yerleştirmeniz için yararlı konumlar olan komut menüleri gösterilmektedir.  
   
-|Komutu menüsü|Açıklama|  
+|Komut menüsü|Açıklama|  
 |------------------|-----------------|  
-|IDM_VS_MENU_PROJECT|**Proje** üst düzey menü.|  
+|IDM_VS_MENU_PROJECT|**Projenin** üst düzey menüsü.|  
 |IDM_VS_TOOL_PROJWIN|**Çözüm Gezgini** araç çubuğu.|  
   
-## <a name="shortcut-menus"></a>Kısayol menüleri  
- Aşağıdaki tabloda, tek bir düğüm olarak seçildiğinde uygulayan kısayol menülerini gösterilmektedir **Çözüm Gezgini**, veya birden çok homojen seçimleri olduğunda **Çözüm Gezgini**, ne zaman olduğu Tüm seçili düğümleri aynı türüdür.  
+## <a name="shortcut-menus"></a>Kısayol Menüleri  
+ Aşağıdaki tabloda, **Çözüm Gezgini**tek bir düğüm seçildiğinde veya **Çözüm Gezgini**birden çok Hogense seçimi olduğunda uygulanan kısayol menüleri gösterilmektedir. Bu, seçilen tüm düğümlerin aynı türden olduğu durumlar olur.  
   
 |Kısayol menüsü|Açıklama|  
 |-------------------|-----------------|  
-|<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_PROJNODE>|Proje düğümü seçildiğinde uygulanır.|  
-|<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_ITEMNODE>|Bir dosya seçili durumdayken geçerlidir.|  
-|<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_FOLDERNODE>|Bir klasörü seçildiğinde uygulanır.|  
-|IDM_VS_CTXT_WEBREFFOLDER|Web başvuru klasörü seçildiğinde uygulanır.|  
-|<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_REFERENCEROOT>|"Başvuru" adlı başvuruları kök düğümü seçildiğinde uygulanır.|  
-|<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_REFERENCE>|Başvuru düğümleri seçili olduğunda geçerlidir; Bunlar, derleme, COM ve yalnızca proje başvurularını içerir. Web başvuruları içermez.|  
+|<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_PROJNODE>|Proje düğümü seçildiğinde geçerlidir.|  
+|<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_ITEMNODE>|Bir dosya seçildiğinde geçerlidir.|  
+|<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_FOLDERNODE>|Bir klasör seçildiğinde geçerlidir.|  
+|IDM_VS_CTXT_WEBREFFOLDER|Web başvurusu klasörü seçildiğinde geçerlidir.|  
+|<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_REFERENCEROOT>|"Başvurular" olarak adlandırılan başvurular kök düğümü seçildiğinde geçerlidir.|  
+|<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_REFERENCE>|Başvuru düğümleri seçildiğinde geçerlidir; Bunlar yalnızca derleme, COM ve proje başvuruları içerir. Web başvuruları içermez.|  
   
- Aşağıdaki tabloda, ne zaman uygulamak kısayol menüleri gösterilmektedir seçiminde **Çözüm Gezgini** yayılan birden çok hiyerarşi  
+ Aşağıdaki tabloda, **Çözüm Gezgini** seçimi birden çok hiyerarşinin yayıldığı zaman uygulanan kısayol menüleri gösterilmektedir.  
   
 |Kısayol menüsü|Açıklama|  
 |-------------------|-----------------|  
-|IDM_VS_CTXT_XPROJ_SLNPROJ|Çözüm düğümü ve kök proje düğümleri geçerli seçime içerdiğinde, geçerlidir.|  
-|IDM_VS_CTXT_XPROJ_SLNITEM|Geçerli seçimi çözüm düğümü ve proje öğeleri içeren uygulanır.|  
-|IDM_VS_CTXT_XPROJ_MULTIPROJ|Geçerli seçimi birden çok kök proje düğümden yalnızca oluşur uygulanır.|  
-|IDM_VS_CTXT_XPROJ_PROJITEM|Geçerli seçimi kök proje düğümleri ve proje öğeleri bir karışımını içeren uygulanır. Ayrıca, seçim çözüm düğümüne içerebilir.|  
-|IDM_VS_CTXT_XPROJ_MULTIITEM|Geçerli seçimi proje öğelerinden bir çözümde birden çok proje içeriyorsa ya da farklı türdeki öğeleri aynı proje içinde seçili olduğunda geçerlidir.|  
+|IDM_VS_CTXT_XPROJ_SLNPROJ|Geçerli seçim çözüm düğümünü ve kök proje düğümlerini içerdiğinde geçerlidir.|  
+|IDM_VS_CTXT_XPROJ_SLNITEM|Geçerli seçim çözüm düğümünü ve proje öğelerini içerdiğinde geçerlidir.|  
+|IDM_VS_CTXT_XPROJ_MULTIPROJ|Geçerli seçim yalnızca birden çok kök proje düğümünden oluşuyorsa geçerlidir.|  
+|IDM_VS_CTXT_XPROJ_PROJITEM|Geçerli seçim kök proje düğümlerinin ve proje öğelerinin bir karışımını içerdiğinde geçerlidir. Ek olarak, seçim çözüm düğümünü de içerebilir.|  
+|IDM_VS_CTXT_XPROJ_MULTIITEM|Geçerli seçim çözümdeki birden çok projeden proje öğeleri içerdiğinde veya aynı projede farklı türlerde öğeler seçildiğinde geçerlidir.|  
   
 ## <a name="command-groups"></a>Komut grupları  
- Projeleri genişletme ve aracılığıyla erişebileceğiniz kullanabileceğiniz komut gruplarını aşağıdaki tabloda gösterilmektedir <xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_PROJNODE> kısayol menüsü.  
+ Aşağıdaki tabloda, projeleri genişlettiğinizde kullanabileceğiniz ve kısayol menüsü üzerinden erişebileceğiniz komut grupları gösterilmektedir <xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_PROJNODE> .  
   
 |Komut grubu|Açıklama|  
 |-------------------|-----------------|  
-|IDG_VS_CTXT_PROJECT_BUILD|Derleme, yeniden oluşturma ve projeyi dağıtma komutları.|  
-|IDG_VS_CTXT_COMPILELINK|Derleme ve bağlama projesi komutlar içerir.|  
-|IDG_VS_CTXT_PROJECT_CONFIG|Proje yapılandırması ayarlayın ve derleme sırası komutları.|  
-|IDG_VS_CTXT_PROJECT_ADD|Proje öğeleri Ekle komutları.|  
-|IDG_VS_CTXT_PROJECT_START|F5 tuşuna ile ilişkili başlangıç projesi ayarlama komutları.|  
-|IDG_VS_CTXT_PROJECT_SAVE|Proje öğeleri kaydedilirken komutlar içerir.|  
-|IDG_VS_CTXT_PROJECT_DEBUG|Hata ayıklama komutlar içerir.|  
-|IDG_VS_CTXT_PROJECT_SCC|Kaynak denetimi için komutları.|  
-|IDG_VS_CTXT_PROJECT_TRANSFER|Komutları için kesme, kopyalama ve yapıştırma işlemleri.|  
-|IDG_VS_CTXT_PROJECT_PROPERTIES|Erişim sağlayan komutlar **proje özellikleri** iletişim kutusu.|  
+|IDG_VS_CTXT_PROJECT_BUILD|Projeyi oluşturmaya, yeniden oluşturmaya ve dağıtmaya yönelik komutlar.|  
+|IDG_VS_CTXT_COMPILELINK|Projeyi derlemek ve bağlamak için komutlar.|  
+|IDG_VS_CTXT_PROJECT_CONFIG|Proje yapılandırmasını ve derleme sırasını ayarlama komutları.|  
+|IDG_VS_CTXT_PROJECT_ADD|Projeye öğe ekleyen komutlar.|  
+|IDG_VS_CTXT_PROJECT_START|F5 tuşuyla ilişkili başlangıç projesini ayarlama komutları.|  
+|IDG_VS_CTXT_PROJECT_SAVE|Proje öğelerini kaydetme komutları.|  
+|IDG_VS_CTXT_PROJECT_DEBUG|Hata ayıklama komutları.|  
+|IDG_VS_CTXT_PROJECT_SCC|Kaynak denetimi için komutlar.|  
+|IDG_VS_CTXT_PROJECT_TRANSFER|Kesme, kopyalama ve yapıştırma işlemlerine yönelik komutlar.|  
+|IDG_VS_CTXT_PROJECT_PROPERTIES|**Proje özellikleri** iletişim kutusuna erişim sağlayan komutlar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [VSPackage kullanıcı arabirimi öğelerini nasıl eklenir](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
- [MenuCommands Vs. OleMenuCommands](../../misc/menucommands-vs-olemenucommands.md)   
+ [VSPackages Kullanıcı arabirimi öğeleri ekleme](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
+ [MenuCommands ve OleMenuCommands karşılaştırması](../../misc/menucommands-vs-olemenucommands.md)   
  [Yeniden Kullanılabilir Düğme Grupları Oluşturma](../../extensibility/creating-reusable-groups-of-buttons.md)

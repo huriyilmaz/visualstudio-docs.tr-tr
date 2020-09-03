@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6aa4cce032a5eb80a11568a83c1166b5690bd688
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85279892"
 ---
 # <a name="gpu-usage"></a>GPU kullanımı
@@ -106,7 +106,7 @@ Aradığınızı bulmaya yardımcı olması için, işlem adlarına, iş parçac
 
 GPU kullanımı raporunun alt bölümündeki olayların listesi, her bir olayın ayrıntılarını gösterir.
 
-|Sütun|Description|
+|Sütun|Açıklama|
 |------------|-----------------|
 |**Olay Adı**|Grafik olayının adı. Bir olay, genellikle bir CPU iş parçacığı zaman çizelgesinde ve bir GPU zaman çizelgesi olayında bir olaya karşılık gelir. GPU kullanımı bir olayın adını belirleyeleyemiyorsa, olay adları *öznitelik* dışı olabilir. Daha fazla bilgi için bu tablodan sonraki nota bakın.|
 |**CPU başlangıcı (NS)**|Bir Direct3D API 'SI çağırarak etkinliğin CPU 'da başlatıldığı zaman. Süre, uygulamanın başladığı zamana göre nanosaniye cinsinden ölçülür.|
@@ -137,7 +137,7 @@ Profil oluşturma işlemini uygulamanın başından ertelemek için:
 
 Uygulamanızı GPU kullanımı aracı altında çalıştırdıktan sonra, GPU kullanım aracı penceresinin alt bölümünde ek bir bağlantı kullanılabilir hale gelir. Profil oluşturma bilgilerini toplamaya başlamak için, **ek AYRıNTıLı GPU kullanım verileri toplamaya başlama** ' daki **Başlangıç** bağlantısını seçin.
 
-## <a name="hardware-and-driver-support"></a><a name="hwsupport"></a>Donanım ve sürücü desteği
+## <a name="hardware-and-driver-support"></a><a name="hwsupport"></a> Donanım ve sürücü desteği
 
 Aşağıdaki GPU donanım ve sürücüleri desteklenir:
 

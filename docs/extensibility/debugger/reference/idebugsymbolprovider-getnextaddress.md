@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetNextAddress | Microsoft Dokümanlar
+title: 'IDebugSymbolProvider:: GetNextAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 9b314ab7006d6bbe65136451aeee6c5200cf7980
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719200"
 ---
 # <a name="idebugsymbolprovidergetnextaddress"></a>IDebugSymbolProvider::GetNextAddress
 Bir yöntemde belirli bir hata ayıklama adresini izleyen hata ayıklama adresini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetNextAddress( 
@@ -45,16 +45,16 @@ int GetNextAddress( 
 
 ## <a name="parameters"></a>Parametreler
 `pAddress`\
-[içinde] Hata ayıklama adresi verildi.
+'ndaki Verilen hata ayıklama adresi.
 
 `fStatementOnly`\
-[içinde] TRUE ise, hata ayıklama adreslerini tek bir ifadeyle sınırlar.
+'ndaki TRUE ise, hata ayıklama adreslerini tek bir deyimle sınırlandırır.
 
 `ppAddress`\
-[çıkış] Sonraki hata ayıklama adresini döndürür.
+dışı Sonraki hata ayıklama adresini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Geçerli `HRESULT`bir , genellikle S_OK verir.
+ Geçerli bir `HRESULT` , genellikle S_OK döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

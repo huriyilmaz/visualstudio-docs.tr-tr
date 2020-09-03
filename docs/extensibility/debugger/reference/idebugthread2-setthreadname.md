@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::SetThreadName | Microsoft Dokümanlar
+title: 'IDebugThread2:: SetThreadName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b3d39c99049c4c4583fbda466712c5b216137316
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718669"
 ---
 # <a name="idebugthread2setthreadname"></a>IDebugThread2::SetThreadName
 İş parçacığının adını ayarlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT SetThreadName ( 
@@ -41,13 +41,13 @@ int SetThreadName ( 
 
 ## <a name="parameters"></a>Parametreler
 `pszName`\
-[içinde] İş parçacığının adı.
+'ndaki İş parçacığının adı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- İş parçacığı adını almak için [GetName](../../../extensibility/debugger/reference/idebugthread2-getname.md) yöntemini arayın.
+ İş parçacığı adını almak için [GetName](../../../extensibility/debugger/reference/idebugthread2-getname.md) yöntemini çağırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

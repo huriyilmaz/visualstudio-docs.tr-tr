@@ -9,16 +9,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dcc518e649732f6774259efed0965a9898e0fb2d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72734792"
 ---
 # <a name="vsgdbgvsgdbg-destructor"></a>VsgDbg::~VsgDbg (Yok Edici)
-@No__t_0 sınıfının bir örneğini yok eder. Grafik bilgileri etkin bir şekilde kaydedildiyse, grafik günlük dosyası sonlandırılır ve kapatılır ve grafik bilgilerini etkin bir şekilde yakalarken kullanılan kaynaklar serbest bırakılır.
+Sınıfının bir örneğini yok eder `VsgDbg` . Grafik bilgileri etkin bir şekilde kaydedildiyse, grafik günlük dosyası sonlandırılır ve kapatılır ve grafik bilgilerini etkin bir şekilde yakalarken kullanılan kaynaklar serbest bırakılır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```C++
 ~VsgDbg();

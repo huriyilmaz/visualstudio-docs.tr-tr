@@ -10,10 +10,10 @@ ms.topic: how-to
 ms.date: 11/10/2017
 ms.author: ghogen
 ms.openlocfilehash: 5cd458cca0a0b387ce816f2e7f5dde8153e08410
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85280810"
 ---
 # <a name="prepare-to-publish-or-deploy-a-cloud-service-from-visual-studio"></a>Visual Studio'dan bulut hizmeti yayımlamaya veya dağıtmaya hazırlanma
@@ -36,7 +36,7 @@ Bulut hizmeti, rollerinizi Azure ortamında çalıştırır. Visual Studio 'da y
 
 ### <a name="create-a-cloud-service-through-the-azure-portal"></a>Azure portal aracılığıyla bir bulut hizmeti oluşturun
 
-1. [Azure Portal](https://portal.azure.com/) oturum açın.
+1. [Azure portalında](https://portal.azure.com/) oturum açın.
 1. Sayfanın sol tarafındaki **Cloud Services (klasik)** seçeneğini belirleyin.
 1. **+ Ekle**' yi seçin ve gerekli BILGILERI (DNS adı, abonelik, kaynak grubu ve konum) sağlayın. Bu noktada, daha sonra Visual Studio 'da yaptığınız için bir paketi karşıya yüklemek gerekli değildir.
 1. İşlemi gerçekleştirmek için **Oluştur** ' u seçin.
@@ -55,7 +55,7 @@ Depolama hesabı, blob, kuyruk ve tablo hizmetlerine erişim sağlar. Visual Stu
 
 ### <a name="create-a-storage-account-through-the-azure-portal"></a>Azure portal aracılığıyla bir depolama hesabı oluşturun
 
-1. [Azure Portal](https://portal.azure.com/) oturum açın.
+1. [Azure portalında](https://portal.azure.com/) oturum açın.
 1. Sol üstteki **+ Yeni** ' yi seçin.
 1. "Azure Marketi" altında **depolama alanı** ' nı, ardından **depolama hesabı-blob, dosya, tablo, kuyruk** ' u sağ taraftan seçin.
 1. Gerekli bilgileri (ad, dağıtım modeli vb.) sağlayın.

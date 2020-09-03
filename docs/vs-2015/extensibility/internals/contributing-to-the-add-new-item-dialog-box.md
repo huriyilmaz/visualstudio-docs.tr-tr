@@ -1,5 +1,5 @@
 ---
-title: Katkıda bulunan yeni öğe Ekle iletişim kutusu | Microsoft Docs
+title: Yeni öğe Ekle Iletişim kutusuna katkıda bulunma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,19 +11,19 @@ caps.latest.revision: 19
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d288f2d007fd0f923021847179326069959d3698
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197015"
 ---
 # <a name="contributing-to-the-add-new-item-dialog-box"></a>Yeni Öğe Ekleme İletişim Kutusuna Katkıda Bulunma
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Proje alt öğeleri için yeni bir tam dizin sağlayabilir **Yeni Öğe Ekle** kaydederek iletişim kutusu **Öğe Ekle** şablonlar altında `Projects` kayıt defteri alt anahtarı.  
+Proje alt türü, kayıt defteri alt anahtarı altına **öğe Ekle** şablonları kaydederek **Yeni öğe Ekle** iletişim kutusu için yeni bir öğe dizini sağlayabilir `Projects` .  
   
-## <a name="registering-add-new-item-templates"></a>Kaydetme Yeni Öğe Ekle şablonları  
- Bu bölümde altında bulunan **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0\Projects** kayıt defteri. Kayıt defteri girdilerini varsayar bir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] proje kuramsal proje alt türü tarafından toplanır. Girişleri [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] proje aşağıda listelenmiştir.  
+## <a name="registering-add-new-item-templates"></a>Yeni öğe ekleme şablonları kaydediliyor  
+ Bu bölüm, kayıt defterindeki **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\8.0\Projects** altında bulunur. Aşağıdaki kayıt defteri girişlerinde, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kuramsal bir proje alt türü tarafından toplanan bir proje varsayılmaktadır. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Projenin girişleri aşağıda listelenmiştir.  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0\Projects\{F184B08F-C81C-45F6-A57F-5ABD9991F28F}]  
@@ -37,11 +37,11 @@ Proje alt öğeleri için yeni bir tam dizin sağlayabilir **Yeni Öğe Ekle** k
 "TemplatesDir"="projectSubTypeTemplatesDir\\VBProjectItems"  
 ```  
   
- `AddItemTemplates\TemplateDirs` Alt anahtar içerir, burada öğeler yapılan bulunan dizine olan yolu ile kayıt defteri girdilerini **Yeni Öğe Ekle** iletişim kutusu yerleştirilir.  
+ `AddItemTemplates\TemplateDirs`Alt anahtar, **Yeni öğe Ekle** iletişim kutusunda kullanılabilir öğelerin yerleştirildiği dizinin yolunu içeren kayıt defteri girdilerini içerir.  
   
- Tüm ortam otomatik olarak yükleyen `AddItemTemplates` verileri altında `Projects` kayıt defteri alt anahtarı. Bu, temel proje uygulamaları için verilerin yanı sıra belirli proje alt türleri için verileri içerebilir. Her proje alt proje türü tarafından tanımlanan `GUID`. Proje alt alternatif kümesi olduğunu belirtebilirsiniz `Add Item` şablonları kullanılmalıdır belirli flavored proje örneği için destekleyerek `VSHPROPID_ AddItemTemplatesGuid` sabit listesinden alınmış <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> içinde <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> GUID döndürmek için uygulama Proje alt türü değeri. Varsa `VSHPROPID_AddItemTemplatesGuid` özelliği belirtilmedi, temel proje GUID kullanılır.  
+ Ortam, `AddItemTemplates` `Projects` kayıt defteri alt anahtarı altındaki tüm verileri otomatik olarak yükler. Bu, temel proje uygulamalarının verilerini ve ayrıca belirli proje alt türü türleri için verileri içerebilir. Her proje alt türü bir proje türü tarafından tanımlanır `GUID` . Proje alt türü, `Add Item` `VSHPROPID_ AddItemTemplatesGuid` <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> Proje alt türünün GUID değerini döndürmek için uygulamadaki sabit listesini destekleyerek, belirli bir flavored proje örneği için başka bir şablon kümesinin kullanılması gerektiğini belirtebilir. `VSHPROPID_AddItemTemplatesGuid`Özellik belirtilmezse, temel proje GUID 'si kullanılır.  
   
- Öğeleri filtreleyebilirsiniz **Yeni Öğe Ekle** uygulayarak iletişim kutusu <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg> proje alt toplayıcısı nesne üzerinde arabirimi. Örneğin, bir veritabanı projesi toplayarak uygulayan bir proje alt bir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] proje, filtreleyebilirsiniz [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] özel öğeleri gelen **Yeni Öğe Ekle** filtreleme uygulayarak ve iletişim kutusunu açın, ekleyebilirsiniz Veritabanı Proje belirli öğeleri destekleyerek `VSHPROPID_ AddItemTemplatesGuid` içinde <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>. Filtreleme ve öğeler ekleme hakkında daha fazla bilgi için **Yeni Öğe Ekle** iletişim kutusu, bkz: [ekleme yeni öğe iletişim kutularına öğe eklemeyi](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md).  
+ Proje alt türü toplayıcısı nesnesi üzerinde arabirimini uygulayarak **Yeni öğe Ekle** iletişim kutusundaki öğeleri filtreleyebilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg> . Örneğin, bir projeyi toplayarak bir veritabanı projesi uygulayan bir proje alt türü [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] filtre uygulayarak **Yeni öğe Ekle** iletişim kutusundan belirli öğeleri filtreleyebilir ve sırasıyla ' de destekleyerek veritabanı projesine özgü öğeler ekleyebilir `VSHPROPID_ AddItemTemplatesGuid` <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> . **Yeni öğe Ekle** iletişim kutusuna öğe filtreleme ve ekleme hakkında daha fazla bilgi için, bkz. [Yeni öğe Ekle Iletişim kutularına öğe ekleme](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>   

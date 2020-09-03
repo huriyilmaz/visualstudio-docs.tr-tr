@@ -11,10 +11,10 @@ ms.topic: how-to
 ms.workload:
 - azure
 ms.openlocfilehash: 4d705cbff1ce4e25892dfc5df896418e6d58b632
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85371657"
 ---
 # <a name="train-ai-models-in-azure-batch-ai"></a>Azure Batch AI AI modellerini eğitme
@@ -23,7 +23,7 @@ Batch AI, veri bilimcilerinin ve yapay zeka araştırmacılarının, GPU desteğ
 
 Azure 'da eğitim modellerini dinamik olarak ölçeklendirebilmeniz için Visual Studio Tools for AI tümleşiktir.  [Visual Studio Tools for AI](installation.md)yükledikten sonra, Azure Machine Learning örnek galerisinde önceden hazırlanmış yemek tariflerini kullanarak yeni bir Python projesi oluşturmak kolaydır.
 
-1. Visual Studio’yu başlatın. **AI araçları** menüsünü açıp **küme Seç** ' i seçerek **Sunucu Gezgini** açın.
+1. Visual Studio 'Yu başlatın. **AI araçları** menüsünü açıp **küme Seç** ' i seçerek **Sunucu Gezgini** açın.
 
     ![Küme Seçicisi](media/train-model/select-cluster.png)
 

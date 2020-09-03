@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findSymbolsByRVAForAcceleratorPointerTag | Microsoft Docs
+title: 'IDiaSession:: Findsymbolsbyrvaforivatorpointertag | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,18 +12,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0711c95310d4d3613d8b82bccbecab122bf19ef8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196357"
 ---
 # <a name="idiasessionfindsymbolsbyrvaforacceleratorpointertag"></a>IDiaSession::findSymbolsByRVAForAcceleratorPointerTag
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu yöntem karşılık gelen bir etiket değeri verildiğinde, belirtilen üst Hızlandırıcı saplama işlevinde belirtilen göreli sanal adresten bulunan simgeleri bir sabit listesi döndürür.  
+Karşılık gelen bir etiket değeri verildiğinde, bu yöntem belirtilen bir ilişkili sanal adreste belirtilen üst Hızlandırıcı saplama işlevinde bulunan simgelerin bir listesini döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT findSymbolsByRVAForAcceleratorPointerTag (   
@@ -36,24 +36,24 @@ HRESULT findSymbolsByRVAForAcceleratorPointerTag ( 
   
 #### <a name="parameters"></a>Parametreler  
  `parent`  
- [in] Bir `IDiaSymbol` aranacak Hızlandırıcı saplama işlevi karşılık gelir.  
+ 'ndaki `IDiaSymbol` Aranmak üzere Hızlandırıcı saplama işlevine karşılık gelen bir.  
   
  `tagValue`  
- [in] İşaretçi etiket değeri.  
+ 'ndaki İşaretçi etiketi değeri.  
   
  `rva`  
- [in] Göreli sanal adres.  
+ 'ndaki Göreli sanal adres.  
   
  `ppResult`  
- [out] Bir işaretçi bir `IDiaEnumSymbols` sonucu ile başlatılmış bir arabirim işaretçisi.  
+ dışı `IDiaEnumSymbols` Sonuçla başlatılan arabirim işaretçisine yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yalnızca bu yöntemi çağıran bir `IDiaSymbol` karşılık gelen bir Hızlandırıcı saplama işlevi için arabirim.  
+ Bu yöntemi yalnızca `IDiaSymbol` bir Hızlandırıcı saplama işlevine karşılık gelen bir arabirimde çağırın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiasession](../../debugger/debug-interface-access/idiasession.md)   
- [Idiaenumsymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)   
+ [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
+ [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

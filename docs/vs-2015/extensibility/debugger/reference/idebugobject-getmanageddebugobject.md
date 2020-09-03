@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::GetManagedDebugObject | Microsoft Docs
+title: 'IDebugObject:: GetManagedDebugObject | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4f2917135f5e25648cf08cd9030e3fdf31aedb52
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162468"
 ---
 # <a name="idebugobjectgetmanageddebugobject"></a>IDebugObject::GetManagedDebugObject
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Hata ayıklama altyapısı adres alanında yönetilen nesnesinin bir kopyasını oluşturur.  
+Hata ayıklama altyapısının adres alanında yönetilen nesnenin bir kopyasını oluşturur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetManagedDebugObject(   
@@ -40,13 +40,13 @@ int GetManagedDebugObject(
   
 #### <a name="parameters"></a>Parametreler  
  `ppObject`  
- [out] Döndürür bir [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) yeni oluşturulan yönetilen nesneyi temsil eden nesne.  
+ dışı Yeni oluşturulan yönetilen nesneyi temsil eden bir [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür. Bu E_FAIL döndürür [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) yönetilen değeri sınıfı örneğini temsil etmiyor.  
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür. Bu [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) bir yönetilen değer sınıfı örneğini temsil etmediği E_FAIL döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesne gerekir temsil eden bir yönetilen değeri sınıf örneği gibi bir `System.Decimal` örneği. Yerel bir kopya arama getirdiği ek yüke sahip [değerlendir](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md) ortadan kalkar.  
+ Bu [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesnesi, örnek gibi bir yönetilen değer sınıfı örneğini temsil etmelidir `System.Decimal` . Yerel bir kopyaya sahip olarak, [değerlendir](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md) çağırma yükü ortadan kalkar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   

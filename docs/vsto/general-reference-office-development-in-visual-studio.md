@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8e8b8dee20b67338bbe1c8c78ebe1d8bcc730175
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "69551510"
 ---
 # <a name="general-reference-office-development-in-visual-studio"></a>Genel başvuru (Visual Studio 'da Office geliştirme)
@@ -39,16 +39,16 @@ ms.locfileid: "69551510"
 
  Dağıtım bildirimlerinin Office çözümlerini nasıl kullandığını açıklar.
 
-- [Visual Studio 'da &#40;Kullanıcı arabirimi başvurusu Office geliştirme&#41;](../vsto/user-interface-reference-office-development-in-visual-studio.md)
+- [Kullanıcı arabirimi başvurusu &#40;Visual Studio 'da Office geliştirme&#41;](../vsto/user-interface-reference-office-development-in-visual-studio.md)
 
  Çeşitli iletişim kutularında, Windows 'da ve diğer kullanıcı arabirimlerinde görünen seçenekleri açıklayan konuları listeler.
 
-- [Visual Studio &#40;'da Office geliştirme hata iletileri&#41;](../vsto/error-messages-office-development-in-visual-studio.md)
+- [Visual Studio 'da Office geliştirme &#40;hata iletileri&#41;](../vsto/error-messages-office-development-in-visual-studio.md)
 
  Office projelerinin hata iletilerini açıklayan konuları listeler.
 
 ## <a name="related-sections"></a>İlgili bölümler
-- [Visual Studio &#40;'da Office geliştirme ile çalışmaya başlama&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
+- [Visual Studio 'da Office geliştirme &#40;kullanmaya başlama&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
 
  Kurulum, proje şablonları, Office birincil birlikte çalışma derlemeleri ve Office geliştirmede yenilikler hakkında bilgi için bağlantılar sağlar.
 

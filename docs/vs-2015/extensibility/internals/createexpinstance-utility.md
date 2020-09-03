@@ -1,5 +1,5 @@
 ---
-title: Createexpınstance yardımcı programı | Microsoft Docs
+title: CreateExpInstance yardımcı programı | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -15,51 +15,51 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7d778f0f31a7651412915a898bff9e4bdfe6c55f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196987"
 ---
 # <a name="createexpinstance-utility"></a>CreateExpInstance Yardımcı Programı
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Createexpınstance yardımcı programı veya oluşturmak için sıfırlama, Visual Studio'nun deneysel örneği silin. Deneysel örneğinde hata ayıklayın ve Visual Studio uzantıları temel ürünü değiştirmeden test etmek için kullanabilirsiniz.  
+Visual Studio 'nun deneysel bir örneğini oluşturmak, sıfırlamak veya silmek için CreateExpInstance yardımcı programını kullanın. Temel ürünü değiştirmeden Visual Studio uzantıları hatalarını ayıklamak ve test etmek için deneysel örneği kullanabilirsiniz.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```  
 CreateExpInstance.exe [/Create | /Reset | /Clean] /VSInstance=VsInstance /RootSuffix=Suffix  
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- / Oluşturma  
+ /Create  
  Deneysel örneği oluşturur.  
   
- / Reset  
- Deneysel örneği siler ve ardından yeni bir tane oluşturur.  
+ /Reset süpürmeden  
+ Deneysel örneği siler ve yeni bir tane oluşturur.  
   
  /Clean  
  Deneysel örneği siler.  
   
- / VSInstance  
- Kopyalamak için temel Visual Studio örneğini içeren dizinin adı.  
+ /Vsınstance  
+ Kopyalanacak temel Visual Studio örneğini içeren dizinin adı.  
   
- / RootSuffix  
- Deneysel örneği dizin adının sonuna eklenecek sonek.  
+ /RootSuffix  
+ Deneysel örnek dizininin adına eklenecek sonek.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Visual Studio uzantısı üzerinde çalışırken, varsayılan deneysel örneğinde açın ve geçerli uzantıyı yüklemek için F5 tuşuna basabilirsiniz. Deneysel örnek varsa, varsayılan ayarlara sahip bir Visual Studio oluşturur.  
+ Visual Studio uzantısı üzerinde çalışırken, F5 tuşuna basarak varsayılan Deneysel örneği açabilir ve geçerli uzantıyı yükleyebilirsiniz. Deneysel örnek yoksa, Visual Studio varsayılan ayarlara sahip bir tane oluşturur.  
   
- Deneysel örneği varsayılan konumu, Visual Studio sürüm sayısına bağlıdır. Örneğin, Visual Studio 2015 için %localappdata%\Microsoft\VisualStudio\14.0Exp\ konumdur dizin konumunu tüm dosyaları bu örnek bir parçası olarak kabul edilir. Dizin adı varsayılan konuma değiştirilmediği sürece, herhangi bir ek deneysel örneği Visual Studio tarafından yüklenmez.  
+ Deneysel Örneğin varsayılan konumu, Visual Studio sürüm numarasına bağlıdır. Örneğin, Visual Studio 2015 için konum%localappdata%\Microsoft\VisualStudio\14.0Exp\ ' dir; dizin konumundaki tüm dosyalar bu örneğin bir parçası olarak kabul edilir. Dizin adı varsayılan konum olarak değiştirilmediği takdirde, diğer deneysel örnekler Visual Studio tarafından yüklenmez.  
   
- Visual Studio deneysel örneği açıldığında, sistem kayıt defteri erişimi yoktur. Bu, kullanılan kayıt defteri kovanını Deneysel bir sürümü Visual Studio'nun önceki sürümlerden farklıdır.  
+ Visual Studio deneysel örneği açtığında sistem kayıt defterine erişemez. Bu, Visual Studio 'nun, kayıt defteri kovanının deneysel bir sürümünü kullanan önceki sürümlerinden farklıdır.  
   
- Createexpınstance yardımcı programı VsRegEx yardımcı programı değiştirir.  
+ CreateExpInstance yardımcı programı, VsRegEx yardımcı programının yerini alır.  
   
- Aşağıdaki örnek, Visual Studio varsayılan Deneysel örneğini sıfırlar.  
+ Aşağıdaki örnek, Visual Studio 'nun varsayılan Deneysel örneğini sıfırlar.  
   
- **CreateExpInstance.exe Reset /VSInstance 14.0 = /RootSuffix Exp =**  
+ **CreateExpInstance.exe/Reset/Vsınstance = 14.0/RootSuffix = exp**  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir ürün serbest bırakma](../../misc/releasing-a-visual-studio-integration-product.md)
+ [Bir ürünü serbest bırakma](../../misc/releasing-a-visual-studio-integration-product.md)

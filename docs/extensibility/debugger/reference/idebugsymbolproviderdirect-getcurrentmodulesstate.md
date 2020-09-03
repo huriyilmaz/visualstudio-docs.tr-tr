@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProviderDirect::GetCurrentModulesState | Microsoft Dokümanlar
+title: 'Idebugsymbolproviderdirect:: GetCurrentModulesState | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +15,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c9e7cf711b5cf6823059945f85b9c3db30701ccf
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719078"
 ---
 # <a name="idebugsymbolproviderdirectgetcurrentmodulesstate"></a>IDebugSymbolProviderDirect::GetCurrentModulesState
-Sembol sağlayıcısının üyesi olduğu sembol grubu hakkındaki bilgileri alır.
+Sembol sağlayıcısının üye olduğu sembol grubu hakkındaki bilgileri alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetCurrentModulesState(
@@ -42,16 +42,16 @@ int GetCurrentModulesState(
 
 ## <a name="parameters"></a>Parametreler
 `pState`\
-[çıkış] Sembol sağlayıcı grubunun durumu.
+dışı Sembol sağlayıcısı grubunun durumu.
 
 `count`\
-[çıkış] Gruptaki modül sayısı.
+dışı Gruptaki modül sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Durum, sembol grubuna bir modül eklendiğinde veya simge grubundan kaldırıldığında değiştirilir. Bu nedenle, bu yöntem bir sembol grubu değiştirilmiş olup olmadığını algılamak için kullanılabilir.
+ Sembol grubuna bir modül eklendiğinde veya gruptan her kaldırıldığında durum değiştirilir. Bu nedenle, bu yöntem bir sembol grubunun değiştirilip değiştirilmediğini algılamak için kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

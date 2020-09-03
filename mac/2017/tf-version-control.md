@@ -8,10 +8,10 @@ ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
 ms.topic: troubleshooting
 ms.openlocfilehash: 33d00d853c7496e23cb5cd97a0b9abbe05e3accc
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85950588"
 ---
 # <a name="connecting-to-team-foundation-version-control"></a>Team Foundation Sürüm Denetimi bağlanılıyor
@@ -58,7 +58,7 @@ En kolay çözüm, macOS için bir paket yöneticisi olan **HomeBrew**' ı kulla
 
 1. MacOS Terminal uygulamasını başlatın.
 1. Terminal ve [homebrew giriş sayfasındaki](https://brew.sh/)yönergeleri kullanarak Homebrew 'ı yükler.
-1. Homebrew yüklendikten sonra Terminalinizden aşağıdaki komutu çalıştırın:`brew install tee-clc`
+1. Homebrew yüklendikten sonra Terminalinizden aşağıdaki komutu çalıştırın: `brew install tee-clc`
 
 **T-CLC ' i el ile ayarlamak**için:
 
@@ -125,7 +125,7 @@ Uzantıyı yüklemek için istemleri izleyin. Yüklendikten sonra IDE 'yi yenide
 
 ### <a name="updating-the-extension"></a>Uzantı güncelleştiriliyor
 
-TFVC uzantılı güncelleştirmeler düzenli aralıklarla yapılır. Güncelleştirmelere erişmek için, menüden **Visual Studio > uzantıları...** öğesini seçin ve **güncelleştirmeler** sekmesini seçin. listede uzantıyı seçin ve **Güncelleştir** düğmesine basın:
+TFVC uzantılı güncelleştirmeler düzenli aralıklarla yapılır. Güncelleştirmelere erişmek için, menüden **Visual Studio > uzantıları...** öğesini seçin ve **güncelleştirmeler** sekmesini seçin. Listeden uzantıyı seçin ve **Güncelleştir** düğmesine basın:
 
 Sonraki iletişim kutusunda **yükleme** ' ye basarak eski paketi kaldırın ve yenisini yükleme işlemini yapın.
 

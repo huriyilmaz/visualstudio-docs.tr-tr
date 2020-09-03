@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::EnableAutoAttach | Microsoft Dokümanlar
+title: 'IDebugCoreServer3:: Enableoto Iliştirme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: d529bb80f79a3f2972e9349a2679bb528cc10463
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732916"
 ---
 # <a name="idebugcoreserver3enableautoattach"></a>IDebugCoreServer3::EnableAutoAttach
-Belirtilen hata ayıklama motorları için otomatik ekleme sağlar.
+Belirtilen hata ayıklama motorları için otomatik eklemeye izin vermez.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT EnableAutoAttach(
@@ -47,19 +47,19 @@ int EnableAutoAttach(
 
 ## <a name="parameters"></a>Parametreler
 `rgguidSpecificEngines`\
-[içinde] Otomatik bağlama olarak işaretlemek için her hata ayıklama altyapısı için GUID dizisi.
+'ndaki Her hata ayıklama altyapısının otomatik iliştirme olarak işaretleneceği GUID dizisi.
 
 `celtSpecificEngines`\
-[içinde] 'de `rgguidSpecificEngines`belirtilen motor sayısı.
+'ndaki İçinde belirtilen altyapı sayısı `rgguidSpecificEngines` .
 
 `pszStartPageUrl`\
-[içinde] Otomatik takma yaparken kullanılacak başlangıç URL'si.
+'ndaki Otomatik iliştirme sırasında kullanılacak başlangıç URL 'SI.
 
 `pbstrSessionID`\
-[çıkış] Otomatik olarak iliştirilen oturumun kimliği.
+dışı Otomatik olarak eklenen oturumun KIMLIĞI.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde hata kodu döndürür. Bir hata `E_AUTO_ATTACH_NOT_REGISTERED`kodu, otomatik ekleme sınıfı fabrika kayıtlı olmadığını gösterir.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür. Bir hata kodu `E_AUTO_ATTACH_NOT_REGISTERED` , otomatik iliştirme sınıf fabrikasının kaydedilmemiş olduğunu gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
  Belirtilen URL ile ilişkili bir program başlatıldığında, belirtilen hata ayıklama motorları otomatik olarak başlatılır ve eklenir.
