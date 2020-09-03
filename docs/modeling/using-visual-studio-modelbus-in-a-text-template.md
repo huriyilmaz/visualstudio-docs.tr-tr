@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 22a6c9cb035637347ffd501b5cf3b1038cd09369
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535947"
 ---
 # <a name="using-visual-studio-modelbus-in-a-text-template"></a>Metin Şablonunda Visual Studio ModelBus'ı Kullanma
@@ -41,7 +41,7 @@ Metin şablonunda bir ModelBus başvurusunu çözümlemek için, hedef DSL 'nin 
 
     3. İletişim kutusunda **Bu DSL 'Yi ModelBus**' a göstermek istiyorum ' u seçin. Bu DSL 'nin modellerini sergilemesini ve diğer DSLs başvurularını kullanmasını istiyorsanız her iki seçeneği de belirleyebilirsiniz.
 
-    4. **Tamam**'a tıklayın. DSL çözümüne yeni bir "ModelBusAdapter" projesi eklenir.
+    4. **Tamam**’a tıklayın. DSL çözümüne yeni bir "ModelBusAdapter" projesi eklenir.
 
     5. **Tüm Şablonları Dönüştür**' e tıklayın.
 
@@ -257,7 +257,7 @@ Artık ModelBus üzerinden metin şablonları tarafından erişilebilen bir DSL 
 
 1. En küçük dil çözümü şablonunu kullanarak yeni bir DSL oluşturun. Dil Mbtüketicisini adlandırın ve dosya adı uzantısını ". tüketme" olarak ayarlayın.
 
-2. DSL projesinde, MBProvider DSL derlemesine bir başvuru ekleyin. Sağ tıklayın `MBConsumer\Dsl\References` ve ardından **Başvuru Ekle**' ye tıklayın. **Araştır** sekmesine şunu bulun`MBProvider\Dsl\bin\Debug\Company.MBProvider.Dsl.dll`
+2. DSL projesinde, MBProvider DSL derlemesine bir başvuru ekleyin. Sağ tıklayın  `MBConsumer\Dsl\References` ve ardından **Başvuru Ekle**' ye tıklayın. **Araştır** sekmesine şunu bulun`MBProvider\Dsl\bin\Debug\Company.MBProvider.Dsl.dll`
 
     Bu, diğer DSL 'yi kullanan kodu oluşturmanızı sağlar. Birkaç DSLs başvurusu oluşturmak istiyorsanız, bunları da ekleyin.
 

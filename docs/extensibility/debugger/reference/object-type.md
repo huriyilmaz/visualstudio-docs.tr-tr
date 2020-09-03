@@ -1,5 +1,5 @@
 ---
-title: OBJECT_TYPE | Microsoft Dokümanlar
+title: OBJECT_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4ffb85a14e42dd57c345481285eb1f776b3866d3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714125"
 ---
 # <a name="object_type"></a>OBJECT_TYPE
-İfade değerlendiricisinden bir nesnenin türünü belirtir.
+İfade değerlendirici ' nden bir nesne türünü belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_OBJECT_TYPE { 
@@ -70,40 +70,40 @@ public enum enum_OBJECT_TYPE { 
 
 ## <a name="fields"></a>Alanlar
  `OBJECT_TYPE_BOOLEAN`\
- Nesnenin Boolean olduğunu gösterir.
+ Nesnenin Boole olduğunu gösterir.
 
  `OBJECT_TYPE_CHAR`\
  Nesnenin bir karakter olduğunu gösterir.
 
  `OBJECT_TYPE_I1`\
- Nesnenin tek bayt imzalı bir tamsayı olduğunu gösterir.
+ Nesnenin tek baytlık işaretli bir tamsayı olduğunu gösterir.
 
  `OBJECT_TYPE_U1`\
- Nesnenin bir bayt imzasız tamsayı olduğunu gösterir.
+ Nesnenin tek baytlık işaretsiz bir tamsayı olduğunu gösterir.
 
  `OBJECT_TYPE_I2`\
- Nesnenin iki bayt imzalı bir tamsayı olduğunu gösterir.
+ Nesnenin iki baytlık işaretli bir tamsayı olduğunu gösterir.
 
  `OBJECT_TYPE_U2`\
- Nesnenin iki bayt imzasız bir tamsayı olduğunu gösterir.
+ Nesnenin iki baytlık işaretsiz bir tamsayı olduğunu gösterir.
 
  `OBJECT_TYPE_I4`\
- Nesnenin dört bayt imzalı bir tamsayı olduğunu gösterir.
+ Nesnenin dört baytlık işaretli bir tamsayı olduğunu gösterir.
 
  `OBJECT_TYPE_U4`\
- Nesnenin dört bayt imzasız bir tamsayı olduğunu gösterir.
+ Nesnenin dört baytlık işaretsiz bir tamsayı olduğunu gösterir.
 
  `OBJECT_TYPE_I8`\
- Nesnenin sekiz bayt imzalı bir karşımat olduğunu gösterir.
+ Nesnenin sekiz baytlık işaretli bir tamsayı olduğunu gösterir.
 
  `OBJECT_TYPE_U8`\
- Nesnenin sekiz bayt imzasız bir karşıcı olduğunu gösterir.
+ Nesnenin sekiz baytlık işaretsiz bir tamsayı olduğunu gösterir.
 
  `OBJECT_TYPE_R4`\
- Nesnenin dört bayt kayan nokta numarası olduğunu gösterir.
+ Nesnenin dört baytlık kayan noktalı sayı olduğunu gösterir.
 
  `OBJECT_TYPE_R8`\
- Nesnenin sekiz bayt kayan nokta lı bir sayı olduğunu gösterir.
+ Nesnenin sekiz baytlık kayan noktalı sayı olduğunu gösterir.
 
  `OBJECT_TYPE_OBJECT`\
  Nesnenin bir nesne olduğunu gösterir.
@@ -112,19 +112,19 @@ public enum enum_OBJECT_TYPE { 
  Nesnenin NULL olduğunu gösterir.
 
  `OBJECT_TYPE_CLASS`\
- Nesnenin bir sınıf olduğunu gösterir.
+ Nesnenin bir sınıf olduğunu belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
- [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md) ve [CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md) yöntemlerine bağımsız değişken olarak geçirilir.
+ [Createprimitiveobject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md) ve [createarrayobject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md) yöntemlerine bir bağımsız değişken olarak geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: ee.h
+ Üstbilgi: ee. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md)
 - [CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md)

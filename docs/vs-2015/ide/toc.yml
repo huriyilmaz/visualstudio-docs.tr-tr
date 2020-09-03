@@ -12,9 +12,9 @@
       items:
         - name: Visual Studio ile Geliştirmeye Başlama
           href: get-started-developing-with-visual-studio.md
-        - name: 'Visual C# ve Visual Basic''e Başlarken'
+        - name: Visual C# ve Visual Basic'e Başlarken
           items:
-            - name: 'Visual C# ve Visual Basic''e Başlarken'
+            - name: Visual C# ve Visual Basic'e Başlarken
               href: getting-started-with-visual-csharp-and-visual-basic.md
             - name: Basit bir Uygulama Oluşturma
               href: walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md
@@ -188,11 +188,11 @@
           href: outlining.md
         - name: Yeniden Düzenle
           href: refactoring-in-visual-studio.md
-        - name: Üretkenlik ipuçları
+        - name: Üretkenlik İpuçları
           items:
-            - name: Üretkenlik ipuçları
+            - name: Üretkenlik İpuçları
               href: productivity-tips-for-visual-studio.md
-            - name: İp Uçları ve Püf Noktaları
+            - name: İpuçları ve Püf Noktalar
               href: tips-and-tricks-for-visual-studio.md
             - name: Klavye Kısayollarını Tanımlama ve Özelleştirme
               items:
@@ -212,7 +212,7 @@
                   href: visual-basic-specific-intellisense.md
                 - name: Visual Basic'de Filtrelenmiş Tamamlanma Listeleri
                   href: filtered-completion-lists-in-visual-basic.md
-            - name: 'Visual C# IntelliSense'
+            - name: Visual C# IntelliSense
               href: visual-csharp-intellisense.md
             - name: Kullanımdan Üret Özelliği ile Önce Test Desteği
               href: walkthrough-test-first-support-with-the-generate-from-usage-feature.md
@@ -280,13 +280,13 @@
               href: walkthrough-creating-a-code-snippet.md
             - name: Kod Parçacıklarını Dağıtma
               href: how-to-distribute-code-snippets.md
-            - name: 'Visual C# Kod Parçacıkları'
+            - name: Visual C# Kod Parçacıkları
               href: visual-csharp-code-snippets.md
             - name: Visual C++ Kod Parçacıkları
               href: visual-cpp-code-snippets.md
             - name: Kod Parçacığı İşlevleri
               href: code-snippet-functions.md
-            - name: 'C# Yeniden Düzenleme Kod Parçacıklarını Geri Yükleme'
+            - name: C# Yeniden Düzenleme Kod Parçacıklarını Geri Yükleme
               href: how-to-restore-csharp-refactoring-snippets.md
             - name: Surround-with Kod Parçacıklarını Kullanma
               href: how-to-use-surround-with-code-snippets.md
@@ -390,29 +390,29 @@
               href: find-code-changes-and-other-history-with-codelens.md
             - name: CodeIndex Komutu
               href: codeindex-command.md
-        - name: 'C# için Visual Studio Geliştirme Ortamını Kullanma'
+        - name: C# için Visual Studio Geliştirme Ortamını Kullanma
           items:
-            - name: 'C# için Visual Studio Geliştirme Ortamını Kullanma'
+            - name: C# için Visual Studio Geliştirme Ortamını Kullanma
               href: ../csharp-ide/using-the-visual-studio-development-environment-for-csharp.md
-            - name: 'C# Projesine Uygulama Yapılandırma Dosyası Ekleme'
+            - name: C# Projesine Uygulama Yapılandırma Dosyası Ekleme
               href: ../csharp-ide/how-to-add-an-application-configuration-file-to-a-csharp-project.md
             - name: Kaynak olarak Meta Veriler
               href: ../csharp-ide/metadata-as-source.md
-            - name: 'Yeniden Düzenleme (C#)'
+            - name: Yeniden Düzenleme (C#)
               items:
-                - name: 'Yeniden Düzenleme (C#)'
+                - name: Yeniden Düzenleme (C#)
                   href: ../csharp-ide/refactoring-csharp.md
-                - name: 'Ayıklama Yöntemi Yeniden Düzenlemesi (C#)'
+                - name: Ayıklama Yöntemi Yeniden Düzenlemesi (C#)
                   href: ../csharp-ide/extract-method-refactoring-csharp.md
-                - name: 'Yeniden Düzenlemeyi (C#) yeniden adlandırma'
+                - name: Yeniden Düzenlemeyi (C#) yeniden adlandırma
                   href: ../csharp-ide/rename-refactoring-csharp.md
-                - name: 'Alan Yeniden Düzenlemesini Yalıtma (C#)'
+                - name: Alan Yeniden Düzenlemesini Yalıtma (C#)
                   href: ../csharp-ide/encapsulate-field-refactoring-csharp.md
-                - name: 'Ayıklama Arabirimi Yeniden Düzenlemesi (C#)'
+                - name: Ayıklama Arabirimi Yeniden Düzenlemesi (C#)
                   href: ../csharp-ide/extract-interface-refactoring-csharp.md
-                - name: 'Parametreleri Kaldır Yeniden Düzenlemesi (C#)'
+                - name: Parametreleri Kaldır Yeniden Düzenlemesi (C#)
                   href: ../csharp-ide/remove-parameters-refactoring-csharp.md
-                - name: 'Parametreleri Yeniden Sırala (C#) yeniden düzenlemesi'
+                - name: Parametreleri Yeniden Sırala (C#) yeniden düzenlemesi
                   href: ../csharp-ide/reorder-parameters-refactoring-csharp.md
     - name: Visual Studio'da Hata Ayıklama
       href: ../debugger/debugging-in-visual-studio.md
@@ -470,7 +470,7 @@
               href: how-to-configure-projects-to-target-multiple-platforms.md
         - name: Derleme Olayları Belirtme (Visual Basic)
           href: how-to-specify-build-events-visual-basic.md
-        - name: 'Derleme Olayları Belirtme (C#)'
+        - name: Derleme Olayları Belirtme (C#)
           href: how-to-specify-build-events-csharp.md
         - name: Visual Basic'teki Uyarıları Yapılandırma
           href: configuring-warnings-in-visual-basic.md
@@ -510,7 +510,7 @@
           href: how-to-customize-menus-and-toolbars-in-visual-studio.md
         - name: Pencere düzenlerini özelleştirme
           href: customizing-window-layouts-in-visual-studio.md
-        - name: Başlangıç Sayfasını Özelleştirme
+        - name: Başlangıç Sayfasını özelleştirme
           href: customizing-the-start-page-for-visual-studio.md
         - name: Dış Araçları Yönetme
           href: managing-external-tools.md
@@ -754,7 +754,7 @@
                   items:
                     - name: 'Derleme Sayfası, Proje Tasarımcısı (C#)'
                       href: reference/build-page-project-designer-csharp.md
-                    - name: 'Gelişmiş Derleme Ayarları İletişim Kutusu (C#)'
+                    - name: Gelişmiş Derleme Ayarları İletişim Kutusu (C#)
                       href: reference/advanced-build-settings-dialog-box-csharp.md
                 - name: 'Kod Çözümlemesi, Proje Tasarımcısı'
                   href: reference/code-analysis-project-designer.md
@@ -956,7 +956,7 @@
           href: reference/visual-studio-for-applications-reference.md
         - name: MSBuild
           href: ../msbuild/msbuild.md
-        - name: IDE Hatalarında Sorun Giderme Kaynakları
+        - name: IDE hataları için Sorun Giderme kaynakları
           href: reference/resources-for-troubleshooting-integrated-development-environment-errors.md
         - name: Engelliler için Erişilebilirlik
           items:

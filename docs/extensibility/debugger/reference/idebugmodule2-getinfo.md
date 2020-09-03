@@ -1,5 +1,5 @@
 ---
-title: IDebugModule2::GetInfo | Microsoft Dokümanlar
+title: 'IDebugModule2:: GetInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,16 +17,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c68c583702d7def5a7bff3ee40a9b8b2c537bb31
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726955"
 ---
 # <a name="idebugmodule2getinfo"></a>IDebugModule2::GetInfo
-Bu modül hakkında bilgi alır.
+Bu modülle ilgili bilgileri alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetInfo( 
@@ -44,16 +44,16 @@ int GetInfo( 
 
 ## <a name="parameters"></a>Parametreler
 `dwFields`\
-[içinde] [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) numaralandırmadan hangi alanların dolduruleceğini belirten bayrakların `pInfo` birleşimi.
+'ndaki [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) Numaralandırmadaki, doldurulacak alanları belirten bayrakların birleşimi `pInfo` .
 
 `pInfo`\
-[içinde, dışarı] Modülün açıklamasıyla doldurulmuş [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) bir yapı.
+[in, out] Modülün açıklamasıyla doldurulmuş [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) yapısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) yapısı **Modüller** penceresinde görüntülenen modülün adını içerir.
+ [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) yapısı, **modüller** penceresinde görüntülenen modülün adını içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)

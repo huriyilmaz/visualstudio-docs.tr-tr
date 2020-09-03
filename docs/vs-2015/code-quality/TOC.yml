@@ -10,13 +10,13 @@
           href: code-analysis-for-managed-code-overview.md
         - name: 'Nasıl yapılır: Otomatik Kod Çözümlemesini Etkinleştirme ve Devre Dışı Bırakma'
           href: how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md
-        - name: 'Nasıl yapılır: Tam Çözüm Analizini Etkinleştirme ve Devre Dışı Bırakma'
+        - name: 'Nasıl Yapılır: Tam Çözüm Analizini Etkinleştirme ve Devre Dışı Bırakma'
           href: how-to-enable-and-disable-full-solution-analysis-for-managed-code.md
         - name: Otomatik özelliği askıya alma
           href: automatic-feature-suspension.md
-        - name: 'Nasıl yapılır: Kod Analizini Elle Çalıştırma'
+        - name: 'Nasıl yapılır: Kod Çözümlemesini Elle Çalıştırma'
           href: how-to-run-code-analysis-manually-for-managed-code.md
-        - name: 'İzlenecek yol: Kod Hataları İçin Yönetilen Kodu Analiz Etme'
+        - name: 'İzlenecek yol: Kod Kusurları için Yönetilen Kodu Analiz Etme'
           href: walkthrough-analyzing-managed-code-for-code-defects.md
         - name: SuppressMessage Özniteliğini Kullanarak Uyarıları Bastırma
           items:
@@ -28,13 +28,13 @@
               href: how-to-suppress-warnings-by-using-the-menu-item.md
             - name: 'Nasıl yapılır: Üretilen Kod İçin Uyarıları Bastırma'
               href: how-to-suppress-code-analysis-warnings-for-generated-code.md
-            - name: 'Nasıl yapılır: Kod Analizi Sözlüğünü Özelleştirme'
+            - name: 'Nasıl yapılır: Kod Çözümleme Dizinini Özelleştirme'
               href: how-to-customize-the-code-analysis-dictionary.md
             - name: Anonim Yöntemler ve Kod Analizi
               href: anonymous-methods-and-code-analysis.md
-            - name: 'Nasıl yapılır: Yönetilen Kod Hatalarını Görüntüleme'
+            - name: 'Nasıl yapılır: Yönetilen Kod Kusurlarını Görüntüleme'
               href: how-to-view-managed-code-defects.md
-            - name: 'Nasıl yapılır: Yönetilen Kod Hatası için İş Öğesi Oluşturma'
+            - name: 'Nasıl yapılır: Yönetilen bir Kod Hatası için bir İş Öğesi Oluşturma'
               href: how-to-create-a-work-item-for-a-managed-code-defect.md
             - name: Yönetilen Kod için Kod Analizi Uyarıları
               items:
@@ -164,7 +164,7 @@
                   href: ca1058-types-should-not-extend-certain-base-types.md
                 - name: 'CA1059: Üyeler belirli somut türleri kullanıma sunmamalıdır'
                   href: ca1059-members-should-not-expose-certain-concrete-types.md
-                - name: 'CA1060: P/Invokes''u NativeMethods sınıfına taşıyın'
+                - name: 'CA1060: P/Invokes öğesini NativeMethods sınıfına taşıyın'
                   href: ca1060-move-p-invokes-to-nativemethods-class.md
                 - name: 'CA1061: Temel sınıf metotlarını gizlemeyin'
                   href: ca1061-do-not-hide-base-class-methods.md
@@ -216,7 +216,7 @@
                   href: ca1402-avoid-overloads-in-com-visible-interfaces.md
                 - name: 'CA1403: Otomatik yerleşim türleri COM görünebilir olmamalıdır'
                   href: ca1403-auto-layout-types-should-not-be-com-visible.md
-                - name: 'CA1404: P/Invoke ardından hemen GetLastError çağırın'
+                - name: 'CA1404: P/Invoke ardından hemen GetLastError çağır'
                   href: ca1404-call-getlasterror-immediately-after-p-invoke.md
                 - name: 'CA1405: COM görünebilir tür taban türler COM görünebilir olmalıdır'
                   href: ca1405-com-visible-type-base-types-should-be-com-visible.md
@@ -572,7 +572,7 @@
   items:
     - name: C/C++ Kod Kalitesini Analiz Etme
       href: analyzing-c-cpp-code-quality-by-using-code-analysis.md
-    - name: 'Hızlı Başlangıç: C/C++ için Kod Analizi'
+    - name: 'Hızlı Başlangıç: C/C++ İçin Kod Analizi'
       href: quick-start-code-analysis-for-c-cpp.md
     - name: Çalıştırılacak C++ Kurallarını Belirtmek için Kural Kümeleri Kullanma
       href: using-rule-sets-to-specify-the-cpp-rules-to-run.md
@@ -582,9 +582,9 @@
       href: code-analysis-for-c-cpp-overview.md
     - name: 'Nasıl yapılır: C/C++ Projeleri için Kod Analizi Özelliklerini Ayarlama'
       href: how-to-set-code-analysis-properties-for-c-cpp-projects.md
-    - name: 'İzlenecek yol: C/C++ Kodunda Hata Olup Olmadığını Analiz Etme'
+    - name: 'İzlenecek yol: Kod Kusurları için C/C++ Kodunu Analiz Etme'
       items:
-        - name: 'İzlenecek yol: C/C++ Kodunda Hata Olup Olmadığını Analiz Etme'
+        - name: 'İzlenecek yol: Kod Kusurları için C/C++ Kodunu Analiz Etme'
           href: walkthrough-analyzing-c-cpp-code-for-defects.md
         - name: Gösterim Örneği
           href: demo-sample.md
@@ -1190,7 +1190,7 @@
           items:
             - name: Kod Çözümleme Kurallarını Gruplandırmak için Kural Kümeleri Kullanma
               href: using-rule-sets-to-group-code-analysis-rules.md
-            - name: 'İzlenecek yol: Özel bir Kural Kümesini Yapılandırma ve Kullanma'
+            - name: 'İzlenecek Yol: Özel bir Kural Kümesini Yapılandırma ve Kullanma'
               href: walkthrough-configuring-and-using-a-custom-rule-set.md
             - name: 'Nasıl yapılır: Yönetilen Kod Projesi İçin Kod Analizini Yapılandırma'
               href: how-to-configure-code-analysis-for-a-managed-code-project.md
@@ -1198,7 +1198,7 @@
               href: how-to-configure-code-analysis-for-an-aspnet-web-application.md
             - name: 'Nasıl yapılır: Takım Projesi İade İlkesiyle Kod Proje Kural Kümelerini Eşitleme'
               href: how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy.md
-            - name: 'Nasıl yapılır: Bir Çözümde Birden Çok Proje İçin Kural Kümesi Belirtme'
+            - name: 'Nasıl Yapılır: Bir Çözümde Birden Çok Proje İçin Kural Kümesi Belirtme'
               href: how-to-specify-managed-code-rule-sets-for-multiple-projects-in-a-solution.md
             - name: Özel Kural Kümeleri Oluşturma
               items:
@@ -1304,11 +1304,11 @@
               items:
                 - name: Kod Analizi İade İlkeleri Oluşturma ve Kullanma
                   href: creating-and-using-code-analysis-check-in-policies.md
-                - name: 'Nasıl yapılır: Standart Kod Analizi İade İlkeleri Oluşturma veya Güncelleştirme'
+                - name: 'Nasıl yapılır: Standart Kod Çözümleme İade İlkeleri Oluşturma veya Güncelleme'
                   href: how-to-create-or-update-standard-code-analysis-check-in-policies.md
                 - name: Yönetilen Kod için Özel İade İlkelerini Uygulama
                   href: implementing-custom-code-analysis-check-in-policies-for-managed-code.md
-                - name: 'Nasıl yapılır: Bir Kod Analizi İade İlkesi ile Bakımı Yapılabilir Kodu Zorlama'
+                - name: 'Nasıl yapılır: Bir Kod Çözümleme İade İlkesi ile Bakımı Yapılabilir Kodu Zorlama'
                   href: how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy.md
                 - name: Kod Analizi İade İlkeleri için Sürüm Uyumluluğu
                   href: version-compatibility-for-code-analysis-check-in-policies.md
@@ -1318,7 +1318,7 @@
       href: measuring-complexity-and-maintainability-of-managed-code.md
     - name: Kod Ölçüm Değerleri
       href: code-metrics-values.md
-    - name: 'Nasıl yapılır: Kod Ölçüm Verileri Üretme'
+    - name: 'Nasıl yapılır: Kod Ölçümleri Verileri Üretme'
       href: how-to-generate-code-metrics-data.md
     - name: Kod Ölçüm Verileri ile çalışma
       href: working-with-code-metrics-data.md

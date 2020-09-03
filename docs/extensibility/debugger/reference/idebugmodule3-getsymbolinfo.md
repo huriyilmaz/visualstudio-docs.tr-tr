@@ -1,5 +1,5 @@
 ---
-title: IDebugModule3::GetSymbolInfo | Microsoft Dokümanlar
+title: 'IDebugModule3:: Getsymbolınfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,16 +17,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 3aafb28715f58eaba4499b47a2e1dee15b82ed14
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726895"
 ---
 # <a name="idebugmodule3getsymbolinfo"></a>IDebugModule3::GetSymbolInfo
-Sembolleriçin aranan yolların listesini ve her yolu aramanın sonuçlarını alır.
+Simgeler için aranan yolların yanı sıra her bir yolu aramanın sonuçlarını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetSymbolInfo(
@@ -44,29 +44,29 @@ int GetSymbolInfo(
 
 ## <a name="parameters"></a>Parametreler
 `dwFields`\
-[içinde] Hangi alanların dolduruleceğini belirten [numaralandırma SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) gelen `pInfo` bayrakların birleşimi.
+'ndaki [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) Numaralandırmadaki, doldurulacak alanları belirten bayrakların birleşimi `pInfo` .
 
 `pInfo`\
-[çıkış] Üyeleri belirtilen bilgilerle doldurulacak [olan MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md) bir yapı. Bu null değeri ise, bu `E_INVALIDARG`yöntem döndürür.
+dışı Üyeleri belirtilen bilgilerle doldurulacak [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md) yapısı. Bu null bir değer ise, bu yöntem döndürür `E_INVALIDARG` .
 
 ## <a name="return-value"></a>Dönüş Değeri
-Yöntem başarılı olursa, geri `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+Yöntem başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 > [!NOTE]
-> Döndürülen dize `MODULE_SYMBOL_SEARCH_INFO` (yapıdaki) döndürülse `S_OK` bile boş olabilir. Bu durumda, döndürülecek arama bilgisi yoktu.
+> Döndürülen dize ( `MODULE_SYMBOL_SEARCH_INFO` yapıda) döndürülse bile boş olabilir `S_OK` . Bu durumda, döndürülecek arama bilgisi yoktu.
 
 ## <a name="remarks"></a>Açıklamalar
-`MODULE_SYMBOL_SEARCH_INFO` Yapının `bstrVerboseSearchInfo` alanı boş değilse, aranan yolların bir listesini ve bu aramanın sonuçlarını içerir. Liste bir yol ile biçimlendirilir, ardından bir elips ("..."), ardından sonuç gelir. Birden fazla yol sonuç çifti varsa, her çift bir "\r\n" (taşıma-döndürme/linefeed) çifti ile ayrılır. Desen şuna benzer:
+`bstrVerboseSearchInfo` `MODULE_SYMBOL_SEARCH_INFO` Yapı alanı boş değilse, aranan yolların ve bu aramanın sonuçlarının bir listesini içerir. Liste, bir yol ile, ardından üç nokta ("...") ve ardından sonuç olarak biçimlendirilir. Birden fazla yol sonuç çifti varsa, her çift bir "\r\n" (satır başı/linefeed) çifti ile ayrılır. Bu model şöyle görünür:
 
-\<yol>... \<sonuç>\r\n\<yolu>... \<sonuç>\r\n\<yolu>... \<sonuç>
+\<path>...\<result> \r\n \<path> ... \<result> \r\n \<path> ...\<result>
 
-Son girişin \r\n sırası olmadığını unutmayın.
+Son girişin bir \r\n dizisine sahip olmadığına unutmayın.
 
 ## <a name="example"></a>Örnek
-Bu örnekte, bu yöntem üç farklı arama sonucuyla üç yol döndürür. Her satır bir satır döndürme/linefeed çifti ile sonlandırılır. Örnek çıktı, arama sonuçlarını tek bir dize olarak yazdırır.
+Bu örnekte, bu yöntem üç farklı arama sonucu olan üç yol döndürür. Her satır, bir satır başı/satır besleme çifti ile sonlandırılır. Örnek çıktı yalnızca arama sonuçlarını tek bir dize olarak yazdırır.
 
 > [!NOTE]
-> Durum sonucu hemen aşağıdaki her şey "..." hattın sonuna kadar.
+> Durum sonucu, "..." öğesinden hemen sonra gelen her şey olur satırın sonuna kadar.
 
 ```cpp
 void ShowSymbolSearchResults(IDebugModule3 *pIDebugModule3)
@@ -84,9 +84,9 @@ void ShowSymbolSearchResults(IDebugModule3 *pIDebugModule3)
 }
 ```
 
-**c:\semboller\user32.pdb... Dosya bulunamadı.** 
- **c:\winnt\symbols\user32.pdb... Sürüm eşleşmez.** 
- ** \\\symbols\symbols\user32.dll\0a8sd0ad8ad\user32.pdb... Semboller yüklendi.**
+**c:\symbols\user32.pdb... Dosya bulunamadı.** 
+ **c:\winnt\symbols\user32.pdb... Sürüm eşleşmiyor.** 
+ ** \\\symbols\symbols\user32.dll \0A8sd0ad8ad\user32.pdb... Semboller yüklendi.**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

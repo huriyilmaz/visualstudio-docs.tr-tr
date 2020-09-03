@@ -1,5 +1,5 @@
 ---
-title: IDebugModOpt | Microsoft Dokümanlar
+title: Idebugmodopt | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,16 +11,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: e142ed1229f59cfc22ff33cba48e9e35eb4e4406
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726982"
 ---
 # <a name="idebugmodopt"></a>IDebugModOpt
-Hata ayıklama isteğe bağlı değiştiriyi temsil eder.
+Bir hata ayıklama isteğe bağlı değiştiricisini temsil eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugModOpt : IUnknown
@@ -34,11 +34,11 @@ IDebugModOpt : IUnknown
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetModOpts](../../../extensibility/debugger/reference/idebugmodopt-getmodopts.md)|İsteğe bağlı değiştiriciler listesini alır.|
+|[GetModOpts](../../../extensibility/debugger/reference/idebugmodopt-getmodopts.md)|İsteğe bağlı değiştiricilerin bir listesini alır.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: Ş.h
+ Üstbilgi: SH. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll

@@ -10,20 +10,20 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4b305d88779603b374e5f95842d7a5271a657268
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666530"
 ---
-# <a name="how-to-execute-an-xslt-transformation-from-the-xml-editor"></a>Nasıl yapılır: XML düzenleyicisinden XSLT dönüşümü yürütme
+# <a name="how-to-execute-an-xslt-transformation-from-the-xml-editor"></a>Nasıl Yapılır: XML Düzenleyicisinden XSLT Dönüştürmesi Yürütme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 XML Düzenleyicisi bir XSLT stil sayfasını bir XML belgesi ile ilişkilendirmenize, dönüştürmeyi gerçekleştirmenize ve çıktıyı görüntülemenize olanak sağlar. XSLT dönüşümünde elde edilen çıktı yeni bir belge penceresinde görüntülenir.
 
- **Output** özelliği, çıktının dosya adını belirtir. **Output** özelliği boşsa, geçici dizininizde bir dosya adı oluşturulur. Dosya uzantısı, stil sayfanızdaki `xsl:output` öğesine dayalıdır ve. xml,. txt veya. htm olabilir.
+ **Output** özelliği, çıktının dosya adını belirtir. **Output** özelliği boşsa, geçici dizininizde bir dosya adı oluşturulur. Dosya uzantısı, `xsl:output` Stil sayfanızdaki öğesine dayalıdır ve. xml,. txt veya. htm olabilir.
 
- **Output** özelliği. htm veya. html uzantılı bir dosya adı BELIRTIYORSA, XSLT çıkışının [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer kullanılarak önizlemesi yapılır. Diğer tüm dosya uzantıları, [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio tarafından seçilen varsayılan düzenleyici kullanılarak açılır. Örneğin, dosya uzantısı. xml ise, Visual Studio XML düzenleyicisini kullanır.
+ **Output** özelliği. htm veya. html uzantılı bir dosya adı BELIRTIYORSA, XSLT çıkışı Internet Explorer kullanılarak önizlenebilir [!INCLUDE[msCoName](../includes/msconame-md.md)] . Diğer tüm dosya uzantıları, Visual Studio tarafından seçilen varsayılan düzenleyici kullanılarak açılır [!INCLUDE[msCoName](../includes/msconame-md.md)] . Örneğin, dosya uzantısı. xml ise, Visual Studio XML düzenleyicisini kullanır.
 
 ### <a name="to-execute-an-xslt-transformation-from-an-xml-document"></a>Bir XML belgesinden XSLT dönüşümünü yürütmek için
 
@@ -31,9 +31,9 @@ XML Düzenleyicisi bir XSLT stil sayfasını bir XML belgesi ile ilişkilendirme
 
 2. XSLT stil sayfasını XML belgesiyle ilişkilendirin.
 
-    - XML belgesine bir `xml-stylesheet` işleme yönergesi ekleyin. Örneğin, belge giriş satırına aşağıdaki satırı `<?xml-stylesheet type='text/xsl' href='filename.xsl'?>` ekleyin.
+    - `xml-stylesheet`XML belgesine bir işleme yönergesi ekleyin. Örneğin, belge giriş satırına aşağıdaki satırı ekleyin `<?xml-stylesheet type='text/xsl' href='filename.xsl'?>` .
 
-         veya
+         -veya-
 
     - **Özellikler** PENCERESINI kullanarak XSLT stil sayfasını ekleyin. Belge **Özellikleri penceresinde** **stil sayfası** alanı için **Araştır** düğmesine tıklayın, XSLT stil sayfasını seçin ve **Aç**' a tıklayın.
 

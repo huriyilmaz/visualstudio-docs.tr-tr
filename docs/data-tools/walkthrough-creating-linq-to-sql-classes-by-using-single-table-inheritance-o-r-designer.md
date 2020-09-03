@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: afe4063f2d96b2ae46664ec6642ec1a4e98ab892
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535271"
 ---
 # <a name="walkthrough-create-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>İzlenecek yol: tek tablo devralma (O/R Designer) kullanarak LINQ to SQL sınıfları oluşturma
@@ -51,11 +51,11 @@ Kalıtımın nasıl çalıştığını görmek için küçük bir tablo oluştur
 
     |Sütun adı|Veri Türü|Null değerlere izin ver|
     |-----------------|---------------|-----------------|
-    |**ID**|**int**|**Yanlýþ**|
-    |**Tür**|**int**|**Değeri**|
-    |**FirstName**|**nvarchar (200)**|**Yanlýþ**|
-    |**Soyadı**|**nvarchar (200)**|**Yanlýþ**|
-    |**Manager**|**int**|**Değeri**|
+    |**ID**|**int**|**False**|
+    |**Tür**|**int**|**True**|
+    |**FirstName**|**nvarchar (200)**|**False**|
+    |**LastName**|**nvarchar (200)**|**False**|
+    |**Manager**|**int**|**True**|
 
 3. KIMLIK sütununu birincil anahtar olarak ayarlayın.
 
@@ -70,7 +70,7 @@ Kalıtımın doğru yapılandırıldığını doğrulayabilmeniz için tablonun 
 
 2. Aşağıdaki verileri tabloya kopyalayın. (Bunu kopyalayabilir ve ardından **sonuçlar** bölmesinde tüm satırı seçerek tabloya yapıştırabilirsiniz.)
 
-    |**ID**|**Tür**|**FirstName**|**Soyadı**|**Manager**|
+    |**ID**|**Tür**|**FirstName**|**LastName**|**Manager**|
     |-|-|-|-|-|
     |**1**|**1**|**Gamze**|**Wallace**|**DEĞER**|
     |**2**|**1**|**Carlos**|**Grilo dili**|**DEĞER**|

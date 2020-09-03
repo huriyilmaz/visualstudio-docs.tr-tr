@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::IsCustomAttributeDefined | Microsoft Dokümanlar
+title: 'IDebugMethodField:: IsCustomAttributeDefined | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: d60e7a451a18ff8efbf47a008831109cd7f747c9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727112"
 ---
 # <a name="idebugmethodfieldiscustomattributedefined"></a>IDebugMethodField::IsCustomAttributeDefined
-Belirli bir özel öznitelik tanımlı olup olmadığını belirler.
+Belirli bir özel özniteliğin tanımlanıp tanımlanmadığını belirler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT IsCustomAttributeDefined( 
@@ -41,10 +41,10 @@ int IsCustomAttributeDefined(
 
 ## <a name="parameters"></a>Parametreler
 `pszCustomAttributeName`\
-[içinde] Bulmak için özel öznitelik adını içeren bir dize.
+'ndaki Bulunacak özel özniteliğin adını içeren bir dize.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Bu yöntemde özel öznitelik tanımlanmışsa S_OK döndürür, aksi takdirde S_FALSE döndürür.
+ Özel öznitelik bu yöntemde tanımlanmışsa S_OK döndürür, aksi takdirde S_FALSE döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

@@ -1,5 +1,5 @@
 ---
-title: Etkinlik Kaynakları (Visual Studio SDK) | Microsoft Dokümanlar
+title: Olay kaynakları (Visual Studio SDK) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +11,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 13842ab7b231d04bdbcafdf32534edc4eb2a9af6
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738776"
 ---
-# <a name="event-sources-visual-studio-sdk"></a>Etkinlik kaynakları (Visual Studio SDK)
-İki olay kaynağı vardır: hata ayıklama altyapısı (DE) ve Oturum Hata Ayıklama Yöneticisi (SDM). De'den gönderilen olaylar NULL olmayan bir motora sahipken, SDM'den gönderilen olaylar null motoruna sahiptir.
+# <a name="event-sources-visual-studio-sdk"></a>Olay kaynakları (Visual Studio SDK)
+İki olay kaynağı vardır: hata ayıklama altyapısı (DE) ve oturum hata ayıklama Yöneticisi (SDM). Sürümünden gönderilen olaylar NULL olmayan bir altyapıya sahip olsa da, SDM 'den gönderilen olayların NULL bir altyapısı vardır.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, **IDebugProgramCreateEvent2'nin** DE'den SDM'ye nasıl gönderilebildiğini gösterir.
+Aşağıdaki örnek, **IDebugProgramCreateEvent2** öğesinden SDM 'ye nasıl gönderileceğini gösterir.
 
 ```csharp
 CDebugProgramCreateEvent* pProgramCreateEvent = new CDebugProgramCreateEvent();
@@ -73,4 +73,4 @@ HRESULT CEvent::SendAsynchronousEvent(IDebugEventCallback2 *pCallback, IDebugEng
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Etkinlik gönderme](../../extensibility/debugger/sending-events.md)
+- [Olayları gönderme](../../extensibility/debugger/sending-events.md)

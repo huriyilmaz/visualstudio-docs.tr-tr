@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8589be1bd1c1e9ad86a412d4f8bd2630c93a42ac
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535999"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>T4 Metin Şablonları Kullanarak Tasarım Zamanı Kodu Oluşturma
@@ -62,7 +62,7 @@ Metin şablonu, oluşturmak istediğiniz metnin bir karışımını ve metnin de
 
 5. Dosyayı kaydedin.
 
-    Şablonu çalıştırmak istediğinizi onaylamanızı isteyen bir **güvenlik uyarısı** ileti kutusu görebilirsiniz. **Tamam**'a tıklayın.
+    Şablonu çalıştırmak istediğinizi onaylamanızı isteyen bir **güvenlik uyarısı** ileti kutusu görebilirsiniz. **Tamam**’a tıklayın.
 
 6. **Çözüm Gezgini**' de, şablon dosyası düğümünü genişletin ve **. txt**uzantılı bir dosya görürsünüz. Dosya şablondan oluşturulan metni içerir.
 
@@ -134,7 +134,7 @@ Metin şablonunda hata ayıklamak için:
    Şablon, kesme noktalarında çalışır ve duraklar. Değişkenleri inceleyebilir ve her zamanki şekilde kodda adım adım gezinebilirsiniz.
 
 > [!TIP]
-> `debug="true"`oluşturulan koda daha fazla satır numaralandırma yönergesi ekleyerek oluşturulan kod eşlemesini metin şablonuna daha doğru hale getirir. Ayrıldıysanız, kesme noktaları yanlış durumda çalışmayı durdurabilir.
+> `debug="true"` oluşturulan koda daha fazla satır numaralandırma yönergesi ekleyerek oluşturulan kod eşlemesini metin şablonuna daha doğru hale getirir. Ayrıldıysanız, kesme noktaları yanlış durumda çalışmayı durdurabilir.
 >
 > Ancak, hata ayıklama yapmadığınızda bile şablon yönergesinin yan tümcesini bırakabilirsiniz. Bu, yalnızca performansta çok küçük bir bırakma oluşmasına neden olur.
 
@@ -290,7 +290,7 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 > [!TIP]
 > Bir metin şablonu kendi uygulama etki alanında çalışır ve hizmetlere sıralama tarafından erişilir. Bu durumda, GetCOMService (), GetService () öğesinden daha güvenilirdir.
 
-## <a name="regenerating-the-code-automatically"></a><a name="Regenerating"></a>Kodu otomatik olarak yeniden oluşturma
+## <a name="regenerating-the-code-automatically"></a><a name="Regenerating"></a> Kodu otomatik olarak yeniden oluşturma
 
 Genellikle, bir Visual Studio çözümündeki birkaç dosya bir giriş modeliyle oluşturulur. Her dosya kendi şablonundan oluşturulur, ancak şablonlar hepsi aynı modele başvurur.
 
@@ -336,7 +336,7 @@ Error("An error message");
 Warning("A warning message");
 ```
 
-## <a name="converting-an-existing-file-to-a-template"></a><a name="Converting"></a>Var olan bir dosyayı şablona dönüştürme
+## <a name="converting-an-existing-file-to-a-template"></a><a name="Converting"></a> Var olan bir dosyayı şablona dönüştürme
 
 Şablonların yararlı bir özelliği, oluşturdukları dosyalara çok benzer bir şekilde, eklenen bazı program kodları ile birlikte görünmesidir. Bu, şablon oluşturma yararlı bir yöntemini önerir. Önce bir dosya gibi bir prototip olarak sıradan bir dosya oluşturun [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] ve sonuç olarak ortaya çıkan dosyayı değişen nesil kod olarak tanıtın.
 
@@ -353,7 +353,7 @@ Warning("A warning message");
    | | |
    |-|-|
    | **Özel araç =** | **TextTemplatingFileGenerator** |
-   | **Derleme eylemi =** | **Yok** |
+   | **Derleme eylemi =** | **Hiçbiri** |
 
 5. Dosyanın başına aşağıdaki satırları ekleyin:
 
@@ -380,7 +380,7 @@ Lütfen [T4 Metin şablonları yazma yönergelerine](../modeling/guidelines-for-
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-|Sonraki adım|Konu başlığı|
+|Sonraki adım|Konu|
 |-|-|
 |Yardımcı işlevler, dahil edilen dosyalar ve dış verileri kullanan kodla daha gelişmiş bir metin şablonunu yazma ve hata ayıklama.|[T4 Metin Şablonu Yazma](../modeling/writing-a-t4-text-template.md)|
 |Çalışma zamanında şablonlardan belgeler oluşturun.|[T4 Metin Şablonları İle Çalışma Süresi Metni Oluşturma](../modeling/run-time-text-generation-with-t4-text-templates.md)|

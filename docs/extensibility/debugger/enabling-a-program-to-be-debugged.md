@@ -1,5 +1,5 @@
 ---
-title: Bir Programın Debugged Olmasını Etkinleştirme | Microsoft Dokümanlar
+title: Bir programın ayıklanamayacağını etkinleştirme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,25 +11,25 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 17c6218cd0b25c0cf0134351fd5efd7490b6a1f3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738899"
 ---
-# <a name="enable-a-program-to-be-debugged"></a>Bir programın debutlanmasını etkinleştirme
-Hata ayıklama altyapınız (DE) bir programı hata ayıklamadan önce DE'yi başlatmanız veya varolan bir programa iliştirmeniz gerekir.
+# <a name="enable-a-program-to-be-debugged"></a>Bir programın ayıklanamayacağını etkinleştir
+Hata ayıklama altyapısından (DE) bir programda hata ayıklamadan önce, önce bunu başlatmanız veya mevcut bir programa bağlamanız gerekir.
 
 ## <a name="in-this-section"></a>Bu bölümde
- [Bir bağlantı noktası alın](../../extensibility/debugger/getting-a-port.md) Bir programın debugged olmasını etkinleştirmek için ilk adım olarak bir bağlantı noktası elde etmek için nasıl tartışır.
+ [Bağlantı noktası al](../../extensibility/debugger/getting-a-port.md) Bir programın ayıklanamayacağını etkinleştirmeye yönelik ilk adım olarak bir bağlantı noktasının nasıl alınacağını açıklar.
 
- [Programı kaydedin](../../extensibility/debugger/registering-the-program.md) Bir programın debugged olmasını etkinleştirmedeki bir sonraki adımı açıklar: bağlantı noktasına kaydetme. Bir kez kaydedildikten sonra, program ekleme işlemi veya tam zamanında (JIT) hata ayıklama işlemi ile debugged olabilir.
+ [Programı kaydet](../../extensibility/debugger/registering-the-program.md) Bir programın hata ayıklamanın nasıl giderileceği konusunda bir sonraki adımı açıklar: bağlantı noktası ile kaydediliyor. Kaydolduktan sonra programa ekleme veya tam zamanında (JıT) hata ayıklama işlemi tarafından hata ayıklanabilir.
 
- [Programa ekle](../../extensibility/debugger/attaching-to-the-program.md) Bir sonraki adımı açıklar: hata ayıklamayı programa takmak.
+ [Programa iliştirme](../../extensibility/debugger/attaching-to-the-program.md) Bir sonraki adımı açıklar: hata ayıklayıcıyı programa ekleme.
 
- [Başlatma tabanlı ekleme](../../extensibility/debugger/launch-based-attachment.md) SDM tarafından başlatıldıktan sonra otomatik olarak başlatılan bir programa başlatma tabanlı eki açıklar.
+ [Başlatma tabanlı iliştirme](../../extensibility/debugger/launch-based-attachment.md) , SDM tarafından başlatma sonrasında otomatik olan bir programa başlatma tabanlı ek açıklar.
 
- [Gerekli olayları gönderme](../../extensibility/debugger/sending-the-required-events.md) Hata ayıklama altyapısı (DE) oluştururken ve bir programa takarken gerekli olayları iletir.
+ [Gerekli olayları gönder](../../extensibility/debugger/sending-the-required-events.md) Bir hata ayıklama altyapısı (DE) oluştururken ve bir programa iliştirirken gerekli olaylarda adım adım ilerleyin.
 
 ## <a name="related-sections"></a>İlgili bölümler
- [Özel hata ayıklama altyapısı oluşturma](../../extensibility/debugger/creating-a-custom-debug-engine.md) Hata ayıklama altyapısını (DE) tanımlar ve DE arabirimleri aracılığıyla uygulanan hizmetleri ve hata ayıklamanın farklı çalışma modları arasında geçişe nasıl neden olabileceğini açıklar.
+ [Özel hata ayıklama altyapısı oluşturma](../../extensibility/debugger/creating-a-custom-debug-engine.md) Bir hata ayıklama altyapısı (DE) tanımlar ve ayrıca, bu arabirimler aracılığıyla uygulanan Hizmetleri ve hata ayıklayıcının farklı çalışma modları arasında geçişine neden olabilecekleri hizmetleri açıklar.

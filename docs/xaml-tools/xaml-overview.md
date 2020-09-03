@@ -6,10 +6,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: e14e23f9820301374bd435484ba784edf50294bb
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85331945"
 ---
 # <a name="overview-of-xaml"></a>XAML 'ye Genel Bakış
@@ -28,7 +28,7 @@ Aşağıdaki XAML kodu bir basit düğme denetimini tanımlar.
 
 XAML, [Windows Workflow Foundation (WF) uygulamalarında](/dotnet/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml)iş akışlarını tanımlamak için de kullanılır.
 
-## <a name="xaml-code-editor"></a>XAML kod Düzenleyicisi
+## <a name="xaml-code-editor"></a>XAML kod düzenleyici
 
 Visual Studio IDE 'deki [xaml kod Düzenleyicisi](xaml-code-editor.md) , Windows platformu ve Xamarin. Forms için WPF ve UWP uygulamaları oluşturmak için ihtiyacınız olan tüm araçları içerir. Ayrıca, Visual Studio 'daki IDE (tümleşik geliştirme ortamı), diğer platformlar için uygulama geliştirmek üzere kullanabileceğiniz birçok özelliğe sahiptir, ancak XAML için de benzersiz olan bazı özellikler de vardır.
 

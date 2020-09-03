@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d791ec2d75ff070672714626698e162a6c57f355
-ms.sourcegitcommit: 260d093d2287ba791f28bdc7103493beabf80b2e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77506374"
 ---
 # <a name="all-rules-rule-set"></a>Tüm Kurallar kural kümesi
@@ -20,4 +20,4 @@ Tüm Kurallar kural kümesi hem yerel hem de yönetilen kodun tüm kurallarını
 
 - [C/C++ İçin Kod Analizi Uyarıları](/cpp/code-quality/code-analysis-for-c-cpp-warnings)
 
-- [Yönetilen Kod için Kod Çözümleme Uyarıları](../code-quality/code-analysis-for-managed-code-warnings.md)
+- [Yönetilen kod uyarıları için kod analizi](../code-quality/code-analysis-for-managed-code-warnings.md)

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7dc591451b314d5ebac10d30cc89d9498d70f96b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659262"
 ---
 # <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>İzlenecek yol: Modele Erişen Metin Şablonunda Hata Ayıklama
@@ -44,9 +44,9 @@ Etki alanına özgü dil çözümünde metin şablonlarını değiştirirken vey
 
 1. Çözümü derleyin ve hata ayıklayıcıda çalıştırmayı başlatın. ( **Derle** menüsünde **çözümü yeniden derle**' ye tıklayın ve ardından **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat**' a tıklayın.) Visual Studio 'nun yeni bir örneği hata ayıklama projesini açar.
 
-2. Hata ayıklama projesine `DebugTest.tt` adlı bir metin dosyası ekleyin.
+2. Hata ayıklama projesine adlı bir metin dosyası ekleyin `DebugTest.tt` .
 
-3. DebugTest.tt öğesinin **özel araç** özelliğinin `TextTemplatingFileGenerator` olarak ayarlandığından emin olun.
+3. DebugTest.tt öğesinin **özel araç** özelliğinin olarak ayarlandığından emin olun `TextTemplatingFileGenerator` .
 
 ## <a name="debugging-directives-that-access-a-model-from-a-text-template"></a>Bir metin şablonundan bir modele erişen hata ayıklama yönergeleri
  Bir metin şablonundaki deyimlerden ve ifadelerden bir modele erişebilmek için önce oluşturulan bir yönerge işlemcisini çağırmanız gerekir. Oluşturulan yönerge işlemcisini çağırmak, modelinizdeki sınıfları metin şablonu kodu özelliği olarak kullanılabilir hale getirir. Daha fazla bilgi için bkz. [metin şablonlarından modellere erişme](../modeling/accessing-models-from-text-templates.md).
@@ -97,11 +97,11 @@ Etki alanına özgü dil çözümünde metin şablonlarını değiştirirken vey
 
      **' DebuggingTestLanguageDirectiveProcessor ' adlı işlemci ' modelRoot ' adlı yönergeyi desteklemez. Dönüşüm çalıştırılmayacak.**
 
-     Bu durumda, yönerge çağrısı yanlış bir yönerge adı içeriyor. Yönerge adı olarak `modelRoot` belirttiniz, ancak doğru yönerge adı `DebuggingTestLanguage`.
+     Bu durumda, yönerge çağrısı yanlış bir yönerge adı içeriyor. `modelRoot`Yönerge adı olarak belirttiniz, ancak doğru yönerge adı `DebuggingTestLanguage` .
 
 3. Koda gitmek için **hata listesi** penceresindeki hataya çift tıklayın.
 
-4. Kodu düzeltmek için yönerge adını `DebuggingTestLanguage` olarak değiştirin.
+4. Kodu düzeltmek için yönerge adını olarak değiştirin `DebuggingTestLanguage` .
 
      Değişiklik vurgulanır.
 
@@ -161,13 +161,13 @@ Etki alanına özgü dil çözümünde metin şablonlarını değiştirirken vey
 
      (C#)
 
-     **Dönüştürme derleniyor: Microsoft. VisualStudio. Textşablon \<GUID >. GeneratedTextTransformation ', ' ExampleModel ' için bir tanım içermiyor**
+     **Dönüştürme derleniyor: Microsoft. VisualStudio. Textşablon oluşturma \<GUID> . GeneratedTextTransformation ', ' ExampleModel ' için bir tanım içermiyor**
 
      (Visual Basic)
 
-     **Dönüştürme derleniyor: ' ExampleModel ', ' Microsoft. VisualStudio. Textşablon \<GUID > üyesi değil. GeneratedTextTransformation'.**
+     **Dönüştürme derleniyor: ' ExampleModel ', ' Microsoft. VisualStudio. Textşablon oluşturma ' üyesi değil \<GUID> . GeneratedTextTransformation'.**
 
-     Bu durumda, metin şablonu kodu yanlış bir özellik adı içerir. Özellik adı olarak `ExampleModel` belirttiniz, ancak doğru özellik adı `LibraryModel`. Doğru özellik adını aşağıdaki kodda gösterildiği gibi, sağlar parametresinde bulabilirsiniz:
+     Bu durumda, metin şablonu kodu yanlış bir özellik adı içerir. `ExampleModel`Özellik adı olarak belirttiniz, ancak doğru özellik adı `LibraryModel` . Doğru özellik adını aşağıdaki kodda gösterildiği gibi, sağlar parametresinde bulabilirsiniz:
 
     ```
     <#@ DebuggingTestLanguage processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=LibraryModel" #>
@@ -175,7 +175,7 @@ Etki alanına özgü dil çözümünde metin şablonlarını değiştirirken vey
 
 3. Koda gitmek için Hata Listesi penceresindeki hataya çift tıklayın.
 
-4. Kodu düzeltmek için özellik adını metin şablonu kodundaki `LibraryModel` değiştirin.
+4. Kodu düzeltmek için özellik adını `LibraryModel` metin şablonu kodunda olarak değiştirin.
 
      Değişiklikler vurgulanır.
 

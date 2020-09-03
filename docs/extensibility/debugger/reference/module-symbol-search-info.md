@@ -1,5 +1,5 @@
 ---
-title: MODULE_SYMBOL_SEARCH_INFO | Microsoft Dokümanlar
+title: MODULE_SYMBOL_SEARCH_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,17 +16,17 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5f15587759c4f665d1593d1298c47459a0e64aac
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714251"
 ---
 # <a name="module_symbol_search_info"></a>MODULE_SYMBOL_SEARCH_INFO
 
-Aranan simge arama yolları hakkında durum bilgileri içerir.
+Aranan sembol arama yolları hakkında durum bilgilerini içerir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _tagSYMBOL_SEARCH_INFO
@@ -46,22 +46,22 @@ public struct MODULE_SYMBOL_SEARCH_INFO {
 ## <a name="members"></a>Üyeler
 
 `dwValidFields`\
-Bu yapıda açıklanan arama bilgilerinin türünü belirten [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) numaralandırmadan gelen bayrakların birleşimi.
+Bu yapıda açıklanan arama bilgilerinin türünü belirten [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) Numaralandırmadaki bayrakların birleşimi.
 
 `bstrVerboseSearchInfo`\
-Arama yolu ve sonuçlar tek bir dize halinde sıkıştırılır.
+Tek bir dizeye birleştirilmiş arama yolu ve sonuçları.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) yöntemine yapılan bir çağrıdan döndürülür.
+Bu yapı [Getsymbolınfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) yöntemine yapılan çağrıdan döndürülür.
 
-`bstrVerboseSearchInfo` Alan boş değilse, aranan yolların bir listesini ve bu aramanın sonuçlarını içerir. Liste bir yol ile biçimlendirilir, ardından bir elips ("..."), ardından sonuç gelir. Birden fazla yol sonuç çifti varsa, her çift bir "\r\n" (taşıma-döndürme/linefeed) çifti ile ayrılır. Desen şuna benzer:
+`bstrVerboseSearchInfo`Alan boş değilse, aranan yolların ve bu aramanın sonuçlarının bir listesini içerir. Liste, bir yol ile, ardından üç nokta ("...") ve ardından sonuç olarak biçimlendirilir. Birden fazla yol sonuç çifti varsa, her çift bir "\r\n" (satır başı/linefeed) çifti ile ayrılır. Bu model şöyle görünür:
 
-\<yol>... \<sonuç>\r\n\<yolu>... \<sonuç>\r\n\<yolu>... \<sonuç>
+\<path>...\<result> \r\n \<path> ... \<result> \r\n \<path> ...\<result>
 
-Son girişin \r\n sırası olmadığını unutmayın.
+Son girişin bir \r\n dizisine sahip olmadığına unutmayın.
 
-Burada standart `bstrVerboseSearchInfo` dışarı gönderildi olası bir dize.
+`bstrVerboseSearchInfo`Standart Out 'a gönderilen olası bir dize aşağıda verilmiştir.
 
 `c:\symbols\user32.pdb... File not found.`
 
@@ -71,11 +71,11 @@ Burada standart `bstrVerboseSearchInfo` dışarı gönderildi olası bir dize.
 
 ## <a name="requirements"></a>Gereksinimler
 
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

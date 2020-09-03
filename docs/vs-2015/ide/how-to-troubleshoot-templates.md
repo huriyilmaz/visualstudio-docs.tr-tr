@@ -12,16 +12,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c481b2b9c90b15f4cbc709cad89e5b772ad95cee
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77477091"
 ---
 # <a name="how-to-troubleshoot-templates"></a>Nasıl Yapılır: Şablonlarda Sorun Giderme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Geliştirme ortamında yüklemek bir şablon başarısız olursa, sorunu bulmak için birkaç yolu vardır.
+Bir şablon geliştirme ortamında yüklenemezse, sorunu bulmanın birkaç yolu vardır.
 
 ## <a name="validating-the-vstemplate-file"></a>. Vstemplate dosyasını doğrulama
  Bir şablondaki. vstemplate dosyası [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] şablon şemasına bağlı değilse, şablon **Yeni proje** iletişim kutusunda görünmeyebilir.
@@ -32,14 +32,14 @@ Geliştirme ortamında yüklemek bir şablon başarısız olursa, sorunu bulmak 
 
 2. . Zip dosyasını ayıklayın.
 
-3. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]**Dosya** menüsünde **Aç**' a ve ardından **Dosya**' ya tıklayın.
+3. İçindeki **Dosya** menüsünde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **Aç**' a ve ardından **Dosya**' ya tıklayın.
 
 4. Şablon için. vstemplate dosyasını seçin ve **Aç**' a tıklayın.
 
-5. . Vstemplate dosyasının XML dosyasının [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] şablon şemasına bağlı olduğunu doğrulayın. . Vstemplate şeması hakkında daha fazla bilgi için bkz. [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md).
+5. . Vstemplate dosyasının XML dosyasının şablon şemasına bağlı olduğunu doğrulayın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . . Vstemplate şeması hakkında daha fazla bilgi için bkz. [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md).
 
     > [!NOTE]
-    > . Vstemplate dosyasını yazarken IntelliSense desteği almak için, `VSTemplate` öğesine bir `xmlns` özniteliği ekleyin ve bu değere `http://schemas.microsoft.com/developer/vstemplate/2005`değerini atayın.
+    > . Vstemplate dosyasını yazarken IntelliSense desteği almak için, öğesine bir özniteliği ekleyin `xmlns` `VSTemplate` ve değeri atayın `http://schemas.microsoft.com/developer/vstemplate/2005` .
 
 6. . Vstemplate dosyasını kaydedin ve kapatın.
 
@@ -50,7 +50,7 @@ Geliştirme ortamında yüklemek bir şablon başarısız olursa, sorunu bulmak 
 9. Ayıklanan şablon dosyalarını ve eski şablon. zip dosyasını silin.
 
 ## <a name="monitoring-the-event-log"></a>Olay günlüğünü izleme
- şablon. zip dosyaları işlenirken [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] günlük hatalarıyla karşılaşıldı. Şablon **Yeni proje** iletişim kutusunda beklendiği gibi görünmüyorsa, sorunu gidermek için **Olay Görüntüleyicisi** kullanabilirsiniz.
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Template. zip dosyaları işlenirken günlüğe hata ile karşılaşıldı. Şablon **Yeni proje** iletişim kutusunda beklendiği gibi görünmüyorsa, sorunu gidermek için **Olay Görüntüleyicisi** kullanabilirsiniz.
 
 #### <a name="to-locate-template-errors-in-event-viewer"></a>Olay Görüntüleyicisi şablon hatalarını bulmak için
 
@@ -58,7 +58,7 @@ Geliştirme ortamında yüklemek bir şablon başarısız olursa, sorunu bulmak 
 
 2. Sol bölmede **uygulama**' ya tıklayın.
 
-3. **Kaynak** değeri `Visual Studio - VsTemplate`olan olayları arayın.
+3. **Kaynak** değeri olan olayları arayın `Visual Studio - VsTemplate` .
 
 4. Hatayı görüntülemek için bir şablon olayına çift tıklayın.
 

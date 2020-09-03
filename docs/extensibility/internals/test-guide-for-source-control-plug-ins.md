@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 321d61175068f135aae87bff73f13ac800f4793c
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905152"
 ---
 # <a name="test-guide-for-source-control-plug-ins"></a>Kaynak Denetimi Eklentileri için Test Kılavuzu
@@ -51,7 +51,7 @@ Bu bölüm, kaynak denetimi eklentisini ile test etmek için rehberlik sağlar [
 
 ## <a name="test-areas-covered-in-this-section"></a>Bu bölümde kapsanan test bölgeleri
 
-- [Test alanı 1: kaynak denetimine Ekle/aç](../../extensibility/internals/test-area-1-add-to-open-from-source-control.md)
+- [Test Alanı 1: Kaynak Denetimine Ekleme/Kaynak Denetiminden Açma](../../extensibility/internals/test-area-1-add-to-open-from-source-control.md)
 
   - Durum 1a: kaynak denetimine çözüm ekleme
 
@@ -61,7 +61,7 @@ Bu bölüm, kaynak denetimi eklentisini ile test etmek için rehberlik sağlar [
 
 - [Test Alanı 2: Kaynak Denetiminden Alma](../../extensibility/internals/test-area-2-get-from-source-control.md)
 
-- [Test alanı 3: kullanıma almayı denetle/geri al](../../extensibility/internals/test-area-3-check-out-undo-checkout.md)
+- [Test Alanı 3: Kullanıma Alma/Kullanıma Almayı Geri Alma](../../extensibility/internals/test-area-3-check-out-undo-checkout.md)
 
   - Durum 3: kullanıma almayı denetleme/geri alma
 
@@ -91,9 +91,9 @@ Bu bölüm, kaynak denetimi eklentisini ile test etmek için rehberlik sağlar [
 
   - Case 5c: yeniden bağlama
 
-- [Test Alanı 6: Silme](../../extensibility/internals/test-area-6-delete.md)
+- [Test Alanı 6: Sil](../../extensibility/internals/test-area-6-delete.md)
 
-- [Test Alanı 7: Paylaşma](../../extensibility/internals/test-area-7-share.md)
+- [Test Alanı 7: Paylaş](../../extensibility/internals/test-area-7-share.md)
 
 - [Test Alanı 8: Eklenti Değiştirme](../../extensibility/internals/test-area-8-plug-in-switching.md)
 
