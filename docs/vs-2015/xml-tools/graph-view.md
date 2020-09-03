@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ba58777700ba34de3dc3b7a842f26462daf08c89
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656355"
 ---
 # <a name="graph-view"></a>Graf Görünümü
@@ -41,7 +41,7 @@ Grafik görünümü, genel şema düğümlerinin ve düğümler arasındaki ili�
 ## <a name="breadcrumb-bar"></a>İçerik haritası çubuğu
  Grafik görünümünün alt kısmındaki içerik haritası çubuğu, seçili düğümün şema kümesinde bulunduğu yeri gösterir. Birden çok öğe seçilirse, içerik haritası çubuğu boş olur.
 
-## <a name="context-menu"></a>Bağlam menüsü
+## <a name="context-menu"></a>Bağlam Menüsü
  Aşağıdaki tabloda, grafik görünümü tasarım yüzeyindeki tüm düğümler için kullanılabilen seçenekler açıklanmaktadır.
 
 |Seçenek|Açıklama|
@@ -54,8 +54,8 @@ Grafik görünümü, genel şema düğümlerinin ve düğümler arasındaki ili�
 |**Seçimi çalışma alanından Tümünü Kaldır**|Çalışma alanından ve tasarım yüzeyinden seçilmemiş düğümleri kaldırır.|
 |**Diyagramı görüntü olarak dışarı aktar...**|Tasarım yüzeyini bir XPS dosyasına kaydeder.|
 |**Tümünü Seç**|Tasarım yüzeyinde tüm düğümleri seçer.|
-|**Kodu görüntüle**|XML düzenleyicisinde Seçili düğümü içeren dosyayı açar. XML şeması Gezgininde seçilen öğe, XML düzenleyicisinde de seçilir.|
-|**Özellik Penceresi**|**Özellikler** penceresini açar (zaten açık değilse). Bu pencere, düğüm hakkındaki bilgileri görüntüler.|
+|**Kodu Görüntüle**|XML düzenleyicisinde Seçili düğümü içeren dosyayı açar. XML şeması Gezgininde seçilen öğe, XML düzenleyicisinde de seçilir.|
+|**Özellikler penceresi**|**Özellikler** penceresini açar (zaten açık değilse). Bu pencere, düğüm hakkındaki bilgileri görüntüler.|
 
  Yukarıda açıklanan ortak seçeneklere ek olarak, genel öğelerin bağlam menüsü de aşağıdaki seçeneklere sahiptir:
 
@@ -121,7 +121,7 @@ Grafik görünümü, genel şema düğümlerinin ve düğümler arasındaki ili�
 
 - Tek veya birden çok düğüm siliniyor.
 
-## <a name="zoom"></a>Yakınlaştır
+## <a name="zoom"></a>Zoom
  Yakınlaştırma, grafik görünümünün sağ alt köşesinde bulunur.
 
  Yakınlaştırma, aşağıdaki yollarla denetlenebilir:

@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4181fd11e6f1ba86e2965991aab704995210e6bc
-ms.sourcegitcommit: 2c26d6e6f2a5c56ae5102cdded7b02f2d0fd686c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88168742"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Yardım Görüntüleyicisi SDK’sı
@@ -131,17 +131,17 @@ Daha sonra, konunun nasıl sunulacağınızı (kendi kendine markalı veya deği
 
 Konunun başlık ve alt bilgisini dahil değil), sayfa bağlantıları, bir not bölümü, daraltılabilir alan, kod parçacığı ve dile özgü metnin bir bölümünü içerir.  Sunulma konusunun bu alanlarla ilgili bilgiler için bkz. marka bölümü.
 
-1. Konu başlığı etiketi ekleyin:`<div class="title">Contoso Topic 4</div>`
+1. Konu başlığı etiketi ekleyin:  `<div class="title">Contoso Topic 4</div>`
 
-2. Bir dekont bölümü ekleyin:`<div class="alert"> add your table tag and text </div>`
+2. Bir dekont bölümü ekleyin: `<div class="alert"> add your table tag and text </div>`
 
-3. Daraltılabilir bir alan ekleyin:`<CollapsibleArea Expanded="1" Title="Collapsible Area Test Heading"> add text  </CollapsibleArea>`
+3. Daraltılabilir bir alan ekleyin:  `<CollapsibleArea Expanded="1" Title="Collapsible Area Test Heading"> add text  </CollapsibleArea>`
 
-4. Kod parçacığı ekleyin:`<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" > a block of code </CodeSnippet>`
+4. Kod parçacığı ekleyin:  `<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" > a block of code </CodeSnippet>`
 
-5. Kod diline özgü metin ekleme: `<LanguageSpecificText devLangcs="CS" devLangvb="VB" devLangcpp="C++" devLangnu="F#" />` `devLangnu=` diğer dilleri girmenizi sağlayan unutmayın. Örneğin, `devLangnu="Fortran"` kod parçacığı DisplayLanguage = FORTRAN olduğunda FORTRAN öğesini görüntüler.
+5. Kod diline özgü metin ekleme:  `<LanguageSpecificText devLangcs="CS" devLangvb="VB" devLangcpp="C++" devLangnu="F#" />` `devLangnu=` diğer dilleri girmenizi sağlayan unutmayın. Örneğin, `devLangnu="Fortran"` kod parçacığı DisplayLanguage = FORTRAN olduğunda FORTRAN öğesini görüntüler.
 
-6. Sayfa bağlantıları ekle:`<a href="ms-xhelp:///?Id=ContosoTopic1">Main Topic</a>`
+6. Sayfa bağlantıları ekle: `<a href="ms-xhelp:///?Id=ContosoTopic1">Main Topic</a>`
 
 > [!NOTE]
 > Note: desteklenmeyen yeni "görüntüleme dili" (örnek, F #, COBOL, FORTRAN) için kod parçacığında tek renkli olacak kod renklendirme.
@@ -360,7 +360,7 @@ IDE 'de, yardım menüsü öğesi altında **Hata Ayıkla yardım bağlamı**' n
 
 Aşağıdaki tabloda, köşeli ayraçlar arasında görünen tüm dizeler, tanınan bir değerle değiştirilmelidir. Örneğin, \<meta name="Microsoft.Help.Locale" content="[language code]" /> "[Language Code]", "en-US" gibi bir değer ile değiştirilmelidir.
 
-| Özellik (HTML temsili) | Açıklama |
+| Özellik (HTML temsili) | Description |
 | - | - |
 | \< meta name="Microsoft.Help.Locale" content="[language-code]" /> | Bu konu için bir yerel ayar ayarlar. Bu etiket bir konu başlığında kullanılıyorsa, yalnızca bir kez kullanılması gerekir ve diğer Microsoft Yardım etiketlerinin üzerine eklenmelidir. Bu etiket kullanılmazsa, konunun gövde metni, belirtilen ürün yerel ayarıyla ilişkili sözcük kesici kullanılarak dizinlenir; Aksi halde, en-US sözcük kesici kullanılır. Bu etiket, ıSOC RFC 4646 ' e uygundur. Microsoft Yardım 'ın doğru şekilde çalıştığından emin olmak için, genel dil özniteliği yerine bu özelliği kullanın. |
 | \< meta name="Microsoft.Help.TopicLocale" content="[language-code]" /> | Diğer yerel ayarlar da kullanıldığında, bu konu için bir yerel ayar ayarlar. Bu etiket bir konu başlığında kullanılıyorsa, yalnızca bir kez kullanılmalıdır. Katalog birden fazla dilde içerik içerdiğinde bu etiketi kullanın. Bir katalogdaki birden çok konu aynı KIMLIĞE sahip olabilir, ancak her birinin benzersiz bir Topılocale belirtmesi gerekir. Kataloğun yerel ayarıyla eşleşen bir Topılocale belirten konu, içindekiler tablosunda görüntülenen konudur. Ancak, konunun tüm dil sürümleri arama sonuçlarında görüntülenir. |
@@ -534,7 +534,7 @@ branding.js dosyası, Visual Studio Yardım Görüntüleyicisi markalama öğele
 |Tanımlama bilgisi değerlerini ayarlama ve edinme|getCookie, setCookie||
 |Devralınan üye|changeMembersLabel|Devralınan üyeyi Genişlet/Daralt|
 |Selfmarkalı = false olduğunda|onLoad|Bir yazdırma isteği olup olmadığını denetlemek için sorgu dizesini okuyun.  Tüm kod parçacıklarını Kullanıcı tarafından tercih edilen sekmesine odaklamak için ayarlayın.  Bu bir yazdırma isteği ise, isPrinterFriendly değerini true olarak ayarlayın. Yüksek karşıtlık modunu denetleyin.|
-|Kod parçacığı|addSpecificTextLanguageTagSet||
+|Kod Parçacığı|addSpecificTextLanguageTagSet||
 ||Getındexfromdevlang||
 ||Değişiklik sekmesi||
 ||setCodesnippetLang||
@@ -566,22 +566,22 @@ Marka paketi, içerik kullanıcılarına yardımcı olmak üzere anahtar bilgile
 |**Dosya**|**Kullanırsınız**|**Görünen Içerik kaynağı**|
 |-|-|-|
 |homepage.htm|Bu, şu anda yüklü olan içeriği görüntüleyen ve kullanıcıya içerik hakkında sunmanız gereken diğer tüm iletileri gösteren bir sayfasıdır.  Bu dosya, "Microsoft.Help.Id" content = "-1" ek meta veri özniteliğine sahiptir ve bu içeriği TOC yerel içeriğinin üst kısmına koyar.||
-||<META_HOME_PAGE_TITLE_ADD/>|Branding.xml, etiket\<HomePageTitle>|
-||<HOME_PAGE_INTRODUCTION_SECTION_ADD/>|Branding.xml, etiket\<HomePageIntroduction>|
-||<HOME_PAGE_CONTENT_INSTALL_SECTION_ADD/>|Branding.xml, etiket\<HomePageContentInstallText>|
-||<HOME_PAGE_BOOKS_INSTALLED_SECTION_ADD/>|Başlık bölümü Branding.xml etiket \<HomePageInstalledBooks> , hiçbir kitap yüklü olmadığında uygulamadan oluşturulan veriler \<HomePageNoBooksInstalled> .|
+||<META_HOME_PAGE_TITLE_ADD/>|Branding.xml, etiket \<HomePageTitle>|
+||<HOME_PAGE_INTRODUCTION_SECTION_ADD/>|Branding.xml, etiket \<HomePageIntroduction>|
+||<HOME_PAGE_CONTENT_INSTALL_SECTION_ADD/>|Branding.xml, etiket \<HomePageContentInstallText>|
+||<HOME_PAGE_BOOKS_INSTALLED_SECTION_ADD/>|Başlık bölümü Branding.xml etiket \<HomePageInstalledBooks> , hiçbir kitap yüklü olmadığında uygulamadan oluşturulan veriler  \<HomePageNoBooksInstalled> .|
 ||<HOME_PAGE_SETTINGS_SECTION_ADD/>|Başlık bölümü Branding.xml etiketi \<HomePageHelpSettings> , Bölüm metni \<HomePageHelpSettingsText> .|
 |topiccorrupted.htm|Yerel küme içinde bir konu mevcut olduğunda, ancak bazı nedenlerle görüntülenemiyor (bozuk içerik).||
-||<META_TOPIC_CORRUPTED_TITLE_ADD/>|Branding.xml, etiket\<TopicCorruptedTitle>|
-||<TOPIC_CORRUPTED_SECTION_ADD/>|Branding.xml, etiket\<TopicCorruptedViewOnlineText>|
+||<META_TOPIC_CORRUPTED_TITLE_ADD/>|Branding.xml, etiket \<TopicCorruptedTitle>|
+||<TOPIC_CORRUPTED_SECTION_ADD/>|Branding.xml, etiket \<TopicCorruptedViewOnlineText>|
 |topicnotfound.htm|Bir konu, yerel içerik kümesinde bulunamadığında veya çevrimiçi olarak kullanılabilir||
-||<META_TOPIC_NOT_FOUND_TITLE_ADD/>|Branding.xml, etiket\<TopicNotFoundTitle>|
-||<META_TOPIC_NOT_FOUND_ID_ADD/>|Branding.xml, etiket\<TopicNotFoundViewOnlineText> + \<TopicNotFoundDownloadContentText>|
-||<TOPIC_NOT_FOUND_SECTION_ADD/>|Branding.xml, etiket\<TopicNotFoundText>|
+||<META_TOPIC_NOT_FOUND_TITLE_ADD/>|Branding.xml, etiket \<TopicNotFoundTitle>|
+||<META_TOPIC_NOT_FOUND_ID_ADD/>|Branding.xml, etiket \<TopicNotFoundViewOnlineText> + \<TopicNotFoundDownloadContentText>|
+||<TOPIC_NOT_FOUND_SECTION_ADD/>|Branding.xml, etiket \<TopicNotFoundText>|
 |contentnotinstalled.htm|Ürün için yerel içerik yüklü olmadığında.||
-||<META_CONTENT_NOT_INSTALLED_TITLE_ADD/>|Branding.xml, etiket\<ContentNotInstalledTitle>|
-||<META_CONTENT_NOT_INSTALLED_ID_ADD/>|Branding.xml, etiket\<ContentNotInstalledDownloadContentText>|
-||<CONTENT_NOT_INSTALLED_SECTION_ADD/>|Branding.xml, etiket\<ContentNotInstalledText>|
+||<META_CONTENT_NOT_INSTALLED_TITLE_ADD/>|Branding.xml, etiket \<ContentNotInstalledTitle>|
+||<META_CONTENT_NOT_INSTALLED_ID_ADD/>|Branding.xml, etiket \<ContentNotInstalledDownloadContentText>|
+||<CONTENT_NOT_INSTALLED_SECTION_ADD/>|Branding.xml, etiket \<ContentNotInstalledText>|
 
 **CSS dosyaları**
 
@@ -741,9 +741,9 @@ Kayıt defterinde içerik deposunu tanımlayın. Tümleşik Kabuk için VisualSt
 
 Yalıtılmış Kabuk uzantısı oluşturmak için:
 
-1. Visual Studio 'da, **Dosya**altında **Yeni proje**' yi seçin, **diğer proje türleri** altında **genişletilebilirlik**' i seçin ve ardından **Visual Studio Kabuğu yalıtılmış**' i seçin. Projeyi, `ContosoHelpShell` Visual Studio yalıtılmış Kabuk şablonunu temel alan bir genişletilebilirlik projesi oluşturacak şekilde adlandırın.
+1. Visual Studio 'da, **Dosya**altında **Yeni proje**' yi seçin, **diğer proje türleri** altında **genişletilebilirlik**' i seçin ve ardından  **Visual Studio Kabuğu yalıtılmış**' i seçin. Projeyi, `ContosoHelpShell` Visual Studio yalıtılmış Kabuk şablonunu temel alan bir genişletilebilirlik projesi oluşturacak şekilde adlandırın.
 
-2. Çözüm Gezgini, ContosoHelpShellUI projesinde, kaynak dosyaları klasöründe ApplicationCommands. vsct öğesini açın. Bu satırın açıklama olarak belirlendiğinden emin olun ("No_Help" araması yapın):`<!-- <define name="No_HelpMenuCommands"/> -->`
+2. Çözüm Gezgini, ContosoHelpShellUI projesinde, kaynak dosyaları klasöründe ApplicationCommands. vsct öğesini açın. Bu satırın açıklama olarak belirlendiğinden emin olun ("No_Help" araması yapın): `<!-- <define name="No_HelpMenuCommands"/> -->`
 
 3. **Hata ayıklamayı**derlemek ve çalıştırmak için F5 tuşunu seçin. Yalıtılmış Kabuk IDE 'nin deneysel örneğinde **Yardım** menüsünü seçin. **Görünüm yardım**, **Yardım Içeriği ekleme ve kaldırma**ve **Yardım tercihi** komutlarının göründüğünden emin olun.
 
@@ -808,7 +808,7 @@ Bunu dağıtıldıktan sonra test etmek için:
 
     C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15
 
-    [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]Tümleşik Kabuk:
+    [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] Tümleşik Kabuk:
 
     C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15en-US
 

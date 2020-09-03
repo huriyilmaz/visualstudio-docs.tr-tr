@@ -10,27 +10,27 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0d24fc7a01a8eebe356f37704c1a821332f5dca1
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850759"
 ---
 # <a name="events-vsperfcmd"></a>Olaylar (VSPerfCmd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-VSPerfCmd. exe **olayları** seçeneği, Windows Için olay Izleme (ETW) günlüğünü denetler. ETW verileri, profil oluşturucu veri dosyasından ayrı bir. etl dosyasına kaydedilir. Veriler [VSPerfReport](../profiling/vsperfreport.md) /Summary: ETW komutu kullanılarak bir raporda görüntülenebilir.  
+VSPerfCmd.exe **Events** seçeneği, Windows Için olay Izleme (ETW) günlüğünü denetler. ETW verileri, profil oluşturucu veri dosyasından ayrı bir. etl dosyasına kaydedilir. Veriler [VSPerfReport](../profiling/vsperfreport.md) /Summary: ETW komutu kullanılarak bir raporda görüntülenebilir.  
   
  Profil oluşturma işlemini durdurmak için VSPerfCmd **kapatmadan** önce herhangi bir zamanda **Olaylar** seçeneği çağrılabilir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```  
 VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]  
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- &#124;**Kapalı**  
+ **&#124;** **kapalı**  
  Olay verilerini toplamayı başlatır veya sonlandırır.  
   
  `Guid`  
@@ -43,14 +43,14 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
  Olay sağlayıcısı tarafından tanımlanan bir "0x"-önekli onaltılık bayraklar değeri.  
   
  `Level`  
- Toplanan veri miktarını belirtir. `Level`, olay sağlayıcısı tarafından tanımlanır.  
+ Toplanan veri miktarını belirtir. `Level` Olay sağlayıcısı tarafından tanımlanır.  
   
  **Olaylar** seçeneği, aşağıdaki çekirdek anahtar sözcüklerini sağlayıcı adları olarak anlamıştır:  
   
- **İşle**  
+ **İşleme**  
  Olay işleme  
   
- **iş parçacığı**  
+ **Zincirinin**  
  İş parçacığı olayları  
   
  **Görüntü**  
@@ -71,7 +71,7 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
  **Ağ**  
  Ağ olayları  
   
- **Defteri**  
+ **Kapsayıcı Kayıt Defteri**  
  Kayıt defteri erişim olayları  
   
  Çekirdek sağlayıcının yalnızca etkinleştiğine de emin olun. İzleyici kapanana kadar devre dışı bırakılamaz veya bayrakları değiştirilemez.  

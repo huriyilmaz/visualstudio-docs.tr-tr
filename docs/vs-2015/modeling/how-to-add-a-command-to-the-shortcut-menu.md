@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2d5ddea477aa7295c41097177265b43483b7aa45
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850409"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>Nasıl yapılır: Kısayol Menüsüne Komut Ekleme
@@ -52,7 +52,7 @@ Kullanıcılarınızın DSL 'nize özgü görevler gerçekleştirebilmesi için,
 
    Aksi takdirde, komutları tanımlamak için MEF metodunu kullanmayı düşünün. Daha fazla bilgi için bkz. [mef kullanarak DSL 'Nizi genişletme](../modeling/extend-your-dsl-by-using-mef.md).
 
-## <a name="VSCT"></a>Commands. vsct içinde komutu bildirin
+## <a name="declare-the-command-in-commandsvsct"></a><a name="VSCT"></a> Commands. vsct içinde komutu bildirin
  Menü komutları Dslpackage\commandsve vsct' içinde bildirilmiştir. Bu tanımlar menü öğelerinin etiketlerini ve menülerde nerede göründüğünü belirtir.
 
  Commands. vsct olan dosya, *Visual STUDIO SDK install Path*\VisualStudioIntegration\Common\Inc. dizininde bulunan çeşitli. h dosyalarından tanımları içeri aktarır. Ayrıca DSL tanımınızdan oluşturulan GeneratedVsct. vsct öğesini de içerir.
@@ -63,7 +63,7 @@ Kullanıcılarınızın DSL 'nize özgü görevler gerçekleştirebilmesi için,
 
 1. **Çözüm Gezgini**, **DslPackage** projesi altında Commands. vsct öğesini açın.
 
-2. `Commands` öğesinde bir veya daha fazla düğme ve grup tanımlayın. *Düğme* , menüdeki bir öğedir. Bir *Grup* , menüdeki bir bölümdür. Bu öğeleri tanımlamak için aşağıdaki öğeleri ekleyin:
+2. `Commands`Öğesinde bir veya daha fazla düğme ve grup tanımlayın. *Düğme* , menüdeki bir öğedir. Bir *Grup* , menüdeki bir bölümdür. Bu öğeleri tanımlamak için aşağıdaki öğeleri ekleyin:
 
     ```
     <!-- Define a group - a section in the menu -->
@@ -90,11 +90,11 @@ Kullanıcılarınızın DSL 'nize özgü görevler gerçekleştirebilmesi için,
     ```
 
     > [!NOTE]
-    > Her düğme veya grup bir GUID ve bir tamsayı KIMLIĞI ile tanımlanır. Aynı GUID ile birkaç grup ve düğme oluşturabilirsiniz. Ancak, farklı kimliklere sahip olmaları gerekir. GUID adları ve KIMLIK adları, `<Symbols>` düğümündeki gerçek GUID 'lere ve sayısal kimliklere çevrilir.
+    > Her düğme veya grup bir GUID ve bir tamsayı KIMLIĞI ile tanımlanır. Aynı GUID ile birkaç grup ve düğme oluşturabilirsiniz. Ancak, farklı kimliklere sahip olmaları gerekir. GUID adları ve KIMLIK adları, düğümdeki gerçek GUID 'lere ve sayısal kimliklere çevrilir `<Symbols>` .
 
 3. Yalnızca etki alanına özgü dilinizin bağlamında yüklenebilmesi için komut için görünürlük kısıtlaması ekleyin. Daha fazla bilgi için bkz. [Visibilitykısıtlamalar öğesi](../extensibility/visibilityconstraints-element.md).
 
-     Bunu yapmak için, `Commands` öğesinden sonra `CommandTable` öğesine aşağıdaki öğeleri ekleyin.
+     Bunu yapmak için, öğesinden sonra öğesine aşağıdaki öğeleri ekleyin `CommandTable` `Commands` .
 
     ```
     <VisibilityConstraints>
@@ -104,7 +104,7 @@ Kullanıcılarınızın DSL 'nize özgü görevler gerçekleştirebilmesi için,
     </VisibilityConstraints>
     ```
 
-4. GUID 'ler ve kimlikler için kullandığınız adları tanımlayın. Bunu yapmak için, `Commands` öğesinden sonra `CommandTable` öğesinde bir `Symbols` öğesi ekleyin.
+4. GUID 'ler ve kimlikler için kullandığınız adları tanımlayın. Bunu yapmak için, öğesinden sonra öğesine bir `Symbols` öğesi ekleyin `CommandTable` `Commands` .
 
     ```
     <Symbols>
@@ -117,10 +117,10 @@ Kullanıcılarınızın DSL 'nize özgü görevler gerçekleştirebilmesi için,
     </Symbols>
     ```
 
-5. `{000...000}`, gruplarınızı ve menü öğelerinizi tanımlayan bir GUID ile değiştirin. Yeni bir GUID almak için, **Araçlar** menüsünde **GUID oluştur** aracını kullanın.
+5. `{000...000}`Gruplarınızı ve menü öğelerinizi tanımlayan BIR GUID ile değiştirin. Yeni bir GUID almak için, **Araçlar** menüsünde **GUID oluştur** aracını kullanın.
 
     > [!NOTE]
-    > Daha fazla grup veya menü öğesi eklerseniz, aynı GUID 'yi kullanabilirsiniz. Ancak, `IDSymbols`için yeni değerler kullanmanız gerekir.
+    > Daha fazla grup veya menü öğesi eklerseniz, aynı GUID 'yi kullanabilirsiniz. Ancak, için yeni değerleri kullanmanız gerekir `IDSymbols` .
 
 6. Bu yordamdan kopyaladığınız kodda, aşağıdaki dizelerin her oluşumunu kendi dizelerinizle değiştirin:
 
@@ -132,8 +132,8 @@ Kullanıcılarınızın DSL 'nize özgü görevler gerçekleştirebilmesi için,
 
     - `My Context Menu Command`
 
-## <a name="version"></a>Package.tt 'de paket sürümünü güncelleştirme
- Bir komut eklediğinizde veya değiştirdiğinizde, etki alanına özgü dilin yeni sürümünü bırakmadan önce paket sınıfına uygulanan <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> `version` parametresini güncelleştirin.
+## <a name="update-the-package-version-in-packagett"></a><a name="version"></a> Package.tt 'de paket sürümünü güncelleştirme
+ Bir komut eklediğinizde veya değiştirdiğinizde, `version` <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> etki alanına özgü dilin yeni sürümünü bırakmadan önce paket sınıfına uygulanan öğesinin parametresini güncelleştirin.
 
  Paket sınıfı oluşturulmuş bir dosyada tanımlandığından, Package.cs dosyasını oluşturan metin şablonu dosyasında özniteliğini güncelleştirin.
 
@@ -141,16 +141,16 @@ Kullanıcılarınızın DSL 'nize özgü görevler gerçekleştirebilmesi için,
 
 1. **Çözüm Gezgini**, **DslPackage** projesinde, **GeneratedCode** klasöründe, Package.tt dosyasını açın.
 
-2. `ProvideMenuResource` özniteliğini bulun.
+2. Özniteliğini bulun `ProvideMenuResource` .
 
-3. İkinci parametre olan özniteliğin `version` parametresini artırın. İsterseniz, size amacını hatırlatmak için parametre adını açıkça yazabilirsiniz. Örneğin:
+3. `version`İkinci parametre olan özniteliği parametresini artırın. İsterseniz, size amacını hatırlatmak için parametre adını açıkça yazabilirsiniz. Örneğin:
 
      `[VSShell::ProvideMenuResource("1000.ctmenu", version: 2 )]`
 
-## <a name="CommandSet"></a>Komutun davranışını tanımlama
- DSL 'niz zaten DslPackage\GeneratedCode\CommandSet.cs. içinde belirtilen kısmi bir sınıfta uygulanan bazı komutlara sahiptir Yeni komutlar eklemek için, aynı sınıfın kısmi bildirimini içeren yeni bir dosya oluşturarak bu sınıfı genişletmeniz gerekir. Sınıfın adı genellikle *Dslname >`CommandSet`\<* . Sınıfın adını doğrulayarak ve içeriğini inceleyerek başlamak yararlı olur.
+## <a name="define-the-behavior-of-the-command"></a><a name="CommandSet"></a> Komutun davranışını tanımlama
+ DSL 'niz zaten DslPackage\GeneratedCode\CommandSet.cs. içinde belirtilen kısmi bir sınıfta uygulanan bazı komutlara sahiptir Yeni komutlar eklemek için, aynı sınıfın kısmi bildirimini içeren yeni bir dosya oluşturarak bu sınıfı genişletmeniz gerekir. Sınıfın adı genellikle olur *\<YourDslName>* `CommandSet` . Sınıfın adını doğrulayarak ve içeriğini inceleyerek başlamak yararlı olur.
 
- Komut kümesi sınıfı <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>türetilir.
+ Komut kümesi sınıfı öğesinden türetilir <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> .
 
 #### <a name="to-extend-the-commandset-class"></a>CommandSet sınıfını genişletmek için
 
@@ -160,7 +160,7 @@ Kullanıcılarınızın DSL 'nize özgü görevler gerçekleştirebilmesi için,
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. **DslPackage**' de, **özel kod**adlı bir klasör oluşturun. Bu klasörde, `CommandSet.cs`adlı yeni bir sınıf dosyası oluşturun.
+2. **DslPackage**' de, **özel kod**adlı bir klasör oluşturun. Bu klasörde, adlı yeni bir sınıf dosyası oluşturun `CommandSet.cs` .
 
 3. Yeni dosyada, oluşturulan kısmi sınıfla aynı ad alanına ve ada sahip kısmi bir bildirim yazın. Örneğin:
 
@@ -196,7 +196,7 @@ namespace Company.Language1 /* Make sure this is correct */
  Komutun bağlam menüsünde ne zaman görünür olacağını ve komutun ne zaman gerçekleştirileceğini belirlemek için iki yöntem tanımlamanız gerekir. Bu Yöntemler geçersiz kılınmaz; Bunun yerine, bunları bir komut listesine kaydedersiniz.
 
 ### <a name="define-when-the-command-will-be-visible"></a>Komutun ne zaman görünür olacağını tanımlayın
- Her komut için, komutun menüde görünüp görünmeyeceğini ve etkinleştirilip etkinleştirilmeyeceğini veya büyümeyeceğini belirleyen bir `OnStatus...` yöntemi tanımlayın. Aşağıdaki örnekte gösterildiği gibi `MenuCommand``Visible` ve `Enabled` özelliklerini ayarlayın. Bu yöntem, kullanıcının Diyagramı sağ tıkladığı her seferinde kısayol menüsünü oluşturmak için çağrılır, bu nedenle hızlı bir şekilde çalışır.
+ Her komut için, komutun menüde görünüp görünmeyeceğini ve etkinleştirilip etkinleştirilmeyeceğini `OnStatus...` veya büyümeyeceğini belirleyen bir yöntem tanımlayın. `Visible` `Enabled` `MenuCommand` Aşağıdaki örnekte gösterildiği gibi, ve özelliklerini ayarlayın. Bu yöntem, kullanıcının Diyagramı sağ tıkladığı her seferinde kısayol menüsünü oluşturmak için çağrılır, bu nedenle hızlı bir şekilde çalışır.
 
  Bu örnekte, komut yalnızca Kullanıcı belirli bir şekil türünü seçtiğinde görünür ve yalnızca seçili öğelerden en az biri belirli bir durumda olduğunda etkindir. Örnek, DSL şablonu sınıf diyagramı ' na dayalıdır ve ClassShape ve ModelClass, DSL içinde tanımlanan türlerdir:
 
@@ -225,26 +225,26 @@ private void OnStatusMyContextMenuCommand(object sender, EventArgs e)
 
 - `this.CurrentSelection`. Kullanıcının sağ tıklamış olduğu şekil bu listeye her zaman dahildir. Kullanıcı diyagramın boş bir kısmına tıkladığında diyagram, listenin tek üyesidir.
 
-- Kullanıcı diyagramın boş bir bölümüne tıklandığı `true`  - `this.IsDiagramSelected()`.
+- `this.IsDiagramSelected()` - `true` Kullanıcı diyagramın boş bir kısmına tıklamıştır.
 
 - `this.IsCurrentDiagramEmpty()`
 
-- `this.IsSingleSelection()`-Kullanıcı birden çok nesne seçmedi
+- `this.IsSingleSelection()` -Kullanıcı birden çok nesne seçmedi
 
-- `this.SingleSelection`-kullanıcıya sağ tıklamış olan şekil veya diyagram
+- `this.SingleSelection` -kullanıcıya sağ tıklamış olan şekil veya diyagram
 
-- `shape.ModelElement as MyLanguageElement`-bir şekil tarafından temsil edilen model öğesi.
+- `shape.ModelElement as MyLanguageElement` -bir şekil tarafından temsil edilen model öğesi.
 
-  Genel bir kılavuz olarak, `Visible` özelliğinin seçili öğelere bağlı olmasını ve `Enabled` özelliğinin seçili öğelerin durumuna bağlı olmasını sağlayın.
+  Genel bir kılavuz olarak, `Visible` özelliği seçili öğelere bağlı hale getirin ve `Enabled` özelliği seçili öğelerin durumuna göre değişir.
 
   OnStatus yöntemi deponun durumunu değiştirmemelidir.
 
 ### <a name="define-what-the-command-does"></a>Komutun ne yaptığını tanımlayın
- Her komut için, Kullanıcı menü komutuna tıkladığında gerekli eylemi gerçekleştiren bir `OnMenu...` yöntemi tanımlayın.
+ Her komut için, `OnMenu...` Kullanıcı menü komutuna tıkladığında gerekli eylemi gerçekleştiren bir yöntem tanımlayın.
 
  Model öğelerinde değişiklik yaparsanız, bunu bir işlem içinde yapmanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: standart menü komutunu değiştirme](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
 
- Bu örnekte, `ClassShape`, `ModelClass`ve `Comment`, DSL şablonunda tanımlanan ve bu tür bir DSL şablonundan türetilen türlerdir.
+ Bu örnekte,, ve,,, `ClassShape` `ModelClass` ve `Comment` sınıf diyagramı DSL şablonundan türetilmiş DSL 'de tanımlanan türlerdir.
 
 ```
 private void OnMenuMyContextMenuCommand(object sender, EventArgs e)
@@ -286,7 +286,7 @@ private void OnMenuMyContextMenuCommand(object sender, EventArgs e)
  Bir nesneden nesne ve bağlantı oluşturma hakkında daha fazla bilgi için, bkz. [nasıl yapılır: bir standart menü komutunu değiştirme](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
 
 ### <a name="register-the-command"></a>Komutu Kaydet
- C# CommandSet. vsct 'ın semboller bölümünde yaptığınız GUID ve kimlik değerlerinin bildirimlerinde yineleyin:
+ C# ' de, CommandSet. vsct 'ın semboller bölümünde yaptığınız GUID ve KIMLIK değerlerinin bildirimlerini yineleyin:
 
 ```
 private Guid guidCustomMenuCmdSet =
@@ -300,7 +300,7 @@ private const int cmdidMyContextMenuCommand = 1;
 > [!NOTE]
 > VSCT dosyasının semboller bölümünü değiştirirseniz bu bildirimleri eşleşecek şekilde de değiştirmeniz gerekir. Ayrıca, Package.tt içindeki sürüm numarasını da artırmanız gerekir
 
- Menü komutlarınızı bu komut kümesinin bir parçası olarak kaydedin. Diyagram başlatıldığında `GetMenuCommands()` bir kez çağrılır:
+ Menü komutlarınızı bu komut kümesinin bir parçası olarak kaydedin. `GetMenuCommands()` Diyagram başlatıldığında bir kez çağrılır:
 
 ```
 protected override IList<MenuCommand> GetMenuCommands()
@@ -335,7 +335,7 @@ protected override IList<MenuCommand> GetMenuCommands()
 ## <a name="troubleshooting"></a>Sorun giderme
  **Komut menüde görünmüyor:**
 
-- Bu komut, DSL paketini yükleyene kadar yalnızca Visual Studio 'daki hata ayıklama örneklerinde görünür. Daha fazla bilgi için [etki alanına özgü dil çözümlerini dağıtma](../modeling/deploying-domain-specific-language-solutions.md).
+- Bu komut, DSL paketini yükleyene kadar yalnızca Visual Studio 'daki hata ayıklama örneklerinde görünür. Daha fazla bilgi için bkz. [etki alanına özgü dil çözümlerini dağıtma](../modeling/deploying-domain-specific-language-solutions.md).
 
 - Deneysel örneklerinizin bu DSL için doğru dosya adı uzantısına sahip olduğundan emin olun. Dosya adı uzantısını denetlemek için, Visual Studio 'nun ana örneğinde DslDefinition. dsl dosyasını açın. Ardından DSL Gezgini ' nde düzenleyici düğümüne sağ tıklayın ve ardından Özellikler ' e tıklayın. Özellikler penceresi FileExtension özelliğini inceleyin.
 

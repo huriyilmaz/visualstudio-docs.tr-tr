@@ -1,5 +1,5 @@
 ---
-title: Anonim Türü Sınıfa Dönüştür
+title: Anonim türü sınıfa Dönüştür
 ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
@@ -11,15 +11,15 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 2379ce588eeb4773e562f630ade37e28d7f17315
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79094283"
 ---
 # <a name="convert-anonymous-type-to-class"></a>Anonim türü sınıfa dönüştürme
 
-Bu yeniden düzenleme aşağıdakiler için geçerlidir:
+Bu yeniden düzenleme için geçerlidir:
 
 - C#
 
@@ -27,20 +27,20 @@ Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 **Ne:** Anonim bir türü sınıfa dönüştürün.
 
-**Ne zaman:** Bir sınıfta geliştirmeye devam etmek istediğiniz anonim bir türüniz var.
+**Ne zaman:** Bir sınıfta oluşturmaya devam etmek istediğiniz anonim bir tür vardır.
 
-**Neden:** Anonim türleri yalnızca yerel olarak kullanıyorsanız yararlıdır. Kodunuz büyüdükçe, onları bir sınıfa tanıtmanın kolay bir yolunun olması güzeldir.
+**Neden:** Anonim türler yalnızca yerel olarak kullanıyorsanız faydalıdır. Kodunuz büyüdükçe, bunları bir sınıfa yükseltmek oldukça güzel bir yoldur.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
 1. İmlecinizi anonim bir türe yerleştirin.
-2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
+2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 
-   ![Anonim Türü Sınıfa Dönüştür](media/convert-anon-to-class.png)
+   ![Anonim türü sınıfa Dönüştür](media/convert-anon-to-class.png)
 
-2. Yeniden düzenlemeyi kabul etmek için **Enter** tuşuna basın.
+2. Yeniden düzenlemeyi kabul etmek için **ENTER** tuşuna basın.
 
-   ![Anonim Türü Kabul Edilen Sınıfa Dönüştür](media/convert-anon-to-class-complete.png)
+   ![Anonim türü kabul edilen sınıfa Dönüştür](media/convert-anon-to-class-complete.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

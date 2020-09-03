@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 28267f705dd9a747d0e3f3ac5dc2869ab7de8f6a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656314"
 ---
-# <a name="how-to-switch-between-views-and-the-xml-editor"></a>Nasıl yapılır: görünümler ve XML Düzenleyicisi arasında geçiş yapma
+# <a name="how-to-switch-between-views-and-the-xml-editor"></a>Nasıl Yapılır: Görünümler ile XML Düzenleyicisi Arasında Geçiş Yapma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu konu başlığı altında, XML şema Tasarımcısı (XSD Designer) görünümleri ve XML Düzenleyicisi arasında nasıl geçiş yapılacağı gösterilmektedir. Bu örnek, [satın alma siparişi şemasını](../xml-tools/sample-xsd-file-simple-schema.md)kullanır.
@@ -29,9 +29,9 @@ Bu konu başlığı altında, XML şema Tasarımcısı (XSD Designer) görünüm
 
 3. Filigranı kullanarak grafik görünümüne geçiş yapmak için, başlangıç görünümündeki düğümler bağlantısı **arasındaki ilişkiyi görmek Için Graf görünümünü kullanın** ' a tıklayın.
 
-4. @No__t_0 düğümünü XML şema Gezgini ' nden grafik görünümüne sürükleyin. Grafik görünümünde `USAddress` düğümüne sağ tıklayın ve bağlam menüsünde **Içerik modeli görünümünde göster** ' i seçin.
+4. `USAddress`Düğümü xml şema Gezgini ' nden grafik görünümüne sürükleyin. `USAddress`Grafik görünümünde düğüme sağ tıklayın ve bağlam menüsünde **Içerik modeli görünümünde göster** ' i seçin.
 
-     @No__t_0 düğümün ayrıntıları ile Içerik modeli görünümü görüntülenir.
+     Düğüm ayrıntılarını içeren Içerik modeli görünümü `USAddress` görüntülenir.
 
 5. Araç çubuğunu kullanarak Içerik modeli görünümünden başlangıç görünümüne geçiş yapmak için, XSD araç çubuğundaki görünümü Başlat düğmesine tıklayın.
 

@@ -23,10 +23,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 448a74b739bbb339d5f3b3e56c0ba59072994109
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850624"
 ---
 # <a name="layer-diagrams-reference"></a>Katman Diyagramları: Başvuru
@@ -55,15 +55,15 @@ Visual Studio 'da, sisteminizin üst düzey, mantıksal mimarisini görselleşti
 
  Aşağıdaki tabloda bir katman diyagramında kullanabileceğiniz öğeler açıklanmaktadır.
 
-|**Şeklinin**|**Öğe**|**Açıklama**|
+|**Şekil**|**Öğe**|**Açıklama**|
 |---------------|-----------------|---------------------|
-|1\.|**Katmanı**|Sisteminizdeki fiziksel yapıların mantıksal grubu. Bu yapıtlar ad alanları, projeler, sınıflar, yöntemler vb. olabilir.<br /><br /> Bir katmana bağlı yapıtları görmek için katmanın kısayol menüsünü açın ve sonra **Katman Gezgini**'ni açmak Için **bağlantıları görüntüle** ' yi seçin.<br /><br /> Daha fazla bilgi için bkz. [Katman Gezgini](#Explorer).<br /><br /> **yasak ad alanı bağımlılıklarını** -   -bu katmanla ilişkili yapıtların belirtilen ad alanlarına bağlı olduğunu belirtir.<br />**yasak ad alanları** -   -bu katman ile ilişkili yapıtların belirtilen ad alanlarına ait olmaması gerektiğini belirtir.<br />**gerekli ad alanlarını** -   -bu katman ile ilişkili yapıtların belirtilen ad alanlarından birine ait olması gerektiğini belirtir.|
-|2|**Bağımlılık**|Bir katmanın işlevselliği başka bir katmanda kullanabilir, ancak tersi anlamına gelir.<br /><br /> -   **yönü** -bağımlılığın yönünü belirtir.|
-|3|**Çift yönlü bağımlılık**|Bir katmanın başka bir katmandaki işlevleri kullanacağını ve bunun tersini gösterir.<br /><br /> -   **yönü** -bağımlılığın yönünü belirtir.|
+|1|**Katman**|Sisteminizdeki fiziksel yapıların mantıksal grubu. Bu yapıtlar ad alanları, projeler, sınıflar, yöntemler vb. olabilir.<br /><br /> Bir katmana bağlı yapıtları görmek için katmanın kısayol menüsünü açın ve sonra **Katman Gezgini**'ni açmak Için **bağlantıları görüntüle** ' yi seçin.<br /><br /> Daha fazla bilgi için bkz. [Katman Gezgini](#Explorer).<br /><br /> -   **Yasak ad alanı bağımlılıkları** -bu katmanla ilişkili yapıtların belirtilen ad alanlarına bağlı olduğunu belirtir.<br />-   **Yasak ad alanları** -bu katman ile ilişkili yapıtların belirtilen ad alanlarına ait olmaması gerektiğini belirtir.<br />-   **Gerekli ad alanları** -bu katman ile ilişkili yapıtların belirtilen ad alanlarından birine ait olması gerektiğini belirtir.|
+|2|**Bağımlılık**|Bir katmanın işlevselliği başka bir katmanda kullanabilir, ancak tersi anlamına gelir.<br /><br /> -   **Yön** -bağımlılığın yönünü belirtir.|
+|3|**Çift yönlü bağımlılık**|Bir katmanın başka bir katmandaki işlevleri kullanacağını ve bunun tersini gösterir.<br /><br /> -   **Yön** -bağımlılığın yönünü belirtir.|
 |4|**Yorum**|Diyagramdaki diyagrama veya öğelere genel notlar eklemek için kullanın.|
 |5|**Açıklama bağlantısı**|Diyagramdaki öğelere açıklama bağlamak için kullanın.|
 
-## <a name="Explorer"></a>Katman Gezgini
+## <a name="layer-explorer"></a><a name="Explorer"></a> Katman Gezgini
  Çözümünüzde projeler, sınıflar, ad alanları, proje dosyaları ve yazılımınızın diğer kısımları gibi her bir katmanı çözümünüzdeki yapıtlara bağlayabilirsiniz. Katmandaki sayı katmana bağlı yapıların sayısını gösterir. Ancak, bir katmandaki yapıt sayısını okurken, aşağıdakileri unutmayın:
 
 - Bir katman diğer yapıları içeren bir yapıya bağlanırsa, ancak katman doğrudan diğer yapılara bağlanmazsa, sayı yalnızca bağlı yapıyı içerir. Bununla birlikte, diğer yapılar katman doğrulanırken analiz için alınır.
@@ -89,10 +89,10 @@ Visual Studio 'da, sisteminizin üst düzey, mantıksal mimarisini görselleşti
 
     |**Katman Gezgini 'ndeki sütun**|**Açıklama**|
     |----------------------------------|---------------------|
-    |**Kategorisine**|Sınıf, ad alanı, kaynak dosya vb. gibi yapıt türü|
-    |**Katmanı**|Yapıtı bağlayan katman|
+    |**Kategoriler**|Sınıf, ad alanı, kaynak dosya vb. gibi yapıt türü|
+    |**Katman**|Yapıtı bağlayan katman|
     |**Doğrulamayı destekler**|**Doğru**ise, katman doğrulama işlemi projenin bu öğeden veya bu öğeden bağımlılıklara uygun olduğunu doğrulayabilirler.<br /><br /> **Yanlışsa**, bağlantı katman doğrulama işlemine katılmaz.<br /><br /> Daha fazla bilgi için bkz. [Katman diyagramları: yönergeler](../modeling/layer-diagrams-guidelines.md).|
-    |**Tanımlayıcısını**|Bağlı yapıt başvurusu|
+    |**Tanımlayıcı**|Bağlı yapıt başvurusu|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Uygulamanız için model oluşturma](../modeling/create-models-for-your-app.md)

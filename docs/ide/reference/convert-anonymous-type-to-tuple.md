@@ -1,5 +1,5 @@
 ---
-title: Anonim Türü Tuple'a Dönüştür
+title: Anonim türü kayıt tipine Dönüştür
 ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
@@ -11,36 +11,36 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: f7e89c5b5a05900fe42af62ef87f70292e94e662
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79094272"
 ---
 # <a name="convert-anonymous-type-to-tuple"></a>Anonim türü tanımlama grubuna dönüştürme
 
-Bu yeniden düzenleme aşağıdakiler için geçerlidir:
+Bu yeniden düzenleme için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** Anonim bir türü tuple'a dönüştürün.
+**Ne:** Anonim bir türü kayıt türüne dönüştürün.
 
-**Ne zaman:** Tuple olarak nitelendirilen isimsiz bir türün var.
+**Ne zaman:** Kayıt düzeni olarak niteleyen anonim bir türü vardır.
 
-**Neden:** [Tuples](/dotnet/csharp/tuples) sözdiziminizi hafif tutmada yardımcı olur. Bu hızlı eylem, bu C# özelliğinden yararlanmayı kolaylaştırır.
+**Neden:** [tanımlama](/dotnet/csharp/tuples) bilgileri, sözdiziminizi hafif tutmak için faydalıdır. Bu hızlı eylem, bu C# özelliğinden faydalanmasını kolaylaştırır.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
 1. İmlecinizi anonim bir türe yerleştirin.
-2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
+2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 
-   ![Anonim Türü Tuple'a Dönüştür](media/convert-anon-to-tuple.png)
+   ![Anonim türü kayıt tipine Dönüştür](media/convert-anon-to-tuple.png)
 
-2. Yeniden düzenlemeyi kabul etmek için **Enter** tuşuna basın.
+2. Yeniden düzenlemeyi kabul etmek için **ENTER** tuşuna basın.
 
-   ![Anonim Türü Tuple'a Dönüştür](media/convert-anon-to-tuple-complete.png)
+   ![Anonim türü kayıt tipine Dönüştür](media/convert-anon-to-tuple-complete.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

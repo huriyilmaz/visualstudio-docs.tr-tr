@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 89531fe0f2e912a6aabd962ab56ca7a24a7f3e20
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850659"
 ---
 # <a name="install-a-uml-profile"></a>UML profili yükleme
@@ -29,11 +29,11 @@ Visual Studio 'Yu bir UML profiliyle genişletebilirsiniz. Profil, UML modelleri
 
 ### <a name="to-install-a-uml-profile-on-your-computer"></a>Bilgisayarınıza bir UML profili yüklemek için
 
-1. Profil, Visual Studio uzantısı (`.vsix`) dosyası biçiminde size verilmiş olmalıdır. Aynı dosyadaki diğer özellikler olabilir.
+1. Profil size Visual Studio uzantısı ( `.vsix` ) dosyası biçiminde verilmelidir. Aynı dosyadaki diğer özellikler olabilir.
 
-     `.vsix` dosyasını bilgisayarınızda uygun bir konuma taşıyın.
+     `.vsix`Dosyayı bilgisayarınızda uygun bir konuma taşıyın.
 
-2. Windows Gezgini 'nde (veya dosya Gezgini) `.vsix` dosyasına çift tıklayın veya dosyayı [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]içinde açın.
+2. `.vsix`Windows Gezgini 'nde (veya dosya Gezgini) dosyayı çift tıklatın veya içinde açın [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] .
 
 3. Görüntülenen iletişim kutusunda, **yüklensin** ' e tıklayın.
 

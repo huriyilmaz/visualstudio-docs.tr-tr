@@ -13,10 +13,10 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: 2b9c86c17b89258145613e867ba6a91b2219fe0d
-ms.sourcegitcommit: 2c26d6e6f2a5c56ae5102cdded7b02f2d0fd686c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88168755"
 ---
 # <a name="update-visual-studio-using-a-minimal-offline-layout"></a>En düşük düzeyde çevrimdışı düzen kullanarak Visual Studio'yu güncelleştirme
@@ -49,7 +49,7 @@ Bu araç, Visual Studio 2017 (15,9) ve sonraki sürümler için güncelleştirme
 
 ### <a name="how-to-use-the-minimal-layout-tool"></a>En az düzen aracını kullanma
 
-`MinimalLayout.exe`düzeni oluşturmak için aşağıdaki komutları ve seçenekleri kullanır. Aracı çalıştırmak için en az bir komut gereklidir. Aracı nasıl çalıştıracağınızı aşağıda bulabilirsiniz:
+`MinimalLayout.exe` düzeni oluşturmak için aşağıdaki komutları ve seçenekleri kullanır. Aracı çalıştırmak için en az bir komut gereklidir. Aracı nasıl çalıştıracağınızı aşağıda bulabilirsiniz:
 
 ```MinimalLayout.exe [command] <options>...```
 
@@ -69,7 +69,7 @@ Bu araç, Visual Studio 2017 (15,9) ve sonraki sürümler için güncelleştirme
 
 #### <a name="options"></a>Seçenekler 
 
-|Seçenekler    |Açıklama    |Gerekli/İsteğe Bağlı |Örnek |
+|Seçenekler    |Description    |Gerekli/İsteğe Bağlı |Örnek |
 |:----------|:-----------|:------------|:--------------|
 |--targetLocation &lt; dir&gt; |En az bir çevrimdışı düzen oluşturulacağı dizini belirtir.       |Gerekli        |--targetLocation c:\VSLayout\ |
 |--baseVersion &lt; sürümü&gt;|Bu sürümle başlayarak en az çevrimdışı düzen oluşturulacaktır.   |Gerekli|--baseVersion 16.4.0 |

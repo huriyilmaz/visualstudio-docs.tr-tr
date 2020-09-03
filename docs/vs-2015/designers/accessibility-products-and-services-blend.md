@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 757b0b685094e40f48f659bd978087b20a8133c7
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850587"
 ---
-# <a name="accessibility-products-and-services-blend"></a>Erişilebilirlik ürünleri ve Hizmetleri (Blend)
+# <a name="accessibility-products-and-services-blend"></a>Blend’de erişilebilirlik ürünleri ve hizmetleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Microsoft ürünlerinin ve hizmetlerinin kullanımını herkes için daha kolay hale getireceğini taahhüt eder. Aşağıdaki bölümler, Microsoft Windows'u engelli kişiler için daha kolay erişilebilir duruma getiren özellikler, ürünler ve hizmetler konusunda bilgi sağlar.
@@ -48,9 +48,9 @@ Microsoft ürünlerinin ve hizmetlerinin kullanımını herkes için daha kolay 
 ## <a name="documentation-in-alternative-formats"></a>Alternatif biçimlerdeki belgeler
  Yazdırılan malzemelerin okunmasında veya yönetilmesinde zorluk yaşıyorsanız, bir Microsoft ürününe yönelik belgeleri daha erişilebilir bir biçimde edinebilirsiniz. [Microsoft Erişilebilirlik sitesinde](https://www.microsoft.com/enable)erişilebilir ürün belgelerinin dizinini görüntüleyebilirsiniz.
 
- Ayrıca, Recording for the Blind & Dyslexic, Inc (RFB&D) sitesinde ek Microsoft yayınları bulabilirsiniz. RFB&D bu belgeleri kendi dağıtım hizmetine kayıtlı ve uygun üyelerine dağıtmaktadır. Microsoft ürün belgelerinin ve Microsoft Press kitaplarının uygunluğu hakkında bilgi için şuraya başvurun:
+ Ayrıca, Recording for the Blind & Dyslexic, Inc (RFB&D) için daha fazla Microsoft yayını elde edebilirsiniz. RFB&D bu belgeleri dağıtım hizmetinin kayıtlı ve uygun üyelerine dağıtır. Microsoft ürün belgelerinin ve Microsoft Press kitaplarının uygunluğu hakkında bilgi için şuraya başvurun:
 
- **Önemli ölçüde öğrenme**
+ **Learning Ally**
 
  20 Roszel Road
 
@@ -75,5 +75,5 @@ Microsoft ürünlerinin ve hizmetlerinin kullanımını herkes için daha kolay 
 
  Microsoft Destek Hizmetleri hizmetin kullanıldığı andaki ücretlendirmeye, hüküm ve koşullara tabidir.
 
-## <a name="for-more-information"></a>Daha fazla bilgi için
+## <a name="for-more-information"></a>Daha fazla bilgi edinmek için
  Bilgisayarlar için erişilebilir teknolojinin Engelli kişilerin yaşamlarını iyileştirmeye nasıl yardımcı olduğu hakkında daha fazla bilgi için bkz. [Microsoft erişilebilirlik sitesi](https://www.microsoft.com/enable).

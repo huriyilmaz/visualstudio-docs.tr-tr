@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bffaf0bcff0c0fc93201badeb01b95928edc2979
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850709"
 ---
 # <a name="code-generation-in-a-build-process"></a>Derleme Sürecinde Kod Oluşturma
@@ -27,7 +27,7 @@ Kullandığınız oluşturma motoruna bağlı olarak, yapı görevleri farklı i
 
 Başka bir deyişle, MSBuild içinde metin şablonu oluşturduğunuzda, proje dosyası adları gibi şeylere aynı şekilde erişemezsiniz. Ancak, [Yapı parametrelerini kullanarak ortam bilgilerini metin şablonlarına ve yönerge işlemcilere geçirebilirsiniz](#parameters).
 
-## <a name="buildserver"></a>Makinelerinizi yapılandırma
+## <a name="configure-your-machines"></a><a name="buildserver"></a> Makinelerinizi yapılandırma
 
 Geliştirme bilgisayarınızda derleme görevlerini etkinleştirmek için, [Visual Studio Için modelleme SDK 'sını](https://www.microsoft.com/download/details.aspx?id=48148)yükler.
 
@@ -35,7 +35,7 @@ Geliştirme bilgisayarınızda derleme görevlerini etkinleştirmek için, [Visu
 
 - $ (ProgramFiles) \MSBuild\Microsoft\VisualStudio\v *. 0 \ Textşablon oluşturma
 
-  - Microsoft.VisualStudio.TextTemplating.Sdk.Host.*.0.dll
+  - Microsoft. VisualStudio. Textşablon. SDK. Host. * .0.dll
 
   - Microsoft.TextTemplating.Build.Tasks.dll
 
@@ -43,15 +43,15 @@ Geliştirme bilgisayarınızda derleme görevlerini etkinleştirmek için, [Visu
 
 - $ (ProgramFiles) \Microsoft Visual Studio *. 0 \ VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0
 
-  - Microsoft.VisualStudio.TextTemplating.*.0.dll
+  - Microsoft. VisualStudio. Textşablon oluşturma. * .0.dll
 
-  - Microsoft.VisualStudio.TextTemplating.Interfaces.*.0.dll (several files)
+  - Microsoft. VisualStudio. Textşablon. Interfaces. * .0.dll (çeşitli dosyalar)
 
-  - Microsoft.VisualStudio.TextTemplating.VSHost.*.0.dll
+  - Microsoft. VisualStudio. Textşablon. VSHost. * .0.dll
 
 - $ (ProgramFiles) \Microsoft Visual Studio *. 0 \ Common7\IDE\PublicAssemblies\
 
-  - Microsoft.VisualStudio.TextTemplating.Modeling.*.0.dll
+  - Microsoft. VisualStudio. Textşablon oluşturma. Modellendirme. * .0.dll
 
 ## <a name="to-edit-the-project-file"></a>Projeyi dosyasını düzenlemek için
 
@@ -67,7 +67,7 @@ Düzenlemeden sonra **yeniden yükle**' yi seçin.
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`
 
-\- veya -
+\- veya
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`
 
@@ -98,7 +98,7 @@ Dönüştürme görevini kontrol etmek için proje dosyanızın içine ekleyebil
     </PropertyGroup>
     ```
 
-- Salt okunur dosyaların üzerine yaz (ör. kullanıma alınmamış oldukları için):
+- Salt okunur dosyaların üzerine yaz (ör. kullanıma alınmamış oldukları için): 
 
     ```xml
     <PropertyGroup>
@@ -140,7 +140,7 @@ Son işleme adımını özelleştirmediğiniz sürece, herhangi bir dosyanın ü
 
 ## <a name="customizing-the-build-process"></a>Oluşturma işlemini özelleştirme
 
-Oluşturma işleminde diğer görevlerden önce metin dönüştürme gerçekleşir. Dönüşümden önce ve sonra çağrılan görevleri, `$(BeforeTransform)` özellikleri ve `$(AfterTransform)`ayarlayarak tanımlayabilirsiniz:
+Oluşturma işleminde diğer görevlerden önce metin dönüştürme gerçekleşir. Dönüşümden önce ve sonra çağrılan görevleri ve özelliklerini ayarlayarak tanımlayabilirsiniz `$(BeforeTransform)` `$(AfterTransform)` :
 
 ```xml
 <PropertyGroup>
@@ -155,7 +155,7 @@ Oluşturma işleminde diğer görevlerden önce metin dönüştürme gerçekleş
   </Target>
 ```
 
-`AfterTransform`, dosya listelerine başvurabilirsiniz:
+`AfterTransform`' De, dosya listelerine başvurabilirsiniz:
 
 - GeneratedFiles - işlem tarafından yazılan dosyaların listesi. Varolan salt okunur dosyaların üzerine yazan bu dosyalar için, %(GeneratedFiles.ReadOnlyFileOverwritten) doğru olacaktır. Bu dosyalar kaynak denetiminden denetlenebilir.
 
@@ -177,7 +177,7 @@ Bu özellikler yalnızca MSBuild tarafından kullanılır. Visual Studio'da kod 
 </ItemGroup>
 ```
 
-Yeniden yönlendirilecek yararlı bir klasör `$(IntermediateOutputPath).`
+Yeniden yönlendirileceği yararlı bir klasör `$(IntermediateOutputPath).`
 
 Dosya adını belirtir ve çıktısını alırsanız, şablonlardaki çıktı yönergesinde belirtilen uzantıdan öncelikli olur.
 
@@ -213,7 +213,7 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
 </PropertyGroup>
 ```
 
-## <a name="parameters"></a>Yapı bağlamı verilerini şablonlara geçirme
+## <a name="pass-build-context-data-into-the-templates"></a><a name="parameters"></a> Yapı bağlamı verilerini şablonlara geçirme
 
 Proje dosyasında parametre değerlerini ayarlayabilirsiniz. Örneğin, yapı özelliklerini ve [ortam değişkenlerini](../msbuild/how-to-use-environment-variables-in-a-build.md)geçirebilirsiniz:
 
@@ -226,7 +226,7 @@ Proje dosyasında parametre değerlerini ayarlayabilirsiniz. Örneğin, yapı ö
 </ItemGroup>
 ```
 
-Bir metin şablonunda, şablon yönergesinde `hostspecific` ayarlayın. Değerleri almak için [Parameter](../modeling/t4-parameter-directive.md) yönergesini kullanın:
+Bir metin şablonunda, `hostspecific` şablon yönergesinde öğesini ayarlayın. Değerleri almak için [Parameter](../modeling/t4-parameter-directive.md) yönergesini kullanın:
 
 ```
 <#@template language="c#" hostspecific="true"#>
@@ -234,11 +234,11 @@ Bir metin şablonunda, şablon yönergesinde `hostspecific` ayarlayın. Değerle
 The project folder is: <#= ProjectFolder #>
 ```
 
-## <a name="msbuild"></a>Derleme ve ekleme yönergeleri içinde proje özelliklerini kullanma
+## <a name="using-project-properties-in-assembly-and-include-directives"></a><a name="msbuild"></a> Derleme ve ekleme yönergeleri içinde proje özelliklerini kullanma
 
 $(SolutionDir) gibi Visual Studio makroları MSBuild içinde çalışmaz. Bunun yerine, proje özelliklerini kullanabilirsiniz.
 
-Proje özelliği tanımlamak için .csproj veya .vbproj dosyanızı düzenleyin. Bu örnek, `myLibFolder`adlı bir özelliği tanımlar:
+Proje özelliği tanımlamak için .csproj veya .vbproj dosyanızı düzenleyin. Bu örnek adında bir özelliği tanımlar `myLibFolder` :
 
 ```xml
 <!-- Define a project property, myLibFolder: -->
@@ -263,7 +263,7 @@ Artık derlemede ve ekleme yönergelerinde proje özelliklerini kullanabilirsini
 
  Bu yönergeler, hem MSBuild içinde hem de Visual Studio ana bilgisayarlarında T4parameterValues değerlerini alır.
 
-## <a name="q--a"></a>Soru - Yanıt
+## <a name="q--a"></a>Soru-Cevap
 
 **Neden yapı sunucusundaki şablonları dönüştürmek istiyorum? Kodumu iade etmeden önce Visual Studio 'daki şablonları zaten dönüştürtim.**
 
