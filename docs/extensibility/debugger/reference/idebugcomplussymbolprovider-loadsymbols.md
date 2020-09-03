@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::LoadSymbols | Microsoft Dokümanlar
+title: 'IDebugComPlusSymbolProvider:: LoadSymbols | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +15,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 805db1f0b0722b75e7a047d8509ed9e63e4565c9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733651"
 ---
 # <a name="idebugcomplussymbolproviderloadsymbols"></a>IDebugComPlusSymbolProvider::LoadSymbols
-Bellekte belirtilen hata ayıklama simgelerini yükler.
+Belirtilen hata ayıklama sembollerini belleğe yükler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT LoadSymbols(
@@ -50,28 +50,28 @@ int LoadSymbols(
 
 ## <a name="parameters"></a>Parametreler
 `ulAppDomainID`\
-[içinde] Uygulama etki alanının tanımlayıcısı.
+'ndaki Uygulama etki alanının tanımlayıcısı.
 
 `guidModule`\
-[içinde] Mondule benzersiz tanımlayıcısı.
+'ndaki Mondule öğesinin benzersiz tanımlayıcısı.
 
 `baseAddress`\
-[içinde] Temel bellek adresi.
+'ndaki Temel bellek adresi.
 
 `pUnkMetadataImport`\
-[içinde] Sembol meta verilerini içeren nesne.
+'ndaki Sembol meta verilerini içeren nesne.
 
 `bstrModuleName`\
-[içinde] Modülün adı.
+'ndaki Modülün adı.
 
 `bstrSymSearchPath`\
-[içinde] Sembol dosyasını arama yolu.
+'ndaki Sembol dosyasının aranacağı yol.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini ortaya çıkaran bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::LoadSymbols(

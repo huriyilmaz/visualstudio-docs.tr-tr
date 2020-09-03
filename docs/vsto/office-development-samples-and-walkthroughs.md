@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: a9a8e71395190647fa7a908949a186c511b24610
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "69551676"
 ---
 # <a name="office-development-samples-and-walkthroughs"></a>Office geliştirme örnekleri ve izlenecek yollar
@@ -38,7 +38,7 @@ ms.locfileid: "69551676"
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|Konu|Açıklama|
+|Konu|Description|
 |-----------|-----------------|
 |[Office geliştirme örnekleri](../vsto/office-development-samples.md)|Visual Studio 'da Office ve SharePoint geliştirme kullanımını gösteren örnek uygulamalara bağlantılar sağlar.|
 |[Word kullanarak izlenecek yollar](../vsto/walkthroughs-using-word.md)|Visual Studio 'da Office geliştirme araçlarına giriş sağlayan ve Word 'Ü Office Business Applications nasıl tümleştirebileceğinizi göstermeye yardımcı olan adım adım kılavuzların listesini görüntüler.|
@@ -49,9 +49,9 @@ ms.locfileid: "69551676"
 
 ## <a name="related-sections"></a>İlgili Bölümler
 
-|Konu|Açıklama|
+|Konu|Description|
 |-----------|-----------------|
-|[Visual Studio &#40;'da Office geliştirme ile çalışmaya başlama&#41;](../vsto/getting-started-office-development-in-visual-studio.md)|Kurulum, proje şablonları, Office birincil birlikte çalışma derlemeleri ve Office geliştirmede yenilikler hakkında bilgi için bağlantılar sağlar.|
+|[Visual Studio 'da Office geliştirme &#40;kullanmaya başlama&#41;](../vsto/getting-started-office-development-in-visual-studio.md)|Kurulum, proje şablonları, Office birincil birlikte çalışma derlemeleri ve Office geliştirmede yenilikler hakkında bilgi için bağlantılar sağlar.|
 |[Visual Studio 'da Office çözümlerinin mimarisi](../vsto/architecture-of-office-solutions-in-visual-studio.md)|Yönetilen kod Office çözümlerinin, geliştiricinin ve son kullanıcının perspektifinden nasıl çalıştığını açıklar ve yönetilen kodun Office belgeleri ve uygulamalarıyla nasıl çalıştığı hakkında bilgi içerir.|
 |[Office programlamada ortak görevler](../vsto/common-tasks-in-office-programming.md)|Visual Studio 'da Office geliştirme ile programlama hakkında sık sorulan soruları listeler ve yaygın sorunları çözmeye yardımcı olabilecek konuların bağlantılarını sağlar.|
 |[Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)|Microsoft Office çözümlerin nasıl oluşturulacağı ve çözümünüzde derlemelerin rolü hakkında bilgilere bağlantılar sağlar.|

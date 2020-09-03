@@ -24,24 +24,24 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1ade6c38a8edd73c181a3f135dd5e967901bf63f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68178923"
 ---
 # <a name="viewing-data-in-the-debugger"></a>Hata Ayıklayıcıda Verileri Görüntüleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Hata ayıklayıcı incelemek ve programınızın durumunu değiştirmek için çeşitli araçlar sağlar. Bu araçlar işlevi yalnızca kesme modunda çoğunu.  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Hata ayıklayıcı programınızın durumunu incelemek ve değiştirmek için çeşitli araçlar sağlar. Bu araçların çoğu yalnızca kesme modunda çalışır.  
   
 ## <a name="datatips"></a>DataTips  
- DataTips, hata ayıklama sırasında programınızdaki nesneler ve değişkenler hakkında bilgi görüntülemek için en uygun araçlardan biridir. Hata ayıklayıcı kesme modundayken, fare işaretçisini bir kaynak penceredeki değişkenin üzerine yerleştirerek geçerli kapsam içinde bir değişkenin değerini görüntüleyebilirsiniz. Daha fazla bilgi için [veri İpuçlarında veri değerlerini görüntüleme](../debugger/view-data-values-in-data-tips-in-the-code-editor.md).  
+ DataTips, hata ayıklama sırasında programınızdaki değişkenler ve nesneler hakkında bilgi görüntülemek için en kullanışlı araçlardan biridir. Hata ayıklayıcı kesme modundayken, fare işaretçisini bir kaynak penceresinde değişkenin üzerine yerleştirerek geçerli kapsamdaki bir değişkenin değerini görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [veri İpuçlarında veri değerlerini görüntüleme](../debugger/view-data-values-in-data-tips-in-the-code-editor.md).  
   
 ## <a name="visualizers"></a>Görselleştiriciler  
- Görselleştiriciler, yeni bir bileşeninin [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bir nesnenin veya değişkenin içeriklerini anlamlı bir şekilde görüntülemenize olanak tanıyan hata ayıklayıcı. Örneğin, bir HTML dizesi yorumlanır ve bir tarayıcıda görüntülenen olarak görüntülemek için HTML görselleştiriciyi kullanabilirsiniz. Görselleştiriciler ipuçlarından erişebileceğiniz **izleme** penceresinde **Otolar** penceresinde **Yereller** penceresinde veya **QuickWatch** iletişim bir kutu. Daha fazla bilgi için [oluşturma özel Görselleştiriciler](../debugger/create-custom-visualizers-of-data.md).  
+ Görselleştiriciler, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bir nesnenin veya değişkenin içeriğini anlamlı bir şekilde görüntülemenizi sağlayan yeni bir hata ayıklayıcı bileşenidir. Örneğin, HTML Görselleştirici bir tarayıcıda yorumlandığı ve görüntülendiği için HTML dizesini görüntülemek için kullanabilirsiniz. Görselleştiricilerde veri Ipuçları, **Gözcü** penceresi, **oto** penceresi, **Yereller** penceresi veya **QuickWatch** iletişim kutusu üzerinden erişebilirsiniz. Daha fazla bilgi için bkz. [özel Görselleştiriciler oluşturma](../debugger/create-custom-visualizers-of-data.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklayıcı temel bilgileri](../debugger/debugger-basics.md)   
+ [Hata ayıklayıcı temelleri](../debugger/debugger-basics.md)   
  [Komut penceresi](../ide/reference/command-window.md)   
- [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
+ [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)

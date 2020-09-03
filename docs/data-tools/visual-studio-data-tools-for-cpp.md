@@ -11,10 +11,10 @@ ms.workload:
 - data-storage
 - cplusplus
 ms.openlocfilehash: 063efeebff92698b8e5db66880360713c73fe150
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281103"
 ---
 # <a name="visual-studio-data-tools-for-c"></a>C++ için Visual Studio veri araçları
@@ -39,7 +39,7 @@ SQL Server 2005 ve sonraki sürümlerde özel işlevlerden faydalanmak için, [S
 
    ![SSMS veritabanı Ekle](../data-tools/media/raddata-ssms-attach-database.png)
 
-4. ODBC Windows SDK örneğini indirin ve yeni bir konuma ayıklayın. Bu örnek, bir veritabanına bağlanmak ve sorguları ve komutları vermek için kullanılan temel ODBC komutlarını gösterir. Bu işlevler hakkında daha fazla bilgi için bkz. [Microsoft açık veritabanı bağlantısı (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc). Çözümü ilk yüklediğinizde (C++ klasöründe olduğu gibi), Visual Studio çözümü Visual Studio 'nun geçerli sürümüne yükseltmeyi sağlar. **Evet**' e tıklayın.
+4. ODBC Windows SDK örneğini indirin ve yeni bir konuma ayıklayın. Bu örnek, bir veritabanına bağlanmak ve sorguları ve komutları vermek için kullanılan temel ODBC komutlarını gösterir. Bu işlevler hakkında daha fazla bilgi için bkz. [Microsoft açık veritabanı bağlantısı (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc). Çözümü ilk yüklediğinizde (C++ klasöründe olduğu gibi), Visual Studio çözümü Visual Studio 'nun geçerli sürümüne yükseltmeyi sağlar. **Evet**'e tıklayın.
 
 5. Yerel istemciyi kullanmak için *üst bilgi* dosyası ve *LIB* dosyasına ihtiyacınız vardır. Bu dosyalar, SQL. h içinde tanımlanan ODBC işlevlerinin ötesinde SQL Server özgü işlevler ve tanımlar içerir. **Proje**  >  **özellikleri**  >  **VC + + dizinleri**' nde aşağıdaki içerme dizinini ekleyin:
 

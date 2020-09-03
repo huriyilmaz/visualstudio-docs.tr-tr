@@ -1,5 +1,5 @@
 ---
-title: IDebugContainerField::EnumFields | Microsoft Dokümanlar
+title: 'IDebugContainerField:: EnumFields | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: afc461d52f81afc2c2e7127a90313bea7b9dacf3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733230"
 ---
 # <a name="idebugcontainerfieldenumfields"></a>IDebugContainerField::EnumFields
-Kapsayıcının alanları için bir sayısallaştırıcı oluşturur.
+Kapsayıcının alanları için bir Numaralandırıcı oluşturur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT EnumFields( 
@@ -49,25 +49,25 @@ int EnumFields(
 
 ## <a name="parameters"></a>Parametreler
 `dwKindFilter`\
-[içinde] Numaralandırılacak alanları seçen [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) sabitlerinin birleşimi. Alan türleri, sınıf veya ilkel veya yerel, parametre veya "bu" işaretçisi gibi belirli bilgiler gibi depolama türlerini açıklayabilir.
+'ndaki Numaralandırılacak alanları seçerek [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) sabitlerin birleşimi. Alan türleri, sınıf veya temel gibi depolama türlerini veya yerel, parametre veya "This" işaretçisi gibi belirli bilgileri tanımlayabilir.
 
 `dwModifiersFilter`\
-[içinde] Numaralandırılacak alanları seçen [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) sabitlerinin birleşimi. Alan değiştiriciler, genel veya özel veya sanal, statik veya son gibi depolama bilgileri gibi izinlere erişebilir.
+'ndaki Numaralandırılacak alanları seçerek [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) sabitlerin birleşimi. Alan değiştiricileri, genel veya özel gibi erişim izinleri veya sanal, statik veya son gibi depolama bilgileri olabilir.
 
 `pszNameFilter`\
-[içinde] Numaralandırılacak alanın adı. Tüm alanlar döndürülecekse, bu null bir değer olabilir.
+'ndaki Numaralandırılacak alanın adı. Tüm alanlar döndürülürsünüz bu null bir değer olabilir.
 
 `nameMatch`\
-[içinde] [Aramanın](../../../extensibility/debugger/reference/name-match.md) büyük/küçük harf duyarlı olup olmadığını kontrol eden NAME_MATCH numaralandırma değeri.
+'ndaki Aramanın büyük/küçük harfe duyarlı olup olmadığını denetleyen [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) numaralandırmasından bir değer.
 
 `ppEnum`\
-[çıkış] Alanlar listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Alan yoksa null değeri döndürür.
+dışı Alan listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Alan yoksa null değeri döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, alan yoksa S_OK veya S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- `dwKindFilter`Örneğin, `dwModifiersFilter`"MyMethod" adlı tüm genel sanal yöntemleri seçmek için , ve `pszNameFilter` parametreler birleştirilebilir.
+ `dwKindFilter`, `dwModifiersFilter` Ve `pszNameFilter` parametreleri birleştirilebilir, örneğin, "MyMethod" adlı tüm ortak sanal yöntemleri seçmek için.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)

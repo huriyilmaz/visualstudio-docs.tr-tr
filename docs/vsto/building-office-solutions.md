@@ -27,10 +27,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 3f89e20b710584c678c035f4d85034e90bb11323
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "69551851"
 ---
 # <a name="build-office-solutions"></a>Office çözümleri oluşturma
@@ -94,20 +94,20 @@ ms.locfileid: "69551851"
  Belge düzeyi projeleri için, belgenin tam konumunu da Office güvenilir klasörler listesine eklemeniz gerekir. Daha fazla bilgi için bkz. [belgelere güven verme](../vsto/granting-trust-to-documents.md).
 
 ## <a name="change-the-platform-target"></a>Platform hedefini değiştirme
- Varsayılan olarak, Office projeleri için platform hedefi **herhangi BIR CPU**olur. Genellikle, bu ayarı değiştirmemelisiniz. **Herhangi bir CPU** platformu hedefi ayarıyla oluşturulan Office çözümleri, Microsoft [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)]'un 32 bit ve 64 bit sürümlerinde çalışır.
+ Varsayılan olarak, Office projeleri için platform hedefi **herhangi BIR CPU**olur. Genellikle, bu ayarı değiştirmemelisiniz. **Herhangi BIR CPU** platformu hedefi ayarıyla oluşturulan Office çözümleri, Microsoft 'un 32 bit ve 64 bit sürümlerinde çalışır [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] .
 
- Platform hedefini yalnızca Microsoft [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)]'un 64-bit sürümlerinde çalışacak bir çözüm oluşturuyorsanız ve çözümünüz yerel 64 bit API 'leri çağırdığında x64 olarak ayarlamanız gerekir. Platform hedefi ayarını değiştirme hakkında daha fazla bilgi için bkz [. nasıl yapılır: Projeleri hedef platformları](../ide/how-to-configure-projects-to-target-platforms.md)için yapılandırın.
+ Platform hedefini yalnızca Microsoft 'un 64-bit sürümlerinde çalışacak bir çözüm oluşturuyorsanız [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] ve çözümünüz yerel 64 bit API 'leri çağırdığında x64 olarak ayarlamanız gerekir. Platform hedefi ayarını değiştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: projeleri hedef platformları Için yapılandırma](../ide/how-to-configure-projects-to-target-platforms.md).
 
  Platform hedefini x64 olarak ayarlarsanız, çözüm 32 bitlik Windows veya Office sürümlerinde çalışmaz. X64 platformu hedefi, çözümün 64 bitlik bir işlemde çalıştırılmasını gerektirir.
 
 ## <a name="use-the-clean-command"></a>Temizle komutunu kullanma
- Oluşturulan proje dosyalarını geliştirme bilgisayarından kaldırmak için içindeki [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **derleme** menüsündeki **Temizle** komutunu kullanabilirsiniz. **Clean** komutu derleme çıkış konumundaki tüm dosyaları siler. Uygulama düzeyi projeleri için, **Temizleme** komutu yapı işlemi tarafından oluşturulan kayıt defteri girişlerini de kaldırır.
+ Oluşturulan proje dosyalarını geliştirme bilgisayarından kaldırmak için içindeki **derleme** menüsündeki **Temizle** komutunu kullanabilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . **Clean** komutu derleme çıkış konumundaki tüm dosyaları siler. Uygulama düzeyi projeleri için, **Temizleme** komutu yapı işlemi tarafından oluşturulan kayıt defteri girişlerini de kaldırır.
 
 ## <a name="related-topics"></a>İlgili konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
 |[Office projelerinde hata ayıklama](../vsto/debugging-office-projects.md)|Office projelerinde hata ayıklama ile ilgili sorunları gösterir.|
-|[İzlenecek yol: Excel için ilk belge düzeyi özelleştirmeyi oluşturma](../vsto/walkthrough-creating-your-first-document-level-customization-for-excel.md)|Excel için temel bir belge düzeyi özelleştirmeyi oluşturma işlemini gösterir.|
-|[Nasıl yapılır: Devre dışı bırakılmış bir VSTO eklentisini yeniden etkinleştirme](../vsto/how-to-re-enable-a-vsto-add-in-that-has-been-disabled.md)|Kalıcı veya geçici devre dışı bırakılmış bir VSTO eklentisinin yeniden nasıl etkinleştirileceğini açıklar.|
+|[İzlenecek yol: Excel için ilk belge düzeyi özelleştirmeyi oluşturma](../vsto/walkthrough-creating-your-first-document-level-customization-for-excel.md)|Excel için temel bir belge düzeyi özelleştirmesi oluşturmayı gösterir.|
+|[Nasıl yapılır: devre dışı bırakılmış bir VSTO eklentisini yeniden etkinleştirme](../vsto/how-to-re-enable-a-vsto-add-in-that-has-been-disabled.md)|Kalıcı veya geçici devre dışı bırakılmış bir VSTO eklentisinin yeniden nasıl etkinleştirileceğini açıklar.|
 |[Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)|Office çözümleri oluşturma ve çözümünüzde derlemelerin rolü hakkında bilgi için bağlantılar sağlar.|

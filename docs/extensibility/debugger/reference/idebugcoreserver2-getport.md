@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer2::GetPort | Microsoft Dokümanlar
+title: 'IDebugCoreServer2:: GetPort | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: e8dfafffb485150687b1877295a00a8ec6b71cfc
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733114"
 ---
 # <a name="idebugcoreserver2getport"></a>IDebugCoreServer2::GetPort
 Belirli bir bağlantı noktasını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetPort( 
@@ -43,13 +43,13 @@ int GetPort( 
 
 ## <a name="parameters"></a>Parametreler
 `guidPort`\
-[içinde] Portun GUID'i alınacak.
+'ndaki Alınacak bağlantı noktasının GUID 'SI.
 
 `ppPort`\
-[çıkış] İstenilen bağlantı noktasını temsil eden bir [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) nesnesi döndürür.
+dışı İstenen bağlantı noktasını temsil eden bir [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür. Verilen `E_PORTSUPPLIER_NO_PORT` tanımlayıcıile bağlantı noktası yoksa döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. `E_PORTSUPPLIER_NO_PORT`Verilen tanımlayıcıya sahip bir bağlantı noktası yoksa döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

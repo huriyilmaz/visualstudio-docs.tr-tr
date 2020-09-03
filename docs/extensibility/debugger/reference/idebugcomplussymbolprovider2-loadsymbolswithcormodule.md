@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider2::LoadSymbolsWithCorModule | Microsoft Dokümanlar
+title: 'IDebugComPlusSymbolProvider2:: LoadSymbolsWithCorModule | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +15,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ef4750de223b133e30e620f5dc0eec526e98526d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733323"
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolswithcormodule"></a>IDebugComPlusSymbolProvider2::LoadSymbolsWithCorModule
-**ICorDebugModule** nesnesi verilen hata ayıklama sembolleri yükler.
+**ICorDebugModule** nesnesi verilen hata ayıklama sembollerini yükler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT LoadSymbolsWithCorModule(
@@ -52,31 +52,31 @@ int LoadSymbolsWithCorModule(
 
 ## <a name="parameters"></a>Parametreler
 `ulAppDomainID`\
-[içinde] Uygulama etki alanının tanımlayıcısı.
+'ndaki Uygulama etki alanının tanımlayıcısı.
 
 `guidModule`\
-[içinde] Modülün benzersiz tanımlayıcısı.
+'ndaki Modülün benzersiz tanıtıcısı.
 
 `baseAddress`\
-[içinde] Temel bellek adresi.
+'ndaki Temel bellek adresi.
 
 `pUnkMetadataImport`\
-[içinde] Hata ayıklama simgesi meta verilerini içeren nesne.
+'ndaki Hata ayıklama simgesi meta verilerini içeren nesne.
 
 `pUnkCorDebugModule`\
-[içinde] [ICorDebugModule Arabirimini](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)uygulayan nesne.
+'ndaki [ICorDebugModule arabirimini](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)uygulayan nesne.
 
 `bstrModuleName`\
-[içinde] Modülün adı.
+'ndaki Modülün adı.
 
 `bstrSymSearchPath`\
-[içinde] Sembol dosyasını arama yolu.
+'ndaki Sembol dosyasının aranacağı yol.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) arabirimini ortaya çıkaran bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::LoadSymbolsWithCorModule(

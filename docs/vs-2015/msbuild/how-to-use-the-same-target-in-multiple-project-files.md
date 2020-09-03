@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Birden çok proje dosyasında aynı hedefi kullanma | Microsoft Docs'
+title: 'Nasıl yapılır: birden çok proje dosyasında aynı hedefi kullanma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -13,34 +13,34 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d388d32b288e47a7e92f5d0f727230ffa00a2621
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68178329"
 ---
-# <a name="how-to-use-the-same-target-in-multiple-project-files"></a>Nasıl yapılır: Birden Çok Proje Dosyasında Aynı Hedefi Kullanma
+# <a name="how-to-use-the-same-target-in-multiple-project-files"></a>Nasıl Yapılır: Birden Çok Proje Dosyasında Aynı Hedefi Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Birkaç yazdıysanız [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] proje dosyaları, olduğunu keşfetti., aynı görevleri ve hedefleri, farklı proje dosyalarında kullanmanız gerekebilir. Bu görevler veya hedefleri eksiksiz bir açıklaması her proje dosyasında dahil olmak üzere yerine ayrı proje dosyasında hedef kaydedebilir ve sonra proje hedef kullanması gereken diğer proje alın.  
+Birkaç [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] Proje dosyası oluşturduysanız, farklı proje dosyalarında aynı görevleri ve hedefleri kullanmanız gerektiğini fark edebilirsiniz. Her proje dosyasındaki bu görevlerin veya hedeflerin tüm açıklamalarını eklemek yerine, bir hedefi ayrı bir proje dosyasında kaydedebilir ve sonra bu projeyi, hedefi kullanmak için gereken diğer bir projeye içeri aktarabilirsiniz.  
   
-## <a name="using-the-import-element"></a>İçeri aktarma öğesi kullanma  
- `Import` Öğesi, bir proje dosyası başka bir proje dosyasına eklemek için kullanılır. İçeri aktarılan proje dosyası geçerli bir olmalıdır [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] proje dosyası ve doğru biçimlendirilmiş XML içeriyor. `Project` Özniteliği, içeri aktarılan proje dosyasının yolunu belirtir. Daha fazla bilgi için `Import` öğesi bkz [içeri aktarma öğesi (MSBuild)](../msbuild/import-element-msbuild.md).  
+## <a name="using-the-import-element"></a>Içeri aktarma öğesini kullanma  
+ Öğesi, başka bir proje dosyasına `Import` bir proje dosyası eklemek için kullanılır. İçeri aktarılmakta olan proje dosyası geçerli bir [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] Proje dosyası olmalıdır ve iyi BIÇIMLENDIRILMIŞ XML içermelidir. `Project`Öznitelik, içeri aktarılan proje dosyasının yolunu belirtir. Öğesi hakkında daha fazla bilgi için `Import` bkz. [Import element (MSBuild)](../msbuild/import-element-msbuild.md).  
   
-#### <a name="to-import-a-project"></a>Bir projeye içeri aktarmak için  
+#### <a name="to-import-a-project"></a>Bir projeyi içeri aktarmak için  
   
-1. İçeri aktarma proje dosyası, tüm özellikleri ve özellikler için parametre olarak kullanılan öğeleri ve içeri aktarılan projedeki öğeleri tanımlar.  
+1. İçeri aktarılan projedeki Özellikler ve öğeler için parametre olarak kullanılan proje dosyasını içeri aktarma, tüm özellikler ve öğeler ' i tanımlayın.  
   
-2. Kullanım `Import` projeyi içeri aktarmak için öğesi. Örneğin:  
+2. `Import`Projeyi içeri aktarmak için öğesini kullanın. Örneğin:  
   
      `<Import Project="MyCommon.targets"/>`  
   
-3. Aşağıdaki `Import` öğe, içeri aktarılan projedeki tüm özelliklerini ve özelliklerinin varsayılan tanımları geçersiz kılmanız gerekir öğeleri ve öğeleri tanımlar.  
+3. Öğesini takip `Import` eden tüm özellikleri ve içeri aktarılan projedeki özelliklerin ve öğelerin varsayılan tanımlarını geçersiz kılması gereken öğeleri tanımlayın.  
   
 ## <a name="order-of-evaluation"></a>Değerlendirme Sırası  
- Zaman [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] ulaştığında bir `Import` öğe, içeri aktarılan proje konumda alma projesine eklenen etkili bir şekilde `Import` öğesi. Bu nedenle, konumunu `Import` öğesi özellikleri ve öğeleri değerlerini etkileyebilir. İçeri aktarılan proje ve özellikleri ve öğeleri tarafından içeri aktarılan proje kullandığı ayarlanmış olan öğeleri ve özellikleri anlamak önemlidir.  
+ [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]Bir öğeye ulaştığında `Import` , içeri aktarılan proje, öğe konumundaki içeri aktarma projesine etkin bir şekilde eklenir `Import` . Bu nedenle, `Import` öğesinin konumu Özellikler ve öğelerin değerlerini etkileyebilir. İçeri aktarılan proje tarafından ayarlanan özellikleri ve öğeleri ve içeri aktarılan projenin kullandığı özellikleri ve öğeleri anlamak önemlidir.  
   
- Projeyi oluşturduğunda, öğeleri tarafından izlenen tüm özellikler ilk olarak değerlendirilir. Örneğin, aşağıdaki XML, içeri aktarılan proje dosyası MyCommon.targets tanımlar:  
+ Proje oluşturulduğunda tüm özellikler önce değerlendirilir ve ardından öğeler gelir. Örneğin, aşağıdaki XML içeri aktarılan proje dosyasını MyCommon. targets olarak tanımlar:  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -54,7 +54,7 @@ Birkaç yazdıysanız [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] p
 </Project>  
 ```  
   
- Aşağıdaki XML MyCommon.targets alır, MyApp.proj tanımlar:  
+ Aşağıdaki XML, MyCommon. targets içeri aktaran MyApp. proj öğesini tanımlar:  
   
 ```  
 <Project  
@@ -67,24 +67,24 @@ Birkaç yazdıysanız [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] p
 </Project>  
 ```  
   
- Projeyi oluşturduğunda, aşağıdaki ileti görüntülenir:  
+ Proje oluşturduğunda, aşağıdaki ileti görüntülenir:  
   
  `Name="MyCommon"`  
   
- Proje özelliği sonra içeri aktarılmış olduğundan `Name` tanımını MyApp.proj içinde tanımlanan `Name` MyCommon.targets MyApp.proj tanımında geçersiz kılar. Özellik adı tanımlı önce projeyi içeri aktarılırsa, derleme şu iletiyi görüntüler:  
+ Proje, özelliği `Name` MyApp. proj içinde tanımlandıktan sonra içeri aktarıldığından `Name` MyCommon. targets içindeki tanımı, MyApp. proj içindeki tanımı geçersiz kılar. Eğer proje, özellik adı tanımlanmadan önce içeri aktarıldıysa, yapı aşağıdaki iletiyi görüntüler:  
   
  `Name="MyApp"`  
   
-#### <a name="use-the-following-approach-when-importing-projects"></a>Projeleri içeri aktarılırken aşağıdaki yaklaşımı kullanın.  
+#### <a name="use-the-following-approach-when-importing-projects"></a>Projeleri içeri aktarırken aşağıdaki yaklaşımı kullanın  
   
-1. , Proje dosyası, tüm özellikleri ve özellikler için parametre olarak kullanılan öğeleri ve içeri aktarılan projedeki öğeleri tanımlar.  
+1. Proje dosyasında, içeri aktarılan projedeki Özellikler ve öğeler için parametre olarak kullanılan tüm özellikleri ve öğeleri tanımlayın.  
   
 2. Projeyi içeri aktarın.  
   
-3. Proje dosyasında tüm özellikleri ve özelliklerinin varsayılan tanımları geçersiz kılmanız gerekir öğeleri ve içeri aktarılan projedeki öğeleri tanımlar.  
+3. Proje dosyasında, içeri aktarılan projedeki özelliklerin ve öğelerin varsayılan tanımlarını geçersiz kılması gereken tüm özellikleri ve öğeleri tanımlayın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, ikinci kod örneğinde aktarır MyCommon.targets dosyasını gösterir. .Targets dosyasının özelliklerini alma projeden yapı yapılandırmak için değerlendirir.  
+ Aşağıdaki kod örneği, ikinci kod örneği içe aktardığı MyCommon. targets dosyasını gösterir. . Targets dosyası, derlemeyi yapılandırmak için içeri aktarma projesinden özellikleri değerlendirir.  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -102,7 +102,7 @@ Birkaç yazdıysanız [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] p
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği MyCommon.targets dosyasını içeri aktarır.  
+ Aşağıdaki kod örneği MyCommon. targets dosyasını içeri aktarır.  
   
 ```  
 <Project DefaultTargets="Build"  
@@ -116,4 +116,4 @@ Birkaç yazdıysanız [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] p
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İçeri aktarma öğesi (MSBuild)](../msbuild/import-element-msbuild.md)   
- [Hedefler](../msbuild/msbuild-targets.md)
+ [Targets](../msbuild/msbuild-targets.md)

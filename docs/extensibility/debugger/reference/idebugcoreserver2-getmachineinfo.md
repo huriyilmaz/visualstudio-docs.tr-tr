@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer2::GetMachineInfo | Microsoft Dokümanlar
+title: 'IDebugCoreServer2:: Getmachineınfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 9411c296f396043a63eee6e4254a35d5c2c35884
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733157"
 ---
 # <a name="idebugcoreserver2getmachineinfo"></a>IDebugCoreServer2::GetMachineInfo
-Çekirdek sunucunun üzerinde çalıştığının açıklamasını alır.
+Çekirdek sunucunun üzerinde çalıştığı makinenin açıklamasını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetMachineInfo( 
@@ -43,14 +43,14 @@ int GetMachineInfo( 
 
 ## <a name="parameters"></a>Parametreler
 `Fields`\
-[içinde] Hangi alanların dolduruleceğini belirten [MACHINE_INFO_FIELDS](../../../extensibility/debugger/reference/machine-info-fields.md) numaralandırmadan gelen `pMachineInfo` bayrakların birleşimi.
+'ndaki [MACHINE_INFO_FIELDS](../../../extensibility/debugger/reference/machine-info-fields.md) Numaralandırmadaki, doldurulacak alanları belirten bayrakların birleşimi `pMachineInfo` .
 
  `pMachineInfo`\
 
- [içinde, dışarı] Makinenin açıklamasıyla doldurulmuş [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) bir yapı.
+ [in, out] Makinenin açıklamasıyla doldurulmuş bir [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) yapısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

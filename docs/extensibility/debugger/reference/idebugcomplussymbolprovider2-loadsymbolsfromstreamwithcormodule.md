@@ -15,16 +15,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fa1d03b2f91cea03403f4893e61ec15bf5b82952
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733390"
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolsfromstreamwithcormodule"></a>IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
-**ICorDebugModule** nesnesi verilen bir veri akışından hata ayıklama simgelerini yükleyin.
+**ICorDebugModule** nesnesi verilen bir veri akışından hata ayıklama sembolleri yükleyin.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT LoadSymbolsFromStreamWithCorModule(
@@ -50,28 +50,28 @@ int LoadSymbolsFromStreamWithCorModule(
 
 ## <a name="parameters"></a>Parametreler
 `ulAppDomainID`\
-[içinde] Uygulama etki alanının tanımlayıcısı.
+'ndaki Uygulama etki alanının tanımlayıcısı.
 
 `guidModule`\
-[içinde] Modülün benzersiz tanımlayıcısı.
+'ndaki Modülün benzersiz tanıtıcısı.
 
 `baseAddress`\
-[içinde] Temel bellek adresi.
+'ndaki Temel bellek adresi.
 
 `pUnkMetadataImport`\
-[içinde] Sembol meta verilerini içeren nesne.
+'ndaki Sembol meta verilerini içeren nesne.
 
 `pUnkCorDebugModule`\
-[içinde] [ICorDebugModule Arabirimini](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)uygulayan nesne.
+'ndaki [ICorDebugModule arabirimini](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)uygulayan nesne.
 
 `pStream`\
-[içinde] Yüklenmesi gereken hata ayıklama sembollerini içeren veri akışı.
+'ndaki Yüklenecek hata ayıklama sembollerini içeren veri akışı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) arabirimini ortaya çıkaran bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::LoadSymbolsFromStreamWithCorModule(

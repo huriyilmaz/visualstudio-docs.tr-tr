@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider2::LoadSymbolsFromCallback | Microsoft Dokümanlar
+title: 'IDebugComPlusSymbolProvider2:: LoadSymbolsFromCallback | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +15,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 738c9e24a8acfe33d7d3993da0eb5eb96ace1795
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733362"
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolsfromcallback"></a>IDebugComPlusSymbolProvider2::LoadSymbolsFromCallback
-Belirtilen geri çağırma yöntemini kullanarak hata ayıklama simgelerini yükler.
+Belirtilen geri çağırma yöntemini kullanarak hata ayıklama sembolleri yükler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT LoadSymbolsFromCallback(
@@ -52,31 +52,31 @@ int LoadSymbolsFromCallback(
 
 ## <a name="parameters"></a>Parametreler
 `ulAppDomainID`\
-[içinde] Uygulama etki alanının tanımlayıcısı.
+'ndaki Uygulama etki alanının tanımlayıcısı.
 
 `guidModule`\
-[içinde] Modülün benzersiz tanımlayıcısı.
+'ndaki Modülün benzersiz tanıtıcısı.
 
 `pUnkMetadataImport`\
-[içinde] Sembol meta verilerini içeren nesne.
+'ndaki Sembol meta verilerini içeren nesne.
 
 `pUnkCorDebugModule`\
-[içinde] [ICorDebugModule Arabirimini](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)uygulayan nesne.
+'ndaki [ICorDebugModule arabirimini](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)uygulayan nesne.
 
 `bstrModuleName`\
-[içinde] Modülün adı.
+'ndaki Modülün adı.
 
 `bstrSymSearchPath`\
-[içinde] Sembol dosyasını arama yolu.
+'ndaki Sembol dosyasının aranacağı yol.
 
 `pCallback`\
-[içinde] Geri arama yöntemini temsil eden nesne.
+'ndaki Geri çağırma yöntemini temsil eden nesne.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) arabirimini ortaya çıkaran bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::LoadSymbolsFromCallback(
