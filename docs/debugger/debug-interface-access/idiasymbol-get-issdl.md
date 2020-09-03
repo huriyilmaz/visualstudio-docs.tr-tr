@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: abca9e52087a8cebd44ee21f9791a2ce290731d0
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85463206"
 ---
 # <a name="idiasymbolget_issdl"></a>IDiaSymbol::get_isSdl
@@ -30,7 +30,7 @@ HRESULT get_isSdl(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `BOOL`Modülün/SDL seçeneğiyle derlenip derlenmeyeceğini belirten bir işaretçisi.
+dışı `BOOL` Modülün/SDL seçeneğiyle derlenip derlenmeyeceğini belirten bir işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.

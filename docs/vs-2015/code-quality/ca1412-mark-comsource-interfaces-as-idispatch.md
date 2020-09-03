@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 5685ad7a760e00392b5f9684cdf399ee320d4a0c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540263"
 ---
 # <a name="ca1412-mark-comsource-interfaces-as-idispatch"></a>CA1412: ComSource arabirimlerini IDispatch olarak işaretleyin
@@ -36,7 +36,7 @@ ms.locfileid: "85540263"
  Bir tür, <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> özniteliğiyle işaretlenmiş ve en az bir belirtilen arabirim, <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> değer olarak ayarlanan öznitelik ile işaretlenmemiş `InterfaceIsDispatch` .
 
 ## <a name="rule-description"></a>Kural Tanımı
- <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>, bir sınıfın bileşen nesne modeli (COM) istemcilerine sunduğu olay arabirimlerini belirlemek için kullanılır. Bu arabirimler, `InterfaceIsIDispatch` Visual Basic 6 com istemcilerinin olay bildirimleri almasını sağlamak için olarak sunulmalıdır. Varsayılan olarak, bir arabirim <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> özniteliğiyle işaretlenmemişse, Çift arabirim olarak sunulur.
+ <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> , bir sınıfın bileşen nesne modeli (COM) istemcilerine sunduğu olay arabirimlerini belirlemek için kullanılır. Bu arabirimler, `InterfaceIsIDispatch` Visual Basic 6 com istemcilerinin olay bildirimleri almasını sağlamak için olarak sunulmalıdır. Varsayılan olarak, bir arabirim <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> özniteliğiyle işaretlenmemişse, Çift arabirim olarak sunulur.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kural ihlalini onarmak için özniteliği, özniteliği <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> ile belirtilen tüm arabirimler için değeri ınterfaceisidispatch olarak ayarlanacak şekilde ekleyin veya değiştirin <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> .

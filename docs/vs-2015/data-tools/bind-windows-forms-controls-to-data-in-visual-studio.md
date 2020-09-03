@@ -24,10 +24,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8a03f4df57b216fa68e5ac24df80b67917aa3e3f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672983"
 ---
 # <a name="bind-windows-forms-controls-to-data-in-visual-studio"></a>Visual Studio'da verilere Windows Forms denetimleri bağlama
@@ -58,11 +58,11 @@ Verileri Windows Forms 'e bağlayarak uygulamanızın kullanıcılarına veriler
 - [Formlar arasında veri geçirme](../data-tools/pass-data-between-forms.md)
 
 ## <a name="bindingsource-component"></a>BindingSource bileşeni
- @No__t_0 bileşeni iki amaca hizmet eder. İlk olarak, formunuzdaki denetimleri verilerle bağlarken bir soyutlama katmanı sağlar. Formdaki denetimler <xref:System.Windows.Forms.BindingSource> bileşene bağlıdır (doğrudan bir veri kaynağına bağlı olmak yerine).
+ <xref:System.Windows.Forms.BindingSource>Bileşen iki amaca hizmet eder. İlk olarak, formunuzdaki denetimleri verilerle bağlarken bir soyutlama katmanı sağlar. Formdaki denetimler <xref:System.Windows.Forms.BindingSource> bileşene bağlıdır (doğrudan bir veri kaynağına bağlı olmak yerine).
 
- İkincisi, bir nesne koleksiyonunu yönetebilir. @No__t_0 bir türü eklemek, bu türün bir listesini oluşturur.
+ İkincisi, bir nesne koleksiyonunu yönetebilir. Bir türü öğesine eklemek, <xref:System.Windows.Forms.BindingSource> Bu türün bir listesini oluşturur.
 
- @No__t_0 bileşeni hakkında daha fazla bilgi için bkz.:
+ Bileşen hakkında daha fazla bilgi için <xref:System.Windows.Forms.BindingSource> bkz.
 
 - [BindingSource Bileşeni](https://msdn.microsoft.com/library/3e2faf4c-f5b8-4fa6-9fbc-f59c37ec2fb9)
 
@@ -74,7 +74,7 @@ Verileri Windows Forms 'e bağlayarak uygulamanızın kullanıcılarına veriler
  Bu bileşen, bir Windows uygulaması tarafından gösterilecek veriler arasında gezinmek için bir kullanıcı arabirimi sağlar. Daha fazla bilgi için bkz. [BindingNavigator denetimi](https://msdn.microsoft.com/library/18c1e2a5-9834-40d3-9b2e-2b545e4e769e).
 
 ## <a name="datagridview-control"></a>DataGridView denetimi
- Birçok farklı türde veri kaynağından tablo verilerini göstermek ve düzenlemek için <xref:System.Windows.Forms.DataGridView> denetimini kullanın. @No__t_1 özelliğini kullanarak verileri <xref:System.Windows.Forms.DataGridView> bağlayabilirsiniz. Daha fazla bilgi için bkz. [DataGridView denetimine genel bakış](https://msdn.microsoft.com/library/0a45c661-89dc-4390-9cc6-c47eee501488).
+ Birçok farklı türde veri kaynağından tablo verilerini göstermek ve düzenlemek için, <xref:System.Windows.Forms.DataGridView> denetimi kullanın. Özelliğini kullanarak verileri öğesine bağlayabilirsiniz <xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.DataGridView.DataSource%2A> . Daha fazla bilgi için bkz. [DataGridView denetimine genel bakış](https://msdn.microsoft.com/library/0a45c661-89dc-4390-9cc6-c47eee501488).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Visual Studio'da verilere denetimler bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md)

@@ -10,18 +10,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6f42600a739561a27a6dd8f6caa237027bac4554
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72603698"
 ---
-# <a name="how-to-invoke-a-windows-communication-foundation-contract-operation-legacy"></a>Nasıl yapılır: Windows Communication Foundation sözleşmesi Işlemini çağırma (eski)
-Bu konu, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedefleyen eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] kullanarak bir [!INCLUDE[indigo1](../includes/indigo1-md.md)] sözleşmesi işleminin nasıl çağırılacağını açıklar.
+# <a name="how-to-invoke-a-windows-communication-foundation-contract-operation-legacy"></a>Nasıl Yapılır: Windows Communication Foundation Sözleşme İşlemi Çağırma (Eski)
+Bu konu, veya ' i hedefleyen bir sözleşme işleminin nasıl çağırılacağını açıklar [!INCLUDE[indigo1](../includes/indigo1-md.md)] [!INCLUDE[wfd1](../includes/wfd1-md.md)] [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  Araç kutusundan bir **SendActivity** etkinliğini iş akışı tasarım yüzeyine sürükledikten sonra, var olan bir sözleşmeyi içeri aktarmanız ve bu **SendActivity** etkinliğinden hangi işlemin çağrılacağını belirlemelisiniz. [Işlem Seç Iletişim kutusu (eski)](../workflow-designer/choose-operation-dialog-box-legacy.md)aracılığıyla sözleşmenizi ve işlemlerini seçersiniz.
 
- Ayrıca, hizmetinize sahip bir yapılandırma dosyası kullanıyorsanız, bir <xref:System.Workflow.Activities.ChannelToken> belirtmeniz gerekecektir. @No__t_0, gönderme etkinliğinizin iş akışı hizmetine bağlanmak için kullanacağı uç nokta yapılandırmasını tanımlar.
+ Ayrıca, hizmetinize sahip bir yapılandırma dosyası kullanıyorsanız, bir belirtmeniz gerekir <xref:System.Workflow.Activities.ChannelToken> . , <xref:System.Workflow.Activities.ChannelToken> Gönderme etkinliğinizin iş akışı hizmetine bağlanmak için kullanacağı uç nokta yapılandırmasını tanımlar.
 
 ### <a name="to-invoke-a-wcf-contract-operation-from-a-sendactivity-activity"></a>Bir SendActivity etkinliğinden WCF sözleşme işlemini çağırmak için
 
@@ -39,11 +39,11 @@ Bu konu, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE
 
 ### <a name="to-specify-a-channel-token"></a>Bir kanal belirteci belirtmek için
 
-1. Tasarımcıda <xref:System.Workflow.Activities.SendActivity> etkinliğini seçin.
+1. <xref:System.Workflow.Activities.SendActivity>Tasarımcıda etkinliği seçin.
 
-2. **Özellikler** bölmesinde, <xref:System.Workflow.Activities.ChannelToken> için bir ad belirtin. Bu ad, kanal belirtecini benzersiz şekilde tanımlar.
+2. **Özellikler** bölmesinde, için bir ad belirtin <xref:System.Workflow.Activities.ChannelToken> . Bu ad, kanal belirtecini benzersiz şekilde tanımlar.
 
-3. Kanal belirteci düğümünü genişletin ve <xref:System.Workflow.Activities.ChannelToken.EndpointName%2A> alanında kullanacağınız istemci uç noktası için bir ad belirtin. Yapılandırma dosyasındaki aynı adın uç nokta yapılandırması, kanalı yapılandırmak için kullanılacaktır.
+3. Kanal belirteci düğümünü genişletin ve alanda kullanacağınız istemci uç noktası için bir ad belirtin <xref:System.Workflow.Activities.ChannelToken.EndpointName%2A> . Yapılandırma dosyasındaki aynı adın uç nokta yapılandırması, kanalı yapılandırmak için kullanılacaktır.
 
 4. Zaten mevcut değilse, yapılandırma dosyanızda uç nokta yapılandırmasını oluşturun. İstemcinizi yapılandırma hakkında daha fazla bilgi için bkz. [WCF Istemcisine genel bakış](https://msdn.microsoft.com/library/f60d9bc5-8ade-4471-8ecf-5a07a936c82d).
 

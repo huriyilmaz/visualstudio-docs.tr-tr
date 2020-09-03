@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 823c61e7625850c680b52cd4ad9386ef0838d340
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660928"
 ---
 # <a name="call-hierarchy"></a>Çağrı Hiyerarşisi
@@ -30,7 +30,7 @@ ms.locfileid: "72660928"
 ## <a name="using-call-hierarchy"></a>Çağrı hiyerarşisini kullanma
  **Çağrı hiyerarşisi** penceresini görüntülemek için bir yöntem, özellik veya Oluşturucu çağrısının adına sağ tıklayın ve ardından **Çağrı hiyerarşisini görüntüle**' ye tıklayın.
 
- Üye adı, **çağrı hiyerarşisi** penceresindeki bir ağaç görünümü bölmesinde görünür. Üye düğümünü **genişletirseniz üye adı**_ve alt_ **düğümlere yapılan çağrılar** görüntülenir. Aşağıdaki çizim, bu düğümleri **çağrı hiyerarşisi** penceresinde gösterir.
+ Üye adı, **çağrı hiyerarşisi** penceresindeki bir ağaç görünümü bölmesinde görünür. Üye düğümünü **genişletirseniz üye adı**_ve alt_ **düğümlere yapılan çağrılar**_member name_ görüntülenir. Aşağıdaki çizim, bu düğümleri **çağrı hiyerarşisi** penceresinde gösterir.
 
  ![Tek düğümlü Açık hiyerarşi çağırma](../../ide/reference/media/onenode.png "OneNode") Çağrı hiyerarşisi penceresi
 
@@ -50,7 +50,7 @@ ms.locfileid: "72660928"
 
 - **Çağrı hiyerarşisi** ayrıntıları bölmesi, alt üyenin üst Üyeden çağrıldığı tüm kod satırlarını görüntüler.
 
-- **Kod tanımı penceresi**açıksa, seçilen üyenin kodunu görüntüler. Bu pencere ve C++' de C# kullanılabilir. Bu pencere hakkında daha fazla bilgi için bkz. [kod yapısını görüntüleme](../../ide/viewing-the-structure-of-code.md).
+- **Kod tanımı penceresi**açıksa, seçilen üyenin kodunu görüntüler. Bu pencere C# ve C++ ' da kullanılabilir. Bu pencere hakkında daha fazla bilgi için bkz. [kod yapısını görüntüleme](../../ide/viewing-the-structure-of-code.md).
 
 > [!NOTE]
 > Çağrı hiyerarşisi, bir yöntemin bir olay işleyicisi olarak eklendiği veya bir temsilciye atandığı yerleri içeren, metot grubu başvurularını bulamaz. Bir yönteme yapılan tüm başvuruları bulmak için, **tüm başvuruları bul** komutunu kullanabilirsiniz.
@@ -63,6 +63,6 @@ ms.locfileid: "72660928"
 |**Yeni kök olarak ekle**|Seçili düğümü ağaç görünümü bölmesine yeni bir kök düğüm olarak ekler. Bu, ilgilenmeniz belirli bir alt ağaçta odaklanmanızı sağlar.|
 |**Kökü Kaldır**|Seçili kök düğümü ağaç görünümü bölmesinden kaldırır. Bu seçenek yalnızca bir kök düğümden kullanılabilir.<br /><br /> Seçili kök düğümü kaldırmak için **kök kaldır** araç çubuğu düğmesini de kullanabilirsiniz.|
 |**Tanıma Git**|Seçili düğümdeki Tanıma Git komutunu çalıştırır. Bu, bir üye çağrısının veya değişken tanımının orijinal tanımına gider.<br /><br /> Tanıma Git komutunu çalıştırmak için Seçili düğüme çift tıklayabilir veya seçili düğümdeki F12 tuşuna basabilirsiniz.|
-|**Tüm başvuruları bul**|Seçili düğümdeki tüm başvuruları bul komutunu çalıştırır. Bu, projenizdeki bir sınıfa veya üyeye başvuran tüm kod satırlarını bulur.<br /><br /> Seçili düğümdeki tüm başvuruları bul komutunu çalıştırmak için SHIFT + F12 tuşlarını da kullanabilirsiniz.|
+|**Tüm Başvuruları Bul**|Seçili düğümdeki tüm başvuruları bul komutunu çalıştırır. Bu, projenizdeki bir sınıfa veya üyeye başvuran tüm kod satırlarını bulur.<br /><br /> Seçili düğümdeki tüm başvuruları bul komutunu çalıştırmak için SHIFT + F12 tuşlarını da kullanabilirsiniz.|
 |**Kopyala**|Seçili düğümün içeriğini kopyalar (alt düğümleri değil).|
-|**Yenileyebilir**|Seçili düğümü, yeniden genişleterek geçerli bilgileri görüntüleyecek şekilde daraltır.|
+|**Yenile**|Seçili düğümü, yeniden genişleterek geçerli bilgileri görüntüleyecek şekilde daraltır.|

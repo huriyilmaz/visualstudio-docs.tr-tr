@@ -25,10 +25,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a58fc57ca840f064e7d32b830133f0d909af7585
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72604761"
 ---
 # <a name="web-browser-environment-options-dialog-box"></a>Web Tarayıcısı, Ortam, Seçenekler İletişim Kutusu
@@ -52,7 +52,7 @@ Hem iç Web tarayıcısı hem de Internet Explorer seçeneklerini ayarlar. Bu il
 
 - **HTML Düzenleyicisi** Kaynağı [HTML Tasarımcısı](https://msdn.microsoft.com/library/640043cc-3657-4677-a091-bc315e636477)'nda görüntülemek için seçin. Web sayfasını iki görünümden birinde düzenlemek için bu seçimi kullanın: Tasarım görünümü veya standart metin tabanlı kaynak görünümü.
 
-- **Dış düzenleyici** Kaynağı başka bir düzenleyicide görüntülemek için seçin. Seçtiğiniz düzenleyicinin yolunu belirtin; örneğin, Notepad. exe.
+- **Dış düzenleyici** Kaynağı başka bir düzenleyicide görüntülemek için seçin. Seçtiğiniz düzenleyicinin yolunu belirtin, örneğin Notepad.exe.
 
   Internet Explorer seçenekleri Internet **özellikleri** Iletişim kutusunda Internet Explorer seçeneklerini değiştirmek için tıklayın. Bu iletişim kutusunda yapılan değişiklikler hem iç Web tarayıcısını hem de Visual Studio IDE dışında başlatılan Internet Explorer örneklerini (örneğin, Başlat menüsünden) etkiler.
 

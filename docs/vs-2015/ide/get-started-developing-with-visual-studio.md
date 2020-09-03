@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a1da2c07d5a412a7ac1865cfc2669e2f4ff992b0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548076"
 ---
 # <a name="get-started-developing-with-visual-studio"></a>Visual Studio ile Geliştirmeye Başlama
@@ -53,7 +53,7 @@ Visual Studio 'ya hoş geldiniz! Ürünü [indirdikten](https://visualstudio.mic
 
 - **[Masaüstü uygulamaları oluşturun](https://dev.windows.com/desktop)** : Windows bilgisayarlarda çalışan geleneksel masaüstü uygulamaları oluşturmaya başlamak için buraya gidin.
 
-     [Örnek yükleme](https://github.com/microsoft/windows-classic-samples) &#124; bir [öğretici oluşturma](https://msdn.microsoft.com/library/dd492171.aspx) &#124; [docs 'ta gezinme](https://dev.windows.com/desktop)
+     [Örnek yükleme](https://github.com/microsoft/windows-classic-samples) &#124; bir                     [öğretici oluşturma](https://msdn.microsoft.com/library/dd492171.aspx) &#124;                               [docs 'ta gezinme](https://dev.windows.com/desktop)
 
 - **[Office uygulamaları oluşturun](https://msdn.microsoft.com/library/fp161347.aspx)** : Office 365 hizmetleriyle Word, Excel, Outlook ve PowerPoint 'i genişleten ve özelleştiren Office uygulamaları oluşturmaya başlayın.
 

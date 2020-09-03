@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Görevlerdeki hataları yoksayma | Microsoft Docs'
+title: 'Nasıl yapılır: görevlerdeki hataları yoksayma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -13,40 +13,40 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5025cc3e9dc0e13c3ae4658d129f5d0ac94f6fd6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156599"
 ---
-# <a name="how-to-ignore-errors-in-tasks"></a>Nasıl yapılır: Görevlerdeki Hataları Yoksayma
+# <a name="how-to-ignore-errors-in-tasks"></a>Nasıl Yapılır: Görevlerdeki Hataları Yoksayma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bazen bir derleme hatalarının bazı görevler dayanıklı olmasını istersiniz. Kritik olmayan bu görev başarısız olursa yine de gerekli çıktı üretebilir çünkü devam etmek için yapı istediğinizde. Örneğin, bir proje kullanıyorsa bir `SendMail` her bileşenin oluşturulduktan sonra bir e-posta iletisi göndermek için görev posta sunucuları kullanılamaz ve durum iletilerinin gönderilemez bile tamamlanana kadar devam etmek derleme için kabul edilebilir düşünebilirsiniz. Veya Ara dosyaları derleme sırasında genellikle silinir, örneğin, bu dosyaları silinemez, tamamlanana kadar devam etmek derleme için kabul edilebilir düşünebilirsiniz.  
+Bazen bir derlemeyi belirli görevlerde hatalara karşı dayanıklı olmasını isteyebilirsiniz. Kritik olmayan görevler başarısız olursa, gerekli çıktıyı hala üretebileceğinden, derlemeyi devam ettirmek istersiniz. Örneğin, bir proje `SendMail` her bileşen oluşturulduktan sonra e-posta iletisi göndermek için bir görev kullanıyorsa, posta sunucuları kullanılamadığında ve durum iletileri gönderilemediği zaman bile yapılandırmanın tamamlanmasına devam edebilmesi için kabul edilebilir olarak düşünebilirsiniz. Ya da örneğin, derleme sırasında ara dosyalar silinirse, bu dosyalar silinemese bile, derleme tamamlanana kadar devam etmek için kabul edilebilir olarak düşünebilirsiniz.  
   
-## <a name="using-the-continueonerror-attribute"></a>ContinueOnError özniteliği kullanma  
- `ContinueOnError` Özniteliği `Task` öğesi, bir derleme durdurur veya görev hatası oluştuğunda devam edip denetler. Bu öznitelik de derleme devam ettiğinde hatalarını hata veya uyarı kabul edilip edilmeyeceğini denetler.  
+## <a name="using-the-continueonerror-attribute"></a>Devam eden özniteliğini kullanma  
+ `ContinueOnError`Öğesinin özniteliği bir `Task` görev hatası oluştuğunda bir yapılandırmanın durmasını veya devam edip etmediğini denetler. Bu öznitelik, derleme devam ettiğinde hataların hata ya da uyarı olarak değerlendirilip değerlendirilmediğini denetler.  
   
- `ContinueOnError` Öznitelik aşağıdaki değerlerden birini içerebilir:  
+ `ContinueOnError`Özniteliği aşağıdaki değerlerden birini içerebilir:  
   
-- **WarnAndContinue** veya **true**. Bir görev başarısız olduğunda, sonraki görevlerinde [hedef](../msbuild/target-element-msbuild.md) öğesi ile derleme devam yürütülecek ve görevin tüm hataları uyarı olarak kabul edilir.  
+- **WarnAndContinue** veya **true**. Bir görev başarısız olduğunda, [hedef](../msbuild/target-element-msbuild.md) öğe ve yapı içindeki sonraki görevler yürütülmeye devam eder ve görevdeki tüm hatalar uyarı olarak kabul edilir.  
   
-- **ErrorAndContinue**. Bir görev başarısız olduğunda, sonraki görevlerinde `Target` öğesi ile derleme devam yürütmek ve tüm hataları görev hata olarak kabul edilir.  
+- **Errportadcontinue**. Bir görev başarısız olduğunda, öğedeki sonraki görevler `Target` ve derleme yürütülmeye devam eder ve görevdeki tüm hatalar hata olarak değerlendirilir.  
   
-- **ErrorAndStop** veya **false** (varsayılan). Bir görev başarısız olduğunda, listesindeki kalan görevlere `Target` olmayan öğe ve derleme yürütülür ve tüm `Target` öğesi ve yapı başarısız olduğu değerlendirilir.  
+- **Errportadstop** veya **false** (varsayılan). Bir görev başarısız olduğunda, öğe ve yapı içindeki kalan görevler `Target` yürütülmez ve tüm `Target` öğe ve derleme başarısız olarak kabul edilir.  
   
-  .NET Framework 4.5 yalnızca desteklenen önce sürümleri `true` ve `false` değerleri.  
+  4,5 ' den önceki .NET Framework sürümleri yalnızca `true` ve değerlerini destekliyordu `false` .  
   
-  Varsayılan değer olan `ContinueOnError` olduğu `ErrorAndStop`. Öznitelik ayarlamanız `ErrorAndStop`, davranışı açık proje dosyasını okuyan herkese yapmanızı ister.  
+  Varsayılan değeri `ContinueOnError` `ErrorAndStop` . Özniteliğini olarak ayarlarsanız `ErrorAndStop` , davranışı proje dosyasını okuyan herkese açık hale getirebilirsiniz.  
   
-#### <a name="to-ignore-an-error-in-a-task"></a>Bir görevdeki bir hatayı yok saymak için  
+#### <a name="to-ignore-an-error-in-a-task"></a>Görevdeki bir hatayı yok saymak için  
   
-- Kullanım `ContinueOnError` görevin özniteliği. Örneğin:  
+- `ContinueOnError`Görevin özniteliğini kullanın. Örneğin:  
   
      `<Delete Files="@(Files)" ContinueOnError="WarnAndContinue"/>`  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği gösterir `Build` hedef hala çalışır ve yapı değerlendirilir olsa bile, bir başarı `Delete` görev başarısız olur.  
+ Aşağıdaki kod örneği, `Build` hedefin hala çalıştığını ve bir görev başarısız olsa bile derlemenin başarılı olarak kabul edileceğini gösterir `Delete` .  
   
 ```  
 <Project DefaultTargets="FakeBuild"  
@@ -65,6 +65,6 @@ Bazen bir derleme hatalarının bazı görevler dayanıklı olmasını istersini
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.
-[MSBuild](msbuild.md)  
+[MSBUILD](msbuild.md)  
  [Görev başvurusu](../msbuild/msbuild-task-reference.md)   
  [Görevler](../msbuild/msbuild-tasks.md)

@@ -10,26 +10,26 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f1334655f2a8b8587922628664e43784b54ce971
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72604927"
 ---
-# <a name="how-to-create-a-workflow-console-application"></a>Nasıl yapılır: Iş akışı konsol uygulaması oluşturma
-[!INCLUDE[wf](../includes/wf-md.md)], sistem veya insan süreçlerini yürütmek için iş akışları oluşturmanıza olanak tanır. @No__t_0, bu iş akışlarını oluşturmaya yönelik tasarım yüzeyi sağlar. @No__t_0, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] içinden iş akışları oluşturmak için kullanılabilir veya tasarımcıyı yeniden barındıran diğer uygulamalarla tümleştirilebilir.
+# <a name="how-to-create-a-workflow-console-application"></a>Nasıl Yapılır: İş Akışı Konsol Uygulaması Oluşturma
+[!INCLUDE[wf](../includes/wf-md.md)] Sistem veya insan süreçlerini yürütmek için iş akışları oluşturmanıza olanak tanır. , [!INCLUDE[wfd1](../includes/wfd1-md.md)] Bu iş akışlarını oluşturmaya yönelik tasarım yüzeyi sağlar. , [!INCLUDE[wfd2](../includes/wfd2-md.md)] İçinden iş akışı oluşturmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] veya tasarımcıyı yeniden barındıran diğer uygulamalarla tümleştirilebilecek şekilde kullanılabilir.
 
- Bu konuda, bir konsol uygulamasında iş akışı oluşturmak için [!INCLUDE[vs2010](../includes/vs2010-md.md)] [!INCLUDE[wfd2](../includes/wfd2-md.md)] nasıl kullanılacağı açıklanmaktadır.
+ Bu konu, [!INCLUDE[wfd2](../includes/wfd2-md.md)] [!INCLUDE[vs2010](../includes/vs2010-md.md)] bir konsol uygulamasında iş akışı oluşturmak için ' ın nasıl kullanılacağını açıklar.
 
 ### <a name="to-create-a-workflow-console-application"></a>Bir iş akışı konsol uygulaması oluşturmak için
 
-1. @No__t_0 başlatın.
+1. Başlatın [!INCLUDE[vs2010](../includes/vs2010-md.md)] .
 
 2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **proje...** öğesini seçin.
 
      **Yeni proje** iletişim kutusu açılır.
 
-3. **Yüklü şablonlar** bölmesinde, tercih diliniz ' ne bağlı olarak, **görsel C#**  veya **Visual Basic** gruplandırmalarından **iş akışı** ' nı seçin.
+3. **Yüklü şablonlar** bölmesinde, tercih diliniz ' ne bağlı olarak, **Visual C#** veya **Visual Basic** gruplamalarından **iş akışı** ' nı seçin.
 
 4. Orta bölmede **Iş akışı konsol uygulaması**' nı seçin.
 
@@ -40,9 +40,9 @@ ms.locfileid: "72604927"
 7. **Çözüm** kutusuna yeni çözüm için bir ad girin. Uygulamayı oluşturmak için **Tamam** ' ı tıklatın.
 
     > [!NOTE]
-    > Mevcut bir çözüme bir iş akışı konsol uygulaması eklemek istiyorsanız, bu çözümü [!INCLUDE[vs2010](../includes/vs2010-md.md)] açın, **Çözüm Gezgini**çözüme sağ tıklayın ve **Ekle**, **Yeni proje..** . öğesini seçin. **Yeni proje** iletişim kutusunu açmak için. Bu yordamda yukarıda açıklanan şekilde ilerleyin.
+    > Mevcut bir çözüme bir iş akışı konsol uygulaması eklemek istiyorsanız, bu çözümü içinde açın [!INCLUDE[vs2010](../includes/vs2010-md.md)] , **Çözüm Gezgini**' de çözüme sağ tıklayın ve **Ekle**, **Yeni proje..** . öğesini seçin. **Yeni proje** iletişim kutusunu açmak için. Bu yordamda yukarıda açıklanan şekilde ilerleyin.
 
-8. Proje şablonu XAML 'de bir iş akışı tanımı oluşturur ve konsol uygulama tanımı kaynak kodunda bulunur. @No__t_0 açılır ve oluşturduğunuz iş akışının tuvali görüntülenir.
+8. Proje şablonu XAML 'de bir iş akışı tanımı oluşturur ve konsol uygulama tanımı kaynak kodunda bulunur. [!INCLUDE[wfd2](../includes/wfd2-md.md)]Açılır ve oluşturduğunuz iş akışı için tuvali görüntüler.
 
 9. Bir iş akışı oluşturmak için, etkinlik veya diğer iş akışı öğelerini **araç kutusundan** , iş akışınızın tasarım yüzeyine sürükleyin.
 

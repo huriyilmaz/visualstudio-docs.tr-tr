@@ -9,10 +9,10 @@ manager: justinclareburt
 ms.workload:
 - willbrown
 ms.openlocfilehash: ca1f367510aa9730c1b3b212438579a8eaeb0e8f
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86387284"
 ---
 # <a name="how-to-make-extensions-compatible-with-visual-studio-20192017-and-visual-studio-2015"></a>Nasıl yapılır: Visual Studio 2019/2017 ve Visual Studio 2015 ile uyumlu uzantılar yapma
@@ -29,14 +29,14 @@ Bu belgede, bir VSıX 'i yuvarlamak için tamamlayacağımız adımların bir an
 1. Doğru NuGet paketlerini içeri aktarın.
 2. Uzantı bildirimini güncelleştir:
     * Yükleme hedefi
-    * Önkoşullar
+    * Ön koşullar
 3. CSProj güncelleştir:
     * Güncelleştirin `<MinimumVisualStudioVersion>` .
     * Özelliği ekleyin `<VsixType>` .
     * Hata ayıklama özelliğini `($DevEnvDir)` 3 kez ekleyin.
     * Derleme araçlarını ve hedefleri içeri aktarmaya yönelik koşullar ekleyin.
 
-4. Derleme ve test
+4. Derleme ve Test Etem
 
 ## <a name="environment-setup"></a>Ortamı ayarlama
 
@@ -51,7 +51,7 @@ Visual Studio 2019 veya 2017 yerine Visual Studio 2015 ile bu yükseltmeyi başl
 
 ## <a name="ensure-there-is-no-reference-to-projectjson"></a>project.jsiçin bir başvuru olmadığından emin olun
 
-Bu belgede daha sonra, **. csproj* dosyanıza koşullu içeri aktarma deyimleri ekleyeceğiz. NuGet başvurularınız *üzerindeproject.js*depolanıyorsa bu çalışmaz. Bu nedenle, tüm NuGet başvurularını *packages.config* dosyasına taşımanız önerilir.
+Bu belgede daha sonra, **. csproj* dosyanıza koşullu içeri aktarma deyimleri ekleyeceğiz. NuGet başvurularınız * üzerindeproject.js*depolanıyorsa bu çalışmaz. Bu nedenle, tüm NuGet başvurularını *packages.config* dosyasına taşımanız önerilir.
 Projeniz dosyada bir *project.js* içeriyorsa:
 
 * *project.jsüzerindeki*başvuruları bir yere göz atın.

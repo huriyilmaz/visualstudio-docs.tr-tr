@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 14231cc4dcde5aed5cabc2d8a6172a002c0ba6bf
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85539756"
 ---
 # <a name="ca1052-static-holder-types-should-be-sealed"></a>CA1052: Static tutucu türler sealed olmalıdır
@@ -46,7 +46,7 @@ ms.locfileid: "85539756"
 
 ## <a name="example-of-a-violation"></a>Ihlalin örneği
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki örnek, kuralı ihlal eden bir türü gösterir.
 
 ### <a name="code"></a>Kod
@@ -56,7 +56,7 @@ ms.locfileid: "85539756"
 
 ## <a name="fix-with-the-static-modifier"></a>Statik değiştiriciyle onarma
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki örnek, türü değiştiriciyle işaretleyerek bu kural ihlalinin nasıl düzeltileceğini gösterir `static` .
 
 ### <a name="code"></a>Kod

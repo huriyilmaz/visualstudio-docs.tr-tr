@@ -17,16 +17,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5abf89828576c44b2f5ec5c59813d366cec73b7a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72661552"
 ---
 # <a name="toolbox"></a>Araç Kutusu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-**Araç kutusu** , [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] projelerine ekleyebileceğiniz denetimler ve diğer öğeler için simgeler görüntüler. **Araç kutusunu**açmak için **Görünüm** menüsünde **araç kutusu** ' na tıklayın. **Araç kutusunu**sabitleyebilir ve açık olarak sabitleyebilir ya da **otomatik olarak gizleyebileceğiniz**şekilde ayarlayabilirsiniz.
+**Araç kutusu** , projelere ekleyebileceğiniz denetimler ve diğer öğeler için simgeler görüntüler [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . **Araç kutusunu**açmak için **Görünüm** menüsünde **araç kutusu** ' na tıklayın. **Araç kutusunu**sabitleyebilir ve açık olarak sabitleyebilir ya da **otomatik olarak gizleyebileceğiniz**şekilde ayarlayabilirsiniz.
 
  **Araç kutusu** simgeleri bir Tasarım görünümüne sürüklenebilir veya bir kod düzenleyicisine yapıştırılamaz. Her iki eylem de, etkin proje dosyasındaki **araç kutusu** öğesinin bir örneğini oluşturmak için temel kodu ekler.
 

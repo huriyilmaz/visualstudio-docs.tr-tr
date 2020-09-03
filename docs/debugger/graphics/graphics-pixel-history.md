@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8cb1b7a869915eebc561e1baf47082dd5dbc00df
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72735483"
 ---
 # <a name="graphics-pixel-history"></a>Grafik Piksel Geçmişi
@@ -29,13 +29,13 @@ Visual Studio Grafik Çözümleyicisi grafik piksel geçmişi penceresi, belirli
 
  Piksel geçmişi penceresi, seçilen karenin kursu boyunca bir pikselin tamamlanma geçmişini görüntüler. Pencerenin üst kısmındaki **son çerçeve arabelleği** , çerçevenin sonundaki framebuffer ile birlikte gelen ve ekran koordinatları gibi piksel hakkındaki ek bilgilerle yazılmış olan rengi görüntüler. bu Bu alan ayrıca **Alfa Oluştur** onay kutusunu da içerir. Bu onay kutusu seçildiğinde, **son kare arabelleği** rengi ve ara renk değerleri bir dama tahtası deseninin üzerinde saydamlıkla görüntülenir. Onay kutusu silinirse, renk değerlerinin alfa kanalı yok sayılır.
 
- Pencerenin alt kısmında, framebuffer 'ın başlangıçtaki ve nihai renk değerlerini temsil eden **ilk** ve **son** sözde etkinliklerle birlikte piksel rengini etkileyen bir şansınız olan olaylar görüntülenir. İlk renk değeri, pikselin rengini değiştiren ilk olay tarafından belirlenir (genellikle bir `Clear` olayı). Başka hiçbir olay etkilenmedikleri zaman bile, bir piksel geçmişinde bu iki sözde olaya her zaman sahiptir. Diğer olayların pikseli etkileme şansı varsa, bunlar **ilk** ve **son** olaylar arasında görüntülenir. Olayları, ayrıntılarını göstermek için genişletilebilir. Bir işleme hedefini temizleyecek olanlar gibi basit olaylar için, etkinliğin etkisi yalnızca bir renk değeridir. Çizim çağrıları gibi daha karmaşık olaylar, pikselin rengine katkıda bulunan bir veya daha fazla temel oluşturur.
+ Pencerenin alt kısmında, framebuffer 'ın başlangıçtaki ve nihai renk değerlerini temsil eden **ilk** ve **son** sözde etkinliklerle birlikte piksel rengini etkileyen bir şansınız olan olaylar görüntülenir. İlk renk değeri, pikselin rengini değiştiren ilk olay tarafından belirlenir (genellikle bir `Clear` olay). Başka hiçbir olay etkilenmedikleri zaman bile, bir piksel geçmişinde bu iki sözde olaya her zaman sahiptir. Diğer olayların pikseli etkileme şansı varsa, bunlar **ilk** ve **son** olaylar arasında görüntülenir. Olayları, ayrıntılarını göstermek için genişletilebilir. Bir işleme hedefini temizleyecek olanlar gibi basit olaylar için, etkinliğin etkisi yalnızca bir renk değeridir. Çizim çağrıları gibi daha karmaşık olaylar, pikselin rengine katkıda bulunan bir veya daha fazla temel oluşturur.
 
  Olay tarafından çizilen temel elemanlar, nesne için toplam temel sayı ile birlikte temel tür ve dizinleriyle tanımlanır. Örneğin, **üçgen (1456)/(6214)** gibi bir tanımlayıcı, ilkel öğenin, 6214 üçgenden oluşan bir nesne içindeki 1456th üçgene karşılık geldiği anlamına gelir. Her ilkel tanımlayıcının solunda, ilkel öğenin piksel üzerinde sahip olduğu etkiyi özetleyen bir simge bulunur. Piksel rengini etkileyen temel elemanlar, sonuç rengiyle doldurulmuş bir yuvarlatılmış dikdörtgen tarafından temsil edilir. Piksel rengi üzerinde bir etkiye sahip olmanın dışında bırakılan temel elemanlar, pikselin dışlanmasının neden olduğunu belirten simgelerle temsil edilir. Bu simgeler, bu makalenin ilerleyen kısımlarında bölüm [temel dışlama](#exclusion) bölümünde açıklanmaktadır.
 
  Her bir temel genişleterek, piksel gölgelendirici çıkışının, sonuç rengini oluşturmak için mevcut piksel rengi ile nasıl birleştirildiğini inceleyebilirsiniz. Buradan, temel ile ilişkili piksel gölgelendirici kodunu inceleyebilir veya hata ayıklayın ve köşe gölgelendirici girişini incelemek için köşe gölgelendirici düğümünü daha da genişletebilirsiniz.
 
-### <a name="exclusion"></a>Temel dışlama
+### <a name="primitive-exclusion"></a><a name="exclusion"></a> Temel dışlama
  Bir temel değer piksel rengini etkilemeden dışlanmazsa, dışlama çeşitli nedenlerle meydana gelebilir. Her neden, bu tabloda açıklanan bir simgeyle temsil edilir:
 
 |Simge|Dışlama nedeni|
@@ -75,5 +75,5 @@ Visual Studio Grafik Çözümleyicisi grafik piksel geçmişi penceresi, belirli
  Piksel geçmişindeki grafik olaylarını anlamak için, olay sırasında veya olay tarafından başvurulan Direct3D nesneleri hakkında, cihaz durumu hakkında bilgilere ihtiyacınız bulunabilir. Piksel geçmişindeki her bir olay için **Grafik piksel geçmişi** , daha sonra geçerli cihaz durumuna ve ilgili nesnelere bağlantılar sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek Yol: Cihaz Durumu Nedeniyle Nesnelerin Eksikliği](walkthrough-missing-objects-due-to-device-state.md)
-- [İzlenecek Yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama](walkthrough-debugging-rendering-errors-due-to-shading.md)
+- [İzlenecek yol: Cihaz Durumu Nedeniyle Eksik Nesneler](walkthrough-missing-objects-due-to-device-state.md)
+- [İzlenecek yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama](walkthrough-debugging-rendering-errors-due-to-shading.md)

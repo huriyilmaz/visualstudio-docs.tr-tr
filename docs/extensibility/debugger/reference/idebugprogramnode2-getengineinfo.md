@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::GetEngineInfo | Microsoft Dokümanlar
+title: 'IDebugProgramNode2:: GetEngineInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c2e74ba3c0f826314818bc883778a6364ff3fb6e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80722094"
 ---
 # <a name="idebugprogramnode2getengineinfo"></a>IDebugProgramNode2::GetEngineInfo
 Bir programı çalıştıran hata ayıklama altyapısının (DE) adını ve tanımlayıcısını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetEngineInfo ( 
@@ -43,13 +43,13 @@ int GetEngineInfo(
 
 ## <a name="parameters"></a>Parametreler
 `pbstrEngine`\
-[çıkış] Programı çalıştıran DE'nin adını döndürür (C++'a özgü: bu, arayanın motorun adıile ilgilenmediğini belirten boş bir işaretçi olabilir).
+dışı Programı çalıştıran kişinin adını döndürür (C++ özel: Bu, çağıranın altyapının adı ile ilgilenmediğini belirten bir null işaretçi olabilir).
 
 `pguidEngine`\
-[çıkış] Programı çalıştıran DE'nin genel olarak benzersiz tanımlayıcısını döndürür (C++'a özgü: bu, arayanın motorun GUID'i ile ilgilenmediğini belirten boş bir işaretçi olabilir).
+dışı Programı çalıştırmanın genel benzersiz tanımlayıcısını döndürür (C++ ' a özgü: Bu, çağıranın altyapının GUID 'SI ile ilgilenmediğini belirten bir null işaretçi olabilir).
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)
