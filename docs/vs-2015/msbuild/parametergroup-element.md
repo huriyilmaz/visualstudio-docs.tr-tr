@@ -1,5 +1,5 @@
 ---
-title: ParameterGroup öğesi | Microsoft Docs
+title: ParameterGroup Öğesi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -18,22 +18,22 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5f4faa9038a5931dec376903f166301f27f00b37
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68154795"
 ---
 # <a name="parametergroup-element"></a>ParameterGroup Öğesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İsteğe bağlı bir liste tarafından oluşturulan bir görev üzerinde mevcut parametreler içeren bir `UsingTask``TaskFactory`. Daha fazla bilgi için [UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
+Tarafından oluşturulan görevde mevcut olacak parametrelerin isteğe bağlı bir listesini içerir `UsingTask``TaskFactory` . Daha fazla bilgi için bkz. [UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
   
- \<Proje >  
- \<UsingTask >  
- \<ParameterGroup >  
+ \<Project>  
+ \<UsingTask>  
+ \<ParameterGroup>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <ParameterGroup />  
@@ -49,16 +49,16 @@ ms.locfileid: "68154795"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[Parametre](../msbuild/parameter-element.md)|Tarafından oluşturulan bir görev için belirli bir parametre hakkında bilgi içeren bir `UsingTask``TaskFactory`. Öğe adı parametrenin adıdır.|  
+|[Parametre](../msbuild/parameter-element.md)|Tarafından oluşturulan bir görev için belirli bir parametre hakkında bilgi içerir `UsingTask``TaskFactory` . Öğesinin adı parametrenin adıdır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[UsingTask](../msbuild/usingtask-element-msbuild.md)|Görevleri kaydetmek için bir yol sağlar [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]. Sıfır veya daha fazla olabilir `UsingTask` proje öğeleri.|  
+|[UsingTask](../msbuild/usingtask-element-msbuild.md)|İçindeki görevleri kaydetmek için bir yol sağlar [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] . Bir projede sıfır veya daha fazla `UsingTask` öğe olabilir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir `ParameterGroup` öğesi.  
+ Aşağıdaki örnek, öğesinin nasıl kullanılacağını gösterir `ParameterGroup` .  
   
 ```  
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">  
@@ -74,6 +74,6 @@ ms.locfileid: "68154795"
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görevleri](../msbuild/msbuild-tasks.md)   
+ [Görevlerinize](../msbuild/msbuild-tasks.md)   
  [Görev başvurusu](../msbuild/msbuild-task-reference.md)   
  [Proje Dosyası Şema Başvurusu](../msbuild/msbuild-project-file-schema-reference.md)

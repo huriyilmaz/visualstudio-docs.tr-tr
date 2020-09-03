@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::DiagnoseWebDebuggingError | Microsoft Dokümanlar
+title: IDebugCoreServer3::D iagnoseWebDebuggingError | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fec5b8fbe1cae18b8221702fe14443df231d8880
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732958"
 ---
 # <a name="idebugcoreserver3diagnosewebdebuggingerror"></a>IDebugCoreServer3::DiagnoseWebDebuggingError
-Otomatik eklemenin neden başarısız olduğunu belirlemeye çalışır.
+Otomatik iliştirme neden başarısız olduğunu saptamaya çalışır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT DiagnoseWebDebuggingError(
@@ -41,16 +41,16 @@ int DiagnoseWebDebuggingError(
 
 ## <a name="parameters"></a>Parametreler
 `pszUrl`\
-[içinde] Şu anda kullanılmamış; her zaman null değerine ayarlanmalıdır.
+'ndaki Şu anda kullanılmıyor; her zaman bir null değer olarak ayarlanmalıdır.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür. Diğer tipik iade kodları şunlardır:
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. Diğer tipik dönüş kodları aşağıda verilmiştir:
 
-|Kod|Açıklama|
+|Kod|Description|
 |----------|-----------------|
-|`S_WEBDBG_UNABLE_TO_DIAGNOSE`|Uzak sunucunun hata ayıklamayı başlatmak için neden başarısız olduğunu belirleyemiyor.|
-|`S_WEBDBG_DEBUG_VERB_BLOCKED`|Büyük olasılıkla yetersiz izinler nedeniyle veya HATA Ayıklama fiili etkin olmadığı için uzak sunucuda hata ayıklama yapamaz.|
-|`E_WEBDBG_DEBUG_VERB_BLOCKED`|Web sunucusu kilitlendi ve hata ayıklamayı etkinleştirmek için gerekli olan HATA Ayıklama fiilini engelliyor.|
+|`S_WEBDBG_UNABLE_TO_DIAGNOSE`|Uzak sunucunun neden hata ayıklamaya başlayamadığını belirleyemiyor.|
+|`S_WEBDBG_DEBUG_VERB_BLOCKED`|Büyük olasılıkla yetersiz izinler nedeniyle veya hata ayıklama fiili etkinleştirilmediğinden, uzak sunucuda hata ayıklama yapılamıyor.|
+|`E_WEBDBG_DEBUG_VERB_BLOCKED`|Web sunucusu kilitlenmiş ve hata ayıklamayı etkinleştirmek için gereken hata ayıklama fiilini engelliyor.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

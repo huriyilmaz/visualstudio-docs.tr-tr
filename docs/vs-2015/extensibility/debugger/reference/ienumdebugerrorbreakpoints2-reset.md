@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugErrorBreakpoints2::Reset | Microsoft Docs
+title: 'IEnumDebugErrorBreakpoints2:: Reset | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 309aa8684f8e5a8f92bd9dbd146408d8ee01e73c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68178503"
 ---
 # <a name="ienumdebugerrorbreakpoints2reset"></a>IEnumDebugErrorBreakpoints2::Reset
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Numaralandırma ilk öğeyi sıfırlar.  
+Numaralandırmayı ilk öğeye sıfırlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Reset(  
@@ -37,10 +37,10 @@ int Reset();
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem çağrıldığında sonra yapılan sonraki çağrıda [sonraki](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2-next.md) yöntemi numaralandırma ilk öğeyi döndürür.  
+ Bu yöntem çağrıldıktan sonra [Next](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2-next.md) yöntemine yapılan sonraki çağrı, numaralandırmanın ilk öğesini döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)

@@ -12,63 +12,63 @@ caps.latest.revision: 35
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a6e9eaf69be62b38a880b07fd8eb51cfc9c256a3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195068"
 ---
 # <a name="command-design"></a>Komut Tasarımı
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir komut için bir VSPackage'ı eklediğinizde, görüntülenecek olduğu, kullanılabilir olduğunda ve nasıl işleneceğini olduğunu belirtmeniz gerekir.  
+VSPackage 'a bir komut eklediğinizde, nerede görüneceğini, kullanılabilir olduğunda ve nasıl işleneceğini belirtmeniz gerekir.  
   
-## <a name="defining-commands"></a>Komutlarını tanımlama  
- Yeni komutlar tanımlamak için VSPackage projenizde Visual Studio komut tablosu (.vsct) dosyası içerir. Visual Studio Paket şablonu kullanarak bir VSPackage oluşturduysanız, bu dosyalardan biri proje içerir. Daha fazla bilgi için [Visual Studio komut tablosu (. Vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).  
+## <a name="defining-commands"></a>Komutları tanımlama  
+ Yeni komutlar tanımlamak için VSPackage projenize bir Visual Studio komut tablosu (. vsct) dosyası ekleyin. Visual Studio paket şablonunu kullanarak bir VSPackage oluşturduysanız, proje bu dosyalardan birini içerir. Daha fazla bilgi için bkz [. Visual Studio komut tablosu (. Vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).  
   
- Visual Studio komutları görüntüleyebilmesi bulduğu tüm .vsct dosyaları birleştirir. Bu dosyalar ikili VSPackage farklı olduğundan, Visual Studio komutları paketi yok. Daha fazla bilgi için [nasıl VSPackages Ekle kullanıcı arabirimi öğeleri](../../extensibility/internals/how-vspackages-add-user-interface-elements.md).  
+ Visual Studio, bulduğu tüm. vsct dosyalarını birleştirir, böylece komutları görüntüleyebilir. Bu dosyalar VSPackage ikilisinden farklı olduğundan, Visual Studio 'Nun komutları bulmak için paketini yüklemesi gerekmez. Daha fazla bilgi için bkz. [VSPackages Kullanıcı arabirimi öğeleri ekleme](../../extensibility/internals/how-vspackages-add-user-interface-elements.md).  
   
- Visual Studio kullanan <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> menüsü kaynaklarını ve komutları tanımlayan kayıt öznitelik. Daha fazla bilgi için [uygulama](../../extensibility/internals/command-implementation.md).  
+ Visual Studio, <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> menü kaynaklarını ve komutları tanımlamak için kayıt özniteliğini kullanır. Daha fazla bilgi için bkz. [uygulama](../../extensibility/internals/command-implementation.md).  
   
- Komutlar, çalışma zamanında bir dizi farklı yolla değiştirilebilir. Bunlar gösterilen veya gizli, devre dışı bırakabilir veya etkinleştirilebilir. Bunlar farklı metin veya simgelerini görüntülemek veya farklı değerler içerir. Visual Studio, VSPackage'ı yüklemeden önce özelleştirme büyük ölçüde gerçekleştirilebilir. Daha fazla bilgi için [nasıl VSPackages Ekle kullanıcı arabirimi öğeleri](../../extensibility/internals/how-vspackages-add-user-interface-elements.md).  
+ Komutlar, çalışma zamanında çeşitli yollarla değiştirilebilir. Bunlar görüntülenebilir veya gizli, etkinleştirilebilir veya devre dışı bırakılabilir. Farklı metin veya simgeleri görüntüleyebilir veya farklı değerler içerebilir. Visual Studio VSPackage 'ı yüklemeden önce harika bir özelleştirme gerçekleştirilemeyebilir. Daha fazla bilgi için bkz. [VSPackages Kullanıcı arabirimi öğeleri ekleme](../../extensibility/internals/how-vspackages-add-user-interface-elements.md).  
   
-## <a name="command-handlers"></a>Komut işleyicileri  
- Bir komut oluşturduğunuzda komutu yürütmek için bir olay işleyicisi sağlamanız gerekir. Kullanıcı komutu seçtiğinde, uygun şekilde yönlendirilmelidir. Bir komut yönlendirme etkinleştirmek veya devre dışı bırakmak, gizleme veya görüntülemek ve kullanıcı bunu yapmak seçerse çalıştırmak için doğru VSPackage gönderme anlamına gelir. Daha fazla bilgi için [yönlendirme algoritması](../../extensibility/internals/command-routing-algorithm.md).  
+## <a name="command-handlers"></a>Komut Işleyicileri  
+ Bir komut oluşturduğunuzda, komutunu yürütmek için bir olay işleyicisi sağlamanız gerekir. Kullanıcı komutu seçerse, uygun şekilde yönlendirilmelidir. Komut yönlendirmesi, bunu etkinleştirmek veya devre dışı bırakmak, onu gizlemek veya göstermek ve Kullanıcı bunu seçerse yürütmek için doğru VSPackage 'a gönderilmesi anlamına gelir. Daha fazla bilgi için bkz. [yönlendirme algoritması](../../extensibility/internals/command-routing-algorithm.md).  
   
 ## <a name="the-visual-studio-command-environment"></a>Visual Studio komut ortamı  
- Visual Studio VSPackages herhangi bir sayıda barındırabilir ve her biri kendi komut kümesi katkıda bulunabilir. Ortamın geçerli görev için uygun olan komutları görüntüler. Daha fazla bilgi için [kullanılabilirlik](../../extensibility/internals/command-availability.md) ve [seçim bağlamı nesneleri](../../extensibility/internals/selection-context-objects.md).  
+ Visual Studio herhangi bir sayıda VSPackages barındırabilir ve her biri kendi komut kümesini katkıda bulunabilir. Ortam yalnızca geçerli göreve uygun olan komutları görüntüler. Daha fazla bilgi için bkz. [kullanılabilirlik](../../extensibility/internals/command-availability.md) ve [seçim bağlamı nesneleri](../../extensibility/internals/selection-context-objects.md).  
   
- Yeni komutlar, menüler, araç çubukları veya kısayol menüleri tanımlayan bir VSPackage'ı yerel veya yönetilen bütünleştirilmiş kodlar içindeki kaynaklara başvuran bir kayıt defteri girdileri ile yükleme sırasında Visual Studio için komut bilgileri sağlar. Her kaynak bir Visual Studio komut tablosu (.vsct) dosyası derleme yaparken, üretilen ikili verileri (.cto) kaynak dosyası, ardından başvuruyor. Bu birleştirilmiş komut kümelerini, menüleri ve araç çubuklarını yüklü her VSPackage'ı yüklemek zorunda kalmadan sağlamak Visual Studio sağlar.  
+ Yeni komutlar, menüler, araç çubukları veya kısayol menülerini tanımlayan bir VSPackage, yerel veya yönetilen derlemelerdeki kaynaklara başvuran kayıt defteri girişleri aracılığıyla, yükleme sırasında Visual Studio 'ya ait komut bilgilerini sağlar. Her kaynak daha sonra bir Visual Studio komut tablosu (. vsct) dosyası derlerken üretilen bir ikili veri kaynağı (. CTO) dosyasına başvurur. Bu, Visual Studio 'Nun her yüklü VSPackage yüklemesine gerek duymadan birleştirilmiş komut kümeleri, menüler ve araç çubukları sağlamasına olanak sağlar.  
   
-### <a name="command-organization"></a>Komut kuruluş  
- Ortam, grubu, öncelik ve menü komutları yerleştirir.  
+### <a name="command-organization"></a>Komut organizasyonu  
+ Ortam komutları gruba, önceliğe ve menüye göre konumlandırır.  
   
-- Grupları mantıksal koleksiyonlarıdır ilgili komutlar, örneğin, **Kes**, **kopyalama**, ve **Yapıştır** komut grubu. Menülerde görünür komutları gruplarıdır.  
+- Gruplar, ilgili komutların mantıksal koleksiyonlarıdır, örneğin **Kes**, **Kopyala**ve **Yapıştır** komut grubu. Gruplar menülerde görüntülenen komutlardır.  
   
-- Öncelik grubundaki tek tek komutlarla menüsünde görünme sırasını belirler.  
+- Öncelik, bir gruptaki bireysel komutların menüde görünme sırasını belirler.  
   
-- Menü grupları için kapsayıcı görevi görür.  
+- Menüler, gruplar için kapsayıcı olarak davranır.  
   
-  Ortamın bazı komutlar, grupları ve menüler önceden belirler. Daha fazla bilgi için [varsayılan komut, Grup ve araç çubuğu yerleştirme](../../extensibility/internals/default-command-group-and-toolbar-placement.md).  
+  Ortam, bazı komutları, grupları ve menüleri önceden tanımlar. Daha fazla bilgi için bkz. [varsayılan komut, Grup ve araç çubuğu yerleşimi](../../extensibility/internals/default-command-group-and-toolbar-placement.md).  
   
-  Bir komutu bir birincil grubu olarak atanabilir. Ana menü yapısı ve komut konumunu birincil grup denetimleri **Özelleştir** iletişim kutusu. Bir komutu birden çok grupta yer görünebilir; Örneğin, bir komut ana menüsündeki kısayol menüsünde ve araç çubuğundaki olabilir. Daha fazla bilgi için [nasıl VSPackages Ekle kullanıcı arabirimi öğeleri](../../extensibility/internals/how-vspackages-add-user-interface-elements.md).  
+  Bir komut, birincil gruba atanabilir. Birincil grup, komutun konumunu ana menü yapısında ve **Özelleştir** iletişim kutusunda denetler. Bir komut, birden çok grupta görünebilir; Örneğin, bir komut ana menüde, kısayol menüsünde ve bir araç çubuğunda olabilir. Daha fazla bilgi için bkz. [VSPackages Kullanıcı arabirimi öğeleri ekleme](../../extensibility/internals/how-vspackages-add-user-interface-elements.md).  
   
 ### <a name="command-routing"></a>Komut Yönlendirme  
- Nesne örneklerinde metotları çağırma işleminin çağırma ve komutları Vspackage'lar için yönlendirme işlemi farklıdır.  
+ VSPackages için çağırma ve Yönlendirme komutları nesne örneklerine çağırma sürecinden farklıdır.  
   
- Ortam, en dıştaki (Genel) bağlam sıralı olarak geçerli seçime göre en içteki (yerel) komut içeriğinden komutları yönlendirir. Komutu yürütebilmek için olan ilk bağlam işleme sertifikadır. Daha fazla bilgi için [yönlendirme algoritması](../../extensibility/internals/command-routing-algorithm.md).  
+ Ortam komutları, geçerli seçime dayalı olan en dıştaki (yerel) komut bağlamından ardışık olarak (genel) içeriğine yönlendirir. Komutu yürütebilecek ilk bağlam onu işleyen bir. Daha fazla bilgi için bkz. [yönlendirme algoritması](../../extensibility/internals/command-routing-algorithm.md).  
   
- Çoğu durumda, ortam komutlarını kullanarak işleme <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimi. Komut yönlendirme şeması komutları işlemek birçok farklı nesne sağladığından <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> herhangi bir sayıda nesneleri uygulanması olabilir; bunlar dahil Microsoft ActiveX denetimleri, pencere görünümü uygulamaları, belge nesneleri, proje hiyerarşileri VSPackage için ve nesneleri kendilerini (genel komutları). Bazı özel durumlarda, örneğin, bir hiyerarşide komutları yönlendirme <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> arabirimi uygulanmış.  
+ Çoğu örnekte, ortam komutları arabirimini kullanarak işler <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> . Komut yönlendirme şeması birçok farklı nesnenin komutları işlemesini sağladığından, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> herhangi bir sayıda nesne tarafından uygulanabilir. bunlar Microsoft ActiveX denetimlerini, pencere görünümü uygulamalarını, belge nesnelerini, proje hiyerarşilerini ve VSPackage nesnelerini (genel komutlar için) içerir. Bazı özel durumlarda (örneğin, bir hiyerarşideki yönlendirme komutları), <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> arabirimin uygulanması gerekir.  
   
 ## <a name="related-topics"></a>İlgili Konular  
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Uygulama](../../extensibility/internals/command-implementation.md)|VSPackage'ı komutları uygulamak açıklar.|  
-|[Kullanılabilirlik](../../extensibility/internals/command-availability.md)|Visual Studio bağlam hangi komutları kullanılabilir etiketleneceğini nasıl açıklar.|  
-|[Yönlendirme Algoritması](../../extensibility/internals/command-routing-algorithm.md)|Visual Studio komut yönlendirme mimarisi farklı VSPackage'ları tarafından işlenecek komutları nasıl sağladığını açıklar.|  
-|[Yerleştirme Yönergeleri](../../extensibility/internals/command-placement-guidelines.md)|Visual Studio ortamında komutları konumlandırmak nasıl önerir.|  
-|[VSPackage’ların Kullanıcı Arabirimi Öğeleri Eklemesi](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)|VSPackage en iyi kullanarak Visual Studio komut mimarisi nasıl açıklar.|  
-|[Varsayılan Komut, Grup ve Araç Çubuğu Yerleşimi](../../extensibility/internals/default-command-group-and-toolbar-placement.md)|Nasıl VSPackages Visual Studio'ya dahil olan komutları en iyi şekilde kullanabileceğinizi açıklar.|  
-|[VSPackage’ları Yönetme](../../extensibility/managing-vspackages.md)|Visual Studio VSPackages nasıl yüklenir açıklar.|  
-|[Visual Studio Komut Tablosu (.Vsct) Dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)|Vspackage'larda komut Görünüm ve düzeninin açıklamak için kullanılan XML tabanlı .vsct dosyaları hakkında bilgi sağlar.|
+|[Uygulama](../../extensibility/internals/command-implementation.md)|Bir VSPackage içinde komutların nasıl uygulanacağını açıklar.|  
+|[Kullanılabilirlik](../../extensibility/internals/command-availability.md)|Visual Studio bağlamının hangi komutların kullanılabilir olduğunu nasıl belirlediğini açıklar.|  
+|[Yönlendirme Algoritması](../../extensibility/internals/command-routing-algorithm.md)|Visual Studio komut yönlendirme mimarisinin, komutların farklı VSPackages tarafından nasıl işleneceğini açıklar.|  
+|[Yerleştirme Yönergeleri](../../extensibility/internals/command-placement-guidelines.md)|Visual Studio ortamında komutların nasıl konumlandıralınacağını önerir.|  
+|[VSPackage’ların Kullanıcı Arabirimi Öğeleri Eklemesi](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)|VSPackages 'ın Visual Studio komut mimarisini en iyi şekilde kullanmasını açıklar.|  
+|[Varsayılan Komut, Grup ve Araç Çubuğu Yerleşimi](../../extensibility/internals/default-command-group-and-toolbar-placement.md)|VSPackages 'in Visual Studio 'Ya dahil olan komutları en iyi şekilde nasıl kullanabileceğinizi açıklar.|  
+|[VSPackage’ları Yönetme](../../extensibility/managing-vspackages.md)|Visual Studio 'Nun VSPackages 'yi nasıl yüklediğini açıklar.|  
+|[Visual Studio Komut Tablosu (.Vsct) Dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)|VSPackages içindeki komutların yerleşimini ve görünümünü anlatmak için kullanılan XML tabanlı. vsct dosyaları hakkında bilgi sağlar.|

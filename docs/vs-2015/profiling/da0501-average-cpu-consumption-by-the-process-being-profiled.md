@@ -1,5 +1,5 @@
 ---
-title: 'DA0501: Profili oluşturulan İşlemin Ortalama CPU kullanımı. | Microsoft Docs'
+title: 'DA0501: İşlemin ortalama CPU kullanımının profili oluşturuluyor. | Microsoft Belgeleri'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,25 +14,25 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1462ac73e599b870f015a02998c069f7613be0ae
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155769"
 ---
-# <a name="da0501-average-cpu-consumption-by-the-process-being-profiled"></a>DA0501: Profili oluşturulan İşlemin Ortalama CPU kullanımı.
+# <a name="da0501-average-cpu-consumption-by-the-process-being-profiled"></a>DA0501: İşlemin ortalama CPU kullanımının profili oluşturuluyor.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kural Kimliği | DA501 |  
-| Kategori | Kaynak İzleme |  
-| Profil oluşturma yöntemi | Tüm |  
-| İleti | Ortalama CPU kullanımının profili oluşturuluyor işlem. |  
+Kural kimliği | DA501 |  
+| Kategori | Kaynak Izleme |  
+| Profil oluşturma yöntemi | Tümü |  
+| İleti | Işlem tarafından ortalama CPU kullanımı profili oluşturuldu. |  
 | Kural türü | Bilgi |  
   
- Örnekleme, .NET bellek ve kaynak çekişmesi yöntemleri kullanılarak profili, bu kural tetiklemek için en az 10 örnekleri toplamanız gerekir.  
+ Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.  
   
 ## <a name="rule-description"></a>Kural Tanımı  
- Bu ileti bir işlemci yönergeleri uygulamadan çalıştırmakla meşgul olduğu sürenin yüzdesini bildirir. Bildirilen değer profil oluşturulan işlem etkin olduğu tüm ölçüm aralıklarında bir ortalamadır. Değeri, birden çok işlemcili bir makinede % 100'den daha büyük olabilir.  
+ Bu ileti, bir işlemcinin uygulamadan yönergeleri yürütürken meşgul olduğu sürenin yüzdesini bildirir. Bildirilen değer, işlem yapılan işlemin etkin olduğu tüm ölçüm aralıklarının ortalaması olarak belirlenir. Değerin değeri, birden fazla işlemciye sahip bir makinede %100 değerinden büyük olabilir.  
   
-## <a name="how-to-use-rule-data"></a>Kural verileri kullanma  
- Kural değeri, farklı sürümlerin performans veya programın yapıları karşılaştırmak veya farklı test senaryoları altında uygulama performansını anlamak için kullanın.
+## <a name="how-to-use-rule-data"></a>Kural verilerini kullanma  
+ Programın farklı sürümlerinin veya derlemelerin performansını karşılaştırmak veya farklı test senaryoları altında uygulamanın performansını anlamak için kural değerini kullanın.

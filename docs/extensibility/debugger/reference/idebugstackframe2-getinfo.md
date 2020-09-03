@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetInfo | Microsoft Dokümanlar
+title: 'IDebugStackFrame2:: GetInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 09768fc58640d79a3b5628bafc16b2267f1f8a4c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719714"
 ---
 # <a name="idebugstackframe2getinfo"></a>IDebugStackFrame2::GetInfo
 Yığın çerçevesinin açıklamasını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetInfo ( 
@@ -45,16 +45,16 @@ int GetInfo ( 
 
 ## <a name="parameters"></a>Parametreler
 `dwFieldSpec`\
-[içinde] Parametrenin hangi alanlarının dolduruleceğini belirten FRAMEINFO_FLAGS numaralandırmadan gelen bayrakların birleşimi. [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) `pFrameInfo`
+'ndaki [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) Numaralandırmadaki, parametrenin hangi alanlarının doldurulacağını belirten bayrakların birleşimi `pFrameInfo` .
 
 `nRadix`\
-[içinde] Herhangi bir sayısal bilgi biçimlendirmede kullanılacak radix.
+'ndaki Herhangi bir sayısal bilgiyi biçimlendirmede kullanılacak taban tabanı.
 
 `pFrameInfo`\
-[çıkış] Yığın çerçevesinin açıklamasıyla doldurulan bir [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) yapısı.
+dışı Yığın çerçevesinin açıklamasıyla doldurulmuş bir [frameInfo](../../../extensibility/debugger/reference/frameinfo.md) yapısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

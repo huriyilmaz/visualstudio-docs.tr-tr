@@ -1,5 +1,5 @@
 ---
-title: Getassemblyıdentity görevi | Microsoft Docs
+title: GetAssemblyIdentity görevi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -20,32 +20,32 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9b4a578d1d22c6e912fd3f7edc203195dbba8987
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68178402"
 ---
 # <a name="getassemblyidentity-task"></a>GetAssemblyIdentity Görevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Belirtilen dosyalardan derleme kimlikleri alır ve kimlik bilgilerini çıkarır.  
+Belirtilen dosyalardaki derleme kimliklerini alır ve kimlik bilgilerini çıkarır.  
   
 ## <a name="task-parameters"></a>Görev parametreleri  
- Parametreleri aşağıdaki tabloda açıklanmıştır `GetAssemblyIdentity` görev.  
+ Aşağıdaki tablo, görevin parametrelerini açıklar `GetAssemblyIdentity` .  
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
 |`Assemblies`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Alınan derleme kimliklerini içerir.|  
-|`AssemblyFiles`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Kimliklerden alınacak dosyaları belirtir.|  
+|`AssemblyFiles`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Kimlikleri alınacak dosyaları belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğeleri tarafından çıkarılan `Assemblies` parametre içeren adlı öğesi meta veri girdileri `Version`, `PublicKeyToken`, ve `Culture`.  
+ Parametresine göre çıkış öğeleri `Assemblies` ,, ve adlı öğe meta veri girdilerini içerir `Version` `PublicKeyToken` `Culture` .  
   
- Yukarıda listelenen parametrelerin yanı sıra, bu görev parametreleri devralan <xref:Microsoft.Build.Tasks.TaskExtension> kendisi sınıfının devraldığı <xref:Microsoft.Build.Utilities.Task> sınıfı. Bu ek parametrelerin ve Tanımlamaların bir listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).  
+ Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek belirtilen dosyaları kimliğini alır. `MyAssemblies` öğesi ekleyin ve bunları çıkarır `MyAssemblyIdentities` öğesi.  
+ Aşağıdaki örnek, öğesinde belirtilen dosyaların kimliğini alır `MyAssemblies` ve bunları `MyAssemblyIdentities` öğeye çıkarır.  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -66,5 +66,5 @@ Belirtilen dosyalardan derleme kimlikleri alır ve kimlik bilgilerini çıkarır
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görevleri](../msbuild/msbuild-tasks.md)   
- [Görev Başvurusu](../msbuild/msbuild-task-reference.md)
+ [Görevlerinize](../msbuild/msbuild-tasks.md)   
+ [Görev başvurusu](../msbuild/msbuild-task-reference.md)

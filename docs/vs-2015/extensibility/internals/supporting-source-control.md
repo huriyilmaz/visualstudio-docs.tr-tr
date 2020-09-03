@@ -11,49 +11,49 @@ caps.latest.revision: 19
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d1166197a5c79dcb0d1ddf4018227914346a6172
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156068"
 ---
 # <a name="supporting-source-control"></a>Kaynak Denetimini Destekleme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Dosya kullanıma alma, iade etme işlemleri ve diğer kaynak denetim işlemlerini Proje veya Düzenleyicisi için destekler. Kaynak denetimi istemci olarak [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] gibi kaynak denetim paketi ile etkileşim kuracak şekilde tasarlanmıştır [!INCLUDE[vsvss](../../includes/vsvss-md.md)], arşivleme, sürüm oluşturma ve denetim özellikleri için dinamik olarak tanımlanan bir dosya kümesini sağlar.  
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , projeniz veya düzenleyiciniz için dosya kullanıma alma işlemleri, iadeler ve diğer kaynak denetimi işlemlerini destekler. Kaynak Denetim istemcisi olarak, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[vsvss](../../includes/vsvss-md.md)] dinamik olarak tanımlanmış bir dosya kümesi için arşivleme, sürüm oluşturma ve denetim olanakları sağlayan gibi bir kaynak denetimi paketiyle etkileşime geçmek üzere tasarlanmıştır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Kaynak Denetimi Paketleri için Model](../../extensibility/internals/model-for-source-control-packages.md)  
- Bir proje türü uygulanmalı arabirimleri açıklar kaynak denetimi desteklemek için.  
+ Kaynak denetimini desteklemek için bir proje türünün uygulanması gereken arayüzleri açıklar.  
   
  [Tasarım Kararları](../../extensibility/internals/source-control-design-decisions.md)  
- Soruların yanıtlarını proje türüne nasıl uygulayacağınıza değiştirme sağlar.  
+ Yanıtları bir proje türünü nasıl uygulayacağınızı değiştiren sorular sağlar.  
   
  [Yapılandırma Ayrıntıları](../../extensibility/internals/source-control-configuration-details.md)  
- Kaynak denetimini destekleyen bir proje türü uygulamasını nasıl değiştiğini açıklar.  
+ Destekleyici kaynak denetiminin bir proje türünün uygulamasını nasıl değiştirdiği açıklanmaktadır.  
   
  [Projeler ve Düzenleyiciler için Ek Yönergeler](../../extensibility/internals/additional-source-control-guidelines-for-projects-and-editors.md)  
- Proje türleri ve düzenleyiciler için en iyi uygulamaları açıklar.  
+ Proje türleri ve düzenleyicilerle ilgili en iyi yöntemleri açıklar.  
   
  [Çalışma Zamanı Ayrıntıları](../../extensibility/internals/source-control-runtime-details.md)  
- Bir kullanıcı, bir kaynak denetim sistemine eklediğinde, bir proje kaydetme işlemini açıklamaktadır.  
+ Bir kullanıcının bir kaynak denetimi sistemine eklemesi durumunda projenin nasıl kaydedileceği açıklanmaktadır.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>  
- Ortam ya da bir dosya hakkında bellekte değiştirilemez veya kaydedilmiş olan kaynak denetim paketi belirtir.  
+ Bir dosyanın bellekte veya kaydedilmiş olarak değiştirilmesinin olduğu ortam veya kaynak denetimi paketine bildirir.  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>  
- Projeler ve hiyerarşileri kendilerini kaynak denetimiyle kaydetmesini ve kaynak denetimi durumu hakkında bilgi sağlar.  
+ Projelerin ve hiyerarşilerin kendilerini kaynak denetimi ile kaydetmesini ve kaynak denetimi durumu hakkında bilgi almasını sağlar.  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2>  
- Kaynak denetimi proje dosyaları ve proje öğeleri için sağlamak üzere proje sistemindeki uygulanır.  
+ Proje dosyaları ve proje öğeleri için kaynak denetimi sağlamak üzere bir proje sisteminde uygulanır.  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>  
- Ortam eklemek, kaldırmak veya bir dosya veya bir çözüm dizini yeniden adlandırma izni için Sorgulanacak projeleri tarafından kullanılır.  
+ Bir çözümde dosya veya dizin ekleme, kaldırma veya yeniden adlandırma izni için ortamı sorgulamak üzere kullanılır.  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2>  
- Proje dosyaları veya dizinleri için yapılan değişiklikler istemcileri bildirir.  
+ İstemcilere proje dosyaları veya dizinlerinde yapılan değişiklikleri bildirir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Proje Türleri](../../extensibility/internals/project-types.md)  
- Temel yapı taşları projelerine genel bir bakış sağlar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE). Projeler oluşturmak ve kodu derleme nasıl kontrol açıklayan ek konulara bağlantılar sağlanmaktadır.
+ , [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tümleşik geliştirme ortamının (IDE) temel yapı taşları olarak projelere genel bir bakış sağlar. Bağlantılar, projelerin kod oluşturma ve derleme şeklini açıklayan ek konulara sağlanır.

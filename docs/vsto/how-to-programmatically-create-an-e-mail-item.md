@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: d22808b8d68c0fdb3b6a2374985ae25a539f0e8c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546048"
 ---
 # <a name="how-to-programmatically-create-an-email-item"></a>Nasıl yapılır: program aracılığıyla e-posta öğesi oluşturma

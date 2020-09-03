@@ -1,5 +1,5 @@
 ---
-title: marker_series::is_enabled yöntemi | Microsoft Docs
+title: 'marker_series:: is_enabled yöntemi | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9ccef8ebbf63835a71027643b518280d5f4f867b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156407"
 ---
-# <a name="markerseriesisenabled-method"></a>marker_series::is_enabled Yöntemi
+# <a name="marker_seriesis_enabled-method"></a>marker_series::is_enabled Yöntemi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tüm oturum sağlayıcısı etkin olmadığını belirler.  
+Sağlayıcının herhangi bir oturumun etkinleştirilip etkinleştirilmediğini belirler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```  
 bool is_enabled();  
@@ -40,14 +40,14 @@ bool is_enabled(
  Önem düzeyi.  
   
  `_Category`  
- Kategori.  
+ Alan.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** cvmarkersobj.h  
+ **Üst bilgi:** cvmarkersobj. h  
   
- **Namespace:** CONCURRENCY::Diagnostic  
+ **Ad alanı:** Eşzamanlılık::d ıagstik  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [marker_series Sınıfı](../profiling/marker-series-class.md)

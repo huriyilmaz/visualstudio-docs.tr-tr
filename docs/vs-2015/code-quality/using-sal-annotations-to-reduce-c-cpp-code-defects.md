@@ -1,5 +1,5 @@
 ---
-title: CC++ kod hatalarını azaltmak Için sal ek açıklamalarını kullanma | Microsoft Docs
+title: C-C + + kod hatalarını azaltmak için SAL ek açıklamalarını kullanma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -14,10 +14,10 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 66da17a31f6287bea810fc29fdb9c12d95cc94b2
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77275418"
 ---
 # <a name="using-sal-annotations-to-reduce-cc-code-defects"></a>C/C++ Kod Hatalarını Azaltmak için SAL Ek Açıklamalarını Kullanma
@@ -27,7 +27,7 @@ SAL, Microsoft kaynak kodu ek açıklama dilidir. Kaynak kodu ek açıklamaları
   
  Belgelerinin bu bölümündeki makaleler SAL 'un yönlerini tartışmaktadır, SAL söz dizimi için başvuru sağlar ve kullanım örnekleri sunar.  
   
-- [SAL'yi Anlama](../code-quality/understanding-sal.md)  
+- [SAL'ı Anlama](../code-quality/understanding-sal.md)  
   
      Çekirdek SAL ek açıklamalarını gösteren bilgiler ve örnekler sağlar.  
   
@@ -51,7 +51,7 @@ SAL, Microsoft kaynak kodu ek açıklama dilidir. Kaynak kodu ek açıklamaları
   
      Diğer SAL ek açıklamaların koşulunu veya kapsamını (yerleşimini) belirten SAL ek açıklamalarını listeler.  
   
-- [İç İşlevler](../code-quality/intrinsic-functions.md)  
+- [İç Işlevler](../code-quality/intrinsic-functions.md)  
   
      İç SAL ek açıklamalarını listeler.  
   

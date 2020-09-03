@@ -1,5 +1,5 @@
 ---
-title: ProjectTemplateLink Elemanı (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: ProjectTemplateLink öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,18 +15,25 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: e6d402b6605f2e01a20d400c2c33573c686a1cdd
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701816"
 ---
 # <a name="projecttemplatelink-element-visual-studio-templates"></a>ProjectTemplateLink öğesi (Visual Studio şablonları)
-Çok projeli şablonda bir projenin *.vstemplate* dosyasına giden yolu belirtir.
+Çoklu Proje şablonundaki bir projenin *. vstemplate* dosyasının yolunu belirtir.
 
- \<VSTemplate \<> \<TemplateContent> \<ProjectCollection> ProjectTemplateLink> \<-or- VSTemplate> \<TemplateContent> \<ProjectCollection> \<SolutionFolder> \<ProjectTemplateLink>
+ \<VSTemplate> \<TemplateContent>
+ \<ProjectCollection>
+ \<ProjectTemplateLink>
+veya \<VSTemplate>
+ \<TemplateContent>
+ \<ProjectCollection>
+ \<SolutionFolder>
+ \<ProjectTemplateLink>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ProjectTemplateLink ProjectName="Name">
@@ -41,8 +48,8 @@ ms.locfileid: "80701816"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`ProjectName`|İsteğe bağlı öznitelik.<br /><br /> Birden fazla projeli bir şablonda, her bir proje için adı belirtir. **Yeni Proje** iletişim kutusu tek tek projelere ad atayamaz.|
-|`CopyParameters`|Ana grup şablonundaki tüm değişkenlerin bağlı şablonların her birine kopyalanmasını sağlar.<br /><br /> Bağlı şablonlarda parametrelerin bir önek `"$ext_*$"`var. Örneğin, ana grup şablonunda `$projectname$` parametrenin bir değeri varsa **ExampleProject1**, bağlı şablon yürütülmek üzere `$ext_projectname$`sırasını aldığında, `$projectname$` ana grup şablonundan parametrenin bir kopyası olan bir parametre alır.<br /><br /> Bu durum, bağlı şablonların, yalnızca üst grup şablonunda rahatlıkla oluşturulabilecek bazı ortak parametreleri paylaşmasına olanak sağlar.<br /><br /> Bu öznitelik isteğe bağlıdır ve dahil `false` olmadığında otomatik olarak varsayılandır.<br /><br /> Visual Studio 2013 Güncelleme 2 tanıtıldı. Doğru ürün sürümüne başvurmak için Visual [Studio 2013 SDK Update 2'de teslim edilen Başvuru derlemelerine](https://msdn.microsoft.com/library/42b65c3e-e42b-4c39-98c8-bea285f25ffb)bakın.|
+|`ProjectName`|İsteğe bağlı öznitelik.<br /><br /> Birden fazla projeli bir şablonda, her bir proje için adı belirtir. **Yeni proje** iletişim kutusu ayrı projelere ad atayamaz.|
+|`CopyParameters`|Ana grup şablonundaki tüm değişkenlerin bağlı şablonların her birine kopyalanmasını sağlar.<br /><br /> Bağlantılı şablonlardaki parametrelerin öneki vardır `"$ext_*$"` . Örneğin, üst grup şablonunda parametresinin `$projectname$` bir **ExampleProject1**değeri varsa, bağlantılı şablon, yürütülmesi için bir değer aldığında, `$ext_projectname$` `$projectname$` üst grup şablonundan parametresinin bir kopyası olan bir parametre alır.<br /><br /> Bu durum, bağlı şablonların, yalnızca üst grup şablonunda rahatlıkla oluşturulabilecek bazı ortak parametreleri paylaşmasına olanak sağlar.<br /><br /> Bu öznitelik isteğe bağlıdır ve dahil olmadığında otomatik olarak varsayılan olarak ayarlanır `false` .<br /><br /> Visual Studio 2013 güncelleştirme 2 ' de kullanıma sunulmuştur. Doğru ürün sürümüne başvurmak için, bkz. [VISUAL STUDIO 2013 SDK güncelleştirme 2 ' de sunulan başvuru derlemeleri](https://msdn.microsoft.com/library/42b65c3e-e42b-4c39-98c8-bea285f25ffb).|
 
 ### <a name="child-elements"></a>Alt öğeleri
  Yok.
@@ -57,13 +64,13 @@ ms.locfileid: "80701816"
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Bu metin, şablonun *.vstemplate* dosyasına giden yolu belirtir.
+ Bu metin, şablonun *. vstemplate* dosyasının yolunu belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
- Birden fazla projeli şablonlar, iki veya daha fazla proje için kapsayıcı olarak davranır. Öğe, `ProjectTemplateLink` şablondaki projelerden biri için *.vstemplate* dosyasının konumunu belirtmek için kullanılır. Çoklu proje şablonunun *.vstemplate* dosyası, `ProjectTemplateLink` şablondaki her proje için bir öğe içerir. Çoklu proje şablonları hakkında daha fazla bilgi için [bkz.](../ide/how-to-create-multi-project-templates.md)
+ Birden fazla projeli şablonlar, iki veya daha fazla proje için kapsayıcı olarak davranır. `ProjectTemplateLink`Öğesi, şablondaki projelerden biri için *. vstemplate* dosyasının konumunu belirtmek için kullanılır. Çoklu proje şablonunun *. vstemplate* dosyası `ProjectTemplateLink` şablondaki her proje için bir öğe içeriyor. Çoklu proje şablonları hakkında daha fazla bilgi için bkz. [nasıl yapılır: çoklu proje şablonları oluşturma](../ide/how-to-create-multi-project-templates.md).
 
 ## <a name="example"></a>Örnek
- Bu örnek, basit bir çok proje kökü *.vstemplate* dosyagösterir. Bu örnekte, şablon iki `My Windows Application` proje `My Class Library`içerir ve . Öğedeki `ProjectName` `ProjectTemplateLink` öznitelik, bu projeyi atamak için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] adı ayarlar. `ProjectName` Öznitelik yoksa, *.vstemplate* dosyasının adı proje adı olarak kullanılır.
+ Bu örnekte basit bir çoklu proje root *. vstemplate* dosyası gösterilmektedir. Bu örnekte, şablon iki proje içerir `My Windows Application` ve `My Class Library` . `ProjectName`Öğesi üzerindeki özniteliği, `ProjectTemplateLink` [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Bu projeyi atamak için adını ayarlar. `ProjectName`Özniteliği yoksa, *. vstemplate* dosyasının adı proje adı olarak kullanılır.
 
 ```
 <VSTemplate Version="3.0.0" Type="ProjectGroup"
@@ -88,6 +95,6 @@ ms.locfileid: "80701816"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
-- [Nasıl yapılı: Çoklu proje şablonları oluşturma](../ide/how-to-create-multi-project-templates.md)
+- [Nasıl yapılır: birden çok proje şablonu oluşturma](../ide/how-to-create-multi-project-templates.md)

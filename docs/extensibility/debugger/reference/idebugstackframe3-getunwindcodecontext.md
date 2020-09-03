@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame3::GetUnwindCodeContext | Microsoft Dokümanlar
+title: 'IDebugStackFrame3:: Getunıwıncode bağlamı | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 488f675c39bb01c87aca13a9bef8cc4a715ecf18
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719504"
 ---
 # <a name="idebugstackframe3getunwindcodecontext"></a>IDebugStackFrame3::GetUnwindCodeContext
-Yığın gevşeme işlemi oluştuysa, konumu temsil eden kod bağlamını döndürür.
+Yığın geriye doğru izleme işlemi gerçekleştiyse bir konumu temsil eden kod bağlamını döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetUnwindCodeContext(
@@ -41,13 +41,13 @@ int GetUnwindCodeContext(
 
 ## <a name="parameters"></a>Parametreler
 `ppCodeContext`\
-[çıkış] Yığın gevşeme oluştuysa kod bağlamı konumunu temsil eden bir [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi döndürür.
+dışı Yığın geriye doğru meydana getirtiyse kod bağlamı konumunu temsil eden bir [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, yığın gevşedikten sonra konum için bir kod bağlamı döndürebilir, ancak bu, yığının gevşemesinin geçerli yığın çerçevesinde gerçekten oluşabileceği anlamına gelmez.
+ Bu yöntem, bir yığın geri dönüşi sonrasında konum için bir kod bağlamı döndürebilse de, yığın geriye doğru bir şekilde geçerli yığın çerçevesinde gerçekleşebileceği anlamına gelmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md)

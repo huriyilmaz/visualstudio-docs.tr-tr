@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: d35611dcc7b6067cf6d6166aff521ef291b8dfcd
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281129"
 ---
 # <a name="upgrade-mdf-files"></a>.mdf dosyalarını yükseltme
@@ -61,7 +61,7 @@ Bir veritabanını yükseltmeden önce aşağıdaki ölçütleri göz önünde b
 
 2. **Bağlantı ekle** iletişim kutusunda, aşağıdaki bilgileri belirtin:
 
-    - **Veri kaynağı**:`Microsoft SQL Server (SqlClient)`
+    - **Veri kaynağı**: `Microsoft SQL Server (SqlClient)`
 
     - **Sunucu adı**:
 

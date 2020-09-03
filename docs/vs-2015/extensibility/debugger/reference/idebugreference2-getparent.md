@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::GetParent | Microsoft Docs
+title: 'IDebugReference2:: GetParent | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 906a4dd5e8bf3b6b50fbd4288440bc2c85c92a22
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155868"
 ---
 # <a name="idebugreference2getparent"></a>IDebugReference2::GetParent
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Üst başvuru bir başvuru alır. Daha sonraki kullanımlar için ayrılmıştır.  
+Başvurunun üst başvurusunu alır. Daha sonraki kullanımlar için ayrılmıştır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetParent (   
@@ -40,10 +40,10 @@ int GetParent ( 
   
 #### <a name="parameters"></a>Parametreler  
  `ppParent`  
- [out] Döndürür bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) bu özelliğin üst temsil eden nesne.  
+ dışı Bu özelliğin üst öğesini temsil eden bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Her zaman döndürür `E_NOTIMPL`.  
+ Her zaman `E_NOTIMPL` döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

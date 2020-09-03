@@ -1,5 +1,5 @@
 ---
-title: IDebugAlias::GetICorDebugValue | Microsoft Docs
+title: 'IDebugAlias:: GetICorDebugValue | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 67ab8a7343cd320470515b757dfca905a0a4690e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156287"
 ---
 # <a name="idebugaliasgeticordebugvalue"></a>IDebugAlias::GetICorDebugValue
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu diğer adla ilişkilendirilmiş değeri temsil eden bir yönetilen kod arabirim alır.  
+Bu diğer adla ilişkili değeri temsil eden bir yönetilen kod arabirimini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetICorDebugValue(  
@@ -40,13 +40,13 @@ int GetICorDebugValue(
   
 #### <a name="parameters"></a>Parametreler  
  `ppUnk`  
- [out] `IUnknown` bu diğer adla ilişkilendirilmiş değeri temsil eden arabirim. Bu arabirim için sorgulanabilir `ICorDebugValue` arabirimi.  
+ [out] `IUnknown` Bu diğer adla ilişkili değeri temsil eden arabirim. Bu arabirim arabirim için sorgulanabilir `ICorDebugValue` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem yalnızca yönetilen değerlere uygulanır ( `ICorDebugValue` arabirim kullanılabilir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ve tanımlanan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK cordebug.idl dosyasında).  
+ Bu yöntem yalnızca yönetilen değerler için geçerlidir ( `ICorDebugValue` ' de kullanılabilir bir arabirimdir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ve [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] CorDebug. IDL dosyasında SDK 'da tanımlanmıştır).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

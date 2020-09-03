@@ -11,29 +11,29 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5d36b1091f34318ccba1ce0a997ad23043cbdeb2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155572"
 ---
 # <a name="idebugnosymbolsevent2"></a>IDebugNoSymbolsEvent2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Sinyaller [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] hata ayıklayıcı semboller için başlatılan yürütülebilir dosya bulunamadı, kullanıcıyı uyarmak için kullanıcı Arabirimi.  
+[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]Hata ayıklayıcı Kullanıcı arabirimine, başlatılan yürütülebilir dosya için simgelerin konumlandırılamadığından kullanıcıyı uyarmasını sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugNoSymbolsEvent2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar  
- Hata ayıklama motoru tarafından uygulanan ve tarafından tüketilen [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] hata ayıklayıcı, kullanıcı Arabirimi.  
+## <a name="notes-for-implementers"></a>Implemenonun notları  
+ Hata ayıklama motorları tarafından uygulanır ve [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] hata ayıklayıcı kullanıcı arabirimi tarafından kullanılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üst bilgi: Msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll

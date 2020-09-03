@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetPhysicalStackRange | Microsoft Dokümanlar
+title: 'IDebugStackFrame2:: GetPhysicalStackRange | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 3df924c6c8a4373082d61575e4ad8a7ec3f161d1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719663"
 ---
 # <a name="idebugstackframe2getphysicalstackrange"></a>IDebugStackFrame2::GetPhysicalStackRange
-Yığın çerçevesiyle ilişkili fiziksel adres aralığının makineye bağımlı bir temsilini alır.
+Yığın çerçevesiyle ilişkili fiziksel adres aralığının makineye bağlı temsilini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetPhysicalStackRange ( 
@@ -43,18 +43,18 @@ int GetPhysicalStackRange ( 
 
 ## <a name="parameters"></a>Parametreler
 `paddrMin`\
-[çıkış] Bu yığın çerçevesiyle ilişkili en düşük fiziksel adresi döndürür.
+dışı Bu yığın çerçevesiyle ilişkili en düşük fiziksel adresi döndürür.
 
 `paddrMax`\
-[çıkış] Bu yığın çerçevesiyle ilişkili en yüksek fiziksel adresi döndürür.
+dışı Bu yığın çerçevesiyle ilişkili en yüksek fiziksel adresi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntemle döndürülen bilgiler, yığın çerçevelerini sıralamak için oturum hata ayıklama yöneticisi (SDM) tarafından kullanılır.
+ Bu yöntemin döndürdüğü bilgiler, yığın çerçevelerini sıralamak için oturum hata ayıklama Yöneticisi (SDM) tarafından kullanılır.
 
- Çağrı yığınının küçültüldüğü, yani yeni yığın karelerinin giderek daha alttaki bellek adreslerine eklendiği varsayılıyor. Çalışma zamanı mimarisi, bu varsayımla eşleşen fiziksel yığın aralıkları sağlamalıdır.
+ Çağrı yığınının arttığına, yani yeni yığın çerçevelerinin artan bellek adreslerinde daha düşük bir şekilde ekleneceğini kabul edilir. Çalışma zamanı mimarisi, bu varsayım ile eşleşen fiziksel yığın aralıkları sağlamalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

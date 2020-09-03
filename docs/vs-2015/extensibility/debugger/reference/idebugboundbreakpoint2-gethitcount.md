@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::GetHitCount | Microsoft Docs
+title: 'IDebugBoundBreakpoint2:: GetHitCount | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,18 +14,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e373c19e3213e1e39ca610839478cad613ad4454
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156243"
 ---
 # <a name="idebugboundbreakpoint2gethitcount"></a>IDebugBoundBreakpoint2::GetHitCount
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu bağlı kesme noktası için geçerli isabet sayısını alır.  
+Bu bağlantılı kesme noktası için geçerli isabet sayısını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetHitCount(   
@@ -41,13 +41,13 @@ int GetHitCount( 
   
 #### <a name="parameters"></a>Parametreler  
  `pdwHitCount`  
- [out] İsabet sayısı döndürür.  
+ dışı İsabet sayısını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Döndürür `E_BP_DELETED` bağlı Kesme noktasının nesnenin durumu ayarlanırsa `BPS_DELETED` (parçası [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) sabit listesi).  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. , `E_BP_DELETED` Bağlantılı kesme noktası nesnesinin durumunun `BPS_DELETED` ( [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) sabit listesinin parçası) olarak ayarlanmış olup olmadığını döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İsabet sayısı bu Kesme noktasının harekete geçirilen oturumun geçerli çalıştırma sırasında sayısıdır.  
+ İsabet sayısı, bu kesme noktasının, oturumun geçerli çalıştırması sırasında kaç kez tetiklenme sayısıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   

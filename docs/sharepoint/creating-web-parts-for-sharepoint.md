@@ -24,9 +24,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 3825ef7d2c1c90f63a90f5028063c74332543841
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015053"
 ---
 # <a name="create-web-parts-for-sharepoint"></a>SharePoint için Web bölümleri oluşturma
@@ -99,7 +100,7 @@ ms.locfileid: "86015053"
   Korumalı çözümler hakkında daha fazla bilgi için bkz. [korumalı ve Grup çözümleri arasındaki farklılıklar](../sharepoint/differences-between-sandboxed-and-farm-solutions.md).
 
 ## <a name="create-older-style-sharepoint-based-web-parts"></a>Eski stil SharePoint tabanlı Web bölümleri oluşturma
- SharePoint için özel Web bölümleri oluşturmak üzere Visual Studio 'daki şablonları kullanabilirsiniz [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] . [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)]Web bölümleri, [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] Web Bölümü altyapısının üzerine kurulmuştur ve yeni projeler için önerilen türdür.
+ SharePoint için özel Web bölümleri oluşturmak üzere Visual Studio 'daki şablonları kullanabilirsiniz [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] . [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] Web bölümleri, [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] Web Bölümü altyapısının üzerine kurulmuştur ve yeni projeler için önerilen türdür.
 
  Çok az durumda, daha eski stil SharePoint tabanlı Web bölümünü kullanarak bir Web bölümü oluşturmanız gerekebilir. Bu Web bölümleri türlerini oluşturmak için Visual Studio 'Yu kullanabilirsiniz, ancak Visual Studio, özel olarak bunları oluşturmanıza yardımcı olmak için tasarlanan herhangi bir şablon sağlamaz.
 

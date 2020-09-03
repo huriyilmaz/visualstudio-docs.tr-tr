@@ -8,27 +8,27 @@ author: conceptdev
 ms.author: crdun
 manager: jillfra
 ms.openlocfilehash: 0d0903db05b193b3318dc30c250bfdb21e76b093
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155274"
 ---
 # <a name="visual-studio-tools-for-apache-cordova"></a>Apache Cordova için Visual Studio Araçları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yaklaşık %100 kodunuzu paylaşmak ve iOS, Android ve Windows cihazlarında çalışan uygulamalar oluşturun. Bunları, sık kullandığınız web teknolojileri ile oluşturun. Apache Cordova, yerel bir phone'da kamera gibi cihaz özelliklerine erişmenizi sağlar ve en önemlisi, ücretsizdir. Visual Studio, uygulamanızı oluşturmak daha da kolay hale getirmek için bu ek özellikler ekler:  
+İOS, Android ve Windows cihazlarında çalışan uygulamalar oluşturun ve kodunuzun neredeyse %100 ' ını paylaşabilirsiniz. Bunları en sevdiğiniz web teknolojileriyle derleyin. Apache Cordova, bir telefonda kamera gibi cihaz özelliklerine yerel erişim sağlar ve bunların en iyisi ücretsizdir. Visual Studio, uygulamanızı daha da kolay hale getirmek için bu ek özellikleri ekler:  
   
-- Kolay yükleme ve Kurulum.  
+- Kolay yükleme ve kurulum.  
   
-- Bulmanıza ve sorunları gidermeye yardımcı olmak için Gelişmiş hata ayıklayıcısı'ı seçin.  
+- Sorunları bulmanıza ve gidermenize yardımcı olması için gelişmiş hata ayıklayıcı.  
   
-- Cihaz öykünücüleri için kolay erişim sağlar.  
+- Cihaz öykünücülere kolay erişim.  
   
 - Cihaz eklentilerinizi yönetmek için bir tasarımcı.  
   
-- Komut satırı arabirimi ile tamamen uyumlu bir proje.  
+- Komut satırı arabirimiyle tamamen uyumlu olan bir proje.  
   
-Bu araçlar kullanılabiliyor, ancak bunları deneyin henüz ziyaret edin, hazır değil bizim [özellikleri](https://www.visualstudio.com/explore/cordova-vs) sayfası, belirleriz, bunlar hakkında daha fazla.  
+Bu araçları göz önünde bulunduruyoruz, ancak yine de denemeye hazırsanız [Özellikler](https://www.visualstudio.com/explore/cordova-vs) sayfamızı ziyaret edin ve bunlar hakkında daha fazla bilgi edineceksiniz.  
   
-Başlamaya hazırsanız bkz [JavaScript ile Mobil Geliştirme](/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017).
+Başlamaya hazırsanız bkz. [JavaScript Ile mobil geliştirme](/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017).

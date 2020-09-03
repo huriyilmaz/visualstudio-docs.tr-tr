@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::Enable | Microsoft Docs
+title: 'IDebugBoundBreakpoint2:: Enable | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,18 +14,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c650ff26b1ce7358312ef90bc737f2f911b0a52f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156270"
 ---
 # <a name="idebugboundbreakpoint2enable"></a>IDebugBoundBreakpoint2::Enable
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Etkinleştirir veya kesme noktasını devre dışı bırakır.  
+Kesme noktasını etkinleştirilir veya devre dışı bırakır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Enable(   
@@ -41,13 +41,13 @@ int Enable( 
   
 #### <a name="parameters"></a>Parametreler  
  `fEnable`  
- [in] İçin sıfır olmayan ayarlayın (`TRUE`) etkinleştirmek için ya da sıfıra (`FALSE`) kesme noktasını devre dışı bırakmak için.  
+ 'ndaki `TRUE` `FALSE` Kesme noktasını devre dışı bırakmak için sıfır () özelliğini etkinleştirmek için sıfır olmayan () olarak ayarlayın.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Döndürür `E_BP_DELETED` bağlı Kesme noktasının nesnenin durumu ayarlanırsa `BPS_DELETED` (parçası [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) sabit listesi).  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. , `E_BP_DELETED` Bağlantılı kesme noktası nesnesinin durumunun `BPS_DELETED` ( [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) sabit listesinin parçası) olarak ayarlanmış olup olmadığını döndürür.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CBoundBreakpoint` gösteren nesne [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) arabirimi.  
+ Aşağıdaki örnek, `CBoundBreakpoint` [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) arabirimini kullanıma sunan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.  
   
 ```  
 HRESULT CBoundBreakpoint::Enable(BOOL fEnable)    

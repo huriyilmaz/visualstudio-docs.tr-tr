@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::GetServerFriendlyName | Microsoft Dokümanlar
+title: 'IDebugCoreServer3:: GetServerFriendlyName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: eec30783041a1240d8f85815c06f4ca60729a484
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732890"
 ---
 # <a name="idebugcoreserver3getserverfriendlyname"></a>IDebugCoreServer3::GetServerFriendlyName
-Sunucu için uygun bir ad alır.
+Sunucu için kolay bir ad alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetServerFriendlyName(
@@ -41,18 +41,18 @@ int GetServerFriendlyName(
 
 ## <a name="parameters"></a>Parametreler
 `pbstrName`\
-[çıkış] Sunucu için uygun bir ad verir.
+dışı Sunucu için kolay bir ad döndürür.
 
 > [!NOTE]
-> Arayan dize serbest sorumludur.
+> Çağıran, dizeyi boşaltmaktan sorumludur.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Kullanıcı tarafından başlatılan sunucular için, bu yöntemle döndürülen ad, sunucunun tam adıdır. Otomatik olarak başlatılan sunucular için, sunucunun üzerinde çalışan makinenin adıdır.
+ Kullanıcı tarafından başlatılan sunucular için, bu yöntemin döndürdüğü ad sunucunun tam adıdır. Otomatik başlatılan sunucular için, ad sunucunun üzerinde çalıştığı makinenin adıdır.
 
- Makine odaklı bir ad için [GetServerName](../../../extensibility/debugger/reference/idebugcoreserver3-getservername.md) yöntemini arayın.
+ Makineye yönelik bir ad için [GetServerName](../../../extensibility/debugger/reference/idebugcoreserver3-getservername.md) metodunu çağırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

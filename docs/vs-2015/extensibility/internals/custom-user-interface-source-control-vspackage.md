@@ -1,5 +1,5 @@
 ---
-title: Özel kullanıcı arabirimi (kaynak denetimi VSPackage'ı) | Microsoft Docs
+title: Özel Kullanıcı arabirimi (kaynak denetimi VSPackage) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,50 +12,50 @@ caps.latest.revision: 29
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f03713213ec2e54ed8d82d7528dae12cefab7ebc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68154983"
 ---
 # <a name="custom-user-interface-source-control-vspackage"></a>Özel Kullanıcı Arabirimi (Kaynak Denetimi VSPackage’ı)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-VSPackage Visual Studio komut tablosu (.vsct) dosyası, menü öğelerini ve varsayılan durumlarına bildirir. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tümleşik geliştirme ortamı (IDE) VSPackage yüklenene kadar bu menü öğeleri varsayılan durumlarını görüntüler. Sonuç olarak, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> etkinleştirmek ya da menü öğelerini devre dışı yöntemi çağrılır.  
+VSPackage, Visual Studio komut tablosu (. vsct) dosyası aracılığıyla menü öğelerini ve bunların varsayılan durumlarını bildirir. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Tümleşik geliştirme ortamı (IDE), VSPackage yükleninceye kadar menü öğelerini varsayılan durumlarında görüntüler. Daha sonra, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> yöntemi menü öğelerini etkinleştirmek veya devre dışı bırakmak için çağrılır.  
   
- VSPackage VSPackage bağlı olarak bir komut kullanıcı arabirimi (UI) bağlamı otomatik olarak yüklenebilmesi için kayıt defteri anahtarını ayarlayabilirsiniz, ancak genellikle bir kaynak denetimi VSPackage'ı yalnızca belirli bir kullanıcı Arabirimi bağlamına geçiş yerine isteğe bağlı yüklenecektir. AutoLoadPackages kayıt defteri anahtarı hakkında daha fazla bilgi için bkz. [yönetme VSPackages](../../extensibility/managing-vspackages.md).  
+ VSPackage, bir komut Kullanıcı arabirimi (UI) bağlamına göre otomatik olarak yüklenebilmesi için bir kayıt defteri anahtarı ayarlayabilir, ancak genellikle bir kaynak denetimi VSPackage yalnızca belirli bir kullanıcı arabirimi bağlamına geçiş yapmak yerine isteğe bağlı olarak yüklenir. Oto Loadpackages kayıt defteri anahtarı hakkında daha fazla bilgi için bkz. [VSPackages 'ı yönetme](../../extensibility/managing-vspackages.md).  
   
-## <a name="vspackage-ui"></a>VSPackage kullanıcı Arabirimi  
- Paket kaynak denetimi VSPackage uygulanır ve herhangi bir UI kullanmaz [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Her kaynak denetimi VSPackage'ı seçenekler belirli kaynak denetimi VSPackage'ı ayarlamak için menü öğeleri, menü grupları, araç pencerelerini, araç çubukları ve gerekli herhangi bir UI gibi kendi kullanıcı Arabirimi öğeleri belirtmeniz gerekir. Bu kullanıcı Arabirimi öğeleri, statik veya dinamik olarak etkinleştirilebilir. Statik kullanıcı Arabirimi öğeleri .vsct dosyasında tanımlanan ve VSPackage'ı veya yüklü olup olmadığını görüntülenir. Dinamik kullanıcı Arabirimi öğeleri olabilir görünür bir komuta UI bağlama bağlı olarak gibi <xref:EnvDTE.Constants.vsContextNoSolution>, veya yapılan bir çağrının sonucu olarak <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> yöntemi. Dinamik kullanıcı Arabirimi öğeleri görünürlüğünü VSPackages Gecikmeli yüklemeyi stratejisini ile uyumludur.  
+## <a name="vspackage-ui"></a>VSPackage Kullanıcı arabirimi  
+ Kaynak denetim paketi VSPackage olarak uygulanır ve ' den herhangi bir kullanıcı arabirimi kullanmaz [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Her kaynak denetimi VSPackage, menü öğeleri, menü grupları, araç pencereleri, araç çubukları ve kaynak denetimi VSPackage 'a özgü seçenekleri ayarlamak için gerekli Kullanıcı arabirimi gibi kendi kullanıcı arabirimi öğelerini belirtmelidir. Bu Kullanıcı arabirimi öğeleri statik veya dinamik olarak etkinleştirilebilir. Statik kullanıcı arabirimi öğeleri bir. vsct dosyasında tanımlanır ve VSPackage 'ın yüklenip yüklenmediğini belirtir. Dinamik Kullanıcı arabirimi öğeleri, gibi belirli bir komut Kullanıcı arabirimi bağlamına <xref:EnvDTE.Constants.vsContextNoSolution> veya yöntemine yapılan çağrının sonucuna bağlı olarak görünür olabilir <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> . Dinamik Kullanıcı arabirimi öğelerinin görünürlüğü, VSPackages 'nin geciktirilen yükleme stratejisiyle uyumludur.  
   
-## <a name="ui-constraints-on-source-control-vspackages"></a>Kaynak denetimi VSPackage'larını kısıtlamalar kullanıcı Arabirimi  
- Yüklendikten sonra IDE'den kaynak denetimi VSPackage'ı kaldırılamaz çünkü VSPackage etkin olmayan bir duruma girmeniz mümkün olması gerekir. VSPackage artık etkin olduğunu bildirimi aldığında, VSPackage kullanıcı arabirimini devre dışı bırakır ve dış IDE etkileşimi yok sayar. VSPackage'nın uygulaması <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> yöntemi VSPackage etkin değilken komutları gizle.  
+## <a name="ui-constraints-on-source-control-vspackages"></a>Kaynak denetimi VSPackages üzerinde kullanıcı arabirimi kısıtlamaları  
+ Kaynak denetimi VSPackage yüklendikten sonra IDE 'den kaldırılamadığından, VSPackage etkin olmayan bir durum girebilmelidir. VSPackage, artık etkin olmadığını belirten bir bildirim aldığında, VSPackage Kullanıcı arabirimini devre dışı bırakır ve tüm dış IDE etkileşimini yoksayar. VSPackage, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> VSPackage etkin olmadığında komutları gizlemelidir.  
   
- Her kaynak denetimi VSPackage'ı uygulanmalı `IVsSccProvider` arabirimi. İki yöntem arabirimde <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetActive%2A> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetInactive%2A>, VSPackage'ı tarafından uygulanmalıdır.  
+ Her kaynak denetimi VSPackage `IVsSccProvider` arabirimini uygulamalıdır. Arabirimindeki iki yöntem <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetActive%2A> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetInactive%2A> , VSPackage tarafından uygulanmalıdır.  
   
- Kaynak denetimi VSPackage'ı abone olduğunuz tarafından uygulanan çeşitli IDE olaylarına <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3>, <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2>ve benzeri. Ayrıca, VSPackage kayıt defteri etkin geri çağırma arabirimleri olarak uygulanan <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence>. Bu tüm etkin olmadığında yoksayılmalıdır.  
+ Kaynak denetimi VSPackage,, ve tarafından uygulanan çeşitli IDE olaylarına abone olmuş olabilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3> <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2> . Ayrıca, VSPackage, gibi, kayıt defteri etkin geri arama arabirimlerini uygulamış olabilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence> . Bunların hepsi etkin olmadığında yok sayılacak.  
   
- Aşağıdaki listede, bir kaynak denetimi VSPackage'ı etkin durumunu tarafından etkilenen arabirimler gösterilir:  
+ Aşağıdaki listede, bir kaynak denetimi VSPackage 'ın etkin durumundan etkilenen arabirimler gösterilmektedir:  
   
-- Proje belgelerini olayları izleyin.  
+- Proje belgelerinin olaylarını izleyin.  
   
 - Çözüm olayları.  
   
-- Çözüm Kalıcılık arabirimleri. Paketleri .sln ve .suo dosyalara yazamazlar, etkin olmadığında.  
+- Çözüm Kalıcılık arabirimleri. Devre dışı bırakıldığında, paketler. sln ve. suo dosyalarına yazmamalıdır.  
   
 - Özellik Genişleticileri.  
   
-  Gerekli <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>, ve ayrıca kaynak denetimiyle ilişkili herhangi bir isteğe bağlı arabirimi değil çağrılır kaynak denetimi VSPackage'ı devre dışı olduğunda.  
+  Kaynak denetimi <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2> VSPackage etkin olmadığında, gerekli ve ve ayrıca kaynak denetimiyle ilişkili tüm isteğe bağlı arabirimler çağrılmaz.  
   
-  Zaman [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE başlatıldığında [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] komut UI bağlamı için geçerli varsayılan kaynak denetimi VSPackage'ı kimliği Kimliğini ayarlar Bu, statik UI etkin kaynak denetimi VSPackage'ı yüklemeden IDE'de görünmesini VSPackage'ı neden olur. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSPackage'ı kaydetmek için duraklatır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] aracılığıyla <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterScciProvider> önce VSPackage yapılan her çağrı yapar.  
+  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]IDE başladığında, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] komut UI bağlamını geçerli varsayılan kaynak denetimi VSPackage kimliği kimliğine ayarlar. Bu, etkin kaynak denetimi VSPackage 'ın statik kullanıcı arabiriminin, gerçekten VSPackage yüklemeden IDE 'de görünmesine neden olur. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSPackage için [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterScciProvider> VSPackage çağrısı yapmadan önce ile ile kaydolmasını duraklatır.  
   
-  Aşağıdaki tabloda belirli ayrıntıları hakkında nasıl açıklar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE farklı kullanıcı Arabirimi öğeleri gizler.  
+  Aşağıdaki tabloda, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE 'nin farklı kullanıcı arabirimi öğelerini nasıl gizlediğini gösteren özel ayrıntılar açıklanmaktadır.  
   
-|Kullanıcı Arabirimi öğesi|Açıklama|  
+|UI öğesi|Açıklama|  
 |-------------|-----------------|  
-|Menüler ve araç çubukları|Kaynak Denetim paketi kaynak denetimi paket Kimliğini ilk menü ve araç çubuğu görünürlük durumlarını ayarlamalısınız [VisibilityConstraints](../../extensibility/visibilityconstraints-element.md) .vsct dosyası bölümünü. Böylece [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSPackage'ı yükleme ve uygulaması çağırma menü öğelerinin durumunu uygun şekilde ayarlamak için IDE <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> yöntemi.|  
-|Araç pencereleri|Kaynak denetimi VSPackage'ı devre dışı yapıldığında sahip olduğu tüm araç pencereleri gizler.|  
-|Kaynak denetimi VSPackage'ı özgü seçenekler sayfaları|Kayıt defteri anahtarı HKLM\SOFTWARE\Microsoft\VisualStudio\X.Y\ToolsOptionsPages\VisibilityCmdUIContexts görüntülenecek seçenekler sayfalarını gerektiren bağlamları ayarlamak VSPackage olanak tanır. Bu anahtar altındaki bir kayıt defteri girişi, hizmet kimliği (SID), kaynak denetimi hizmetini kullanarak ve DWORD değerini 1 atama oluşturulması gerekir. Her bir kullanıcı Arabirimi olay kaynak denetimi VSPackage'ı ile kayıtlı bir bağlamda gerçekleştiğinde VSPackage etkin olursa çağrılır.|  
+|Menüler ve araç çubukları|Kaynak denetim paketi, ilk menü ve araç çubuğu görünürlük durumlarını,. vsct dosyasının [Visibilitykýsýtlamalarındaki](../../extensibility/visibilityconstraints-element.md) kaynak DENETIM paketi kimliğine ayarlamış olmalıdır. Bu, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE 'nin, VSPackage yüklemeden ve yönteminin bir uygulamasını çağırarak menü öğelerinin durumunu uygun şekilde ayarlanmasını sağlar <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> .|  
+|Araç pencereleri|Kaynak denetimi VSPackage, etkin olmadığında sahip olduğu tüm araç pencerelerini gizler.|  
+|Kaynak denetimi VSPackage 'a özgü seçenekler sayfaları|Kayıt defteri anahtarı HKLM\SOFTWARE\Microsoft\VisualStudio\X.Y\ToolsOptionsPages\VisibilityCmdUIContexts, bir VSPackage 'ın, seçenek sayfalarının görüntülenmesini gerektirdiği bağlamların ayarlanmasını sağlar. Bu anahtarın altındaki bir kayıt defteri girişinin, kaynak denetimi hizmetinin hizmet KIMLIĞI (SID) kullanılarak oluşturulması ve DWORD değeri 1 olarak atanması gerekir. Kaynak denetimi VSPackage ile kayıtlı bir bağlamda bir kullanıcı arabirimi olayı her gerçekleştiğinde, etkin olduğunda VSPackage çağrılır.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>   
