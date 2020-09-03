@@ -13,49 +13,49 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b6d040597f48d4514a58027df3335c080d6305a4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144951"
 ---
 # <a name="idebugdocumentcontext2"></a>IDebugDocumentContext2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu arabirim bir konumda bir kaynak dosyası belgeyi temsil eder.  
+Bu arabirim, kaynak dosya belgesindeki bir konumu temsil eder.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugDocumentContext2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar  
- Hata ayıklama altyapısı (DE), kaynak kod düzeyinde hata ayıklama desteği bir parçası olarak bu arabirimi uygular. Kaynak kodunda bir konuma ek olarak, bu arabirim bağlamları karşılaştırma ve kaynak kodu belgesinin arasında gezinmek için yöntemler sağlar.  
+## <a name="notes-for-implementers"></a>Implemenonun notları  
+ Hata ayıklama altyapısı (DE), bu arabirimi kaynak kodu düzeyinde hata ayıklama desteğinin bir parçası olarak uygular. Bu arabirim, kaynak kodundaki bir konuma ek olarak, bağlamların karşılaştırılması ve bir kaynak kod belgesinde gezinmek için yöntemler sağlar.  
   
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar  
- En yaygın yöntemlerde birkaç arabirimleri [GetDocumentContext](../../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) ve [GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md) arabirimler, bu arabirim döndürür.  
+ Birçok arabirimde Yöntemler, genellikle [GetDocumentContext](../../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) ve [GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md) arabirimleri, bu arabirimi döndürür.  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugDocumentContext2`.  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugDocumentContext2` .  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetDocument](../../../extensibility/debugger/reference/idebugdocumentcontext2-getdocument.md)|Bu belge bağlamına içeren belgeyi alır.|  
-|[GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md)|Bu belge bağlamına içeren belge görüntülenebilir adını alır.|  
-|[EnumCodeContexts](../../../extensibility/debugger/reference/idebugdocumentcontext2-enumcodecontexts.md)|Bu belge bağlamı ile ilişkili tüm kod bağlamı bir listesini alır.|  
-|[GetLanguageInfo](../../../extensibility/debugger/reference/idebugdocumentcontext2-getlanguageinfo.md)|Bu belge bağlamı ile ilişkili dilini alır.|  
-|[GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)|Bu belge bağlamına dosya deyimi aralığını alır.|  
-|[GetSourceRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getsourcerange.md)|Bu belge bağlamına dosya kaynağı aralığını alır.|  
-|[Compare](../../../extensibility/debugger/reference/idebugdocumentcontext2-compare.md)|Bu belge bağlamları belirli bir dizi belge bağlamına karşılaştırır.|  
-|[Seek](../../../extensibility/debugger/reference/idebugdocumentcontext2-seek.md)|Belge bağlamı belirli sayıda deyimleri veya satırları tarafından taşır.|  
+|[GetDocument](../../../extensibility/debugger/reference/idebugdocumentcontext2-getdocument.md)|Bu belge bağlamını içeren belgeyi alır.|  
+|[GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md)|Bu belge bağlamını içeren belgenin görüntülenebilen adını alır.|  
+|[EnumCodeContexts](../../../extensibility/debugger/reference/idebugdocumentcontext2-enumcodecontexts.md)|Bu belge içeriğiyle ilişkili tüm kod bağlamlarının bir listesini alır.|  
+|[GetLanguageInfo](../../../extensibility/debugger/reference/idebugdocumentcontext2-getlanguageinfo.md)|Bu belge içeriğiyle ilişkili dili alır.|  
+|[GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)|Bu belge bağlamının dosya deyimleri aralığını alır.|  
+|[GetSourceRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getsourcerange.md)|Bu belge bağlamının dosya kaynak aralığını alır.|  
+|[Karşılaştır](../../../extensibility/debugger/reference/idebugdocumentcontext2-compare.md)|Bu belge bağlamını, belirli bir belge bağlamı dizisiyle karşılaştırır.|  
+|[Seek](../../../extensibility/debugger/reference/idebugdocumentcontext2-seek.md)|Belge bağlamını verilen sayıda deyim veya satır olarak kaydırır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [GetDocumentContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getdocumentcontext.md)   

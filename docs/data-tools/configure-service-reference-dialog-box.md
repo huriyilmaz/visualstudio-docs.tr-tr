@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: f5bae3acb6f687c8c787e2d4121999d1133b0f1f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75586932"
 ---
 # <a name="configure-service-reference-dialog-box"></a>Hizmet Başvurusu Yapılandır iletişim kutusu
@@ -43,7 +43,7 @@ ms.locfileid: "75586932"
 
 ## <a name="uielement-list"></a>UIElement listesi
 
-**Adresi**
+**Adres**
 
 Hizmet başvurusunun bir hizmet için aradığı Web adresini güncelleştirir. Örneğin, geliştirme sırasında hizmet bir geliştirme sunucusunda barındırılabilir ve daha sonra bir üretim sunucusuna taşınabilir ve bir adres değişikliği tasarımda.
 
@@ -55,7 +55,7 @@ Hizmet başvurusunun bir hizmet için aradığı Web adresini güncelleştirir. 
 WCF istemci sınıfları için kod erişim düzeyini belirler.
 
 > [!NOTE]
-> Web sitesi projeleri için, bu seçenek her zaman `Public` olarak ayarlanır ve değiştirilemez. Daha fazla bilgi için bkz. [hizmet başvurularına sorun giderme](../data-tools/troubleshooting-service-references.md).
+> Web sitesi projeleri için, bu seçenek her zaman olarak ayarlanır `Public` ve değiştirilemez. Daha fazla bilgi için bkz. [hizmet başvurularına sorun giderme](../data-tools/troubleshooting-service-references.md).
 
 **Zaman uyumsuz işlemler oluşturma**
 
@@ -71,11 +71,11 @@ Bir WCF istemcisi için ileti anlaşması türlerinin oluşturulup oluşturulmay
 
 **Koleksiyon türü**
 
-Bir WCF istemcisi için liste koleksiyonu türünü belirtir. Varsayılan tür <xref:System.Array>.
+Bir WCF istemcisi için liste koleksiyonu türünü belirtir. Varsayılan tür <xref:System.Array> .
 
 **Sözlük toplama türü**
 
-Bir WCF istemcisi için sözlük koleksiyonu türünü belirtir. Varsayılan tür <xref:System.Collections.Generic.Dictionary%602>.
+Bir WCF istemcisi için sözlük koleksiyonu türünü belirtir. Varsayılan tür <xref:System.Collections.Generic.Dictionary%602> .
 
 **Başvurulan derlemelerdeki türleri yeniden kullan**
 

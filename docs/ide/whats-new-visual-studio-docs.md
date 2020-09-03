@@ -1,8 +1,8 @@
 ---
-title: "Visual Studio belgeleri: Temmuz 2020 ' deki yenilikler "
+title: "Visual Studio belgeleri: Ağustos 2020 ' deki yenilikler "
 titleSuffix: ''
-description: Temmuz 2020 için Visual Studio docs 'daki yenilikler.
-ms.date: 08/06/2020
+description: Ağustos 2020 için Visual Studio docs 'daki yenilikler.
+ms.date: 09/02/2020
 helpviewer_keywords:
 - Visual Studio, what's new, docs
 - what's new [Visual Studio]
@@ -15,105 +15,131 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: f8f5ac8944120d5a48ab0f199d19376423abd2eb
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.openlocfilehash: 4364bd62ac19be958632b8cb2dbbe907013e8a70
+ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714441"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89402250"
 ---
-# <a name="visual-studio-docs-whats-new-in-the-docs-for-july-2020"></a>Visual Studio docs: Temmuz 2020 için docs 'daki yenilikler
+# <a name="visual-studio-docs-whats-new-for-august-2020"></a>Visual Studio belgeleri: Ağustos 2020 ' deki yenilikler
 
-Temmuz 2020 için Visual Studio docs 'daki yenilikler 'e hoş geldiniz. Bu makalede, bu süre boyunca docs 'ta yapılan önemli değişikliklerden bazıları listelenir.
+Ağustos 2020 için Visual Studio docs 'daki yenilikler 'e hoş geldiniz. Bu makalede, bu süre boyunca docs 'ta yapılan önemli değişikliklerden bazıları listelenir. Önceki aylardaki yenilikler hakkında daha fazla bilgi için bkz. yenilikler [geçmişi](whats-new-visual-studio-docs-history.md) konusu.
+
+## <a name="azure"></a>Azure
+
+**Yeni makaleler**
+
+- VS 2019 16,7 için [Visual Studio bağlı hizmetler 'e bağlı hizmetleri kullanarak Azure Application Insights ekleme](/visualstudio/azure/azure-app-insights-add-connected-service)
+- VS 2019 16,7 için [Visual Studio bağlı hizmetler 'e bağlı hizmetleri kullanarak redsıs Için Azure önbelleği ekleme](/visualstudio/azure/azure-cache-for-redis-add-connected-service)
+- VS 2019 16,7 için [Visual Studio bağlı hizmetler 'e bağlı hizmetleri kullanarak uygulamanıza Azure Cosmos DB ekleyin](/visualstudio/azure/azure-cosmosdb-add-connected-service)
+- VS 2019 16,7 için [Visual Studio bağlı hizmetler 'e bağlı hizmetleri kullanarak Azure SignalR ekleme](/visualstudio/azure/azure-signalr-add-connected-service)
+- VS 2019 16,7 için [Azure SQL veritabanı 'na bağlı hizmetlere bağlantı ekleme](/visualstudio/azure/azure-sql-database-add-connected-service)
+
+**Güncelleştirilmiş makaleler**
+
+- [Visual Studio bağlı hizmetler 'i kullanarak Azure depolama ekleme](/visualstudio/azure/vs-azure-tools-connected-services-storage)
+  - VS 2019 için bağlı hizmetler 16,7
+  - Azure depolama bağlı hizmetler makalesi: desteklenen Kullanıcı arabirimini ve proje türlerini güncelleştirme
 
 ## <a name="code-quality"></a>Kod kalitesi
 
 **Yeni makaleler**
 
-- [CA1417: `OutAttribute` P/Invoke için dize parametrelerinde KULLANMAYıN](/visualstudio/code-quality/ca1417) -CA1417 için belge ekleyin
-- [CA1805: gereksiz yere başlatma.](/visualstudio/code-quality/ca1805) -CA1805 için belgeler ekleme
-- [CA1836: kullanılabilir olduğunda sayı üzerinde IsEmpty tercih et](/visualstudio/code-quality/ca1836) -CA1836 için belge ekleme (Count üzerinde IsEmpty tercih et)
-- [CA2016: CancellationToken parametresini tek bir belge alan yöntemlere Iletme](/visualstudio/code-quality/ca2016) CA2016-CancellationToken parametresini bir tane alacak yöntemlere iletme
-- [CA2350: DataTable. ReadXml () girişinin güvenilir olduğundan emin olun](/visualstudio/code-quality/ca2350) -Ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri
-- [CA2351: DataSet. ReadXml () girişinin güvenilir olduğundan](/visualstudio/code-quality/ca2351) ve Ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri olduğundan emin olun
-- [CA2352: serileştirilebilir türdeki güvenli olmayan veri kümesi veya DataTable, uzaktan kod yürütme saldırılarına karşı savunmasız](/visualstudio/code-quality/ca2352) olabilir-Ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri
-- CA2353: Serializable tür-ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri için [güvenli olmayan veri kümesi veya DataTable](/visualstudio/code-quality/ca2353)
-- [CA2354: Serisi kaldırılan nesne grafiğinde güvenli olmayan veri kümesi veya DataTable, uzaktan kod yürütme saldırısında savunmasız](/visualstudio/code-quality/ca2354) olabilir-Ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri
-- [CA2355: Serisi kaldırılan nesne grafiğinde güvenli olmayan veri kümesi veya DataTable](/visualstudio/code-quality/ca2355) -Ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri
-- [CA2356: web serisi kaldırılan nesne grafiğinde güvenli olmayan veri kümesi veya DataTable türü,](/visualstudio/code-quality/ca2356) Ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri
+- [CA1310: doğruluk Için StringComparison belirtin](/visualstudio/code-quality/ca1310) -CA1307 için CA1310 ve güncelleştirme belgelerine belge ekleyin
+- [CA1837: Process. GetCurrentProcess () yerine Environment. ProcessId kullanın. ](/visualstudio/code-quality/ca1837) CA1837 için kimlik-belgeler
+- [CA1838: `StringBuilder` P/Invoke Için parametrelerden KAÇıNıN](/visualstudio/code-quality/ca1838) -CA1838 için belge ekleyin
+- [CA2008: TaskScheduler geçirmeden görev oluşturma](/visualstudio/code-quality/ca2008) -CA2008 için belge ekleme
+- [CA2249: CA2249 Için String. IndexOf-docs yerine String. Contains kullanmayı düşünün](/visualstudio/code-quality/ca2249)
+- [CA2361: DataSet. ReadXml () içeren bir otomatik oluşturulan sınıfın güvenilmeyen verilerle kullanılmadığından emin olun](/visualstudio/code-quality/ca2361) -daha fazla veri kümesi/DataTable kuralları
+- [CA2362: otomatik olarak oluşturulabilen seri hale getirilebilir türde veri kümesi veya DataTable, uzaktan kod yürütme saldırılarına karşı savunmasız](/visualstudio/code-quality/ca2362) olabilir-daha fazla veri kümesi/DataTable kuralları
+- [IL3000: tek dosya olarak yayımlarken derleme dosyası yoluna erişim kullanmaktan KAÇıNıN](/visualstudio/code-quality/il3000) IL3000 için belge Ekle
+- [IL3001: tek bir dosya olarak yayımlarken derleme dosya yoluna erişmenin önüne kaçının](/visualstudio/code-quality/il3001) -IL3001 için belge ekleyin
+
+**Güncellendi**
+
+- [CA1002: genel listeleri](/visualstudio/code-quality/ca1002) gösterme-yapılandırılabilirlik-API yüzeyi bölümü ekleme
+- [CA1046: Başvuru türlerinde eşittir işlecini aşırı yüklemeyin](/visualstudio/code-quality/ca1046) -yapılandırılabilirliği-API yüzeyi bölümüne ekleyin
+- [CA1307: açıklık Için StringComparison belirtin](/visualstudio/code-quality/ca1307) -CA1307 için CA1310 ve güncelleştirme belgelerine belge ekleyin
+- [CA1700: Enum değerlerini &#39;ayrılmış&#39;](/visualstudio/code-quality/ca1700) -yapılandırılabilirlik-API yüzeyi bölümü ekleme
+- [CA1707: tanımlayıcılar alt çizgi](/visualstudio/code-quality/ca1707) -yapılandırma yapılandırması-API yüzeyi bölümü içermemelidir
+- [CA1822: üyeleri statik olarak işaretle](/visualstudio/code-quality/ca1822) -yapılandırılabilirlik-API Surface Bölümü Ekle
+- [CA2351: DataSet. ReadXml () girişinin güvenilir olduğundan](/visualstudio/code-quality/ca2351) ve daha fazla veri kümesi/DataTable kuralı olduğundan emin olun
+- [Üçüncü taraf Çözümleyicileri](/visualstudio/code-quality/install-roslyn-analyzers) , kod analizi belgeleri için değiştirilen yapıyı ve başlıkları yükler
 
 ## <a name="containers"></a>Kapsayıcılar
 
+**Güncelleştirilmiş makaleler**
+
+- Visual [Studio 'da ASP.net kapsayıcısını bir kapsayıcı kayıt defterine dağıtma](/visualstudio/containers/hosting-web-apps-in-docker) visual Studio 16,7 yayımlama Kullanıcı arabirimi Için kapsayıcı Araçları güncelleştirmeleri
+- [Visual Studio Kubernetes araçları ile çalışmaya başlama](/visualstudio/containers/tutorial-kubernetes-tools) -Kubernetes öğreticisi: kaldırma adımlarını ekleme
+
+## <a name="deployment"></a>Dağıtım
+
 **Yeni makaleler**
 
-- Kubernetes: YAML yapılandırması ile [Yerel Işlemi Kubernetes](/visualstudio/containers/configure-local-process-with-kubernetes) -yerel işlemle yapılandırma
-- [Kubernetes (Önizleme) Ile yerel Işlem kullanma](/visualstudio/containers/local-process-kubernetes) -dev Spaces geçişi
-- [Kubernetes ile Yerel İşlem nasıl çalışır?](/visualstudio/containers/overview-local-process-kubernetes)
-  - Kubernetes için yerel Işlem: yönlendirme ekleme bölümü
-  - Geliştirme alanları geçişi
-
-## <a name="cross-platform"></a>Platformlar arası
+- [Visual Studio yükleyicisi projeler uzantısı ve .net core 3,1](/visualstudio/deployment/installer-projects-net-core) -Yükleyici projeleri için yeni yardım sayfası oluşturma .net Core 3,1 özellikleri
 
 **Güncelleştirilmiş makaleler**
 
-- [Değişiklik günlüğü (Unity için Visual Studio Araçları, Windows)](/visualstudio/cross-platform/change-log-visual-studio-tools-for-unity) -kabartma VSTU changelog 4.7.1.0
-- [Değişiklik günlüğü (Unity için Visual Studio Araçları, Mac)](/visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac) -kabartma vstum changelog, 2.7.1.0
+- [Uygulamanızı bir klasöre, IIS 'ye, Azure 'a veya başka bir hedef](/visualstudio/deployment/deploying-applications-services-and-components-resources) dağıtım güncelleştirmelerine dağıtın
+- [Visual Studio 'Da dağıtım](/visualstudio/deployment/index) -dağıtım güncelleştirmeleri
 
-## <a name="get-started"></a>başlarken
+## <a name="extensibility"></a>Genişletilebilirlik
 
-**Yeni makaleler**
+**Güncelleştirilmiş makaleler**
+- [Proje alt türleri](/visualstudio/extensibility/internals/project-subtypes) -liste öğelerini girintileme girintisini çözme
+- [Visual Studio Için renk değeri başvurusu](/visualstudio/extensibility/ux-guidelines/color-value-reference-for-visual-studio) -AB # 1759333 düzeltilmesi eksik sütun başlıkları
 
-- [Öğretici: basit bir C# konsol uygulamasını genişletme](/visualstudio/get-started/csharp/tutorial-console-part-2) -yayın genişletme öğreticisi ilk sürümü
+## <a name="get-started"></a>Kullanmaya başlayın
+
+**Güncelleştirilmiş makaleler**
+
+- 5. Adım: yeni bağlı hizmetler kullanıcı arabirimi için [ASP.NET Core uygulamanızı Azure 'A dağıtma](/visualstudio/get-started/csharp/tutorial-aspnet-core-ef-step-05) -video öğreticisi güncelleştirmeleri
 
 ## <a name="ide"></a>IDE
 
 **Yeni makaleler**
 
-- [Geliştirici topluluğu yönergeleri](/visualstudio/ide/developer-community-guidelines) -eklenen Devcom yönergeleri
-- [İçeri aktarılmamış türler ve genişletme yöntemleri için IntelliSense tamamlama](/visualstudio/ide/reference/intellisense-completion-unimported-types-extension-methods)
-
-## <a name="install"></a>Yükleme
-
-**Yeni makaleler**
-
-- [En düşük düzeyde çevrimdışı düzen kullanarak Visual Studio 'Yu güncelleştirme](/visualstudio/install/update-minimal-layout) -belge en az düzen özelliği
-- [Visual Studio kurumsal kılavuzu](/visualstudio/install/visual-studio-enterprise-guide) -kurumsal kılavuz
-
-## <a name="javascript"></a>JavaScript
-
-**Yeni makaleler**
-
-- [TypeScript kodu derleme (Node.js)](/visualstudio/javascript/compile-typescript-code-npm) -TypeScript derleme ve derleme
-- [TypeScript kodu derleme (ASP.NET Core)](/visualstudio/javascript/compile-typescript-code-nuget) -TypeScript derleme ve derleme
-
-## <a name="msbuild"></a>MSBuild
-
-**Yeni makaleler**
-
-- [Ortak MSBuild öğe meta verileri](/visualstudio/msbuild/common-msbuild-item-metadata) -MSBuild: bağlantı ve bağlantı tabanı ile isteğe bağlı meta veriler için tablo ekleme
-- [MSBuild 'de çözüm filtreleri](/visualstudio/msbuild/solution-filters) -MSBuild çözüm filtreleri
-
-## <a name="test"></a>Test etme
-
-**Yeni makaleler**
-
-- Test Gezgini-test Gezgini performans çalışması [ile birim testlerini hata ayıklama ve çözümleme](/visualstudio/test/debug-unit-tests-with-test-explorer)
+- [Visual Studio 'Da F1 Yardım anahtarını değiştirme](/visualstudio/ide/not-in-toc/change-f1-help-key) -yeniden düzenleme varsayılan F1 Yardım sayfası
+- [Metin Düzenleyicisi Için F1 yardımı](/visualstudio/ide/not-in-toc/default-f1-text-editor) -yeniden düzenleme varsayılan F1 Yardım sayfası
+- -Convert typeof öğesini yeniden düzenleme adına [Dönüştür `typeof` `nameof` ](/visualstudio/ide/reference/convert-typeof-to-nameof)
+- [LINQ Ifadesini Basitleştir](/visualstudio/ide/reference/simplify-linq-expression) -LINQ ifade yeniden düzenlemeyi basitleştirme
 
 **Güncelleştirilmiş makaleler**
 
-- [*. Runsettings* dosyasını kullanarak birim testlerini yapılandırma](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
-  - Bir runsettings dosyası kullanarak birim testlerini yapılandırmaya yönelik güncelleştirmeler
-  - Blame seçeneği açıklaması değiştirildi ve örnek eklendi.
+- [Visual Studio 'da pencere düzenlerini özelleştirme](/visualstudio/ide/customizing-window-layouts-in-visual-studio) -pencere düzenlerini özelleştirme konusunda monikered dikey belge sekmeleri ekleme bilgileri
+- [Visual Studio veya Visual Studio Yükleyicisi ilgili bir sorunu bildirme](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)
+  - NMI 'ye daha fazla bilgi eklendi
+  - Sorun bildir sayfasının tamamını yeniden oldu
+- [F1 Yardım](/visualstudio/ide/not-in-toc/default) -yeniden düzenleme varsayılan F1 Yardım sayfası
+- [Otomatik kurtarma, ortam, Seçenekler iletişim kutusu](/visualstudio/ide/reference/autorecover-environment-options-dialog-box) -güncelleştirilmiş otomatik kaydetme dosya konumları hakkında bilgi ekleme
+- [Seçenekler, metin düzenleyici, temel (Visual Basic),](/visualstudio/ide/reference/options-text-editor-basic-visual-basic) satır içi parametre adı Ipuçları için gelişmiş-eklenen temel belgeler
+- [Seçenekler, metin düzenleyici, C#, gelişmiş](/visualstudio/ide/reference/options-text-editor-csharp-advanced) -satır içi parametre adı ipuçları için temel belgeler eklendi
+- [Visual Studio performans ipuçları ve püf noktaları](/visualstudio/ide/visual-studio-performance-tips-and-tricks) -' harita modunu devre dışı bırak ' ve ' sözcük kaydırmayı devre dışı bırak ' bilgilerini
+- [Visual studio 2019 ' deki](/visualstudio/ide/whats-new-visual-studio-2019) yenilikler-visual Studio 2019 ' deki yenılıklerı 16,7 GA bilgiyle güncelleştirme
+
+## <a name="rtvs"></a>RTVS
+
+**Güncelleştirilmiş makaleler**
+
+- Sütun üstbilgilerini dahil etmek için [SQL Server ve R ile](/visualstudio/rtvs/integrating-sql-server-with-r) düzeltilen tablolarla çalışma
 
 ## <a name="community-contributors"></a>Topluluk katkı sağlayanlar
 
 Aşağıdaki kişiler bu süre boyunca Visual Studio belgelerine katkıda bulunanlar. Teşekkür ederiz! [Katkıda bulunan kılavuzundaki](https://docs.microsoft.com/contribute/)Kılavuzu Izleyerek Visual Studio belgelerine nasıl katkıda bulunabileceğinizi öğrenin.
 
-- [briuk](https://github.com/briuk) -Viktor Briukhanov (2)
-- [Youssef1313](https://github.com/Youssef1313) -Youssef Victor (2)
-- [Arntwork](https://github.com/ArntWork) -yasalolas (1)
-- [Asugakolis](https://github.com/Asugakoisi) -アスガコイシ (1)
-- [Delizald](https://github.com/Delizald) -David Elizalde (1)
-- [farisachugthai](https://github.com/farisachugthai) -fara bir Chugtay dili (1)
-- [mycalingram](https://github.com/mycalingram) -mycal (1)
-- [tuygurca-iş](https://github.com/tuyen-at-work) -tuygurca (1)
+- [Alexb-Sheldonürt](https://github.com/AlexB-SheldonMFG) -Alex Black (11)
+- [Youssef1313](https://github.com/Youssef1313) -Youssef Victor (8)
+- [hyoshioka0128](https://github.com/hyoshioka0128) -Hiroshi Yoshioka (3)
+- [Astrochoco](https://github.com/AstroChoco) -Qian lu (çikolata) (1)
+- [athyunnath](https://github.com/athyunnath) -Athyunnath eleti (1)
+- [Caro-Oviedo](https://github.com/caro-oviedo) -Caro oviewdo (1)
+- [Evangelink](https://github.com/Evangelink) -Amaury levé (1)
+- [jetas-bennettjones](https://github.com/jethas-bennettjones) -Shafiq Jeta (1)
+- [nebuk89](https://github.com/nebuk89) -ben de St paer-Gotch (1)
+- [pcartwright81](https://github.com/pcartwright81) (1)
+- [pkulikov](https://github.com/pkulikov) -Petr Kulikov (1)
+- [Riqq](https://github.com/riQQ) (1)
+- [tcmetzger](https://github.com/tcmetzger) -Timo Cornelius Metzger (1)
+- [Weitzhandler](https://github.com/weitzhandler) -Shimmy (1)

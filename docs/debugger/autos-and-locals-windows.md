@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3ae67fadf5d9710f2088f47617b74eeeb8212826
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350751"
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows"></a>Oto ve Yereller pencerelerinde değişkenleri İnceleme
@@ -97,7 +97,7 @@ Bir kesme noktası ayarlayın ve hata ayıklamayı başlatın. Kesme noktası is
 
 ![Hata Ayıklama Konumu araç çubuğu](../debugger/media/debuglocationtoolbar.png "Hata Ayıklama Konumu araç çubuğu")
 
-## <a name="variables-in-the-autos-window-c-c-visual-basic-python"></a><a name="bkmk_whatvariables"></a>Oto penceresindeki değişkenler (C#, C++, Visual Basic, Python)
+## <a name="variables-in-the-autos-window-c-c-visual-basic-python"></a><a name="bkmk_whatvariables"></a> Oto penceresindeki değişkenler (C#, C++, Visual Basic, Python)
 
 Farklı kod dilleri, **oto** penceresinde farklı değişkenler görüntüler.
 
@@ -140,7 +140,7 @@ Farklı kod dilleri, **oto** penceresinde farklı değişkenler görüntüler.
 
     `e`Satır `e = 5` henüz yürütülmediği için değişken başlatılmamış.
 
-## <a name="view-return-values-of-method-calls"></a><a name="bkmk_returnValue"></a>Yöntem çağrılarının dönüş değerlerini görüntüle
+## <a name="view-return-values-of-method-calls"></a><a name="bkmk_returnValue"></a> Yöntem çağrılarının dönüş değerlerini görüntüle
  .NET ve C++ kodunda, bir yöntem çağrısının üstündeyken veya dışına dönerek, dönüş değerlerini, **oto s** penceresinde inceleyebilirsiniz. Yöntem çağrısı döndürme değerlerini görüntüleme, yerel değişkenlerde depolanmayan yararlı olabilir. Bir yöntem bir parametre olarak veya başka bir yöntemin dönüş değeri olarak kullanılabilir.
 
  Örneğin, aşağıdaki C# kodu iki işlevin dönüş değerlerini ekler:

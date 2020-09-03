@@ -1,5 +1,5 @@
 ---
-title: Idiaenumframedata::framebyva | Microsoft Docs
+title: 'IDiaEnumFrameData:: frameByVA | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d0560965858bd6d9ee823a6056332bdd9a7b654a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68146499"
 ---
 # <a name="idiaenumframedataframebyva"></a>IDiaEnumFrameData::frameByVA
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir çerçeve sanal adres (VA) döndürür.  
+Sanal adrese (VA) göre bir çerçeve döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT frameByVA(   
@@ -36,14 +36,14 @@ HRESULT frameByVA( 
   
 #### <a name="parameters"></a>Parametreler  
  virtualAddress  
- [in] VA ilgi çerçeve.  
+ 'ndaki İlgilendiğiniz çerçevenin VA.  
   
  çerçeve  
- [out] Döndürür bir [Idiaframedata](../../debugger/debug-interface-access/idiaframedata.md) sağlanan adresini içeren çerçeveyi temsil eden nesne.  
+ dışı Belirtilen adresi içeren çerçeveyi temsil eden bir [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` belirtilen adresi çerçeve veri eşleşmesi durumunda. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Belirtilen adresle eşleşen hiçbir çerçeve verisi yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiaenumframedata](../../debugger/debug-interface-access/idiaenumframedata.md)   
+ [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)   
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

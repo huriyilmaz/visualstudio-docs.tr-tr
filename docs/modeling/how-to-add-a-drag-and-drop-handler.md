@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9272a530eaa15f902a2e295aeaa6d8b34c4eccdd
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545671"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>Nasıl yapılır: Sürükle ve Bırak İşleyicisi Ekleme
@@ -50,7 +50,7 @@ Yeni dosyada, şekil veya Diyagram sınıfı için sürükle işlemine yanıt ve
         }
     ```
 
-- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A>-Bu yöntem, `OnDragOver(DiagramDragEventArgs e)` daha önce `e.Effect` dışında bir değere ayarlandıysa fare işaretçisi bu şeklin veya diyagramın üzerine getirildiğinde Kullanıcı fare düğmesini bıraktığında çağrılır `None` .
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A> -Bu yöntem, `OnDragOver(DiagramDragEventArgs e)` daha önce `e.Effect` dışında bir değere ayarlandıysa fare işaretçisi bu şeklin veya diyagramın üzerine getirildiğinde Kullanıcı fare düğmesini bıraktığında çağrılır `None` .
 
     ```csharp
     public override void OnDragDrop(DiagramDragEventArgs e)
@@ -66,7 +66,7 @@ Yeni dosyada, şekil veya Diyagram sınıfı için sürükle işlemine yanıt ve
     }
     ```
 
-- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A>-Bu yöntem, Kullanıcı şekle veya diyagrama çift tıkladığında çağrılır.
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> -Bu yöntem, Kullanıcı şekle veya diyagrama çift tıkladığında çağrılır.
 
      Daha fazla bilgi için bkz. [nasıl yapılır: bir şekle veya Dekorata tıklama](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md).
 
@@ -124,11 +124,11 @@ Kullanıcı diyagramınıza bir öğe veya diyagramınızın bir bölümünden d
 
 Sürükleme kaynak bilgilerinizin kullanılabildiği biçimleri öğrenmek için kodunuzu hata ayıklama modunda çalıştırın, girişte veya olarak bir kesme noktası ayarlar `OnDragOver()` `CanDragDrop()` . Parametresinin değerlerini inceleyin `DiagramDragEventArgs` . Bilgiler iki şekilde sunulmaktadır:
 
-- <xref:System.Windows.Forms.IDataObject>  `Data`-Bu özellik, genellikle birden çok biçimde kaynak nesnelerinin serileştirilmiş sürümlerini taşır. En faydalı işlevleri şunlardır:
+- <xref:System.Windows.Forms.IDataObject>  `Data` -Bu özellik, genellikle birden çok biçimde kaynak nesnelerinin serileştirilmiş sürümlerini taşır. En faydalı işlevleri şunlardır:
 
   - diagramEventArgs. Data. GetDataFormats ()-sürüklenen nesnenin kodunu çözebileceği biçimleri listeler. Örneğin, Kullanıcı masaüstünden bir dosya sürüklediğinde, kullanılabilir biçimler dosya adını (" `FileNameW` ") içerir.
 
-  - `diagramEventArgs.Data.GetData(format)`-Belirtilen biçimdeki sürüklenen nesnenin kodunu çözer. Nesneyi uygun türe atayın. Örneğin:
+  - `diagramEventArgs.Data.GetData(format)` -Belirtilen biçimdeki sürüklenen nesnenin kodunu çözer. Nesneyi uygun türe atayın. Örneğin:
 
     `string fileName = diagramEventArgs.Data.GetData("FileNameW") as string;`
 
@@ -148,7 +148,7 @@ Sürükleme kaynak bilgilerinizin kullanılabildiği biçimleri öğrenmek için
 
      UML şekillerini kabul etmek için, deneme tarafından UML şekil sınıflarının GUID 'Lerini saptayın. Her diyagramda genellikle birden çok öğe türü olduğunu unutmayın. Ayrıca, bir DSL veya UML diyagramından sürüklenen bir nesnenin model öğesi değil, şekil olduğunu unutmayın.
 
-`DiagramDragEventArgs`Ayrıca, geçerli fare işaretçisi konumunu ve kullanıcının CTRL, ALT veya SHIFT tuşlarına basılı tutup basmadığını belirten özelliklere sahiptir.
+`DiagramDragEventArgs` Ayrıca, geçerli fare işaretçisi konumunu ve kullanıcının CTRL, ALT veya SHIFT tuşlarına basılı tutup basmadığını belirten özelliklere sahiptir.
 
 ## <a name="how-to-get-the-original-of-a-dragged-element"></a>Sürüklenen bir öğenin orijinalini alma
 
@@ -160,7 +160,7 @@ Sürüklenen öğe bir DSL öğesi ise, kaynak modeli açıp öğeye erişebilir
 
 Kaynak DSL 'yi Visual Studio Model veri yolu tarafından erişilebilir yapın:
 
-1. DSL Tasarımcısı ' de kaynak DSL 'nin DSL tanım dosyasını açın. Tasarım yüzeyine sağ tıklayın ve sonra **ModelBus 'ı etkinleştir**' e tıklayın. İletişim kutusunda seçeneklerden birini veya her ikisini birden seçin.  **Tamam**'a tıklayın. DSL çözümüne yeni bir proje "ModelBus" eklenir.
+1. DSL Tasarımcısı ' de kaynak DSL 'nin DSL tanım dosyasını açın. Tasarım yüzeyine sağ tıklayın ve sonra **ModelBus 'ı etkinleştir**' e tıklayın. İletişim kutusunda seçeneklerden birini veya her ikisini birden seçin.  **Tamam**’a tıklayın. DSL çözümüne yeni bir proje "ModelBus" eklenir.
 
 2. **Tüm Şablonları Dönüştür** ' e tıklayın ve çözümü yeniden oluşturun.
 

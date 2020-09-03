@@ -12,63 +12,63 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 87972fe12cb8be78b89261d0aaaa272d9e2d5a14
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67825574"
 ---
 # <a name="graphics-state"></a>Grafik Durumu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio grafik tanılama durumu penceresinde bir çizim çağrısı gibi geçerli bir Olay sırasındaki etkin olan grafik durumu anlamanıza yardımcı olur.  
+Visual Studio grafik tanılama 'daki durum penceresi, çizim çağrısı gibi geçerli olay sırasında etkin olan grafik durumunu anlamanıza yardımcı olur.  
   
-## <a name="understanding-the-state-window"></a>Durum Penceresi'ni anlama  
- Durum Penceresi'ni birlikte işleme etkiler ve hiyerarşik olarak sunduğu durumu tek bir yerde toplar. Direct3D sürümüne bağlı olarak uygulamanızı kullanır, durumu penceresinde görüntülenen bilgileri farklar olabilir.  
+## <a name="understanding-the-state-window"></a>Durum penceresini anlama  
+ Durum penceresi, işlemeyi etkileyen durumu birlikte toplar ve tek bir yerde hiyerarşik olarak sunar. Uygulamanızın kullandığı Direct3D sürümüne bağlı olarak, durum penceresinde sunulan bilgiler fark edebilir.  
   
 ### <a name="state-views"></a>Durum görünümleri  
- Durum tablosu birkaç farklı yolla görüntüleyebilirsiniz:  
+ Durum tablosunu birkaç farklı yolla görüntüleyebilirsiniz:  
   
-|Görüntüle|Açıklama|  
+|Görünüm|Description|  
 |----------|-----------------|  
-|API giriş durumu görünümünü|Bu görünüm durumunda Durumu'nu oluşturan Direct3D nesneleri için benzer bir düzen gösterir.|  
-|Mantıksal giriş durumu görünümünü|Bu görünüm mantıksal görünümündeki Durumu'nu oluşturan Direct3D nesneleri düzenini yansıtan değil durumu sayısını gösterir.|  
-|Sabitlenmiş durum görünümü|Bir hiyerarşi yerine Pinned durum görünümü sabitlenmiş durum öğeleri düz bir liste ile tam olarak nitelenmiş adlar sunar. Bu Görünüm durumunun farklı paketleri birçok durum öğeleri az sayıda satır içinde görüntülemek yaptığı mümkündür.|  
+|API giriş durumu görünümü|Bu görünüm, durumu oluşturan Direct3D nesnelerine benzer bir düzende durumu gösterir.|  
+|Mantıksal giriş durumu görünümü|Bu görünüm, durumu oluşturan Direct3D nesnelerinin yerleşimini yansıtmayan bir mantıksal görünümde durumu gösterir.|  
+|Sabitlenmiş durum görünümü|Bir hiyerarşi yerine sabitlenmiş durum görünümü, sabitlenmiş durum öğelerini tamamen nitelenmiş adlara sahip düz bir liste halinde sunar. Bu görünüm, az sayıda satırda farklı durum paketlerinden çok sayıda durum öğesi görüntülemek mümkündür.|  
   
-##### <a name="to-change-the-state-view"></a>Durum görünümü değiştirmek için  
+##### <a name="to-change-the-state-view"></a>Durum görünümünü değiştirmek için  
   
-- Titlebar hemen sol üst kısımdaki durum Penceresi'ni kullanmak istediğiniz durum görünümü stiline karşılık gelen düğmeyi seçin.  
+- Durum penceresinde, sol üst taraftaki başlık çubuğunda, kullanmak istediğiniz durum görünümü stiline karşılık gelen düğmeyi seçin.  
 
   - **API giriş durumu görünümünü göster**  
 
-  - **Mantıksal durumu görünümünü göster**  
+  - **Mantıksal durum görünümünü göster**  
 
-  - **Pinned durumu görünümünü göster**  
+  - **Sabitlenmiş durum görünümünü göster**  
   
 > [!IMPORTANT]
-> Durumda sabitleme gerekir **Göster API giriş durumu** veya **Göster mantıksal durumlarına** görüntülenmesi için görünümleri **durum görünümü göster sabitlenmiş**.  
+> **API giriş durumunda** durumu sabitleyebilir ya da **sabitlenmiş durum görünümünde**görüntülenmek üzere **mantıksal durum görünümlerini gösterebilirsiniz** .  
   
-### <a name="state-table-format"></a>Durum tablo biçimi  
- Durum Penceresi'ni çeşitli sütunlar sunar.  
+### <a name="state-table-format"></a>Durum tablosu biçimi  
+ Durum penceresi birçok bilgi sütununu gösterir.  
   
 |Sütun|Açıklama|  
 |------------|-----------------|  
-|Ad|Durum öğesi adı. Bu öğe bir paket durumu temsil ediyorsa, öğeyi görüntülemek için genişletilebilir.<br /><br /> İçinde **API giriş durumu görünümünü** ve **mantıksal durum görünümünü** durumlarını adları girintili durumları hiyerarşik ilişkiyi göstermek için.<br /><br /> İçinde **durum görünümü sabitlenmiş** durumunda, tam olarak nitelenmiş adlar, düz bir listede görüntülenir.|  
+|Ad|Durum öğesinin adı. Bu öğe bir durum grubunu temsil ediyorsa, öğe görüntülenecek şekilde genişletilebilir.<br /><br /> **API giriş durumu görünümü** ve **mantıksal durum görünümü** durumlarında, durumlar arasındaki hiyerarşik ilişkiyi göstermek için adlar girintilenir.<br /><br /> **Sabitlenmiş durum görünümü** durumunda, tam olarak nitelenmiş adlar düz bir listede görüntülenir.|  
 |Değer|Durum öğesinin değeri.|  
-|Tür|Durum öğenin türü.|  
+|Tür|Durum öğesinin türü.|  
   
-### <a name="changed-state"></a>Durum değiştirme  
- Grafik durumu genellikle artımlı olarak sonraki çizim çağrıları arasında değiştirir ve çok çeşitli işleme sorunlarını durumu yanlış değiştirildiğinde kaynaklanır. Önceki çizim çağrısı çıktılarının sonra hangi durumu değişti bulmanıza yardımcı olmak için değiştirilip değiştirilmediğini durumu yıldız ile işaretlenmiş ve kırmızı renkte gösterilir; böylece değişen durumunu kolayca belirleyebileceğiniz durumu yalnızca sağlar, ancak kendi üst durum öğesi de bu geçerlidir en yüksek düzeyde ve ardından detaya gitme ayrıntıları.  
+### <a name="changed-state"></a>Değiştirilen durum  
+ Grafik durumu genellikle sonraki çizim çağrıları arasında artımlı olarak değişir ve çok sayıda işleme sorunu durum yanlış değiştirildiğinde oluşur. Önceki çizim çağrısından bu yana hangi durumun değiştiğini bulmanıza yardımcı olmak için, değiştirilen durum bir yıldız işareti ile işaretlenir ve kırmızı renkte görüntülenir. bu durum yalnızca durumun kendisine değil, üst durum öğesine de uygulanır, böylece, en yüksek düzeyde değiştirilen durumu kolayca belirleyebilir ve sonra ayrıntılara gidebilirsiniz.  
   
 ### <a name="pinning-state"></a>Sabitleme durumu  
- Birçok uygulama durumu, bilinen bir dizi değiştirme benzer nesnelerini ardışık olarak işleyin. çünkü bazen çizim çağrısından çizim çağrısı çıktılarının taşıma nasıl değişiklikleri izleyebilmesi için yerinde değişen durumları sabitlemek yararlıdır.  
+ Birçok uygulama, benzer nesneleri sırayla işlerken, bilinen bir durum kümesini değiştirerek, çizim çağrısından çizim çağrısına geçiş yaparken nasıl değiştiğini izleyebilmeniz için değişen durumları yerinde sabitlemek faydalı olur.  
   
- Bu da bir özel durum nedeniyle olacak şekilde bir sorunun kaynağını ayırdığınız durumlarda yararlı olabilir.  
+ Bu, belirli bir durumdaki bir değişiklikten kaynaklanan bir sorunun kaynağını yalıtdıysanız da yararlı olabilir.  
   
-##### <a name="to-pin-state-in-place"></a>Yerinde durumu sabitlemek için  
+##### <a name="to-pin-state-in-place"></a>Durumu yerinde sabitlemek için  
   
-1. İlginizi çeken durumu durum penceresinde bulun. İlgilendiğiniz ayrıntılarını bulmak için üst düzey durum genişletmeniz gerekebilir.  
+1. Durum penceresinde ilgilendiğiniz durumu bulun. İlgilendiğiniz ayrıntıları bulmak için üst düzey durumu genişletmeniz gerekebilir.  
   
-2. İlginizi çeken durumu üzerine imleci yerleştirin. Raptiye simgesini, durum öğesi solunda görünür.  
+2. İmleci ilgilendiğiniz durumunun üzerine yerleştirin. Durum öğesinin solunda bir PIN simgesi görüntülenir.  
   
-3. Yerinde durumu öğesi sabitlemek için Raptiye simgesini seçin.
+3. Durum öğesini yerinde sabitlemek için raptiye simgesini seçin.

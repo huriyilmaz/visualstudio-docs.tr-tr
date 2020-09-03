@@ -20,40 +20,40 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cd3cbbcd740c0f124b8ab4379204a9d425cd541c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205396"
 ---
-# <a name="how-to-debug-web-applications"></a>Nasıl yapılır: Web Uygulamalarında Hata Ayıklama
+# <a name="how-to-debug-web-applications"></a>Nasıl Yapılır: Web Uygulamalarında Hata Ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulamaları geliştirmek için birincil teknolojidir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Hata ayıklayıcı, hata ayıklama için güçlü araçlar sağlar [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] yerel veya uzak bir sunucuya Web uygulamaları. Bu konu, hata ayıklamak açıklar bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] geliştirme sırasında proje. Hata ayıklama hakkında bilgi için bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web bir üretim sunucusu üzerinde zaten dağıtılmış uygulaması, bakın [dağıtılan Web uygulamaları hata ayıklama](../debugger/debugging-deployed-web-applications.md).  
+[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] , ' de Web uygulamaları geliştirmeye yönelik birincil teknolojidir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Hata ayıklayıcı, [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulamalarında yerel olarak veya uzak bir sunucuda hata ayıklama için güçlü araçlar sağlar. Bu konu, geliştirme sırasında bir projenin hatalarını ayıklama işlemini açıklar [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] . [!INCLUDE[vstecasp](../includes/vstecasp-md.md)]Bir üretim sunucusuna zaten dağıtılmış bir Web uygulamasının hatalarını ayıklama hakkında bilgi için bkz. [Dağıtılmış Web uygulamalarında hata ayıklama](../debugger/debugging-deployed-web-applications.md).  
   
- Hata ayıklamak için bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] uygulama:  
+ Bir uygulamada hata ayıklamak için [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] :  
   
-- Gerekli izinleriniz gerekir. Daha fazla bilgi için, bkz. [System Requirements](../debugger/aspnet-debugging-system-requirements.md).  
+- Gerekli izinlere sahip olmanız gerekir. Daha fazla bilgi için, bkz. [System Requirements](../debugger/aspnet-debugging-system-requirements.md).  
   
-- [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] içinde hata ayıklaması etkinleştirilmelidir **proje özellikleri**.  
+- [!INCLUDE[vstecasp](../includes/vstecasp-md.md)]**proje özelliklerinde**hata ayıklama etkinleştirilmelidir.  
   
-- Uygulamanızın yapılandırma dosyası (Web.config) hata ayıklama moduna ayarlanmalıdır. Hata ayıklama modu nedenleri [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] iliştirmek hata ayıklayıcı sağlar ve dinamik olarak oluşturulan dosyaları simgeleri üretmesine [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] uygulama. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Web proje şablonunu projenizi oluşturduysanız, hata ayıklamak başlattığınızda bu otomatik olarak ayarlar.  
+- Uygulamanızın yapılandırma dosyası (Web.config) hata ayıklama moduna ayarlanmalıdır. Hata ayıklama modu [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] dinamik olarak oluşturulan dosyalar için semboller oluşturulmasına neden olur ve hata ayıklayıcının uygulamaya iliştirmesine olanak sağlar [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] . [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Projenizi web projeleri şablonundan oluşturduysanız, hata ayıklamaya başladığınızda bunu otomatik olarak ayarlar.  
   
-- Daha fazla bilgi için [nasıl yapılır: ASP.NET uygulamaları için hata ayıklamayı](../debugger/how-to-enable-debugging-for-aspnet-applications.md).  
+- Daha fazla bilgi için bkz. [nasıl yapılır: ASP.NET uygulamaları Için hata ayıklamayı etkinleştirme](../debugger/how-to-enable-debugging-for-aspnet-applications.md).  
   
-### <a name="to-debug-a-web-application-during-development"></a>Bir Web uygulaması geliştirme sırasında hata ayıklamak için  
+### <a name="to-debug-a-web-application-during-development"></a>Geliştirme sırasında bir Web uygulamasında hata ayıklamak için  
   
-1. Üzerinde **hata ayıklama** menüsünde tıklatın **Başlat** Web uygulamasına hata ayıklamayı başlatmak için.  
+1. **Hata Ayıkla** menüsünde, Web uygulamasında hata ayıklamaya başlamak için **Başlat** ' a tıklayın.  
   
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Web uygulaması projesi oluşturur, gerekirse başlarsa ASP.NET geliştirme sunucusu yerel olarak hata ayıklaması yapıyorsanız, uygulama dağıtır ve ekler [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] çalışan işlemi.  
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Web uygulaması projesini oluşturur, gerekirse uygulamayı dağıtır, yerel olarak hata ayıklaması yapıyorsanız ASP.NET geliştirme sunucusunu başlatır ve [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] çalışan işlemine ekler.  
   
-2. Hata ayıklayıcısını kümesi ve açık kesme noktaları, adım ve herhangi bir uygulamada olduğu gibi diğer hata ayıklama işlemlerini gerçekleştirin.  
+2. Herhangi bir uygulama için yaptığınız gibi kesme noktalarını ayarlamak ve temizlemek, adımı ve diğer hata ayıklama işlemlerini gerçekleştirmek için hata ayıklayıcıyı kullanın.  
   
-     Daha fazla bilgi için [hata ayıklayıcı temel bilgileri](../debugger/debugger-basics.md).  
+     Daha fazla bilgi için bkz. [hata ayıklayıcı temelleri](../debugger/debugger-basics.md).  
   
-3. Üzerinde **hata ayıklama** menüsünde tıklayın **hata ayıklamayı Durdur** son hata ayıklama oturumu veya üzerinde **dosya** Internet Explorer'da menüsünü **Kapat**.  
+3. **Hata ayıklama menüsünde hata** ayıklamayı **Durdur** ' a tıklayarak hata ayıklama oturumunu sonlandırın veya Internet Explorer 'daki **Dosya** menüsünde **Kapat**' a tıklayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Web uygulamalarında ve betikte hata ayıklama](../debugger/debugging-web-applications-and-script.md)   
  [ASP.NET ve AJAX uygulamalarında hata ayıklama](../debugger/debugging-aspnet-and-ajax-applications.md)   
- [Nasıl yapılır: ASP.NET Uygulamaları için Hata Ayıklamayı Etkinleştirme](../debugger/how-to-enable-debugging-for-aspnet-applications.md)
+ [Nasıl Yapılır: ASP.NET Uygulamaları için Hata Ayıklamayı Etkinleştirme](../debugger/how-to-enable-debugging-for-aspnet-applications.md)

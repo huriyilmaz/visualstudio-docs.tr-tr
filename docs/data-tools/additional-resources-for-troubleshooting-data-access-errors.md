@@ -225,10 +225,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 0383de73992b96f6a458b389573e252b39d624b6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75587049"
 ---
 # <a name="troubleshoot-data-access-errors-on-the-forums"></a>Forumlarda veri erişimi hatalarında sorun giderme

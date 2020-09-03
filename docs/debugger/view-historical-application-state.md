@@ -1,6 +1,6 @@
 ---
-title: IntelliTrace'i kullanarak önceki uygulama durumunu görüntüleme
-description: Anlık görüntüleri nasıl çekeceğinizi öğrenin ve IntelliTrace adım geri siyle anlık görüntüleri görüntüleme
+title: IntelliTrace kullanarak önceki uygulama durumunu görüntüleme
+description: Anlık görüntü alma ve IntelliTrace adım geri alma ile anlık görüntüleri görüntüleme hakkında bilgi edinin
 ms.custom: seodec18
 ms.date: 09/19/2018
 ms.topic: tutorial
@@ -11,124 +11,124 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 83d444cb5e3345d79ca6e1422982c0ecd37e4287
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67825523"
 ---
-# <a name="inspect-previous-app-states-using-intellitrace-step-back-in-visual-studio-visual-studio-enterprise"></a>Visual Studio'da (Visual Studio Enterprise) IntelliTrace adım geri adım kullanarak önceki uygulama durumlarını inceleyin
+# <a name="inspect-previous-app-states-using-intellitrace-step-back-in-visual-studio-visual-studio-enterprise"></a>Visual Studio 'da IntelliTrace adım geri 'yi kullanarak önceki uygulama durumlarını İnceleme (Visual Studio Enterprise)
 
-IntelliTrace adım geri otomatik olarak her kesme noktası ve hata ayıklama adım olay uygulamanızın bir anlık alır. Kaydedilen anlık görüntüler, önceki kesme noktalarına veya adımlara geri dönmenizi ve uygulamanın durumunu geçmişte olduğu gibi görüntülemenizi sağlar. IntelliTrace adım geri önceki uygulama durumunu görmek istediğinizde zaman kazandırabilir, ancak hata ayıklama yeniden başlatmak veya istenen uygulama durumunu yeniden oluşturmak istemiyorum.
+IntelliTrace adım geri alma, her kesme noktası ve hata ayıklayıcı adım olayında uygulamanızın bir anlık görüntüsünü otomatik olarak alır. Kaydedilen anlık görüntüler, önceki kesme noktalarına veya adımlara geri dönmenize ve uygulamanın geçmişte olduğu gibi durumunu görüntülemenize imkan tanır. IntelliTrace adım geri dönüş, önceki uygulama durumunu görmek istediğinizde, ancak hata ayıklamayı yeniden başlatmak veya istenen uygulama durumunu yeniden oluşturmak istemediğinizde size zaman kazandırabilir.
 
-IntelliTrace adım geri Visual Studio Enterprise 2017 sürümü 15.5 ve üzeri başlayan kullanılabilir ve Windows 10 Anniversary Update veya üzeri gerektirir. Özellik şu anda hata ayıklama ASP.NET, WinForms, WPF, yönetilen konsol uygulamaları ve yönetilen sınıf kitaplıkları için desteklenir. Visual Studio 2017 Enterprise sürüm 15.7 ile başlayan özellik, ASP.NET Core ve .NET Core için de desteklenir. Visual Studio 2017 Enterprise sürüm 15.9 Preview 2 ile başlayan özellik, Windows'u hedefleyen yerel uygulamalar için de desteklenir. Hata ayıklama UWP uygulamaları şu anda desteklenmiyor.
+IntelliTrace adım geri 'yi Visual Studio Enterprise 2017 sürüm 15,5 ve üzeri sürümlerde ve Windows 10 yıldönümü güncelleştirmesi veya üstünü gerektirir. Özelliği şu anda ASP.NET, WinForms, WPF, yönetilen konsol uygulamaları ve yönetilen sınıf kitaplıklarında hata ayıklama için desteklenmektedir. Visual Studio 2017 Enterprise sürüm 15,7 ' den itibaren, özellik ASP.NET Core ve .NET Core için de desteklenir. Visual Studio 2017 Enterprise sürüm 15,9 Preview 2 ' den itibaren, özelliği Windows 'u hedefleyen yerel uygulamalar için de desteklenir. UWP uygulamalarında hata ayıklama Şu anda desteklenmiyor.
 
 Bu öğreticide şunları yapacaksınız:
 
 > [!div class="checklist"]
-> * IntelliTrace olaylarını ve anlık görüntülerini etkinleştirin
-> * Adım adım ve adım adım komutlarını kullanarak olaylarda gezinme
-> * Olay anlık görüntülerini görüntüleme
+> * IntelliTrace olaylarını ve anlık görüntülerini etkinleştir
+> * Geri adım ve adım ileri komutlarını kullanarak olaylara gitme
+> * Olay anlık görüntülerini görüntüle
 
-## <a name="enable-intellitrace-events-and-snapshots-mode"></a>IntelliTrace olayları ve anlık görüntü modunu etkinleştirme
+## <a name="enable-intellitrace-events-and-snapshots-mode"></a>IntelliTrace olaylarını ve anlık görüntü modunu etkinleştir
 
-1. Visual Studio Enterprise'da projenizi açın.
+1. Projenizi Visual Studio Enterprise açın.
 
-1. **Araç** > **Seçenekleri** > **IntelliTrace** ayarlarını açın ve **IntelliTrace etkinlikleri ni ve anlık görüntüleri**seçeneğini seçin.
+1. **Araçlar**  >  **Seçenekler**  >  **IntelliTrace** ayarları ' nı açın ve **IntelliTrace olayları ve anlık görüntüleri**seçeneğini belirleyin.
 
-    Visual Studio 2017 Enterprise sürüm 15.9 Preview 2'den başlayarak bu seçenek **IntelliTrace anlık görüntüleridir (yönetilen ve yerel)**.
+    Visual Studio 2017 Enterprise sürüm 15,9 Preview 2 ' den başlayarak, bu seçenek **IntelliTrace anlık görüntüleridir (yönetilen ve yerel)**.
 
-    ![IntelliTrace Olayları ve Anlık Görüntü modunu etkinleştirin](../debugger/media/intellitrace-enable-snapshots.png "IntelliTrace Olayları ve Anlık Görüntü modunu etkinleştirin")
+    ![IntelliTrace olaylarını ve anlık görüntü modunu etkinleştir](../debugger/media/intellitrace-enable-snapshots.png "IntelliTrace olaylarını ve anlık görüntü modunu etkinleştir")
 
-1. Anlık görüntüleri özel durumlara göre görüntülemek için seçenekleri yapılandırmak istiyorsanız, **Seçenekler** iletişim**kutusundan** **Gelişmiş IntelliTrace'i** > seçin.
+1. Özel durumların anlık görüntülerini görüntüleme seçeneklerini yapılandırmak istiyorsanız, **IntelliTrace**  >  **Seçenekler** iletişim kutusundan IntelliTrace**Gelişmiş** ' i seçin.
 
-    Bu seçenekler Visual Studio 2017 Enterprise sürüm 15.7'den başlayarak mevcuttur.
+    Bu seçenekler, Visual Studio 2017 Enterprise sürüm 15,7 ' den itibaren kullanılabilir.
 
-    ![Özel durumlardaki anlık görüntüler için davranışı yapılandırma](../debugger/media/intellitrace-enable-snapshots-on-exceptions.png)
+    ![Özel durumlarda anlık görüntüler için davranışı yapılandırma](../debugger/media/intellitrace-enable-snapshots-on-exceptions.png)
 
-    Olayları ve anlık görüntüleri etkinleştirdiğinizde, özel durumlar üzerinde anlık görüntü almak da varsayılan olarak etkinleştirilir. Özel durumlar için **anlık görüntü toplama'yı**seçerek anlık görüntüleri özel durumlar üzerinde devre dışı atabilirsiniz. Bu özellik etkinleştirildiğinde, işlenmemiş özel durumlar için anlık görüntüler alınır. İşlenen özel durumlar için anlık görüntüler yalnızca özel durum atılırsa ve daha önce atılmış bir özel durum yeniden atılmazsa alınır. Açılan listeden bir değer seçerek, özel durumlar alabilen en fazla anlık görüntü sayısını ayarlayabilirsiniz. Uygulamanızın kesme moduna her girdiği her zaman (örneğin, uygulamanız bir kesme noktasına ulaştığında) maksimum geçerlidir.
+    Olayları ve anlık görüntüleri etkinleştirdiğinizde, özel durumlarla ilgili anlık görüntülerin alınması de varsayılan olarak etkindir. **Özel durum olaylarında anlık görüntü toplamayı**devre dışı bırakarak özel durumlarda anlık görüntüleri devre dışı bırakabilirsiniz. Bu özellik etkinleştirildiğinde, işlenmemiş özel durumlar için anlık görüntüler alınır. İşlenmiş özel durumlar için, anlık görüntüler yalnızca özel durum oluşturulursa ve daha önce oluşturulan bir özel durumun yeniden oluşturulması durumunda alınır. Özel durumlar üzerinde, açılan listeden bir değer seçerek en fazla sayıda anlık görüntü ayarlayabilirsiniz. En büyük değer, uygulamanız kesme moduna girdiğinde (örneğin, uygulamanız bir kesme noktasına rastlarsa) her seferinde geçerlidir.
 
     > [!NOTE]
-    > Anlık görüntüler yalnızca IntelliTrace'in kaydettiği özel durumlar için alınır. Yönetilen kod için, **Araçlar** > **Seçenekleri** > **IntelliTrace Olaylar**seçerek intelliTrace kayıtları hangi olayları belirtebilirsiniz.
+    > Anlık görüntüler yalnızca IntelliTrace 'in kaydettiği özel durum olayları için alınır. Yönetilen kod için, **Araçlar**  >  **Seçenekler**  >  **IntelliTrace olayları**' nı seçerek hangi olayların IntelliTrace 'in kayıt yaptığını belirtebilirsiniz.
 
-1. Projenizde, bir veya daha fazla kesme noktası ayarlayın ve hata ayıklamaya başlayın **(F5**tuşuna basın), veya kodunuzu **(F10** veya **F11)** atarak hata ayıklamaya başlayın).
+1. Projenizde bir veya daha fazla kesme noktası ayarlayın ve hata ayıklamayı başlatın ( **F5**tuşuna basın) veya kodunuzda (**F10** veya **F11**) adımlayarak hata ayıklamaya başlayın.
 
-    IntelliTrace, her hata ayıklama adımında, kesme noktası olayında ve işlenmemiş özel durum olayında uygulamanın işleminin anlık görüntüsünü alır. Bu olaylar, diğer IntelliTrace olaylarıile birlikte **Tanılama Araçları** penceresindeki **Olaylar** sekmesine kaydedilir. Bu pencereyi açmak için **Hata Ayıklama** > **Windows** > **Show Tanılama Araçları'nı**seçin.
+    IntelliTrace, her hata ayıklayıcı adımı, kesme noktası olayı ve işlenmemiş özel durum olayında uygulamanın işleminin anlık görüntüsünü alır. Bu olaylar, diğer IntelliTrace olaylarıyla birlikte **Tanılama araçları** penceresindeki **Olaylar** sekmesine kaydedilir. Bu pencereyi açmak için, **Hata Ayıkla**  >  **Windows**  >  **göster tanılama araçları**seçin.
 
-    Anlık görüntünün kullanılabildiği olayların yanında bir kamera simgesi görünür.
+    Anlık görüntülerin kullanılabildiği olayların yanında bir kamera simgesi görüntülenir.
 
-    ![Anlık görüntülerle olaylar sekmesi](../debugger/media/intellitrace-events-tab-with-snapshots.png "Kesme noktaları ve adımlardaki anlık görüntülerle olaylar sekmesi")
+    ![Anlık görüntülerle olaylar sekmesi](../debugger/media/intellitrace-events-tab-with-snapshots.png "Kesme noktaları ve adımlarda anlık görüntülerle olaylar sekmesi")
 
-    Performans nedenleriyle, çok hızlı adım attığınızda anlık görüntüler alınmaz. Adımın yanında kamera simgesi görünmüyorsa, daha yavaş basmayı deneyin.
+    Performans nedenleriyle, çok hızlı bir şekilde ilerlebilmeniz için anlık görüntüler alınmaz. Adımın yanında kamera simgesi görünürse daha yavaş adımlamayı deneyin.
 
-## <a name="navigate-and-view-snapshots"></a>Anlık görüntüde gezinme ve görüntüleme
+## <a name="navigate-and-view-snapshots"></a>Anlık görüntülere git ve görüntüle
 
-1. Hata Ayıklama araç çubuğundaki **Geri Adım (Alt + [)** ve **İleri Adım (Alt + ])** düğmelerini kullanarak olaylar arasında gezinin.
+1. Hata ayıklama araç çubuğundaki **geri adım (alt + [)** ve **adım ileri (alt +])** düğmelerini kullanarak olaylar arasında gezinin.
 
-    Bu **düğmeler, Tanılama Araçları penceresindeki** **Olaylar** sekmesinde görünen olaylarda gezinir. Bir olaya geri veya ileri adım atmak, seçili olaydaki [geçmiş hata ayıklamayı](../debugger/historical-debugging.md) otomatik olarak etkinleştirir.
+    Bu düğmeler **Tanılama araçları penceresindeki** **Olaylar** sekmesinde görüntülenen olaylara gider. Bir olaya geri veya ileri dönmek, seçili olayda [geçmiş hata ayıklamayı](../debugger/historical-debugging.md) otomatik olarak etkinleştirir.
 
-    ![İleri adım ve İleri düğmeleri](../debugger/media/intellitrace-step-back-icons-description.png "Geri Adım ve İleri Adım düğmeleri")
+    ![Geri adımla ve Ilet düğmeleri](../debugger/media/intellitrace-step-back-icons-description.png "Geri adımla ve adım Ileri düğmeleri")
 
-    Geri adım attığınızda veya adım attığınızda, Visual Studio geçmiş hata ayıklama moduna girer. Bu modda, hata ayıklamanın bağlamı, seçili olayın kaydedildiği zamana geçer. Visual Studio ayrıca işaretçiyi kaynak penceredeki ilgili kod satırına taşır.
+    Geri döndüğünüzde veya ileri adımla, Visual Studio geçmiş hata ayıklama moduna girer. Bu modda, hata ayıklayıcının bağlamı seçili olayın kaydedildiği zamana geçer. Visual Studio Ayrıca işaretçiyi kaynak penceredeki ilgili kod satırına da taşımayın.
 
-    Bu görünümden, **Arama Yığını,** **Yereller,** **Otomatikler**ve **Windows'u İzle'deki** değerleri inceleyebilirsiniz. DataTips'i görüntülemek ve **Hemen** penceresinde ifade değerlendirmesi gerçekleştirmek için değişkenlerin üzerine de bakabilirsiniz. Gördüğünüz veriler, uygulamanın o anda aldığı işlemin anlık görüntüsünden elde edilir.
+    Bu görünümden, **çağrı yığını**, **Yereller**, **oto**ve **izleme** pencerelerinde değerleri inceleyebilirsiniz. Ayrıca, veri Ipuçlarını görüntülemek ve **komut** penceresinde ifade değerlendirmesi gerçekleştirmek için değişkenlerin üzerine gelin. Gördüğünüz veriler, uygulamanın o anda geçen işlemin anlık görüntüsünden alınmıştır.
 
-    Örneğin, bir kesme noktasına ulaştıysanız ve bir Adım **(F10)** aldıysanız, **Step Backward** düğmesi Visual Studio'yu kesme noktasına karşılık gelen kod satırında geçmiş modda yer alar.
+    Bu nedenle, örneğin, bir kesme noktasına ulaşırsanız ve bir adım (**F10**) aldıysanız, **geri adım** düğmesi Visual Studio 'yu kesme noktasına karşılık gelen kod satırına geçmiş moduna geçirir.
 
-    ![Anlık görüntüyle bir etkinlikte geçmiş modu etkinleştirme](../debugger/media/intellitrace-historical-mode-with-snapshot.png "Anlık görüntüyle bir etkinlikte geçmiş modu etkinleştirme")
+    ![Anlık görüntü ile bir olayda geçmiş modunu etkinleştirme](../debugger/media/intellitrace-historical-mode-with-snapshot.png "Anlık görüntü ile bir olayda geçmiş modunu etkinleştirme")
 
-2. Yürütmeyi yaşamak için Devam **et (F5)** seçeneğini belirleyin veya bilgi çubuğundaki **Canlı Hata Ayıklama'ya Geri Dön** bağlantısını tıklatın.
+2. Canlı yürütmeye dönmek için devam ' ı **(F5)** veya bilgi çubuğu 'Ndaki **canlı hata ayıklama bağlantısına dön** ' ü seçin.
 
-3. **Etkinlikler** sekmesinden anlık görüntü de görüntüleyebilirsiniz. Bunu yapmak için anlık görüntü içeren bir olay seçin ve **Geçmiş Hata Ayıklama'yı etkinleştir'i**tıklatın.
+3. Ayrıca, **Olaylar** sekmesinden bir anlık görüntü görüntüleyebilirsiniz. Bunu yapmak için, anlık görüntü içeren bir olay seçin ve **geçmiş hata ayıklamayı etkinleştir**' e tıklayın.
 
-    ![Bir etkinlikte Geçmiş Hata Ayıklama'yı etkinleştirme](../debugger/media/intellitrace-activate-historical-debugging.png "Bir etkinlikte Geçmiş Hata Ayıklama'yı etkinleştirme")
+    ![Bir olayda geçmiş hata ayıklamayı etkinleştirin](../debugger/media/intellitrace-activate-historical-debugging.png "Bir olayda geçmiş hata ayıklamayı etkinleştirin")
 
-    Sonraki **Bildirimi Ayarla** komutundan farklı olarak, anlık görüntü görüntülemek kodunuzu yeniden çalışmaz; geçmişte meydana gelen bir noktada uygulamanın durumunun statik bir görünümünü verir.
+    **Sonraki Ifadeyi ayarla** komutundan farklı olarak, anlık görüntüyü görüntülemek kodunuzu yeniden çalıştırmaz; Bu, geçmişte gerçekleştiği zaman bir noktada uygulamanın durumunun statik görünümünü sağlar.
 
-    ![IntelliTrace adım geri genel bakış](../debugger/media/intellitrace-step-back-overview.png "IntelliTrace Adım Geri Genel Bakış")
+    ![IntelliTrace adım geri 'ye Genel Bakış](../debugger/media/intellitrace-step-back-overview.png "IntelliTrace adım geri 'ye Genel Bakış")
 
-    Visual Studio'da değişkenleri nasıl inceleyikarşıları hakkında daha fazla bilgi edinmek için hata [ayıklama bölümüne ilk bakışta](../debugger/debugger-feature-tour.md)
+    Visual Studio 'da değişkenlerin nasıl inceleneceği hakkında daha fazla bilgi edinmek için bkz [. hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
 
 ## <a name="frequently-asked-questions"></a>Sık Sorulan Sorular
 
-#### <a name="how-is-intellitrace-step-back-different-from-intellitrace-events-only-mode"></a>Nasıl IntelliTrace adım geri IntelliTrace olaylar sadece modu farklıdır?
+#### <a name="how-is-intellitrace-step-back-different-from-intellitrace-events-only-mode"></a>IntelliTrace 'in yalnızca IntelliTrace olayları modundan farkı nasıl farklıdır?
 
-IntelliTrace olaylarda yalnızca modu hata ayıklama adımları ve kesme noktalarında geçmiş hata ayıklama etkinleştirmek için izin verir. Ancak, IntelliTrace yalnızca windows açıksa **Yerel ler** ve **Otomatik ler** pencerelerinde veri yakalar ve yalnızca genişletilmiş ve görünümde olan verileri yakalar. Olaylar yalnızca modda, genellikle değişkenlerin ve karmaşık nesnelerin tam bir görünümü yoktur. Ayrıca, **İzleme** penceresinde ifade değerlendirme ve görüntüleme verileri desteklenmez.
+Yalnızca olaylar modundaki IntelliTrace, hata ayıklayıcı adımlarında ve kesme noktalarında geçmiş hata ayıklamayı etkinleştirmenizi sağlar. Ancak IntelliTrace yalnızca **Yereller** ve **oto** içindeki verileri yakalar ve Windows açık ise yalnızca genişletilmiş ve görüntüleme içinde verileri yakalar. Yalnızca olaylar modunda, genellikle değişkenlerin ve karmaşık nesnelerin tamamen bir görünümüne sahip olursunuz. Ayrıca, **izleme** penceresindeki ifade değerlendirmesi ve verileri görüntüleme desteklenmez.
 
-Olaylar ve anlık görüntü modunda IntelliTrace, karmaşık nesneler de dahil olmak üzere uygulama sürecinin tüm anlık görüntüsünü yakalar. Bir kod satırında, aynı bilgileri bir kesme noktasında durdurulmuş gibi görebilirsiniz (ve bilgileri daha önce genişletip genişletmediğiniz önemli değildir). Anlık görüntü görüntülenirken ifade değerlendirmesi de desteklenir.  
+Olaylar ve anlık görüntüler modunda, IntelliTrace karmaşık nesneler de dahil olmak üzere uygulamanın işleminin tüm anlık görüntüsünü yakalar. Bir kod satırında, bir kesme noktasında durdurulmuş gibi aynı bilgileri görebilirsiniz (ve daha önce bilgileri genişletmenizden bağımsız olarak). Bir anlık görüntü görüntülenirken ifade değerlendirmesi de desteklenir.  
 
 #### <a name="what-is-the-performance-impact-of-this-feature"></a>Bu özelliğin performans etkisi nedir? 
 
-Genel adım performansı üzerindeki etkisi uygulamanıza bağlıdır. Anlık görüntü almanın yükü yaklaşık 30 ms'dir. Anlık görüntü alındığında, uygulamanın işlemi çatallanır ve çatallı kopya askıya alınır. Bir anlık görüntü görüntülediğinizde, Visual Studio işlemin çatallı kopyasına iliştiriyor. Her anlık görüntü için Visual Studio yalnızca sayfa tablosunu kopyalar ve sayfaları kopyalayıp yazmaya ayarlar. Yığındaki nesneler ilişkili anlık görüntülerle hata ayıklama adımları arasında değişirse, ilgili sayfa tablosu kopyalanır ve en az bellek maliyeti oluşur. Visual Studio anlık görüntü almak için yeterli bellek olmadığını algılarsa, bir tane almaz.
+Genel Adımlama performansının etkisi uygulamanıza bağlıdır. Anlık görüntü alma ek yükü 30 MS 'nin üzerinde. Anlık görüntü alındığında, uygulamanın süreci ele alınır ve bu kopya askıya alınır. Bir anlık görüntüyü görüntülediğinizde, Visual Studio işlemin çatallanmış kopyasına ekleniyor. Her anlık görüntü için, Visual Studio yalnızca sayfa tablosunu kopyalar ve sayfaları, yazma kopyalama olarak ayarlar. Yığındaki nesneler ilişkili anlık görüntülerle hata ayıklayıcı adımları arasında değişiklik yapmışsa ilgili sayfa tablosu daha sonra kopyalanır ve bu da en az bellek maliyetine yol açar. Visual Studio bir anlık görüntü almak için yeterli bellek olmadığını algılarsa, bir tane almaz.
 
 ## <a name="known-issues"></a>Bilinen Sorunlar
-* Windows 10 Fall Creators Update (RS3) daha eski Windows sürümlerinde IntelliTrace olayları ve anlık görüntü modunu kullanıyorsanız ve uygulamanın hata ayıklama platformu hedefi x86 olarak ayarlanmışsa, IntelliTrace anlık görüntü almaz.
+* Windows 10 Fall Creators Update (RS3) sürümünden önceki Windows sürümlerinde IntelliTrace olayları ve anlık görüntü modu kullanıyorsanız ve uygulamanın hata ayıklama platformu hedefi x86 olarak ayarlandıysa, IntelliTrace anlık görüntü almaz.
 
     Geçici çözümler:
-  * Windows 10 Yıldönümü Güncellemesi (RS1) ve sürüm 10.0.14393.2273'ün altındaysanız, [KB4103720'yi yükleyin.](https://support.microsoft.com/help/4103720/windows-10-update-kb4103720)
-  * Windows 10 Creators Update (RS2) ve sürüm 10.0.15063.1112 altında iseniz, [KB4103722 yükleyin.](https://support.microsoft.com/help/4103722/windows-10-update-4103722)
-  * Windows 10 Fall Creators Update'e (RS3) yükleyin veya yükseltin.
+  * Windows 10 yıldönümü Güncelleştirmesi (RS1) ve sürümü 10.0.14393.2273 ' de çalışıyorsanız, KB4103720 ' yi [yükleyebilirsiniz](https://support.microsoft.com/help/4103720/windows-10-update-kb4103720).
+  * Windows 10 Creators Update (RS2) ve 10.0.15063.1112 sürüm ' de çalışıyorsanız, KB4103722 ' yi [yükleyebilirsiniz](https://support.microsoft.com/help/4103722/windows-10-update-4103722).
+  * Windows 10 Fall Creators Update ' e (RS3) yükler veya yükseltin.
   * Alternatif olarak:
     1. Visual Studio yükleyicisinden masaüstü için VC++ 2015.3 v140 araç seti (x86, x64) bileşenini yükleyin.
     2. Hedef uygulamayı derleyin.
-    3. Komut satırından, yürütülebilir hedef için `Largeaddressaware` bayrağı ayarlamak için düzenleme kutusu aracını kullanın. Örneğin, bu komutu kullanabilirsiniz (yolu güncelledikten sonra): "C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise\VC\Tools\MSVC\14.12.25718\bin\Hostx86\x86\editbin.exe" /Largeaddressaware "C:\Path\To\Application.exe".
-    4. Hata ayıklamaya başlamak için **F5**tuşuna basın. Şimdi, anlık görüntü hata ayıklama adımları ve kesme noktalarında alınır.
+    3. Hedef yürütülebilirin bayrağını ayarlamak için komut satırından editbin aracını kullanın `Largeaddressaware` . Örneğin, bu komutu (yolu güncelleştirdikten sonra) kullanabilirsiniz: "C:\Program Files (x86) \Microsoft Visual Studio\Preview\Enterprise\VC\Tools\MSVC\14.12.25718\bin\Hostx86\x86\editbin.exe"/LARGEADDRESSAWARE "C:\Path\To\Application\app.exe".
+    4. Hata ayıklamayı başlatmak için **F5**'e basın. Şimdi, anlık görüntüler hata ayıklayıcı adımlarında ve kesme noktalarında alınır.
 
        > [!Note]
-       > Yürütülebilir `Largeaddressaware` değişikliklerle yeniden inşa edilen bayrak her zaman ayarlanmalıdır.
+       > `Largeaddressaware`Her çalıştırılabilir dosyanın değişikliklerle yeniden oluşturulması durumunda bayrak ayarlanmalıdır.
 
-* Uygulamanın işleminin anlık görüntüsü, kalıcı bellek eşlenen dosyayı kullanan bir uygulamada alındığında, anlık görüntüyle birlikte bellek eşlenen dosyada özel bir kilit tutar (üst işlem kilitlerini serbest bıraktıktan sonra bile). Diğer işlemler, bellek eşlenen dosyaya hala okuyabilir, ancak yazamaz.
+* Kalıcı bir bellek eşlemeli dosya kullanan bir uygulamada uygulama işleminin bir anlık görüntüsü yapıldığında, anlık görüntüye sahip işlem, bellek eşlemeli dosyada (üst işlem kilidi serbest bırakıldıktan sonra bile) özel bir kilit barındırır. Diğer süreçler yine de bellek eşlemeli dosyayı okuyabilir, ancak yazamayacak.
 
   Geçici çözüm:
-  * Hata ayıklama oturumunu sonlayarak tüm anlık görüntüleri temizleyin.
+  * Hata ayıklama oturumunu sona erdirerek tüm anlık görüntüleri temizleyin.
 
-* İşlemi çok sayıda DL's i yükleyen bir uygulama gibi çok sayıda benzersiz bellek bölgesine sahip olan bir uygulamanın hata ayıklanması ndan etkilenebilir. Bu sorun, Windows'un gelecekteki bir sürümünde ele alınacaktır. Bu sorunu yaşıyorsanız, bize stepback@microsoft.comulaşın.
+* İşlemi, çok sayıda dll yükleyen bir uygulama gibi yüksek sayıda benzersiz bellek bölgesine sahip olan bir uygulamada hata ayıklarken, anlık görüntüler etkinken daha fazla performans etkilenebilir. Bu sorun, Windows 'un gelecek bir sürümünde değinilecek. Bu sorunla karşılaşıyorsanız, bizden bize ulaşın stepback@microsoft.com .
 
-* Hata **Ayıklama > IntelliTrace > IntelliTrace oturumunu** olaylar ve anlık görüntüler modu altında kaydederken, anlık görüntülerden yakalanan ek veriler .itrace dosyasında kullanılamaz. Kesme noktası ve adım olaylarında, dosyayı yalnızca IntelliTrace olayları modunda kaydetmiş gibi aynı bilgileri görürsünüz.
+* Bir dosya **hata ayıklama > IntelliTrace ile kaydedilirken > IntelliTrace oturumunu** olaylar ve anlık görüntüler modu altına Kaydet ' in altında, anlık görüntülerden yakalanan ek veriler. iTrace dosyasında kullanılamaz. Kesme noktası ve adım olayları ' nda, dosyayı yalnızca IntelliTrace olayları modunda kaydettiğinizden aynı bilgileri görürsünüz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu eğitimde, IntelliTrace adım geri nasıl kullanılacağını öğrendim. Diğer IntelliTrace özellikleri hakkında daha fazla bilgi edinmek isteyebilirsiniz.
+Bu öğreticide, IntelliTrace adım geri 'yi nasıl kullanacağınızı öğrendiniz. Diğer IntelliTrace özellikleri hakkında daha fazla bilgi edinmek isteyebilirsiniz.
 
 > [!div class="nextstepaction"]
-> [IntelliTrace özellikleri](../debugger/intellitrace-features.md)
+> [IntelliTrace Özellikleri](../debugger/intellitrace-features.md)

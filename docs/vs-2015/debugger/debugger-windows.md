@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1395aba0ea2f40e0df95435a340f4104c9f25d03
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545632"
 ---
 # <a name="debugger-windows"></a>Hata Ayıklayıcısı Pencereleri
@@ -23,7 +23,7 @@ Programınızda hata ayıklarken çoğu hata ayıklayıcı penceresini açabilir
   
 |**Pencere**|**Kısayol tuşu**|**Konuya bakın**|  
 |-|-|-|  
-|Kesme Noktaları|CTRL + ALT + B|[Kesme Noktalarını Kullanma](../debugger/using-breakpoints.md)|  
+|Kesme noktaları|CTRL + ALT + B|[Kesme Noktalarını Kullanma](../debugger/using-breakpoints.md)|  
 |Özel durum ayarları|CTRL + ALT + E|[Özel Durumları Hata Ayıklayıcısı ile Yönetme](../debugger/managing-exceptions-with-the-debugger.md)|  
 |Çıktı|CTRL + ALT + O|[Çıkış Penceresi](../ide/reference/output-window.md)|  
 |GPU Iş parçacıkları|-|[Nasıl yapılır: GPU Iş parçacıkları penceresini kullanma](../debugger/how-to-use-the-gpu-threads-window.md)|  

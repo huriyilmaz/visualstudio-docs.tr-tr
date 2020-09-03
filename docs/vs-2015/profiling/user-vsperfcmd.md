@@ -10,20 +10,20 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 311d02ad3e15f184f8b7e21b5794d73c41a8d4fb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145385"
 ---
 # <a name="user-vsperfcmd"></a>Kullanıcı (VSPerfCmd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Kullanıcı** seçeneği profilli işlemin sahibi olan hesabının etki alanı ve kullanıcı adını belirtir. Bu seçenek, yalnızca oturum açan kullanıcının farklı bir kullanıcı olarak işlem çalışıyorsa gereklidir. İşlem sahibi, Windows Görev Yöneticisi'nin İşlemler sekmesinde kullanıcı adı sütununda listelenir.  
+**Kullanıcı** seçeneği, profili oluşturulan işlemin sahibi olan hesabın etki alanını ve Kullanıcı adını belirtir. Bu seçenek yalnızca, işlem oturum açmış kullanıcı dışında bir kullanıcı olarak çalışıyorsa gereklidir. İşlem sahibi, Windows Görev Yöneticisi 'nin Işlemler sekmesinde Kullanıcı adı sütununda listelenir.  
   
- **Kullanıcı** seçeneği yalnızca de içeren bir komut satırında belirtilebilir **Başlat** seçeneğini seçenek.  
+ **Kullanıcı** seçeneği yalnızca, **Başlat** seçeneği seçeneğini de içeren bir komut satırında belirtilebilir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```  
 VSPerfCmd.exe /Start:Method /Output:FileName /User:[Domain\]UserName [Options]  
@@ -31,19 +31,19 @@ VSPerfCmd.exe /Start:Method /Output:FileName /User:[Domain\]UserName [Options]
   
 #### <a name="parameters"></a>Parametreler  
  `Domain`  
- Kullanıcının etki alanı adı.  
+ Kullanıcının etki alanının adı.  
   
  `UserName`  
- Kullanıcı adı.  
+ Kullanıcının adı.  
   
-## <a name="required-options"></a>Gerekli seçenekleri  
- **Kullanıcı** seçeneği yalnızca kullanılabilir ile **Başlat** seçeneği.  
+## <a name="required-options"></a>Gerekli seçenekler  
+ **Kullanıcı** seçeneği yalnızca **Başlangıç** seçeneğiyle birlikte kullanılabilir.  
   
- **Başlat:** `Method`  
- Belirtilen profil oluşturma metodu için profil oluşturucuyu başlatır.  
+ **Başlangıç:**`Method`  
+ Profil oluşturucuyu belirtilen profil oluşturma yöntemine başlatır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, kullanımını gösterir **kullanıcı** seçeneği.  
+ Aşağıdaki örnek, **Kullanıcı** seçeneğinin kullanımını gösterir.  
   
 ```  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp /User:SYSTEM  
@@ -51,6 +51,6 @@ VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp /User:SYSTEM
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
- [Bağımsız uygulamaların profilini oluşturma](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [ASP.NET Web uygulamalarında profil oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Tek başına uygulamaların profilini oluşturma](../profiling/command-line-profiling-of-stand-alone-applications.md)   
+ [ASP.NET Web uygulamalarının profilini oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
  [Profil Oluşturma Hizmetleri](../profiling/command-line-profiling-of-services.md)

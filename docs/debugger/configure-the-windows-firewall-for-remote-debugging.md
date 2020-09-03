@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0fa5d60d7fe662cff31b54bf3a13c203f4b6d8c9
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350699"
 ---
 # <a name="configure-windows-firewall-for-remote-debugging"></a>Uzaktan hata ayıklama için Windows güvenlik duvarını yapılandırma
@@ -57,7 +57,7 @@ Uzaktan hata ayıklama için, uzak bilgisayarda aşağıdaki bağlantı noktalar
 |**Bağlantı noktaları**|**Gelen/giden**|**Protokol**|**Açıklama**|
 |-|-|-|-|
 |4022|Gelen|TCP|VS 2017 için. Her Visual Studio sürümü için bağlantı noktası numarası 2 ' ye kadar artar. Daha fazla bilgi için bkz. [Visual Studio uzaktan hata ayıklayıcı bağlantı noktası atamaları](../debugger/remote-debugger-port-assignments.md).|
-|4023|Gelen|TCP|VS 2017 için. Her Visual Studio sürümü için bağlantı noktası numarası 2 ' ye kadar artar. Bu bağlantı noktası yalnızca uzaktan hata ayıklayıcının 64 bit sürümünden 32 bitlik bir işlemin uzaktan hata ayıklamasını yapmak için kullanılır. Daha fazla bilgi için bkz. [Visual Studio uzaktan hata ayıklayıcı bağlantı noktası atamaları](../debugger/remote-debugger-port-assignments.md).|
+|4023|Gelen|TCP|VS 2017 için. Her Visual Studio sürümü için bağlantı noktası numarası 2 ' ye kadar artar. Bu bağlantı noktası yalnızca uzaktan hata ayıklayıcının 64 bit sürümünden 32 bitlik bir işlemin uzaktan hata ayıklamasını yapmak için kullanılır. Daha fazla bilgi için bkz.  [Visual Studio uzaktan hata ayıklayıcı bağlantı noktası atamaları](../debugger/remote-debugger-port-assignments.md).|
 |3702|Tarafına|UDP|Seçim Uzaktan hata ayıklayıcı keşfi için gereklidir.|
 
 ::: moniker-end
@@ -67,7 +67,7 @@ Uzaktan hata ayıklama için, uzak bilgisayarda aşağıdaki bağlantı noktalar
 |**Bağlantı noktaları**|**Gelen/giden**|**Protokol**|**Açıklama**|
 |-|-|-|-|
 |4024|Gelen|TCP|VS 2019 için. Her Visual Studio sürümü için bağlantı noktası numarası 2 ' ye kadar artar. Daha fazla bilgi için bkz. [Visual Studio uzaktan hata ayıklayıcı bağlantı noktası atamaları](../debugger/remote-debugger-port-assignments.md).|
-|4025|Gelen|TCP|VS 2019 için. Her Visual Studio sürümü için bağlantı noktası numarası 2 ' ye kadar artar. Bu bağlantı noktası yalnızca uzaktan hata ayıklayıcının 64 bit sürümünden 32 bitlik bir işlemin uzaktan hata ayıklamasını yapmak için kullanılır. Daha fazla bilgi için bkz. [Visual Studio uzaktan hata ayıklayıcı bağlantı noktası atamaları](../debugger/remote-debugger-port-assignments.md).|
+|4025|Gelen|TCP|VS 2019 için. Her Visual Studio sürümü için bağlantı noktası numarası 2 ' ye kadar artar. Bu bağlantı noktası yalnızca uzaktan hata ayıklayıcının 64 bit sürümünden 32 bitlik bir işlemin uzaktan hata ayıklamasını yapmak için kullanılır. Daha fazla bilgi için bkz.  [Visual Studio uzaktan hata ayıklayıcı bağlantı noktası atamaları](../debugger/remote-debugger-port-assignments.md).|
 |3702|Tarafına|UDP|Seçim Uzaktan hata ayıklayıcı keşfi için gereklidir.|
 
 ::: moniker-end

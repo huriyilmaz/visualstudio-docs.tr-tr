@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8bc5d08e8b0ae71acb846e1e863e24e8b8def0ee
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84183567"
 ---
 # <a name="debug-at-design-time-in-visual-studio-c-ccli-visual-basic-f"></a>Visual Studio 'da tasarım zamanında hata ayıklama (C#, C++/CLı, Visual Basic, F #)
@@ -83,13 +83,13 @@ Aşağıdaki örnek Visual Basic. Ayrıca C#, F # ve C++/CLı uygulamalarında t
 
 1. Hata ayıklamak istediğiniz özel denetimi içeren XAML sayfasını açın.
 
-   Windows Build 16299 veya üstünü hedefleyen UWP projeleri için bu adım *Uıwpsurface. exe* işlemini başlatacak. Windows Build 16299 veya üstünü hedefleyen WPF projeleri için bu adım *Wpfsurface. exe* işlemini başlatacak. Windows Build 16299 ' den önceki WPF veya UWP sürümlerinde bu adım *Xdesproc. exe* işlemini başlatacak. 
+   Windows Build 16299 veya üstünü hedefleyen UWP projeleri için bu adım *UwpSurface.exe* işlemini başlatacak. Windows Build 16299 veya üstünü hedefleyen WPF projeleri için bu adım *WpfSurface.exe* işlemini başlatacak. Windows Build 16299 ' den önceki WPF veya UWP sürümlerinde bu adım *XDesProc.exe* işlemini başlatacak. 
 
 1. Visual Studio 'nun ikinci bir örneğini açın. İkinci örnekte bir çözüm veya proje açmayın.
 
 1. Visual Studio 'nun ikinci örneğinde **Hata Ayıkla** menüsünü açın ve **işleme Ekle...** seçeneğini belirleyin.
 
-1. Proje türüne bağlı olarak (önceki adımlara bakın), kullanılabilir işlemler listesinden *Uıwpsurface. exe*, *wpfsurface. exe*veya *xdesproc. exe* işlemini seçin.
+1. Proje türüne bağlı olarak (önceki adımlara bakın), kullanılabilir işlemler listesinden *UwpSurface.exe*, *WpfSurface.exe*veya *XDesProc.exe* işlemini seçin.
 
 1. **Işleme İliştir** Iletişim kutusunun **İliştir** alanına hata ayıklamak istediğiniz özel denetim için doğru kod türünü seçin.
 

@@ -1,5 +1,5 @@
 ---
-title: Dosyalar için eylemler oluşturma
+title: Dosyalar için derleme eylemleri
 ms.date: 11/19/2018
 ms.technology: vs-ide-compile
 ms.topic: reference
@@ -9,53 +9,53 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 35136ac0b7b0104f1812df7a9bf8ba81f6907374
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79301988"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89315115"
 ---
 # <a name="build-actions"></a>Derleme eylemleri
 
-Visual Studio projesindeki tüm dosyaların bir yapı eylemi var. Yapı eylemi, proje derlendiğinde dosyaya ne olacağını denetler.
+Visual Studio projesindeki tüm dosyaların bir yapı eylemi vardır. Yapı eylemi, proje derlendiğinde dosyaya ne olacağını denetler.
 
 > [!NOTE]
-> Bu konu Windows'daki Visual Studio için geçerlidir. Mac için Visual Studio [için, Mac için Visual Studio'da oluşturma eylemleri'ne](/visualstudio/mac/build-actions)bakın.
+> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio Içindeki derleme eylemleri](/visualstudio/mac/build-actions).
 
-## <a name="set-a-build-action"></a>Yapı eylemi ayarlama
+## <a name="set-a-build-action"></a>Yapı eylemi ayarla
 
-Bir dosya için yapı eylemini ayarlamak için, **Solution Explorer'da** dosyayı seçip **Alt**+**Enter**tuşuna basarak **Dosyanın Özelliklerini** penceresinde açın. Veya **Solution Explorer'daki** dosyaya sağ tıklayın ve **Özellikler'i**seçin. **Özellikler** penceresinde, **Gelişmiş** bölümün altında, dosya için bir yapı eylemi ayarlamak için **Eylem Oluştur'un** yanındaki açılır listeyi kullanın.
+Bir dosyaya yönelik derleme eylemini ayarlamak için, **Çözüm Gezgini** dosya ' da bir dosyayı seçip **alt**ENTER ' a basarak **Özellikler** penceresinde dosyanın özelliklerini açın + **Enter**. Ya da **Çözüm Gezgini** ' de dosyaya sağ tıklayıp **Özellikler**' i seçin. **Özellikler** penceresinde, **Gelişmiş** bölümünde, dosya için derleme eylemi ayarlamak için **Oluştur eylemi** ' nin yanındaki açılan listeyi kullanın.
 
-![Visual Studio'da bir dosya için eylemler oluşturma](media/build-actions.png)
+![Visual Studio 'da bir dosya için derleme eylemleri](media/build-actions.png)
 
-## <a name="build-action-values"></a>Eylem değerleri oluşturma
+## <a name="build-action-values"></a>Derleme eylemi değerleri
 
-C# ve Visual Basic proje dosyaları için daha yaygın yapı eylemlerinden bazıları şunlardır:
+C# ve Visual Basic proje dosyaları için daha yaygın olarak kullanılan derleme eylemlerinden bazıları şunlardır:
 
-|Eylem Oluştur | Proje türleri | Açıklama |
+|Derleme eylemi | Proje türleri | Açıklama |
 |-|-|
-| **Ek Dosyalar** | C#, Visual Basic | C# veya Visual Basic derleyicisine giriş olarak geçirilen kaynak olmayan bir metin dosyası. Bu yapı eylemi esas olarak kod kalitesini doğrulamak için bir proje tarafından başvurulan [çözümleyicilere](../code-quality/roslyn-analyzers-overview.md) giriş sağlamak için kullanılır. Daha fazla bilgi için [bkz.](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Using%20Additional%20Files.md)|
-| **Uygulama Tanımı** | WPF | Uygulamanızı tanımlayan dosya. Bir projeyi ilk oluşturduğunuzda, bu *App.xaml'dır.* |
-| **CodeAnalysisDictionary** | .NET | Yazım denetimi için Kod Analizi tarafından kullanılan özel bir sözcük sözlüğü. [Bkz. Nasıl: Kod Analizi Sözlüğü'ni özelleştirin](../code-quality/how-to-customize-the-code-analysis-dictionary.md)|
-| **Derlemek** | herhangi bir | Dosya derleyiciye kaynak dosya olarak aktarılır.|
-| **İçerik** | .NET | **İçerik** olarak işaretlenmiş bir dosya, 'yi <xref:System.Windows.Application.GetContentStream%2A?displayProperty=nameWithType>arayarak akış olarak alınabilir. ASP.NET projeleriçin bu dosyalar dağıtıldığında sitenin bir parçası olarak bulunur.|
-| **Tasarım Verileri** | WPF | XAML ViewModel dosyaları için kullanılır, kullanıcı denetimlerinin tasarım zamanında, sahte türleri ve örnek verilerle görüntülenebilmesi için. |
-| **DesignDataWithDesignTimeCreateable** | WPF | **DesignData**gibi, ancak gerçek türleri ile.  |
-| **Gömülü Kaynak** | .NET | Dosya derlemeye katıştırılması gereken bir kaynak olarak derleyiciye geçirilir. Dosyayı <xref:System.Reflection.Assembly.GetManifestResourceStream%2A?displayProperty=fullName> derlemeden okumak için arayabilirsiniz.|
-| **EntityDeploy** | .NET | Varlık Çerçevesi (EF) için .EF yapılarının dağıtımını belirten edmx dosyaları. |
-| **Sahte** | .NET | Microsoft Fakes test çerçevesi için kullanılır. [Microsoft Fakes kullanarak testi n altında kodu yalıtma](../test/isolating-code-under-test-with-microsoft-fakes.md) |
-| **Yok** | herhangi bir | Dosya herhangi bir şekilde yapının bir parçası değildir. Bu değer, örneğin "ReadMe" dosyaları gibi belge dosyaları için kullanılabilir.|
-| **Sayfası** | WPF | Çalışma zamanında daha hızlı yüklemek için bir XAML dosyasını ikili .baml dosyasına derle. |
-| **Kaynak** | WPF | Dosyayı uzantısı *.g.resources*olan bir derleme bildirimi kaynak dosyasına katıştırmak için belirtir. |
-| **Gölge** | .NET | Yapılı derleme dosya adlarının listesini içeren bir .accessor dosyası için, satır başına bir tane kullanılır. Listedeki her derleme için, orijinallere `ClassName_Accessor` benzeyen adlarla, ancak özel yöntemler yerine ortak yöntemlerle ortak sınıflar oluşturun. Birim testi için kullanılır. |
-| **Giriş Ekranı** | WPF | Uygulama başlatılırken çalışma zamanında görüntülenecek bir resim dosyası belirtir. |
-| **XamlAppDef** | Windows Workflow Foundation | Yapıya, katışmış iş akışı olan bir derlemeye iş akışı XAML dosyası oluşturmatalimatı verir. |
+| **AdditionalFiles** | C#, Visual Basic | C# veya Visual Basic derleyicisine giriş olarak geçirilen kaynak olmayan bir metin dosyası. Bu derleme eylemi, genellikle kod kalitesini doğrulamak üzere bir proje tarafından başvurulan [çözümleyiciler](../code-quality/roslyn-analyzers-overview.md) için giriş sağlamak üzere kullanılır. Daha fazla bilgi için bkz. [ek dosyaları kullanma](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Using%20Additional%20Files.md).|
+| **ApplicationDefinition** | WPF | Uygulamanızı tanımlayan dosya. İlk kez bir proje oluşturduğunuzda, bu *app. xaml*' dir. |
+| **CodeAnalysisDictionary** | .NET | Yazım denetimi için kod analizi tarafından kullanılan özel bir sözcük sözlüğü. Bkz [. nasıl yapılır: kod analizi sözlüğünü özelleştirme](../code-quality/how-to-customize-the-code-analysis-dictionary.md)|
+| **Se** | herhangi biri | Dosya derleyiciye kaynak dosya olarak geçirilir.|
+| **İçerik** | .NET | **İçerik** olarak işaretlenen bir dosya, çağırarak akış olarak alınabilir <xref:System.Windows.Application.GetContentStream%2A?displayProperty=nameWithType> . ASP.NET projelerinde, bu dosyalar, dağıtıldığı sırada sitenin bir parçası olarak dahil edilir.|
+| **DesignData** | WPF | Kullanıcı denetimlerinin tasarım zamanında, kukla türler ve örnek verilerle görüntülenmesini sağlamak için XAML ViewModel dosyaları için kullanılır. |
+| **DesignDataWithDesignTimeCreateable** | WPF | **Designdata**gibi, ancak gerçek türler.  |
+| **Gömülü kaynak** | .NET | Dosya, derlemeye gömülebilen bir kaynak olarak derleyiciye geçirilir. <xref:System.Reflection.Assembly.GetManifestResourceStream%2A?displayProperty=fullName>Derlemeden dosyayı okumak için öğesini çağırabilirsiniz.|
+| **EntityDeploy** | .NET | EF yapıtlarının dağıtımını belirten Entity Framework (EF). edmx dosyaları için. |
+| **Fakes** | .NET | Microsoft Fakes test çerçevesi için kullanılır. Bkz. [Microsoft Fakes kullanarak test edilen kodu yalıtma](../test/isolating-code-under-test-with-microsoft-fakes.md) |
+| **Hiçbiri** | herhangi biri | Dosya, herhangi bir şekilde derleme kapsamında değildir. Bu değer, örneğin "Benioku" dosyaları gibi belge dosyaları için kullanılabilir.|
+| **Sayfa** | WPF | Çalışma zamanında daha hızlı yükleme yapmak için bir XAML dosyasını bir binary. BAML dosyasına derleyin. |
+| **Kaynak** | WPF | Dosyayı *. g. resources*uzantısına sahip bir derleme bildirimi kaynak dosyasına katıştırmayı belirtir. |
+| **Gölgeli** | .NET | Her satırda bir tane olmak üzere oluşturulan derleme dosya adlarının listesini içeren bir. accessor dosyası için kullanılır. Listedeki her derleme için, `ClassName_Accessor` yalnızca orijinallere benzeyen, ancak özel yöntemler yerine ortak yöntemlerle ortak sınıflar oluşturun. Birim testi için kullanılır. |
+| **Giriş ekranı** | WPF | Uygulama başlatıldığında çalışma zamanında görüntülenecek bir resim dosyasını belirtir. |
+| **XamlAppDef** | Windows Workflow Foundation | Derlemeyi, gömülü iş akışıyla bir derlemede iş akışı XAML dosyası oluşturmak için yönlendirir. |
 
 > [!NOTE]
-> Ek yapı eylemleri belirli proje türleri için tanımlanabilir, bu nedenle yapı eylemleri listesi proje türüne bağlıdır ve bu listede olmayan değerler görünebilir.
+> Ek derleme eylemleri belirli proje türleri için tarafından tanımlanabilir, bu nedenle derleme eylemlerinin listesi proje türüne bağlıdır ve değerler bu listede yer alan görünebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# derleyici seçenekleri](/dotnet/csharp/language-reference/compiler-options/listed-alphabetically)
 - [Visual Basic derleyici seçenekleri](/dotnet/visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically)
-- [Eylemler oluşturma (Mac için Visual Studio)](/visualstudio/mac/build-actions)
+- [Derleme eylemleri (Mac için Visual Studio)](/visualstudio/mac/build-actions)

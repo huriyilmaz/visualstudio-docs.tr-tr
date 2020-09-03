@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Duraklatma ve sürdürme performans veri toplama | Microsoft Docs'
+title: 'Nasıl yapılır: performans veri toplamayı duraklatma ve devam etme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,34 +12,34 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 50eedfe849de2a0fe82ee337d26a8b66a15d6764
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67826156"
 ---
-# <a name="how-to-pause-and-resume-performance-data-collection"></a>Nasıl yapılır: Performans Verileri Toplamayı Duraklatma ve Sürdürme
+# <a name="how-to-pause-and-resume-performance-data-collection"></a>Nasıl yapılır: performans veri toplamayı duraklatma ve devam etme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Profil oluşturma oturumu sayfa penceresinden verileri etkileşimli olarak profil oluşturma koleksiyonu denetleyebilirsiniz.  
+Profil oluşturma oturumu sayfa penceresinde, profil oluşturma verilerinin toplanmasını etkileşimli bir şekilde denetleyebilirsiniz.  
   
- Veri toplama denetlenmesi size profili veri dosyasının boyutunu azaltın ve yalnızca ilgilendiğiniz işlemler için veri toplamanızı sağlar. Duraklatma ve birden çok kez bir performans oturumu profil oluşturmayı sürdürün.  
+ Veri toplamayı denetlemek, profil veri dosyasının boyutunu azaltmanıza ve yalnızca ilgilendiğiniz işlemler için veri toplamanızı sağlar. Bir performans oturumunda, profil oluşturmayı birden çok kez duraklatabilir ve sürdürebilirsiniz.  
   
- ![Profil oluşturma oturumu sayfasında](../profiling/media/prof-profilingsessionpage.png "PROF_ProfilingSessionPage")  
+ ![Profil oluşturma oturum sayfası](../profiling/media/prof-profilingsessionpage.png "PROF_ProfilingSessionPage")  
   
 > [!NOTE]
-> Performans oturumu ile profil oluşturma duraklatıldı başlayın sonra program yürütmesinde daha sonraki bir noktada profil oluşturmayı sürdürün. Performans başlatmak için profil oluşturma oturumu durduruldu, seçin **profil oluşturma duraklatıldı ile Performans Analizi Başlat** komutunu **hata ayıklama** menüsü.  
+> Ayrıca, profil oluşturma duraklatıldıktan sonra performans oturumunu başlatabilir ve ardından programın yürütülmesine daha sonraki bir noktada profil oluşturmayı sürdürebilirsiniz. Performans oturumunu profil oluşturma duraklatılmış olarak başlatmak için **hata ayıklama** menüsünde, **profil oluşturma duraklatıldı komutuyla performans analizini Başlat** komutunu seçin.  
   
-### <a name="to-pause--resume-or-stop-profiling"></a>Duraklatmak için sürdürmek veya profil oluşturmayı durdur  
+### <a name="to-pause--resume-or-stop-profiling"></a>Profil oluşturmayı duraklatmak, devam ettirin veya durdurmak için  
   
 - Profil oluşturma oturumu sayfasında:  
   
-  - Seçin **koleksiyonu duraklatın** veri toplamayı durdurma.  
+  - Veri toplamayı askıya almak için **koleksiyonu Duraklat** ' ı seçin.  
 
-  - Seçin **sürdürme koleksiyonu** duraklatıldıktan sonra veri toplamayı yeniden başlatmak için.  
+  - Durakladıktan sonra veri toplamayı yeniden başlatmak için **koleksiyonu sürdürür** ' ı seçin.  
 
-  - Seçin **profil oluşturmayı durdurmak** profil oluşturma oturumunu sona erdirmek ve raporlar oluşturmak için.  
+  - Profil oluşturma oturumunu sonlandırmak ve rapor oluşturmak için **profil oluşturmayı durdur** ' ı seçin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri toplama denetimi](../profiling/controlling-data-collection.md)   
- [Nasıl yapılır: Başlangıç ve Bitiş Performans Verilerini Toplama](../profiling/how-to-start-and-end-performance-data-collection.md)
+ [Veri toplamayı denetleme](../profiling/controlling-data-collection.md)   
+ [Nasıl Yapılır: Başlangıç ve Bitiş Performans Verilerini Toplama](../profiling/how-to-start-and-end-performance-data-collection.md)

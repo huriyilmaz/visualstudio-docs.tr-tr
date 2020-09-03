@@ -16,10 +16,10 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: 418cc9f75842cb4f3e9d8c0c0753084e2f0633c2
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350816"
 ---
 # <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Visual Studio yükleme ve yükseltme sorunlarını giderme
@@ -122,7 +122,7 @@ Aşağıda, bir [çevrimdışı yükleme](create-an-offline-installation-of-visu
 
 | Sorun       | Öğe                   | Çözüm |
 | ----------- | ---------------------- | -------- |
-| Kullanıcıların dosyalara erişimi yok. | izinler (ACL 'Ler) | Çevrimdışı yüklemeyi paylaşmadan *önce* diğer kullanıcılara okuma erişimi sağlamak için Izinleri (ACL 'ler) ayarladığınızdan emin olun. |
+| Kullanıcıların dosyalara erişimi yok. | izinler (ACL 'Ler) | Çevrimdışı yüklemeyi paylaşmadan  *önce* diğer kullanıcılara okuma erişimi sağlamak için Izinleri (ACL 'ler) ayarladığınızdan emin olun. |
 | Yeni iş yükleri, bileşenler veya diller yüklenemez.  | `--layout`  | Kısmi bir düzenden yüklüyorsanız ve bu kısmi düzende daha önce indirilmeyen iş yükleri, bileşenler veya diller ' i seçerseniz Internet erişiminizin olduğundan emin olun. |
 
 Bir [ağ yüklemesiyle](create-a-network-installation-of-visual-studio.md)ilgili sorunları çözme hakkında daha fazla bilgi için bkz. [Visual Studio 'yu yüklerken veya kullanırken ağla Ilgili hatalarda sorun giderme](troubleshooting-network-related-errors-in-visual-studio.md).

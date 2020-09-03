@@ -10,10 +10,10 @@ manager: AndSter
 ms.workload:
 - multiple
 ms.openlocfilehash: 81c15753b083256b97c9f67219b64565a8db8736
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88247793"
 ---
 # <a name="analyze-memory-usage-by-using-the-net-object-allocation-tool"></a>.NET nesne ayırma aracı 'nı kullanarak bellek kullanımını analiz etme
@@ -36,7 +36,7 @@ Aracı çalıştırdıktan sonra, nesnelerin ayrıldığı işlev yürütme yoll
 
    ![Durdur toplamayı gösteren pencere](../profiling/media/stopcollectionlighttheme.png "Durdur toplamayı gösteren pencere")
 
-1. **Ayırma** sekmesini seçin. aşağıdaki ekran görüntüsüne benzer pencere içeriği görüntülenir.
+1. **Ayırma** sekmesini seçin. Aşağıdaki ekran görüntüsüne benzer pencere içeriği görüntülenir.
 
    ![Ayırma sekmesi](../profiling/media/allocationview.png "Ayırma sekmesi")
 

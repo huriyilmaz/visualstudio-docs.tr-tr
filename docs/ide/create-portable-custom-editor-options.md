@@ -1,22 +1,22 @@
 ---
 title: EditorConfig ayarları
-ms.date: 08/01/2018
+ms.date: 09/02/2020
 ms.topic: how-to
 helpviewer_keywords:
 - editorconfig [Visual Studio]
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
-ms.openlocfilehash: 30c2ce8a10a6a1001f8fb7c21ba7db7db7243fe4
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 59e226fc0cc09b1eda5197d6accddfa9bd1a20ed
+ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85770751"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89402263"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>EditorConfig ile taşınabilir, özel düzenleyici ayarları oluşturma
 
-Kod tabanında çalıştırılan herkes için tutarlı kodlama stillerini zorlamak üzere projenize veya kod tabanınıza bir [Editorconfig](https://editorconfig.org/) dosyası ekleyebilirsiniz. EditorConfig ayarları, Global Visual Studio metin Düzenleyicisi ayarlarından önceliklidir. Bu, her kod temelini o projeye özel metin düzenleyici ayarlarını kullanmak üzere uyarlayabileceğiniz anlamına gelir. Visual Studio **seçenekleri** iletişim kutusunda kendi kişisel düzenleyici tercihlerinizi ayarlamaya devam edebilirsiniz. Bu ayarlar, *. editorconfig* dosyası olmayan bir kod tabanında her çalıştığınızda veya *. editorconfig* dosyası belirli bir ayarı geçersiz kılmazsa geçerlidir. Bu tür bir tercihe bir örnek, girinti stili &mdash; sekmeleri veya boşluklardan oluşur.
+Kod tabanında çalıştırılan herkes için tutarlı kodlama stillerini zorlamak üzere projenize veya kod tabanınıza bir EditorConfig dosyası ekleyebilirsiniz. EditorConfig ayarları, Global Visual Studio metin Düzenleyicisi ayarlarından önceliklidir. Bu, her kod temelini o projeye özel metin düzenleyici ayarlarını kullanmak üzere uyarlayabileceğiniz anlamına gelir. Visual Studio **seçenekleri** iletişim kutusunda kendi kişisel düzenleyici tercihlerinizi ayarlamaya devam edebilirsiniz. Bu ayarlar, *. editorconfig* dosyası olmayan bir kod tabanında her çalıştığınızda veya *. editorconfig* dosyası belirli bir ayarı geçersiz kılmazsa geçerlidir. Bu tür bir tercihe bir örnek, girinti stili &mdash; sekmeleri veya boşluklardan oluşur.
 
 EditorConfig ayarları, Visual Studio da dahil olmak üzere çok sayıda kod Düzenleyicisi ve Ides tarafından desteklenir. Bu, kodunuzla taşınan taşınabilir bir bileşendir ve Visual Studio dışında bile kodlama stillerini uygulayabilir.
 

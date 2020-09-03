@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İleti özelliklerini görüntüleme | Microsoft Docs'
+title: 'Nasıl yapılır: Ileti özelliklerini görüntüleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,21 +12,21 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b440d2883a06b41b751b6ae84e41b118e864cfec
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205370"
 ---
 # <a name="how-to-display-message-properties"></a>Nasıl yapılır: İleti Özelliklerini Görüntüleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Listelenen bir ileti hakkında daha fazla bilgi için [iletiler görünümünü](../debugger/messages-view.md), kullanın [ileti özellikleri iletişim kutusu](../debugger/message-properties-dialog-box.md).  
+[Iletiler görünümünde](../debugger/messages-view.md)listelenen bir ileti hakkında daha fazla bilgi edinmek Için [Ileti özellikleri iletişim kutusunu](../debugger/message-properties-dialog-box.md)kullanın.  
   
-### <a name="to-open-a-message-properties-dialog-box"></a>İleti Özellikleri iletişim kutusunu açmak için  
+### <a name="to-open-a-message-properties-dialog-box"></a>Ileti özellikleri iletişim kutusunu açmak için  
   
-1. İletiler Görünümü'nde görüntülenen ağacından bir iletiyi seçin.  
+1. Iletiler görünümü ' nde görüntülenecek ağaç içinden bir ileti seçin.  
   
-2. Gelen **görünümü** menüsünde seçin **özellikleri**.  
+2. **Görünüm** menüsünde **Özellikler**' i seçin.  
   
-   Özellikler iletişim kutularında, bir Görünüm penceresi başka bir öğeye tıklayın ve iletişim kutusunda seçili öğeye bilgileri gösterir kalıcı, değildir.
+   Özellikler iletişim kutuları kalıcı değildir, bu nedenle bir görünüm penceresinde başka bir öğeye tıklayabilir ve iletişim kutusu seçili öğe hakkındaki bilgileri gösterir.

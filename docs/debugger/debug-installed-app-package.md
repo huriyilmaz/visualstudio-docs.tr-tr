@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - uwp
 ms.openlocfilehash: eabc694665bede7d193a360a01c42366568e33c5
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350738"
 ---
 # <a name="debug-an-installed-uwp-app-package-in-visual-studio"></a>Visual Studio 'da yüklü UWP uygulama paketinde hata ayıklama
@@ -54,7 +54,7 @@ UWP uygulamalarında hata ayıklama hakkında daha fazla bilgi için bkz. [yükl
 > [!NOTE]
 > Ayrıca, Visual Studio 'da **hata ayıklama**  >  **Ekle** ' ye tıklayarak çalışan UWP veya diğer uygulama işlemlerini de iliştirebilirsiniz. Çalışan bir işleme eklemek için özgün Visual Studio projesine ihtiyacınız yoktur, ancak uygulamanın simgelerini yüklemek, için özgün koda sahip olmadığınız bir işlemde hata ayıklamanın önemli ölçüde sağlanmasına yardımcı olur. Bkz. [hata ayıklayıcıda sembol ve kaynak dosyaları belirtme](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
 
-## <a name="debug-an-installed-uwp-app-on-a-remote-computer-or-device"></a><a name="remote"></a>Uzak bilgisayarda veya cihazda yüklü bir UWP uygulamasında hata ayıklama
+## <a name="debug-an-installed-uwp-app-on-a-remote-computer-or-device"></a><a name="remote"></a> Uzak bilgisayarda veya cihazda yüklü bir UWP uygulamasında hata ayıklama
 
 Visual Studio 'da bir Windows 10 cihazında veya uzak bir oluşturucunun güncelleştirme Windows 10 bilgisayarında yüklü bir UWP uygulamasını ilk kez yüklerken, uzaktan hata ayıklama araçları 'nı hedef cihaza yüklenir.
 

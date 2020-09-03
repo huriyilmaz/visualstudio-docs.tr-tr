@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: aed37ee9cdd8c221fcfb114db426a6286ee8ad6f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72673110"
 ---
 # <a name="add-code-to-datasets-in-n-tier-applications"></a>N katmanlı uygulamalarda veri kümelerine kod ekleme
@@ -28,13 +28,13 @@ Veri kümesi için kısmi bir sınıf dosyası oluşturarak ve buna kod ekleyere
 
 Veri kümesini tanımlayan kod, veri kümesi tanımında her değişiklik yapıldığında oluşturulur. Bu kod ayrıca, bir veri kümesinin yapılandırmasını değiştiren herhangi bir sihirbazın çalıştırılması sırasında değişiklikler yaptığınızda da oluşturulur. Bir veri kümesinin yeniden oluşturulması sırasında kodunuzun silinmesini engellemek için, veri kümesinin kısmi sınıf dosyasına kod ekleyin.
 
-Varsayılan olarak, veri kümesini ve `TableAdapter` kodunu ayırdıktan sonra sonuç, her projedeki ayrı bir sınıf dosyasıdır. Özgün projenin *DataSetName*adlı bir dosya vardır. Designer. vb (veya *DataSetName*. Designer.cs) `TableAdapter` kodu içerir. **DataSet proje** özelliğinde belirtilen projede, *DataSetName*adlı bir dosya bulunur. DataSet. Designer. vb (veya *DataSetName*. DataSet.Designer.cs). Bu dosya veri kümesi kodunu içerir.
+Varsayılan olarak, veri kümesini ve kodu ayırdıktan sonra `TableAdapter` sonuç, her projedeki ayrı bir sınıf dosyasıdır. Özgün projenin *DataSetName*adlı bir dosya vardır. Designer. vb (veya *DataSetName*. Designer.cs) `TableAdapter` kodu içerir. **DataSet proje** özelliğinde belirtilen projede, *DataSetName*adlı bir dosya bulunur. DataSet. Designer. vb (veya *DataSetName*. DataSet.Designer.cs). Bu dosya veri kümesi kodunu içerir.
 
 > [!NOTE]
-> Veri kümelerini ve `TableAdapter`s ayırdığınızda ( **DataSet proje** özelliğini ayarlayarak), projedeki mevcut kısmi veri kümesi sınıfları otomatik olarak taşınmaz. Mevcut veri kümesi kısmi sınıflarının veri kümesi projesine el ile taşınması gerekir.
+> Veri kümelerini ve `TableAdapter` öğeleri ( **veri kümesi proje** özelliğini ayarlayarak) ayırdığınızda, projedeki mevcut kısmi veri kümesi sınıfları otomatik olarak taşınmaz. Mevcut veri kümesi kısmi sınıflarının veri kümesi projesine el ile taşınması gerekir.
 
 > [!NOTE]
-> Doğrulama kodunun eklenmesi gerektiğinde, veri kümesi Tasarımcısı <xref:System.Data.DataTable.ColumnChanging> ve <xref:System.Data.DataTable.RowChanging> olay işleyicilerini oluşturmak için işlevsellik sağlar. Daha fazla bilgi için bkz. [n katmanlı bir veri kümesine doğrulama ekleme](../data-tools/add-validation-to-an-n-tier-dataset.md).
+> Doğrulama kodunun eklenmesi gerektiğinde, veri kümesi Tasarımcısı, oluşturma <xref:System.Data.DataTable.ColumnChanging> ve olay işleyicileri için işlevsellik sağlar <xref:System.Data.DataTable.RowChanging> . Daha fazla bilgi için bkz. [n katmanlı bir veri kümesine doğrulama ekleme](../data-tools/add-validation-to-an-n-tier-dataset.md).
 
 ## <a name="add-code-to-datasets-in-n-tier-applications"></a>N katmanlı uygulamalarda veri kümelerine kod ekleme
 
