@@ -1,5 +1,5 @@
 ---
-title: Yönetilen Koddaki COM Sabitleri | Microsoft Dokümanlar
+title: Yönetilen kodda COM sabitleri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,16 +11,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 919d000e44b90e975543f8aa6419968a40149adf
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739834"
 ---
 # <a name="com-constants-in-managed-code"></a>Yönetilen koddaki COM sabitleri
-Yönetilen Paket Çerçevesi (MPF), yönetilen kod için bazı standart COM sabitlerini kullanılabilir hale getirir. Bu sabitler referans ınız için aşağıda listelenmiştir.
+Yönetilen paket çerçevesi (MPF), bazı standart COM sabitleri yönetilen kod için kullanılabilir hale getirir. Bu sabitler, başvurunuz için aşağıda listelenmiştir.
 
-## <a name="boolean-hresult-values"></a>Boolean HRESULT değerleri
+## <a name="boolean-hresult-values"></a>Boole HRESULT değerleri
  <xref:Microsoft.VisualStudio.VSConstants.S_FALSE>
 
  <xref:Microsoft.VisualStudio.VSConstants.S_OK>
@@ -89,7 +89,7 @@ Yönetilen Paket Çerçevesi (MPF), yönetilen kod için bazı standart COM sabi
 
  <xref:Microsoft.VisualStudio.VSConstants.OLE_E_WRONGCOMPOBJ>
 
-## <a name="ole-dispatch-errors"></a>OLE gönderme hataları
+## <a name="ole-dispatch-errors"></a>OLE dağıtım hataları
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_ARRAYISLOCKED>
 
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_BADCALLEE>
@@ -127,4 +127,4 @@ Yönetilen Paket Çerçevesi (MPF), yönetilen kod için bazı standart COM sabi
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_UNKNOWNNAME>
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata işleme ve iade değerleri](../extensibility/error-handling-and-return-values.md)
+- [Hata işleme ve dönüş değerleri](../extensibility/error-handling-and-return-values.md)

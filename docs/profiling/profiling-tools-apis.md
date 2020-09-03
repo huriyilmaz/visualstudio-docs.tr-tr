@@ -1,5 +1,5 @@
 ---
-title: Profil Oluşturma Araçları API'leri | Microsoft Dokümanlar
+title: API 'Leri Profil Oluşturma Araçları | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: bd9ca972-e5bf-45a6-9a5d-ac30a4d9ee02
@@ -10,19 +10,19 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: ed4fef32c04d68f37df71101447a4e24f39eecba
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74772096"
 ---
 # <a name="profiling-tools-apis"></a>Profil Araçları API'leri
 
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profil oluşturma çalışmasında veri toplamayı denetlemek için Profil Oluşturma Araçları'nın API'lerinin yönetilen veya yerel yöntemlerini ekleyebilirsiniz. Bu bölümde API'lerin yöntemleri açıklanır ve bunların nasıl kullanılacağı açıklanmaktadır.
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Bir profil oluşturma çalıştırmasında veri toplamayı denetlemek için profil oluşturma araçları API 'lerinin yönetilen veya yerel yöntemlerini ekleyebilirsiniz. Bu bölümde API 'lerin yöntemleri açıklanmakta ve bunların nasıl kullanılacağı açıklanmaktadır.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-[Visual Studio Profil Oluşturucu API Başvurusu (Yerel)](../profiling/visual-studio-profiler-api-reference-native.md)
+[Visual Studio profil oluşturucu API başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)
 
 C++ Profil Oluşturma Araçları yöntemlerini açıklar.
 
@@ -30,9 +30,9 @@ C++ Profil Oluşturma Araçları yöntemlerini açıklar.
 
 .NET Profil Oluşturma Araçları yöntemlerini açıklar.
 
-[İzleyici: Profiler API'lerini kullanma](../profiling/walkthrough-using-profiler-apis.md)
+[İzlenecek yol: profil oluşturucu API 'Leri kullanma](../profiling/walkthrough-using-profiler-apis.md)
 
-Bu tam örnekte .NET Profil Oluşturma Araçları yöntemlerini nasıl kullanacağınızı öğrenin.
+.NET Profil Oluşturma Araçları yöntemlerini bu bütün örnekte kullanmayı öğrenin.
 
 ## <a name="related-sections"></a>İlgili bölümler
 

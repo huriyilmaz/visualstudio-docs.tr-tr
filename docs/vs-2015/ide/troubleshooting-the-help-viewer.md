@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2cedc9f45d2e21684496bd882de4aa74b3bf8b3d
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851074"
 ---
 # <a name="troubleshooting-the-help-viewer"></a>Yardım Görüntüleyici'de Sorun Giderme
@@ -45,7 +45,7 @@ Bu konuda, yardım görüntüleyiciyle karşılaşabileceğiniz sorunlar ele al�
 ## <a name="additional-resources"></a>Ek Kaynaklar
  Aşağıdaki kaynakları kullanarak daha fazla bilgi alabilir ve Yardım Görüntüleyicisi hakkında geri bildirim sağlayabilirsiniz:
 
-- Geri bildirim sağlamak için Microsoft Web sitesinde [Microsoft Connect](https://connect.microsoft.com/) 'e bakın veya [hlpfdbk@microsoft.com](mailto:hlpfdbk@microsoft.com)e-posta gönderin.
+- Geri bildirim sağlamak için Microsoft Web sitesinde [Microsoft Connect](https://connect.microsoft.com/) 'e bakın veya adresine e-posta gönderin [hlpfdbk@microsoft.com](mailto:hlpfdbk@microsoft.com) .
 
 - Daha fazla bilgi için [Geliştirici belgelerine ve yardım sistemi](https://social.msdn.microsoft.com/Forums/en-US/devdocs/threads) forumuna ve [Yardım Guy](https://blogs.msdn.com/b/thehelpguy/) bloguna bakın.
 

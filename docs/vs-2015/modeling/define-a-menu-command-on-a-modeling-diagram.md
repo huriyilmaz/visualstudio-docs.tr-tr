@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4b6481a56b4cbc254baaee3ae087201df69c371b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534218"
 ---
 # <a name="define-a-menu-command-on-a-modeling-diagram"></a>Modelleme diyagramında menü komutu tanımlama
@@ -166,13 +166,13 @@ Visual Studio 'da, UML diyagramının kısayol menülerinde ek menü öğeleri t
 
          **Proje**  =  *Sınıf kitaplığı projeniz*
 
-## <a name="implementing-the-menu-command"></a><a name="Implementing"></a>Menü komutunu uygulama
+## <a name="implementing-the-menu-command"></a><a name="Implementing"></a> Menü komutunu uygulama
  Menü komut sınıfı için gerekli yöntemleri uygular <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> .
 
-|İmza|Açıklama|
+|İmza|Description|
 |-|-|
 |`string Text { get; }`|Menü öğesinin etiketini döndürün.|
-|`void QueryStatus(IMenuCommand command);`|Kullanıcı diyagramda sağ tıkladığında çağırılır.<br /><br /> Bu yöntem modeli değiştirmemelidir.<br /><br /> `DiagramContext.CurrentDiagram.SelectedShapes`Komutun görünmesini ve etkinleştirilmesini isteyip istemediğinizi öğrenmek için kullanın.<br /><br /> Kurmak<br /><br /> -   `command.Visible``true`Kullanıcı diyagramda sağ tıkladığında komutun menüde görünmesi gerekir<br />-   `command.Enabled``true`Kullanıcı menüdeki komutuna tıkladıysanız<br />-   `command.Text`Menü etiketini dinamik olarak ayarlamak için|
+|`void QueryStatus(IMenuCommand command);`|Kullanıcı diyagramda sağ tıkladığında çağırılır.<br /><br /> Bu yöntem modeli değiştirmemelidir.<br /><br /> `DiagramContext.CurrentDiagram.SelectedShapes`Komutun görünmesini ve etkinleştirilmesini isteyip istemediğinizi öğrenmek için kullanın.<br /><br /> Kurmak<br /><br /> -   `command.Visible``true`Kullanıcı diyagramda sağ tıkladığında komutun menüde görünmesi gerekir<br />-   `command.Enabled``true`Kullanıcı menüdeki komutuna tıkladıysanız<br />-   `command.Text` Menü etiketini dinamik olarak ayarlamak için|
 |`void Execute (IMenuCommand command);`|Görünür ve etkinse Kullanıcı menü öğesine tıkladığında çağırılır.|
 
 ### <a name="accessing-the-model-in-code"></a>Koddaki modele erişme
@@ -209,7 +209,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
  Ancak, model deposunun iş parçacığı güvenli olmadığı farkında olmalısınız. Güncelleştirme yapmak için Kullanıcı arabirimi (UI) iş parçacığını her zaman kullanmanız gerekir ve mümkünse arka plan işlemi devam ederken kullanıcının düzenlemeler yapmasını önleyin. Bir örnek için bkz. [arka plan iş parçacığından UML modelini güncelleştirme](../modeling/update-a-uml-model-from-a-background-thread.md).
 
-## <a name="executing-the-menu-command"></a><a name="Executing"></a>Menü komutu yürütülüyor
+## <a name="executing-the-menu-command"></a><a name="Executing"></a> Menü komutu yürütülüyor
  Test amaçları için, komut hata ayıklama modunda komutunu yürütün.
 
 #### <a name="to-test-the-menu-command"></a>Menü komutunu test etmek için
@@ -222,7 +222,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
     - Birden çok projeniz varsa, VSıX projesinin çözümün başlangıç projesi olarak ayarlandığından emin olun.
 
-    - Çözüm Gezgini, başlangıç veya yalnızca projenin kısayol menüsünde **Özellikler**' i seçin. Proje özellikleri düzenleyicisinde **Hata Ayıkla** sekmesini seçin. **dış program Başlat** alanındaki dizenin, genellikle tam yol adı olduğundan emin olun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] :
+    - Çözüm Gezgini, başlangıç veya yalnızca projenin kısayol menüsünde **Özellikler**' i seçin. Proje özellikleri düzenleyicisinde **Hata Ayıkla** sekmesini seçin. **Dış program Başlat** alanındaki dizenin, genellikle tam yol adı olduğundan emin olun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] :
 
          `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
@@ -240,7 +240,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
     - Kullandığınız model diyagramın türü (UML sınıfı, sırası, vb.) menü komut sınıfı özniteliklerinden biri olarak listelenir `[ClassDesignerExtension]` `[SequenceDesignerExtension]` ve bu şekilde devam eder.
 
-## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a>Uzantı yükleme ve kaldırma
+## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a> Uzantı yükleme ve kaldırma
  Bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] uzantıyı, hem kendi bilgisayarınıza hem de diğer bilgisayarlara yükleyebilirsiniz.
 
 #### <a name="to-install-an-extension"></a>Uzantı yüklemek için
@@ -273,7 +273,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
    *% LocalAppData%* **\Local\microsoft\visualstudio \\ [sürüm] \Extensions**
 
-## <a name="example"></a><a name="MenuExample"></a>Örneğinde
+## <a name="example"></a><a name="MenuExample"></a> Örneğinde
  Aşağıdaki örnek, bir sınıf diyagramında iki öğenin adlarını değiş tokuş edecek bir menü komutu için kodu gösterir. Bu kodun bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantı projesinde oluşturulması ve önceki bölümlerde açıklandığı gibi yüklenmesi gerekir.
 
 ```

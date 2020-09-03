@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2::LaunchSuspended | Microsoft Dokümanlar
+title: 'IDebugPortEx2:: Launchaskıya alındı | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 28ff6065bbe83852b5acc3ffe253a0bdabcc67ec
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725104"
 ---
 # <a name="idebugportex2launchsuspended"></a>IDebugPortEx2::LaunchSuspended
-Çalıştırılabilir bir dosya başlatıyor.
+Yürütülebilir bir dosya başlatır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT LaunchSuspended( 
@@ -55,36 +55,36 @@ int LaunchSuspended( 
 
 ## <a name="parameters"></a>Parametreler
 `pszExe`\
-[içinde] Başlatılacak yürütülebilir adı. Bu tam bir yol veya `pszDir` parametre belirtilen çalışma dizini göreli olabilir.
+'ndaki Başlatılacak yürütülebilir dosyanın adı. Bu, tam yol veya parametrede belirtilen çalışma dizinine göre olabilir `pszDir` .
 
 `pszArgs`\
-[içinde] Yürütülebilir geçmek için argümanlar. Bağımsız değişken yoksa null bir değer olabilir.
+'ndaki Yürütülebilir dosyaya geçirilecek bağımsız değişkenler. Bağımsız değişken yoksa, null bir değer olabilir.
 
 `pszDir`\
-[içinde] Çalıştırılabilen tarafından kullanılan çalışma dizininin adı. Çalışma dizini gerekli değilse, null bir değer olabilir.
+'ndaki Yürütülebilir dosya tarafından kullanılan çalışma dizininin adı. Çalışma dizini gerekmiyorsa null değeri olabilir.
 
 `bstrEnv`\
-[içinde] Null-sonlandırılan dizeleri çevre bloğu, ek bir NULL sonlandırıcı izledi.
+'ndaki Null ile sonlandırılmış dizelerin ortam bloğu ve ardından ek bir NULL Sonlandırıcı.
 
 `hStdInput`\
-[içinde] Alternatif bir giriş akışına işitin. Yeniden yönlendirme gerekli değilse 0 olabilir.
+'ndaki Alternatif bir giriş akışına işleyin. Yeniden yönlendirme gerekmiyorsa 0 olabilir.
 
 `hStdOutput`\
-[içinde] Alternatif bir çıktı akışına işitin. Yeniden yönlendirme gerekli değilse 0 olabilir.
+'ndaki Alternatif bir çıkış akışına işleyin. Yeniden yönlendirme gerekmiyorsa 0 olabilir.
 
 `hStdError`\
-[içinde] Alternatif bir hata çıktısı akışına işitin. Yeniden yönlendirme gerekli değilse 0 olabilir.
+'ndaki Alternatif bir hata çıktı akışına işleyin. Yeniden yönlendirme gerekmiyorsa 0 olabilir.
 
 `ppPortProcess`\
-[çıkış] Başlatılan işlemi temsil eden bir [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) nesnesi döndürür.
+dışı Başlatılan işlemi temsil eden bir [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, askıya alınması ve herhangi bir kod çalışmaması için işlemi başlatmalıdır. [ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md) yöntemi işlemi devam ettirmek için çağrılır.
+ Bu yöntem, askıya alınmış ve herhangi bir kod çalıştırmayan için işlemi başlatacaktır. İşlemi sürdürecek [ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md) yöntemi çağırılır.
 
- Bir program hata ayıklama motorundan da başlatılabilir. Ayrıntılar için [bkz.](../../../extensibility/debugger/launching-a-program.md)
+ Ayrıca, bir program hata ayıklama altyapısından başlatılabilir. Ayrıntılar için bkz. [Program başlatma](../../../extensibility/debugger/launching-a-program.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)

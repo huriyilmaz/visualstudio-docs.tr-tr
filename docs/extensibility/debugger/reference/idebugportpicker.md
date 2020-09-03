@@ -1,5 +1,5 @@
 ---
-title: IDebugPortPicker | Microsoft Dokümanlar
+title: Idebugportpicker | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,35 +11,35 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 554ac24d7148f0d5de07779f35376b28b7ff7b07
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724841"
 ---
 # <a name="idebugportpicker"></a>IDebugPortPicker
-Bağlantı noktasını seçmek için özelleştirilmiş bir ara birimi temsil eder.
+Bağlantı noktasını seçmek için özelleştirilmiş bir kullanıcı arabirimini temsil eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugPortPicker : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Bu arabirim liman tedarikçileri tarafından uygulanır. Bir bağlantı noktası tedarikçisi, bağlantı noktası seçicisini CLSID olarak `metricPortPickerCLSID` teşhir ederek ve ölçümü açığa çıkan CLSID'ye işaret ederek tanımlar.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Bu arabirim, bağlantı noktası tedarikçileri tarafından uygulanır. Bir bağlantı noktası tedarikçisinin bağlantı noktası seçiciyi bir CLSID olarak işaretleyerek ve `metricPortPickerCLSID` ortaya ÇıKAN CLSID üzerinde ölçerek tanımlar.
 
 ## <a name="methods"></a>Yöntemler
- Aşağıdaki tabloda `IDebugPortPicker`.
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugPortPicker` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[DisplayPortPicker](../../../extensibility/debugger/reference/idebugportpicker-displayportpicker.md)|Kullanıcının bir bağlantı noktası seçmesine izin veren belirtilen iletişim kutusunu görüntüler.|
-|[SetSite](../../../extensibility/debugger/reference/idebugportpicker-setsite.md)|Servis sağlayıcıyı ayarlar.|
+|[DisplayPortPicker](../../../extensibility/debugger/reference/idebugportpicker-displayportpicker.md)|Kullanıcının bir bağlantı noktası seçmesini sağlayan, belirtilen iletişim kutusunu görüntüler.|
+|[SetSite](../../../extensibility/debugger/reference/idebugportpicker-setsite.md)|Hizmet sağlayıcıyı ayarlar.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: Msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll

@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerObject::GetBytes | Microsoft Dokümanlar
+title: 'Ihata ayıklama Gpoınterobject:: GetBytes | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 17bc39f65d7c4c42b4f958b559df7c5b7d3bbdf7
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725521"
 ---
 # <a name="idebugpointerobjectgetbytes"></a>IDebugPointerObject::GetBytes
-Ardışık baytlar bir dizi olarak işaret değeri alır.
+Ardışık bayt dizisi olarak işaret edilen değeri alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetBytes( 
@@ -47,22 +47,22 @@ int GetBytes(
 
 ## <a name="parameters"></a>Parametreler
 `dwStart`\
-[içinde] Bir ofset, bayt, nesnenin başından itibaren işaret.
+'ndaki İşaret edilen nesnenin başından itibaren bayt cinsinden bir konum.
 
 `dwCount`\
-[içinde] Alınacak bayt sayısı.
+'ndaki Alınacak bayt sayısı.
 
 `pBytes`\
-[içinde, dışarı] Işaret edilen nesneden verilen ofset ten başlayarak, ardışık bayt lar dizisi olarak değerle doldurulan bir dizi.
+[in, out] Değerin işaret ettiği nesnenin verilen uzaklığında başlayarak ardışık bayt dizisi olarak değer ile doldurulmuş bir dizi.
 
 `pdwBytes`\
-[çıkış] Alınan bayt sayısını verir.
+dışı Gerçekten alınan bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) tarafından temsil edilen işaretçi ilkel bir türe veya basit bir ilkel tür dizisine (diğer bir şekilde, basit bir bayt dizisiyle temsil edilebilen bir dizi) işaret ederse bu yöntem kullanılır.
+ Bu yöntem, bu [Ihata ayıklama Gpoınterobject](../../../extensibility/debugger/reference/idebugpointerobject.md) tarafından temsil edilen işaretçi temel bir türe veya basit türlerin basit bir dizisine (yani basit bir bayt dizisiyle temsil edilebilir bir dizi) işaret ediyorsa kullanılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md)

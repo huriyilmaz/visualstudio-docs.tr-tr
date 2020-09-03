@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerObject::SetBytes | Microsoft Dokümanlar
+title: 'Ihata ayıklama Gpoınterobject:: SetBytes | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: dede3ee5291afbfbeab4d6e60dcbd56e205e4526
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725507"
 ---
 # <a name="idebugpointerobjectsetbytes"></a>IDebugPointerObject::SetBytes
-Ardışık bayt lar dizisinin işaret ettiği değeri ayarlar.
+İşaret edilen değeri ardışık baytların bir serisinden belirler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT SetBytes( 
@@ -47,22 +47,22 @@ int SetBytes(
 
 ## <a name="parameters"></a>Parametreler
 `dwStart`\
-[içinde] Bir ofset, bayt, nesnenin başından itibaren işaret.
+'ndaki İşaret edilen nesnenin başından itibaren bayt cinsinden bir konum.
 
 `dwCount`\
-[içinde] Ayarlanan bayt sayısı.
+'ndaki Ayarlanacak bayt sayısı.
 
 `pBytes`\
-[içinde] Yeni değeri temsil eden bir dizi bayt. Bu değer, verilen ofset başlayarak nesneye depolanır.
+'ndaki Yeni değeri temsil eden bir bayt dizisi. Bu değer, belirtilen kaydırmadan başlayarak nesnesine depolanır.
 
 `pdwBytes`\
-[çıkış] Ayarlanan bayt sayısını verir.
+dışı Gerçekten ayarlanan bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) tarafından temsil edilen işaretçi ilkel bir türe veya basit bir ilkel tür dizisine (diğer bir şekilde, basit bir bayt dizisiyle temsil edilebilen bir dizi) işaret ederse bu yöntem kullanılır. Bu `IDebugPointerObject` nesne null bir başvuru olamaz (bellekte bir adrese işaret etmelidir).
+ Bu yöntem, bu [Ihata ayıklama Gpoınterobject](../../../extensibility/debugger/reference/idebugpointerobject.md) tarafından temsil edilen işaretçi temel bir türe veya basit türlerin basit bir dizisine (yani basit bir bayt dizisiyle temsil edilebilir bir dizi) işaret ediyorsa kullanılır. Bu `IDebugPointerObject` nesne null bir başvuru olamaz (bellekte bir adrese işaret etmelidir).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [GetBytes](../../../extensibility/debugger/reference/idebugpointerobject-getbytes.md)

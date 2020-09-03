@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9f7c49eadcfa0b73997f9902bdde0b8a9c98065e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533738"
 ---
 # <a name="shortcut-keys-in-help-viewer"></a>Yardım görüntüleyicisinde kısayol tuşları
@@ -42,28 +42,28 @@ Aşağıdaki tablodaki kısayol tuşlarını kullanarak **Microsoft Yardım Gör
 |Gezginlerini|**Alt** + **F**<br /><br /> -VEYA-<br /><br /> **CTRL** + **SHIFT** + **F**|**Sık Kullanılanlar** sekmesini görüntüleyin.|
 |Gezginlerini|**Alt** + **S**<br /><br /> -VEYA-<br /><br /> **CTRL** + E<br /><br /> -VEYA-<br /><br /> **CTRL** + **SHIFT** + **S**|**Arama** sekmesini görüntüleyin.|
 |Gezginlerini|**Alt** + **A**<br /><br /> -VEYA-<br /><br /> **CTRL** + **SHIFT** + **A**|**Içeriği Yönet** sekmesini görüntüleyin.|
-|Konu başlığı|**Kısayol menü** tuşu<br /><br /> OR<br /><br /> **SHIFT** + **F10**|Geçerli UI öğesi için kısayol menüsünü görüntüler.|
-|Konu başlığı|**Yukarı Ok**|Belgenin başlangıcına doğru her seferinde bir satır başı kaydırın.|
-|Konu başlığı|**Aşağı Ok**|Tek seferde belgenin sonuna doğru ilerleyin.|
-|Konu başlığı|**Page Up**|Belgenin başlangıcına doğru her seferinde bir ekran kaydırın.|
-|Konu başlığı|**Page Down**|Belgenin sonuna doğru bir ekran kaydırmak için bir seferde bir ekran.|
-|Konu başlığı|**Giriş**|Belgenin başlangıcına gidin.|
-|Konu başlığı|**Erer**|Belgenin sonuna taşı.|
-|Konu başlığı|**CTRL** + **F**|Bu sayfada arama metni bulun.|
-|Konu başlığı|**F5**|Geçerli sayfayı yenileyin.|
-|Konu başlığı|**CTRL** + **P**|Geçerli sayfayı yazdır.|
-|Konu başlığı|**CTRL** + **F2**|Geçerli sayfanın baskı önizlemesini görüntüleyin.|
-|Konu başlığı|**F4**|Geçerli sayfa için **Özellikler** iletişim kutusunu görüntüleyin.|
-|Konu başlığı|**CTRL** + **T**|Ön planda başka bir içerik sekmesi açın.|
-|Konu başlığı|**CTRL** + **Tıklama**|Ön planda yeni bir sekmede bağlantı açın.|
-|Konu başlığı|**CTRL** + **Sekme**|Sekmelerin arasından soldan sağa geçiş yapın.|
-|Konu başlığı|**CTRL** + **SHIFT** + **Sekme**|Sekmeler arasında sağdan sola geçiş yapın.|
-|Konu başlığı|**CTRL** + **W**|Geçerli sekmeyi kapatın.|
-|Konu başlığı|**CTRL** + ** _Sayı_**|**_Sayının_** 1 ile 9 arasında olduğu belirli bir sekmeye geçin ve hangi sekmenin sırada olduğunu gösterir.|
-|Konu başlığı|**CTRL** + **Alt** + **F4**|Diğer içerik sekmelerini kapatın.|
-|Konu başlığı|**CTRL** + **SHIFT** + **Artı işareti**|Yakınlaştırmayı %10 oranında arttırın.|
-|Konu başlığı|**CTRL** + **Eksi işareti**|%10 oranında yakınlaştırmayı azalt.|
-|Konu başlığı|**CTRL** + **0** (sıfır)|Yakınlaştırmayı %100 olarak değiştirin.|
+|Konu|**Kısayol menü** tuşu<br /><br /> VEYA<br /><br /> **SHIFT** + **F10**|Geçerli UI öğesi için kısayol menüsünü görüntüler.|
+|Konu|**Yukarı Ok**|Belgenin başlangıcına doğru her seferinde bir satır başı kaydırın.|
+|Konu|**Aşağı Ok**|Tek seferde belgenin sonuna doğru ilerleyin.|
+|Konu|**Page Up**|Belgenin başlangıcına doğru her seferinde bir ekran kaydırın.|
+|Konu|**Page Down**|Belgenin sonuna doğru bir ekran kaydırmak için bir seferde bir ekran.|
+|Konu|**Giriş**|Belgenin başlangıcına gidin.|
+|Konu|**Erer**|Belgenin sonuna taşı.|
+|Konu|**CTRL** + **F**|Bu sayfada arama metni bulun.|
+|Konu|**F5**|Geçerli sayfayı yenileyin.|
+|Konu|**CTRL** + **P**|Geçerli sayfayı yazdır.|
+|Konu|**CTRL** + **F2**|Geçerli sayfanın baskı önizlemesini görüntüleyin.|
+|Konu|**F4**|Geçerli sayfa için **Özellikler** iletişim kutusunu görüntüleyin.|
+|Konu|**CTRL** + **T**|Ön planda başka bir içerik sekmesi açın.|
+|Konu|**CTRL** + **Tıklama**|Ön planda yeni bir sekmede bağlantı açın.|
+|Konu|**CTRL** + **Sekme**|Sekmelerin arasından soldan sağa geçiş yapın.|
+|Konu|**CTRL** + **SHIFT** + **Sekme**|Sekmeler arasında sağdan sola geçiş yapın.|
+|Konu|**CTRL** + **W**|Geçerli sekmeyi kapatın.|
+|Konu|**CTRL** + ** _Sayı_**|**_Sayının_** 1 ile 9 arasında olduğu belirli bir sekmeye geçin ve hangi sekmenin sırada olduğunu gösterir.|
+|Konu|**CTRL** + **Alt** + **F4**|Diğer içerik sekmelerini kapatın.|
+|Konu|**CTRL** + **SHIFT** + **Artı işareti**|Yakınlaştırmayı %10 oranında arttırın.|
+|Konu|**CTRL** + **Eksi işareti**|%10 oranında yakınlaştırmayı azalt.|
+|Konu|**CTRL** + **0** (sıfır)|Yakınlaştırmayı %100 olarak değiştirin.|
 |Dizin oluşturma|**Sekmesinde**|Anahtar sözcük girdisinden anahtar sözcük listesine kaydır.|
 |Dizin oluşturma|**CTRL** + **K**|Belirttiğiniz anahtar sözcüğü içeren girişleri ve belirttiğiniz anahtar sözcüğü ile başlayan girdileri gösterme arasında geçiş yapın.|
 |Sık Kullanılanlar|**CTRL** + **SHIFT** + **Del**|Göz atma geçmişinizi temizleyin.|
@@ -80,7 +80,7 @@ Aşağıdaki tablodaki kısayol tuşlarını kullanarak **Microsoft Yardım Gör
 |Görüntüleyici Seçenekleri|**Alt** + **H**|Odağı, **kaydedilen en fazla geçmiş girdileri** listesine göre değiştirin.|
 |Görüntüleyici Seçenekleri|**Alt** + **E**|Etkinleştirilirse, **tüm gezinme sekmeleri ve F1 Isteklerinde İngilizce Içeriği dahil et** onay kutusunu işaretleyin veya temizleyin.|
 |Görüntüleyici Seçenekleri|**Alt** + **O**|**İçerik güncelleştirmelerini denetlemek için çevrimiçi ol** onay kutusunu seçin veya temizleyin.|
-|Bul|**Enter**|Odağı sonraki öğeye değiştirme.|
+|Bul|**Girmesini**|Odağı sonraki öğeye değiştirme.|
 |Bul|**SHIFT** + Şunu **girin**|Odağı önceki öğeye değiştir.|
 |Bul|**Esc**|**Bul** metin kutusunu gizler.|
 |Durum çubuğu|**Alt** + **E**|Durum çubuğunda bir hata oluştuğunu gösteriyorsa **hata** iletişim kutusunu açın.|

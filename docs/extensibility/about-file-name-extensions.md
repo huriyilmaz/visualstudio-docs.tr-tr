@@ -1,5 +1,5 @@
 ---
-title: Dosya Adı Uzantıları Hakkında | Microsoft Dokümanlar
+title: Dosya adı uzantıları hakkında | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,18 +12,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 03e07ec233ef975441a1f10507f0db872051558f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80740350"
 ---
 # <a name="about-file-name-extensions"></a>Dosya adı uzantıları hakkında
-Bir VSPackage'ın dosya uzantısını kaydettirdiğinizde, dosyayı bir .. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Bir bilgisayarda birden fazla [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sürümü yüklüyse bu önemlidir.
+VSPackage 'un bir dosya uzantısını kaydettiğinizde, bunu bir sürümüyle ilişkilendirirsiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Bir bilgisayarda birden fazla sürümü yüklüyse bu önemlidir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
- VSPackages için dosya uzantıları, ilişkili programlı tanımlayıcıya (ProgID) işaret eden varsayılan bir değere sahip **HKEY_CLASSES_ROOT** anahtar altında kaydedilir.
+ VSPackages için dosya uzantıları, ilişkili programlı tanımlayıcıyı (ProgID) gösteren varsayılan bir değer olan **HKEY_CLASSES_ROOT** anahtarı altına kaydedilir.
 
- Aşağıdaki örnekte *.vcproj* dosya uzantısı için kayıt bilgileri gösterilmektedir:
+ Aşağıdaki örnek, *. vcproj* dosya uzantısının kayıt bilgilerini gösterir:
 
 ```
 HKEY_CLASSES_ROOT\
@@ -31,9 +31,9 @@ HKEY_CLASSES_ROOT\
       (default)=" VisualStudio.vcproj.8.0"
 ```
 
- İlişkili [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] dosyaların progid sürümü olması gerekir, örneğin. `VisualStudio.vcproj.8.0` Sürümlü ProgID, ürünün yan yana yüklenmesini sağlayarak ürün sürümleri arasında dosya uzantısı ilişkilendirmelerini korur. Bir sürüm özel ProgID de standart fiiller kullanmanıza olanak sağlar, açık gibi, düzenleme, ve benzeri, overwriting veya diğer [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]uygulamalar veya sürümleri tarafından üzerine yazılmış olma endişesi olmadan .
+ İle ilişkili dosyalar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , gibi sürümlü bir ProgID 'ye sahip olmalıdır `VisualStudio.vcproj.8.0` . Sürümlü bir ProgID, ürün sürümleri arasında dosya uzantısı ilişkilendirmelerini sürdürmek için ürünün yan yana yüklemelerine izin verir. Sürüme özgü bir ProgID Ayrıca, diğer uygulamalar veya sürümleri için üzerine yazma veya üzerine yazma sorunu olmadan açık, düzenleme, vb. gibi standart yüklemleri kullanmanıza da olanak tanır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
- Bazı durumlarda, bir dosya uzantısı ile ilişkili ProgID değiştirilmemelidir. Örneğin, *.htm* dosya uzantısı için ProgID (progid = htmlfile) işletim sistemindeki bir dizi yerde sabit kodlanır ve *.htm* ve *.html* dosyalarıyla bağlantılı olarak yaygın olarak bilinir ve kullanılır.
+ Belirli durumlarda, bir dosya uzantısıyla ilişkili ProgID değiştirilmemelidir. Örneğin, *. htm* dosya uzantısı (ProgID = htmlfile) için ProgID, işletim sistemindeki birkaç yerde sabit kodlanmış ve *. htm* ve *. html* dosyalarıyla ilişkilendirmede yaygın olarak bilinir ve kullanılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yan yana dağıtımlar için dosya adı uzantılarını kaydetme](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md)

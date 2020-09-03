@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 3ae48670fceb78ff85f395852f0a31414f37e8cf
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349074"
 ---
 # <a name="specify-an-older-net-framework-version-for-debugging-c-visual-basic-f"></a>Hata ayıklama için eski bir .NET Framework sürümü belirtin (C#, Visual Basic, F #)
@@ -58,7 +58,7 @@ Bu hatanın göründüğü nadir durumlarda, bir kayıt defteri anahtarını, ha
 
 7. **Dize Düzenle** kutusuna **değer** kutusuna .NET Framework sürüm numarasını yazın. Örneğin: V 1.1.4322
 
-8. **Tamam**'a tıklayın.
+8. **Tamam**’a tıklayın.
 
 9. **Kayıt defteri düzenleyicisini**kapatın.
 

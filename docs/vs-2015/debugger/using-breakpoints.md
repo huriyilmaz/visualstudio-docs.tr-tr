@@ -42,17 +42,17 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bbe2ecf89f94cc75ff9036285ae9acbf9cf3b657
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534504"
 ---
 # <a name="using-breakpoints"></a>Kesme Noktalarını Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 Hata ayıklayıcı yürütmeyi durdurmak istediğinizde, belki kod değişkenlerinin durumunu görmek veya çağrı yığınına bakmak için kesme noktaları ayarlayabilirsiniz. Geliştirici araç kutusundaki en önemli hata ayıklama tekniklerinden biridir.
   
-## <a name="setting-a-function-breakpoint-in-source-code"></a><a name="BKMK_Overview"></a>Kaynak kodunda bir işlev kesme noktası ayarlama  
+## <a name="setting-a-function-breakpoint-in-source-code"></a><a name="BKMK_Overview"></a> Kaynak kodunda bir işlev kesme noktası ayarlama  
  Kaynak kodda bir işlev kesme noktası, kaynak kodu dosyasının sol kenar boşluğuna tıklayarak ya da imlecinizi bir kod satırına yerleştirerek ve F9 tuşuna basarak ayarlarsınız. Kesme noktası sol kenar boşluğunda kırmızı nokta olarak görünür ve kod satırı da renklendirilir:  
   
  ![Kesme noktası ayarlama](../debugger/media/basicbreakpoint.png "BasicBreakpoint")  
@@ -67,10 +67,10 @@ Hata ayıklayıcı yürütmeyi durdurmak istediğinizde, belki kod değişkenler
   
  Herhangi bir çalıştırılabilir kod satırında bir kesme noktası ayarlayabilirsiniz. Örneğin, yukarıdaki C# kodunda, değişken bildiriminde, `for` döngüde veya döngü içindeki herhangi bir kodda bir kesme noktası ayarlayabilirsiniz `for` , ancak ad alanı veya sınıf bildirimlerinde veya yöntem imzasında bir kesme noktası ayarlayamazsınız.  
   
-## <a name="setting-other-kinds-of-breakpoints"></a><a name="BKMK_Set_a_breakpoint_in_a_source_file"></a>Diğer kesme noktası türlerini ayarlama  
+## <a name="setting-other-kinds-of-breakpoints"></a><a name="BKMK_Set_a_breakpoint_in_a_source_file"></a> Diğer kesme noktası türlerini ayarlama  
  Ayrıca, çağrı yığınında, ayrıştırma penceresinde ve yerel C++ kodunda, bir veri koşulunda veya bir bellek adresinde kesme noktaları da ayarlayabilirsiniz.  
   
-## <a name="setting-a-breakpoint-in-the-call-stack-window"></a><a name="BKMK_Set_a_breakpoint_in_the_call_stack_window"></a>Çağrı yığını penceresinde bir kesme noktası ayarlama  
+## <a name="setting-a-breakpoint-in-the-call-stack-window"></a><a name="BKMK_Set_a_breakpoint_in_the_call_stack_window"></a> Çağrı yığını penceresinde bir kesme noktası ayarlama  
  **Çağrı yığını** penceresinde bir kesme noktası ayarlayarak, çağırma işlevinin döndürdüğü yönergeden veya satırda yürütmeyi kesebilirsiniz. Çağrı yığını hakkında daha fazla bilgi için bkz. [nasıl yapılır: çağrı yığını penceresini kullanma](../debugger/how-to-use-the-call-stack-window.md). Hata ayıklayıcının yürütülmesi durmuş olmalıdır.  
   
 1. Uygulamada hata ayıklamayı başlatın ve yürütme bekleme durdurulur (örneğin, bir kesme noktasında). **Çağrı yığını** penceresini açın (**hata ayıklama/Windows/çağrı yığını**veya **Ctrl + Alt + C**).  
@@ -90,7 +90,7 @@ Hata ayıklayıcı yürütmeyi durdurmak istediğinizde, belki kod değişkenler
   
 2. Kesmek istediğiniz yönergede sol kenar boşluğuna tıklayın veya imlecinizi yönergede ayarlayın ve **F9**tuşuna basın.  
   
-## <a name="setting-a-data-breakpoint-native-c-only"></a><a name="BKMK_set_a_data_breakpoint_native_cplusplus_only"></a>Veri kesme noktası ayarlama (yalnızca yerel C++)  
+## <a name="setting-a-data-breakpoint-native-c-only"></a><a name="BKMK_set_a_data_breakpoint_native_cplusplus_only"></a> Veri kesme noktası ayarlama (yalnızca yerel C++)  
  Veri kesme noktaları, belirtilen bir bellek adresinde depolanan bir değer değiştiğinde yürütmeyi keser. Değer salt okunurdur, ancak değiştirilmez, yürütme kesintiye uğramaz. Veri kesme noktaları ayarlamak için, hata ayıklayıcı kesme modunda olmalıdır.  
   
 1. Uygulamada hata ayıklamayı başlatın ve bir kesme noktasına ulaşılana kadar bekleyin. **Hata Ayıkla** menüsünde **Yeni kesme noktası/veri kesme noktası** ' nı seçin (veya **kesme noktaları** penceresini açın ve **Yeni/veri kesme noktası**' nı seçin.  
@@ -114,7 +114,7 @@ Hata ayıklayıcı yürütmeyi durdurmak istediğinizde, belki kod değişkenler
 - Bellek konumu çekirdek içinde güncelleştirilir. Örneğin, bellek 32-bit Windows `ReadFile` işlevine geçirilirse, bellek çekirdek modundan güncelleştirilir ve hata ayıklayıcı bellek yazma işlemi kesilir.  
   
 ## <a name="setting-a-breakpoint-with-a-memory-address-native-c-only"></a>Bir bellek adresi ile kesme noktası ayarlama (yalnızca yerel C++)  
- Ayrıca, bir sınıfın belirli bir örneğinde çağrılan bir yöntemde bir kesme noktası ayarlamak için bir nesnenin adresini de kullanabilirsiniz.  İşte bir örnek:  
+ Ayrıca, bir sınıfın belirli bir örneğinde çağrılan bir yöntemde bir kesme noktası ayarlamak için bir nesnenin adresini de kullanabilirsiniz.  Aşağıda bir örnek verilmiştir:  
   
  Örneğin, adresle birlikte türünde bir nesne verildiğinde `my_class` , bu örnekten çağrılan adlı bir yöntemde işlev kesme noktası ayarlayabilirsiniz `my_method` .  
   
@@ -130,14 +130,14 @@ Hata ayıklayıcı yürütmeyi durdurmak istediğinizde, belki kod değişkenler
     ((my_class *) 0xcccccccc)->my_method  
     ```  
   
-## <a name="managing-breakpoints"></a><a name="BKMK_Specify_advanced_properties_of_a_breakpoint_"></a>Kesme noktalarını yönetme  
+## <a name="managing-breakpoints"></a><a name="BKMK_Specify_advanced_properties_of_a_breakpoint_"></a> Kesme noktalarını yönetme  
  Çözümünüzde ayarlamış olduğunuz tüm kesme noktalarını görmek için **kesme noktaları** penceresini (**hata ayıklama/Windows/kesme noktaları**veya **CTRL + ALT + B**) kullanabilirsiniz:  
   
  ![Kesme Noktaları penceresi](../debugger/media/breakpointswindow.png "BreakpointsWindow")  
   
  **Kesme noktaları** penceresi, özellikle büyük bir çözümde veya kesme noktalarının kritik olduğu karmaşık bir hata ayıklama senaryosunda yararlı olabilecek tüm kesme noktalarını yönetmek için size merkezi bir yer sunar. Bir kesme noktası kümesinin durumunu ve konumunu kaydetmeniz veya paylaşmanız gerekiyorsa, kesme noktalarını yalnızca **kesme noktaları** penceresinden dışarı ve içeri aktarabilirsiniz.  
   
-## <a name="advanced-breakpoints"></a><a name="BKMK_Specify_a_breakpoint_condition_using_a_code_expression"></a>Gelişmiş kesme noktaları  
+## <a name="advanced-breakpoints"></a><a name="BKMK_Specify_a_breakpoint_condition_using_a_code_expression"></a> Gelişmiş kesme noktaları  
   
 ## <a name="breakpoint-conditions"></a>Kesme noktası koşulları  
  Koşullar ayarlayarak bir kesme noktasının ne zaman ve nerede yürütüldüğünü kontrol edebilirsiniz.  
@@ -209,7 +209,7 @@ Hata ayıklayıcı yürütmeyi durdurmak istediğinizde, belki kod değişkenler
   
   Dize değerlerini çift tırnak içine alın. Yan tümceleri `&` (ve), ( `||` veya), `!` (Not) ve parantezleri kullanarak birleştirebilirsiniz.  
   
-## <a name="breakpoint-actions-and-tracepoints"></a><a name="BKMK_Print_to_the_Output_window_with_tracepoints"></a>Kesme noktası eylemleri ve Izleme noktaları  
+## <a name="breakpoint-actions-and-tracepoints"></a><a name="BKMK_Print_to_the_Output_window_with_tracepoints"></a> Kesme noktası eylemleri ve Izleme noktaları  
  İzleme noktası, çıkış penceresine bir ileti yazdıran bir kesme noktasıdır. İzleme noktası, programlama dilinde geçici bir izleme deyimleri gibi davranabilir.  
   
  **Kesme noktası ayarları** penceresinde, **Eylemler** kutusunu işaretleyin. **Eylem** grubundaki **Çıkış Için bir iletiyi günlüğe kaydet** ' i seçin. **Bir test**gibi genel bir dize yazdırabilirsiniz. Bir değişkenin veya ifadenin değerini dahil etmek için, küme ayraçları içine alın.  
@@ -218,7 +218,7 @@ Hata ayıklayıcı yürütmeyi durdurmak istediğinizde, belki kod değişkenler
   
  **İletide**aşağıdaki özel anahtar sözcükleri kullanabilirsiniz.  
   
-|Sözcükle|Açıklama|  
+|Sözcükle|Description|  
 |-|-|  
 |**$ADDRESS**|Geçerli yönerge|  
 |**$CALLER**|İşlev adı çağırma|  
@@ -231,7 +231,7 @@ Hata ayıklayıcı yürütmeyi durdurmak istediğinizde, belki kod değişkenler
 |**$TICK**||  
 |**$TNAME**||  
   
-## <a name="breakpoint-labels"></a><a name="BKMK_Set_a_breakpoint_at_a_function_return_in_the_Call_Stack_window"></a>Kesme noktası etiketleri  
+## <a name="breakpoint-labels"></a><a name="BKMK_Set_a_breakpoint_at_a_function_return_in_the_Call_Stack_window"></a> Kesme noktası etiketleri  
  Kesme noktası etiketleri, kesme noktalarının listesini sıralamak ve filtrelemek için yalnızca **kesme noktaları** penceresinde kullanılır. Bir kesme noktasına etiket eklemek için kesme noktası satırını seçin ve bağlam menüsünde **etiket** ' i seçin.  
   
 ## <a name="export-and-import-breakpoints"></a>Dışarı ve Içeri aktarma kesme noktaları  

@@ -26,10 +26,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 735f93b2f900b8681a1e9fee490de8e4b697f9e7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656441"
 ---
 # <a name="using-intellisense"></a>IntelliSense Kullanma
@@ -40,7 +40,7 @@ IntelliSense; Üyeleri Listeleme, Parametre Bilgisi, Hızlı Bilgi ve Tam Sözc�
  IntelliSense'in birçok yönü dile özgüdür. Farklı dillere yönelik IntelliSense hakkında daha fazla bilgi için Ayrıca Bkz. altında listelenen konulara bakın.
 
 ## <a name="list-members"></a>Üyeleri Listeleme
- Bir tür (veya ad alanı) için geçerli üyelerin listesi, bir tetikleyici karakteri (örneğin, Yönetilen koddaki bir nokta (`.`) veya içindeki C++`::`) yazdıktan sonra görüntülenir. Karakterleri yazmaya devam ederseniz, liste yalnızca bu karakterlerle başlayan üyeleri içerecek şekilde filtrelenir.
+ Bir tür (veya ad alanı) için geçerli üyelerin listesi, bir tetikleyici karakteri (örneğin, `.` yönetilen kodda veya C++ ' da bir nokta () yazdığınızda görüntülenir `::` . Karakterleri yazmaya devam ederseniz, liste yalnızca bu karakterlerle başlayan üyeleri içerecek şekilde filtrelenir.
 
  Bir öğeyi seçtikten sonra SEKME tuşuna basarak veya bir boşluk girerek öğeyi kodunuza ekleyebilirsiniz. Öğeyi seçip bir nokta yazarsanız, bu noktanın arkasında başka üye listesini getiren bir öğe görüntülenir. Bir öğe seçtiğinizde, öğeyi eklemeden önce öğeye ilişkin Hızlı Bilgi alırsınız.
 
@@ -59,7 +59,7 @@ IntelliSense; Üyeleri Listeleme, Parametre Bilgisi, Hızlı Bilgi ve Tam Sözc�
 
  Kalın yazı tipli parametre, işlevi yazarken gerekli olan bir sonraki parametreyi gösterir. Aşırı yüklenmiş işlevler için, işlev aşırı yüklerine ilişkin alternatif parametre bilgilerini görüntülemek üzere YUKARI ve AŞAĞI ok tuşlarını kullanabilirsiniz.
 
- ![Parametre bilgisi](../ide/media/vs2015-param-info.png "VS2015_param_Info")
+ ![Parametre Bilgisi](../ide/media/vs2015-param-info.png "VS2015_param_Info")
 
  XML Belgeleri yorumlarıyla işlevlere ve parametrelere ek açıklamalar koyduğunuzda, yorumlar Parametre Bilgisi olarak görüntülenir. Daha fazla bilgi için bkz. [XML kodu açıklamaları sağlama](../ide/supplying-xml-code-comments.md).
 
@@ -78,7 +78,7 @@ IntelliSense; Üyeleri Listeleme, Parametre Bilgisi, Hızlı Bilgi ve Tam Sözc�
 
  Bir işlev aşırı yüklenmişse, IntelliSense, tüm aşırı yük biçimleri için bilgileri görüntülemeyebilir.
 
- **Araçlar/Seçenekler/metin düzenleyici/C/C++/Advanced/Auto hızlı bilgi** 'Yi `false` ayarlayarak hızlı bilgi C++ 'yi kapatabilirsiniz.
+ C++ ' da, **Araçlar/Seçenekler/metin düzenleyici/C/C++/Advanced/Auto hızlı bilgi** ' yi ayarlayarak hızlı bilgi 'yi kapatabilirsiniz `false` .
 
 ## <a name="complete-word"></a>Tam Sözcük
  Tam Sözcük, terim belirsizliğini ortadan kaldıracak yeterli sayıda karakter girdikten sonra değişken, komut veya işlev adının kalanını tamamlar. Tüm sözcüğü, **Düzenle/IntelliSense/Tamam**' a TıKLAYARAK, CTRL + boşluk yazarak veya Düzenleyici araç çubuğunda **sözcüğü Tamam** düğmesine tıklayarak çağırabilirsiniz.
@@ -102,4 +102,4 @@ MessageBox( hWnd, "String literal|") )
  **Otomatik seçenekler kapalıdır.** Varsayılan olarak, IntelliSense otomatik olarak işe yarar, ancak devre dışı bırakabilirsiniz. Otomatik deyim tamamlama devre dışı olsa bile, bir IntelliSense özelliğini çağırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Visual Basic özel IntelliSense](../ide/visual-basic-specific-intellisense.md) [Visual C# IntelliSense](../ide/visual-csharp-intellisense.md) [JavaScript IntelliSense](../ide/javascript-intellisense.md) , [XML kodu açıklamaları sağlama](../ide/supplying-xml-code-comments.md)
+ [Visual Basic özel IntelliSense](../ide/visual-basic-specific-intellisense.md) [Visual C# ıNTELLISENSE](../ide/visual-csharp-intellisense.md) [JavaScript IntelliSense](../ide/javascript-intellisense.md) [XML kodu açıklamaları sağlama](../ide/supplying-xml-code-comments.md)

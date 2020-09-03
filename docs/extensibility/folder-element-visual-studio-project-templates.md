@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b05ef44896e5cd428584c7efed267f130597ee35
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769592"
 ---
 # <a name="folder-element-visual-studio-project-templates"></a>Folder öğesi (Visual Studio proje şablonları)
@@ -50,7 +50,7 @@ Projeye eklenecek klasörü belirtir.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|`Folder`|Projeye eklenecek klasörü belirtir. `Folder`öğeler, alt `Folder` öğeleri içerebilir.|
+|`Folder`|Projeye eklenecek klasörü belirtir. `Folder` öğeler, alt `Folder` öğeleri içerebilir.|
 |[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|Projeye eklenecek bir dosya belirtir.|
 
 ### <a name="parent-elements"></a>Üst öğeler
@@ -60,7 +60,7 @@ Projeye eklenecek klasörü belirtir.
 |[Project](../extensibility/project-element-visual-studio-templates.md)|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)öğesinin isteğe bağlı alt öğesi.|
 
 ## <a name="remarks"></a>Açıklamalar
- `Folder`, öğesinin isteğe bağlı bir alt öğesidir `Project` .
+ `Folder` , öğesinin isteğe bağlı bir alt öğesidir `Project` .
 
  Bir şablondaki klasörler halinde proje öğelerini düzenlemek için aşağıdaki yöntemlerden herhangi birini kullanabilirsiniz:
 

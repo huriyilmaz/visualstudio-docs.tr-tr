@@ -20,10 +20,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 89afba591899b626863b0157f6d9d955d46e46cf
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851925"
 ---
 # <a name="error-debugging-failed-because-integrated-windows-authentication-is-not-enabled"></a>Hata: Tümleşik Windows Kimlik Doğrulaması Etkinleştirilmediğinden Hata Ayıklama Başarısız
@@ -77,7 +77,7 @@ Hata ayıklamayı isteyen kullanıcının kimlik doğrulaması bir kimlik doğru
   
          Kullanıcı Access Control iletişim kutusu görünür ve devam etmek için sizden izin ister.  
   
-    3. **Devam**'a tıklayın.  
+    3. **Devam**’a tıklayın.  
   
          Windows özellikleri iletişim kutusu görüntülenir.  
   

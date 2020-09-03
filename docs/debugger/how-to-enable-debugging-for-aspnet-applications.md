@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - aspnet
 ms.openlocfilehash: f23f5bb2588c179f47593b1ecbcf5d6cd7fa9f0d
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349763"
 ---
 # <a name="debug-aspnet-or-aspnet-core-apps-in-visual-studio"></a>Visual Studio'da ASP.NET veya ASP.NET Core uygulamalarının hatalarını ayıklama
@@ -140,7 +140,7 @@ ASP.NET projelerinde, hata ayıklama ayarları dahil olmak üzere uygulama yapı
 
 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]*web.config* dosyalarda yapılan değişiklikleri otomatik olarak algılar ve yeni yapılandırma ayarlarını uygular. Değişikliklerin etkili olması için bilgisayarı veya IIS sunucusunu yeniden başlatmanız gerekmez.
 
-Bir Web sitesi, her birinde *web.config* dosyaları ile çeşitli sanal dizinler ve alt dizinler içerebilir. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]uygulamalar, URL yolundaki daha yüksek düzeylerdeki *web.config* dosyalarından yapılandırma ayarlarını devralınır. Hiyerarşik *web.config* dosya ayarları hiyerarşideki tüm uygulamalar için geçerlidir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] . Hiyerarşide daha düşük bir *web.config* dosyasında farklı bir yapılandırmanın ayarlanması, daha yüksek dosyadaki ayarları geçersiz kılar.
+Bir Web sitesi, her birinde *web.config* dosyaları ile çeşitli sanal dizinler ve alt dizinler içerebilir. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] uygulamalar, URL yolundaki daha yüksek düzeylerdeki *web.config* dosyalarından yapılandırma ayarlarını devralınır. Hiyerarşik *web.config* dosya ayarları hiyerarşideki tüm uygulamalar için geçerlidir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] . Hiyerarşide daha düşük bir *web.config* dosyasında farklı bir yapılandırmanın ayarlanması, daha yüksek dosyadaki ayarları geçersiz kılar.
 
 Örneğin, `debug="true"` <em>www.Microsoft.com/aaa/web.config</em>belirtirseniz, *aaa* klasöründeki veya *aaa* 'ın herhangi bir alt klasöründeki herhangi bir uygulama bu ayarı devralır, bu uygulamalardan biri bu ayarı kendi *web.config* dosyası ile geçersiz kılar.
 
@@ -175,7 +175,7 @@ Uygulamaları IIS 'de yayımlamanın farklı yolları vardır. Bu adımlarda, do
 
 1. **Yayımla** Iletişim kutusunda **customprofile** (veya yeni oluşturduğunuz profilin adı) göründüğünden emin olun ve **Lastusedbuildconfiguration** **hata ayıklama**olarak ayarlanmıştır.
 
-1. **Yayımla** seçeneğini belirleyin.
+1. **Yayımla**’yı seçin.
 
     ![IIS 'de Yayımla](media/dbg-aspnet-local-iis-select-site.png "IIS 'de Yayımla")
 

@@ -1,5 +1,5 @@
 ---
-title: '3\. Adım: form özelliklerinizi ayarlama | Microsoft Docs'
+title: '3. Adım: form özelliklerinizi ayarlama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,18 +10,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f05e91c13b1a9c52b5afad6942e5847643aa9490
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851560"
 ---
-# <a name="step-3-set-your-form-properties"></a>3\. Adım: Form Özelliklerinizi Ayarlama
+# <a name="step-3-set-your-form-properties"></a>3. Adım: Form Özelliklerinizi Ayarlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Daha sonra, formunuzun görünüşünü değiştirmek için **Özellikler** penceresini kullanın.
 
- ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 1](https://msdn.microsoft.com/vbasic/gg315352.aspx) veya [öğretici 1: video 1 ' de C# bir resim görüntüleyici oluşturma](https://msdn.microsoft.com/vcsharp/gg278409.aspx). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
+ ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 1](https://msdn.microsoft.com/vbasic/gg315352.aspx) veya [öğretici 1: C# içinde resim görüntüleyici oluşturma-video 1](https://msdn.microsoft.com/vcsharp/gg278409.aspx). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
 
 ### <a name="to-set-your-form-properties"></a>Form özelliklerinizi ayarlamak için
 

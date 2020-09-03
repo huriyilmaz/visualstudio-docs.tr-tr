@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6ac5bee0ffa05aa275782c57fc9b7b1c369bf65d
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349412"
 ---
 # <a name="how-to-run-the-worker-process-under-a-user-account"></a>Nasıl Yapılır: Çalışan İşlemi Kullanıcı Hesabı Altında Çalıştırma
@@ -82,7 +82,7 @@ ms.locfileid: "85349412"
 
 11. **Geçici ASP.NET dosyaları Için Izin girdisi** iletişim kutusunda, kullanıcıya **tam denetim**verin ve ardından **tamam** ' a tıklayarak **Geçici ASP.NET dosyaları için girişi** iletişim kutusunu kapatın.
 
-12. Bir **güvenlik** iletişim kutusu görüntülenir ve bir sistem klasöründeki izinleri gerçekten değiştirmek isteyip istemediğinizi sorar. **Evet**' e tıklayın.
+12. Bir **güvenlik** iletişim kutusu görüntülenir ve bir sistem klasöründeki izinleri gerçekten değiştirmek isteyip istemediğinizi sorar. **Evet**'e tıklayın.
 
 13. **Geçici ASP.NET dosyaları özellikleri** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.
 

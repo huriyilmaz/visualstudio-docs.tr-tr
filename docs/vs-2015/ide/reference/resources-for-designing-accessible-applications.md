@@ -15,22 +15,22 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: af300bca2b1e679eae58a92962067fcd50fea78f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74297790"
 ---
 # <a name="resources-for-designing-accessible-applications"></a>Erişilebilir Uygulamalar Tasarlama için Kaynaklar
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Erişilebilir tasarımı ve erişilebilir Windows Uygulamaları ve Web siteleri geliştirmeye yönelik ipuçları ve örnekleri destekleyen teknolojiler hakkında bilgi edinmek için aşağıdaki bağlantıları kullanın. Erişilebilirlik hakkındaki genel bilgiler [http://www.microsoft.com/enable/](https://www.microsoft.com/accessibility/)adresinden çevrimiçi olarak bulunabilir.
+Erişilebilir tasarımı ve erişilebilir Windows Uygulamaları ve Web siteleri geliştirmeye yönelik ipuçları ve örnekleri destekleyen teknolojiler hakkında bilgi edinmek için aşağıdaki bağlantıları kullanın. Erişilebilirlik hakkında genel bilgiler, adresinde çevrimiçi olarak bulunabilir [http://www.microsoft.com/enable/](https://www.microsoft.com/accessibility/) .
 
-## <a name="technologies"></a>Teknolojilerinin
+## <a name="technologies"></a>Teknolojiler
 
 - **Microsoft Etkin Erişilebilirlik** Microsoft Windows üzerinde çalışan uygulamalarla erişilebilirlik yardımlarının çalışma yöntemini artıran COM tabanlı bir teknoloji. İşletim sisteminin yanı sıra bir COM arabirimi ve Kullanıcı arabirimi öğeleriyle ilgili bilgileri açığa çıkarmak için güvenilir yöntemler sağlayan uygulama programlama öğelerine dahil olan dinamik bağlantı kitaplıklarını sağlar. Daha fazla bilgi için bkz. [https://msdn.microsoft.com/library/windows/desktop/dd373592(v=vs.85).aspx](https://msdn.microsoft.com/library/windows/desktop/dd373592\(v=vs.85\).aspx).
 
-- **Microsoft .net konuşma teknolojileri** Microsoft .NET konuşma SDK 'Sı, Web geliştiricilerinin konuşma özellikli [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] uygulamaları oluşturmasına, hata ayıklamasına ve dağıtmasına olanak sağlayan Microsoft [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] denetimleri, Microsoft Internet Explorer konuşma eklentisi, örnek uygulamalar ve belgeler kümesidir. Araçlar Microsoft Visual Studio, geliştiricilerin tanıdık geliştirme ortamından yararlanmasını sağlayan sorunsuz bir şekilde tümleşiktir. Daha fazla bilgi için bkz. [https://msdn.microsoft.com/library/ms950383.aspx](https://msdn.microsoft.com/library/ms950383.aspx).
+- **Microsoft .net konuşma teknolojileri** Microsoft .NET konuşma SDK 'Sı, [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Web geliştiricilerinin konuşma özellikli uygulamalar oluşturmasına, hata ayıklamasına ve dağıtmasına olanak tanıyan bir Microsoft denetimleri, Microsoft Internet Explorer konuşma eklentisi, örnek uygulamalar ve belgeler kümesidir [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Araçlar Microsoft Visual Studio, geliştiricilerin tanıdık geliştirme ortamından yararlanmasını sağlayan sorunsuz bir şekilde tümleşiktir. Daha fazla bilgi için bkz. [https://msdn.microsoft.com/library/ms950383.aspx](https://msdn.microsoft.com/library/ms950383.aspx).
 
 - **Samı 1,0** ' i anlama Microsoft eşitlenmiş erişilebilir medya değişimi (SAMı) teknolojisi, geliştiricilerin bılgısayar çoklu ortamı için ses içeriğini açıklamalı alt yazı için bir yol sağlar. Daha fazla bilgi için bkz. [https://msdn.microsoft.com/library/ms971327.aspx](https://msdn.microsoft.com/library/ms971327.aspx).
 
@@ -42,7 +42,7 @@ Erişilebilir tasarımı ve erişilebilir Windows Uygulamaları ve Web siteleri 
 
 - [Konsol erişilebilirliği](/previous-versions/windows/desktop/dnacc/console-accessibility) Bu teknik makalede, erişilebilirlik yardımlarına yönelik Windows XP 'de konsolu açığa çıkarmak için kullanılan API 'Ler ve olaylar açıklanmaktadır.
 
-## <a name="web-sites"></a>Web Siteleri
+## <a name="web-sites"></a>Web siteleri
 
 - [Izlenecek yol: görüntü denetimleri, menü denetimleri ve AutoPostBack kullanımı Için erişilebilirlik yönergeleri](https://msdn.microsoft.com/library/ff7b5021-48b3-46bf-921f-9fe1e0e32202) Bu konu, Web için bazı erişilebilirlik tasarımı ipuçlarına ek bir Web sayfasına erişilebilir denetimler dahil etmek için adım adım yönergeler sağlar.
 

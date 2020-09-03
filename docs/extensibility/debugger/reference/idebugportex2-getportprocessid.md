@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2::GetPortProcessId | Microsoft Dokümanlar
+title: 'IDebugPortEx2:: Getportprocessıd | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ae974461e312c68e6fcc14150a08879ac7709950
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725142"
 ---
 # <a name="idebugportex2getportprocessid"></a>IDebugPortEx2::GetPortProcessId
-Bağlantı noktasının işlem kimliğini alır.
+Bağlantı noktasının işlem KIMLIĞINI alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetPortProcessId ( 
@@ -41,13 +41,13 @@ int GetPortProcessId ( 
 
 ## <a name="parameters"></a>Parametreler
 `pdwProcessId`\
-[çıkış] Bağlantı noktasının fiziksel işlem kimliğini verir.
+dışı Bağlantı noktasının kendisinin fiziksel işlem KIMLIĞINI döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Örneğin Win32 çalışma zamanında, bu yöntem genellikle fiziksel işlem `GetCurrentProcessId` kimliğini almak için Win32 işlevini çağırır.
+ Örneğin, Win32 çalışma zamanında, bu yöntem genellikle `GetCurrentProcessId` fiziksel Işlem kimliği almak Için Win32 işlevini çağırır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)

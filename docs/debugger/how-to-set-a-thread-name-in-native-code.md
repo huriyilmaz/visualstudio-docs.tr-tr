@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ce6281a87900247cc54422a5175714d5f05b8e07
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349152"
 ---
 # <a name="how-to-set-a-thread-name-in-native-code"></a>Nasıl Yapılır: Yerel Kodda İş Parçacığı Adı Ayarlama
@@ -32,7 +32,7 @@ Bir iş parçacığı adı ayarlamak için iki yol vardır. İlki [Setthreaddesc
 
 _Her iki yaklaşımın de_ , çalıştıkları mekanizmaların birbirinden bağımsız olduğu mekanizmalar tarafından birlikte kullanılabileceğini belirtmekte de dikkat edin.
 
-### <a name="set-a-thread-name-by-using-setthreaddescription"></a>Kullanarak bir iş parçacığı adı ayarlama`SetThreadDescription`
+### <a name="set-a-thread-name-by-using-setthreaddescription"></a>Kullanarak bir iş parçacığı adı ayarlama `SetThreadDescription`
 
 Avantajlar:
 * Hata ayıklayıcının, SetThreadDescription çağrıldığında işleme bağlı olup olmadığına bakılmaksızın, Visual Studio 'da hata ayıklarken iş parçacığı adları görünür.
@@ -43,7 +43,7 @@ Uyarılar
 * İş parçacığı adları yalnızca Visual Studio 2017 sürüm 15,6 ve sonraki sürümlerinde görülebilir.
 * Post-mordıtem bir kilitlenme bilgi döküm dosyasında hata ayıklaması yaparken, iş parçacığı adları yalnızca kilitlenme Windows 10 sürüm 1607, Windows Server 2016 veya Windows 'un sonraki sürümlerinde oluşturulduysa görülebilir.
 
-*Örneğinde*
+*Örnek:*
 
 ```C++
 #include <windows.h>
@@ -72,7 +72,7 @@ Uyarılar
 * Yalnızca hata ayıklayıcı özel durum tabanlı yöntemin kullanıldığı sırada eklenmişse işe yarar.
 * Bu yöntem kullanılarak ayarlanan iş parçacığı adları, dökümler veya performans analizi araçlarında kullanılamayacak.
 
-*Örneğinde*
+*Örnek:*
 
 `SetThreadName`Aşağıda gösterilen işlev bu özel durum tabanlı yaklaşımı gösterir. İş parçacığı adının, çağrı tamamlandıktan sonra, parametre için belleğin yayınlanabilmesi için iş parçacığına otomatik olarak kopyalanacağını unutmayın `threadName` `SetThreadName` .
 

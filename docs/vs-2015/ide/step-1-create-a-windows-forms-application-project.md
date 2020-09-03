@@ -1,5 +1,5 @@
 ---
-title: '1\. Adım: Windows Forms uygulama projesi oluşturma | Microsoft Docs'
+title: '1. Adım: Windows Forms uygulama projesi oluşturma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,26 +10,26 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cdba2105c6b8af42d51669e0d1fc8ce49085d513
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851607"
 ---
-# <a name="step-1-create-a-windows-forms-application-project"></a>1\. Adım: Windows Forms Uygulaması Projesi Oluşturma
+# <a name="step-1-create-a-windows-forms-application-project"></a>1. Adım: Windows Forms Uygulaması Projesi Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bir resim görüntüleyici oluşturduğunuzda, ilk adım Windows Forms bir uygulama projesi oluşturmaktır.
 
- ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 1](https://msdn.microsoft.com/vbasic/gg315352.aspx) veya [öğretici 1: video 1 ' de C# bir resim görüntüleyici oluşturma](https://msdn.microsoft.com/vcsharp/gg278409.aspx). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
+ ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 1](https://msdn.microsoft.com/vbasic/gg315352.aspx) veya [öğretici 1: C# içinde resim görüntüleyici oluşturma-video 1](https://msdn.microsoft.com/vcsharp/gg278409.aspx). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
 
 ### <a name="to-create-a-windows-forms-application-project"></a>Windows Forms uygulama projesi oluşturmak için
 
-1. Menü çubuğunda, **dosya**, **yeni**, **proje**. İletişim kutusu şöyle görünmelidir.
+1. Menü çubuğunda **Dosya**, **Yeni**, **Proje**' yi seçin. İletişim kutusu şöyle görünmelidir.
 
      ![Yeni proje iletişim kutusu](../ide/media/newprojectdialogcallouts.png "Newprojectdialogbelirtme çizgileri") Yeni proje iletişim kutusu
 
-2. **Yüklü şablonlar** listesinde **görsel C#**  veya **Visual Basic** seçin.
+2. **Yüklü şablonlar** listesinde **Visual C#** veya **Visual Basic** seçin.
 
 3. Şablonlar listesinde **Windows Forms uygulama** simgesini seçin. Yeni formu **PictureViewer olarak adlandırın**olarak adlandırın ve ardından **Tamam** düğmesini seçin.
 
@@ -50,7 +50,7 @@ Bir resim görüntüleyici oluşturduğunuzda, ilk adım Windows Forms bir uygul
 
     - **Ana pencere** Bu pencerede, yaptığınız gibi, formlarla çalışma ve kod düzenlemeyle ilgili birçok iş olacaktır. Çizimde pencere, form düzenleyicisinde bir form gösterir. Pencerenin üst kısmında, **Başlangıç sayfası** sekmesi ve **Form1.cs [Design]** sekmesi görüntülenir. (Visual Basic, sekme adı. cs yerine. vb ile biter.)
 
-    - **Çözüm Gezgini penceresi** Bu pencerede, çözümünüzdeki tüm öğeleri görüntüleyebilir ve buna gidebilirsiniz. Bir dosya seçerseniz, **Özellikler** penceresinin içeriği değişir. Bir kod dosyası açarsanız (Visual C# üzerinde. cs ve. vb Visual Basic), kod dosyası veya kod dosyası Tasarımcısı görüntülenir. Tasarımcı, üzerinde düğme ve liste gibi denetimler ekleyebileceğiniz görsel bir yüzeydir. Visual Studio Forms için tasarımcı Windows Form Tasarımcısı olarak adlandırılır.
+    - **Çözüm Gezgini penceresi** Bu pencerede, çözümünüzdeki tüm öğeleri görüntüleyebilir ve buna gidebilirsiniz. Bir dosya seçerseniz, **Özellikler** penceresinin içeriği değişir. Bir kod dosyası açarsanız (Visual C# ve. vb içinde. cs Ile biten) Visual Basic), kod dosyası veya kod dosyası Tasarımcısı görüntülenir. Tasarımcı, üzerinde düğme ve liste gibi denetimler ekleyebileceğiniz görsel bir yüzeydir. Visual Studio Forms için tasarımcı Windows Form Tasarımcısı olarak adlandırılır.
 
     - **Özellikler penceresi** Bu pencerede, diğer pencereler üzerinde seçtiğiniz öğelerin özelliklerini değiştirebilirsiniz. Örneğin, Form1 ' i seçerseniz, **Text** özelliğini ayarlayarak başlığını değiştirebilir ve **BackColor** özelliğini ayarlayarak arka plan rengini değiştirebilirsiniz.
 

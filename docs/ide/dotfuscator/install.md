@@ -23,10 +23,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: befa47e5718d3d2f5d492c49e173b22fc63310e0
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769680"
 ---
 # <a name="install-dotfuscator-community"></a>Dotfuscator Community’yi yükleme
@@ -53,7 +53,7 @@ Visual Studio IDE 'den Dotfuscator topluluğunu yükleyebilirsiniz:
    > [!NOTE]
    > Devam etmek için yönetici kimlik bilgilerini sağlamanız gerekebilir.
 
-4. Visual Studio Yükleyicisi penceresinde, *yüklensin*' e tıklayın. <br/> <br/> ![Yükle'ye tıklayın](media/install_in_vs19_34.png) <br/> <br/>
+4. Visual Studio Yükleyicisi penceresinde, *yüklensin*' e tıklayın. <br/> <br/> ![Install 'a tıklayın](media/install_in_vs19_34.png) <br/> <br/>
 
 ::: moniker-end
 
@@ -70,7 +70,7 @@ Visual Studio IDE 'den Dotfuscator topluluğunu yükleyebilirsiniz:
    > [!NOTE]
    > Devam etmek için yönetici kimlik bilgilerini sağlamanız gerekebilir.
 
-4. Visual Studio Yükleyicisi penceresinde, *yüklensin*' e tıklayın. <br/> <br/> ![Yükle'ye tıklayın](media/install_from_vs_345.png) <br/> <br/>
+4. Visual Studio Yükleyicisi penceresinde, *yüklensin*' e tıklayın. <br/> <br/> ![Install 'a tıklayın](media/install_from_vs_345.png) <br/> <br/>
 
 ::: moniker-end
 

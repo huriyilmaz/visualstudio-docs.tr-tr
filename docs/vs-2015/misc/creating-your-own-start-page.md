@@ -12,10 +12,10 @@ ms.assetid: a0df5b9c-0932-4e54-86f0-28530ad9d684
 caps.latest.revision: 22
 manager: jillfra
 ms.openlocfilehash: fba7f1e0801b6f977d47b13af025538f5d2fe031
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850988"
 ---
 # <a name="creating-your-own-start-page"></a>Kendi başlangıç sayfanızı oluşturma
@@ -56,7 +56,7 @@ Başlangıç sayfası proje şablonunu kullanarak ya da boş bir başlangıç sa
   
 2. StartPage. xaml ' i açın.  
   
-3. . Xaml dosyanız aşağıdaki örneğe benzer şekilde, yalnızca dış XML öğelerinden ve kapsayan Izgara <xref:System.Windows.Controls.Grid> öğesini bırakarak tüm sayfa içeriğini kaldırın.  
+3. Tüm sayfa içeriğini kaldırın ve yalnızca dış XML öğelerinden ve kapsayan kılavuz öğesinden ayrıldıktan <xref:System.Windows.Controls.Grid> sonra. xaml dosyanız aşağıdaki örneğe benzer.  
   
    ```xaml
       <Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"

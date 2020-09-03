@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::SetCondition | Microsoft Dokümanlar
+title: 'IDebugPendingBreakpoint2:: SetCondition | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,16 +17,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4683d944f2489b8b21ff545c86e3d867283d644a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725729"
 ---
 # <a name="idebugpendingbreakpoint2setcondition"></a>IDebugPendingBreakpoint2::SetCondition
 Bekleyen kesme noktasıyla ilişkili koşulu ayarlar veya değiştirir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT SetCondition( 
@@ -42,13 +42,13 @@ int SetCondition( 
 
 ## <a name="parameters"></a>Parametreler
 `bpCondition`\
-[içinde] Ayarlanan durumu belirten [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) bir yapı.
+'ndaki Ayarlanacak koşulu belirten [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) yapısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Daha önce bekleyen kesme noktasıyla ilişkili olan tüm koşullar kaybolur. Bu bekleyen kesme noktasından bağlı tüm kesme `bpCondition` noktaları, durumlarını parametrede belirtilen değere ayarlamak için çağrılır.
+ Daha önce bekleyen kesme noktasıyla ilişkili olan tüm koşullar kaybedilir. Bu bekleyen kesme noktasından bağlantılı tüm kesme noktaları, koşullarını parametresinde belirtilen değere ayarlamak için çağırılır `bpCondition` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

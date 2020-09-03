@@ -11,10 +11,10 @@ caps.latest.revision: 38
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 737311167fc1f444d5c0f8a5d2c27e2fe321da75
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851245"
 ---
 # <a name="using-code-coverage-to-determine-how-much-code-is-being-tested"></a>Ne Kadar Kodun Test Edildiğini Belirlemek için Kod Kapsamını Kullanma
@@ -28,7 +28,7 @@ Proje kodunuzun ne oranda aslında birim testleri gibi kodlanmış testler taraf
 
  ![Renklendirme ile kod kapsamı sonuçları](../test/media/codecoverage1.png "CodeCoverage1")
 
- **Requirements**
+ **Gereksinimler**
 
 - Visual Studio Enterprise
 
@@ -94,7 +94,7 @@ Proje kodunuzun ne oranda aslında birim testleri gibi kodlanmış testler taraf
 - ASP.NET projesinin testlerinden sonuçları birleştirirseniz, birleştirilmiş değil ayrı testlerin sonuçları görüntülenir. Bu yalnızca ASP.NET yapılarına uygulanır: başka bir derleme için sonuçlar birleştirilecektir.
 
 ## <a name="excluding-elements-from-the-code-coverage-results"></a>Kod kapsamı sonuçlarından öğeleri hariç tut
- Örneğin kodu bir metin şablonundan oluşturulan tedarik puanlarını kodunuzda belirli öğeler dışında isteyebilirsiniz. Aşağıdaki kod öğelerinden herhangi birine `System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage` özniteliği ekleyin: sınıf, yapı, yöntem, özellik, özellik ayarlayıcı veya alıcı, olay. Hariç tutulan bir sınıfın türetilmiş sınıfları dışarıda tuttuğunu unutmayın.
+ Örneğin kodu bir metin şablonundan oluşturulan tedarik puanlarını kodunuzda belirli öğeler dışında isteyebilirsiniz. `System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage`Aşağıdaki kod öğelerinden herhangi birine özniteliği ekleyin: Class, struct, Method, Property, Property Setter veya getter, Event. Hariç tutulan bir sınıfın türetilmiş sınıfları dışarıda tuttuğunu unutmayın.
 
  Örneğin:
 
@@ -221,13 +221,13 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
  Aşağıdaki makroları kullanın:
 
- `ExcludeFromCodeCoverage(` *Exclusionname* `, L"` *fonksiyonadı* `");`
+ `ExcludeFromCodeCoverage(`*Exclusionname* `, L"` *Fonksiyonadı*`");`
 
- `ExcludeSourceFromCodeCoverage(` *Exclusionname* `, L"` *SourceFilePath* `");`
+ `ExcludeSourceFromCodeCoverage(`*Exclusionname* `, L"` *SourceFilePath*`");`
 
 - *Exclusionname* herhangi bir benzersiz addır.
 
-- *Fonksiyonadı* tam olarak nitelenmiş bir işlev adıdır. Joker karakterler içerebilir. Örneğin, bir sınıfın tüm işlevlerini dışlamak için, `MyNamespace::MyClass::*` yazın
+- *Fonksiyonadı* tam olarak nitelenmiş bir işlev adıdır. Joker karakterler içerebilir. Örneğin, bir sınıfın tüm işlevlerini dışlamak için şunu yazın `MyNamespace::MyClass::*`
 
 - *SourceFilePath* , bir. cpp dosyasının yerel veya UNC yoludur. Joker karakterler içerebilir. Aşağıdaki örnek, belirli bir dizindeki tüm dosyaları dışlar: `\\MyComputer\Source\UnitTests\*.cpp`
 
@@ -237,10 +237,10 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
 - Dışlamaları birim test kod dosyasına veya uygulama kod dosyasına yerleştirebilirsiniz.
 
-- Dışlamaları, derleyici seçeneği ayarlanarak veya `#pragma managed(off)`kullanılarak yönetilmeyen (yerel) kod olarak derlenmelidir.
+- Dışlamaları, derleyici seçeneği ayarlanarak veya kullanılarak yönetilmeyen (yerel) kod olarak derlenmelidir `#pragma managed(off)` .
 
 > [!NOTE]
-> C++/CLI kodundaki işlevleri dışlamak için, `[System::Diagnostics::CodeAnalysis::ExcludeFromCodeCoverage]` özniteliği işleve uygulayın. Bu C# ile aynıdır.
+> C++/CLı kodundaki işlevleri dışlamak için, işlevine özniteliğini uygulayın `[System::Diagnostics::CodeAnalysis::ExcludeFromCodeCoverage]` . Bu C# ile aynıdır.
 
 ### <a name="including-or-excluding-additional-elements"></a>Dahil veya hariç ek öğeler
  Kod kapsamı çözümlemesi yüklü olan ve bir .pdb dosyası .dll veya .exe dosyası ile aynı dizinde bulunan derlemeler üzerinde yapılır. Bu nedenle bazı durumlarda uygun .pdb dosyalarının kopyalarını alarak eklenen derleme kümesini genişletebilirsiniz.
@@ -265,22 +265,22 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
    Yapı çalıştıktan sonra kod kapsamı sonuçları test çalıştırmasına eklenir ve yapı özet olarak görünür.
 
 ## <a name="analyzing-code-coverage-in-a-command-line"></a>Komut Satırında Kod Kapsamı Çözümleme
- Komut satırından testleri çalıştırmak için vstest.console.exe kullanın. Kod kapsamı, bu yardımcı programın bir seçeneğidir. Daha fazla bilgi için bkz. [VSTest. Console. exe komut satırı seçenekleri](https://msdn.microsoft.com/library/52e1689d-b1a8-4589-bd98-99a55acd0a11).
+ Komut satırından testleri çalıştırmak için vstest.console.exe kullanın. Kod kapsamı, bu yardımcı programın bir seçeneğidir. Daha fazla bilgi için bkz. [VSTest.Console.exe komut satırı seçenekleri](https://msdn.microsoft.com/library/52e1689d-b1a8-4589-bd98-99a55acd0a11).
 
 1. Visual Studio Geliştirici Komut Satırını başlatın:
 
      Windows **Başlat** menüsünde, **tüm programlar**, **Microsoft Visual Studio**, **Visual Studio Araçları** **Geliştirici komut istemi**' ı seçin.
 
-2. Çalıştırın:
+2. Çalıştır:
 
      `vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage`
 
 ## <a name="troubleshooting"></a>Sorun giderme
- Kod kapsamı sonuçlarını görmüyorsanız bkz. [sorun giderme kodu kapsamı](../test/troubleshooting-code-coverage.md).
+ Kod kapsamı sonuçlarını görmüyorsanız bkz.  [sorun giderme kodu kapsamı](../test/troubleshooting-code-coverage.md).
 
 ## <a name="external-resources"></a>Dış kaynaklar
 
-### <a name="guidance"></a>Kılavuz
+### <a name="guidance"></a>Rehber
  [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 2: birim testi: Içini test etme](https://msdn.microsoft.com/library/jj159340.aspx)
 
 ## <a name="see-also"></a>Ayrıca Bkz.

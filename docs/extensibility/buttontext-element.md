@@ -1,5 +1,5 @@
 ---
-title: ButtonText Öğesi | Microsoft Dokümanlar
+title: ButtonText öğesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +12,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 59308feea2002a18662a7c04b95a92a920f934c4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739914"
 ---
 # <a name="buttontext-element"></a>ButtonText öğesi
-Bu alan, çeşitli menülerde görünen metni belirtmenizi sağlar. Varsayılan olarak, `ButtonText` öğe menü denetleyicilerinde görünür. Diğer `ButtonText` metin alanları boşsa öğe de varsayılan olur. Diğer `ButtonText` metin alanları belirtilse bile öğe boş olamaz.
+Bu alan, çeşitli menülerde görüntülenen metni belirtmenize olanak tanır. Varsayılan olarak, `ButtonText` öğesi menü denetleyicileri ' nde görünür. `ButtonText`Diğer metin alanları boşsa, öğesi de varsayılan olarak olur. `ButtonText`Diğer metin alanları belirtilmiş olsa bile öğe boş bırakılamaz.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ButtonText>My Command</ButtonText>
@@ -40,10 +40,10 @@ Bu alan, çeşitli menülerde görünen metni belirtmenizi sağlar. Varsayılan 
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Dizeleri Öğe](../extensibility/strings-element.md)|Metin öğelerini grupla, örneğin. `ButtonText` `CommandName`|
+|[Dizeler öğesi](../extensibility/strings-element.md)|Ve gibi metin öğelerini gruplandırır `ButtonText` `CommandName` .|
 
 ## <a name="text-value"></a>Metin değeri
- Öğenin `ButtonText` metin değeri, görünür metin ekiolan menü öğeleri, kombinasyonlar ve diğer kullanıcı arabirimi (UI) öğeleri için görüntülenen metni sağlar.
+ Öğesinin metin değeri, `ButtonText` menü öğeleri, combos ve görünür metne sahip diğer kullanıcı arabirimi (UI) öğeleri için görüntülenen metni sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio komut tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

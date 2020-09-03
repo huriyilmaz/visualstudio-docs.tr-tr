@@ -22,10 +22,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e3c08ce9605560173d6f29817372dee4af8d622e
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349984"
 ---
 # <a name="how-to-debug-optimized-code"></a>Nasıl Yapılır: İyileştirilmiş Kodda Hata Ayıklama
@@ -77,7 +77,7 @@ ms.locfileid: "85349984"
 9. Yapılandırma özellikleri, C/C++, proje özellikleri sayfasının komut satırı düğümünü seçin ve `(` [/Zo](/cpp/build/reference/zo-enhance-optimized-debugging) `)` **ek seçenekler** metin kutusuna/zo ekleyin.
 
     > [!WARNING]
-    > `/Zo`Visual Studio 2013 güncelleştirme 3 veya sonraki bir sürümünü gerektirir.
+    > `/Zo` Visual Studio 2013 güncelleştirme 3 veya sonraki bir sürümünü gerektirir.
     >
     >  Ekleme `/Zo` , [Düzenle ve devam et](../debugger/edit-and-continue-visual-csharp.md)özelliğini devre dışı bırakır.
 

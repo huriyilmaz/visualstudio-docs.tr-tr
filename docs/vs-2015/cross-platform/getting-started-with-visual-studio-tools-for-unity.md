@@ -10,10 +10,10 @@ author: conceptdev
 ms.author: crdun
 manager: jillfra
 ms.openlocfilehash: f110b8d6f7ab05d5a1b6942cd9ec599a8d8619b7
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74299831"
 ---
 # <a name="getting-started-with-visual-studio-tools-for-unity"></a>Unity için Visual Studio Araçları ile Başlarken
@@ -24,7 +24,7 @@ Bu bölümde, Visual Studio ile çalışmak için Unity için Visual Studio Ara�
 > [!IMPORTANT]
 > Unity 5,2, proje kurulumunu kolaylaştıran Unity için Visual Studio Araçları 2,1 için yerleşik destek ekler. Bundan faydalanmak için, Windows 'da Unity sürüm 5.2.0 veya üzeri ve sürüm 2,1 veya üstünü Unity için Visual Studio Araçları gerekir.  
   
-## <a name="prerequisites"></a>Önkoşullar  
+## <a name="prerequisites"></a>Ön koşullar  
  Unity için Visual Studio Araçları kullanmak için şunlar gerekir:  
   
 - **Visual Studio 'Nun Visual** Studio Community, Professional, Premium veya Enterprise gibi uzantıları destekleyen bir sürümü. Visual Studio Community 'yi ücretsiz olarak indirebilirsiniz.  

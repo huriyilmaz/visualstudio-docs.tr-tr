@@ -33,10 +33,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3e00735a180ec951a8afced0f5c74f7a9466e50b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534101"
 ---
 # <a name="analyze-and-model-your-architecture"></a>Mimarinizi çözümleme ve mimarinizin modelini oluşturma
@@ -48,7 +48,7 @@ Uygulamanızı tasarlamak ve modellemek için Visual Studio mimarisi ve modellem
 
  Hangi Visual Studio sürümlerini her bir özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)
 
-## <a name="to"></a>Alıcı
+## <a name="to"></a>Amaç
 
 |Senaryo|Makaleler|
 |-|-|

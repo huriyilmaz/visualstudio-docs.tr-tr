@@ -1,5 +1,5 @@
 ---
-title: Profil Oluşturma Araçları&#39;yenilikleri | Microsoft Docs
+title: Profil Oluşturma Araçları ' deki yenilikler&#39;| Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,13 +13,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f9611170c7b23a9db72c27b9c3f69a39e21a4bdc
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74300627"
 ---
-# <a name="what39s-new-in-profiling-tools"></a>Profil Oluşturma Araçları&#39;yenilikleri
+# <a name="what39s-new-in-profiling-tools"></a>Profil Oluşturma Araçları&#39;yenilikler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio 2015 güncelleştirme 1 hata ayıklama ve tanılama 'daki yenilikler hakkında daha fazla bilgi için bkz. [Visual studio 2015 güncelleştirme 1 sürüm notları](https://www.visualstudio.com/news/vs2015-update1-vs#debug).  

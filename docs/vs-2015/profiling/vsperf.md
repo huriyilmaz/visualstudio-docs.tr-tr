@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a8042b228a481dc3d720d8b422963db41abbddcd
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533841"
 ---
 # <a name="vsperf"></a>VSPerf
@@ -27,7 +27,7 @@ ms.locfileid: "85533841"
   
    Profil oluşturma seçenekleriniz hakkında daha fazla bilgi için bkz. [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
   
-## <a name="in-this-topic"></a><a name="BKMK_In_this_topic"></a>Bu konuda  
+## <a name="in-this-topic"></a><a name="BKMK_In_this_topic"></a> Bu konuda  
  Bu konu, komut satırı aracı ile kullanabileceğiniz seçenekleri açıklar `vsperf.exe` . Konusu aşağıdaki bölümleri içerir:  
   
  [Yalnızca Windows Mağazası uygulamaları](#BKMK_windows_store_apps_only)  
@@ -36,7 +36,7 @@ ms.locfileid: "85533841"
   
  [Tüm uygulamalar](#BKMK_All_applications)  
   
-## <a name="windows-store-apps-only"></a><a name="BKMK_windows_store_apps_only"></a>Yalnızca Windows Mağazası uygulamaları  
+## <a name="windows-store-apps-only"></a><a name="BKMK_windows_store_apps_only"></a> Yalnızca Windows Mağazası uygulamaları  
  Bu seçenekler yalnızca Windows Mağazası uygulamaları için geçerlidir.  
   
 |Seçenek|Açıklama|  
@@ -47,7 +47,7 @@ ms.locfileid: "85533841"
 |**/noclr**|İsteğe bağlı. CLR verileri toplama.<br /><br /> Yalnızca/Package veya/attachile kullanın.<br /><br /> İyileştirme, yönetilen semboller çözümlenmez.|  
 |**/listapps**|Yüklü uygulama adlarını ve PackageFullNames listesini listeleyin.|  
   
-## <a name="windows-8-desktop-applications-and-windows-server-2012-applications-only"></a><a name="BKMK_Windows_8_classic_applications_and_Windows_Server_2012_applications_only"></a>Yalnızca Windows 8 masaüstü uygulamaları ve Windows Server 2012 uygulamaları  
+## <a name="windows-8-desktop-applications-and-windows-server-2012-applications-only"></a><a name="BKMK_Windows_8_classic_applications_and_Windows_Server_2012_applications_only"></a> Yalnızca Windows 8 masaüstü uygulamaları ve Windows Server 2012 uygulamaları  
  Bu seçenekler Windows Mağazası uygulamaları üzerinde çalışmaz.  
   
 |Seçenek|Açıklama|  
@@ -56,7 +56,7 @@ ms.locfileid: "85533841"
 |**/args: {ExecutableArguments}**|**/Launch** hedefini geçirmek için komut satırı bağımsız değişkenlerini belirtir.|  
 |**/Console**|Yeni bir komut penceresinde **/Launch** hedefini çalıştırır.|  
   
-## <a name="all-applications"></a><a name="BKMK_All_applications"></a>Tüm uygulamalar  
+## <a name="all-applications"></a><a name="BKMK_All_applications"></a> Tüm uygulamalar  
  Bu seçenek, herhangi bir Windows 8 veya Windows Server 2012 uygulaması için geçerlidir.  
   
 |Seçenek|Açıklama|  

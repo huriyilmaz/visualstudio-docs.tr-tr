@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 30932a6c94bc6104aeea0244f06f471d0a639b21
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533672"
 ---
 # <a name="keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window"></a>Sınıf diyagramı ve Sınıf Ayrıntıları penceresinde klavye ve fare kısayolları
@@ -28,7 +28,7 @@ ms.locfileid: "85533672"
 
 Aşağıdaki fare eylemleri sınıf diyagramlarında desteklenir:
 
-|Fare birleşimi|Bağlam|Açıklama|
+|Fare birleşimi|Bağlam|Description|
 | - |-------------|-----------------|
 |Çift tıklama|Şekil öğeleri|Kod düzenleyicisini açar.|
 |Çift tıklama|Lolipop Bağlayıcısı|Lolipop 'i Genişlet/Daralt.|
@@ -56,7 +56,7 @@ Bir fare kullanarak, **Sınıf Ayrıntıları** penceresinin ve görüntülediğ
 
 Aşağıdaki klavye eylemleri sınıf diyagramlarında desteklenir:
 
-|Anahtar|Bağlam|Açıklama|
+|Anahtar|Bağlam|Description|
 |---------|-------------|-----------------|
 |**Ok tuşları**|Tür şekillerinin içinde|Şekil içeriklerinde ağaç stili gezinti (şeklin etrafında kaydırma desteklenir). Sol ve sağ tuşları, Genişletilebilir ise geçerli öğeyi genişletir/daraltır ve değilse üst öğeye gidebilir (ayrıntılı davranış için bkz. ağaç görünümü gezintisi).|
 |**Ok tuşları**|Üst düzey şekiller|Diyagramda şekiller taşınıyor.|
@@ -67,14 +67,14 @@ Aşağıdaki klavye eylemleri sınıf diyagramlarında desteklenir:
 |**Erer**|Üst düzey şekiller|Diyagramdaki son şekle gidin.|
 |**SHIFT** + **Giriş sayfası**|Tür şeklinin içinde|Geçerli öğeyle başlayan ve aynı şekildeki en üstteki öğeyle biten şekildeki öğeleri seçer.|
 |**SHIFT** + **Son**|Tür şeklinin içinde|**SHIFT** + **girişi** , ancak yukarıdan aşağı yönle aynıdır.|
-|**Enter**|Tüm bağlamlar|Şekil üzerinde, Çift tıklama ile de kullanılabilen varsayılan eylemi çağırır. Çoğu durumda bu, kod görüntüler ancak bazı öğeler bunu farklı şekilde tanımlar (Lollipop 'lar, bölme üstbilgileri, lolipop etiketleri).|
-|**+**'**-**|Tüm bağlamlar|Şu anda odaklanmış öğe Genişletilebilir ise, bu anahtarlar öğeyi genişletir veya daraltır.|
+|**Girmesini**|Tüm bağlamlar|Şekil üzerinde, Çift tıklama ile de kullanılabilen varsayılan eylemi çağırır. Çoğu durumda bu, kod görüntüler ancak bazı öğeler bunu farklı şekilde tanımlar (Lollipop 'lar, bölme üstbilgileri, lolipop etiketleri).|
+|**+** ' **-**|Tüm bağlamlar|Şu anda odaklanmış öğe Genişletilebilir ise, bu anahtarlar öğeyi genişletir veya daraltır.|
 |**>**|Tüm bağlamlar|Alt öğeleri olan öğelerde, daraltılamışsa ve ilk alt öğeye gidiliyorsa, bu öğe genişletilir.|
 |**<**|Tüm bağlamlar|Üst öğeye gider.|
 |**Alt** + **SHIFT** + **L**|Tür şekillerinin içindeki şekil + tür şekilleri.|Varsa, seçili olan şeklin lolipop öğesine gider.|
 |**Alt** + **SHIFT** + **B**|Tür şekillerinin içindeki şekil + tür şekilleri.|Tür şekli üzerinde temel tür listesi gösterilirse ve birden fazla öğe varsa, bu, listenin genişletme durumuna geçer (daraltma/genişletme).|
-|**Sil**|Tür ve açıklama şekilleri üzerinde|**Diyagramdan kaldır** komutunu çağırır.|
-|**Sil**|Diğer her şey.|**Koddan Sil** komutunu (Üyeler, parametreler, ilişkilendirmeler, devralma, Lollipop etiketleri) çağırır.|
+|**Silme**|Tür ve açıklama şekilleri üzerinde|**Diyagramdan kaldır** komutunu çağırır.|
+|**Silme**|Diğer her şey.|**Koddan Sil** komutunu (Üyeler, parametreler, ilişkilendirmeler, devralma, Lollipop etiketleri) çağırır.|
 |**CTRL** + **Sil**|Tüm bağlamlar|Seçimdeki **kodu Sil** komutundan çağırır.|
 |**Sekmesinde**|Tüm bağlamlar|Aynı üst öğe içindeki sonraki alt öğeye gider (kaydırmayı destekler).|
 |**SHIFT** + **Sekme**|Tüm bağlamlar|Aynı üst öğe içinde önceki alt öğeye gider (kaydırmayı destekler).|
