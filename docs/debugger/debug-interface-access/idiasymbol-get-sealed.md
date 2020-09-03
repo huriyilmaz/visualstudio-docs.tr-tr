@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0b1f826c4dfcc8f000b37144b28dfcb8cf503a87
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85462055"
 ---
 # <a name="idiasymbolget_sealed"></a>IDiaSymbol::get_sealed
@@ -33,7 +33,7 @@ HRESULT get_sealed( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE`Sınıf veya yöntemin mühürlense döndürür; Aksi takdirde, döndürür `FALSE` .
+dışı `TRUE` Sınıf veya yöntemin mühürlense döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.

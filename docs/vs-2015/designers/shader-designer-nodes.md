@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b7526da10262003c9d086fdf1d74d065aac2d406
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664126"
 ---
 # <a name="shader-designer-nodes"></a>Gölgelendirici Tasarımcısı Düğümleri
@@ -28,13 +28,13 @@ Belgelerinin bu bölümündeki makaleler, grafik etkileri oluşturmak için kull
  Tüm düğümler ortak öğelerin birleşiminden oluşur. Her düğümün sağ tarafında en az bir çıkış terminali vardır (gölgelendirici çıkışını temsil eden son renk düğümü hariç). Hesaplamaları veya doku örnekleyicileri temsil eden düğümler, sol taraflarındaki giriş terminallerine sahiptir, ancak bilgileri temsil eden düğümlerin giriş terminalleri yoktur. Çıkış terminalleri, bir düğümden diğerine bilgi taşımak için giriş terminallere bağlanır.
 
 ### <a name="promotion-of-inputs"></a>Girişlerin yükseltilmesi
- Gölgelendirici Tasarımcısının, efektin bir oyun veya uygulamada kullanılabilmesi için sonunda HLSL kaynak kodu oluşturması gerektiğinden, gölgelendirici tasarımcı düğümleri HLSL 'ın kullandığı tür yükseltme kurallarına tabidir. Grafik donanımı öncelikle kayan nokta değerlerinde çalıştığından, farklı türler arasında yükseltme yazın — örneğin, `int` `float` veya `float` 'den `double` 'ye). Bunun yerine, grafik donanımı birden çok bilgi halinde aynı işlemi aynı anda kullandığından, bir dizi girişin daha kısa olması, en uzun giriş boyutuyla eşleşecek şekilde uzadığı için farklı bir promosyon türü meydana gelebilir. Nasıl boyunun, girişin türüne ve ayrıca işlemin kendisine göre belirlenir:
+ Gölgelendirici Tasarımcısının, efektin bir oyun veya uygulamada kullanılabilmesi için sonunda HLSL kaynak kodu oluşturması gerektiğinden, gölgelendirici tasarımcı düğümleri HLSL 'ın kullandığı tür yükseltme kurallarına tabidir. Grafik donanımı öncelikli olarak kayan nokta değerlerinde çalıştığından, farklı türler arasında yükseltme yapın — Örneğin, öğesinden `int` `float` veya türünden `float` `double` - Bunun yerine, grafik donanımı birden çok bilgi halinde aynı işlemi aynı anda kullandığından, bir dizi girişin daha kısa olması, en uzun giriş boyutuyla eşleşecek şekilde uzadığı için farklı bir promosyon türü meydana gelebilir. Nasıl boyunun, girişin türüne ve ayrıca işlemin kendisine göre belirlenir:
 
 - **Daha küçük tür skaler bir değer ise:**
 
      Skalar değerin değeri, daha büyük girişe eşit olan bir Vector öğesine çoğaltılır. Örneğin, işlemin en büyük girişi işlemin ne olursa olsun üç öğeli bir vektör olduğunda, 5,0 skaler girişi vektörü (5,0, 5,0, 5,0) olur.
 
-- **Daha küçük tür bir Vector ise ve işlem çarpanda (\*,/,%, vb.) ise:**
+- **Küçük tür bir Vector ise ve işlem çarpanda ( \* ,/,%, vb.) varsa:**
 
      Vector değeri, daha büyük girişe eşit olan bir Vector öğesinin önde gelen öğelerine kopyalanır ve sondaki öğeler 1,0 olarak ayarlanır. Örneğin, vektör girişi (5,0, 5,0) dört öğeli vektörle çarpıldığı zaman vektör (5,0, 5,0, 1,0, 1,0) olur. Bu, çarpma kimliği, 1,0 kullanılarak çıktının üçüncü ve dördüncü öğelerini korur.
 
@@ -46,9 +46,9 @@ Belgelerinin bu bölümündeki makaleler, grafik etkileri oluşturmak için kull
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Sabit Düğümler](../designers/constant-nodes.md)|Sabit değerleri temsil etmek için kullanabileceğiniz düğümleri ve gölgelendirici hesaplamalarında ara durum bilgilerini enterpolasyonlarla dengeleyebileceğinizi açıklar. Köşe durumu enterpolacağından ve bu nedenle her bir piksel için farklı olduğundan, her piksel gölgelendirici örneği, sabit 'in farklı bir sürümünü alır.|
-|[Parametre Düğümleri](../designers/parameter-nodes.md)|Gölgelendirici hesaplamalarında kamera konumunu, malzeme özelliklerini, aydınlatma parametrelerini, saati ve diğer uygulama durumu bilgilerini temsil etmek için kullanabileceğiniz düğümleri açıklar.|
-|[Doku Düğümleri](../designers/texture-nodes.md)|Çeşitli doku türlerini ve geometrileri örneklemek ve ortak yollarla doku koordinatları oluşturmak veya dönüştürmek için kullanabileceğiniz düğümleri açıklar.|
-|[Matematik Düğümleri](../designers/math-nodes.md)|Algebraic, Logic, trigonometrik ve doğrudan HLSL yönergelerine eşlenen diğer matematiksel işlemleri gerçekleştirmek için kullanabileceğiniz düğümleri açıklar.|
-|[Yardımcı Program Düğümleri](../designers/utility-nodes.md)|Genel aydınlatma hesaplamalarını ve doğrudan HLSL yönergelerine eşlenmez diğer yaygın işlemleri gerçekleştirmek için kullanabileceğiniz düğümleri açıklar.|
-|[Filtre Düğümleri](../designers/filter-nodes.md)|Doku filtrelemesi ve renk filtrelemesi gerçekleştirmek için kullanabileceğiniz düğümleri açıklar.|
+|[Sabit düğümler](../designers/constant-nodes.md)|Sabit değerleri temsil etmek için kullanabileceğiniz düğümleri ve gölgelendirici hesaplamalarında ara durum bilgilerini enterpolasyonlarla dengeleyebileceğinizi açıklar. Köşe durumu enterpolacağından ve bu nedenle her bir piksel için farklı olduğundan, her piksel gölgelendirici örneği, sabit 'in farklı bir sürümünü alır.|
+|[Parametre düğümleri](../designers/parameter-nodes.md)|Gölgelendirici hesaplamalarında kamera konumunu, malzeme özelliklerini, aydınlatma parametrelerini, saati ve diğer uygulama durumu bilgilerini temsil etmek için kullanabileceğiniz düğümleri açıklar.|
+|[Doku düğümleri](../designers/texture-nodes.md)|Çeşitli doku türlerini ve geometrileri örneklemek ve ortak yollarla doku koordinatları oluşturmak veya dönüştürmek için kullanabileceğiniz düğümleri açıklar.|
+|[Matematik düğümleri](../designers/math-nodes.md)|Algebraic, Logic, trigonometrik ve doğrudan HLSL yönergelerine eşlenen diğer matematiksel işlemleri gerçekleştirmek için kullanabileceğiniz düğümleri açıklar.|
+|[Yardımcı program düğümleri](../designers/utility-nodes.md)|Genel aydınlatma hesaplamalarını ve doğrudan HLSL yönergelerine eşlenmez diğer yaygın işlemleri gerçekleştirmek için kullanabileceğiniz düğümleri açıklar.|
+|[Filtre düğümleri](../designers/filter-nodes.md)|Doku filtrelemesi ve renk filtrelemesi gerçekleştirmek için kullanabileceğiniz düğümleri açıklar.|

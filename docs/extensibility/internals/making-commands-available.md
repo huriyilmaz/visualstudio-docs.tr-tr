@@ -1,5 +1,5 @@
 ---
-title: Komutları Kullanılabilir Hale Getirme | Microsoft Dokümanlar
+title: Komutları kullanılabilir hale getirme | Microsoft Docs
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,25 +14,25 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 2d64df85516e0a1ac326f8d40558755718c4644c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80707328"
 ---
 # <a name="making-commands-available"></a>Komutları kullanılabilir hale getirme
 
-Visual Studio'ya birden fazla VSPackages eklendiğinde, kullanıcı arabirimi (UI) komutlarla dolup taştırılabilir. Paketinizi bu sorunu azaltmaya yardımcı olacak şekilde aşağıdaki gibi programlayabilirsiniz:
+Visual Studio 'ya birden çok VSPackages eklendiğinde, Kullanıcı arabirimi (UI) komutlarla birlikte ortaya çıkabilir. Bu sorunu azaltmaya yardımcı olmak için paketinizi aşağıdaki şekilde programlayabilirsiniz:
 
-- Paketi yalnızca bir kullanıcı gerektirdiğinde yüklenecek şekilde programla.
+- Paketi yalnızca bir Kullanıcı gerektirdiğinde yüklenecek şekilde programlayabilirsiniz.
 
-- Paketi, komutlarının yalnızca tümleşik geliştirme ortamının (IDE) geçerli durumu bağlamında gerekli olabilecekleri durumlarda görüntülenecek şekilde programlayın.
+- Komutları yalnızca tümleşik geliştirme ortamının (IDE) geçerli durumu bağlamında gerekebilecek durumlarda görüntülenecek şekilde programlayabilirsiniz.
 
 ## <a name="delayed-loading"></a>Gecikmeli yükleme
 
-Gecikmeli yüklemeyi etkinleştirmenin tipik yolu, KOMUTları Kullanıcı Arabirimi'nde görüntülenecek şekilde VSPackage'ı tasarlamaktır, ancak kullanıcı komutlardan birini tıklayana kadar paketin kendisi yüklenmez. Bunu başarmak için ,.vsct dosyasında komut bayrakları olmayan komutlar oluşturun.
+Gecikmeli yüklemeyi etkinleştirmenin tipik yolu, komut Kullanıcı arabiriminde görüntülenmek üzere VSPackage tasarlayacağından, bir kullanıcı komutlardan birine tıklaana kadar paketin kendisi yüklenmez. Bunu gerçekleştirmek için,. vsct dosyasında komut bayrakları olmayan komutlar oluşturun.
 
-Aşağıdaki örnekte ,vsct dosyasından bir menü komutunun tanımı gösterilmektedir. Bu, şablondaki **Menü Komutu** seçeneği seçildiğinde Visual Studio Package Template tarafından oluşturulan komuttur.
+Aşağıdaki örnek, bir. vsct dosyasındaki bir menü komutunun tanımını gösterir. Bu, şablondaki **menü komutu** seçeneği belirlendiğinde Visual Studio paket şablonu tarafından oluşturulan komuttur.
 
 ```xml
 <Button guid="guidTopLevelMenuCmdSet" id="cmdidTestCommand" priority="0x0100" type="Button">
@@ -45,24 +45,24 @@ Aşağıdaki örnekte ,vsct dosyasından bir menü komutunun tanımı gösterilm
 </Button>
 ```
 
-Örnekte, üst grup, `MyMenuGroup` **Araçlar** menüsü gibi üst düzey bir menünün alt öğesiyse, komut bu menüde görünür, ancak komutu çalıştıran paket, komut kullanıcı tarafından tıklanana kadar yüklenmez. Ancak, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimi uygulamak için komutu programlayarak, komutu içeren menü ilk genişletildiğinde paketin yüklenmesini etkinleştirebilirsiniz.
+Örnekte, üst grup, `MyMenuGroup` **Araçlar** menüsü gibi üst düzey bir menünün bir alt öğesi ise, komut bu menüde görünür olur, ancak komut bir kullanıcı tarafından tıklanana kadar komutu yürüten paket yüklenmez. Bununla birlikte, arabirimi uygulamak için komutunu programlayarak <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> , komutu içeren menü ilk genişletildiğinde paketin yüklenmesine izin verebilirsiniz.
 
-Gecikmiş yüklemenin başlangıç performansını da artırabileceğini unutmayın.
+Gecikmeli yüklemenin de başlangıç performansını iyileştirebileceğini unutmayın.
 
 ## <a name="current-context-and-the-visibility-of-commands"></a>Geçerli bağlam ve komutların görünürlüğü
 
-VSPackage komutlarını, VSPackage verilerinin geçerli durumuna veya şu anda alakalı olan eylemlere bağlı olarak görünür veya gizli olacak şekilde programlayabilirsiniz. VSPackage'ın komutlarının durumunu, genellikle <xref:EnvDTE.IDTCommandTarget.QueryStatus%2A> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimden yöntemin bir uygulamasını kullanarak ayarlamasını etkinleştirebilirsiniz, ancak bu, kodu yürütebilmek için VSPackage'ın yüklenmesini gerektirir. Bunun yerine, IDE'nin paketi yüklemeden komutların görünürlüğünü yönetmesini etkinleştirmenizi öneririz. Bunu yapmak için ,.vsct dosyasında, komutları bir veya daha fazla özel UI bağlamıyla ilişkilendirin. Bu UI bağlamları *komut bağlamı GUID*olarak bilinen bir GUID tarafından tanımlanır.
+VSPackage komutlarının geçerli durumuna veya şu anda ilgili eylemlere bağlı olarak, VSPackage komutlarını görünür veya gizli olacak şekilde programlayabilirsiniz. Genellikle, arabiriminden yönteminin bir uygulamasını kullanarak, kendi komutlarının durumunu ayarlamak için VSPackage <xref:EnvDTE.IDTCommandTarget.QueryStatus%2A> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 'ı etkinleştirebilirsiniz, ancak bu, kodu yürütebilmesi Için VSPackage 'ın yüklenmesini gerektirir. Bunun yerine, IDE 'yi, paketi yüklemeden komutların görünürlüğünü yönetmek için etkinleştirmenizi öneririz. Bunu yapmak için,. vsct dosyasında komutları bir veya daha fazla özel UI bağlamlarıyla ilişkilendirin. Bu Kullanıcı arabirimi bağlamları, *komut BAĞLAMı GUID*'si olarak BILINEN bir GUID tarafından tanımlanır.
 
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]proje yükleme veya düzenlemeden binaya gitme gibi kullanıcı eylemlerinden kaynaklanan değişiklikleri izler. Değişiklikler meydana geldikçe, IDE'nin görünümü otomatik olarak değiştirilir. Aşağıdaki tablo, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] izleyen IDE değişikliğinin dört ana bağlamını gösterir.
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Proje yükleme veya düzenlemeden oluşturmaya bağlanma gibi kullanıcı eylemlerinden kaynaklanan değişiklikleri izler. Değişiklikler gerçekleştiğinde IDE görünümü otomatik olarak değiştirilir. Aşağıdaki tabloda, izleyen IDE değişikliğinin dört ana bağlamı gösterilmektedir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
-| Bağlam Türü | Açıklama |
+| Bağlam türü | Açıklama |
 |-------------------------| - |
-| Etkin Proje Türü | Çoğu proje türü `GUID` için bu değer, projeyi uygulayan VSPackage'ın GUID'i ile aynıdır. Ancak, [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] projeler değer `GUID` olarak Proje Türünü kullanır. |
-| Etkin Pencere | Genellikle, bu anahtar bağlamaları için geçerli UI bağlamını oluşturan son etkin belge penceresidir. Ancak, aynı zamanda iç Web tarayıcısı benzer bir anahtar bağlama tablosu olan bir araç penceresi olabilir. HTML düzenleyicisi gibi çok sekmeli belge pencereleri için `GUID`her sekmefarklı bir komut bağlamı vardır. |
-| Aktif Dil Servisi | Şu anda bir metin düzenleyicisinde görüntülenen dosyayla ilişkili dil hizmeti. |
-| Etkin Araç Penceresi | Açık ve odaklanmış bir araç penceresi. |
+| Etkin proje türü | Çoğu proje türü için bu `GUID` değer, projeyi uygulayan VSPackage 'un GUID 'si ile aynıdır. Ancak, [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] projeler proje türünü `GUID` değer olarak kullanır. |
+| Etkin pencere | Genellikle, bu, anahtar bağlamaları için geçerli kullanıcı arabirimi bağlamını kuran son etkin belge penceresidir. Bununla birlikte, iç Web tarayıcısına benzer bir anahtar bağlama tablosuna sahip bir araç penceresi de olabilir. HTML Düzenleyicisi gibi çok sekmeli belge pencereleri için her sekmenin farklı bir komut bağlamı vardır `GUID` . |
+| Etkin dil hizmeti | Şu anda bir metin düzenleyicisinde görüntülenen dosyayla ilişkili dil hizmeti. |
+| Etkin araç penceresi | Açık ve odaklanmış bir araç penceresi. |
 
-Beşinci ana bağlam alanı IDE'nin UI durumudur. UI bağlamları aşağıdaki gibi, `GUID`etkin komut bağlamı tarafından tanımlanır:
+Bir beşinci önemli bağlam alanı, IDE 'nin UI durumudur. UI bağlamları, etkin komut bağlamı tarafından `GUID` aşağıdaki gibi tanımlanır:
 
 - <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionBuilding_guid>
 
@@ -86,30 +86,30 @@ Beşinci ana bağlam alanı IDE'nin UI durumudur. UI bağlamları aşağıdaki g
 
 - <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.CodeWindow_guid>
 
-Bu GUID'ler, IDE'nin geçerli durumuna bağlı olarak etkin veya etkin olmayan olarak işaretlenir. Birden çok Ara Bilgi bağlamı aynı anda etkin olabilir.
+Bu GUID 'Ler, IDE 'nin geçerli durumuna bağlı olarak etkin veya etkin değil olarak işaretlenir. Aynı anda birden çok UI bağlamı etkin olabilir.
 
-### <a name="hide-and-display-commands-based-on-context"></a>Komutları bağlama göre gizleme ve görüntüleme
+### <a name="hide-and-display-commands-based-on-context"></a>Bağlam temelinde komutları gizleme ve görüntüleme
 
-Paketin kendisini yüklemeden IDE'de bir paket komutunu görüntüleyebilir veya gizleyebilirsiniz. Bunu yapmak için, paketin .vsct dosyasındaki komutu `DefaultDisabled`, `DefaultInvisible`, `DynamicVisibility` ve komut bayraklarını kullanarak ve Görünürlük Kısıtlamaları bölümüne bir veya daha fazla [Görünürlük Öğesi](../../extensibility/visibilityitem-element.md) öğesi ekleyerek [tanımlayın.](../../extensibility/visibilityconstraints-element.md) Belirli bir komut `GUID` bağlamı etkin hale geldiğinde, komut paketi yüklemeden görüntülenir.
+Paketin kendisini yüklemeden IDE 'deki bir paket komutunu gösterebilir veya gizleyebilirsiniz. Bunu yapmak için,, `DefaultDisabled` `DefaultInvisible` ve `DynamicVisibility` komut bayraklarını kullanarak ve bir veya daha fazla [VisibilityItem](../../extensibility/visibilityitem-element.md) öğesini [visibilitykısıtlamalar](../../extensibility/visibilityconstraints-element.md) bölümüne ekleyerek paketin. vsct dosyasında komutunu tanımlayın. Belirtilen bir komut bağlamı `GUID` etkin hale geldiğinde, komut paket yüklenmeden görüntülenir.
 
-### <a name="custom-context-guids"></a>Özel bağlam GUIDs
+### <a name="custom-context-guids"></a>Özel bağlam GUID 'Leri
 
-Uygun bir komut bağlamı GUID zaten tanımlanmamışsa, VSPackage'ınızda bir tane tanımlayabilir ve ardından komutlarınızın görünürlüğünü denetlemek için gerektiğinde etkin veya etkin olmayan olarak programlayabilirsiniz. <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> Hizmeti şu şekilde kullanın:
+Uygun bir komut bağlamı GUID 'SI zaten tanımlanmamışsa, VSPackage içinde bir tane tanımlayabilir ve ardından komutlarınızın görünürlüğünü denetlemek için gerektiğinde etkin veya devre dışı olarak programlayabilirsiniz. Hizmetini kullanarak <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> şunları yapın:
 
-- İçerik GUID'lerini kaydedin <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.GetCmdUIContextCookie%2A> (yöntemi arayarak).
+- Bağlam GUID 'Lerini kaydedin (yöntemini çağırarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.GetCmdUIContextCookie%2A> ).
 
-- Bir bağlam `GUID` Durumunu alın <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A> (yöntemi arayarak).
+- Bağlam durumunu alır `GUID` ( <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A> yöntemini çağırarak).
 
-- Bağlamı `GUID`açıp kapatın <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.SetCmdUIContext%2A> (yöntemi arayarak).
+- Bağlamı açın `GUID` ve kapatın ( <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.SetCmdUIContext%2A> yöntemini çağırarak).
 
     > [!CAUTION]
-    > VSPackage'ınızın varolan herhangi bir bağlam GUID'in durumunu etkilemediğinden emin olun, çünkü diğer VSPackages'lar bunlara bağlı olabilir.
+    > Diğer VSPackages bunlara bağlı olabileceğinden VSPackage 'ın var olan herhangi bir bağlam GUID 'sinin durumunu etkilemediğinden emin olun.
 
 ## <a name="example"></a>Örnek
 
-VSPackage komutunun aşağıdaki örneği, VSPackage'ı yüklemeden komut bağlamları tarafından yönetilen bir komutun dinamik görünürlüğünü gösterir.
+Aşağıdaki VSPackage komutuna örnek, VSPackage yüklenmeden komut bağlamlarının yönettiği bir komutun dinamik görünürlüğünü gösterir.
 
-Komut etkinleştirilecek ve bir çözüm olduğunda görüntülenecek şekilde ayarlanır; diğer bir şey, aşağıdaki komut bağlamından biri GUID'ler etkin olduğunda:
+Komut, bir çözüm olduğunda etkinleştirilecek ve görüntülenecek şekilde ayarlanır; diğer bir deyişle, aşağıdaki komut bağlamı GUID 'Lerinin her biri etkin olduğunda:
 
 - <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.EmptySolution_guid>
 
@@ -117,7 +117,7 @@ Komut etkinleştirilecek ve bir çözüm olduğunda görüntülenecek şekilde a
 
 - <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionHasSingleProject_guid>
 
-Örnekte, her komut bayrağının ayrı bir [Komut Bayrağı](../../extensibility/command-flag-element.md) öğesi olduğuna dikkat edin.
+Örnekte, her komut bayrağının ayrı bir [komut bayrağı](../../extensibility/command-flag-element.md) öğesi olduğunu fark edersiniz.
 
 ```xml
 <Button guid="guidDynamicVisibilityCmdSet" id="cmdidMyCommand"
@@ -134,7 +134,7 @@ Komut etkinleştirilecek ve bir çözüm olduğunda görüntülenecek şekilde a
 </Button>
 ```
 
-Ayrıca, her ui bağlamı aşağıdaki `VisibilityItem` gibi ayrı bir öğe içinde verilmelidir dikkat edin.
+Ayrıca, her UI bağlamının aşağıdaki gibi ayrı bir öğede verilmesi gerektiğini de unutmayın `VisibilityItem` .
 
 ```xml
 <VisibilityConstraints>

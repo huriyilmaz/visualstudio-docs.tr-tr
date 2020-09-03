@@ -12,16 +12,16 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 423264362118343d573b417cd055d2d722df995e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657458"
 ---
 # <a name="how-to-configure-code-analysis-for-an-aspnet-web-application"></a>Nasıl yapılır: Bir ASP.NET Web Uygulaması İçin Kod Analizini Yapılandırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_0 ve [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulamasına uygulanacak kod analizi *kural kümeleri* listesinden seçim yapabilirsiniz. Varsayılan kural kümesi, en az Microsoft tarafından önerilen kurallardır. Web sitesi için uygulanacak başka bir kural kümesi seçebilirsiniz.
+Ve ' de, [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] Web uygulamasına uygulanacak kod analizi *kural kümeleri* listesinden seçim yapabilirsiniz [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] . Varsayılan kural kümesi, en az Microsoft tarafından önerilen kurallardır. Web sitesi için uygulanacak başka bir kural kümesi seçebilirsiniz.
 
 ### <a name="to-configure-a-rule-set-for-an-aspnet-page-framework-project"></a>Bir ASP.NET Page Framework projesi için bir kural kümesi yapılandırmak için
 
@@ -43,6 +43,6 @@ ms.locfileid: "72657458"
 
     - Kullanmak istediğiniz kural kümesini seçin.
 
-    - Listede olmayan mevcut bir özel kural kümesini belirtmek için **\<Browse >** seçin.
+    - **\<Browse>** Listede olmayan mevcut bir özel kural kümesini belirtmek için seçin.
 
     - Özel bir kural kümesi tanımlayın. Daha fazla bilgi için bkz. [özel kural kümeleri oluşturma](../code-quality/creating-custom-code-analysis-rule-sets.md).

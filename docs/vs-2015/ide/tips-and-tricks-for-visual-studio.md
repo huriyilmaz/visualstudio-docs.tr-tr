@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 53caca1d98b4074867757ae01d8cc9efa9692952
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542993"
 ---
 # <a name="tips-and-tricks-for-visual-studio"></a>Visual Studio için İp Uçları ve Püf Noktaları
@@ -36,9 +36,9 @@ Bu konudaki kısayolları kullanarak Visual Studio 'da daha kolay gezinebilirsin
 
 - [Hata Ayıklama](../ide/tips-and-tricks-for-visual-studio.md#BKMK_Debugging)
 
-- [Uygulama yaşam döngüsü yönetimi](../ide/tips-and-tricks-for-visual-studio.md#BKMK_ALM)
+- [Uygulama Yaşam Döngüsü Yönetimi](../ide/tips-and-tricks-for-visual-studio.md#BKMK_ALM)
 
-## <a name="window-management"></a><a name="BKMK_WindowMgmt"></a>Pencere yönetimi
+## <a name="window-management"></a><a name="BKMK_WindowMgmt"></a> Pencere yönetimi
 
 |Komut|Kısayol|
 |-|-|
@@ -49,7 +49,7 @@ Bu konudaki kısayolları kullanarak Visual Studio 'da daha kolay gezinebilirsin
 |Açık dosya listesini göster|Ctrl + alt + aşağı|
 |Tüm kayan pencereleri göster|Ctrl+Shift+M|
 
-## <a name="window-shortcuts"></a><a name="BKMK_WindowShortcuts"></a>Pencere kısayolları
+## <a name="window-shortcuts"></a><a name="BKMK_WindowShortcuts"></a> Pencere kısayolları
 
 |Komut|Kısayol|
 |-|-|
@@ -59,17 +59,17 @@ Bu konudaki kısayolları kullanarak Visual Studio 'da daha kolay gezinebilirsin
 |Yeni örnek Başlat|Win + SHIFT + n|
 |Pencereler arasında geçiş yap|Win + n|
 
-## <a name="visual-studio-search"></a><a name="BKMK_Search"></a>Visual Studio arama
+## <a name="visual-studio-search"></a><a name="BKMK_Search"></a> Visual Studio arama
 
 |Komut|Kısayol|
 |-|-|
 |Çözüm Gezgini arama|Ctrl+;|
 |Odağı herhangi bir araç penceresinde arama kutusuna yerleştir|Araç penceresi odağa sahip olduğunda alt + '|
 |Hızlı Başlat|Ctrl+Q|
-|Hızlı başlatma kapsamı sonuçları|- @opt Seçenekler<br />- @cmd Komutlar<br />- @mru En son kullanılan<br />- @doc Açık belgeler|
+|Hızlı başlatma kapsamı sonuçları|-   @opt Seçenekler<br />-   @cmd Komutlar<br />-   @mru En son kullanılan<br />-   @doc Açık belgeler|
 |Araç seçeneklerinde ara|CTRL + E|
 
-## <a name="editor-find"></a><a name="BKMK_EditorFind"></a>Düzenleyiciyi bul
+## <a name="editor-find"></a><a name="BKMK_EditorFind"></a> Düzenleyiciyi bul
 
 |Komut|Kısayol|
 |-|-|
@@ -84,7 +84,7 @@ Bu konudaki kısayolları kullanarak Visual Studio 'da daha kolay gezinebilirsin
 |Dosyalarda Bul|Ctrl+Shift+F|
 |Dosyalarda Değiştir|Ctrl+Shift+H|
 
-## <a name="code-editor"></a><a name="BKMK_CodeEditor"></a>Kod Düzenleyicisi
+## <a name="code-editor"></a><a name="BKMK_CodeEditor"></a> Kod Düzenleyicisi
 
 |Komut|Kısayol|
 |-|-|
@@ -109,7 +109,7 @@ Bu konudaki kısayolları kullanarak Visual Studio 'da daha kolay gezinebilirsin
 |Birden çok göz atma sonucu arasında gezinme|F8ve Shift+F8|
 |Kod Düzenleyicisi penceresi ve Özet Tanım penceresi arasında geçiş yap|Shift+Esc|
 
-## <a name="toolbars"></a><a name="BKMK_Toolbars"></a>Çubuklarındaki
+## <a name="toolbars"></a><a name="BKMK_Toolbars"></a> Çubuklarındaki
 
 |Komut|Kısayol|
 |-|-|
@@ -137,7 +137,7 @@ Bu konudaki kısayolları kullanarak Visual Studio 'da daha kolay gezinebilirsin
 |Anında pencere temizleme arabelleği|>CLS|
 |Anında pencere yazdırma değeri|? varname|
 
-## <a name="application-lifecycle-management"></a><a name="BKMK_ALM"></a>Uygulama yaşam döngüsü yönetimi
+## <a name="application-lifecycle-management"></a><a name="BKMK_ALM"></a> Uygulama yaşam döngüsü yönetimi
 
 Bkz. [klavye kısayolları: Visual Studio Online, TFS web portalı ve Takım Gezgini](/azure/devops/project/navigation/keyboard-shortcuts?view=vsts).
 

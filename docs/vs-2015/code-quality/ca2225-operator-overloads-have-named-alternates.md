@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 2dc43e92b92b6f963900057a76dfe88e38a3638f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545229"
 ---
 # <a name="ca2225-operator-overloads-have-named-alternates"></a>CA2225: İşleç aşırı yüklemeleri adlandırılmış alternatiflere sahiptir
@@ -77,7 +77,7 @@ ms.locfileid: "85545229"
 |true|IsTrue|Yok|IsTrue (özellik)|
 |-(birli)|Yok|-|Negate|
 |+ (birli)|Yok|+|Artı|
-|yanlış|IsFalse|False|IsTrue (özellik)|
+|yanlış|IsFalse|Yanlış|IsTrue (özellik)|
 
  Seçili dilde N/A = = aşırı yüklenemez.
 

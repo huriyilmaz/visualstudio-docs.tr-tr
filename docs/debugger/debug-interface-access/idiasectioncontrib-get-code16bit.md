@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5cf76f2c335af44a3dc1b0ebdd388ae1a26c462c
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85466359"
 ---
 # <a name="idiasectioncontribget_code16bit"></a>IDiaSectionContrib::get_code16bit
@@ -33,7 +33,7 @@ HRESULT get_code16bit(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE`Bölümdeki kodun 16 bit olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .
+dışı `TRUE` Bölümdeki kodun 16 bit olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.

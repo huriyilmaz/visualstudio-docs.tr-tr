@@ -1,5 +1,5 @@
 ---
-title: PENDING_BP_STATE | Microsoft Dokümanlar
+title: PENDING_BP_STATE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 69c8dbe1022ee0b1b2ff034d2b83b947c8fb3df6
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714003"
 ---
 # <a name="pending_bp_state"></a>PENDING_BP_STATE
-Bekleyen bir kesme noktasının durumunu (henüz bağlanmamış bir kesme noktası) belirtir.
+Bekleyen bir kesme noktasının durumunu belirtir (henüz bağlanmamış bir kesme noktası).
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_PENDING_BP_STATE { 
@@ -48,27 +48,27 @@ public enum enum_PENDING_BP_STATE { 
 
 ## <a name="fields"></a>Alanlar
  `PBPS_NONE`\
- Yer tutucu sıfır. Bu değer hiçbir zaman döndürülür.
+ Sıfır için yer tutucu. Bu değer hiçbir şekilde döndürülmez.
 
  `PBPS_DELETED`\
  Bekleyen kesme noktasının silindiğini gösterir.
 
  `PBPS_DISABLED`\
- Bekleyen kesme noktasının devre dışı bırakıldığını gösterir.
+ Bekleyen kesme noktasının devre dışı olduğunu belirtir.
 
  `PBPS_ENABLED`\
  Bekleyen kesme noktasının etkin olduğunu gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
- `state` [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) yapının üyesi olarak kullanın.
+ `state` [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) yapısının üyesi olarak kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)

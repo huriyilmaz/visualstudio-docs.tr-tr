@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ba2f0351997b5f6a2a96cb035871b116b9180786
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461986"
 ---
 # <a name="idiasymbolget_sizeinudt"></a>IDiaSymbol::get_sizeInUdt
@@ -30,7 +30,7 @@ HRESULT get_sizeInUdt(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `DWORD`Üyenin boyutunu belirten bir işaretçisi.
+dışı `DWORD` Üyenin boyutunu belirten bir işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.

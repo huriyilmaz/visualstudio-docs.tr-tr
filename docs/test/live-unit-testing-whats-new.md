@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 2017 Canlı Ünite Testinde Yenilikler
+title: Visual Studio 2017 ' de Live Unit Testing yenilikler
 titleSuffix: ''
 ms.date: 10/11/2017
 ms.topic: conceptual
@@ -12,59 +12,59 @@ ms.workload:
 - dotnet
 monikerRange: vs-2017
 ms.openlocfilehash: 7f7ab0c257bfed4521e95d9da12eaa0b9e25a71e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76114278"
 ---
-# <a name="whats-new-in-live-unit-testing-for-visual-studio-2017"></a>Visual Studio 2017 Canlı Ünite Testinde Yenilikler
+# <a name="whats-new-in-live-unit-testing-for-visual-studio-2017"></a>Visual Studio 2017 için Live Unit Testing yenilikler
 
-Bu konu Visual Studio 2017 sürüm 15.3 ile başlayan Visual Studio'nun her sürümünde Canlı Birim Testine eklenen yeni özellikleri listeler. Canlı Birim Testi'nin nasıl kullanılacağına genel bir bakış için [Visual Studio ile Canlı Birim Testi'ne](live-unit-testing.md)bakın.
+Bu konuda, Visual Studio 2017 sürüm 15,3 ' den başlayarak her Visual Studio sürümünde Live Unit Testing eklenen yeni özellikler listelenmiştir. Live Unit Testing kullanma hakkında genel bir bakış için bkz. [Visual Studio ile Live Unit Testing](live-unit-testing.md).
 
-## <a name="version-154"></a>Sürüm 15.4
+## <a name="version-154"></a>Sürüm 15,4
 
-Visual Studio 2017 sürüm 15.4 ile başlayan Canlı Birim Testi, bazı alanlarda iyileştirmeler ve geliştirmeler içerir:
+Visual Studio 2017 sürüm 15,4 ' den başlayarak, Live Unit Testing çeşitli alanlarda iyileştirmeler ve iyileştirmeler içerir:
 
-- **Geliştirilmiş keşfedilebilirlik**. Canlı Birim Testi özelliğinin var olduğunu bilmeyen kullanıcılar için Visual Studio IDE, kullanıcı birim testleri içeren bir çözüm açtığında Canlı Birim Testi'nden bahseden bir altın çubuk gösterir, ancak Canlı Birim Testi etkinleştirilmez. Altın çubukta sunulan bilgiler, kullanıcının Canlı Birim Testi hakkında daha fazla bilgi edinmesini ve bunu etkinleştirmesini sağlar. Altın çubuk, Canlı Birim Testi ön koşulları karşılanmadığında da bilgileri görüntüler. Bunlar:
+- **İyileştirilmiş bulunabilirliği**. Live Unit Testing özelliğinin mevcut olduğunu bilemeyen kullanıcılar için, Visual Studio IDE, Kullanıcı birim testlerini içeren bir çözümü her açtığında Live Unit Testing bahsetmeyen bir altın çubuk gösterir, ancak Live Unit Testing etkinleştirilmez. Altın renkli çubukta sunulan bilgiler, kullanıcının Live Unit Testing hakkında daha fazla bilgi almasına ve etkinleştirmesini sağlar. Altın renkli çubuk, Live Unit Testing önkoşulları karşılanmazsa bilgileri de görüntüler. Bu güncelleştirmeler şunlardır:
 
   - Test bağdaştırıcıları eksik.
   - Test bağdaştırıcılarının eski sürümleri mevcuttur.
-  - Çözüm tarafından başvurulan NuGet paketlerinin geri yüklenmesi gereklidir.
+  - Çözüm tarafından başvurulan NuGet paketlerinin geri yüklenmesi gerekiyor.
 
-- **Görev Merkezi bildirimleri ile tümleştirme.** Visual Studio IDE artık Görev Merkezi'nde Bir Canlı Birim Testi arka plan işleme bildirimi gösterir, böylece kullanıcılar Canlı Birim Testi etkinleştirildiğinde neler olduğunu kolayca anlayabilirler. Bu, büyük bir çözüm üzerinde Canlı Birim Testi başlatma nın temel sorununu giderer. Daha önce, kapsama simgeleri ortaya çıkana kadar birkaç dakika boyunca, kullanıcılar Canlı Birim Testi'nin gerçekten etkin olup olmadığını ve çalışıp çalışmadığını belirleyemediler. Artık değil!
+- **Görev Merkezi bildirimleri Ile tümleştirme**. Visual Studio IDE artık, kullanıcıların Live Unit Testing etkinleştirildiğinde ne olduğunu kolayca anlayabilmesi için, görev merkezi 'nde Live Unit Testing bir arka plan işleme bildirimi gösterir. Bu, büyük bir çözümde Live Unit Testing başlatma ile ilgili önemli sorunu ele alır. Daha önce, kapsam simgeleri görünene kadar birkaç dakika boyunca, kullanıcılar Live Unit Testing gerçekten etkinleştirilip etkinleştirilmeyeceğini ve çalışıp çalışmadığını belirlemeiyordu. Artık değil!
 
-- **MSTest framework version 1 desteği**: Canlı Birim Testi zaten üç popüler birim test çerçevesi ile çalışır: xUnit, NUnit ve MSTest. Daha önce, Canlı Birim Testi yalnızca MSTest birim test projeleri MS Test sürüm 2 kullanıldığında işe yaralsA. Visual Studio 2017 sürüm 15.4 ile başlayarak, şimdi de MSTest sürüm 1'i de destekliyor.
+- **MSTest Framework sürüm 1 Için destek**: Live Unit Testing zaten üç popüler birim test çerçevesiyle çalışmaktadır: xUnit, NUnit ve MSTest. Daha önce Live Unit Testing yalnızca MSTest birim testi projeleri MS test sürüm 2 ' i kullanırken kullanılabilir. Visual Studio 2017 sürüm 15,4 ' den itibaren artık MSTest sürüm 1 de desteklenir.
 
-- **Güvenilirlik & Performansı**: Canlı Birim Testi artık projelerin tam olarak yüklenmeyi tamamlamadığını daha iyi algılamasını sağlar ve Canlı Birim Testi'nin çökmesini önler. Yapı performansı iyileştirmeleri, sistem proje dosyasındaki hiçbir şeyin değişmediğini bildiğinde MSBuild projelerinin yeniden değerlendirilmesini de önler.
+- **Güvenilirlik & performansı**: Live Unit Testing artık, projenin tamamen yüklemeyi tamamlamadıklarında ve kilitlenen Live Unit Testing kaçınarak sistemin daha iyi algılayabilmesini sağlar. Yapı performansı geliştirmeleri Ayrıca, sistem proje dosyasındaki hiçbir şeyin değiştiğini bildiğinde MSBuild projelerinin yeniden değerlendirilmesinden kaçının.
 
-- **Çeşitli kullanıcı arabirimi iyileştirmeleri**: Kafa karıştırıcı Canlı Test Seti – Sağ tıklama hareketinden **Ekle/Hariç tutma** **seçeneği, Canlı Birim Test Ekle/Hariç Tut**olarak yeniden adlandırıldı.  >  **Canlı**Ünite Test menüsündeki Temiz**Test'i** **Sıfırla** seçeneği kaldırıldı. Artık **Araçlar** > **Seçenekleri** > **Canlı Birim Testi'ni** seçerek ve Kalıcı Verileri **Sil'i**seçerek erişilebilir.
+- **Çeşitli kullanıcı arabirimi işlevselliklerindeki**: sağ tıklama hareketinizden karışık **canlı test kümesi – dahil etme/hariç tutma** seçeneği **Live Unit Testing dahil etme/hariç tutma**olarak yeniden adlandırıldı. Test Live Unit Testing menüsündeki **temiz sıfırlama** seçeneği **Test**  >  **Live Unit Testing** kaldırılmıştır. Artık **Araçlar**  >  **Seçenekler**  >  **Live Unit Testing** ve **kalıcı verileri Sil**' i seçerek erişilebilir.
 
-## <a name="version-153"></a>Sürüm 15.3
+## <a name="version-153"></a>Sürüm 15,3
 
-Visual Studio 2017 sürüm 15.3 ile başlayan Live Unit Test, iki ana alanda iyileştirmeler ve geliştirmeler sunar:
+Visual Studio 2017 sürüm 15,3 ' den başlayarak, Özellikler ve iyileştirmeler iki ana alanda Live Unit Testing:
 
-- .NET Core ve .NET Standard desteği. C# veya Visual Basic ile yazılmış .NET Core ve .NET Standart çözümlerinde Canlı Birim Testi'ni kullanabilirsiniz.
+- .NET Core ve .NET Standard için destek. .NET Core üzerinde Live Unit Testing, C# veya Visual Basic yazılmış .NET Standard çözümleri kullanabilirsiniz.
 
-- Performans geliştirmeleri. Canlı Birim Testi altında yapılan ilk tam test ve çalıştırmadan sonra performansın önemli ölçüde daha hızlı olduğunu fark edeceksiniz. Aynı çözüm üzerinde Canlı Birim Testi'nin sonraki başlangıcında da önemli performans artışı fark edeceksiniz. Artık Live Unit Testing tarafından oluşturulan verileri sürdürüyoruz ve güncel kontrollerle mümkün olduğunca yeniden kullanıyoruz.
+- Performans geliştirmeleri. Live Unit Testing altında testlerin ilk tam derlemeden ve çalıştırıldıktan sonra performansın önemli ölçüde daha hızlı olduğunu fark edeceksiniz. Ayrıca, aynı çözümde Live Unit Testing sonraki başlangıçlarda önemli performans iyileştirmesini de fark edeceksiniz. Artık Live Unit Testing tarafından oluşturulan verileri kalıcı hale getiriyoruz ve güncel denetimler sayesinde mümkün olduğunca yeniden kullanıma sunduk.
 
-Bu önemli eklemelere ek olarak, Canlı Birim Testi aşağıdaki geliştirmeleri içerir:
+Bu büyük eklemelere ek olarak, Live Unit Testing aşağıdaki geliştirmeleri içerir:
 
-- Yeni bir beher simgesi artık bir test yöntemini normal yöntemlerden ayırt etmek için kullanılır. Boş bir beher simgesi, belirli bir testin Canlı Birim Testi'ne dahil olmadığını gösterir.
+- Artık bir test yöntemini normal yöntemlerden ayırt etmek için yeni bir Beaker simgesi kullanılır. Boş bir Beaker simgesi, belirli bir testin Live Unit Testing dahil edilmediğini belirtir.
 
-- Canlı Birim Test kapsamı simgesinin açılır ara birimi penceresinden bir test yöntemini tıklattığınızda, artık testin hatasını ui penceresindeki ve kod düzenleyicisinden ayrılmadan bu bağlamdan ayıklama seçeneğiniz vardır. Bu, özellikle başarısız bir teste baktığınızda kullanışlıdır.
+- Bir Live Unit Testing kapsam simgesinin açılır Kullanıcı arabirimi penceresinde bir test yöntemine tıkladığınızda, artık Kullanıcı arabirimi penceresinde bu bağlamdan test etme ve kod düzenleyicisinden çıkmak zorunda kalmadan hata ayıklama seçeneğiniz vardır. Bu, özellikle başarısız bir teste baktığınızda yararlı olur.
 
-- Araçlar/Seçenekler/Canlı Birim Testi/Genel'e birkaç ek yapılandırılabilir seçenek eklendi. Canlı Birim Testi için kullanılan belleği kapatabilirsiniz. Ayrıca, açık çözümünüz için kalıcı Canlı Birim Testi verilerinin dosya yolunu da belirtebilirsiniz.
+- Araçlar/Seçenekler/Live Unit Testing/genel 'e birkaç ek yapılandırılabilir seçenek eklenmiştir. Live Unit Testing için kullanılan belleği büyük bir şekilde kullanabilirsiniz. Ayrıca, açık çözümünüz için kalıcı Live Unit Testing verilerinin dosya yolunu da belirtebilirsiniz.
 
-- Test/Canlı Birim Testi'nin menü çubuğunun altına birkaç ek menü öğesi eklendi. **Temiz'i Sıfırla,** kalıcı verileri siler ve yeniden oluşturur. **Seçenekler** Araçlar/Seçenekler/Canlı Birim Testi/Genel'e atlar.
+- Test/Live Unit Testing menü çubuğunun altına birkaç ek menü öğesi eklenmiştir. **Temiz sıfırlama** kalıcı verileri siler ve yeniden oluşturur. **Seçenek** , Araçlar/seçenekler/Live Unit Testing/genel ' i atlar.
 
-- Artık, Hedeflenen test yöntemlerini Canlı Birim Testi'nden hariç tutmak istediğiniz kaynak kodunda belirtmek için aşağıdaki öznitelikleri kullanabilirsiniz:
+- Artık Live Unit Testing ' den hedeflenen test yöntemlerini dışlamak istediğiniz kaynak kodu belirtmek için aşağıdaki öznitelikleri kullanabilirsiniz:
 
-  - xUnit için:`[Trait("Category", "SkipWhenLiveUnitTesting")]`
-  - NUnit için:`[Category("SkipWhenLiveUnitTesting")]`
-  - MSTest için:`[TestCategory("SkipWhenLiveUnitTesting")]`
+  - XUnit için: `[Trait("Category", "SkipWhenLiveUnitTesting")]`
+  - NUnit için: `[Category("SkipWhenLiveUnitTesting")]`
+  - MSTest için: `[TestCategory("SkipWhenLiveUnitTesting")]`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dinamik Birim Testine Giriş](live-unit-testing-intro.md)
-- [Visual Studio ile Canlı Ünite Testi](live-unit-testing.md)
+- [Visual Studio ile Live Unit Testing](live-unit-testing.md)

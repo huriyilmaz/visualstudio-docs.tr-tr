@@ -12,9 +12,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: c3b84d901a1fd94d72ff14ec5c481e04676c5cbc
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016400"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>İzlenecek yol: proje şablonu, Bölüm 2 ile bir site sütunu proje öğesi oluşturma
@@ -39,7 +40,7 @@ ms.locfileid: "86016400"
 > [!NOTE]
 > Bir dizi örnek iş akışı için bkz. [SharePoint Workflow örnekleri](/sharepoint/dev/general-development/sharepoint-workflow-samples).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Bu yönergeyi gerçekleştirmek için, önce [Izlenecek yol: proje şablonu, Bölüm 1 ile bir site sütunu proje öğesi oluşturma '](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)yı tamamlayarak SiteColumnProjectItem çözümünü oluşturmanız gerekir.
 
  Bu izlenecek yolu tamamlamak için geliştirme bilgisayarında aşağıdaki bileşenlere de ihtiyacınız vardır:
@@ -57,7 +58,7 @@ ms.locfileid: "86016400"
 ## <a name="understand-the-wizard-components"></a>Sihirbaz bileşenlerini anlama
  Bu izlenecek yolda gösterilen sihirbaz çeşitli bileşenleri içerir. Aşağıdaki tabloda bu bileşenler açıklanmaktadır.
 
-|Bileşen|Description|
+|Bileşen|Açıklama|
 |---------------|-----------------|
 |Sihirbaz uygulama|Bu, arabirimini uygulayan adlı bir sınıftır `SiteColumnProjectWizard` <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> . Bu arabirim, sihirbaz başladığında ve tamamlandığında Visual Studio 'Nun çağırdığı ve sihirbaz çalışırken belirli zamanlarda çağrı yaptığı yöntemleri tanımlar.|
 |Sihirbaz kullanıcı arabirimi|Bu, adlı WPF tabanlı bir pencere `WizardWindow` . Bu pencere, ve adlı iki kullanıcı denetimini `Page1` içerir `Page2` . Bu Kullanıcı denetimleri, sihirbazın iki sayfasını temsil eder.<br /><br /> Bu kılavuzda, <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> sihirbaz uygulamasının yöntemi sihirbaz kullanıcı arabirimini görüntüler.|
@@ -86,7 +87,7 @@ ms.locfileid: "86016400"
 
 5. Proje şablonları listesinde **WPF Kullanıcı denetimi kitaplığı**' nı seçin, Project **ProjectTemplateWizard**' ı adlandırın ve **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]çözüme **ProjectTemplateWizard** projesini ekler ve varsayılan UserControl1. xaml dosyasını açar.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] çözüme **ProjectTemplateWizard** projesini ekler ve varsayılan UserControl1. xaml dosyasını açar.
 
 6. Projedeki UserControl1. xaml dosyasını silin.
 
@@ -100,7 +101,7 @@ ms.locfileid: "86016400"
 
 4. **Sınıf kitaplığı** proje şablonu ' nu seçin, projeyi **SharePointCommands**olarak adlandırın ve **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]çözüme **SharePointCommands** projesini ekler ve varsayılan Class1 kod dosyasını açar.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] çözüme **SharePointCommands** projesini ekler ve varsayılan Class1 kod dosyasını açar.
 
 5. Class1 kod dosyasını projeden silin.
 
@@ -165,13 +166,13 @@ ms.locfileid: "86016400"
 
 1. **Çözüm Gezgini**, **SharePointCommands** proje düğümünü seçin.
 
-2. Menü çubuğunda **Proje**, **Varolan öğe Ekle**' yi seçin.
+2. Menü çubuğunda **Proje**,  **Varolan öğe Ekle**' yi seçin.
 
 3. **Varolan öğe Ekle** iletişim kutusunda, ProjectTemplateWizard projesi için kod dosyalarını içeren klasöre gidin ve ardından **CommandIds** kod dosyasını seçin.
 
 4. **Ekle** düğmesinin yanındaki oku seçin ve ardından görüntülenen menüdeki **bağlantı olarak ekle** seçeneğini belirleyin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]bir bağlantı olarak **SharePointCommands** projesine kod dosyasını ekler. Kod dosyası **ProjectTemplateWizard** projesinde bulunur, ancak dosyadaki kod de **SharePointCommands** projesinde derlenir.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bir bağlantı olarak **SharePointCommands** projesine kod dosyasını ekler. Kod dosyası **ProjectTemplateWizard** projesinde bulunur, ancak dosyadaki kod de **SharePointCommands** projesinde derlenir.
 
 5. **SharePointCommands** projesinde komutları adlı başka bir kod dosyası ekleyin.
 

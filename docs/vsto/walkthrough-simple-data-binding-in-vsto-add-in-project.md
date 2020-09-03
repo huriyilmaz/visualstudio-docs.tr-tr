@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: bcfb150cc0b97b72fd0f6eac02f59ae1db3e9ca6
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72985399"
 ---
 # <a name="walkthrough-simple-data-binding-in-vsto-add-in-project"></a>İzlenecek yol: VSTO eklenti projesinde basit veri bağlama
@@ -29,15 +29,15 @@ VSTO eklenti projelerinde verileri konak denetimlerine ve Windows Forms denetiml
 
 Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Çalışma zamanında bir belgeye <xref:Microsoft.Office.Tools.Word.ContentControl> ekleme.
+- Çalışma zamanında <xref:Microsoft.Office.Tools.Word.ContentControl> belgeye ekleme.
 
-- Denetimi bir veri kümesinin örneğine bağlayan <xref:System.Windows.Forms.BindingSource> oluşturma.
+- Denetimi bir <xref:System.Windows.Forms.BindingSource> veri kümesinin örneğine bağlayan bir oluşturma.
 
 - Kullanıcının kayıtlarda gezinmelerini ve denetimde görüntülemesini sağlama.
 
 [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
@@ -45,7 +45,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 - [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] veya [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].
 
-- `AdventureWorksLT` örnek veritabanının eklendiği SQL Server 2005 veya SQL Server 2005 Express 'in çalışan bir örneğine erişim. `AdventureWorksLT` veritabanını [SQL Server örnekleri GitHub deposundan](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)indirebilirsiniz. Veritabanı ekleme hakkında daha fazla bilgi için aşağıdaki konulara bakın:
+- Örnek veritabanının eklendiği SQL Server 2005 veya SQL Server 2005 Express 'in çalışan bir örneğine erişim `AdventureWorksLT` . `AdventureWorksLT`Veritabanını [SQL Server örnekleri GitHub deposundan](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)indirebilirsiniz. Veritabanı ekleme hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
   - SQL Server Management Studio veya SQL Server Management Studio Express kullanarak bir veritabanı eklemek için bkz. [nasıl yapılır: veritabanı iliştirme (SQL Server Management Studio)](/sql/relational-databases/databases/attach-a-database).
 
@@ -57,13 +57,13 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Visual Basic veya C#kullanarak **bir veritabanından belge doldurma**adlı bir Word VSTO eklentisi projesi oluşturun.
+1. Visual Basic veya C# kullanarak **bir veritabanından belge doldurma**adlı BIR Word VSTO eklentisi projesi oluşturun.
 
      Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
      Visual Studio, *ThisAddIn. vb* veya *ThisAddIn.cs* dosyasını açar ve **belgeyi bir veritabanı projesinden doldurma** **Çözüm Gezgini**ekler.
 
-2. Projeniz [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]hedefliyorsa, *Microsoft. Office. Tools. Word. v 4.0. Utilities. dll* derlemesine bir başvuru ekleyin. Bu izlenecek yolda daha sonra belgeye Windows Forms denetimleri eklemek için bu başvuru gerekir.
+2. Projeniz [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] ' i hedefliyorsa, *Microsoft.Office.Tools.Word.v4.0.Utilities.dll* derlemesine bir başvuru ekleyin. Bu izlenecek yolda daha sonra belgeye Windows Forms denetimleri eklemek için bu başvuru gerekir.
 
 ## <a name="create-a-data-source"></a>Veri kaynağı oluşturma
 
@@ -71,13 +71,13 @@ Projenize türü belirtilmiş bir veri kümesi eklemek için **veri kaynakları*
 
 ### <a name="to-add-a-typed-dataset-to-the-project"></a>Projeye türü belirtilmiş bir veri kümesi eklemek için
 
-1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda, **diğer Windows** > **veri kaynaklarını** **görüntüle** > ' yi seçerek görüntüleyin.
+1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda, **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçerek bunu görüntüleyin.
 
 2. **Veri kaynağı Yapılandırma Sihirbazı 'nı**başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
 3. **Veritabanı**' na ve ardından **İleri**' ye tıklayın.
 
-4. `AdventureWorksLT` veritabanıyla bağlantı varsa, bu bağlantıyı seçin ve **İleri**' ye tıklayın.
+4. Veritabanına var olan bir bağlantınız varsa `AdventureWorksLT` , bu bağlantıyı seçin ve **İleri**' ye tıklayın.
 
     Aksi takdirde, **Yeni bağlantı**' ya tıklayın ve yeni bağlantıyı oluşturmak Için **bağlantı ekle** iletişim kutusunu kullanın. Daha fazla bilgi için bkz. [yeni bağlantılar ekleme](../data-tools/add-new-connections.md).
 
@@ -89,26 +89,26 @@ Projenize türü belirtilmiş bir veri kümesi eklemek için **veri kaynakları*
 
     *AdventureWorksLTDataSet. xsd* dosyası **Çözüm Gezgini**eklenir. Bu dosya aşağıdaki öğeleri tanımlar:
 
-   - `AdventureWorksLTDataSet`adlı türü belirtilmiş bir veri kümesi. Bu veri kümesi AdventureWorksLT veritabanındaki **Customer (SalesLT)** tablosunun içeriğini temsil eder.
+   - Adında bir türü belirtilmiş veri kümesi `AdventureWorksLTDataSet` . Bu veri kümesi AdventureWorksLT veritabanındaki **Customer (SalesLT)** tablosunun içeriğini temsil eder.
 
-   - `CustomerTableAdapter`adlı bir TableAdapter. Bu TableAdapter, `AdventureWorksLTDataSet`veri okumak ve yazmak için kullanılabilir. Daha fazla bilgi için bkz. [TableAdapter Overview](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).
+   - Adında bir TableAdapter `CustomerTableAdapter` . Bu TableAdapter, içindeki verileri okumak ve yazmak için kullanılabilir `AdventureWorksLTDataSet` . Daha fazla bilgi için bkz. [TableAdapter Overview](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).
 
      Bu iki nesneyi daha sonra Bu izlenecek yolda kullanacaksınız.
 
 ## <a name="create-controls-and-binding-controls-to-data"></a>Verilere denetimler oluşturma ve denetimleri bağlama
 
-Bu izlenecek yolda veritabanı kayıtlarını görüntüleme arabirimi temel ve belge içinde oluşturulur. Bir <xref:Microsoft.Office.Tools.Word.ContentControl> her seferinde tek bir veritabanı kaydını görüntüler ve iki <xref:Microsoft.Office.Tools.Word.Controls.Button> denetimi kayıtlarda ileri ve geri kaydıramanıza imkan tanır. İçerik denetimi, veritabanına bağlanmak için bir <xref:System.Windows.Forms.BindingSource> kullanır.
+Bu izlenecek yolda veritabanı kayıtlarını görüntüleme arabirimi temel ve belge içinde oluşturulur. <xref:Microsoft.Office.Tools.Word.ContentControl>Tek seferde tek bir veritabanı kaydını görüntüler ve iki <xref:Microsoft.Office.Tools.Word.Controls.Button> Denetim kayıtlarda ileri ve geri kaydıramanıza imkan tanır. İçerik denetimi, <xref:System.Windows.Forms.BindingSource> veritabanına bağlanmak için bir kullanır.
 
 Verilere yönelik bağlama denetimleri hakkında daha fazla bilgi için bkz. [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md).
 
 ### <a name="to-create-the-interface-in-the-document"></a>Belgede arabirim oluşturmak için
 
-1. `ThisAddIn` sınıfında, `AdventureWorksLTDataSet` veritabanının `Customer` tablosunu göstermek ve kaydırmak için aşağıdaki denetimleri bildirin.
+1. `ThisAddIn`Sınıfında, veritabanı tablosunu göstermek ve kaydırmak için aşağıdaki denetimleri bildirin `Customer` `AdventureWorksLTDataSet` .
 
      [!code-vb[Trin_WordAddInDatabase#1](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#1)]
      [!code-csharp[Trin_WordAddInDatabase#1](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#1)]
 
-2. `ThisAddIn_Startup` yönteminde, veri kümesini başlatmak için aşağıdaki kodu ekleyin, veri kümesini `AdventureWorksLTDataSet` veritabanındaki bilgilerle doldurabilirsiniz.
+2. `ThisAddIn_Startup`Yönteminde, veri kümesini başlatmak için aşağıdaki kodu ekleyin, veri kümesini veritabanından alınan bilgilerle doldurabilirsiniz `AdventureWorksLTDataSet` .
 
      [!code-vb[Trin_WordAddInDatabase#2](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#2)]
      [!code-csharp[Trin_WordAddInDatabase#2](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#2)]
@@ -128,7 +128,7 @@ Verilere yönelik bağlama denetimleri hakkında daha fazla bilgi için bkz. [Of
      [!code-vb[Trin_WordAddInDatabase#5](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#5)]
      [!code-csharp[Trin_WordAddInDatabase#5](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#5)]
 
-6. İçerik denetimini <xref:System.Windows.Forms.BindingSource>kullanarak `AdventureWorksLTDataSet` bağlayın. Geliştiriciler C# için<xref:Microsoft.Office.Tools.Word.Controls.Button>denetimleri için iki olay işleyicisi ekleyin.
+6. Kullanarak içerik denetimini bağlayın `AdventureWorksLTDataSet` <xref:System.Windows.Forms.BindingSource> . C# geliştiricileri için, denetimler için iki olay işleyicisi ekleyin <xref:Microsoft.Office.Tools.Word.Controls.Button> .
 
      [!code-vb[Trin_WordAddInDatabase#6](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#6)]
      [!code-csharp[Trin_WordAddInDatabase#6](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#6)]
@@ -140,13 +140,13 @@ Verilere yönelik bağlama denetimleri hakkında daha fazla bilgi için bkz. [Of
 
 ## <a name="test-the-add-in"></a>Eklentiyi test etme
 
-Word 'Ü açtığınızda, içerik denetimi `AdventureWorksLTDataSet` veri kümesinden verileri görüntüler. **Sonraki** ve **önceki** düğmelere tıklayarak veritabanı kayıtlarında ilerleyin.
+Word 'Ü açtığınızda içerik denetimi veri kümesinden verileri görüntüler `AdventureWorksLTDataSet` . **Sonraki** ve **önceki** düğmelere tıklayarak veritabanı kayıtlarında ilerleyin.
 
 ### <a name="to-test-the-vsto-add-in"></a>VSTO eklentisini test etmek için
 
 1. **F5**tuşuna basın.
 
-     `customerContentControl` adlı bir içerik denetimi oluşturulur ve verilerle doldurulur. Aynı zamanda, `adventureWorksLTDataSet` adlı bir veri kümesi nesnesi ve `customerBindingSource` adlı bir <xref:System.Windows.Forms.BindingSource> projeye eklenir. <xref:Microsoft.Office.Tools.Word.ContentControl> <xref:System.Windows.Forms.BindingSource>bağlanır, bu da DataSet nesnesine bağlanır.
+     Adlı bir içerik denetimi `customerContentControl` oluşturulur ve verilerle doldurulur. Aynı zamanda, adlı ve adlı bir veri kümesi nesnesi `adventureWorksLTDataSet` <xref:System.Windows.Forms.BindingSource> `customerBindingSource` projeye eklenir. , <xref:Microsoft.Office.Tools.Word.ContentControl> ' A bağlanır ve <xref:System.Windows.Forms.BindingSource> veri kümesi nesnesine bağlanır.
 
 2. Veritabanı kayıtlarında gezinmek için **İleri** ve **önceki** düğmelere tıklayın.
 

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 60951091914474f07f19672799fb59c8b2d0aa56
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75919136"
 ---
 # <a name="migrate-apps-to-the-universal-windows-platform-uwp"></a>Uygulamaları Evrensel Windows Platformu’na (UWP) geçirme
@@ -23,7 +23,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
 - [Mevcut C#/vb Windows mağazası 8,1 veya Windows Phone 8,1 uygulamalarınızı](#MigrateCSharp) Evrensel Windows platformu kullanacak şekilde geçirin.
 
-- [ C++ Mevcut Windows mağazası 8,1 veya Windows Phone 8,1 uygulamalarınızı](#MigrateCPlusPlus) Evrensel Windows platformu kullanacak şekilde geçirin.
+- [Mevcut C++ Windows mağazası 8,1 veya Windows Phone 8,1 uygulamalarınızı](#MigrateCPlusPlus) Evrensel Windows platformu kullanacak şekilde geçirin.
 
 - [Visual Studio 2015 RC ile oluşturulan mevcut Evrensel Windows uygulamaları için gerekli değişiklikler](#PreviousVersions).
 
@@ -31,9 +31,9 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
   Tüm bu değişiklikleri yapmak istemiyorsanız, [mevcut uygulamalarınızın](https://msdn.microsoft.com/library/windows/apps/xaml/mt238321.aspx) yeni bir Evrensel Windows projesine nasıl bağlantı sağladığını öğrenin.
 
-## <a name="MigrateCSharp"></a>C#/Vb Windows Mağazası 8,1 veya Windows Phone 8,1 uygulamalarınızı Evrensel Windows platformu kullanacak şekilde geçirin
+## <a name="migrate-your-cvb-windows-store-81-or-windows-phone-81-apps-to-use-the-universal-windows-platform"></a><a name="MigrateCSharp"></a> C#/vb Windows Mağazası 8,1 veya Windows Phone 8,1 uygulamalarınızı Evrensel Windows Platformu kullanacak şekilde geçirin
 
-#### <a name="migrate-your-cvb-project-files"></a>C#/Vb proje dosyalarınızı geçirin
+#### <a name="migrate-your-cvb-project-files"></a>C#/vb proje dosyalarınızı geçirme
 
 1. Yüklediğiniz Evrensel Windows Platformu bulmak için şu klasörü açın: **\Program Files (x86) \Windows Kits\10\Platforms\UAP**. Bu, yüklü her bir Evrensel Windows Platformu klasörlerinin listesini içerir. Klasör adı, yüklediğiniz Evrensel Windows Platformu sürümdür. Örneğin, bu Windows 10 cihazında yüklü Evrensel Windows Platformu sürüm 10.0.10240.0 vardır.
 
@@ -41,7 +41,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
      Evrensel Windows Platformu birden fazla sürümü yüklenebilir. Uygulamanız için en son sürümü kullanmanızı öneririz.
 
-2. Dosya Gezgini 'ni kullanarak UWP projenizin depolandığı klasöre gidin. Bu klasörde bir. JSON dosyası oluşturun. Dosyayı şu şekilde adlandırın: Project. JSON ve sonra şu içeriği bu dosyaya ekleyin:
+2. Dosya Gezgini 'ni kullanarak UWP projenizin depolandığı klasöre gidin. Bu klasörde bir. JSON dosyası oluşturun. Dosyayı project.jsolarak adlandırın ve ardından şu içeriği bu dosyaya ekleyin:
 
     ```json
     {
@@ -66,7 +66,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
     ```
 
-3. Varsayılan. RD. xml adlı bir dosyayı aşağıdaki içeriklerle oluşturun. Bir VB projeniz varsa, bu dosyayı projeniz için projem dizinine ekleyin. Bir C# projeniz varsa, bu dosyayı projenizin Özellikler dizinine ekleyin.
+3. Aşağıdaki içeriklerle default.rd.xml adlı bir dosya oluşturun. Bir VB projeniz varsa, bu dosyayı projeniz için projem dizinine ekleyin. Bir C# projeniz varsa, bu dosyayı projenizin Özellikler dizinine ekleyin.
 
     ```xml
     <?xml version="1.0"?>
@@ -84,17 +84,17 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
      ![Projeye sağ tıklayın ve Düzenle ' yi seçin.](../misc/media/uap-editproject.png "UAP_EditProject")
 
-6. 8,1 değerine sahip \<TargetPlatformVersion > öğesini içeren \<PropertyGroup > öğesini bulun. Bu \<PropertyGroup > öğesi için aşağıdaki adımları uygulayın:
+6. \<PropertyGroup> \<TargetPlatformVersion> 8,1 değerine sahip öğeyi içeren öğeyi bulun. Bu öğe için aşağıdaki adımları uygulayın \<PropertyGroup> :
 
-    1. \<platform > öğesinin değerini: **x86**olarak ayarlayın.
+    1. \<Platform>Öğesinin değerini: **x86**olarak ayarlayın.
 
-    2. \<targetPlatformIdentifier > öğesi ekleyin ve değerini: **UAP**olarak ayarlayın.
+    2. Bir \<TargetPlatformIdentifier> öğe ekleyin ve değerini: **UAP**olarak ayarlayın.
 
-    3. \<TargetPlatformVersion > öğesinin var olan değerini yüklediğiniz Evrensel Windows Platformu sürümünün değeri olacak şekilde değiştirin. Ayrıca, bir \<TargetPlatformMinVersion > öğesi ekleyin ve aynı değere verin.
+    3. Öğesinin varolan değerini, \<TargetPlatformVersion> yüklediğiniz Evrensel Windows platformu sürümünün değeri olacak şekilde değiştirin. Ayrıca bir \<TargetPlatformMinVersion> öğesi ekleyin ve aynı değere verin.
 
-    4. \<MinimumVisualStudioVersion > öğesinin değerini: **14**olarak değiştirin.
+    4. \<MinimumVisualStudioVersion>Öğenin değerini: **14**olarak değiştirin.
 
-    5. \<Projecttypeguid > öğesini aşağıda gösterildiği gibi değiştirin:
+    5. \<ProjectTypeGuids>Öğesini aşağıda gösterildiği gibi değiştirin:
 
          C# için:
 
@@ -108,11 +108,11 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
         <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
         ```
 
-    6. \<EnableDotNetNativeCompatibleProfile > öğesi ekleyin ve değerini: **true**olarak ayarlayın.
+    6. Bir \<EnableDotNetNativeCompatibleProfile> öğe ekleyin ve değerini: **true**olarak ayarlayın.
 
-    7. Evrensel Windows uygulamaları için varsayılan varlık ölçeği 200 ' dir. Projeniz 200 değerinde ölçeklendirilmemiş varlıklar içeriyorsa, bu PropertyGroup 'a varlıklarınızın ölçeğine sahip \<Uıapdefaultassetscale > öğesi eklemeniz gerekecektir. [Varlıklar ve ölçekler](https://msdn.microsoft.com/library/jj679352.aspx)hakkında daha fazla bilgi edinin.
+    7. Evrensel Windows uygulamaları için varsayılan varlık ölçeği 200 ' dir. Projeniz 200 değerinde ölçeklendirilmemiş varlıklar içeriyorsa, \<UapDefaultAssetScale> Bu PropertyGroup 'a varlıklarınızın ölçeğine sahip bir öğe eklemeniz gerekir. [Varlıklar ve ölçekler](https://msdn.microsoft.com/library/jj679352.aspx)hakkında daha fazla bilgi edinin.
 
-         \<PropertyGroup > öğesi Şu örneğe benzer şekilde görünmelidir:
+         Artık şu \<PropertyGroup> örneğe benzer görünmelidir:
 
         ```xml
         <PropertyGroup>
@@ -140,7 +140,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
         <VisualStudioVersion>14.0</VisualStudioVersion>
     ```
 
-8. Koşul özniteliğinin bir parçası olarak AnyCPU platformu için yapılandırılmış \<PropertyGroup > öğelerini bulun. Bu öğeleri ve tüm alt öğelerini kaldırın. Visual Studio 2015 ' de Windows 10 uygulamaları için AnyCPU desteklenmez. Örneğin, bunlar gibi \<PropertyGroup > öğelerini kaldırmanız gerekir:
+8. \<PropertyGroup>Koşul özniteliğinin bir parçası olarak anycpu platformu için yapılandırılmış öğeleri bulun. Bu öğeleri ve tüm alt öğelerini kaldırın. Visual Studio 2015 ' de Windows 10 uygulamaları için AnyCPU desteklenmez. Örneğin, \<PropertyGroup> bunlar gibi öğeleri kaldırmanız gerekir:
 
     ```xml
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -164,7 +164,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
       </PropertyGroup>
     ```
 
-9. Kalan her \<PropertyGroup > öğesi için, öğenin Sürüm yapılandırmasına sahip bir koşul özniteliğine sahip olup olmadığını denetleyin. Varsa, ancak bir \<Usedotnetnativetoolzincirine > öğesi içermiyorsa bir tane ekleyin. \<Usedotnetnativetoolzincirine > öğesi için değeri true olarak ayarlayın:
+9. Kalan her \<PropertyGroup> öğe için, öğenin sürüm yapılandırması olan bir koşul özniteliğine sahip olup olmadığını denetleyin. Varsa, ancak bir öğesi içermiyorsa bir \<UseDotNetNativeToolchain> tane ekleyin. Öğesi için değeri \<UseDotNetNativeToolchain> true olarak ayarlayın, şöyle:
 
     ```xml
     <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
@@ -181,7 +181,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
       </PropertyGroup>
     ```
 
-10. Yalnızca Windows Phone projeleri için, bir \<targetPlatformIdentifier > öğesi içeren \<PropertyGroup > öğesini WindowsPhoneApp değeriyle kaldırın. Bu öğenin tüm alt öğelerini de kaldır:
+10. Yalnızca Windows Phone projeleri için, \<PropertyGroup> \<TargetPlatformIdentifier> WindowsPhoneApp değeri olan bir öğe içeren öğeyi kaldırın. Bu öğenin tüm alt öğelerini de kaldır:
 
     ```xml
     <PropertyGroup Condition=" '$(TargetPlatformIdentifier)' == '' ">
@@ -189,15 +189,15 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
     </PropertyGroup>
     ```
 
-11. \<AppxManifest > öğesini içeren \<ItemGroup > öğesini bulun. Aşağıdaki \<None > öğesini \<ItemGroup > öğesinin bir alt öğesi olarak ekleyin:
+11. \<ItemGroup>Öğesini içeren öğeyi bulun \<AppxManifest> . Aşağıdaki \<None> öğeyi öğesinin bir alt öğesi olarak ekleyin \<ItemGroup> :
 
     ```xml
     <None Include="project.json" />
     ```
 
-12. Projenize eklenen logo. png dosyaları (\<Içerik dahil = "Assets\Logo.scale-100.png"/>) gibi diğer varlıkları içeren \<ItemGroup > öğesini bulun. Aşağıdaki \<Content > alt öğesini bu \<ItemGroup > öğesine ekleyin:
+12. \<ItemGroup>Projenize eklenen logo. png dosyaları () gibi diğer varlıkları içeren öğeyi bulun \<Content Include="Assets\Logo.scale-100.png" /> . Aşağıdaki \<Content> alt öğeyi bu \<ItemGroup> öğeye ekleyin:
 
-     **İçin C#:**
+     **C# için:**
 
     ```xml
     <Content Include="Properties\default.rd.xml" />
@@ -209,7 +209,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
     <Content Include="My Project\default.rd.xml" />
     ```
 
-13. \<ItemGroup > öğesini, alt öğeleri NuGet paketlerine > \<başvurusunu içerir. Projenizi yeniden yükledikten sonra NuGet Paket Yöneticisi ile indirmeniz gerekeceğinden, kullandığınız NuGet paketlerini bir yere göz atın. Bu \<ItemGroup > alt öğeleri ile birlikte kaldırın. Örneğin, UWP projesinde kaldırılması gereken aşağıdaki NuGet paketleri olabilir:
+13. \<ItemGroup> \<Reference> NuGet paketlerine alt öğeler içeren öğeyi bulun. Projenizi yeniden yükledikten sonra NuGet Paket Yöneticisi ile indirmeniz gerekeceğinden, kullandığınız NuGet paketlerini bir yere göz atın. Bunu \<ItemGroup> alt öğeleri ile birlikte kaldırın. Örneğin, UWP projesinde kaldırılması gereken aşağıdaki NuGet paketleri olabilir:
 
     ```xml
     <ItemGroup>
@@ -236,7 +236,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
       </ItemGroup>
     ```
 
-14. Değişikliklerinizi kaydedin.
+14. Yaptığınız değişiklikleri kaydedin.
 
 15. . Csproj veya. vbproj dosyasını kapatın.
 
@@ -246,9 +246,9 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
      Şimdi tüm Windows Mağazası 8,1 veya Windows Phone 8,1 projelerinizin [Paket bildirim dosyalarını güncelleştirmek](#PackageManifest) için adımları izlemeniz gerekir.
 
-## <a name="MigrateCPlusPlus"></a>Evrensel Windows Platformu kullanmak C++ Için Windows Mağazası 8,1 veya Windows Phone 8,1 uygulamalarınızı geçirin
+## <a name="migrate-your-c-windows-store-81-or-windows-phone-81-apps-to-use-the-universal-windows-platform"></a><a name="MigrateCPlusPlus"></a> C++ Windows Mağazası 8,1 veya Windows Phone 8,1 uygulamalarınızı Evrensel Windows Platformu kullanmak için geçirin
 
-#### <a name="migrate-your-c-project-files"></a>C++ Proje dosyalarınızı geçirin
+#### <a name="migrate-your-c-project-files"></a>C++ proje dosyalarınızı geçirme
 
 1. Yüklediğiniz Evrensel Windows Platformu bulmak için şu klasörü açın: **\Program Files (x86) \Windows Kits\10\Platforms\UAP**. Bu, yüklü her bir Evrensel Windows Platformu klasörlerinin listesini içerir. Klasör adı, yüklediğiniz Evrensel Windows Platformu sürümdür. Örneğin, bu Windows 10 cihazında yüklü Evrensel Windows Platformu sürüm 10.0.10240.0 vardır.
 
@@ -260,23 +260,23 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
      Çözüm Gezgini ' nde mevcut projenize sağ tıklayın ve ardından **Projeyi Kaldır**' ı seçin. Proje kaldırıldıktan sonra proje dosyasına tekrar sağ tıklayın ve. vcxproj dosyasını düzenlemeyi seçin.
 
-     ![Proje&#45;dosyası ' na sağ tıklayın ve düzenlemek için seçin](../misc/media/uap-editcplusproject.png "UAP_EditCPlusProject")
+     ![Sağ&#45;proje dosyası ' na tıklayın ve düzenlemek için seçin](../misc/media/uap-editcplusproject.png "UAP_EditCPlusProject")
 
-3. 8,1 değerine sahip \<ApplicationTypeRevision > öğesini içeren \<PropertyGroup > öğesini bulun. Bu \<PropertyGroup > öğesi için aşağıdaki adımları uygulayın:
+3. \<PropertyGroup> \<ApplicationTypeRevision> 8,1 değerine sahip öğeyi içeren öğeyi bulun. Bu öğe için aşağıdaki adımları uygulayın \<PropertyGroup> :
 
-    1. \<WindowsTargetPlatformVersion > öğesi ve bir \<WindowsTargetPlatformMinVersion > öğesi ekleyin ve bu değere yüklediğiniz Evrensel Windows Platformu sürümünün değerini verin.
+    1. Bir \<WindowsTargetPlatformVersion> öğe ve bir \<WindowsTargetPlatformMinVersion> öğesi ekleyin ve yüklediğiniz Evrensel Windows platformu sürümünün değerini verin.
 
     2. ApplicationTypeRevision öğesinin değerini 8,1 ' den 10,0 ' e güncelleştirin.
 
-    3. \<MinimumVisualStudioVersion > öğesinin değerini: 14 olarak değiştirin.
+    3. \<MinimumVisualStudioVersion>Öğenin değerini: 14 olarak değiştirin.
 
-    4. \<EnableDotNetNativeCompatibleProfile > öğesi ekleyin ve değerini: true olarak ayarlayın.
+    4. Bir \<EnableDotNetNativeCompatibleProfile> öğe ekleyin ve değerini: true olarak ayarlayın.
 
-    5. Evrensel Windows uygulamaları için varsayılan varlık ölçeği 200 ' dir. Projeniz 200 değerinde ölçeklendirilmemiş varlıklar içeriyorsa, bu PropertyGroup 'a varlıklarınızın ölçeğine sahip \<Uıapdefaultassetscale > öğesi eklemeniz gerekecektir. [Varlıklar ve ölçekler](https://msdn.microsoft.com/library/jj679352.aspx)hakkında daha fazla bilgi edinin.
+    5. Evrensel Windows uygulamaları için varsayılan varlık ölçeği 200 ' dir. Projeniz 200 değerinde ölçeklendirilmemiş varlıklar içeriyorsa, \<UapDefaultAssetScale> Bu PropertyGroup 'a varlıklarınızın ölçeğine sahip bir öğe eklemeniz gerekir. [Varlıklar ve ölçekler](https://msdn.microsoft.com/library/jj679352.aspx)hakkında daha fazla bilgi edinin.
 
-    6. Yalnızca Windows Phone projeleri için, \<ApplicationType > değerini Windows Phone 'den Windows Mağazası 'na değiştirin.
+    6. Yalnızca Windows Phone projeleri için, \<ApplicationType> Windows Phone değerini Windows Mağazası olarak değiştirin.
 
-         \<PropertyGroup > öğesi Şu örneğe benzer şekilde görünmelidir:
+         Artık şu \<PropertyGroup> örneğe benzer görünmelidir:
 
         ```xml
         <PropertyGroup>
@@ -292,7 +292,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
         </PropertyGroup>
         ```
 
-4. \<Platformaraç takımı > öğesinin tüm örneklerini v140 değerine sahip olacak şekilde değiştirin. Örneğin:
+4. Öğesinin tüm örneklerini \<PlatformToolset> v140 değerine sahip olacak şekilde değiştirin. Örneğin:
 
     ```xml
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -304,7 +304,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
       </PropertyGroup>
     ```
 
-5. Kalan her \<PropertyGroup > öğesi için, öğenin Sürüm yapılandırmasına sahip bir koşul özniteliğine sahip olup olmadığını denetleyin. Varsa, ancak bir \<Usedotnetnativetoolzincirine > öğesi içermiyorsa bir tane ekleyin. \<Usedotnetnativetoolzincirine > öğesi için değeri true olarak ayarlayın:
+5. Kalan her \<PropertyGroup> öğe için, öğenin sürüm yapılandırması olan bir koşul özniteliğine sahip olup olmadığını denetleyin. Varsa, ancak bir öğesi içermiyorsa bir \<UseDotNetNativeToolchain> tane ekleyin. Öğesi için değeri \<UseDotNetNativeToolchain> true olarak ayarlayın, şöyle:
 
     ```xml
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|X64'" Label="Configuration">
@@ -317,22 +317,22 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
     ```
 
-6. Değişikliklerinizi kaydedin. Ardından proje dosyasını kapatın.
+6. Yaptığınız değişiklikleri kaydedin. Ardından proje dosyasını kapatın.
 
 7. Çözüm Gezgini ' de proje dosyanıza sağ tıklayın ve bağlam menüsünden projeyi yeniden yükle ' yi seçin. Projenizdeki tüm dosyalar artık Çözüm Gezgini görüntülenmelidir.
 
      Şimdi tüm Windows Mağazası 8,1 veya Windows Phone 8,1 projelerinizin [Paket bildirim dosyalarını güncelleştirmek](#PackageManifest) için adımları izlemeniz gerekir.
 
-## <a name="PackageManifest"></a>Paket bildirim dosyanızı tüm Windows Mağazası 8,1 veya Windows Phone 8,1 projeleriniz için güncelleştirin
+## <a name="update-your-package-manifest-file-for-all-your-windows-store-81-or-windows-phone-81-projects"></a><a name="PackageManifest"></a> Paket bildirim dosyanızı tüm Windows Mağazası 8,1 veya Windows Phone 8,1 projeleriniz için güncelleştirin
  Çözümünüzde her bir proje için paket bildirim dosyasını güncelleştirmeniz gerekir.
 
 #### <a name="update-your-package-manifest-file"></a>Paket bildirim dosyanızı güncelleştirme
 
 1. Projenizde Package. appxmanifest dosyasını açın. Windows Mağazası ve Windows Phone projelerinin her biri için Package. AppxManifest dosyasını düzenlemeniz gerekir.
 
-2. \<paketi > öğesini mevcut proje türüne göre yeni şemalarla güncelleştirmeniz gerekir. İlk olarak, bir Windows Mağazası veya Windows Phone projesi olup olmadığına bağlı olarak aşağıdaki şemaları kaldırın.
+2. \<Package>Öğeyi mevcut proje türüne göre yeni şemalar ile güncelleştirmeniz gerekir. İlk olarak, bir Windows Mağazası veya Windows Phone projesi olup olmadığına bağlı olarak aşağıdaki şemaları kaldırın.
 
-    **Windows Mağazası projesi Için eski:** \<paketiniz > öğesi şuna benzer.
+    **Windows Mağazası projesi Için eski:** \<Package> Öğe şuna benzer.
 
    ```xml
    <Package
@@ -341,7 +341,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
    ```
 
-    **Windows Phone projesi Için eski:** \<paketiniz > öğesi şuna benzer.
+    **Windows Phone projesi Için eski:** \<Package> Öğe şuna benzer.
 
    ```xml
    <Package
@@ -351,7 +351,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
    xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
    ```
 
-    **Evrensel Windows platformu Için yeni:** Aşağıdaki şemaları \<Package > öğesine ekleyin. Yeni kaldırdığınız şemaların öğelerinden ilişkili ad alanı tanımlayıcı öneklerini kaldırın. Ignorablenamespaces özelliğini şu şekilde güncelleştirin: UAP MP. Yeni \<paketinizin > öğesi şuna benzer görünmelidir.
+    **Evrensel Windows platformu Için yeni:** Aşağıdaki şemaları \<Package> öğesine ekleyin. Yeni kaldırdığınız şemaların öğelerinden ilişkili ad alanı tanımlayıcı öneklerini kaldırın. Ignorablenamespaces özelliğini şu şekilde güncelleştirin: UAP MP. Yeni \<Package> öğe şuna benzer görünmelidir.
 
    ```xml
    <Package
@@ -362,7 +362,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
    ```
 
-3. \<Package > öğesine > alt öğesi \<bir bağımlılıklar ekleyin. Daha sonra bu \<> bağımlılıklara \<bir TargetDeviceFamily > alt öğesi ekleyin. Bu, Name, MinVersion ve MaxVersionTested. Name özniteliğine: Windows. Universal değerini verin. MinVersion ve Maxversion'in yüklediğiniz Evrensel Windows Platformu sürümünün değerini test edin. Bu öğe şuna benzer görünmelidir:
+3. Öğeye bir \<Dependencies> alt öğesi ekleyin \<Package> . Daha sonra \<TargetDeviceFamily> Bu \<Dependencies> öğeye Name, MinVersion ve MaxVersionTested ile test edilmiş öznitelikleri ekleyerek bir alt öğesi ekleyin. Name özniteliğine: Windows. Universal değerini verin. MinVersion ve Maxversion'in yüklediğiniz Evrensel Windows Platformu sürümünün değerini test edin. Bu öğe şuna benzer görünmelidir:
 
    ```xml
    <Dependencies>
@@ -370,16 +370,16 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
    </Dependencies>
    ```
 
-4. **Yalnızca Windows Mağazası için:** \<paketi > öğesine \<MP: Phoneıdentity > alt öğesi eklemeniz gerekir. Phoneproductıd özniteliği ve Phonepublisherıd özniteliği ekleyin. Phoneproductıd 'yi, \<Identity > öğesindeki name özniteliğiyle aynı değere sahip olacak şekilde ayarlayın. PhonePublishedId değerini şu şekilde ayarlayın: 00000000-0000-0000-0000-000000000000. Böyle:
+4. **Yalnızca Windows Mağazası için:** \<mp:PhoneIdentity> Öğeye bir alt öğe eklemeniz gerekiyor \<Package> . Phoneproductıd özniteliği ve Phonepublisherıd özniteliği ekleyin. Phoneproductıd 'yi öğedeki Name özniteliğiyle aynı değere sahip olacak şekilde ayarlayın \<Identity> . PhonePublishedId değerini şu şekilde ayarlayın: 00000000-0000-0000-0000-000000000000. Böyle:
 
    ```xml
    <Identity Name="aa3815a1-2d97-4c71-8c99-578135b28cd8" Publisher="CN=xxxxxxxx" Version="1.0.0.0" />
    <mp:PhoneIdentity PhoneProductId="aa3815a1-2d97-4c71-8c99-578135b28cd8" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
    ```
 
-5. \<önkoşulları > öğesini bulun ve bu öğeyi ve içerdiği tüm alt öğeleri silin.
+5. Öğesini bulun \<Prerequisites> ve bu öğeyi ve içerdiği tüm alt öğeleri silin.
 
-6. **Uıap** ad alanını şu \<kaynak > öğelerine ekleyin: Scale, DXFeatureLevel. Örneğin:
+6. **Uıap** ad alanını şu \<Resource> öğelere ekleyin: Scale, dxfeaturelevel. Örneğin:
 
    ```xml
    <Resources>
@@ -390,7 +390,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
    ```
 
-7. **UAP** ad alanını şu \<yetenek > öğelerine ekleyin: documentsLibrary, Resimkitaplığı, Videoslibrary, MusicLibrary, enterpriseAuthentication, sharedUserCertificates, removableStorage, randevular ve kişiler. Örneğin:
+7. **UAP** ad alanını şu \<Capability> öğelere ekleyin: Documentslibrary, Resimkitaplığı, Videoslibrary, MusicLibrary, enterpriseAuthentication, Sharedusercertificates, removableStorage, randevular ve Contacts. Örneğin:
 
    ```xml
    <Capabilities>
@@ -400,7 +400,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
    ```
 
-8. \<Görselleştirbir > öğesine ve alt öğelerinden herhangi birine **UAP** ad alanını ekleyin. Örneğin:
+8. **Uıap** ad alanını \<VisualElements> öğeye ve alt öğelerinden birine ekleyin. Örneğin:
 
    ```xml
    <uap:VisualElements
@@ -414,7 +414,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
    ```
 
-    **Yalnızca Windows Mağazası için geçerlidir:** Kutucuk boyutu adları değişti. \<Görselitelements > öğesindeki öznitelikleri, yeni yakınsanmış döşeme boyutunu yansıtacak şekilde değiştirin. 70x70, 71x71 olur ve 30x30, 44x44 olur.
+    **Yalnızca Windows Mağazası için geçerlidir:** Kutucuk boyutu adları değişti. Öğesi içindeki öznitelikleri, \<VisualElements> Yeni yakınsanmış döşeme boyutlarını yansıtacak şekilde değiştirin. 70x70, 71x71 olur ve 30x30, 44x44 olur.
 
     **Eski:** kutucuk boyutu adları
 
@@ -444,7 +444,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
    ```
 
-9. **UAP** ad alanını \<ApplicationContentUriRules > ve onun tüm alt öğelerine ekleyin. Örneğin:
+9. **Uıap** ad alanını \<ApplicationContentUriRules> ve tüm alt öğelerine ekleyin. Örneğin:
 
     ```xml
     <uap:ApplicationContentUriRules>
@@ -454,7 +454,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
     ```
 
-10. **UAP** ad alanını aşağıdaki \<uzantısına > öğelerine ve tüm alt öğelerine ekleyin: Windows. Accountpicturesağlamasını, Windows. alarm, Windows. Randevutmentsprovider Windows. autoPlayContent, Windows. autoPlayDevice, Windows. cachedFileUpdate, Windows. cameraSettings, Windows. fileOpenPicker, Windows. fileTypeAssociation, Windows. fileSavePicke, Windows. lockScreenCall, Windows. printTaskSettings, Windows. Protocol, Windows. Search, Windows. shareTarget. Örneğin:
+10. Aşağıdaki öğelere ve tüm alt öğelerine **UAP** ad alanını ekleyin \<Extension> : Windows. accountpicturesağlamasını, Windows. alarm, Windows. Randevutmentsprovider Windows. autoPlayContent, Windows. autoPlayDevice, Windows. cachedFileUpdate, Windows. cameraSettings, Windows. FileOpenPicker, Windows. fileTypeAssociation, Windows. fileSavePicke, Windows. lockScreenCall, Windows. printtasksettings, Windows. Protocol, Windows. Search, Windows. shareTarget. Örneğin:
 
     ```xml
     <Extensions>
@@ -480,9 +480,9 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
     ```
 
-12. Çerçeve bağımlılıklarını değiştirin. Tüm \<PackageDependency > öğelerine bir yayımcı adı ekleyin ve henüz belirtilmemişse bir MinVersion belirtin.
+12. Çerçeve bağımlılıklarını değiştirin. Tüm öğelere yayımcı adı ekleyin \<PackageDependency> ve henüz belirtilmemişse bir MinVersion belirtin.
 
-     **Eski:** \<packagedependency > öğesi
+     **Eski:** \<PackageDependency> dosyalarında
 
     ```xml
     <Dependencies>
@@ -491,7 +491,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
     ```
 
-     **Yeni:** \<packagedependency > öğesi
+     **Yeni:** \<PackageDependency> dosyalarında
 
     ```xml
     <Dependencies>
@@ -558,13 +558,13 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
 15. Kullanım dışı bırakılmış öğeleri kaldırın.
 
-    1. \<Görselleştirmeli > için bu öznitelikler kullanımdan kaldırılmıştır ve kaldırılmalı:
+    1. İçin bu öznitelikler \<VisualElements> kullanımdan kaldırılmıştır ve kaldırılmalı:
 
-       - \<Görselleştirmelements > öznitelikler: ForegroundText, Toastuyumlu
+       - \<VisualElements>Öznitelikler: ForegroundText, Toastyetenekli
 
-       - \<DefaultTile > öznitelik DefaultSize özniteliği
+       - \<DefaultTile>DefaultSize özniteliği
 
-       - \<ApplicationView > öğesi
+       - \<ApplicationView>Öğe
 
          Örneğin:
 
@@ -585,7 +585,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
 17. Çözümünüzü yeniden kullanabilmek için bazı gizli dosyaları kaldırmanız gerekir.
 
-    1. Dosya Gezgini 'ni açın, araç çubuğunda **Görünüm** ' e tıklayın ve **gizli öğeler** ve **dosya adı uzantıları**' nı seçin. Makinenizde bu klasörü açın: çözümünüzün konumu için \<yol >\\. vs\\{Project Name} \v14. . Suo dosya uzantısına sahip bir dosya varsa, silin.
+    1. Dosya Gezgini 'ni açın, araç çubuğunda **Görünüm** ' e tıklayın ve **gizli öğeler** ve **dosya adı uzantıları**' nı seçin. Bu klasörü makinenizde açın: \<path for the location of your solution> \\ . vs \\ {Project Name} \v14. . Suo dosya uzantısına sahip bir dosya varsa, silin.
 
     2. Şimdi çözümünüzün bulunduğu klasöre geri dönün. Çözümünüzde bulunan projeler için herhangi bir klasör açın. Bu proje klasörlerinin içindeki bir dosyanın. csproj. User veya. vbproj. User uzantısı varsa, silin.
 
@@ -593,14 +593,14 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
          Evrensel Windows Platformu ile ilgili yeniliklerin avantajlarından yararlanmak için [kodunuzu nasıl uyarlayacağınızı](https://msdn.microsoft.com/library/windows/apps/dn954974.aspx) öğrenin.
 
-## <a name="PreviousVersions"></a>Visual Studio 2015 RC ile oluşturulan mevcut Evrensel Windows uygulamaları için gereken değişiklikler
+## <a name="changes-required-for-existing-universal-windows-apps-created-with-visual-studio-2015-rc"></a><a name="PreviousVersions"></a> Visual Studio 2015 RC ile oluşturulan mevcut Evrensel Windows uygulamaları için gereken değişiklikler
  Visual Studio 2015 RC ile Windows 10 Universal uygulamaları oluşturduysanız, Visual Studio 2015 ' nin en son sürümüyle yüklü Evrensel Windows Platformu sürümünü kullanmak için projenizi yeniden hedeflemeniz gerekir. Önceki tüm sürümleri desteklenmez. Uygulamanızı oluşturmak için kullandığınız dile bağlı olarak, gerekli değişiklikler farklıdır:
 
-- [C#/VB uygulamaları](#RCUpdate10CSharp)
+- [C#/vb uygulamaları](#RCUpdate10CSharp)
 
-- [C++gör](#RCUpdate10CPlusPlus)
+- [C++ uygulamaları](#RCUpdate10CPlusPlus)
 
-### <a name="RCUpdate10CSharp"></a>C#/Vb projelerinizi en son Evrensel Windows platformu kullanacak şekilde güncelleştirin
+### <a name="update-your-cvb-projects-to-use-the-latest-universal-windows-platform"></a><a name="RCUpdate10CSharp"></a> C#/vb projelerinizi en son Evrensel Windows Platformu kullanacak şekilde güncelleştirin
  Çözümünüzü mevcut uygulamanız için açtığınızda, uygulamanızın bir güncelleştirme gerektirdiğini görürsünüz:
 
  ![Projenizi Çözüm Gezgini görüntüleyin](../misc/media/uwp-updaterequired.png "UWP_UpdateRequired")
@@ -611,7 +611,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
  Projeniz için Evrensel Windows Platformu SDK 'Sı artık desteklenmediğinden, bu dosyayı yükleyemeyeceksiniz. Tamam ' a tıkladıktan sonra aşağıdaki adımları izlemeniz yeterlidir.
 
-##### <a name="update-your-cvb-projects-to-use-the-latest-universal-windows-platform"></a>C#/Vb projelerinizi en son Evrensel Windows platformu kullanacak şekilde güncelleştirin
+##### <a name="update-your-cvb-projects-to-use-the-latest-universal-windows-platform"></a>C#/vb projelerinizi en son Evrensel Windows Platformu kullanacak şekilde güncelleştirin
 
 1. Yüklediğiniz Evrensel Windows Platformu bulmak için şu klasörü açın: **\Program Files (x86) \Windows Kits\10\Platforms\UAP**. Bu, yüklü her bir Evrensel Windows Platformu klasörlerinin listesini içerir. Klasör adı, yüklediğiniz Evrensel Windows Platformu sürümdür. Örneğin, bu Windows 10 cihazında yüklü Evrensel Windows Platformu sürüm 10.0.10240.0 vardır.
 
@@ -619,7 +619,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
     Evrensel Windows Platformu birden fazla sürümü yüklenebilir. Uygulamanız için en son sürümü kullanmanızı öneririz.
 
-2. Dosya Gezgini 'ni kullanarak UWP projenizin depolandığı klasöre gidin. Packages. config dosyasını silin ve bu klasörde yeni bir. JSON dosyası oluşturun. Dosyayı şu şekilde adlandırın: Project. JSON ve sonra şu içeriği bu dosyaya ekleyin:
+2. Dosya Gezgini 'ni kullanarak UWP projenizin depolandığı klasöre gidin. packages.config dosyasını silin ve bu klasörde yeni bir. JSON dosyası oluşturun. Dosyayı project.jsolarak adlandırın ve ardından şu içeriği bu dosyaya ekleyin:
 
    ```json
 
@@ -645,15 +645,15 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
    ```
 
-3. Visual Studio ile C#/vb Universal Windows uygulamanızı içeren çözümünüzü açın. Proje dosyanızın (. csproj veya. vbproj dosyası) güncelleştirilmesi gerektiğini görürsünüz. Proje dosyasına sağ tıklayın ve bu dosyayı düzenlemek için seçin.
+3. Visual Studio ile, C#/vb Universal Windows uygulamanızı içeren çözümünüzü açın. Proje dosyanızın (. csproj veya. vbproj dosyası) güncelleştirilmesi gerektiğini görürsünüz. Proje dosyasına sağ tıklayın ve bu dosyayı düzenlemek için seçin.
 
     ![Projeye sağ tıklayın ve Düzenle ' yi seçin.](../misc/media/uap-editproject.png "UAP_EditProject")
 
-4. \<TargetPlatformVersion > ve \<TargetPlatformMinVersion > öğelerini içeren \<PropertyGroup > öğesini bulun. \<TargetPlatformVersion > var olan değerini ve TargetPlatformMinVersion > öğelerini \<yüklediğiniz Evrensel Windows Platformu aynı sürümü olacak şekilde değiştirin.
+4. \<PropertyGroup>Ve öğelerini içeren öğesini bulun \<TargetPlatformVersion> \<TargetPlatformMinVersion> . Ve öğelerinin var olan değerini \<TargetPlatformVersion> \<TargetPlatformMinVersion> yüklediğiniz Evrensel Windows platformu aynı sürümü olacak şekilde değiştirin.
 
-    Evrensel Windows uygulamaları için varsayılan varlık ölçeği 200 ' dir. Visual Studio 2015 RC dahil edilen ve 100 ' de ölçeklendirilmiş olan projeler, bu PropertyGroup 'a bir 100 değeri olan bir \<UapDefaultAssetScale > öğesi eklemeniz gerekir. [Varlıklar ve ölçekler](https://msdn.microsoft.com/library/jj679352.aspx)hakkında daha fazla bilgi edinin.
+    Evrensel Windows uygulamaları için varsayılan varlık ölçeği 200 ' dir. Visual Studio 2015 RC ile oluşturulan ve 100 ' de ölçeklendirilmiş varlıklar içeren projeler, \<UapDefaultAssetScale> Bu PropertyGroup 'a bir 100 değeri olan bir öğe eklemeniz gerekecektir. [Varlıklar ve ölçekler](https://msdn.microsoft.com/library/jj679352.aspx)hakkında daha fazla bilgi edinin.
 
-5. UWP uzantısı SDK 'larına herhangi bir başvuru eklediyseniz (örneğin: Windows Mobile SDK) SDK sürümünü güncelleştirmeniz gerekir. Örneğin bu \<SDKReference > öğesi:
+5. UWP uzantısı SDK 'larına herhangi bir başvuru eklediyseniz (örneğin: Windows Mobile SDK) SDK sürümünü güncelleştirmeniz gerekir. Örneğin, bu \<SDKReference> öğe:
 
    ```xml
    <SDKReference Include="WindowsMobile, Version=10.0.0.1">
@@ -671,7 +671,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
    ```
 
-6. Şu değere sahip bir Name özniteliğiyle \<Target > öğesini bulun: Ensurtrts. Bu öğeyi ve tüm alt öğelerini silin.
+6. \<Target>Şu değere sahip olan bir name özniteliğine sahip öğeyi bulun: Ensurtrıgetpackagebuildımports. Bu öğeyi ve tüm alt öğelerini silin.
 
    ```xml
    <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -683,7 +683,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
    </Target>
    ```
 
-7. Aşağıdaki gibi Microsoft. Diagnostics. Tracing. EventSource ve Microsoft. ApplicationInsights 'a başvuran proje ve koşul öznitelikleriyle \<Içeri aktarma > öğelerini bulun ve silin:
+7. \<Import>Aşağıdaki gibi Microsoft. Diagnostics. Tracing. EventSource ve Microsoft. ApplicationInsights 'a başvuran proje ve koşul öznitelikleriyle öğeleri bulun ve silin:
 
    ```xml
    <Import Project="..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.16-beta\build\portable-net45+win8+wpa81\Microsoft.Diagnostics.Tracing.EventSource.Redist.targets" Condition="Exists('..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.16-beta\build\portable-net45+win8+wpa81\Microsoft.Diagnostics.Tracing.EventSource.Redist.targets')" />
@@ -691,9 +691,9 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
    ```
 
-8. > Öğeleri NuGet paketlerine > \<başvurusuna sahip \<ItemGroup bulun. Gelecek bir adım için bu bilgilere ihtiyaç duyduğundan, başvurulan NuGet paketlerini göz önünde bulabilirsiniz. Visual Studio 2015 RC ile Visual Studio 2015 RTM arasındaki Windows 10 proje biçimi arasındaki önemli bir fark, RTM biçiminin [NuGet](/nuget/) sürüm 3 ' ü kullanmadır.
+8. \<ItemGroup> \<Reference> NuGet paketlerine alt öğeleri olan öğesini bulun. Gelecek bir adım için bu bilgilere ihtiyaç duyduğundan, başvurulan NuGet paketlerini göz önünde bulabilirsiniz. Visual Studio 2015 RC ile Visual Studio 2015 RTM arasındaki Windows 10 proje biçimi arasındaki önemli bir fark, RTM biçiminin [NuGet](/nuget/) sürüm 3 ' ü kullanmadır.
 
-    \<ItemGroup > ve tüm alt öğelerini kaldırın. Örneğin, Visual Studio RC ile oluşturulan UWP projesi, kaldırılması gereken aşağıdaki NuGet paketlerine sahip olacaktır:
+    \<ItemGroup>Ve tüm alt öğelerini kaldırın. Örneğin, Visual Studio RC ile oluşturulan UWP projesi, kaldırılması gereken aşağıdaki NuGet paketlerine sahip olacaktır:
 
    ```xml
    <ItemGroup>
@@ -721,23 +721,23 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
    ```
 
-9. \<AppxManifest > öğesi içeren \<ItemGroup > öğesini bulun. Include özniteliği: Packages. config olarak ayarlanmış bir \<None > öğesi varsa, silin. Ayrıca, Include özniteliğiyle birlikte \<None > öğesi ekleyin ve değerini: Project. JSON olarak ayarlayın.
+9. \<ItemGroup>Öğe içeren öğeyi bulun \<AppxManifest> . \<None>İçerme özniteliği şu şekilde ayarlanmış bir öğe varsa: packages.config, silin. Ayrıca, \<None> içerme özniteliği içeren bir öğesi ekleyin ve değerini olarak ayarlayın: project.json.
 
-10. Değişikliklerinizi kaydedin. Ardından proje dosyasını kapatın.
+10. Yaptığınız değişiklikleri kaydedin. Ardından proje dosyasını kapatın.
 
 11. Çözüm Gezgini ' de proje dosyanıza sağ tıklayın ve bağlam menüsünden projeyi yeniden yükle ' yi seçin. Projenizdeki tüm dosyalar artık Çözüm Gezgini görüntülenmelidir.
 
-12. Çözüm Gezgini ' de ApplicationInsights. config dosyasını seçin ve özelliklerini açın. Yapı eylemi özelliğini "Içerik" olarak ve çıkış dizinine Kopyala özelliğini "daha sonra Kopyala" olarak ayarlayın.
+12. Dosya ApplicationInsights.config Çözüm Gezgini seçin ve özelliklerini açın. Yapı eylemi özelliğini "Içerik" olarak ve çıkış dizinine Kopyala özelliğini "daha sonra Kopyala" olarak ayarlayın.
 
 13. Projenizde Package. appxmanifest dosyasını açın.
 
-    1. \<TargetDeviceFamily > öğesini bulun. MinVersion ve Maxversionsınanan özniteliklerini, yüklediğiniz Evrensel Windows Platformu sürümüne karşılık gelecek şekilde değiştirin. Böyle:
+    1. Öğesini bulun \<TargetDeviceFamily> . MinVersion ve Maxversionsınanan özniteliklerini, yüklediğiniz Evrensel Windows Platformu sürümüne karşılık gelecek şekilde değiştirin. Böyle:
 
         ```xml
         <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.10240.0" />
         ```
 
-    2. Değişikliklerinizi kaydedin.
+    2. Yaptığınız değişiklikleri kaydedin.
 
 14. Önceki adımda sildiğiniz paketleri eklemek için NuGet yöneticisini kullanın. Visual Studio 2015 RC ile Visual Studio 2015 RTM arasındaki Windows 10 proje biçimi arasındaki önemli bir fark, RTM biçiminin [NuGet](/nuget/) sürüm 3 ' ü kullanmadır.
 
@@ -745,7 +745,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
     Evrensel Windows uygulamalarınız için birim testi projelerine sahipseniz, [Bu adımları](#MigrateUnitTest)da izlemeniz gerekir.
 
-### <a name="RCUpdate10CPlusPlus"></a>C++ Projelerinizi en son Evrensel Windows platformu kullanacak şekilde güncelleştirin
+### <a name="update-your-c-projects-to-use-the-latest-universal-windows-platform"></a><a name="RCUpdate10CPlusPlus"></a> C++ projelerinizi en son Evrensel Windows Platformu kullanacak şekilde güncelleştirin
 
 1. Yüklediğiniz Evrensel Windows Platformu bulmak için şu klasörü açın: **\Program Files (x86) \Windows Kits\10\Platforms\UAP**. Bu, yüklü her bir Evrensel Windows Platformu klasörlerinin listesini içerir. Klasör adı, yüklediğiniz Evrensel Windows Platformu sürümdür. Örneğin, bu Windows 10 cihazında yüklü Evrensel Windows Platformu sürüm 10.0.10240.0 vardır.
 
@@ -757,13 +757,13 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
      ![Projeyi kaldırma, sonra proje dosyasını düzenleme](../misc/media/uap-editearliercplus.png "UAP_EditEarlierCPlus")
 
-3. Koşul özniteliği içermeyen, ancak bir \<ApplicationTypeRevision > öğesi içeren bir \<PropertyGroup > öğesi bulun. ApplicationTypeRevision değerini 8,2 ' den 10,0 ' e güncelleştirin. \<WindowsTargetPlatformVersion > ve bir \<WindowsTargetPlatformMinVersion > öğesi ekleyin ve değerlerini yüklediğiniz Evrensel Windows Platformu sürümünün değeri olarak ayarlayın.
+3. \<PropertyGroup>Koşul özniteliği içermeyen ancak bir öğesi içeren herhangi bir öğeyi bulun \<ApplicationTypeRevision> . ApplicationTypeRevision değerini 8,2 ' den 10,0 ' e güncelleştirin. Bir \<WindowsTargetPlatformVersion> ve öğesi ekleyin \<WindowsTargetPlatformMinVersion> ve değerlerini yüklediğiniz Evrensel Windows platformu sürümünün değeri olarak ayarlayın.
 
-     \<EnableDotNetNativeCompatibleProfile > öğesi ekleyin ve öğesi zaten yoksa değeri true olarak ayarlayın.
+     Öğe \<EnableDotNetNativeCompatibleProfile> zaten yoksa, bir öğe ekleyin ve değerini true olarak ayarlayın.
 
-     Evrensel Windows uygulamaları için varsayılan varlık ölçeği 200 ' dir. Visual Studio 2015 RC dahil edilen ve 100 ' de ölçeklendirilmiş olan projeler, bu PropertyGroup 'a bir 100 değeri olan bir \<UapDefaultAssetScale > öğesi eklemeniz gerekir. [Varlıklar ve ölçekler](https://msdn.microsoft.com/library/jj679352.aspx)hakkında daha fazla bilgi edinin.
+     Evrensel Windows uygulamaları için varsayılan varlık ölçeği 200 ' dir. Visual Studio 2015 RC ile oluşturulan ve 100 ' de ölçeklendirilmiş varlıklar içeren projeler, \<UapDefaultAssetScale> Bu PropertyGroup 'a bir 100 değeri olan bir öğe eklemeniz gerekecektir. [Varlıklar ve ölçekler](https://msdn.microsoft.com/library/jj679352.aspx)hakkında daha fazla bilgi edinin.
 
-     Bu nedenle, bu \<PropertyGroup > öğesi artık şuna benzer:
+     Bu \<PropertyGroup> öğe artık şuna benzer olacaktır:
 
     ```xml
     <PropertyGroup Label="Globals">
@@ -779,7 +779,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
     ```
 
-4. Kalan her \<PropertyGroup > öğesi için, öğenin Sürüm yapılandırmasına sahip bir koşul özniteliğine sahip olup olmadığını denetleyin. Varsa, ancak bir \<Usedotnetnativetoolzincirine > öğesi içermiyorsa bir tane ekleyin. \<Usedotnetnativetoolzincirine > öğesi için değeri true olarak ayarlayın:
+4. Kalan her \<PropertyGroup> öğe için, öğenin sürüm yapılandırması olan bir koşul özniteliğine sahip olup olmadığını denetleyin. Varsa, ancak bir öğesi içermiyorsa bir \<UseDotNetNativeToolchain> tane ekleyin. Öğesi için değeri \<UseDotNetNativeToolchain> true olarak ayarlayın, şöyle:
 
     ```xml
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -792,36 +792,36 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
     ```
 
-5. .NET Native etkinleştirmek için \<EnableDotNetNativeCompatibleProfile > öğesini ve \<Usedotnetnativetoolzincirine > öğesini güncelleştirmeniz gerekir, ancak C++ şablonlarda .NET Native etkin değildir.
+5. \<EnableDotNetNativeCompatibleProfile>.NET Native etkinleştirmek için öğeyi ve öğeyi güncelleştirmeniz gerekir \<UseDotNetNativeToolchain> , ancak C++ şablonlarında .NET Native etkinleştirilmemiştir.
 
-     Değişikliklerinizi kaydedin. Ardından proje dosyasını kapatın.
+     Yaptığınız değişiklikleri kaydedin. Ardından proje dosyasını kapatın.
 
 6. Çözüm Gezgini ' de proje dosyanıza sağ tıklayın ve bağlam menüsünden projeyi yeniden yükle ' yi seçin. Projenizdeki tüm dosyalar artık Çözüm Gezgini görüntülenmelidir.
 
 7. Projenizde Package. appxmanifest dosyasını açın.
 
-    1. \<TargetDeviceFamily > öğesini bulun. MinVersion ve Maxversionsınanan özniteliklerini, yüklediğiniz Evrensel Windows Platformu sürümüne karşılık gelecek şekilde değiştirin. Böyle:
+    1. Öğesini bulun \<TargetDeviceFamily> . MinVersion ve Maxversionsınanan özniteliklerini, yüklediğiniz Evrensel Windows Platformu sürümüne karşılık gelecek şekilde değiştirin. Böyle:
 
         ```xml
         <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.10240.0" />
         ```
 
-    2. Değişikliklerinizi kaydedin.
+    2. Yaptığınız değişiklikleri kaydedin.
 
          Artık uygulamanızı kodleyebilir, oluşturabilir ve hata ayıklayabilirsiniz.
 
          Evrensel Windows uygulamalarınız için birim testi projelerine sahipseniz, [Bu adımları](#MigrateUnitTest)da izlemeniz gerekir.
 
-## <a name="MigrateUnitTest"></a>Visual Studio 2015 RC ile oluşturulan Evrensel Windows uygulamaları için mevcut birim testi projeleri için gereken değişiklikler
+## <a name="changes-required-for-existing-unit-test-projects-for-universal-windows-apps-created-with-visual-studio-2015-rc"></a><a name="MigrateUnitTest"></a> Visual Studio 2015 RC ile oluşturulan Evrensel Windows uygulamaları için mevcut birim testi projeleri için gereken değişiklikler
  Visual Studio 2015 RC ile Windows 10 Universal uygulamaları için birim testi projeleri oluşturduysanız, bu test projelerini Visual Studio 2015 ' nin en son sürümüyle kullanabilmek için proje dosyalarınızda bu ek değişiklikleri yapmanız gerekir. Uygulamanızı oluşturmak için kullandığınız dile bağlı olarak, gerekli değişiklikler farklıdır:
 
-- [C#/VB uygulamaları](#UnitTestRCUpdate10CSharp)
+- [C#/vb uygulamaları](#UnitTestRCUpdate10CSharp)
 
-- [C++gör](#UnitTestRCUpdate10CPlusPlus)
+- [C++ uygulamaları](#UnitTestRCUpdate10CPlusPlus)
 
-### <a name="UnitTestRCUpdate10CSharp"></a>C#/Vb birim testi projelerinizi güncelleştirin
+### <a name="update-your-cvb-unit-test-projects"></a><a name="UnitTestRCUpdate10CSharp"></a> C#/vb birim testi projelerinizi güncelleştirme
 
-1. Visual Studio ile C#/vb birim testi projenizi içeren çözümünüzü açın. \<OuttputType > öğesinin değerini: AppContainerExe olarak değiştirin.
+1. Visual Studio ile, C#/vb birim testi projenizi içeren çözümünüzü açın. \<OuttputType>Öğesinin değerini olarak değiştirin: appcontainerexe.
 
    ```xml
 
@@ -829,7 +829,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
    ```
 
-2. Bu öğeyi \<EnableCoreRuntime > false\</EnableCoreRuntime > aşağıdaki öğeyle değiştirin:
+2. Bu öğe \<EnableCoreRuntime> değerini \</EnableCoreRuntime> aşağıdaki öğeyle değiştirin:
 
    ```xml
 
@@ -867,7 +867,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
    ```
 
-4. Bu öğe \<Usedotnetnativetoolzincirini > true\</Usedotnetnativetoolzincirine > bir alt öğe olarak bu özellik gruplarına ekleyin:
+4. Bu öğeyi bu \<UseDotNetNativeToolchain> \</UseDotNetNativeToolchain> özellik gruplarına bir alt öğe olarak true olarak ekleyin:
 
    ```xml
 
@@ -877,7 +877,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
    ```
 
-5. Aşağıdaki \<ItemGroup > öğelerini silin:
+5. Aşağıdaki öğeleri silin \<ItemGroup> :
 
    ```xml
 
@@ -941,7 +941,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
 6. Yeni bir birim testi projesi oluşturun ve bu yeni projeden UnitTestApp. xaml ve UnitTestApp.xaml.cs dosyalarını güncelleştirdiğiniz mevcut birim testi projenize kopyalayın.
 
-7. Yeni birim testi projesinin Özellikler klasöründen UnitTestApp. RD. xml dosyasını, güncelleştirmekte olduğunuz mevcut birim testi projenizin Özellikler klasörüne kopyalayın.
+7. Yeni birim testi projesinin Özellikler klasöründen UnitTestApp.rd.xml dosyasını güncelleştirdiğiniz mevcut birim testi projenizin Özellikler klasörüne kopyalayın.
 
 8. Projenizde Package. appxmanifest dosyasını açın. Sonra bu öğeleri bundan silin:
 
@@ -992,7 +992,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
    Artık birim testlerinizi çalıştırabilirsiniz.
 
-### <a name="UnitTestRCUpdate10CPlusPlus"></a>C++ Projelerinizi en son Evrensel Windows platformu kullanacak şekilde güncelleştirin
+### <a name="update-your-c-projects-to-use-the-latest-universal-windows-platform"></a><a name="UnitTestRCUpdate10CPlusPlus"></a> C++ projelerinizi en son Evrensel Windows Platformu kullanacak şekilde güncelleştirin
 
 1. Visual Studio ile, C++ birim testi projenizi içeren çözümünüzü açın. Aşağıdaki öğeleri kaldırın:
 
@@ -1005,7 +1005,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
     ```
 
-2. Şu \<ProjectConfiguration > öğelerini bu öğenin altına ekleyin \<ItemGroup etiketi = "ProjectConfigurations" > Bu filde henüz yoksa:
+2. Şu öğeleri, \<ProjectConfiguration> \<ItemGroup Label="ProjectConfigurations"> zaten bu filde içinde olmayan bu öğenin altına ekleyin:
 
     ```xml
 
@@ -1036,7 +1036,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
     ```
 
-4. Bu \<PropertyGroup > öğelerini zaten dosyada yoksa ekleyin:
+4. \<PropertyGroup>Zaten dosyada değilse, bu öğeleri ekleyin:
 
     ```xml
 
@@ -1086,7 +1086,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
     ```
 
-7. Bu \<ItemDefinitionGroup > öğelerini zaten diğer \<ItemDefinitionGroup > öğelerini içeren bölüme ekleyin:
+7. Bu \<ItemDefinitionGroup> öğeleri, zaten diğer öğeleri içeren bölüme ekleyin \<ItemDefinitionGroup> :
 
     ```xml
 
@@ -1113,7 +1113,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
     ```
 
-8. Aşağıdaki \< ItemGroup > öğesini silin:
+8. Aşağıdaki öğeyi silin \< ItemGroup> :
 
     ```xml
 
@@ -1127,7 +1127,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
     ```
 
-     Bu \<ItemGroup > öğesiyle değiştirin:
+     Bu \<ItemGroup> öğeyle değiştirin:
 
     ```xml
 
@@ -1143,7 +1143,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
     ```
 
-9. Aşağıdaki \< ItemGroup > öğesini silin:
+9. Aşağıdaki öğeyi silin \< ItemGroup> :
 
     ```xml
 
@@ -1152,7 +1152,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
     </ItemGroup>
     ```
 
-     Bu \<ItemGroup > öğeleriyle değiştirin:
+     Şu \<ItemGroup> öğelerle değiştirin:
 
     ```xml
 
@@ -1176,7 +1176,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
     <ClCompile Include="UnitTest.cpp"/>
     ```
 
-     Bu \<Cıile > öğeleriyle değiştirin:
+     Şu \<CICompile> öğelerle değiştirin:
 
     ```xml
 
@@ -1202,7 +1202,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
     </ItemGroup>
     ```
 
-12. Yeni bir birim testi C++ projesi oluşturun ve bu projeden UnitTestApp. xaml, UnitTestApp. xaml. cpp, UnitTestApp. xaml. h ve UnitTestApp. RD. xml dosyalarını güncelleştirdiğiniz mevcut projenize kopyalayın.
+12. Yeni bir birim testi C++ projesi oluşturun ve UnitTestApp. xaml, UnitTestApp. xaml. cpp, UnitTestApp. xaml. h ve UnitTestApp.rd.xml dosyalarını bu projeden güncelleştirdiğiniz mevcut projenize kopyalayın.
 
 13. Projenizde Package. appxmanifest dosyasını açın. Sonra bu öğeleri bundan silin:
 

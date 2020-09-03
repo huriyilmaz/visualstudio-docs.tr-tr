@@ -1,5 +1,5 @@
 ---
-title: REFERENCE_TYPE | Microsoft Dokümanlar
+title: REFERENCE_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 29ce6ad17aa32b98fd28914c422a49bd8bcc14b5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713666"
 ---
 # <a name="reference_type"></a>REFERENCE_TYPE
 Başvuru türünü belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_REFERENCE_TYPE { 
@@ -44,24 +44,24 @@ public enum enum_REFERENCE_TYPE { 
 
 ## <a name="fields"></a>Alanlar
  `REF_TYPE_WEAK`\
- Zayıf bir başvuru belirtir. ' ile `REF_TYPE_STRONG`birleştirilemez.
+ Zayıf bir başvuruyu belirtir. İle birleştirilemez `REF_TYPE_STRONG` .
 
  `REF_TYPE_STRONG`\
- Güçlü bir başvuru belirtir. ' ile `REF_TYPE_WEAK`birleştirilemez.
+ Güçlü bir başvuru belirtir. İle birleştirilemez `REF_TYPE_WEAK` .
 
 ## <a name="remarks"></a>Açıklamalar
- `dwRefType` [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapısının bir üyesi olarak kullanılır.
+ `dwRefType` [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapısının üyesi olarak kullanılır.
 
- [SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md) yöntemine parametre olarak geçirilir.
+ [Setreferencetype](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md) metoduna parametre olarak geçirildi.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)
 - [SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md)

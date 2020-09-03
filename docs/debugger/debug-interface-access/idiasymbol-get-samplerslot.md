@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 64cc4dbae33e8522e323681196a7401735f0257b
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85462388"
 ---
 # <a name="idiasymbolget_samplerslot"></a>IDiaSymbol::get_samplerSlot
@@ -30,7 +30,7 @@ HRESULT get_samplerSlot(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `DWORD`Örnekleyici yuvasını tutan bir işaretçisi.
+dışı `DWORD` Örnekleyici yuvasını tutan bir işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.

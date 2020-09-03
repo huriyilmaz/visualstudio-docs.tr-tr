@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 90c30f27ada6673608a1c5cf9500207f9aeb2d72
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664191"
 ---
 # <a name="organize-objects-into-layout-containers-in-xaml-designer"></a>XAML Tasarımcısı’nda nesneleri düzen kapsayıcılarına yerleştirme
@@ -47,14 +47,14 @@ Nesnelerin sayfada görünmesini istediğiniz yeri düşünün; görüntüler, d
 
 - [DockPanel](#Dock)
 
-### <a name="Grid"></a>Çizgisi
+### <a name="grid"></a><a name="Grid"></a> Çizgisi
  Nesneleri satırlar ve sütunlar halinde düzenleyin.
 
  ![](../designers/media/98b234b2-ac3b-441f-9136-98375fee87b7.png "98b234b2-ac3b-441f-9136-98375fee87b7")
 
  **Kısa bir video izleyin:** [Kılavuzlar kullanarak](http://www.popscreen.com/v/6A4hj/Microsoft-Expression-Blend-Using-Grids) ![yüklü özellikleri yapılandırma](../designers/media/bldadminconsoleinitialconfigicon.PNG "Bldadminconsoleınitialconfigıcon")
 
-### <a name="Uniform"></a>Birlik Kılavuzu
+### <a name="uniformgrid"></a><a name="Uniform"></a> Birlik Kılavuzu
  Nesneleri eşit veya tek biçimli, ızgara bölgelerine göre düzenleyin. Bu panel, görüntülerin listesini düzenlemek için idealdir.
 
  ![](../designers/media/928b9284-a7e8-4678-875a-656b80b78076.png "928b9284-a7e8-4678-875a-656b80b78076")
@@ -63,21 +63,21 @@ Nesnelerin sayfada görünmesini istediğiniz yeri düşünün; görüntüler, d
 
  **Kısa bir video izleyin:** [bir birlik kılavuzuyla çalışan](http://www.popscreen.com/v/6A4iq/Microsoft-Expression-Blend-Working-with-a-UniformGrid) ![yüklü özellikleri yapılandırma](../designers/media/bldadminconsoleinitialconfigicon.PNG "Bldadminconsoleınitialconfigıcon")
 
-### <a name="Canvas"></a>Tuvalinin
+### <a name="canvas"></a><a name="Canvas"></a> Tuvalinin
  Nesneleri istediğiniz gibi düzenleyin. Kullanıcılar uygulamanızı çalıştırdığınızda, bu öğelerin ekranda sabit konumları olur.
 
  ![](../designers/media/e1ae27f0-3a57-454e-b580-877dcea8836d.png "e1ae27f0-3a57-454e-b580-877dcea8836d")
 
  **Kısa bir video izleyin:** [tuvalle çalışan](http://www.popscreen.com/v/6A4hT/Microsoft-Expression-Blend-Working-with-the-Canvas) ![yüklü özellikleri yapılandırma](../designers/media/bldadminconsoleinitialconfigicon.PNG "Bldadminconsoleınitialconfigıcon")
 
-### <a name="Stack"></a>StackPanel
+### <a name="stackpanel"></a><a name="Stack"></a> StackPanel
  Nesneleri yatay veya dikey olarak tek bir satırda düzenleyin.
 
  ![](../designers/media/a85a7b57-b0a8-495e-b985-f0291e41d093.png "a85a7b57-b0a8-495e-b985-f0291e41d093")
 
  **Kısa bir video izleyin:** [StackPanel ve WrapPanel Ile çalışan](http://www.popscreen.com/v/6A4i5/Microsoft-Expression-Blend-Using-the-StackPanel-and-WrapPanel) ![yüklü özellikleri yapılandırma](../designers/media/bldadminconsoleinitialconfigicon.PNG "Bldadminconsoleınitialconfigıcon")
 
-### <a name="Wrap"></a>WrapPanel
+### <a name="wrappanel"></a><a name="Wrap"></a> WrapPanel
  Nesneleri soldan sağa sıralı olarak düzenleyin. Panel, en sağ kenarda yer aldığında, içeriği bir sonraki satıra *kaydırır* ve bu şekilde soldan sağa, yukarıdan aşağıya doğru. Ayrıca, nesnelerin yukarıdan aşağıya, soldan sağa akmasını sağlamak için bir sarması panelinin yönünü dikey hale getirebilirsiniz.
 
  (Yalnızca WPF projeleri için kullanılabilir)
@@ -86,7 +86,7 @@ Nesnelerin sayfada görünmesini istediğiniz yeri düşünün; görüntüler, d
 
  **Kısa bir video izleyin:** [StackPanel ve WrapPanel Ile çalışan](http://www.popscreen.com/v/6A4i5/Microsoft-Expression-Blend-Using-the-StackPanel-and-WrapPanel) ![yüklü özellikleri yapılandırma](../designers/media/bldadminconsoleinitialconfigicon.PNG "Bldadminconsoleınitialconfigıcon")
 
-### <a name="Dock"></a>DockPanel
+### <a name="dockpanel"></a><a name="Dock"></a> DockPanel
  Nesneleri, panelin bir kenarına kalacak veya *sabitler*olacak şekilde düzenleyin.
 
  (Yalnızca WPF projeleri için kullanılabilir)
@@ -110,22 +110,22 @@ Nesnelerin sayfada görünmesini istediğiniz yeri düşünün; görüntüler, d
 
 - [Viewbox](#View)
 
-### <a name="Border"></a>Sınırının
+### <a name="border"></a><a name="Border"></a> Sınırının
  Bir nesne etrafında kenarlık, arka plan veya her ikisini birden oluşturun. Bir **kenarlığa**yalnızca bir nesne ekleyebilirsiniz. Birden fazla nesne için bir kenarlık veya arka plan uygulamak istiyorsanız, **kenarlığa**Düzen paneli ekleyin. Ardından, bu panele veya denetime nesne ekleyin.
 
  ![](../designers/media/e761238b-99fd-43c5-bbc4-57538b8289ff.png "e761238b-99fd-43c5-bbc4-57538b8289ff")
 
  **Kısa bir video izleyin:** [Kenarlıklar Ile çalışan](http://www.popscreen.com/v/6A4hB/Microsoft-Expression-Blend-Working-with-Borders) ![yüklü özellikleri yapılandırma](../designers/media/bldadminconsoleinitialconfigicon.PNG "Bldadminconsoleınitialconfigıcon")
 
-### <a name="Popup"></a>Kutu
+### <a name="popup"></a><a name="Popup"></a> Kutu
  Bir penceredeki kullanıcılara bilgi veya seçenek göster. Bir **açılan pencerede**yalnızca bir nesne ekleyebilirsiniz. Varsayılan olarak, bir **açılan pencere** bir **kılavuz** içerir, ancak bunu değiştirebilirsiniz.
 
-### <a name="Scroll"></a>ScrollViewer
+### <a name="scrollviewer"></a><a name="Scroll"></a> ScrollViewer
  Sayfanın bir sayfasını veya alanını kaydırmak için kullanımları etkinleştirin. Bir **ScrollViewer** için yalnızca bir nesne ekleyebilirsiniz. böylece, **kılavuz** veya **StackPanel**gibi bir Düzen paneli eklemek çok anlamlı olur.
 
  ![](../designers/media/06b326d4-f23d-41a6-b26b-e1aff37572a7.png "06b326d4-f23d-41a6-b26b-e1aff37572a7")
 
-### <a name="View"></a>Viewbox
+### <a name="viewbox"></a><a name="View"></a> Viewbox
  Nesneleri yakınlaştırma denetimiyle yaptığınız gibi ölçeklendirin. **Viewbox**'a yalnızca bir nesne ekleyebilirsiniz. Bu etkiyi birden fazla nesneye uygulamak istiyorsanız, **Viewbox**'a bir Düzen paneli ekleyin ve ardından denetimlerinizi bu düzen paneline ekleyin.
 
  (Yalnızca WPF projeleri için kullanılabilir)

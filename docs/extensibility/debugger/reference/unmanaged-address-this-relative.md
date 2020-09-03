@@ -1,5 +1,5 @@
 ---
-title: UNMANAGED_ADDRESS_THIS_RELATIVE | Microsoft Dokümanlar
+title: UNMANAGED_ADDRESS_THIS_RELATIVE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ea493170c7b422129485fcea4248981a2b506001
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713263"
 ---
 # <a name="unmanaged_address_this_relative"></a>UNMANAGED_ADDRESS_THIS_RELATIVE
-Bu yapı, işaretçiye `this` göre (Visual`Me` Basic'te) bir adresi temsil eder.
+Bu yapı, bir `this` işaretçiye (Visual Basic) göre bir adresi temsil eder `Me` .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _tagUNMANAGED_THIS_RELATIVE {
@@ -45,23 +45,23 @@ public struct UNMANAGED_THIS_RELATIVE {
 
 ## <a name="members"></a>Üyeler
  `dwOffset`\
- Bir temel konumdan bayt mahsup (örneğin, bir sınıf vtable başlangıcı).
+ Taban konumundan bayt konumu (örneğin, bir sınıf vtable 'u başlangıcı).
 
  `dwBitOffset`\
- Bir taban konumundan bitler halinde ofset (bir bit alanı atıfta sürece her zaman 0).
+ Taban konumundan bit cinsinden konum (bir bit alanına başvurmadığı takdirde daima 0).
 
  `dwBitLength`\
- Adresi temsil eden bit sayısı (bit alanına atıfta bulunulmadığı sürece her zaman 0).
+ Adresi temsil eden bit sayısı (bir bit alanına başvurmadığı müddetçe daima 0).
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı, `DEBUG_ADDRESS_UNION` yapı alanı [(ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) numaralandırmadan bir değer) `ADDRESS_KIND_UNMANAGED_THIS_RELATIVE` `dwKind` ayarlandığında, [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) yapıdaki birliğin bir parçasıdır.
+ Bu yapı, [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) `dwKind` `DEBUG_ADDRESS_UNION` yapı alanı `ADDRESS_KIND_UNMANAGED_THIS_RELATIVE` ( [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) numaralandırmasından bir değer) olarak ayarlandığında DEBUG_ADDRESS_UNION yapısındaki birleşimin bir parçasıdır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: sh.h
+ Üstbilgi: SH. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

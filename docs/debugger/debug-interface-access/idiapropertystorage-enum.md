@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 89c5b6418e832dd145837e579cfded3f47022e00
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85466604"
 ---
 # <a name="idiapropertystorageenum"></a>IDiaPropertyStorage::Enum
@@ -33,7 +33,7 @@ HRESULT Enum ( 
 #### <a name="parameters"></a>Parametreler
  `ppenum`
 
-dışı `IEnumSTATPROPSTG`Özelliklerin bir listesini temsil eden bir nesne döndürür (Microsoft. VisualStudio. OLE. Interop ad alanında).
+dışı `IEnumSTATPROPSTG` Özelliklerin bir listesini temsil eden bir nesne döndürür (Microsoft. VisualStudio. OLE. Interop ad alanında).
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür.

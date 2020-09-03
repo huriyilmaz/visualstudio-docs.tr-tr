@@ -1,5 +1,5 @@
 ---
-title: THREADSTATE | Microsoft Dokümanlar
+title: THREADSTATE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 1b291cc1668b2b867729da11d4c561f74567f257
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713332"
 ---
 # <a name="threadstate"></a>THREADSTATE
 İş parçacığının durumunu belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_THREADSTATE { 
@@ -53,27 +53,27 @@ public enum enum_THREADSTATE { 
  İş parçacığının çalıştığını gösterir.
 
  `THREADSTATE_STOPPED`\
- Bir kesme noktası nedeniyle iş parçacığının durdurulduğunu gösterir.
+ Bir kesme noktası nedeniyle iş parçacığının durdurulduğunu belirtir.
 
  `THREADSTATE_FRESH`\
- İş parçacığının oluşturulduğunu, ancak henüz kod çalıştırmadığını gösterir.
+ İş parçacığının oluşturulduğunu, ancak henüz kod çalışmadığını gösterir.
 
  `THREADSTATE_DEAD`\
- İş parçacığının öldüğünü gösterir.
+ İş parçacığının ölü olduğunu gösterir.
 
  `THREADSTATE_FROZEN`\
- İş parçacığının dondurulduğunu gösterir (yürütme yapılamaz).
+ İş parçacığının dondurulmuş olduğunu belirtir (yürütme yapılamaz).
 
 ## <a name="remarks"></a>Açıklamalar
- [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) `dwThreadState` yapısının alanı için kullanılır.
+ `dwThreadState` [Threadproperties](../../../extensibility/debugger/reference/threadproperties.md) yapısının alanı için kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)

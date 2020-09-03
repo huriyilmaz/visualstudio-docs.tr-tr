@@ -16,16 +16,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ac8f4cf619bbdd007bb7aa570f549ae3c0b50e86
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651107"
 ---
 # <a name="configure-service-reference-dialog-box"></a>Hizmet Başvurusu Yapılandırma İletişim Kutusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Hizmet başvurusunu Yapılandır** iletişim kutusu, [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] hizmetlerinin davranışını yapılandırmanızı sağlar.
+**Hizmet başvurusunu Yapılandır** iletişim kutusu, hizmetlerin davranışını yapılandırmanızı sağlar [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] .
 
 > [!NOTE]
 > Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için Araçlar menüsünden Içeri ve dışarı aktarma ayarları ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
@@ -44,7 +44,7 @@ ms.locfileid: "72651107"
 
 - Bir WCF istemcisi için liste veya sözlük koleksiyon türlerini belirtmek için, **koleksiyon türü** ve **sözlük koleksiyon türü** listelerinden türleri seçin.
 
-- Tür paylaşımını devre dışı bırakmak için, **başvurulan derlemelerde türleri yeniden kullan** onay kutusunu temizleyin. Başvurulan derlemelerin bir alt kümesi için tür paylaşımını etkinleştirmek üzere, **başvurulan derlemelerde türleri yeniden kullan** onay kutusunu seçin, **belirtilen başvurulan derlemelerdeki türleri yeniden kullan**' ı seçin ve başvurulan başvuruları seçin  **bütünleştirilmiş kodlar listesi**.
+- Tür paylaşımını devre dışı bırakmak için, **başvurulan derlemelerde türleri yeniden kullan** onay kutusunu temizleyin. Başvurulan derlemelerin bir alt kümesi için tür paylaşımını etkinleştirmek üzere, **başvurulan derlemelerde türleri yeniden kullan** onay kutusunu seçin, **belirtilen başvurulan derlemelerdeki türleri yeniden kullan**' ı seçin ve **başvurulan derlemeler listesinde**istenen başvuruları seçin.
 
 ## <a name="uielement-list"></a>UIElement Listesi
  **Adres** Hizmet başvurusunun hizmet için aradığı Web adresini güncelleştirmek için kullanılır. Örneğin, geliştirme sırasında hizmet bir geliştirme sunucusunda barındırılabilir ve daha sonra bir üretim sunucusuna taşınabilir ve bir adres değişikliği tasarımda.
@@ -55,7 +55,7 @@ ms.locfileid: "72651107"
  **Oluşturulan sınıflar Için erişim düzeyi** WCF istemci sınıfları için kod erişim düzeyini belirler.
 
 > [!NOTE]
-> Web sitesi projeleri için, bu seçenek her zaman `Public` olarak ayarlanır ve değiştirilemez. Daha fazla bilgi için bkz. [hizmet başvurularına sorun giderme](../data-tools/troubleshooting-service-references.md).
+> Web sitesi projeleri için, bu seçenek her zaman olarak ayarlanır `Public` ve değiştirilemez. Daha fazla bilgi için bkz. [hizmet başvurularına sorun giderme](../data-tools/troubleshooting-service-references.md).
 
  **Zaman uyumsuz Işlemler oluşturma** WCF hizmeti yöntemlerinin zaman uyumlu olarak mı (varsayılan) yoksa zaman uyumsuz olarak mı çağracağını belirler.
 
@@ -63,9 +63,9 @@ ms.locfileid: "72651107"
 
  **Her zaman ileti sözleşmeleri oluştur** Bir WCF istemcisi için ileti sözleşmesi türlerinin oluşturulup oluşturulmayacağını belirler. İleti sözleşmeleri hakkında daha fazla bilgi için bkz. [Ileti sözleşmelerini kullanma](https://msdn.microsoft.com/library/1e19c64a-ae84-4c2f-9155-91c54a77c249).
 
- **Koleksiyon türü** Bir WCF istemcisi için liste koleksiyonu türünü belirtir. Varsayılan tür <xref:System.Array>.
+ **Koleksiyon türü** Bir WCF istemcisi için liste koleksiyonu türünü belirtir. Varsayılan tür <xref:System.Array> .
 
- **Sözlük toplama türü** Bir WCF istemcisi için sözlük koleksiyonu türünü belirtir. Varsayılan tür <xref:System.Collections.Generic.Dictionary%602>.
+ **Sözlük toplama türü** Bir WCF istemcisi için sözlük koleksiyonu türünü belirtir. Varsayılan tür <xref:System.Collections.Generic.Dictionary%602> .
 
  **Başvurulan derlemelerdeki türleri yeniden kullan** Bir hizmet eklendiğinde veya güncelleştirilirken yeni türler oluşturmak yerine, bir WCF istemcisinin, başvurulan derlemelerde zaten mevcut olan yeniden kullanmayı deneyip denemeyeceğini belirler. Varsayılan olarak, bu seçenek denetlenir.
 
@@ -78,7 +78,7 @@ ms.locfileid: "72651107"
  **Web başvurusu Ekle** [Nib: Web başvurusu Ekle Iletişim kutusunu](https://msdn.microsoft.com/bdf05776-c591-40af-bfd7-e1e2aa1e87b5)görüntüler.
 
 > [!NOTE]
-> Bu seçenek yalnızca [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürüm 2,0 ' i hedefleyen projeler için kullanılmalıdır.
+> Bu seçenek yalnızca öğesinin 2,0 sürümünü hedefleyen projeler için kullanılmalıdır [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .
 
 > [!NOTE]
 > **Web başvurusu Ekle** düğmesi yalnızca **hizmet başvurusu Ekle Iletişim kutusundan** **hizmet başvurusunu Yapılandır** iletişim kutusu görüntülendiğinde kullanılabilir.

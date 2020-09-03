@@ -1,5 +1,5 @@
 ---
-title: Eski Dil Hizmeti Geliştirme | Microsoft Dokümanlar
+title: Eski dil hizmeti geliştirme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,62 +17,62 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0c7f930d5087b6a822156fd44024def0d5b42b49
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80708665"
 ---
-# <a name="develop-a-legacy-language-service"></a>Eski bir dil hizmeti geliştirme
-Bu bölümde, eski bir dil hizmeti oluşturmanıza yardımcı olan konular bağlantı verir.
+# <a name="develop-a-legacy-language-service"></a>Eski dil hizmeti geliştirme
+Bu bölüm, eski dil hizmeti oluşturmanıza yardımcı olan konulara bağlantı sağlar.
 
- Eski dil hizmetleri BIR VSPackage'ın bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamanın en yeni yolu MEF uzantılarını kullanmaktır. Bir dil hizmetini uygulamanın yeni yolu hakkında daha fazla bilgi edinmek için [Editör ve dil hizmeti uzantılarına](../../extensibility/editor-and-language-service-extensions.md)bakın.
+ Eski dil Hizmetleri VSPackage 'un bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamak için daha yeni bir yol MEF uzantıları kullanmaktır. Dil hizmeti uygulama hakkında daha fazla bilgi edinmek için bkz. [Düzenleyici ve dil hizmeti uzantıları](../../extensibility/editor-and-language-service-extensions.md).
 
 > [!NOTE]
-> Yeni düzenleyici API'yi mümkün olan en kısa sürede kullanmaya başlamanızı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
+> Yeni Düzenleyici API 'sini mümkün olan en kısa sürede kullanmaya başlamanızı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
 
 ## <a name="in-this-section"></a>Bu bölümde
-- [Eski bir dil hizmeti modeli](../../extensibility/internals/model-of-a-legacy-language-service.md)
+- [Eski dil hizmeti modeli](../../extensibility/internals/model-of-a-legacy-language-service.md)
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Çekirdek düzenleyici için en az bir dil hizmeti modeli sağlar. Bu modeli kendi dil hizmetinizi oluşturmak için bir kılavuz olarak kullanabilirsiniz.
+ Çekirdek Düzenleyici için en düşük dil hizmetinin bir modelini sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Bu modeli, kendi dil hizmetinizi oluşturmak için bir kılavuz olarak kullanabilirsiniz.
 
 - [Eski dil hizmeti arabirimleri](../../extensibility/internals/legacy-language-service-interfaces.md)
 
- Bir dil hizmeti uygulamak için gereken nesneleri tartışır ve sözdizimi vurgulama, yöntem verileri ve diğer özellikleri sağlamak için kullanabileceğiniz ek nesnelerin listesini sağlar.
+ Bir dil hizmetini uygulamak için gereken nesneleri açıklar ve söz dizimi vurgulaması, yöntem verileri ve diğer özellikleri sağlamak için kullanabileceğiniz ek nesnelerin bir listesini sağlar.
 
-- [Eski dil hizmeti komutlarını engelleme](../../extensibility/internals/intercepting-legacy-language-service-commands.md)
+- [Eski dil hizmeti komutlarını kesme](../../extensibility/internals/intercepting-legacy-language-service-commands.md)
 
- Metin görünümünün başka şekilde işleyeceğini komutları engellemek için dil hizmetinize komut filtresi nasıl ekleyeceğiniaçıklar.
+ Metin görünümünün daha sonra işleyeceği komutları ele almak için dil hizmetinize bir komut filtresi eklemeyi açıklar.
 
-- [Eski bir dil hizmeti kaydetme](../../extensibility/internals/registering-a-legacy-language-service2.md)
+- [Eski dil hizmetini Kaydet](../../extensibility/internals/registering-a-legacy-language-service2.md)
 
- Kullanarak dil hizmetinizi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]nasıl kaydedin izleyin
+ Kullanarak dil hizmetinizi kaydetme hakkında bilgi sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
 - [Hata ayıklama için dil hizmeti desteği](../../extensibility/internals/language-service-support-for-debugging.md)
 
- Bir dil hizmetinin hata ayıklamayı destekleyecek özellikleri nasıl sağlayabileceğini açıklar.
+ Bir dil hizmetinin bir hata ayıklayıcıyı desteklemek için nasıl özellik sağlayabileceğinizi açıklar.
 
-- [Denetim Listesi: Eski bir dil hizmeti oluşturma](../../extensibility/internals/checklist-creating-a-legacy-language-service.md)
+- [Denetim listesi: eski dil hizmeti oluşturma](../../extensibility/internals/checklist-creating-a-legacy-language-service.md)
 
- Çekirdek düzenleyici için bir dil hizmeti oluşturmak ve tümleştirmek için adım adım yönergeler sağlar.
+ Çekirdek Düzenleyici için dil hizmeti oluşturmak ve tümleştirmek için adım adım yönergeler sağlar.
 
 ## <a name="related-sections"></a>İlgili bölümler
-- [Eski bir dil hizmetinde sözdizimi boyama](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)
+- [Eski dil hizmetinde söz dizimi renklendirmesi](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)
 
- Dil hizmetinizde sözdizimi vurgulamanın nasıl uygulanacağını tartışır.
+ Dil hizmetinize nasıl sözdizimi vurgulamanın uygulanacağını açıklar.
 
-- [Eski bir dil hizmetinde deyim tamamlama](../../extensibility/internals/statement-completion-in-a-legacy-language-service.md)
+- [Eski dil hizmetinde deyimin tamamlanması](../../extensibility/internals/statement-completion-in-a-legacy-language-service.md)
 
- İfade tamamlama, bir dil hizmetinin kullanıcıların yazmaya başladıkları bir dil anahtar sözcüklerini veya öğeyi bitirmelerine yardımcı olduğu işlemi tartışır.
+ Bir dil hizmetinin, kullanıcıların yazmaya başladıkları bir dil anahtar sözcüğünü veya öğesini bitirmesini yardım eden işlem olan deyimin tamamlanmasını açıklar.
 
-- [Eski bir dil hizmetinde Parametre Bilgisi](../../extensibility/internals/parameter-info-in-a-legacy-language-service1.md)
+- [Eski dil hizmetindeki parametre bilgisi](../../extensibility/internals/parameter-info-in-a-legacy-language-service1.md)
 
- Aşırı yüklenen işlevler ve yöntemler için yöntem ipuçlarının nasıl sağlandığını açıklar.
+ Aşırı yüklenmiş işlevler ve yöntemler için nasıl Yöntem ipuçları sağlayabileceğinizi açıklar.
 
-- [Nasıl yapilir: Eski bir dil hizmetinde gizli metin desteği sağlayın](../../extensibility/internals/how-to-provide-hidden-text-support-in-a-legacy-language-service.md)
+- [Nasıl yapılır: eski dil hizmetinde gizli metin desteği sağlama](../../extensibility/internals/how-to-provide-hidden-text-support-in-a-legacy-language-service.md)
 
- Gizli metin bölgesinin amacını açıklar ve gizli metin bölgesinin nasıl uygulanacağı yla ilgili yönergeler sağlar.
+ Gizli bir metin bölgesinin amacını açıklar ve gizli metin bölgesinin nasıl uygulanacağı hakkında yönergeler sağlar.
 
-- [Nasıl?](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)
+- [Nasıl yapılır: eski dil hizmetinde genişletilmiş anahat desteği sağlama](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)
 
- Dillerinizin anahat *desteğini, Tanımlara Daralt* komutunu desteklemenin ötesine genişleten iki seçeneği açıklar.
+ *Tanımlara göre Daralt* komutunu desteklemeye daha fazla dil için anahat desteğini genişleten iki seçeneği açıklar.

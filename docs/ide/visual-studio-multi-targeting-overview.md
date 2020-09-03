@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: b7c3c2b6b81f8f7793bda35c6b220e43caee9b5f
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770455"
 ---
 # <a name="framework-targeting-overview"></a>Çerçeve hedefleme genel bakış
@@ -102,9 +102,9 @@ Mevcut bir Visual Basic, C# veya F # projesinde, proje özellikleri iletişim ku
 > [!TIP]
 > Hedef çerçeveye bağlı olarak, proje dosyasında aşağıdaki yollarla temsil edilebilir:
 >
-> - Bir .NET Core uygulaması için:`<TargetFramework>netcoreapp2.1</TargetFramework>`
-> - .NET Standard bir uygulama için:`<TargetFramework>netstandard2.0</TargetFramework>`
-> - .NET Framework bir uygulama için:`<TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>`
+> - Bir .NET Core uygulaması için: `<TargetFramework>netcoreapp2.1</TargetFramework>`
+> - .NET Standard bir uygulama için: `<TargetFramework>netstandard2.0</TargetFramework>`
+> - .NET Framework bir uygulama için: `<TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>`
 
 ## <a name="resolve-system-and-user-assembly-references"></a>Sistem ve Kullanıcı derleme başvurularını çözümle
 

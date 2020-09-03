@@ -1,5 +1,5 @@
 ---
-title: PROCESS_INFO | Microsoft Dokümanlar
+title: PROCESS_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ef73145fb0a2598dc5e4ee98e8652314e0bc1c89
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713879"
 ---
 # <a name="process_info"></a>PROCESS_INFO
-Bir işlem hakkında bilgi içerir.
+Bir işlem hakkındaki bilgileri içerir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct tagPROCESS_INFO { 
@@ -57,41 +57,41 @@ public struct PROCESS_INFO { 
 
 ## <a name="members"></a>Üyeler
  `Fields`\
- Hangi alanların doldurulduğuna işaret eden [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) numaralandırmadaki bayrakların birleşimi.
+ [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) Numaralandırmadaki, doldurulacak alanları belirten bayrakların birleşimi.
 
  `bstrFileName`\
- İşlemin tam yol adı. [Parametre](../../../extensibility/debugger/reference/idebugprocess2-getname.md) `GN_FILENAME`ile GetName yöntemini çağırmaya eşdeğerdir.
+ İşlemin tam yol adı. Parametresiyle [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) metodunu çağırmaya eşdeğerdir `GN_FILENAME` .
 
  `bstrBaseName`\
- Dosya adı ve işlemin uzantısı. Parametre `GN_BASENAME`ile `IDebugProcess2::Getname` yöntemi çağırmaya eşdeğerdir.
+ İşlemin dosya adı ve uzantısı. `IDebugProcess2::Getname`Yöntemi parametresiyle çağırma ile eşdeğerdir `GN_BASENAME` .
 
  `bstrTitle`\
- Varsa, sürecin başlığı. Parametre `GN_TITLE`ile `IDebugProcess2::Getname` yöntemi çağırmaya eşdeğerdir.
+ Bir varsa, işlemin başlığı. `IDebugProcess2::Getname`Yöntemi parametresiyle çağırma ile eşdeğerdir `GN_TITLE` .
 
  `ProcessId`\
- İşlemi tanımlayan [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) yapı. [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md) yöntemini aramaya eşdeğerdir.
+ İşlemi tanımlayan [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) yapısı. [Getphysicalprocessıd](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md) yöntemini çağırmaya eşdeğerdir.
 
  `dwSessionId`\
- Bu işlemin yürüttün hata ayıklama oturumunun tanımlayıcısı.
+ Bu işlemin üzerinde çalıştığı hata ayıklama oturumunun tanımlayıcısı.
 
  `bstrAttachedSessionName`\
- Ekteki oturum adı. [GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md) yöntemini aramaya eşdeğerdir.
+ Eklenen oturum adı. [Getattachedoturumadı](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md) yöntemini çağırmaya eşdeğerdir.
 
  `CreationTime`\
- İşlemin oluşturulduğu saat.
+ İşlemin oluşturulduğu zaman.
 
  `Flags`\
- İşlemin özelliklerini belirten [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md) numaralandırmadan gelen bayrakların birleşimi.
+ İşlemin özelliklerini belirten [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md) Numaralandırmadaki bayrakların birleşimi.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı doldurulduğu [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) yöntemine aktarılır.
+ Bu yapı, doldurulduğu [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) yöntemine geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

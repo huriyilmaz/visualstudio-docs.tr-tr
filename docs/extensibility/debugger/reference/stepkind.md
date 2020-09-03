@@ -1,5 +1,5 @@
 ---
-title: STEPKIND | Microsoft Dokümanlar
+title: STEPKIND | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7ed2877c880d3cd2674f62b4f900a6e923bb29d9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713552"
 ---
 # <a name="stepkind"></a>STEPKIND
-Adım atmak için adım türünü belirtir.
+Adımlama için adım türünü belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_STEPKIND { 
@@ -48,27 +48,27 @@ public enum enum_STEPKIND { 
 
 ## <a name="fields"></a>Alanlar
  `STEP_INTO`\
- Bir işleve adım atar.
+ Bir işlevin adımları.
 
  `STEP_OVER`\
- Bir işlevin üzerine basarsa.
+ Bir işlev üzerindeki adımlar.
 
  `STEP_OUT`\
- Bir işlevin dışına adım.
+ Bir işlevin adımları.
 
  `STEP_BACKWARDS`\
- Bir işleve geriye doğru adım atar.
+ Bir işleve geri doğru adımlar.
 
 ## <a name="remarks"></a>Açıklamalar
- [Adım](../../../extensibility/debugger/reference/idebugprocess3-step.md) yöntemine bağımsız değişken olarak geçirilir.
+ [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md) yöntemine bir bağımsız değişken olarak geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [Adım](../../../extensibility/debugger/reference/idebugprocess3-step.md)

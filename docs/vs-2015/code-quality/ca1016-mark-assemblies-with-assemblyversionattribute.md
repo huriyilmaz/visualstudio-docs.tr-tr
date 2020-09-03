@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 97bd41e51c8d6b5415ffb91c5696c7055f46cf7c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545411"
 ---
 # <a name="ca1016-mark-assemblies-with-assemblyversionattribute"></a>CA1016: Derlemeleri AssemblyVersionAttribute ile işaretleyin
@@ -42,7 +42,7 @@ ms.locfileid: "85545411"
 
 - Sürüm numarası
 
-- Culture (Kültür)
+- Kültür
 
 - Ortak anahtar (kesin adlandırılmış derlemeler için).
 

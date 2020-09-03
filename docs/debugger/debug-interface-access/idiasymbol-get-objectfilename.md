@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d578ddc7510aaec82418bd7a637d9edef7c9f708
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85462716"
 ---
 # <a name="idiasymbolget_objectfilename"></a>IDiaSymbol::get_objectFileName
@@ -30,7 +30,7 @@ HRESULT get_objectFilename(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `BSTR`Nesne dosyası adını tutan bir işaretçisi.
+dışı `BSTR` Nesne dosyası adını tutan bir işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.

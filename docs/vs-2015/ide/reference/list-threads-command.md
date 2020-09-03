@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fc11479901785b19235e0962d3ae90e552e5b33b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671135"
 ---
 # <a name="list-threads-command"></a>İş Parçacıklarını Listele Komutu
@@ -27,17 +27,17 @@ ms.locfileid: "72671135"
 
 Geçerli programdaki iş parçacıklarının listesini görüntüler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Debug.ListThreads [index]
 ```
 
-## <a name="arguments"></a>Arguments
- Isteğe bağlı `index`. Geçerli iş parçacığı olarak dizini tarafından bir iş parçacığı seçer.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `index` Seçim. Geçerli iş parçacığı olarak dizini tarafından bir iş parçacığı seçer.
 
 ## <a name="remarks"></a>Açıklamalar
- Belirtildiğinde `index` bağımsız değişkeni, belirtilen iş parçacığını geçerli iş parçacığı olarak işaretler. Geçerli iş parçacığının yanındaki listede bir yıldız işareti (*) görüntülenir.
+ Belirtildiğinde `index` bağımsız değişken belirtilen iş parçacığını geçerli iş parçacığı olarak işaretler. Geçerli iş parçacığının yanındaki listede bir yıldız işareti (*) görüntülenir.
 
 ## <a name="example"></a>Örnek
 

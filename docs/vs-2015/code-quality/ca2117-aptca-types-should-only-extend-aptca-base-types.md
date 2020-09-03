@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 90c1f66f36fc689ee077ec66f154487d65ee13a1
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543617"
 ---
 # <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117: APTCA türleri yalnızca APTCA taban türlerini genişletmelidir
@@ -40,7 +40,7 @@ ms.locfileid: "85543617"
 
  APTCA özniteliği tam olarak güvenilen bir derlemede olduğunda ve derlemedeki bir tür, kısmen güvenilen çağıranlara izin verilmeyen bir türden devralırsa, bir güvenlik açığından yararlanma olasılığı vardır. İki tür varsa `T1` ve `T2` aşağıdaki koşullara uyuyorsa, kötü amaçlı çağıranlar, `T1` koruduğu örtük tam güven devralma talebini atlamak için türünü kullanabilir `T2` :
 
-- `T1`, APTCA özniteliğine sahip tam güvenilir bir derlemede tanımlanmış ortak bir tür.
+- `T1` , APTCA özniteliğine sahip tam güvenilir bir derlemede tanımlanmış ortak bir tür.
 
 - `T1``T2`kendi derlemesi dışındaki bir türden devralır.
 

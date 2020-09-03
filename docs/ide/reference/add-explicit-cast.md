@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: e159082266b848ce4742e436c706f3f71b2cc9ea
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84182982"
 ---
 # <a name="add-explicit-cast"></a>Açık tür dönüştürme ekleme
@@ -30,7 +30,7 @@ Bu kod üretimi için geçerlidir:
 
 1. Giriş işaretini hata üzerine yerleştirin.
 2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
-3. **Açık tür Ekle**' yi seçin.
+3. **Açık tür dönüştürme ekle** seçeneğini belirleyin.
 
    ![Visual Studio 'da açık atama hızlı eylem ekleme](media/add-explicit-cast.png)
 

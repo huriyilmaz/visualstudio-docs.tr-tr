@@ -18,9 +18,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 942891bc9281c07966160ea9df065408fcbfd5ff
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015166"
 ---
 # <a name="create-pages-for-sharepoint"></a>SharePoint için sayfa oluşturma
@@ -33,7 +34,7 @@ ms.locfileid: "86015166"
 ## <a name="types-of-sharepoint-pages"></a>SharePoint sayfa türleri
  Aşağıdaki tabloda, bir SharePoint sitesinin içerdiği dört ana sayfa türü açıklanmaktadır.
 
-|Sayfa türü|Description|
+|Sayfa türü|Açıklama|
 |---------------|-----------------|
 |Uygulama sayfaları|Sayfanın özel kod içermesini istiyorsanız veya sayfanın birden çok site arasında paylaşılmasını istiyorsanız bir uygulama sayfası oluşturun. Aksi takdirde, bir site sayfası en iyi seçim olabilir.|
 |Site sayfaları|Aşağıdaki görevlerden herhangi birini gerçekleştirmek istiyorsanız site sayfası oluşturun:<br /><br /> -Sayfayı bir SharePoint kitaplığına ekleyin.<br />-Dinamik Web Bölümleri ve Web Bölümü bölgeleri gibi özellikleri barındırmak için sayfayı etkinleştirin.<br />-Kullanıcıların SharePoint Designer kullanarak sayfayı özelleştirmesini sağlar.<br /><br /> Sayfanın özel kod içermesini istiyorsanız site sayfası oluşturmayın. Bir site sayfasına özel kod ekleyebilseniz de, kullanıcı SharePoint Designer 'ı kullanarak sayfayı özelleştiren kod çalışmayı durduruyor.|

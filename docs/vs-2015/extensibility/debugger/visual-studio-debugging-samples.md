@@ -13,17 +13,17 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 73af28d8cb84e30f053000b601cb497ed052b310
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75917573"
 ---
 # <a name="visual-studio-debugging-samples"></a>Visual Studio Hata Ayıklama Örnekleri
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-İki örnek [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]kullanarak Visual Studio hata ayıklayıcıyı genişletmeyi gösterir.  
+İki örnek kullanarak Visual Studio hata ayıklayıcının nasıl uzatıleceği gösterilmektedir [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] .  
   
-- Yönetilen diller için hata ayıklayıcı Ifade değerlendirici örneği [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]eklenmiştir. [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] penceresinde, **örnekler** sekmesine tıklayın, diller listesinde **Tümü** **C#** ' ne tıklayın ve ardından **hata ayıklayıcı ' ya**tıklayın.  
+- Yönetilen diller için hata ayıklayıcı Ifade değerlendirici örneği, içinde bulunur [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] . [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]Penceresinde, **örnekler** sekmesine tıklayın, diller listesinde **Tümü** veya **C#** ' ye tıklayın ve ardından **hata ayıklayıcı ' ya**tıklayın.  
   
 - Yerel diller için Visual Studio hata ayıklama altyapısı örneği, MSDN Kod Galerisi 'nde kullanılabilir. Daha fazla bilgi için GitHub: [Visual Studio hata ayıklama altyapısı örneğindeki](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Visual%20Studio%20Product%20Team/Visual%20Studio%20Debug%20Engine%20Sample)örneğe bakın.

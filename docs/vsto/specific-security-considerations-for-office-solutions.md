@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 571b604b87fb7fac4e78c83a791c265d910fae94
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72985588"
 ---
 # <a name="specific-security-considerations-for-office-solutions"></a>Office çözümleri için belirli güvenlik konuları
@@ -37,7 +37,7 @@ ms.locfileid: "72985588"
 
  Bu saldırıyı mümkün kılmak için kodun kendisi, potansiyel olarak güvenilir olmayan verilere göre kararlar verecek şekilde yazılmalıdır. Bir veritabanı sunucusunun adını içeren gizli bir hücre içeren bir çalışma sayfası oluşturma örneği. Kullanıcı çalışma sayfasını, SQL kimlik doğrulaması kullanarak bu sunucuya bağlanmayı deneyen bir ASPX sayfasına gönderir ve sabit kodlanmış bir SA parolası. Saldırgan, gizli hücrenin içeriğini farklı bir bilgisayar adıyla değiştirebilir ve SA parolasını alabilir. Bu sorundan kaçınmak için, hiçbir zaman kalıcı olarak parola kodu ve sunucu kimliklerini sunucuya erişmeden önce iyi olduğu bilinen bir iç sunucu listesine karşı denetleyin.
 
-### <a name="recommendations"></a>Öneri
+### <a name="recommendations"></a>Öneriler
 
 - Kullanıcı, belge, veritabanı, Web hizmeti veya diğer kaynaklardan gelen giriş ve verileri her zaman doğrulayın.
 
@@ -48,7 +48,7 @@ ms.locfileid: "72985588"
 - Uygulamanız ayrıcalıklı eylemler gerçekleştirdiğinde belge açıldığında bir uyarı görüntülenmesi iyi bir fikir olabilir. Örneğin, uygulamanın kişisel bilgilere erişebileceğini ve kullanıcının devam etmeyi veya iptal etmeyi seçmesini belirten bir giriş ekranı veya bir başlangıç iletişim kutusu oluşturabilirsiniz. Bir son kullanıcı bir yazmasum belgesinden böyle bir uyarı alırsa, hiçbir şeyin tehlikeye atılmadan önce uygulamadan çıkabilirsiniz.
 
 ## <a name="code-is-blocked-by-the-outlook-object-model-guard"></a>Kod Outlook nesne modeli koruyucusu tarafından engelleniyor
- Microsoft Office, nesne modelindeki belirli özellikleri, yöntemleri ve nesneleri kullanarak kodu kısıtlayabilir. Outlook, bu nesnelere erişimi kısıtlayarak e-posta solucanlarının ve virüslerin kötü amaçlı olarak nesne modelini kullanmasını önlemeye yardımcı olur. Bu güvenlik özelliği Outlook nesne modeli koruyucusu olarak bilinir. Bir VSTO eklentisi, nesne modeli koruyucusu etkinken kısıtlı bir özellik veya yöntem kullanmaya çalışırsa, Outlook, kullanıcının işlemi durdurmasına izin veren bir güvenlik uyarısı görüntüler veya kullanıcının sınırlı bir süre için özelliğe veya yönteme erişim izni vermesini sağlar IME. Kullanıcı işlemi durdurduktan sonra, Visual Studio 'da Office çözümleri kullanılarak oluşturulan Outlook VSTO eklentileri bir <xref:System.Runtime.InteropServices.COMException>oluşturur.
+ Microsoft Office, nesne modelindeki belirli özellikleri, yöntemleri ve nesneleri kullanarak kodu kısıtlayabilir. Outlook, bu nesnelere erişimi kısıtlayarak e-posta solucanlarının ve virüslerin kötü amaçlı olarak nesne modelini kullanmasını önlemeye yardımcı olur. Bu güvenlik özelliği Outlook nesne modeli koruyucusu olarak bilinir. Bir VSTO eklentisi, nesne modeli koruyucusu etkinken kısıtlı bir özellik veya yöntem kullanmaya çalışırsa, Outlook, kullanıcının işlemi durdurmasına izin veren bir güvenlik uyarısı görüntüler veya kullanıcının sınırlı bir süre için özelliğe veya yönteme erişim izni vermesini sağlar. Kullanıcı işlemi durdurduktan sonra, Visual Studio 'da Office çözümleri kullanılarak oluşturulan Outlook VSTO eklentileri bir oluşturur <xref:System.Runtime.InteropServices.COMException> .
 
  Nesne modeli koruyucusu, Outlook 'un Microsoft Exchange Server ile kullanılıp kullanıldığına bağlı olarak VSTO Eklentilerini farklı yollarla etkileyebilir:
 
@@ -59,27 +59,27 @@ ms.locfileid: "72985588"
   Outlook 2007 ' den başlayarak, nesne modeli koruyucusu davranışı, Outlook güvenliğini sağlamaya yardımcı olurken geliştirici ve Kullanıcı deneyimini geliştirmek üzere değiştirilmiştir. Daha fazla bilgi için bkz. [Outlook 2007 'Deki kod güvenliği değişiklikleri](/previous-versions/office/developer/office-2007/bb226709(v=office.12)).
 
 ### <a name="minimize-object-model-guard-warnings"></a>Nesne modeli koruyucu uyarılarını Simgeleştir
- Kısıtlanmış Özellikler ve Yöntemler kullandığınızda güvenlik uyarılarından kaçınmak için, VSTO eklentisinin projenizdeki `ThisAddIn` sınıfının `Application` alanından Outlook nesnelerini edindiğinizden emin olun. Bu alan hakkında daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
+ Kısıtlı özellikler ve Yöntemler kullandığınızda güvenlik uyarılarından kaçınmak için, VSTO eklentisinin `Application` projenizdeki sınıfın alanından Outlook nesnelerini edindiğinizden emin olun `ThisAddIn` . Bu alan hakkında daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
 
- Yalnızca bu nesneden edinilen Outlook nesnelerine nesne modeli koruyucusu tarafından güveniliyor. Buna karşılık, yeni bir `Microsoft.Office.Interop.Outlook.Application` nesnesinden elde edilen nesneler güvenilir değildir ve nesne modeli koruyucusu etkinse kısıtlı özellikler ve Yöntemler güvenlik uyarıları oluşturacak.
+ Yalnızca bu nesneden edinilen Outlook nesnelerine nesne modeli koruyucusu tarafından güveniliyor. Buna karşılık, yeni bir nesneden edinilen nesneler `Microsoft.Office.Interop.Outlook.Application` güvenilir değildir ve nesne modeli koruyucusu etkinse kısıtlı özellikler ve Yöntemler güvenlik uyarıları oluşturacak.
 
- Aşağıdaki kod örneği, nesne modeli koruyucusu etkinse bir güvenlik uyarısı görüntüler. `Microsoft.Office.Interop.Outlook.MailItem` sınıfının `To` özelliği, nesne modeli koruyucusu tarafından kısıtlanır. `Microsoft.Office.Interop.Outlook.MailItem` nesnesi güvenilir değil çünkü kod, `Application` alandan almak yerine **Yeni** işleç kullanılarak oluşturulan bir `Microsoft.Office.Interop.Outlook.Application` alır.
+ Aşağıdaki kod örneği, nesne modeli koruyucusu etkinse bir güvenlik uyarısı görüntüler. `To`Sınıfının özelliği, `Microsoft.Office.Interop.Outlook.MailItem` nesne modeli koruyucusu tarafından kısıtlanır. `Microsoft.Office.Interop.Outlook.MailItem`Kodu `Microsoft.Office.Interop.Outlook.Application` alanından almak yerine **Yeni** işleç kullanılarak oluşturulan bir öğesinden aldığından, nesne güvenli değildir `Application` .
 
  [!code-csharp[Trin_VstcoreOutlookSecurity#1](../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs#1)]
  [!code-vb[Trin_VstcoreOutlookSecurity#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb#1)]
 
- Aşağıdaki kod örneği, nesne modeli koruyucusu tarafından güvenilen bir `Microsoft.Office.Interop.Outlook.MailItem` nesnesinin kısıtlanmış to özelliğinin nasıl kullanılacağını gösterir. Kod, `Microsoft.Office.Interop.Outlook.MailItem`almak için güvenilir `Application` alanını kullanır.
+ Aşağıdaki kod örneği, `Microsoft.Office.Interop.Outlook.MailItem` nesne modeli koruyucusu tarafından güvenilen bir nesnenin kısıtlı to özelliğinin nasıl kullanılacağını gösterir. Kod, ' i `Application` almak için güvenilir alanını kullanır `Microsoft.Office.Interop.Outlook.MailItem` .
 
  [!code-csharp[Trin_VstcoreOutlookSecurity#2](../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs#2)]
  [!code-vb[Trin_VstcoreOutlookSecurity#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb#2)]
 
 > [!NOTE]
-> Outlook Exchange ile kullanılıyorsa, tüm Outlook nesnelerini `ThisAddIn.Application` alma işlemi, VSTO eklentisinin tüm Outlook nesne modeline erişebilmesini garantilemez. Örneğin, bir Exchange Yöneticisi Outlook 'u Outlook nesne modeli kullanarak adres bilgilerine erişme girişimlerini otomatik olarak reddedecek şekilde ayarladıysanız, kod örneği tarafından kullanılsa bile, Outlook önceki kod örneğine erişim izni vermez güvenilir `ThisAddIn.Application` alanı.
+> Outlook Exchange ile kullanılıyorsa, tüm Outlook nesnelerini ' den almak, `ThisAddIn.Application` VSTO eklentisinin tüm Outlook nesne modeline erişebilmesini garantilemez. Örneğin, bir Exchange Yöneticisi Outlook 'u Outlook nesne modeli kullanarak adres bilgilerine erişme girişimlerini otomatik olarak reddedecek şekilde ayarladıysanız, kod örneği güvenilir alanı kullansa bile, Outlook önceki kod örneğine erişim için bu özelliğe izin vermez `ThisAddIn.Application` .
 
 ### <a name="specify-which-add-ins-to-trust-when-using-exchange"></a>Exchange kullanılırken hangi eklentilerin güveneceği belirtin
  Outlook Exchange ile kullanıldığında, Yöneticiler belirli VSTO eklentilerinin nesne modeli koruyucusu ile karşılaşmadan çalıştırılabilirler. Visual Studio 'da Office çözümleri kullanılarak oluşturulan Outlook VSTO eklentilerine tek tek güvenilemez; yalnızca Grup olarak güvenilir olabilir.
 
- Outlook, VSTO eklentisinin giriş noktası DLL 'inin karma kodunu temel alarak bir VSTO eklentisini güvenir. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] hedefleyen tüm Outlook VSTO eklentileri aynı giriş noktası DLL 'ini (*VSTOLoader. dll*) kullanır. Bu, bir yönetici, nesne modeli koruyucusu ile karşılaşmadan çalıştırmak üzere [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] hedefleyen herhangi bir VSTO eklentisinin güvendiği, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] hedefleyen diğer tüm VSTO eklentileri de güvenilirdir. Nesne modeli koruyucusu ile karşılaşılmadan çalıştırılacak belirli VSTO Eklentilerini güvenme hakkında daha fazla bilgi için, bkz. [Outlook 'un virüs önleme özelliklerini yönetmek için kullandığı yöntemi belirtme](/previous-versions/office/office-2007-resource-kit/cc179194(v=office.12)).
+ Outlook, VSTO eklentisinin giriş noktası DLL 'inin karma kodunu temel alarak bir VSTO eklentisini güvenir. ' İ hedefleyen tüm Outlook VSTO eklentileri [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] aynı giriş noktası DLL 'ini (*VSTOLoader.dll*) kullanır. Bu, bir yönetici, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] nesne modeli koruyucusu ile karşılaşılmadan çalıştırmak için hedefleyen herhangi BIR VSTO eklentisinin güvendiği bir, ve öğesini hedefleyen diğer tüm VSTO eklentileri [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] de güvenilirdir. Nesne modeli koruyucusu ile karşılaşılmadan çalıştırılacak belirli VSTO Eklentilerini güvenme hakkında daha fazla bilgi için, bkz. [Outlook 'un virüs önleme özelliklerini yönetmek için kullandığı yöntemi belirtme](/previous-versions/office/office-2007-resource-kit/cc179194(v=office.12)).
 
 ## <a name="permission-changes-do-not-take-effect-immediately"></a>İzin değişiklikleri hemen etkili olmaz
  Yönetici bir belge veya derleme için izinleri ayarladığında, kullanıcıların bu değişikliklerin uygulanması için tüm Office uygulamalarını sonlandırmalıdır ve sonra yeniden başlatması gerekir.
@@ -99,9 +99,9 @@ ms.locfileid: "72985588"
 
 - Yönetilen ve yönetilmeyen gerçek zamanlı veri bileşenleri.
 
-  Aşağıdaki yordamlarda, kullanıcıların Microsoft [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] ve Microsoft Office 2010 ' de VSTO Eklentilerini yüklemesini kısıtlamak için **güven merkezini** nasıl kullanabileceği açıklanır. Bu yordamlar, Visual Studio 'da Office geliştirme araçları kullanılarak oluşturulan VSTO Eklentilerini veya özelleştirmelerini etkilemez.
+  Aşağıdaki yordamlarda, kullanıcıların Microsoft ve Microsoft Office 2010 ' de VSTO eklentilerinin yüklenmesini engellemek için **güven merkezini** nasıl kullanabileceği açıklanır [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] . Bu yordamlar, Visual Studio 'da Office geliştirme araçları kullanılarak oluşturulan VSTO Eklentilerini veya özelleştirmelerini etkilemez.
 
-#### <a name="to-disable-vsto-add-ins-in-microsoft-office-2010-and-microsoft-includeoffice_15_shortvstoincludesoffice-15-short-mdmd-applications"></a>Microsoft Office 2010 ve Microsoft [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] uygulamalarında VSTO eklentilerini devre dışı bırakmak için
+#### <a name="to-disable-vsto-add-ins-in-microsoft-office-2010-and-microsoft-office_15_short-applications"></a>Microsoft Office 2010 ve Microsoft uygulamalarında VSTO eklentilerini devre dışı bırakmak için [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)]
 
 1. **Dosya** sekmesini seçin.
 
