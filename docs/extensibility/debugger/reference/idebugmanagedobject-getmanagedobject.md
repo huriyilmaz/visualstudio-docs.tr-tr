@@ -1,5 +1,5 @@
 ---
-title: IDebugManagedObject::GetManagedObject | Microsoft Dokümanlar
+title: 'IDebugManagedObject:: GetManagedObject | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b7080760b174c51d62c44cd2757944948e0104ca
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727741"
 ---
 # <a name="idebugmanagedobjectgetmanagedobject"></a>IDebugManagedObject::GetManagedObject
 Yönetilen nesneyi temsil eden bir arabirim döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetManagedObject( 
@@ -41,13 +41,13 @@ int GetManagedObject(
 
 ## <a name="parameters"></a>Parametreler
 `ppManagedObject`\
-[çıkış] Yönetilen nesneyi temsil eden bir arabirim döndürür.
+dışı Yönetilen nesneyi temsil eden bir arabirim döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntemden döndürülen arabirim, yönetilen sınıf tarafından uygulanan herhangi bir arabirim için sorgulanabilir ve yöntemlerinin çağrılmasını sağlar.
+ Bu yöntemden döndürülen arabirim, yönetilen sınıf tarafından uygulanan herhangi bir arabirim için sorgulanarak yöntemlerinin çağrılmasına izin verir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)

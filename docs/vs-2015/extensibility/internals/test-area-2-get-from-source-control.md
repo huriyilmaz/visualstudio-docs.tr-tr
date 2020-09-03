@@ -1,5 +1,5 @@
 ---
-title: 'Test Alanı 2: Kaynak denetiminden almak | Microsoft Docs'
+title: 'Test alanı 2: kaynak denetiminden al | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,19 +12,19 @@ caps.latest.revision: 19
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 069c396ce4cb75c9153082fdbb352b2ba713c8a8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156012"
 ---
 # <a name="test-area-2-get-from-source-control"></a>Test Alanı 2: Kaynak Denetiminden Alma
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu test alanı Get komutu aracılığıyla sürüm deposundan öğeleri almak için test çalışmaları kapsar. Bu test çalışmaları, yerel ve Web projeleri için uygulanabilir.  
+Bu test alanı, Al komutu aracılığıyla sürüm deposundan öğeleri almaya yönelik test çalışmalarını ele alır. Bu test çalışmaları, hem yerel hem de Web projelerine uygulanabilir.  
   
-## <a name="command-menu-access"></a>Komut menü erişimi  
- Aşağıdaki [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] tümleşik geliştirme ortamı menüsü yolları test durumlarında kullanılır.  
+## <a name="command-menu-access"></a>Komut menüsü erişimi  
+ Aşağıdaki [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tümleşik geliştirme ortamı menü yolları test durumlarında kullanılır.  
   
 ##### <a name="get-latest-version"></a>En son sürümü Al:  
   
@@ -32,28 +32,28 @@ Bu test alanı Get komutu aracılığıyla sürüm deposundan öğeleri almak i�
   
 - **Dosya**, **en son sürümü Al**.  
   
-- Kısayol menüsünde, **en son sürümü Al**.  
+- Kısayol menüsü, **en son sürümü Al**.  
   
-- Al: **Dosya**, **kaynak denetimi**, **alma**.  
+- Al: **Dosya**, **kaynak denetimi**, **Get**.  
   
 ## <a name="expected-behavior"></a>Beklenen davranış  
   
 ##### <a name="get-latest-version"></a>En son sürümü Al:  
- Bir öğenin en son sürümünü (kullanıcı Arabirimi) Sessiz alınmasını sürüm Mağazası'ndan gerçekleştirir.  
+ Sürüm deposundan öğenin en son sürümünü sessiz (Kullanıcı arabirimi) alma işlemini gerçekleştirir.  
   
 ##### <a name="get"></a>Al:  
- Görüntüler **alma** iletişim kutusu ve kullanıcının değişiklik alınır yanı sıra dosyaların nasıl alınır etkileyen seçenekleri değiştirmek, dosya kümesine izin verir.  
+ **Al** iletişim kutusunu görüntüler ve kullanıcının alınacak dosya kümesinde değişiklik yapmasına ve dosyaların nasıl alındığını etkileyen seçenekleri değiştirmesine izin verir.  
   
-## <a name="test-cases"></a>Test çalışmaları  
+## <a name="test-cases"></a>Test Çalışmaları  
   
-|Eylem|Test adımları|Beklenen sonuçları doğrulamak için|  
+|Eylem|Test adımları|Doğrulanacak beklenen sonuçlar|  
 |------------|----------------|--------------------------------|  
-|Yerel olarak mevcut olmayan bir dosyanın en son sürümü Al|1.  Bir proje oluşturun.<br />2.  Projeye bir öğe ekleyin.<br />3.  Projenin kaynak denetimi altına yerleştirin.<br />4.  Öğenin yerel kopyasını silin.<br />5.  Öğenin en son sürümü Al (kısayol menüsünde, **en son sürümü Al**).|Öğesi dosyasını yerel olarak alınır.|  
-|Yerel olarak mevcut olmayan bir dosya alın|1.  Bir proje oluşturun.<br />2.  Projeye bir öğe ekleyin.<br />3.  Projenin kaynak denetimi altına yerleştirin.<br />4.  Öğenin yerel kopyasını silin.<br />5.  Öğe alma (**dosya**, **kaynak denetimi**, **alma** \<öğesi >).|Öğesi dosyasını yerel olarak alınır.|  
-|Özel olarak kullanıma ve yerel olarak değiştiren bir dosya alın|1.  Bir proje oluşturun.<br />2.  Projeye bir öğe ekleyin.<br />3.  Projenin kaynak denetimi altına yerleştirin.<br />4.  Proje öğesi özel kontrol edin.<br />5.  Yerel kopya değiştirin.<br />6.  Öğenin en son sürümü Al (**dosya**, **en son sürümü Al** \<öğesi >). Bu adım başarılı olursa, sonraki adıma geçin.<br />7.  Tıklayın **değiştirin** uyarı iletişim kutusunda düğmesi.|**6. adımdan reResult** `:`<br /><br /> Uyarı iletişim kutusunda, bu dosya kullanıma gösterir.<br /><br /> **7. adımdan reResult:**<br /><br /> Değiştirilen yerel dosya sürümü Mağazası'ndan özgün sürümle değiştirilir.<br /><br /> Okuma/yazma dosyasıdır.|  
-|Alma ve kullanıma, paylaşılan ve yerel olarak değiştirilen dosya değiştirin|1.  Yeni bir proje oluşturun.<br />2.  Projeye bir öğe ekleyin.<br />3.  Projenin kaynak denetimi altına yerleştirin.<br />4.  Proje öğesi paylaşılan olarak göz atın.<br />5.  Yerel kopya değiştirin.<br />6.  Öğenin en son sürümü Al (**dosya**, **en son sürümü Al** \<öğesi >). Bu adım başarılı olursa, sonraki adıma geçin.<br />7.  Tıklayın **değiştirin** uyarı iletişim kutusunda.|**6. adımdan sonuç:**<br /><br /> Uyarı iletişim kutusunda, bu dosya kullanıma gösterir.<br /><br /> **7. adımdan sonuç:**<br /><br /> Değiştirilen yerel dosya sürümü Mağazası'ndan özgün sürümle değiştirilir.<br /><br /> Okuma/yazma dosyasıdır.|  
-|Yerel olarak mevcut bir dosyayı aynı sürüm deposuna en son sürümü Al|1.  Yeni bir proje oluşturun.<br />2.  Projeye bir öğe ekleyin.<br />3.  Projenin kaynak denetimi altına yerleştirin.<br />4.  Öğe alma (**dosya**, **kaynak denetimi**, **alma** \<öğesi >).|Yerel dosya değiştirilmez.|  
-|Bir proje içeren bir çözümünü edinme|1.  Bir çözümü ile bir proje oluşturun.<br />2.  Çözüm kaynak denetimi altına yerleştirin.<br />3.  Tüm proje dosyaları yerel olarak sil.<br />4.  Çözümünü edinme (**dosya**, **kaynak denetimi**, **alma**).|Tüm silinen dosyaları yerel olarak geri yüklenir.|  
+|Yerel olarak mevcut olmayan bir dosyanın en son sürümünü al|1. bir proje oluşturun.<br />2. projeye bir öğe ekleyin.<br />3. projeyi kaynak denetimi altına yerleştirin.<br />4. öğenin yerel kopyasını silin.<br />5. öğenin en son sürümünü alın (kısayol menüsü, **en son sürümü Al**).|Öğe dosyası yerel olarak alındı.|  
+|Yerel olarak mevcut olmayan bir dosya al|1. bir proje oluşturun.<br />2. projeye bir öğe ekleyin.<br />3. projeyi kaynak denetimi altına yerleştirin.<br />4. öğenin yerel kopyasını silin.<br />5. öğeyi (**Dosya**, **kaynak denetimi**, **Get** \<item> ) alın.|Öğe dosyası yerel olarak alındı.|  
+|Özel olarak kullanıma alınmış ve yerel olarak değiştirilen bir dosyayı alma|1. bir proje oluşturun.<br />2. projeye bir öğe ekleyin.<br />3. projeyi kaynak denetimi altına yerleştirin.<br />4. yalnızca proje öğesine göz atın.<br />5. Yerel kopyayı değiştirin.<br />6. öğenin en son sürümünü alın (**Dosya**, **en son sürümünü al** \<item> ). Bu adım başarılı olursa sonraki adımla devam edin.<br />7. uyarı iletişim kutusunda **Değiştir** düğmesine tıklayın.|**Adım 6 ' dan tekrar tekrar sonucu**`:`<br /><br /> Uyarı iletişim kutusu, dosyanın kullanıma alınmış olduğunu gösterir.<br /><br /> **7. adımda tekrar sonucu:**<br /><br /> Değiştirilen yerel dosya, sürüm deposundaki özgün sürümle değiştirilir.<br /><br /> Dosya okuma/yazma.|  
+|Kullanıma alınmış, paylaşılan ve yerel olarak değiştirilen dosyayı alma ve değiştirme|1. yeni bir proje oluşturun.<br />2. projeye bir öğe ekleyin.<br />3. projeyi kaynak denetimi altına yerleştirin.<br />4. proje öğesine paylaşılan olarak göz atın.<br />5. Yerel kopyayı değiştirin.<br />6. öğenin en son sürümünü alın (**Dosya**, **en son sürümünü al** \<item> ). Bu adım başarılı olursa sonraki adımla devam edin.<br />7. uyarı iletişim kutusunda **Değiştir** 'e tıklayın.|**6. adımdan elde edilen sonuç:**<br /><br /> Uyarı iletişim kutusu, dosyanın kullanıma alınmış olduğunu gösterir.<br /><br /> **Adım 7:**<br /><br /> Değiştirilen yerel dosya, sürüm deposundaki özgün sürümle değiştirilir.<br /><br /> Dosya okuma/yazma.|  
+|Yerel olarak var olan bir dosyayı, sürüm deposundaki en son sürümle aynı şekilde alın|1. yeni bir proje oluşturun.<br />2. projeye bir öğe ekleyin.<br />3. projeyi kaynak denetimi altına yerleştirin.<br />4. öğeyi (**Dosya**, **kaynak denetimi**, **Get** \<item> ) alın.|Yerel dosya değiştirilmez.|  
+|Bir projeyle bir çözüm alın|1. bir projeyle bir çözüm oluşturun.<br />2. çözümü kaynak denetimi altına yerleştirin.<br />3. tüm proje dosyalarını yerel olarak silin.<br />4. çözümü (**Dosya**, **kaynak denetimi**, **Get**) alın.|Silinen tüm dosyalar yerel olarak geri yüklenir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Kaynak Denetimi Eklentileri için Test Kılavuzu](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

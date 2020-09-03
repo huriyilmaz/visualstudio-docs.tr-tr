@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d5f5d8bb92b80942a95528a0b2e4c7e64bbfafc8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668137"
 ---
 # <a name="how-to-create-and-edit-configurations"></a>Nasıl Yapılır: Yapılandırmaları Oluşturma ve Düzenleme
@@ -41,7 +41,7 @@ Bir çözüm için birkaç yapı yapılandırması oluşturabilirsiniz. Örneği
 - **Çözüm Gezgini**, çözüm için kısayol menüsünü açın ve **Configuration Manager**öğesini seçin.
 
   > [!NOTE]
-  > **Configuration Manager** komutu kısayol menüsünde görünmezse, menü çubuğunda **derleme** menüsünün altına bakın. Burada görünmezse, menü çubuğunda **Araçlar**, **Seçenekler**' i seçin ve ardından **Seçenekler** iletişim kutusunun sol bölmesinde, **Projeler ve çözümler**, **genel**' i genişletin ve sağ bölmedeki göster ' i seçin.  **Gelişmiş derleme yapılandırması** onay kutusu.
+  > **Configuration Manager** komutu kısayol menüsünde görünmezse, menü çubuğunda **derleme** menüsünün altına bakın. Burada görünmezse, menü çubuğunda **Araçlar**, **Seçenekler**' i seçin ve ardından **Seçenekler** iletişim kutusunun sol bölmesinde, **Projeler ve çözümler**, **genel**' i genişletin ve sağ bölmedeki **Gelişmiş derleme yapılandırmasını göster** onay kutusunu seçin.
 
    **Configuration Manager** iletişim kutusunda, çözüm genelinde bir yapı yapılandırması seçmek, var olan bir yapılandırmayı değiştirmek veya yeni bir yapılandırma oluşturmak için **etkin çözüm yapılandırma** açılan listesini kullanabilirsiniz. **Etkin çözüm platformu** açılan listesini, yapılandırmanın hedeflediği platformu seçmek, var olan bir nesneyi değiştirmek veya yeni bir platform eklemek için kullanabilirsiniz. **Proje bağlamları** bölmesinde, çözümdeki projeler listelenir. Her proje için, projeye özgü bir yapılandırma ve platform seçebilir, var olanları değiştirebilir veya yeni bir yapılandırma oluşturabilir ya da yeni bir platform ekleyebilirsiniz. Çözümü derlemek veya dağıtmak için çözüm genelinde yapılandırma kullandığınızda her projenin dahil edilip edilmeyeceğini belirten onay kutularını da seçebilirsiniz.
 
@@ -53,7 +53,7 @@ Bir çözüm için birkaç yapı yapılandırması oluşturabilirsiniz. Örneği
 
      **Özellik sayfaları** penceresi açılır.
 
-     Yapılandırmalarınızın özelliklerini ayarlayabilirsiniz. Örneğin, bir yayın yapılandırması için, çözüm oluşturulduğunda kodun iyileştirildiğini belirtebilir ve bir hata ayıklama yapılandırması için `DEBUG` koşullu derleme sembolünün dahil edileceğini belirtebilirsiniz. Özellik sayfası ayarları hakkında daha fazla bilgi için bkz. [Proje tasarımcısına giriş](https://msdn.microsoft.com/898dd854-c98d-430c-ba1b-a913ce3c73d7).
+     Yapılandırmalarınızın özelliklerini ayarlayabilirsiniz. Örneğin, bir yayın yapılandırması için, çözüm oluşturulduğunda kodun iyileştirildiği ve hata ayıklama yapılandırmasında `DEBUG` koşullu derleme sembolünün dahil edileceğini belirtebilirsiniz. Özellik sayfası ayarları hakkında daha fazla bilgi için bkz. [Proje tasarımcısına giriş](https://msdn.microsoft.com/898dd854-c98d-430c-ba1b-a913ce3c73d7).
 
 ## <a name="creating-and-modifying-project-configurations"></a>Proje yapılandırması oluşturma ve değiştirme
 

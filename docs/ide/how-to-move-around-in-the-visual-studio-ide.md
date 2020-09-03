@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1052deb04a93d11349ef9beb2ff667893095902f
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769843"
 ---
 # <a name="how-to-move-around-in-the-visual-studio-ide"></a>Nasıl yapılır: Visual Studio IDE 'de gezinme
@@ -56,7 +56,7 @@ Ayrıca, dosyaya son erişiminizden bağımsız olarak, **IDE Gezginini**, düze
 
 ![Visual Studio IDE Gezgini](../ide/media/vs2015_ide_navigator.png)
 
-`Window.PreviousDocumentWindowNav`en son erişilen dosyaya taşımanızı sağlar ve `Window.NextDocumentWindowNav` ters sırada taşımanızı sağlar. **Genel geliştirme ayarları** **SHIFT** + **alt** + **F7** öğesine `Window.PreviousDocumentWindowNav` ve **alt** + **F7** `Window.NextDocumentWindowNav` 'e atar.
+`Window.PreviousDocumentWindowNav` en son erişilen dosyaya taşımanızı sağlar ve `Window.NextDocumentWindowNav` ters sırada taşımanızı sağlar. **Genel geliştirme ayarları** **SHIFT** + **alt** + **F7** öğesine `Window.PreviousDocumentWindowNav` ve **alt** + **F7** `Window.NextDocumentWindowNav` 'e atar.
 
 > [!NOTE]
 > Kullandığınız ayarlar birleşimine bu komuta atanmış kısayol tuşu birleşimi zaten yoksa, **Seçenekler** Iletişim kutusunun **klavye** sayfasını kullanarak kendi özel komutunuzu atayabilirsiniz. Daha fazla bilgi için bkz. [klavye kısayollarını tanımlamak ve özelleştirmek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
@@ -68,11 +68,11 @@ Ayrıca, dosyaya son erişiminizden bağımsız olarak, **IDE Gezginini**, düze
     > [!TIP]
     > **Etkin dosyalar** listesinden gittiğiniz sırayı tersine çevirmek için **CTRL** + **SHIFT** tuşlarını basılı tutarak **Tab**tuşuna basın.
 
-    \-veya
+    \- veya
 
 - Düzenleyicinin sağ üst köşesinde **etkin dosyalar** düğmesini seçin ve ardından listeden bir dosyayı seçerek geçiş yapın.
 
-    \-veya
+    \- veya
 
 - Menü çubuğunda **Window**  >  **Windows**' u seçin.
 
@@ -80,7 +80,7 @@ Ayrıca, dosyaya son erişiminizden bağımsız olarak, **IDE Gezginini**, düze
 
 ## <a name="navigate-among-tool-windows-in-the-ide"></a>IDE 'deki araç pencereleri arasında gezinme
 
-**IDE Gezgini** , IDE 'de açtığınız araç pencereleri arasında geçiş yapmanızı de sağlar. **IDE Gezginine** erişmek için iki komuttan birini kullanarak, geçiş yapmak istediğiniz sıraya bağlı olarak araç pencereleri arasında geçiş yapabilirsiniz. `Window.PreviousToolWindowNav`en son erişilen dosyaya taşımanızı sağlar ve `Window.NextToolWindowNav` ters sırada taşımanızı sağlar. **Genel geliştirme ayarları** **SHIFT** + **alt** + **F7** öğesine `Window.PreviousDocumentWindowNav` ve **alt** + **F7** `Window.NextDocumentWindowNav` 'e atar.
+**IDE Gezgini** , IDE 'de açtığınız araç pencereleri arasında geçiş yapmanızı de sağlar. **IDE Gezginine** erişmek için iki komuttan birini kullanarak, geçiş yapmak istediğiniz sıraya bağlı olarak araç pencereleri arasında geçiş yapabilirsiniz. `Window.PreviousToolWindowNav` en son erişilen dosyaya taşımanızı sağlar ve `Window.NextToolWindowNav` ters sırada taşımanızı sağlar. **Genel geliştirme ayarları** **SHIFT** + **alt** + **F7** öğesine `Window.PreviousDocumentWindowNav` ve **alt** + **F7** `Window.NextDocumentWindowNav` 'e atar.
 
 > [!NOTE]
 > Kullandığınız ayarlar birleşimine bu komuta atanmış kısayol tuşu birleşimi zaten yoksa, **Seçenekler** Iletişim kutusunun **klavye** sayfasını kullanarak kendi özel komutunuzu atayabilirsiniz. Daha fazla bilgi için bkz. [klavye kısayollarını tanımlamak ve özelleştirmek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).

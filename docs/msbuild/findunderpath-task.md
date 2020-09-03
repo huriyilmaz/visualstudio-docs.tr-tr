@@ -1,5 +1,5 @@
 ---
-title: Findunderpath Görevi | Microsoft Dokümanlar
+title: FindUnderPath görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,35 +19,35 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4d97b727dcba8cd16fe97ee33764947797c36db7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77634142"
 ---
 # <a name="findunderpath-task"></a>FindUnderPath görevi
 
-Belirtilen madde koleksiyonundaki hangi öğelerin belirtilen klasörün içinde veya altında olan yolları olduğunu belirler.
+Belirtilen öğe koleksiyonundaki hangi öğelerin belirtilen klasörün içinde veya altında olan yollara sahip olduğunu belirler.
 
 ## <a name="parameters"></a>Parametreler
 
-Aşağıdaki tabloda görevparametreleri `FindUnderPath` açıklanmaktadır.
+Aşağıdaki tablo, görevin parametrelerini açıklar `FindUnderPath` .
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`Files`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Yolları `Path` parametre tarafından belirtilen yol ile karşılaştırıldığında gereken dosyaları belirtir.|
-|`InPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Belirtilen yolun altında bulunan öğeleri içerir.|
-|`OutOfPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Belirtilen yolun altında bulunmayan öğeleri içerir.|
+|`Files`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Yolu, parametresi tarafından belirtilen yol ile karşılaştırılacak olan dosyaları belirtir `Path` .|
+|`InPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Belirtilen yolun altında bulunan öğeleri içerir.|
+|`OutOfPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Belirtilen yolda bulunmayan öğeleri içerir.|
 |`Path`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Başvuru olarak kullanılacak klasör yolunu belirtir.|
-|`UpdateToAbsolutePaths`|İsteğe bağlı `Boolean` parametre.<br /><br /> Doğruysa, çıktı öğelerinin yolları mutlak yollar olarak güncelleştirilir.|
+|`UpdateToAbsolutePaths`|İsteğe bağlı `Boolean` parametre.<br /><br /> True ise, çıkış öğelerinin yolları mutlak yollar olacak şekilde güncelleştirilir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
+Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `FindUnderPath` `MyFiles` öğede bulunan dosyaların `SearchPath` özellik tarafından belirtilen yolun altında var olan yolları olup olmadığını belirlemek için görevi kullanır. `FilesNotFoundInPath` Görev tamamlandıktan sonra, öğe *File1.txt* dosyasını `FilesFoundInPath` içerir ve öğe *File2.txt* dosyasını içerir.
+Aşağıdaki örnek, `FindUnderPath` öğesinde yer alan dosyaların, `MyFiles` özelliği tarafından belirtilen yol altında var olan yollara sahip olup olmadığını anlamak için görevini kullanır `SearchPath` . Görev tamamlandıktan sonra, `FilesNotFoundInPath` öğe *File1.txt* dosyasını içerir ve `FilesFoundInPath` öğe *File2.txt* dosyasını içerir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

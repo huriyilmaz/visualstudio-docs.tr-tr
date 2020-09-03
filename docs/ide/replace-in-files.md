@@ -1,5 +1,5 @@
 ---
-title: Dosyalarda bulma ve değiştirme
+title: Dosyalarda bul ve Değiştir
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,94 +15,94 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dddd55714e53516ba1ccd8a11c99761a4db7136a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75585632"
 ---
 # <a name="replace-in-files"></a>Dosyalarda Değiştir
 
-**Dosyalarda Değiştir,** bir dize veya ifade için belirli bir dosya kümesinin kodunu aramanızı ve bulunan eşleşmelerin bazılarını veya tümünü değiştirmenizi sağlar. Bulunan eşleşmeler ve alınan eylemler **Sonuç seçeneklerinde**seçilen **Sonuçları Bul** penceresinde listelenir.
+**Dosyalardaki Değiştir** bir dize veya ifade için belirtilen dosya kümesinin kodunu aramanıza ve bulunan eşleşmelerin bazılarını veya tümünü değiştirmenize izin verir. Bulunan eşleşmeler ve gerçekleştirilen eylemler, **sonuç seçeneklerinde**seçilen **sonuçları bul** penceresinde listelenir.
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya sürüme bağlı olarak **Yardım'da** açıklananlardan farklı olabilir. Ayarlarınızı değiştirmek için, örneğin **Genel** veya **Görsel C++** ayarlarını değiştirmek **için, Araçlar** > **İçe Ve Dışa Aktar Ayarlarını**seçin ve ardından **tüm ayarları sıfırla'yı**seçin.
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya sürümüne bağlı olarak **Yardım** bölümünde açıklananlardan farklı bir durum içerebilir. Ayarlarınızı değiştirmek (örneğin, **genel** veya **Visual C++** ayarları) için **Araçlar**  >  **içeri ve dışarı aktarma ayarları**' nı seçin ve ardından **tüm ayarları Sıfırla**' yı seçin.
 
-Bul **ve Değiştir** penceresinde **Dosyalarda Değiştir'i** görüntülemek için aşağıdaki yöntemlerden birini kullanabilirsiniz.
+**Bul ve Değiştir** penceresindeki **dosyalardaki değiştirme** 'yi göstermek için aşağıdaki yöntemlerden herhangi birini kullanabilirsiniz.
 
-## <a name="to-display-replace-in-files"></a>Dosyalarda Değiştir'i görüntülemek için
+## <a name="to-display-replace-in-files"></a>Dosyaların değiştirilmesini görüntüleme
 
-1. **Edit** menüsünde **Bul ve Değiştir'i**genişletin.
+1. **Düzenle** menüsünde **Bul ve Değiştir**' i genişletin.
 
-2. **Dosyalarda Değiştir'i**seçin.
+2. **Dosyalarda Değiştir '** i seçin.
 
-   — veya —
+   veya
 
-   Bul **ve Değiştir** penceresi zaten açıksa, araç çubuğunda **Dosyalarda Değiştir'i**seçin.
+   **Bul ve Değiştir** penceresi zaten açıksa, araç çubuğunda, **dosyalarda Değiştir**' i seçin.
 
-## <a name="find-what"></a>Neyi bul
+## <a name="find-what"></a>Neyi bulun
 
-Yeni bir metin dizesini veya ifadesini aramak için kutuda belirtin. En son aradığınız 20 dizeden herhangi birini aramak için açılır listeyi açın ve dizeyi seçin. Arama dizenizde bir veya daha fazla normal ifade kullanmak istiyorsanız bitişik **İfade Oluşturucu** düğmesini seçin. Daha fazla bilgi için [bkz.](../ide/using-regular-expressions-in-visual-studio.md)
+Yeni bir metin dizesi veya ifade aramak için, kutuyu kutuda belirtin. En son aradığınız 20 dizeden herhangi birini aramak için, açılan listeyi açın ve dizeyi seçin. Arama dizenizde bir veya daha fazla normal ifade kullanmak istiyorsanız bitişik **Ifade Oluşturucu** düğmesini seçin. Daha fazla bilgi için bkz. [Visual Studio 'da normal Ifadeler kullanma](../ide/using-regular-expressions-in-visual-studio.md).
 
 > [!NOTE]
-> **İfade Oluşturucu** düğmesi yalnızca **Bul seçenekleri**altında Düzenli **İfadeleri Kullan'ı** seçtiyseniz etkinleştirilir.
+> **Ifade Oluşturucu** düğmesi yalnızca **Bul seçenekleri**altında **Normal ifadeleri kullan** seçeneğini belirlediyseniz etkinleştirilir.
 
 ## <a name="replace-with"></a>Şununla Değiştir
 
-Hangi kutuyu başka bir dizeyle **bul** dizeörneklerini değiştirmek **Replace With** için, değiştir kutusuna yedek dize girin. **Ne** kutusu bul'daki dize örneklerini silmek için bu alanı boş bırakın. En son aradığınız 20 dizeyi görüntülemek için listeyi açın. Değiştirme dizenizde bir veya daha fazla normal ifade kullanmak istiyorsanız bitişik **İfade Oluşturucu** düğmesini seçin. Daha fazla bilgi için [bkz.](../ide/using-regular-expressions-in-visual-studio.md)
+**Bulunacak** kutusunda bulunan dize örneklerini başka bir dizeyle değiştirmek Için, **Değiştir** kutusuna değiştirme dizesini girin. **Bulunacak** kutusunda dize örneklerini silmek için bu alanı boş bırakın. En son aradığınız 20 dizeyi göstermek için listeyi açın. Değiştirme dizenizde bir veya daha fazla normal ifade kullanmak istiyorsanız bitişik **Ifade Oluşturucu** düğmesini seçin. Daha fazla bilgi için bkz. [Visual Studio 'da normal Ifadeler kullanma](../ide/using-regular-expressions-in-visual-studio.md).
 
-## <a name="look-in"></a>Şuna bak
+## <a name="look-in"></a>Arama yeri
 
-**Açılan** listeden seçilen seçenek, **Dosyalarda Değiştir'in** yalnızca etkin dosyalarda mı yoksa belirli klasörlerde depolanan tüm dosyaları mı arayacağını belirler. Listeden bir arama kapsamı seçin, klasör yolu yazın veya **Arama Klasörleri Seç** iletişim kutusunu görüntülemek için **Gözat (...)** düğmesini tıklatın ve aramak için bir klasör kümesi seçin. Doğrudan **Bak** kutusuna bir yol da yazabilirsiniz.
+**Içinde ara** açılan listesinden seçilen seçenek, **dosyalardaki Değiştir** 'in yalnızca şu anda etkin dosyalardaki arama yapıp kullanmadığını veya belirli klasörler içinde depolanan tüm dosyaları arayacağını belirler. Listeden bir arama kapsamı seçin, bir klasör yolu yazın veya arama **Klasörleri seç** iletişim kutusunu göstermek için Araştır **(...)** düğmesine tıklayın ve aranacak bir klasör kümesi seçin. Ayrıca, doğrudan **Ara** kutusuna bir yol yazabilirsiniz.
 
 > [!NOTE]
-> **Seçili Bak** seçeneği, kaynak kodu denetiminden çıkış yaptığınız bir dosyada arama nıza neden oluyorsa, yalnızca yerel makinenize indirilen dosyanın sürümü aranır.
+> Seçili **Ara** seçeneği, kaynak kodu denetiminden kullanıma aldığınız bir dosyayı aramanıza neden oluyorsa, yalnızca yerel makinenize indirilmiş olan dosyanın bulunduğu dosya aranır.
 
-## <a name="find-options"></a>Seçenekleri bul
+## <a name="find-options"></a>Bulma seçenekleri
 
-**Bul seçenekleri** bölümünü genişletebilir veya daraltabilirsiniz. Aşağıdaki seçenekler seçilebilir veya temizlenebilir:
+**Seçenekleri bul** bölümünü genişletebilir veya daraltabilirsiniz. Aşağıdaki seçenekler seçilebilir veya temizlenemez:
 
-**Durum kılıfını eşleştir**
+**Büyük/küçük harf eşleştir**
 
-Seçildiğinde, **Sonuçları Bul** pencereleri yalnızca hem içerikle hem de büyük/küçük harfle eşleşen hangi dizeyi **bul** örneklerini görüntüler. Örneğin, **Match case** ile "MyObject" için yapılan bir arama "MyObject" döndürecek, ancak "myobject" veya "MYOBJECT" değil.
+Seçildiğinde, **sonuçları bul** penceresi yalnızca içeriğe ve büyük/küçük harflere göre eşleşen dize **bulma** örnekleri görüntülenir. Örneğin, **eşleşme durumu** seçiliyken "MyObject" araması "MyObject" döndürür ancak "MyObject" veya "MyObject" olarak değil.
 
-**Tüm kelimeyi eşleştir**
+**Sözcüğün tamamını Eşleştir**
 
-Seçildiğinde, **Sonuçları Bul** pencereleri yalnızca tam sözcüklerle eşleşen **dizesini bul** örneklerini görüntüler. Örneğin, "MyObject" için yapılan bir arama "MyObject" döndürür, ancak "CMyObject" veya "MyObjectC" döndürmez.
+Seçildiğinde, **sonuçları bul** penceresi yalnızca, tüm sözcüklerde eşleşen dizeyi **bul** örnekleri görüntülenir. Örneğin, "MyObject" araması "MyObject" döndürür ancak "CMyObject" veya "MyObjectC" olarak değil.
 
-**Düzenli İfadeler Kullanma**
+**Normal Ifadeleri kullanma**
 
-Bu onay kutusu seçildiğinde, **ne bul** veya metin **kutularıyla değiştir'deki** metin desenlerini tanımlamak için özel gösterimler kullanabilirsiniz. Bu gösterimlerin bir listesi için visual [studio'da düzenli ifadeleri kullan'a](../ide/using-regular-expressions-in-visual-studio.md)bakın.
+Bu onay kutusu seçildiğinde, **bul** veya **Değiştir** metin kutularında metin desenleri tanımlamak için özel gösterimler kullanabilirsiniz. Bu gösterimlerin bir listesi için bkz. [Visual Studio 'da normal Ifadeler kullanma](../ide/using-regular-expressions-in-visual-studio.md).
 
 **Bu dosya türlerine bakın**
 
-Bu liste, dizinlerde **Bak'ta** aranacak dosya türlerini gösterir. Bu alan boş bırakılırsa, **Görünüm** dizinlerinde bulunan tüm dosyalar aranır. Bu tür dosyaların bulunacağı önceden yapılandırılmış bir arama dizesi girmek için listedeki herhangi bir öğeyi seçin.
+Bu liste, dizinde **Bakılacak** dosya türlerini gösterir. Bu alan boş bırakılırsa, dizinlerde **Bakılacak** tüm dosyalar aranır. Belirli türlerin dosyalarını bulacak önceden yapılandırılmış bir arama dizesi girmek için listedeki herhangi bir öğeyi seçin.
 
 ## <a name="result-options"></a>Sonuç seçenekleri
 
-**Sonuç seçenekleri** bölümünü genişletebilir veya daraltabilirsiniz. Aşağıdaki seçenekler seçilebilir veya temizlenebilir:
+**Sonuç seçenekleri** bölümünü genişletebilir veya daraltabilirsiniz. Aşağıdaki seçenekler seçilebilir veya temizlenemez:
 
-**Sonuçları Bul 1** penceresi
+**Arama sonuçları 1** penceresi
 
-Seçildiğinde, geçerli aramanın sonuçları Sonuçları Bul **1** penceresinin içeriğini değiştirir. Bu pencere, arama sonuçlarınızı görüntülemek için otomatik olarak açılır. Bu pencereyi el ile açmak için **Görünüm** menüsünden **Diğer Windows'u** seçin ve Sonuçları Bul **1'i**seçin.
+Seçildiğinde, geçerli aramanın sonuçları, **sonuçları Bul 1** penceresinin içeriğinin yerini alır. Bu pencere, arama sonuçlarınızı göstermek için otomatik olarak açılır. Bu pencereyi el ile açmak için, **Görünüm** menüsünde **diğer pencereler** ' i seçin ve **sonuçları Bul 1**' i seçin.
 
-**Sonuçları Bul 2** penceresi
+**Sonuçları bul 2** penceresi
 
-Seçildiğinde, geçerli aramanın sonuçları Sonuçları Bul **2** penceresinin içeriğinin yerini alır. Bu pencere, arama sonuçlarınızı görüntülemek için otomatik olarak açılır. Bu pencereyi el ile açmak için **Görünüm** menüsünden **Diğer Windows'u** seçin ve Sonuçları Bul **2'yi**seçin.
+Seçildiğinde, geçerli aramanın sonuçları, **bulma sonuçları 2** penceresinin içeriğinin yerini alır. Bu pencere, arama sonuçlarınızı göstermek için otomatik olarak açılır. Bu pencereyi el ile açmak için, **Görünüm** menüsünde **diğer pencereler** ' i seçin ve **sonuçları bul 2**' yi seçin.
 
-**Yalnızca dosya adlarını görüntüleme**
+**Yalnızca dosya adlarını görüntüle**
 
-Bu onay kutusu seçildiğinde, **Sonuçları Bul** pencereleri arama dizesini içeren tüm dosyaların tam adlarını ve yollarını listeler. Ancak, sonuçlar dize görünür kod satırı içermez. Bu onay kutusu yalnızca **Dosyaları Bul** için kullanılabilir.
+Bu onay kutusu seçildiğinde, **sonuçları bul** penceresi, arama dizesini içeren tüm dosyalar için tam adları ve yolları listeler. Ancak sonuçlar, dizenin göründüğü kod satırını içermez. Bu onay kutusu yalnızca **dosyalarda bul** için kullanılabilir.
 
-**Tümlerini Değiştir'den sonra değiştirilen dosyaları açık tutun**
+**Tümünü değiştirdikten sonra değiştirilen dosyaları açık tut**
 
-Seçildiğinde, değişiklikleri geri alabilmeniz veya kaydedebilirsiniz. Bellek kısıtlamaları, değiştirme işleminden sonra açık kalabilecek dosya sayısını sınırlayabilir.
+Seçildiğinde, değişiklikleri geri alabilir veya kaydedebilirsiniz. bu sayede değişiklikleri geri alabilir veya kaydedebilirsiniz. Bellek kısıtlamaları, bir değiştirme işleminden sonra açık kalabilecek dosya sayısını sınırlayabilir.
 
 > [!CAUTION]
-> Yalnızca düzenleme için açık kalan dosyalarda **Geri Al'ı** kullanabilirsiniz. Bu seçenek seçili değilse, düzenleme için zaten açık olmayan dosyalar kapalı kalır ve bu dosyalarda **Geri Al** seçeneği bulunmaz.
+> Yalnızca düzenlenmek üzere açık kalan dosyalar üzerinde **geri al** ' i kullanabilirsiniz. Bu seçenek seçilmezse, zaten düzenlenmek üzere açık olmayan dosyalar kapalı kalır ve bu dosyalarda **geri alma** seçeneği kullanılabilir olmaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Metin bulma ve değiştirme](../ide/finding-and-replacing-text.md)
-- [Dosyalarda bulun](../ide/find-in-files.md)
+- [Dosyalarda bul](../ide/find-in-files.md)
 - [Visual Studio komutları](../ide/reference/visual-studio-commands.md)

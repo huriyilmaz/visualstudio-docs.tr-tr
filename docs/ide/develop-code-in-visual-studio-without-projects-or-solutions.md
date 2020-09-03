@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 68665acfcc3ea00f118dc19cf155cb3e6f5d1b36
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769658"
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>Visual Studio’da projeler veya çözümler olmadan kod geliştirme
@@ -66,7 +66,7 @@ Aşağıdaki örnekte, bir GitHub deposunun nasıl klonaçılacağı ve sonra ko
 
 1. Takım Gezgini, **yerel Git depoları** bölümünde, **Kopyala** komutunu seçin ve ardından GitHub sayfasının URL 'sini metin kutusuna yapıştırın.
 
-   ![Projeyi Kopyala](./media/VSIDE_Code_Clone2.png)
+   ![Projeyi kopyalama](./media/VSIDE_Code_Clone2.png)
 
 1. Projenin dosyalarını yerel bir git deposuna kopyalamak için **Kopyala** düğmesini seçin. Deponun boyutuna bağlı olarak, bu işlem birkaç dakika sürebilir.
 

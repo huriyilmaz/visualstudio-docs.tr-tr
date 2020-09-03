@@ -17,62 +17,62 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cb855cbed67bffc5ff2fb63b1785c577dd9fea25
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75570355"
 ---
 # <a name="command-window"></a>Komut Penceresi
-**Komut** penceresi, komutları veya diğer adları doğrudan [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tümleşik geliştirme ortamında (IDE) yürütmek için kullanılır. Herhangi bir menüde görünmeyen hem menü komutlarını hem de komutları yürütebilirsiniz. **Komut** penceresini görüntülemek için **Görünüm** menüsünden **Diğer Windows'u** seçin ve **Komut Penceresi'ni**seçin.
+**Komut** penceresi, komutları veya diğer adları doğrudan [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik GELIŞTIRME ortamında (IDE) yürütmek için kullanılır. Herhangi bir menüde görünmeyen menü komutlarını ve komutları çalıştırabilirsiniz. **Komut** penceresini görüntülemek Için, **Görünüm** menüsünde **diğer pencereler** ' i seçin ve **komut penceresi**' ni seçin.
 
-## <a name="displaying-the-values-of-variables"></a>Değişkenlerin Değerlerini Görüntüleme
-Bir değişkenin `varA`değerini kontrol etmek [için, Yazdırma Komutu](../../ide/reference/print-command.md)kullanın:
+## <a name="displaying-the-values-of-variables"></a>Değişkenlerin değerlerini görüntüleme
+Bir değişkenin değerini denetlemek için `varA` [Print komutunu](../../ide/reference/print-command.md)kullanın:
 
 ```cmd
 >Debug.Print varA
 ```
 
-Soru işareti (?) için `Debug.Print`bir takma ad, bu komut da yazılabilir, böylece:
+Soru işareti (?) için bir diğer addır `Debug.Print` , bu nedenle bu komut de yazılabilir:
 
 ```cmd
 >? varA
 ```
 
-Bu komutun her iki sürümü de `varA`değişkenin değerini döndürecek.
+Bu komutun her iki sürümü de değişkenin değerini döndürür `varA` .
 
-## <a name="entering-commands"></a>Komutları Girme
-Simgeden büyük`>`( ) komut penceresinin sol kenarında yeni satırlar için bir istek olarak görünür. Daha önce verilmiş komutlar arasında gezinmek için YUVARI OK ve DOWN ARROW tuşlarını kullanın.
+## <a name="entering-commands"></a>Komutları girme
+Büyüktür simgesi (), `>` yeni satırlar için istem olarak komut penceresi sol kenarında görüntülenir. Daha önce verilen komutlarda gezinmek için yukarı ok ve aşağı ok tuşlarını kullanın.
 
 |Görev|Çözüm|Örnek|
 |----------|--------------|-------------|
-|Bir ifadeyi değerlendirin.|İfadeyi soru işaretiyle önsöz (`?`).|`? myvar`|
-|Hemen penceresine geçin.|Pencereye işaretten büyük olmadan girin `immed` (>)|`immed`|
-|Hemen penceresinden Komut penceresine geri dön.|Pencereye girin. `cmd`|`>cmd`|
+|Bir ifadeyi değerlendirin.|İfadeyi bir soru işaretiyle () önyüz `?` .|`? myvar`|
+|Anında pencereye geçiş yapın.|`immed`Büyüktür işareti olmadan pencereye girin (>)|`immed`|
+|Hemen bir pencereden Komut penceresi geri dönün.|`cmd`Pencereye girin.|`>cmd`|
 
-Aşağıdaki kısayollar Komut modundayken gezinmenize yardımcı olur.
+Aşağıdaki kısayollar, komut modundayken gezinmenize yardımcı olur.
 
-|Eylem|İmleç konumu|Keybinding|
+|Eylem|İmleç konumu|KeyBinding|
 |------------| - |----------------|
-|Daha önce girilen komutlar listesinde geçiş yap.|Giriş satırı|YUKARı OK & Aşağı OK|
+|Daha önce girilen komutların listesi boyunca ilerleyin.|Giriş çizgisi|YUKARı OK & AŞAĞı OK|
 |Pencereyi yukarı kaydırın.|Komut penceresi içeriği|CTRL+YUKARI OK|
-|Pencereyi aşağı kaydırın.|Komut penceresi içeriği|DOWN ARROW veya CTRL+DOWN OK|
+|Pencereyi aşağı kaydırın.|Komut penceresi içeriği|AŞAĞı ok veya CTRL + aşağı ok|
 
 > [!TIP]
-> Önceki komutun tamamını veya bir kısmını giriş satırına kaydırarak, tamamını veya bir kısmını vurgulayarak ve enter tuşuna basarak kopyalayabilirsiniz.
+> Önceki bir komutun tümünü veya bir kısmını giriş satırına kaydırarak, bu bölümün tümünü veya bir kısmını vurgulayarak ENTER tuşuna basarak ekleyebilirsiniz.
 
-## <a name="mark-mode"></a>İşaretle Modu
-**Komut** penceresinde önceki herhangi bir satırı tıklattığınızda, otomatik olarak İşaretmoduna geçersiniz. Bu, önceki komutların metnini herhangi bir metin düzenleyicisinde olduğu gibi seçmenize, düzenleyeve kopyalamanıza ve bunları geçerli satıra yapıştırmaya olanak tanır.
+## <a name="mark-mode"></a>İşaret modu
+**Komut** penceresinde önceki herhangi bir satıra tıkladığınızda, işaret moduna otomatik olarak kaydırma yapabilirsiniz. Bu, herhangi bir metin düzenleyicisinde yaptığınız gibi önceki komutların metnini seçmenizi, düzenlemenizi ve kopyalamanızı sağlar ve bunları geçerli satıra yapıştırabilirsiniz.
 
-## <a name="the-equals--sign"></a>Eşittir (=) İşaret
-Komutu `EvaluateStatement` girmek için kullanılan pencere, eşit ler işaretinin (=) karşılaştırma işleci veya atama işleci olarak mı yorumlandığını belirler.
+## <a name="the-equals--sign"></a>Eşittir (=) Işareti
+Komutun girilmesi için kullanılan pencere, `EvaluateStatement` bir eşittir işaretinin (=) karşılaştırma işleci olarak mı yoksa atama işleci olarak mı yorumlanacağını belirler.
 
-**Komut** penceresinde, eşitler işareti (=) karşılaştırma işleci olarak yorumlanır. **Komut** penceresinde atama işleçlerini kullanamazsınız. Yani, örneğin, `varA` değişkenlerin değerleri ve `varB` farklı ise, `>Debug.EvaluateStatement(varA=varB)` o zaman komutu bir değer döndürür `False`.
+**Komut** penceresinde, bir eşittir işareti (=) karşılaştırma işleci olarak yorumlanır. **Komut** penceresinde atama işleçlerini kullanamazsınız. Bu nedenle, örneğin, değişkenlerin değerleri `varA` ve `varB` farklıysa, komut `>Debug.EvaluateStatement(varA=varB)` bir değeri döndürür `False` .
 
-**Hemen** penceresinde, buna karşılık, eşitler işareti (=) bir atama işleci olarak yorumlanır. Yani, örneğin, komut `>Debug.EvaluateStatement(varA=varB)` değişkene `varA` değişkenin `varB`değerini atayacaktır.
+**Hemen** penceresinde, aksine, bir eşittir işareti (=) bir atama işleci olarak yorumlanır. Bu nedenle, örneğin, komut değişkenin `>Debug.EvaluateStatement(varA=varB)` değerini değişkenine atar `varA` `varB` .
 
-## <a name="parameters-switches-and-values"></a>Parametreler, Anahtarlar ve Değerler
-Bazı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] komutlar gerekli ve isteğe bağlı bağımsız değişkenler, anahtarlar ve değerler var. Bu tür komutlarla uğraşırken belirli kurallar geçerlidir. Aşağıda terminolojiaçıklığa kavuşturmak için zengin bir komut bir örnektir.
+## <a name="parameters-switches-and-values"></a>Parametreler, anahtarlar ve değerler
+Bazı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] komutlarda gerekli ve isteğe bağlı bağımsız değişkenler, anahtarlar ve değerler vardır. Belirli kurallar söz konusu komutlarla ilgilenirken geçerlidir. Aşağıda, terminolojiyi açıklığa kavuşturmak için zengin bir komuta bir örnek verilmiştir.
 
 ```cmd
 Edit.ReplaceInFiles /case /pattern:regex var[1-3]+ oldpar
@@ -80,36 +80,36 @@ Edit.ReplaceInFiles /case /pattern:regex var[1-3]+ oldpar
 
 Bu örnekte
 
-- `Edit.ReplaceInFiles`komutudur
+- `Edit.ReplaceInFiles` komut
 
-- `/case`ve `/pattern:regex` anahtarları (eğik çizgi [/] karakteri ile prefaced)
+- `/case` ve `/pattern:regex` anahtarlardır (eğik çizgi [/] karakteriyle önceden başlar)
 
-- `regex``/pattern` anahtarın değeridir; anahtarın `/case` değeri yoktur
+- `regex``/pattern`anahtarın değeri; `/case` anahtarın değeri yok
 
-- `var[1-3]+`ve `oldpar` parametreler
+- `var[1-3]+` ve `oldpar` parametreleri
 
     > [!NOTE]
-    > Boşlukları içeren herhangi bir komut, parametre, anahtar veya değer, her iki tarafta çift tırnak işaretleri olmalıdır.
+    > Boşluk içeren herhangi bir komutun, parametrenin, anahtarın veya değerin her iki tarafta da çift tırnak işareti olmalıdır.
 
-Anahtarların ve parametrelerin konumu, belirli bir sırada anahtarlarını ve parametrelerini gerektiren [Shell](../../ide/reference/shell-command.md) komutu dışında komut satırında serbestçe değiştirilebilir.
+Anahtar ve parametrelerin konumu, komut satırında, anahtar ve parametrelerini belirli bir sırada gerektiren [kabuk](../../ide/reference/shell-command.md) komutu hariç olmadan serbestçe değiştirilebilir.
 
-Bir komut tarafından desteklenen hemen hemen her anahtarın iki biçimi vardır: kısa (bir karakter) form ve uzun bir form. Birden çok kısa form anahtarları bir grup halinde birleştirilebilir. Örneğin, `/p /g /m` dönüşümlü olarak `/pgm`ifade edilebilir.
+Bir komutun desteklediği neredeyse her anahtarın iki formu vardır: kısa (bir karakter) form ve uzun bir form. Birden çok kısa formlu anahtar, bir grup içinde birleştirilebilir. Örneğin, `/p /g /m` Alternatif olarak ifade edilebilir `/pgm` .
 
-Kısa form anahtarları bir grup halinde birleştirilir ve bir değer verilirse, bu değer her anahtar için geçerlidir. Örneğin, `/pgm:123` `/p:123 /g:123 /m:123`eşittir . Gruptaki anahtarlardan herhangi biri bir değeri kabul etmezse bir hata oluşur.
+Kısa biçimli anahtarlar bir grup içinde birleştirilirse ve bir değer verildiyse, bu değer her anahtar için geçerli olur. Örneğin, `/pgm:123` ile eşleledir `/p:123 /g:123 /m:123` . Gruptaki anahtarların herhangi biri bir değer kabul etmediğinde bir hata oluşur.
 
-## <a name="escape-characters"></a>Kaçış Karakterleri
-Komut satırındaki bir caret (^) karakter, onu hemen izleyen karakterin bir kontrol karakteri olarak değil, tam anlamıyla yorumlanması anlamına gelir. Bu, geçiş adları dışında, düz tırnak işaretleri ("), boşluklar, satır başları, bakımlar veya parametre veya anahtar değerindeki diğer tüm gerçek karakterleri katıştırmak için kullanılabilir. Örneğin,
+## <a name="escape-characters"></a>Kaçış karakterleri
+Komut satırında bir şapka işareti (^) karakteri, bir denetim karakteri olarak değil, bundan hemen sonra gelen karakterin bir şekilde yorumlanması anlamına gelir. Bu, anahtar adları dışında bir parametre veya anahtar değerindeki düz tırnak işaretlerini ("), boşlukları, baştaki eğik çizgileri, yüzleri veya diğer sabit karakterleri eklemek için kullanılabilir. Örneğin,
 
 ```cmd
 >Edit.Find ^^t /regex
 ```
 
-Bir caret, tırnak işaretlerinin içinde veya dışında olsun aynı işlevi görür. Bir basamak satırdaki son karakterse, yoksayılır. Burada gösterilen örnek, "^t" deseninin nasıl arandığını göstermektedir.
+Bir giriş işareti, tırnak işaretlerinin içinde mi yoksa dışında mı olduğunu görür. Şapka, satırdaki son karakter ise yok sayılır. Burada gösterilen örnekte, "^ t" deseninin nasıl aranacağı gösterilmektedir.
 
-## <a name="use-quotes-for-path-names-with-spaces"></a>Boşluklu Yol Adları için TırnakLar'ı Kullanma
-Örneğin, boşluk içeren bir yol içeren bir dosyayı açmak istiyorsanız, boşluk içeren yol veya yol kesiminin etrafına çift tırnak eklemeniz gerekir: **C:\\"Program Dosyaları"** veya **"C:\Program Dosyaları"**.
+## <a name="use-quotes-for-path-names-with-spaces"></a>Boşluk içeren yol adları için tırnak Işaretleri kullanma
+Örneğin, boşluk içeren bir yolu olan bir dosyayı açmak isterseniz, boşluk içeren yolun veya yol segmentinin çevresine çift tırnak koymanız gerekir: **C: \\ "Program Files"** veya **"C:\Program Files"**.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)
-- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
+- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)

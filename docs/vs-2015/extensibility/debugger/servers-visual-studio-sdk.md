@@ -12,25 +12,25 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7ed2ce924b22827a82a67664e3e473f0930a87e3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68199399"
 ---
 # <a name="servers-visual-studio-sdk"></a>Sunucular (Visual Studio SDK)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Hata ayıklayıcı mimarisi bakımından bir **sunucu**:  
+Hata ayıklayıcı mimarisi açısından bir **sunucu**:  
   
-- Bir kapsayıcı bağlantı noktası ve bağlantı noktası sağlayıcıları ve hata ayıklama altyapıları ve bağlantı noktaları ve bağlantı noktası sağlayıcıları oturum hata ayıklama Yöneticisi (SDM) iletişim kurmak için kullanılır.  
+- Bağlantı noktaları ve bağlantı noktası sağlayıcılarının bir kapsayıcısıdır ve bağlantı noktası ve bağlantı noktası tedarikçilerini oturum hata ayıklama Yöneticisi (SDM) ve hata ayıklama altyapılarına iletmek için kullanılır.  
   
-- Kendi adına göre tanımlayabilir ve kendi bağlantı noktası ve bağlantı noktası sağlayıcıları numaralandırılamadı.  
+- Kendisini adıyla tanımlayabilir ve bağlantı noktalarını ve bağlantı noktası tedarikçilerini numaralandırabilirsiniz.  
   
-- Tarafından temsil edilen bir [IDebugCoreServer2](../../extensibility/debugger/reference/idebugcoreserver2.md) yalnızca Visual Studio (bir Visual Studio çalışan her örneği için bir sunucu örneğini) tarafından uygulanan arabirimi.  
+- Yalnızca Visual Studio tarafından uygulanan bir [IDebugCoreServer2](../../extensibility/debugger/reference/idebugcoreserver2.md) arabirimi tarafından temsil edilir (çalıştırılan her Visual Studio örneği için bir sunucu örneği).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bağlantı noktaları](../../extensibility/debugger/ports.md)   
- [Bağlantı noktası sağlayıcıları](../../extensibility/debugger/port-suppliers.md)   
+ [Adet](../../extensibility/debugger/ports.md)   
+ [Bağlantı noktası tedarikçileri](../../extensibility/debugger/port-suppliers.md)   
  [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md)   
  [IDebugCoreServer2](../../extensibility/debugger/reference/idebugcoreserver2.md)

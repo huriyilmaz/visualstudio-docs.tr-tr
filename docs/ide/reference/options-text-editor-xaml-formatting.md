@@ -30,94 +30,94 @@ manager: jillfra
 ms.workload:
 - uwp
 ms.openlocfilehash: d340a3b9468ea23c4cab23aabe19a7c1390955a3
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75568249"
 ---
 # <a name="options-text-editor-xaml-formatting"></a>Seçenekler, Metin Düzenleyici, XAML, Biçimlendirme
 
-XAML belgelerinizde öğelerin ve özniteliklerin nasıl biçimlendiğini belirtmek için **Biçimlendirme** özelliği sayfasını kullanın. **Seçenekler** iletişim kutusunu açmak için **Araçlar** menüsünü tıklatın ve ardından **Seçenekler'i**tıklatın. **Biçimlendirme** özelliği sayfasına erişmek için **Metin Düzenleyicisi** > **XAML** > Biçimlendirme düğümlerini**genişletin.**
+Öğelerin ve özniteliklerin XAML belgelerinizde nasıl biçimlendirileceğini belirtmek için **biçimlendirme** özelliği sayfasını kullanın. **Seçenekler** iletişim kutusunu açmak için **Araçlar** menüsüne ve ardından **Seçenekler**' e tıklayın. **Biçimlendirme** özelliği sayfasına erişmek için, **metin düzenleyici**  >  **xaml**  >  **biçimlendirme** düğümünü genişletin.
 
-## <a name="auto-formatting-events"></a>Olayları Otomatik Biçimlendirme
+## <a name="auto-formatting-events"></a>Otomatik biçimlendirme olayları
 
-Aşağıdaki olaylardan herhangi biri algılandığında otomatik biçimlendirme oluşabilir.
+Aşağıdaki olaylardan herhangi biri algılandığında, oto biçimlendirme gerçekleşebilir.
 
-- Bir bitiş etiketinin veya basit etiketin tamamlanması.
+- Bitiş etiketi veya basit etiket tamamlama.
 
 - Başlangıç etiketinin tamamlanması.
 
-- Panodan yapıştırma.
+- Panodan yapıştırılıyor.
 
-- Klavye komutlarını biçimlendirme.
+- Klavye komutları biçimlendiriliyor.
 
-Hangi olayların otomatik biçimlendirmeye neden olduğunu belirtebilirsiniz.
+Hangi olayların, hangi olayların bu şekilde olduğunu belirtebilirsiniz.
 
 **Bitiş etiketi veya basit etiket tamamlandığında**
 
-Otomatik biçimlendirme, bir son etiketi veya basit bir etiket yazmayı bitirdiğinizde gerçekleşir. Basit bir etiket, örneğin `<Button />`hiçbir öznitelikleri vardır.
+Bir bitiş etiketi veya basit bir etiket yazmayı bitirdiğinizde otomatik biçimlendirme oluşur. Basit bir etiketin öznitelikleri yoktur, örneğin `<Button />` .
 
-**Başlangıç etiketinin tamamlanmasıüzerine**
+**Başlangıç etiketi tamamlandığında**
 
-Bir başlangıç etiketi yazmayı bitirdiğinizde otomatik biçimlendirme gerçekleşir.
+Başlangıç etiketi yazmayı bitirdiğinizde otomatik biçimlendirme oluşur.
 
-**Panodan yapıştır'da**
+**Panodan yapıştırılırken**
 
-Otomatik biçimlendirme, panodan XAML'yi XAML görünümüne yapıştırdığınızda gerçekleşir.
+Panodaki XAML 'yi XAML görünümüne yapıştırdığınızda, oto biçimlendirme gerçekleşir.
 
-## <a name="quotation-mark-style"></a>Tırnak Stili
+## <a name="quotation-mark-style"></a>Tırnak Işareti stili
 
-Bu ayar, öznitelik değerlerinin tek veya çift tırnak işaretleriyle mi ekte olduğunu gösterir. Autoformatter ve IntelliSense otomatik tamamlama hem bu ayarı kullanın.
+Bu ayar, öznitelik değerlerinin tek veya çift tırnak işareti içine alınmış olup olmadığını gösterir. Otomatik biçimlendirici ve IntelliSense otomatik tamamlama bu ayarı kullanır.
 
-Bu seçeneği ayarladıktan sonra, yalnızca tasarımcıyı kullanarak veya XAML görünümünde el ile eklenen öznitelikler etkilenir.
+Bu seçeneği ayarladıktan sonra, yalnızca Tasarımcı kullanılarak veya XAML görünümünde el ile eklenen öznitelikler etkilenir.
 
-**Çift tırnak (")**
+**Çift tırnak işareti (")**
 
-Öznitelik değerleri çift tırnak içinde eklenir.
+Öznitelik değerleri çift tırnak içine alınır.
 `<Button Name="button1">Hello</Button>`
 
 **Tek tırnak (')**
 
-Öznitelik değerleri tek tırnak içinde eklenir.
+Öznitelik değerleri tek tırnak içine alınır.
 `<Button Name='button1'>Hello</Button>`
 
-## <a name="tag-wrapping"></a>Etiket Sarma
+## <a name="tag-wrapping"></a>Etiket sarmalama
 
-Etiket kaydırma için bir satır uzunluğu belirtebilirsiniz. Etiket kaydırma etkinleştirildiğinde, tasarımcı kullanılarak eklenen herhangi bir XAML uygun şekilde sarılır.
+Etiket sarmalama için bir satır uzunluğu belirtebilirsiniz. Etiket kaydırma etkinleştirildiğinde, daha sonra tasarımcı kullanılarak eklenen XAML, uygun şekilde sarmalanır.
 
-**Belirtilen uzunluğu aşan etiketleri kaydırma**
+**Belirtilen uzunluğu aşan etiketleri sarın**
 
-Çizgilerin **Uzunluk**tarafından belirtilen satır uzunluğuna sarıp sarılmadığını belirtir.
+Çizgilerin, **uzunluğa**göre belirtilen satır uzunluğuna kaydırılıp kaydırılmayacağını belirtir.
 
 **Uzunluk**
 
-Bir satırın içerebileceği karakter sayısı. Gerekirse, bazı XAML satırları belirtilen satır uzunluğunu aşabilir.
+Bir çizginin içerebileceği karakter sayısı. Gerekirse, bazı XAML satırları belirtilen satır uzunluğunu aşabilir.
 
-## <a name="attribute-spacing"></a>Öznitelik Aralığı
+## <a name="attribute-spacing"></a>Öznitelik aralığı
 
-XAML belgenizde özniteliklerin nasıl düzenlenebildiğini denetlemek için bu ayarı kullanın
+Özniteliklerin XAML belgenizde nasıl düzenlendiğini denetlemek için bu ayarı kullanın
 
-**Öznitelikler arasındaki yeni çizgileri ve boşlukları koruma**
+**Öznitelikler arasındaki newlines ve boşlukları koru**
 
-Öznitelikler arasındaki yeni satırlar ve boşluklar otomatik biçimlendirmeden etkilenmez.
+Öznitelikler arasındaki yeni satırlar ve boşluklar, oto biçimlendirmeden etkilenmez.
 
 ```xml
 <Button Height="23"   Name="button1"
 Width="75">Hello</Button>
 ```
 
-**Öznitelikler arasında tek bir boşluk ekleme**
+**Öznitelikler arasına tek boşluk Ekle**
 
-Öznitelikler, bitişik öznitelikleri ayıran bir boşlukla bir satırı kaplar. Etiket kaydırma ayarları uygulanır.
+Öznitelikler bir satır kaplar ve bitişik öznitelikleri ayıran bir alandır. Etiket kaydırma ayarları uygulanır.
 
 ```xml
 <Button Height="23" Name="button1" Width="75">Hello</Button>
 ```
 
-**Her özniteliği ayrı bir satıra konumlandırma**
+**Her özniteliği ayrı bir satıra yerleştir**
 
-Her öznitelik, birçok öznitelik mevcut olduğunda yararlı olan kendi satır, kaplar.
+Her öznitelik kendi satırını kaplar, bu da birçok öznitelik mevcut olduğunda yararlı olur.
 
 ```xml
 <Button
@@ -126,9 +126,9 @@ Name="button1"
 Width="75">Hello</Button>
 ```
 
-**İlk özniteliği başlangıç etiketiyle aynı satıra yerleştirin**
+**İlk özniteliği başlangıç etiketiyle aynı satıra yerleştir**
 
-İşaretlendiğinde, ilk öznitelik öğenin başlangıç etiketiyle aynı satırda görünür.
+İşaretlendiğinde, ilk öznitelik öğenin başlangıç etiketiyle aynı satırda görüntülenir.
 
 ```xml
 <Button Height="23"
@@ -136,11 +136,11 @@ Name="button1"
 Width="75">Hello</Button>
 ```
 
-## <a name="element-spacing"></a>Eleman Aralığı
+## <a name="element-spacing"></a>Öğe aralığı
 
-XAML belgenizde öğelerin nasıl düzenlenerek düzenlenebildiğini denetlemek için bu ayarı kullanın.
+Öğelerin XAML belgenizde nasıl düzenlendiğini denetlemek için bu ayarı kullanın.
 
-**İçerikteki yeni satırları koruma**
+**İçerikte yeni satırları koru**
 
 Öğe içeriğindeki boş satırlar kaldırılmaz.
 
@@ -152,7 +152,7 @@ XAML belgenizde öğelerin nasıl düzenlenerek düzenlenebildiğini denetlemek 
 </Grid>
 ```
 
-**İçerikteki birden çok boş satırı tek bir satıra daraltma**
+**İçerikteki birden çok boş satırı tek bir satıra Daralt**
 
 Öğe içeriğindeki boş satırlar tek bir satıra daraltılır.
 
@@ -164,7 +164,7 @@ XAML belgenizde öğelerin nasıl düzenlenerek düzenlenebildiğini denetlemek 
 </Grid>
 ```
 
-**İçerikteki boş satırları kaldırma**
+**İçerikteki boş satırları kaldır**
 
 Öğe içeriğindeki tüm boş satırlar kaldırılır.
 

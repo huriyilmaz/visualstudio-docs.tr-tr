@@ -1,6 +1,6 @@
 ---
 title: Yaygın Hızlı Eylemler
-description: Yanlış yazılmış anahtar kelimeleri veya sembolleri düzeltme, birleştirme çakışmalarını çözme, gerekli içeri aktarımları kaldırma, türleri oluşturma, yerel değişkenleri tanıtma vb. dahil olmak üzere C# ve Visual Basic için en popüler Hızlı Eylemler
+description: C# ve Visual Basic yanlış yazılmış anahtar sözcükleri veya sembolleri düzeltme, birleştirme çakışmalarını çözme, gerekli içeri aktarmaları kaldırma, türleri oluşturma, yerel değişkenlere giriş vb. gibi popüler hızlı eylemler.
 ms.date: 03/28/2018
 ms.topic: reference
 author: TerryGLee
@@ -12,25 +12,25 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: db7a3a550f6bfc1250679eeefa0ba3ec6291eef0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75585528"
 ---
 # <a name="common-quick-actions"></a>Yaygın Hızlı Eylemler
 
-Bu konudaki bölümler, hem C# hem de Visual Basic kodu için geçerli olan ortak **Hızlı Eylemlerden** bazılarını listeler. Bu eylemler, derleyici tanılama veya Visual Studio'daki yerleşik [.NET Derleyici Platformu çözümleyicileri](../code-quality/roslyn-analyzers-overview.md) için *kod düzeltmeleridir.*
+Bu konudaki bölümler, hem C# hem de Visual Basic kodu için geçerli olan genel **hızlı eylemlerin** bazılarını listeler. Bu eylemler, derleyici tanılamaları veya Visual Studio 'daki yerleşik [.net Compiler platform Çözümleyicileri](../code-quality/roslyn-analyzers-overview.md) için *kod düzeltmelerdir* .
 
-## <a name="actions-that-fix-errors"></a>Hataları düzelten eylemler
+## <a name="actions-that-fix-errors"></a>Hataları gidermeye yönelik eylemler
 
-Bu bölümdeki Hızlı Eylemler, yapının başarısız lığa neden olacak kodhatalarını düzeltir. Hızlı Eylemler bir kod satırındaki bir hatayı düzeltmek için kullanılabilir olduğunda, kenar boşluğunda veya kırmızı dalgalı çizginin altında görüntülenen simge, üzerinde kırmızı 'x' olan bir ampuldür.
+Bu bölümdeki hızlı eylemler, bir yapılandırmanın başarısız olmasına neden olan koddaki hataları düzeltir. Bir kod satırındaki bir hatayı onarmak için hızlı eylemler kullanılabilir olduğunda, kenar boşluğunda veya kırmızı dalgalı çizgi altında görüntülenen simge, üzerinde kırmızı ' x ' olan bir ampul olur.
 
-![Hızlı Eylemler hata simgesi ve menüsü](media/error-light-bulb-with-code.png)
+![Hızlı eylemler hata simgesi ve menü](media/error-light-bulb-with-code.png)
 
-### <a name="correct-misspelled-symbol-or-keyword"></a>Yanlış yazılmış simgeyi veya anahtar kelimeyi düzeltme
+### <a name="correct-misspelled-symbol-or-keyword"></a>Yanlış yazılmış sembol veya anahtar sözcüğü düzelt
 
-Visual Studio'da yanlışlıkla bir türü veya anahtar kelimeyi yanlış yazarsanız, bu Hızlı Eylem bunu sizin için otomatik olarak düzeltir. Ampul menüsünde bu öğeleri "> yanlış **yazılmış\<sözcüğü değiştir' olarak\<' doğru sözcük>'** olarak görürsünüz. Örnek:
+Visual Studio 'da bir tür veya anahtar sözcüğü yanlışlıkla yanlış yazarsanız, bu hızlı eylem sizin için otomatik olarak düzeltir. Bu öğeleri ampul menüsünde "' ' öğesini ' ' olarak **Değiştir \<misspelled word> \<correct word> "** olarak görürsünüz. Örneğin:
 
 ```csharp
 // Before
@@ -58,13 +58,13 @@ Function MyFunction as Integer
 End Function
 ```
 
-| Hata Kimliği | Uygulanabilir Diller |
+| Hata KIMLIĞI | Uygun diller |
 | - | - |
 | CS0103, BC30002 | C# ve Visual Basic |
 
-### <a name="resolve-git-merge-conflict"></a>Git birleştirme çakışma giderme
+### <a name="resolve-git-merge-conflict"></a>Git birleştirme çakışmasını çözümle
 
-Bu Hızlı Eylemler, çakışan kodu ve işaretçileri kaldıran "değişiklik alarak" git birleştirme çakışmalarını çözmenize olanak tanır.
+Bu hızlı eylemler, çakışan kod ve işaretçileri kaldıran git birleştirme çakışmalarını "değişiklik yaparak" çözmenizi sağlar.
 
 ```csharp
 // Before
@@ -88,23 +88,23 @@ private void MyMethod()
 }
 ```
 
-| Hata Kimliği | Uygulanabilir Diller | Desteklenen Sürüm |
+| Hata KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| CS8300, BC37284 | C# ve Visual Basic | Visual Studio 2017 sürüm 15.3 ve sonrası |
+| CS8300, BC37284 | C# ve Visual Basic | Visual Studio 2017 sürüm 15,3 ve üzeri |
 
-## <a name="actions-that-remove-unnecessary-code"></a>Gereksiz kodu kaldıran eylemler
+## <a name="actions-that-remove-unnecessary-code"></a>Gereksiz kodu kaldırma eylemleri
 
-### <a name="remove-unnecessary-usingsimports"></a>Gereksiz kullanımı kaldırma/Alma
+### <a name="remove-unnecessary-usingsimports"></a>Gereksiz kullanımlar/Içeri aktarmaları kaldır
 
-**Gereksiz Usings/Imports** Quick Action kaldır, geçerli `using` `Import` dosya için kullanılmayan tüm yönergeleri ve yönergeleri kaldırır. Bu öğeyi seçtiğinizde, kullanılmayan ad alanı içeri aktarımları kaldırılır.
+**Gereksiz kullanımlar/Içeri aktarmalar kaldırma** hızlı eylemi, `using` `Import` geçerli dosya için kullanılmayan ve yönergeleri kaldırır. Bu öğeyi seçtiğinizde, kullanılmayan ad alanı içeri aktarmaları kaldırılır.
 
-| Uygulanabilir Diller | Desteklenen Sürüm |
+| Uygun diller | Desteklenen Sürüm |
 | - | - |
-| C# ve Visual Basic | Visual Studio 2015 ve sonrası |
+| C# ve Visual Basic | Visual Studio 2015 ve üzeri |
 
-### <a name="remove-unnecessary-cast"></a>Gereksiz dökümleri kaldırma
+### <a name="remove-unnecessary-cast"></a>Gereksiz tür dönüştürmeyi kaldır
 
-Bir türü döküm gerektirmeyen başka bir türe atarsanız, **Gereksiz Döküm** Hızlı Eylem öğesini kaldır öğesi gereksiz dökümü kaldırır.
+Bir türü, atama gerektirmeyen başka bir türe çevirebilirsiniz, **Gereksiz atama kaldırma** hızlı eylem öğesi gereksiz tür dönüştürmeyi kaldırır.
 
 ```csharp
 // before
@@ -126,13 +126,13 @@ Dim number as Integer = CType(3, Integer)
 Dim number as Integer = 3
 ```
 
-| Tanılama Kimliği | Uygulanabilir Diller | Desteklenen Sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| IDE0004 | C# ve Visual Basic | Visual Studio 2015 ve sonrası |
+| IDE0004 | C# ve Visual Basic | Visual Studio 2015 ve üzeri |
 
-### <a name="remove-unused-variables"></a>Kullanılmayan değişkenleri kaldırma
+### <a name="remove-unused-variables"></a>Kullanılmayan değişkenleri kaldır
 
-Bu Hızlı Eylem, bildirilen ancak kodunuzda hiç kullanılmayan değişkenleri kaldırmanızı sağlar.
+Bu hızlı eylem, kodunuzda tanımlanmış ancak hiç kullanılmamış değişkenleri kaldırmanıza olanak sağlar.
 
 ```csharp
 // Before
@@ -153,13 +153,13 @@ public MyMethod()
 }
 ```
 
-| Tanılama Kimliği | Uygulanabilir Diller | Desteklenen Sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| CS0219, BC42024 | C# ve Visual Basic | Visual Studio 2017 sürüm 15.3 ve sonrası |
+| CS0219, BC42024 | C# ve Visual Basic | Visual Studio 2017 sürüm 15,3 ve üzeri |
 
-### <a name="remove-type-from-default-value-expression"></a>Varsayılan değer ifadesinden türü kaldırma
+### <a name="remove-type-from-default-value-expression"></a>Türü varsayılan değer ifadesinden kaldır
 
-Bu Hızlı Eylem, varsayılan değer ifadesinden değer türünü kaldırır ve derleyici ifade türünü çıkarabildiği zaman [varsayılan literal'ı](/dotnet/csharp/language-reference/operators/default#default-literal) kullanır.
+Bu hızlı eylem değer türünü varsayılan değer ifadesinden kaldırır ve derleyici ifadenin türünü çıkardığında [varsayılan değişmez](/dotnet/csharp/language-reference/operators/default#default-literal) değeri kullanır.
 
 ```csharp
 // Before
@@ -171,20 +171,20 @@ void DoWork(CancellationToken cancellationToken = default(CancellationToken)) { 
 void DoWork(CancellationToken cancellationToken = default) { ... }
 ```
 
-| Tanılama Kimliği | Uygulanabilir Diller | Desteklenen Sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| IDE0034 | C# 7.1+ | Visual Studio 2017 sürüm 15.3 ve sonrası |
+| IDE0034 | C# 7.1 + | Visual Studio 2017 sürüm 15,3 ve üzeri |
 
-## <a name="actions-that-add-missing-code"></a>Eksik kod ekleyen eylemler
+## <a name="actions-that-add-missing-code"></a>Eksik kodu ekleyen eylemler
 
-### <a name="add-usingsimports-for-types-in-reference-assemblies-nuget-packages-or-other-types-in-your-solution"></a>Çözümdeki referans derlemeleri, NuGet paketleri veya diğer türler için kullanır/içe alma ekleme
+### <a name="add-usingsimports-for-types-in-reference-assemblies-nuget-packages-or-other-types-in-your-solution"></a>Çözümünüzde başvuru derlemelerindeki, NuGet paketlerindeki veya diğer türlerdeki türler için kullanımlar/içeri aktarmalar ekleyin
 
-Çözümünüzde diğer projelerde bulunan türleri kullanmak Hızlı Eylem'i otomatik olarak görüntüler, ancak diğerlerinin C# veya **Temel > Gelişmiş** **sekmesi> Araçlar > Seçenekleri'nden** etkinleştirilmesi gerekir:
+Çözümünüzde diğer projelerde bulunan türlerin kullanılması hızlı eylemi otomatik olarak görüntüler, ancak diğerlerinin C# veya **temel > gelişmiş** sekmesinden **> araçlar > seçenekleri** arasından etkinleştirilmesi gerekir:
 
-- Referans derlemeler deki türler için kullanarak/içe alma önerme
-- NuGet paketlerindeki türler için kullanma/alma önerme
+- Başvuru derlemelerindeki türler için kullanımlar/içeri aktarmalar öner
+- NuGet paketlerindeki türler için kullanımlar/içeri aktarmalar öner
 
-Etkinleştirildiğinde, şu anda alınmamış ancak bir başvuru derlemesinde veya NuGet paketinde bulunan bir ad alanında bir tür kullanıyorsanız, kullanma veya alma yönergesi oluşturulur.
+Etkinleştirildiğinde, şu anda içeri aktarılmamış ancak başvuru derlemesinde veya NuGet paketinde bulunan bir ad alanında bir tür kullanırsanız, using veya Import yönergesi oluşturulur.
 
 ```csharp
 // Before
@@ -210,15 +210,15 @@ Imports System.Diagnostics
 Debug.WriteLine("Hello")
 ```
 
-| Tanılama Kimliği | Uygulanabilir Diller |
+| Tanılama KIMLIĞI | Uygun diller |
 | - | - |
 | CS0103, BC30451 | C# ve Visual Basic|
 
-### <a name="add-missing-casesdefault-caseboth"></a>Eksik kılıflar/varsayılan durum/her ikisi ekleme
+### <a name="add-missing-casesdefault-caseboth"></a>Eksik durumları/varsayılan durumu/her ikisini de ekle
 
-C#'da veya `switch` Visual `Select Case` Basic'te bir deyim oluştururken, eksik servis talebi öğelerini, varsayılan servis talebi bildirimini veya her ikisini de otomatik olarak eklemek için bir Kod Eylemi kullanabilirsiniz.
+`switch`C# veya Visual Basic içinde bir ifade oluştururken, `Select Case` eksik durum öğelerini otomatik olarak eklemek Için bir kod eylemi, varsayılan bir Case ifadesini veya her ikisini de kullanabilirsiniz.
 
-Aşağıdaki numaralandırma ve boş `switch` veya `Select Case` ifade düşünün:
+Aşağıdaki sabit listesini ve boş veya ifadesini göz önünde bulundurun `switch` `Select Case` :
 
 ```csharp
 enum MyEnum
@@ -252,7 +252,7 @@ Select Case myEnum
 End Select
 ```
 
-Her **Iki** Hızlı Eylem Ekle'yi kullanmak eksik servis taleplerini doldurur ve varsayılan bir servis talebi ekler:
+Hem hızlı eylem **ekleme hem de** eksik durumlarda dolgu, varsayılan bir durum ekler:
 
 ```csharp
 switch(myEnum)
@@ -279,13 +279,13 @@ Select Case myEnum
 End Select
 ```
 
-| Tanılama Kimliği | Uygulanabilir Diller | Desteklenen Sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| IDE0010 | C# ve Visual Basic| Visual Studio 2017 sürüm 15.3 ve sonrası |
+| IDE0010 | C# ve Visual Basic| Visual Studio 2017 sürüm 15,3 ve üzeri |
 
-### <a name="add-null-checks-for-parameters"></a>Parametreler için null denetimleri ekleme
+### <a name="add-null-checks-for-parameters"></a>Parametreler için null denetimleri Ekle
 
-Bu Hızlı Eylem, parametrenin null olup olmadığını söylemek için kodunuza bir çek eklemenize olanak tanır.
+Bu hızlı eylem, bir parametrenin null olup olmadığını söylemek için kodunuzda bir denetim eklemenize olanak sağlar.
 
 ```csharp
 // Before
@@ -313,11 +313,11 @@ class MyClass
 }
 ```
 
-| Uygulanabilir Diller | Desteklenen Sürüm |
+| Uygun diller | Desteklenen Sürüm |
 | -------------------- | ---------------- |
-| C# ve Visual Basic| Visual Studio 2017 sürüm 15.3 ve sonrası |
+| C# ve Visual Basic| Visual Studio 2017 sürüm 15,3 ve üzeri |
 
-### <a name="add-argument-name"></a>Bağımsız değişken adı ekleme
+### <a name="add-argument-name"></a>Bağımsız değişken adı Ekle
 
 ```csharp
 // Before
@@ -329,13 +329,13 @@ var date = new DateTime(1997, 7, 8);
 var date = new DateTime(year: 1997, month: 7, day: 8);
 ```
 
-| Uygulanabilir Diller | Desteklenen Sürüm |
+| Uygun diller | Desteklenen Sürüm |
 | -------------------- | ---------------- |
-| C# ve Visual Basic| Visual Studio 2017 sürüm 15.3 ve sonrası |
+| C# ve Visual Basic| Visual Studio 2017 sürüm 15,3 ve üzeri |
 
-### <a name="add-braces"></a>Ayraç ekleme
+### <a name="add-braces"></a>Küme ayracı Ekle
 
-Hızlı Eylem Ekle ayraçları, ayraçları `if` tek satırlık deyimlerin etrafına sarar.
+Ayraç ekleme hızlı eylemi, tek satırlık deyimler etrafında küme ayraçları kaydırır `if` .
 
 ```csharp
 // Before
@@ -351,13 +351,13 @@ if (true)
 }
 ```
 
-| Tanılama Kimliği | Uygulanabilir Diller | Desteklenen Sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| IDE0011 | C# | Visual Studio 2017 ve sonrası |
+| IDE0011 | C# | Visual Studio 2017 ve üzeri |
 
-### <a name="add-and-order-modifiers"></a>Değiştiriciler ekleme ve sipariş
+### <a name="add-and-order-modifiers"></a>Ekleme ve sıralama değiştiricileri
 
-Bu Hızlı Eylemler, varolan ları sıralamanızı ve eksik erişilebilirlik değiştiriciler eklemenizi sağlayarak değiştiricilerin düzenlenmesine yardımcı olur.
+Bu hızlı eylemler, var olan ve eksik erişilebilirlik değiştiricilerini eklemenizi sağlayarak değiştiricilerin düzenlenmesine yardımcı olur.
 
 ```csharp
 // Before
@@ -385,16 +385,16 @@ static private int thisFieldIsPublic;
 private static int thisFieldIsPublic;
 ```
 
-| Tanılama Kimliği | Uygulanabilir Diller | Desteklenen Sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| IDE0036 | C# ve Visual Basic| Visual Studio 2017 sürüm 15.5 ve sonrası |
-| IDE0040 | C# ve Visual Basic| Visual Studio 2017 sürüm 15.5 ve sonrası |
+| IDE0036 | C# ve Visual Basic| Visual Studio 2017 sürüm 15,5 ve üzeri |
+| IDE0040 | C# ve Visual Basic| Visual Studio 2017 sürüm 15,5 ve üzeri |
 
 ## <a name="code-transformations"></a>Kod dönüşümleri
 
-### <a name="convert-if-construct-to-switch"></a>'if' yapısını 'anahtar' olarak dönüştürme
+### <a name="convert-if-construct-to-switch"></a>' İf ' yapısını ' Switch ' olarak Dönüştür
 
-Bu Hızlı Eylem, else **else'deki bir yapıyı** **anahtar** yapısına dönüştürmenizi sağlar.
+Bu hızlı eylem **, bir if-then-else** yapısını bir **Switch** yapısına dönüştürmenize olanak sağlar.
 
 ```csharp
 // Before
@@ -443,13 +443,13 @@ Select Case obj
 End Select
 ```
 
-| Uygulanabilir Diller | Desteklenen Sürüm |
+| Uygun diller | Desteklenen Sürüm |
 | -------------------- | ---------------- |
-| C# ve Visual Basic| Visual Studio 2017 sürüm 15.3 ve sonrası |
+| C# ve Visual Basic| Visual Studio 2017 sürüm 15,3 ve üzeri |
 
-### <a name="convert-to-interpolated-string"></a>Enterpolasyonlu dize dönüştürme
+### <a name="convert-to-interpolated-string"></a>Enterpolasyonlu dizeye Dönüştür
 
-[Enterpolasyonlu dizeleri,](/dotnet/csharp/language-reference/keywords/interpolated-strings) **[String.Format](/dotnet/api/system.string.format#overloads)** yöntemine benzer şekilde katıştılı değişkenlerle dizeleri ifade etmenin kolay bir yoludur.  Bu Hızlı Eylem, dizelerin bağlandığı veya **String.Format'ı**kullandığı durumları tanır ve kullanımı enterpolasyonlu bir dize yle değiştirir.
+[Enterpolasyonlu dizeler](/dotnet/csharp/language-reference/keywords/interpolated-strings) , **[dize. Format](/dotnet/api/system.string.format#overloads)** yöntemine benzer şekilde, gömülü değişkenlerle dizeleri hızlı bir şekilde ifade etmenin kolay bir yoludur.  Bu hızlı eylem, dizelerin bitiştirildiği veya **String. Format**kullanan veya kullanımı enterpolasyonlu bir dizeye değiştiren durumları tanır.
 
 ```csharp
 // Before
@@ -475,13 +475,13 @@ Dim num as Integer = 3
 Dim s As String = $"My string with {num} in the middle"
 ```
 
-| Uygulanabilir Diller | Desteklenen Sürüm |
+| Uygun diller | Desteklenen Sürüm |
 | -------------------- | ---------------- |
-| C# 6.0+ ve Visual Basic 14+ | Visual Studio 2017 ve sonrası |
+| C# 6.0 + ve Visual Basic 14 + | Visual Studio 2017 ve üzeri |
 
-### <a name="use-object-initializers"></a>Nesne baş harflerini kullanma
+### <a name="use-object-initializers"></a>Nesne başlatıcıları kullanma
 
-Bu Hızlı Eylem, oluşturucuyu çağırmak ve ek atama deyimsatırlarına sahip olmak yerine [nesne baş harflerini](/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers) kullanmanıza olanak tanır.
+Bu hızlı eylem, oluşturucuyu çağırmak ve ek satır atama deyimlerinin olması yerine [nesne başlatıcıları](/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers) kullanmanıza olanak sağlar.
 
 ```csharp
 // Before
@@ -505,13 +505,13 @@ c.Age = 21
 Dim c = New Customer() With {.Age = 21}
 ```
 
-| Tanılama Kimliği | Uygulanabilir Diller | Desteklenen Sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| IDE0017 | C# ve Visual Basic | Visual Studio 2017 ve sonrası |
+| IDE0017 | C# ve Visual Basic | Visual Studio 2017 ve üzeri |
 
-### <a name="use-collection-initializers"></a>Koleksiyon baş harflerini kullanma
+### <a name="use-collection-initializers"></a>Koleksiyon Başlatıcıları kullanma
 
-Bu Hızlı Eylem, [collection initializers](/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers) sınıfınızın `Add` yöntemine birden çok çağrı yerine koleksiyon başlatma layıcılarını kullanmanıza olanak tanır.
+Bu hızlı eylem, sınıfınızın yöntemine birden çok çağrı yerine [koleksiyon başlatıcıları](/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers) kullanmanıza olanak sağlar `Add` .
 
 ```csharp
 // Before
@@ -539,13 +539,13 @@ list.Add(3)
 Dim list = New List(Of Integer) From {1, 2, 3}
 ```
 
-| Tanılama Kimliği | Uygulanabilir Diller | Desteklenen Sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| IDE0028 | C# ve Visual Basic | Visual Studio 2017 ve sonrası |
+| IDE0028 | C# ve Visual Basic | Visual Studio 2017 ve üzeri |
 
-### <a name="convert-auto-property-to-full-property"></a>Otomatik mülkü tam mülke dönüştürme
+### <a name="convert-auto-property-to-full-property"></a>Auto özelliğini Full özelliğine Dönüştür
 
-Bu Hızlı Eylem, bir otomatik mülkü tam bir özelliğe dönüştürmenize olanak tanır ve bunun tersi de vardır.
+Bu hızlı eylem, bir otomatik özelliği tam bir özelliğe dönüştürmenizi ve bunun tersini yapmanızı sağlar.
 
 ```csharp
 // Before
@@ -580,13 +580,13 @@ Public Property Name As String
 End Property
 ```
 
-| Uygulanabilir Diller | Desteklenen Sürüm |
+| Uygun diller | Desteklenen Sürüm |
 | -------------------- | ---------------- |
-| C# ve Visual Basic | Visual Studio 2017 sürüm 15.5 ve sonrası |
+| C# ve Visual Basic | Visual Studio 2017 sürüm 15,5 ve üzeri |
 
-### <a name="convert-block-body-to-expression-bodied-member"></a>Blok gövdesini ifade gövdeli üyeye dönüştürme
+### <a name="convert-block-body-to-expression-bodied-member"></a>Blok gövdesini ifade-Bodied üyeye Dönüştür
 
-Bu Hızlı Eylem, blok gövdelerini yöntemler, oluşturucular, işleçler, özellikler, dizin leyiciler ve erişimciler için ifade gövdeli üyelere dönüştürmenize olanak tanır.
+Bu hızlı eylem, Yöntemler, oluşturucular, işleçler, özellikler, Dizin oluşturucular ve erişimciler için blok gövdelerini Expression-Bodied üyelere dönüştürmenize olanak sağlar.
 
 ```csharp
 //Before
@@ -633,13 +633,13 @@ class MyClass4
 }
 ```
 
-| Tanılama Kimliği | Uygulanabilir Diller | Desteklenen Sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| IDE0021-27 | C# 6.0+ | Visual Studio 2017 ve sonrası |
+| IDE0021-27 | C# 6.0 + | Visual Studio 2017 ve üzeri |
 
-### <a name="convert-anonymous-function-to-local-function"></a>Anonim işlevi yerel işleve dönüştürme
+### <a name="convert-anonymous-function-to-local-function"></a>Anonim işlevi yerel işleve Dönüştür
 
-Bu Hızlı Eylem anonim işlevleri yerel işlevlere dönüştürür.
+Bu hızlı eylem anonim işlevleri yerel işlevlere dönüştürür.
 
 ```csharp
 // Before
@@ -658,13 +658,13 @@ int fibonacci(int n)
 }
 ```
 
-### <a name="convert-referenceequals-to-is-null"></a>'ReferenceEquals'ı 'null' olarak dönüştürün
+### <a name="convert-referenceequals-to-is-null"></a>' ReferenceEquals ' öğesini ' null ' olarak Dönüştür
 
-| Tanılama Kimliği | Uygulanabilir Diller | Desteklenen Sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| IDE0041 | C# 7.0+ | Visual Studio 2017 sürüm 15.5 ve sonrası |
+| IDE0041 | C# 7.0 + | Visual Studio 2017 sürüm 15,5 ve üzeri |
 
-Bu Hızlı Eylem, mümkünse ```ReferenceEquals``` kodlama deseni yerine desen [eşleştirmesinin](/dotnet/csharp/pattern-matching) kullanılmasını önerir.
+Bu hızlı eylem, mümkün olduğunda kodlama düzeniyle değil, [model eşleme](/dotnet/csharp/pattern-matching) kullanımını önerir ```ReferenceEquals``` .
 
 ```csharp
 // Before
@@ -684,13 +684,13 @@ if (value is null)
 }
 ```
 
-| Tanılama Kimliği | Uygulanabilir Diller | Desteklenen Sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| IDE0039 | C# 7.0+ | Visual Studio 2017 sürüm 15. ve daha sonra |
+| IDE0039 | C# 7.0 + | Visual Studio 2017 sürüm 15. ve üzeri |
 
-### <a name="introduce-pattern-matching"></a>Desen eşleştirmetanıt
+### <a name="introduce-pattern-matching"></a>Model eşleştirmeyi tanıtma
 
-Bu Hızlı Eylem, C#'daki kalıplar ve null denetimlerle [eşleşen örüntü](/dotnet/csharp/pattern-matching) kullanımını önerir.
+Bu hızlı eylem, C# ' deki yayınlar ve null denetimleri ile [eşleşen düzenin](/dotnet/csharp/pattern-matching) kullanımını önerir.
 
 ```csharp
 // Before
@@ -726,14 +726,14 @@ if (o is string s)
 }
 ```
 
-| Tanılama Kimliği | Uygulanabilir Diller | Desteklenen Sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| IDE0020 | C# 7.0+ | Visual Studio 2017 ve sonrası |
-| IDE0019 | C# 7.0+ | Visual Studio 2017 ve sonrası |
+| IDE0020 | C# 7.0 + | Visual Studio 2017 ve üzeri |
+| IDE0019 | C# 7.0 + | Visual Studio 2017 ve üzeri |
 
-### <a name="change-base-for-numeric-literals"></a>Sayısal literaller için temeli değiştirme
+### <a name="change-base-for-numeric-literals"></a>Sayısal değişmez değerler için tabanı Değiştir
 
-Bu Hızlı Eylem, sayısal bir gerçek dosyayı bir temel sayısal sistemden diğerine dönüştürmenizi sağlar. Örneğin, bir sayıyı hexadecimal veya ikili biçime değiştirebilirsiniz.
+Bu hızlı eylem, sayısal bir sabit değeri bir taban sayısal sistemden diğerine dönüştürmenize olanak sağlar. Örneğin, bir sayıyı onaltılı veya ikili biçime değiştirebilirsiniz.
 
 ```csharp
 // Before
@@ -755,13 +755,13 @@ Dim countdown As Integer = 2097152
 Dim countdown As Integer = &H200000
 ```
 
-| Uygulanabilir Diller | Desteklenen Sürüm |
+| Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| C# 7.0+ ve Visual Basic 14+ | Visual Studio 2017 sürüm 15.3 ve sonrası |
+| C# 7.0 + ve Visual Basic 14 + | Visual Studio 2017 sürüm 15,3 ve üzeri |
 
-### <a name="insert-digit-separators-into-literals"></a>Basamak ayırıcılarını literals'e ekleme
+### <a name="insert-digit-separators-into-literals"></a>Sabit değerlere basamak ayırıcıları ekleyin
 
-Bu Hızlı Eylem, ayırıcı karakterleri gerçek değerlere eklemenize olanak tanır.
+Bu hızlı eylem, değer değerlerine Ayırıcı karakterler eklemenize olanak sağlar.
 
 ```csharp
 // Before
@@ -783,13 +783,13 @@ Dim countdown As Integer = 1000000
 Dim countdown As Integer = 1_000_000
 ```
 
-| Uygulanabilir Diller | Desteklenen Sürüm |
+| Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| C# 7.0+ ve Visual Basic 14+ | Visual Studio 2017 sürüm 15.3 ve sonrası |
+| C# 7.0 + ve Visual Basic 14 + | Visual Studio 2017 sürüm 15,3 ve üzeri |
 
-### <a name="use-explicit-tuple-names"></a>Açık tuple adlarını kullanma
+### <a name="use-explicit-tuple-names"></a>Açık demet adlarını kullan
 
-Bu Hızlı Eylem, Müstehcen tuple adının Item1, Item2, vb. yerine kullanılabildiği alanları tanımlar.
+Bu hızlı eylem, Item1, Item2 vb. yerine açık demet adının kullanılabileceği yerleri tanımlar.
 
 ```csharp
 // Before
@@ -815,13 +815,13 @@ Dim customer As (name As String, age As Integer) = GetCustomer()
 Dim name = customer.name
 ```
 
-| Tanılama Kimliği | Uygulanabilir Diller | Desteklenen Sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| IDE0033 | C# 7.0+ ve Visual Basic 15+ | Visual Studio 2017 ve sonrası |
+| IDE0033 | C# 7.0 + ve Visual Basic 15 + | Visual Studio 2017 ve üzeri |
 
-### <a name="use-inferred-names"></a>Çıkarılan adları kullanma
+### <a name="use-inferred-names"></a>Gösterilen adları kullan
 
-Bu Hızlı Eylem, kodun anonim türlerde veya tuples'te çıkarılan öğe adlarında çıkarılan üye adlarını kullanmak için ne zaman basitleştirilenene işaret tir.
+Bu hızlı eylem, kod, anonim türlerde çıkartılan üye adlarını veya diziler içinde çıkartılan öğe adlarını kullanacak şekilde basitleşilerek çıkar.
 
 ```csharp
 // Before
@@ -843,14 +843,14 @@ var tuple = (age: age, name: name);
 var tuple = (age, name);
 ```
 
-| Tanılama Kimliği | Uygulanabilir Diller | Desteklenen Sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| IDE0037 | C# | Visual Studio 2017 sürüm 15.5 ve sonrası |
-| IDE0037 | C# 7.1+ | Visual Studio 2017 sürüm 15.5 ve sonrası |
+| IDE0037 | C# | Visual Studio 2017 sürüm 15,5 ve üzeri |
+| IDE0037 | C# 7.1 + | Visual Studio 2017 sürüm 15,5 ve üzeri |
 
-### <a name="deconstruct-tuple-declaration"></a>Tuple bildirimini deconstruct
+### <a name="deconstruct-tuple-declaration"></a>Demet bildirimini kaldırma
 
-Bu Hızlı Eylem, tuple değişken bildirimlerinin yapısızlaştırılmasını sağlar.
+Bu hızlı eylem, kayıt düzeni değişken bildirimlerinin çıkarılması işlemini mümkün hale getirmenizi.
 
 ```csharp
 // Before
@@ -870,13 +870,13 @@ Console.WriteLine($"{name} {age}");
 Console.WriteLine($"{x} {y}");
 ```
 
-| Tanılama Kimliği | Uygulanabilir Diller | Desteklenen Sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| IDE0042 | C# 7.0+ | Visual Studio 2017 sürüm 15.5 ve sonrası |
+| IDE0042 | C# 7.0 + | Visual Studio 2017 sürüm 15,5 ve üzeri |
 
-### <a name="make-method-synchronous"></a>Yöntem senkron yapma
+### <a name="make-method-synchronous"></a>Yöntemi zaman uyumlu yap
 
-Bir `async` yöntemde `Async` anahtar kelimeyi kullanırken, bu yöntemin `await` içinde `Await` anahtar kelimenin de kullanılması beklenir. Ancak, bu durumda değilse, hızlı eylem, yöntemi veya `async` `Async` anahtar sözcüğü kaldırarak ve dönüş türünü değiştirerek eşzamanlı hale getiren bir Hızlı Eylem görüntülenir. Hızlı İşlemler menüsünden **yöntem eşzamanlı lık** seçeneğini kullanın.
+`async` `Async` Bir yöntemde or anahtar sözcüğünü kullanırken, `await` veya `Await` anahtar sözcüğünün de kullanılması beklenmektedir. Ancak böyle bir durum yoksa, `async` veya `Async` anahtar sözcüğünü kaldırarak ve dönüş türünü değiştirerek yöntemi zaman uyumlu hale getiren hızlı bir eylem görünür. Hızlı Eylemler menüsünden **yöntemi zaman uyumlu yap** seçeneğini kullanın.
 
 ```csharp
 // Before
@@ -908,13 +908,13 @@ Function MyAsyncMethod() As Integer
 End Function
 ```
 
-| Hata Kimliği | Uygulanabilir Diller |
+| Hata KIMLIĞI | Uygun diller |
 | ------- | -------------------- |
 | CS1998, BC42356 | C# ve Visual Basic |
 
-### <a name="make-method-asynchronous"></a>Yöntem asynchronous olun
+### <a name="make-method-asynchronous"></a>Metodu zaman uyumsuz yap
 
-Bir `await` yöntemin `Await` içindeki anahtar kelimeyi kullanırken, yöntemin veya `async` `Async` anahtar kelimeyle işaretli olması beklenir. Ancak, bu durumda değilse, yöntemi eşsenkronize yapan bir Hızlı Eylem görüntülenir. Hızlı İşlemler menüsünden **Yöntem Yap/İşlev asynchronous** seçeneğini kullanın.
+`await` `Await` Bir yöntemin içinde veya anahtar sözcüğünü kullanırken, yöntemin `async` veya anahtar sözcüğüyle işaretlenmiş olması beklenir `Async` . Ancak böyle bir durum yoksa, yöntemi zaman uyumsuz hale getiren bir hızlı eylem görüntülenir. Hızlı Eylemler menüsünde **Yöntem/işlev zaman uyumsuz** seçeneğini kullanın.
 
 ```csharp
 // Before
@@ -946,9 +946,9 @@ Async Function MyAsyncMethod() As Task(Of Integer)
 End Function
 ```
 
-| Hata Kimliği | Uygulanabilir Diller | Desteklenen Sürüm |
+| Hata KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
-| CS4032, BC37057 | C# ve Visual Basic | Visual Studio 2017 ve sonrası |
+| CS4032, BC37057 | C# ve Visual Basic | Visual Studio 2017 ve üzeri |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

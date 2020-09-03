@@ -58,14 +58,14 @@ SCCRTN SccSetOption(
   
  Seçeneklerin Özeti ve değerleri:  
   
-|`nOption`|`dwValue`|Description|  
+|`nOption`|`dwValue`|Açıklama|  
 |---------------|---------------|-----------------|  
 |`SCC_OPT_EVENTQUEUE`|`SCC_OPT_EQ_DISABLE`<br /><br /> `SCC_OPT_EQ_ENABLE`|Arka plan olay Queuing 'i etkinleştirilir/devre dışı bırakır.|  
 |`SCC_OPT_USERDATA`|Rastgele değer|[SeçenekAdı Changepfn](../extensibility/optnamechangepfn.md) callback işlevine geçirilecek bir kullanıcı değeri belirtir.|  
 |`SCC_OPT_HASCANCELMODE`|`SCC_OPT_HCM_NO`<br /><br /> `SCC_OPT_HCM_YES`|IDE 'nin şu anda bir işlemi iptal etmeyi destekleyip desteklemediğini gösterir.|  
 |`SCC_OPT_NAMECHANGEPFN`|[Seçeneknamechangepfn](../extensibility/optnamechangepfn.md) callback işlevine yönelik işaretçi|Ad değiştirme geri arama işlevine yönelik bir işaretçi ayarlar.|  
 |`SCC_OPT_SCCCHECKOUTONLY`|`SCC_OPT_SCO_NO`<br /><br /> `SCC_OPT_SCO_YES`|IDE 'nin, dosyalarını el ile kullanıma almasına (kaynak denetimi kullanıcı arabirimi aracılığıyla) veya yalnızca kaynak denetimi eklentisi aracılığıyla kullanıma alınması gerekip gerekmediğini belirtir.|  
-|`SCC_OPT_SHARESUBPROJ`|Yok|Kaynak denetimi eklentisi IDE 'nin yerel proje klasörünü belirtmesini sağlamasına izin veriyorsa eklenti döndürülür `SCC_I_SHARESUBPROJOK` .|  
+|`SCC_OPT_SHARESUBPROJ`|YOK|Kaynak denetimi eklentisi IDE 'nin yerel proje klasörünü belirtmesini sağlamasına izin veriyorsa eklenti döndürülür `SCC_I_SHARESUBPROJOK` .|  
   
 ## <a name="scc_opt_eventqueue"></a>SCC_OPT_EVENTQUEUE  
  `nOption`İse `SCC_OPT_EVENTQUEUE` , IDE arka planda işlemeyi devre dışı bırakır (veya yeniden etkinleştirir). Örneğin, bir derleme sırasında IDE, kaynak denetimi eklentisinin herhangi bir türdeki boş işlemeyi durdurmasına izin verebilir. Derlemeden sonra, eklentinin olay kuyruğunu güncel tutmak için arka plan işlemeyi yeniden etkinleştirir. Değerine karşılık gelen,, `SCC_OPT_EVENTQUEUE` `nOption` ve için iki olası değer vardır `dwVal` `SCC_OPT_EQ_ENABLE` `SCC_OPT_EQ_DISABLE` .  

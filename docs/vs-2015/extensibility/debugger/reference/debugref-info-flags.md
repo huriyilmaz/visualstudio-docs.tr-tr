@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 05a073b3663ff85fe3d68878999aaf1dfa9e0017
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198853"
 ---
-# <a name="debugrefinfoflags"></a>DEBUGREF_INFO_FLAGS
+# <a name="debugref_info_flags"></a>DEBUGREF_INFO_FLAGS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Hangi bilgilerin hakkında bir hata ayıklama başvuru nesnesi alınacağını belirtir.  
+Bir hata ayıklama başvuru nesnesi hakkında hangi bilgilerin yapılacağını belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_DEBUGREF_INFO_FLAGS {   
@@ -57,48 +57,48 @@ public enum enum_DEBUGREF_INFO_FLAGS { 
   
 ## <a name="members"></a>Üyeler  
  DEBUGREF_INFO_NAME  
- Başlat/kullanım `bstrName` yapısında alan.  
+ Yapıda alanı başlatın/kullanın `bstrName` .  
   
  DEBUGREF_INFO_TYPE  
- Başlat/kullanım `bstrType` yapısında alan.  
+ Yapıda alanı başlatın/kullanın `bstrType` .  
   
  DEBUGREF_INFO_VALUE  
- Başlat/kullanım `bstrValue` yapısında alan.  
+ Yapıda alanı başlatın/kullanın `bstrValue` .  
   
  DEBUGREF_INFO_ATTRIB  
- Başlat/kullanım `dwAttrib` yapısında alan.  
+ Yapıda alanı başlatın/kullanın `dwAttrib` .  
   
  DEBUGREF_INFO_REFTYPE  
- Başlat/kullanım `dwRefType` yapısında alan.  
+ Yapıda alanı başlatın/kullanın `dwRefType` .  
   
  DEBUGREF_INFO_REF  
- Başlat/kullanım `pReference` yapısında alan.  
+ Yapıda alanı başlatın/kullanın `pReference` .  
   
  DEBUGREF_INFO_VALUE_AUTOEXPAND  
- Değer alanı otomatik olarak genişletilmiş değeri varsa, bu nesne türü içermelidir.  
+ Değer alanı, varsa, bu nesne türü için otomatik genişletilmiş değeri içermelidir.  
   
  DEBUGREF_INFO_NONE  
- Bayrak belirlendiğini gösterir.  
+ Hiçbir bayrak belirlenmediğini gösterir.  
   
  DEBUGREF_INFO_ALL  
- Maske bayrakları belirtir.  
+ Bayrakların maskesini belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu bayraklar geçirilen [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) ve [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) hangi alanları göstermek için yöntemlerini [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapısı olan başlatılacak.  
+ Bu bayraklar, [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapısının hangi alanlarının başlatıldığını göstermek Için [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) ve [getreferenceınfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) yöntemlerine geçirilir.  
   
- İçin kullanılan `dwFields` üyesi `DEBUG_REFERENCE_INFO` yapısı yapısı döndürüldüğünde hangi alanların kullanılan ve geçerli olduğunu belirtmek için.  
+ Yapı öğesi için, `dwFields` `DEBUG_REFERENCE_INFO` Yapı döndürüldüğünde hangi alanların kullanıldığını ve geçerli olduğunu göstermek için kullanılır.  
   
- Bu değerler, bit düzeyinde ile birleştirilebilir `OR`.  
+ Bu değerler, bit düzeyinde birleştirilebilir `OR` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)   
  [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md)   
  [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md)

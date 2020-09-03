@@ -1,5 +1,5 @@
 ---
-title: Ünite testlerinde Microsoft.VisualStudio.TestTools.UnitTesting'i kullanma
+title: Birim testlerinde Microsoft. VisualStudio. TestTools. UnitTesting kullanın
 ms.date: 03/02/2018
 ms.topic: reference
 ms.author: mikejo
@@ -8,30 +8,30 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: e45df63f36947b5f6f0aad77bb8eebcab4aca731
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75585567"
 ---
 # <a name="use-the-mstest-framework-in-unit-tests"></a>Birim testlerinde MSTest çerçevesini kullanma
 
-[MSTest](<xref:Microsoft.VisualStudio.TestTools.UnitTesting>) çerçevesi Visual Studio'da birim testini destekler. Birim testlerini kodlarken <xref:Microsoft.VisualStudio.TestTools.UnitTesting> ad alanındaki sınıfları ve üyeleri kullanın. Koddan oluşturulan bir birim testini rafine ederken bunları da kullanabilirsiniz.
+[MSTest](<xref:Microsoft.VisualStudio.TestTools.UnitTesting>) Framework, Visual Studio 'da birim testini destekler. <xref:Microsoft.VisualStudio.TestTools.UnitTesting>Birim testlerini kodlarunuzda, ad alanındaki sınıfları ve üyeleri kullanın. Ayrıca, koddan oluşturulmuş bir birim testini iyileştirirken de kullanabilirsiniz.
 
 ## <a name="framework-members"></a>Çerçeve üyeleri
 
-Birim sınama çerçevesinin daha net bir genel görünümünü sağlamaya <xref:Microsoft.VisualStudio.TestTools.UnitTesting> yardımcı olmak için, bu bölüm ad alanı nın üyelerini ilgili işlevsellik gruplarına ayırır.
+Birim testi çerçevesine daha net bir genel bakış sağlamaya yardımcı olmak için, bu bölüm <xref:Microsoft.VisualStudio.TestTools.UnitTesting> ad alanının üyelerini ilgili işlevsellik grupları olarak düzenler.
 
 > [!NOTE]
-> Adları "Öznitelik" ile biten öznitelik öğeleri, sonunda "Öznitelik" ile veya "Öznitelik" olmadan kullanılabilir. Örneğin, aşağıdaki iki kod örneği aynı şekilde çalışır:
+> Adları "Attribute" ile biten öznitelik öğeleri, sonunda ya da "Attribute" olmadan kullanılabilir. Örneğin, aşağıdaki iki kod örneği aynı şekilde çalışır:
 >
 > `[TestClass()]`
 >
 > `[TestClassAttribute()]`
 
-### <a name="members-used-for-data-driven-testing"></a>Veri tabanlı test için kullanılan üyeler
+### <a name="members-used-for-data-driven-testing"></a>Veri odaklı test için kullanılan Üyeler
 
-Veri tabanlı birim testleri ayarlamak için aşağıdaki öğeleri kullanın. Daha fazla bilgi için [bkz.](../test/how-to-create-a-data-driven-unit-test.md) [Use a configuration file to define a data source](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)
+Veri tabanlı birim testlerini ayarlamak için aşağıdaki öğeleri kullanın. Daha fazla bilgi için bkz. [veri temelli birim testi oluşturma](../test/how-to-create-a-data-driven-unit-test.md) ve bir [veri kaynağı tanımlamak Için yapılandırma dosyası kullanma](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md).
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataAccessMethod>
 
@@ -41,21 +41,21 @@ Veri tabanlı birim testleri ayarlamak için aşağıdaki öğeleri kullanın. D
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElementCollection>
 
-## <a name="attributes-used-to-establish-a-calling-order"></a>Arama emri oluşturmak için kullanılan öznitelikler
+## <a name="attributes-used-to-establish-a-calling-order"></a>Arama sırası oluşturmak için kullanılan öznitelikler
 
-Belirttiğiniz anda, aşağıdaki özniteliklerden biriyle dekore edilmiş bir kod öğesi çağrılır. Daha fazla bilgi [için, bir birim testinin Anatomisi](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144)bölümüne bakın.
+Aşağıdaki özniteliklerden biriyle donatılmış bir kod öğesi, belirttiğiniz anda çağırılır. Daha fazla bilgi için bkz. [birim testinin anatomi](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144).
 
 ### <a name="attributes-for-assemblies"></a>Derlemeler için öznitelikler
 
-AssemblyInitialize ve AssemblyCleanup, derlemeniz yüklendikten hemen sonra ve derlemeniz boşaltılmadan hemen önce çağrılır.
+AssemblyInitialize ve AssemblyCleanup, derleme yüklenmeden hemen önce ve derleme bellekten kaldırıldıktan hemen sonra çağrılır.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssemblyInitializeAttribute>
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssemblyCleanupAttribute>
 
-### <a name="attributes-for-classes"></a>Sınıflar için öznitelikler
+### <a name="attributes-for-classes"></a>Sınıfların öznitelikleri
 
-ClassInitialize ve ClassCleanup, sınıfınız yüklendikten hemen sonra ve sınıf Kaldırılmadan hemen önce çağrılır.
+Sınıfınız yüklenmeden ve sınıfınız bellekten kaldırılmadan önce ClassInitialize ve Classctaanup değeri hemen çağırılır.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute>
 
@@ -69,15 +69,15 @@ ClassInitialize ve ClassCleanup, sınıfınız yüklendikten hemen sonra ve sın
 
 ## <a name="attributes-used-to-identify-test-classes-and-methods"></a>Test sınıflarını ve yöntemlerini tanımlamak için kullanılan öznitelikler
 
-Her test sınıfı `TestClass` özniteliğe sahip olmalıdır ve `TestMethod` her test yöntemi özniteliğe sahip olmalıdır. Daha fazla bilgi [için, bir birim testinin Anatomisi](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144)bölümüne bakın.
+Her test sınıfının `TestClass` özniteliği olmalıdır ve her test yönteminin `TestMethod` özniteliği olmalıdır. Daha fazla bilgi için bkz. [birim testinin anatomi](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144).
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute>
 
-## <a name="assert-classes-and-related-exceptions"></a>Sınıfları ve ilgili özel durumları öne sür
+## <a name="assert-classes-and-related-exceptions"></a>Onaylama sınıfları ve ilgili özel durumlar
 
-Birim testleri, belirli uygulama davranışını çeşitli türde iddialar, özel durumlar ve öznitelikleri kullanarak doğrulayabilir. Daha fazla bilgi için [bkz.](../test/using-the-assert-classes.md)
+Birim testleri, çeşitli onay, özel durum ve öznitelik türlerini kullanarak belirli uygulama davranışlarını doğrulayabilirler. Daha fazla bilgi için bkz. [onaylama sınıflarını kullanma](../test/using-the-assert-classes.md).
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>
 
@@ -95,7 +95,7 @@ Birim testleri, belirli uygulama davranışını çeşitli türde iddialar, öze
 
 ## <a name="the-testcontext-class"></a>TestContext sınıfı
 
-Belirli bir test yöntemi için Visual Studio Properties penceresinde aşağıdaki öznitelikler ve bunlara atanan değerler görünür. Bu özniteliklere birim testinin kodu yla erişilmesi amaçlanmaz. Bunun yerine, birim testinin kullanılma veya çalışma yöntemlerini, Visual Studio'nun IDE'si veya Visual Studio test motoru aracılığıyla etkiler. Örneğin, bu özniteliklerden bazıları **Test Yöneticisi** penceresinde ve **Test Sonuçları** penceresinde sütun olarak görünür, bu da bunları testleri gruplandırmak ve sıralamak ve sonuçları test etmek için kullanabileceğiniz anlamına gelir. Bu tür öznitelik, birim testleri için rasgele meta veri eklemek için kullandığınız. <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> Örneğin, birim testini . ile işaretleyerek, bu testin kapsadığı bir `[TestProperty("TestPass", "Accessibility")]`test geçişinin adını depolamak için kullanabilirsiniz. Veya, test türünün bir göstergesini depolamak için `[TestProperty("TestKind", "Localization")]`kullanabilirsiniz. Bu özniteliği kullanarak oluşturduğunuz özellik ve atadığınız özellik değeri, **Test'e özgü**' başlığı altında Visual Studio **Properties** penceresinde görüntülenir.
+Aşağıdaki öznitelikler ve bunlara atanan değerler, belirli bir test yöntemi için Visual Studio Özellikler penceresi görüntülenir. Bu özniteliklere birim testinin kodu aracılığıyla erişilmek üzere tasarlanmamıştır. Bunun yerine, Visual Studio 'nun IDE 'si veya Visual Studio test altyapısı aracılığıyla, birim testinin kullanıldığı ya da çalıştırıldığı yolları etkiler. Örneğin, bu özniteliklerin bazıları **Test Yöneticisi** penceresinde ve **test sonuçları** penceresinde sütun olarak görünür, bu da testleri ve test sonuçlarını gruplamak ve sıralamak için bunları kullanabileceğiniz anlamına gelir. Bu tür bir özniteliği <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> , birim testlerine rastgele meta veriler eklemek için kullandığınız bir özniteliktir. Örneğin, birim testini ile işaretleyerek, bu testin kapsamakta olduğu bir test geçişinin adını depolamak için kullanabilirsiniz `[TestProperty("TestPass", "Accessibility")]` . Ya da bunu, sahip olduğu test türünün bir göstergesini depolamak için kullanabilirsiniz `[TestProperty("TestKind", "Localization")]` . Bu özniteliği kullanarak oluşturduğunuz özellik ve atadığınız Özellik değeri, her ikisi de başlık **testi**altındaki Visual Studio **özellikleri** penceresinde görüntülenir.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>
 
@@ -111,7 +111,7 @@ Belirli bir test yöntemi için Visual Studio Properties penceresinde aşağıda
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.WorkItemAttribute>
 
-## <a name="test-configuration-classes"></a>Yapılandırma sınıflarını test edin
+## <a name="test-configuration-classes"></a>Test yapılandırması sınıfları
 
 - [ObjectTypes](/previous-versions/visualstudio/visual-studio-2013/dd987428(v=vs.120))
 
@@ -119,15 +119,15 @@ Belirli bir test yöntemi için Visual Studio Properties penceresinde aşağıda
 
 ## <a name="attributes-used-to-generate-reports"></a>Rapor oluşturmak için kullanılan öznitelikler
 
-Bu bölümdeki öznitelikler, takım foundation server takım projesinin proje hiyerarşisindeki varlıklarla dekore ettikleri test yöntemini ilişkilendirmektedir.
+Bu bölümdeki öznitelikler, bir Team Foundation Server takım projesinin proje hiyerarşisindeki varlıklarla süsledikleri test yöntemiyle ilgilidir.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.CssIterationAttribute>
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.CssProjectStructureAttribute>
 
-## <a name="classes-used-with-private-accessors"></a>Özel erişimcilerle kullanılan sınıflar
+## <a name="classes-used-with-private-accessors"></a>Özel Erişimcilerde kullanılan sınıflar
 
-Özel bir yöntem için birim testi oluşturabilirsiniz. Bu nesil, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject> sınıfın bir nesnesini anında alan özel bir erişimci sınıf oluşturur. Sınıf, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject> yansımayı özel erişimci işleminin bir parçası olarak kullanan bir sarmalayıcı sınıfıdır. Sınıf <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType> benzer, ancak özel örnek yöntemleri çağırmak yerine özel statik yöntemleri aramak için kullanılır.
+Özel bir yöntem için birim testi oluşturabilirsiniz. Bu nesil, sınıfının bir nesnesini örnekleyen özel bir erişimci sınıfı oluşturur <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject> . <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject>Sınıfı, özel erişimci sürecinin bir parçası olarak yansıma kullanan bir sarmalayıcı sınıftır. <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType>Sınıf benzerdir, ancak özel örnek yöntemlerini çağırmak yerine özel statik yöntemleri çağırmak için kullanılır.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject>
 
@@ -135,4 +135,4 @@ Bu bölümdeki öznitelikler, takım foundation server takım projesinin proje h
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:Microsoft.VisualStudio.TestTools.UnitTesting>referans belgeleri
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting> başvuru belgeleri

@@ -13,47 +13,47 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 434b2ad0f2a6ca4d84c6d82bf9a1a85876a4d975
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75570407"
 ---
 # <a name="command-devenvexe"></a>/Command (devenv.exe)
 
-Visual Studio IDE'yi başlattıktan sonra belirtilen komutu çalıştırıyor.
+Visual Studio IDE 'yi başlattıktan sonra belirtilen komutu yürütür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```shell
 devenv /Command CommandName
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
-*Commandname*
+*Name*
 
-Gereklidir. Bir Visual Studio komutunun veya takma adının tam adı, çift tırnak işaretleriyle birlikte. Komut ve diğer ad sözdizimi hakkında daha fazla bilgi için [Visual Studio Komutları'na](../../ide/reference/visual-studio-commands.md)bakın.
+Gereklidir. Bir Visual Studio komutunun veya diğer adının, çift tırnak işareti içine alınmış olarak tamamı. Komut ve diğer ad sözdizimi hakkında daha fazla bilgi için bkz. [Visual Studio komutları](../../ide/reference/visual-studio-commands.md).
 
 ## <a name="remarks"></a>Açıklamalar
 
-Başlangıç tamamlandıktan sonra, IDE adlandırılmış komutu yürütür.
+Başlangıç tamamlandıktan sonra IDE, adlandırılmış komutunu yürütür.
 
 ::: moniker range="vs-2017"
 
-Bu anahtarı kullanırsanız, IDE başlangıç sayfasında Başlangıç Sayfasını görüntülemez.
+Bu anahtarı kullanırsanız, IDE başlangıç sayfasını başlangıçta görüntülemez.
 
 ::: moniker-end
 
-Bir eklenti bir komut ortaya çıkarırsa, eklentiyi komut satırından başlatmak için bu anahtarı kullanabilirsiniz. Daha fazla bilgi için [bkz: Eklenti yöneticisini kullanarak eklentileri denetleme.](/previous-versions/xwdatdwh(v=vs.140))
+Bir eklenti bir komut kullanıma sunarsa, bu anahtarı komut satırından eklentiyi başlatmak için kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: eklenti yöneticisini kullanarak eklentileri denetleme](/previous-versions/xwdatdwh(v=vs.140)).
 
 ## <a name="example"></a>Örnek
 
-İlk örnek Visual Studio'yu başlatur ve makroyu Sık Kullanılan Dosyaları Aç'ı otomatik olarak çalıştırın.
+İlk örnek, Visual Studio 'Yu başlatır ve makro açık olan dosyaları aç makrosunu otomatik olarak çalıştırır.
 
-İkinci örnek, IDE içinde bir web tarama sekmesini açar ve Microsoft Dokümanlar sitesine yönlendirilir.
+İkinci örnek, IDE içinde bir Web gözatma sekmesi açar ve Microsoft Docs sitesine gider.
 
-Üçüncü örnek, adlı `some_file.cs` yeni bir dosya oluşturur ve bir kod düzenleyicisinde açar.
+Üçüncü örnek adlı yeni bir dosya oluşturur `some_file.cs` ve onu bir kod düzenleyicisinde açar.
 
 ```shell
 devenv /command "Macros.MyMacros.Module1.OpenFavoriteFiles"
