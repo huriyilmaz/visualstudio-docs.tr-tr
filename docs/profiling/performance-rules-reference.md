@@ -10,16 +10,16 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 5280226aaba40de42052d72e58928a53af53f631
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543643"
 ---
 # <a name="performance-rules-reference"></a>Performans Kuralları Başvurusu
 Profil Oluşturma Araçları performans kuralları, uygulamanızın performansı hakkında ek uyarılar ve bilgiler sağlar. Performans kuralları, Windows ve işlemci performans sayaçları gibi kaynaklardan toplanan bir profil oluşturma çalıştırmasında verileri analiz eder. Kural iletileri tümleşik geliştirme ortamının hata çıktısı penceresinde görüntülenir [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] . İletiler aşağıdaki kural düzeylerinden biriyle listelenir:
 
-|Kategori|Description|
+|Kategori|Açıklama|
 |-|-|
 |**Hata**|Birçok performans sorunu sağ hata olmadığından, birkaç kural hata iletileri oluşturur. Bir hata iletisi, profil oluşturma verilerini toplamanın bir başarısızlığını gösterebilir.|
 |**Uyarı**|Uyarılar, uygulamanızın bir performans sorunları kaynağı olabilecek veya iyileştirmelerin avantajlarından faydalanabilecek bir alanını gösterir.|
@@ -31,7 +31,7 @@ Profil Oluşturma Araçları performans kuralları, uygulamanızın performansı
 
 Profil Oluşturma Araçları performans kuralları dört kategoride düzenlenmiştir:
 
-|Kategori|Description|
+|Kategori|Açıklama|
 |-|-|
 |[Kullanım performans kuralları .NET Framework](../profiling/dotnet-framework-usage-performance-rules.md)|.NET Framework verimli bir şekilde kullanmanıza yardımcı olan kurallar.|
 |[Bellek ve disk belleği performans kuralları](../profiling/memory-and-paging-performance-rules.md)|Uygulamanızın yönetilen bellek ve sayfalama davranışını çözümleyen kurallar.|

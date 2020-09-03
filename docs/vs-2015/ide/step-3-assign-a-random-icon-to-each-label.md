@@ -1,5 +1,5 @@
 ---
-title: '3\. Adım: her etikete rastgele bir simge atama | Microsoft Docs'
+title: '3. Adım: her etikete rastgele bir simge atama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,27 +10,27 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4382a450051b7626a5eb5e29bf2ce4e78f6eceda
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671833"
 ---
-# <a name="step-3-assign-a-random-icon-to-each-label"></a>3\. Adım: Her Etikete Rasgele Simge Atama
+# <a name="step-3-assign-a-random-icon-to-each-label"></a>3. Adım: Her Etikete Rasgele Simge Atama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Simgeler her oyunda aynı hücrelerde gösterilirse, oyun pek de zorlu olmaz. Bunu önlemek için, bir `AssignIconsToSquares()` yöntemi kullanarak, simgeleri formunuzdaki etiket denetimlerine rastgele atayın.
+Simgeler her oyunda aynı hücrelerde gösterilirse, oyun pek de zorlu olmaz. Bunu önlemek için, bir yöntemi kullanarak simgeleri formunuzdaki etiket denetimlerine rastgele atayın `AssignIconsToSquares()` .
 
 ### <a name="to-assign-a-random-icon-to-each-label"></a>Her etikete rasgele bir simge atamak için
 
-1. Aşağıdaki kodu eklemeden önce yöntemin nasıl çalıştığını düşünün. Yeni bir anahtar sözcük vardır: görsel C# `foreach` ve Visual Basic `For Each`. (Satırlardan biri bilerek derleme dışı bırakılmıştır; bunun nedeni bu yordamın sonunda açıklanmaktadır.)
+1. Aşağıdaki kodu eklemeden önce yöntemin nasıl çalıştığını düşünün. Yeni bir anahtar sözcük vardır: `foreach` Visual C# ve `For Each` Visual Basic. (Satırlardan biri bilerek derleme dışı bırakılmıştır; bunun nedeni bu yordamın sonunda açıklanmaktadır.)
 
      [!code-csharp[VbExpressTutorial4Step2_3_4#2](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/cs/form1.cs#2)]
      [!code-vb[VbExpressTutorial4Step2_3_4#2](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/vb/form1.vb#2)]
 
-2. Önceki adımda gösterildiği gibi `AssignIconsToSquares()` yöntemini ekleyin. [2. Adım: rastgele bir nesne ve simge listesi ekleme](../ide/step-2-add-a-random-object-and-a-list-of-icons.md)bölümünde eklediğiniz kodun hemen altına yerleştirebilirsiniz.
+2. Yöntemi, `AssignIconsToSquares()` önceki adımda gösterildiği gibi ekleyin. [2. Adım: rastgele bir nesne ve simge listesi ekleme](../ide/step-2-add-a-random-object-and-a-list-of-icons.md)bölümünde eklediğiniz kodun hemen altına yerleştirebilirsiniz.
 
-     Daha önce belirtildiği gibi, `AssignIconsToSquares()` yönteminde yeni bir şey vardır: görselde C# bir `foreach` döngüsü ve Visual Basic `For Each`. @No__t_0 döngüsünü aynı eylemi birden çok kez yapmak istediğiniz zaman kullanabilirsiniz. Bu durumda, aşağıdaki kod ile açıklandığı gibi, TableLayoutPanel denetiminizdeki her öğe için aynı deyimleri yürütmek istiyorsunuz. İlk satır, her denetimi bir kerede depolayan `control` adlı bir değişken oluşturur ve bu denetim, bu denetimde yürütülen Döngülerdeki deyimler vardır.
+     Daha önce belirtildiği gibi, `AssignIconsToSquares()` yöntetiğiniz yeni bir şey vardır: `foreach` Visual C# ve Visual Basic bir döngü `For Each` . Bir `For Each` döngüyü, aynı eylemi birden çok kez yapmak istediğiniz zaman kullanabilirsiniz. Bu durumda, aşağıdaki kod ile açıklandığı gibi, TableLayoutPanel denetiminizdeki her öğe için aynı deyimleri yürütmek istiyorsunuz. İlk satır, `control` her denetimi bir kez depolayan adlı bir değişken oluşturur ve bu denetim, üzerinde yürütülen deyimlerdeki deyimler vardır.
 
      [!code-csharp[VbExpressTutorial4Step2_3_4#14](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/cs/form1.cs#14)]
      [!code-vb[VbExpressTutorial4Step2_3_4#14](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/vb/form1.vb#14)]
@@ -38,22 +38,22 @@ Simgeler her oyunda aynı hücrelerde gösterilirse, oyun pek de zorlu olmaz. Bu
     > [!NOTE]
     > "iconLabel" (simge etiketi) ve "control" (denetim) kullanılmasının nedeni bu adların açıklayıcı olmasıdır. Bu adların yerine istediğiniz adları kullanabilirsiniz; ilgili adı döngüdeki her bir deyimde de değiştirdiğiniz sürece kod tamamen aynı şekilde çalışacaktır.
 
-     @No__t_0 yöntemi TableLayoutPanel içindeki her etiket denetimi boyunca yinelenir ve her biri için aynı deyimleri yürütür. Bu deyimler [Adım 2: rastgele bir nesne ve simge listesi ekleme](../ide/step-2-add-a-random-object-and-a-list-of-icons.md)bölümünde eklediğiniz listeden rastgele bir simge çeker. (Listeye her simgeden iki tane eklemenizin nedeni budur; böylece rasgele etiket denetimlerine atanmış bir çift simge olur.)
+     `AssignIconsToSquares()`Yöntemi TableLayoutPanel içindeki her etiket denetimi boyunca yinelenir ve her biri için aynı deyimleri yürütür. Bu deyimler [Adım 2: rastgele bir nesne ve simge listesi ekleme](../ide/step-2-add-a-random-object-and-a-list-of-icons.md)bölümünde eklediğiniz listeden rastgele bir simge çeker. (Listeye her simgeden iki tane eklemenizin nedeni budur; böylece rasgele etiket denetimlerine atanmış bir çift simge olur.)
 
-     @No__t_0 veya `For Each` döngüsü içinde çalışan koda daha yakından bakın. Bu kod burada tekrar üretilmektedir.
+     Veya döngüsünün içinde çalışan koda daha yakından bakın `foreach` `For Each` . Bu kod burada tekrar üretilmektedir.
 
      [!code-csharp[VbExpressTutorial4Step2_3_4#16](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/cs/form1.cs#16)]
      [!code-vb[VbExpressTutorial4Step2_3_4#16](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/vb/form1.vb#16)]
 
-     İlk satır `control` değişkenini `iconLabel` adlı bir etikete dönüştürür. Bundan sonraki satır, dönüştürmenin çalıştığından emin olmak için kontrol eden bir `if` deyimidir. Dönüştürme işe alıyorsa, `if` deyimindeki deyimler çalıştırılır. (Önceki öğreticilerden hatırlayabileceğiniz gibi, belirttiğiniz herhangi bir koşulu değerlendirmek için `if` deyimleri kullanılır.) @No__t_1 deyimindeki ilk satır, simgeler listesindeki öğelerden birine karşılık gelen rastgele bir sayı içeren `randomNumber` adlı bir değişken oluşturur. Bunu yapmak için, daha önce oluşturduğunuz `Random` nesnesinin `Next` yöntemini kullanır. @No__t_0 yöntemi rastgele sayı döndürür. Bu satır ayrıca rastgele sayının seçim aralığını belirlemek için `icons` listesinin `Count` özelliğini kullanır. Sonraki satır, bir simge listesi öğelerinden birini etiketinin `Text` özelliğine atar. Derleme dışı bırakılan satır bu konunun sonunda açıklanmaktadır. Son olarak, `if` deyimindeki son satır, forma eklenmiş olan simgeyi listeden kaldırır.
+     İlk satır, `control` değişkenini adlı bir etikete dönüştürür `iconLabel` . Bundan sonraki satır, `if` dönüştürmenin çalıştığından emin olmak için denetleyen bir ifadedir. Dönüştürme işe alıyorsa, `if` deyimindeki deyimler çalışır. (Önceki öğreticilerden hatırlayabileceğiniz gibi, `if` ifade belirttiğiniz koşulu değerlendirmek için kullanılır.) Deyimdeki ilk satır, `if` `randomNumber` simgeler listesindeki öğelerden birine karşılık gelen rastgele bir sayı içeren adlı bir değişken oluşturur. Bunu yapmak için, `Next` `Random` daha önce oluşturduğunuz nesnenin yöntemini kullanır. `Next`Yöntemi rastgele sayı döndürür. Bu satır, `Count` `icons` rastgele sayının seçim aralığını belirlemek için listenin özelliğini de kullanır. Sonraki satır, simge listesi öğelerinden birini `Text` etiketin özelliğine atar. Derleme dışı bırakılan satır bu konunun sonunda açıklanmaktadır. Son olarak, deyimindeki son satır, `if` forma eklenmiş olan simgeyi listeden kaldırır.
 
      Kodun belirli bir bölümünün ne işe yaradığından emin olamadığınızda, fare işaretçisini kod öğesinin üzerine getirip ortaya çıkan araç ipucunu gözden geçirebileceğinizi unutmayın. Ayrıca, Visual Studio hata ayıklayıcısını kullanarak, program çalışırken kodun her satırını adım adım geçebilirsiniz. Bkz. [nasıl yapılır: Visual Studio 'Da hata ayıklayıcıyla adımla](https://msdn.microsoft.com/vstudio/ee672313.aspx) veya daha fazla bilgi Için [hata ayıklayıcı Ile kod arasında geziniyor](../debugger/navigating-through-code-with-the-debugger.md) .
 
-3. Oyun panosunu simgelerle doldurmanız için, program başladıktan hemen sonra `AssignIconsToSquares()` yöntemini çağırmanız gerekir. Visual C#kullanıyorsanız, `Form1`*oluşturucusunda*`InitializeComponent()` yöntemine yapılan çağrının hemen altına bir ifade ekleyin, böylece formunuz görüntülenmeden önce kendisini ayarlamak için yeni yönteminizi çağırır. Oluşturucular, sınıf veya yapı gibi yeni bir nesne oluşturduğunuzda çağrılır. Daha fazla bilgi için bkz. [oluşturucular (C# programlama kılavuzu)](https://msdn.microsoft.com/library/ace5hbzh.aspx) veya Visual Basic [oluşturucular ve Yıkıcılar kullanma](https://msdn.microsoft.com/library/2z08e49e%28v=vs.90%29.aspx) .
+3. Oyun panosunu simgelerle doldurmanız için `AssignIconsToSquares()` Program başlatıldıktan hemen sonra yöntemi çağırmanız gerekir. Visual C# kullanıyorsanız, yalnızca kurucudaki yöntemine yapılan çağrının altına bir ifade ekleyin `InitializeComponent()` `Form1` *constructor*, böylece formunuz görüntülenmeden önce kendisini ayarlamak için yeni yönteminizi çağırır. Oluşturucular, sınıf veya yapı gibi yeni bir nesne oluşturduğunuzda çağrılır. Daha fazla bilgi için bkz. [oluşturucular (C# Programlama Kılavuzu)](https://msdn.microsoft.com/library/ace5hbzh.aspx) veya Visual Basic [oluşturucular ve Yıkıcılar kullanma](https://msdn.microsoft.com/library/2z08e49e%28v=vs.90%29.aspx) .
 
      [!code-csharp[VbExpressTutorial4Step2_3_4#13](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/cs/form1.cs#13)]
 
-     Visual Basic için, `AssignIconsToSquares()` yöntemi çağrısını `Form1_Load` yöntemine ekleyerek kodun aşağıdaki gibi görünmesini sağlayın.
+     Visual Basic için yöntemine `AssignIconsToSquares()` yöntem çağrısını ekleyerek `Form1_Load` kodun aşağıdaki gibi görünmesini sağlayın.
 
     ```vb
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -67,12 +67,12 @@ Simgeler her oyunda aynı hücrelerde gösterilirse, oyun pek de zorlu olmaz. Bu
 
      ![Rastgele simgelerle eşleşen oyun](../ide/media/express-tut4step3.png "Express_Tut4Step3") Rastgele simgelerle eşleşen oyun
 
-     Henüz gizlemediğiniz için simgeler şimdilik görünmektedir. Bunları Player 'dan gizlemek için, her etiketin `Forecolor` özelliğini `BackColor` özelliğiyle aynı renge ayarlayabilirsiniz.
+     Henüz gizlemediğiniz için simgeler şimdilik görünmektedir. Bunları Player 'dan gizlemek için, her etiketin `Forecolor` özelliğini özelliğiyle aynı renge ayarlayabilirsiniz `BackColor` .
 
     > [!TIP]
-    > Etiketler gibi denetimleri gizlemek için başka bir yöntem de **Visible** özelliğini `False` olarak ayarlamanıza olanak sağlar.
+    > Etiketler gibi denetimleri gizlemek için başka bir yöntem de **Visible** özelliğini olarak ayarlanmıştır `False` .
 
-6. Simgeleri gizlemek için programı durdurun ve `For Each` döngüsünün içinde açıklamalı kod satırının açıklama işaretlerini kaldırın.
+6. Simgeleri gizlemek için programı durdurun ve döngü içindeki açıklamalı kod satırının açıklama işaretlerini kaldırın `For Each` .
 
      [!code-csharp[VbExpressTutorial4Step2_3_4#15](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/cs/form1.cs#15)]
      [!code-vb[VbExpressTutorial4Step2_3_4#15](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/vb/form1.vb#15)]

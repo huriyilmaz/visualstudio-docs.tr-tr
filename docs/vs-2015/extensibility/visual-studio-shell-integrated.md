@@ -12,10 +12,10 @@ caps.latest.revision: 26
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 907b71d82a3c630bedc48209e735d9cf817432ad
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543162"
 ---
 # <a name="visual-studio-shell-integrated"></a>Visual Studio Kabuğu (Tümleşik)
@@ -32,12 +32,12 @@ Visual Studio tümleşik kabuğu, tümleşik geliştirme ortamı (IDE), hata ay�
   
 ## <a name="features-in-the-integrated-shell"></a>Tümleşik kabukta Özellikler  
   
-|Özellik alanı|Özellik|  
+|Özellik alanı|Öne çıkan özelliği|  
 |-|-|  
 |Dil Desteği|-   Hiçbiri|  
 |IDE|<ul><li>Ayarlar<br /><br /> <ul><li>Ayarları oluştur</li><li>Ayarları içeri ve dışarı aktarma</li><li>Ayarları Sıfırla</li></ul></li><li>**Araç kutusu** tümleştirmesi</li><li>**Görev listesi** tümleştirme</li><li>Yardım tümleştirmesi</li><li>**Seçenekler** iletişim kutusu</li><li>Yazı tipleri ve renkler Yönetimi</li><li>**Çıkış** penceresi</li><li>**Komut** penceresi</li><li>Pencere yönetimi</li><li>Komutlar, menüler ve tuş bağlamaları</li><li>Etki alanına özgü dil (DSL) çalışma zamanı</li></ul>|  
 |Proje sistemi ve proje türleri|-Çözümler ve çözüm klasörleri<br />-Çözüm Yapılandırma Yöneticisi<br />-Öğe yönetimi<br />-Tek projeli ve çoklu proje çözümleri<br />-Uygulama Tasarımcısı (Basitleştirilmiş proje özellikleri)<br />-Web başvurusu Ekle<br />-Hizmet Başvurusu Ekle<br />-Tek projem<br />-Web sitesi proje türleri<br />-Web uygulaması projeleri|  
-|Yapı|-IDE 'de özel derleme adımları<br />-Fikri mülkiyet (IP) koruması için ön derleme<br />-Kod imzalama<br />     MSBuild|  
+|Oluşturma|-IDE 'de özel derleme adımları<br />-Fikri mülkiyet (IP) koruması için ön derleme<br />-Kod imzalama<br />     MSBuild|  
 |Düzenleyici|-Kod gözatma araçları (Birleşik bul, kaynak tanımı, devralma)<br />-Kod gezintisi<br />-IntelliSense<br />-SmartTags<br />-Yeniden düzenleme<br />-Düzgün listeleme<br />-IntelliSense filtreleme<br />-   **Kod tanımı** penceresi|  
 |Tasarımcı|-Windows Presentation Foundation Tasarımcısı<br />-Windows Form Tasarımcısı<br />-Web Tasarımcısı ve HTML Düzenleyicisi|  
 |Veriler|-   **Sunucu Gezgini** (Basitleştirilmiş: yalnızca veri). Bkz. Note 1.<br />-   **Veri kaynakları** penceresi<br />-Tam veri denetimleri kümesi<br />-XML Düzenleyicisi<br />-Yerel veri kaynağına veri bağlama (. MDF veya. TATIL<br />-Nesneye veri bağlama<br />-Web hizmetine veri bağlama<br />-Yerel veritabanı sunucusuna veri bağlama<br />-Uzak veritabanı sunucusuna veri bağlama<br />-Uzak veriler için DDL araçları<br />-   **Sunucu Gezgini** genişletilebilirliği ( [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] örnekler)|  

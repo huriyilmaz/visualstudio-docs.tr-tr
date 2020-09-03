@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f5e52bf174e5a41d79fa23bfca39121db668e40e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72643852"
 ---
 # <a name="statement-completion-for-identifiers"></a>Tanımlayıcılar İçin İfade Tamamlama
@@ -50,9 +50,9 @@ JavaScript, değişken bildirimleri için açık yazmaya izin vermez. Sonuç ola
 
 - Bir nesne, olaya yanıt olarak çağrılan bir işlevdir. Tasarım zamanında, IntelliSense altyapısı bu durumda kullanılan nesnelerin türünü belirleyemez.
 
-   IntelliSense altyapısı, genellikle etkin belgedeki olayın `addEventListener` kullanımı aracılığıyla olayın çağrılması gerektiğini tespit edebilir, daha doğru IntelliSense bilgileri sağlanır.
+   IntelliSense altyapısı, genellikle etkin belgedeki olay için kullanılması aracılığıyla olayın çağrılması gerektiğini tespit edebilir `addEventListener` , daha doğru IntelliSense bilgileri sağlanır.
 
-  IntelliSense bir nesneyi tanımlayamıyorsa, IntelliSense altyapısı tamamlama listesini etkin belgede mevcut olan adlandırılmış varlıklar veya tanımlayıcılarla doldurur. Tamamlanma listesi bu tanımlayıcıları içerdiğinde, bunların yanında bilgi simgeleri görünür. Ayrıca, her tanımlayıcı için bir araç ipucu, ifadenin bilinmediğini gösterir. Aşağıdaki çizimde, nesne ve özellikleri tanımsız olduğundan belirlenemediği `light` türünde bir nesne için ifade tamamlama seçenekleri gösterilmektedir. Ancak, `intensity` özelliği, `illuminate` işlevinde kullanıldığı için tanımlayıcı listesinde kullanılabilir.
+  IntelliSense bir nesneyi tanımlayamıyorsa, IntelliSense altyapısı tamamlama listesini etkin belgede mevcut olan adlandırılmış varlıklar veya tanımlayıcılarla doldurur. Tamamlanma listesi bu tanımlayıcıları içerdiğinde, bunların yanında bilgi simgeleri görünür. Ayrıca, her tanımlayıcı için bir araç ipucu, ifadenin bilinmediğini gösterir. Aşağıdaki çizimde, `light` nesne ve özellikleri tanımsız olduğundan belirlenemediği bir nesne için ifade tamamlama seçenekleri gösterilmektedir. Ancak, `intensity` özelliği, işlevinde kullanıldığı için tanımlayıcı listesinde kullanılabilir `illuminate` .
 
   **Belirlenemediğini belirten bir nesne için tamamlama seçenekleri**
 

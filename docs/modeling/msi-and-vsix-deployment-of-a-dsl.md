@@ -8,16 +8,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6d4de8d7560cb43115a30e29516e0e88b4d02d21
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542622"
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL'nin MSI ve VSIX Dağıtımı
 Kendi bilgisayarınıza veya diğer bilgisayarlara, etki alanına özgü bir dil yükleyebilirsiniz. Visual Studio 'Nun hedef bilgisayarda zaten yüklü olması gerekir.
 
-## <a name="choosing-between-vsix-and-msi-deployment"></a><a name="which"></a>VSıX ve MSI dağıtımı arasında seçim yapma
+## <a name="choosing-between-vsix-and-msi-deployment"></a><a name="which"></a> VSıX ve MSI dağıtımı arasında seçim yapma
  Etki alanına özgü dil dağıtmanın iki yöntemi vardır:
 
 |Yöntem|Yararları|
@@ -25,7 +25,7 @@ Kendi bilgisayarınıza veya diğer bilgisayarlara, etki alanına özgü bir dil
 |VSX (Visual Studio uzantısı)|Dağıtım çok kolay: **. vsix** dosyasını DslPackage projesinden kopyalayın ve yürütün.<br /><br /> Daha fazla bilgi için bkz. [VSX kullanarak DSL yükleme ve kaldırma](#Installing).|
 |MSI (yükleyici dosyası)|-Kullanıcının bir DSL dosyasına çift tıklayarak Visual Studio 'Yu açmasına izin verir.<br />-Bir simgeyi hedef bilgisayardaki DSL dosyası türüyle ilişkilendirir.<br />-Bir XSD (XML Şeması) DSL dosya türüyle ilişkilendirir. Bu, dosya Visual Studio 'ya yüklendiğinde uyarıları önler.<br /><br /> MSI oluşturmak için çözümünüze bir kurulum projesi eklemeniz gerekir.<br /><br /> Daha fazla bilgi için bkz. [MSI dosyası kullanarak DSL dağıtma](#msi).|
 
-## <a name="install-and-uninstall-a-dsl-by-using-the-vsx"></a><a name="Installing"></a>VSX kullanarak DSL yükleme ve kaldırma
+## <a name="install-and-uninstall-a-dsl-by-using-the-vsx"></a><a name="Installing"></a> VSX kullanarak DSL yükleme ve kaldırma
 
 Bu yöntem tarafından DSL yüklendiğinde, Kullanıcı Visual Studio içinden bir DSL dosyası açabilir, ancak dosya Windows Gezgini ' nden açılamaz.
 
@@ -63,7 +63,7 @@ Bu yöntem tarafından DSL yüklendiğinde, Kullanıcı Visual Studio içinden b
 
    *LocalAppData* **\Microsoft\visualstudio\10.0\Extensions**
 
-## <a name="deploying-a-dsl-in-an-msi"></a><a name="msi"></a>MSI içinde DSL dağıtma
+## <a name="deploying-a-dsl-in-an-msi"></a><a name="msi"></a> MSI içinde DSL dağıtma
  DSL 'niz için bir MSI (Windows Installer) dosyası tanımlayarak, kullanıcıların Windows Gezgini 'nden DSL dosyalarını açmasına izin verebilirsiniz. Ayrıca, dosya adı uzantınızla bir simge ve kısa açıklama ilişkilendirebilirsiniz. Buna ek olarak, MSI DSL dosyalarını doğrulamak için kullanılabilen bir XSD 'yi de yükleyebilir. İsterseniz, diğer bileşenleri MSI 'ye aynı anda yüklenecek şekilde ekleyebilirsiniz.
 
  MSI dosyaları ve diğer dağıtım seçenekleri hakkında daha fazla bilgi için bkz. [uygulamaları, hizmetleri ve bileşenleri dağıtma](../deployment/deploying-applications-services-and-components.md).
@@ -134,4 +134,4 @@ Bu yöntem tarafından DSL yüklendiğinde, Kullanıcı Visual Studio içinden b
 
 2. DSL 'yi kaldırın.
 
-3. Visual Studio'yu yeniden başlatın.
+3. Visual Studio’yu yeniden başlatın.

@@ -1,5 +1,5 @@
 ---
-title: MarkupCompilePass2 Görev | Microsoft Dokümanlar
+title: MarkupCompilePass2 görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,42 +17,42 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d18bc3638454e2a6b034cd2e35c3a158361a033e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633531"
 ---
 # <a name="markupcompilepass2-task"></a>MarkupCompilePass2 görevi
 
-Görev, <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> aynı projede başvuru türlerine başvuran XAML dosyalarında ikinci geçiş biçimlendirme derlemesi gerçekleştirir.
+<xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2>Görev, aynı projedeki türlere başvuran xaml dosyalarında ikinci geçiş biçimlendirme derlemesini gerçekleştirir.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
 | Parametre | Açıklama |
 | - | - |
-| `AlwaysCompileMarkupFilesInSeparateDomain` | İsteğe bağlı **Boolean** parametresi.<br /><br /> Görevin ayrı <xref:System.AppDomain>bir şekilde çalıştırılıp çalıştırılmayacağını belirtir. Bu parametre **yanlış**dönerse, görev MSBuild ile aynı <xref:System.AppDomain> şekilde çalışır ve daha hızlı çalışır. Parametre **doğru**döndürürse, görev <xref:System.AppDomain> MSBuild'ten yalıtılmış bir saniyede çalışır ve daha yavaş çalışır. |
-| `AssembliesGeneratedDuringBuild` | İsteğe bağlı **String[]** parametresi.<br /><br /> Yapı işlemi sırasında değişen derlemelere yapılan başvuruları belirtir. Örneğin, Visual Studio çözümü, başka bir projenin derlenmiş çıktısını başvuran bir proje içerebilir. Bu durumda, ikinci projenin derlenmiş **çıktısı AssembliesGeneratedDuringBuild**eklenebilir.<br /><br /> Not: **DerlemelerGeneratedDuringBuild,** bir yapı çözümü tarafından oluşturulan tüm derlemeler kümesine başvurular içermelidir. |
-| `AssemblyName` | Gerekli **String** parametresi.<br /><br /> Bir proje için oluşturulan derlemenin kısa adını belirtir. Örneğin, bir proje *winexeAssembly.exe*olan bir yürütülebilir oluşturuyorsa, **AssemblyName** parametresi **WinExeAssembly**değerine sahiptir. |
-| `GeneratedBaml` | İsteğe bağlı **ITaskItem[]** çıktı parametresi.<br /><br /> XAML ikili biçiminde oluşturulan dosyaların listesini içerir. |
-| `KnownReferencePaths` | İsteğe bağlı **String[]** parametresi.<br /><br /> Yapı işlemi sırasında hiç değişmeyen derlemelere yapılan başvuruları belirtir. Genel montaj önbelleğinde (GAC) bulunan derlemeleri, bir .NET yükleme dizininde vb. içerir. |
-| `Language` | Gerekli **String** parametresi.<br /><br /> Derleyicinin desteklediği yönetilen dili belirtir. Geçerli seçenekler **C#**, **VB**, **JScript**ve **C++**'dır. |
-| `LocalizationDirectivesToLocFile` | İsteğe bağlı **String** parametresi.<br /><br /> Her kaynak XAML dosyası için yerelleştirme bilgilerinin nasıl üretileceklerini belirtir. Geçerli seçenekler **Yok**, **CommentsOnly**, ve **Tüm**. |
-| `OutputPath` | Gerekli **String** parametresi.<br /><br /> Oluşturulan XAML ikili biçim dosyalarının oluşturulduğu dizini belirtir. |
-| `OutputType` | Gerekli **String** parametresi.<br /><br /> Bir proje tarafından oluşturulan derleme türünü belirtir. Geçerli seçenekler **winexe**, **exe**, **kütüphane**ve **netmodule**vardır. |
-| `References` | İsteğe bağlı **ITaskItem[]** parametresi.<br /><br /> Dosyalardan XAML dosyalarında kullanılan türleri içeren derlemelere yapılan başvuruların listesini belirtir. Başvurulardan biri, <xref:Microsoft.Build.Tasks.Windows.GenerateTemporaryTargetAssembly> görevden önce çalıştırılması gereken görev tarafından <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> oluşturulan derlemedir. |
-| `RootNamespace` | İsteğe bağlı **String** parametresi.<br /><br /> Projenin içinde olan sınıflar için kök ad alanını belirtir. **RootNamespace,** ilgili XAML dosyası özniteliği içermiyorsa, `x:Class` yönetilen kod dosyasının varsayılan ad alanı olarak da kullanılır. |
-| `XAMLDebuggingInformation` | İsteğe bağlı **Boolean** parametresi.<br /><br /> **Doğru**olduğunda, tanılama bilgileri oluşturulur ve hata ayıklama yardımcı olmak için derlenmiş XAML dahil. |
+| `AlwaysCompileMarkupFilesInSeparateDomain` | İsteğe bağlı **Boolean** parametresi.<br /><br /> Görevin ayrı ayrı çalıştırılıp çalıştırılmayacağını belirtir <xref:System.AppDomain> . Bu parametre **false**döndürürse, görev MSBuild ile aynı şekilde çalışır <xref:System.AppDomain> ve daha hızlı çalışır. Parametre **true**döndürürse, görev, <xref:System.AppDomain> MSBuild 'ten yalıtılmış ve daha yavaş çalışır. |
+| `AssembliesGeneratedDuringBuild` | İsteğe bağlı **dize []** parametresi.<br /><br /> Yapı işlemi sırasında değişen derlemelere yönelik başvuruları belirtir. Örneğin, bir Visual Studio çözümü başka bir projenin derlenmiş çıktısına başvuran bir proje içerebilir. Bu durumda, ikinci projenin derlenmiş çıktısı **AssembliesGeneratedDuringBuild**' e eklenebilir.<br /><br /> Note: **AssembliesGeneratedDuringBuild** , derleme çözümü tarafından oluşturulan derlemelerin tamamına yönelik başvuruları içermelidir. |
+| `AssemblyName` | Gerekli **dize** parametresi.<br /><br /> Bir proje için oluşturulan derlemenin kısa adını belirtir. Örneğin, bir proje adı *WinExeAssembly.exe*bir yürütülebilir dosya üretiyorsa, **AssemblyName** parametresinin değeri **WinExeAssembly**olur. |
+| `GeneratedBaml` | İsteğe bağlı **ıtaskitem []** çıkış parametresi.<br /><br /> XAML ikili biçimindeki oluşturulan dosyaların listesini içerir. |
+| `KnownReferencePaths` | İsteğe bağlı **dize []** parametresi.<br /><br /> Yapı işlemi sırasında hiçbir değişiklik olmayan derlemeler için başvuruları belirtir. Genel derleme önbelleğinde (GAC), bir .NET yükleme dizininde bulunan derlemeler ve bu şekilde devam eder. |
+| `Language` | Gerekli **dize** parametresi.<br /><br /> Derleyicinin desteklediği yönetilen dili belirtir. Geçerli seçenekler **C#**, **vb**, **JScript**ve **C++**' dir. |
+| `LocalizationDirectivesToLocFile` | İsteğe bağlı **dize** parametresi.<br /><br /> Her kaynak XAML dosyası için yerelleştirme bilgilerinin nasıl oluşturulacağını belirtir. Geçerli seçenekler None, **CommentsOnly**ve **All** **'tur**. |
+| `OutputPath` | Gerekli **dize** parametresi.<br /><br /> Oluşturulan XAML ikili biçim dosyalarının oluşturulduğu dizini belirtir. |
+| `OutputType` | Gerekli **dize** parametresi.<br /><br /> Bir proje tarafından oluşturulan derlemenin türünü belirtir. Geçerli seçenekler **winexe**, **exe**, **Library**ve **netmodule**' dir. |
+| `References` | İsteğe bağlı **ıtaskitem []** parametresi.<br /><br /> XAML dosyalarında kullanılan türleri içeren derlemelere ait başvuruların listesini belirtir. Bir başvuru, görev tarafından oluşturulan ve <xref:Microsoft.Build.Tasks.Windows.GenerateTemporaryTargetAssembly> görevden önce çalıştırılması gereken derlemeye yönelik bir başvurudur <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> . |
+| `RootNamespace` | İsteğe bağlı **dize** parametresi.<br /><br /> Projenin içindeki sınıfların kök ad alanını belirtir. **RootNamespace** , KARŞıLıK gelen xaml dosyası özniteliğini içermiyorsa oluşturulan bir yönetilen kod dosyasının varsayılan ad alanı olarak da kullanılır `x:Class` . |
+| `XAMLDebuggingInformation` | İsteğe bağlı **Boolean** parametresi.<br /><br /> **Doğru**olduğunda, hata ayıklamaya yardımcı olması için tanılama bilgileri OLUŞTURULUP derlenmiş xaml 'e eklenir. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-**MarkupCompilePass2'yi**çalıştırmadan önce, biçimlendirme derleme geçişi ertelenmiş olan XAML dosyaları tarafından kullanılan türleri içeren geçici bir derleme oluşturmanız gerekir. **GenerateTemporaryTargetAssembly** görevini çalıştırarak geçici derlemeyi oluşturursunuz.
+**MarkupCompilePass2**çalıştırmadan önce, biçimlendirme derleme geçişinin ERTELENMESI olan XAML dosyaları tarafından kullanılan türleri içeren geçici bir derleme oluşturmanız gerekir. **GenerateTemporaryTargetAssembly** görevini çalıştırarak geçici derlemeyi oluşturabilirsiniz.
 
-Oluşturulan geçici derlemeye <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> bir başvuru, ilk biçimlendirme derleme geçişinde derlemesi ertelenen XAML dosyalarının artık ikili biçime derlenmesine izin vererek çalıştığında sağlanır.
+Oluşturulan geçici derlemeye bir başvuru <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> , çalıştırıldığında, derleme sırasında ilk biçimlendirme derleme geçişinde ERTELENMIŞ XAML dosyaları, artık ikili biçime derlenmeye sağlanır.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, ikinci <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> bir geçiş derlemesi gerçekleştirmek için görevin nasıl kullanılacağı gösterilmektedir.
+Aşağıdaki örnek, <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> ikinci bir pass derlemesi gerçekleştirmek için görevinin nasıl kullanılacağını gösterir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -76,5 +76,5 @@ Aşağıdaki örnekte, ikinci <xref:Microsoft.Build.Tasks.Windows.MarkupCompileP
 - [WPF MSBuild görev başvurusu](../msbuild/wpf-msbuild-task-reference.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
 - [MSBuild görev başvurusu](../msbuild/msbuild-task-reference.md)
-- [WPF uygulaması (WPF) oluşturma](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+- [WPF uygulaması oluşturma (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
 - [WPF XAML tarayıcı uygulamalarına genel bakış](/dotnet/framework/wpf/app-development/wpf-xaml-browser-applications-overview)

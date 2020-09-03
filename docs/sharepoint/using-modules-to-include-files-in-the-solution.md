@@ -15,9 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 778bbc9cff2d7853628edbb5be6466acc55d9ab8
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015820"
 ---
 # <a name="use-modules-to-include-files-in-the-solution"></a>Çözümdeki dosyaları dahil etmek için modülleri kullanma
@@ -40,7 +41,7 @@ ms.locfileid: "86015820"
 
  Yeni oluşturulan modüller aşağıdaki varsayılan dosyaları içerir:
 
-|Dosya Adı|Description|
+|Dosya Adı|Açıklama|
 |---------------|-----------------|
 |*Elements.xml*|Modülün tanım dosyası.|
 |*Sample.txt*|Modüldeki bir dosyaya örnek olarak hizmet veren bir yer tutucu dosyası.|

@@ -51,7 +51,7 @@ Bu izlenecek yol, verileri bir formdan diğerine geçirmek için adım adım yö
 
 - Formlar arasında veri geçirme.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için şunlar gerekir:
 
 - Northwind örnek veritabanına erişim.

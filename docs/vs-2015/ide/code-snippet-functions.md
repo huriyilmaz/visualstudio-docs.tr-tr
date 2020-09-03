@@ -14,28 +14,28 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 92533b90e6a2da9f29a67d13c6e0eee2c31dbcfe
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72620225"
 ---
 # <a name="code-snippet-functions"></a>Kod Parçacığı İşlevleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_0 kod parçacıkları ile kullanabileceğiniz üç işlev mevcuttur. İşlevler, kod parçacığının [Function](https://msdn.microsoft.com/572c5549-5821-4e15-8ecd-0fa86c1c65df) öğesinde belirtilir. Kod parçacıkları oluşturma hakkında daha fazla bilgi için bkz. [kod parçacıkları](../ide/code-snippets.md).
+Kod parçacıkları ile kullanabileceğiniz üç işlev mevcuttur [!INCLUDE[csprcs](../includes/csprcs-md.md)] . İşlevler, kod parçacığının [Function](https://msdn.microsoft.com/572c5549-5821-4e15-8ecd-0fa86c1c65df) öğesinde belirtilir. Kod parçacıkları oluşturma hakkında daha fazla bilgi için bkz. [kod parçacıkları](../ide/code-snippets.md).
 
 ## <a name="functions"></a>İşlevler
- Aşağıdaki tabloda, kod parçacıkları içinde `Function` öğesiyle birlikte kullanılabilecek işlevler açıklanmaktadır.
+ Aşağıdaki tabloda, `Function` kod parçacıkları içindeki öğesiyle birlikte kullanılabilecek işlevler açıklanmaktadır.
 
 |İşlev|Açıklama|Dil|
 |--------------|-----------------|--------------|
-|`GenerateSwitchCases(` `EnumerationLiteral` `)`|@No__t_0 parametresi tarafından belirtilen numaralandırma üyeleri için bir switch deyimi ve Case deyimleri kümesi oluşturur. @No__t_0 parametresi bir sabit listesi sabit değeri ya da bir numaralandırma türü için başvuru olmalıdır.|[!INCLUDE[csprcs](../includes/csprcs-md.md)]|
+|`GenerateSwitchCases(` `EnumerationLiteral` `)`|Parametresi tarafından belirtilen numaralandırma üyeleri için bir switch deyimi ve Case deyimleri kümesi oluşturur `EnumerationLiteral` . `EnumerationLiteral`Parametre, sabit listesi sabit değerine veya bir numaralandırma türüne başvuru olmalıdır.|[!INCLUDE[csprcs](../includes/csprcs-md.md)]|
 |`ClassName()`|Eklenen kod parçacığını içeren sınıfın adını döndürür.|[!INCLUDE[csprcs](../includes/csprcs-md.md)]|
 |`SimpleTypeName(` `TypeName` `)`|*TypeName* parametresini, kod parçacığının çağrıldığı bağlamdaki en basit biçimine düşürür.|[!INCLUDE[csprcs](../includes/csprcs-md.md)]|
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, `GenerateSwitchCases` işlevinin nasıl kullanılacağını göstermektedir. Bu kod parçacığı eklendiğinde ve `$switch_on$` değişmez değerine bir numaralandırma girildiğinde, `$cases$` değişmez değeri, Numaralandırmadaki her değer için bir `case` açıklaması oluşturur.
+ Aşağıdaki örnek, işlevinin nasıl kullanılacağını gösterir `GenerateSwitchCases` . Bu kod parçacığı eklendiğinde ve sabit listesine bir sabit listesi girildiğinde `$switch_on$` , `$cases$` sabit `case` listesi Numaralandırmadaki her değer için bir ifade oluşturur.
 
 ```
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
@@ -76,7 +76,7 @@ ms.locfileid: "72620225"
 ```
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, `ClassName` işlevinin nasıl kullanılacağını göstermektedir. Bu kod parçacığı eklendiğinde `$classname$` değişmez değeri, kod dosyasındaki bu konumdaki kapsayan sınıfın adı ile değiştirilmiştir.
+ Aşağıdaki örnek, işlevinin nasıl kullanılacağını gösterir `ClassName` . Bu kod parçacığı eklendiğinde, `$classname$` değişmez değer, kod dosyasındaki bu konumdaki kapsayan sınıfın adı ile değiştirilmiştir.
 
 ```
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
@@ -122,7 +122,7 @@ ms.locfileid: "72620225"
 ```
 
 ## <a name="example"></a>Örnek
- Bu örnek, `SimpleTypeName` işlevinin nasıl kullanılacağını gösterir. Bu kod parçacığı bir kod dosyasına eklendiğinde `$SystemConsole$` değişmez değeri, parçacığın çağrıldığı bağlamdaki <xref:System.Console> türünün en basit biçimiyle yerine geçer.
+ Bu örnek, işlevinin nasıl kullanılacağını gösterir `SimpleTypeName` . Bu kod parçacığı bir kod dosyasına eklendiğinde, `$SystemConsole$` değişmez değer, <xref:System.Console> parçacığın çağrıldığı bağlamdaki türün en basit biçimiyle yerine geçer.
 
 ```
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">

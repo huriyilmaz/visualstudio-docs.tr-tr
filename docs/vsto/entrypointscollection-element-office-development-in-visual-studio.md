@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: ffa3c76f0f1afa0c9c445cfaf6f5f92484a73ba7
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543565"
 ---
 # <a name="ltentrypointscollectiongt-element-office-development-in-visual-studio"></a>&lt;entryPointsCollection &gt; öğesi (Visual Studio 'Da Office geliştirme)
@@ -46,7 +46,7 @@ ms.locfileid: "85543565"
 
  `entryPointsCollection`Öğesinde hiç öznitelik yok.
 
- `entryPointsCollection`Aşağıdaki öğelere sahiptir.
+ `entryPointsCollection` Aşağıdaki öğelere sahiptir.
 
 ### <a name="entrypoints"></a>entryPoints
  Gereklidir. `entryPoints` `vstav3` Ad alanındaki öğesinin rolü [&#60;entryPoints&#62; öğesi &#40;Visual Studio 'da Office geliştirme&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md)' nde tanımlanmıştır.

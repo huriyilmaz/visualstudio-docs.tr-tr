@@ -16,9 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 5e5221d1cce065a352051ca700cf0fc5ef4ae843
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015634"
 ---
 # <a name="walkthrough-extend-server-explorer-to-display-web-parts"></a>İzlenecek yol: Sunucu Gezgini Web bölümlerini görüntüleyecek şekilde genişletme
@@ -41,7 +42,7 @@ ms.locfileid: "86015634"
 > [!NOTE]
 > Bu izlenecek yolun sunucu nesne modeli yerine SharePoint için istemci nesne modelini kullanan alternatif bir sürümü için, bkz. [Izlenecek yol: SharePoint istemci nesne modelini bir Sunucu Gezgini uzantısında çağırma](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yolu tamamlamak için geliştirme bilgisayarında aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Desteklenen Windows, SharePoint ve Visual Studio sürümleri.
@@ -92,7 +93,7 @@ ms.locfileid: "86015634"
 
 4. Proje şablonları listesinde, **sınıf kitaplığı**' nı seçin, projeyi **WebPartNodeExtension**olarak adlandırın ve **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]çözüme bir **WebPartNodeExtension** projesi ekler ve varsayılan Class1 kod dosyasını açar.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] çözüme bir **WebPartNodeExtension** projesi ekler ve varsayılan Class1 kod dosyasını açar.
 
 5. Class1 kod dosyasını projeden silin.
 
@@ -106,7 +107,7 @@ ms.locfileid: "86015634"
 
 4. Proje şablonları listesinde, **sınıf kitaplığı**' nı seçin, projeyi **WebPartCommands**olarak adlandırın ve **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]çözüme bir **WebPartCommands** projesi ekler ve varsayılan Class1 kod dosyasını açar.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] çözüme bir **WebPartCommands** projesi ekler ve varsayılan Class1 kod dosyasını açar.
 
 5. Class1 kod dosyasını projeden silin.
 
@@ -153,7 +154,7 @@ ms.locfileid: "86015634"
 
 4. **Ekle** düğmesinin yanındaki oku seçin ve açılan menüden **bağlantı olarak ekle** ' yi seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]kod dosyalarını, bağlantı olarak WebPartCommands projesine ekler. Sonuç olarak, kod dosyaları WebPartNodeExtension projesinde bulunur, ancak dosyalardaki kod de WebPartCommands projesinde derlenir.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] kod dosyalarını, bağlantı olarak WebPartCommands projesine ekler. Sonuç olarak, kod dosyaları WebPartNodeExtension projesinde bulunur, ancak dosyalardaki kod de WebPartCommands projesinde derlenir.
 
 5. **WebPartCommands** projesinin kısayol menüsünü yeniden açın ve **Başvuru Ekle**' yi seçin.
 
@@ -182,7 +183,7 @@ ms.locfileid: "86015634"
 
 3. **Kaynaklar** sekmesini seçin ve ardından **Bu proje varsayılan bir kaynak dosyası içermez öğesini seçin. Bir bağlantı oluşturmak için buraya tıklayın** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]bir kaynak dosyası oluşturur ve tasarımcıda açar.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bir kaynak dosyası oluşturur ve tasarımcıda açar.
 
 4. Tasarımcının üst kısmında, **Kaynak Ekle** menü komutunun yanındaki oku seçin ve açılan menüden **Yeni simge Ekle** ' yi seçin.
 

@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 07592247e0afb870f3c4774c6f2023a6e8141cd1
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542746"
 ---
 # <a name="customize-file-storage-and-xml-serialization"></a>Dosya Depolama ve XML Serileştirmeyi Özelleştirme
@@ -79,7 +79,7 @@ Bu model kaydedildi ve sonra XML metin düzenleyicisinde yeniden açıldı:
 
 Serileştirilmiş model hakkında aşağıdaki noktalara dikkat edin:
 
-- Her XML düğümü, bir etki alanı sınıf adı ile aynı bir ada sahiptir, ancak ilk harf küçük harfle yazılmalıdır. Örneğin, `familyTreeModel` ve `person` .
+- Her XML düğümü, bir etki alanı sınıf adı ile aynı bir ada sahiptir, ancak ilk harf küçük harfle yazılmalıdır. Örneğin `familyTreeModel` ve `person`.
 
 - Ad ve Doğum yılı gibi etki alanı özellikleri, XML düğümlerinde öznitelikler olarak serileştirilir. Yeniden, özellik adının ilk karakteri küçük harfe dönüştürülür.
 
@@ -142,13 +142,13 @@ Nitelikli anahtar adları, KIMLIK adlarıyla daha kolay okunabilir. Model dosyal
 
     2. Özellikler penceresi, için **bilinen ad anahtarı** ' nı belirleyin `true` .
 
-- \-veya
+- \- veya
 
      **Adlandırılmış alan sınıfı** aracını kullanarak yeni bir etki alanı sınıfı oluşturun.
 
      Bu araç, Name adlı bir etki alanı özelliğine sahip yeni bir sınıf oluşturur. **Öğesi öğesinin adı** ve bu etki alanı özelliğinin **bilinen ad anahtarı** özellikleri olarak başlatılır `true` .
 
-- \-veya
+- \- veya
 
      Etki alanı sınıfından, bilinen ad anahtarı özelliğine sahip başka bir sınıfa devralma ilişkisi oluşturun.
 
@@ -272,7 +272,7 @@ Bu öğeler, **XML serileştirme Behavior\Class verileri**altında DSL Gezgini '
 |Özel|Bu etki alanı sınıfı için kendi serileştirme ve seri durumdan çıkarma kodunuzu yazmak istiyorsanız bunu **true** olarak ayarlayın.<br /><br /> Çözümü oluşturun ve ayrıntılı yönergeleri bulmaya yönelik hataları araştırın.|
 |Alan sınıfı|Bu sınıf veri düğümünün geçerli olduğu etki alanı sınıfı. Salt okunur.|
 |Öğe Adı|Bu sınıfın öğeleri için XML düğümü adı. Varsayılan değer, etki alanı sınıf adının küçük bir sürümüdür.|
-|Bilinen ad öznitelik adı|Başvuruyu içermesi için bilinen ad öğelerinde kullanılan özniteliğin adı. Boşsa, anahtar özelliğin veya kimliğin adı kullanılır.<br /><br /> Bu örnekte, "ad" dır:`<personMoniker name="/Mike Nash"/>`|
+|Bilinen ad öznitelik adı|Başvuruyu içermesi için bilinen ad öğelerinde kullanılan özniteliğin adı. Boşsa, anahtar özelliğin veya kimliğin adı kullanılır.<br /><br /> Bu örnekte, "ad" dır:  `<personMoniker name="/Mike Nash"/>`|
 |Bilinen ad öğe adı|Bu sınıfın öğelerine başvuran bilinen adlar için kullanılan XML öğesinin adı.<br /><br /> Varsayılan değer, "bilinen ad" ile düzeltilen sınıf adının küçük harfli bir sürümüdür. Örneğin, `personMoniker`.|
 |Bilinen ad türü adı|Bu sınıfın öğelerine ait bilinen adlar için oluşturulan xsd türünün adı. XSD, **Dsl\generated Code \\ \* Schema. xsd** ' dir|
 |Seri hale getirme kimliği|True ise, öğe GUID 'SI dosyaya dahil edilir. Bu, **bilinen** bir özellik varsa ve bu sınıf için başvuru ilişkilerini tanımlarsa, bu doğru olmalıdır.|

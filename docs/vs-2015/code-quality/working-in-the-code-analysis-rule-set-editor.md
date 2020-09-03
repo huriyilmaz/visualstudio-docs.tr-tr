@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: f25cc5a5f56c20f6a1696baa5aa3e9ee5ebdf2fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72621504"
 ---
 # <a name="working-in-the-code-analysis-rule-set-editor"></a>Kod Çözümleme Kural Kümesi Düzenleyici'de Çalışma
@@ -25,9 +25,9 @@ Kod analizi kural kümesi Düzenleyicisi, özel bir kural kümesine dahil edilen
 
 |Eylem|Açıklama|
 |------------|-----------------|
-|**Warning**|**Hata listesi** penceresinde bir uyarı oluşturur.|
-|**Hata:**|**Hata listesi** penceresinde bir hata oluşturur.|
-|**Seçim**|Kuralı devre dışı bırakır.|
+|**Uyarı**|**Hata listesi** penceresinde bir uyarı oluşturur.|
+|**Hata**|**Hata listesi** penceresinde bir hata oluşturur.|
+|**Hiçbiri**|Kuralı devre dışı bırakır.|
 
  Düzenleyici, kuralları belirttiğiniz bir kural kümesi alanına göre gruplandıran bir ağaç yapısında görüntüler. Kural kümesine kural eklemek veya kuralı kaldırmak için aşağıdaki adımlardan birini veya birkaçını yapın:
 
@@ -46,7 +46,7 @@ Kod analizi kural kümesi Düzenleyicisi, özel bir kural kümesine dahil edilen
 |---------------------|-----------------|
 |**Tümünü Genişlet**|Tüm gruplardaki kuralları gösterir.|
 |**Tümünü Daralt**|Tüm gruplardaki kuralları gizler.|
-|**Gruplandırma ölçütü**|Kuralların gruplandırılacağı alanı belirtir. Kuralları gruplar olmadan göstermek için **\<None >** ' a tıklayın.|
+|**Gruplandırma ölçütü**|Kuralların gruplandırılacağı alanı belirtir. **\<None>** Kuralları gruplar olmadan göstermek için tıklayın.|
 |**Sütun Seçenekleri**|Görüntülenecek kural alanlarını belirtir.|
 |**Geçerli çözüm için geçerli olmayan kuralları gizle**|Çözümle aynı hedef türünde olmayan kuralları gösterir veya gizler.|
 |**Kod Analizi hataları oluşturabilen kuralları göster**|Hata eyleminin atandığı kuralları gösterir veya gizler.|
@@ -62,12 +62,12 @@ Kod analizi kural kümesi Düzenleyicisi, özel bir kural kümesine dahil edilen
 
 |Alan|Açıklama|
 |-----------|-----------------|
-|**NUMARASıNı**|Kuralın tanımlayıcısı.|
-|**Alan**|Kural kümelerinde üyeliklerine ek olarak, kod analizi kuralları da kategoriye göre gruplandırılır. Daha fazla bilgi için bkz. [yönetilen kod uyarıları Için kod analizi](../code-quality/code-analysis-for-managed-code-warnings.md).|
+|**ID**|Kuralın tanımlayıcısı.|
+|**Kategori**|Kural kümelerinde üyeliklerine ek olarak, kod analizi kuralları da kategoriye göre gruplandırılır. Daha fazla bilgi için bkz. [yönetilen kod uyarıları Için kod analizi](../code-quality/code-analysis-for-managed-code-warnings.md).|
 |**Ad**|Kuralın başlığı.|
-|**Uzayına**|Kuralın ad alanı.|
+|**Ad Alanı**|Kuralın ad alanı.|
 |**Hedef türü**|Kuralın yerel, yönetilen veya veritabanı kodu için olup olmadığını gösterir.|
-|**Ön**|Kod Analizi çalıştırmasında kural ihlal edildiğinde gerçekleştirilecek eylem.<br /><br /> **Uyarı** -bir uyarı oluşturur.<br /><br /> **Hata** -bir hata oluşturur.<br /><br /> **Hiçbiri** -kuralı devre dışı bırakır.<br /><br /> Eylem alanını düzenleyebilirsiniz. Değerin None olarak ayarlanması, kuralın onay kutusunun temizlenmesiyle aynıdır.|
+|**Eylem**|Kod Analizi çalıştırmasında kural ihlal edildiğinde gerçekleştirilecek eylem.<br /><br /> **Uyarı** -bir uyarı oluşturur.<br /><br /> **Hata** -bir hata oluşturur.<br /><br /> **Hiçbiri** -kuralı devre dışı bırakır.<br /><br /> Eylem alanını düzenleyebilirsiniz. Değerin None olarak ayarlanması, kuralın onay kutusunun temizlenmesiyle aynıdır.|
 |**Kaynak kural kümeleri**|Kuralı içeren kural kümesi.|
 
 ## <a name="sorting-and-filtering-rule-sets"></a>Kural kümelerini sıralama ve filtreleme

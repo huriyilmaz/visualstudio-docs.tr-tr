@@ -15,16 +15,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b524c9d630f30edd226265ac150ef7ec4f6c60d8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651069"
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET kullanarak basit veri uygulaması oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Veritabanındaki verileri işleyen bir uygulama oluşturduğunuzda, bağlantı dizelerini tanımlama, veri ekleme ve saklı yordamları çalıştırma gibi temel görevleri gerçekleştirirsiniz. Bu konuyu izleyerek, Visual C# veya Visual Basic ve ADO.NET kullanarak basit bir Windows Forms "veri üzerinden Forms" uygulaması aracılığıyla bir veritabanıyla nasıl etkileşim kuracağınızı bulabilirsiniz.  Veri kümeleri, LINQ to SQL ve Entity Framework dahil olmak üzere tüm .NET veri teknolojileri, sonuçta bu makalede gösterilenler için çok benzeyen adımları gerçekleştirir.
+Veritabanındaki verileri işleyen bir uygulama oluşturduğunuzda, bağlantı dizelerini tanımlama, veri ekleme ve saklı yordamları çalıştırma gibi temel görevleri gerçekleştirirsiniz. Bu konuyu izleyerek, Visual C# veya Visual Basic ve ADO.NET kullanarak basit bir Windows Forms "veri üzerinden Forms" uygulamasının içinden bir veritabanıyla nasıl etkileşim kuracağınızı bulabilirsiniz.  Veri kümeleri, LINQ to SQL ve Entity Framework dahil olmak üzere tüm .NET veri teknolojileri, sonuçta bu makalede gösterilenler için çok benzeyen adımları gerçekleştirir.
 
  Bu makalede, verileri bir veritabanından çok hızlı bir şekilde almanın basit bir yolu gösterilmektedir. Uygulamanızın verileri basit olmayan yollarla değiştirmesi ve veritabanını güncelleştirmesi gerekiyorsa, Kullanıcı arabirimi denetimlerini temel verilerdeki değişikliklerle otomatik olarak eşitlemek için Entity Framework kullanmayı ve veri bağlamayı kullanmayı göz önünde bulundurmanız gerekir.
 
@@ -45,7 +45,7 @@ Veritabanındaki verileri işleyen bir uygulama oluşturduğunuzda, bağlantı d
 
 - [Uygulamanızı test etme](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_testyourapplication)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Uygulamayı oluşturmak için şunlar gerekir:
 
 - Visual Studio Community Edition.
@@ -54,14 +54,14 @@ Veritabanındaki verileri işleyen bir uygulama oluşturduğunuzda, bağlantı d
 
 - Bir [komut dosyası kullanarak SQL veritabanı oluşturma](../data-tools/create-a-sql-database-by-using-a-script.md)bölümündeki adımları izleyerek oluşturduğunuz küçük örnek veritabanı.
 
-- Ayarladıktan sonra veritabanı için bağlantı dizesi. Bu değeri **SQL Server Nesne Gezgini**açarak, veritabanının kısayol menüsünü açıp **Özellikler**' i seçip **ConnectionString** özelliğine giderek bulabilirsiniz.
+- Ayarladıktan sonra veritabanı için bağlantı dizesi. Bu değeri **SQL Server Nesne Gezgini**açarak, veritabanının kısayol menüsünü açıp **Özellikler**' i seçip **ConnectionString**  özelliğine giderek bulabilirsiniz.
 
-  Bu konu başlığı altında, Visual Studio IDE 'nin temel işlevleriyle ilgili bilgi sahibi olduğunuz ve bu formlara form ekleyebileceğiniz, bu formlara düğme ve diğer denetimleri koyabildiğiniz, bu denetimlerin özelliklerini ayarlayabildiğiniz ve basit olayları kodlayWindows Forms abileceğiniz varsayılmaktadır . Bu görevlerle ilgili deneyimli değilseniz, bu konuya başlamadan önce, [Visual C# ile çalışmaya başlama ve Visual Basic](../ide/getting-started-with-visual-csharp-and-visual-basic.md) tamamlamayı öneririz.
+  Bu konu başlığı altında, Visual Studio IDE 'nin temel işlevleriyle ilgili bilgi sahibi olduğunuz ve bu formlara form ekleyebileceğiniz, bu formlara düğme ve diğer denetimleri koyabildiğiniz, bu denetimlerin özelliklerini ayarlayabildiğiniz ve basit olayları kodlayWindows Forms abileceğiniz varsayılmaktadır. Bu görevlerle ilgili deneyimli değilseniz, bu konuya başlamadan önce [Visual C# ile çalışmaya başlama ve Visual Basic](../ide/getting-started-with-visual-csharp-and-visual-basic.md) tamamlamayı öneririz.
 
-## <a name="BKMK_setupthesampledatabase"></a>Örnek veritabanını ayarlama
+## <a name="set-up-the-sample-database"></a><a name="BKMK_setupthesampledatabase"></a> Örnek veritabanını ayarlama
  Bu izlenecek yol için örnek veritabanı, müşteri ve sipariş tablolarından oluşur. Tablolar başlangıçta veri içermez, ancak oluşturacağınız uygulamayı çalıştırdığınızda veri eklersiniz. Veritabanında Ayrıca beş basit saklı yordam bulunur. [Bir betik kullanarak SQL veritabanı oluşturma](../data-tools/create-a-sql-database-by-using-a-script.md) tabloları, birincil ve yabancı anahtarları, kısıtlamaları ve saklı yordamları oluşturan bir Transact-SQL betiği içerir.
 
-## <a name="BKMK_createtheformsandaddcontrols"></a>Formları oluşturma ve denetimleri ekleme
+## <a name="create-the-forms-and-add-controls"></a><a name="BKMK_createtheformsandaddcontrols"></a> Formları oluşturma ve denetimleri ekleme
 
 1. Windows Forms bir uygulama için bir proje oluşturun ve bunu SimpleDataApp olarak adlandırın.
 
@@ -119,14 +119,14 @@ Veritabanındaki verileri işleyen bir uygulama oluşturduğunuzda, bağlantı d
 |Düğme|Ad = btnFillOrder|
 |Düğme|Ad = Btnsonlandırsupdates|
 
-## <a name="BKMK_storetheconnectionstring"></a>Bağlantı dizesini depolayın
+## <a name="store-the-connection-string"></a><a name="BKMK_storetheconnectionstring"></a> Bağlantı dizesini depolayın
  Uygulamanız veritabanına bir bağlantı açmaya çalıştığında, uygulamanızın bağlantı dizesine erişimi olması gerekir. Dizeyi her bir forma el ile girmekten kaçınmak için, dizeyi projenizdeki uygulama yapılandırma dosyasında depolayın ve yöntemi uygulamanızdaki herhangi bir formdan çağrıldığında dizeyi döndüren bir yöntem oluşturun.
 
  Bağlantı dizesini veritabanına sağ tıklayıp **Özellikler**' i seçip ConnectionString özelliğini bularak **SQL Server Nesne Gezgini** bulabilirsiniz. Dizeyi seçmek için CTRL + A tuşlarını kullanın.
 
 1. **Çözüm Gezgini**, projenin altındaki **Özellikler** düğümünü seçin ve ardından **ayarlar. ayarlar**' ı seçin.
 
-2. **Ad** sütununa `connString` girin.
+2. **Ad** sütununda, girin `connString` .
 
 3. **Tür** listesinde **(bağlantı dizesi)** öğesini seçin.
 
@@ -137,11 +137,11 @@ Veritabanındaki verileri işleyen bir uygulama oluşturduğunuzda, bağlantı d
 > [!NOTE]
 > Gerçek bir uygulamada bağlantı dizesini [bağlantı dizeleri ve yapılandırma dosyalarında](https://msdn.microsoft.com/library/37df2641-661e-407a-a3fb-7bf9540f01e8)açıklandığı gibi güvenli bir şekilde depolamanız gerekir.
 
-## <a name="BKMK_retrievetheconnectionstring"></a>Bağlantı dizesini alma
+## <a name="retrieve-the-connection-string"></a><a name="BKMK_retrievetheconnectionstring"></a> Bağlantı dizesini alma
 
-1. Menü çubuğunda, **proje**  > **Başvuru Ekle**' yi seçin ve ardından System. Configuration. dll ' e bir başvuru ekleyin.
+1. Menü çubuğunda, **Proje**  >  **Başvuru Ekle**' yi seçin ve ardından System.Configuration.dll bir başvuru ekleyin.
 
-2. Projenize bir sınıf dosyası eklemek için menü çubuğunda **proje**  > **Sınıf Ekle** ' yi seçin ve sonra dosyayı `Utility` olarak adlandırın.
+2. **Project**  >  Projenize bir sınıf dosyası eklemek için menü çubuğunda Proje**Ekle sınıf** ' ı seçin ve ardından dosyayı adlandırın `Utility` .
 
      Visual Studio dosyayı oluşturur ve **Çözüm Gezgini**görüntüler.
 
@@ -213,20 +213,20 @@ Veritabanındaki verileri işleyen bir uygulama oluşturduğunuzda, bağlantı d
     End Namespace
     ```
 
-    |Yorum|Açıklama|
+    |Yorum|Description|
     |-------------|-----------------|
-    |Util-1|@No__t_0 ad alanını ekleyin.|
+    |Util-1|`System.Configuration`Ad alanını ekleyin.|
     |Util-2|Bir değişken tanımlayın, `returnValue` ve `null` (C#) veya `Nothing` (Visual Basic) olarak başlatın.|
-    |Util-3|**Özellikler** penceresinde bağlantı dizesinin adı olarak `connString` girmiş olsanız bile, kodda `"SimpleDataApp.Properties.Settings.connString"` (C#) veya `"SimpleDataApp.My.MySettings.connString"` (Visual Basic) belirtmeniz gerekir.|
+    |Util-3|`connString` **Özellikler** penceresinde bağlantı dizesinin adı olarak girmiş olsanız bile, `"SimpleDataApp.Properties.Settings.connString"` kodda (C#) veya `"SimpleDataApp.My.MySettings.connString"` (Visual Basic) öğesini belirtmeniz gerekir.|
 
-## <a name="BKMK_writethecodefortheforms"></a>Formların kodunu yazma
+## <a name="write-the-code-for-the-forms"></a><a name="BKMK_writethecodefortheforms"></a> Formların kodunu yazma
  Bu bölümde, her bir formun ne yaptığı hakkında kısa bir genel bakış yer almaktadır ve formları oluşturan kod gösterilmektedir. Numaralandırılmış açıklamalar kodun bölümlerini belirler.
 
 ### <a name="navigation-form"></a>Gezinti formu
  Uygulamayı çalıştırdığınızda gezinti formu açılır. **Hesap Ekle** düğmesi NewCustomer formunu açar. **Siparişleri doldur veya iptal et** düğmesi FillOrCancel formunu açar. **Çıkış** düğmesi uygulamayı kapatır.
 
 #### <a name="make-the-navigation-form-the-startup-form"></a>Gezinti formunu başlangıç formu haline getirme
- Kullanıyorsanız C#, **Çözüm Gezgini**' de program.cs açın ve `Application.Run` satırını şu şekilde değiştirin: `Application.Run(new Navigation());`
+ C# kullanıyorsanız, **Çözüm Gezgini**' de program.cs açın ve ardından `Application.Run` satırı bu şekilde değiştirin: `Application.Run(new Navigation());`
 
  Visual Basic kullanıyorsanız, **Çözüm Gezgini**' de **Özellikler** penceresini açın, **uygulama** sekmesini seçin ve ardından **başlangıç formu** listesinden **simpledataapp. Navigation** öğesini seçin.
 
@@ -710,30 +710,30 @@ Namespace SimpleDataApp
 End Namespace
 ```
 
-|Yorum|Açıklama|
+|Yorum|Description|
 |-------------|-----------------|
-|NC-1|Ad alanları listesine `System.Data.SqlClient` ve `System.Configuration` ekleyin.|
-|NC-2|Daha sonra kullanacağınız `parsedCustomerID` ve `orderID` değişkenlerini bildirin.|
-|NC-3|Uygulama yapılandırma dosyasından bağlantı dizesini almak için `GetConnectionString` yöntemini çağırın ve değeri `connstr` String değişkeninde depolayın.|
-|NC-4|@No__t_0 düğme için Click olay işleyicisine kod ekleyin.|
-|NC-5|@No__t_1 yalnızca bir müşteri adı mevcutsa çalışacak şekilde tıklama olay kodu etrafında `isCustomerName` için çağrıyı sarmalayın.|
-|NC-6|@No__t_0 nesnesi oluşturun (`conn`) ve `connstr` bağlantı dizesini geçirin.|
-|NC-7|@No__t_0 nesne `cmdNewCustomer` oluşturun.<br /><br /> -Çalıştırılacak saklı yordam olarak `Sales.uspNewCustomer` belirtin.<br />-Komutun saklı yordam olduğunu belirtmek için `CommandType` özelliğini kullanın.|
-|NC-8|Saklı yordamdan `@CustomerName` giriş parametresini ekleyin.<br /><br /> -Parametreyi `Parameters` koleksiyonuna ekleyin.<br />-Parametre türünü nvarchar (40) olarak belirtmek için `SqlDbType` numaralandırmayı kullanın.<br />-Kaynak olarak `txtCustomerName.Text` belirtin.|
-|NC-9|Saklı yordamdan çıkış parametresini ekleyin.<br /><br /> -Parametreyi `Parameters` koleksiyonuna ekleyin.<br />-Parametreyi çıkış olarak tanımlamak için `ParameterDirection.Output` kullanın.|
+|NC-1|`System.Data.SqlClient` `System.Configuration` Ad alanları listesine ve ekleyin.|
+|NC-2|`parsedCustomerID` `orderID` Daha sonra kullanacağınız ve değişkenlerini bildirin.|
+|NC-3|`GetConnectionString`Uygulama yapılandırma dosyasından bağlantı dizesini almak için yöntemini çağırın ve değeri `connstr` dize değişkeninde depolayın.|
+|NC-4|Düğme için Click olay işleyicisine kod ekleyin `btnCreateAccount` .|
+|NC-5|Çağrıyı `isCustomerName` Click olay kodu etrafında sarmalayın, böylece `uspNewCustomer` yalnızca bir müşteri adı mevcutsa çalışır.|
+|NC-6|Bir `SqlConnection` nesne ( `conn` ) oluşturun ve içinde bağlantı dizesini geçirin `connstr` .|
+|NC-7|Bir `SqlCommand` nesne oluşturun, `cmdNewCustomer` .<br /><br /> - `Sales.uspNewCustomer` Çalıştırılacak saklı yordam olarak belirtin.<br />- `CommandType` Komutun saklı yordam olduğunu belirtmek için özelliğini kullanın.|
+|NC-8|`@CustomerName`Saklı yordamdan giriş parametresini ekleyin.<br /><br /> -Parametreyi `Parameters` koleksiyona ekleyin.<br />- `SqlDbType` Parametre türünü nvarchar (40) olarak belirtmek için numaralandırmayı kullanın.<br />- `txtCustomerName.Text` Kaynak olarak belirtin.|
+|NC-9|Saklı yordamdan çıkış parametresini ekleyin.<br /><br /> -Parametreyi `Parameters` koleksiyona ekleyin.<br />- `ParameterDirection.Output` Parametreyi çıkış olarak tanımlamak için kullanın.|
 |NC-10|Bağlantıyı açmak için try-catch-finally bloğu ekleyin, saklı yordamı çalıştırın, özel durumları işleyin ve bağlantıyı kapatın.|
-|NC-11|NC-6 ' da oluşturduğunuz bağlantıyı (`conn`) açın.|
-|NC-12|@No__t_2 saklı yordamını çalıştırmak için `cmdNewCustomer` `ExecuteNonQuery` yöntemi kullanın. Bu saklı yordam bir sorgu değil `INSERT` bir ifade çalıştırır.|
-|NC-13|@No__t_0 değeri, veritabanından bir KIMLIK değeri olarak döndürülür. Bir tamsayı olduğundan, bunu **MÜŞTERI kimliği** metin kutusunda göstermek için bir dizeye dönüştürmeniz gerekir.<br /><br /> -NC-2 ' de `parsedCustomerID` bildirdiniz.<br />-@No__t_0 değerini daha sonra kullanmak üzere `parsedCustomerID` depolayın.<br />-Döndürülen müşteri KIMLIĞINI bir dizeye dönüştürüp `txtCustomerID.Text` ekleyin.|
+|NC-11|`conn`NC-6 ' da oluşturduğunuz bağlantıyı () açın.|
+|NC-12|`ExecuteNonQuery` `cmdNewCustomer` Saklı yordamını çalıştırmak için yöntemini kullanın `Sales.uspNewCustomer` . Bu saklı yordam `INSERT` bir sorgu değil, bir ifade çalıştırır.|
+|NC-13|`@CustomerID`Değer, veritabanından BIR kimlik değeri olarak döndürülür. Bir tamsayı olduğundan, bunu **MÜŞTERI kimliği** metin kutusunda göstermek için bir dizeye dönüştürmeniz gerekir.<br /><br /> - `parsedCustomerID` NC-2 ' de bildirdiniz.<br />- `@CustomerID` Değerini `parsedCustomerID` daha sonra kullanmak üzere depolayın.<br />-Döndürülen müşteri KIMLIĞINI bir dizeye dönüştürün ve içine ekleyin `txtCustomerID.Text` .|
 |NC-14|Bu örnek için basit (üretim kalitesi olmayan) bir catch yan tümcesi ekleyin.|
 |NC-15|Bağlantıyı tamamladıktan sonra bağlantı havuzuna yayımlanabilmesi için her zaman bir bağlantıyı kapatın. Bkz. [SQL Server bağlantı havuzu (ADO.net)](https://msdn.microsoft.com/library/8xx3tyca\(l=en-us,v=VS.110\).aspx).|
-|NC-16|Bir müşteri adının mevcut olduğunu doğrulamak için bir yöntem tanımlayın.<br /><br /> -Metin kutusu boşsa, hesap oluşturmak için bir ad gerektiğinden bir ileti görüntüleyip `false` döndürün.<br />-Metin kutusu boş değilse `true` döndürün.|
-|NC-17|@No__t_0 düğme için Click olay işleyicisine kod ekleyin.|
-|NC-18|Gerekli giriş yoksa `uspPlaceNewOrder` çalışmadığı için, `btnPlaceOrder_Click` olay kodu etrafında `isPlaceOrderReady` çağrısını sarmalayın.|
-|NC-19 ile NC-25|Bu kod bölümleri `btnCreateAccount_Click` olay işleyicisi için eklediğiniz koda benzer.<br /><br /> -NC-19. @No__t_0 nesnesini oluşturun, `cmdNewOrder` ve saklı yordam olarak `Sales.uspPlaceOrder` belirtin.<br />-NC-20 ila NC-23, saklı yordamın giriş parametreleridir.<br />-NC-24. `@RC`, veritabanından üretilen sıra KIMLIĞI olan bir dönüş değeri içerecektir. Bu Parametrenin yönü `ReturnValue` olarak belirtilir.<br />-NC-25. Sıra KIMLIĞI değerini NC-2 ' de bildirdiğiniz `orderID` değişkeninde depolayın ve değeri bir ileti kutusunda görüntüleyin.|
-|NC-26|Bir müşteri KIMLIĞININ mevcut olduğunu ve `numOrderAmount` bir miktarın bulunduğunu doğrulamak için bir yöntem tanımlayın.|
-|NC-27|@No__t_1 Click olay işleyicisinde `ClearForm` yöntemi çağırın.|
-|NC-28|Başka bir müşteri eklemek istiyorsanız formdaki değerleri temizlemek için `ClearForm` yöntemi oluşturun.|
+|NC-16|Bir müşteri adının mevcut olduğunu doğrulamak için bir yöntem tanımlayın.<br /><br /> -Metin kutusu boşsa, `false` hesap oluşturmak için bir ad gerektiğinden bir ileti ve dönüş görüntüleyin.<br />-Metin kutusu boş değilse, döndürün `true` .|
+|NC-17|Düğme için Click olay işleyicisine kod ekleyin `btnPlaceOrder` .|
+|NC-18|Gerekli giriş yoksa çalıştırılmaması için, çağrı `isPlaceOrderReady` olay kodu etrafında sarmalayın `btnPlaceOrder_Click` `uspPlaceNewOrder` .|
+|NC-19 ile NC-25|Bu kod bölümleri, olay işleyicisi için eklediğiniz koda benzer `btnCreateAccount_Click` .<br /><br /> -NC-19. Nesnesini oluşturun `SqlCommand` `cmdNewOrder` ve `Sales.uspPlaceOrder` saklı yordam olarak belirtin.<br />-NC-20 ila NC-23, saklı yordamın giriş parametreleridir.<br />-NC-24. `@RC` , veritabanından üretilen sıra KIMLIĞI olan bir dönüş değeri içerir. Bu Parametrenin yönü olarak belirtilir `ReturnValue` .<br />-NC-25. Sıra KIMLIĞI değerini `orderID` NC-2 ' de bildirdiğiniz değişkende depolayın ve değeri bir ileti kutusunda görüntüleyin.|
+|NC-26|Bir müşteri KIMLIĞININ mevcut olduğunu ve ' de bir tutarın bulunduğunu doğrulamak için bir yöntem tanımlayın `numOrderAmount` .|
+|NC-27|`ClearForm` `btnAddAnotherAccount` Click olay işleyicisindeki yöntemi çağırın.|
+|NC-28|`ClearForm`Başka bir müşteri eklemek istiyorsanız formdaki değerleri temizlemek için yöntemi oluşturun.|
 |NC29|NewCustomer formunu kapatın ve odağı gezinti formuna döndürün.|
 
 ### <a name="fillorcancel-form"></a>FillOrCancel formu
@@ -1127,17 +1127,17 @@ Namespace SimpleDataApp
 End Namespace
 ```
 
-|Yorum|Açıklama|
+|Yorum|Description|
 |-------------|-----------------|
-|FC-1|Ad alanları listesine `System.Data.SqlClient`, `System.Configuration` ve `System.Text.RegularExpressions` ekleyin.|
-|FC-2|@No__t_0 değişkenini bildirin.|
-|FC-3|Uygulama yapılandırma dosyasından bağlantı dizesini almak için `GetConnectionString` yöntemini çağırın ve değeri `connstr` String değişkeninde depolayın.|
-|FC-4|@No__t_0 için Click olay işleyicisine kod ekleyin.|
-|FC-5|Bu görevler, bir SQL ifadesini veya saklı yordamı çalıştırmayı denemeden önce gereklidir.<br /><br /> -@No__t_0 nesnesi oluşturun.<br />-SQL ifadesini tanımlayın veya saklı yordamın adını belirtin. (Bu durumda, bir `SELECT` ifadesini çalıştıracaksınız.)<br />-@No__t_0 nesnesi oluşturun.<br />-SQL deyimin veya saklı yordamın parametrelerini tanımlayın.|
-|FC-6|Bu kod, sorgu sonucunu almak ve göstermek için `SqlDataReader` ve `DataTable` kullanır.<br /><br /> -Bağlantıyı açın.<br />-@No__t_3 için `ExecuteReader` yöntemini çalıştırarak `rdr` `SqlDataReader` nesnesi oluşturun.<br />-Alınan verileri tutmak için bir `DataTable` nesnesi oluşturun.<br />-@No__t_0 nesnesinden verileri `DataTable` nesnesine yükleyin.<br />-Veri kılavuzu görünümünde `DataTable` `DataSource` olarak belirterek verileri veri kılavuzu görünümünde görüntüleyin.<br />-@No__t_0 kapatın.|
-|FC-7|@No__t_0 için Click olay işleyicisine kod ekleyin. Bu kod, `Sales.uspCancelOrder` saklı yordamını çalıştırır.|
-|FC-8|@No__t_0 için Click olay işleyicisine kod ekleyin. Bu kod, `Sales.uspFillOrder` saklı yordamını çalıştırır.|
-|FC-9|@No__t_0, `SqlCommand` nesnesine bir parametre olarak gönderilmeye hazırlanmaya yönelik olduğunu doğrulamak için bir yöntem oluşturun.<br /><br /> -@No__t_0 bir KIMLIK girildiğinden emin olun.<br />-Tamsayı olmayan karakterler için basit bir denetim tanımlamak üzere `Regex.IsMatch` kullanın.<br />-@No__t_0 değişkenini FC-2 konumunda bildirdiniz.<br />-Giriş geçerliyse, metni bir tamsayıya dönüştürün ve değeri `parsedOrderID` değişkende depolayın.<br />-@No__t_0 yöntemi `btnFindByOrderID` etrafında sarmalayın `btnCancelOrder` `btnFillOrder` ve olay işleyicileri ' ne tıklayın.|
+|FC-1|`System.Data.SqlClient` `System.Configuration` `System.Text.RegularExpressions` Ad alanları listesine, ve ekleyin.|
+|FC-2|Değişkeni bildirin `parsedOrderID` .|
+|FC-3|`GetConnectionString`Uygulama yapılandırma dosyasından bağlantı dizesini almak için yöntemini çağırın ve değeri `connstr` dize değişkeninde depolayın.|
+|FC-4|İçin Click olay işleyicisine kod ekleyin `btnFindOrderByID` .|
+|FC-5|Bu görevler, bir SQL ifadesini veya saklı yordamı çalıştırmayı denemeden önce gereklidir.<br /><br /> -Bir `SqlConnection` nesne oluşturun.<br />-SQL ifadesini tanımlayın veya saklı yordamın adını belirtin. (Bu durumda, bir ifadesini çalıştıracaksınız `SELECT` .)<br />-Bir `SqlCommand` nesne oluşturun.<br />-SQL deyimin veya saklı yordamın parametrelerini tanımlayın.|
+|FC-6|Bu kod `SqlDataReader` `DataTable` , sorgu sonucunu almak ve göstermek için ve kullanır.<br /><br /> -Bağlantıyı açın.<br />- `SqlDataReader` Yöntemini çalıştırarak bir nesnesi oluşturun `rdr` `ExecuteReader` `cmdOrderID` .<br />- `DataTable` Alınan verileri tutacak bir nesne oluşturun.<br />-Nesne içindeki verileri nesnesine yükleyin `SqlDataReader` `DataTable` .<br />-Veri `DataTable` Kılavuzu görünümü için olarak belirterek verileri veri kılavuzu görünümünde görüntüleyin `DataSource` .<br />-Kapat `SqlDataReader` .|
+|FC-7|İçin Click olay işleyicisine kod ekleyin `btnCancelOrder` . Bu kod, `Sales.uspCancelOrder` saklı yordamı çalıştırır.|
+|FC-8|İçin Click olay işleyicisine kod ekleyin `btnFillOrder` . Bu kod, `Sales.uspFillOrder` saklı yordamı çalıştırır.|
+|FC-9|`OrderID`Nesnesine bir parametre olarak gönderilmeye hazırlanma olduğunu doğrulamak için bir yöntem oluşturun `SqlCommand` .<br /><br /> -' De bir KIMLIK girildiğinden emin olun `txtOrderID` .<br />- `Regex.IsMatch` Tamsayı olmayan karakterler için basit bir denetim tanımlamak üzere kullanın.<br />- `parsedOrderID` DEĞIŞKENI FC-2 konumunda bildirdiniz.<br />-Giriş geçerliyse, metni bir tamsayıya dönüştürün ve değeri `parsedOrderID` değişkende depolayın.<br />-Yöntemini,,, `isOrderID` `btnFindByOrderID` `btnCancelOrder` ve `btnFillOrder` olay işleyiciler ' a sarmalayın.|
 
-## <a name="BKMK_testyourapplication"></a>Uygulamanızı test etme
+## <a name="test-your-application"></a><a name="BKMK_testyourapplication"></a> Uygulamanızı test etme
  Her bir tıklama olayı işleyicisini kodladıktan sonra ve sonra kodlamayı tamamladıktan sonra uygulamanızı derlemek ve test etmek için F5 tuşunu seçin.

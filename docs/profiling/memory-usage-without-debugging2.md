@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5fe336962a9d631a01438fdd4620fd27e2affc44
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543357"
 ---
 # <a name="analyze-memory-usage-without-the-debugger"></a>Hata ayıklayıcı olmadan bellek kullanımını analiz etme
@@ -56,7 +56,7 @@ Bir uygulama çok sayıda nesne kullanır ve analizinizi bir senaryoya göre yo�
 
 Anlık görüntü toplamak için bellek verilerini yakalamak istediğinizde **anlık görüntü al** ' ı seçin.
 
-### <a name="close-the-diagnostic-session"></a><a name="BKMK_Close_a_monitoring_session"></a>Tanılama oturumunu kapat
+### <a name="close-the-diagnostic-session"></a><a name="BKMK_Close_a_monitoring_session"></a> Tanılama oturumunu kapat
 
 Bir rapor oluşturmadan izleme oturumunu durdurmak için, yalnızca tanılama penceresini kapatmanız yeterlidir. Anlık görüntü toplamayı bitirdiğinizde rapor oluşturmak için, **toplamayı durdur**' u seçin.
 
@@ -68,7 +68,7 @@ Veri toplamayı durdurduktan sonra, **bellek kullanımı** Aracı uygulamayı du
 
 ![Bellek kullanımına genel bakış sayfası](../profiling/media/memuse__reportoverview1.png "Bellek kullanımına genel bakış sayfası")
 
-### <a name="memory-usage-snapshots"></a><a name="BKMK_Memory_Usage_snapshot_views"></a>Bellek kullanımı anlık görüntüleri
+### <a name="memory-usage-snapshots"></a><a name="BKMK_Memory_Usage_snapshot_views"></a> Bellek kullanımı anlık görüntüleri
 
 **Anlık** görüntü bölmelerinde bulunan sayılar, her anlık görüntü alındığı sırada bellekteki baytları ve nesneleri ve anlık görüntü ile bir önceki arasındaki farkı gösterir.
 
@@ -103,13 +103,13 @@ Anlık görüntü raporunda:
 
 - **Başvurulan türler** veya **başvurulan nesneler** ağacı, seçilen türün veya Örneğin başvurduğu nesneleri gösterir.
 
-### <a name="report-tree-filters"></a><a name="BKMK_Report_tree_filters_"></a>Rapor ağacı filtreleri
+### <a name="report-tree-filters"></a><a name="BKMK_Report_tree_filters_"></a> Rapor ağacı filtreleri
 
 Uygulamalarda birçok tür uygulama geliştiricilerine çok ilginç değildir. Anlık görüntü raporu filtreleri **yönetilen yığında** bu türlerin çoğunu ve kök ağaçlara **yolları** gizleyebilir.
 
 ![Sıralama ve filtreleme seçenekleri](../profiling/media/memuse_sortandfilter.png "MEMUSE_SortAndFilter")
 
-- <a name="BKMK_Filter"></a>Bir ağacı tür adına göre filtrelemek için, **filtre** kutusuna adı girin. Filtre, büyük/küçük harfe duyarlı değildir ve tür adının herhangi bir bölümünde belirtilen dizeyi tanır.
+- <a name="BKMK_Filter"></a> Bir ağacı tür adına göre filtrelemek için, **filtre** kutusuna adı girin. Filtre, büyük/küçük harfe duyarlı değildir ve tür adının herhangi bir bölümünde belirtilen dizeyi tanır.
 
 - <a name="BKMK_Collapse_Small_Objects"></a>**Boyutu (bayt)** toplam belleğin yüzde 0,5 ' inden az olan türleri gizlemek için **filtre** açılan menüsünde **küçük nesneleri Daralt** ' ı seçin.
 
@@ -123,14 +123,14 @@ Uygulamalarda birçok tür uygulama geliştiricilerine çok ilginç değildir. A
 
 Her iki bağlantı de aynı raporu açar. Tek fark, **yönetilen yığın** ağacının başlangıç sıralama sıraıdır. Boyut bağlantısı, raporu **kapsamlı boyut (bayt)** sütununa göre sıralar. Nesneler bağlantısı, raporu **say** sütununa göre sıralar. Sıralama sütununu veya sırayı rapor açıldıktan sonra değiştirebilirsiniz.
 
-### <a name="managed-heap-tree-snapshot-details-reports"></a><a name="BKMK_Managed_Heap_tree__Snapshot_details_"></a>Yönetilen yığın ağacı (anlık görüntü ayrıntıları raporları)
+### <a name="managed-heap-tree-snapshot-details-reports"></a><a name="BKMK_Managed_Heap_tree__Snapshot_details_"></a> Yönetilen yığın ağacı (anlık görüntü ayrıntıları raporları)
  **Yönetilen yığın** ağacı bellekte tutulan nesne türlerini listeler. Türün en büyük on örneğini görüntülemek için bir tür adı genişletin, boyuta göre sıralanır. Seçili öğe için köke ve **başvurulan nesne** ağaçlarına **yönelik yolları** göstermek için bir tür veya örnek seçin.
 
  ![Yönetilen yığın ağacı](../profiling/media/memuse__snapshotdetails_managedheaptree.png "Yönetilen yığın ağacı")
 
 Anlık görüntü ayrıntıları raporundaki **yönetilen yığın** ağacı aşağıdaki sütunlara sahiptir:
 
-|Name|Description|
+|Ad|Açıklama|
 |-|-|
 |**Nesne türü**|Tür veya nesne örneğinin adı.|
 |**Biriktirme**|Türün nesne örneklerinin sayısı. Bir örnek için **sayı** her zaman 1 ' dir.|
@@ -138,21 +138,21 @@ Anlık görüntü ayrıntıları raporundaki **yönetilen yığın** ağacı aş
 |**Kapsamlı boyut (bayt)**|İçerilen nesnelerin boyutu dahil olmak üzere, türün örneklerinin boyutu veya tek bir örneğin boyutu.|
 |**Modül**|Nesneyi içeren modül.|
 
-### <a name="paths-to-root-tree-snapshot-details-reports"></a><a name="BKMK_Paths_to_Root_tree__Snapshot_details_"></a>Kök ağacına yönelik yollar (anlık görüntü ayrıntıları raporları)
+### <a name="paths-to-root-tree-snapshot-details-reports"></a><a name="BKMK_Paths_to_Root_tree__Snapshot_details_"></a> Kök ağacına yönelik yollar (anlık görüntü ayrıntıları raporları)
 **Kök ağacına yönelik yollar** , bir türe veya örneğe başvuran nesne zincirini gösterir. .NET atık toplayıcısı, yalnızca tüm başvuruları serbest bırakıldığında bir nesne için belleği temizler.
 
 **Kök ağaç yollarındaki** bir tür Için, **başvuru sayısı** sütununda bu türe başvuru tutan nesne sayısı görüntülenir.
 
 ![Türler için kök ağacına yönelik yollar](../profiling/media/memuse_snapshotdetails_type_pathstoroottree.png "Türler için kök ağacına yönelik yollar")
 
-### <a name="referenced-types-or-referenced-objects-tree-snapshot-details-reports"></a><a name="BKMK_Referenced_Objects_tree__Snapshot_details_"></a>Başvurulan türler veya başvurulan nesneler ağacı (anlık görüntü ayrıntıları raporları)
+### <a name="referenced-types-or-referenced-objects-tree-snapshot-details-reports"></a><a name="BKMK_Referenced_Objects_tree__Snapshot_details_"></a> Başvurulan türler veya başvurulan nesneler ağacı (anlık görüntü ayrıntıları raporları)
 **Başvurulan türler** veya **başvurulan nesneler** ağacı, seçilen türün veya Örneğin başvurduğu nesneleri gösterir.
 
 ![Örnekler için başvurulan nesneler ağacı](../profiling/media/memuse_snapshotdetails_referencedobjects_instance.png "Örnekler için başvurulan nesneler ağacı")
 
 Bir anlık görüntü ayrıntıları raporundaki **başvurulan türler** ağacı aşağıdaki sütunlara sahiptir. **Başvurulan bir nesne** ağacının **başvuru sayısı** sütunu yok.
 
-|Name|Description|
+|Ad|Açıklama|
 |-|-|
 |**Nesne türü** veya **örneği**|Türün veya örneğin adı.|
 |**Başvuru sayısı**|Türler için, türün nesne örneklerinin sayısı.|
@@ -168,7 +168,7 @@ Her iki bağlantı de aynı raporu açar. Tek fark, rapordaki **yönetilen yığ
 
  ![Bir anlık görüntü bölmesindeki fark raporuna bağlantılar](../profiling/media/memuse_snapshotview_snapshotdifflinks.png "Bir anlık görüntü bölmesindeki fark raporuna bağlantılar")
 
-### <a name="managed-heap-tree-snapshot-diff-reports"></a><a name="BKMK_Managed_Heap_tree__Snapshot_diff_"></a>Yönetilen yığın ağacı (anlık görüntü fark raporları)
+### <a name="managed-heap-tree-snapshot-diff-reports"></a><a name="BKMK_Managed_Heap_tree__Snapshot_diff_"></a> Yönetilen yığın ağacı (anlık görüntü fark raporları)
 
  **Yönetilen yığın** ağacı bellekte tutulan nesne türlerini listeler. Türün en büyük on örneğini görüntülemek için bir tür adını genişletebilirsiniz, boyuta göre sıralanır. Seçili öğe için köke ve **başvurulan nesne** ağaçlarına **yönelik yolları** göstermek için bir tür veya örnek seçin.
 
@@ -176,7 +176,7 @@ Her iki bağlantı de aynı raporu açar. Tek fark, rapordaki **yönetilen yığ
 
 Anlık görüntü farkı raporundaki **yönetilen yığın** ağacı aşağıdaki sütunlara sahiptir:
 
-|Name|Description|
+|Ad|Açıklama|
 |-|-|
 |**Nesne türü**|Tür veya nesne örneğinin adı.|
 |**Biriktirme**|Birincil anlık görüntüdeki bir türün örneklerinin sayısı. Bir örnek için **sayı** her zaman 1 ' dir.|
@@ -187,7 +187,7 @@ Anlık görüntü farkı raporundaki **yönetilen yığın** ağacı aşağıdak
 |**Kapsamlı boyut farkı (bayt)**|Bir tür için, nesne içindeki nesnelerin boyutu dahil olmak üzere birincil anlık görüntü ve önceki anlık görüntü arasındaki türün tüm örneklerinin boyutuyla aradaki fark. Alan, bir örnek için boştur.|
 |**Modül**|Nesneyi içeren modül.|
 
-### <a name="paths-to-root-tree-snapshot-diff-reports"></a><a name="BKMK_Paths_to_Root_tree__Snapshot_diff_"></a>Kök ağacına yönelik yollar (anlık görüntü fark raporları)
+### <a name="paths-to-root-tree-snapshot-diff-reports"></a><a name="BKMK_Paths_to_Root_tree__Snapshot_diff_"></a> Kök ağacına yönelik yollar (anlık görüntü fark raporları)
 
 **Kök ağacına yönelik yollar** , bir türe veya örneğe başvuran nesne zincirini gösterir. .NET atık toplayıcısı, yalnızca tüm başvuruları serbest bırakıldığında bir nesne için belleği temizler.
 
@@ -195,7 +195,7 @@ Anlık görüntü farkı raporundaki **yönetilen yığın** ağacı aşağıdak
 
  ![Fark raporundaki kök ağacına yönelik yollar](../profiling/media/memuse_snapshotdiff_pathstoroot_instance_all.png "Fark raporundaki kök ağacına yönelik yollar")
 
-### <a name="referenced-types-or-referenced-objects-tree-snapshot-diff-reports"></a><a name="BKMK_Referenced_Objects_tree__Snapshot_diff_"></a>Başvurulan türler veya başvurulan nesneler ağacı (anlık görüntü fark raporları)
+### <a name="referenced-types-or-referenced-objects-tree-snapshot-diff-reports"></a><a name="BKMK_Referenced_Objects_tree__Snapshot_diff_"></a> Başvurulan türler veya başvurulan nesneler ağacı (anlık görüntü fark raporları)
 
 **Başvurulan türler** veya **başvurulan nesneler** ağacı, seçilen türün veya Örneğin başvurduğu nesneleri gösterir.
 
@@ -203,7 +203,7 @@ Anlık görüntü farkı raporundaki **yönetilen yığın** ağacı aşağıdak
 
 Bir anlık görüntü farkı raporundaki **başvurulan türler** ağacı aşağıdaki sütunlara sahiptir. **Başvurulan nesneler** ağacının **örneği**, **boyutu (bayt)**, **kapsamlı boyut (bayt)** ve **Modül** sütunları vardır.
 
-|Name|Description|
+|Ad|Açıklama|
 |-|-|
 |**Nesne türü** veya **örneği**|Tür veya nesne örneğinin adı.|
 |**Başvuru sayısı**|Birincil anlık görüntüdeki bir türün örneklerinin sayısı.|

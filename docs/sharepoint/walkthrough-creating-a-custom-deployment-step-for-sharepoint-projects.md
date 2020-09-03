@@ -14,9 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 56fac2be1e73de5df9da8aa13e6631c4cc9d1022
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015894"
 ---
 # <a name="walkthrough-create-a-custom-deployment-step-for-sharepoint-projects"></a>İzlenecek yol: SharePoint projeleri için özel bir dağıtım adımı oluşturma
@@ -38,7 +39,7 @@ ms.locfileid: "86015894"
 
 - Yeni dağıtım adımını test etme.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yolu tamamlamak için geliştirme bilgisayarında aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Windows, SharePoint ve Visual Studio 'nun desteklenen sürümleri.
@@ -91,7 +92,7 @@ ms.locfileid: "86015894"
 
 4. **Sınıf kitaplığı** proje şablonu ' nu seçin, projenin **DeploymentStep uzantısını**adlandırın ve **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]çözüme **DeploymentStepExtension** projesini ekler ve varsayılan Class1 kod dosyasını açar.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] çözüme **DeploymentStepExtension** projesini ekler ve varsayılan Class1 kod dosyasını açar.
 
 5. Class1 kod dosyasını projeden silin.
 
@@ -265,7 +266,7 @@ ms.locfileid: "86015894"
 
 7. **Son** düğmesini seçin.
 
-    [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]EmployeesListDefinition projesi oluşturur.
+    [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] EmployeesListDefinition projesi oluşturur.
 
 8. EmployeesListDefinition projesi için kısayol menüsünü açın, **Ekle**' yi ve ardından **Yeni öğe**' yi seçin.
 
@@ -283,7 +284,7 @@ ms.locfileid: "86015894"
 
     3. **Varsayılan (boş)** , listesine **göre özelleştirilebilir bir liste oluştur** bölümünde seçilir.
 
-       [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], bir başlık sütunuyla ve tek bir boş örnekle çalışanlar listesi öğesi oluşturur ve liste Tasarımcısını açar.
+       [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bir başlık sütunuyla ve tek bir boş örnekle çalışanlar listesi öğesi oluşturur ve liste Tasarımcısını açar.
 
 12. Liste tasarımcısında, **sütunlar** sekmesinde, **Yeni veya var olan bir sütun adı** satırını seçin ve ardından **sütun görünen ad** listesine aşağıdaki sütunları ekleyin:
 

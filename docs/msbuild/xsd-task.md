@@ -1,5 +1,5 @@
 ---
-title: XSD Görevi | Microsoft Dokümanlar
+title: XSD görevi | Microsoft Docs
 ms.date: 06/27/2018
 ms.topic: reference
 f1_keywords:
@@ -21,72 +21,72 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 217e045a731efa1fe3ba1dda63e89eca685d4b75
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77630788"
 ---
 # <a name="xsd-task"></a>XSD görevi
 
-Bir kaynaktan şema veya sınıf dosyaları üreten XML Şema Tanımı aracını *(xsd.exe)* sarar.
+Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracını (*xsd.exe*) sarmalanmış olarak kaydırır.
 
 > [!NOTE]
-> Visual Studio 2017'den itibaren *xsd.exe* için C++ proje desteği azalmaktadır. Gac'a *CppCodeProvider.dll'yi* el ile ekleyerek **Microsoft.VisualC.CppCodeProvider** API'lerini kullanmaya devam edebilirsiniz.
+> Visual Studio 2017 ' den başlayarak *xsd.exe* için C++ proje desteği kullanım dışıdır. GAC 'ye *CppCodeProvider.dll* El Ile ekleyerek **Microsoft. VisualC. CppCodeProvider** API 'lerini kullanmaya devam edebilirsiniz.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda **XSD** görevinin parametreleri açıklanmaktadır.
+ Aşağıdaki tabloda, **XSD** görevinin parametreleri açıklanmaktadır.
 
-- **Ek Seçenekler**
+- **AdditionalOptions**
 
-     İsteğe bağlı **String** parametresi.
+     İsteğe bağlı **dize** parametresi.
 
-     Komut satırında belirtilen seçenekler listesi. Örneğin, /\<option1\<> /\<option2> / seçenek #>. Başka bir **XSD** görev parametresi tarafından temsil edilmeyen seçenekleri belirtmek için bu parametreyi kullanın.
+     Komut satırında belirtilen seçeneklerin listesi. Örneğin,/ \<option1>  / \<option2>  / \<option#> . Başka bir **XSD** görev parametresi tarafından temsil edilmeyen seçenekleri belirtmek için bu parametreyi kullanın.
 
-- **Schema'dan Üret**
+- **GenerateFromSchema**
 
-  İsteğe bağlı **String** parametresi.
+  İsteğe bağlı **dize** parametresi.
 
   Belirtilen şemadan oluşturulan türleri belirtir.
 
-  Her biri XSD seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
+  Her biri bir XSD seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
-  - **sınıflar** - **/sınıflar**
+  - **sınıflar**  -  **/Classes**
 
-  - **veri kümesi** - **/veri kümesi**
+  - **veri kümesi**  -  **/DataSet**
 
 - **Dil**
 
-     İsteğe bağlı **String** parametresi.
+     İsteğe bağlı **dize** parametresi.
 
      Oluşturulan kod için kullanılacak programlama dilini belirtir.
 
-     **CS** (Varsayılan olan C#), **VB** (Visual Basic) veya **JS** (JScript) arasından seçim yapın. Ayrıca uygulayan bir sınıf için tam bir ad belirtin `System.CodeDom.Compiler.CodeDomProvider Class`.
+     **CS** (varsayılan olan C#), **vb** (Visual Basic) veya **js** (JScript) arasından seçim yapın. Ayrıca uygulayan bir sınıf için tam bir ad belirtin `System.CodeDom.Compiler.CodeDomProvider Class`.
 
-- **Namespace**
+- **Ad Alanı**
 
-     İsteğe bağlı **String** parametresi.
+     İsteğe bağlı **dize** parametresi.
 
      Oluşturulan türleri için çalışma zamanı ad alanını belirtir.
 
-- **Kaynak**
+- **Kaynaklar**
 
      Gerekli `ITaskItem[]` parametre.
 
-     Görevler tarafından tüketilebilen ve yayılabilen bir dizi MSBuild kaynak dosya öğesi tanımlar.
+     Görevler tarafından tüketilen ve yayılmakta olabilecek bir MSBuild kaynak dosya öğeleri dizisini tanımlar.
 
-- **BastırmaBaşlangıç Banner**
+- **SuppressStartupBanner**
 
      İsteğe bağlı **Boolean** parametresi.
 
-     Eğer, `true`görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini engeller.
+     İse `true` , görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini önler.
 
 - **TrackerLogDirectory**
 
-     İsteğe bağlı **String** parametresi.
+     İsteğe bağlı **dize** parametresi.
 
-     İzleyici günlüğüiçin dizini belirtir.
+     İzleyici günlüğü için dizini belirtir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

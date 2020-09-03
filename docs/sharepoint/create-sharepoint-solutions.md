@@ -13,9 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 2a7aaa8a5e5c8e6079c04b05d887138d294116dd
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016245"
 ---
 # <a name="create-sharepoint-solutions"></a>SharePoint çözümleri oluşturma
@@ -30,8 +31,8 @@ ms.locfileid: "86016245"
 |-|-|
 |![Belgeler](../sharepoint/media/vs-icon-documentation.gif "Belgeler")|**Belgeler**<br /><br /> -   [Visual Studio 'da SharePoint geliştirme &#40;kullanmaya başlama&#41;](../sharepoint/getting-started-sharepoint-development-in-visual-studio.md)<br />-   [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)<br />-   [SharePoint çözümlerini yerelleştirin](../sharepoint/localizing-sharepoint-solutions.md)<br />-   [SharePoint çözümlerini derleme ve hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)<br />-   [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)<br />-   [SharePoint araçlarını Visual Studio 'da genişletme](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)|
 |![Belgeler](../sharepoint/media/vs-icon-documentation.gif "Belgeler")|**Öne çıkan görevler**<br /><br /> -   [İzlenecek yol: SharePoint için site sütunu, içerik türü ve liste oluşturma](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)<br />-   [Nasıl yapılır: olay alıcısı oluşturma](../sharepoint/how-to-create-an-event-receiver.md)<br />-   [Nasıl yapılır: BDC modeli oluşturma](../sharepoint/how-to-create-a-bdc-model.md)<br />-   [Nasıl yapılır: SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part.md)<br />-   [Nasıl yapılır: SharePoint uygulama sayfası veya Web bölümü için Kullanıcı denetimi oluşturma](../sharepoint/how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part.md)|
-|![Kılavuz](../sharepoint/media/vs-icon-walkthroughs.gif "Kılavuz")|**Kılavuz**<br /><br /> -   [SharePoint geliştirme talimatları](../sharepoint/sharepoint-development-walkthroughs.md)|
-|![Kod Örnekleri](../sharepoint/media/vs-icon-codesamples.gif "Kod Örnekleri")|**Kod Örnekleri**<br /><br /> -   [SharePoint geliştirme örnekleri](../sharepoint/sharepoint-development-samples.md)<br />-   [SharePoint Geliştirici Indirmeleri](/sharepoint/dev/)|
+|![İzlenecek Yollar](../sharepoint/media/vs-icon-walkthroughs.gif "İzlenecek Yollar")|**İzlenecek Yollar**<br /><br /> -   [SharePoint geliştirme talimatları](../sharepoint/sharepoint-development-walkthroughs.md)|
+|![Kod örnekleri](../sharepoint/media/vs-icon-codesamples.gif "Kod Örnekleri")|**Kod örnekleri**<br /><br /> -   [SharePoint geliştirme örnekleri](../sharepoint/sharepoint-development-samples.md)<br />-   [SharePoint Geliştirici Indirmeleri](/sharepoint/dev/)|
 |![Eğitim](../sharepoint/media/vs-icon-training.gif "Eğitim")|**Eğitim**<br /><br /> -   [SharePoint geliştirmeyi öğrenin](/sharepoint/dev/)|
 |![Forumlar](../sharepoint/media/vs-icon-forums.gif "Forumlar")|**Forumlar**<br /><br /> -   [Visual Studio ile SharePoint geliştirme](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vssharepointdevelopment)<br />-   [SharePoint 2010](https://social.msdn.microsoft.com/Forums/sharepoint/home?category=sharepoint2010,sharepoint)|
 |![Eğitim](../sharepoint/media/vs-icon-training.gif "Eğitim")|**Bloglar**<br /><br /> -   [Visual Studio SharePoint geliştirme blogu](https://blogs.msdn.microsoft.com/vssharepointtoolsblog/)|

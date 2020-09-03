@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bb75d6fc02f2841383127482503799b2c78512cf
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85289189"
 ---
 # <a name="standard-and-custom-toolset-configurations"></a>Standart ve özel araç takımı yapılandırması
@@ -87,7 +87,7 @@ Visual Studio 2017 ve sonraki sürümleri, MSBuild yolu için bir kayıt defteri
 </msbuildToolsets>
 ```
 
- `<msbuildToolsets>`Ayrıca yapılandırma dosyasında aşağıdaki gibi tanımlanmalıdır.
+ `<msbuildToolsets>` Ayrıca yapılandırma dosyasında aşağıdaki gibi tanımlanmalıdır.
 
 ```xml
 <configSections>
@@ -102,13 +102,13 @@ Visual Studio 2017 ve sonraki sürümleri, MSBuild yolu için bir kayıt defteri
 > [!NOTE]
 > Doğru okunalmak için, `<configSections>` bölümündeki ilk alt bölüm olmalıdır `<configuration>` .
 
- `ToolsetConfigurationSection`, özel yapılandırma için herhangi bir MSBuild ana bilgisayarı tarafından kullanılabilen özel bir yapılandırma bölümüdür. Özel bir araç kümesi kullanıyorsanız, yapılandırma dosyası girdilerini sağlama dışında bir konağın derleme altyapısını başlatmak için bir şey yapması gerekmez.
+ `ToolsetConfigurationSection` , özel yapılandırma için herhangi bir MSBuild ana bilgisayarı tarafından kullanılabilen özel bir yapılandırma bölümüdür. Özel bir araç kümesi kullanıyorsanız, yapılandırma dosyası girdilerini sağlama dışında bir konağın derleme altyapısını başlatmak için bir şey yapması gerekmez.
 
  Aşağıdaki özellikler, `ToolsVersion` projelerde kullanılan değerine özgüdür:
 
 - **$ (MSBuildBinPath)** , `ToolsPath` kayıt defterinde veya tanımlanan yapılandırma dosyasında belirtilen değere ayarlanır `ToolsVersion` . `$(MSBuildToolsPath)`Kayıt defterindeki veya yapılandırma dosyasındaki ayar, çekirdek görevlerinin ve hedeflerin konumunu belirtir. Proje dosyasında, bu $ (MSBuildBinPath) özelliğine ve ayrıca $ (Msbuildaraçları yolu) özelliğine eşlenir.
 
-- `$(MSBuildToolsPath)`, yapılandırma dosyasında belirtilen Msbuildaraçları yol özelliği tarafından sağlanan ayrılmış bir özelliktir. (Bu özellik yerini alır `$(MSBuildBinPath)` . Ancak, `$(MSBuildBinPath)` uyumluluk için ileriye doğru yürütülür.) Özel bir araç takımı, her `$(MSBuildToolsPath)` `$(MSBuildBinPath)` ikisi de aynı değere sahip olmadıkları takdirde, ya da öğesini tanımlamalıdır.
+- `$(MSBuildToolsPath)` , yapılandırma dosyasında belirtilen Msbuildaraçları yol özelliği tarafından sağlanan ayrılmış bir özelliktir. (Bu özellik yerini alır `$(MSBuildBinPath)` . Ancak, `$(MSBuildBinPath)` uyumluluk için ileriye doğru yürütülür.) Özel bir araç takımı, her `$(MSBuildToolsPath)` `$(MSBuildBinPath)` ikisi de aynı değere sahip olmadıkları takdirde, ya da öğesini tanımlamalıdır.
 
   Ayrıca, Msbuildaraçları Path özelliğini eklemek için kullandığınız söz dizimini kullanarak yapılandırma dosyasına özel, araçları sürümüne özel özellikler ekleyebilirsiniz. Bu özel özellikleri proje dosyası için kullanılabilir hale getirmek için, yapılandırma dosyasında belirtilen değerin adı ile aynı adı kullanın. Yapılandırma dosyasında araç kümelerini tanımlayabilir, ancak alt araç kümelerini tanımlayabilirsiniz.
 

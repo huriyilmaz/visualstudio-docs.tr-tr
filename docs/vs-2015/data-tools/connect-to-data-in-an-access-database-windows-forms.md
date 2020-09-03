@@ -21,10 +21,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8426e9fcaa29bef36b6701c78d622f6f42fd1171
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651138"
 ---
 # <a name="connect-to-data-in-an-access-database-windows-forms"></a>Bir Access veritabanındaki verilere bağlanma (Windows Forms)
@@ -32,7 +32,7 @@ ms.locfileid: "72651138"
 
 Visual Studio kullanarak bir Access veritabanına (bir. mdf dosyası ya da. accdb dosyası) bağlanabilirsiniz. Bağlantıyı tanımladıktan sonra veriler **veri kaynakları** penceresinde görünür. Burada, tabloları veya görünümleri formlarınıza sürükleyebilirsiniz.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Bu yordamları kullanmak için, bir Windows Forms uygulama projesine ve bir Access veritabanı (. accdb dosyası) ya da Access 2000 – 2003 veritabanı (. mdb dosyası) gerekir. Dosya türünüze karşılık gelen yordamı izleyin.
 
 ## <a name="creating-the-dataset-for-an-accdb-file"></a>. Accdb dosyası için veri kümesi oluşturma
@@ -42,7 +42,7 @@ Visual Studio kullanarak bir Access veritabanına (bir. mdf dosyası ya da. accd
 
 1. Veri bağlamak istediğiniz Windows Forms uygulamayı açın.
 
-2. **Görünüm** menüsünde **diğer Windows**  > **veri kaynakları**' nı seçin.
+2. **Görünüm** menüsünde **diğer Windows**  >  **veri kaynakları**' nı seçin.
 
      ![Diğer Windows veri kaynaklarını görüntüleme](../data-tools/media/viewdatasources.png "ViewDataSources 'lar")
 
@@ -89,7 +89,7 @@ Visual Studio kullanarak bir Access veritabanına (bir. mdf dosyası ya da. accd
 
 1. Veri bağlamak istediğiniz Windows Forms uygulamayı açın.
 
-2. **Görünüm** menüsünde **diğer Windows**  > **veri kaynakları**' nı seçin.
+2. **Görünüm** menüsünde **diğer Windows**  >  **veri kaynakları**' nı seçin.
 
      ![Diğer Windows veri kaynaklarını görüntüleme](../data-tools/media/viewdatasources.png "ViewDataSources 'lar")
 
@@ -127,7 +127,7 @@ Visual Studio kullanarak bir Access veritabanına (bir. mdf dosyası ya da. accd
 
 - Veri kümesini oluşturan nesneleri eklemek veya düzenlemek için Veri Kümesi Tasarımcısı veri kaynağını açın.
 
-- Veri kümesindeki veri tablolarının <xref:System.Data.DataTable.ColumnChanging> veya <xref:System.Data.DataTable.RowChanging> olayına doğrulama mantığı ekleyin (bkz. [veri kümelerinde verileri doğrulama](../data-tools/validate-data-in-datasets.md)).
+- Veri <xref:System.Data.DataTable.ColumnChanging> <xref:System.Data.DataTable.RowChanging> kümesindeki veri tablolarının veya olayına doğrulama mantığı ekleyin (bkz. [veri kümelerinde verileri doğrulama](../data-tools/validate-data-in-datasets.md)).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 

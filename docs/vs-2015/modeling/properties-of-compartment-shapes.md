@@ -45,7 +45,7 @@ Bölme şekilleri, etki alanına özgü bir dilde bir etki alanı sınıfını g
 |Özel Öznitelikler|Bu bölme şeklinden oluşturulan kaynak kodu sınıfına öznitelikler eklemek için kullanılır|\<none>|
 |Double türevi üretir|Eğer `True` bir temel sınıf ve kısmi bir sınıf (geçersiz kılmaları özelleştirmeyi desteklemek için) oluşturulur. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|Yanlış|
 |Özel Oluşturucusu vardır|İse `True` , kaynak kodda özel bir Oluşturucu sağlanacaktır. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|Yanlış|
-|Devralma değiştiricisi|Bölme şeklinden oluşturulan kaynak kodu sınıfının devralım türünü açıklar ( `none` `abstract` veya `sealed` ).|Hiçbiri|
+|Devralma değiştiricisi|Bölme şeklinden oluşturulan kaynak kodu sınıfının devralım türünü açıklar ( `none` `abstract` veya `sealed` ).|Yok|
 |Temel bölme şekli|Bu şeklin temel sınıfı.|(yok)|
 |Name|Bu şeklin adı.|Geçerli ad|
 |Ad Alanı|Bu şekille ilişkili ad alanı.|Geçerli ad alanı|

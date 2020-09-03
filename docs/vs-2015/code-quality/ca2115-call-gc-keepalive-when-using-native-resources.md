@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: c668172ca318000068fb4e90f4848e456c32208d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543630"
 ---
 # <a name="ca2115-call-gckeepalive-when-using-native-resources"></a>CA2115: Yerel kaynaklar kullanırken GC.KeepAlive'ı çağırın
@@ -53,7 +53,7 @@ ms.locfileid: "85543630"
   Diğer iletileri hariç tutarak dikkatle gözden geçirin. Bu kural, yeniden oluşturulması ve hata ayıklaması zor olan hataları algılar.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, `BadMethod` öğesine bir çağrı içermez `GC.KeepAlive` ve bu nedenle kuralı ihlal eder. `GoodMethod`düzeltilen kodu içerir.
+ Aşağıdaki örnekte, `BadMethod` öğesine bir çağrı içermez `GC.KeepAlive` ve bu nedenle kuralı ihlal eder. `GoodMethod` düzeltilen kodu içerir.
 
 > [!NOTE]
 > Bu örnek, kod derlense ve çalıştırılsa da, yönetilmeyen bir kaynak oluşturulmadığından veya serbest bırakıldığı için uyarının tetiklenmemesine rağmen sözde koddur.

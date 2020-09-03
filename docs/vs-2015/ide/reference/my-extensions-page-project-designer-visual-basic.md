@@ -15,25 +15,25 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ada9e1f9eaa63e2158bd3d6a117946e90924461d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671993"
 ---
 # <a name="my-extensions-page-project-designer-visual-basic"></a>My Extensions Sayfası, Proje Tasarımcısı (Visual Basic)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Projenizde `My` ad alanı uzantılarını yönetmek için **Proje Tasarımcısı** ' nın **uzantılarım** sayfasını kullanın. `My` ad alanı uzantıları, kendi özel üyelerinizi eklemek için `My` ad alanını özelleştirmenizi sağlar. Özel `My` ad alanı uzantıları oluşturma hakkında daha fazla bilgi için, bkz. [Visual Basic ad alanını genişletme](https://msdn.microsoft.com/library/808e8617-b01c-4135-8b21-babe87389e8e).
+Projenizdeki ad alanı uzantılarını yönetmek için **Proje Tasarımcısı** ' nın **uzantılarım** sayfasını kullanın `My` . `My` ad alanı uzantıları, `My` kendi özel üyelerinizi eklemek için ad alanını özelleştirmenizi sağlar. Özel ad alanı uzantıları oluşturma hakkında daha fazla bilgi için `My` bkz. [Visual Basic ad alanını genişletme](https://msdn.microsoft.com/library/808e8617-b01c-4135-8b21-babe87389e8e).
 
  **Uzantılarım** sayfasına erişmek için, **Çözüm Gezgini**içindeki proje düğümünüz için **projem** ' e çift tıklayın. **Proje Tasarımcısı** göründüğünde **uzantılarım** sekmesine tıklayın.
 
 ## <a name="uielement-list"></a>UIElement Listesi
- Aşağıdaki seçenekler, projenize `My` ad alanı uzantıları eklemenize veya kaldırmanıza olanak sağlar. Bir `My` ad alanı uzantısının eklenebilmesi için önce bir Visual Studio öğe şablonu olarak yüklenmesi gerekir. @No__t_0 ad alanı uzantılarını yayımlama ve yükleme hakkında daha fazla bilgi için bkz. [özel uzantılarımı paketleme ve dağıtma](https://msdn.microsoft.com/library/fd89c54b-0290-4c50-95a3-ff17d4487a21).
+ Aşağıdaki seçenekler, `My` projenize ad alanı uzantıları eklemenize veya kaldırmanıza imkan sağlar. `My`Ad alanı uzantısının eklenebilmesi için önce bir Visual Studio öğe şablonu olarak yüklenmesi gerekir. Ad alanı uzantılarını yayımlama ve yükleme hakkında daha fazla bilgi için `My` bkz. [özel uzantılarımı paketleme ve dağıtma](https://msdn.microsoft.com/library/fd89c54b-0290-4c50-95a3-ff17d4487a21).
 
- **My Namespace uzantıları** Bu liste, projede yüklü olan tüm `My` ad alanı uzantılarını gösterir.
+ **My Namespace uzantıları** Bu liste, `My` projede yüklü olan tüm ad alanı uzantılarını gösterir.
 
- **Uzantı Ekle** Projenize yüklü bir `My` ad alanı uzantısı eklemek için bu düğmeye tıklayın. Tüm olası `My` ad alanı uzantılarının listesi görüntülenir. Projenize eklemek istediğiniz `My` ad alanı uzantısını seçip eklemek için **Tamam** ' a tıklayın.
+ **Uzantı Ekle** Projenize yüklü bir ad alanı uzantısı eklemek için bu düğmeye tıklayın `My` . Tüm olası `My` ad alanı uzantılarının listesi görüntülenir. `My`Projenize eklemek istediğiniz ad alanı uzantısını seçin ve eklemek Için **Tamam** ' ı tıklatın.
 
  **Uzantıyı kaldır** **My Namespace Extensions** listesindeki bir veya daha fazla başvuruyu seçin ve ardından bu düğmeye tıklayarak `My` ad alanı uzantısını projeden kaldırın.
 

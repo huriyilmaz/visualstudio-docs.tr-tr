@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 001f1faa969275788b10bc9bd1e6398373a54b37
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669969"
 ---
 # <a name="replace-in-files"></a>Dosyalarda Değiştir
@@ -46,7 +46,7 @@ Dosyalarda Değiştir * * bir dize veya ifade için belirtilen dosya kümesinin 
 ## <a name="find-what"></a>Neyi bulun
  Yeni bir metin dizesi veya ifade aramak için, kutuyu kutuda belirtin. En son aradığınız 20 dizeden herhangi birini aramak için listeyi açın ve aramak istediğiniz dizeyi seçin. Arama dizenizde bir veya daha fazla normal ifade kullanmak istiyorsanız bitişik **Ifade Oluşturucu** düğmesini seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da normal Ifadeler kullanma](../ide/using-regular-expressions-in-visual-studio.md).
 
-## <a name="replace-with"></a>Değiştir
+## <a name="replace-with"></a>Şununla Değiştir
  **Bulunacak** kutusunda bulunan dize örneklerini başka bir dizeyle değiştirmek Için, **Değiştir** kutusuna değiştirme dizesini girin. **Bulunacak** kutusunda dize örneklerini silmek için bu alanı boş bırakın. En son aradığınız 20 dizeyi göstermek için listeyi açın. Değiştirme dizenizde bir veya daha fazla normal ifade kullanmak istiyorsanız bitişik **Ifade Oluşturucu** düğmesini seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da normal Ifadeler kullanma](../ide/using-regular-expressions-in-visual-studio.md).
 
 ## <a name="look-in"></a>Arama yeri
