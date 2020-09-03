@@ -9,10 +9,10 @@ caps.latest.revision: 14
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fd212eb304e6cba022b067b8b432cf00fc3f87ba
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660547"
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>Nasıl yapılır: Birim Testlerini .NET Framework'ün Önceki Sürümünü Hedefleyecek Şekilde Yapılandırma
@@ -26,13 +26,13 @@ Microsoft Visual Studio ' de bir test projesi oluşturduğunuzda, varsayılan ol
 
 - Yerel makinenizde Visual Studio 'dan belirli bir .NET Framework sürümünü hedefleyen birim testlerini çalıştırabilirsiniz.
 
-- Komut isteminden MSTest. exe ' yi kullanarak .NET Framework belirli bir sürümünü hedefleyen birim testlerini çalıştırabilirsiniz.
+- Komut isteminden MSTest.exe kullanarak .NET Framework belirli bir sürümünü hedefleyen birim testlerini çalıştırabilirsiniz.
 
 - Yapı aracısında bir derleme parçası olarak birim testlerini çalıştırabilirsiniz.
 
   **SharePoint uygulamalarını test etme**
 
-  Yukarıda listelenen yetenekler, Visual Studio kullanarak SharePoint uygulamaları için birim testleri ve tümleştirme testleri yazmanızı de sağlar. Visual Studio kullanarak SharePoint uygulamaları geliştirmeyi [!INCLUDE[crabout](../includes/crabout-md.md)], bkz. SharePoint [çözümleri oluşturma](https://msdn.microsoft.com/library/4bfb1e59-97c9-4594-93f8-3068b4eb9631), [SharePoint çözümlerini derleme ve hata ayıklama](https://msdn.microsoft.com/library/c9e7c9ab-4eb3-40cd-a9b9-6c2a896f70ae) ve [SharePoint kodunu doğrulama ve hata ayıklama](https://msdn.microsoft.com/library/b5f3bce2-6a51-41b1-a292-9e384bae420c).
+  Yukarıda listelenen yetenekler, Visual Studio kullanarak SharePoint uygulamaları için birim testleri ve tümleştirme testleri yazmanızı de sağlar. [!INCLUDE[crabout](../includes/crabout-md.md)] Visual Studio kullanarak SharePoint uygulamaları geliştirme, bkz. SharePoint [çözümleri oluşturma](https://msdn.microsoft.com/library/4bfb1e59-97c9-4594-93f8-3068b4eb9631), [SharePoint çözümlerini derleme ve hata ayıklama](https://msdn.microsoft.com/library/c9e7c9ab-4eb3-40cd-a9b9-6c2a896f70ae) ve [SharePoint kodunu doğrulama ve hata ayıklama](https://msdn.microsoft.com/library/b5f3bce2-6a51-41b1-a292-9e384bae420c).
 
   **Sınırlamalar**
 
@@ -68,46 +68,46 @@ Microsoft Visual Studio ' de bir test projesi oluşturduğunuzda, varsayılan ol
 
 6. Hedef Framework 'ü **.NET Framework 3,5** veya sonraki bir sürümü, aşağıdaki çizimde yer alarak B çağrısında gösterildiği gibi değiştirmek için **hedef Framework (tüm yapılandırma)** açılan listesini kullanın. İstemci sürümü belirtmemelisiniz.
 
-     ![Hedef çerçeve açılan&#45;listesi](../test/media/howtoconfigureunitest35frameworkstepb.png "HowToConfigureUniTest35FrameworkStepB")
+     ![Hedef çerçeve bırakma&#45;aşağı açılan listesi](../test/media/howtoconfigureunitest35frameworkstepb.png "HowToConfigureUniTest35FrameworkStepB")
 
-### <a name="re-targeting-to-a-specific-version-of-the-net-framework-for-visual-c-unit-test-projects"></a>Visual C# Unit Test projeleri için .NET Framework belirli bir sürümüne yeniden hedefleme
+### <a name="re-targeting-to-a-specific-version-of-the-net-framework-for-visual-c-unit-test-projects"></a>Visual C# birim testi projeleri için .NET Framework belirli bir sürümüne yeniden hedefleme
 
-1. Yeni bir görsel C# birim test projesi oluşturun. **Dosya** menüsünde **Yeni** ' yi ve ardından **Proje**' yi seçin.
+1. Yeni bir Visual C# birim testi projesi oluşturun. **Dosya** menüsünde **Yeni** ' yi ve ardından **Proje**' yi seçin.
 
      **Yeni proje** iletişim kutusu görüntülenir.
 
-2. **Yüklü şablonlar**altında, **görsel C#** ' i genişletin. **Test** ' i seçin ve ardından **test projesi** şablonunu seçin.
+2. **Yüklü şablonlar**altında **Visual C#**' yi genişletin. **Test** ' i seçin ve ardından **test projesi** şablonunu seçin.
 
-3. **Ad** metin kutusuna görsel C# test projeniz için bir ad yazın ve ardından **Tamam**' ı seçin.
+3. **Ad** metin kutusuna, Visual C# test projeniz için bir ad yazın ve ardından **Tamam**' ı seçin.
 
-4. Çözüm Gezgini ' de, yeni görsel C# test projenizin kısayol menüsünden Özellikler ' i seçin.
+4. Çözüm Gezgini ' de, yeni Visual C# test projenizin kısayol menüsünden **Özellikler** ' i seçin.
 
-     Görsel C# test projenizin özellikleri görüntülenir.
+     Visual C# test projenizin özellikleri görüntülenir.
 
 5. **Uygulama** sekmesinde **hedef çerçeve** ' yi seçin ve ardından aşağı açılan listeden **.NET Framework 3,5** veya sonraki bir sürümü seçerek aşağıdaki çizimde gösterilen hedef Framework.as değiştirin. İstemci sürümü belirtmemelisiniz.
 
-     ![Hedef çerçeve açılan&#45;listesi](../test/media/howtoconfigureunittest35frameworkcsharp.png "HowToConfigureUnitTest35FrameworkCSharp")
+     ![Hedef çerçeve bırakma&#45;aşağı açılan listesi](../test/media/howtoconfigureunittest35frameworkcsharp.png "HowToConfigureUnitTest35FrameworkCSharp")
 
-### <a name="re-targeting-to-a-specific-version-of-the-net-framework-for-ccli-unit-test-projects"></a>/CLI birim testi projeleri için C++.NET Framework belirli bir sürümüne yeniden hedefleme
+### <a name="re-targeting-to-a-specific-version-of-the-net-framework-for-ccli-unit-test-projects"></a>C++/CLı birim testi projeleri için .NET Framework belirli bir sürümüne yeniden hedefleme
 
-1. Yeni C++ bir birim testi projesi oluşturun. **Dosya** menüsünde, **Yeni** ' yi seçin ve ardından **Proje**' ye tıklayın.
+1. Yeni bir C++ birim testi projesi oluşturun. **Dosya** menüsünde, **Yeni** ' yi seçin ve ardından **Proje**' ye tıklayın.
 
      **Yeni proje** iletişim kutusu görüntülenir.
 
     > [!WARNING]
-    > Visual C++Studio C++için .NET Framework 'ün önceki bir sürümü için/CLI birim testlerini derlemek için, Visual Studio 'nun karşılık gelen sürümünü kullanmanız gerekir. Örneğin, .NET Framework 3,5 ' i hedeflemek için [!INCLUDE[vs_orcas_long](../includes/vs-orcas-long-md.md)] ve [!INCLUDE[vs_orcas_long](../includes/vs-orcas-long-md.md)] Service Pack 1 ' i yüklemelisiniz.
+    > Visual C++ için .NET Framework 'ün önceki bir sürümü için C++/CLı birim testlerini derlemek için, Visual Studio 'nun karşılık gelen sürümünü kullanmanız gerekir. Örneğin, .NET Framework 3,5 ' i hedeflemek için, [!INCLUDE[vs_orcas_long](../includes/vs-orcas-long-md.md)] ve [!INCLUDE[vs_orcas_long](../includes/vs-orcas-long-md.md)] Service Pack 1 ' i yüklemelisiniz.
 
-2. **Yüklü şablonlar**altında, **Visual C + +** ' yi genişletin. **Test** ' i seçin ve ardından **test projesi** şablonunu seçin.
+2. **Yüklü şablonlar**altında, **Visual C + +**' yi genişletin. **Test** ' i seçin ve ardından **test projesi** şablonunu seçin.
 
-3. **Ad** metin kutusuna görsel C++ test projeniz için bir ad yazın ve ardından **Tamam**' a tıklayın.
+3. **Ad** metin kutusuna Visual C++ test projeniz için bir ad yazın ve ardından **Tamam**' a tıklayın.
 
-4. Çözüm Gezgini, yeni görsel C++ test projenizden **Projeyi Kaldır** ' ı seçin.
+4. Çözüm Gezgini, yeni Visual C++ test projenizden **Projeyi Kaldır** ' ı seçin.
 
-5. Çözüm Gezgini, yüklenmeyen görsel C++ test projesini seçin ve ardından **\<project adı Düzenle >. vcxproj**öğesini seçin.
+5. Çözüm Gezgini ' de, yüklenmeyen Visual C++ test projesini seçin ve ardından ** \<project name> . vcxproj Düzenle**' yi seçin.
 
      . Vcxproj dosyası düzenleyicide açılır.
 
-6. @No__t_0 sürüm 3,5 ' e veya `"Globals"` etiketli `PropertyGroup` sonraki bir sürüme ayarlayın. İstemci sürümü belirtmemelisiniz:
+6. `TargetFrameworkVersion`Etiketli bir sürüm 3,5 veya sonraki bir sürümü olarak ayarlayın `PropertyGroup` `"Globals"` . İstemci sürümü belirtmemelisiniz:
 
     ```
     <PropertyGroup Label="Globals">
@@ -123,7 +123,7 @@ Microsoft Visual Studio ' de bir test projesi oluşturduğunuzda, varsayılan ol
 
 7. . Vcxproj dosyasını kaydedin ve kapatın.
 
-8. Çözüm Gezgini ' de, yeni görsel C++ test projenizin kısayol menüsünden **projeyi yeniden yükle** ' yi seçin.
+8. Çözüm Gezgini ' de, yeni Visual C++ test projenizin kısayol menüsünden **projeyi yeniden yükle** ' yi seçin.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Mevcut kod Için birim testleri oluşturma ve çalıştırma](https://msdn.microsoft.com/e8370b93-085b-41c9-8dec-655bd886f173) SharePoint çözümleri [oluşturma](https://msdn.microsoft.com/library/4bfb1e59-97c9-4594-93f8-3068b4eb9631) [ve hata ayıklama SharePoint çözümleri](https://msdn.microsoft.com/library/c9e7c9ab-4eb3-40cd-a9b9-6c2a896f70ae) [Gelişmiş derleyici ayarları iletişim kutusu (Visual Basic)](../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md)

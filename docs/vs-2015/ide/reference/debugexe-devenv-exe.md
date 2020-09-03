@@ -1,5 +1,5 @@
 ---
-title: -DebugExe (devenv. exe) | Microsoft Docs
+title: -DebugExe (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f472add6b821693d1d48397e878db19e707e2868
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660800"
 ---
 # <a name="debugexe-devenvexe"></a>/DebugExe (devenv.exe)
@@ -25,22 +25,22 @@ ms.locfileid: "72660800"
 
 Ayıklanmakta olan belirtilen yürütülebilir dosyayı açar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Devenv /debugexe ExecutableFile
 ```
 
-## <a name="arguments"></a>Arguments
- `ExecutableFile` gerekiyor. Bir. exe dosyasının yolu ve dosya adı.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `ExecutableFile` Gerekli. Bir. exe dosyasının yolu ve dosya adı.
 
  . Exe dosyası bulunamazsa veya yoksa, hiçbir uyarı veya hata görüntülenmez ve [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] normal olarak başlatılır.
 
 ## <a name="remarks"></a>Açıklamalar
- @No__t_0 parametresini izleyen dizeler, bu dosyaya bağımsız değişken olarak geçirilir.
+ Parametresini izleyen dizeler, `ExecutableFile` Bu dosyaya bağımsız değişken olarak geçirilir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, hata ayıklama için `MyApplication.exe` dosyasını açar.
+ Aşağıdaki örnek, `MyApplication.exe` hata ayıklama için dosyasını açar.
 
 ```
 Devenv.exe /debugexe MyApplication.exe

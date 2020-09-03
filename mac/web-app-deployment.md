@@ -1,26 +1,26 @@
 ---
-title: ASP.NET Çekirdek Web Uygulaması Dağıtımı
-description: Mac için Visual Studio'da ASP.NET Çekirdek Web Uygulaması Dağıtımı hakkında bilgi.
+title: ASP.NET Core Web uygulaması dağıtımı
+description: Mac için Visual Studio ASP.NET Core Web uygulaması dağıtımı hakkında bilgiler.
 ms.topic: overview
 author: sayedihashimi
 ms.author: sayedha
 ms.date: 01/25/2019
 ms.assetid: d746292d-0570-424a-bf43-e16ab85bbf0d
 ms.openlocfilehash: 98169016921df5397fafb5a77c214357c18a0ae8
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "70107978"
 ---
-# <a name="aspnet-core-web-app-deployment"></a>ASP.NET Çekirdek Web Uygulaması Dağıtımı
+# <a name="aspnet-core-web-app-deployment"></a>ASP.NET Core Web uygulaması dağıtımı
 
-Web uygulamaları geliştirmede önemli bir adım yayımlama (dağıtım). Başkalarının uygulamayı kullanabilmesi için veya sınama amacıyla uzak bir ortamda yayımlayabilirsiniz. Mac için Visual Studio, uygulamanızı yayınlamak için iki seçenek sunar. Azure Uygulama Hizmetinde Yayımlama, web uygulamanızı Azure Uygulama Hizmeti'nde yayınlamanızı sağlar. Klasöre Yayımlama, uygulamanızı bir klasörde yayımlamanızı sağlar.
+Web uygulamaları geliştirme konusunda önemli bir adım yayımlanıyor (dağıtım). Başkalarının uygulamayı kullanabilmesi için veya test amacıyla uzak bir ortama yayımlayabilirsiniz. Mac için Visual Studio uygulamanızı yayımlamak için iki seçenek sunar. Azure App Service yayımlama, Web uygulamanızı Azure App Service yayımlamanıza olanak sağlar. Klasöre Yayımla, uygulamanızı bir klasöre yayımlamanıza olanak sağlar.
 
 ## <a name="publish-to-azure-app-service"></a>Azure App Service’e yayımlama
 
-Mac için Visual Studio'yu kullanarak web uygulamanızı doğrudan Azure Uygulama Hizmeti'ne yayınlayabilirsiniz. ASP.NET Core web uygulamanızı Azure Uygulama Hizmeti'nde yayınlamak [için Azure Uygulama Hizmeti'ne yayımlama makalesine](publish-app-svc.md) bakın.
+Mac için Visual Studio kullanarak, Web uygulamanızı doğrudan Azure App Service yayınlayabilirsiniz. ASP.NET Core Web uygulamanızı yayımlamak için Azure App Service [Azure App Service Yayımla](publish-app-svc.md) makalesine başvurun.
 
 ## <a name="publish-to-folder"></a>Klasöre Yayımlama
 
-Ayrıca ASP.NET Core web uygulamalarınızı bir klasörde de yayınlayabilirsiniz. Web uygulamanızı bir klasörde nasıl yayınlayacağınız hakkında daha fazla bilgi edinmek için [Klasöre](publish-folder.md)Yayımla'ya bakın.
+Ayrıca, ASP.NET Core Web uygulamalarınızı bir klasöre yayımlayabilirsiniz. Web uygulamanızı bir klasöre nasıl yayımlayacağınız hakkında daha fazla bilgi edinmek için, [klasöre yayımlama](publish-folder.md)bölümüne bakın.

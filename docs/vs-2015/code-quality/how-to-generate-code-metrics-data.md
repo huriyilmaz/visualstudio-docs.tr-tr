@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 32e309497a90622f0091d13f6619ac9527d4cfa9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72661288"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Nasıl yapılır: Kod Ölçümleri Verileri Üretme
@@ -25,7 +25,7 @@ ms.locfileid: "72661288"
 
 Tüm çözüm veya seçili proje için kod ölçümleri sonuçları oluşturmaya karar verebilirsiniz.
 
- **Requirements**
+ **Gereksinimler**
 
  Visual Studio Enterprise
 
@@ -33,11 +33,11 @@ Tüm çözüm veya seçili proje için kod ölçümleri sonuçları oluşturmaya
 
 - **Çözümle menüsü**' ne ve ardından **çözüm için CalculateCode ölçümleri**' ne tıklayın.
 
-     \- veya-
+     \- veya
 
 - **Çözüm Gezgini**, çözüme sağ tıklayın ve ardından **CalculateCode ölçümleri**' ne tıklayın.
 
-     \- veya-
+     \- veya
 
 - **Kod ölçümleri sonuçları** penceresinde, **çözüm için CalculateCode ölçümleri** düğmesine tıklayın.
 
@@ -49,7 +49,7 @@ Tüm çözüm veya seçili proje için kod ölçümleri sonuçları oluşturmaya
 
 2. **Çözümle**' ye ve ardından **Seçili projeler Için kod ölçümleri oluştur**' a tıklayın.
 
-    \- veya-
+    \- veya
 
     Seçimlerinizi sağ tıklatın ve ardından **CalculateCode ölçümleri**' ne tıklayın.
 

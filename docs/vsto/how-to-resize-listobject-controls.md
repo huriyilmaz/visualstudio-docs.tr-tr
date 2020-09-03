@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 68a9841d8471189538959a311bf9349199d55f78
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545840"
 ---
 # <a name="how-to-resize-listobject-controls"></a>Nasıl yapılır: ListObject denetimlerini yeniden boyutlandırma
@@ -37,12 +37,12 @@ ms.locfileid: "85545840"
 
   Denetimler hakkında daha fazla bilgi için <xref:Microsoft.Office.Tools.Excel.ListObject> bkz. [ListObject denetimi](../vsto/listobject-control.md).
 
-## <a name="resize-a-listobject-control-at-design-time"></a><a name="designtime"></a>Tasarım zamanında ListObject denetimini yeniden boyutlandırma
+## <a name="resize-a-listobject-control-at-design-time"></a><a name="designtime"></a> Tasarım zamanında ListObject denetimini yeniden boyutlandırma
  Bir listeyi yeniden boyutlandırmak için, boyutlandırma tutamaçlarından birini tıklatabilir ve sürükleyebilirsiniz ya da **Listeyi yeniden boyutlandır** iletişim kutusunda boyutunu yeniden tanımlayabilirsiniz.
 
 ### <a name="to-resize-a-list-by-using-the-resize-list-dialog-box"></a>Listeyi yeniden boyutlandır iletişim kutusunu kullanarak bir listeyi yeniden boyutlandırmak için
 
-1. Tabloda herhangi bir yere tıklayın <xref:Microsoft.Office.Tools.Excel.ListObject> . Şeritteki **Tablo Araçları**  >  **Tasarım** sekmesi görüntülenir.
+1. Tabloda herhangi bir yere tıklayın  <xref:Microsoft.Office.Tools.Excel.ListObject> . Şeritteki **Tablo Araçları**  >  **Tasarım** sekmesi görüntülenir.
 
 2. Özellikler bölümünde, **tabloyu yeniden boyutlandır**' ı tıklatın.
 
@@ -50,9 +50,9 @@ ms.locfileid: "85545840"
 
 3. Tablonuz için yeni veri aralığını seçin.
 
-4. **Tamam**'a tıklayın.
+4. **Tamam**’a tıklayın.
 
-## <a name="resize-a-listobject-control-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a>Belge düzeyindeki bir projede bir ListObject denetimini çalışma zamanında yeniden boyutlandırma
+## <a name="resize-a-listobject-control-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a> Belge düzeyindeki bir projede bir ListObject denetimini çalışma zamanında yeniden boyutlandırma
  <xref:Microsoft.Office.Tools.Excel.ListObject>Yöntemini kullanarak çalışma zamanında bir denetimi yeniden boyutlandırabilirsiniz <xref:Microsoft.Office.Tools.Excel.ListObject.Resize%2A> . Bu yöntemi, <xref:Microsoft.Office.Tools.Excel.ListObject> denetimi çalışma sayfasındaki yeni bir konuma taşımak için kullanamazsınız. Üst bilgiler aynı satırda kalmalıdır ve yeniden boyutlandırılmış <xref:Microsoft.Office.Tools.Excel.ListObject> Denetim özgün liste nesnesiyle çakışmalıdır. Yeniden boyutlandırılmış <xref:Microsoft.Office.Tools.Excel.ListObject> Denetim bir başlık satırı ve en az bir veri satırı içermelidir.
 
 ### <a name="to-resize-a-list-object-programmatically"></a>Bir liste nesnesini programlı olarak yeniden boyutlandırmak için
@@ -67,7 +67,7 @@ ms.locfileid: "85545840"
      [!code-csharp[Trin_VstcoreHostControlsExcel#7](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#7)]
      [!code-vb[Trin_VstcoreHostControlsExcel#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#7)]
 
-## <a name="resize-a-listobject-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a>VSTO eklenti projesindeki bir ListObject 'i çalışma zamanında yeniden boyutlandırma
+## <a name="resize-a-listobject-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a> VSTO eklenti projesindeki bir ListObject 'i çalışma zamanında yeniden boyutlandırma
  <xref:Microsoft.Office.Tools.Excel.ListObject>Çalışma zamanında herhangi bir açık çalışma sayfasında bir denetimi yeniden boyutlandırabilirsiniz. <xref:Microsoft.Office.Tools.Excel.ListObject>VSTO eklentisini kullanarak çalışma sayfasına denetim ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: ListObject denetimlerini çalışma sayfalarına ekleme](../vsto/how-to-add-listobject-controls-to-worksheets.md).
 
 ### <a name="to-resize-a-list-object-programmatically"></a>Bir liste nesnesini programlı olarak yeniden boyutlandırmak için

@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 454b51b6939a78cdaab8d29f51d30910024adbe3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72661209"
 ---
 # <a name="go-to-command"></a>Git Komutu
@@ -26,19 +26,19 @@ ms.locfileid: "72661209"
 
 İmleci belirtilen satıra kaydırır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Edit.GoTo [linenumber]
 ```
 
-## <a name="arguments"></a>Arguments
- Isteğe bağlı `linenumber`. Gidilecek satırın numarasını temsil eden bir tamsayı.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `linenumber` Seçim. Gidilecek satırın numarasını temsil eden bir tamsayı.
 
 ## <a name="remarks"></a>Açıklamalar
- Satır numaralandırması bir kerede başlar. @No__t_0 değeri bir değerinden küçükse, ilk satır görüntülenir. @No__t_0 değeri son satırın sayısından büyükse, son satır görüntülenir.
+ Satır numaralandırması bir kerede başlar. Değeri `linenumber` bir değerinden küçükse, ilk satır görüntülenir. Değeri, `linenumber` son satırın sayısından büyükse, son satır görüntülenir.
 
- @No__t_0 için bir değer belirtilmemişse, **satıra git** iletişim kutusu görüntülenir.
+ İçin bir değer `linenumber` belirtilmemişse, **satıra git** iletişim kutusu görüntülenir.
 
  Bu komutun diğer adı Sayfayln 'dir.
 

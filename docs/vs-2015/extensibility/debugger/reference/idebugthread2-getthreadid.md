@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetThreadId | Microsoft Docs
+title: 'IDebugThread2:: GetThreadId | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d3e9df6746cb2b1828b3020e473f2de19799b582
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153015"
 ---
 # <a name="idebugthread2getthreadid"></a>IDebugThread2::GetThreadId
@@ -24,7 +24,7 @@ ms.locfileid: "68153015"
 
 Sistem iş parçacığı tanımlayıcısını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetThreadId (   
@@ -40,16 +40,16 @@ int GetThreadId ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pdwThreadId`  
- [out] Sistem iş parçacığı tanıtıcısını döndürür.  
+ dışı Sistem iş parçacığı tanımlayıcısını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir iş parçacığı kimliği bir iş parçacığı bir işlemdeki diğer iş parçacıkları arasında tanımlamak için kullanılır.  
+ İş parçacığı KIMLIĞI, bir işlemdeki diğer tüm iş parçacıkları arasında iş parçacığı tanımlamak için kullanılır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CProgram` uygulayan nesne [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) arabirimi.  
+ Aşağıdaki örnek, `CProgram` [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.  
   
 ```cpp#  
 HRESULT CProgram::GetThreadId(DWORD* pdwThreadId) {     

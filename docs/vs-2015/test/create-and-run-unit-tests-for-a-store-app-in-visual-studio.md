@@ -12,16 +12,16 @@ author: alexhomer1
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a7efb5fe4484fdd0ce7d2fcb0a1988e9b089509e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660619"
 ---
 # <a name="create-and-run-unit-tests-for-a-store-app-in-visual-studio"></a>Visual Studio 'da bir mağaza uygulaması için birim testleri oluşturma ve çalıştırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Windows 8 için Visual Studio 2012 Express birim testi araçları, yazılım geliştirme uygulamalarında birim testi birleştiren geliştiricileri ve ekipleri desteklemek üzere tasarlanmıştır. Birim testleri, geliştiricilere ve test edicilere görsel C#, Visual Basic ve görsel C++ projelerdeki sınıfların yöntemlerinde mantık hataları aramak için verimli ve sürdürülebilir bir yol sağlar.
+Windows 8 için Visual Studio 2012 Express birim testi araçları, yazılım geliştirme uygulamalarında birim testi birleştiren geliştiricileri ve ekipleri desteklemek üzere tasarlanmıştır. Birim testleri, geliştiricilere ve test edicilere, Visual C#, Visual Basic ve Visual C++ projelerindeki sınıfların yöntemlerinde mantık hataları aramak için verimli ve sürdürülebilir bir yol sağlar.
 
 > [!NOTE]
 > Bu bölümdeki konularda, Windows 8 için Visual Studio 2012 Express işlevinin işlevleri açıklanır. Visual Studio Ultimate, VS Premium ve VS Professional birim testi için ek özellikler sağlar.

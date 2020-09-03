@@ -11,31 +11,31 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 54e0b95084bd685d5bc4b025f777c82b0ab1381f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162231"
 ---
-# <a name="taskstatecanceled-field"></a>TASK_STATE_CANCELED Alanı
+# <a name="task_state_canceled-field"></a>TASK_STATE_CANCELED Alanı
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Görev çalışma durumuna ulaştı veya kendi iptal onaylanır ve özel durum tamamlandı önce iptal edildi.  
+Görev, çalışma durumuna erişmeden önce iptal edildi veya iptal edildi ve özel durum olmadan tamamlandı.  
   
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll içinde)  
+ **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll)  
   
- .NET Framework'den bu iç üye erişemediği için aşağıdaki söz dizimini ortak Ara dil (CIL) sağlanır.  
+ Bu iç üyeye .NET Framework erişemediği için, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 .field static assembly literal int32 TASK_STATE_CANCELED = int32(0x00800000)  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa [m_stateFlags](../../extensibility/debugger/m-stateflags-field.md) alan içerir, bu değer <xref:System.Threading.Tasks.Task.Status%2A> özelliği döndürür <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName>.  
+ [M_stateFlags](../../extensibility/debugger/m-stateflags-field.md) alan bu değeri içeriyorsa, <xref:System.Threading.Tasks.Task.Status%2A> özelliği döndürür <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Task Sınıfı](../../extensibility/debugger/task-class-internal-members.md)

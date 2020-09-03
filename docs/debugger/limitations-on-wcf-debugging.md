@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c70195cdc0a6a03395744c63f556ce8c2970aa30
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72731501"
 ---
 # <a name="limitations-on-wcf-debugging"></a>WCE Hata Ayıklamasında Sınırlamalar
@@ -43,7 +43,7 @@ WCF hizmetinde hata ayıklamaya başlayabilmeniz için kullanabileceğiniz üç 
 
 - Sunucu zaman uyumsuz ise, hizmet içinde kod yürütürken tam çağrı yığınını görüntüleyemezsiniz.
 
-- App. config veya Web. config dosyasında aşağıdaki kodla hata ayıklamanın etkinleştirilmesi gerekir:
+- app.config veya Web.config dosyasında aşağıdaki kodla hata ayıklamanın etkinleştirilmesi gerekir:
 
     ```xml
     <system.web>
@@ -59,13 +59,13 @@ WCF hizmetinde hata ayıklamaya başlayabilmeniz için kullanabileceğiniz üç 
 ## <a name="limitations-on-automatic-attach-to-a-service"></a>Bir hizmete otomatik Iliştirme sınırlamaları
  Bir hizmete otomatik iliştirme aşağıdaki sınırlamalara sahiptir:
 
-- Hizmet, hata ayıkladığınız [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] çözümünün bir parçası olmalıdır.
+- Hizmet, hata ayıkladığınız çözümün bir parçası olmalıdır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
 - Hizmet barındırılıyor olmalıdır. Bir Web sitesi projesinin (dosya sistemi ve HTTP), Web uygulaması projesinin (dosya sistemi ve HTTP) veya WCF hizmet kitaplığı projesinin bir parçası olabilir. WCF hizmet kitaplığı projeleri hizmet kitaplıkları veya Iş akışı hizmeti kitaplıkları olabilir.
 
 - Hizmetin bir WCF istemcisinden çağrılması gerekir.
 
-- App. config veya Web. config dosyasında aşağıdaki kodla hata ayıklamanın etkinleştirilmesi gerekir:
+- app.config veya Web.config dosyasında aşağıdaki kodla hata ayıklamanın etkinleştirilmesi gerekir:
 
   ```xml
   <system.web>
@@ -74,10 +74,10 @@ WCF hizmetinde hata ayıklamaya başlayabilmeniz için kullanabileceğiniz üç 
   ```
 
 ## <a name="self-hosting"></a>Kendi kendine barındırma
- *Şirket içinde barındırılan bir hizmet* , IIS 'de, WCF hizmeti ana bilgisayarında veya [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] geliştirme sunucusunda ÇALıŞTıRMAYAN bir WCF hizmetidir. Şirket içinde barındırılan bir hizmette hata ayıklama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Şirket Içinde BARıNDıRıLAN WCF hizmetinde hata ayıklama](../debugger/how-to-debug-a-self-hosted-wcf-service.md).
+ *Şirket içinde barındırılan bir hizmet* , IIS 'de, WCF hizmeti ana bilgisayarında veya geliştirme sunucusunda ÇALıŞTıRMAYAN bir WCF hizmetidir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] . Şirket içinde barındırılan bir hizmette hata ayıklama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Şirket Içinde BARıNDıRıLAN WCF hizmetinde hata ayıklama](../debugger/how-to-debug-a-self-hosted-wcf-service.md).
 
 ## <a name="self-hosting"></a>Kendi kendine barındırma
- @No__t_0 3,0 veya 3,5 uygulamalarında hata ayıklamayı etkinleştirmek için [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] yüklenmeden önce [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3,0 veya 3,5 yüklü olmalıdır. @No__t_0, 3,0 veya 3,5 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] önce yüklendiyse, bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3,0 veya 3,5 uygulamasında hata ayıklamaya çalıştığınızda bir hata oluşur. "Sunucuda otomatik olarak adımla" hata iletisi görüntülenir. Bu sorunu gidermek için, [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] yüklemenizi onarmak üzere Windows **Denetim masası**  > **Programlar ve Özellikler** ' i kullanın.
+ [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]3,0 veya 3,5 uygulamalarında hata ayıklamayı etkinleştirmek için, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] önce 3,0 veya 3,5 yüklü olmalıdır [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] . [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3,0 veya 3,5 ' den önce yüklendiyse, bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3,0 veya 3,5 uygulamasında hata ayıklamaya çalıştığınızda bir hata oluşur. "Sunucuda otomatik olarak adımla" hata iletisi görüntülenir. Bu sorunu gidermek için, Windows **Denetim Masası**  >  **Programlar ve Özellikler** ' i kullanarak yüklemenizi onarın [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [WCF Hizmetlerinde Hata Ayıklama](../debugger/debugging-wcf-services.md)

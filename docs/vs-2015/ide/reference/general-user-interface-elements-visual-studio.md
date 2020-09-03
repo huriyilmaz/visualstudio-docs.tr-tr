@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ff25c7b03f9287afe9b8070a656643d34d5ec478
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72661239"
 ---
 # <a name="general-user-interface-elements-visual-studio"></a>Genel Kullanıcı Arabirimi Öğeleri (Visual Studio)
@@ -41,15 +41,15 @@ Bu bölüm, tümleşik geliştirme ortamının (IDE) bazı kullanıcı arabirimi
 
  [Seçenekler, metin düzenleyici, temel (Visual Basic)](../../ide/reference/options-text-editor-basic-visual-basic.md) Visual Basic dosyaları için seçenekleri belirtmenizi sağlar.
 
- [Seçenekler, metin düzenleyici, C/C++, biçimlendirme](../../ide/reference/options-text-editor-c-cpp-formatting.md) , c veya C++ dosyaları için biçimlendirme seçeneklerini belirtmenizi sağlar.
+ [Seçenekler, metin düzenleyici, C/C++, biçimlendirme](../../ide/reference/options-text-editor-c-cpp-formatting.md) C veya C++ dosyaları için biçimlendirme seçeneklerini belirtmenizi sağlar.
 
- [Seçenekler, metin düzenleyici, C/C++, gelişmiş](../../ide/reference/options-text-editor-c-cpp-advanced.md) , c veya C++ dosyaları için Gelişmiş Seçenekler belirtmenize olanak tanır.
+ [Seçenekler, metin düzenleyici, C/C++, gelişmiş](../../ide/reference/options-text-editor-c-cpp-advanced.md) C veya C++ dosyaları için gelişmiş seçenekleri belirtmenize olanak tanır.
 
- [Seçenekler, metin düzenleyici, C#biçimlendirme](../../ide/reference/options-text-editor-csharp-formatting.md) , dosyalar için C# biçimlendirme seçeneklerini belirtmenizi sağlar.
+ [Seçenekler, metin düzenleyici, C#, biçimlendirme](../../ide/reference/options-text-editor-csharp-formatting.md) C# dosyaları için biçimlendirme seçeneklerini belirtmenizi sağlar.
 
- [Seçenekler, metin C#düzenleyici, gelişmiş](../../ide/reference/options-text-editor-csharp-advanced.md) dosyalar için C# gelişmiş seçenekler belirtmenize olanak tanır.
+ [Seçenekler, metin düzenleyici, C#, gelişmiş](../../ide/reference/options-text-editor-csharp-advanced.md) C# dosyaları için gelişmiş seçenekleri belirtmenize olanak tanır.
 
- [Seçenekler, metin C#düzenleyici, IntelliSense](../../ide/reference/options-text-editor-csharp-intellisense.md) , dosyalar için C# IntelliSense seçeneklerini belirtmenizi sağlar.
+ [Seçenekler, metin düzenleyici, C#, IntelliSense](../../ide/reference/options-text-editor-csharp-intellisense.md) C# dosyaları için IntelliSense seçeneklerini belirtmenizi sağlar.
 
  [Seçenekler, metin düzenleyici, XAML, biçimlendirme](../../ide/reference/options-text-editor-xaml-formatting.md) XAML dosyaları için biçimlendirme seçeneklerini belirtmenizi sağlar.
 

@@ -20,10 +20,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3beefe16f8883eb64d7d0a2641cabf9eb1f702fa
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72729664"
 ---
 # <a name="stop-debugging-in-progress-dialog-box"></a>Devam Eden Hata Ayıklamayı Durdur İletişim Kutusu
@@ -34,5 +34,5 @@ Hata ayıklayıcı bir hata ayıklama oturumunu durdurmayı denerken bu iletişi
  **Şimdi durdur** Hata ayıklama oturumunu hemen sonlandırmak için bu düğmeye tıklayın. **Şimdi durdur** 'un kullanılması, hata ayıklamakta olan işlemlerin ayrılması yerine sonlandırılır. Sistem işlemlerinde hata ayıklaması yapıyorsanız, **Şimdi durdur** ile bu işlemlerin sonlandırmasında beklenmedik ve istenmeyen etkileri olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
+- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
 - [Programları ayırma](/previous-versions/visualstudio/visual-studio-2010/x1thkxez(v=vs.100))

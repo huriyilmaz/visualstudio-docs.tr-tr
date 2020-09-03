@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ea80420b2146bd8c604a95d71012009dcb940ef5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72735442"
 ---
 # <a name="graphics-object-table"></a>Grafik Nesnesi Tablosu
@@ -31,21 +31,21 @@ Visual Studio grafik analizinde grafik nesne tablosu, oyununuzun veya uygulaman�
 
  Nesne tablosu kopyalamayı ve yapıştırmayı destekler, böylece başka bir araç (örneğin, Microsoft Excel) kullanarak içeriğini inceleyebilirsiniz.
 
- Ayrıca, sol üst köşedeki **tür** açılan listesini kullanarak, tür **arabelleklerinin**, **gölgelendiricilerin** veya **dokuların**veya bu öğelerin tümünün aynı anda görüntülenmesini sağlayabilirsiniz.  Ayrıca, gösterilen tüm veriler genelinde belirli satırları bulmak için sağ üst köşedeki arama kutusunu da kullanabilirsiniz.  Örneğin, listede bu biçimdeki tüm nesne örneklerini bulmak için *D32_FLOAT* araması yapabilirsiniz.
+ Ayrıca, sol üst köşedeki **tür** açılan listesini kullanarak, tür **arabelleklerinin**, **gölgelendiricilerin** veya **dokuların**veya bu öğelerin tümünün aynı anda görüntülenmesini sağlayabilirsiniz.  Ayrıca, gösterilen tüm veriler genelinde belirli satırları bulmak için sağ üst köşedeki arama kutusunu da kullanabilirsiniz.  Örneğin, listedeki bu biçimdeki tüm nesne örneklerini bulmak için *D32_FLOAT* araması yapabilirsiniz.
 
 ### <a name="graphics-object-table-format"></a>Grafik nesne tablosu biçimi
  Nesne tablosu, seçili olayla ilişkili çerçeveyi destekleyen Direct3D nesne ve kaynaklarını (örneğin, durum nesneleri, arabellekler, gölgelendiriciler, dokular ve diğer kaynaklar) görüntüler. Önceki çerçevede oluşturulan ancak yakalanan çerçeve sırasında kullanılmayan nesneler nesne tablosundan çıkarılır. Yakalanan çerçeve sırasında önceki olaylar tarafından yok edilmiş nesneler sonraki olaylarda atlanır. D3D10Device veya D3D11DeviceContext üzerinde ayarlı olmayan nesneler gri metin olarak görüntülenir. Nesneler tablo biçiminde görüntülenir.
 
-|Sütunuyla|Açıklama|
+|Sütun|Açıklama|
 |------------|-----------------|
-|**Tanımlayıcısını**|Nesne KIMLIĞI.|
-|**Ad**|Nesnesinde Direct3D işlevi kullanılarak ayarlanan uygulamaya özgü bilgiler `SetPrivateData` — genellikle bir nesne hakkında ek tanımlayıcı bilgi sağlamak için.|
-|**Türüyle**|Nesne türü.|
-|**Bkz**|Yakalanan çerçeve sırasında D3D10Device veya D3D11DeviceContext üzerinde ayarlanan bir nesne için "*" görüntüler.<br /><br /> Bu, gri metin olarak görüntülenen nesnelere karşılık gelir, ancak nesne tablosunun sıralanmasını sağlamak için kullanabileceğiniz bir sütun girişi sağlar.|
-|**Boyutla**|Nesnenin bayt cinsinden boyutu.|
-|**Formatını**|Nesnenin biçimi. Örneğin, bir doku nesnesinin biçimi veya bir gölgelendirici nesnesinin gölgelendirici modeli.|
-|**Genişlik**|Bir doku nesnesinin genişliği. Diğer nesne türleri için de geçerlidir.|
-|**Yükseklik**|Bir doku nesnesinin yüksekliği. Diğer nesne türleri için de geçerlidir.|
+|**Tanımlayıcı**|Nesne KIMLIĞI.|
+|**Ad**|Nesnesinde Direct3D işlevi kullanılarak ayarlanan uygulamaya özgü bilgiler, `SetPrivateData` genellikle bir nesne hakkında ek tanımlayıcı bilgi sağlamak için.|
+|**Tür**|Nesne türü.|
+|**Etkin**|Yakalanan çerçeve sırasında D3D10Device veya D3D11DeviceContext üzerinde ayarlanan bir nesne için "*" görüntüler.<br /><br /> Bu, gri metin olarak görüntülenen nesnelere karşılık gelir, ancak nesne tablosunun sıralanmasını sağlamak için kullanabileceğiniz bir sütun girişi sağlar.|
+|**Boyut**|Nesnenin bayt cinsinden boyutu.|
+|**Biçimlendir**|Nesnenin biçimi. Örneğin, bir doku nesnesinin biçimi veya bir gölgelendirici nesnesinin gölgelendirici modeli.|
+|**Width**|Bir doku nesnesinin genişliği. Diğer nesne türleri için de geçerlidir.|
+|**Height**|Bir doku nesnesinin yüksekliği. Diğer nesne türleri için de geçerlidir.|
 |**Derinliğini**|3-b doku nesnesinin derinliği. Doku 3-D değilse, değer 0 ' dır. Diğer nesne türleri için de geçerlidir.|
 |**MIPS**|Bir doku nesnesinin sahip olduğu MıP düzeylerinin sayısı. Diğer nesne türleri için de geçerlidir.|
 |**Dizi boyutu**|Bir doku dizisindeki dokuların sayısı. Aralık 1 ile geçerli özellik düzeyi tarafından tanımlanan bir üst sınırdır. Küp eşleme için, bu değer dizideki küp haritaları sayısının 6 katından fazla olur.|
@@ -78,13 +78,13 @@ Visual Studio grafik analizinde grafik nesne tablosu, oyununuzun veya uygulaman�
 
  Ayrıca, arabellekteki her bir öğenin sapmasını gizlemek veya görüntülemek için de kaydırmayı **göster** onay kutusunu işaretleyebilirsiniz.
 
-|Tür|Açıklama|
+|Tür|Description|
 |----------|-----------------|
 |**float**|32 bitlik kayan nokta değeri.|
 |**float2**|2 32 bitlik kayan nokta değerlerini içeren bir vektör.|
 |**float3**|3 32 bitlik kayan nokta değerlerini içeren bir vektör.|
 |**float4**|4 32 bitlik kayan nokta değerlerini içeren bir vektör.|
-|**byte**|8 bit işaretli tamsayı değeri.|
+|**bayt**|8 bit işaretli tamsayı değeri.|
 |**2 bayt**|16 bit işaretli tamsayı değeri.|
 |**4 bayt**|32 bitlik işaretli bir tamsayı değeri. **İnt**ile aynı.|
 |**8 bayt**|64 bitlik işaretli bir tamsayı değeri. **Int64**ile aynıdır.|
@@ -107,8 +107,8 @@ Visual Studio grafik analizinde grafik nesne tablosu, oyununuzun veya uygulaman�
 |**xint64**|64 bitlik bir onaltılık değer. **X8byte**ile aynı.|
 |**uint**|32 bitlik işaretsiz bir tamsayı değeri. **U4byte**ile aynı.|
 |**Int64**|64 bitlik işaretsiz bir tamsayı değeri. **U8byte**ile aynı.|
-|**bool**|Boole (`true` veya `false`) değeri. Her Boole değeri 32 bitlik bir değer ile temsil edilir.|
+|**bool**|Boole ( `true` veya `false` ) değeri. Her Boole değeri 32 bitlik bir değer ile temsil edilir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Grafik Tanılama (DirectX Grafiklerinde Hata Ayıklama)](visual-studio-graphics-diagnostics.md)
-- [İzlenecek Yol: Cihaz Durumu Nedeniyle Nesnelerin Eksikliği](walkthrough-missing-objects-due-to-device-state.md)
+- [İzlenecek yol: Cihaz Durumu Nedeniyle Eksik Nesneler](walkthrough-missing-objects-due-to-device-state.md)

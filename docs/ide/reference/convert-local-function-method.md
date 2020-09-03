@@ -1,5 +1,5 @@
 ---
-title: Yerel bir işlevi yönteme dönüştürme
+title: Yerel bir işlevi bir yönteme Dönüştür
 ms.date: 02/19/2019
 ms.topic: reference
 author: kendrahavens
@@ -8,39 +8,39 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 3572682fe68d9b0b1bc4adee537de5cd056a8906
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71301687"
 ---
-# <a name="convert-a-local-function-to-a-method"></a>Yerel bir işlevi yönteme dönüştürme
+# <a name="convert-a-local-function-to-a-method"></a>Yerel bir işlevi bir yönteme Dönüştür
 
-Bu yeniden düzenleme aşağıdakiler için geçerlidir:
+Bu yeniden düzenleme için geçerlidir:
 
 - C#
 
-**Ne:** Yerel bir işlevi yönteme dönüştürün.
+**Ne:** Yerel bir işlevi bir yönteme dönüştürün.
 
-**Ne zaman:** Geçerli yerel bağlamınız dışında tanımlamak istediğiniz yerel bir işleviniz vardır.
+**Ne zaman:** Geçerli yerel bağlamınızın dışında tanımlamak istediğiniz bir yerel işleviniz var.
 
-**Neden:** Yerel bir işlevi, yerel bağlamınızın dışına çağırabilmeniz için bir yönteme dönüştürmek istiyorsunuz. Yerel işleviniz çok uzadığında bir yönteme dönüştürmek isteyebilirsiniz. İşlevinizi ayrı bir yöntemle tanımladığınızda, kodunuzu okumak daha kolaydır.
+**Neden:** Yerel bir işlevi bir yönteme dönüştürmek istiyorsunuz, böylece bunu yerel içeriğiniz dışında çağırabilirsiniz. Yerel işleviniz çok uzun süren bir yönteme dönüştürmek isteyebilirsiniz. İşlevi ayrı bir yöntemde tanımladığınızda, kodunuzun okunması daha kolay olur.
 
-## <a name="convert-local-function-to-method-refactoring"></a>Yerel işlevi yöntem refactoring'e dönüştürme
+## <a name="convert-local-function-to-method-refactoring"></a>Yerel işlevi yeniden düzenleme yöntemine Dönüştür
 
-1. İmlecinizi yerel fonksiyona yerleştirin.
+1. İmlecinizi yerel işleve yerleştirin.
 
-    ![Yerel bir işlevi yöntem kodu örneğine dönüştürme](media/convert-local-function-to-method.png)
+    ![Yerel bir işlevi bir yöntem kodu örneğine Dönüştür](media/convert-local-function-to-method.png)
 
-2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
+2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 
-    ![Yerel işlevi yöntem kodu düzeltme örneğine dönüştürme](media/convert-local-function-to-method-codefix.png)
+    ![Yerel işlevi Yöntem kodu düzeltmesini örnekle Dönüştür](media/convert-local-function-to-method-codefix.png)
 
-2. Yeniden düzenlemeyi kabul etmek için Enter tuşuna basın.
+2. Yeniden düzenlemeyi kabul etmek için ENTER tuşuna basın.
 
-    ![Yerel işlevi yöntem sonuç örneğine dönüştürme](media/convert-local-function-to-method-result.png)
+    ![Yerel işlevi Yöntem sonucu örneğine Dönüştür](media/convert-local-function-to-method-result.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yeniden Düzenle](../refactoring-in-visual-studio.md)
-- [.NET Geliştiricileri için ipuçları](../csharp-developer-productivity.md)
+- [.NET geliştiricileri için ipuçları](../csharp-developer-productivity.md)

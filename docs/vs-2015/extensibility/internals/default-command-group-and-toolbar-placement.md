@@ -16,31 +16,31 @@ caps.latest.revision: 31
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a7fc877332f7db7b27c4a30c23f1ac395a4fc22e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196891"
 ---
 # <a name="default-command-group-and-toolbar-placement"></a>Varsayılan Komut, Grup ve Araç Çubuğu Yerleşimi
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Ürün gerekmemesi ve tutarlılık için kullanıcı Arabirimi varsayılan olarak, bazı komut gruplarını görüntüler ve [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] komutları ve komut gruplar için tanımları sağlar. VSPackage de standart komut ve komut gruplarını kullanabilirsiniz.  
+Ürün ve kararlılık için, Kullanıcı arabirimi belirli komut gruplarını varsayılan olarak görüntüler ve [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Komutlar ve komut grupları için tanımlar sağlar. VSPackages, standart komutları ve komut gruplarını da kullanabilir.  
   
- Varsayılan komut gruplarını üç kategoriye ayrılır: IDE komutları, ürün komutları ve düzenleyici komutları.  
+ Varsayılan komut grupları üç kategoriye ayrılır: IDE komutları, ürün komutları ve düzenleyici komutları.  
   
 ## <a name="default-ide-commands"></a>Varsayılan IDE komutları  
- Varsayılan IDE araç çubuğunda yer alan tüm ürünleri tarafından paylaşılan komutları içermektedir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Bunlar gibi genel proje işlemleriyle ilgili komutları **Kaydet** komut ve **Öğe Ekle** komutu. VSPackage'ları ekleyin veya bu araç, bir özel durum ile Çıkart gerekir: Yeni bir araç penceresi ürün veya VSPackage ekler ardından pencerenin üzerinde kullanılabilir araç pencereleri listesine eklenmesi gereken **görünümü** menüsü. Kendi araç, yeni ürünler veya VSPackages ekleyebilirsiniz.  
+ Varsayılan IDE araç çubuğu, içinde bulunan tüm ürünler tarafından paylaşılan komutları içerir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Bunlar, **Kaydet** komutu ve **öğe Ekle** komutu gibi genel proje işlemleriyle ilgili komutları içerir. VSPackages, tek bir özel durumla birlikte bu araç çubuğuna eklemez veya çıkarmamalıdır: ürün veya VSPackage yeni bir araç penceresi eklerse, pencere **Görünüm** menüsünde kullanılabilir araç pencereleri listesine eklenmelidir. Yeni ürünler veya VSPackages kendi araç çubuklarını ekleyebilir.  
   
 ## <a name="default-product-commands"></a>Varsayılan ürün komutları  
- Her ürün IDE ile önemli içeren ve sık kullanılan komutlar kendi varsayılan araç çubuğu sağlar. Ancak, var olan menüleri ve araç çubuklarını mümkün olduğunca kullanın ve bunları gerektiği gibi diğer görev özel araç çubuklarıyla desteklemek için en iyisidir.  
+ Her ürün, IDE 'yi önemli ve sık kullanılan komutları içeren kendi varsayılan araç çubuğuyla sağlayabilir. Bununla birlikte, mümkün olan her durumda var olan menüleri ve araç çubuklarını kullanmak ve gerektiğinde diğer görevlere özgü araç çubuklarıyla birlikte kullanmak en iyisidir.  
   
- Satır yerleşimi için bir araç çubuğu Öncelik alanını belirler. Araç çubuğu menü çubuğu altındaki üçüncü satıra (Satır 3) sıfır öncelik yerleştirir (1 satır) ve **standart** araç çubuğu (satır 2). Bu nedenle, diğer araç çubukları satırında görünür (öncelik + 3). Oda ise aynı satırda sonraki araç çubukları yerleştirilir; Aksi takdirde, bunlar otomatik olarak sonraki satıra taşınır.  
+ Bir araç çubuğunun öncelik alanı, satır yerleşimini belirler. Sıfır öncelik araç çubuğunu, menü çubuğunun (satır 1) ve **Standart** araç çubuğunun (satır 2) altındaki üçüncü satıra (satır 3) koyar. Bu nedenle, diğer araç çubukları satırda görünür (öncelik + 3). Sonraki araç çubukları, oda varsa aynı satıra yerleştirilir; Aksi takdirde, otomatik olarak bir sonraki satıra taşınır.  
   
-## <a name="default-editor-commands"></a>Varsayılan Düzenleyicisi komutları  
- Özel bir düzenleyici sağlayan bir VSPackage'ı en önemli içeren ve sık kullanılan komutlar, düzenleyicide varsayılan araç sağlamanız gerekir. Düzenleyici etkinse ve Düzenleyici etkin değilken gizlenmelidir Düzenleyici araç çubuğu görüntülenmelidir. Bu görünürlük denetlenir `VisibilityConstraints Element` .vsct dosyası.  
+## <a name="default-editor-commands"></a>Varsayılan düzenleyici komutları  
+ Özel bir düzenleyici sağlayan VSPackage, Bu düzenleyicide en önemli ve sık kullanılan komutları içeren varsayılan bir araç çubuğu sağlamalıdır. Düzenleyici etkin olduğunda Düzenleyici araç çubuğu görünmelidir ve düzenleyici etkin olmadığında gizli olmalıdır. Bu görünürlük, `VisibilityConstraints Element` . vsct dosyasının içinde denetlenir.  
   
- IDE ve ürün araç çubukları Düzenleyicisi araç çubukları yerleştirilmelidir.  
+ Düzenleyici araç çubukları IDE ve ürün araç çubuklarının altına yerleştirilmelidir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDE tanımlı komutlar, menüler ve gruplar](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)   

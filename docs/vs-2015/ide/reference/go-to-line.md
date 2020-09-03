@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2c08967d333fc23dfed9089936cbef86889b2145
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72661255"
 ---
 # <a name="go-to-line"></a>Satıra Gitme
@@ -26,7 +26,7 @@ ms.locfileid: "72661255"
 
 Bu iletişim kutusu etkin belgedeki belirli bir satıra geçiş yapmanıza olanak sağlar. Bu iletişim kutusuna erişmek için, düzenleme için bir belge açın ve ardından **Düzenle** menüsünde **Git** ' i seçin.
 
- Satır numarası (1-`n`), taşımak istediğiniz etkin belgedeki çizginin numarasını girmenize olanak tanır. Girilen sayı 1 ile `n` arasında olmalıdır, geçerli belgedeki satır sayısı.
+ Satır numarası (1- `n` ), taşımak istediğiniz etkin belgedeki çizginin numarasını girmenize olanak tanır. Girilen sayı 1 ile `n` , geçerli belgedeki satır sayısı arasında olmalıdır.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Koddaki yer Imlerini ayarlama](../../ide/setting-bookmarks-in-code.md) metin [yazma kodunu](../../ide/writing-code-in-the-code-and-text-editor.md) [bulma ve değiştirme](../../ide/finding-and-replacing-text.md)

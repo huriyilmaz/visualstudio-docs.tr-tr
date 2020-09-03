@@ -11,10 +11,10 @@ ms.topic: how-to
 ms.workload:
 - multiple
 ms.openlocfilehash: 4bcc1932bad5b34d9695257feb163654f6b99514
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85371631"
 ---
 # <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>Visual Studio 'da Azure Machine Learning galerisinden bir AI projesi oluşturma
@@ -26,7 +26,7 @@ Azure Machine Learning Visual Studio Tools for AI tümleşiktir. Azure sanal mak
 > [!NOTE]
 > Azure Machine Learning Workbench yüklü olmalıdır. 
 
-1. Visual Studio’yu başlatın. **AI araçları** menüsünü açıp **küme Seç** ' i seçerek **Sunucu Gezgini** açın.
+1. Visual Studio 'Yu başlatın. **AI araçları** menüsünü açıp **küme Seç** ' i seçerek **Sunucu Gezgini** açın.
 
     ![Küme Seçicisi](media/create-project-gallery/select-cluster.png)
 

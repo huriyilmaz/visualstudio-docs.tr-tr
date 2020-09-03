@@ -15,21 +15,21 @@ dev_langs:
 - CSharp
 - CPP
 ms.openlocfilehash: 09ec5d82251fa4598096fca8a59c9a1fd29e3f27
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "69585373"
 ---
 # <a name="per-monitor-awareness-support-for-visual-studio-extenders"></a>Visual Studio Extender 'lar için monitör başına tanıma desteği
 
-Visual Studio 2019 ' den önceki sürümlerde, DPı tanıma bağlamı, ekran başına DPı kullanan (PMA) değil, sistem tarafından uyumlu olarak ayarlanmıştır. Sistem tanıma 'da çalışmak, Visual Studio 'Nun farklı ölçek faktörlerine sahip izleyiciler genelinde veya farklı görüntü yapılandırmalarına sahip makinelere uzak olarak işlenmesi gerektiğinde (örneğin, farklı Windows ölçeklendirme).
+Visual Studio 2019 ' den önceki sürümlerde, DPı tanıma bağlamı, ekran başına DPı kullanan (PMA) değil, sistem tarafından uyumlu olarak ayarlanmıştır. Sistem tanıma 'da çalışmak, Visual Studio 'Nun farklı ölçek faktörlerine sahip izleyicilerin tamamında veya farklı görüntü yapılandırmalarına sahip makinelere (örneğin, farklı Windows ölçeklendirilmesine) işlenmesi gerektiğinde, düşürülmüş bir görsel deneyime (örn. bulanık yazı tipleri veya simgeler) neden oldu.
 
 Visual Studio 2019 ' in DPı tanıma bağlamı, ortam tarafından desteklendiği zaman PMA olarak ayarlanmıştır, Visual Studio 'nun tek sistem tanımlı yapılandırma yerine barındırıldığı görüntü yapılandırmasına göre işlenmesine izin verir. Sonuç olarak PMA modunu destekleyen yüzey alanları için her zaman net bir kullanıcı arabirimine çevriliyor.
 
 Bu belgede ele alınan hüküm ve genel senaryo hakkında daha fazla bilgi için [Windows belgelerindeki yüksek DPI masaüstü uygulaması geliştirmesi](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows) bölümüne bakın.
 
-## <a name="quickstart"></a>Hızlı başlangıç
+## <a name="quickstart"></a>Hızlı Başlangıç
 
 - Visual Studio 'Nun PMA modunda çalıştığından emin olun (bkz. **PMA 'Yı etkinleştirme**)
 
@@ -109,7 +109,7 @@ Birincil DPı üzerinde oluşturulan kullanıcı arabirimi öğeleri doğru şek
 #### <a name="incorrect-bounding"></a>Yanlış sınırlama
 Ölçeklendirme sorununa benzer şekilde, UI öğeleri birincil DPı bağlamında sınırlarını doğru hesaplar, ancak birincil olmayan bir DPı 'ye taşındığında, yeni sınırları doğru bir şekilde hesaplamaz. Bu nedenle, içerik penceresi çok küçük veya çok büyük olduğundan barındırma Kullanıcı arabirimine kıyasla boş alan veya kırpma ile sonuçlanır.
 
-#### <a name="drag--drop"></a>& Bırakmayı sürükleyin
+#### <a name="drag--drop"></a>& bırakmayı sürükleyin
 Karma mod DPı senaryolarında her seferinde (örneğin, farklı DPı tanıma modlarında farklı kullanıcı arabirimi öğeleri oluşturma), sürükle ve bırak koordinatları hatalı hesaplanarak, son bırakma konumu yanlış olur.
 
 #### <a name="out-of-process-ui"></a>İşlem dışı Kullanıcı arabirimi
@@ -168,7 +168,7 @@ Gözetle benzer şekilde, Visual Studio 'daki XAML araçları PMA sorunlarını 
 
 ### <a name="replace-dpihelper-calls"></a>DpiHelper çağrılarını değiştirme
 
-Çoğu durumda, Yönetilen koddaki çağrıları eski *Microsoft. VisualStudio. Utilities. DPI. DpiHelper* ve *Microsoft. VisualStudio. Platformui. DpiHelper* sınıflarına, yeni  *Microsoft. VisualStudio. Utilities. Dpiconversionhelper* sınıfı. 
+Çoğu durumda, yeni *Microsoft. VisualStudio. Utilities* . dpiconversionhelper sınıfına yapılan çağrılarıyla Yönetilen koddaki çağrıları eski *Microsoft. VisualStudio. Utilities. DPI. DpiHelper* ve *Microsoft. VisualStudio. platformui. DPIHELPER* sınıflarına değiştirmek için PMA modundaki Kullanıcı arabirimi sorunlarını gidermek için bobin. 
 
 ```cs
 // Remove this kind of use:
@@ -178,7 +178,7 @@ Point deviceTopLeft = new Point(window.Left, window.Top).LogicalToDeviceUnits();
 Point deviceTopLeft = window.LogicalToDevicePoint(new Point(window.Left, window.Top));
 ```
 
-Yerel kod için, eski Vsui:: CDpiHelper sınıfına yapılan çağrıları yeni *Vsuı:: cdpitanıma* sınıfına yapılan çağrılarla değiştirme kuyruğa alınır. 
+Yerel kod için, eski Vsui:: *CDpiHelper* sınıfına yapılan çağrıları yeni *Vsuı:: cdpitanıma* sınıfına yapılan çağrılarla değiştirme kuyruğa alınır. 
 
 ```cpp
 // Remove this kind of use:
@@ -211,7 +211,7 @@ Varsayılan olarak, alt pencereler, üst öğe olmadan oluşturulmuşsa geçerli
 Ana mesajlaşma döngüsünün veya olay zincirinin bir parçası olarak gerçekleşen UI hesaplama işinin çoğu doğru DPı tanıma bağlamında çalışıyor olmalıdır. Ancak, bu ana iş akışlarının dışında (boş kalma süresi görevi sırasında veya Kullanıcı arabirimi iş parçacığı dışında), koordinat veya boyutlandırma hesaplamaları yapıldığında, geçerli DPı tanıma bağlamı, UI yanlış yerleştirme veya hatalı boyutlandırma sorunları için yanlış önde gelebilir. İş parçacığını UI çalışması için doğru duruma getirmek genellikle sorunu düzeltir.
  
 #### <a name="opt-out-of-clmm"></a>CLMM 'yi devre dışı
-WPF olmayan bir araç penceresi, PMA 'yı tam olarak desteklemek için geçiriliyorsa, CLMM 'nin devre dışı olması gerekir. Bunu yapmak için yeni bir arabirim uygulanması gerekir: Isdpiaware.
+WPF olmayan bir araç penceresi, PMA 'yı tam olarak desteklemek için geçiriliyorsa, CLMM 'nin devre dışı olması gerekir. Bunu yapmak için yeni bir arabirimin uygulanması gerekir: ısdpiaware.
 
 ```cs
 [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
@@ -230,9 +230,9 @@ IVsDpiAware : public IUnknown
 };
 ```
 
-Yönetilen diller için, bu arabirimi uygulamak için en iyi yer, *Microsoft. VisualStudio. Shell. ToolWindowPane*' dan türetilen sınıfta bulunur. İçin C++, bu arabirimi uygulamak için en iyi yer, vsshell. h öğesinden *IVsWindowPane* 'ı uygulayan sınıfta bulunur.
+Yönetilen diller için, bu arabirimi uygulamak için en iyi yer, *Microsoft. VisualStudio. Shell. ToolWindowPane*' dan türetilen sınıfta bulunur. C++ için, bu arabirimi uygulamak için en iyi yer, vsshell. h öğesinden *IVsWindowPane* 'ı uygulayan sınıfta bulunur.
 
-Arabirim üzerinde Mode özelliği tarafından döndürülen değer bir __VSDPIMODE (ve yönetilen bir uint öğesine atama):
+Arabirim üzerinde Mode özelliği tarafından döndürülen değer bir __VSDPIMODE (ve yönetilen bir uint öğesine Yayınla):
 
 ```cs
 enum __VSDPIMODE
@@ -248,7 +248,7 @@ enum __VSDPIMODE
 - PerMonitor, araç penceresinin tüm ekranlarda tüm Dpın ve DPı değiştiği her zaman işlenmesi gerektiği anlamına gelir.
 
 > [!NOTE]
-> Visual Studio yalnızca PerMonitorV2 tanımayı destekler; bu nedenle, PerMonitor Enum değeri DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2 Windows değerine çevrilir.
+> Visual Studio yalnızca PerMonitorV2 tanımayı destekler; bu nedenle, PerMonitor Enum değeri DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2 Windows değerini çevirir.
 
 #### <a name="force-a-control-into-a-specific-dpiawarenesscontext"></a>Belirli bir DpiAwarenessContext denetimi zorla
 

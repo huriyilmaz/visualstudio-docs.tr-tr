@@ -1,5 +1,5 @@
 ---
-title: Bir kaynak denetimi VSPackage'ı oluşturma | Microsoft Docs
+title: Kaynak denetimi VSPackage oluşturma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,35 +12,35 @@ caps.latest.revision: 24
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2b1516cf358a4488ff02e650f6c703a1761a94a2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196959"
 ---
 # <a name="creating-a-source-control-vspackage"></a>Kaynak Denetimi VSPackage’ı Oluşturma
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu belge mimarisine genel bakış ile tümleşik kaynak denetimi paketi bağlantılarını içerir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], uygulanacak arabirimleri ve tüketilmesi Hizmetleri tarafından tanımlanan API ve basit bir kaynağı gösteren bir örnek paket uygulama denetimi.  
+Bu belge, ile tümleştirilmiş bir kaynak denetimi paketinin mimarisine genel bakış [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , uygulanacak arabirimler tarafından tanımlanan API ve tüketilen hizmetler ve basit bir kaynak denetimi paket uygulamasını gösteren bir örnek içerir.  
   
- Bir kaynak denetimi VSPackage'ı ile kapsamlı tümleştirme yolu ile tümleştirmek kaynak denetimi için oluşturabileceğiniz [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Varsayılan kaynak denetimi tarafından barındırılan UI atlamak için paketi etkinleştirir. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], proje sistemi kaynak denetimi isteklerine yanıt vermek ve etkileşim [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] bileşenleri gibi **Çözüm Gezgini**. [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] Güçlendirir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] iş ortakları ile tümleştirilebilir bir VSPackage'ı oluşturmak için bir mekanizma [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] hizmet modelini kullanma.  
+ Kaynak denetimi VSPackage ile tümleştirilecek kaynak denetimi için derin bir tümleştirme yolu oluşturabilirsiniz [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Paketin tarafından barındırılan varsayılan kaynak denetimi kullanıcı arabirimini atlamasına [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , Proje sisteminden gelen kaynak denetim isteklerini yanıtlamasını ve [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Çözüm Gezgini**gibi bileşenlerle etkileşime geçmesini sağlar. , [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Hizmet modeli kullanarak tümleştirilebilen bir VSPackage oluşturma mekanizmasına sahip iş ortakları sağlar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Başlarken](../../extensibility/internals/getting-started-with-source-control-vspackages.md)  
- Kaynak Denetimi Eklentisi Kaynak denetimi uygulamak için daha gelişmiş bir alternatifidir kaynak denetim paketi anlatılmaktadır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ ' De kaynak denetimi özelliklerinin uygulanması için kaynak denetim eklentisinin daha gelişmiş bir alternatifi olan kaynak denetimi paketini açıklar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
  [Mimari](../../extensibility/internals/source-control-vspackage-architecture.md)  
- Bir diyagramını sunar ve kaynak denetimi paket bileşenlerinin açıklar.  
+ Bir diyagram sunar ve bir kaynak denetimi paketinin bileşenlerini açıklar.  
   
  [Özellikler](../../extensibility/internals/source-control-vspackage-features.md)  
- Bir kaynak denetim paketi çeşitli özelliklerini açıklar.  
+ Bir kaynak denetimi paketinin çeşitli özelliklerini açıklar.  
   
  [Tasarım Öğeleri](../../extensibility/internals/source-control-vspackage-design-elements.md)  
- Bir kaynak denetim paketi için derin tümleştirme uygulamalıdır VSPackage'ı yapısını açıklar.  
+ Bir kaynak denetimi paketinin derin tümleştirme için uygulanması gereken VSPackage yapısını açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Kaynak Denetimi Eklentisi Oluşturma](../../extensibility/internals/creating-a-source-control-plug-in.md)  
- İçinde kaynak denetimi işlevlerini sağlar. kaynak denetimi eklentisi oluşturma anlatılmaktadır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kaynak denetimi kullanıcı arabirimini (UI).  
+ Kaynak denetimi [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Kullanıcı arabiriminde (UI) kaynak denetimi işlevselliği sağlayan bir kaynak denetimi eklentisinin nasıl oluşturulacağını açıklar.  
   
  [Kaynak Denetimi](../../extensibility/internals/source-control.md)  
- Tümleşik bir özelliği olarak kaynak denetimi uygulama seçenekleri ele alınmaktadır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].
+ ' Nin tümleşik özelliği olarak kaynak denetimi uygulama seçeneklerini açıklar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .

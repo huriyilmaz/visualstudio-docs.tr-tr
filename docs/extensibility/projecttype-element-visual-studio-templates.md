@@ -1,5 +1,5 @@
 ---
-title: ProjectType Element (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: ProjectType öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,21 +14,22 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d794bd5e81e77a892b5a3be38ff73ab805582dd7
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701803"
 ---
 # <a name="projecttype-element-visual-studio-templates"></a>ProjectType öğesi (Visual Studio şablonları)
-Proje şablonu, **Yeni Proje'de** belirtilen grubun altında görünecek şekilde kategorilere ayırıyor veya **Yeni Öğe Ekle** iletişim kutusu.
+Proje şablonunu **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda belirtilen grup altında görünecek şekilde kategorilere ayırır.
 
 > [!WARNING]
-> Visual Studio 2012'den itibaren C++ için proje şablonları desteklenir. Visual Studio 2010 ve önceki sürümlerde C++ için desteklenmez.
+> Proje şablonları, Visual Studio 2012 ' den itibaren C++ için desteklenir. Visual Studio 2010 ve önceki sürümlerde C++ için desteklenmez.
 
- \<VSTemplate \<> ŞablonVeri> \<ProjectType>
+ \<VSTemplate> \<TemplateData>
+ \<ProjectType>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ProjectType> CSharp/VisualBasic/VC/Web </ProjectType>
@@ -47,28 +48,28 @@ Proje şablonu, **Yeni Proje'de** belirtilen grubun altında görünecek şekild
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırın ve Yeni **Proje'de** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleyeceğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Bu değer, şablonun oluşturacağı proje türünü belirtir ve aşağıdaki değerlerden birini içermelidir:
+ Bu değer, şablonun oluşturulacağı projenin türünü belirtir ve aşağıdaki değerlerden birini içermelidir:
 
-- `CSharp`: Şablonun bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] proje veya öğe oluşturduğunu belirtir.
+- `CSharp`: Şablonun bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Proje veya öğe oluşturduğunu belirtir.
 
-- `VisualBasic`: Şablonun bir [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] proje veya öğe oluşturduğunu belirtir.
+- `VisualBasic`: Şablonun bir [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] Proje veya öğe oluşturduğunu belirtir.
 
-- `Web`: Şablonun bir Web projesi veya öğesi oluşturduğunu belirtir. `ProjectType` Öğe bu değeri içeriyorsa, [ProjectSubType Öğesi'nde (Visual Studio Templates)](../extensibility/projectsubtype-element-visual-studio-templates.md)proje veya öğenin dili tanımlanır.
+- `Web`: Şablonun bir Web projesi veya öğe oluşturduğunu belirtir. `ProjectType`Öğesi bu değeri içeriyorsa, projenin veya öğenin dili [ProjectSubType öğesinde tanımlanır (Visual Studio şablonları)](../extensibility/projectsubtype-element-visual-studio-templates.md).
 
 ## <a name="remarks"></a>Açıklamalar
- `ProjectType`gerekli bir alt `TemplateData`öğedir.
+ `ProjectType` , öğesinin gerekli bir alt öğesidir `TemplateData` .
 
- Öğenin `ProjectType` değeri, şablonun **Yeni Proje** veya Yeni Öğe **Ekle** iletişim kutusunda nerede bulunduğunu belirtir. Örneğin, **Yeni Proje** `ProjectType` iletişim `CSharp` kutusunda Görsel **C#** düğümünün altında görünen değeri olan bir şablon.
+ Öğesinin değeri, `ProjectType` şablonun **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nerede olduğunu belirtir. Örneğin, değeri bulunan bir şablon, `ProjectType` `CSharp` **Yeni proje** iletişim kutusunda **Visual C#** düğümünün altında görünür.
 
- [ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md) öğesi kullanılarak bir şablon alt türü belirtilebilir.
+ Bir şablon alt türü, [ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md) öğesi kullanılarak belirtilebilir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] uygulama için proje şablonu için meta verileri gösterir.
+ Aşağıdaki örnek, bir uygulama için bir proje şablonu meta verilerini gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -95,6 +96,6 @@ Proje şablonu, **Yeni Proje'de** belirtilen grubun altında görünecek şekild
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
 - [ProjectSubType öğesi (Visual Studio şablonları)](../extensibility/projectsubtype-element-visual-studio-templates.md)

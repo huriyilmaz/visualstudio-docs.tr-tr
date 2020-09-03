@@ -1,5 +1,5 @@
 ---
-title: LocationField öğesi (Visual Studio Proje şablonları) | Microsoft Docs
+title: LocationField öğesi (Visual Studio proje şablonları) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,22 +13,22 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b28fe0e696b23724758bd877b6031287290f879e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194468"
 ---
 # <a name="locationfield-element-visual-studio-project-templates"></a>LocationField Öğesi (Visual Studio Proje Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Belirtir olup olmadığını **konumu** metin kutusu **yeni proje** iletişim kutusu etkin, devre dışı veya gizli proje şablonu.  
+**Yeni proje** Iletişim kutusundaki **konum** metin kutusunun etkin, devre dışı veya proje şablonu için gizli olup olmadığını belirtir.  
   
- \<VSTemplate >  
- \<TemplateData >  
- \<LocationField >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<LocationField>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <LocationField> Enabled/Disabled/Hidden </LocationField>  
@@ -47,28 +47,28 @@ Belirtir olup olmadığını **konumu** metin kutusu **yeni proje** iletişim ku
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje**.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni projede**nasıl görüntüleneceğini tanımlar.|  
   
 ## <a name="text-value"></a>Metin Değeri  
  Bir metin değeri gereklidir.  
   
- Geçerli bir metin değerleri şunlardır:  
+ Geçerli metin değerleri şunlardır:  
   
-- `Enabled`, hangi belirtir **konumu** kutusunun **yeni proje** iletişim kutusu etkin.  
+- `Enabled`**Yeni proje** Iletişim kutusunun **konum** kutusunun etkin olduğunu belirtir.  
   
-- `Disabled`, hangi belirtir **konumu** kutusunun **yeni proje** iletişim kutusu devre dışı bırakıldı.  
+- `Disabled`**Yeni proje** Iletişim kutusunun **konum** kutusunun devre dışı olduğunu belirtir.  
   
-- `Hidden`, hangi belirtir **konumu** kutusunun **yeni proje** iletişim kutusu gizlenir.  
+- `Hidden`**Yeni proje** Iletişim kutusunun **konum** kutusunun gizlendiğini belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsayılan değer `Enabled` şeklindedir.  
+ Varsayılan değer: `Enabled`.  
   
- **Konumu** metin kutusu **yeni proje** iletişim kutusu yeni projeler kaydedilir varsayılan dizinini değiştirme olanağı sağlar.  
+ **Yeni proje** Iletişim kutusundaki **konum** metin kutusu, kullanıcıların, yeni projelerin kaydedildiği varsayılan dizini değiştirmesine olanak sağlar.  
   
- İçinde belirtilen değerle `Location` temel proje sistemi destekliyorsa öğesi iletişim kutusu tarafından yalnızca kabul.  
+ Öğesinde belirtilen değer `Location` yalnızca temel alınan proje sistemi destekliyorsa iletişim kutusu tarafından kabul edilir.  
   
 ## <a name="example"></a>Örnek  
- Meta veriler için aşağıdaki örnekte bir [!INCLUDE[csprcs](../includes/csprcs-md.md)] şablonu.  
+ Aşağıdaki örnek, bir şablon için meta verileri gösterir [!INCLUDE[csprcs](../includes/csprcs-md.md)] .  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  

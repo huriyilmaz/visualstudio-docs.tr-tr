@@ -1,5 +1,5 @@
 ---
-title: '&lt;entryPoint&gt; öğesi (ClickOnce uygulaması) | Microsoft Docs'
+title: '&lt;entryPoint &gt; öğesi (ClickOnce uygulaması) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -20,18 +20,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9ce9fcbddf54dff0ee8574d0c2a5a3df4d8b5c7e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193501"
 ---
-# <a name="ltentrypointgt-element-clickonce-application"></a>&lt;entryPoint&gt; öğesi (ClickOnce uygulaması)
+# <a name="ltentrypointgt-element-clickonce-application"></a>&lt;entryPoint &gt; öğesi (ClickOnce uygulaması)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Gereken derleme tanımlayan yürütülmesi bu [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamayı bir istemci bilgisayarda çalıştırın.  
+Bu [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama bir istemci bilgisayarda çalıştırıldığında yürütülmesi gereken derlemeyi tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -54,52 +54,52 @@ Gereken derleme tanımlayan yürütülmesi bu [!INCLUDE[ndptecclick](../includes
 ```  
   
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler  
- `entryPoint` Öğesi gereklidir ve içinde `urn:schemas-microsoft-com:asm.v2` ad alanı. Yalnızca olabilir bir `entryPoint` uygulama bildiriminde tanımlanan öğe.  
+ `entryPoint`Öğesi gereklidir ve `urn:schemas-microsoft-com:asm.v2` ad alanında bulunur. `entryPoint`Uygulama bildiriminde yalnızca bir öğe tanımlanmış olabilir.  
   
- `entryPoint` Öğesi aşağıdaki özniteliklere sahiptir.  
+ `entryPoint`Öğesi aşağıdaki özniteliğe sahiptir.  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`name`|İsteğe bağlı. Bu değer, .NET Framework tarafından kullanılmaz.|  
+|`name`|İsteğe bağlı. Bu değer .NET Framework tarafından kullanılmaz.|  
   
  `entryPoint` Aşağıdaki öğelere sahiptir.  
   
-## <a name="assemblyidentity"></a>assemblyIdentity  
- Gerekli. Rolü `assemblyIdentity` ve özniteliklerini tanımlanmış [ \<assemblyIdentity > öğesi](../deployment/assemblyidentity-element-clickonce-application.md).  
+## <a name="assemblyidentity"></a>AssemblyIdentity  
+ Gereklidir. `assemblyIdentity`Ve özniteliklerinin rolü [ \<assemblyIdentity> öğesinde](../deployment/assemblyidentity-element-clickonce-application.md)tanımlanmıştır.  
   
- `processorArchitecture` Özniteliği bu öğenin ve `processorArchitecture` tanımlanan öznitelik `assemblyIdentity` uygulama bildirimi başka bir yerde eşleşmelidir.  
+ `processorArchitecture`Bu öğenin özniteliği ve `processorArchitecture` `assemblyIdentity` uygulama bildiriminde bir yerde tanımlanan özniteliğin eşleşmesi gerekir.  
   
-## <a name="commandline"></a>komut satırı  
- Gerekli. Bir alt öğesi olmalıdır `entryPoint` öğesi. Alt öğe yok ve aşağıdaki özniteliklere sahiptir.  
+## <a name="commandline"></a>Komut satırı  
+ Gereklidir. Öğenin bir alt `entryPoint` öğesi olmalıdır. Alt öğesi yoktur ve aşağıdaki özniteliklere sahiptir.  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`file`|Gerekli. Yerel başvuru için başlangıç derlemesine [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama. Bu değer, eğik çizgi (/) veya ters eğik çizgi içeremez (\\) yol ayırıcı.|  
-|`parameters`|Gerekli. Giriş noktası ile gerçekleştirilecek eylemi açıklar. Yalnızca geçerli değer `run`; boş bir dize sağlanmazsa `run` varsayılır.|  
+|`file`|Gereklidir. Uygulama için başlangıç derlemesine yerel bir başvuru [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] . Bu değer eğik çizgi (/) veya ters eğik çizgi ( \\ ) yol ayırıcıları içeremez.|  
+|`parameters`|Gereklidir. Giriş noktasıyla gerçekleştirilecek eylemi açıklar. Geçerli tek değer `run` ; boş bir dize sağlanırsa `run` kabul edilir.|  
   
 ## <a name="customhostrequired"></a>customHostRequired  
- İsteğe bağlı. Bu onay kutusu eklediyseniz, bu dağıtım için özel bir ana bilgisayar içinde dağıtılan bir bileşen içerdiğini belirtir ve tek başına bir uygulama değildir.  
+ İsteğe bağlı. Dahil ise, bu dağıtımın özel bir ana bilgisayar içinde dağıtılacak bir bileşen içerdiğini ve tek başına bir uygulama olmadığını belirtir.  
   
- Bu öğe varsa `assemblyIdentity` ve `commandLine` öğeleri de mevcut olmamalıdır. Böyle bir durumda [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] yükleme sırasında bir doğrulama hatası verir.  
+ Bu öğe mevcutsa, `assemblyIdentity` ve `commandLine` öğeleri de bulunmamalıdır. Bunlar, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] yükleme sırasında bir doğrulama hatası oluşturacak.  
   
- Bu öğenin öznitelikleri ve alt öğe var.  
+ Bu öğenin hiç özniteliği yok ve alt öğesi yok.  
   
 ## <a name="customux"></a>customUX  
- İsteğe bağlı. Uygulama yüklenir ve özel bir yükleyici tarafından korunur ve oluşturmaz Başlat menüsü girişi, kısayol veya Ekle veya programlar girdisini kaldırmak olduğunu belirtir.  
+ İsteğe bağlı. Uygulamanın özel bir yükleyici tarafından yüklenip korunur olduğunu ve bir Başlat menüsü girdisi, kısayol veya Program Ekle veya Kaldır girdisi oluşturmadığından emin olarak belirtir.  
   
 ```  
 <customUX xmlns="urn:schemas-microsoft-com:clickonce.v1" />  
 ```  
   
- CustomUX öğesi içeren bir uygulama kullanan özel bir yükleyici sağlamalısınız <xref:System.Deployment.Application.InPlaceHostingManager> yükleme işlemlerini gerçekleştirmek için. Bu öğe ile bir uygulama bildirimi ya da setup.exe, önkoşul önyükleyici çift tıklayarak yüklenemez. Başlangıç menüsünde girişleri, kısayolları ve Program Ekle veya Kaldır girişleri özel yükleyici oluşturabilirsiniz. Özel yükleyici Program Ekle veya Kaldır bir giriş oluşturmaz, tarafından sağlanan abonelik tanımlayıcısı depolamalısınız <xref:System.Deployment.Application.GetManifestCompletedEventArgs.SubscriptionIdentity%2A> özelliği ve etkinleştirme çağırarak daha sonra uygulamayı kaldırmak için kullanıcı <xref:System.Deployment.Application.InPlaceHostingManager.UninstallCustomUXApplication%2A> yöntemi. Daha fazla bilgi için [izlenecek yol: ClickOnce uygulaması için özel bir yükleyici oluşturma](../deployment/walkthrough-creating-a-custom-installer-for-a-clickonce-application.md).  
+ CustomUX öğesini içeren bir uygulamanın, <xref:System.Deployment.Application.InPlaceHostingManager> yükleme işlemlerini gerçekleştirmek için sınıfını kullanan özel bir yükleyici sağlaması gerekir. Bu öğeye sahip bir uygulama, bildirimine veya önkoşul önyükleyici setup.exe ' ye çift tıklayarak yüklenemez. Özel yükleyici, Başlat menüsü girdileri, kısayolları ve Program Ekle veya Kaldır girdilerini oluşturabilir. Özel yükleyici Program Ekle veya Kaldır girdisi içermiyorsa, özelliği tarafından sağlanmış abonelik tanımlayıcısını depolamalıdır <xref:System.Deployment.Application.GetManifestCompletedEventArgs.SubscriptionIdentity%2A> ve kullanıcıyı daha sonra metodunu çağırarak uygulamayı kaldırmasını sağlar <xref:System.Deployment.Application.InPlaceHostingManager.UninstallCustomUXApplication%2A> . Daha fazla bilgi için bkz. [Izlenecek yol: ClickOnce uygulaması Için özel bir yükleyici oluşturma](../deployment/walkthrough-creating-a-custom-installer-for-a-clickonce-application.md).  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe için derleme ve giriş noktasını tanımlar [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama.  
+ Bu öğe, uygulamanın derlemesini ve giriş noktasını tanımlar [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] .  
   
- Kullanamazsınız `commandLine` uygulamanıza çalışma zamanında parametreleri geçirmek için. Sorgu dizesi parametreleri için erişebileceğiniz bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamanın dağıtımından <xref:System.AppDomain>. Daha fazla bilgi için [nasıl yapılır: Bir çevrimiçi bir ClickOnce uygulamasında sorgu dize bilgilerini alma](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md).  
+ `commandLine`Çalışma zamanında uygulamanıza parametreleri geçirmek için kullanamazsınız. Uygulamanın bir dağıtım için sorgu dizesi parametrelerine erişebilirsiniz [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] <xref:System.AppDomain> . Daha fazla bilgi için bkz. [nasıl yapılır: sorgu dizesi bilgilerini bir çevrimiçi ClickOnce uygulamasında alma](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde gösterilmiştir bir `entryPoint` öğesi için bir uygulama bildiriminde bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama. Bu kod örneği için sağlanan daha büyük bir örneğin parçasıdır [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md) konu.  
+ Aşağıdaki kod örneği, `entryPoint` bir uygulama için uygulama bildiriminde bir öğe gösterir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] . Bu kod örneği, [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md) konusu için sağlanmış daha büyük bir örneğin bir parçasıdır.  
   
 ```  
 <!-- Identify the main code entrypoint. -->  
@@ -115,4 +115,4 @@ Gereken derleme tanımlayan yürütülmesi bu [!INCLUDE[ndptecclick](../includes
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ClickOnce Uygulama Bildirimi](../deployment/clickonce-application-manifest.md)
+ [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4ff23e07bd6e81b11d94a8256c33b57b4b0c558c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85531397"
 ---
 # <a name="add-commands-and-gestures-to-dependency-diagrams"></a>Bağımlılık diyagramlarına komut ve hareket ekleme
@@ -108,7 +108,7 @@ Komutları, katman Doğrulayıcıları ve diğer uzantıları içeren bir VSıX 
 
 8. VSıX 'i Visual Studio 'nun ana örneğine veya başka bir bilgisayara yüklemek için VSıX projesinin **bin** dizininde **. vsix** dosyasını bulun. VSıX 'i yüklemek istediğiniz bilgisayara kopyalayın. Dosya Gezgini 'nde VSıX dosyasına çift tıklayın.
 
-## <a name="defining-a-menu-command"></a><a name="command"></a>Menü komutu tanımlama
+## <a name="defining-a-menu-command"></a><a name="command"></a> Menü komutu tanımlama
 
 Varolan bir hareket veya komut projesine daha fazla menü komut tanımı ekleyebilirsiniz. Her komut, aşağıdaki özelliklere sahip bir sınıf tarafından tanımlanır:
 
@@ -124,11 +124,11 @@ Varolan bir hareket veya komut projesine daha fazla menü komut tanımı ekleyeb
 
 - Uygulayan yöntemler şunlardır `ICommandExtension` :
 
-  - `string Text {get;}`-Menüde görünen etiket.
+  - `string Text {get;}` -Menüde görünen etiket.
 
-  - `void QueryStatus(IMenuCommand command)`-Kullanıcı diyagrama sağ tıkladığında çağrılır ve komutun kullanıcının geçerli seçimi için görünür ve etkin olup olmayacağını belirler.
+  - `void QueryStatus(IMenuCommand command)` -Kullanıcı diyagrama sağ tıkladığında çağrılır ve komutun kullanıcının geçerli seçimi için görünür ve etkin olup olmayacağını belirler.
 
-  - `void Execute(IMenuCommand command)`-Kullanıcı komutu seçtiğinde çağırılır.
+  - `void Execute(IMenuCommand command)` -Kullanıcı komutu seçtiğinde çağırılır.
 
 - Geçerli seçimi belirleyebilmek için şunları içeri aktarabilirsiniz `IDiagramContext` :
 
@@ -212,7 +212,7 @@ namespace MyLayerExtension // Change to your preference.
 }
 ```
 
-## <a name="defining-a-gesture-handler"></a><a name="gesture"></a>Hareket Işleyicisi tanımlama
+## <a name="defining-a-gesture-handler"></a><a name="gesture"></a> Hareket Işleyicisi tanımlama
 
 Bir hareket işleyicisi, kullanıcı öğeleri bağımlılık diyagramına sürüklediğinde ve Kullanıcı diyagramda herhangi bir yere çift tıkladığında yanıt verir.
 

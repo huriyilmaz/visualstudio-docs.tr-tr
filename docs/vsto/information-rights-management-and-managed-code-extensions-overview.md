@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 753f3d2da201c67cd86c697eccf7580596a40d6e
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68872057"
 ---
 # <a name="information-rights-management-and-managed-code-extensions-overview"></a>Bilgi hakları yönetimine ve yönetilen kod uzantılarına genel bakış
@@ -30,14 +30,14 @@ ms.locfileid: "68872057"
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
 ## <a name="run-code-behind-documents-with-restricted-permissions"></a>Kısıtlı izinlerle arka planda kod Çalıştır
- Çözümünüz ıRM kullanan bir belge veya çalışma kitabı içeriyorsa, varsayılan olarak Word ve Excel hiçbir kodun çalışmasına izin vermez. Belgenin yazarından veya tam denetim erişimine sahipseniz, çözümünüzün çalışması için varsayılan olarak değişiklik yapabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Kodun, kısıtlı izinlerle](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)belgelerin arkasında çalışmasına izin verme.
+ Çözümünüz ıRM kullanan bir belge veya çalışma kitabı içeriyorsa, varsayılan olarak Word ve Excel hiçbir kodun çalışmasına izin vermez. Belgenin yazarından veya tam denetim erişimine sahipseniz, çözümünüzün çalışması için varsayılan olarak değişiklik yapabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: kodun, kısıtlı izinlerle belgelerin arkasında çalışmasına Izin verme](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md).
 
- IRM, belgesinde önbelleğe <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> alınan verileri almak veya işlemek için kullanımını engeller.
+ IRM, <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> belgesinde önbelleğe alınan verileri almak veya işlemek için kullanımını engeller.
 
 ## <a name="end-users-to-restrict-permissions-to-documents-that-use-managed-code-extensions"></a>Son kullanıcılar yönetilen kod uzantıları kullanan belgelerle ilgili izinleri kısıtlar
  Çözümünüzde belge veya çalışma kitabına tam denetim erişimi olan herkes, izinleri kısıtlamak için ıRM kullanabilir. Örneğin, muhasebe departmanındaki bir son kullanıcı bir çalışma sayfasını bir veritabanından alınan verilerle otomatik olarak dolduran bir çözüm kullanıyorsa, bu kullanıcı yalnızca departmandaki kişilere ve başkalarına okuma erişimine izin vermek isteyebilir. Kullanıcı kısıtlı izinleri eklediğinde, varsayılan olarak, çalışma sayfasının arkasındaki kod çalıştırılamaz ve çalışma sayfası verilerle doldurulmaz.
 
- Sorunu gidermek için, belgeye veya çalışma kitabına tam denetim erişimi olan birinin, nesne modeline programlı erişim sağlamak için varsayılan izin ayarlarını değiştirmesi gerekir. Daha fazla bilgi için [nasıl yapılır: Kodun, kısıtlı izinlerle](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)belgelerin arkasında çalışmasına izin verme.
+ Sorunu gidermek için, belgeye veya çalışma kitabına tam denetim erişimi olan birinin, nesne modeline programlı erişim sağlamak için varsayılan izin ayarlarını değiştirmesi gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: kodun, kısıtlı izinlerle belgelerin arkasında çalışmasına Izin verme](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Belge düzeyi çözümlerde Belge koruması](../vsto/document-protection-in-document-level-solutions.md)

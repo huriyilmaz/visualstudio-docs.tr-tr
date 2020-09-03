@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Çalışma zamanında Şeritteki denetimleri güncelleştirme'
+title: 'İzlenecek yol: çalışma zamanında Şeritteki denetimleri güncelleştirme'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,13 +18,13 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 425918ea32c14e6ba905d6b32864a2844d2b5a90
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71255347"
 ---
-# <a name="walkthrough-update-the-controls-on-a-ribbon-at-run-time"></a>İzlenecek yol: Çalışma zamanında Şeritteki denetimleri güncelleştirme
+# <a name="walkthrough-update-the-controls-on-a-ribbon-at-run-time"></a>İzlenecek yol: çalışma zamanında Şeritteki denetimleri güncelleştirme
 
 Bu izlenecek yol, Şerit Office uygulamasına yüklendikten sonra Şeritteki denetimleri güncelleştirmek için şerit nesne modelinin nasıl kullanılacağını gösterir.
 
@@ -45,7 +45,7 @@ Bu izlenecek yol aşağıdaki görevleri gösterir:
 > [!NOTE]
 > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
@@ -59,13 +59,13 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 ### <a name="to-create-a-new-outlook-vsto-add-in-project"></a>Yeni bir Outlook VSTO eklentisi projesi oluşturmak için
 
-1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], **Ribbon_Update_At_Runtime**adlı bir Outlook VSTO eklentisi projesi oluşturun.
+1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , **Ribbon_Update_At_Runtime**ADLı bir Outlook VSTO eklentisi projesi oluşturun.
 
 2. **Yeni proje** iletişim kutusunda, **çözüm için dizin oluştur**' u seçin.
 
 3. Projeyi varsayılan proje dizinine kaydedin.
 
-     Daha fazla bilgi için [nasıl yapılır: Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)'da Office projeleri oluşturun.
+     Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
 ## <a name="design-a-custom-ribbon-group"></a>Özel Şerit grubu tasarlama
 
@@ -149,11 +149,11 @@ Projenize türü belirtilmiş bir veri kümesi eklemek için **veri kaynakları*
 
 8. Aşağıdaki tabloların yanındaki onay kutusunu işaretleyin:
 
-    1. **Müşterinizin**
+    1. **Müşteriler**
 
     2. **Sipariş Ayrıntıları**
 
-    3. **Siparişlerine**
+    3. **Siparişler**
 
     4. **Ürünler**
 
@@ -188,26 +188,26 @@ Aşağıdaki görevleri gerçekleştirmek için şerit nesne modelini kullanın:
     [!code-csharp[Trin_Ribbon_Update_At_Runtime#1](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#1)]
     [!code-vb[Trin_Ribbon_Update_At_Runtime#1](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#1)]
 
-6. Aşağıdaki kodu `CustomerRibbon` sınıfının içine ekleyin. Bu kod, Northwind veritabanının Müşteri, siparişler, sipariş ayrıntıları ve ürün tablolarından bilgi depolamak için kullanacağınız veri tablosu ve tablo bağdaştırıcılarını bildirir.
+6. Aşağıdaki kodu sınıfının içine ekleyin `CustomerRibbon` . Bu kod, Northwind veritabanının Müşteri, siparişler, sipariş ayrıntıları ve ürün tablolarından bilgi depolamak için kullanacağınız veri tablosu ve tablo bağdaştırıcılarını bildirir.
 
     [!code-csharp[Trin_Ribbon_Update_At_Runtime#2](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#2)]
     [!code-vb[Trin_Ribbon_Update_At_Runtime#2](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#2)]
 
-7. Aşağıdaki kod `CustomerRibbon` bloğunu sınıfına ekleyin. Bu kod, çalışma zamanında Şerit için denetimler oluşturan üç yardımcı yöntem ekler.
+7. Aşağıdaki kod bloğunu `CustomerRibbon` sınıfına ekleyin. Bu kod, çalışma zamanında Şerit için denetimler oluşturan üç yardımcı yöntem ekler.
 
     [!code-csharp[Trin_Ribbon_Update_At_Runtime#3](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#3)]
     [!code-vb[Trin_Ribbon_Update_At_Runtime#3](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#3)]
 
-8. `CustomerRibbon_Load` Olay işleyicisi yöntemini aşağıdaki kodla değiştirin. Bu kod, aşağıdaki görevleri gerçekleştirmek için bir LINQ sorgusu kullanır:
+8. `CustomerRibbon_Load`Olay işleyicisi yöntemini aşağıdaki kodla değiştirin. Bu kod, aşağıdaki görevleri gerçekleştirmek için bir LINQ sorgusu kullanır:
 
    - Northwind veritabanındaki 20 müşterinin KIMLIĞINI ve adını kullanarak **müşteriler** Birleşik giriş kutusunu doldurun.
 
-   - `PopulateSalesOrderInfo` Yardımcı yöntemini çağırır. Bu yöntem, **ProductsPurchased** menüsünü Şu anda seçili müşteriyle ilgili satış siparişi numaralarıyla güncelleştirir.
+   - `PopulateSalesOrderInfo`Yardımcı yöntemini çağırır. Bu yöntem, **ProductsPurchased** menüsünü Şu anda seçili müşteriyle ilgili satış siparişi numaralarıyla güncelleştirir.
 
      [!code-csharp[Trin_Ribbon_Update_At_Runtime#4](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#4)]
      [!code-vb[Trin_Ribbon_Update_At_Runtime#4](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#4)]
 
-9. `CustomerRibbon` Sınıfına aşağıdaki kodu ekleyin. Bu kod, aşağıdaki görevleri gerçekleştirmek için LINQ sorgularını kullanır:
+9. Sınıfına aşağıdaki kodu ekleyin `CustomerRibbon` . Bu kod, aşağıdaki görevleri gerçekleştirmek için LINQ sorgularını kullanır:
 
    - Seçili müşteriyle ilgili her satış siparişi için **ProductsPurchased** menüsüne bir alt menü ekler.
 
@@ -226,11 +226,11 @@ Aşağıdaki görevleri gerçekleştirmek için şerit nesne modelini kullanın:
 
      Şerit kod dosyası kod düzenleyicisinde açılır ve `ComboBox1_TextChanged` olay işleyicisi görünür.
 
-12. `ComboBox1_TextChanged` Olay işleyicisini aşağıdaki kodla değiştirin. Bu kod aşağıdaki görevleri gerçekleştirir:
+12. `ComboBox1_TextChanged`Olay işleyicisini aşağıdaki kodla değiştirin. Bu kod aşağıdaki görevleri gerçekleştirir:
 
-    - `PopulateSalesOrderInfo` Yardımcı yöntemini çağırır. Bu yöntem, **satın alınan ürünler** menüsünü Seçili müşteriyle ilgili satış siparişleriyle güncelleştirir.
+    - `PopulateSalesOrderInfo`Yardımcı yöntemini çağırır. Bu yöntem, **satın alınan ürünler** menüsünü Seçili müşteriyle ilgili satış siparişleriyle güncelleştirir.
 
-    - `PopulateMailItem` Yardımcı yöntemini çağırır ve seçilen müşteri adı olan geçerli metinde geçirir. Bu yöntem, yeni posta iletilerinin, konu ve gövde alanlarını doldurur.
+    - `PopulateMailItem`Yardımcı yöntemini çağırır ve seçilen müşteri adı olan geçerli metinde geçirir. Bu yöntem, yeni posta iletilerinin, konu ve gövde alanlarını doldurur.
 
       [!code-csharp[Trin_Ribbon_Update_At_Runtime#5](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#5)]
       [!code-vb[Trin_Ribbon_Update_At_Runtime#5](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#5)]
@@ -240,7 +240,7 @@ Aşağıdaki görevleri gerçekleştirmek için şerit nesne modelini kullanın:
      [!code-csharp[Trin_Ribbon_Update_At_Runtime#8](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#8)]
      [!code-vb[Trin_Ribbon_Update_At_Runtime#8](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#8)]
 
-14. `CustomerRibbon` Sınıfına aşağıdaki kodu ekleyin. Bu kod aşağıdaki görevleri gerçekleştirir:
+14. Sınıfına aşağıdaki kodu ekleyin `CustomerRibbon` . Bu kod aşağıdaki görevleri gerçekleştirir:
 
     - Şu anda seçili olan müşterinin e-posta adresini kullanarak yeni posta iletilerinin satırına doldurur.
 
@@ -291,14 +291,14 @@ Aşağıdaki konulardan Office Kullanıcı arabirimini özelleştirme hakkında 
 
 - Herhangi bir belge düzeyi özelleştirmesine bağlam tabanlı kullanıcı arabirimi ekleyin. Daha fazla bilgi için bkz. [eylemler bölmesine genel bakış](../vsto/actions-pane-overview.md).
 
-- Bir standart veya özel Microsoft Office Outlook formunu genişletin. Daha fazla bilgi için bkz [. İzlenecek yol: Outlook form bölgesi](../vsto/walkthrough-designing-an-outlook-form-region.md)tasarlayın.
+- Bir standart veya özel Microsoft Office Outlook formunu genişletin. Daha fazla bilgi için bkz. [Izlenecek yol: Outlook form bölgesi tasarlama](../vsto/walkthrough-designing-an-outlook-form-region.md).
 
 - Outlook 'a özel bir görev bölmesi ekleyin. Daha fazla bilgi için bkz. [özel görev bölmeleri](../vsto/custom-task-panes.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çalışma zamanında Şerite erişin](../vsto/accessing-the-ribbon-at-run-time.md)
-- [Şerite Genel Bakış](../vsto/ribbon-overview.md)
+- [Şerite genel bakış](../vsto/ribbon-overview.md)
 - [Dil ile Tümleşik Sorgu (LINQ)](/dotnet/csharp/linq/index)
 - [Nasıl yapılır: Şeriti özelleştirmeye başlama](../vsto/how-to-get-started-customizing-the-ribbon.md)
 - [Şerit Tasarımcısı](../vsto/ribbon-designer.md)
@@ -306,7 +306,7 @@ Aşağıdaki konulardan Office Kullanıcı arabirimini özelleştirme hakkında 
 - [Şerit nesne modeline genel bakış](../vsto/ribbon-object-model-overview.md)
 - [Outlook için şerit özelleştirme](../vsto/customizing-a-ribbon-for-outlook.md)
 - [Nasıl yapılır: Şeritteki sekmenin konumunu değiştirme](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)
-- [Nasıl yapılır: Yerleşik bir sekmeyi özelleştirme](../vsto/how-to-customize-a-built-in-tab.md)
+- [Nasıl yapılır: yerleşik bir sekmeyi özelleştirme](../vsto/how-to-customize-a-built-in-tab.md)
 - [Nasıl yapılır: Backstage görünümüne denetimler ekleme](../vsto/how-to-add-controls-to-the-backstage-view.md)
 - [Nasıl yapılır: Şerit Tasarımcısından Şerit XML 'ine şerit aktarma](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)
-- [Nasıl yapılır: Eklenti kullanıcı arabirimi hatalarını göster](../vsto/how-to-show-add-in-user-interface-errors.md)
+- [Nasıl yapılır: eklenti Kullanıcı arayüzü hatalarını gösterme](../vsto/how-to-show-add-in-user-interface-errors.md)

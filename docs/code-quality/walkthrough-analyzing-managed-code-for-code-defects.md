@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: ab1e0b890d6241742770ed38ff61fc1c2c0ed2f4
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72535698"
 ---
 # <a name="walkthrough-use-static-code-analysis-to-find-code-defects"></a>İzlenecek yol: kod kusurlarını bulmak için statik Kod analizini kullanın
@@ -93,25 +93,25 @@ Bu makalede, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım kıla
 
 1. Uyarıları düzeltmek için aşağıdaki ipuçlarını kullanın:
 
-   [CA1014: Derlemeleri CLSCompliantAttribute Ile işaretleyin](../code-quality/ca1014.md): kodu `[assembly: CLSCompliant(true)]` AssemblyInfo.cs dosyasının sonuna ekleyin.
+   [CA1014: Derlemeleri CLSCompliantAttribute Ile işaretle](../code-quality/ca1014.md): kodu `[assembly: CLSCompliant(true)]` AssemblyInfo.cs dosyasının sonuna ekleyin.
 
-   [CA1032: Standart özel durum oluşturucularını Uygula](../code-quality/ca1032.md): `public demo (String s) : base(s) { }` oluşturucusunu `demo` sınıfına ekleyin.
+   [CA1032: Standart özel durum oluşturucuları uygulayın](../code-quality/ca1032.md): oluşturucuyu `public demo (String s) : base(s) { }` sınıfına ekleyin `demo` .
 
-   [CA1032: Standart özel durum oluşturucularını Uygula](../code-quality/ca1032.md): `public demo (String s, Exception e) : base(s, e) { }` oluşturucusunu `demo` sınıfına ekleyin.
+   [CA1032: Standart özel durum oluşturucuları uygulayın](../code-quality/ca1032.md): oluşturucuyu `public demo (String s, Exception e) : base(s, e) { }` sınıfına ekleyin `demo` .
 
-   [CA1032: Standart özel durum oluşturucularını uygulayın](../code-quality/ca1032.md): sınıf tanıtımına `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { }` oluşturucusunu ekleyin. Ayrıca, <xref:System.Runtime.Serialization?displayProperty=fullName> için `using` bir ifade eklemeniz gerekir.
+   [CA1032: Standart özel durum oluşturucuları uygulayın](../code-quality/ca1032.md): oluşturucuyu `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { }` sınıf tanıtımı 'na ekleyin. Ayrıca için bir ifade eklemeniz gerekir `using` <xref:System.Runtime.Serialization?displayProperty=fullName> .
 
-   [CA1032: Standart özel durum oluşturucularını Uygula](../code-quality/ca1032.md): `public demo () : base() { }` oluşturucusunu `demo` sınıfına ekleyin.
+   [CA1032: Standart özel durum oluşturucuları uygulayın](../code-quality/ca1032.md): oluşturucuyu `public demo () : base() { }` sınıfına ekleyin `demo` .
 
-   [CA1709: tanımlayıcılar doğru olmalıdır](../code-quality/ca1709.md): `testCode` ad alanının büyük küçük harflerini `TestCode` ' ye değiştirin.
+   [CA1709: tanımlayıcılar doğru şekilde eşit olmalıdır](../code-quality/ca1709.md): ad alanının büyük küçük harflerini olarak değiştirin `testCode` `TestCode` .
 
-   [CA1709: tanımlayıcılar doğru şekilde olmalıdır](../code-quality/ca1709.md): üyenin adını `Demo` olarak değiştirin.
+   [CA1709: tanımlayıcılar doğru şekilde olmalıdır](../code-quality/ca1709.md): üyenin adını olarak değiştirin `Demo` .
 
-   [CA1709: tanımlayıcılar doğru şekilde olmalıdır](../code-quality/ca1709.md): üyenin adını `Item` olarak değiştirin.
+   [CA1709: tanımlayıcılar doğru şekilde olmalıdır](../code-quality/ca1709.md): üyenin adını olarak değiştirin `Item` .
 
-   [CA1710: tanımlayıcılar doğru sonekine sahip olmalıdır](../code-quality/ca1710.md): sınıf ve oluşturucularının adını `DemoException` olarak değiştirin.
+   [CA1710: tanımlayıcılar doğru sonekine sahip olmalıdır](../code-quality/ca1710.md): sınıfın ve oluşturucularının adını olarak değiştirin `DemoException` .
 
-   [CA2237: ISerializable türlerini SerializableAttribute Ile işaretleyin](../code-quality/ca2237.md): `[Serializable ()]` özniteliğini sınıf `demo` ekleyin.
+   [CA2237: ISerializable türlerini SerializableAttribute Ile işaretleyin](../code-quality/ca2237.md): `[Serializable ()]` özniteliği sınıfına ekleyin `demo` .
 
    [CA2210: derlemeler geçerli tanımlayıcı adlara sahip olmalıdır](../code-quality/ca2210.md): ' CodeAnalysisManagedDemo ' öğesini bir tanımlayıcı ad anahtarıyla imzalayın:
 
@@ -123,7 +123,7 @@ Bu makalede, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım kıla
 
    1. **Derlemeyi imzala** onay kutusunu seçin.
 
-   1. **Dize adı seçin anahtar dosyası** listesinde **\<new >** ' ı seçin.
+   1. **Bir dize adı seçin anahtar dosyası** listesinde, öğesini seçin **\<New>** .
 
       **Tanımlayıcı ad anahtarı oluştur** iletişim kutusu görüntülenir.
 
@@ -164,7 +164,7 @@ Bu makalede, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım kıla
 
     1. **Hata listesi**uyarıyı seçin.
 
-    1. Sağ tıklama menüsünde (bağlam menüsü),**gizleme dosyasında** >  ' i **Gizle**' yi seçin.
+    1. Sağ tıklama menüsünde (bağlam menüsü), **Suppress**  >  **gizleme dosyasında**Gizle ' yi seçin.
 
 1. Projeyi yeniden derleyin.
 

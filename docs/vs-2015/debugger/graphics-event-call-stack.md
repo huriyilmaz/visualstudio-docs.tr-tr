@@ -1,5 +1,5 @@
 ---
-title: Grafik olay Çağırma yığını | Microsoft Docs
+title: Grafik olay çağrısı yığını | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,37 +12,37 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8344050d26286263e0c33974b976e4ae25ff18de
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192742"
 ---
 # <a name="graphics-event-call-stack"></a>Grafik Olay Çağırma Yığını
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Grafik olay çağrı yığını'nı Visual Studio grafik Çözümleyicisi sorunlu grafik olaylarını ve uygulamanızın kaynak kodu arasındaki ilişkiyi eşlemenize yardımcı olur.  
+Visual Studio Grafik Çözümleyicisi 'deki grafik olay çağrısı yığını, sorunlu grafik olayları ve uygulamanızın kaynak kodu arasındaki ilişkiyi eşlemenizi sağlar.  
   
- Bu olay çağrı yığını penceresinde.  
+ Bu olay çağrı yığını penceresidir:  
   
- ![Çağrı yığını önceki DrawIndexed olay. ](../debugger/media/gfx-diag-demo-graphics-event-call-stack-orientation.png "gfx_diag_demo_graphics_event_call_stack_orientation")  
+ ![Çağrı yığını bir DrawIndexed olayından önce.](../debugger/media/gfx-diag-demo-graphics-event-call-stack-orientation.png "gfx_diag_demo_graphics_event_call_stack_orientation")  
   
-## <a name="understanding-the-graphics-event-call-stack"></a>Grafik olay çağrı yığını anlama  
- Olay çağrı yığını, belirli bir Direct3D olaya yol açan akışını anlamak için kullanabilirsiniz. Seçili Direct3D olayın gerçekleştiği edildiğinde bulunduğu gibi çalışan bir uygulamada etkin iş parçacığının geçerli çağrı yığınını görüntülemek yerine, çağrı yığınını görüntüler dışında Visual Studio çağrı yığını penceresini benzer. Olay çağrısı yığını, çevreleyen kod İnceleme seçili Direct3D olayın çağrı sitesini atlayabilirsiniz.  
+## <a name="understanding-the-graphics-event-call-stack"></a>Grafik olay çağrı yığınını anlama  
+ Belirli bir Direct3D olayına işaret eden yürütmenin akışını anlamak için olay çağrı yığınını kullanabilirsiniz. Visual Studio çağrı yığını penceresine benzer, ancak çalışan bir uygulamada etkin iş parçacığının geçerli çağrı yığınını görüntülemek yerine, seçilen Direct3D olayı gerçekleştiğinde çağrı yığınını görüntüler. Olay çağrı yığınında, çevreleyen kodu incelemek için seçilen Direct3D olayının çağrı sitesine atlayabilirsiniz.  
   
- Bir sorun olay kaynaklandığı kod yolu belirlemek için olay çağrı yığını kullanarak olası sorun kaynaklarını çıkarmaya kod tabanının bilginizi kullanabilirsiniz veya Geleneksel kullanabilmesi için uygulamanızın kaynak kodunda kesme noktaları ekleyebilirsiniz. teknikleri, uygulama veya olay parametreleri durumunu işlemiyorsa olayın neden nasıl incelemek için hata ayıklama. Bu inceleme, yalnızca işleme sorunları bildirilen kaynak kodundaki sorunlarını bulmanıza yardımcı olabilir.  
+ Bir sorun olayının kaynaklandığı kod yolunu tanımlamak için olay çağrı yığınını kullanarak, sorunun olası kaynaklarını belirlemek için kod tabanınızın bilgisini kullanabilir veya uygulamanın veya olay parametrelerinin durumunun hatalı davranmasına neden olduğunu incelemek üzere geleneksel hata ayıklama tekniklerini kullanabilmeniz için uygulamanızın kaynak kodunda kesme noktaları ekleyebilirsiniz. Bu İnceleme, kaynak kodda yalnızca işleme sorunları olarak bildirilen sorunları bulmanıza yardımcı olabilir.  
   
-### <a name="graphics-event-call-stack-information"></a>Grafik olay çağrı yığını bilgilerini  
- Olay Çağırma yığını öncesi çerçeve olayları veya kullanıcı tanımlı olayları desteklemez. Grafik olay çağrı yığını, tablo biçiminde görüntülenir.  
+### <a name="graphics-event-call-stack-information"></a>Grafik olay çağrı yığını bilgileri  
+ Olay çağrı yığını, çerçeve öncesi olayları veya Kullanıcı tanımlı olayları desteklemez. Grafik olay çağrı yığını bir tablo biçiminde görüntülenir.  
   
 |Sütun|Açıklama|  
 |------------|-----------------|  
-|**Ad**|Çağrı sitesini içeren işlev benzersiz olarak tanımlayan bir simge. Hata ayıklama sembolü işlev için kullanılabilir hale geldiğinde görüntülenir; Aksi halde, işlev uzaklık görüntülenir.|  
-|**Dosya**|Kaynak kodu dosyanızı veya çağrı sitesini içeren kitaplık dosyasının dosya adı.|  
-|**Konum**|Çağrı sitesini satır sayısı.|  
+|**Ad**|Çağrı sitesini içeren işlevi benzersiz bir şekilde tanımlayan bir sembol. İşlevin hata ayıklama sembolü kullanılabilir olduğunda görüntülenir; Aksi takdirde, işlev boşluğu görüntülenir.|  
+|**Dosya**|Çağrı sitesini içeren kaynak kodu dosyasının veya kitaplık dosyasının dosya adı.|  
+|**Konum**|Çağrı sitesinin satır numarası.|  
   
-### <a name="links-to-graphics-objects"></a>Grafik nesneleri bağlantılar  
- Seçilen grafik olay anlamak için ilişkili Direct3D nesneleri hakkındaki bilgileri gerekebilir. **Grafik olay çağrı yığını** penceresi bu bilgilere bağlantılar sağlar.  
+### <a name="links-to-graphics-objects"></a>Grafik nesnelerine bağlantılar  
+ Seçili grafik olayını anlamak için, onunla ilişkili Direct3D nesneleri hakkında bilgilere ihtiyacınız olabilir. **Grafik olay çağrı yığını** penceresi bu bilgilere bağlantılar sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İzlenecek yol: Köşe Gölgeleme Nedeniyle Eksik Nesneler](../debugger/walkthrough-missing-objects-due-to-vertex-shading.md)

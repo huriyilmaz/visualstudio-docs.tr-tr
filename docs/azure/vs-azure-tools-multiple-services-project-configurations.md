@@ -10,18 +10,18 @@ ms.topic: how-to
 ms.date: 11/11/2017
 ms.author: ghogen
 ms.openlocfilehash: 8c9f65291d43a55ee75840591698c26fdde6e967
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85280550"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>Visual Studio'da Azure projenizi birden çok hizmet yapılandırması kullanacak şekilde yapılandırma
 
 Visual Studio 'da bir Azure bulut hizmeti projesi üç yapılandırma dosyası içerir: `ServiceDefinition.csdef` , `ServiceConfiguration.Local.cscfg` ve `ServiceConfiguration.Cloud.cscfg` :
 
-- `ServiceDefinition.csdef`, bulut hizmeti ve rollerinin gereksinimlerini ve tüm örneklere uygulanan ayarları sağlamak üzere Azure 'a dağıtılır. Ayarlar, Azure hizmeti barındırma çalışma zamanı API 'SI kullanılarak çalışma zamanında okunabilir. Bu dosya, Azure 'da yalnızca bulut hizmeti durdurulduğunda güncelleştirilir.
-- `ServiceConfiguration.Local.cscfg`ve `ServiceConfiguration.Cloud.cscfg` tanım dosyasındaki ayarlar için değerler sağlayın ve her bir rol için çalıştırılacak örneklerin sayısını belirtin. "Yerel" dosya, yerel hata ayıklamada kullanılan değerleri içerir; "bulut" dosyası Azure 'a olarak dağıtılır `ServiceConfiguration.cscfg` ve sunucu ortamı için ayarları sağlar. Bu dosya, bulut hizmetiniz Azure 'da çalışırken güncelleştirilemeyebilir.
+- `ServiceDefinition.csdef` , bulut hizmeti ve rollerinin gereksinimlerini ve tüm örneklere uygulanan ayarları sağlamak üzere Azure 'a dağıtılır. Ayarlar, Azure hizmeti barındırma çalışma zamanı API 'SI kullanılarak çalışma zamanında okunabilir. Bu dosya, Azure 'da yalnızca bulut hizmeti durdurulduğunda güncelleştirilir.
+- `ServiceConfiguration.Local.cscfg` ve `ServiceConfiguration.Cloud.cscfg` tanım dosyasındaki ayarlar için değerler sağlayın ve her bir rol için çalıştırılacak örneklerin sayısını belirtin. "Yerel" dosya, yerel hata ayıklamada kullanılan değerleri içerir; "bulut" dosyası Azure 'a olarak dağıtılır `ServiceConfiguration.cscfg` ve sunucu ortamı için ayarları sağlar. Bu dosya, bulut hizmetiniz Azure 'da çalışırken güncelleştirilemeyebilir.
 
 Yapılandırma ayarları, geçerli rolün Özellik sayfaları kullanılarak Visual Studio 'da yönetilir ve değiştirilir (Role sağ tıklayıp **Özellikler**' i seçin ya da role çift tıklayın). Değişiklikler, **hizmet yapılandırması** açılır penceresinde hangi yapılandırmanın seçiltiğine göre kapsamlandırılır. Web ve çalışan rollerinin özellikleri, aşağıdaki bölümlerde açıklananlar dışında benzerdir.
 

@@ -1,5 +1,5 @@
 ---
-title: Seçenekler sayfaları oluşturma | Microsoft Docs
+title: Seçenek sayfaları oluşturuluyor | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,78 +12,78 @@ caps.latest.revision: 30
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8c2b993a6c6947adfa3b01f2947b992b23236b8f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196938"
 ---
 # <a name="creating-options-pages"></a>Seçenekler Sayfaları Oluşturma
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-İçinde [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] yönetilen paket çerçevesini türetilen sınıflar <xref:Microsoft.VisualStudio.Shell.DialogPage> genişletmek [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ekleyerek IDE **seçenekleri** altında sayfaları **Araçları** menüsü.  
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Yönetilen paket çerçevesinde, <xref:Microsoft.VisualStudio.Shell.DialogPage> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Araçlar** menüsünün altına **Seçenekler** sayfası ekleyerek IDE 'yi genişletten türetilmiş sınıflar.  
   
- Bir nesneyi uygulama bir verilen **araçları seçeneği** sayfasıdır belirli VSPackages ilişkilendirilmiş <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> nesne.  
+ Belirli bir **Araçlar seçeneği** sayfasını uygulayan nesne, nesne tarafından belirli VSPackages ile ilişkilendirilir <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> .  
   
- Belirli bir uygulama nesnesi ortamı oluşturur çünkü **Araçlar Seçenekler** sayfa sayfa IDE tarafından görüntülendiğinde:  
+ Ortam, belirli bir sayfa IDE tarafından görüntülenirken belirli bir **araç seçenekleri** sayfasını uygulayan nesneyi örneklendiren için:  
   
-- A **araçları seçeneği** VSPackage uygulama nesnesi değil ve kendi nesne üzerinde sayfa'nin uygulanmasını.  
+- Bir **araç seçeneği** sayfası, VSPackage uygulayan nesne üzerinde değil, kendi nesnesine uygulanmalıdır.  
   
-- Bir nesne birden çok uygulayamaz **Araçlar Seçenekler** sayfaları.  
+- Bir nesne birden çok **araç seçenekleri** sayfası uygulayamaz.  
   
-## <a name="registering-as-a-tools-options-page-provider"></a>Bir araç seçenekleri sayfası sağlayıcısı olarak kaydetme  
- Bir VSPackage'ı destekleyen kullanıcı yapılandırması üzerinden **Araçlar Seçenekler** sayfaları bu sağlayan nesneleri gösterir **Araçlar Seçenekler** örneklerini uygulayarak sayfaları <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> içinuygulanan<xref:Microsoft.VisualStudio.Shell.Package>uygulaması.  
+## <a name="registering-as-a-tools-options-page-provider"></a>Araç seçenekleri sayfası sağlayıcısı olarak kaydetme  
+ **Araç seçenekleri** sayfaları aracılığıyla Kullanıcı yapılandırmasını destekleyen VSPackage, uygulamaya uygulanan örnekleri uygulayarak bu **araç seçenekleri** sayfalarını sağlayan nesneleri gösterir <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> <xref:Microsoft.VisualStudio.Shell.Package> .  
   
- Bir örneği olmalıdır <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> için her <xref:Microsoft.VisualStudio.Shell.DialogPage>-uygulayan bir tür türetilmiş bir **Araçlar Seçenekler** sayfası.  
+ <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> <xref:Microsoft.VisualStudio.Shell.DialogPage> Bir **araç seçenekleri** sayfası uygulayan her türetilmiş tür için bir örnek olmalıdır.  
   
- Her bir örneği <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> uygulayan bir tür kullanan **Araçlar Seçenekler** sayfası, kategori ve tanımlamak için kullanılan alt kategorisi içeren dizeleri bir **Araçlar Seçenekler** sayfası ve kaynak bilgi türü sağlayarak olarak kaydetmek için bir **Araçlar Seçenekler** sayfası.  
+ Her bir örneği, Araçlar Seçenekler sayfasını <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> uygulayan türü **Tools Options** , bir **araç seçenekleri** sayfasını tanımlamak için kullanılan kategori ve alt kategoriyi Içeren dizeleri ve türü bir **araç seçenekleri** sayfası olarak kaydetmek için kaynak bilgilerini kullanır.  
   
-## <a name="persisting-tools-options-page-state"></a>Kalıcı Araçlar seçenekleri sayfa durumu  
- Varsa bir **Araçlar Seçenekler** sayfa uygulaması Otomasyon desteği etkinleştirilmiş kayıtlı ise, IDE'nin yanı sıra diğer tüm sayfa durum devam ederse **Araçlar Seçenekler** sayfaları.  
+## <a name="persisting-tools-options-page-state"></a>Kalıcı Araçlar Seçenekler sayfası durumu  
+ Bir **araç seçenekleri** sayfası uygulamasının Otomasyon desteği etkinken kayıtlı olması halınde, IDE sayfanın durumunu diğer tüm **araç seçenekleri** sayfalarıyla birlikte sürdürür.  
   
- Bir VSPackage'ı kullanarak kendi Kalıcılık yönetebilirsiniz <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>. Tek veya diğer Kalıcılık yöntemi kullanılmalıdır.  
+ Bir VSPackage, kullanarak kendi kalıcılığını yönetebilir <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> . Yalnızca bir veya başka bir kalıcılık yöntemi kullanılmalıdır.  
   
-## <a name="implementing-dialogpage-class"></a>DialogPage sınıf uygulama  
- VSPackage'nın uygulamasını sağlayan bir nesne bir <xref:Microsoft.VisualStudio.Shell.DialogPage>-türetilmiş bir tür, aşağıdaki devralınan özellikler avantajlarından faydalanabilirsiniz:  
+## <a name="implementing-dialogpage-class"></a>DialogPage sınıfı uygulama  
+ Bir VSPackage 'ın türetilmiş bir tür uygulamasını sağlayan bir nesne <xref:Microsoft.VisualStudio.Shell.DialogPage> , aşağıdaki devralınmış özelliklerden faydalanabilir:  
   
-- Varsayılan kullanıcı arabirimi pencere.  
+- Varsayılan bir kullanıcı arabirimi penceresi.  
   
-- Bir ya da Eğer Kalıcılık mekanizması kullanılabilir varsayılan <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> sınıfına uygulanan veya <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute.SupportsProfiles%2A> özelliği `true` için <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> sınıfa uygulanır.  
+- <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>Sınıfına uygulandığında veya <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute.SupportsProfiles%2A> özelliği `true` sınıfına uygulanan için olarak ayarlandıysa, varsayılan bir Kalıcılık mekanizması kullanılabilir <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> .  
   
 - Otomasyon desteği.  
   
-  Bir nesne uygulamak için en düşük gereksinimi bir **Araçlar Seçenekler** kullanarak sayfa <xref:Microsoft.VisualStudio.Shell.DialogPage> genel özelliklerin ektir.  
+  Kullanarak bir **araç seçenekleri** sayfası uygulayan bir nesne için en düşük gereksinim, <xref:Microsoft.VisualStudio.Shell.DialogPage> ortak özelliklerin eklenmalarıdır.  
   
-  Sınıf düzgün olarak kayıtlı bir **Araçlar Seçenekler** genel özelliklerini kullanılabilir sonra sayfa sağlayıcısı **seçenekleri** bölümünü **Araçları** menü biçiminde bir Özellik Kılavuzu.  
+  Sınıf bir **araç seçenekleri** sayfa sağlayıcısı olarak düzgün kaydedilmişse, bir özellik Kılavuzu formundaki **Araçlar** menüsünün **Seçenekler** bölümünde ortak özellikleri kullanılabilir.  
   
-  Bu varsayılan özellikler geçersiz kılınabilir. Örneğin, daha karmaşık bir kullanıcı oluşturmak için arabirimi yalnızca varsayılan uygulamasını geçersiz kılma gerektirir <xref:Microsoft.VisualStudio.Shell.DialogPage.Window%2A>.  
+  Tüm bu varsayılan özellikler geçersiz kılınabilir. Örneğin, daha karmaşık bir kullanıcı arabirimi oluşturmak için yalnızca varsayılan uygulamasının geçersiz kılınması gerekir <xref:Microsoft.VisualStudio.Shell.DialogPage.Window%2A> .  
   
 ## <a name="example"></a>Örnek  
- Aşağıda bir basit "Merhaba Dünya" bir seçenekler sayfası uygulamasıdır. Visual Studio Paket şablonla tarafından oluşturulan varsayılan projeye aşağıdaki kodu ekleyerek **menü komutu** seçeneği belirlenmiş yeterince seçeneği sayfa işlevselliği gösterir.  
+ Aşağıda, bir Seçenekler sayfasının basit bir "Hello World" uygulamasıdır. Aşağıdaki kodu **menü komutu** seçeneği seçili olan Visual Studio paket şablonu tarafından oluşturulan varsayılan bir projeye eklemek, seçenek sayfası işlevselliğini yeterince gösterir.  
   
 ### <a name="description"></a>Açıklama  
- En az bir "Merhaba Dünya" Seçenekler sayfası aşağıdaki sınıfı tanımlar. Açıldığında, kullanıcının ortak ayarlayıp `HelloWorld` özellik kılavuzunda özelliği.  
+ Aşağıdaki sınıf, en düşük bir "Hello World" seçenekleri sayfasını tanımlar. Açıldığında, Kullanıcı `HelloWorld` bir özellik kılavuzunda ortak özelliği ayarlayabilir.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[UI_UserSettings_ToolsOptionPages#11](../../snippets/csharp/VS_Snippets_VSSDK/ui_usersettings_toolsoptionpages/cs/class1.cs#11)]
  [!code-vb[UI_UserSettings_ToolsOptionPages#11](../../snippets/visualbasic/VS_Snippets_VSSDK/ui_usersettings_toolsoptionpages/vb/class1.vb#11)]  
   
 ### <a name="description"></a>Açıklama  
- Paket yüklediğinde, paket sınıfına aşağıdaki öznitelik uygulama sayfasında seçenekleri kullanılabilir hale getirir. Kategori ve sayfa için rastgele kaynak kimliklerini sayılardır ve Boole değeri en sonda sayfasında Otomasyon destekleyip desteklemediğini belirtir.  
+ Aşağıdaki öznitelik paket sınıfına uygulandığında, paket yüklendiğinde Seçenekler sayfası kullanılabilir hale gelir. Sayılar, kategori ve sayfa için rastgele kaynak kimliklerdir ve sonundaki Boole değeri sayfanın Otomasyonu destekleyip desteklemediğini belirtir.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[UI_UserSettings_ToolsOptionPages#07](../../snippets/csharp/VS_Snippets_VSSDK/ui_usersettings_toolsoptionpages/cs/uiusersettingstoolsoptionspagespackage.cs#07)]
  [!code-vb[UI_UserSettings_ToolsOptionPages#07](../../snippets/visualbasic/VS_Snippets_VSSDK/ui_usersettings_toolsoptionpages/vb/uiusersettingstoolsoptionspagespackage.vb#07)]  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki olay işleyicisini sonucu Seçenekler sayfasında özellik değerine bağlı olarak görüntüler. Kullandığı <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> sonucuyla yöntemi açıkça cast sayfa tarafından kullanıma sunulan özelliklere erişmek için özel seçeneğini sayfa türü.  
+ Aşağıdaki olay işleyicisi, Seçenekler sayfasında ayarlanmış özelliğin değerine bağlı olarak bir sonuç görüntüler. Bu yöntem, bir <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> yöntemi, sayfanın açığa çıkarılan özelliklerine erişmek için özel seçenek sayfası türüne açıkça bir atama ile kullanır.  
   
- Paket şablon tarafından oluşturulan bir proje söz konusu olduğunda bu işlevden çağırma `MenuItemCallback` varsayılan komutu eklemek için işlevi eklenen **Araçları** menüsü.  
+ Paket şablonu tarafından oluşturulan bir proje söz konusu olduğunda, `MenuItemCallback` **araç** menüsüne eklenen varsayılan komuta eklemek için bu işlevi işlevinden çağırın.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[UI_UserSettings_ToolsOptionPages#08](../../snippets/csharp/VS_Snippets_VSSDK/ui_usersettings_toolsoptionpages/cs/uiusersettingstoolsoptionspagespackage.cs#08)]
  [!code-vb[UI_UserSettings_ToolsOptionPages#08](../../snippets/visualbasic/VS_Snippets_VSSDK/ui_usersettings_toolsoptionpages/vb/uiusersettingstoolsoptionspagespackage.vb#08)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Genişletme kullanıcı ayarları ve seçenekleri](../../extensibility/extending-user-settings-and-options.md)   
+ [Kullanıcı ayarlarını ve seçeneklerini genişletme](../../extensibility/extending-user-settings-and-options.md)   
  [Seçenekler Sayfaları için Otomasyon Desteği](../../extensibility/internals/automation-support-for-options-pages.md)

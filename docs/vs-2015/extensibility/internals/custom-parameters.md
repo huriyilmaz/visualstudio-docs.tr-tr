@@ -1,5 +1,5 @@
 ---
-title: Özel Parametreler | Microsoft Docs
+title: Özel parametreler | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,20 +12,20 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1a595861be835ec1aaa7079b3e3fe1962d5055e9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68154993"
 ---
 # <a name="custom-parameters"></a>Özel Parametreler
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir sihirbaz başlatıldıktan sonra özel parametreler sihirbaz işlemi denetleyin. İlgili .vsz dosyası, kullanıcı tanımlı olan tümleşik geliştirme ortamı (IDE) paketlenir ve Sihirbazı başlattığınızda sihirbaz dize dizisi geçirilen parametreler dizisi sağlar. Sihirbaz dizisini ayrıştırır ve gerçek işlem sihirbazın denetlemek için bu bilgileri kullanır. Bu şekilde, bir sihirbaz .vsz dosyasının içeriğini bağlı olarak işlevsellik özelleştirebilirsiniz.  
+Özel parametreler sihirbaz başladıktan sonra sihirbazın işlemini denetler. İlgili bir. vsz dosyası, tümleşik geliştirme ortamı (IDE) tarafından paketlenmiş ve sihirbaz başlatıldığında dize dizisi olarak sihirbaza geçilen Kullanıcı tanımlı parametrelerin dizisini sağlar. Sihirbaz daha sonra dizeler dizisini ayrıştırır ve sihirbazın gerçek işlemini denetlemek için bu bilgileri kullanır. Bu şekilde, bir sihirbaz. vsz dosyasının içeriğine bağlı olarak işlevselliği özelleştirebilir.  
   
- Sihirbazı başlattığınızda bağlam parametreleri, diğer taraftan, proje durumunu tanımlar. Daha fazla bilgi için [bağlam parametreleri](../../extensibility/internals/context-parameters.md).  
+ Bağlam parametreleri, diğer yandan, sihirbaz başlatıldığında projenin durumunu tanımlar. Daha fazla bilgi için bkz. [Bağlam parametreleri](../../extensibility/internals/context-parameters.md).  
   
- Özel Parametreler içeren bir .vsz dosyası örneği aşağıdadır:  
+ Özel parametrelere sahip bir. vsz dosyasının örneği aşağıda verilmiştir:  
   
 ```  
 VSWIZARD 8.0  
@@ -37,14 +37,14 @@ Param="PREPROCESS_FUNCTION = CanAddATLSupport"
 Param="PROJECT_TYPE = CSPROJ"  
 ```  
   
- .Vsz dosyası yazarı parametrelerinin değerlerini ekler. Bir kullanıcı seçtiğinde **yeni proje** veya **Yeni Öğe Ekle** Dosya menüsünden veya bir projeye sağ tıklayarak **Çözüm Gezgini**, IDE bu değerleri dizisi toplar. dizeleri. IDE sonra projenin çağırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.AddItem%2A> yöntemiyle <xref:Microsoft.VisualStudio.Shell.Interop.VSADDITEMOPERATION> bayrak kümesi ve proje çağrıları <xref:EnvDTE.IVsExtensibility.RunWizardFile%2A> Sihirbazı'nı çalıştıran ve sonucu döndürerek sorumlu yöntemi.  
+ . Vsz dosyasının yazarı parametre değerlerini ekler. Bir Kullanıcı **Yeni proje** **seçtiğinde veya dosya** menüsünde bir projeye sağ TıKLANARAK **Çözüm Gezgini**, IDE bu değerleri bir dizeler dizisine toplar. Daha sonra IDE, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.AddItem%2A> bayrak kümesiyle projenin yöntemini çağırır <xref:Microsoft.VisualStudio.Shell.Interop.VSADDITEMOPERATION> ve proje, <xref:EnvDTE.IVsExtensibility.RunWizardFile%2A> Sihirbazı çalıştırmaktan ve sonucu döndürmekten sorumlu yöntemi çağırır.  
   
- Sihirbaz, dize dizisi, ayrıştırma ve dizeleri uygun şekilde hareket sorumludur. Özel Parametreler uygulayarak bu şekilde, çeşitli işlevler gerçekleştiren bir sihirbaz oluşturabilirsiniz. Diğer bir deyişle, bir sihirbaz üç farklı .vsz dosyası olabilir. Her dosya, farklı çeşitli durumlarda sihirbazda davranışını denetlemek için özel parametreleri kümesini geçirir.  
+ Sihirbaz, dizelerin dizisini ayrıştırmaktan ve dizilerin uygun şekilde davranmasından sorumludur. Bu şekilde, özel parametreler uygulayarak çeşitli işlevler gerçekleştiren bir sihirbaz oluşturabilirsiniz. Diğer bir deyişle, bir sihirbaz üç farklı. vsz dosyasına sahip olabilir. Her dosya, sihirbazın çeşitli durumlarda davranışını denetlemek için farklı özel parametre kümeleri geçirir.  
   
- Daha fazla bilgi için [Sihirbazı (. Vsz) dosya](../../extensibility/internals/wizard-dot-vsz-file.md).  
+ Daha fazla bilgi için bkz [. sihirbaz (. Vsz) dosyası](../../extensibility/internals/wizard-dot-vsz-file.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>   
  [Bağlam parametreleri](../../extensibility/internals/context-parameters.md)   
- [Sihirbazlar](../../extensibility/internals/wizards.md)   
+ ['Nı](../../extensibility/internals/wizards.md)   
  [Sihirbaz (.Vsz) Dosyası](../../extensibility/internals/wizard-dot-vsz-file.md)

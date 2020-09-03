@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 0842cab03ba92568b0b672e2b8d257af4b6aa490
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "69551868"
 ---
 # <a name="architecture-of-office-solutions-in-visual-studio"></a>Visual Studio 'da Office çözümlerinin mimarisi
@@ -51,11 +51,11 @@ Belge düzeyi özelleştirmelerde özel belge özelliklerinin nasıl çalıştı
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-[Office çözümleri geliştirmesine genel &#40;bakış VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
+[Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
 
 İş çözümleri geliştirmeye yönelik bir platform olarak Microsoft Office kullanımı için bir giriş sağlar.
 
-[Visual Studio &#40;'da Office geliştirme ile çalışmaya başlama&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
+[Visual Studio 'da Office geliştirme &#40;kullanmaya başlama&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
 
 Office çözümleri oluşturmak için bir geliştirme bilgisayarı yapılandırma, çözüm oluşturmaya başlama ve Visual Studio 'da Office Geliştirici araçlarının önceki sürümlerinden bu yana nelerin değiştiğini gösteren bilgilere bağlantılar sağlar.
 
@@ -63,6 +63,6 @@ Office çözümleri oluşturmak için bir geliştirme bilgisayarı yapılandırm
 
 Office çözümleri oluşturma hakkında bilgi için bağlantılar sağlar.
 
-[Visual Studio &#40;'da Genel başvuru Office geliştirme&#41;](../vsto/general-reference-office-development-in-visual-studio.md)
+[Visual Studio 'da Office geliştirme &#40;Genel başvuru&#41;](../vsto/general-reference-office-development-in-visual-studio.md)
 
-Office projelerindeki Kullanıcı arabirimi öğeleri, Office projeleri için uygulama ve dağıtım bildirimleri ve içindeki [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]API 'ler hakkında bilgi bağlantıları sağlar.
+Office projelerindeki Kullanıcı arabirimi öğeleri, Office projeleri için uygulama ve dağıtım bildirimleri ve içindeki API 'Ler hakkında bilgi bağlantıları sağlar [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] .

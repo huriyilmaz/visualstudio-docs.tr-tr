@@ -23,16 +23,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5873eb18b2f803acfd5aba9444657884b1a24581
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84184438"
 ---
 # <a name="lttrustinfogt-element-clickonce-application"></a>&lt;TrustInfo &gt; öğesi (ClickOnce uygulaması)
 Uygulamanın istemci bilgisayarda çalışması için gereken en düşük güvenlik izinlerini açıklar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 
@@ -87,7 +87,7 @@ Uygulamanın istemci bilgisayarda çalışması için gereken en düşük güven
      Gereklidir. İznin sürümünü tanımlar. Normalde bu değer `1` .
 
 ## <a name="ipermission"></a>IPermission
- İsteğe bağlı. Bu öğe, öğesinin bir alt öğesidir `PermissionSet` . `IPermission`Öğesi .NET Framework bir izin sınıfını tam olarak tanımlar. `IPermission`Öğesi aşağıdaki özniteliklere sahiptir, ancak izin sınıfındaki özelliklere karşılık gelen ek özniteliklere sahip olabilir. Belirli bir iznin sözdizimini öğrenmek için, Security. config dosyasında listelenen örneklere bakın.
+ İsteğe bağlı. Bu öğe, öğesinin bir alt öğesidir `PermissionSet` . `IPermission`Öğesi .NET Framework bir izin sınıfını tam olarak tanımlar. `IPermission`Öğesi aşağıdaki özniteliklere sahiptir, ancak izin sınıfındaki özelliklere karşılık gelen ek özniteliklere sahip olabilir. Belirli bir iznin sözdizimini öğrenmek için Security.config dosyasında listelenen örneklere bakın.
 
 - `class`
 
@@ -150,7 +150,7 @@ Uygulamanın istemci bilgisayarda çalışması için gereken en düşük güven
 
    `requireAdministrator`, tam yönetici izinleri istiyor.
 
-   [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]uygulamalar yalnızca değeri ile yüklenir `asInvoker` . Başka bir değerle yükleme başarısız olur.
+   [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamalar yalnızca değeri ile yüklenir `asInvoker` . Başka bir değerle yükleme başarısız olur.
 
 - `uiAccess`
 

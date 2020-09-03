@@ -1,5 +1,5 @@
 ---
-title: Kesme modunda ifade değerlendirme | Microsoft Docs
+title: Kesme modunda ifade değerlendirmesi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,33 +13,33 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 362e50e20519c358564d13ba169f706fe384ca5c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152754"
 ---
 # <a name="expression-evaluation-in-break-mode"></a>Kesme Modunda İfade Değerlendirme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Hata ayıklayıcı kesme modundayken ve ifade değerlendirmesi gerçekleştirin gerekir oluşan süreci açıklanmaktadır.  
+Aşağıda, hata ayıklayıcı kesme modundayken oluşan ve ifade değerlendirmesi yapmak zorunda olan işlem açıklanmaktadır.  
   
-## <a name="expression-evaluation-process"></a>İfade değerlendirme işlemi  
- Bir ifadenin değerlendirilmesi ilgili temel adımlar şunlardır:  
+## <a name="expression-evaluation-process"></a>İfade değerlendirme Işlemi  
+ Bunlar, bir ifadeyi değerlendirmek için temel adımlardır:  
   
-1. Oturum hata ayıklama Yöneticisi (SDM) çağıran [IDebugStackFrame2::GetExpressionContext](../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) bir ifade bağlam arabirimi almak için [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md).  
+1. Oturum hata ayıklama Yöneticisi (SDM), [IDebugStackFrame2:: GetExpressionContext](../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) yöntemini çağırarak bir ifade bağlamı arabirimi elde eder, [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md).  
   
-2. SDM sonra çağıran [IDebugExpressionContext2::ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) ayrıştırılacak dize ile.  
+2. SDM daha sonra [IDebugExpressionContext2::P arseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) öğesini ayrıştırılacak dizeyle çağırır.  
   
-3. Hatanın nedenini ParseText S_OK döndürmezse döndürülür.  
+3. ParseText S_OK döndürmezse, hatanın nedeni döndürülür.  
   
-     -Aksi takdirde-  
+     güvenmiyorsanız  
   
-     ParseText S_OK döndürürse SDM sonra ya da çağırabilir [IDebugExpression2::EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) veya [IDebugExpression2::EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) ayrıştırılmış ifadedeki son değer elde edilir.  
+     ParseText S_OK dönmezse, SDM, ayrıştırılmış ifadeden son bir değer elde etmek için [IDebugExpression2:: EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) ya da [IDebugExpression2:: EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) öğesini çağırabilir.  
   
-    - Kullanarak söz konusu olduğunda `IDebugExpression2::EvaluateSync`, belirtilen geri arama arabirimi değerlendirmeye devam eden işlemi iletişim kurmak için kullanılır. Son değeri döndürülür bir [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) arabirimi.  
+    - Kullanılması durumunda `IDebugExpression2::EvaluateSync` , belirtilen geri çağırma arabirimi değerlendirmenin devam eden işlemini iletmek için kullanılır. Son değer bir [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) arabiriminde döndürülür.  
   
-    - Kullanarak söz konusu olduğunda `IDebugExpression2::EvaluateAsync`, belirtilen geri arama arabirimi değerlendirmeye devam eden işlemi iletişim kurmak için kullanılır. Değerlendirme tamamlandıktan sonra EvaluateAsync gönderen bir [IDebugExpressionEvaluationCompleteEvent2](../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) arabirimi aracılığıyla geri çağırma. Bu olay arabirimi ile son değeri ile alınabilir [GetResult](../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2-getresult.md).  
+    - Kullanılması durumunda `IDebugExpression2::EvaluateAsync` , belirtilen geri çağırma arabirimi değerlendirmenin devam eden işlemini iletmek için kullanılır. Değerlendirme tamamlandıktan sonra, EvaluateAsync geri çağırma aracılığıyla bir [IDebugExpressionEvaluationCompleteEvent2](../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) arabirimi gönderir. Bu olay arabirimiyle, son değer [GetResult](../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2-getresult.md)ile elde edilebilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hata Ayıklayıcısı Olaylarını Çağırma](../../extensibility/debugger/calling-debugger-events.md)

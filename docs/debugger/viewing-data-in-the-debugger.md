@@ -20,19 +20,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 63dc11736e92013719fcda2bae0ba9599a8835aa
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72568994"
 ---
-# <a name="create-custom-views-of-data-in-the-visual-studio-debugger-c-visual-basic-c"></a>Visual Studio hata ayıklayıcısında verilerin özel görünümlerini oluşturma (C#, Visual Basic,) C++
+# <a name="create-custom-views-of-data-in-the-visual-studio-debugger-c-visual-basic-c"></a>Visual Studio hata ayıklayıcısında verilerin özel görünümlerini oluşturma (C#, Visual Basic, C++)
 
-@No__t_0 hata ayıklayıcı programınızın durumunu incelemek ve değiştirmek için birçok araç sağlar. Bu araçların çoğu yalnızca kesme modunda çalışır.
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Hata ayıklayıcı programınızın durumunu incelemek ve değiştirmek için birçok araç sağlar. Bu araçların çoğu yalnızca kesme modunda çalışır.
 
 ## <a name="create-custom-views-of-data-in-variable-windows-and-datatips"></a>Değişken Windows ve veri Ipuçlarında verilerin özel görünümlerini oluşturma
 
- **Oto** ve **Gözcü** pencereleri gibi [hata ayıklayıcı pencerelerinin](../debugger/debugger-windows.md)birçoğu, değişkenleri incelemenizi sağlar. Türlerin, yönetilen nesnelerin C++ ve kendi türlerinizin hata ayıklayıcı değişkeni penceresinde ve [veri ipuçlarında](../debugger/view-data-values-in-data-tips-in-the-code-editor.md)nasıl gösterildiğini özelleştirebilirsiniz. Daha fazla bilgi için bkz. [ C++ nesnelerin özel görünümlerini oluşturma](../debugger/create-custom-views-of-native-objects.md) ve [yönetilen nesnelerin özel görünümlerini oluşturma](../debugger/create-custom-views-of-managed-objects.md).
+ **Oto** ve **Gözcü** pencereleri gibi [hata ayıklayıcı pencerelerinin](../debugger/debugger-windows.md)birçoğu, değişkenleri incelemenizi sağlar. C++ türlerinin, yönetilen nesnelerin ve kendi türlerinizin hata ayıklayıcı değişkeni penceresinde ve [veri ipuçlarında](../debugger/view-data-values-in-data-tips-in-the-code-editor.md)nasıl gösterileceğini özelleştirebilirsiniz. Daha fazla bilgi için bkz. [C++ nesnelerinin özel görünümlerini oluşturma](../debugger/create-custom-views-of-native-objects.md) ve [yönetilen nesnelerin özel görünümlerini oluşturma](../debugger/create-custom-views-of-managed-objects.md).
 
 ## <a name="create-custom-visualizers"></a>Özel Görselleştiriciler oluşturma
 
@@ -42,4 +42,4 @@ ms.locfileid: "72568994"
 
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
 - [Komut penceresi](../ide/reference/command-window.md)
-- [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)

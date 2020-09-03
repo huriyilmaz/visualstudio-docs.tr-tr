@@ -1,5 +1,5 @@
 ---
-title: Mesaj Kayıt Oyası | Microsoft Dokümanlar
+title: İleti numaralandırıcısı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,18 +12,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0e09b72bd228839268cffc228dd0dc503cc82bd9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80702503"
 ---
-# <a name="message-enumerator"></a>İleti kayıt otomu
-IDE'nin `TEXTOUTPROC` [SccOpenProject'i](../extensibility/sccopenproject-function.md) aradığında sağladığı bir geri çağırma işlevi olan işlev için aşağıdaki bayraklar kullanılır (geri arama işleviyle ilgili ayrıntılar için [LPTEXTOUTPROC'a](../extensibility/lptextoutproc.md) bakın).
+# <a name="message-enumerator"></a>İleti numaralandırıcısı
+Aşağıdaki bayraklar, `TEXTOUTPROC` IDE 'Nin [SccOpenProject](../extensibility/sccopenproject-function.md) çağırdığında sağladığı bir geri çağırma işlevi olan işlevi için kullanılır (geri çağırma işlevi hakkında ayrıntılar Için bkz. [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) ).
 
- IDE'den işlemi iptal etmesi istenirse, iptal iletilerinden birini alabilir. Bu durumda, kaynak denetimi eklentisi IDE'den `SCC_MSG_STARTCANCEL` **İptal** düğmesini görüntülemesini istemek için kullanır. Bundan sonra, normal iletiler herhangi bir dizi gönderilebilir. Bu döndürür `SCC_MSG_RTN_CANCEL`herhangi biri, sonra eklenti işlemi bırakır ve döndürür. Eklenti, kullanıcının `SCC_MSG_DOCANCEL` işlemi iptal edip etmediğini belirlemek için düzenli aralıklarla da anketler eler. Tüm işlemler bittiğinde veya kullanıcı iptal edilmişse, eklenti `SCC_MSG_STOPCANCEL`gönderir. Kaydırma `SCC_MSG_INFO`iletileri listesinde görüntülenen iletiler için SCC_MSG_WARNING ve SCC_MSG_ERROR türleri kullanılır. `SCC_MSG_STATUS`metnin durum çubuğunda veya geçici görüntü alanında gösterilmesi gerektiğini belirten özel bir türdür. Listede kalıcı olarak kalmaz.
+ IDE 'nin işlemi iptal etmek isteniyorsa, iptal iletilerinden birini alabilir. Bu durumda, kaynak denetimi eklentisi `SCC_MSG_STARTCANCEL` IDE 'Nin **iptal** düğmesini görüntülemesini istemek için kullanır. Bundan sonra, herhangi bir normal ileti kümesi gönderilebilir. Bunlardan herhangi biri dönerse `SCC_MSG_RTN_CANCEL` , eklenti işlemden çıkar ve döndürür. Eklenti Ayrıca, `SCC_MSG_DOCANCEL` kullanıcının işlemi iptal etmiş olup olmadığını belirlemede düzenli aralıklarla yoklar. Tüm işlemler tamamlandığında veya Kullanıcı iptal edildiyse, eklenti gönderilir `SCC_MSG_STOPCANCEL` . `SCC_MSG_INFO`, SCC_MSG_WARNING ve SCC_MSG_ERROR türleri, iletilerin kaydırılan listesinde görüntülenen iletiler için kullanılır. `SCC_MSG_STATUS` , metnin bir durum çubuğunda veya geçici görüntüleme alanında gösterilmesi gerektiğini belirten özel bir türdür. Listede kalıcı olarak kalmaz.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 enum { 
@@ -40,24 +40,24 @@ enum { 
 ```
 
 ## <a name="members"></a>Üyeler
- SCC_MSG_RTN_CANCEL İptal belirtmek için geri aramadan dönün.
+ SCC_MSG_RTN_CANCEL iptali göstermek için geri aramadan geri dönün.
 
- SCC_MSG_RTN_OK Geri aramadan devam etmek için geri dön.
+ SCC_MSG_RTN_OK devam etmek için geri aramadan geri dönün.
 
- SCC_MSG_INFO İleti bilgilendirme amaçlıdır.
+ SCC_MSG_INFO Ileti bilgilendirme amaçlıdır.
 
- SCC_MSG_WARNING İleti bir uyarıdır.
+ SCC_MSG_WARNING Ileti bir uyarıdır.
 
- SCC_MSG_ERROR İleti bir hatadır.
+ SCC_MSG_ERROR Ileti bir hatadır.
 
- SCC_MSG_STATUS İleti durum çubuğu içindir.
+ SCC_MSG_STATUS Ileti durum çubuğuna yöneliktir.
 
- SCC_MSG_DOCANCEL Metin yok; IDE `SCC_MSG_RTN_OK` döner `SCC_MSG_RTN_CANCEL`veya .
+ SCC_MSG_DOCANCEL metin yok; IDE, `SCC_MSG_RTN_OK` veya döndürür `SCC_MSG_RTN_CANCEL` .
 
- SCC_MSG_STARTCANCEL İptal döngüsü başlatır.
+ SCC_MSG_STARTCANCEL bir iptal döngüsü başlatır.
 
- SCC_MSG_STOPCANCEL İptal döngüsüne engel olarak durur.
+ SCC_MSG_STOPCANCEL iptal döngüsünü durduruyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak kontrol eklentileri](../extensibility/source-control-plug-ins.md)
+- [Kaynak denetimi eklentileri](../extensibility/source-control-plug-ins.md)
 - [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)
