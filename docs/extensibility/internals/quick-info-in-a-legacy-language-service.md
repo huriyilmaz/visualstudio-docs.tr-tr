@@ -1,5 +1,5 @@
 ---
-title: Eski Dil Hizmetinde Hızlı Bilgi | Microsoft Dokümanlar
+title: Eski dil hizmetinde hızlı bilgi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,32 +13,32 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1d070c607313b406f036a5b6f071eaa371070408
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80705939"
 ---
 # <a name="quick-info-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Hızlı Bilgiler
-IntelliSense Hızlı Bilgi, kullanıcı bakıcıyı tanımlayıcıya yerleştirdiğinde ve **IntelliSense** menüsünden **Hızlı Bilgi'yi** seçtiğinde veya tanımlayıcının üzerinde fare imlecini tuttuğunda kaynaktaki bir tanımlayıcı hakkındaki bilgileri gösterir. Bu, bir araç ipucunun tanımlayıcı hakkında bilgiyle birlikte görünmesine neden olur. Bu bilgiler genellikle tanımlayıcı türünden oluşur. Hata ayıklama altyapısı etkin olduğunda, bu bilgiler geçerli değeri içerebilir. Hata ayıklama altyapısı ifade değerlerini sağlarken, dil hizmeti yalnızca tanımlayıcıları işler.
+**IntelliSense hızlı** bilgi, Kullanıcı giriş işaretini tanımlayıcıya **yerleştirdikçe veya** fare imlecini tanımlayıcı üzerinde tuttuğunda, kaynaktaki bir tanımlayıcı hakkındaki bilgileri gösterir. Bu, bir araç ipucunun tanımlayıcı hakkında bilgi ile görünmesine neden olur. Bu bilgiler genellikle tanımlayıcı türünden oluşur. Hata ayıklama altyapısı etkin olduğunda, bu bilgiler geçerli değeri içerebilir. Hata ayıklama altyapısı, yalnızca tanımlayıcıları işlerken, ifade değerleri sağlar.
 
- Eski dil hizmetleri BIR VSPackage'ın bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamanın en yeni yolu MEF uzantılarını kullanmaktır. Daha fazla bilgi edinmek için [Walkthrough: QuickInfo Araç İpuçlarını Görüntüleme'](../../extensibility/walkthrough-displaying-quickinfo-tooltips.md)ye bakın.
+ Eski dil Hizmetleri VSPackage 'un bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamak için daha yeni bir yol MEF uzantıları kullanmaktır. Daha fazla bilgi edinmek için bkz. [Izlenecek yol: hızlı bilgi araç Ipuçlarını görüntüleme](../../extensibility/walkthrough-displaying-quickinfo-tooltips.md).
 
 > [!NOTE]
-> Yeni düzenleyici API'yi mümkün olan en kısa sürede kullanmaya başlamanızı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
+> Yeni Düzenleyici API 'sini mümkün olan en kısa sürede kullanmaya başlamanızı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
 
- Yönetilen paket çerçevesi (MPF) dil hizmeti sınıfları, IntelliSense Hızlı Bilgi aracı ipucunu görüntülemek için tam destek sağlar. Tek yapmanız gereken görüntülenecek metni sağlamak ve hızlı bilgi özelliğini etkinleştirmektir.
+ Yönetilen paket çerçevesi (MPF) dil hizmeti sınıfları, IntelliSense hızlı bilgi araç ipucunu görüntülemek için tam destek sağlar. Tüm yapmanız gerekir, görüntülenecek metni sağlamak ve hızlı bilgi özelliğini etkinleştirmek için gereklidir.
 
- Görüntülenecek metin, <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> ayrıştırıcı neden değeri ne kadar dırdır <xref:Microsoft.VisualStudio.Package.ParseReason>eden yöntem parer'i arayarak elde edilir. Bu nedenle, <xref:Microsoft.VisualStudio.Package.ParseRequest> arayıcıya, nesnede belirtilen konumdaki tanımlayıcı için tür bilgilerini (veya Hızlı Bilgi aracı ipucunda görüntülenmesi uygun olan her şeyi) elde etmesini söyler. Nesne <xref:Microsoft.VisualStudio.Package.ParseRequest> <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> yönteme geçirilen dir.
+ Görüntülenecek metin, <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> ayrıştırma nedeni değeri olan yöntem ayrıştırıcısı çağırarak elde edilir <xref:Microsoft.VisualStudio.Package.ParseReason> . Bu nedenle, ayrıştırıcının nesne içinde belirtilen konumdaki tanımlayıcı için tür bilgilerini (veya hızlı bilgi araç ipucunda görüntülenmek üzere uygun olanını) almasını söyler <xref:Microsoft.VisualStudio.Package.ParseRequest> . <xref:Microsoft.VisualStudio.Package.ParseRequest>Nesnesi yöntemine geçirilen şeydir <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> .
 
- Ayrıştırıcı, tüm tanımlayıcıların türlerini <xref:Microsoft.VisualStudio.Package.ParseRequest> belirlemek için nesneydeki konuma kadar her şeyi ayrıştırmalıdır. Sonra ayrıştırıcı ayrıştırma isteği konumunda tanımlayıcı almak gerekir. Son olarak, arayıcı, nesnenin metni <xref:Microsoft.VisualStudio.Package.AuthoringScope> <xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDataTipText%2A> yöntemden döndürebilmeleri için bu tanımlayıcıyla ilişkili araç ipucu verilerini nesneye aktarmalıdır.
+ Ayrıştırıcı, <xref:Microsoft.VisualStudio.Package.ParseRequest> Tüm tanımlayıcıların türlerini belirleyebilmek için nesnedeki konuma kadar her şeyi ayrıştıramalıdır. Sonra ayrıştırıcı, ayrıştırma isteği konumundaki tanımlayıcıyı almalıdır. Son olarak, ayrıştırıcının bu tanımlayıcıyla ilişkili araç ipucu verisini nesnesine geçirmesi gerekir, <xref:Microsoft.VisualStudio.Package.AuthoringScope> böylece nesne yönteminden metin döndürebilir <xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDataTipText%2A> .
 
-## <a name="enabling-the-quick-info-feature"></a>Hızlı Bilgi Özelliğini Etkinleştirme
- Hızlı Bilgi özelliğini etkinleştirmek `CodeSense` için, `QuickInfo` <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>'nin ve adı geçen parametreleri ayarlamanız gerekir. Bu öznitelikler <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableQuickInfo%2A> ve özellikleri ayarlayın.
+## <a name="enabling-the-quick-info-feature"></a>Hızlı bilgi özelliğini etkinleştirme
+ Hızlı bilgi özelliğini etkinleştirmek için, `CodeSense` ve `QuickInfo` adlandırılmış parametrelerini ayarlamanız gerekir <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> . Bu öznitelikler <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> ve özelliklerini ayarlar <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableQuickInfo%2A> .
 
-## <a name="implementing-the-quick-info-feature"></a>Hızlı Bilgi Özelliğinin Uygulanması
- Sınıf, <xref:Microsoft.VisualStudio.Package.ViewFilter> IntelliSense Hızlı Bilgi işlemini yönetir. <xref:Microsoft.VisualStudio.Package.ViewFilter> Sınıf <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> komutu <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> aldığında, <xref:Microsoft.VisualStudio.Package.ParseReason> <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> sınıf, ayrışma nedeni ve komutun gönderildiği anda bakıcının konumu yla yöntemi çağırır. Yöntem <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> ayrıştırıcısı daha sonra kaynağı verilen konuma ayrıştırmalı ve ardından Hızlı Bilgi aracı ipucunda ne görüntüleneceğini belirlemek için tanımlayıcıyı verilen konumdaki ayrıştırmalıdır.
+## <a name="implementing-the-quick-info-feature"></a>Hızlı bilgi özelliğini uygulama
+ <xref:Microsoft.VisualStudio.Package.ViewFilter>Sınıfı, IntelliSense hızlı bilgi işlemini işler. <xref:Microsoft.VisualStudio.Package.ViewFilter>Sınıf <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> komutu aldığında, sınıfı <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> yöntemini ayrıştırma nedenine <xref:Microsoft.VisualStudio.Package.ParseReason> ve komutun gönderildiği sırada giriş işaretinin konumunu çağırır <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> . <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>Yöntem ayrıştırıcısı daha sonra kaynağı verilen konuma ayrıştırır ve sonra hızlı bilgi araç ipucunda nelerin görüntüleneceğini belirlemek için verilen konumdaki tanımlayıcıyı ayrıştırmalıdır.
 
- Çoğu ayrıştıcı, tüm kaynak dosyanın ilk ayrıştını yapar ve sonuçları ayrışdırıcı bir ağaçta saklar. Tam ayrıştırış yönteme <xref:Microsoft.VisualStudio.Package.ParseReason> <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> geçirildiğinde gerçekleştirilir. Ayrışma diğer tür sonra istenen bilgileri elde etmek için ayrışma ağacı kullanabilirsiniz.
+ Çoğu ayrıştırıcıları kaynak dosyanın tamamını bir kez ayrıştırarak sonuçları bir ayrıştırma ağacına depolar. Yönteme geçirildiğinde, tüm ayrıştırma yürütülür <xref:Microsoft.VisualStudio.Package.ParseReason> <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> . Diğer ayrıştırma türleri, istenen bilgileri elde etmek için ayrıştırma ağacını kullanabilir.
 
- Örneğin, ayrışma nedeni değeri <xref:Microsoft.VisualStudio.Package.ParseReason> kaynak konumda tanımlayıcıyı bulabilir ve tür bilgilerini elde etmek için ayrışma ağacında inceleyebilir. Bu tür bilgiler daha <xref:Microsoft.VisualStudio.Package.AuthoringScope> sonra sınıfa aktarılır <xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDataTipText%2A> ve yöntemle döndürülür.
+ Örneğin, ayrıştırma nedeni değeri <xref:Microsoft.VisualStudio.Package.ParseReason> kaynak konumda tanımlayıcıyı bulabilir ve tür bilgilerini almak için ayrıştırma ağacında arama yapabilir. Bu tür bilgileri daha sonra <xref:Microsoft.VisualStudio.Package.AuthoringScope> sınıfına geçirilir ve yöntemi tarafından döndürülür <xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDataTipText%2A> .

@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8e2d3d33b150bd9c360896f88eddf032837fe9c9
-ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86876053"
 ---
 # <a name="parallelforeach-activity-designer"></a>ParallelForEach Etkinlik Tasarımcısı
@@ -25,11 +25,11 @@ ms.locfileid: "86876053"
 
 ## <a name="the-parallelforeacht-activity"></a>ParallelForEach<T \> etkinliği
 
-<xref:System.Activities.Statements.ParallelForEach%601>değerlerini numaralandırır ve <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> numaralandıraldığı her değer için öğesini zamanlar. Yalnızca ' i zamanlar <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> . Gövde yürütme, boşta kalma olup olmamasına bağlıdır <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> .
+<xref:System.Activities.Statements.ParallelForEach%601> değerlerini numaralandırır ve <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> numaralandıraldığı her değer için öğesini zamanlar. Yalnızca ' i zamanlar <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> . Gövde yürütme, boşta kalma olup olmamasına bağlıdır <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> .
 
 <xref:System.Activities.Statements.ParallelForEach%601.Body%2A>Boşta kalırsa, zamanlanmış etkinlikler bir yığın olarak işlendiğinden, en son zamanlanan etkinlik ilk olarak yürütülür. Örneğin, içinde bir koleksiyonunuz varsa {1,2,3,4} <xref:System.Activities.Statements.ParallelForEach%601> ve değeri yazmak için gövde olarak bir **WriteLine** kullanın. Konsolda 4, 3, 2, 1 yazdırılmış. Bunun nedeni, **WriteLine** 'ın zamanlanan 4 **WriteLine** etkinliği zamanlanmasından sonra, bir yığın davranışı kullanılarak yürütülemediği (ilk kez geçen süre).
 
-Ancak içindeki etkinlikleriniz varsa <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> , bir <xref:System.ServiceModel.Activities.Receive> etkinlik veya etkinlik gibi boş kalabilirler <xref:System.Activities.Statements.Delay> . Daha sonra bunların tamamlanmasını beklemeniz gerekmez. <xref:System.Activities.Statements.ParallelForEach%601>bir sonraki zamanlanmış gövde etkinliğine gider ve çalıştırmayı deneyin. Bu etkinlik çok fazla kalırsa, <xref:System.Activities.Statements.ParallelForEach%601> sonraki gövde etkinliğini tekrar gider.
+Ancak içindeki etkinlikleriniz varsa <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> , bir <xref:System.ServiceModel.Activities.Receive> etkinlik veya etkinlik gibi boş kalabilirler <xref:System.Activities.Statements.Delay> . Daha sonra bunların tamamlanmasını beklemeniz gerekmez. <xref:System.Activities.Statements.ParallelForEach%601> bir sonraki zamanlanmış gövde etkinliğine gider ve çalıştırmayı deneyin. Bu etkinlik çok fazla kalırsa, <xref:System.Activities.Statements.ParallelForEach%601> sonraki gövde etkinliğini tekrar gider.
 
 ### <a name="using-the-parallelforeacht-activity-designer"></a>ParallelForEach \<T> etkinlik tasarımcısını kullanma
 

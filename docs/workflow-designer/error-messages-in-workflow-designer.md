@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 72592d21fdaba1ef47a15a113c820dffe0ba71eb
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75597054"
 ---
 # <a name="error-messages-in-workflow-designer"></a>İş Akışı Tasarımcısında Hata İletileri
@@ -35,7 +35,7 @@ Bu konu, İş Akışı Tasarımcısı çalışırken karşılaşılabilecek hata
 
 4. XAML dosyasında iş akışının yükleme başarısız olmasına neden olan hatalar vardır.
 
-Geçersiz ifadeler ve karşılanmamış doğrulama kısıtlamaları iş akışının derlenmemesine neden olmaz. İş akışınızı oluşturma işlemi başarılı olur, ancak çalışma zamanında bir <xref:System.Activities.InvalidWorkflowException> oluşturulur. XAML dosyasında hatalar varsa, yapı başarısız olur.
+Geçersiz ifadeler ve karşılanmamış doğrulama kısıtlamaları iş akışının derlenmemesine neden olmaz. İş akışınızı oluşturma işlemi başarılı olur, ancak çalışma zamanında bir oluşturulur <xref:System.Activities.InvalidWorkflowException> . XAML dosyasında hatalar varsa, yapı başarısız olur.
 
 Visual Studio 'Nun içinde, bir iş akışı yüklendiğinde, hata **hata listesi**görüntülenir. Hatanın kaynağı olan etkinliğe gitmek için **hata listesi**hataya çift tıklayın.
 

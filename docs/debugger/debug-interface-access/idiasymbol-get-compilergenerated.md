@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 29d7255fd0e2c769a1b7d318e56982ba739915d2
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85464088"
 ---
 # <a name="idiasymbolget_compilergenerated"></a>IDiaSymbol::get_compilerGenerated
@@ -33,7 +33,7 @@ HRESULT get_compilerGenerated ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE`Derleyicinin sembolü üretdüğünü döndürür; Aksi takdirde `FALSE` sembol Kullanıcı tarafından yazılan kaynaktan oluşturulduysa döndürür.
+dışı `TRUE` Derleyicinin sembolü üretdüğünü döndürür; Aksi takdirde `FALSE` sembol Kullanıcı tarafından yazılan kaynaktan oluşturulduysa döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
@@ -43,7 +43,7 @@ dışı `TRUE`Derleyicinin sembolü üretdüğünü döndürür; Aksi takdirde `
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Açıklama|
+|Gereksinim|Description|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 7.0|

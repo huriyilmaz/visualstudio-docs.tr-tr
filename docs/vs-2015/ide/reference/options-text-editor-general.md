@@ -49,16 +49,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fa81b08d6e375da4ad67b2e6eec32f244a779408
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662257"
 ---
 # <a name="options-text-editor-general"></a>Seçenekler, Metin Düzenleyici, Genel
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu iletişim kutusu, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kodu ve metin Düzenleyicisi için genel ayarları değiştirmenize olanak sağlar. Bu iletişim kutusunu göstermek için, **Araçlar** menüsünde **Seçenekler** ' e tıklayın, **metin düzenleyici** klasörünü genişletin ve ardından **genel**' e tıklayın.
+Bu iletişim kutusu, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kod ve metin Düzenleyicisi için genel ayarları değiştirmenize olanak sağlar. Bu iletişim kutusunu göstermek için, **Araçlar** menüsünde **Seçenekler** ' e tıklayın, **metin düzenleyici** klasörünü genişletin ve ardından **genel**' e tıklayın.
 
 > [!NOTE]
 > Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
@@ -72,7 +72,7 @@ Bu iletişim kutusu, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kodu ve met
 
  Varsayılan olarak imza olmadan UTF-8 kodlamasını otomatik algıla, düzenleyici, bayt sırası işaretlerini veya karakter kümesi etiketlerini arayarak kodlamayı algılar. Geçerli belgede hiçbiri bulunmazsa, kod Düzenleyicisi bayt dizilerini tarayarak UTF-8 kodlamasını otomatik algılamayı dener. Kodlamanın otomatik algılanmasını devre dışı bırakmak için bu seçeneği temizleyin.
 
-## <a name="display"></a>Ekran
+## <a name="display"></a>Göster
  Seçim kenar boşluğu seçildiğinde, düzenleyicinin metin alanının sol kenarı üzerinde dikey bir kenar boşluğu görüntüler. Metnin tamamını seçmek için bu kenar boşluğuna tıklayabilir veya ardışık metin satırları seçmek için tıklayıp sürükleyebilirsiniz.
 
 |Seçim kenar boşluğu|Seçim kenar boşluğu kapalı|
@@ -88,4 +88,4 @@ Bu iletişim kutusu, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kodu ve met
  Geçerli satırı Vurgula seçildiğinde, imlecin bulunduğu kod satırının etrafında gri bir kutu görüntüler.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Seçenekler, metin düzenleyici, tüm diller](../../ide/reference/options-text-editor-all-languages.md) [Seçenekler, metin düzenleyici, tüm diller, sekmeler](../../ide/reference/options-text-editor-all-languages-tabs.md) [Seçenekler, metin düzenleyici, dosya uzantısı,](../../ide/reference/options-text-editor-file-extension.md) [klavye kısayollarını tanımlama ve özelleştirme klavye kısayollarını](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) [kullanarak düzenleyiciyi özelleştirme](../../ide/customizing-the-editor.md) [ IntelliSense](../../ide/using-intellisense.md)
+ [Seçenekler, metin düzenleyici, tüm diller](../../ide/reference/options-text-editor-all-languages.md) [Seçenekler, metin düzenleyici, tüm diller, sekmeler](../../ide/reference/options-text-editor-all-languages-tabs.md) [Seçenekler, metin düzenleyici, dosya uzantısı](../../ide/reference/options-text-editor-file-extension.md) [klavye kısayollarını tanımlama ve özelleştirme](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) , [IntelliSense kullanarak](../../ide/using-intellisense.md) [düzenleyiciyi özelleştirme](../../ide/customizing-the-editor.md)

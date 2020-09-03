@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 9478394162051fc08c33047cf1ac24275aff75e2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72609328"
 ---
 # <a name="walkthrough-analyzing-managed-code-for-code-defects"></a>İzlenecek yol: Kod Kusurları için Yönetilen Kodu Analiz Etme
@@ -31,7 +31,7 @@ Bu kılavuzda, kod hataları için yönetilen bir projeyi kod çözümleme arac�
 
 - Kod hatası uyarılarını çözümleyin ve düzeltin.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Ön koşullar
 
 - [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)].
 
@@ -39,9 +39,9 @@ Bu kılavuzda, kod hataları için yönetilen bir projeyi kod çözümleme arac�
 
 #### <a name="to-create-a-class-library"></a>Bir sınıf kitaplığı oluşturmak için
 
-1. @No__t_1 **Dosya** menüsünde **Yeni** ' ye ve ardından **Proje**' ye tıklayın.
+1. **Dosya** menüsünde [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] **Yeni** ' ye ve ardından **Proje**' ye tıklayın.
 
-2. **Yeni proje** iletişim kutusunda, **Proje türleri**altında, **C#görsel**' e tıklayın.
+2. **Yeni proje** iletişim kutusunda, **Proje türleri**altında, **Visual C#**' ye tıklayın.
 
 3. **Şablonlar**altında, **sınıf kitaplığı**' nı seçin.
 
@@ -95,23 +95,23 @@ Bu kılavuzda, kod hataları için yönetilen bir projeyi kod çözümleme arac�
 
 - [CA1014: Derlemeleri CLSCompliantAttribute Ile işaretle](../code-quality/ca1014-mark-assemblies-with-clscompliantattribute.md): Microsoft. Design: ' demo ' CLSCompliantAttribute ile işaretlenmelidir ve değeri true olmalıdır.
 
-  - Kod `using``System;` AssemblyInfo.cs dosyasına ekleyin.
+  - Kodu `using``System;` AssemblyInfo.cs dosyasına ekleyin.
 
-       Sonra, AssemblyInfo.cs dosyasının sonuna kod `[assembly: CLSCompliant(true)]` ekleyin.
+       Sonra, kodu `[assembly: CLSCompliant(true)]` AssemblyInfo.cs dosyasının sonuna ekleyin.
 
        Projeyi yeniden derleyin.
 
 - [CA1032: Standart özel durum oluşturucuları uygulayın](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft. Design: Şu oluşturucuyu bu sınıfa ekleyin: Genel Tanıtım (dize)
 
-  - Oluşturucuyu `public demo (String s) : base(s) { }` `demo` sınıfına ekleyin.
+  - Oluşturucuyu sınıfına ekleyin `public demo (String s) : base(s) { }` `demo` .
 
 - [CA1032: Standart özel durum oluşturucuları uygulayın](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft. Design: Şu oluşturucuyu bu sınıfa ekleyin: public demo (dize, özel durum)
 
-  - Oluşturucuyu `public demo (String s, Exception e) : base(s, e) { }` `demo` sınıfına ekleyin.
+  - Oluşturucuyu sınıfına ekleyin `public demo (String s, Exception e) : base(s, e) { }` `demo` .
 
 - [CA1032: Standart özel durum oluşturucuları uygulayın](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft. Design: Şu oluşturucuyu bu sınıfa ekleyin: protected demo (SerializationInfo, StreamingContext)
 
-  - Kod `using System.Runtime.Serialization;` Class1.cs dosyasının başına ekleyin.
+  - Kodu `using System.Runtime.Serialization;` Class1.cs dosyasının başına ekleyin.
 
        Sonra, oluşturucuyu ekleyin `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { } to the class demo.`
 
@@ -119,25 +119,25 @@ Bu kılavuzda, kod hataları için yönetilen bir projeyi kod çözümleme arac�
 
 - [CA1032: Standart özel durum oluşturucuları uygulayın](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft. Design: Şu oluşturucuyu bu sınıfa ekleyin: public demo ()
 
-  - Oluşturucuyu `public demo () : base() { }` `demo` sınıfına ekleyin **.**
+  - Oluşturucuyu sınıfına ekleyin `public demo () : base() { }` `demo` **.**
 
        Projeyi yeniden derleyin.
 
 - [CA1709: tanımlayıcılar doğru şekilde yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md): Microsoft. Naming: ' testCode ' ad alanı adının büyük küçük harflerini ' testCode ' Ile değiştirerek düzeltin.
 
-  - Ad alanı `testCode` büyük küçük harf durumunu `TestCode` olarak değiştirin.
+  - Ad alanının büyük küçük harflerini `testCode` olarak değiştirin `TestCode` .
 
 - [CA1709: tanımlayıcılar doğru bir şekilde olmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md): Microsoft. Naming: ' demo ' ad alanının büyük küçük harflerini ' demo ' Ile değiştirerek düzeltin.
 
-  - Üyenin adını `Demo` değiştirin.
+  - Üyenin adını olarak değiştirin `Demo` .
 
 - [CA1709: tanımlayıcılar doğru şekilde olmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md): Microsoft. Naming: ' Item ' üye adının büyük küçük harflerini ' öğe ' Ile değiştirerek düzeltin.
 
-  - Üyenin adını `Item` değiştirin.
+  - Üyenin adını olarak değiştirin `Item` .
 
 - [CA1710: tanımlayıcıda doğru sonek](../code-quality/ca1710-identifiers-should-have-correct-suffix.md)olmalıdır: Microsoft. Naming: ' testCode. Demo ' öğesini ' Exception ' ile sona erdirmek Için yeniden adlandırın.
 
-  - Sınıfın ve oluşturucularının adını `DemoException` olarak değiştirin.
+  - Sınıfının ve oluşturucularının adını olarak değiştirin `DemoException` .
 
 - [CA2210: derlemeler geçerli tanımlayıcı adlara sahip olmalıdır](../code-quality/ca2210-assemblies-should-have-valid-strong-names.md): ' ManagedDemo ' öğesini bir tanımlayıcı ad anahtarıyla imzalayın.
 
@@ -149,7 +149,7 @@ Bu kılavuzda, kod hataları için yönetilen bir projeyi kod çözümleme arac�
 
        **Derlemeyi imzala** onay kutusunu seçin.
 
-       **Bir dize adı seçin anahtar dosyası** listesinde **\<New... öğesini seçin. >** .
+       **Bir dize adı seçin anahtar dosyası** listesinde, öğesini seçin **\<New…>** .
 
        **Tanımlayıcı ad anahtarı oluştur** iletişim kutusu görüntülenir.
 
@@ -163,7 +163,7 @@ Bu kılavuzda, kod hataları için yönetilen bir projeyi kod çözümleme arac�
 
 - [CA2237: ISerializable türlerini SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md): Microsoft. Usage: olarak işaretleyin bu tür ISerializable uyguladığından ' demo ' türüne bir [Serializable] özniteliği ekleyin.
 
-  - Sınıf `demo` `[Serializable ()]` özniteliğini ekleyin.
+  - `[Serializable ()]`Özniteliğini sınıfına ekleyin `demo` .
 
        Projeyi yeniden derleyin.
 

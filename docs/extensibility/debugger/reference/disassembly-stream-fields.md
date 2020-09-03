@@ -1,5 +1,5 @@
 ---
-title: DISASSEMBLY_STREAM_FIELDS | Microsoft Dokümanlar
+title: DISASSEMBLY_STREAM_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: d10f2143cbefa86442e4087ac098020f5f2bd6ac
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737360"
 ---
 # <a name="disassembly_stream_fields"></a>DISASSEMBLY_STREAM_FIELDS
-Sökme alanı hakkında hangi bilgilerin alıncaya kadar alınacak larını belirtir.
+Ayrıştırılmış bir alan hakkında hangi bilgilerin alınması gerektiğini belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_DISASSEMBLY_STREAM_FIELDS {
@@ -66,60 +66,60 @@ public enum enum_DISASSEMBLY_STREAM_FIELDS {
 
 ## <a name="fields"></a>Alanlar
 `DSF_ADDRESS`\
-`bstrAddress` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `bstrAddress` .
 
 `DSF_ADDRESSOFFSET`\
-`bstrAddressOffset` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `bstrAddressOffset` .
 
 `DSF_CODEBYTES`\
-`bstrCodeBytes` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `bstrCodeBytes` .
 
 `DSF_OPCODE`\
-`bstrOpCode` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `bstrOpCode` .
 
 `DSF_OPERANDS`\
-`bstrOperands` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `bstrOperands` .
 
 `DSF_SYMBOL`\
-`bstrSymbol` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `bstrSymbol` .
 
 `DSF_CODELOCATIONID`\
-`uCodeLocationId` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `uCodeLocationId` .
 
 `DSF_POSITION`\
-Initialize/use `posBeg` the `posEnd` ve fields.
+Ve alanlarını başlatın/ `posBeg` kullanın `posEnd` .
 
 `DSF_DOCUMENTURL`\
-`bstrDocumentUrl` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `bstrDocumentUrl` .
 
 `DSF_BYTEOFFSET`\
-`dwByteOffset` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `dwByteOffset` .
 
 `DSF_FLAGS`\
-`dwFlags` ([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)) alanını başlatma/kullanma.
+`dwFlags`([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)) alanını başlatın/kullanın.
 
 `DSF_OPERANDS_SYMBOLS`\
-`bstrOperands` Alana sembol adları ekleyin.
+Alana sembol adlarını ekleyin `bstrOperands` .
 
 `DSF_ALL`\
-Sökme akışı için tüm alanları belirtir.
+Ayrıştırılmış akış için tüm alanları belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
-[DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) yapısının hangi alanlarının başharfe çevrileceğini belirtmek için [Okuma](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) yöntemine parametre olarak geçirilir.
+[DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) yapısının hangi alanlarının başlatıldığını göstermek için [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) yöntemine bir parametre olarak geçirilir.
 
-`DisassemblyData` Yapının `dwFields` üyesi için hangi alanların kullanıldığını belirtmek için kullanılır ve yapı döndürüldüğünde geçerlidir.
+Yapı öğesi için, `dwFields` `DisassemblyData` Yapı döndürüldüğünde hangi alanların kullanıldığını ve geçerli olduğunu göstermek için kullanılır.
 
-Bu değerler biraz ile `OR`birleştirilebilir.
+Bu değerler, bit düzeyinde birleştirilebilir `OR` .
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)
 - [Okuma](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)
 - [DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)

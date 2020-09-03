@@ -14,17 +14,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 685da1184706e106f3bdd2088b4d937e0aa7cc9f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548297"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>Araçları ve Araç Kutusunu Özelleştirme
 
 Kullanıcıların modellerine eklemesini sağlamak istediğiniz öğeler için araç kutusu öğelerini tanımlamanız gerekir. İki tür araç vardır: öğe araçları ve bağlantı araçları. Oluşturulan tasarımcıda, Kullanıcı şekilleri diyagrama sürüklemek için bir öğe aracı seçebilir ve şekiller arasında bağlantı çizmek için bir bağlantı aracı seçebilir. Genel olarak, öğe araçları kullanıcıların, modellerine etki alanı sınıfı örnekleri eklemesine izin verir ve bağlantı araçları, etki alanı ilişkilerinin örneklerini eklemesini sağlar.
 
-## <a name="how-the-toolbox-is-defined"></a><a name="ToolboxDef"></a>Araç kutusu nasıl tanımlanır
+## <a name="how-the-toolbox-is-defined"></a><a name="ToolboxDef"></a> Araç kutusu nasıl tanımlanır
  DSL Gezgini 'nde, düzenleyici düğümünü ve altındaki düğümleri genişletin. Genellikle şuna benzer bir hiyerarşi görürsünüz:
 
 ```
@@ -79,7 +79,7 @@ Bir bağlantı aracının **bağlantı Oluşturucu** özelliği, aracın ne tür
 
      Araç görünmezse, deneysel Visual Studio 'Yu durdurun. Windows **Başlat** menüsünde **Microsoft Visual Studio 2010 Deneysel örneğini Sıfırla**' yı çalıştırın. **Derle** menüsünde **çözümü yeniden derle**' ye tıklayın. Ardından DSL 'yi yeniden test edin.
 
-## <a name="customizing-element-tools"></a><a name="customizing"></a>Öğe araçlarını özelleştirme
+## <a name="customizing-element-tools"></a><a name="customizing"></a> Öğe araçlarını özelleştirme
  Varsayılan olarak, araç belirtilen sınıfın tek bir örneğini oluşturur, ancak bunu iki şekilde değiştirebilirsiniz:
 
 - Diğer sınıflarda öğe birleştirme yönergeleri tanımlayın, bu sınıfın yeni örneklerini kabul etmelerini ve yeni öğe oluşturulduğunda ek bağlantılar oluşturmalarına olanak tanır. Örneğin, kullanıcının başka bir öğeye açıklama bırakmaya izin verebilir ve bu nedenle ikisi arasında bir başvuru bağlantısı oluşturabilirsiniz.
@@ -90,7 +90,7 @@ Bir bağlantı aracının **bağlantı Oluşturucu** özelliği, aracın ne tür
 
 - Araç, öğe grupları oluşturabilmesi için özelleştirmek üzere kod yazın. Araç, geçersiz kılabileceğiniz ToolboxHelper.cs içindeki yöntemlerle başlatılır. Daha fazla bilgi için, bkz. [bir araçtan öğe grupları oluşturma](#groups).
 
-## <a name="creating-groups-of-elements-from-a-tool"></a><a name="groups"></a>Bir araçtan öğe grupları oluşturma
+## <a name="creating-groups-of-elements-from-a-tool"></a><a name="groups"></a> Bir araçtan öğe grupları oluşturma
  Her öğe aracında oluşturulması gereken öğelerin bir prototipi bulunur. Varsayılan olarak, her öğe aracı tek bir öğe oluşturur, ancak aynı zamanda bir araçla ilişkili nesneler grubu oluşturmak da mümkündür. Bunu yapmak için, aracı <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> ilgili öğeleri içeren bir ile başlatın.
 
  Aşağıdaki örnek, bir tür dönüştürme işlemi olan bir DSL 'den alınmıştır. Her bir Transislatör üç adlı terminalde sahiptir. Transtemciler için öğe Aracı, dört model öğesi ve üç ilişki bağlantısı içeren bir prototipi depolar. Kullanıcı, aracı diyagram üzerine sürüklediğinde, prototip oluşturulur ve model köküne bağlanır.
@@ -139,7 +139,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 }  }    }
 ```
 
-## <a name="customizing-connection-tools"></a><a name="connections"></a>Bağlantı araçlarını özelleştirme
+## <a name="customizing-connection-tools"></a><a name="connections"></a> Bağlantı araçlarını özelleştirme
  Genellikle, yeni bir bağlayıcı sınıfı oluşturduğunuzda bir öğe aracı oluşturursunuz. Alternatif olarak, iki ucunun türlerin ilişki türünü belirlemesine izin vererek bir aracı aşırı yükleyebilirsiniz. Örneğin, hem kişi-kişi ilişkileri hem de kişi-şehir ilişkileri oluşturabileceğiniz bir bağlantı aracı tanımlayabilirsiniz.
 
  Bağlantı araçları bağlantı oluşturucularını çağırır. Kullanıcıların oluşturulan tasarımcıda öğeleri nasıl bağlayabilirler belirtmek için bağlantı oluşturucuları kullanın. Bağlantı oluşturucular, bağlanoluşturulabilecek öğeleri ve aralarında oluşturulan bağlantı türünü belirtir.

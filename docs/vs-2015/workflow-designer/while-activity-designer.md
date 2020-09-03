@@ -12,27 +12,27 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fae1b4905d66a5162591fd7c720ba81ed7ffda82
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72606617"
 ---
 # <a name="while-activity-designer"></a>While Etkinlik Tasarımcısı
 
-@No__t_0 etkinliği, belirtilen koşul **true**olarak değerlendirirken, <xref:System.Activities.Statements.While.Body%2A> içerilen etkinliği yürütür. İçerilen etkinlik hiçbir şekilde yürütülemeyebilir. İçerilen etkinliğin en az bir kez yürütülmesini istiyorsanız bunun yerine <xref:System.Activities.Statements.DoWhile> etkinliğini kullanın.
+<xref:System.Activities.Statements.While>Etkinlik, <xref:System.Activities.Statements.While.Body%2A> belirtilen koşul **doğru**olarak değerlendirilirken içinde içerilen etkinliği yürütür. İçerilen etkinlik hiçbir şekilde yürütülemeyebilir. İçerilen etkinliğin en az bir kez yürütülmesini istiyorsanız <xref:System.Activities.Statements.DoWhile> bunun yerine etkinliğini kullanın.
 
 ## <a name="while-properties-in-workflow-designer"></a>İş Akışı Tasarımcısı Özellikler
 
 Aşağıdaki tabloda en yararlı <xref:System.Activities.Statements.While> etkinlik özellikleri gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır.
 
-|Özellik adı|Gerekli|Kullanım|
+|Özellik Adı|Gerekli|Kullanım|
 |-------------------|--------------|-----------|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Üst bilgide <xref:System.Activities.Statements.While> etkinlik tasarımcısının kolay adını belirtir. Varsayılan değer while değeridir. Değer, **Özellikler** penceresinde veya doğrudan etkinlik Tasarımcısı üst bilgisinde düzenlenebilir.<br /><br /> @No__t_0 kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
-|<xref:System.Activities.Statements.While.Body%2A>|False|@No__t_0 **true**olarak değerlendirirken yürütülecek etkinliği içerir.|
-|<xref:System.Activities.Statements.While.Condition%2A>|Doğru|@No__t_1 etkinliğin yürütülüp yürütülmeyeceğini belirlemekte değerlendirilen [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ifadesini içerir.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Başlıktaki etkinlik tasarımcısının kolay adını belirtir <xref:System.Activities.Statements.While> . Varsayılan değer while değeridir. Değer, **Özellikler** penceresinde veya doğrudan etkinlik Tasarımcısı üst bilgisinde düzenlenebilir.<br /><br /> <xref:System.Activities.Activity.DisplayName%2A>Kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.While.Body%2A>|Yanlış|<xref:System.Activities.Statements.While.Condition%2A> **Doğru**olarak değerlendirilirken yürütülecek etkinliği içerir.|
+|<xref:System.Activities.Statements.While.Condition%2A>|Doğru|[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]İçindeki etkinliğin yürütülüp yürütülmeyeceğini belirlemekte değerlendirilen ifadeyi içerir <xref:System.Activities.Statements.While.Body%2A> .|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Denetim Akışı](../workflow-designer/control-flow-activity-designers.md)
+- [Denetim akışı](../workflow-designer/control-flow-activity-designers.md)
 - [DoWhile](../workflow-designer/dowhile-activity-designer.md)

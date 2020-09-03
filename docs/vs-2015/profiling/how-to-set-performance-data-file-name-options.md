@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 71ac053a24b3f765a58fc050ceec84115e1a4e3d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548401"
 ---
 # <a name="how-to-set-performance-data-file-name-options"></a>Nasıl yapılır: performans veri dosyası adı seçeneklerini ayarlama
@@ -29,7 +29,7 @@ Varsayılan olarak, aşağıdaki sözdizimini kullanarak bir profil oluşturma v
   
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
-|Söz dizimi öğesi|Description|  
+|Söz dizimi öğesi|Açıklama|  
 |-|-|  
 |*Yol*|Raporu içeren dizin. Varsayılan konum, çözüm klasörüdür veya kullanıcının projeleri ve çözümleri için varsayılan konumdur.|  
 |*VSP dosyası*|Profil oluşturma veri dosyasının adı. Varsayılan ad, profil oluşturulan çözümün veya yürütülebilir dosyanın adıdır.|  
@@ -44,7 +44,7 @@ Varsayılan olarak, aşağıdaki sözdizimini kullanarak bir profil oluşturma v
   
 3. **Rapor**' ın altında, aşağıdaki ayarlardan birini değiştirin:  
   
-    |Name|Description|  
+    |Ad|Açıklama|  
     |-|-|  
     |**Rapor konumu**|Profil oluşturma veri dosyalarını depolamak için bir dizin belirtin.|  
     |**Rapor adı**|Dosyalar için bir temel ad belirtin.|  

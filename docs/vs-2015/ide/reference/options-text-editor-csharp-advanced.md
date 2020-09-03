@@ -21,16 +21,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4f2d11e78c2402a6541bc87748ed6ba348ba80fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662326"
 ---
 # <a name="options-text-editor-c-advanced"></a>Seçenekler, Metin Düzenleyici, C#, Gelişmiş
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu iletişim kutusunu, Visual C#için düzenleyici biçimlendirme, kod yeniden düzenleme ve XML belge açıklamaları ayarlarını değiştirmek için kullanın. Bu iletişim kutusuna erişmek için, **Araçlar** menüsünde **Seçenekler** ' e tıklayın, **metin düzenleyici** klasörünü genişletin, öğesini genişletin **C#** ve ardından **Gelişmiş**' e tıklayın.
+Visual C# için düzenleyici biçimlendirme, kod yeniden düzenleme ve XML belge açıklamaları ayarlarını değiştirmek için bu iletişim kutusunu kullanın. Bu iletişim kutusuna erişmek için, **Araçlar** menüsünde **Seçenekler** ' e tıklayın, **metin düzenleyici** klasörünü genişletin, **C#**' ı genişletin ve ardından **Gelişmiş**' e tıklayın.
 
 > [!NOTE]
 > Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
@@ -61,13 +61,13 @@ Bu iletişim kutusunu, Visual C#için düzenleyici biçimlendirme, kod yeniden d
  Derleyici tarafından oluşturulan başvuruların bulunduğu üyelerde uyar, bir derleyicinin oluşturduğu başvuru ile aynı ada sahip bir üyeyi yeniden düzenleme çalıştığınızda bir uyarı iletişim kutusu görüntüler.
 
 ## <a name="xml-documentation-comments"></a>XML Belgeleri Yorumları
- İçin XML belge açıklamaları oluştur///seçili olduğunda,///açıklama giriş yazdıktan sonra otomatik olarak XML belge açıklamaları için \<summary > Başlangıç ve bitiş etiketlerini ekler. XML belgeleri hakkında daha fazla bilgi için bkz. [XML belge açıklamaları](https://msdn.microsoft.com/library/803b7f7b-7428-4725-b5db-9a6cff273199).
+ İçin XML belge açıklamaları oluştur///seçili olduğunda, \<summary> ///Açıklama giriş yazdıktan sonra otomatik olarak XML belge açıklamaları için başlangıç ve bitiş etiketlerini ekler. XML belgeleri hakkında daha fazla bilgi için bkz. [XML belge açıklamaları](https://msdn.microsoft.com/library/803b7f7b-7428-4725-b5db-9a6cff273199).
 
 ## <a name="implement-interface"></a>Arabirimi Uygulama
- #Region ile birlikte üretilen kod, arabirim uygulama veya arabirimini açık olarak Uygula ya da açıkça arabirim uygulama ' ya bir #region \<*arabirim > adı*ekler.
+ #Region ile birlikte üretilen kod \<*interface name*> , arabirim uygulama veya arabirimini açık olarak Uygula gibi yöntemlere bir #region üyesi ekler.
 
 ## <a name="organize-usings"></a>Using deyimlerini Düzenle
- ' System ' yönergelerini, seçili olduğunda using yönergelerden önce, diğer using yönergelerinden önce gösterilen `System`. Daha fazla bilgi için bkz. [using deyimlerini sıralama](../../misc/sort-usings.md).
+ ' System ' yönergelerini, seçili olduğunda using `System` yönergelerden önce, diğer using yönergelerinden önce göründüğü zaman yerleştir. Daha fazla bilgi için bkz. [using deyimlerini sıralama](../../misc/sort-usings.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [XML belge açıklamaları](https://msdn.microsoft.com/library/803b7f7b-7428-4725-b5db-9a6cff273199) [dile özgü düzenleyici seçeneklerini ayarlama](../../ide/reference/setting-language-specific-editor-options.md) [Visual C# IntelliSense](../../ide/visual-csharp-intellisense.md)

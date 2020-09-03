@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::DoesInterfaceExist | Microsoft Docs
+title: IDebugClassField::D Oesınterfaceexist | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9f71346c1b69729ae54ef0d33be4149e7000316c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68191134"
 ---
 # <a name="idebugclassfielddoesinterfaceexist"></a>IDebugClassField::DoesInterfaceExist
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Belirli bir arabirim sınıfta tanımlı olup olmadığını belirler.  
+Sınıfta belirli bir arabirimin tanımlanıp tanımlanamayacağını belirler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT DoesInterfaceExist(   
@@ -40,13 +40,13 @@ int DoesInterfaceExist(
   
 #### <a name="parameters"></a>Parametreler  
  `pszInterfaceName`  
- [in] Arabirim adı, aranacak içeren bir dize.  
+ 'ndaki Aranacak arabirim adını içeren bir dize.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür, S_FALSE döndürür arabirimi yoksa, Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, S_OK döndürür, arabirim yoksa S_FALSE döndürür; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, geçerli tüm arabirimleri numaralandırmasını alır ve eşleşen bir arabirim için liste arar.  
+ Bu yöntem, tüm arabirimlerin bir listesini alır ve listede eşleşen bir arabirim arar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

@@ -10,27 +10,27 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9c2f6f6f65410336eacf72967c8360a56e8fa5ca
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72610009"
 ---
-# <a name="how-to-create-an-association-relationship-between-linq-to-sql-classes-or-designer"></a>Nasıl yapılır: LINQ to SQL sınıfları arasında ilişkilendirme (ilişki) oluşturma (O/R Designer)
+# <a name="how-to-create-an-association-relationship-between-linq-to-sql-classes-or-designer"></a>Nasıl yapılır: LINQ to SQL sınıfları arasında ilişkilendirme (ilişki) oluşturma (O/R Tasarımcısı)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_0 varlık sınıfları arasındaki ilişkilendirmeler, bir veritabanındaki tablolar arasındaki ilişkilerle benzerdir. **Ilişki düzenleyici** iletişim kutusunu kullanarak varlık sınıfları arasında ilişkiler oluşturabilirsiniz.
+İçindeki varlık sınıfları arasındaki ilişkilendirmeler [!INCLUDE[vbtecdlinq](../includes/vbtecdlinq-md.md)] , bir veritabanındaki tablolar arasındaki ilişkilerle benzerdir. **Ilişki düzenleyici** iletişim kutusunu kullanarak varlık sınıfları arasında ilişkiler oluşturabilirsiniz.
 
  İlişki oluşturmak için **Ilişkilendirme düzenleyici** iletişim kutusunu kullandığınızda bir üst sınıf ve alt sınıf seçmelisiniz. Ana sınıf, birincil anahtarı içeren varlık sınıfıdır; alt sınıf, yabancı anahtarı içeren varlık sınıfıdır. Örneğin, Northwind Customers ve Orders tablolarıyla eşlenen varlık sınıfları oluşturulduysa, müşteri sınıfı üst sınıf olur ve Order sınıfı alt sınıf olur.
 
 > [!NOTE]
-> Tabloları **Sunucu Gezgini** /**Veritabanı Gezgini** [!INCLUDE[vs_ordesigner_long](../includes/vs-ordesigner-long-md.md)] ([!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)]) üzerine sürüklediğinizde, ilişkilendirmeler veritabanındaki mevcut yabancı anahtar ilişkilerine göre otomatik olarak oluşturulur.
+> **Sunucu Gezgini** / **veritabanı Gezgini** tabloları [!INCLUDE[vs_ordesigner_long](../includes/vs-ordesigner-long-md.md)] () üzerine sürüklediğinizde [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] , ilişkilendirmeler veritabanındaki mevcut yabancı anahtar ilişkilerine göre otomatik olarak oluşturulur.
 
  Bir ilişki oluşturduktan sonra, O/R tasarımcısında ilişkilendirmeyi seçtiğinizde, **Özellikler** penceresinde bazı yapılandırılabilir özellikler vardır. (İlişkilendirme ilişkili sınıflar arasındaki satırdır.) Aşağıdaki tabloda bir ilişkinin özelliklerine ilişkin açıklamalar verilmiştir.
 
 |Özellik|Açıklama|
 |--------------|-----------------|
-|**İte**|İlişkilendirmenin bire çok veya bire bir olduğunu denetler.|
+|**Kardinalite**|İlişkilendirmenin bire çok veya bire bir olduğunu denetler.|
 |**Alt özellik**|Üst öğede, ilişkilendirmenin yabancı anahtar tarafındaki alt kayıtlara yönelik bir koleksiyon veya başvuru olan bir özellik oluşturulup oluşturulmayacağını belirtir. Örneğin, müşteri ve sipariş arasındaki ilişkilendirmede, **alt özelliği** **true**olarak ayarlanırsa, ana sınıfta Orders adlı bir özellik oluşturulur.|
 |**Parent özelliği**|İlişkili üst sınıfa başvuran alt sınıftaki özellik. Örneğin, müşteri ve sipariş arasındaki ilişkilendirmede, sipariş sınıfında bir sipariş için ilişkili müşteriye başvuran müşteri adlı bir özellik oluşturulur.|
 |**Katılım özellikleri**|İlişki özelliklerini görüntüler ve **Ilişkilendirme düzenleyici** iletişim kutusunu yeniden açan **üç nokta** düğmesini (...) sağlar.|

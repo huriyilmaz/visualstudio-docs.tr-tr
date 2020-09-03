@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: db76627afdf44ef1c46ed9ff7a9e204da8eb112d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72608869"
 ---
 # <a name="native-recommended-rules-rule-set"></a>Yerel Önerilen Kurallar kural kümesi
@@ -21,7 +21,7 @@ ms.locfileid: "72608869"
 
 Yerel olarak önerilen kurallar, olası güvenlik delikleri ve uygulama kilitlenmeleri dahil olmak üzere yerel kodunuzda en kritik ve yaygın sorunlara odaklanmaktadır.  Bu kural kümesini yerel projeleriniz için oluşturduğunuz herhangi bir özel kural kümesine dahil etmelisiniz.  Bu RuleSet, Visual Studio Professional Edition ve üzeri ile çalışacak şekilde tasarlanmıştır.
 
-|                                      Kural                                      |                                                             Açıklama                                                             |
+|                                      Kural                                      |                                                             Description                                                             |
 |--------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 |                       [C6001](../code-quality/c6001.md)                        |                                                     Başlatılmamış belleği kullanma                                                      |
 |                       [C6011](../code-quality/c6011.md)                        |                                                     Null Işaretçisinin başvurusu                                                      |
@@ -156,7 +156,7 @@ Yerel olarak önerilen kurallar, olası güvenlik delikleri ve uygulama kilitlen
 |                      [C28020](../code-quality/c28020.md)                       |                                               İfade bu çağrıda doğru değil                                               |
 |                      [C28021](../code-quality/c28021.md)                       |                                           Açıklama eklenen parametrenin bir işaretçi olması gerekir                                           |
 |                      [C28022](../code-quality/c28022.md)                       |            Bu işlevdeki işlev sınıfı (es), kendisini tanımlamak için kullanılan typedef üzerindeki işlev sınıfları ile eşleşmiyor.            |
-|                      [C28023](../code-quality/c28023.md)                       |         Atanan veya geçirilen işlev, en az bir sınıf (es) için \_Function_class \_ ek açıklamasına sahip olmalıdır         |
+|                      [C28023](../code-quality/c28023.md)                       |         Atanan veya geçirilen işlev, \_ \_ en az bir sınıf (es) için Function_class ek açıklamasına sahip olmalıdır         |
 |                      [C28024](../code-quality/c28024.md)                       | Atanmakta olan işlev işaretçisine işlev sınıfı (es) listesinde bulunmayan işlev sınıfıyla açıklama eklenir. |
 |                      [C28039](../code-quality/c28039.md)                       |                                     Gerçek parametre türü, türle tam olarak eşleşmelidir                                      |
 |                      [C28112](../code-quality/c28112.md)                       |            Birbirine kenetlenmiş bir işlev aracılığıyla erişilen bir değişkene, her zaman birbirine kenetlenmiş bir işlev aracılığıyla erişilmesi gerekir.            |
@@ -174,14 +174,14 @@ Yerel olarak önerilen kurallar, olası güvenlik delikleri ve uygulama kilitlen
 |                      [C28196](../code-quality/c28196.md)                       |                            Gereksinim karşılanmıyor. (İfade true olarak değerlendirilmez.)                            |
 |                      [C28202](../code-quality/c28202.md)                       |                                               Statik olmayan üyeye geçersiz başvuru                                                |
 |                      [C28203](../code-quality/c28203.md)                       |                                                Sınıf üyesine belirsiz başvuru.                                                 |
-|                      [C28205](../code-quality/c28205.md)                       |                                      geçersiz bağlamda kullanılan \_Success \_ veya \_On_failure \_                                       |
+|                      [C28205](../code-quality/c28205.md)                       |                                      \_\_ \_ \_ Geçersiz bağlamda kullanılan başarılı veya On_failure                                       |
 |                      [C28206](../code-quality/c28206.md)                       |                                              Sol işlenen bir yapıya işaret ediyor, '-> ' kullanın                                              |
 |                      [C28207](../code-quality/c28207.md)                       |                                                  Sol işlenen bir struct, '. ' kullanın                                                  |
 |                      [C28209](../code-quality/c28209.md)                       |                                      Sembol bildiriminin çakışan bir bildirimi vardır                                       |
-|                      [C28210](../code-quality/c28210.md)                       |                            __On_failure bağlamının ek açıklamaları açık bir ön bağlamda olmamalıdır                             |
+|                      [C28210](../code-quality/c28210.md)                       |                            __On_failure bağlamı için ek açıklamalar açık bir ön bağlamda olmamalıdır                             |
 |                      [C28211](../code-quality/c28211.md)                       |                                            SAL_context için beklenen statik bağlam adı                                             |
 |                      [C28212](../code-quality/c28212.md)                       |                                             Ek açıklama için beklenen işaretçi ifadesi                                              |
-|                      [C28213](../code-quality/c28213.md)                       |            @No__t_0Use_decl_annotations \_ ek açıklaması, önceki bir bildirime göre başvurulmadan başvurmak için kullanılmalıdır.            |
+|                      [C28213](../code-quality/c28213.md)                       |            \_Use_decl_annotations \_ ek açıklaması, değişiklik yapılmadan önceki bir bildirime başvurmak için kullanılmalıdır.            |
 |                      [C28214](../code-quality/c28214.md)                       |                                              Öznitelik parametresi adları P1 olmalıdır... P9 olmalıdır                                              |
 |                      [C28215](../code-quality/c28215.md)                       |                               Typedüzeltmesini zaten bir tür düzeltmesine sahip olan bir parametreye uygulanamaz                               |
 |                      [C28216](../code-quality/c28216.md)                       |                   CheckReturn ek açıklaması yalnızca belirli işlev parametresi için Sonkoşulları için geçerlidir.                    |
@@ -190,7 +190,7 @@ Yerel olarak önerilen kurallar, olası güvenlik delikleri ve uygulama kilitlen
 |                      [C28219](../code-quality/c28219.md)                       |                            Ek açıklamada parametre ek açıklaması için beklenen numaralandırma üyesi                            |
 |                      [C28220](../code-quality/c28220.md)                       |                             Ek açıklamada parametre ek açıklaması için beklenen tamsayı ifadesi                              |
 |                      [C28221](../code-quality/c28221.md)                       |                                   Ek açıklamada parametre için beklenen dize ifadesi                                    |
-|                      [C28222](../code-quality/c28222.md)                       |                                          ek açıklama için __yes, \__no veya \__maybe bekleniyor                                          |
+|                      [C28222](../code-quality/c28222.md)                       |                                          \_ek açıklama için __yes, _No veya \_ _maybe bekleniyor                                          |
 |                      [C28223](../code-quality/c28223.md)                       |                                  Ek açıklama, parametre için beklenen belirteç/tanımlayıcı bulunamadı                                   |
 |                      [C28224](../code-quality/c28224.md)                       |                                                   Ek açıklama parametre gerektiriyor                                                    |
 |                      [C28225](../code-quality/c28225.md)                       |                                Ek açıklamada gerekli parametrelerin doğru sayısı bulunamadı                                 |
@@ -218,28 +218,28 @@ Yerel olarak önerilen kurallar, olası güvenlik delikleri ve uygulama kilitlen
 |                      [C28251](../code-quality/c28251.md)                       |                                  İşlev için tutarsız ek açıklama: Bu örnekte hata var.                                  |
 |                      [C28252](../code-quality/c28252.md)                       |                      İşlev için tutarsız ek açıklama: parametre bu örnekteki başka bir ek açıklamaya sahip.                      |
 |                      [C28253](../code-quality/c28253.md)                       |                      İşlev için tutarsız ek açıklama: parametre bu örnekteki başka bir ek açıklamaya sahip.                      |
-|                      [C28254](../code-quality/c28254.md)                       |                                          ek açıklamalarda dynamic_cast < > () desteklenmiyor                                           |
+|                      [C28254](../code-quality/c28254.md)                       |                                          dynamic_cast<> () ek açıklamalarda desteklenmez                                           |
 |                      [C28262](../code-quality/c28262.md)                       |                               Ek açıklama için işlevde bir sözdizimi hatası bulundu                                |
 |                      [C28263](../code-quality/c28263.md)                       |                            Iç ek açıklamanın koşullu ek açıklamasında söz dizimi hatası bulundu                            |
 |                      [C28267](../code-quality/c28267.md)                       |                               Ek açıklamalarda bir söz dizimi hatası bulundu.                               |
 |                      [C28272](../code-quality/c28272.md)                       |                 İşlevi için ek açıklama, incelenirken parametresi, işlev bildirimiyle tutarsız                 |
 |                      [C28273](../code-quality/c28273.md)                       |                               İşlev için, ipuçları işlev bildirimiyle tutarsız                                |
-|                      [C28275](../code-quality/c28275.md)                       |                                              @No__t_0Macro_value \_ parametresi null                                               |
+|                      [C28275](../code-quality/c28275.md)                       |                                              \_Macro_value parametresi \_ null                                               |
 |                      [C28279](../code-quality/c28279.md)                       |                                      Sembol için, eşleşen bir ' End ' olmadan bir ' begin' bulundu                                       |
 |                      [C28280](../code-quality/c28280.md)                       |                                      Sembol için, eşleşen bir ' begin' olmadan bir ' End ' bulundu                                      |
 |                      [C28282](../code-quality/c28282.md)                       |                                               Biçim dizeleri ön koşullarda olmalıdır                                               |
 |                      [C28285](../code-quality/c28285.md)                       |                                               İşlev için, parametrede söz dizimi hatası                                               |
 |                      [C28286](../code-quality/c28286.md)                       |                                               İşlev için, sonda yakınında sözdizimi hatası                                               |
-|                      [C28287](../code-quality/c28287.md)                       |                           İşlev için \_At \_ () ek açıklamasında söz dizimi hatası (Tanınmayan parametre adı)                           |
-|                      [C28288](../code-quality/c28288.md)                       |                             İşlev için \_At \_ () ek açıklamasında söz dizimi hatası (geçersiz parametre adı)                              |
+|                      [C28287](../code-quality/c28287.md)                       |                           İşlev için, \_ at \_ () ek açıklamasında söz dizimi hatası (Tanınmayan parametre adı)                           |
+|                      [C28288](../code-quality/c28288.md)                       |                             İşlev için, \_ at \_ () ek açıklamasında söz dizimi hatası (geçersiz parametre adı)                              |
 |                      [C28289](../code-quality/c28289.md)                       |                           İşlev için: ReadableTo veya WritableTo parametre olarak bir limit-spec içermiyordu                           |
 |                      [C28290](../code-quality/c28290.md)                       |                      işlev için ek açıklama, gerçek parametre sayısından daha fazla dışlar içeriyor                       |
 |                      [C28291](../code-quality/c28291.md)                       |                                   deref düzey 0 ' da null/NotNull Post işlevi için anlamsız bir küçüktür.                                   |
 |                      [C28300](../code-quality/c28300.md)                       |                                       İşleç için uyumsuz türlerin ifade işlenenleri                                        |
 |                      [C28301](../code-quality/c28301.md)                       |                                          İşlevin ilk bildirimi için ek açıklama yok.                                          |
-|                      [C28302](../code-quality/c28302.md)                       |                                        Ek açıklamada bir ek \_Deref \_ işleci bulundu.                                         |
-|                      [C28303](../code-quality/c28303.md)                       |                                      Ek açıklamada belirsiz bir \_Deref \_ işleci bulundu.                                       |
-|                      [C28304](../code-quality/c28304.md)                       |                                Belirtece uygulanmış, uygun olmayan bir \_Notref \_ işleci bulundu.                                 |
+|                      [C28302](../code-quality/c28302.md)                       |                                        \_Ek açıklamada ek bir deref \_ işleci bulundu.                                         |
+|                      [C28303](../code-quality/c28303.md)                       |                                      \_Ek açıklamada belirsiz bir deref \_ işleci bulundu.                                       |
+|                      [C28304](../code-quality/c28304.md)                       |                                Belirtece hatalı yerleştirilmiş \_ Notref \_ işleci bulundu.                                 |
 |                      [C28305](../code-quality/c28305.md)                       |                                           Belirteç ayrıştırılırken bir hata bulundu.                                            |
 |                      [C28306](../code-quality/c28306.md)                       |                                             Parametresindeki ek açıklama kullanımdan görünmez                                              |
 |                      [C28307](../code-quality/c28307.md)                       |                                             Parametresindeki ek açıklama kullanımdan görünmez                                              |

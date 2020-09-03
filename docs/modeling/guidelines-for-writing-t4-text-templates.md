@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 24c8afd5e34d4957dac3d9f4d5b0e4409ad20895
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75596547"
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>T4 Metin Şablonları Yazma Yönergeleri
@@ -46,25 +46,25 @@ Bazı durumlarda, Genel testler doğrudan modelde gerçekleştirilebilir. Örne�
 
 Özel koda izin ver: kısmi sınıflar oluşturun.
 
-Oluşturulan koda ek olarak el ile yazdığınız koda izin verin. Kod oluşturma şemasının ortaya çıkabilecek tüm olası Çeşitlemeler için hesap yapabilmesi olağan dışı bir durum olabilir. Bu nedenle, oluşturulan kodların bazılarını eklemek veya geçersiz kılmak için beklemeniz gerekir. Oluşturulan malzemenin veya Visual Basic gibi bir .NET dilinde olması halinde C# , iki strateji özellikle yararlı olur:
+Oluşturulan koda ek olarak el ile yazdığınız koda izin verin. Kod oluşturma şemasının ortaya çıkabilecek tüm olası Çeşitlemeler için hesap yapabilmesi olağan dışı bir durum olabilir. Bu nedenle, oluşturulan kodların bazılarını eklemek veya geçersiz kılmak için beklemeniz gerekir. Oluşturulan malzemenin C# veya Visual Basic gibi bir .NET dilinde olması halinde, iki strateji özellikle yararlı olur:
 
 - Oluşturulan sınıflar kısmi olmalıdır. Bu, oluşturulan koda içerik eklemenize olanak sağlar.
 
 - Sınıfların, diğeri öğesinden devralan çiftler halinde oluşturulması gerekir. Temel sınıf, oluşturulan tüm yöntemleri ve özellikleri içermeli ve türetilmiş sınıf yalnızca oluşturucuları içermelidir. Bu, el ile yazılmış kodunuzun oluşturulan yöntemlerin herhangi birini geçersiz kılmasını sağlar.
 
-XML gibi diğer oluşturulmuş dillerde, el ile yazılmış ve oluşturulmuş içeriğin basit birleşimlerini yapmak için `<#@include#>` yönergesini kullanın. Daha karmaşık durumlarda, oluşturulan dosyayı el ile yazılmış dosyalarla birleştiren bir işlem sonrası adımı yazmanız gerekebilir.
+XML gibi diğer oluşturulmuş dillerde, `<#@include#>` el ile yazılmış ve oluşturulmuş içeriğin basit birleşimlerini oluşturmak için yönergesini kullanın. Daha karmaşık durumlarda, oluşturulan dosyayı el ile yazılmış dosyalarla birleştiren bir işlem sonrası adımı yazmanız gerekebilir.
 
 Ortak malzemeleri içerme dosyalarına veya çalışma zamanı şablonlarına taşıyın.
 
 Benzer metin ve kod bloklarını birden çok şablonlarda tekrarlamadan kaçınmak için `<#@ include #>` yönergesini kullanın. Daha fazla bilgi için bkz. [T4 Içerme yönergesi](../modeling/t4-include-directive.md).
 
-Ayrıca, ayrı bir projede çalışma zamanı metin şablonları oluşturabilir ve bunları tasarım zamanı şablonundan çağırabilirsiniz. Bunu yapmak için `<#@ assembly #>` yönergesini kullanarak ayrı projeye erişin.
+Ayrıca, ayrı bir projede çalışma zamanı metin şablonları oluşturabilir ve bunları tasarım zamanı şablonundan çağırabilirsiniz. Bunu yapmak için, `<#@ assembly #>` farklı projeye erişmek üzere yönergesini kullanın.
 
 Büyük kod bloklarını ayrı bir derlemeye taşımayı düşünün.
 
-Büyük kod bloklarında ve sınıf özellik bloklarınız varsa, bu kodların bazılarını ayrı bir projede derleyebileceğiniz yöntemlere taşımak yararlı olabilir. Şablondaki koda erişmek için `<#@ assembly #>` yönergesini kullanabilirsiniz. Daha fazla bilgi için bkz. [T4 derleme yönergesi](../modeling/t4-assembly-directive.md).
+Büyük kod bloklarında ve sınıf özellik bloklarınız varsa, bu kodların bazılarını ayrı bir projede derleyebileceğiniz yöntemlere taşımak yararlı olabilir. `<#@ assembly #>`Şablondaki koda erişmek için yönergesini kullanabilirsiniz. Daha fazla bilgi için bkz. [T4 derleme yönergesi](../modeling/t4-assembly-directive.md).
 
-Yöntemleri şablonun devraldığı bir soyut sınıfa koyabilirsiniz. Soyut sınıfın <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName>devralması gerekir. Daha fazla bilgi için bkz. [T4 şablon yönergesi](../modeling/t4-template-directive.md).
+Yöntemleri şablonun devraldığı bir soyut sınıfa koyabilirsiniz. Soyut sınıf öğesinden devralması gerekir <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> . Daha fazla bilgi için bkz. [T4 şablon yönergesi](../modeling/t4-template-directive.md).
 
 Yapılandırma dosyaları değil, kod oluştur.
 
@@ -115,7 +115,7 @@ Bunu yapmanın avantajı, IntelliSense 'in kullanılabildiği için kodun daha k
 
 Özel koda izin ver: uzantı noktaları sağlayın.
 
-\<# + sınıf özelliği blokları # > içinde sanal yöntemler oluşturmayı düşünün. Bu, tek bir şablonun değişiklik yapılmadan birçok bağlamda kullanılmasına izin verir. Şablonu değiştirmek yerine, en düşük ek mantığı sağlayan bir türetilmiş sınıf oluşturabilirsiniz. Türetilmiş sınıf, normal bir kod olabilir veya bir çalışma zamanı şablonu olabilir.
+İçinde sanal yöntemler oluşturmayı düşünün \<#+ class feature blocks #> . Bu, tek bir şablonun değişiklik yapılmadan birçok bağlamda kullanılmasına izin verir. Şablonu değiştirmek yerine, en düşük ek mantığı sağlayan bir türetilmiş sınıf oluşturabilirsiniz. Türetilmiş sınıf, normal bir kod olabilir veya bir çalışma zamanı şablonu olabilir.
 
 Örneğin, MyStandardRunTimeTemplate.tt içinde:
 
@@ -139,11 +139,11 @@ class FabrikamTemplate : MyStandardRunTimeTemplate
 
 Metin oluşturma işleminden ayrı veri toplamayı ayırın.
 
-Hesaplama ve metin bloklarını karıştırmaktan kaçının. Her metin şablonunda, değişkenleri ayarlamak ve karmaşık hesaplamalar gerçekleştirmek için # Code Block # > ilk \<kullanın. İlk metin bloğundan şablonun sonuna veya ilk \<# + sınıf özelliği blok # >, uzun ifadelerden kaçının ve metin blokları içermediği sürece döngülerin ve koşullarından kaçının. Bu uygulama, şablonu okumayı ve bakımını daha kolay hale getirir.
+Hesaplama ve metin bloklarını karıştırmaktan kaçının. Her metin şablonunda, \<# code block #> değişkenleri ayarlamak ve karmaşık hesaplamalar gerçekleştirmek için ilkini kullanın. İlk metin bloğundan önce şablonun sonuna veya birinciden, \<#+ class feature block #> uzun ifadelerden kaçının ve metin blokları içermedikçe döngülerin ve koşullarından kaçının. Bu uygulama, şablonu okumayı ve bakımını daha kolay hale getirir.
 
-İçerme dosyaları için `.tt` kullanmayın.
+`.tt`İçerme dosyaları için kullanmayın.
 
-İçerme dosyaları için `.ttinclude` gibi farklı bir dosya adı uzantısı kullanın. Yalnızca çalışma zamanı veya tasarım zamanı metin şablonları olarak işlenmesini istediğiniz dosyalar için `.tt` kullanın. Bazı durumlarda, Visual Studio `.tt` dosyalarını tanır ve kendi özelliklerini işleme için otomatik olarak ayarlar.
+İçerme dosyaları için gibi farklı bir dosya adı uzantısı kullanın `.ttinclude` . `.tt`Yalnızca çalışma zamanı veya tasarım zamanı metin şablonları olarak işlenmesini istediğiniz dosyalar için kullanın. Bazı durumlarda, Visual Studio dosyaları tanır `.tt` ve işlemek için özelliklerini otomatik olarak ayarlar.
 
 Her şablonu sabit bir prototip olarak başlatın.
 

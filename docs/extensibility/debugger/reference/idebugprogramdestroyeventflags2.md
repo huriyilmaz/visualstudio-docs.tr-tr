@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramDestroyEventFlags2 | Microsoft Dokümanlar
+title: IDebugProgramDestroyEventFlags2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,37 +11,37 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d869304dd8b6dc82db78cc09ed9d51a54acdc3c0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80722497"
 ---
 # <a name="idebugprogramdestroyeventflags2"></a>IDebugProgramDestroyEventFlags2
-Hata ayıklama oturumunu sonladiğinizde [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] ui varsayılan davranışını geçersiz kılmak için hata ayıklama altyapısı sağlar.
+Bir hata ayıklama oturumunu sonlandırdığınızda, bir hata ayıklama altyapısının Kullanıcı arabiriminin varsayılan davranışını geçersiz kılmasını sağlar [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugProgramDestroyEventFlags2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Bu arabirim hata ayıklama motorları tarafından uygulanır. Bir işlemin ömrü boyunca birden çok program oluşturup yok edebilecek ana bilgisayarlar için yararlıdır.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Bu arabirim, hata ayıklama motorları tarafından uygulanır. Bir işlemin kullanım ömrü boyunca birden fazla program oluşturup bozmasına neden olabilecek konaklar için yararlıdır.
 
 ## <a name="methods"></a>Yöntemler
- Aşağıdaki tabloda `IDebugProgramDestroyEventFlags2`.
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugProgramDestroyEventFlags2` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetFlags](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md)|Programı alır bayrakları yok.|
+|[GetFlags](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md)|Program yok etme bayraklarını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] Kullanıcı Arabirimi'nin varsayılan davranışı, tüm programlar bir programı yok etme olayını gönderdikten sonra tasarım moduna geri dönmektir. Bu arabirim, hata ayıklama altyapısının bu davranışı değiştirmesini sağlar.
+ Kullanıcı arabiriminin varsayılan davranışı, [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] tüm programlar bir program yok etme olayı gönderdikten sonra tasarım moduna geri dönmeyecektir. Bu arabirim bir hata ayıklama altyapısının bu davranışı değiştirmesini sağlar.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: Msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll

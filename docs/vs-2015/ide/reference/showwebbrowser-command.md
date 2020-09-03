@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1ecf86bdc7516f05935bd944f23633b3baad2c7c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663517"
 ---
 # <a name="showwebbrowser-command"></a>ShowWebBrowser Komutu
@@ -26,14 +26,14 @@ ms.locfileid: "72663517"
 
 Bir Web tarayıcı penceresinde belirttiğiniz URL 'YI tümleşik geliştirme ortamı (IDE) veya IDE 'nin dışında görüntüler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 View.ShowWebBrowser URL [/new][/ext]
 ```
 
-## <a name="arguments"></a>Arguments
- `URL` gerekiyor. Web sitesi için URL (Tekdüzen Kaynak Konum Belirleyicisi).
+## <a name="arguments"></a>Bağımsız değişkenler
+ `URL` Gerekli. Web sitesi için URL (Tekdüzen Kaynak Konum Belirleyicisi).
 
 ## <a name="switches"></a>Anahtarlar
  /Yeni Isteğe bağlı. Sayfanın, Web tarayıcısının yeni bir örneğinde göründüğünü belirtir.

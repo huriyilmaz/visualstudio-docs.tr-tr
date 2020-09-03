@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::GetEngineInfo | Microsoft Dokümanlar
+title: 'IDebugProgram2:: GetEngineInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 53f16a3ef6bd1328d73c8a6c71c666968d5564d4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80722823"
 ---
 # <a name="idebugprogram2getengineinfo"></a>IDebugProgram2::GetEngineInfo
-Bu programı çalıştıran hata ayıklama altyapısının (DE) adını ve GUID'ini alır.
+Bu programı çalıştıran hata ayıklama altyapısının (DE) adını ve GUID 'sini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetEngineInfo( 
@@ -43,16 +43,16 @@ int GetEngineInfo( 
 
 ## <a name="parameters"></a>Parametreler
 `pbstrEngine`\
-[çıkış] Bu programı çalıştıran DE'nin adını döndürür.
+dışı Bu programın çalıştırıldığı adın adını döndürür.
 
 `pguidEngine`\
-[çıkış] Bu programı çalıştıran DE'nin GUID'ini döndürür.
+dışı Bu programı çalıştıran öğesinin GUID 'sini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Her DE tanımlama için kendi GUID tanımlar.
+ Her ikisi DE tanımlama için kendi GUID 'INI tanımlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

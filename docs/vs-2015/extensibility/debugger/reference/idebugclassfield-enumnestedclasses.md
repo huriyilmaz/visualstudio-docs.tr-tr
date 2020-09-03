@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::EnumNestedClasses | Microsoft Docs
+title: 'IDebugClassField:: EnumNestedClasses | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7745eea3f5b3264016a25defd696a9b85f2e9fb4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68191077"
 ---
 # <a name="idebugclassfieldenumnestedclasses"></a>IDebugClassField::EnumNestedClasses
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu sınıf içinde iç içe sınıflar için bir numaralandırıcı oluşturur.  
+Bu sınıfta iç içe yerleştirilmiş sınıflar için bir Numaralandırıcı oluşturur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT EnumNestedClasses(   
@@ -40,15 +40,15 @@ int EnumNestedClasses(
   
 #### <a name="parameters"></a>Parametreler  
  `ppEnum`  
- [out] Döndürür bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) iç içe geçmiş sınıflar listesini temsil eden nesne. İç içe geçmiş sınıf varsa, bir null değer döndürür.  
+ dışı İç içe sınıfların listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. İç içe geçmiş sınıflar yoksa null değeri döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür veya iç içe geçmiş sınıf varsa S_FALSE döndürür. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, iç içe sınıf yoksa S_OK döndürür veya S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her öğenin sabit bir [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) iç içe geçmiş bir sınıf tanımlayan nesne.  
+ Sabit listesinin her öğesi, iç içe bir sınıfı tanımlayan bir [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) nesnesidir.  
   
- İç içe geçmiş bir sınıf, başka bir sınıf içinde tanımlanan bir sınıftır. Örneğin:  
+ İç içe yerleştirilmiş bir sınıf, başka bir sınıfın içinde tanımlanan bir sınıftır. Örneğin:  
   
 ```  
 class RootClass {  
@@ -56,7 +56,7 @@ class RootClass {
 };  
 ```  
   
- [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) numaralandırma temsil eden bir nesne içerebilir `NestedClass` sınıfı.  
+ [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) numaralandırması, sınıfı temsil eden bir nesne içerir `NestedClass` .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)   

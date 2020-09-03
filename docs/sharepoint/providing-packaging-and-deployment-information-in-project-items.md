@@ -25,14 +25,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: db805c308fd245554824997b24236eb2e2d80e62
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72984208"
 ---
 # <a name="provide-packaging-and-deployment-information-in-project-items"></a>Proje Öğelerinde Paketleme ve dağıtım bilgileri sağlama
-  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] içindeki tüm SharePoint proje öğeleri, proje SharePoint 'e dağıtıldığında ek veri sağlamak için kullanabileceğiniz özelliklere sahiptir. Bu özellikler aşağıdaki gibidir:
+  İçindeki tüm SharePoint proje öğeleri [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , proje SharePoint 'e dağıtıldığında ek veri sağlamak için kullanabileceğiniz özelliklere sahiptir. Bu özellikler aşağıdaki gibidir:
 
 - Özellik özellikleri
 
@@ -57,7 +57,7 @@ ms.locfileid: "72984208"
 
  Tüm proje öğelerinden özdeş Özellik özelliği değerleri, özellik bildiriminde birlikte birleştirilir. Ancak, iki farklı proje öğesi, eşleşmeyen değerlerle aynı özellik özelliği anahtarını belirtursa, bir doğrulama hatası oluşur.
 
- Özellik dosyasını doğrudan özellik dosyasına ( *. feature*) eklemek için, <xref:Microsoft.VisualStudio.SharePoint.Features.IPropertyCollection.Add%2A>[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint nesne modeli yöntemini çağırın. Bu yöntemi kullanırsanız, özellik özelliklerinde aynı özellik özelliği değerlerini eklemekle aynı kuralın aynı zamanda doğrudan özellik dosyasına eklenen özellikler için de geçerli olduğunu unutmayın.
+ Özellik dosyasını doğrudan özellik dosyasına (*. feature*) eklemek için [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint nesne modeli yöntemini çağırın <xref:Microsoft.VisualStudio.SharePoint.Features.IPropertyCollection.Add%2A> . Bu yöntemi kullanırsanız, özellik özelliklerinde aynı özellik özelliği değerlerini eklemekle aynı kuralın aynı zamanda doğrudan özellik dosyasına eklenen özellikler için de geçerli olduğunu unutmayın.
 
 ## <a name="feature-receiver"></a>Özellik alıcısı
  Özellik alıcıları, bir proje öğesinin içeren özelliği için belirli olaylar gerçekleştiğinde yürütülen koddur. Örneğin, özellik yüklendiğinde, etkinleştirildiğinde veya yükseltildiğinde yürütülen Özellik alıcılarını tanımlayabilirsiniz. Özellik alıcısı eklemenin bir yolu, bunu [Izlenecek yol: özellik Olay alıcıları ekleme](../sharepoint/walkthrough-add-feature-event-receivers.md)bölümünde açıklandığı gibi doğrudan bir özelliğe eklemektir. Başka bir yöntem **de özellik alıcısı özelliğindeki bir** özellik alıcısı sınıf adına ve derlemesine başvurulmanız.
@@ -68,9 +68,9 @@ ms.locfileid: "72984208"
 ### <a name="reference-method"></a>Reference yöntemi
  Özellik alıcısı eklemenin başka bir yolu da bir özellik alıcısı derlemesine başvurmak için bir proje öğesinin **özellik alıcısı** özelliğini kullanmaktır. Özellik alıcısı Özellik değeri iki alt özelliğe sahiptir: **derleme** ve **sınıf adı**. Derlemenin tam olarak nitelenmiş, "Strong" adını kullanması ve sınıf adının tam tür adı olması gerekir. Daha fazla bilgi için bkz. [Strong-adlandırılmış derlemeler](/previous-versions/dotnet/netframework-4.0/wd40t7ad(v=vs.100)). Çözümü SharePoint 'e dağıttıktan sonra, Özellik olayları işlemek için başvurulan özellik alıcısını kullanır.
 
- Çözüm derleme zamanında, özellikte ve projelerinde özellik alıcı özelliği değerleri, SharePoint çözümü ( *. wsp*) dosyasının özellik bildiriminde özellik öğesinin ReceiverAssembly ve ReceiverClass özniteliklerini ayarlamak için birlikte birleştirilir. Bu nedenle, bir proje öğesi ve bir özelliğin derleme ve sınıf adı özellik değerleri belirtilirse, proje öğesi ve özellik özelliği değerleri eşleşmelidir. Değerler eşleşmiyorsa, bir doğrulama hatası alırsınız. Bir proje öğesinin özelliği tarafından kullanılan bir özellik alıcısı derlemesine başvurması istiyorsanız, onu başka bir özelliğe taşıyın.
+ Çözüm derleme zamanında, özellikte ve projelerinde özellik alıcı özelliği değerleri, SharePoint çözümü (*. wsp*) dosyasının özellik bildiriminde özellik öğesinin ReceiverAssembly ve ReceiverClass özniteliklerini ayarlamak için birlikte birleştirilir. Bu nedenle, bir proje öğesi ve bir özelliğin derleme ve sınıf adı özellik değerleri belirtilirse, proje öğesi ve özellik özelliği değerleri eşleşmelidir. Değerler eşleşmiyorsa, bir doğrulama hatası alırsınız. Bir proje öğesinin özelliği tarafından kullanılan bir özellik alıcısı derlemesine başvurması istiyorsanız, onu başka bir özelliğe taşıyın.
 
- Zaten sunucuda olmayan bir özellik alıcısı derlemesine başvuru yaparsanız, derleme dosyasının kendisini pakete da dahil etmeniz gerekir; [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sizin için eklemez. Özelliği dağıttığınızda, derleme dosyası, sistem [!INCLUDE[TLA#tla_gac](../sharepoint/includes/tlasharptla-gac-md.md)] veya SharePoint fiziksel dizinindeki bin klasörüne kopyalanır. Daha fazla bilgi için bkz. nasıl yapılır: [nasıl yapılır: ek derlemeler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-additional-assemblies.md).
+ Zaten sunucuda olmayan bir özellik alıcısı derlemesine başvuru yaparsanız, derleme dosyasının kendisini pakete da dahil etmeniz gerekir; [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bunu sizin için eklemez. Özelliği dağıttığınızda, derleme dosyası, sistemin [!INCLUDE[TLA#tla_gac](../sharepoint/includes/tlasharptla-gac-md.md)] veya SharePoint fiziksel dizinindeki bin klasörüne kopyalanır. Daha fazla bilgi için bkz. nasıl yapılır: [nasıl yapılır: ek derlemeler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-additional-assemblies.md).
 
  Özellik alıcıları hakkında daha fazla bilgi için bkz. [özellik olay alıcısı](/previous-versions/office/developer/sharepoint-2007/bb862634(v=office.12)) ve [Özellik olayları](/previous-versions/office/developer/sharepoint-2010/ms469501(v=office.14)).
 
@@ -84,7 +84,7 @@ ms.locfileid: "72984208"
 ## <a name="safe-control-entries"></a>Güvenli denetim girdileri
  SharePoint, güvenilmeyen kullanıcıların erişimini belirli denetimlere sınırlamak için güvenli denetim girişleri adlı bir güvenlik mekanizması sağlar. Tasarım, SharePoint 'e güvenilmeyen kullanıcıların, SharePoint sunucusunda ASPX sayfaları yüklemesine ve oluşturmalarına olanak tanır. Bu kullanıcıların ASPX sayfalarına güvenli olmayan kod eklemesini engellemek için, SharePoint *güvenli denetimlere*erişimini sınırlandırır. Güvenli denetimler, sitenizdeki herhangi bir kullanıcı tarafından kullanılabilen ve güvenli olarak belirlenmiş olan ASPX denetimleridir ve Web bölümleridir. Daha fazla bilgi için bkz. [4. Adım: Web bölümünü güvenli denetimler listesine ekleme](/previous-versions/office/developer/sharepoint-2007/ms581321(v=office.12)).
 
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] içindeki her SharePoint proje öğesi, iki Boolean alt özelliğine sahip olan **Güvenli denetim girişleri** adlı bir özelliğe sahiptir: **betikte** **güvenli** ve güvenlidir. Safe özelliği, güvenilmeyen kullanıcıların bir denetime erişip erişemeyeceğini belirtir. Betik özelliği açısından güvenli, güvenilmeyen kullanıcıların bir denetimin özelliklerini görüntüleyip değiştiremeyeceğini belirtir.
+ İçindeki her SharePoint proje öğesi, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Iki Boolean alt özelliğine sahip **Güvenli denetim girişleri** adlı bir özelliğe sahiptir: **betikte** **güvenli** ve güvenlidir. Safe özelliği, güvenilmeyen kullanıcıların bir denetime erişip erişemeyeceğini belirtir. Betik özelliği açısından güvenli, güvenilmeyen kullanıcıların bir denetimin özelliklerini görüntüleyip değiştiremeyeceğini belirtir.
 
  Güvenli denetim girişlerine bir derleme temelinde başvurulur. Proje öğesinin **Güvenli denetim girişleri** özelliğine girerek bir projenin derlemesine güvenli denetim girişleri eklersiniz. Ancak, pakete ek bir derleme eklediğinizde, **paket Tasarımcısı** ' nda **Gelişmiş** sekmesi aracılığıyla bir projenin derlemesine güvenli denetim girişleri de ekleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: denetimleri güvenli denetim olarak işaretleme](../sharepoint/how-to-mark-controls-as-safe-controls.md) veya [bir Web Bölümü derlemesini güvenli denetim olarak kaydetme](/previous-versions/office/developer/sharepoint2003/dd587360(v=office.11)).
 

@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 261ee4aee81eef06294c8fe2393d56663957b27a
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85465103"
 ---
 # <a name="idiastackframeget_functionstart"></a>IDiaStackFrame::get_functionStart
@@ -33,7 +33,7 @@ HRESULT get_functionStart ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE`Yığın çerçevesi bir işlevin giriş noktasını içeriyorsa döndürür; Aksi takdirde, döndürür `FALSE` .
+dışı `TRUE` Yığın çerçevesi bir işlevin giriş noktasını içeriyorsa döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` . `S_FALSE`Özelliğin desteklenip desteklenmediğini döndürür. Aksi takdirde, bir hata kodu döndürür.

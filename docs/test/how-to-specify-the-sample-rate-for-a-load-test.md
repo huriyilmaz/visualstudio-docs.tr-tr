@@ -9,10 +9,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ab77354226028397d5875137ed331860a4b32925
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287395"
 ---
 # <a name="how-to-specify-the-sample-rate-for-a-load-test-run-setting"></a>Nasıl yapılır: bir yük testi çalışma ayarı için örnek hızı belirtme
@@ -29,7 +29,7 @@ Yük testinizin uzunluğuna bağlı olarak yük testi çalışma ayarı için **
 
 |Yük testi süresi|Önerilen örnek hızı|
 |-|-----------------------------|
-|\<1 saat|5 saniye|
+|\< 1 saat|5 saniye|
 |1-8 saat|15 saniye|
 |8-24 saat|30 saniye|
 |> 24 saat|60 saniye|

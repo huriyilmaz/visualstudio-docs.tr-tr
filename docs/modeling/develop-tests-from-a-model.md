@@ -10,14 +10,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2981d510b5f56b89a2cb68d1a6bee93222d71b3b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75596664"
 ---
 # <a name="develop-tests-from-a-model"></a>Model aracılığıyla test geliştirme
-Sistem ve bileşenlerinin testlerini düzenlemenize yardımcı olması için gereksinimleri ve mimari modelleri kullanabilirsiniz. Bu uygulama, kullanıcılar ve diğer paydaşlar için önemli olan gereksinimleri test etmenize yardımcı olur ve gereksinimler değiştiğinde testleri hızlı bir şekilde güncelleştirmenize yardımcı olur. [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]kullanıyorsanız, modeller ve testler arasındaki bağlantıları da tutabilirsiniz.
+Sistem ve bileşenlerinin testlerini düzenlemenize yardımcı olması için gereksinimleri ve mimari modelleri kullanabilirsiniz. Bu uygulama, kullanıcılar ve diğer paydaşlar için önemli olan gereksinimleri test etmenize yardımcı olur ve gereksinimler değiştiğinde testleri hızlı bir şekilde güncelleştirmenize yardımcı olur. Kullanıyorsanız [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] , modeller ve testler arasındaki bağlantıları da koruyabilirsiniz.
 
  Visual Studio 'nun hangi sürümlerinin bu özellikleri desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -36,7 +36,7 @@ Sistem ve bileşenlerinin testlerini düzenlemenize yardımcı olması için ger
  Sistem testleri ve gereksinimler modeli arasında bir ilişki oluşturabilir ve bakımını yapabilirsiniz. Bu ilişkiyi oluşturmak için, gereksinimler modelinin ana öğelerine karşılık gelen testleri yazarsınız. Visual Studio, modelin testleri ve bölümleri arasında bağlantılar oluşturmanıza izin vererek ilişkiyi korumanıza yardımcı olur. Gereksinim modelleri hakkında daha fazla bilgi için bkz. [model Kullanıcı gereksinimleri](../modeling/model-user-requirements.md).
 
 ### <a name="write-tests-for-each-use-case"></a>Her kullanım örneği için test yazma
- [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]kullanıyorsanız, gereksinim modelinizde tanımladığınız her kullanım örneği için bir test grubu oluşturabilirsiniz. Örneğin, sipariş oluştur ve sipariş Ekle öğelerini içeren bir yemek kullanım örneği siparişiniz varsa, bu kullanım örneklerinin her ikisi için de test oluşturabilirsiniz.
+ Kullanıyorsanız [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] , gereksinim modelinizde tanımladığınız her kullanım örneği için bir test grubu oluşturabilirsiniz. Örneğin, sipariş oluştur ve sipariş Ekle öğelerini içeren bir yemek kullanım örneği siparişiniz varsa, bu kullanım örneklerinin her ikisi için de test oluşturabilirsiniz.
 
  Bu yönergeler yararlı olabilir:
 
@@ -53,13 +53,13 @@ Sistem ve bileşenlerinin testlerini düzenlemenize yardımcı olması için ger
 - Testleri tasarlarken, sonkoşulun gerçekleştirilip gerçekleştirilmediğini belirleyen koddan veya betikten test verilerinin seçimini ayırın. Örneğin, basit bir aritmetik işlevin testi şu şekilde olabilir: giriş 4; çıkışın 2 olduğunu doğrulayın. Bunun yerine betiği şu şekilde tasarlayın: bir giriş seçin; çıktıyı kendisiyle çarpın ve sonucun özgün giriş olduğunu doğrulayın. Bu stil, testin ana gövdesini değiştirmeden test girişlerinin değiştirilmesini sağlar.
 
 #### <a name="linking-tests-to-use-cases"></a>Testleri kullanım örneklerine bağlama
- Testlerinizi tasarlamak ve çalıştırmak için [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] kullanıyorsanız, testlerinizi gereksinim, kullanım durumu veya Kullanıcı hikayesi iş öğeleri altında düzenleyebilirsiniz. Bu iş öğelerini modelinizdeki kullanım taleplerine bağlayabilirsiniz. Bu, testlerin gereksinim değişikliklerini hızlıca izlemenizi sağlar ve her kullanım örneğinin ilerlemesini izlemenize yardımcı olur.
+ [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]Testlerinizi tasarlamak ve çalıştırmak için kullanıyorsanız, testlerinizi gereksinim, kullanım durumu veya Kullanıcı hikayesi iş öğeleri altında düzenleyebilirsiniz. Bu iş öğelerini modelinizdeki kullanım taleplerine bağlayabilirsiniz. Bu, testlerin gereksinim değişikliklerini hızlıca izlemenizi sağlar ve her kullanım örneğinin ilerlemesini izlemenize yardımcı olur.
 
 ###### <a name="to-link-tests-to-a-use-case"></a>Testleri kullanım örneğine bağlamak için
 
-1. [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)], bir gereksinim oluşturun ve üzerinde bir test paketi temel alır.
+1. İçinde [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] , bir gereksinim oluşturun ve üzerinde bir test paketi temel alır.
 
-    Oluşturduğunuz gereksinim, [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)]bir iş öğesidir. Projenizin Team Foundation ile kullandığı işlem şablonuna bağlı olarak, bir kullanıcı hikayesi, gereksinim veya kullanım örneği iş öğesi olabilir. Daha fazla bilgi için bkz. [Çevik Araçlar ve çevik proje yönetimi hakkında](/azure/devops/boards/backlogs/backlogs-overview?view=vsts).
+    Oluşturduğunuz gereksinim içindeki bir iş öğesidir [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] . Projenizin Team Foundation ile kullandığı işlem şablonuna bağlı olarak, bir kullanıcı hikayesi, gereksinim veya kullanım örneği iş öğesi olabilir. Daha fazla bilgi için bkz. [Çevik Araçlar ve çevik proje yönetimi hakkında](/azure/devops/boards/backlogs/backlogs-overview?view=vsts).
 
 2. Gereksinim iş öğesini modelinizdeki bir veya daha fazla kullanım durumuna bağlayın.
 
@@ -128,10 +128,10 @@ Assert (countAfter == countBefore = 1);
 
  Bir test noktasından, gereksinimler modeli testler için bir toplu değer olarak görülebilir. Bu nedenle, proje genelinde testler ve modeller arasındaki ilişkinin korunması önemlidir.
 
-## <a name="Attaching"></a>Model öğelerine test durumları iliştirme
- Projeniz [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]kullanıyorsa, testlerinizi modelinizdeki öğelere bağlayabilirsiniz. Bu, gereksinimlerdeki bir değişiklikten etkilenen testleri hızlı bir şekilde bulmanıza olanak sağlar ve bir gereksinimin gerçekleştirilme kapsamını izlemenize yardımcı olur.
+## <a name="attaching-test-cases-to-model-elements"></a><a name="Attaching"></a> Model öğelerine test durumları iliştirme
+ Projeniz kullanıyorsa [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] , testlerinizi modelinizdeki öğelere bağlayabilirsiniz. Bu, gereksinimlerdeki bir değişiklikten etkilenen testleri hızlı bir şekilde bulmanıza olanak sağlar ve bir gereksinimin gerçekleştirilme kapsamını izlemenize yardımcı olur.
 
- Testleri tüm öğe türlerine bağlayabilirsiniz. Bazı örnekler şunlardır:
+ Testleri tüm öğe türlerine bağlayabilirsiniz. İşte bazı örnekler:
 
 - Kullanım örneğini, onu uygulayan testlere bağlayın.
 
@@ -145,9 +145,9 @@ Assert (countAfter == countBefore = 1);
 
 #### <a name="to-link-tests-to-a-model-element-or-relationship"></a>Testleri model öğesine veya ilişkiye bağlamak için
 
-1. [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)], bir gereksinim oluşturun ve üzerinde bir test paketi temel alır.
+1. İçinde [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] , bir gereksinim oluşturun ve üzerinde bir test paketi temel alır.
 
-    Oluşturduğunuz gereksinim, [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)]bir iş öğesidir. Projenizin Team Foundation ile kullandığı işlem şablonuna bağlı olarak, bir kullanıcı hikayesi, gereksinim veya kullanım örneği iş öğesi olabilir. Daha fazla bilgi için bkz. [Çevik Araçlar ve çevik proje yönetimi hakkında](/azure/devops/boards/backlogs/backlogs-overview?view=vsts).
+    Oluşturduğunuz gereksinim içindeki bir iş öğesidir [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] . Projenizin Team Foundation ile kullandığı işlem şablonuna bağlı olarak, bir kullanıcı hikayesi, gereksinim veya kullanım örneği iş öğesi olabilir. Daha fazla bilgi için bkz. [Çevik Araçlar ve çevik proje yönetimi hakkında](/azure/devops/boards/backlogs/backlogs-overview?view=vsts).
 
 2. Gereksinim iş öğesini modelinizdeki bir veya daha fazla öğeye bağlayın.
 

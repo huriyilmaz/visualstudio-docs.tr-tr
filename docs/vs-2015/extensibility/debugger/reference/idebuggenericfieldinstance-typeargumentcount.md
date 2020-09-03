@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericFieldInstance::TypeArgumentCount | Microsoft Docs
+title: 'Idebuggenericfieldınstance:: TypeArgumentCount | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 80c2aea4130fe7de0208d4c40b0f01afed06eecf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180851"
 ---
 # <a name="idebuggenericfieldinstancetypeargumentcount"></a>IDebugGenericFieldInstance::TypeArgumentCount
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu örnek için parametre bağımsız değişkenlerini türünün sayısını döndürür.  
+Bu örnek için tür parametresi bağımsız değişkenlerinin sayısını döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT TypeArgumentCount(  
@@ -39,13 +39,13 @@ int TypeArgumentCount(
   
 #### <a name="parameters"></a>Parametreler  
  `pcArgs`  
- [out içinde] Tür parametresi bağımsız değişkenleri için bu örneği sayısı.  
+ [in, out] Bu örnek için tür parametresi bağımsız değişkenlerinin sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Örneğin, liste\<int >, bu yöntem, 1 döndürür ve liste\<int, float2 > 2 Bu yöntemi döndürür. Bu yöntem, hiçbir tür bağımsız değişkenleri yoksa 0 döndürür.  
+ Örneğin, liste ise \<int> , bu yöntem 1 değerini döndürür ve eğer liste \<int,float2> Bu yöntemin 2 değerini döndürürse. Bu yöntem, hiçbir tür bağımsız değişkeni yoksa 0 döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugGenericFieldInstance](../../../extensibility/debugger/reference/idebuggenericfieldinstance.md)

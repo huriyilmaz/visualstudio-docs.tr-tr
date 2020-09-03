@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 783f7fad05cad18efea2f83b6d76c4c9e644f119
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548388"
 ---
 # <a name="ca1414-mark-boolean-pinvoke-arguments-with-marshalas"></a>CA1414: Boolean P/Invoke bağımsız değişkenlerini MarshalAs ile işaretleyin
@@ -36,7 +36,7 @@ ms.locfileid: "85548388"
  Platform çağırma yöntemi bildirimi bir <xref:System.Boolean?displayProperty=fullName> parametre veya dönüş değeri içeriyor, ancak <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=fullName> öznitelik parametreye veya dönüş değerine uygulanmıyor.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Platform çağırma yöntemi yönetilmeyen koda erişir ve `Declare` içindeki veya içinde anahtar sözcüğü kullanılarak tanımlanır [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> . <xref:System.Runtime.InteropServices.MarshalAsAttribute>yönetilen ve yönetilmeyen kod arasında veri türlerini dönüştürmek için kullanılan sıralama davranışını belirtir. Ve gibi birçok basit veri türü, <xref:System.Byte?displayProperty=fullName> <xref:System.Int32?displayProperty=fullName> yönetilmeyen kodda tek bir gösterimine sahiptir ve sıralama davranışının belirtimini gerektirmez; ortak dil çalışma zamanı, doğru davranışı otomatik olarak sağlar.
+ Platform çağırma yöntemi yönetilmeyen koda erişir ve `Declare` içindeki veya içinde anahtar sözcüğü kullanılarak tanımlanır [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> . <xref:System.Runtime.InteropServices.MarshalAsAttribute> yönetilen ve yönetilmeyen kod arasında veri türlerini dönüştürmek için kullanılan sıralama davranışını belirtir. Ve gibi birçok basit veri türü, <xref:System.Byte?displayProperty=fullName> <xref:System.Int32?displayProperty=fullName> yönetilmeyen kodda tek bir gösterimine sahiptir ve sıralama davranışının belirtimini gerektirmez; ortak dil çalışma zamanı, doğru davranışı otomatik olarak sağlar.
 
  <xref:System.Boolean>Veri türünün yönetilmeyen kodda birden çok temsili vardır. Belirtilmediğinde, <xref:System.Runtime.InteropServices.MarshalAsAttribute> veri türü için varsayılan sıralama davranışı <xref:System.Boolean> olur <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName> . Bu, tüm koşullarda uygun olmayan 32 bitlik bir tamsayıdır. Yönetilmeyen yöntemin gerektirdiği Boolean temsili, uygun şekilde belirlenmeli ve eşleştirilir <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName> . UnmanagedType. bool, her zaman 4 bayt olan Win32 BOOL türüdür. UnmanagedType. U1 C++ `bool` veya diğer 1 baytlık türler için kullanılmalıdır. Daha fazla bilgi için bkz. [Boole türleri Için varsayılan sıralama](https://msdn.microsoft.com/d4c00537-70f7-4ca6-8197-bfc1ec037ff9).
 

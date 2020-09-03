@@ -1,5 +1,5 @@
 ---
-title: DEBUG_REFERENCE_INFO | Microsoft Dokümanlar
+title: DEBUG_REFERENCE_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 6e31205f52151679f932877c9c4fdc56907ea59e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737406"
 ---
 # <a name="debug_reference_info"></a>DEBUG_REFERENCE_INFO
-Bir başvuru açıklar.
+Bir başvuruyu açıklar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct tagDEBUG_REFERENCE_INFO {
@@ -53,35 +53,35 @@ public struct DEBUG_REFERENCE_INFO {
 
 ## <a name="members"></a>Üyeler
 `dwFields`\
-Hangi alanların [doldurulduğuna](../../../extensibility/debugger/reference/debugref-info-flags.md) DEBUGREF_INFO_FLAGS numaralandırmadaki bayrakların birleşimi.
+[DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) Numaralandırmadaki, doldurulacak alanları belirten bayrakların birleşimi.
 
 `bstrName`\
 [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesinin kullanıcı tarafından belirtilen adı.
 
 `bstrType`\
-Biçimlendirilmiş dize olarak başvuru türü.
+Bir biçimli dize olarak başvuru türü.
 
 `bstrValue`\
-Biçimlendirilmiş dize olarak başvuru değeri
+Bir biçimli dize olarak başvuru değeri
 
 `dwAttrib`\
-Hata ayıklama özelliği öznitelikleri için bayrakları belirten [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) numaralandırma bayraklarının birleşimi.
+Hata ayıklama özelliği özniteliklerinin bayraklarını belirten [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) numaralandırmasındaki bayrakların birleşimi.
 
 `dwRefType`\
-Başvuru türünün güçlü veya zayıf olup olmadığını belirten [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) numaralandırma değeri.
+[REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) numaralandırmasından, başvuru türünün güçlü veya zayıf olduğunu belirten bir değer.
 
 `m_pReference`\
 Başvuru bilgilerini belirten bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı doldurulmak üzere [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) yöntemine bir çağrıya geçirilir. Bu yapı aynı zamanda, sırayla, [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) yöntemine bir çağrı döndürülür [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md) arabiriminden bir listenin bir parçası olarak döndürülür.
+Bu yapı, doldurulacak [Getreferenceınfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) metoduna yapılan çağrıya geçirilir. Bu yapı Ayrıca, [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md) arabiriminden bir listenin parçası olarak da döndürülür, bu da [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) yöntemine yapılan çağrıdan döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

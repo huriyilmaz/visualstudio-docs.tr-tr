@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramEx2::GetProgramNode | Microsoft Docs
+title: 'IDebugProgramEx2:: GetProgramNode | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: caf3ef288a98d538c94702cf18f2cba8b7b87c20
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68181994"
 ---
 # <a name="idebugprogramex2getprogramnode"></a>IDebugProgramEx2::GetProgramNode
@@ -24,7 +24,7 @@ ms.locfileid: "68181994"
 
 Bir programla ilişkili program düğümünü alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetProgramNode(   
@@ -40,10 +40,10 @@ int GetProgramNode( 
   
 #### <a name="parameters"></a>Parametreler  
  `ppProgramNode`  
- [out] Döndürür bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) bu programla ilişkili program düğümünü temsil eden nesne.  
+ dışı Bu programla ilişkili program düğümünü temsil eden bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)   
