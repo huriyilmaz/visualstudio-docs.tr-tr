@@ -8,10 +8,10 @@ ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
 ms.topic: overview
 ms.openlocfilehash: 09a761a8269fa40c3fab49a34b3e43a7f0ec63cd
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85939073"
 ---
 # <a name="debugging-with-visual-studio-for-mac"></a>Mac için Visual Studio ile hata ayıklama
@@ -30,7 +30,7 @@ Mac için Visual Studio, tüm Xamarin uygulamalarındaki yönetilen (C# veya F #
 
 ## <a name="using-the-debugger"></a>Hata ayıklayıcıyı kullanma
 
-Herhangi bir uygulamada hata ayıklamaya başlamak için yapılandırmanın **hata ayıklama**olarak ayarlandığından emin olun. Hata ayıklama yapılandırması, kesme noktaları, veri görselleştiricileri kullanma ve çağrı yığınını görüntüleme gibi hata ayıklamayı desteklemek için faydalı bir araç kümesi sağlar:
+Herhangi bir uygulamada hata ayıklamaya başlamak için yapılandırmanın  **hata ayıklama**olarak ayarlandığından emin olun. Hata ayıklama yapılandırması, kesme noktaları, veri görselleştiricileri kullanma ve çağrı yığınını görüntüleme gibi hata ayıklamayı desteklemek için faydalı bir araç kümesi sağlar:
 
 ![Hata ayıklama yapılandırması](media/debugging-image_0.png)
 
@@ -51,7 +51,7 @@ Hata ayıklamayı başlatmak için hedef tarayıcı, cihaz veya simülatör/öyk
 ![Hata ayıklama yapılandırması ](media/debugging-image_0.png)
  ![ hedef cihaz Seç](media/debugging-image1.png)
 
-Ardından **oynat** düğmesine veya **cmd + Return**tuşuna basarak uygulamanızı dağıtın. Bir kesme noktasına ulaştığınızda, kod sarı olarak vurgulanır:
+Ardından  **oynat** düğmesine veya  **cmd + Return**tuşuna basarak uygulamanızı dağıtın. Bir kesme noktasına ulaştığınızda, kod sarı olarak vurgulanır:
 
 ![Kesme noktasının isabet olduğunu Vurgula](media/debugging-image2.png)
 
@@ -61,13 +61,13 @@ Kodunuzda neler olduğunu öğrenmek için, bu noktada, nesnelerin değerlerini 
 
 ## <a name="conditional-breakpoints"></a>Koşullu kesme noktaları
 
-Ayrıca, bir kesme noktası olması gereken koşulları görüntüleyen kuralları ayarlayabilirsiniz, bu durum, *koşullu kesme noktası*ekleme olarak bilinir. Koşullu kesme noktası ayarlamak için **kesme noktası Özellikler penceresi**erişin ve bu iki şekilde yapılabilir:
+Ayrıca, bir kesme noktası olması gereken koşulları görüntüleyen kuralları ayarlayabilirsiniz, bu durum, *koşullu kesme noktası*ekleme olarak bilinir. Koşullu kesme noktası ayarlamak için  **kesme noktası Özellikler penceresi**erişin ve bu iki şekilde yapılabilir:
 
 * Yeni bir koşullu kesme noktası eklemek için, bir kesme noktası ayarlamak istediğiniz kodun sol tarafındaki Düzenleyici kenar boşluğuna sağ tıklayın ve yeni kesme noktası ' nı seçin:
 
  ![Kesme noktası bağlam menüsü](media/debugging-image4.png)
 
-* Varolan bir kesme noktasına koşul eklemek için, kesme noktasına sağ tıklayın ve **kesme noktası özellikleri**' ni seçin ya da **kesme noktaları panelinde**aşağıda gösterilen kesme noktasını Düzenle düğmesini seçin:
+* Varolan bir kesme noktasına koşul eklemek için, kesme noktasına sağ tıklayın ve  **kesme noktası özellikleri**' ni seçin ya da  **kesme noktaları panelinde**aşağıda gösterilen kesme noktasını Düzenle düğmesini seçin:
 
  ![Kesme noktaları panelinde mevcut kesme noktasını Düzenle](media/debugging-image5.png)
 
@@ -103,7 +103,7 @@ Xamarin ürünleri, mono 'ın sınıf kitaplıkları için kaynak kodla birlikte
 
 Bu özellik hata ayıklama sırasında daha fazla bellek tükettiği için varsayılan olarak kapalıdır.
 
-Bu özelliği etkinleştirmek için, **Mac için Visual Studio > tercihleri > hata ayıklayıcıya** gidin ve aşağıda gösterildiği gibi "**dış koda adımla**" seçeneğinin **seçildiğinden**emin olun:
+Bu özelliği etkinleştirmek için,  **Mac için Visual Studio > tercihleri > hata ayıklayıcıya** gidin ve aşağıda gösterildiği gibi "**dış koda adımla**" seçeneğinin **seçildiğinden**emin olun:
 
 ![Dış koda adımla seçeneği](media/debugging-image8.png)
 

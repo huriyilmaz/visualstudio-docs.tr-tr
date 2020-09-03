@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::GetGlobalContainer | Microsoft Dokümanlar
+title: 'IDebugMethodField:: GetGlobalContainer | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 37e3b26a265fe651216e46fa299bdd827416b8ce
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727128"
 ---
 # <a name="idebugmethodfieldgetglobalcontainer"></a>IDebugMethodField::GetGlobalContainer
-Yöntemin genel kapsayıcısını alır.
+Metodun genel kapsayıcısını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetGlobalContainer(
@@ -41,13 +41,13 @@ int GetGlobalContainer(
 
 ## <a name="parameters"></a>Parametreler
 `ppClass`\
-[çıkış] Bu yöntemin tanımlandığı modülü temsil eden bir [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) döndürür.
+dışı Bu yöntemin tanımlandığı modülü temsil eden bir [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Döndürülen [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) nesnesi tüm modülü temsil eder ve yapay bir nesnedir, yani modülün kendisi `IDebugClassField` gerçek bir sınıfa sahip değildir, ancak modülün çeşitli öğelerinin numaralandırılmalarına ve keşfedilmelerine izin veren bir nesne tarafından temsil edilebilir.
+ Döndürülen [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) nesnesi Modülün tamamını temsil eder ve yapay bir nesnedir, diğer bir deyişle, modülün kendisi gerçek bir sınıfa sahip değildir ancak bir nesne tarafından temsil edilebilir, bu da `IDebugClassField` modülün çeşitli öğelerinin numaralandırılmasına ve keşfedilmesini sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

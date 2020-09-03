@@ -9,13 +9,13 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: f730484ade07689f2a50e19a263adbcd10693151
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85282702"
 ---
-# <a name="could-not-retrieve-schema-information-for-database-object-object-name"></a>Veritabanı nesnesi için şema bilgileri alınamadı\<object name>
+# <a name="could-not-retrieve-schema-information-for-database-object-object-name"></a>Veritabanı nesnesi için şema bilgileri alınamadı \<object name>
 
 Bu ileti genellikle **Sunucu Gezgini** veya **veritabanı Gezgini** içindeki bir nesne panoya kopyalandığında, veritabanından silindiğinde ve sonra tasarımcıya yapıştırılırken görüntülenir. Veritabanı nesnesi artık mevcut olmadığından, bu ileti görünür.
 

@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a62b4df06d1c180a6a6d62b0231dce1136fb8059
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288981"
 ---
 # <a name="itemgroup-element-msbuild"></a>ItemGroup öğesi (MSBuild)
@@ -55,13 +55,13 @@ Kullanıcı tanımlı [öğe](../msbuild/item-element-msbuild.md) öğeleri küm
 
 ### <a name="child-elements"></a>Alt öğeleri
 
-|Öğe|Description|
+|Öğe|Açıklama|
 |-------------|-----------------|
 |[Öğe](../msbuild/item-element-msbuild.md)|Yapı işlemi için girişleri tanımlar. İçinde sıfır veya daha fazla `Item` öğe olabilir `ItemGroup` .|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
-| Öğe | Description |
+| Öğe | Açıklama |
 | - | - |
 | [Project](../msbuild/project-element-msbuild.md) | MSBuild proje dosyasının gerekli kök öğesi. |
 | [Hedef](../msbuild/target-element-msbuild.md) | .NET Framework 3,5 ' den başlayarak, `ItemGroup` öğe bir öğe içinde görünebilir `Target` . Daha fazla bilgi için bkz. [hedefler](../msbuild/msbuild-targets.md). |
@@ -96,5 +96,5 @@ ItemGroups özniteliği kullanılarak uygulanmış koşullara sahip olabilir `Co
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
-- [Öğeleri](../msbuild/msbuild-items.md)
-- [Ortak MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)
+- [Öğeler](../msbuild/msbuild-items.md)
+- [Yaygın MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)

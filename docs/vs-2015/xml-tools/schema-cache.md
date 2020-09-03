@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d590bf618693a5ced1aa17969b888c0fff130c4c
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77476956"
 ---
 # <a name="schema-cache"></a>Şema Önbelleği
@@ -21,29 +21,29 @@ ms.locfileid: "77476956"
 
 XML Düzenleyicisi,%InstallRoot%\Xml\Schemas dizininde bulunan bir şema önbelleği sağlar. Şema önbelleği, bilgisayarınızdaki tüm kullanıcılara geneldir ve IntelliSense ve XML belge doğrulaması için kullanılan standart XML şemalarını içerir.
 
- XML Düzenleyicisi, çözüm içinde bulunan şemaları, belge **özellikleri** penceresinin **şemalar** alanında belirtilen şemaları ve `xsi:schemaLocation` ve `xsi:noNamespaceSchemaLocation` öznitelikleri tarafından tanımlanan şemaları da bulabilir.
+ XML Düzenleyicisi çözümde bulunan şemaları, belge **özellikleri** penceresinin **şemalar** alanında belirtilen şemaları ve ve öznitelikleri tarafından tanımlanan şemaları da bulabilir `xsi:schemaLocation` `xsi:noNamespaceSchemaLocation` .
 
  Aşağıdaki tablo, XML Düzenleyicisi ile yüklenen şemaları açıklar.
 
-|     Kısaltın      |                                                      Açıklama                                                      |
+|     Kısaltın      |                                                      Description                                                      |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------|
 |    Catalog. xsd    |             XML Düzenleyicisi şema kataloğu dosyaları için şema. Şema katalogları hakkında daha fazla bilgi için aşağıya bakın.             |
-| DotNetConfig. xsd  |                 Web. config dosyaları için şema, `http://schemas.microsoft.com/.NETConfiguration/v2.0`.                 |
-|    MSBuild. xsd    |              MSBuild Make dosyaları için şema `http://schemas.microsoft.com/developer/msbuild/2003`.              |
-|    msdata.xsd     | <xref:System.Data.DataSet> sınıfı tarafından eklenen XSD ek açıklamaları için şema, "urn: schemas-microsoft-com: XML-msdata". |
+| DotNetConfig. xsd  |                 Web.Config dosyaları için şema `http://schemas.microsoft.com/.NETConfiguration/v2.0` .                 |
+|    MSBuild. xsd    |              MSBuild Make dosyaları için şema `http://schemas.microsoft.com/developer/msbuild/2003` .              |
+|    msdata. xsd     | <xref:System.Data.DataSet>"Urn: schemas-microsoft-com: XML-msdata" sınıfı tarafından eklenen xsd ek açıklamaların şeması. |
 |     msxsl. xsd     |                  Microsoft XSLT betik bloğu uzantıları, urn: schemas-microsoft-com: XSLT şeması.                   |
-| SnippetFormat. xsd |                 Kod parçacığı XML dosyaları için şema. Örnekler için bkz .% InstallDir% \VC#\ expansions.                 |
-|    Soap 1.1. xsd    |            Basit nesne erişim Protokolü (SOAP) 1,1 için şema `http://schemas.xmlsoap.org/soap/envelope/`.            |
+| SnippetFormat. xsd |                 Kod parçacığı XML dosyaları için şema. Örnekler için bkz .%InstallDir%\VC # \Expansions.                 |
+|    Soap 1.1. xsd    |            Basit nesne erişim Protokolü (SOAP) 1,1 için şema `http://schemas.xmlsoap.org/soap/envelope/` .            |
 |    Soap 1.2. xsd    |                                     Basit nesne erişim Protokolü 1,2 şeması.                                     |
-| SiteMapSchema. xsd |            ASP.NET sitemap XML dosyası için şema `http://schemas.microsoft.com/AspNet/SiteMap-File-1.0`.             |
-|     WSDL. xsd      |                    Web hizmeti Açıklama Dili için şema, `http://schemas.xmlsoap.org/wsdl/`.                     |
-|     XENC. xsd      |                            XML şifreleme şeması, `http://www.w3.org/2000/09/xmldsig#`.                             |
-|     XHTML. xsd     |                                    XHTML `http://www.w3.org/1999/xhtml`şeması.                                     |
-|     XLink. xsd     |                                  XLink 1.0 için şema `http://www.w3.org/1999/xlink`.                                   |
-|      XML. xsd      |              XML: Space ve XML: lang özniteliklerini tanımlayan şema `http://www.w3.org/XML/1998/namespace`.               |
-|    xmlsig. xsd     |                        XML dijital Imzaları için şema, `http://www.w3.org/2000/09/xmldsig#`.                         |
-|   XSDSchema. xsd   |                            XSD kendisini tanımlayan şema `http://www.w3.org/2001/XMLSchema`.                            |
-|     xslt.xsd      |                           XML dönüşümleri için şema, `http://www.w3.org/1999/XSL/Transform`.                            |
+| SiteMapSchema. xsd |            ASP.NET sitemap XML dosyası için şema `http://schemas.microsoft.com/AspNet/SiteMap-File-1.0` .             |
+|     WSDL. xsd      |                    Web hizmeti Açıklama Dili için şema, `http://schemas.xmlsoap.org/wsdl/` .                     |
+|     XENC. xsd      |                            XML şifrelemesi için şema, `http://www.w3.org/2000/09/xmldsig#` .                             |
+|     XHTML. xsd     |                                    XHTML şeması `http://www.w3.org/1999/xhtml` .                                     |
+|     XLink. xsd     |                                  XLink 1.0 için şema, `http://www.w3.org/1999/xlink` .                                   |
+|      XML. xsd      |              XML: Space ve XML: lang özniteliklerini tanımlayan şema `http://www.w3.org/XML/1998/namespace` .               |
+|    xmlsig. xsd     |                        XML dijital Imzaları için şema, `http://www.w3.org/2000/09/xmldsig#` .                         |
+|   XSDSchema. xsd   |                            XSD kendisini tanımlayan şema `http://www.w3.org/2001/XMLSchema` .                            |
+|     XSLT. xsd      |                           XML dönüşümleri için şema `http://www.w3.org/1999/XSL/Transform` .                            |
 
 ## <a name="updating-schemas-in-the-cache"></a>Önbellekteki şemaları güncelleştirme
  Düzenleyici, XML Düzenleyicisi paketi yüklendiğinde şema önbellek dizinini yükler ve çalışırken herhangi bir değişikliği izler. Bir şema eklendiyse, bu, bilinen şemaların bellek içi dizinine otomatik olarak yüklenir. Bir şema kaldırılmışsa, bellek içi dizinden otomatik olarak kaldırılır. Bir şema güncellendiyse, bu şemanın bellek içi önbelleğini otomatik olarak geçersiz kılar.
@@ -51,7 +51,7 @@ XML Düzenleyicisi,%InstallRoot%\Xml\Schemas dizininde bulunan bir şema önbell
 > [!NOTE]
 > Şema önbellek dizini bilgisayarınız için genel olduğundan, burada yalnızca standart olan ve bilgisayarınızda oluşturulabilen tüm Visual Studio projelerine yararlı olan şemaları eklemeniz gerekir.
 
- XML Düzenleyicisi, şema önbellek dizinindeki herhangi bir sayıda şema kataloğu dosyasını da destekler. Şema katalogları, her zaman düzenleyicinin bilmesini istediğiniz şemalar için diğer konumlara işaret edebilir. Catalog. xsd dosyası, katalog dosyasının biçimini tanımlar ve şema önbellek dizinine dahildir. Catalog. xml dosyası varsayılan kataloğudur ve% InstallDir% içindeki diğer şemaların bağlantılarını içerir. Catalog. xml dosyasının örneklemesi aşağıda verilmiştir:
+ XML Düzenleyicisi, şema önbellek dizinindeki herhangi bir sayıda şema kataloğu dosyasını da destekler. Şema katalogları, her zaman düzenleyicinin bilmesini istediğiniz şemalar için diğer konumlara işaret edebilir. Catalog. xsd dosyası, katalog dosyasının biçimini tanımlar ve şema önbellek dizinine dahildir. catalog.xml dosyası varsayılan katalogdur ve% InstallDir% içindeki diğer şemaların bağlantılarını içerir. catalog.xml dosyasının örneklemesi aşağıda verilmiştir:
 
 ```
 <SchemaCatalog xmlns="http://schemas.microsoft.com/xsd/catalog">
@@ -61,7 +61,7 @@ XML Düzenleyicisi,%InstallRoot%\Xml\Schemas dizininde bulunan bir şema önbell
 </SchemaCatalog>
 ```
 
- `href` özniteliği, şemaya işaret eden herhangi bir dosya yolu veya HTTP URL 'SI olabilir. Dosya yolu, Katalog belgesine göreli olabilir. %% Tarafından ayrılan şu değişkenler, düzenleyici tarafından tanınır ve yolda genişletilir:
+ `href`Öznitelik, şemaya işaret eden herhangi bir dosya yolu veya HTTP URL 'si olabilir. Dosya yolu, Katalog belgesine göreli olabilir. %% Tarafından ayrılan şu değişkenler, düzenleyici tarafından tanınır ve yolda genişletilir:
 
 - InstallDir
 
@@ -79,22 +79,22 @@ XML Düzenleyicisi,%InstallRoot%\Xml\Schemas dizininde bulunan bir şema önbell
 
 - LCID
 
-  Katalog belgesi, diğer kataloglara işaret eden bir `Catalog` öğesi içerebilir. Ekip veya şirketiniz tarafından paylaşılan bir merkezi kataloğa veya iş ortaklarınızla paylaşılan bir çevrimiçi kataloğa işaret etmek için `Catalog` öğesini kullanabilirsiniz. `href` özniteliği, diğer katalogların dosya yolu veya HTTP URL 'sidir. `Catalog` öğesinin bir örneği aşağıda verilmiştir:
+  Katalog belgesi `Catalog` , diğer kataloglara işaret eden bir öğe içerebilir. `Catalog`Öğesini ekibiniz veya şirketiniz tarafından paylaşılan bir merkezi kataloğa veya iş ortaklarınızla paylaşılan bir çevrimiçi kataloğa işaret etmek için kullanabilirsiniz. `href`Özniteliği, diğer katalogların dosya yolu veya HTTP URL 'sidir. Aşağıda, öğesinin bir örneği verilmiştir `Catalog` :
 
 ```
 <Catalog href="file://c:/xcbl/xcblCatalog.xml"/>
 ```
 
- Katalog, şemaların özel `Association` öğesi kullanılarak XML belgeleriyle nasıl ilişkilendirildiğini de denetleyebilir. Bu öğe, belirli bir dosya uzantısına sahip hiçbir hedef ad alanı olmayan şemaları ilişkilendirir, çünkü XML Düzenleyicisi `targetNamespace` özniteliği olmayan şemaların otomatik ilişkilendirmesini yapmaz. Aşağıdaki örnekte `Association` öğesi dotNetConfig şemasını "config" dosya uzantısına sahip tüm dosyalarla ilişkilendirir:
+ Katalog, şemaların özel öğe kullanılarak XML belgeleriyle nasıl ilişkilendirildiğini de denetleyebilir `Association` . Bu öğe, belirli bir dosya uzantısına sahip hiçbir hedef ad alanı olmayan şemaları ilişkilendirir. Bu, XML Düzenleyicisi bir özniteliği olmayan şemaların hiçbir otomatik ilişkilendirmesini yapamadığı için faydalı olabilir `targetNamespace` . Aşağıdaki örnekte, `Association` öğesi dotNetConfig şemasını "config" dosya uzantısına sahip tüm dosyalarla ilişkilendirir:
 
 ```
 <Association extension="config" schema="%InstallDir%/xml/schemas/dotNetConfig.xsd"/>
 ```
 
 ## <a name="localized-schemas"></a>Yerelleştirilmiş şemalar
- Çoğu durumda, Catalog. xml dosyası yerelleştirilmiş şemalar için giriş içermez. Yerelleştirilmiş şema dizinine işaret eden Catalog. xml dosyasına ek girişler ekleyebilirsiniz.
+ Çoğu durumda catalog.xml dosyası yerelleştirilmiş şemalar için giriş içermez. Yerelleştirilmiş şema dizinine işaret eden catalog.xml dosyasına ek girdiler ekleyebilirsiniz.
 
- Aşağıdaki örnekte yerelleştirilmiş şemayı işaret etmek için% LCıD% değişkenini kullanan yeni bir `Schema` öğesi oluşturulmuştur.
+ Aşağıdaki örnekte `Schema` yerelleştirilmiş şemayı işaret etmek için% LCID% değişkenini kullanan yeni bir öğe oluşturulmuştur.
 
 ```xml
 <Schema href="%InstallRoot%/Common7/IDE/Policy/Schemas/%LCID%/TDLSchema.xsd"
@@ -119,9 +119,9 @@ XML Düzenleyicisi,%InstallRoot%\Xml\Schemas dizininde bulunan bir şema önbell
 
 #### <a name="to-add-another-directory-of-common-schemas"></a>Ortak şemaların başka bir dizinini eklemek için
 
-1. XML düzenleyici şeması önbellek dizinindeki Catalog. xml dosyasını düzenleyin.
+1. XML düzenleyici şeması önbellek dizinindeki catalog.xml dosyasını düzenleyin.
 
-2. Ek şemaların dizinine işaret eden yeni bir `<Catalog href="…"/>` öğesi ekleyin.
+2. `<Catalog href="…"/>`Ek şemaların dizinine işaret eden yeni bir öğesi ekleyin.
 
 3. Yaptığınız değişiklikleri kaydedin.
 

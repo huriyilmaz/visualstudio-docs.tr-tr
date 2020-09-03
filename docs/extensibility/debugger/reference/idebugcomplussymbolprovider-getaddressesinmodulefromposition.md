@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition | Microsoft Dokümanlar
+title: 'IDebugComPlusSymbolProvider:: GetAddressesInModuleFromPosition | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +15,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f7295d49faa8799731a13f500b31d436df6dc66a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734037"
 ---
 # <a name="idebugcomplussymbolprovidergetaddressesinmodulefromposition"></a>IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition
-Belirtilen modüldeki belge konumunu hata ayıklama adresleri dizisiyle eşler.
+Belirtilen modüldeki bir belge konumunu hata ayıklama adresleri dizisine eşler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetAddressesInModuleFromPosition(
@@ -50,28 +50,28 @@ int GetAddressesInModuleFromPosition(
 
 ## <a name="parameters"></a>Parametreler
 `ulAppDomainID`\
-[içinde] Uygulama etki alanı tanımlayıcısı.
+'ndaki Uygulama etki alanı tanımlayıcısı.
 
 `guidModule`\
-[içinde] Modülün benzersiz tanımlayıcısı.
+'ndaki Modülün benzersiz tanıtıcısı.
 
 `pDocPos`\
-[içinde] Belge konumu.
+'ndaki Belge konumu.
 
 `fStatmentOnly`\
-[içinde] Hata `TRUE`ayıklama adreslerini tek bir ifadeyle sınırlarsa.
+'ndaki İse `TRUE` , hata ayıklama adreslerini tek bir deyimle sınırlandırır.
 
 `ppEnumBegAddresses`\
-[çıkış] Bu deyim veya satırla ilişkili başlangıç hata ayıklama adresleri için bir sayısalatör döndürür.
+dışı Bu deyimle veya satırla ilişkili başlangıç hata ayıklama adresleri için bir Numaralandırıcı döndürür.
 
 `ppEnumEndAddresses`\
-[çıkış] Bu deyim veya satırla ilişkili son hata ayıklama adresleri için bir sayısalatör döndürür.
+dışı Bu deyimle veya satırla ilişkilendirilen son hata ayıklama adresleri için bir Numaralandırıcı döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini ortaya çıkaran bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+ Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetAddressesInModuleFromPosition(

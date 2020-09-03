@@ -21,10 +21,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 960ebb94cf03ef293011645e732a0f0379d0fd47
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75852242"
 ---
 # <a name="setenv-task"></a>SetEnv Görevi
@@ -39,11 +39,11 @@ Belirtilen ortam değişkeninin değerini ayarlar veya siler.
 |---------------|-----------------|  
 |**Ad**|Gerekli **dize** parametresi.<br /><br /> Ortam değişkeninin adı.|  
 |**OutputEnvironmentVariable**|İsteğe bağlı **dize** çıkış parametresi.<br /><br /> **Ad** parametresiyle belirtilen ortam değişkenine atanan değeri içerir.|  
-|**Koy**|Zorunlu `Boolean` parametresi.<br /><br /> `true`, **değer** parametresinin değerini, **ad** parametresiyle belirtilen ortam değişkeni değerinden önce birleştirir ve sonra sonucu ortam değişkenine atar. `false`, ortam değişkenine yalnızca **Value** parametresinin değerini atar.|  
-|**Hedef**|İsteğe bağlı **dize** parametresi.<br /><br /> Bir ortam değişkeninin depolandığı konumu belirtir. "`User`" veya "`Machine`" belirtin.<br /><br /> Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "EnvironmentVariableTarget numaralandırması" konusuna bakın.|  
+|**Ön ek**|Zorunlu `Boolean` parametre.<br /><br /> İse `true` , **değer** parametresinin değerini, **ad** parametresiyle belirtilen ortam değişkeni değerinden önce birleştirir ve sonra sonucu ortam değişkenine atar. İse `false` , ortam değişkenine yalnızca **Value** parametresinin değerini atar.|  
+|**Hedef**|İsteğe bağlı **dize** parametresi.<br /><br /> Bir ortam değişkeninin depolandığı konumu belirtir. " `User` " Veya " `Machine` " belirtin.<br /><br /> Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "EnvironmentVariableTarget numaralandırması" konusuna bakın.|  
 |**Değer**|İsteğe bağlı **dize** parametresi.<br /><br /> **Name** parametresiyle belirtilen ortam değişkenine atanan değer. **Değer** boşsa ve değişken varsa, değişken silinir. Değişken yoksa, işlem gerçekleştirilemediği halde bir hata oluşmaz.<br /><br /> Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesinde "Environment:: SetEnvironmentVariable yöntemi" başlığına bakın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görev Başvurusu](../msbuild/msbuild-task-reference.md)
+ [Görev başvurusu](../msbuild/msbuild-task-reference.md)

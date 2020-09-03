@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e9fa22a4ed52c3e0a1afdda0105716c0de9b3316
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851821"
 ---
 # <a name="property-pages-javascript"></a>Özellik Sayfaları, JavaScript
@@ -40,7 +40,7 @@ ms.locfileid: "75851821"
 
  **Yapılandırma** Görüntülenecek veya değiştirilecek yapılandırma ayarlarını belirtir. Ayarlar **hata ayıklama** (varsayılan), **yayın**, **tüm yapılandırmalar**veya Kullanıcı tanımlı bir yapılandırmadır. Daha fazla bilgi için bkz. [hata ayıklama ve yayın projesi yapılandırması](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e).
 
- **Platform** Görüntülenecek veya değiştirilecek platform ayarlarını belirtir. Ayarlar **herhangi BIR CPU** ([!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] uygulamalar için varsayılan), **x64**, **ARM**, **x86**veya Kullanıcı tanımlı bir platform. Daha fazla bilgi için bkz. [hata ayıklama ve yayın projesi yapılandırması](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e).
+ **Platform** Görüntülenecek veya değiştirilecek platform ayarlarını belirtir. Ayarlar **herhangi BIR CPU** (uygulamalar için varsayılan [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] ), **x64**, **ARM**, **x86**veya Kullanıcı tanımlı bir platform. Daha fazla bilgi için bkz. [hata ayıklama ve yayın projesi yapılandırması](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e).
 
 ## <a name="general-page"></a>Genel sayfa
  Projenin genel özelliklerini ayarlamak için aşağıdaki seçenekleri kullanın.
@@ -70,7 +70,7 @@ ms.locfileid: "75851821"
 
   **Uygulamayı Başlat** F5 tuşuna bastığınızda veya **Hata Ayıkla**, **hata ayıklamayı Başlat**' a tıkladığınızda uygulamanın başlatılıp başlatılmayacağını belirtir. Uygulamayı başlatmak için **Evet** ' i seçin; Aksi takdirde **Hayır**' ı seçin. **Hayır**' ı seçerseniz, uygulamayı başlatmak için farklı bir yöntem kullanıyorsanız uygulamada hata ayıklamaya devam edebilirsiniz.
 
-  **Hata ayıklayıcı türü** Hata ayıklaması yapılacak kod türlerini belirtir. JavaScript kodunda hata ayıklamak için **yalnızca betiği** seçin. Yalnızca ortak dil çalışma zamanı tarafından yönetilen kodda hata ayıklama için **yönetilen** ' ı seçin. **Yalnızca** hata ayıklama C++ kodunda yerel ' i seçin. Hata ayıklama C++ ve JavaScript için **betiği ile yerel** ' i seçin. Hem yönetilen hem de C++ kodun hatalarını ayıklamak için **karışık (yönetilen ve yerel)** seçeneğini belirleyin.
+  **Hata ayıklayıcı türü** Hata ayıklaması yapılacak kod türlerini belirtir. JavaScript kodunda hata ayıklamak için **yalnızca betiği** seçin. Yalnızca ortak dil çalışma zamanı tarafından yönetilen kodda hata ayıklama için **yönetilen** ' ı seçin. C++ kodunda hata ayıklamak için **yalnızca yerel** ' i seçin. C++ ve JavaScript hatalarını ayıklamak için **betiği Ile yerel** ' i seçin. Hem yönetilen hem de C++ kodunda hata ayıklamak için **karışık (yönetilen ve yerel)** seçeneğini belirleyin.
 
   **Yerel ağ geri döngüsüne Izin ver** Uygulama testi için IP geri döngü adresine erişime izin verilip verilmeyeceğini belirtir. İstemci uygulaması, sunucu uygulamasının çalıştığı makinada ise geri döngü adresinin kullanılmasına izin vermek için **Evet** ' i seçin; Aksi takdirde **Hayır**' ı seçin. Bu özellik yalnızca, **başlatma Için hata ayıklayıcı** özelliği **uzak makine**olarak ayarlanırsa kullanılabilir.
 

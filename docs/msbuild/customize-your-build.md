@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6c52c6b584db94ff3cbe8dc041c00ebe969c9faf
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288942"
 ---
 # <a name="customize-your-build"></a>Derlemenizi özelleştirme
@@ -111,7 +111,7 @@ MSBuild 'in genel yaklaşımının Özeti aşağıdaki gibidir:
 - MSBuild, belirli bir proje için ilk dizini bulur *. Build. props* öğesini çözüm yapısında yukarı doğru birleştirir, varsayılana göre birleştirir ve daha fazlasını taramayı durduruyor
 - Birden çok düzeyin bulunmasını ve birleştirilmesini istiyorsanız, [`<Import...>`](../msbuild/property-functions.md#msbuild-getpathoffileabove) "iç" dosyadan "dış" dosya
 - "Dış" dosya kendisine ait bir şeyi de içeri aktarmadıysanız, tarama bunu durdur
-- Tarama/birleştirme işlemini denetlemek için `$(DirectoryBuildPropsPath)` ve kullanın`$(ImportDirectoryBuildProps)`
+- Tarama/birleştirme işlemini denetlemek için `$(DirectoryBuildPropsPath)` ve kullanın `$(ImportDirectoryBuildProps)`
 
 Ya da daha fazla: herhangi bir şeyi içeri aktarmaz ilk *Dizin. Build. props* , MSBuild 'in durduğu yerdir.
 
@@ -123,7 +123,7 @@ Açık içeri aktarmalar kullanılırken, herhangi bir noktada bir *. props* vey
 
 - *. props* dosyaları içeri aktarma sırasında erken içeri aktarılır.
 
-- *. targets* dosyaları, derleme sırasında geç alınır.
+- *. targets*  dosyaları, derleme sırasında geç alınır.
 
 Bu kural `<Project Sdk="SdkName">` içeri aktarmalar tarafından zorlanır (yani, *SDK. props* 'ın içe aktarılması ilk olarak, dosyanın tüm içeriğiyle önce gelir ve ardından *SDK. targets* , dosyanın tüm içeriğinden sonra, son olarak gelir.
 

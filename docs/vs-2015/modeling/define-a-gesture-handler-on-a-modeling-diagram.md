@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: af4123b24ab9286e306a1034de4416a31ae76f2b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533074"
 ---
 # <a name="define-a-gesture-handler-on-a-modeling-diagram"></a>Modelleme diyagramında hareket işleyicisi tanımlama
@@ -74,7 +74,7 @@ Visual Studio 'da, kullanıcının öğeleri bir UML diyagramına çift tıklad�
 
     `System.Windows.Forms`
 
-    `Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer`– Buna yalnızca Katman diyagramlarını uzatıyorsunuz yapmanız gerekir. Daha fazla bilgi için bkz. [Katman diyagramlarını genişletme](../modeling/extend-layer-diagrams.md).
+    `Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer` – Buna yalnızca Katman diyagramlarını uzatıyorsunuz yapmanız gerekir. Daha fazla bilgi için bkz. [Katman diyagramlarını genişletme](../modeling/extend-layer-diagrams.md).
 
 3. Projeye bir sınıf dosyası ekleyin ve içeriğini aşağıdaki koda ayarlayın.
 
@@ -230,7 +230,7 @@ Visual Studio 'da, kullanıcının öğeleri bir UML diyagramına çift tıklad�
 
          **Proje**  =  *Sınıf kitaplığı projeniz*
 
-## <a name="executing-the-gesture-handler"></a><a name="Executing"></a>Hareket Işleyicisini yürütme
+## <a name="executing-the-gesture-handler"></a><a name="Executing"></a> Hareket Işleyicisini yürütme
  Test amaçları için, hareket işleyicinizi hata ayıklama modunda yürütün.
 
 #### <a name="to-test-the-gesture-handler"></a>Hareket işleyicisini test etmek için
@@ -243,7 +243,7 @@ Visual Studio 'da, kullanıcının öğeleri bir UML diyagramına çift tıklad�
 
    - Birden çok projeniz varsa, VSıX projesinin çözümün başlangıç projesi olarak ayarlandığından emin olun.
 
-   - Çözüm Gezgini, başlangıç veya yalnızca projenin kısayol menüsünde Özellikler ' i seçin. Proje özellikleri düzenleyicisinde **Hata Ayıkla** sekmesini seçin. **dış program Başlat** alanındaki dizenin, genellikle tam yol adı olduğundan emin olun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] :
+   - Çözüm Gezgini, başlangıç veya yalnızca projenin kısayol menüsünde Özellikler ' i seçin. Proje özellikleri düzenleyicisinde **Hata Ayıkla** sekmesini seçin. **Dış program Başlat** alanındaki dizenin, genellikle tam yol adı olduğundan emin olun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] :
 
         `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
@@ -265,16 +265,16 @@ Visual Studio 'da, kullanıcının öğeleri bir UML diyagramına çift tıklad�
 
 - Bu tür hedef ve bırakılan öğe için önceden tanımlanmış bir yerleşik işlev yok.
 
-## <a name="implementing-the-gesture-handler"></a><a name="Implementing"></a>Hareket Işleyicisini uygulama
+## <a name="implementing-the-gesture-handler"></a><a name="Implementing"></a> Hareket Işleyicisini uygulama
 
 ### <a name="the-gesture-handler-methods"></a>Hareket Işleyici yöntemleri
  Hareket işleyicisi sınıfı uygular ve dışarı aktarır <xref:Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement.IGestureExtension> . Tanımlamanız gereken yöntemler şunlardır:
 
-|İmza|Açıklama|
+|İmza|Description|
 |-|-|
 |`bool CanDragDrop (ShapeElement target, DiagramDragEventArgs dragEvent)`|`true`İçinde başvurulan kaynak öğenin bu hedefte bırakılmasına izin vermek için geri dönün `dragEvent` .<br /><br /> Bu yöntem modelde değişiklik yapmamalıdır. Kullanıcı fareyi taşırken ok durumunu belirlemede kullanıldığından, bu değer hızlı bir şekilde çalışmalıdır.|
 |`void OnDragDrop (ShapeElement target, DiagramDragEventArgs dragEvent)`|İçinde başvurulan kaynak nesnesine ve hedefe göre modeli güncelleştirin `dragEvent` .<br /><br /> Kullanıcı fareyi sürüklemeye sonra bıraktığında çağırılır.|
-|`void OnDoubleClick (ShapeElement target, DiagramPointEventArgs pointEvent)`|`target`kullanıcının çift tıkladığını şekildir.|
+|`void OnDoubleClick (ShapeElement target, DiagramPointEventArgs pointEvent)`|`target` kullanıcının çift tıkladığını şekildir.|
 
  Dosyalar, .NET Sınıf görünümündeki düğümler gibi çok çeşitli diğer öğeleri de yalnızca UML değil de kabul edebilecek işleyiciler yazabilirsiniz. Kullanıcı bu öğelerden herhangi birini bir UML diyagramına sürükleyebilir, bu da `OnDragDrop` öğelerin seri hale getirilmiş biçimini çözebilen bir yöntem yazmanızı sağladı. Kod çözme yöntemleri bir öğe türünden diğerine farklılık gösterir.
 
@@ -282,7 +282,7 @@ Visual Studio 'da, kullanıcının öğeleri bir UML diyagramına çift tıklad�
 
 - `ShapeElement target`. Kullanıcının üzerine bir şeyi sürüklemiş olduğu şekil veya diyagram.
 
-    `ShapeElement`, UML modelleme araçlarının temelini oluşturan uygulamadaki bir sınıftır. UML model ve diyagramlarını tutarsız bir duruma getirme riskini azaltmak için bu sınıfın yöntemlerini doğrudan kullanmanızı öneririz. Bunun yerine, öğesini bir içinde sarın `IShape` ve [DIYAGRAMDA bir UML modeli görüntüleme](../modeling/display-a-uml-model-on-diagrams.md)bölümünde açıklanan yöntemleri kullanın.
+    `ShapeElement` , UML modelleme araçlarının temelini oluşturan uygulamadaki bir sınıftır. UML model ve diyagramlarını tutarsız bir duruma getirme riskini azaltmak için bu sınıfın yöntemlerini doğrudan kullanmanızı öneririz. Bunun yerine, öğesini bir içinde sarın `IShape` ve [DIYAGRAMDA bir UML modeli görüntüleme](../modeling/display-a-uml-model-on-diagrams.md)bölümünde açıklanan yöntemleri kullanın.
 
   - Şunu almak için `IShape` :
 
@@ -348,7 +348,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
  Daha fazla bilgi için bkz. [UML modeline gitme](../modeling/navigate-the-uml-model.md).
 
-## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a>Uzantı yükleme ve kaldırma
+## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a> Uzantı yükleme ve kaldırma
  Bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] uzantıyı, hem kendi bilgisayarınıza hem de diğer bilgisayarlara yükleyebilirsiniz.
 
 #### <a name="to-install-an-extension"></a>Uzantı yüklemek için
@@ -381,7 +381,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
    *% LocalAppData%* **\Local\microsoft\visualstudio \\ [sürüm] \Extensions**
 
-## <a name="example"></a><a name="DragExample"></a>Örneğinde
+## <a name="example"></a><a name="DragExample"></a> Örneğinde
  Aşağıdaki örnek, bir bileşen diyagramından sürüklenen bir bileşenin bölümlerine ve bağlantı noktalarına bağlı olarak bir sıralı diyagramda Yaşam çizgilerinin nasıl oluşturulacağını gösterir.
 
  Test etmek için F5 'e basın. Visual Studio 'nun deneysel bir örneği açılır. Bu örnekte, bir UML modeli açın ve bileşen diyagramında bir bileşen oluşturun. Bu bileşene bazı arabirimler ve iç bileşen bölümleri ekleyin. Arabirimleri ve parçaları seçin. Ardından arabirimleri ve parçaları sıralı diyagram üzerine sürükleyin. (Sıralı diyagram için bileşen diyagramından sekmeye kadar sürükleyin ve sonra sıralı diyagramda aşağı taşıyın.) Her arabirim ve bölüm için bir yaşam çizgisi görüntülenir.

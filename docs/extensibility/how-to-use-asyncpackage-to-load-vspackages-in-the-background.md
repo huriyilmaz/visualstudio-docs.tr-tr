@@ -8,14 +8,14 @@ ms.author: anthc
 ms.workload:
 - vssdk
 ms.openlocfilehash: 7727d53c84ab876fe6616c8ec5d438033216481e
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905601"
 ---
 # <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>Nasıl yapılır: arka planda VSPackages yüklemek için AsyncPackage kullanma
-VS paketini yükleme ve başlatma, disk g/ç ile sonuçlanabilir. Bu tür g/ç, UI iş parçacığında gerçekleşdiğinde, yanıt hızı sorunlarına yol açabilir. Visual Studio 2015, <xref:Microsoft.VisualStudio.Shell.AsyncPackage> bir arka plan iş parçacığında paket yüklemeyi sağlayan sınıfı kullanıma sunmuştur.
+VS paketini yükleme ve başlatma, disk g/ç ile sonuçlanabilir. Bu tür g/ç, UI iş parçacığında gerçekleşdiğinde, yanıt hızı sorunlarına yol açabilir. Visual Studio 2015,  <xref:Microsoft.VisualStudio.Shell.AsyncPackage> bir arka plan iş parçacığında paket yüklemeyi sağlayan sınıfı kullanıma sunmuştur.
 
 ## <a name="create-an-asyncpackage"></a>AsyncPackage oluşturma
  Bir VSIX projesi oluşturarak**başlayabilir (**  >  **Yeni**  >  **Proje**  >  **Visual C#**  >  **genişletilebilirlik**  >  **VSIX projesi**) ve projeye VSPackage **ekleyebilirsiniz**(projeye sağ tıklayıp  >  **Yeni öğe**Ekle  >  **C# öğe**  >  **genişletilebilirlik**  >  **Visual Studio paketi**). Daha sonra hizmetlerinizi oluşturabilir ve bu hizmetleri paketinize ekleyebilirsiniz.

@@ -14,18 +14,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d09a251dc5f98080b317e1560423dcb7c8bf0805
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72619306"
 ---
 # <a name="configuring-warnings-in-visual-basic"></a>Visual Basic'teki Uyarıları Yapılandırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_0 derleyicisi, çalışma zamanı hatalarına neden olabilecek kodla ilgili bir uyarı kümesi içerir. Daha az hata ile temizleyici, daha hızlı ve daha iyi kod yazmak için bu bilgileri kullanabilirsiniz. Örneğin, Kullanıcı atanmamış bir nesne değişkeninin bir üyesini çağırmayı denediğinde bir uyarı üretir, dönüş değerini ayarlamadan bir işlevden geri dönüş veya özel durumları yakalamak için mantığdaki hatalarla birlikte `Try` bir blok yürütmez.
+[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]Derleyici, çalışma zamanı hatalarına neden olabilecek kodla ilgili bir uyarı kümesi içerir. Daha az hata ile temizleyici, daha hızlı ve daha iyi kod yazmak için bu bilgileri kullanabilirsiniz. Örneğin, Kullanıcı atanmamış bir nesne değişkeninin bir üyesini çağırmayı denediğinde bir uyarı oluşturur, dönüş değerini ayarlamadan bir işlevden geri dönüş veya `Try` özel durumları yakalamak için mantığdaki hatalarla bir blok yürütmez.
 
- Bazen derleyici Kullanıcı adına ek mantık sağlar, böylece Kullanıcı, benimsemeyi bekleme olası hatalar yerine her seferinde bir göreve odaklanabilir. Önceki [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] sürümlerinde, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] derleyicisinin sağladığı ek mantığı sınırlandırmak için `Option Strict` kullanılmıştır. Uyarıları yapılandırmak, bu mantığı bireysel uyarıların düzeyinde daha ayrıntılı bir şekilde sınırlamanıza olanak tanır.
+ Bazen derleyici Kullanıcı adına ek mantık sağlar, böylece Kullanıcı, benimsemeyi bekleme olası hatalar yerine her seferinde bir göreve odaklanabilir. Önceki sürümlerinde [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] , `Option Strict` derleyicinin sağladığı ek mantığı sınırlandırmak için kullanılmıştır [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] . Uyarıları yapılandırmak, bu mantığı bireysel uyarıların düzeyinde daha ayrıntılı bir şekilde sınırlamanıza olanak tanır.
 
  Projenizi özelleştirmek ve diğer uyarıları hatalara karşı yaparken uygulamanız için gerekli olan bazı uyarıları kapatmak isteyebilirsiniz. Bu sayfada, tek tek uyarıların nasıl kapatılacağı ve kapatılacağı açıklanmaktadır.
 
@@ -34,15 +34,15 @@ ms.locfileid: "72619306"
 
  **Proje Tasarımcısı** sayfasının **Derle** sekmesi, uyarıları açıp kapatmanızı sağlar. Tüm uyarıları devre dışı bırakmak için **tüm uyarıları devre dışı bırak** onay kutusunu seçin; Tüm uyarıları hata olarak değerlendirmek için **tüm uyarıları hata olarak değerlendir** ' i seçin. Bazı ayrı uyarılar, görüntülenmiş tabloda istendiği gibi hata veya uyarı olarak değiştirilebilir.
 
- **Option Strict** **devre dışı**olarak ayarlandığında, kesin ilgili uyarı **seçeneği** birbirinden bağımsız olarak kabul edilemez. **Option Strict** **Açık**olarak ayarlandığında, ilişkili uyarılar, durumu ne olduğuna bakılmaksızın hata olarak değerlendirilir. **Option Strict** , komut satırı derleyicisinde `/optionstrict:custom` belirterek **özel** olarak ayarlandığında, **kesin** uyarılar bağımsız olarak açık veya kapalı olabilir.
+ **Option Strict** **devre dışı**olarak ayarlandığında, kesin ilgili uyarı **seçeneği** birbirinden bağımsız olarak kabul edilemez. **Option Strict** **Açık**olarak ayarlandığında, ilişkili uyarılar, durumu ne olduğuna bakılmaksızın hata olarak değerlendirilir. **Option Strict** **Custom** `/optionstrict:custom` , komut satırı derleyicisinde belirtilerek özel olarak ayarlandığında, **kesin** uyarılar bağımsız olarak açık veya kapalı olabilir.
 
- Derleyicinin **/warnaserror** komut satırı seçeneği, uyarıların hata olarak değerlendirilip değerlendirilmeyeceğini belirtmek için de kullanılabilir. \+ Veya-kullanarak hangi uyarıların hata veya uyarı olarak değerlendirileceğini belirtmek için bu seçeneğe virgülle ayrılmış bir liste ekleyebilirsiniz. Aşağıdaki tabloda olası seçenekler ayrıntılı olarak verilmiştir.
+ Derleyicinin **/warnaserror** komut satırı seçeneği, uyarıların hata olarak değerlendirilip değerlendirilmeyeceğini belirtmek için de kullanılabilir. + Veya-kullanarak hangi uyarıların hata veya uyarı olarak değerlendirileceğini belirtmek için bu seçeneğe virgülle ayrılmış bir liste ekleyebilirsiniz. Aşağıdaki tabloda olası seçenekler ayrıntılı olarak verilmiştir.
 
-|Komut satırı seçeneği|Belirler|
+|Komut satırı araçları|Belirler|
 |--------------------------|---------------|
 |`/warnaserror+`|Tüm uyarıları hata olarak değerlendir|
-|`/warnsaserror`-|Hata olarak uyarı olarak davranmayın. Bu varsayılandır.|
-|`/warnaserror+:<warning list``>`|Belirli uyarıları, virgülle ayrılmış bir liste r içinde kendi hata KIMLIĞI numarası ile listelenmiş hata olarak değerlendirin.|
+|`/warnsaserror`-|Hata olarak uyarı olarak davranmayın. Bu varsayılan seçenektir.|
+|`/warnaserror+:<warning list` `>`|Belirli uyarıları, virgülle ayrılmış bir liste r içinde kendi hata KIMLIĞI numarası ile listelenmiş hata olarak değerlendirin.|
 |`/warnaserror-:<warning list>`|Belirli uyarıları hata olarak değerlendirmeyin ve hata KIMLIK numarası, virgülle ayrılmış bir liste ile listelenir.|
 |`/nowarn`|Uyarı bildirme.|
 |`/nowarn:<warning list>`|Belirtilen uyarıları, kendi hata KIMLIĞI numarasına göre, virgülle ayrılmış bir listede bildirmeyin.|
@@ -65,7 +65,7 @@ ms.locfileid: "72619306"
  Hata olarak değerlendirmek isteyebileceğiniz uyarıların listesi aşağıda verilmiştir.
 
 ### <a name="implicit-conversion-warning"></a>Örtük dönüştürme uyarısı
- Örtük dönüştürme örnekleri için oluşturulur. @No__t_0 işleci kullanılırken, iç sayısal türden bir dizeye örtük dönüştürmeler eklemeyin. Yeni projeler için varsayılan değer kapalıdır.
+ Örtük dönüştürme örnekleri için oluşturulur. İşleci kullanılırken, iç sayısal türden bir dizeye örtük dönüştürmeler eklemeyin `&` . Yeni projeler için varsayılan değer kapalıdır.
 
  KIMLIK: 42016
 
@@ -75,12 +75,12 @@ ms.locfileid: "72619306"
  KIMLIK: 42017
 
 ### <a name="operands-of-type-object-warnings"></a>Nesne uyarıları türündeki işlenenler
- @No__t_1 ile bir hata oluşturacak tür işlenenleri `Object` oluştuğunda üretilir. Yeni projeler için varsayılan değer açık.
+ Türünde `Object` bir hata oluşturacak tür işlenenleri oluştuğunda üretilir `Option Strict On` . Yeni projeler için varsayılan değer açık.
 
  KIMLIK: 42018 ve 42019
 
 ### <a name="declarations-require-as-clause-warnings"></a>Bildirimler ' As ' yan tümce uyarıları gerektirir
- Bir `As` yan tümcesi olmayan bir değişken, işlev veya özellik bildirimi `Option Strict On` ile bir hata oluşturacaksa oluşturulur. Kendisine atanmış bir türü olmayan değişkenlerin türü `Object` olarak kabul edilir. Yeni projeler için varsayılan değer açık.
+ Bir yan tümce olmayan bir değişken, işlev veya özellik bildirimi `As` ile bir hata oluşturacaksa oluşturulur `Option Strict On` . Kendisine atanmış bir türü olmayan değişkenlerin tür olduğu varsayılır `Object` . Yeni projeler için varsayılan değer açık.
 
  KIMLIK: 42020 (değişken bildirimi), 42021 (işlev bildirimi) ve 42022 (özellik bildirimi).
 
@@ -105,17 +105,17 @@ ms.locfileid: "72619306"
  KIMLIK: 42004 (işleç), 42026 (özellik)
 
 ### <a name="function-or-operator-without-return-value-warning"></a>Dönüş değeri olmayan işlev veya Işleç uyarısı
- İşlevin veya işlecin belirtilen bir dönüş değeri olmadığında üretilir. Bu, işlevle aynı ada sahip örtük yerel değişkene bir `Set` atlama içerir. Yeni projeler için varsayılan değer açık.
+ İşlevin veya işlecin belirtilen bir dönüş değeri olmadığında üretilir. Bu, `Set` işlevle aynı ada sahip örtük yerel değişkene bir ile atlama içerir. Yeni projeler için varsayılan değer açık.
 
  KIMLIK: 42105 (işlev), 42016 (işleç)
 
 ### <a name="overloads-modifier-used-in-a-module-warning"></a>Modül uyarısında kullanılan aşırı yükleme değiştiricisi
- Bir `Module` `Overloads` kullanıldığında oluşturulur. Yeni projeler için varsayılan değer açık.
+ `Overloads`Bir içinde kullanıldığında oluşturulur `Module` . Yeni projeler için varsayılan değer açık.
 
  KIMLIK: 42028
 
 ### <a name="duplicate-or-overlapping-catch-blocks-warnings"></a>Yinelenen veya çakışan catch blokları uyarıları
- Tanımlı diğer `Catch` bloklarıyla ilişkili olduğundan `Catch` bloğuna hiçbir zaman ulaşılmadığında oluşturulur. Yeni projeler için varsayılan değer açık.
+ `Catch`Tanımlı diğer bloklarla ilişkili olduğundan hiçbir zaman bir bloğa ulaşılmadığında oluşturulur `Catch` . Yeni projeler için varsayılan değer açık.
 
  KIMLIK: 42029, 42031
 

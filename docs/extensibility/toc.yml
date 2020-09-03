@@ -24,7 +24,7 @@
       href: set-install-root.md
     - name: Hata ayıklayıcı COM kaydını geçirme
       href: migrate-debugger-com-registration.md
-    - name: Sıkça Sorulan Sorular
+    - name: Sık Sorulan Sorular
       href: faq-2017.md
 - name: Genişletilebilirlik Projelerini Visual Studio 2017’ye Geçirme
   href: how-to-migrate-extensibility-projects-to-visual-studio-2017.md
@@ -40,15 +40,15 @@
   items:
     - name: Klasörü Aç
       href: open-folder.md
-    - name: Çalışma Alanları
+    - name: Çalışma alanları
       href: workspaces.md
     - name: Dosya bağlamları
       href: workspace-file-contexts.md
-    - name: Dizin oluşturma
+    - name: Dizinleme
       href: workspace-indexing.md
     - name: Dil hizmetleri
       href: workspace-language-services.md
-    - name: Yapı
+    - name: Oluşturma
       href: workspace-build.md
 - name: Menüleri ve Komutları Genişletme
   items:

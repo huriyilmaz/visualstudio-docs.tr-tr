@@ -1,5 +1,5 @@
 ---
-title: Unity ve Azure için Visual Studio Araçları ile Programlama | Microsoft Dokümanlar
+title: Unity için Visual Studio Araçları ve Azure ile programlama | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.reviewer: crdun
@@ -13,29 +13,29 @@ ms.workload:
 - azure
 - unity
 ms.openlocfilehash: e9a07a7f04cae433803d012302555821fc851075
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75916819"
 ---
 # <a name="program-with-unity-and-azure"></a>Unity ve Azure ile Programlama
 
-Azure, telemetri ve diğer oyun verilerini bulutta depolamak için ölçeklenebilir bir çözüm sağlar. Unity 2017 sürümüyle, Unity'nin .NET 4.6 için verdiği deneysel destek, Azure .NET SDK'larının kullanımına izin vererek Azure tümleştirmesini her zamankinden daha basit hale getiriyor.
+Azure, telemetri ve diğer oyun verilerini bulutta depolamaya yönelik ölçeklenebilir bir çözüm sunar. Unity 2017 sürümü sayesinde Unity 'nin .NET 4,6 için deneysel desteği, Azure .NET SDK 'larının kullanılmasına izin vererek Azure tümleştirmesini her zamankinden daha kolay hale getirir.
 
-## <a name="experimental-azure-sdks"></a>Deneysel Azure SDK'ları
+## <a name="experimental-azure-sdks"></a>Deneysel Azure SDK 'Ları
 
 > [!NOTE]
-> Bu SDK'lar desteklenmez, ancak müşterilerin Unity'nin deneysel .NET 4.6 desteğini denemelerine yardımcı olmak için sağlanır.
+> Bu SDK 'lar desteklenmemiştir, ancak müşterilerin Unity 'nin deneysel .NET 4,6 desteğini denemenize yardımcı olmak için sağlanır.
 
-Aşağıdaki deneysel Azure SDK'larını Unity ile denemek için [Sandbox'ı](/sandbox/) ziyaret edin:
+Unity ile aşağıdaki deneysel Azure SDK 'larını denemek için [korumalı alanı](/sandbox/) ziyaret edin:
 
-* [Unity için Azure Depolama SDK](/sandbox/gamedev/unity/azure-storage-unity?wt.mc_id=azgamedev-sandbox-brpeek)
-* [Unity için Azure Etkinlik Hub'ları SDK](/sandbox/gamedev/unity/azure-event-hubs-unity?WT.mc_id=azgamedev-sandbox-brpeek)
-* [Unity için Azure Mobil Uygulamalar SDK](/sandbox/gamedev/unity/azure-mobile-apps-unity?WT.mc_id=azgamedev-sandbox-brpeek)
+* [Unity için Azure depolama SDK 'Sı](/sandbox/gamedev/unity/azure-storage-unity?wt.mc_id=azgamedev-sandbox-brpeek)
+* [Unity için Azure Event Hubs SDK](/sandbox/gamedev/unity/azure-event-hubs-unity?WT.mc_id=azgamedev-sandbox-brpeek)
+* [Unity için Azure Mobile Apps SDK](/sandbox/gamedev/unity/azure-mobile-apps-unity?WT.mc_id=azgamedev-sandbox-brpeek)
 
 ## <a name="azure-sdk-sample"></a>Azure SDK örneği
 
-Azure Kolay Tablolar SDK ve Unity'yi kullanarak basit bir [örnek oyun](/sandbox/gamedev/unity/samples/azure-mobile-apps-unity-racer) da vardır. Oyun yüksek skor lider tablosunu izlemek ve oyun içi telemetridepolamak için Azure Kolay Tablolar veri depolamasını kullanır ve [GitHub'dan indirilebilir.](https://github.com/BrianPeek/AzureSamples-Unity)
+Ayrıca, Azure kolay tabloları SDK ve Unity kullanarak [basit bir örnek oyun](/sandbox/gamedev/unity/samples/azure-mobile-apps-unity-racer) de vardır. Oyun, yüksek puanı elde etmek ve oyun içi Telemetriyi izlemek için Azure kolay tabloları veri depolamayı kullanır ve [GitHub 'dan indirilebilir](https://github.com/BrianPeek/AzureSamples-Unity).
 
 ![Örnek oyun ekran görüntüsü](media/vstu_azure-test-sample-game-image2.png)

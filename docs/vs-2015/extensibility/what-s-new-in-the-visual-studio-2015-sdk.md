@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 2015 SDK yenilikler | Microsoft Docs
+title: Visual Studio 2015 SDK 'daki yenilikler | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -9,38 +9,38 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d47e40a5c38eeb7898aa179282fa55bbe17ef1d5
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75917326"
 ---
-# <a name="what39s-new-in-the-visual-studio-2015-sdk"></a>Hangi&#39;'teki Visual Studio 2015 SDK'sı
+# <a name="what39s-new-in-the-visual-studio-2015-sdk"></a>Visual Studio 2015 SDK 'sında ne&#39;yenidir
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio SDK, Visual Studio 2015, Visual Studio 2015 güncelleştirme ve Visual Studio 2017 için aşağıdaki yeni ve güncelleştirilmiş özelliklere sahiptir.
+Visual Studio SDK, Visual Studio 2015, Visual Studio 2015 Updated ve Visual Studio 2017 için aşağıdaki yeni ve güncelleştirilmiş özelliklere sahiptir.
 
 ## <a name="visual-studio-2017"></a>Visual Studio 2017
 
-Visual Studio 2017'den itibaren özel Proje ve öğe şablonları için tarama artık gerçekleştirilir. Bunun yerine, uzantı yükleme konumu olarak bu şablonları tanımlamak, şablon bildirim dosyalarını sağlamanız gerekir. VSIX uzantılarınızı güncelleştirmek için Visual Studio 2017'yi kullanabilirsiniz. Uzantınızı bir MSI kullanarak dağıtırsanız, şablon bildirim dosyalarını el ile oluşturmanız gerekir. Daha fazla bilgi için [özel Proje ve öğe şablonlarını yükseltme Visual Studio 2017 için](/visualstudio/extensibility/upgrading-custom-project-and-item-templates-for-visual-studio-2017?view=vs-2015). Şablon bildirim şeması belgelenen [Visual Studio şablon bildirim şeması başvurusu](/visualstudio/extensibility/visual-studio-template-manifest-schema-reference).
+Visual Studio 2017 ' den başlayarak özel proje ve öğe şablonlarının taranması artık gerçekleştirilmeyecek. Bunun yerine, uzantı Bu şablonların yüklemesinin konumunu tanımlayan şablon bildirim dosyaları sağlamalıdır. VSıX uzantılarınızı güncelleştirmek için Visual Studio 2017 ' i kullanabilirsiniz. Uzantınızı bir MSI kullanarak dağıtırsanız, şablon bildirim dosyalarını el ile oluşturmanız gerekir. Daha fazla bilgi için bkz. [özel Visual Studio için proje ve öğe şablonları yükseltme 2017](/visualstudio/extensibility/upgrading-custom-project-and-item-templates-for-visual-studio-2017?view=vs-2015). Şablon bildirim şeması, [Visual Studio şablon bildirimi şema başvurusunda](/visualstudio/extensibility/visual-studio-template-manifest-schema-reference)belgelenmiştir.
 
-## <a name="vs-2015-sdk-update-1"></a>VS 2015 SDK'sı güncelleştirme 1
- Güncelleştirme 1 iyi renk temaları ve Visual Studio Görüntü hizmeti çalışma uzantınız yardımcı olacak araçlar içerir.
+## <a name="vs-2015-sdk-update-1"></a>VS 2015 SDK güncelleştirme 1
+ Güncelleştirme 1, uzantınızın renk temaları ve Visual Studio görüntü hizmeti ile iyi çalışmasına yardımcı olacak araçlar içerir.
 
- Bu konu başlıkları altında olan [VSSDK yardımcı programları](../extensibility/internals/vssdk-utilities.md) bölümü:
+ Bu konular [VSSDK yardımcı programları](../extensibility/internals/vssdk-utilities.md) bölümünde bulunur:
 
-- [Renk teması oluşturma araçları](../extensibility/internals/color-theming-tools.md) oluşturun ve Visual Studio için özel renkler Düzenle yardımcı.
+- [Renk teması araçları](../extensibility/internals/color-theming-tools.md) , Visual Studio için özel renkler oluşturmanıza ve düzenlemenize yardımcı olur.
 
-- [Görüntü Hizmeti Araçları](../extensibility/internals/image-service-tools.md) Visual Studio görüntü bildirim dosyaları ile çalışma sağlar.
+- [Görüntü hizmeti araçları](../extensibility/internals/image-service-tools.md) , Visual Studio görüntü bildirim dosyalarıyla çalışmanıza olanak sağlar.
 
-## <a name="new-way-to-add-the-visual-studio-sdk-to-visual-studio"></a>Visual Studio için Visual Studio SDK eklemek için yeni yol
- Visual Studio 2015'ten başlayarak, Visual Studio SDK'yı ayrı olarak karşıdan yüklemek gerekmez. Bunun yerine, normal yükleme işleminin bir parçası yükleyin ya da daha sonra yüklemek seçebilirsiniz. Bir VSIX çözümüne oluşturun veya açın, Visual Studio, Visual Studio genişletilebilirlik araçları yüklemek için sorar. Daha fazla bilgi için [Visual Studio SDK'sını yükleme](../extensibility/installing-the-visual-studio-sdk.md).
+## <a name="new-way-to-add-the-visual-studio-sdk-to-visual-studio"></a>Visual Studio SDK 'sını Visual Studio 'ya eklemenin yeni yolu
+ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'yı ayrı olarak indirmeniz gerekmez. Bunun yerine, normal yükleme sürecinin bir parçası olarak yükleyebilirsiniz veya daha sonra yüklemeyi tercih edebilirsiniz. Bir VSıX çözümü açtığınızda veya oluşturduğunuzda, Visual Studio sizden Visual Studio Genişletilebilirlik Araçları yüklemenizi isteyecektir. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="new-ways-of-creating-extensions"></a>Uzantıları oluşturmanın yeni yolu
- Visual Studio 2015 SDK başlayarak, hangi programlama diline bağlı olarak, kullandığınız uzantıları oluşturmak için farklı seçenekler vardır.
+## <a name="new-ways-of-creating-extensions"></a>Uzantı oluşturmanın yeni yolları
+ Visual Studio 2015 SDK 'dan başlayarak, kullandığınız programlama diline bağlı olarak uzantı oluşturmaya yönelik farklı seçenekleriniz vardır.
 
 ### <a name="visual-c-and-visual-basic"></a>Visual C# ve Visual Basic
- C# ve Visual Basic için tam kapsamlı bir VSPackage, menü komutları, araç pencerelerini, düzenleyici sınıflandırıcılar, düzenleyici Kenarlıklar ve düzenleyici kenar boşluğu uzantıları oluşturmanıza imkan tanır ve proje öğesi şablonları yoktur. Tüm standart VSIX projesine ekleyebilirsiniz. Daha fazla bilgi için bkz.
+ C# ve Visual Basic için, VSPackages, menü komutları, araç pencereleri, düzenleyici sınıflandırıcıları, düzenleyici donnments ve Düzenleyici kenar boşluğu uzantıları oluşturmanıza imkan tanıyan, proje öğesi şablonlarının tam bir yelpazesi vardır. Bunlardan herhangi birini veya tümünü standart VSıX projesine ekleyebilirsiniz. Daha fazla bilgi için bkz.
 
 - [Bir Menü Komutuyla Uzantı Oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md)
 
@@ -50,27 +50,27 @@ Visual Studio 2017'den itibaren özel Proje ve öğe şablonları için tarama a
 
 - [VSPackage İçeren Bir Uzantı Oluşturma](../extensibility/creating-an-extension-with-a-vspackage.md)
 
-     VSPackage Sihirbazı, uzantıları artık C# veya Visual Basic'te oluşturur.
+     VSPackage Sihirbazı artık C# veya Visual Basic uzantılar oluşturmayacaktır.
 
 ### <a name="c"></a>C++
- C++ için VSPackage Sihirbazı'nı menü komutları, araç pencereleri ve özel düzenleyicileri destekler. İçinde arayın **yeni proje** iletişim kutusunda **Visual C++ / genişletilebilirlik**.
+ C++ için, VSPackage Sihirbazı menü komutlarını, araç pencerelerini ve özel düzenleyicilerini destekler. **Visual C++/genişletilebilirlik**bölümünde **Yeni proje** iletişim kutusunda bulun.
 
-## <a name="vs-sdk-reference-assemblies-via-nuget"></a>VS SDK başvurusu Derlemeleri'nin NuGet aracılığıyla
- Taşınabilirliği artırmak ve genişletilebilirlik projeleri paylaşımı için VS SDK başvurusu derlemeleri'nin NuGet sürümlerini kullanabilirsiniz.  Bunlar üzerinde kullanılabilir [nuget.org](https://www.nuget.org/) tarafından yayımlanan [VisualStudioExtensibility](https://www.nuget.org/profiles/VisualStudioExtensibility) ve proje veya çözümü Visual Studio ile kolayca eklenebilir **başvuran / yönetme NuGet Paketleri** iletişim. Tek tek özgü genişletilebilirlik derlemelere başvurular ekleyin veya tüm VS SDK'yi başvuran tek seferde VS SDK'sını kullanarak derlemeleri eklemek [Meta paket](https://www.nuget.org/packages/VSSDK_Reference_Assemblies). NuGet hakkında daha fazla bilgi için bkz: [NuGet genel bakış](/nuget/) ve [yönetme NuGet paketlerini kullanarak iletişim](/nuget/consume-packages/install-use-packages-visual-studio).
+## <a name="vs-sdk-reference-assemblies-via-nuget"></a>NuGet aracılığıyla VS SDK başvuru derlemeleri
+ Daha fazla taşınabilirlik ve genişletilebilirlik projelerinin paylaşılması için VS SDK başvuru derlemelerinin NuGet sürümlerini kullanabilirsiniz.  Bunlar, [VisualStudioExtensibility](https://www.nuget.org/profiles/VisualStudioExtensibility) tarafından yayımlanan [NuGet.org](https://www.nuget.org/) üzerinde bulunabilir ve Visual Studio **başvuruları/yönetim NuGet paketleri** iletişim kutusu aracılığıyla projenize veya çözümünüze kolayca eklenebilir. Belirli genişletilebilirlik derlemelerine tek tek başvuruları ekleyebilir veya VS SDK [meta paketini](https://www.nuget.org/packages/VSSDK_Reference_Assemblies)kullanarak bir kerede tüm vs SDK başvuru derlemelerini ekleyebilirsiniz. NuGet hakkında daha fazla bilgi edinmek için bkz. [NuGet 'e genel bakış](/nuget/) ve [Iletişim kutusunu kullanarak NuGet paketlerini yönetme](/nuget/consume-packages/install-use-packages-visual-studio).
 
- VS SDK başvurusu derlemeleri'nin NuGet sürümlerini kullandığınızda, başka bir kullanıcı açın ve derleme için VS SDK'sını yükleme gerekmez.  VS SDK derleme araçları ve NuGet başvuru bütünleştirilmiş kodları bilgisayarlarında bu proje için otomatik olarak yüklenir.
+ VS SDK başvuru derlemelerinin NuGet sürümlerini kullandığınızda, başka bir kullanıcının projenizi açmak ve derlemek için VS SDK 'Yı yüklemesi gerekmez.  NuGet başvuru derlemeleri ve VS SDK derleme araçları, bu proje için kendi bilgisayarlarına otomatik olarak yüklenir.
 
- VS SDK'sı öğe şablonları NuGet başvurularını için kullanın ve varsayılan olarak NuGet avantajlarını elde derleme araçları.
+ VS SDK öğe şablonları, varsayılan olarak NuGet avantajlarından yararlanmak için başvuruları ve derleme araçları için NuGet kullanır.
 
 > [!NOTE]
-> Projelerinizi VS SDK'sı başvuru derlemelerini kullanmaya devam edebilirsiniz (altında bulunan \<Visual Studio yükleme konumu > \ VSSDK\VisualStudioIntegration\Common\Assemblies) ve mevcut genişletilebilirlik projeleri olması gerekmez NuGet paketlerini kullanacak şekilde yükseltildi.  Proje **başvuran / başvuru ekleme** VS SDK'sı başvuru bütünleştirilmiş kodlarını kullanan iletişim devam etmektedir.
+> Projeler ile VS SDK yüklü başvuru derlemelerini kullanmaya devam edebilirsiniz ( \<Visual Studio Install Location> \ VSSDK\VisualStudioIntegration\Common\Assemblies altında bulunur) ve var olan genişletilebilirlik projelerinin NuGet paketlerini kullanacak şekilde yükseltilmesi gerekmez.  Proje **başvuruları/başvuru Ekle** iletişim kutusu, vs SDK yüklü başvuru derlemelerini kullanmaya devam eder.
 >
-> Mevcut projelerinizi NuGet kullanmak üzere değiştirmek istiyorsanız, [nasıl yapılır: Visual Studio 2015 Vspackages'a geçirme](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2015.md) genişletilebilirlik projeleri için NuGet paketlerini güncelleştirme bir bölümü vardır.
+> NuGet 'i kullanmak için mevcut projelerinizi değiştirmek isterseniz, bkz. [nasıl yapılır: VSPackages 'ı](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2015.md) NuGet paketlerine güncelleştirme hakkında bir bölümü olan Visual Studio 2015 ' a geçirme.
 
-## <a name="light-bulbs"></a>Ampuller
- Uzantı kod yazmayı en heyecan verici yeni yollardan biriyle Roslyn proje tarafından sağlanır. Daha fazla bilgi için [Roslyn](https://github.com/dotnet/Roslyn).
+## <a name="light-bulbs"></a>Hafif bulbs
+ Uzantı kodu yazmanın en heyecan verici yeni yöntemlerinden biri Roslyn projesi tarafından sağlanır. Daha fazla bilgi için bkz. [Roslyn](https://github.com/dotnet/Roslyn).
 
- Ampuller VSSDK ile birlikte gelen yeni bir özelliktir. Visual Studio Düzenleyicisi'nde kullanılan simgeler, kod yeniden düzenleme işlemleri veya yerleşik kod çözümleyicileri tarafından tanımlanan sorunlar için düzeltmeler gösterecek şekilde genişletmek değildirler. Daha fazla bilgi için [izlenecek yol: ampul önerilerini görüntüleme](../extensibility/walkthrough-displaying-light-bulb-suggestions.md).
+ Hafif bulbs, VSSDK ile birlikte gelen yeni bir özelliktir. Bunlar, Visual Studio Düzenleyicisi 'nde kullanılan ve yerleşik kod Çözümleyicileri tarafından tanımlanan sorunlar için bir kod yeniden düzenleme eylemleri veya düzeltmeler kümesi görüntülenmesini sağlayan simgelerdir. Daha fazla bilgi için bkz. [Izlenecek yol: ampul önerilerini görüntüleme](../extensibility/walkthrough-displaying-light-bulb-suggestions.md).
 
-## <a name="updated-user-experience-guidelines"></a>Güncelleştirilmiş kullanıcı deneyimi yönergeleri
- Visual Studio için yeni uzantıları veya özellikler tasarlama? Güncelleştirilmiş genişletilmiş kullanıma alıp [Visual Studio kullanıcı deneyimi yönergeleri](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).  Bölümünde bulabilirsiniz [renk belirteçleri](../extensibility/ux-guidelines/shared-colors-for-visual-studio.md), [yazı tipi boyutlarını](../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md), [iletişim düzeni belirtimleri](../extensibility/ux-guidelines/layout-for-visual-studio.md)ve yeni kullanıcı Arabirimi Visual Studio ile sorunsuz bir şekilde tümleştirmek için ihtiyacınız olan diğer Kılavuzlar.
+## <a name="updated-user-experience-guidelines"></a>Güncelleştirilmiş Kullanıcı deneyimi yönergeleri
+ Visual Studio için yeni uzantılar veya özellikler tasarlansın mı? Güncelleştirilmiş ve genişletilmiş [Visual Studio Kullanıcı deneyimi yönergelerine](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)göz atın.  [Renkli belirteçleri](../extensibility/ux-guidelines/shared-colors-for-visual-studio.md), [yazı tipi boyutlarını](../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md), [iletişim kutusu düzen belirtimlerini](../extensibility/ux-guidelines/layout-for-visual-studio.md)ve yeni kullanıcı arabiriminizi Visual Studio ile sorunsuz bir şekilde tümleştirmeniz için ihtiyacınız olan diğer kılavuzları bulabilirsiniz.

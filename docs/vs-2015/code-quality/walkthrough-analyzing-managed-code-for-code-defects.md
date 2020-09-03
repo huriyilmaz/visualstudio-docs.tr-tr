@@ -31,7 +31,7 @@ Bu kılavuzda, kod hataları için yönetilen bir projeyi kod çözümleme arac�
 
 - Kod hatası uyarılarını çözümleyin ve düzeltin.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)].
 

@@ -19,10 +19,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f87e3a3adda270f6b78b9134c7535bda6c73d952
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533152"
 ---
 # <a name="how-to-create-types-by-using-class-designer"></a>Nasıl Yapılır: Sınıf Tasarımcısı Kullanarak Tür Oluşturma
@@ -36,7 +36,7 @@ Visual C# .NET ve Visual Basic .NET projeleri için yeni türler tasarlamak üze
 
 - [Bir tür üyesine özel bir öznitelik uygulama](#CustAttributeMember)
 
-## <a name="create-a-new-type"></a><a name="CreateType"></a>Yeni bir tür oluştur
+## <a name="create-a-new-type"></a><a name="CreateType"></a> Yeni bir tür oluştur
 
 1. Araç Kutusu'nda, Sınıf Tasarımcısı'nın altında aşağıdakilerden birini bir sınıf diyagramına sürükleyin:
 
@@ -74,7 +74,7 @@ Visual C# .NET ve Visual Basic .NET projeleri için yeni türler tasarlamak üze
 
      Bkz. [üyeleri oluşturma](../ide/creating-and-configuring-type-members-class-designer.md#CreateMembers).
 
-## <a name="apply-a-custom-attribute-to-a-type"></a><a name="CustAttributeType"></a>Türe özel bir öznitelik uygulama
+## <a name="apply-a-custom-attribute-to-a-type"></a><a name="CustAttributeType"></a> Türe özel bir öznitelik uygulama
 
 1. Bir sınıf diyagramında türe ait şekle tıklayın.
 
@@ -84,7 +84,7 @@ Visual C# .NET ve Visual Basic .NET projeleri için yeni türler tasarlamak üze
 
      İşiniz bittiğinde özel öznitelikler türe uygulanır.
 
-## <a name="apply-a-custom-attribute-to-a-type-member"></a><a name="CustAttributeMember"></a>Bir tür üyesine özel bir öznitelik uygulama
+## <a name="apply-a-custom-attribute-to-a-type-member"></a><a name="CustAttributeMember"></a> Bir tür üyesine özel bir öznitelik uygulama
 
 1. Bir sınıf diyagramında kendi türünün şeklinde üyenin adına veya Sınıf Ayrıntıları penceresinde satırına tıklayın.
 

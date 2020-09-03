@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetAssemblyName | Microsoft Dokümanlar
+title: 'IDebugComPlusSymbolProvider:: GetAssemblyName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +15,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ad546e3cde5106a966ce4533ee059f0ba1e2565d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733984"
 ---
 # <a name="idebugcomplussymbolprovidergetassemblyname"></a>IDebugComPlusSymbolProvider::GetAssemblyName
-Modülü ve uygulama etki alanı verilen derlemenin adını alır.
+Modül ve uygulama etki alanı verilen derlemenin adını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetAssemblyName(
@@ -44,19 +44,19 @@ int GetAssemblyName(
 
 ## <a name="parameters"></a>Parametreler
 `ulAppDomainID`\
-[içinde] Uygulama etki alanı için tanımlayıcı.
+'ndaki Uygulama etki alanı için tanımlayıcı.
 
 `guidModule`\
-[içinde] Modül için benzersiz tanımlayıcı.
+'ndaki Modül için benzersiz tanımlayıcı.
 
 `pbstrName`\
-[çıkış] Derlemenin adını döndürür.
+dışı Derlemenin adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini ortaya çıkaran bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetAssemblyName(

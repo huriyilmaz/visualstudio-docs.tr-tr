@@ -12,52 +12,52 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fda60ffb97ecb44bd4a881cb42e4d9199cc958b8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76115334"
 ---
-# <a name="specify-custom-build-events-in-visual-studio"></a>Visual Studio'da özel yapı olaylarını belirtin
+# <a name="specify-custom-build-events-in-visual-studio"></a>Visual Studio 'da özel derleme olayları belirtme
 
-Özel bir yapı olayı belirterek, komutları oluşturma başlamadan önce veya bittikten sonra otomatik olarak çalıştırabilirsiniz. Örneğin, yapı başlamadan önce bir *.bat* dosyasını çalıştırabilir veya yapı tamamlandıktan sonra yeni dosyaları bir klasöre kopyalayabilirsiniz. Yapı olayları yalnızca yapı işleminde bu noktalara başarıyla ulaşırsa çalışır.
+Özel bir yapı olayı belirterek, bir yapı başlamadan veya tamamlanmadan önce komutları otomatik olarak çalıştırabilirsiniz. Örneğin, bir yapı başlamadan önce bir *. bat* dosyası çalıştırabilir veya derleme tamamlandıktan sonra yeni dosyaları bir klasöre kopyalayabilirler. Yapı olayları yalnızca derleme yapı işlemindeki bu noktalara başarıyla ulaşırsa çalışır.
 
-Kullanmakta olduğunuz programlama dili hakkında özel bilgiler için aşağıdaki konulara bakın:
+Kullanmakta olduğunuz programlama diliyle ilgili belirli bilgiler için aşağıdaki konulara bakın:
 
-- Visual Basic-[Nasıl Yapılır: Yapı olaylarını belirtin (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md).
+- Visual Basic--[nasıl yapılır: derleme olayları belirtme (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md).
 
-- C# ve F#--[Nasıl yapılır: Yapı olayları (C#) belirtin.](../ide/how-to-specify-build-events-csharp.md)
+- C# ve F #--[nasıl yapılır: derleme olayları belirtme (C#)](../ide/how-to-specify-build-events-csharp.md).
 
-- Visual C++--[Yapı olayları belirtin.](/cpp/build/specifying-build-events)
+- Visual C++--[derleme olaylarını belirtin](/cpp/build/specifying-build-events).
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
-Yapı olayları DOS komutları ile aynı sözdizimini izler, ancak yapı olayları oluşturmak için makroları daha kolay kullanabilirsiniz. Kullanılabilir makroların listesi için, [Önceden Yapı Olay/Post-build Olay komut satırı iletişim kutusuna](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)bakın.
+Derleme olayları, DOS komutlarıyla aynı sözdizimini izler, ancak daha kolay derleme olayları oluşturmak için makroları kullanabilirsiniz. Kullanılabilir makrolar listesi için bkz. [derleme öncesi olay/oluşturma sonrası olay komut satırı iletişim kutusu](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md).
 
-En iyi sonuçlar için şu biçimlendirme ipuçlarını izleyin:
+En iyi sonuçlar için şu biçimlendirme ipuçlarına uyun:
 
-- `call` *.bat* dosyalarını çalıştıran tüm yapı olayları önce bir deyim ekleyin.
+- `call` *. Bat* dosyalarını çalıştıran tüm derleme olaylarından önce bir ifade ekleyin.
 
    Örnek: `call C:\MyFile.bat`
 
    Örnek: `call C:\MyFile.bat call C:\MyFile2.bat`
 
-- Dosya yollarını tırnak işaretlerine ekin.
+- Dosya yollarını tırnak işaretleri içine alın.
 
-   Örnek (örneğin): [!INCLUDE[win8](../debugger/includes/win8_md.md)]"%ProgramFiles(x86)%\Microsoft SDKs\Windows\v8.0A\Bin\NETFX 4.0 Tools\gacutil.exe" -if "$(TargetPath)"
+   Örnek (için [!INCLUDE[win8](../debugger/includes/win8_md.md)] ): "% ProgramFiles (x86)% \ Microsoft SDKs\Windows\v8.0A\Bin\NETFX 4,0 Tools\gacutil.exe"-If "$ (TargetPath)"
 
-- Satır sonları kullanarak birden çok komutu ayırın.
+- Satır sonlarını kullanarak birden çok komutu ayırın.
 
 - Gerektiğinde joker karakterleri ekleyin.
 
    Örnek: `for %I in (*.txt *.doc *.html) do copy %I c:\` *mydirectory*`\`
 
   > [!NOTE]
-  > `%I`yukarıdaki kodda toplu `%%I` komut dosyaları olmalıdır.
+  > `%I` Yukarıdaki kodda `%%I` toplu betiklerin olması gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md)
-- [Önceden Oluşturma Olay/Post-build Olay komut satırı iletişim kutusu](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)
+- [Oluşturma öncesi olay/oluşturma sonrası olay komut satırı iletişim kutusu](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)
 - [MSBuild özel karakterleri](../msbuild/msbuild-special-characters.md)
 - [İzlenecek yol: Uygulama oluşturma](../ide/walkthrough-building-an-application.md)

@@ -15,10 +15,10 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0396d3290ef870fb2c2c7b7b49c774b66397077c
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75852223"
 ---
 # <a name="binding-keyboard-shortcuts-to-menu-items"></a>Menü Öğelerine Klavye Kısayolları Bağlama
@@ -52,16 +52,16 @@ Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için. 
   
 1. Paketiniz için. vsct dosyasını açın.  
   
-2. Zaten mevcut değilse, `<Commands>` sonra boş bir `<KeyBindings>` bölümü oluşturun.  
+2. `<KeyBindings>`Zaten mevcut değilse, boş bir bölüm oluşturun `<Commands>` .  
   
    > [!WARNING]
    > Anahtar bağlamaları hakkında daha fazla bilgi için bkz. [KeyBinding](../extensibility/keybinding-element.md).  
   
-    `<KeyBindings>` bölümünde, bir `<KeyBinding>` girişi oluşturun.  
+    `<KeyBindings>`Bölümünde bir `<KeyBinding>` giriş oluşturun.  
   
-    `guid` ve `id` özniteliklerini çağırmak istediğiniz komuta ait olanlarla ayarlayın.  
+    `guid`Ve `id` özniteliklerini çağırmak istediğiniz komuta ait olanlarla ayarlayın.  
   
-    `mod1` özniteliğini **Control**, **alt**veya **SHIFT**olarak ayarlayın.  
+    `mod1`Özniteliği **Control**, **alt**veya **Shift**olarak ayarlayın.  
   
     KeyBindings bölümü şuna benzemelidir:  
   
@@ -79,12 +79,12 @@ Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için. 
   
    Sanal anahtar kodları, işlev anahtarları ve **geri al** tuşu gibi kendileriyle ilişkili bir karakter olmayan özel anahtarlara erişmenizi sağlar. Daha fazla bilgi için bkz. [sanal anahtar kodları](https://msdn2.microsoft.com/library/ms645540.aspx).  
   
-   Komutu Visual Studio Düzenleyicisi 'nde kullanılabilir hale getirmek için `editor` özniteliğini `guidVSStd97`olarak ayarlayın.  
+   Komutu Visual Studio düzenleyicisinde kullanılabilir hale getirmek için `editor` özniteliğini olarak ayarlayın `guidVSStd97` .  
   
-   Komutu yalnızca özel bir düzenleyicide kullanılabilir hale getirmek için, `editor` özniteliğini, özel düzenleyiciyi içeren VSPackage oluşturduğunuzda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] paket şablonu tarafından oluşturulan özel düzenleyicinin adına ayarlayın. Ad değerini bulmak için, `name` özniteliği "`editorfactory`" olan bir `<GuidSymbol>` düğümü için `<Symbols>` bölümüne bakın. Bu, özel düzenleyicinin adıdır.  
+   Komutu yalnızca özel bir düzenleyicide kullanılabilir hale getirmek için, `editor` [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] özel düzenleyiciyi Içeren VSPackage oluşturduğunuzda özniteliği paket şablonu tarafından oluşturulan özel düzenleyicinin adına ayarlayın. Ad değerini bulmak için, `<Symbols>` `<GuidSymbol>` `name` özniteliği "." ile biten bir düğüm için bölümüne bakın `editorfactory` . Bu, özel düzenleyicinin adıdır.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, CTRL + ALT + C klavye kısayolunu `MyPackage`adlı bir pakette `cmdidMyCommand` adlı bir komuta bağlar.  
+ Bu örnek, CTRL + ALT + C klavye kısayolunu adlı bir pakette adlı bir komuta bağlar `cmdidMyCommand` `MyPackage` .  
   
 ```  
 <CommandTable>  
@@ -101,7 +101,7 @@ Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için. 
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, CTL + B klavye kısayolunu, `TestEditor`adlı bir projede `cmdidBold` adlı bir komuta bağlar. Komut, diğer düzenleyicilerde değil yalnızca özel düzenleyicide kullanılabilir.  
+ Bu örnek, CTL + B klavye kısayolunu adlı bir projede adlı bir komuta bağlar `cmdidBold` `TestEditor` . Komut, diğer düzenleyicilerde değil yalnızca özel düzenleyicide kullanılabilir.  
   
 ```xml  
 <KeyBinding guid="guidVSStd97" id="cmdidBold" editor="guidTestEditorEditorFactory" key1="B" mod1="Control" />  

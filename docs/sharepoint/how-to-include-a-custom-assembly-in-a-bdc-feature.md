@@ -18,9 +18,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 772cdbaca67cc82fc6b7eb2c5ef5adb6508df34a
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015258"
 ---
 # <a name="how-to-include-a-custom-assembly-in-a-bdc-feature"></a>Nasıl yapılır: bir BDC özelliğine özel bütünleştirilmiş kod ekleme

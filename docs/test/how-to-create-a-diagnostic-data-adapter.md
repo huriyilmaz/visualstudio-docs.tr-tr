@@ -9,10 +9,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 43519a96e0718a0864065864d9dd4fbd2ac16b23
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288084"
 ---
 # <a name="how-to-create-a-diagnostic-data-adapter"></a>Nasıl yapılır: tanılama veri bağdaştırıcısı oluşturma
@@ -32,7 +32,7 @@ Tanılama veri bağdaştırıcınızın testte o noktada görev gerçekleştireb
 
 Aşağıda, tanılama veri bağdaştırıcınızı oluştururken kullanabileceğiniz önemli olayların kısmi bir listesi verilmiştir. Tanılama veri bağdaştırıcısı olaylarının tamamı listesi için bkz <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents> . soyut sınıf.
 
-|Olay|Description|
+|Olay|Açıklama|
 |-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionStart>|Test çalıştıralım başlangıcı|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionEnd>|Test çalıştıralım bitişi|

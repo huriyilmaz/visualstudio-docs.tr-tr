@@ -1,5 +1,5 @@
 ---
-title: Yeni Proje iletişim kutusuna dizin ekleme | Microsoft Docs
+title: Yeni proje Iletişim kutusuna dizin ekleme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,22 +11,22 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a8a9eeca4dc455c4f16e3551541454483138a993
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203869"
 ---
 # <a name="adding-directories-to-the-new-project-dialog-box"></a>Yeni Proje İletişim Kutusuna Dizin Ekleme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Yeni proje türleri oluşturduğunuzda, yeni bir dizin de kaydedebilirsiniz **yeni proje** şablon olarak kullanmak için bunları görüntülemek için iletişim kutusu. Aşağıdaki kod örneği, bir düğüm olarak da bilinen yeni bir dizin kaydedilecek açıklanmaktadır. Örnekte, VSPackage CLSID_Package tarafından kullanıma sunulan şablonları kaydedilir. Sonuç olarak, sol tarafındaki **yeni proje** iletişim kutusu eklenen düğümü Folder_Label_ResID kaynak tarafından belirlenen bir adla sunar. Bu kaynak VSPackage uydu DLL yüklenir.  
+Yeni proje türleri oluşturduğunuzda, yeni **Proje** iletişim kutusunda şablon olarak kullanmak üzere yeni bir dizin de kaydedebilirsiniz. Aşağıdaki kod örneğinde, düğüm olarak da bilinen yeni bir dizinin nasıl kaydedileceği açıklanmaktadır. Örnekte, VSPackage CLSID_Package tarafından sunulan şablonlar kaydedilir. Sonuç olarak, **Yeni proje** iletişim kutusunun sol tarafı, eklenen düğümü Folder_Label_ResID kaynak tarafından belirlenen bir adla birlikte sunar. Bu kaynak VSPackage uydu DLL 'sinden yüklenir.  
   
- **Klasör** değeri bir GUID Folder_Label_ResID düğümü altında görüntülendiği bir klasörün temsil eder. Örnekte, GUID'i temsil **diğer projeleri** klasöründe **proje türleri** bölmesinde **yeni proje** iletişim kutusu. Varsa **diğer projeleri** değeri yok, en üst düzeyinde etiketi konumlandırıldı.  
+ **Klasör** değeri, Folder_Label_ResID düğümünün görüntülendiği bir klasörün GUID 'sini temsil eder. Örnekte GUID, **Yeni proje** Iletişim kutusunun **Proje türleri** bölmesinde **diğer projeler** klasörünü temsil eder. **Diğer projeler** değeri yoksa, etiket en üst düzeyde konumlandırılır.  
   
- TemplatesDir değeri proje şablonları içeren dizinin tam yolunu belirtir. .Vsz dosyaları veya Normal şablon dosyaları kopyalamak için bu dosyalar olabilir.  
+ Templates dır değeri, proje şablonlarını içeren dizinin tam yolunu belirtir. Bu dosyalar, klonlanacak. vsz dosyası ya da tipik şablon dosyaları olabilir.  
   
- TemplatesLocalizedSubDir belirtirseniz, kaynak Kimliğini yerelleştirilmiş şablonları tutan TemplatesDir alt adları bir dize olmalıdır. Çünkü [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] dize kaynağını yükler, yoksa bir uydu DLL farklı bir alt dizin adı her uydu DLL içerebilir. SortPriority değeri bir sıralama önceliği belirtir.  
+ Templates Localizedsubdir belirtirseniz, yerelleştirilmiş şablonları tutan Templates dizini 'nin alt dizinini isimeden bir dizenin kaynak KIMLIĞI olmalıdır. , [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Varsa, bir uydu dll 'sinden dize kaynağını yükler, her uydu dll farklı bir alt dizin adı içerebilir. SortPriority değeri bir sıralama önceliği belirtir.  
   
 ```  
 NoRemove NewProjectTemplates  
@@ -49,5 +49,5 @@ NoRemove NewProjectTemplates
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Proje ve öğe şablonlarını kaydetme](../../extensibility/internals/registering-project-and-item-templates.md)   
- [Öğeler ekleme yeni öğe Ekle iletişim kutuları](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)   
+ [Yeni öğe Ekle Iletişim kutularına öğe ekleme](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)   
  [Yeni Öğe Ekleme İletişim Kutusuna Dizin Ekleme](../../extensibility/internals/adding-directories-to-the-add-new-item-dialog-box.md)

@@ -12,18 +12,18 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ca5ced87596b5e40ae70e3faa06e58493da3d8ab
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203988"
 ---
 # <a name="icon-element"></a>Icon Öğesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Guid özniteliği simge etiketi, tanımlı bir bit eşlem GUID'dir.  ID özniteliği, bit eşlem şeridinde yuvası seçer. Bu öğe isteğe bağlıdır.  Bu öğe atlanırsa değerini **guidOfficeIcon:msotcidNoIcon** kapsanan.  
+Simge etiketinin GUID özniteliği, tanımlı bir bit eşlemin GUID 'sidir.  ID özniteliği, bit eşlem şeridinde yuva seçer. Bu öğe isteğe bağlıdır.  Bu öğe atlanırsa **guidOfficeIcon değeri: Msotcıdnoıcon** dahil edilir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Icon guid="guidImages" id="bmpPic1" />  
@@ -36,8 +36,8 @@ Guid özniteliği simge etiketi, tanımlı bir bit eşlem GUID'dir.  ID öznitel
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|guid|Gerekli. Tanımlı bir bit eşlem guid'si.|  
-|kimlik|Gerekli. Yuva bit eşlem şeridinde seçer.|  
+|guid|Gereklidir. Tanımlı bir bit eşlemin GUID 'si.|  
+|kimlik|Gereklidir. Bit eşlem şeridinde yuva seçer.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   

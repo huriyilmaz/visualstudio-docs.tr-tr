@@ -13,10 +13,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5d9e22200a63544b4539f7bf78c48d5711974776
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287499"
 ---
 # <a name="how-to-specify-test-agents-to-use-in-load-test-scenarios"></a>Nasıl yapılır: yük testi senaryolarında kullanılacak test aracılarını belirtme
@@ -35,11 +35,11 @@ Yük testini uzaktan çalıştırmak için denetleyiciler ve aracılar kullanıy
 > [!TIP]
 > Uzak siteye fiziksel olarak bir aracı koymak yerine, yavaş ağa öykünmek için Ağ öykünmesinin kullanılması başka bir seçenektir. Daha fazla bilgi için bkz. [sanal ağ türlerini belirtme](../test/specify-virtual-network-types-in-a-load-test-scenario.md).
 
-Daha fazla bilgi için bkz. [Test denetleyicileri ve test aracıları](configure-test-agents-and-controllers-for-load-tests.md).
+Daha fazla bilgi için bkz.  [Test denetleyicileri ve test aracıları](configure-test-agents-and-controllers-for-load-tests.md).
 
 Diğer bir nedenden dolayı, aracıların bazıları belirli bir senaryo için gerekli olan bir yazılım, ancak bunların tümüne yüklenmemiş olabilir.
 
-Test ayarlarındaki rolleri kullanarak belirli bir test çalıştırması için aracı seçimini kontrol edebilirsiniz. Daha fazla bilgi için bkz. [test ayarlarını kullanarak tanılama bilgilerini toplama](../test/collect-diagnostic-information-using-test-settings.md).
+Test ayarlarındaki rolleri kullanarak belirli bir test çalıştırması için aracı seçimini kontrol edebilirsiniz. Daha fazla bilgi için bkz.  [test ayarlarını kullanarak tanılama bilgilerini toplama](../test/collect-diagnostic-information-using-test-settings.md).
 
 Bir test aracısı makinesinde yüzde 75 ' den fazla CPU kullanımı varsa veya kullanılabilir fiziksel belleğin yüzde 10 ' dan az olması halinde, aracı makinenin yük testinizde performans sorunu olmadığından emin olmak için yük testinize daha fazla aracı ekleyin.
 

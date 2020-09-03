@@ -14,13 +14,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6152b0e64286c3cadedfcafb0ac530616c4012a6
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288994"
 ---
-# <a name="item-metadata-in-task-batching"></a>Görev toplu işlem içindeki öğe meta verileri
+# <a name="item-metadata-in-task-batching"></a>Toplu görev işlemede öğe meta verileri
 
 MSBuild öğe listelerini, öğe meta verilerine göre farklı kategorilere veya toplu işlemlere bölebilir ve her toplu iş ile bir kez görev çalıştırabilir. Hangi toplu işte hangi öğelerin geçtiğini tam olarak anlamak kafa karıştırıcı olabilir. Bu konuda, toplu işleme içeren aşağıdaki yaygın senaryolar ele alınmaktadır.
 

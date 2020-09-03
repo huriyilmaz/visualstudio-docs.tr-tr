@@ -11,16 +11,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 30bfdd49d871919503be767ea930b3d5f2f0fd95
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905764"
 ---
 # <a name="how-to-provide-a-service"></a>Nasıl yapılır: hizmet sağlama
 VSPackage, diğer VSPackages tarafından kullanılabilecek hizmetler sağlayabilir. Bir hizmet sağlamak için, bir VSPackage hizmeti Visual Studio ile kaydetmelidir ve hizmeti ekleyecek.
 
- <xref:Microsoft.VisualStudio.Shell.Package>Sınıfı hem hem de <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> uygular <xref:System.ComponentModel.Design.IServiceContainer> . <xref:System.ComponentModel.Design.IServiceContainer>isteğe bağlı hizmetler sağlayan geri çağırma yöntemleri içerir.
+ <xref:Microsoft.VisualStudio.Shell.Package>Sınıfı hem hem de <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> uygular <xref:System.ComponentModel.Design.IServiceContainer> . <xref:System.ComponentModel.Design.IServiceContainer> isteğe bağlı hizmetler sağlayan geri çağırma yöntemleri içerir.
 
  Hizmetler hakkında daha fazla bilgi için bkz. [Service Essentials](../extensibility/internals/service-essentials.md) .
 
@@ -76,7 +76,7 @@ VSPackage, diğer VSPackages tarafından kullanılabilecek hizmetler sağlayabil
 
 ### <a name="register-a-service"></a>Hizmet kaydetme
 
-1. Bir hizmeti kaydetmek için <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> hizmeti sağlayan VSPackage öğesine ekleyin. Örnek aşağıda verilmiştir:
+1. Bir hizmeti kaydetmek için <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> hizmeti sağlayan VSPackage öğesine ekleyin. Aşağıda bir örnek verilmiştir:
 
     ```csharp
     [ProvideService(typeof(SMyService))]

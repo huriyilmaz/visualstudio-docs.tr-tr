@@ -7,10 +7,10 @@ ms.date: 11/06/2018
 ms.assetid: 4C1B7952-CD45-4132-AD6B-01CF993D83F8
 ms.topic: how-to
 ms.openlocfilehash: 490ec4f5763ba7ba5be6bf9099dcd608a3712fa1
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85938407"
 ---
 # <a name="editor-themes"></a>Düzenleyici temaları
@@ -29,7 +29,7 @@ Yeni renk temaları, desteklenen biçimlerden birinde olmaları şartıyla eklen
 
 Yeni bir tema bulduktan veya oluşturduktan sonra yerel makinenize indirdikten sonra aşağıdaki adımları gerçekleştirerek ekleyin:
 
-1. Renk temaları seçenek iletişim kutusunda **Ekle** düğmesini seçin: ![ renk teması Ekle](media/source-editor-image20.png)
+1. Renk temaları seçenek iletişim kutusunda **Ekle** düğmesini seçin:  ![ renk teması Ekle](media/source-editor-image20.png)
 2. Yerel makinenizde temaya gözatıp **Açık**' a basın.
 3. Tema, önceden yüklenmiş Temalar listesinin alt kısmına eklenir. Temayı önizlemek için seçin: ![ renk teması önizlemesi](media/source-editor-image21.png)
 4. Temayı uygulamak için **Tamam** düğmesine basın.

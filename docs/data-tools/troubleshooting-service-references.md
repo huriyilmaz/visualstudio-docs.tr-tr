@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: d52562382f10615c7da1dfab22d4c18323b725b3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75586126"
 ---
 # <a name="troubleshoot-service-references"></a>Hizmet başvurularında sorun giderme
@@ -29,19 +29,19 @@ Bu konuda, Visual Studio 'da Windows Communication Foundation (WCF) veya WCF Ver
 
 ## <a name="error-returning-data-from-a-service"></a>Hizmetten veri döndürme hatası
 
-Bir hizmetten bir `DataSet` veya `DataTable` döndürdüğünüzde, "gelen iletiler için en büyük boyut kotası aşıldı" özel durumunu alabilirsiniz. Varsayılan olarak bazı bağlamaların `MaxReceivedMessageSize` özelliği, hizmet reddi saldırılarına maruz kalma olasılığını sınırlamak için görece küçük bir değere ayarlanır. Özel durumu engellemek için bu değeri artırabilirsiniz. Daha fazla bilgi için bkz. <xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A>.
+Bir `DataSet` hizmetten veya bir hizmetten geri döndüğünüzde `DataTable` , "gelen iletiler için en büyük boyut kotası aşıldı" özel durumunu alabilirsiniz. Varsayılan olarak, `MaxReceivedMessageSize` bazı bağlamaların özelliği, hizmet reddi saldırılarına maruz kalma olasılığını sınırlamak için görece küçük bir değere ayarlanır. Özel durumu engellemek için bu değeri artırabilirsiniz. Daha fazla bilgi için bkz. <xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A>.
 
-Bu hatayı düzeltmek için:
+Bu hatayı onarmak için:
 
-1. **Çözüm Gezgini**, açmak için *app. config* dosyasına çift tıklayın.
+1. **Çözüm Gezgini**, açmak için *app.config* dosyasına çift tıklayın.
 
-2. `MaxReceivedMessageSize` özelliğini bulun ve daha büyük bir değerle değiştirin.
+2. Özelliği bulun `MaxReceivedMessageSize` ve daha büyük bir değerle değiştirin.
 
 ## <a name="cannot-find-a-service-in-my-solution"></a>Çözümünüzde bir hizmet bulunamıyor
 
 **Hizmet başvuruları Ekle** Iletişim kutusunda **bul** düğmesine tıkladığınızda, çözümdeki BIR veya daha fazla WCF hizmet kitaplığı projesi Hizmetler listesinde görünmez. Bu, çözüme bir hizmet kitaplığı eklendiyse ancak henüz derlenmemişse meydana gelebilir.
 
-Bu hatayı düzeltmek için:
+Bu hatayı onarmak için:
 
 - **Çözüm Gezgini**, WCF hizmet kitaplığı projesine sağ tıklayın ve **Oluştur**' a tıklayın.
 
@@ -49,20 +49,20 @@ Bu hatayı düzeltmek için:
 
 Bir Kullanıcı, bir Uzak Masaüstü bağlantısı üzerinden Web 'de barındırılan bir WCF hizmetine eriştiğinde ve kullanıcının yönetim izinleri yoksa, NTLM kimlik doğrulaması kullanılır. Kullanıcı yönetici izinlerine sahip değilse, Kullanıcı şu hata iletisini alabilir: "HTTP isteği, istemci kimlik doğrulama düzeni ' anonim ' ile yetkilendirilmemiş. Sunucudan alınan kimlik doğrulama üst bilgisi ' NTLM ' idi. "
 
-Bu hatayı düzeltmek için:
+Bu hatayı onarmak için:
 
 1. Web sitesi projesinde **Özellikler** sayfalarını açın.
 
 2. **Başlangıç seçenekleri** sekmesinde, **NTLM kimlik doğrulaması** onay kutusunu temizleyin.
 
     > [!NOTE]
-    > Yalnızca WCF hizmetleri içeren Web siteleri için NTLM kimlik doğrulamasını kapatmanız gerekir. WCF Hizmetleri için güvenlik, *Web. config* dosyasındaki yapılandırma üzerinden yönetilir. Bu, NTLM kimlik doğrulamasını gereksiz hale getirir.
+    > Yalnızca WCF hizmetleri içeren Web siteleri için NTLM kimlik doğrulamasını kapatmanız gerekir. WCF Hizmetleri için güvenlik, *web.config* dosyasındaki yapılandırma üzerinden yönetilir. Bu, NTLM kimlik doğrulamasını gereksiz hale getirir.
 
 ## <a name="access-level-for-generated-classes-setting-has-no-effect"></a>Oluşturulan sınıflar için erişim düzeyi ayarı etkisizdir
 
-**Hizmet başvurularını Yapılandır** Iletişim kutusunda **iç** veya **arkadaş** olarak **oluşturulan sınıflar için erişim düzeyi** seçeneğinin ayarlanması her zaman çalışmayabilir. İletişim kutusunda seçenek ayarlanmış gibi görünse de, elde edilen destek sınıfları bir `Public`erişim düzeyiyle oluşturulur.
+**Hizmet başvurularını Yapılandır** Iletişim kutusunda **iç** veya **arkadaş** olarak **oluşturulan sınıflar için erişim düzeyi** seçeneğinin ayarlanması her zaman çalışmayabilir. İletişim kutusunda seçenek ayarlanmış gibi görünse de, elde edilen destek sınıfları bir erişim düzeyiyle oluşturulur `Public` .
 
-Bu, <xref:System.Xml.Serialization.XmlSerializer>kullanılarak serileştirilenler gibi belirli türlerin bilinen bir sınırlamasıdır.
+Bu, kullanılarak serileştirilenler gibi belirli türlerin bilinen bir sınırlamasıdır <xref:System.Xml.Serialization.XmlSerializer> .
 
 ## <a name="error-debugging-service-code"></a>Hizmet kodunda hata ayıklama hatası
 
@@ -74,7 +74,7 @@ Hizmet projesi çözümden kaldırılırsa, bu açık derleme bağımlılığı 
 
 Bu hatayı onarmak için, hizmet projesini el ile yeniden oluşturmanız gerekir:
 
-1. Üzerinde **Araçları** menüsünü tıklatın **seçenekleri**.
+1. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.
 
 2. **Seçenekler** iletişim kutusunda, **Projeler ve çözümler**' i genişletin ve ardından **genel**' i seçin.
 
@@ -82,7 +82,7 @@ Bu hatayı onarmak için, hizmet projesini el ile yeniden oluşturmanız gerekir
 
 4. WCF hizmeti projesini yükleyin.
 
-5. **Configuration Manager** iletişim kutusunda, **etkin çözüm yapılandırmasını** **Hata Ayıkla**olarak ayarlayın. Daha fazla bilgi için [nasıl yapılır: yapılandırmaları oluşturma ve düzenleme](../ide/how-to-create-and-edit-configurations.md).
+5. **Configuration Manager** iletişim kutusunda, **etkin çözüm yapılandırmasını** **Hata Ayıkla**olarak ayarlayın. Daha fazla bilgi için bkz. [nasıl yapılır: yapılandırma oluşturma ve düzenleme](../ide/how-to-create-and-edit-configurations.md).
 
 6. **Çözüm Gezgini**, WCF hizmeti projesini seçin.
 
@@ -90,7 +90,7 @@ Bu hatayı onarmak için, hizmet projesini el ile yeniden oluşturmanız gerekir
 
 ## <a name="wcf-data-services-do-not-display-in-the-browser"></a>WCF Veri Hizmetleri tarayıcıda gösterme
 
-Bir [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]verilerin XML temsilini görüntülemeye çalıştığında, Internet Explorer verileri bir RSS akışı olarak yanlış yorumlayabilir. RSS akışlarını görüntüleme seçeneğinin devre dışı olduğundan emin olun.
+Internet Explorer verilerin bir XML temsilini görüntülemeye çalıştığında [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] verileri BIR RSS akışı olarak yanlış yorumlayabilir. RSS akışlarını görüntüleme seçeneğinin devre dışı olduğundan emin olun.
 
 Bu hatayı onarmak için RSS akışlarını devre dışı bırakın:
 

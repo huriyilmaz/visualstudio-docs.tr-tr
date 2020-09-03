@@ -1,5 +1,5 @@
 ---
-title: İçinde çekirdek Düzenleyicisi | Microsoft Docs
+title: Çekirdek düzenleyicinin içinde | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,18 +11,18 @@ caps.latest.revision: 22
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: cf9bc42aec3aac5acc996487f99c7e1f29ca252c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203948"
 ---
 # <a name="inside-the-core-editor"></a>Temel Düzenleyicinin İçinde
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Çekirdek Düzenleyicisi değiştirebilir ve sorgu metin tabanlı bilgiler sağlayan çeşitli bileşenleri kümesidir. Eski API'yi kullanarak çekirdek Düzenleyici özelleştirdiyseniz, düzenleyici bağdaştırıcıları fabrikamserverpool'a yönlendirilebilir bu özelleştirmeler kullanmaya devam edebilir. Bu, ancak yeni bir düzenleyici API özelleştirmelerinizi uyum önerilir.  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Çekirdek Düzenleyici, metin bilgilerini değiştirmenize ve sorgulamanızı sağlayan birkaç bileşen kümesidir. Çekirdek düzenleyiciyi eski API kullanarak özelleştirdiyseniz, bu özelleştirmeleri kullanmaya devam edebilirsiniz, bu da düzenleyici bağdaştırıcıları aracılığıyla yönlendirilir. Ancak özelleştirmelerinizi yeni Düzenleyici API 'sine uyarlamanız önerilir.  
   
- Çekirdek Düzenleyici önemli bazı yönleri şunlardır:  
+ Aşağıdaki alanlarda temel düzenleyicinin bazı önemli yönleri verilmiştir:  
   
 - Metin arabelleği  
   
@@ -34,48 +34,48 @@ ms.locfileid: "68203948"
   
 - Metin Yöneticisi  
   
-- Dil Hizmetleri ile tümleştirme  
+- Dil hizmetleriyle tümleştirme  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Eski API'yi Kullanarak Temel Düzenleyiciyi Başlatma](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)  
- Nasıl kullanılacağını hakkında adım adım yönergeler sağlar <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> Düzenleyici çekirdek örneğini oluşturmak için.  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>Temel düzenleyicinin bir örneğini oluşturmak için kullanımı hakkında adım adım yönergeler sağlar.  
   
  [Eski API'yi Kullanarak Metin Arabelleğine Erişme](../extensibility/accessing-the-text-buffer-by-using-the-legacy-api.md)  
- Çekirdek Düzenleyici içindeki metin arabelleği rolü açıklar, arabellek erişmek için kullanılır ve metin arabelleği nesne tarafından uygulanan arabirimler listesini sağlayan ilişkili sistemleri açıklanmaktadır <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>.  
+ Çekirdek düzenleyicide metin arabelleğinin rolünü açıklar, arabelleğe erişmek için kullanılan ilgili sistemleri açıklar ve metin arabelleği nesnesi tarafından uygulanan arabirimlerin bir listesini sağlar <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> .  
   
  [Eski API'deki Metin Arabelleği Olayları](../extensibility/text-buffer-events-in-the-legacy-api.md)  
- Metin arabelleği olay bildirimi için kullanılan arabirimlerin listesini sağlar.  
+ Metin arabelleği olaylarının bildirilmesi için kullanılan arabirimlerin bir listesini sağlar.  
   
- [Nasıl yapılır: Eski API ile Metin Arabelleği Olaylarına Kaydolma](../extensibility/how-to-register-for-text-buffer-events-with-the-legacy-api.md)  
- Metin arabelleği olayları için öneri açıklar.  
+ [Nasıl Yapılır: Eski API ile Metin Arabelleği Olaylarına Kaydolma](../extensibility/how-to-register-for-text-buffer-events-with-the-legacy-api.md)  
+ Metin arabelleği olaylarına nasıl öneride bulunan açıklanır.  
   
  [Genel Ayarları İzlemek İçin Metin Yöneticisini Kullanma](../extensibility/using-the-text-manager-to-monitor-global-settings.md)  
- Metin Yöneticisi ile çekirdek Düzenleyicisi bileşenleri genel tercih bilgi paylaşımı için nasıl kullanıldığını ve metin Yöneticisi olaylarını bildirim almak nasıl ele alır.  
+ Metin yöneticisinin ana düzenleyici bileşenleriyle küresel tercih bilgilerini paylaşmak için nasıl kullanıldığını ve metin Yöneticisi olaylarının bildirimini nasıl alacağınızı açıklar.  
   
  [Eski API'yi Kullanarak Metin Görünümüne Erişme](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)  
- Çekirdek Düzenleyici içindeki metin görünümün rolü açıklar ve tarafından uygulanan arabirimler listeler <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> nesne.  
+ Temel düzenleyicide metin görünümünün rolünü açıklar ve nesne tarafından uygulanan arabirimleri listeler <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> .  
   
  [Eski API'yi Kullanarak Kod Penceresini Özelleştirme](../extensibility/customizing-code-windows-by-using-the-legacy-api.md)  
- Nasıl bir kod penceresinde metin görünümünü içine almak için kullanılan, kod penceresi Yöneticisi kod penceresine süslemeleri sağlamak için nasıl kullanıldığını açıklar ve bildirim yeni bir görünüm sağlar hakkında bilgi sağlar.  
+ Bir kod penceresinin metin görünümünü çevrelemek için nasıl kullanıldığı hakkında bilgi sağlar, kod penceresine yönelik süslemeler sağlamak için kod penceresi yöneticisinin nasıl kullanıldığını açıklar ve yeni görünümler hakkında bildirim sağlar.  
   
  [Eski API'yi Kullanarak Görünüm Ayarlarını Değiştirme](../extensibility/changing-view-settings-by-using-the-legacy-api.md)  
- Görünüm ayarları zorlamak ve zorunlu ayarlarını kaldırmak hakkında adım adım yönergeler sağlar.  
+ Ayarları görüntülemeyi zorlama ve zorlanan ayarları kaldırma hakkında adım adım yönergeler sağlar.  
   
  [Dil Hizmetleri ve Temel Düzenleyici](../extensibility/language-services-and-the-core-editor.md)  
- Bir denetim kodu süslemeleri için dil hizmeti örneğinin açıklar.  
+ Kod süslemelerini denetlemek için bir dil hizmetinin örneklenmesini açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [İzlenecek yol: Temel Düzenleyici Oluşturma ve Düzenleyici Dosya Türü Kaydetme](../extensibility/walkthrough-creating-a-core-editor-and-registering-an-editor-file-type.md)  
- Yönetilen koddan çekirdek Düzenleyici başlama hakkında adım adım yönergeler sağlar.  
+ [İzlenecek Yol: Temel Düzenleyici Oluşturma ve Düzenleyici Dosya Türü Kaydetme](../extensibility/walkthrough-creating-a-core-editor-and-registering-an-editor-file-type.md)  
+ Yönetilen koddan çekirdek düzenleyiciyi başlatma hakkında adım adım yönergeler sağlar.  
   
  [Aşağı Açılan Çubuk](../extensibility/drop-down-bar.md)  
- Açılan çubuğunun nasıl kod penceresinde kullanılır ve bir açılan çubuğu uygularken kullanılan arabirimler açıklanmaktadır açıklanır.  
+ Açılan çubuğun kod penceresinde nasıl kullanıldığını açıklar ve bir açılan çubuğu uyguladığınızda kullanılan arabirimleri açıklar.  
   
  [Eski API ile Metin İşaretçilerini Kullanma](../extensibility/using-text-markers-with-the-legacy-api.md)  
- Metin işaretçileri ve çekirdek Düzenleyicisi'nde nasıl kullanılacağını kavramını açıklar ve erişmek ve metin işaretçileri yönetmek için kullanılan arabirimleri listeler.  
+ Metin işaretçileri kavramını ve bunların çekirdek düzenleyicide nasıl kullanıldığını açıklar ve Metin işaretleyicilerini erişmek ve yönetmek için kullanılan arabirimleri listeler.  
   
- [Nasıl yapılır: Standart Metin İşaretçileri Ekleme](../extensibility/how-to-add-standard-text-markers.md)  
- Bir metin işaretçisi oluşturmak ve özel komut için kısayol menüsü ekleme hakkında adım adım yönergeler sağlar.  
+ [Nasıl Yapılır: Standart Metin İşaretçileri Ekleme](../extensibility/how-to-add-standard-text-markers.md)  
+ Bir metin işaretçisi oluşturma ve kısayol menüsüne özel bir komut ekleme hakkında adım adım yönergeler sağlar.  
   
  [Nasıl yapılır: Özel Metin İşaretçileri Oluşturma](../extensibility/how-to-create-custom-text-markers.md)  
- Bir özel metin işaretçisi oluşturmak ve hizmet olarak işaret türü sağlamak hakkında adım adım yönergeler sağlar.
+ Özel metin işaretleyicisi oluşturma ve işaret türünün bir hizmet olarak nasıl sağlanması hakkında adım adım yönergeler sağlar.

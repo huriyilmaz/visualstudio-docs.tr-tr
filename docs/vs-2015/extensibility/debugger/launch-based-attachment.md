@@ -12,28 +12,28 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 09a6b39bef9ba6af098bf92d779a490e22492209
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203155"
 ---
 # <a name="launch-based-attachment"></a>Başlatma Tabanlı Ek
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Başlatma tabanlı ek bir program için otomatik olarak gerçekleşir. SDM tarafından program barındırma işlemi başlatıldığında, başlatma tabanlı ek el ile ek yöntemi için benzer bir yolu izler. Bilgi için [programa ekleme](../../extensibility/debugger/attaching-to-the-program.md).  
+Bir programa başlatma tabanlı ek otomatik. Programı barındıran işlem SDM tarafından başlatıldığında, başlatma tabanlı ek el ile ek yöntemine benzer bir yol izler. Bilgi için bkz. [programa ekleme](../../extensibility/debugger/attaching-to-the-program.md).  
   
-## <a name="the-attaching-process"></a>Düğmelere işlemi  
- İkisi arasındaki temel fark aşağıdaki olaylar dizisi olan **Ekle** gibi çağırın:  
+## <a name="the-attaching-process"></a>Iliştirme Işlemi  
+ Ana fark, aşağıdaki gibi, **iliştirme** çağrısını izleyen olayların sırasıdır:  
   
-1. Gönderme bir **IDebugEngineCreateEvent2** SDM olay nesnesiyle. Ayrıntılar için bkz [olayları gönderme](../../extensibility/debugger/sending-events.md).  
+1. SDM 'ye bir **IDebugEngineCreateEvent2** Event nesnesi gönderin. Ayrıntılar için bkz. [olayları gönderme](../../extensibility/debugger/sending-events.md).  
   
-2. Çağrı `IDebugProgram2::GetProgramId` metodunda **IDebugProgram2** arabirimi geçirilen **iliştirme** yöntemi.  
+2. `IDebugProgram2::GetProgramId` **Attach** yöntemine geçirilen **IDebugProgram2** arabirimindeki yöntemi çağırın.  
   
-3. Gönder bir **IDebugProgramCreateEvent2** SDM bildirmek üzere olay nesnesi, yerel **IDebugProgram2** nesne program için DE göstermek için oluşturuldu.  
+3. Yerel **IDebugProgram2** nesnesinin program tarafından da temsil etmek IÇIN oluşturulduğunu SDM 'ye bildirmek Için bir **IDebugProgramCreateEvent2** olay nesnesi gönderin.  
   
-4. Gönderme bir [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) SDM başlatılan işlem için yeni bir iş parçacığı oluşturulduğunu bildirmek üzere olay nesnesi.  
+4. SDM 'yi Başlatan işlem için yeni bir iş parçacığının oluşturulduğunu bildirmek için bir [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) olay nesnesi gönderin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Gerekli olayları gönderme](../../extensibility/debugger/sending-the-required-events.md)   
+ [Gerekli olaylar gönderiliyor](../../extensibility/debugger/sending-the-required-events.md)   
  [Bir Programı Hataları Ayıklanacak Şekilde Etkinleştirme](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)

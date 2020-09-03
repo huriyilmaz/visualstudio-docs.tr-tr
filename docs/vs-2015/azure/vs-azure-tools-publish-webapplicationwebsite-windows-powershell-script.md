@@ -12,14 +12,14 @@ ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
 ms.openlocfilehash: 3d56cfce70b0723b636b9b8ef7c6f3917015bf66
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75915554"
 ---
 # <a name="publish-webapplicationwebsite-windows-powershell-script"></a>Publish-WebApplicationWebSite (Windows PowerShell betiği)
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 Bir Web projesini bir Azure Web sitesinde yayımlar. Komut dosyası, mevcut değilse, Azure aboneliğinizde gerekli kaynakları oluşturur.
 
 ```
@@ -41,8 +41,8 @@ Dağıtımın ayrıntılarını açıklayan JSON yapılandırma dosyasının yol
 | Gerekli mi? |true |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| İşlem hattı girişi kabul edilsin mi? |{1&gt;false&lt;1} |
-| Joker karakterler kabul edilsin mi? |{1&gt;false&lt;1} |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ## <a name="subscriptionname"></a>SubscriptionName
 Web sitesini oluşturmak istediğiniz Azure aboneliğinin adı.
@@ -50,11 +50,11 @@ Web sitesini oluşturmak istediğiniz Azure aboneliğinin adı.
 | Parametre | Varsayılan değer |
 | --- | --- |
 | Diğer adlar |yok |
-| Gerekli mi? |{1&gt;false&lt;1} |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| İşlem hattı girişi kabul edilsin mi? |{1&gt;false&lt;1} |
-| Joker karakterler kabul edilsin mi? |{1&gt;false&lt;1} |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ## <a name="webdeploypackage"></a>WebDeployPackage
 Web sitesinde yayımlanacak Web dağıtım paketinin yolu. Bu paketi Visual Studio 'daki Web 'i Yayımla Sihirbazı 'nı kullanarak oluşturabilirsiniz. Daha fazla bilgi için bkz. [Azure Cloud Services ve ASP.NET ile çalışmaya başlama](vs-azure-tools-publish-webapplicationwebsite-windows-powershell-script.md).
@@ -62,11 +62,11 @@ Web sitesinde yayımlanacak Web dağıtım paketinin yolu. Bu paketi Visual Stud
 | Parametre | Varsayılan değer |
 | --- | --- |
 | Diğer adlar |yok |
-| Gerekli mi? |{1&gt;false&lt;1} |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| İşlem hattı girişi kabul edilsin mi? |{1&gt;false&lt;1} |
-| Joker karakterler kabul edilsin mi? |{1&gt;false&lt;1} |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ## <a name="databaseserverpassword"></a>DatabaseServerPassword
 Azure 'da SQL veritabanı için Kullanıcı adı ve parola.
@@ -74,11 +74,11 @@ Azure 'da SQL veritabanı için Kullanıcı adı ve parola.
 | Parametre | Varsayılan değer |
 | --- | --- |
 | Diğer adlar |yok |
-| Gerekli mi? |{1&gt;false&lt;1} |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| İşlem hattı girişi kabul edilsin mi? |{1&gt;false&lt;1} |
-| Joker karakterler kabul edilsin mi? |{1&gt;false&lt;1} |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ## <a name="sendhostmessagestooutput"></a>Sendhostiletitooutput
 Doğru ise, komut dosyasından çıkış akışına iletileri yazdırın.
@@ -86,11 +86,11 @@ Doğru ise, komut dosyasından çıkış akışına iletileri yazdırın.
 | Parametre | Varsayılan değer |
 | --- | --- |
 | Diğer adlar |yok |
-| Gerekli mi? |{1&gt;false&lt;1} |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
-| Varsayılan değer |{1&gt;false&lt;1} |
-| İşlem hattı girişi kabul edilsin mi? |{1&gt;false&lt;1} |
-| Joker karakterler kabul edilsin mi? |{1&gt;false&lt;1} |
+| Varsayılan değer |yanlış |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ## <a name="remarks"></a>Açıklamalar
 Geliştirme ve test ortamları oluşturmak için betiğin nasıl kullanılacağına ilişkin ayrıntılı bir açıklama için, bkz. [geliştirme ve test ortamlarında yayımlamak Için Windows PowerShell betiklerini kullanma](vs-azure-tools-publishing-using-powershell-scripts.md).

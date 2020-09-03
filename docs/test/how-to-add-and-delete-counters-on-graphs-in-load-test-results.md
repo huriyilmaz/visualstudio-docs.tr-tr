@@ -12,10 +12,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2b2cefc56d299c9ec917aea555aec1cd9ca53887
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288474"
 ---
 # <a name="how-to-add-and-delete-counters-on-graphs-in-load-test-results"></a>Nasıl yapılır: Yük Testi Sonuçlarındaki Grafiklerde Sayaç Ekleme ve Silme
@@ -34,7 +34,7 @@ Yük testinin uzunluğuna bağlı olarak yük testi çalıştırma ayarlarındak
 
 |Yük testi süresi|Önerilen örnek hızı|
 |-|-----------------------------|
-|\<1 saat|5 saniye|
+|\< 1 saat|5 saniye|
 |1-8 saat|15 saniye|
 |8-24 saat|30 saniye|
 |> 24 saat|60 saniye|
@@ -71,11 +71,11 @@ Daha fazla bilgi için bkz. [nasıl yapılır: zamanlama ayrıntıları depolama
 
 5. Grafikten performans sayacı verilerini kaldırmak için göstergenin **sayaç** sütununda performans sayacını sağ tıklatın ve **Sil**' i seçin.
 
-     \-veya
+     \- veya
 
      Grafikteki veri satırına sağ tıklayın ve **Sil**' i seçin.
 
-     \-veya
+     \- veya
 
      Göstergenin **sayaç** sütununda veya grafikteki veri satırında performans sayacını seçin ve ardından **Delete** tuşuna basın.
 

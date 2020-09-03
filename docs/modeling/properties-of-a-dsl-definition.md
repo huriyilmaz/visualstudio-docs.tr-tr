@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ee23e15e6cc389ea5a8bdcdd793648365d08c30d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532308"
 ---
 # <a name="properties-of-a-dsl-definition"></a>DSL Tanımının Özellikleri
@@ -34,10 +34,10 @@ DslDefinition özellikleri, sürüm numaralandırması gibi, *etki alanına özg
 |Paket ad alanı|Bu DSL için oluşturulan Visual Studio paketinin ad alanı.|\<none>|
 |Ürün Adı|Bu DSL için oluşturulan Visual Studio paketi için kaydedilecek ürünün adı.|\<none>|
 |Notlar|Bu alan sınıfıyla ilişkili notlar.|\<none>|
-|Açıklama|Bu alan sınıfı için açıklama.|\<none>|
+|Description|Bu alan sınıfı için açıklama.|\<none>|
 |Görünen Ad|Bu alan sınıfı için oluşturulan tasarımcıda görüntülenecek ad.|\<none>|
 |Help anahtar sözcüğü|Bu alan sınıfıyla ilişkili Yardım anahtar sözcüğü.|\<none>|
-|Yapı|Bu etki alanına özgü dil tanımı için Artımlı derleme numarası.|0|
+|Oluşturma|Bu etki alanına özgü dil tanımı için Artımlı derleme numarası.|0|
 |Ana Sürüm|Bu etki alanına özgü dil tanımı için artımlı ana derleme numarası.|1|
 |Alt Sürüm|Bu etki alanına özgü dil tanımı için artımlı küçük derleme numarası.|0|
 |Revizyon|Bu etki alanına özgü dil tanımı için artımlı düzeltme derleme numarası.|0|

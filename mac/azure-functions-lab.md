@@ -8,17 +8,17 @@ ms.technology: vs-ide-install
 ms.assetid: 38FD2070-5151-482E-B0A9-993715128736
 ms.topic: tutorial
 ms.openlocfilehash: 99373d7da8c7f83c8703b237ff83c63f9d1b6a53
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85939090"
 ---
 # <a name="tutorial-getting-started-with-azure-functions"></a>Öğretici: Azure Işlevleri 'ni kullanmaya başlama
 
 Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturmaya nasıl başlayacağınızı öğreneceksiniz. Ayrıca, Azure Işlevleri geliştiricileri tarafından kullanılabilen çok sayıda bağlama ve tetikleyiciden birini temsil eden Azure depolama tabloları ile de tümleştirilebilir.
 
-## <a name="objectives"></a>Amaçlar
+## <a name="objectives"></a>Hedefler
 
 > [!div class="checklist"]
 > * Yerel Azure Işlevleri oluştur ve hata ayıkla
@@ -69,7 +69,7 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
 
     ![Yeni depolama hesabı ayrıntıları](media/azure-functions-lab-image6.png)
 
-1. **Oluştur**'a tıklayın. Depolama hesabının oluşturulması birkaç dakika sürebilir. Başarılı bir şekilde oluşturulduktan sonra bir bildirim alırsınız.
+1. **Oluştur**’a tıklayın. Depolama hesabının oluşturulması birkaç dakika sürebilir. Başarılı bir şekilde oluşturulduktan sonra bir bildirim alırsınız.
 
     ![Dağıtım başarılı bildirimi](media/azure-functions-lab-image7.png)
 

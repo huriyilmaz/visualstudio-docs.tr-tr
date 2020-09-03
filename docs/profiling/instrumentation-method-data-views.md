@@ -1,5 +1,5 @@
 ---
-title: Enstrümantasyon Yöntemi Veri Görünümleri | Microsoft Dokümanlar
+title: İzleme yöntemi veri görünümleri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,19 +13,19 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 18cc473f517e1f2eb03b657a365a33e4e37ff23f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74774169"
 ---
-# <a name="instrumentation-method-data-views"></a>Enstrümantasyon yöntemi veri görünümleri
-Bu bölüm, enstrümantasyon yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgilerini içerir.
+# <a name="instrumentation-method-data-views"></a>İzleme yöntemi veri görünümleri
+Bu bölüm, izleme yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri içerir.
 
 ## <a name="in-this-section"></a>Bu bölümde
 - [Özet Görünümü](../profiling/summary-view-instrumentation-data.md)
 
- En çok zamanı tüketen işlevleri ve en bireysel çalışmayı yapan işlevleri listeler.
+ En çok kullanılan işlevleri ve en bireysel çalışmayı yapan işlevleri listeler.
 
 - [Çağrı Ağacı Görünümü](../profiling/call-tree-view-instrumentation-data.md)
 
@@ -35,35 +35,35 @@ Bu bölüm, enstrümantasyon yöntemi kullanılarak oluşturulan profil oluştur
 
  Profil oluşturma verilerini modüle göre düzenler ve modüldeki işlevler için profil oluşturma verilerini listeler.
 
-- [Arayan/Callee Görünümü - Enstrümantasyon Verileri](../profiling/caller-callee-view-instrumentation-data.md)
+- [Arayan/çağrılan görünümü-Izleme verileri](../profiling/caller-callee-view-instrumentation-data.md)
 
  Seçili bir işlevin üst ve alt işlevleri için profil oluşturma verilerini görüntüler.
 
-- [Fonksiyonlar Görünümü](../profiling/functions-view-instrumentation-data.md)
+- [İşlevler Görünümü](../profiling/functions-view-instrumentation-data.md)
 
- Profil oluşturma verilerini işleve göre listeler.
+ İşlevine göre profil oluşturma verilerini listeler.
 
 ## <a name="reference"></a>Başvuru
 - [İşlev Ayrıntıları Görünümü](../profiling/function-details-view.md)
 
- Seçili bir işlev ile seçili işlev tarafından çağrılan ve çağrılan işlevler arasındaki ilişkinin grafik grafiğini görüntüler.
+ Seçilen işlev ve seçilen işlev tarafından çağrılan ve çağrılan işlevler arasındaki ilişkinin grafik grafiğini görüntüler.
 
 - [İşlem Görünümü](../profiling/process-view.md)
 
- Wer profili oluşturan tüm işlemler için işlem başlangıcını, sonunu ve kullanım ömrünü listeler.
+ Wer tarafından profili oluşturulan tüm işlemler için işlem başlangıç, bitiş ve ömür süresini listeler.
 
 ## <a name="related-sections"></a>İlgili bölümler
 - [Örnekleme yöntemi veri görünümleri](../profiling/profiler-sampling-method-data-views.md)
 
  Örnekleme yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri.
 
-- [.NET bellek veri görünümleri](../profiling/dotnet-memory-data-views.md)
+- [.NET bellek verileri görünümleri](../profiling/dotnet-memory-data-views.md)
 
- .NET bellek verilerini içeren profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri.
+ .NET bellek verileri içeren profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri.
 
-- [Kaynak çekişme veri görünümleri](../profiling/resource-contention-data-views.md)
+- [Kaynak çakışması veri görünümleri](../profiling/resource-contention-data-views.md)
 
- İş parçacığı çekişme yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri.
+ İş parçacığı çekişmesi yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Enstrümantasyon veri değerlerini anlama](../profiling/understanding-instrumentation-data-values.md)
+- [İzleme veri değerlerini anlama](../profiling/understanding-instrumentation-data-values.md)

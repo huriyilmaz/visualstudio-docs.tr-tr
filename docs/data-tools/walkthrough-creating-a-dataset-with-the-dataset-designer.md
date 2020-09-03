@@ -14,17 +14,17 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 8c525d55de16e859005b9746eb52e5516928b9e6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75586035"
 ---
 # <a name="walkthrough-create-a-dataset-with-the-dataset-designer"></a>İzlenecek yol: Veri Kümesi Tasarımcısı bir veri kümesi oluşturma
 
 Bu izlenecek yolda, **veri kümesi Tasarımcısı**kullanarak bir veri kümesi oluşturursunuz. Makale, yeni bir proje oluşturma ve buna yeni bir **veri kümesi** öğesi ekleme sürecinde size kılavuzluk eden bir işlemdir. Bir sihirbaz kullanmadan bir veritabanındaki tabloları temel alan tablolar oluşturmayı öğreneceksiniz.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
@@ -38,15 +38,15 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
     2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
 
-    3. T-SQL betiği sorgu düzenleyiciye yapıştırın ve ardından **yürütme** düğmesi.
+    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **Çalıştır** düğmesini seçin.
 
        Kısa bir süre sonra sorgu yürütmeyi tamamlar ve Northwind veritabanı oluşturulur.
 
 ## <a name="create-a-new-windows-forms-application-project"></a>Yeni bir Windows Forms uygulama projesi oluşturma
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni** > **projesi**' ni seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
 
-2. Sol bölmedeki **görsel C#**  veya **Visual Basic** ' i genişletin ve ardından **Windows Masaüstü**' nü seçin.
+2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü**' nü seçin.
 
 3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
@@ -58,7 +58,7 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
-     **Yeni Öğe Ekle** iletişim kutusu görüntülenir.
+     **Yeni Öğe Ekle** iletişim kutusu görünür.
 
 2. Sol bölmedeki **veriler**' i seçin ve ardından orta bölmedeki veri **kümesi** ' ni seçin.
 
@@ -106,7 +106,7 @@ Bu bölümde, veri kümesine nasıl tablo ekleneceği açıklanmaktadır.
 
 - TableAdapters 'e daha fazla sorgu ekleyin.
 
-- Veri kümesindeki veri tablolarının <xref:System.Data.DataTable.ColumnChanging> veya <xref:System.Data.DataTable.RowChanging> olaylarına doğrulama mantığı ekleyin. Daha fazla bilgi için bkz. [veri kümelerinde verileri doğrulama](../data-tools/validate-data-in-datasets.md).
+- <xref:System.Data.DataTable.ColumnChanging> <xref:System.Data.DataTable.RowChanging> Veri kümesindeki veri tablolarının veya olaylarına doğrulama mantığı ekleyin. Daha fazla bilgi için bkz. [veri kümelerinde verileri doğrulama](../data-tools/validate-data-in-datasets.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

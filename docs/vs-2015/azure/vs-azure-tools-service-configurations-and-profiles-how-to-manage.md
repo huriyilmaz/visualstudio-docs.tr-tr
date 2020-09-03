@@ -12,14 +12,14 @@ ms.topic: conceptual
 ms.date: 8/11/2017
 ms.author: ghogen
 ms.openlocfilehash: 008dd927f38c7fd79996bde39531e256314f2e24
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75917354"
 ---
 # <a name="how-to-manage-service-configurations-and-profiles"></a>Hizmet yapılandırmalarını ve profillerini yönetme
-## <a name="overview"></a>Genel bakış
+## <a name="overview"></a>Genel Bakış
 Bir bulut hizmeti yayımladığınızda, Visual Studio yapılandırma bilgilerini iki tür yapılandırma dosyasında depolar: hizmet yapılandırmaları ve profiller. Hizmet yapılandırma (. cscfg dosyaları) bir Azure bulut hizmeti için dağıtım ortamları için depolama ayarları. Azure, bulut hizmetlerinizi yönetirken bu yapılandırma dosyalarını kullanır. Diğer yandan, profiller (. azurePubxml dosyaları), bulut hizmetleri için yayımlama ayarlarını depolar. Bu ayarlar, Yayımlama Sihirbazı 'nı kullanırken seçtiğiniz ayarların bir kaydıdır ve Visual Studio tarafından yerel olarak kullanılır. Bu konu, her iki yapılandırma dosyası türüyle nasıl çalışılacağını açıklamaktadır.
 
 ## <a name="service-configurations"></a>Hizmet yapılandırması
@@ -27,7 +27,7 @@ Dağıtım ortamlarınızın her biri için kullanmak üzere birden çok hizmet 
 
 Gereksinimlerinize göre bu hizmet yapılandırmasını ekleyebilir, silebilir, yeniden adlandırabilir ve değiştirebilirsiniz. Aşağıdaki çizimde gösterildiği gibi, bu hizmet yapılandırmalarının Visual Studio 'dan yönetebilirsiniz.
 
-![Hizmet Yapılandırmalarını Yönet](./media/vs-azure-tools-service-configurations-and-profiles-how-to-manage/manage-service-config.png)
+![Hizmet yapılandırmasını yönetme](./media/vs-azure-tools-service-configurations-and-profiles-how-to-manage/manage-service-config.png)
 
 Ayrıca rolün özellik sayfalarındaki **konfigürasyonları Yönet** iletişim kutusunu da açabilirsiniz. Azure projenizde bir rolün özelliklerini açmak için, bu rolün kısayol menüsünü açın ve **Özellikler**' i seçin. **Ayarlar** sekmesinde, **hizmet yapılandırması** listesini genişletin ve ardından **Yönet** ' i seçerek **yapılandırmaları Yönet** iletişim kutusunu açın.
 
@@ -70,7 +70,7 @@ Sihirbazı ilk kez çalıştırdığınızda varsayılan bir profil oluşturulur
 2. Aşağıdaki çizimde gösterildiği gibi, **hedef profil** listesinin yanındaki **profili kaydet** düğmesini seçin. Bu, sizin için bir profil oluşturur.
    
     ![Yeni bir profil oluşturun](./media/vs-azure-tools-service-configurations-and-profiles-how-to-manage/create-new-profile.png)
-3. Profil oluşturulduktan sonra **yönet < seçin...**  **hedef profil** listesinde >.
+3. Profil oluşturulduktan sonra **hedef profil** listesinde **<Yönet... >** öğesini seçin.
    
     Aşağıdaki çizimde gösterildiği gibi **profilleri Yönet** iletişim kutusu görünür.
    

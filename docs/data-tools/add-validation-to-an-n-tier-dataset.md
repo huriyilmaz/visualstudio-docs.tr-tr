@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 91dbe04c85491a38a221edfb064702085136780f
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85283027"
 ---
 # <a name="add-validation-to-an-n-tier-dataset"></a>N Katmanlı bir veri kümesine doğrulama ekleme
@@ -58,7 +58,7 @@ End Sub
 2. Doğrulamak istediğiniz sütuna çift tıklayın. Bu eylem <xref:System.Data.DataTable.ColumnChanging> olay işleyicisini oluşturur.
 
     > [!NOTE]
-    > Veri Kümesi Tasarımcısı, C# olayı için otomatik olarak bir olay işleyici oluşturmaz. C# ' de olayı işlemek için gerekli olan kod bir sonraki bölüme dahildir. `SampleColumnChangingEvent`oluşturulur ve sonra <xref:System.Data.DataTable.ColumnChanging> yöntemdeki olaya bağlanır <xref:System.Data.DataTable.EndInit%2A> .
+    > Veri Kümesi Tasarımcısı, C# olayı için otomatik olarak bir olay işleyici oluşturmaz. C# ' de olayı işlemek için gerekli olan kod bir sonraki bölüme dahildir. `SampleColumnChangingEvent` oluşturulur ve sonra <xref:System.Data.DataTable.ColumnChanging> yöntemdeki olaya bağlanır <xref:System.Data.DataTable.EndInit%2A> .
 
 3. `e.ProposedValue`Uygulamanızın gereksinimlerini karşılayan veriler içerdiğini doğrulamak için kod ekleyin. Önerilen değer kabul edilemez ise, sütunu bir hata içerdiğini belirtecek şekilde ayarlayın.
 

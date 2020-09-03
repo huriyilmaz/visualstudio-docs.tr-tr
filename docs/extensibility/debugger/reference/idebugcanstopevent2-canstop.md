@@ -1,5 +1,5 @@
 ---
-title: IDebugCanStopEvent2::CanStop | Microsoft Dokümanlar
+title: 'IDebugCanStopEvent2:: CanStop | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2915938c966bac7f842d0745c973c7d0b7033e2b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734597"
 ---
 # <a name="idebugcanstopevent2canstop"></a>IDebugCanStopEvent2::CanStop
-Hata ayıklama altyapısına (DE) geçerli kod konumunda durup durmayacağını veya yürütmeye devam edip etmeyeceğini bildirin.
+Hata ayıklama altyapısına (DE) geçerli kod konumunda durdurulup durdurulmayacağını bildirir veya yürütmeye devam edin.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT CanStop ( 
@@ -41,15 +41,15 @@ int CanStop ( 
 
 ## <a name="parameters"></a>Parametreler
 `fCanStop`\
-[içinde] Sıfır sız`TRUE`( ) DE geçerli kod konumunda durmalıdır; aksi takdirde,`FALSE`sıfır ( ).
+'ndaki `TRUE`Geçerli kod konumunda durmalı sıfır olmayan (), aksi takdirde sıfır ( `FALSE` ).
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu olayın alıcısı genellikle DE'nin durdurmak isteme nedenini belirlemek için [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) `IDebugCanStopEvent2::CanStop` yöntemini çağırır ve ardından yöntemi uygun yanıtla çağırır.
+ Bu olayın alıcısı genellikle [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) yöntemini çağırarak, onun durdurmak istediği nedeni tespit edin ve ardından `IDebugCanStopEvent2::CanStop` yöntemi uygun Yanıtla çağırır.
 
- DE durursa, durdurma nedenini açıklayan bir olay gönderir. Gönderilen genellikle iki olay vardır, [iDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) arabirimi tarafından temsil edilen bir kullanıcı veya sinyal sonu ve [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) arabirimi tarafından temsil edilen bir kesme noktası olayı.
+ DE duruyorsa, durdurma nedenini açıklayan bir olay gönderir. Tipik olarak gönderilen iki olay, [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) arabirimi tarafından temsil edilen bir kullanıcı veya sinyal kesmesi ve [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) arabirimi tarafından temsil edilen bir kesme noktası olayı vardır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)

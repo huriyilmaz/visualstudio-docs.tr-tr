@@ -8,10 +8,10 @@ ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
 ms.topic: how-to
 ms.openlocfilehash: f8452094f0059a1ffa4421d1ccd02ee244559c72
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85950337"
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>Mac için Visual Studio kaldırılıyor
@@ -196,10 +196,10 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 
 Eski sürümler için aşağıdaki yapıtları el ile kaldırmanız gerekir:
 
-* Çalışma kitapları uygulamasını şurada silin:`"/Applications/Xamarin Workbooks.app"`
-* Inspector uygulamasını şurada Sil:`"Applications/Xamarin Inspector.app"`
-* Eklentileri silin: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` ve`"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
-* Inspector ve destekleyici dosyaları şurada silin: `/Library/Frameworks/Xamarin.Interactive.framework` ve`/Library/Frameworks/Xamarin.Inspector.framework`
+* Çalışma kitapları uygulamasını şurada silin: `"/Applications/Xamarin Workbooks.app"`
+* Inspector uygulamasını şurada Sil: `"Applications/Xamarin Inspector.app"`
+* Eklentileri silin: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` ve `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
+* Inspector ve destekleyici dosyaları şurada silin: `/Library/Frameworks/Xamarin.Interactive.framework` ve `/Library/Frameworks/Xamarin.Inspector.framework`
 
 ## <a name="uninstall-the-xamarin-profiler"></a>Xamarin Profiler kaldırın
 

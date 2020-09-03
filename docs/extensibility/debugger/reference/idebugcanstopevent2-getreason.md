@@ -1,5 +1,5 @@
 ---
-title: IDebugCanStopEvent2::GetReason | Microsoft Dokümanlar
+title: 'IDebugCanStopEvent2:: GetReason | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 59e611c3ed69528f92a6085cf74aa44efed09144
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734528"
 ---
 # <a name="idebugcanstopevent2getreason"></a>IDebugCanStopEvent2::GetReason
-Hata ayıklama altyapısının (DE) durdurmak istemesinin nedenini alır.
+Hata ayıklama altyapısının (DE) durdurulması nedenini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetReason( 
@@ -41,15 +41,15 @@ int GetReason( 
 
 ## <a name="parameters"></a>Parametreler
 `pcr`\
-[çıkış] Bu olayın nedenini açıklayan [CANSTOP_REASON](../../../extensibility/debugger/reference/canstop-reason.md) numaralandırmadan bir değer verir.
+dışı Bu olayın nedenini açıklayan [CANSTOP_REASON](../../../extensibility/debugger/reference/canstop-reason.md) numaralandırmasından bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem genellikle [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md) yönteminden önce çağrılır, böylece arayan`TRUE` `IDebugCanStopEvent2::CanStop` yönteme sıfırsız () geçip geçmeyeceğini belirleyebilir.
+ Bu yöntem genellikle [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md) yönteminden önce çağrılır, böylece çağıranın sıfır olmayan () yönteme geçirilip geçemeyeceğini belirleyebilmesini sağlayabilirsiniz `TRUE` `IDebugCanStopEvent2::CanStop` .
 
- Durdurma nedeni, `CANSTOP_ENTRYPOINT`DE'nin bir giriş noktasına ulaştığı anlamına `CANSTOP_STEPIN`gelir veya DE'nin bir işleve adım attığı anlamına gelir.
+ Durdurma nedeni, ya da bir `CANSTOP_ENTRYPOINT` giriş noktasına eriştiği anlamına gelir, yanı `CANSTOP_STEPIN` de bir işlev olarak da çalışır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)

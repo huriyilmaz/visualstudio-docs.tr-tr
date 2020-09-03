@@ -1,5 +1,5 @@
 ---
-title: IDebugCodeContext2 | Microsoft Dokümanlar
+title: IDebugCodeContext2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,44 +13,44 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 778602cc29049d855c418fd8fa416feb1ad8e9fe
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734215"
 ---
 # <a name="idebugcodecontext2"></a>IDebugCodeContext2
-Bu arabirim, kod yönergesinin başlangıç konumunu temsil eder. Günümüzde çoğu çalışma zamanı mimarisi için, kod bağlamı bir programın yürütme akışında bir adres olarak düşünülebilir.
+Bu arabirim, bir kod yönergesinin başlangıç konumunu temsil eder. Günümüzde çoğu çalışma zamanı mimarilerinde, bir programın yürütme akışında bir adres olarak bir kod bağlamı düşünülebilir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugCodeContext2 : IDebugMemoryContext2
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Hata ayıklama altyapısı, kod yönergesinin konumunu belge konumuyla ilişkilendirmek için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Hata ayıklama altyapısı, bir kod yönergesinin konumunu bir belge konumuna ilişkilendirmek için bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Birçok arabirimdeki yöntemler, en tipik olarak [GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md)bu arabirimi döndürebilir. Ayrıca [iDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md) arabirimi yanı sıra kesme noktası çözünürlük bilgileri ile yoğun olarak kullanılır.
+ Birçok arabirimdeki Yöntemler bu arabirimi, genellikle [GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md)' i döndürür. Ayrıca, [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md) arabirimi ve kesme noktası çözümleme bilgileri ile de kapsamlı bir şekilde kullanılır.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) arabirimindeki yöntemlere ek olarak, bu arabirim aşağıdaki yöntemleri uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
 |[GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md)|Etkin kod bağlamına karşılık gelen belge bağlamını alır.|
-|[GetLanguageInfo](../../../extensibility/debugger/reference/idebugcodecontext2-getlanguageinfo.md)|Bu kod bağlamı için dil bilgilerini alır.|
+|[GetLanguageInfo](../../../extensibility/debugger/reference/idebugcodecontext2-getlanguageinfo.md)|Bu kod bağlamı için dil bilgisini alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Arabirim `IDebugCodeContext2` ile [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) arabirimi arasındaki temel `IDebugCodeContext2` fark, bir arabirimin her zaman talimatla hizalanmış olmasıdır. Bu, bir `IDebugCodeContext2` talimatın başlangıcını her zaman işaret `IDebugMemoryContext2` ederken, çalışma zamanı mimarisindeki herhangi bir bellek baytına işaret edebilir anlamına gelir. `IDebugCodeContext2`temel depolama boyutu (genellikle bayt) yerine talimatlarla artarak elde edilir.
+ Bir `IDebugCodeContext2` arabirim ve bir [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) arabirimi arasındaki temel fark, `IDebugCodeContext2` her zaman yönerge hizalı olur. Yani, bir `IDebugCodeContext2` yönergenin başlangıcını her zaman işaret eder, ancak `IDebugMemoryContext2` çalışma zamanı mimarisinde herhangi bir bellek baytına işaret edebilir. `IDebugCodeContext2` temel depolama boyutu (genellikle bayt) yerine yönergelerle artırılır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md)
