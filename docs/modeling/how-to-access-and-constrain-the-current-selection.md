@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b1f5aaa106e00f9b10eb88892bcc978b92a01c79
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545697"
 ---
 # <a name="how-to-access-and-constrain-the-current-selection"></a>Nasıl yapılır: Geçerli Seçime Erişme ve Seçimi Kısıtlama
@@ -30,16 +30,16 @@ Komuta bağlı olarak, komut işleyicisinin model tasarımcısında, model Gezgi
 
 1. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>Sınıfı, geçerli seçime erişmek için kullanılabilecek aşağıdaki üyeleri tanımlar.
 
-    |Üye|Açıklama|
+    |Üye|Description|
     |-|-|
     |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A> yöntemi|`true`Model tasarımcısında seçili öğelerden herhangi biri bir bölme şekli ise, aksi takdirde, döndürür `false` .|
     |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A> yöntemi|`true`Şema, model tasarımcısında seçiliyse döndürür; Aksi takdirde, `false` .|
     |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleDocumentSelection%2A> yöntemi|`true`Model tasarımcısında tam olarak bir öğe seçildiyse, aksi takdirde, döndürür `false` .|
     |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleSelection%2A> yöntemi|`true`Etkin pencerede tam olarak bir öğe seçildiyse, aksi takdirde, döndürür `false` .|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentDocumentSelection%2A>özelliði|Model tasarımcısında seçilen öğelerin salt okunurdur bir koleksiyonunu alır.|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentSelection%2A>özelliði|Etkin pencerede seçili öğelerin salt okunurdur bir koleksiyonunu alır.|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleDocumentSelection%2A>özelliði|Model tasarımcısında seçimin birincil öğesini alır.|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleSelection%2A>özelliði|Etkin pencerede Seçilenin birincil öğesini alır.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentDocumentSelection%2A> özelliði|Model tasarımcısında seçilen öğelerin salt okunurdur bir koleksiyonunu alır.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentSelection%2A> özelliði|Etkin pencerede seçili öğelerin salt okunurdur bir koleksiyonunu alır.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleDocumentSelection%2A> özelliði|Model tasarımcısında seçimin birincil öğesini alır.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleSelection%2A> özelliði|Etkin pencerede Seçilenin birincil öğesini alır.|
 
 2. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet.CurrentDocView%2A>Sınıfının özelliği, <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView> Model Tasarımcısı penceresini temsil eden nesneye erişim sağlar ve model tasarımcısında seçili öğelere ek erişim sağlar.
 

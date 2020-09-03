@@ -17,21 +17,21 @@ caps.latest.revision: 22
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f14942ffd59ce2c6eacf7da2d0d1ab252d58e2cb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194454"
 ---
 # <a name="lptextoutproc"></a>LPTEXTOUTPROC
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kullanıcı bir kaynak denetim işleminde tümleşik geliştirme ortamı (IDE) içinde yürütüldüğünde, kaynak denetimi eklentisi işlemi ile ilgili durum veya hata iletilerini iletmek isteyebilirsiniz. Eklenti kendi ileti kutularını bu amaçla görüntüleyebilirsiniz. Ancak, daha fazla sorunsuz tümleştirme için eklenti dizeler ardından bunları durum bilgisini görüntüleme, kendi yerel biçiminde görüntüler IDE geçirebilirsiniz. Bu mekanizma `LPTEXTOUTPROC` işlev işaretçisi. IDE hata ve durum görüntüleme (Aşağıda daha ayrıntılı olarak açıklanmıştır) Bu işlev uygular.  
+Kullanıcı, tümleşik geliştirme ortamının (IDE) içinden bir kaynak denetimi işlemi yürüttüğünde, kaynak denetimi eklentisi işlemle ilgili hata veya durum iletilerini iletmek isteyebilir. Eklenti, bu amaçla kendi ileti kutularını gösterebilir. Ancak, daha sorunsuz tümleştirme için, eklenti dizeleri IDE 'ye geçirebilir, bu da bunları durum bilgilerini görüntülemek için yerel bir şekilde görüntüler. Bunun mekanizması `LPTEXTOUTPROC` işlev işaretçisidir. IDE, hata ve durumu görüntülemek için bu işlevi uygular (aşağıda daha ayrıntılı olarak açıklanmıştır).  
   
- IDE için kaynak denetimi eklentisi bu işlev, işlev işaretçisi olarak geçirir `lpTextOutProc` çağırırken parametre [SccOpenProject](../extensibility/sccopenproject-function.md). Örneğin, bir çağrı ortasında bir SCC işlemi sırasında [SccGet](../extensibility/sccget-function.md) çok sayıda dosya içeren, eklenti çağırabilirsiniz `LPTEXTOUTPROC` işlevi, düzenli aralıklarla görüntülemek için dizeleri geçirme. IDE bu dizeler durum çubuğunda, çıktı penceresinde ya da ayrı ileti kutusunda uygun şekilde görüntülenebilir. İsteğe bağlı olarak, IDE ile belirli iletileri görüntülemeyi mümkün olabilir bir **iptal** düğmesi. Bu işlemi iptal etmek kullanıcının sağlar ve bu bilgileri tekrar eklenti geçirme özelliği IDE sağlar.  
+ IDE, `lpTextOutProc` [SccOpenProject](../extensibility/sccopenproject-function.md)çağrılırken parametresi olarak bu işleve yönelik bir işlev işaretçisi olan kaynak denetimi eklentisine geçer. Bir SCC işlemi sırasında, örneğin, birçok dosya içeren [SccGet](../extensibility/sccget-function.md) öğesine yapılan çağrının ortasında eklenti, `LPTEXTOUTPROC` düzenli aralıklarla görüntülenecek dizeleri geçirerek işlevi çağırabilir. IDE, bu dizeleri bir durum çubuğunda, bir çıkış penceresinde veya ayrı bir ileti kutusunda uygun şekilde gösterebilir. İsteğe bağlı olarak, IDE belirli iletileri bir **iptal** düğmesi ile görüntüleyebiliyor olabilir. Bu, kullanıcının işlemi iptal etmesini sağlar ve IDE 'nin bu bilgileri eklentiye geri geçirebilmesini sağlar.  
   
 ## <a name="signature"></a>İmza  
- IDE işlevi aşağıdaki imzası olan çıktı:  
+ IDE 'nin çıkış işlevi aşağıdaki imzaya sahiptir:  
   
 ```cpp#  
 typedef LONG (*LPTEXTOUTPROC) (  
@@ -42,36 +42,36 @@ typedef LONG (*LPTEXTOUTPROC) (
   
 ## <a name="parameters"></a>Parametreler  
  display_string  
- Görüntülenecek bir metin dizesi. Bu dize bir satır başı dönüş veya satır besleme ile sonlandırılmalıdır değil.  
+ Görüntülenecek metin dizesi. Bu dize bir satır başı veya bir satır akışı ile sonlandırılmamalıdır.  
   
  mesg_type  
- İleti türü. Bu parametre için desteklenen değerler aşağıdaki tabloda listelenmektedir.  
+ İleti türü. Aşağıdaki tabloda bu parametre için desteklenen değerler listelenmiştir.  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`SCC_MSG_INFO, SCC_MSG_WARNING, SCC_MSG_ERROR`|İletinin bilgi, uyarı veya hata olarak kabul edilir.|  
-|`SCC_MSG_STATUS`|İleti durumu gösterir ve durum çubuğunda görüntülenir.|  
-|`SCC_MSG_DOCANCEL`|İleti dize ile gönderilir.|  
-|`SCC_MSG_STARTCANCEL`|Görüntüleme başlangıcı bir **iptal** düğmesi.|  
-|`SCC_MSG_STOPCANCEL`|Görüntüleme durdurur bir **iptal** düğmesi.|  
-|`SCC_MSG_BACKGROUND_IS_CANCELLED`|IDE, arka plan işlemi iptal edilip edilmeyeceğini ister: IDE döndürür `SCC_MSG_RTN_CANCEL` işlem iptal edildi; Aksi halde döndürür `SCC_MSG_RTN_OK`. `display_string` Parametresi olarak atandığında bir [SccMsgDataIsCancelled](#LinkSccMsgDataIsCancelled) yapısı, kaynak denetimi eklentisi tarafından sağlanır.|  
-|`SCC_MSG_BACKGROUND_ON_BEFORE_GET_FILE`|Sürüm denetiminden alınmadan önce bir dosya hakkında IDE söyler. `display_string` Parametresi olarak atandığında bir [SccMsgDataOnBeforeGetFile](#LinkSccMsgDataOnBeforeGetFile) yapısı, kaynak denetimi eklentisi tarafından sağlanır.|  
-|`SCC_MSG_BACKGROUND_ON_AFTER_GET_FILE`|Sürüm denetiminden aldıktan sonra IDE bir dosya hakkında söyler. `display_string` Parametresi olarak atandığında bir [SccMsgDataOnAfterGetFile](#LinkSccMsgDataOnAfterGetFile) yapısı, kaynak denetimi eklentisi tarafından sağlanır.|  
-|`SCC_MSG_BACKGROUND_ON_MESSAGE`|Arka plan işlemi şu andaki durumu IDE'yi söyler. `display_string` Parametresi olarak atandığında bir [SccMsgDataOnMessage](#LinkSccMsgDataOnMessage) yapısı, kaynak denetimi eklentisi tarafından sağlanır.|  
+|`SCC_MSG_INFO, SCC_MSG_WARNING, SCC_MSG_ERROR`|İleti bilgi, uyarı veya hata olarak kabul edilir.|  
+|`SCC_MSG_STATUS`|İleti durumu gösterir ve durum çubuğunda gösterilebilir.|  
+|`SCC_MSG_DOCANCEL`|İleti dizesi olmadan gönderilir.|  
+|`SCC_MSG_STARTCANCEL`|**İptal** düğmesini görüntülemeye başlar.|  
+|`SCC_MSG_STOPCANCEL`|**İptal** düğmesini görüntülemeyi durduruyor.|  
+|`SCC_MSG_BACKGROUND_IS_CANCELLED`|Arka plan işleminin iptal edilip edilmemeyi IDE ister: IDE `SCC_MSG_RTN_CANCEL` , işlem iptal edildiyse döndürür; Aksi takdirde, döndürür `SCC_MSG_RTN_OK` . `display_string`Parametresi, kaynak denetimi eklentisi tarafından sağlanan bir [Sccmsgdataısiptal](#LinkSccMsgDataIsCancelled) yapısı olarak dönüştürüldü.|  
+|`SCC_MSG_BACKGROUND_ON_BEFORE_GET_FILE`|Sürüm denetiminden alınmadan önce IDE 'ye bir dosya hakkında bilgi söyler. `display_string`Parametresi, kaynak denetimi eklentisi tarafından sağlanan bir [SccMsgDataOnBeforeGetFile](#LinkSccMsgDataOnBeforeGetFile) yapısı olarak dönüştürüldü.|  
+|`SCC_MSG_BACKGROUND_ON_AFTER_GET_FILE`|Sürüm denetiminden alındıktan sonra IDE 'yi bir dosya hakkında söyler. `display_string`Parametresi, kaynak denetimi eklentisi tarafından sağlanan bir [Sccmsgdataonaftergetfile](#LinkSccMsgDataOnAfterGetFile) yapısı olarak dönüştürüldü.|  
+|`SCC_MSG_BACKGROUND_ON_MESSAGE`|Arka plan işleminin geçerli durumunun IDE 'sine söyler. `display_string`Parametresi, kaynak denetimi eklentisi tarafından sağlanan bir [SccMsgDataOnMessage](#LinkSccMsgDataOnMessage) yapısı olarak dönüştürüldü.|  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|SCC_MSG_RTN_OK|Dize zobrazilo veya işlemi başarıyla tamamlandı.|  
+|SCC_MSG_RTN_OK|Dize görüntülendi veya işlem başarıyla tamamlandı.|  
 |SCC_MSG_RTN_CANCEL|Kullanıcı işlemi iptal etmek istiyor.|  
   
 ## <a name="example"></a>Örnek  
- IDE çağrıları varsayalım [SccGet](../extensibility/sccget-function.md) yirmi dosya adlarına sahip. Kaynak Denetimi Eklentisi, ortasında bir dosya alma işlemi iptal ediliyor önlemek istiyor. Her dosyayı edindikten sonra onu çağıran `lpTextOutProc`, her dosya durum bilgilerini geçirme ve gönderen bir `SCC_MSG_DOCANCEL` raporlanacak durum yok varsa, ileti. Herhangi bir zamanda eklenti dönüş değerini alıp almadığına `SCC_MSG_RTN_CANCEL` böylece daha fazla dosya alınır IDE üzerinden, alma işlemi hemen iptal eder.  
+ IDE 'nin, yirmi dosya adı ile [SccGet](../extensibility/sccget-function.md) 'e çağrı sağladığını varsayalım. Kaynak denetimi eklentisi bir dosya al işleminin ortasında işlemin iptal edilmesini engellemek istiyor. Her bir dosyayı aldıktan sonra, `lpTextOutProc` her bir dosyaya durum bilgilerini çağırarak ve `SCC_MSG_DOCANCEL` rapor durumu yoksa bir ileti gönderir. Eklenti, IDE 'den dönüş değeri aldığında herhangi bir zamanda `SCC_MSG_RTN_CANCEL` , daha fazla dosya alınmaması için alma işlemini hemen iptal eder.  
   
 ## <a name="structures"></a>Yapılar  
   
-### <a name="LinkSccMsgDataIsCancelled"></a> SccMsgDataIsCancelled  
+### <a name="sccmsgdataiscancelled"></a><a name="LinkSccMsgDataIsCancelled"></a> Sccmsgdataısiptal edildi  
   
 ```cpp#  
 typedef struct {  
@@ -79,9 +79,9 @@ typedef struct {
 } SccMsgDataIsCancelled;  
 ```  
   
- Bu yapı ile gönderilen `SCC_MSG_BACKGROUND_IS_CANCELLED` ileti. İptal edildi arka plan işlemi kimliği iletişim kurmak için kullanılır.  
+ Bu yapı iletiyle birlikte gönderilir `SCC_MSG_BACKGROUND_IS_CANCELLED` . İptal edilen arka plan işleminin KIMLIĞINI iletmek için kullanılır.  
   
-### <a name="LinkSccMsgDataOnBeforeGetFile"></a> SccMsgDataOnBeforeGetFile  
+### <a name="sccmsgdataonbeforegetfile"></a><a name="LinkSccMsgDataOnBeforeGetFile"></a> SccMsgDataOnBeforeGetFile  
   
 ```cpp#  
 typedef struct {  
@@ -90,9 +90,9 @@ typedef struct {
 } SccMsgDataOnBeforeGetFile;  
 ```  
   
- Bu yapı ile gönderilen `SCC_MSG_BACKGROUND_ON_BEFORE_GET_FILE` ileti. Yaklaşık Alınacak dosya adını ve Kimliğini alma yapıyor arka plan işlemi iletişim kurmak için kullanılır.  
+ Bu yapı iletiyle birlikte gönderilir `SCC_MSG_BACKGROUND_ON_BEFORE_GET_FILE` . Alınacak dosyanın adı ve alma işlemini yapan arka plan işleminin KIMLIĞI ile iletişim kurmak için kullanılır.  
   
-### <a name="LinkSccMsgDataOnAfterGetFile"></a> SccMsgDataOnAfterGetFile  
+### <a name="sccmsgdataonaftergetfile"></a><a name="LinkSccMsgDataOnAfterGetFile"></a> SccMsgDataOnAfterGetFile  
   
 ```cpp#  
 typedef struct {  
@@ -102,9 +102,9 @@ typedef struct {
 } SccMsgDataOnAfterGetFile;  
 ```  
   
- Bu yapı ile gönderilen `SCC_MSG_BACKGROUND_ON_AFTER_GET_FILE` ileti. Belirtilen dosya ve bunun yanı sıra alınırken yapmış arka plandaki işlem kimliği alınıyor sonucunu iletişim kurmak için kullanılır. Dönüş değerlerinin [SccGet](../extensibility/sccget-function.md) için ne sonuç olarak verilebilir.  
+ Bu yapı iletiyle birlikte gönderilir `SCC_MSG_BACKGROUND_ON_AFTER_GET_FILE` . Belirtilen dosyanın alınması sonucunu ve alma işlemini yapan arka plan işleminin KIMLIĞINI iletmek için kullanılır. Sonuç olarak verilebilir olan [SccGet](../extensibility/sccget-function.md) için dönüş değerlerine bakın.  
   
-### <a name="LinkSccMsgDataOnMessage"></a> SccMsgDataOnMessage  
+### <a name="sccmsgdataonmessage"></a><a name="LinkSccMsgDataOnMessage"></a> SccMsgDataOnMessage  
  [C++]  
   
 ```  
@@ -115,10 +115,10 @@ typedef struct {
 } SccMsgDataOnMessage;  
 ```  
   
- Bu yapı ile gönderilen `SCC_MSG_BACKGROUND_ON_MESSAGE` ileti. Arka plan işlemi şu andaki durumu iletişim kurmak için kullanılır. Durum IDE tarafından görüntülenecek dize olarak ifade edilir ve `bIsError` iletinin önemini gösterir (`TRUE` bir hata iletisi için; `FALSE` bir uyarı ya da bir bilgi iletisidir). Gönderme durumu arka plan işlemi Kimliğini de verilir.  
+ Bu yapı iletiyle birlikte gönderilir `SCC_MSG_BACKGROUND_ON_MESSAGE` . Arka plan işleminin geçerli durumunu iletmek için kullanılır. Durum, IDE tarafından görüntülenmek üzere bir dize olarak ifade edilir ve `bIsError` iletinin önem derecesini (bir `TRUE` hata iletisi için, `FALSE` bir uyarı veya bir bilgi iletisi için) gösterir. Durumu gönderen arka plan işleminin KIMLIĞI de verilir.  
   
 ## <a name="code-example"></a>Kod Örneği  
- Kısa bir arama örnek `LPTEXTOUTPROC` göndermek için `SCC_MSG_BACKGROUND_ON_MESSAGE` yapısı çağrı için tür dönüştürme gösteren bir ileti.  
+ İşte `LPTEXTOUTPROC` `SCC_MSG_BACKGROUND_ON_MESSAGE` , çağrının yapısının nasıl alınacağını gösteren iletiyi göndermek için çağırmanın kısa bir örneği.  
   
 ```cpp#  
 LONG SendStatusMessage(  
@@ -140,5 +140,5 @@ LONG SendStatusMessage(
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [IDE tarafından uygulanan geri çağırma işlevleri](../extensibility/callback-functions-implemented-by-the-ide.md)   
+ [IDE tarafından uygulanan geri çağırma Işlevleri](../extensibility/callback-functions-implemented-by-the-ide.md)   
  [Kaynak Denetimi Eklentileri](../extensibility/source-control-plug-ins.md)

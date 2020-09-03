@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::GetSize | Microsoft Dokümanlar
+title: 'IDebugDisassemblyStream2:: GetSize | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 75fa12b1e9e70601626667dd3707f1e230f5de0c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732108"
 ---
 # <a name="idebugdisassemblystream2getsize"></a>IDebugDisassemblyStream2::GetSize
-Bu sökme akışının yönergelerindeki boyutu alır.
+Bu ayırt derleme akışının yönergelerindeki boyutu alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetSize( 
@@ -41,13 +41,13 @@ int GetSize( 
 
 ## <a name="parameters"></a>Parametreler
 `pnSize`\
-[çıkış] Yönergeleri boyutu döndürür.
+dışı Yönergelerde, boyutunu döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntemden döndürülen değer, daha sonra [Okuma](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) yöntemine geçirilen bir dizi [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) yapısını ayırmak için kullanılabilir.
+ Bu yöntemden döndürülen değer, daha sonra [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) yöntemine geçirilen bir [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) yapıları dizisi ayırmak için kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)

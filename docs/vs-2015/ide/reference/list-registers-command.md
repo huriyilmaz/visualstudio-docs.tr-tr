@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3476244d3044eb80dbfce3559479421b012cc5fa
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659508"
 ---
 # <a name="list-registers-command"></a>Yazmaçları Listele Komutu
@@ -27,7 +27,7 @@ ms.locfileid: "72659508"
 
 Seçili yazmaçların değerini görüntüler ve gösterilecek kayıt listesini değiştirmenize izin verir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 Debug.ListRegisters [/Display [{register|registerGroup}...]] [/List]
@@ -36,7 +36,7 @@ Debug.ListRegisters [/Display [{register|registerGroup}...]] [/List]
 ```
 
 ## <a name="switches"></a>Anahtarlar
- /Display [{`register`&#124; `registerGroup`}...] Belirtilen `register` veya `registerGroup` değerlerini görüntüler. @No__t_0 veya `registerGroup` belirtilmemişse, varsayılan kayıt listesi görüntülenir. Anahtar belirtilmemişse, davranış aynıdır. Örneğin:
+ /Display [{ `register`&#124;`registerGroup` }...] Belirtilen veya değerlerini görüntüler `register` `registerGroup` . `register`Veya `registerGroup` belirtilmemişse, varsayılan kayıt listesi görüntülenir. Anahtar belirtilmemişse, davranış aynıdır. Örneğin:
 
  `Debug.ListRegisters /Display eax`
 
@@ -46,15 +46,15 @@ Debug.ListRegisters [/Display [{register|registerGroup}...]] [/List]
 
  /List listedeki tüm yazmaç gruplarını görüntüler.
 
- /Watch [{`register`&#124; `registerGroup`}...] Listeye bir veya daha fazla `register` veya `registerGroup` değeri ekler.
+ /Watch [{ `register`&#124;`registerGroup` }...] Listeye bir veya daha fazla `register` veya `registerGroup` değer ekler.
 
- /Unwatch [{`register`&#124; `registerGroup`}...] Listeden bir veya daha fazla `register` veya `registerGroup` değeri kaldırır.
+ /Unwatch [{ `register`&#124;`registerGroup` }...] Listeden bir veya daha fazla `register` veya `registerGroup` değeri kaldırır.
 
 ## <a name="remarks"></a>Açıklamalar
- Diğer ad `r` `Debug.ListRegisters` yerine kullanılabilir.
+ Diğer ad, yerine `r` kullanılabilir `Debug.ListRegisters` .
 
 ## <a name="example"></a>Örnek
- Bu örnek, kayıt grubu `Flags` değerlerini göstermek için `r` `Debug.ListRegisters` diğer adını kullanır.
+ Bu örnek, `Debug.ListRegisters` `r` yazmaç grubunun değerlerini göstermek için diğer adı kullanır `Flags` .
 
 ```
 r /Display Flags

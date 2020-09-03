@@ -23,10 +23,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 84d43ede5fcca1ae76d155cb8799a61900926d7b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84183853"
 ---
 # <a name="walkthrough-debugging-a-parallel-application-in-visual-studio-c-visual-basic-c"></a>İzlenecek yol: Visual Studio 'da paralel uygulamada hata ayıklama (C#, Visual Basic, C++)
@@ -104,7 +104,7 @@ Bu izlenecek yol, paralel bir uygulamada hata ayıklamak için paralel **Görevl
    [!code-cpp[Debugger#1](../debugger/codesnippet/CPP/walkthrough-debugging-a-parallel-application_1.cpp)]
    [!code-vb[Debugger#1](../debugger/codesnippet/VisualBasic/walkthrough-debugging-a-parallel-application_1.vb)]
 
-1. **Dosya** menüsünde **Tümünü Kaydet**' e tıklayın.
+1. **Dosya** menüsünde **Tümünü Kaydet**’e tıklayın.
 
 1. **Derle** menüsünde **çözümü yeniden derle**' ye tıklayın.
 

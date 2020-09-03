@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::GetAlias | Microsoft Docs
+title: 'IDebugObject2:: GetAlias | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b05d416da41265f6727df843b1b686fcfe5107f7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194606"
 ---
 # <a name="idebugobject2getalias"></a>IDebugObject2::GetAlias
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu nesneyle ilişkilendirilmiş diğer ada varsa alır.  
+Varsa, bu nesneyle ilişkili diğer adı alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetAlias(  
@@ -40,13 +40,13 @@ int GetAlias(
   
 #### <a name="parameters"></a>Parametreler  
  `ppAlias`  
- [out] Döndürür bir [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) bu nesne için bir diğer ad temsil eden nesne; Aksi takdirde, null değeri döndürür.  
+ dışı Bu nesne için diğer adı temsil eden bir [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) nesnesi döndürür; Aksi takdirde, null bir değer döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir nesne için bir diğer ad çağrısı ile oluşturulan [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) yöntemi.  
+ Bir nesne için bir diğer ad [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) yöntemi çağrısıyla oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)   

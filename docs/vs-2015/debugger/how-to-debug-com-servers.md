@@ -24,29 +24,29 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3552ff1ffb5d6b3e3789aebd3a8903bf82a66b16
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205411"
 ---
-# <a name="how-to-debug-com-servers"></a>Nasıl yapılır: COM Sunucularında Hata Ayıklama
+# <a name="how-to-debug-com-servers"></a>Nasıl Yapılır: COM Sunucularında Hata Ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-COM sunucu uygulamalarında hata ayıklama, bir dizi benzersiz olmayan her zaman kolay çözmek sorun oluşturur.  
+COM sunucu uygulamalarında hata ayıklama, her zaman kolayca çözülabilen benzersiz bir sorun kümesi oluşturur.  
   
- Sahip değil ya da kapsayıcı uygulamanızı hata ayıklama bilgilerini kullanmak istiyor musunuz, sunucu uygulamasının hata ayıklamayı başlatma işlemi üç adımdan olur.  
+ Kapsayıcı uygulamanız için hata ayıklama bilgilerini kullanmak veya istemiyorsanız, sunucu uygulamasında hata ayıklamaya başlamak üç adımlı bir işlemdir.  
   
-### <a name="to-debug-a-server-application-without-container-information"></a>Kapsayıcı bilgileri olmadan bir sunucu uygulamasında hata ayıklamak için  
+### <a name="to-debug-a-server-application-without-container-information"></a>Kapsayıcı bilgileri olmadan sunucu uygulamasında hata ayıklamak için  
   
-1. Sunucunun normal bir uygulama olarak hatalarını ayıklamaya başlayın.  
+1. Normal bir uygulama olarak sunucuda hata ayıklamayı başlatın.  
   
-2. Kesme noktaları, istediğiniz şekilde ayarlayın.  
+2. Kesme noktalarını istediğiniz gibi ayarlayın.  
   
 3. Kapsayıcı uygulamasını başlatın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [COM ve ActiveX hata ayıklaması](../debugger/com-and-activex-debugging.md)   
- [Nasıl yapılır: RPC hata ayıklamasını kullanarak COM istemcilerinde ve sunucularda hata ayıklama](../debugger/how-to-debug-com-clients-and-servers-using-rpc-debugging.md)   
- [COM sunucusunda ve kapsayıcısında hata ayıklama](../debugger/com-server-and-container-debugging.md)   
- [Visual Studio’da hata ayıklama](../debugger/debugging-in-visual-studio.md)
+ [Nasıl yapılır: RPC hata ayıklamasını kullanarak COM Istemcilerinde ve sunucularda hata ayıklama](../debugger/how-to-debug-com-clients-and-servers-using-rpc-debugging.md)   
+ [COM sunucusu ve kapsayıcı hata ayıklaması](../debugger/com-server-and-container-debugging.md)   
+ [Visual Studio'da Hata Ayıklama](../debugger/debugging-in-visual-studio.md)

@@ -14,102 +14,102 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 86279ff4e1721007814163787bd9ed06edc9fb13
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161198"
 ---
 # <a name="graphics-object-table"></a>Grafik Nesnesi Tablosu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio grafik analizi grafik nesnesi tablosu oyunlarda veya uygulamalarda karesi destekleyen Direct3D nesneleri anlamanıza yardımcı olur.  
+Visual Studio grafik analizinde grafik nesne tablosu, oyununuzun veya uygulamanızın çerçevesini destekleyen Direct3D nesnelerini anlamanıza yardımcı olur.  
   
- Bu nesne tablosu.  
+ Bu, nesne tablosudur:  
   
- ![Bir uygulama tarafından oluşturulan Direct3D nesneleri](../debugger/media/gfx-diag-demo-object-table-orientation.png "gfx_diag_demo_object_table_orientation")  
+ ![Bir uygulama tarafından oluşturulan Direct3D nesneleri.](../debugger/media/gfx-diag-demo-object-table-orientation.png "gfx_diag_demo_object_table_orientation")  
   
-## <a name="understanding-the-graphics-object-table"></a>Grafik nesne tablosu anlama  
- Nesne tablosu kullanarak, belirli bir çerçevenin işleme desteği Direct3D nesneleri çözümleyebilirsiniz. Belirli bir nesnesi bir işleme sorunuyla özelliklerini ve verileri inceleyerek saptayabilirler (tanılama aşamasında daha önce diğer grafik tanılama araçlarını kullanarak, beklediğiniz olmayabilir nesne listesini daraltabilirsiniz.) Soruna neden olan nesne buldunuz, bunu incelemek için türü özel bir görselleştirmeyi kullanabilirsiniz — örneğin, dokuları ve görüntülemek için görüntü Düzenleyicisi kullanabilirsiniz veya *arabellek Görselleştirici* arabellek içeriği görüntülemek için.  
+## <a name="understanding-the-graphics-object-table"></a>Grafik nesne tablosunu anlama  
+ Nesne tablosunu kullanarak, belirli bir çerçeveyi işlemeyi destekleyen Direct3D nesnelerini çözümleyebilirsiniz. Bir işleme sorununu, özelliklerini ve verilerini inceleyerek belirli bir nesneye (tanılamada daha önce diğer Grafik Tanılama araçları kullanarak, beklediğiniz gibi olmayan nesnelerin listesini daraltabilirsiniz.) Sorunlu nesneyi bulduğunuz zaman, incelemek için türüne özgü bir görselleştirmeyi kullanabilirsiniz. Örneğin, doku içeriğini görüntülemek için görüntü düzenleyiciyi veya *arabellek görselleştirmesini* görüntülemek Için görüntü düzenleyicisini kullanabilirsiniz.  
   
- Nesne tablosu Kopyala ve Yapıştır destekler böylece başka bir araç kullanabilirsiniz — örneğin, Microsoft Excel — içeriğini incelemek için.  
+ Nesne tablosu kopyalamayı ve yapıştırmayı destekler, böylece başka bir araç (örneğin, Microsoft Excel) kullanarak içeriğini inceleyebilirsiniz.  
   
 ### <a name="graphics-object-table-format"></a>Grafik nesne tablosu biçimi  
- Direct3D nesneleri ve seçilen olayla ilişkili çerçevesini destekleyen kaynak nesne tablosu görüntüler — örneğin, nesneleri, arabellekler, gölgelendiricileri, dokuları ve diğer kaynakların durum. Önceki bir çerçeve içinde oluşturulmuş ancak sırasında yakalanan çerçeve kullanılmayan nesneleri nesne tablosundan göz ardı edilir. Önceki olayları tarafından yakalanan çerçevesinde edildikten sonra nesneleri sonraki olayları göz ardı edilir. D3D10Device veya D3D11DeviceContext ayarlanmamış nesneler gri renkte görüntülenir. Nesneler bir tablo biçiminde görüntülenir.  
+ Nesne tablosu, seçili olayla ilişkili çerçeveyi destekleyen Direct3D nesne ve kaynaklarını (örneğin, durum nesneleri, arabellekler, gölgelendiriciler, dokular ve diğer kaynaklar) görüntüler. Önceki çerçevede oluşturulan ancak yakalanan çerçeve sırasında kullanılmayan nesneler nesne tablosundan çıkarılır. Yakalanan çerçeve sırasında önceki olaylar tarafından yok edilmiş nesneler sonraki olaylarda atlanır. D3D10Device veya D3D11DeviceContext üzerinde ayarlı olmayan nesneler gri metin olarak görüntülenir. Nesneler tablo biçiminde görüntülenir.  
   
 |Sütun|Açıklama|  
 |------------|-----------------|  
-|**tanımlayıcı**|Nesne Kimliği|  
-|**Ad**|Direct3D işlevini kullanarak bir nesnede ayarlanmış uygulamaya özgü bilgileri `SetPrivateData`— tipik bir nesneyle ilgili ek kimlik bilgileri sağlamak için.|  
+|**Tanımlayıcı**|Nesne KIMLIĞI.|  
+|**Ad**|Nesnesinde Direct3D işlevi kullanılarak ayarlanan uygulamaya özgü bilgiler, `SetPrivateData` genellikle bir nesne hakkında ek tanımlayıcı bilgi sağlamak için.|  
 |**Tür**|Nesne türü.|  
-|**Etkin**|Görüntüler "*" D3D10Device veya D3D11DeviceContext sırasında yakalanan kare ayarlanmış bir nesne için.<br /><br /> Bu, gri renkte görüntülenir nesnelere karşılık gelen, ancak nesne tablosu sıralama yardımcı olmak için kullanabileceğiniz bir sütun girişi sağlar.|  
-|**Boyutu**|Nesnenin bayt cinsinden boyutu.|  
-|**Biçim**|Nesne biçimi. Örneğin, bir doku nesnesi veya bir gölgelendirici nesnesinin gölgelendirici modeli biçimi.|  
-|**Genişlik**|Bir doku nesnesine genişliği. Diğer nesne türleri için geçerli değildir.|  
-|**Yükseklik**|Bir doku nesnesine yüksekliği. Diğer nesne türleri için geçerli değildir.|  
-|**Derinliği**|Bir 3B doku nesne derinliği. Doku 3B değilse, değeri 0'dır. Diğer nesne türleri için geçerli değildir.|  
-|**MIPS**|Bir doku nesnesine sahip MIP düzeyi sayısı. Diğer nesne türleri için geçerli değildir.|  
-|**Dizi boyutu**|Bir doku dizisi dokular sayısı. Aralık geçerli bir özellik düzeyi tarafından tanımlanan bir üst sınır 1'den sağlamaktır. Bir küp eşlemi için bu değer 6 kereye küp eşlemlerinin dizideki sayısıdır.|  
-|**Örnekler**|Piksel başına multisamples sayısı.|  
+|**Etkin**|Yakalanan çerçeve sırasında D3D10Device veya D3D11DeviceContext üzerinde ayarlanan bir nesne için "*" görüntüler.<br /><br /> Bu, gri metin olarak görüntülenen nesnelere karşılık gelir, ancak nesne tablosunun sıralanmasını sağlamak için kullanabileceğiniz bir sütun girişi sağlar.|  
+|**Boyut**|Nesnenin bayt cinsinden boyutu.|  
+|**Biçimlendir**|Nesnenin biçimi. Örneğin, bir doku nesnesinin biçimi veya bir gölgelendirici nesnesinin gölgelendirici modeli.|  
+|**Width**|Bir doku nesnesinin genişliği. Diğer nesne türleri için de geçerlidir.|  
+|**Height**|Bir doku nesnesinin yüksekliği. Diğer nesne türleri için de geçerlidir.|  
+|**Derinliğini**|3-b doku nesnesinin derinliği. Doku 3-D değilse, değer 0 ' dır. Diğer nesne türleri için de geçerlidir.|  
+|**MIPS**|Bir doku nesnesinin sahip olduğu MıP düzeylerinin sayısı. Diğer nesne türleri için de geçerlidir.|  
+|**Dizi boyutu**|Bir doku dizisindeki dokuların sayısı. Aralık 1 ile geçerli özellik düzeyi tarafından tanımlanan bir üst sınırdır. Küp eşleme için, bu değer dizideki küp haritaları sayısının 6 katından fazla olur.|  
+|**Örnekler**|Piksel başına çok örnek sayısı.|  
   
-## <a name="graphics-object-viewers"></a>Grafik nesne görüntüleyiciler  
- Bir nesne hakkındaki ayrıntıları görüntülemek için nesne tablosunda adını seçerek açın. Nesne ayrıntılarını, nesne türüne bağlı olarak farklı biçimlerde görüntülenir. Örneğin, dokular, doku Görüntüleyicisi'ni kullanarak görüntülenir ve D3D11 cihaz bağlamı gibi cihaz durumu biçimlendirilmiş bir liste görüntülenir. Direct3D'ün farklı sürümlerini olun farklı nesnelerin kullanın ve çoğunlukla her sürümün en önemli nesneler için özel görselleştiriciler vardır.  
+## <a name="graphics-object-viewers"></a>Grafik nesne görüntüleyicileri  
+ Bir nesne hakkındaki ayrıntıları görüntülemek için, nesne tablosunda adını seçerek açın. Nesnesi hakkındaki ayrıntılar, nesnenin türüne bağlı olarak farklı biçimlerde görüntülenir. Örneğin, dokular doku Görüntüleyicisi kullanılarak, D3D11 cihaz bağlamı gibi cihaz durumu ise biçimli bir liste olarak görüntülenir. Farklı Direct3D sürümleri farklı nesneler kullanır ve her sürümün en önemli nesneleri için genellikle belirli Görselleştiriciler vardır.  
   
- Çıkış Birleştiricisi ardışık düzen aşamasını içeriğini gösteren doku Görüntüleyicisi aşağıda verilmiştir.  
+ Bu, çıktı Merger ardışık düzen aşamasının içeriğini gösteren doku görüntüleyicisine sahiptir.  
   
- ![Çıkış Birleştiricisi görüntüleme doku Önizleme](../debugger/media/gfx-diag-texture-preview.png "gfx_diag_texture_preview")  
+ ![Çıktı Merini görüntüleyen doku önizlemesi](../debugger/media/gfx-diag-texture-preview.png "gfx_diag_texture_preview")  
   
 ### <a name="d3d12-command-list"></a>D3D12 komut listesi  
- Direct3D 12'deki komut listesi komutlar bir komut ayırıcısı kaydeder ve böylece tek bir istek olarak GPU için gönderilebilir bir nesnedir. Komut listeleri genellikle bir dizi bir ayar durumu gerçekleştirmek, çizme, Temizle ve komutları kopyalayın. Tercih edilen yöntem, oluşumunu Direct3D 12 yapıyorsanız ve performansı artırmaya yardımcı olmak için çerçeve arasında yeniden kullanılabilir olduğundan, bunlar özellikle önemlidir. Komut listesi ayrıntılarını kendi sekmede sunulan her bir ardışık düzen aşaması ile ilgili bilgileri içeren yeni bir belge penceresinde görüntülenir.  
+ Direct3D 12 ' de bir komut listesi, komutları tek bir istek olarak GPU 'ya gönderilebilmeleri için komut ayırıcılarına kaydeden bir nesnedir. Komut listeleri genellikle bir dizi durum ayarı, çizim, temizleme ve kopyalama komutu gerçekleştirir. Bu, özellikle önemlidir çünkü Direct3D 12 ' de işleme için tercih edilen yöntem olduklarından, performansı artırmaya yardımcı olmak için çerçeveler arasında yeniden kullanılabilir. Komut listesi ayrıntıları, kendi sekmesinde sunulan her bir ardışık düzen aşaması ile ilgili bilgiler içeren yeni bir belge penceresinde görüntülenir.  
   
-### <a name="d3d12-pipeline-state-object-pso"></a>D3D12 komut zinciri durumu nesnesi (PSO)  
- Direct3D 12'deki bir ardışık düzen durumu nesnesi şu anda tüm kümesi gölgelendiricileri ve belirli sabit işlevi durumu nesneleri dahil olmak üzere, bir GPU durumu önemli bir bölümünü temsil eder. İşlem hattı durum nesnesi oluşturulduktan sonra sabittir; bir uygulama yalnızca işlem hattının yapılandırmasını farklı bir işlem hattı durum nesnesi bağlayarak değiştirebilirsiniz. PSO ayrıntıları hiyerarşik olarak düzenlendiği ardışık düzen yapılandırma ayrıntılarını içeren yeni bir belge penceresi görüntülenir.  
+### <a name="d3d12-pipeline-state-object-pso"></a>D3D12 işlem hattı durumu nesnesi (PSO)  
+ Direct3D 12 ' de bir ardışık düzen durumu nesnesi, şu anda ayarlanmış tüm gölgelendiriciler ve belirli sabit işlevli durum nesneleri dahil olmak üzere GPU durumunun önemli bir kısmını temsil eder. Oluşturulduktan sonra bir işlem hattı durum nesnesi sabittir — bir uygulama, yalnızca farklı bir işlem hattı durum nesnesi bağlayarak işlem hattının yapılandırmasını değiştirebilir. PSO ayrıntıları, ardışık düzen yapılandırmasının ayrıntılarıyla hiyerarşik olarak düzenlendiği yeni bir belge penceresinde görüntülenir.  
   
-### <a name="d3d12-root-signature"></a>D3D12 kök imzası  
- Direct3D 12'de, kök imzası bir grafik veya işlem ardışık düzenine bağlı olan tüm kaynakları tanımlar ve komut listeleri gölgelendiriciler gerektiren kaynaklara bağlar. Genellikle grafik için bir kök imza, diğeri de bir uygulamada bir işlem yoktur. Kök imza ayrıntıları hiyerarşik olarak düzenlendiği kök imzası ilgili ayrıntıları içeren yeni bir belge penceresi görüntülenir.  
+### <a name="d3d12-root-signature"></a>D3D12 kök Imzası  
+ Direct3D 12 ' de, kök imzası bir grafik veya işlem ardışık düzenine bağlanan tüm kaynakları tanımlar ve gölgelendiricilerin gerektirdiği kaynakları komut listelerine bağlar. Genellikle, grafikler için bir kök imzası ve bir uygulamada işlem için bir tane vardır. Kök imzası ayrıntıları, yeni bir belge penceresinde görüntülenir ve kök imzasının ayrıntıları hiyerarşik olarak düzenlenir.  
   
 ### <a name="d3d12-resources"></a>D3D12 kaynakları  
- Direct3D 12'deki veri işleme ardışık düzenine sağlayan catch tüm nesneleri kaynaklardır; birçok belirli nesneler için farklı türleri ve boyutları kaynakların tanımlanan Direct3D11 aksine budur. Direct3D 12 kaynak doku veri, köşe verisi, gölgelendirici veri ve daha fazlasını içerebilir — derinlik arabelleği gibi işleme hedefleri bile temsil edebilir. Bir Direct3D 12 kaynağın ayrıntılarını yeni bir belge penceresi görüntülenir; Türünü belirlemek mümkün ise grafik analizi için kaynak nesnenin içeriğini uygun Görüntüleyicisi'ni kullanır. Örneğin, doku verileri içeren bir kaynak nesne doku Görüntüleyicisi'ni kullanarak görüntülenen yalnızca bir D3D11 Texture2D gibi nesnesidir.  
+ Direct3D 12 ' de kaynaklar, işleme ardışık düzenine veri sağlayan tüm nesneler yakalar; Bu, farklı tür ve kaynak boyutları için çok sayıda belirli nesne tanımlayan Direct3D11 'e karşılık gelir. Direct3D 12 kaynağı doku verileri, köşe verileri, gölgelendirici verileri ve daha fazlasını içerebilir. Bu, derinlik arabelleği gibi işleme hedeflerini de temsil edebilirler. Direct3D 12 kaynağının ayrıntıları yeni bir belge penceresinde görüntülenir; Grafik analizi, türünü tespit edebilise kaynak nesnesinin içeriği için uygun görüntüleyiciyi kullanacaktır. Örneğin, doku verileri içeren bir kaynak nesnesi, tıpkı bir D3D11 Texture2D nesnesi gibi doku Görüntüleyicisi kullanılarak görüntülenir.  
   
 ### <a name="device-context-object"></a>Cihaz bağlamı nesnesi  
- Direct3D 11 ve Direct3D 10, cihaz bağlam (**D3D11 cihaz bağlamı** veya **D3D10 cihazı**) nesnedir özellikle önemlidir çünkü en önemli durum bilgilerini tutar ve diğer bağlantılar şu anda ayarlanmış durum nesneleri. Cihaz bağlamı ayrıntıları yeni bir belge penceresi görüntülenir ve her bilgi kategorisi vardır, kendi sekmesinde sunulur. Yeni bir olay, geçerli cihaz durumunda yansıtacak şekilde seçildiğinde, cihaz bağlam değişiklikleri.  
+ Direct3D 11 ve Direct3D 10 ' da, cihaz bağlamı (**d3d11 cihaz bağlamı** veya **D3D10 cihazı**) nesnesi özellikle önemlidir çünkü en önemli durum bilgilerini barındırır ve şu anda ayarlanmış olan diğer durum nesnelerine bağlantı sağlar. Cihaz bağlamı ayrıntıları yeni bir belge penceresinde görüntülenir ve her bilgi kategorisi kendi sekmesinde sunulur. Geçerli cihaz durumunu yansıtmak için yeni bir olay seçildiğinde cihaz bağlamı değişir.  
   
-### <a name="buffer-object"></a>Arabellek nesnesi  
- Arabellek nesne ayrıntıları (D3D11 arabellek veya D3D10 arabellek) bir tablodaki arabellek içeriği sunan ve arabellek içeriği nasıl görüntüleneceğini değiştirmek için bir arabirim sağlar. yeni bir belge penceresi görüntülenir. **Arabellek veri** Tablo kopyalama destekler ve yapıştırmak ve böylece başka bir araç kullanabilirsiniz — örneğin, Microsoft Excel — içeriğini incelemek için. Arabellek içeriği değerini göre yorumlanır **biçimi** yukarıda bulunan birleşik giriş kutusu **arabellek veri** tablo. Kutusunda aşağıdaki tabloda listelenen veri türlerinden oluşan bir bileşik veri biçimi girebilirsiniz. Örneğin, "int kaydırabilirsiniz", bir 32 bitlik işaretli tamsayı değer tarafından izlenen bir 32 bit kayan nokta değeri içeren yapılarını listesini görüntüler. Belirttiğiniz bileşik veri biçimleri daha sonra kullanmak için birleşik giriş kutusu eklenir.  
+### <a name="buffer-object"></a>Buffer nesnesi  
+ Arabellek nesnesi ayrıntıları (D3D11 buffer veya D3D10 buffer), bir tablodaki arabellek içeriğini gösteren yeni bir belge penceresinde görüntülenir ve arabellek içeriklerinin nasıl görüntülendiğini değiştirmek için bir arabirim sağlar. **Arabellek verileri** tablosu, içeriğini incelemek için başka bir araç (örneğin, Microsoft Excel) kullanabilmeniz için kopyalama ve yapıştırmayı destekler. Arabelleğin içeriği, **arabellek veri** tablosunun üstünde bulunan **Biçim** Birleşik giriş kutusunun değerine göre yorumlanır. Kutusunda, aşağıdaki tabloda listelenen veri türlerinden oluşan bir bileşik veri biçimi girebilirsiniz. Örneğin, "float int", 32 bitlik kayan noktalı bir değer ve ardından 32 bit işaretli bir tamsayı değeri içeren yapıların listesini görüntüler. Belirttiğiniz bileşik veri biçimleri, daha sonra kullanılmak üzere Birleşik giriş kutusuna eklenir.  
   
- Ayrıca geçiş yapabilirsiniz **Göster'e kaydırır** arabellek uzaklığı her öğenin görüntülemek veya gizlemek için onay kutusu.  
+ Ayrıca, arabellekteki her bir öğenin sapmasını gizlemek veya görüntülemek için de kaydırmayı **göster** onay kutusunu işaretleyebilirsiniz.  
   
 |Tür|Açıklama|  
 |----------|-----------------|  
-|**float**|32 bit kayan nokta değeri.|  
-|**float2**|İki 32-bit kayan nokta değerleri içeren vektör.|  
-|**float3**|Üç 32-bit kayan nokta değerleri içeren vektör.|  
-|**float4**|Dört 32-bit kayan nokta değerleri içeren vektör.|  
-|**byte**|8-bit imzalı tamsayı değeri.|  
-|**2 bayt**|Bir 16 bitlik işaretli tamsayı değeri.|  
-|**4 bayt**|Bir 32 bitlik işaretli tamsayı değeri. Aynı **int**.|  
-|**8 bayt**|Bir 64-bit imzalı bir tamsayı değeri. Aynı **Int64**.|  
-|**xbyte kullanılıyor**|Bir 8 bit onaltılık değeri.|  
-|**x2byte**|Bir 16 bitlik onaltılık değer.|  
-|**x4byte**|Bir 32 bit onaltılık değer. Aynı **xint**.|  
-|**x8byte**|Bir 64-bit onaltılık değer. Aynı **xint64**.|  
-|**ubyte**|8 bitlik işaretsiz tamsayı değeri.|  
-|**u2byte**|Bir 16 bitlik işaretsiz tamsayı değeri.|  
-|**u4byte**|Bir 32-bit işaretsiz tamsayı değeri. Aynı **uint**.|  
-|**u8byte**|Bir 64-bit işaretsiz tamsayı değeri. Aynı **uint64**.|  
-|**Yarı**|16-bit kayan nokta değeri.|  
-|**half2**|İki 16-bit kayan nokta değerleri içeren vektör.|  
-|**half3**|Üç 16-bit kayan nokta değerleri içeren vektör.|  
-|**half4**|Dört 16-bit kayan nokta değerleri içeren vektör.|  
-|**double**|64-bit kayan nokta değeri.|  
-|**int**|Bir 32 bitlik işaretli tamsayı değeri. Aynı **4 baytlık**.|  
-|**int64**|Bir 64-bit imzalı bir tamsayı değeri. Aynı **8 baytlık**.|  
-|**xint**|Bir 32 bit onaltılık değer. Aynı **x4byte**.|  
-|**xint64**|Bir 64-bit onaltılık değer. Aynı **x8byte**.|  
-|**uint**|Bir 32-bit işaretsiz tamsayı değeri. Aynı **u4byte**.|  
-|**uint64**|Bir 64-bit işaretsiz tamsayı değeri. Aynı **u8byte**.|  
-|**bool**|Bir Boole değeri (`true` veya `false`) değeri. Her bir Boole değeri bir 32-bit değeri tarafından temsil edilir.|  
+|**float**|32 bitlik kayan nokta değeri.|  
+|**float2**|2 32 bitlik kayan nokta değerlerini içeren bir vektör.|  
+|**float3**|3 32 bitlik kayan nokta değerlerini içeren bir vektör.|  
+|**float4**|4 32 bitlik kayan nokta değerlerini içeren bir vektör.|  
+|**bayt**|8 bit işaretli tamsayı değeri.|  
+|**2 bayt**|16 bit işaretli tamsayı değeri.|  
+|**4 bayt**|32 bitlik işaretli bir tamsayı değeri. **İnt**ile aynı.|  
+|**8 bayt**|64 bitlik işaretli bir tamsayı değeri. **Int64**ile aynıdır.|  
+|**xbyte**|8 bit onaltılı değer.|  
+|**x2byte**|16 bit onaltılı değer.|  
+|**x4byte**|32 bitlik bir onaltılık değer. **XINT**ile aynı.|  
+|**x8byte**|64 bitlik bir onaltılık değer. **Xint64**ile aynı.|  
+|**ubde**|8 bit işaretsiz tamsayı değeri.|  
+|**u2byte**|16 bit işaretsiz tamsayı değeri.|  
+|**u4byte**|32 bitlik işaretsiz bir tamsayı değeri. **Uint**ile aynı.|  
+|**u8byte**|64 bitlik işaretsiz bir tamsayı değeri. **Uint64**ile aynı.|  
+|**yarısını**|16 bit kayan nokta değeri.|  
+|**half2**|2 16 bitlik kayan nokta değerlerini içeren bir vektör.|  
+|**half3**|3 16 bitlik kayan nokta değerlerini içeren bir vektör.|  
+|**half4**|4 16 bitlik kayan nokta değerlerini içeren bir vektör.|  
+|**double**|64 bitlik kayan nokta değeri.|  
+|**int**|32 bitlik işaretli bir tamsayı değeri. **4byte**ile aynıdır.|  
+|**tutulamaz**|64 bitlik işaretli bir tamsayı değeri. **8byte**ile aynıdır.|  
+|**xint**|32 bitlik bir onaltılık değer. **X4byte**ile aynı.|  
+|**xint64**|64 bitlik bir onaltılık değer. **X8byte**ile aynı.|  
+|**uint**|32 bitlik işaretsiz bir tamsayı değeri. **U4byte**ile aynı.|  
+|**Int64**|64 bitlik işaretsiz bir tamsayı değeri. **U8byte**ile aynı.|  
+|**bool**|Boole ( `true` veya `false` ) değeri. Her Boole değeri 32 bitlik bir değer ile temsil edilir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Grafik tanılama (DirectX grafik hata ayıklama)](../debugger/visual-studio-graphics-diagnostics.md)   
+ [Grafik Tanılama (DirectX grafik hatalarını ayıklama)](../debugger/visual-studio-graphics-diagnostics.md)   
  [İzlenecek yol: Cihaz Durumu Nedeniyle Eksik Nesneler](../debugger/walkthrough-missing-objects-due-to-device-state.md)

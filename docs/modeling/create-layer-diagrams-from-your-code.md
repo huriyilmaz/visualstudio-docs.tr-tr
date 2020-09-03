@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 463e73a989deecf90e6bbfb7e8b92409b15695a5
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545736"
 ---
 # <a name="create-dependency-diagrams-from-your-code"></a>Kodunuz aracılığıyla bağımlılık diyagramları oluşturma
@@ -29,7 +29,7 @@ Bağımlılık diyagramı, Visual Studio çözüm öğelerini *Katmanlar*olarak 
 
 [Video: mimari bağımlılıklarınızı gerçek zamanlı olarak doğrulama](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)
 
-## <a name="create-a-dependency-diagram"></a><a name="CreateDiagram"></a>Bağımlılık diyagramı oluşturma
+## <a name="create-a-dependency-diagram"></a><a name="CreateDiagram"></a> Bağımlılık diyagramı oluşturma
 
 Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme projesine sahip olduğundan emin olun.
 
@@ -78,14 +78,14 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
 
 ![Kod eşlemesinden oluşturulan bağımlılık diyagramı](media/dependency-validation-01.png)
 
-## <a name="create-layers-from-artifacts"></a><a name="CreateLayers"></a>Yapıtlardan katmanlar oluşturma
+## <a name="create-layers-from-artifacts"></a><a name="CreateLayers"></a> Yapıtlardan katmanlar oluşturma
  Visual Studio çözüm öğelerinden projeler, kod dosyaları, ad alanları, sınıflar ve yöntemler gibi katmanlar oluşturabilirsiniz. Bu, katmanlar ve öğeler arasında otomatik olarak bağlantılar oluşturarak bunları katman doğrulama işlemine dahil eder.
 
  Katmanları Word belgeleri veya PowerPoint sunumları gibi doğrulamayı desteklemeyen öğelere de ekleyebilir ve böylece bir katmanı belirtimlerle veya planlarla ilişkilendirebilirsiniz. Katmanları birden fazla uygulama arasında paylaşılan projelerdeki dosyalara da bağlayabilirsiniz, ancak doğrulama işlemi "Katman 1" ve "Katman 2" gibi genel adlarla görünen bu katmanları içermez.
 
  Bağlı bir öğenin doğrulamayı destekleyip desteklemediğini görmek için **Katman Gezgini** ' ni açın ve öğenin **doğrulamayı destekler** özelliğini inceleyin. Bkz. [yapıtlara bağlantıları yönetme](#Managing).
 
-|**Hedef**|**Bu adımları izleyin**|
+|**Amaç**|**Bu adımları izleyin**|
 |-|-|
 |Tek bir yapı için katman oluşturma|<ol><li>Öğeyi şu kaynaklardaki bağımlılık diyagramına sürükleyin:<br /><br /> <ul><li>**Çözüm Gezgini**<br /><br />         Örneğin, dosyaları veya projeleri sürükleyebilirsiniz.</li><li>Kod eşlemeleri<br /><br />         Bkz. [çözümlerinizde harita bağımlılıkları](../modeling/map-dependencies-across-your-solutions.md) ve [uygulamalarınızda hata ayıklamak Için kod haritaları kullanın](../modeling/use-code-maps-to-debug-your-applications.md).</li><li>**Sınıf görünümü** veya **nesne tarayıcısı**</li></ul><br />     Katman, diyagramda görünür ve yapıya bağlanır.</li><li>İlişkili kodun veya yapıların sorumluluklarını yansıtmak için katmanı yeniden adlandırın.</li></ol> **Önemli:**  İkili dosyaları bağımlılık diyagramına sürüklemek, başvurularını otomatik olarak modelleme projesine eklemez. Doğrulamak istediğiniz ikili dosyaları el ile modelleme projesine eklemeniz gerekir. **Modelleme projesine ikili dosyalar eklemek için** <ol><li>**Çözüm Gezgini**, modelleme projesi için kısayol menüsünü açın ve ardından **Varolan öğe Ekle**' yi seçin.</li><li>**Varolan öğe Ekle** iletişim kutusunda, ikili dosyalar ' a gidin, bunları seçin ve ardından **Tamam**' ı seçin.     İkili dosyalar modelleme projesinde görünür.</li><li>**Çözüm Gezgini**, eklediğiniz bir ikili dosyayı seçin ve ardından **Özellikler** penceresini açmak için **F4** tuşuna basın.</li><li>Her ikili dosyada, **derleme eylemi** özelliğini **doğrulanacak**olarak ayarlayın.</li></ol>|
 |Seçilen tüm yapılar için tek bir katman oluşturma|Tüm yapıtları aynı anda bağımlılık diyagramına sürükleyin.<br /><br /> Katman diyagramda görünür ve tüm yapılara bağlıdır.|
@@ -107,7 +107,7 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
 
 - Bir katman yapılarla bağlantılı diğer katmanları içeriyorsa, kapsayıcı katman da üzerindeki sayı bu yapıları içermese bile bu yapılara bağlıdır.
 
-## <a name="manage-links-between-layers-and-artifacts"></a><a name="Managing"></a>Katmanlar ve yapıtlar arasındaki bağlantıları yönetme
+## <a name="manage-links-between-layers-and-artifacts"></a><a name="Managing"></a> Katmanlar ve yapıtlar arasındaki bağlantıları yönetme
 
 1. Bağımlılık diyagramında, katmanın kısayol menüsünü açın ve **bağlantıları görüntüle**' yi seçin.
 
@@ -115,7 +115,7 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
 
 2. Bu bağlantıları yönetmek için aşağıdaki görevleri kullanın.
 
-|**Hedef**|**Katman Gezgini 'nde**|
+|**Amaç**|**Katman Gezgini 'nde**|
 |-|-|
 |Katman ve yapı arasındaki bağlantıyı silme|Yapıt bağlantısının kısayol menüsünü açın ve **Sil**' i seçin.|
 |Bağlantıyı bir katmandan diğerine taşıma|Yapı bağlantısını diyagramda varolan bir katmana sürükleyin.<br /><br /> - veya -<br /><br /> 1. yapıt bağlantısının kısayol menüsünü açın ve **Kes**' i seçin.<br />2. bağımlılık diyagramında katmanın kısayol menüsünü açın ve **Yapıştır**' ı seçin.|
@@ -123,7 +123,7 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
 |Varolan yapı bağlantısından yeni bir katman oluşturma|Yapı bağlantısını diyagramdaki boş bir alana sürükleyin.|
 |Bağlı bir yapının, bağımlılık diyagramında doğrulamayı desteklediğini doğrulayın.|Yapıt bağlantısı için **doğrulama sütununu destekler** bölümüne bakın.|
 
-## <a name="reverse-engineer-existing-dependencies"></a><a name="Discovering"></a>Mevcut bağımlılıklara ters mühendislik Uygula
+## <a name="reverse-engineer-existing-dependencies"></a><a name="Discovering"></a> Mevcut bağımlılıklara ters mühendislik Uygula
  Bir bağımlılık, bir katman ile ilişkili yapının başka bir katman ile ilişkili bir yapıya başvurusu olduğu yerde var olur. Örneğin, bir katmandaki sınıf başka bir katmanda sınıfı olan değişkeni bildirir. Diyagramdaki katmanlara bağlanmış yapılar için varolan bağımlılıklara ters mühendislik uygulayabilirsiniz.
 
 > [!NOTE]
@@ -133,10 +133,10 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
 
   Genellikle var olmaması gereken bazı bağımlılıklar göreceksiniz. Bu bağımlılıkları hedeflenen tasarım ile uyumlu hale getirmek için düzenleyebilirsiniz.
 
-## <a name="edit-layers-and-dependencies-to-show-the-intended-design"></a><a name="EditDependencies"></a>Tasarlanan tasarımı göstermek için katmanları ve bağımlılıkları düzenleyin
+## <a name="edit-layers-and-dependencies-to-show-the-intended-design"></a><a name="EditDependencies"></a> Tasarlanan tasarımı göstermek için katmanları ve bağımlılıkları düzenleyin
  Sisteminizde veya amaçlanan mimaride yapmayı planladığınız değişiklikleri anlatmak için, bağımlılık diyagramını düzenleyin:
 
-|**Hedef**|**Bu adımları gerçekleştirin**|
+|**Amaç**|**Bu adımları gerçekleştirin**|
 |-|-|
 |Bağımlılık yönünü değiştirme veya kısıtlama|**Direction** özelliğini ayarlayın.|
 |Yeni bağımlılıklar oluşturma|**Bağımlılık** ve **çift yönlü bağımlılık** araçlarını kullanın.<br /><br /> Çoklu bağımlılıklar çizmek için araca çift tıklayın. İşiniz bittiğinde **işaretçi** aracını seçin veya **ESC** tuşuna basın.|
@@ -144,10 +144,10 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
 |Bir katman ile ilişkili yapıların belirli ad alanlarına ait olmaması gerektiğini belirtme|Katmanın **yasak ad alanları** özelliğindeki ad alanlarını yazın. Ad alanlarını ayırmak için noktalı virgül (**;**) kullanın.|
 |Bir katman ile ilişkili yapıların belirli ad alanlarından birine ait olması gerektiğini belirtme|Katmanın **gerekli ad alanları** özelliğindeki ad alanını yazın. Ad alanlarını ayırmak için noktalı virgül (**;**) kullanın.|
 
-## <a name="change-how-elements-appear-on-the-diagram"></a><a name="EditLayout"></a>Öğelerin diyagramda görünme şeklini değiştirme
+## <a name="change-how-elements-appear-on-the-diagram"></a><a name="EditLayout"></a> Öğelerin diyagramda görünme şeklini değiştirme
  Özelliklerini düzenleyerek katmanların boyutunu, şeklini, rengini ve konumunu veya bağımlılıkların rengini değiştirebilirsiniz.
 
-## <a name="discover-patterns-and-dependencies-on-a-code-map"></a><a name="Codemaps"></a>Kod haritasında desenleri ve bağımlılıkları bulma
+## <a name="discover-patterns-and-dependencies-on-a-code-map"></a><a name="Codemaps"></a> Kod haritasında desenleri ve bağımlılıkları bulma
  Bağımlılık diyagramları oluştururken, **Kod eşlemeleri**de oluşturabilirsiniz. Bu diyagramlar, kodu araştırırken desenleri ve bağımlılıkları keşfetmenize yardımcı olabilir. Derlemeleri, ad alanlarını ve sınıfları araştırmak için Çözüm Gezgini, Sınıf Görünümü veya Nesne Tarayıcısı kullanın; Bu, genellikle mevcut katmanlara iyi karşılık gelir. Kod eşlemeleri hakkında daha fazla bilgi için bkz.
 
 - [Çözümlerinizdeki bağımlılıkları eşleme](../modeling/map-dependencies-across-your-solutions.md)

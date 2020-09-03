@@ -1,5 +1,5 @@
 ---
-title: Onaylama başarısız iletişim kutusu | Microsoft Docs
+title: Onaylama başarısız Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -22,22 +22,22 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d665f51f2ec5d825dbac1533c82e3d15bf419ff2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161817"
 ---
 # <a name="assertion-failed-dialog-box"></a>Onaylama Başarısız İletişim Kutusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir onay deyimi, programınızda belirli bir noktada doğru tutun beklediğiniz bir koşulu belirtir. Bu koşul true tutmazsa, onaylama işlemi başarısızsa, programınızın yürütülmesini yarıda ve bu iletişim kutusu görüntülenir.  
+Bir onaylama deyimi, programınızda belirli bir noktada doğru tutmayı düşündüğünüz bir koşulu belirtir. Bu koşul doğru değilse, onaylama başarısız olur, programınızın yürütülmesi kesintiye uğrar ve bu iletişim kutusu görüntülenir.  
   
-|Şuna tıklayın|Bitiş|  
+|Eski kimlik doğrulamasını engelleme hakkında daha fazla bilgi edinmek için|Amaç|  
 |-----------|--------|  
-|Yeniden Dene|Hata ayıklama doğrulama veya bildirimler ilgili yardım alın.|  
-|Yoksayma|Onaylama yoksay ve programı çalıştırmaya devam edin.|  
-|Durdurma|Programın yürütülmesini durdurmak ve hata ayıklama oturumunu sona erdirme.|  
+|Yeniden Dene|Onaylama sırasında hata ayıklayın veya yardım alın.|  
+|Yoksayma|Onayı yoksayın ve programı çalıştırmaya devam edin.|  
+|Durdurma|Programın yürütülmesini durdurur ve hata ayıklama oturumunu sonlandırın.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C/C++ Onaylamaları](../debugger/c-cpp-assertions.md)
+ [C/C++ Onayları](../debugger/c-cpp-assertions.md)

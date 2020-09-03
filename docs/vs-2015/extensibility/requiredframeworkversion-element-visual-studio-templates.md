@@ -12,22 +12,22 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ce312d7951f4c1be720604c006f9afcd63f364d3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68163659"
 ---
 # <a name="requiredframeworkversion-element-visual-studio-templates"></a>RequiredFrameworkVersion Öğesi (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Şablon için gerekli en düşük .NET Framework sürümünü belirtir. Şema hiyerarşisi.  
+Şablonun gerektirdiği en düşük .NET Framework sürümünü belirtir. Şema hiyerarşisi.  
   
- \<VSTemplate >  
- \<TemplateData >  
- \<RequiredFrameworkVersion >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<RequiredFrameworkVersion>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <RequiredFrameworkVersion> .... </RequiredFrameworkVersion>  
@@ -46,15 +46,15 @@ ms.locfileid: "68163659"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve ya da nasıl görüntüleneceğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** ya da **Yeni öğe Ekle** iletişim kutusunda nasıl görüntüleneceğini tanımlar.|  
   
 ## <a name="text-value"></a>Metin Değeri  
  Bir metin değeri gereklidir.  
   
- Metin şablon için gerekli olan .NET Framework'ün en düşük sürüm numarası olmalıdır.  
+ Metin, şablon için gerekli .NET Framework en düşük sürüm numarası olmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `RequiredFrameworkVersion` İsteğe bağlı bir öğedir. Şablonu yalnızca belirli en düşük sürüm ve sonraki sürümlerinde, .NET Framework'ü destekliyorsa, bu öğeyi kullanırsınız.  
+ `RequiredFrameworkVersion` isteğe bağlı bir öğedir. Şablon yalnızca belirli bir minimum sürümü ve varsa .NET Framework daha sonraki sürümlerini destekliyorsa bu öğeyi kullanın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)   

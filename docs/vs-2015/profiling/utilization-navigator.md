@@ -12,26 +12,26 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f4aec8cc1a707535e9cf6ae204be0a7ff67ea51d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145347"
 ---
 # <a name="utilization-navigator"></a>Kullanım Gezgini
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kullanım Gezgini, bir zaman aralığı içinde bir izleme seçmek için eşzamanlılık görselleştiricisi içinde kullanabilirsiniz. Eşzamanlılık görselleştiricisi, zaman içinde hedef işlem CPU Çekirdek kullanımını gösterir. Bu, CPU kullanım desenlerini incelenmesi kolaylaştırır ve kullanım verileri ve diğer görünümlerde verileri arasında karşılaştırma sağlar. Kullanım Gezgini en üstündeki eşzamanlılık görselleştiricisi her görünümünde görünür. Kullanım Gezgini aşağıda gösterilmiştir.  
+Bir izlemede zaman aralığı seçmek için eşzamanlılık görselleştiricisi içindeki kullanım Gezgini ' ni kullanabilirsiniz. Eşzamanlılık görselleştiricisi, CPU çekirdeklerinin zaman içindeki hedef işleme göre kullanımını gösterir. Bu, CPU kullanım düzenlerini incelemenizi kolaylaştırır ve ayrıca, kullanım verileri ile diğer görünümlerdeki veriler arasında karşılaştırmaya olanak sağlar. Kullanım Gezgini, eşzamanlılık görselleştiricisi içindeki her görünümün en üstünde görünür. Aşağıdaki çizimde kullanım Gezgini gösterilmektedir.  
   
- ![Seçilen zaman dilimini gösteren kullanım Gezgini](../profiling/media/cvutilizationnavigator.png "CVUtilizationNavigator")  
-Kullanım Gezgini ve seçilen bir zaman çerçevesi  
+ ![Seçili zaman dilimini gösteren kullanım Gezgini](../profiling/media/cvutilizationnavigator.png "Cvkullanımı Zationnavigator")  
+Kullanım Gezgini ve seçilen zaman çerçevesi  
   
- Çizimde, seçilen aralığı olarak bilinen kırmızı bir dikdörtgen tarafından tanımlanan *thumb*.  
+ Çizimde, seçilen Aralık, *Thumb*olarak bilinen kırmızı bir dikdörtgen tarafından tanımlanır.  
   
- Görüntülenen zaman aralığını değiştirmek için kullanım Gezgini nasıl kullanabileceğinizi aşağıda verilmiştir:  
+ Kullanım gezginini, görüntülenecek zaman aralığını değiştirmek için nasıl kullanabileceğinizi aşağıda bulabilirsiniz:  
   
-- Thumb sağa veya sola sürükleyerek kaydırabilirsiniz. (Klavye: Kaydırma kutusu için odağı taşıyın ve sonra sol veya sağ ok tuşuna basın.)  
+- Parmak izi ' ni sola veya sağa sürükleyerek kaydırma yapabilirsiniz. (Klavye: odağı Thumb öğesine taşıyın ve sol veya sağ ok tuşuna basın.)  
   
-- Aralık kapsamını tutamaçlarını sürükleyerek değiştirebilirsiniz. (Klavye: Odağı taşımak için bir tanıtıcı ve ardından sağ veya sol ok tuşuna basın.)  
+- Tutamaçlardan birini sürükleyerek aralığın kapsamını değiştirebilirsiniz. (Klavye: odağı bir tutamaya taşıyın ve sağ veya sol ok tuşuna basın.)  
   
-  Aralık farklı bir eşzamanlılık görselleştiricisi yakınlaştırma denetimi kullanılarak değiştirirseniz, değişikliği yansıtacak şekilde kullanım Gezgini güncelleştirir.
+  Aralığı farklı bir eşzamanlılık görselleştiricisi yakınlaştırma denetimi kullanarak değiştirirseniz, kullanım Gezgini değişikliği yansıtacak şekilde güncelleştirilir.

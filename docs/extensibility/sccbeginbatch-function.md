@@ -1,5 +1,5 @@
 ---
-title: SccBeginBatch Fonksiyonu | Microsoft Dokümanlar
+title: SccBeginBatch Işlevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 6c7982d8c8c0d71f8c79e9b808be5453d384882d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701195"
 ---
-# <a name="sccbeginbatch-function"></a>SccBeginBatch fonksiyonu
-Bu işlev, kaynak denetim işlemlerinin toplu sırasını başlatır. [SccEndBatch](../extensibility/sccendbatch-function.md) toplu iş sona erdirmek için çağrılacak. Bu gruplar iç içe geçmeyebilir.
+# <a name="sccbeginbatch-function"></a>SccBeginBatch işlevi
+Bu işlev, kaynak denetimi işlemleri toplu işlem dizisini başlatır. Toplu işi sonlandırmak için [SccEndBatch](../extensibility/sccendbatch-function.md) çağırılır. Bu toplu işlemler iç içe olamaz.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 SCCRTN SccBeginBatch(void);
@@ -32,18 +32,18 @@ SCCRTN SccBeginBatch(void);
  Yok.
 
 ## <a name="return-value"></a>Döndürülen değer
- Bu işlevin kaynak denetim eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|SCC_OK|Toplu işlemler başarıyla başladı.|
-|SCC_E_UNKNOWNERROR|Nonspesifik bir hata.|
+|SCC_OK|İşlem toplu işlemleri başarıyla başlatıldı.|
+|SCC_E_UNKNOWNERROR|Özel olmayan hata.|
 
 ## <a name="remarks"></a>Açıklamalar
- Kaynak denetim toplu işlemleri, birden çok proje veya birden çok bağlam da aynı işlemleri yürütmek için kullanılır. Toplu iş, toplu işlem sırasında kullanıcı deneyiminden proje başına gereksiz iletişim kutularını ortadan kaldırmak için kullanılabilir. İşlev `SccBeginBatch` ve [SccEndBatch,](../extensibility/sccendbatch-function.md) bir işlemin başlangıcını ve sonunu belirtmek için işlev çifti olarak kullanılır. İç içe geçemezler. `SccBeginBatch`toplu iş işleminin devam ettiğini belirten bir bayrak ayarlar.
+ Kaynak denetimi toplu işleri, birden çok proje veya birden çok bağlam arasında aynı işlemleri yürütmek için kullanılır. Toplu işlem sırasında kullanıcı deneyiminin gereksiz proje başına iletişim kutularını ortadan kaldırmak için toplu işlemler kullanılabilir. `SccBeginBatch`İşlevi ve [SccEndBatch](../extensibility/sccendbatch-function.md) , bir işlemin başlangıcını ve sonunu belirtmek için bir işlev çifti olarak kullanılır. Bunlar iç içe geçirilemez. `SccBeginBatch` bir toplu işlemin devam ettiğini belirten bir bayrak ayarlar.
 
- Toplu işlem etkinken, kaynak denetimi eklentisi kullanıcıya herhangi bir soru için en fazla bir iletişim kutusunda sunmalı ve sonraki tüm işlemlerde bu iletişim kutusundan gelen yanıtı uygulamalıdır.
+ Bir toplu işlem etkinken, kaynak denetimi eklentisinin kullanıcıya herhangi bir soru için en çok bir iletişim kutusu sunması ve sonraki tüm işlemlerde bu iletişim kutusundan yanıtı uygulamanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak kontrol eklentisi API fonksiyonları](../extensibility/source-control-plug-in-api-functions.md)
+- [Kaynak denetimi eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)
 - [SccEndBatch](../extensibility/sccendbatch-function.md)

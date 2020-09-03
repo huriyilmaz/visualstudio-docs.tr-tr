@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::Seek | Microsoft Dokümanlar
+title: 'IDebugDisassemblyStream2:: Seek | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4954b3b278b3c7a6b798a4ffda3856ab8bb200c1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732079"
 ---
 # <a name="idebugdisassemblystream2seek"></a>IDebugDisassemblyStream2::Seek
-Okuma işaretçisini sökme akışındaki okundu işaretçisini belirli bir konuma göre belirli sayıda yönerge taşır.
+Ayırma akışındaki okuma işaretçisini, belirtilen bir konuma göre verilen sayıda yönergeye kaydırır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT Seek( 
@@ -47,22 +47,22 @@ int Seek( 
 
 ## <a name="parameters"></a>Parametreler
 `dwSeekStart`\
-[içinde] Arama işlemini başlatmak için göreli konumu belirten [SEEK_START](../../../extensibility/debugger/reference/seek-start.md) numaralandırmadeğeri.
+'ndaki Arama işlemini başlatmak için göreli konumu belirten [SEEK_START](../../../extensibility/debugger/reference/seek-start.md) numaralandırmasından bir değer.
 
 `pCodeContext`\
-[içinde] Arama işleminin göreli olduğu kod bağlamını temsil eden [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi. Bu parametre `dwSeekStart`  =  `SEEK_START_CODECONTEXT`yalnızca; aksi takdirde, bu parametre yoksayılır ve null bir değer olabilir.
+'ndaki Arama işleminin göreli olduğu kod bağlamını temsil eden [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi. Bu parametre yalnızca ise kullanılır `dwSeekStart`  =  `SEEK_START_CODECONTEXT` ; Aksi takdirde, bu parametre yok sayılır ve null bir değer olabilir.
 
 `uCodeLocationId`\
-[içinde] Arama işleminin göreli olduğu kod konumu tanımlayıcısı. Bu parametre kullanılırsa; `dwSeekStart`  =  `SEEK_START_CODELOCID` aksi takdirde, bu parametre yoksayılır ve 0 olarak ayarlanabilir. Kod konum tanımlayıcısının açıklaması için [GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md) yönteminin Açıklamalar bölümüne bakın.
+'ndaki Arama işleminin göreli olduğu kod konumu tanımlayıcısı. Bu parametre ise kullanılır `dwSeekStart`  =  `SEEK_START_CODELOCID` ; Aksi takdirde, bu parametre yok sayılır ve 0 olarak ayarlanabilir. Kod konumu tanımlayıcısının açıklaması için [GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md) yöntemi için açıklamalar bölümüne bakın.
 
 `iInstructions`\
-[içinde] Belirtilen konuma göre hareket etmek için `dwSeekStart`talimat sayısı. Bu değer geriye doğru hareket etmek için negatif olabilir.
+'ndaki İçinde belirtilen konuma göre taşınacak yönergelerin sayısı `dwSeekStart` . Bu değer geriye doğru ilerlemek için negatif olabilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döndürür. Arama `S_FALSE` pozisyonu kullanılabilir yönergeler listesinin ötesinde bir noktaya geldiyse döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Arama konumunun kullanılabilir yönergeler listesinin ötesinde bir noktaya olup olmadığını döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Arama, listenin başlangıcından önce bir konuma olsaydı, okuma konumu listedeki ilk yönergeye ayarlanır. See listenin sonundan sonra bir konuma olsaydı, okuma konumu listedeki son yönergeye ayarlanır.
+ Arama, listenin başlangıcından önceki bir konuma ise, okuma konumu listedeki ilk yönergeye ayarlanır. Liste, listenin sonundan sonraki bir konuma ise, okuma konumu listedeki son yönergeye ayarlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)

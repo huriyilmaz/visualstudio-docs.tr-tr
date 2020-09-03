@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: df6f2245f06a594e35febe07d5aab2d7e83c48fd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75586815"
 ---
 # <a name="create-a-windows-form-to-search-data"></a>Veri aramak için Windows Form oluşturma
@@ -43,7 +43,7 @@ Bu izlenecek yolda gösterilen görevler şunlardır:
 
 - Forma parametreler girerek ve parametreli sorgu yürütülüyor.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
@@ -57,13 +57,13 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
     2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
 
-    3. T-SQL betiği sorgu düzenleyiciye yapıştırın ve ardından **yürütme** düğmesi.
+    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **Çalıştır** düğmesini seçin.
 
        Kısa bir süre sonra sorgu çalışmayı sonlandırır ve Northwind veritabanı oluşturulur.
 
 ## <a name="create-the-windows-forms-application"></a>Windows Forms uygulamasını oluşturma
 
-Ya da C# Visual Basic için yeni bir **Windows Forms uygulama** projesi oluşturun. Projeyi **WindowsSearchForm**olarak adlandırın.
+C# veya Visual Basic için yeni bir **Windows Forms uygulama** projesi oluşturun. Projeyi **WindowsSearchForm**olarak adlandırın.
 
 ## <a name="create-the-data-source"></a>Veri kaynağını oluşturma
 
@@ -99,17 +99,17 @@ Veri **kaynakları** penceresinden formunuza öğe sürükleyerek veri bağlant�
 
 2. **Müşteriler** düğümünü **veri kaynakları** penceresinden formunuza sürükleyin.
 
-     Kayıtlar üzerinde gezinmek için bir <xref:System.Windows.Forms.DataGridView> ve araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) formda görüntülenir. Bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource>ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
+     <xref:System.Windows.Forms.DataGridView>Kayıtlar üzerinde gezinmek için bir ve araç şeridi ( <xref:System.Windows.Forms.BindingNavigator> ) formda görüntülenir. Bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
 
 ## <a name="add-parameterization-search-functionality-to-the-query"></a>Sorguya Parametreleştirme (arama işlevi) ekleme
 
 **Arama ölçütü Oluşturucu** iletişim kutusunu kullanarak, özgün sorguya bir where yan tümcesi ekleyebilirsiniz:
 
-1. <xref:System.Windows.Forms.DataGridView> denetimini seçin ve ardından **veri** menüsünde **Sorgu Ekle** ' yi seçin.
+1. Denetimi seçin <xref:System.Windows.Forms.DataGridView> ve ardından **veri** menüsünde **Sorgu Ekle** ' yi seçin.
 
 2. **Arama ölçütü Oluşturucu** Iletişim kutusundaki **Yeni sorgu adı** alanına **FillByCity** yazın.
 
-3. Sorgu **metin** alanındaki sorguya `WHERE City = @City` ekleyin.
+3. Sorgu `WHERE City = @City` **metin** alanındaki sorguya ekleyin.
 
      Sorgu aşağıdakine benzemelidir:
 
@@ -121,13 +121,13 @@ Veri **kaynakları** penceresinden formunuza öğe sürükleyerek veri bağlant�
      ```
 
     > [!NOTE]
-    > Erişim ve OLE DB veri kaynakları, parametreleri belirtmek için soru işareti ('? ') kullanır; bu nedenle WHERE yan tümcesi şöyle görünür: `WHERE City = ?`.
+    > Erişim ve OLE DB veri kaynakları, parametreleri belirtmek için soru işareti ('? ') kullanır, bu nedenle WHERE yan tümcesi şöyle görünür: `WHERE City = ?` .
 
 4. **Tamam** ' a tıklayarak **arama ölçütleri Oluşturucu** iletişim kutusunu kapatın.
 
      Forma bir **FillByCityToolStrip** eklenir.
 
-## <a name="test-the-application"></a>Uygulamayı test edin
+## <a name="test-the-application"></a>Uygulamayı test etme
 
 Uygulamayı çalıştırmak formunuzu açar ve parametreyi giriş olarak almaya başlamaya çalışır:
 
@@ -143,7 +143,7 @@ Uygulama gereksinimlerinize bağlı olarak, parametreli form oluşturduktan sonr
 
 - İlgili verileri görüntüleyen denetimler ekleme. Daha fazla bilgi için bkz. [veri kümelerinde ilişkiler](relationships-in-datasets.md).
 
-- Veritabanı nesneleri eklemek veya çıkarmak için veri kümesini düzenleme. Daha fazla bilgi için [oluşturun ve veri kümeleri yapılandırma](../data-tools/create-and-configure-datasets-in-visual-studio.md).
+- Veritabanı nesneleri eklemek veya çıkarmak için veri kümesini düzenleme. Daha fazla bilgi için bkz. [veri kümeleri oluşturma ve yapılandırma](../data-tools/create-and-configure-datasets-in-visual-studio.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

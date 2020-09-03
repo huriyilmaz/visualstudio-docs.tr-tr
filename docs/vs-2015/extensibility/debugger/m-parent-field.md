@@ -11,24 +11,24 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e371056f367588005001b4d77b8e80a2e9cb67d8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149074"
 ---
-# <a name="mparent-field"></a>m_parent Alanı
+# <a name="m_parent-field"></a>m_parent Alanı
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Destek alanı görevin üst <xref:System.Threading.Tasks.Task>.
+Görevin üst öğesi için yedekleme alanı <xref:System.Threading.Tasks.Task> .
 
-**Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>
+**Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
-**Bütünleştirilmiş kod:** mscorlib (mscorlib.dll içinde)
+**Bütünleştirilmiş kod:** mscorlib (mscorlib.dll)
 
-.NET Framework'den bu iç üye erişemediği için aşağıdaki söz dizimini ortak Ara dil (CIL) sağlanır.
+Bu iç üyeye .NET Framework erişemediği için, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```csharp
 .field private initonly class System.Threading.Tasks.Task m_parent

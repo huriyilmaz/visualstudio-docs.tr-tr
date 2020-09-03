@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9c3a0feed4177bd41ee2b77edc49336bfda3171b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84184048"
 ---
 # <a name="special-characters-to-escape"></a>Kaçış için özel karakterler
@@ -31,7 +31,7 @@ ms.locfileid: "84184048"
 
  Kaçış için özel karakterlerin tam listesi aşağıdadır:
 
-|Karakter|ASCII kodlama|Açıklama|
+|Karakter|ASCII kodlama|Description|
 |---------|----------|-----------|
 |%|%25|Meta verilere başvurmak için kullanılan yüzde işareti.|
 |$|%24|Dolar işareti, özelliklere başvurmak için kullanılır.|
@@ -40,7 +40,7 @@ ms.locfileid: "84184048"
 |)|%29|Listelerde kullanılan parantez kapatma.|
 |;|% 3B|Noktalı virgül, liste ayırıcısı.|
 |?|% 3F|Soru işareti, bir öğenin Içerme/hariç tutma bölümünde bir dosya belirtimini açıklayan bir joker karakterdir.|
-|* |% 2A|Bir öğenin Içerme/hariç tutma bölümünde bir dosya belirtimini açıklayan bir joker karakter olan yıldız işareti.|
+|* |%2A|Bir öğenin Içerme/hariç tutma bölümünde bir dosya belirtimini açıklayan bir joker karakter olan yıldız işareti.|
 
 > [!NOTE]
 > Bazı senaryolarda, bir görev içinde kullanırken olduğu gibi çift tırnak (") karakterlerini kaçış gerekebilir `Exec` .

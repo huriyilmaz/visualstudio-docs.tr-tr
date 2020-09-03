@@ -10,18 +10,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c31d54a87ff305504496eac6ae02900334c0966a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659451"
 ---
 # <a name="updating-shapes-and-connectors-to-reflect-the-model"></a>Modeli Yansıtacak Şekilleri ve Bağlayıcıları Güncelleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_0 bir alana özgü dilde, bir şeklin görünümünün temel alınan modelin durumunu yansıtmasını sağlayabilirsiniz.
+İçindeki alana özgü bir dilde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , bir şeklin görünümünün temel alınan modelin durumunu yansıtmasını sağlayabilirsiniz.
 
- Bu konudaki kod örnekleri, `Dsl` projenizdeki bir `.cs` dosyasına eklenmelidir. Her dosyada bu deyimlere ihtiyacınız olacaktır:
+ Bu konudaki kod örnekleri `.cs` projenizdeki bir dosyaya eklenmelidir `Dsl` . Her dosyada bu deyimlere ihtiyacınız olacaktır:
 
 ```
 using Microsoft.VisualStudio.Modeling;
@@ -30,9 +30,9 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 ```
 
 ## <a name="set-shape-map-properties-to-control-the-visibility-of-a-decorator"></a>Bir dekoratörün görünürlüğünü denetlemek için şekil eşleme özelliklerini ayarlama
- Bir dekoratın görünürlüğünü, bir program kodu yazmadan denetleyebilir ve bu, DSL tanımındaki şekil ile alan sınıfı arasındaki eşlemeyi yapılandırarak kontrol edebilirsiniz. Daha fazla bilgi için aşağıdaki konulara bakın:
+ Bir dekoratın görünürlüğünü, bir program kodu yazmadan denetleyebilir ve bu, DSL tanımındaki şekil ile alan sınıfı arasındaki eşlemeyi yapılandırarak kontrol edebilirsiniz. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
 
-- [Nasıl yapılır: bir dekoratörün görünürlüğünü denetleme-yeniden yönlendirme](../misc/how-to-control-the-visibility-of-a-decorator-redirect.md)
+- [Nasıl yapılır: Bir Dekoratörün Görünürlüğünü Denetleme - yeniden yönlendirme](../misc/how-to-control-the-visibility-of-a-decorator-redirect.md)
 
 - [Nasıl yapılır: Etki Alanına Özgü bir Dili Tanımlama](../modeling/how-to-define-a-domain-specific-language.md)
 
@@ -43,14 +43,14 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
  `shape.FillColor = System.Drawing.Color.Red;`
 
- Özellik değişkenini Kullanıcı tarafından değil yalnızca program denetimi altında yapmak istiyorsanız, DSL tanımı diyagramında **Fill Color** gibi yeni bir etki alanı özelliğini seçin. Sonra, Özellikler penceresi, `false` için **gözatılabilir** veya **Kullanıcı arabirimi salt okunur** `true` olarak ayarlanmıştır.
+ Özellik değişkenini Kullanıcı tarafından değil yalnızca program denetimi altında yapmak istiyorsanız, DSL tanımı diyagramında **Fill Color** gibi yeni bir etki alanı özelliğini seçin. Daha sonra, Özellikler penceresi, set olarak **gözatılabilir** `false` veya **Kullanıcı arabirimi salt okunur** olarak ayarlanır `true` .
 
 ## <a name="define-change-rules-to-make-color-style-or-location-depend-on-model-element-properties"></a>Renk, stil veya konumun model öğesi özelliklerine bağımlı olması için değişiklik kurallarını tanımlayın
  Şeklin, modelin diğer bölümlerine bağımlı görünümünü güncelleştiren kurallar tanımlayabilirsiniz. Örneğin, model öğesinin özelliklerine bağımlı şeklin rengini güncelleştiren bir model öğesinde bir değişiklik kuralı tanımlayabilirsiniz. Değişiklik kuralları hakkında daha fazla bilgi için bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).
 
  Geri Al komutu gerçekleştirildiğinde kurallar çağrılamadığından, yalnızca mağaza dahilinde tutulan özellikleri güncelleştirmek için kuralları kullanmanız gerekir. Bu, bir şeklin boyut ve görünürlüğü gibi bazı grafik özellikleri içermez. Bir şeklin bu özelliklerini güncelleştirmek için bkz. [depolama olmayan grafik özelliklerini güncelleştirme](#OnAssociatedProperty).
 
- Aşağıdaki örnek, önceki bölümde açıklandığı gibi `FillColor` bir etki alanı özelliği olarak kullanıma aldığını varsayar.
+ Aşağıdaki örnek, `FillColor` önceki bölümde açıklandığı gibi bir etki alanı özelliği olarak kullanıma sunulacak olduğunu varsayar.
 
 ```csharp
 [RuleOn(typeof(ExampleElement))]
@@ -90,7 +90,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 ```
 
 ## <a name="use-onchildconfigured-to-initialize-a-shapes-properties"></a>Şekil özelliklerini başlatmak için OnChildConfigured kullanın
- Bir şeklin özelliklerini ilk oluşturulduğunda ayarlamak için, geçersiz kılma `OnChildConfigured()` diyagram sınıfınızın kısmi tanımıdır. Diyagram sınıfı DSL tanımınızda belirtilir ve oluşturulan kod **Dsl\generated Code\Diagram.cs**' de bulunur. Örneğin:
+ Bir şeklin özelliklerini ilk oluşturulduğunda ayarlamak için, `OnChildConfigured()` Diyagram sınıfınızın kısmi tanımında geçersiz kılma. Diyagram sınıfı DSL tanımınızda belirtilir ve oluşturulan kod **Dsl\generated Code\Diagram.cs**' de bulunur. Örneğin:
 
 ```csharp
 partial class MyLanguageDiagram
@@ -115,10 +115,10 @@ partial class MyLanguageDiagram
 
  Bu yöntem, hem etki alanı özellikleri hem de depolama olmayan özellikler için kullanılabilir (örneğin, şeklin boyutu).
 
-## <a name="OnAssociatedProperty"></a>Bir şeklin diğer özelliklerini güncelleştirmek için AssociateValueWith () kullanın
+## <a name="use-associatevaluewith-to-update-other-features-of-a-shape"></a><a name="OnAssociatedProperty"></a> Bir şeklin diğer özelliklerini güncelleştirmek için AssociateValueWith () kullanın
  Bir şeklin gölge veya bir bağlayıcının ok stili olup olmadığı gibi bazı özellikler için, özelliği etki alanı özelliği olarak gösterme yerleşik bir yöntemi yoktur.  Bu tür özelliklerde yapılan değişiklikler işlem sisteminin denetiminde değildir. Bu nedenle, Kullanıcı geri al komutunu gerçekleştirdiğinde kurallar çağrılmadığından kurallar kullanılarak güncelleştirilmesi uygun değildir.
 
- Bunun yerine, <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A> kullanarak bu özellikleri güncelleştirebilirsiniz. Aşağıdaki örnekte, bağlayıcının ok stili, bağlayıcının gösterdiği ilişkide bir etki alanı özelliğinin değeri ile denetlenir:
+ Bunun yerine, kullanarak bu özellikleri güncelleştirebilirsiniz <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A> . Aşağıdaki örnekte, bağlayıcının ok stili, bağlayıcının gösterdiği ilişkide bir etki alanı özelliğinin değeri ile denetlenir:
 
 ```
 public partial class ArrowConnector // My connector class.
@@ -159,6 +159,6 @@ public partial class ArrowConnector // My connector class.
 
 ```
 
- `AssociateValueWith()`, kaydetmek istediğiniz her bir etki alanı özelliği için bir kez çağrılmalıdır. Çağrıldıktan sonra, belirtilen özellikte yapılan herhangi bir değişiklik, özelliğin model öğesini sunan tüm şekillerde `OnAssociatedPropertyChanged()` çağırır.
+ `AssociateValueWith()` kaydetmek istediğiniz her bir etki alanı özelliği için bir kez çağrılmalıdır. Çağrıldıktan sonra, belirtilen özellikte yapılan herhangi bir değişiklik, `OnAssociatedPropertyChanged()` özelliğin model öğesini sunan herhangi bir şekle çağrı yapılır.
 
- Her örnek için `AssociateValueWith()` çağırmak gerekli değildir. InitializeResources bir örnek yöntemi olsa da, her şekil sınıfı için yalnızca bir kez çağrılır.
+ Her örnek için çağrı yapılması gerekli değildir `AssociateValueWith()` . InitializeResources bir örnek yöntemi olsa da, her şekil sınıfı için yalnızca bir kez çağrılır.

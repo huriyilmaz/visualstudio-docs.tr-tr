@@ -15,15 +15,15 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 97d9e64a0fcabb207d4606d4819f6afcb61b1043
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75586854"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-complex-data-binding"></a>Karmaşık veri bağlama modelini destekleyen bir Windows Forms kullanıcı denetimi oluşturma
 
-Windows uygulamalarındaki formlarda verileri görüntülerken **araç kutusundan**varolan denetimleri seçebilirsiniz. Ya da uygulamanız standart denetimlerde kullanılamayan işlevselliği gerektiriyorsa özel denetimler yazabilirsiniz. Bu izlenecek yol, <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>uygulayan bir denetimin nasıl oluşturulacağını gösterir. <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> uygulayan denetimler, verilere bağlanabilen bir `DataSource` ve `DataMember` özelliği içerir. Bu tür denetimler <xref:System.Windows.Forms.DataGridView> veya <xref:System.Windows.Forms.ListBox>benzerdir.
+Windows uygulamalarındaki formlarda verileri görüntülerken **araç kutusundan**varolan denetimleri seçebilirsiniz. Ya da uygulamanız standart denetimlerde kullanılamayan işlevselliği gerektiriyorsa özel denetimler yazabilirsiniz. Bu izlenecek yol, uygulayan bir denetimin nasıl oluşturulacağını gösterir <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> . , <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> `DataSource` Verilerine bağlanabilen ve özelliğini içeren denetimler `DataMember` . Bu tür denetimler veya ile benzerdir <xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.ListBox> .
 
 Denetim yazma hakkında daha fazla bilgi için bkz. [tasarım zamanında Windows Forms denetimleri geliştirme](/dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time).
 
@@ -31,11 +31,11 @@ Veri bağlama senaryolarında kullanılacak denetimleri yazma sırasında, aşa�
 
 |Veri bağlama özniteliği kullanımı|
 | - |
-|Verilerin tek bir sütununu (veya özelliği) görüntüleyen <xref:System.Windows.Forms.TextBox>gibi basit denetimlerde <xref:System.ComponentModel.DefaultBindingPropertyAttribute> uygulayın. Daha fazla bilgi için bkz. [basit veri bağlamayı destekleyen Windows Forms Kullanıcı denetimi oluşturma](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md).|
-|Denetimlerin listesini (veya tabloları) görüntüleyen <xref:System.Windows.Forms.DataGridView>gibi denetimlerde <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> uygulayın. (Bu işlem Bu izlenecek yol sayfasında açıklanmaktadır.)|
-|Verilerin listelerini (veya tabloları) görüntüleyen ancak tek bir sütun veya özellik sunması gereken <xref:System.Windows.Forms.ComboBox>gibi denetimlerde <xref:System.ComponentModel.LookupBindingPropertiesAttribute> uygulayın. Daha fazla bilgi için bkz. [arama verisi bağlamayı destekleyen Windows Forms Kullanıcı denetimi oluşturma](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md).|
+|<xref:System.ComponentModel.DefaultBindingPropertyAttribute> <xref:System.Windows.Forms.TextBox> Verilerin tek bir sütununu (veya özelliğini) görüntüleyen bir gibi basit denetimleri uygulayın. Daha fazla bilgi için bkz. [basit veri bağlamayı destekleyen Windows Forms Kullanıcı denetimi oluşturma](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md).|
+|<xref:System.ComponentModel.ComplexBindingPropertiesAttribute> <xref:System.Windows.Forms.DataGridView> Verilerin listelerini (veya tabloları) görüntüleyen, gibi denetimleri uygulayın. (Bu işlem Bu izlenecek yol sayfasında açıklanmaktadır.)|
+|<xref:System.ComponentModel.LookupBindingPropertiesAttribute> <xref:System.Windows.Forms.ComboBox> Verilerin listelerini (veya tabloları) görüntüleyen, ancak tek bir sütun veya özellik sunmanız gereken, gibi denetimleri uygulayın. Daha fazla bilgi için bkz. [arama verisi bağlamayı destekleyen Windows Forms Kullanıcı denetimi oluşturma](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md).|
 
-Bu izlenecek yol, bir tablodaki veri satırlarını görüntüleyen karmaşık bir denetim oluşturur. Bu örnek, Northwind örnek veritabanındaki `Customers` tablosunu kullanır. Karmaşık kullanıcı denetimi, müşteriler tablosunu özel denetimdeki bir <xref:System.Windows.Forms.DataGridView> görüntüler.
+Bu izlenecek yol, bir tablodaki veri satırlarını görüntüleyen karmaşık bir denetim oluşturur. Bu örnek, `Customers` Northwind örnek veritabanındaki tablosunu kullanır. Karmaşık kullanıcı denetimi, içindeki Customers tablosunu <xref:System.Windows.Forms.DataGridView> özel denetimde görüntüler.
 
 Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
@@ -43,7 +43,7 @@ Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
 - Kullanıcı denetimini görsel olarak tasarlayın.
 
-- `ComplexBindingProperty` özniteliğini uygulayın.
+- Özniteliğini uygulayın `ComplexBindingProperty` .
 
 - [Veri kaynağı Yapılandırma Sihirbazı](../data-tools/media/data-source-configuration-wizard.png)ile bir veri kümesi oluşturun.
 
@@ -51,7 +51,7 @@ Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
 - **Veri kaynakları** penceresinden **Form1**üzerine sürükleyerek yeni denetim ekleyin.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
@@ -65,13 +65,13 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
     1. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
 
-    1. T-SQL betiği sorgu düzenleyiciye yapıştırın ve ardından **yürütme** düğmesi.
+    1. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **Çalıştır** düğmesini seçin.
 
        Kısa bir süre sonra sorgu çalışmayı sonlandırır ve Northwind veritabanı oluşturulur.
 
 ## <a name="create-a-windows-forms-app-project"></a>Windows Forms uygulama projesi oluşturma
 
-İlk adım, ya da C# Visual Basic için **Windows Forms bir uygulama** projesi oluşturmaktır. Projeyi **ComplexControlWalkthrough**olarak adlandırın.
+İlk adım, C# veya Visual Basic için **Windows Forms bir uygulama** projesi oluşturmaktır. Projeyi **ComplexControlWalkthrough**olarak adlandırın.
 
 ## <a name="add-a-user-control-to-the-project"></a>Projeye Kullanıcı denetimi Ekle
 
@@ -85,24 +85,24 @@ Bu izlenecek yol, **Kullanıcı denetiminden**karmaşık bir veri bağlanabilir 
 
 ## <a name="design-the-complexdatagridview-control"></a>ComplexDataGridView denetimini tasarlama
 
-Kullanıcı denetimine bir <xref:System.Windows.Forms.DataGridView> eklemek için, **araç kutusundan** bir <xref:System.Windows.Forms.DataGridView> Kullanıcı denetiminin tasarım yüzeyine sürükleyin.
+Kullanıcı denetimine bir eklemek için <xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.DataGridView> **araç kutusundan** bir öğesini Kullanıcı denetiminin tasarım yüzeyine sürükleyin.
 
 ## <a name="add-the-required-data-binding-attribute"></a>Gerekli veri bağlama özniteliğini ekleyin
 
-Veri bağlamayı destekleyen karmaşık denetimler için <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>uygulayabilirsiniz:
+Veri bağlamayı destekleyen karmaşık denetimler için şunları uygulayabilirsiniz <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> :
 
 1. **ComplexDataGridView** denetimini Code View olarak değiştirin. ( **Görünüm** menüsünde **kod**' i seçin.)
 
-1. `ComplexDataGridView` kodundaki kodu aşağıdaki kodla değiştirin:
+1. İçindeki kodu aşağıdaki gibi değiştirin `ComplexDataGridView` :
 
     [!code-csharp[VbRaddataDisplaying#4](../data-tools/codesnippet/CSharp/create-a-windows-forms-user-control-that-supports-complex-data-binding_1.cs)]
     [!code-vb[VbRaddataDisplaying#4](../data-tools/codesnippet/VisualBasic/create-a-windows-forms-user-control-that-supports-complex-data-binding_1.vb)]
 
-1. Gelen **derleme** menüsünde seçin **Çözümü Derle**.
+1. **Build** menüsünde **Build Solution**öğesini seçin.
 
 ## <a name="create-a-data-source-from-your-database"></a>Veritabanınızdan bir veri kaynağı oluşturun
 
-Northwind örnek veritabanındaki `Customers` tablosuna dayalı bir veri kaynağı oluşturmak için **veri kaynağı yapılandırma** Sihirbazı ' nı kullanın:
+Northwind örnek veritabanındaki tabloya dayalı bir veri kaynağı oluşturmak için **veri kaynağı yapılandırma** Sihirbazı ' nı kullanın `Customers` :
 
 1. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
 
@@ -122,9 +122,9 @@ Northwind örnek veritabanındaki `Customers` tablosuna dayalı bir veri kaynağ
 
 7. **Veritabanı nesnelerinizi seçin** sayfasında **Tablolar** düğümünü genişletin.
 
-8. `Customers` tablosunu seçin ve ardından **son**' a tıklayın.
+8. Tabloyu seçin `Customers` ve ardından **son**' a tıklayın.
 
-   **NorthwindDataSet** , projenize eklenir ve `Customers` tablosu **veri kaynakları** penceresinde görünür.
+   **NorthwindDataSet** , projenize eklenir ve `Customers` tablo **veri kaynakları** penceresinde görünür.
 
 ## <a name="set-the-customers-table-to-use-the-complexdatagridview-control"></a>Müşteriler tablosunu ComplexDataGridView denetimini kullanacak şekilde ayarlama
 
@@ -138,13 +138,13 @@ Northwind örnek veritabanındaki `Customers` tablosuna dayalı bir veri kaynağ
 
 1. **Veri Kullanıcı arabirimi özelleştirme seçenekleri** Iletişim kutusunda **Ilişkili denetimler** listesinden **ComplexDataGridView** ' i seçin.
 
-1. `Customers` tablosundaki aşağı açılan oka tıklayın ve denetim listesinden **ComplexDataGridView** ' i seçin.
+1. Tablodaki açılan oka tıklayın `Customers` ve denetim listesinden **ComplexDataGridView** ' i seçin.
 
 ## <a name="add-controls-to-the-form"></a>Forma denetim ekleme
 
 Veri **kaynakları** penceresinden formunuza öğe sürükleyerek veri bağlantılı denetimleri oluşturabilirsiniz. Ana **müşteriler** düğümünü **veri kaynakları** penceresinden form üzerine sürükleyin. Tablo verilerini göstermek için **ComplexDataGridView** denetiminin kullanıldığını doğrulayın.
 
-## <a name="run-the-application"></a>Uygulamayı çalıştırın
+## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
 Uygulamayı çalıştırmak için **F5**'e basın.
 
@@ -159,5 +159,5 @@ Uygulama gereksinimlerinize bağlı olarak, veri bağlamayı destekleyen bir den
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio'da verilere Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
-- [Deneti veri kaynakları penceresinden sürüklendiğinde oluşturulacak şekilde ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)
-- [Windows Forms Denetimleri](/dotnet/framework/winforms/controls/index)
+- [Veri Kaynakları penceresinden sürüklendiğinde denetimin oluşturulmasını ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)
+- [Windows Forms denetimleri](/dotnet/framework/winforms/controls/index)

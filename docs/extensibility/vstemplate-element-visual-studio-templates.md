@@ -1,5 +1,5 @@
 ---
-title: VSTemplate Öğesi (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: VSTemplate öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,16 +14,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 651e8b6dbbe11c450b105f3185e7e987bb30da9b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80697863"
 ---
-# <a name="vstemplate-element-visual-studio-templates"></a>VSTemplate öğesi (Visual Studio Şablonları)
-Proje şablonu, öğe şablonu veya başlangıç kiti yle ilgili tüm meta verileri içerir.
+# <a name="vstemplate-element-visual-studio-templates"></a>VSTemplate öğesi (Visual Studio şablonları)
+Proje şablonu, öğe şablonu veya Starter Kit ile ilgili tüm meta verileri içerir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```csharp
 <VSTemplate Type="TemplateType" Version="x.x.x">
@@ -40,14 +40,14 @@ Proje şablonu, öğe şablonu veya başlangıç kiti yle ilgili tüm meta veril
 
 | Öznitelik | Açıklama |
 |-----------| - |
-| `Type` | Şablonu proje şablonu veya öğe şablonu olarak tanımlar. Bu öznitelik veya `Project` . `Item` |
-| `Version` | Şablon için bir sürüm numarası belirtir. Şablonlar [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] içinde [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] ve `Version` bir öznitelik değeri var `3.0.0`. |
+| `Type` | Şablonu bir proje şablonu veya bir öğe şablonu olarak tanımlar. Bu öznitelik veya değerine sahip olabilir `Project` `Item` . |
+| `Version` | Şablon için sürüm numarasını belirtir. Ve içindeki [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] Şablonlar [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] `Version` özniteliği değeri `3.0.0` . |
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayıran verileri belirtir ve **Yeni Proje** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleyeceğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 |[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonun içeriğini belirtir.|
 |[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|İsteğe bağlı öğe.|
 |[WizardData](../extensibility/wizarddata-element-visual-studio-templates.md)|İsteğe bağlı öğe.|
@@ -56,10 +56,10 @@ Proje şablonu, öğe şablonu veya başlangıç kiti yle ilgili tüm meta veril
  Yok.
 
 ## <a name="remarks"></a>Açıklamalar
- Öğe `VSTemplate` *.vstemplate* dosyalarının kök öğesidir.
+ `VSTemplate`Öğesi *. vstemplate* dosyalarının kök öğesidir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] uygulama için proje şablonu için meta verileri gösterir.
+ Aşağıdaki örnek, bir uygulama için bir proje şablonu meta verilerini gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -86,5 +86,5 @@ Proje şablonu, öğe şablonu veya başlangıç kiti yle ilgili tüm meta veril
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
-- [Proje ve madde şablonları oluşturma](../ide/creating-project-and-item-templates.md)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

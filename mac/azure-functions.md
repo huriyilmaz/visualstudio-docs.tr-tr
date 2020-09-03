@@ -1,20 +1,20 @@
 ---
-title: Azure İşlevleri’ne giriş
+title: Azure İşlevleri’ne Giriş
 description: Mac için Visual Studio 'de Azure işlevleri 'ni kullanma.
-author: sayedihashimi
-ms.author: sayedha
+author: jmatthiesen
+ms.author: jomatthi
 ms.date: 04/02/2019
 ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
 ms.topic: how-to
-ms.openlocfilehash: 600c4a21b6c9db8a6adb14e8fc96092f1782339f
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.openlocfilehash: 586d03e88ba3a2523dde00a6826980830ad54fbc
+ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85938645"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89402323"
 ---
-# <a name="introduction-to-azure-functions"></a>Azure İşlevleri’ne giriş
+# <a name="introduction-to-azure-functions"></a>Azure İşlevleri’ne Giriş
 
 Azure işlevleri, altyapıyı açıkça sağlamak veya yönetmek zorunda kalmadan, kod – – işlevleri – –, bulutta olay odaklı kod parçacıkları oluşturup çalıştırmanın bir yoludur. Azure Işlevleri hakkında daha fazla bilgi için bkz. [Azure işlevleri belgeleri](/azure/azure-functions/).
 
@@ -54,7 +54,7 @@ Mac için Visual Studio, varsayılan bir işlevle dahil .NET Standard bir proje 
 Yeni proje aşağıdaki dosyaları içerir:
 
 * **Your-Function-Name.cs** – Bu sınıf seçtiğiniz işlevin ortak kodunu içerir. İşlev adına sahip bir **fonksiyonadı** özniteliği ve işlevi neyin tetikleyeceğini belirten bir tetikleyici özniteliği içerir (örn. bir HTTP isteği). İşlev yöntemi hakkında daha fazla bilgi için bkz. [Azure Işlevleri C# Geliştirici başvurusu](/azure/azure-functions/functions-dotnet-class-library) makalesi.
-* **host.js** : Bu dosya, işlevler ana bilgisayarı için genel yapılandırma seçeneklerini açıklar. Örnek bir dosya ve bu dosya için kullanılabilir ayarlar hakkında bilgi için bkz. [Azure işlevleri için başvuruhost.js](/azure/azure-functions/functions-host-json).
+* **host.js** : Bu dosya, işlevler ana bilgisayarı için genel yapılandırma seçeneklerini açıklar. Örnek bir dosya ve bu dosya için kullanılabilir ayarlar hakkında bilgi için bkz. [ Azure işlevleri için başvuruhost.js](/azure/azure-functions/functions-host-json).
 * **local.settings.js** : Bu dosya, işlevleri yerel olarak çalıştırmaya yönelik tüm ayarları içerir. Bu ayarlar Azure Functions Core Tools tarafından kullanılır. Daha fazla bilgi için Azure Functions Core Tools makalesindeki [yerel ayarlar dosyası](/azure/azure-functions/functions-run-local#local-settings-file) ' na bakın.
 
 Artık Mac için Visual Studio yeni bir Azure Işlevleri projesi oluşturduğunuza göre, yerel makinenizden varsayılan HTTP ile tetiklenen işlevi test edebilirsiniz.
@@ -95,12 +95,12 @@ Mac için Visual Studio Azure Işlevleri desteğiyle, işlevinizi yerel gelişti
 
 ## <a name="publish-to-azure"></a>Azure’da Yayımlama
 
-1. Proje adına sağ tıklayıp **yayımla > Azure**'da Yayımla ' yı seçin: Azure 'da ![ Yayımla menü seçeneği](media/azure-functions-image5.png)
+1. Proje adına sağ tıklayıp **yayımla > Azure**'da Yayımla ' yı seçin: Azure 'da  ![ Yayımla menü seçeneği](media/azure-functions-image5.png)
 2. Azure hesabınızı Mac için Visual Studio için zaten bağladıysanız, kullanılabilir uygulama hizmetlerinin bir listesi görüntülenir. Oturum açmadıysanız bunu yapmanız istenir.
 3. **Azure App Service Yayımla** iletişim kutusunda, var olan bir uygulama hizmetini seçebilir veya **Yeni**' ye tıklayarak yeni bir tane oluşturabilirsiniz.
 4. **Yeni App Service oluştur** iletişim kutusunda ayarlarınızı girin: ![ Azure 'a Yayımla menü seçeneği](media/azure-functions-image7.png)
 
-    |Ayar  |Description  |
+    |Ayar  |Açıklama  |
     |---------|---------|
     |**App Service adı**|Yeni işlev uygulamanızı tanımlayan genel olarak benzersiz bir ad.|
     |**Abonelik**|Kullanılacak Azure aboneliği.|
@@ -159,4 +159,4 @@ Ayarlamanız gerekebilmeniz gereken önemli bir ayardır `FUNCTIONS_EXTENSION_VE
 
 - **Görüntü Resizer** – bu işlev, bir kapsayıcıya bir blob eklendiğinde yeniden boyutlandırılmış görüntüler oluşturur. Şablon, tetikleyici için yol ve bağlantı dizesi, küçük bir görüntü çıkışı ve orta görüntü çıkışı alır.
 
-- **SAS belirteci** – bu işlev, belirli bir Azure depolama kapsayıcısı ve BLOB adı IÇIN bir SAS belirteci oluşturur. Bu şablon, işlev adının yanı sıra bir yol ve bağlantı özelliği de alır. Path özelliği, depolama hesabınızda tetikleyicinin izleyecektir. Bağlantı hesabı, depolama hesabı Bağlantı dizenizi içeren uygulama ayarının adıdır. **Erişim haklarının** de ayarlanması gerekir. Yetkilendirme düzeyi, işlevin bir API anahtarı gerektirip gerektirmediğini ve hangi anahtarın kullanılacağını denetler; İşlev bir işlev anahtarı kullanır; Yönetici ana anahtarınızı kullanır. Daha fazla bilgi için bkz. [SAS belirteçleri oluşturma örneği Için C# Azure işlevi](https://github.com/Azure-Samples/functions-dotnet-sas-token/) .
+- **SAS belirteci** – bu işlev, belirli bir Azure depolama kapsayıcısı ve BLOB adı IÇIN bir SAS belirteci oluşturur. Bu şablon, işlev adının yanı sıra bir yol ve bağlantı özelliği de alır. Path özelliği, depolama hesabınızda tetikleyicinin izleyecektir. Bağlantı hesabı, depolama hesabı Bağlantı dizenizi içeren uygulama ayarının adıdır. **Erişim haklarının** de ayarlanması gerekir. Yetkilendirme düzeyi, işlevin bir API anahtarı gerektirip gerektirmediğini ve hangi anahtarın kullanılacağını denetler; İşlev bir işlev anahtarı kullanır; Yönetici, hesap erişim anahtarınızı kullanır. Daha fazla bilgi için bkz. [SAS belirteçleri oluşturma örneği Için C# Azure işlevi](https://github.com/Azure-Samples/functions-dotnet-sas-token/) .

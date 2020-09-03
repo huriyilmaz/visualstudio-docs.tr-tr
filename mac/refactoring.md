@@ -1,99 +1,99 @@
 ---
 title: Kodu yeniden düzenleme
-description: Mac için Visual Studio'u kullanarak kodu ve hızlı işlemleri rafine etme.
-author: cobey
-ms.author: cobey
-ms.date: 03/29/2019
+description: Mac için Visual Studio ve hızlı eylemleri kullanarak kodu iyileştirme.
+author: jmatthiesen
+ms.author: jomatthi
+ms.date: 07/03/2020
 ms.assetid: C7782BF3-016F-4B41-8A81-85FC540A1A8F
 ms.custom: video
-ms.openlocfilehash: 5a87b87f3a14462daec1e069fe222164818d2a19
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 3892117e5c84a71f258d4e019105fca0a8cf9c5b
+ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "67691291"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89402604"
 ---
 # <a name="refactoring"></a>Yeniden Düzenle
 
-Yeniden düzenleme kodu, kodun genel davranışının değişmemesini sağlarken varolan kodu yeniden düzenlemenin, yeniden yapılandırmanın ve netleştirmenin bir yoludur.
+Kodu yeniden düzenleme, kodun genel davranışının değişmeyeceğinden emin olmak için mevcut kodu yeniden düzenlemek, yeniden yapılandırmak ve netleştirmek için bir yoldur.
 
-Yeniden düzenleme, sizin veya koda atıfta bulunabilecek başka bir geliştirici veya kullanıcı için daha kullanılabilir, okunabilir ve bakımlı hale getirerek daha sağlıklı bir kod tabanı üretir.
+Yeniden düzenleme, bir isteyen kod tabanı üretir, sizin için daha kolay bir şekilde çalışabilir, okunabilir ve sürdürülebilir hale gelir.
 
-Mac'in Microsoft'un açık kaynak kodlayıcı platformu Roslyn ile tümleşmesi için Visual Studio, daha fazla yeniden düzenleme işlemi sağlar.
+Mac için Visual Studio, Microsoft 'un açık kaynaklı .NET derleyicisi platformu ile, daha yeniden düzenleme işlemlerine izin verir.
 
-## <a name="renaming"></a>Yeni -den adlandırma
+## <a name="renaming"></a>Adlandırıl
 
-*Yeniden Adlandırma* yeniden düzenleme komutu, bu tanımlayıcının tüm oluşumlarını bulmak ve değiştirmek için herhangi bir kod tanımlayıcısında (örneğin, bir sınıf adı, özellik adı vb.) kullanılabilir. Bir sembolü yeniden adlandırmak için üzerine sağ tıklayın ve **Yeniden Adlandır'ı seçin...** veya **Cmd (3) + R** tuş bağlamayı kullanın:
+*Yeniden düzenlemeyi yeniden adlandır* komutu herhangi bir kod tanımlayıcısı üzerinde (örneğin, bir sınıf adı, özellik adı vb.), Bu tanımlayıcının tüm oluşumlarını bulmak ve bunları değiştirmek için kullanılabilir. Bir sembolü yeniden adlandırmak için, üzerine sağ tıklayıp **yeniden adlandır...** seçeneğini belirleyin veya **cmd (⌘) + R** anahtar bağlamasını kullanın:
 
-![Menü öğeyi yeniden adlandır](media/refactoring-renaming1.png)
+![Menü öğesini yeniden adlandır](media/refactoring-renaming1.png)
 
-Bu, sembolü ve ona yapılan tüm başvuruları vurgular. Yeni bir ad yazmaya başladığınızda, kodunuzdaki tüm başvuruları otomatik olarak değiştirir ve **Enter**tuşuna basarak değişikliklerinizi gerçekleştirebilirsiniz:
+Bu, simgeyi ve ona yapılan tüm başvuruları vurgular. Yeni bir ad yazmaya başladığınızda kodunuzdaki tüm başvuruları otomatik olarak değiştirir ve **ENTER**tuşuna basarak yaptığınız değişiklikleri gerçekleştirebilirsiniz:
 
 ![Yeniden adlandırma ve tanımlayıcı](media/refactoring-renaming2.png)
 
-## <a name="quick-actions"></a>Hızlı eylemler
+## <a name="quick-actions-and-refactorings"></a>Hızlı Eylemler ve Yeniden Düzenlemeler
 
-Hızlı Eylemler, kodu tek bir eylemle kolayca yeniden düzenlemenize, oluşturmanıza veya başka bir şekilde değiştirmenize izin sağlar.
+Hızlı Eylemler ve yeniden düzenlemeler kodu tek bir eylemle kolayca yeniden düzenleme, oluşturma veya başka şekilde değiştirme sağlar.
 
-Hızlı Eylemler için kullanılabilir:
+Hızlı eylemler şu Işlemler için kullanılabilir:
 
-* Kod çözümleyici kural ihlali için kod düzeltmesi uygulama
-* Kod çözümleyicikural ihlalini bastırma
-* Yeniden düzenleme uygulayın (örneğin, geçici bir değişken inline)
-* Kod oluşturma (örneğin, yerel bir değişken tanıtın)
+* Kod Çözümleyicisi kural ihlali için kod düzeltmesini uygulayın
+* Kod Çözümleyicisi kural ihlalini gösterme
+* Yeniden düzenleme uygulama (örneğin, satır içi geçici değişken)
+* Kod oluştur (örneğin, yerel bir değişken tanıtma)
 
-Hızlı ![İşlemler ampul ampul simgesi](media/quick-actions-light-bulb-icon.png) veya tornavida ![simgeleri](media/quick-actions-screwdriver-icon.png) kullanılarak veya imleç bir eylem kullanılabilir kod satırında olduğunda Seçenek **(3)**+**Girin** tuşuna basarak uygulanabilir. Bir hata gösteren kırmızı ![bir dalgalı](media/quick-actions-error-light-bulb-icon.png) varsa bir hata ampul ampul simge görürsünüz ve Visual Studio bu hata için kullanılabilir bir düzeltme vardır.
+Hızlı Eylemler, ampullü ampul ![ simgesi ](media/quick-actions-light-bulb-icon.png) veya screwsürücü, ![ screwdriver simgesi ](media/quick-actions-screwdriver-icon.png) simgeleri kullanılarak veya imlecinizin bir eylemin kullanılabildiği bir kod satırında olduğunda ENTER **(⌥)** tuşuna basarak uygulanabilir + **Enter** . ![ ](media/quick-actions-error-light-bulb-icon.png) Bir hata belirten kırmızı renkli bir çizgi varsa ve Visual Studio 'nun bu hata için kullanılabilir bir düzeltilmesi varsa, bir hata ışığı hatası ampul simgesi görürsünüz.
 
-Herhangi bir dil için, üçüncü taraflar özel tanılama ve öneriler sağlayabilir, örneğin bir SDK'nın bir parçası olarak, ve Visual Studio ampuller bu kurallara göre yanar.
+Herhangi bir dilde üçüncü taraflar, bir SDK 'nın parçası olarak özel tanılama ve öneriler sunabilir ve bu kurallara göre Visual Studio Light bulbs hafif.
 
-### <a name="quick-action-icons"></a>Hızlı Eylem Simgeleri
-Hızlı Eylem kullanılabilir olduğunda görünen simge, kullanılabilen düzeltme veya yeniden düzenleme türünü gösterir. *Tornavida* ![simgesi](media/quick-actions-screwdriver-icon.png) simgesi, kodu değiştirmek için kullanılabilir eylemler olduğunu gösterir, ancak bunları mutlaka kullanmamalısınız. *Sarı ampul* ![ampul simgesi,](media/quick-actions-light-bulb-icon.png) kodunuzu geliştirmek için yapmanız *gereken* eylemler olduğunu gösterir. Hata ![ *ampulü* hata ampul](media/quick-actions-error-light-bulb-icon.png) simge simgesi, kodunuzda bir hatayı düzelten bir eylem olduğunu gösterir.
+### <a name="quick-action-icons"></a>Hızlı eylem simgeleri
+Hızlı bir eylem kullanılabilir olduğunda görüntülenen simge, düzeltilmesi veya kullanılabilir yeniden düzenleme türü hakkında bir gösterge sağlar. *Screwdriver* ![ screwdriver simge ](media/quick-actions-screwdriver-icon.png) simgesi, yalnızca kodu değiştirecek eylemlerin olduğunu gösterir, ancak bunları kullanmamanız gerekmez. *Sarı* ampul ![ ışığı ampul simgesi simgesi, ](media/quick-actions-light-bulb-icon.png) kodunuzu geliştirmek için yapmanız *gereken* eylemler olduğunu gösterir. *Hata ampulü* ![ hatası ampul simgesi ](media/quick-actions-error-light-bulb-icon.png) simgesi kodunuzda bir hatayı düzelten bir eylem olduğunu gösterir.
 
-### <a name="to-see-a-light-bulb-or-screwdriver"></a>Ampul veya tornavida görmek için
+### <a name="to-see-a-light-bulb-or-screwdriver"></a>Ampul veya screwsürücüyü görmek için
 
-- Düzeltme varsa, fareyi bir hatanın bulunduğu yerde gezdiğinizde ampuller kendiliğinden görünür.
+- Bir düzeltilmesi varsa, fareyi bir hata konumuna getirdiğinizde açık bulbs sünyler görünür.
 
-   ![Fare havada gezinen ampul](media/refactoring-lightbulb-hover.png)
+   ![Fare üzerine gelindiğinde ampul](media/refactoring-lightbulb-hover.png)
 
-- Ampuller ve tornavidalar, bakıcıyı Hızlı İşlemin kullanılabildiği bir kod satırına taşıdığınızda editörün sol kenar boşluğunda görünür.
+- Giriş işaretini hızlı bir eylem veya yeniden düzenlemenin kullanılabildiği bir kod satırına taşıdığınızda, açık bulbs ve screwdrivers, düzenleyicinin sol kenar boşluğunda görüntülenir.
 
-- **Seçenek (3)**+Tuşuna basın, kullanılabilir Hızlı Eylemlerin ve yeniden düzenlemelistesinin listesini görmek için bir satırın herhangi bir yerine**girin.**
+- **Option (⌥)** + Kullanılabilir hızlı eylemlerin ve yeniden düzenlemeler 'in bir listesini görmek için bir satırda herhangi bir yere basın seçeneğini (⌥)**girin** .
 
-![Bağlam Öğelerini Görüntüle](media/refactoring-context-action.png)
+![Bağlam öğelerini görüntüle](media/refactoring-context-action.png)
 
-İçerik eylemlerinden herhangi birinin üzerinde gezinmek, kodunuzdan eklenecek veya kaldırılacak ların önizlemesini sağlar.
+Bağlam eylemlerinin herhangi birinin üzerine gelindiğinde, kodunuzla nelerin ekleneceğini veya hangilerinin kaldırılabileceği hakkında bir önizleme sunulmaktadır.
 
-![Bağlam öğelerini girin seçeneği](media/refactoring-image2a.png)
+![Seçenek bağlam öğelerini gir](media/refactoring-image2a.png)
 
-Bu seçenekleri etkinleştirmek **için, Mac > Tercihleri için Visual Studio seçeneklerinde** *açık dosyaların kaynak çözümlemesini etkinleştir'i* > Metin Düzenleyici> Kaynak Analizi'ni seçmeniz gerekir:
+Bu seçenekleri etkinleştirmek için, seçeneklerde *Açık dosyaların kaynak analizini etkinleştir* ' i seçmeniz gerekir **Mac için Visual Studio > tercihleri > metin Düzenleyicisi > kaynak analizi**:
 
-![Kaynak çözümlemesini etkinleştirme](media/refactoring-options.png)
+![Kaynak analizini etkinleştirme](media/refactoring-options.png)
 
-Mac > Tercihleri için Visual Studio'ya göz atarak etkinleştirilen veya devre dışı bırakılan 100'den fazla olası eylem vardır **> Kaynak Analizi > C# > Kod Eylemleri'nin** yanındaki kutuyu seçip seçerek veya seçerek:
+Mac için Visual Studio > tercihlerine göz atarak etkin veya devre dışı bırakılmış olabilecek 100 üzerinde **> kaynak analizi > C# > kod eylemleri** ve eylemin yanındaki kutuyu seçip seçimi kaldır:
 
-![C# Kaynak Analizi eylemleri](media/refactoring-image3a.png)
+![C# kaynak çözümleme eylemleri](media/refactoring-image3a.png)
 
-### <a name="common-quick-actions"></a>Sık karşılaşılan hızlı eylemler
+### <a name="common-quick-actions"></a>Ortak hızlı eylemler
 
-[Ortak Hızlı Eylemler](/visualstudio/ide/common-quick-actions) makalesinde sık kullanılan hızlı eylemler hakkında daha fazla bilgi edinebilirsiniz.
+Ortak [hızlı](/visualstudio/ide/common-quick-actions) eylemler makalesinde ortak hızlı eylemler hakkında daha fazla bilgi edinebilirsiniz.
 
 ## <a name="source-analysis"></a>Kaynak analizi
 
-Kaynak çözümlemesi, olası hataların ve stil ihlallerinin altını çizerek ve bağlam eylemleri olarak otomatik düzeltmeler sağlayarak kodunuzu anında analiz eder.
+Kaynak analizi, olası hataların ve stil ihlallerinin altını ve bağlam eylemleri olarak otomatik düzeltmeler sağlayarak kodunuzu anında analiz eder.
 
-Metin düzenleyicisinin sağ tarafındaki kaydırma çubuğunu görüntüleyerek istediğiniz zaman herhangi bir dosya için kaynak çözümlemenin tüm sonuçlarını görüntüleyebilirsiniz:
+Herhangi bir dosya için kaynak analizinin tüm sonuçlarını, istediğiniz zaman, metin düzenleyicisinin sağ tarafındaki kaydırma çubuğunu görüntüleyerek görüntüleyebilirsiniz:
 
-![Kaynak Analizi kenar çubuğu](media/refactoring-image4a.png)
+![Kaynak çözümleme kenar çubuğu](media/refactoring-image4a.png)
 
-Üstteki daireyi tıklatırsanız, her öneride, en yüksek önem sorunları ilk olarak göstererek yineleyebilirsiniz. Tek bir sonuç veya satır üzerinde gezinme, bağlam eylemleri ile düzeltilebilir sorunu görüntüler:
+Üstteki daireye tıkladığınızda, en yüksek önem derecesine sahip olan ilk öneri arasında yineleme yapabilirsiniz. Tek bir sonucun veya satırın üzerine gelindiğinde sorun görüntülenir ve bu, bağlam eylemleri aracılığıyla düzeltilenebilir:
 
-![Kaynak Analiz Öğesi](media/refactoring-image5.png)
+![Kaynak analiz öğesi](media/refactoring-image5.png)
 
-## <a name="related-video"></a>İlgili Video
+## <a name="related-video"></a>İlgili video
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Refactoring-Code/player]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hızlı Eylemler (Windows'ta Visual Studio)](/visualstudio/ide/quick-actions)
-- [Refactor kodu (Windows'ta Visual Studio)](/visualstudio/ide/refactoring-in-visual-studio)
+- [Hızlı eylemler (Windows üzerinde Visual Studio)](/visualstudio/ide/quick-actions)
+- [Kodu yeniden düzenleme (Windows üzerinde Visual Studio)](/visualstudio/ide/refactoring-in-visual-studio)

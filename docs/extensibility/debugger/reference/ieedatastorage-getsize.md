@@ -1,5 +1,5 @@
 ---
-title: IEEDataStorage::GetSize | Microsoft Dokümanlar
+title: 'IEEDataStorage:: GetSize | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: e7d9000889d082826f46bdceb0476dd5d06c24d2
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718201"
 ---
 # <a name="ieedatastoragegetsize"></a>IEEDataStorage::GetSize
 Bu nesnede bulunan bayt sayısını döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetSize(
@@ -41,13 +41,13 @@ int GetSize(
 
 ## <a name="parameters"></a>Parametreler
 `size`\
-[çıkış] Bu nesnede bulunan bayt sayısı.
+dışı Bu nesnede bulunan baytların sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Gerçek veri baytlarını almak için [GetData](../../../extensibility/debugger/reference/ieedatastorage-getdata.md) yöntemini kullanın.
+ Asıl veri baytlarını almak için [GetData](../../../extensibility/debugger/reference/ieedatastorage-getdata.md) yöntemini kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)

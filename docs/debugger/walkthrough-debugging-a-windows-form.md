@@ -24,13 +24,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 701d156d5fdc23a5e98ac1de43c1882f3065171e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72728329"
 ---
-# <a name="walkthrough-debugging-a-windows-form"></a>İzlenecek Yol: Windows Formunda Hata Ayıklama
+# <a name="walkthrough-debugging-a-windows-form"></a>İzlenecek yol: Windows Formunda hata ayıklama
 Bir Windows formülü en yaygın yönetilen uygulamalardan biridir. Bir Windows formu, standart bir Windows uygulaması oluşturur. Bu adım adım işlemleri Visual Basic, C# ya da C++ kullanarak tamamlayabilirsiniz.
 
  İlk olarak, herhangi bir açık çözümü kapatmanız gerekir.
@@ -46,17 +46,17 @@ Bir Windows formülü en yaygın yönetilen uygulamalardan biridir. Bir Windows 
 
 1. **Dosya** menüsünde, **Yeni** ' yi seçin ve **Proje**' ye tıklayın.
 
-     **Yeni proje** iletişim kutusu görüntülenir.
+     **Yeni Proje** iletişim kutusu görünür.
 
-2. Proje türleri bölmesinde **Visual Basic**, **görsel C#** veya **görsel C++**  düğümünü açın ve ardından
+2. Proje türleri bölmesinde **Visual Basic**, **Visual C#** veya **Visual C++** düğümünü açın, sonra
 
-    1. Visual Basic veya Visual C#Için windows **Masaüstü**  > **Windows form uygulaması**' nı seçin.
+    1. Visual Basic veya Visual C# için **Windows Masaüstü**  >  **Windows form uygulaması**' nı seçin.
 
-    2. Görsel C++Için **Windows masaüstü uygulaması**' nı seçin.
+    2. Visual C++ için **Windows masaüstü uygulaması**' nı seçin.
 
 3. **Ad** kutusunda projeye benzersiz bir ad verin (örneğin, Walkthrough_SimpleDebug).
 
-4. **Tamam**'a tıklayın.
+4. **Tamam**’a tıklayın.
 
      Visual Studio, yeni bir proje oluşturur ve Windows Forms Tasarımcısı'nda yeni bir form görüntüler. Daha fazla bilgi için bkz. [Windows Form Tasarımcısı](/previous-versions/visualstudio/visual-studio-2010/e06hs424\(v\=vs.100\)).
 
@@ -124,7 +124,7 @@ Bir Windows formülü en yaygın yönetilen uygulamalardan biridir. Bir Windows 
 
 4. **Hata Ayıkla** menüsünde **Windows**' u ve ardından **Izle**' yi ve ardından **Watch1**' ı tıklatın.
 
-5. **Watch1** penceresinde boş bir satıra tıklayın. **Ad** sütununda `textBox1.Text` (Visual Basic veya görsel C#kullanıyorsanız) veya `textBox1->Text` (kullanıyorsanız C++) yazın ve ardından ENTER tuşuna basın.
+5. **Watch1** penceresinde boş bir satıra tıklayın. **Ad** sütununda, `textBox1.Text` (Visual Basic veya Visual C# kullanıyorsanız) veya `textBox1->Text` (C++ kullanıyorsanız) yazın, ardından ENTER tuşuna basın.
 
      **Watch1** penceresi, bu değişkenin değerini tırnak işaretleri halinde şöyle gösterir:
 
@@ -175,7 +175,7 @@ Bir Windows formülü en yaygın yönetilen uygulamalardan biridir. Bir Windows 
 
      **Işleme İliştir** iletişim kutusu görüntülenir.
 
-4. **Kullanılabilir işlemler** bölmesinde **işlem sütununda Işlem** adını (Walkthrough_SimpleDebug. exe) bulun ve tıklatın.
+4. **Kullanılabilir işlemler** bölmesinde **işlem sütununda işlem** adını (Walkthrough_SimpleDebug.exe) bulun ve tıklatın.
 
 5. **Ekle** düğmesine tıklayın.
 
@@ -185,4 +185,4 @@ Bir Windows formülü en yaygın yönetilen uygulamalardan biridir. Bir Windows 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yönetilen Kodda Hata Ayıklama](../debugger/debugging-managed-code.md)
-- [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
+- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)

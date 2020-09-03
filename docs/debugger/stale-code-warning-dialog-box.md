@@ -21,15 +21,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dba38e5b5d9f7a2be710cad58d6f2297dd03a412
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72729540"
 ---
 # <a name="stale-code-warning-dialog-box"></a>Eski Kod Uyarısı İletişim Kutusu
 
-Bu iletişim kutusu, yerel kodda **düzenleme ve devam etme işleminin** hemen uygulanmadığından değişiklikler yaptığınızda görüntülenir. Sonuç olarak, geçerli yığın çerçevesindeki bazı yerel kodlar artık güncel değil, yani eski. Daha fazla bilgi için bkz. [Düzenle ve devamC++et ()](edit-and-continue-visual-cpp.md).
+Bu iletişim kutusu, yerel kodda **düzenleme ve devam etme işleminin** hemen uygulanmadığından değişiklikler yaptığınızda görüntülenir. Sonuç olarak, geçerli yığın çerçevesindeki bazı yerel kodlar artık güncel değil, yani eski. Daha fazla bilgi için bkz. [Düzenle ve devam et (C++)](edit-and-continue-visual-cpp.md).
 
 **Bu iletişim kutusunu bir daha gösterme**
 
@@ -37,5 +37,5 @@ Bu onay kutusunu seçerseniz, Düzenle ve devam et daha sonra izin istemeden kod
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Desteklenen Kod Değişiklikleri (C++)](supported-code-changes-cpp.md)
+- [Desteklenen kod değişiklikleri (C++)](supported-code-changes-cpp.md)
 - [Düzenle ve devam et, hata ayıklama, Seçenekler Iletişim kutusu](edit-and-continue.md)

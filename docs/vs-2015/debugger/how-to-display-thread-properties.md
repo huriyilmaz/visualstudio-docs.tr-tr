@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İş parçacığı özelliklerini görüntüleme | Microsoft Docs'
+title: 'Nasıl yapılır: Iş parçacığı özelliklerini görüntüleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,21 +12,21 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4a9d311563134850a7b2efd04eb6d6ed00dfcc25
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205360"
 ---
 # <a name="how-to-display-thread-properties"></a>Nasıl yapılır: İş Parçacığı Özelliklerini Görüntüleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Listelenen bir iş parçacığı hakkında daha fazla bilgi için [iş parçacıkları görünümü](../debugger/threads-view.md), kullanın [iş parçacığı Özellikleri iletişim kutusu](../debugger/thread-properties-dialog-box.md).  
+İş [parçacıkları görünümünde](../debugger/threads-view.md)listelenen bir iş parçacığı hakkında daha fazla bilgi edinmek Için [Iş parçacığı özellikleri iletişim kutusunu](../debugger/thread-properties-dialog-box.md)kullanın.  
   
-### <a name="to-open-a-thread-properties-dialog-box"></a>Bir iş parçacığı Özellikleri iletişim kutusunu açmak için  
+### <a name="to-open-a-thread-properties-dialog-box"></a>Iş parçacığı özellikleri iletişim kutusunu açmak için  
   
-1. Görüntülenen ağacından bir iş parçacığı seçin [iş parçacıkları görünümü](../debugger/threads-view.md).  
+1. [Iş parçacıkları görünümünde](../debugger/threads-view.md)görüntülenmiş olan ağaçtan bir iş parçacığı seçin.  
   
-2. Gelen **görünümü** menüsünde seçin **özellikleri**.  
+2. **Görünüm** menüsünde **Özellikler**' i seçin.  
   
-   Özellikler iletişim kutularında, bir Görünüm penceresi başka bir öğeye tıklayın ve iletişim kutusunda seçili öğeye bilgileri gösterir kalıcı, değildir.
+   Özellikler iletişim kutuları kalıcı değildir, bu nedenle bir görünüm penceresinde başka bir öğeye tıklayabilir ve iletişim kutusu seçili öğe hakkındaki bilgileri gösterir.

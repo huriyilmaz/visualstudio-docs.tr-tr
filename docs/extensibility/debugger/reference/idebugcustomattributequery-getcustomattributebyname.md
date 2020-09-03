@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttributeQuery::GetCustomAttributeByName | Microsoft Dokümanlar
+title: 'Idebugcustomattributequery:: GetCustomAttributeByName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +15,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: e1c87fd105d2dbdc18bd4689c4680f2825c9e3be
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732646"
 ---
 # <a name="idebugcustomattributequerygetcustomattributebyname"></a>IDebugCustomAttributeQuery::GetCustomAttributeByName
-Adını verilen özel bir özniteliği alır.
+Adı verilen özel bir özniteliği alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetCustomAttributeByName(
@@ -44,19 +44,19 @@ int GetCustomAttributeByName(
 
 ## <a name="parameters"></a>Parametreler
 `pszCustomAttributeName`\
-[içinde] Özel öznitelik adı.
+'ndaki Özel özniteliğin adı.
 
 `ppBlob`\
-[içinde,dışarı] Özel öznitelik verilerini içeren bayt dizisi.
+[in, out] Özel öznitelik verilerini içeren bayt dizisi.
 
 `pdwLen`\
-[çıkış] `ppBlob` Parametrenin baytlarındaki uzunluk.
+dışı Parametrenin bayt cinsinden uzunluğu `ppBlob` .
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döndürür. Özel öznitelik yoksa, döndürür. `S_FALSE` Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` . Özel öznitelik yoksa, döndürür `S_FALSE` . Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md) arabirimini ortaya çıkaran bir **CDebugClassFieldSymbol** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, [ıdebugcustomattributequery](../../../extensibility/debugger/reference/idebugcustomattributequery.md) arabirimini kullanıma sunan bir **Cdebugclassfieldsymbol** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugClassFieldSymbol::GetCustomAttributeByName(

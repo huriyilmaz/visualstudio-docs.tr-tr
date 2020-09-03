@@ -1,5 +1,5 @@
 ---
-title: PreviewImage Element (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: Previewiımage öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,18 +13,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: f20cfe5f3ef35b23a52972ef1e3b7d9d4adc5a39
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80702013"
 ---
-# <a name="previewimage-element-visual-studio-templates"></a>PreviewImage öğesi (Visual Studio şablonları)
-**Yeni Proje** veya **Yeni Öğe Ekle** iletişim kutusunda görünecek önizleme görüntüsü için önizleme görüntüsünü dosya adı olarak belirtir.
+# <a name="previewimage-element-visual-studio-templates"></a>Previewiımage öğesi (Visual Studio şablonları)
+Önizleme görüntüsünün **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda görünecek olan önizleme resmini bir dosya adı olarak belirtir.
 
- \<VSTemplate \<> ŞablonVeri> \<PreviewImage>
+ \<VSTemplate> \<TemplateData>
+ \<PreviewImage>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <PreviewImage>"filename"</PreviewImage>
@@ -43,16 +44,16 @@ ms.locfileid: "80702013"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırın ve **Yeni Proje** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleneceğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** ya da **Yeni öğe Ekle** iletişim kutusunda nasıl görüntüleneceğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Metin, dosya adını temsil eden bir dize olmalıdır.
+ Metin bir dosya adını temsil eden bir dize olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
- `PreviewImage`isteğe bağlı bir unsurdur.
+ `PreviewImage` isteğe bağlı bir öğedir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
-- [Proje ve madde şablonları oluşturma](../ide/creating-project-and-item-templates.md)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

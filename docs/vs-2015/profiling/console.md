@@ -10,34 +10,34 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e947fb28c92323f0d4d66c697c272699fc63450e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161319"
 ---
 # <a name="console"></a>Konsol
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-VSPerfCmd.exe **konsol** seçenek, yeni bir komut istemi penceresinde belirtilen uygulamayı başlatır. **Konsol** VSPerfCmd ile yalnızca kullanılabilir **başlatma** seçeneği. Uygulamayı bir komut satırı uygulaması değilse **konsol** hiçbir etkisi olmaz.  
+VSPerfCmd.exe **konsolu** seçeneği, yeni bir komut istemi penceresinde belirtilen uygulamayı başlatır. **Konsol** yalnızca VSPerfCmd **başlatma** seçeneğiyle birlikte kullanılabilir. Uygulama bir komut satırı uygulaması değilse, **konsolunun** hiçbir etkisi olmaz.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```  
 VSPerfCmd.exe /Launch:AppName /Console  
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- Yok.  
+ Hiçbiri  
   
-## <a name="required-options"></a>Gerekli seçenekleri  
- **Konsol** yalnızca de içeren bir komut satırında belirtilebilir **başlatma** seçeneği.  
+## <a name="required-options"></a>Gerekli seçenekler  
+ **Konsol** , yalnızca **başlatma** seçeneğini de içeren bir komut satırında belirtilebilir.  
   
- **Başlat:** `AppName`  
- Profil Oluşturucu ve tarafından belirtilen uygulamayı başlatır `AppName`.  
+ **Başlatma:**`AppName`  
+ Profil oluşturucuyu ve tarafından belirtilen uygulamayı başlatır `AppName` .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
- [Bağımsız uygulamaların profilini oluşturma](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [ASP.NET Web uygulamalarında profil oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Tek başına uygulamaların profilini oluşturma](../profiling/command-line-profiling-of-stand-alone-applications.md)   
+ [ASP.NET Web uygulamalarının profilini oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
  [Profil Oluşturma Hizmetleri](../profiling/command-line-profiling-of-services.md)

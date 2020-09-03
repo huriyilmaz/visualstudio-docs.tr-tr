@@ -24,16 +24,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 029aafa634ba0e6837cdc7d4304d0419420dd912
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72728657"
 ---
 # <a name="using-run-time-checks-without-the-c-run-time-library"></a>C Çalışma Zamanı Kitaplığını Kullanmadan Çalışma Zamanı Denetimlerini Kullanma
 Programınızı, **/nodefaultlib**kullanarak C çalışma zamanı kitaplığı olmadan bağlantılandırdıysanız ve çalışma zamanı denetimlerini kullanmak Istiyorsanız RunTmChk. lib ile bağlantı oluşturmanız gerekir.
 
-`_RTC_Initialize` programınızı çalışma zamanı denetimleri için başlatır. C çalışma zamanı kitaplığıyla bağlantı yapmazsanız, aşağıdaki gibi `_RTC_Initialize`çağrılmadan önce programınızın çalışma zamanı hata denetimleriyle derlenip derlenmediğini denetlemeniz gerekir:
+`_RTC_Initialize` programınızı çalışma zamanı denetimleri için başlatır. C çalışma zamanı kitaplığıyla bağlantı yapmazsanız, aşağıdaki gibi, çağrılmadan önce programınızın çalışma zamanı hata denetimleri ile derlenip derlenmediğini denetlemeniz gerekir `_RTC_Initialize` :
 
 ```cpp
 #ifdef __MSVC_RUNTIME_CHECKS
@@ -41,7 +41,7 @@ Programınızı, **/nodefaultlib**kullanarak C çalışma zamanı kitaplığı o
 #endif
 ```
 
-C çalışma zamanı kitaplığıyla bağlantı yapmazsanız, `_CRT_RTC_INITW`adlı bir işlev da tanımlamanız gerekir. `_CRT_RTC_INITW`, Kullanıcı tanımlı işlevinizi varsayılan hata raporlama işlevi olarak aşağıdaki gibi yüklenir:
+C çalışma zamanı kitaplığıyla bağlantı yapmazsanız, adlı bir işlev da tanımlamanız gerekir `_CRT_RTC_INITW` . `_CRT_RTC_INITW` Kullanıcı tanımlı işlevinizi varsayılan hata raporlama işlevi olarak aşağıdaki gibi kurar:
 
 ```cpp
 // C version:
@@ -61,7 +61,7 @@ extern "C" _RTC_error_fnW __cdecl _CRT_RTC_INITW(
 }
 ```
 
-Varsayılan hata raporlama işlevini yükledikten sonra, `_RTC_SetErrorFuncW`ek hata raporlama işlevlerini yükleyebilirsiniz. Daha fazla bilgi için bkz. [_RTC_SetErrorFuncW](/cpp/c-runtime-library/reference/rtc-seterrorfuncw).
+Varsayılan hata raporlama işlevini yükledikten sonra, ile ek hata raporlama işlevlerini yükleyebilirsiniz `_RTC_SetErrorFuncW` . Daha fazla bilgi için bkz. [_RTC_SetErrorFuncW](/cpp/c-runtime-library/reference/rtc-seterrorfuncw).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-[Nasıl Yapılır: Yerel Çalışma Zamanı Denetimlerini Kullanma](../debugger/how-to-use-native-run-time-checks.md)
+[Nasıl yapılır: yerel çalışma zamanı denetimlerini kullanma](../debugger/how-to-use-native-run-time-checks.md)

@@ -1,5 +1,5 @@
 ---
-title: Sınıf sekmesi, pencere Özellikleri iletişim kutusu | Microsoft Docs
+title: Sınıf sekmesi, pencere özellikleri Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,29 +12,29 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9a7f81a100b2c2311444732434df0f5c5599742a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161608"
 ---
 # <a name="class-tab-window-properties-dialog-box"></a>Sınıf Sekmesi, Pencere Özellikleri İletişim Kutusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kullanım **sınıfı** seçilen pencere sınıf üzerinde bilgi göstermek için sekmesinde. Görüntülenecek [pencere Özellikleri iletişim kutusu](../debugger/window-properties-dialog-box.md), odağı Taşı [Windows görünümü](../debugger/windows-view.md) penceresi. Herhangi bir pencere düğüm ağaçta seçin ve ardından **özellikleri** gelen **görünümü** menüsü.  
+Seçili pencerenin sınıfındaki bilgileri göstermek için **sınıf** sekmesini kullanın. [Pencere özellikleri Iletişim kutusunu](../debugger/window-properties-dialog-box.md)görüntülemek Için odağı [Windows görünümü](../debugger/windows-view.md) penceresine taşıyın. Ağaçta herhangi bir pencere düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.  
   
- Aşağıdaki ayarlar kullanılabilir **sınıfı** sekmesinde:  
+ Aşağıdaki ayarlar **sınıf** sekmesinde mevcuttur:  
   
 |Giriş|Açıklama|  
 |-----------|-----------------|  
-|**Sınıf adı**|Bu pencere sınıfı adı (veya sıra numarası).|  
-|**Sınıf stilleri**|Sınıf stili kodlarını birleşimi.|  
-|**Sınıf baytları**|Bu pencere sınıfı ile ilgili uygulamaya özgü veriler.|  
-|**Sınıf atomu**|Tarafından döndürülen sınıf için atom **RegisterClass** çağırın.|  
-|**Örnek tanıtıcısını**|Sınıf kayıtlı modül örnek tanıtıcısını. Örnek işler özgü değildir.|  
-|**Pencere baytları**|Bu sınıfın her bir pencere ile ilgili ek bayt sayısı. Bu bayt anlamını uygulama tarafından belirlenir. Liste kutusu DWORD biçimde bayt değerleri görmek için genişletin.|  
-|**Pencere işleme**|Geçerli adresi **WndProc** bu sınıfın windows için işlevi. Bu farklıdır **pencere işleme** üzerinde **genel** pencerenin alt sınıflanan, sekme.|  
-|**Menü adı**|Bu sınıf ("none" menü yok ise), windows ile ilişkili ana menü adı.|  
-|**Simge tanıtıcı**|Windows, bu sınıfın ("none" herhangi bir simge varsa) ile ilişkili simge tanıtıcı.|  
-|**İmleç tanıtıcı**|Windows, bu sınıfın ("none" Hiçbir imleç varsa) ile ilişkili imleci için tanıtıcı.|  
-|**Arka plan Fırçası**|Windows Bu sınıf ya da bir pencere arkaplanı ("none" fırça yok ise) boyama için önceden tanımlanmış COLOR_ * renge ilişkilendirildiği arkaplan Fırçası için tanıtıcı.|
+|**Sınıf adı**|Bu pencere sınıfının adı (veya sıra numarası).|  
+|**Sınıf stilleri**|Sınıf stili kodlarının birleşimi.|  
+|**Sınıf baytları**|Bu pencere sınıfıyla ilişkili uygulamaya özel veriler.|  
+|**Sınıf atom 'u**|**RegisterClass** çağrısı tarafından döndürülen sınıf için atom.|  
+|**Örnek tanıtıcısı**|Sınıfı kaydettiğiniz modülün örnek tanıtıcısı. Örnek tutamaçları benzersiz değil.|  
+|**Pencere baytları**|Bu sınıfın her bir penceresiyle ilişkili ek baytların sayısı. Bu baytların anlamı uygulama tarafından belirlenir. Bayt değerlerini DWORD biçiminde görmek için liste kutusunu genişletin.|  
+|**Pencere proc**|Bu sınıfın Windows için **WndProc** işlevinin geçerli adresi. Bu, pencere alt sınıflandır, **genel** sekmesindeki **pencere proc** ' dan farklıdır.|  
+|**Menü adı**|Bu sınıfın Windows ile ilişkili ana menünün adı (menü yoksa "none").|  
+|**Simge tutamacı**|Bu sınıfın (simge yoksa "none") Windows ile ilişkili simgenin tutamacı.|  
+|**İmleç tutamacı**|Bu sınıfın (imleç yoksa "none") Windows ile ilişkili imleç için tanıtıcı.|  
+|**Arka plan Fırçası**|Bu sınıfın Windows ile ilişkili arka plan fırçasının tanıtıcısı veya pencere arka planını boyamak için önceden tanımlanmış COLOR_ * renklerinden biri (fırça yoksa "yok").|

@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::GetICorDebugValue | Microsoft Docs
+title: 'IDebugObject2:: GetICorDebugValue | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6fdf426058390aef2a0c8abf2590123572bbc3b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194601"
 ---
 # <a name="idebugobject2geticordebugvalue"></a>IDebugObject2::GetICorDebugValue
@@ -24,7 +24,7 @@ ms.locfileid: "68194601"
 
 Bu nesneyle ilişkili değeri temsil eden bir yönetilen kod nesnesi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetICorDebugValue(  
@@ -40,13 +40,13 @@ int GetICorDebugValue(
   
 #### <a name="parameters"></a>Parametreler  
  `ppUnk`  
- [out] `IUnknown` bu diğer adı temsil eden arabirim. Bu arabirim için sorgulanabilir `ICorDebugValue` arabirimi.  
+ [out] `IUnknown` Bu diğer adı temsil eden arabirim. Bu arabirim arabirim için sorgulanabilir `ICorDebugValue` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorDebugValue` Bir değeri temsil eden bir ortak dil çalışma zamanı arabirimi nesnedir.  
+ `ICorDebugValue`Nesnesi, bir değeri temsil eden ortak bir dil çalışma zamanı arabirimidir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)
