@@ -1,5 +1,5 @@
 ---
-title: ParallelCustomBuild Görevi | Microsoft Dokümanlar
+title: ParallelCustomBuild görevi | Microsoft Docs
 ms.date: 03/10/2019
 ms.topic: reference
 f1_keywords:
@@ -18,10 +18,10 @@ ms.author: corob
 ms.workload:
 - multiple
 ms.openlocfilehash: 0d8a171d393f629d0b6ab3a7fc61ad37862b0da1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77279256"
 ---
 # <a name="parallelcustombuild-task"></a>ParallelCustomBuild görevi
@@ -30,14 +30,14 @@ ms.locfileid: "77279256"
 
 ## <a name="parameters"></a>Parametreler
 
-Aşağıdaki tabloda **ParallelCustomBuild** görevinin parametreleri açıklanmaktadır.
+Aşağıdaki tabloda **Parallelcustombuild** görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|**BreakOnFirstFailure**|İsteğe bağlı **bool** parametresi.|
-|**MaxItemsinBatch**|İsteğe bağlı **int** parametresi.|
-|**Maxprocesses**|İsteğe bağlı **int** parametresi.|
-|**Kaynak**|Gerekli **ITaskItem[]** parametresi.|
+|**Breakkonfirstfailure**|İsteğe bağlı **bool** parametresi.|
+|**Maxıtemınbatch**|İsteğe bağlı **int** parametresi.|
+|**MaxProcesses**|İsteğe bağlı **int** parametresi.|
+|**Kaynaklar**|Gerekli **ıtaskitem []** parametresi.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

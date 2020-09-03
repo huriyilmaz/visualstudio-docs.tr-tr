@@ -1,5 +1,5 @@
 ---
-title: Dağıtım Yönetimi için Proje Yapılandırması | Microsoft Dokümanlar
+title: Dağıtımı yönetmeye yönelik proje yapılandırması | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,30 +12,30 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 62f7bf6535a89e46799ade88fe8976974b3019c5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80706707"
 ---
 # <a name="project-configuration-for-managing-deployment"></a>Dağıtımı Yönetmek için Proje Yapılandırması
-Dağıtım, çıktı maddelerini bir yapı işleminden hata ayıklama ve yükleme için beklenen konuma fiziksel olarak taşıma eylemidir. Örneğin, bir Web uygulaması yerel bir makinede oluşturulabilir ve sunucuya yerleştirilebilir.
+Dağıtım, çıkış öğelerini bir yapı işleminden fiziksel olarak hata ayıklama ve yükleme için beklenen konuma taşıma işlemidir. Örneğin, bir Web uygulaması yerel bir makinede oluşturulmuş ve sonra sunucuya yerleştirilebilir.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]projelerin dağıtımda yer alabildiği iki yolu destekler:
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , projelerin dağıtıma dahil edilebilir iki yolunu destekler:
 
-- Dağıtım sürecinin konusu olarak.
+- Dağıtım sürecinin konusu.
 
-- Dağıtım işleminin yöneticisi olarak.
+- Dağıtım işleminin Yöneticisi olarak.
 
-  Çözümler dağıtılmadan önce, dağıtım seçeneklerini yapılandırmak için önce bir dağıtım projesi eklemeniz gerekir. Dağıtma projesi zaten yoksa, **Yapı** menüsünden **Çözüm Dağı'nı** seçtiğinizde veya çözüme sağ tıklattığınızda bir tane oluşturmak isteyip istemediğiniz sorulur. **Evet'i** tıklattığınızda, **Seçili Uzaktan Dağıtma Sihirbazı** projesiyle **Yeni Proje Ekle** iletişim kutusunu açar.
+  Çözümlerin dağıtılması için önce dağıtım seçeneklerini yapılandırmak üzere bir dağıtım projesi eklemeniz gerekir. Dağıtım projesi zaten yoksa, **derleme** menüsünden **Çözümü dağıt** ' ı seçtiğinizde bir tane oluşturmak isteyip istemediğiniz sorulur veya çözüme sağ tıklayın. **Evet** ' i tıklatmak, **uzak dağıtım Sihirbazı** projesi seçiliyken **Yeni Proje Ekle** iletişim kutusunu açar.
 
-  Uzaktan Dağıtma Sihirbazı sizden uygulama türünü (Windows veya Web), proje çıktı gruplarını, eklemek istediğiniz ek dosyaları ve dağıtmak istediğiniz uzak bilgisayarı ister. Sihirbazın son sayfası seçili seçeneklerin bir özetini görüntüler.
+  Uzak dağıtım Sihirbazı, uygulama türünü (Windows veya Web), dahil edilecek proje çıkış gruplarını, dahil etmek istediğiniz ek dosyaları ve dağıtmak istediğiniz uzak bilgisayarı belirtmenizi ister. Sihirbazın son sayfasında, seçilen seçeneklerin bir özeti görüntülenir.
 
-  Dağıtım işleminin konusu olan projeler, alternatif bir ortama taşınması gereken çıktı öğeleri üretir. Bu çıktı öğeleri, projelerin <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> çıktıları gruplandırmasına izin vermek birincil amacı olan arabirim için parametreler olarak tanımlanır. Uygulama ile ilgili daha `IVsProjectCfg2`fazla bilgi [için, Çıktı için Proje](../../extensibility/internals/project-configuration-for-output.md)Yapılandırması'na bakın.
+  Bir dağıtım işleminin konusu olan projeler, alternatif bir ortama taşınması gereken çıkış öğeleri oluşturur. Bu çıktı öğeleri <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> , birincil amacı, projelerin çıkışları gruplandırılarına izin versin olan arabirim için parametreler olarak tanımlanır. Uygulamasıyla ilgili daha fazla bilgi için `IVsProjectCfg2` bkz. [çıktı Için proje yapılandırması](../../extensibility/internals/project-configuration-for-output.md).
 
-  Dağıtım işlemini yöneten dağıtım projeleri, Dağıtım komutunu etkinleştirin ve bu komut seçildiğinde yanıt verir. Dağıtım projeleri, <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> dağıtımı gerçekleştirmek için arabirimi <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback> uygular ve durum durum olaylarını bildirmek için arabirime çağrı yapar.
+  Dağıtım işlemini yöneten dağıtım projeleri, Dağıt komutunu etkinleştirir ve bu komut seçildiğinde yanıt verir. Dağıtım projeleri <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> dağıtımı gerçekleştirmek için arabirimini uygular ve dağıtım <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback> durumu olaylarını raporlamak için arabirime çağrı yapar.
 
-  Yapılandırmalar, yapı veya dağıtım işlemlerini etkileyen bağımlılıkları belirtebilir. Yapı veya dağıtma bağımlılıkları, yapılandırmalar oluşturulmadan veya dağıtıldıktan önce veya sonra oluşturulması veya dağıtılması gereken projelerdir. Projeler arasındaki bağımlılıkları oluşturma <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency> arabirimi ile açıklanır <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency> ve arabirim ile bağımlılıkları dağıtılır. Daha fazla bilgi [için, Bina için Proje Yapılandırması'na](../../extensibility/internals/project-configuration-for-building.md)bakın.
+  Konfigürasyonlar, derleme veya dağıtım işlemlerini etkileyen bağımlılıklar belirtebilir. Yapı veya dağıtım bağımlılıkları, yapılandırmaların kendilerini oluşturup dağıtmadan önce veya sonra oluşturulması ya da dağıtılması gereken projelerdir. Projeler arasında yapı bağımlılıkları, <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency> arabirimiyle tanımlanır ve arabirim ile bağımlılıkları dağıtır <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency> . Daha fazla bilgi için bkz. [derleme Için proje yapılandırması](../../extensibility/internals/project-configuration-for-building.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılandırma Seçeneklerini Yönetme](../../extensibility/internals/managing-configuration-options.md)

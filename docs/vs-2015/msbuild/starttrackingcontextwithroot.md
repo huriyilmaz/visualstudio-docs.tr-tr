@@ -18,38 +18,38 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 68e80da01a0ab1ad59bbb5bdb06c92c1a11a8ac1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68182315"
 ---
 # <a name="starttrackingcontextwithroot"></a>StartTrackingContextWithRoot
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir kök işaret belirten bir yanıt dosyası kullanarak bir izleme bağlamına başlatır.  
+Bir kök işaretleyici belirten yanıt dosyası kullanarak izleme bağlamını başlatır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```  
 HRESULT WINAPI StartTrackingContextWithRoot(LPCTSTR intermediateDirectory, LPCTSTR taskName, LPCTSTR rootMarkerResponseFile);  
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- [in] `intermediateDirectory`  
- İzleme günlüğü depolanacağı dizin.  
+ 'ndaki `intermediateDirectory`  
+ İzleme günlüğünün depolayabileceği dizin.  
   
- [in] `taskName`  
- İzleme bağlamı tanımlar. Bu ad, günlük dosyası adı oluşturmak için kullanılır.  
+ 'ndaki `taskName`  
+ İzleme bağlamını tanımlar. Bu ad, günlük dosyası adını oluşturmak için kullanılır.  
   
- [in] `rootMarkerResponseFile`  
- Bir kök işaret içeren bir yanıt dosyasının yol adı. Kök adı, tüm izleme için bir bağlam birlikte gruplandırmak için kullanılır.  
+ 'ndaki `rootMarkerResponseFile`  
+ Kök işaretleyici içeren bir yanıt dosyasının yol adı. Kök adı bir bağlam için tüm izlemeyi gruplamak üzere kullanılır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bir [HRESULT])<!-- TODO: review code entity reference <xref:assetId:///HRESULT?qualifyHint=False&amp;autoUpgrade=True>  -->) [başarılı] () ile<!-- TODO: review code entity reference <xref:assetId:///SUCCEEDED?qualifyHint=False&amp;autoUpgrade=True>  -->) izleme bağlamına oluşturulduysa biti ayarlanmamış.  
+ A [HRESULT] (<!-- TODO: review code entity reference <xref:assetId:///HRESULT?qualifyHint=False&amp;autoUpgrade=True>  -->) ile [başarılı] (<!-- TODO: review code entity reference <xref:assetId:///SUCCEEDED?qualifyHint=False&amp;autoUpgrade=True>  -->) izleme bağlamı oluşturulduysa bit ayarlanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** FileTracker.h  
+ **Üst bilgi:** FileTracker. h  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [StartTrackingContext](../msbuild/starttrackingcontext.md)

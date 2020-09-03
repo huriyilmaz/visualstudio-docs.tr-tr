@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 47f403f4eec6ec66563ae88bec226e073f625716
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72981106"
 ---
 # <a name="create-application-pages-for-sharepoint"></a>SharePoint için uygulama sayfaları oluşturma
@@ -41,16 +41,16 @@ ms.locfileid: "72981106"
 ## <a name="create-an-application-page"></a>Uygulama sayfası oluşturma
  Bir uygulama sayfası oluşturmak için bir SharePoint projesine bir **Uygulama sayfa** öğesi ekleyin. Bir uygulama sayfası oluşturduğunuzda, Visual Studio projenize aşağıdaki klasörleri ekler:
 
-|Klasör|Açıklama|
+|Klasör|Description|
 |------------|-----------------|
 |Düzenler|SharePoint dosya sisteminin _layouts sanal diziniyle eşlenir.|
 |Düzenler alt klasörü|Uygulama sayfasını oluşturan dosyaları içerir. Varsayılan olarak, bu klasör projenizle aynı ada sahiptir. Bu klasörü dilediğiniz zaman yeniden adlandırabilirsiniz. Projeyi çalıştırdığınızda, Visual Studio bu klasörü SharePoint dosya sisteminin _layouts sanal dizinine dağıtır.|
 
  Visual Studio projenize aşağıdaki dosyaları ekler:
 
-|Dosya|Açıklama|
+|Dosya|Description|
 |----------|-----------------|
-|ASP.NET sayfa dosyası ( *. aspx*)|Sayfayı tanımlayan XML işaretlemesini içerir.|
+|ASP.NET sayfa dosyası (*. aspx*)|Sayfayı tanımlayan XML işaretlemesini içerir.|
 |Uygulama sayfası kod dosyası|Uygulama sayfasının arkasındaki kodu içerir. Bu dosyaya olayları işleyen kodu ekleyin.|
 |Uygulama sayfa Tasarımcısı kod dosyası|Tasarımcı tarafından oluşturulan kodu içerir. Bu dosyayı doğrudan düzenlemeyin.|
 
@@ -62,14 +62,14 @@ ms.locfileid: "72981106"
 
  Visual Studio 'da diğer SharePoint proje öğelerinde hata ayıklaması yaptığınız gibi, bir uygulama sayfasında hata ayıklayabilirsiniz. Visual Studio hata ayıklayıcısını başlattığınızda, Visual Studio SharePoint sitesini açar.
 
- Uygulama sayfasını görüntülemek için uygulama sayfasının konumuna el ile gitmeniz gerekir (örneğin: http://<em>sunucu_adı</em>/_layouts/*Project_Name*/Applicationpage1.aspx).
+ Uygulama sayfasını görüntülemek için uygulama sayfasının konumuna el ile gitmeniz gerekir (örneğin: http://<em>SERVER_NAME</em>/_layouts/*Project_Name*/Applicationpage1.aspx).
 
  SharePoint projelerinde hata ayıklama hakkında daha fazla bilgi için bkz. [SharePoint Çözümlerinde Sorun giderme](../sharepoint/troubleshooting-sharepoint-solutions.md).
 
 ## <a name="choose-a-master-page"></a>Ana sayfa seçin
  Varsayılan olarak, bir **uygulama sayfası** öğesi, projenizde hata ayıklamak için kullandığınız sitenin ana sayfasına başvurur. Bu sayfada v4. Master adı verilir ve SharePoint sitesinin **Ana sayfa galerisinde** listelenmiş olduğunu bulabilirsiniz.
 
- Uygulama sayfası tarafından hangi ana sayfanın kullanıldığını, uygulama `Page` öğesinin `MasterPageFile` özniteliğini ayarlayarak açık bir şekilde değiştirebilirsiniz. (Örneğin: `MasterPageFile="~/_layouts/applicationv4.master"`). Aslında, SharePoint sunucusunda dinamik ana sayfalar etkinleştirilmemişse bu özniteliği ayarlamanız gerekir. SharePoint 'teki ana sayfalar hakkında daha fazla bilgi için bkz. [ana sayfalar](/previous-versions/office/developer/sharepoint-2010/ms443795(v=office.14)).
+ Uygulama öğesinin özniteliğini ayarlayarak uygulama sayfası tarafından hangi ana sayfanın kullanıldığını açıkça değiştirebilirsiniz `MasterPageFile` `Page` . (Örneğin: `MasterPageFile="~/_layouts/applicationv4.master"` ). Aslında, SharePoint sunucusunda dinamik ana sayfalar etkinleştirilmemişse bu özniteliği ayarlamanız gerekir. SharePoint 'teki ana sayfalar hakkında daha fazla bilgi için bkz. [ana sayfalar](/previous-versions/office/developer/sharepoint-2010/ms443795(v=office.14)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Derinlemesine SharePoint Foundation geliştirme](/previous-versions/office/developer/sharepoint-2010/ee539092(v=office.14))

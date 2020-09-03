@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::Compare | Microsoft Docs
+title: 'IDebugReference2:: Compare | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 41b183baa00f86c7a6e54d35b6188cd8c04946b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68182491"
 ---
 # <a name="idebugreference2compare"></a>IDebugReference2::Compare
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Başka bir başvuru karşılaştırır. Daha sonraki kullanımlar için ayrılmıştır.  
+Bir başvuruyu diğerine karşılaştırır. Daha sonraki kullanımlar için ayrılmıştır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Compare (   
@@ -42,13 +42,13 @@ int Compare ( 
   
 #### <a name="parameters"></a>Parametreler  
  `dwCompare`  
- [in] Bir değer [REFERENCE_COMPARE](../../../extensibility/debugger/reference/reference-compare.md) karşılaştırma işlemi, örneğin, eşittir, daha fazla veya daha büyük belirten sabit listesi.  
+ 'ndaki Karşılaştırma işlemini belirten [REFERENCE_COMPARE](../../../extensibility/debugger/reference/reference-compare.md) numaralandırmasından bir değer, örneğin, eşittir, küçüktür veya büyüktür.  
   
  `pReference`  
- [in] Bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) için karşılaştırılması gereken başvuruyu temsil eden nesne.  
+ 'ndaki Karşılaştırılacak başvuruyu temsil eden bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Her zaman döndürür `E_NOTIMPL`.  
+ Her zaman `E_NOTIMPL` döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)   

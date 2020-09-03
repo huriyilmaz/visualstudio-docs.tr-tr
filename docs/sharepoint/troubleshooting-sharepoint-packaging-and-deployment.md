@@ -24,10 +24,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 7eafac8015b7a2c51279b7a2d664f0e094d2397b
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72981930"
 ---
 # <a name="troubleshoot-sharepoint-packaging-and-deployment"></a>SharePoint paketleme ve dağıtım sorunlarını giderme
@@ -37,7 +37,7 @@ ms.locfileid: "72981930"
  Visual Studio, SharePoint ve diğer katmanlar arasında tanılama yapmak için, EnableDiagnostics kayıt defteri anahtarını kullanarak yığın izlemesini görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [SharePoint Çözümlerinde hata ayıklama](../sharepoint/debugging-sharepoint-solutions.md).
 
 ## <a name="add-project-output-to-the-solution-package"></a>Çözüm paketine proje çıktısı ekleme
- Proje çıktısını Paket Tasarımcısı aracılığıyla bir pakete ekleyebilirsiniz. Ancak, proje çıktısını eklediğinizde, projenin platformunun SharePoint çözümünün platformuyla eşleştiğinden emin olun. Bir SharePoint sunucusuna dağıtmak istediğiniz derlemeler için **herhangi BIR CPU** platformu hedefini kullanmanızı öneririz. Daha fazla bilgi için bkz. [derleme sayfası, proje &#40;Tasarımcısı&#41; Visual Basic](../ide/reference/compile-page-project-designer-visual-basic.md) ve [Gelişmiş derleyici ayarları iletişim &#40;kutusu&#41;Visual Basic](../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md).
+ Proje çıktısını Paket Tasarımcısı aracılığıyla bir pakete ekleyebilirsiniz. Ancak, proje çıktısını eklediğinizde, projenin platformunun SharePoint çözümünün platformuyla eşleştiğinden emin olun. Bir SharePoint sunucusuna dağıtmak istediğiniz derlemeler için **herhangi BIR CPU** platformu hedefini kullanmanızı öneririz. Daha fazla bilgi için bkz. [derleme sayfası, Proje tasarımcısı &#40;Visual Basic&#41;](../ide/reference/compile-page-project-designer-visual-basic.md) ve [Gelişmiş derleyici ayarları iletişim kutusu &#40;Visual Basic&#41;](../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md).
 
 ## <a name="validation-warnings-and-errors"></a>Doğrulama uyarıları ve hataları
  Visual Studio 'daki SharePoint geliştirme araçları, çözüm paketinin doğru biçimlendirildiğini doğrulamak için doğrulama adımları gerçekleştirir. Ayrıca, özellikleriniz ve paketleriniz için özel doğrulama adımları da oluşturabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: SharePoint çözümleri için özel özellik ve paket doğrulama kuralları oluşturma](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).
@@ -49,12 +49,12 @@ ms.locfileid: "72981930"
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|Otomatik|Çakışmaları algılar ve çakışmaları otomatik olarak çözer.|
-|isteme|Çakışmaları çözümlemeden önce çakışmaları algılar ve geliştiriciyle raporlar.|
-|Yok.|Çarpışmaları algılamaz.|
+|Automatic|Çakışmaları algılar ve çakışmaları otomatik olarak çözer.|
+|İstem|Çakışmaları çözümlemeden önce çakışmaları algılar ve geliştiriciyle raporlar.|
+|Hiçbiri|Çarpışmaları algılamaz.|
 
 ## <a name="differences-between-f5-deployment"></a>F5 dağıtımı arasındaki farklar
- SharePoint projenizi test ve hata ayıklama için yerel SharePoint sunucusuna dağıtmak üzere [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] kullandığınızda, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]tarafından gerçekleştirilen bazı ek adımlar vardır.
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint projenizi test ve hata ayıklama için yerel SharePoint sunucusuna dağıtmak üzere kullandığınızda, tarafından gerçekleştirilen bazı ek adımlar vardır [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 1. Dağıtım adımı sırasında Internet Information Service (IIS) ' i sıfırlayın.
 
@@ -65,7 +65,7 @@ ms.locfileid: "72981930"
    **F5** davranışını daha fazla değiştirmek için özel dağıtım adımları ekleyebilirsiniz. Daha fazla bilgi için bkz. [Izlenecek yol: SharePoint projeleri için özel bir dağıtım adımı oluşturma](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).
 
 ## <a name="delay-displaying-sharepoint-page-when-deploy-visual-web-part"></a>Visual Web Bölümü dağıtılırken SharePoint sayfasını görüntülemeyi geciktir
- SharePoint sayfasının, [!INCLUDE[wiprlhext](../sharepoint/includes/wiprlhext-md.md)], [!INCLUDE[win7](../sharepoint/includes/win7-md.md)]veya [!INCLUDE[winsvr08](../sharepoint/includes/winsvr08-md.md)]bin klasörüne görsel bir Web Bölümü dağıtıldığında görünmesi uzun zaman alır. Bir üst düzey [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] dizinde (bin dizini gibi) herhangi bir dosyayı değiştirirseniz, tüm Web uygulaması yeniden derlenir. Bu, SharePoint sayfasının işlemesi için 25 saniyeye kadar gecikmeye neden olabilir.
+ SharePoint sayfasının, veya üzerinde bin klasörüne bir görsel web bölümü dağıtıldığında görünmesi uzun zaman alır [!INCLUDE[wiprlhext](../sharepoint/includes/wiprlhext-md.md)] [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] [!INCLUDE[winsvr08](../sharepoint/includes/winsvr08-md.md)] . Bir üst düzey dizinde (bin dizini gibi) herhangi bir dosyayı değiştirirseniz [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] , tüm Web uygulaması yeniden derlenir. Bu, SharePoint sayfasının işlemesi için 25 saniyeye kadar gecikmeye neden olabilir.
 
 ### <a name="error-message"></a>Hata iletisi
  Yok.
@@ -75,7 +75,7 @@ ms.locfileid: "72981930"
 
 1. Güncelleştirme KB967535, Microsoft Desteği makalesinde açıklandığı şekilde yüklenir [: Windows Vista ve Windows Server 2008 IÇIN ııs 7,0 ' de ASP.net 'teki iki sorunu gidermeye yönelik bir düzeltme vardır](https://support.microsoft.com/help/967535).
 
-2. Web. config dosyasına aşağıdaki satırı ekleyin:
+2. Aşağıdaki satırı Web.config dosyasına ekleyin:
 
     ```xml
     <compilation batch="false" optimizeCompilations="true">
@@ -100,13 +100,13 @@ ms.locfileid: "72981930"
  Bu hata, Visual Web Bölümü özelliklerinin SharePoint 'te geri çekilme yöntemi nedeniyle oluşur. Visual Web bölümünü başarıyla dağıtmak için **F5** tuşunu seçerek çözümü yeniden dağıtın.
 
 ## <a name="warning-appears-when-deploying-nested-user-controls"></a>İç içe Kullanıcı denetimleri dağıtıldığında uyarı görüntülenir
- Bu uyarı, bir kullanıcı denetimi veya bir görsel web bölümü ya da başka bir kullanıcı denetimi içeren bir kullanıcı denetimi içeren bir Visual Web bölümü gibi iç içe geçmiş kullanıcı denetimlerine sahip bir SharePoint çözümünü dağıtırken oluşur. Bu uyarı, araç kutusundan sürükleyerek veya kaynak görünümündeki @Register yönergesini kullanarak bir tasarımcıya denetim eklediğinizde oluşur.
+ Bu uyarı, bir kullanıcı denetimi veya bir görsel web bölümü ya da başka bir kullanıcı denetimi içeren bir kullanıcı denetimi içeren bir Visual Web bölümü gibi iç içe geçmiş kullanıcı denetimlerine sahip bir SharePoint çözümünü dağıtırken oluşur. Bu uyarı, araç kutusundan sürükleyerek veya kaynak görünümündeki yönergesini kullanarak bir tasarımcıya denetim eklediğinizde oluşur @Register .
 
 ### <a name="error-message"></a>Hata iletisi
- Uyarı 1 öğesi ' [*Denetim adı*] ' bilinen bir öğe değil. Web sitesinde bir derleme hatası varsa veya Web. config dosyası eksikse bu durum oluşabilir.
+ Uyarı 1 öğesi ' [*Denetim adı*] ' bilinen bir öğe değil. Web sitesinde bir derleme hatası varsa veya web.config dosyası eksikse bu durum oluşabilir.
 
 ### <a name="resolution"></a>Çözüm
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] proje sistemi, iç içe geçmiş bir kullanıcı denetiminin farkında değilse, IntelliSense sağlayamaz ve uyarıyı yayar. Proje derlenmemişse ve tasarımcı kapatılıp yeniden açılmadıysa veya otomatik geri çek seçeneği etkinse veya hata ayıkladıktan sonra Kullanıcı denetiminin SharePoint kovanına geri çekmesine neden olan, proje sistemi iç içe geçmiş bir kullanıcı denetiminden haberdar değildir.
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Proje sistemi, iç içe geçmiş bir kullanıcı denetiminin farkında değilse, IntelliSense sağlayamaz ve uyarıyı yayar. Proje derlenmemişse ve tasarımcı kapatılıp yeniden açılmadıysa veya otomatik geri çek seçeneği etkinse veya hata ayıkladıktan sonra Kullanıcı denetiminin SharePoint kovanına geri çekmesine neden olan, proje sistemi iç içe geçmiş bir kullanıcı denetiminden haberdar değildir.
 
  Bu uyarıyı kaldırmak için, projeyi derleyin ve sonra tasarımcı 'yı kapatıp yeniden açın ya da proje için otomatik geri çekme seçeneğini devre dışı bırakın. Bunu yapmak için, proje özellikleri iletişim kutusunun **SharePoint** sekmesinde **hata ayıklamadan sonra otomatik olarak geri çek** onay kutusunu temizleyin.
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugCodeContext3::GetModule | Microsoft Docs
+title: 'IDebugCodeContext3:: GetModule | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,18 +11,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 328916a6e1ceb8979c1c10c7d94dca9725689125
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190912"
 ---
 # <a name="idebugcodecontext3getmodule"></a>IDebugCodeContext3::GetModule
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Hata ayıklama modülü arabirimine bir başvuru alır.  
+Hata ayıklama modülünün arabirimine bir başvuru alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetModule(   
@@ -38,13 +38,13 @@ public int GetModule(
   
 #### <a name="parameters"></a>Parametreler  
  `ppModule`  
- [out] Başvuru için hata ayıklama modül arabirimi.  
+ dışı Hata ayıklama modülü arabirimine başvuru.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **CDebugCodeContext** gösteren nesne [IDebugBeforeSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2.md) arabirimi.  
+ Aşağıdaki örnek, [IDebugBeforeSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2.md) arabirimini kullanıma sunan bir **Cdebugcodecontext** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.  
   
 ```cpp#  
 HRESULT CDebugCodeContext::GetModule(IDebugModule2** ppModule)  

@@ -1,5 +1,5 @@
 ---
-title: DÖKÜM TÜRÜ | Microsoft Dokümanlar
+title: DUMPTYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 0d4d42709efdefe097b4c8a78a0b00f45f2e1a2b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737207"
 ---
 # <a name="dumptype"></a>DUMPTYPE
-Bir programın durumunun ne kadarının (çalışan iş parçacıkları, yığın çerçeveleri ve geçerli yönerge adresi gibi) ne kadarının çöpe atılmasını belirtir.
+Bir programın durumunun ne kadarının (iş parçacıkları, yığın çerçeveleri ve geçerli yönerge adresi gibi) dökümünü belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_DUMPTYPE {
@@ -47,18 +47,18 @@ public enum enum_DUMPTYPE {
 Küçük, kompakt bir döküm belirtir.
 
 `DUMP_FULLDUMP`\
-Büyük, tam bir dökümü belirtir.
+Büyük ve tamamlanmış bir döküm belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
-[Yazma Dökümü](../../../extensibility/debugger/reference/idebugprogram2-writedump.md) yöntemine bağımsız değişken olarak geçirilir.
+[WriteDump](../../../extensibility/debugger/reference/idebugprogram2-writedump.md) yöntemine bir bağımsız değişken olarak geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [WriteDump](../../../extensibility/debugger/reference/idebugprogram2-writedump.md)

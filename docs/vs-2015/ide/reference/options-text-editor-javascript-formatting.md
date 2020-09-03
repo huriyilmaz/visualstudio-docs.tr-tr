@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: dcfa4a2fb15ed8f4abfff24aa8e78c2b08eb8412
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662242"
 ---
 # <a name="options-text-editor-javascript-formatting"></a>Seçenekler, Metin Düzenleyici, JavaScript, Biçimlendirme
@@ -47,9 +47,9 @@ Kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için **Seçe
 |Seçenek|Açıklama|
 |------------|-----------------|
 |**İşlevler için yeni satıra açık küme ayracı yerleştir**|Bu seçenek belirlendiğinde, kod Düzenleyicisi bir işlevle ilişkili açık küme ayracını yeni bir satıra taşıdır.|
-|**Denetim blokları için yeni satıra açık küme ayracı yerleştir**|Bu seçenek belirlendiğinde, kod Düzenleyicisi bir denetim bloğu (örneğin, `if` ve `while` denetim blokları) ile ilişkili açık küme ayracını yeni bir satıra taşıdır.|
+|**Denetim blokları için yeni satıra açık küme ayracı yerleştir**|Bu seçenek belirlendiğinde, kod Düzenleyicisi bir denetim bloğu (örneğin, ve denetim blokları) ile ilişkili açık küme ayracını `if` `while` Yeni bir satıra taşıdır.|
 
-## <a name="spacing"></a>Matema
+## <a name="spacing"></a>Aralık
  Bu seçenekler, **kaynak** görünümünde boşlukların nasıl ekleneceğini tespit ediyor.
 
 ## <a name="uielement-list"></a>UIElement Listesi
@@ -57,10 +57,10 @@ Kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için **Seçe
 |Seçenek|Açıklama|
 |------------|-----------------|
 |**Virgül sınırlayıcısından sonra boşluk Ekle**|Bu seçenek belirlendiğinde, kod Düzenleyicisi virgül sınırlayıcıdan sonra bir boşluk ekler.|
-|**' For ' deyiminde noktalı virgülden sonra boşluk Ekle**|Bu seçenek belirlendiğinde, kod Düzenleyicisi `for` döngüsünün ilk satırında her noktalı virgülden sonra bir boşluk ekler.|
-|**İkili işleçlerden önce ve sonra boşluk Ekle**|Bu seçenek belirlendiğinde, kod Düzenleyicisi ikili işleçlerden önce ve sonra bir boşluk ekler (örneğin, +,-, & &, &#124; &#124;).|
+|**' For ' deyiminde noktalı virgülden sonra boşluk Ekle**|Bu seçenek belirlendiğinde, kod Düzenleyicisi döngünün ilk satırına her noktalı virgülden sonra bir boşluk ekler `for` .|
+|**İkili işleçlerden önce ve sonra boşluk Ekle**|Bu seçenek belirlendiğinde, kod Düzenleyicisi ikili işleçlerden önce ve sonra bir boşluk ekler (örneğin, +,-,  &&,  &#124;&#124;).|
 |**Denetim akışı deyimlerinde anahtar sözcüklerden sonra boşluk Ekle**|Bu seçenek belirlendiğinde, kod Düzenleyicisi denetim akış deyimlerindeki JavaScript anahtar sözcükleriyle sonra bir boşluk ekler.|
-|**Anonim işlevler için Function anahtar sözcüğünden sonra boşluk Ekle.**|Bu seçenek belirlendiğinde, kod Düzenleyicisi anonim işlevler için `function` anahtar sözcüğünden sonra bir boşluk ekler.|
+|**Anonim işlevler için Function anahtar sözcüğünden sonra boşluk Ekle.**|Bu seçenek belirlendiğinde, kod Düzenleyicisi `function` Anonim işlevler için anahtar sözcükten sonra bir boşluk ekler.|
 |**Boş olmayan parantezleri kapatmadan önce ve açtıktan sonra boşluk Ekle**|Bu seçenek belirlendiğinde, kod Düzenleyicisi, parantez içinde boş olmayan karakterler varsa, açma parantezinden sonra ve kapatma parantezinden önce bir boşluk ekler.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.

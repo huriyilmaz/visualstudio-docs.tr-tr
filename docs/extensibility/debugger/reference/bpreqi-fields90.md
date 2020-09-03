@@ -1,5 +1,5 @@
 ---
-title: BPREQI_FIELDS90 | Microsoft Dokümanlar
+title: BPREQI_FIELDS90 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +14,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ea46939118ec48490280d6a85cc84e144d320d4e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737738"
 ---
 # <a name="bpreqi_fields90"></a>BPREQI_FIELDS90
-Kesme noktası isteği hakkında alınacak bilgileri belirten geçerli değerleri oyalar. Bu numaralandırma [numaralandırma BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) genişletir.
+Kesme noktası isteği hakkında alınacak bilgileri belirten geçerli değerleri sıralar. Bu sabit listesi [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) numaralandırmayı genişletir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_BPREQI_FIELDS90
@@ -78,56 +78,56 @@ public enum enum_BPREQI_FIELDS90
 
 ## <a name="fields"></a>Alanlar
 `BPREQI90_BPLOCATION`\
-`bpLocation` [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) veya [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) yapısının (kesme noktası konumu) alanını başlatma veya kullanma.
+`bpLocation` [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) veya [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) yapısının (kesme noktası konumu) alanını başlatın veya kullanın.
 
 `BPREQI90_LANGUAGE`\
-Veya `guidLanguage` `BP_REQUEST_INFO` `BP_REQUEST_INFO2` yapının alanını başlatma veya kullanma.
+`guidLanguage`Veya yapısının alanını başlatın veya kullanın `BP_REQUEST_INFO` `BP_REQUEST_INFO2` .
 
 `BPREQI90_PROGRAM`\
-Veya `pProgram` `BP_REQUEST_INFO` `BP_REQUEST_INFO2` yapının alanını başlatma veya kullanma.
+`pProgram`Veya yapısının alanını başlatın veya kullanın `BP_REQUEST_INFO` `BP_REQUEST_INFO2` .
 
 `BPREQI90_PROGRAMNAME`\
-Veya `bstrProgramName` `BP_REQUEST_INFO` `BP_REQUEST_INFO2` yapının alanını başlatma veya kullanma.
+`bstrProgramName`Veya yapısının alanını başlatın veya kullanın `BP_REQUEST_INFO` `BP_REQUEST_INFO2` .
 
 `BPREQI90_THREAD`\
-Veya `pThread` `BP_REQUEST_INFO` `BP_REQUEST_INFO2` yapının alanını başlatma veya kullanma.
+`pThread`Veya yapısının alanını başlatın veya kullanın `BP_REQUEST_INFO` `BP_REQUEST_INFO2` .
 
 `BPREQI90_THREADNAME`\
-Veya `bstrThreadName` `BP_REQUEST_INFO` `BP_REQUEST_INFO2` yapının alanını başlatma veya kullanma.
+`bstrThreadName`Veya yapısının alanını başlatın veya kullanın `BP_REQUEST_INFO` `BP_REQUEST_INFO2` .
 
 `BPREQI90_PASSCOUNT`\
-Veya `bpPassCount` `BP_REQUEST_INFO` `BP_REQUEST_INFO2` yapının alanını başlatma veya kullanma.
+`bpPassCount`Veya yapısının alanını başlatın veya kullanın `BP_REQUEST_INFO` `BP_REQUEST_INFO2` .
 
 `BPREQI90_CONDITION`\
-(Kesme noktası `bpCondition` koşulu) alanını başlatma `BP_REQUEST_INFO` veya `BP_REQUEST_INFO2` kullanma.
+`bpCondition`Veya yapısının (kesme noktası koşulu) alanını başlatın veya kullanın `BP_REQUEST_INFO` `BP_REQUEST_INFO2` .
 
 `BPREQI90_FLAGS`\
-Veya `dwFlags` `BP_REQUEST_INFO` `BP_REQUEST_INFO2` yapının alanını başlatma veya kullanma.
+`dwFlags`Veya yapısının alanını başlatın veya kullanın `BP_REQUEST_INFO` `BP_REQUEST_INFO2` .
 
 `BPREQI90_ALLOLDFIELDS`\
-`BP_REQUEST_INFO` Yapının tüm alanlarını başlatma veya kullanma.
+Yapının tüm alanlarını başlatın veya kullanın `BP_REQUEST_INFO` .
 
 `BPREQI90_VENDOR`\
-`BP_REQUEST_INFO2` Yapı `guidVendor` alanını başlatma veya kullanma.
+Yapı alanını başlatın veya kullanın `guidVendor` `BP_REQUEST_INFO2` .
 
 `BPREQI90_CONSTRAINT`\
-`BP_REQUEST_INFO2` Yapı `bstrConstraint` alanını başlatma veya kullanma.
+Yapı alanını başlatın veya kullanın `bstrConstraint` `BP_REQUEST_INFO2` .
 
 `BPREQI90_TRACEPOINT`\
-`BP_REQUEST_INFO2` Yapı `bstrTracepoint` alanını başlatma veya kullanma.
+Yapı alanını başlatın veya kullanın `bstrTracepoint` `BP_REQUEST_INFO2` .
 
 `BPREQI90_MACROTRACEPOINT`\
-`BP_REQUEST_INFO2` Yapı `bstrMacroTracepoint` alanını başlatma veya kullanma. BPREQI_ALLFIELDS bu alanı içermez.
+Yapı alanını başlatın veya kullanın `bstrMacroTracepoint` `BP_REQUEST_INFO2` . BPREQI_ALLFIELDS bu alanı içermez.
 
 `BPREQI90_ALLFIELDS`\
-`BP_REQUEST_INFO2` Yapı için tüm alanları belirtir.
+Yapının tüm alanlarını belirtir `BP_REQUEST_INFO2` .
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: Msdbg90.h
+Üstbilgi: Msdbg90. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

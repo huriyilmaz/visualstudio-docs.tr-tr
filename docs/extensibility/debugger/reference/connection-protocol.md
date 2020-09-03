@@ -1,5 +1,5 @@
 ---
-title: CONNECTION_PROTOCOL | Microsoft Dokümanlar
+title: CONNECTION_PROTOCOL | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 29ac287462149a20f52a1affdeab7fa6b8333711
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737640"
 ---
 # <a name="connection_protocol"></a>CONNECTION_PROTOCOL
-Hata ayıklama sunucusu ile hata ayıklama paketi (DE) arasında iletişim kurmak için kullanılan protokolü gösterir.
+Hata ayıklama sunucusu ile hata ayıklama paketi (DE) arasında iletişim kurmak için kullanılan protokolü belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef enum tagCONNECTION_PROTOCOL {
@@ -53,36 +53,36 @@ public enum CONNECTION_PROTOCOL {
 
 ## <a name="fields"></a>Alanlar
 `CONNECTION_NONE`\
-Sunucuya bağlantı yapılmadı.
+Bir sunucuya bağlantı yapılmadı.
 
 `CONNECTION_UNKNOWN`\
-Bir bağlantı yapıldı, ancak bilinmeyen bir tür.
+Bir bağlantı kuruldu, ancak bilinmeyen bir türde.
 
 `CONNECTION_LOCAL`\
-Bağlantı yerel bir sunucuya.
+Bağlantı, yerel bir sunucuya.
 
 `CONNECTION_PIPE`\
-Bağlantı adlı bir boru aracılığıyla yapılır.
+Bağlantı, adlandırılmış bir kanal üzerinden.
 
 `CONNECTION_TCPIP`\
 Bağlantı TCP/IP kullanır.
 
 `CONNECTION_HTTP`\
-Bağlantı HTTP (bir Web sunucusu üzerinden) kullanır.
+Bağlantı HTTP kullanır (bir Web sunucusu üzerinden).
 
 `CONNECTION_OTHER`\
-Başka bir bağlantı türü oluşturuldu (bu değer şu anda kullanılmadı).
+Başka bir bağlantı türü oluşturuldu (Bu değer şu anda kullanılmıyor).
 
 ## <a name="remarks"></a>Açıklamalar
 Bu değerler [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) yönteminden döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md)

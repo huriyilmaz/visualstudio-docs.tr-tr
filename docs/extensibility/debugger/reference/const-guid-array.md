@@ -1,5 +1,5 @@
 ---
-title: CONST_GUID_ARRAY | Microsoft Dokümanlar
+title: CONST_GUID_ARRAY | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c0021ef24e0cafec0119263d2c74175f0d38d784
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737629"
 ---
 # <a name="const_guid_array"></a>CONST_GUID_ARRAY
-`GUID`S listesini tutan bir yapı.
+Bir listesini tutan bir yapı `GUID` .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct tagCONST_GUID_ARRAY {
@@ -43,22 +43,22 @@ public struct CONST_GUID_ARRAY {
 
 ## <a name="members"></a>Üyeler
 `dwCount`\
-Dizideki s sayısı. `GUID` `Members`
+`GUID`Dizideki s sayısı `Members` .
 
 `Members`\
-S `GUID`dizisi.
+Dizi `GUID` öğeleri.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) yöntemine aktarılır ve [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) ve [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md) yöntemlerinden döndürülür.
+Bu yapı [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) yöntemine geçirilir ve [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) ve [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md) yöntemlerinden döndürülür.
 
-Bu yapının bir örneğinin sahibi, ayrılan herhangi bir belleği serbest bırakmaktan sorumludur.
+Bu yapının bir örneğinin sahibi, ayrılan tüm belleği boşaltmaktan sorumludur.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

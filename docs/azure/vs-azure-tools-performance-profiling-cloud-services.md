@@ -9,14 +9,14 @@ ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
 ms.openlocfilehash: 04e3ee89498447f7743fc1b5119e129f046b4fcc
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72911775"
 ---
 # <a name="testing-the-performance-of-a-cloud-service"></a>Bulut hizmetinin performansını test etme
-## <a name="overview"></a>Genel bakış
+## <a name="overview"></a>Genel Bakış
 Bir bulut hizmetinin performansını aşağıdaki yollarla test edebilirsiniz:
 
 * İstekler ve bağlantılarla ilgili bilgi toplamak ve hizmetin müşterinin perspektifinden nasıl gerçekleştiğini gösteren site istatistiklerini gözden geçirmek için Azure Tanılama kullanın. Kullanmaya başlamak için bkz. [Azure Cloud Services ve sanal makineler için tanılamayı yapılandırma](vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md).
@@ -101,7 +101,7 @@ Bulut hizmetinizde bir rolün her örneği için bir profil oluşturma oturumu o
 2. Azure Işlem düğümünü seçin ve ardından Visual Studio 'dan yayımlandığında profil için seçtiğiniz bulut hizmeti için Azure dağıtım düğümünü seçin.
 3. Bir örneğin profil oluşturma raporlarını görüntülemek için, hizmette rolü seçin, belirli bir örnek için kısayol menüsünü açın ve **profil oluşturma raporunu görüntüle**' yi seçin.
 
-    Bu rapor, bir. vsp dosyası artık Azure 'dan indirilir ve indirme durumu Azure etkinlik günlüğünde görüntülenir. İndirme işlemi tamamlandığında, profil oluşturma raporu, Visual Studio Düzenleyicisi 'ndeki < rol adı\> *< örnek numarası\>* < tanımlayıcı\>. vsp adlı bir sekmede görüntülenir. Raporun özet verileri görüntülenir.
+    Bu rapor, bir. vsp dosyası artık Azure 'dan indirilir ve indirme durumu Azure etkinlik günlüğünde görüntülenir. İndirme işlemi tamamlandığında, profil oluşturma raporu Visual Studio Düzenleyicisi 'nde <rol adı \> *<örnek numarası \> *<Identifier. vsp adlı bir sekmede görüntülenir \> . Raporun özet verileri görüntülenir.
 4. Raporun farklı görünümlerini görüntülemek için, geçerli görünüm listesinde istediğiniz görünüm türünü seçin. Daha fazla bilgi için bkz. [profil oluşturma araçları rapor görünümleri](https://msdn.microsoft.com/library/azure/bb385755.aspx).
 
 ## <a name="next-steps"></a>Sonraki adımlar

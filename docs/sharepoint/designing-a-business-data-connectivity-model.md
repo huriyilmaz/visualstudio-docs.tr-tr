@@ -14,19 +14,19 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 16a410b59cef6f282d2d27ad90a90013636d6489
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72984462"
 ---
 # <a name="design-a-business-data-connectivity-model"></a>İş verileri bağlantı modeli tasarlama
   Bir model dosyasına varlıklar ve yöntemler ekleyerek Iş verileri bağlantısı (BDC) hizmeti için bir model geliştirebilirsiniz. Bir varlık, veri alanları koleksiyonunu açıklar. Örneğin, bir varlık veritabanındaki bir tabloyu temsil edebilir. Bir yöntem, varlıklar tarafından temsil edilen verileri ekleme, silme veya güncelleştirme gibi bir görevi gerçekleştirir. Daha fazla bilgi için bkz. [iş verilerini SharePoint Ile tümleştirme](../sharepoint/integrating-business-data-into-sharepoint.md).
 
-## <a name="add-entities"></a>Varlık Ekle
+## <a name="add-entities"></a>Varlık ekleme
  Bir varlığı, Visual Studio **araç kutusu** **'ndan BDC** Tasarımcısı üzerine sürükleyerek veya kopyalayarak bir varlık ekleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: bir modele varlık ekleme](../sharepoint/how-to-add-an-entity-to-a-model.md).
 
- Bir sınıftaki varlık alanlarını tanımlayın. Örneğin, bir `Customer` sınıfına `Address` adlı bir alan ekleyebilirsiniz. Projeye yeni bir sınıf ekleyebilir veya Nesne İlişkisel Tasarımcısı (O/R Designer) gibi diğer araçları kullanarak oluşturulan mevcut bir sınıfı kullanabilirsiniz. Varlığın adı ve varlığı temsil eden sınıfın adı eşleşmelidir. Modelinizdeki yöntemleri tanımlarken, sınıfı varlıkla ilişkilendirebilirsiniz.
+ Bir sınıftaki varlık alanlarını tanımlayın. Örneğin, bir sınıfa adlı bir alan ekleyebilirsiniz `Address` `Customer` . Projeye yeni bir sınıf ekleyebilir veya Nesne İlişkisel Tasarımcısı (O/R Designer) gibi diğer araçları kullanarak oluşturulan mevcut bir sınıfı kullanabilirsiniz. Varlığın adı ve varlığı temsil eden sınıfın adı eşleşmelidir. Modelinizdeki yöntemleri tanımlarken, sınıfı varlıkla ilişkilendirebilirsiniz.
 
 ## <a name="add-methods"></a>Yöntem Ekle
  Kullanıcılar, modelinize bağlı bir liste veya Web Bölümü içindeki bilgileri görüntülerken, eklerken, Güncelleştir, Güncelleştir, Güncelleştir, güncelleyebilir veya silbir şekilde modelinizdeki yöntemleri çağırır. Kullanıcının gerçekleştirebileceği her görev için modele bir yöntem eklemeniz gerekir. **IVB yöntemi ayrıntıları** penceresinden beş temel yöntem türünden birini seçerek Yöntemler oluşturun. Aşağıdaki tabloda bir BDC modelinin beş temel yöntemi açıklanmaktadır.
@@ -42,7 +42,7 @@ ms.locfileid: "72984462"
 ## <a name="define-method-parameters"></a>Yöntem parametrelerini tanımlayın
  Bir yöntem oluşturduğunuzda, Visual Studio Yöntem türü için uygun olan giriş ve çıkış parametrelerini ekler. Bu parametreler yalnızca yer tutuculardır. Çoğu durumda, parametreleri doğru veri türünü geçecek veya döndürecek şekilde değiştirmeniz gerekir. Örneğin, varsayılan olarak, bir bulucu yöntemi bir dize döndürür. Çoğu durumda, Finder yönteminin dönüş parametresini bir varlık koleksiyonu döndürecek şekilde değiştirmek istersiniz. Parametrenin tür tanımlayıcısını değiştirerek bunu yapabilirsiniz. Tür tanımlayıcısı, bir parametrenin veri türünü açıklayan özniteliklerin koleksiyonudur. Daha fazla bilgi için bkz. [nasıl yapılır: bir parametrenin tür tanımlayıcısını tanımlama](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md).
 
- Visual Studio, modeldeki parametreler arasında tür tanımlayıcılarını kopyalamanızı sağlar. Örneğin, `GetCustomer` yönteminin Return parametresi için `CustomerTD` adlı bir tür tanımlayıcısı tanımlayabilirsiniz. `CustomerTD` türü tanımlayıcısını **BDC Gezgini**' nde kopyalayabilir ve sonra bu tür tanımlayıcısını `CreateCustomer` yönteminin giriş parametresine yapıştırabilirsiniz. Bu, aynı tür tanımlayıcısını birden çok kez tanımlamanızı önler.
+ Visual Studio, modeldeki parametreler arasında tür tanımlayıcılarını kopyalamanızı sağlar. Örneğin, `CustomerTD` yönteminin Return parametresi için adlı bir tür tanımlayıcısı tanımlayabilirsiniz `GetCustomer` . `CustomerTD`Tür tanımlayıcısını **BDC Gezgini**' nde kopyalayabilir ve sonra bu tür tanımlayıcısını metodun giriş parametresine yapıştırabilirsiniz `CreateCustomer` . Bu, aynı tür tanımlayıcısını birden çok kez tanımlamanızı önler.
 
 ## <a name="method-instances"></a>Yöntem örnekleri
  Bir yöntem oluşturduğunuzda, Visual Studio varsayılan bir yöntem örneği ekler. Yöntem örneği bir yönteme başvurudur ve parametreler için varsayılan değerleri. Tek bir yöntem birden çok yöntem örneğine sahip olabilir. Her örnek, yöntem imzasının ve bir dizi varsayılan değerin birleşimidir. Daha fazla bilgi için bkz. [nasıl yapılır: bir parametrenin tür tanımlayıcısını tanımlama](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md).
@@ -71,7 +71,7 @@ ms.locfileid: "72984462"
 ## <a name="validate-the-model"></a>Modeli doğrulama
  Geliştirme sırasında modelinizi doğrulayabilirsiniz. Visual Studio, modelinizin beklendiği gibi davranmasını engelleyebilecek sorunları tanımlar. Bu sorunlar, Visual Studio **hata listesi**görüntülenir.
 
- Bir modeli, IVB Tasarımcısı için kısayol menüsünü açıp **Doğrula**' yı seçerek doğrulayabilirsiniz. Model herhangi bir hata içeriyorsa **hata listesi**görünürler. İmleci, listedeki hataya çift tıklayarak, hata içeren koda hızlıca taşıyabilirsiniz. Alternatif **olarak, listedeki** hataları ileri veya geri ilerlemek için F8 veya **SHIFT**+**F8** tuşlarını tekrar tekrar seçebilirsiniz.
+ Bir modeli, IVB Tasarımcısı için kısayol menüsünü açıp **Doğrula**' yı seçerek doğrulayabilirsiniz. Model herhangi bir hata içeriyorsa **hata listesi**görünürler. İmleci, listedeki hataya çift tıklayarak, hata içeren koda hızlıca taşıyabilirsiniz. Alternatif olarak, listedeki hataların ileri veya geri ilerlemek için **F8** veya **SHIFT** + **F8** tuşlarını tekrar tekrar seçebilirsiniz.
 
  Doğrulama hataları, modelin kuralları bir şekilde ihlal edildiğinde meydana gelebilir. Örneğin, bir tür tanımlayıcısının **IsCollection** özelliği **true**olarak ayarlanmışsa, ancak alt tür tanımlayıcıları yoksa, bir doğrulama hatası görüntülenir. Visual Studio **hata listesi**görünen bazı hataları anlamak IÇIN bir BDC modeli kurallarına başvurmanız gerekebilir. Bir BDC modelinin kuralları hakkında daha fazla bilgi için bkz. [BDCMetadata şeması](/previous-versions/office/developer/sharepoint-2010/ee556387(v=office.14)).
 

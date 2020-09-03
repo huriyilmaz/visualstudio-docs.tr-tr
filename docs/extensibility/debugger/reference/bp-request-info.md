@@ -1,5 +1,5 @@
 ---
-title: BP_REQUEST_INFO | Microsoft Dokümanlar
+title: BP_REQUEST_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 35a1202f4990f4f6370ad031c896ba85ebb6d816
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737889"
 ---
 # <a name="bp_request_info"></a>BP_REQUEST_INFO
 Kesme noktası uygulamak için gereken bilgileri içerir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _BP_REQUEST_INFO {
@@ -59,46 +59,46 @@ public struct BP_REQUEST_INFO {
 
 ## <a name="members"></a>Üyeler
 `dwFields`\
-Hangi alanların [doldurulduğuna](../../../extensibility/debugger/reference/bpreqi-fields.md) BPREQI_FIELDS numaralandırmadan gelen bayrakların birleşimi.
+[BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) Numaralandırmadaki, doldurulacak alanları belirten bayrakların birleşimi.
 
 `guidLanguage`\
-Dil GUID.
+Dil GUID 'SI.
 
 `bpLocation`\
-Kesme noktası konumunun türünü belirten [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapı.
+Kesme noktası konumunun türünü belirten [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapısı.
 
 `pProgram`\
-Kesme noktasının oluştuğu uygulamayı temsil eden [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesi.
+Kesme noktasının gerçekleştiği uygulamayı temsil eden [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesi.
 
 `bstrProgramName`\
-Kesme noktasının oluştuğu uygulamanın adı.
+Kesme noktasının gerçekleştiği uygulamanın adı.
 
 `pThread`\
-Kesme noktasının oluştuğu iş parçacığı temsil eden [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
+Kesme noktasının gerçekleştiği iş parçacığını temsil eden [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
 
 `bstrThreadName`\
-Kesme noktasının oluştuğu iş parçacığının adı.
+Kesme noktasının gerçekleştiği iş parçacığının adı.
 
 `bpCondition`\
-Kırılma noktasının hangi koşullar altında ateş edeceğini açıklayan [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) yapı.
+Kesme noktasının tetikleneceği koşulları açıklayan [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) yapısı.
 
 `bpPassCount`\
-Kesme noktasının geçiş sayısı bilgilerini içeren [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) yapı.
+Kesme noktasının geçiş sayısı bilgilerini içeren [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) yapısı.
 
 `dwFlags`\
-İstenen kesme noktası için bayrakları belirten [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) numaralandırmadan gelen bayrakların birleşimi.
+İstenen kesme noktasına yönelik bayrakları belirten [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) numaralandırmasındaki bayrakların birleşimi.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) yöntemi yle döndürülür.
+Bu yapı [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) yöntemi tarafından döndürülür.
 
-Hata ayıklama motoru satıcısı GUID, kesme noktası kısıtlaması veya izleme noktası edinmeniz gerekiyorsa, [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) yapıya bakın.
+Hata ayıklama altyapısı satıcı GUID 'SI, kesme noktası kısıtlaması veya izleme noktası edinmeniz gerekiyorsa [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) yapısına bakın.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

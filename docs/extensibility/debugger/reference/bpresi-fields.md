@@ -1,5 +1,5 @@
 ---
-title: BPRESI_FIELDS | Microsoft Dokümanlar
+title: BPRESI_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 837bb7d25ab8dea2b146a98cc65d320b58162685
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737726"
 ---
 # <a name="bpresi_fields"></a>BPRESI_FIELDS
-Bir kesme noktasının başarılı çözümü hakkında alınacak bilgileri belirtir.
+Bir kesme noktasının başarıyla çözümlenmesi hakkında alınacak bilgileri belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_BPRESI_FIELDS {
@@ -48,32 +48,32 @@ public enum enum_BPRESI_FIELDS {
 
 ## <a name="fields"></a>Alanlar
 `BPRESI_BPRESLOCATION`\
-`bpResLocation` [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) yapının (kesme noktası çözümlemesi konumu) alanını başlatma/kullanma.
+`bpResLocation` [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) yapısının (kesme noktası çözümleme konumu) alanını başlatın/kullanın.
 
 `BPRESI_PROGRAM`\
-`BP_RESOLUTION_INFO` Yapının `pProgram` alanını başlatma/kullanma.
+Yapının alanını başlatın/kullanın `pProgram` `BP_RESOLUTION_INFO` .
 
 `BPRESI_THREAD`\
-`BP_RESOLUTION_INFO` Yapının `pThread` alanını başlatma/kullanma.
+Yapının alanını başlatın/kullanın `pThread` `BP_RESOLUTION_INFO` .
 
 `BPRESI_ALLFIELDS`\
 Tüm alanları belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
-[BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) yapısının hangi alanlarının baş harfe alıneceğini belirtmek için [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) yöntemine geçirildi.
+[BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) yapısının hangi alanlarının başlatıldığını göstermek Için [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) yöntemine geçirilir.
 
-Bu bayraklar, yapının hangi `BP_RESOLUTION_INFO` alanlarının kullanıldığını belirtmek için de kullanılır ve bu yapı döndürüldüğünde geçerlidir.
+Bu bayraklar aynı zamanda yapının hangi alanlarının `BP_RESOLUTION_INFO` kullanıldığını ve bu yapı döndürüldüğünde geçerli olduğunu göstermek için kullanılır.
 
-Bu değerler biraz ile `OR`birleştirilebilir.
+Bu değerler, bit düzeyinde birleştirilebilir `OR` .
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)
 - [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)

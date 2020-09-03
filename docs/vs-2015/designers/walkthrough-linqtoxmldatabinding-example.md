@@ -10,22 +10,22 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0e97d612e19f64110f3090029dcff82acbad8e87
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663978"
 ---
-# <a name="walkthrough-linqtoxmldatabinding-example"></a>İzlenecek yol: LinqToXmlDataBinding örneği
+# <a name="walkthrough-linqtoxmldatabinding-example"></a>İzlenecek Yol: LinqToXmlDataBinding Örneği
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu izlenecek yol, LinqToXmlDataBinding örneğini açıklar ve iki birincil kaynak dosyasının (L2DBForm. xaml ve L2DBForm.xaml.cs) daha ilginç içeriğini açıklar.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Ön koşullar
  Bu kılavuzu kullanmadan önce, LinqToXmlDataBinding programını oluşturup çalıştırmak [için, LinqToXmlDataBinding örneğini oluşturma ve çalıştırma konusunda](../designers/how-to-build-and-run-the-linqtoxmldatabinding-example.md)açıklandığı gibi kesinlikle tavsiye ederiz.
 
 ## <a name="remarks"></a>Açıklamalar
- LinqToXmlDataBinding programı, C# ve xaml kaynak dosyalarından oluşan bir WINDOWS PRESENTATION FOUNDATION (WPF) uygulamasıdır. Kitap listesini tanımlayan ve kullanıcının bu girdileri görüntülemesini, eklemesini, silmesini ve düzenlemesini sağlayan ekli bir XML belgesi içerir. Aşağıdaki iki birincil kaynak dosyadan oluşur:
+ LinqToXmlDataBinding programı C# ve XAML kaynak dosyalarından oluşan bir Windows Presentation Foundation (WPF) uygulamasıdır. Kitap listesini tanımlayan ve kullanıcının bu girdileri görüntülemesini, eklemesini, silmesini ve düzenlemesini sağlayan ekli bir XML belgesi içerir. Aşağıdaki iki birincil kaynak dosyadan oluşur:
 
 - L2DBForm. xaml, ana pencerenin kullanıcı arabirimi (UI) için XAML bildirim kodunu içerir. Ayrıca, kitap listeleri için veri sağlayıcısını ve katıştırılmış XML belgesini tanımlayan bir pencere kaynağı bölümü içerir.
 
@@ -45,8 +45,8 @@ Bu izlenecek yol, LinqToXmlDataBinding örneğini açıklar ve iki birincil kayn
 
 |Konu|Açıklama|
 |-----------|-----------------|
-|[L2DBForm.xaml Kaynak Kodu](../designers/l2dbform-xaml-source-code.md)|L2DBForm. xaml dosyasındaki XAML kodunun içeriğini ve açıklamasını içerir.|
-|[L2DBForm.xaml.cs Kaynak Kodu](../designers/l2dbform-xaml-cs-source-code.md)|L2DBForm.xaml.cs dosyasındaki C# kaynak kodun içeriğini ve açıklamasını içerir.|
+|[L2DBForm. xaml kaynak kodu](../designers/l2dbform-xaml-source-code.md)|L2DBForm. xaml dosyasındaki XAML kodunun içeriğini ve açıklamasını içerir.|
+|[L2DBForm.xaml.cs kaynak kodu](../designers/l2dbform-xaml-cs-source-code.md)|L2DBForm.xaml.cs dosyasındaki C# kaynak kodunun içeriğini ve açıklamasını içerir.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [LINQ to XML örnek kullanarak WPF veri bağlama](../designers/wpf-data-binding-using-linq-to-xml-example.md) [nasıl yapılır: LinqToXmlDataBinding örneğini oluşturma ve çalıştırma](../designers/how-to-build-and-run-the-linqtoxmldatabinding-example.md)

@@ -1,5 +1,5 @@
 ---
-title: BP_RES_DATA_FLAGS | Microsoft Dokümanlar
+title: BP_RES_DATA_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: d0b687a54ddc1ed111b664a819dacfed6709196d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737871"
 ---
 # <a name="bp_res_data_flags"></a>BP_RES_DATA_FLAGS
-Veri kesme noktasının donanımda taklit edilip edilmeymediğini veya uygulanıp uygulanmadığını belirtir.
+Veri kesme noktasının donanımda öykünmesinin yapılıp yapılmayacağını veya uygulanıp uygulanmadığını belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_BP_RES_DATA_FLAGS {
@@ -42,18 +42,18 @@ public enum enum_BP_RES_DATA_FLAGS {
 
 ## <a name="fields"></a>Alanlar
 `BP_RES_DATA_EMULATED`\
-Veri kesme noktasının taklit edildiğini belirtir.
+Veri kesme noktasının öykünmekte olduğunu belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
 `dwFlags` [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) yapısının üyesi için kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md)

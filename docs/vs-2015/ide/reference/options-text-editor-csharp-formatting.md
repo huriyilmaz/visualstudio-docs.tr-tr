@@ -27,16 +27,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5371b7180aed462910a57daeb9bf5d43f2ecfedb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662282"
 ---
 # <a name="options-text-editor-c-formatting"></a>Seçenekler, Metin Düzenleyici, C++, Biçimlendirme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için özellik sayfasını **biçimlendirme** iletişim kutusunu kullanın. Bu iletişim kutusuna erişmek için, **Araçlar** menüsünde **Seçenekler** ' e tıklayın, **metin düzenleyici** **C#** ' yi genişletin ve ardından **biçimlendirme**' ye tıklayın.
+Kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için özellik sayfasını **biçimlendirme** iletişim kutusunu kullanın. Bu iletişim kutusuna erişmek için, **Araçlar** menüsünde **Seçenekler** ' e tıklayın, **metin düzenleyici**' yi genişletin, **C#**' ı genişletin ve ardından **biçimlendirme**' ye tıklayın.
 
 > [!NOTE]
 > Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
@@ -46,7 +46,7 @@ Kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için özelli
 
 ## <a name="uielement-list"></a>UIElement Listesi
 
-|Etiketle|Açıklama|
+|Etiketle|Description|
 |-----------|-----------------|
 |**Tamamlandı ifadesinin üzerinde otomatik olarak Biçimlendir;**|Seçildiğinde, kod Düzenleyicisi için seçilen biçimlendirme seçeneklerine göre, deyimleri tamamlanma aşamasında biçimlendirir. Kod Düzenleyicisi 'nin alter deyimlerini istemiyorsanız bu kutuyu temizleyin.|
 |**Tamamlandı bloğunu} tarihinde otomatik olarak Biçimlendir**|Seçildiğinde, kod bloğunu tamamladıktan hemen sonra kod Düzenleyicisi için seçilen biçimlendirme seçeneklerine göre kod bloklarını biçimlendirir. Kod düzenleyicisinin blokları değiştirmesini istemiyorsanız bu kutuyu temizleyin.|

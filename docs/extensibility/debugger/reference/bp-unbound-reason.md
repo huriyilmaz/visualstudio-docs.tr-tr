@@ -1,5 +1,5 @@
 ---
-title: BP_UNBOUND_REASON | Microsoft Dokümanlar
+title: BP_UNBOUND_REASON | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b0ee695e1108bf9f1c6069084a0826ee23bf37d4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737776"
 ---
 # <a name="bp_unbound_reason"></a>BP_UNBOUND_REASON
-Bir kırılma noktasının bağlanmamasının nedenini verir.
+Kesme noktasının bağlantısı kesildi sebebini sağlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_BP_UNBOUND_REASON {
@@ -54,21 +54,21 @@ Nedeni bilinmiyor.
 Kesme noktasını içeren kod kaldırıldı.
 
 `BPUR_BREAKPOINT_REBIND`\
-Kırılma noktası farklı bir konuma geri tepme oldu. Bu, kesme noktası hareket ettiğinde veya kesme noktası artık geçerli olmayan bir yola sahip bir dosyaya bağlandığında, İşlemleri Edit ve Devam'tan sonra gerçekleşebilir.
+Kesme noktası farklı bir konuma yeniden bağlıydı. Bu durum, kesme noktası taşırken veya kesme noktası artık geçerli olmayan bir dosyaya bağlandığında, düzenleme ve devam etme işlemlerinden sonra gerçekleşebilir.
 
 `BPUR_ BREAKPOINT_ERROR`\
-Kesme noktası bağlandıktan sonra hata olarak belirlenir. Bu, koşulları artık geçerli olmayan yönetilen kesme noktalarına olur.
+Kesme noktasının bağlandıktan sonra hatalı olduğu belirlendi. Bu durum, koşulları artık geçerli olmayan yönetilen kesme noktaları olur.
 
 ## <a name="remarks"></a>Açıklamalar
-[GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) yöntemiyle döndürülür.
+[GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) yöntemi tarafından döndürüldü.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md)

@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 34da9091c0f96b7270678f9b36fe861e4a87418f
-ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86876092"
 ---
 # <a name="pickbranch-activity-designer"></a>PickBranch Etkinlik Tasarımcısı
@@ -23,7 +23,7 @@ ms.locfileid: "86876092"
 
 ## <a name="pickbranch"></a>PickBranch
 
-<xref:System.Activities.Statements.PickBranch>nesneler <xref:System.Activities.Statements.Pick.Branches%2A> bir etkinlik koleksiyonunda bulunur <xref:System.Activities.Statements.Pick> . Her biri <xref:System.Activities.Statements.PickBranch> etkinliğin bir dalında bulunur <xref:System.Activities.Statements.Pick> ve tetikleyici olarak hizmet veren bazı gelen etkinlikler nedeniyle Yürütülebilirler. Bu şekilde İş Akışı Tasarımcısı, olay tabanlı denetim akışı modelleme sağlar. Her biri <xref:System.Activities.Statements.PickBranch> bir <xref:System.Activities.Statements.PickBranch.Trigger%2A> ve içerir <xref:System.Activities.Statements.PickBranch.Action%2A> .
+<xref:System.Activities.Statements.PickBranch> nesneler <xref:System.Activities.Statements.Pick.Branches%2A> bir etkinlik koleksiyonunda bulunur <xref:System.Activities.Statements.Pick> . Her biri <xref:System.Activities.Statements.PickBranch> etkinliğin bir dalında bulunur <xref:System.Activities.Statements.Pick> ve tetikleyici olarak hizmet veren bazı gelen etkinlikler nedeniyle Yürütülebilirler. Bu şekilde İş Akışı Tasarımcısı, olay tabanlı denetim akışı modelleme sağlar. Her biri <xref:System.Activities.Statements.PickBranch> bir <xref:System.Activities.Statements.PickBranch.Trigger%2A> ve içerir <xref:System.Activities.Statements.PickBranch.Action%2A> .
 
 ### <a name="how-to-use-the-pick-activity-designer"></a>Seçme etkinliği tasarımcısını kullanma
 

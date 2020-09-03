@@ -1,5 +1,5 @@
 ---
-title: Idiasourcefile::get_checksumtype | Microsoft Docs
+title: 'IDiaSourceFile:: get_checksumType | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f859bce63e2976b23ab613e249dad41b2bc63486
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190709"
 ---
-# <a name="idiasourcefilegetchecksumtype"></a>IDiaSourceFile::get_checksumType
+# <a name="idiasourcefileget_checksumtype"></a>IDiaSourceFile::get_checksumType
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Sağlama türünü alır.  
+Sağlama toplamı türünü alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_checksumType (   
@@ -35,24 +35,24 @@ HRESULT get_checksumType ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Sağlama türünü döndürür.  
+ dışı Sağlama toplamı türünü döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sağlama toplamı, bir sağlama toplamı algoritması için eşlenmiş bir değer türüdür. Örneğin, standart PDB dosya biçimine genellikle aşağıdaki değerlerden biri olabilir:  
+ Sağlama toplamı türü, sağlama algoritması ile eşleştirilenebilir bir değerdir. Örneğin, standart PDB dosya biçimi genellikle aşağıdaki değerlerden birine sahip olabilir:  
   
-|Sağlama türü|CryptoAPI etiketi|Açıklama|  
+|Sağlama toplamı türü|CryptoAPI etiketi|Açıklama|  
 |-------------------|---------------------|-----------------|  
-|0|\<yok >|Sağlama mevcut.|  
-|1\.|`CALG_MD5`|bir MD5 karma algoritması ile oluşturulan bir sağlama toplamı.|  
-|2|`CALG_SHA1`|SHA1 karma algoritması ile oluşturulan bir sağlama toplamı.|  
+|0|\<none>|Sağlama yok.|  
+|1|`CALG_MD5`|MD5 karma algoritmasıyla üretilen sağlama toplamı.|  
+|2|`CALG_SHA1`|SHA1 karma algoritmasıyla oluşturulan sağlama toplamı.|  
   
- `CryptoAPI` Olan etiketleri `ALG_ID` sabit listesi. Karma algoritmaları hakkında daha fazla bilgi için `CryptoAPI` Microsoft bölümünü [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)].  
+ `CryptoAPI`Etiketler `ALG_ID` numaralandırmadır. Karma algoritmalar hakkında daha fazla bilgi için Microsoft konusunun `CryptoAPI` bölümüne bakın [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] .  
   
- Kaynak dosyası için asıl sağlama toplamı bayt elde etmek için çağrı [Idiasourcefile::get_checksum](../../debugger/debug-interface-access/idiasourcefile-get-checksum.md) yöntemi.  
+ Kaynak dosyanın gerçek sağlama toplamı baytlarını elde etmek için [IDiaSourceFile:: get_checksum](../../debugger/debug-interface-access/idiasourcefile-get-checksum.md) metodunu çağırın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiasourcefile](../../debugger/debug-interface-access/idiasourcefile.md)   
+ [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)   
  [IDiaSourceFile::get_checksum](../../debugger/debug-interface-access/idiasourcefile-get-checksum.md)

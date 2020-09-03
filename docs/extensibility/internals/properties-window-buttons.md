@@ -1,5 +1,5 @@
 ---
-title: Özellikler Pencere Düğmeleri | Microsoft Dokümanlar
+title: Özellikler penceresi düğmeleri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,30 +11,30 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: aaa4db159ccb0ecf3d0e9c9243e23fcd0dacc455
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80706168"
 ---
 # <a name="properties-window-buttons"></a>Özellikler Penceresi Düğmeleri
-Geliştirme diline ve ürün türüne bağlı olarak, **Özellikler** penceresinin araç çubuğunda varsayılan olarak belirli düğmeler görüntülenir. Her durumda, **Kategorilere,** **Alfabetik,** **Özellikler**ve **Özellik Sayfaları** düğmeleri görüntülenir. Visual C# ve Visual Basic'te **Olaylar** düğmesi de görüntülenir. Bazı Visual C++ **projelerinde, VC++ İletileri** ve **VC Geçersiz Kılma** düğmeleri görüntülenir. Diğer proje türleri için ek düğmeler görüntülenebilir. **Özellikler** penceresindeki düğmeler hakkında daha fazla bilgi için [Özellikler Penceresi'ne](../../ide/reference/properties-window.md)bakın.
+Geliştirme diline ve ürün türüne bağlı olarak, **Özellikler** penceresi için araç çubuğunda bazı düğmeler varsayılan olarak görüntülenir. Her durumda, **kategorilere ayrılan**, **sıralama**, **Özellikler**ve **Özellik sayfaları** düğmeleri görüntülenir. Visual C# ve Visual Basic, **Olaylar** düğmesi de görüntülenir. Bazı Visual C++ projelerinde, **vc + + iletileri** ve **vc geçersiz kılmalar** düğmeleri görüntülenir. Diğer proje türleri için ek düğmeler gösterilebilir. **Özellikler** penceresindeki düğmeler hakkında daha fazla bilgi için bkz. [Özellikler penceresi](../../ide/reference/properties-window.md).
 
-## <a name="implementation-of-properties-window-buttons"></a>Özellikler Pencere Düğmelerinin Uygulanması
- **Kategorilere Ayır düğmesini** tıklattığınızda, <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> Visual Studio özelliklerini kategoriye göre sıralamak için odaklanmış nesneüzerinde arabirimi çağırır. <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties>`IDispatch` **Özellikler** penceresine sunulan nesne üzerinde uygulanır.
+## <a name="implementation-of-properties-window-buttons"></a>Özellikler penceresi düğmelerinin uygulanması
+ **Kategorilere ayrılmış** düğmesine tıkladığınızda, Visual Studio <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> nesnenin özelliklerini kategoriye göre sıralamak için odağı olan nesne üzerindeki arabirimini çağırır. <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> , `IDispatch` **Özellikler** penceresine sunulan nesnesine uygulanır.
 
- Negatif değerlere sahip 11 önceden tanımlanmış özellik kategorisi vardır. Özel kategoriler tanımlayabilirsiniz, ancak bunları önceden tanımlanmış kategorilerden ayırmak için bunları pozitif değerler atamanızı öneririz.
+ Negatif değerlere sahip 11 önceden tanımlanmış özellik kategorisi vardır. Özel kategoriler tanımlayabilirsiniz, ancak bunları önceden tanımlanmış kategorilerden ayırt etmek için pozitif değerler atamanızı öneririz.
 
- Yöntem, <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties.MapPropertyToCategory%2A> belirtilen özellik için uygun özellik kategori değerini döndürür. Yöntem, <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties.GetCategoryName%2A> kategori adını içeren bir dize döndürür. Visual Studio standart özellik kategorisi değerlerini bildiğinden, yalnızca özel kategori değerleri için destek sağlamanız gerekir.
+ <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties.MapPropertyToCategory%2A>Yöntemi, belirtilen özellik için uygun özellik kategorisi değerini döndürür. <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties.GetCategoryName%2A>Yöntemi, kategori adını içeren bir dize döndürür. Visual Studio standart özellik kategorisi değerlerini bildiğinden, yalnızca özel kategori değerleri için destek sağlamanız gerekir.
 
- **Alfabetik** düğmeyi tıklattığınızda, özellikler ada göre alfabetik sırada görüntülenir. Adlar yerelleştirilmiş `IDispatch` bir sıralama algoritmasına göre alınır.
+ **Alfabetik hale getirme** düğmesine tıkladığınızda Özellikler ada göre alfabetik sırada görüntülenir. Adlar, `IDispatch` yerelleştirilmiş bir sıralama algoritmasına göre alınır.
 
- **Özellikler** penceresi açıldığında, **Özellikler** düğmesi otomatik olarak seçili olarak gösterilir. Ortamın diğer bölümlerinde, aynı düğme görüntülenir ve **Özellikler** penceresini göstermek için düğmeyi tıklatabilirsiniz.
+ **Özellikler** penceresi açık olduğunda, **Özellikler** düğmesi otomatik olarak seçili olarak gösterilir. Ortamın diğer bölümlerinde aynı düğme görüntülenir ve **Özellikler** penceresini göstermek için bu düğmeye tıklayabilirsiniz.
 
- Seçili nesne için uygulanmazsa **Özellik Sayfaları** düğmesi kullanılamaz. `ISpecifyPropertyPages` Özellik sayfaları genellikle çözümler ve projelerle ilişkili yapılandırmaya bağımlı özellikleri görüntüler, ancak proje öğeleriyle de ilişkilendirilebilir (örneğin, Visual C++'da).
+ Seçili nesne için uygulanmıyorken **Özellik sayfaları** düğmesi kullanılamaz `ISpecifyPropertyPages` . Özellik sayfaları, genellikle çözümler ve projelerle ilişkili yapılandırmaya bağımlı özellikleri görüntüler, ancak proje öğeleriyle da ilişkilendirilebilirler (örneğin, Visual C++).
 
 > [!NOTE]
-> Yönetilmeyen kodu kullanarak **Özellikler** penceresine araç çubuğu düğmeleri ekleyemezsiniz. Araç çubuğu düğmesi eklemek için, 'den <xref:System.Windows.Forms.Design.PropertyTab>türetilen yönetilen bir nesne oluşturmanız gerekir.
+> Yönetilmeyen kod kullanarak **Özellikler** penceresine araç çubuğu düğmeleri ekleyemezsiniz. Bir araç çubuğu düğmesi eklemek için, öğesinden türetilmiş bir yönetilen nesne oluşturmalısınız <xref:System.Windows.Forms.Design.PropertyTab> .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Özellikleri Genişletme](../../extensibility/internals/extending-properties.md)

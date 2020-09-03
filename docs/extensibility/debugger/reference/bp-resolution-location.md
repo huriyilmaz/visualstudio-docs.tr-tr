@@ -1,5 +1,5 @@
 ---
-title: BP_RESOLUTION_LOCATION | Microsoft Dokümanlar
+title: BP_RESOLUTION_LOCATION | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4b11d80e90daec19a14ca509e5a4b9bdb2d1ced4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737817"
 ---
 # <a name="bp_resolution_location"></a>BP_RESOLUTION_LOCATION
-Kesme noktası çözümlü konumuyapısını belirtir.
+Kesme noktası çözümleme konumunun yapısını belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 struct _BP_RESOLUTION_LOCATION {
@@ -50,41 +50,41 @@ public struct BP_RESOLUTION_LOCATION {
 
 ## <a name="members"></a>Üyeler
 `bpType`\
-Sendika veya `unionmemberX` üyelerin nasıl yorumlanacağına BP_TYPE numaralandırma değeri. [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) `bpResLocation`
+Birleşim veya üyelerin nasıl yorumlanacağını belirten [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) numaralandırmasından bir değer `bpResLocation` `unionmemberX` .
 
 `bpResLocation.bpresCode`\
-[Yalnızca C++ ] Eğer [BP_RESOLUTION_CODE](../../../extensibility/debugger/reference/bp-resolution-code.md) yapısını `bpType`  =  `BPT_CODE`içerir.
+[Yalnızca C++] İse [BP_RESOLUTION_CODE](../../../extensibility/debugger/reference/bp-resolution-code.md) yapısını içerir `bpType`  =  `BPT_CODE` .
 
 `bpResLocation.bpresData`\
-[Yalnızca C++ ] [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) yapısını içerir. `bpType`  =  `BPT_DATA`
+[Yalnızca C++] İse [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) yapısını içerir `bpType`  =  `BPT_DATA` .
 
 `bpResLocation.unused`\
-[Yalnızca C++ ] Yer tutucu.
+[Yalnızca C++] Yer tutucu.
 
 `unionmember1`\
-[Yalnızca C# ] Nasıl yorumlanacağına ilişkin Açıklamalar'a bakın.
+[Yalnızca C#] Yorumlama hakkında açıklamalar bölümüne bakın.
 
 `unionmember2`\
-[Yalnızca C# ] Nasıl yorumlanacağına ilişkin Açıklamalar'a bakın.
+[Yalnızca C#] Yorumlama hakkında açıklamalar bölümüne bakın.
 
 `unionmember3`\
-[Yalnızca C# ] Nasıl yorumlanacağına ilişkin Açıklamalar'a bakın.
+[Yalnızca C#] Yorumlama hakkında açıklamalar bölümüne bakın.
 
 `unionmember4`\
-[Yalnızca C# ] Nasıl yorumlanacağına ilişkin Açıklamalar'a bakın.
+[Yalnızca C#] Yorumlama hakkında açıklamalar bölümüne bakın.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) ve [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) yapıların bir üyesidir.
+Bu yapı, [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) ve [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) yapılarının bir üyesidir.
 
- [Yalnızca C# ] Üyeler `unionmemberX` aşağıdaki tabloya göre yorumlanır. Her `bpType` `unionmemberX` üyenin neyi temsil edip buna `unionmemberX` göre mareşallik yaptığını belirlemek için sol sütuna bakın. Bu yapıyı C#'da yorumlamanın bir yolu için Örnek'e bakın.
+ [Yalnızca C#] `unionmemberX` Üyeler aşağıdaki tabloya göre yorumlanır. `bpType`Her üyenin ne kadar `unionmemberX` temsil ettiğini ve ne kadar uygun olduğunu belirlemek için, bu değerin içindeki sol sütuna bakın `unionmemberX` . C# dilinde bu yapıyı yorumlamak için bir yol örneğine bakın.
 
 |`bpLocationType`|`unionmember1`|`unionmember2`|`unionmember3`|`unionmember4`|
 |----------------------|--------------------|--------------------|--------------------|--------------------|
 |`BPT_CODE`|[IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)|-|-|-|
-|`BPT_DATA`|`string`(veri ifade)|`string`(işlev adı)|`string`(resim adı)|`enum_BP_RES_DATA_FLAGS`|
+|`BPT_DATA`|`string` (veri ifadesi)|`string` (işlev adı)|`string` (görüntü adı)|`enum_BP_RES_DATA_FLAGS`|
 
 ## <a name="example"></a>Örnek
-Bu örnek, C#'daki yapının nasıl yorumlanacağı gösterilmektedir. `BP_RESOLUTION_LOCATION`
+Bu örnekte, `BP_RESOLUTION_LOCATION` C# ' de yapının nasıl yorumlanacağı gösterilmektedir.
 
 ```csharp
 using System;
@@ -114,11 +114,11 @@ namespace MyPackage
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

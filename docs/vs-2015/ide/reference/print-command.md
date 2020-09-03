@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 136edf7fa91e4caeb9303edfd4441ee178fa6038
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662151"
 ---
 # <a name="print-command"></a>Yazdır Komutu
@@ -27,14 +27,14 @@ ms.locfileid: "72662151"
 
 Bir ifadeyi değerlendirir veya belirtilen metni görüntüler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Debug.Print text
 ```
 
-## <a name="arguments"></a>Arguments
- `text` gerekiyor. Değerlendirilecek ifade veya görüntülenecek metin.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `text` Gerekli. Değerlendirilecek ifade veya görüntülenecek metin.
 
 ## <a name="remarks"></a>Açıklamalar
  Bu komut için bir diğer ad olarak soru işareti (?) kullanabilirsiniz. Bu nedenle, örneğin, komut
@@ -49,7 +49,7 @@ Debug.Print text
 >? expA
 ```
 
- Bu komutun her iki sürümü de `expA` ifadenin geçerli değerini döndürür.
+ Bu komutun her iki sürümü de ifadenin geçerli değerini döndürür `expA` .
 
 ## <a name="example"></a>Örnek
 

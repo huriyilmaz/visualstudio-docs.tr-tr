@@ -1,5 +1,5 @@
 ---
-title: Proje Önceliği | Microsoft Dokümanlar
+title: Proje önceliği | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,26 +11,26 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a75c1c333d88e1bf5524281bee8b2a683ca6c98e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80706414"
 ---
 # <a name="project-priority"></a>Proje Önceliği
-Proje öğesi genellikle çözümdeki yalnızca bir projenin üyesidir. Bu nedenle, IDE öğeyi açmak için hangi projenin kullanıldığını kolayca belirleyebilir. Ancak, bir öğe birden fazla projenin üyesiyse, IDE öğeyi açmak için en iyi projeyi belirlemek için bir öncelik düzeni kullanır.
+Proje öğesi genellikle çözümdeki yalnızca bir projenin üyesidir. Bu nedenle, IDE, öğeyi açmak için hangi projenin kullanıldığını kolayca belirleyebilir. Ancak, bir öğe birden fazla projenin üyesiyse, IDE, öğeyi açmak için en iyi projeyi belirlemede bir öncelik şeması kullanır.
 
- Aşağıdaki liste proje öncelik düzenini gösterir:
+ Aşağıdaki listede, proje öncelik şeması gösterilmektedir:
 
-- IDE, belgenin <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject2.IsDocumentInProject%2A> o projenin bir üyesi olup olmadığını belirlemek için çözümdeki her proje yöntemini çağırır.
+- IDE, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject2.IsDocumentInProject%2A> belgenin o projenin bir üyesi olup olmadığını anlamak için çözümdeki her proje için yöntemini çağırır.
 
-- Belge projenin bir üyesiyse, proje, projenin bu belgeyi işlemesine göre atadığı bir öncelikle yanıt verir. Örneğin, bir dil projesi dil kaynağı dosyaları için yüksek bir önceliğe sahip yanıt verir, ancak yapı işleminin bir parçası olarak kullanılmayan tanınmayan bir dosya türü için daha düşük bir öncelikle yanıt verir.
+- Belge projenin üyesiyse proje, projenin işleme göre atadığı bir öncelik ile yanıt verir. Örneğin, bir dil projesi kendi dil kaynak dosyaları için yüksek öncelikli olarak yanıt verir, ancak yapı sürecinin bir parçası olarak kullanılmayan tanınmayan bir dosya türü için daha düşük bir önceliğe sahip olur.
 
-- Bir belge için özel, projeye özel düzenleyiciler veya tasarımcılar sağlayan projeler de yüksek öncelik alır.
+- Bir belge için özel, projeye özgü düzenleyiciler ve tasarımcılar sağlayan projeler de yüksek öncelikli bir öncelik alır.
 
-- Numaralandırma belge <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> öncelik değerlerini sağlar.
+- <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY>Sabit listesi belge önceliği değerlerini sağlar.
 
-- En yüksek önceliği belirten projeye belgeyi açmak için bağlam verilir. İki proje eşit öncelik değerleri döndürürse, etkin proje tercih edilir. Çözümdeki hiçbir proje belgeyi açabileceği yanıtını vermezse, IDE belgeyi Çeşitli Dosyalar projesine koyar. Daha fazla bilgi için [bkz.](../../extensibility/internals/miscellaneous-files-project.md)
+- En yüksek önceliğe sahip projeye belgeyi açmak için bağlam verilir. İki proje eşit öncelik değeri getirse, etkin proje tercih edilir. Çözümdeki bir proje belgeyi açabiliyorsa yanıt verirse, IDE belgeyi çeşitli dosyalar projesine koyar. Daha fazla bilgi için bkz. [çeşitli dosyalar projesi](../../extensibility/internals/miscellaneous-files-project.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çeşitli Dosyalar Projesi](../../extensibility/internals/miscellaneous-files-project.md)
