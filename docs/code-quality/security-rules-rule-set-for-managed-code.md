@@ -9,17 +9,17 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 49fe666884c3a96a5c8eb632308e7f732150805e
-ms.sourcegitcommit: 9a5cf730d8e43eed6eba25369b7b44cae0b26b98
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75929218"
 ---
 # <a name="security-rules-rule-set-for-managed-code"></a>Yönetilen kod için Güvenlik Kuralları kural kümesi
 
 Bildirilen olası güvenlik sorunlarının sayısını en üst düzeye çıkarmak için eski kod analizi için Microsoft güvenlik kuralları kural kümesini kullanın.
 
-|Kural|Açıklama|
+|Kural|Description|
 |----------|-----------------|
 |[CA2100](../code-quality/ca2100.md)|SQL sorgularını güvenlik açıkları için inceleyin|
 |[CA2102](../code-quality/ca2102.md)|CLSCompliant olmayan özel durumları genel işleyiciler içinde yakalayın|
@@ -34,7 +34,7 @@ Bildirilen olası güvenlik sorunlarının sayısını en üst düzeye çıkarma
 |[CA2112](../code-quality/ca2112.md)|Güvenli türler alanları açığa çıkarmamalıdır|
 |[CA2114](../code-quality/ca2114.md)|Metot güvenliği türün bir üst kümesi olmalıdır|
 |[CA2115](../code-quality/ca2115.md)|Yerel kaynaklar kullanırken GC.KeepAlive'ı çağırın|
-|[CA2116Ç](../code-quality/ca2116.md)|APTCA metotları yalnızca APTCA metotlarını çağırmalıdır|
+|[CA2116](../code-quality/ca2116.md)|APTCA metotları yalnızca APTCA metotlarını çağırmalıdır|
 |[CA2117](../code-quality/ca2117.md)|APTCA türleri yalnızca APTCA taban türlerini genişletmelidir|
 |[CA2118](../code-quality/ca2118.md)|SuppressUnmanagedCodeSecurityAttribute kullanımını gözden geçirin|
 |[CA2119](../code-quality/ca2119.md)|Özel arabirimleri karşılayan metotları mühürleyin|
@@ -86,5 +86,5 @@ Bildirilen olası güvenlik sorunlarının sayısını en üst düzeye çıkarma
 |[CA3010](../code-quality/ca3010.md)|XAML ekleme güvenlik açıkları için inceleme kodu|
 |[CA3011](../code-quality/ca3011.md)|DLL ekleme güvenlik açıkları için inceleme kodu|
 |[CA3012](../code-quality/ca3012.md)|Normal ifade ekleme güvenlik açıkları için inceleme kodu|
-|[CA5358](../code-quality/ca5358.md)|Güvenli olmayan şifre modlarını kullanma|
+|[CA5358](../code-quality/ca5358.md)|Güvenli Olmayan Şifreleme Modlarını Kullanmayın|
 |[CA5403](../code-quality/ca5403.md)|Sertifikayı sabit olarak kodlamayın|

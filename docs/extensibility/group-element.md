@@ -1,5 +1,5 @@
 ---
-title: Grup Elemanı | Microsoft Dokümanlar
+title: Grup öğesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +12,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 26479257511d74f122dd4064330f5b6a1e8dadd3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711228"
 ---
-# <a name="group-element"></a>Grup öğesi
+# <a name="group-element"></a>Group öğesi
 VSPackage komut grubunu tanımlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Group guid="guidMyCommandSet" id="MyGroup" priority="0x101">
@@ -36,23 +36,23 @@ VSPackage komut grubunu tanımlar.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Guıd|Gereklidir. GUID/ID komut tanımlayıcısının GUID'i.|
-|id|Gereklidir. GUID/ID komut tanımlayıcısının kimliği.|
-|Öncelik|İsteğe bağlı. Önceliği belirten sayısal bir değer.|
-|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
+|guid|Gereklidir. GUID/ID komut tanımlayıcısının GUID 'SI.|
+|kimlik|Gereklidir. GUID/ID komut tanımlayıcısının KIMLIĞI.|
+|Priority|İsteğe bağlı. Önceliği belirten sayısal bir değer.|
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|Üst|İsteğe bağlı. Düğmenin ana öğesi.|
-|Ek Açıklama|İsteğe bağlı yorum.|
+|Üst|İsteğe bağlı. Düğmenin üst öğesi.|
+|Ek Açıklama|İsteğe bağlı açıklama.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Gruplar öğesi](../extensibility/groups-element.md)|VSPackage komut gruplarını tanımlayan girişler içerir.|
+|[Groups öğesi](../extensibility/groups-element.md)|VSPackage 'un komut gruplarını tanımlayan girişleri içerir.|
 
 ## <a name="example"></a>Örnek
 
@@ -63,4 +63,4 @@ VSPackage komut grubunu tanımlar.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio komut tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -138,7 +138,7 @@
                   href: extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md
                 - name: VSO Eklentilerinde Diğer Office Çözümlerinden Kod Çağırma
                   href: calling-code-in-vsto-add-ins-from-other-office-solutions.md
-                - name: 'İzlenecek yol: VSTO Eklentisinde VBA''dan Kod Çağırma'
+                - name: 'İnceleme: VSTO Eklentisinde VBA''dan Kod Çağırma'
                   href: walkthrough-calling-code-in-a-vsto-add-in-from-vba.md
                 - name: Genişletilebilirlik Arabirimlerini Kullanarak Kullanıcı Arabirimi Özelliklerini Özelleştirme
                   href: customizing-ui-features-by-using-extensibility-interfaces.md
@@ -152,11 +152,11 @@
                       href: combining-vba-and-document-level-customizations.md
                     - name: Visual Basic Projesinde Kodu VBA Kullanımına Sunma
                       href: how-to-expose-code-to-vba-in-a-visual-basic-project.md
-                    - name: 'Visual C# Projesinde Kodu VBA Kullanımına Sunma'
+                    - name: Visual C# Projesinde Kodu VBA Kullanımına Sunma
                       href: how-to-expose-code-to-vba-in-a-visual-csharp-project.md
-                    - name: 'İzlenecek yol: Visual Basic Projesinde VBA''dan Kod Çağırma'
+                    - name: 'İzlenecek Yol: Visual Basic Projesinde VBA''dan Kod Çağırma'
                       href: walkthrough-calling-code-from-vba-in-a-visual-basic-project.md
-                    - name: 'İzlenecek yol: Visual C# Projesinde VBA''dan Kod Çağırma'
+                    - name: 'İzlenecek Yol: Visual C# Projesinde VBA''dan Kod Çağırma'
                       href: walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md
                 - name: ServerDocument Sınıfını Kullanarak Sunucuda Belge Yönetme
                   items:
@@ -186,17 +186,17 @@
                           href: limitations-of-windows-forms-controls-on-office-documents.md
                         - name: Office Belgelerine Windows Forms Denetimleri Ekleme
                           href: how-to-add-windows-forms-controls-to-office-documents.md
-                        - name: 'İzlenecek yol: CheckBox Denetimlerini Kullanarak Belge Biçimlendirmesini Değiştirme'
+                        - name: 'İzlenecek Yol: CheckBox Denetimlerini Kullanarak Belge Biçimlendirmesini Değiştirme'
                           href: walkthrough-changing-document-formatting-using-checkbox-controls.md
-                        - name: 'İzlenecek yol: CheckBox Denetimlerini Kullanarak Çalışma Sayfası Biçimlendirmesini Değiştirme'
+                        - name: 'İzlenecek Yol: CheckBox Denetimlerini Kullanarak Çalışma Sayfası Biçimlendirmesini Değiştirme'
                           href: walkthrough-changing-worksheet-formatting-using-checkbox-controls.md
-                        - name: 'İzlenecek yol: Belgedeki Metin Kutusunda Düğme Kullanarak Metin Görüntüleme'
+                        - name: 'İzlenecek Yol: Belgedeki Metin Kutusunda Düğme Kullanarak Metin Görüntüleme'
                           href: walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md
-                        - name: 'İzlenecek yol: Çalışma Sayfasındaki Metin Kutusunda Düğme Kullanarak Metin Görüntüleme'
+                        - name: 'İzlenecek Yol: Düğme Kullanarak Çalışma Sayfasındaki Metin Kutusunda Metin Görüntüleme'
                           href: walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md
-                        - name: 'İzlenecek yol: Radyo Düğmelerini Kullanarak Belgede Grafik Güncelleme'
+                        - name: 'İzlenecek Yol: Radyo Düğmelerini Kullanarak Belgede Grafik Güncelleme'
                           href: walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md
-                        - name: 'İzlenecek yol: Radyo Düğmelerini Kullanarak Çalışma Sayfasında Grafik Güncelleme'
+                        - name: 'İzlenecek Yol: Radyo Düğmelerini Kullanarak Çalışma Sayfasında Grafik Güncelleme'
                           href: walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons.md
                         - name: Çalışma Sayfası Hücreleri İçinde Denetimleri Yeniden Boyutlandırma
                           href: how-to-resize-controls-within-worksheet-cells.md
@@ -216,11 +216,11 @@
                       href: how-to-get-started-customizing-the-ribbon.md
                     - name: Şerit Tasarımcısı
                       href: ribbon-designer.md
-                    - name: 'İzlenecek yol: Şerit Tasarımcısını Kullanarak Özel Sekme Oluşturma'
+                    - name: 'İzlenecek Yol: Şerit Tasarımcısını Kullanarak Özel Sekme Oluşturma'
                       href: walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md
                     - name: Şerit Nesne Modeline Genel Bakış
                       href: ribbon-object-model-overview.md
-                    - name: 'İzlenecek yol: Şerit Denetimlerini Çalışma Zamanında Güncelleme'
+                    - name: 'İzlenecek Yol: Şerit Denetimlerini Çalışma Zamanında Güncelleme'
                       href: walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md
                     - name: Outlook İçin Şerit Özelleştirme
                       href: customizing-a-ribbon-for-outlook.md
@@ -240,7 +240,7 @@
                       href: how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md
                     - name: Şerit XML
                       href: ribbon-xml.md
-                    - name: 'İzlenecek yol: Şerit XML Kullanarak Özel Sekme Oluşturma'
+                    - name: 'İzlenecek Yol: Şerit XML Kullanarak Özel Sekme Oluşturma'
                       href: walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md
                 - name: Eylemler Bölmesine Genel Bakış
                   items:
@@ -250,11 +250,11 @@
                       href: how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md
                     - name: Eylemler Bölmesindeki Denetim Düzenini Yönetme
                       href: how-to-manage-control-layout-on-actions-panes.md
-                    - name: 'İzlenecek yol: Word Eylemler Bölmesindeki Denetimlere Veri Bağlama'
+                    - name: 'İzlenecek Yol: Word Eylemler Bölmesindeki Denetimlere Veri Bağlama'
                       href: walkthrough-binding-data-to-controls-on-a-word-actions-pane.md
-                    - name: 'İzlenecek yol: Excel Eylemler Bölmesindeki Denetimlere Veri Bağlama'
+                    - name: 'İzlenecek Yol: Excel Eylemler Bölmesindeki Denetimlere Veri Bağlama'
                       href: walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md
-                    - name: 'İzlenecek yol: Eylemler Bölmesinden Belgeye Metin Ekleme'
+                    - name: 'İzlenecek Yol: Eylemler Bölmesinden Belgeye Metin Ekleme'
                       href: walkthrough-inserting-text-into-a-document-from-an-actions-pane.md
                 - name: Özel Görev Bölmeleri
                   items:
@@ -262,11 +262,11 @@
                       href: custom-task-panes.md
                     - name: Uygulamaya Özel Görev Bölmesi Ekleme
                       href: how-to-add-a-custom-task-pane-to-an-application.md
-                    - name: 'İzlenecek yol: Uygulamayı Özel Görev Bölmesinden Otomatikleştirme'
+                    - name: 'İzlenecek Yol: Uygulamayı Özel Görev Bölmesinden Otomatikleştirme'
                       href: walkthrough-automating-an-application-from-a-custom-task-pane.md
-                    - name: 'İzlenecek yol: Özel Görev Bölmesini Şerit Düğmesi ile Eşitleme'
+                    - name: 'İzlenecek Yol: Özel Görev Bölmesini Şerit Düğmesi ile Eşitleme'
                       href: walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md
-                    - name: 'İzlenecek yol: Outlook''ta E-Posta İletileri ile Birlikte Özel Görev Bölmelerini Görüntüleme'
+                    - name: 'İzlenecek Yol: Outlook''ta E-Posta İletileri ile Birlikte Özel Görev Bölmelerini Görüntüleme'
                       href: walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md
                 - name: Office Çözümlerinde WPF Denetimlerini Kullanma
                   href: using-wpf-controls-in-office-solutions.md
@@ -276,7 +276,7 @@
                   href: how-to-show-add-in-user-interface-errors.md
                 - name: Kısayol Menülerine Komut Ekleme
                   href: how-to-add-commands-to-shortcut-menus.md
-                - name: 'İzlenecek yol: Windows Formu Kullanarak Veri Toplama'
+                - name: 'İzlenecek Yol: Windows Formu Kullanarak Veri Toplama'
                   href: walkthrough-collecting-data-using-a-windows-form.md
             - name: Office Çözümlerindeki Veriler
               items:
@@ -292,7 +292,7 @@
                       href: how-to-populate-documents-with-data-from-a-database.md
                     - name: Belgeleri Hizmet Verileriyle Doldurma
                       href: how-to-populate-documents-with-data-from-services.md
-                    - name: 'İzlenecek yol: VSTO Eklenti Projesinde Bir Hizmetten Verilere Bağlanma'
+                    - name: 'İzlenecek Yol: Bir VSTO eklenti Projesinde Bir Hizmetten Verilere Bağlanma'
                       href: walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project.md
                     - name: Belgeleri Nesne Verileriyle Doldurma
                       href: how-to-populate-documents-with-data-from-objects.md
@@ -300,13 +300,13 @@
                       href: how-to-scroll-through-database-records-in-a-worksheet.md
                     - name: Konak Kontrolü Verileriyle Veri Kaynağını Güncelleme
                       href: how-to-update-a-data-source-with-data-from-a-host-control.md
-                    - name: 'İzlenecek yol: Belge Düzeyi Projede Basit Veri Bağlama'
+                    - name: 'İzlenecek Yol: Belge Düzeyi Projede Basit Veri Bağlama'
                       href: walkthrough-simple-data-binding-in-a-document-level-project.md
-                    - name: 'İzlenecek yol: Belge Düzeyi Projede Karmaşık Veri Bağlama'
+                    - name: 'İzlenecek Yol: Belge Düzeyi Projede Karmaşık Veri Bağlama'
                       href: walkthrough-complex-data-binding-in-a-document-level-project.md
-                    - name: 'İzlenecek yol: VSTO Eklenti Projesinde Basit Veri Bağlama'
+                    - name: 'İzlenecek Yol: VSTO eklenti Projesinde Basit Veri Bağlama'
                       href: walkthrough-simple-data-binding-in-vsto-add-in-project.md
-                    - name: 'İzlenecek yol: VSTO Eklenti Projesinde Karmaşık Veri Bağlama'
+                    - name: 'İzlenecek Yol: VSTO eklenti Projesinde Karmaşık Veri Bağlama'
                       href: walkthrough-complex-data-binding-in-vsto-add-in-project.md
                 - name: Özel XML Bölümlerine Genel Bakış
                   items:
@@ -330,17 +330,17 @@
                           href: how-to-programmatically-cache-a-data-source-in-an-office-document.md
                         - name: Parola Korumalı Belgede Veriyi Önbelleğe Alma
                           href: how-to-cache-data-in-a-password-protected-document.md
-                        - name: 'İzlenecek yol: Önbellekteki Veri Kümesini Kullanarak Ana Öğe-Ayrıntı İlişkisi Oluşturma'
+                        - name: 'İzlenecek Yol: Önbellekteki Veri Kümesini Kullanarak Ana Öğe-Ayrıntı İlişkisi Oluşturma'
                           href: walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md
                     - name: Sunucudaki Belgelerde Verilere Erişme
                       items:
                         - name: Sunucudaki Belgelerde Verilere Erişme
                           href: accessing-data-in-documents-on-the-server.md
-                        - name: 'İzlenecek yol: Sunucudaki Çalışma Kitabına Veri Ekleme'
+                        - name: 'İzlenecek Yol: Sunucudaki Çalışma Kitabına Veri Ekleme'
                           href: walkthrough-inserting-data-into-a-workbook-on-a-server.md
-                        - name: 'İzlenecek yol: Sunucudaki Çalışma Kitabından Önbelleğe Alınmış Verileri Alma'
+                        - name: 'İzlenecek Yol: Sunucudaki Çalışma Kitabından Önbelleğe Alınmış Verileri Alma'
                           href: walkthrough-retrieving-cached-data-from-a-workbook-on-a-server.md
-                        - name: 'İzlenecek yol: Sunucudaki Çalışma Kitabında Bulunan Önbelleğe Alınmış Verileri Değiştirme'
+                        - name: 'İzlenecek Yol: Sunucudaki Çalışma Kitabında Bulunan Önbelleğe Alınmış Verileri Değiştirme'
                           href: walkthrough-changing-cached-data-in-a-workbook-on-a-server.md
                 - name: Belge Düzeyi Özelleştirmelerde XML Şemaları ve Verileri
                   items:
@@ -494,7 +494,7 @@
                   href: how-to-map-listobject-columns-to-data.md
                 - name: ListObject Denetimlerini Veri ile Doldurma
                   href: how-to-fill-listobject-controls-with-data.md
-                - name: 'İzlenecek yol: NamedRange Denetimi Olaylarına Karşı Programlama'
+                - name: 'İzlenecek Yol: NamedRange Denetimi Olaylarına Karşı Programlama'
                   href: walkthrough-programming-against-events-of-a-namedrange-control.md
             - name: Birlikte Yazmayı ve Eklentileri Anlama
               href: understanding-coauthoring-and-addins.md
@@ -502,11 +502,11 @@
               href: globalization-and-localization-of-excel-solutions.md
             - name: Excel Çalışma Sayfalarında Windows Forms Denetimlerini Kullanma
               href: using-windows-forms-controls-on-excel-worksheets.md
-            - name: 'İzlenecek yol: Excel İçin İlk Belge Düzeyi Özelleştirmeyi Oluşturma'
+            - name: 'İzlenecek Yol: Excel İçin İlk Belge Düzeyi Özelleştirmeyi Oluşturma'
               href: walkthrough-creating-your-first-document-level-customization-for-excel.md
-            - name: 'İzlenecek yol: Excel için İlk VSTO Eklentinizi Oluşturma'
+            - name: 'İnceleme: Excel için İlk VSTO Eklentinizi Oluşturma'
               href: walkthrough-creating-your-first-vsto-add-in-for-excel.md
-            - name: 'İzlenecek yol: Çalışma Zamanında VSTO Eklenti Projesindeki Çalışma Sayfasına Denetimler Ekleme'
+            - name: 'İzlenecek Yol: Çalışma Zamanında VSTO Eklenti Projesindeki Çalışma Sayfasına Denetimler Ekleme'
               href: walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md
         - name: InfoPath Çözümleri
           href: infopath-solutions.md
@@ -586,9 +586,9 @@
                   href: how-to-add-a-form-region-to-an-outlook-add-in-project.md
                 - name: Form Bölgesini Outlook İleti Sınıfıyla İlişkilendirme
                   href: associating-a-form-region-with-an-outlook-message-class.md
-                - name: 'İzlenecek yol: Outlook Form Bölgesi Tasarlama'
+                - name: 'İzlenecek Yol: Outlook Form Bölgesi Tasarlama'
                   href: walkthrough-designing-an-outlook-form-region.md
-                - name: 'İzlenecek yol: Outlook''ta Tasarlanan Form Bölgesini İçeri Aktarma'
+                - name: 'İzlenecek Yol: Outlook''ta Tasarlanan Form Bölgesini İçeri Aktarma'
                   href: walkthrough-importing-a-form-region-that-is-designed-in-outlook.md
                 - name: Form Bölgesine Çalışma Zamanında Erişme
                   href: accessing-a-form-region-at-run-time.md
@@ -596,13 +596,13 @@
                   href: how-to-prevent-outlook-from-displaying-a-form-region.md
                 - name: Outlook Form Bölgelerindeki Özel Eylemler
                   href: custom-actions-in-outlook-form-regions.md
-            - name: 'İzlenecek yol: Outlook için İlk VSTO Eklentinizi Oluşturma'
+            - name: 'İnceleme: Outlook için İlk VSTO Eklentinizi Oluşturma'
               href: walkthrough-creating-your-first-vsto-add-in-for-outlook.md
         - name: PowerPoint Çözümleri
           items:
             - name: PowerPoint Çözümleri
               href: powerpoint-solutions.md
-            - name: 'İzlenecek yol: PowerPoint için İlk VSTO Eklentinizi Oluşturma'
+            - name: 'İnceleme: PowerPoint için İlk VSTO Eklentinizi Oluşturma'
               href: walkthrough-creating-your-first-vsto-add-in-for-powerpoint.md
         - name: Proje Çözümleri
           items:
@@ -750,17 +750,17 @@
                   href: how-to-protect-parts-of-documents-by-using-content-controls.md
                 - name: Yer İşareti Denetimlerini Yeniden Boyutlandırma
                   href: how-to-resize-bookmark-controls.md
-                - name: 'İzlenecek yol: İçerik Denetimlerini Kullanarak Şablon Oluşturma'
+                - name: 'İzlenecek Yol: İçerik Denetimlerini Kullanarak Şablon Oluşturma'
                   href: walkthrough-creating-a-template-by-using-content-controls.md
-                - name: 'İzlenecek yol: İçerik Denetimlerini Özel XML Bölümlerine Bağlama'
+                - name: 'İzlenecek Yol: İçerik Denetimlerini Özel XML Bölümlerine Bağlama'
                   href: walkthrough-binding-content-controls-to-custom-xml-parts.md
-                - name: 'İzlenecek yol: Yer İşaretleri İçin Kısayol Menüleri Oluşturma'
+                - name: 'İzlenecek Yol: Yer İşaretleri İçin Kısayol Menüleri Oluşturma'
                   href: walkthrough-creating-shortcut-menus-for-bookmarks.md
-            - name: 'İzlenecek yol: Word İçin İlk Belge Düzeyi Özelleştirmeyi Oluşturma'
+            - name: 'İzlenecek Yol: Word İçin İlk Belge Düzeyi Özelleştirmeyi Oluşturma'
               href: walkthrough-creating-your-first-document-level-customization-for-word.md
-            - name: 'İzlenecek yol: Word İçin İlk VSTO Eklentinizi Oluşturma'
+            - name: 'İnceleme: Word için İlk VSTO Eklentinizi Oluşturma'
               href: walkthrough-creating-your-first-vsto-add-in-for-word.md
-            - name: 'İzlenecek yol: VSTO Eklentisindeki Belgeye Çalışma Zamanında Denetim Ekleme'
+            - name: 'İzlenecek Yol: VSTO Eklentisindeki Belgeye Çalışma Zamanında Denetim Ekleme'
               href: walkthrough-adding-controls-to-a-document-at-run-time-in-a-vsto-add-in.md
         - name: Office Çözümleri Oluşturma
           href: building-office-solutions.md

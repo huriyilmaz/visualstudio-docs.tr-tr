@@ -9,16 +9,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: cb2f209e212406fd9809ecb4bd30bce30d95a2bf
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544800"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Visual Studio İçin Görüntüler ve Simgeler
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a>Visual Studio 'da görüntü kullanımı
+## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a> Visual Studio 'da görüntü kullanımı
  Resim oluşturmadan önce, [Visual Studio Görüntü Kitaplığı](https://www.microsoft.com/download/details.aspx?id=35825)'nda 1000 + görüntüden birini kullanmayı düşünün.
 
 ### <a name="types-of-images"></a>Görüntü türleri
@@ -35,7 +35,7 @@ ms.locfileid: "85544800"
 
 - **İmleçler.** Bir işlemin fare kullanarak izin verilip verilmeyeceğini belirtmek için kullanılır, burada bir nesne bırakılabilir ve bu şekilde devam eder.
 
-## <a name="icon-design"></a><a name="BKMK_IconDesign"></a>Simge tasarımı
+## <a name="icon-design"></a><a name="BKMK_IconDesign"></a> Simge tasarımı
 
 ### <a name="overview"></a>Genel Bakış
  Visual Studio, temizleme geometrisi ve 50/50 bir pozitif/negatif (Açık/Koyu) olan modern stil simgeleri kullanır ve doğrudan, anlaşılır olmayan metaphiler kullanır. Netme, basitleştirme ve bağlam etrafında önemli simge tasarım noktaları merkezi.
@@ -150,7 +150,7 @@ ms.locfileid: "85544800"
 
 |**Sıfırdan olumlu oranı doğru yapın**|**Negatif-pozitif oranına yanlış**|
 |-|-|
-|![Simgeler &#40;1&#41;için görsel ağırlığı düzeltin](../../extensibility/ux-guidelines/media/0404-26-visualweightcorrect1.png "0404-26_VisualWeightCorrect1")<br /><br /> ![Simgeler &#40;2&#41;için görsel ağırlığı düzeltin](../../extensibility/ux-guidelines/media/0404-27-visualweightcorrect2.png "0404-27_VisualWeightCorrect2")<br /><br /> ![Simgeler &#40;3&#41;için doğru görsel ağırlığı](../../extensibility/ux-guidelines/media/0404-28-visualweightcorrect3.png "0404-28_VisualWeightCorrect3")|![Simgeler için yanlış görsel ağırlık](../../extensibility/ux-guidelines/media/0404-29-visualweightincorrect.png "0404-29_VisualWeightIncorrect")|
+|![Simgeler &#40;1&#41;için görsel ağırlığı düzeltin ](../../extensibility/ux-guidelines/media/0404-26-visualweightcorrect1.png "0404-26_VisualWeightCorrect1")<br /><br /> ![Simgeler &#40;2&#41;için görsel ağırlığı düzeltin ](../../extensibility/ux-guidelines/media/0404-27-visualweightcorrect2.png "0404-27_VisualWeightCorrect2")<br /><br /> ![Simgeler &#40;3&#41;için doğru görsel ağırlığı ](../../extensibility/ux-guidelines/media/0404-28-visualweightcorrect3.png "0404-28_VisualWeightCorrect3")|![Simgeler için yanlış görsel ağırlık](../../extensibility/ux-guidelines/media/0404-29-visualweightincorrect.png "0404-29_VisualWeightIncorrect")|
 
  Öğeleri öğe bütünlüğünden ödün vermeden derlemek için basit, karşılaştırılabilir şekiller ve tamamlayıcı açıları kullanın. Mümkün olduğunda 45 ° veya 90 ° açı kullanın.
 
@@ -269,7 +269,7 @@ ms.locfileid: "85544800"
 
  Visual Studio simgelerinde renk kullanma hakkında daha fazla bilgi için bkz. [görüntülerde renk kullanma](../../extensibility/ux-guidelines/images-and-icons-for-visual-studio.md#BKMK_UsingColorInImages).
 
-## <a name="using-color-in-images"></a><a name="BKMK_UsingColorInImages"></a>Görüntülerde renk kullanma
+## <a name="using-color-in-images"></a><a name="BKMK_UsingColorInImages"></a> Görüntülerde renk kullanma
 
 ### <a name="overview"></a>Genel Bakış
  Visual Studio 'daki simgeler temelde tek bir görseldir. Renk, belirli bilgileri iletmek ve hiçbir şekilde süslemesi için ayrılmıştır. Renk kullanılır:
@@ -422,7 +422,7 @@ ms.locfileid: "85544800"
 ### <a name="visual-studio-online"></a>Visual Studio Online
  Genel olarak, Visual Studio Online bir tarayıcıda barındırılan özelliklerden oluşur. Renk farklı ortamlarda farklılık gösterir, ancak stil aynı kalır.
 
-|Grup|Kullanım|Name|Değer (tüm temalar)|Basılı|
+|Gruplama|Kullanım|Name|Değer (tüm temalar)|Basılı|
 |-----------|-----------|----------|--------------------------|------------|
 |TFS|Arka Plan|TFSO BG|656565/101, 101, 101|![Renk örneği 656565](../../extensibility/ux-guidelines/media/0405-656565.png "0405_656565")|
 |TFS|Ana hat|TFSO ÇıKıŞ|FFFFFF/255, 255, 255|![Renk örneği FFFFFF](../../extensibility/ux-guidelines/media/0405-ffffff.png "0405_FFFFFF")|

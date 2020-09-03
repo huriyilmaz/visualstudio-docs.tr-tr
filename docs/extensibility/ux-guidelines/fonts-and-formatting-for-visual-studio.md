@@ -9,14 +9,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: fd2e8a41ef4b9708df079e94bcac8b8c06189116
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536116"
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>Visual Studio İçin Yazı Tipleri ve Biçimlendirme
-## <a name="the-environment-font"></a><a name="BKMK_TheEnvironmentFont"></a>Ortam yazı tipi
+## <a name="the-environment-font"></a><a name="BKMK_TheEnvironmentFont"></a> Ortam yazı tipi
  Visual Studio içindeki tüm yazı tipleri, özelleştirmeye yönelik kullanıcıya gösterilmelidir. Bu, öncelikle **araçlar > seçenekleri** Iletişim kutusundaki **yazı tipleri ve renkler** sayfasından yapılır. Yazı tipi ayarlarının üç ana kategorisi şunlardır:
 
 - **Ortam yazı tipi** -iletişim kutuları, menüler, araç pencereleri ve belge pencereleri dahil olmak üzere tüm arabirim öğeleri IÇIN kullanılan IDE (tümleşik geliştirme ortamı) için birincil yazı tipi. Varsayılan olarak, ortam yazı tipi Windows 'un geçerli sürümlerinde 9 nk Segoe UI olarak görünen bir sistem yazı tipine bağlıdır. Tüm arabirim öğelerinde bir yazı tipi kullanmak, IDE genelinde tutarlı bir yazı tipi görünümünün sağlanmasına yardımcı olur.
@@ -32,7 +32,7 @@ ms.locfileid: "85536116"
 
 1. Düzenleyicide kod metni için, kod metni yazı tipi ayarıyla yeniden boyutlandırın ve düzenleyici metninin yakınlaştırma düzeyini yanıtlayın.
 
-2. Arabirimin diğer tüm öğeleri, ortam yazı tipi ayarına bağlı olmalıdır ve ortamdaki tüm genel değişikliklere yanıt vermelidir. Bu, (ancak bunlarla sınırlı olmamak üzere) şunları içerir:
+2. Arabirimin diğer tüm öğeleri, ortam yazı tipi ayarına bağlı olmalıdır ve ortamdaki tüm genel değişikliklere yanıt vermelidir. Bu adımlardan bazıları:
 
     - Bağlam menülerindeki metin
 
@@ -69,7 +69,7 @@ internal partial class WebConfigModificationWindow : DialogWindow
 
  ( `Microsoft.VisualStudio.Shell.11.0` MPF dll 'nin geçerli sürümüyle değiştirin.)
 
- İletişim kutusunu göstermek için, sınıfında " `ShowModal()` " çağırın `ShowDialog()` . `ShowModal()`kabukta doğru kalıcı durumu ayarlar, iletişim kutusunun üst pencerede ortalanmasını sağlar ve bu şekilde devam eder.
+ İletişim kutusunu göstermek için, sınıfında " `ShowModal()` " çağırın `ShowDialog()` . `ShowModal()` kabukta doğru kalıcı durumu ayarlar, iletişim kutusunun üst pencerede ortalanmasını sağlar ve bu şekilde devam eder.
 
  Kod şu şekildedir:
 
@@ -78,7 +78,7 @@ MyWindow window = new MyWindow();
 window.ShowModal()
 ```
 
- `ShowModal`bir bool döndürür mi? (null yapılabilir Boolean) ile `DialogResult` , gerekirse kullanılabilir. İletişim kutusu **Tamam**ile kapalıysa dönüş değeri true olur.
+ `ShowModal` bir bool döndürür mi? (null yapılabilir Boolean) ile `DialogResult` , gerekirse kullanılabilir. İletişim kutusu **Tamam**ile kapalıysa dönüş değeri true olur.
 
  Bir iletişim kutusu olmayan ve bir Win32/WinForms ana penceresinin WPF alt penceresi gibi bir iletişim kutusu olmayan ve kendi içinde barındırılan bazı WPF Kullanıcı arabirimini kullanmanız gerekiyorsa, `HwndSource` `FontFamily` `FontSize` WPF öğesinin kök öğesinde ve öğesini ayarlamanız gerekir. (Kabuk ana penceredeki özellikleri ayarlar, ancak bundan sonra devralınmaz `HWND` ). Kabuk, özelliklerin bağlanacağı kaynakları sağlar; örneğin:
 
@@ -87,7 +87,7 @@ window.ShowModal()
 <Setter Property="FontSize" Value="{DynamicResource VsFont.EnvironmentFontSize}" />
 ```
 
-### <a name="formatting-scalingbolding-reference"></a><a name="BKMK_Formatting"></a>Biçimlendirme (ölçeklendirme/cıvamanı) başvurusu
+### <a name="formatting-scalingbolding-reference"></a><a name="BKMK_Formatting"></a> Biçimlendirme (ölçeklendirme/cıvamanı) başvurusu
  Bazı iletişim kutularında belirli bir metnin kalın olması veya ortam yazı tipinin dışında bir boyutta olması gerekir. Daha önce, ortam yazı tipinde daha büyük yazı tiplerinin " `environment font +2` " veya benzer şekilde kodlandığı. Belirtilen kod parçacıklarını kullanmak yüksek DPı izleyicileri destekleyecektir ve görüntü metninin her zaman doğru boyutta ve ağırlığa (ışık veya Semilight gibi) göründüğünden emin olur.
 
 > [!NOTE]
@@ -301,7 +301,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 
  Yazı tipini sıfırlamak için, Araçlar > Seçenekler altında "Varsayılanları Kullan" seçeneğine tıklayın **> ortam > yazı tipi ve renk**.
 
-## <a name="text-style"></a><a name="BKMK_TextStyle"></a>Metin stili
+## <a name="text-style"></a><a name="BKMK_TextStyle"></a> Metin stili
  Metin stili, yazı tipi boyutu, ağırlık ve büyük harfe başvurur. Uygulama Kılavuzu için bkz. [ortam yazı tipi](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont).
 
 ### <a name="text-casing"></a>Metin büyük harfleri
@@ -389,7 +389,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 #### <a name="italics"></a>İtalik
  Visual Studio, italik ya da kalın italik metin kullanmaz.
 
-#### <a name="color"></a>Renk
+#### <a name="color"></a>Color
 
 - Mavi, köprüler için ayrılmıştır (gezinti ve verme) ve hiçbir şekilde yönlendirme için kullanılmamalıdır.
 

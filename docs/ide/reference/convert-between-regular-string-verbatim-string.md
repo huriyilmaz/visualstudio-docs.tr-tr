@@ -1,5 +1,5 @@
 ---
-title: Normal dize ve tam dize değişmez değerleri arasında Dönüştür
+title: Normal dize ve düz metin dizesi değişmez değerleri arasında dönüştürme
 ms.date: 06/08/2020
 ms.topic: reference
 author: mikadumont
@@ -10,10 +10,10 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 7e8e239f53f92727072a2fcd6573d6957b7cd3ec
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85290571"
 ---
 # <a name="convert-between-regular-string-and-verbatim-string-literals-refactoring"></a>Normal dize ve tam dize değişmez değerlerini yeniden düzenleme arasında Dönüştür

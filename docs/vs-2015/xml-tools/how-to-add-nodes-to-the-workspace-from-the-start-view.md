@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5bf0301f9b97bf6a7ca76f72f832c635a0dbb128
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656388"
 ---
-# <a name="how-to-add-nodes-to-the-workspace-from-the-start-view"></a>Nasıl yapılır: başlangıç görünümünden çalışma alanına düğüm ekleme
+# <a name="how-to-add-nodes-to-the-workspace-from-the-start-view"></a>Nasıl Yapılır: Başlangıç Görünümünden Çalışma Alanına Düğüm Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu konuda, [Başlangıç görünümünden](../xml-tools/start-view.md) [XML şema Tasarımcısı çalışma alanına](../xml-tools/xml-schema-designer-workspace.md) genel düğümlerin nasıl ekleneceği açıklanmaktadır.
@@ -33,4 +33,4 @@ Bu konuda, [Başlangıç görünümünden](../xml-tools/start-view.md) [XML şem
 
 3. **Genel karmaşık türler** başlığının sağındaki **Ekle** bağlantısına tıklayın.
 
-     @No__t_0 ve `PurchaseOrderType` karmaşık tür düğümleri grafik görünümünün tasarım yüzeyinde görünür.
+     `USAddress`Ve `PurchaseOrderType` karmaşık tür düğümleri grafik görünümünün tasarım yüzeyinde görünür.

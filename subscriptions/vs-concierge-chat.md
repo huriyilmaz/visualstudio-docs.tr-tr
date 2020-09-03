@@ -8,10 +8,10 @@ ms.date: 03/25/2020
 ms.topic: how-to
 description: Visual Studio aboneliklerine dahil olan danışman sohbet avantajı hakkında bilgi edinin.
 ms.openlocfilehash: 8c945a71d41a1545a4dc6155bbd63d3ddc78053c
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85906049"
 ---
 # <a name="concierge-chat-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Concierge Sohbeti

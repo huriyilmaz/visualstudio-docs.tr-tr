@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - aspnet
 ms.openlocfilehash: 97d8e18d68ecaf0abf2b3b94e6c22ea6ba3237de
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85327917"
 ---
 # <a name="how-to-instrument-a-statically-compiled-aspnet-web-application-and-collect-detailed-timing-data-with-the-profiler-by-using-the-command-line"></a>Nasıl yapılır: statik olarak derlenen bir ASP.NET Web uygulamasını izleme ve komut satırını kullanarak profil Oluşturucu ile ayrıntılı zamanlama verileri toplama
@@ -52,14 +52,14 @@ Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , önceden
 
    - [/Start](../profiling/start.md)**: Trace** seçeneği profil oluşturucuyu başlatır.
 
-   - /Start ile [/output](../profiling/output.md)**:** `OutputFile` seçeneği gereklidir. **/start** `OutputFile`profil oluşturma verileri (. vsp) dosyasının adını ve konumunu belirtir.
+   - /Start ile [/output](../profiling/output.md)**:** `OutputFile` seçeneği gereklidir. **/start** `OutputFile` profil oluşturma verileri (. vsp) dosyasının adını ve konumunu belirtir.
 
      Aşağıdaki seçeneklerden herhangi birini, **/Start: Trace** seçeneği ile kullanabilirsiniz.
 
    > [!NOTE]
    > **/User** ve **/CrossSession** seçenekleri genellikle ASP.NET uygulamaları için gereklidir.
 
-   | Seçenek | Description |
+   | Seçenek | Açıklama |
    | - | - |
    | [/User](../profiling/user-vsperfcmd.md) **:**[ `Domain` **\\** ]`UserName` | ASP.NET çalışan işleminin sahibi olan hesabın etki alanını ve Kullanıcı adını belirtir. İşlem, oturum açmış kullanıcı dışında bir kullanıcı olarak çalışıyorsa, bu seçenek gereklidir. İşlem sahibi, Windows Görev Yöneticisi 'nin **işlemler** sekmesinde **Kullanıcı adı** sütununda listelenir. |
    | [/CrossSession](../profiling/crosssession.md) | Diğer oturum oturumlarda işlemlerin profilini oluşturmayı mümkün. ASP.NET uygulaması farklı bir oturumda çalışıyorsa, bu seçenek gereklidir. Oturum tanımlayıcısı, Windows Görev Yöneticisi 'nin **süreçler** SEKMESINDEKI oturum kimliği sütununda listelenir. **/CS** , **/CrossSession**için bir kısaltma olarak belirtilebilir. |
@@ -77,7 +77,7 @@ Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , önceden
 
 - Aşağıdaki seçenek çiftleri veri toplamayı başlatır ve durdurur. Her seçeneği ayrı bir komut satırında belirtin. Veri toplamayı birden çok kez açıp kapatabilirsiniz.
 
-    |Seçenek|Description|
+    |Seçenek|Açıklama|
     |------------|-----------------|
     |[/GlobalOn/globaloff](../profiling/globalon-and-globaloff.md)|Tüm süreçler için veri toplamayı başlatır (**/GlobalOn**) veya Durdur (**/globaloff**).|
     |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` [/ProcessOff](../profiling/processon-and-processoff.md) **:**`PID`|İşlem KIMLIĞI () tarafından belirtilen işlem için (**/ProcessOn**) veya duraklar (**/ProcessOff**) veri toplamayı başlatır `PID` .|

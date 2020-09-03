@@ -17,10 +17,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e7061acabbe5ce18ff6e1f210fe0003bdaf88980
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586815"
 ---
 # <a name="concurrency-visualizer"></a>Eşzamanlılık Görselleştiricisi
@@ -52,7 +52,7 @@ NOTUN
 |[Visual Studio blogda paralel geliştirme](https://docs.microsoft.com/archive/blogs/visualizeparallel/)|Eşzamanlılık görselleştiricisi için ipuçları ve en iyi uygulamalar sağlar.|  
 |[Performans Raporu Görünümleri](../profiling/performance-report-views.md)|Visual Studio Profil Oluşturma Araçları raporları ve görünümleri için başvuru bilgileri sağlar.|  
 |[Eşzamanlılık Görselleştiricisi SDK](../profiling/concurrency-visualizer-sdk.md)|Eşzamanlılık görselleştiricisi içinde ek bilgileri göstermek için kaynak kodunuzun nasıl ekleneceğini açıklar.|  
-|[Eşzamanlılık Görselleştiricisi Komut Satırı Yardımcı Programı (CVCollectionCmd)](../profiling/concurrency-visualizer-command-line-utility-cvcollectioncmd.md)|Visual Studio olmayan makinelerde izlemeleri toplamak ve işlemek için eşzamanlılık görselleştiricisi komut satırı yardımcı programı 'nın (CVCollectionCmd. exe) nasıl kullanılacağını açıklar.|  
+|[Eşzamanlılık Görselleştiricisi Komut Satırı Yardımcı Programı (CVCollectionCmd)](../profiling/concurrency-visualizer-command-line-utility-cvcollectioncmd.md)|Eşzamanlılık görselleştiricisi komut satırı yardımcı programının (CVCollectionCmd.exe), Visual Studio olmayan makinelerde izlemeleri toplamak ve işlemek için nasıl kullanılacağını açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Profil Araçları](../profiling/profiling-tools.md)

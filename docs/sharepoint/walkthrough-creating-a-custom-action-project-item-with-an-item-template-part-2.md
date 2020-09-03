@@ -12,9 +12,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: c96546f85b21ee0ca8a559059a16158b743cb915
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016108"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-2"></a>İzlenecek yol: öğe şablonu, Bölüm 2 ile özel bir eylem proje öğesi oluşturma
@@ -35,7 +36,7 @@ ms.locfileid: "86016108"
 > [!NOTE]
 > Bir iş akışı için nasıl özel etkinlik oluşturulacağını gösteren [GitHub](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.Activities) 'dan bir örnek indirebilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Bu yönergeyi gerçekleştirmek için, önce [Izlenecek yol: bir öğe şablonuyla bir özel eylem proje öğesi oluşturun, 1. Bölüm ' i](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)tamamlayarak CustomActionProjectItem çözümünü oluşturmanız gerekir.
 
  Bu izlenecek yolu tamamlamak için geliştirme bilgisayarında aşağıdaki bileşenlere de ihtiyacınız vardır:
@@ -65,7 +66,7 @@ ms.locfileid: "86016108"
 
 5. **WPF Kullanıcı denetimi kitaplığı** proje şablonu ' nu seçin, projenin **ItemTemplateWizard**' ı adlandırın ve **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]çözümdeki **ItemTemplateWizard** projesini ekler.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] çözümdeki **ItemTemplateWizard** projesini ekler.
 
 6. Projedeki UserControl1 öğesini silin.
 

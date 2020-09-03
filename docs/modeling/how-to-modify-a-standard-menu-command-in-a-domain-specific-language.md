@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a7236c074bda17023c989c744042db2de4046558
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532502"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>Nasıl yapılır: Etki Alanına Özgü bir Dilde Standart Menü Komutunu Değiştirme
@@ -131,15 +131,15 @@ Aşağıdaki parçalar genellikle bu yöntemler içinde yararlı olur:
 
 - `this.CurrentSelection`. Kullanıcının sağ tıklamış olduğu şekil, bu şekil ve bağlayıcılar listesine her zaman dahildir. Kullanıcı diyagramın boş bir kısmına tıkladığında diyagram, listenin tek üyesidir.
 
-- `this.IsDiagramSelected()` - `true`Kullanıcı diyagramın boş bir kısmına tıklamıştır.
+- `this.IsDiagramSelected()` - `true` Kullanıcı diyagramın boş bir kısmına tıklamıştır.
 
 - `this.IsCurrentDiagramEmpty()`
 
-- `this.IsSingleSelection()`-Kullanıcı birden çok şekil seçmedi
+- `this.IsSingleSelection()` -Kullanıcı birden çok şekil seçmedi
 
-- `this.SingleSelection`-kullanıcıya sağ tıklamış olan şekil veya diyagram
+- `this.SingleSelection` -kullanıcıya sağ tıklamış olan şekil veya diyagram
 
-- `shape.ModelElement as MyLanguageElement`-bir şekil tarafından temsil edilen model öğesi.
+- `shape.ModelElement as MyLanguageElement` -bir şekil tarafından temsil edilen model öğesi.
 
 Öğesinden öğeye nasıl gidebileceğiniz ve nesnelerin ve bağlantıların nasıl oluşturulacağı hakkında daha fazla bilgi için bkz. [Program kodundaki bir modeli gezinme ve güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md).
 

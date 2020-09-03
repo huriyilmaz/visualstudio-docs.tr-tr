@@ -3,7 +3,7 @@ title: Dotfuscator Özellikleri
 ms.date: 03/28/2019
 ms.devlang: dotnet
 ms.topic: conceptual
-keywords: Dotfuscator, Dotfuscator Community, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, protection, community edition, obfuscation, .NET, free, Visual Studio 2017, Visual Studio 2019, Visual Studio
+keywords: Dotfuscator, Dotfuscator Community, Dotfuscator CE, PreEmptive, PreEmptive çözümleri, PreEmptive Protection, koruma, topluluk sürümü, gizleme, .NET, ücretsiz, Visual Studio 2017, Visual Studio 2019, Visual Studio
 helpviewer_keywords:
 - PreEmptive Protection Dotfuscator
 - Dotfuscator Community Edition
@@ -12,55 +12,55 @@ helpviewer_keywords:
 - Dotfuscator
 - obfuscation
 - protection
-description: Visual Studio'da yer alan Dotfuscator Community'nin ücretsiz kopyasının özelliklerini öğrenin.
+description: Visual Studio 'Ya dahil edilen Dotfuscator topluluğunun ücretsiz kopyasının yeteneklerini öğrenin.
 ms.assetid: 0ee89c58-c900-48fc-a6a2-65ace00e8bab
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 019acd338ab49dd08255e3dc5d174cf2e371b71e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918413"
 ---
 # <a name="capabilities-of-dotfuscator"></a>Dotfuscator Özellikleri
 
-Bu sayfa, yükseltmeler aracılığıyla mevcut gelişmiş seçeneklere bazı [referanslar][upgrades]ile Dotfuscator Topluluk yetenekleri üzerinde duruluyor.
+Bu sayfa, [yükseltmeler][upgrades]aracılığıyla kullanılabilen gelişmiş seçeneklere yönelik bazı başvurularla Dotfuscator topluluğunun özelliklerine odaklanır.
 
-Dotfuscator Community ,NET uygulamaları için *bir post-build* sistemidir.
-Bununla, Visual Studio kullanıcıları [derlemeleri gizlemek][obfuscation] ve uygulamaya [aktif savunma önlemleri][checks] enjekte edebiliyoruz - tüm Dotfuscator orijinal kaynak koduna erişmek için gerek olmadan.
-Dotfuscator, katmanlı bir koruma stratejisi oluşturarak uygulamanızı birden çok şekilde korur.
+Dotfuscator topluluğu, .NET uygulamaları için bir *Derleme sonrası* sistemidir.
+Bununla birlikte, Visual Studio kullanıcıları [derlemeleri][obfuscation] ayırt edebilir ve [etkin savunma ölçümlerini][checks] , özgün kaynak koduna erişmesi gereken Dotfuscator olmadan uygulamaya ekleyebilir.
+Dotfuscator, uygulamanızı birden çok şekilde korur, katmanlı bir koruma stratejisi oluşturur.
 
-Dotfuscator Community, [Evrensel Windows Platformu (UWP)][uwp] ve [Xamarin][xamarin]dahil olmak üzere çok çeşitli .NET derlemesini ve uygulama türlerini destekler.
+Dotfuscator topluluğu, [Evrensel Windows platformu (UWP)][uwp] ve [Xamarin][xamarin]dahil olmak üzere çok sayıda .NET derlemesini ve uygulama türünü destekler.
 
-## <a name="intellectual-property-protection"></a>Fikri Mülkiyet Koruması
+## <a name="intellectual-property-protection"></a>Fikri mülkiyet koruması
 
-Uygulamanızın tasarımı, davranışı ve uygulaması fikri mülkiyet (IP) biçimleridir.
-Ancak,.NET için oluşturulan uygulamalar temelde açık kitaplardır; üst düzey meta veriler ve ara [kod içerdikleri][assemblies]için .NET derlemelerini tersine çevirmek kolaydır.
+Uygulamanızın tasarımı, davranışı ve uygulaması, fikri mülkiyet (IP) formlarıdır.
+Ancak, .NET için oluşturulan uygulamalar temelde açık kitaplardır; [yüksek düzeyde meta veriler ve ara kod içerdiğinden][assemblies], .NET derlemelerine tersine mühendislik uygulamak çok kolaydır.
 
-Dotfuscator Topluluk [yeniden adlandırma][renaming]şeklinde temel [.NET gizleme][obfuscation] içerir.
-Kodunuzu Dotfuscator ile gizlemek, önemli adlandırma bilgilerinin artık herkese açık olmayacağından, ters mühendislik yoluyla kaynak koduna yetkisiz erişim riskini azaltır.
-Gizleme, kodunuzu incelemeden korumak için sizin için de çaba gösterir - IP'nizin yasal olarak ticari sır olarak korunduğunu belirlemede değerli bir adımdır.
+Dotfuscator topluluğu, [yeniden adlandırma][renaming]biçiminde temel [.net gizleme][obfuscation] özelliklerini içerir.
+Kodunuzu Dotfuscator ile gizleme, önemli adlandırma bilgileri artık genel olmayacak şekilde, ters mühendislik aracılığıyla kaynak koda yetkisiz erişim riskini azaltır.
+Gizleme Ayrıca, kodunuzun inceinizden korunması için önemli bir adımdır; Örneğin, IP 'nizin ticari gizli anahtar olarak korunmasını sağlamak için değerli bir adımdır.
 
-Dotfuscator Community'nin [uygulama bütünlüğü koruma özelliklerinin](#application-integrity-protection) çoğu ters mühendisliği daha da engellemez.
-Örneğin, kötü bir aktör, program mantığını anlamak için uygulamanızın çalışan bir örneğine hata ayıklama eklemeyi deneyebilir.
-Dotfuscator bunu engellemek için uygulamanıza [hata ayıklama önleme davranışı][debug] enjekte edebilir.
+Dotfuscator Community 'nin [uygulama bütünlüğü koruma özelliklerinin](#application-integrity-protection) birçoğu, geriye doğru mühendislik.
+Örneğin, hatalı aktör program mantığını anlamak için uygulamanızın çalışan bir örneğine bir hata ayıklayıcı eklemeyi deneyebilir.
+Dotfuscator, uygulamanıza [hata ayıklama davranışını][debug] sınıftakiyle öğesine ekleyebilir.
 
-## <a name="application-integrity-protection"></a>Uygulama Bütünlüğü Koruması
+## <a name="application-integrity-protection"></a>Uygulama bütünlüğü koruması
 
-Kaynak kodunuzu korumanın yanı sıra, uygulamanızın tasarlanmış şekilde kullanıldığından da emin olmak önemlidir.
-Saldırganlar, lisans lama ilkelerini (diğer bir deyişle yazılım korsanlığı) atlatmak, uygulama tarafından işlenen hassas verileri çalmak veya işlemek veya uygulamanın davranışını değiştirmek için uygulamanızı ele geçirmeye çalışabilir.
+Kaynak kodunuzu korumanın yanı sıra, uygulamanızın tasarlandığı gibi kullanıldığından emin olmak da önemlidir.
+Saldırganlar, uygulama tarafından işlenen hassas verileri çalmak veya işlemek ya da uygulamanın davranışını değiştirmek için, uygulamanızı, lisans ilkelerini (yani, yazılım korsanlığı) aşmak için bir sıraya alma girişiminde bulunabilir.
 
-Dotfuscator [Topluluk, anti-kurcalan,][tamper] [hata ayıklama ve][debug] [anti-köklü cihaz][root] önlemleri de dahil olmak üzere derlemelerinize uygulama doğrulama [kodu][checks] enjekte edebilir.
-Geçersiz bir uygulama durumu algılandığında, doğrulama kodu [durumu uygun bir şekilde ele almak için uygulama kodunu arayabilir.][check-app]
-Veya, uygulamanın geçersiz kullanımlarını işlemek için kod yazmayı tercih ederseniz, Dotfuscator kaynak kodunuzda herhangi bir değişiklik gerektirmeden [yanıt][check-action] davranışları da enjekte edebilir.
+Dotfuscator topluluğu, [uygulama doğrulama kodunu][checks] derlemelerinize, [korsanlığa karşı koruma][tamper], [hata ayıklama][debug]ve [köklü cihaz][root] ölçüleri dahil olmak üzere ekleyebilir.
+Geçersiz bir uygulama durumu algılandığında, doğrulama kodu, [durumu uygun bir şekilde ele almak için uygulama kodundan sonra çağırabilir][check-app].
+Ya da uygulamanın geçersiz kullanımlarını işlemek üzere kod yazmamayı tercih ediyorsanız, Dotfuscator, kaynak kodunuzda herhangi bir değişikliğe gerek kalmadan [Yanıt][check-action] davranışları da ekleyebilir.
 
-Bu aynı yöntemlerin çoğu, değerlendirme veya deneme yazılımı için [yaşam sonu tarihlerini][shelflife] uygulamak için de kullanılabilir.
+Bu yöntemlerin birçoğu, değerlendirme veya deneme yazılımı için [yaşam süresi son tarihleri][shelflife] zorlamak üzere de kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Tam Dotfuscator Topluluk Kullanım Kılavuzu bu konu][full]
+[Tam Dotfuscator topluluk Kullanıcı Kılavuzu 'ndaki bu konu][full]
 
 <!-- Copyright © 2019 PreEmptive Solutions, LLC -->
 

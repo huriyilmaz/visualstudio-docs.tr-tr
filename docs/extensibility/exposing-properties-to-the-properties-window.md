@@ -1,5 +1,5 @@
 ---
-title: Özellikler Penceresine Özellikleri Açığa Çıkarma | Microsoft Dokümanlar
+title: Özellikleri Özellikler penceresine gösterme | Microsoft Docs
 ms.date: 3/16/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,31 +13,31 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: f84962628ae550676e2c2eeb10c0f3baeca1bb58
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711822"
 ---
-# <a name="expose-properties-to-the-properties-window"></a>Özellikleri pencereye göster
+# <a name="expose-properties-to-the-properties-window"></a>Özellikler penceresi özellikleri kullanıma sunun
 
-Bu gözden geçirme, bir nesnenin ortak özelliklerini **Özellikler** penceresine maruz bırakır. Bu özelliklerde yaptığınız değişiklikler **Özellikler** penceresine yansıtılır.
+Bu izlenecek yol, bir nesnenin ortak özelliklerini **Özellikler** penceresinde gösterir. Bu özelliklerde yaptığınız değişiklikler **Özellikler** penceresinde yansıtılır.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-Visual Studio 2015'ten itibaren Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak yer almaktadır. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için Visual [Studio SDK'yı yükleyin.](../extensibility/installing-the-visual-studio-sdk.md)
+Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="expose-properties-to-the-properties-window"></a>Özellikleri pencereye göster
+## <a name="expose-properties-to-the-properties-window"></a>Özellikler penceresi özellikleri kullanıma sunun
 
-Bu bölümde, özel bir araç penceresi oluşturmak ve **Özellikler** penceresinde ilişkili pencere bölmesi nesnesinin ortak özelliklerini görüntüleyin.
+Bu bölümde, özel bir araç penceresi oluşturur ve **Özellikler** penceresinde ilişkili pencere bölmesi nesnesinin ortak özelliklerini görüntüleyebilirsiniz.
 
-### <a name="to-expose-properties-to-the-properties-window"></a>Özellikleri pencereye çıkarmak için
+### <a name="to-expose-properties-to-the-properties-window"></a>Özellikler penceresi özellikleri göstermek için
 
-1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSIX dağıtım projesiyle başlar. Adlı `MyObjectPropertiesExtension` [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir VSIX projesi oluşturun. "vsix" aramasını yaparak **VSIX** proje şablonunu Yeni Proje iletişim kutusunda bulabilirsiniz.
+1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSıX dağıtım projesiyle başlar. Adlı bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX projesi oluşturun `MyObjectPropertiesExtension` . "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
 
-2. Özel Araç Penceresi öğesi şablonu ekleyerek `MyToolWindow`bir araç penceresi ekleyin. Çözüm **Gezgini'nde**proje düğümüne sağ tıklayın ve**Yeni Öğe** **Ekle'yi** > seçin. Yeni **Öğe Ekle iletişim kutusunda,** **Visual C# Items** > **Extensibility'e** gidin ve **Özel Araç Penceresi'ni**seçin. İletişim kutusunun altındaki **Ad** alanında, dosya adını *MyToolWindow.cs*olarak değiştirin. Özel bir araç penceresi oluşturma hakkında daha fazla bilgi için [bkz.](../extensibility/creating-an-extension-with-a-tool-window.md)
+2. Adlı özel bir araç penceresi öğe şablonu ekleyerek bir araç penceresi ekleyin `MyToolWindow` . **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle iletişim kutusunda**, **Visual C# öğeleri**  >  **genişletilebilirliği** ' ne gidin ve **özel araç penceresi**' ni seçin. İletişim kutusunun alt kısmındaki **ad** alanında, dosya adını *MyToolWindow.cs*olarak değiştirin. Özel bir araç penceresi oluşturma hakkında daha fazla bilgi için bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
 
-3. *MyToolWindow.cs* açın ve aşağıdaki leri kullanarak ekleyin:
+3. *MyToolWindow.cs* açın ve aşağıdaki using ifadesini ekleyin:
 
    ```csharp
    using System.Collections;
@@ -45,7 +45,7 @@ Bu bölümde, özel bir araç penceresi oluşturmak ve **Özellikler** penceresi
    using Microsoft.VisualStudio.Shell.Interop;
    ```
 
-4. Şimdi `MyToolWindow` sınıfa aşağıdaki alanları ekleyin.
+4. Şimdi aşağıdaki alanları `MyToolWindow` sınıfına ekleyin.
 
    ```csharp
    private ITrackSelection trackSel;
@@ -53,7 +53,7 @@ Bu bölümde, özel bir araç penceresi oluşturmak ve **Özellikler** penceresi
 
    ```
 
-5. `MyToolWindow` Sınıfa aşağıdaki kodu ekleyin.
+5. Sınıfına aşağıdaki kodu ekleyin `MyToolWindow` .
 
    ```csharp
    private ITrackSelection TrackSelection
@@ -90,27 +90,27 @@ Bu bölümde, özel bir araç penceresi oluşturmak ve **Özellikler** penceresi
    }
    ```
 
-    Özellik, `TrackSelection` `GetService` arabirim <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> `STrackSelection` sağlayan bir hizmet elde etmek için kullanır. Olay `OnToolWindowCreated` işleyicisi ve `SelectList` yöntemi birlikte yalnızca araç penceresi bölmesi nesnesinin kendisini içeren seçili nesnelerin bir listesini oluşturur. Yöntem, `UpdateSelection` **Özellikler** penceresine araç penceresi bölmesinin ortak özelliklerini görüntülemesini söyler.
+    `TrackSelection`Özelliği `GetService` `STrackSelection` , bir arabirim sağlayan bir hizmeti elde etmek için kullanır <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> . `OnToolWindowCreated`Olay işleyicisi ve `SelectList` yöntemi birlikte yalnızca araç pencere bölmesi nesnesinin kendisini içeren seçili nesnelerin bir listesini oluşturur. `UpdateSelection`Yöntemi, **Özellikler** penceresine araç penceresi bölmesinin ortak özelliklerini göstermesini söyler.
 
-6. Projeyi oluşturun ve hata ayıklamaya başlayın. Visual Studio'nun deneysel örneği görünmelidir.
+6. Projeyi derleyin ve hata ayıklamayı başlatın. Visual Studio 'nun deneysel örneği görünmelidir.
 
 7. **Özellikler** penceresi görünmüyorsa, **F4**tuşuna basarak açın.
 
-8. **MyToolWindow** penceresini açın. **Diğer Windows'u** **Görüntüle'de** > bulabilirsiniz.
+8. **MyToolWindow** penceresini açın. **View**  >  **Diğer pencereleri**görüntülemek için bunu bulabilirsiniz.
 
     Pencere açılır ve pencere bölmesinin ortak özellikleri **Özellikler** penceresinde görünür.
 
-9. **Özellikler** penceresindeki **Resim Yazısı** özelliğini **Nesne Özelliklerim olarak**değiştirin.
+9. **Özellikler** penceresindeki **Caption** özelliğini **nesnem özellikleri**olarak değiştirin.
 
-     MyToolWindow pencere başlığı buna göre değişir.
+     MyToolWindow pencere başlığı, buna göre değişir.
 
-## <a name="expose-tool-window-properties"></a>Araç penceresi özelliklerini ortaya çıkarma
+## <a name="expose-tool-window-properties"></a>Araç penceresi özelliklerini kullanıma sunma
 
-Bu bölümde, bir araç penceresi ekleyin ve özelliklerini ortaya çıkarır. Özelliklerde yaptığınız değişiklikler **Özellikler** penceresine yansıtılır.
+Bu bölümde bir araç penceresi ekler ve özelliklerini kullanıma sunun. Özelliklerde yaptığınız değişiklikler **Özellikler** penceresinde yansıtılır.
 
-### <a name="to-expose-tool-window-properties"></a>Araç penceresi özelliklerini ortaya çıkarmak için
+### <a name="to-expose-tool-window-properties"></a>Araç penceresi özelliklerini açığa çıkarmak için
 
-1. *MyToolWindow.cs*açın ve halka açık boolean özelliğiischecked sınıfa `MyToolWindow` ekleyin.
+1. *MyToolWindow.cs*' i açın ve sınıfı Için IsChecked genel Boole özelliğini ekleyin `MyToolWindow` .
 
     ```csharp
     [Category("My Properties")]
@@ -127,9 +127,9 @@ Bu bölümde, bir araç penceresi ekleyin ve özelliklerini ortaya çıkarır. �
     }
     ```
 
-     Bu özellik, durumunu daha sonra oluşturacağınız WPF onay kutusundan alır.
+     Bu özellik, daha sonra oluşturacağınız WPF onay kutusunun durumunu alır.
 
-2. *MyToolWindowControl.xaml.cs* açın ve MyToolWindowControl oluşturucuyu aşağıdaki kodla değiştirin.
+2. *MyToolWindowControl.xaml.cs* açın ve MyToolWindowControl oluşturucusunu aşağıdaki kodla değiştirin.
 
     ```vb
     private MyToolWindow pane;
@@ -141,21 +141,21 @@ Bu bölümde, bir araç penceresi ekleyin ve özelliklerini ortaya çıkarır. �
     }
     ```
 
-     Bu `MyToolWindowControl` `MyToolWindow` bölmeye erişim sağlar.
+     Bu `MyToolWindowControl` , bölmeye erişim sağlar `MyToolWindow` .
 
-3. *MyToolWindow.cs*olarak, `MyToolWindow` aşağıdaki gibi yapıcı değiştirin:
+3. *MyToolWindow.cs*içinde, `MyToolWindow` oluşturucuyu aşağıdaki gibi değiştirin:
 
     ```csharp
     base.Content = new MyToolWindowControl(this);
     ```
 
-4. MyToolWindowControl'un tasarım görünümünü değiştirin.
+4. MyToolWindowControl Tasarım görünümüne geçin.
 
-5. Düğmeyi silin ve **Araç Kutusu'ndan** sol üst köşeye bir onay kutusu ekleyin.
+5. Düğmeyi silin ve **araç** kutusundan sol üst köşeye bir onay kutusu ekleyin.
 
-6. İşaretli ve İşaretlenmemiş olayları ekleyin. Tasarım görünümünde onay kutusunu seçin. **Özellikler** penceresinde, olay işleyicileri düğmesini **(Özellikler** penceresinin sağ üst kısmında) tıklatın. **İşaretli'yi** bulun ve metin kutusuna **checkbox_Checked** yazın, ardından **İşaretsiz'i** bulun ve metin kutusuna **checkbox_Unchecked** yazın.
+6. Denetlenen ve Denetlenmemiş olayları ekleyin. Tasarım görünümündeki onay kutusunu seçin. **Özellikler** penceresinde olay işleyiciler düğmesine ( **Özellikler** penceresinin sağ üst kısmında) tıklayın. **Denetlenen** ve metin kutusunda **checkbox_Checked** yazın ve metin kutusuna **denetimsiz** bulun ve **checkbox_Unchecked** yazın.
 
-7. Onay kutusu olay işleyicileri ekleyin:
+7. Onay kutusu olay işleyicilerini ekleyin:
 
     ```csharp
     private void checkbox_Checked(object sender, RoutedEventArgs e)
@@ -170,24 +170,24 @@ Bu bölümde, bir araç penceresi ekleyin ve özelliklerini ortaya çıkarır. �
     }
     ```
 
-8. Projeyi oluşturun ve hata ayıklamaya başlayın.
+8. Projeyi derleyin ve hata ayıklamayı başlatın.
 
-9. Deneysel örnekte, **MyToolWindow** penceresini açın.
+9. Deneysel örnekte **MyToolWindow** penceresini açın.
 
-     **Özellikler** penceresinde pencerenin özelliklerini arayın. **IsChecked** özelliği pencerenin alt kısmında, **Özelliklerim** kategorisialtında görünür.
+     **Özellikler** penceresinde pencerenin özelliklerini bulun. **IsChecked** özelliği, pencerenin alt kısmında, **My Properties** kategorisinin altında görünür.
 
-10. **MyToolWindow** penceresindeki onay kutusunu işaretleyin. **Özellikler** penceresinde **IsChecked** **True**olarak değişir. **MyToolWindow** penceresindeki onay kutusunu temizleyin. **Özellikler** penceresinde Yanlış **olarak** **değiştirildi.** **Özellikler** penceresinde **IsChecked** değerini değiştirin. **MyToolWindow** penceresindeki onay kutusu yeni değerle eşleşecek şekilde değişir.
+10. **MyToolWindow** penceresindeki onay kutusunu işaretleyin. **Özellikler** penceresinde **IsChecked** **değeri true**olarak değişir. **MyToolWindow** penceresindeki onay kutusunun işaretini kaldırın. **Özellikler** penceresinde **IsChecked** **yanlış**olarak değişir. **Özellikler** penceresinde **IsChecked** değerini değiştirin. **MyToolWindow** penceresindeki onay kutusu yeni değerle eşleşecek şekilde değişir.
 
     > [!NOTE]
-    > **Özellikler** penceresinde görüntülenen bir nesneyi imha nız gerekiyorsa, `null` önce bir seçim kapsayıcısıyla arayın. `OnSelectChange` Özelliği veya nesneyi atadıktan sonra, güncelleştirilen <xref:Microsoft.VisualStudio.Shell.SelectionContainer.SelectableObjects%2A> ve <xref:Microsoft.VisualStudio.Shell.SelectionContainer.SelectedObjects%2A> listelenen bir seçim kapsayıcısına değiştirebilirsiniz.
+    > **Özellikler** penceresinde görüntülenen bir nesneyi Dispose etmeniz gerekiyorsa, `OnSelectChange` `null` önce bir seçim kapsayıcısı ile çağırın. Özelliği veya nesneyi elden aldıktan sonra, güncelleştirilmiş ve listeleri olan bir seçim kapsayıcısına geçiş yapabilirsiniz <xref:Microsoft.VisualStudio.Shell.SelectionContainer.SelectableObjects%2A> <xref:Microsoft.VisualStudio.Shell.SelectionContainer.SelectedObjects%2A> .
 
-## <a name="change-selection-lists"></a>Seçim listelerini değiştirme
+## <a name="change-selection-lists"></a>Seçim listelerini Değiştir
 
- Bu bölümde, temel özellik sınıfı için bir seçim listesi ekleyin ve hangi seçim listesinin görüntüleyeceğini seçmek için araç penceresi arabirimini kullanın.
+ Bu bölümde, temel özellik sınıfı için bir seçim listesi ekler ve görüntülenecek seçim listesini seçmek için araç penceresi arabirimini kullanın.
 
-### <a name="to-change-selection-lists"></a>Seçim listelerini değiştirmek için
+### <a name="to-change-selection-lists"></a>Seçim listesini değiştirmek için
 
-1. *MyToolWindow.cs* açın ve adlandırılmış `Simple`bir genel sınıf ekleyin.
+1. *MyToolWindow.cs* açın ve adlı ortak bir sınıf ekleyin `Simple` .
 
     ```csharp
     public class Simple
@@ -212,7 +212,7 @@ Bu bölümde, bir araç penceresi ekleyin ve özelliklerini ortaya çıkarır. �
     }
     ```
 
-2. Sınıfa `SimpleObject` bir özellik ve pencere bölmesi ve `Simple` nesne arasında Özellikler penceresi seçimini değiştirmek için iki yöntem ekleyin. **Properties** `MyToolWindow`
+2. `SimpleObject` `MyToolWindow` Pencere bölmesi ve nesnesi arasında **Özellikler** penceresi seçimini değiştirmek için sınıfa bir özellik ve iki yöntem ekleyin `Simple` .
 
     ```csharp
     private Simple simpleObject = null;
@@ -240,7 +240,7 @@ Bu bölümde, bir araç penceresi ekleyin ve özelliklerini ortaya çıkarır. �
     }
     ```
 
-3. *MyToolWindowControl.cs,* onay kutusu işleyicilerini şu kod satırlarıyla değiştirin:
+3. *MyToolWindowControl.cs*' de, onay kutusu işleyicilerini şu kod satırlarıyla değiştirin:
 
     ```csharp
     private void checkbox_Checked(object sender, RoutedEventArgs e)
@@ -257,21 +257,21 @@ Bu bölümde, bir araç penceresi ekleyin ve özelliklerini ortaya çıkarır. �
     }
     ```
 
-4. Projeyi oluşturun ve hata ayıklamaya başlayın.
+4. Projeyi derleyin ve hata ayıklamayı başlatın.
 
-5. Deneysel örnekte, **MyToolWindow** penceresini açın.
+5. Deneysel örnekte **MyToolWindow** penceresini açın.
 
-6. **MyToolWindow** penceresindeki onay kutusunu seçin. **Özellikler** penceresi `Simple` nesne özelliklerini görüntüler, **SomeText** ve **ReadOnly.** Onay kutusunu temizle. Pencerenin ortak özellikleri **Özellikler** penceresinde görünür.
+6. **MyToolWindow** penceresindeki onay kutusunu seçin. **Özellikler** penceresi, `Simple` **metin** ve **salt okunur**nesne özelliklerini görüntüler. Onay kutusunun işaretini kaldırın. Pencerenin ortak özellikleri **Özellikler** penceresinde görünür.
 
     > [!NOTE]
-    > **SomeText'in** görüntü adı **Benim Metnimdir.**
+    > **SomeText** 'in görünen adı **Metnim**.
 
 ## <a name="best-practice"></a>En iyi yöntem
 
-Bu izbiste, <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> seçilebilir nesne koleksiyonu ve seçili nesne koleksiyonu aynı koleksiyon olacak şekilde uygulanır. Özellik Tarayıcısı listesinde yalnızca seçili nesne görünür. Daha eksiksiz bir ISelectionContainer uygulaması için Reference.ToolWindow örneklerine bakın.
+Bu izlenecek yolda, <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> seçilebilir nesne koleksiyonu ve seçilen nesne koleksiyonu aynı koleksiyon olacak şekilde uygulanır. Yalnızca seçilen nesne, özellik tarayıcısı listesinde görünür. Daha kapsamlı bir ISelectionContainer uygulaması için bkz. Reference. ToolWindow Samples.
 
-Visual Studio araç pencereleri Visual Studio oturumları arasında devam etmektedir. Araç penceresi durumunu devamlandırma hakkında daha <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>fazla bilgi için bkz.
+Visual Studio aracı Windows, Visual Studio oturumları arasında kalır. Araç penceresi durumunu kalıcı hale getirme hakkında daha fazla bilgi için bkz <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> ..
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özellikleri ve Özellik penceresini genişletme](../extensibility/extending-properties-and-the-property-window.md)
+- [Özellikleri ve özellik penceresini genişletme](../extensibility/extending-properties-and-the-property-window.md)

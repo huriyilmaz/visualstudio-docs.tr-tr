@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f45d08a82bdc3f6807f9a4d5a0cb31dc157e4c9c
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85328658"
 ---
 # <a name="how-to-attach-the-profiler-to-a-native-service-to-collect-application-statistics-by-using-the-command-line"></a>Nasıl yapılır: Komut satırını kullanarak uygulama istatistikleri toplamak için bir yerel hizmete profil oluşturucu ekleme
@@ -43,14 +43,14 @@ Bu makalede, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir yerel
 
    - **/Start: örnek** seçeneği, profil oluşturucuyu başlatır.
 
-   - /Start ile **/output:** `OutputFile` seçeneği gereklidir. **/start** `OutputFile`profil oluşturma verilerinin adını ve konumunu belirtir (.* VSP*) dosyası.
+   - /Start ile **/output:** `OutputFile` seçeneği gereklidir. **/start** `OutputFile` profil oluşturma verilerinin adını ve konumunu belirtir (.* VSP*) dosyası.
 
      Aşağıdaki seçeneklerden herhangi birini, **/Start: Sample** seçeneğiyle kullanabilirsiniz.
 
    > [!NOTE]
    > **/User** ve **/CrossSession** seçenekleri genellikle hizmetler için gereklidir.
 
-   | Seçenek | Description |
+   | Seçenek | Açıklama |
    | - | - |
    | [/User](../profiling/user-vsperfcmd.md) **:**[ `Domain` **\\** ]`UserName` | Profili oluşturulan işlemin sahibi olan hesabın etki alanını ve Kullanıcı adını belirtir. Bu seçenek yalnızca, işlem oturum açmış kullanıcı dışında bir kullanıcı olarak çalışıyorsa gereklidir. İşlem sahibi, Windows Görev Yöneticisi 'nin Işlemler sekmesinde Kullanıcı adı sütununda listelenir. |
    | [/CrossSession](../profiling/crosssession.md) | Diğer oturumlardaki işlemlerin profilini oluşturmaya izin vermez. Uygulama farklı bir oturumda çalışıyorsa, bu seçenek gereklidir. Oturum kimliği, Windows Görev Yöneticisi 'nin süreçler sekmesindeki oturum KIMLIĞI sütununda listelenir. **/CS** , **/CrossSession**için bir kısaltma olarak belirtilebilir. |
@@ -62,7 +62,7 @@ Bu makalede, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir yerel
 
     **VSPerfCmd/Attach:** `PID` [`Sample Event`]
 
-    `PID`hedef uygulamanın işlem KIMLIĞINI belirtir. Windows Görev Yöneticisi 'nde çalışan tüm işlemlerin işlem kimliklerini görüntüleyebilirsiniz.
+    `PID` hedef uygulamanın işlem KIMLIĞINI belirtir. Windows Görev Yöneticisi 'nde çalışan tüm işlemlerin işlem kimliklerini görüntüleyebilirsiniz.
 
     Varsayılan olarak, performans verileri 10.000.000 her durdurulmayan işlemci saati döngüsünde örneklenir. Bu, yaklaşık olarak 1GH işlemcide her 10 saniyede bir. Saat çevrimi aralığını değiştirmek veya farklı bir örnekleme olayı belirtmek için aşağıdaki seçeneklerden birini belirtebilirsiniz.
 
@@ -80,7 +80,7 @@ Bu makalede, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir yerel
 
 - Aşağıdaki **VSPerfCmd** seçenek çiftleri veri toplamayı başlatır ve durdurur. Her seçeneği ayrı bir komut satırında belirtin. Veri toplamayı birden çok kez açıp kapatabilirsiniz.
 
-    |Seçenek|Description|
+    |Seçenek|Açıklama|
     |------------|-----------------|
     |[/GlobalOn/globaloff](../profiling/globalon-and-globaloff.md)|Tüm süreçler için veri toplamayı başlatır (**/GlobalOn**) veya Durdur (**/globaloff**).|
     |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` [/ProcessOff](../profiling/processon-and-processoff.md) **:**`PID`|İşlem KIMLIĞI () tarafından belirtilen işlem için (**/ProcessOn**) veya duraklar (**/ProcessOff**) veri toplamayı başlatır `PID` .|

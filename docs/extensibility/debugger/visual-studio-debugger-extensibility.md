@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Debugger Genişletilebilirlik | Microsoft Dokümanlar
+title: Visual Studio hata ayıklayıcısı genişletilebilirliği | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,32 +12,32 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ff4222b555fab73914776725fc79581f29fa5e53
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80712509"
 ---
-# <a name="visual-studio-debugger-extensibility"></a>Visual Studio hata ayıklama genişletilebilirlik
-Visual Studio, programınızdaki hataları izlemek için güçlü ve kullanımı kolay bir araç sağlayan tamamen etkileşimli bir kaynak kod ayıklayıcı içerir. Hata ayıklama, Visual Basic, C#, C/C++ve JavaScript için tam destek vardır. Ancak, Microsoft [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] [Download Center'dan](https://www.microsoft.com/download/details.aspx?id=21835)edinilebilen , diğer programlama dilleri aynı zengin özelliklere sahip hata ayıklamada desteklenebilir.
+# <a name="visual-studio-debugger-extensibility"></a>Visual Studio hata ayıklayıcı genişletilebilirliği
+Visual Studio, programınızda hata izlemek için güçlü ve kullanımı kolay bir araç sağlayan tam bir etkileşimli kaynak kodu hata ayıklayıcısı içerir. Hata ayıklayıcı Visual Basic, C#, C/C++ ve JavaScript için kapsamlı desteğe sahiptir. Bununla birlikte, [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] [Microsoft İndirme Merkezi](https://www.microsoft.com/download/details.aspx?id=21835)' nden erişilebilen diğer programlama dilleri, hata ayıklayıcıda aynı zengin özelliklerle desteklenebilir.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Hata ayıklama, hata ayıklama nın sırayla debugged olan dile özgü hata ayıklama bileşenleriiçin ortak ön uç (yani, kullanıcı arabirimi) olduğunu. Yeni diller için hata ayıklamanın [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] desteği için gereken tek şey hata ayıklama altyapısı (DE) gibi gerekli arka uç bileşenlerini oluşturmaktır. Bu noktada [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] devreye girer.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Hata ayıklayıcı genel ön uç (yani, Kullanıcı arabirimi) hata ayıklama bileşenlerinde, bu da hata ayıklamakta olan dile özgüdür. Yeni diller için, hata ayıklayıcı tarafından destek için gerekli olan her şey, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hata ayıklama altyapısı (de) gibi gerekli arka uç bileşenlerini oluşturmaktır. Bu nokta, öğesinin [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] geldiği yerdir.
 
- Yeni [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] bir DE oluşturmak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] için gereken tüm öğelere tam bir başvuru içerir. Buna ek olarak, başlamak yardımcı olacak örnekler ve öğreticiler vardır.
+ , [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Yenı bir de oluşturmak için gereken tüm öğelere yönelik kapsamlı bir başvuru içerir. Ayrıca, başlamanıza yardımcı olacak örnekler ve öğreticiler de vardır.
 
- Hata ayıklama desteğine sahip bir dil proje sisteminin tam bir örneği için [IronPython örneğine](https://www.microsoft.com/download/details.aspx?id=55984)bakın.
+ Hata ayıklama desteğiyle bir dil projesi sisteminin tamamen bir örneği için bkz. [IronPython örneği](https://www.microsoft.com/download/details.aspx?id=55984).
 
- Aşağıdaki bölümlerde hata ayıklamanın [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]nasıl genişletilen .
+ Aşağıdaki bölümlerde, kullanarak hata ayıklayıcının nasıl genişletileceği açıklanır [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] .
 
 ## <a name="in-this-section"></a>Bu bölümde
- [Başlayın](../../extensibility/debugger/getting-started-with-debugger-extensibility.md) Hata [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Ayıklama'nın neler sunduğunu ve SDK'nın nasıl yüklenirolduğunu açıklar.
+ [Kullanmaya](../../extensibility/debugger/getting-started-with-debugger-extensibility.md) başlayın [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Hata ayıklama tekliflerinin ve SDK 'nın nasıl yükleneceğini açıklar.
 
- [Özel hata ayıklama altyapısı oluşturma](../../extensibility/debugger/creating-a-custom-debug-engine.md) Programınızı DE'ye hazırlamaktan DE'yi ayırmaya kadar özel DE işlemini belgeler.
+ [Özel hata ayıklama altyapısı oluşturma](../../extensibility/debugger/creating-a-custom-debug-engine.md) Özel DE sürecini, programınızı bir DE ile ayırmak için hazırlamaktan bir de belgeler.
 
- [CLR ifade değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md) Bir ifade değerlendiricisi yazmanız gerekip gerekmediğini açıklar.
+ [Clr ifade değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md) Bir ifade değerlendirici yazmanız gerekip gerekmediğini açıklar.
 
- [Hata ayıklama motoru uygulama stratejisi ni seçin](../../extensibility/debugger/choosing-a-debug-engine-implementation-strategy.md) DE'nizi nasıl uygulayacağınızı tartışır.
+ [Hata ayıklama altyapısı uygulama stratejisi seçin](../../extensibility/debugger/choosing-a-debug-engine-implementation-strategy.md) ' Nin nasıl uygulanacağını açıklar.
 
- [Referans](../../extensibility/debugger/reference/reference-visual-studio-debugging-apis.md) Hata [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Ayıklama API'sini belgeler.
+ [Başvuru](../../extensibility/debugger/reference/reference-visual-studio-debugging-apis.md) [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Hata ayıklama API 'sini belgeler.
 
- [Örnekler](../../extensibility/debugger/visual-studio-debugging-samples.md) Ortak bir dil çalışma zamanı ifade değerlendirici örneği ve hata ayıklama motoru örneği bağlantıları içerir.
+ [Örnekler](../../extensibility/debugger/visual-studio-debugging-samples.md) Ortak dil çalışma zamanı ifadesi değerlendirici örneğine ve bir hata ayıklama altyapısı örneğine bağlantılar içerir.

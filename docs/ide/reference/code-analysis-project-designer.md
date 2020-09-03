@@ -14,56 +14,56 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6b9b61d25d0a08763d55dcfb5d5ddb245471effc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76113778"
 ---
 # <a name="code-analysis-project-designer"></a>Kod Çözümlemesi, Proje Tasarımcısı
 
-Kodunuzda çalıştırmayı seçebileceğiniz kod çözümleme aracını içerir. Araç, Derlemeleriniz hakkındaki Microsoft .NET Tasarım Yönergeleri'nde belirtilen programlama ve tasarım kurallarıihlalleri gibi bilgileri raporlar.
+Kodunuzda çalıştırmayı tercih ettiğiniz kod analizi aracını içerir. Araç, Microsoft .NET tasarım yönergelerinden sonra ayarlanan programlama ve tasarım kuralları ihlalleri gibi derlemeleriniz hakkındaki bilgileri raporlar.
 
 ## <a name="uielement-list"></a>UIElement listesi
 
-Kod Analizini Etkinleştir\
-Projeniz için kod çözümlemesi sağlar veya devre dışı kılabilir.
+Kod analizini etkinleştir \
+Projeniz için kod analizini etkinleştirilir veya devre dışı bırakır.
 
-Tasarım Kuralları\
-Tasarım kurallarını etkinleştirer veya devre dışı kılabilir. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı kalmak için bu girişi genişletebilirsiniz.
+Tasarım kuralları \
+Tasarım kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Küreselleşme Kuralları\
-Küreselleşme kurallarını etkinleştirer veya devre dışı kılabilir. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı kalmak için bu girişi genişletebilirsiniz.
+Genelleştirme kuralları \
+Genelleştirme kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Birlikte Çalışabilirlik Kuralları\
-Birlikte çalışabilirlik kurallarını etkinleştirir veya devre dışı kılabilir. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı kalmak için bu girişi genişletebilirsiniz.
+Birlikte çalışabilirlik kuralları \
+Birlikte çalışabilirlik kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Bakım Kuralları\
-Bakım kurallarını etkinleştirer veya devre dışı kılabilir. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı kalmak için bu girişi genişletebilirsiniz.
+Bakım kuralları \
+Bakım kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Mobilite Kuralları\
-Mobilite kurallarını etkinleştirir veya devre dışı kılabilir. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı kalmak için bu girişi genişletebilirsiniz.
+Mobility kuralları \
+Mobility kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Adlandırma Kuralları\
-Adlandırma kurallarını etkinleştirer veya devre dışı kılabilir. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı kalmak için bu girişi genişletebilirsiniz.
+Adlandırma kuralları \
+Adlandırma kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Performans Kuralları\
-Performans kurallarını etkinleştirer veya devre dışı kılabilir. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı kalmak için bu girişi genişletebilirsiniz.
+Performans kuralları \
+Performans kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Taşınabilirlik Kuralları\
-Taşınabilirlik kurallarını etkinleştirer veya devre dışı kılabilir. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı kalmak için bu girişi genişletebilirsiniz.
+Taşınabilirlik kuralları \
+Taşınabilirlik kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Güvenilirlik Kuralları\
-Güvenilirlik kurallarını etkinleştirir veya devre dışı kılabilir. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı kalmak için bu girişi genişletebilirsiniz.
+Güvenilirlik kuralları \
+Güvenilirlik kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Güvenlik Kuralları\
-Güvenlik kurallarını etkinleştirer veya devre dışı kılabilir. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı kalmak için bu girişi genişletebilirsiniz.
+Güvenlik kuralları \
+Güvenlik kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Kullanım Kuralları\
-Kullanım kurallarını etkinleştirer veya devre dışı kılabilir. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı kalmak için bu girişi genişletebilirsiniz.
+Kullanım kuralları \
+Kullanım kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilen Kod Uyarıları için Kod Analizi](../../code-quality/code-analysis-for-managed-code-warnings.md)
+- [Yönetilen kod uyarıları için kod analizi](../../code-quality/code-analysis-for-managed-code-warnings.md)
 - [Yönetilen Kod için Kod Çözümlemesine Genel Bakış](../../code-quality/code-analysis-for-managed-code-overview.md)
 - [İzlenecek yol: Kod Kusurları için Yönetilen Kodu Analiz Etme](../../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)

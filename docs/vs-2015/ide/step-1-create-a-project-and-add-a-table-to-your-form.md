@@ -1,5 +1,5 @@
 ---
-title: '1\. Adım: proje oluşturma ve formunuza tablo ekleme | Microsoft Docs'
+title: '1. Adım: proje oluşturma ve formunuza tablo ekleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 05a7f9930dc1619d6f35a6024bd0f754f7caeeb5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72643510"
 ---
-# <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>1\. Adım: Proje Oluşturma ve Formunuza Tablo Ekleme
+# <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>1. Adım: Proje Oluşturma ve Formunuza Tablo Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Eşleştirme oyunu hazırlarken ilk adım projeyi oluşturmak ve formunuza bir tablo eklemektir. Tablo, simgeleri 4x4'lük muntazam bir kılavuza hizalamaya yardımcı olur. Ayrıca, oyun tahtasının görünüşünü iyileştirmek için çeşitli özellikleri ayarlarsınız.
@@ -25,7 +25,7 @@ Eşleştirme oyunu hazırlarken ilk adım projeyi oluşturmak ve formunuza bir t
 
 1. Menü çubuğunda **Dosya**, **Yeni**, **Proje**' yi seçin.
 
-2. Visual Studio Express kullanmıyorsanız, önce bir programlama dili seçmeniz gerekir. **Yüklü şablonlar** listesinden, **görsel C#**  veya **Visual Basic**seçin.
+2. Visual Studio Express kullanmıyorsanız, önce bir programlama dili seçmeniz gerekir. **Yüklü şablonlar** listesinde, **Visual C#** veya **Visual Basic**seçeneklerinden birini belirleyin.
 
 3. Proje şablonları listesinde **Windows Forms uygulama**' yı seçin, proje **MatchingGame**olarak adlandırın ve **Tamam** düğmesini seçin.
 
@@ -37,7 +37,7 @@ Eşleştirme oyunu hazırlarken ilk adım projeyi oluşturmak ve formunuza bir t
 
 5. IDE 'nin sol tarafındaki **araç kutusu** sekmesini seçerek araç kutusunu görüntüleyin.
 
-6. Araç kutusundaki **kapsayıcılar** kategorisinden bir `TableLayoutPanel` denetimini sürükleyin ve sonra bunun için aşağıdaki özellikleri ayarlayın.
+6. `TableLayoutPanel`Araç kutusundaki **kapsayıcılar** kategorisinden bir denetim sürükleyin ve sonra bunun için aşağıdaki özellikleri ayarlayın.
 
    1. **BackColor** özelliğini **CornflowerBlue**olarak ayarlayın. Bunu yapmak için, **Özellikler** penceresinde **BackColor** özelliğinin yanındaki açılan oku seçerek **BackColor** iletişim kutusunu açın.  Ardından, kullanılabilir renk adlarının listesini görüntülemek için **BackColor** Iletişim kutusundaki **Web** sekmesini seçin.
 
@@ -58,7 +58,7 @@ Eşleştirme oyunu hazırlarken ilk adım projeyi oluşturmak ve formunuza bir t
 
 7. Form düzenleyicisinde TableLayoutPanel seçildiğinden emin olun. Bunu doğrulamak için, **Özellikler** penceresinin en üstünde **tableLayoutPanel1** görmeniz gerekir. Seçili değilse, formda TableLayoutPanel öğesini seçin veya **Özellikler** penceresinin en üstündeki açılan denetimde seçin.
 
-    TableLayoutPanel seçiliyken, araç kutusunu açın ve TableLayoutPanel 'in sol üst hücresine bir **etiket** denetimi ( **ortak denetimler** kategorisinde bulunur) ekleyin. @No__t_0 denetimi artık IDE 'de seçilmelidir. Bu öğe için aşağıdaki özellikleri ayarlayın.
+    TableLayoutPanel seçiliyken, araç kutusunu açın ve TableLayoutPanel 'in sol üst hücresine bir **etiket** denetimi ( **ortak denetimler** kategorisinde bulunur) ekleyin. `Label`Denetim artık IDE 'de seçilmelidir. Bu öğe için aşağıdaki özellikleri ayarlayın.
 
    1. Etiketin **BackColor** özelliğinin **CornflowerBlue**olarak ayarlandığından emin olun.
 
@@ -79,7 +79,7 @@ Eşleştirme oyunu hazırlarken ilk adım projeyi oluşturmak ve formunuza bir t
        > [!NOTE]
        > Webdings yazı tipi, simgelerden oluşan bir yazı tipi olup Windows işletim sistemiyle birlikte gelir. Eşleştirme oyununuzda oyuncunun simge çiftlerini eşleştirmesi gerektiğinden, eşleştirilecek simgeleri göstermek için bu yazı tipini kullanıyorsunuz. **Metin** özelliğine **c** koymak yerine, hangi simgelerin görüntülendiğini görmek için farklı harfler girmeyi deneyin. Ünlem işareti bir örümcek, büyük N harfi bir göz ve virgül ise kırmızı biberdir.
 
-8. Etiket denetiminizi seçin ve TableLayoutPanel içinde sonraki hücreye kopyalayın. (CTRL + C tuşlarını seçin veya menü çubuğunda **Düzenle**, **Kopyala**' yı seçin.) Ardından yapıştırın. (Ctrl + V tuşlarını seçin veya menü çubuğunda **Düzenle**, **Yapıştır**' ı seçin.) İlk etiketin bir kopyası TableLayoutPanel 'in ikinci hücresinde görüntülenir. Yeniden yapıştırdığınızda, üçüncü hücrede bir başka etiket görünür. Tüm hücreler dolduruluncaya kadar `Label` denetimlerini yapıştırmayı sürdürün.
+8. Etiket denetiminizi seçin ve TableLayoutPanel içinde sonraki hücreye kopyalayın. (CTRL + C tuşlarını seçin veya menü çubuğunda **Düzenle**, **Kopyala**' yı seçin.) Ardından yapıştırın. (Ctrl + V tuşlarını seçin veya menü çubuğunda **Düzenle**, **Yapıştır**' ı seçin.) İlk etiketin bir kopyası TableLayoutPanel 'in ikinci hücresinde görüntülenir. Yeniden yapıştırdığınızda, üçüncü hücrede bir başka etiket görünür. `Label`Tüm hücreler dolduruluncaya kadar denetimleri yapıştırmayı sürdürün.
 
    > [!NOTE]
    > Çok fazla kez yapıştırırsanız, yeni etiket denetiminizi ekleyecek bir yer olması için IDE TabloLayoutPanel öğesine yeni bir satır yapıştırır. Bunu geri alabilirsiniz. Yeni hücreyi kaldırmak için CTRL + Z tuşlarını seçin veya menü çubuğunda **Düzenle**, **geri al**' ı seçin.

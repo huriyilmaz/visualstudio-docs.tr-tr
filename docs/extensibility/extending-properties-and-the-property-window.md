@@ -1,5 +1,5 @@
 ---
-title: Özellikleri ve Özellik Penceresini Genişletme | Microsoft Dokümanlar
+title: Özellikleri ve özellik penceresini genişletme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,18 +15,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 14cc7bba8f5255d612c0f429aab5acf36729b506
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711735"
 ---
-# <a name="extend-properties-and-the-property-window"></a>Özellikleri ve Özellik penceresini genişletme
+# <a name="extend-properties-and-the-property-window"></a>Özellikleri ve özellik penceresini genişletme
 **Özellikler** penceresi, seçili nesnelerin tasarım zamanı özelliklerini ve olaylarını görüntülemek ve düzenlemek için kullanılır.
 
- Bir nesneyi seçtiğinizde, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]özellikler penceresinde bu nesnenin ortak özellikleri görünür. **Properties** Daha fazla bilgi için [Özellikler penceresine genel bakış](../extensibility/internals/properties-window-overview.md)abakın.
+ İçindeki bir nesneyi seçtiğinizde [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bu nesnenin ortak özellikleri **Özellikler** penceresinde görünür. Daha fazla bilgi için bkz. [Özellikler penceresi genel bakış](../extensibility/internals/properties-window-overview.md).
 
 ## <a name="in-this-section"></a>Bu bölümde
-- [Özellikleri pencereye göster](../extensibility/exposing-properties-to-the-properties-window.md) Özellikler penceresinde özel özelliklerinizin nasıl görüntülenebileceğini açıklar.
+- [Özellikler penceresi özellikleri kullanıma sunun](../extensibility/exposing-properties-to-the-properties-window.md) Özellikler penceresi özel özelliklerinizi nasıl görüntübileceğinizi açıklar.
 
-- [Proje özelliklerini alma](../extensibility/getting-project-properties.md) Proje özelliklerinin nasıl alınır olduğunu açıklar.
+- [Proje özelliklerini al](../extensibility/getting-project-properties.md) Proje özelliklerinin nasıl alınacağını açıklar.

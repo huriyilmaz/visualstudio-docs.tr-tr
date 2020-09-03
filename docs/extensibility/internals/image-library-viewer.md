@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d9714879f93af052e244134ce225b07317455921
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536350"
 ---
 # <a name="image-library-viewer"></a>Görüntü Kitaplığı Görüntüleyicisi
@@ -131,7 +131,7 @@ Visual Studio Görüntü Kitaplığı Görüntüleyicisi Aracı, görüntü bild
 
  Bir \<Source> öğe, aşağıdaki isteğe bağlı alt öğeler için tam olarak birine sahip olabilir:
 
-|**Dosyalarında**|**Öznitelikler (tüm gerekli)**|**Tanım**|
+|**Öğe**|**Öznitelikler (tüm gerekli)**|**Tanım**|
 |-|-|-|
 |\<Size>|Değer|Kaynak, verilen boyutun (cihaz birimlerinde) görüntüleri için kullanılacaktır. Resim kare olacak.|
 |\<SizeRange>|MinSize, MaxSize|Kaynak, MinSize ' den MaxSize 'a (cihaz birimlerinde) dahil olmak üzere, dahil edilecek görüntüler için kullanılacaktır. Resim kare olacak.|

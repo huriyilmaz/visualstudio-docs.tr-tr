@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8f02c7ec0e453f0758ba2ab13145fcdff11b442a
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84173609"
 ---
 # <a name="author-vsct-files"></a>Author. vsct dosyaları
@@ -229,7 +229,7 @@ Bu belgede, Visual Studio tümleşik geliştirme ortamına (IDE) menü öğeleri
 
    Bazı menü ve düğme türleri özel davranışları içerir. Aşağıdaki listede bazı özel menü ve düğme türleri açıklanmaktadır. Diğer türler için, `types` [menü](../../extensibility/menu-element.md), [düğme](../../extensibility/button-element.md)ve [Birleşik](../../extensibility/combo-element.md) öğeler öğelerinin öznitelik açıklamalarını inceleyin.
 
-   - Birleşik giriş kutusu: bir açılan kutu, bir araç çubuğunda kullanılabilen bir açılan listesidir. Kullanıcı arabirimine Birleşik giriş kutuları eklemek için, öğesinde bir [combos](../../extensibility/combos-element.md) öğesi oluşturun `Commands` . Sonra `Combos` `Combo` eklenecek her Birleşik giriş kutusu için öğesi öğesine ekleyin. `Combo`öğeler, öğelerle aynı özniteliklere ve alt öğelere sahiptir `Button` ve ayrıca `DefaultWidth` ve özniteliklerini de vardır `idCommandList` . `DefaultWidth`Özniteliği piksel cinsinden genişliği ayarlar ve `idCommandList` öznitelik, Birleşik giriş kutusunu doldurmak için kullanılan BIR komut kimliğini gösterir.
+   - Birleşik giriş kutusu: bir açılan kutu, bir araç çubuğunda kullanılabilen bir açılan listesidir. Kullanıcı arabirimine Birleşik giriş kutuları eklemek için, öğesinde bir [combos](../../extensibility/combos-element.md) öğesi oluşturun `Commands` . Sonra `Combos` `Combo` eklenecek her Birleşik giriş kutusu için öğesi öğesine ekleyin. `Combo` öğeler, öğelerle aynı özniteliklere ve alt öğelere sahiptir `Button` ve ayrıca `DefaultWidth` ve özniteliklerini de vardır `idCommandList` . `DefaultWidth`Özniteliği piksel cinsinden genişliği ayarlar ve `idCommandList` öznitelik, Birleşik giriş kutusunu doldurmak için kullanılan BIR komut kimliğini gösterir.
 
    - Menü denetleyicisi: menü denetleyicisi, yanında bir ok olan bir düğmedir. Oka tıkladığınızda bir liste açılır. Kullanıcı arabirimine bir menü denetleyicisi eklemek için bir `Menu` öğe oluşturun ve `type` özniteliğini istediğiniz `MenuController` davranışa göre veya olarak ayarlayın `MenuControllerLatched` . Bir menü denetleyicisini doldurmak için, onu bir öğesinin üst öğesi olarak ayarlayın `Group` . Menü denetleyicisi açılan listesinde bu grubun tüm alt öğelerini görüntüler.
 

@@ -8,10 +8,10 @@ ms.date: 03/25/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen kod Magazine avantajı hakkında bilgi edinin.
 ms.openlocfilehash: c7b56074ea9a48f4d94af5c7d79cd93dc2c4a3b8
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86387180"
 ---
 # <a name="code-magazine-included-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerine kod Dergisi dahildir
@@ -21,7 +21,7 @@ CODE Magazine, Tüm platformlardaki geliştirme teknolojilerini kapsayan, önde 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 CODE Magazine aboneliğinizi ayarlama işlemi basittir.  Şu adımları izlemeniz yeterlidir:
 
-1. Ederken[https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
+1. Ederken [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
 2. Portalınızın profesyonel geliştirme veya eğitim bölümünde CODE Magazine kutucuğunu bulun ve **kodu al**' ı tıklatın.
    > [!div class="mx-imgBorder"]
    > ![KOD Magazine kutucuğu](_img/vs-code-magazine/vs-code-magazine-tile.png "KOD Magazine kutucuğu")
@@ -49,13 +49,13 @@ Abonelik siparişinizi tamamladıktan sonra, aldığınız sorunları görmek i�
 ## <a name="eligibility"></a>Önceliği
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  No          |
-| GitHub Enterprise ile Visual Studio Enterprise   | VL| Kullanılabilir       |  No          |
-| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılabilir                                                            |  No          |
-| GitHub Enterprise ile Visual Studio Professional | VL                                      | Kullanılabilir                                                            |  No          |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir                                             |  No          |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir                                              |  No          |
-| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Hayır          |
+| GitHub Enterprise ile Visual Studio Enterprise   | VL| Kullanılabilir       |  Hayır          |
+| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılabilir                                                            |  Hayır          |
+| GitHub Enterprise ile Visual Studio Professional | VL                                      | Kullanılabilir                                                            |  Hayır          |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir                                             |  Hayır          |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir                                              |  Hayır          |
+| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | YOK |
 
 <sup>1</sup>  *şunları Içerir: SATıLAMAZ (NFR), Visual Studio Endüstri ortağı (VSıP), FTE, BizSpark, Imagine Premium.  Dışlar: Microsoft İş Ortağı Ağı (MPN), en değerli profesyonel (MVP), bölgesel Müdürü (RD), MCT yazılım & Hizmetleri Geliştirici, MCT yazılım & Hizmetleri, Imagine.*
 

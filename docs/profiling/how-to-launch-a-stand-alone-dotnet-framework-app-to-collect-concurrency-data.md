@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: e2c1b0a52429e74ad35cf0cad3acc44d064c9672
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85327909"
 ---
 # <a name="how-to-launch-a-stand-alone-net-framework-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line"></a>Nasıl yapılır: komut satırını kullanarak eşzamanlılık verileri toplamak için Profil Oluşturucu ile tek başına .NET Framework uygulaması başlatma
@@ -43,11 +43,11 @@ Bu konu, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir .NET Fram
      | **/Start: eşzamanlılık, yalnızca Resource** | Yalnızca kaynak çekişme verilerinin toplanmasını mümkün. |
      | **/Start: eşzamanlılık, threadonly** | Yalnızca iş parçacığı yürütme verilerinin toplanmasını mümkün. |
 
-   - /Start ile [/output](../profiling/output.md)**:** `OutputFile` seçeneği gereklidir. **/start** `OutputFile`profil oluşturma verileri (. vsp) dosyasının adını ve konumunu belirtir.
+   - /Start ile [/output](../profiling/output.md)**:** `OutputFile` seçeneği gereklidir. **/start** `OutputFile` profil oluşturma verileri (. vsp) dosyasının adını ve konumunu belirtir.
 
      Aşağıdaki seçeneklerden herhangi birini, **/Start: eşzamanlılık** seçeneğiyle kullanabilirsiniz.
 
-   | Seçenek | Description |
+   | Seçenek | Açıklama |
    | - | - |
    | [/User](../profiling/user-vsperfcmd.md) **:**[ `domain\` ]`username` | Profil oluşturucuya erişim verilecek hesabın isteğe bağlı etki alanını ve Kullanıcı adını belirtir. |
    | [/CrossSession](../profiling/crosssession.md) | Diğer oturum oturumlarda işlemlerin profilini oluşturmayı mümkün. |
@@ -61,7 +61,7 @@ Bu konu, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir .NET Fram
 
     Aşağıdaki seçeneklerden herhangi birini **/Launch** seçeneği ile kullanabilirsiniz.
 
-   |Seçenek|Description|
+   |Seçenek|Açıklama|
    |------------|-----------------|
    |[/args](../profiling/args.md) **:**`Arguments`|Hedef Uygulamaya geçirilecek komut satırı bağımsız değişkenlerini içeren bir dize belirtir.|
    |[/Console](../profiling/console.md)|Hedef komut satırı uygulamasını ayrı bir pencerede başlatır.|
@@ -74,7 +74,7 @@ Bu konu, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir .NET Fram
 
 1. Aşağıdaki *VSPerfCmd.exe* seçenek çiftleri veri toplamayı başlatır ve durdurur. Her seçeneği ayrı bir komut satırında belirtin. Veri toplamayı birden çok kez açıp kapatabilirsiniz.
 
-    |Seçenek|Description|
+    |Seçenek|Açıklama|
     |------------|-----------------|
     |[/GlobalOn/globaloff](../profiling/globalon-and-globaloff.md)|Tüm süreçler için veri toplamayı başlatır (**/GlobalOn**) veya Durdur (**/globaloff**).|
     |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` [/ProcessOff](../profiling/processon-and-processoff.md) **:**`PID`|İşlem KIMLIĞI () tarafından belirtilen işlem için (**/ProcessOn**) veya duraklar (**/ProcessOff**) veri toplamayı başlatır `PID` .|

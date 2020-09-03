@@ -11,43 +11,43 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a5c378aec6822a436de0d8fc2656fcac7be4149f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203901"
 ---
 # <a name="intellisense-hosting"></a>IntelliSense Barındırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio IntelliSense barındırma sağlar. Sağlar barındırma IntellSense Visual Studio metin düzenleyicisi tarafından barındırılmadığında kod için IntelliSense sağlar.  
+Visual Studio IntelliSense barındırılmasına izin vermez. Intellsense barındırma, Visual Studio metin Düzenleyicisi tarafından barındırılmayan kod için IntelliSense sağlamanıza olanak tanır.  
   
 ## <a name="intellisense-hosting-usage"></a>IntelliSense barındırma kullanımı  
- Visual Studio'da tamamlama kümesi ve bir metin arabelleği erişimi olan herhangi bir kod IntelliSense windows yerden edinebilirsiniz kullanıcı arabiriminde (UI). Bazı örnek senaryolar bu tamamlanmasında olduğu **Watch** penceresi ya da bir kesme noktası Özellikler penceresinin koşul alanında.  
+ Visual Studio 'da, bir tamamlanma kümesine ve bir metin arabelleğine erişimi olan tüm kodlar, IntelliSense pencerelerini Kullanıcı arabirimi (UI) içinde herhangi bir yerden alabilir. Bunun bazı örnek senaryoları, **Gözcü** penceresinde veya bir kesme noktası özellikleri penceresinin Koşul alanında tamamlanmalarıdır.  
   
 ### <a name="implementation-interfaces"></a>Uygulama arabirimleri  
   
 #### <a name="ivsintellisensehost"></a>IVsIntellisenseHost  
- IntelliSense açılır pencereleri barındıran herhangi bir UI bileşeni desteklemelidir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> arabirimi. Hisse varsayılan çekirdek düzenleyici metin görünümünü içerir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> geçerli IntelliSense işlevselliği korumak için uygulama arabirimi. Çoğunlukla, yöntemlerinin <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> ne bir alt kümesi üzerinde gerçekleştirilir temsil arabirim <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> arabirimi. Alt IntelliSense UI işleme, giriş işaretini ve seçim düzenlemesi ve basit metin değiştirme işlevselliği içerir. Ayrıca, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> arabirimi, ayrı IntelliSense "konu" ve "içerik" böylece doğrudan bağlamları için kullanılan metin arabelleği yok konular için IntelliSense sağlanabilir sağlar.  
+ IntelliSense açılır penceresi barındıran herhangi bir kullanıcı arabirimi bileşeni <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> arabirimi desteklemelidir. Varsayılan çekirdek Düzenleyicisi metin görünümü, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> geçerli IntelliSense işlevini koruyacak bir stok arabirimi uygulamasını içerir. Çoğu bölümde, arabirimin yöntemleri, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> arabirimde uygulanan bir alt kümesini temsil eder <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> . Alt küme, IntelliSense Kullanıcı arabirimi işleme, giriş işareti ve seçim düzenlemesi ve basit metin değiştirme işlevlerini içerir. Ayrıca, arabirim, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> içerik için kullanılan metin arabelleğinde doğrudan mevcut olmayan konular Için IntelliSense 'in sağlanması için ayrı IntelliSense "Subject" ve "Context" i de olanak tanıyor.  
   
-#### <a name="ivsintellisensehostgethostflags"></a>IVsIntellisenseHost.GetHostFlags  
- Bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> arabirimi sağlayıcısı uygulanmalı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.GetHostFlags%2A> konak ne tür bir IntelliSense özellikleri belirlemek bir istemci etkinleştirme yöntemi destekler.  
+#### <a name="ivsintellisensehostgethostflags"></a>IVsIntellisenseHost. GetHostFlags  
+ Bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> arabirim sağlayıcının, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.GetHostFlags%2A> bir istemcinin konağın desteklediği IntelliSense özelliklerinin türünü belirlemesini sağlamak için yöntemini uygulaması gerekir.  
   
- Tanımlanan konak bayrakları [IntelliSenseHostFlags](../extensibility/intellisensehostflags.md), aşağıda özetlenmiştir.  
+ [IntelliSenseHostFlags](../extensibility/intellisensehostflags.md)içinde tanımlanan konak bayrakları aşağıda özetlenmiştir.  
   
-|IntelliSense konak bayrağı|Açıklama|  
+|IntelliSense ana bilgisayar bayrağı|Açıklama|  
 |----------------------------|-----------------|  
-|IHF_READONLYCONTEXT|Bağlamı arabelleğine bu bayrağı anlamına gelir ayarlama salt okunur ve düzenleme yalnızca konu metnini içinde gerçekleşir.|  
-|IHF_NOSEPERATESUBJECT|Bu bayrak anlamına gelir, orada ayrı IntelliSense konu yok ayardır. Konu bağlamı arabelleğinde gibi geleneksel var. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> IntelliSense sistem.|  
-|IHF_SINGLELINESUBJECT|Konu olmayan bu bayrağı ayarlamak çok satırlı özelliği, tek bir satırda olduğu gibi düzenleme **Watch** penceresi.|  
-|IHF_FORCECOMMITTOCONTEXT|Bu bayrağı ayarlarsanız ve bağlamı arabelleğine güncelleştirilmelidir konağı yok sayılacak bağlamı arabelleğine salt okunur bayrağı ve devam etmek için düzenlemeleri etkinleştirir.|  
-|IHF_OVERTYPE|(Konu veya bağlam) düzenleme, üzerine yazma modunda yapılmalıdır.|  
+|IHF_READONLYCONTEXT|Bu bayrak ayarlandığında, bağlam arabelleğinin salt okunurdur ve düzenlemenin yalnızca konu metninde yer aldığı anlamına gelir.|  
+|IHF_NOSEPERATESUBJECT|Bu bayrak ayarlandığında, ayrı bir IntelliSense konusu olmadığı anlamına gelir. Konu, geleneksel IntelliSense sistemindeki gibi bağlam arabelleğinde bulunur <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> .|  
+|IHF_SINGLELINESUBJECT|Bu bayrağın ayarlanması, konunun, **Gözcü** penceresinde tek satırlı düzenleme gibi çok satırlı özellikli olmadığı anlamına gelir.|  
+|IHF_FORCECOMMITTOCONTEXT|Bu bayrak ayarlandıysa ve bağlam arabelleğinin güncellenmesi gerekiyorsa, ana bilgisayar bağlam arabelleğindeki salt okuma bayrağını yok sayılır ve devam etmek için düzenlemeler sağlar.|  
+|IHF_OVERTYPE|Düzenlemenin (konu veya bağlamda) üzerine yazma modunda yapılması gerekir.|  
   
-#### <a name="ivsintellisensehostbeforecompletorcommit-and-ivsintellisensehostaftercompletorcommit"></a>IVsIntellisenseHost.BeforeCompletorCommit ve IVsIntellisenseHost.AfterCompletorCommit  
- Bu geri çağırma yöntemleri önce ve sonra metin ön işleme ve son işlemi etkinleştirmek için taahhüt tamamlama penceresini tarafından çağrılır.  
+#### <a name="ivsintellisensehostbeforecompletorcommit-and-ivsintellisensehostaftercompletorcommit"></a>IVsIntellisenseHost. Beforetamamlantorcommıt ve IVsIntellisenseHost. Aftertamamlann COMMIT  
+ Bu geri arama yöntemleri, ön işleme ve işleme sonrası işlemlerini etkinleştirmek için, metin kaydedilmeden önce ve sonra tamamlanma penceresi tarafından çağrılır.  
   
 #### <a name="ivsintellisensecompletor"></a>IVsIntellisenseCompletor  
- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseCompletor> Tümleşik geliştirme ortamı (IDE) tarafından kullanılan standart tamamlama penceresini birlikte oluşturulabilir sürümü arabirimidir. Tüm <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> arabirimi hızlı bir şekilde uygulayabilirsiniz IntelliSense bu completor arabirimini kullanarak.  
+ <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseCompletor>Arabirim, standart tamamlama penceresinin tümleşik geliştirme ortamı (IDE) tarafından kullanılan ortak hale tablo sürümüdür. Her türlü <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> arabirim, bu tamamlayıcı arabirimini kullanarak IntelliSense 'i hızlıca uygulayabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualStudio.TextManager.Interop>
