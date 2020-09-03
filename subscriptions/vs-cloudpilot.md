@@ -1,88 +1,88 @@
 ---
-title: Visual Studio Aboneliklerine CloudPilot Avantajı | Microsoft Dokümanlar
+title: Visual Studio aboneliklerinde CloudPilot avantajı | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 6255b6a3-f101-4b2c-b7fa-851eccc944b2
 ms.date: 03/24/2020
 ms.topic: conceptual
-description: Belirli Visual Studio aboneliklerinde kullanılabilen CloudPilot avantajı hakkında bilgi edinin
+description: Seçili Visual Studio aboneliklerinde bulunan CloudPilot avantajı hakkında bilgi edinin
 ms.openlocfilehash: bebffb505f5c2b0fff7167ed2cccf629be1e7543
-ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80274043"
 ---
 # <a name="the-cloudpilot-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde CloudPilot avantajı
-Uygulamalarınızı birkaç kolay adımda Microsoft Azure'a taşıyın. Birkaç dakika içinde, başarılı geçiş için kod satırına kadar gerekli tüm kod değişikliklerini tanımlayın: Kapsayıcılar, VM'ler, Uygulama Hizmetleri, SQL Azure ve/veya SQL MI. Ardından, ASR, DMA ve DMS kullanan sihirbazları kullanarak uygulamaları Azure'a taşıyın.
+Uygulamalarınızı birkaç kolay adımda Microsoft Azure taşıyın. Dakikalar içinde, başarılı geçiş için kod satırına tüm gerekli kod değişikliklerini belirlemek için: kapsayıcılar, VM 'Ler, App Services, SQL Azure ve/veya SQL MI. Ardından, ASR, DMA ve DMS kullanan sihirbazları kullanarak uygulamaları Azure 'a geçirin.
 
 ## <a name="overview"></a>Genel Bakış
-CloudPilot, UnifyCloud tarafından, geliştiricilerin uygulamaları hızlı ve kolay bir şekilde Azure'a taşımasına yardımcı olmak üzere tasarlanmıştır.  Kısa bir süre içinde, CloudPilot Azure PaaS & IaaS geçiş maliyetlerini doğru bir şekilde belirler ve uygulamanın Bulut'ta çalışması için hangi kod değişikliklerinin yapılması gerektiğikonusunda kod satırına kadar ayrıntılı öneriler sağlar. CloudPilot, Bulut geçiş çabasının ilk değerlendirmesine ve geliştirme planlamasında, Bulut için ayrıntılı kod düzeyinde değişiklikler sunarak yeniden faktoring sürecinde ve kurumsal teknoloji denetimlerine karşı yapılan son testlerde yardımcı olur ve Koşullarıdır.
+UniFi bulutu tarafından sağlanan CloudPilot, geliştiricilerin uygulamaları hızla ve kolayca Azure 'a taşımalarına yardımcı olmak için tasarlanmıştır.  El ile gerçekleştirilen bir değerlendirmenin zaman içinde, CloudPilot, Azure PaaS & IaaS geçiş maliyetlerini doğru şekilde belirler ve uygulamanın bulutta çalışması için hangi kod değişikliklerinin yapılması gerektiği hakkında ayrıntılı öneriler sağlar. CloudPilot, buluta yönelik ayrıntılı kod düzeyinde değişiklikler sunarak ve kurumsal teknoloji denetimleri ve ilkelerine karşı son sınamalarda, bulut geçiş çabasından ve geliştirme planlamadaki ilk değerlendirmede yardımcı olur.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
-1. Oturum [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)aç.
+1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
 
-2. CloudPilot fayda döşemesini "Araçlar" kategorisinde bulun ve **Kodu Al'a**tıklayın.
-
-   > [!div class="mx-imgBorder"]
-   > ![CloudPilot Benefit Karo](_img/vs-cloudpilot/vs-cloudpilot-tile-ent.png)
-
-0. Kodunuzu başarıyla alındığını bildiren bir ileti görürsünüz.  **Etkinleştir'i**tıklatın , bu noktada etkinleştirme işlemine devam edebileceğiniz CloudPilot sayfasına yönlendirilirsiniz.  (Şimdi etkinleştirmeyi seçmezseniz, abonelik portalındaki CloudPilot döşemesine her zaman geri dönebilirsiniz.  "Kodu Al" bağlantısı "Etkinleştir" olarak değişecek ve tıklatıldığında etkinleştirme işleminde bir sonraki adıma geçmeniz gerekir.)
-
-0. Geliştirme çabalarınız için CloudPilot'un avantajlarından göz atın.  Hazır olduğunuzda **Etkinleştir** düğmesini tıklatın.
+2. "Araçlar" kategorisinde CloudPilot avantajı kutucuğunu bulun ve **kodu al**' a tıklayın.
 
    > [!div class="mx-imgBorder"]
-   > ![CloudPilot Açılış Sayfası](_img/vs-cloudpilot/vs-cloudpilot-landing.png)
+   > ![CloudPilot avantajı kutucuğu](_img/vs-cloudpilot/vs-cloudpilot-tile-ent.png)
 
-0. Hesabınızı oluşturmak ve CloudPilot aboneliğinizi etkinleştirmek için web formundaki iletişim bilgilerini doldurun ve **KAYDOL'a**tıklayın.
+0. Kodunuzun başarıyla alındığını bildiren bir ileti görürsünüz.  **Etkinleştir**' e tıklayın, bu noktada etkinleştirme işlemine devam edebileceğiniz Cloudpilot sayfasına yönlendirilirsiniz.  (Şimdi etkinleştirmeyi tercih ederseniz, abonelik portalındaki CloudPilot kutucuğuna her zaman geri dönebilirsiniz.  "Kod al" bağlantısı "etkinleştir" olarak değişir ve bu, tıklatıldığında etkinleştirme sürecinin sonraki adımına gidecektir.)
+
+0. Geliştirme çabalarınız için CloudPilot 'ın avantajlarına göz atın.  Hazırsanız **Etkinleştir** düğmesine tıklayın.
 
    > [!div class="mx-imgBorder"]
-   > ![CloudPilot Kayıt Sayfası](_img/vs-cloudpilot/vs-cloudpilot-register.png)
+   > ![CloudPilot giriş sayfası](_img/vs-cloudpilot/vs-cloudpilot-landing.png)
+
+0. Hesabınızı oluşturmak ve CloudPilot aboneliğinizi etkinleştirmek için, Web formundaki iletişim bilgilerini doldurun ve **Kaydol**' a tıklayın.
+
+   > [!div class="mx-imgBorder"]
+   > ![CloudPilot kayıt sayfası](_img/vs-cloudpilot/vs-cloudpilot-register.png)
 
    > [!NOTE]
-   > CloudPilot avantajının aktivasyonları, Visual Studio Enterprise veya Visual Studio Professional aboneliklerinin herhangi bir kombinasyonundan yararlanılan kuruluş başına on ile sınırlıdır.  Kuruluşunuzun on aktivasyonu zaten tüketildiyse, CloudPilot avantajını etkinleştiremezsiniz ve UnifyCloud'dan daha fazla bilgi içeren bir e-posta alırsınız.
+   > CloudPilot avantajı 'nın etkinleştirmeleri, Visual Studio Enterprise veya Visual Studio Professional aboneliklerinin herhangi bir bileşiminden itibaren kullanılan her kuruluş için on ile sınırlıdır.  Kuruluşunuzun on etkinleştirmesi zaten tüketilmişse, CloudPilot avantajını etkinleştiremeyecektir ve daha fazla bilgi içeren Unifo buluttan bir e-posta alacaksınız.
 
-0. Ardından, CloudPilot'u tanımak için tasarlanmış bir ürün sayfası görürsünüz.  CloudPilot portalına gitmek için sağ üst köşedeki **CloudPilot'a Git'i** tıklatın.
-
-    > [!div class="mx-imgBorder"]
-    > ![CloudPilot Ürün Sayfası](_img/vs-cloudpilot/vs-cloudpilot-navigate.png)
-
-0. İşte bu kadar!  CloudPilot portalını görürsünüz ve uygulamalarınızı Microsoft Azure'a taşımak için CloudPilot aboneliğinizi kullanmaya başlamaya hazır olursunuz.
-
-0. Hesabınız başarıyla oluşturulur oluşturulmaz, UnifyCloud VSS Desteği'nden hesabınızın başarılı bir şekilde oluşturulduğunu onaylayan bir e-posta alırsınız.
+0. Daha sonra, CloudPilot ile sizi tanımak için tasarlanan bir ürün sayfası görürsünüz.  CloudPilot portalına gitmek için sağ üst köşedeki **CloudPilot 'a** git ' e tıklayın.
 
     > [!div class="mx-imgBorder"]
-    > ![CloudPilot Onay E-postası](_img/vs-cloudpilot/vs-cloudpilot-email.png)
+    > ![CloudPilot ürün sayfası](_img/vs-cloudpilot/vs-cloudpilot-navigate.png)
 
-## <a name="eligibility"></a>Uygunluk
+0. İşte bu kadar!  CloudPilot portalını görürsünüz ve uygulamalarınızı Microsoft Azure taşımak için CloudPilot aboneliğinizi kullanmaya başlamaya başlayabilirsiniz.
 
-| Abonelik Düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilen -ebilir?    |
+0. Hesabınız başarıyla oluşturulduktan sonra, hesabınızın başarıyla oluşturulmasını onaylayan Unifyıcloud VSS desteğinden bir e-posta alırsınız.
+
+    > [!div class="mx-imgBorder"]
+    > ![CloudPilot onay e-postası](_img/vs-cloudpilot/vs-cloudpilot-email.png)
+
+## <a name="eligibility"></a>Önceliği
+
+| Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, Perakende, | 2 lisans, 90 gün, sınırsız tarama       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
-| GitHub Enterprise ile Visual Studio Enterprise   | Vl | 2 lisans, 90 gün, sınırsız tarama       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
-| Visual Studio Professional (Standart) | VL, Azure, Perakende                                       | 1 lisans, 30 gün, bir tarama                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
-| GitHub Enterprise ile Visual Studio Professional | Vl | 1 lisans, 30 gün, bir tarama                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
-| Visual Studio Test Professional (Standart)                         | VL, Perakende                                              | Kullanılamaz                                             |  Yok           |
-| MSDN Platformları (Standart)                                          | VL, Perakende                                              | Kullanılamaz                                              |  Yok          |
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, | 2 lisans, 90 gün, sınırsız tarama       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
+| GitHub Enterprise ile Visual Studio Enterprise   | VL | 2 lisans, 90 gün, sınırsız tarama       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
+| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | 1 lisans, 30 gün, bir tarama                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
+| GitHub Enterprise ile Visual Studio Professional | VL | 1 lisans, 30 gün, bir tarama                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                             |  Yok           |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              |  Yok          |
 | Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Kullanılamaz  | Yok |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |
 
-<sup>1</sup>  *Içerir: Satış için değil (NFR), FTE, En Değerli Profesyonel (MVP), Bölge Direktörü (RD), Microsoft Partner Network (MPN), Visual Studio Industry Partner (VSIP), Microsoft Certified Trainer, BizSpark, Imagine*
+<sup>1</sup>  *şunları içerir: iş için değil (NFR), FTE, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), Microsoft iş ortağı ağı (MPN), Visual Studio Endüstri ortağı (VSIP), Microsoft Sertifikalı Trainer, BizSpark, Imagine*
 
 > [!NOTE]
-> Microsoft artık Cloud Subscriptions'da Visual Studio Professional Annual abonelikleri ve Visual Studio Enterprise Annual abonelikleri sunamaz. Mevcut müşterilerin aboneliklerini yenileme, artırma, azaltma veya iptal etme deneyimi ve yeteneğinde herhangi bir değişiklik olmayacaktır. Yeni müşteriler Visual Studio [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) satın almak için farklı seçenekleri keşfetmek için gitmek için teşvik edilir.
+> Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) Visual Studio 'yu satın almaya yönelik farklı seçeneklere göz atın.
 
-Hangi aboneliği kullandığınızdan emin değil misiniz?  E-posta adresinize [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) atanan tüm abonelikleri görmek için bağlanın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla nız olabilir.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
+Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)E-posta adresinize atanan tüm abonelikleri görmek için bağlantısını yapın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla sahip olabilirsiniz.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
 
 ## <a name="support-resources"></a>Destek kaynakları
-- CloudPilot'u kullanma konusunda yardıma mı ihtiyacınız var?  Aşağıdaki kaynakları inceleyin:
-  - UnifyCloud ürünleri hakkında bilgi için [UnifyCloud ile iletişime geçin.](https://www.unifycloud.com/contacts/)
-  - [CloudPilot Kullanım Kılavuzu](https://www.cloudatlasinc.com/cloudpilot/doc/CloudPilot-User-Manual.pdf )
-  - [Destek isteği gönderme](https://support.datacamp.com/hc/requests/new)
+- CloudPilot kullanımı ile ilgili yardıma mı ihtiyacınız var?  Aşağıdaki kaynakları inceleyin:
+  - Unifcloud ürünleriyle ilgili sorgular için [Unifcloud Ile Iletişim kurun](https://www.unifycloud.com/contacts/) .
+  - [CloudPilot Kullanıcı El Ile](https://www.cloudatlasinc.com/cloudpilot/doc/CloudPilot-User-Manual.pdf )
+  - [Destek isteği gönder](https://support.datacamp.com/hc/requests/new)
 
-- Visual Studio Abonelikleri için satış, abonelik, hesap ve faturalandırma ile ilgili yardım için Visual Studio [Abonelikleri Desteği'ne](https://visualstudio.microsoft.com/subscriptions/support/)başvurun.
-- Visual Studio IDE, Azure DevOps Hizmetleri veya diğer Visual Studio ürünleri veya hizmetleri hakkında bir sorunuz mu var?  [Visual Studio Desteği'ni ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
+- Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
@@ -91,4 +91,4 @@ Hangi aboneliği kullandığınızdan emin değil misiniz?  E-posta adresinize [
 - [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Aboneliğinizle birlikte gelen Azure DevTest bireysel kredi avantajını zaten [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) etkinleştirmediyseniz, Azure aboneliğinizi ayarlamak ve Azure DevTest bireysel kredinizi kullanmak için Araçlar kategorisindeki Azure döşemesini ziyaret edin ve tıklayın.
+Aboneliğinizle birlikte gelen Azure DevTest bireysel kredi avantajını henüz etkinleştirmediyseniz, [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) Azure aboneliğinizi kurmak ve Azure DevTest bireysel kredilerinizi kullanmak Için Araçlar kategorisindeki Azure kutucuğuna gidin ve tıklayın.

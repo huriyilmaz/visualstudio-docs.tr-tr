@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 085542f912cc5747c2012adb05e6097b5891ed60
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85282585"
 ---
 # <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>Visual Studio'nun verilere bağlı denetimler için başlık oluşturma biçimini özelleştirme
@@ -55,7 +55,7 @@ Aşağıdaki tabloda, bu kayıt defteri değerleri için iç varsayılan ayarlar
 |-------------------|-------------------|-----------------|
 |**Smartcaptionifadesi**|**( \\ \p{ll}) ( \\ \p{lu}) &#124;_ +**|Küçük bir karakterle ve ardından büyük bir karakter veya alt çizgi ile eşleşir.|
 |**Smartcaptiondeğiştirme**|**$1 $2**|**$1** , ifadenin ilk parantezleri ile eşleşen tüm karakterleri temsil eder ve **$2** ikinci parantez içinde eşleşen tüm karakterleri temsil eder. Değiştirme ilk eşleşme, bir boşluk ve ikinci eşleşmedir.|
-|**SmartCaptionSuffix**|**:**|Döndürülen dizeye eklenen bir karakteri temsil eder. Örneğin, resim yazısı ise `Company Name` , sonek bunu yapar`Company Name:`|
+|**SmartCaptionSuffix**|**:**|Döndürülen dizeye eklenen bir karakteri temsil eder. Örneğin, resim yazısı ise `Company Name` , sonek bunu yapar `Company Name:`|
 
 > [!CAUTION]
 > Kayıt defteri düzenleyicisinde herhangi bir şey yaparken çok dikkatli olun. Düzenlemeden önce kayıt defterini yedekleyin. Kayıt Defteri Düzenleyicisi 'Ni yanlış kullanırsanız, işletim sisteminizi yeniden yüklemenizi gerektirebilecek önemli sorunlara neden olabilirsiniz. Microsoft, kayıt defteri düzenleyicisini yanlış kullanarak neden olan sorunların çözümlenemeyeceğini garanti etmez. Kayıt Defteri Düzenleyicisi'ni kullanım riski size aittir.

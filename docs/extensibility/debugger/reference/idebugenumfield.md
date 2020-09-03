@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField | Microsoft Dokümanlar
+title: Ihata ayıklama Genumfield | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,49 +13,49 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 7885f36a113809e81279498a769e257af4f1cde2
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80730177"
 ---
 # <a name="idebugenumfield"></a>IDebugEnumField
-Bu arabirim bir numaralandırma türünü temsil eder.
+Bu arabirim bir sabit listesi türünü temsil eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugEnumField : IDebugContainerField
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Bir sembol sağlayıcı, numaralandırmayı temsil etmek için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Bir sembol sağlayıcısı, bir numaralandırmayı temsil etmek için bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) dönerse `FIELD_TYPE_ENUM` [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabiriminden bu arabirimi elde etmek için [QueryInterface'i](/cpp/atl/queryinterface) kullanın.
+ Bu arabirimi, [Getkinleştirilen d](../../../extensibility/debugger/reference/idebugfield-getkind.md) döndürürse [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabiriminden elde etmek için [QueryInterface](/cpp/atl/queryinterface) kullanın `FIELD_TYPE_ENUM` .
 
-## <a name="methods-in-vtable-order"></a>VTable sırasına göre yöntemler
- Bu arabirim, `IDebugField` arabirimlerdeki `IDebugContainerField` yöntemlere ek olarak aşağıdaki yöntemleri uygular:
+## <a name="methods-in-vtable-order"></a>VTable sırasındaki Yöntemler
+ `IDebugField`Ve arayüzlerindeki yöntemlere ek olarak `IDebugContainerField` , bu arabirim aşağıdaki yöntemleri uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
 |[GetUnderlyingSymbol](../../../extensibility/debugger/reference/idebugenumfield-getunderlyingsymbol.md)|Bu numaralandırma türü için adı açıklayan bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) döndürür.|
-|[GetStringFromValue](../../../extensibility/debugger/reference/idebugenumfield-getstringfromvalue.md)|Verilen değerle ilişkili numaralandırma sabitinin adını verir.|
-|[GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)|Verilen numaralandırma sabit adı ile ilişkili değeri verir|
-|[GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)|Verilen numaralandırma sabit adı ile ilişkili değeri döndürür, ancak durum yoksayma.|
+|[GetStringFromValue](../../../extensibility/debugger/reference/idebugenumfield-getstringfromvalue.md)|Verilen değerle ilişkili sabit listesi sabitinin adını döndürür.|
+|[GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)|Verilen sabit listesi sabit adıyla ilişkili değeri döndürür|
+|[GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)|Verilen sabit listesi sabit adıyla ilişkili değeri döndürür, ancak büyük/küçük harf yok sayılıyor.|
 
 ## <a name="remarks"></a>Açıklamalar
- Aslında [Bind](../../../extensibility/debugger/reference/idebugbinder-bind.md)ile bir konuma bağlı altta yatan semboldür.
+ Aslında [bind](../../../extensibility/debugger/reference/idebugbinder-bind.md)ile bir konuma bağlı olan temel simgedir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: sh.h
+ Üstbilgi: SH. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Sembol Sağlayıcısı Arabirimleri](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)
 - [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)
-- [Bağla](../../../extensibility/debugger/reference/idebugbinder-bind.md)
+- [Bağladığınızda](../../../extensibility/debugger/reference/idebugbinder-bind.md)

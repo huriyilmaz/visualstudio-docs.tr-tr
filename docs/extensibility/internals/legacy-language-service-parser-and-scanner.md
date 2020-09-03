@@ -1,5 +1,5 @@
 ---
-title: Eski Dil Servisi Parser ve Tarayıcı | Microsoft Dokümanlar
+title: Eski dil hizmeti ayrıştırıcısı ve tarayıcısı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +12,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c87f447a4b8bca804d27aae4967f4adaf389c627
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80707322"
 ---
 # <a name="legacy-language-service-parser-and-scanner"></a>Eski Dil Hizmeti Ayrıştırıcısı ve Tarayıcısı
-Ayrıştırıcı, dil servisinin kalbidir. Yönetilen Paket Çerçevesi (MPF) dil sınıfları, görüntülenen kod hakkında bilgi seçmek için bir dil parer gerektirir. Bir ayrıştırıcı metni sözlü belirteçlere ayırır ve sonra bu belirteçleri türüne ve işlevselliğe göre tanımlar.
+Ayrıştırıcı, dil hizmetinin kalbidir. Yönetilen paket çerçevesi (MPF) dil sınıfları, görüntülenmekte olan kodla ilgili bilgileri seçmek için bir dil ayrıştırıcısı gerektirir. Bir Ayrıştırıcı, metni sözcük temelli belirteçlere ayırır ve sonra bu belirteçleri tür ve işlevlere göre tanımlar.
 
 ## <a name="discussion"></a>Tartışma
- Aşağıdaki bir C# yöntemidir.
+ Aşağıda bir C# yöntemi verilmiştir.
 
 ```csharp
 namespace MyNamespace
@@ -37,99 +37,99 @@ namespace MyNamespace
 }
 ```
 
- Bu örnekte, belirteçleri sözcükler ve noktalama işaretleri vardır. Belirteçleri türleri aşağıdaki gibidir.
+ Bu örnekte, belirteçler sözcükler ve noktalama işaretleri vardır. Belirteç türleri aşağıdaki gibidir.
 
-|Belirteç Adı|Belirteç Türü|
+|Belirteç Adı|Belirteç türü|
 |----------------|----------------|
-|ad alanı, sınıf, genel, geçersiz, int|Anahtar kelime|
-|=|operator|
+|Namespace, Class, Public, void, int|sözcükle|
+|=|işleç|
 |{ } ( ) ;|sınırlayıcı|
 |MyNamespace, MyClass, MyFunction, arg1, var1|tanımlayıcı|
 |MyNamespace|ad alanı|
-|Myclass|sınıf|
-|Myfunction|method|
+|Sınıfım|sınıf|
+|MyFunction|method|
 |arg1|parametre|
-|var1|yerel değişken|
+|var1|Yerel değişken|
 
- Ayrıştırıcının rolü belirteçleri tanımlamaktır. Bazı belirteçlerin birden fazla türü olabilir. Parser belirteçleri tanımladıktan sonra, dil hizmeti sözdizimi vurgulama, ayraç eşleştirme ve IntelliSense işlemleri gibi yararlı özellikler sağlamak için bilgileri kullanabilirsiniz.
+ Ayrıştırıcısının rolü belirteçleri belirlemektir. Bazı belirteçlerin birden fazla türü olabilir. Ayrıştırıcı belirteçleri tanımladıktan sonra dil hizmeti, söz dizimi vurgulaması, küme ayracı eşleştirme ve IntelliSense işlemleri gibi yararlı özellikler sağlamak için bu bilgileri kullanabilir.
 
-## <a name="types-of-parsers"></a>Ayrışdırıcı Çeşitleri
- Dil hizmeti ayırıcısı, derleyicinin bir parçası olarak kullanılan bir parçalayıcıyla aynı değildir. Ancak, bu tür bir ayrıştırıcı, derleyici parleyici olarak aynı şekilde, hem bir tarayıcı ve bir ayrıştırıcı kullanmanız gerekir.
+## <a name="types-of-parsers"></a>Ayrıştırıcıları türleri
+ Dil hizmeti ayrıştırıcısı, bir derleyicinin parçası olarak kullanılan bir ayrıştırıcıyla aynı değildir. Ancak, bu tür bir ayrıştırıcıda bir derleyici ayrıştırıcıyla aynı şekilde hem tarayıcı hem de ayrıştırıcı kullanması gerekir.
 
-- Bir tarayıcı belirteçleri türlerini tanımlamak için kullanılır. Bu bilgiler sözdizimi vurgulama ve diğer işlemleri tetikleyebilir belirteç türlerini hızlı bir şekilde tanımlamak için kullanılır( örneğin, ayraç eşleme. Bu tarayıcı <xref:Microsoft.VisualStudio.Package.IScanner> arabirim tarafından temsil edilir.
+- Bir tarayıcı, belirteç türlerini belirlemek için kullanılır. Bu bilgiler, söz dizimi vurgulaması için ve diğer işlemleri tetikleyebilecek (ayraç eşleştirme gibi) belirteç türlerini hızlı bir şekilde tanımlamak için kullanılır. Bu tarayıcı arabirim tarafından temsil edilir <xref:Microsoft.VisualStudio.Package.IScanner> .
 
-- Belirteçlerin işlevlerini ve kapsamını tanımlamak için bir parser kullanılır. Bu bilgiler IntelliSense işlemlerinde yöntemler, değişkenler, parametreler ve bildirimler gibi dil öğelerini tanımlamak ve içeriğe dayalı üye ve yöntem imzaları listelerini sağlamak için kullanılır. Bu ayrıştırıcı, ayraçlar ve parantezler gibi eşleşen dil öğesi çiftleri bulmak için de kullanılır. Bu ayrıştırıcı <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> <xref:Microsoft.VisualStudio.Package.LanguageService> sınıfta yöntem üzerinden erişilir.
+- Bir Ayrıştırıcı, belirteçlerin işlevlerini ve kapsamını tanımlamakta kullanılır. Bu bilgiler, IntelliSense işlemlerinde Yöntemler, değişkenler, parametreler ve bildirimler gibi dil öğelerini tanımlamak ve bağlam temelinde üye ve yöntem imzaları listeleri sağlamak için kullanılır. Bu ayrıştırıcı Ayrıca, parantez ve parantezler gibi eşleşen dil öğesi çiftlerini bulmak için de kullanılır. Bu ayrıştırıcıya <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> sınıfındaki yöntemi aracılığıyla erişilir <xref:Microsoft.VisualStudio.Package.LanguageService> .
 
-  Dil hizmetiniz için tarayıcı ve ayrıştırıcıyı nasıl uygulayacağınız size kalmış. Ayrıştırıcıların nasıl çalıştığını ve kendi parer'inizi nasıl yazılanızı açıklayan çeşitli kaynaklar mevcuttur. Ayrıca, birkaç ücretsiz ve ticari ürünler bir parser oluşturmada yardımcı mevcuttur.
+  Dil hizmetiniz için bir tarayıcıyı ve ayrıştırıcısı nasıl uygulayacağınızı öğrenin. Çözümleyicilerin nasıl çalıştığını ve kendi ayrıştırıcılarınızın nasıl yazılacağını betimleyen birkaç kaynak vardır. Ayrıca, bir Ayrıştırıcı oluşturmaya yardımcı olan çeşitli ücretsiz ve ticari ürünler de mevcuttur.
 
-### <a name="the-parsesource-parser"></a>The ParseSource Parser
- Bir derleyicinin parçası olarak kullanılan (belirteçlerin bir tür yürütülebilir kodbiçimine dönüştürüldüğü) bir arayıcısının aksine, bir dil hizmeti aralayıcısı birçok farklı nedenden ve birçok farklı bağlamda çağrılabilir. <xref:Microsoft.VisualStudio.Package.LanguageService> Sınıfta yöntembu <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> yaklaşımı nasıl uygularsanız size kalmış. Yöntemin <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> bir arka plan iş parçacığı üzerinde çağrılabileceğini akılda tutmak önemlidir.
+### <a name="the-parsesource-parser"></a>ParseSource ayrıştırıcısı
+ Bir derleyicinin parçası olarak kullanılan bir Ayrıştırıcıdan farklı olarak (belirteçlerin bazı yürütülebilir kod biçimine dönüştürülebildiği) farklı nedenlerden dolayı bir dil hizmeti ayrıştırıcısı çağrılabilir ve birçok farklı bağlamda. Bu yaklaşımı, sınıfındaki yönteminde nasıl uygulayacağınızı <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> <xref:Microsoft.VisualStudio.Package.LanguageService> görürsünüz. <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>Yöntemin bir arka plan iş parçacığında çağrılabilir olabileceğini aklınızda bulundurmanız önemlidir.
 
 > [!CAUTION]
-> Yapı <xref:Microsoft.VisualStudio.Package.ParseRequest> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> nesneye bir başvuru içerir. Bu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> nesne arka plan iş parçacığı kullanılamaz. Aslında, temel MPF sınıflarının çoğu arka plan iş parçacığı nda kullanılamaz. Bunlar, <xref:Microsoft.VisualStudio.Package.Source>, <xref:Microsoft.VisualStudio.Package.ViewFilter> <xref:Microsoft.VisualStudio.Package.CodeWindowManager> , sınıflar ve doğrudan veya dolaylı olarak görünümü ile iletişim kurar başka bir sınıf içerir.
+> <xref:Microsoft.VisualStudio.Package.ParseRequest>Yapı, nesnesine bir başvuru içerir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> . Bu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> nesne arka plan iş parçacığında kullanılamaz. Aslında, temel MPF sınıflarının birçoğu arka plan iş parçacığında kullanılamaz. Bunlar,, <xref:Microsoft.VisualStudio.Package.Source> <xref:Microsoft.VisualStudio.Package.ViewFilter> <xref:Microsoft.VisualStudio.Package.CodeWindowManager> sınıfları ve görünümle doğrudan veya dolaylı olarak iletişim kuran diğer herhangi bir sınıfı içerir.
 
- Bu ayrıştırıcı genellikle ilk çağrıldığında veya ayrıştırıcı neden değeri <xref:Microsoft.VisualStudio.Package.ParseReason> verildiğinde tüm kaynak dosyasını ayrıştırır. Yönteme <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> sonraki çağrılar ayrıştırılmış kodun küçük bir bölümünü işler ve önceki tam ayrıştırıcı işleminin sonuçlarını kullanarak çok daha hızlı bir şekilde yürütülebilir. Yöntem, <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> ayrıştma işleminin sonuçlarını nesneler <xref:Microsoft.VisualStudio.Package.AuthoringSink> <xref:Microsoft.VisualStudio.Package.AuthoringScope> aracılığıyla ileter. Nesne, <xref:Microsoft.VisualStudio.Package.AuthoringSink> belirli bir ayrıştırma nedeni için bilgi toplamak için kullanılır, örneğin, eşleşen ayraçların veya parametre listeleri olan yöntem imzalarının yayılma ları hakkında bilgi. Bildirimlerin <xref:Microsoft.VisualStudio.Package.AuthoringScope> ve yöntem imzalarının koleksiyonlarını sağlar ve ayrıca Gelişmiş Edit e git seçeneği **(Tanıya Git**, **Bildirgeye Git**, **Başvuruya Git**) için destek sağlar.
+ Bu ayrıştırıcı genellikle ilk kez çağrıldığında veya ayrıştırma neden değeri verildiğinde kaynak dosyanın tamamını ayrıştırır <xref:Microsoft.VisualStudio.Package.ParseReason> . Yöntemine yapılan sonraki çağrılar, <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> ayrıştırılmış kodun küçük bir kısmını işler ve önceki tam Ayrıştırma işleminin sonuçları kullanılarak çok daha hızlı yürütülebilir. <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>Yöntemi, ve nesneleri aracılığıyla ayrıştırma işleminin sonuçlarını iletişim kurar <xref:Microsoft.VisualStudio.Package.AuthoringSink> <xref:Microsoft.VisualStudio.Package.AuthoringScope> . <xref:Microsoft.VisualStudio.Package.AuthoringSink>Nesnesi, belirli bir ayrıştırma nedenine ilişkin bilgileri toplamak için kullanılır; Örneğin, eşleşen küme ayraçları veya parametre listelerine sahip Yöntem imzalarının yayılmaları hakkındaki bilgiler. , <xref:Microsoft.VisualStudio.Package.AuthoringScope> Bildirim ve yöntem imzaları koleksiyonlarını sağlar ve ayrıca gelişmiş Düzenle git seçeneği için de destek sağlar (**tanıma**git, **bildirime**git, **başvuruya git**).
 
-### <a name="the-iscanner-scanner"></a>iScanner Tarayıcı
- Ayrıca uygulayan bir tarayıcı uygulamanız <xref:Microsoft.VisualStudio.Package.IScanner>gerekir. Ancak, bu tarayıcı <xref:Microsoft.VisualStudio.Package.Colorizer> sınıf boyunca satır satır çalıştığından, uygulanması genellikle daha kolaydır. Her satırın başında, MPF <xref:Microsoft.VisualStudio.Package.Colorizer> sınıftarayıcıya geçirilen bir durum değişkeni olarak kullanılacak bir değer verir. Her satırın sonunda, tarayıcı güncelleştirilmiş durum değişkenini döndürür. MPF, tarayıcının kaynak dosyanın başında niçin başlamak zorunda kalmadan herhangi bir satırdan ayrıştırmaya başlayabilmeleri için her satır için bu durum bilgilerini önbelleğe alar. Tek bir satırın bu hızlı taranması, düzenleyicinin kullanıcıya hızlı geri bildirim sağlamasına olanak tanır.
+### <a name="the-iscanner-scanner"></a>IScanner tarayıcısı
+ Ayrıca, uygulayan bir tarayıcı uygulamalısınız <xref:Microsoft.VisualStudio.Package.IScanner> . Bununla birlikte, bu tarayıcı sınıfı aracılığıyla bir satır temelinde çalıştığından <xref:Microsoft.VisualStudio.Package.Colorizer> , genellikle daha kolay bir şekilde uygulanır. Her satırın başlangıcında MPF, <xref:Microsoft.VisualStudio.Package.Colorizer> sınıfa, tarayıcıya geçirilen bir durum değişkeni olarak kullanılacak bir değer verir. Her satırın sonunda, tarayıcı güncelleştirilmiş durum değişkenini döndürür. MPF bu durum bilgilerini her satır için önbelleğe alır, böylece tarayıcı kaynak dosyanın başlangıcında başlatmaya gerek kalmadan herhangi bir satırdan ayrıştırmaya başlayabilir. Tek bir satırın hızlı taraması, düzenleyicinin kullanıcıya hızlı geri bildirim sağlamasına olanak tanır.
 
-## <a name="parsing-for-matching-braces"></a>Eşleşen Ayraçlar için Ayrışma
- Bu örnek, kullanıcının yazdığı bir kapanış ayracıyla eşleştirme için denetim akışını gösterir. Bu işlemde, renklendirme için kullanılan tarayıcı da belirteç türünü belirlemek için kullanılır ve belirteç bir eşleştirme ayraç işlemi tetikleyebilir. Tetikleyici bulunursa, <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> eşleşen ayraç bulmak için yöntem çağrılır. Son olarak, iki parantez vurgulanır.
+## <a name="parsing-for-matching-braces"></a>Eşleşen küme ayraçları için ayrıştırma
+ Bu örnek, kullanıcının yazdığı bir kapanış ayracı ile eşleşen denetim akışını gösterir. Bu süreçte, belirtecin türünü ve belirtecin bir eşleştirme ayracı işlemini tetikleyemeyeceğini anlamak için renklendirme için kullanılan tarayıcı da kullanılır. Tetikleyici bulunursa, <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> eşleşen küme ayracını bulmak için yöntemi çağırılır. Son olarak, iki küme ayracı vurgulanır.
 
- Ayraçlar tetikleyiciler ve ayrıştırma nedenlerinin adlarında kullanılsa da, bu işlem gerçek ayraçlarla sınırlı değildir. Eşleşen bir çift olarak belirtilen herhangi bir karakter çifti desteklenir. Örnekler şunlardır \< ( ve ), ve >, ve [ ve ].
+ Küme ayraçları Tetikleyiciler ve ayrıştırma nedenlerinin adlarında kullanılmasına karşın, bu işlem gerçek küme ayraçları ile sınırlı değildir. Eşleşen bir çift olarak belirtilen tüm karakter çiftleri desteklenir. Örnekler şunlardır (ve), \< and > , ve [ve].
 
- Dil hizmetinin eşleşen ayraçları desteklediğini varsayalım.
+ Dil hizmetinin eşleşen ayraçları desteklediğini varsayın.
 
-1. Kullanıcı kapanış kıvırcık ayracı (}) olarak yıtipler.
+1. Kullanıcı bir kapanış küme ayracı (}).
 
-2. Kıvırcık ayraç, kaynak dosyadaki imleçten eklenir ve imleç bir kişi tarafından ilerletilir.
+2. Küme ayracı, kaynak dosyadaki imlece eklenir ve imleç bir tarafından ilerlemiş olur.
 
-3. Sınıftaki <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> <xref:Microsoft.VisualStudio.Package.Source> yöntem, yazılan kapanış ayracıyla çağrılır.
+3. <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>Sınıfındaki yöntemi, <xref:Microsoft.VisualStudio.Package.Source> türü belirlenmiş kapanış ayracı ile çağırılır.
 
-4. Yöntem, <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> geçerli <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> imleç <xref:Microsoft.VisualStudio.Package.Source> konumundan hemen önce belirteç leri konumda niçin elde etmek için sınıftaki yöntemi çağırır. Bu belirteç, yazılan kapanış ayracına karşılık gelir).
+4. <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>Yöntemi, <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> <xref:Microsoft.VisualStudio.Package.Source> geçerli imleç konumundan hemen önceki konumda belirteci almak için sınıfındaki yöntemini çağırır. Bu belirteç, türü belirlenmiş kapanış ayracı ' ne karşılık gelir).
 
-    1. Yöntem, <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> geçerli <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> satırdaki <xref:Microsoft.VisualStudio.Package.Colorizer> tüm belirteçleri elde etmek için nesne üzerindeki yöntemi çağırır.
+    1. <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A>Yöntemi, <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> <xref:Microsoft.VisualStudio.Package.Colorizer> geçerli satırdaki tüm belirteçleri almak için nesnesine yöntemini çağırır.
 
-    2. Yöntem, <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> geçerli <xref:Microsoft.VisualStudio.Package.IScanner.SetSource%2A> satırın <xref:Microsoft.VisualStudio.Package.IScanner> metniyle nesne üzerindeki yöntemi çağırır.
+    2. <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A>Yöntemi <xref:Microsoft.VisualStudio.Package.IScanner.SetSource%2A> nesne üzerindeki yöntemini <xref:Microsoft.VisualStudio.Package.IScanner> geçerli satırın metniyle çağırır.
 
-    3. Yöntem, <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> geçerli satırdaki <xref:Microsoft.VisualStudio.Package.IScanner.ScanTokenAndProvideInfoAboutIt%2A> <xref:Microsoft.VisualStudio.Package.IScanner> tüm belirteçleri toplamak için nesne üzerindeki yöntemi art arda çağırır.
+    3. <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A>Yöntemi, <xref:Microsoft.VisualStudio.Package.IScanner.ScanTokenAndProvideInfoAboutIt%2A> <xref:Microsoft.VisualStudio.Package.IScanner> geçerli satırdaki tüm belirteçleri toplamak için nesne üzerinde yöntemi tekrar tekrar çağırır.
 
-    4. Yöntem, <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> istenen konumu içeren <xref:Microsoft.VisualStudio.Package.Source> belirteci elde etmek için sınıfta özel bir yöntem çağırır ve <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> yöntemden elde edilen belirteçler listesinde geçer.
+    4. <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A>Yöntemi, <xref:Microsoft.VisualStudio.Package.Source> istenen konumu içeren belirteci almak için sınıfında özel bir yöntemi çağırır ve yönteminden edinilen belirteçleri listesinde geçirir <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> .
 
-5. Yöntem, <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> <xref:Microsoft.VisualStudio.Package.TokenTriggers> <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> yöntemden döndürülen belirteç üzerinde bir belirteç tetikleyici bayrağı arar; diğer bir şey, kapanış ayracını temsil eden belirteçtir).
+5. <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>Yöntemi, yönteminden döndürülen belirteçte belirteç tetikleyici bayrağını arar <xref:Microsoft.VisualStudio.Package.TokenTriggers> <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> ; diğer bir deyişle, kapatma küme ayracını temsil eden belirteç).
 
-6. Tetikleyici bayrağı <xref:Microsoft.VisualStudio.Package.TokenTriggers> bulunursa, <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> sınıftaki <xref:Microsoft.VisualStudio.Package.Source> yöntem çağrılır.
+6. Tetikleyici bayrağı <xref:Microsoft.VisualStudio.Package.TokenTriggers> bulunursa, <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> <xref:Microsoft.VisualStudio.Package.Source> sınıfındaki yöntemi çağrılır.
 
-7. Yöntem <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> ayrıştırma neden değeri ile ayrıştırma işlemi <xref:Microsoft.VisualStudio.Package.ParseReason>başlar. Bu işlem sonuçta <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> <xref:Microsoft.VisualStudio.Package.LanguageService> sınıfta yöntem çağırır. Eşzamanlı ayrıştırma etkinleştirilmişse, yönteme <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> yapılan bu çağrı bir arka plan iş parçacığı üzerinde gerçekleşir.
+7. <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A>Yöntemi ayrıştırma nedeni değeri ile bir ayrıştırma işlemi başlatır <xref:Microsoft.VisualStudio.Package.ParseReason> . Bu işlem, sonuç <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> olarak sınıfında yöntemini çağırır <xref:Microsoft.VisualStudio.Package.LanguageService> . Zaman uyumsuz ayrıştırma etkinse yöntemine bu çağrı <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> bir arka plan iş parçacığında gerçekleşir.
 
-8. Ayrıştırma işlemi tamamlandığında, `HandleMatchBracesResponse` <xref:Microsoft.VisualStudio.Package.Source> sınıfta adı geçen bir iç tamamlama işleyicisi (geri arama yöntemi olarak da bilinir) çağrılır. Bu arama, ayrıştırıcı tarafından değil, <xref:Microsoft.VisualStudio.Package.LanguageService> taban sınıf tarafından otomatik olarak yapılır.
+8. Ayrıştırma işlemi bittiğinde sınıfında adlı bir iç tamamlama işleyicisi (geri çağırma yöntemi olarak da bilinir) `HandleMatchBracesResponse` çağırılır <xref:Microsoft.VisualStudio.Package.Source> . Bu çağrı, <xref:Microsoft.VisualStudio.Package.LanguageService> ayrıştırıcının değil, temel sınıf tarafından otomatik olarak yapılır.
 
-9. Yöntem, `HandleMatchBracesResponse` <xref:Microsoft.VisualStudio.Package.AuthoringSink> <xref:Microsoft.VisualStudio.Package.ParseRequest> nesnede depolanan nesneden bir yayılma listesi alır. (Yayılma alanı, <xref:Microsoft.VisualStudio.TextManager.Interop.TextSpan> kaynak dosyadaki satır ve karakter aralığını belirten bir yapıdır.) Bu yayılma listesi genellikle açılış ve kapanış ayraçları için birer tane olmak üzere iki açıklık içerir.
+9. `HandleMatchBracesResponse`Yöntemi, <xref:Microsoft.VisualStudio.Package.AuthoringSink> nesnesinde depolanan nesneden yayılmalar listesini alır <xref:Microsoft.VisualStudio.Package.ParseRequest> . (Span, <xref:Microsoft.VisualStudio.TextManager.Interop.TextSpan> kaynak dosyadaki bir dizi satırı ve karakteri belirten bir yapıdır.) Bu yayılmalar, genellikle her biri açma ve kapatma ayraçları için olmak üzere iki yayılma içerir.
 
-10. Yöntem, `HandleBracesResponse` <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.HighlightMatchingBrace%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> <xref:Microsoft.VisualStudio.Package.ParseRequest> nesnede depolanan nesne üzerinde yöntem çağırır. Bu, verilen yayılma açıklıklarını vurgular.
+10. `HandleBracesResponse`Yöntemi, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.HighlightMatchingBrace%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> nesnesinde depolanan nesnesi üzerinde yöntemini çağırır <xref:Microsoft.VisualStudio.Package.ParseRequest> . Bu, verilen yayılmaları vurgular.
 
-11. <xref:Microsoft.VisualStudio.Package.LanguagePreferences> Özellik <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A> etkinse, `HandleBracesResponse` yöntem eşleşen açıktarafından kapsanan metni alır ve durum çubuğunda bu açıklının ilk 80 karakterini görüntüler. <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> Yöntem eşleşen çifti eşlik eden dil öğesi içeriyorsa bu en iyi şekilde çalışır. Daha fazla bilgi <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A> için tesise bakın.
+11. <xref:Microsoft.VisualStudio.Package.LanguagePreferences>Özellik <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A> etkinleştirilirse, `HandleBracesResponse` yöntemi, eşleşen yayılma tarafından dahil edilen metni alır ve durum çubuğunda o yayılma alanının ilk 80 karakterini görüntüler. Bu, <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> yöntemi, eşleşen çifte eşlik eden dil öğesini içeriyorsa en iyi şekilde geçerlidir. Daha fazla bilgi için bkz <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A> . özelliği.
 
 12. Bitti.
 
 ### <a name="summary"></a>Özet
- Eşleşen ayraçişlemi genellikle basit dil öğeleri çiftleri ile sınırlıdır. Üçlü eşleştirme`if(...)`(" ", " "`{`ve "`}`",`else`" "`{`"`}`" ve " ") gibi daha karmaşık öğeler, sözcük tamamlama işleminin bir parçası olarak vurgulanabilir. Örneğin, "else" sözcüğü tamamlandığında , eşleşen`if`" " ifadesi vurgulanabilir. Bir dizi `if` / `else if` deyim olsaydı, bunların tümü eşleç ayraçlarla aynı mekanizma kullanılarak vurgulanabilir. Taban sınıf zaten aşağıdaki gibi bunu destekler: Tarayıcı imleç <xref:Microsoft.VisualStudio.Package.TokenTriggers> konumundan önce <xref:Microsoft.VisualStudio.Package.TokenTriggers> belirteç için tetikleme değeri ile birlikte belirteç tetikleme değerini döndürmelidir. <xref:Microsoft.VisualStudio.Package.Source>
+ Eşleşen küme ayraçları işlemi, genellikle basit dil öğesi çiftleri ile sınırlıdır. Eşleşen Üçlü öğeler (" `if(...)` ", " `{` " ve "" `}` veya " `else` ", " `{` " ve "") gibi daha karmaşık öğeler `}` , bir sözcük tamamlama işleminin parçası olarak vurgulanabilir. Örneğin, "Else" sözcüğü bittiğinde, eşleşen " `if` " ifadesini vurgulanabilir. Bir dizi `if` / `else if` deyim varsa, bunların hepsi eşleşen küme ayraçları ile aynı mekanizmaya göre vurgulanacaktır. <xref:Microsoft.VisualStudio.Package.Source>Temel sınıf, bunu aşağıdaki şekilde zaten destekler: tarayıcı, <xref:Microsoft.VisualStudio.Package.TokenTriggers> <xref:Microsoft.VisualStudio.Package.TokenTriggers> imleç konumundan önce olan belirtecin tetikleyici değeriyle birleştirilmiş belirteç tetikleyici değerini döndürmelidir.
 
- Daha fazla bilgi için, [Eski Dil Hizmetinde Ayraç Eşleştirme'ye](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md)bakın.
+ Daha fazla bilgi için bkz. [eski dil hizmetinde küme ayracı eşleme](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md).
 
-## <a name="parsing-for-colorization"></a>Renklendirme için ayrışma
- Kaynak kodunu renklendirmek basittir, yalnızca belirteç türünü tanımlayın ve bu türle ilgili renk bilgilerini döndürün. Sınıf, <xref:Microsoft.VisualStudio.Package.Colorizer> her belirteç hakkında renk bilgisi sağlamak için düzenleyici ve tarayıcı arasında aracı görevi görür. Sınıf, <xref:Microsoft.VisualStudio.Package.Colorizer> bir <xref:Microsoft.VisualStudio.Package.IScanner> satırı renklendirmeye yardımcı olmak ve kaynak dosyadaki tüm satırlar için durum bilgilerini toplamak için nesneyi kullanır. MPF dil hizmeti sınıflarında, <xref:Microsoft.VisualStudio.Package.Colorizer> tarayıcıyla yalnızca <xref:Microsoft.VisualStudio.Package.IScanner> arabirim üzerinden iletişim kurduğundan sınıfın geçersiz kılınması gerekmez. Sınıfta yöntemi geçersiz kılarak <xref:Microsoft.VisualStudio.Package.IScanner> <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> arabirimi uygulayan nesneyi sağlarsınız. <xref:Microsoft.VisualStudio.Package.LanguageService>
+## <a name="parsing-for-colorization"></a>Renklendirme için ayrıştırma
+ Kaynak kodu renklendirme basittir, belirtecin türünü ve bu türle ilgili dönüş renk bilgilerini belirlemeniz yeterlidir. <xref:Microsoft.VisualStudio.Package.Colorizer>Sınıfı, her belirteçle ilgili renk bilgilerini sağlamak için düzenleyici ve tarayıcı arasında aracı işlevi görür. <xref:Microsoft.VisualStudio.Package.Colorizer>Sınıfı, <xref:Microsoft.VisualStudio.Package.IScanner> bir satırı renklendirime ve ayrıca kaynak dosyadaki tüm satırların durum bilgilerini toplama konusunda yardımcı olmak için nesnesini kullanır. MPF dil hizmeti sınıflarında, <xref:Microsoft.VisualStudio.Package.Colorizer> yalnızca arabirim aracılığıyla tarayıcıyla iletişim kurduğu için sınıfın geçersiz kılınması gerekmez <xref:Microsoft.VisualStudio.Package.IScanner> . <xref:Microsoft.VisualStudio.Package.IScanner>Sınıfında yöntemini geçersiz kılarak arabirimini uygulayan nesneyi sağlarsınız <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> <xref:Microsoft.VisualStudio.Package.LanguageService> .
 
- Tarayıcı <xref:Microsoft.VisualStudio.Package.IScanner> <xref:Microsoft.VisualStudio.Package.IScanner.SetSource%2A> yöntemi ile kaynak kodu bir satır verilir. <xref:Microsoft.VisualStudio.Package.IScanner.ScanTokenAndProvideInfoAboutIt%2A> Satır belirteçleri tükenene kadar satırdaki sonraki belirteci elde etmek için yönteme yapılan çağrılar yinelenir. Renklendirme için, MPF tüm kaynak kodunu bir satır dizisi olarak ele alar. Bu nedenle, tarayıcı satır olarak gelen kaynak ile başa çıkmak gerekir. Buna ek olarak, herhangi bir satır herhangi bir zamanda tarayıcıya geçirilebilir ve tek garanti tarayıcı nın taranmak üzere olan satırdan önce satırdan durum değişkenini almasıdır.
+ <xref:Microsoft.VisualStudio.Package.IScanner>Tarayıcıya, yöntemi aracılığıyla bir kaynak kodu satırı verilir <xref:Microsoft.VisualStudio.Package.IScanner.SetSource%2A> . Yöntemine yapılan çağrılar, satır <xref:Microsoft.VisualStudio.Package.IScanner.ScanTokenAndProvideInfoAboutIt%2A> belirteçlerin tükenene kadar satırdaki bir sonraki belirteci almak için yinelenir. Renklendirme için MPF tüm kaynak kodlarını satır dizisi olarak değerlendirir. Bu nedenle, tarayıcı, kaynak olarak bu kaynağa gelen kaynak ile Cope sağlamalıdır. Bunlara ek olarak, herhangi bir zamanda tarayıcıya herhangi bir zaman geçirilebilir ve tek garanti, tarayıcının durum değişkenini taranmadan önceki satırdan almasını sağlar.
 
- Sınıf, <xref:Microsoft.VisualStudio.Package.Colorizer> belirteç tetikleyicilerini tanımlamak için de kullanılır. Bu tetikleyiciler MPF'ye belirli bir belirtecisözcük tamamlama veya eşleme ayraçları gibi daha karmaşık bir işlem başlatabileceğini söyler. Bu tür tetikleyicileri tanımlamahızlı olmalı ve herhangi bir konumda gerçekleşmesi gerekir, tarayıcı bu görev için en uygun.
+ <xref:Microsoft.VisualStudio.Package.Colorizer>Sınıf, belirteç tetikleyicilerini belirlemek için de kullanılır. Bu Tetikleyiciler, MPF 'ye belirli bir belirtecin sözcük tamamlama veya eşleşen küme ayraçları gibi daha karmaşık bir işlem başlatabileceğini söyler. Bu tür Tetikleyiciler hızlı olması ve herhangi bir konumda gerçekleşmesi gerektiğinden, tarayıcı bu görev için en uygun seçenektir.
 
- Daha fazla bilgi için, [Eski Dil Hizmetinde Sözdizimi Renklendirme'ye](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md)bakın.
+ Daha fazla bilgi için, bkz. [eski dil hizmetinde söz dizimi renklendirme](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md).
 
-## <a name="parsing-for-functionality-and-scope"></a>İşlevsellik ve Kapsam Ayrıştisı
- İşlevsellik ve kapsam ayrıştMası, karşılaşılan belirteç türlerini tanımlamaktan daha fazla çaba gerektirir. Parser yalnızca belirteç türünü değil, aynı zamanda belirteci kullanılan işlevselliği tanımlamak zorundadır. Örneğin, tanımlayıcı sadece bir addır, ancak dilinizde bir tanımlayıcı içeriğe bağlı olarak bir sınıfın, ad alanının, yöntemin veya değişkenin adı olabilir. Belirteç genel türü bir tanımlayıcı olabilir, ancak tanımlayıcı da ne olduğuna ve nerede tanımlandığına bağlı olarak başka anlamları olabilir. Bu tanımlama, ayrıştırılan dil hakkında daha kapsamlı bilgiye sahip olması için ayrıştırıcıyı gerektirir. <xref:Microsoft.VisualStudio.Package.AuthoringSink> Burası sınıfın devreye girdiği yer. Sınıf <xref:Microsoft.VisualStudio.Package.AuthoringSink> tanımlayıcılar, yöntemler, eşleşen dil çiftleri (parantez ler ve parantezler gibi) ve dil üçlüsü (dil çiftlerine benzer, örneğin " "`foreach()`"`{`"`}`ve " ") gibi üç bölüm dışında bilgi toplar. Buna ek olarak, hata <xref:Microsoft.VisualStudio.Package.AuthoringSink> ayıklayıcının yüklenmesi gerekmemesi için kesme noktalarının erken doğrulamasında kullanılan kod tanımlamasını ve bir program hata ayıklanırken yerel değişkenleri ve parametreleri otomatik olarak gösteren ve hata ayıklayıcının sunduğuna ek olarak uygun yerel değişkenleri ve parametreleri tanımlamasını gerektiren **Otomatik hata** ayıklama penceresini desteklemek için sınıfı geçersiz kılabilirsiniz.
+## <a name="parsing-for-functionality-and-scope"></a>Işlevsellik ve kapsam için ayrıştırma
+ İşlevsellik ve kapsam için ayrıştırma, yalnızca karşılaşılan belirteç türlerini tanımlamaya kıyasla daha fazla çaba gerektirir. Ayrıştırıcının yalnızca belirteç türünü değil, belirtecin kullanıldığı işlevselliği de belirlemesi gerekir. Örneğin, bir tanımlayıcı yalnızca bir addır, ancak dilinizde bir tanımlayıcı, içeriğe bağlı olarak bir sınıf, ad alanı, yöntem veya değişkenin adı olabilir. Belirtecin genel türü bir tanımlayıcı olabilir, ancak tanımlayıcı ne olduğuna ve nerede tanımlandığına bağlı olarak başka anlamlara da sahip olabilir. Bu kimlik, ayrıştırıcısının ayrıştırılmakta olan dil hakkında daha kapsamlı bilgi sahibi olmasını gerektirir. Bu, <xref:Microsoft.VisualStudio.Package.AuthoringSink> sınıfının içinde geldiği yerdir. <xref:Microsoft.VisualStudio.Package.AuthoringSink>Sınıfı tanımlayıcılar, Yöntemler, eşleşen dil çiftleri (küme ayraçları ve parantezler gibi) ve dil Üçlü (örneğin, "" "" `foreach()` `{` ve "") gibi üç bölüm olması dışında dil çiftlerine benzer bilgiler toplar `}` . Ayrıca, <xref:Microsoft.VisualStudio.Package.AuthoringSink> bir programın hata ayıklaması yapıldığında otomatik olarak yerel değişkenleri ve parametreleri gösteren ve ayrıştırıcıların hata **ayıklamasına** ek olarak uygun yerel değişkenleri ve parametreleri belirlemesine olanak tanımak için, kesme noktalarının erken doğrulanmasında kullanılan kod kimliğini desteklemek için sınıfını geçersiz kılabilirsiniz.
 
- Nesne, <xref:Microsoft.VisualStudio.Package.AuthoringSink> <xref:Microsoft.VisualStudio.Package.ParseRequest> nesnenin bir parçası olarak ayrıştırıcıya <xref:Microsoft.VisualStudio.Package.AuthoringSink> aktarılır ve her yeni <xref:Microsoft.VisualStudio.Package.ParseRequest> nesne oluşturulduğunda yeni bir nesne oluşturulur. Buna ek <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> olarak, yöntem <xref:Microsoft.VisualStudio.Package.AuthoringScope> çeşitli IntelliSense işlemleri işlemek için kullanılan bir nesne döndürmeniz gerekir. Nesne, <xref:Microsoft.VisualStudio.Package.AuthoringScope> ayrıştırma nedenine bağlı olarak, bildirimler için bir liste ve her ikisi de doldurulan yöntemler için bir liste tutar. Sınıf <xref:Microsoft.VisualStudio.Package.AuthoringScope> uygulanmalıdır.
+ <xref:Microsoft.VisualStudio.Package.AuthoringSink>Nesne, nesnenin bir parçası olarak ayrıştırıcıya geçirilir <xref:Microsoft.VisualStudio.Package.ParseRequest> ve <xref:Microsoft.VisualStudio.Package.AuthoringSink> her yeni nesne oluşturulduğunda yeni bir nesne oluşturulur <xref:Microsoft.VisualStudio.Package.ParseRequest> . Ayrıca, <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> yöntemin <xref:Microsoft.VisualStudio.Package.AuthoringScope> çeşitli IntelliSense işlemlerini işlemek için kullanılan bir nesnesi döndürmesi gerekir. <xref:Microsoft.VisualStudio.Package.AuthoringScope>Nesnesi bildirimler için bir liste ve ayrıştırma nedenine bağlı olarak, her biri doldurulmuş yöntemler için bir liste tutar. <xref:Microsoft.VisualStudio.Package.AuthoringScope>Sınıfın uygulanması gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Eski Dil Hizmeti Uygulama](../../extensibility/internals/implementing-a-legacy-language-service1.md)

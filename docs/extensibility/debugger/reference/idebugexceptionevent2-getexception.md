@@ -1,5 +1,5 @@
 ---
-title: IDebugExceptionEvent2::GetException | Microsoft Dokümanlar
+title: 'IDebugExceptionEvent2:: GetException | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 332cbb28bd175aa5c3b4187ae735a479ba9de6b0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729855"
 ---
 # <a name="idebugexceptionevent2getexception"></a>IDebugExceptionEvent2::GetException
-Bu olayı ateşleyen özel durum ayrıntılı bir açıklamasını alır.
+Bu olayı tetikleyen özel durumun ayrıntılı bir açıklamasını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetException( 
@@ -41,14 +41,14 @@ int GetException( 
 
 ## <a name="parameters"></a>Parametreler
 `pExceptionInfo`\
-[içinde, dışarı] Özel durum açıklamasıyla doldurulmuş [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) bir yapı.
+[in, out] Özel durumun açıklamasıyla doldurulmuş bir [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) yapısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
 
- [Yalnızca C++ ] Arayan, [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) yapısındaki dizeleri serbest bırakmanın yanı sıra yapıdaki [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesini serbest bırakmakla da sorumludur.
+ [Yalnızca C++] Çağıran, [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) yapısındaki dizeleri boşaltmaktan ve [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesinin yapıda serbest bırakılmasından sorumludur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)
