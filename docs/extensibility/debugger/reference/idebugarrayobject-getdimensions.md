@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject::GetDimensions | Microsoft Dokümanlar
+title: 'Ihata ayıklama Garrayobject:: GetDimensions | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 527f79724aeac0de58d0ae63c9c2408ed2eca9ec
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736166"
 ---
 # <a name="idebugarrayobjectgetdimensions"></a>IDebugArrayObject::GetDimensions
 Dizinin boyutlarını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetDimensions( 
@@ -40,16 +40,16 @@ int GetDimensions(
 
 ## <a name="parameters"></a>Parametreler
 `dwCount`\
-[içinde] Alınacak boyut sayısı.
+'ndaki Alınacak boyut sayısı.
 
 `dwDimensions`\
-[içinde, dışarı] Her boyutun boyutlarıyla doldurulmuş bir dizi. `dwCount``dwDimensions` dizinin en büyük boyutunu belirtir.
+[in, out] Her boyutun boyutlarıyla doldurulmuş bir dizi. `dwCount` dizinin en büyük boyutunu belirtir `dwDimensions` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Çok boyutlu bir dizi, her boyut için farklı boyutlara sahip olabilir. Örneğin, üç boyutlu dizi `myarray[3][2][6]`göz önüne alındığında, bu yöntem bu `dwDimensions` sırada parametre 3, 2 ve 6 döndürecek.
+ Çok boyutlu bir dizi, her boyut için farklı boyutlarda olabilir. Örneğin, üç boyutlu dizi verildiğinde `myarray[3][2][6]` , bu yöntem bu sırada parametreye 3, 2 ve 6 döndürür `dwDimensions` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

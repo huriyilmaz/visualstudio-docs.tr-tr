@@ -11,33 +11,33 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 775656d2190a36f62c2b047c1ff7f1e02575c1ca
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68154148"
 ---
 # <a name="project-types-architecture"></a>Proje Türleri Mimarisi
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu bölümde proje türleri mimarisi hakkında ayrıntılı bilgi içeren [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+Bu bölüm, içindeki proje türlerinin mimarisi hakkında ayrıntılı bilgiler içerir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Proje Modeli Öğeleri](../../extensibility/internals/elements-of-a-project-model.md)  
- Bir proje türü kullanabilir hizmetlerini ve bunu uygulamalıdır arabirimler listelenmiştir.  
+ Bir proje türünün tüketebileceği Hizmetleri ve uygulanması gereken arabirimleri listeler.  
   
  [Proje Modeli Çekirdek Bileşenleri](../../extensibility/internals/project-model-core-components.md)  
- Proje türleri hem uygulamalıdır ve isteğe bağlı olarak ek işlevsellik sağlamak için uygulayabileceğiniz arabirimler açıklanmaktadır.  
+ Hem uygulanması gereken hem de isteğe bağlı olarak ek işlevsellik sağlamak için uygulayabileceğiniz arabirimlerin proje türleri açıklanmaktadır.  
   
  [Proje Türlerinin Oluşturulacağı Durumlar](../../extensibility/internals/when-to-create-project-types.md)  
- Karar bir proje oluşturduğunuzda gerekir yardımcı yazın ve ne zaman kullanabileceğiniz başka [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] gibi VSPackages ve düzenleyicileri aynı hedefe ulaşmak için genişletilebilirlik özelliği.  
+ , Ne zaman bir proje türü oluşturmanız gerektiğine ve [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] aynı hedefe ulaşmak Için VSPackages ve düzenleyiciler gibi başka bir genişletilebilirlik özelliğini ne zaman kullanacağınızı belirlemenize yardımcı olur.  
   
  [Hiyerarşiler ve Seçim](../../extensibility/internals/hierarchies-and-selection.md)  
- Açıklayan nasıl [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] tutarlı ve Basitleştirilmiş kullanıcı deneyimi sağlamak için hiyerarşiler ve seçim bağlamını kullanır.  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Tutarlı ve basitleştirilmiş bir kullanıcı deneyimi sağlamak için hiyerarşi ve seçim bağlamını nasıl kullandığını açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Proje Alt Türleri](../../extensibility/internals/project-subtypes.md)  
- Proje alt türleri proje sistemleri davranışını özelleştirmenize izin nasıl açıklar [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ve [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)].  
+ Proje alt türleri, ve proje sistemlerinin davranışını özelleştirmenize nasıl olanak sağladığını açıklar [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] .  
   
  [Proje Türleri](../../extensibility/internals/project-types.md)  
- Temel yapı taşları projelerine genel bir bakış sağlar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE). Projeler oluşturmak ve kodu derleme nasıl kontrol açıklayan ek konulara bağlantılar sağlanmaktadır.
+ , [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tümleşik geliştirme ortamının (IDE) temel yapı taşları olarak projelere genel bir bakış sağlar. Bağlantılar, projelerin kod oluşturma ve derleme şeklini açıklayan ek konulara sağlanır.

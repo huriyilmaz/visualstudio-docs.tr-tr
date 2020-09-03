@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject2 | Microsoft Dokümanlar
+title: IDebugArrayObject2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,41 +11,41 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a8a6580d0cbdead7866bbc6dd106a2aa0ea56f76
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736230"
 ---
 # <a name="idebugarrayobject2"></a>IDebugArrayObject2
 > [!IMPORTANT]
-> Visual Studio 2015'te ifade değerlendiricilerinin bu şekilde uygulanması amortismana uymaktadır. CLR ifade değerlendiricilerinin uygulanması hakkında bilgi için lütfen [CLR İfade Değerlendiriciler](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [Yönetilen İfade Değerlendirici Örneği'ne](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)bakın.
+> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Yönetilen bir dizi nesnesini temsil eder ve bir ifade değerlendiricinin (EE) dizi için taban diziyi (alt sınırlar) belirlemesine olanak tanır.
+ Yönetilen bir dizi nesnesini temsil eder ve bir ifade değerlendiricisi (EE) dizi için temel dizini (alt sınır) belirlemesine izin verir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugArrayObject2 : IDebugArrayObject
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+## <a name="notes-for-implementers"></a>Implemenonun notları
  Bu, yönetilen hata ayıklama altyapısı (DE) tarafından uygulanır.
 
 ## <a name="methods"></a>Yöntemler
- [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md) arabirimindeki yöntemlere ek olarak, bu arabirim aşağıdaki yöntemleri uygular:
+ Bu arabirim, [Ihata ayıklama Garrayobject](../../../extensibility/debugger/reference/idebugarrayobject.md) arabirimindeki yöntemlere ek olarak aşağıdaki yöntemleri uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetBaseIndices](../../../extensibility/debugger/reference/idebugarrayobject2-getbaseindices.md)|Dizideki boyut sayısı göz önüne alındığında her dizin için temel endeksleri (alt sınırlar) alır.|
-|[HasBaseIndices](../../../extensibility/debugger/reference/idebugarrayobject2-hasbaseindices.md)|Dizinin tanımlı temel endeksleri (alt sınırlar) olup olmadığını belirler.|
+|[GetBaseIndices](../../../extensibility/debugger/reference/idebugarrayobject2-getbaseindices.md)|Dizideki boyutların sayısını verilen her bir dizin için temel dizinleri (alt sınır) alır.|
+|[HasBaseIndices](../../../extensibility/debugger/reference/idebugarrayobject2-hasbaseindices.md)|Dizide tanımlanmış temel dizinler (alt sınırlar) olup olmadığını belirler.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bir ifade değerlendiricisi, ayrıştırma ağacında yönetilen dizileri temsil etmek için bu arabirimi kullanır.
+ Bir ifade değerlendirici, bir ayrıştırma ağacındaki yönetilen dizileri göstermek için bu arabirimi kullanır.
 
 ## <a name="requirements"></a>Gereksinimler
- Başlık: Ee.h
+ Üstbilgi: ee. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll

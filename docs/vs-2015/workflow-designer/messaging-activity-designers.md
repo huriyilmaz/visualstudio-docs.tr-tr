@@ -10,26 +10,26 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a6fb06bea4cebf2558990d23f7ece5b4f8db5b95
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658930"
 ---
 # <a name="messaging-activity-designers"></a>Mesajlaşma Etkinlik Tasarımcıları
-Mesajlaşma etkinliği tasarımcıları, bir [!INCLUDE[wf](../includes/wf-md.md)] uygulamasının içinden [!INCLUDE[indigo1](../includes/indigo1-md.md)] iletileri gönderen ve alan mesajlaşma etkinlikleri oluşturmak ve yapılandırmak için kullanılır. @No__t_0 beş mesajlaşma etkinliği tanıtır ve [!INCLUDE[wfd1](../includes/wfd1-md.md)], bir iş akışı içinde mesajlaşma yönetmenizi sağlayan iki yeni şablon tasarımcıları sağlar. Bu bölümde yer alan ve aşağıdaki tabloda listelenen konular [!INCLUDE[wfd2](../includes/wfd2-md.md)] etkinliğinin ve Şablon tasarımcılarının nasıl kullanılacağına ilişkin yönergeler sağlar.
+Mesajlaşma etkinliği tasarımcıları, [!INCLUDE[indigo1](../includes/indigo1-md.md)] bir uygulamanın içinden ileti gönderen ve alan mesajlaşma etkinliklerini oluşturmak ve yapılandırmak için kullanılır [!INCLUDE[wf](../includes/wf-md.md)] . , [!INCLUDE[netfx40_long](../includes/netfx40-long-md.md)] Beş mesajlaşma etkinliği [!INCLUDE[wfd1](../includes/wfd1-md.md)] sunar ve bir iş akışı içinde mesajlaşma yönetmenizi sağlayan iki yeni şablon tasarımcıları sağlar. Bu bölümde yer alan ve aşağıdaki tabloda listelenen konular, [!INCLUDE[wfd2](../includes/wfd2-md.md)] etkinliğin ve Şablon tasarımcılarının nasıl kullanılacağına ilişkin yönergeler sağlar.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-|İleti etkinliği|Açıklama|
+|İleti etkinliği|Description|
 |----------------------|-----------------|
-|[CorrelationScope](../workflow-designer/correlationscope-activity-designer.md)|Bir <xref:System.ServiceModel.Activities.CorrelationHandle> nesnesi ile alt ileti etkinliklerinin örtük yönetimi sağlayan <xref:System.ServiceModel.Activities.CorrelationScope> bir etkinlik oluşturur ve yapılandırır.|
-|[InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md)|Bir ileti göndermeden veya almadan bağıntı başlatmak için kullanılan <xref:System.ServiceModel.Activities.InitializeCorrelation> etkinlik oluşturur ve yapılandırır.|
-|[Receive](../workflow-designer/receive-activity-designer.md)|Bir hizmetten ileti alan <xref:System.ServiceModel.Activities.Receive> etkinlik oluşturur ve yapılandırır.|
-|[ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)|@No__t_2 etkinliğinde önceden yapılandırılmış <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.ReceiveReply> etkinlikleri oluşturur.|
-|[Send](../workflow-designer/send-activity-designer.md)|Bir hizmete ileti gönderen <xref:System.ServiceModel.Activities.Send> etkinlik oluşturur ve yapılandırır.|
-|[SendAndReceiveReply](../workflow-designer/sendandreceivereply-template-designer.md)|@No__t_2 etkinliğinde önceden yapılandırılmış <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> etkinlikleri oluşturur.|
-|[TransactedReceiveScope](../workflow-designer/transactedreceivescope-activity-designer.md)|İşlemlerin iş akışına akışını sağlayan <xref:System.ServiceModel.Activities.TransactedReceiveScope> etkinlik oluşturur ve yapılandırır.|
+|[CorrelationScope](../workflow-designer/correlationscope-activity-designer.md)|<xref:System.ServiceModel.Activities.CorrelationScope>Bir nesne ile alt ileti etkinliklerinin örtük yönetimini sağlayan bir etkinlik oluşturur ve yapılandırır <xref:System.ServiceModel.Activities.CorrelationHandle> .|
+|[InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md)|<xref:System.ServiceModel.Activities.InitializeCorrelation>Bir ileti göndermeden veya almadan bağıntı başlatmak için kullanılan bir etkinlik oluşturur ve yapılandırır.|
+|[Al](../workflow-designer/receive-activity-designer.md)|<xref:System.ServiceModel.Activities.Receive>Bir hizmetten ileti alan bir etkinlik oluşturur ve yapılandırır.|
+|[ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)|<xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.ReceiveReply> Bir etkinlik içinde önceden yapılandırılmış bir çift ve etkinlik oluşturur <xref:System.Activities.Statements.Sequence> .|
+|[Gönder](../workflow-designer/send-activity-designer.md)|<xref:System.ServiceModel.Activities.Send>Bir hizmete ileti gönderen bir etkinlik oluşturur ve yapılandırır.|
+|[SendAndReceiveReply](../workflow-designer/sendandreceivereply-template-designer.md)|<xref:System.ServiceModel.Activities.Receive> <xref:System.ServiceModel.Activities.SendReply> Bir etkinlik içinde önceden yapılandırılmış bir çift ve etkinlik oluşturur <xref:System.Activities.Statements.Sequence> .|
+|[TransactedReceiveScope](../workflow-designer/transactedreceivescope-activity-designer.md)|<xref:System.ServiceModel.Activities.TransactedReceiveScope>İşlemlerin iş akışına akışını sağlayan bir etkinlik oluşturur ve yapılandırır.|
 
 ## <a name="reference"></a>Başvuru
  <xref:System.Activities.Activity>
@@ -49,7 +49,7 @@ Mesajlaşma etkinliği tasarımcıları, bir [!INCLUDE[wf](../includes/wf-md.md)
 ## <a name="related-sections"></a>İlgili Bölümler
  Diğer etkinlik tasarımcıları türleri için aşağıdaki konulara bakın.
 
- [Denetim Akışı](../workflow-designer/control-flow-activity-designers.md)
+ [Denetim akışı](../workflow-designer/control-flow-activity-designers.md)
 
  [Etkinlik Tasarımcılarını kullanma](../workflow-designer/using-the-activity-designers.md)
 
@@ -63,7 +63,7 @@ Mesajlaşma etkinliği tasarımcıları, bir [!INCLUDE[wf](../includes/wf-md.md)
 
  [Koleksiyon](../workflow-designer/collection-activity-designers.md)
 
- [Hata İşleme](../workflow-designer/error-handling-activity-designers.md)
+ [Hata Işleme](../workflow-designer/error-handling-activity-designers.md)
 
 ## <a name="external-resources"></a>Dış Kaynaklar
  [Etkinlik Tasarımcılarını kullanma](../workflow-designer/using-the-activity-designers.md)

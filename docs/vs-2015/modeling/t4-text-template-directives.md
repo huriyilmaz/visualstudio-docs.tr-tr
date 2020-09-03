@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6d77c7a779afcbf7bc7fc3f8fbd863aa368ee7e6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658546"
 ---
 # <a name="t4-text-template-directives"></a>T4 Metin Şablonu Yönergeleri
@@ -36,7 +36,7 @@ Yönergeler metin şablonu dönüştürme motoru için yönergeler sağlar.
 
  Tüm öznitelik değerleri çift tırnak işaretleri arasına alınmalıdır. Değerin kendisi tırnak işaretleri içeriyorsa, bunlardan \ karakteriyle kaçılmalıdır.
 
- Yönergeler genellikle şablon dosyasında ya da eklenen dosyadaki ilk öğelerdir. Bir sınıf özelliği bloğunun `<#+...#>` `<#...#>` bir kod bloğunun içine yerleştirmemelisiniz.
+ Yönergeler genellikle şablon dosyasında ya da eklenen dosyadaki ilk öğelerdir. Bunları bir kod bloğunun içine `<#...#>` veya bir sınıf özelliği bloğundan sonra yerleştirmemelisiniz `<#+...#>` .
 
  [T4 Şablon Yönergesi](../modeling/t4-template-directive.md)
 

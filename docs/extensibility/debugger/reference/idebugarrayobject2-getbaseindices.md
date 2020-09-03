@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject2::GetBaseIndices | Microsoft Dokümanlar
+title: 'IDebugArrayObject2:: Getbasedizinler | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +15,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 925ce3a7bcce9f787e02c2bd2714f8b26d8cec26
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736140"
 ---
 # <a name="idebugarrayobject2getbaseindices"></a>IDebugArrayObject2::GetBaseIndices
-Dizideki boyut sayısı göz önüne alındığında her dizin için temel endeksleri (alt sınırlar) alır.
+Dizideki boyutların sayısını verilen her bir dizin için temel dizinleri (alt sınır) alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetBaseIndices (
@@ -42,16 +42,16 @@ int GetBaseIndices (
 
 ## <a name="parameters"></a>Parametreler
 `dwRank`\
-[içinde] Dizinin boyut sayısı (sıralama).
+'ndaki Dizinin boyut (derece) sayısı.
 
 `dwIndices`\
-[çıkış] Dizi için temel endeksler (alt sınırlar).
+dışı Dizi için temel dizinler (alt sınırlar).
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Örnek olarak, bu işlev aşağıdaki C# kodu tarafından oluşturulan dizi için '5' döndürür:
+ Örnek olarak, bu işlev aşağıdaki C# kodu tarafından oluşturulan dizi için ' 5 ' döndürür:
 
 ```
 int[] lengths = { 12 };

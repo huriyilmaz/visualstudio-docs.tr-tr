@@ -11,36 +11,36 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 96241026afff71c061abcfae3547d25cc2166902
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152871"
 ---
 # <a name="idebugtypefieldbuilder2"></a>IDebugTypeFieldBuilder2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Genişletir **IDebugTypeFieldBuilder** dizi türleri oluşturabilmek için.  
+Dizi türleri oluşturabilmeniz için **ıdebugtypefieldbuilder** 'ı genişletir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugTypeFieldBuilder2 : IDebugTypeFieldBuilder  
 ```  
   
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar  
- Bu arabirim, sembol Sağlayıcısı'ndan edinilebilir.  
+ Bu arabirim, sembol sağlayıcısından elde edilebilir.  
   
 ## <a name="methods"></a>Yöntemler  
- Yöntemlere ek olarak [IDebugTypeFieldBuilder](../../../extensibility/debugger/reference/idebugtypefieldbuilder.md) arabirimi bu arabirim, aşağıdaki yöntemi uygular:  
+ Bu arabirim, [ıdebugtypefieldbuilder](../../../extensibility/debugger/reference/idebugtypefieldbuilder.md) arabirimindeki yöntemlere ek olarak aşağıdaki yöntemi uygular:  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[CreateArrayOfType](../../../extensibility/debugger/reference/idebugtypefieldbuilder2-createarrayoftype.md)|Belirtilen tür ve size bir dizi oluşturur.|  
+|[CreateArrayOfType](../../../extensibility/debugger/reference/idebugtypefieldbuilder2-createarrayoftype.md)|Belirtilen türde ve boyutta bir dizi oluşturur.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üst bilgi: Sh.h  
+ Üstbilgi: SH. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll

@@ -13,24 +13,24 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4bd2a6cc947c5f52212029bebe590d59906f5aee
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75591170"
 ---
 # <a name="codeindex-command"></a>CodeIndex komutu
 
-Team Foundation Server'da kod dizini oluşturmayı yönetmek için **CodeIndex** komutunu kullanın. Örneğin, CodeLens bilgilerini düzeltmek için dizini sıfırlamak veya sunucu performansı sorunlarını araştırmak için dizin oluşturmayı kapatmak isteyebilirsiniz.
+Team Foundation Server kod dizinlemeyi yönetmek için **CodeIndex** komutunu kullanın. Örneğin, CodeLens bilgilerini onarmak için dizini sıfırlamak veya sunucu performans sorunlarını araştırmak için dizin oluşturmayı devre dışı bırakmak isteyebilirsiniz.
 
 ## <a name="required-permissions"></a>Gerekli izinler
 
-**CodeIndex** komutunu kullanmak için Takım Vakfı **Yöneticileri** güvenlik grubunun bir üyesi olmalısınız. [Bkz. Azure DevOps Hizmetleri ve TFS için tanımlanan İzinler ve gruplar.](/azure/devops/organizations/security/permissions?view=vsts)
+**CodeIndex** komutunu kullanmak Için, **Team Foundation yöneticileri** güvenlik grubunun bir üyesi olmanız gerekir. [Azure DevOps Services ve TFS için tanımlanan izinler ve gruplar](/azure/devops/organizations/security/permissions?view=vsts)bölümüne bakın.
 
 > [!NOTE]
-> Yönetim kimlik bilgileriyle oturum açsanız bile, bu komutu çalıştırmak için yükseltilmiş bir Komut İstem penceresi açmanız gerekir. Bu komutu Ekip Vakfı uygulama katmanından da çalıştırmalısınız.
+> Yönetici kimlik bilgileriyle oturum açmış olsanız bile, bu komutu çalıştırmak için yükseltilmiş bir komut Istemi penceresi açmalısınız. Ayrıca, bu komutu Team Foundation uygulama katmanından çalıştırmanız gerekir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cmd
 TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /ignoreList:[ add | remove | removeAll | view ] ServerPath | /listLargeFiles [/fileCount:FileCount] [/minSize:MinSize] | /reindexAll | /destroyCodeIndex [/noPrompt] | /temporaryDataSizeLimit:[ view | <SizeInGBs> | disable ] | /indexHistoryPeriod:[ view | all | <NumberOfMonths> ] [/collectionName:CollectionName | /collectionId:CollectionId]
@@ -38,29 +38,29 @@ TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /
 
 ### <a name="parameters"></a>Parametreler
 
-|**Bağımsız değişken**|**Açıklama**|
+|**Değişkendir**|**Açıklama**|
 |------------------| - |
-|`CollectionName`|Proje koleksiyonunun adını belirtir. Adın boşlukları varsa, adı tırnak işaretleriyle( örneğin Fabrikam Web Sitesi" ile kapa.|
+|`CollectionName`|Proje koleksiyonunun adını belirtir. Adda boşluk varsa, adı tırnak işaretleri (örneğin, "Fabrikam Web sitesi") arasına alın.|
 |`CollectionId`|Proje koleksiyonunun kimlik numarasını belirtir.|
-|`ServerPath`|Kod dosyasına giden yolu belirtir.|
+|`ServerPath`|Bir kod dosyasının yolunu belirtir.|
 
-|**Seçeneği**|**Açıklama**|
+|**Seçenek**|**Açıklama**|
 |----------------| - |
-|**/indexingDurum**|Kod dizinioluşturma hizmetinin durumunu ve yapılandırmasını gösterin.|
-|**/setIndexing:**[ &#124; kapalı &#124; keepupOnly ]|-   **on**: Tüm değişiklik kümelerini dizine almaya başlayın.<br />-   **off**: Tüm değişiklik kümelerini dizine almayı durdurun.<br />-   **keepupOnly**: Daha önce oluşturulmuş değişiklik kümelerini dizine almayı durdurun ve yalnızca yeni değişiklik kümelerini dizine almaya başlayın.|
-|**/ignoreList:**[ ekle &#124; kaldır &#124; kaldırTüm &#124; görünümü ]`ServerPath`<br /><br /> Sunucu yolunun başında, sonunda veya her iki ucunda joker karakter (*) kullanabilirsiniz.|Dizine eklenmenizi istemediğiniz kod dosyalarının ve yollarının listesini belirtir.<br /><br /> -   **add**: Gözardı edilen dosya listesine dizine eklenmesini istemediğiniz dosyayı ekleyin.<br />-   **remove**: Gözardı edilen dosya listesinden dizine ekstre olmasını istediğiniz dosyayı kaldırın.<br />-   **removeAll**: Gözardı edilen dosya listesini temizleyin ve tüm dosyaları dizine eklemeye başlayın.<br />-   **view**: Dizine ekitolmayan tüm dosyaları görün.|
-|**/listLargeFiles [/fileCount:** `FileCount` **/minSize:** `MinSize`]|KB'de belirtilen boyutu aşan belirtilen dosya sayısını gösterir. Daha sonra bu dosyaları dizin oluşturmayı hariç tutmak için **/ignoreList** seçeneğini kullanabilirsiniz.|
-|**/reindexTümü**|Daha önce dizine alınan verileri temizleyin ve dizin oluşturmayı yeniden başlatın.|
-|**/destroyCodeIndex [/noPrompt]**|Kod dizini silin ve tüm dizinlenmiş verileri kaldırın. **/noPrompt** seçeneğini kullanıyorsanız onay gerektirmez.|
-|**/temporaryDataSizeLimit**:[ `SizeInGBs` &#124; <> &#124; devre dışı ]|Değişiklik kümelerini işlerken CodeLens'in ne kadar geçici veri oluşturduğunu denetleyin. Varsayılan sınır 2 GB'dır.<br /><br /> -   **görünüm**: Geçerli boyut sınırını göster.<br />-   `SizeInGBs`: Boyut sınırını değiştirin.<br />-   **disable**: Boyut sınırını kaldırın.<br /><br /> Bu sınır, CodeLens yeni bir değişiklik kümesini işletmeden önce denetlenir. Geçici veriler bu sınırı aşarsa, CodeLens yenilerini değil, geçmiş değişiklik kümelerini işlemeyi duraklatır. CodeLens, veriler temizlendikten ve bu sınırın altına düştükten sonra işlemeye yeniden başlayacaktır. Temizleme günde bir kez otomatik olarak çalışır. Bu, temizleme çalışmaya başlayana kadar geçici verilerin bu sınırı aşabileceği anlamına gelir.|
-|**/indexHistoryPeriod**:[ tüm `NumberOfMonths` &#124; <> &#124; görüntüle ]|Değişiklik geçmişinizi ne kadar süreyle dizine ekeceğinikontrol edin. Bu, CodeLens'in size ne kadar tarih gösterdiğini etkiler. Varsayılan sınır 12 aydır. Bu, CodeLens'in yalnızca son 12 aylık değişim geçmişinizi gösterdiği anlamına gelir.<br /><br /> -   **görünüm**: Geçerli ay sayısını göster.<br />-   **all**: Tüm değişim geçmişini dizine dizine dizin.<br />-   `NumberOfMonths`: Dizin değişikliği geçmişini dizine almak için kullanılan ay sayısını değiştirin.|
-|**/collectionName:**`CollectionName`|**CodeIndex** komutunu çalıştıracak proje koleksiyonunun adını belirtir. **/CollectionId**kullanmıyorsanız gereklidir.|
-|**/collectionId:**`CollectionId`|**CodeIndex** komutunu çalıştıracak proje koleksiyonunun kimlik numarasını belirtir. **/CollectionName**kullanmıyorsanız gereklidir.|
+|**/IndexingStatus**|Kod dizin oluşturma hizmetinin durumunu ve yapılandırmasını görüntüleyin.|
+|**/setIndexing:**[&#124; kapalı &#124; yalnızca keepupOnly]|-   **Açık**: tüm değişiklik kümelerini dizine almayı Başlat.<br />-   **kapalı**: tüm değişiklik kümelerini dizinlemeyi durdur.<br />-   **keepupOnly**: önceden oluşturulmuş değişiklik kümelerinin dizinini oluşturmayı Durdur ve yalnızca yeni değişiklik kümelerini dizine almayı Başlat.|
+|**/IgnoreList:**[Ekle &#124; kaldır &#124; removeall &#124; görünümü] `ServerPath`<br /><br /> Sunucu yolunun başlangıcında, sonunda veya her iki ucunda joker karakteri (*) kullanabilirsiniz.|Dizinlenmesini istemediğiniz kod dosyalarının ve yollarının listesini belirtir.<br /><br /> -   **Ekle**: dizinlenmesini istemediğiniz dosyayı, yoksayılan dosya listesine ekleyin.<br />-   **Kaldır**: dizine alınmasını istediğiniz dosyayı yoksayılan dosya listesinden kaldırın.<br />-   **RemoveAll**: yoksayılan dosya listesini temizleyin ve tüm dosyaları dizine almayı başlatın.<br />-   **görüntüle**: dizinlenmemiş tüm dosyaları görüntüleyin.|
+|**/listlargefiles [/FileCount:** `FileCount` **/MinSize:** `MinSize` ]|KB cinsinden belirtilen boyutu aşan belirtilen dosya sayısını gösterir. Daha sonra bu dosyaları dizin oluşturma işleminden dışlamak için **/IgnoreList** seçeneğini kullanabilirsiniz.|
+|**/Reındexall**|Önceden dizinli verileri temizleyin ve Dizin oluşturmayı yeniden başlatın.|
+|**/Destroyıcodeındex [/noPrompt]**|Kod dizinini silin ve tüm dizinli verileri kaldırın. **/Noprompt** seçeneğini kullanırsanız onay gerektirmez.|
+|**/temporaryDataSizeLimit**: [görünüm &#124; <`SizeInGBs`> &#124; devre dışı]|Değişiklik kümelerini işlerken CodeLens 'in ne kadar geçici veri oluşturduğunu denetleyin. Varsayılan sınır 2 GB 'dir.<br /><br /> -   **görüntüle**: geçerli boyut sınırını göster.<br />-   `SizeInGBs`: Boyut sınırını değiştirin.<br />-   **devre dışı bırak**: boyut sınırını kaldır.<br /><br /> Bu sınır, CodeLens yeni bir değişiklik kümesini işleyerek denetlenir. Geçici veriler bu sınırı aşarsa, CodeLens, yenilerini değil, geçmiş değişiklik kümelerini işlemeyi duraklatacaktır. CodeLens, veriler temizlendikten ve bu sınırın altına düştüğünde işlemeyi yeniden başlatacak. Temizleme, günde bir kez otomatik olarak çalıştırılır. Bu, temizleme çalışmaya başlamadan geçici verilerin bu sınırı aşabileceği anlamına gelir.|
+|**/ındexgeçmişini**: [&#124; tüm &#124; <> görüntüleme `NumberOfMonths` ]|Değişiklik geçmişinizin ne kadar süreyle dizine alınacağını denetleyin. Bu, ne kadar geçmiş CodeLens 'in size gösterdiği geçmişi etkiler. Varsayılan sınır 12 aydır. Bu, CodeLens 'in yalnızca son 12 aydan değişiklik geçmişinizi gösterdiği anlamına gelir.<br /><br /> -   **görüntüle**: geçerli ay sayısını göster.<br />-   **All**: tüm değişiklik geçmişinin dizinini oluştur.<br />-   `NumberOfMonths`: Değişiklik geçmişine dizin eklemek için kullanılan ayların sayısını değiştirin.|
+|**/CollectionName:**`CollectionName`|**CodeIndex** komutunun çalıştırılacağı proje koleksiyonunun adını belirtir. **/CollectionId**kullanmıyorsanız gereklidir.|
+|**/CollectionId:**`CollectionId`|**CodeIndex** komutunun çalıştırılacağı proje koleksiyonunun kimlik numarasını belirtir. **/CollectionName**kullanmıyorsanız gereklidir.|
 
 ## <a name="examples"></a>Örnekler
 
 > [!NOTE]
-> Burada adı geçen örnek şirketler, kuruluşlar, ürünler, etki alanı adları, e-posta adresleri, logolar, kişiler, yerler ve olaylar hayal ürünüdür.  Herhangi bir gerçek şirket, kuruluş, ürün, etki alanı adı, e-posta adresi, logo, kişi, yerler veya olaylar ile hiçbir ilişki amaçlanmamıştır veya çıkarılmalıdır.
+> Burada adı geçen örnek şirketler, kuruluşlar, ürünler, etki alanı adları, e-posta adresleri, logolar, kişiler, yerler ve olaylar hayal ürünüdür.  Herhangi bir gerçek şirket, kuruluş, ürün, etki alanı adı, e-posta adresi, logo, kişi, yer veya olay ile ilişki amaçlanmamıştır.
 
 Kod dizini oluşturma durumunu ve yapılandırmasını görmek için:
 
@@ -68,37 +68,37 @@ Kod dizini oluşturma durumunu ve yapılandırmasını görmek için:
 TFSConfig CodeIndex /indexingStatus /collectionName:"Fabrikam Website"
 ```
 
-Tüm değişiklik kümelerini dizine ekinlemeye başlamak için:
+Tüm değişiklik kümelerini dizine almayı başlatmak için:
 
 ```cmd
 TFSConfig CodeIndex /setIndexing:on /collectionName:"Fabrikam Website"
 ```
 
-Daha önce oluşturulmuş değişiklik kümelerini dizine almayı durdurmak ve yalnızca yeni değişiklik kümelerini dizine almaya başlamak için:
+Önceden oluşturulmuş değişiklik kümelerinin dizinini oluşturmayı durdurmak ve yalnızca yeni değişiklik kümelerini dizine almayı başlatmak için:
 
 ```cmd
 TFSConfig CodeIndex /setIndexing:keepupOnly /collectionName:"Fabrikam Website"
 ```
 
-10 KB'den büyük 50 dosyayı bulmak için:
+10 KB 'den büyük 50 dosya bulmak için:
 
 ```cmd
 TFSConfig CodeIndex /listLargeFiles /fileCount:50 /minSize:10 /collectionName:"Fabrikam Website"
 ```
 
-Belirli bir dosyayı dizin oluşturmayı hariç tutmak ve göz ardı edilen dosya listesine eklemek için:
+Dizin oluşturma işleminden belirli bir dosyayı dışlamak ve yoksayılan dosya listesine eklemek için:
 
 ```cmd
 TFSConfig CodeIndex /ignoreList:add "$/Fabrikam Website/Catalog.cs" /collectionName:"Fabrikam Website"
 ```
 
-Dizine eklenmemiş tüm dosyaları görmek için:
+Dizini oluşturulmamış tüm dosyaları görmek için:
 
 ```cmd
 TFSConfig CodeIndex /ignoreList:view
 ```
 
-Daha önce dizine eklenmiş verileri temizlemek ve dizin oluşturmayı yeniden başlatmak için:
+Önceden dizinli verileri temizlemek ve Dizin oluşturmayı yeniden başlatmak için:
 
 ```cmd
 TFSConfig CodeIndex /reindexAll /collectionName:"Fabrikam Website"
@@ -110,13 +110,13 @@ Tüm değişiklik kümesi geçmişini kaydetmek için:
 TFSConfig CodeIndex /indexHistoryPeriod:all /collectionName:"Fabrikam Website"
 ```
 
-CodeLens geçici verilerinin boyut sınırını kaldırmak ve geçici veri boyutundan bağımsız olarak dizine devam etmek için:
+CodeLens geçici verilerinde boyut sınırını kaldırmak ve geçici veri boyutundan bağımsız olarak dizin oluşturmaya devam etmek için:
 
 ```cmd
 TFSConfig CodeIndex /temporaryDataSizeLimit:disable /collectionName:"Fabrikam Website"
 ```
 
-Onay ile kod dizini silmek için:
+Kod dizinini onaylama ile silmek için:
 
 ```cmd
 TFSConfig CodeIndex /destroyCodeIndex /collectionName:"Fabrikam Website"
@@ -125,4 +125,4 @@ TFSConfig CodeIndex /destroyCodeIndex /collectionName:"Fabrikam Website"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [CodeLens ile kod değişikliklerini ve diğer geçmişi bulma](../ide/find-code-changes-and-other-history-with-codelens.md)
-- [TFSConfig ile sunucu yapılandırmalarını yönetme](/azure/devops/server/command-line/tfsconfig-cmd)
+- [TFSConfig ile sunucu yapılandırmasını yönetme](/azure/devops/server/command-line/tfsconfig-cmd)

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ea2fdf1f47385a9be26fa65a93b9104b2d864079
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658018"
 ---
 # <a name="animate-objects-in-xaml-designer"></a>XAML Tasarımcısı’nda nesnelere animasyon ekleme
@@ -29,7 +29,7 @@ Nesneleri taşımak veya onları dışarı veya dışarı soluklaştırmak için
 
  Bu videoları izleyerek animasyon oluşturmayı öğrenin.
 
-|Kısa bir video izleyin:|Şunları yapmayı öğrenin:|
+|Kısa bir video izleyin:|Şunları nasıl yapacağınızı öğrenin:|
 |--------------------------|-------------------|
 |![Yüklü Özellikleri Yapılandır](../designers/media/bldadminconsoleinitialconfigicon.PNG "Bldadminconsoleınitialconfigıcon") [zaman çizelgeleri oluşturma](http://www.popscreen.com/v/6A4eF/Microsoft-Expression-Blend-Creating-Timelines)|Zaman çizelgesi oluşturun ve zaman çizelgesinde nesnelerle çalışın.|
 |![Yüklü Özellikleri Yapılandır](../designers/media/bldadminconsoleinitialconfigicon.PNG "Bldadminconsoleınitialconfigıcon") [anahtar kareler ekleme ve animasyonu yineleme](http://www.popscreen.com/v/6A4fi/Microsoft-Expression-Blend-Adding-Keyframes-and-Repeating-an-Animation)|Her bir ana karede anahtar kareler ekleyin ve özellikleri ayarlayın. Ardından, animasyonu çalıştırın ve nesneler arasında sorunsuzca geçiş yapın.|

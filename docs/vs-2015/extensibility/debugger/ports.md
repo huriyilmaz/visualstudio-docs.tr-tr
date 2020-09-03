@@ -12,30 +12,30 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 73003e00fef5c37db4a702e7a4a1121600673844
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153693"
 ---
-# <a name="ports"></a>Bağlantı Noktaları
+# <a name="ports"></a>Bağlantı noktaları
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Hata ayıklayıcı mimarisi bakımından bir **bağlantı noktası**:  
+Hata ayıklayıcı mimarisi açısından, bir **bağlantı noktası**:  
   
-- Bir dizi işlemleri için bir kapsayıcı, bir sunucu üzerinde çalışıyor. Örneğin, bir bağlantı noktası seri kablo Windows CE tabanlı bir cihaz için veya ağa bağlı DCOM olmayan bir makineye bağlantı temsil edebilir. Yerel bağlantı noktası adı verilen bir özel bağlantı noktası, yerel makine üzerinde çalışan tüm işlemler içeriyor.  
+- , Sunucuda çalışan bir işlem kümesi için bir kapsayıcıdır. Örneğin, bir bağlantı noktası, Windows CE tabanlı bir cihaza seri bir kabloyla veya ağ bağlantılı DCOM olmayan bir makineye bağlantıyı temsil edebilir. Yerel makinede çalışan tüm işlemlerin bulunduğu, yerel bağlantı noktası olarak adlandırılan özel bir bağlantı noktası.  
   
-- Kendi adına veya tanımlayıcısına göre belirleyebilirsiniz.  
+- , Kendisini ada veya tanımlayıcıya göre tanımlayabilir.  
   
-- Bağlantı noktası üzerinde çalışan tüm işlemler listeleme ve başlatabileceğini ve bu işlemleri sonlandırın.  
+- Bağlantı noktasında çalışan tüm işlemlerin listesini oluşturabilir ve bu süreçler başlatabilir ve sonlandırabilirsiniz.  
   
-- Tarafından temsil edilen bir [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) geçirerek oluşturulduğu arabirimi bir [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) bağımsız değişkeni [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md).  
+- , [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md)'A bir [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) bağımsız değişkeni geçirerek oluşturulan bir [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) arabirimi tarafından temsil edilir.  
   
-  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] tüm Windows tabanlı işlemler, yerel ve yönetilen işleyen varsayılan bağlantı noktası sağlar. Özel bir bağlantı noktası bağlantılar için Windows tabanlı olmayan dış cihazlarla uygulanmalıdır. Bu tür özel bağlantı noktaları sağlamanız gerekiyorsa, özel bağlantı noktası sağlayıcısı ayrıca uygulanması gerekir.  
+  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , yerel ve yönetilen tüm Windows tabanlı süreçlerini işleyen varsayılan bir bağlantı noktası sağlar. Windows tabanlı olmayan dış cihazlara yönelik bağlantılar için özel bir bağlantı noktası uygulanmalıdır. Bu tür özel bağlantı noktalarını sağlamak için özel bir bağlantı noktası tedarikçinin de uygulanması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sunucuları](../../extensibility/debugger/servers-visual-studio-sdk.md)   
- [İşlemler](../../extensibility/debugger/processes.md)   
+ [Larý](../../extensibility/debugger/servers-visual-studio-sdk.md)   
+ [Lerse](../../extensibility/debugger/processes.md)   
  [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md)   
  [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)   
  [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md)   

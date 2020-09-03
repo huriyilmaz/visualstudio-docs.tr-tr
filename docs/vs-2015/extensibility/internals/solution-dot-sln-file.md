@@ -13,25 +13,25 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d9e045ab707620fe985e34174238081f6168e5af
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68154968"
 ---
 # <a name="solution-sln-file"></a>Çözüm (.Sln) Dosyası
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Çözüm Projeleri Visual Studio'da düzenleme yapısıdır. Çözüm projeleri (metin tabanlı, paylaşılan) .sln ve .suo (ikili, kullanıcıya özel bir çözüm seçenekleri) dosyaları için durum bilgilerini tutar. .Suo dosyaları hakkında daha fazla bilgi için bkz. [çözüm kullanıcı seçenekleri (. Suo) dosyası](../../extensibility/internals/solution-user-options-dot-suo-file.md).  
+Çözüm, Visual Studio 'da proje düzenlemek için bir yapıdır. Çözüm,. sln (metin tabanlı, paylaşılan) ve. suo (ikili, kullanıcıya özel çözüm seçenekleri) dosyalarındaki projelere ait durum bilgilerini tutar. . Suo dosyaları hakkında daha fazla bilgi için bkz. [çözüm Kullanıcı seçenekleri (. Suo) dosyası](../../extensibility/internals/solution-user-options-dot-suo-file.md).  
   
- Ortam, VSPackage .sln dosyasında başvurulan bir sonucu olarak yüklenirse çağırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.ReadSolutionProps%2A> .sln dosyasını okuma için.  
+ VSPackage,. sln dosyasında başvurulmakta olan bir sonuç olarak yüklenirse, ortam <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.ReadSolutionProps%2A> . sln dosyasında okumak için çağırır.  
   
- .Sln dosyasını bulup ad-değer parametreleri kalıcı veri ve ' % s'projesinin başvurduğu VSPackage yükleme ortamı kullanan metin tabanlı bilgiler içerir. Bir çözüm bir kullanıcı oturum açtığında, ortam aracılığıyla döngüleri `preSolution`, `Project`, ve `postSolution` çözümü yüklemek için .sln dosyasında bilgilerini çözüm projeleri ve kalıcı bilgileri çözüme eklenmiş.  
+ . Sln dosyası, kalıcı veriler ve başvurduğu VSPackages projesi için ad-değer parametrelerini bulmak ve yüklemek üzere ortam tarafından kullanılan metin tabanlı bilgiler içerir. Bir Kullanıcı bir çözüm açtığında, ortam, `preSolution` `Project` ve çözümü `postSolution` yüklemek için. sln dosyasındaki bilgileri, çözüm içindeki projeleri ve çözüme ekli kalıcı bilgileri geçer.  
   
- Her proje dosyası, bu proje öğelerini bir hiyerarşiyle doldurmak için ortamı tarafından okunur ek bilgiler içerir. Hiyerarşi veri kalıcılığı, proje tarafından denetlenir; Bunu yapmayı tercih ederseniz proje bilgileri .sln dosyasına kasıtlı olarak yazabilirsiniz, ancak veri .sln dosyasında normalde depolanmaz. Kalıcılık için ilgili daha fazla bilgi için bkz. [proje kalıcılığı](../../extensibility/internals/project-persistence.md) ve [açma ve kaydetme proje öğeleri](../../extensibility/internals/opening-and-saving-project-items.md).  
+ Her projenin dosyası, hiyerarşiyi ilgili projenin öğeleriyle doldurmak için ortam tarafından okunan ek bilgiler içerir. Hiyerarşi verilerinin kalıcılığı proje tarafından denetlenir; veriler normalde. sln dosyasında depolanmaz, ancak bunu yapmak istiyorsanız, kasıtlı olarak proje bilgilerini. sln dosyasına yazabilirsiniz. Kalıcılık hakkında daha fazla bilgi için bkz. [Proje kalıcılığı](../../extensibility/internals/project-persistence.md) ve [Proje öğelerini açma ve kaydetme](../../extensibility/internals/opening-and-saving-project-items.md).  
   
-## <a name="solution-file-contents"></a>Çözüm dosyası içeriği  
- .Sln dosyasını aşağıdaki kodda gösterildiği gibi birkaç bölümden oluşur.  
+## <a name="solution-file-contents"></a>Çözüm dosyası Içeriği  
+ . Sln dosyası, aşağıdaki kodda gösterildiği gibi birkaç bölümden oluşur.  
   
 ```  
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Project1", "Project1.vbproj", "{8CDD8387-B905-44A8-B5D5-07BB50E05BEA}"  
@@ -58,9 +58,9 @@ Global
 EndGlobal  
 ```  
   
- Bir çözümü yüklemek için aşağıdaki görev dizisi ortamı gerçekleştirir.  
+ Bir çözümü yüklemek için, ortam aşağıdaki görev sırasını gerçekleştirir.  
   
-1. Ortam genel bölümünü .sln dosyasını okur ve işaretlenmiş tüm bölümleri işleyen `preSolution`. Bu durumda, bir ifade vardır:  
+1. Ortam,. sln dosyasının genel bölümünü okur ve işaretlenen tüm bölümleri işler `preSolution` . Bu durumda, böyle bir ifade vardır:  
   
    ```  
    GlobalSection(SolutionConfiguration) = preSolution  
@@ -68,11 +68,11 @@ EndGlobal
         ConfigName.1 = Release  
    ```  
   
-    Zaman ortam okur `GlobalSection('name')` etiketi, adıyla eşleşir Vspackage'a kayıt defterini kullanarak. Kayıt defteri anahtarı adı bulunmalıdır [HKLM\\< Uygulama kimliği kayıt defteri kökü\>\SolutionPersistence\AggregateGUIDs]. Paket GUID'si (REG_SZ) girişleri yazdı VSPackage'ı, anahtarları varsayılan değerdir.  
+    Ortam etiketi okuduğunda `GlobalSection('name')` , kayıt defterini kullanarak adı VSPackage ile eşler. Anahtar adı [HKLM \\<uygulama kimliği kayıt defteri kökü \> \ Solutionpersistence\aggregateıds] altındaki kayıt defterinde bulunmalıdır. Anahtarların varsayılan değeri, girdileri yazan VSPackage 'ın paket GUID 'sidir (REG_SZ).  
   
-2. VSPackage çağrıları ortam yükler `QueryInterface` VSPackage için üzerinde <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps> arabirimi ve çağrılarını <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.ReadSolutionProps%2A> biçimde Vspackage'i verileri depolayabilirsiniz bölümünde verilerle yöntemi. Ortam her biri için bu işlemi yineler `preSolution` bölümü.  
+2. Ortam, VSPackage 'ı yükler, `QueryInterface` arabirim Için VSPackage üzerinde çağırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps> ve yöntemi, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.ReadSolutionProps%2A> VSPackage 'un verileri depolayabilmesi için bölümündeki verilerle çağırır. Ortam, her bölüm için bu işlemi yineler `preSolution` .  
   
-3. Ortamı proje kalıcılığı blokları boyunca yinelenir. Bu durumda, bir proje yok.  
+3. Ortam, proje Kalıcılık blokları boyunca yinelenir. Bu durumda, bir proje vardır.  
   
    ```  
    Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Project1",  
@@ -80,27 +80,27 @@ EndGlobal
    EndProject  
    ```  
   
-    Bu ifade, benzersiz GUID proje ve proje türü GUID içerir. Bu bilgiler proje dosyası veya çözüme ait dosyaları bulmak için ortamı tarafından kullanılır ve VSPackage'ı her proje için gerekli. GUID geçirilen proje <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory> projeyle ilgili belirli VSPackage'ı yüklemek için ardından projeyi VSPackage'ı tarafından yüklenir. Bu durumda, bu proje için yüklenen VSPackage'ı Visual Basic ' dir.  
+    Bu ifade, benzersiz proje GUID 'ini ve proje türü GUID 'sini içerir. Bu bilgiler, bir proje dosyası ya da çözüme ait olan dosyaları ve her proje için gereken VSPackage 'ı bulmak için ortam tarafından kullanılır. Proje GUID 'SI, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory> projeyle ilgili belirli VSPackage 'ı yüklemek için öğesine geçirilir, ardından Proje VSPackage tarafından yüklenir. Bu durumda, bu proje için yüklenen VSPackage Visual Basic.  
   
-    Böylece iş çözümdeki diğer projelerin gerektiği şekilde erişilebilir her proje bir benzersiz proje örnek kimliği kalıcı hale getirebilirsiniz. İdeal olarak, çözüm ve projeler kaynak kod denetimi altında ise, yolun projeye çözüme göreli olmalıdır. Çözüm ilk yüklendiğinde, proje dosyalarını kullanıcının makinesine olamaz. Proje dosyasını çözüm dosyasına göreli sunucusunda depolanan sağlayarak, proje dosyası bulundu ve kullanıcının makineye kopyalandı görece basit. Bunu daha sonra kopyalar ve proje için gerekli dosyaları geri kalanı yükler.  
+    Her proje, çözümdeki diğer projelerin gerektiği şekilde erişilebilmesi için benzersiz bir proje örneği KIMLIĞINI kalıcı hale getirebilirler. İdeal olarak, çözüm ve projeler kaynak kodu denetimi altındaysa, projenin yolu çözümün yoluna göre olmalıdır. Çözüm ilk yüklendiğinde, proje dosyaları kullanıcının makinesinde olamaz. Proje dosyasının, çözüm dosyası ile ilişkili sunucuda depolanmasından sonra, proje dosyasının bulunması ve kullanıcının makinesine kopyalanması oldukça basittir. Daha sonra, proje için gereken dosyaları kopyalar ve geri yükler.  
   
-4. .Sln dosyasını Proje bölümünde yer alan bilgileri bağlı olarak, ortam her proje dosyası yükler. Proje, ardından Proje hiyerarşisi doldurma ve tüm iç içe projeler yükleniyor sorumludur.  
+4. . Sln dosyasının proje bölümünde yer alan bilgilere bağlı olarak, ortam her bir proje dosyasını yükler. Projenin kendisi bundan sonra proje hiyerarşisinin doldurulmasından ve iç içe geçmiş projelerin yüklenmesine sorumludur.  
   
-5. Tüm bölümlerini .sln dosyası işlendikten sonra çözüm Çözüm Gezgini'nde görüntülenir ve kullanıcı tarafından değiştirilmek üzere ayrıldığı için hazırdır.  
+5. . Sln dosyasının tüm bölümleri işlendikten sonra, çözüm Çözüm Gezgini görüntülenir ve Kullanıcı tarafından değiştirilmek üzere hazırdır.  
   
-   Herhangi bir proje çözümde uygulayan VSPackage'ı yüklemek, başarısız olursa <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.OnProjectLoadFailure%2A> yöntemi çağrılır ve her bir proje çözümde, yapmış yükleme sırasında Değişiklikleri yoksaymak için bir fırsat verildi. Ayrıştırma hataları oluşursa, mümkün olduğunca fazla bilgi ile çözüm dosyalarını korunur ve ortam çözüm bozuk kullanıcıya uyarı iletişim kutusu görüntüler.  
+   Çözümdeki bir projeyi uygulayan herhangi bir VSPackage yükleme başarısız olursa, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.OnProjectLoadFailure%2A> yöntemi çağrılır ve çözümdeki diğer tüm projeler, yükleme sırasında yapmış olabileceği değişiklikleri yok saymaya bir şans vermiş olur. Ayrıştırma hataları oluşursa, çözüm dosyalarıyla mümkün olduğunca fazla bilgi korunur ve ortam, kullanıcının çözümün bozuk olduğunu bildiren bir iletişim kutusu görüntüler.  
   
-   Çözüm kaydedildi ya da kapatıldığında <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.QuerySaveSolutionProps%2A> yöntemi çağrılır ve .sln dosyasına girilmesi gerekir çözüme değişiklikler yapılıp yapılmadığını görmek için hiyerarşi geçirilir. İçin geçirilen bir null değer `QuerySaveSolutionProps` içinde <xref:Microsoft.VisualStudio.Shell.Interop.VSQUERYSAVESLNPROPS>, çözüm bilgilerinin kalıcı olduğunu gösterir. Değer null değilse, kalıcı işaretçisi tarafından belirlenen, belirli bir projenin bilgilerdir <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> arabirimi.  
+   Çözüm kaydedildiğinde veya kapatıldığında, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.QuerySaveSolutionProps%2A> Yöntem,. sln dosyasına girilmesi gereken çözümde değişiklik yapıldığını görmek için çağrılır ve hiyerarşiye geçirilir. İçinde öğesine geçirilen null değeri `QuerySaveSolutionProps` <xref:Microsoft.VisualStudio.Shell.Interop.VSQUERYSAVESLNPROPS> , çözüm için bilgilerin kalıcı olduğunu gösterir. Değer null değilse, kalıcı bilgiler arabirimin işaretçisi tarafından belirlenen belirli bir proje içindir <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> .  
   
-   Kaydedilecek, bilgiler varsa <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence> arabirim işaretçisi volat <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.SaveSolutionProps%2A> yöntemi. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.WriteSolutionProps%2A> Yöntemi ad-değer çiftlerinden almak için ortamı tarafından sonra çağrılır `IPropertyBag` arabirim ve .sln dosyasına yazmak.  
+   Kaydedilecek bilgiler varsa, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence> arabirimi yöntemine yönelik bir işaretçi ile çağırılır <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.SaveSolutionProps%2A> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.WriteSolutionProps%2A>Daha sonra yöntemi, arabirimden ad-değer çiftlerini almak `IPropertyBag` ve bilgileri. sln dosyasına yazmak için ortamı tarafından çağrılır.  
   
-   `SaveSolutionProps` ve `WriteSolutionProps` nesneleri çağrılır yinelemeli olarak gelen kaydedilecek bilgi almak için ortamı tarafından `IPropertyBag` tüm değişiklikleri .sln dosyasına girilene kadar arabirim. Bu şekilde, bilgileri çözüm ve çözüm kullanılabilir sonraki açılışında ile kalıcı olmasını sağlamak.  
+   `SaveSolutionProps` ve `WriteSolutionProps` nesneler, `IPropertyBag` . sln dosyasına tüm değişiklikler girilene kadar arabirimden kaydedilecek bilgileri almak için ortam tarafından yinelemeli olarak çağrılır. Bu şekilde, bilgilerin çözümle kalıcı olacağını ve çözümün bir sonraki açılışında kullanılabilmesini sağlayabilirsiniz.  
   
-   Yüklenen her VSPackage .sln dosyasına kaydetmek için herhangi bir şey olup olmadığını öğrenmek için numaralandırılmış alan şeklinde. Yalnızca kayıt defteri anahtarlarını sorgulanır yükleme sırasında dir. Çözüm kaydedildiğinde bellekte çünkü ortam tüm yüklenen paketler hakkında bilir.  
+   Yüklenen her VSPackage,. sln dosyasına kaydedilecek bir şey olup olmadığını görmek için numaralandırılır. Yalnızca kayıt defteri anahtarlarının sorgulandığı yükleme sırasında olur. Ortam, çözüm kaydedildiği sırada bellekte olduklarından yüklenen paketlerin tümünü bilir.  
   
-   .Sln dosyasını girişler yalnızca `preSolution` ve `postSolution` bölümler. Benzer bölüm yok .suo dosyasında çözüm düzgün bir şekilde yüklemek için bu bilgiye sonun. .Suo dosya paylaşılan ya da kaynak kodu denetimi altında yerleştirilmiş amaçlanmayan özel notları gibi kullanıcıya özgü seçenekleri içerir.  
+   Yalnızca. sln dosyası, ve bölümlerindeki girdileri içerir `preSolution` `postSolution` . Çözümün bu bilgilerin düzgün şekilde yüklenmesi gerektiğinden,. suo dosyasında benzer bir bölüm yoktur. . Suo dosyası, kaynak kodu denetimi altına paylaşılması veya yerleştirilmesi amaçlanan özel notlar gibi kullanıcıya özgü seçenekleri içerir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps>   
- [Çözüm kullanıcı seçenekleri (. Suo) dosyası](../../extensibility/internals/solution-user-options-dot-suo-file.md)   
+ [Çözüm Kullanıcı seçenekleri (. Suo) dosyası](../../extensibility/internals/solution-user-options-dot-suo-file.md)   
  [Çözümler](../../extensibility/internals/solutions-overview.md)

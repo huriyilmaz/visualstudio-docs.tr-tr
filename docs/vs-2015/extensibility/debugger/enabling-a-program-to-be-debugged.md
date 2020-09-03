@@ -1,5 +1,5 @@
 ---
-title: Ayıklanacak Program etkinleştirme | Microsoft Docs
+title: Bir programın ayıklanamayacağını etkinleştirme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,33 +11,33 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b0f0331430a1cc625dee2a7029742fd62d67fb56
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155370"
 ---
 # <a name="enabling-a-program-to-be-debugged"></a>Bir Programı Hataları Ayıklanacak Şekilde Etkinleştirme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir program, hata ayıklama altyapısı (DE) hata ayıklama yapılabilmesi, önce DE başlatın ya varolan bir program ekleyin.  
+Hata ayıklama altyapısından (DE) bir programda hata ayıklamadan önce, önce bunu başlatmanız veya mevcut bir programa bağlamanız gerekir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Bağlantı Noktası Alma](../../extensibility/debugger/getting-a-port.md)  
- Bir program görüntüde hata ayıklamayı etkinleştirmek için ilk adım olarak bir bağlantı noktası alınacağını açıklar.  
+ Bir programın ayıklanamayacağını etkinleştirmeye yönelik ilk adım olarak bir bağlantı noktasının nasıl alınacağını açıklar.  
   
  [Program Kaydetme](../../extensibility/debugger/registering-the-program.md)  
- Sonraki adım bir program görüntüde hata ayıklamayı etkinleştirme açıklanmaktadır: bağlantı noktası ile kaydediliyor. Kaydedildikten sonra program ayıklanabilir ya da ekleme veya just-in-time (JIT) hata ayıklama işlemi.  
+ Bir programın hata ayıklamanın nasıl giderileceği konusunda bir sonraki adımı açıklar: bağlantı noktası ile kaydediliyor. Kaydolduktan sonra programa ekleme veya tam zamanında (JıT) hata ayıklama işlemi tarafından hata ayıklanabilir.  
   
  [Programa Ekleme](../../extensibility/debugger/attaching-to-the-program.md)  
- Sonraki adımda açıklanmaktadır: hata ayıklayıcı programa ekleme.  
+ Bir sonraki adımı açıklar: hata ayıklayıcıyı programa ekleme.  
   
- [Başlatma tabanlı ekleme](../../extensibility/debugger/launch-based-attachment.md)  
- Otomatik başlatma SDM ile bağlı olan bir program için başlatma tabanlı ek açıklar.  
+ [Başlatma tabanlı Iliştirme](../../extensibility/debugger/launch-based-attachment.md)  
+ , SDM tarafından başlatma sonrasında otomatik olan bir programa başlatma tabanlı ek açıklar.  
   
  [Gerekli Olayları Gönderme](../../extensibility/debugger/sending-the-required-events.md)  
- Hata ayıklama altyapısı (DE) oluştururken gerekli olayları adımları ve programa ekleme.  
+ Bir hata ayıklama altyapısı (DE) oluştururken ve bir programa iliştirirken gerekli olaylarda adım adım ilerleyin.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Özel Hata Ayıklama Altyapısı Oluşturma](../../extensibility/debugger/creating-a-custom-debug-engine.md)  
- Hata ayıklama altyapısı (DE) tanımlar ve DE arabirimler ve bunlar farklı çalışma modları arasında geçiş için hata ayıklayıcının nasıl neden aracılığıyla uygulanan hizmetlerini açıklar.
+ Bir hata ayıklama altyapısı (DE) tanımlar ve ayrıca, bu arabirimler aracılığıyla uygulanan Hizmetleri ve hata ayıklayıcının farklı çalışma modları arasında geçişine neden olabilecekleri hizmetleri açıklar.

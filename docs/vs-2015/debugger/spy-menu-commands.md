@@ -1,5 +1,5 @@
 ---
-title: Menü komutları olmak | Microsoft Docs
+title: Spy menü komutları | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,31 +12,31 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: eb8ecf72e83f12900db77b912d66ff28493ca98e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153855"
 ---
 # <a name="spy-menu-commands"></a>Spy Menü Komutları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Spy** menü Spy ++ Windows ve görünümler ile çalışmak için komutları sağlar.  
+**Spy** menüsü, Spy + + Windows ve görünümleriyle çalışma komutları sağlar.  
   
  **Windows**  
  Yeni bir Windows görünümü açar.  
   
  **İşlemler**  
- Yeni bir işlemler görünümü açar.  
+ Yeni bir süreçler görünümü açar.  
   
  **İş Parçacıkları**  
- Yeni bir iş parçacıkları görünümü açar.  
+ Yeni bir Iş parçacığı görünümü açar.  
   
- **Günlük iletileri**  
- Yeni bir ileti görünümü açar ve açılır [ileti seçenekleri iletişim kutusu](../debugger/message-options-dialog-box.md) görünüm.  
+ **Günlük Iletileri**  
+ Yeni bir Iletiler görünümü açar ve görünümün [Ileti seçenekleri Iletişim kutusunu](../debugger/message-options-dialog-box.md) açar.  
   
- **Pencereyi Bul**  
- Görüntüler **FindWindow** fare ile bir pencere seçmek için iletişim kutusu.  
+ **Pencereyi bul**  
+ Fare ile bir pencere seçmek için **FindWindow** iletişim kutusunu görüntüler.  
   
  **Çıkış**  
- Spy ++ yardımcı programı kapatır.
+ Spy + + yardımcı programını kapatır.

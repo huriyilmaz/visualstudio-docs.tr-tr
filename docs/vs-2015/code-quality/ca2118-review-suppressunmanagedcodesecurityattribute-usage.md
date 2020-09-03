@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: bc0e88265245d795697d32a9e6a95909c0415259
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538664"
 ---
 # <a name="ca2118-review-suppressunmanagedcodesecurityattribute-usage"></a>CA2118: SuppressUnmanagedCodeSecurityAttribute kullanımını gözden geçirin
@@ -36,7 +36,7 @@ ms.locfileid: "85538664"
  Ortak veya korumalı bir tür veya üyenin özniteliği vardır <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> .
 
 ## <a name="rule-description"></a>Kural Tanımı
- <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>COM birlikte çalışma veya platform çağırma kullanılarak yönetilmeyen kodu çalıştıran Üyeler için varsayılan güvenlik sistemi davranışını değiştirir. Genellikle, sistem, yönetilmeyen kod izni için bir [veri ve modelleme](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6) sağlar. Bu talep, üyenin her çağrılması için çalışma zamanında gerçekleşir ve izin için çağrı yığınında her çağrıyı denetler. Öznitelik mevcut olduğunda, sistem izin için bir [bağlantı taleplerine](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) sahip olur: çağıran JIT olarak derlendiğinde, hemen çağıranın izinleri denetlenir.
+ <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> COM birlikte çalışma veya platform çağırma kullanılarak yönetilmeyen kodu çalıştıran Üyeler için varsayılan güvenlik sistemi davranışını değiştirir. Genellikle, sistem, yönetilmeyen kod izni için bir [veri ve modelleme](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6) sağlar. Bu talep, üyenin her çağrılması için çalışma zamanında gerçekleşir ve izin için çağrı yığınında her çağrıyı denetler. Öznitelik mevcut olduğunda, sistem izin için bir [bağlantı taleplerine](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) sahip olur: çağıran JIT olarak derlendiğinde, hemen çağıranın izinleri denetlenir.
 
  Bu öznitelik, öncelikle performansı artırmak için kullanılır; ancak, gelen performans artışı önemli güvenlik riskleri ile gelir. Özniteliği yerel yöntemleri çağıran ortak üyelere yerleştirirseniz, Çağrı yığınındaki çağıranlar (hemen çağıran), yönetilmeyen kodu yürütmek için yönetilmeyen kod iznine gerek kalmaz. Genel üyenin eylemlerine ve giriş işlemeye bağlı olarak, güvenilir olmayan çağıranların normal olarak güvenilir kodla sınırlı işlevlere erişmesine izin verebilir.
 

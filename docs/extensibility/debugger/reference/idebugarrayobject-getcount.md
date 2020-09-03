@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject::GetCount | Microsoft Dokümanlar
+title: 'Ihata ayıklama Garrayobject:: GetCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: d9d5e322b7bcd5238335c74caa21989f1f1962ce
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736203"
 ---
 # <a name="idebugarrayobjectgetcount"></a>IDebugArrayObject::GetCount
 Dizideki öğelerin sayısını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetCount( 
@@ -41,13 +41,13 @@ int GetCount(
 
 ## <a name="parameters"></a>Parametreler
 `pdwElements`\
-[çıkış] Sayımı döndürür.
+dışı Sayıyı döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, dizi nesnesi çok boyutlu olsa bile, bir dizi nesnesinin tüm öğelerini tek boyutlu bir dizi olarak görür. Örneğin, dizi `myarray[3][2][6]`göz önüne alındığında, bu yöntem `pdwElements` parametre 36 döndürecek. Tek tek öğeleri tektek almak için [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) yöntemini kullanın.
+ Bu yöntem, dizi nesnesi çok boyutlu olsa bile, dizi nesnesinin tüm öğelerini tek boyutlu bir dizi olarak görür. Örneğin, dizi verildiğinde `myarray[3][2][6]` , bu yöntem parametresinde 36 döndürür `pdwElements` . Tek tek öğeleri tek tek almak için [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) metodunu kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

@@ -15,16 +15,16 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 1ac04a3d8834e3fc24f148fc36327d101e43720a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658852"
 ---
 # <a name="how-to-configure-code-analysis-for-a-managed-code-project"></a>Nasıl yapılır: Yönetilen Kod Projesi İçin Kod Analizini Yapılandırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_0, [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] ve [!INCLUDE[vsPro](../includes/vspro-md.md)], yönetilen bir kod projesine uygulamak için kod analizi *kural kümeleri* listesinden seçim yapabilirsiniz. Varsayılan kural kümesi, en düşük Microsoft önerilen kurallardır. Bir projeye veya bir Çözümdeki tüm projelere başka bir kural kümesi uygulayabilirsiniz.
+Ve ' de, [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] [!INCLUDE[vsPro](../includes/vspro-md.md)] bir yönetilen kod projesine uygulamak için kod analizi *kural kümeleri* listesinden seçim yapabilirsiniz. Varsayılan kural kümesi, en düşük Microsoft önerilen kurallardır. Bir projeye veya bir Çözümdeki tüm projelere başka bir kural kümesi uygulayabilirsiniz.
 
 > [!NOTE]
 > ASP.NET Web uygulamaları için bir kural kümesinin nasıl yapılandırılacağı hakkında bilgi için bkz. [nasıl yapılır: bir ASP.NET Web uygulaması Için kod analizini yapılandırma](../code-quality/how-to-configure-code-analysis-for-an-aspnet-web-application.md).
@@ -48,7 +48,7 @@ ms.locfileid: "72658852"
 
     - Kullanmak istediğiniz kural kümesine tıklayın.
 
-    - **@No__t_1Browse tıklayın...** listede olmayan mevcut bir özel kural kümesini belirtmek için >.
+    - **\<Browse...>** Listede olmayan mevcut bir özel kural kümesini belirtmek için tıklayın.
 
     - Özel bir kural kümesi tanımlayın.
 

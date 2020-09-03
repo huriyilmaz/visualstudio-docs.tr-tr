@@ -1,5 +1,5 @@
 ---
-title: -Düzenle (devenv. exe) | Microsoft Docs
+title: -Düzenle (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,35 +13,35 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c81f59f2dadf535af4e9a76949a29fd1355c33f3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657750"
 ---
 # <a name="edit-devenvexe"></a>/Edit (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Belirtilen dosyayı varolan bir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] örneğinde açar.
+Belirtilen dosyayı varolan bir örneğinde açar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Devenv /edit [file1[ file2]]
 ```
 
-## <a name="arguments"></a>Arguments
- Isteğe bağlı `file1`. @No__t_0 var olan bir örneğinde açılacak dosya. @No__t_0 örneği yoksa, Basitleştirilmiş bir pencere düzeniyle yeni bir örnek oluşturulur ve `file1` yeni örnekte açılır.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `file1` Seçim. Var olan bir örneğinde açılacak dosya [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Mevcut bir örneği yoksa [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , Basitleştirilmiş pencere düzeniyle yeni bir örnek oluşturulur ve `file1` Yeni örnekte açılır.
 
- Isteğe bağlı `file2`. Mevcut [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] örneğinde açmak için bir veya daha fazla ek dosya.
+ `file2` Seçim. Mevcut örneğinde açmak için bir veya daha fazla ek dosya [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .
 
 ## <a name="remarks"></a>Açıklamalar
- Dosya belirtilmemişse ve var olan bir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] örneği varsa, var olan [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] örneği odağı alır. Hiçbir dosya belirtilmemişse ve mevcut bir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] örneği yoksa, Basitleştirilmiş bir pencere düzeniyle yeni bir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] örneği oluşturulur.
+ Dosya belirtilmemişse ve var olan bir örneği varsa [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , var olan örneği [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] odak alır. Hiçbir dosya belirtilmemişse ve mevcut bir örneği yoksa [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , yeni bir örneği [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Basitleştirilmiş pencere düzeniyle oluşturulur.
 
- Mevcut [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] örneği kalıcı durumdaysa, örneğin [Seçenekler iletişim kutusu](../../ide/reference/options-dialog-box-visual-studio.md) açıksa, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kalıcı durumdan çıktığında dosya mevcut örnekte açılır.
+ Mevcut örneği [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kalıcı bir durumdaysa, örneğin, [Seçenekler iletişim kutusu](../../ide/reference/options-dialog-box-visual-studio.md) açıksa, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kalıcı durumdan çıkıldığında dosya mevcut örnekte açılır.
 
 ## <a name="example"></a>Örnek
- Bu örnek, dosya `MyFile.cs` var olan bir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] örneğinde açar veya zaten mevcut değilse dosyayı yeni bir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] örneğinde açar.
+ Bu örnek, dosyayı `MyFile.cs` var olan bir örneğinde açar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] veya zaten mevcut değilse dosyayı yeni bir örneğinde açar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .
 
 ```
 devenv /edit MyFile.cs

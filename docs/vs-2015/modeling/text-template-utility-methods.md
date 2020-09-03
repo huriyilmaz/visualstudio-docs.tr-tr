@@ -12,22 +12,22 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6c38b15a3b819ce561c098c3b9810ee6884e526b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658531"
 ---
 # <a name="text-template-utility-methods"></a>Metin Şablonu Yardımcı Program Yöntemleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_0 metin şablonunda kod yazdığınızda her zaman kullanabileceğiniz çeşitli yöntemler vardır. Bu yöntemler <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> tanımlanmıştır.
+Bir metin şablonunda kod yazdığınızda her zaman kullanabileceğiniz çeşitli yöntemler vardır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Bu yöntemler içinde tanımlanmıştır <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> .
 
 > [!TIP]
-> Ayrıca, ana bilgisayar ortamı tarafından sunulan diğer yöntemleri ve Hizmetleri normal (önceden işlenmiş) metin şablonunda de kullanabilirsiniz. Örneğin, dosya yollarını çözümleyebilir, hataları günlüğe kaydedebilir ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] tarafından sunulan hizmetleri ve yüklenmiş tüm paketleri alabilirsiniz.  Daha fazla bilgi için bkz. [bir metin şablonundan Visual Studio 'Ya erişme](https://msdn.microsoft.com/0556f20c-fef4-41a9-9597-53afab4ab9e4).
+> Ayrıca, ana bilgisayar ortamı tarafından sunulan diğer yöntemleri ve Hizmetleri normal (önceden işlenmiş) metin şablonunda de kullanabilirsiniz. Örneğin, dosya yollarını çözümleyebilir, hataları günlüğe kaydedebilir ve tarafından sunulan hizmetleri [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ve yüklü paketleri alabilirsiniz.  Daha fazla bilgi için bkz. [bir metin şablonundan Visual Studio 'Ya erişme](https://msdn.microsoft.com/0556f20c-fef4-41a9-9597-53afab4ab9e4).
 
 ## <a name="write-methods"></a>Yazma yöntemleri
- @No__t_0 ve `WriteLine()` yöntemlerini, bir ifade kod bloğu kullanmak yerine standart bir kod bloğunun içine metin eklemek için kullanabilirsiniz. Aşağıdaki iki kod bloğu işlevsel olarak eşdeğerdir.
+ `Write()` `WriteLine()` Bir ifade kodu bloğu kullanmak yerine standart bir kod bloğunun içine metin eklemek için ve yöntemlerini kullanabilirsiniz. Aşağıdaki iki kod bloğu işlevsel olarak eşdeğerdir.
 
 ##### <a name="code-block-with-an-expression-block"></a>İfade bloğuna sahip kod bloğu
 
@@ -55,7 +55,7 @@ while (i-- > 0)
 
  İç içe geçmiş denetim yapılarına uzun bir kod bloğu içindeki bir ifade bloğu yerine bu yardımcı program yöntemlerinden birini kullanmayı yararlı bulabilirsiniz.
 
- @No__t_0 ve `WriteLine()` yöntemlerinin iki aşırı yüklemesi vardır, biri tek bir dize parametresi ve bir bileşik biçim dizesi ve bir dizi nesnenin içermesi için bir nesne dizisi (`Console.WriteLine()` yöntemi gibi) alır. Aşağıdaki iki kullanım `WriteLine()` işlevsel olarak eşdeğerdir:
+ `Write()`Ve `WriteLine()` yöntemlerinin, tek bir dize parametresi alan ve bir bileşik biçim dizesi ve bir dize içeren bir nesne dizisi ile (yöntemi gibi) iki aşırı yüklemesi vardır `Console.WriteLine()` . Aşağıdaki iki kullanımı `WriteLine()` işlevsel olarak eşdeğerdir:
 
 ```
 <#
@@ -70,7 +70,7 @@ while (i-- > 0)
 ```
 
 ## <a name="indentation-methods"></a>Girintileme yöntemleri
- Metin şablonunuzun çıkışını biçimlendirmek için girintileme yöntemlerini kullanabilirsiniz. @No__t_0 sınıfı, metin şablonundaki geçerli girintiyi ve eklenen girintilendirme listesi olan bir `indentLengths` alanını gösteren bir `CurrentIndent` String özelliğine sahiptir. @No__t_0 yöntemiyle bir girintileme ekleyebilir ve `PopIndent()` yöntemiyle bir girintileme çıkarabilirsiniz. Tüm girintileri kaldırmak istiyorsanız, `ClearIndent()` yöntemini kullanın. Aşağıdaki kod bloğu bu yöntemlerin kullanımını gösterir:
+ Metin şablonunuzun çıkışını biçimlendirmek için girintileme yöntemlerini kullanabilirsiniz. <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>Sınıfı, `CurrentIndent` metin şablonundaki geçerli girintiyi ve `indentLengths` eklenen girintilendirme listesi olan bir alanı gösteren bir dize özelliğine sahiptir. Yöntemiyle bir girintileme ekleyebilir ve bu yöntemle `PushIndent()` bir girintileme çıkarabilirsiniz `PopIndent()` . Tüm girintileri kaldırmak istiyorsanız `ClearIndent()` yöntemini kullanın. Aşağıdaki kod bloğu bu yöntemlerin kullanımını gösterir:
 
 ```
 <#
@@ -97,7 +97,7 @@ Hello
 ```
 
 ## <a name="error-and-warning-methods"></a>Hata ve uyarı yöntemleri
- @No__t_0 Hata Listesi ileti eklemek için hata ve uyarı yardımcı programı yöntemlerini kullanabilirsiniz. Örneğin, aşağıdaki kod Hata Listesi bir hata mesajı ekler.
+ Hata Listesi ileti eklemek için hata ve uyarı yardımcı programı yöntemlerini kullanabilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Örneğin, aşağıdaki kod Hata Listesi bir hata mesajı ekler.
 
 ```
 <#
@@ -114,11 +114,11 @@ Hello
 ```
 
 ## <a name="access-to-host-and-service-provider"></a>Konak ve hizmet sağlayıcısına erişim
- Özellik `this.Host`, şablonu yürüten ana bilgisayar tarafından kullanıma sunulan özelliklere erişim sağlayabilir. @No__t_0 kullanmak için `<@template#>` yönergesinde `hostspecific` özniteliğini ayarlamanız gerekir:
+ Özelliği, `this.Host` şablonu yürüten ana bilgisayar tarafından kullanıma sunulan özelliklere erişim sağlayabilir. Kullanmak için `this.Host` , `hostspecific` yönergesinde özniteliği ayarlamanız gerekir `<@template#>` :
 
  `<#@template ... hostspecific="true" #>`
 
- @No__t_0 türü, şablonun yürütüldüğü konak türüne bağlıdır. @No__t_0 çalıştıran bir şablonda, IDE gibi hizmetlere erişim kazanmak için `this.Host` `IServiceProvider` atayabilirsiniz. Örneğin:
+ Türü, `this.Host` şablonun yürütüldüğü konak türüne bağlıdır. İçinde çalışan bir şablonda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , `this.Host` `IServiceProvider` IDE gibi hizmetlere erişim kazanmak için ' a atayabilirsiniz. Örneğin:
 
 ```
 EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)
@@ -126,10 +126,10 @@ EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)
 ```
 
 ## <a name="using-a-different-set-of-utility-methods"></a>Farklı bir yardımcı program yöntemi kümesi kullanma
- Metin oluşturma sürecinin bir parçası olarak, şablon dosyanız her zaman <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> `GeneratedTextTransformation`and devraldığı bir sınıfa dönüştürülür. Bunun yerine farklı bir yöntem kümesi kullanmak istiyorsanız kendi sınıfınızı yazabilir ve onu şablon yönergesinde belirtebilirsiniz. Sınıfınızın <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> devralması gerekir.
+ Metin oluşturma sürecinin bir parçası olarak, şablon dosyanız her zaman adlandırılmış ve devralan bir sınıfa dönüştürülür `GeneratedTextTransformation` <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> . Bunun yerine farklı bir yöntem kümesi kullanmak istiyorsanız kendi sınıfınızı yazabilir ve onu şablon yönergesinde belirtebilirsiniz. Sınıfınızın öğesinden devralması gerekir <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> .
 
 ```
 <#@ template inherits="MyUtilityClass" #>
 ```
 
- Derlenmiş sınıfın bulunabileceği derlemeye başvurmak için `assembly` yönergesini kullanın.
+ `assembly`Derlenen sınıfın bulunabileceği derlemeye başvurmak için yönergesini kullanın.

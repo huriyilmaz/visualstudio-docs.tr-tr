@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 094305e901624e13df147030899981f8fedb80d1
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86387037"
 ---
 # <a name="debug-your-python-code"></a>Python kodunuzda hata ayıklama
@@ -45,7 +45,7 @@ Hata ayıklama **Oturumu hata ayıklama**  >  **başlatma hata ayıklama** komut
 > [!Note]
 > Hata ayıklayıcı her zaman proje için etkin Python ortamıyla başlar. Ortamı değiştirmek için, [bir proje Için Python ortamı seçme](selecting-a-python-environment-for-a-project.md)konusunda açıklandığı gibi farklı bir tane etkin yapın.
 
-### <a name="breakpoints"></a>Kesme Noktaları
+### <a name="breakpoints"></a>Kesme noktaları
 
 Kesme noktaları, program durumunu incelemenize olanak sağlamak için işaretli bir noktada kodun yürütülmesini durdurur. Kod Düzenleyicisi 'nin sol kenar boşluğuna tıklayarak veya bir kod satırına sağ **tıklayıp kesme**  >  **noktası Ekle kesme noktası**' nı seçerek kesme noktaları ayarlayın. Her satırda bir kesme noktasıyla kırmızı bir nokta görünür.
 
@@ -66,7 +66,7 @@ Koşulları ayarlarken, Ayrıca, isteğe bağlı olarak yürütmeye devam etmek 
 
 Bir kesme noktasında durdurulduktan sonra, yeniden kesmeden önce kod veya kod blokları çalıştırmak için çeşitli yöntemlere sahip olursunuz. Bu komutlar, en üstteki hata ayıklama araç çubuğu, **hata ayıklama** menüsü, kod düzenleyicisinde sağ tıklama bağlam menüsünde ve klavye kısayolları (tüm komutlar tüm yerlerde olmasa da) dahil olmak üzere birkaç yerde mevcuttur:
 
-| Özellik | U | Açıklama |
+| Öne çıkan özelliği | U | Description |
 | --- | --- | --- |
 | **Devam et** | **F5** | Sonraki kesme noktasına ulaşılana kadar kodu çalıştırır. |
 | **Adımla** | **F11** | Sonraki ifadeyi çalıştırır ve duraklar. Next ifadesinde bir işlev çağrısı varsa, hata ayıklayıcı çağrılan işlevin ilk satırında duraklar. |
@@ -161,7 +161,7 @@ Hata ayıklama oturumu sırasında kullanabileceğiniz iki etkileşimli Windows 
 
 **Hata ayıklama etkileşimli** penceresi, [Standart REPL komutlarına](python-interactive-repl-in-visual-studio.md#meta-commands)ek olarak özel meta komutları destekler:
 
-| Komut | Arguments | Açıklama |
+| Komut | Arguments | Description |
 | --- | --- | --- |
 | `$continue`, `$cont`, `$c` | Geçerli deyimden programı çalıştırmaya başlar. |
 | `$down`, `$d` | Geçerli çerçeveyi yığın izlemesinde bir düzey aşağı taşıyın. |

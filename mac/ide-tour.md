@@ -3,19 +3,19 @@ title: Mac için Visual Studio turu
 description: Mac için Visual Studio, macOS 'ta iOS, Android, Mac ve Xamarin. Forms için ASP.NET Core Web siteleri ve Xamarin projeleri gibi .NET uygulamaları oluşturmaya yönelik tümleşik bir geliştirme ortamı sağlar.
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 12/13/2019
+ms.date: 07/03/2020
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
 ms.custom: video
-ms.openlocfilehash: f7686efae903912b64d8692a823d6e82592cbec9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 56af8f7cd30ec8e41ece2772dc63d67a2dbf3976
+ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/02/2020
-ms.locfileid: "75405827"
+ms.locfileid: "89402619"
 ---
 # <a name="visual-studio-2019-for-mac-tour"></a>Mac için Visual Studio 2019 Tur turu
 
-Mac için Visual Studio, Mac üzerinde kod düzenlemek, hata ayıklamak ve derlemek ve sonra bir uygulama yayımlamak için kullanılabilen .NET _Tümleşik geliştirme ortamıdır_ . Standart bir düzenleyici ve hata ayıklayıcı gibi beklenen özelliklerin yanı sıra, Mac için Visual Studio yazılım geliştirme sürecini kolaylaştırmak için derleyiciler, kod tamamlama araçları, grafik tasarımcıları ve kaynak denetimi de içerir.
+Mac için Visual Studio, Mac üzerinde kod düzenlemek, hata ayıklamak ve derlemek ve sonra bir uygulama yayımlamak için kullanılabilen .NET _Tümleşik geliştirme ortamıdır_ . Bir kod düzenleyicisine ve hata ayıklayıcıya ek olarak, Mac için Visual Studio yazılım geliştirme sürecini kolaylaştırmak için derleyiciler, kod tamamlama araçları, grafik tasarımcıları ve kaynak denetimi özellikleri içerir.
 
 Mac için Visual Studio,, veya dosyaları gibi Windows karşılığı ile aynı dosya türlerini destekler `.csproj` `.fsproj` `.sln` ve editorconfig gibi özellikleri destekler, bu da sizin IÇIN en uygun IDE 'yi kullanabileceğiniz anlamına gelir.
 Bir uygulama oluşturmak, açmak ve geliştirmek, daha önce Windows üzerinde Visual Studio kullanan herkes için tanıdık bir deneyim olacaktır. Ayrıca Mac için Visual Studio, Windows karşılığına yönelik güçlü bir IDE gibi birçok güçlü araç kullanır. Roslyn derleyici platformu, yeniden düzenleme ve IntelliSense için kullanılır. Proje sistemi ve derleme altyapısı MSBuild kullanır ve kaynak Düzenleyicisi Windows üzerinde Visual Studio ile aynı temeli kullanır. Xamarin ve .NET Core uygulamaları için aynı hata ayıklayıcı altyapılarını ve Xamarin. iOS ve Xamarin. Android için aynı tasarımcıları kullanır.
@@ -38,7 +38,7 @@ Mac için Visual Studio, uygulama dosyalarını ve ayarlarını yönetmek, uygul
 
 ## <a name="getting-started"></a>Başlarken
 
-Mac için Visual Studio 2019 ' u başlattığınızda yeni kullanıcılar bir oturum açma penceresi görür. Ücretli bir lisansı etkinleştirmek (varsa) veya Azure aboneliklerine bağlanmak için Microsoft hesabı ile oturum açın. Bunu **daha sonra yapacağım** ve daha sonra **Visual Studio > oturum açma** menü öğesi aracılığıyla oturum açacağım.
+Mac için Visual Studio 2019 ' i ilk kez başlattığınızda, yeni kullanıcılar bir oturum açma penceresi görür. Ücretli bir lisansı etkinleştirmek (varsa) veya Azure aboneliklerine bağlanmak için Microsoft hesabı ile oturum açın. Bunu **daha sonra yapacağım** ve daha sonra **Visual Studio > oturum açma** menü öğesi aracılığıyla oturum açacağım.
 
 ![Microsoft hesabı oturum açın](media/ide-tour-2019-start-signin.png)
 
@@ -46,7 +46,7 @@ Daha sonra tercih ettiğiniz klavye kısayollarını seçerek IDE 'yi özelleşt
 
 ![En sevdiğiniz klavye kısayollarını seçin](media/ide-tour-2019-keyboard-shortcut.png)
 
-Oturum açan kullanıcılar yeni _başlangıç penceresini_görür. Bu, en son projelerin bir listesini ve mevcut bir projeyi açmak ya da yeni bir proje açmak için düğmeleri gösterir:
+Bu ilk kurulum deneyiminden sonra, en son projelerin bir listesini ve var olan bir projeyi açmak ya da yeni bir proje açmak için düğmeleri gösteren Mac için Visual Studio 2019 ' u her açışınızda _başlangıç penceresini_ görürsünüz:
 
 ![Son projeler arasından seçim yapın veya yeni bir öğe oluşturun](media/ide-tour-2019-start-projects.png)
 
@@ -82,7 +82,7 @@ Mac için Visual Studio başvuruları kullanma hakkında daha fazla bilgi için 
 
 ## <a name="dependencies--packages"></a>Bağımlılıklar/paketler
 
-Uygulamanızda kullanılan tüm dış bağımlılıklar, .Net Core veya Xamarin. iOS/Xamarin. Android projesinde olup olmadığına bağlı olarak bağımlılıklar veya paketler klasörüne depolanır. Bunlar genellikle bir NuGet biçiminde sağlanır.
+Uygulamanızda kullanılan tüm dış bağımlılıklar, .NET Core veya Xamarin. iOS/Xamarin. Android projesinde olmanıza bağlı olarak bağımlılıklar veya paketler klasörüne depolanır. Bunlar genellikle bir NuGet biçiminde sağlanır.
 
 NuGet, .NET geliştirme için en popüler paket yöneticisidir. Visual Studio 'nun NuGet desteğiyle, kolayca uygulamanıza paket arayabilir ve uygulamanızı ekleyebilirsiniz.
 
@@ -94,7 +94,7 @@ Bir uygulamada NuGet paketinin kullanılmasıyla ilgili bilgiler, [Proje makalen
 
 ## <a name="source-editor"></a>Kaynak Düzenleyicisi
 
-C#, XAML veya JavaScript 'e yazıyorsanız bağımsız olarak, kod Düzenleyicisi Visual Studio Windows ile aynı çekirdek bileşenlerini tamamen yerel bir kullanıcı arabirimiyle paylaşır.
+C#, XAML veya JavaScript dilinde yazı yazıyorsanız bağımsız olarak, kod Düzenleyicisi Windows üzerinde Visual Studio ile aynı çekirdek bileşenlerini tamamen yerel bir kullanıcı arabirimiyle paylaşır.
 
 Bu, aşağıdaki özelliklerden bazılarını getirir:
 

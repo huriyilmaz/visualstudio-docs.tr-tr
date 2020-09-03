@@ -1,5 +1,5 @@
 ---
-title: Projeleri Yükseltme | Microsoft Dokümanlar
+title: Projeleri yükseltme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,171 +13,171 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a99207fc14cf9f462bc1abc88d6fed166ea6523f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80704263"
 ---
 # <a name="upgrading-projects"></a>Projeleri Yükseltme
 
-Visual Studio'nun bir sürümünden diğerine proje modelinde yapılan değişiklikler, projelerin ve çözümlerin yeni sürümde çalıştırılabilmeleri için yükseltilmesigerektirebilir. Kendi [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] projelerinizde yükseltme desteği uygulamak için kullanılabilecek arabirimler sağlar.
+Visual Studio 'nun bir sürümündeki proje modelinde yapılan değişiklikler, daha yeni sürümde çalıştırılabilmesi için projelerin ve çözümlerin yükseltilmesini gerektirebilir. , [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] Kendi projelerinizde yükseltme desteğini uygulamak için kullanılabilen arabirimler sağlar.
 
-## <a name="upgrade-strategies"></a>Yükseltme Stratejileri
+## <a name="upgrade-strategies"></a>Yükseltme stratejileri
 
-Yükseltmeyi desteklemek için proje sistem uygulamanızın bir yükseltme stratejisi tanımlaması ve uygulaması gerekir. Stratejinizi belirlerken, yan yana (SxS) yedeklemeyi, yedeklemekopyalamayı veya her ikisini birden desteklemeyi seçebilirsiniz.
+Bir yükseltmeyi desteklemek için, proje sistemi uygulamanızın bir yükseltme stratejisi tanımlayıp uygulaması gerekir. Stratejinizi belirlemek için yan yana (SxS) yedeklemeyi, kopya yedeklemesini veya her ikisini de desteklemeyi seçebilirsiniz.
 
-- SxS yedekleme, bir projenin yalnızca yerinde yükseltmesi gereken dosyaları kopyalayarak uygun bir dosya adı eki (örneğin,.eski" anlamına gelir) anlamına gelir.
+- SxS yedekleme, bir projenin yalnızca yükseltilmesi gereken dosyaları, örneğin ". old" gibi uygun bir dosya adı sonekini ekleyerek kopyaladığını gösterir.
 
-- Yedeklemeyi kopyala, projenin tüm proje öğelerini kullanıcı tarafından sağlanan yedekleme konumuna kopyalandığı anlamına gelir. Özgün proje konumundaki ilgili dosyalar daha sonra yükseltilir.
+- Kopya yedekleme, bir projenin tüm proje öğelerini Kullanıcı tarafından belirtilen bir yedekleme konumuna kopyaladığı anlamına gelir. Özgün proje konumundaki ilgili dosyalar yükseltilir.
 
-## <a name="how-upgrade-works"></a>Yükseltme Nasıl Çalışır?
+## <a name="how-upgrade-works"></a>Yükseltme nasıl Işe yarar?
 
-Visual Studio'nun önceki bir sürümünde oluşturulan bir çözüm daha yeni bir sürümde açıldığında, IDE yükseltmesi gerekip gerekmeden gerekip gerekolmadığını belirlemek için çözüm dosyasını denetler. Yükseltme gerekiyorsa, **Yükseltme Sihirbazı** kullanıcıyı yükseltme işleminde yürümek için otomatik olarak başlatılır.
+Visual Studio 'nun önceki bir sürümünde oluşturulan bir çözüm daha yeni bir sürümde açıldığında IDE, yükseltilmesi gerekip gerekmediğini öğrenmek için çözüm dosyasını denetler. Yükseltme gerekliyse, yükseltme **Sihirbazı** , kullanıcıya yükseltme işlemi boyunca yol gösterecek şekilde otomatik olarak başlatılır.
 
-Bir çözümün yükseltmesi gerektiğinde, yükseltme stratejisi için her proje fabrikasını sorgular. Strateji, proje fabrikasının kopya yedeklemesini mi yoksa SxS yedeklemesini mi desteklediğini belirler. Bilgiler, yedekleme için gerekli bilgileri toplayan ve geçerli seçenekleri kullanıcıya sunan **Yükseltme Sihirbazı'na**gönderilir.
+Bir çözümün yükseltilmesi gerektiğinde, her proje fabrikasını yükseltme stratejisi için sorgular. Strateji, proje fabrikasının kopya yedeklemesini mi yoksa SxS yedeklemesini mi desteklediğini belirler. Bilgiler, yedekleme için gereken bilgileri toplayan ve Kullanıcı için geçerli seçenekleri sunan **Yükseltme Sihirbazına**gönderilir.
 
-### <a name="multi-project-solutions"></a>Çoklu Proje Çözümleri
+### <a name="multi-project-solutions"></a>Çoklu proje çözümleri
 
-Bir çözüm birden çok proje içeriyorsa ve yalnızca SxS yedeklemesini destekleyen bir C++ projesi ve yalnızca kopya yedeklemesini destekleyen bir Web projesi gibi yükseltme stratejileri farklıysa, proje fabrikalarının yükseltme stratejisini müzakere etmesi gerekir.
+Bir çözüm birden çok proje içeriyorsa ve yükseltme stratejileri farklıysa (örneğin, yalnızca SxS yedeklemesini destekleyen bir C++ projesi ve yalnızca kopya yedeklemesini destekleyen bir Web projesi gibi), proje fabrikaları yükseltme stratejisi üzerinde anlaşmalıdır.
 
-Çözüm, her proje fabrikasını <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory>. Daha sonra, genel proje dosyalarının yükseltmeye ihtiyacı olup olmadığını görmek ve desteklenen yükseltme stratejilerini belirlemek için çağrıda bulunur. <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject_CheckOnly%2A> **Yükseltme Sihirbazı** daha sonra çağrılır.
+Çözüm her proje fabrikasını sorgular <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> . Daha sonra <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject_CheckOnly%2A> , genel proje dosyalarının yükseltilmesi gerekip gerekmediğini ve desteklenen yükseltme stratejilerini belirlemesini sağlamak için çağırır. **Yükseltme Sihirbazı** daha sonra çağrılır.
 
-Kullanıcı sihirbazı tamamladıktan <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> sonra, gerçek yükseltme gerçekleştirmek için her proje fabrikasında çağrılır. Yedeklemeyi kolaylaştırmak için, IVsProjectUpgradeViaFactory yöntemleri yükseltme işleminin ayrıntılarını günlüğe kaydetmek için <xref:Microsoft.VisualStudio.Shell.Interop.SVsUpgradeLogger> hizmeti sağlar. Bu hizmet önbelleğe alınamaz.
+Kullanıcı Sihirbazı tamamladıktan sonra, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> gerçek yükseltmeyi gerçekleştirmek için her proje fabrikası üzerinde çağırılır. Backup 'ı kolaylaştırmak için IVsProjectUpgradeViaFactory yöntemleri, <xref:Microsoft.VisualStudio.Shell.Interop.SVsUpgradeLogger> yükseltme işleminin ayrıntılarını günlüğe kaydetmek için hizmeti sağlar. Bu hizmet önbelleğe alınamaz.
 
-İlgili tüm genel dosyaları güncelledikten sonra, her proje fabrikası bir projeyi anında kullanmayı seçebilir. Proje uygulaması desteklemelidir. <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> Yöntem <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> daha sonra ilgili tüm proje öğelerini yükseltmek için çağrılır.
+Tüm ilgili genel dosyalar güncelleştirildikten sonra her proje fabrikası bir proje örneğini oluşturmayı seçebilirler. Proje uygulamasının desteklemesi gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A>Daha sonra tüm ilgili proje öğelerini yükseltmek için yöntemi çağırılır.
 
 > [!NOTE]
-> Yöntem <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> SVsUpgradeLogger hizmetini sağlamaz. Bu hizmet arayarak <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A>elde edilebilir.
+> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A>Yöntemi, Svsupgradegünlükçü hizmetini sağlamaz. Bu hizmet çağırarak elde edilebilir <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> .
 
 ## <a name="best-practices"></a>En İyi Uygulamalar
 
-Bir <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave> dosyayı düzenlemeden önce düzenleyip düzenleyip düzenleyip düzenleyip düzenleyip düzenleyip düzenlemediğinizi kontrol etmek için hizmeti kullanın ve kaydetmeden önce kaydedebilirsiniz. Bu, yedekleme ve yükseltme uygulamalarınızın proje dosyalarını kaynak denetimi altında, yetersiz izinlere sahip dosyaları vb. işlemesine yardımcı olur.
+<xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave>Düzenlemeden önce bir dosyayı düzenleyip düzenleyebiliyorsanız ve kaydetmeden önce bu hizmeti kaydedebilir. Bu, yedekleme ve yükseltme uygulamalarınızın, kaynak denetimi altındaki proje dosyalarını, yetersiz izinlere sahip dosyaları ve benzerlerini işlemesini yardımcı olur.
 
-Yükseltme <xref:Microsoft.VisualStudio.Shell.Interop.SVsUpgradeLogger> işleminin başarısı veya başarısızlığı hakkında bilgi sağlamak için yedekleme ve yükseltmenin tüm aşamalarında hizmeti kullanın.
+<xref:Microsoft.VisualStudio.Shell.Interop.SVsUpgradeLogger>Yükseltme işleminin başarısı veya başarısızlığı hakkında bilgi sağlamak için yedekleme ve yükseltme aşamaları sırasında hizmeti kullanın.
 
-Projeleri yedekleme ve yükseltme hakkında daha fazla bilgi için vsshell2.idl'deki IVsProjectUpgrade yorumlarına bakın.
+Projeleri yedekleme ve yükseltme hakkında daha fazla bilgi için, vsshell2. IDL içindeki IVsProjectUpgrade için açıklamalara bakın.
 
-## <a name="upgrading-custom-projects"></a><a name="upgrading-custom-projects"></a>Özel Projeleri Yükseltme
+## <a name="upgrading-custom-projects"></a><a name="upgrading-custom-projects"></a> Özel projeleri yükseltme
 
-Proje dosyasında kalıcı bilgileri ürününüzün farklı Visual Studio sürümleri arasında değiştirirseniz, proje dosyanızın eski sürümden yeni sürüme yükseltilmesine destek olmanız gerekir. **Visual Studio Dönüşüm Sihirbazı'na**katılmanızı sağlayan yükseltmeyi <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> desteklemek için arabirimi uygulayın. Bu arabirim, kopya yükseltme için kullanılabilen tek mekanizmayı içerir. Projenin yükseltme süreçi, çözümün bir bir araçı açılışının bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> Arabirim proje fabrikası tarafından uygulanır veya en azından proje fabrikasından elde edilmelidir.
+Proje dosyasında kalıcı olan bilgileri ürününüzün farklı Visual Studio sürümleri arasında değiştirirseniz, proje dosyanızı eski sürümden yeni sürüme yükseltmeyi desteklemeniz gerekir. **Visual Studio dönüştürme sihirbazına**katılımını sağlayan yükseltmeyi desteklemek için <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> arabirimini uygulayın. Bu arabirim, kopyalama yükseltme için kullanılabilen tek mekanizmayı içerir. Projenin yükseltilmesi, çözümün bir parçası olarak gerçekleşir. <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory>Arabirim, proje fabrikası tarafından uygulanır veya en azından proje fabrikasında bilgiler kişilerden olmalıdır.
 
-<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> Arabirimi kullanan eski mekanizma hala desteklenir, ancak proje açık bir parçası olarak proje sistemini kavramsal olarak yükseltir. Bu <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> nedenle arabirim çağrılsa veya <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> uygulansa bile, arabirim Visual Studio ortamı tarafından çağrılır. Bu yaklaşım, kopyave proje yalnızca yükseltme bölümlerini uygulamak için kullanmak <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> ve yerinde yapılacak işin geri kalanını (büyük olasılıkla yeni <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> konumda) arabirim tarafından temsilci sağlar.
+Arabirimi kullanan eski mekanizma <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> hala desteklenmektedir, ancak kavramsal olarak proje sistemini projenin bir parçası olarak yükseltir. Arabirim, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> Bu nedenle <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> arabirim çağrılıp uygulanmış olsa bile Visual Studio ortamı tarafından çağırılır. Bu yaklaşım <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> , yalnızca yükseltmenin ve projenin yalnızca bir kısmını kopyalamak için ' i kullanmanıza olanak sağlar ve bu işlemi, arabirime göre (muhtemelen yeni konumda) yapılacak işin geri kalanını devredebilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> .
 
-Örnek bir uygulama <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade>için [VSSDK Örnekleri](https://github.com/Microsoft/VSSDK-Extensibility-Samples)bölümüne bakın.
+Örnek bir uygulama için <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> bkz. [VSSDK örnekleri](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
 
-Proje yükseltmeleri ile ilgili aşağıdaki senaryolar ortaya çıkar:
+Aşağıdaki senaryolar proje yükseltmeleri ile ortaya çıkar:
 
-- Dosya, projenin destekedebileceğinden daha yeni bir biçimdeyse, bunu belirten bir hata döndürmesi gerekir. Bu, ürününüzün eski sürümünün sürümü denetlemek için kod içerdiğini varsayar.
+- Dosya projenin destekleyebileceğinden daha yeni bir biçimde ise, bunu belirten bir hata döndürmelidir. Bu, ürününüzün eski sürümünün sürümü denetlemek için kod içerdiğini varsayar.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.__VSPPROJECTUPGRADEVIAFACTORYFLAGS.PUVFF_SXSBACKUP> Bayrak <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> yöntemde belirtilirse, yükseltme, projenin açılışından önce yerinde yükseltme olarak uygulanacaktır.
+- Bu <xref:Microsoft.VisualStudio.Shell.Interop.__VSPPROJECTUPGRADEVIAFACTORYFLAGS.PUVFF_SXSBACKUP> yöntemde bayrak belirtilmişse <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> , yükseltme, proje açılmadan önce yerinde bir yükseltme olarak uygulanır.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.__VSPPROJECTUPGRADEVIAFACTORYFLAGS.PUVFF_COPYBACKUP> Bayrak <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> yöntemde belirtilirse, yükseltme kopya yükseltmesi olarak uygulanır.
+- Bu <xref:Microsoft.VisualStudio.Shell.Interop.__VSPPROJECTUPGRADEVIAFACTORYFLAGS.PUVFF_COPYBACKUP> yöntemde bayrak belirtilmişse <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> , yükseltme bir kopya yükseltme olarak uygulanır.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> Aramada <xref:Microsoft.VisualStudio.Shell.Interop.__VSUPGRADEPROJFLAGS.UPF_SILENTMIGRATE> bayrak belirtilirse, proje açıldıktan sonra kullanıcıdan proje dosyasını yerinde yükseltme olarak yükseltmesi istenir. Örneğin, ortam, kullanıcı çözümün eski bir sürümünü açtığında kullanıcıdan yükseltmesini ister.
+- <xref:Microsoft.VisualStudio.Shell.Interop.__VSUPGRADEPROJFLAGS.UPF_SILENTMIGRATE>Çağrıda bayrak belirtilmişse <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> , proje açıldıktan sonra, Kullanıcı ortam tarafından proje dosyasını yerinde yükseltme olarak yükseltmek için bir kullanıcı tarafından istenir. Örneğin, ortam, Kullanıcı çözümün eski bir sürümünü açtığında kullanıcıdan yükseltme yapmanızı ister.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> Aramada <xref:Microsoft.VisualStudio.Shell.Interop.__VSUPGRADEPROJFLAGS.UPF_SILENTMIGRATE> bayrak belirtilmemişse, kullanıcıdan proje dosyasını yükseltmesini isteminiz gerekir.
+- <xref:Microsoft.VisualStudio.Shell.Interop.__VSUPGRADEPROJFLAGS.UPF_SILENTMIGRATE>Çağrıda bayrak belirtilmemişse <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> , kullanıcıdan proje dosyasını yükseltmesini istemelidir.
 
-     Aşağıda bir örnek yükseltme istemi iletisi verilmiştir:
+     Aşağıda örnek bir yükseltme istemi iletisi verilmiştir:
 
-     "Proje '%1' Visual Studio eski bir sürümü ile oluşturuldu. Visual Studio'nun bu sürümüyle açarsanız, Visual Studio'nun eski sürümleriyle açamayabilirsiniz. Bu projeye devam etmek ve açmak istiyor musunuz?"
+     "' %1 ' projesi, Visual Studio 'nun daha eski bir sürümüyle oluşturulmuş. Visual Studio 'nun bu sürümüyle açarsanız, Visual Studio 'nun eski sürümleriyle açamazsınız. Devam etmek ve bu projeyi açmak istiyor musunuz? "
 
 ### <a name="to-implement-ivsprojectupgradeviafactory"></a>IVsProjectUpgradeViaFactory uygulamak için
 
-1. Arabirim yöntemini, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> özellikle <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> proje fabrikası uygulamayöntemini uygulayın veya uygulamaları proje fabrikası uygulamanızdan çağrılabilir hale getirin.
+1. <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory>Arabirim yöntemini, özellikle de <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> proje fabrikası uygulamanızdaki yöntemi uygulayın veya uygulamaları proje fabrikası uygulamanızdan çağrılabilir hale getirin.
 
-2. Çözüm açmanın bir parçası olarak yerinde yükseltme yapmak istiyorsanız, bayrağı <xref:Microsoft.VisualStudio.Shell.Interop.__VSPPROJECTUPGRADEVIAFACTORYFLAGS.PUVFF_SXSBACKUP> uygulamanızda `VSPUVF_FLAGS` <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> parametre olarak tedarik edin.
+2. Çözümün açılması kapsamında bir yerinde yükseltme yapmak istiyorsanız, bayrağını <xref:Microsoft.VisualStudio.Shell.Interop.__VSPPROJECTUPGRADEVIAFACTORYFLAGS.PUVFF_SXSBACKUP> `VSPUVF_FLAGS` uygulamanızda parametre olarak belirtin <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> .
 
-3. Çözüm açmanın bir parçası olarak yerinde yükseltme yapmak istiyorsanız, bayrağı <xref:Microsoft.VisualStudio.Shell.Interop.__VSPPROJECTUPGRADEVIAFACTORYFLAGS.PUVFF_COPYBACKUP> uygulamanızda `VSPUVF_FLAGS` <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> parametre olarak tedarik edin.
+3. Çözümün açılması kapsamında bir yerinde yükseltme yapmak istiyorsanız, bayrağını <xref:Microsoft.VisualStudio.Shell.Interop.__VSPPROJECTUPGRADEVIAFACTORYFLAGS.PUVFF_COPYBACKUP> `VSPUVF_FLAGS` uygulamanızda parametre olarak belirtin <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> .
 
-4. Hem 2 hem de 3 adımları için, <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>gerçek dosya yükseltme adımları, kullanarak , `IVsProjectUpgade`aşağıdaki "Uygulama " bölümünde açıklandığı gibi <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade>uygulanabilir, ya da gerçek dosya yükseltme sini .
+4. 2 ve 3. adımlarda, kullanarak gerçek dosya yükseltme adımları <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> aşağıdaki "uygulama" bölümünde açıklandığı gibi uygulanabilir `IVsProjectUpgade` veya gerçek dosya yükseltmeyi sürümüne atayabilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> .
 
-5. Visual Studio <xref:Microsoft.VisualStudio.Shell.Interop.IVsUpgradeLogger> Geçiş Sihirbazı'nı kullanarak kullanıcı için yükseltme ile ilgili iletileri göndermek için yöntemleri kullanın.
+5. <xref:Microsoft.VisualStudio.Shell.Interop.IVsUpgradeLogger>Visual Studio Geçiş Sihirbazı 'nı kullanarak Kullanıcı için yükseltme ile ilgili iletileri gönderme yöntemlerini kullanın.
 
-6. <xref:Microsoft.VisualStudio.Shell.Interop.IVsFileUpgrade>arabirimi, proje yükseltmesinin bir parçası olarak gerçekleşmesi gereken her türlü dosya yükseltmesini uygulamak için kullanılır. Bu arabirim, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory>proje sisteminin bir parçası olan dosyaları yükseltmek için bir mekanizma olarak verilir, ancak ana proje sistemi doğrudan farkında olmayabilir çağrılır. Örneğin, derleyiciile ilgili dosya ve özellikler proje sisteminin geri kalanını işleyen aynı geliştirme ekibi tarafından işlenmezse bu durum ortaya çıkabilir.
+6. <xref:Microsoft.VisualStudio.Shell.Interop.IVsFileUpgrade> arabirim, proje yükseltmesinin bir parçası olarak gerçekleşmesi gereken herhangi bir tür dosya yükseltmesini uygulamak için kullanılır. Bu arabirim öğesinden çağrılmaz <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> , ancak proje sisteminin bir parçası olan dosyaları yükseltmek için bir mekanizma olarak sağlanır, ancak ana proje sistemi doğrudan farkında olmayabilir. Örneğin, derleyici ile ilgili dosyalar ve özellikler proje sisteminin geri kalanını işleyen geliştirme ekibi tarafından işlenmezse bu durum ortaya çıkabilir.
 
-### <a name="ivsprojectupgrade-implementation"></a>IVsProjectUpgrade Uygulaması
+### <a name="ivsprojectupgrade-implementation"></a>IVsProjectUpgrade uygulaması
 
-Proje sisteminiz yalnızca <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> uygularsa, **Visual Studio Dönüşüm Sihirbazı'na**katılamaz. Ancak, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> arabirimi uygulasanız bile, dosya yükseltmesini <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> uygulamaya yine de devredebilirsiniz.
+Proje sisteminiz yalnızca uygularsa <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> , **Visual Studio dönüştürme sihirbazına**katılamaz. Ancak, arabirimini uygulasanız bile <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> , uygulamaya dosya yükseltmeyi de atayabilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> .
 
-#### <a name="to-implement-ivsprojectupgrade"></a>IVsProjectUpgrade uygulamak için
+#### <a name="to-implement-ivsprojectupgrade"></a>IVsProjectUpgrade 'i uygulamak için
 
-1. Bir kullanıcı projeyi açmaya çalıştığında, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> yöntem proje açıldıktan sonra ve proje üzerinde başka bir kullanıcı eylemi yapılmadan önce ortam tarafından çağrılır. Kullanıcıdan çözümü yükseltmesi istendiyse, <xref:Microsoft.VisualStudio.Shell.Interop.__VSUPGRADEPROJFLAGS.UPF_SILENTMIGRATE> bayrak `grfUpgradeFlags` parametrede geçirilir. Kullanıcı, **Varolan Proje Ekle** komutunu kullanarak doğrudan bir proje <xref:Microsoft.VisualStudio.Shell.Interop.__VSUPGRADEPROJFLAGS.UPF_SILENTMIGRATE> açarsa, bayrak geçirilir ve projenin kullanıcıdan yükseltme ye geçmesini ister.
+1. Bir Kullanıcı bir projeyi açmayı denediğinde, proje <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> açıldıktan sonra ve proje üzerinde diğer herhangi bir kullanıcı eylemi alınmadan önce, yöntemi ortam tarafından çağrılır. Kullanıcının çözümü yükseltmesi zaten istenirse, <xref:Microsoft.VisualStudio.Shell.Interop.__VSUPGRADEPROJFLAGS.UPF_SILENTMIGRATE> bayrak `grfUpgradeFlags` parametreye geçirilir. Kullanıcı bir projeyi doğrudan açarsa (örneğin, **var olan proje Ekle** komutunu kullanarak), <xref:Microsoft.VisualStudio.Shell.Interop.__VSUPGRADEPROJFLAGS.UPF_SILENTMIGRATE> bayrak geçirilir ve projenin kullanıcıdan yükseltmesini istemek gerekir.
 
-2. Çağrıya <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> yanıt olarak, projenin proje dosyasının yükseltilip yükseltilmediğini değerlendirmesi gerekir. Proje türünü yeni bir sürüme yükseltmesi gerekmiyorsa, bayrağı <xref:Microsoft.VisualStudio.VSConstants.S_OK> döndürebilir.
+2. Çağrıya yanıt olarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> Proje, proje dosyasının yükseltilip yükseltilmediğini değerlendirmelidir. Projenin proje türünü yeni bir sürüme yükseltmesi gerekmiyorsa, yalnızca <xref:Microsoft.VisualStudio.VSConstants.S_OK> bayrağı döndürebilir.
 
-3. Projenin proje türünü yeni bir sürüme yükseltmesi gerekiyorsa, <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> yöntem çağırArak ve <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditFlags> `rgfQueryEdit` parametre için bir değer geçirerek proje dosyasının değiştirilip değiştirilemeyeceğini belirlemesi gerekir. Proje daha sonra aşağıdakileri yapmak gerekir:
+3. Projenin proje türünü yeni bir sürüme yükseltmesi gerekiyorsa, bu, <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> yöntemi çağırarak ve parametresi için değerini geçirerek proje dosyasının değiştirilip değiştirilemeyeceğini belirlemelidir <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditFlags> `rgfQueryEdit` . Ardından projenin aşağıdakileri yapması gerekir:
 
-    - Parametrede döndürülen `VSQueryEditResult` değer <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResult.QER_EditOK>ise, proje dosyası yazılabilir, çünkü yükseltme devam edebilir. `pfEditCanceled`
+    - `VSQueryEditResult`Parametresinde döndürülen değer `pfEditCanceled` ise <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResult.QER_EditOK> , proje dosyası yazılabildiğinden yükseltme devam edebilir.
 
-    - `pfEditCanceled` Parametrede döndürülen `VSQueryEditResult` değer <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResult.QER_EditNotOK> ise `VSQueryEditResult` ve değer <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResultFlags.QER_ReadOnlyNotUnderScc> bit kümesine sahipse, kullanıcıların izinler sorununu kendileri çözmeleri gerektiğinden, hata döndürmesi <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> gerekir. Proje daha sonra aşağıdakileri yapmalıdır:
+    - `VSQueryEditResult`Parametresinde döndürülen değer `pfEditCanceled` ise <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResult.QER_EditNotOK> ve `VSQueryEditResult` değer <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResultFlags.QER_ReadOnlyNotUnderScc> bit kümesine sahipse, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> kullanıcıların izinleri sorunu çözmesi için hata döndürmemelidir. Projenin ardından şunları yapması gerekir:
 
-         Arayarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> hatayı kullanıcıya bildirin <xref:Microsoft.VisualStudio.Shell.Interop.VSErrorCodes.VS_E_PROJECTMIGRATIONFAILED> ve hata <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade>kodunu ' ya döndürün.
+         Hata <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> kodunu çağırarak ve geri döndüren hatayı kullanıcıya bildirin <xref:Microsoft.VisualStudio.Shell.Interop.VSErrorCodes.VS_E_PROJECTMIGRATIONFAILED> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> .
 
-    - `VSQueryEditResult` Değer bit <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResult.QER_EditNotOK> kümesine `VSQueryEditResultFlags` sahipse, <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResultFlags.QER_ReadOnlyUnderScc> proje dosyası (, <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditFlags.QEF_ForceEdit_NoPrompting> <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditFlags.QEF_DisallowInMemoryEdits>,...) çağırArak kullanıma alınmalıdır.
+    - `VSQueryEditResult`Değer ise <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResult.QER_EditNotOK> ve `VSQueryEditResultFlags` değer <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResultFlags.QER_ReadOnlyUnderScc> bit kümesine sahipse, proje dosyası <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> ( <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditFlags.QEF_ForceEdit_NoPrompting> ,,...) çağırarak kullanıma alınmalıdır <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditFlags.QEF_DisallowInMemoryEdits> .
 
-4. Proje <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> dosyasındaki arama, dosyanın kullanıma alınmasına ve en son sürümün alınmasına neden oluyorsa, proje boşaltılır ve yeniden yüklenir. Yöntem, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> projenin başka bir örneği oluşturulduktan sonra yeniden çağrılır. Bu ikinci çağrıda, proje dosyası diske yazılabilir; proje dosyasının bir kopyasını önceki biçimde bir . ile kaydetmesi önerilir. ESKI uzantısı, gerekli yükseltme değişiklikleri yapmak ve yeni biçiminde proje dosyası kaydedin. Yine, yükseltme işleminin herhangi bir bölümü başarısız olursa, <xref:Microsoft.VisualStudio.Shell.Interop.VSErrorCodes.VS_E_PROJECTMIGRATIONFAILED>yöntem döndürerek başarısızlığı göstermelidir. Bu, projenin Çözüm Gezgini'nde boşaltılmasına neden olur.
+4. <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A>Proje dosyasındaki çağrı dosyanın kullanıma alınmasına ve alınacak en son sürüme neden oluyorsa, proje kaldırılır ve yeniden yüklenir. <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A>Yöntemi, projenin başka bir örneği oluşturulduktan sonra yeniden çağrılır. Bu ikinci çağrıda, proje dosyası diske yazılabilir; Projenin bir önceki biçimde proje dosyasının bir kopyasını ile kaydetmesi önerilir. ESKI uzantı, gerekli yükseltme değişikliklerini yapın ve proje dosyasını yeni biçimde kaydedin. Yine, yükseltme işleminin herhangi bir bölümü başarısız olursa, yöntemi dönerek hata olduğunu belirtmelidir <xref:Microsoft.VisualStudio.Shell.Interop.VSErrorCodes.VS_E_PROJECTMIGRATIONFAILED> . Bu, projenin Çözüm Gezgini bellekten kaldırılmasına neden olur.
 
-     <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> Yönteme çağrının (ReportOnly değerini belirterek) ve <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResultFlags.QER_ReadOnlyUnderScc> bayrakları döndürdeği <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResult.QER_EditNotOK> için ortamda oluşan tüm işlemi anlamak önemlidir.
+     Yöntemine yapılan çağrının <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> (ReportOnly değerini belirtmek) ve bayraklarını döndürdüğü durum için ortamda oluşan tamamlanmış işlemi anlamak önemlidir <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResult.QER_EditNotOK> <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResultFlags.QER_ReadOnlyUnderScc> .
 
 5. Kullanıcı proje dosyasını açmaya çalışır.
 
-6. Ortam uygulamanızı <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CanCreateProject%2A> çağırır.
+6. Ortam, uygulamanızı çağırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CanCreateProject%2A> .
 
-7. İade <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CanCreateProject%2A> `true`edilirse, ortam uygulamanızı <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CanCreateProject%2A> çağırır.
+7. <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CanCreateProject%2A>Dönerse `true` , ortam uygulamanızı çağırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CanCreateProject%2A> .
 
-8. Ortam, dosyayı açmak ve proje nesnesini (örneğin Project1) başlatması için uygulamanızı <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat.Load%2A> çağırır.
+8. Ortam, <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat.Load%2A> dosyayı açmak ve proje nesnesini başlatmak için uygulamanızı çağırır, örneğin, Project1.
 
-9. Ortam, proje `IVsProjectUpgrade::UpgradeProject` dosyasının yükseltilmesi gerekip gerekmediğini belirlemek için uygulamanızı çağırır.
+9. Ortam, `IVsProjectUpgrade::UpgradeProject` Proje dosyasının yükseltilmesi gerekip gerekmediğini öğrenmek için uygulamanızı çağırır.
 
-10. Parametre <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditFlags.QEF_ReportOnly> için bir değer arar ve geçersiniz. `rgfQueryEdit`
+10. <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A>Parametresi için bir değerini çağırır ve geçirin <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditFlags.QEF_ReportOnly> `rgfQueryEdit` .
 
-11. Ortam için <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResult.QER_EditNotOK> `VSQueryEditResult` geri <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResultFlags.QER_ReadOnlyUnderScc> döner ve `VSQueryEditResultFlags`bit olarak ayarlanır.
+11. Ortamı için döner <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResult.QER_EditNotOK> `VSQueryEditResult` ve <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResultFlags.QER_ReadOnlyUnderScc> bit ' de ayarlanır `VSQueryEditResultFlags` .
 
-12. Uygulama <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> `IVsQueryEditQuerySave::QueryEditFiles` çağrılarınız<xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditFlags.QEF_ForceEdit_NoPrompting> <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditFlags.QEF_DisallowInMemoryEdits>( , ).
+12. <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade>Uygulamanızın çağrısı `IVsQueryEditQuerySave::QueryEditFiles` ( <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditFlags.QEF_ForceEdit_NoPrompting> , <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditFlags.QEF_DisallowInMemoryEdits> ).
 
-Bu arama, proje dosyanızın yeni bir kopyasının kullanıma alınmasına ve en son sürümün alınmasına ve proje dosyanızı yeniden yükleme gereksinimine neden olabilir. Bu noktada, iki şeyden biri olur:
+Bu çağrı, proje dosyanızın yeni bir kopyasının kullanıma alınması ve en son sürümün alınması ve ayrıca proje dosyanızı yeniden yüklenmesi gereksinimini ortadan çıkarabilir. Bu noktada, iki işlemlerden biri gerçekleşir:
 
-- Kendi proje yeniden işleyebilirseniz, o zaman <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.ReloadItem%2A> ortam (VSITEMID_ROOT) uygulama çağırır. Bu çağrıyı aldığınızda, projenizin ilk örneğini yeniden yükleyin (Project1) ve proje dosyanızı yükseltmeye devam edin. Çevre, geri döndüğünüzde `true` kendi projeyeniden <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> işlemek<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_HandlesOwnReload>bilir ( ).
+- Kendi proje yeniden yükleme uygulamanızı işlebiliyorsanız, ortam <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.ReloadItem%2A> (VSITEMID_ROOT) uygulamanızı çağırır. Bu çağrıyı aldığınızda, projenizin ilk örneğini yeniden yükleyin (Project1) ve proje dosyanızı yükseltmeye devam edin. Ortam, `true` () için geri döntakdirde kendi proje yeniden yükleme uygulamanızı işleceğini bilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_HandlesOwnReload> .
 
-- Kendi proje yeniden işlemek yoksa, o zaman `false` <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> için<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_HandlesOwnReload>geri dönmek ( ). Bu durumda, <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A>(QEF_ForceEdit_NoPrompting, QEF_DisallowInMemoryEdits) dönmeden önce, ortam projenizin project2 gibi yeni bir örneğini aşağıdaki gibi oluşturur:
+- Kendi proje yeniden yükleme işlemeyin, `false` () için öğesini geri döndürürler <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_HandlesOwnReload> . Bu durumda, <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> (QEF_ForceEdit_NoPrompting, QEF_DisallowInMemoryEdits) önce, ortam projenizin başka bir yeni örneğini (örneğin, Project2) oluşturur:
 
-    1. Ortam, <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.Close%2A> ilk proje nesneniz olan Project1'i çağırır ve böylece bu nesneyi etkin olmayan duruma yerleştirilmesi ne kadar önemli.
+    1. Ortam, <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.Close%2A> Project1 ilk proje nesnesini çağırır, bu nedenle bu nesneyi etkin olmayan duruma yerleştirir.
 
-    2. Ortam, projenizin ikinci bir örneğini oluşturmak için uygulamanızı `IVsProjectFactory::CreateProject` çağırır, Project2.
+    2. Ortam `IVsProjectFactory::CreateProject` , Project2 projenizin ikinci bir örneğini oluşturmak için uygulamanızı çağırır.
 
-    3. Ortam, dosyayı açmak ve ikinci proje nesnesi Project2'yi başlatmak için uygulamanızı `IPersistFileFormat::Load` çağırır.
+    3. Ortam, `IPersistFileFormat::Load` dosyayı açmak ve Project2 ikinci proje nesnesini başlatmak için uygulamanızı çağırır.
 
-    4. Ortam, `IVsProjectUpgrade::UpgradeProject` proje nesnesinin yükseltilip yükseltilmeyeceğini belirlemek için ikinci kez çağrıda bulunur. Ancak, bu arama yeni, ikinci, projenin örneği, Project2 yapılır. Bu çözüm de açılan projedir.
+    4. Ortam `IVsProjectUpgrade::UpgradeProject` , proje nesnesinin yükseltilmesi gerekip gerekmediğini belirlemekte ikinci bir kez çağrı yapmış olur. Ancak bu çağrı, Project2 projesinin yeni, ikinci bir örneğinde yapılır. Bu, çözümde açılan projem.
 
         > [!NOTE]
-        > İlk projeniz Olan Project1'in etkin olmayan duruma yerleştirildiğinde, ilk <xref:Microsoft.VisualStudio.VSConstants.S_OK> çağrıdan uygulamanız <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> için dönmeniz gerekir.
+        > İlk projenizin, Project1, etkin olmayan durumda yerleştirildiğinden, <xref:Microsoft.VisualStudio.VSConstants.S_OK> uygulamanıza ilk çağrıdan geri dönmeniz gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> .
 
-    5. Parametre <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditFlags.QEF_ReportOnly> için bir değer arar ve geçersiniz. `rgfQueryEdit`
+    5. <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A>Parametresi için bir değerini çağırır ve geçirin <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditFlags.QEF_ReportOnly> `rgfQueryEdit` .
 
-    6. Proje dosyası <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResult.QER_EditOK> yazılabilir, çünkü ortam döndürür ve yükseltme devam edebilir.
+    6. Ortam döndürülür <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditResult.QER_EditOK> ve proje dosyası yazılabildiğinden yükseltme devam edebilir.
 
-Yükseltmeyi başaramazsanız, <xref:Microsoft.VisualStudio.Shell.Interop.VSErrorCodes.VS_E_PROJECTMIGRATIONFAILED> `IVsProjectUpgrade::UpgradeProject`'den dön' Yükseltme gerekli değilse veya yükseltmemeyi seçerseniz, `IVsProjectUpgrade::UpgradeProject` aramayı bir no-op olarak ele alabilirsiniz. Geri dönerseniz, <xref:Microsoft.VisualStudio.Shell.Interop.VSErrorCodes.VS_E_PROJECTMIGRATIONFAILED>projenizin çözümüne bir yer tutucu düğümü eklenir.
+Yükseltme işlemi başarısız olursa, öğesinden geri <xref:Microsoft.VisualStudio.Shell.Interop.VSErrorCodes.VS_E_PROJECTMIGRATIONFAILED> dönün `IVsProjectUpgrade::UpgradeProject` . Yükseltme gerekmez veya yükseltme yapmadıysanız, `IVsProjectUpgrade::UpgradeProject` çağrıyı hiçbir işlem olmadan değerlendirin. Geri dönerseniz <xref:Microsoft.VisualStudio.Shell.Interop.VSErrorCodes.VS_E_PROJECTMIGRATIONFAILED> , projeniz için çözüme bir yer tutucu düğüm eklenir.
 
-## <a name="upgrading-project-items"></a>Proje Öğelerini Yükseltme
+## <a name="upgrading-project-items"></a>Proje öğeleri yükseltiliyor
 
-Uygulamadığınız proje sistemlerine öğe ekler veya yönetirseniz, proje yükseltme işlemine katılmanız gerekebilir. Kristal Raporlar, proje sistemine eklenebilecek bir öğeörneğidir.
+Uygulamadıysanız proje sistemleri içine öğe ekler veya bunları yönetiyorsanız, proje yükseltme işlemine katılmanız gerekebilir. Crystal Reports, proje sistemine eklenebilecek bir öğe örneğidir.
 
-Genellikle, proje öğesi uygulayıcıları, proje başvurularının ne olduğunu ve yükseltme kararı almak için diğer proje özelliklerinin ne olduğunu bilmeleri gerektiğinden, zaten tamamen anında ve yükseltilmiş bir projeden yararlanmak isterler.
+Genellikle proje öğesi uygulayıcıları, proje başvurularının ne olduğunu ve başka proje özelliklerinin yükseltme kararı vermek için ne olduğunu bilmeleri gerektiğinden, zaten tam olarak örneklenen ve yükseltilen bir projeden yararlanmak istiyor.
 
 ### <a name="to-get-the-project-upgrade-notification"></a>Proje yükseltme bildirimini almak için
 
-1. Proje <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80.SolutionOrProjectUpgrading> öğesi uygulamanızda bayrağı (vsshell80.idl'de tanımlanan) ayarlayın. Bu, Visual Studio kabuğu bir proje sisteminin yükseltme sürecinde olduğunu belirlediğinde proje öğesi VSPackage'ın otomatik yüklenmesine neden olur.
+1. <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80.SolutionOrProjectUpgrading>Proje öğesi uygulamanızda bayrağını ayarlayın (vsshell80. IDL içinde tanımlanmıştır). Bu, Visual Studio Kabuğu bir proje sisteminin yükseltme sürecinde olduğunu belirlediğinde, proje öğesi VSPackage 'ın otomatik olarak yüklenmesine neden olur.
 
-2. Yöntem <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEventsProjectUpgrade> aracılığıyla arayüz <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution2.AdviseSolutionEvents%2A> tavsiye.
+2. <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEventsProjectUpgrade>Yöntemi aracılığıyla arabirime tavsiye edin <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution2.AdviseSolutionEvents%2A> .
 
-3. Arabirim, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEventsProjectUpgrade> proje sistemi uygulaması yükseltme işlemlerini tamamladıktan ve yeni yükseltilmiş proje oluşturulduktan sonra ateşlenir. Senaryoya bağlı olarak, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEventsProjectUpgrade> arabirim <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenSolution%2A>, , <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A>veya <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterLoadProject%2A> yöntemleri sonra ateşlenir.
+3. <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEventsProjectUpgrade>Arabirim, proje sistemi uygulamasının yükseltme işlemlerini tamamladıktan sonra yeni yükseltilen proje oluşturulduktan sonra tetiklenir. Senaryoya bağlı olarak, arabirim,, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEventsProjectUpgrade> veya yöntemlerinden sonra tetiklenir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenSolution%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterLoadProject%2A> .
 
 ### <a name="to-upgrade-the-project-item-files"></a>Proje öğesi dosyalarını yükseltmek için
 
-1. Proje öğesi uygulamanızda dosya yedekleme işlemini dikkatle yönetmeniz gerekir. Bu, özellikle `fUpgradeFlag` <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> yöntemin parametresi olarak ayarlandığı <xref:Microsoft.VisualStudio.Shell.Interop.__VSPPROJECTUPGRADEVIAFACTORYFLAGS.PUVFF_SXSBACKUP>yan yana yedekleme için geçerlidir , yedeklenmiş olan dosyalar ".eski" olarak belirlenmiş yan dosyaların yanına yerleştirilir. Projenin yükseltilmesinde sistem süresinden daha eski yedeklenmiş dosyalar eski olarak atanabilir. Ayrıca, bunu önlemek için belirli adımlar atmadığınız sürece bunlar üzerine yazılabilir.
+1. Dosya yedekleme sürecini proje öğesi uygulamanızda dikkatle yönetmeniz gerekir. Bu, yöntemin parametresinin olarak ayarlandığı, bir yan yana yedekleme için geçerlidir. burada, `fUpgradeFlag` <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> <xref:Microsoft.VisualStudio.Shell.Interop.__VSPPROJECTUPGRADEVIAFACTORYFLAGS.PUVFF_SXSBACKUP> yedeklenen dosyalar ". old" olarak belirlenmiş olan dosyaların yanına yerleştirilir. Projenin yükseltilme sırasında sistem saatinden daha eski olan yedeklenen dosyalar eski olarak belirlenebilir. Ayrıca, bunu engellemek için özel adımlar yapmadığınız takdirde bunların üzerine yazılabilir.
 
-2. Proje öğeniz proje yükseltmesi hakkında bir bildirim aldığında, **Visual Studio Dönüşüm Sihirbazı** hala görüntülenir. Bu nedenle, sihirbaz UI <xref:Microsoft.VisualStudio.Shell.Interop.IVsUpgradeLogger> yükseltme iletileri sağlamak için arabirim yöntemlerini kullanmanız gerekir.
+2. Proje öğesi proje yükseltmesinin bir bildirimini aldığında, **Visual Studio Dönüştürme Sihirbazı** yine de görüntülenir. Bu nedenle, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUpgradeLogger> Sihirbaz kullanıcı arabirimine yükseltme iletileri sağlamak için arabirimin yöntemlerini kullanmanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

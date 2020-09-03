@@ -1,5 +1,5 @@
 ---
-title: 'Test Alanı 8: Eklenti Anahtarlama | Microsoft Dokümanlar'
+title: 'Test alanı 8: eklenti değiştirme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,45 +12,45 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 799fb04936a24004d73ce4c8aa3ec654490f3f62
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80704388"
 ---
 # <a name="test-area-8-plug-in-switching"></a>Test Alanı 8: Eklenti Değiştirme
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik geliştirme ortamı (IDE), geçerli kaynak denetimi eklentisini değiştirmek için kullanıcı arabirimine (UI) sahiptir. Bu test alanı, çözüm kaynağı denetimi için hangi eklentinin kullanılacağını seçme işlemi için test çalışmaları sağlar.
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamı (IDE), geçerli kaynak denetimi eklentisini değiştirmek için Kullanıcı arabirimine (UI) sahiptir. Bu test alanı, çözüm kaynak denetimi için hangi eklentinin kullanılacağını seçme işlemi için test çalışmaları sağlar.
 
-## <a name="command-menu-access"></a>Komut Menüsü ne erişim
- Test [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] servis örneklerinde aşağıdaki tümleşik geliştirme ortamı menü yolları kullanılır.
+## <a name="command-menu-access"></a>Komut menüsü erişimi
+ Aşağıdaki [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik geliştirme ortamı menü yolları test durumlarında kullanılır.
 
-- Geçerli kaynak kontrol eklentisi: **Araçlar** -> **Seçenekleri** -> **Kaynak Kontrolü** -> **Eklentisi Seçimi**.
+- Geçerli kaynak denetimi eklentisi: **Araçlar**  ->  **Seçenekler**  ->  **kaynak denetimi**  ->  **eklentisi seçimi**.
 
-- Kaynak denetimi bağlamadeğiştirin: **Dosya** -> **Kaynak Denetimi** -> **Değişikliği Kaynak Denetimi**...
+- Kaynak denetimi bağlamasını Değiştir: **Dosya**  ->  **kaynağı denetimi**  ->  **kaynak denetimini Değiştir**...
 
-## <a name="common-expected-behavior"></a>Ortak Beklenen Davranış
- Bir çözüm için kaynak kontrol eklentisini değiştirmek Visual Studio'dan çıkmadan veya çözümü yeniden yüklemeden mümkündür. Buna ek olarak, geçerli kaynak denetimi eklentisi, çözüm yüklendiğinde bir çözüm tarafından kullanılan fişe otomatik olarak dönüşür.
+## <a name="common-expected-behavior"></a>Yaygın beklenen davranış
+ Bir çözüm için kaynak denetimi eklentisinin değiştirilmesi, Visual Studio 'dan çıkmadan veya çözümü yeniden yüklemeden mümkündür. Ayrıca, geçerli kaynak denetimi eklentisi, çözüm yüklendiğinde bir çözüm tarafından kullanılan bir otomatik olarak değişir.
 
 ## <a name="test-cases"></a>Test Çalışmaları
- Aşağıda, eklenti anahtarlama test alanı için özel test çalışmaları vereme leri yer almaktadır.
+ Aşağıdakiler, eklenti geçiş test alanı için özel test çalışmalardır.
 
-### <a name="case-8a-automatic-change"></a>Büyük/Küçük Harf 8a: Otomatik Değişim
+### <a name="case-8a-automatic-change"></a>Case 8A: Otomatik değişiklik
 
-#### <a name="expected-behavior"></a>Beklenen Davranış
- Bir kullanıcı kaynak denetimi altında olan bir çözüm yüklediğinde, çözüm otomatik olarak yüklenir ve uygun kaynak kontrol eklentisi akım olarak seçilir.
+#### <a name="expected-behavior"></a>Beklenen davranış
+ Bir Kullanıcı kaynak denetimi altındaki bir çözümü yüklediğinde, çözüm otomatik olarak yüklenir ve uygun kaynak denetimi eklentisi geçerli olarak seçilidir.
 
-| Eylem | Test Adımları | Doğrulaması Beklenen Sonuçlar |
+| Eylem | Test adımları | Doğrulanacak beklenen sonuçlar |
 | - | - | - |
-| Otomatik kaynak kontrol eklentisi değişikliği | 1. Geçerli olarak test altında eklenti seçin (**Araçlar** -> **Seçenekleri** -> **Kaynak Kontrol** -> **Eklentisi Seçimi**.)<br />2. Yeni bir proje oluşturun.<br />3. Çözümü kaynak denetimine ekleyin.<br />4. Başka bir eklenti seçin [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)](örneğin, ).<br />5. Boşaltma çözüm istemini kabul edin.<br />6. Çözümü diskten yeniden açın. | Çözüm açıldı.<br /><br /> Test altında plug-in geçerli kaynak kontrol eklentisi. |
+| Otomatik kaynak denetimi eklentisi değişikliği | 1. geçerli test (**Araçlar**  ->  **Seçenekler**  ->  **kaynak denetimi**  ->  **eklentisi seçimi**) altındaki eklentiyi seçin.<br />2. yeni bir proje oluşturun.<br />3. çözümü kaynak denetimine ekleyin.<br />4. başka bir eklenti seçin (örneğin, [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] ).<br />5. kaldırma çözümü istemi 'ni kabul edin.<br />6. çözümü diskten yeniden açın. | Çözüm açıldı.<br /><br /> Test altındaki eklenti, geçerli kaynak denetimi eklentisidir. |
 
-### <a name="case-8b-solution-based-change"></a>Örnek 8b: Çözüm tabanlı değişim
+### <a name="case-8b-solution-based-change"></a>Durum 8B: çözüm tabanlı değişiklik
 
-#### <a name="expected-behavior"></a>Beklenen Davranış
- Çözümün ilişkili kaynak denetim eklentisi değiştirilebilir.
+#### <a name="expected-behavior"></a>Beklenen davranış
+ Çözümün ilişkili kaynak denetimi eklentisi değişmiş olabilir.
 
-| Eylem | Test Adımları | Doğrulaması Beklenen Sonuçlar |
+| Eylem | Test adımları | Doğrulanacak beklenen sonuçlar |
 |----------------------------------| - | - |
-| Çözüm için eklenti değişikliği | 1. Geçerli olarak test altında eklenti seçin (**Araçlar** -> **Seçenekleri** -> **Kaynak Kontrol** -> **Eklentisi Seçimi**).<br />2. Yeni bir proje ve çözüm oluşturun.<br />3. Çözümü kaynak denetimine ekleyin.<br />4. Çözüm kaynak denetiminden **(Kaynak Denetimini Değiştir** iletişim kutusunu kullanarak) silin.<br />5. Başka bir eklenti seçin [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)](örneğin, ).<br />6. Boşaltılan solüsyonu diskten yeniden yükleyin.<br />7. Çözüm kaynağı denetimine ekleyin.<br />8. Çözüm kaynak denetiminden **(Kaynak Denetimi Değiştir** iletişim kutusunu kullanarak) silin.<br />9. Test altında eklentiyi tekrar seçin.<br />10. Boşaltılan solüsyonu diskten yeniden yükleyin.<br />11. Çözümü özgün konuma bağlayın **(Kaynak Denetimini Değiştir** iletişim kutusunu kullanarak). | Seçili eklenti kullanılarak kaynak denetimine çözüm eklenir. |
+| Bir çözüm için eklentinin değiştirilmesi | 1. geçerli test (**Araçlar**  ->  **Seçenekler**  ->  **kaynak denetimi**  ->  **eklentisi seçimi**) altındaki eklentiyi seçin.<br />2. yeni bir proje ve çözüm oluşturun.<br />3. çözümü kaynak denetimine ekleyin.<br />4. kaynak denetiminden çözümün bağlantısını kesin ( **kaynak denetimini Değiştir** iletişim kutusunu kullanarak).<br />5. başka bir eklenti seçin (örneğin, [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] ).<br />6. yüklü değilse çözümü diskten yeniden yükleyin.<br />7. çözümü kaynak denetimine ekleyin.<br />8. kaynak denetiminden çözümün bağlantısını kesin ( **kaynak denetimini Değiştir** iletişim kutusunu kullanarak).<br />9. test altındaki eklentiyi seçin.<br />10. kaldırılan çözümü diskten yeniden yükleyin.<br />11. çözümü özgün konuma bağlayın ( **kaynak denetimini Değiştir** iletişim kutusunu kullanarak). | Çözüm, kaynak denetimine seçili eklenti kullanılarak eklenir. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentileri için Test Kılavuzu](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

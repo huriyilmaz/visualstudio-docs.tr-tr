@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6aaddd47a20623ee21855d4c7bb86e91b2796d53
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658066"
 ---
 # <a name="measuring-complexity-and-maintainability-of-managed-code"></a>Yönetilen Kodun Ölçüm Karmaşıklığı ve Bakımı
@@ -31,9 +31,9 @@ ms.locfileid: "72658066"
 
 Modern yazılım uygulamalarının artan karmaşıklığı, kodun güvenilir ve sürdürülebilir hale getirilmesi zorluklarını de artırır. Son yıllarda, kod ölçümleri olarak bilinen birçok yazılım ölçümü geliştirildiği için, geliştiricilerin kodun yeniden çalışma veya daha fazla test ihtiyaçlarını anlamasına yardımcı olabilir.
 
- Geliştiriciler, yönetilen kodların karmaşıklığını ve bakımlarını ölçen kod ölçüm verileri oluşturmak için [!INCLUDE[vsprvsts](../includes/vsprvsts-md.md)] kullanabilir. Tüm çözüm veya tek bir proje için kod ölçüm verileri oluşturulabilir.
+ Geliştiriciler [!INCLUDE[vsprvsts](../includes/vsprvsts-md.md)] , yönetilen kodların karmaşıklığını ve bakımlarını ölçen kod ölçüm verileri oluşturmak için kullanabilir. Tüm çözüm veya tek bir proje için kod ölçüm verileri oluşturulabilir.
 
- Bu bölümde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ' de kod ölçümlerinin nasıl oluşturulacağı ve kullanılacağı açıklanmaktadır.
+ Bu bölümde, ' de kod ölçümlerinin nasıl oluşturulacağı ve kullanılacağı açıklanmaktadır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 ## <a name="in-this-section"></a>Bu Bölümde
  [Kod Ölçüm Değerleri](../code-quality/code-metrics-values.md)
