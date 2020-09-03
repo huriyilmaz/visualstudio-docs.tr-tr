@@ -1,5 +1,5 @@
 ---
-title: CreateInPlace öğesi (Visual Studio Şablonları)
+title: Createınplace öğesi (Visual Studio şablonları)
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,18 +15,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ab2b5d68be069f30c8f71536b6d47cb1ce8823b6
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739665"
 ---
-# <a name="createinplace-element-visual-studio-templates"></a>CreateInPlace öğesi (Visual Studio şablonları)
-Projeyi oluşturup belirtilen konumda parametre değiştirme mi gerçekleştireceklerini veya geçici bir konumda parametre değiştirme yapıp sonra da projeyi belirtilen konuma kaydedip kaydetmeyeceklerini belirtir.
+# <a name="createinplace-element-visual-studio-templates"></a>Createınplace öğesi (Visual Studio şablonları)
+Projenin oluşturulup oluşturulmayacağını ve belirtilen konumda parametre değişimini gerçekleştirip gerçekleştirmeyeceğinizi belirtir ya da geçici bir konumda parametre değişimini gerçekleştirin ve ardından projeyi belirtilen konuma kaydedin.
 
- \<VSTemplate \<> ŞablonVeri> \<CreateInPlace>
+ \<VSTemplate> \<TemplateData>
+ \<CreateInPlace>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <CreateInPlace> true/false </CreateInPlace>
@@ -45,18 +46,18 @@ Projeyi oluşturup belirtilen konumda parametre değiştirme mi gerçekleştirec
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırın ve Yeni **Proje'de** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleyeceğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Metin ya da `true` `false`olmalıdır . Proje oluşturulurve parametre değiştirme Yeni Proje iletişim kutusunda belirtilen konumda gerçekleştirilir. **New Project** `true` `false`Eğer , parametre değiştirme geçici bir konumda gerçekleştirilir ve proje daha sonra belirtilen konuma kopyalanır.
+ Metin ya da olmalıdır `true` `false` . Eğer `true` , proje oluşturulur ve **Yeni proje** iletişim kutusunda belirtilen konumda parametre değişimi gerçekleştirilir. `false`Parametre değiştirme geçici bir konumda gerçekleştirilir ve proje belirtilen konuma kopyalanır.
 
 ## <a name="remarks"></a>Açıklamalar
- `CreateInPlace`isteğe bağlı bir unsurdur. Varsayılan değer: `true`.
+ `CreateInPlace` isteğe bağlı bir öğedir. Varsayılan değer: `true`.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, şablonun [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] meta verileri gösteriş verilmiştir.
+ Aşağıdaki örnek, bir şablon için meta verileri gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -85,4 +86,4 @@ Projeyi oluşturup belirtilen konumda parametre değiştirme mi gerçekleştirec
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
-- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)

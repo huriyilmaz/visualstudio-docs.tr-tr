@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows için Otomasyon sağlar | Microsoft Docs'
+title: 'Nasıl yapılır: Windows için Otomasyon sağlama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,34 +12,34 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7ea7b79df4e7f3748ec2bc7f5e57c6ecb7dfca5b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68191840"
 ---
-# <a name="how-to-provide-automation-for-windows"></a>Nasıl yapılır: Windows için Otomasyon Sağlama
+# <a name="how-to-provide-automation-for-windows"></a>Nasıl Yapılır: Windows için Otomasyon Sağlama
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Otomasyon için belge ve araç pencerelerini sağlayabilir. Görev listesi ile yaptığı gibi Otomasyon nesneleri bir penceresinde kullanılabilir hale getirmek istediğiniz ve ortam zaten bir hazır Otomasyon nesnesi sağlamaz sağlayarak Otomasyon daha önerilir.  
+Belge ve araç pencereleri için Otomasyon sağlayabilirsiniz. Otomasyon nesnelerini bir pencerede kullanılabilir hale getirmek istediğinizde otomasyon sağlanması önerilir ve ortam, bir görev listesi ile çalıştığı için önceden hazır bir Otomasyon nesnesi sağlamaz.  
   
-## <a name="automation-for-tool-windows"></a>Aracı Windows için Otomasyon  
- Araç penceresinde Otomasyon döndüren ve standart bir ortam sağlar <xref:EnvDTE.Window> nesne aşağıdaki yordamda açıklandığı gibi:  
+## <a name="automation-for-tool-windows"></a>Araç pencereleri için Otomasyon  
+ Ortam, <xref:EnvDTE.Window> Aşağıdaki yordamda açıklandığı gibi standart bir nesne döndürerek bir araç penceresi üzerinde Otomasyon sağlar:  
   
-#### <a name="to-provide-automation-for-tool-windows"></a>Araç pencereleri için Otomasyon sağlamak için  
+#### <a name="to-provide-automation-for-tool-windows"></a>Araç pencereleri için Otomasyon sağlamak üzere  
   
-1. Çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> ortamıyla yöntemiyle <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID> olarak `VSFPROPID` almak için parametre `Window` nesne.  
+1. <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID> `VSFPROPID` Nesneyi almak için yöntemi parametresi ile ortam aracılığıyla çağırın `Window` .  
   
-2. Çağıran bir VSPackage özgü Otomasyon nesnesi için araç penceresi istediğinde <xref:EnvDTE.Window.Object%2A>, ortam çağrıları `QueryInterface` için `IExtensibleObject`, <xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibleObject>, veya `IDispatch` arabirimleri. Her ikisi de `IExtensibleObject` ve `IVsExtensibleObject` sağlayan bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibleObject.GetAutomationObject%2A> yöntemi.  
+2. Bir çağıran araç pencerenizin aracılığıyla VSPackage 'a özgü bir Otomasyon nesnesi istediğinde, ortam, <xref:EnvDTE.Window.Object%2A> `QueryInterface` `IExtensibleObject` <xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibleObject> veya `IDispatch` arabirimlerini çağırır. Her ikisi de `IExtensibleObject` `IVsExtensibleObject` bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibleObject.GetAutomationObject%2A> yöntemi sağlar.  
   
-3. Ortam sonra çağırdığında `GetAutomationObject` geçirme yöntemi `NULL`, geçirerek yanıt VSPackage özgü nesnenizin yedekleyin.  
+3. Ortam daha sonra `GetAutomationObject` yöntemi geçirerek `NULL` , VSPackage 'a özgü nesneyi geri geçirerek yanıtlayın.  
   
-4. Çağırma varsa `QueryInterface` için `IExtensibleObject` ve `IVsExtensibleObject` ortam çağırır, başarısız olursa `QueryInterface` için `IDispatch`.  
+4. `QueryInterface`Ve için arama `IExtensibleObject` `IVsExtensibleObject` başarısız olursa, ortam öğesine çağrı yapılır `QueryInterface` `IDispatch` .  
   
-## <a name="automation-for-document-windows"></a>Belge Windows için Otomasyon  
- Standart <xref:EnvDTE.Document> nesne kullanılabilir ayrıca ortamından bir düzenleyici kendi uygulaması içerebilmesine karşın `T:EnvDTE.Document` uygulayarak nesne `IExtensibleObject` arabirimi ve yanıtlama `GetAutomationObject`.  
+## <a name="automation-for-document-windows"></a>Belge pencereleri için Otomasyon  
+ Standart bir <xref:EnvDTE.Document> nesne, ortamda da kullanılabilir, ancak bir düzenleyici, `T:EnvDTE.Document` arabirimini uygulayarak ve yanıt vererek nesnenin kendi uygulamasına sahip olabilir `IExtensibleObject` `GetAutomationObject` .  
   
- Ayrıca, bir düzenleyici üzerinden alınan bir VSPackage özgü Otomasyon nesnesi sağlayabilirsiniz <xref:EnvDTE.Document.Object%2A> uygulayarak yöntemi `IVsExtensibleObject` veya `IExtensibleObject` arabirimleri. [VSSDK örnekleri](../../misc/vssdk-samples.md) bir RTF belgeye özgü Otomasyon nesnesi katkıda bulunur.  
+ Ayrıca, bir düzenleyici, <xref:EnvDTE.Document.Object%2A> veya arabirimlerini uygulayarak yöntemi aracılığıyla alınan VSPackage 'a özgü bir Otomasyon nesnesi sağlayabilir `IVsExtensibleObject` `IExtensibleObject` . [VSSDK örnekleri](../../misc/vssdk-samples.md) , RTF belgesine özgü bir Otomasyon nesnesine katkıda bulunur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibleObject>

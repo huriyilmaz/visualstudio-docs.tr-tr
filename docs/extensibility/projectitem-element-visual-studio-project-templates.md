@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 943f50823892e3cd942709bdcd4556b65c006b58
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770312"
 ---
 # <a name="projectitem-element-visual-studio-project-templates"></a>ProjectItem öğesi (Visual Studio proje şablonları)
@@ -74,7 +74,7 @@ Proje şablonuna dahil olan bir dosyayı belirtir.
  `string`Şablon *. zip* dosyasındaki bir dosyanın adını veya yolunu temsil eden bir.
 
 ## <a name="remarks"></a>Açıklamalar
- `ProjectItem`, öğesinin isteğe bağlı bir alt öğesidir `Project` .
+ `ProjectItem` , öğesinin isteğe bağlı bir alt öğesidir `Project` .
 
  `TargetFileName`Özniteliği, şablon *. zip* dosyasındaki dizin yapısından farklı bir dizin yapısı oluşturmak için kullanılabilir. Örneğin, File *. vb* dosyası template *. zip* dosyasının kökünde mevcutsa, ancak dosyanın şablondan oluşturulan tüm projelerde *customfiles* ADLı bir dizine yerleştirilmesini istiyorsanız aşağıdaki XML 'i kullanacaksınız:
 

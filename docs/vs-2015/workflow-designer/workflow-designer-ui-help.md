@@ -13,14 +13,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bf1a78148e2520478c7c6bc3e7953adccbab8c52
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657551"
 ---
 # <a name="workflow-designer-ui-help"></a>İş Akışı Tasarımcısı Kullanıcı Arabirimi Yardımı
-Bu bölüm [!INCLUDE[wfd1](../includes/wfd1-md.md)] için bağlama duyarlı Yardım konularını içerir. @No__t_0 çalışırken, bir [!INCLUDE[wfd2](../includes/wfd2-md.md)] iletişim kutusu açıkken **F1** tuşuna basarak kullanıcı arabiriminden bu konulara erişebilirsiniz.
+Bu bölüm için bağlama duyarlı Yardım konularını içerir [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Üzerinde çalışırken [!INCLUDE[vs2010](../includes/vs2010-md.md)] , bir iletişim kutusu açık olduğunda **F1** tuşuna basarak kullanıcı arabiriminden bu konulara erişebilirsiniz [!INCLUDE[wfd2](../includes/wfd2-md.md)] .
 
  Bu bölüm, gezinme ve hata iletileriyle ilgili çeşitli konuları da içerir.
 
@@ -43,6 +43,6 @@ Bu bölüm [!INCLUDE[wfd1](../includes/wfd1-md.md)] için bağlama duyarlı Yard
 
  [İş Akışı Tasarımcısı Kabuk Özellikleri](../workflow-designer/workflow-designer-shell-features.md)
 
- [Klavye Kısayolları](../workflow-designer/keyboard-shortcuts-in-the-workflow-designer.md)
+ [Klavye kısayolları](../workflow-designer/keyboard-shortcuts-in-the-workflow-designer.md)
 
  [Hata İletileri](../workflow-designer/error-messages-in-workflow-designer.md)

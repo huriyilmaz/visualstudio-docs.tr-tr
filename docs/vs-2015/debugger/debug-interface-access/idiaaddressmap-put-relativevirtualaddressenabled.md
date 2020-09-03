@@ -1,5 +1,5 @@
 ---
-title: Idiaaddressmap::put_relativevirtualaddressenabled | Microsoft Docs
+title: IDiaAddressMap::p ut_relativeVirtualAddressEnabled | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 14c9924346471e098d9ba9f1abb52fda0d3c9969
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198665"
 ---
-# <a name="idiaaddressmapputrelativevirtualaddressenabled"></a>IDiaAddressMap::put_relativeVirtualAddressEnabled
+# <a name="idiaaddressmapput_relativevirtualaddressenabled"></a>IDiaAddressMap::put_relativeVirtualAddressEnabled
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Etkinleştirmek veya hesaplama ve göreli sanal adreslerine (RVA) kullanımını devre dışı bırakmak istemcinin sağlar.  
+İstemcinin, göreli sanal adreslerin (RVA) hesaplanmasını ve kullanımını etkinleştirmesine veya devre dışı bırakmasına izin verir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT put_relativeVirtualAddressEnabled (   
@@ -35,19 +35,19 @@ HRESULT put_relativeVirtualAddressEnabled ( 
   
 #### <a name="parameters"></a>Parametreler  
  NewVal  
- [in] Kümesine `TRUE` etkinleştirmek için veya `FALSE` devre dışı bırakmak için.  
+ 'ndaki `TRUE` Öğesini etkinleştirmek veya `FALSE` devre dışı bırakmak için olarak ayarlayın.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- DIA arabirimleri ve temel, yürütülebilir dosyası görüntü göre açıklanan hata ayıklama nesneler için adresleri göreli sanal adreslerine alınabilir.  
+ DIA arabirimleri tarafından tanımlanan hata ayıklama nesnelerinin adresleri ve yürütülebilir dosyanın görüntü tabanına göreli olarak, göreli sanal adresler olarak alınabilir.  
   
- Parçaları bir PDB dosyasındaki ilk yüklendiğinde RVA kullanımını etkinleştirilir. RVA kullanımını geçerli durumunu almak için arama [Idiaaddressmap::get_relativevirtualaddressenabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md) yöntemi.  
+ RVA kullanımı, kesimler başlangıçta bir PDB dosyasından yüklendiğinde etkinleştirilir. RVA öğesinin geçerli durumunu almak için [IDiaAddressMap:: get_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md) yöntemini çağırın.  
   
- `put_relativeVirtualAddress` Yöntemi çağrıldığında, başarılı bir çağrı sonra RVA etkinleştirmek için [Idiaaddressmap::set_imageheaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md) yöntemi yeni bir görüntü üstbilgileri kurulan.  
+ `put_relativeVirtualAddress` [IDiaAddressMap:: set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md) yöntemi için başarılı bir çağrıdan sonra RVA etkinleştirmek üzere yöntemi çağrılmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiaaddressmap](../../debugger/debug-interface-access/idiaaddressmap.md)   
- [Idiaaddressmap::get_relativevirtualaddressenabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md)   
+ [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)   
+ [IDiaAddressMap:: get_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md)   
  [IDiaAddressMap::set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)

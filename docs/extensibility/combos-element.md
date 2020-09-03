@@ -1,5 +1,5 @@
 ---
-title: Kombinasyon Elemanı | Microsoft Dokümanlar
+title: Combos öğesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +12,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d005ea69aea7f0331877326abe4087fcff403553
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739805"
 ---
-# <a name="combos-element"></a>Kombinasyon öğesi
-[Combo element](../extensibility/combo-element.md) öğelerini gruplar.
+# <a name="combos-element"></a>Combos öğesi
+Gruplar [Birleşik öğe](../extensibility/combo-element.md) öğeleri.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <Combos>
@@ -37,20 +37,20 @@ ms.locfileid: "80739805"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Kombinasyon öğesi](../extensibility/combos-element.md)|Combo öğelerini gruplar.|
-|[Açılan eleman](../extensibility/combo-element.md)|Açılan kutuda görünen komutları tanımlar.|
+|[Combos öğesi](../extensibility/combos-element.md)|Grupları açılan öğeleri.|
+|[Combo öğesi](../extensibility/combo-element.md)|Birleşik giriş kutusunda görünen komutları tanımlar.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Komutlar öğesi](../extensibility/commands-element.md)|VSPackage araç çubuğundaki komutların toplanmasını temsil eder.|
+|[Commands öğesi](../extensibility/commands-element.md)|VSPackage araç çubuğundaki komutların koleksiyonunu temsil eder.|
 
 ## <a name="example"></a>Örnek
 
@@ -77,5 +77,5 @@ ms.locfileid: "80739805"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [VSPackages kullanıcı arabirimi öğelerini nasıl ekler?](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [VSPackages Kullanıcı arabirimi öğeleri ekleme](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md)

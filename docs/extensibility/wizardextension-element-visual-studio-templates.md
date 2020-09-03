@@ -1,5 +1,5 @@
 ---
-title: WizardExtension Öğesi (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: Wizardexgeri öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,18 +15,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: fd81b32861114d654aa794b992826589406b1df9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80740380"
 ---
 # <a name="wizardextension-element-visual-studio-templates"></a>WizardExtension Öğesi (Visual Studio Şablonları)
-Şablon sihirbazını özelleştirmek için kayıt öğelerini içerir.
+Şablon Sihirbazı ' nı özelleştirmek için kayıt öğelerini içerir.
 
- \<VSTemplate> ... \<WizardUzatma>
+ \<VSTemplate> ... \<WizardExtension>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <WizardExtension>
@@ -45,20 +45,20 @@ ms.locfileid: "80740380"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Derleme](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|Gerekli öğe.<br /><br /> Genel derleme önbelleğinde görünen bir derlemenin adını veya güçlü adını belirtir. Bir `WizardExtension` öğede en `Assembly` az bir öğe olmalıdır.|
-|[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|Gerekli öğe.<br /><br /> `IWizard` Arabirimi uygulayan sınıfın tam nitelikli adı. Bir `WizardExtension` öğede en `FullClassName` az bir öğe olmalıdır.|
+|[Bütünleştirilmiş Kod](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|Gerekli öğe.<br /><br /> Genel derleme önbelleğinde görüntülenen bir derlemenin adını veya tanımlayıcı adını belirtir. Öğesinde en az bir öğe olmalıdır `Assembly` `WizardExtension` .|
+|[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|Gerekli öğe.<br /><br /> Arabirimi uygulayan sınıfın tam adı `IWizard` . Öğesinde en az bir öğe olmalıdır `FullClassName` `WizardExtension` .|
 
 ### <a name="parent-elements"></a>Üst Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Proje şablonu, öğe şablonu veya başlangıç kiti için tüm meta verileri içerir.|
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Proje şablonu, öğe şablonu veya başlangıç seti için tüm meta verileri içerir.|
 
 ## <a name="remarks"></a>Açıklamalar
- `WizardExtension`isteğe bağlı bir `VSTemplate`alt öğedir.
+ `WizardExtension` , öğesinin isteğe bağlı bir alt öğesidir `VSTemplate` .
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows uygulaması için standart proje şablonu için meta veriler gösterilmektedir.
+ Aşağıdaki örnek, bir Windows uygulaması için Standart proje şablonu meta verilerini gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
 
 ```
 <VSTemplate Version="3.0.0" Type="Item"

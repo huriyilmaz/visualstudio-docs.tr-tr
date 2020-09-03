@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ffd0f7378893b52e93480272c73acc2aa413320d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533725"
 ---
 # <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>"Klasör aç" geliştirmesi için derleme ve hata ayıklama görevlerini özelleştirin
@@ -30,8 +30,8 @@ Aşağıdaki *. JSON* dosyalarını kullanarak proje-Less kod tabanınızı öze
 
 |Dosya adı|Amaç|
 |-|-|
-|*Üzerindetasks.vs.js*|Özel derleme komutları ve derleyici anahtarları ve rastgele (derleme olmayan ilişkili) görevleri belirtin.<br>**Çözüm Gezgini** sağ tıklama menü öğesi **görevleri Yapılandır**' ı kullanarak erişilir.|
-|*Üzerindelaunch.vs.js*|Hata ayıklama için komut satırı bağımsız değişkenlerini belirtin.<br>**Çözüm Gezgini** menü öğesi **hata ayıklama ve başlatma ayarları**' na sağ tıklayın.|
+|* Üzerindetasks.vs.js*|Özel derleme komutları ve derleyici anahtarları ve rastgele (derleme olmayan ilişkili) görevleri belirtin.<br>**Çözüm Gezgini** sağ tıklama menü öğesi **görevleri Yapılandır**' ı kullanarak erişilir.|
+|* Üzerindelaunch.vs.js*|Hata ayıklama için komut satırı bağımsız değişkenlerini belirtin.<br>**Çözüm Gezgini** menü öğesi **hata ayıklama ve başlatma ayarları**' na sağ tıklayın.|
 
 Bu *. JSON* dosyaları, kod tabanınızın kök klasöründe *vs. ile* adlı gizli bir klasörde bulunur. Dosyalarda *tasks.vs.js* ve *launch.vs.js* , **Çözüm Gezgini**bir dosya veya klasör üzerinde **görevleri yapılandırma** veya **hata ayıklama ve başlatma ayarları** ' nı seçtiğinizde, Visual Studio tarafından gerekli bir şekilde oluşturulur. Kullanıcılar genellikle kaynak denetimine denetlemek istemediğinden, bu *. JSON* dosyaları gizlidir. Ancak onları kaynak denetimine denetleyebilmek istiyorsanız, dosyaları görünür oldukları kod tabanınızın köküne sürükleyin.
 
@@ -147,8 +147,8 @@ Aşağıdaki örnekte, tek bir görevi tanımlayan bir dosya *tasks.vs.js* göst
 }
 ```
 
-- `taskName`sağ tıklama menüsünde görüntülenen adı belirtir.
-- `appliesTo`komutun hangi dosyalara uygulanabilir olduğunu belirtir.
+- `taskName` sağ tıklama menüsünde görüntülenen adı belirtir.
+- `appliesTo` komutun hangi dosyalara uygulanabilir olduğunu belirtir.
 - `command`Özelliği çağrılacak komutu belirtir. Bu örnekte, `COMSPEC` ortam değişkeni, genellikle *cmd.exe*komut satırı yorumlayıcısını belirlemek için kullanılır.
 - `args`Özelliği, çağrılan komuta geçirilecek bağımsız değişkenleri belirtir.
 - `${file}`Makro seçili dosyayı **Çözüm Gezgini**alır.
@@ -176,7 +176,7 @@ Sonraki örnek, *bin* dizininin dosyalarını ve alt klasörlerini listeleyen bi
 }
 ```
 
-- `${outDir}`, bloğundan önce ilk tanımlanan özel bir makrodur `tasks` . Daha sonra `args` özelliğinde çağırılır.
+- `${outDir}` , bloğundan önce ilk tanımlanan özel bir makrodur `tasks` . Daha sonra `args` özelliğinde çağırılır.
 
 Bu görev tüm dosyalar için geçerlidir. **Çözüm Gezgini**bir dosya üzerinde bağlam menüsünü açtığınızda, görevin ad **listesi çıktıları** menünün alt kısmında görünür. **Liste çıktıları**' nı seçtiğinizde, *bin* dizininin Içeriği Visual Studio 'daki **Çıkış** penceresinde listelenir.
 
@@ -191,17 +191,17 @@ Dosyalarda birden çok *tasks.vs.js* , bir kod temelinin kökünde ve alt dizinl
 - Kök dizine kadar olan geçerli dizinin üst dizini.
 - Kök dizindeki ayarlar dosyaları.
 
-Bu toplama kuralları *üzerindetasks.vs.js*için geçerlidir. Diğer dosyadaki ayarların nasıl toplandığından ilgili bilgi için, bu makaledeki dosyanın ilgili bölümüne bakın.
+Bu toplama kuralları * üzerindetasks.vs.js*için geçerlidir. Diğer dosyadaki ayarların nasıl toplandığından ilgili bilgi için, bu makaledeki dosyanın ilgili bölümüne bakın.
 
 ### <a name="properties-for-tasksvsjson"></a>tasks.vs.jsiçin Özellikler
 
-Bu bölümde, *üzerindetasks.vs.js*belirtebileceğiniz bazı özellikler açıklanmaktadır.
+Bu bölümde, * üzerindetasks.vs.js*belirtebileceğiniz bazı özellikler açıklanmaktadır.
 
 #### <a name="appliesto"></a>appliesTo
 
 Alanında adını belirterek herhangi bir dosya veya klasör için görevler oluşturabilirsiniz `appliesTo` , örneğin `"appliesTo": "hello.js"` . Aşağıdaki dosya maskeleri değer olarak kullanılabilir:
 
-|Dosya maskesi|Açıklama|
+|Dosya maskesi|Description|
 |-|-|
 |`"*"`| görev, çalışma alanındaki tüm dosya ve klasörler için kullanılabilir|
 |`"*/"`| görev, çalışma alanındaki tüm klasörler için kullanılabilir|
@@ -213,7 +213,7 @@ Alanında adını belirterek herhangi bir dosya veya klasör için görevler olu
 
 #### <a name="macros-for-tasksvsjson"></a>tasks.vs.jsmakrolar
 
-|Makroya|Açıklama|
+|Makroya|Description|
 |-|-|
 |`${env.<VARIABLE>}`| Herhangi bir ortam değişkenini belirtir (örneğin, $ {env. Geliştirici komut istemi için ayarlanan PATH}, $ {env. COMSPEC} ve benzeri). Daha fazla bilgi için bkz. [Visual Studio Için Geliştirici komut istemi](/dotnet/framework/tools/developer-command-prompt-for-vs).|
 |`${workspaceRoot}`| Çalışma alanı klasörünün tam yolu (örneğin, *C:\sources\hello*)|
@@ -221,7 +221,7 @@ Alanında adını belirterek herhangi bir dosya veya klasör için görevler olu
 |`${relativeFile}`| Dosya veya klasörün göreli yolu (örneğin, *src\hello.js*)|
 |`${fileBasename}`| Dosyanın yolu veya uzantısı olmayan adı (örneğin, *Merhaba*)|
 |`${fileDirname}`| Dosya adı hariç dosyanın tam yolu (örneğin, *C:\sources\hello\src*)|
-|`${fileExtname}`| Seçilen dosyanın uzantısı (örneğin, *. js*)|
+|`${fileExtname}`| Seçilen dosyanın uzantısı (örneğin,  *. js*)|
 
 ## <a name="configure-debugging-with-launchvsjson"></a>launch.vs.jsile hata ayıklamayı yapılandırma
 

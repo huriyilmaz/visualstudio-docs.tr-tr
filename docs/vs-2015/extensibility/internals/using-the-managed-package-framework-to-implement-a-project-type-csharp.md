@@ -1,5 +1,5 @@
 ---
-title: Bir proje türü (C#) uygulamak Için yönetilen paket çerçevesini kullanma | Microsoft Docs
+title: Proje türü uygulamak için yönetilen paket çerçevesini kullanma (C#) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 21
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 066695c6d94603d0a0474243ed05dece4cc0bd1f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74300371"
 ---
 # <a name="using-the-managed-package-framework-to-implement-a-project-type-c"></a>Yönetilen Paket Çerçevesini Kullanarak Proje Türü Uygulama (C#)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Yönetilen paket çerçevesi (MPF), kendi C# proje türlerinizi uygulamak için kullanabileceğiniz veya buradan devralma sınıfları sağlar. MPF, Visual Studio 'nun sağlaması için bir proje türünün sağlamasını beklediği ve proje türünün bununla uygulama üzerinde yoğunlaşmaya odaklanmanızı sağlayan birçok arabirimi uygular.  
+Yönetilen paket çerçevesi (MPF), kendi proje türlerinizi uygulamak için kullanabileceğiniz veya buradan kalýtýmla kullanabileceğiniz C# sınıfları sağlar. MPF, Visual Studio 'nun sağlaması için bir proje türünün sağlamasını beklediği ve proje türünün bununla uygulama üzerinde yoğunlaşmaya odaklanmanızı sağlayan birçok arabirimi uygular.  
   
 ## <a name="using-the-mpf-project-source-code"></a>MPF proje kaynak kodunu kullanma  
  Projeler için yönetilen paket çerçevesi (MPFProj), yeni proje sistemi oluşturmak ve yönetmek için yardımcı sınıflar sağlar. MPF içindeki diğer sınıfların aksine proje sınıfları, Visual Studio ile gönderilen derlemelere dahil edilmez. Bunun yerine, proje sınıfları [2013 projeleri Için MPF](https://archive.codeplex.com/?p=mpfproj12)'de kaynak kodu olarak sağlanır.  
@@ -44,7 +44,7 @@ Yönetilen paket çerçevesi (MPF), kendi C# proje türlerinizi uygulamak için 
   
 2. VSPackage projesini kaldırın.  
   
-3. Diğer `<Import>` bloğundan önce aşağıdaki bloğu ekleyerek VSPackage. csproj dosyasını düzenleyin:  
+3. Diğer blokların önüne aşağıdaki bloğu ekleyerek VSPackage. csproj dosyasını düzenleyin `<Import>` :  
   
 ```  
 <Import Project="MPFProjectDir\Dev10\Src\CSharp\ProjectBase.files" />  
@@ -66,7 +66,7 @@ Yönetilen paket çerçevesi (MPF), kendi C# proje türlerinizi uygulamak için 
   
      Microsoft. Build. Tasks. 4.0  
   
-5. Projeyi oluşturun.  
+5. Projeyi derleyin.  
   
 ## <a name="hierarchy-classes"></a>Hiyerarşi sınıfları  
  Aşağıdaki tabloda, MPFProj içindeki proje hiyerarşilerini destekleyen sınıflar özetlenmektedir. Daha fazla bilgi için bkz. [hiyerarşiler ve seçim](../../extensibility/internals/hierarchies-and-selection.md).  

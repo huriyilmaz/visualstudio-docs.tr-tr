@@ -15,16 +15,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 46f6e9daafc2688b9bea75cba9eddd8c8a53c9bb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656663"
 ---
-# <a name="how-to-add-a-new-item-to-a-workflow-project-legacy"></a>Nasıl yapılır: bir Iş akışı projesine yeni öğe ekleme (eski)
-@No__t_2 ya da [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedefleyen [!INCLUDE[vs2010](../includes/vs2010-md.md)] tarafından sunulan eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] kullanarak bir iş akışı projesi oluşturduktan sonra, projenize [!INCLUDE[wf](../includes/wf-md.md)] öğeler ve diğer tanıdık [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] öğeleri ekleyebilirsiniz.
+# <a name="how-to-add-a-new-item-to-a-workflow-project-legacy"></a>Nasıl Yapılır: Bir İş Akışı Projesine Yeni Öğe Ekleme (Eski)
+Ya da ' i hedefleyerek, tarafından belirtilen eskiyi kullanan bir iş akışı projesi oluşturduktan sonra [!INCLUDE[wfd1](../includes/wfd1-md.md)] [!INCLUDE[vs2010](../includes/vs2010-md.md)] [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] , [!INCLUDE[wf](../includes/wf-md.md)] projenize öğeler ve diğer tanıdık öğeler ekleyebilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
- Aşağıdaki tabloda, bir iş akışı projesine ekleyebileceğiniz [!INCLUDE[wf2](../includes/wf2-md.md)] öğeleri listelenmektedir.
+ Aşağıdaki tabloda, [!INCLUDE[wf2](../includes/wf2-md.md)] bir iş akışı projesine ekleyebileceğiniz öğeler listelenmektedir.
 
 |Öğe|Açıklama|
 |----------|-----------------|

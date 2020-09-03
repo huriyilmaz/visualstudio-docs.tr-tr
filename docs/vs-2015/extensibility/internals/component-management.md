@@ -1,5 +1,5 @@
 ---
-title: Bileşen Yönetimi | Microsoft Docs
+title: Bileşen yönetimi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,43 +12,43 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 56a110f382d0b182eed0ea1a95cd4dabf2877037
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68191860"
 ---
 # <a name="component-management"></a>Bileşen Yönetimi
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Windows Installer görevlerin birimleri (bazen WICs veya yalnızca bileşenleri olarak adlandırılır), Windows Yükleyici bileşenleri adlandırılır. Bir GUID, yükleme ve başvuru sayımı Windows Installer kullanan ayarları için temel birimdir her WIC tanımlar.  
+Windows Installer görev birimleri Windows Installer bileşenleri (bazen WICs veya yalnızca bileşenler olarak adlandırılır) olarak adlandırılır. Bir GUID, Windows Installer kullanan kurulumlara yönelik temel yükleme birimi ve başvuru sayımı olan her bir WIC 'yi tanımlar.  
   
- VSPackage yükleyicinizi oluşturmak için birden çok ürünlerin kullanabilirsiniz, ancak bu tartışma Windows Installer (.msi) dosyalarının kullanımını varsayar. Böylece her zaman doğru başvuru sayımı gerçekleşir yükleyicinizi oluştururken, dosyayı dağıtım doğru bir şekilde yönetmeniz gerekir. Sonuç olarak, farklı sürümlerini ürünü değil müdahale veya birbiriyle yükleme karışımında Kes ve senaryoları kaldırın.  
+ VSPackage yükleyicinizi oluşturmak için birkaç ürün kullanabilseniz de, bu tartışma Windows Installer (. msi) dosyalarının kullanımını varsayar. Yükleyicinizi oluştururken doğru başvuru sayımı her zaman gerçekleşmeleri için dosya dağıtımını doğru şekilde yönetmeniz gerekir. Sonuç olarak, ürününüzün farklı sürümleri, yükleme ve kaldırma senaryolarında bir karışımında birbirini engellemez veya bunları bozmaz.  
   
- Windows Yükleyicisi'nde başvuru sayımı, bileşen düzeyinde gerçekleşir. Kaynaklarınızı dikkatli bir şekilde düzenlemeniz gerekir — dosyaları, kayıt defteri girdileri ve benzeri — bileşenlere. Diğer kuruluş düzeyi vardır — modülleri, özellikler ve ürünleri gibi — farklı senaryolarda yardımcı olabilir. Daha fazla bilgi için [Windows Installer Temelleri](../../extensibility/internals/windows-installer-basics.md).  
+ Windows Installer, bileşen düzeyinde başvuru sayımı oluşur. Kaynaklarınızı (dosyalar, kayıt defteri girişleri vb.) bileşenlere dikkatle düzenlemeniz gerekir. Farklı senaryolarda yardımcı olabilecek modüller, Özellikler ve ürünler gibi diğer kuruluş düzeyleri vardır. Daha fazla bilgi için bkz. [Windows Installer temel kavramları](../../extensibility/internals/windows-installer-basics.md).  
   
-## <a name="guidelines-of-authoring-setup-for-side-by-side-installation"></a>Yan yana yüklemesi için Kurulum yazma yönergeleri  
+## <a name="guidelines-of-authoring-setup-for-side-by-side-installation"></a>Yan yana yükleme için kurulum yazma yönergeleri  
   
-- Yazar dosyaları ve kayıt defteri anahtarlarını, kendi bileşenlerine sürümleri arasında paylaşılır.  
+- Sürümler arasında paylaşılan dosyaları ve kayıt defteri anahtarlarını kendi bileşenlerine yazar.  
   
-     Bu, bir sonraki sürümünde bunları kolayca kullanmasını sağlar. Örneğin, küresel olarak kayıtlı bir tür kitaplıklarını dosya uzantıları, kayıtlı HKEY_CLASSES_ROOT ve benzeri diğer öğeler.  
+     Bu, bunları bir sonraki sürümde kolayca kullanmanıza olanak sağlar. Örneğin, genel olarak kayıtlı kitaplıklar, dosya uzantıları, HKEY_CLASSES_ROOT kayıtlı diğer öğeler ve benzeri.  
   
-- Paylaşılan bileşenler ayrı birleştirme modülleri gruplayın.  
+- Paylaşılan bileşenleri ayrı birleştirme modülleriyle gruplandırın.  
   
-     Bu, yazar-ilerletme yan için doğru şekilde yardımcı olur.  
+     Bu, yan yana taşımaya doğru şekilde yazmanıza yardımcı olur.  
   
-- Paylaşılan dosyaları ve kayıt defteri anahtarlarını sürümleri arasında aynı Windows Yükleyici bileşenlerini kullanarak yükleyin.  
+- Sürümler arasında aynı Windows Installer bileşenlerini kullanarak paylaşılan dosyaları ve kayıt defteri anahtarlarını yükler.  
   
-     Farklı bir bileşen kullanırsanız, dosyaları ve kayıt defteri girdilerini tutulan bir VSPackage kaldırılır ancak başka bir VSPackage yüklüdür kaldırılır.  
+     Farklı bir bileşen kullanıyorsanız, bir sürümlü VSPackage kaldırıldığında dosya ve kayıt defteri girdileri kaldırılır, ancak başka bir VSPackage hala yüklüdür.  
   
-- Oluşturulan ve paylaşılan öğeleri aynı bileşende karıştırmayın.  
+- Aynı bileşendeki sürümlenmiş ve paylaşılan öğeleri karışmayın.  
   
-     Bunun yapılması, genel bir konum ve yalıtılmış konumlara sürümlü öğeleri paylaşılan öğeleri yüklemek mümkün kılar.  
+     Bunun yapılması, paylaşılan öğeleri küresel bir konuma ve sürümü tutulan öğeleri yalıtılmış konumlara yüklemeyi olanaksız hale getirir.  
   
-- Tutulan dosyalarının olduğu noktaya paylaşılan kayıt defteri anahtarlarını yok.  
+- Sürümlü dosyaları işaret eden paylaşılan kayıt defteri anahtarları yok.  
   
-     Bunu yaparsanız, başka bir sürümü tutulan VSPackage yüklendiğinde paylaşılan anahtarların üzerine yazılır. Dosyanın ikinci sürümü kaldırdıktan sonra anahtar işaret ettiği dosya kayboluyor.  
+     Bunu yaparsanız, başka bir sürümlenmiş VSPackage yüklendiğinde paylaşılan anahtarların üzerine yazılır. İkinci sürümü kaldırdıktan sonra, anahtarın işaret ettiği dosya kayboldu.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Paylaşılan ve sürümü tutulan Vspackage'lar arasında seçim yapma](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)   
+ [Paylaşılan ve sürümlü VSPackages arasında seçim yapma](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)   
  [VSPackage Kurulum Senaryoları](../../extensibility/internals/vspackage-setup-scenarios.md)

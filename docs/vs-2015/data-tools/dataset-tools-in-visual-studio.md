@@ -54,10 +54,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 23e4deba53288383a569f6da6e14d27f723825ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657377"
 ---
 # <a name="dataset-tools-in-visual-studio"></a>Visual Studio'daki veri kümesi araçları
@@ -83,13 +83,13 @@ NOTUN
 
   - [TableAdapter'ları kullanarak veri kümelerini doldurma](../data-tools/fill-datasets-by-using-tableadapters.md)
 
-  - [Veri kümelerindeki verileri düzenleme](../data-tools/edit-data-in-datasets.md)
+  - [Veri kümelerinde verileri düzenleme](../data-tools/edit-data-in-datasets.md)
 
-  - [Veri kümelerindeki verileri doğrulama](../data-tools/validate-data-in-datasets.md)
+  - [Veri kümelerinde verileri doğrulama](../data-tools/validate-data-in-datasets.md)
 
   - [Verileri yeniden veritabanına kaydetme](../data-tools/save-data-back-to-the-database.md)
 
-- Veri kümesindeki verileri sorgulama ve arama. Daha fazla bilgi için bkz. [sorgu veri kümeleri](../data-tools/query-datasets.md). [!INCLUDE[linq_dataset](../includes/linq-dataset-md.md)], bir <xref:System.Data.DataSet> nesnesindeki veriler üzerinde [LINQ (dil Ile tümleşik sorgu)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) olanağı sunar. Daha fazla bilgi için bkz. [LINQ to DataSet](https://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17).
+- Veri kümesindeki verileri sorgulama ve arama. Daha fazla bilgi için bkz. [sorgu veri kümeleri](../data-tools/query-datasets.md). [!INCLUDE[linq_dataset](../includes/linq-dataset-md.md)] nesnedeki veriler üzerinde [LINQ (dil Ile tümleşik sorgu)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) olanağı sunar <xref:System.Data.DataSet> . Daha fazla bilgi için bkz. [LINQ to DataSet](https://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17).
 
 - Kullanıcı arabirimi denetimlerini veri kümesine veya tek tek sütunlarına bağlamak ve hangi sütunların Kullanıcı tarafından düzenlenebilir olduğunu belirtmek için **veri kaynakları** penceresini kullanın. Daha fazla bilgi için bkz. [Visual Studio 'da denetimleri verilere bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md).
 

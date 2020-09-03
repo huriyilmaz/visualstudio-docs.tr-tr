@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8930bba76830a6116c3182f3fb2936cd4f1a3e47
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657602"
 ---
 # <a name="link-uml-model-updates-by-using-transactions"></a>İşlemleri kullanarak UML model güncelleştirmelerini bağlama
@@ -34,7 +34,7 @@ Visual Studio 'da UML tasarımcıları için bir uzantı tanımladığınızda, 
 
  **Microsoft. VisualStudio. model. SDK. [sürüm]. dll**
 
- Sınıfınız içinde, türü <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ILinkedUndoContext> olan içeri aktarılmış bir özelliği bildirin:
+ Sınıfınız içinde, türü olan içeri aktarılan bir özelliği bildirin <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ILinkedUndoContext> :
 
  `using Microsoft.VisualStudio.Modeling.ExtensionEnablement;`
 
@@ -62,13 +62,13 @@ Visual Studio 'da UML tasarımcıları için bir uzantı tanımladığınızda, 
 
  Aşağıdakilere dikkat edin:
 
-- İşlemin sonuna `Commit()` her zaman dahil etmeniz gerekir. Bir işlem yürütülmeden atıldığı takdirde, işlem geri alınacaktır. Diğer bir deyişle, model işlemin başlangıcında durumuna geri yüklenecek.
+- İşlemin sonuna her zaman dahil etmeniz gerekir `Commit()` . Bir işlem yürütülmeden atıldığı takdirde, işlem geri alınacaktır. Diğer bir deyişle, model işlemin başlangıcında durumuna geri yüklenecek.
 
-- İşlem içinde yakalanamayan bir özel durum oluşursa, işlem geri alınacaktır. İşlemin `using` bloğunu `try…catch` bloğunun içine almak için sık kullanılan bir desendir.
+- İşlem içinde yakalanamayan bir özel durum oluşursa, işlem geri alınacaktır. `using`İşlemin bloğunu bir blok içinde kapsamak için sık kullanılan bir desendir `try…catch` .
 
 - İşlemleri iç içe geçirebilirsiniz.
 
-- @No__t_0 için boş olmayan bir ad sağlayabilirsiniz.
+- ' A boş olmayan bir ad verebilirsiniz `BeginTransaction()` .
 
 - Bu işlemlerden yalnızca UML model deposu etkilenir. Modelleme işlemleri etkilenmez: değişkenler, dosyalar ve veritabanları gibi dış depolar, katman diyagramları ve kod modelleri.
 

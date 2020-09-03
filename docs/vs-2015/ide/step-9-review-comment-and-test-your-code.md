@@ -1,5 +1,5 @@
 ---
-title: '9\. Adım: kodunuzu gözden geçirme, açıklama ve test etme | Microsoft Docs'
+title: '9. Adım: kodunuzu gözden geçirme, açıklama ve test etme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 090aeb83f6d0480c511acd808498953ae6c01940
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851096"
 ---
-# <a name="step-9-review-comment-and-test-your-code"></a>9\. Adım: Kodunuzu Gözden Geçirme, Açıklama ve Test Etme
+# <a name="step-9-review-comment-and-test-your-code"></a>9. Adım: Kodunuzu Gözden Geçirme, Açıklama ve Test Etme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Daha sonra kodunuza bir açıklama eklersiniz. Yorum, programın davranış biçimini değiştirmeyen bir notdur. Kodunuzu okuyan birisinin ne yaptığını öğrenmesini kolaylaştırır. Kodunuza açıklama eklemek için iyi bir önleminizi alarak vardır. Görselde C#iki eğik çizgi (//) bir satırı açıklama olarak işaretleyin. Visual Basic, bir satırı açıklama olarak işaretlemek için tek tırnak işareti (') kullanılır. Bir açıklama ekledikten sonra, programınızı test edersiniz. Projeniz üzerinde çalışırken kodunuzu sık çalıştırmak ve test etmek iyi bir uygulamadır. bu sayede, kod daha karmaşık hale gelmeden önce sorunları önceden yakalayabilir ve çözebilirsiniz. Buna *yinelemeli test*denir.
+Daha sonra kodunuza bir açıklama eklersiniz. Yorum, programın davranış biçimini değiştirmeyen bir notdur. Kodunuzu okuyan birisinin ne yaptığını öğrenmesini kolaylaştırır. Kodunuza açıklama eklemek için iyi bir önleminizi alarak vardır. Visual C# ' de iki eğik çizgi (//) bir satırı açıklama olarak işaretler. Visual Basic, bir satırı açıklama olarak işaretlemek için tek tırnak işareti (') kullanılır. Bir açıklama ekledikten sonra, programınızı test edersiniz. Projeniz üzerinde çalışırken kodunuzu sık çalıştırmak ve test etmek iyi bir uygulamadır. bu sayede, kod daha karmaşık hale gelmeden önce sorunları önceden yakalayabilir ve çözebilirsiniz. Buna *yinelemeli test*denir.
 
  Yalnızca bir şey oluşturmuş olabilirsiniz ve henüz yapılmasa da, bir resmi yükleyebilir. Kodunuza bir açıklama eklemeden ve test etmeden önce, bu kavramları sık kullandığınız için kod kavramlarını gözden geçirmek için zaman alın:
 
@@ -27,7 +27,7 @@ Daha sonra kodunuza bir açıklama eklersiniz. Yorum, programın davranış biç
 
 - Yöntemler, kodunuzun nasıl düzenlenme yöntemleridir: kodunuz birlikte gruplandırılır.
 
-- Çoğu zaman bir yöntem, `showButton_Click()` yönteminizin bir iletişim kutusu gösterdiği ve sonra bir resmi yükleyen gibi belirli bir sırada çok sayıda şey yapar.
+- Çoğu zaman, yöntemin `showButton_Click()` bir iletişim kutusu gösterdiği ve sonra bir resmi yükleyen gibi belirli bir sırada çok sayıda şey yapar.
 
 - Yöntem kod *deyimlerinden*veya kod satırlarından oluşur. Bir yöntemi kod deyimlerini birlikte paketetmenin bir yolu olarak düşünün.
 
@@ -43,9 +43,9 @@ Daha sonra kodunuza bir açıklama eklersiniz. Yorum, programın davranış biç
   pictureBox1.Load(openFileDialog1.FileName)
   ```
 
-   Deyimler, programlarınızın şeyleri yapabilecekleri şeydir. Görsel C#içinde, bir ifade her zaman noktalı virgül ile biter. Visual Basic, satırın sonu deyimin sonu olur. (Visual Basic noktalı virgül gerekmez.) Yukarıdaki ifade, `PictureBox` denetimine kullanıcının seçtiği dosyayı **OpenFileDialog** bileşeniyle yüklemesini söyler.
+   Deyimler, programlarınızın şeyleri yapabilecekleri şeydir. Visual C# ' de, bir ifade her zaman noktalı virgül ile biter. Visual Basic, satırın sonu deyimin sonu olur. (Visual Basic noktalı virgül gerekmez.) Yukarıdaki ifade, `PictureBox` Denetiinizde **OpenFileDialog** bileşeni ile kullanıcının seçtiği dosyayı yüklemesini söyler.
 
-  ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 5](https://msdn.microsoft.com/vbasic/gg315356.aspx) veya [öğretici 1: video üzerinde C# bir resim görüntüleyici oluşturma 5](https://msdn.microsoft.com/vcsharp/gg278413.aspx). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
+  ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 5](https://msdn.microsoft.com/vbasic/gg315356.aspx) veya [öğretici 1: C# içinde resim görüntüleyici oluşturma-video 5](https://msdn.microsoft.com/vcsharp/gg278413.aspx). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
 
 ### <a name="to-add-comments"></a>Açıklama eklemek için
 
@@ -55,14 +55,14 @@ Daha sonra kodunuza bir açıklama eklersiniz. Yorum, programın davranış biç
      [!code-vb[VbExpressTutorial1Step9_10#1](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial1step9_10/vb/form1.vb#1)]
 
     > [!NOTE]
-    > **ShowButton** düğinizin Click olay işleyicisi artık tamamlandı ve çalışıyor. Bir `if` ifadesiyle başlayarak kod yazmaya başladıysanız. `if` bir ifade, programınıza "Bu şeyi denetleme ve doğru ise, bu eylemleri yapma" şeklinde nasıl söylüyorsunuz. Bu durumda, programınıza **Dosya Aç** iletişim kutusunu açmasını söylersiniz ve Kullanıcı bir dosya seçip **Tamam** düğmesini seçerse, bu dosyayı PictureBox 'a yükleyin.
+    > **ShowButton** düğinizin Click olay işleyicisi artık tamamlandı ve çalışıyor. Bir deyimden başlayarak kod yazmaya başladıysanız `if` . Bir `if` ifade, programınıza "Bu şeyi denetle ve doğru ise, bu eylemleri yapın." Bu durumda, programınıza **Dosya Aç** iletişim kutusunu açmasını söylersiniz ve Kullanıcı bir dosya seçip **Tamam** düğmesini seçerse, bu dosyayı PictureBox 'a yükleyin.
 
     > [!TIP]
     > IDE, kod yazmanızı kolaylaştıracak şekilde oluşturulmuştur ve *kod parçacıkları* bunu yapmanın bir yoludur. Kod parçacığı, küçük bir kod bloğuna genişletilmiş bir kısayoldur.
     >
-    >  Kullanılabilir tüm parçacıkları görebilirsiniz. Menü çubuğunda **Araçlar**, **kod parçacıkları Yöneticisi**' ni seçin. Görsel C#için `if` kod parçacığı **görseldir C#**  . Visual Basic için, `if` parçacıkları **conditionals ve döngüler**, **kod desenlerinde**yer alır. Bu yöneticiyi, mevcut parçacıkları taramak veya kendi kod parçacıklarınızı eklemek için kullanabilirsiniz.
+    >  Kullanılabilir tüm parçacıkları görebilirsiniz. Menü çubuğunda **Araçlar**, **kod parçacıkları Yöneticisi**' ni seçin. Visual c# için `if` kod parçacığı **Visual c#** ' de bulunur. Visual Basic için, `if` kod parçacıkları **conditionals ve döngüler**, **kod desenleri**' nde bulunur. Bu yöneticiyi, mevcut parçacıkları taramak veya kendi kod parçacıklarınızı eklemek için kullanabilirsiniz.
     >
-    >  Kodu yazarken bir kod parçacığını etkinleştirmek için yazın ve sekme tuşunu seçin. Birçok parçacık, **IntelliSense** penceresinde görünür. bu nedenle, **IntelliSense** penceresinde kod PARÇACıĞıNı seçmek ve sonra IDE 'nin kod parçacığını kullanmasını söylemek için. (IntelliSense, `if` parçacığı destekler, ancak `ifelse` parçacığı değil.)
+    >  Kodu yazarken bir kod parçacığını etkinleştirmek için yazın ve sekme tuşunu seçin. Birçok parçacık, **IntelliSense** penceresinde görünür. bu nedenle, **IntelliSense** penceresinde kod PARÇACıĞıNı seçmek ve sonra IDE 'nin kod parçacığını kullanmasını söylemek için. (IntelliSense parçacığı destekler `if` , ancak `ifelse` kod parçacığını destekler.)
 
 2. Programınızı çalıştırmadan önce, aşağıdaki gibi görünen **Tümünü Kaydet** araç çubuğu düğmesini seçerek programınızı kaydedin.
 
@@ -81,7 +81,7 @@ Daha sonra kodunuza bir açıklama eklersiniz. Yorum, programın davranış biç
 2. Yeni yazdığınız kodu çalıştırmak için **bir resim göster** düğmesini seçin. İlk olarak, program açık bir **Dosya** iletişim kutusu açar. Filtrelerinizin, iletişim kutusunun alt kısmındaki **dosya türü** açılan listesinde göründüğünü doğrulayın. Ardından bir resme gidin ve açın. Genellikle **Belgelerim klasörünüzdeki Windows** işletim sistemiyle birlikte gelen örnek resimleri, **Resimlerim \ örnek resimler** klasörü içinde bulabilirsiniz.
 
     > [!NOTE]
-    > **Resim dosyası seç** iletişim kutusunda herhangi bir görüntü görmüyorsanız, "tüm dosyalar (*.\*) "iletişim kutusunun sağ alt tarafındaki aşağı açılan listede filtre seçilidir.
+    > **Resim dosyası seç** iletişim kutusunda herhangi bir görüntü görmüyorsanız, \* iletişim kutusunun sağ alt tarafındaki aşağı açılan listede "tüm dosyalar (*.)" filtresinin seçili olduğundan emin olun.
 
 3. Bir resim yükleyin ve PictureBox 'da görünür. Ardından, kenarlıklarını sürükleyerek formunuzu yeniden boyutlandırmayı deneyin. PictureBox 'ın, kendisini formun içine yerleştirilmiş bir TableLayoutPanel içinde yerleştiğinden, resim alanı kendini form kadar geniş olacak şekilde yeniden boyutlandırır ve formun en üstteki %90 ' unu dolduracaktır. TableLayoutPanel ve FlowLayoutPanel kapsayıcılarını şu nedenle kullandınız: Kullanıcı yeniden boyutlandırdığında formunuzu doğru boyutlandırırlar.
 

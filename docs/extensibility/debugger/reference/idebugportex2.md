@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2 | Microsoft Dokümanlar
+title: IDebugPortEx2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,50 +13,50 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 5789681b0da70f46dadac1e29d0d6bb9dc905d1a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724991"
 ---
 # <a name="idebugportex2"></a>IDebugPortEx2
-Bu arabirim, oturum hata ayıklama yöneticisinin (SDM) bir bağlantı noktasında çalışan programları ve işlemleri denetlemesini sağlar.
+Bu arabirim, oturum hata ayıklama Yöneticisi 'nin (SDM) bir bağlantı noktasında çalışan programları ve süreçlerini denetlemesine olanak tanır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugPortEx2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Özel bir bağlantı noktası tedarikçisi bu arabirimi [IDebugPort2'yi](../../../extensibility/debugger/reference/idebugport2.md)uygulayan nesne üzerinde uygular.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Özel bir bağlantı noktası sağlayıcısı, bu arabirimi [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)uygulayan aynı nesne üzerinde uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- SDM bu arabirimi `IDebugPort2` elde etmek için arabirimde [QueryInterface](/cpp/atl/queryinterface) çağırır.
+ SDM, [QueryInterface](/cpp/atl/queryinterface) `IDebugPort2` Bu arabirimi edinmek için arabirimdeki QueryInterface 'i çağırır.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
- Aşağıdaki tabloda `IDebugPortEx2`.
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugPortEx2` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md)|Çalıştırılabilir bir dosya başlatıyor.|
-|[ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md)|Bir işlemin yürütülmesini devam ettirer.|
+|[LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md)|Yürütülebilir bir dosya başlatır.|
+|[ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md)|Bir işlemin yürütülmesini sürdürür.|
 |[CanTerminateProcess](../../../extensibility/debugger/reference/idebugportex2-canterminateprocess.md)|Bir işlemin sonlandırılıp sonlandırılamayacağını belirler.|
 |[TerminateProcess](../../../extensibility/debugger/reference/idebugportex2-terminateprocess.md)|Bir işlemi sonlandırır.|
-|[GetPortProcessId](../../../extensibility/debugger/reference/idebugportex2-getportprocessid.md)|Bağlantı noktasının işlem kimliğini alır.|
-|[GetProgram](../../../extensibility/debugger/reference/idebugportex2-getprogram.md)|Program düğümüyle ilişkili bir program alır.|
+|[GetPortProcessId](../../../extensibility/debugger/reference/idebugportex2-getportprocessid.md)|Bağlantı noktasının işlem KIMLIĞINI alır.|
+|[GetProgram](../../../extensibility/debugger/reference/idebugportex2-getprogram.md)|Program düğümüyle ilişkili bir programı alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu arabirim normalde SDM ve özel bağlantı noktası tedarikçisi arasında özeldir.
+ Bu arabirim, birincil olarak SDM ve özel bağlantı noktası tedarikçisidir.
 
- İstenirse, hata ayıklama motoru (DE) LaunchSuspended'e geçen [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) arabiriminde bu arabirimi bulabilir ve programı başlatmak için [LaunchSuspended'ı](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) kullanabilir. [LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md) Bu bir gereklilik değildir, ancak, ve bir DE istek programı başlatmak için ne gerekiyorsa yapabilirsiniz.
+ İsterseniz, bir hata ayıklama altyapısı (DE), [Launchaskıya alındı](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) öğesine geçirilen [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) arabiriminde bu arabirime bakabilir ve programı başlatmak için [launchaskıya alındı](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md) ' ı kullanır. Ancak bu bir gereksinim değildir ve bir DE, istek programını başlatmak için yapması gereken her şeyi yapabilir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: portpriv.h
+ Üstbilgi: portprıv. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

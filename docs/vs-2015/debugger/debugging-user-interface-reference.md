@@ -1,5 +1,5 @@
 ---
-title: Kullanıcı arabirim başvurusunda hata ayıklama | Microsoft Docs
+title: Kullanıcı arabirimi başvurusunda hata ayıklama | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -23,18 +23,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 59cc4e96630be23ee864e3d5a03cbb6dde709695
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68191229"
 ---
 # <a name="debugging-user-interface-reference"></a>Kullanıcı Arabirim Başvurusunda Hata Ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Uygulamanızda hata ayıklama olarak aşağıdaki iletişim kutuları karşılaşabilirsiniz.  
+Uygulamanızda hata ayıklarken aşağıdaki iletişim kutularıyla karşılaşabilirsiniz.  
   
- Birçok hata ayıklayıcı özelliği Visual Studio genişletilebilirlik modelini kullanarak otomatik hale getirebilirsiniz. Daha fazla bilgi için Visual Studio hata ayıklama SDK bakın.  
+ Visual Studio genişletilebilirlik modelini kullanarak pek çok hata ayıklayıcı özelliğini otomatikleştirebilirsin. Daha fazla bilgi için bkz. Visual Studio hata ayıklama SDK.  
   
 - [Kesme Noktaları Seç İletişim Kutusu](../debugger/choose-breakpoints-dialog-box.md)  
   
@@ -49,5 +49,5 @@ Uygulamanızda hata ayıklama olarak aşağıdaki iletişim kutuları karşıla�
 - [Hataları Ayıklama ve Uyarı İletişim Kutuları](../debugger/debugging-errors-and-warning-dialog-boxes.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Studio'da hata ayıklama](../debugger/debugging-in-visual-studio.md)   
- [Komut Penceresi](../ide/reference/command-window.md)
+ [Visual Studio 'da hata ayıklama](../debugger/debugging-in-visual-studio.md)   
+ [Komut penceresi](../ide/reference/command-window.md)

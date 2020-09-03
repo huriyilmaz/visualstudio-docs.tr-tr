@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerObject3 | Microsoft Dokümanlar
+title: IDebugPointerObject3 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,37 +11,37 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8605f1cdd50b6e98d6e30a7b550cce1d22543ff9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725468"
 ---
 # <a name="idebugpointerobject3"></a>IDebugPointerObject3
 > [!IMPORTANT]
-> Visual Studio 2015'te ifade değerlendiricilerinin bu şekilde uygulanması amortismana uymaktadır. CLR ifade değerlendiricilerinin uygulanması hakkında bilgi için lütfen [CLR İfade Değerlendiriciler](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [Yönetilen İfade Değerlendirici Örneği'ne](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)bakın.
+> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Ayrışdırıcı ağacındaki bir işaretçiyi temsil eder ve **IDebugPointerObject** arabirimini genişletir.
+ Bir ayrıştırma ağacındaki bir işaretçiyi temsil eder ve **Ihata ayıklama Gpoınterobject** arabirimini genişletir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugPointerObject3 : IDebugPointerObject
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Bir ifade değerlendiricisi (EE) bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Bir ifade değerlendirici (EE) bu arabirimi uygular.
 
 ## <a name="methods"></a>Yöntemler
- [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) arabirimindeki yöntemlere ek olarak, bu arabirim aşağıdaki yöntemleri uygular:
+ Bu arabirim, [Ihata ayıklama Gpoınterobject](../../../extensibility/debugger/reference/idebugpointerobject.md) arabirimindeki yöntemlere ek olarak aşağıdaki yöntemleri uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
 |[GetPointerAddress](../../../extensibility/debugger/reference/idebugpointerobject3-getpointeraddress.md)|İşaretçinin adresini alır.|
 
 ## <a name="requirements"></a>Gereksinimler
- Başlık: Ee.h
+ Üstbilgi: ee. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll

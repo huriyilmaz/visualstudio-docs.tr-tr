@@ -10,10 +10,10 @@ ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
 ms.openlocfilehash: 7583848c4bbe38f9094c60998e16ca3e95cf399f
-ms.sourcegitcommit: 3ef987e99616c3eecf4731bf5ac89e16238e68aa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88643607"
 ---
 # <a name="add-azure-cache-for-redis-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetlerini kullanarak Redsıs için Azure önbelleği ekleme
@@ -51,7 +51,7 @@ Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodları
 
 1. **Bağımlılık Ekle** sayfasında **Redsıs için Azure önbelleği**' ni seçin.
 
-    ![Redsıs için Azure önbelleği ekleme](./media/azure-redis-cache-add-connected-service/azure-redis-cache.png)
+    ![Redis için Azure Cache ekleme](./media/azure-redis-cache-add-connected-service/azure-redis-cache.png)
 
     Henüz oturum açmadıysanız Azure hesabınızda oturum açın. Bir Azure hesabınız yoksa, [ücretsiz deneme](https://azure.microsoft.com/account/free)için kaydolabilirsiniz.
 

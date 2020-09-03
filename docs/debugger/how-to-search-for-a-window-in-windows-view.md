@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fb5fb871ebf03595c0baca0336e8449fe39029f3
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349243"
 ---
 # <a name="how-to-search-for-a-window-in-windows-view"></a>Nasıl Yapılır: Pencereler Görünümünde Pencere Arama
@@ -45,6 +45,6 @@ Windows görünümündeki belirli bir pencereyi, onun tanıtıcısını, başlı
 
 4. Aramanın ilk yönü için **yukarı** veya **aşağı** seçeneğini belirleyin.
 
-5. **Tamam**'a tıklayın.
+5. **Tamam**’a tıklayın.
 
     Eşleşen bir pencere bulunursa, [Windows görünümü](../debugger/windows-view.md) penceresinde vurgulanır.
