@@ -1,5 +1,5 @@
 ---
-title: Hiyerarşiler ve Seçim | Microsoft Dokümanlar
+title: Hiyerarşiler ve seçim | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,31 +13,31 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a0e38c2cea464abded5ecf6ee2c8ac087868b07e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80708136"
 ---
 # <a name="hierarchies-and-selection"></a>Hiyerarşiler ve seçim
-Özelleştirdiğinizde, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]projeler gibi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hiyerarşileri nasıl işleyeceğini ve kullanıcıya ne görüntüleneceğini belirlemek için seçim bağlamını nasıl kullandığını anlamanız gerekir. Bu bölümde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hiyerarşiler ve seçim kavramları tartışılmaktadır.
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]' Yi özelleştirirken, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] proje gibi hiyerarşilerin nasıl işlediğini ve kullanıcıya neyin gösterileceğini belirlemek için seçim bağlamını nasıl kullandığını anlamanız gerekir. Bu bölümde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hiyerarşiler ve seçim kavramlarını ele alınmaktadır.
 
 ## <a name="in-this-section"></a>Bu bölümde
 - [Visual Studio’da Hiyerarşiler](../../extensibility/internals/hierarchies-in-visual-studio.md)
 
- Proje hiyerarşilerini ve genel hiyerarşi kavramını açıklar.
+ Proje hiyerarşilerini ve genel hiyerarşiler kavramını açıklar.
 
-- [IDE'de seçim ve para birimi](../../extensibility/internals/selection-and-currency-in-the-ide.md)
+- [IDE 'de seçim ve para birimi](../../extensibility/internals/selection-and-currency-in-the-ide.md)
 
- Tümleşik [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] geliştirme ortamının (IDE) kullanıcının şu anda etkin olan nesneleri hakkında nasıl bilgi saklandığını ve VSPackages'ın para birimini izlemesine izin verir.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamının (IDE), kullanıcının şu anda etkin olan nesneleriyle ilgili bilgileri nasıl koruduğu ve VSPackages 'in para birimini izlemesine olanak tanır.
 
 - [Seçim bağlamı nesneleri](../../extensibility/internals/selection-context-objects.md)
 
- Kullanıcının seçim bağlamını bir pencerede nasıl belirleyebileceğinizi modelde açıklanır.
+ Kullanıcının seçim bağlamını bir pencerede nasıl belirleyebileceğinizi gösteren modeli açıklar.
 
 - [Kullanıcıya geri bildirim](../../extensibility/internals/feedback-to-the-user.md)
 
- Kullanılabilir işlevselliğin [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kullanıcının geçerli seçim bağlamını ve genel IDE bağlamını nasıl temel alsüreceğini tartışır.
+ ' Deki kullanılabilir işlevselliğin, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kullanıcının geçerli seçim bağlamına ve genel IDE içeriğine göre nasıl olduğunu açıklar.
 
 ## <a name="related-sections"></a>İlgili bölümler
 - [Proje türleri mimarisi](../../extensibility/internals/project-types-architecture.md)

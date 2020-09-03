@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e4c2f2445bc7139c5bbc80a35905e24c319c9dfa
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85284652"
 ---
 # <a name="how-to-change-the-build-output-directory"></a>Nasıl yapılır: derleme çıkış dizinini değiştirme
@@ -62,4 +62,4 @@ Projeniz tarafından oluşturulan çıktının yapılandırma bazında (hata ay�
 
 - [Derleme sayfası, proje Tasarımcısı (C#)](../ide/reference/build-page-project-designer-csharp.md)
 - [Genel özellik sayfası (proje)](/cpp/build/reference/general-property-page-project)
-- [Derle ve derle](../ide/compiling-and-building-in-visual-studio.md)
+- [Derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md)

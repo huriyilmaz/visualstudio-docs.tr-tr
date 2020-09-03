@@ -16,16 +16,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 89a667e3254be8161d4defb54d524756a5eb02fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670015"
 ---
 # <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>Nasıl Yapılır: WCF Veri Hizmeti Başvurusunu Güncelleme veya Kaldırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir *hizmet başvurusu* , projenin bir veya daha fazla [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] erişmesini sağlar. Geçerli çözümde, yerel bir ağda veya Internet 'te [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] aramak için **hizmet başvurusu Ekle** iletişim kutusunu kullanın.
+Bir *hizmet başvurusu* , projenin bir veya daha fazla erişmesini sağlar [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] . Yerel ağda veya Internet 'te geçerli çözümde arama yapmak için **hizmet başvurusu Ekle** iletişim kutusunu kullanın [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] .
 
  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
@@ -52,7 +52,7 @@ Bir *hizmet başvurusu* , projenin bir veya daha fazla [!INCLUDE[ssAstoria](../i
 
 5. Başvuruyu projeye eklemek için **Tamam** ' ı tıklatın.
 
-     Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler App. config dosyasına eklenir.
+     Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler app.config dosyasına eklenir.
 
 #### <a name="to-add-a-reference-to-a-service-in-the-current-solution"></a>Geçerli çözümde bir hizmete başvuru eklemek için
 
@@ -60,9 +60,9 @@ Bir *hizmet başvurusu* , projenin bir veya daha fazla [!INCLUDE[ssAstoria](../i
 
      **Hizmet başvurusu Ekle** iletişim kutusu görüntülenir.
 
-2. **Keşfet**' e tıklayın.
+2. **Bul**'a tıklayın.
 
-     Geçerli Çözümdeki tüm hizmetler (hem [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] hem de WCF Hizmetleri) **Hizmetler** listesine eklenir.
+     Geçerli Çözümdeki tüm hizmetler (her ikisi [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] ve WCF Hizmetleri) **Hizmetler** listesine eklenir.
 
 3. **Hizmetler** listesinde, kullanmak istediğiniz hizmetin düğümünü genişletin ve bir varlık kümesi seçin.
 
@@ -70,10 +70,10 @@ Bir *hizmet başvurusu* , projenin bir veya daha fazla [!INCLUDE[ssAstoria](../i
 
 5. Başvuruyu projeye eklemek için **Tamam** ' ı tıklatın.
 
-     Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler App. config dosyasına eklenir.
+     Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler app.config dosyasına eklenir.
 
 ## <a name="updating-a-service-reference"></a>Hizmet başvurusunu güncelleştirme
- Bir [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] Varlık Veri Modeli bazen değişir. Bu durumda, hizmet başvurusunun güncellenmesi gerekir.
+ İçin Varlık Veri Modeli [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] bazen değişir. Bu durumda, hizmet başvurusunun güncellenmesi gerekir.
 
 #### <a name="to-update-a-service-reference"></a>Bir hizmet başvurusunu güncelleştirmek için
 
@@ -88,7 +88,7 @@ Bir *hizmet başvurusu* , projenin bir veya daha fazla [!INCLUDE[ssAstoria](../i
 
 - **Çözüm Gezgini**, hizmet başvurusunu sağ tıklatın ve ardından **Sil**' e tıklayın.
 
-     Hizmet istemcisi çözümden kaldırılır ve hizmeti tanımlayan meta veriler App. config dosyasından kaldırılır.
+     Hizmet istemcisi çözümden kaldırılacak ve hizmeti tanımlayan meta veriler app.config dosyasından kaldırılacak.
 
     > [!NOTE]
     > Hizmet başvurusuna başvuruda bulunan tüm kodların el ile kaldırılması gerekecektir.

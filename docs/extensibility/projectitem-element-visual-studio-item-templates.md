@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 885d0fbb50204f23a30fa43c1ffad45c9d67f829
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770722"
 ---
 # <a name="projectitem-element-visual-studio-item-templates"></a>ProjectItem öğesi (Visual Studio öğe şablonları)
@@ -71,7 +71,7 @@ ms.locfileid: "85770722"
  `string`Şablon *. zip* dosyasındaki bir dosyanın adını temsil eden bir.
 
 ## <a name="remarks"></a>Açıklamalar
- `ProjectItem`, öğesinin isteğe bağlı bir alt öğesidir `TemplateContent` .
+ `ProjectItem` , öğesinin isteğe bağlı bir alt öğesidir `TemplateContent` .
 
  `TargetFileName`Özniteliği parametreleri olan dosyaları yeniden adlandırmak için kullanılabilir. Örneğin, File *. vb* dosyası template *. zip* dosyasının kök dizininde mevcutsa, ancak dosyanın **Yeni öğe Ekle** iletişim kutusunda belirtilen dosya ADıNA göre adlandırılmış olmasını istiyorsanız aşağıdaki XML 'i kullanacaksınız:
 

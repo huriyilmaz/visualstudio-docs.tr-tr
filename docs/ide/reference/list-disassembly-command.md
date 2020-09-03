@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 91319a8d25aaec6bdd676ed6d709dffc47100195
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770643"
 ---
 # <a name="list-disassembly-command"></a>Ayrıştırılmış Kodu Listele Komutu
@@ -34,11 +34,11 @@ Debug.ListDisassembly [/count:number] [/endaddress:expression]
 ## <a name="switches"></a>Anahtarlar
 Her anahtar, tamamı ya da kısa bir form kullanılarak çağrılabilir.
 
-/Count: `number` [veya]/c: `number` [veya]/length: `number` [veya]/l:`number`
+/Count: `number` [veya]/c: `number` [veya]/length: `number` [veya]/l: `number`
 
 İsteğe bağlı. Görüntülenecek yönerge sayısı. Varsayılan değer 8 ' dir.
 
-/endadddress: `expression` [veya]/e:`expression`
+/endadddress: `expression` [veya]/e: `expression`
 
 İsteğe bağlı. Ayrıştırılmış kodun durdurulacağı adres.
 

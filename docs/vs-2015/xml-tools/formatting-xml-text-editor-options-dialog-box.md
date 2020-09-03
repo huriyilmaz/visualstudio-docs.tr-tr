@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 962321a1ab1a1ca5332300eea0d21781a9e4bbf5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670967"
 ---
 # <a name="formatting-xml-text-editor-options-dialog-box"></a>Biçimlendirme, XML, Metin Düzenleyici, Seçenekler İletişim Kutusu
@@ -25,7 +25,7 @@ Bu iletişim kutusu, XML Düzenleyicisi için biçimlendirme ayarlarını belirt
 > Bu ayarlar, **metin düzenleyici** klasörünü, **XML** klasörünü ve ardından **Seçenekler** iletişim kutusundan **biçimlendirme** seçeneğini belirlediğinizde kullanılabilir.
 
 ## <a name="attributes"></a>Öznitelikler
- **El ile öznitelik biçimlendirmesini koru** Öznitelikler yeniden biçimlendirilmedi. Bu varsayılandır.
+ **El ile öznitelik biçimlendirmesini koru** Öznitelikler yeniden biçimlendirilmedi. Bu varsayılan seçenektir.
 
 > [!NOTE]
 > Öznitelikler birden çok satırda varsa, düzenleyici her bir öznitelik satırını üst öğenin girintilemesi ile eşleşecek şekilde girintiler.
@@ -45,7 +45,7 @@ Bu iletişim kutusu, XML Düzenleyicisi için biçimlendirme ayarlarını belirt
  **Bitiş etiketi tamamlandığında** Bitiş etiketi tamamlandığında öğeyi yeniden biçimlendirir.
 
 ## <a name="mixed-content"></a>Karışık Içerik
- **Karma içeriği varsayılan olarak koru** Düzenleyicinin karışık içeriği yeniden biçimlendirir olup olmadığını belirler. Varsayılan olarak düzenleyici, içeriğin bir `xml:space="preserve"` kapsamında bulunması dışında, karışık içeriği yeniden biçimlendirmeye çalışır.
+ **Karma içeriği varsayılan olarak koru** Düzenleyicinin karışık içeriği yeniden biçimlendirir olup olmadığını belirler. Varsayılan olarak düzenleyici, içeriğin bir kapsamda bulunması dışında, karışık içeriği yeniden biçimlendirmeye çalışır `xml:space="preserve"` .
 
  Bir öğe metin ve biçimlendirme karışımı içeriyorsa, içerik karışık içerik olarak kabul edilir. Aşağıda, karışık içerikli bir öğe örneği verilmiştir.
 

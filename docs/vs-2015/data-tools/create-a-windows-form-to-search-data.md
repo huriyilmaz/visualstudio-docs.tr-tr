@@ -21,10 +21,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 81980f38cbd8fb595530cc52b2cf32056feb43a7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670057"
 ---
 # <a name="create-a-windows-form-to-search-data"></a>Veri aramak için Windows Form oluşturma
@@ -52,7 +52,7 @@ Sık rastlanan bir uygulama senaryosu seçilen verileri form üzerinde görünt�
 
 - Forma parametreler girerek ve parametreli sorgu yürütülüyor.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için şunlar gerekir:
 
 - Northwind örnek veritabanına erişim.
@@ -64,7 +64,7 @@ Sık rastlanan bir uygulama senaryosu seçilen verileri form üzerinde görünt�
 
 1. **Dosya** menüsünden Yeni bir proje oluşturun.
 
-2. Projeyi `WindowsSearchForm` olarak adlandırın.
+2. Projeyi adlandırın `WindowsSearchForm` .
 
 3. **Windows uygulaması** ' nı seçin ve **Tamam**' a tıklayın.
 
@@ -106,18 +106,18 @@ Sık rastlanan bir uygulama senaryosu seçilen verileri form üzerinde görünt�
 
 2. **Müşteriler** düğümünü **veri kaynakları** penceresinden formunuza sürükleyin.
 
-     Kayıtlar üzerinde gezinmek için bir <xref:System.Windows.Forms.DataGridView> ve araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) formda görüntülenir. Bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
+     <xref:System.Windows.Forms.DataGridView>Kayıtlar üzerinde gezinmek için bir ve araç şeridi ( <xref:System.Windows.Forms.BindingNavigator> ) formda görüntülenir. Bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
 
 ## <a name="addparameterization-search-functionality-to-the-query"></a>Sorguya addparameterleştirme (arama işlevi)
  **Arama ölçütü Oluşturucu** iletişim kutusunu kullanarak, özgün sorguya bir where yan tümcesi ekleyebilirsiniz.
 
 #### <a name="to-create-a-parameterized-query-and-controls-to-enter-the-parameters"></a>Parametreleri girmek üzere parametreli sorgu ve denetimler oluşturmak için
 
-1. @No__t_0 denetimini seçin ve ardından **veri** menüsünde **Sorgu Ekle** ' yi seçin.
+1. Denetimi seçin <xref:System.Windows.Forms.DataGridView> ve ardından **veri** menüsünde **Sorgu Ekle** ' yi seçin.
 
-2. **Arama ölçütleri Oluşturucu** Iletişim kutusundaki **Yeni sorgu adı** alanına `FillByCity` yazın.
+2. `FillByCity` **Arama ölçütleri Oluşturucu** iletişim kutusunda **Yeni sorgu adı** alanını yazın.
 
-3. Sorgu **metin** alanındaki sorguya `WHERE City = @City` ekleyin.
+3. Sorgu `WHERE City = @City` **metin** alanındaki sorguya ekleyin.
 
      Sorgu aşağıdakine benzemelidir:
 
@@ -128,7 +128,7 @@ Sık rastlanan bir uygulama senaryosu seçilen verileri form üzerinde görünt�
      `WHERE City = @City`
 
     > [!NOTE]
-    > Erişim ve OLE DB veri kaynakları, parametreleri belirtmek için soru işareti ('? ') kullanır; bu nedenle WHERE yan tümcesi şöyle görünür: `WHERE City = ?`.
+    > Erişim ve OLE DB veri kaynakları, parametreleri belirtmek için soru işareti ('? ') kullanır, bu nedenle WHERE yan tümcesi şöyle görünür: `WHERE City = ?` .
 
 4. **Tamam** ' a tıklayarak **arama ölçütleri Oluşturucu** iletişim kutusunu kapatın.
 
@@ -139,7 +139,7 @@ Sık rastlanan bir uygulama senaryosu seçilen verileri form üzerinde görünt�
 
 #### <a name="to-test-the-application"></a>Uygulamayı test etmek için
 
-1. Uygulamayı çalıştırmak için F5 tuşuna basın.
+1. Uygulamayı çalıştırmak için F5'e basın.
 
 2. **Şehir** metin kutusuna **Londra** yazın ve ardından **FillByCity**' ye tıklayın.
 

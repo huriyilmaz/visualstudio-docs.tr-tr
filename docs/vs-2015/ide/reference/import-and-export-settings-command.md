@@ -15,27 +15,27 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6e3ee8549fd8cf1a4551818c013551ba24128f95
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671047"
 ---
 # <a name="import-and-export-settings-command"></a>Ayarları İçeri ve Dışarı Aktar Komutu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-@No__t_0 ayarlarını içeri aktarır, dışarı aktarır veya sıfırlar.
+Ayarları içeri aktarır, dışarı aktarır veya sıfırlar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 Tools.ImportandExportSettings [/export:filename | /import:filename | /reset]
 ```
 
 ## <a name="switches"></a>Anahtarlar
- /Export: Isteğe bağlı `filename`. Geçerli ayarları belirtilen dosyaya dışa aktarır.
+ /Export: `filename` isteğe bağlı. Geçerli ayarları belirtilen dosyaya dışa aktarır.
 
- /import: Isteğe bağlı `filename`. Belirtilen dosyadaki ayarları içeri aktarır.
+ /import: `filename` isteğe bağlı. Belirtilen dosyadaki ayarları içeri aktarır.
 
  /Reset süpürmeden isteğe bağlı. Geçerli ayarları sıfırlar.
 
@@ -43,7 +43,7 @@ Tools.ImportandExportSettings [/export:filename | /import:filename | /reset]
  Bu komutu hiçbir anahtar olmadan çalıştırmak, **Ayarları içeri ve dışarı aktarma** Sihirbazı 'nı açar. Daha fazla bilgi için bkz. [nasıl yapılır: ayarları bilgisayarlar veya Visual Studio sürümleri arasında paylaşma](https://msdn.microsoft.com/1131fb10-35c1-42da-9cd8-91aa3235b882).
 
 ## <a name="example"></a>Örnek
- Aşağıdaki komut, `MyFile.vssettings` dosya ayarlarını dosyaya dışarı aktarır.
+ Aşağıdaki komut, dosya ayarlarını dosyaya dışa aktarır `MyFile.vssettings` .
 
 ```
 Tools.ImportandExportSettings /export:"c:\Files\MyFile.vssettings"

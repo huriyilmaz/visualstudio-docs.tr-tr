@@ -1,5 +1,5 @@
 ---
-title: marker_series::write_message yöntemi | Microsoft Docs
+title: 'marker_series:: write_message yöntemi | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f759ea679af818d85dd365f5615ce4fc664df89a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200736"
 ---
-# <a name="markerserieswritemessage-method"></a>marker_series::write_message Yöntemi
+# <a name="marker_serieswrite_message-method"></a>marker_series::write_message Yöntemi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Eşzamanlılık görselleştiricisi izleme dosyasının bir ileti yazar.  
+Eşzamanlılık görselleştiricisi izleme dosyasına bir ileti yazar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```  
 void write_message(  
@@ -52,18 +52,18 @@ void write_message(
   
 #### <a name="parameters"></a>Parametreler  
  `_Format`  
- Bağımsız değişken listesindeki nesnelere karşılık gelen sıfır veya daha fazla biçim öğeleri ile karıştırılmış, metin içeren bir bileşik biçimlendirme dizesi.  
+ Bağımsız değişken listesindeki nesnelere karşılık gelen sıfır veya daha fazla biçim öğesiyle metin içeren bir bileşik biçim dizesi.  
   
  `_Importance`  
  Önem düzeyi.  
   
  `_Category`  
- Category.Importance düzeyi.  
+ Category. önem düzeyi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** cvmarkersobj.h  
+ **Üst bilgi:** cvmarkersobj. h  
   
- **Namespace:** CONCURRENCY::Diagnostic  
+ **Ad alanı:** Eşzamanlılık::d ıagstik  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [marker_series Sınıfı](../profiling/marker-series-class.md)

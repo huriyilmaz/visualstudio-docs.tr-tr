@@ -13,17 +13,17 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: c283d5ca29b67e772df2a0bb2e25dee70cd63fd3
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85284379"
 ---
 # <a name="how-to-distribute-code-snippets"></a>Nasıl yapılır: kod parçacıklarını dağıtma
 
 Kod parçacıklarında Arkadaşlarınıza kod parçacıklarını verebilir ve **kod parçacıkları Yöneticisi 'ni**kullanarak kendi bilgisayarlarına kod parçacıkları yükleyebilirsiniz. Ancak, dağıtılacak birkaç kod parçacığına sahipseniz veya bunları daha yaygın olarak dağıtmak istiyorsanız, kod parçacığı dosyalarınızı bir Visual Studio uzantısına dahil edebilirsiniz. Visual Studio kullanıcıları daha sonra kod parçacıklarını almak için uzantıyı yükleyebilir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 **VSIX proje** projesi şablonlarına erişim sağlamak Için **Visual Studio uzantısı geliştirme** iş yükünü yükler.
 
@@ -115,7 +115,7 @@ Bu yordamda, [Izlenecek yol: kod parçacığı oluşturma](../ide/walkthrough-cr
 
 4. Kod parçacığını test edin. Deneysel örnekte, bir Visual Basic projesi açın ve kod dosyalarından birini açın. İmlecinizi kodda bir yere yerleştirin, sağ tıklayın ve bağlam menüsünde kod **parçacığı Ekle**' yi seçin.
 
-5. Bir klasörden biri olarak *Merhaba Worldvb* görmeniz gerekir. Çift tıklayın. Açılan bir **ekleme kod parçacığı** görmeniz gerekir: bir açılan Merhaba çalışma parçacığı, bir açılan **helloworldvb**>. **Merhaba Worldvb** açılan listesine tıklayın.
+5. Bir klasörden biri olarak *Merhaba Worldvb* görmeniz gerekir. Çift tıklayın. Açılan bir **ekleme kod parçacığı ** görmeniz gerekir: bir açılan Merhaba çalışma parçacığı, bir açılan **helloworldvb**>. **Merhaba Worldvb** açılan listesine tıklayın.
 
    Kod dosyasına aşağıdaki satır eklenir:
 

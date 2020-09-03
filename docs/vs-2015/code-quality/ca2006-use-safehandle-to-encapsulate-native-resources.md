@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: fdf3ff02c86a878e9c955d2b3b92879870700efa
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85521153"
 ---
 # <a name="ca2006-use-safehandle-to-encapsulate-native-resources"></a>CA2006: Yerel kaynakları kapsamak için SafeHandle kullanın
@@ -40,7 +40,7 @@ ms.locfileid: "85521153"
 
  Bu tür senaryolarda, çok iş parçacıklı erişime izin veriliyorsa `IntPtr` ve tarafından temsil edilen kaynağı serbest bırakma yoluyla güvenlik veya güvenilirlik sorunları da vardır `IntPtr` . Bu sorunlar, `IntPtr` kaynağın eşzamanlı kullanımı başka bir iş parçacığında yapıldığında kaynak sürümündeki değerin geri dönüşümünü içerir. Bu, bir iş parçacığının yanlış kaynakla ilişkili verileri okuyabildiği veya yazabileceği yarış koşullarına neden olabilir. Örneğin, türünüz bir işletim sistemi tanıtıcısını bir olarak depoluyorsa `IntPtr` ve kullanıcıların her zaman ve bu tanıtıcıyı **Close** kullanan başka bir yöntemi aynı anda ve bir tür eşitleme olmadan çağırmasını sağlar.
 
- Bu tanıtıcı geri dönüştürme sorunu, verilerin bozulmasına ve sıklıkla bir güvenlik açığına neden olabilir. `SafeHandle`ve eşdüzey sınıfı, <xref:System.Runtime.InteropServices.CriticalHandle> Bu tür iş parçacığı sorunlarından kaçınılması için bir kaynağa yerel tanıtıcıyı kapsüllemek için bir mekanizma sağlar. Ek olarak, `SafeHandle` diğer iş parçacığı sorunları için ve alt sınıfını kullanarak, yerel `CriticalHandle` metotların çağrıları üzerinde yerel tanıtıcının bir kopyasını içeren yönetilen nesnelerin ömrünü dikkatlice kontrol edebilirsiniz. Bu durumda, genellikle çağrılarını kaldırabilirsiniz `GC.KeepAlive` . `SafeHandle`Ve kullandığınızda ve daha düşük bir dereceye kadar yaptığınız performans yükü, `CriticalHandle` dikkatli bir tasarım aracılığıyla sık azaltılabilir.
+ Bu tanıtıcı geri dönüştürme sorunu, verilerin bozulmasına ve sıklıkla bir güvenlik açığına neden olabilir. `SafeHandle` ve eşdüzey sınıfı, <xref:System.Runtime.InteropServices.CriticalHandle> Bu tür iş parçacığı sorunlarından kaçınılması için bir kaynağa yerel tanıtıcıyı kapsüllemek için bir mekanizma sağlar. Ek olarak, `SafeHandle` diğer iş parçacığı sorunları için ve alt sınıfını kullanarak, yerel `CriticalHandle` metotların çağrıları üzerinde yerel tanıtıcının bir kopyasını içeren yönetilen nesnelerin ömrünü dikkatlice kontrol edebilirsiniz. Bu durumda, genellikle çağrılarını kaldırabilirsiniz `GC.KeepAlive` . `SafeHandle`Ve kullandığınızda ve daha düşük bir dereceye kadar yaptığınız performans yükü, `CriticalHandle` dikkatli bir tasarım aracılığıyla sık azaltılabilir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  `IntPtr` `SafeHandle` Yerel kaynaklara erişimi güvenle yönetmek için kullanımı öğesine dönüştürün. <xref:System.Runtime.InteropServices.SafeHandle>Örnekler için başvuru konusuna bakın.

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1d35ec92a76c9ecbf933256229b64ce06a03a4fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670984"
 ---
 # <a name="debugger-user-interface-xslt"></a>Hata Ayıklayıcı Kullanıcı Arabirimi (XSLT)
@@ -34,7 +34,7 @@ Bu konuda hata ayıklayıcı pencereleri ve iletişim kutuları açıklanmaktad�
 
  Yereller penceresi ayrıca XSLT dönüşümünün bağlamını izleyen önceden tanımlanmış bağlam değişkenlerini de görüntüler. Aşağıdaki tabloda XSLT hata ayıklayıcısı tarafından kullanılan önceden tanımlanmış bağlam değişkenleri açıklanmaktadır.
 
-|Name|Açıklama|
+|Ad|Açıklama|
 |----------|-----------------|
 |`last()`|Bağlam boyutu.|
 |`position()`|Bağlam düğümünün bağlam boyutuna göre konumu veya dizin numarası.|
@@ -78,13 +78,13 @@ Bu konuda hata ayıklayıcı pencereleri ve iletişim kutuları açıklanmaktad�
  Listenin en üstünde yer aldığı bir öğeyi tıklatmak, XSLT yürütme dalının standart yeşil vurgulama ve yeşil oklar kullanılarak gerçekleştiği görüntüleyiciye işaret gösterir.
 
 ## <a name="quickwatch-dialog-box"></a>QuickWatch Iletişim kutusu
- **Hızlı izleme** iletişim kutusu, XPath 1,0 ifadelerini değerlendirmek için kullanılır. Bağlam düğümü (Yerel öğeler penceresinden `self::node()` düğümü), XPath ifadesinin yürütülmesi için bağlam sağlar. XPath ifadesinin yürütülmesi sonucu izleme penceresi görüntülenir.
+ **Hızlı izleme** iletişim kutusu, XPath 1,0 ifadelerini değerlendirmek için kullanılır. Bağlam düğümü ( `self::node()` Yereller penceresinden düğüm) XPath ifadesinin yürütülmesi için bağlam sağlar. XPath ifadesinin yürütülmesi sonucu izleme penceresi görüntülenir.
 
  Aşağıdaki listede, XPath ifadesi değerlendirmesinde bazı kısıtlamalar açıklanmaktadır.
 
 - Yalnızca yerleşik XPath işlevlerine izin verilir.
 
-- @No__t_0, `key()` vb. gibi yerleşik XSLT işlevlerine izin verilmez.
+- , Ve gibi yerleşik XSLT işlevlerine `document()` `key()` izin verilmez.
 
 - Kullanıcı tanımlı işlevlere izin verilmiyor.
 

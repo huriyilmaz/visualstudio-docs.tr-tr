@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 562990b14edba11abf50dc735279cba36bb21518
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671198"
 ---
 # <a name="share-models-and-exporting-diagrams"></a>Modelleri paylaşma ve diyagramları dışarı aktarma
@@ -31,7 +31,7 @@ Visual Studio 'da, iş arkadaşlarınızla modelleri ve diyagramları çeşitli 
 
  Farklı kullanıcılar bir UML modelinde aynı anda çalışabilir, ancak farklı paketler üzerinde çalışır.
 
- @No__t_0 kullanmanızı öneririz.
+ Kullanmanızı öneririz [!INCLUDE[esprscc](../includes/esprscc-md.md)] .
 
  Daha fazla bilgi için bkz. [sürüm denetimi altındaki modelleri ve diyagramları yönetme](../modeling/manage-models-and-diagrams-under-version-control.md).
 

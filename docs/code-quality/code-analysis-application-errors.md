@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fe3f92adea762058b6b4414f0bf9596d77ab698e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85521322"
 ---
 # <a name="code-analysis-application-errors"></a>Kod analizi uygulama hataları
@@ -26,7 +26,7 @@ Bu bölüm, yönetilen kod Analizi Aracı tarafından oluşturulan hata iletiler
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|Kod|Açıklama|
+|Kod|Description|
 |-|-|
 |[CA0001](ca0001.md)|Yönetilen kod analizi aracında beklenen bir hata koşulunu göstermediği bir özel durum oluştu.|
 |[CA0051](ca0051.md)|Hiçbir kural seçilmedi.|

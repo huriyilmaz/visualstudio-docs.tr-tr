@@ -1,5 +1,5 @@
 ---
-title: '&lt;Ürün&gt; öğesi (Önyükleyici) | Microsoft Docs'
+title: '&lt;Ürün &gt; öğesi (önyükleyici) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -17,18 +17,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c3c1304a0ff93c58add65f20aa417bb547f5bb31
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200650"
 ---
-# <a name="ltproductgt-element-bootstrapper"></a>&lt;Ürün&gt; öğesi (Önyükleyici)
+# <a name="ltproductgt-element-bootstrapper"></a>&lt;Ürün &gt; öğesi (önyükleyici)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`Product` En üst düzey XML öğesi bir ürün dosyası içinde bir öğedir.  
+`Product`Öğesi, bir ürün dosyasının içindeki en üst düzey xml öğesidir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Product  
@@ -141,14 +141,14 @@ ProductCode
 ```  
   
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler  
- `Product` Öğesi, bir ürün dosyasında gereklidir. Aşağıdaki özniteliği var.  
+ `Product`Öğe bir ürün dosyasında gereklidir. Aşağıdaki özniteliğe sahiptir.  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |`ProductCode`|Ürün için benzersiz bir tanımlayıcı.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği yüklemek için bir tam ürün dosyası gösterir [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
+ Aşağıdaki kod örneği, yüklemek için tüm ürün dosyalarını gösterir [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  

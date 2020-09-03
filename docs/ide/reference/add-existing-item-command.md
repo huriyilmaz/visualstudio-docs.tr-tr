@@ -14,40 +14,40 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4d49f0fde7bbf13a1219296420b84970f4350860
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75585710"
 ---
 # <a name="add-existing-item-command"></a>Varolan Öğeyi Ekle Komutu
-Varolan bir dosyayı geçerli çözüme ekler ve açar.
+Geçerli çözüme var olan bir dosyayı ekler ve açar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cmd
 File.AddExistingItem filename [/e:editorname]
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 `filename`\
-Gereklidir. Geçerli çözüme eklenecek öğenin uzantısı ile tam yol ve dosya adı. Dosya yolu veya dosya adı boşluklar içeriyorsa, tüm yolu tırnak işaretlerine bürün.
+Gereklidir. Geçerli çözüme eklenecek öğenin Uzantısı ile tam yol ve dosya adı. Dosya yolu veya dosya adı boşluk içeriyorsa, tüm yolu tırnak işaretleri içine alın.
 
 ## <a name="switches"></a>Anahtarlar
-/e:`editorname`\
-İsteğe bağlı. Dosyanın açılacağı düzenleyicinin adı. Bağımsız değişken belirtilir, ancak düzenleyici adı sağlanmamışsa, **Ile Aç** iletişim kutusu görüntülenir.
+/e `editorname`\
+İsteğe bağlı. Dosyanın açıldığı düzenleyicinin adı. Bağımsız değişken belirtilmişse ancak düzenleyici adı sağlanmadığında, **birlikte Aç** iletişim kutusu görüntülenir.
 
-/e:`editorname` bağımsız değişken sözdizimi, teklif işaretleriyle birlikte **Açık İletişim Kutusu'nda**göründükleri gibi düzenleyici adlarını kullanır. Örneğin, kaynak kod düzenleyicisinde bir stil sayfası açmak için /e:`editorname` bağımsız değişkeniçin aşağıdakileri girersiniz.
+/E: `editorname` Argument sözdizimi, **birlikte Aç iletişim kutusunda**göründükleri gibi, tırnak işaretleri içine alınan düzenleyici adlarını kullanır. Örneğin, kaynak kodu düzenleyicisinde bir stil sayfası açmak için/e: Argument için aşağıdakini girersiniz `editorname` .
 
 ```cmd
 /e:"Source Code (text) Editor"
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-Otomatik tamamlama, siz yazarken doğru yolu ve dosya adını bulmaya çalışır.
+Otomatik tamamlama, yazarken doğru yolu ve dosya adını bulmaya çalışır.
 
 ## <a name="example"></a>Örnek
-Bu örnek, form1.frm dosyasını geçerli çözüme ekler.
+Bu örnek, Form1. frm dosyasını geçerli çözüme ekler.
 
 ```cmd
 >File.AddExistingItem "C:\public\solution files\Form1.frm"
@@ -55,7 +55,7 @@ Bu örnek, form1.frm dosyasını geçerli çözüme ekler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
-- [Komut Penceresi](../../ide/reference/command-window.md)
-- [Bul/Komut Kutusu](../../ide/find-command-box.md)
+- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Komut penceresi](../../ide/reference/command-window.md)
+- [Bul/komut kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

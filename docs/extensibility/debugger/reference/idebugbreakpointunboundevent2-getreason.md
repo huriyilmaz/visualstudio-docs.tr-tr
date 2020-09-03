@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointUnboundEvent2::GetReason | Microsoft Dokümanlar
+title: 'IDebugBreakpointUnboundEvent2:: GetReason | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 9830309f0a40aee37982554e8920a95d289eb74c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734727"
 ---
 # <a name="idebugbreakpointunboundevent2getreason"></a>IDebugBreakpointUnboundEvent2::GetReason
-Kopuş noktasının bağlanmamasının nedenini alır.
+Kesme noktasının bağlanmamış olma nedenini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetReason(
@@ -41,16 +41,16 @@ int GetReason(
 
 ## <a name="parameters"></a>Parametreler
 `pdwUnboundReason`\
-[çıkış] Kesme noktasının bağlanmamasının nedenini belirten [BP_UNBOUND_REASON](../../../extensibility/debugger/reference/bp-unbound-reason.md) numaralandırmadan bir değer verir.
+dışı Kesme noktasının bağlanmamış olma nedenini belirten [BP_UNBOUND_REASON](../../../extensibility/debugger/reference/bp-unbound-reason.md) numaralandırmasından bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Bunun nedenleri arasında bir kesme noktasının bir düzenlenen ve devam etme işleminden sonra farklı bir konuma geri tepme sayılması veya kesme noktasının hataya bağlı olduğu belirlenmesi yer almaktadır.
+Nedenler, bir düzenleme ve devam etme işleminden sonra farklı bir konuma yeniden bağlanan bir kesme noktasının veya bir kesme noktasının hata halinde bağlandığını belirleme işlemidir.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md) arabirimini ortaya çıkaran bir **CBreakpointUnboundDebugEventBase** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md) arabirimini kullanıma sunan bir **Cbreakpointunboundtcgeventbase** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 STDMETHODIMP CBreakpointUnboundDebugEventBase::GetReason(
