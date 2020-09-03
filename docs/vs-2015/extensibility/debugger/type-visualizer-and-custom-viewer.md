@@ -12,29 +12,29 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a85be2978abe35e91096b55fba5ec5281be25fbe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185313"
 ---
 # <a name="type-visualizer-and-custom-viewer"></a>Tür Görselleştiricisi ve Özel Görüntüleyici
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Tür görselleştiricisi bir veri parçasını çok belirli bir biçimde görüntüleyen bir bileşenidir. Bu biçim tamamen Görselleştirici uygulayan kadar son kullanıcıya veya bir üçüncü taraf sağlayıcı görselleştiriciler, olabilir.  
+Tür görselleştiricisi, verileri çok özel bir biçimde görüntüleyen bir bileşendir. Bu biçim, görselleştiricinin uygulayıcısı 'na tamamen sahiptir, son kullanıcı veya görselleştiricilerin bir üçüncü taraf tedarikçisidir.  
   
- Özel bir Görüntüleyici, bir veri parçasını çok belirli bir biçimde görüntüleyen bir özel ifade değerlendiricisi parçasıdır. Tamamen biçimi (EE) ifade değerlendiricisi ' uygulayan kadar olduğu anlamına gelir özel Görüntüleyici'nin uygulayan kadar bu biçimidir.  
+ Özel bir görüntüleyici, belirli bir biçimde veri parçasını görüntüleyen bir özel ifade değerlendiricisi bölümüdür. Bu biçim, özel görüntüleyicisinin uygulayıcısı 'na tamamıyla yapılır; bu, biçimin ifade değerlendiricisi (EE) uygulayıcısı 'na kadar olduğu anlamına gelir.  
   
-## <a name="support-for-type-visualizers-in-an-expression-evaluator"></a>İfade değerlendiricisi, tür Görselleştiricileri desteği  
- Bir EE arabirimleri görselleştiriciler için erişilebilir bir dizi destekleyerek tür görselleştiricileri destekleyebilir: gibi arabirimleri [IEEVisualizerService](../../extensibility/debugger/reference/ieevisualizerservice.md) ve [IEEVisualizerDataProvider](../../extensibility/debugger/reference/ieevisualizerdataprovider.md). Ancak, EE tür görselleştiricisi uygulamak için sorumlu olduğunu unutmayın: EE, dış görselleştiriciler yalnızca tür bilgisi erişmesine izin verir. Tür görselleştiricileri EE birlikte sevk ve uygun bir yerden başka bir üçüncü taraf satıcı veya bile son kullanıcı tarafından sağlanan Visual Studio yüklü.  
+## <a name="support-for-type-visualizers-in-an-expression-evaluator"></a>Ifade değerlendirici içindeki tür Görselleştiriciler için destek  
+ Bir EE, Görselleştiriciler için erişilebilen bir arabirim kümesini destekleyerek tür Görselleştiriciler destekleyebilir: [IEEVisualizerService](../../extensibility/debugger/reference/ieevisualizerservice.md) ve [IEEVisualizerDataProvider](../../extensibility/debugger/reference/ieevisualizerdataprovider.md)gibi arabirimler. Ancak, EE 'ın tür Görselleştiricisinin kendisini uygulamaktan sorumlu olmadığına not edin: EE yalnızca dış görselleştiricilerin tür bilgilerine erişmesine izin verir. Bu tür Görselleştiriciler, EE ile birlikte sevk edilebilir ve Visual Studio 'da, başka bir üçüncü taraf satıcı tarafından sağlanan ve hatta son kullanıcı tarafından sağlanan uygun yere yüklenmiş olabilir.  
   
-## <a name="support-for-custom-viewers-in-an-expression-evaluator"></a>İfade değerlendiricisi, özel görüntüleyiciler için destek  
- Özel görüntüleyiciler EE veri türünü görüntülemeye ilişkin kodu sağladığı bir EE de destekler. Özel bir Görüntüleyici uygulayan [IDebugCustomViewer](../../extensibility/debugger/reference/idebugcustomviewer.md) tüm görevleri, verileri hangi biçimde göstermenin işleyen arabirimi istenen; Görüntüleyici görünümü üzerinde tam denetime sahiptir ve değiştirilecek veri bile izin verebilirsiniz. Ürün gönderildiğinde EE tarafından sağlanan herhangi bir özel görüntüleyiciler EE ile gelir.  
+## <a name="support-for-custom-viewers-in-an-expression-evaluator"></a>Ifade Değerlendiricisi içinde özel görüntüleyiciler için destek  
+ EE Ayrıca, EE 'ın veri türünü görüntülemek için kod sağladığı özel görüntüleyiciler de destekleyebilir. Özel bir Görüntüleyici [IDebugCustomViewer](../../extensibility/debugger/reference/idebugcustomviewer.md) arabirimini uygular, bu da her türlü biçimde verileri gösteren tüm görevleri işler. Görüntüleyici, ekran üzerinde tam denetime sahiptir ve verilerin değiştirilmesine de izin verebilir. EE tarafından sağlanan tüm özel görüntüleyiciler, ürün sevk edildiğinde EE ile gelir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hata ayıklayıcı bileşenleri](../../extensibility/debugger/debugger-components.md)   
  [İfade değerlendirici](../../extensibility/debugger/expression-evaluator.md)   
  [Hata ayıklama altyapısı](../../extensibility/debugger/debug-engine.md)   
  [IDebugCustomViewer](../../extensibility/debugger/reference/idebugcustomviewer.md)   
- [IEEVisualizerService](../../extensibility/debugger/reference/ieevisualizerservice.md)   
+ [Ieevisualizerhizmeti](../../extensibility/debugger/reference/ieevisualizerservice.md)   
  [IEEVisualizerDataProvider](../../extensibility/debugger/reference/ieevisualizerdataprovider.md)

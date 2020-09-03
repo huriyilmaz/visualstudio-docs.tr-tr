@@ -12,14 +12,14 @@ ms.assetid: abbd3c3c-3a6e-4539-bd6c-a5891dead234
 caps.latest.revision: 12
 manager: jillfra
 ms.openlocfilehash: 1f3b0c173d5d1f4b3642bf61d2cca9fb6fd231e6
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850321"
 ---
 # <a name="how-to-create-a-toolbox-control-that-uses-windows-forms"></a>Nasıl yapılır: Windows Forms kullanan bir araç kutusu denetimi oluşturma
-[!INCLUDE[vssdk_dev11_long](../includes/vssdk-dev11-long-md.md)] eklenen Windows Forms araç kutusu denetim şablonu, uzantı yüklendiğinde **araç kutusuna** otomatik olarak eklenen Windows Forms denetimleri oluşturmanıza imkan tanır. Bu konu başlığı altında, diğer kullanıcılara dağıtabileceğiniz bir **araç kutusu** denetimi oluşturmak için şablonunun nasıl kullanılacağı gösterilmektedir.  
+' De yer alan Windows Forms araç kutusu denetim şablonu, [!INCLUDE[vssdk_dev11_long](../includes/vssdk-dev11-long-md.md)] uzantı yüklendiğinde **araç kutusuna** otomatik olarak eklenen Windows Forms denetimleri oluşturmanızı sağlar. Bu konu başlığı altında, diğer kullanıcılara dağıtabileceğiniz bir **araç kutusu** denetimi oluşturmak için şablonunun nasıl kullanılacağı gösterilmektedir.  
   
 > [!NOTE]
 > Visual Studio SDK 'sını nasıl indirecek hakkında bilgi edinmek için MSDN Web sitesinde [Visual Studio genişletilebilirlik Geliştirici Merkezi](https://msdn.microsoft.com/vsx/default.aspx) ' ne bakın.  
@@ -33,7 +33,7 @@ ms.locfileid: "75850321"
   
 2. **Yeni proje** iletişim kutusunda, **yüklü şablonlar**' ın altında, tercih ettiğiniz programlama dilinin düğümüne tıklayın ve ardından **genişletilebilirlik**' e tıklayın. Proje türleri listesinde **Windows Forms araç kutusu denetimi**' ni seçin.  
   
-3. **Ad** kutusuna proje için kullanmak istediğiniz adı yazın. **Tamam**'ı tıklatın.  
+3. **Ad** kutusuna proje için kullanmak istediğiniz adı yazın. **Tamam**’a tıklayın.  
   
      Visual Studio, bir kullanıcı denetimi, denetimin **araç kutusuna**yerleştirilecek bir öznitelik ve dağıtım IÇIN bir VSIX bildirimi içeren bir çözüm oluşturur.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "75850321"
   
 2. Denetimi uygulayan kısmi sınıfın tanımında sınıf adına sağ tıklayın, yeniden **Düzenle**' ye ve ardından **Yeniden Adlandır**' a tıklayın. Sınıf adını, denetim yüklendiğinde **araç kutusunda** görüntülenmesini istediğiniz adla değiştirin.  
   
-3. Sınıf tanımının hemen üstünde, `ProvideToolboxControl` Attribute bildiriminde, ilk parametrenin değerini **araç kutusunda**denetimi barındıracak olan öğe grubunun adıyla değiştirin.  
+3. Sınıf tanımının hemen üzerinde, `ProvideToolboxControl` öznitelik bildiriminde, ilk parametrenin değerini **araç kutusunda**denetimi barındıracak olan öğe grubunun adıyla değiştirin.  
   
-     Aşağıdaki örnek, `General` öğesi grubunda `Counter` adlı bir denetim için `ProvideToolboxControl` özniteliğini ve ayarlanmış sınıf tanımını gösterir.  
+     Aşağıdaki örnek, `ProvideToolboxControl` öğe grubunda adlı bir denetim için özniteliğini ve ayarlanmış sınıf tanımını gösterir `Counter` `General` .  
   
      [!code-csharp[ToolboxControlWinForms#07](../snippets/csharp/VS_Snippets_VSSDK/toolboxcontrolwinforms/cs/toolboxcontrol.cs#07)]  
   

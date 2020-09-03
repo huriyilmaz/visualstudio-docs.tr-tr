@@ -12,45 +12,45 @@ caps.latest.revision: 52
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 64ab627d785e8b00b5159969a01dc1102df30359
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184933"
 ---
 # <a name="adding-a-menu-to-the-visual-studio-menu-bar"></a>Visual Studio Menü Çubuğuna Menü Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu izlenecek yol, Visual Studio tümleşik geliştirme ortamı (IDE) menü çubuğuna menü ekleme işlemi gösterilmektedir. Menü kategorileri gibi IDE menü çubuğu içeren **dosya**, **Düzenle**, **görünümü**, **penceresi**, ve **yardımcı** .
+Bu izlenecek yol, Visual Studio tümleşik geliştirme ortamının (IDE) menü çubuğuna bir menünün nasıl ekleneceğini gösterir. IDE menü çubuğu, **Dosya**, **düzenleme**, **görüntüleme**, **pencere**ve **Yardım**gibi menü kategorilerini içerir.
 
- Visual Studio menü çubuğunda yeni menü eklemeden önce komutlarınızı içinde varolan bir menüye yerleştirilmiş olup olmadığını göz önünde bulundurun. Komut yerleşimi hakkında daha fazla bilgi için bkz: [menüler ve komutlar için Visual Studio](../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md).
+ Visual Studio menü çubuğuna yeni bir menü eklemeden önce, komutlarınızın mevcut bir menü içine yerleştirilmesi gerekip gerekmediğini göz önünde bulundurun. Komut yerleşimi hakkında daha fazla bilgi için bkz. [Visual Studio Için menüler ve komutlar](../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md).
 
- Menüleri projenin .vsct dosyasında bildirilir. Menüler ve .vsct dosyaları hakkında daha fazla bilgi için bkz: [komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md).
+ Menüler, projenin. vsct dosyasında bildirilmiştir. Menüler ve. vsct dosyaları hakkında daha fazla bilgi için bkz. [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md).
 
- Bu izlenecek yolu tamamlayarak adlı bir menü oluşturabilirsiniz **TestMenu** , bir komut içerir.
+ Bu yönergeyi tamamlayarak, bir komut içeren **TestMenu** adlı bir menü oluşturabilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
- Visual Studio 2015'ten başlayarak, size Visual Studio SDK İndirme Merkezi'nden yüklemeyin. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için [Visual Studio SDK'sını yükleme](../extensibility/installing-the-visual-studio-sdk.md).
+ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="creating-a-vsix-project-that-has-a-custom-command-item-template"></a>Özel komut öğe şablonu bir VSIX projesi oluşturma
+## <a name="creating-a-vsix-project-that-has-a-custom-command-item-template"></a>Özel bir komut öğesi şablonu olan bir VSıX projesi oluşturma
 
-1. Adlı bir VSIX projesi oluşturun `TopLevelMenu`. VSIX proje şablonunda bulabilirsiniz **yeni proje** iletişim altında **Visual C#**  / **genişletilebilirlik**.  Daha fazla bilgi için [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
+1. Adlı bir VSıX projesi oluşturun `TopLevelMenu` . VSIX proje şablonunu, **Visual C#** genişletilebilirliği altında **Yeni proje** iletişim kutusunda bulabilirsiniz  /  **Extensibility**.  Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
 
-2. Projeyi açtığında, adlı bir özel komut öğesi şablonu ekleme **TestCommand**. İçinde **Çözüm Gezgini**, proje düğümüne sağ tıklayıp **Ekle / yeni öğe**. İçinde **Yeni Öğe Ekle** iletişim kutusunda, Git **Visual C# / genişletilebilirlik** seçip **özel komut**. İçinde **adı** alan penceresinin en altında komut dosyası adı için değiştirme **TestCommand.cs**.
+2. Proje açıldığında, **TestCommand**adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Ekle/yeni öğe**' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#/genişletilebilirlik** ' e gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını **TestCommand.cs**olarak değiştirin.
 
-## <a name="creating-a-menu-on-the-ide-menu-bar"></a>IDE menü çubuğuna menü oluşturma
+## <a name="creating-a-menu-on-the-ide-menu-bar"></a>IDE menü çubuğunda bir menü oluşturma
 
 #### <a name="to-create-a-menu"></a>Bir menü oluşturmak için
 
-1. İçinde **Çözüm Gezgini**, TestCommandPackage.vsct açın.
+1. **Çözüm Gezgini**' de TestCommandPackage. vsct öğesini açın.
 
-     Dosyanın sonunda, var olan bir \<sembolleri > içeren birkaç düğüm \<GuidSymbol > düğümleri. GuidTestCommandPackageCmdSet adlı düğümünde, yeni bir sembol, aşağıdaki şekilde ekleyin:
+     Dosyanın sonunda, \<Symbols> birkaç düğüm içeren bir düğüm vardır \<GuidSymbol> . GuidTestCommandPackageCmdSet adlı düğümde aşağıdaki şekilde yeni bir sembol ekleyin:
 
     ```xml
     <IDSymbol name="TopLevelMenu" value="0x1021"/>
     ```
 
-2. Boş bir oluşturma \<menüleri > düğümünde \<komutları > düğümü hemen önce \<Gruplar >. İçinde \<menüleri > düğümü Ekle bir \<menüsü > düğümü, aşağıdaki gibi:
+2. \<Menus> \<Commands> Düğümde yalnızca daha önce boş bir düğüm oluşturun \<Groups> . Düğümünde, \<Menus> \<Menu> aşağıdaki gibi bir düğüm ekleyin:
 
     ```xml
     <Menus>
@@ -65,13 +65,13 @@ Bu izlenecek yol, Visual Studio tümleşik geliştirme ortamı (IDE) menü çubu
     </Menus>
     ```
 
-     `guid` Ve `id` menü değerlerini komut kümesi ve belirli menü komut kümesinde belirtin.
+     `guid`Menünün ve `id` değerleri komut kümesindeki komut kümesini ve belirli menüyü belirler.
 
-     `guid` Ve `id` değerler üst menü Araçlar ve eklentiler menüleri içeren Visual Studio menü çubuğunun bölümüne getirin.
+     `guid` `id` Üst öğesi ve değerleri, Visual Studio menü çubuğunun araç ve eklenti menülerini içeren bölümündeki menüyü konumlandırır.
 
-     Değerini `CommandName` dize menü öğesi metni görüntüleneceğini belirtir.
+     Dizenin değeri, `CommandName` metnin menü öğesinde görünmesi gerektiğini belirtir.
 
-3. İçinde \<grupları > bölümünde, bulma \<grubu > değiştirip \<üst > öğesini eklediğimiz yöntemlerin menüsünde:
+3. \<Groups>Bölümünde \<Group> öğesini bulun ve \<Parent> öğesini yeni eklediğimiz menüye işaret etmek üzere değiştirin:
 
     ```csharp
     <Groups>
@@ -81,19 +81,19 @@ Bu izlenecek yol, Visual Studio tümleşik geliştirme ortamı (IDE) menü çubu
         </Groups>
     ```
 
-     Bu yeni menü grubunun parçası yapar.
+     Bu, grubun yeni menünün bir parçasını oluşturur.
 
-4. Bulma `Buttons` bölümü. Dikkat [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] paket Şablonu oluşturulan bir `Button` üst kümesine sahip öğe `MyMenuGroup`. Sonuç olarak, bu komut menünüzde görünür.
+4. Bölümünü bulun `Buttons` . [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Paket şablonunun üst öğesi olarak ayarlanmış bir öğe ürettiğine dikkat edin `Button` `MyMenuGroup` . Sonuç olarak, bu komut menüde görünür.
 
-## <a name="building-and-testing-the-extension"></a>Oluşturma ve uzantıyı test etme
+## <a name="building-and-testing-the-extension"></a>Uzantıyı derleme ve test etme
 
-1. Projeyi oluşturmak ve hata ayıklamaya başlayın. Bir örneği deneysel örneğinde görüntülenmesi gerekir.
+1. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örneğin bir örneği görünmelidir.
 
-2. Deneysel örneğinin menü çubuğunda içermesi gereken bir **TestMenu** menüsü.
+2. Deneysel örnekteki menü çubuğu bir **TestMenu** menüsü içermelidir.
 
-3. Üzerinde **TestMenu** menüsünde tıklatın **Test komutu çağırmak**.
+3. **TestMenu** menüsünde **test komutunu çağır**' a tıklayın.
 
-     Bir ileti kutusu, görünür ve "TopLevelMenu.TestCommand.MenuItemCallback() içinde TestCommand paket" iletisini görüntüler. Bu, yeni bir komut çalıştığını gösterir.
+     İleti kutusu görünmelidir ve "TestCommand paketini TopLevelMenu. TestCommand. Menuıitemcallback ()" Içinde görüntüler. Bu, yeni komutun çalışıp çalışmadığını gösterir.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Komutlar, Menüler ve Araç Çubukları](../extensibility/internals/commands-menus-and-toolbars.md)

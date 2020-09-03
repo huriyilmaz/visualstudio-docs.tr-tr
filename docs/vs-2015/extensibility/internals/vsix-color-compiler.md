@@ -7,10 +7,10 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c92fb2ad45bc0fb09c7e9bd8e87db38c13a99736
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546750"
 ---
 # <a name="vsix-color-compiler"></a>VSIX Renk Derleyicisi
@@ -79,7 +79,7 @@ Visual Studio Uzantı rengi derleyici aracı, var olan Visual Studio temaları i
 |Name|Istenir Kategorinin adı|  
 |GUID|Istenir Kategorinin GUID 'SI (GUID biçimlendirmesine uymalıdır)|  
   
- **Renk**  
+ **Color**  
   
  \<Color>Öğesi bir bileşen veya Kullanıcı arabirimi durumu için bir renk tanımlar. Bir renk için tercih edilen adlandırma şeması [UI türü] [State]. Gereksiz olduğu için "Color" sözcüğünü kullanmayın. Renk, öğe türünü ve durumları ya da rengin uygulanacağı "durumu" açıkça göstermelidir. Bir renk boş olmamalı ve bir ve öğelerinin bir veya her ikisini de içermelidir \<Background> \<Foreground> . Renk öğeleri şöyle tanımlanır:  
   

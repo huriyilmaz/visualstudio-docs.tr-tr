@@ -1,5 +1,5 @@
 ---
-title: Eski API'yi kullanarak metin arabelleğini erişme | Microsoft Docs
+title: Eski API kullanarak metin arabelleğine erişme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,33 +11,33 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f2cfbd84bc4f9298358a2a2d1ba87f76d6e5303c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185001"
 ---
 # <a name="accessing-the-text-buffer-by-using-the-legacy-api"></a>Eski API'yi Kullanarak Metin Arabelleğine Erişme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Metin, metin akışları ve dosya kalıcılığına yönetmekten sorumludur. Arabellek okuma veya yazma diğer biçimlere rağmen arabellek ile tüm sıradan iletişim Unicode kullanılarak gerçekleştirilir. Eski API'leri, metin arabelleğini bir - veya iki boyutlu bir koordinat sistemini arabellekteki karakterin konumlarını belirlemek için kullanabilirsiniz.  
+Metin, metin akışlarını ve dosya kalıcılığını yönetmekten sorumludur. Arabellek diğer biçimleri okuyup yazabilir, ancak arabellek ile olan tüm sıradan iletişim Unicode kullanılarak gerçekleştirilir. Eski API 'lerde, metin arabelleği, arabellekteki karakter konumlarını belirlemek için bir veya iki boyutlu bir koordinat sistemi kullanabilir.  
   
-## <a name="one--and-two-dimension-coordinate-systems"></a>Tek ve iki boyutu koordinat sistemleri  
- Tek boyutlu bir koordinat konumu ilk karakter bir karakterin konumu arabellekteki 147 gibi temel alır. Kullandığınız <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream> tek boyutlu bir arabellek konuma erişmek için arabirim. İki boyutlu bir koordinat sistemini satır ve dizin çiftlerine dayanarak temel alır. Örneğin, bir karakter 43 arabellekte 5 satırında 43, o satırdaki ilk karakterin sağındaki beş karakter olabilir. Arabellek kullanarak iki boyutlu bir konuma erişim <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> arabirimi. Hem <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream> arabirimleri metin arabelleği nesne tarafından uygulanan (<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>) ve birbirinden kullanarak erişilebilir `QueryInterface`. Aşağıdaki diyagramda bu ve diğer temel arabirimleri gösteren <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>.  
+## <a name="one--and-two-dimension-coordinate-systems"></a>Tek ve Iki boyutlu koordinat sistemleri  
+ Tek boyutlu koordinat konumu, arabellekteki ilk karakterden (147 gibi) bir karakterin konumunu temel alır. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream>Arabellekte tek boyutlu bir konuma erişmek için arabirimini kullanırsınız. İki boyutlu koordinat sistemi, çizgi ve Dizin çiftlerine dayalıdır. Örneğin, 43 konumundaki arabellekteki bir karakter, 5.43 satırda, bu satırdaki ilk karakterin sağında beş karakterden oluşmalıdır. Arabirimi kullanarak arabellekte iki boyutlu bir konuma erişirsiniz <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> . Hem <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> hem de <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream> arabirimleri metin arabelleği nesnesi () tarafından uygulanır <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> ve kullanılarak birbirleriyle erişilebilir `QueryInterface` . Aşağıdaki diyagramda bu ve diğer temel arabirimler gösterilmektedir <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> .  
   
  ![Metin arabelleği nesnesi](../extensibility/media/vstextbuffer.gif "vsTextBuffer")  
 Metin arabelleği nesnesi  
   
- Metin arabelleğinde ya da koordinat sistemini çalışır, ancak iki boyutlu koordinatlarını kullanmak için optimize edilmiştir. Tek boyutlu bir koordinat sistemi performans yükü oluşturabilirsiniz. Bu nedenle, mümkün olduğunda iki boyutlu koordinat sistemini kullanın.  
+ Koordinat sistemi metin arabelleğinde çalışsa da, iki boyutlu koordinatları kullanmak en iyi duruma getirilir. Tek boyutlu koordinat sistemi, performans yükü oluşturabilir. Bu nedenle, mümkün olan her durumda iki boyutlu koordinat sistemini kullanın.  
   
- Arabellek ikinci sorumluluk dosya kalıcılığına metindir. Bunu yapmak için metin arabelleği nesnesi uygulayan <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> ve proje öğeleri için belge veri nesnesi bileşeni ve kalıcı ilgili diğer ortam bileşenleri olarak görev yapar. Daha fazla bilgi için [açma ve kaydetme proje öğeleri](../extensibility/internals/opening-and-saving-project-items.md).  
+ Metin arabelleğinin ikinci sorumluluğu dosya kalıcılığı. Bunu yapmak için, metin buffer nesnesi, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> Proje öğeleri ve Kalıcılık ile ilgili diğer ortam bileşenleri için belge veri nesnesi bileşeni olarak davranır ve çalışır. Daha fazla bilgi için bkz. [Proje öğelerini açma ve kaydetme](../extensibility/internals/opening-and-saving-project-items.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Eski API'yi Kullanarak Görünüm Ayarlarını Değiştirme](../extensibility/changing-view-settings-by-using-the-legacy-api.md)  
- Eski API'yi kullanarak görünüm ayarlarını değiştirme açıklanmaktadır.  
+ Eski API kullanılarak Görünüm ayarlarının nasıl değiştirileceğini açıklar.  
   
  [Genel Ayarları İzlemek İçin Metin Yöneticisini Kullanma](../extensibility/using-the-text-manager-to-monitor-global-settings.md)  
- Genel ayarlar izlemek için metin Yöneticisi'ni kullanmayı açıklar...  
+ Genel ayarları izlemek için metin Yöneticisi 'nin nasıl kullanılacağını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Temel Düzenleyicinin İçinde](../extensibility/inside-the-core-editor.md)

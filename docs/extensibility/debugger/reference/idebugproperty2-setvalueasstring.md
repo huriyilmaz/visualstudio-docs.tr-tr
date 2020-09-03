@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::SetValueAsString | Microsoft Dokümanlar
+title: 'IDebugProperty2:: SetValueAsString | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 112ded163f38b93e9918387d8ca6beafb8282647
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721244"
 ---
 # <a name="idebugproperty2setvalueasstring"></a>IDebugProperty2::SetValueAsString
 Belirli bir dizeden bir özelliğin değerini ayarlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT SetValueAsString ( 
@@ -45,21 +45,21 @@ int SetValueAsString ( 
 
 ## <a name="parameters"></a>Parametreler
 `pszValue`\
-[içinde] Ayarlanacak değeri içeren bir dize.
+'ndaki Ayarlanacak değeri içeren bir dize.
 
 `nRadix`\
-[içinde] Herhangi bir sayısal bilgi nin yorumlanmasında kullanılacak bir radix. Bu, radix'i otomatik olarak belirlemeye çalışmak için 0 olabilir.
+'ndaki Herhangi bir sayısal bilgiyi yorumlamak için kullanılan bir taban. Bu, taban x 'i otomatik olarak belirlemeyi denemek için 0 olabilir.
 
 `dwTimeout`\
-[içinde] Bu yöntemden dönmeden önce beklemek için milisaniye cinsinden en büyük süreyi belirtir. Süresiz beklemek için kullanın. `INFINITE`
+'ndaki Bu yöntemden dönmeden önce beklenecek en uzun süreyi milisaniye olarak belirtir. `INFINITE`Sonsuza kadar beklemek için kullanın.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde hata kodu döndürür. Aşağıdaki tablo diğer olası değerleri gösterir.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür. Aşağıdaki tabloda olası diğer değerler gösterilmektedir.
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |`E_SETVALUE_VALUE_CANNOT_BE_SET`|Dize bir özellik değerine dönüştürülemedi veya özellik değeri ayarlanamadı.|
-|`E_SETVALUE_VALUE_IS_READONLY`|Tesis salt okunur.|
+|`E_SETVALUE_VALUE_IS_READONLY`|Özellik salt okunurdur.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

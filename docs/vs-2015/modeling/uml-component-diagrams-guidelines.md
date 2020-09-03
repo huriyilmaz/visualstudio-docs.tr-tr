@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 99f2b67d264edcaab5272d0224d4450ee2e8a6f6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74297155"
 ---
 # <a name="uml-component-diagrams-guidelines"></a>UML Bileşen Diyagramları: Yönergeler
@@ -41,7 +41,7 @@ Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bile�
 
   Bileşen diyagramını, tasarımın kullandığı veya kullanacağı dile ya da platforma bakılmaksızın tasarımınızı göstermek için kullanabilirsiniz.
 
-## <a name="OtherDiagrams"></a>Diğer diyagramlarla ilişki
+## <a name="relationship-to-other-diagrams"></a><a name="OtherDiagrams"></a> Diğer diyagramlarla ilişki
  Bileşen diyagramını başka diyagramlarla birlikte kullanabilirsiniz.
 
 |Başka diyagram|Tasarımınızın bu yönlerini tartışmanıza ve iletişim kurmanıza yardımcı olur|
@@ -51,7 +51,7 @@ Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bile�
 |Etkinlik Diyagramları|-Gelen iletilere yanıt olarak bir bileşen tarafından gerçekleştirilen iç işleme.<br /><br /> Daha fazla bilgi için bkz. [UML etkinlik diyagramları: yönergeler](../modeling/uml-activity-diagrams-guidelines.md).|
 |Katman Diyagramları|-Bileşenleriniz için mantıksal mimari katmanları.<br /><br /> Daha fazla bilgi için bkz. [Katman diyagramları: başvuru](../modeling/layer-diagrams-reference.md).|
 
-## <a name="Basics"></a>Bileşen diyagramları çizmek için temel adımlar
+## <a name="basic-steps-for-drawing-component-diagrams"></a><a name="Basics"></a> Bileşen diyagramları çizmek için temel adımlar
  Bileşen diyagramlarındaki öğeler hakkında başvuru bilgileri için bkz. [UML Bileşen diyagramları: başvuru](../modeling/uml-component-diagrams-reference.md).
 
  Tasarım sürecinde Bileşen diyagramlarının nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [uygulamanızın mimarisini modelleme](../modeling/model-your-app-s-architecture.md).
@@ -82,7 +82,7 @@ Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bile�
 
 1. Araç kutusunda **bileşen** ' e tıklayın ve ardından diyagramın boş bir kısmına tıklayın.
 
-     \- veya-
+     \- veya
 
      Varolan bileşeni kopyalayıp yapıştırın.
 
@@ -146,7 +146,7 @@ Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bile�
 
 - **UML Model Gezgini** 'nde arabirimi bulun ve ardından bileşeni üzerine sürükleyin.
 
-     veya
+     -veya-
 
 - Başvuruyu diyagramdan arabirime kopyalayıp yapıştırın.
 
@@ -161,7 +161,7 @@ Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bile�
 
     3. Gerekli bir arabirim oluşturmak isterseniz, eylem etiketine tıklayın ve **gerekli arabirime Dönüştür ' e**tıklayın.
 
-## <a name="Parts"></a>Bir bileşenin Iç parçalarını gösterme
+## <a name="showing-the-internal-parts-of-a-component"></a><a name="Parts"></a> Bir bileşenin Iç parçalarını gösterme
  ![İç parçaları gösteren bileşen diyagramı](../modeling/media/uml-compshowing.png "UML_CompShowing")
 
  Nasıl birbiriyle etkileşim kuran daha küçük bileşenlerden oluştuğunu göstermek için bileşene (1) parçalar (3) yerleştirebilirsiniz.
@@ -188,13 +188,13 @@ Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bile�
 
          **UML Model Gezgini**'nde yeni bir bileşen oluşturulur. Bu, yeni parçanın türüdür.
 
-         \- veya-
+         \- veya
 
          Varolan bileşeni UML Model Gezgini'nden ana bileşen üzerine sürükleyin.
 
          Yeni parça (3) ana bileşenin içinde görünür. Türü UML Model Gezgini'nden sürüklediğiniz bileşendir.
 
-         \- veya-
+         \- veya
 
          Diyagramda veya UML Model Gezgini ' nde bir bileşene sağ tıklayın ve ardından **Kopyala**' ya tıklayın.
 
@@ -206,7 +206,7 @@ Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bile�
 
     3. Yeni parçaya sağlanan ve gerekli arabirimleri (4, 5) ekleyebilirsiniz. **Belirtilen arabirime** veya **gerekli arabirim** aracına tıklayın ve ardından bölümüne tıklayın.
 
-         \- veya-
+         \- veya
 
          **UML Model Gezgini** ' nden varolan bir arabirimi bölümüne sürükleyin.
 
@@ -225,7 +225,7 @@ Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bile�
 ### <a name="showing-the-parts-of-a-part"></a>Bir Parçanın Parçalarını Gösterme
  Bir bileşeni parçalara ayırdıktan sonra, parça türlerinin her birini kendi iç parçalarına ayırabilirsiniz.
 
- Ayrışımın her katmanının, ayrı bileşen diyagramında tutulması en kolay yoldur. İlk önce parçanın türünü bulmanız gerekir. Örneğin, çizimde bölümlerden biri `DNCustomerServer`olarak adlandırılır ve türü `CustomerServer`adlı bir bileşendir. Bu türü UML Model Gezgini'nde bulabilir ve onu başka bir diyagrama yerleştirebilirsiniz. Daha sonra onun kendi iç parçalarını oluşturabilirsiniz.
+ Ayrışımın her katmanının, ayrı bileşen diyagramında tutulması en kolay yoldur. İlk önce parçanın türünü bulmanız gerekir. Örneğin, çizimde bölümlerden biri adlandırılır `DNCustomerServer` ve türü adlı bir bileşendir `CustomerServer` . Bu türü UML Model Gezgini'nde bulabilir ve onu başka bir diyagrama yerleştirebilirsiniz. Daha sonra onun kendi iç parçalarını oluşturabilirsiniz.
 
 ##### <a name="to-place-a-parts-type-on-a-diagram"></a>Diyagrama parçanın türünü yerleştirmek için
 
@@ -255,7 +255,7 @@ Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bile�
 
      Artık parçaları içine ekleyebilirsiniz.
 
-## <a name="Designing"></a>Bileşeni tasarlama
+## <a name="designing-the-component"></a><a name="Designing"></a> Bileşeni tasarlama
 
 ### <a name="describing-how-the-parts-collaborate"></a>Parçaların Birlikte Nasıl Çalıştığını Açıklama
  Parçaların ana bileşene ulaşan iletiye yanıt olarak birlikte nasıl çalıştığını göstermek için sıralı diyagram çizebilirsiniz.

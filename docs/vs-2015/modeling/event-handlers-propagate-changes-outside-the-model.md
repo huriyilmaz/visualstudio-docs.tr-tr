@@ -13,36 +13,36 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a23a8d28f336728789fe9cbbe38f965cc56763d7
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74295519"
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>Değişiklikleri Modelin Dışına Yayan Olay İşleyicileri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Görselleştirme ve modelleme SDK 'sında mağaza dışı değişkenler, dosyalar, diğer mağazalardaki modeller veya diğer [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantıları gibi mağaza dışındaki kaynaklara değişiklikleri yaymak için depo olay işleyicilerini tanımlayabilirsiniz. Mağaza olay işleyicileri, tetikleme olayının gerçekleştiği işlemin sonundan sonra yürütülür. Bunlar ayrıca bir geri alma veya yineleme işleminde yürütülür. Bu nedenle, mağaza kurallarından farklı olarak mağaza olayları, deponun dışındaki değerleri güncelleştirmek için en yararlı seçenektir. .NET olaylarının aksine, Store olay işleyicileri bir sınıfı dinlemek için kaydedilir: her örnek için ayrı bir işleyici kaydetmeniz gerekmez. Değişiklikleri işlemek için farklı yollar arasından nasıl seçim yapılacağı hakkında daha fazla bilgi için bkz. [yanıt verme ve yayma değişiklikleri](../modeling/responding-to-and-propagating-changes.md).
+Görselleştirme ve modelleme SDK 'sında mağaza dışı değişkenler, dosyalar, diğer mağazalardaki modeller veya diğer uzantılar gibi mağaza dışındaki kaynaklardaki değişiklikleri yaymak için depo olay işleyicilerini tanımlayabilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Mağaza olay işleyicileri, tetikleme olayının gerçekleştiği işlemin sonundan sonra yürütülür. Bunlar ayrıca bir geri alma veya yineleme işleminde yürütülür. Bu nedenle, mağaza kurallarından farklı olarak mağaza olayları, deponun dışındaki değerleri güncelleştirmek için en yararlı seçenektir. .NET olaylarının aksine, Store olay işleyicileri bir sınıfı dinlemek için kaydedilir: her örnek için ayrı bir işleyici kaydetmeniz gerekmez. Değişiklikleri işlemek için farklı yollar arasından nasıl seçim yapılacağı hakkında daha fazla bilgi için bkz. [yanıt verme ve yayma değişiklikleri](../modeling/responding-to-and-propagating-changes.md).
 
  Grafik yüzeyi ve diğer kullanıcı arabirimi denetimleri, depo olayları tarafından işlenebilen dış kaynak örnekleridir.
 
 ### <a name="to-define-a-store-event"></a>Bir mağaza olayını tanımlamak için
 
-1. İzlemek istediğiniz olay türünü seçin. Tam liste için <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory>özelliklerine bakın. Her özellik bir olay türüne karşılık gelir. En sık kullanılan olay türleri şunlardır:
+1. İzlemek istediğiniz olay türünü seçin. Tam liste için özelliklerine bakın <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory> . Her özellik bir olay türüne karşılık gelir. En sık kullanılan olay türleri şunlardır:
 
    - `ElementAdded` – bir model öğesi, ilişki bağlantısı, şekil veya bağlayıcı oluşturulduğunda tetiklenir.
 
-   - ElementPropertyChanged – bir `Normal` alanı özelliğinin değeri değiştiğinde tetiklenir. Olay yalnızca yeni ve eski değerler eşit değilse tetiklenir. Olay, hesaplanan ve özel depolama özelliklerine uygulanamaz.
+   - ElementPropertyChanged – bir `Normal` alan özelliğinin değeri değiştiğinde tetiklenir. Olay yalnızca yeni ve eski değerler eşit değilse tetiklenir. Olay, hesaplanan ve özel depolama özelliklerine uygulanamaz.
 
-        İlişki bağlantılarına karşılık gelen rol özelliklerine uygulanamaz. Bunun yerine, etki alanı ilişkisini izlemek için `ElementAdded` kullanın.
+        İlişki bağlantılarına karşılık gelen rol özelliklerine uygulanamaz. Bunun yerine, `ElementAdded` etki alanı ilişkisini izlemek için kullanın.
 
    - `ElementDeleted` – bir model öğesi, ilişki, şekil veya bağlayıcı silindikten sonra tetiklenir. Öğesinin özellik değerlerine erişmeye devam edebilirsiniz, ancak diğer öğelerle hiçbir ilişkisi olmayacaktır.
 
 2. **DslPackage** projesindeki ayrı bir kod dosyasında, _yourdsl_**DocData** için kısmi bir sınıf tanımı ekleyin.
 
-3. Aşağıdaki örnekte olduğu gibi olayın kodunu Yöntem olarak yazın. `DocData`erişmek istemediğiniz müddetçe `static`olabilir.
+3. Aşağıdaki örnekte olduğu gibi olayın kodunu Yöntem olarak yazın. `static`Erişmek istemediğiniz müddetçe olabilir `DocData` .
 
-4. İşleyiciyi kaydetmek için `OnDocumentLoaded()` geçersiz kılın. Birden fazla işleyiciniz varsa, bunları aynı yerde kaydedebilirsiniz.
+4. `OnDocumentLoaded()`İşleyiciyi kaydetmek için geçersiz kılın. Birden fazla işleyiciniz varsa, bunları aynı yerde kaydedebilirsiniz.
 
    Kayıt kodunun konumu önemli değil. `DocView.LoadView()` alternatif bir konumdur.
 
@@ -166,9 +166,9 @@ private static void AlbumTitleAdjuster(object sender,
 
  Mağazayı güncelleştiren bir olay yazarsanız:
 
-- Geri al 'da model öğelerinde değişiklik yapmaktan kaçınmak için `store.InUndoRedoOrRollback` kullanın. İşlem Yöneticisi depodaki her şeyi özgün durumuna geri ayarlayacaktır.
+- `store.InUndoRedoOrRollback`Geri al 'da model öğelerinde değişiklik yapmaktan kaçınmak için kullanın. İşlem Yöneticisi depodaki her şeyi özgün durumuna geri ayarlayacaktır.
 
-- Model dosyadan yüklenirken değişiklik yapmaktan kaçınmak için `store.InSerializationTransaction` kullanın.
+- `store.InSerializationTransaction`Model dosyadan yüklenirken değişiklik yapmaktan kaçınmak için kullanın.
 
 - Değişiklikleriniz, daha fazla olayın tetiklenmesi için yol açacaktır. Sonsuz bir döngüden kaçındığınızdan emin olun.
 

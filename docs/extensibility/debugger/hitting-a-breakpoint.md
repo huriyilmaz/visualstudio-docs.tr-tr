@@ -1,5 +1,5 @@
 ---
-title: Bir Breakpoint vurmak | Microsoft Dokümanlar
+title: Kesme noktasına vurun | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,20 +12,20 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 6e75eb1e807e72f3bd035b5dd0534860f5fd8df2
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738573"
 ---
-# <a name="hit-a-breakpoint"></a>Bir kesme noktasına çarptım
-Aşağıdaki bölümde hata ayıklama altyapısı (DE) çalışırken veya adım atarken bir kesme noktasına çarptığında işlem açıklanır:
+# <a name="hit-a-breakpoint"></a>Kesme noktasına isabet edin
+Aşağıdaki bölümde, hata ayıklama altyapısı (DE) çalışırken veya adımla bir kesme noktasına rastlarken işlem açıklanmaktadır:
 
-## <a name="troubleshoot-a-hit-breakpoint"></a>Bir isabet kesme noktasını sorun giderme
+## <a name="troubleshoot-a-hit-breakpoint"></a>İsabet kesme noktası sorunlarını giderme
 
-1. DE, **EVENT_SYNC_STOP**olarak [bir IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md) arabirimi gönderir.
+1. DE bir [IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md) arabirimini **event_sync_stop**olarak gönderir.
 
-2. Oturum hata ayıklama yöneticisi (SDM) [iDebugBreakpointEvent2 çağırır:::EnumBreakpoints](../../extensibility/debugger/reference/idebugbreakpointevent2-enumbreakpoints.md) vuruldu kırılma noktası almak için.
+2. Oturum hata ayıklama Yöneticisi (SDM), isabet noktasını almak için [IDebugBreakpointEvent2:::](../../extensibility/debugger/reference/idebugbreakpointevent2-enumbreakpoints.md) enınınınınınınınınınınının
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklama olaylarını arama](../../extensibility/debugger/calling-debugger-events.md)
+- [Hata ayıklayıcı olaylarını çağırma](../../extensibility/debugger/calling-debugger-events.md)

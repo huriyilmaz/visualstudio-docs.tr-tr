@@ -1,5 +1,5 @@
 ---
-title: Değişken bildirimini başvuruya yakın taşıma
+title: Değişken bildirimini başvuru yakınına taşı
 ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
@@ -11,38 +11,38 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 1339f4a9d151ef41d9a35c5aac0a96f220a297b3
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79093998"
 ---
-# <a name="move-declaration-near-reference-refactoring"></a>Bildirgeyi referans refactoring'e yaklaştır
+# <a name="move-declaration-near-reference-refactoring"></a>Bildirimi başvuru yeniden düzenlemesi yakınında taşı
 
-Bu yeniden düzenleme aşağıdakiler için geçerlidir:
+Bu yeniden düzenleme için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** Değişken bildirimleri kullanıma daha yakın taşımanızı sağlar.
+**Ne:** Değişken bildirimlerini kullanımlarına yaklaştırmanızı sağlar.
 
-**Ne zaman:** Daha dar bir kapsamda olabilecek değişken bildirimleriniz vardır.
+**Ne zaman:** Daha dar bir kapsamda olabilecek değişken bildirimlerinizde yer vardır.
 
-**Neden:** Olduğu gibi bırakabilirsiniz, ancak bu okunabilirlik sorunları veya bilgi gizleme neden olabilir. Bu okunabilirliği artırmak için yeniden faktör için bir şanstır.
+**Neden:** Bunu olduğu gibi bırakabilirsiniz, ancak bu durum okunabilirlik sorunları veya bilgi gizlenmesine neden olabilir. Bu, okunabilirliği artırmak için yeniden düzenleme şansı sağlar.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
 1. İmlecinizi değişken bildirimine yerleştirin.
 
-1. Ardından, aşağıdakilerden birini yapın:
+1. Sonra, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Yeniden Çarpanlara Yönelikler** menüsünü tetiklemek ve Önizleme penceresinden **başvuruya yakın taşı bildirimini** seçin.
+      - **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek ve Önizleme penceresi açılır penceresinde **bildirimi başvuru yakınına taşı** ' yı seçin.
    - **Fare**
-      - Kodu sağ tıklatın, **Hızlı Eylemler ve Yeniden Faktörler** menüsünü seçin ve Önizleme penceresi açılır penceresinden **başvuruya yakın bildirimi taşı'yı** seçin.
+      - Koda sağ tıklayın, **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçip Önizleme penceresi açılır penceresinde **bildirimi başvuru yakınına taşı** ' yı seçin.
 
-1. Değişiklikten memnun olduğunuzda, menüdeki düzeltmeyi **Girin'e** veya düzeltmeye tıklayın ve değişiklikler işlenir.
+1. Değişikliğin ne kadar memnunsanız, **ENTER** tuşuna basın veya menüdeki değişikliğe tıklayın ve değişiklikler uygulanır.
 
 Örnek:
 

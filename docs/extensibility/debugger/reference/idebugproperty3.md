@@ -1,5 +1,5 @@
 ---
-title: IDebugÖzellik3 | Microsoft Dokümanlar
+title: IDebugProperty3 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,57 +13,57 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d2819724c204631112fd1a3e827126c4bc176972
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721045"
 ---
 # <a name="idebugproperty3"></a>IDebugProperty3
 Bu arabirim için destek sağlar:
 
-- Özellik ile ilişkili rasgele uzun bir dize alma.
+- Özelliği ile ilişkili rastgele bir uzun dize alma.
 
-- Tesisle benzersiz bir kimlik ilişkilendirme.
+- Benzersiz bir KIMLIĞI özelliği ile ilişkilendirme.
 
-- Özellik için özel görüntüleyenlerin listesini alma.
+- Özelliği için özel görüntüleyicilerin bir listesi alınıyor.
 
-- Ortaya çıkan hataları bildirme özelliğiyle bir özelliğin değerini ayarlama
+- Bir özelliğin değerini, ortaya çıkan hataları bildirme özelliğiyle ayarlama
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugProperty3 : IDebugProperty2
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Hata ayıklama altyapısı (DE), uzun dizeleri, özellik disleri ve özel görüntüleyenler için destek sağlamak için [IDebugProperty2'yi](../../../extensibility/debugger/reference/idebugproperty2.md) uygulayan aynı nesneye bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Hata ayıklama altyapısı (DE), uzun dizeler, özellik kimlikleri ve özel görüntüleyiciler için destek sağlamak üzere [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) uygulayan aynı nesne üzerinde bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bu arabirimi `IDebugProperty2` elde etmek için [queryinterface'i](/cpp/atl/queryinterface) bir arabirimden arayın.
+ [QueryInterface](/cpp/atl/queryinterface) `IDebugProperty2` Bu arabirimi edinmek Için arabirim üzerinde QueryInterface 'i çağırın.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
- Devralınan yöntemlere ek `IDebugProperty2`olarak, `IDebugProperty3` arabirim aşağıdaki yöntemleri ortaya çıkarır.
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+ Kaynağından devralınan yöntemlere ek olarak `IDebugProperty2` , `IDebugProperty3` arabirimi aşağıdaki yöntemleri sunar.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetStringCharLength](../../../extensibility/debugger/reference/idebugproperty3-getstringcharlength.md)|Özellik ile ilişkili dize uzunluğunu döndürür.|
+|[GetStringCharLength](../../../extensibility/debugger/reference/idebugproperty3-getstringcharlength.md)|Özelliği ile ilişkili dizenin uzunluğunu döndürür.|
 |[GetStringChars](../../../extensibility/debugger/reference/idebugproperty3-getstringchars.md)|Kullanıcı tarafından sağlanan arabellekteki dizeyi döndürür.|
-|[CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md)|Bu özellik için benzersiz bir kimlik oluşturur.|
-|[DestroyObjectID](../../../extensibility/debugger/reference/idebugproperty3-destroyobjectid.md)|Bu özellik için benzersiz kimliği yok eder.|
-|[GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md)|Bu özelliğin görüntülenebileceği özel görüntüleyenlerin sayısını döndürür.|
-|[GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)|Bu özelliğin görüntülenebileceği özel görüntüleyenlerin listesini verir.|
-|[SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md)|Bir şey yanlış gittiyse bir hata iletisi döndürerek bu özelliğin değerini ayarlar.|
+|[CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md)|Bu özellik için benzersiz bir KIMLIK oluşturur.|
+|[DestroyObjectID](../../../extensibility/debugger/reference/idebugproperty3-destroyobjectid.md)|Bu özellik için benzersiz KIMLIĞI yok eder.|
+|[GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md)|Bu özelliğin görüntülenebilmesini sağlayan özel görüntüleyicilerin sayısını döndürür.|
+|[GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)|Bu özelliğin görüntülenebilmesini sağlayan özel görüntüleyicilerin listesini döndürür.|
+|[SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md)|Bu özelliğin değerini ayarlar, bir sorun varsa hata iletisi döndürür.|
 
 ## <a name="remarks"></a>Açıklamalar
-- [SetValueAsStringWithError,](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md) oturum hata ayıklama yöneticisinin (SDM) bir özelliğin değerini ayarlamasının tercih edilen yoludur.
+- [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md) , oturum hata ayıklama Yöneticisi 'nın (SDM) bir özelliğin değerini ayarlaması için tercih edilen yoldur.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

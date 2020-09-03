@@ -10,16 +10,16 @@ author: conceptdev
 ms.author: crdun
 manager: jillfra
 ms.openlocfilehash: ad085cc6c41714a551fbb344274e6d0f164ab67e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74297662"
 ---
 # <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>Sorun Giderme ve Bilinen Sorunlar (Unity için Visual Studio Araçları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu bölümde, bilinen sorunların açıklamalarını Unity için Visual Studio Araçları ile sık karşılaşılan sorunlara çözümler bulmak ve Unity için Visual Studio Araçları hata bildirimi tarafından geliştirilmesine nasıl yardımcı olabileceğini öğrenin.  
+Bu bölümde, Unity için Visual Studio Araçları, bilinen sorunların açıklamalarıyla ilgili sık karşılaşılan sorunlara çözümler bulacaksınız ve hataları bildirerek Unity için Visual Studio Araçları nasıl iyileştirebileceğinizi öğreneceksiniz.  
   
 ## <a name="troubleshooting"></a>Sorun giderme  
  Unity için Visual Studio Araçları bazı yaygın sorunları çözümlemek için aşağıdaki bölümlere bakın.  
@@ -42,31 +42,31 @@ Bu bölümde, bilinen sorunların açıklamalarını Unity için Visual Studio A
  UnityVS, Windows 8 ' de varsayılan olarak yüklü olmayan .NET Framework 3,5 gerektirir. Bu sorunu gidermek için, .NET Framework 3,5 'yi indirme ve yükleme yönergelerini izleyin.  
   
 ## <a name="known-issues"></a>Bilinen Sorunlar  
- Bilinen sorunlar vardır, hata ayıklayıcı Unity'nın daha eski C# Derleyici sürümü ile nasıl etkileştiğini gelen neden Visual Studio Araçları Unity için. Bu sorunları gidermeye yardımcı olmak için çalışıyoruz, ancak bu sırada aşağıdaki sorunlarla karşılaşabilirsiniz.  
+ Unity için Visual Studio Araçları hata ayıklayıcının, C# derleyicisinin daha eski sürümü ile nasıl etkileşime gireceğini belirten bilinen sorunlar vardır. Bu sorunları gidermeye yardımcı olmak için çalışıyoruz, ancak bu sırada aşağıdaki sorunlarla karşılaşabilirsiniz.  
   
-- Hata ayıklama sırasında Unity bazen kilitleniyor.  
+- Hata ayıklarken Unity bazen kilitleniyor.  
   
-- Unity bazen hata ayıklama sırasında donuyor.  
+- Hata ayıklama sırasında Unity bazen donuyor.  
   
-- İçine ve dışına yöntemleri bazen Adımlama özellikle yineleyiciler veya switch deyimleri içinde yanlış bir şekilde davranır.  
+- Yöntemlerin içine ve dışına adımla bazen, özellikle yineleyiciler içinde veya switch deyimlerinde yanlış bir şekilde davranır.  
   
 ## <a name="reporting-errors"></a>Raporlama hataları  
- Lütfen kilitlenen, donuyor veya diğer hatalarla karşılaşırsanız, hata raporları göndermek kalite Unity için Visual Studio Araçları'nın geliştirmemize yardımcı olun. Bu, bize araştırmak ve Unity için Visual Studio Araçları'ndaki sorunları gidermeye yardımcı olur. Teşekkür ederiz!  
+ Kilitlenme, dondurur veya diğer hatalarla karşılaşdığınızda hata raporları göndererek Unity için Visual Studio Araçları kalitesini iyileştirmemize yardımcı olun. Bu, Unity için Visual Studio Araçları sorunları araştırmamıza ve gidermenize yardımcı olur. Teşekkür ederiz!  
   
-### <a name="how-to-report-an-error-when-visual-studio-freezes"></a>Visual Studio donuyor olduğunda bir hata bildirme  
- Visual Studio bazen Unity için Visual Studio Araçları ile hata ayıklama sırasında donuyor raporlar vardır, ancak bu sorunu anlamak için daha fazla veriye ihtiyacımız. Bize aşağıdaki adımları izleyerek araştırmanıza yardımcı olabilir.  
+### <a name="how-to-report-an-error-when-visual-studio-freezes"></a>Visual Studio donuyor olduğunda hata bildirme  
+ Unity için Visual Studio Araçları ile hata ayıklarken Visual Studio 'Nun bazen donmasına neden olan raporlar var, ancak bu sorunu anlamak için daha fazla veri gerekir. Aşağıdaki adımları izleyerek araştırmamıza yardımcı olabilirsiniz.  
   
-##### <a name="to-report-that-visual-studio-freezes-while-debugging-with-visual-studio-tools-for-unity"></a>Visual Studio Unity için Visual Studio Araçları ile hata ayıklama sırasında donuyor bildirmek için  
+##### <a name="to-report-that-visual-studio-freezes-while-debugging-with-visual-studio-tools-for-unity"></a>Unity için Visual Studio Araçları hata ayıklarken Visual Studio 'Nun donuyor olduğunu bildirmek için  
   
-1. Visual Studio'nun yeni bir örneğini açın.  
+1. Visual Studio 'nun yeni bir örneğini açın.  
   
-2. İşleme İliştir'iletişim kutusunda açın. Visual Studio 'nun yeni örneğinde, ana menüdeki **Hata Ayıkla**, **İşleme İliştir**' i seçin.  
+2. Işleme Iliştir iletişim kutusunu açın. Visual Studio 'nun yeni örneğinde, ana menüdeki **Hata Ayıkla**, **İşleme İliştir**' i seçin.  
   
-3. Hata ayıklayıcı, Visual Studio dondurulmuş örneğine ekleyin. **Işleme İliştir** iletişim kutusunda, **kullanılabilir Işlemler** tablosundan Visual Studio 'nun dondurulmuş örneğini seçin ve **Ekle** düğmesini seçin.  
+3. Hata ayıklayıcıyı Visual Studio 'nun dondurulmuş örneğine iliştirin. **Işleme İliştir** iletişim kutusunda, **kullanılabilir Işlemler** tablosundan Visual Studio 'nun dondurulmuş örneğini seçin ve **Ekle** düğmesini seçin.  
   
-4. Hata ayıklayıcı duraklatın. Visual Studio 'nun yeni örneğinde, ana menüdeki **Hata Ayıkla**, **Tümünü kes** ' i seçin veya **Ctrl + Alt + Break**tuşlarına basın.  
+4. Hata ayıklayıcıyı duraklatın. Visual Studio 'nun yeni örneğinde, ana menüdeki **Hata Ayıkla**, **Tümünü kes** ' i seçin veya **Ctrl + Alt + Break**tuşlarına basın.  
   
-5. Bir iş parçacığı dökümü oluşturun. Komut penceresi, aşağıdaki komutu girin ve **ENTER**tuşuna basın.  
+5. İş parçacığı oluşturma-döküm. Komut penceresi, aşağıdaki komutu girin ve **ENTER**tuşuna basın.  
   
    ```powershell  
    Debug.ListCallStack /AllThreads /ShowExternalCode  
@@ -74,4 +74,4 @@ Bu bölümde, bilinen sorunların açıklamalarını Unity için Visual Studio A
   
     Önce **komut** penceresini görünür yapmanız gerekebilir. Visual Studio 'da, ana menüden **Görünüm**, **diğer pencereler**, **komut penceresi**' ni seçin.  
   
-6. Son olarak, iş parçacığı dökümünü [vstusp@microsoft.com](mailto:vstusp@microsoft.com), Visual Studio dondurulmuş hale geldiğinde ne yaptığınızın bir açıklamasıyla birlikte gönderin.
+6. Son olarak, iş parçacığı dökümünü [vstusp@microsoft.com](mailto:vstusp@microsoft.com) , Visual Studio dondurulmuş hale geldiğinde ne yaptığınızın bir açıklamasıyla birlikte gönderin.

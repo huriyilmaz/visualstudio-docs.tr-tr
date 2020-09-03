@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: df6219a66b0f6c85e197b209741706abc7ce3d06
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655873"
 ---
 # <a name="finding-and-using-visual-studio-extensions"></a>Visual Studio Uzantıları’nı bulma ve kullanma
@@ -43,7 +43,7 @@ Visual Studio uzantıları, Visual Studio içinde çalışan ve yeni veya geliş
  Bir uzantıyı kullanmayı bırakmak isterseniz devre dışı bırakabilir veya kaldırabilirsiniz. Bir uzantı devre dışı bırakıldığında yüklü kalır, ancak etkin değildir. Yalnızca VSıX uzantılarını devre dışı bırakabilirsiniz; MSI kullanılarak yüklenen uzantılar yalnızca kaldırılabilir. Uzantıyı bulun ve **Kaldır** veya **devre dışı bırak**' a tıklayın. Devre dışı bırakılmış bir uzantıyı kaldırmak için Visual Studio 'Yu yeniden başlatmanız gerekir.
 
 ## <a name="per-user-and-administrative-extensions"></a>Kullanıcı Başına ve Yönetim Uzantıları
- Çoğu uzantı Kullanıcı başına uzantılardır ve **%LocalAppData%\microsoft\visualstudio \\ < Visual Studio sürümü \> \Extensions \\** klasörüne yüklenir. Birkaç uzantı yönetim uzantılarıdır ve **\<Visual Studio yükleme klasörü > \Common7\IDE\Extensions \\** klasörüne yüklenir.
+ Çoğu uzantı Kullanıcı başına uzantılardır ve **%LocalAppData%\microsoft\visualstudio \\<Visual Studio Sürüm \> \ Extensions \\ ** klasörüne yüklenir. Birkaç uzantı yönetim uzantılarıdır ve ** \<Visual Studio installation folder> \Common7\IDE\Extensions \\ ** klasörüne yüklenir.
 
  Sisteminizi hatalar veya kötü amaçlı kod içerebilen uzantılara karşı korumak için, Kullanıcı başına uzantıları yalnızca Visual Studio normal Kullanıcı izinleriyle çalıştırıldığında yüklenecek şekilde kısıtlayabilirsiniz. Bu, Visual Studio Yönetici Kullanıcı izinleriyle çalıştırıldığında kullanıcı başına uzantıların devre dışı bırakıldığı anlamına gelir. Bunu yapmak için, **Uzantılar ve güncelleştirmeler** Seçenekler sayfasına gidin (**Araçlar/Seçenekler**, **ortam**, **Uzantılar ve güncelleştirmeler**veya **Hızlı başlatma** penceresinde yalnızca **uzantı** yazın). **Yönetici olarak çalışırken Kullanıcı Uzantıları başına yükle** onay kutusunu temizleyin ve ardından Visual Studio 'yu yeniden başlatın.
 

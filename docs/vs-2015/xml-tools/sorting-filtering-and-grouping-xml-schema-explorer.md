@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 99c28842a92ab598ff196e80fc96678c256e4db8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656142"
 ---
-# <a name="sorting-filtering-and-grouping-xml-schema-explorer"></a>Sıralama, filtreleme ve gruplandırma (XML şema Gezgini)
+# <a name="sorting-filtering-and-grouping-xml-schema-explorer"></a>Sıralama, Filtreleme ve Gruplandırma (XML Şeması Gezgini)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu konu başlığı altında, XML şema Gezgini araç çubuğundaki **sıralama, filtreleme ve gruplandırma seçenekleri** menüsünde bulunan seçenekler açıklanmaktadır.
@@ -28,7 +28,7 @@ Bu konu başlığı altında, XML şema Gezgini araç çubuğundaki **sıralama,
 
 - **Şema dosyalarını göster**.
 
-- Oluşturucuları **göster (Sequence/Choice/All)** .
+- Oluşturucuları **göster (Sequence/Choice/All)**.
 
 ## <a name="sorting-options"></a>Sıralama seçenekleri
  Aşağıdaki sıralama seçenekleri kullanılabilir. Varsayılan değer **türe göre sıralanır**. Seçeneklere göre sırala, dosyalar ve ad alanları için geçerlidir.
@@ -42,32 +42,32 @@ Bu konu başlığı altında, XML şema Gezgini araç çubuğundaki **sıralama,
 ### <a name="sort-by-type"></a>Türe göre sırala
  **Türe göre sırala** seçeneği belirlendiğinde, genel düğümler aşağıdaki sırada sıralanır. Daha sonra düğümler her grup içinde alfabetik olarak sıralanır.
 
-1. düğümleri `import`.
+1. `import` düğümlerini.
 
-2. düğümleri `include`.
+2. `include` düğümlerini.
 
-3. düğümleri `redefine`.
+3. `redefine` düğümlerini.
 
-4. düğümleri `attribute`.
+4. `attribute` düğümlerini.
 
-5. düğümleri `attributeGroup`.
+5. `attributeGroup` düğümlerini.
 
-6. düğümleri `complexType`.
+6. `complexType` düğümlerini.
 
-7. düğümleri `simpleType`.
+7. `simpleType` düğümlerini.
 
-8. düğümleri `element`.
+8. `element` düğümlerini.
 
-9. düğümleri `group`.
+9. `group` düğümlerini.
 
 ### <a name="sort-by-name"></a>Ada göre sırala
  **Ada göre sırala** seçeneği belirlendiğinde, genel düğümler aşağıdaki sıraya göre sıralanır:
 
-1. düğümleri `import` (ad alanlarının alfabetik sırasıyla).
+1. `import` düğümler (ad alanlarının alfabetik sırasıyla).
 
-2. düğümler `include` (`schemaLocation` özniteliklerinin alfabetik sırasıyla).
+2. `include` düğümler (özniteliklerin alfabetik sırasına göre `schemaLocation` ).
 
-3. düğümler `redefine` (`schemaLocation` özniteliklerinin alfabetik sırasıyla).
+3. `redefine` düğümler (özniteliklerin alfabetik sırasına göre `schemaLocation` ).
 
 4. Alfabetik sırada diğer genel düğümler.
 

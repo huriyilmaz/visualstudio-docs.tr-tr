@@ -1,5 +1,5 @@
 ---
-title: Parametre öğesi | Microsoft Docs
+title: Parameter öğesi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -18,23 +18,23 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a815d2ef623a35030469fa631cae65653c2fe2d1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185222"
 ---
 # <a name="parameter-element"></a>Parameter Öğesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tarafından oluşturulan bir görev için belirli bir parametre hakkında bilgi içeren bir `UsingTask``TaskFactory`.  Öğe adı parametrenin adıdır.  Daha fazla bilgiler için bkz. [UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
+Tarafından oluşturulan bir görev için belirli bir parametre hakkında bilgi içerir `UsingTask``TaskFactory` .  Öğesinin adı parametrenin adıdır.  Daha fazla bilgi için bkz. [UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
   
- \<Proje >  
- \<UsingTask >  
- \<ParameterGroup >  
- \<Parametresi >  
+ \<Project>  
+ \<UsingTask>  
+ \<ParameterGroup>  
+ \<Parameter>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <ParameterGroup ParameterType="SystemType"  
@@ -49,9 +49,9 @@ Tarafından oluşturulan bir görev için belirli bir parametre hakkında bilgi 
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`ParameterType`|İsteğe bağlı öznitelik.<br /><br /> Örneğin, "System.String" parametresinin .NET türü.|  
-|`Output`|İsteğe bağlı Boolean özniteliği.<br /><br /> Varsa `true`, bu parametre görev için bir çıktı parametresidir. Varsayılan değer olan `false`.|  
-|`Required`|İsteğe bağlı Boolean özniteliği.<br /><br /> Varsa `true`, bu parametre bir görev için gerekli bir parametredir. Varsayılan değer olan `false`.|  
+|`ParameterType`|İsteğe bağlı öznitelik.<br /><br /> Parametrenin .NET türü, örneğin, "System. String".|  
+|`Output`|İsteğe bağlı Boolean özniteliği.<br /><br /> Eğer `true` , bu parametre, görev için bir çıkış parametresidir. Varsayılan değer `false` şeklindedir.|  
+|`Required`|İsteğe bağlı Boolean özniteliği.<br /><br /> `true`Bu parametre, görev için gerekli bir parametredir. Varsayılan değer `false` şeklindedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -60,10 +60,10 @@ Tarafından oluşturulan bir görev için belirli bir parametre hakkında bilgi 
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[ParameterGroup](../msbuild/parametergroup-element.md)|İsteğe bağlı bir liste tarafından oluşturulan bir görev üzerinde mevcut parametreler içeren bir `UsingTask``TaskFactory`.|  
+|[ParameterGroup](../msbuild/parametergroup-element.md)|Tarafından oluşturulan görevde mevcut olacak parametrelerin isteğe bağlı bir listesini içerir `UsingTask``TaskFactory` .|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir `Parameter` öğesi.  
+ Aşağıdaki örnek, öğesinin nasıl kullanılacağını gösterir `Parameter` .  
   
 ```  
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">  
@@ -79,6 +79,6 @@ Tarafından oluşturulan bir görev için belirli bir parametre hakkında bilgi 
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görevleri](../msbuild/msbuild-tasks.md)   
+ [Görevlerinize](../msbuild/msbuild-tasks.md)   
  [Görev başvurusu](../msbuild/msbuild-task-reference.md)   
  [Proje Dosyası Şema Başvurusu](../msbuild/msbuild-project-file-schema-reference.md)

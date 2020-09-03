@@ -1,5 +1,5 @@
 ---
-title: IntelliSense menüsü ile Regex tamamlama
+title: IntelliSense menüsünde Regex tamamlama
 ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
@@ -11,33 +11,33 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 68b5cb480184a287d9fcb088b0a74ac9d607f3f2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79093865"
 ---
-# <a name="regex-completion-through-intellisense-menu"></a>IntelliSense menüsü ile Regex tamamlama
+# <a name="regex-completion-through-intellisense-menu"></a>IntelliSense menüsünde Regex tamamlama
 
-Bu yeniden düzenleme aşağıdakiler için geçerlidir:
+Bu yeniden düzenleme için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** IntelliSense menüsü ile normal ifade (regex) tamamlama.
+**Ne:** IntelliSense menüsünde normal ifade (Regex) tamamlama.
 
-**Ne zaman:** IntelliSense yardımıyla düzenli bir ifade yazmak istiyorum. IntelliSense size temel tamamlama ve regex karakterlerin her ne anlama geldiğini bir açıklama verir. 
+**Ne zaman:** IntelliSense 'den yardım içeren bir normal ifade yazmak istiyorsunuz. IntelliSense, her bir Regex karakterinin ne anlama geldiğini temel tamamlamayı ve bir açıklama sağlar. 
 
 **Neden:** Regex yazmak zordur ve IntelliSense bunu yazmanıza yardımcı olabilir.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi regex dizesinde yerleştirin.
-2. **IntelliSense** menüsünü tetiklemek için **Ctrl**+**Space** tuşuna basın.
-3. Regex dizenize eklemek istediğiniz karakteri seçin.
+1. İmlecinizi Regex dizesine yerleştirin.
+2. **Ctrl** + **IntelliSense** menüsünü tetiklemek için CTRL +**boşluk** tuşlarına basın.
+3. Regex dizeniz için eklemek istediğiniz karakteri seçin.
 
-   ![Regex Tamamlama IntelliSense](../media/regex-completion-intellisense.png)
+   ![Regex tamamlama IntelliSense](../media/regex-completion-intellisense.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

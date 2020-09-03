@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 2e679fb3cc62ba80cfb7b56dfd7fa6590375565e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546620"
 ---
 # <a name="ca1035-icollection-implementations-have-strongly-typed-members"></a>CA1035: ICollection uygulamalarının kesin türde üyeleri vardır
@@ -38,7 +38,7 @@ ms.locfileid: "85546620"
 ## <a name="rule-description"></a>Kural Tanımı
  Bu kural <xref:System.Collections.ICollection> <xref:System.Object> , kullanıcıların, arabirim tarafından sunulan işlevleri kullanırken bağımsız değişkenleri türüne dönüştürmeleri gerekmeden, kesin olarak belirlenmiş Üyeler sağlaması için uygulamalar gerektirir. Bu kural, uygulayan türün, daha <xref:System.Collections.ICollection> güçlü bir tür örnek koleksiyonunu yönetmek için bunu uyguladığı varsayılır <xref:System.Object> .
 
- <xref:System.Collections.ICollection>arabirimini uygular <xref:System.Collections.IEnumerable?displayProperty=fullName> . Koleksiyondaki nesneler <xref:System.ValueType?displayProperty=fullName> genişlemişlerse, <xref:System.Collections.IEnumerable.GetEnumerator%2A> kutulamaktan kaynaklanan performansı azaltmaktan kaçınmak için, için kesin olarak belirlenmiş bir üye sağlamalısınız. Koleksiyonun nesneleri bir başvuru türü olduğunda bu gerekli değildir.
+ <xref:System.Collections.ICollection> arabirimini uygular <xref:System.Collections.IEnumerable?displayProperty=fullName> . Koleksiyondaki nesneler <xref:System.ValueType?displayProperty=fullName> genişlemişlerse, <xref:System.Collections.IEnumerable.GetEnumerator%2A> kutulamaktan kaynaklanan performansı azaltmaktan kaçınmak için, için kesin olarak belirlenmiş bir üye sağlamalısınız. Koleksiyonun nesneleri bir başvuru türü olduğunda bu gerekli değildir.
 
  Bir arabirim üyesinin kesin türü belirtilmiş bir sürümünü uygulamak için, formdaki adları kullanarak arabirim üyelerini açıkça uygulayın `InterfaceName.InterfaceMemberName` <xref:System.Collections.ICollection.CopyTo%2A> . Açık arabirim üyeleri, arabirimi tarafından belirtilen veri türlerini kullanır. Arabirim üye adını (gibi) kullanarak türü kesin belirlenmiş üyeleri uygulayın <xref:System.Collections.ICollection.CopyTo%2A> . Kesin olarak belirlenmiş üyeleri ortak olarak bildirin ve koleksiyon tarafından yönetilen güçlü türde parametreleri ve dönüş değerlerini bildirin. Güçlü türler, ve gibi daha zayıf türler <xref:System.Object> yerine <xref:System.Array> arabirim tarafından bildirilmiştir.
 

@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: 62a55c36cd634b9451ad3796e5866d1e3a89b6a2
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85331721"
 ---
 # <a name="collect-net-framework-memory-data-by-using-the-profiler-command-line"></a>Profil oluşturucu komut satırını kullanarak .NET Framework bellek verileri toplama

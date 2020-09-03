@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplierDescription2::GetDescription | Microsoft Dokümanlar
+title: 'IDebugPortSupplierDescription2:: GetDescription | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +14,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c2e99b55b89ef921c42fab582f65788923aa15c8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724375"
 ---
 # <a name="idebugportsupplierdescription2getdescription"></a>IDebugPortSupplierDescription2::GetDescription
-Bağlantı noktası tedarikçisinin açıklama ve açıklama meta verilerini alır.
+Bağlantı noktası sağlayıcısına ilişkin açıklama ve açıklama meta verilerini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetDescription(
@@ -41,13 +41,13 @@ public int GetDescription(
 
 ## <a name="parameters"></a>Parametreler
 `pdwFlags`\
-[çıkış] Açıklama için meta veri bayrakları.
+dışı Açıklama için meta veri bayrakları.
 
 `pbstrText`\
-[çıkış] Liman tedarikçisinin açıklaması.
+dışı Bağlantı noktası tedarikçinin açıklaması.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPortSupplierDescription2](../../../extensibility/debugger/reference/idebugportsupplierdescription2.md)

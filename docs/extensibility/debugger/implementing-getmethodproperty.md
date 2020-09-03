@@ -1,5 +1,5 @@
 ---
-title: GetMethodProperty'in Uygulanması | Microsoft Dokümanlar
+title: GetMethodProperty uygulama | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,30 +12,30 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 252d09eee9c69ca75cb46d28dde807f2c500737f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738520"
 ---
-# <a name="implement-getmethodproperty"></a>GetMethodProperty uygula
+# <a name="implement-getmethodproperty"></a>GetMethodProperty Uygula
 > [!IMPORTANT]
-> Visual Studio 2015'te ifade değerlendiricilerinin bu şekilde uygulanması amortismana uymaktadır. CLR ifade değerlendiricilerinin uygulanması hakkında bilgi [için, bkz.](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) [Managed expression evaluator sample](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)
+> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
-Visual Studio hata ayıklama motorunun (DE) [GetDebugProperty](../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md)çağırır, sırayla yığın çerçevesinde geçerli yöntem hakkında bilgi almak için [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) çağırır.
+Visual Studio, hata ayıklama altyapısının (DE) [GetDebugProperty](../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md)öğesini çağırır, bu da yığın çerçevesindeki geçerli yöntem hakkında bilgi almak Için [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) öğesini çağırır.
 
 Bu uygulama `IDebugExpressionEvaluator::GetMethodProperty` aşağıdaki görevleri gerçekleştirir:
 
-1. [GetContainerField'ı](../../extensibility/debugger/reference/idebugsymbolprovider-getcontainerfield.md)çağırır, [IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md) nesnesinde geçer. Sembol sağlayıcı (SP), belirtilen adresi içeren yöntemi temsil eden bir [IDebugContainerField](../../extensibility/debugger/reference/idebugcontainerfield.md) döndürür.
+1. [IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md) nesnesine geçirerek [GetContainerField](../../extensibility/debugger/reference/idebugsymbolprovider-getcontainerfield.md)öğesini çağırır. Sembol sağlayıcısı (SP), belirtilen adresi içeren yöntemi temsil eden bir [IDebugContainerField](../../extensibility/debugger/reference/idebugcontainerfield.md) döndürüyor.
 
-2. [IDebugMethodField'ı](../../extensibility/debugger/reference/idebugmethodfield.md) `IDebugContainerField`.
+2. Öğesinden [IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md) 'ı alır `IDebugContainerField` .
 
-3. [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) arabirimini uygulayan ve SP'den döndürülen `IDebugMethodField` nesneyi içeren bir sınıfı (bu örnekte çağrılır) `CFieldProperty` anında sunar.
+3. `CFieldProperty` [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) ARABIRIMINI uygulayan ve `IDebugMethodField` SP 'den döndürülen nesneyi içeren bir sınıfı (Bu örnekte çağırılır) başlatır.
 
-4. `CFieldProperty` Nesneden `IDebugProperty2` arabirimi döndürür.
+4. `IDebugProperty2`Nesneden arabirimi döndürür `CFieldProperty` .
 
 ## <a name="managed-code"></a>Yönetilen kod
-Bu `IDebugExpressionEvaluator::GetMethodProperty` örnek, yönetilen kodda bir uygulama gösterir.
+Bu örnek, yönetilen kodda uygulamasının bir uygulamasını gösterir `IDebugExpressionEvaluator::GetMethodProperty` .
 
 ```csharp
 namespace EEMC
@@ -67,7 +67,7 @@ namespace EEMC
 ```
 
 ## <a name="unmanaged-code"></a>Yönetilmeyen kod
-Bu örnek, yönetilmeyen kod `IDebugExpressionEvaluator::GetMethodProperty` bir uygulama gösterir.
+Bu örnek, yönetilmeyen kodda uygulamasının bir uygulamasını gösterir `IDebugExpressionEvaluator::GetMethodProperty` .
 
 ```
 [CPP]
@@ -125,4 +125,4 @@ STDMETHODIMP CExpressionEvaluator::GetMethodProperty(
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yerel halktan örnek uygulama](../../extensibility/debugger/sample-implementation-of-locals.md)
+- [Yereller için örnek uygulama](../../extensibility/debugger/sample-implementation-of-locals.md)

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f2d9b958dacfb35877abc9ad1e83a349e43a7af0
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74296867"
 ---
 # <a name="walkthrough-building-an-application"></a>İzlenecek yol: Uygulama Oluşturma
@@ -42,11 +42,11 @@ Bu konu aşağıdaki bölümleri içermektedir:
 
 2. **Çevrimiçi** kategorisini seçin ve ardından **örnekler Galeri** kategorisini seçin.
 
-3. Örneği bulmak için arama kutusunda `Introduction` belirtin.
+3. `Introduction`Örneği bulmak için arama kutusunda belirtin.
 
     ![Uzantılar ve güncelleştirmeler iletişim kutusu](../ide/media/buildwalk-extensionsdialogsampledownload.png "BuildWalk_ExtensionsDialogSampleDownload")
 
-4. Sonuçlar listesinde, **WPF uygulamaları oluşturmaya giriş (görsel C#)** veya **WPF uygulamaları oluşturmaya giriş (Visual Basic)** seçeneğini belirleyin.
+4. Sonuçlar listesinde, **WPF uygulamaları oluşturmaya giriş (Visual C#)** veya **WPF uygulamaları oluşturmaya giriş (Visual Basic)** seçeneğini belirleyin.
 
 5. **İndir** düğmesini seçin ve sonra **Kapat** düğmesini seçin.
 
@@ -60,19 +60,19 @@ Bu konu aşağıdaki bölümleri içermektedir:
 
 2. **Yüklü** KATEGORIDE, WPF uygulamaları oluşturmaya giriş örneğini göstermek için **örnekler** kategorisini seçin.
 
-3. Visual C#için çözüm `IntroWPFcsharp` adlandırın.
+3. `IntroWPFcsharp`Visual C# için çözümü adlandırın.
 
      ![Yeni proje iletişim kutusu, yüklü örnekler](../ide/media/buildwalk-newprojectdlgintrotowpfsample.png "BuildWalk_NewProjectdlgIntrotoWPFsample")
 
-     OR
+     VEYA
 
-     `IntroWPFvb` Visual Basic için çözümü adlandırın.
+     `IntroWPFvb`Visual Basic için çözümü adlandırın.
 
      ![Yeni proje iletişim kutusu, Visual Basic örneği](../ide/media/buildwalk-newprojectdlgintrotowpfsamplevb.png "BuildWalk_NewProjectdlgIntrotoWPFsampleVB")
 
 4. **Tamam** düğmesini seçin.
 
-## <a name="BKMK_CreateBuildConfig"></a>Özel derleme yapılandırması oluşturma
+## <a name="create-a-custom-build-configuration"></a><a name="BKMK_CreateBuildConfig"></a> Özel derleme yapılandırması oluşturma
 
 Bir çözüm oluşturduğunuzda, hata ayıklama ve yayın yapılandırma yapılandırmalarının yanı sıra varsayılan platform hedefleri çözüm için otomatik olarak tanımlanır. Daha sonra bu konfigürasyonları özelleştirebilir veya kendinizinkini oluşturabilirsiniz. Yapı yapılandırması derleme türünü belirtir. Yapı platformları, bir uygulamanın bu yapılandırma için hedeflediği işletim sistemini belirtir. Daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../ide/understanding-build-configurations.md), [derleme platformlarını anlama](../ide/understanding-build-platforms.md)ve [proje yapılandırmasını hata ayıklama ve yayınlama](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e).
 
@@ -86,7 +86,7 @@ Bir çözüm oluşturduğunuzda, hata ayıklama ve yayın yapılandırma yapıla
 
 2. **Etkin çözüm yapılandırması** listesinde **Yeni**' yi seçin.
 
-3. **Yeni çözüm yapılandırması** iletişim kutusunda yeni yapılandırma `Test`adlandırın, mevcut hata ayıklama yapılandırmasından ayarları kopyalayın ve **Tamam** düğmesini seçin.
+3. **Yeni çözüm yapılandırması** iletişim kutusunda, yeni yapılandırmayı adlandırın `Test` , mevcut hata ayıklama yapılandırmasından ayarları kopyalayın ve **Tamam** düğmesini seçin.
 
     ![Yeni çözüm yapılandırması Iletişim kutusu](../ide/media/buildwalk-newsolutionconfigdlgbox.png "BuildWalk_NewSolutionConfigDlgBox")
 
@@ -106,11 +106,11 @@ Bir çözüm oluşturduğunuzda, hata ayıklama ve yayın yapılandırma yapıla
 
    ![Çözüm yapılandırma seçeneği standart araç çubuğu](../ide/media/buildwalk-standardtoolbarsolutioncongfig.png "BuildWalk_StandardToolbarSolutionCongfig")
 
-## <a name="BKMK_building"></a>Uygulamayı oluşturma
+## <a name="build-the-application"></a><a name="BKMK_building"></a> Uygulamayı oluşturma
 
 Ardından, özel yapı yapılandırmasıyla çözümü oluşturacaksınız.
 
-#### <a name="to-build-the-solution"></a>Çözümü derlemek için
+#### <a name="to-build-the-solution"></a>Çözümü oluşturmak için
 
 - Menü çubuğunda **Oluştur**, **çözüm oluştur**' u seçin.
 
@@ -120,15 +120,15 @@ Ardından, özel yapı yapılandırmasıyla çözümü oluşturacaksınız.
 
   ![Çıkış Penceresi Visual Basic](../ide/media/buildwalk-vbbuildoutputwnd.png "BuildWalk_VBBuildOutputWnd")
 
-  Şekil 2: görsel C# uyarılar
+  Şekil 2: Visual C# uyarıları
 
   ![Çıkış Penceresi Visual C&#35;](../ide/media/buildwalk-csharpbuildoutputwnd.png "BuildWalk_CsharpBuildOutputWnd")
 
-## <a name="BKMK_hidewarning"></a>Derleyici uyarılarını gizle
+## <a name="hide-compiler-warnings"></a><a name="BKMK_hidewarning"></a> Derleyici uyarılarını gizle
 
 Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı iletilerini geçici olarak gizleyebilirsiniz.
 
-#### <a name="to-hide-a-specific-visual-c-warning"></a>Belirli bir görsel C# uyarıyı gizlemek için
+#### <a name="to-hide-a-specific-visual-c-warning"></a>Belirli bir Visual C# uyarısını gizlemek için
 
 1. **Çözüm Gezgini**' de en üst düzey proje düğümünü seçin.
 
@@ -136,13 +136,13 @@ Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı 
 
      **Proje Tasarımcısı** açılır.
 
-3. **Yapı** sayfasını seçin ve ardından **uyarıları bastır** kutusunda `1762`uyarı numarasını belirtin.
+3. **Yapı** sayfasını seçin ve ardından **uyarıları bastır** kutusunda uyarı numarasını belirtin `1762` .
 
      ![Derleme sayfası, proje Tasarımcısı](../ide/media/buildwalk-csharpsuppresswarnings.png "BuildWalk_CsharpSuppressWarnings")
 
-     Daha fazla bilgi için bkz. [derleme sayfası, proje TasarımcısıC#()](../ide/reference/build-page-project-designer-csharp.md).
+     Daha fazla bilgi için bkz. [derleme sayfası, proje Tasarımcısı (C#)](../ide/reference/build-page-project-designer-csharp.md).
 
-4. Çözümü oluşturun.
+4. Çözümü derleyin.
 
      **Çıkış** penceresi yalnızca derleme için Özet bilgileri görüntüler.
 
@@ -162,7 +162,7 @@ Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı 
 
     Daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](../ide/configuring-warnings-in-visual-basic.md).
 
-4. Çözümü oluşturun.
+4. Çözümü derleyin.
 
    **Çıkış** penceresi yalnızca derleme için Özet bilgileri görüntüler.
 
@@ -170,7 +170,7 @@ Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı 
 
    Daha fazla bilgi için bkz. [nasıl yapılır: derleyici uyarılarını gösterme](../ide/how-to-suppress-compiler-warnings.md).
 
-## <a name="BKMK_outputdetails"></a>Çıkış Penceresi ek derleme ayrıntılarını görüntüleme
+## <a name="display-additional-build-details-in-the-output-window"></a><a name="BKMK_outputdetails"></a> Çıkış Penceresi ek derleme ayrıntılarını görüntüleme
 
 **Çıkış** penceresinde yapı işlemi hakkındaki bilgilerin ne kadar göründüğünü değiştirebilirsiniz. Yapı ayrıntı düzeyi genellikle en az bir olarak ayarlanır. Bu, **çıktı** penceresinin yalnızca derleme işleminin bir özetini ve yalnızca herhangi bir yüksek öncelikli uyarı veya hata ile birlikte görüntülenmesini sağlar. [Seçenekler Iletişim kutusu, projeler ve çözümler, oluşturma ve çalıştırma seçeneklerini](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)kullanarak yapı hakkında daha fazla bilgi görüntüleyebilirsiniz.
 
@@ -193,7 +193,7 @@ Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı 
 
     Yapı bilgileri, yapılandırmanın başlatıldığı süreyi (başlangıcında bulunur), dosyaların işlendiği sırayı ve işlemin tamamlanması için geçen süreyi (sonunda bulunur) içerir. Bu bilgiler, Visual Studio 'Nun derleme sırasında çalıştığı gerçek derleyici söz dizimini da içerir.
 
-    Örneğin, görsel C# derlemede, [/nowarn](https://msdn.microsoft.com/library/7ebf2106-0652-4fdc-bf60-70fc86465d83) seçeneği, bu konunun önceki kısımlarında yer alan üç farklı uyarıyla birlikte belirttiğiniz 1762 uyarı kodunu listeler.
+    Örneğin, Visual C# derlemesinde, [/nowarn](https://msdn.microsoft.com/library/7ebf2106-0652-4fdc-bf60-70fc86465d83) seçeneği, bu konunun önceki kısımlarında yer alan üç farklı uyarıyla birlikte belirttiğiniz 1762 uyarı kodunu listeler.
 
     Visual Basic derlemede, [/nowarn](https://msdn.microsoft.com/library/7ebf2106-0652-4fdc-bf60-70fc86465d83) hariç tutulacak belirli uyarıları içermez, bu nedenle hiçbir uyarı görünmez.
 
@@ -202,7 +202,7 @@ Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı 
 
    Daha fazla bilgi için bkz. [nasıl yapılır: yapı günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma](../ide/how-to-view-save-and-configure-build-log-files.md).
 
-## <a name="create-a-release-build"></a>Yayın derlemesi oluşturma
+## <a name="create-a-release-build"></a>Yayın Derlemesi Oluşturma
 
 Örnek uygulamanın, gönderim için en iyi duruma getirilmiş bir sürümünü oluşturabilirsiniz. Yayın derlemesi için, yürütülebilir dosyanın derleme dışına çıkmadan önce bir ağ paylaşımında kopyalanacağını belirtirsiniz.
 
@@ -222,7 +222,7 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
 5. **Yapı çıkış yolu** kutusunda bir ağ yolu belirtin.
 
-     Örneğin, \ myserver\builds\\belirtebilirsiniz.
+     Örneğin, \\ \myserver\builds' belirtebilirsiniz.
 
     > [!IMPORTANT]
     > Belirttiğiniz ağ paylaşımının güvenilir bir konum olmayabilir uyarısı veren bir ileti kutusu görünür. Belirttiğiniz konuma güveniyorsanız ileti kutusunda **Tamam** düğmesini seçin.
@@ -231,7 +231,7 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
      ![Build menüsünde çözüm komutu oluştur](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")
 
-#### <a name="to-specify-a-release-build-for-visual-c"></a>Visual C\# için bir yayın derlemesi belirtmek için
+#### <a name="to-specify-a-release-build-for-visual-c"></a>Visual C için bir yayın derlemesi belirtmek için\#
 
 1. **Proje tasarımcısını**açın.
 
@@ -245,7 +245,7 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
 5. **Çıkış yolu** kutusunda bir ağ yolu belirtin.
 
-    Örneğin, \ myserver\builds\\belirtebilirsiniz.
+    Örneğin, \\ \myserver\builds' belirtebilirsiniz.
 
    > [!IMPORTANT]
    > Belirttiğiniz ağ paylaşımının güvenilir bir konum olmayabilir uyarısı veren bir ileti kutusu görünür. Belirttiğiniz konuma güveniyorsanız ileti kutusunda **Tamam** düğmesini seçin.
@@ -254,7 +254,7 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
     ![Build menüsünde çözüm komutu oluştur](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")
 
-   Yürütülebilir dosya, belirttiğiniz ağ yoluna kopyalanır. Yolu, \myserver\derlemeler\\*filename*. exe \\.
+   Yürütülebilir dosya, belirttiğiniz ağ yoluna kopyalanır. Yolu \\ \myserver\derlemeadı \\ *FileName*. exe olacaktır.
 
    Tebrikler: Bu yönergeyi başarıyla tamamladınız.
 
@@ -262,4 +262,4 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
 - [İzlenecek Yol: Proje Derleme (C++)](https://msdn.microsoft.com/library/d459bc03-88ef-48d0-9f9a-82d17f0b6a4d)
 - [ASP.NET Web uygulaması projesi ön derlemesine genel bakış](https://msdn.microsoft.com/b940abbd-178d-4570-b441-52914fa7b887)
-- [İzlenecek Yol: MSBuild Kullanma](../msbuild/walkthrough-using-msbuild.md)
+- [İzlenecek yol: MSBuild Kullanma](../msbuild/walkthrough-using-msbuild.md)

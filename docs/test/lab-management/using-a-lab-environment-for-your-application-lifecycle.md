@@ -10,10 +10,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 7ec0e4eed9036a0548c4f8f162331e92a416c0cb
-ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88144694"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>DevOps 'niz için laboratuvar ortamı kullanma
@@ -28,7 +28,7 @@ Laboratuvar ortamı, uygulama geliştirmek ve test etmek için kullanabileceğin
 
 Yaygın laboratuvar ortamı Topolojilerine örnekler aşağıda verilmiştir:
 
-| Topoloji | Açıklama |
+| Topoloji | Description |
 |---|---|
 |![Yalnızca sunucu topolojisi](../media/topology_backend.png)| Bu laboratuvar ortamında, genellikle sunucu uygulamalarında el ile testleri çalıştırmak için kullanılan ve Test edicilerin ortamdaki hataları doğrulamak için kendi istemci makinelerini kullanmasına izin veren bir *sunucu topolojisi*vardır. Bir arka uç topolojisinde, Laboratuvar ortamınız yalnızca sunucular içerir. Bu tür bir topoloji kullandığınızda, genellikle ortamı parçası olmayan bir istemci makinesini kullanarak Laboratuvar ortamındaki sunuculara bağlanırsınız.|
 |![Bulut Laboratuvarı ortamı](../media/topology_cloud.png)| Bu laboratuvar ortamı _sunucu topolojisi_olarak benzer özellikler ve özellikler sağlar, ancak yerel bir ortamda çalışan fiziksel veya sanal makinelerin gereksinimini ortadan kaldırır; Bu, kurulum süresini azaltabilir, bakımın basitleşebilir ve maliyeti en aza indirir. Özel ağlarla birlikte birden çok Web sitesi ve sanal makine ayarlamak, Microsoft Azure gibi bir bulut ortamında hızlı ve kolaydır.|
@@ -120,7 +120,7 @@ Standart ortamlar ve SCVMM ortamları, aynı özelliklerin birçoğunu destekler
 
 Devam etmeden önce bilmeniz gereken bazı ek kavramlar aşağıda verilmiştir:
 
-|Terim|Açıklama|
+|Süre|Açıklama|
 |-|-----------------|
 |Laboratuvar Merkezi|Laboratuvar ortamlarını oluşturduğunuz ve yönettiğiniz Microsoft Test Yöneticisi alanı.|
 |Azure DevOps proje Laboratuvarı|Kendilerine bağlanıp sanal makinelerini çalıştırabilmeniz için ayarlanmış laboratuvar ortamları koleksiyonu.|

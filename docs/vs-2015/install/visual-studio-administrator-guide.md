@@ -14,10 +14,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: a59f9f2cb2548d6d40670832e66d4df5c83680df
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74295912"
 ---
 # <a name="visual-studio-administrator-guide"></a>Visual Studio Yönetici Kılavuzu
@@ -27,7 +27,7 @@ Visual Studio ile ilgili en son belgeler için bkz. [Visual Studio Yönetici Kı
 
 Her bir hedef bilgisayar [Minimum yükleme gereksinimlerini](https://visualstudio.microsoft.com/vs/older-downloads/)karşıladığı sürece, Visual Studio 2015 ' i bir ağ üzerinde dağıtabilirsiniz. Yükleme dosyasını/Layout anahtarıyla çalıştırarak ( [Visual Studio 'Nun çevrimdışı yüklemesi oluşturma](../install/create-an-offline-installation-of-visual-studio.md) sayfasında açıklandığı gibi) ve ardından bunu yerel makineden ağ paylaşımından kopyalayarak bir ağ paylaşımının oluşturulması mümkündür. ISO kullanıyorsanız, ISO 'yı bağlayabilir ve paylaşabilir veya ISO 'yu bir ağ paylaşımında kopyalayabilirsiniz.  
   
- Bir ağ paylaşımından yüklemelerin, geldiği kaynak konumu "hatırlayın" olduğunu unutmayın. Başka bir deyişle, istemci ilk olarak yüklendiği ağ paylaşımına döndürmek bir istemci makinesi onarılması gerekebilir. Kuruluşunuzda çalışan Visual Studio 2015 istemcilerini tahmin ettiğiniz yaşam süresine göre hizalanacak şekilde ağ konumunuzu dikkatle seçin.  
+ Bir ağ paylaşımından yüklemelerin, geldiği kaynak konumu "hatırlayın" olduğunu unutmayın. Bu, bir istemci makinenin onarımına istemcinin ilk yüklendiği ağ paylaşımının geri dönmesi gerekebilecek anlamına gelir. Kuruluşunuzda çalışan Visual Studio 2015 istemcilerini tahmin ettiğiniz yaşam süresine göre hizalanacak şekilde ağ konumunuzu dikkatle seçin.  
   
 ## <a name="detection-and-servicing-keys"></a>Algılama ve bakım anahtarları  
  Bir Visual Studio ürününün bir bilgisayara zaten yüklenmiş olup olmadığını saptamak için kayıt defterindeki algılama alt anahtarlarını kullanabilirsiniz. Bu algılama anahtarlarını bir yükleme ile devam etmek gerekip gerekmediğini saptamak için otomatik bir dağıtımda kullanacaksınız.  Bkz. [sistem gereksinimlerini algılama](../extensibility/internals/detecting-system-requirements.md)[sistem gereksinimlerini algılama].  
@@ -40,10 +40,10 @@ Her bir hedef bilgisayar [Minimum yükleme gereksinimlerini](https://visualstudi
 ## <a name="error-return-codes"></a>Hata dönüş kodları  
  Aşağıdaki tabloda önemli hata kodları listelenmektedir. Bu hata kodlarını, bir yeniden başlatmanın gerekli olup olmadığını ve yükleme başarılı olup olmadığına karar vermek için Otomasyon 'da kullanabilirsiniz. Bir hata kodu alırsanız, [Visual Studio 'Yu Yüklele](../install/install-visual-studio-2015.md) sayfasındaki sorun giderme adımlarını göz önünde bulundurun.  
   
-|Kurulum durumu|Yeniden başlatma gerekli değil|Yeniden başlatma gerekiyor|Açıklama|  
+|Kurulum durumu|Yeniden başlatma gerekli değil|Yeniden başlatma gerekiyor|Description|  
 |------------------|--------------------------|----------------------|-----------------|  
 |Başarılı|0x00000000 [0]|0x00000bc2 [3010]|Yükleme başarılı.|  
-|Engelle|0x80044000 [-2147205120]|0x8004C000 [-2147172352]|Raporlanacak tek blok "yeniden başlatma bekleniyor" ise, döndürülen değer eksik-yeniden başlatma gerekli değeridir (0x80048bc7).|  
+|Blok|0x80044000 [-2147205120]|0x8004C000 [-2147172352]|Raporlanacak tek blok "yeniden başlatma bekleniyor" ise, döndürülen değer eksik-yeniden başlatma gerekli değeridir (0x80048bc7).|  
 |İptal|0x00000642 [1602]|0x80048642 [-2147187134]|Yeniden başlatma değeri döndürüldüğünde, dönüş kodu 1602 ' dir.|  
 |Tamamlanmamış-yeniden başlatma gerekiyor|Yok|0x80048bc7 [-2147185721]|Yüklemenin devam edebilmesi için yeniden başlatma gerekiyor.|  
 |Hata|0x00000643 [1603]|0x80048643 [-2147187133]|Yeniden başlatma değeri döndürüldüğünde, dönüş kodu 1603 ' dir.|  
@@ -58,7 +58,7 @@ Her bir hedef bilgisayar [Minimum yükleme gereksinimlerini](https://visualstudi
   
 ## <a name="specifying-customer-feedback-settings"></a>Müşteri geri bildirim ayarlarını belirtme  
 
-Varsayılan olarak, Visual Studio yüklemesini müşteri geri bildirim sağlar. Visual Studio 'Yu, her bir bilgisayarda müşteri geri bildirimini devre dışı bırakmak için, aşağıdaki kayıt defteri anahtarının değerini "0" dizesiyle değiştirerek yapılandırabilirsiniz:  
+Varsayılan olarak, Visual Studio yüklemesi müşteri geri bildirimlerine izin vermez. Visual Studio 'Yu, her bir bilgisayarda müşteri geri bildirimini devre dışı bırakmak için, aşağıdaki kayıt defteri anahtarının değerini "0" dizesiyle değiştirerek yapılandırabilirsiniz:  
   
 **\SOFTWARE\Policies\Microsoft\VisualStudio\SQM HKEY_LOCAL_MACHINE**  
 **OptIn**  
@@ -67,10 +67,10 @@ Varsayılan olarak, Visual Studio yüklemesini müşteri geri bildirim sağlar. 
   
 ## <a name="related-topics"></a>İlgili Konular  
   
-|Konu|Açıklama|  
+|Konu|Description|  
 |-----------|-----------------|  
-|[Nasıl Yapılır: Visual Studio’nun Belirli Bir Sürümünü Yükleme](../install/how-to-install-a-specific-release-of-visual-studio.md)|Geçerli [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]sürümünün belirli yapılandırmalarının nasıl yükleneceğini açıklar.|  
-|[Nasıl Yapılır: Katılımsız Visual Studio Yüklemesi Oluşturma ve Çalıştırma](../install/how-to-create-and-run-an-unattended-installation-of-visual-studio.md)|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] katılımsız modda nasıl yükleneceğini açıklar.|  
+|[Nasıl Yapılır: Visual Studio’nun Belirli Bir Sürümünü Yükleme](../install/how-to-install-a-specific-release-of-visual-studio.md)|Geçerli sürümünün belirli yapılandırmalarının nasıl yükleneceğini açıklar  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .|  
+|[Nasıl Yapılır: Katılımsız Visual Studio Yüklemesi Oluşturma ve Çalıştırma](../install/how-to-create-and-run-an-unattended-installation-of-visual-studio.md)|Katılımsız modda nasıl yükleneceğini açıklar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .|  
 |[Nasıl Yapılır: Visual Studio’yu dağıtırken ürün anahtarlarını otomatik olarak uygulama](../install/how-to-automatically-apply-product-keys-when-deploying-visual-studio.md)|Birden çok makineye dağıtım yaparken Ürün anahtarlarının nasıl uygulanacağını açıklar.|  
 |[Yardım Görüntüleyicisi Yönetici Kılavuzu](../ide/help-viewer-administrator-guide.md)|İnternet erişimi olan veya olmayan ağ ortamları için yerel yardım yüklemelerinin nasıl yönetileceği hakkında bilgi sağlar.|  
-|[Visual Studio'yu yükleyin](../install/install-visual-studio-2015.md)|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]nasıl yükleneceğini açıklayan konulara yönergeler ve bağlantılar sağlar.|
+|[Visual Studio'yu yükleme](../install/install-visual-studio-2015.md)|' Nin nasıl yükleneceğini açıklayan konularda yönergeler ve bağlantılar sağlar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .|

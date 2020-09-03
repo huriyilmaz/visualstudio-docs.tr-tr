@@ -11,51 +11,51 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: a3b42f83faacda6be34b282150cf4fb4c0f379f1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79093695"
 ---
 # <a name="split-or-merge-if-statements"></a>Birleştir veya ayır if deyimleri
 
-Bu yeniden düzenleme aşağıdakiler için geçerlidir:
+Bu yeniden düzenleme için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne: Ne:** **What:** Bölme veya birleştirme [eğer](/dotnet/csharp/language-reference/keywords/if-else) ifadeleri.
+**Nedir** **: or** [IF](/dotnet/csharp/language-reference/keywords/if-else) deyimleri Böl veya birleştir.
 
-**Ne zaman:** Veya `if` `&&` `||` işleçleri iç içe olan bir `if` deyime kullanan bir `if` deyimi `if` bölmek veya bir deyimle dış deyimle birleştirmek istiyorsunuz.
+**Ne zaman:** `if` OR işleçlerini kullanan bir ifadeyi `&&` `||` iç içe geçmiş bir `if` ifadeye bölmek veya bir ifadeyi bir dış ifadesiyle birleştirmek istiyorsunuz `if` `if` .
 
-**Neden:** Bu bir stil tercihi meselesi.  
+**Neden:** Stil tercihlerinin bir önemi vardır.  
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-İfadeyi `if` bölmek isterseniz:
+İfadeyi ayırmak istiyorsanız `if` :
 
-1. İmlecinizi ekstreye `if` `&&` yerleştirin `||` veya operatör tarafından.
+1. İmlecinizi `if` ifadeye `&&` or `||` işlecine koyun.
 
-2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
+2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 
-    ![Bölünmüş If Deyimi](../media/split-if-statement.png)
+    ![If Ifadesini Böl](../media/split-if-statement.png)
 
-3. **İfadeler iç içe yse Bölün'i**seçin.
+3. **İç içe geçmiş deyimlerine Böl**' ü seçin.
 
-    ![İfade Tamamlandıysa Böl](../media/split-if-statement-complete.png)
+    ![Ekstre tamamlanarak Böl](../media/split-if-statement-complete.png)
 
-İç `if` deyimi dış `if` ifadeyle birleştirmek istiyorsanız: 
+İç `if` ifadeyi dış ifadesiyle birleştirmek istiyorsanız `if` : 
 
-1. İmlecinizi iç `if` anahtar kelimeye yerleştirin.
+1. İmlecinizi iç `if` anahtar sözcüğe yerleştirin.
 
-2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
+2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 
-    ![If Bildirimini Birleştir](../media/merge-if-statement.png)
+    ![If Ifadesini Birleştir](../media/merge-if-statement.png)
 
-3. **Dışife ile Birleştir'i**seçin.
+3. **Outer If Ifadesiyle Birleştir**' i seçin.
 
-    ![İfade Tamamlandıysa Birleştir](../media/merge-if-statement-complete.png)
+    ![Deyimden sonra birleştir](../media/merge-if-statement-complete.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

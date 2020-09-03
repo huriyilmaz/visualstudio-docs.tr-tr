@@ -1,5 +1,5 @@
 ---
-title: İfade Değerlendirme (Visual Studio Hata Ayıklama SDK) | Microsoft Dokümanlar
+title: İfade değerlendirmesi (Visual Studio hata ayıklama SDK) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,31 +12,31 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: e41179fd530818f5ac59aa54420ede1b4eafa1ec
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738716"
 ---
-# <a name="expression-evaluation-visual-studio-debugging-sdk"></a>İfade değerlendirmesi (Visual Studio Hata Ayıklama SDK)
-Kesme modu sırasında, IDE birkaç program değişkeni içeren basit ifadeleri değerlendirmek gerekir. Değerlendirmesini gerçekleştirmek için hata ayıklama altyapısının (DE) IDE pencerelerinden birine girilen bir ifadeyi ayrıştırması ve değerlendirmesi gerekir.
+# <a name="expression-evaluation-visual-studio-debugging-sdk"></a>İfade değerlendirmesi (Visual Studio hata ayıklama SDK)
+Kesme modu sırasında IDE, çeşitli program değişkenlerini kapsayan basit ifadeleri değerlendirmelidir. Kendi değerlendirmesini gerçekleştirmek için, hata ayıklama altyapısı (DE), IDE 'nin bir pencerelerinin birine girilen bir ifadeyi ayrıştırmalıdır ve değerlendirmelidir.
 
- İfadeler [IDebugExpressionContext2::ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) yöntemi ile oluşturulur ve ortaya çıkan [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) arabirimi ile temsil edilir.
+ İfadeler, [IDebugExpressionContext2::P arseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) yöntemiyle oluşturulur ve elde edilen [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) arabirimi tarafından temsil edilir.
 
- **IDebugExpression2** arabirimi DE tarafından uygulanır ve IDE ifade değerlendirme sonuçlarını görüntülemek için [IDEbugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) arabirimini IDE'ye döndürmek için **EvalAsync** yöntemini çağırır. [IDebugProperty2::GetPropertyInfo,](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) bir ifadenin değerini **Bir İzleme** penceresine veya Yerel **Ler** penceresine koymak için kullanılan bir yapıyı döndürür.
+ **IDebugExpression2** arabirimi de tarafından UYGULANıR ve IDE 'de ifade değerlendirmesinin sonuçlarını göstermek için **EVALASYNC** yöntemini çağırarak IDE 'ye bir [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) arabirimi döndürür. [IDebugProperty2:: GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) , bir ifadenin değerini bir **Gözcü** penceresine veya **Locals** penceresine koymak için kullanılan bir yapı döndürür.
 
- Hata ayıklama paketi veya oturum hata ayıklama yöneticisi (SDM) [IDebugExpression2 çağırır::EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) veya [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) değerlendirme sonucunu temsil eden bir [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) arabirimi almak için. `IDebugProperty2`ifadenin adını, türünü ve değerini döndüren yöntemleri vardır. Bu bilgiler çeşitli hata ayıklama pencerelerinde görünür.
+ Hata ayıklama paketi veya oturum hata ayıklama Yöneticisi (SDM), değerlendirmenin sonucunu temsil eden bir [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) arabirimi almak için [IDebugExpression2:: EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) veya [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) çağırır. `IDebugProperty2` ifadenin adını, türünü ve değerini döndüren yöntemlere sahiptir. Bu bilgiler çeşitli hata ayıklayıcı pencereleri içinde görüntülenir.
 
 ## <a name="using-expression-evaluation"></a>İfade değerlendirmesini kullanma
- İfade değerlendirmesini kullanmak için, aşağıdaki tabloda gösterildiği gibi [IDebugExpressionContext2::ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) yöntemini ve [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) arabiriminin tüm yöntemlerini uygulamanız gerekir.
+ İfade değerlendirmesini kullanmak için, aşağıdaki tabloda gösterildiği gibi, [IDebugExpressionContext2::P arseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) yöntemini ve [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) arabiriminin tüm yöntemlerini uygulamanız gerekir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)|Bir ifadeyi eşzamanlı olarak değerlendirir.|
-|[Durdurma](../../extensibility/debugger/reference/idebugexpression2-abort.md)|Eşzamanlı ifade değerlendirmesini bitirir.|
-|[EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)|Bir ifadeyi eşzamanlı olarak değerlendirir.|
+|[EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)|Bir ifadeyi zaman uyumsuz olarak değerlendirir.|
+|[Durdurulmaya](../../extensibility/debugger/reference/idebugexpression2-abort.md)|Zaman uyumsuz ifade değerlendirmesini sonlandırır.|
+|[EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)|Bir ifadeyi zaman uyumlu olarak değerlendirir.|
 
- Senkron ve eşzamanlı değerlendirme [iDebugProperty2 uygulanmasını gerektirir::GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) yöntemi. Asynchronous ifade değerlendirmesi [IDebugExpressionEvaluationCompleteEvent2](../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)uygulanmasını gerektirir.
+ Zaman uyumlu ve zaman uyumsuz değerlendirme, [IDebugProperty2:: GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) metodunu uygulamayı gerektirir. Zaman uyumsuz ifade değerlendirmesi, [IDebugExpressionEvaluationCompleteEvent2](../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)uygulamasını gerektirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yürütme kontrolü ve durum değerlendirmesi](../../extensibility/debugger/execution-control-and-state-evaluation.md)
+- [Yürütme denetimi ve durum değerlendirmesi](../../extensibility/debugger/execution-control-and-state-evaluation.md)

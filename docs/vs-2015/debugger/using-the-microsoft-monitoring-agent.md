@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f3f70d3799bfae96b15c13a42c3c11246d1e89ba
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85520581"
 ---
 # <a name="using-the-microsoft-monitoring-agent"></a>Microsoft İzleme Aracısı’nı kullanma
@@ -36,10 +36,10 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
 3. [3. Adım: kayıtlı olayları kaydetme](#SaveEvents)  
   
-## <a name="step-1-set-up-microsoft-monitoring-agent"></a><a name="SetUpMonitoring"></a>1. Adım: Microsoft Monitoring Agent ayarlama  
+## <a name="step-1-set-up-microsoft-monitoring-agent"></a><a name="SetUpMonitoring"></a> 1. Adım: Microsoft Monitoring Agent ayarlama  
  Uygulamanızı değiştirmeden yerel izleme yapmak için web sunucunuz üzerinde bağımsız aracıyı ayarlayın. System Center 2012 kullanıyorsanız bkz. [yükleme Microsoft Monitoring Agent](https://technet.microsoft.com/library/dn465156.aspx).  
   
-### <a name="set-up-the-standalone-agent"></a><a name="SetUpStandaloneMMA"></a>Tek başına aracıyı ayarlama  
+### <a name="set-up-the-standalone-agent"></a><a name="SetUpStandaloneMMA"></a> Tek başına aracıyı ayarlama  
   
 1. Şunlardan emin olun:  
   
@@ -68,7 +68,7 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
 ### <a name="q--a"></a>Soru-Cevap  
   
-#### <a name="q-what-if-i-have-windows-powershell-20"></a><a name="PowerShell2"></a>S: Windows PowerShell 2,0 varsa ne yapmalıyım?  
+#### <a name="q-what-if-i-have-windows-powershell-20"></a><a name="PowerShell2"></a> S: Windows PowerShell 2,0 varsa ne yapmalıyım?  
  Y **:** PowerShell 3,0 kullanmanızı kesinlikle öneririz. Aksi halde, PowerShell'i her çalıştırdığınızda Microsoft İzleme Aracısı PowerShell cmdlet'lerini içeri aktarmanız gerekir. Ayrıca, indirilebilen Yardım içeriğine de erişiminiz olmayacaktır.  
   
 1. Yönetici olarak bir **Windows PowerShell** veya **Windows PowerShell ISE** komut istemi penceresi açın.  
@@ -79,7 +79,7 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
 3. En son yardım içeriğini almak için [TechNet sitesini ziyaret edin](https://technet.microsoft.com/systemcenter/default) .  
   
-#### <a name="q-how-do-i-set-up-permissions-for-the-application-pool"></a><a name="FullPermissionsITLog"></a>S: uygulama havuzu için izinleri ayarla Nasıl yaparım??  
+#### <a name="q-how-do-i-set-up-permissions-for-the-application-pool"></a><a name="FullPermissionsITLog"></a> S: uygulama havuzu için izinleri ayarla Nasıl yaparım??  
  Y **:** Windows **ıccacls** komutunu kullanın veya Windows Gezgini (veya dosya Gezgini) kullanın. Örneğin:  
   
 - Windows **ıccacls** komutuyla izinleri ayarlamak için:  
@@ -110,7 +110,7 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
   7. Uygulama havuzunun **okuma & yürütme** izinlerine sahip olduğundan emin olun.  
   
-## <a name="step-2-start-monitoring-your-app"></a><a name="MonitorEvents"></a>2. Adım: uygulamanızı izlemeye başlama  
+## <a name="step-2-start-monitoring-your-app"></a><a name="MonitorEvents"></a> 2. Adım: uygulamanızı izlemeye başlama  
  Uygulamanızı izlemeye başlamak için Windows PowerShell [Start-WebApplicationMonitoring](https://technet.microsoft.com/library/dn472749(v=sc.20).aspx) komutunu kullanın. System Center 2012 kullanıyorsanız bkz. [Microsoft Monitoring Agent Web uygulamalarını izleme](https://technet.microsoft.com/library/dn465157.aspx).  
   
 1. Web sunucunuzda, yönetici olarak bir **Windows PowerShell** veya **Windows PowerShell ISE** komut istemi penceresi açın.  
@@ -149,7 +149,7 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
 ### <a name="q--a"></a>Soru-Cevap  
   
-#### <a name="q-how-do-i-get-the-most-data-without-slowing-down-my-app"></a><a name="Minimizing"></a>S: uygulamamı yavaşlatmadan en çok veriyi almak Nasıl yaparım??  
+#### <a name="q-how-do-i-get-the-most-data-without-slowing-down-my-app"></a><a name="Minimizing"></a> S: uygulamamı yavaşlatmadan en çok veriyi almak Nasıl yaparım??  
  Y **:** Microsoft Monitoring Agent, çok sayıda veri toplayabilir ve toplamayı seçtiğiniz verilere ve bu verileri nasıl topladığınıza bağlı olarak uygulamanızın performansını etkiler. Uygulamanızı yavaşlatmadan en çok veriyi almanın bazı yolları aşağıda verilmiştir:  
   
 - Web uygulamaları ve SharePoint uygulamaları için, aracı belirtilen uygulama havuzunu paylaşan her uygulama için veri kaydeder. Bu aynı uygulama havuzunu paylaşan herhangi bir uygulamayı, toplamayı tek bir uygulamanın modüllerine kısıtlamanıza rağmen yavaşlatabilir. Diğer uygulamaları yavaşlatmayı önlemek için, her uygulamayı kendi uygulama havuzunda barındırın.  
@@ -230,7 +230,7 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
   Aracı `id`, `Employee.Id` ve `Employee.Name` değerlerini ve `Employee` yönteminden döndürülen `AlterEmployee` nesnesini kaydeder. Ancak aracı `Address` nesnesi hakkında, nesnenin null olup olmadığı dışında bilgi kaydetmez. Aracı, ayrıca, `AlterEmployee` yöntemindeki yerel değişkenlerle ilgili olarak, diğer yöntemler bu yerel değişkenleri parametre olarak kullanıp onların yöntem parametresi olarak kaydedilmesini sağlamadığı sürece, veri kaydetmez.  
   
-## <a name="step-3-save-recorded-events"></a><a name="SaveEvents"></a>3. Adım: kayıtlı olayları kaydetme  
+## <a name="step-3-save-recorded-events"></a><a name="SaveEvents"></a> 3. Adım: kayıtlı olayları kaydetme  
  Bir hata veya performans sorunu bulduğunuzda, kayıtlı olayları bir IntelliTrace günlüğüne kaydedin. Aracı günlüğü yalnızca olay kaydettiyse oluşturur. System Center 2012 kullanıyorsanız bkz. [Microsoft Monitoring Agent Web uygulamalarını izleme](https://technet.microsoft.com/library/dn465157.aspx).  
   
 ### <a name="save-recorded-events-but-continue-monitoring"></a>Kayıtlı olayları kaydedip izlemeye devam etme  
@@ -242,7 +242,7 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
     **Checkpoint-WebApplicationMonitoring** *" \<IISWebsiteName> \\<ııswebappname \> "*  
   
-    \-veya  
+    \- veya  
   
     **Checkpoint-WebApplicationMonitoring "IIS: \ Sites** * \\<ııswebsitename \> \\<iiswebappname \> "*  
   
@@ -272,7 +272,7 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
     **Stop-WebApplicationMonitoring** *" \<IISWebsiteName> \\<ııswebappname \> "*  
   
-    \-veya  
+    \- veya  
   
     **Stop-WebApplicationMonitoring "IIS: \ Sites** * \\<ııswebsitename \> \\<iiswebappname \> "*  
   
@@ -284,7 +284,7 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
     **PS C: \\>Stop-WebApplicationMonitoring "Fabrikam\iFabrikamFiber.Web"**  
   
-    \-veya  
+    \- veya  
   
     **PS C: \\>Stop-WebApplicationMonitoring "IIS: \ sites\Fabrikam\FabrikamFiber.Web"**  
   

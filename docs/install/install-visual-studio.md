@@ -21,10 +21,10 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: 3f0d17fcaf856799ded82ebe684d671b358cb8df
-ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88114277"
 ---
 # <a name="install-visual-studio"></a>Visual Studio'yu yükleme
@@ -170,7 +170,7 @@ Yükleyici yüklendikten sonra, istediğiniz özellik kümelerini (veya iş yük
 
 ## <a name="step-5---choose-individual-components-optional"></a>5. adım-tek tek bileşenleri seçin (Isteğe bağlı)
 
-Visual Studio yüklemenizi özelleştirmek için Iş yükleri özelliğini kullanmak istemiyorsanız veya bir iş yükü yüklemesinden daha fazla bileşen eklemek istiyorsanız, **tek** tek bileşenler sekmesinden tek tek bileşenleri yükleyerek veya ekleyerek bunu yapabilirsiniz. istediğinizi seçin ve ardından istemleri takip edin.
+Visual Studio yüklemenizi özelleştirmek için Iş yükleri özelliğini kullanmak istemiyorsanız veya bir iş yükü yüklemesinden daha fazla bileşen eklemek istiyorsanız **, tek tek bileşenler sekmesinden tek** tek bileşenleri yükleyerek veya ekleyerek yapabilirsiniz. İstediğinizi seçin ve ardından istemleri izleyin.
 
 ::: moniker range="vs-2017"
 

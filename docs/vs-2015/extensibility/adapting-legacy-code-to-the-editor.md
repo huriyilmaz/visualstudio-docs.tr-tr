@@ -1,5 +1,5 @@
 ---
-title: Eski kod düzenleyicisine uyarlama | Microsoft Docs
+title: Eski kodu düzenleyiciye uyarlatma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,73 +11,73 @@ caps.latest.revision: 26
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0bb90723a72c10dbf6cfda5edd4aa68f71f1c6b9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184916"
 ---
 # <a name="adapting-legacy-code-to-the-editor"></a>Eski Kodu Düzenleyiciye Uyarlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio düzenleyicisinde, mevcut kod bileşenlerini erişebileceğiniz birçok özelliğe sahiptir. Aşağıdaki yönergeler, olmayan MEF Bileşeni, düzenleyici işlevselliği kullanmak için örneğin, bir VSPackage, uyum gösterilmektedir. Yönergeler ayrıca hem yönetilen hem de yönetilmeyen kod düzenleyicisinin Hizmetleri almak için bağdaştırıcıları kullanmayı gösterir.  
+Visual Studio Düzenleyicisi, varolan kod bileşenlerinden erişebileceğiniz birçok özelliğe sahiptir. Aşağıdaki yönergelerde, düzenleyici işlevlerini kullanmak için bir VSPackage gibi, MEF olmayan bir bileşeni nasıl uyarlayacağınız gösterilmektedir. Yönergeler Ayrıca, hem yönetilen hem de yönetilmeyen koddaki düzenleyicinin hizmetlerini almak için bağdaştırıcıların nasıl kullanılacağını gösterir.  
   
 ## <a name="editor-adapters"></a>Düzenleyici bağdaştırıcıları  
- Düzenleyici bağdaştırıcıları ya da dolgular, olan sınıfları ve arabirimleri de kullanıma Düzenleyicisi nesneleri için sarmalayıcılar <xref:Microsoft.VisualStudio.TextManager.Interop> API. Örneğin Düzenleyici olmayan hizmetleri arasında taşımak için bağdaştırıcılar, Visual Studio Kabuk komutları ve düzenleyici Hizmetleri kullanabilirsiniz. (Bu, düzenleyici Visual Studio şu anda nasıl barındırılan içindir.) Bağdaştırıcıları ayrıca Visual Studio'da düzgün çalışması eski düzenleyici ve dil hizmeti uzantıları sağlar.  
+ Düzenleyici bağdaştırıcıları veya dolgu, API 'de sınıfları ve arabirimleri kullanıma sunan düzenleyici nesneleri için sarmalayıcılardır <xref:Microsoft.VisualStudio.TextManager.Interop> . Düzenleyiciden, Visual Studio Kabuk komutları ve Düzenleyici Hizmetleri gibi düzenleyici olmayan hizmetler arasında geçiş yapmak için kullanabilirsiniz. (Bu, düzenleyicinin Şu anda Visual Studio 'da barındırılıyor.) Bağdaştırıcılar, eski düzenleyici ve dil hizmeti uzantılarının Visual Studio 'da doğru şekilde çalışmasını da sağlar.  
   
-## <a name="using-editor-adapters"></a>Düzenleyici bağdaştırıcıları kullanmak  
- <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService> Yeni düzenleyici arabirimler ve eski arabirimleri arasında geçiş yapma yöntemleri ve bağdaştırıcıları oluşturma yöntemleri sağlar.  
+## <a name="using-editor-adapters"></a>Düzenleyici bağdaştırıcılarını kullanma  
+ , <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService> Yeni düzenleyici arabirimleri ve eski arabirimler arasında geçiş yapan Yöntemler ve ayrıca bağdaştırıcılar oluşturan yöntemler sağlar.  
   
- Bu hizmet bir MEF Bileşeni bölümünde kullanıyorsanız, hizmet aşağıda gösterildiği gibi aktarabilirsiniz.  
+ Bu hizmeti bir MEF bileşeni bölümünde kullanıyorsanız, hizmeti aşağıdaki şekilde içeri aktarabilirsiniz.  
   
 ```  
 [Import(typeof(IVsEditorAdaptersFactoryService))]  
 internal IVsEditorAdaptersFactoryService editorFactory;  
 ```  
   
- Bu hizmet bir olmayan MEF Bileşeni olarak kullanmak istiyorsanız, bu konunun ilerleyen bölümlerindeki "Kullanarak Visual Studio Düzenleyicisi hizmetler bir MEF olmayan bileşeni" bölümündeki yönergeleri izleyin.  
+ Bu hizmeti MEF olmayan bir bileşende kullanmak istiyorsanız, bu konunun ilerleyen kısımlarında yer alarak "MEF olmayan bir bileşende Visual Studio Düzenleyicisi Hizmetleri 'Ni kullanma" bölümündeki yönergeleri izleyin.  
   
-## <a name="switching-between-the-new-editor-api-and-the-legacy-api"></a>Yeni Düzenleyici API ve eski API arasında geçiş yapma  
- Düzenleyici nesneyi bir eski arabirimi arasında geçiş yapmak için aşağıdaki yöntemleri kullanın.  
-  
-|Yöntem|Dönüştürme|  
-|------------|----------------|  
-|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.GetBufferAdapter%2A>|Dönüştürür bir <xref:Microsoft.VisualStudio.Text.ITextBuffer> için bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>.|  
-|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.GetDataBuffer%2A>|Dönüştürür bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> için bir <xref:Microsoft.VisualStudio.Text.ITextBuffer>.|  
-|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.GetDocumentBuffer%2A>|Dönüştürür bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> için bir <xref:Microsoft.VisualStudio.Text.ITextBuffer>.|  
-|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.GetViewAdapter%2A>|Dönüştürür bir <xref:Microsoft.VisualStudio.Text.Editor.ITextView> için bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>.|  
-|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.GetWpfTextView%2A>|Dönüştürür bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> için bir <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView>.|  
-  
-## <a name="creating-adapters"></a>Bağdaştırıcıları oluşturma  
- Eski arabirimleri için bağdaştırıcıları oluşturmak için aşağıdaki yöntemleri kullanın.  
+## <a name="switching-between-the-new-editor-api-and-the-legacy-api"></a>Yeni Düzenleyici API 'SI ile eski API arasında geçiş yapma  
+ Bir düzenleyici nesnesi ve eski arabirim arasında geçiş yapmak için aşağıdaki yöntemleri kullanın.  
   
 |Yöntem|Dönüştürme|  
 |------------|----------------|  
-|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsCodeWindowAdapter%2A>|Oluşturur bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>.|  
-|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsTextBufferAdapter%2A>|Oluşturur bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> için belirtilen <xref:Microsoft.VisualStudio.Utilities.IContentType>.|  
-|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsTextBufferAdapter%2A>|Oluşturur bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>.|  
-|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsTextBufferCoordinatorAdapter%2A>|Oluşturur bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator>.|  
-|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsTextViewAdapter%2A>|Oluşturur bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> için bir <xref:Microsoft.VisualStudio.Text.Editor.ITextViewRoleSet>.|  
-|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsTextViewAdapter%2A>|Oluşturur bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>.|  
+|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.GetBufferAdapter%2A>|Bir <xref:Microsoft.VisualStudio.Text.ITextBuffer> öğesine dönüştürür <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> .|  
+|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.GetDataBuffer%2A>|Bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> öğesine dönüştürür <xref:Microsoft.VisualStudio.Text.ITextBuffer> .|  
+|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.GetDocumentBuffer%2A>|Bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> öğesine dönüştürür <xref:Microsoft.VisualStudio.Text.ITextBuffer> .|  
+|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.GetViewAdapter%2A>|Bir <xref:Microsoft.VisualStudio.Text.Editor.ITextView> öğesine dönüştürür <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> .|  
+|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.GetWpfTextView%2A>|Bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> öğesine dönüştürür <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> .|  
   
-## <a name="creating-adapters-in-unmanaged-code"></a>Yönetilmeyen kodda bağdaştırıcıları oluşturma  
- Yerel olarak kayıtlı tüm bağdaştırıcısı sınıflar birlikte oluşturulabilir ve kullanarak oluşturulabilir `VsLocalCreateInstance()` işlevi.  
+## <a name="creating-adapters"></a>Bağdaştırıcılar oluşturma  
+ Eski arabirimler için bağdaştırıcılar oluşturmak üzere aşağıdaki yöntemleri kullanın.  
   
- Tüm bağdaştırıcıları vsshlids.h dosyasında tanımlanan GUID'ler kullanılarak oluşturulan... Visual Studio SDK yükleme klasörü \VisualStudioIntegration\Common\Inc\. VsTextBufferAdapter bir örneğini oluşturmak için aşağıdaki kodu kullanın.  
+|Yöntem|Dönüştürme|  
+|------------|----------------|  
+|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsCodeWindowAdapter%2A>|Oluşturur <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow> .|  
+|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsTextBufferAdapter%2A>|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>Belirtilen bir için oluşturur <xref:Microsoft.VisualStudio.Utilities.IContentType> .|  
+|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsTextBufferAdapter%2A>|Oluşturur <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> .|  
+|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsTextBufferCoordinatorAdapter%2A>|Oluşturur <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator> .|  
+|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsTextViewAdapter%2A>|Bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> için oluşturur <xref:Microsoft.VisualStudio.Text.Editor.ITextViewRoleSet> .|  
+|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsTextViewAdapter%2A>|Oluşturur <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> .|  
+  
+## <a name="creating-adapters-in-unmanaged-code"></a>Yönetilmeyen kodda bağdaştırıcılar oluşturma  
+ Tüm bağdaştırıcı sınıfları yerel ortak oluşturulmuş tablo olarak kaydedilir ve işlevi kullanılarak oluşturulabilir `VsLocalCreateInstance()` .  
+  
+ Tüm bağdaştırıcılar, içindeki Vsshlids. h dosyasında tanımlanan GUID 'Ler kullanılarak oluşturulur. Visual Studio SDK yüklemesinin \VisualStudioIntegration\Common\Inc\ klasörü. VsTextBufferAdapter örneği oluşturmak için aşağıdaki kodu kullanın.  
   
 ```  
 IVsTextBuffer *pBuf = NULL;  
 VsLocalCreateInstance(CLSID_VsTextBuffer, NULL, CLSCTX_INPROC_SERVER, IID_IVsTextBuffer, (void**)&pBuf);  
 ```  
   
-## <a name="creating-adapters-in-managed-code"></a>Yönetilen kodda bağdaştırıcıları oluşturma  
- Yönetilen kodda, bağdaştırıcılar aynı şekilde yönetilmeyen kod için tanımlanan birlikte oluşturabilirsiniz. Oluşturma ve bağdaştırıcıları ile etkileşime olanak tanıyan bir MEF hizmet de kullanabilirsiniz. Bu şekilde bir bağdaştırıcı alma birlikte oluşturduğunuzda olandan daha ayrıntılı denetim sağlar.  
+## <a name="creating-adapters-in-managed-code"></a>Yönetilen kodda bağdaştırıcılar oluşturma  
+ Yönetilen kodda, bağdaştırıcıları yönetilmeyen kod için açıklanan şekilde birlikte oluşturabilirsiniz. Ayrıca, bağdaştırıcılar oluşturup bunlarla etkileşime girebilmenizi sağlayan bir MEF hizmeti de kullanabilirsiniz. Bu şekilde bir bağdaştırıcı almak, ortak oluşturduğunuz zaman daha ayrıntılı denetim imkanı sunar.  
   
-#### <a name="to-create-an-adapter-for-ivstextview"></a>Bir bağdaştırıcı için Ivstextview oluşturmak için  
+#### <a name="to-create-an-adapter-for-ivstextview"></a>IVsTextView için bir bağdaştırıcı oluşturmak için  
   
-1. Microsoft.VisualStudio.Editor.dll bir başvuru ekleyin. Emin olun `CopyLocal` ayarlanır `false`.  
+1. Microsoft.VisualStudio.Editor.dll bir başvuru ekleyin. ' `CopyLocal` Nin olarak ayarlandığından emin olun `false` .  
   
-2. Örneği <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>aşağıdaki gibi.  
+2. <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>Aşağıdaki gibi örneğini oluşturun.  
   
     ```  
     using Microsoft.VisualStudio.Editor;  
@@ -85,20 +85,20 @@ VsLocalCreateInstance(CLSID_VsTextBuffer, NULL, CLSCTX_INPROC_SERVER, IID_IVsTex
     IVsEditorAdaptersFactoryService adapterFactoryService = ComponentModel.GetService<IVsEditorAdaptersFactoryService>();  
     ```  
   
-3. Çağrı `CreateX()` yöntemi.  
+3. Yöntemini çağırın `CreateX()` .  
   
     ```  
     adapterFactoryService.CreateTextViewAdapter(textView);  
     ```  
   
-## <a name="using-the-visual-studio-editor-directly-from-unmanaged-code"></a>Yönetilmeyen koddan doğrudan Visual Studio Düzenleyicisi'ni kullanarak  
- COM çağrılabilir arabirimleri, Microsoft.VisualStudio.Platform.VSEditor ad alanı ve Microsoft.VisualStudio.Platform.VSEditor.Interop ad alanı IVx * arabirimleri olarak kullanıma sunar. Örneğin, COM sürümünü Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer arabirimi olan <xref:Microsoft.VisualStudio.Text.ITextBuffer> arabirimi. Gelen `IVxTextBuffer`, arabellek anlık görüntüleri erişin, önbelleği değiştiren, arabellek metin değişikliği olaylarını dinler ve izleme noktaları ve yayılma oluşturun. Aşağıdaki adımları nasıl erişileceğini gösteren bir `IVxTextBuffer` gelen bir `IVsTextBuffer`.  
+## <a name="using-the-visual-studio-editor-directly-from-unmanaged-code"></a>Doğrudan yönetilmeyen koddan Visual Studio düzenleyicisini kullanma  
+ Microsoft. VisualStudio. platform. VSEditor ad alanı ve Microsoft. VisualStudio. platform. VSEditor. Interop ad alanı COM çağrılabilir arabirimlerini IX * arabirimleri olarak kullanıma sunar. Örneğin, Microsoft. VisualStudio. platform. VSEditor. Interop. ıxtextbuffer arabirimi arabirimin COM sürümüdür <xref:Microsoft.VisualStudio.Text.ITextBuffer> . ' Den, `IVxTextBuffer` arabellek anlık görüntülerine erişim sağlayabilir, arabelleği değiştirebilir, arabellekteki metin değişikliği olaylarını dinleyebilir ve izleme noktaları ve yayılma alanları oluşturabilirsiniz. Aşağıdaki adımlarda, ' dan ' a nasıl erişebileceğiniz gösterilmektedir `IVxTextBuffer` `IVsTextBuffer` .  
   
-#### <a name="to-get-an-ivxtextbuffer"></a>Bir IVxTextBuffer almak için  
+#### <a name="to-get-an-ivxtextbuffer"></a>Ixtextbuffer almak için  
   
-1. IVx * arabirimler için tanımları VSEditor.h dosyasında bulunan... Visual Studio SDK yükleme klasörü \VisualStudioIntegration\Common\Inc\.  
+1. IX * arabirimlerinin tanımları, içindeki VSEditor. h dosyasıdır. Visual Studio SDK yüklemesinin \VisualStudioIntegration\Common\Inc\ klasörü.  
   
-2. Aşağıdaki kodu kullanarak bir metin arabelleği başlatır `IVsUserData->GetData()` yöntemi. Aşağıdaki kodda, `pData` işaretçisidir bir `IVsUserData` nesne.  
+2. Aşağıdaki kod yöntemini kullanarak bir metin arabelleği oluşturur `IVsUserData->GetData()` . Aşağıdaki kodda, bir `pData` nesnesi işaretçisi olur `IVsUserData` .  
   
     ```  
     #include <textmgr.h>  
@@ -120,14 +120,14 @@ VsLocalCreateInstance(CLSID_VsTextBuffer, NULL, CLSCTX_INPROC_SERVER, IID_IVsTex
     }  
     ```  
   
-## <a name="using-visual-studio-editor-services-in-a-non-mef-component"></a>Visual Studio Düzenleyicisi Hizmetleri bir olmayan MEF Bileşeni olarak kullanma  
- MEF kullanmayan varolan yönetilen kod bileşeni varsa ve Visual Studio Düzenleyicisi hizmetlerini kullanmak istediğiniz ComponentModelHost VSPackage'ı içeren derlemeyi bir başvuru ekleyin ve onun SComponentModel hizmeti alın.  
+## <a name="using-visual-studio-editor-services-in-a-non-mef-component"></a>MEF olmayan bir bileşende Visual Studio Düzenleyicisi hizmetlerini kullanma  
+ MEF kullanmayan ve Visual Studio Düzenleyicisi 'nin hizmetlerini kullanmak istediğiniz mevcut bir yönetilen kod bileşenine sahipseniz, ComponentModelHost VSPackage içeren derlemeye bir başvuru eklemeniz ve onun SComponentModel hizmetini almanız gerekir.  
   
-#### <a name="to-consume-visual-studio-editor-components-from-a-non-mef-component"></a>Visual Studio Düzenleyicisi bileşenleri olmayan MEF Bileşeni kullanmak için  
+#### <a name="to-consume-visual-studio-editor-components-from-a-non-mef-component"></a>MEF olmayan bir bileşenden Visual Studio Düzenleyicisi bileşenlerini kullanmak için  
   
-1. Microsoft.VisualStudio.ComponentModelHost.dll derlemeye bir başvuru ekleyin... Visual Studio yükleme klasörü \Common7\IDE\. Emin olun `CopyLocal` ayarlanır `false`.  
+1. İçindeki Microsoft.VisualStudio.ComponentModelHost.dll derlemesine bir başvuru ekleyin. Visual Studio yüklemesinin \Common7\IDE\ klasörü. ' `CopyLocal` Nin olarak ayarlandığından emin olun `false` .  
   
-2. Özel bir ekleme `IComponentModel` gibi Visual Studio Düzenleyicisi Hizmetleri, kullanmak istediğiniz sınıf üyesi.  
+2. `IComponentModel`Visual Studio Düzenleyicisi hizmetlerini kullanmak istediğiniz sınıfa aşağıdaki gibi özel bir üye ekleyin.  
   
     ```  
     using Microsoft.VisualStudio.ComponentModelHost;  
@@ -135,14 +135,14 @@ VsLocalCreateInstance(CLSID_VsTextBuffer, NULL, CLSCTX_INPROC_SERVER, IID_IVsTex
     private IComponentModel componentModel;  
     ```  
   
-3. Başlatma yöntemi bileşeniniz için bileşen modelinde örneği oluşturur.  
+3. Bileşeninizin başlatma yönteminde bileşen modelini oluşturun.  
   
     ```  
     componentModel =  
      (IComponentModel)Package.GetGlobalService(typeof(SComponentModel));  
     ```  
   
-4. Bundan sonra herhangi bir Visual Studio Düzenleyicisi hizmetin çağırarak alabileceğiniz `IComponentModel.GetService<T>()` istediğiniz hizmeti için yöntemi.  
+4. Bundan sonra, istediğiniz hizmet için yöntemini çağırarak Visual Studio Düzenleyicisi hizmetlerinden herhangi birini edinebilirsiniz `IComponentModel.GetService<T>()` .  
   
     ```  
     textBufferFactoryService =  

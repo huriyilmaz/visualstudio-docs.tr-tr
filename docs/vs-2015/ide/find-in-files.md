@@ -22,10 +22,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5e21d0880813452e37c9e20afdc98321e4b2e3a6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655895"
 ---
 # <a name="find-in-files"></a>Dosyalarda Bul
@@ -44,7 +44,7 @@ Dosyalarda bul * *, belirtilen dosya kümesinde arama yapmanıza olanak tanır. 
    Bir bul işlemini iptal etmek için CTRL + BREAK tuşlarına basın.
 
 > [!NOTE]
-> Bul ve Değiştir aracı, `Hidden` veya `System` özniteliği ayarlanmış dizinlerde arama yapmaz.
+> Bul ve Değiştir aracı, ya da özniteliği ayarlanmış dizinlerde arama `Hidden` yapmaz `System` .
 
 ## <a name="find-what"></a>Neyi bulun
  Yeni bir metin dizesi veya ifade aramak için, kutuyu kutuda belirtin. En son aradığınız 20 dizeden herhangi birini aramak için listeyi açın ve aramak istediğiniz dizeyi seçin. Arama dizenizde bir veya daha fazla normal ifade kullanmak istiyorsanız bitişik **Ifade Oluşturucu** düğmesini seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da normal Ifadeler kullanma](../ide/using-regular-expressions-in-visual-studio.md).
@@ -86,4 +86,4 @@ Dosyalarda bul * *, belirtilen dosya kümesinde arama yapmanıza olanak tanır. 
  Sona Ekle sonuçları, aramanın sonuçlarını önceki arama sonuçlarına ekler.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Dosyalardaki metni bulma ve değiştirme](../ide/finding-and-replacing-text.md) [](../ide/replace-in-files.md) [Visual Studio komutları](../ide/reference/visual-studio-commands.md)
+ [Dosyalardaki metni bulma ve değiştirme](../ide/finding-and-replacing-text.md) [Replace in Files](../ide/replace-in-files.md) [Visual Studio komutları](../ide/reference/visual-studio-commands.md)

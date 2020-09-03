@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b2e827b180ae218f3dd42b124500e01260e72d82
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74297398"
 ---
 # <a name="gpu-usage"></a>GPU Kullanımı
@@ -67,11 +67,11 @@ Direct3D uygulamanızın üst düzey donanım kullanımını daha iyi anlamak i�
   
 2. Raporun üst kısmında, araştırmak istediğiniz sorunu gösteren grafiklerden birindeki bir bölümü seçin. Seçiminiz en fazla 3 saniye uzunluğunda olabilir; daha uzun bölümler başlangıca doğru kesiliyor.  
   
-    ![Koleksiyon&#45;sonrası, ayrıntıları görüntülemek için bir Aralık seçin](../debugger/media/gfx-diag-gpu-usage-select1.png "gfx_diag_gpu_usage_select1")  
+    ![&#45;koleksiyonu gönderin, ayrıntıları görüntülemek için bir Aralık seçin](../debugger/media/gfx-diag-gpu-usage-select1.png "gfx_diag_gpu_usage_select1")  
   
 3. Raporun alt bölümünde, içindeki **Ayrıntıları görüntüle** bağlantısını seçin **... Seçiminizin ayrıntılı bir zaman çizelgesini görüntülemek için bu Aralık iletisi için GPU kullanımının ayrıntılarını görüntülemek için buraya tıklayın** .  
   
-    ![Seçili&#45;Aralık seçiliyken koleksiyonu gönder](../debugger/media/gfx-diag-gpu-usage-select2.png "gfx_diag_gpu_usage_select2")  
+    ![Aralık seçiliyken&#45;koleksiyonu gönder](../debugger/media/gfx-diag-gpu-usage-select2.png "gfx_diag_gpu_usage_select2")  
   
    Bu, raporu içeren yeni bir sekmeli belge açar. GPU kullanımı raporu, CPU üzerinde bir grafik olayının ne zaman başlatıldığını, GPU 'ya ulaştığında ve GPU 'nun bunu yürütmesi için ne kadar sürdüğünü görmenizi sağlar. Bu bilgiler, kodunuzda daha fazla paralellik için performans sorunlarını ve fırsatları belirlemenize yardımcı olabilir.  
   
@@ -84,25 +84,25 @@ Direct3D uygulamanızın üst düzey donanım kullanımını daha iyi anlamak i�
   
  ![CPU ve GPU zaman çizelgeleriyle GPU kullanım raporu](../debugger/media/gfx-diag-gpu-usage-report.png "gfx_diag_gpu_usage_report")  
   
- Raporun alt kısmındaki olaylardan birini seçmek ilgili zaman çizelgeleriyle ilgili olaylara bir işaret koyar, genellikle API çağrısını temsil eden bir CPU iş parçacığında bir olay ve GPU 'nun ne zaman temsil ettiğini temsil eden GPU zaman çizelgeleriyle birindeki başka bir olay vardır. Görev tamamlandı. Benzer şekilde, bir zaman çizelgesindeki olaylardan birini seçmek, raporun alt bölümünde karşılık gelen olayı vurgular. Raporun üst bölümündeki zaman çizelgelerin dışına küçültüldüğünde, yalnızca en uzun süren olaylar görünür. Daha kısa bir süre olan olayları görmek için, işaret cihazındaki CTRL + tekerleği veya üst bölmenin sol alt köşesindeki ölçekleme denetimini kullanarak zaman çizelgelerine yakınlaştırın. Ayrıca, kaydedilen olaylar arasında gezinmek için zaman çizelgesi bölmesinin içeriğini sürükleyebilirsiniz.  
+ Raporun alt kısmındaki olaylardan birini seçmek, ilgili zaman çizelgeleriyle ilgili olaylara bir işaret koyar, genellikle API çağrısını temsil eden bir CPU iş parçacığında bir olay ve GPU 'nun görevi ne zaman tamamlandığını temsil eden GPU zaman çizelgeleriyle birindeki başka bir olay vardır. Benzer şekilde, bir zaman çizelgesindeki olaylardan birini seçmek, raporun alt bölümünde karşılık gelen olayı vurgular. Raporun üst bölümündeki zaman çizelgelerin dışına küçültüldüğünde, yalnızca en uzun süren olaylar görünür. Daha kısa bir süre olan olayları görmek için, işaret cihazındaki CTRL + tekerleği veya üst bölmenin sol alt köşesindeki ölçekleme denetimini kullanarak zaman çizelgelerine yakınlaştırın. Ayrıca, kaydedilen olaylar arasında gezinmek için zaman çizelgesi bölmesinin içeriğini sürükleyebilirsiniz.  
   
  Aradığınızı bulmanıza yardımcı olmak için, Işlem adlarına, Iş parçacığı kimliklerine ve olay adına göre GPU kullanım raporunu filtreleyebilirsiniz. Ayrıca, vysnc satırlarını hangi görüntü yenileme oranının belirlediğini seçebilirsiniz ve uygulamanız işleme komutlarını gruplamak için ID3DUserDefinedAnnotation arabirimini kullanıyorsa olayları hiyerarşik olarak sıralayabilirsiniz.  
   
- Daha fazla ayrıntı aşağıda verilmiştir:  
+ Daha fazla ayrıntı aşağıdadır:  
   
-|Filtre denetimi|Açıklama|  
+|Filtre denetimi|Description|  
 |--------------------|-----------------|  
-|**İşle**|İlgilendiğiniz işlemin adı. Tanılama oturumu sırasında GPU kullanan tüm süreçler bu açılan listeye dahil edilir. Bu açılan bu açılan işlemle ilişkili renk, iş parçacığının etkinliğinin aşağıdaki zaman çizelgeleriyle olan rengidir.|  
+|**İşleme**|İlgilendiğiniz işlemin adı. Tanılama oturumu sırasında GPU kullanan tüm süreçler bu açılan listeye dahil edilir. Bu açılan bu açılan işlemle ilişkili renk, iş parçacığının etkinliğinin aşağıdaki zaman çizelgeleriyle olan rengidir.|  
 |**Zincirinin**|İlgilendiğiniz iş parçacığı KIMLIĞI. Çok iş parçacıklı bir uygulamada, bu, ilgilendiğiniz işleme ait olan belirli iş parçacıklarını yalıtmanıza yardımcı olabilir. Seçilen iş parçacığıyla ilişkili olaylar her bir zaman çizelgesinde vurgulanır.|  
-|**Görüntülenme**|Yenileme hızına görüntülenen ekran numarası **Note:** bazı sürücüler birden çok fiziksel ekranı tek, büyük bir sanal görüntü olarak sunacak şekilde yapılandırılabilir. Makinede birden çok görüntü eklenmiş olsa bile, yalnızca bir ekran listelendiğini görebilirsiniz.|  
-|**Filtreyle**|İlgilendiğiniz anahtar sözcükler. Raporun alt bölümündeki olaylar yalnızca tüm veya kısmen bir anahtar sözcükle eşleşen olanları içerir. Birden çok anahtar sözcüğü noktalı virgülle ayırarak belirtebilirsiniz (;).|  
+|**Görüntüleme**|Yenileme hızına görüntülenen ekran numarası **Note:**  bazı sürücüler birden çok fiziksel ekranı tek, büyük bir sanal görüntü olarak sunacak şekilde yapılandırılabilir. Makinede birden çok görüntü eklenmiş olsa bile, yalnızca bir ekran listelendiğini görebilirsiniz.|  
+|**Filtrele**|İlgilendiğiniz anahtar sözcükler. Raporun alt bölümündeki olaylar yalnızca tüm veya kısmen bir anahtar sözcükle eşleşen olanları içerir. Birden çok anahtar sözcüğü noktalı virgülle ayırarak belirtebilirsiniz (;).|  
 |**Hiyerarşi sıralaması**|Kullanıcı işaretçileri aracılığıyla tanımlanan (--) olay hiyerarşilerinin korunup korunmadığını veya yoksayıldığını belirten bir onay kutusu.|  
   
  GPU kullanımı raporunun alt bölümündeki olayların listesi, her bir olayın ayrıntılarını görüntüler.  
   
 |Sütun|Açıklama|  
 |------------|-----------------|  
-|**Olay adı**|Grafik olayının adı. Bir olay, genellikle bir CPU iş parçacığı zaman çizelgesinde bir olaya ve bir GPU zaman çizelgesinde bir olaya karşılık gelir.<br /><br /> GPU kullanımı bir olayın adını belirleyemedik, olay adları ' unöznitelikli ' olabilir. Daha fazla bilgi için bu tablonun altındaki nota bakın.|  
+|**Olay Adı**|Grafik olayının adı. Bir olay, genellikle bir CPU iş parçacığı zaman çizelgesinde bir olaya ve bir GPU zaman çizelgesinde bir olaya karşılık gelir.<br /><br /> GPU kullanımı bir olayın adını belirleyemedik, olay adları ' unöznitelikli ' olabilir. Daha fazla bilgi için bu tablonun altındaki nota bakın.|  
 |**CPU başlangıcı (NS)**|Bir Direct3D API 'SI çağırarak etkinliğin CPU 'da başlatıldığı zaman. Süre, uygulamanın başladığı zamana göre nanosaniye cinsinden ölçülür.|  
 |**GPU başlangıcı (NS)**|Etkinliğin GPU 'da başlatıldığı zaman. Süre, uygulamanın başladığı zamana göre nanosaniye cinsinden ölçülür.|  
 |**GPU süresi (NS)**|Etkinliğin GPU 'da, nanosaniye cinsinden tamamlanması için geçen süre.|  
@@ -130,12 +130,12 @@ Direct3D uygulamanızın üst düzey donanım kullanımını daha iyi anlamak i�
   
  Bu ayarı kullanarak profil oluşturma bilgilerinin koleksiyonunu ertelerseniz, GPU kullanımı aracı ' nın altında uygulamanızı çalıştırdığınızda GPU kullanımı araç penceresinin alt bölümünde ek bir bağlantı kullanılabilir hale gelir. Profil oluşturma bilgilerini toplamaya başlamak için, **ek AYRıNTıLı GPU kullanım verileri toplamaya başlama** ' daki **Başlangıç** bağlantısını seçin.  
   
-## <a name="hwsupport"></a>Donanım ve sürücü desteği  
+## <a name="hardware-and-driver-support"></a><a name="hwsupport"></a> Donanım ve sürücü desteği  
  Aşağıdaki GPU donanım ve sürücüleri desteklenir:  
   
 |Satıcı|GPU açıklaması|Sürücü sürümü gerekli|  
 |------------|---------------------|-----------------------------|  
-|Intel®|4\. nesil Intel® Çekirdek Işlemcileri (' Haswell ')<br /><br /> -Intel® HD grafikleri (GT1)<br />-Intel® HD grafik 4200 (GT2)<br />-Intel® HD grafik 4400 (GT2)<br />-Intel® HD grafik 4600 (GT2)<br />-Intel® HD grafik P4600 (GT2)<br />-Intel® HD grafik P4700 (GT2)<br />-Intel® HD grafik 5000 (GT3)<br />-Intel® Iris™ Graphics 5100 (GT3)<br />-Intel® Iris™ Pro grafik 5200 (GT3e)|--(en son sürücüleri kullan)|  
+|Intel®|4. nesil Intel® Çekirdek Işlemcileri (' Haswell ')<br /><br /> -Intel® HD grafikleri (GT1)<br />-Intel® HD grafik 4200 (GT2)<br />-Intel® HD grafik 4400 (GT2)<br />-Intel® HD grafik 4600 (GT2)<br />-Intel® HD grafik P4600 (GT2)<br />-Intel® HD grafik P4700 (GT2)<br />-Intel® HD grafik 5000 (GT3)<br />-Intel® Iris™ Graphics 5100 (GT3)<br />-Intel® Iris™ Pro grafik 5200 (GT3e)|--(en son sürücüleri kullan)|  
 |AMD®|En çok, AMD Radeon™ HD 7000-Serisi (AMD Radeon™ HD 7350-7670 ' den hariç tutar)<br /><br /> AMD Radeon™ GPU, AMD FirePro™ GPU 'Lar ve grafik çekirdeği Ileri (GCN) mimarisine sahip AMD FirePro GPU hızlandırıcıları.<br /><br /> DC Core Next (GCN) mimarisi (' Kaveri ', ' kabini ', ' Temash ', ' Beema ', ' Mullins ') özelliklerine sahip AMD® E serisi ve AMD A Serisi Hızlandırılmış Işlem birimleri (APUs)|14,7 RC3 veya üzeri|  
 |NVıDıA®|En çok bu, NVıDıA® GeForce® 400 serisi.<br /><br /> NVIDIA® GeForce® GPU 'lar, NVıDıA Quadro® GPU 'Lar ve NVıDıA® Tesla™, Fermi™, Kepler™ veya Maxwell™ mimarisine sahip GPU Hızlandırıcılar.|343,37 veya üzeri|  
   

@@ -14,10 +14,10 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: 1fd7538782bff80ee12ac0aa0e66c0daa4da2d5c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546724"
 ---
 # <a name="invoke-text-transformation-in-the-build-process"></a>Yapı işleminde metin dönüşümünü çağır
@@ -26,7 +26,7 @@ ms.locfileid: "85546724"
 
 Kullandığınız oluşturma motoruna bağlı olarak, yapı görevleri farklı işlevleri yerine getirebilirler. Visual Studio 'da çözümü oluşturduğunuzda, [hostspecific = "true"](../modeling/t4-template-directive.md) özniteliği ayarlandıysa bir metin şablonu Visual Studio API 'Sine (EnvDTE) erişebilir. Bu, çözümü komut satırından oluşturduğunuzda ya da Visual Studio aracılığıyla bir sunucu derlemesi başlattığınızda doğru değildir. Bu durumlarda, yapı MSBuild tarafından oluşturulur ve farklı bir T4 ana bilgisayar kullanılır. Bu, MSBuild kullanarak bir metin şablonu oluşturduğunuzda, proje dosya adları gibi şeylere aynı şekilde erişemeyeceğiniz anlamına gelir. Ancak, [Yapı parametrelerini kullanarak ortam bilgilerini metin şablonlarına ve yönerge işlemcilere geçirebilirsiniz](#parameters).
 
-## <a name="configure-your-machines"></a><a name="buildserver"></a>Makinelerinizi yapılandırma
+## <a name="configure-your-machines"></a><a name="buildserver"></a> Makinelerinizi yapılandırma
 
 Geliştirme bilgisayarınızda derleme görevlerini etkinleştirmek için, Visual Studio için modelleme SDK 'sını yükler.
 
@@ -65,7 +65,7 @@ MSBuild 'teki bazı özellikleri yapılandırmak için proje dosyanızı düzenl
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`
 
-\-veya
+\- veya
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`
 
@@ -220,7 +220,7 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
 </PropertyGroup>
 ```
 
-## <a name="pass-build-context-data-into-the-templates"></a><a name="parameters"></a>Yapı bağlamı verilerini şablonlara geçirme
+## <a name="pass-build-context-data-into-the-templates"></a><a name="parameters"></a> Yapı bağlamı verilerini şablonlara geçirme
 
 Proje dosyasında parametre değerlerini ayarlayabilirsiniz. Örneğin, [Yapı](../msbuild/msbuild-properties.md) özelliklerini ve [ortam değişkenlerini](../msbuild/how-to-use-environment-variables-in-a-build.md)geçirebilirsiniz:
 
@@ -254,7 +254,7 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 > [!NOTE]
 > `ResolveParameterValue``T4ParameterValues`yalnızca MSBuild 'i kullandığınızda verileri alır. Visual Studio kullanarak şablonu dönüştürdüğünüzde, parametrelerin varsayılan değerleri vardır.
 
-## <a name="use-project-properties-in-assembly-and-include-directives"></a><a name="msbuild"></a>Derleme ve ekleme yönergeleri içindeki proje özelliklerini kullanma
+## <a name="use-project-properties-in-assembly-and-include-directives"></a><a name="msbuild"></a> Derleme ve ekleme yönergeleri içindeki proje özelliklerini kullanma
 
 **$ (SolutionDir)** gibi Visual Studio makroları MSBuild 'de çalışmıyor. Bunun yerine, proje özelliklerini kullanabilirsiniz.
 
@@ -303,13 +303,13 @@ Dahil edilen bir dosyayı veya şablon tarafından okunan başka bir dosyayı g�
 
 ::: moniker range="vs-2017"
 
-- Şu adreste T4 MSbuild şablonunda iyi bir kılavuzluk vardır:`%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets`
+- Şu adreste T4 MSbuild şablonunda iyi bir kılavuzluk vardır: `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets`
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- Şu adreste T4 MSbuild şablonunda iyi bir kılavuzluk vardır:`%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets`
+- Şu adreste T4 MSbuild şablonunda iyi bir kılavuzluk vardır: `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets`
 
 ::: moniker-end
 

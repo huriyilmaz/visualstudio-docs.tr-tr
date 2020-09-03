@@ -1,5 +1,5 @@
 ---
-title: IDebugÖzellik3::DestroyObjectID | Microsoft Dokümanlar
+title: IDebugProperty3::D Estroyobjectıd | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f465bc06712c5032c6e90288ebd02406de4f2330
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721206"
 ---
 # <a name="idebugproperty3destroyobjectid"></a>IDebugProperty3::DestroyObjectID
-Bu özellik ile ilişkili benzersiz kimliği yok eder ve arayan kişinin artık bu özelliği diğer tüm özelliklerden benzersiz olarak tanımlamayı önemsemediğini gösterir.
+Bu özellik ile ilişkili benzersiz KIMLIĞI yok eder ve çağıranın artık bu özelliği diğer tüm özelliklerden benzersiz bir şekilde belirlemesine işaret eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 HRESULT DestroyObjectID(
@@ -38,12 +38,12 @@ int DestroyObjectID();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Hata ayıklama altyapısı nın bir özellik için benzersiz edilmiş iAh'ları desteklemesi gerekmiyorsa (çünkü bunları `E_NOTIMPL` zaten benzersiz bir şekilde içten izler), o zaman bu yöntem için geri dönebilir.
+ Hata ayıklama altyapısının bir özelliğin benzersiz kimliklerini desteklemesi gerekmiyorsa (bunları benzersiz bir şekilde takip ettiğinden), bu yöntem için yalnızca geri dönüş yapılabilir `E_NOTIMPL` .
 
- Tekil kimlikler, arayan bu özelliğin diğer tüm özellikler arasında benzersiz bir şekilde tanımlandığınızdan emin olmak istediğinde [CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md) yöntemine yapılan bir çağrıyla oluşturulur.
+ Çağıran, bu özelliğin diğer tüm özellikler arasında benzersiz bir şekilde tanımlandığını doğrulamak istediğinde [CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md) yöntemine yapılan bir çağrıyla benzersiz kimlikler oluşturulur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)

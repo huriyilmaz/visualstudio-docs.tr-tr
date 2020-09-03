@@ -1,5 +1,5 @@
 ---
-title: IDebugÖzellik3::GetStringChars | Microsoft Dokümanlar
+title: 'IDebugProperty3:: GetStringChars | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 693a29bc30ef206428713ace36275389de1b7f0a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721085"
 ---
 # <a name="idebugproperty3getstringchars"></a>IDebugProperty3::GetStringChars
-Bu özellik ile ilişkili dize alır ve kullanıcı tarafından sağlanan arabellekte depolar.
+Bu özellikle ilişkili dizeyi alır ve Kullanıcı tarafından sağlanan arabellekte depolar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetStringChars(
@@ -45,24 +45,24 @@ int GetStringChars(
 
 ## <a name="parameters"></a>Parametreler
 `buflen`\
-[içinde] Kullanıcı tarafından sağlanan arabellek tetbit edebileceği maksimum karakter sayısı.
+'ndaki Kullanıcı tarafından sağlanan arabelleğin tutabilecek en fazla karakter sayısı.
 
 `rgString`\
-[çıkış] Dizeyi döndürür.
+dışı Dizeyi döndürür.
 
- [Yalnızca `rgString` C++, dize Tekkod karakterleri alan bir arabellek için bir işaretçidir. Bu arabellek boyutu `buflen` en az karakter (bayt değil) olmalıdır.
+ [Yalnızca C++], `rgString` dizenin Unicode karakterlerini alan arabelleğin bir işaretçisidir. Bu arabellek en az `buflen` karakter (bayt değil) boyutunda olmalıdır.
 
 `pceltFetched`\
-[çıkış] Arabellekte depolanan karakter sayısının döndürüldüğü yer. (C++'da olabilir.) `NULL`
+dışı Aslında arabellekte depolanan karakterlerin sayısı döndürülür. ( `NULL` C++ ' da olabilir.)
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-C++'da arabellek en azından `buflen` Unicode karakterleri uzun olduğundan emin olmak için dikkatli olunmalıdır. Unicode karakterinin 2 bayt uzunluğunda olduğunu unutmayın.
+C++ ' da, arabelleğin en az Unicode karakter uzunluğunda olduğundan emin olmak için dikkatli olunmalıdır `buflen` . Unicode karakterinin 2 bayt uzunluğunda olduğunu unutmayın.
 
 > [!NOTE]
-> C++'da döndürülen dize sonlandırıcı null karakterini içermez. Verilirse, `pceltFetched` dizedeki karakter sayısını belirtir.
+> C++ ' da, döndürülen dize bir Sonlandırıcı null karakteri içermez. Belirtilmişse `pceltFetched` dizedeki karakter sayısını belirtir.
 
 ## <a name="example"></a>Örnek
 

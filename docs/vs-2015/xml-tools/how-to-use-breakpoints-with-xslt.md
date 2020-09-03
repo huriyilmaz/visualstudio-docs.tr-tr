@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0519c3ab19e7d36aa26ea2f462c8a4571b9f8b32
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656301"
 ---
-# <a name="how-to-use-breakpoints-with-xslt"></a>Nasıl yapılır: XSLT ile kesme noktaları kullanma
+# <a name="how-to-use-breakpoints-with-xslt"></a>Nasıl Yapılır: XSLT ile Kesme Noktaları Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bir XSLT stil sayfasında veya XML kaynak belgesinde kesme noktaları ayarlayabilirsiniz. Bir etikette kesme noktası ayarlarsanız, yürütme başladığında kesme noktası kaynak satırı bilgilerine sahip bir sonraki ifadeye geçer.
@@ -32,7 +32,7 @@ Bir XSLT stil sayfasında veya XML kaynak belgesinde kesme noktaları ayarlayabi
 
 2. İmleci kesme noktası konumuna konumlandırın, sağ tıklayın, **kesme**noktası ' nın üzerine gelin ve **kesme noktası Ekle**' ye tıklayın.
 
-3. Belge Özellikleri penceresinin **giriş** alanındaki gözata ( **...** ) düğmesine tıklayın.
+3. Belge Özellikleri penceresinin **giriş** alanındaki gözata (**...**) düğmesine tıklayın.
 
 4. XML kaynak belgesini bulun ve **Aç**' a tıklayın.
 
@@ -49,7 +49,7 @@ Bir XSLT stil sayfasında veya XML kaynak belgesinde kesme noktaları ayarlayabi
 
 2. İmleci kesme noktası konumuna konumlandırın, sağ tıklayın, **kesme**noktası ' nın üzerine gelin ve **kesme noktası Ekle**' ye tıklayın.
 
-3. Belge Özellikleri penceresinin **stil sayfası** alanındaki gözata ( **...** ) düğmesine tıklayın.
+3. Belge Özellikleri penceresinin **stil sayfası** alanındaki gözata (**...**) düğmesine tıklayın.
 
 4. XML kaynak belgesini bulun ve **Aç**' a tıklayın.
 

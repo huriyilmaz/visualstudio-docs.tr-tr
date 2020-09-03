@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::GetCustomViewerList | Microsoft Dokümanlar
+title: 'IDebugProperty3:: GetCustomViewerList | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 212f8d251232d35ee7d9cc46074a21239eea29f4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721164"
 ---
 # <a name="idebugproperty3getcustomviewerlist"></a>IDebugProperty3::GetCustomViewerList
-Bu özellik ile ilişkili özel görüntüleyenlerin listesini alır.
+Bu özellikle ilişkili özel görüntüleyicilerin bir listesini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetCustomViewerList(
@@ -47,27 +47,27 @@ int GetCustomViewerList(
 
 ## <a name="parameters"></a>Parametreler
 `celtSkip`\
-[içinde] Atlayacak izleyici sayısı.
+'ndaki Atlanacak görüntüleyiciler sayısı.
 
 `celtRequested`\
-[içinde] Alınacak izleyici sayısı `rgViewers` (dizinin boyutunu da belirtir).
+'ndaki Alınacak görüntüleyiciler sayısı (Ayrıca dizinin boyutunu belirtir `rgViewers` ).
 
 `rgViewers`\
-[içinde, dışarı] Doldurulacak [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) yapıları dizisi.
+[in, out] Doldurulacak [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) yapıları dizisi.
 
 `pceltFetched`\
-[çıkış] Gerçek izleyici sayısı döndürülür.
+dışı Döndürülen gerçek izleyici sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Tür görselleştiricilerini desteklemek için, bu yöntem aramayı [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) yöntemine ileter. İfade değerlendiricisi, bu özelliğin türü için özel görüntüleyenleri de destekliyorsa, bu yöntem listeye uygun özel görüntüleyenleri ekleyebilir.
+Tür görselleştiricileri desteklemek için, bu yöntem çağrıyı [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) yöntemine iletir. İfade değerlendirici bu özelliğin türü için özel görüntüleyiciler de destekliyorsa, bu yöntem ilgili özel görüntüleyicilerin listeye eklenmesini sağlayabilir.
 
-Tür görselleştiricileri ve özel görüntüleyenler arasındaki farklar hakkında ayrıntılar için [Type Visualizer](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md) ve Custom Viewer'a bakın.
+Tür Görselleştiriciler ve özel görüntüleyiciler arasındaki farklılıklar hakkındaki ayrıntılar için bkz. [tür görselleştiricisi ve özel Görüntüleyici](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md) .
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimini ortaya çıkaran bir **CProperty** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimini kullanıma sunan bir **cproperty** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 STDMETHODIMP CProperty::GetCustomViewerList(ULONG celtSkip, ULONG celtRequested, DEBUG_CUSTOM_VIEWER* prgViewers, ULONG* pceltFetched)
