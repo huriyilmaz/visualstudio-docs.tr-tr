@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::CanSetNextStatement | Microsoft Dokümanlar
+title: 'IDebugThread2:: Cansetnextdeyimizi | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4232c25bfe9acd7f17c88c28aa4211a9c62175f8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718868"
 ---
 # <a name="idebugthread2cansetnextstatement"></a>IDebugThread2::CanSetNextStatement
-Geçerli yönerge işaretçisinin verilen yığın çerçevesine ayarlanıp ayarlanamayacağını belirler.
+Geçerli yönerge işaretçisinin verilen yığın çerçevesine uygulanıp ayarlanamayacağını belirler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT CanSetNextStatement ( 
@@ -43,16 +43,16 @@ int CanSetNextStatement ( 
 
 ## <a name="parameters"></a>Parametreler
 `pStackFrame`\
-İleride kullanım için ayrılmış; null değerine ayarlanır. Bu null değeri ise, geçerli yığın çerçevesini kullanın.
+Gelecekte kullanılmak üzere ayrılmıştır; null değere ayarlayın. Bu null bir değer ise, geçerli yığın çerçevesini kullanın.
 
 `pCodeContext`\
-[içinde] Yürütülmek üzere olan kod konumunu ve içeriğini açıklayan bir [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi.
+'ndaki Yürütülmesi ve bağlamı için kod konumunu açıklayan bir [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem `S_OK`dönerse, bir sonraki deyimi ayarlamak için [SetNextStatement](../../../extensibility/debugger/reference/idebugthread2-setnextstatement.md) yöntemini arayın.
+ Bu yöntem döndürürse `S_OK` , bir sonraki ifadeyi ayarlamak Için [Setnextdeyimyöntemi](../../../extensibility/debugger/reference/idebugthread2-setnextstatement.md) çağırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

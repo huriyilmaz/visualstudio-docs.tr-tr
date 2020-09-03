@@ -1,5 +1,5 @@
 ---
-title: Statik kod analizini C# kullanarak mağaza uygulamalarında Visual Basic ve kod kalitesini analiz etme
+title: Statik kod analizini kullanarak Mağaza uygulamalarında Visual Basic ve C# kod kalitesini analiz etme
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-test
@@ -12,17 +12,17 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cfe5ed57bfc361b711ed2aceceff2aabfc44cf4e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660732"
 ---
-# <a name="analyze-visual-basic-and-c-code-quality-in-store-apps-using-visual-studio-static-code-analysis"></a>Visual Studio statik C# Kod analizini kullanarak mağaza uygulamalarında Visual Basic ve kod kalitesini analiz etme
+# <a name="analyze-visual-basic-and-c-code-quality-in-store-apps-using-visual-studio-static-code-analysis"></a>Visual Studio statik Kod analizini kullanarak Mağaza uygulamalarında Visual Basic ve C# kod kalitesini analiz etme
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content.exe "windows_and_phone_content")
+Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content.png "windows_and_phone_content")
 
  ' Visual Studio Express deki kod Analizi Aracı, kodunuzun bir dizi ortak kusur ve iyi programlama uygulaması ihlallerini inceler. Kod Analizi uyarıları derleyici hatalarından ve uyarılarından farklıdır, ancak siz veya kodunuzu kullanan diğer kişiler için hala sorun oluşturabilir. Kod Analizi, kodunuzda test aracılığıyla keşfedilmesi zor olan kusurları da bulabilir. Geliştirme işleminiz sırasında kod analizi aracını düzenli aralıklarla çalıştırmak, tamamlanmış uygulamanızın kalitesini artırabilir.
 
@@ -42,7 +42,7 @@ Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content
 
  [Visual Basic ve C# kod analizi uyarıları](../test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md#BKMK_Warnings)
 
-## <a name="BKMK_Run"></a>Kod analizini çalıştırma
+## <a name="running-code-analysis"></a><a name="BKMK_Run"></a> Kod analizini çalıştırma
  Visual Studio Çözümünüzde kod analizini çalıştırmak için:
 
 - **Build** menüsünde, **çözüm üzerinde Kod analizini Çalıştır**' ı seçin.
@@ -51,13 +51,13 @@ Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content
 
 1. Çözüm Gezgini ' de proje adına sağ tıklayın ve ardından **Özellikler**' i seçin.
 
-2. Proje özelliği sayfasında, **Kod Analizi** ' ni seçin ve ardından **derlemede Kod analizini etkinleştir ' i SEÇIN (CodeAnalysis sabitini tanımlar)** .
+2. Proje özelliği sayfasında, **Kod Analizi** ' ni seçin ve ardından **derlemede Kod analizini etkinleştir ' i SEÇIN (CodeAnalysis sabitini tanımlar)**.
 
    Çözüm derlenir ve kod analizi çalışır. Sonuçlar Kod Analizi penceresinde görünür.
 
    ![Kod Analizi penceresi](../test/media/ca-managed-collapsed.png "CA_Managed_Collapsed")
 
-## <a name="BKMK_Analyze"></a>Kod Analizi uyarılarını çözümleme ve çözme
+## <a name="analyzing-and-resolving-code-analysis-warnings"></a><a name="BKMK_Analyze"></a> Kod Analizi uyarılarını çözümleme ve çözme
  Belirli bir uyarıyı çözümlemek için, Kod Analizi penceresinde uyarının başlığına tıklayın. Uyarı, sorunla ilgili ayrıntılı bilgileri görüntüleyecek şekilde genişler.
 
  ![Genişletilmiş kod analizi uyarısı](../test/media/ca-managed-callouts.png "CA_Managed_Callouts")
@@ -71,7 +71,7 @@ Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content
 > [!TIP]
 > Kod Analizi penceresinden Kod analizini yeniden çalıştırabilirsiniz. **Çözümle** düğmesine tıklayın ve analizin kapsamını seçin. Çözümlemeyi çözümün tamamında veya seçili bir projede yeniden çalıştırabilirsiniz.
 
-## <a name="BKMK_Suppress"></a>Kod Analizi uyarılarını gizleme
+## <a name="suppressing-code-analysis-warnings"></a><a name="BKMK_Suppress"></a> Kod Analizi uyarılarını gizleme
  Kod Analizi uyarısının düzeltilmeyeceğine karar verirken zamanlar olabilir. Uyarı çözmenin, kodunuzun gerçek hayatta herhangi bir uygulamada ortaya çıkması olasılığa göre çok fazla kaynak gerektirir. Ya da uyarıda kullanılan çözümlemenin belirli bir bağlam için uygun olmadığından emin olabilirsiniz. Kod Analizi penceresinde artık görünmemek için tek tek uyarıları bastırın.
 
  Bir uyarıyı bastırmak için:
@@ -82,23 +82,23 @@ Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content
 
 3. **Iletiyi bastır** ' ın üzerine gelin ve **kaynak** ya da **gizleme dosyası**' nı seçin.
 
-   - **Kaynak** dosyasında, uyarıyı oluşturan metodun yukarıdaki kaynak dosyasına bir `SuppressMessage` özniteliği ekler. Bu, gizleme daha keşfedilmesini sağlar.
+   - **Kaynak** `SuppressMessage` dosyasında, uyarıyı oluşturan metodun üzerine kaynak dosyasına bir öznitelik ekler. Bu, gizleme daha keşfedilmesini sağlar.
 
-   - **Gizleme dosyası içinde** , projenin **GlobalSuppressions.cs** dosyasına bir `SuppressMessage` özniteliği ekler. Bu, gizlemelerin yönetimini kolaylaştırır. **GlobalSuppression.cs** öğesine eklenen `SuppressMessage` özniteliğinin, uyarıyı oluşturan yöntemi de hedeflediğini unutmayın. Bu, uyarıyı küresel olarak göstermez.
+   - **Gizleme dosyası içinde** `SuppressMessage` , projenin **GlobalSuppressions.cs** dosyasına bir öznitelik ekler. Bu, gizlemelerin yönetimini kolaylaştırır. `SuppressMessage` **GlobalSuppression.cs** öğesine eklenen özniteliğin da uyarıyı oluşturan yöntemi hedeflediğini unutmayın. Bu, uyarıyı küresel olarak göstermez.
 
      Kaynak dosyadaki uyarının engellenip engellenmeyeceğini kararınız veya gizleme dosyasında kodlama stilinize ve gereksinimlerinize göre değişiklik yapılıp yapılmayacağını belirtir.
 
-## <a name="BKMK_Search"></a>Kod analizi sonuçlarını arama ve filtreleme
+## <a name="searching-and-filtering-code-analysis-results"></a><a name="BKMK_Search"></a> Kod analizi sonuçlarını arama ve filtreleme
  Uyarı iletilerinin uzun listelerinde arama yapabilir ve çok projeli çözümlerde uyarıları filtreleyebilirsiniz.
 
  ![Kod Analizi penceresinde arama ve filtreleme](../test/media/ca-searchfilter.png "CA_SearchFilter")
 
- @No__t_0, tüm kod analizi uyarıları, uyarı önem düzeyine sahiptir.
+ [!INCLUDE[vs_dev11_expwin_long](../includes/vs-dev11-expwin-long-md.md)]' De, tüm kod analizi uyarıları, uyarı önem düzeyine sahiptir.
 
-## <a name="BKMK_Warnings"></a>Visual Basic ve C# kod analizi uyarıları
+## <a name="visual-basic-and-c-code-analysis-warnings"></a><a name="BKMK_Warnings"></a> Visual Basic ve C# kod analizi uyarıları
  Kod Analizi aşağıdaki uyarıları oluşturur:
 
- [CA1001: Atılabilir alanlara sahip olan türler atılabilir olmalıdır](https://msdn.microsoft.com/library/ms182172.aspx)
+ [CA1001: Atılabilen alanlara sahip türler atılabilir olmalıdır](https://msdn.microsoft.com/library/ms182172.aspx)
 
  [CA1821: Boş sonlandırıcıları kaldırın](https://msdn.microsoft.com/library/bb264476.aspx)
 
@@ -106,4 +106,4 @@ Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content
 
  [CA2229: Serileştirme oluşturucularını uygulayın](https://msdn.microsoft.com/library/ms182343.aspx)
 
- [CA2231: ValueType.Equals değerini geçersiz kılmada eşittir işlecini aşırı yükle](https://msdn.microsoft.com/library/ms182359.aspx)
+ [CA2231: Eşittir işlecini ValueType.Equals'ı geçersiz kılarak aşırı yükleyin](https://msdn.microsoft.com/library/ms182359.aspx)

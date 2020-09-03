@@ -9,10 +9,10 @@ caps.latest.revision: 12
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c2bd087dc0b06cbf8ffe4c08f84d819e8ef1c2f8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660520"
 ---
 # <a name="install-third-party-unit-test-frameworks"></a>Nasıl yapılır: Üçüncü taraf birim test çerçevelerini yükleme
@@ -20,7 +20,7 @@ ms.locfileid: "72660520"
 
 Visual Studio Test Gezgini, gezgin için bir bağdaştırıcı arabirimi geliştiren herhangi bir birim test çerçevesini çalıştırabilir. Framework 'ün yükleme programı ikili dosyaları yükler ve desteklediği diller için Visual Studio proje şablonları ekler. Şablonuyla bir proje oluşturduğunuzda, çerçeve test Gezgini ile kaydedilir. Visual Studio çözümü, farklı çerçeveleri kullanan ve farklı dillerde hedeflenen birim testi projeleri içerebilir. Test Gezgini tümünü çalıştırır.
 
- **Requirements**
+ **Gereksinimler**
 
 - Visual Studio Enterprise, Visual Studio Professional
 

@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a72b5bc3f3645d9af1008f2c178ab285e8b45449
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84184139"
 ---
 # <a name="clickonce-and-application-settings"></a>ClickOnce ve uygulama ayarları
@@ -27,11 +27,11 @@ Windows Forms için uygulama ayarları, istemci üzerinde özel uygulama ve Kull
  Aşağıdaki bilgiler yalnızca varsayılan uygulama ayarları sağlayıcısı, sınıfı için geçerlidir <xref:System.Configuration.LocalFileSettingsProvider> . Özel bir sağlayıcı sağlarsanız, bu sağlayıcı, verileri nasıl depoladığını ve sürümler arasında ayarlarını nasıl yükseltleyeceğini tespit eder. Uygulama ayarları sağlayıcıları hakkında daha fazla bilgi için bkz. [uygulama ayarları mimarisi](/dotnet/framework/winforms/advanced/application-settings-architecture).
 
 ## <a name="application-settings-files"></a>Uygulama ayarları dosyaları
- Uygulama ayarları iki dosya tüketir: * \<app> . exe. config* ve *User. config*, burada *uygulama* Windows Forms uygulamanızın adıdır. *User. config* , uygulamanız kullanıcı kapsamlı ayarları depoladığında istemci üzerinde oluşturulur. * \<app> . exe. config*, aksine, ayarlar için varsayılan değerler tanımlarsanız dağıtımdan önce mevcut olacaktır. **Yayımla** komutunu kullandığınızda, Visual Studio bu dosyayı otomatik olarak içerecektir. ClickOnce uygulamanızı *Mage. exe* veya *MageUI. exe*kullanarak oluşturursanız, uygulama bildiriminizi doldurduğunuzda bu dosyanın uygulamanızın diğer dosyalarına eklendiğinden emin olmanız gerekir.
+ Uygulama ayarları iki dosya tüketir: * \<app>.exe.config* ve *user.config*, burada *uygulama* Windows Forms uygulamanızın adıdır. *user.config* , uygulamanız kullanıcı kapsamlı ayarları depolaışında istemci üzerinde oluşturulur. Ayarlar için varsayılan değerler tanımlarsanız, buna karşılık olarak * \<app>.exe.config*, dağıtımdan önce mevcut olacaktır. **Yayımla** komutunu kullandığınızda, Visual Studio bu dosyayı otomatik olarak içerecektir. ClickOnce uygulamanızı *Mage.exe* veya *MageUI.exe*kullanarak oluşturursanız, uygulama bildiriminizi doldurduğunuzda bu dosyanın uygulamanızın diğer dosyalarına eklendiğinden emin olmanız gerekir.
 
- ClickOnce kullanılarak dağıtılan bir Windows Forms uygulamasında, bir uygulamanın * \<app> . exe. config* dosyası uygulama dizininde depolanır, ancak *User. config* dosyası kullanıcının **Documents and Settings** klasöründe depolanır. ClickOnce uygulamasında, * \<app> . exe. config* ClickOnce uygulama önbelleğinin içindeki uygulama dizininde bulunur ve *User. config* bu uygulamanın ClickOnce veri dizininde bulunur.
+ ClickOnce kullanılarak dağıtılan bir Windows Forms uygulamasında, uygulamanın * \<app>.exe.config* dosyası uygulama dizininde depolanır, ancak *user.config* dosyası kullanıcının **Belgeler ve ayarlar** klasöründe depolanır. ClickOnce uygulamasında, * \<app>.exe.config* ClickOnce uygulama önbelleğinin içindeki uygulama dizininde bulunur ve bu uygulamanın ClickOnce veri dizininde yer *user.config* .
 
- Uygulamanızı nasıl dağıtabileceğinizi ne olursa olsun, uygulama ayarları, * \<app> . exe. config*dosyasına güvenli okuma erişiminin yanı sıra *User. config*dosyasına güvenli okuma/yazma erişimi sağlar.
+ Uygulamanızı nasıl dağıtabileceğinizi göz önüne alarak, uygulama ayarları * \<app>.exe.config*için güvenli okuma erişimi ve *user.config*güvenli okuma/yazma erişimi sağlar.
 
  ClickOnce uygulamasında, uygulama ayarları tarafından kullanılan yapılandırma dosyalarının boyutu ClickOnce önbelleğinin boyutuyla sınırlıdır. Daha fazla bilgi için bkz. [ClickOnce önbelleğine genel bakış](../deployment/clickonce-cache-overview.md).
 
@@ -42,10 +42,10 @@ Windows Forms için uygulama ayarları, istemci üzerinde özel uygulama ve Kull
 
 |Değişiklik türü|Yükseltme eylemi|
 |--------------------|--------------------|
-|* \<app> . Exe. config* dosyasına eklenen ayar|Yeni ayar, geçerli sürümün * \<app> . exe. config dosyasında* birleştirilir|
-|* \<app> . Exe. config* öğesinden kaldırılan ayar|Eski ayar geçerli sürümden * \<app> . exe. config* öğesinden kaldırılır|
-|Ayarın varsayılan değiştirildi; Yerel ayar, *User. config* içinde hala özgün varsayılana ayarlanmış|Ayar, geçerli sürümün *User. config dosyasında* yeni varsayılan değer olarak birleştirilir|
-|Ayarın varsayılan değiştirildi; *User. config* dosyasında varsayılan olmayan ayar ayarlandı|Ayar, geçerli sürümün *User. config dosyasında* , varsayılan olmayan değerle birleştirilir|
+|* \<app>.exe.config* ayarı eklendi|Yeni ayar, geçerli sürümün * \<app>.exe.config* birleştirilir|
+|* \<app>.exe.config* kaldırılan ayar|Eski ayar geçerli sürümden kaldırılır * \<app>.exe.config*|
+|Ayarın varsayılan değiştirildi; Yerel ayar hala *user.config* özgün varsayılana ayarlanmış|Bu ayar, geçerli sürümün *user.config* , yeni varsayılan değer olarak ile birleştirilir|
+|Ayarın varsayılan değiştirildi; *user.config* ' de varsayılan olmayan ayar ayarlandı|Ayar, geçerli sürüm *user.config* ile birleştirilir ve varsayılan olmayan değer korunur|
 
 Kendi uygulama ayarları sarmalayıcı sınıfınızı oluşturduysanız ve güncelleştirme mantığını özelleştirmek istiyorsanız, yöntemini geçersiz kılabilirsiniz <xref:System.Configuration.ApplicationSettingsBase.Upgrade%2A> .
 

@@ -9,10 +9,10 @@ caps.latest.revision: 13
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c2bf21286143b2b9543c834f00ed31ddaa4cef63
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660374"
 ---
 # <a name="troubleshooting-code-coverage"></a>Kod Kapsamı Sorunlarını Giderme
@@ -58,7 +58,7 @@ Visual Studio'daki kod kapsamı analiz aracı yerel ve yönetilen (.ddl veya .ex
  .pdb ve .dll veya .exe dosyaları farklı yerlerdeyse, .pdb dosyasını aynı dizine kopyalayın. Kod kapsamı motorunu .pdb dosyalarını başka bir konumda aramak için yapılandırmak mümkündür. Daha fazla bilgi için bkz. [kod kapsamı analizini özelleştirme](../test/customizing-code-coverage-analysis.md).
 
 ### <a name="using-an-instrumented-or-optimized-binary"></a>Araçlı ya da optimize edilmiş ikili kullanma
- Analiz, ikili dosyanın profil temelli Iyileştirme veya vsinstr. exe ya da VSPerfMon. exe gibi bir profil oluşturma aracı tarafından işaretlenmiş bir Gelişmiş iyileştirme biçimi olup olmadığını belirleme.
+ Analiz, ikili dosyanın profil temelli Iyileştirme veya vsinstr.exe ya da vsperfmon.exe gibi bir profil oluşturma aracı tarafından işaretlenmiş gelişmiş iyileştirmede herhangi bir biçime sahip olup olmadığını belirleme.
 
  Açıklama bir derleme başka bir profil oluşturma aracı tarafından zaten belgelenmiş veya iyileştirilmişse, derleme kod kapsamı analizinden çıkarılır.
 
@@ -67,7 +67,7 @@ Visual Studio'daki kod kapsamı analiz aracı yerel ve yönetilen (.ddl veya .ex
  Çözüm geçiş iyileştirmesi ve yeni bir yapı kullanın.
 
 ### <a name="code-is-not-managed-net-or-native-c-code"></a>Kod yönetilen (.NET) veya yerel (C++) kodu değilse
- Analiz, yönetilen veya C++ kod üzerinde bazı testler çalıştırdığınızı doğrulayın.
+ Analiz, yönetilen veya C++ kodu üzerinde bazı testler çalıştırdığınızı doğrulayın.
 
  Açıklama Visual Studio 'da kod kapsamı Analizi yalnızca yönetilen ve yerel (C++) kodda kullanılabilir. Üçüncü parti araçlar kullanıyorsanız, kodunuzun bazı veya tamamı farklı bir platformda çalışabilir.
 
@@ -76,7 +76,7 @@ Visual Studio'daki kod kapsamı analiz aracı yerel ve yönetilen (.ddl veya .ex
 ### <a name="assembly-has-been-installed-by-ngen"></a>NGen tarafından yüklenen derleme
  Analiz, derlemenin yerel görüntü önbelleğinden yüklenmediğini doğrulayın.
 
- Performans nedenleriyle Ilgili açıklama, yerel görüntü derlemeleri çözümlenmez. Daha fazla bilgi için bkz. [Ngen. exe (yerel görüntü Oluşturucu)](https://msdn.microsoft.com/library/44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66).
+ Performans nedenleriyle Ilgili açıklama, yerel görüntü derlemeleri çözümlenmez. Daha fazla bilgi için bkz. [Ngen.exe (yerel görüntü Oluşturucu)](https://msdn.microsoft.com/library/44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66).
 
  Çözüm derlemenin MSIL sürümünü kullanır. NGen ile işlemeyin.
 
@@ -97,16 +97,16 @@ Visual Studio'daki kod kapsamı analiz aracı yerel ve yönetilen (.ddl veya .ex
 
   Dosyadaki her dize bir düzenli ifadedir. Her birini hatalar için gözden geçirin ve bu belirtilen için bakın:
 
-  - Eşleşmeyen parantezler (...) veya kaçışsız parantezler \\ (... \\). Arama dizisinde parantezleri eşleştirmek istiyorsanız, atlatmak gerekir. Örneğin, bir işlev kullanımıyla eşleştirmek için: `.*MyFunction\(double\)`
+  - Eşleşmeyen parantezler (...) veya kaçışsız parantezler \\ (... \\ ). Arama dizisinde parantezleri eşleştirmek istiyorsanız, atlatmak gerekir. Örneğin, bir işlev kullanımıyla eşleştirmek için: `.*MyFunction\(double\)`
 
-  - İfadenin başına yıldız veya artı koyun. Herhangi bir karakter dizesini eşleştirmek için, bir nokta ve bir yıldız işareti kullanın: `.*`
+  - İfadenin başına yıldız veya artı koyun. Herhangi bir karakter dizesini eşleştirmek için bir nokta ve ardından bir yıldız işareti kullanın: `.*`
 
 ### <a name="custom-runsettings-file-with-incorrect-exclusions"></a>Yanlış istisnalarla özelleştirilmiş .runsettings dosyası
  Analiz özel bir. runsettings dosyası kullanıyorsanız, derlemenizi içerdiğinden emin olun.
 
  Açıklama kod kapsamı seçeneklerini yapılandırmak için birim testlerinizi özel bir. runsettings dosyası ile çalıştırabilirsiniz. Bu seçenek size dosyaları eklemeyi veya çıkarmayı sağlar. Daha fazla bilgi için bkz. [kod kapsamı analizini özelleştirme](../test/customizing-code-coverage-analysis.md).
 
- Çözüm tüm `Include` düğümlerini. runsettings dosyasından kaldırın ve ardından tüm `Exclude` düğümlerini kaldırın. Bu problemi çözdüyse, bunları aşamalar halinde yerleştirin.
+ Çözüm `Include` . runsettings dosyasındaki tüm düğümleri kaldırın ve tüm `Exclude` düğümleri kaldırın. Bu problemi çözdüyse, bunları aşamalar halinde yerleştirin.
 
  DataCollectors düğümünün Kod Kapsamını belirttiğinden emin olun. [Kod kapsamı analizini özelleştirme](../test/customizing-code-coverage-analysis.md)içindeki örnekle karşılaştırın.
 

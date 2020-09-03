@@ -1,5 +1,5 @@
 ---
-title: CvCreateDefaultMarkerSeriesOfDefaultProvider işlevi | Microsoft Docs
+title: CvCreateDefaultMarkerSeriesOfDefaultProvider Işlevi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: fb0ab16dcd7e42a496317f4e7589bafdbdaf83dc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162003"
 ---
 # <a name="cvcreatedefaultmarkerseriesofdefaultprovider-function"></a>CvCreateDefaultMarkerSeriesOfDefaultProvider İşlevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Varsayılan işaret varsayılan sağlayıcı dizi oluşturur.  
+Varsayılan bir sağlayıcının varsayılan işaretleyici serisini oluşturur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```  
 HRESULT CvCreateDefaultMarkerSeriesOfDefaultProvider(  
@@ -36,16 +36,16 @@ HRESULT CvCreateDefaultMarkerSeriesOfDefaultProvider(
   
 #### <a name="parameters"></a>Parametreler  
  `ppProvider`  
- Nesne değişkeni sağlayıcı adresi. Adresi boş olamaz, değişken herhangi bir değere sahip olabilir.  
+ Sağlayıcı nesne değişkeninin adresi. Adres NULL olamaz, değişken herhangi bir değere sahip olabilir.  
   
  `ppMarkerSeries`  
- İşaret serisi nesne değişkeni adresi. Adresi boş olamaz, değişken herhangi bir değere sahip olabilir.  
+ İşaretleyici serisi nesne değişkeninin adresi. Adres NULL olamaz, değişken herhangi bir değere sahip olabilir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Hem sağlayıcı hem de işaret serisi başarıyla oluşturulmuş veya hata kodu var. durumda herhangi bir hata olduğunda S_OK. Hata koşulu denetleyen için başarılı/başarısız makroları kullanın.  
+ Hem sağlayıcı hem de işaretleyici serisi başarıyla oluşturulduğunda S_OK ya da herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** cvmarkers.h  
+ **Üst bilgi:** cvişaretleyiciler. h  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C++ Kitaplık Başvurusu](../profiling/cpp-library-reference.md)
+ [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)

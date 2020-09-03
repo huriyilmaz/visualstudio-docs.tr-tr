@@ -20,28 +20,28 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6dffa98a8abbf74bd6eee8761d91f09a7c022666
-ms.sourcegitcommit: b56dc6fadc6c924beed36bb4c2ccc16cf6bcfa1c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68740214"
 ---
 # <a name="updatemanifestforbrowserapplication-task"></a>UpdateManifestForBrowserApplication Görevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Görev, bir[!INCLUDE[TLA#tla_xbap](../includes/tlasharptla-xbap-md.md)] proje oluşturulduğunda,  **\<HostInBrowser/>** öğesini uygulama bildirimine (ProjectName. exe. manifest) eklemek için çalıştırılır. <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication>  
+<xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication>Görev, **\<hostInBrowser />** bir proje oluşturulduğunda öğeyi uygulama bildirimine (*ProjectName*. exe. manifest) eklemek için çalıştırılır [!INCLUDE[TLA#tla_xbap](../includes/tlasharptla-xbap-md.md)] .  
   
 ## <a name="task-parameters"></a>Görev parametreleri  
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|`ApplicationManifest`|Gerekli **ıtaskitem []** parametresi.<br /><br /> `<hostInBrowser />` Öğesini eklemek istediğiniz uygulama bildirim dosyasının yolunu ve adını belirtir.|  
-|`HostInBrowser`|Gerekli **Boolean** parametresi.<br /><br /> Uygulama bildiriminin  **\<HostInBrowser/>** öğesini içermesini isteyip istemediğinizi belirtir. **True**ise, `<` **entryPoint/> öğesine yeni bir HostInBrowser/> öğesi dahil edilir. \<** Öğe içerme birikimlidir: bir  **\<HostInBrowser/>** öğesi zaten varsa, kaldırılmaz veya üzerine yazılmaz. Bunun yerine, ek  **\<bir HostInBrowser/>** öğesi oluşturulur. **False**ise, uygulama bildirimi değiştirilmez.|  
+|`ApplicationManifest`|Gerekli **ıtaskitem []** parametresi.<br /><br /> Öğesini eklemek istediğiniz uygulama bildirim dosyasının yolunu ve adını belirtir `<hostInBrowser />` .|  
+|`HostInBrowser`|Gerekli **Boolean** parametresi.<br /><br /> Uygulama bildiriminin öğesini dahil etmek için değiştirip değiştirmeyeceğinizi belirtir **\<hostInBrowser />** . **True**ise, öğesine yeni bir `<` **hostınbrowser/>** öğesi dahil edilir **\<entryPoint />** . Öğe içerme birikimlidir: bir **\<hostInBrowser />** öğe zaten varsa, kaldırılmaz veya üzerine yazılmaz. Bunun yerine, ek bir **\<hostInBrowser />** öğe oluşturulur. **False**ise, uygulama bildirimi değiştirilmez.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [!INCLUDE[TLA2#tla_xbap#plural](../includes/tla2sharptla-xbapsharpplural-md.md)], dağıtım kullanılarak [!INCLUDE[TLA#tla_clickonce](../includes/tlasharptla-clickonce-md.md)] çalıştırılır ve bu nedenle, destekleyici dağıtım ve uygulama bildirimleri ile yayımlanmalıdır. [!INCLUDE[TLA#tla_msbuild](../includes/tlasharptla-msbuild-md.md)]bir uygulama bildirimi oluşturmak için [GenerateApplicationManifest](/dotnet/api/microsoft.build.tasks.generateapplicationmanifest) görevini kullanır.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../includes/tla2sharptla-xbapsharpplural-md.md)] , dağıtım kullanılarak çalıştırılır [!INCLUDE[TLA#tla_clickonce](../includes/tlasharptla-clickonce-md.md)] ve bu nedenle, destekleyici dağıtım ve uygulama bildirimleri ile yayımlanmalıdır. [!INCLUDE[TLA#tla_msbuild](../includes/tlasharptla-msbuild-md.md)] bir uygulama bildirimi oluşturmak için [GenerateApplicationManifest](/dotnet/api/microsoft.build.tasks.generateapplicationmanifest) görevini kullanır.  
   
- Ardından, bir uygulamayı tarayıcıdan barındırılacak şekilde yapılandırmak için, aşağıdaki örnekte gösterildiği gibi, uygulama bildirimine ek bir öğe,  **\<HostInBrowser/>** eklenmelidir:  
+ Ardından, bir uygulamayı bir tarayıcıdan barındırılacak şekilde yapılandırmak için, **\<hostInBrowser />** Aşağıdaki örnekte gösterildiği gibi, uygulama bildirimine ek bir öğe eklenmelidir:  
   
 ```  
 <!--MyXBAPApplication.exe.manifest-->  
@@ -57,7 +57,7 @@ Görev, bir[!INCLUDE[TLA#tla_xbap](../includes/tlasharptla-xbap-md.md)] proje ol
 />  
 ```  
   
- Görev, öğe eklemek için oluşturulduğunda [!INCLUDE[TLA2#tla_xbap](../includes/tla2sharptla-xbap-md.md)]çalıştırılır. <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> `<hostInBrowser />`  
+ <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication>Görev, [!INCLUDE[TLA2#tla_xbap](../includes/tla2sharptla-xbap-md.md)] öğe eklemek için oluşturulduğunda çalıştırılır `<hostInBrowser />` .  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, `<hostInBrowser />` öğesinin bir uygulama bildirim dosyasına dahil edildiğini nasıl güvence altına gösterir.  

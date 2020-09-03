@@ -1,5 +1,5 @@
 ---
-title: VSPackage yapısı (kaynak denetimi VSPackage'ı) | Microsoft Docs
+title: VSPackage yapısı (kaynak denetimi VSPackage) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,31 +12,31 @@ caps.latest.revision: 27
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 08bb0a296daca0de1c02b905a75fb10ce05f254e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68206005"
 ---
 # <a name="vspackage-structure-source-control-vspackage"></a>VSPackage Yapısı (Kaynak Denetimi VSPackage’ı)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Kaynak denetimi paket SDK izin kendi kaynak denetimi işlevlerini ile tümleştirmek bir kaynak denetimi uygulayan bir VSPackage'ı oluşturma yönergeleri sağlar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ortam. VSPackage genellikle tarafından isteğe bağlı olarak yüklenen bir COM bileşenidir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE), kayıt defteri girdilerini pakette tarafından tanıtılan Hizmetleri temel. Her VSPackage'ı uygulamalıdır <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>. VSPackage genellikle Hizmetleri tarafından sunulan kullanıyor [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE ve bazı hizmetler kendi proffers.  
+Kaynak denetim paketi SDK 'Sı, kaynak denetimi uygulayıcısı ile ortamla tümleştirilmesine izin veren bir VSPackage oluşturmaya yönelik yönergeler sağlar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . VSPackage, genellikle [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kayıt defteri girişlerinde paketin tanıtıldığı hizmetlere bağlı olarak tümleşik geliştirme ortamı (IDE) tarafından isteğe bağlı olarak yüklenen BIR COM bileşenidir. Her VSPackage öğesini uygulamalıdır <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> . VSPackage genellikle IDE tarafından sunulan hizmetleri kullanır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ve bunların belirli hizmetlerini temin etmek için kullanılır.  
   
- VSPackage kendi menü öğeleri bildirir ve varsayılan öğe durumu .vsct dosyası aracılığıyla oluşturur. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE VSPackage yüklenene kadar bu menü öğeleri Bu durumdayken görüntüler. Sonuç olarak, VSPackage'nın uygulaması <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> etkinleştirmek ya da menü öğelerini devre dışı yöntemi çağrılır.  
+ VSPackage, menü öğelerini bildirir ve. vsct dosyası aracılığıyla varsayılan bir öğe durumu oluşturur. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]IDE, VSPackage yükleninceye kadar bu durumdaki menü öğelerini görüntüler. Daha sonra, VSPackage 'ın <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> yöntemi, menü öğelerini etkinleştirmek veya devre dışı bırakmak için çağrılır.  
   
 ## <a name="source-control-package-characteristics"></a>Kaynak denetimi paket özellikleri  
- Kaynak denetimi VSPackage'ı ile son derece tümleşiktir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ Kaynak denetimi VSPackage, ile arasında daha fazla tümleştirilir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
- VSPackage semantiği şunlardır:  
+ VSPackage semantiği şunları içerir:  
   
-- VSPackage'ı olan da uygulanacak arabirim ( `IVsPackage` arabirimi)  
+- VSPackage (arabirim) olarak sanallaştırılan tarafından uygulanacak arabirim `IVsPackage`  
   
-- Komut kullanıcı Arabirimi uygulama (.vsct dosyası ve uygulaması <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimi)  
+- UI komut uygulama (. vsct dosyası ve <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimin uygulanması)  
   
-- İle VSPackage kaydı [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+- İle VSPackage kaydı [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
-  Kaynak denetimi VSPackage'ı ile diğer iletmelidir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] varlıkları:  
+  Kaynak denetimi VSPackage bu diğer varlıklarla iletişim kurmalıdır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] :  
   
 - Projeler  
   
@@ -46,9 +46,9 @@ Kaynak denetimi paket SDK izin kendi kaynak denetimi işlevlerini ile tümleşti
   
 - Windows  
   
-- Çalıştırılan Belge tablosu  
+- Çalışan belge tablosu  
   
-### <a name="visual-studio-environment-services-that-may-be-consumed"></a>Tüketilebilir visual Studio ortamını Hizmetleri  
+### <a name="visual-studio-environment-services-that-may-be-consumed"></a>Tüketilen Visual Studio ortam hizmetleri  
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>  
@@ -57,7 +57,7 @@ Kaynak denetimi paket SDK izin kendi kaynak denetimi işlevlerini ile tümleşti
   
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsSolution>  
   
- SVsRegisterScciProvider hizmeti  
+ Svsregistersccıprovider hizmeti  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave>  
   
@@ -65,14 +65,14 @@ Kaynak denetimi paket SDK izin kendi kaynak denetimi işlevlerini ile tümleşti
   
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsSccManager>  
   
-### <a name="vsip-interfaces-implemented-and-called"></a>Uygulanan ve adlı VSIP arabirimleri  
- Kaynak denetimi VSPackage paketidir ve bu nedenle doğrudan diğer kayıtlı VSPackages ile etkileşebilirsiniz [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Kaynak denetimi işlevlerini teknolojilerimizden sağlamak için kaynak denetimi VSPackage'ı projeleri veya kabuk tarafından sağlanan arabirimlerle giderebilirsiniz.  
+### <a name="vsip-interfaces-implemented-and-called"></a>Uygulanan ve çağrılan VSıP arabirimleri  
+ Kaynak denetim paketi bir VSPackage ve bu nedenle, ile kaydedilen diğer VSPackages ile doğrudan etkileşime girebilirler [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Kaynak denetimi işlevselliğinin tam kapsamını sağlamak için, bir kaynak denetimi VSPackage, projeler veya kabuğun sağladığı arabirimlerle ilgilenebilirler.  
   
- Her projede [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] uygulamalıdır <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3> içinde bir proje olarak tanınması için [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE. Ancak, bu arabirimi değil özel kaynak denetimi için yeterli. Altında bir kaynak olarak beklenen projelerini denetleyecek uygulama <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2>. Bu arabirim içeriği için bir proje sorgulamak ve karakterleri ve bağlama bilgileri (sunucu konumu ve disk konumu altında olan proje arasında bağlantı kurmak için gereken bilgileri sağlamak için kaynak denetimi VSPackage'ı tarafından kullanılır Kaynak Denetimi).  
+ İçindeki her proje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3> IDE içinde proje olarak tanınmak için öğesini uygulamalıdır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Ancak, bu arabirim kaynak denetimi için yeterince uzmanlaşmış değildir. Kaynak denetimi altında olması beklenen projeler öğesini uygular <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2> . Bu arabirim, bir projeyi içerikleri için sorgulamak ve BT glifleri ile bağlama bilgilerini sağlamak için kaynak denetimi VSPackage tarafından kullanılır (sunucu konumu ve kaynak denetimi altındaki bir projenin disk konumu arasında bir bağlantı kurmak için gereken bilgiler).  
   
- Kaynak denetimi VSPackage'ı uygulayan <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>, sırayla sağlayan kendileri için kaynak denetimi kaydedin ve bunların durumunu karakterleri almak proje.  
+ Kaynak denetimi VSPackage <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2> öğesini uygular, bu da projelerin kaynak denetimine kaydolmasını ve durum gliflerinden alınmasını sağlar.  
   
- Kaynak denetimi VSPackage'ı dikkate almanız gereken arabirimleri tam bir listesi için bkz. [ilgili hizmetler ve arabirimler](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md).  
+ Bir kaynak denetimi VSPackage 'ın göz önünde bulundurmanız gereken arabirimlerin tüm listesi için bkz. [Ilgili hizmetler ve arabirimler](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Tasarım öğeleri](../../extensibility/internals/source-control-vspackage-design-elements.md)   

@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 20ec2a10210517f291a3bb21db9e1689942786c9
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84184282"
 ---
 # <a name="walkthrough-create-an-msbuild-project-file-from-scratch"></a>İzlenecek yol: Sıfırdan MSBuild proje dosyası oluşturma
@@ -49,7 +49,7 @@ Bu izlenecek yol, komut isteminde projenin nasıl oluşturulacağını gösterir
 
 ## <a name="extend-the-path"></a>Yolu uzat
 
-MSBuild 'i kullanabilmeniz için, PATH ortam değişkenini tüm gerekli araçları içerecek şekilde genişletmeniz gerekir. **Visual Studio için geliştirici komut istemi**kullanabilirsiniz. Windows görev çubuğundaki arama kutusunda Windows 10 ' da arama yapın. Ortamı sıradan bir komut isteminde veya bir betik ortamında ayarlamak için, Visual Studio yüklemesinin *Common7/Tools* alt klasöründe *vsdevcmd. bat* dosyasını çalıştırın.
+MSBuild 'i kullanabilmeniz için, PATH ortam değişkenini tüm gerekli araçları içerecek şekilde genişletmeniz gerekir. **Visual Studio için geliştirici komut istemi**kullanabilirsiniz. Windows görev çubuğundaki arama kutusunda Windows 10 ' da arama yapın. Ortamı sıradan bir komut isteminde veya bir betik ortamında ayarlamak için, Visual Studio yüklemesinin *Common7/Tools* alt klasöründeki *VSDevCmd.bat* çalıştırın.
 
 ## <a name="create-a-minimal-application"></a>En az uygulama oluşturma
 
@@ -87,7 +87,7 @@ MSBuild 'i kullanabilmeniz için, PATH ortam değişkenini tüm gerekli araçlar
 
      **Merhaba, dünya!** ileti görüntülenmelidir.
 
-8. Komut istemine **del helloworld. exe** yazarak uygulamayı silin.
+8. Komut istemine **del helloworld.exe** yazarak uygulamayı silin.
 
 ## <a name="create-a-minimal-msbuild-project-file"></a>En az MSBuild proje dosyası oluşturma
 
@@ -186,7 +186,7 @@ Yapı hedefi içindeki görevler sırayla yürütülür. Bu durumda, Visual C# d
 
 ### <a name="to-add-build-properties"></a>Derleme özellikleri eklemek için
 
-1. Komut istemine **del helloworld. exe** yazarak mevcut uygulamayı silin.
+1. Komut istemine **del helloworld.exe** yazarak mevcut uygulamayı silin.
 
 2. Proje dosyasında, bu `PropertyGroup` öğeyi açılış öğesinden hemen sonra ekleyin `Project` :
 
@@ -234,7 +234,7 @@ Proje dosyanız şimdi aşağıdaki koda benzemelidir:
 ```
 
 > [!NOTE]
-> \\ `OutputPath` Görevin özniteliğinde eklemek yerine, öğe içinde belirttiğinizde, klasör adının sonuna ters eğik çizgi () yol sınırlayıcısı eklemenizi öneririz `OutputAssembly` `Csc` . Bu nedenle,
+> \\ `OutputPath` Görevin özniteliğinde eklemek yerine, öğe içinde belirttiğinizde, klasör adının sonuna ters eğik çizgi () yol sınırlayıcısı eklemenizi öneririz `OutputAssembly` `Csc` . Yani:
 >
 > `<OutputPath>Bin\</OutputPath>`
 >
@@ -329,7 +329,7 @@ Proje dosyanız şimdi aşağıdaki koda benzemelidir:
 
 1. Komut isteminde **MSBuild HelloWorld. csproj-p:AssemblyName = Greetings**yazın.
 
-     Hedefi açıkça ayarlamak için **-t** anahtarını kullanmadınız, MSBuild varsayılan derleme hedefini çalıştırır. **-P** anahtarı özelliği geçersiz kılar `AssemblyName` ve yeni bir değer verir `Greetings` . Bu, \Bin *. exe*' nin *\Bin \\ * klasöründe oluşturulmasına neden olur.
+     Hedefi açıkça ayarlamak için **-t** anahtarını kullanmadınız, MSBuild varsayılan derleme hedefini çalıştırır. **-P** anahtarı özelliği geçersiz kılar `AssemblyName` ve yeni bir değer verir `Greetings` . Bu, *\Bin \\ * klasöründe yeni bir uygulama *Greetings.exe*oluşturulmasına neden olur.
 
 2. *\Bin \\ * klasörünün hem *MSBuildSample* uygulamasını hem de yeni *Greetings* uygulamasını içerdiğini doğrulamak için, **dir bin**yazın.
 
@@ -353,7 +353,7 @@ Proje dosyanız şimdi aşağıdaki koda benzemelidir:
 
      * \\ \Bin* klasörünün *MSBuildSample* uygulamasını içerdiğini doğrulamak için, tür **dir bin**.
 
-## <a name="build-incrementally"></a>Artımlı olarak derleyin
+## <a name="build-incrementally"></a>Artımlı olarak derleme
 
  MSBuild 'i yalnızca hedef dosya veya hedefin bağımlı olduğu hedef dosyalar değiştiyse bir hedef oluşturmak için söyleyebilirsiniz. MSBuild, değiştirilip değiştirilmediğini anlamak için bir dosyanın zaman damgasını kullanır.
 
@@ -388,7 +388,7 @@ Proje dosyanız şimdi aşağıdaki koda benzemelidir:
 
      **Giriş dosyaları: HelloWorld.cs**
 
-     **Çıkış dosyaları: BinMSBuildSample. exe**
+     **Çıkış dosyaları: BinMSBuildSample.exe**
 
      Uygulama son derlenmesinden bu yana kaynak dosyalardan hiçbiri değişmediğinden MSBuild, derleme hedefini atlar.
 

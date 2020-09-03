@@ -1,5 +1,5 @@
 ---
-title: SccAddFromScc Fonksiyonu | Microsoft Dokümanlar
+title: SccAddFromScc Işlevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1dd32e31330cdce958e463a40a4d92f88b09afb2
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701241"
 ---
-# <a name="sccaddfromscc-function"></a>SccAddFromScc fonksiyonu
-Bu işlev, kullanıcının kaynak denetim sisteminde zaten bulunan dosyalara göz atmasına ve daha sonra bu dosyaları geçerli projenin bir parçası haline getirmesine olanak tanır. Örneğin, bu işlev, dosyayı kopyalamadan geçerli projeye ortak bir üstbilgi dosyası alabilir. Dosyaların iade dizisi, `lplpFileNames`kullanıcının IDE projesine eklemek istediği dosyaların listesini içerir.
+# <a name="sccaddfromscc-function"></a>SccAddFromScc işlevi
+Bu işlev, kullanıcının zaten kaynak denetimi sisteminde bulunan dosyalara gözatmasını ve ardından bu dosyaları geçerli projenin bir parçası yapmasını sağlar. Örneğin, bu işlev, geçerli projeye dosyayı kopyalamadan ortak bir üst bilgi dosyası alabilir. Dosyaların dönüş dizisi, `lplpFileNames` kullanıcının IDE projesine eklemek istediği dosyaların listesini içerir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 SCCRTN SccAddFromScc (
@@ -36,41 +36,41 @@ SCCRTN SccAddFromScc (
 ### <a name="parameters"></a>Parametreler
  pvContext
 
-[içinde] Kaynak denetimi eklentisi bağlam yapısı.
+'ndaki Kaynak denetimi eklentisi bağlam yapısı.
 
- Hwnd
+ lendiği
 
-[içinde] Kaynak denetim eklentisinin sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresine bir tanıtıcı.
+'ndaki Kaynak denetimi eklentisinin, sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi için bir işleyici.
 
  lpnFiles
 
-[içinde, dışarı] Eklenen dosya sayısı için bir arabellek. (Bu `NULL` bellek tarafından `lplpFileNames` işaret serbest bırakılacak ise. Ayrıntılar için Açıklamalar'a bakın.)
+[in, out] İçine eklenmekte olan dosya sayısı için bir arabellek. (Bu, `NULL` tarafından işaret edilen belleğin `lplpFileNames` yayımlanacaksa olur. Ayrıntılar için bkz. açıklamalar.)
 
- lplpFileNames
+ Lplpdosyaadı
 
-[içinde, dışarı] Dizin yolları olmayan tüm dosya adlarına işaretçiler dizisi. Bu dizi, kaynak denetim eklentisi tarafından ayrılır ve serbest bırakılır. `lpnFiles` = 1 `lplpFileNames` ve `NULL`değilse , hedef klasörü `lplpFileNames` içeren dizideki ilk ad.
+[in, out] Dizin yolları olmayan tüm dosya adlarına işaretçiler dizisi. Bu dizi, kaynak denetimi eklentisi tarafından ayrılır ve serbest bırakılır. `lpnFiles`= 1 ise ve belirtilmemişse `lplpFileNames` `NULL` dizideki ilk ad `lplpFileNames` hedef klasörü içerir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Bu işlevin kaynak denetim eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|SCC_OK|Dosyalar başarıyla konumlandı ve projeye eklendi.|
-|SCC_I_OPERATIONCANCELED|İşlem hiçbir şekilde iptal edildi.|
-|SCC_I_RELOADFILE|Bir dosyanın veya projenin yeniden yüklenmesi gerekir.|
+|SCC_OK|Dosyalar başarıyla bulundu ve projeye eklendi.|
+|SCC_I_OPERATIONCANCELED|İşlem, hiçbir etkisi olmadan iptal edildi.|
+|SCC_I_RELOADFILE|Bir dosya veya projenin yeniden yüklenmesi gerekiyor.|
 
 ## <a name="remarks"></a>Açıklamalar
- IDE bu işlevi çağırır. Kaynak denetimi eklentisi yerel bir hedef klasörbelirtmeyi destekliyorsa, IDE = 1'den geçer `lpnFiles` ve yerel klasör adını `lplpFileNames`.
+ IDE bu işlevi çağırır. Kaynak denetimi eklentisi yerel bir hedef klasör belirtmeyi destekliyorsa, IDE = 1 ' i geçirir `lpnFiles` ve yerel klasör adını ' ye geçirir `lplpFileNames` .
 
- İşlev çağrısı geri döndüğünde, eklenti, dosya adı `lpnFiles` `lplpFileNames`dizisi için belleği gerektiği gibi ayırarak değerler atamıştır (bu `lplpFileNames`ayırmanın işaretçinin yerini aldığından not edin). `SccAddFromScc` Kaynak denetimi eklentisi, tüm dosyaları kullanıcının dizinine veya belirtilen atama klasörüne yerleştirmekten sorumludur. IDE daha sonra dosyaları IDE projesine ekler.
+ İşlev çağrısı döndürüldüğünde `SccAddFromScc` , eklenti ve için değerler atanır `lpnFiles` ve `lplpFileNames` dosya adı dizisinin belleğini gerektiği şekilde ayırarak (Bu ayırmanın içindeki işaretçinin yerini aldığını unutmayın `lplpFileNames` ). Kaynak denetimi eklentisi, tüm dosyaları kullanıcının dizinine veya belirtilen atama klasörüne yerleştirmekten sorumludur. Daha sonra IDE, dosyaları IDE projesine ekler.
 
- Son olarak, IDE bu işlevi ikinci `NULL` kez `lpnFiles`çağırır, için geçen. Bu, dosya adı dizisi için ayrılan belleği serbest bırakmak için kaynak denetim eklentisi tarafından özel bir sinyal olarak yorumlanır`lplpFileNames``.`
+ Son olarak, IDE bu işlevi ikinci bir kez çağırır, için öğesine `NULL` geçer `lpnFiles` . Bu, içindeki dosya adı dizisine ayrılan belleği serbest bırakmak için kaynak denetimi eklentisi tarafından özel bir sinyal olarak yorumlanır. `lplpFileNames``.`
 
- `lplpFileNames`bir `char ***` işaretçidir. Kaynak denetimi eklentisi, bir işaretçiyi dosya adları için bir dizi işaretçiye yerleştirir ve böylece listeyi bu API için standart şekilde geçer.
+ `lplpFileNames` bir `char ***` işaretçidir. Kaynak denetimi eklentisi dosya adlarına işaretçiler dizisine bir işaretçi koyar, bu nedenle listeyi bu API için standart şekilde geçirerek.
 
 > [!NOTE]
-> VSSCI API'nin ilk sürümleri, eklenen dosyalar için hedef projeyi göstermek için bir yol sağlamadı. Bunu karşılamak için, `lplpFIleNames` parametrenin semantik bir çıkış parametresi yerine bir in/out parametresi yapmak için geliştirilmiştir. Yalnızca tek bir dosya belirtilirse, yani `lpnFiles` = 1'in işaret ettiği `lplpFileNames` değer, hedef klasörü içerir. Bu yeni semantik leri kullanmak için, `SccSetOption` IDE `nOption`parametre `SCC_OPT_SHARESUBPROJ`olarak ayarlanmış işlevi çağırır. Kaynak denetim eklentisi semantikleri desteklemiyorsa, `SCC_E_OPTNOTSUPPORTED`döndürür. Bunu yapmak, **Kaynak Denetimi'nden Ekle** özelliğinin kullanımını devre dışı kılabilir. Bir eklenti **Kaynak Denetiminden Ekle** özelliğini`SCC_CAP_ADDFROMSCC`destekliyorsa ( ), yeni semantikleri desteklemesi ve döndürmesi `SCC_I_SHARESUBPROJOK`gerekir.
+> VSSCI API 'sinin ilk sürümleri, eklenen dosyalar için hedef projeyi göstermek için bir yol sağlamadı. Buna uyum sağlamak için, parametresinin semantiği bir `lplpFIleNames` çıkış parametresi yerine bir ın/out parametresi haline getirmek üzere geliştirilmiştir. Yalnızca tek bir dosya belirtilmişse, diğer bir deyişle, = 1 ile işaret edilen değer, `lpnFiles` sonra da ilk öğesi `lplpFileNames` hedef klasörü içerir. Bu yeni semantiğini kullanmak için IDE, `SccSetOption` `nOption` parametresi olarak ayarlanan parametresini çağırır `SCC_OPT_SHARESUBPROJ` . Bir kaynak denetimi eklentisi semantiğini desteklemiyorsa, döndürür `SCC_E_OPTNOTSUPPORTED` . Bunun yapılması, **kaynak denetimi Ekle** özelliğinin kullanımını devre dışı bırakır. Bir eklenti **kaynak denetiminden Ekle** özelliğini ( `SCC_CAP_ADDFROMSCC` ) destekliyorsa, yeni semantiğini ve dönmesini desteklemelidir `SCC_I_SHARESUBPROJOK` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak kontrol eklentisi API fonksiyonları](../extensibility/source-control-plug-in-api-functions.md)
+- [Kaynak denetimi eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)
 - [SccSetOption](../extensibility/sccsetoption-function.md)

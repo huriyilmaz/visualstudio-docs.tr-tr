@@ -24,28 +24,28 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a0bb14b47fb17c4d59089aafa123115b85ab9342
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72729865"
 ---
 # <a name="report-hook-functions"></a>Kanca İşlevlerini Raporla
-[_Crtsetreporthook](/cpp/c-runtime-library/reference/crtsetreporthook)kullanılarak yüklenen bir rapor kancası Işlevi, [_Crtdbgreport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw) bir hata ayıklama raporu oluşturduğunda her seferinde çağrılır. Diğer şeyler arasında, raporları belirli ayırma türlerine odaklanmak üzere filtrelemek için kullanabilirsiniz. Bir rapor kancası işlevinin, aşağıdaki gibi bir prototipi olmalıdır:
+[_CrtSetReportHook](/cpp/c-runtime-library/reference/crtsetreporthook)kullanılarak yüklenen bir rapor kancası işlevi, [_CrtDbgReport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw) bir hata ayıklama raporu oluşturduğunda her seferinde çağırılır. Diğer şeyler arasında, raporları belirli ayırma türlerine odaklanmak üzere filtrelemek için kullanabilirsiniz. Bir rapor kancası işlevinin, aşağıdaki gibi bir prototipi olmalıdır:
 
 ```cpp
 int YourReportHook(int nRptType, char *szMsg, int *retVal);
 ```
 
- **_Crtsetreporthook** 'e geçirdiğiniz işaretçi, CRTDBG Içinde tanımlanan **_CRT_REPORT_HOOK**türüdür. Olsun
+ **_CrtSetReportHook** için geçirdiğiniz işaretçi, CRTDBG içinde tanımlanan **_CRT_REPORT_HOOK**türündedir. Olsun
 
 ```cpp
 typedef int (__cdecl *_CRT_REPORT_HOOK)(int, char *, int *);
 ```
 
- Çalışma zamanı kitaplığı, kanca işlevinizi çağırdığında, *nRptType* bağımsız değişkeni raporun kategorisini Içerir ( **_CRT_WARN**, **_CRT_ERROR**veya **_CRT_ASSERT**), *szMsg* , tam olarak birleştirilmiş bir rapora yönelik bir işaretçi içerir ileti dizesi ve *retval* , rapor oluşturulduktan sonra `_CrtDbgReport` normal yürütmeye devam edip etmediğini belirtir veya hata ayıklayıcıyı başlatın. (Bir *retval* değeri sıfır yürütmeye devam eder, 1 değeri hata ayıklayıcıyı başlatır.)
+ Çalışma zamanı kitaplığı, kanca işlevinizi çağırdığında, *nRptType* bağımsız değişkeni raporun kategorisini içerir (**_CRT_WARN**, **_CRT_ERROR**veya **_CRT_ASSERT**), *szMsg* , tam olarak birleştirilmiş bir rapor iletisi dizesine yönelik bir işaretçi içerir ve *retval* , `_CrtDbgReport` raporu oluşturduktan veya hata ayıklayıcısını başlattıktan sonra normal yürütmeye devam edilip edilmeyeceğini belirtir. (Bir *retval* değeri sıfır yürütmeye devam eder, 1 değeri hata ayıklayıcıyı başlatır.)
 
- Kanca sorudaki iletiyi tamamen işlediğinde daha fazla raporlama gerekmiyorsa, **true**döndürmelidir. **Yanlış**döndürürse `_CrtDbgReport` iletiyi normalde rapor eder.
+ Kanca sorudaki iletiyi tamamen işlediğinde daha fazla raporlama gerekmiyorsa, **true**döndürmelidir. **False**döndürürse, `_CrtDbgReport` iletiyi normal olarak rapor eder.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Hata Ayıklama Kanca İşlevi Yazma](../debugger/debug-hook-function-writing.md)

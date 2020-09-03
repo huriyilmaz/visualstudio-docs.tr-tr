@@ -1,5 +1,5 @@
 ---
-title: ProvideDefaultName Öğesi (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: ProvideDefaultName öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,18 +14,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 192716198f605a5f6b4f62730e84dcf83b4229cc
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701711"
 ---
-# <a name="providedefaultname-element-visual-studio-templates"></a>DefaultName öğesi sağlama (Visual Studio şablonları)
-Proje sisteminin **Yeni Öğe Ekle** veya Yeni Proje iletişim kutusunda şablon için varsayılan bir ad oluşturup oluşturmayacağını belirtir. **New Project** [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]
+# <a name="providedefaultname-element-visual-studio-templates"></a>ProvideDefaultName öğesi (Visual Studio şablonları)
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Proje sisteminin **Yeni öğe** veya **Yeni proje** Ekle iletişim kutusunda şablon için varsayılan bir ad oluşturup üretmeyeceğini belirtir.
 
- \<VSTemplate \<> ŞablonVeri> \<VarsayılanAd>
+ \<VSTemplate> \<TemplateData>
+ \<ProvideDefaultName>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ProvideDefaultName> true/false </ProvideDefaultName>
@@ -44,22 +45,22 @@ Proje sisteminin **Yeni Öğe Ekle** veya Yeni Proje iletişim kutusunda şablon
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırın ve Yeni **Proje'de** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleyeceğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Yeni Öğe Veya `true` `false` **Yeni Proje** **Ekle** iletişim kutusunda şablon için varsayılan bir ad oluşturup oluşturmayacağını belirten metin veya metin olmalıdır.
+ Metin ya da ya da `true` `false` **Yeni öğe Ekle** iletişim kutusunda şablon için varsayılan bir ad oluşturulup oluşturulmayacağını belirten bir değer olmalıdır. **New Project**
 
 ## <a name="remarks"></a>Açıklamalar
- `ProvideDefaultName`isteğe bağlı bir unsurdur. Varsayılan değer: `true`.
+ `ProvideDefaultName` isteğe bağlı bir öğedir. Varsayılan değer: `true`.
 
- `ProvideDefaultName` Öğe `false`ise, **Yeni Öğe Ekle** ve **Yeni Proje** iletişim kutularının `<Enter_name>` **Ad** kutuları değeri içerir.
+ `ProvideDefaultName`Öğesi ise `false` , **Yeni öğe Ekle** ve **Yeni proje** iletişim kutularının **ad** kutuları değeri içerir `<Enter_name>` .
 
- **Yeni Öğe Ekle** ve **Yeni Proje** iletişim kutularında projenin veya öğenin varsayılan adını belirtmek için Varsayılan [Ad](../extensibility/defaultname-element-visual-studio-templates.md) öğesini kullanın. `ProvideDefaultName` Öğenin değeri `true`olduğunda, projeler için `DefaultName` öğenin ihmal şablonun adı ile iletişim kutusu nu doldurur, yani [Ad](../extensibility/name-element-visual-studio-templates.md) öğesinden değer.
+ **Yeni öğe** ve **Yeni proje** Ekle iletişim kutularında varsayılan proje veya öğe adını belirtmek için [defaultname](../extensibility/defaultname-element-visual-studio-templates.md) öğesini kullanın. Öğesinin değeri olduğunda `ProvideDefaultName` `true` , `DefaultName` projeler için öğesinin atlanması, iletişim kutusunu şablon adı, diğer bir deyişle, [ad](../extensibility/name-element-visual-studio-templates.md) öğesinden doldurur.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği `ProvideDefaultName` öğeyi `false`.
+ Aşağıdaki kod örneği `ProvideDefaultName` öğesini olarak ayarlar `false` .
 
 ```
 <VSTemplate Type="Item" Version="3.0.0"
@@ -78,5 +79,5 @@ Proje sisteminin **Yeni Öğe Ekle** veya Yeni Proje iletişim kutusunda şablon
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

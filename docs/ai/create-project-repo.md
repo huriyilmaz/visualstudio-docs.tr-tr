@@ -9,21 +9,21 @@ ms.topic: how-to
 ms.workload:
 - multiple
 ms.openlocfilehash: 9bb3aa4a7aa9818f42f99860956e0e2ae73b2b7f
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85371592"
 ---
 # <a name="clone-a-repository-of-python-code-in-visual-studio"></a>Visual Studio 'da Python kodu deposunu kopyalama
 
 [Visual Studio Tools for AI](installation.md)yükledikten sonra Python kodu deposunu kolayca kopyalayabilir ve bundan bir proje oluşturabilirsiniz.
 
-1. GitHub depolarına bağlanmak için, Visual Studio yükleyicisi 'ni çalıştırın, **Değiştir**' i seçin ve **ayrı bileşenler** sekmesini seçin. **kod araçları** bölümünde aşağı kaydırın, **Visual Studio Için GitHub Uzantısı**' nı seçin ve **Değiştir**' i seçin.
+1. GitHub depolarına bağlanmak için Visual Studio yükleyicisi 'ni çalıştırın, **Değiştir**' i seçin ve **ayrı bileşenler** sekmesini seçin. **Kod araçları** bölümünde aşağı kaydırın, **Visual Studio için GitHub Uzantısı**' nı seçin ve **Değiştir**' i seçin.
 
     ![Visual Studio yükleyicisi 'nde GitHub uzantısını seçme](media/create-project-repo/installation-github-extension.png)
 
-2. Visual Studio’yu başlatın.
+2. Visual Studio 'Yu başlatın.
 
 3. GitHub veya Azure DevOps 'a bağlanabildiğinizi veya bir depoyu klonlayabileceğiniz **Takım Gezgini** penceresini açmak için **> Takım Gezgini görüntüle** ' yi seçin.
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::GetCodeLocationId | Microsoft Docs
+title: 'IDebugDisassemblyStream2:: GetCodeLocationId | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ebb2280f814985e2352413921a00268d96761b7d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196233"
 ---
 # <a name="idebugdisassemblystream2getcodelocationid"></a>IDebugDisassemblyStream2::GetCodeLocationId
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Belirli kod bağlamı için bir kod konum tanımlayıcısı döndürür.  
+Belirli bir kod bağlamı için bir kod konum tanımlayıcısı döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetCodeLocationId(   
@@ -42,18 +42,18 @@ int GetCodeLocationId( 
   
 #### <a name="parameters"></a>Parametreler  
  `pCodeContext`  
- [in] Bir [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) tanımlayıcıya dönüştürülecek nesne.  
+ 'ndaki Bir tanımlayıcıya dönüştürülecek bir [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi.  
   
  `puCodeLocationId`  
- [out] Kod konumu tanımlayıcısını döndürür. Açıklamalara bakın.  
+ dışı Kod konumu tanımlayıcısını döndürür. Bkz. açıklamalar.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Döndürür `E_CODE_CONTEXT_OUT_OF_SCOPE` kod bağlamı geçerli olup olmadığını ancak kapsamı dışında.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. `E_CODE_CONTEXT_OUT_OF_SCOPE`Kod bağlamı geçerli ancak kapsam dışında bir değer döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ayrıştırılmış kodu destekleyen hata ayıklama altyapısına (DE) kod konum tanımlayıcısı özeldir. Bu konum tanımlayıcısı kod konumda izlemek için DE tarafından dahili olarak kullanılır ve genellikle bir adresi veya bir tür uzaklığı. Bir konum kod bağlamı başka bir konum kod bağlamı altındaysa ilk kod bağlamı karşılık gelen kod konum tanımlayıcısı de ikinci kod bağlamı kod konum tanımlayıcısı değerinden küçük olmalıdır tek gereksinim olmasıdır.  
+ Kod konumu tanımlayıcısı, ayrıştırılmış derlemeyi destekleme hata ayıklama altyapısına (DE) özgüdür. Bu konum tanımlayıcısı, koddaki konumları izlemek için DE tarafından dahili olarak kullanılır ve genellikle bir tür adres ya da fark olur. Tek gereksinim, bir konumun kod bağlamı başka bir konumun kod bağlamından azsa, ilk kod bağlamının karşılık gelen kod konumu tanımlayıcısının ikinci kod bağlamının kod konumu tanımlayıcısından de küçük olması gerekir.  
   
- Bir kod konum tanımlayıcısı kod bağlamı almak için arama [GetCodeContext](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodecontext.md) yöntemi.  
+ Kod konumu tanımlayıcısının kod bağlamını almak için [GetCodeContext](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodecontext.md) yöntemini çağırın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)   

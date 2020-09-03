@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 0d54ca9a31e8a1bbd2496bf8689a119e53580c79
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660214"
 ---
 # <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>Nasıl yapılır: Bir Kod Çözümleme İade İlkesi ile Bakımı Yapılabilir Kodu Zorlama
@@ -25,7 +25,7 @@ Geliştiriciler, kodunuzun karmaşıklığını ve bakımlarını ölçmek için
 
  Geliştiriciler, kod analizi iade ilkeleri aracılığıyla sürdürülebilir kodu zorlamak için devralma, sınıf bağlantısı, bakım dizini ve karmaşıklık kurallarının derinliğini etkinleştirebilir. Bu kuralların dört bölümü, kod analizi ilke düzenleyicisinde "Bakımkuralı kuralları" kategorisinde bulunur.
 
- @No__t_0 için sürüm denetimi yöneticileri, iade etme ilkesi gereksinimlerine kod analizi bakım kuralları ekleyebilir. Bu iade ilkeleri, geliştiricilerin bir iade başlatmadan önce Bu kural değişikliklerini temel alan kod analizini çalıştırmasını gerektirir.
+ İçin sürüm denetimi yöneticileri [!INCLUDE[esprfound](../includes/esprfound-md.md)] , iade ilkesi gereksinimlerine kod analizi bakım kuralları ekleyebilir. Bu iade ilkeleri, geliştiricilerin bir iade başlatmadan önce Bu kural değişikliklerini temel alan kod analizini çalıştırmasını gerektirir.
 
 ### <a name="to-open-the-code-analysis-policy-editor"></a>Kod Analizi Ilke düzenleyicisini açmak için
 
@@ -57,7 +57,7 @@ Geliştiriciler, kodunuzun karmaşıklığını ve bakımlarını ölçmek için
 
     - Ayrıca, bir derlemeyi engellemek için bir kural ihlalini isterseniz, kural açıklamasının yanındaki **uyarıyı hata olarak işle** onay kutusunu seçin.
 
-3. **Tamam**'a tıklayın. Yeni iade ilkesi artık gelecek iadeler için geçerlidir.
+3. **Tamam**’a tıklayın. Yeni iade ilkesi artık gelecek iadeler için geçerlidir.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  Kod [ölçüm değerleri](../code-quality/code-metrics-values.md) [Kod Analizi iade Ilkeleri oluşturma ve kullanma](../code-quality/creating-and-using-code-analysis-check-in-policies.md)

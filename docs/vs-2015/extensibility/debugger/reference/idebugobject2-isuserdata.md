@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::IsUserData | Microsoft Docs
+title: 'IDebugObject2:: IsUserData | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: fd595ce041ae1968e085e3b63b49d308cfd14452
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194584"
 ---
 # <a name="idebugobject2isuserdata"></a>IDebugObject2::IsUserData
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Nesne kullanıcı verilerini temsil edip etmediğini belirler.  
+Nesnenin Kullanıcı verilerini temsil edip etmediğini belirler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT IsUserData(  
@@ -40,13 +40,13 @@ int IsUserData(
   
 #### <a name="parameters"></a>Parametreler  
  `pfUser`  
- [out] Sıfır olmayan döndürür (`TRUE`) kullanıcı verilerini; nesne temsil ediyorsa sıfır (`FALSE`) kullanmıyorsa.  
+ dışı `TRUE`Nesne, Kullanıcı verilerini temsil ediyorsa sıfır () değerini döndürür `FALSE` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanıcı verilerini JustMyCode (bir modül olarak kullanıcı kodu ve bu nedenle bir yığın izlemesi görünür işaretler kullanıcı tarafından yapılandırılabilen bir seçeneği) olarak belirlenmiş bir modülün parçası olan herhangi bir nesnedir.  
+ Kullanıcı verileri, Ditmycode olarak belirtilen bir modülün parçası olan herhangi bir nesnedir (bir modülü kullanıcı kodu olarak işaretleyen ve bu nedenle bir yığın izlemesinde görünür) Kullanıcı tarafından yapılandırılabilir bir seçenek.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

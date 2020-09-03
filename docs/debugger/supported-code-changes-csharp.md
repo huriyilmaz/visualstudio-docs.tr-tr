@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 44881035da14483c3ddf1f4c48cb3957a1ce8b50
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72729085"
 ---
 # <a name="supported-code-changes-c-and-visual-basic"></a>Desteklenen kod değişiklikleri (C# ve Visual Basic)
@@ -28,22 +28,22 @@ Düzenle ve devam et, yöntem gövdelerinde birçok kod değişikliği türünü
 
 ## <a name="supported-changes-to-code"></a>Koddaki desteklenen değişiklikler
 
-Aşağıdaki tabloda, oturum yeniden başlatmadan hata ayıklama oturumu sırasında kod C# Visual Basic ve kodu gösterilmektedir.
+Aşağıdaki tabloda, oturum yeniden başlatmadan hata ayıklama oturumu sırasında C# ve Visual Basic koduna yapılabilecek değişiklikler gösterilmektedir.
 
 |Dil öğesi/özelliği|Desteklenen düzenleme işlemi|Sınırlamalar|
 |-|-|-|
-|Türler|Yöntemler, alanlar, oluşturucular, et al|[Yes](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
+|Türler|Yöntemler, alanlar, oluşturucular, et al|[Evet](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
 |Yineleyiciler|Ekleme veya değiştirme|Hayır|
-|zaman uyumsuz/await ifadeleri|Ekleme veya değiştirme|[Yes](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
+|zaman uyumsuz/await ifadeleri|Ekleme veya değiştirme|[Evet](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
 |Dinamik nesneler|Ekleme veya değiştirme|Hayır|
-|lambda ifadeleri|Ekleme veya değiştirme|[Yes](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
+|lambda ifadeleri|Ekleme veya değiştirme|[Evet](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
 |LINQ ifadeleri|Ekleme veya değiştirme|[Lambda ifadeleriyle aynı](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
 
 > [!NOTE]
 > Dize ilişkilendirme ve null koşullu işleçler gibi daha yeni dil özellikleri genellikle Düzenle ve devam et tarafından desteklenir. En güncel bilgiler için, bkz. [ENC tarafından desteklenen düzenlemeler](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits) sayfası.
 
 ## <a name="unsupported-changes-to-code"></a>Koddaki desteklenmeyen değişiklikler
- Hata ayıklama oturumu sırasında aşağıdaki değişiklikler C# ve kod Visual Basic uygulanamaz:
+ Bir hata ayıklama oturumu sırasında C# ve Visual Basic koduna aşağıdaki değişiklikler uygulanamaz:
 
 - Geçerli ifadede veya diğer etkin deyimdeki değişiklikler.
 
@@ -56,10 +56,10 @@ Aşağıdaki tabloda, oturum yeniden başlatmadan hata ayıklama oturumu sıras�
 |Dil öğesi/özelliği|Desteklenmeyen düzenleme işlemi|
 |-|-|
 |Tüm kod öğeleri|Adlandırıl|
-|Ad Alanları|Ekle|
+|Ad alanları|Ekle|
 |Ad alanları, türler, Üyeler|Sil|
 |Genel Türler|Ekleme veya değiştirme|
-|Arabirimler|Değiştirebilirler|
+|Arabirimler|Değiştir|
 |Türler|Soyut veya sanal üye ekleyin, geçersiz kılma ekleyin ( [ayrıntılara](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)bakın)|
 |Türler|Yıkıcı Ekle|
 |Üyeler|Katıştırılmış birlikte çalışma türüne başvuran bir üyeyi değiştirme|
@@ -79,7 +79,7 @@ Aşağıdaki tabloda, oturum yeniden başlatmadan hata ayıklama oturumu sıras�
 |Yineleyiciler|.NET Framework 4 ve daha düşük bir projede bir yineleyiciyi değiştirme ( [ayrıntılara](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)bakın)|
 
 ## <a name="unsafe-code"></a>Güvenli olmayan kod
- Güvenli olmayan koddaki değişiklikler, güvenli koddaki değişikliklerle aynı sınırlamalara sahiptir ve bir ek kısıtlama sağlar: Düzenle ve devam et, `stackalloc` işlecini içeren bir yöntem içinde çıkış olmayan güvenli olmayan koddaki değişiklikleri desteklemez.
+ Güvenli olmayan koddaki değişiklikler, güvenli koddaki değişikliklerle aynı sınırlamalara sahiptir ve bir ek kısıtlamadır: Düzenle ve devam et işleci içeren bir yöntem içinde çıkış olmayan güvenli olmayan koddaki değişiklikleri desteklemez `stackalloc` .
 
 ## <a name="unsupported-app-scenarios"></a>Desteklenmeyen uygulama senaryoları
 

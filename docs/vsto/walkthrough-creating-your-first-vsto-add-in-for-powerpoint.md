@@ -16,14 +16,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 9bba8095c1e79b8ab8addfd69afc1e89a50e3fce
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68871961"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-powerpoint"></a>İzlenecek yol: PowerPoint için ilk VSTO eklentisini oluşturma
-  Bu izlenecek yol, PowerPoint Microsoft Office için VSTO eklentisi oluşturmayı gösterir. Bu tür çözümde oluşturduğunuz özellikler, hangi sunuların açık olduğuna bakılmaksızın uygulamanın kendisi için kullanılabilir. Daha fazla bilgi için bkz. [Office çözümleri geliştirmeye &#40;genel&#41;bakış VSTO](../vsto/office-solutions-development-overview-vsto.md).
+  Bu izlenecek yol, PowerPoint Microsoft Office için VSTO eklentisi oluşturmayı gösterir. Bu tür çözümde oluşturduğunuz özellikler, hangi sunuların açık olduğuna bakılmaksızın uygulamanın kendisi için kullanılabilir. Daha fazla bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
 
  [!INCLUDE[appliesto_pptallapp](../vsto/includes/appliesto-pptallapp-md.md)]
 
@@ -46,15 +46,15 @@ ms.locfileid: "68871961"
 
 - PowerPoint
 
-## <a name="create-the-project"></a>Projeyi oluşturma
+## <a name="create-the-project"></a>Proje oluşturma
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Başlangıç [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+1. Başlatın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
 
-3. Şablonlar bölmesinde, **Visual C#**  veya **Visual Basic**öğesini genişletin ve ardından **Office/SharePoint**' i genişletin.
+3. Şablonlar bölmesinde, **Visual C#** veya **Visual Basic**' i genişletin ve ardından **Office/SharePoint**' i genişletin.
 
 4. Genişletilmiş **Office/SharePoint** düğümü altında **Office eklentileri** düğümünü seçin.
 
@@ -62,35 +62,35 @@ ms.locfileid: "68871961"
 
 6. **Ad** kutusuna **FirstPowerPointAddIn**yazın.
 
-7.           **Tamam**'ı tıklatın.
+7. **Tamam**’a tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**FirstPowerPointAddIn** projesini oluşturur ve **ThisAddIn** kod dosyasını düzenleyicide açar.
 
 ## <a name="write-code-that-adds-text-to-each-new-slide"></a>Her yeni slayda metin ekleyen kodu yazın
  Ardından, ThisAddIn kod dosyasına kod ekleyin. Yeni kod, her yeni slayda metin kutusu eklemek için PowerPoint nesne modelini kullanır. Varsayılan olarak, ThisAddIn kod dosyası aşağıdaki oluşturulan kodu içerir:
 
-- `ThisAddIn` Sınıfın kısmi tanımı. Bu sınıf, kodunuz için bir giriş noktası sağlar ve PowerPoint 'in nesne modeline erişim sağlar. Daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md). `ThisAddIn` Sınıfın geri kalanı, değiştirmemelisiniz bir gizli kod dosyasında tanımlanır.
+- Sınıfın kısmi tanımı `ThisAddIn` . Bu sınıf, kodunuz için bir giriş noktası sağlar ve PowerPoint 'in nesne modeline erişim sağlar. Daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md). Sınıfın geri kalanı, `ThisAddIn` değiştirmemelisiniz bir gizli kod dosyasında tanımlanır.
 
-- `ThisAddIn_Startup` Ve`ThisAddIn_Shutdown` olay işleyicileri. Bu olay işleyicileri, PowerPoint, VSTO eklentinizi yüklerken ve kaldırıldığında çağrılır. Bu olay işleyicilerini, yüklendiğinde VSTO eklentisini başlatmak ve bu etkinlik kaldırıldığında VSTO eklentisi tarafından kullanılan kaynakları temizlemek için kullanın. Daha fazla bilgi için bkz. [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md).
+- `ThisAddIn_Startup`Ve `ThisAddIn_Shutdown` olay işleyicileri. Bu olay işleyicileri, PowerPoint, VSTO eklentinizi yüklerken ve kaldırıldığında çağrılır. Bu olay işleyicilerini, yüklendiğinde VSTO eklentisini başlatmak ve bu etkinlik kaldırıldığında VSTO eklentisi tarafından kullanılan kaynakları temizlemek için kullanın. Daha fazla bilgi için bkz. [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md).
 
 ### <a name="to-add-a-text-box-to-each-new-slide"></a>Her yeni slayda metin kutusu eklemek için
 
-1. ThisAddIn kod dosyasında, `ThisAddIn` sınıfına aşağıdaki kodu ekleyin. Bu kod, [uygulama](/previous-versions/office/developer/office-2010/ff764034(v=office.14)) nesnesinin [Microsoft. Office. Interop. PowerPoint. EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) olayı için bir olay işleyicisini tanımlar.
+1. ThisAddIn kod dosyasında, sınıfına aşağıdaki kodu ekleyin `ThisAddIn` . Bu kod, [uygulama](/previous-versions/office/developer/office-2010/ff764034(v=office.14)) nesnesinin [Microsoft. Office. Interop. PowerPoint. EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) olayı için bir olay işleyicisini tanımlar.
 
     Kullanıcı etkin sunuya yeni bir slayt eklediğinde, bu olay işleyicisi yeni slaydın üst kısmına bir metin kutusu ekler ve metin kutusuna bazı metinler ekler.
 
     [!code-vb[Trin_PowerPointAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_PowerPointAddInTutorial/ThisAddIn.vb#1)]
     [!code-csharp[Trin_PowerPointAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_PowerPointAddInTutorial/ThisAddIn.cs#1)]
 
-2. Kullanıyorsanız C#, `ThisAddIn_Startup` olay işleyicisine aşağıdaki kodu ekleyin. Bu kod, `Application_PresentationNewSlide` olay işleyicisini [Microsoft. Office. Interop. PowerPoint. EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) olayına bağlamak için gereklidir.
+2. C# kullanıyorsanız, olay işleyicisine aşağıdaki kodu ekleyin `ThisAddIn_Startup` . Bu kod, `Application_PresentationNewSlide` olay Işleyicisini [Microsoft. Office. Interop. PowerPoint. EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) olayına bağlamak için gereklidir.
 
     [!code-csharp[Trin_PowerPointAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_PowerPointAddInTutorial/ThisAddIn.cs#2)]
 
    Yeni bir slaytı değiştirmek için, önceki kod örnekleri aşağıdaki nesneleri kullanır:
 
-- `ThisAddIn` Sınıfının `Application` alanı. Alan, PowerPoint 'in geçerli örneğini temsil eden bir uygulama nesnesi döndürür. [](/previous-versions/office/developer/office-2010/ff764034(v=office.14)) `Application`
+- `Application` `ThisAddIn` Sınıfının alanı. `Application`Alan, PowerPoint 'in geçerli örneğini temsil eden bir [uygulama](/previous-versions/office/developer/office-2010/ff764034(v=office.14)) nesnesi döndürür.
 
-- [Microsoft. Office. Interop. PowerPoint. EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) olayının olay işleyicisinin parametresi.`Sld` Parametresi, yeni slaytı temsil eden bir slayt nesnesidir. [](/previous-versions/office/developer/office-2010/ff763417(v=office.14)) `Sld` Daha fazla bilgi için bkz. [PowerPoint çözümleri](../vsto/powerpoint-solutions.md).
+- `Sld` [Microsoft. Office. Interop. PowerPoint. EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) olayına yönelik olay işleyicisinin parametresi. `Sld`Parametresi, yeni slaytı temsil eden bir [Slayt](/previous-versions/office/developer/office-2010/ff763417(v=office.14)) nesnesidir. Daha fazla bilgi için bkz. [PowerPoint çözümleri](../vsto/powerpoint-solutions.md).
 
 ## <a name="test-the-project"></a>Projeyi test etme
  Projeyi derleyip çalıştırdığınızda, metin kutusunun bir sunuya eklediğiniz yeni slaytlarda göründüğünü doğrulayın.

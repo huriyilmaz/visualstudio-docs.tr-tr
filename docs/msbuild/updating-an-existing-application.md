@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c141d1e35db1e5ce334606b255d99ce2c0afc29b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84184035"
 ---
 # <a name="update-an-existing-application-for-msbuild-15"></a>MSBuild 15 için mevcut bir uygulamayı güncelleştirme
@@ -22,11 +22,11 @@ Daha hızlı, daha küçük ve yan yana yüklemeyi desteklemek için, Visual Stu
 
 ## <a name="use-msbuild-from-visual-studio"></a>Visual Studio 'dan MSBuild 'i kullanma
 
-Uygulamanıza ait program derlemelerinin Visual Studio veya *MSBuild. exe*içinde yapılan yapılarla eşleştiğinden emin olmak Için, Visual Studio 'dan MSBuild derlemelerini yükleyin ve Visual Studio 'Da bulunan SDK 'leri kullanın. Microsoft. Build. Locator NuGet paketi bu işlemi basitleştirir.
+Uygulamanıza ait program derlemelerinin Visual Studio veya *MSBuild.exe*içinde yapılan derlemelerin eşleştiğinden emin olmak Için, Visual Studio 'dan MSBuild derlemelerini yükleyin ve Visual Studio 'Da bulunan SDK 'ları kullanın. Microsoft. Build. Locator NuGet paketi bu işlemi basitleştirir.
 
 ## <a name="use-microsoftbuildlocator"></a>Microsoft. Build. Locator kullanın
 
-*Microsoft. Build. Locator. dll dosyasını* uygulamanızla yeniden dağıtırsanız, diğer MSBuild derlemelerini dağıtmanız gerekmez.
+*Microsoft.Build.Locator.dll* uygulamanızla birlikte yeniden dağıtırsanız, diğer MSBuild derlemelerini dağıtmanız gerekmez.
 
 Bir projeyi MSBuild 15 kullanacak şekilde güncelleştirmek ve Konumlandırıcı API 'SI projenizde aşağıda açıklanan birkaç değişiklik yapılmasını gerektirir. Bir projeyi güncelleştirmek için gereken değişikliklere bir örnek görmek için bkz. [MSBuildLocator deposundaki örnek bir projeye yapılan işlemeler](https://github.com/Microsoft/MSBuildLocator/commits/example-updating-to-msbuild-15).
 
@@ -69,7 +69,7 @@ Uygulamanızın 15.1.0.0 sürümüne gereken bağlama yeniden yönlendirmelerini
 
 ### <a name="ensure-output-is-clean"></a>Çıktının temiz olduğundan emin olun
 
-Projenizi derleyin ve Microsoft. Build ' ın içermediğinden emin olmak için çıkış dizinini inceleyin *. \* *sonraki adımda eklenen *Microsoft. Build. Locator. dll*dışındaki dll derlemeleri.
+Projenizi derleyin ve Microsoft. Build ' ın içermediğinden emin olmak için çıkış dizinini inceleyin *. \* * sonraki adımda eklenen *Microsoft.Build.Locator.dll*dışındaki dll derlemeleri.
 
 ### <a name="add-package-reference-for-microsoftbuildlocator"></a>Microsoft. Build. Locator için paket başvurusu Ekle
 

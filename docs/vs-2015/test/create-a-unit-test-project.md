@@ -9,10 +9,10 @@ caps.latest.revision: 10
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bfc85b0616fdf8f30732f2409a1a15040967dbb3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660647"
 ---
 # <a name="create-a-unit-test-project"></a>Birim testi projesi oluşturma
@@ -21,7 +21,7 @@ ms.locfileid: "72660647"
 Birim testleri genellikle test altındaki kodun yapısını yansıtır. Örneğin, üründeki her kod projesi için bir birim testi projesi oluşturulur. Test projesi üretim koduyla aynı çözümde olabilir veya ayrı bir çözümde olabilir. Bir çözümde birden çok birim testi projesine sahip olabilirsiniz.
 
 > [!NOTE]
-> Yerel kod ve test projesi yapısına yönelik birim testlerinin konumu, bu konuda açıklanan yapıdan farklı olabilir. Daha fazla bilgi için bkz. [var olan C++ uygulamalara birim testleri ekleme](../test/unit-testing-existing-cpp-applications-with-test-explorer.md).
+> Yerel kod ve test projesi yapısına yönelik birim testlerinin konumu, bu konuda açıklanan yapıdan farklı olabilir. Daha fazla bilgi için bkz. [var olan C++ uygulamalarına birim testleri ekleme](../test/unit-testing-existing-cpp-applications-with-test-explorer.md).
 
 ## <a name="to-create-a-unit-test-project"></a>Birim testi projesi oluşturmak için:
 

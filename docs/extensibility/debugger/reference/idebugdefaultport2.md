@@ -1,5 +1,5 @@
 ---
-title: IDebugDefaultPort2 | Microsoft Dokümanlar
+title: IDebugDefaultPort2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,45 +13,45 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: f560a3dabefb0a8dede6520dcd8fd47f609a7780
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732321"
 ---
 # <a name="idebugdefaultport2"></a>IDebugDefaultPort2
-Bu arabirim, bir bağlantı noktasının sunucu ve bildirim tesislerine erişmek için çeşitli yöntemler sağlar.
+Bu arabirim, bir bağlantı noktasının sunucusuna ve bildirim tesislerini erişmek için çeşitli yöntemler sağlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugDefaultPort2 : IDebugPort2
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Visual Studio, programlara erişmek için hata ayıklama bağlantı noktasını temsil etmek için bu arabirimi uygular. Özel bir bağlantı noktası tedarikçisi, uzaktan hata ayıklama işliyorsa bu arabirimi de uygulayabilir.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Visual Studio, programlara erişmek için hata ayıklama bağlantı noktasını göstermek üzere bu arabirimi uygular. Özel bir bağlantı noktası sağlayıcısı, uzaktan hata ayıklamayı işlediğinde da bu arabirimi uygulayabilir.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) arabirimindeki yöntemlere yönelik bir bağımsız değişken bu arabirimi sağlar. Bir [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) arabiriminde [QueryInterface](/cpp/atl/queryinterface) arama da bu arabirimi elde edebilirsiniz.
+ [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) arabirimindeki yöntemlere bir bağımsız değişken bu arabirimi sağlar. [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) arabiriminde [QueryInterface](/cpp/atl/queryinterface) çağrısı, bu arabirimi de edinebilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasına göre yöntemler
- [IDebugPort2'de](../../../extensibility/debugger/reference/idebugport2.md)tanımlanan yöntemlere ek olarak, bu arabirim aşağıdaki yöntemleri uygular:
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+ Bu arabirim, [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)içinde tanımlanan yöntemlere ek olarak aşağıdaki yöntemleri uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
 |[GetPortNotify](../../../extensibility/debugger/reference/idebugdefaultport2-getportnotify.md)|Bu bağlantı noktasından bağlantı noktası bildirim arabirimini alır.|
-|[GetServer](../../../extensibility/debugger/reference/idebugdefaultport2-getserver.md)|Arabirimi bu bağlantı noktasını barındıran sunucuya getirir.|
+|[GetServer](../../../extensibility/debugger/reference/idebugdefaultport2-getserver.md)|Bu bağlantı noktasını barındıran sunucunun arabirimini alır.|
 |[QueryIsLocal](../../../extensibility/debugger/reference/idebugdefaultport2-queryislocal.md)|Bu bağlantı noktasının yerel makinede çalışıp çalışmadığını belirler.|
 
 ## <a name="remarks"></a>Açıklamalar
- " "`IDebugDefaultPort2`adı, varsayılan bir bağlantı noktasını temsil etmediğinden, biraz yanlış isimdir. Adı "IDebugPort3" olabilir.
+ "" Adı `IDebugDefaultPort2` , varsayılan bir bağlantı noktasını temsil etmediği için bir hatalı Nomer 'nin bir bitidir. "IDebugPort3" olarak adlandırılabilir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

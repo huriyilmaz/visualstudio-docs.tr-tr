@@ -1,5 +1,5 @@
 ---
-title: Typeof 'ı NameOf öğesine Dönüştür
+title: typeof ifadesini nameof ifadesine dönüştürme
 ms.date: 08/12/2020
 ms.topic: reference
 author: m-redding
@@ -11,10 +11,10 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 233393114883c2a9833aa7ec82f0d78f0ef33bae
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88251305"
 ---
 # <a name="convert-typeof-to-nameof"></a>Dönüştür `typeof``nameof`

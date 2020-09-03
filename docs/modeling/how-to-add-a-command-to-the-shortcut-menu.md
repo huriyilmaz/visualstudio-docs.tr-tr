@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6aac779a3c165d10262c078ff431731d9d248f3a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545723"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>Nasıl yapılır: kısayol menüsüne komut ekleme
@@ -48,7 +48,7 @@ Aşağıdaki durumlarda bu konudaki yöntemini kullanın:
 
    Aksi takdirde, komutları tanımlamak için MEF metodunu kullanmayı düşünün. Daha fazla bilgi için bkz. [mef kullanarak DSL 'Nizi genişletme](../modeling/extend-your-dsl-by-using-mef.md).
 
-## <a name="declare-the-command-in-commandsvsct"></a><a name="VSCT"></a>Commands. vsct içinde komutu bildirin
+## <a name="declare-the-command-in-commandsvsct"></a><a name="VSCT"></a> Commands. vsct içinde komutu bildirin
  Menü komutları Dslpackage\commandsve vsct' içinde bildirilmiştir. Bu tanımlar menü öğelerinin etiketlerini ve menülerde nerede göründüğünü belirtir.
 
  Commands. vsct olan dosya, *Visual STUDIO SDK install Path*\VisualStudioIntegration\Common\Inc. dizininde bulunan çeşitli. h dosyalarından tanımları içeri aktarır. Ayrıca DSL tanımınızdan oluşturulan GeneratedVsct. vsct öğesini de içerir.
@@ -128,7 +128,7 @@ Aşağıdaki durumlarda bu konudaki yöntemini kullanın:
 
     - `My Context Menu Command`
 
-## <a name="update-the-package-version-in-packagett"></a><a name="version"></a>Package.tt 'de paket sürümünü güncelleştirme
+## <a name="update-the-package-version-in-packagett"></a><a name="version"></a> Package.tt 'de paket sürümünü güncelleştirme
  Bir komut eklediğinizde veya değiştirdiğinizde, `version` <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> etki alanına özgü dilin yeni sürümünü bırakmadan önce paket sınıfına uygulanan öğesinin parametresini güncelleştirin.
 
  Paket sınıfı oluşturulmuş bir dosyada tanımlandığından, Package.cs dosyasını oluşturan metin şablonu dosyasında özniteliğini güncelleştirin.
@@ -143,7 +143,7 @@ Aşağıdaki durumlarda bu konudaki yöntemini kullanın:
 
      `[VSShell::ProvideMenuResource("1000.ctmenu", version: 2 )]`
 
-## <a name="define-the-behavior-of-the-command"></a><a name="CommandSet"></a>Komutun davranışını tanımlama
+## <a name="define-the-behavior-of-the-command"></a><a name="CommandSet"></a> Komutun davranışını tanımlama
 
 DSL 'niz zaten DslPackage\GeneratedCode\CommandSet.cs. içinde belirtilen kısmi bir sınıfta uygulanan bazı komutlara sahiptir Yeni komutlar eklemek için, aynı sınıfın kısmi bildirimini içeren yeni bir dosya oluşturarak bu sınıfı genişletmeniz gerekir. Sınıfın adı genellikle olur *\<YourDslName>* `CommandSet` . Sınıfın adını doğrulayarak ve içeriğini inceleyerek başlamak yararlı olur.
 
@@ -222,15 +222,15 @@ Aşağıdaki parçalar OnStatus yöntemlerinde sıklıkla faydalıdır:
 
 - `this.CurrentSelection`. Kullanıcının sağ tıklamış olduğu şekil bu listeye her zaman dahildir. Kullanıcı diyagramın boş bir kısmına tıkladığında diyagram, listenin tek üyesidir.
 
-- `this.IsDiagramSelected()` - `true`Kullanıcı diyagramın boş bir kısmına tıklamıştır.
+- `this.IsDiagramSelected()` - `true` Kullanıcı diyagramın boş bir kısmına tıklamıştır.
 
 - `this.IsCurrentDiagramEmpty()`
 
-- `this.IsSingleSelection()`-Kullanıcı birden çok nesne seçmedi
+- `this.IsSingleSelection()` -Kullanıcı birden çok nesne seçmedi
 
-- `this.SingleSelection`-kullanıcıya sağ tıklamış olan şekil veya diyagram
+- `this.SingleSelection` -kullanıcıya sağ tıklamış olan şekil veya diyagram
 
-- `shape.ModelElement as MyLanguageElement`-bir şekil tarafından temsil edilen model öğesi.
+- `shape.ModelElement as MyLanguageElement` -bir şekil tarafından temsil edilen model öğesi.
 
 Genel bir kılavuz olarak, `Visible` özelliği seçili öğelere bağlı hale getirin ve `Enabled` özelliği seçili öğelerin durumuna göre değişir.
 
@@ -297,7 +297,7 @@ private const int cmdidMyContextMenuCommand = 1;
 > [!NOTE]
 > VSCT dosyasının semboller bölümünü değiştirirseniz bu bildirimleri eşleşecek şekilde de değiştirmeniz gerekir. Ayrıca, Package.tt içindeki sürüm numarasını da artırmanız gerekir
 
- Menü komutlarınızı bu komut kümesinin bir parçası olarak kaydedin. `GetMenuCommands()`Diyagram başlatıldığında bir kez çağrılır:
+ Menü komutlarınızı bu komut kümesinin bir parçası olarak kaydedin. `GetMenuCommands()` Diyagram başlatıldığında bir kez çağrılır:
 
 ```csharp
 protected override IList<MenuCommand> GetMenuCommands()

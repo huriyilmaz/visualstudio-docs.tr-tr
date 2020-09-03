@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::GetGlobalContainer | Microsoft Docs
+title: 'IDebugMethodField:: GetGlobalContainer | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 63912b75435de503dec677b715d1914b419ba07a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162570"
 ---
 # <a name="idebugmethodfieldgetglobalcontainer"></a>IDebugMethodField::GetGlobalContainer
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Yöntem genel kapsayıcısını alır.  
+Metodun genel kapsayıcısını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetGlobalContainer(  
@@ -40,13 +40,13 @@ int GetGlobalContainer(
   
 #### <a name="parameters"></a>Parametreler  
  `ppClass`  
- [out] Döndürür bir [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) bu yöntem tanımlanır modülü temsil eden.  
+ dışı Bu yöntemin tanımlandığı modülü temsil eden bir [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Döndürülen [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) nesne tüm modülü temsil eder ve yapay bir nesnedir, diğer bir deyişle, modül gerçek bir sınıf yok ancak tarafından temsil edilebilir bir `IDebugClassField` çeşitli izin nesnesi Numaralandırılan bulunan ve modül öğeleri.  
+ Döndürülen [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) nesnesi Modülün tamamını temsil eder ve yapay bir nesnedir, diğer bir deyişle, modülün kendisi gerçek bir sınıfa sahip değildir ancak bir nesne tarafından temsil edilebilir, bu da `IDebugClassField` modülün çeşitli öğelerinin numaralandırılmasına ve keşfedilmesini sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   

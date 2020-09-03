@@ -23,21 +23,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c2129db98293cef678527fb331992c6c5960d8f9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72731384"
 ---
 # <a name="macros-for-reporting"></a>Raporlama Makroları
-Hata ayıklama için, CRTDBG içinde tanımlanan **_Rptn** ve **_Rptfn** makrolarını kullanabilirsiniz. H, `printf` deyimlerinin kullanımını değiştirmek için. **_Hata ayıklama** tanımlanmadığında yayın derlemenize otomatik olarak kaybolduğu için **#ifdef**s 'de bunları almanız gerekmez.
+Hata ayıklama için, CRTDBG içinde tanımlanan **_RPTn** ve **_RPTFn** makrolarını kullanabilirsiniz. H, deyimlerin kullanımını değiştirmek için `printf` . **_DEBUG** tanımlanmadığında yayın derlemeniz otomatik olarak kaybolduğu için **#ifdef**s 'de bunları almanız gerekmez.
 
-|Makroya|Açıklama|
+|Makroya|Description|
 |-----------|-----------------|
-|**_Rpt0**, **_RPT1**, **_rpt2**, **_rpt3**, **_RPT4**|İleti dizesi ve sıfırdan dört bağımsız değişken verir. _RPT1 ile **_Rpt4**arasında, ileti dizesi bağımsız değişkenler için bir printf stili biçimlendirme dizesi işlevi görür.|
-|**_Rptf0**, **_rptf1**, **_RPTF2**, **_rptf4**|**_Rptn**ile aynı, ancak bu makrolar, makronun bulunduğu dosya adı ve satır numarası da çıktı.|
+|**_RPT0**, **_RPT1**, **_RPT2**, **_RPT3**, **_RPT4**|İleti dizesi ve sıfırdan dört bağımsız değişken verir. **_RPT4**üzerinden _RPT1 için, ileti dizesi bağımsız değişkenler için bir printf stili biçimlendirme dizesi işlevi görür.|
+|**_RPTF0**, **_RPTF1**, **_RPTF2**, **_RPTF4**|**_RPTn**ile aynıdır, ancak bu makrolar, makronun bulunduğu dosya adı ve satır numarasını da çıktı olarak alır.|
 
- Aşağıdaki örneği göz önünde bulundurun:
+ Aşağıdaki örneği inceleyin:
 
 ```cpp
 #ifdef _DEBUG
@@ -48,7 +48,7 @@ Hata ayıklama için, CRTDBG içinde tanımlanan **_Rptn** ve **_Rptfn** makrola
 #endif
 ```
 
- Bu kod `someVar` ve `otherVar` değerlerini **stdout**' a çıkarır. Aynı değerleri raporlamak ve ayrıca dosya adı ve satır numarasını bildirmek için `_RPTF2` için aşağıdaki çağrıyı kullanabilirsiniz:
+ Bu kod, `someVar` ve değerlerini `otherVar` **stdout**olarak verir. `_RPTF2`Aynı değerleri ve ek olarak dosya adını ve satır numarasını raporlamak için aşağıdaki çağrısını kullanabilirsiniz:
 
 ```cpp
 if (someVar > MAX_SOMEVAR) _RPTF2(_CRT_WARN, "In NameOfThisFunc( ), someVar= %d, otherVar= %d\n", someVar, otherVar );
@@ -70,7 +70,7 @@ Belirli bir uygulamanın, C çalışma zamanı kitaplığı ile sağlanan makrol
 #endif
 ```
 
- **ALERT_IF2** öğesine yapılan bir çağrı, **printf** kodunun tüm işlevlerini verebilir:
+ **ALERT_IF2** bir çağrı, **printf** kodunun tüm işlevlerini yapabilirim:
 
 ```cpp
 ALERT_IF2(someVar > MAX_SOMEVAR, "OVERFLOW! In NameOfThisFunc( ),

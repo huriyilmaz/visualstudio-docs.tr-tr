@@ -9,10 +9,10 @@ caps.latest.revision: 18
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f2a78c10b125379d1b4aa284d4b2ff6e999b80f0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660593"
 ---
 # <a name="customizing-code-coverage-analysis"></a>Kod Kapsamı Çözümlemeyi Özelleştirme
@@ -24,7 +24,7 @@ Visual Studio Code kapsam Aracı, varsayılan olarak birim testleri sırasında 
 
 - *Kod kapsamı sonuçlarından test kodunu dışlamak ve yalnızca uygulama kodunu dahil etmek istiyorum.*
 
-   @No__t_0 test sınıfınıza ekleyin.
+   Öğesini `ExcludeFromCodeCoverage Attribute` Test sınıfınıza ekleyin.
 
 - *Çözümmin parçası olmayan derlemeler eklemek istiyorum.*
 
@@ -41,15 +41,15 @@ Visual Studio Code kapsam Aracı, varsayılan olarak birim testleri sırasında 
 
   Kod kapsamını özelleştirmek için çözümünüze bir .runsettings dosyası eklemeniz gerekir:
 
-1. Uzantı `.runsettings` bir çözüm öğesi olarak bir. xml dosyası ekleyin:
+1. Uzantıya sahip bir çözüm öğesi olarak bir. xml dosyası ekleyin `.runsettings` :
 
-    Çözüm Gezgini, çözümünüzün kısayol menüsünde, **Ekle**, **Yeni öğe**' yi seçin ve **XML dosyası**' nı seçin. Dosyayı `CodeCoverage.runsettings` gibi sonlanan bir adla kaydedin
+    Çözüm Gezgini, çözümünüzün kısayol menüsünde, **Ekle**, **Yeni öğe**' yi seçin ve **XML dosyası**' nı seçin. Dosyayı şu şekilde biten bir adla kaydedin `CodeCoverage.runsettings`
 
 2. Bu konunun sonundaki örnekte verilen içerik ekleyin ve sonra gereksinimleriniz için aşağıdaki bölümlerde açıklandığı şekilde özelleştirin.
 
 3. **Test** menüsünde **Test ayarları**' nı seçin, **Test ayarları dosyası** ' nı seçin ve dosyayı seçin.
 
-4. Şimdi **kod kapsamını çözümle**' yi çalıştırdığınızda bu `.runsettings` dosyası davranışını kontrol eder. Kod kapsamını yeniden çalıştırmanız gerektiğini unutmayın: testleri çalıştırdığınızda veya kodunuzu güncelleştirdiğinizde önceki kapsam sonuçları ve kod renklendirme otomatik olarak gizli değildir.
+4. Şimdi **kod kapsamını çözümle**' yi çalıştırdığınızda bu `.runsettings` Dosya davranışını kontrol eder. Kod kapsamını yeniden çalıştırmanız gerektiğini unutmayın: testleri çalıştırdığınızda veya kodunuzu güncelleştirdiğinizde önceki kapsam sonuçları ve kod renklendirme otomatik olarak gizli değildir.
 
 5. Özel ayarları kapatmak ve açmak için **Test**, **Test ayarları** menüsünde dosya seçimini kaldırın veya seçin.
 
@@ -94,24 +94,24 @@ Visual Studio Code kapsam Aracı, varsayılan olarak birim testleri sırasında 
 </ModulePaths>
 ```
 
- @No__t_0 boş ise, kod kapsamı işleme yüklenen ve için **. pdb** dosyalarının bulunduğu tüm derlemeleri (. dll ve. exe dosyaları) ve bir `<Exclude>` listesindeki yan tümcesiyle eşleşen öğeler hariç bulunur.
+ `<Include>`Boşsa, kod kapsamı işleme, yüklenen ve için **. pdb** dosyalarının bulunduğu tüm derlemeleri (. dll ve. exe dosyaları), bir listedeki yan tümcesiyle eşleşen öğeler dışında içerir `<Exclude>` .
 
- `Include`, `Exclude` önce işlenir.
+ `Include` daha önce işlenir `Exclude` .
 
 ### <a name="regular-expressions"></a>Normal ifadeler
  Dahil ve hariç düğümler normal ifadeler kullanır. Daha fazla bilgi için bkz. [Visual Studio 'Da normal Ifadeler kullanma](../ide/using-regular-expressions-in-visual-studio.md). Normal ifadeler joker karakterler ile aynı değildir. Özellikle:
 
-1. **\. \\** * herhangi bir karakter dizesiyle eşleşir
+1. **\.\\*** herhangi bir karakter dizesiyle eşleşir
 
 2. **\\.** bir noktayla eşleşir ".")
 
-3. **\\ (\\)** parantezlerle eşleşir "()"
+3. ** \\ ( \\ )** parantezle eşleşir "()"
 
-4. **\\ \\** , "\\" dosya yolu sınırlayıcısıyla eşleşiyor
+4. **\\\\** bir dosya yolu sınırlayıcısı ile eşleşir " \\ "
 
 5. **^** dizenin başlangıcını eşleştirir
 
-6. **$** dizenin sonuyla eşleşiyor
+6. **$** dizenin sonuyla eşleşir
 
    Tüm eşlemeler büyük/küçük harf duyarsızdır.
 
@@ -139,25 +139,25 @@ Visual Studio Code kapsam Aracı, varsayılan olarak birim testleri sırasında 
 ### <a name="other-ways-to-include-or-exclude-elements"></a>Öğeleri içerecek veya dışlayacak diğer yollar
  Örnekler için [Bu konunun sonundaki örneğe](#sample) bakın.
 
-- `ModulePath` – derleme dosyası yolu tarafından belirtilen derlemeler.
+- `ModulePath` – Derleme dosyası yolu tarafından belirtilen derlemeler.
 
 - `CompanyName` – derlemeler şirket özniteliğiyle eşleşir.
 
-- `PublicKeyToken`: ortak anahtar belirtecinin imzalı Derlemelerle eşleşir. Örneğin, tüm Visual Studio bileşenlerini ve uzantılarını eşleştirmek için `<PublicKeyToken>^B03F5F7F11D50A3A$</PublicKeyToken>` kullanın.
+- `PublicKeyToken` – imzalı derlemeleri ortak anahtar belirteci ile eşleştirir. Örneğin, tüm Visual Studio bileşenlerini ve uzantılarını eşleştirmek için kullanın `<PublicKeyToken>^B03F5F7F11D50A3A$</PublicKeyToken>` .
 
-- `Source`: öğeleri tanımlandıkları kaynak dosyanın yol adına göre eşler.
+- `Source` – öğelerin tanımlandıkları kaynak dosyanın yol adına göre eşleşir.
 
-- `Attribute`: belirli bir özniteliğin eklendiği öğelerle eşleşir. Adın sonunda "Öznitelik" dahil özniteliğin tam adını belirtin.
+- `Attribute` – belirli bir özniteliğin eklendiği öğelerle eşleşir. Adın sonunda "Öznitelik" dahil özniteliğin tam adını belirtin.
 
-- `Function`: yordamlarla, işlevlerle veya yöntemlerle tam olarak nitelenmiş ada göre eşleşir.
+- `Function` – tam ad ile yordamları, işlevleri veya yöntemleri eşleştirir.
 
   **İşlev adıyla eşleşen**
 
   Normal ifadenizin tam ad alanı, sınıf adı, yöntemin adı ve parametre listesi de dahil olmak üzere, işlev adıyla eşleşmesi gerekir. Örneğin,
 
-- C#veya Visual Basic: `Fabrikam.Math.LocalMath.SquareRoot(double)`
+- C# veya Visual Basic: `Fabrikam.Math.LocalMath.SquareRoot(double)`
 
-- C++: `Fabrikam::Math::LocalMath::SquareRoot(double)`
+- C++  `Fabrikam::Math::LocalMath::SquareRoot(double)`
 
 ```xml
 <Functions>
@@ -208,10 +208,10 @@ Visual Studio Code kapsam Aracı, varsayılan olarak birim testleri sırasında 
 
    Sonuçlar yapı raporunun özet bölümünde görünürdür.
 
-## <a name="sample"></a>Sample. runsettings dosyası
+## <a name="sample-runsettings-file"></a><a name="sample"></a> Sample. runsettings dosyası
  Bu kodu kopyalayın ve kendi gereksinimlerinize göre düzenleyin. Bu varsayılan .runsettings dosyasıdır.
 
- (. Runsettings dosyasının diğer kullanımları için bkz [. runsettings dosyasını kullanarak birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).)
+ (. Runsettings dosyasının diğer kullanımları için bkz [.. runsettings dosyasını kullanarak birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
