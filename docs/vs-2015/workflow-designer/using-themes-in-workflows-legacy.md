@@ -14,16 +14,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3ad3c6b1c66ffa5ec512cfda857738d1219628e8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72606689"
 ---
 # <a name="using-themes-in-workflows-legacy"></a>İş Akışlarında Temaları Kullanma (Eski)
-Bu konu, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedefleyen eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] kullanılırken [!INCLUDE[wf](../includes/wf-md.md)] temaları kullanmayı açıklar.
+Bu konu [!INCLUDE[wf](../includes/wf-md.md)] , veya ' i hedefleyen eskiyi kullanırken ' de temaları kullanmayı açıklar [!INCLUDE[wfd1](../includes/wfd1-md.md)] [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
- @No__t_0 temalarını kullanarak, eski tasarımcı ile iş akışlarınızın görünümünü özelleştirebilirsiniz. Bir tema, bir iş akışının arka plan ve ön plan renklerini, stillerini, simgelerini ve diğer görsel öğelerini tanımlar. Temaları diğer iş akışları tarafından yeniden kullanmak üzere kaydedebilirsiniz.
+ Temaları kullanarak, eski tasarımcı ile iş akışlarınızın görünümünü özelleştirebilirsiniz [!INCLUDE[wf2](../includes/wf2-md.md)] . Bir tema, bir iş akışının arka plan ve ön plan renklerini, stillerini, simgelerini ve diğer görsel öğelerini tanımlar. Temaları diğer iş akışları tarafından yeniden kullanmak üzere kaydedebilirsiniz.
 
  [Tema yapılandırması Iletişim kutusunu (eski)](../workflow-designer/theme-configuration-dialog-box-legacy.md)kullanarak temaları oluşturup düzenleyebilirsiniz. Bu iletişim kutusunu açmak için, **Iş akışı** menüsünde **Yeni Tema oluştur** ' u seçin veya iş akışı tasarım yüzeyine sağ tıklayıp **Yeni Tema oluştur**' u seçin.
 

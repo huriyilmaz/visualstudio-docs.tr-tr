@@ -10,25 +10,25 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8fc2af704ab587480913c51cdbc593e6cc0f483a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663462"
 ---
-# <a name="how-to-add-activities-to-the-toolbox"></a>Nasıl yapılır: araç kutusuna etkinlik ekleme
+# <a name="how-to-add-activities-to-the-toolbox"></a>Nasıl Yapılır: Araç Kutusuna Etkinlik Ekleme
 Etkinlikler çözümünüzdeki **araç kutusuna** birkaç farklı şekilde eklenebilir. Bunları geçerli projenizin içinden ekleyebilir, farklı bir projeden başvurabilir veya farklı bir derlemeden bunlara başvurabilirsiniz.
 
 ### <a name="to-add-an-activity-from-within-your-current-project"></a>Geçerli projenizin içinden etkinlik eklemek için
 
-1. Geçerli iş akışı projenize yeni bir özel etkinlik ekleyin. projenize yeni bir özel etkinlik eklemek [!INCLUDE[crabout](../includes/crabout-md.md)], bkz. [nasıl yapılır: bir Iş akışı projesine yeni öğe ekleme](../workflow-designer/how-to-add-a-new-item-to-a-workflow-project.md).
+1. Geçerli iş akışı projenize yeni bir özel etkinlik ekleyin. [!INCLUDE[crabout](../includes/crabout-md.md)] projenize yeni bir özel etkinlik eklemek için bkz. [nasıl yapılır: bir Iş akışı projesine yeni öğe ekleme](../workflow-designer/how-to-add-a-new-item-to-a-workflow-project.md).
 
 2. Etkinliğinizi özel mantık ekleyin.
 
-3. Projeyi oluşturun. Yapı başarılı olduysa, "\<*Project name*>" adlı **araç kutusundaki** yeni bir kategori, söz konusu kategoriye dahil edilen özel etkinlikle görüntülenir.
+3. Projeyi derleyin. Yapı başarılı olduysa, "" adlı **araç kutusu** içindeki ve \<*project name*> Bu kategoriye dahil olan özel etkinlik içeren yeni bir kategori görüntülenir.
 
     > [!NOTE]
-    > Araç kutusu sıfırlandığında, çözüm yeniden derlense bile özel etkinlikler kaldırılır. Araç kutusunu sıfırlandıktan sonra özel etkinliklerle yeniden doldurmak için [!INCLUDE[vs2010](../includes/vs2010-md.md)] yeniden başlatın.
+    > Araç kutusu sıfırlandığında, çözüm yeniden derlense bile özel etkinlikler kaldırılır. Araç kutusunu, sıfırlandıktan sonra özel etkinliklerle yeniden doldurmak için yeniden başlatın [!INCLUDE[vs2010](../includes/vs2010-md.md)] .
 
     > [!NOTE]
     > Araç kutusu yalnızca belirli bir adın bir etkinliğini gösterebilir. Farklı derlemelerden iki etkinlik aynı sınıf adına sahip ise, yalnızca bir tane görüntülenir.
@@ -40,7 +40,7 @@ Etkinlikler çözümünüzdeki **araç kutusuna** birkaç farklı şekilde eklen
 
 1. En az bir iş akışı projesi ve özel etkinlik kitaplığı projesi ya da özel bir etkinliği tanımlayan başka bir iş akışı projesi içeren bir çözüm açın.
 
-2. Her iki projeyi de derleyin. Derlemeler başarılı olduysa, **araç kutusundaki** "\<*Project Name*>" adlı yeni bir kategori, bu kategoriye dahil edilen özel etkinlikle görüntülenir.
+2. Her iki projeyi de derleyin. Derlemeler başarılı olduysa, **araç kutusundaki** "" adlı ve \<*project name*> Bu kategoriye dahil olan özel etkinlik içeren yeni bir kategori görüntülenir.
 
 ### <a name="to-add-an-activity-to-the-toolbox-from-an-assembly"></a>Bir derlemeden araç kutusuna etkinlik eklemek için
 

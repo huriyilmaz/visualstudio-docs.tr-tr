@@ -1,6 +1,6 @@
 ---
 title: Müşteri Deneyimi Geliştirme Programı
-description: Visual Studio'da gizlilik ayarlarını nasıl yönetabileceğinizi öğrenin.
+description: Visual Studio 'da gizlilik ayarlarını yönetme hakkında bilgi edinin.
 ms.date: 05/21/2018
 ms.topic: conceptual
 author: PoulChapman
@@ -9,70 +9,70 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b6c785b755b64f0dd7e367a01d9c05c1981ea558
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71693009"
 ---
 # <a name="visual-studio-customer-experience-improvement-program"></a>Visual Studio Müşteri Deneyimini Geliştirme Programı
 
-Visual Studio Müşteri Deneyimi Geliştirme Programı (VSCEIP), Microsoft'un Visual Studio'yu zaman içinde geliştirmesine yardımcı olmak için tasarlanmıştır. Bu [program, bilgisayardaki](../ide/diagnostic-data-collection.md)görevlerinde kullanıcıları kesintiye uğratmadan hatalar, bilgisayar donanımı ve insanların Visual Studio'yu nasıl kullandıkları hakkında bilgi toplar. Toplanan bilgiler, Microsoft'un hangi özelliklerin geliştireceğini belirlemesine yardımcı olur. Bu belge, VSCEIP'e nasıl seçilen veya devre dışı kolunmayı kapsar.
+Visual Studio Müşteri Deneyimini Geliştirme Programı (VSCEıP), Microsoft 'un zaman içinde Visual Studio 'Yu iyileştirmesine yardımcı olmak için tasarlanmıştır. Bu program hatalar, bilgisayar donanımı ve kişilerin bilgisayardaki görevlerinde kullanıcıları kesintiye uğramadan Visual Studio 'Yu nasıl kullandıkları [hakkında bilgi toplar](../ide/diagnostic-data-collection.md). Toplanan bilgiler Microsoft 'un hangi özellikleri iyileştirebileceğinizi belirlemesine yardımcı olur. Bu belge VSCEıP 'nin nasıl kabul veya dışına alınacağını anlatmaktadır.
 
 [!INCLUDE [gdpr-hybrid-note](../misc/includes/gdpr-hybrid-note.md)]
 > [!NOTE]
-> VSCEIP telemetri seve meslerken veya devre dışı bırakma ayarları Visual Studio'daki 'Sorunu Bildir' için geçerli değildir. Bir sorun günlükleri rapor ettiğinizde toplanır ve Microsoft'a gönderilir yalnızca 'Gönder'i tıklayarak izin verdiğinizde. 'Bir Sorunu Bildir' adresine göndermeden önce günlükleri yönetmek istiyorsanız, daha fazla bilgi için lütfen [Geri Bildirim Veri Gizliliği'ne](./developer-community-privacy.md) bakın.
+> VSCEıP telemetri kabul etme veya out ayarları, Visual Studio 'da ' sorun bildir ' için uygulanmaz. Bir sorun günlüğü raporlarken, yalnızca ' Gönder ' seçeneğine tıklayarak izin sağladığınızda Microsoft 'a gönderilir. Günlükleri ' bir sorun bildir ' e göndermeden önce yönetmek istiyorsanız lütfen daha fazla ayrıntı için [geri bildirim veri gizliliği](./developer-community-privacy.md) ' ne bakın.
 
-## <a name="opt-in-or-out"></a>Devre dışı bırakma veya çıkarma
+## <a name="opt-in-or-out"></a>Kabul etme veya kapatma
 
-VSCEIP varsayılan olarak açık. Aşağıdaki yönergeleri izleyerek kapatabilir veya yeniden açabilirsiniz:
+VSCEıP varsayılan olarak açıktır. Bu yönergeleri izleyerek devre dışı bırakabilirsiniz veya tekrar tekrar açabilirsiniz:
 
-1. Visual Studio'da Geri Bildirim **Gönder'i** > **Send Feedback**seçin ve ardından **Ayarlar'ı**seçin.
+1. Visual Studio 'da, **Yardım**  >  **geri bildirimi gönder**' i seçin ve ardından **Ayarlar**' ı seçin.
 
-   **Visual Studio Deneyim Geliştirme Programı** iletişim kutusu açılır.
+   **Visual Studio deneyimini geliştirme programı** iletişim kutusu açılır.
 
-1. Devre dışı bırakmak için, **Hayır'ı seçin, katılmak istiyorum**ve sonra **Tamam'ı**seçin. Katılmak için **Evet'i seçin, katılmaya hazırım**ve sonra **Tamam'ı**seçin.
+1. Devre dışı bırakmak için **Hayır, katılmak istemiyorum**' u seçin ve ardından **Tamam**' ı seçin. Kabul etmek için **Evet, katılmak istiyorum**' u seçin ve ardından **Tamam**' ı seçin.
 
-   ![Visual Studio Deneyim Geliştirme Programı iletişim](media/experience-improvement-program.png)
+   ![Visual Studio Deneyimini Geliştirme Programı iletişim kutusu](media/experience-improvement-program.png)
 
-### <a name="registry-settings"></a>Kayıt defteri ayarları
+### <a name="registry-settings"></a>Kayıt Defteri ayarları
 
-Visual Studio [için Yapı Araçları'nı](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017)yüklerseniz, VSCEIP'i yapılandırmak için kayıt defterini güncelleştirmeniz gerekir. Kurumsal müşteriler, kayıt defteritabanlı bir ilke ayarlayarak VSCEIP'e kabul etmek veya devre dışı bırakmak için bir grup ilkesi oluşturabilirsiniz.
+[Visual Studio Için derleme araçları](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017)'nı YÜKLERSENIZ, vsceıp 'yi yapılandırmak için kayıt defterini güncelleştirmeniz gerekir. Kurumsal müşteriler, kayıt defteri tabanlı bir ilke ayarlayarak VSCEıP 'i kabul etmek veya kapatmak için bir grup ilkesi oluşturabilir.
 
 İlgili kayıt defteri anahtarı ve ayarları aşağıdaki gibidir:
 
 ::: moniker range="vs-2017"
 
-- 64 bit işletim sistemi üzerinde, Anahtar = **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Düğüm\Microsoft\VSCommon\15.0\SQM**
-- 32 bit işletim sistemi üzerinde Anahtar = **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM**
-- Grup İlkesi etkinleştirildiğinde, Anahtar = **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM**
+- 64 bitlik bir IŞLETIM sisteminde anahtar = **HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM**
+- 32 bitlik bir IŞLETIM sisteminde anahtar = **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VSCommon\15.0\SQM**
+- Grup ilkesi etkinleştirildiğinde anahtar = **HKEY_LOCAL_MACHINE \Software\Policies\Microsoft\VisualStudio\SQM**
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- 64 bit işletim sistemi üzerinde, Anahtar = **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Düğüm\Microsoft\VSCommon\16.0\SQM**
-- 32 bit işletim sistemi üzerinde Anahtar = **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\16.0\SQM**
-- Grup İlkesi etkinleştirildiğinde, Anahtar = **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM**
+- 64 bitlik bir IŞLETIM sisteminde anahtar = **HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\VSCommon\16.0\SQM**
+- 32 bitlik bir IŞLETIM sisteminde anahtar = **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VSCommon\16.0\SQM**
+- Grup ilkesi etkinleştirildiğinde anahtar = **HKEY_LOCAL_MACHINE \Software\Policies\Microsoft\VisualStudio\SQM**
 
 ::: moniker-end
 
-Giriş = **Optin**
+Entry = **OptIn**
 
 Değer = (DWORD)
 
-- **0** devre dışı bırakılır (VSCEIP kapatın)
-- **1** tercih edilir (VSCEIP'i açın)
+- **0** kabul EDILDI (vsceıp 'i kapatın)
+- **1** kabul EDILDI (vsceıp 'i açın)
 
 > [!CAUTION]
-> Kayıt defterinin hatalı düzenlenmesi sisteminize ciddi şekilde zarar verebilir. Kayıt defterinde değişiklik yapmadan önce, bilgisayarınızdaki tüm değerli verileri yedeklemelisiniz. El ile değişiklikler uygulandıktan sonra sorunlarla **karşılaşırsanız, Bilinen Son Bilinen İyi Yapılandırma** başlatma seçeneğini de kullanabilirsiniz.
+> Kayıt defterinin hatalı düzenlenmesi sisteminize ciddi şekilde zarar verebilir. Kayıt defterinde değişiklik yapmadan önce, bilgisayarınızdaki tüm değerli verileri yedeklemelisiniz. Ayrıca, el ile yapılan değişiklikler uygulandıktan sonra sorunlarla karşılaşırsanız **bilinen son Iyi yapılandırma** başlatma seçeneğini de kullanabilirsiniz.
 
-VSCEIP tarafından toplanan, işlenen veya iletilen bilgiler hakkında daha fazla bilgi için [Microsoft Gizlilik Bildirimi'ne](https://privacy.microsoft.com/privacystatement)bakın.
+VSCEıP tarafından toplanan, işlenen veya aktarılan bilgiler hakkında daha fazla bilgi için [Microsoft gizlilik bildirimi](https://privacy.microsoft.com/privacystatement)' ne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio tarafından toplanan tanısal bilgiler](diagnostic-data-collection.md)
+* [Visual Studio tarafından toplanan tanılama bilgileri](diagnostic-data-collection.md)
 * [Visual Studio geri bildirim seçenekleri](../ide/feedback-options.md)
-* [Visual Studio ile ilgili bir sorun nasıl bildirilir?](../ide/how-to-report-a-problem-with-visual-studio.md)
-* [Visual Studio Geliştirici Topluluğu](https://developercommunity.visualstudio.com/)
+* [Visual Studio ile ilgili sorun bildirme](../ide/how-to-report-a-problem-with-visual-studio.md)
+* [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/)
 * [Microsoft Gizlilik Bildirimi](https://privacy.microsoft.com/privacystatement)

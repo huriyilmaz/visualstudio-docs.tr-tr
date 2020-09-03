@@ -8,10 +8,10 @@ ms.workload:
 - cplusplus
 author: corob-msft
 ms.openlocfilehash: 3bfbe5fd0147a04d6fc6142fd1d722f8f2304586
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287044"
 ---
 # <a name="write-unit-tests-for-c-dlls-in-visual-studio"></a>Visual Studio 'da C++ dll 'Leri için birim testleri yazma
@@ -38,7 +38,7 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
 ## <a name="create-the-tests"></a>Testleri oluşturma
 
-### <a name="to-change-the-dll-to-a-static-library"></a><a name="staticLink"></a>DLL 'yi bir statik kitaplığa dönüştürmek için
+### <a name="to-change-the-dll-to-a-static-library"></a><a name="staticLink"></a> DLL 'yi bir statik kitaplığa dönüştürmek için
 
 - Testlerinizin, DLL projesi tarafından dışarıya aktarılmamış üyeleri kullanması gerekiyorsa ve test edilen proje dinamik bir kitaplık olarak derlendiğinden, onu statik bir kitaplığa dönüştürmeyi düşünün.
 
@@ -50,7 +50,7 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
   [Testleri nesne veya kitaplık dosyalarına bağlama](#objectRef)yordamıyla devam edin.
 
-### <a name="to-reference-exported-dll-functions-from-the-test-project"></a><a name="projectRef"></a>Test projesinden içe aktarılmış DLL işlevlerine başvurmak için
+### <a name="to-reference-exported-dll-functions-from-the-test-project"></a><a name="projectRef"></a> Test projesinden içe aktarılmış DLL işlevlerine başvurmak için
 
 - DLL projesi test etmek istediğiniz işlevleri dışa aktardığında, test projesinden kod projesine bir başvuru ekleyebilirsiniz.
 
@@ -82,7 +82,7 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
   [Birim testlerini yazmak](#addTests)için gidin.
 
-### <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="objectRef"></a>Testleri nesne veya kitaplık dosyalarına bağlamak için
+### <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="objectRef"></a> Testleri nesne veya kitaplık dosyalarına bağlamak için
 
 - DLL test etmek istediğiniz işlevleri dışa aktarmaz, Output *. obj* veya *. lib* dosyasını test projesinin bağımlılıklarına ekleyebilirsiniz.
 
@@ -116,7 +116,7 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
   [Birim testlerini yazmak](#addTests)için gidin.
 
-### <a name="to-add-unit-tests-in-the-same-project"></a><a name="sameProject"></a>Aynı projeye birim testleri eklemek için
+### <a name="to-add-unit-tests-in-the-same-project"></a><a name="sameProject"></a> Aynı projeye birim testleri eklemek için
 
 1. Ürün kodu proje özelliklerini, birim testi için gereken üst bilgileri ve kitaplık dosyalarını içerecek şekilde değiştirin.
 
@@ -137,7 +137,7 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
    [Birim testlerini yazmak](#addTests)için gidin.
 
-## <a name="write-the-unit-tests"></a><a name="addTests"></a>Birim testlerini yazma
+## <a name="write-the-unit-tests"></a><a name="addTests"></a> Birim testlerini yazma
 
 1. Her birim test kodu dosyasında, `#include` test edilen projenin üst bilgileri için bir ifade ekleyin.
 

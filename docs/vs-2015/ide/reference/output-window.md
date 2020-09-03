@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f17b91cc462b6f628100ffbf370fcdec2eb9888d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662191"
 ---
 # <a name="output-window"></a>Çıktı Penceresi
@@ -53,9 +53,9 @@ ms.locfileid: "72662191"
 
  [Komut penceresinde](../../ide/reference/command-window.md) ÇAĞRıLAN bazı IDE özellikleri ve komutları çıktısını **Çıkış** penceresine teslim edin. Genellikle komut Istemi penceresinde görünen. bat ve. com dosyaları gibi dış araçlardan alınan çıkış, [dış araçların yönetilmesi](../../ide/managing-external-tools.md) **Çıkış penceresi** seçeneğini belirlediğinizde bir **Çıkış** bölmesine yönlendirilir. Diğer birçok ileti, **Çıkış** bölmelerinde de görüntülenebilir. Örneğin, saklı yordamdaki Transact-SQL sözdizimi hedef veritabanına karşı denetlendiğinde, sonuçlar **Çıkış** penceresinde görüntülenir.
 
- Ayrıca, çalışma zamanında bir **Çıkış** bölmesine tanılama iletileri yazmak için kendi uygulamalarınızı programlayabilirsiniz. Bunu yapmak için, .NET Framework sınıf kitaplığının <xref:System.Diagnostics> ad alanındaki <xref:System.Diagnostics.Debug> sınıfının veya <xref:System.Diagnostics.Trace> sınıfının üyelerini kullanın. @No__t_0 sınıfının üyeleri, çözümünüzün veya projenizin hata ayıklama konfigürasyonlarını oluştururken çıktıyı görüntüler; <xref:System.Diagnostics.Trace> sınıfının üyeleri, hata ayıklama veya sürüm yapılandırması oluştururken çıktıyı görüntüler. Daha fazla bilgi için [Çıkış penceresi tanılama iletileri](../../debugger/diagnostic-messages-in-the-output-window.md)bölümüne bakın.
+ Ayrıca, çalışma zamanında bir **Çıkış** bölmesine tanılama iletileri yazmak için kendi uygulamalarınızı programlayabilirsiniz. Bunu yapmak için, <xref:System.Diagnostics.Debug> <xref:System.Diagnostics.Trace> <xref:System.Diagnostics> .NET Framework sınıf kitaplığının ad alanındaki sınıfının veya sınıfın üyelerini kullanın. Sınıf üyeleri, <xref:System.Diagnostics.Debug> çözümünüzün veya projenizin hata ayıklama yapılandırmalarının derlenmesi sırasında çıktıyı görüntüler; <xref:System.Diagnostics.Trace> sınıf üyeleri hata ayıklama veya sürüm yapılandırması oluştururken çıktıyı görüntüler. Daha fazla bilgi için [Çıkış penceresi tanılama iletileri](../../debugger/diagnostic-messages-in-the-output-window.md)bölümüne bakın.
 
- @No__t_0, özel derleme adımları ve uyarı ve hataları **çıktı** bölmesinde görüntülenen ve sayılan olay oluşturma olaylarını oluşturabilirsiniz. Bir çıktı satırında F1 tuşuna basarak uygun bir yardım konusu görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [özel derleme adımının veya derleme olayının çıktısını biçimlendirme](https://msdn.microsoft.com/library/92ad3e38-24d7-4b89-90e6-5a16f5f998da).
+ İçinde [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] , **Çıkış** bölmesinde uyarıları ve hataları görüntülenen ve sayılan özel yapı adımları ve derleme olayları oluşturabilirsiniz. Bir çıktı satırında F1 tuşuna basarak uygun bir yardım konusu görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [özel derleme adımının veya derleme olayının çıktısını biçimlendirme](https://msdn.microsoft.com/library/92ad3e38-24d7-4b89-90e6-5a16f5f998da).
 
 ## <a name="scrolling-behavior"></a>Kaydırma davranışı
  Çıkış penceresinde bir oto kaydırma kullanır ve sonra fare veya ok tuşlarını kullanarak gezinirseniz, oto kaydırma duraklar. Oto kaydırmayı yeniden başlatmak için CTRL + END tuşlarına basın.

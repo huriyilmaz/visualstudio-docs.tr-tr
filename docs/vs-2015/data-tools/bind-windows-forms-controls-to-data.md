@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3cf93d96594b65b06670567e8c23cd83ccb7f1ab
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672973"
 ---
 # <a name="bind-windows-forms-controls-to-data"></a>Verilere Windows Forms denetimleri bağlama
@@ -36,7 +36,7 @@ Veri **kaynakları** penceresinden bir Windows formuna veya bir formdaki mevcut 
  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
 ## <a name="bind-to--data-in-a-datagridview-control"></a>DataGridView Denetimindeki verilere bağlama
- DataGridView için tüm tablo bu tek denetime bağlanır. Forma bir DataGridView sürüklediğiniz zaman, kayıtlarda gezinmek için bir araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) de görüntülenir. Bir [veri kümesi](../data-tools/dataset-tools-in-visual-studio.md), TableAdapter, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür. Aşağıdaki çizimde, Customers tablosunun Orders tablosuyla bir ilişkisi olduğundan, bir TableAdapterManager de eklenir. Bu değişkenlerin hepsi, otomatik olarak oluşturulan kodda form sınıfında özel Üyeler olarak bildirilmiştir. DataGridView 'i doldurmak için otomatik olarak oluşturulan kod Form_Load olay işleyicisinde bulunur. Veritabanını güncelleştirmek için verileri kaydetme kodu, BindingNavigator için Save olay işleyicisinde bulunur. Gerektiğinde bu kodu taşıyabilir veya değiştirebilirsiniz.
+ DataGridView için tüm tablo bu tek denetime bağlanır. Forma bir DataGridView sürüklediğinizde, kayıtlar () içinde gezinmek için bir araç şeridi <xref:System.Windows.Forms.BindingNavigator> de görüntülenir. Bir [veri kümesi](../data-tools/dataset-tools-in-visual-studio.md), TableAdapter, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür. Aşağıdaki çizimde, Customers tablosunun Orders tablosuyla bir ilişkisi olduğundan, bir TableAdapterManager de eklenir. Bu değişkenlerin hepsi, otomatik olarak oluşturulan kodda form sınıfında özel Üyeler olarak bildirilmiştir. DataGridView 'in doldurulmasıyla ilgili otomatik oluşturulan kod form_load olay işleyicisinde bulunur. Veritabanını güncelleştirmek için verileri kaydetme kodu, BindingNavigator için Save olay işleyicisinde bulunur. Gerektiğinde bu kodu taşıyabilir veya değiştirebilirsiniz.
 
  ![BindingNavigator ile GridView](../data-tools/media/raddata-gridview-with-bindingnavigator.png "BindingNavigator ile radveri GridView")
 
@@ -46,7 +46,7 @@ Veri **kaynakları** penceresinden bir Windows formuna veya bir formdaki mevcut 
 
  Uygulamanızın ihtiyaç duyacağı denetimler **veri kaynakları** penceresinde yoksa, denetimler ekleyebilirsiniz. Daha fazla bilgi için bkz. [veri kaynakları penceresine özel denetimler ekleme](../data-tools/add-custom-controls-to-the-data-sources-window.md).
 
- Ayrıca, denetimi verilere bağlamak için **veri kaynakları** penceresinden öğeleri zaten bir form üzerinde bulunan denetimlere sürükleyebilirsiniz. Veriye zaten bağlanan bir denetimin veri bağlamaları, en son sürüklediğiniz öğeye sıfırlanır. Geçerli bırakma hedefleri olması için, denetimlerin **veri kaynakları** penceresinden üzerine sürüklenen öğenin temel alınan veri türünü görüntülemesi yeterli olmalıdır. Örneğin, <xref:System.Windows.Forms.CheckBox> bir tarihi görüntüleme yeteneğine sahip olmadığından, veri türü <xref:System.DateTime> olan bir öğeyi bir <xref:System.Windows.Forms.CheckBox> sürüklemek geçerli değildir.
+ Ayrıca, denetimi verilere bağlamak için **veri kaynakları** penceresinden öğeleri zaten bir form üzerinde bulunan denetimlere sürükleyebilirsiniz. Veriye zaten bağlanan bir denetimin veri bağlamaları, en son sürüklediğiniz öğeye sıfırlanır. Geçerli bırakma hedefleri olması için, denetimlerin **veri kaynakları** penceresinden üzerine sürüklenen öğenin temel alınan veri türünü görüntülemesi yeterli olmalıdır. Örneğin, bir veri türüne sahip olan bir öğeyi <xref:System.DateTime> bir <xref:System.Windows.Forms.CheckBox> Tarih görüntüleme yeteneğine sahip olmadığından, üzerine sürüklemek için geçerli değildir <xref:System.Windows.Forms.CheckBox> .
 
 ## <a name="bind-to--data-in-individual-controls"></a>Tek denetimlerde verilere bağlama
  Bir veri kaynağını "details" öğesine bağladığınızda, veri kümesindeki her bir sütun ayrı bir denetime bağlanır.

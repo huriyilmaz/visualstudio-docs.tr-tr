@@ -23,10 +23,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6c53af4a8e0f42708ab94d7206a9c0cc54819798
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72573545"
 ---
 # <a name="general-debugging-options-dialog-box"></a>Genel, Hata Ayıklama, Seçenekler İletişim Kutusu
@@ -43,13 +43,13 @@ ms.locfileid: "72573545"
  **Özel durum AppDomain veya yönetilen/yerel sınırlar olduğunda kes**  
  Yönetilen veya karma mod hata ayıklamada, ortak dil çalışma zamanı, aşağıdaki koşullar doğru olduğunda, uygulama etki alanı sınırları veya yönetilen/yerel sınırları karşılıklı yapan özel durumları yakalayabilir:  
   
- 1 \) yerel kod, yönetilen kodu COM birlikte çalışabilirliği kullanarak çağırdığında ve yönetilen kod bir özel durum oluşturduğunda. Bkz. [com birlikte çalışabilirliğine giriş](https://msdn.microsoft.com/library/8bd62e68-383d-407f-998b-29aa0ce0fd67).  
+ 1 \) yerel kod, yönetilen kodu com birlikte çalışabilirliği kullanarak çağırdığında ve yönetilen kod bir özel durum oluşturduğunda. Bkz. [com birlikte çalışabilirliğine giriş](https://msdn.microsoft.com/library/8bd62e68-383d-407f-998b-29aa0ce0fd67).  
   
  2 \) uygulama etki alanı 1 ' de çalıştırılan yönetilen kod, uygulama etki alanı 2 ' deki Yönetilen kodu çağırdığında ve uygulama etki alanı 2 ' deki kod bir özel durum oluşturur. Bkz. [uygulama etki alanlarıyla programlama](https://msdn.microsoft.com/bd36055b-56bd-43eb-b4d8-820c37172131).  
   
  3 \) kod, yansıma kullanarak bir işlevi çağırdığında ve işlev bir özel durum oluşturduğunda. Bkz. [yansıma](https://msdn.microsoft.com/library/d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775).  
   
- 2\) ve 3), özel durum bazen ortak dil çalışma zamanı yerine `mscorlib` yönetilen kod tarafından yakalanır. Bu seçenek `mscorlib` tarafından yakalanan özel durumların kesilmesini etkilemez.  
+ 2) ve 3), özel durum bazen `mscorlib` ortak dil çalışma zamanı yerine yönetilen kod tarafından yakalanır. Bu seçenek tarafından yakalanan özel durumların kesilmesini etkilemez `mscorlib` .  
   
  **Adres düzeyinde hata ayıklamayı etkinleştir**  
  Adres düzeyinde hata ayıklama için gelişmiş özellikleri ( **ayrıştırılmış** pencere, **Yazmaçları** penceresi ve adres kesme noktaları) sağlar.  
@@ -84,11 +84,11 @@ ms.locfileid: "72573545"
  **Özellik değerlendirmesini ve diğer örtük işlev çağrılarını etkinleştir**  
  Değişkenler Windows ve **QuickWatch** iletişim kutusunda özelliklerin ve örtük işlev çağrılarının otomatik değerlendirmesini etkinleştirir.  
   
- **Değişkenler Windows 'daki (C# ve yalnızca JavaScript) nesnelerde dize dönüştürme işlevini çağır**  
- Değişkenler penceresinde nesneleri değerlendirirken örtük bir dize dönüştürme çağrısı yürütür. Bu nedenle, bu sonuç tür adı yerine bir dize olarak görüntülenir. Yalnızca C# kodda hata ayıklanırken geçerlidir. Bu ayar DebuggerDisplay özniteliği tarafından geçersiz kılınabilir (bkz. [DebuggerDisplay özniteliğini kullanma](../debugger/using-the-debuggerdisplay-attribute.md)).  
+ **Değişkenler penceresinde nesnelerde dize dönüştürme işlevini çağır (yalnızca C# ve JavaScript)**  
+ Değişkenler penceresinde nesneleri değerlendirirken örtük bir dize dönüştürme çağrısı yürütür. Bu nedenle, bu sonuç tür adı yerine bir dize olarak görüntülenir. Yalnızca C# kodunda hata ayıklanırken geçerlidir. Bu ayar DebuggerDisplay özniteliği tarafından geçersiz kılınabilir (bkz. [DebuggerDisplay özniteliğini kullanma](../debugger/using-the-debuggerdisplay-attribute.md)).  
   
  **Kaynak sunucu desteğini etkinleştir**  
- Visual Studio hata ayıklayıcısına SrcSrv (`srcsrv.dll`) protokolünü uygulayan kaynak sunuculardan kaynak dosyaları almasını söyler. Team Foundation Server ve Windows için hata ayıklama araçları, protokolü uygulayan iki kaynak sunucularıdır. SrcSrv kurulumu hakkında daha fazla bilgi için bkz. Windows için hata ayıklama araçları belgeleri. Ayrıca bkz. [simge (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
+ Visual Studio hata ayıklayıcısına SrcSrv () protokolünü uygulayan kaynak sunuculardan kaynak dosyaları almasını söyler `srcsrv.dll` . Team Foundation Server ve Windows için hata ayıklama araçları, protokolü uygulayan iki kaynak sunucularıdır. SrcSrv kurulumu hakkında daha fazla bilgi için bkz. Windows için hata ayıklama araçları belgeleri. Ayrıca bkz. [simge (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
   
 > [!IMPORTANT]
 > . Pdb dosyalarını okuma dosyalarında rastgele kod yürütebildiğinden, sunucuya güvendiğinizden emin olun.  
@@ -123,7 +123,7 @@ ms.locfileid: "72573545"
  **DLL dışarı aktarmaları yükle**  
  DLL dışarı aktarma tablolarını yükler. DLL dışarı aktarma tablolarından sembol bilgileri, Windows iletileri, Windows yordamları (WindowProcs), COM nesneleri veya sıralama ya da sembolleri olmayan herhangi bir dll ile çalışıyorsanız yararlı olabilir. Dll dışa aktarma bilgilerini okuma bazı ek yük içerir. Bu nedenle, bu özellik varsayılan olarak kapalıdır.  
   
- Dll 'nin dışarı aktarma tablosunda hangi simgelerin kullanılabildiğini görmek için `dumpbin /exports` kullanın. Semboller, 32 bit sistem dll 'si için kullanılabilir. @No__t_0 çıktısını okuyarak, alfasayısal olmayan karakterler de dahil olmak üzere tam işlev adını görebilirsiniz. Bu, bir işlev bir kesme noktası ayarlamak için yararlıdır. DLL dışarı aktarma tablolarındaki işlev adları, hata ayıklayıcının başka bir yerinde kesilmiş görünebilir. Aramalar geçerli işlev en üstte (en yoğun şekilde iç içe geçmiş) olacak şekilde arama sırasıyla listelenir. Daha fazla bilgi için bkz. [döküm bin/dışarı aktarmalar](https://msdn.microsoft.com/library/2971ab7e-4ee6-478b-9c85-cda42a4ce1bf).  
+ Dll 'nin dışarı aktarma tablosunda hangi simgelerin kullanılabildiğini görmek için kullanın `dumpbin /exports` . Semboller, 32 bit sistem dll 'si için kullanılabilir. Çıktıyı okuyarak, `dumpbin /exports` alfasayısal olmayan karakterler de dahil olmak üzere tam işlev adını görebilirsiniz. Bu, bir işlev bir kesme noktası ayarlamak için yararlıdır. DLL dışarı aktarma tablolarındaki işlev adları, hata ayıklayıcının başka bir yerinde kesilmiş görünebilir. Aramalar geçerli işlev en üstte (en yoğun şekilde iç içe geçmiş) olacak şekilde arama sırasıyla listelenir. Daha fazla bilgi için bkz. [döküm bin/dışarı aktarmalar](https://msdn.microsoft.com/library/2971ab7e-4ee6-478b-9c85-cda42a4ce1bf).  
   
  **Paralel Yığınlar diyagramını aşağıdan yukarı göster**  
  Yığınların **Paralel Yığınlar** penceresinde Görüntülenme yönünü denetler.  
@@ -134,19 +134,19 @@ ms.locfileid: "72573545"
  **Yönetilen Uyumluluk modunu kullan**  
  Bu senaryoları etkinleştirmek için varsayılan hata ayıklama altyapısını eski bir sürümle değiştirir:  
   
-- C#, Vb veya F# dışında bir .NET Framework dili kullanıyorsunuz (Bu,/CLI içerir C++).  
+- Kendi Ifade Değerlendiricisi sağlayan C#, VB veya F # dışında bir .NET Framework dili kullanıyorsunuz (C++/CLı 'Yı içerir).  
   
-- Karışık mod hata ayıklaması yaparken projeler için C++ Düzenle ve devam et özelliğini etkinleştirmek istiyorsunuz.  
+- Karışık modda hata ayıklama sırasında C++ projeleri için Düzenle ve devam et özelliğini etkinleştirmek istiyorsunuz.  
   
   Yönetilen Uyumluluk modunun seçilmesi, yalnızca varsayılan hata ayıklama altyapısında uygulanan bazı özellikleri devre dışı bıraktığını unutmayın.  
   
   **Yerel uyumluluk modunu kullan**  
   Bu seçenek belirlendiğinde, hata ayıklayıcı yeni yerel hata ayıklayıcı yerine Visual Studio 2010 yerel hata ayıklayıcısını kullanır.  
   
-  Yeni hata ayıklama altyapısı .NET C++ C++ ifadeleri değerlendirmeyi desteklemediğinden, .net Code hata ayıklaması yaparken bu seçeneği kullanmanız gerekir. Ancak, yerel uyumluluk modunu etkinleştirmek, geçerli hata ayıklayıcı uygulamasına bağımlı birçok özelliği çalışır şekilde devre dışı bırakır. Örneğin, eski altyapıda Visual Studio 2015 projelerinde `std::string` gibi yerleşik türler için birçok Görselleştiriciler yoktur.  Bu durumlarda en iyi hata ayıklama deneyimi için Visual Studio 2013 projelerini kullanın.  
+  Yeni hata ayıklama altyapısı .NET C++ ifadelerini değerlendirmeyi desteklemediğinden, .NET C++ kodunda hata ayıklarken bu seçeneği kullanmanız gerekir. Ancak, yerel uyumluluk modunu etkinleştirmek, geçerli hata ayıklayıcı uygulamasına bağımlı birçok özelliği çalışır şekilde devre dışı bırakır. Örneğin, eski altyapıda Visual Studio 2015 projelerinde gibi yerleşik türler için birçok Görselleştiriciler yoktur `std::string` .  Bu durumlarda en iyi hata ayıklama deneyimi için Visual Studio 2013 projelerini kullanın.  
   
-  **Eski C# ve vb ifadesini kullanın değerlendiricileri**  
-  Hata ayıklayıcı, Visual Studio 2015 C#Roslyn tabanlı ifade değerlendiricileri yerine Visual Studio 2013/vb Expression değerlendiricileri kullanır.  
+  **Eski C# ve VB ifadesini kullanın değerlendiricileri**  
+  Hata ayıklayıcı, Visual Studio 2015 Roslyn tabanlı ifade değerlendiricileri yerine C#/vb Expression değerlendiricileri Visual Studio 2013 kullanır.  
   
   **Güvenli olmayan işlemlere karşı özel hata ayıklama görselleştiricileri kullanıldığında uyar (yalnızca yönetilen)**  
   Hata ayıklanan işlemde kod çalıştıran özel bir hata ayıklayıcı görselleştiricisi kullandığınızda, güvenli olmayan kod çalıştırdığından, Visual Studio sizi uyarır.  
@@ -173,7 +173,7 @@ ms.locfileid: "72573545"
   Hata ayıklarken Düzenle ve devam et işlevini kullanabilirsiniz.  
   
   **Yerel Düzenle ve devam et 'i etkinleştir**  
-  Yerel C++ kodda hata ayıklarken Düzenle ve devam et işlevini kullanabilirsiniz. Daha fazla bilgi için bkz. [Düzenle ve devam et C++(görsel)](../debugger/edit-and-continue-visual-cpp.md).  
+  Yerel C++ kodunda hata ayıklarken Düzenle ve devam et işlevselliğini kullanabilirsiniz. Daha fazla bilgi için bkz. [Düzenle ve devam et (Visual C++)](../debugger/edit-and-continue-visual-cpp.md).  
   
   **Değişiklikleri devam ederken Uygula (yalnızca yerel)**  
   Visual Studio, işleme bir kesme durumundan devam ederken yaptığınız bekleyen kod değişikliklerini otomatik olarak derler ve uygular. Seçili değilse, hata ayıkla menüsündeki "kod değişikliklerini Uygula" öğesini kullanarak değişiklikleri uygulamayı seçebilirsiniz.  
@@ -185,4 +185,4 @@ ms.locfileid: "72573545"
   Önceden derlemeye izin veriliyor.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Studio’da hata ayıklama](../debugger/debugging-in-visual-studio.md)
+ [Visual Studio'da Hata Ayıklama](../debugger/debugging-in-visual-studio.md)

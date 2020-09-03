@@ -10,29 +10,29 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e800fe651d32435351b2338b4da2f9c55158b3a0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664000"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>İzlenecek yol: Ilk WPF Masaüstü Uygulamam
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) geliştirmeye bir giriş sağlar. Çoğu WPF Masaüstü uygulaması için ortak olan öğeleri içeren temel bir uygulama oluşturacaksınız: XAML işaretleme, arka plan kod, uygulama tanımları, denetimler, düzen, veri bağlama ve stiller.
+Name = "giriş" ></a> Bu izlenecek yol, Windows Presentation Foundation (WPF) geliştirmeye bir giriş sağlar. Çoğu WPF Masaüstü uygulaması için ortak olan öğeleri içeren temel bir uygulama oluşturacaksınız: XAML işaretleme, arka plan kod, uygulama tanımları, denetimler, düzen, veri bağlama ve stiller.
 
-## <a name="Create_The_Application_Code_Files"></a>Uygulama projesi oluşturma
+## <a name="creating-the-application-project"></a><a name="Create_The_Application_Code_Files"></a> Uygulama projesi oluşturma
  Bu bölümde, projeyi ve ana pencereyi veya formu içeren uygulama altyapısını oluşturacaksınız.
 
 #### <a name="to-create-the-project"></a>Proje oluşturmak için
 
 1. Menü çubuğunda **Dosya**, **Yeni**, **Proje**' yi seçin.
 
-2. **Yeni proje** iletişim kutusunda, **Visual C#**  veya **Visual Basic** düğümünü genişletin ve **Windows** düğümünü seçin ve ardından **Windows** düğümünü genişletin ve **Klasik Masaüstü** düğümünü seçin.
+2. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** düğümünü genişletin ve **Windows** düğümünü seçin ve ardından **Windows** düğümünü genişletin ve **Klasik Masaüstü** düğümünü seçin.
 
 3. Şablon listesinde **WPF uygulama** şablonunu seçin.
 
-4. **Ad** metin kutusuna `ExpenseIt` girin ve sonra **Tamam** düğmesini seçin.
+4. **Ad** metin kutusuna girin `ExpenseIt` ve **Tamam** düğmesini seçin.
 
      Proje oluşturulur ve proje dosyaları **Çözüm Gezgini**eklenir ve **MainWindow. xaml** adlı varsayılan uygulama penceresi için tasarımcı görüntülenir.
 
@@ -40,28 +40,28 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
 1. Tasarımcıda zaten etkin Tasarımcı sekmesi yoksa **MainWindow. xaml** sekmesini seçin.
 
-2. Kullanıyorsanız C#satır `<Window x:Class="ExpenseIt.MainWindow"` bulun ve `<NavigationWindow x:Class="ExpenseIt.MainWindow"` ile değiştirin.
+2. C# kullanıyorsanız, satırı bulun `<Window x:Class="ExpenseIt.MainWindow"` ve ile değiştirin `<NavigationWindow x:Class="ExpenseIt.MainWindow"` .
 
-     Visual Basic kullanıyorsanız, satırı `<Window x:Class=" MainWindow"` bulun ve `<NavigationWindow x:Class="MainWindow"` ile değiştirin.
+     Visual Basic kullanıyorsanız, satırı bulun `<Window x:Class=" MainWindow"` ve ile değiştirin `<NavigationWindow x:Class="MainWindow"` .
 
-     @No__t_0 etiketini `<NavigationWindow` olarak değiştirdiğinizde, IntelliSense, kapatma etiketini otomatik olarak `</NavigationWindow>` olarak değiştirdiğine dikkat edin.
+     Etiketini olarak değiştirdiğinizde `<Window` `<NavigationWindow` , IntelliSense otomatik olarak kapanış etiketini de olarak değiştirir `</NavigationWindow>` .
 
     > [!NOTE]
     > Etiketi değiştirdikten sonra, **hata listesi** penceresi açıksa birkaç hata fark edebilirsiniz. Endişelenmeyin, sonraki birkaç adımda yaptığınız değişiklikler bu şekilde kaybolur.
 
-3. @No__t_0 ve `</Grid>` etiketlerini seçin ve silin.
+3. `<Grid>`Ve etiketlerini seçin `</Grid>` ve silin.
 
      **NavigationWindow** , **kılavuz**gibi diğer kullanıcı arabirimi öğelerini içeremez.
 
-4. **Özellikler** penceresinde **ortak** kategori düğümünü genişletin ve **Title** özelliğini seçin ve sonra `ExpenseIt` girip **ENTER** tuşuna basın.
+4. **Özellikler** penceresinde **ortak** kategori düğümünü genişletin ve **title** özelliğini seçin ve ENTER `ExpenseIt` tuşuna basın. **Enter**
 
      XAML penceresindeki **title** öğesinin yeni değerle eşleşecek şekilde değişdiğine dikkat edin. Xaml özelliklerini XAML penceresinde ya da **Özellikler** penceresinde değiştirebilirsiniz ve değişiklikler eşitlenir.
 
-5. XAML penceresinde, **Height** öğesinin değerini `375` olarak ayarlayın ve **Width** özelliğinin değerini `500` olarak ayarlayın.
+5. XAML penceresinde, **Height** öğesinin değerini olarak ayarlayın `375` ve **Width** özelliğinin değerini olarak ayarlayın `500` .
 
      Bu öğeler, **Özellikler** penceresindeki **Düzen** kategorisinde bulunan **Yükseklik** ve **Genişlik** özelliklerine karşılık gelir.
 
-     **MainWindow. xaml** dosyanız şu şekilde C#görünmelidir:
+     **MainWindow. xaml** dosyanız artık C# dilinde şöyle görünmelidir:
 
     ```xaml
     <NavigationWindow x:Class="ExpenseIt.MainWindow"
@@ -91,30 +91,30 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
     </NavigationWindow>
     ```
 
-#### <a name="to-modify-the-code-behind-file-c"></a>Arka plan kod dosyasını (C#) değiştirmek için
+#### <a name="to-modify-the-code-behind-file-c"></a>Arka plan kod dosyasını değiştirmek için (C#)
 
 1. **Çözüm Gezgini**, **MainWindow. xaml** düğümünü genişletin ve **MainWindow.xaml.cs** dosyasını açın.
 
-2. Satırı `public partial class MainWindow : Window` bulun ve `public partial class MainWindow : NavigationWindow` ile değiştirin.
+2. Satırı bulun `public partial class MainWindow : Window` ve ile değiştirin `public partial class MainWindow : NavigationWindow` .
 
-     Bu, `NavigationWindow` türetmek için `MainWindow` sınıfını değiştirir. Visual Basic, XAML 'de pencereyi değiştirdiğinizde bu otomatik olarak gerçekleşir, bu nedenle kod değişikliği gerekli değildir.
+     Bu, `MainWindow` öğesinden türetmek için sınıfını değiştirir `NavigationWindow` . Visual Basic, XAML 'de pencereyi değiştirdiğinizde bu otomatik olarak gerçekleşir, bu nedenle kod değişikliği gerekli değildir.
 
-## <a name="add_files_to_the_application"></a>Uygulamaya dosya ekleme
+## <a name="adding-files-to-the-application"></a><a name="add_files_to_the_application"></a> Uygulamaya dosya ekleme
  Bu bölümde, uygulamaya iki sayfa ve bir görüntü ekleyeceksiniz.
 
 #### <a name="to-add-a-home-screen"></a>Bir giriş ekranı eklemek için
 
 1. **Çözüm Gezgini**, **ExpenseIt** düğümünün kısayol menüsünü açın ve **Ekle**, **sayfa**' yı seçin.
 
-2. **Yeni öğe Ekle** Iletişim kutusunda **ad** metin kutusunu seçin ve `ExpenseItHome` girin ve sonra **Ekle** düğmesini seçin.
+2. **Yeni öğe Ekle** Iletişim kutusunda **ad** metin kutusunu seçin ve girin `ExpenseItHome` ve sonra **Ekle** düğmesini seçin.
 
      Bu sayfa, uygulama başlatıldığında görüntülenen ilk penceredir.
 
 3. Tasarımcıda zaten etkin Tasarımcı sekmesi yoksa **ExpenseItHome. xaml** sekmesini seçin.
 
-4. @No__t_0 öğesini seçin ve başlığı **ExpenseIt – Home**olarak değiştirin.
+4. Öğesini seçin `<Title>` ve başlığı **ExpenseIt – Home**olarak değiştirin.
 
-     **ExpenseItHome. xaml** dosyanız şu şekilde C#görünmelidir:
+     **ExpenseItHome. xaml** dosyanız artık C# dilinde şöyle görünmelidir:
 
     ```xaml
     <Page x:Class="ExpenseIt.ExpenseItHome"
@@ -153,9 +153,9 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
 5. Tasarımcıda **MainWindow. xaml** sekmesini seçin.
 
-6. Satırı `Title="ExpenseIt" Height="375" Width="500">` öğesini bulun ve bir `Source="ExpenseItHome.xaml"` özelliği ekleyin.
+6. Çizgi öğesini bulun `Title="ExpenseIt" Height="375" Width="500">` ve bir özellik ekleyin `Source="ExpenseItHome.xaml"` .
 
-     Bu, uygulama başlatıldığında **ExpenseItHome. xaml** ' i açılan ilk sayfa olacak şekilde ayarlar. **MainWindow. xaml** dosyanız şu şekilde C#görünmelidir:
+     Bu, uygulama başlatıldığında **ExpenseItHome. xaml** ' i açılan ilk sayfa olacak şekilde ayarlar. **MainWindow. xaml** dosyanız artık C# dilinde şöyle görünmelidir:
 
     ```xaml
     <NavigationWindow x:Class="ExpenseIt.MainWindow"
@@ -185,21 +185,21 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
     </NavigationWindow>
     ```
 
-     Daha önce ayarladığınız özelliklerde olduğu gibi, **Özellikler** penceresinin **çeşitli** kategorisindeki `Source` özelliğini ayarlamış olabilirsiniz.
+     Daha önce ayarladığınız özelliklerde olduğu gibi, `Source` özelliği **Özellikler** penceresinin **çeşitli** kategorisinde ayarlamış olabilirsiniz.
 
 #### <a name="to-add-a-details-window"></a>Ayrıntılar penceresi eklemek için
 
 1. **Çözüm Gezgini**, **ExpenseIt** düğümünün kısayol menüsünü açın ve **Ekle**, **sayfa**' yı seçin.
 
-2. **Yeni öğe Ekle** Iletişim kutusunda **ad** metin kutusunu seçin ve `ExpenseReportPage` girin ve sonra **Ekle** düğmesini seçin.
+2. **Yeni öğe Ekle** Iletişim kutusunda **ad** metin kutusunu seçin ve girin `ExpenseReportPage` ve sonra **Ekle** düğmesini seçin.
 
      Bu pencerede tek bir gider raporu görüntülenir.
 
 3. Tasarımcıda, zaten etkin Tasarımcı sekmesi değilse **ExpenseReportPage. xaml** sekmesini seçin.
 
-4. @No__t_0 öğesini seçin ve başlığı ExpenseIt ile değiştirin. **gideri görüntüleyin**.
+4. Öğeyi seçin `<Title>` ve başlığı ExpenseIt ile değiştirin. **gideri görüntüleyin**.
 
-     ExpenseReportPage. xaml dosyanız şu şekilde C#şöyle görünmelidir:
+     ExpenseReportPage. xaml dosyanız artık C# dilinde şöyle görünmelidir:
 
     ```xaml
     <Page x:Class="ExpenseIt.ExpenseReportPage"
@@ -244,18 +244,18 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
 6. Tasarım moduna geri dönmek için uygulamayı kapatın.
 
-## <a name="Add_Layout"></a>Kullanıcı arabirimi oluşturma
+## <a name="creating-the-user-interface"></a><a name="Add_Layout"></a> Kullanıcı arabirimi oluşturma
  Düzen, öğeleri yerleştirmek için sıralı bir yol sağlar ve ayrıca form yeniden boyutlandırılırken bu öğelerin boyutunu ve konumunu yönetir. Bu bölümde, üç satırlık bir tek sütunlu kılavuz oluşturacaksınız. İki sayfaya denetimler ekleyecek, bazı kodlar ekleyecek ve son olarak denetimler için yeniden kullanılabilir stiller tanımlayacaksınız.
 
 #### <a name="to-create-the-layout"></a>Düzen oluşturmak için
 
-1. **ExpenseItHome. xaml** açın ve `<Grid>` öğesini seçin.
+1. **ExpenseItHome. xaml** açın ve öğesini seçin `<Grid>` .
 
-2. **Özellikler** penceresinde, **Düzen** kategorisi düğümünü genişletin ve **kenar boşluğu** değerlerini, sol, sağ, üst ve alt kenar boşluklarına karşılık gelen `10`, `10`, `0` ve `10` olarak ayarlayın.
+2. **Özellikler** penceresinde, **Düzen** kategorisi düğümünü genişletin ve **kenar boşluğu** değerlerini `10` `10` `0` `10` sol, sağ, üst ve alt kenar boşluklarına karşılık gelen,, ve olarak ayarlayın.
 
-     @No__t_0 öğesi XAML içindeki `<Grid>` öğesine eklenir. Bir kez daha, bu değerleri, aynı sonuçla **Özellikler** penceresi yerıne doğrudan xaml kodunda girmiş olabilirsiniz.
+     Öğesi `Margin="10,0,10,10"` `<Grid>` xaml içindeki öğesine eklenir. Bir kez daha, bu değerleri, aynı sonuçla **Özellikler** penceresi yerıne doğrudan xaml kodunda girmiş olabilirsiniz.
 
-3. Satır ve sütun tanımlarını oluşturmak için aşağıdaki XAML kodunu `Grid` öğesine ekleyin:
+3. `Grid`Satır ve sütun tanımlarını oluşturmak için AŞAĞıDAKI xaml kodunu öğesine ekleyin:
 
     ```xaml
     <Grid.ColumnDefinitions>
@@ -272,7 +272,7 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
 1. **ExpenseItHome. xaml**açın.
 
-2. @No__t_1, `ListBox` ve `Button` denetimleri oluşturmak için `</Grid>` etiketinin hemen üstüne aşağıdaki XAML kodunu ekleyin.
+2. `</Grid>`Ve denetimlerini oluşturmak için AŞAĞıDAKI xaml kodunu etiketinin hemen üstüne ekleyin `Border` `ListBox` `Button` .
 
     ```xaml
     <!-- People list -->
@@ -302,21 +302,21 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
 #### <a name="to-add-a-background-image"></a>Arka plan görüntüsü eklemek için
 
-1. Aşağıdaki görüntüyü seçin ve `watermark.png` olarak kaydedin.
+1. Aşağıdaki görüntüyü seçin ve farklı kaydedin `watermark.png` .
 
      ![İzlenecek yol için filigran resmi](../designers/media/wpf-watermark.png "WPF_watermark")
 
     > [!NOTE]
-    > Alternatif olarak, kendi görüntünüzü oluşturup `watermark.png` olarak kaydedebilirsiniz.
+    > Alternatif olarak, kendi görüntünüzü oluşturabilir ve farklı kaydedebilirsiniz `watermark.png` .
 
 2. **Çözüm Gezgini**, **ExpenseIt** düğümünün kısayol menüsünü açın ve **Ekle**, **Varolan öğe**' yi seçin.
 
-3. **Varolan öğe Ekle** iletişim kutusunda, az önce eklediğiniz **filigran. png** görüntüsünü bulun, seçin ve sonra **Ekle** düğmesini seçin.
+3. **Varolan öğe Ekle** iletişim kutusunda, az önce eklediğiniz **watermark.png** görüntüsünü bulun, seçin ve sonra **Ekle** düğmesini seçin.
 
     > [!NOTE]
     > **Dosya türleri** listesini genişletmeniz ve **görüntü dosyaları**' nı seçmeniz gerekebilir.
 
-4. **ExpenseItHome. xaml** dosyasını açın ve bir arka plan görüntüsü oluşturmak için `</Grid>` etiketinin hemen üstüne aşağıdaki xaml kodunu ekleyin:
+4. **ExpenseItHome. xaml** dosyasını açın ve `</Grid>` bir arka plan görüntüsü oluşturmak için etiketinin hemen üstüne aşağıdaki xaml kodunu ekleyin:
 
     ```xaml
     <Grid.Background>
@@ -329,7 +329,7 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
 1. **ExpenseItHome. xaml**açın.
 
-2. Satırı `<Grid.ColumnDefinitions>` bulun ve hemen altına aşağıdaki satırı ekleyin:
+2. Satırı bulun `<Grid.ColumnDefinitions>` ve hemen altına aşağıdaki satırı ekleyin:
 
     ```xaml
     <ColumnDefinition Width="230" />
@@ -338,7 +338,7 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
      Bu, diğer sütunların solunda, 230 piksel sabit genişliğinde ek bir sütun oluşturur.
 
-3. Satırı `<Grid.RowDefinitions>` bulun ve hemen altına aşağıdaki satırı ekleyin:
+3. Satırı bulun `<Grid.RowDefinitions>` ve hemen altına aşağıdaki satırı ekleyin:
 
     ```xaml
     <RowDefinition />
@@ -347,15 +347,15 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
      Bu, kılavuzun üst kısmına bir satır ekler.
 
-4. @No__t_0 değerini 1 olarak ayarlayarak denetimleri ikinci sütuna taşıyın. Her `Grid.Row` değerini 1 artırarak bir satırı aşağı taşıyın.
+4. Değeri 1 olarak ayarlayarak denetimleri ikinci sütuna taşıyın `Grid.Column` . Her bir değeri 1 ' i artırarak her bir denetimi bir satıra taşıyın `Grid.Row` .
 
-    1. Satırı `<Border Grid.Column="0" Grid.Row="0" Height="35" Padding="5" Background="#4E87D4">` bulun. @No__t_0 `Grid.Column="1"` ve `Grid.Row="0"` `Grid.Row="1"` olarak değiştirin.
+    1. Satırı bulun `<Border Grid.Column="0" Grid.Row="0" Height="35" Padding="5" Background="#4E87D4">` . `Grid.Column="0"`Olarak değiştirin `Grid.Column="1"` ve öğesini `Grid.Row="0"` olarak değiştirin `Grid.Row="1"` .
 
-    2. Satırı `<ListBox Name="peopleListBox" Grid.Column="0" Grid.Row="1"` bulun. @No__t_0 `Grid.Column="1"` ve `Grid.Row="1"` `Grid.Row="2"` olarak değiştirin.
+    2. Satırı bulun `<ListBox Name="peopleListBox" Grid.Column="0" Grid.Row="1"` . `Grid.Column="0"`Olarak değiştirin `Grid.Column="1"` ve öğesini `Grid.Row="1"` olarak değiştirin `Grid.Row="2"` .
 
-    3. Satırı `<Button Grid.Column="0" Grid.Row="2" Margin="0,10,0,0" Width="125"` bulun. @No__t_0 `Grid.Column="1"` ve `Grid.Row="2"` `Grid.Row="3"` olarak değiştirin.
+    3. Satırı bulun `<Button Grid.Column="0" Grid.Row="2" Margin="0,10,0,0" Width="125"` . `Grid.Column="0"`Olarak değiştirin `Grid.Column="1"` ve öğesini `Grid.Row="2"` olarak değiştirin `Grid.Row="3"` .
 
-5. @No__t_0 öğeden hemen önce, başlığı göstermek için aşağıdaki XAML kodunu ekleyin:
+5. Öğesinden hemen önce, `<Border` başlığı göstermek için AŞAĞıDAKI xaml kodunu ekleyin:
 
     ```xaml
     <Label Grid.Column="1" VerticalAlignment="Center" FontFamily="Trebuchet MS"
@@ -365,7 +365,7 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
     ```
 
-     **ExpenseItHome. xaml** içeriği şu şekilde C#görünür:
+     **ExpenseItHome. xaml** Içeriği artık C# dilinde şöyle görünmelidir:
 
     ```xaml
     <Page x:Class="ExpenseIt.ExpenseItHome"
@@ -469,9 +469,9 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
 1. **ExpenseItHome. xaml**açın.
 
-2. @No__t_0 öğesini seçip **HorizontalAlignment = "Right"** öğesinden hemen sonra aşağıdaki xaml kodunu ekleyin: `Click="Button_Click"`.
+2. Öğesini seçin `<Button` ve **HorizontalAlignment = "Right"** öğesinden hemen sonra şu xaml kodunu ekleyin: `Click="Button_Click"` .
 
-     Bu, düğmenin `Click` olayı için bir olay işleyicisi ekler. **< Button** öğesi kodu şu şekilde görünmelidir:
+     Bu, düğmenin olayı için bir olay işleyicisi ekler `Click` . **<Button** öğesi kodu şu şekilde görünmelidir:
 
     ```
     <!-- View report button -->
@@ -481,7 +481,7 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
 3. **ExpenseItHome.xaml.cs** veya **ExpenseItHome. xaml. vb** dosyasını açın.
 
-4. @No__t_0 sınıfına aşağıdaki kodu ekleyin:
+4. Sınıfına aşağıdaki kodu ekleyin `ExpenseItHome` :
 
     ```csharp
     private void Button_Click(object sender, RoutedEventArgs e)
@@ -509,7 +509,7 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
      Bu sayfada, giriş sayfasında seçili olan kişinin gider raporu görüntülenir.
 
-2. @No__t_0 ve `</Grid>` etiketleri arasına aşağıdaki XAML kodunu ekleyin:
+2. Ve etiketleri arasına aşağıdaki XAML kodunu ekleyin `<Grid>` `</Grid>` :
 
     ```xaml
     <Grid.Background>
@@ -589,7 +589,7 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
 1. **App. xaml** dosyasını (C#) veya **Application. xaml** dosyasını (Visual Basic) açın.
 
-2. @No__t_0 ve `</Application.Resources>` etiketleri arasına aşağıdaki XAML 'yi ekleyin:
+2. Ve etiketleri arasına aşağıdaki XAML `<Application.Resources>` 'yi ekleyin `</Application.Resources>` :
 
     ```xaml
     <!-- Header text style -->
@@ -642,19 +642,19 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
      Bu XAML aşağıdaki stilleri ekler:
 
-    - `headerTextStyle`: sayfa başlığını `Label` biçimlendirmek Için.
+    - `headerTextStyle`: Sayfa başlığını biçimlendirmek için `Label` .
 
-    - `labelStyle`: `Label` denetimlerini biçimlendirmek Için.
+    - `labelStyle`: Denetimleri biçimlendirmek için `Label` .
 
-    - `columnHeaderStyle`: `DataGridColumnHeader` biçimlendirmek Için.
+    - `columnHeaderStyle`: Öğesini biçimlendirmek için `DataGridColumnHeader` .
 
-    - `listHeaderStyle`: liste üst bilgisini `Border` denetimlerine biçimlendirmek Için.
+    - `listHeaderStyle`: Liste üst bilgi denetimlerini biçimlendirmek için `Border` .
 
-    - `listHeaderTextStyle`: liste üst bilgisi **etiketini**biçimlendirmek için.
+    - `listHeaderTextStyle`: Liste üst bilgisi **etiketini**biçimlendirmek için.
 
-    - `buttonStyle`: **ExpenseItHome. xaml** pppage üzerindeki `Button` biçimlendirmek için.
+    - `buttonStyle`: `Button` **ExpenseItHome. xaml** pppage üzerinde biçimlendirmek için.
 
-3. **ExpenseItHome. xaml** açın ve aşağıdaki xaml ile `<Grid>` ve `</Grid>` öğeleri arasındaki her şeyi değiştirin
+3. **ExpenseItHome. xaml** açın ve `<Grid>` `</Grid>` aşağıdaki xaml ile ve öğeleri arasındaki her şeyi değiştirin
 
     ```xaml
     <Grid.ColumnDefinitions>
@@ -689,9 +689,9 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
             </Grid.Background>
     ```
 
-     Her bir denetimin görünümünü tanımlayan `VerticalAlignment` ve `FontFamily` gibi özellikler, stiller uygulanarak kaldırılır ve değiştirilmez.
+     `VerticalAlignment`Ve `FontFamily` her bir denetimin görünümünü tanımlayan özellikler, stiller uygulanarak kaldırılır ve değiştirilmez.
 
-4. **ExpenseReportPage. xaml** ' i açın ve `<Grid>` ile son `</Grid>` öğeleri arasındaki her şeyı aşağıdaki xaml ile değiştirin
+4. **ExpenseReportPage. xaml** ' i açın ve `<Grid>` `</Grid>` aşağıdaki xaml ile son öğeler arasındaki her şeyi değiştirin
 
     ```xaml
     <Grid.Background>
@@ -747,14 +747,14 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
     ```
 
-     Bu, `<Label>` ve `<Border>` öğelerine stiller ekler.
+     Bu, `<Label>` ve öğelerine stiller ekler `<Border>` .
 
 ## <a name="connecting-to-data"></a>Verilere Bağlanma
  Bu bölümde, bir veri sağlayıcısı ve bir veri şablonu oluşturacak ve sonra verileri görüntüleyecek denetimleri bağlayacaksınız.
 
 #### <a name="to-bind-data-to-a-control"></a>Bir denetime veri bağlamak için
 
-1. **ExpenseItHome. xaml** açın ve `<Grid>` öğesini seçin.
+1. **ExpenseItHome. xaml** açın ve öğesini seçin `<Grid>` ...
 
 2. Aşağıdaki XAML kodunu ekleyin:
 
@@ -789,9 +789,9 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
     </Grid.Resources>
     ```
 
-     Bu kod, her kişiye ait verileri içeren bir `XmlDataProvider` sınıfı oluşturur. Normalde bu bir dosya olarak yüklenir, ancak kolaylık sağlaması için veriler satır içi eklenir.
+     Bu kod `XmlDataProvider` , her kişiye ait verileri içeren bir sınıf oluşturur. Normalde bu bir dosya olarak yüklenir, ancak kolaylık sağlaması için veriler satır içi eklenir.
 
-3. @No__t_0 öğesinin içinde, aşağıdaki XAML kodunu ekleyin:
+3. Öğesinin içinde `<Grid.Resources>` , AŞAĞıDAKI xaml kodunu ekleyin:
 
     ```xaml
     <!-- Name item template -->
@@ -800,9 +800,9 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
     </DataTemplate>
     ```
 
-     Bu, verilerin **ListBox**'da nasıl görüntüleneceğini tanımlayan bir `Data Template` ekler.
+     Bu `Data Template` , **ListBox**'ta verilerin nasıl görüntüleneceğini tanımlayan bir ekler.
 
-4. Mevcut `<ListBox>` öğesini aşağıdaki XAML ile değiştirin.
+4. Var olan `<ListBox>` öğeyi AŞAĞıDAKI XAML ile değiştirin.
 
     ```xaml
     <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2"
@@ -811,13 +811,13 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
     </ListBox>
     ```
 
-     Bu kod, `ListBox` `ItemsSource` özelliğini veri kaynağına bağlar ve veri şablonunu `ItemTemplate` olarak uygular.
+     Bu kod `ItemsSource` , öğesinin özelliğini `ListBox` veri kaynağına bağlar ve veri şablonunu olarak uygular `ItemTemplate` .
 
 #### <a name="to-connect-data-to-controls"></a>Denetimlere veri bağlamak için
 
 1. **ExpenseReportPage. xaml. vb** veya **ExpenseReportPage.xaml.cs**öğesini açın.
 
-2. ' C#De, aşağıdaki oluşturucuyu **ExpenseReportPage** sınıfına ekleyin veya Visual Basic var olan sınıfı aşağıdaki kodla değiştirin:
+2. C# ' de, aşağıdaki oluşturucuyu **ExpenseReportPage** sınıfına ekleyin veya Visual Basic var olan sınıfı aşağıdaki kodla değiştirin:
 
     ```csharp
     // Custom constructor to pass expense report data
@@ -849,7 +849,7 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
 3. **ExpenseItHome. xaml. vb** veya **ExpenseItHome.xaml.cs**öğesini açın.
 
-4. @No__t_0 olay işleyicisi kodunu aşağıdaki kodla değiştirin:
+4. `Click`Olay işleyicisi kodunu aşağıdaki kodla değiştirin:
 
     ```csharp
     private void Button_Click(object sender, RoutedEventArgs e)
@@ -875,7 +875,7 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
 1. **ExpenseReportPage. xaml**' i açın.
 
-2. **Ad** ve **bölüm** `<StackPanel` öğeleri için xaml kodunu aşağıdaki gibi değiştirin:
+2. **Ad** ve **bölüm** `<StackPanel` öğelerinin xaml kodunu aşağıdakiler ile değiştirin:
 
     ```xaml
     <!-- Name -->
@@ -894,7 +894,7 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
      Bu, **etiket** denetimlerini uygun veri kaynağı özelliklerine bağlar.
 
-3. Aşağıdaki XAML kodunu `<Grid>` öğesi içine ekleyin:
+3. Aşağıdaki XAML kodunu öğesi içine ekleyin `<Grid>` :
 
     ```xaml
     <!--Templates to display expense report data-->
@@ -913,7 +913,7 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
      Bu, harcama raporu verilerinin nasıl görüntüleneceğini tanımlar.
 
-4. @No__t_0 öğesini aşağıdaki ile değiştirin:
+4. `<DataGrid>`Öğesini aşağıdaki ile değiştirin:
 
     ```xaml
     <!-- Expense type and Amount table -->
@@ -937,7 +937,7 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
      ![ExpenseIt örnek ekran görüntüleri](../designers/media/gettingstartedfigure5.png "GettingStartedFigure5")
 
-## <a name="Best_Practices"></a>En iyi uygulamalar
+## <a name="best-practices"></a><a name="Best_Practices"></a> En iyi uygulamalar
  Bu örnek WPF hakkında temel bilgileri gösterir ve sonuç olarak uygulama geliştirme en iyi yöntemlerini izlemez. WPF 'nin kapsamlı kapsamı ve uygulama geliştirme en iyi uygulamaları .NET Framework için aşağıdaki konulara bakın:
 
 - Erişilebilirlik- [Erişilebilirlik En Iyi uygulamaları](https://msdn.microsoft.com/library/aa350483\(v=vs.100\).aspx)
@@ -948,7 +948,7 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
 - Performansı [En Iyi duruma GETIRME WPF uygulama performansı](https://msdn.microsoft.com/library/aa970683\(v=vs.100\).aspx)
 
-## <a name="Whats_Next"></a>Sıradaki
+## <a name="whats-next"></a><a name="Whats_Next"></a> Sıradaki
  Artık, WPF kullanarak bir masaüstü uygulaması oluşturmaya yönelik bir dizi teknikte sahip olursunuz. Artık, veri bağlantılı WPF uygulamasının yapı taşlarından daha basit bir bilgiye sahip olmanız gerekir. Bu konu, önemli değildir, ancak artık bu konudaki tekniklerin ötesinde sizin de keşfedecek bazı olasılıklar hakkında daha fazla fikir sahibi oldunuz.
 
  WPF mimarisi ve programlama modelleri hakkında daha fazla bilgi için aşağıdaki konulara bakın:
@@ -961,7 +961,7 @@ Name = "giriş" > </a> Bu izlenecek yol Windows Presentation Foundation (WPF) ge
 
 - [Düzen sistemi](https://msdn.microsoft.com/library/ms745058\(v=vs.100\).aspx)
 
-- [Stiller ve Şablonlar](https://msdn.microsoft.com/library/bb613570\(v=vs.100\).aspx)
+- [Stiller ve şablonlar](https://msdn.microsoft.com/library/bb613570\(v=vs.100\).aspx)
 
   Uygulama oluşturma hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 

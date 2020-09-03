@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 245b453a3020e79b924cb8058ff392bd59673402
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662130"
 ---
 # <a name="projects-and-solutions-options-dialog-box"></a>Projeler ve Çözümler, Seçenekler İletişim Kutusu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-@No__t_0 proje klasörlerinin varsayılan yolunu ayarlar ve proje geliştirilip derlendikleri için **Çıkış** penceresi, **görev listesi**ve **Çözüm Gezgini** varsayılan davranışını belirler. Bu iletişim kutusuna erişmek için **Araçlar/Seçenekler** ' i **ve ardından projeler ve çözümler**' i genişletin ve **genel**' i tıklatın
+Proje klasörlerinin varsayılan yolunu ayarlar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ve proje geliştirilip derlendikleri Için **Çıkış** penceresinin, **görev listesi**ve **Çözüm Gezgini** varsayılan davranışını belirler. Bu iletişim kutusuna erişmek için **Araçlar/Seçenekler** ' i **ve ardından projeler ve çözümler**' i genişletin ve **genel**' i tıklatın
 
 > [!NOTE]
 > İletişim kutularında kullanılabilen seçenekler ve gördüğünüz menü komutlarının adları ve konumları, etkin ayarlarınıza veya sürümüne bağlı olarak yardım altında açıklananlar arasından farklılık gösterebilir. Bu yardım sayfası, **genel geliştirme ayarları** göz önünde bulundurularak yazılmıştır. Ayarlarınızı görüntülemek veya değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
@@ -38,9 +38,9 @@ ms.locfileid: "72662130"
 
  **Çözüm Gezgini etkin öğeyi izle** Seçildiğinde, **Çözüm Gezgini** otomatik olarak açılır ve etkin öğe seçilir. Seçilen öğe, bir proje veya çözümde farklı dosyalarla veya bir tasarımcıda farklı bileşenlere çalışırken değişir. Bu seçenek temizlenmiş olduğunda **Çözüm Gezgini** seçimi otomatik olarak değişmez. Bu seçenek varsayılan olarak etkindir.
 
- **Gelişmiş derleme yapılandırmasını göster** Seçildiğinde, derleme yapılandırma seçenekleri **Proje özellik sayfaları** iletişim kutusunda ve **Çözüm Özellik sayfaları** iletişim kutusunda görünür. Temizlenme sırasında, derleme yapılandırma seçenekleri **Proje özellik sayfaları** iletişim kutusunda ve bir yapılandırma ya da iki yapılandırma hata ayıklaması içeren [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ve [!INCLUDE[csprcs](../../includes/csprcs-md.md)] projeler Için **Çözüm Özellik sayfaları** iletişim kutusu üzerinde görünmez ve yayın. Bir projede Kullanıcı tanımlı bir yapılandırma varsa, derleme yapılandırma seçenekleri gösterilir.
+ **Gelişmiş derleme yapılandırmasını göster** Seçildiğinde, derleme yapılandırma seçenekleri **Proje özellik sayfaları** iletişim kutusunda ve **Çözüm Özellik sayfaları** iletişim kutusunda görünür. Temizlenme sırasında, derleme yapılandırma seçenekleri **Proje özellik sayfaları** iletişim kutusunda ve bir yapılandırma ya da iki yapılandırma hata ayıklaması ve sürümü içeren projeler Için **Çözüm Özellik sayfaları** iletişim kutusunda görünmez [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] . Bir projede Kullanıcı tanımlı bir yapılandırma varsa, derleme yapılandırma seçenekleri gösterilir.
 
- Bu seçilmediğinde **, derleme için** derleme **çözümü**, **çözümü yeniden derleme**ve **çözümü Temizleme**gibi komutlar, sürüm yapılandırmasında ve başlatma gibi **hata ayıklama** menüsündeki komutlarda gerçekleştirilir.  **Hata ayıklama ve hata** ayıklama **olmadan başlatma**, hata ayıklama yapılandırmasında gerçekleştirilir.
+ Seçilmediğinde, oluşturma **çözümü**, **çözümü yeniden oluşturma**ve **çözümü Temizleme**gibi **derleme** menüsündeki komutlar, sürüm yapılandırması üzerinde gerçekleştirilir ve hata **ayıklamayı Başlat** ve hata ayıklama **olmadan Başlat**gibi **hata** ayıklama menüsündeki komutlar hata ayıklama yapılandırmasında gerçekleştirilir.
 
  **Çözümü her zaman göster** Seçildiğinde, çözüm ve çözümler üzerinde işlem yapan tüm komutlar her zaman IDE 'de gösterilir. Temizlenme sırasında, tüm projeler tek başına projeler olarak oluşturulur ve çözüm yalnızca bir proje içeriyorsa IDE 'deki çözümler üzerinde çalışan Çözüm Gezgini veya komutlarda çözümü görmezsiniz.
 
@@ -53,4 +53,4 @@ ms.locfileid: "72662130"
  **Dosyaları yeniden adlandırırken sembolik yeniden adlandırma iste** Seçildiğinde, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] projedeki tüm başvuruları kod öğesine de yeniden adlandırmayacağını soran bir ileti kutusu görüntüler.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Seçenekler İletişim Kutusu, Projeler ve Çözümler, Derleme ve Çalıştırma](../../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)
+ [Seçenekler Iletişim kutusu, projeler ve çözümler, derleme ve çalıştırma](../../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)

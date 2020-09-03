@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 18e585064bb50db7a0497c6b96e428a662e953ab
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72604829"
 ---
 # <a name="watch-command"></a>İzle Komutu
@@ -26,17 +26,17 @@ ms.locfileid: "72604829"
 
 Bir **Gözcü** penceresinin belirtilen bir örneğini oluşturur ve açar. Değişkenler, ifadeler ve yazmaçların değerlerini hesaplamak, bu değerleri düzenlemek ve sonuçları kaydetmek için bir **Gözcü** penceresi kullanabilirsiniz.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Debug.Watch[index]
 ```
 
-## <a name="arguments"></a>Arguments
- `index` gerekiyor. İzleme penceresinin örnek numarası.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `index` Gerekli. İzleme penceresinin örnek numarası.
 
 ## <a name="remarks"></a>Açıklamalar
- @No__t_0 bir tamsayı olmalıdır. Geçerli değerler 1, 2, 3 veya 4 ' dir.
+ `index`Bir tamsayı olmalıdır. Geçerli değerler 1, 2, 3 veya 4 ' dir.
 
 ## <a name="example"></a>Örnek
 

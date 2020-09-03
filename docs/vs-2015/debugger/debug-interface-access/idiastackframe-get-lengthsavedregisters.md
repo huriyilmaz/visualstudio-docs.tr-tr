@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_lengthsavedregisters | Microsoft Docs
+title: 'IDiaStackFrame:: get_lengthSavedRegisters | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 747c5f561368df92d3c9472df93a0066f3815c2a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190520"
 ---
-# <a name="idiastackframegetlengthsavedregisters"></a>IDiaStackFrame::get_lengthSavedRegisters
+# <a name="idiastackframeget_lengthsavedregisters"></a>IDiaStackFrame::get_lengthSavedRegisters
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Yığına itildi kaydedilmiş kayıtları bayt sayısını alır.  
+Yığına gönderilen kaydedilmiş yazmaçların bayt sayısını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_lengthSavedRegisters (   
@@ -35,10 +35,10 @@ HRESULT get_lengthSavedRegisters ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Kaydedilmiş kayıtları bayt sayısını döndürür.  
+ dışı Kaydedilen yazmaçların bayt sayısını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` özelliği desteklenmiyorsa. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Özelliğin desteklenip desteklenmediğini döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

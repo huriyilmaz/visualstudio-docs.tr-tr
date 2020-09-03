@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7732a5757281e83c501a8258dd1d44b4f329a87a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548063"
 ---
 # <a name="cpu-usage"></a>CPU Kullanımı
@@ -27,7 +27,7 @@ Uygulamanızdaki performans sorunlarını araştırmanız gerektiğinde, baştan
   
  Performans ve tanılama hub 'ı, tanılama oturumunuzu çalıştırmak ve yönetmek için size çok sayıda seçenek sunar. Örneğin, **CPU kullanımı** aracını yerel veya uzak makinelerde veya bir simülatör ya da öykünücü içinde çalıştırabilirsiniz. Visual Studio 'da bir açık projenin performansını analiz edebilir, çalışan bir uygulamaya iliştirilir veya Windows Mağazası 'ndan yüklenen bir uygulamayı başlatabilirsiniz. Daha fazla bilgi için bkz. [profil oluşturma araçlarını hata ayıklama olmadan çalıştırma](https://msdn.microsoft.com/library/e97ce1a4-62d6-4b8e-a2f7-61576437ff01)  
   
-## <a name="collect-cpu-usage-data"></a><a name="BKMK_Collect_CPU_usage_data"></a>CPU kullanım verilerini topla  
+## <a name="collect-cpu-usage-data"></a><a name="BKMK_Collect_CPU_usage_data"></a> CPU kullanım verilerini topla  
   
 1. Visual Studio 'da çözüm yapılandırmasını **serbest bırakma** olarak ayarlayın ve dağıtım hedefini seçin.  
   
@@ -59,10 +59,10 @@ Uygulamanızdaki performans sorunlarını araştırmanız gerektiğinde, baştan
   
 ## <a name="analyze-the-cpu-usage-report"></a>CPU kullanımı raporunu analiz etme  
   
-### <a name="the-cpu-usage-call-tree"></a><a name="BKMK_The_CPU_Usage_call_tree"></a>CPU kullanımı çağrı ağacı  
+### <a name="the-cpu-usage-call-tree"></a><a name="BKMK_The_CPU_Usage_call_tree"></a> CPU kullanımı çağrı ağacı  
  Çağrı ağacı bilgilerini anlamak için, segmenti yeniden seçin `GetMaxNumberButton_Click` ve çağrı ağacı ayrıntılarına bakın.  
   
-#### <a name="call-tree-structure"></a><a name="BKMK_Call_tree_structure"></a>Çağrı ağacı yapısı  
+#### <a name="call-tree-structure"></a><a name="BKMK_Call_tree_structure"></a> Çağrı ağacı yapısı  
  ![GetMaxNumberButton&#95;çağrı ağacı ' na tıklayın](../profiling/media/cpu-use-wt-getmaxnumbercalltree-annotated.png "CPU_USE_WT_GetMaxNumberCallTree_annotated")  
   
 |Görüntü|Description|  
@@ -72,7 +72,7 @@ Uygulamanızdaki performans sorunlarını araştırmanız gerektiğinde, baştan
 |![3. Adım](../profiling/media/procguid-3.png "ProcGuid_3")|İkinci düzey düğümün alt öğeleri, ikinci düzey sistem ve Framework kodu tarafından çağrılan veya oluşturulan kullanıcı kodu yöntemleri ve zaman uyumsuz yordamlardır.|  
 |![4. adım](../profiling/media/procguid-4.png "ProcGuid_4")|Bir metodun alt düğümleri yalnızca üst yöntemin çağrıları için veri içerir. **Dış kodu göster** devre dışı bırakıldığında, uygulama yöntemleri bir **[Dış kod]** düğümü de içerebilir.|  
   
-#### <a name="external-code"></a><a name="BKMK_External_Code"></a>Dış kod  
+#### <a name="external-code"></a><a name="BKMK_External_Code"></a> Dış kod  
  Dış kod, System ve Framework bileşenlerinde yazdığınız kod tarafından yürütülen işlevlerdir. Dış kod, uygulamayı başlatıp durduran, Kullanıcı arabirimini çizdiğiniz, iş parçacığı denetleyen ve diğer alt düzey Hizmetleri uygulamaya sağlayan işlevleri içerir. Çoğu durumda, harici kod ile ilgilenmezsiniz ve bu nedenle CPU kullanımı çağrı ağacı bir Kullanıcı yönteminin dış işlevlerini tek bir **[harici kod]** düğümüne toplar.  
   
  Dış kodun çağrı yollarını görüntülemek istediğinizde, **filtre görünümü** listesinden **dış kodu göster** ' i seçin ve ardından **Uygula**' yı seçin.  
@@ -87,7 +87,7 @@ Uygulamanızdaki performans sorunlarını araştırmanız gerektiğinde, baştan
   
  ![İç içe geçmiş dış kodu arayın](../profiling/media/cpu-use-wt-showexternalcodetoowide-found.png "CPU_USE_WT_ShowExternalCodeTooWide_Found")  
   
-### <a name="call-tree-data-columns"></a><a name="BKMK_Call_tree_data_columns"></a>Ağaç veri sütunlarını çağır  
+### <a name="call-tree-data-columns"></a><a name="BKMK_Call_tree_data_columns"></a> Ağaç veri sütunlarını çağır  
   
 |Özellik|Açıklama|
 |-|-|  
@@ -97,7 +97,7 @@ Uygulamanızdaki performans sorunlarını araştırmanız gerektiğinde, baştan
 |**Self CPU (MS)**|Seçili zaman aralığındaki işleve yapılan çağrılar ve işlev tarafından çağrılan işlevler için harcanan milisaniye sayısı.|  
 |**Modül**|İşlevi içeren modülün adı veya [Dış kod] düğümündeki işlevleri içeren modül sayısı.|  
   
-### <a name="asynchronous-functions-in-the-cpu-usage-call-tree"></a><a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a>CPU kullanım çağrısı ağacındaki zaman uyumsuz işlevler  
+### <a name="asynchronous-functions-in-the-cpu-usage-call-tree"></a><a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a> CPU kullanım çağrısı ağacındaki zaman uyumsuz işlevler  
  Derleyici zaman uyumsuz bir yöntemle karşılaştığında, yöntemin yürütmesini denetlemek için gizli bir sınıf oluşturur. Kavramsal olarak, sınıfı, özgün yöntemin işlemlerini zaman uyumsuz olarak çağıran derleyici tarafından oluşturulan işlevlerin bir listesini ve bunları doğru bir şekilde gereken geri çağırmaları, zamanlayıcıyı ve yineleyicilerini çağıran bir durum makinedir. Özgün yöntem bir üst yöntem tarafından çağrıldığında, çalışma zamanı, yöntemi üst öğenin yürütme bağlamından kaldırır ve gizli sınıfın yöntemlerini, uygulamanın yürütülmesini denetleyen sistem ve çerçeve kodu bağlamında çalıştırır. Zaman uyumsuz yöntemler çoğunlukla, her zaman bir veya daha fazla farklı iş parçacığında yürütülürler. Bu kod, ağacın üst düğümünün hemen altındaki **[Dış kod]** düğümünün alt ÖĞELERI olarak CPU kullanım çağrısı ağacında gösterilir.  
   
  Bunu örneğimizde görmek için `GetMaxNumberAsyncButton_Click` zaman çizelgesinde segmenti yeniden seçin.  
@@ -108,8 +108,8 @@ Uygulamanızdaki performans sorunlarını araştırmanız gerektiğinde, baştan
   
  ![Genişletilmiş GetMaxNumberAsyncButton&#95;çağrı ağacı ' na tıklayın](../profiling/media/cpu-use-wt-getmaxnumberasync-expandedcalltree.png "CPU_USE_WT_GetMaxNumberAsync_ExpandedCallTree")  
   
-- `MainPage::GetMaxNumberAsyncButton_Click`çok az; görev değerlerinin bir listesini yönetir, sonuçların maksimum sayısını hesaplar ve çıktıyı görüntüler.  
+- `MainPage::GetMaxNumberAsyncButton_Click` çok az; görev değerlerinin bir listesini yönetir, sonuçların maksimum sayısını hesaplar ve çıktıyı görüntüler.  
   
-- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext`çağrıyı kaydırmak için gereken 48 görevlerini zamanlamak ve başlatmak için gereken etkinliği gösterir `GetNumberAsync` .  
+- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext` çağrıyı kaydırmak için gereken 48 görevlerini zamanlamak ve başlatmak için gereken etkinliği gösterir `GetNumberAsync` .  
   
-- `MainPage::<GetNumberAsync>b__b`çağıran görevlerin etkinliğini gösterir `GetNumber` .
+- `MainPage::<GetNumberAsync>b__b` çağıran görevlerin etkinliğini gösterir `GetNumber` .

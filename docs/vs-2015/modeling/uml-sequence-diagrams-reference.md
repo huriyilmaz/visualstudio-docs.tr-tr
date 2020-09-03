@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7f9b02bbad4fa897404f6c20e12b1705a3ae9ac8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72661709"
 ---
 # <a name="uml-sequence-diagrams-reference"></a>UML Sıralı Diyagramlar: Başvuru
@@ -40,10 +40,10 @@ Visual Studio 'da, bir *sıralı diyagram* , sınıfların, bileşenlerin, alt s
 
  ![Sıralı diyagramın parçaları](../modeling/media/uml-sequence.png "UML_Sequence")
 
-|**Şeklinin**|**Öğe**|**Açıklama**|
+|**Şekil**|**Öğe**|**Açıklama**|
 |---------------|-----------------|---------------------|
-|1\.|**Yaşam**|Bir etkileşim sırasında bir katılımcı sırasında gerçekleşen olayların sırasını temsil eden, zaman satırı aşağı ilerledikçe oluşan dikey bir çizgi. Bu katılımcı bir sınıf, bileşen veya aktör örneği olabilir.|
-|2|**Aktör**|Geliştirmekte olduğunuz sistem dışında bir katılımcı.<br /><br /> **Aktör özelliğini ayarlayarak** bir yaşam çizgisinin en üstünde bir aktör sembolü görünmesini sağlayabilirsiniz.|
+|1|**Yaşam**|Bir etkileşim sırasında bir katılımcı sırasında gerçekleşen olayların sırasını temsil eden, zaman satırı aşağı ilerledikçe oluşan dikey bir çizgi. Bu katılımcı bir sınıf, bileşen veya aktör örneği olabilir.|
+|2|**Actor** (Oyuncu)|Geliştirmekte olduğunuz sistem dışında bir katılımcı.<br /><br /> **Aktör özelliğini ayarlayarak** bir yaşam çizgisinin en üstünde bir aktör sembolü görünmesini sağlayabilirsiniz.|
 |3|**Zaman uyumlu ileti**|Gönderen, devam etmeden önce zaman uyumlu bir iletiye yanıt bekler. Diyagramda hem çağrı hem de dönüş gösterilmektedir. Zaman uyumlu iletiler, bir program içindeki sıradan işlev çağrılarını ve aynı şekilde davranan diğer ileti türlerini temsil etmek için kullanılır.|
 |4|**Zaman uyumsuz ileti**|Gönderen devam etmeden önce yanıt gerektirmeyen bir ileti. Zaman uyumsuz bir ileti yalnızca gönderenden gelen çağrıyı gösterir. Ayrı iş parçacıkları veya yeni bir iş parçacığının oluşturulması arasındaki iletişimi göstermek için kullanın.|
 |5|**Yürütme oluşumu**|Katılımcının yaşam çizgisinde görüntülenen ve katılımcı bir işlem yürütürken dönemi temsil eden dikey gölgeli dikdörtgen.<br /><br /> Yürütme, katılımcının bir ileti alacağı yerde başlar. Başlatma iletisi zaman uyumlu bir iletidir, yürütme, bir «return» geri dönüşle sona erer.|
@@ -57,7 +57,7 @@ Visual Studio 'da, bir *sıralı diyagram* , sınıfların, bileşenlerin, alt s
 |13|**Birleşik parça**|Parçalar koleksiyonu. Her parça bir veya daha fazla ileti içerebilir. Farklı türlerde birleştirilmiş parçalar vardır. Daha fazla bilgi için bkz. [UML sıralı diyagramlarındaki parçaların bulunduğu denetim akışını açıklama](../modeling/describe-control-flow-with-fragments-on-uml-sequence-diagrams.md).<br /><br /> Bir parça oluşturmak için, bir iletiye sağ tıklayın, şununla **çevreye**gelin ve ardından bir parça türüne tıklayın.|
 |14|**Parça koruyucusu**|Parçanın gerçekleşip gerçekleşmeyeceğini ilgili bir koşul sağlamak için kullanılabilir.<br /><br /> Koruyucuyu ayarlamak için bir parça seçin, ardından koruyucu ' ı seçin ve bir değer yazın.|
 |**Sayı**|**Yok etme olayı**|Nesnenin silindiği veya artık erişilemeyen noktayı temsil eder. Her yaşam çizgisinin altında görünür.|
-||**Uyor**|Sıralı diyagramda görüntülenen ileti ve yaşam çizgileri koleksiyonu. Bir etkileşimin özelliklerini görüntülemek için **UML Model Gezgini**' nde seçmeniz gerekir.|
+||**Etkileşim**|Sıralı diyagramda görüntülenen ileti ve yaşam çizgileri koleksiyonu. Bir etkileşimin özelliklerini görüntülemek için **UML Model Gezgini**' nde seçmeniz gerekir.|
 ||**Sıralı diyagram**|Bir etkileşimi görüntüleyen diyagram. Özelliklerini görüntülemek için diyagramın boş bir kısmına tıklayın. **Note:**  Sıralı diyagramın adları, gösterdiği etkileşim ve diyagramı içeren dosya hepsi farklı olabilir.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.

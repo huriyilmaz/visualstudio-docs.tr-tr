@@ -10,14 +10,14 @@ author: steved0x
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fdbe68b416560b85580e3dd30e5f8138b7cd08fe
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72606933"
 ---
 # <a name="unsupported-debugging-scenarios-in-the-workflow-designer"></a>İş Akışı Tasarımcısında desteklenmeyen hata ayıklama senaryoları
-İş Akışı Tasarımcısı [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)] birçok yeni özellik ekledi, ancak hala desteklemediği bazı hata ayıklama senaryoları vardır. Bu belgede desteklenmeyen İş Akışı Tasarımcısı hata ayıklama senaryolarında ayrıntılar.
+İş Akışı Tasarımcısı [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)] birçok yeni özellik ekledik, ancak desteklemediği bazı hata ayıklama senaryoları hala var. Bu belgede desteklenmeyen İş Akışı Tasarımcısı hata ayıklama senaryolarında ayrıntılar.
 
 - Kod düzenlendikten sonra yürütme devam ettirilemez.
 
@@ -27,9 +27,9 @@ ms.locfileid: "72606933"
 
 - İş akışı Tasarımcısı, tasarımcı kullanımı olmadan kodda oluşturulan iş akışlarının hatalarını ayıklamak için kullanılamaz.
 
-- @No__t_0 önceki sürümlerinde oluşturulan iş akışlarının [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)] tasarımcısında hata ayıklaması yapılamaz.
+- Önceki sürümlerinde oluşturulan iş akışlarının [!INCLUDE[wf](../includes/wf-md.md)] , tasarımcıda hata ayıklaması yapılamaz [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)] .
 
-- Kesme noktaları, etkinlikler veya <xref:System.Activities.Statements.Flowchart> düğümleri arasındaki bağlantılarda tanımlanamaz.
+- Kesme noktaları, etkinlikler veya düğümler arasındaki bağlantılarda tanımlanamaz <xref:System.Activities.Statements.Flowchart> .
 
 - Pano hata ayıklama sırasında kullanılamaz.
 
@@ -49,8 +49,8 @@ ms.locfileid: "72606933"
 
   - İşlev
 
-  - Veri
+  - Veriler
 
-  - İşlem
+  - İşleme
 
   - Ayrıştırılmış koda git

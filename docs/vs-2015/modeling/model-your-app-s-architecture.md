@@ -1,5 +1,5 @@
 ---
-title: Uygulamanızın&#39;mimarisini modelleyin | Microsoft Docs
+title: Uygulamanızın mimarisini&#39;modelleyin | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -12,13 +12,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 41dbb7b996c32af10010694935cbd3660b462f73
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72609646"
 ---
-# <a name="model-your-app39s-architecture"></a>Uygulamanızın&#39;mimarisini modelleyin
+# <a name="model-your-app39s-architecture"></a>Uygulamanızın mimarisini modelleme&#39;
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Yazılım sisteminizin veya uygulamanızın kullanıcılarınızın ihtiyaçlarını karşıladığından emin olmak için, yazılım sisteminizin veya uygulamanızın genel yapısı ve davranışı açıklamasının bir parçası olarak Visual Studio 'da modeller oluşturabilirsiniz. Modelleri kullanarak, tasarımın tamamında kullanılan desenleri de tanımlayabilirsiniz. Bu modeller mevcut mimariyi anlamanıza, değişiklikleri tartışmanıza ve amaclarınızı açık bir şekilde iletmanıza yardımcı olur.
@@ -36,7 +36,7 @@ Yazılım sisteminizin veya uygulamanızın kullanıcılarınızın ihtiyaçlar�
 
 - Bileşenlerin tasarımları boyunca kullanılan [tasarım desenleri](#Patterns) ve kuralları. Bir model, programlama hedefini elde etmeye yönelik belirli bir yaklaşımı açıklar. Tasarımın tamamında aynı desenleri kullanarak ekibiniz, değişiklik yapma ve yeni yazılım geliştirme maliyetini azaltabilir.
 
-## <a name="Structure"></a>Üst düzey tasarım
+## <a name="high-level-design"></a><a name="Structure"></a> Üst düzey tasarım
  Üst düzey bir tasarım, sisteminizin ana bileşenlerini ve tasarımın hedeflerine ulaşmak için birbirleriyle nasıl etkileşime gireceğini açıklar. Aşağıdaki listede yer alan etkinlikler, belirli bir dizide olması gerekmese de, üst düzey tasarımı geliştirmeye dahil edilir.
 
  Mevcut kodu güncelleştiriyorsanız, ana bileşenleri açıklayarak başlayabilirsiniz. Kullanıcı gereksinimlerinde yapılan tüm değişiklikleri anladığınızdan emin olun ve ardından bileşenler arasındaki etkileşimleri ekleyin veya değiştirin. Yeni bir sistem geliştiriyorsanız, kullanıcı gereksinimlerinin ana özelliklerini anlamak için ' ı başlatın. Daha sonra ana kullanım örnekleri için etkileşim dizilerini keşfedebilirsiniz ve sonra dizileri bir bileşen tasarımında birleştirebilirsiniz.
@@ -53,7 +53,7 @@ Yazılım sisteminizin veya uygulamanızın kullanıcılarınızın ihtiyaçlar�
 
 - [Bileşenlerin ve arabirimlerin veri modeli](#Data). Bileşenler arasında geçirilen ve bileşenlerin içinde depolanan bilgileri anlatmak için sınıf diyagramları çizebilirsiniz.
 
-## <a name="Requirements"></a>Gereksinimleri anlama
+## <a name="understanding-the-requirements"></a><a name="Requirements"></a> Gereksinimleri anlama
  Tam bir uygulamanın üst düzey tasarımı, bir gereksinim modeli veya kullanıcı gereksinimlerinin diğer açıklamasıyla birlikte en etkili şekilde geliştirilmiştir. Gereksinim modelleri hakkında daha fazla bilgi için bkz. [model Kullanıcı gereksinimleri](../modeling/model-user-requirements.md).
 
  Geliştirmekte olduğunuz sistem daha büyük bir sistemdeki bir bileşen ise, gereksinimlerinizin bir kısmı veya tümü programlı arabirimlerde bulunabilir.
@@ -78,7 +78,7 @@ Yazılım sisteminizin veya uygulamanızın kullanıcılarınızın ihtiyaçlar�
 
   Bir gereksinimlere veya mimari modele yerleştirmeniz gereken ayrıntı miktarı projenin ölçeğine ve takımın boyutuna ve dağıtımına bağlıdır. Kısa bir proje üzerinde küçük bir ekip, iş kavramlarının ve bazı Tasarım desenlerinin bir sınıf diyagramına göre taslağı oluşturma özelliğinden daha fazla çalışmayabilir; birden fazla bölgeye dağıtılmış büyük bir proje, önemli ölçüde daha ayrıntılı olmalıdır.
 
-## <a name="BigDecisions"></a>Mimari Desenler
+## <a name="architectural-patterns"></a><a name="BigDecisions"></a> Mimari Desenler
  Geliştirmede erken olarak, tasarımın bağlı olduğu ana teknolojileri ve öğeleri seçmeniz gerekir. Bu seçimlerin yapılması gereken alanlara aşağıdakiler dahildir:
 
 - Bir veritabanı ve dosya sistemi arasındaki seçim ve ağa bağlı bir uygulama ile Web istemcisi arasındaki seçim gibi temel teknoloji seçimleri.
@@ -91,7 +91,7 @@ Yazılım sisteminizin veya uygulamanızın kullanıcılarınızın ihtiyaçlar�
 
   Yaptığınız seçimler, mimari modeli nasıl kullanacağınızı ve yorumlayacağını etkiler. Örneğin, bir veritabanı kullanan bir sistemde, bir sınıf diyagramındaki ilişkilendirmeler, veritabanındaki ilişkileri veya yabancı anahtarları temsil edebilir, ancak XML dosyalarını temel alan bir sistemde, ilişkilendirmeler XPath kullanan çapraz başvuruları belirtebilir. Dağıtılmış bir sistemde, Sıralı diyagramdaki iletiler bir hattaki iletileri temsil edebilir; kendi içinde bulunan bir uygulamada, işlev çağrılarını temsil edebilirler.
 
-## <a name="Components"></a>Bileşenler ve arabirimleri
+## <a name="components-and-their-interfaces"></a><a name="Components"></a> Bileşenler ve arabirimleri
  Bu bölümün başlıca önerileri aşağıdaki gibidir:
 
 - Sisteminizin ana parçalarını göstermek için Bileşen diyagramları oluşturun.
@@ -178,7 +178,7 @@ Yazılım sisteminizin veya uygulamanızın kullanıcılarınızın ihtiyaçlar�
 
   Gerekli arabirimlerin kullanımı genellikle parçaların kullanımı için tercih edilir. Tasarım uzun sürebilse de elde edilen sistem daha esnektir. Ayrıca, bileşenleri ayrı olarak test etmek de daha kolay. Bu, geliştirme planlarında daha az eşlenmeye olanak tanır.
 
-## <a name="Interactions"></a>Bileşenler arasındaki etkileşimler
+## <a name="interactions-between-components"></a><a name="Interactions"></a> Bileşenler arasındaki etkileşimler
  Bu bölümün başlıca önerileri aşağıdaki gibidir:
 
 - Sisteminizin kullanım durumlarını belirler.
@@ -218,14 +218,14 @@ Yazılım sisteminizin veya uygulamanızın kullanıcılarınızın ihtiyaçlar�
 
  Her işlemden sonra ne elde edildiğini aklınızda olmak için etkinlik veya Sıralı diyagramlara yorum eklemek yararlıdır. Her işlemin **Yerel Sonkoşul** özelliğindeki etkisini de yazabilirsiniz.
 
-### <a name="Data"></a>Bileşenlerin ve arabirimlerin veri modeli
+### <a name="data-model-of-the-components-and-interfaces"></a><a name="Data"></a> Bileşenlerin ve arabirimlerin veri modeli
  Bileşen arabirimlerindeki her bir işlemin parametrelerini ve dönüş değerlerini tanımlayın. İşlemler Web hizmeti istekleri gibi çağırmaları temsil ediyorsa, parametreler isteğin bir parçası olarak gönderilen bu bilgi parçalarından oluşur. Bir işlemden birkaç değer döndürüldüğünde, **Direction** özelliği **Out**olarak ayarlanan parametreleri kullanabilirsiniz.
 
  Her parametre ve dönüş değeri bir tür içerir. Bu türleri UML sınıf diyagramlarını kullanarak tanımlayabilirsiniz. Bu diyagramlarda uygulama ayrıntılarını temsil etmek zorunda değilsiniz. Örneğin, XML olarak aktarılan verileri açıkladıysanız, XML düğümleri arasında herhangi bir çapraz başvuru türünü temsil etmek için bir ilişkilendirme kullanabilirsiniz ve düğümleri temsil etmek için sınıfları kullanabilirsiniz.
 
  İlişkilendirmeler ve özniteliklerde iş kısıtlamalarını anlatmak için açıklamaları kullanın. Örneğin, bir müşterinin sırasındaki tüm öğelerin aynı tedarikçiden gelmesi gerekiyorsa, bunu sipariş öğeleri ve ürün kataloğundaki öğeler arasındaki ilişkilendirmelere ve Katalog öğesi ile tedarikçisine göre tanımlayabilirsiniz.
 
-## <a name="Patterns"></a>Tasarım desenleri
+## <a name="design-patterns"></a><a name="Patterns"></a> Tasarım desenleri
  Tasarım düzeni, yazılımın, özellikle de sistemin farklı bölümlerinde yinelenen belirli bir yönün nasıl tasarlanacağını gösteren bir ana hatlarıyla oluşur. Proje genelinde tek bir yaklaşımı benimseerek, tasarımın maliyetini azaltabilir, Kullanıcı arabiriminde tutarlılığı güvence altına alabilir ve kodu anlama ve değiştirme maliyetini azaltabilirsiniz.
 
  Gözlemci gibi bazı genel tasarım desenleri iyi bilinmektedir ve yaygın olarak uygulanabilir. Ayrıca, yalnızca projeniz için geçerli olan desenler vardır. Örneğin, bir web satış sisteminde, kodda bir müşterinin sırasıyla değişiklikler yapıldığı birkaç işlem olacaktır. Siparişin durumunun her aşamada doğru şekilde görüntülendiğinden emin olmak için, bu işlemlerin veritabanının güncelleştirilmesi için belirli bir protokolü izlemesi gerekir.
@@ -236,7 +236,7 @@ Yazılım sisteminizin veya uygulamanızın kullanıcılarınızın ihtiyaçlar�
 
  Tasarım alanı bir belge içinde tanımlanır ve genellikle şu parçaları içerir:
 
-- ada.
+- Ada.
 
 - Geçerli olduğu bağlamın açıklaması. Bir geliştirici bu düzenin uygulanmasını ne planlıyor?
 

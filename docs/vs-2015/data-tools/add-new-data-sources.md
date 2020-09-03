@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 85c07ad7995bc614df4b988bb17fa8977452b5d8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72673058"
 ---
 # <a name="add-new-data-sources"></a>Yeni veri kaynağı ekleme
@@ -44,21 +44,21 @@ Visual Studio 'daki .NET veri araçları bağlamında *veri kaynağı* terimi, b
 > [!NOTE]
 > Veri bağlama özellikleri, veri kümeleri, Entity Framework, LINQ to SQL, WCF veya SharePoint kullanmıyorsanız, "veri kaynağı" kavramı uygulanmaz. Yalnızca SQLCommand nesnelerini kullanarak doğrudan veritabanına bağlanın ve veritabanıyla doğrudan iletişim kurun.
 
- Veri kaynaklarını bir Windows Forms veya Windows Presentation Foundation uygulamasında **veri kaynağı Yapılandırma Sihirbazı** ' nı kullanarak oluşturur ve düzenleyebilirsiniz. Entity Framework için öncelikle varlık sınıflarınızı oluşturun ve ardından **proje**  > **Yeni veri kaynağı Ekle** ' yi seçerek Sihirbazı başlatın (Bu makalenin ilerleyen bölümlerinde daha ayrıntılı açıklanmıştır).
+ Veri kaynaklarını bir Windows Forms veya Windows Presentation Foundation uygulamasında **veri kaynağı Yapılandırma Sihirbazı** ' nı kullanarak oluşturur ve düzenleyebilirsiniz. Entity Framework için öncelikle varlık sınıflarınızı oluşturun ve ardından **Proje**  >  **Yeni veri kaynağı Ekle** ' yi seçerek Sihirbazı başlatın (Bu makalenin ilerleyen bölümlerinde daha ayrıntılı açıklanmıştır).
 
- ![Veri kaynağı Yapılandırma Sihirbazı](../data-tools/media/data-source-configuration-wizard.png "Veri Kaynağı Yapılandırma Sihirbazı")
+ ![Veri Kaynağı Yapılandırma Sihirbazı](../data-tools/media/data-source-configuration-wizard.png "Veri Kaynağı Yapılandırma Sihirbazı")
 
- Veri kaynağı oluşturduktan sonra, **veri kaynakları** araç penceresinde görünür (SHIFT + alt + D veya  > **diğer Windows**  > **veri kaynağını** **görüntüle** ). Veri **kaynakları** penceresinden bir veri kaynağını form tasarım yüzeyine veya denetimine sürükleyebilirsiniz. Bu, ortak kodların oluşturulmasına neden olur — veri deposunda kullanıcıya ait verileri görüntüleyen kod. Aşağıdaki çizimde bir Windows formuna bırakılan bir veri kümesi gösterilmektedir. Uygulamada F5 ' i seçtiyseniz, temel alınan veritabanındaki veriler formun denetimlerinde görünür.
+ Bir veri kaynağı oluşturduktan sonra, **veri kaynakları** araç penceresinde görünür (SHIFT + alt + D veya **View**  >  **diğer Windows**  >  **veri kaynağını**görüntüle). Veri **kaynakları** penceresinden bir veri kaynağını form tasarım yüzeyine veya denetimine sürükleyebilirsiniz. Bu, ortak kodların oluşturulmasına neden olur — veri deposunda kullanıcıya ait verileri görüntüleyen kod. Aşağıdaki çizimde bir Windows formuna bırakılan bir veri kümesi gösterilmektedir. Uygulamada F5 ' i seçtiyseniz, temel alınan veritabanındaki veriler formun denetimlerinde görünür.
 
  ![Veri kaynağı sürükleme işlemi](../data-tools/media/raddata-data-source-drag-operation.png "radveri veri kaynağı sürükleme işlemi")
 
 ## <a name="data-source-for-a-database-or-a-database-file"></a>Veritabanı veya veritabanı dosyası için veri kaynağı
 
 ### <a name="dataset"></a>Veri kümesi
- Veri kaynağı olarak bir veri kümesi oluşturmak için **veri kaynağı Yapılandırma Sihirbazı** 'nı çalıştırın (**Proje**  > **Yeni veri kaynağı Ekle** ) ve **veritabanı** veri kaynağı türünü seçin. Yeni veya mevcut bir veritabanı bağlantısı ya da bir veritabanı dosyası belirtmek için istemleri izleyin.
+ Veri kaynağı olarak bir veri kümesi oluşturmak için **veri kaynağı Yapılandırma Sihirbazı** 'nı çalıştırın (**Proje**  >  **Yeni veri kaynağı Ekle** ) ve **veritabanı** veri kaynağı türünü seçin. Yeni veya mevcut bir veritabanı bağlantısı ya da bir veritabanı dosyası belirtmek için istemleri izleyin.
 
 ### <a name="entity-classes"></a>Varlık sınıfları
- Veri kaynağı olarak bir Entity Framework modeli oluşturmak için önce **varlık veri modeli sihirbazını** çalıştırarak varlık sınıflarını oluşturun (**Proje**  > **yeni öğe Ekle**  > **ADO.net varlık veri modeli**).
+ Veri kaynağı olarak bir Entity Framework modeli oluşturmak için, önce varlık sınıflarını oluşturmak için **varlık veri modeli sihirbazını** çalıştırın (**Project**  >  **Add New Item**  >  **ADO.net varlık veri modeli**).
 
  ![Yeni Entity Framework modeli proje öğesi](../data-tools/media/raddata-new-entity-framework-model-project-item.png "radveri yeni Entity Framework modeli proje öğesi")
 
@@ -77,7 +77,7 @@ Visual Studio 'daki .NET veri araçları bağlamında *veri kaynağı* terimi, b
 
  Aşağıdaki hizmet türlerinden bir veri kaynağı oluşturabilirsiniz:
 
-- WCF Veri Hizmetleri. Daha fazla bilgi için bkz. [genel bakış](https://msdn.microsoft.com/library/7924cf94-c9a6-4015-afc9-f5d22b1743bb).
+- WCF Veri Hizmetleri. Daha fazla bilgi için bkz. [Genel Bakış](https://msdn.microsoft.com/library/7924cf94-c9a6-4015-afc9-f5d22b1743bb).
 
 - WCF veri Hizmetleri. Daha fazla bilgi için bkz. [Visual Studio 'da Windows Communication Foundation Hizmetleri ve WCF veri Hizmetleri](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md).
 
@@ -97,10 +97,10 @@ Visual Studio 'daki .NET veri araçları bağlamında *veri kaynağı* terimi, b
 > Nesneler ağaç görünümünde görüntülenmeden önce, nesnelerinizi içeren projeyi oluşturmanız gerekebilir.
 
 > [!NOTE]
-> Sürükle ve bırak veri bağlamayı desteklemek için, <xref:System.ComponentModel.ITypedList> veya <xref:System.ComponentModel.IListSource> arabirimini uygulayan nesnelerin varsayılan bir oluşturucusu olmalıdır. Aksi halde, Visual Studio veri kaynağı nesnesini örneklemez ve öğeyi tasarım yüzeyine sürüklediğinizde bir hata görüntüler.
+> Sürükle ve bırak veri bağlamayı desteklemek için, <xref:System.ComponentModel.ITypedList> veya arabirimini uygulayan nesnelerin <xref:System.ComponentModel.IListSource> varsayılan bir oluşturucusu olmalıdır. Aksi halde, Visual Studio veri kaynağı nesnesini örneklemez ve öğeyi tasarım yüzeyine sürüklediğinizde bir hata görüntüler.
 
 ## <a name="data-source-for-a-sharepoint-list"></a>SharePoint listesi için veri kaynağı
- **Veri kaynağı Yapılandırma Sihirbazı** 'nı çalıştırarak ve **SharePoint** veri kaynağı türünü seçerek SharePoint listesinden bir veri kaynağı oluşturabilirsiniz. SharePoint verileri [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] aracılığıyla kullanıma sunar, bu nedenle bir SharePoint veri kaynağı oluşturmak hizmetten veri kaynağı oluşturma ile aynıdır. **Veri kaynağı Yapılandırma Sihirbazı** 'nda **SharePoint** öğesini seçme, SharePoint sunucusuna işaret ederek sharepoint veri hizmetine bağlandığınız **hizmet başvurusu Ekle** iletişim kutusunu açar.  Bu, SharePoint SDK 'sını gerektirir.
+ **Veri kaynağı Yapılandırma Sihirbazı** 'nı çalıştırarak ve **SharePoint** veri kaynağı türünü seçerek SharePoint listesinden bir veri kaynağı oluşturabilirsiniz. SharePoint verileri aracılığıyla kullanıma sunar [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] , bu nedenle bir SharePoint veri kaynağı oluşturmak, bir hizmetten veri kaynağı oluşturma ile aynıdır. **Veri kaynağı Yapılandırma Sihirbazı** 'nda **SharePoint** öğesini seçme, SharePoint sunucusuna işaret ederek sharepoint veri hizmetine bağlandığınız **hizmet başvurusu Ekle** iletişim kutusunu açar.  Bu, SharePoint SDK 'sını gerektirir.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [.NET için Visual Studio veri araçları](../data-tools/visual-studio-data-tools-for-dotnet.md)

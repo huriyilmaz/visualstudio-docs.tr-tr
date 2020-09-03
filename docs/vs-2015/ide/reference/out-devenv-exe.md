@@ -1,5 +1,5 @@
 ---
-title: -Out (devenv. exe) | Microsoft Docs
+title: -Out (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 075746353440462a66133cd83ed9158470d8de5b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662208"
 ---
 # <a name="out-devenvexe"></a>/Out (devenv.exe)
@@ -31,14 +31,14 @@ ms.locfileid: "72662208"
 
 Bir çözümü çalıştırdığınızda, yapılandırdığınızda, yeniden oluşturduğunuzda veya dağıtırken hataları depolamak ve göstermek için bir dosya belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 devenv /out FileName
 ```
 
-## <a name="arguments"></a>Arguments
- `FileName` gerekiyor. Yürütülebilir dosya oluştururken hata alacak dosyanın yolu ve adı.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `FileName` Gerekli. Yürütülebilir dosya oluştururken hata alacak dosyanın yolu ve adı.
 
 ## <a name="remarks"></a>Açıklamalar
  Varolmayan bir dosya adı belirtilmişse dosya otomatik olarak oluşturulur. Dosya zaten varsa, sonuçlar dosyanın varolan içeriğine eklenir.
@@ -46,11 +46,11 @@ devenv /out FileName
  Komut satırı derleme hataları, **komut** penceresinde ve **Çıkış** penceresinin çözüm Oluşturucu görünümünde görüntülenir. Bu seçenek, katılımsız derlemeler çalıştırıyorsanız ve sonuçları görmeniz gerekiyorsa yararlıdır.
 
 ## <a name="example"></a>Örnek
- Bu örnek `MySolution` çalıştırır ve dosya `MyErrorLog.txt` hataları yazar.
+ Bu örnek `MySolution` , dosyasını çalıştırır ve dosyaya hatalar yazar `MyErrorLog.txt` .
 
 ```
 devenv /run "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /out "C:\MyErrorLog.txt"
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md) [/Run (devenv. exe)](../../ide/reference/run-devenv-exe.md) [/Build (devenv. exe](../../ide/reference/build-devenv-exe.md) ) [/Rebuild (devenv. exe](../../ide/reference/rebuild-devenv-exe.md) ) [/Deploy (devenv. exe)](../../ide/reference/deploy-devenv-exe.md)
+ [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md) [/Run (devenv.exe)](../../ide/reference/run-devenv-exe.md) [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md) [/rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md) [/Deploy (devenv.exe)](../../ide/reference/deploy-devenv-exe.md)

@@ -10,24 +10,24 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9bf941babd943c6856809a13de847b62745b2056
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72605006"
 ---
-# <a name="how-to-create-a-wcf-workflow-service-application"></a>Nasıl yapılır: WCF Iş akışı hizmeti uygulaması oluşturma
-[!INCLUDE[indigo1](../includes/indigo1-md.md)] iş akışı hizmeti uygulamaları, istemcilerle işlem sınırları arasında iletileri geçen dağıtılmış iletişim hizmetleridir. Hizmet tarafındaki hizmet sözleşmesinin uygulanması, [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)] .NET Framework 3,5 ' deki eski iş akışı hizmetlerine benzer şekilde iş akışı etkinlikleri aracılığıyla bildirimli olarak gerçekleştirilir.
+# <a name="how-to-create-a-wcf-workflow-service-application"></a>Nasıl Yapılır: WCF İş Akışı Hizmeti Uygulaması Oluşturma
+[!INCLUDE[indigo1](../includes/indigo1-md.md)] iş akışı hizmeti uygulamaları, istemcilerle işlem sınırları arasında iletileri geçen dağıtılmış iletişim hizmetleridir. Hizmet tarafındaki hizmet sözleşmesinin uygulanması, [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)] .NET Framework 3,5 ' deki eski iş akışı hizmetlerine benzer şekilde ' de iş akışı etkinlikleri aracılığıyla bildirimli olarak yapılır.
 
 ### <a name="to-create-a-wcf-workflow-service-application"></a>Bir WCF iş akışı hizmeti uygulaması oluşturmak için
 
-1. @No__t_0 başlatın.
+1. Başlatın [!INCLUDE[vs2010](../includes/vs2010-md.md)] .
 
 2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **proje...** öğesini seçin.
 
      **Yeni proje** iletişim kutusu açılır.
 
-3. **Yüklü şablonlar** bölmesinde, tercih ettiğiniz dile bağlı olarak **Visual C#**  veya **Visual Basic** gruplarından **WCF** veya **iş akışı** ' nı seçin.
+3. **Yüklü şablonlar** bölmesinde, tercih ettiğiniz dile bağlı olarak, **Visual C#** veya **Visual Basic** gruplandırmaları içinden **WCF** veya **iş akışı** ' nı seçin.
 
 4. Orta bölmede, **WCF Iş akışı hizmeti uygulaması**' nı seçin.
 
@@ -38,9 +38,9 @@ ms.locfileid: "72605006"
 7. **Çözüm** kutusunda, yeni bir çözüm oluşturup **Tamam**' ı seçin.
 
     > [!NOTE]
-    > Mevcut bir çözüme bir iş akışı konsol uygulaması eklemek istiyorsanız, bu çözümü [!INCLUDE[vs2010](../includes/vs2010-md.md)] açın, **Çözüm Gezgini**çözüme sağ tıklayın ve **Ekle**, **Yeni proje..** . öğesini seçin. **Yeni proje** iletişim kutusunu açmak için. Bu yordamda yukarıda açıklanan şekilde ilerleyin.
+    > Mevcut bir çözüme bir iş akışı konsol uygulaması eklemek istiyorsanız, bu çözümü içinde açın [!INCLUDE[vs2010](../includes/vs2010-md.md)] , **Çözüm Gezgini**' de çözüme sağ tıklayın ve **Ekle**, **Yeni proje..** . öğesini seçin. **Yeni proje** iletişim kutusunu açmak için. Bu yordamda yukarıda açıklanan şekilde ilerleyin.
 
-8. Proje şablonu, XAML olarak bir hizmet tanımı oluşturur. @No__t_0, Tasarım görünümüne <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> etkinlikleri içeren bir <xref:System.Activities.Statements.Sequence> etkinliğiyle açılır.
+8. Proje şablonu, XAML olarak bir hizmet tanımı oluşturur. , [!INCLUDE[wfd1](../includes/wfd1-md.md)] <xref:System.Activities.Statements.Sequence> Bir dizi ve etkinlik içeren bir etkinlikle Tasarım görünümü açılır <xref:System.ServiceModel.Activities.Receive> <xref:System.ServiceModel.Activities.SendReply> .
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Nasıl yapılır:](https://msdn.microsoft.com/library/c09b1e99-21b5-4d96-9c04-ec31db3f4436) [iş akışı projesi oluşturma](../workflow-designer/creating-a-workflow-project.md) etkinliği oluşturma
