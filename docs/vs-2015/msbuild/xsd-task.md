@@ -22,37 +22,37 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0c9dcc0d09887cacca7e6cdaa2e4f2b719c6451c
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67826239"
 ---
 # <a name="xsd-task"></a>XSD Görevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir kaynaktan şema ya da sınıf dosyaları oluşturur XML şema tanımı Aracı (XSD.exe'nin) sarmalar.  
+Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracını (xsd.exe) sarmalanmış olarak kaydırır.  
   
 ## <a name="parameters"></a>Parametreler  
- Parametreleri aşağıdaki tabloda açıklanmıştır **XSD** görev.  
+ Aşağıdaki tabloda, **XSD** görevinin parametreleri açıklanmaktadır.  
   
 - **AdditionalOptions**  
   
      İsteğe bağlı **dize** parametresi.  
   
-     Komut satırında belirtilen seçeneklerin bir listesi. Örneğin, " */option1 /option2 /option#* ". Diğer tarafından temsil edilmez seçeneklerini belirtmek için bu parametreyi kullanın **XSD** görev parametresi.  
+     Komut satırında belirtilen seçeneklerin listesi. Örneğin, "*/option1/option2/option #*". Başka bir **XSD** görev parametresi tarafından temsil edilmeyen seçenekleri belirtmek için bu parametreyi kullanın.  
   
 - **GenerateFromSchema**  
   
   İsteğe bağlı **dize** parametresi.  
 
-  Belirtilen şemadan oluşturulan türler belirtir.  
+  Belirtilen şemadan oluşturulan türleri belirtir.  
 
-  Her biri bir XSD seçeneğine karşılık gelir aşağıdaki değerlerden birini belirtin.  
+  Her biri bir XSD seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
 
-  - **sınıflar** -   **/sınıfları**  
+  - **sınıflar**  -  **/Classes**  
 
-  - **veri kümesi** -   **/DataSet**  
+  - **veri kümesi**  -  **/DataSet**  
   
 - **Dil**  
   
@@ -60,31 +60,31 @@ Bir kaynaktan şema ya da sınıf dosyaları oluşturur XML şema tanımı Arac�
   
      Oluşturulan kod için kullanılacak programlama dilini belirtir.  
   
-     Aralarından seçim **CS** (C#, varsayılan değerdir), **VB** (Visual Basic) veya **JS** (JScript). Ayrıca uygulayan bir sınıf için tam bir ad belirtin `System.CodeDom.Compiler.CodeDomProvider Class`.  
+     **CS** (varsayılan olan C#), **vb** (Visual Basic) veya **js** (JScript) arasından seçim yapın. Ayrıca uygulayan bir sınıf için tam bir ad belirtin `System.CodeDom.Compiler.CodeDomProvider Class`.  
   
-- **Namespace**  
+- **Ad Alanı**  
   
      İsteğe bağlı **dize** parametresi.  
   
      Oluşturulan türleri için çalışma zamanı ad alanını belirtir.  
   
-- **Kaynakları**  
+- **Kaynaklar**  
   
-     Gerekli `ITaskItem[]` parametresi.  
+     Gerekli `ITaskItem[]` parametre.  
   
-     Tüketilen ve görevler tarafından yayılan MSBuild kaynak dosya öğeleri bir dizisi tanımlanmaktadır.  
+     Görevler tarafından tüketilen ve yayılmakta olabilecek bir MSBuild kaynak dosya öğeleri dizisini tanımlar.  
   
 - **SuppressStartupBanner**  
   
-     İsteğe bağlı **Boole** parametresi.  
+     İsteğe bağlı **Boolean** parametresi.  
   
-     Varsa `true`, görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini engeller.  
+     İse `true` , görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini önler.  
   
 - **TrackerLogDirectory**  
   
      İsteğe bağlı **dize** parametresi.  
   
-     İzleyici günlüğü dizini belirtir.  
+     İzleyici günlüğü için dizini belirtir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görev Başvurusu](../msbuild/msbuild-task-reference.md)
+ [Görev başvurusu](../msbuild/msbuild-task-reference.md)

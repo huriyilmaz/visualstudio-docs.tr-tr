@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f72b403d4c6c9cc71bc2a3fdbff8f778a44b3b55
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663069"
 ---
 # <a name="ltvargt-javascript"></a>&lt;var &gt; (JavaScript)
@@ -24,7 +24,7 @@ ms.locfileid: "72663069"
 
 Bir değişken için belge bilgilerini belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 <var type="ValueType" integer="true|false"
@@ -36,36 +36,36 @@ Bir değişken için belge bilgilerini belirtir.
 ```
 
 #### <a name="parameters"></a>Parametreler
- Isteğe bağlı `type`. Değişkenin veri türü. Tür aşağıdakilerden biri olabilir:
+ `type` Seçim. Değişkenin veri türü. Tür aşağıdakilerden biri olabilir:
 
-- @No__t_0 ve `Object` gibi ECMAScript 5 belirtiminde bir ECMAScript dil türü.
+- ECMAScript 5 belirtiminde, ve gibi bir ECMAScript dil türü `Number` `Object` .
 
-- @No__t_0, `Window` ve `Document` gibi bir DOM nesnesi.
+- , Ve gibi bir DOM nesnesi `HTMLElement` `Window` `Document` .
 
 - JavaScript Oluşturucu işlevi.
 
-  Isteğe bağlı `integer`. @No__t_0 `Number`, değişkenin bir tamsayı olup olmadığını belirtir. Değişkenin bir tamsayı olduğunu göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+  `integer` Seçim. İse `type` , `Number` değişkenin bir tamsayı olup olmadığını belirtir. `true`Değişkenin bir tamsayı olduğunu belirtmek için olarak ayarlanır; Aksi takdirde, olarak ayarlayın `false` . Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
 
-  Isteğe bağlı `domElement`. Bu öznitelik kullanım dışıdır; `type` özniteliği bu özniteliğin üzerine gelir. Bu öznitelik, belgelenen değişkenin bir DOM öğesi olup olmadığını belirtir. Değişkenin bir DOM öğesi olduğunu belirtmek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. @No__t_0 özniteliği ayarlanmamışsa ve `domElement` `true` olarak ayarlandıysa, IntelliSense, deyimin tamamlanmasını gerçekleştirirken belgelenen değişkeni bir `HTMLElement` olarak değerlendirir.
+  `domElement` Seçim. Bu öznitelik kullanım dışıdır; `type` öznitelik bu özniteliğin üzerine gelir. Bu öznitelik, belgelenen değişkenin bir DOM öğesi olup olmadığını belirtir. `true`Değişkenin BIR DOM öğesi olduğunu belirtmek için olarak ayarlanır; Aksi takdirde, olarak ayarlayın `false` . `type`Özniteliği ayarlanmamışsa ve `domElement` olarak ayarlanırsa `true` , IntelliSense, ifade tamamlama gerçekleştirirken belgelenen değişkeni bir olarak değerlendirir `HTMLElement` .
 
-  Isteğe bağlı `mayBeNull`. Belgelenmiş değişkenin null olarak ayarlanamayacağını belirtir. Değişkenin null olarak ayarlanabileceği göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Varsayılan değer `false` şeklindedir. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+  `mayBeNull` Seçim. Belgelenmiş değişkenin null olarak ayarlanamayacağını belirtir. `true`Değişkenin null olarak ayarlanabileceği belirtmek için olarak ayarlanır; Aksi takdirde, olarak ayarlayın `false` . Varsayılan değer: `false`. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
 
-  Isteğe bağlı `elementType`. @No__t_0 `Array` ise, bu öznitelik dizideki öğelerin türünü belirtir.
+  `elementType` Seçim. `type`İse `Array` , bu öznitelik dizideki öğelerin türünü belirtir.
 
-  Isteğe bağlı `elementInteger`. @No__t_0 `Array` ve `elementType` `Number` ise, bu öznitelik dizideki öğelerin tamsayı olup olmadığını belirtir. Dizideki öğelerin tamsayılar olduğunu göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+  `elementInteger` Seçim. , `type` Ve ise, `Array` `elementType` `Number` Bu öznitelik dizideki öğelerin tamsayı olup olmadığını belirtir. `true`Dizideki öğelerin tamsayılar olduğunu belirtmek için olarak ayarlanır; Aksi takdirde, olarak ayarlayın `false` . Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
 
-  Isteğe bağlı `elementDomElement`. Bu öznitelik kullanım dışıdır; `elementType` özniteliği bu özniteliğin üzerine gelir. @No__t_0 `Array` ise, bu öznitelik dizideki öğelerin DOM öğeleri olup olmadığını belirtir. Öğelerin DOM öğeleri olduğunu belirtmek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. @No__t_0 özniteliği ayarlanmamışsa ve `elementDomElement` `true` olarak ayarlandıysa, IntelliSense deyimin tamamlanma sırasında dizideki her öğeyi bir `HTMLElement` olarak değerlendirir.
+  `elementDomElement` Seçim. Bu öznitelik kullanım dışıdır; `elementType` öznitelik bu özniteliğin üzerine gelir. `type`İse `Array` , bu öznitelik DIZIDEKI öğelerin DOM öğeleri olup olmadığını belirtir. `true`ÖĞELERIN DOM öğesi olduğunu belirtmek için olarak ayarlanır; Aksi takdirde, olarak ayarlayın `false` . `elementType`Özniteliği ayarlanmamışsa ve `elementDomElement` olarak ayarlandıysa `true` , IntelliSense deyimin tamamlanma sırasında dizideki her öğeyi bir olarak değerlendirir `HTMLElement` .
 
-  Isteğe bağlı `elementMayBeNull`. @No__t_0 `Array`, dizideki öğelerin null olarak ayarlanamayacağını belirtir. Dizideki öğelerin null olarak ayarlanabileceği göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Varsayılan değer `false` şeklindedir. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+  `elementMayBeNull` Seçim. `type`İse, `Array` dizideki öğelerin null olarak ayarlanamayacağını belirtir. `true`Dizideki öğelerin null olarak ayarlanabileceği belirtmek için olarak ayarlanır; Aksi takdirde, olarak ayarlayın `false` . Varsayılan değer: `false`. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
 
-  Isteğe bağlı `helpKeyword`. F1 Yardım anahtar sözcüğü.
+  `helpKeyword` Seçim. F1 Yardım anahtar sözcüğü.
 
-  Isteğe bağlı `locid`. Değişkenle ilgili yerelleştirme bilgileri için tanımlayıcı. Tanımlayıcı, bir üye KIMLIĞI ya da OpenAjax meta verileri tarafından tanımlanan bir ileti grubundaki `name` öznitelik değerine karşılık gelir. Tanımlayıcı türü, [\<loc >](../ide/loc-javascript.md) etiketinde belirtilen biçime bağlıdır.
+  `locid` Seçim. Değişkenle ilgili yerelleştirme bilgileri için tanımlayıcı. Tanımlayıcı, bir üye KIMLIĞI ya da `name` OpenAjax meta verileri tarafından tanımlanan bir ileti grubundaki öznitelik değerine karşılık gelir. Tanımlayıcı türü, etiketinde belirtilen biçime bağlıdır [\<loc>](../ide/loc-javascript.md) .
 
-  Isteğe bağlı `description`. Değişkenin açıklaması.
+  `description` Seçim. Değişkenin açıklaması.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, `<var>` öğesinin nasıl kullanılacağını gösterir.
+ Aşağıdaki kod örneği, öğesinin nasıl kullanılacağını gösterir `<var>` .
 
 ```javascript
 /// <var>A rectangle that has a width of 5.</var>
@@ -82,4 +82,4 @@ var Rectangle = {
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [XML Belge Açıklamaları](../ide/xml-documentation-comments-javascript.md)
+ [XML belge açıklamaları](../ide/xml-documentation-comments-javascript.md)

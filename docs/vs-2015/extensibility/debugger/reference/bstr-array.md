@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 912537eb632768b3bcb6543dab098126ce02424f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153189"
 ---
-# <a name="bstrarray"></a>BSTR_ARRAY
+# <a name="bstr_array"></a>BSTR_ARRAY
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Dize dizisi açıklar yapısı.  
+Bir dize dizisini tanımlayan bir yapı.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct tagBSTR_ARRAY {  
@@ -40,24 +40,24 @@ struct BSTR_ARRAY {
 }  
 ```  
   
-## <a name="terms"></a>Koşulları  
+## <a name="terms"></a>Terimler  
  dwCount  
- Sayı dizeleri `Members` dizisi.  
+ Dizideki dize sayısı `Members` .  
   
  Üyeler  
- Dize dizisi.  
+ Dizeler dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapı döndürüldüğü [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md) yöntemi.  
+ Bu yapı [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md) yönteminden döndürülür.  
   
- [C++ yalnızca] Her bir dizenin kullanarak boşaltılması `SysFreeString`ve `Members` dizi serbest, ile `CoTaskMemFree`.  
+ [Yalnızca C++] Her tek dize kullanılarak serbest bırakılmalıdır `SysFreeString` ve `Members` dizi ile serbest bırakılmalıdır `CoTaskMemFree` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılar ve birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)   

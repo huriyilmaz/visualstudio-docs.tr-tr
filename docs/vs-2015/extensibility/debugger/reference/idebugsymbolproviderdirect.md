@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProviderDirect | Microsoft Docs
+title: Idebugsymbolproviderdirect | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,41 +11,41 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1ad768419786f78277b791997538785265a24c0f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153092"
 ---
 # <a name="idebugsymbolproviderdirect"></a>IDebugSymbolProviderDirect
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Meta verileri ve çekirdek sembol arabirimleri doğrudan erişimi olan bir sembol sağlayıcısını temsil eder.  
+Meta verilere ve çekirdek sembol arabirimlerine doğrudan erişimi olan bir sembol sağlayıcısını temsil eder.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugSymbolProviderDirect: IUnknown  
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- Bu arabirim, aşağıdaki yöntemleri uygular:  
+ Bu arabirim aşağıdaki yöntemleri uygular:  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
 |[GetAppIDFromAddress](../../../extensibility/debugger/reference/idebugsymbolproviderdirect-getappidfromaddress.md)|Hata ayıklama adresi verilen uygulama etki alanı tanımlayıcısını alır.|  
-|[GetCurrentModulesInfo](../../../extensibility/debugger/reference/idebugsymbolproviderdirect-getcurrentmodulesinfo.md)|Sembol grubu modülleri hakkında bilgi alır.|  
-|[GetCurrentModulesState](../../../extensibility/debugger/reference/idebugsymbolproviderdirect-getcurrentmodulesstate.md)|Sembol sağlayıcısı üyesi olduğu simgesi grubu hakkındaki bilgileri alır.|  
-|[GetMetaDataImport](../../../extensibility/debugger/reference/idebugsymbolproviderdirect-getmetadataimport.md)|Meta veri alma bilgilerini alır.|  
-|[GetMethodFromAddress](../../../extensibility/debugger/reference/idebugsymbolproviderdirect-getmethodfromaddress.md)|Belirtilen hata ayıklama adresindeki yöntem hakkında bilgi alır.|  
-|[GetSymUnmanagedReader](../../../extensibility/debugger/reference/idebugsymbolproviderdirect-getsymunmanagedreader.md)|Yönetilmeyen kod için simge okuyucu alır.|  
+|[GetCurrentModulesInfo](../../../extensibility/debugger/reference/idebugsymbolproviderdirect-getcurrentmodulesinfo.md)|Sembol grubundaki modüller hakkındaki bilgileri alır.|  
+|[GetCurrentModulesState](../../../extensibility/debugger/reference/idebugsymbolproviderdirect-getcurrentmodulesstate.md)|Sembol sağlayıcısının üye olduğu sembol grubu hakkındaki bilgileri alır.|  
+|[GetMetaDataImport](../../../extensibility/debugger/reference/idebugsymbolproviderdirect-getmetadataimport.md)|Meta veri içeri aktarma bilgilerini alır.|  
+|[GetMethodFromAddress](../../../extensibility/debugger/reference/idebugsymbolproviderdirect-getmethodfromaddress.md)|Belirtilen hata ayıklama adresinde yöntemi hakkındaki bilgileri alır.|  
+|[GetSymUnmanagedReader](../../../extensibility/debugger/reference/idebugsymbolproviderdirect-getsymunmanagedreader.md)|Yönetilmeyen kod için bir sembol okuyucu alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu arabirim, diğer sembol sağlayıcısı arabirimleri çoğunu yerine kullanılabilir. Meta veriler doğrudan erişim sağlayan ve `CorSym` arabirimleri.  
+ Bu arabirim diğer sembol sağlayıcısı arabirimlerinin çoğu yerine kullanılabilir. Meta verilere ve arabirimlere doğrudan erişim sağlar `CorSym` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üst bilgi: Sh.h  
+ Üstbilgi: SH. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll

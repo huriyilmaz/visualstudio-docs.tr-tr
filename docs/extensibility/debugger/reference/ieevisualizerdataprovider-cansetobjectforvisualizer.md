@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerDataProvider::CanSetObjectForVisualizer | Microsoft Dokümanlar
+title: 'IEEVisualizerDataProvider:: CanSetObjectForVisualizer | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c4d3c190195360d37c15be12cef2790610928a95
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718139"
 ---
 # <a name="ieevisualizerdataprovidercansetobjectforvisualizer"></a>IEEVisualizerDataProvider::CanSetObjectForVisualizer
-Bu yöntem, görselleştiricinin temsil eder veri nesnesi güncelleştirilmiş olup olmadığını belirler.
+Bu yöntem, Görselleştirici tarafından temsil ettiği veri nesnesine sahip olup olmadığını belirler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT CanSetObjectForVisualizer(
@@ -41,13 +41,13 @@ int CanSetObjectForVisualizer(
 
 ## <a name="parameters"></a>Parametreler
 `b`\
-[çıkış] Nonzero`TRUE`( ) görselleştiricideki nesne güncelleştirilebiliyorsa, sıfır (`FALSE`) eğer güncelleştirilemezse.
+dışı `TRUE`Görselleştirici üzerindeki nesne güncelleştirilemeyebilir (), değilse sıfır ( `FALSE` ).
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Örneğin, yalnızca okunan belleğe bağlı bir nesne değiştirilemez.
+ Örneğin, salt okuma belleğine bağlıysa bir nesne değiştirilebilir olmayabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)

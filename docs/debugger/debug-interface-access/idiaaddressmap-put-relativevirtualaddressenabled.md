@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5a2e69bf6626cd11d82164a707c2611884b36411
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85468562"
 ---
 # <a name="idiaaddressmapput_relativevirtualaddressenabled"></a>IDiaAddressMap::put_relativeVirtualAddressEnabled
@@ -33,7 +33,7 @@ HRESULT put_relativeVirtualAddressEnabled ( 
 #### <a name="parameters"></a>Parametreler
  NewVal
 
-'ndaki `TRUE`Öğesini etkinleştirmek veya `FALSE` devre dışı bırakmak için olarak ayarlayın.
+'ndaki `TRUE` Öğesini etkinleştirmek veya `FALSE` devre dışı bırakmak için olarak ayarlayın.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.

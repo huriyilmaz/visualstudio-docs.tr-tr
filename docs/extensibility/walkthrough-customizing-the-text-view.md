@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3b7a62ee2b55bf2b56ae1d8e28fc1910ed444c29
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904929"
 ---
 # <a name="walkthrough-customize-the-text-view"></a>İzlenecek yol: metin görünümünü özelleştirme
@@ -32,7 +32,7 @@ Bir metin görünümünü, düzenleyici biçimindeki haritada aşağıdaki özel
 
 - Görünür boşluk
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-mef-project"></a>MEF projesi oluşturma
@@ -54,9 +54,9 @@ Bir metin görünümünü, düzenleyici biçimindeki haritada aşağıdaki özel
 
 3. Öğesinden devralan adlı bir sınıf bildirin `TestViewCreationListener` <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener> . Bu sınıfı aşağıdaki özniteliklerle dışarı aktarın:
 
-   - <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>Bu dinleyicinin uygulandığı içerik türünü belirtmek için.
+   - <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> Bu dinleyicinin uygulandığı içerik türünü belirtmek için.
 
-   - <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>Bu dinleyicinin rolünü belirtmek için.
+   - <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> Bu dinleyicinin rolünü belirtmek için.
 
      [!code-csharp[VSSDKViewPropertyTest#2](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_2.cs)]
      [!code-vb[VSSDKViewPropertyTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_2.vb)]

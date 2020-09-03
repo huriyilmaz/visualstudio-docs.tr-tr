@@ -11,10 +11,10 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
 ms.openlocfilehash: abcffcfe6a7a22b2001ff38852d9bef916d2d119
-ms.sourcegitcommit: 78face15e71c305a2146358df51f8f1fefe3388f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87805858"
 ---
 ## <a name="azure-development-build-tools"></a>Azure geliştirme derleme araçları
@@ -25,7 +25,7 @@ ms.locfileid: "87805858"
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft.Net. Component. 4.7.2. TargetingPack | .NET Framework 4.7.2 hedefleme paketi | 16.7.30310.162 | Gerekli
 Microsoft. net. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Gerekli
@@ -69,7 +69,7 @@ Microsoft. NetCore. Component. SDK | .NET Core SDK | 16.7.30310.162 | İsteğe B
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft.Net. Component. 4.5.1. TargetingPack | .NET Framework 4.5.1 hedefleme paketi | 16.0.28517.75 | Önerilen
 Microsoft.Net. Component. 4.5.2. TargetingPack | .NET Framework 4.5.2 hedefleme paketi | 16.0.28517.75 | Önerilen
@@ -89,7 +89,7 @@ Microsoft. VisualStudio. Component. SQL. SSDTBuildSku | SQL Server Veri Araçlar
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Gerekli
 Microsoft.Net. Component. 4.6.1. TargetingPack | .NET Framework 4.6.1 hedefleme paketi | 16.0.28517.75 | Gerekli
@@ -128,7 +128,7 @@ Microsoft. VisualStudio. Component. FSharp. MSBuild | F# derleyici | 16.0.28528.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Gerekli
 Microsoft. VisualStudio. Component. CoreBuildTools | Visual Studio Derleme Araçları çekirdek | 16.7.30310.162 | Gerekli
@@ -142,7 +142,7 @@ Microsoft. VisualStudio. Component. Roslyn. derleyicisi | C# ve Visual Basic Ros
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. NetCore. BuildTools. ComponentGroup | .NET Core derleme araçları | 16.3.29102.218 | Gerekli
 Microsoft. NetCore. Component. Runtime. 3.1 | .NET Core 3,1 LTS çalışma zamanı | 16.7.30310.162 | Gerekli
@@ -158,7 +158,7 @@ Microsoft. net. Core. Component. SDK. 2.1 | .NET Core 2,1 çalışma zamanı (LT
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. VisualStudio. Component. Node. Build | MSBuild desteğini Node.js | 16.0.28517.75 | Gerekli
 Microsoft. VisualStudio. Component. TypeScript. 3.9 | TypeScript 3,9 SDK | 16.0.30310.162 | Gerekli
@@ -171,7 +171,7 @@ Microsoft. VisualStudio. Component. TypeScript. 3.9 | TypeScript 3,9 SDK | 16.0.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. Component. ClickOnce. MSBuild | ClickOnce derleme araçları | 16.0.28625.61 | Gerekli
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Gerekli
@@ -209,7 +209,7 @@ Microsoft.Net. ComponentGroup. 4.8. DeveloperTools | .NET Framework 4,8 gelişti
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Gerekli
 Microsoft. Component. NetFX. Native | .NET Yerel | 16.5.29515.121 | Gerekli
@@ -242,7 +242,7 @@ Microsoft. VisualStudio. ComponentGroup. UWP. VC. v141. BuildTools | C++ (v141) 
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. VisualStudio. Component. VC. CoreBuildTools | C++ derleme araçları temel özellikleri | 16.0.28625.61 | Gerekli
 Microsoft. VisualStudio. Component. VC. Redist. 14. Latest | C++ 2019 yeniden dağıtılabilir güncelleştirmesi | 16.5.29515.121 | Gerekli
@@ -276,7 +276,7 @@ Microsoft. VisualStudio. ComponentGroup. NativeDesktop. LLVM. Clang | Windows i�
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Gerekli
 Microsoft.Net. Component. 4.6. TargetingPack | .NET Framework 4,6 hedefleme paketi | 16.0.28517.75 | Gerekli
@@ -301,7 +301,7 @@ Microsoft. VisualStudio. Component. VC. Tools. x86. x64 | MSVC v142-VS 2019 C++ 
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft.Net. Component. 4.7.2. TargetingPack | .NET Framework 4.7.2 hedefleme paketi | 16.7.30310.162 | Gerekli
 Microsoft. net. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Gerekli
@@ -344,7 +344,7 @@ Microsoft.Net. ComponentGroup. 4.8. DeveloperTools | .NET Framework 4,8 gelişti
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Gerekli
 Microsoft.Net. Component. 4.6.1. TargetingPack | .NET Framework 4.6.1 hedefleme paketi | 16.0.28517.75 | Gerekli
@@ -358,7 +358,7 @@ Component. OpenJDK | OpenJDK (Microsoft dağıtımı) | 16.1.28811.260 | İsteğ
 
 Bunlar herhangi bir iş yüküne dahil olmayan, ancak tek bir bileşen olarak seçilebilir olan bileşenlerdir.
 
-Bileşen KIMLIĞI | Ad | Sürüm
+Bileşen KIMLIĞI | Name | Sürüm
 --- | --- | ---
 Microsoft. net. Core. Component. SDK. 2.2 | .NET Core 2,2 çalışma zamanı (destek dışı) | 16.7.30310.162
 Microsoft. net. Core. Component. SDK. 3.0 | .NET Core 3,0 çalışma zamanı (destek dışı) | 16.7.30310.162

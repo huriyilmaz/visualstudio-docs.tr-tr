@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 5108f4afa382c00376424432d2086f0494e34a03
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904679"
 ---
 # <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>İzlenecek yol: komut satırı aracılığıyla Visual Studio uzantısı yayımlama
@@ -192,7 +192,7 @@ This is test extension.
 
 ## <a name="publishing-walkthrough"></a>Yayımlama Kılavuzu
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 
 Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
 

@@ -19,15 +19,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 97f057edefefd590c37b49d709ecf8a6e029b905
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72745737"
 ---
 # <a name="cannot-change-value-dialog-box"></a>Değer Değiştirilemez İletişim Kutusu
 ## <a name="error"></a>Hata
- &#124; *diğer diğer iletiler* `does not exist in the current context` &#124; `The value of this variable cannot be changed` `The name` *adı*
+ `The value of this variable cannot be changed``The name` *name* `does not exist in the current context` *Diğer diğer iletiler* &#124; &#124; adı
 
  Bu ileti kutusu, bir değişkenin içeriğini bir hata ayıklayıcı penceresinde (Oto, Izleme veya Yereller Windows) veya QuickWatch iletişim kutusunda geçersiz bir değerle değiştirmeye çalıştığınızda görüntülenir. Örneğin, bir tamsayı değişkeninin değerini bir karakter dizesine ayarlamaya çalışırsanız bu ileti kutusu görünür.
 
@@ -36,4 +36,4 @@ ms.locfileid: "72745737"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklayıcısındaki İfadeler](../debugger/expressions-in-the-debugger.md)
+- [Hata Ayıklayıcıdaki İfadeler](../debugger/expressions-in-the-debugger.md)

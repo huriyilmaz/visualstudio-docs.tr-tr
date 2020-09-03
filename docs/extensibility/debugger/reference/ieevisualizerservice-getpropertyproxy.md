@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerService::GetPropertyProxy | Microsoft Dokümanlar
+title: 'IEEVisualizerService:: GetPropertyProxy | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4f499b816b012c3b3a71e3e8ecafaa2c0f34586d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718006"
 ---
 # <a name="ieevisualizerservicegetpropertyproxy"></a>IEEVisualizerService::GetPropertyProxy
 Bu yöntem, bir özellik nesnesi için bir proxy döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetPropertyProxy(
@@ -43,16 +43,16 @@ int GetPropertyProxy(
 
 ## <a name="parameters"></a>Parametreler
 `dwID`\
-[içinde] Almak için özellik proxy kimliği.
+'ndaki Alınacak Özellik proxy 'sinin KIMLIĞI.
 
 `proxy`\
-[çıkış] [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) arabiriminde uygulanan proxy istenir.
+dışı İstenen proxy bir [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) arabiriminde uygulandı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-- [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) türü görüntüleyiciler için destek bir parçası olarak bu yönteme istek geçer.
+- [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) , tür Görselleştiriciler desteğinin bir parçası olarak bu yönteme isteği geçirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)

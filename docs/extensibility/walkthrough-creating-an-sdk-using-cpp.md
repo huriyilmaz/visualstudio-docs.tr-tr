@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 15fa0714097efda31b52f1d389d3a26cf581e506
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905017"
 ---
 # <a name="walkthrough-create-an-sdk-using-c"></a>İzlenecek yol: C++ kullanarak SDK oluşturma
@@ -24,10 +24,10 @@ Bu izlenecek yol, yerel bir C++ matematik kitaplığı SDK 'sı oluşturmayı, S
 
 - [Sınıf kitaplığını kullanan bir örnek uygulama oluşturmak için](../extensibility/walkthrough-creating-an-sdk-using-cpp.md#createSample)
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
 
-## <a name="to-create-the-native-and-windows-runtime-libraries"></a><a name="createClassLibrary"></a>Yerel ve Windows Çalışma Zamanı kitaplıklarını oluşturmak için
+## <a name="to-create-the-native-and-windows-runtime-libraries"></a><a name="createClassLibrary"></a> Yerel ve Windows Çalışma Zamanı kitaplıklarını oluşturmak için
 
 1. Menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
 
@@ -55,7 +55,7 @@ Bu izlenecek yol, yerel bir C++ matematik kitaplığı SDK 'sı oluşturmayı, S
 
 9. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin.
 
-## <a name="to-create-the-nativemathvsix-extension-project"></a><a name="createVSIX"></a>NativeMathVSIX Extension projesi oluşturmak için
+## <a name="to-create-the-nativemathvsix-extension-project"></a><a name="createVSIX"></a> NativeMathVSIX Extension projesi oluşturmak için
 
 1. **Çözüm Gezgini**' de, **' nativemath ' çözümünün**kısayol menüsünü açın ve **Add**  >  **Yeni proje**Ekle ' yi seçin.
 
@@ -137,7 +137,7 @@ Bu izlenecek yol, yerel bir C++ matematik kitaplığı SDK 'sı oluşturmayı, S
 
 18. **Yükleme düğmesini seçin** , yüklemenin bitmesini bekleyin ve sonra Visual Studio 'yu açın.
 
-## <a name="to-create-a-sample-app-that-uses-the-class-library"></a><a name="createSample"></a>Sınıf kitaplığını kullanan bir örnek uygulama oluşturmak için
+## <a name="to-create-a-sample-app-that-uses-the-class-library"></a><a name="createSample"></a> Sınıf kitaplığını kullanan bir örnek uygulama oluşturmak için
 
 1. Menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
 

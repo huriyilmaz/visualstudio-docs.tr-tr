@@ -1,5 +1,5 @@
 ---
-title: VSTextView Nesne | Microsoft Dokümanlar
+title: VSTextView nesnesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,17 +14,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 81d5e02d6ec18f8561a83b414532a4b78def5c09
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80697707"
 ---
 # <a name="vstextview-object"></a>VSTextView nesnesi
 
-Metin görünümü, kullanıcıların metin arabelleği Tek kodu metnini görüntülemesini ve yönetmesini sağlayan bir penceredir. Esasen, görünüm çoğu kullanıcı nın editör olarak adlandırdığı şeydir. Görünüm çeşitli metin katmanları (sözcük kaydırma, metnin anahat vb.) tarafından arabellekten ayrıldığından, görünümün arabellekteki metnin tam bir temsili olacağı garanti edilmez. Metin görünümü hakkında daha fazla bilgi için, [eski API'yi kullanarak Metin görünümüne erişim ebakına](/visualstudio/extensibility/accessing-thetext-view-by-using-the-legacy-api?view=vs-2015)bakın.
+Metin görünümü, kullanıcıların metin arabelleğinin Unicode metnini görüntülemesine ve düzenlemesine izin veren bir penceredir. Esas olarak görünüm, çoğu kullanıcının düzenleyici olarak başvurduğu şeydir. Görünüm, çeşitli metin katmanları (sözcük kaydırması, anahat metni vb.) tarafından arabelleğinden ayrıldığından, bu görünümün arabellekteki metnin tam bir gösterimi olması garanti edilmez. Metin görünümü hakkında daha fazla bilgi için, bkz. [eskı API kullanarak metin görünümüne erişme](/visualstudio/extensibility/accessing-thetext-view-by-using-the-legacy-api?view=vs-2015).
 
-Aşağıdaki tabloda <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> nesnedeki arabirimler gösterilmektedir.
+Aşağıdaki tabloda, nesnesindeki arabirimler gösterilmektedir <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> .
 
 |Arabirim|Açıklama|
 |---------------|-----------------|
@@ -32,13 +32,13 @@ Aşağıdaki tabloda <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView
 |<xref:Microsoft.VisualStudio.OLE.Interop.IDropTarget>|Standart OLE arabirimi.|
 |<xref:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite>|Standart OLE arabirimi.|
 |<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|Standart OLE arabirimi.|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompoundAction>|Bileşik eylemlerin (diğer bir deyişle, tek bir geri/yeniden oluşturma biriminde gruplanan eylemler) oluşturulmasını sağlar.|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>|Görünümü yönetmek ve erişim için temel yöntemleri sağlar. `IVsTextView`güvenli dişli değildir.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|Pencere bölmesi oluşturur ve yönetir.|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLayeredTextView>|Metin katmanlarıyla etkileşime girsin.|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsThreadSafeTextView>|Görünümde farklı bir iş parçacığından işlemler gerçekleştirir.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompoundAction>|Bileşik eylemlerin (yani, tek bir geri alma/yineleme biriminde gruplanmış eylemler) oluşturulmasına izin vermez.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>|, Görünümü yönetmek ve bunlara erişmek için temel yöntemleri sağlar. `IVsTextView` iş parçacıklı güvenli değildir.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|Bir pencere bölmesi oluşturur ve yönetir.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLayeredTextView>|Metin katmanlarla etkileşime girer.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsThreadSafeTextView>|Farklı bir iş parçacığından görünüm üzerinde işlemler gerçekleştirir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Şekiller edit](https://www.microsoft.com/download/details.aspx?id=55984)
+- [Şekil düzenleme](https://www.microsoft.com/download/details.aspx?id=55984)
 - [VSTextBuffer nesnesi](../extensibility/vstextbuffer-object.md)

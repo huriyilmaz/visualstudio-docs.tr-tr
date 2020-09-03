@@ -1,5 +1,5 @@
 ---
-title: Uzak bilgisayara erişilmeye çalışılırken DCOM hatası oluştu. Erişim reddedildi. | Microsoft Docs
+title: Uzak bilgisayara erişilmeye çalışılırken DCOM hatası oluştu. Erişim reddedildi. | Microsoft Belgeleri
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,20 +21,20 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ffc9cae027a078a62b1ef7bab16994a418d76763
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72745838"
 ---
 # <a name="a-dcom-error-occurred-trying-to-contact-the-remote-computer-access-is-denied"></a>Uzak bilgisayara erişilmeye çalışılırken DCOM hatası oluştu. Erişim reddedildi.
 Uzaktan hata ayıklama, aşağıdaki durumlarda yerel ve uzak bilgisayarlar arasında iletişim kurmak için DCOM kullanır:
 
-- Hata ayıklayıcı **Yerel uyumluluk moduna** ayarlı veya **yönetilen uyumluluk modu** **Araçlar > Seçenekler > hata ayıklama** sayfasında işaretlendi
+- Hata ayıklayıcı **Yerel uyumluluk moduna** ayarlı veya **yönetilen uyumluluk modu** **Araçlar > seçenekler > hata ayıklama** sayfasında işaretlendi
 
-- Yönetilen C++ (C++/CLI) koddan hata ayıklaması yapıyorsanız.
+- Yönetilen C++ (C++/CLı) kodunda hata ayıklaması yapıyorsanız.
 
-- Visual Studio 2013, **Yerel Düzenle ve devam et** ' i etkinleştir **araçlar > Seçenekler > hata ayıklama** sayfasında işaretlenir
+- Visual Studio 2013, **Yerel Düzenle ve devam et** ' i etkinleştir **araçlar > seçenekler > hata ayıklama** sayfasında işaretlenir
 
 - Bazı üçüncü taraf hata ayıklama senaryoları
 
@@ -51,4 +51,4 @@ Uzaktan hata ayıklama, aşağıdaki durumlarda yerel ve uzak bilgisayarlar aras
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Uzaktan Hata Ayıklama Hataları ve Sorun Giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)
-- [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)
+- [Uzaktan hata ayıklama](../debugger/remote-debugging.md)

@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 153eda065b9a6e845a39c35aaae34bbe1745f7a8
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904995"
 ---
 # <a name="walkthrough-display-light-bulb-suggestions"></a>İzlenecek yol: ampul önerilerini görüntüleme
@@ -36,7 +36,7 @@ Hafif bulbs, Visual Studio düzenleyicisinde, yerleşik kod Çözümleyicileri v
 
   Açık bulbs kullanarak kendi önerdiğimiz eylemleri sağlayabilirsiniz. Örneğin, küme ayracını yeni bir satıra taşımak veya önceki satırın sonuna taşımak için Eylemler sağlayabilirsiniz. Aşağıdaki izlenecek yol, geçerli kelimede görüntülenen ve iki önerilen eyleme sahip olan bir ampul oluşturmayı gösterir: **büyük harfe Dönüştür** ve **küçük harfe Dönüştür**.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) projesi oluşturma

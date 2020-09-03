@@ -21,29 +21,29 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bddba1170cf675b5bde7ab8deed8cce1e7eb57dd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196569"
 ---
 # <a name="cppclean-task"></a>CPPClean Görevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-MSBuild Visual C++ proje derlenirken oluşturan geçici dosyaları siler. Derleme dosyaları silme işlemi olarak bilinir *Temizleme*.  
+Bir Visual C++ projesi oluşturulduğunda MSBuild tarafından oluşturulan geçici dosyaları siler. Derleme dosyalarını silme işlemi *Temizleme*olarak bilinir.  
 
 ## <a name="parameters"></a>Parametreler  
- Parametreleri aşağıdaki tabloda açıklanmıştır **CPPClean** görev.  
+ Aşağıdaki tabloda **CPPClean** görevinin parametreleri açıklanmaktadır.  
 
 |            Parametre            |                                                                                                Açıklama                                                                                                 |
 |---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|        **DeletedFiles**         |                               İsteğe bağlı `ITaskItem[]` çıkış parametresi.<br /><br /> Tüketilen ve görevler tarafından yayılan MSBuild çıkış dosya öğeleri bir dizisi tanımlanmaktadır.                                |
-|          **DoDelete**           |                                                            İsteğe bağlı **Boole** parametresi.<br /><br /> Varsa `true`, temiz geçici dosyaları derleme.                                                             |
-| **FilePatternsToDeleteOnClean** |                                            Gerekli `String` parametresi.<br /><br /> Noktalı virgülle ayrılmış bir temizlemeye dosyaların dosya uzantıları listesini belirtir.                                             |
-|   **FilesExcludedFromClean**    |                                                    İsteğe bağlı `String` parametresi.<br /><br /> Dosyaları değil temizlemek için noktalı virgül ile ayrılmış bir listesini belirtir.                                                    |
-|       **FoldersToClean**        | Gerekli `String` parametresi.<br /><br /> Temizlemek için dizinlerin noktalı virgülle ayrılmış bir listesini belirtir. Tam veya göreli bir yol belirtin ve yolun joker karakter sembolünü içermelidir ( **\\** \*). |
+|        **DeletedFiles**         |                               İsteğe bağlı `ITaskItem[]` çıkış parametresi.<br /><br /> Görevler tarafından tüketilen ve yayılan MSBuild çıkış dosyası öğelerinin dizisini tanımlar.                                |
+|          **DoDelete**           |                                                            İsteğe bağlı **Boolean** parametresi.<br /><br /> Eğer `true` , geçici derleme dosyalarını temizleyin.                                                             |
+| **FilePatternsToDeleteOnClean** |                                            Gerekli `String` parametre.<br /><br /> Temizleyen dosyaların dosya uzantılarının noktalı virgülle ayrılmış bir listesini belirtir.                                             |
+|   **Filesexcludedfromcyalın**    |                                                    İsteğe bağlı `String` parametre.<br /><br /> Temizleyememelidir dosyaların noktalı virgülle ayrılmış bir listesini belirtir.                                                    |
+|       **FoldersToClean**        | Gerekli `String` parametre.<br /><br /> Temizleyen dizinlerin noktalı virgülle ayrılmış bir listesini belirtir. Tam veya göreli bir yol belirtebilirsiniz ve yol joker karakter simgesini ( **\\** \* ) içerebilir. |
 
 ## <a name="remarks"></a>Açıklamalar  
 
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görev Başvurusu](../msbuild/msbuild-task-reference.md)
+ [Görev başvurusu](../msbuild/msbuild-task-reference.md)

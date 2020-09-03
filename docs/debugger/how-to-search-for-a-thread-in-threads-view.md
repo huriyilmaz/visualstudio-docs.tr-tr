@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e97d381fd0b1f6340035eec129e7304a8e73b03d
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349269"
 ---
 # <a name="how-to-search-for-a-thread-in-threads-view"></a>Nasıl Yapılır: İş Parçacıkları Görünümünde İş Parçacığı Arama
@@ -37,6 +37,6 @@ ms.locfileid: "85349269"
 
 5. Aramanın ilk yönü için **yukarı** veya **aşağı** seçeneğini belirleyin.
 
-6. **Tamam**'a tıklayın.
+6. **Tamam**’a tıklayın.
 
    Eşleşen bir iş parçacığı bulunursa, Iş parçacıkları görünümü penceresinde vurgulanır.

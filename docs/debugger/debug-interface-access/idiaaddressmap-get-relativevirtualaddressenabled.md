@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 287f076e4ae38f26cec6046896d978319c872148
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85468583"
 ---
 # <a name="idiaaddressmapget_relativevirtualaddressenabled"></a>IDiaAddressMap::get_relativeVirtualAddressEnabled
@@ -33,7 +33,7 @@ HRESULT get_relativeVirtualAddressEnabled ( 
 #### <a name="parameters"></a>Parametreler
  pRetVal
 
-dışı `TRUE`RVA hesaplamasının etkin olup olmadığını döndürür.
+dışı `TRUE` RVA hesaplamasının etkin olup olmadığını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.

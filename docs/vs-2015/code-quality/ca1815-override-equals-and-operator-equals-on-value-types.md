@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: fc5dc311fd85af2b6a0eb3e29e9932614ca55193
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543916"
 ---
 # <a name="ca1815-override-equals-and-operator-equals-on-value-types"></a>CA1815: Değer türlerinde eşittir ve işleç eşittiri geçersiz kılın
@@ -46,7 +46,7 @@ ms.locfileid: "85543916"
 
 ## <a name="example-of-a-violation"></a>Ihlalin örneği
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki örnek, bu kuralı ihlal eden bir yapıyı (değer türü) gösterir.
 
 ### <a name="code"></a>Kod
@@ -54,7 +54,7 @@ ms.locfileid: "85543916"
 
 ## <a name="example-of-how-to-fix"></a>Nasıl düzeltileceğini gösteren örnek
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki örnek, <xref:System.ValueType.Equals%2A?displayProperty=fullName> eşitlik işleçlerini (= =,! =) geçersiz kılarak ve uygulayarak önceki ihlalin düzeltir.
 
 ### <a name="code"></a>Kod

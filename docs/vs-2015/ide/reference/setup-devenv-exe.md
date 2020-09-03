@@ -1,5 +1,5 @@
 ---
-title: -Kurulum (devenv. exe) | Microsoft Docs
+title: -Kurulum (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,30 +14,30 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a923d1f3532548ebc6ed651a0739e0e5792f7967
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663529"
 ---
 # <a name="setup-devenvexe"></a>/Setup (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Tüm kullanılabilir VSPackages 'lerden menüleri, araç çubuklarını ve komut gruplarını açıklayan kaynak meta verilerini birleştirmeye [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] zorlar.
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Menüleri, araç çubuklarını ve komut gruplarını açıklayan kaynak meta verilerini, tüm kullanılabilir VSPackages 'lerden birleştirmeye zorlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 devenv /setup
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- Bu anahtar bağımsız değişken almaz. @No__t_0 komutu genellikle yükleme işleminin son adımı olarak verilir. @No__t_0 anahtarın kullanımı [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] başlamaz.
+ Bu anahtar bağımsız değişken almaz. `devenv /setup`Komut genellikle yükleme işleminin son adımı olarak verilir. `/setup`Anahtarın kullanımı başlamaz [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .
 
- [/Setup (devenv. exe)](../../ide/reference/setup-devenv-exe.md) ve [/ınstallvstempsyonlar (devenv. exe)](../../ide/reference/installvstemplates-devenv-exe.md) anahtarlarını kullanabilmeniz için `devenv` yönetici olarak çalıştırmanız gerekir.
+ `devenv` [/Setup (devenv.exe)](../../ide/reference/setup-devenv-exe.md) ve [/ınstallvstempsyonlar (devenv.exe)](../../ide/reference/installvstemplates-devenv-exe.md) anahtarlarını kullanabilmeniz için yönetici olarak çalıştırmanız gerekir.
 
 ## <a name="example"></a>Örnek
- Bu örnekte, VSPackages içeren bir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] sürümünün yüklenmesiyle ilgili son adım gösterilmektedir.
+ Bu örnek, VSPackages içeren bir sürümünü yüklemenin son adımını gösterir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .
 
 ```
 devenv /setup

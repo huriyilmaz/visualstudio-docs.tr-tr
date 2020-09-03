@@ -12,10 +12,10 @@ dev_langs:
 ms.workload:
 - vssdk
 ms.openlocfilehash: e06e97acc77b4701e02b0ca54de589830a768669
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904708"
 ---
 # <a name="walkthrough-implement-code-snippets"></a>İzlenecek yol: kod parçacıklarını uygulama
@@ -35,7 +35,7 @@ Kod parçacıkları oluşturabilir ve bunları bir düzenleyici uzantısına ekl
 
    Bu izlenecek yol, [Izlenecek yol: görüntüleme ifadesinin tamamlanmasını](../extensibility/walkthrough-displaying-statement-completion.md)temel alır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-and-register-code-snippets"></a>Kod parçacıkları oluşturma ve kaydetme

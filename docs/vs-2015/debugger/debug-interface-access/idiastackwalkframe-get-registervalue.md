@@ -1,5 +1,5 @@
 ---
-title: Idiastackwalkframe::get_registervalue | Microsoft Docs
+title: 'IDiaStackWalkFrame:: get_registerValue | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8c420266d08550398f33c2e2da9ba1b7bc41b5dc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68141923"
 ---
-# <a name="idiastackwalkframegetregistervalue"></a>IDiaStackWalkFrame::get_registerValue
+# <a name="idiastackwalkframeget_registervalue"></a>IDiaStackWalkFrame::get_registerValue
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir kayıt değeri alır.  
+Bir kaydın değerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_registerValue (   
@@ -36,14 +36,14 @@ HRESULT get_registerValue ( 
   
 #### <a name="parameters"></a>Parametreler  
  `index`  
- [in] Bir değer [CV_HREG_e numaralandırması](../../debugger/debug-interface-access/cv-hreg-e.md) değerini almak için kasa belirten sabit listesi.  
+ 'ndaki Değerin alınacağı kaydı belirten [CV_HREG_e sabit listesi](../../debugger/debug-interface-access/cv-hreg-e.md) numaralandırmasından bir değer.  
   
  `pRetVal`  
- [out] Kayıt geçerli değerini döndürür.  
+ dışı Kaydın geçerli değerini döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiastackwalkframe](../../debugger/debug-interface-access/idiastackwalkframe.md)   
+ [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)   
  [CV_HREG_e Numaralandırması](../../debugger/debug-interface-access/cv-hreg-e.md)

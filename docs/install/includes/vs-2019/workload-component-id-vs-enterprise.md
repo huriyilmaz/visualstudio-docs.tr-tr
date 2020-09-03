@@ -11,10 +11,10 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
 ms.openlocfilehash: 204777b0209b2ca0b1c88717e9908828743087d9
-ms.sourcegitcommit: 78face15e71c305a2146358df51f8f1fefe3388f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87805793"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-enterprise-2019"></a>Visual Studio çekirdek Düzenleyicisi (Visual Studio Enterprise 2019 ile birlikte)
@@ -25,7 +25,7 @@ ms.locfileid: "87805793"
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. VisualStudio. Component. CoreEditor | Visual Studio temel Düzenleyicisi | 16.1.28811.260 | Gerekli
 Microsoft. VisualStudio. Component. Startpagedenemeler. cpp | C++ kullanıcıları için Visual Studio başlangıç sayfası | 16.0.28315.86 | İsteğe Bağlı
@@ -38,7 +38,7 @@ Microsoft. VisualStudio. Component. Startpagedenemeler. cpp | C++ kullanıcılar
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component. Microsoft. VisualStudio. Çzorexgeri | Razor dil Hizmetleri | 16.0.28714.129 | Gerekli
 Component. Microsoft. VisualStudio. Web. AzureFunctions | Azure Web Işleri araçları | 16.0.28714.129 | Gerekli
@@ -64,7 +64,7 @@ Microsoft.VisualStudio.Component.DockerTools | Kapsayıcı geliştirme araçlar�
 Microsoft. VisualStudio. Component. FSharp | F # dil desteği | 16.0.28315.86 | Gerekli
 Microsoft. VisualStudio. Component. FSharp. WebTemplates | Web projeleri için F # dil desteği | 16.3.29207.166 | Gerekli
 Microsoft. VisualStudio. Component. IISExpress | IIS Express  | 16.0.28315.86 | Gerekli
-Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0,2 | Gerekli
+Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0.2 | Gerekli
 Microsoft. VisualStudio. Component. JavaScript. Diagnostics | JavaScript tanılama | 16.0.28517.75 | Gerekli
 Microsoft. VisualStudio. Component. JavaScript. TypeScript | JavaScript ve TypeScript dil desteği | 16.7.30310.162 | Gerekli
 Microsoft. VisualStudio. Component. ManagedDesktop. Core | Yönetilen masaüstü Iş yükü çekirdeği | 16.4.29318.151 | Gerekli
@@ -125,7 +125,7 @@ Microsoft. VisualStudio. Component. WCF. Tooling | Windows Communication Foundat
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component. Microsoft. VisualStudio. Çzorexgeri | Razor dil Hizmetleri | 16.0.28714.129 | Önerilen
 Component. Microsoft. Web. LibraryManager | Kitaplık Yöneticisi | 16.0.28315.86 | Önerilen
@@ -181,7 +181,7 @@ Microsoft. VisualStudio. Component. FSharp. Desktop | F # masaüstü dil desteğ
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. Component. PythonTools | Python dil desteği | 16.5.29515.121 | Önerilen
 Microsoft. Component. PythonTools. Minicondax64 | Python miniconda | 16.2.29003.222 | Önerilen
@@ -212,7 +212,7 @@ Microsoft. VisualStudio. Component. Windows10SDK. 18362 | Windows 10 SDK (10.0.1
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Gerekli
 Microsoft.Net. Component. 4.7.2. TargetingPack | .NET Framework 4.7.2 hedefleme paketi | 16.7.30310.162 | Gerekli
@@ -220,7 +220,7 @@ Microsoft. net. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | 
 Microsoft.Net. ComponentGroup. Developmentönkoşullar | .NET Framework 4.7.2 geliştirme araçları | 16.3.29207.166 | Gerekli
 Microsoft. NetCore. Component. Runtime. 3.1 | .NET Core 3,1 LTS çalışma zamanı | 16.7.30310.162 | Gerekli
 Microsoft. NetCore. Component. SDK | .NET Core SDK | 16.7.30310.162 | Gerekli
-Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0,2 | Gerekli
+Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0.2 | Gerekli
 Microsoft. VisualStudio. Component. ManagedDesktop. Core | Yönetilen masaüstü Iş yükü çekirdeği | 16.4.29318.151 | Gerekli
 Microsoft. VisualStudio. Component. ManagedDesktop. Önkoşullar | .NET masaüstü geliştirme araçları | 16.7.30310.162 | Gerekli
 Microsoft. VisualStudio. Component. Roslyn. derleyicisi | C# ve Visual Basic Roslyn derleyicileri | 16.0.28714.129 | Gerekli
@@ -293,7 +293,7 @@ Microsoft. VisualStudio. ComponentGroup. WebToolsExtensions | ASP.NET ve web gel
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft.Net. Component. 3.5. DeveloperTools | .NET Framework 3,5 geliştirme araçları | 16.0.28517.75 | Gerekli
 Microsoft.Net. Component. 4.7.1. TargetingPack | .NET Framework 4.7.1 hedefleme paketi | 16.7.30310.162 | Gerekli
@@ -312,10 +312,10 @@ Component. UnityEngine. x86 | Unity 5,6 32-bit düzenleyici | 16.1.28811.260 | �
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component. MDD. Linux | Linux geliştirme için C++ | 16.5.29515.121 | Gerekli
-Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0,2 | Gerekli
+Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0.2 | Gerekli
 Microsoft. VisualStudio. Component. VC. Coreıde | C++ temel özellikleri | 16.7.30310.162 | Gerekli
 Component. Linux. CMake | Linux için C++ CMake araçları | 16.2.29003.222 | Önerilen
 Microsoft. VisualStudio. ComponentGroup. WebToolsExtensions | ASP.NET ve web geliştirme | 16.7.30310.162 | Önerilen
@@ -329,13 +329,13 @@ Component. MDD. Linux. GCC. ARM | Katıştırılmış ve IoT geliştirme araçla
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Gerekli
 Microsoft. VisualStudio. Component. ClassDesigner | Sınıf Tasarımcısı | 16.0.28528.71 | Gerekli
 Microsoft. VisualStudio. Component. CodeMap | Kod Haritası | 16.0.28625.61 | Gerekli
 Microsoft. VisualStudio. Component. GraphDocument | DGML Düzenleyicisi | 16.0.28625.61 | Gerekli
-Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0,2 | Gerekli
+Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0.2 | Gerekli
 Microsoft. VisualStudio. Component. Roslyn. derleyicisi | C# ve Visual Basic Roslyn derleyicileri | 16.0.28714.129 | Gerekli
 Microsoft. VisualStudio. Component. SQL. LocalDB. Runtime | SQL Server Express 2016 LocalDB | 16.0.28625.61 | Gerekli
 Microsoft. VisualStudio. Component. Textşablon oluşturma | Metin şablonu dönüşümü | 16.0.28625.61 | Gerekli
@@ -383,9 +383,9 @@ Microsoft. VisualStudio. ComponentGroup. NativeDesktop. LLVM. Clang | Windows i�
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
-Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0,2 | Gerekli
+Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0.2 | Gerekli
 Microsoft. VisualStudio. Component. VC. Coreıde | C++ temel özellikleri | 16.7.30310.162 | Gerekli
 Microsoft. VisualStudio. Component. VC. Redist. 14. Latest | C++ 2019 yeniden dağıtılabilir güncelleştirmesi | 16.5.29515.121 | Gerekli
 Microsoft. VisualStudio. Component. VC. Tools. x86. x64 | MSVC v142-VS 2019 C++ x64/x86 derleme araçları (v 14.27) | 16.7.30310.162 | Gerekli
@@ -430,11 +430,11 @@ Microsoft. VisualStudio. Component. Windows10SDK. 17763 | Windows 10 SDK (10.0.1
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component. Android. SDK25. Private | Android SDK kurulumu (API düzeyi 25) (C++ ile mobil geliştirme için yerel yükleme) | 16.0.28625.61 | Gerekli
 Component. OpenJDK | OpenJDK (Microsoft dağıtımı) | 16.1.28811.260 | Gerekli
-Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0,2 | Gerekli
+Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0.2 | Gerekli
 Microsoft. VisualStudio. Component. VC. Coreıde | C++ temel özellikleri | 16.7.30310.162 | Gerekli
 Component. Android. NDK. R16B | Android NDK (R16B) | 16.7.30316.201 | Önerilen
 Component. ant | Apache Ant (1.9.3) | 1.9.3.8 | Önerilen
@@ -454,7 +454,7 @@ Component. MDD. IOS | C++ iOS geliştirme araçları | 16.0.28517.75 | İsteğe 
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component. Microsoft. VisualStudio. Çzorexgeri | Razor dil Hizmetleri | 16.0.28714.129 | Gerekli
 Component. Microsoft. Web. LibraryManager | Kitaplık Yöneticisi | 16.0.28315.86 | Gerekli
@@ -474,7 +474,7 @@ Microsoft.VisualStudio.Component.DockerTools | Kapsayıcı geliştirme araçlar�
 Microsoft. VisualStudio. Component. FSharp | F # dil desteği | 16.0.28315.86 | Gerekli
 Microsoft. VisualStudio. Component. FSharp. WebTemplates | Web projeleri için F # dil desteği | 16.3.29207.166 | Gerekli
 Microsoft. VisualStudio. Component. IISExpress | IIS Express  | 16.0.28315.86 | Gerekli
-Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0,2 | Gerekli
+Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0.2 | Gerekli
 Microsoft. VisualStudio. Component. JavaScript. Diagnostics | JavaScript tanılama | 16.0.28517.75 | Gerekli
 Microsoft. VisualStudio. Component. JavaScript. TypeScript | JavaScript ve TypeScript dil desteği | 16.7.30310.162 | Gerekli
 Microsoft. VisualStudio. Component. ManagedDesktop. Core | Yönetilen masaüstü Iş yükü çekirdeği | 16.4.29318.151 | Gerekli
@@ -523,7 +523,7 @@ Microsoft.VisualStudio.ComponentGroup.MSIX. paketleme | MSIX paketleme araçlar�
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component. OpenJDK | OpenJDK (Microsoft dağıtımı) | 16.1.28811.260 | Gerekli
 Component. Xamarin | Xamarin | 16.7.30310.162 | Gerekli
@@ -537,7 +537,7 @@ Microsoft. NetCore. Component. DevelopmentTools | .NET Core geliştirme araçlar
 Microsoft. NetCore. Component. Runtime. 3.1 | .NET Core 3,1 LTS çalışma zamanı | 16.7.30310.162 | Gerekli
 Microsoft. NetCore. Component. SDK | .NET Core SDK | 16.7.30310.162 | Gerekli
 Microsoft. VisualStudio. Component. FSharp | F # dil desteği | 16.0.28315.86 | Gerekli
-Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0,2 | Gerekli
+Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0.2 | Gerekli
 Microsoft. VisualStudio. Component. Merq | Ortak Xamarin iç araçları | 16.2.29012.281 | Gerekli
 Microsoft. VisualStudio. Component. MonoDebugger | Mono hata ayıklayıcısı | 16.0.28517.75 | Gerekli
 Microsoft. VisualStudio. Component. NuGet | NuGet Paket Yöneticisi | 16.1.28829.92 | Gerekli
@@ -554,7 +554,7 @@ Component. Android. SDK28 | Android SDK kurulumu (API düzeyi 28) | 16.2.29003.2
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component. Microsoft. VisualStudio. Çzorexgeri | Razor dil Hizmetleri | 16.0.28714.129 | Gerekli
 Component. Microsoft. Web. LibraryManager | Kitaplık Yöneticisi | 16.0.28315.86 | Gerekli
@@ -574,7 +574,7 @@ Microsoft.VisualStudio.Component.DockerTools | Kapsayıcı geliştirme araçlar�
 Microsoft. VisualStudio. Component. FSharp | F # dil desteği | 16.0.28315.86 | Gerekli
 Microsoft. VisualStudio. Component. FSharp. WebTemplates | Web projeleri için F # dil desteği | 16.3.29207.166 | Gerekli
 Microsoft. VisualStudio. Component. IISExpress | IIS Express  | 16.0.28315.86 | Gerekli
-Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0,2 | Gerekli
+Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0.2 | Gerekli
 Microsoft. VisualStudio. Component. JavaScript. Diagnostics | JavaScript tanılama | 16.0.28517.75 | Gerekli
 Microsoft. VisualStudio. Component. JavaScript. TypeScript | JavaScript ve TypeScript dil desteği | 16.7.30310.162 | Gerekli
 Microsoft. VisualStudio. Component. ManagedDesktop. Core | Yönetilen masaüstü Iş yükü çekirdeği | 16.4.29318.151 | Gerekli
@@ -644,7 +644,7 @@ Microsoft. VisualStudio. ComponentGroup. ıısdevelopment | Geliştirme zamanı 
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. VisualStudio. Component. JavaScript. Diagnostics | JavaScript tanılama | 16.0.28517.75 | Gerekli
 Microsoft. VisualStudio. Component. JavaScript. TypeScript | JavaScript ve TypeScript dil desteği | 16.7.30310.162 | Gerekli
@@ -652,7 +652,7 @@ Microsoft. VisualStudio. Component. Node. Tools | Node.js geliştirme araçları
 Microsoft. VisualStudio. Component. TypeScript. 3.9 | TypeScript 3,9 SDK | 16.0.30310.162 | Gerekli
 Microsoft. VisualStudio. ComponentGroup. WebToolsExtensions | ASP.NET ve web geliştirme | 16.7.30310.162 | Gerekli
 Component. Microsoft. VisualStudio. Livespaylaşımı | Live Share | 1.0.2517 | Önerilen
-Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0,2 | Önerilen
+Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0.2 | Önerilen
 Microsoft. VisualStudio. Component. WebDeploy | Web Dağıtımı | 16.0.28517.75 | Önerilen
 Microsoft. VisualStudio. Component. Appınsights. Tools | Geliştirici analiz araçları | 16.5.29515.121 | İsteğe Bağlı
 Microsoft. VisualStudio. Component. Common. Azure. Tools | Bağlantı ve yayımlama araçları | 16.4.29409.204 | İsteğe Bağlı
@@ -667,7 +667,7 @@ Microsoft. VisualStudio. Component. VC. Tools. x86. x64 | MSVC v142-VS 2019 C++ 
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component. Microsoft. VisualStudio. Çzorexgeri | Razor dil Hizmetleri | 16.0.28714.129 | Gerekli
 Component. Microsoft. Web. LibraryManager | Kitaplık Yöneticisi | 16.0.28315.86 | Gerekli
@@ -685,7 +685,7 @@ Microsoft. VisualStudio. Component. Appınsights. Tools | Geliştirici analiz ar
 Microsoft. VisualStudio. Component. Common. Azure. Tools | Bağlantı ve yayımlama araçları | 16.4.29409.204 | Gerekli
 Microsoft.VisualStudio.Component.DockerTools | Kapsayıcı geliştirme araçları | 16.4.29409.204 | Gerekli
 Microsoft. VisualStudio. Component. IISExpress | IIS Express  | 16.0.28315.86 | Gerekli
-Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0,2 | Gerekli
+Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0.2 | Gerekli
 Microsoft. VisualStudio. Component. JavaScript. Diagnostics | JavaScript tanılama | 16.0.28517.75 | Gerekli
 Microsoft. VisualStudio. Component. JavaScript. TypeScript | JavaScript ve TypeScript dil desteği | 16.7.30310.162 | Gerekli
 Microsoft. VisualStudio. Component. ManagedDesktop. Core | Yönetilen masaüstü Iş yükü çekirdeği | 16.4.29318.151 | Gerekli
@@ -730,7 +730,7 @@ Microsoft. VisualStudio. ComponentGroup. SharePoint. WıF | Windows Identity Fou
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. Component. PythonTools | Python dil desteği | 16.5.29515.121 | Gerekli
 Component. CPython3. x64 | Python 3 64-bit (3.7.8) | 3.7.8 | Önerilen
@@ -794,7 +794,7 @@ Microsoft. VisualStudio. ComponentGroup. Web | ASP.NET ve Web geliştirme araçl
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. Component. NetFX. Native | .NET Yerel | 16.5.29515.121 | Gerekli
 Microsoft. ComponentGroup. Blend | Visual Studio için Blend | 16.0.28315.86 | Gerekli
@@ -804,7 +804,7 @@ Microsoft. NetCore. Component. SDK | .NET Core SDK | 16.7.30310.162 | Gerekli
 Microsoft. VisualStudio. Component. Appınsights. Tools | Geliştirici analiz araçları | 16.5.29515.121 | Gerekli
 Microsoft. VisualStudio. Component. DiagnosticTools | .NET profil oluşturma araçları | 16.7.30310.162 | Gerekli
 Microsoft. VisualStudio. Component. Graphics | Görüntü ve 3B model düzenleyicileri | 16.0.28517.75 | Gerekli
-Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0,2 | Gerekli
+Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0.2 | Gerekli
 Microsoft. VisualStudio. Component. NuGet | NuGet Paket Yöneticisi | 16.1.28829.92 | Gerekli
 Microsoft. VisualStudio. Component. Roslyn. derleyicisi | C# ve Visual Basic Roslyn derleyicileri | 16.0.28714.129 | Gerekli
 Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# ve Visual Basic | 16.7.30310.162 | Gerekli
@@ -848,14 +848,14 @@ Microsoft. VisualStudio. ComponentGroup. UWP. VC. v141 | C++ (v141) Evrensel Win
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Gerekli
 Microsoft.Net. Component. 4.6. TargetingPack | .NET Framework 4,6 hedefleme paketi | 16.0.28517.75 | Gerekli
 Microsoft.Net. Component. 4.7.2. TargetingPack | .NET Framework 4.7.2 hedefleme paketi | 16.7.30310.162 | Gerekli
 Microsoft. net. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Gerekli
 Microsoft.Net. ComponentGroup. Developmentönkoşullar | .NET Framework 4.7.2 geliştirme araçları | 16.3.29207.166 | Gerekli
-Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0,2 | Gerekli
+Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0.2 | Gerekli
 Microsoft. VisualStudio. Component. NuGet | NuGet Paket Yöneticisi | 16.1.28829.92 | Gerekli
 Microsoft. VisualStudio. Component. Roslyn. derleyicisi | C# ve Visual Basic Roslyn derleyicileri | 16.0.28714.129 | Gerekli
 Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# ve Visual Basic | 16.7.30310.162 | Gerekli
@@ -872,7 +872,7 @@ Microsoft. VisualStudio. Component. DslTools | Modelleme SDK 'Sı | 16.0.28315.8
 
 Bunlar herhangi bir iş yüküne dahil olmayan, ancak tek bir bileşen olarak seçilebilir olan bileşenlerdir.
 
-Bileşen KIMLIĞI | Ad | Sürüm
+Bileşen KIMLIĞI | Name | Sürüm
 --- | --- | ---
 Component. GitHub. VisualStudio | Visual Studio için GitHub Uzantısı | 2.5.9.5485
 Component. Xamarin. Profiler | Xamarin Profiler | 16.0.28315.86

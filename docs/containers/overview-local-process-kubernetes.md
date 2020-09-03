@@ -10,10 +10,10 @@ manager: jillfra
 author: ghogen
 ms.author: ghogen
 ms.openlocfilehash: 5b6c07d5987c52d818a35babd16681652ddf5830
-ms.sourcegitcommit: 50bbb62525c91c5a31bab57e1caf37c5638872c8
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87913269"
 ---
 # <a name="how-local-process-with-kubernetes-works"></a>Kubernetes ile Yerel İşlem nasıl çalışır?
@@ -67,7 +67,7 @@ Yalıtımda çalışmayı etkinleştirdiğinizde, Kubernetes ile yerel Işlem, K
 
 * Kubernetes kümesinin Azure Dev Spaces etkin olmadığını doğrular.
 * Seçtiğiniz hizmetinizi aynı ad alanındaki kümede çoğaltır ve bir *Routing.VisualStudio.io/Route-from=SERVICE_NAME* etiketi ve *Routing.VisualStudio.io/Route-on-Header=Kubernetes-Route-as: GENERATED_NAME* ek açıklaması ekler.
-* , Kubernetes kümesindeki aynı ad alanında bulunan yönlendirme yöneticisini yapılandırır ve başlatır. Yönlendirme Yöneticisi, ad alanınız içinde yönlendirmeyi yapılandırırken *Routing.VisualStudio.io/Route-from=SERVICE_NAME* label ve *Routing.VisualStudio.io/Route-on-Header=Kubernetes-Route-as: GENERATED_NAME* ek açıklamalarını aramak için bir etiket seçici kullanır.
+* , Kubernetes kümesindeki aynı ad alanında bulunan yönlendirme yöneticisini yapılandırır ve başlatır. Yönlendirme Yöneticisi, ad alanınız içinde yönlendirmeyi yapılandırırken *Routing.VisualStudio.io/Route-from=SERVICE_NAME* label ve  *Routing.VisualStudio.io/Route-on-Header=Kubernetes-Route-as: GENERATED_NAME* ek açıklamalarını aramak için bir etiket seçici kullanır.
 
 Kubernetes ile yerel Işlem, Kubernetes kümenizde Azure Dev Spaces etkinleştirildiğini algılarsa, Kubernetes ile yerel Işlem kullanabilmeniz için önce Azure Dev Spaces devre dışı bırakmanız istenir.
 

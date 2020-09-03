@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c6895abd85a4394e4ddcaebcd6f09bc0a39936cb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663026"
 ---
 # <a name="visual-basic-specific-intellisense"></a>Visual Basic'e Özel IntelliSense
@@ -32,18 +32,18 @@ Visual Basic kaynak kodu Düzenleyicisi aşağıdaki IntelliSense özelliklerini
 
 - Çeşitli anahtar sözcüklerde tamamlama
 
-   Örneğin, `goto` ve bir boşluk yazarsanız, IntelliSense açılan menüdeki tanımlı etiketlerin bir listesini görüntüler. Desteklenen diğer anahtar sözcükler `Exit`, `Implements`, `Option` ve `Declare` içerir.
+   Örneğin, `goto` ve bir boşluk yazarsanız, IntelliSense açılan menüdeki tanımlı etiketlerin bir listesini görüntüler. Desteklenen diğer anahtar sözcükler `Exit` , `Implements` , `Option` ve içerir `Declare` .
 
-- @No__t_0 ve `Boolean` tamamlama
+- Tamamlama `Enum` ve `Boolean`
 
-   Bir ifade bir numaralandırmanın üyesine başvuracaktır, IntelliSense `Enum` üyelerinin bir listesini görüntüler. Bir deyimin `Boolean` başvurduğu zaman IntelliSense, true-false açılan menüsünü görüntüler.
+   Bir ifade bir sabit listesinin bir üyesine başvuracaktır, IntelliSense öğesinin üyelerini bir listesini görüntüler `Enum` . Bir ifade öğesine başvuracaksa `Boolean` , IntelliSense true-false açılan menüsünü görüntüler.
 
   Tamamlama, **Visual Basic** klasöründeki **genel** özellik sayfasından **otomatik liste üyelerinin** seçimini kaldırarak varsayılan olarak devre dışı bırakabilirsiniz.
 
   Liste üyelerini, tamamla sözcüğünü veya ALT + sağ oku çağırarak tamamlamayı el ile çağırabilirsiniz. Daha fazla bilgi için bkz. [IntelliSense kullanma](../ide/using-intellisense.md).
 
 ## <a name="intellisense-in-zone"></a>Bölgedeki IntelliSense
- Bölgedeki IntelliSense, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] üzerinden uygulama dağıtması gereken ve kısmi güven ayarları ile sınırlandırmaları gereken geliştiricilerin Visual Basic yardımcı olur. Bu özellik:
+ Bölgedeki IntelliSense, ile uygulamaları dağıtmaları gereken [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] ve kısmi güven ayarlarına kısıtlanmış Visual Basic geliştiricilere yardımcı olur. Bu özellik:
 
 - Uygulamanın çalışacağı izinleri seçmenizi sağlar.
 
@@ -52,4 +52,4 @@ Visual Basic kaynak kodu Düzenleyicisi aşağıdaki IntelliSense özelliklerini
   Daha fazla bilgi için bkz. [ClickOnce uygulamaları Için kod erişimi güvenliği](../deployment/code-access-security-for-clickonce-applications.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [IntelliSense Kullanma](../ide/using-intellisense.md)
+ [IntelliSense kullanma](../ide/using-intellisense.md)

@@ -21,10 +21,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5707ef277892c37cab16f78ac11113194a95e190
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663511"
 ---
 # <a name="signing-page-project-designer"></a>İmzalama Sayfası, Proje Tasarımcısı
@@ -55,18 +55,18 @@ Uygulama ve dağıtım bildirimlerini imzalamak ve derlemeyi imzalamak (tanımla
 
  **Test sertifikası oluştur** düğmesi test için bir sertifika oluşturmanıza olanak sağlar. Test sertifikası, ClickOnce uygulamanızı ve dağıtım bildirimlerini imzalamak için kullanılır.
 
- Test **sertifikası oluştur** ' a tıklamak, test sertifikası **Oluştur** iletişim kutusunu açar, burada test sertifikası için tanımlayıcı ad anahtar dosyası için bir parola yazabilirsiniz. Dosya *ProjectName*_TemporaryKey. pfx olarak adlandırılır. Parola yazmadan **Tamam** ' a tıkladığınızda,. pfx dosyası parola şifrelenmez.
+ Test **sertifikası oluştur** ' a tıklamak, test sertifikası **Oluştur** iletişim kutusunu açar, burada test sertifikası için tanımlayıcı ad anahtar dosyası için bir parola yazabilirsiniz. Dosya *projectname*_TemporaryKey. pfx olarak adlandırılır. Parola yazmadan **Tamam** ' a tıkladığınızda,. pfx dosyası parola şifrelenmez.
 
  **Zaman damgası sunucusu URL 'si** kutusu, imzanızın zaman damgasında bir sunucunun adresini belirtir. Bir sertifika sağladığınızda, bu dış site uygulamanın imzalandığı saati doğrular.
 
 ## <a name="assembly-signing"></a>Bütünleştirilmiş kod Imzalama
  **Derlemeyi imzala** onay kutusu, derlemeyi imzalamak ve kesin adlandırılmış anahtar dosyası oluşturmak için bu onay kutusunu işaretleyin. **Proje tasarımcısını**kullanarak derlemeyi imzalama hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir derlemeyi Imzalama (Visual Studio)](https://msdn.microsoft.com/f468a7d3-234c-4353-924d-8e0ae5896564).
 
- Bu seçenek, derlemeyi imzalamak için [!INCLUDE[winsdklong](../../includes/winsdklong-md.md)] tarafından sunulan al. exe aracını kullanır. Al. exe hakkında daha fazla bilgi için bkz. [nasıl yapılır: derlemeyi güçlü bir adla imzalama](https://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67).
+ Bu seçenek, derlemeyi imzalamak için tarafından sunulan Al.exe aracını kullanır [!INCLUDE[winsdklong](../../includes/winsdklong-md.md)] . Al.exe hakkında daha fazla bilgi için bkz. [nasıl yapılır: derlemeyi güçlü bir adla imzalama](https://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67).
 
- **Tanımlayıcı ad anahtar dosyası** listesi, derlemeyi imzalamak için kullanılan yeni veya var olan bir kesin adlandırılmış anahtar dosyası belirtmenize olanak sağlar. **@No__t_1Browse seçin...** mevcut bir anahtar dosyasını seçmek için >.
+ **Tanımlayıcı ad anahtar dosyası** listesi, derlemeyi imzalamak için kullanılan yeni veya var olan bir kesin adlandırılmış anahtar dosyası belirtmenize olanak sağlar. **\<Browse...>** Var olan bir anahtar dosyasını seçmek için seçin.
 
- **@No__t_1New seçin...** derlemenin imzalanmasını sağlayan yeni bir anahtar dosyası oluşturmak için >. Bir anahtar dosya adı belirtmek ve anahtar dosyasını parolayla korumak için kullanabileceğiniz **tanımlayıcı ad anahtarı oluştur** iletişim kutusu görüntülenir. Parola en az 6 karakter uzunluğunda olmalıdır. Bir parola belirtirseniz, kişisel bilgi değişimi (. pfx) dosyası oluşturulur; bir parola belirtmezseniz, kesin adlı bir adlandırılmış anahtar (. snk) dosyası oluşturulur.
+ **\<New...>** Derlemenin imzalanmasını sağlayan yeni bir anahtar dosyası oluşturmayı seçin. Bir anahtar dosya adı belirtmek ve anahtar dosyasını parolayla korumak için kullanabileceğiniz **tanımlayıcı ad anahtarı oluştur** iletişim kutusu görüntülenir. Parola en az 6 karakter uzunluğunda olmalıdır. Bir parola belirtirseniz, kişisel bilgi değişimi (. pfx) dosyası oluşturulur; bir parola belirtmezseniz, kesin adlı bir adlandırılmış anahtar (. snk) dosyası oluşturulur.
 
  **Parola Değiştir** düğmesi, derlemeyi imzalamak Için kullanılan kişisel bilgi değişimi (. pfx) anahtar dosyasının parolasını değiştirir.
 
@@ -74,10 +74,10 @@ Uygulama ve dağıtım bildirimlerini imzalamak ve derlemeyi imzalamak (tanımla
 
  **Yalnızca IMZALAMAYı geciktir** onay kutusu, Gecikmeli imzalamayı etkinleştirmek için bu onay kutusunu işaretleyin.
 
- Bir gecikmeli imzalanmış projenin çalıştırılmadığını ve ayıklanamayacağını unutmayın. Ancak, geliştirme sırasında doğrulamayı atlamak için `-Vr` seçeneğiyle [sn. exe (tanımlayıcı ad aracı)](https://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6) kullanabilirsiniz.
+ Bir gecikmeli imzalanmış projenin çalıştırılmadığını ve ayıklanamayacağını unutmayın. Ancak, geliştirme sırasında doğrulamayı atlama seçeneği ile [Sn.exe (tanımlayıcı ad aracı)](https://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6) kullanabilirsiniz `-Vr` .
 
 > [!NOTE]
 > Bir derlemeyi imzaladığınızda, her zaman bir özel anahtara erişiminiz olmayabilir. Örneğin, bir kuruluş, geliştiricilerin günlük olarak erişimi olmayan, daha yakından korunan bir anahtar çiftine sahip olabilir. Ortak anahtar kullanılabilir olabilir, ancak özel anahtara erişim birkaç bireyle kısıtlıdır. Böyle bir durumda, ortak anahtar sağlamak için *gecikmeli* veya *kısmi imzalamayı* , derleme kullanıma alınana kadar özel anahtarın eklenmesini ertelemeyi de kullanabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Proje Özellikleri başvurusu](../../ide/reference/project-properties-reference.md) [derleme ve bildirim IMZALAMAYı yönetme](../../ide/managing-assembly-and-manifest-signing.md) [yönetilen uygulamalar için tanımlayıcı ad IMZALAMAYı](https://msdn.microsoft.com/5fef3490-c519-4363-94fd-8b1ad260dab5) Imzalama [nasıl yapılır: uygulama ve dağıtım bildirimlerini](../../ide/how-to-sign-application-and-deployment-manifests.md) Imzalama [nasıl yapılır: bir derlemeyi imzalama (Visual Studio)](https://msdn.microsoft.com/f468a7d3-234c-4353-924d-8e0ae5896564) [Nasıl yapılır: tanımlayıcı adı kesin adlandırılmış Derlemelerle bir derlemeyi imzalama](https://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67) [](https://msdn.microsoft.com/library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)
+ [Proje Özellikleri başvurusu](../../ide/reference/project-properties-reference.md) [derleme ve bildirim IMZALAMAYı yönetme](../../ide/managing-assembly-and-manifest-signing.md) [yönetilen uygulamalar için tanımlayıcı ad IMZALAMAYı Imzalama](https://msdn.microsoft.com/5fef3490-c519-4363-94fd-8b1ad260dab5) [: uygulama ve dağıtım bildirimlerini](../../ide/how-to-sign-application-and-deployment-manifests.md) Imzalama nasıl yapılır: [bir derlemeyi imzalama (Visual Studio)](https://msdn.microsoft.com/f468a7d3-234c-4353-924d-8e0ae5896564) [nasıl yapılır: bütünleştirilmiş](https://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67) kodu tanımlayıcı adı [kesin adlandırılmış bütünleştirilmiş kodlar](https://msdn.microsoft.com/library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b) ile imzalama

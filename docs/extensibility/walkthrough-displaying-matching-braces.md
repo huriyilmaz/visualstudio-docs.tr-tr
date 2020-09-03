@@ -11,16 +11,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 65a0bc2c53d5d6e970b4aaa956170bc06c24e7c9
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904848"
 ---
 # <a name="walkthrough-display-matching-braces"></a>İzlenecek yol: eşleşen ayraçları görüntüle
 Eşleştirmek istediğiniz küme ayraçlarını tanımlayarak, parantez eşleştirme ile eşleşen dil tabanlı özellikleri uygulayın ve şapka işareti ayraçlarından birinde olduğunda, eşleşen ayraçların içine bir metin işaretçisi etiketi ekleyin. Bir dilin bağlamında küme ayraçları tanımlayabilir, kendi dosya adı uzantınızı ve içerik türünü tanımlayabilir ve etiketleri yalnızca o türe uygulayabilir ya da etiketleri varolan bir içerik türüne (örneğin "metin") uygulayabilirsiniz. Aşağıdaki izlenecek yol, "metin" içerik türüne parantez ile eşleşen etiketlerin nasıl uygulanacağını gösterir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) projesi oluşturma

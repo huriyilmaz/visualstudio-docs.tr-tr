@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 20daae821191bd5cf8bdb4dbe0f56935f1a85c17
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85468653"
 ---
 # <a name="exe"></a>Exe
@@ -31,9 +31,9 @@ Exe,. exe veya. dll dosyasının genel kapsamını temsil ettiğinden, sözcük 
 |Özellik|Veri türü|Açıklama|
 |--------------|---------------|-----------------|
 |[IDiaSymbol::get_age](../../debugger/debug-interface-access/idiasymbol-get-age.md)|`DWORD`|Bu yürütülebilir dosyanın yaşı.|
-|[IDiaSymbol::get_guid](../../debugger/debug-interface-access/idiasymbol-get-guid.md)|`GUID`|`GUID`Bu yürütülebilir dosya.|
-|[IDiaSymbol::get_isCTypes](../../debugger/debug-interface-access/idiasymbol-get-isctypes.md)|`BOOL`|`TRUE`Bu yürütülebilirle ilişkilendirilen sembol dosyası C türleri içeriyorsa (yalnızca DIA SDK v 8.0 veya üzeri).|
-|[IDiaSymbol::get_isStripped](../../debugger/debug-interface-access/idiasymbol-get-isstripped.md)|`BOOL`|`TRUE`özel semboller bu yürütülebilir dosya ile ilişkili sembol dosyasından çıkarıldı (yalnızca DIA SDK v 8.0 veya üzeri sürümlerde).|
+|[IDiaSymbol::get_guid](../../debugger/debug-interface-access/idiasymbol-get-guid.md)|`GUID`|`GUID` Bu yürütülebilir dosya.|
+|[IDiaSymbol::get_isCTypes](../../debugger/debug-interface-access/idiasymbol-get-isctypes.md)|`BOOL`|`TRUE` Bu yürütülebilirle ilişkilendirilen sembol dosyası C türleri içeriyorsa (yalnızca DIA SDK v 8.0 veya üzeri).|
+|[IDiaSymbol::get_isStripped](../../debugger/debug-interface-access/idiasymbol-get-isstripped.md)|`BOOL`|`TRUE` özel semboller bu yürütülebilir dosya ile ilişkili sembol dosyasından çıkarıldı (yalnızca DIA SDK v 8.0 veya üzeri sürümlerde).|
 |[IDiaSymbol::get_machineType](../../debugger/debug-interface-access/idiasymbol-get-machinetype.md)|`DWORD`|Hedef CPU belirten değer ( [CV_CPU_TYPE_e sabit listesi](../../debugger/debug-interface-access/cv-cpu-type-e.md) değerlerinden biri).|
 |[IDiaSymbol::get_name](../../debugger/debug-interface-access/idiasymbol-get-name.md)|`BSTR`|. Exe dosyasının adı.|
 |[IDiaSymbol::get_signature](../../debugger/debug-interface-access/idiasymbol-get-signature.md)|`DWORD`|Yürütülebilir dosyanın imzası.|

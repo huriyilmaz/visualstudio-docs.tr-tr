@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a1beeef572282a642e4a989086ac0fd228409fec
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586275"
 ---
 # <a name="validate-your-system-during-development"></a>Geliştirme sırasında sisteminizi doğrulama
@@ -30,7 +30,7 @@ Visual Studio, yazılımınızın kullanıcıların gereksinimleriyle ve sistemi
 
 |**Görevler**|**İlişkili Konular**|
 |---------------|---------------------------|
-|**Modelinizin tutarlı olduğundan emin olun:**<br /><br /> Projenizin kullanma ve modelleri yorumlama yönteminize bağlı olarak, bazı öğe birleşimlerine izin vermemek faydalı olabilir. Örneğin, UML sınıflarını, her zaman uyumlu adlara sahip [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)]olacak şekilde kısıtlayabilirsiniz. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Uzantılar gibi kısıtlamalar tanımlayabilirsiniz.|-   [UML modelinizi doğrulama](../modeling/validate-your-uml-model.md)<br />-   [UML modelleri için doğrulama kısıtlamaları tanımlama](../modeling/define-validation-constraints-for-uml-models.md)|
+|**Modelinizin tutarlı olduğundan emin olun:**<br /><br /> Projenizin kullanma ve modelleri yorumlama yönteminize bağlı olarak, bazı öğe birleşimlerine izin vermemek faydalı olabilir. Örneğin, UML sınıflarını, her zaman uyumlu adlara sahip olacak şekilde kısıtlayabilirsiniz [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)] . Uzantılar gibi kısıtlamalar tanımlayabilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .|-   [UML modelinizi doğrulama](../modeling/validate-your-uml-model.md)<br />-   [UML modelleri için doğrulama kısıtlamaları tanımlama](../modeling/define-validation-constraints-for-uml-models.md)|
 |**Yazılımınızın kullanıcıların gereksinimlerini karşıladığından emin olun**:<br /><br /> Sistem ve bileşenlerinin testlerini düzenlemenize yardımcı olması için gereksinimleri ve mimari modelleri kullanabilirsiniz. Bu uygulama, kullanıcılar ve diğer paydaşlar için önemli olan gereksinimleri test etmenize yardımcı olur ve gereksinimler değiştiğinde testleri hızlı bir şekilde güncelleştirmenize yardımcı olur.|-   [Bir modelden testler geliştirme](../modeling/develop-tests-from-a-model.md)|
 |**Yazılımınızın sisteminizin tasarlanan tasarımla tutarlı kaldığından emin olun:**<br /><br /> Katman diyagramları, uygulamanızın bileşenleri arasındaki amaçlanan bağımlılıkları anlatmaktadır. Geliştirme sırasında, koddaki gerçek bağımlılıkların amaçlanan tasarıma uygun olduğunu doğrulayabilirsiniz.|-   [Kodunuzda katman diyagramları oluşturma](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [Katman diyagramları ile kodu doğrulama](../modeling/validate-code-with-layer-diagrams.md)|
 
