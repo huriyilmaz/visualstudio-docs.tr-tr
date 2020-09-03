@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: .NET Framework çalışma zamanını belirtin. | Microsoft Docs'
+title: 'Nasıl yapılır: .NET Framework çalışma zamanını belirtme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,43 +13,43 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2f631e8639c1004fa2cb005da3b6c8bcb27f1a9b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203404"
 ---
-# <a name="how-to-specify-the-net-framework-runtime"></a>Nasıl yapılır: .NET Framework Çalışma Zamanını Belirtme
+# <a name="how-to-specify-the-net-framework-runtime"></a>Nasıl yapılır: .NET Framework çalışma zamanını belirtme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Sürümüyle [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)], uygulamalar oluşan farklı sürümleri kullanılarak derlenmiş modüllerin [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] çalışma zamanı. Varsayılan olarak, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] profil oluşturma araçları, uygulama tarafından yüklenen ilk çalışma zamanı profili. Bir uygulamaya Profil Oluşturucu ile başladığınızda ve profil oluşturucu zaten çalışan bir uygulamaya ekleme yaptığınızda profil için çalışma zamanı belirtebilirsiniz.  
+Sürümü ile [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] , uygulamalar çalışma zamanının farklı sürümleri kullanılarak oluşturulmuş modüllerden oluşabilir [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] . Varsayılan olarak, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uygulama tarafından yüklenen ilk çalışma zamanının profilini profil oluşturma araçları. Profil Oluşturucu ile bir uygulama başlattığınızda ve zaten çalışan bir uygulamaya profil oluşturucu iliştirçalıştığınızda, profil oluşturma zamanını belirtebilirsiniz.  
   
  **Gereksinimler**  
   
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
-### <a name="to-specify-the-net-framework-run-time-to-profile-when-starting-an-application-with-the-profiler"></a>Profil Oluşturucu ile bir uygulama başlatma sırasında .NET Framework çalışma zamanı profili belirtmek için  
+### <a name="to-specify-the-net-framework-run-time-to-profile-when-starting-an-application-with-the-profiler"></a>Profil Oluşturucu ile bir uygulama başlatılırken .NET Framework çalışma zamanını belirlemek için  
   
-1. İçinde **performans Gezgini**, performans oturumu sağ tıklayın, **özellikleri**ve ardından **Gelişmiş**.  
+1. **Performans Gezgini**, performans oturumuna sağ tıklayın, **Özellikler**' e ve ardından **Gelişmiş**' e tıklayın.  
   
-     **Hedef CLR sürümü** liste kutusu görüntüler **otomatik** sürümleri [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] bilgisayarda yüklü çalışma zamanı.  
+     **Hedef CLR sürümü** liste kutusu, **Automatic** [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] bilgisayarda yüklü olan çalışma zamanının otomatik ve sürümlerini görüntüler.  
   
 2. Aşağıdaki adımlardan birini uygulayın:  
   
-    - Profil oluşturmak istediğiniz CLR sürümünü tıklayın.  
+    - Profil eklemek istediğiniz CLR sürümüne tıklayın.  
   
-    - Tıklayın **otomatik** profilini uygulama tarafından yüklenen ilk sürümü.  
+    - Uygulama tarafından yüklenen ilk sürümü profil için **Otomatik** ' e tıklayın.  
   
-### <a name="to-specify-the-net-framework-run-time-to-profile-when-attaching-the-profiler-to-an-application"></a>Bir uygulamaya profil oluşturucu iliştirme ne zaman .NET Framework çalışma zamanı profili belirtmek için  
+### <a name="to-specify-the-net-framework-run-time-to-profile-when-attaching-the-profiler-to-an-application"></a>Profil oluşturucuyu bir uygulamaya eklerken kullanılacak .NET Framework çalışma zamanını belirtmek için  
   
-1. Analiz menüsünde için Profiler gelin ve iliştir/Ayır'ı tıklatın.  
+1. Çözümle menüsünde Profil Oluşturucu ' nın üzerine gelin ve Ekle/ayır ' a tıklayın.  
   
-2. İşlem iletişim kutusu için ekleme Profiler hakkında profil oluşturmak istediğiniz işleme tıklayın.  
+2. Işleme profil oluşturucu Ekle iletişim kutusunda, profil eklemek istediğiniz işleme tıklayın.  
   
-     **Hedef CLR sürümü** liste kutusu s **otomatik** sürümleri [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] bilgisayarda yüklü çalışma zamanı.  
+     **Hedef CLR sürümü** liste kutusu **Otomatik** ve [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] bilgisayarda yüklü olan çalışma zamanının sürümleri.  
   
 3. Aşağıdaki adımlardan birini uygulayın:  
   
-    - Profil oluşturmak istediğiniz CLR sürümünü tıklayın.  
+    - Profil eklemek istediğiniz CLR sürümüne tıklayın.  
   
-    - Tıklayın **otomatik** uygulamaya profil oluşturucu ekler, yüklü sürümle profil için.
+    - Profil Oluşturucu uygulamaya iliştirayarlandığında yüklenen sürümü profil için **Otomatik** ' e tıklayın.

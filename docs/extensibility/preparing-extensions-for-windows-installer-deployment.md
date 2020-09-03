@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 74cfdcaf5b9f9babe9eefed59f1ea62478434e66
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85906158"
 ---
 # <a name="prepare-extensions-for-windows-installer-deployment"></a>Windows Installer dağıtımı için uzantıları hazırlama
@@ -44,7 +44,7 @@ Bir VSıX paketini dağıtmak için bir Windows Installer paketi (MSI) kullanama
 
 ### <a name="to-extract-files-from-an-existing-vsix-package"></a>Mevcut bir VSıX paketinden dosyaları ayıklamak için
 
-1. Yeniden adlandırın *. *Dosya *adı. vsix* ' den *filename.zip*için uzantıyı içeren VSIX dosyası.
+1. Yeniden adlandırın *. * Dosya *adı. vsix* ' den *filename.zip*için uzantıyı içeren VSIX dosyası.
 
 2. *. Zip* dosyasının içeriğini bir dizine kopyalayın.
 

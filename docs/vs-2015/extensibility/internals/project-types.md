@@ -12,60 +12,60 @@ caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e32778e6c1ab82eddb50bbac1e79430d827716e3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203256"
 ---
 # <a name="project-types"></a>Proje Türleri
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Proje birden fazla dil için APIleri içerir [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ve [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Ayrıca, kendi proje türleri oluşturmanızı sağlar.  
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , ve gibi diller için birçok proje türü [!INCLUDE[csprcs](../../includes/csprcs-md.md)] içerir [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Ayrıca kendi proje türlerinizi oluşturmanıza imkan tanır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Temel Bileşenler](../../extensibility/internals/project-type-essentials.md)  
- Proje türleriyle çalışmaya başlamak için gereken önemli bilgiler sunulmuştur.  
+ [Essentials](../../extensibility/internals/project-type-essentials.md)  
+ Proje türleriyle çalışmaya başlamak için sahip olmanız gereken önemli bilgileri gösterir.  
   
  [Proje Türleri Oluşturma](../../extensibility/internals/creating-project-types.md)  
- Proje türleri tasarımı açıklanır.  
+ Proje türlerinin tasarımını açıklar.  
   
  [Çözüm Gezgini Araç Çubuğuna Komut Ekleme](../../extensibility/adding-a-command-to-the-solution-explorer-toolbar.md)  
- Düğme eklemek için izlemeniz gereken adımları ayrıntılı [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Çözüm Gezgini** araç çubuğu.  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Çözüm Gezgini** araç çubuğuna bir düğme eklemek için izlemeniz gereken adımların ayrıntılarına bakın.  
   
- [Proje sistemleri için Web Hizmetleri ekleme](../../misc/adding-web-services-to-project-systems.md)  
- VSPackage proje sisteminizi Web Hizmetleri Tümleştirme işlemi açıklanır.  
+ [Proje sistemlerine Web Hizmetleri ekleme](../../misc/adding-web-services-to-project-systems.md)  
+ Web hizmetlerinin VSPackage proje sisteminizle nasıl tümleştirileceğini gösterir.  
   
- [Yeniden adlandırma proje hiyerarşisi düğümleri (C++)](../../misc/renaming-project-hierarchy-nodes-cpp.md)  
- Proje klasör hiyerarşisi düğümü yeniden adlandırma işlemi gösterilmektedir.  
+ [Proje hiyerarşisi düğümlerini yeniden adlandırma (C++)](../../misc/renaming-project-hierarchy-nodes-cpp.md)  
+ Proje klasörü hiyerarşisi düğümünün nasıl yeniden adlandırılacağı gösterir.  
   
  [Proje ve Proje Öğesi Şablonları Ekleme](../../extensibility/internals/adding-project-and-project-item-templates.md)  
- Kullanıcılar yeni projeleri ve proje öğeleri bir düzen göre oluşturabilmeniz nasıl şablonları için proje türleri ekleyebileceğinizi açıklar.  
+ Kullanıcıların bir modele göre yeni projeler ve proje öğeleri oluşturabilmesi için proje türlerinizi nasıl şablon ekleyebileceğiniz açıklanmaktadır.  
   
  [Proje Öğelerini Açma ve Kaydetme](../../extensibility/internals/opening-and-saving-project-items.md)  
- Proje türünü destekleyen öğeleri yönetme hakkında bilgi sağlar.  
+ Proje türü tarafından desteklenen öğelerin nasıl yönetileceği hakkında bilgi sağlar.  
   
  [Yapılandırma Seçeneklerini Yönetme](../../extensibility/internals/managing-configuration-options.md)  
- Proje türleri, hata ayıklama ve hata ayıklama, denetlemek nasıl projeler oluşturulur, sürüm ve benzeri gibi yapılandırma seçeneklerini nasıl destekleyebileceğini açıklanır.  
+ Proje türlerinizi, projelerin nasıl oluşturulduğunu, ayıklanamayacağını ve bu şekilde çalıştığını denetleyen hata ayıklama ve sürüm gibi yapılandırma seçeneklerini nasıl destekleyebileceğinizi açıklar.  
   
  [Kaynak Denetimini Destekleme](../../extensibility/internals/supporting-source-control.md)  
- İçin proje türleri kaynak denetimi sistemleri için destek ekleme hakkında bilgi sağlar.  
+ Proje türleriniz için kaynak denetimi sistemleri desteğinin nasıl ekleneceği hakkında bilgi sağlar.  
   
  [Projeleri İç İçe Geçirme](../../extensibility/internals/nesting-projects.md)  
- Proje türleri nasıl destekleyebileceğini açıklar *iç içe geçme*, böylece projeleri içinde birlikte gruplandırılabilir **Çözüm Gezgini**.  
+ Proje türlerinizi *iç içe geçirmeyi*nasıl destekleyebileceğini açıklar, böylece projeler **Çözüm Gezgini**birlikte gruplandırılabilir.  
   
  [Projeleri Yükseltme](../../extensibility/internals/upgrading-projects.md)  
- Proje türünüzü proje dosyaları önceki bir sürümünü yükseltmek için Yükseltme Sihirbazı nasıl katılmak açıklar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ Proje türlerini, daha önceki bir sürümünden proje dosyalarını yükseltmek için Yükseltme Sihirbazına nasıl katılabileceğinizi açıklar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
  [Mimari](../../extensibility/internals/project-types-architecture.md)  
- Proje türleri hakkında teknik bilgi sağlar.  
+ Proje türleri hakkında ayrıntılı teknik bilgi sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Hiyerarşiler ve Seçim](../../extensibility/internals/hierarchies-and-selection.md)  
- Bir genel bakış nasıl sağlanır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE) proje bir hiyerarşi olarak görüntüler.  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Tümleşik geliştirme ortamının (IDE) bir projeyi hiyerarşi olarak nasıl görüntülediğini gösteren bir genel bakış sağlar.  
   
  [Proje Alt Türleri](../../extensibility/internals/project-subtypes.md)  
- Proje alt konuları için bağlantılar sağlar. Proje alt türleri dahil olmak üzere kendi proje türlerinin çoğu tür uzantısı etkinleştirin.  
+ Project Subtype 'a bağlantılar sağlar. Proje alt türleri, kendi dahil olmak üzere çoğu proje türü uzantısını etkinleştirir.  
   
  [Projeler](../../extensibility/internals/projects.md)  
- Nasıl genişletileceğini açıklar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] proje sistemi.
+ Proje sisteminin nasıl genişletileceğini açıklar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .

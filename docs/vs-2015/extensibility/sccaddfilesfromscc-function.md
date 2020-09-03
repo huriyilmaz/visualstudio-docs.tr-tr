@@ -1,5 +1,5 @@
 ---
-title: SccAddFilesFromSCC işlevi | Microsoft Docs
+title: SccAddFilesFromSCC Işlevi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d5af748c9180644cae928d1b6db3a3f880b6b286
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200915"
 ---
 # <a name="sccaddfilesfromscc-function"></a>SccAddFilesFromSCC İşlevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu işlev, kaynak denetiminden dosyaların listesini açık projeye ekler.  
+Bu işlev, kaynak denetiminden açık olan projeye bir dosya listesi ekler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 SCCRTN SccAddFilesFromSCC(  
@@ -42,40 +42,40 @@ SCCRTN SccAddFilesFromSCC(
   
 #### <a name="parameters"></a>Parametreler  
  pContext  
- [in] Kaynak Denetimi Eklentisi bağlam işaretçisi.  
+ 'ndaki Kaynak denetimi eklentisi bağlam işaretçisi.  
   
- hWnd  
- [in] Kaynak Denetimi Eklentisi sağladığı herhangi bir iletişim kutusu için bir üst öğe olarak kullanabileceğiniz IDE penceresi için bir tanıtıcı.  
+ lendiği  
+ 'ndaki Kaynak denetimi eklentisinin, sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi için bir işleyici.  
   
  lpUser  
- [out içinde] Kullanıcı adı (en fazla SCC_USER_SIZE, null sonlandırıcıyı da dahil olmak üzere).  
+ [in, out] Kullanıcı adı (en fazla SCC_USER_SIZE, null Sonlandırıcı dahil).  
   
  lpAuxProjPath  
- [out içinde] Proje tanımlayan yardımcı dize (en fazla `SCC_PRJPATH_`BOYUTU, null sonlandırıcıyı da dahil olmak üzere).  
+ [in, out] Projeyi tanımlayan yardımcı dize ( `SCC_PRJPATH_` null Sonlandırıcı dahil olmak üzere).  
   
  cFiles  
- [in] Tarafından verilen dosya sayısı `lpFilePaths`.  
+ 'ndaki Tarafından verilen dosya sayısı `lpFilePaths` .  
   
  lpFilePaths  
- [out içinde] Geçerli projeye eklemek için dosya adları dizisi.  
+ [in, out] Geçerli projeye eklenecek dosya adları dizisi.  
   
  lpDestination  
- [in] Yazılacak dosyalar nerede hedef yolu.  
+ 'ndaki Dosyaların yazılacağı hedef yol.  
   
- lpComment  
- [in] Eklenmekte olan dosyalar her öğesine uygulanması için açıklama.  
+ lpComment açıklaması  
+ 'ndaki Eklenmekte olan her bir dosyaya uygulanacak yorum.  
   
  pbResults  
- [out içinde] Başarılı (sıfır olmayan veya TRUE) olduğunu belirtmek için set ya da hata bayrakları dizisi (sıfır ya da FALSE) her dosya için (dizinin boyutu en az olmalıdır `cFiles` uzun).  
+ [in, out] Her dosya için başarı (sıfır olmayan veya doğru) veya hata (sıfır veya yanlış) göstermek için ayarlanan bayrakların dizisi (dizinin boyutu en az bir olmalıdır `cFiles` ).  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Kaynak Denetimi Eklentisi uygulanması bu işlev, aşağıdaki değerlerden birini döndürmesi beklenir:  
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |SCC_E_PROJNOTOPEN|Proje açık değil.|  
-|SCC_E_OPNOTPERFORMED|Bağlantı tarafından belirtildiği gibi aynı projeye değil `lpAuxProjPath.`|  
-|SCC_E_NOTAUTHORIZED|Veritabanını güncellemek için kullanıcı yetkili değil.|  
+|SCC_E_OPNOTPERFORMED|Bağlantı, tarafından belirtilen projede değil `lpAuxProjPath.`|  
+|SCC_E_NOTAUTHORIZED|Kullanıcının veritabanını güncelleştirme yetkisi yok.|  
 |SCC_E_NONSPECIFICERROR|Bilinmeyen hata.|  
 |SCC_I_RELOADFILE|Bir dosya veya projenin yeniden yüklenmesi gerekiyor.|  
   

@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 989367d395abb56e4f57c4aa2694b5f4ef17fb6e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74300873"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>Nasıl yapılır: Etki Alanına Özgü bir Dilde Standart Menü Komutunu Değiştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-DSL 'niz içinde otomatik olarak tanımlanan bazı standart komutlardan oluşan davranışı değiştirebilirsiniz. Örneğin, hassas bilgileri dışladığı için **kesmeyi** değiştirebilirsiniz. Bunu yapmak için, komut kümesi sınıfındaki yöntemleri geçersiz kılabilirsiniz. Bu sınıflar, DslPackage projesindeki CommandSet.cs dosyasında tanımlanır ve <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>türetilir.
+DSL 'niz içinde otomatik olarak tanımlanan bazı standart komutlardan oluşan davranışı değiştirebilirsiniz. Örneğin, hassas bilgileri dışladığı için **kesmeyi** değiştirebilirsiniz. Bunu yapmak için, komut kümesi sınıfındaki yöntemleri geçersiz kılabilirsiniz. Bu sınıflar, DslPackage projesindeki CommandSet.cs dosyasında tanımlanır ve öğesinden türetilir <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> .
 
  Özet ' te, bir komutu değiştirmek için:
 
@@ -37,15 +37,15 @@ DSL 'niz içinde otomatik olarak tanımlanan bazı standart komutlardan oluşan 
 > [!NOTE]
 > Kendi Menü komutlarınızı oluşturmak isterseniz, bkz. [nasıl yapılır: kısayol menüsüne komut ekleme](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).
 
-## <a name="what"></a>Hangi komutlara değişiklik yapabilirsiniz?
+## <a name="what-commands-can-you-modify"></a><a name="what"></a> Hangi komutlara değişiklik yapabilirsiniz?
 
 #### <a name="to-discover-what-commands-you-can-modify"></a>Değiştirebileceğiniz komutları öğrenmek için
 
-1. `DslPackage` projesinde, `GeneratedCode\CommandSet.cs`açın. Bu C# dosya, `CommandSet.tt`bir yan kuruluşu olarak Çözüm Gezgini bulunabilir.
+1. `DslPackage`Projesinde öğesini açın `GeneratedCode\CommandSet.cs` . Bu C# dosyası, ' ın bir yan kuruluşu olarak Çözüm Gezgini bulunabilir `CommandSet.tt` .
 
-2. Bu dosyada adları "`CommandSet`" ile biten, örneğin `Language1CommandSet` ve `Language1ClipboardCommandSet`olan sınıfları bulun.
+2. Adları "" ile biten bu dosyadaki sınıfları bulur `CommandSet` , örneğin `Language1CommandSet` ve `Language1ClipboardCommandSet` .
 
-3. Her komut kümesi sınıfında, "`override`" yazın ve ardından bir boşluk girin. IntelliSense, geçersiz kılabileceğiniz yöntemlerin bir listesini gösterir. Her komutun adları "`ProcessOnStatus`" ve "`ProcessOnMenu`" başlayan bir çift yöntemi vardır.
+3. Her komut kümesi sınıfında, "" yazın ve `override` ardından bir boşluk girin. IntelliSense, geçersiz kılabileceğiniz yöntemlerin bir listesini gösterir. Her komutun adı " `ProcessOnStatus` " ve "" olan bir çift yöntemi vardır `ProcessOnMenu` .
 
 4. Komut kümesi sınıflarından hangilerinin değiştirmek istediğiniz komutu içerdiğini göz önünde görürsünüz.
 
@@ -54,7 +54,7 @@ DSL 'niz içinde otomatik olarak tanımlanan bazı standart komutlardan oluşan 
     > [!NOTE]
     > Normalde, oluşturulan dosyaları düzenlememelisiniz. Dosyaların bir sonraki oluşturulışında tüm düzenlemeler kaybedilir.
 
-## <a name="extend"></a>Uygun komut kümesi sınıfını Genişlet
+## <a name="extend-the-appropriate-command-set-class"></a><a name="extend"></a> Uygun komut kümesi sınıfını Genişlet
  Komut kümesi sınıfının kısmi bildirimini içeren yeni bir dosya oluşturun.
 
 #### <a name="to-extend-the-command-set-class"></a>Komut kümesi sınıfını genişletmek için
@@ -65,7 +65,7 @@ DSL 'niz içinde otomatik olarak tanımlanan bazı standart komutlardan oluşan 
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. **DslPackage**' de, **özel kod**adlı bir klasör oluşturun. Bu klasörde, `CommandSet.cs`adlı yeni bir sınıf dosyası oluşturun.
+2. **DslPackage**' de, **özel kod**adlı bir klasör oluşturun. Bu klasörde adlı yeni bir sınıf dosyası oluşturun `CommandSet.cs` .
 
 3. Yeni dosyada, oluşturulan kısmi sınıfla aynı ad alanına ve ada sahip kısmi bir bildirim yazın. Örneğin:
 
@@ -79,8 +79,8 @@ DSL 'niz içinde otomatik olarak tanımlanan bazı standart komutlardan oluşan 
 
      **Göz önünde** Yeni dosyayı oluşturmak için sınıf dosya şablonunu kullandıysanız, hem ad alanını hem de sınıf adını düzeltmeniz gerekir.
 
-## <a name="override"></a>Komut yöntemlerini geçersiz kılın
- Çoğu komutun iki ilişkili yöntemi vardır: `ProcessOnStatus`gibi bir ada sahip yöntem... komutun görünür ve etkin olup olmayacağını belirler. Kullanıcı diyagrama sağ tıkladığında çağrılır ve hızlı bir şekilde yürütülecektir ve hiçbir değişiklik yapmamalıdır. `ProcessOnMenu`... Kullanıcı komuta tıkladığında çağrılır ve komutun işlevini gerçekleştirmesi gerekir. Bu yöntemlerin birini ya da her ikisini de geçersiz kılmak isteyebilirsiniz.
+## <a name="override-the-command-methods"></a><a name="override"></a> Komut yöntemlerini geçersiz kılın
+ Çoğu komutun iki ilişkili yöntemi vardır:... gibi bir ada sahip Yöntem `ProcessOnStatus` komutun görünür ve etkin olup olmayacağını belirler. Kullanıcı diyagrama sağ tıkladığında çağrılır ve hızlı bir şekilde yürütülecektir ve hiçbir değişiklik yapmamalıdır. `ProcessOnMenu`... Kullanıcı komuta tıkladığında çağrılır ve komutun işlevini gerçekleştirmesi gerekir. Bu yöntemlerin birini ya da her ikisini de geçersiz kılmak isteyebilirsiniz.
 
 ### <a name="to-change-when-the-command-appears-on-a-menu"></a>Komutun bir menüde göründüğü zaman değiştirmek için
  ProcessOnStatus öğesini geçersiz kıl... yöntemidir. Bu yöntem, parametrenin MenuCommand öğesinin Visible ve Enabled özelliklerini ayarlamanız gerekir. Genellikle komut buna bakar. Geçerli seçim komutun seçili öğelere uygulanıp uygulanmadığını belirleme ve ayrıca, komutun geçerli durumunda uygulanıp uygulanamayacağını tespit etmek için özelliklerine de bakabilirler.
@@ -138,17 +138,17 @@ protected override void ProcessOnMenuDeleteCommand()
 
 - `this.CurrentSelection`. Kullanıcının sağ tıklamış olduğu şekil, bu şekil ve bağlayıcılar listesine her zaman dahildir. Kullanıcı diyagramın boş bir kısmına tıkladığında diyagram, listenin tek üyesidir.
 
-- Kullanıcı diyagramın boş bir bölümüne tıklandığı `true`  - `this.IsDiagramSelected()`.
+- `this.IsDiagramSelected()` - `true` Kullanıcı diyagramın boş bir kısmına tıklamıştır.
 
 - `this.IsCurrentDiagramEmpty()`
 
-- `this.IsSingleSelection()`-Kullanıcı birden çok şekil seçmedi
+- `this.IsSingleSelection()` -Kullanıcı birden çok şekil seçmedi
 
-- `this.SingleSelection`-kullanıcıya sağ tıklamış olan şekil veya diyagram
+- `this.SingleSelection` -kullanıcıya sağ tıklamış olan şekil veya diyagram
 
-- `shape.ModelElement as MyLanguageElement`-bir şekil tarafından temsil edilen model öğesi.
+- `shape.ModelElement as MyLanguageElement` -bir şekil tarafından temsil edilen model öğesi.
 
   Öğesinden öğeye nasıl gidebileceğiniz ve nesnelerin ve bağlantıların nasıl oluşturulacağı hakkında daha fazla bilgi için bkz. [Program kodundaki bir modeli gezinme ve güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [bir etki alanına özgü dil özelleştirmek Için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md) <xref:System.ComponentModel.Design.MenuCommand> [nasıl yapılır: kısayol menüsüne komut ekleme](../modeling/how-to-add-a-command-to-the-shortcut-menu.md) [Izlenecek yol: seçili bağlantılardan bilgileri alma](../misc/walkthrough-getting-information-from-a-selected-link.md) [VSPackages Kullanıcı arabirimi öğeleri ekleme](../extensibility/internals/how-vspackages-add-user-interface-elements.md) [Visual Studio komut tablosu (. Vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md) [VSCT XML şema başvurusu](../extensibility/vsct-xml-schema-reference.md)
+ <xref:System.ComponentModel.Design.MenuCommand>[Etki alanına özgü dil özelleştirmek Için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md) [nasıl yapılır: kısayol menüsüne komut ekleme](../modeling/how-to-add-a-command-to-the-shortcut-menu.md) [Izlenecek yol: seçili bağlantılardan bilgileri alma](../misc/walkthrough-getting-information-from-a-selected-link.md) [VSPackages Kullanıcı arabirimi öğeleri ekleme](../extensibility/internals/how-vspackages-add-user-interface-elements.md) [Visual Studio komut tablosu (. Vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md) [VSCT XML şema başvurusu](../extensibility/vsct-xml-schema-reference.md)

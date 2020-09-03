@@ -1,7 +1,7 @@
 ---
-title: Visual Studio Team Explorer 2017 iş yükü ve bileşen ilikleri
+title: Visual Studio Takım Gezgini 2017 iş yükü ve bileşen kimlikleri
 titleSuffix: ''
-description: Generalist test edenler için tümleşik test araçları sağlamak için Visual Studio iş yükünü ve bileşen dalgınlarını kullanın
+description: Visual Studio iş yükünü ve bileşen kimliklerini kullanarak generaldıst test ediciler için tümleşik test araçları sağlayın
 keywords: ''
 author: ornellaalt
 ms.author: ornella
@@ -11,29 +11,29 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
 ms.openlocfilehash: 986186c0fb4a6819d85f9b3771d89eeb6d96e893
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76158917"
 ---
-## <a name="visual-studio-core-editor-included-with-visual-studio-team-explorer-2017"></a>Visual Studio çekirdek editörü (Visual Studio Team Explorer 2017 dahil)
+## <a name="visual-studio-core-editor-included-with-visual-studio-team-explorer-2017"></a>Visual Studio çekirdek Düzenleyicisi (Visual Studio Takım Gezgini 2017 ile birlikte)
 
-**Kimlik Numarası:** Microsoft.VisualStudio.Workload.CoreEditor
+**Kimliği:** Microsoft. VisualStudio. Workload. CoreEditor
 
-**Açıklama:** Sözdizime duyarlı kod düzenleme, kaynak kodu denetimi ve iş öğesi yönetimi de dahil olmak üzere Visual Studio çekirdek kabuk deneyimi.
+**Açıklama:** Sözdizimi kullanan kod düzenlemesi, kaynak kodu denetimi ve iş öğesi yönetimi de dahil olmak üzere Visual Studio Core kabuğu deneyimi.
 
-### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından dahil edilen bileşenler
+### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen Kimliği | Adı | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
-Microsoft.VisualStudio.Component.CoreEditor | Visual Studio çekirdek editörü | 15.8.27729.1 | Gerekli
-Microsoft.VisualStudio.Component.StartPageExperiment.Cpp | C++ Kullanıcıları için Visual Studio Başlangıç Sayfası | 15.0.27128.1 | İsteğe bağlı
+Microsoft. VisualStudio. Component. CoreEditor | Visual Studio temel Düzenleyicisi | 15.8.27729.1 | Gerekli
+Microsoft. VisualStudio. Component. Startpagedenemeler. cpp | C++ kullanıcıları için Visual Studio başlangıç sayfası | 15.0.27128.1 | İsteğe Bağlı
 
-## <a name="unaffiliated-components"></a>Bağlı olmayan bileşenler
+## <a name="unaffiliated-components"></a>Bağlantılı olmayan bileşenler
 
-Bunlar, iş yüküne dahil olmayan, ancak tek bir bileşen olarak seçilebilen bileşenlerdir.
+Bunlar herhangi bir iş yüküne dahil olmayan, ancak tek bir bileşen olarak seçilebilir olan bileşenlerdir.
 
-Bileşen Kimliği | Adı | Sürüm
+Bileşen KIMLIĞI | Name | Sürüm
 --- | --- | ---
 yok | yok | yok

@@ -1,5 +1,5 @@
 ---
-title: marker_series::write_alert yöntemi | Microsoft Docs
+title: 'marker_series:: write_alert yöntemi | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d65bec449938a55ee9a415dd86db1ba07efbdb1b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200770"
 ---
-# <a name="markerserieswritealert-method"></a>marker_series::write_alert Yöntemi
+# <a name="marker_serieswrite_alert-method"></a>marker_series::write_alert Yöntemi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir uyarı eşzamanlılık görselleştiricisi izleme dosyasına yazar.  
+Eşzamanlılık görselleştiricisi izleme dosyasına bir uyarı yazar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```  
 void write_alert(  
@@ -36,12 +36,12 @@ void write_alert(
   
 #### <a name="parameters"></a>Parametreler  
  `_Format`  
- Bağımsız değişken listesindeki nesnelere karşılık gelen sıfır veya daha fazla biçim öğeleri ile karıştırılmış, metin içeren bir bileşik biçimlendirme dizesi.  
+ Bağımsız değişken listesindeki nesnelere karşılık gelen sıfır veya daha fazla biçim öğesiyle metin içeren bir bileşik biçim dizesi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** cvmarkersobj.h  
+ **Üst bilgi:** cvmarkersobj. h  
   
- **Namespace:** CONCURRENCY::Diagnostic  
+ **Ad alanı:** Eşzamanlılık::d ıagstik  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [marker_series Sınıfı](../profiling/marker-series-class.md)

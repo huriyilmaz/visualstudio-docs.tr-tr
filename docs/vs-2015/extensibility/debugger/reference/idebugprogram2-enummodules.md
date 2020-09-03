@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::EnumModules | Microsoft Docs
+title: 'IDebugProgram2:: EnumModules | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c5e133045c83b62892850ede552d1f9cfd886506
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202747"
 ---
 # <a name="idebugprogram2enummodules"></a>IDebugProgram2::EnumModules
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu program yüklendi ve yürütülmekte olan modülleri listesini alır.  
+Bu programın yüklediği ve yürütüldüğü modüllerin listesini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT EnumModules(   
@@ -40,13 +40,13 @@ int EnumModules( 
   
 #### <a name="parameters"></a>Parametreler  
  `ppEnum`  
- [out] Döndürür bir [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md) modüllerin listesini içeren nesne.  
+ dışı Modüllerin listesini içeren bir [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir modülün bir DLL veya derleme ve genellikle listelenen **modülleri** hata ayıklama penceresine.  
+ Modül bir DLL veya derlemedir ve genellikle **modüller** hata ayıklama penceresinde listelenir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   

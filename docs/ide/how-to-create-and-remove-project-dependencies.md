@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ad21aeae2d348f56cb722365cd1e2ded249bbefe
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85284470"
 ---
 # <a name="how-to-create-and-remove-project-dependencies"></a>Nasıl yapılır: Proje bağımlılıklarını oluşturma ve kaldırma
@@ -64,6 +64,6 @@ Birden fazla proje içeren bir çözüm oluştururken, diğer projeler tarafınd
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio 'da projeler ve çözümler oluşturma ve Temizleme](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
-- [Derle ve derle](../ide/compiling-and-building-in-visual-studio.md)
+- [Derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md)
 - [Derleme yapılandırmalarını anlama](../ide/understanding-build-configurations.md)
 - [Proje ve çözüm özelliklerini yönetme](managing-project-and-solution-properties.md)

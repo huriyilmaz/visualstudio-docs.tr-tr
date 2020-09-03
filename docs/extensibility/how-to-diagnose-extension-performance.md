@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - bertaygu
 ms.openlocfilehash: 542d8a6d6d90091aa7a800ef18f847fea6b1a81c
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905905"
 ---
 # <a name="measuring-extension-impact-in-startup"></a>Başlangıçta uzantı etkisini ölçme

@@ -1,5 +1,5 @@
 ---
-title: '8\. Adım: testi özelleştirme | Microsoft Docs'
+title: '8. Adım: testi özelleştirme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,22 +10,22 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ded65e85a2ae11e96c21fdd852ea12daa4bbcdf4
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74299989"
 ---
-# <a name="step-8-customize-the-quiz"></a>8\. Adım: Testi Özelleştirme
+# <a name="step-8-customize-the-quiz"></a>8. Adım: Testi Özelleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Öğreticinin son bölümünde, testi özelleştirmenin ve daha önce öğrendiklerinizi genişletmenin bazı yollarını keşfedeceksiniz. Örneğin, programın yanıtın hiç bir kesir olmadığı rastgele bölüm sorunları nasıl oluşturduğunu düşünün. Daha fazla bilgi edinmek için `timeLabel` denetimini farklı bir renkle açın ve sınava ipucu sunun.
+Öğreticinin son bölümünde, testi özelleştirmenin ve daha önce öğrendiklerinizi genişletmenin bazı yollarını keşfedeceksiniz. Örneğin, programın yanıtın hiç bir kesir olmadığı rastgele bölüm sorunları nasıl oluşturduğunu düşünün. Daha fazla bilgi edinmek için, `timeLabel` denetimi farklı bir renk yapın ve sınava ipucu sunun.
 
 ### <a name="to-customize-the-quiz"></a>Testi özelleştirmek için
 
-- Bir test içinde yalnızca beş saniye kaldığında, **BackColor** özelliğini (`timeLabel.BackColor = Color.Red;`) ayarlayarak **timeLabel** denetimini kırmızı olarak açın. Test üzerindeyken rengi sıfırlayın.
+- Bir test içinde yalnızca beş saniye kaldığında, **BackColor** özelliğini () ayarlayarak **timeLabel** denetimini kırmızı olarak açın `timeLabel.BackColor = Color.Red;` . Test üzerindeyken rengi sıfırlayın.
 
-- Bir NumericUpDown denetimine doğru yanıt girildiğinde, bir sesi oynatarak sınava ipucu sunun. (Her denetimin `ValueChanged()` olayı için bir olay işleyicisi yazmanız gerekir ve bu, her bir test, denetimin değerini değiştirdiğinde ateşlenir.)
+- Bir NumericUpDown denetimine doğru yanıt girildiğinde, bir sesi oynatarak sınava ipucu sunun. (Her denetim olayı için bir olay işleyicisi yazmanız gerekir ve bu, her bir `ValueChanged()` test, denetimin değerini değiştirdiğinde harekete geçirilir.)
 
 ### <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 

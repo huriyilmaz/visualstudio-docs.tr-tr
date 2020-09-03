@@ -18,28 +18,28 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7b4a6cca4010284c9a75767710710d28c093c271
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203104"
 ---
 # <a name="stoptrackingandcleanup"></a>StopTrackingAndCleanup
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tüm izleme durdurur ve izleme oturumu tarafından kullanılan belleği serbest bırakır.  
+Tüm izlemeyi durduruyor ve izleme oturumu tarafından kullanılan belleği serbest bırakır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 HRESULT WINAPI StopTrackingAndCleanup(void);  
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- [HRESULT] (döndürür<!-- TODO: review code entity reference <xref:assetId:///HRESULT?qualifyHint=False&amp;autoUpgrade=True>  -->) [başarılı] () ile<!-- TODO: review code entity reference <xref:assetId:///SUCCEEDED?qualifyHint=False&amp;autoUpgrade=True>  -->) izleme durduruldu durumunda biti ayarlanmamış.  
+ Bir [HRESULT] döndürür (<!-- TODO: review code entity reference <xref:assetId:///HRESULT?qualifyHint=False&amp;autoUpgrade=True>  -->) ile [başarılı] (<!-- TODO: review code entity reference <xref:assetId:///SUCCEEDED?qualifyHint=False&amp;autoUpgrade=True>  -->) izleme durdurulmuşsa bit ayarlanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** FileTracker.h  
+ **Üst bilgi:** FileTracker. h  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [StartTrackingContext](../msbuild/starttrackingcontext.md)

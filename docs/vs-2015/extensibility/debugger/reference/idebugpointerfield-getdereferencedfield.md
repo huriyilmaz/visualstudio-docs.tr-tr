@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerField::GetDereferencedField | Microsoft Docs
+title: 'Ihata ayıklama Gpoınterfield:: Getbaşvurunun Encedfield | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 02197f660189d4caf374fc5927f349fd5fc6b8b5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68201018"
 ---
 # <a name="idebugpointerfieldgetdereferencedfield"></a>IDebugPointerField::GetDereferencedField
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu yöntem, bu işaretçi nesnesinin işaret ettiği nesnenin türü döndürür.  
+Bu yöntem, bu işaretçi nesnesinin işaret ettiği nesne türünü döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetDereferencedField(  
@@ -40,14 +40,14 @@ int GetDereferencedField(
   
 #### <a name="parameters"></a>Parametreler  
  `ppField`  
- [out] Döndürür bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) açıklayan hedef nesnenin türü.  
+ dışı Hedef nesnenin türünü açıklayan bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Örneğin, bir IF [IDebugPointerField](../../../extensibility/debugger/reference/idebugpointerfield.md) nesneyi işaret eden bir tamsayıya [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) bu yöntem tarafından döndürülen tür, tamsayı türü açıklar.  
+ Örneğin, [ıdebuggpoınterfield](../../../extensibility/debugger/reference/idebugpointerfield.md) nesnesi bir tamsayıya işaret ediyorsa, bu yöntem tarafından döndürülen [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) türü bu tamsayı türünü açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [IDebugPointerField](../../../extensibility/debugger/reference/idebugpointerfield.md)   
+ [Ihata ayıklama Gpoınterfield](../../../extensibility/debugger/reference/idebugpointerfield.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

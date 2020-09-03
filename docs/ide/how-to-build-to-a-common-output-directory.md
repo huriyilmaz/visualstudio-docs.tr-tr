@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9a499b5ca5ea64dd9ded10f82b1af43258f346d3
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85284782"
 ---
 # <a name="how-to-build-to-a-common-output-directory"></a>Nasıl yapılır: ortak bir çıkış dizinine derleme
@@ -36,5 +36,5 @@ Varsayılan olarak, çözüm içindeki [!INCLUDE[vsprvs](../code-quality/include
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derle ve derle](../ide/compiling-and-building-in-visual-studio.md)
+- [Derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md)
 - [Nasıl yapılır: derleme çıkış dizinini değiştirme](../ide/how-to-change-the-build-output-directory.md)

@@ -8,10 +8,10 @@ ms.date: 04/20/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen beyaz kaynak sürgüsü aboneliğini nasıl etkinleştireceğinizi öğrenin.
 ms.openlocfilehash: 3bdd71615d0dff19cd1d05dfca91041ae531a6f1
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85906006"
 ---
 # <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde beyaz kaynak sürgüsü
@@ -28,7 +28,7 @@ Açık kaynak güvenlik açıklarını bulup düzeltir ve derinizdeki tüm açı
 
 3. Etkinleştirme kodunuzu görüntüleyen bir bildirim alırsınız.  **Kodu panonuza kopyalayın**ve ardından **Etkinleştir**' e tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Beyaz kaynak avantajı kodu](_img/vs-whitesource/vs-whitesource-code.png)
+   > ![Beyaz kaynak avantajı kodu ](_img/vs-whitesource/vs-whitesource-code.png)
 
 4. **Hesabınızı etkinleştirin** sayfasında, 1. adımdaki **Install** bağlantısına tıklayın.
 5. Visual Studio Market **ücretsiz alın** ' a tıklayın.
@@ -57,7 +57,7 @@ Açık kaynak güvenlik açıklarını bulup düzeltir ve derinizdeki tüm açı
 > Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) Visual Studio 'yu satın almaya yönelik farklı seçeneklere göz atın.
 
 ## <a name="support-resources"></a>Destek kaynakları
-- Beyaz kaynak sürgüsü ile ilgili yardım mı gerekiyor?  Beyaz kaynaklı bir Cıvatiyle sohbet edinhttps://www.whitesourcesoftware.com/vse_whitesource_bolt/
+- Beyaz kaynak sürgüsü ile ilgili yardım mı gerekiyor?  Beyaz kaynaklı bir Cıvatiyle sohbet edin https://www.whitesourcesoftware.com/vse_whitesource_bolt/
 - Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 

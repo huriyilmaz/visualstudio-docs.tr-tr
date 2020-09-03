@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Metin görünümünü özelleştirme | Microsoft Docs'
+title: 'İzlenecek yol: metin görünümünü özelleştirme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,87 +11,87 @@ caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e96bb177d3cfa90b2c80304eabfd93d1bea76d5b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202019"
 ---
-# <a name="walkthrough-customizing-the-text-view"></a>İzlenecek yol: Metin Görünümünü Özelleştirme
+# <a name="walkthrough-customizing-the-text-view"></a>İzlenecek Yol: Metin Görünümünü Özelleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir metin görünümünü kendi Düzenleyicisi biçim eşlemesi şu özelliklerde değiştirerek özelleştirebilirsiniz:  
+Bir metin görünümünü, düzenleyici biçimindeki haritada aşağıdaki özelliklerden birini değiştirerek özelleştirebilirsiniz:  
   
-- Belirteç kenar boşluğu  
+- Gösterge kenar boşluğu  
   
-- Ekleme düzeltme işareti  
+- Ekleme giriş işareti  
   
-- Giriş işaretini üzerine yaz  
+- Giriş işaretinin üzerine yaz  
   
-- Seçili metni  
+- Seçili metin  
   
-- Etkin olmayan seçili metin (odağını kaybetmiş diğer bir deyişle, seçilen metin)  
+- Etkin olmayan seçili metin (yani, odağa kayıp olan seçili metin)  
   
 - Görünür boşluk  
   
-## <a name="prerequisites"></a>Önkoşullar  
- Visual Studio 2015'ten başlayarak, size Visual Studio SDK İndirme Merkezi'nden yüklemeyin. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için [Visual Studio SDK'sını yükleme](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Ön koşullar  
+ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-mef-project"></a>MEF proje oluşturma  
+## <a name="creating-a-mef-project"></a>MEF projesi oluşturma  
   
-1. Bir C# VSIX projesi oluşturun. (İçinde **yeni proje** iletişim kutusunda **Visual C# / genişletilebilirlik**, ardından **VSIX projesi**.) Çözüm adı `ViewPropertyTest`.  
+1. C# VSıX projesi oluşturun. ( **Yeni proje** iletişim kutusunda, **Visual C#/genişletilebilirliği**, sonra **VSIX projesi**' ni seçin.) Çözümü adlandırın `ViewPropertyTest` .  
   
-2. Bir düzenleyici sınıflandırıcı öğe şablonu, projeye ekleyin. Daha fazla bilgi için [bir düzenleyici öğesi şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+2. Projeye bir düzenleyici sınıflandırıcı öğe şablonu ekleyin. Daha fazla bilgi için bkz. [bir düzenleyici öğe şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
   
-3. Varolan sınıf dosyaları silin.  
+3. Varolan sınıf dosyalarını silin.  
   
-## <a name="defining-the-content-type"></a>İçerik türü tanımlama  
+## <a name="defining-the-content-type"></a>Içerik türünü tanımlama  
   
-1. Bir sınıf dosyası ekleyin ve adlandırın `ViewPropertyModifier`.  
+1. Bir sınıf dosyası ekleyin ve adlandırın `ViewPropertyModifier` .  
   
-2. Aşağıdaki `using` yönergeleri:  
+2. Aşağıdaki yönergeleri ekleyin `using` :  
   
     [!code-csharp[VSSDKViewPropertyTest#1](../snippets/csharp/VS_Snippets_VSSDK/vssdkviewpropertytest/cs/viewpropertymodifier.cs#1)]
     [!code-vb[VSSDKViewPropertyTest#1](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkviewpropertytest/vb/viewpropertymodifier.vb#1)]  
   
-3. Adlı bir sınıf bildirme `TestViewCreationListener` öğesinden devralan <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>. Bu sınıf aşağıdaki özniteliklerle dışarı aktarın:  
+3. Öğesinden devralan adlı bir sınıf bildirin `TestViewCreationListener` <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener> . Bu sınıfı aşağıdaki özniteliklerle dışarı aktarın:  
   
-   - <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> Bu dinleyici uygulandığı içerik türünü belirtmek için.  
+   - <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> Bu dinleyicinin uygulandığı içerik türünü belirtmek için.  
   
-   - <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> Bu dinleyici rolünü belirtmek için.  
+   - <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> Bu dinleyicinin rolünü belirtmek için.  
   
      [!code-csharp[VSSDKViewPropertyTest#2](../snippets/csharp/VS_Snippets_VSSDK/vssdkviewpropertytest/cs/viewpropertymodifier.cs#2)]
      [!code-vb[VSSDKViewPropertyTest#2](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkviewpropertytest/vb/viewpropertymodifier.vb#2)]  
   
-4. Bu sınıf, içeri aktarma <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMapService>.  
+4. Bu sınıfta, öğesini içe aktarın <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMapService> .  
   
     [!code-csharp[VSSDKViewPropertyTest#3](../snippets/csharp/VS_Snippets_VSSDK/vssdkviewpropertytest/cs/viewpropertymodifier.cs#3)]
     [!code-vb[VSSDKViewPropertyTest#3](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkviewpropertytest/vb/viewpropertymodifier.vb#3)]  
   
 ## <a name="changing-the-view-properties"></a>Görünüm özelliklerini değiştirme  
   
-1. Uygulama <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> yöntemi böylece görünüm açıldığında Görünüm Özellikleri değiştirilir. Değişiklik yapmak için öncelikle bulma <xref:System.Windows.ResourceDictionary> bulmak istediğiniz görünümü en/boy karşılık gelir. Ardından uygun kaynak sözlüğü özelliğini değiştirin ve özelliklerini ayarlayın. Toplu işlem çağrıları <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.SetProperties%2A> yöntemi çağırarak <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.BeginBatchUpdate%2A> özellikleri ayarlanmadan önce yöntemi ve ardından <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.EndBatchUpdate%2A> özellikleri ayarladıktan sonra.  
+1. <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A>Görünümü açıldığında görünüm özelliklerinin değişmesi için yöntemini uygulayın. Değişikliği yapmak için önce <xref:System.Windows.ResourceDictionary> bulmak istediğiniz görünümün yönüdür karşılık gelen öğesini bulun. Sonra kaynak sözlüğünde uygun özelliği değiştirin ve özellikleri ayarlayın. <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.SetProperties%2A> <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.BeginBatchUpdate%2A> Özelliklerini ayarlamadan önce yöntemini çağırarak ve sonra özellikleri ayarladıktan sonra yöntemine yapılan çağrıları toplu olarak ayarlayın <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.EndBatchUpdate%2A> .  
   
      [!code-csharp[VSSDKViewPropertyTest#4](../snippets/csharp/VS_Snippets_VSSDK/vssdkviewpropertytest/cs/viewpropertymodifier.cs#4)]
      [!code-vb[VSSDKViewPropertyTest#4](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkviewpropertytest/vb/viewpropertymodifier.vb#4)]  
   
-## <a name="building-and-testing-the-code"></a>Oluşturma ve kod test etme  
+## <a name="building-and-testing-the-code"></a>Kodu derleme ve test etme  
   
-1. Çözümü oluşturun.  
+1. Çözümü derleyin.  
   
-     Bu projede hata ayıklayıcıda çalıştırdığınızda, Visual Studio'nun ikinci bir örneğini başlatılır.  
+     Bu projeyi hata ayıklayıcıda çalıştırdığınızda, Visual Studio 'nun ikinci bir örneği oluşturulur.  
   
-2. Bir metin dosyası oluşturun ve bir metin yazın.  
+2. Bir metin dosyası oluşturun ve metin yazın.  
   
-    - Ekleme giriş işaretini Eflatun olmalıdır ve üzerine yazma giriş işaretini Turkuaz olmalıdır.  
+    - Ekleme giriş işareti Macenta olmalıdır ve üzerine yazma şapka karakteri turkuaz olmalıdır.  
   
-    - Belirteç kenar boşluğu ('metin görünümünü sol) açık olması gereken yeşil.  
+    - Gösterge kenar boşluğu (metin görünümünün solunda) açık yeşil olmalıdır.  
   
-3. Yazdığınız metni seçin. Seçili metnin rengini açık olmalıdır pembe.  
+3. Yeni yazdığınız metni seçin. Seçilen metnin rengi açık pembe olmalıdır.  
   
-4. Metin seçili durumdayken metni penceresi dışında herhangi bir yere tıklayın. Seçili metnin rengini koyu pembe olmalıdır.  
+4. Metin seçiliyken metin penceresinin dışında herhangi bir yere tıklayın. Seçilen metnin rengi koyu pembe olmalıdır.  
   
-5. Üzerinde görünür boşluk bırakın. (Üzerinde **Düzenle** menüsünde **Gelişmiş** ve ardından **beyaz boşluğu görüntüle**). Bazı sekmeler metin girin. Sekmeleri temsil eden kırmızı ok görüntülenmesi gerekir.  
+5. Görünür boşluğu açın. ( **Düzenle** menüsünde **Gelişmiş** ' in üzerine gelin ve ardından **boşluğu görüntüle**' ye tıklayın. Metinde bazı Sekmeler yazın. Sekmeleri temsil eden kırmızı oklar görüntülenmelidir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Dil Hizmeti ve Düzenleyici Uzantı Noktaları](../extensibility/language-service-and-editor-extension-points.md)

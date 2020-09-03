@@ -14,10 +14,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d7cd59266a69140ba2ea5a7fd1d1b0b0c72f14c2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68201937"
 ---
 # <a name="wizarddata-element-visual-studio-templates"></a>WizardData Öğesi (Visual Studio Şablonları)
@@ -25,10 +25,10 @@ ms.locfileid: "68201937"
 
 Özel XML belirtir  
   
- \<VSTemplate >  
- \<WizardData >  
+ \<VSTemplate>  
+ \<WizardData>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <WizardData>  
@@ -50,20 +50,20 @@ ms.locfileid: "68201937"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Proje şablonu, öğe şablonu veya başlangıç Seti için meta veriler içerir.|  
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Proje şablonu, öğe şablonu veya başlangıç seti için tüm meta verileri içerir.|  
   
 ## <a name="text-value"></a>Metin Değeri  
  Metin değeri isteğe bağlıdır.  
   
- Belirtilen özel sihirbaz uzantısı geçirmek için özel XML bu metni [WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md) öğesi.  
+ Bu metin, [Wizardexgeri](../extensibility/wizardextension-element-visual-studio-templates.md) öğesinde belirtilen özel sihirbaz uzantısına GEÇIRILECEK özel XML 'i belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe, XML belirtilebilir. XML parametre olarak bu öğenin içeriğini kullanılacak uzantısı izin vermek için özel sihirbaz uzantısı geçirilir. Bu veriler üzerinde doğrulama gerçekleştirilir.  
+ Bu öğede herhangi bir XML belirtilebilir. XML özel sihirbaz uzantısına bir parametre olarak geçirilir ve bu da uzantının bu öğenin içeriğini kullanmasına izin verir. Bu verilerde doğrulama yapılmadı.  
   
- İçeriğini `WizardData` öğesi geçirilir, parametreleri dize sözlüğü içinde bir parametre olarak, değiştirilmeden `IWizard.RunStarted` yöntemi. Parametre $WizardData$ adlandırılır.  
+ Öğenin içeriği, `WizardData` yöntemindeki parametrelerin dize sözlüğünün içindeki parametre olarak geçirilir, değiştirilmez `IWizard.RunStarted` . Parametresi $WizardData $ olarak adlandırılmıştır.  
   
 ## <a name="example"></a>Örnek  
- Standart proje şablonu için meta veriler aşağıdaki örnekte bir [!INCLUDE[csprcs](../includes/csprcs-md.md)] Windows uygulaması.  
+ Aşağıdaki örnek, bir Windows uygulaması için Standart proje şablonu meta verilerini gösterir [!INCLUDE[csprcs](../includes/csprcs-md.md)] .  
   
 ```  
 <VSTemplate Version="3.0.0" Type="Item"  
@@ -99,5 +99,5 @@ ms.locfileid: "68201937"
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)   
  [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)   
- [WizardExtension öğesi (Visual Studio şablonları)](../extensibility/wizardextension-element-visual-studio-templates.md)   
- [Nasıl yapılır: Proje Şablonlarıyla Sihirbazlar Kullanma](../extensibility/how-to-use-wizards-with-project-templates.md)
+ [Wizardexgeri öğesi (Visual Studio şablonları)](../extensibility/wizardextension-element-visual-studio-templates.md)   
+ [Nasıl Yapılır: Sihirbazları Proje Şablonlarıyla Kullanma](../extensibility/how-to-use-wizards-with-project-templates.md)

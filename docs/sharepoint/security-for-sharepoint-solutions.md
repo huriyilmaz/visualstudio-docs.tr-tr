@@ -16,30 +16,30 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 6dc1449a40528670274ea5b275cca3f0a8d2f277
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73983784"
 ---
 # <a name="security-for-sharepoint-solutions"></a>SharePoint çözümleri için güvenlik
-  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], SharePoint uygulamalarının güvenliğinin artırılmasına yardımcı olmak için aşağıdaki özellikleri içerir.
+  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint uygulamalarının güvenliğinin artırılmasına yardımcı olmak için aşağıdaki özellikleri içerir.
 
 ## <a name="safe-control-entries"></a>Güvenli denetim girdileri
- [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] ' de oluşturulan her SharePoint proje öğesinde, güvenli bir denetim koleksiyonu temsil eden **güvenli bir denetim girişleri** özelliği bulunur. **Güvenli** alt özelliği, güvenli hale getirmek istediğiniz denetimleri belirtmenize olanak sağlar. Daha fazla bilgi için bkz. [Proje öğelerinde paket ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) ve [Güvenli Web bölümleri belirtme](/previous-versions/office/developer/sharepoint2003/dd583154(v=office.11)#specifying-safe-web-parts).
+ İçinde oluşturulan her SharePoint proje öğesi [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] , güvenli denetimler koleksiyonunu temsil eden bir **Güvenli denetim girişleri** özelliğine sahiptir. **Güvenli** alt özelliği, güvenli hale getirmek istediğiniz denetimleri belirtmenize olanak sağlar. Daha fazla bilgi için bkz. [Proje öğelerinde paket ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) ve [Güvenli Web bölümleri belirtme](/previous-versions/office/developer/sharepoint2003/dd583154(v=office.11)#specifying-safe-web-parts).
 
 ## <a name="allowpartiallytrustedcallers-attribute"></a>Allowpartiallytrustedçağıranlar özniteliği
  Varsayılan olarak, yalnızca çalışma zamanı kodu erişim güvenliği (CAS) sistemi tarafından tam olarak güvenilen uygulamalar paylaşılan bir yönetilen kod derlemesine erişebilir. Tam güvenilir bir derlemeyi Allowpartiallytrustedçağıranlar özniteliğiyle işaretlemek, kısmen güvenilen derlemelerin buna erişmesini sağlar.
 
- Allowpartiallytrustedçağıranlar özniteliği, sistem genel derleme önbelleğine ([!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)]) dağıtılmamış herhangi bir SharePoint çözümüne eklenir. Bu, korumalı çözümleri veya SharePoint uygulama sepeti dizinine dağıtılan çözümleri içerir. Daha fazla bilgi için bkz. [Microsoft .NET Framework Için sürüm 1 güvenlik değişiklikleri](/previous-versions/msp-n-p/ff921345(v=pandp.10)) ve [SharePoint Foundation 'da Web bölümleri dağıtma](/previous-versions/office/developer/sharepoint-2010/cc768621(v=office.14)).
+ Allowpartiallytrustedçağıranlar özniteliği, sistem genel derleme önbelleğine () dağıtılmayan herhangi bir SharePoint çözümüne eklenir [!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)] . Bu, korumalı çözümleri veya SharePoint uygulama sepeti dizinine dağıtılan çözümleri içerir. Daha fazla bilgi için bkz. [Microsoft .NET Framework Için sürüm 1 güvenlik değişiklikleri](/previous-versions/msp-n-p/ff921345(v=pandp.10)) ve [SharePoint Foundation 'da Web bölümleri dağıtma](/previous-versions/office/developer/sharepoint-2010/cc768621(v=office.14)).
 
 ## <a name="safe-against-script-property"></a>Betik özelliğine karşı güvenli
- *Betiği ekleme* , olası kötü amaçlı kodun denetimlere veya Web sayfalarına eklenmesidir. SharePoint 2010 sitelerini betik eklenmesine karşı korumaya yardımcı olmak için, katkıda bulunanlar, varsayılan olarak Web bölümlerini veya özelliklerini görüntüleyemez veya düzenleyemez. Bu davranış, SafeAgainstScript adlı bir SafeControl özniteliğiyle denetlenir. [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)]içinde, bu özniteliği bir proje öğesinin **Güvenli denetim girdileri** alt özelliğine **karşı güvenli**olarak ayarlayın. Daha fazla bilgi için bkz. [Proje öğelerinde paket ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) ve [nasıl yapılır: denetimleri güvenli denetim olarak işaretleme](../sharepoint/how-to-mark-controls-as-safe-controls.md).
+ *Betiği ekleme* , olası kötü amaçlı kodun denetimlere veya Web sayfalarına eklenmesidir. SharePoint 2010 sitelerini betik eklenmesine karşı korumaya yardımcı olmak için, katkıda bulunanlar, varsayılan olarak Web bölümlerini veya özelliklerini görüntüleyemez veya düzenleyemez. Bu davranış, SafeAgainstScript adlı bir SafeControl özniteliğiyle denetlenir. ' De [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bir proje öğesinin **Güvenli denetim girdileri** alt özelliğindeki bu özniteliği **betikle güvende**olarak ayarlayın. Daha fazla bilgi için bkz. [Proje öğelerinde paket ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) ve [nasıl yapılır: denetimleri güvenli denetim olarak işaretleme](../sharepoint/how-to-mark-controls-as-safe-controls.md).
 
 ## <a name="vista-and-windows-7-user-account-control"></a>Vista ve Windows 7 Kullanıcı hesabı denetimi
- [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] ve [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] Kullanıcı hesabı denetimi (UAC) olarak bilinen bir güvenlik özelliği ekleyin. [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] ve [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] sistemlerinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint çözümleri geliştirmek için UAC, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bir sistem yöneticisi olarak çalıştırmanızı gerektirir. **Başlat** menüsünden, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]için kısayol menüsünü açın ve ardından **yönetici olarak çalıştır**' ı seçin.
+ [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] ve [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] Kullanıcı hesabı denetimi (UAC) olarak bilinen bir güvenlik özelliği ekleyebilirsiniz. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Üzerinde ve sistemlerinde SharePoint çözümleri geliştirmek [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] IÇIN [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] , UAC [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bir sistem yöneticisi olarak çalıştırmanızı gerektirir. **Başlat** menüsünde, için kısayol menüsünü açın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve ardından **yönetici olarak çalıştır**' ı seçin.
 
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] kısayolunu her zaman yönetici olarak çalışacak şekilde yapılandırmak için, kısayol menüsünü açın, **Özellikler**' i seçin, **Özellikler** iletişim kutusunda **Gelişmiş** düğmesini seçin ve ardından **yönetici olarak çalıştır** onay kutusunu seçin.
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Her zaman yönetici olarak çalıştır kısayolunu yapılandırmak için, kısayol menüsünü açın, **Özellikler**' i seçin, **Özellikler** iletişim kutusunda **Gelişmiş** düğmesini seçin ve ardından **yönetici olarak çalıştır** onay kutusunu seçin.
 
  Daha fazla bilgi için bkz. [Windows Vista 'Da Kullanıcı hesabı denetimini anlama ve yapılandırma](/previous-versions/windows/it-pro/windows-vista/cc709628(v=ws.10)). ve [Windows 7 Kullanıcı hesabı denetimi](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731416(v=ws.10)).
 
@@ -56,7 +56,7 @@ ms.locfileid: "73983784"
 
 3. Kullanıcı hesabınızı WSS_ADMIN_WPG grubuna ekleyin.
 
-## <a name="additional-security-resources"></a>Ek güvenlik kaynakları
+## <a name="additional-security-resources"></a>Ek güvenlik seçenekleri
  Güvenlik sorunları hakkında daha fazla bilgi için aşağıdaki konulara bakın.
 
 ### <a name="visual-studio-security"></a>Visual Studio güvenliği
@@ -65,7 +65,7 @@ ms.locfileid: "73983784"
 
 - [Yerel ve .NET Framework kodundaki güvenlik](/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 
-- [.NET Framework güvenliği](/previous-versions/dotnet/netframework-4.0/fkytk30f(v=vs.100))
+- [.NET Framework'te Güvenlik](/previous-versions/dotnet/netframework-4.0/fkytk30f(v=vs.100))
 
 ### <a name="sharepoint-security"></a>SharePoint güvenliği
 

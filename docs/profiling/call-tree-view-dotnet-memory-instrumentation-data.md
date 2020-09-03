@@ -1,5 +1,5 @@
 ---
-title: Çağrı Ağacı Görünümü - .NET Bellek Enstrümantasyon Verileri | Microsoft Dokümanlar
+title: Çağrı ağacı görünümü-.NET bellek Izleme verileri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,95 +12,95 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: 2066959578987e358f8c1c91dcbda1eeb6f79f26
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74773603"
 ---
-# <a name="call-tree-view---net-memory-instrumentation-data"></a>Çağrı Ağacı görünümü - .NET bellek enstrümantasyon verileri
-Enstrümantasyon yöntemi kullanılarak toplanan .NET bellek ayırma profil oluşturma verilerinin Çağrı Ağacı görünümü, profilli uygulamada geçen işlev yürütme yollarını görüntüler. Ağacın kökü, uygulamanın veya bileşenin giriş noktasıdır. Her işlev düğümü, aradığı tüm işlevleri ve işlevin .NET bellek ve zamanlama verilerini listeler.
+# <a name="call-tree-view---net-memory-instrumentation-data"></a>Çağrı ağacı görünümü-.NET bellek izleme verileri
+İzleme yöntemi kullanılarak toplanan .NET bellek ayırma profil oluşturma verilerinin çağrı ağacı görünümü, profili oluşturulmuş uygulamada geçen işlev yürütme yollarını görüntüler. Ağacın kökü, uygulamanın veya bileşenin giriş noktasıdır. Her işlev düğümü, çağırdığı tüm işlevleri ve işlevin .NET belleğini ve zamanlama verilerini listeler.
 
- Çağrı Ağacı görünümündeki değerler, çağrı ağacındaki üst işlev tarafından çağrılan işlev örnekleri içindir. Yüzde değerleri, işlev örneği değeri profil oluşturma çalışmasındaki ayırmaların toplam sayısı veya boyutuyla karşılaştırılarak hesaplanır.
+ Çağrı ağacı görünümündeki değerler, çağrı ağacındaki üst işlev tarafından çağrılan işlev örneklerine yöneliktir. Yüzde değerleri, işlev örneği değeri, profil oluşturma çalıştırmasında toplam sayı veya ayırma boyutuyla karşılaştırılarak hesaplanır.
 
-## <a name="highlight-the-execution-hot-path"></a>Yürütme sıcak yolunu vurgulayın
- Çağrı Ağacı görünümü, en büyük veya en çok bellek nesnesini oluşturan işlemin veya işlevin yürütme yolunu genişletebilir ve vurgulayabilir. En etkin yolu görüntülemek için, işlemi veya işlevi sağ tıklatın ve ardından **Sıcak Yolu Genişlet'i**tıklatın.
+## <a name="highlight-the-execution-hot-path"></a>Yürütme etkin yolunu Vurgula
+ Çağrı ağacı görünümü, en büyük veya en fazla bellek nesnelerini oluşturan işlemin veya işlevin yürütme yolunu genişletebilir ve vurgulayabilir. En etkin yolu göstermek için, işlem veya işleve sağ tıklayın ve ardından **etkin yolu genişlet**' e tıklayın.
 
-## <a name="set-the-call-tree-root-node"></a>Çağrı Ağacı kök düğümünü ayarlama
- Profil oluşturma çalışmasındaki her işlem kök düğüm olarak görüntülenir. Başlangıç düğümü olarak ayarlamak istediğiniz düğümü sağ tıklatarak ve ardından **Root'u**Ayarla'yı seçerek Çağrı Ağacı görünümünün başlangıç düğümünü ayarlayabilirsiniz.
+## <a name="set-the-call-tree-root-node"></a>Çağrı ağacı kök düğümünü ayarla
+ Profil oluşturma çalıştırmasında her işlem kök düğüm olarak görüntülenir. Başlangıç düğümü olarak ayarlamak istediğiniz düğüme sağ tıklayıp ardından **kökü ayarla**' yı seçerek çağrı ağacı görünümünün başlangıç düğümünü ayarlayabilirsiniz.
 
- Kök düğümünü ayarladığınızda, seçili düğümün alt ağacı dışında görünümdeki diğer tüm girişleri ortadan kaldırırsınız. Kök düğümünü görüntülediğiniz düğüme geri sıfırlayabilirsiniz; Çağrı Ağacı Görünümü penceresinde sağ tıklatın ve **Root'u Sıfırla'yı**seçin.
+ Kök düğümü ayarladığınızda, seçili düğümün alt ağacı hariç diğer tüm girişleri görünümden ortadan kaldırabilirsiniz. Kök düğümü, görüntülemekte olduğunuz düğüme geri sıfırlayabilirsiniz; Çağrı Ağacı Görünümü penceresine sağ tıklayın ve **kökü Sıfırla**' yı seçin.
 
 ## <a name="general"></a>Genel
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Fonksiyon Adı**|İşlevin adı.|
-|**Fonksiyon Adresi**|Fonksiyonun adresi.|
-|**Fonksiyon Satır Numarası**|Kaynak dosyadaki bu işlevin başlangıcının satır numarası.|
-|**Çağrı Sayısı**|Bu işleve yapılan toplam arama sayısı.|
+|**İşlev adı**|İşlevin adı.|
+|**İşlev adresi**|İşlevin adresi.|
+|**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
+|**Çağrı Sayısı**|Bu işleve yapılan çağrıların toplam sayısı.|
 |**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
-|**Modül Adı**|İşleviçeren modülün adı.|
-|**Modül Yolu**|İşleviçeren modülün yolu.|
-|**İşlem Kimliği**|Profil oluşturma çalışmasının işlem kimliği (PID).|
-|**İşlem Adı**|İşleme atanan ad.|
-|**Zaman Özel Sonda Genel**|Enstrümantasyonun neden olduğu bu işlev için gereken süre. Sonda yükü tüm özel zamanlardan çıkarıldı.|
-|**Zaman Dahil Prob Genel**|Bu işlev için zaman yükü ve enstrümantasyon neden olduğu alt işlevleri. Sonda yükü her şey dahil zamanlardan çıkarıldı.|
-|**Tür**|Fonksiyonun bağlamı:<br /><br /> -   **0** - geçerli fonksiyon<br />-   **1** - geçerli işlevi çağıran bir işlev<br />-   **2** - geçerli işlev tarafından çağrılan bir işlev<br /><br /> Yalnızca [VSPerfReport](../profiling/vsperfreport.md) komut satırı raporlarında.|
-|**Kök Fonksiyon Adı**|Geçerli işlevin adı. Yalnızca [VSPerfReport](../profiling/vsperfreport.md) komut satırı raporlarında.|
+|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül yolu**|İşlevi içeren modülün yolu.|
+|**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
+|**İşlem adı**|İşleme atanan ad.|
+|**Zaman Dışlamalı Araştırma ek yükü**|Bu işlev için, izleme nedeniyle oluşan zaman ek yükü. Araştırma ek yükü tüm özel zamanlarda çıkarıldı.|
+|**Zaman kapsamlı araştırma ek yükü**|Bu işlev için zaman yükü ve alt işlevleri, izleme nedeniyle oluşur. Araştırma ek yükü tüm kapsamlı bir şekilde çıkarıldı.|
+|**Tür**|İşlevin bağlamı:<br /><br /> -   **0** -geçerli işlev<br />-   **1** -geçerli işlevi çağıran bir işlev<br />-   **2** -geçerli işlev tarafından çağrılan bir işlev<br /><br /> Yalnızca [VSPerfReport](../profiling/vsperfreport.md) komut satırı raporlarında.|
+|**Kök Işlev adı**|Geçerli işlevin adı. Yalnızca [VSPerfReport](../profiling/vsperfreport.md) komut satırı raporlarında.|
 
 ## <a name="net-memory-values"></a>.NET bellek değerleri
- Bir işlevin kapsayıcı .NET bellek değerleri, işlev ve işlevler tarafından çağrılan işlevler tarafından oluşturulan nesnelerin sayısını (ayırmalarını) ve boyutunu (baytları) gösterir.
+ Bir işlevin dahil .NET bellek değerleri, işlev tarafından çağrılan işlevlerin ve işlevin tarafından oluşturulan nesnelerin sayısını (ayırmalar) ve boyutunu (bayt) belirtir.
 
- Özel bellek değerleri, işlev gövdesinde kod tarafından oluşturulan nesnelerin sayısını ve boyutunu gösterir, işlev tarafından çağrılan işlevler tarafından değil.
-
-|Sütun|Açıklama|
-|------------|-----------------|
-|**Kapsayıcı Tahsisatlar**|Çağrı ağacındaki üst işlev tarafından çağrılan bu işlevin örnekleri tarafından ayrılan nesnelerin sayısı. Bu sayı, alt işlevler tarafından yapılan ayırmaları içerir.|
-|**Kapsayıcı Tahsisler %**|Çağrı ağacındaki üst işlev tarafından çağrılan işlev örneklerinin kapsayıcı ayırmaları olan profil oluşturma çalışmasında oluşturulan tüm nesnelerin yüzdesi.|
-|**Özel Tahsisler**|Çağrı ağacındaki üst işlev tarafından çağrılan bu işlevin örnekleri tarafından ayrılan nesnelerin sayısı. Bu sayı, alt işlevler tarafından yapılan ayırmaları içermez.|
-|**Özel Tahsisatlar %**|Çağrı ağacındaki üst işlev tarafından çağrılan işlev örneklerinin özel ayırmaları olan profil oluşturma çalışmasında oluşturulan tüm nesnelerin yüzdesi.|
-
-## <a name="elapsed-inclusive-values"></a>Geçen kapsayıcı değerler
- Geçen kapsayıcı değerler, bir işlevin çağrı yığınında olduğu zamanı gösterir. Zaman, işlev tarafından çağrılan işlevlerde ve bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrılarda harcanan zamanı içerir.
+ Dışlamalı bellek değerleri işlev gövdesinde oluşturulan ve işlev tarafından çağrılan işlevlere göre değil, nesne sayısını ve boyutunu belirtir.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Geçen Kapsayıcı Süre**|Çağrı ağacındaki üst işlev tarafından çağrıldığında bu işleve yapılan tüm çağrıların toplam kapsayıcı süresi.|
-|**Geçen Kapsayıcı Süre %**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işlevin toplam geçen kapsayıcı süresi nde harcanan profil oluşturma çalışmasının toplam geçen kapsayıcı süresinin yüzdesi.|
-|**Avg Geçen Dahil Süresi**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan çağrının ortalama kapsayıcı süresi.|
-|**Max Geçen Dahil Süresi**|Çağrı ağacındaki üst işlev tarafından çağrıldığında bu işleve yapılan çağrının en fazla geçen kapsayıcı süresi.|
-|**Min Geçen Kapsayıcı Süre**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan çağrının en az geçen kapsayıcı süresi.|
+|**Kapsamlı ayırmalar**|Çağrı ağacındaki üst işlev tarafından çağrılan bu işlevin örnekleri tarafından ayrılan nesne sayısı. Bu sayı, alt işlevler tarafından yapılan ayırmaları içerir.|
+|**Kapsamlı ayırmalar%**|Profil oluşturma çalıştırmasında oluşturulan, çağrı ağacındaki üst işlev tarafından çağrılan işlev örneklerinin dahil tahsisatlarından oluşan tüm nesnelerin yüzdesi.|
+|**Dışlamalı ayırmalar**|Çağrı ağacındaki üst işlev tarafından çağrılan bu işlevin örnekleri tarafından ayrılan nesne sayısı. Bu sayı alt işlevler tarafından yapılan ayırmaları içermez.|
+|**Dışlamalı ayırmalar%**|Profil oluşturma çalıştırmasında oluşturulan, çağrı ağacındaki üst işlev tarafından çağrılan işlev örneklerinin özel ayırmaları olan tüm nesnelerin yüzdesi.|
 
-## <a name="elapsed-exclusive-values"></a>Geçen özel değerler
- Geçen özel değerler, bir işlevin çağrı yığınının üst kısmında doğrudan yürütüldettiği zamanı gösterir. Bu süre, bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan aramalarda süreyi içerir. Ancak, zaman işlevi tarafından çağrılan işlevlerde harcanan zamanı içermez.
-
-|Sütun|Açıklama|
-|------------|-----------------|
-|**Geçen Özel Zaman**|Çağrı ağacındaki üst işlev tarafından çağrıldığında bu işleve yapılan tüm çağrıların toplam geçen özel süresi.|
-|**Geçen Özel Zaman %**|Çağrı ağacındaki ana işlev tarafından çağrıldığında, bu işlevin geçen özel süresinde harcanan profil oluşturma çalışmasının toplam geçen özel zamanının yüzdesi.|
-|**Avg Geçen Özel Zaman**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan bir çağrının ortalama geçen özel süresi.|
-|**Max Geçen Özel Zaman**|Çağrı ağacındaki üst işlev tarafından çağrıldığında bu işleve yapılan bir çağrının en fazla geçen özel süresi.|
-|**Min Geçen Özel Zaman**|Çağrı ağacındaki üst işlev tarafından çağrıldığında bu işleve yapılan çağrının en az geçen özel süresi.|
-
-## <a name="application-inclusive-values"></a>Uygulama dahil değerleri
- Uygulama kapsayıcı değerleri, bir işlevin çağrı yığınında olduğu zamanı gösterir. Bu süre, bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan aramalarda harcanan zamanı içermez. Zaman, işlev tarafından çağrılan alt işlevlerde harcanan zamanı içerir.
+## <a name="elapsed-inclusive-values"></a>Geçen kapsamlı değerler
+ Geçen kapsamlı değerler, bir işlevin çağrı yığınında olduğu süreyi belirtir. Süre, işlev tarafından çağrılan işlevlerde ve bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrılar için harcanan zamanı içerir.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Uygulama Dahil Süresi**|Çağrı ağacındaki üst işlev tarafından çağrıldığında bu işleve yapılan tüm çağrıların toplam uygulama kapsayıcı süresi.|
-|**Uygulama Kapsayıcı Süresi %**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işlevin toplam uygulama kapsayıcı süresi içinde harcanan profil oluşturma çalışmasının toplam geçen kapsayıcı süresinin yüzdesi.|
-|**Avg Uygulama Dahil Süresi**|Çağrı ağacındaki üst işlev tarafından çağrıldığında bu işleve çağrının ortalama uygulama kapsayıcı süresi.|
-|**Max Uygulama Dahil Süresi**|Çağrı ağacındaki üst işlev tarafından çağrıldığında bu işleve yapılan çağrının maksimum uygulama kapsayıcı süresi.|
-|**Min Uygulama Dahil Süresi**|Çağrı ağacındaki üst işlev tarafından çağrıldığında bu işleve çağrının minimum uygulama kapsayıcı süresi.|
+|**Geçen kapsamlı süre**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan çağrıların toplam geçen kapsamlı süresi.|
+|**Geçen kapsamlı süre yüzdesi**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işlevin toplam geçen iç zaman içinde harcanan toplam geçen kapsamlı süre yüzdesi.|
+|**Ortalama geçen kapsamlı süre**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan çağrının ortalama geçen kapsamlı süresi.|
+|**Geçen maksimum kapsamlı süre**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan çağrının geçen en uzun kapsamlı süresi.|
+|**Geçen minimum kapsamlı süre**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan çağrının geçen en az kapsamlı süre.|
 
-## <a name="application-exclusive-values"></a>Uygulama özel değerleri
- Uygulama özel değerleri, işlev tarafından çağrılan alt işlevlerde harcanan süre hariç, işlevde harcanan zamanı gösterir. Bu süre, bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrıları da dışlar.
+## <a name="elapsed-exclusive-values"></a>Geçen dışlamalı değerler
+ Geçen dışlamalı değerler, bir işlevin çağrı yığınının en üstünde doğrudan yürütüldüğü süreyi belirtir. Bu süre, işletim sistemine çağrı sırasında bağlam anahtarları ve giriş/çıkış işlemleri gibi zaman alır. Ancak, zaman, işlev tarafından çağrılan işlevlerde harcanan zamanı içermez.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Uygulama Özel Zaman**|Çağrı ağacındaki üst işlev tarafından çağrıldığında bu işleve yapılan tüm çağrıların toplam uygulama münhasır süresi.|
-|**Uygulama Özel Zaman %**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işlevin toplam uygulama münhasır süresi içinde harcanan profil oluşturma çalışmasının toplam geçen münhasır zamanının yüzdesi.|
-|**Avg Uygulama Özel Zaman**|Çağrı ağacındaki üst işlev tarafından çağrıldığında bu işleve yapılan çağrının ortalama uygulama münhasır süresi.|
-|**Max Uygulama Özel Zaman**|Çağrı ağacındaki üst işlev tarafından çağrıldığında bu işleve yapılan çağrının maksimum uygulama münhasır süresi.|
-|**Min Uygulama Özel Zaman**|Çağrı ağacındaki üst işlev tarafından çağrıldığında bu işleve yapılan çağrının minimum uygulama münhasır süresi.|
+|**Geçen dışlamalı süre**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan çağrıların toplam dışlamalı süresi geçti.|
+|**Geçen dışlamalı süre yüzdesi**|Bu işlevin çağrı ağacındaki üst işlev tarafından çağrıldığında geçen toplam dışlamalı süre içinde harcanan toplam çalışma süresi geçen özel süre yüzdesi.|
+|**Geçen ortalama dışlamalı süre**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan çağrının geçen ortalama dışlamalı süresi.|
+|**Geçen maksimum dışlamalı süre**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan çağrının geçen maksimum dışlamalı süresi.|
+|**Geçen en düşük dışlamalı süre**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan çağrının en az geçen dışlamalı süresi.|
+
+## <a name="application-inclusive-values"></a>Uygulama kapsamlı değerler
+ Uygulama kapsamlı değerleri bir işlevin çağrı yığınında olduğu süreyi belirtir. Bu süre, işletim sistemine yapılan çağrılarında bağlam anahtarları ve giriş/çıkış işlemleri gibi harcanan zamanı içermez. Süre, işlev tarafından çağrılan alt işlevlerde harcanan zamanı içerir.
+
+|Sütun|Açıklama|
+|------------|-----------------|
+|**Uygulama kapsamlı süresi**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan tüm çağrıların Toplam uygulama kapsamlı süresi.|
+|**Uygulama kapsamlı süresi%**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işlevin toplam uygulama kapsamlı süresi içinde harcanan toplam geçen kapsamlı çalışma süresi yüzdesi.|
+|**Ortalama uygulama kapsamlı süresi**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan çağrının ortalama uygulama kapsamlı süresi.|
+|**En fazla uygulama kapsamlı süresi**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan çağrının uygulama kapsamlı en fazla süresi.|
+|**En az uygulama kapsamlı süre**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan çağrının en düşük uygulama kapsamlı süresi.|
+
+## <a name="application-exclusive-values"></a>Uygulamanın dışlamalı değerleri
+ Uygulama dışlamalı değerleri, işlev tarafından çağrılan alt işlevlerde harcanan zamanı hariç olmak üzere işlevinde harcanan süreyi belirtir. Bu süre Ayrıca, bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine çağrıları dışlar.
+
+|Sütun|Açıklama|
+|------------|-----------------|
+|**Dışlamalı uygulama süresi**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan tüm çağrıların Toplam uygulama dışlamalı süresi.|
+|**Uygulama dışlamalı süresi%**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işlevin toplam uygulama dışlamalı süresi içinde harcanan toplam çalışma süresi hariç geçen özel zamanın yüzdesi.|
+|**Ortalama uygulama dışlamalı süresi**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan çağrının ortalama uygulama dışlamalı süresi.|
+|**Maksimum uygulama dışlamalı süresi**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan çağrının en büyük uygulama dışlamalı süresi.|
+|**En az uygulama dışlamalı süresi**|Çağrı ağacındaki üst işlev tarafından çağrıldığında, bu işleve yapılan çağrının en düşük uygulama dışlamalı süresi.|

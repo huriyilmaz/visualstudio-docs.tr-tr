@@ -8,10 +8,10 @@ ms.date: 04/17/2020
 ms.topic: how-to
 description: Seçili Visual Studio abonelikleriyle birlikte bulunan veri Camp eğitim aboneliği hakkında bilgi edinin.
 ms.openlocfilehash: 49370b4b3425effc4b8eeef704684420edfd3d41
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904520"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde DataCamp eğitimi avantajı
@@ -38,7 +38,7 @@ Uygun Visual Studio abonelikleri, DataCamp abonelikleri içerir.  DataCamp ile, 
    > [!div class="mx-imgBorder"]
    > ![DataCamp seçim yolu](_img/vs-datacamp/vs-datacamp-choose-path.png)
 
-5. Yolunuzu seçtikten sonra, bir hedef seçerek öğrenme yolunuzu daha da iyileştirebilirsiniz.  Örneğin, "Data Science Beceri geliştirin" yolunu seçerseniz, aşağıdaki seçenekleri görürsünüz. Bir seçenek belirleyin veya eminim ' e tıklayın **.  **Daha geniş bir yol oluşturmak için tüm kariyer yollarını göster.
+5. Yolunuzu seçtikten sonra, bir hedef seçerek öğrenme yolunuzu daha da iyileştirebilirsiniz.  Örneğin, "Data Science Beceri geliştirin" yolunu seçerseniz, aşağıdaki seçenekleri görürsünüz. Bir seçenek belirleyin veya eminim ' e tıklayın **.  ** Daha geniş bir yol oluşturmak için tüm kariyer yollarını göster.
    > [!div class="mx-imgBorder"]
    > ![DataCamp veri bilimi beceri](_img/vs-datacamp/vs-datacamp-datascience.png)
 

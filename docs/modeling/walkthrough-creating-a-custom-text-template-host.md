@@ -14,10 +14,10 @@ dev_langs:
 - CSharp
 - VB
 ms.openlocfilehash: 3979f93de6040078a5b1e4315cadc4f7faa4728e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532229"
 ---
 # <a name="walkthrough-create-a-custom-text-template-host"></a>İzlenecek yol: Özel Metin Şablonu Konağı Oluşturma
@@ -716,7 +716,7 @@ Bu kılavuzda, yürütülebilir bir uygulamada, komut satırından çağrılabil
 
 4. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]Yalnızca Için **Proje** menüsünü açın ve **CustomHost özellikleri**' ne tıklayın. **Başlangıç nesnesi** listesinde, **CustomHost. program**' ya tıklayın.
 
-5. **Dosya** menüsünde **Tümünü Kaydet**' e tıklayın.
+5. **Dosya** menüsünde **Tümünü Kaydet**’e tıklayın.
 
 6. **Yapı** menüsünde **Yapı Çözümü**’ne tıklayın.
 

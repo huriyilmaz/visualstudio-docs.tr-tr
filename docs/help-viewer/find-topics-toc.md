@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f9bd332b5767dbfffcfbaa44637e0cc92051f7b1
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85284938"
 ---
 # Nasıl yapılır: İçindekiler tablosunda konuları bulma
@@ -31,7 +31,7 @@ ms.locfileid: "85284938"
 
 ## TOC 'yi filtrele
 
-**İçindekiler** sekmesinde görünen konuların kapsamını DARALTMAK için TOC 'ye filtre uygulayabilirsiniz. başlıklar listede yalnızca belirttiğiniz terimin kökünü içeriyorsa görünür. Örneğin, bir filtre olarak "sorun giderme" belirtirseniz, yalnızca "sorun giderme" veya "sorun giderme" içeren başlıklar görüntülenir. Başlıkları terimi olmayan düğümler, üç nokta (**...**) ile tek bir düğüme daraltılır.
+**İçindekiler** sekmesinde görüntülenen konuların kapsamını DARALTMAK için TOC 'ye filtre uygulayabilirsiniz. Başlıklar listede yalnızca belirttiğiniz terimin kökünü içeriyorsa görüntülenir. Örneğin, bir filtre olarak "sorun giderme" belirtirseniz, yalnızca "sorun giderme" veya "sorun giderme" içeren başlıklar görüntülenir. Başlıkları terimi olmayan düğümler, üç nokta (**...**) ile tek bir düğüme daraltılır.
 
 1. **İçindekiler** sekmesini seçin.
 

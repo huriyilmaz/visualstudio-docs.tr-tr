@@ -1,5 +1,5 @@
 ---
-title: Genel Bakışlar (Performans Araçları) | Microsoft Dokümanlar
+title: Genel Bakış (performans araçları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b877802d-c736-4047-821a-bd7733fff6de
@@ -10,39 +10,39 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: d284ffc6b850a9746cf1442f35400a18045bbe18
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74772690"
 ---
 # <a name="overviews-performance-tools"></a>Genel Bakış (performans araçları)
-Bu bölümde, geliştirilmekte olan [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir uygulamanın performans özelliklerini ölçmek için kullanabileceğiniz Profil Oluşturma Araçları için kavramsal ve terminoloji genel bakışları sağlanabilir.
+Bu bölümde [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , geliştirme aşamasındaki bir uygulamanın performans özelliklerini ölçmek için kullanabileceğiniz profil oluşturma araçları kavramsal ve terminoloji genel bakış sunulmaktadır.
 
 ## <a name="in-this-section"></a>Bu bölümde
 - [Performans oturumuna genel bakış](../profiling/performance-session-overview.md)
 
- Profil Oluşturma Araçları ile performans [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] profiloluşturmanın temellerini öğrenin.
+ Profil Oluşturma Araçları ile performans profili oluşturma temellerini öğrenin [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
 - [Performans oturumu özellikleri](../profiling/performance-session-properties.md)
 
- Performans oturumunu yapılandırmak için kullanılabilecek özellikleri açıklar.
+ Bir performans oturumu yapılandırmak için kullanılabilen özellikleri açıklar.
 
 - [Örnekleme veri değerlerini anlama](../profiling/understanding-sampling-data-values.md)
 
- Örnekleme profil oluşturma yöntemini kullandığınızda bildirilen veri değerlerini öğrenin.
+ Örnekleme profil oluşturma yöntemini kullandığınızda raporlanan veri değerlerini öğrenin.
 
-- [Enstrümantasyon veri değerlerini anlama](../profiling/understanding-instrumentation-data-values.md)
+- [İzleme veri değerlerini anlama](../profiling/understanding-instrumentation-data-values.md)
 
- Enstrümantasyon profil oluşturma yöntemini kullandığınızda bildirilen veri değerlerini öğrenin.
+ İzleme profili oluşturma yöntemini kullanırken raporlanan veri değerlerini öğrenin.
 
-- [Bellek ayırma ve nesne yaşam boyu veri değerlerini anlama](../profiling/understanding-memory-allocation-and-object-lifetime-data-values.md)
+- [Bellek ayırmayı ve nesne yaşam süresi veri değerlerini anlama](../profiling/understanding-memory-allocation-and-object-lifetime-data-values.md)
 
- .NET bellek profil oluşturma yöntemini kullandığınızda bildirilen veri değerlerini öğrenin.
+ .NET bellek profili oluşturma yöntemini kullandığınızda bildirilen veri değerlerini öğrenin.
 
-- [Kaynak çekişme veri değerlerini anlama](../profiling/understanding-resource-contention-data-values.md)
+- [Kaynak çakışması veri değerlerini anlama](../profiling/understanding-resource-contention-data-values.md)
 
- Eşzamanlılık profil oluşturma yöntemini kullandığınızda bildirilen veri değerlerini öğrenin.
+ Eşzamanlılık profil oluşturma yöntemini kullandığınızda raporlanan veri değerlerini öğrenin.
 
 - [Performans Gezgini penceresi](../profiling/performance-explorer-window.md)
 
@@ -54,7 +54,7 @@ Bu bölümde, geliştirilmekte olan [!INCLUDE[vsprvs](../code-quality/includes/v
 
 - [Profil oluşturma ve Windows Vista güvenliği](../profiling/profiling-and-windows-vista-security.md)
 
- Örnekleme verileri toplamak ve oturumlar arası uygulamaları profillemek için gereken [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)]sorunları ve adımları öğrenin.
+ Örnekleme verilerini toplamak ve üzerinde oturum açma uygulamalarının profilini almak için gereken sorunları ve adımları öğrenin [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)] .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

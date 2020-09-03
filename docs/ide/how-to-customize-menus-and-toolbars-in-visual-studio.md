@@ -28,10 +28,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ed85d3a3406cf7abf4bc08e728cc647d605e16ae
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85284405"
 ---
 # <a name="how-to-customize-menus-and-toolbars-in-visual-studio"></a>Nasıl yapılır: Visual Studio 'da menüleri ve araç çubuklarını özelleştirme
@@ -119,5 +119,5 @@ Visual Studio 'Yu yalnızca menü çubuğuna araç çubukları ve menüler ekley
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IDE 'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md)
+- [IDE’yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md)
 - [Düzenleyiciyi özelleştirme](../ide/how-to-change-text-case-in-the-editor.md)

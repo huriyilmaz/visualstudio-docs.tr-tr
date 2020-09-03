@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7c9ccd5285f9a2744704c0ee13094a1dac31c53b
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74302840"
 ---
 # <a name="uml-use-case-diagrams-guidelines"></a>UML Kullanım Durumu Diyagramları: Yönergeler
@@ -59,7 +59,7 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 
    Kullanım durumu diyagramı, sisteminiz veya alt sistemleri tarafından hangi kullanım örneklerinin desteklendiğini gösterebilir.
 
-## <a name="BasicSteps"></a>Kullanım örneği diyagramları çizmek için temel adımlar
+## <a name="basic-steps-for-drawing-use-case-diagrams"></a><a name="BasicSteps"></a> Kullanım örneği diyagramları çizmek için temel adımlar
 
 > [!NOTE]
 > Modelleme diyagramlarından herhangi birini oluşturmaya yönelik ayrıntılı adımlar [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md)bölümünde açıklanmıştır.
@@ -110,7 +110,7 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 
 7. Farklı alt sistemlere veya ilgili kullanım durumlarının farklı gruplarına odaklanmak için ayrı diyagramlar çizin. Tek bir modelleme projesindeki tüm diyagramlar aynı modelin görünümleridir.
 
-## <a name="Actors"></a>Aktör ve kullanım durumları çizme
+## <a name="drawing-actors-and-use-cases"></a><a name="Actors"></a> Aktör ve kullanım durumları çizme
  Kullanım örneği diyagramının ana amacı, sisteminizle etkileşen kişileri ve bu uygulamayla elde ettikleri ana hedefleri göstersağlamaktır.
 
 - Sistem veya alt sistemlerinizle etkileşime geçen kişi, kuruluş, diğer sistem, yazılım veya cihaz sınıflarını temsil eden **aktörler** oluşturun.
@@ -170,11 +170,11 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 
  ![Birçok çokluğa çok çokluğu gösteren kullanım örneği](../modeling/media/uml-ucguidemulti2.png "UML_UCGuideMulti2")
 
-- Aynı sınıfın kaç aktörlerin tek bir kullanım durumunun tek bir yerinde bir parçasını ele geçirmesine olanak sağlamak için, ilişkilendirmenin aktör sonundaki çokluğu **1..\*** olarak ayarlayın.
+- Aynı sınıfın çeşitli aktörleri bir kullanım durumunun tek bir yerinde bir parçasını ele geçirmesine olanak sağlamak için, ilişkilendirmenin aktör sonundaki çokluğu **1.. \* **.
 
    Çizimde, bir veya daha fazla restoran aynı yemek siparişini yerine getirmek için bir parçası alabilir.
 
-- Her bir aktörün bir kullanım örneğinin birkaç tekrarışında aynı anda katılacaklarını göstermek için, ilişkinin kullanım örneği sonunda çoğulluğu **\*** olarak ayarlayın.
+- Her bir aktörün bir kullanım örneğinin birkaç tekrarışında aynı anda katılacaklarını göstermek için, ilişkilendirmenin kullanım örneği sonunda çoğulluğu ayarlayın **\*** .
 
    Çizimde, her restoran aynı anda birden fazla siparişi yerine getirmek için çalışabilir.
 
@@ -190,11 +190,11 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 
    - **1** bu rolün tam olarak bir örneğinin her bir bağlantıya katıldığı durum.
 
-   - **1..** bu rolün bir veya daha fazla örneğinin her bir bağlantıya katılmasını sağlamak için\*.
+   - **1.. \* ** bu rolün bir veya daha fazla örneğinin her bir bağlantıya katılmasını sağlamak için.
 
    - **0.. 1** katılımın isteğe bağlı olması durumunda.
 
-   - Bu rolün sıfır veya daha fazla örneğinin bağlantıya katılacağı durumu **\*** .
+   - **\*** Bu rolün sıfır veya daha fazla örneğinin bağlantıya katılmasını sağlamak için.
 
 > [!NOTE]
 > Birçok ekip kullanım örneği diyagramlarında çoğullanlarını varsayılan değer olan 1 ' de bırakarak çeşitlilik bilgileri yerleştirmez. Bunun yerine, kullanım örneklerinin ayrı açıklamalarıyla bilgileri sağlarlar. Bu durumda, kullanım durumu diyagramlarındaki tüm çeşitlilimler gizlenir.
@@ -217,7 +217,7 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
     > [!NOTE]
     > Yeni diyagrama bir aktör ve zaten ilişkilendirilmiş bir kullanım durumu yerleştirirseniz, bunlar arasındaki ilişki yeni diyagramda otomatik olarak görünür.
 
-## <a name="Details"></a>Kullanım örneklerini ayrıntılı olarak açıklama
+## <a name="describing-use-cases-in-detail"></a><a name="Details"></a> Kullanım örneklerini ayrıntılı olarak açıklama
  Kullanım örneği şunu temsil eder:
 
 - Bir oyuncu **satın alma**gibi sistemi kullanan bir aktör hedefi; '
@@ -270,7 +270,7 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 
 #### <a name="to-link-to-a-shared-document-onenote-element-or-web-page"></a>Paylaşılan bir belgeye, OneNote öğesine veya Web sayfasına bağlamak için
 
-1. Paylaşılan öğenin URL 'sini alın. Bu, örneğin, '\\\\' veya bir Web sayfası veya SharePoint URL 'SI ' http://' ile başlayan bir ağ dosyası yolu ya da ' OneNote: ' başlangıcında bir OneNote bölümü, sayfası veya paragrafı bağlantısı olabilir.
+1. Paylaşılan öğenin URL 'sini alın. Bu, örneğin, ' ' başlangıcı olan bir ağ dosyası yolu \\ \\ veya bir Web sayfası veya SharePoint URL 'si ' http://' veya bir OneNote bölümüne, sayfaya ya da paragrafa bir bağlantı olan ' OneNote: ' başlangıcı olabilir.
 
 2. Araç kutusunda **yapıt** ' ye ve ardından kullanım durumu diyagramında ' a tıklayın.
 
@@ -280,9 +280,9 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 > Bir yapıya çift tıklayarak, bağlandığı diyagramı veya belgeyi açabilirsiniz.
 
 ### <a name="linking-use-cases-to-work-items"></a>Kullanım örneklerini iş öğelerine bağlama
- Projeniz [!INCLUDE[vstsTfsRosarioLong](../includes/vststfsrosariolong-md.md)] kullanıyorsa ve [!INCLUDE[esprtfc](../includes/esprtfc-md.md)]sahipseniz, her kullanım örneğini [!INCLUDE[esprfound](../includes/esprfound-md.md)]bir iş öğesine bağlayabilirsiniz. Bu bağlantıları nasıl yapacağınızı öğrenmek için bkz. [bağlantı modeli öğeleri ve iş öğeleri](../modeling/link-model-elements-and-work-items.md).
+ Projeniz kullanıyorsa [!INCLUDE[vstsTfsRosarioLong](../includes/vststfsrosariolong-md.md)] ve sahipseniz [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] , her kullanım örneğini içindeki bir iş öğesine bağlayabilirsiniz [!INCLUDE[esprfound](../includes/esprfound-md.md)] . Bu bağlantıları nasıl yapacağınızı öğrenmek için bkz. [bağlantı modeli öğeleri ve iş öğeleri](../modeling/link-model-elements-and-work-items.md).
 
- Bu şunları yapmanızı sağlar:
+ Şunları yapmanızı sağlar:
 
 - Bağlantılı iş öğesinde kullanım durumunu açıkla. Özellikle, projeniz Visual Studio biçimsel Işlem şablonunu kullanıyorsa, kullanım örneği Iş öğesine bağlayabilirsiniz. Bu iş öğesi türü, kullanım durumunun amaçlarını ve senaryolarını açıklamak için alanlar sağlar.
 
@@ -290,7 +290,7 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 
 - Geliştirme işinin ilerlemesini izleyebilmek için, görevleri kullanım örneğine bağlayın.
 
-## <a name="Structuring"></a>Kullanım örneklerini yapılandırma
+## <a name="structuring-use-cases"></a><a name="Structuring"></a> Kullanım örneklerini yapılandırma
  Yalnızca birkaç önemli kullanım durumu ile sisteminizin davranışını açıklamaya çalışırsınız. Her büyük kullanım örneği, bir aktörün bir ürün satın alma, satıcının görünüm noktasından, satış için ürünler sağlayan bir büyük hedefi tanımlar.
 
  Bu hedefleri açık hale getirdiğiniz zaman, her hedefin nasıl elde edildiğini ve temel hedeflerdeki Çeşitlemeler hakkında daha fazla ayrıntıya geçebilirsiniz.
@@ -305,7 +305,7 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 
 - [Genişletme ile değişken durumları ayırma](#Extend)
 
-### <a name="Include"></a>Dahil bir kullanım durumunun ayrıntılarını gösterme
+### <a name="showing-the-details-of-a-use-case-with-include"></a><a name="Include"></a> Dahil bir kullanım durumunun ayrıntılarını gösterme
  Bir kullanım durumunun başka bir ayrıntıyı açıklar olduğunu göstermek için bir **dahil etme** ilişkisi kullanın. Çizimde, **yemek siparişi** **ödeyerek**, **menüyü seçin**ve **menü öğesi**' ni seçin. Dahil edilen ve daha ayrıntılı kullanım örneklerinin her biri, aktör veya aktörlerin, dahil kullanım durumunun genel amacını elde etmek için gerçekleştirmesi gerekebilecek bir adımdır. Ok, daha ayrıntılı, dahil edilen kullanım durumuna işaret etmelidir.
 
 > [!CAUTION]
@@ -323,7 +323,7 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 
 - Farklı kullanım durumlarında paylaşılan senaryolarınızı tekrarlamadan kaçının.
 
-#### <a name="Steps"></a>Ayrıntılı adımların sırasını tanımlama
+#### <a name="defining-the-order-of-the-detailed-steps"></a><a name="Steps"></a> Ayrıntılı adımların sırasını tanımlama
  Kullanım durumu diyagramı, daha ayrıntılı adımların gerçekleştirilmesi gereken sıra veya her birinin her zaman gerekli olup olmadığı hakkında hiçbir şey söylemez.
 
  Adımların sırasını açık hale getirmek için, dahil olan kullanım örneğine ayrı bir belge iliştirmek üzere bir **yapıtı** kullanabilirsiniz. Aşağıdaki örnekte, bir yiyecek kullanım örneğine iliştirilmiş bir etkinlik diyagramı. Alternatif olarak, bir adım listesi veya ekran görüntüsü sırası içeren bir metin belgesi kullanabilirsiniz. Daha fazla bilgi için bkz. [kullanım örneklerini ayrıntılı olarak açıklama](#Details).
@@ -338,7 +338,7 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 
   ![Bağlantılı etkinlik diyagramında gösterilen kullanım örneği adımları](../modeling/media/uml-ucguidesteps.png "UML_UCGuideSteps")
 
-### <a name="Inheritance"></a>Genelleştirme ile hedefleri paylaşma
+### <a name="sharing-goals-with-generalization"></a><a name="Inheritance"></a> Genelleştirme ile hedefleri paylaşma
  *Özel* kullanım durumunun, başka bir *genel* kullanım örneği tarafından ifade edilen hedeflere ulaşmak için belirli bir yol olduğunu göstermek için bir Genelleştirme ilişkisi kullanın. Açık ok ucu, daha genel kullanım durumuna işaret etmelidir.
 
  ![Genelleştirme ilişkisini gösteren kullanım örnekleri](../modeling/media/uml-ucguidegeneral.png "UML_UCGuideGeneral")
@@ -368,7 +368,7 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 
 4. Özelleştirilmiş kullanım örnekleri arasında paylaşılan aktörler genel kullanım örneğine taşınabilir.
 
-### <a name="Extend"></a>Değişken durumları genişletme ile ayırma
+### <a name="separating-variant-cases-with-extend"></a><a name="Extend"></a> Değişken durumları genişletme ile ayırma
  Bir kullanım durumunun belirli koşullar altında başka bir kullanım örneğine işlevsellik ekleyeolabileceğini göstermek için genişletme bağlantısını kullanın. Ok, ana, Genişletilmiş kullanım örneğine işaret etmelidir.
 
  ![Bir kullanım örneği başka bir genişletme](../modeling/media/uml-ucguideextend.png "UML_UCGuideExtend")
@@ -407,7 +407,7 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 
 - Bu uzantı yalnızca sistemin belirli sürümlerinde kullanılabilir olacaktır. Kullanım durumu diyagramında her sürümü ayrı bir alt sistem olarak gösterebilirsiniz.
 
-## <a name="Subsystems"></a>Alt sistem sınırlarını kullanma
+## <a name="using-subsystem-boundaries"></a><a name="Subsystems"></a> Alt sistem sınırlarını kullanma
  Sisteminizin kapsamındaki kullanım örneklerinin ne olduğunu göstermek için bir alt sistem sınırı kullanın.
 
 #### <a name="to-draw-a-subsystem-boundary"></a>Alt sistem sınırı çizmek için
@@ -420,7 +420,7 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 
 3. İçeriğini ayarlamak için mevcut kullanım çalışmalarını alt sistem içine veya dışına sürükleyin.
 
-   \- veya-
+   \- veya
 
    Doğrudan bir alt sistemde yeni bir kullanım durumu oluşturmak için, araç kutusunda **kullanım örneği** ' ne tıklayın ve ardından alt sistem içine tıklayın.
 

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 02d51c5799391863262d285e1cda209a3b7938d7
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74300846"
 ---
 # <a name="insert-controls-and-modify-their-behavior-in-xaml-designer"></a>XAML Tasarımcısı'de denetimler ekleme ve bunların davranışlarını değiştirme
@@ -27,10 +27,10 @@ Denetimler, kullanıcıların uygulamanızla etkileşime geçmesini sağlar. Bun
 
 - [Denetimleri yapın](#Modify)
 
-## <a name="Insert"></a>Çalışma yüzeyine denetim ekleme
+## <a name="add-controls-to-the-artboard"></a><a name="Insert"></a> Çalışma yüzeyine denetim ekleme
  Denetimleri **varlıklar** panelinden **çalışma yüzeyine**sürükleyebilir ve sonra bunları **Özellikler** penceresinde değiştirebilirsiniz.
 
- ![Blend &#45; varlıkları &#45; FlipView](../designers/media/blend-assetsflipview-xaml.png "blend_AssetsFlipView_XAML")
+ ![&#45; FlipView &#45; varlıkları Blend](../designers/media/blend-assetsflipview-xaml.png "blend_AssetsFlipView_XAML")
 
  Bu videolar, daha yaygın denetimlerin bazılarını nasıl kullanacağınızı gösterir.
 
@@ -53,7 +53,7 @@ Denetimler, kullanıcıların uygulamanızla etkileşime geçmesini sağlar. Bun
 
  Bir denetim yapmak için bir nesne seçin. Ardından, **Araçlar** menüsünde **Denetim oluştur**' a tıklayın.
 
-## <a name="Modify"></a>Denetimleri yapın
+## <a name="make-controls-do-things"></a><a name="Modify"></a> Denetimleri yapın
  Denetimler, kullanıcılar onlarla etkileşim kurarken eylemler gerçekleştirebilir. Örneğin, bir animasyon başlatabilir, bir veri kaynağını güncelleştirebilir veya video oynatabilir.
 
  Denetimleri yapmak için *Tetikleyiciler*, *davranışlar*ve *olayları* kullanın.
@@ -72,7 +72,7 @@ Denetimler, kullanıcıların uygulamanızla etkileşime geçmesini sağlar. Bun
 
  **Kısa bir video izleyin:** ![yüklü özellikleri yapılandırma](../designers/media/bldadminconsoleinitialconfigicon.PNG "Bldadminconsoleınitialconfigıcon") [Blend ipuçları: davranış Bölüm 1 ' i kullanma tanıtımı](https://www.bing.com/videos/search?q=Expression%20blend%20behaviors&qs=n&form=QBVR&pq=expression%20blend%20behavior&sc=4-25&sp=-1&sk=#view=detail&mid=CF0DD797ED84DE740904CF0DD797ED84DE740904).
 
-### <a name="events"></a>Olaylar
+### <a name="events"></a>Ekinlikler
  Ultimate esnekliği için bir *olayı*işleyin. Kod yazmanız gerekir.
 
  **Kısa bir video izleyin:** ![yüklü özellikleri yapılandırma](../designers/media/bldadminconsoleinitialconfigicon.PNG "Bldadminconsoleınitialconfigıcon") [fare olayı ekleme](https://www.youtube.com/watch?v=2PMxAlb-x_E).

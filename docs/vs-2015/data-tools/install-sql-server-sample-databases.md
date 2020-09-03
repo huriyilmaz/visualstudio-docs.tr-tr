@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3915351bff74f35ceb5fc462cb29dfd2f322fb6a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74299634"
 ---
 # <a name="install-sql-server-sample-databases"></a>SQL Server örnek veritabanlarını yükleme
@@ -27,7 +27,7 @@ ms.locfileid: "74299634"
 
 #### <a name="to-restore-a-database-from-a-bak-file-in-visual-studio"></a>Visual Studio 'da bir. bak dosyasından bir veritabanını geri yüklemek için
 
-1. Microsoft SQL Server bir veritabanını yedeklerken sonuç bir. bak dosyasıdır. . Bak dosyasını bir veritabanı dosyası olarak yeniden kullanılabilir hale getirmek için *geri yüklenmesi*gerekir. Ana menüde, > **SQL Server Nesne Gezgini** **görüntüle** ' yi seçin. Bunu görmüyorsanız, yüklemeniz gerekebilir. **Denetim masası** > **Programlar ve Özellikler**' e gidin, Microsoft Visual Studio 2015 ' i bulun ve **Değiştir** düğmesine tıklayın. Yüklü bileşenlerin listesi Yükleyici penceresinde göründüğünde, **SQL Server Nesne Gezgini** onay kutusunu seçin ve yükleme işlemine devam edin.
+1. Microsoft SQL Server bir veritabanını yedeklerken sonuç bir. bak dosyasıdır. . Bak dosyasını bir veritabanı dosyası olarak yeniden kullanılabilir hale getirmek için *geri yüklenmesi*gerekir. Ana menüde SQL Server Nesne Gezgini **görüntüle**' yi seçin  >  **SQL Server Object Explorer**. Bunu görmüyorsanız, yüklemeniz gerekebilir. **Denetim Masası**  >  **Programlar ve Özellikler**' e gidin, Microsoft Visual Studio 2015 ' i bulun ve **Değiştir** düğmesine tıklayın. Yüklü bileşenlerin listesi Yükleyici penceresinde göründüğünde, **SQL Server Nesne Gezgini** onay kutusunu seçin ve yükleme işlemine devam edin.
 
 2. SQL Server Nesne Gezgini, herhangi bir SQL Server veritabanı altyapısına (örneğin, LocalDB) sağ tıklayın ve**Yeni sorgu**' yı seçin.
 

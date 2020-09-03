@@ -11,180 +11,180 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: dca7768f31219328648d457d188086e0185e2ffc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200960"
 ---
 # <a name="web-site-support-templates"></a>Web Sitesi Destek Şablonları
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Web sitesi proje ve öğe şablonları, yeni Web sitesi projeleri ve öğeleri sıfırdan oluşturma gereksinimini ortadan kaldırarak geliştirme sürecini hızlandırmak Web sitesini yeniden kullanılabilir ve özelleştirilebilir proje ve öğe saptamalar sağlar. Daha fazla bilgi için [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] şablonları, [oluşturma proje ve öğe şablonları](../../ide/creating-project-and-item-templates.md).  
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Web sitesi projesi ve öğe şablonları, yeni Web sitesi projeleri ve öğeleri sıfırdan oluşturma gereksinimini ortadan kaldırarak geliştirme sürecini hızlandıran, yeniden kullanılabilir ve özelleştirilebilir Web sitesi projesi ve öğe saplamaları sağlar. Şablonlar hakkında daha fazla bilgi için [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] bkz. [Proje ve öğe şablonları oluşturma](../../ide/creating-project-and-item-templates.md).  
   
 ## <a name="project-template-folder"></a>Proje şablonu klasörü  
- Web projesi şablonu şablonları genellikle yüklenen [*Visual Studio yükleme yolu*] \Common7\IDE\ProjectTemplates\Web\\, her programlama dilinde web sonra adlı bir alt klasör.  
+ Web projesi şablonu şablonları genellikle, Web programlama dilinden sonra adlandırılmış bir alt klasörde bulunan [*Visual Studio yükleme yolu*] \Common7\IDE\ProjectTemplates\Web üzerine yüklenir \\ .  
   
 ## <a name="project-file"></a>Proje Dosyası  
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tümleşik geliştirme ortamı (IDE) doğru proje türü için bir şablon bir yolu olarak bir proje dosyasının uzantısına gerektirir. Web projeleri bir proje dosyası olmadığından işlevsiz proje dosya uzantısı .webproj Bunu desteklemek için kaydedilir.  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Tümleşik geliştirme ortamı (IDE), bir şablonu doğru proje türüyle eşlemek için bir proje dosyası uzantısı gerektirir. Web projelerinin bir proje dosyası olmadığından,. webproj sözde proje dosyası uzantısını desteklemek için kaydedilir.  
   
- İsteğe bağlı olarak, bir dil adı dizesi Web Proje sisteminin dil varsayılan kümesinde etkinleştirmek için şablon eklenebilir **Yeni Öğe Ekle** iletişim kutusu öğeleri için şablona dayalı. Dize, dosyanın ilk satırı olmalıdır ve hem IntelliSense altyapısı kaydında AddItemLanguageName altında kayıtlı adı hem de proje Subtype(VsTemplate) altında kayıtlı adı ile eşleşmelidir. Daha fazla bilgi için [Web sitesi destek öznitelikleri](../../extensibility/internals/web-site-support-attributes.md).  
+ İsteğe bağlı olarak, Web projesi sisteminin şablona dayalı öğeler için **Yeni öğe Ekle** iletişim kutusunda varsayılan dili ayarlayabir dile etkinleştirmek üzere şablona bir dil adı dizesi eklenebilir. Dize, dosyanın ilk satırı olmalıdır ve IntelliSense altyapısı kaydında AddItemLanguageName altında kayıtlı adla ve proje alt türü (VsTemplate) altında kayıtlı ad ile eşleşmelidir. Daha fazla bilgi için bkz. [Web sitesi destek öznitelikleri](../../extensibility/internals/web-site-support-attributes.md).  
   
- Dize mevcut değilse Web Proje sistemi proje şablonu şablon tarafından Web projesine eklediğiniz sayfaları dil özniteliği ve dosya uzantıları temel varsayılan dili belirlemeye çalışır.  
+ Dize yoksa, Web proje sistemi, proje şablonu şablonu tarafından web projesine eklenen sayfaların dil özniteliği ve dosya uzantılarına göre varsayılan dili belirlemeyi dener.  
   
 ## <a name="project-templates"></a>Proje şablonları  
- Yanıt olarak yeni Web siteleri oluşturmak için kullanılan Web sitesi projesi şablonları **yeni Web sitesi** komutunu **dosya** menüsü. Şu anda desteklenen üç Web sitesi projesi türleri:  
+ Web sitesi proje şablonları, **Dosya** menüsündeki **Yeni Web sitesi** komutuna yanıt olarak yeni Web siteleri oluşturmak için kullanılır. Üç Web sitesi proje türü şu anda destekleniyor:  
   
 - Boş Web sitesi projeleri  
   
 - Web sitesi projeleri  
   
-- Web hizmeti projelerini Microsoft Azure  
+- Web hizmeti projeleri  
   
 ### <a name="empty-web-site-projects"></a>Boş Web sitesi projeleri  
- Bu dosyalar, yanıt olarak yeni bir boş Web sitesi oluşturma **boş Web sitesi** işaret sonra kullanılabilir olan komut **yeni Web sitesi** üzerinde **dosya** menüsü:  
+ Bu dosyalar, **boş Web** sitesi komutuna yanıt olarak yeni bir boş Web sitesi oluşturur ve bu, **Dosya** menüsündeki **Yeni Web sitesini** işaret ettikten sonra kullanılabilir:  
   
-- EmptyWeb.vstemplate  
+- EmptyWeb. vstemplate  
   
-     Yeni bir boş Web sitesi oluşturmayı kılavuzları şablon dosyası.  
+     Yeni boş Web sitesinin oluşturulmasını yönlendiren şablon dosyası.  
   
-- EmptyWeb.webproj  
+- EmptyWeb. webproj  
   
-     Bu dosya, proje şablonu sisteminin bir yapıdır. Bu proje dosyası başvurusu EmptyWeb.vstemplate dosyasındaki karşılar.  
+     Bu dosya, proje şablonu sisteminin yapıtıdır. EmptyWeb. vstemplate dosyasındaki proje dosyası başvurusunu karşılar.  
   
 ### <a name="web-site-projects"></a>Web sitesi projeleri  
- Bu dosyalar, yanıt olarak yeni bir Web sitesi oluşturma **ASP.NET Web sitesi** işaret sonra kullanılabilir olan komut **yeni Web sitesi** üzerinde **dosya** menüsü:  
+ Bu dosyalar, **Dosya** menüsündeki **Yeni Web sitesini** işaret ettikten sonra kullanılabilir olan **ASP.NET Web sitesi** komutuna yanıt olarak yeni bir Web sitesi oluşturur:  
   
 - Default.aspx  
   
-     Yeni Web sitesi için varsayılan giriş sayfası. Language özniteliği codebehind dilini belirtir ve bu sayfayla ilişkili codebehind kodu içeren bağımlı dosya CodeFile özniteliği belirtir.  
+     Yeni Web sitesi için varsayılan giriş sayfası. Language özniteliği codebehind dilini belirtir ve CodeFile özniteliği bu sayfayla ilişkili olan codebehind kodunu içeren bağımlı dosyayı belirtir.  
   
-- Default.aspx. *uzantısı*  
+- Default. aspx. *uzantı*  
   
-     Bağımlı dosya varsayılan giriş sayfasını codebehind kodunu içerir. Codebehind dili belirler *uzantısı* bu dosyanın.  
+     Varsayılan giriş sayfası için codebehind kodunu içeren bağımlı dosya. CodeBehind dili bu dosyanın *uzantısını* belirler.  
   
-- Web.config  
+- web.config  
   
-     Kök web.site yapılandırma dosyası.  
+     Kök Web. site yapılandırma dosyası.  
   
-- WebApplication.vstemplate  
+- WebApplication. vstemplate  
   
-     Web sitesi çözüm içeriğini belirler ve App_Data klasöründe oluşturulmasını zorlar şablon dosyası.  
+     Web sitesi çözümünün içeriğini belirleyen ve App_Data klasörünün oluşturulmasını zorlayan şablon dosyası.  
   
-- WebApplication.webproj  
+- WebApplication. webproj  
   
-     Bu dosya, proje şablonu sisteminin bir yapıdır. Bu proje dosyası başvurusu WebApplication.vstemplate dosyasındaki karşılar.  
+     Bu dosya, proje şablonu sisteminin yapıtıdır. WebApplication. vstemplate dosyasındaki proje dosyası başvurusunu karşılar.  
   
-### <a name="web-service-projects"></a>Web hizmeti projelerini Microsoft Azure  
- Bu dosyalar, yanıt olarak yeni bir Web sitesi oluşturma **ASP.NET Web hizmeti** işaret sonra kullanılabilir olan komut **yeni Web sitesi** üzerinde **dosya** menüsü:  
+### <a name="web-service-projects"></a>Web hizmeti projeleri  
+ Bu dosyalar, **Dosya** menüsündeki **Yeni Web sitesini** işaret ettikten sonra kullanılabilir olan **ASP.NET Web hizmeti** komutuna yanıt olarak yeni bir Web sitesi oluşturur:  
   
-- QuoteService.asmx'e değiştirin  
+- Service. asmx  
   
-     Yeni bir Web hizmeti için HTML sayfası. Language özniteliği codebehind dilini belirtir ve bu hizmetle ilişkili codebehind kodu içeren bağımlı dosya CodeBehind özniteliğinin belirtir.  
+     Yeni Web hizmeti için HTML sayfası. Language özniteliği codebehind dilini belirtir ve CodeBehind Özniteliği bu hizmetle ilişkili olan codebehind kodunu içeren bağımlı dosyayı belirtir.  
   
-- Hizmeti. *Uzantı*  
+- Hizmetle. *uzantının*  
   
-     Bağımlı dosya hizmet sınıfını uygular. Codebehind dili belirler *uzantısı* bu dosyanın.  
+     Hizmet sınıfını uygulayan bağımlı dosya. CodeBehind dili bu dosyanın *uzantısını* belirler.  
   
-- Web.config  
+- web.config  
   
-- Kök web.site yapılandırma dosyası.  
+- Kök Web. site yapılandırma dosyası.  
   
-- WebService.vstemplate  
+- WebService. vstemplate  
   
-     Web sitesi çözüm içeriğini belirler ve App_Data ve App_Code klasörleri oluşturulmasını zorlar şablon dosyası. Hizmet. *uzantısı* dosya, App_Code klasörüne kopyalanır.  
+     Web sitesi çözümünün içeriğini belirleyen ve App_Data ve App_Code klasörlerinin oluşturulmasına zorlayan şablon dosyası. Hizmet. *uzantı* dosyası App_Code klasörüne kopyalanır.  
   
-- WebService.webproj  
+- WebService. webproj  
   
-     Bu dosya, proje şablonu sisteminin bir yapıdır. Bu proje dosyası başvurusu WebService.vstemplate dosyasındaki karşılar.  
+     Bu dosya, proje şablonu sisteminin yapıtıdır. WebService. vstemplate dosyasındaki proje dosyası başvurusunu karşılar.  
   
 ## <a name="project-item-template-folder"></a>Proje öğesi şablon klasörü  
- Web proje öğesi şablonu şablonları genellikle yüklenen [*Visual Studio yükleme yolu*] \Common7\IDE\ItemTemplates\Web\\, her programlama dilinde kendi web sonra adlı bir alt klasör.  
+ Web projesi-öğe şablonu şablonları genellikle, Web programlama dilinden sonra adlandırılmış bir alt klasörde bulunan [*Visual Studio yükleme yolu*] \Common7\IDE\ItemTemplates\Web üzerine yüklenir \\ .  
   
 ## <a name="project-item-templates"></a>Proje öğesi şablonları  
- Yeni Web sayfaları yanıt olarak bir Web sitesi eklemek için kullanılan Web sitesi proje öğesi şablonları **varolan öğeyi Ekle** komutu. Şu anda, bu tür bir Web sayfaları desteklenmektedir:  
+ Web sitesi proje öğesi şablonları, **var olan öğe Ekle** komutuna yanıt olarak bir Web sitesine yeni Web sayfaları eklemek için kullanılır. Şu anda bu tür web sayfaları desteklenmektedir:  
   
-- Yeni sınıfı  
+- Yeni sınıf  
   
 - Yeni HTML sayfası  
   
 - Yeni Web formu  
   
-- Yeni ana sayfası  
+- Yeni Ana sayfa  
   
-### <a name="new-class"></a>Yeni sınıfı  
- Bu şablon, yanıt olarak boş bir sınıf tanımlayan yeni bir kaynak dosyası oluşturur. **yeni sınıf Ekle** komutu.  
+### <a name="new-class"></a>Yeni sınıf  
+ Bu şablon, **Yeni sınıf Ekle** komutuna yanıt olarak boş bir sınıfı tanımlayan yeni bir kaynak dosyası oluşturur.  
   
-- sınıf. *Uzantı*  
+- Sınıfı. *uzantının*  
   
-     Boş sınıf uygulayan kaynak dosyası. Codebehind dili belirler *uzantısı* bu dosyanın.  
+     Boş sınıfı uygulayan kaynak dosya. CodeBehind dili bu dosyanın *uzantısını* belirler.  
   
-- Class.vstemplate  
+- Class. vstemplate  
   
-     Kaynak dosyası oluşturur ve içeriğini belirleyen şablon dosyası.  
+     Kaynak dosyayı oluşturan ve içeriğini belirleyen şablon dosyası.  
   
 ### <a name="new-html-page"></a>Yeni HTML sayfası  
- Bu şablon, yanıt olarak yeni bir Web sayfası oluşturur. **yeni HTML sayfası Ekle** komutu.  
+ Bu şablon **yenı HTML sayfası ekle** komutuna yanıt olarak yeni bir Web sayfası oluşturur.  
   
 - HTMLPage.htm  
   
-     Başlangıç Web sayfası içeriği. Bu Web sayfası, genellikle hiçbir ilişkili codebehind bağımlı dosya vardır. Akıllı bir sayfa ile ilişkili bir dosyası oluşturmak için Web formu şablonu kullanın.  
+     Web sayfasının başlangıç içeriği. Bu Web sayfasına genellikle ilişkili bir codebehind bağımlı dosyası yok. İlişkili bir codebehind dosyası ile akıllı sayfa oluşturmak için, bunun yerine Web formu şablonunu kullanın.  
   
-- HTMLPage.vstemplate  
+- HTMLPage. vstemplate  
   
-     Web sayfası oluşturur ve içeriğini belirleyen şablon dosyası.  
+     Web sayfasını oluşturan ve içeriğini belirleyen şablon dosyası.  
   
-### <a name="new-webform"></a>Yeni Web formu  
- Bu şablon, yanıt olarak yeni bir akıllı Web sayfası oluşturur. **yeni Web formu ekleyin** komutu.  
+### <a name="new-webform"></a>Yeni WebForm  
+ Bu şablon yeni **Web formu Ekle** komutuna yanıt olarak yeni bir akıllı Web sayfası oluşturur.  
   
- Bağımlı bir kaynak dosyası oluşturmak için Seç **kod ayrı dosyaya Yerleştir**. Aksi takdirde tek bir Web sayfası boş bir komut dosyası bloğu ve Hayır sahip oluşturulur \<% sayfa % > bağımlı bir dosyanın yeteneklerinizi yönergeleri.  
+ Bağımlı bir codebehind kaynak dosyası oluşturmak için **kodu ayrı dosyaya yerleştir**' i seçin. Aksi halde, boş bir betik bloğu olan ve \<% Page %> bağımlı bir dosyayı bağlama yönergesi olmayan tek bir Web sayfası oluşturulur.  
   
- Seçilen ana sayfa için içerik sayfası oluşturmak için Seç **Select ana sayfa**.  
+ Seçili ana sayfa için bir içerik sayfası oluşturmak için **Ana sayfa seç**' i seçin.  
   
-- WebForm.aspx  
+- WebForm. aspx  
   
-     Başlangıç Web sayfası içeriği. Bu Web sayfası hiçbir ilişkili codebehind bağımlı dosya vardır.  
+     Web sayfasının başlangıç içeriği. Bu Web sayfasına ilişkili bir codebehind bağımlı dosyası yok.  
   
-- WebForm_cb.aspx  
+- WebForm_cb. aspx  
   
-     Başlangıç Web sayfası içeriği. Bu Web sayfasında ilişkili codebehind bağımlı dosya vardır.  
+     Web sayfasının başlangıç içeriği. Bu Web sayfasında ilişkili bir codebehind bağımlı dosyası bulunur.  
   
-- Codebehind. *Uzantı*  
+- CodeBehind. *uzantının*  
   
-     Bağımlı dosya webform sınıfı uygular. Codebehind dili belirler *uzantısı* bu dosyanın.  
+     WebForm sınıfını uygulayan bağımlı dosya. CodeBehind dili bu dosyanın *uzantısını* belirler.  
   
-- ContentPage.aspx  
+- ContentPage. aspx  
   
-     İçerik sayfası olarak Web sayfasının başlangıç içeriği. Bu Web sayfası hiçbir ilişkili codebehind bağımlı dosya vardır.  
+     Web sayfasının içerik sayfası olarak başlangıç içeriği. Bu Web sayfasına ilişkili bir codebehind bağımlı dosyası yok.  
   
-- ContentPage_cb.aspx  
+- ContentPage_cb. aspx  
   
-     İçerik sayfası olarak Web sayfasının başlangıç içeriği. Bu Web sayfasında ilişkili codebehind bağımlı dosya vardır.  
+     Web sayfasının içerik sayfası olarak başlangıç içeriği. Bu Web sayfasında ilişkili bir codebehind bağımlı dosyası bulunur.  
   
-- WebForm.vstemplate  
+- WebForm. vstemplate  
   
-     Varsa yeni web sayfası ve onun bağımlı dosya içeriğini belirleyen şablon dosyası.  
+     Varsa, yeni Web sayfasının ve bağımlı dosyanın içeriğini belirleyen şablon dosyası.  
   
-### <a name="new-master-page"></a>Yeni ana sayfası  
- Bu şablon, yanıt olarak yeni bir ana sayfası oluşturur. **yeni ana sayfa Ekle** komutu.  
+### <a name="new-master-page"></a>Yeni Ana sayfa  
+ Bu şablon **Yeni Ana sayfa ekle** komutuna yanıt olarak yeni bir ana sayfa oluşturur.  
   
- Bağımlı bir kaynak dosyası oluşturmak için Seç **kod ayrı dosyaya Yerleştir**. Aksi takdirde tek bir Web sayfası boş bir komut dosyası bloğu ve Hayır sahip oluşturulur \<% sayfa % > bağımlı bir dosyanın yeteneklerinizi yönergeleri.  
+ Bağımlı bir codebehind kaynak dosyası oluşturmak için **kodu ayrı dosyaya yerleştir**' i seçin. Aksi halde, boş bir betik bloğu olan ve \<% Page %> bağımlı bir dosyayı bağlama yönergesi olmayan tek bir Web sayfası oluşturulur.  
   
-- MasterPage.master  
+- MasterPage. Master  
   
-     Ana sayfaya başlangıç içeriği. Bu ana sayfası hiçbir ilişkili codebehind bağımlı dosya vardır.  
+     Ana sayfanın başlangıç içeriği. Bu ana sayfaya ilişkili bir codebehind bağımlı dosyası yok.  
   
-- MasterPage_cb.master  
+- MasterPage_cb. Master  
   
-     Ana sayfaya başlangıç içeriği. Bu ana sayfanın ilişkili codebehind bağımlı dosya vardır.  
+     Ana sayfanın başlangıç içeriği. Bu ana sayfada, ilişkili bir codebehind bağımlı dosyası var.  
   
-- Codebehind. *uzantısı*  
+- CodeBehind. *uzantı*  
   
-     Ana sayfa sınıfın uyguladığı bağımlı dosya. Codebehind dili belirler *uzantısı* bu dosyanın.  
+     Ana sayfa sınıfını uygulayan bağımlı dosya. CodeBehind dili bu dosyanın *uzantısını* belirler.  
   
-- MasterPage.vstemplate  
+- MasterPage. vstemplate  
   
-     Varsa yeni bir ana sayfa ve onun bağımlı dosya içeriğini belirleyen şablon dosyası.  
+     Varsa, yeni ana sayfanın ve bağımlı dosyanın içeriğini belirleyen şablon dosyası.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Web Sitesi Desteği](../../extensibility/internals/web-site-support.md)
