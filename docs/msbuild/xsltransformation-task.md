@@ -1,5 +1,5 @@
 ---
-title: XslDönüşüm Görevi | Microsoft Dokümanlar
+title: XslTransformation görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,37 +17,37 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d23799e5ce5bf391915ac459c69c27b990211f0a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79094549"
 ---
 # <a name="xsltransformation-task"></a>XslTransformation görevi
 
-XSLT veya derlenmiş XSLT kullanarak xml girdisini dönüştüren ve çıktıları bir çıkış aygıtına veya dosyaya dönüştürür.
+Bir XSLT veya derlenmiş XSLT kullanarak bir XML girişini dönüştürür ve çıkış cihazına veya bir dosyaya çıktılar verir.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda görevparametreleri `XslTransformation` açıklanmaktadır.
+ Aşağıdaki tablo, görevin parametrelerini açıklar `XslTransformation` .
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`OutputPaths`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> XML dönüşümü için çıktı dosyalarını belirtir.|
-|`Parameters`|İsteğe bağlı `String` parametre.<br /><br /> Parametreleri XSLT Giriş belgesine belirtir.  Her parametreyi ' olarak tutan `<Parameter Name="" Value="" Namespace="" />`ham XML'yi sağlayın.|
-|`XmlContent`|İsteğe bağlı `String` parametre.<br /><br /> XML girişini dize olarak belirtir.|
+|`OutputPaths`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> XML dönüştürmesi için çıkış dosyalarını belirtir.|
+|`Parameters`|İsteğe bağlı `String` parametre.<br /><br /> XSLT giriş belgesi için parametreleri belirtir.  Her parametreyi tutan ham XML sağlayın `<Parameter Name="" Value="" Namespace="" />` .|
+|`XmlContent`|İsteğe bağlı `String` parametre.<br /><br /> XML girişini bir dize olarak belirtir.|
 |`XmlInputPaths`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> XML giriş dosyalarını belirtir.|
-|`XslCompiledDllPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Derlenen XSLT'yi belirtir.|
+|`XslCompiledDllPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Derlenen XSLT 'yi belirtir.|
 |`XslContent`|İsteğe bağlı `String` parametre.<br /><br /> XSLT girişini bir dize olarak belirtir.|
 |`XslInputPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> XSLT giriş dosyasını belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Tabloda listelenen parametrelere sahip olmanın yanı sıra, bu görev <xref:Microsoft.Build.Tasks.TaskExtension> sınıftan devralınan parametreleri de devralır. <xref:Microsoft.Build.Utilities.Task> Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
+ Bu görev, tabloda listelenen parametrelere sahip olmanın yanı sıra sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, xml dosyasını `$(XmlInputFileName)`değiştirmek için xsl dönüştürme dosyası *transform.xslt* kullanılır. Dönüştürülmüş XML' ye `$(IntermediateOutputPath)output.xml`yazılır. XSL dönüşümü `$(Parameter1)` giriş parametresi olarak alır.
+Aşağıdaki örnekte, XML dosyasını değiştirmek için bir XSL Transform dosyası *Transform. XSLT* kullanılır `$(XmlInputFileName)` . Dönüştürülmüş XML üzerine yazılır `$(IntermediateOutputPath)output.xml` . XSL dönüşümü `$(Parameter1)` bir giriş parametresi olarak alır.
 
 ```xml
     <XslTransformation XslInputPath="transform.xslt"

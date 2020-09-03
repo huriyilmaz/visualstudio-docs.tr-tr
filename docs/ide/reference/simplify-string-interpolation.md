@@ -11,33 +11,33 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: a8b0fd53164cb98921b111d49fa04a76c9d0d8a8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79094299"
 ---
-# <a name="simplify-string-interpolation-refactoring"></a>Dize enterpolasyon refactoring basitleştirin
+# <a name="simplify-string-interpolation-refactoring"></a>Dize ilişkilendirme yeniden düzenlemesi Basitleştir
 
-Bu yeniden düzenleme aşağıdakiler için geçerlidir:
+Bu yeniden düzenleme için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** Bir [dize enterpolasyon](https://docs.microsoft.com/dotnet/csharp/tutorials/string-interpolation)basitleştirmenizi sağlar.
+**Ne:** Bir [dize ilişkilendirmeyi](https://docs.microsoft.com/dotnet/csharp/tutorials/string-interpolation)basitleştirmenizi sağlar.
 
-**Ne zaman:** Basitleştirilebilen bir dize enterpolasyonvar.
+**Ne zaman:** Basitleştirilen bir dize ilişkilendirmeden sahipsiniz.
 
-**Neden:** Bir dize enterpolasyon basitleştirilmesi daha fazla netlik ve kısa sözdizimi sağlayabilir. Bu yeniden düzenleme aracı, görevi el ile yapmak yerine otomatik olarak gerçekleştirir.
+**Neden:** Bir dize ilişkilendirmesiyle basitleştirmek, daha fazla açıklık ve kısa sözdizimi sağlayabilir. Bu yeniden düzenleme aracı, el ile yapmak yerine görevi otomatik olarak gerçekleştirir.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. Caret'inizi dize enterpolasyonuna yerleştirin:
+1. Giriş işaretini dize ilişkilendirme üzerine yerleştirin:
 
-2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
+2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 
-3. **Enterpolasyonu Basitleştir'i** seçin
+3. **Ilişkilendirmeyi Basitleştir** ' i seçin
 
     ![Dize ilişkilendirmesini basitleştirme](media/simplify-string-interpolation.png)
 
