@@ -1,5 +1,5 @@
 ---
-title: -ResetSettings (devenv. exe) | Microsoft Docs
+title: -ResetSettings (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,35 +14,35 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 41e402a9268acecb70c83e26bab0e682d4ec59f5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665590"
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Varsayılan [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ayarlarını geri yükler ve [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE 'yi otomatik olarak başlatır. İsteğe bağlı olarak ayarları belirtilen bir. vssettings dosyasına sıfırlar.
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Varsayılan ayarları geri yükler ve IDE 'yi otomatik olarak başlatır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . İsteğe bağlı olarak ayarları belirtilen bir. vssettings dosyasına sıfırlar.
 
- Varsayılan ayarlar, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ilk kez başlatıldığında seçilen profil tarafından belirlenir.
+ Varsayılan ayarlar, ilk başlatıldığında seçili olan profil tarafından belirlenir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Devenv /ResetSettings SettingsFile
 ```
 
-## <a name="arguments"></a>Arguments
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] uygulanacak. vssettings dosyasının tam yolunu ve adını `SettingsFile`.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `SettingsFile` Uygulanacak. vssettings dosyasının tam yolu ve adı [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .
 
- Genel geliştirme ayarları profilini geri yüklemek için `General` kullanın.
+ Genel geliştirme ayarları profilini geri yüklemek için kullanın `General` .
 
 ## <a name="remarks"></a>Açıklamalar
- @No__t_0 belirtilmemişse, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] bir sonraki başlatmanızda varsayılan ayar koleksiyonunu seçmeniz istenir.
+ Hayır `SettingsFile` belirtilirse, bir sonraki başlatmanızda bir varsayılan ayarlar koleksiyonu seçmeniz istenir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .
 
 ## <a name="example"></a>Örnek
- Aşağıdaki komut satırı `MySettings.vssettings` dosya içinde depolanan ayarları uygular.
+ Aşağıdaki komut satırı, dosyasında depolanan ayarları uygular `MySettings.vssettings` .
 
 ```
 Devenv.exe /ResetSettings "C:\My Files\MySettings.vssettings"

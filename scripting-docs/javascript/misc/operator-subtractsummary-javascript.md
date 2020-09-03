@@ -13,10 +13,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 995a286140464e58635bc485478bb570871f5e09
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816793"
 ---
 # <a name="operator-summary-javascript"></a>İşleç Özeti (JavaScript)
@@ -24,7 +24,7 @@ Aşağıdaki tablolarda [!INCLUDE[javascript](../../javascript/includes/javascri
   
 ## <a name="computational-operators"></a>Hesaplama İşleçleri  
   
-|İşleç|Sembol|  
+|Operatör|Sembol|  
 |--------------|------------|  
 |[Toplama](../../javascript/reference/addition-operator-decrement-javascript.md)|+|  
 |[Azaltma](../../javascript/reference/increment-and-decrement-operators-javascript.md)|--|  
@@ -37,7 +37,7 @@ Aşağıdaki tablolarda [!INCLUDE[javascript](../../javascript/includes/javascri
   
 ## <a name="logical-operators"></a>Mantıksal İşleçler  
   
-|İşleç|Sembol|  
+|Operatör|Sembol|  
 |--------------|------------|  
 |[Virgül](../../javascript/reference/comma-operator-decrement-javascript.md)|,|  
 |[Koşullu (Üçlü)](../../javascript/reference/conditional-ternary-operator-decrement-javascript.md)|?:|  
@@ -47,7 +47,7 @@ Aşağıdaki tablolarda [!INCLUDE[javascript](../../javascript/includes/javascri
 |[Kimlik](../../javascript/reference/comparison-operators-javascript.md)|===|  
 |[Eşitsizlik](../../javascript/reference/comparison-operators-javascript.md)|!=|  
 |[Küçüktür](../../javascript/reference/comparison-operators-javascript.md)|<|  
-|[Küçük veya eşittir](../../javascript/reference/comparison-operators-javascript.md)|<=|  
+|[Küçüktür veya eşittir](../../javascript/reference/comparison-operators-javascript.md)|<=|  
 |[Mantıksal AND](../../javascript/reference/logical-and-operator-decrement-javascript.md)|&&|  
 |[Mantıksal NOT](../../javascript/reference/logical-not-operator-decrement-exclpt-javascript.md)|!|  
 |[Mantıksal or](../../javascript/reference/logical-or-operator-decrement-javascript.md)|&#124;&#124;|  
@@ -55,7 +55,7 @@ Aşağıdaki tablolarda [!INCLUDE[javascript](../../javascript/includes/javascri
   
 ## <a name="bitwise-operators"></a>Bitwise İşleçleri  
   
-|İşleç|Sembol|  
+|Operatör|Sembol|  
 |--------------|------------|  
 |[Bit düzeyinde AND](../../javascript/reference/bitwise-and-operator-decrement-javascript.md)|&|  
 |[Bit düzeyinde sola kaydırma](../../javascript/reference/bitwise-left-shift-operator-decrement-javascript.md)|<\<|  

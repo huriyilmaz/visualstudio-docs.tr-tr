@@ -1,5 +1,5 @@
 ---
-title: Komut Yerleştirmeleri Öğesi | Microsoft Dokümanlar
+title: CommandPlacements öğesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,18 +14,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a72b087652a654b563fd4e00bacc52290a29fe1c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739706"
 ---
-# <a name="commandplacements-element"></a>Komut Yerleşimleri öğesi
-CommandPlacements öğe grupları Komut Yerleştirme elemanları ve diğer Komut Yerleri gruplandırmaları.
+# <a name="commandplacements-element"></a>CommandPlacements öğesi
+CommandPlacements öğesi, Commandyerleştirme öğelerini ve diğer CommandPlacements gruplandırmaları gruplandırır.
 
- Komut Yerleşimleri öğesi isteğe bağlıdır. İkincil bir konuma komut, grup veya menü eklenmezse, bu bölümü *.vsct* dosyanıza eklemeniz gerekmez.
+ CommandPlacements öğesi isteğe bağlıdır. İkincil bir konuma hiçbir komut, Grup veya menü eklenmemelidir, bu bölümü *. vsct* dosyanıza eklemeniz gerekmez.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <CommandPlacements>
@@ -41,14 +41,14 @@ CommandPlacements öğe grupları Komut Yerleştirme elemanları ve diğer Komut
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|Komut Yerleri|Gruplar Komuta Yerleştirme elemanları ve diğer Komuta Yerleri gruplandırmaları.|
-|[Komut Yerleştirme öğesi](../extensibility/commandplacement-element.md)|Düğmelerin, grupların ve menülerin birden fazla gruba veya menüye eklenmesini sağlar.|
+|CommandPlacements|Commandyerleştirme öğelerini ve diğer CommandPlacements gruplamalarını gruplandırır.|
+|[Commandyerleştirme öğesi](../extensibility/commandplacement-element.md)|Düğmelerin, grupların ve menülerin birden fazla gruba veya menüye dahil edilmesini sağlar.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
@@ -68,5 +68,5 @@ CommandPlacements öğe grupları Komut Yerleştirme elemanları ve diğer Komut
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Komut Yerleştirme öğesi](../extensibility/commandplacement-element.md)
-- [Visual Studio komut tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Commandyerleştirme öğesi](../extensibility/commandplacement-element.md)
+- [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

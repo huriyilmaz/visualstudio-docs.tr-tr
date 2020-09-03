@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 050cbe6e639f4177694d9af3ecbc0b768065b7d9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665417"
 ---
 # <a name="set-radix-command"></a>Sayı Tabanını Ayarla Komutu
@@ -26,14 +26,14 @@ ms.locfileid: "72665417"
 
 Tamsayı değerlerini göstermek için kullanılan sayısal temeli ayarlar veya döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Debug.SetRadix [10 | 16 | hex | dec]
 ```
 
-## <a name="arguments"></a>Arguments
- `10` veya `16` veya `hex` ya da Isteğe bağlı `dec`. Ondalık (10 veya Dec) ya da onaltılı (16 veya onaltılı) anlamına gelir. Bir bağımsız değişken atlanırsa, geçerli taban değeri döndürülür.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `10` ya da ya da `16` `hex` `dec` isteğe bağlı. Ondalık (10 veya Dec) ya da onaltılı (16 veya onaltılı) anlamına gelir. Bir bağımsız değişken atlanırsa, geçerli taban değeri döndürülür.
 
 ## <a name="example"></a>Örnek
  Bu örnek, ortamı tamsayı değerlerini onaltılık biçimde görüntüleyecek şekilde ayarlar.

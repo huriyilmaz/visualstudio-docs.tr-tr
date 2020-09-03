@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3c7dff8e1bb211343ccc44e0d1fd33d96c102283
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817183"
 ---
 # <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>Nasıl yapılır: XML şemasından XML kod parçacığı oluşturma
@@ -33,7 +33,7 @@ Bu özellik yalnızca öğelerde kullanılabilir. Aşağıdaki kurallar da geçe
 
 - İmleç, öğe adının hemen sağına yerleştirilmelidir.
 
-Oluşturulan kod parçacığı tüm gerekli öznitelikleri ve öğeleri içerir. Birden `minOccurs` büyükse, en fazla 100 örneğe kadar, o öğenin gereken minimum örnek sayısı kod parçacığına dahil edilir. Şemada bulunan sabit değerler, kod parçacığında sabit değerlerle sonuçlanır. `xsd:any`ve `xsd:anyAttribute` öğeleri yok sayılır ve ek kod parçacığı yapıları gerektirmez.
+Oluşturulan kod parçacığı tüm gerekli öznitelikleri ve öğeleri içerir. Birden `minOccurs` büyükse, en fazla 100 örneğe kadar, o öğenin gereken minimum örnek sayısı kod parçacığına dahil edilir. Şemada bulunan sabit değerler, kod parçacığında sabit değerlerle sonuçlanır. `xsd:any` ve `xsd:anyAttribute` öğeleri yok sayılır ve ek kod parçacığı yapıları gerektirmez.
 
 Varsayılan değerler oluşturulur ve düzenlenebilir değerler olarak belirtilmiştir. Şema varsayılan bir değer belirtiyorsa, bu varsayılan değer kullanılır. Ancak, şema varsayılan değeri boş bir dize ise, düzenleyici varsayılan değerleri aşağıdaki şekilde oluşturur:
 
@@ -66,7 +66,7 @@ Bu bölümdeki adımlarda, XML düzenleyicisinin şema tarafından oluşturulan 
 
 5. Şema dosyasını seçin ve **Aç**' a tıklayın.
 
-6. **Tamam**'a tıklayın.
+6. **Tamam**’a tıklayın.
 
      XML şeması artık XML belgesiyle ilişkili.
 
@@ -78,7 +78,7 @@ Bu bölümdeki adımlarda, XML düzenleyicisinin şema tarafından oluşturulan 
 
      yorum eklemek için **!--** .
 
-     **! **Belge türü eklemek IÇIN DOCTYPE.
+     **! ** Belge türü eklemek IÇIN DOCTYPE.
 
      **?** bir işleme yönergesi eklemek için.
 
@@ -90,7 +90,7 @@ Bu bölümdeki adımlarda, XML düzenleyicisinin şema tarafından oluşturulan 
 
 4. Şema bilgilerine göre öğesi için XML verisi oluşturmak için **Tab** tuşuna basın `Contact` .
 
-## <a name="input"></a>Girdi
+## <a name="input"></a>Giriş
 
 Aşağıdaki şema dosyası, izlenecek yol tarafından kullanılır.
 

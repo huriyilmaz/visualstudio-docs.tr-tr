@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b070eb361bcc3fbe4f72adfff10b5e7d19649087
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349568"
 ---
 # <a name="how-to-install-a-visualizer"></a>Nasıl Yapılır: Görselleştiriciyi Yükleme
@@ -50,9 +50,9 @@ Görselleştirici oluşturduktan sonra, ' de kullanılabilir olacak şekilde Gö
     - `My Documents\`*VisualStudioVersion* `\Visualizers\` *Framework*
 
     Burada *Framework* şunlardan biri:
-    - `net2.0`çalışma zamanını çalıştıran debuggees için `.NET Framework` .
+    - `net2.0` çalışma zamanını çalıştıran debuggees için `.NET Framework` .
     - `netstandard2.0``netstandard 2.0`(veya) desteği olan bir çalışma zamanı kullanan debuggees için `.NET Framework v4.6.1+` `.NET Core 2.0+` .
-    - `netcoreapp`çalışma zamanını çalıştıran debuggees için `.NET Core` . (destekler `.NET Core 2.0+` )
+    - `netcoreapp` çalışma zamanını çalıştıran debuggees için `.NET Core` . (destekler `.NET Core 2.0+` )
 
    Bağımsız bir Görselleştirici oluşturmak istiyorsanız debugayıklanan taraf DLL gereklidir. Bu DLL, yöntemlerini uygulayabilen veri nesnesi için kod içerir <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> .
 

@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4fcb38e565ea4f30ed6e669f8b98df09c9d733ea
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665452"
 ---
 # <a name="set-current-stack-frame-command"></a>Geçerli Yığın Çerçevesini Ayarla Komutu
@@ -26,14 +26,14 @@ ms.locfileid: "72665452"
 
 Belirli bir yığın çerçevesini ayarlamanıza olanak sağlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Debug.SetCurrentStackFrame index
 ```
 
-## <a name="arguments"></a>Arguments
- `index` gerekiyor. Bir yığın çerçevesini dizinine göre seçer.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `index` Gerekli. Bir yığın çerçevesini dizinine göre seçer.
 
 ## <a name="example"></a>Örnek
 

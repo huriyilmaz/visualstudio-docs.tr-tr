@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: a3c707fef5562b932b6232300131f6e6e6efef6a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534569"
 ---
 # <a name="ca2212-do-not-mark-serviced-components-with-webmethod"></a>CA2212: Servis verilen bileşenleri WebMethod ile işaretlemeyin
@@ -36,7 +36,7 @@ ms.locfileid: "85534569"
  Öğesinden devralan bir tür yöntemi <xref:System.EnterpriseServices.ServicedComponent?displayProperty=fullName> ile işaretlenir <xref:System.Web.Services.WebMethodAttribute?displayProperty=fullName> .
 
 ## <a name="rule-description"></a>Kural Tanımı
- <xref:System.Web.Services.WebMethodAttribute>ASP.NET kullanılarak oluşturulmuş bir XML Web hizmeti içindeki yöntemler için geçerlidir; yöntemi, uzak Web istemcilerinden çağrılabilir hale getirir. Yöntem ve sınıf ortak olmalıdır ve bir ASP.NET Web uygulamasında yürütmelidir. <xref:System.EnterpriseServices.ServicedComponent>türler COM+ uygulamaları tarafından barındırılır ve COM+ Hizmetleri kullanılabilir. <xref:System.Web.Services.WebMethodAttribute><xref:System.EnterpriseServices.ServicedComponent>, aynı senaryolar için düşünülmediği için türlere uygulanmaz. Özellikle, özniteliği <xref:System.EnterpriseServices.ServicedComponent> yöntemine eklemek yöntemi uzak Web istemcilerinden çağrılabilir hale getirir. <xref:System.Web.Services.WebMethodAttribute>Ve bir <xref:System.EnterpriseServices.ServicedComponent> yönteminde bağlam ve işlem akışı için çakışan davranışlar ve gereksinimler olduğundan, metodun davranışı bazı senaryolarda yanlış olacaktır.
+ <xref:System.Web.Services.WebMethodAttribute> ASP.NET kullanılarak oluşturulmuş bir XML Web hizmeti içindeki yöntemler için geçerlidir; yöntemi, uzak Web istemcilerinden çağrılabilir hale getirir. Yöntem ve sınıf ortak olmalıdır ve bir ASP.NET Web uygulamasında yürütmelidir. <xref:System.EnterpriseServices.ServicedComponent> türler COM+ uygulamaları tarafından barındırılır ve COM+ Hizmetleri kullanılabilir. <xref:System.Web.Services.WebMethodAttribute><xref:System.EnterpriseServices.ServicedComponent>, aynı senaryolar için düşünülmediği için türlere uygulanmaz. Özellikle, özniteliği <xref:System.EnterpriseServices.ServicedComponent> yöntemine eklemek yöntemi uzak Web istemcilerinden çağrılabilir hale getirir. <xref:System.Web.Services.WebMethodAttribute>Ve bir <xref:System.EnterpriseServices.ServicedComponent> yönteminde bağlam ve işlem akışı için çakışan davranışlar ve gereksinimler olduğundan, metodun davranışı bazı senaryolarda yanlış olacaktır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kuralın ihlalini onarmak için, yönteminden özniteliğini kaldırın <xref:System.EnterpriseServices.ServicedComponent> .

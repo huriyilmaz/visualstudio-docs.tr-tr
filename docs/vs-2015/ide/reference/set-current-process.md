@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c362d3f5dda5015e91ac88dd8f0abd60a185ba72
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665475"
 ---
 # <a name="set-current-process"></a>Geçerli Süreci Ayarla
@@ -24,17 +24,17 @@ ms.locfileid: "72665475"
 
 Belirtilen işlemi hata ayıklayıcıda etkin işlem olarak ayarlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Debug.SetCurrentProcess index
 ```
 
-## <a name="arguments"></a>Arguments
- `index` gerekiyor. İşlemin dizini.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `index` Gerekli. İşlemin dizini.
 
 ## <a name="remarks"></a>Açıklamalar
- Hata ayıklarken birden çok işleme iliştirebilirsiniz, ancak belirli bir zamanda Dubber içinde yalnızca bir işlem etkin olur. Etkin işlemi ayarlamak için `SetCurrentProcess` komutunu kullanabilirsiniz.
+ Hata ayıklarken birden çok işleme iliştirebilirsiniz, ancak belirli bir zamanda Dubber içinde yalnızca bir işlem etkin olur. `SetCurrentProcess`Etkin işlemi ayarlamak için komutunu kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
 

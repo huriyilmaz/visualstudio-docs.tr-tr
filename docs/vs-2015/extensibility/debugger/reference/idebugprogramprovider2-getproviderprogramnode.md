@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramProvider2::GetProviderProgramNode | Microsoft Docs
+title: 'IDebugProgramProvider2:: GetProviderProgramNode | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5fa9f4db6aa71e9bba1f456b13ba52abd24ab966
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198724"
 ---
 # <a name="idebugprogramprovider2getproviderprogramnode"></a>IDebugProgramProvider2::GetProviderProgramNode
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Belirli bir programı program düğümünü alır.  
+Belirli bir program için program düğümünü alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetProviderProgramNode(  
@@ -50,31 +50,31 @@ int GetProviderProgramNode(
   
 #### <a name="parameters"></a>Parametreler  
  `Flags`  
- [in] Bayraklarının bir birleşimi [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) sabit listesi. Bu çağrı için tipik aşağıdaki bayraklar:  
+ 'ndaki [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) numaralandırmasındaki bayrakların birleşimi. Aşağıdaki bayraklar bu çağrı için tipik olarak verilmiştir:  
   
-|Bayrağı|Açıklama|  
+|Bayrak|Açıklama|  
 |----------|-----------------|  
 |`PFLAG_REMOTE_PORT`|Çağıran uzak makinede çalışıyor.|  
-|`PFLAG_DEBUGGEE`|Arayan şu anda hata ayıklaması (taşıma hakkında ek bilgi, her düğüm için de döndürülür).|  
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|Arayan bağlı, ancak hata ayıklayıcı tarafından başlatılan değil.|  
+|`PFLAG_DEBUGGEE`|Çağıranın Şu anda hata ayıklaması yapılıyor (her düğüm için sıralama ile ilgili ek bilgiler döndürülecek).|  
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|Çağıran, hata ayıklayıcı tarafından eklenmiş ancak başlatılmamış.|  
   
  `pPort`  
- [in] Çağırma işlemi bağlantı noktası çalışıyor.  
+ 'ndaki Çağıran işlemin üzerinde çalıştığı bağlantı noktası.  
   
  `processId`  
- [in] Bir [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) programını içeren işlemin Kimliğini söz konusu tutan yapı.  
+ 'ndaki Söz konusu programı içeren işlemin KIMLIĞINI tutan bir [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) yapısı.  
   
  `guidEngine`  
- [in] GUID (varsa) programı iliştirildiği hata ayıklama altyapısı.  
+ 'ndaki Programın iliştirildiği hata ayıklama altyapısının GUID 'SI (varsa).  
   
  `programId`  
- [in] Program düğüm alınacağı program kimliği.  
+ 'ndaki Program düğümünün alınacağı programın KIMLIĞI.  
   
  `ppProgramNode`  
- [out] Bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) istenen program düğümü temsil eden nesne.  
+ dışı İstenen program düğümünü temsil eden bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)   

@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: da9ba9572e121a9eba74cd8d624789032f1bb4a1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665665"
 ---
 # <a name="quick-watch-command"></a>Hızlı Bakış Komutu
@@ -26,17 +26,17 @@ ms.locfileid: "72665665"
 
 [QuickWatch Iletişim kutusunun](https://msdn.microsoft.com/library/ffaee1dd-e5ce-4ef2-9401-d28329398867)ifade alanında seçili veya belirtilen metni görüntüler. Bu iletişim kutusunu, hata ayıklayıcı tarafından tanınan bir değişkenin veya ifadenin geçerli değerini ya da bir kaydın içeriğini hesaplamak için kullanabilirsiniz. Ayrıca, herhangi bir const olmayan değişkenin veya herhangi bir kaydın içeriğinin değerini değiştirebilirsiniz.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Debug.QuickWatchq [text]
 ```
 
-## <a name="arguments"></a>Arguments
- Isteğe bağlı `text`. **QuickWatch** iletişim kutusuna eklenecek metin.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `text` Seçim. **QuickWatch** iletişim kutusuna eklenecek metin.
 
 ## <a name="remarks"></a>Açıklamalar
- @No__t_0 atlanırsa, imlecin Şu anda seçili olan metni veya sözcüğü izleme penceresi eklenir.
+ `text`Atlanırsa, imlecin üzerinde şu anda seçili olan metin veya sözcük izleme penceresi eklenir.
 
 ## <a name="example"></a>Örnek
 

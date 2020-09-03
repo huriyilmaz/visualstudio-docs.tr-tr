@@ -11,18 +11,18 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7e6384ea963fe1da145cacc0be46b5989f7bc610
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198760"
 ---
-# <a name="fieldkindex"></a>FIELD_KIND_EX
+# <a name="field_kind_ex"></a>FIELD_KIND_EX
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Ek alanları türlerini numaralandırır, bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesne içerebilir. Bu numaralandırma genişletir [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) sabit listesi.  
+Bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinin içerebileceği ek alan türlerini numaralandırır. Bu sabit listesi [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) numaralandırmayı genişletir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_FIELD_KIND_EX  
@@ -45,21 +45,21 @@ public enum enum_FIELD_KIND_EX
   
 ## <a name="members"></a>Üyeler  
  FIELD_KIND_EX_NONE  
- Alan genişletilmiş bir türü içermiyor.  
+ Alan, genişletilmiş bir tür içermiyor.  
   
  FIELD_TYPE_EX_METHODVAR  
- Alan bir yöntem değişken içerir.  
+ Alan bir yöntem değişkeni içeriyor.  
   
  FIELD_TYPE_EX_CLASSVAR  
- Bir sınıf değişkeni alan içerir.  
+ Alan bir sınıf değişkeni içeriyor.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üst bilgi: Sh.h  
+ Üstbilgi: SH. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetExtendedKind](../../../extensibility/debugger/reference/idebugextendedfield-getextendedkind.md)

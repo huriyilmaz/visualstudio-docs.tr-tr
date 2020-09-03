@@ -1,5 +1,5 @@
 ---
-title: EncUnavailableReason | Microsoft Docs
+title: Haksız Blereason | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0ebdc5518579223a0081f30a0affd3a45e91604e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198769"
 ---
 # <a name="encunavailablereason"></a>EncUnavailableReason
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-`This is for internal use only!` Nedenler temsil eder, **Düzenle ve devam et** kullanılabilir değil.  
+`This is for internal use only!`**Düzenle ve devam et** 'in kullanılamayan nedenleri temsil eder.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 enum tagEncUnavailableReason {  
@@ -53,37 +53,37 @@ public enum EncUnavailableReason {
   
 #### <a name="parameters"></a>Parametreler  
  ENCUN_NONE  
- Belirli neden neden Düzenle ve devam et kullanılabilir değil.  
+ Düzenleme ve devam etme işleminin neden kullanılamadığı belirli bir neden yoktur.  
   
  ENCUN_INTEROP  
- Düzenle ve devam et kullanılabilir değil bir birlikte çalışabilirlik çağrısı sırasında.  
+ Birlikte çalışma çağrısı sırasında Düzenle ve devam et kullanılamaz.  
   
  ENCUN_SQLCLR  
- Düzenle ve devam et kullanılabilir değil, ortak dil çalışma zamanı (CLR) kullanan bir SQL yordam çağrısı sırasında.  
+ Düzenle ve devam et, ortak dil çalışma zamanını (CLR) kullanan bir SQL yordam çağrısı sırasında kullanılamaz.  
   
  ENCUN_MINIDUMP  
- Düzenle ve devam et kullanılabilir değil bir mini döküm işlenirken.  
+ Bir mini döküm işlenirken Düzenle ve devam et kullanılamaz.  
   
  ENCUN_EMBEDDED  
- Düzenle ve devam et kullanılamıyor katıştırılmış kod işlerken.  
+ Katıştırılmış kodu işlerken Düzenle ve devam et kullanılamaz.  
   
  ENCUN_ATTACH  
- Düzenle ve devam et kullanılamıyor oturum iliştirilmiş olduğundan değil başlatıldığında hata ayıklayıcı tarafından.  
+ Oturum, hata ayıklayıcı tarafından başlatılmamış olarak eklendiği için Düzenle ve devam et kullanılamıyor.  
   
  ENCUN_WIN64  
- Düzenle ve devam et kullanılamıyor 64 bit Windows kod işlenirken.  
+ 64 bit Windows kodu işlenirken Düzenle ve devam et kullanılamaz.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu iç kullanım için yalnızca göre numaralandırmadır [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. [GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md) ve [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md) özel bağlantı noktası sağlayıcısı tarafından uygulanan yöntemleri her zaman döndürmelidir `E_NOTIMPL`.  
+ Bu numaralandırma yalnızca tarafından iç kullanım içindir [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] . Özel bir bağlantı noktası sağlayıcısı tarafından uygulanan [Getencavailablestate](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md) ve [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md) yöntemleri her zaman döndürmelidir `E_NOTIMPL` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.idl  
+ Üst bilgi: msdbg. IDL  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md)   
  [GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md)

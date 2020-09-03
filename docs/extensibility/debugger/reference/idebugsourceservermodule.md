@@ -1,5 +1,5 @@
 ---
-title: IDebugSourceServerModule | Microsoft Dokümanlar
+title: Idebugsourceservermodule | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,34 +11,34 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a2c362bc4a103c707238acfa3b3148f00c0e25be
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719918"
 ---
 # <a name="idebugsourceservermodule"></a>IDebugSourceServerModule
-PDB dosyasında bulunan kaynak sunucu bilgilerini temsil eder.
+PDB dosyasında bulunan kaynak sunucu bilgisini temsil eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugSourceServerModule : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Bu arabirim hata ayıklama motorları tarafından uygulanır ve hata ayıklama aracı tarafından tüketilir.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Bu arabirim, hata ayıklayıcı motorları tarafından uygulanır ve hata ayıklayıcı kullanıcı arabirimi tarafından kullanılır.
 
 ## <a name="methods"></a>Yöntemler
- Aşağıdaki tabloda `IDebugSourceServerModule`.
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugSourceServerModule` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetSourceServerData](../../../extensibility/debugger/reference/idebugsourceservermodule-getsourceserverdata.md)|Bir dizi kaynak sunucu bilgisini alır.|
+|[GetSourceServerData](../../../extensibility/debugger/reference/idebugsourceservermodule-getsourceserverdata.md)|Kaynak sunucu bilgileri dizisini alır.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: Msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll

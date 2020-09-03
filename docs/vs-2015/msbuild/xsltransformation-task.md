@@ -18,33 +18,33 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1705fd2b79f8b5044aa4ffa0b65801d6db6c7f33
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198951"
 ---
 # <a name="xsltransformation-task"></a>XslTransformation Görevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir XML dönüşümleri bir XSLT kullanarak giriş veya XSLT ve çıktıları çıktı cihazına veya bir dosya için derlenmiş.  
+Bir XSLT veya derlenmiş XSLT kullanarak bir XML girişini dönüştürür ve çıkış cihazına veya bir dosyaya çıktılar verir.  
   
 ## <a name="parameters"></a>Parametreler  
- Parametreleri aşağıdaki tabloda açıklanmıştır `XslTransformation` görev.  
+ Aşağıdaki tablo, görevin parametrelerini açıklar `XslTransformation` .  
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|`OutputPaths`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> XML dönüştürme için Çıkış dosyalarını belirtir.|  
-|`Parameters`|İsteğe bağlı `String` parametresi.<br /><br /> XSLT giriş belgesi için parametreleri belirtir.|  
-|`XmlContent`|İsteğe bağlı `String` parametresi.<br /><br /> XML Giriş bir dize olarak belirtir.|  
-|`XmlInputPaths`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametresi.<br /><br /> XML giriş dosyalarını belirtir.|  
-|`XslCompiledDllPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametresi.<br /><br /> Derlenmiş XSLT belirtir.|  
-|`XslContent`|İsteğe bağlı `String` parametresi.<br /><br /> XSLT Giriş bir dize olarak belirtir.|  
-|`XslInputPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametresi.<br /><br /> XSLT giriş dosyasını belirtir.|  
+|`OutputPaths`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> XML dönüştürmesi için çıkış dosyalarını belirtir.|  
+|`Parameters`|İsteğe bağlı `String` parametre.<br /><br /> XSLT giriş belgesi için parametreleri belirtir.|  
+|`XmlContent`|İsteğe bağlı `String` parametre.<br /><br /> XML girişini bir dize olarak belirtir.|  
+|`XmlInputPaths`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> XML giriş dosyalarını belirtir.|  
+|`XslCompiledDllPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Derlenen XSLT 'yi belirtir.|  
+|`XslContent`|İsteğe bağlı `String` parametre.<br /><br /> XSLT girişini bir dize olarak belirtir.|  
+|`XslInputPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> XSLT giriş dosyasını belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tabloda listelenen parametreleri sahip olmaya ek olarak, bu görev parametreleri devralan <xref:Microsoft.Build.Tasks.TaskExtension> kendisi sınıfının devraldığı <xref:Microsoft.Build.Utilities.Task> sınıfı. Bu ek parametrelerin ve Tanımlamaların bir listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).  
+ Bu görev, tabloda listelenen parametrelere sahip olmanın yanı sıra sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görevleri](../msbuild/msbuild-tasks.md)   
- [Görev Başvurusu](../msbuild/msbuild-task-reference.md)
+ [Görevlerinize](../msbuild/msbuild-tasks.md)   
+ [Görev başvurusu](../msbuild/msbuild-task-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: BuildProjectOnload Element (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: BuildProjectOnload öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -10,14 +10,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 72d1981aab67762b3ee4aa8d62e0643f4c2a8963
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739957"
 ---
 # <a name="buildprojectonload-element-visual-studio-templates"></a>BuildProjectOnload öğesi (Visual Studio şablonları)
-Yalnızca oluşturduğunuz yeni projeler oluşturur ve bunları bir çözüme ekler. Tüm çözüm oluşturulmadı.
+Oluştururken yalnızca yeni projeler oluşturur ve bunları bir çözüme ekler. Tüm çözüm derlenmez.
 
 Öğe hiyerarşisi:
 
@@ -27,7 +27,7 @@ Yalnızca oluşturduğunuz yeni projeler oluşturur ve bunları bir çözüme ek
     <BuildProjectOnLoad>
 ```
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 <BuildProjectOnLoad> true/false </BuildProjectOnLoad>
@@ -46,18 +46,18 @@ Yalnızca oluşturduğunuz yeni projeler oluşturur ve bunları bir çözüme ek
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|`TemplateData`|Şablonu kategorilere ayırAr ve hem **Yeni Proje'de** hem de **Yeni Öğe Ekle** iletişim kutularında nasıl görününcürün denli tanımlar.|
+|`TemplateData`|Şablonu kategorilere ayırır ve hem **Yeni proje** hem de **Yeni öğe Ekle** iletişim kutularında nasıl göründüğünü tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Metin, şablondan `true` `false` oluşturulduğunda yalnızca yeni proje oluşturulup oluşturulmayacağını belirtmek için olmalıdır.
+ Metin ya da `true` `false` şablondan oluşturulduğunda yalnızca yeni proje oluşturulup oluşturulmayacağını göstermek için olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
- `BuildProjectOnLoad`isteğe bağlı bir unsurdur. Varsayılan değer: `false`.
+ `BuildProjectOnLoad` isteğe bağlı bir öğedir. Varsayılan değer: `false`.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, Visual C# şablonu için meta verileri göstermektedir.
+ Aşağıdaki örnek, bir Visual C# şablonu için meta verileri gösterir.
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -87,5 +87,5 @@ Yalnızca oluşturduğunuz yeni projeler oluşturur ve bunları bir çözüme ek
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [BuildOnLoad özniteliği ve öğesi](buildonload-visual-studio-templates.md)
-- [Proje ve madde şablonları oluşturma](../ide/creating-project-and-item-templates.md)
-- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)

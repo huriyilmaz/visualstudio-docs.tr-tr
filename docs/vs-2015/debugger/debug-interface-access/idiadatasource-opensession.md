@@ -1,5 +1,5 @@
 ---
-title: Idiadatasource::opensession | Microsoft Docs
+title: 'IDiaDataSource:: openSession | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4bec5507d15374e6e88afd4567d4b0fec9ca6cb7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198595"
 ---
 # <a name="idiadatasourceopensession"></a>IDiaDataSource::openSession
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Semboller sorgulamak için bir oturum açar.  
+Sembolleri sorgulamak için bir oturum açar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT openSession (   
@@ -35,21 +35,21 @@ HRESULT openSession ( 
   
 #### <a name="parameters"></a>Parametreler  
  ppSession  
- [out] Döndürür bir [Idiasession](../../debugger/debug-interface-access/idiasession.md) Oturum Aç'ı temsil eden nesne.  
+ dışı Açık oturumu temsil eden bir [IDiaSession](../../debugger/debug-interface-access/idiasession.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Aşağıdaki tabloda, bu yöntem olası dönüş değerleri gösterir.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. Aşağıdaki tabloda bu yöntem için olası dönüş değerleri gösterilmektedir.  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|E_UNEXPECTED|[Idiadatasource](../../debugger/debug-interface-access/idiadatasource.md) nesne daha önce başlatılmamış bir simge kaynağı ile.|  
-|E_INVALIDARG|Geçersiz `ppSession` parametresi.|  
-|E_OUTOFMEMORY|Oturum açmak için bellek yetersiz.|  
+|E_UNEXPECTED|[IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md) nesnesi daha önce bir sembol kaynağı ile başlatılmamış.|  
+|E_INVALIDARG|Geçersiz `ppSession` parametre.|  
+|E_OUTOFMEMORY|Oturumu açmak için yeterli bellek yok.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem açılan bir [Idiasession](../../debugger/debug-interface-access/idiasession.md) bir veri kaynağı için nesne.  
+ Bu yöntem bir veri kaynağı için bir [IDiaSession](../../debugger/debug-interface-access/idiasession.md) nesnesi açar.  
   
- `IDiaSession` nesneleri sorgular veri kaynağına uygulayın. Bir oturum her kümesi, hata ayıklama sembolleri için bir adres alanı yönetir. Veri kaynağı simgeleri tarafından açıklanan .exe veya .dll dosyası ise (örneğin, birden çok işlem yüklü olması nedeniyle) etkin durumda birden çok adres aralıkları ve tek bir oturum için her bir adres aralığı kullanılmalıdır.  
+ `IDiaSession` nesneler veri kaynağına sorguları uygular. Bir oturum, her hata ayıklama sembolleri kümesi için bir adres alanını yönetir. Veri kaynağı sembolleri tarafından tanımlanan. exe veya. dll dosyası birden çok adres aralığında etkin ise (örneğin, birden çok işlem yüklendiği için), her bir adres aralığı için bir oturum kullanılmalıdır.  
   
 ## <a name="example"></a>Örnek  
   
@@ -63,7 +63,7 @@ if (FAILED(hr))
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiadatasource](../../debugger/debug-interface-access/idiadatasource.md)   
- [Genel bakış](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)   
- [Idiasession](../../debugger/debug-interface-access/idiasession.md)   
+ [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)   
+ [Bakýþ](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)   
+ [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [.Pdb Dosyasını Sorgulama](../../debugger/debug-interface-access/querying-the-dot-pdb-file.md)

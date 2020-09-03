@@ -11,18 +11,18 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 10bed6b3398b93b0776876491d812ec36c9e9e04
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198815"
 ---
 # <a name="displaykind"></a>DisplayKind
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Düzenleyicinin bilgilerin türlerini temsil eden geçerli değerleri numaralandırır bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesne ve kullanıcıya görüntüler.  
+Bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinden gerçekleştirilecek bilgi türlerini temsil eden geçerli değerleri sıralar ve kullanıcıya görüntüler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 enum enum_DisplayKind  
@@ -54,12 +54,12 @@ public enum enum_DisplayKind
  Alan türü.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üst bilgi: EE.h  
+ Üstbilgi: ee. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetValueDisplayStringCount](../../../extensibility/debugger/reference/ieevisualizerservice-getvaluedisplaystringcount.md)

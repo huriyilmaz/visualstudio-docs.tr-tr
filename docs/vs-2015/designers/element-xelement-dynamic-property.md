@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3c6171a5dedfd6985a6f54e748011bf86e03f4d3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664647"
 ---
 # <a name="element-xelement-dynamic-property"></a>Öğe (XElement dinamik özelliği)
@@ -25,17 +25,17 @@ ms.locfileid: "72664647"
 
 Belirtilen genişletilmiş ada karşılık gelen alt öğe örneğini almak için kullanılan bir dizin oluşturucuyu alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 elem.Element[{namespaceName}localName]
 ```
 
 ## <a name="property-valuereturn-value"></a>Özellik Değeri/Dönüş Değeri
- @No__t_0 türünde bir Dizin Oluşturucu. Bu dizin oluşturucu genişletilmiş bir ad parametresi alır ve karşılık gelen <xref:System.Xml.Linq.XElement> döndürür veya belirtilen ada sahip hiçbir öğe yoksa `null`.
+ Türün Dizin Oluşturucusu `XElement Item(String expandedName)` . Bu dizin oluşturucu genişletilmiş bir ad parametresi alır ve buna karşılık gelen <xref:System.Xml.Linq.XElement> veya `null` belirtilen ada sahip hiçbir öğe yoksa.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu özellik <xref:System.Xml.Linq.XContainer?displayProperty=fullName> sınıfının <xref:System.Xml.Linq.XContainer.Element%2A> metoduna eşdeğerdir.
+ Bu özellik, <xref:System.Xml.Linq.XContainer.Element%2A> sınıfının yöntemine eşdeğerdir <xref:System.Xml.Linq.XContainer?displayProperty=fullName> .
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [XElement sınıfı dinamik özellikleri](../designers/xelement-class-dynamic-properties.md) [öğeleri](../designers/elements-xelement-dynamic-property.md) <xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=fullName>
+ <xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=fullName>[XElement sınıfı dinamik özellikler](../designers/xelement-class-dynamic-properties.md) [öğeleri](../designers/elements-xelement-dynamic-property.md)

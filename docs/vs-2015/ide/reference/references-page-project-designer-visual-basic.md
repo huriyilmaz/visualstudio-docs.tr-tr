@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8bb18ec8dd12431d650d844e3698c1986c8d8bd8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665638"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>Başvurular Sayfası, Proje Tasarımcısı (Visual Basic)
@@ -62,7 +62,7 @@ Projenizdeki başvuruları, Web başvurularını ve içeri aktarılan ad alanlar
 
  **Içeri aktarılan ad alanları** Kendi ad alanınızı bu kutuya yazabilir ve **Kullanıcı Içeri aktarma Ekle** ' ye tıklayarak ad alanları listesine ekleyebilirsiniz.
 
- Kullanıcı tarafından içeri aktarılan ad alanları için diğer adlar oluşturabilirsiniz. Bunu yapmak için *diğer adı ve ad alanını = ad* *alanına*girin. Bu, uzun ad alanları kullanıyorsanız faydalıdır, örneğin: `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http`.
+ Kullanıcı tarafından içeri aktarılan ad alanları için diğer adlar oluşturabilirsiniz. Bunu yapmak için, biçim *diğer* = *ad alanındaki*diğer adı ve ad alanını girin. Bu, uzun ad alanları kullanıyorsanız faydalıdır, örneğin: `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http` .
 
  **Kullanıcı Içeri aktarma Ekle** **Içeri aktarılan ad alanları** kutusunda belirtilen ad alanını içeri aktarılan ad alanları listesine eklemek için bu düğmeye tıklayın. Düğme, yalnızca belirtilen ad alanı listede yoksa etkindir.
 
@@ -70,11 +70,11 @@ Projenizdeki başvuruları, Web başvurularını ve içeri aktarılan ad alanlar
 
  **Kullanıcı Içeri aktarmayı Güncelleştir** Ad alanları listesinde Kullanıcı tarafından belirtilen bir ad alanı seçin, **Içeri aktarılan ad alanları** kutusuna değiştirmek istediğiniz adı yazın ve ardından yeni ad alanına geçmek için bu düğmeye tıklayın. Düğme, yalnızca seçilen ad alanı, **Kullanıcı Içeri aktarma Ekle** düğmesini kullanarak listeye eklediğiniz bir ise etkindir. Şunları ekleyebilirsiniz:
 
-- @No__t_0 gibi sınıflar veya ad alanları.
+- Gibi sınıflar veya ad alanları <xref:System.Math?displayProperty=fullName> .
 
-- @No__t_0 gibi diğer ad almalar.
+- Gibi diğer ad almalar `VB=Microsoft.VisualBasic` .
 
-- @No__t_0 gibi XML ad alanları.
+- Gibi XML ad alanları `<xmlns:xsl="http://www.w3.org/1999/XSL/Transform">` .
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Nib nasıl yapılır: Başvuru Ekle Iletişim kutusunu kullanarak başvuru ekleme veya kaldırma](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9) [nasıl yapılır: Içeri aktarılan ad alanlarını ekleme veya kaldırma (Visual Basic)](../../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md) [nib: Web başvurusu ekleme Iletişim kutusu](https://msdn.microsoft.com/bdf05776-c591-40af-bfd7-e1e2aa1e87b5) [Imports (XML ad alanı)](https://msdn.microsoft.com/library/1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4)

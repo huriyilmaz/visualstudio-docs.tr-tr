@@ -1,5 +1,5 @@
 ---
-title: -SafeMode (devenv. exe) | Microsoft Docs
+title: -SafeMode (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,28 +14,28 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 28480399238c1c915056d3929f8fd188cfff7eca
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665503"
 ---
 # <a name="safemode-devenvexe"></a>/SafeMode (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-@No__t_0, yalnızca varsayılan ortam ve Hizmetleri yükleyerek güvenli modda başlatır.
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Güvenli modda başlatılır, yalnızca varsayılan ortam ve hizmetler yükleniyor.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 devenv /SafeMode
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- Bu anahtar, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] başladığında tüm üçüncü taraf VSPackages 'leri önler ve bu sayede kararlı yürütme sağlar.
+ Bu anahtar, başlatıldığında tüm üçüncü taraf VSPackages 'nin yüklenmesini engeller [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ve böylece kararlı yürütmeyi sağlar.
 
 ## <a name="description"></a>Açıklama
- Aşağıdaki örnek, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] güvenli modda başlatır.
+ Aşağıdaki örnek [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] güvenli modda başlatılır.
 
 ## <a name="code"></a>Kod
 

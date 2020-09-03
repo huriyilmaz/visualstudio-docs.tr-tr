@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 15d88f52b3af3a3e4502c618280107a882761259
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664608"
 ---
 # <a name="how-to-apply-a-shader-to-a-3-d-model"></a>Nasıl Yapılır. 3B Modele Gölgelendirici Uygulama
@@ -38,9 +38,9 @@ Bu belgede, 3B modeline yönlendirilmiş grafik gölgelendirici dili (DGSL) göl
 
    Temel renk efektinin uygulandığı bir model aşağıda verilmiştir:
 
-   ![temel&#45;renk efektini gösteren 3 D sahne](../designers/media/digit-3d-model-effect.png "Basamak-3B-model-efekt")
+   ![3&#45;D sahneyi temel renk efektini gösterir](../designers/media/digit-3d-model-effect.png "Basamak-3B-model-efekt")
 
-   Bir modele gölgelendirici uyguladıktan sonra modeli seçerek gölgelendirici tasarımcısında açabilir ve ardından **Özellikler** penceresinde, **efekt** Özellik grubunun **(Gelişmiş)** özelliğindeki üç nokta ( **...** ) düğmesini seçebilirsiniz.
+   Bir modele gölgelendirici uyguladıktan sonra modeli seçerek gölgelendirici tasarımcısında açabilir ve ardından **Özellikler** penceresinde, **efekt** Özellik grubunun **(Gelişmiş)** özelliğindeki üç nokta (**...**) düğmesini seçebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Nasıl yapılır: temel bir 3-b modeli oluşturma](../designers/how-to-create-a-basic-3-d-model.md) [nasıl yapılır: temel renk gölgelendirici](../designers/how-to-create-a-basic-color-shader.md) [modeli Düzenleyicisi](../designers/model-editor.md) [Gölgelendirici Tasarımcısı](../designers/shader-designer.md) oluşturma

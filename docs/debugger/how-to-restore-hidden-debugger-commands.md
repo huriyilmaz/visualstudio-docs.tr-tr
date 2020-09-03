@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 13b4db03a75decd41430c282a67276caa60182d8
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349386"
 ---
 # <a name="how-to-restore-hidden-debugger-commands"></a>Nasıl Yapılır: Gizli Hata Ayıklayıcı Komutlarını Geri Yükleme
@@ -70,7 +70,7 @@ Visual Studio 'yu ayarlarken, birincil programlama diliniz için bir varsayılan
 
 8. **Içeri aktarma Tamam** sayfasında, **Ayrıntılar**altında ayarlarınızı sıfırlamayla ilişkili tüm hataları gözden geçirin.
 
-9. **Kapat**' a tıklayın.
+9. **Kapat**’a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::EnumProperties | Microsoft Dokümanlar
+title: 'IDebugStackFrame2:: EnumProperties | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f822f20cf4fb7a6fd5aa71b9cc1ec26bcd90e234
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719905"
 ---
 # <a name="idebugstackframe2enumproperties"></a>IDebugStackFrame2::EnumProperties
-Yerel değişkenler gibi yığın çerçevesiyle ilişkili özellikler için bir sayısallaştırıcı oluşturur.
+Yerel değişkenler gibi yığın çerçevesiyle ilişkili özellikler için bir Numaralandırıcı oluşturur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT EnumProperties ( 
@@ -51,28 +51,28 @@ int EnumProperties ( 
 
 ## <a name="parameters"></a>Parametreler
 `dwFieldSpec`\
-[içinde] [Numaralandırılmış](../../../extensibility/debugger/reference/debugprop-info-flags.md) [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapılardaki hangi alanların dolduruleceğini belirten DEBUGPROP_INFO_FLAGS numaralandırmadaki bayrakların birleşimi.
+'ndaki Numaralandırılmış [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapılardaki hangi alanların doldurulacağını belirten [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) Numaralandırmadaki bayrakların birleşimi.
 
 `nRadix`\
-[içinde] Herhangi bir sayısal bilgi biçimlendirmede kullanılacak radix.
+'ndaki Herhangi bir sayısal bilgiyi biçimlendirmede kullanılacak taban tabanı.
 
 `refiid`\
-[içinde] Hangi [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapıların numaralandırılmak üzere kullanılacağını seçmek için `guidFilterLocals`kullanılan bir filtrenin GUID'i.
+'ndaki Hangi [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapılarının numaralandırılacağını seçmek için kullanılan filtrenin GUID 'si (gibi) `guidFilterLocals` .
 
 `dwTimeout`\
-[içinde] Bu yöntemden dönmeden önce beklemek için milisaniye cinsinden maksimum süre. Süresiz beklemek için kullanın. `INFINITE`
+'ndaki Bu yöntemden dönmeden önce beklenecek en uzun süre (milisaniye cinsinden). `INFINITE`Sonsuza kadar beklemek için kullanın.
 
 `pcelt`\
-[çıkış] Numaralandırılmış özellik sayısını verir. Bu, [GetCount](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-getcount.md) yöntemini aramakla aynıdır.
+dışı Numaralandırılan özelliklerin sayısını döndürür. Bu, [GetCount](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-getcount.md) metodunu çağırma ile aynıdır.
 
 `ppEnum`\
-[çıkış] İstenilen özelliklerin listesini içeren bir [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) nesnesi döndürür.
+dışı İstenen özelliklerin bir listesini içeren bir [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, seçili tüm özelliklerin tek bir çağrıyla alınmasını sağladığından, [GetDebugProperty](../../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md) ve [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) yöntemlerini sırayla aramaktan daha hızlıdır.
+ Bu yöntem tüm seçili özelliklerin tek bir çağrıyla alınmasına izin verdiğinden, [GetDebugProperty](../../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md) ve [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) yöntemlerinin sıralı olarak çağrılması daha hızlıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

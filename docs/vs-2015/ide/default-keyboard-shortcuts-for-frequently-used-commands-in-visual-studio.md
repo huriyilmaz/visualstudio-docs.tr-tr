@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 87b240dea73cc447f21422d9c165dad67f136075
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534244"
 ---
 # <a name="default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio"></a>Visual Studio'daki Sık Kullanılan Komutlar için Varsayılan Klavye Kısayolları
@@ -44,7 +44,7 @@ Bu varsayılan klavye kısayolları seçerek Visual Studio'da sık kullanılan k
 
 - [Görünümü](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_view)||
 
-## <a name="build"></a><a name="bkmk_build"></a>Derlemeyi
+## <a name="build"></a><a name="bkmk_build"></a> Derlemeyi
 
 |Komutlar|Klavye Kısayolları [Bağlamlar]|
 |--------------|-------------------------------------|
@@ -53,7 +53,7 @@ Bu varsayılan klavye kısayolları seçerek Visual Studio'da sık kullanılan k
 |Build.Compile|Ctrl+F7 [Genel]|
 |Build.RunCodeAnalysisonSolution|Alt+F11 [Genel]|
 
-## <a name="debug"></a><a name="bkmk_debug"></a>H
+## <a name="debug"></a><a name="bkmk_debug"></a> H
 
 |Komutlar|Klavye Kısayolları [Bağlamlar]|
 |--------------|-------------------------------------|
@@ -73,7 +73,7 @@ Bu varsayılan klavye kısayolları seçerek Visual Studio'da sık kullanılan k
 |Debug.StopDebugging|Shift+F5 [Genel]|
 |Debug.ToggleBreakpoint|F9 [Genel]|
 
-## <a name="edit"></a><a name="bkmk_edit"></a>Düzenle
+## <a name="edit"></a><a name="bkmk_edit"></a> Düzenle
 
 |Komutlar|Klavye Kısayolları [Bağlamlar]|
 |--------------|-------------------------------------|
@@ -124,7 +124,7 @@ düzenleme. SurroundWith|Ctrl+K, Ctrl+S [Genel]|
 |Edit.WordDeleteToEnd|Ctrl+Delete [Metin Düzenleyici]|
 |Edit.WordDeleteToStart|Ctrl+Geri Al [Metin Düzenleyici]|
 
-## <a name="file"></a><a name="bkmk_file"></a>Dosyasýný
+## <a name="file"></a><a name="bkmk_file"></a> Dosyasýný
 
 |Komutlar|Klavye Kısayolları [Bağlamlar]|
 |--------------|-------------------------------------|
@@ -147,19 +147,19 @@ düzenleme. SurroundWith|Ctrl+K, Ctrl+S [Genel]|
 |Project.AddExistingItem|Shift+Alt+A [Genel]|
 |Project.AddNewItem|Ctrl+Shift+A [Genel]|
 
-## <a name="refactor"></a><a name="bkmk_refactor"></a>Düzenle
+## <a name="refactor"></a><a name="bkmk_refactor"></a> Düzenle
 
 |Komut|Klavye Kısayolu [Bağlam]|
 |-------------|-----------------------------------|
 |Refactor.ExtractMethod|Ctrl+R, Ctrl+M [Genel]|
 
-## <a name="tools"></a><a name="bkmk_tools"></a>Aracı
+## <a name="tools"></a><a name="bkmk_tools"></a> Aracı
 
 |Komut|Klavye Kısayolu [Bağlam]|
 |-------------|-----------------------------------|
 |Tools.AttachtoProcess|Ctrl+Alt+P [Genel]|
 
-## <a name="view"></a><a name="bkmk_view"></a>Görünümü
+## <a name="view"></a><a name="bkmk_view"></a> Görünümü
 
 |Komutlar|Klavye Kısayolları [Bağlamlar]|
 |--------------|-------------------------------------|
@@ -180,7 +180,7 @@ görüntüle. TfsTeamExplorer|CTRL + \\ , CTRL + d [Genel]|
 |View.ViewCode|Enter [Sınıf Diyagramı]<br /><br /> veya F7 [Ayarlar Tasarımcısı]|
 |View.ViewDesigner|Shift+F7 [HTML Düzenleyicisi Tasarım Görünümü]|
 
-## <a name="window"></a><a name="bkmk_window"></a>Penceresine
+## <a name="window"></a><a name="bkmk_window"></a> Penceresine
 
 |Komutlar|Klavye Kısayolları [Bağlamlar]|
 |--------------|-------------------------------------|

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3d5088366548c9f92d04f1b65a3afc378db29d6a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665613"
 ---
 # <a name="replace-in-files-command"></a>Dosyalarda Değiştir Komutu
@@ -27,7 +27,7 @@ ms.locfileid: "72665613"
 
 Dosyalardaki metni **Bul ve Değiştir** penceresinin **dosyaları değiştir** sekmesinde bulunan seçeneklerin bir alt kümesini kullanarak değiştirir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
@@ -35,48 +35,48 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
 [/reset] [/stop] [/sub] [/text2] [/wild] [/word]
 ```
 
-## <a name="arguments"></a>Arguments
- `findwhat` gerekiyor. Eşleştirilecek metin.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `findwhat` Gerekli. Eşleştirilecek metin.
 
- `replacewith` gerekiyor. Eşleşen metnin yerine konacak metin.
+ `replacewith` Gerekli. Eşleşen metnin yerine konacak metin.
 
 ## <a name="switches"></a>Anahtarlar
  /All veya/a Isteğe bağlı. Arama metninin tüm oluşumlarını değiştirme metniyle değiştirir.
 
- /Case veya/c Isteğe bağlı. Eşleşmeler yalnızca, büyük harf ve küçük harf karakterlerinin `findwhat` bağımsız değişkeninde belirtilen olanlarla tam olarak eşleşmesi durumunda meydana gelir.
+ /Case veya/c Isteğe bağlı. Eşleşmeler yalnızca büyük ve küçük harfli karakterlerin bağımsız değişkende belirtilen olanlarla tam olarak eşleşmesi durumunda oluşur `findwhat` .
 
- /ext: Isteğe bağlı `extensions`. Aranacak dosyalar için dosya uzantılarını belirtir.
+ /ext: `extensions` isteğe bağlı. Aranacak dosyalar için dosya uzantılarını belirtir.
 
  /Keep veya/k Isteğe bağlı. Değiştirilen tüm dosyaların açık kaldığını belirtir.
 
- /lookin: Isteğe bağlı `searchpath`. Aranacak dizin. Yol boşluk içeriyorsa, tüm yolu tırnak işaretleri içine alın.
+ /LOOKIN: `searchpath` isteğe bağlı. Aranacak dizin. Yol boşluk içeriyorsa, tüm yolu tırnak işaretleri içine alın.
 
  /Options veya/t Isteğe bağlı. Geçerli bulma seçeneği ayarlarının listesini görüntüler ve arama yapmaz.
 
- /Regex veya/r Isteğe bağlıdır. @No__t_0 bağımsız değişkeninde, sabit karakterler yerine metin desenlerini temsil eden gösterimler olarak önceden tanımlanmış özel karakterler kullanır. Normal ifade karakterlerinin tüm listesi için bkz. [normal ifadeler](../../ide/using-regular-expressions-in-visual-studio.md).
+ /Regex veya/r Isteğe bağlıdır. Bağımsız değişkende önceden tanımlanmış özel karakterleri `findwhat` , değişmez karakterler yerine metin desenlerini temsil eden gösterimler olarak kullanır. Normal ifade karakterlerinin tüm listesi için bkz. [normal ifadeler](../../ide/using-regular-expressions-in-visual-studio.md).
 
  /Reset süpürmeden veya/e Isteğe bağlı. Bulma seçeneklerini varsayılan ayarlarına döndürür ve arama yapmaz.
 
- /Stop Isteğe bağlı. Devam eden bir işlem varsa geçerli arama işlemini durdurur. Değiştirme `/stop` belirtildiğinde diğer tüm bağımsız değişkenleri yoksayar. Örneğin, geçerli değişikliği durdurmak için şunu girin:
+ /Stop Isteğe bağlı. Devam eden bir işlem varsa geçerli arama işlemini durdurur. Değiştirme belirtildiğinde diğer tüm bağımsız değişkenleri yoksayar `/stop` . Örneğin, geçerli değişikliği durdurmak için şunu girin:
 
 ```
 >Edit.ReplaceinFiles /stop
 ```
 
- /Sub seçeneklerini veya/s isteğe bağlı. /Lookin: `searchpath` bağımsız değişkeninde belirtilen dizin içindeki alt klasörleri arar.
+ /Sub seçeneklerini veya/s isteğe bağlı. /Lookin: bağımsız değişkeninde belirtilen dizin içindeki alt klasörleri arar `searchpath` .
 
  /text2 veya/2 Isteğe bağlı. Değişiklik **sonuçları 2** penceresinde değiştirme işleminin sonuçlarını görüntüler.
 
- /joker veya/l Isteğe bağlı. Bir karakteri veya karakter dizisini göstermek için `findwhat` bağımsız değişkeninde gösterimler olarak önceden tanımlanmış özel karakterleri kullanır.
+ /joker veya/l Isteğe bağlı. `findwhat`Bağımsız değişkende, bir karakter veya karakter dizisini temsil etmek için önceden tanımlanmış özel karakterleri gösterimler olarak kullanır.
 
  /Word veya/w Isteğe bağlı. Yalnızca tam sözcükleri arar.
 
 ## <a name="example"></a>Örnek
- Bu örnek `btnCancel` arar ve "My Visual Studio Projects" klasöründe bulunan tüm. CLS dosyalarındaki `btnReset` ile değiştirir ve **sonuçları bul 2** penceresinde değiştirme bilgilerini görüntüler.
+ Bu örnek, `btnCancel` `btnReset` "My Visual Studio Projects" klasöründe bulunan tüm. CLS dosyalarında bunu arar ve yerini alır ve **sonuçları bul 2** penceresinde değiştirme bilgilerini görüntüler.
 
 ```
 >Edit.ReplaceinFiles btnCancel btnReset /lookin:"c:/my visual studio projects" /ext:.cls /text2
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- Dosyalardaki [metni bulma ve değiştirme](../../ide/finding-and-replacing-text.md) [](../../ide/replace-in-files.md) [komut penceresi](../../ide/reference/command-window.md) [Bul/komut kutusu](../../ide/find-command-box.md) [Visual Studio komutları](../../ide/reference/visual-studio-commands.md) [Visual Studio komut diğer adları](../../ide/reference/visual-studio-command-aliases.md)
+ Dosyalardaki [metni bulma ve değiştirme](../../ide/finding-and-replacing-text.md) [Replace in Files](../../ide/replace-in-files.md) [komut penceresi](../../ide/reference/command-window.md) [Bul/komut kutusu](../../ide/find-command-box.md) [Visual Studio komutları](../../ide/reference/visual-studio-commands.md) [Visual Studio komut diğer adları](../../ide/reference/visual-studio-command-aliases.md)

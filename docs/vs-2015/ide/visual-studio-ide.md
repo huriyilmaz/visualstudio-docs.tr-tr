@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3bbeeb3d65e50e4cd3e33d4cab63dc619a1ad7a8
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534322"
 ---
 # <a name="visual-studio-ide"></a>Visual Studio IDE
@@ -94,7 +94,7 @@ Visual Studio 2015 ' deki yeni özellikler hakkında daha fazla bilgi edinmek is
 
  ![Yüzeylerini](../ide/media/b5-artboard.png "b5_artboard")
 
-|Görüntü|Açıklama|
+|Görüntü|Description|
 |-|-|
 |![](../designers/media/b1-1.png "B1_1")|**Tasarım görünümü** Belgenizin görsel tasarımını görüntüler. Bu görünümde, Tasarım yüzeyinde nesne çizebilir veya nesneleri değiştirebilirsiniz.|
 |![](../designers/media/b1-2.png "B1_2")|**Içerik Haritası** Seçilen bir nesne için şablon düzenlemesi modu, stil oluşturma modu ve nesne düzenlemesi kapsamı arasında hızlıca geçiş yapın.|
@@ -196,7 +196,7 @@ Bir hata veya başarı iletileri de dahil olmak üzere, derleme çıktısı **Ç
 - [Visual Studio ile Geliştirmeye Başlama](../ide/get-started-developing-with-visual-studio.md)
 - [Visual Studio Uzantıları’nı bulma ve kullanma](../ide/finding-and-using-visual-studio-extensions.md)
 - [Çözümler ve projeler](../ide/solutions-and-projects-in-visual-studio.md)
-- [Kod Yazma](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Kod yazma](../ide/writing-code-in-the-code-and-text-editor.md)
 - [Visual Studio'da Hata Ayıklama](../debugger/debugging-in-visual-studio.md)
 - [Profil Araçları](../profiling/profiling-tools.md)
 - [Kod Kalitesini Geliştirme](https://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)

@@ -1,5 +1,5 @@
 ---
-title: WizardData Element (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: WizardData öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: aa3f9d2e971d944b964f4b194d1324ff960fbd24
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80740386"
 ---
 # <a name="wizarddata-element-visual-studio-templates"></a>WizardData Öğesi (Visual Studio Şablonları)
@@ -30,7 +30,7 @@ ms.locfileid: "80740386"
 \<WizardData>
 ```
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <WizardData>
@@ -55,23 +55,23 @@ Yok.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Proje şablonu, öğe şablonu veya başlangıç kiti için tüm meta verileri içerir.|
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Proje şablonu, öğe şablonu veya başlangıç seti için tüm meta verileri içerir.|
 
 ## <a name="text-value"></a>Metin Değeri
 
 Metin değeri isteğe bağlıdır.
 
-Bu metin, [Sihirbaz Uzantısı](../extensibility/wizardextension-element-visual-studio-templates.md) öğesinde belirtilen özel sihirbaz uzantısıgeçmek için özel XML belirtir.
+Bu metin, [Wizardexgeri](../extensibility/wizardextension-element-visual-studio-templates.md) öğesinde belirtilen özel sihirbaz uzantısına GEÇIRILECEK özel XML 'i belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Herhangi bir XML bu öğede belirtilebilir. XML, uzantının bu öğenin içeriğini kullanmasına izin vererek özel sihirbaz uzantısına bir parametre olarak geçirilir. Bu veriler üzerinde doğrulama yapılmaz.
+Bu öğede herhangi bir XML belirtilebilir. XML özel sihirbaz uzantısına bir parametre olarak geçirilir ve bu da uzantının bu öğenin içeriğini kullanmasına izin verir. Bu verilerde doğrulama yapılmadı.
 
-**WizardData** öğesinin içeriği, yöntemdeki parametrelerin dize sözlüğünün içindeki bir `IWizard.RunStarted` parametre olarak değişmeden geçirilir. Sözlük anahtarı nın `$wizarddata$`adı .
+**WizardData** öğesinin içeriği, yöntemindeki parametrelerin dize Sözlüğü içindeki bir parametre olarak geçirilir, değiştirilmez `IWizard.RunStarted` . Sözlük anahtarı olarak adlandırılır `$wizarddata$` .
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, C# Windows uygulaması için standart proje şablonu için meta veriler gösterilmektedir.
+Aşağıdaki örnek, bir C# Windows uygulaması için Standart proje şablonu meta verilerini gösterir.
 
 ```xml
 <VSTemplate Version="3.0.0" Type="Item"

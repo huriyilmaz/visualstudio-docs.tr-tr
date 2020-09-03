@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2dde1be1d11608b9e7fe6a57709e6ab1889cf3c7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664740"
 ---
 # <a name="designing-user-interfaces"></a>Kullanıcı Arabirimleri Tasarlama
@@ -23,7 +23,7 @@ Visual Studio 'daki çeşitli araçları kullanarak uygulamanız için Kullanıc
 
 |Hakkında daha fazla bilgi edinmek için|Bkz.|
 |-------------------------|---------|
-|Visual Studio veya Visual Studio için Blend kullanarak XAML tabanlı uygulama veya uygulama tasarlama.   biçimindeki telefon numarasıdır.|[Visual Studio ve Visual Studio İçin Blend Uygulamalarında XAML Tasarlama](../designers/designing-xaml-in-visual-studio.md)|
+|Visual Studio veya Visual Studio için Blend kullanarak XAML tabanlı uygulama veya uygulama tasarlama.   .|[Visual Studio ve Visual Studio İçin Blend Uygulamalarında XAML Tasarlama](../designers/designing-xaml-in-visual-studio.md)|
 |XAML WPF özelliğini kullanan masaüstü uygulamaları tasarlama.|[Windows Presentation Foundation ile Modern Masaüstü Uygulamaları Oluşturma](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)|
 |Visual Studio 'da DirectX uygulaması geliştirme.|[Oyunlar ve Uygulamalar için 3B Varlıklarla Çalışma](../designers/working-with-3-d-assets-for-games-and-apps.md)|
 |Programlarınız için kullanılabilen standart simgeler.|[Visual Studio Görüntü Kitaplığı](../designers/the-visual-studio-image-library.md)|

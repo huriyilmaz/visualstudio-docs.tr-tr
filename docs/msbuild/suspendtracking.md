@@ -1,5 +1,5 @@
 ---
-title: Askıya Alma Takibi | Microsoft Dokümanlar
+title: SuspendTracking | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 apiname:
@@ -16,17 +16,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 950c6a07a46f7f4b970912e576257a577021367e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77632024"
 ---
 # <a name="suspendtracking"></a>SuspendTracking
 
-Geçerli bağlamda izlemeyi askıya adamaktadır.
+Geçerli bağlamda izlemeyi askıya alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 HRESULT WINAPI SuspendTracking(void);
@@ -34,11 +34,11 @@ HRESULT WINAPI SuspendTracking(void);
 
 ## <a name="return-value"></a>Döndürülen değer
 
- İzleme askıya **alındıysa, BAŞARILI** bit kümesine sahip bir **HRESULT.**
+ İzleme askıya alınmışsa **başarılı** biti ayarlanmış bir **HRESULT** .
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Üstbilgi:** *FileTracker.h*
+ **Üstbilgi:** *FileTracker. h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

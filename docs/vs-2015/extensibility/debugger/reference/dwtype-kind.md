@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f37fb773a07291a883f5cb65e4cb4ac840a87a14
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198789"
 ---
-# <a name="dwtypekind"></a>dwTYPE_KIND
+# <a name="dwtype_kind"></a>dwTYPE_KIND
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Yorumlama türünü belirten bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesne.  
+Bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinin türünün nasıl yorumlanacağını belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 enum enum_dwTYPE_KIND {  
@@ -46,26 +46,26 @@ public enum enum_dwTYPE_KIND {
   
 #### <a name="parameters"></a>Parametreler  
  TYPE_KIND_METADATA  
- [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) birleşim olarak yorumlanabilir bir [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md) yapısı.  
+ [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) UNION [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md) yapısı olarak yorumlanmalıdır.  
   
  TYPE_KIND_PDB  
- `TYPE_INFO` Birleşim olarak yorumlanabilir bir [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md) yapısı.  
+ `TYPE_INFO`Birleşim [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md) yapısı olarak yorumlanmalıdır.  
   
  TYPE_KIND_BUILT  
- `TYPE_INFO` Birleşim olarak yorumlanabilir bir [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md) yapısı.  
+ `TYPE_INFO`Birleşim [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md) yapısı olarak yorumlanmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu sabit listesi değerlerini görünür `dwKind` alanını [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) yapısı ve nasıl yorumlanacağını belirlemek için kullanılan `type` birleşim üyesi. `TYPE_INFO` Yapısı için bir çağrı tarafından döndürülen [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) yöntemi.  
+ Bu sabit listesinin değerleri `dwKind` [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) yapısı alanında görünür ve UNION üyesini nasıl yorumlayacağınız tespit etmek için kullanılır `type` . `TYPE_INFO`Yapı, [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) yöntemi çağrısıyla döndürülür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: sh.h  
+ Üstbilgi: SH. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)   
  [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)   
  [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md)   

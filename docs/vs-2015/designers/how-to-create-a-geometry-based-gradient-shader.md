@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1d9bfa9a6e9be1a97b3a606aa302defd12a8d062
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664517"
 ---
 # <a name="how-to-create-a-geometry-based-gradient-shader"></a>Nasıl Yapılır: Geometri Tabanlı Gradyan Gölgelendirici Oluşturma
@@ -46,7 +46,7 @@ Bu belgede, geometri tabanlı bir gradyan gölgelendiricisi oluşturmak için G�
 
 4. Grafiğe bir **maske vektör** düğümü ekleyin. **Araç kutusu**' nda, **yardımcı program**altında **maske vektörü** ' nı seçin ve tasarım yüzeyine taşıyın.
 
-5. **Maske vektör** düğümü için maske değerlerini belirtin. **Seç** modunda, **maske vektörü** düğümünü seçin ve ardından **Özellikler** penceresinde **yeşil/Y** özelliğini **doğru**olarak ayarlayın ve ardından **kırmızı/X**, **mavi/Z** ve **Alfa/W** özelliklerini yanlış olarak ayarlayın. Bu örnekte, **kırmızı/X**, **yeşil/Y**ve **mavi/Z** özellikleri **Dünya konumu** düğümünün X, Y ve Z bileşenlerine karşılık gelir ve **Alfa/W** kullanılmıyor. Yalnızca **yeşil/Y** **doğru**olarak ayarlandığı için, yalnızca giriş vektörünün Y bileşeni maskelendikten sonra kalır.
+5. **Maske vektör** düğümü için maske değerlerini belirtin. **Seç** modunda, **maske vektörü** düğümünü seçin ve ardından **Özellikler** penceresinde **yeşil/Y** özelliğini **doğru**olarak ayarlayın ve ardından **kırmızı/X**, **mavi/Z** ve **Alfa/W** özelliklerini **yanlış**olarak ayarlayın. Bu örnekte, **kırmızı/X**, **yeşil/Y**ve **mavi/Z** özellikleri **Dünya konumu** düğümünün X, Y ve Z bileşenlerine karşılık gelir ve **Alfa/W** kullanılmıyor. Yalnızca **yeşil/Y** **doğru**olarak ayarlandığı için, yalnızca giriş vektörünün Y bileşeni maskelendikten sonra kalır.
 
 6. Grafiğe bir **Dünya konumu** düğümü ekleyin. **Araç kutusunda**, **sabitler**altında **Dünya konumu** ' nu seçin ve tasarım yüzeyine taşıyın.
 

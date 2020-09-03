@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 2019 SDK'da Yenilikler | Microsoft Dokümanlar
+title: Visual Studio 2019 SDK 'daki yenilikler | Microsoft Docs
 ms.date: 03/29/2019
 ms.topic: conceptual
 ms.assetid: 4a07607b-0c87-4866-acd8-6d68358d6a47
@@ -9,57 +9,57 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 187d3df4b5bcefefc0135c010c7d98951e9b3af8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80740406"
 ---
-# <a name="whats-new-in-the-visual-studio-2019-sdk"></a>Visual Studio 2019 SDK'da Yenilikler
+# <a name="whats-new-in-the-visual-studio-2019-sdk"></a>Visual Studio 2019 SDK 'daki yenilikler
 
-Visual Studio SDK, Visual Studio 2019 için aşağıdaki yeni ve güncel özelliklere sahiptir.
+Visual Studio SDK, Visual Studio 2019 için aşağıdaki yeni ve güncelleştirilmiş özelliklere sahiptir.
 
-## <a name="synchronously-autoloaded-extensions-warning"></a>Eşzamanlı otomatik yüklenmiş uzantılar uyarısı
+## <a name="synchronously-autoloaded-extensions-warning"></a>Zaman uyumlu olarak yüklenen uzantılar uyarısı
 
-Kullanıcılar artık yüklü uzantılarından herhangi birinin başlangıçta eşzamanlı olarak otomatik olarak yüklenmesi durumunda bir uyarı görürler. [Sen Synchronously otomatik yüklü uzantıları](synchronously-autoloaded-extensions.md)de uyarı hakkında daha fazla bilgi edinebilirsiniz.
+Kullanıcılar, yüklü uzantılarından herhangi biri zaman uyumlu olarak başlangıçta tekrar yüklenirse bir uyarı görür. [Zaman uyumlu olarak yüklenen uzantılara](synchronously-autoloaded-extensions.md)uyarı hakkında daha fazla bilgi edinebilirsiniz.
 
-## <a name="single-unified-visual-studio-sdk"></a>Tek, birleşik Visual Studio SDK
+## <a name="single-unified-visual-studio-sdk"></a>Tek, Birleşik Visual Studio SDK
 
-Artık tek bir NuGet paketi [Microsoft.VisualStudio.SDK](https://www.nuget.org/packages/microsoft.visualstudio.sdk)aracılığıyla tüm Visual Studio SDK varlıkları alabilirsiniz.
+Artık tüm Visual Studio SDK varlıklarını, [Microsoft. VisualStudio. SDK](https://www.nuget.org/packages/microsoft.visualstudio.sdk)tek bir NuGet paketi aracılığıyla edinebilirsiniz.
 
-## <a name="editor-registration-enhancements"></a>Editör Kayıt Geliştirmeleri
+## <a name="editor-registration-enhancements"></a>Düzenleyici kayıt geliştirmeleri
 
-Visual Studio, kuruluşundan bu yana, bir editörün belirli uzantılara (örneğin, .xaml ve .rc) olan yakınlığını beyan edebileceği veya herhangi bir uzantı için uygun olduğu (.*) özel editör kaydını desteklemiştir. Visual Studio 2019 sürüm 16.1'den başlayarak editör kaydı desteğini genişletiyoruz.
+Oluşturma işlemi nedeniyle, Visual Studio, bir düzenleyicinin belirli Uzantılar (örneğin,. xaml ve. RC) için benzeşimini bildirebileceği veya herhangi bir uzantı için uygun olduğu (. *) özel düzenleyici kaydı destekliyordu. Visual Studio 2019 sürüm 16,1 ' den başlayarak, düzenleyici kaydı desteğini genişlettik.
 
 ### <a name="filenames"></a>Dosya Adları
 
-Belirli bir dosya uzantısı için destek kaydetmenin yanı sıra veya bunun yerine, düzenleyicinin paketine `ProvideEditorFilename` yeni öznitelik uygulayarak belirli dosya adlarını desteklediğini kaydedebilir.
+Belirli bir dosya uzantısı için destek kaydetme veya buna ek olarak, bir düzenleyici yeni özniteliği düzenleyicinin paketine uygulayarak belirli dosya adlarını desteklemeyi kaydedebilir `ProvideEditorFilename` .
 
-Örneğin, tüm .json dosyalarını destekleyen bir `ProvideEditorExtension` düzenleyici bu özniteliği paketine uygular:
+Örneğin, tüm. JSON dosyalarını destekleyen bir düzenleyici, bu `ProvideEditorExtension` özniteliği paketine uygular:
 
 ```cs
 [ProvideEditorExtension(typeof(MyEditor), ".json", MyEditor.Priority)]
 ```
 
-16.1 ile başlayarak, MyEditor yalnızca birkaç iyi bilinen .json dosyasını `ProvideEditorFilename` destekliyorsa, bunun yerine bu öznitelikleri paketine uygulayabilir:
+16,1 ile başlayarak, MyEditor yalnızca birkaç iyi bilinen. json dosyasını destekliyorsa, bunun yerine bu `ProvideEditorFilename` öznitelikleri pakete uygulayabilir:
 
 ```cs
 [ProvideEditorFilename(typeof(MyEditor), "particular.json", MyEditor.Priority)]
 [ProvideEditorFilename(typeof(MyEditor), "special.json",    MyEditor.Priority)]
 ```
 
-### <a name="uicontexts"></a>UIContexts
+### <a name="uicontexts"></a>Uıcontexts
 
-Bir düzenleyici, etkinleştirildiğinde temsil eden bir veya daha fazla UIContexts kaydedebilir. Kullanıcı Arabirimi Bağlamları, düzenleyiciyi kaydeden `ProvideEditorUIContextAttribute` pakete bir veya daha fazla örnek uygulanarak kaydedilir.
+Bir düzenleyici, ne zaman etkinleştirildiğini temsil eden bir veya daha fazla Uiconmetini kaydedebilir. Uiconmetin'ler, düzenleyiciyi kaydeden pakete bir veya daha fazla örneği uygulanarak kaydedilir `ProvideEditorUIContextAttribute` .
 
-Bir düzenleyici Kullanıcı Arabirimi'ni kaydettirmişse:
+Bir düzenleyicide Uiconmetin'ler kayıtlıysa:
 
-- Kayıtlı UIContexts en az biri verilen uzantı ile bir dosya açıldığında etkin ise, düzenleyici arama dahil edilir.
-- Kayıtlı Kullanıcı Arabirimi İçeriklerinin hiçbiri etkin değilse, düzenleyici düzenleyici aramaya dahil edilmez.
+- Verilen uzantıya sahip bir dosya açıldığında en az bir kayıtlı Uiconmetinlerinden biri etkinse düzenleyici, düzenleyici aramasına dahil edilir.
+- Kayıtlı Uiconmetinlerinde hiçbiri etkin değilse düzenleyici, düzenleyici aramasına dahil edilmez.
 
-Bir düzenleyici herhangi bir UIContexts kaydetmiyorsa, her zaman bu uzantı için düzenleyici arama dahildir.
+Bir düzenleyici hiçbir Uiconmetin'i KAYDETMEZSE, bu uzantı için her zaman düzenleyici aramasına dahil edilir.
 
-Örneğin, bir düzenleyici yalnızca Bir C# projesi açık olduğunda kullanılabilirse, bir `ProvideEditorUIContext` öznitelik uygulayarak bu yakınlığı bildirebilir:
+Örneğin, bir düzenleyici yalnızca bir C# projesi açık olduğunda kullanılabiliyorsa, bir öznitelik uygulayarak bu benzeşimi bildirebilirler `ProvideEditorUIContext` :
 
 ```cs
 [ProvideEditorUIContext(typeof(MyEditor), KnownUIContexts.CSharpProjectContext)]

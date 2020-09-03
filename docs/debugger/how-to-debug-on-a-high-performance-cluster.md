@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 905a196b0872ac0d8665293200837861adf49795
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350075"
 ---
 # <a name="how-to-debug-on-a-high-performance-cluster-c-visual-basic-c"></a>Nasıl yapılır: yüksek performanslı kümede hata ayıklama (C#, Visual Basic, C++)
@@ -53,7 +53,7 @@ Yüksek performanslı bir kümede çok İşlemsiz bir programın hata ayıklamas
 
      Daha karmaşık bir filtre oluşturmak için, yan tümceleri, `&` and işlecini, `||` , or işlecini, `!` , Not işleci ve parantezleri kullanarak birleştirebilirsiniz.
 
-4. **Tamam**'a tıklayın.
+4. **Tamam**’a tıklayın.
 
 ### <a name="to-set-a-breakpoint-on-a-specific-process"></a>Belirli bir işlemde bir kesme noktası ayarlamak için
 
@@ -71,7 +71,7 @@ Yüksek performanslı bir kümede çok İşlemsiz bir programın hata ayıklamas
 
      Daha karmaşık bir filtre oluşturmak için, yan tümceleri, `&` and işlecini, `||` , or işlecini, `!` , Not işleci ve parantezleri kullanarak birleştirebilirsiniz.
 
-4. **Tamam**'a tıklayın.
+4. **Tamam**’a tıklayın.
 
 ### <a name="to-set-a-breakpoint-on-a-specific-thread"></a>Belirli bir iş parçacığında bir kesme noktası ayarlamak için
 
@@ -89,7 +89,7 @@ Yüksek performanslı bir kümede çok İşlemsiz bir programın hata ayıklamas
 
      Daha karmaşık bir filtre oluşturmak için, yan tümceleri, `&` and işlecini, `||` , or işlecini, `!` , Not işleci ve parantezleri kullanarak birleştirebilirsiniz.
 
-4. **Tamam**'a tıklayın.
+4. **Tamam**’a tıklayın.
 
 ## <a name="example"></a>Örnek
  Aşağıdaki örnek, adlı bir bilgisayar ve adlı bir iş parçacığı için bir kesme noktası için bir filtre oluşturmayı gösterir `marvin` `fourier1` .

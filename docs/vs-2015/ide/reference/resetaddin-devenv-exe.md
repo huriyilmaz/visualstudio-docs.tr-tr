@@ -1,5 +1,5 @@
 ---
-title: -Resetaddın (devenv. exe) | Microsoft Docs
+title: -Resetaddın (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9958e6e9a540dce1a405df8991780600b8f4a702
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665596"
 ---
 # <a name="resetaddin-devenvexe"></a>/ResetAddin (devenv.exe)
@@ -25,20 +25,20 @@ ms.locfileid: "72665596"
 
 Belirtilen eklenti ile ilişkili komutları ve komut Kullanıcı arabirimini kaldırır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Devenv /ResetAddin AddIn
 ```
 
-## <a name="arguments"></a>Arguments
- Isteğe bağlı `AddIn`. Eklentinin komut adı.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `AddIn` Seçim. Eklentinin komut adı.
 
 ## <a name="remarks"></a>Açıklamalar
- Varsayılan olarak, eklentinin komut adı *\<AddInSolutionName >* eşittir. <em>. @No__t_3AddInSolutionName ></em>bağlanın ve `Exec` yönteminin `commandName` parametresi olarak Connect.cs içinde görüntülenir. Ayrıca, Visual Studio 'daki Komutlar penceresine eklentinin adını yazarak ve REST 'i doldurmanız için IntelliSense kullanarak komut adını doğrulayabilirsiniz.
+ Varsayılan olarak, eklentinin komut adı öğesine eşittir *\<AddInSolutionName>* . <em>. \<AddInSolutionName> </em>Ve, yönteminin parametresi olarak Connect.cs içinde görüntülenir `commandName` `Exec` . Ayrıca, Visual Studio 'daki Komutlar penceresine eklentinin adını yazarak ve REST 'i doldurmanız için IntelliSense kullanarak komut adını doğrulayabilirsiniz.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, Visual Studio 'Yu başlatır ve `MyAddin` eklentisinin başlangıçta çalıştırılmasını önler.
+ Aşağıdaki örnek, Visual Studio 'Yu başlatır ve `MyAddin` eklentinin başlangıçta çalıştırılmasını önler.
 
 ```
 Devenv.exe /ResetAddin MyAddin.Connect.MyAddin

@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e7480f953e2fca57c296d6d1641059993bfa582c
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349633"
 ---
 # <a name="how-to-flag-and-unflag-threads-c-visual-basic-c"></a>Nasıl yapılır: bayrak ve Unflag Iş parçacıkları (C#, Visual Basic, C++)
@@ -58,7 +58,7 @@ Bayraklı iş parçacıkları Ayrıca **hata ayıklama konumu** araç çubuğund
 
 4. Seçim **Arama** kutusuna belirli modülleri aramak için bir dize yazın.
 
-5. **Tamam**'a tıklayın.
+5. **Tamam**’a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çok İş Parçacıklı Uygulamalarda Hata Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)

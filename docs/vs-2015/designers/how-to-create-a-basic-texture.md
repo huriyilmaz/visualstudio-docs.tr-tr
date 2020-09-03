@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8a19cd0b68927effc32b0480fdeb7286be8ad8dd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664568"
 ---
 # <a name="how-to-create-a-basic-texture"></a>Nasıl Yapılır: Temel Doku Oluşturma
@@ -46,11 +46,11 @@ Bu belgede, temel bir doku oluşturmak için görüntü Düzenleyicisi 'nin nas�
 
 1. Birlikte çalışmak için bir doku oluşturun. Projenize doku ekleme hakkında daha fazla bilgi için bkz. [Görüntü Düzenleyicisi](../designers/image-editor.md)'ndeki Başlarken bölümü.
 
-2. Görüntü boyutunu 512x512 piksel olarak ayarlayın. **Özellikler** penceresinde **Genişlik** ve **Yükseklik** özelliklerinin değerlerini `512` olarak ayarlayın.
+2. Görüntü boyutunu 512x512 piksel olarak ayarlayın. **Özellikler** penceresinde **Genişlik** ve **Yükseklik** özelliklerinin değerlerini olarak ayarlayın `512` .
 
 3. Görüntü Düzenleyicisi araç çubuğunda, **Fill** aracını seçin. **Özellikler** penceresi artık, görüntü özellikleriyle birlikte **Fill** aracının özelliklerini görüntüler.
 
-4. Ön plan rengini tamamen saydam siyah olarak ayarlayın. **Özellikler** penceresinde, **renkler** Özellik grubunda **ön plan**' ı seçin. **R**, **G**, **B**ve renk seçicisinin yanındaki **bir** özellik değerlerini `0` olarak ayarlayın.
+4. Ön plan rengini tamamen saydam siyah olarak ayarlayın. **Özellikler** penceresinde, **renkler** Özellik grubunda **ön plan**' ı seçin. **R**, **G**, **B**ve renk seçicisinin yanındaki **bir** özellik değerlerini olarak ayarlayın `0` .
 
 5. Görüntü Düzenleyicisi araç çubuğunda, **Fill** aracını seçin ve ardından SHIFT tuşunu basılı tutarak görüntüde herhangi bir noktayı seçin. SHIFT tuşunun kullanılması, görüntü içindeki rengin yerini alacak şekilde, Fill renginin alfa değerini sağlar; Aksi halde, alfa değeri, görüntü içindeki renkle birlikte Fill rengini karıştırmak için kullanılır.
 
@@ -59,30 +59,30 @@ Bu belgede, temel bir doku oluşturmak için görüntü Düzenleyicisi 'nin nas�
 
 6. Görüntü Düzenleyicisi araç çubuğunda **elips** aracını seçin.
 
-7. Ön plan rengini tamamen opak siyah olarak ayarlayın. **R**, **G**ve **B** özelliklerinin değerlerini `0` ve **bir** özelliğin değerini `255` olarak ayarlayın.
+7. Ön plan rengini tamamen opak siyah olarak ayarlayın. **R**, **G**ve **B** özelliklerinin değerlerini `0` ve **bir** özelliğinin değerini olarak ayarlayın `255` .
 
-8. Arka plan rengini tamamen opak beyaz olarak ayarlayın. **Özellikler** penceresinde, **renkler** Özellik grubunda, **arka plan**' ı seçin. **R**, **G**, **B** **ve Özellikler değerlerini** `255` olarak ayarlayın.
+8. Arka plan rengini tamamen opak beyaz olarak ayarlayın. **Özellikler** penceresinde, **renkler** Özellik grubunda, **arka plan**' ı seçin. **R**, **G**, **B**ve **bir** özelliklerinin değerlerini olarak ayarlayın `255` .
 
-9. Elipsin anahattının genişliğini ayarlayın. **Özellikler** penceresinde, **Görünüm** Özellik grubunda, **Width** özelliğinin değerini `8` olarak ayarlayın.
+9. Elipsin anahattının genişliğini ayarlayın. **Özellikler** penceresinde, **Görünüm** Özellik grubunda, **Width** özelliğinin değerini olarak ayarlayın `8` .
 
 10. Kenar yumuşatma özelliğinin etkinleştirildiğinden emin olun. **Özellikler** penceresinde, **Görünüm** Özellik grubunda, **Anti-Alias** özelliğinin ayarlandığından emin olun.
 
-11. **Elips** aracını kullanarak piksel koordinatı `(3, 3)` piksel koordinat `(508, 508)` bir daire çizin. Daireyi daha kolay çizmek için, çizerken SHIFT tuşuna basılı tutabilirsiniz.
+11. **Elips** aracını kullanarak piksel koordinatından `(3, 3)` piksel koordinatına bir daire çizin `(508, 508)` . Daireyi daha kolay çizmek için, çizerken SHIFT tuşuna basılı tutabilirsiniz.
 
     > [!NOTE]
     > Geçerli işaretçi konumunun piksel koordinatları [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] durum çubuğunda görüntülenir.
 
-12. Arka plan rengini değiştirin. **R** 'yi `44`, **G** 'ye `165`, **B** 'den `211` ve **A** 'ya `255` olarak ayarlayın.
+12. Arka plan rengini değiştirin. **R** - `44` , **G** - `165` , **B** - `211` ve **A** ' yı ayarlayın `255` .
 
-13. Piksel koordinatı `(64, 64)` piksel koordinat `(448, 448)` başka bir daire çizin.
+13. Piksel koordinatından piksel koordinatına başka bir daire çizin `(64, 64)` `(448, 448)` .
 
-14. Arka plan rengini tamamen opak beyaza çevirin. **R**, **G**, **B**ve **A** 'yı `255` olarak ayarlayın.
+14. Arka plan rengini tamamen opak beyaza çevirin. **R**, **G**, **B**ve **A** 'yı olarak ayarlayın `255` .
 
-15. Piksel koordinatı `(128, 128)` piksel koordinat `(384, 384)` başka bir daire çizin.
+15. Piksel koordinatından piksel koordinatına başka bir daire çizin `(128, 128)` `(384, 384)` .
 
-16. Arka plan rengini değiştirin. **R** 'yi `255`, **G** ve **B** 'ye `64` ve **bir** `255` olarak ayarlayın.
+16. Arka plan rengini değiştirin. **R** -, `255` **G** ve **B** ile `64` ve arasında **bir** olarak ayarlayın `255` .
 
-17. Piksel koordinatı `(192, 192)` piksel koordinat `(320, 320)` başka bir daire çizin.
+17. Piksel koordinatından piksel koordinatına başka bir daire çizin `(192, 192)` `(320, 320)` .
 
     "Bullseys" hedef dokusu tamamlanmıştır. Saydamlık ile gösterilen nihai görüntü aşağıda verilmiştir.
 

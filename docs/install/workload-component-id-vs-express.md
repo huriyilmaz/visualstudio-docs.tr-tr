@@ -1,7 +1,7 @@
 ---
-title: Visual Studio Desktop Express iş yükü ve bileşen t.c.
+title: Visual Studio Desktop Express iş yükü ve bileşen kimlikleri
 titleSuffix: ''
-description: Komut satırını kullanarak Visual Studio'yu yüklemek veya VSIX bildiriminde bağımlılık olarak belirtmek için iş yükünü ve bileşen bilgisayarlarını kullanın
+description: Komut satırını kullanarak Visual Studio 'Yu yüklemek veya bir VSıX bildiriminde bağımlılık olarak belirtmek için iş yükü ve bileşen kimliklerini kullanma
 keywords: ''
 author: ornellaalt
 ms.author: ornella
@@ -18,77 +18,77 @@ ms.technology: vs-installation
 monikerRange: vs-2017
 open_to_public_contributors: false
 ms.openlocfilehash: 1e24f90f24921bee9a6132ccc047c0b9da37fc90
-ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "81276298"
 ---
 # <a name="visual-studio-desktop-express-component-directory"></a>Visual Studio Desktop Express bileşen dizini
 
-Bu sayfadaki tablolar, komut satırını kullanarak Visual Studio'yu yüklemek için kullanabileceğiniz veya VSIX bildiriminde bağımlılık olarak belirtebileceğiniz künyeleri listelediğinizde. Visual Studio'ya güncellemeler yayınlarken ek bileşenler ekleyeceğiz.
+Bu sayfadaki tablolarda, komut satırını kullanarak Visual Studio 'Yu yüklemek için kullanabileceğiniz veya bir VSıX bildiriminde bağımlılık olarak belirtebileceğiniz kimlikler listelenmektedir. Visual Studio 'Da güncelleştirmeler yayınlıyoruz, ek bileşenler ekleyeceğiz.
 
-Ayrıca sayfa hakkında aşağıdaki leri unutmayın:
+Ayrıca, sayfa hakkında aşağıdakilere de göz önünde bulabilirsiniz:
 
-* Her iş yükünün kendi bölümü vardır ve ardından iş yükü kimliği ve iş yükü için kullanılabilir bileşenlerin bir tablosu vardır.
-* Varsayılan olarak, iş yükünü yüklediğinizde **Gerekli** bileşenler yüklenir.
-* İsterseniz, **Önerilen** ve **İsteğe Bağlı** bileşenleri de yükleyebilirsiniz.
-* Ayrıca, herhangi bir iş yüküne bağlı olmayan ek bileşenleri listeleyen bir bölüm ekledik.
+* Her iş yükü kendi bölümüne sahiptir ve iş yükü KIMLIĞI ve iş yükü için kullanılabilir bileşenlerin bir tablosu gelir.
+* Varsayılan olarak, **gerekli** bileşenler iş yükünü yüklediğinizde yüklenir.
+* Seçeneğini belirlerseniz, **Önerilen** ve **isteğe bağlı** bileşenleri de yükleyebilirsiniz.
+* Ayrıca, herhangi bir iş yükü ile bağlantılı olmayan ek bileşenleri listeleyen bir bölüm ekledik.
 
-VSIX bildiriminizde bağımlılıkları ayarladığınızda, yalnızca Bileşen kimliklerini belirtmeniz gerekir. Minimum bileşen bağımlılıklarımızı belirlemek için bu sayfadaki tabloları kullanın. Bazı senaryolarda, bu iş yükünden yalnızca bir bileşen belirttiğiniz anlamına gelebilir. Diğer senaryolarda, tek bir iş yükünden birden çok bileşen veya birden çok iş yükünden birden çok bileşen belirtmeniz anlamına gelebilir. Daha fazla bilgi için Visual [Studio 2017 sayfasına Nasıl Taşınır: Genişletilebilirlik Projelerini Geçirin](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) sayfasına bakın.
+VSıX bildiriminizde bağımlılıklar ayarladığınızda, yalnızca bileşen kimliklerini belirtmeniz gerekir. En düşük bileşen bağımlılıklarımızı öğrenmek için bu sayfadaki tabloları kullanın. Bazı senaryolarda bu, bir iş yüküyle yalnızca bir bileşen belirttiğinizde anlamına gelebilir. Diğer senaryolarda, tek bir iş yüküyle birden çok bileşeni veya birden çok iş yükünün birden çok bileşenini belirtmeniz anlamına gelebilir. Daha fazla bilgi için bkz. [nasıl yapılır: genişletilebilirlik projelerini Visual Studio 'Ya geçirme 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) sayfası.
 
-Bu tbm'lerin nasıl kullanılacağı hakkında daha fazla bilgi için [Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md) sayfasını yüklemek için Komut Satırı Parametrelerini Kullanın sayfasına bakın. Ayrıca, diğer ürünler için iş yükü ve bileşen idelerinin listesi için [Visual Studio 2017 İş Yükü ve Bileşen II'leri](workload-and-component-ids.md) sayfasına bakın.
+Bu kimlikleri kullanma hakkında daha fazla bilgi için bkz. [Visual Studio 2017 sayfasını yüklemek Için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md) . Ayrıca, diğer ürünlerin iş yükü ve bileşen kimliklerinin bir listesi için bkz. [Visual Studio 2017 Iş yükü ve bileşen kimlikleri](workload-and-component-ids.md) sayfası.
 
 ## <a name="express-for-windows-desktop"></a>Windows Masaüstü için Express
 
-**Kimlik Numarası:** Microsoft.VisualStudio.Workload.WDExpress
+**Kimliği:** Microsoft. VisualStudio. Workload. WDExpress
 
-**Açıklama:** Sözdizime duyarlı kod düzenleme, kaynak kodu denetimi ve iş öğesi yönetimi yle WPF, WinForms ve Win32 gibi yerel ve yönetilen uygulamalar oluşturun. C#, Visual Basic ve Visual C++ desteği içerir.
+**Açıklama:** Sözdizimi kullanan kod düzenlemesi, kaynak kodu denetimi ve iş öğesi yönetimi ile WPF, WinForms ve Win32 gibi yerel ve yönetilen uygulamalar oluşturun. C#, Visual Basic ve Visual C++ desteğini içerir.
 
-### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından dahil edilen bileşenler
+### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen Kimliği | Adı | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
-Microsoft.Component.ClickOnce | ClickOnce Yayıncılık | 15.8.27825.0 | Gerekli
-Microsoft.Component.HelpViewer | Yardım Görüntüleyici | 15.6.27323.2 | Gerekli
-Microsoft.Component.MSBuild | MSBuild | 15.7.27520.0 | Gerekli
-Microsoft.Component.VC.Runtime.OSSupport | UWP için Visual C++ çalışma zamanı | 15.6.27406.0 | Gerekli
-Microsoft.Net.Component.4.5.1.Hedefleme Paketi | .NET Framework 4.5.1 hedefleme paketi | 15.6.27406.0 | Gerekli
-Microsoft.Net.Component.4.5.2.TargetingPack | .NET Framework 4.5.2 hedefleme paketi | 15.6.27406.0 | Gerekli
-Microsoft.Net.Component.4.5.Hedefleme Paketi | .NET Framework 4.5 hedefleme paketi | 15.6.27406.0 | Gerekli
-Microsoft.Net.Component.4.6.1.SDK | .NET Çerçeve 4.6.1 SDK | 15.6.27406.0 | Gerekli
-Microsoft.Net.Component.4.6.1.Hedefleme Paketi | .NET Framework 4.6.1 hedefleme paketi | 15.6.27406.0 | Gerekli
-Microsoft.Net.Component.4.6.Hedefleme Paketi | .NET Framework 4.6 hedefleme paketi | 15.6.27406.0 | Gerekli
-Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 hedefleme paketi | 15.6.27406.0 | Gerekli
-Microsoft.Net.ComponentGroup.DevelopmentÖn Koşullar | .NET Framework 4.6.1 geliştirme araçları | 15.8.27825.0 | Gerekli
-Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 geliştirme araçları | 15.6.27406.0 | Gerekli
-Microsoft.VisualStudio.Component.Common.Azure.Tools | Bağlantı ve yayımlama araçları | 15.9.28107.0 | Gerekli
-Microsoft.VisualStudio.Component.CoreEditor | Visual Studio çekirdek editörü | 15.8.27729.1 | Gerekli
-Microsoft.VisualStudio.Component.EntityFramework | Varlık Çerçevesi 6 araçları | 15.6.27406.0 | Gerekli
-Microsoft.VisualStudio.Component.NuGet | NuGet paket yöneticisi | 15.9.28016.0 | Gerekli
-Microsoft.VisualStudio.Component.Roslyn.Compiler | C# ve Visual Basic Roslyn derleyicileri | 15.6.27309.0 | Gerekli
-Microsoft.VisualStudio.Component.Roslyn.LanguageServices | C# ve Visual Basic | 15.8.27729.1 | Gerekli
-Microsoft.VisualStudio.Component.SQL.ADAL | SQL ADAL çalışma zamanı | 15.6.27406.0 | Gerekli
-Microsoft.VisualStudio.Component.SQL.CLR | SQL Server için CLR veri türleri | 15.0.26208.0 | Gerekli
-Microsoft.VisualStudio.Component.SQL.CMDUtils | SQL Server Komut Satırı Yardımcı Programları | 15.0.26208.0 | Gerekli
-Microsoft.VisualStudio.Component.SQL.DataSources | SQL Server desteği için veri kaynakları | 15.0.26621.2 | Gerekli
-Microsoft.VisualStudio.Component.SQL.LocalDB.Runtime | SQL Server Express 2016 LocalDB | 15.7.27617.1 | Gerekli
-Microsoft.VisualStudio.Component.SQL.NCLI | SQL Server Native Client | 15.0.26208.0 | Gerekli
-Microsoft.VisualStudio.Component.SQL.SSDT | SQL Server Veri Araçları | 15.9.28107.0 | Gerekli
-Microsoft.VisualStudio.Component.Static.Analysis.Tools | Statik analiz araçları | 15.0.26208.0 | Gerekli
-Microsoft.VisualStudio.Component.TextTemplating | Metin Şablonu Dönüştürme | 15.0.26208.0 | Gerekli
-Microsoft.VisualStudio.Component.VC.CLI.Support | C++/CLI desteği | 15.6.27309.0 | Gerekli
-Microsoft.VisualStudio.Component.VC.Tools.ARM | ARM için Visual C++ derleyicileri ve kütüphaneleri | 15.8.27825.0 | Gerekli
-Microsoft.VisualStudio.Component.VC.Tools.ARM64 | ARM64 için Visual C++ derleyicileri ve kütüphaneleri | 15.9.28230.55 | Gerekli
-Microsoft.VisualStudio.Component.VisualStudioData | Veri kaynakları ve hizmet referansları | 15.6.27406.0 | Gerekli
-Microsoft.VisualStudio.Component.Windows10SDK.14393 | Windows 10 SDK (10.0.14393.0) | 15.6.27406.0 | Gerekli
-Microsoft.VisualStudio.Component.Windows10SDK.17134 | Windows 10 SDK (10.0.17134.0) | 15.8.27924.0 | Gerekli
+Microsoft. Component. ClickOnce | ClickOnce yayımlama | 15.8.27825.0 | Gerekli
+Microsoft. Component. HelpViewer | Yardım Görüntüleyicisi | 15.6.27323.2 | Gerekli
+Microsoft. Component. MSBuild | MSBuild | 15.7.27520.0 | Gerekli
+Microsoft. Component. VC. Runtime. OSSupport | UWP için Visual C++ çalışma zamanı | 15.6.27406.0 | Gerekli
+Microsoft.Net. Component. 4.5.1. TargetingPack | .NET Framework 4.5.1 hedefleme paketi | 15.6.27406.0 | Gerekli
+Microsoft.Net. Component. 4.5.2. TargetingPack | .NET Framework 4.5.2 hedefleme paketi | 15.6.27406.0 | Gerekli
+Microsoft.Net. Component. 4.5. TargetingPack | .NET Framework 4,5 hedefleme paketi | 15.6.27406.0 | Gerekli
+Microsoft. net. Component. 4.6.1. SDK | .NET Framework 4.6.1 SDK | 15.6.27406.0 | Gerekli
+Microsoft.Net. Component. 4.6.1. TargetingPack | .NET Framework 4.6.1 hedefleme paketi | 15.6.27406.0 | Gerekli
+Microsoft.Net. Component. 4.6. TargetingPack | .NET Framework 4,6 hedefleme paketi | 15.6.27406.0 | Gerekli
+Microsoft.Net. Component. 4. TargetingPack | .NET Framework 4 hedefleme paketi | 15.6.27406.0 | Gerekli
+Microsoft.Net. ComponentGroup. Developmentönkoşullar | .NET Framework 4.6.1 geliştirme araçları | 15.8.27825.0 | Gerekli
+Microsoft.Net. ComponentGroup. TargetingPacks. Common | .NET Framework 4 – 4,6 geliştirme araçları | 15.6.27406.0 | Gerekli
+Microsoft. VisualStudio. Component. Common. Azure. Tools | Bağlantı ve yayımlama araçları | 15.9.28107.0 | Gerekli
+Microsoft. VisualStudio. Component. CoreEditor | Visual Studio temel Düzenleyicisi | 15.8.27729.1 | Gerekli
+Microsoft. VisualStudio. Component. EntityFramework | Entity Framework 6 araçları | 15.6.27406.0 | Gerekli
+Microsoft. VisualStudio. Component. NuGet | NuGet Paket Yöneticisi | 15.9.28016.0 | Gerekli
+Microsoft. VisualStudio. Component. Roslyn. derleyicisi | C# ve Visual Basic Roslyn derleyicileri | 15.6.27309.0 | Gerekli
+Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# ve Visual Basic | 15.8.27729.1 | Gerekli
+Microsoft. VisualStudio. Component. SQL. ADAL | SQL ADAL çalışma zamanı | 15.6.27406.0 | Gerekli
+Microsoft. VisualStudio. Component. SQL. CLR | SQL Server için CLR veri türleri | 15.0.26208.0 | Gerekli
+Microsoft. VisualStudio. Component. SQL. CMDUtils | SQL Server komut satırı yardımcı programları | 15.0.26208.0 | Gerekli
+Microsoft. VisualStudio. Component. SQL. DataSources | SQL Server destek için veri kaynakları | 15.0.26621.2 | Gerekli
+Microsoft. VisualStudio. Component. SQL. LocalDB. Runtime | SQL Server Express 2016 LocalDB | 15.7.27617.1 | Gerekli
+Microsoft. VisualStudio. Component. SQL. NCLI | SQL Server Native Client | 15.0.26208.0 | Gerekli
+Microsoft. VisualStudio. Component. SQL. SSDT | SQL Server Veri Araçları | 15.9.28107.0 | Gerekli
+Microsoft. VisualStudio. Component. static. Analysis. Tools | Statik analiz araçları | 15.0.26208.0 | Gerekli
+Microsoft. VisualStudio. Component. Textşablon oluşturma | Metin şablonu dönüşümü | 15.0.26208.0 | Gerekli
+Microsoft. VisualStudio. Component. VC. CLı. support | C++/CLı desteği | 15.6.27309.0 | Gerekli
+Microsoft. VisualStudio. Component. VC. Tools. ARM | ARM için Visual C++ derleyiciler ve kitaplıklar | 15.8.27825.0 | Gerekli
+Microsoft. VisualStudio. Component. VC. Tools. ARM64 | ARM64 için derleyiciler ve kitaplıklar Visual C++ | 15.9.28230.55 | Gerekli
+Microsoft. VisualStudio. Component. VisualStudioData | Veri kaynakları ve hizmet başvuruları | 15.6.27406.0 | Gerekli
+Microsoft. VisualStudio. Component. Windows10SDK. 14393 | Windows 10 SDK (10.0.14393.0) | 15.6.27406.0 | Gerekli
+Microsoft. VisualStudio. Component. Windows10SDK. 17134 | Windows 10 SDK (10.0.17134.0) | 15.8.27924.0 | Gerekli
 
-## <a name="unaffiliated-components"></a>Bağlı olmayan bileşenler
+## <a name="unaffiliated-components"></a>Bağlantılı olmayan bileşenler
 
-Bunlar, iş yüküne dahil olmayan, ancak tek bir bileşen olarak seçilebilen bileşenlerdir.
+Bunlar herhangi bir iş yüküne dahil olmayan, ancak tek bir bileşen olarak seçilebilir olan bileşenlerdir.
 
-Bileşen Kimliği | Adı | Sürüm
+Bileşen KIMLIĞI | Name | Sürüm
 --- | --- | ---
 yok | yok | yok
 

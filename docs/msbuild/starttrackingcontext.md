@@ -1,5 +1,5 @@
 ---
-title: StartTrackingContext | Microsoft Dokümanlar
+title: StartTrackingContext | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 apiname:
@@ -16,17 +16,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 50f62704897d68b0e323b948b8f4ed7e96a10c9a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77632114"
 ---
 # <a name="starttrackingcontext"></a>StartTrackingContext
 
-İzleme bağlamı başlatın.
+Bir izleme bağlamı başlatın.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT WINAPI StartTrackingContext(LPCTSTR intermediateDirectory, LPCTSTR taskName);
@@ -34,18 +34,18 @@ HRESULT WINAPI StartTrackingContext(LPCTSTR intermediateDirectory, LPCTSTR taskN
 
 #### <a name="parameters"></a>Parametreler
 
-[içinde]`intermediateDirectory`
+'ndaki `intermediateDirectory`
 
- İzleme günlüğünün depolandığı dizini.
+ İzleme günlüğünün depolayabileceği dizin.
 
-[içinde]`taskName`
+'ndaki `taskName`
 
  İzleme bağlamını tanımlar. Bu ad, günlük dosyası adını oluşturmak için kullanılır.
 
 ## <a name="return-value"></a>Döndürülen değer
 
- İzleme bağlamı **oluşturulduysa, BAŞARILI** bit kümesine sahip bir **HRESULT.**
+ İzleme bağlamı oluşturulduysa, **başarılı** biti ayarlanmış bir **HRESULT** .
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Üstbilgi:** *FileTracker.h*
+ **Üstbilgi:** *FileTracker. h*
