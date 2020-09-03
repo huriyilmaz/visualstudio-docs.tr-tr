@@ -1,52 +1,52 @@
 ---
 title: Sorun giderme
-description: Mac kullanıcıları için Visual Studio için sık karşılaşılan sorunlar ve çözümler.
+description: Mac için Visual Studio kullanıcılara ilişkin yaygın sorunlar ve çözümler.
 ms.topic: troubleshooting
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: CE860D79-E29E-4B93-B094-BE74B35FC1C2
 ms.openlocfilehash: 6073e0bf2a601bf5183798a1df4fd835d0b93427
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74985156"
 ---
 # <a name="troubleshooting"></a>Sorun giderme
 
-## <a name="viewing-logs-in-visual-studio-for-mac"></a>Mac için Visual Studio'daki günlükleri görüntüleme
+## <a name="viewing-logs-in-visual-studio-for-mac"></a>Mac için Visual Studio günlükleri görüntüleme
 
-Günlükleri, aşağıda gösterildiği gibi **Yardım > Açık Günlük Dizini** menü öğesine göz atarak bulunabilir:
+Günlükler, aşağıda gösterildiği gibi **yardım > açma günlüğü Dizin** menü öğesine göz atarak bulunabilir:
 
-![Günlük dizini menü öğeni aç](media/troubleshooting-image1.png)
+![Günlük dizini menü öğesini aç](media/troubleshooting-image1.png)
 
 ## <a name="viewing-exceptions"></a>Özel durumları görüntüleme
 
-Bir özel durum yakalandığında, bir özel durum balonu görüntülenir. Daha fazla ayrıntı görüntülemek için **Ayrıntıları Görüntüle** düğmesini seçin:
+Bir özel durum yakalandığında bir özel durum balonu görüntülenir. Daha fazla ayrıntı görüntülemek için **Ayrıntıları görüntüle** düğmesini seçin:
 
-![Özel durum hakkında daha fazla ayrıntı görüntüleme](media/troubleshooting-image2.png)
+![Özel durum hakkında daha fazla ayrıntı görüntüleyin](media/troubleshooting-image2.png)
 
-Bu, özel durumla ilgili daha fazla bilgi sağlayarak **Ayrıntıları Göster** iletişim kutusunu görüntüler:
+Bu, özel durumla ilgili daha fazla bilgi sağlayan **Ayrıntıları göster** iletişim kutusunu görüntüler:
 
-![Ayrıntılar iletişim kutusunu göster](media/troubleshooting-image3.png)
+![Ayrıntıları göster iletişim kutusu](media/troubleshooting-image3.png)
 
-Yukarıda numaralanmış olan iletişim kutusunun önemli bölümleri aşağıda ayrıntılı olarak açıklanmıştır:
+Bu iletişim kutusunun yukarıda numaralandırılan önemli bölümleri aşağıda ayrıntılı olarak açıklanmıştır:
 
-1. Gözlenen özel durum türünün tam adını gösteren özel durum türü.
+1. Gözlemlenen özel durum türünün tam adını gösteren özel durum türü.
 2. Özel durum nesnesinin Ileti özelliğinin değerini gösteren özel durum iletisi.
-3. İç özel durum ağacı görünümünde şu anda seçili özel durum için özel durum türünün tam adını gösteren İç özel durum türü.
-4. İç özel durum iletisi, İç özel durum ağacı görünümünde seçili özel durum iletisi özelliğinin değerini gösterir.
-5. Stacktrace görünümü. Bu bir açıklama oku ile daraltılabilir ve yığın çerçeveleri girişleri içerir.
-6. Kullanıcı kodu olmayan girişler örneği.
+3. Iç özel durum ağacı görünümünde Şu anda seçili olan özel durum türünün tam adını gösteren Iç özel durum türü.
+4. Iç özel durum iletisi, Iç özel durum ağacı görünümünde seçilen özel durumun Ileti özelliğinin değerini gösterir.
+5. StackTrace görünümü. Bu, bir açıklama oku aracılığıyla daraltılabilir ve yığın çerçeveleri girdilerini içerir.
+6. Kullanıcı olmayan kod girişlerinin örneği.
 7. Kullanıcı kodu girişleri örneği.
-8. Özel durum tüm özelliklerini ve alanlarını gösteren özellikler görünümü. Bu bir açıklama ok aracılığıyla daraltılabilir.
-9. İç özel durum ağacı görünümü. Bu görünümde klavye yukarı/aşağı oklarla veya fare veya izleme dörtgeni yle iç özel durumları seçin.
-10. Varsayılan olarak, bu hata ayıklama ayarlarında **Hata Ayıklama proje kodu yalnızca** seçeneği ayarlanır. Bu kutuyu seçmek, kullanıcı olmayan tüm kodun yığın izinde tek bir satıra çökmesini sağlar.
-11. Çıktıyı panoya `exception.ToString()` kopyalamak için bir kopyalama düğmesi.
+8. Özel durumun tüm özelliklerini ve alanlarını gösteren Özellikler Görünümü. Bu, bir açıklama oku aracılığıyla daraltılabilir.
+9. İç özel durum ağacı görünümü. Bu görünümdeki iç özel durumları klavye yukarı/aşağı okları veya fare veya tekerleksiz ile seçin.
+10. Bu, varsayılan olarak, hata ayıklayıcı ayarlarında **yalnızca hata ayıklama proje kodu** seçeneği olarak ayarlanır. Bu kutunun belirlenmesi, tüm kullanıcı olmayan kodların StackTrace içinde tek bir satırda daraltılmasına olanak tanır.
+11. Çıktıyı panoya kopyalamak için bir Kopyala düğmesi `exception.ToString()` .
 
-Bu bölümlerden bazılarının yalnızca özel durum iç özel bir özel durum olduğunda görünür olduğunu unutmayın.
+Bu bölümlerin bazılarının yalnızca özel durumun iç özel durumu olduğunda görünür olduğunu unutmayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IDE hatalarını giderme kaynakları (Windows'ta Visual Studio)](/visualstudio/ide/reference/resources-for-troubleshooting-integrated-development-environment-errors)
+- [IDE hatalarında sorun giderme kaynakları (Windows üzerinde Visual Studio)](/visualstudio/ide/reference/resources-for-troubleshooting-integrated-development-environment-errors)

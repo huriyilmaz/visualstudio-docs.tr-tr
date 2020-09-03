@@ -1,5 +1,5 @@
 ---
-title: Sdk Eleman (MSBuild) | Microsoft Dokümanlar
+title: SDK öğesi (MSBuild) | Microsoft Docs
 ms.date: 01/25/2018
 ms.topic: reference
 f1_keywords:
@@ -18,19 +18,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8a704744032c5dea70246463a816ba8e1f5c84e8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77632478"
 ---
-# <a name="sdk-element-msbuild"></a>Sdk elemanı (MSBuild)
+# <a name="sdk-element-msbuild"></a>SDK öğesi (MSBuild)
 
-Bir MSBuild projesi SDK'ya başvurur.
+MSBuild proje SDK 'sına başvurur.
 
- \<Proje \<> Sdk>
+ \<Project> \<Sdk>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Sdk Name="My.Custom.Sdk"
@@ -45,8 +45,8 @@ Bir MSBuild projesi SDK'ya başvurur.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Name`|Gerekli öznitelik.<br /><br /> Projenin adı SDK.|
-|`Version`|İsteğe bağlı öznitelik.<br /><br /> Projenin sürümü SDK|
+|`Name`|Gerekli öznitelik.<br /><br /> Proje SDK 'sının adı.|
+|`Version`|İsteğe bağlı öznitelik.<br /><br /> Proje SDK 'sının sürümü|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -56,10 +56,10 @@ Bir MSBuild projesi SDK'ya başvurur.
 
 | Öğe | Açıklama |
 | - | - |
-| [Proje](../msbuild/project-element-msbuild.md) | MSBuild proje dosyasının gerekli kök öğesi. |
+| [Project](../msbuild/project-element-msbuild.md) | MSBuild proje dosyasının gerekli kök öğesi. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl?](../msbuild/how-to-use-project-sdk.md)
+- [Nasıl yapılır: MSBuild proje SDK 'sına başvurma](../msbuild/how-to-use-project-sdk.md)
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
-- [Msbuild](../msbuild/msbuild.md)
+- [MSBUILD](../msbuild/msbuild.md)

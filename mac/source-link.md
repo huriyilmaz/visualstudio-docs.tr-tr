@@ -1,41 +1,41 @@
 ---
-title: Source Link ile NuGet paketlerine hata ayıklama
-description: Bu makalede, Mac için Visual Studio'daki Kaynak Bağlantı özelliği açıklanmaktadır.
+title: Kaynak bağlantısı ile NuGet paketlerinde hata ayıklama
+description: Bu makalede Mac için Visual Studio içindeki kaynak bağlantısı özelliği açıklanır.
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 12/16/2019
 ms.assetid: 4bcb8acf-db50-4bd8-a48e-86248f00c90b
 ms.openlocfilehash: 530ad09bbf72d9696621f328c2df40b37f362c13
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75451491"
 ---
-# <a name="debugging-into-nuget-packages-with-source-link"></a>Source Link ile NuGet paketlerine hata ayıklama
+# <a name="debugging-into-nuget-packages-with-source-link"></a>Kaynak bağlantısı ile NuGet paketlerinde hata ayıklama
 
-Source Link teknolojisi, NuGet o gemiden .NET derlemelerinin kaynak kodunun hata ayıklanmasını sağlar. Kaynak dosyalara bağlantılar içeren PDB'ler. Kaynak Bağlantı, geliştiriciler NuGet paketlerini oluşturduklarında ve kaynak denetimi meta verilerini derlemelerin ve paketin içine yerleştirdiğinde yürütür. Mac için Visual Studio'da Kaynak Bağlantı etkinleştirildiğinde, IDE yüklü paketler için kaynak dosyaların kullanılabilir olup olmadığını algılar. Mac için Visual Studio daha sonra paket kodu ile adım sağlayacak onları indirmek için sunacak. Kaynak Bağlantı ayrıca Xamarin projeleri için Mono Base Sınıf Kitaplığı koduyla çalışır ve .NET Framework koduna adım atmanızı sağlar. Kaynak Bağlantı büyük bir hata ayıklama deneyimi oluşturmak için kaynak denetimi meta verileri sağlar.
+Kaynak bağlantısı teknolojisi, gönderilen NuGet 'den .NET derlemelerinin kaynak kodu hata ayıklamasını sağlar. Kaynak dosyaların bağlantılarıyla pdb 'leri. Geliştiriciler, NuGet paketini oluştururken ve kaynak denetimi meta verilerini derlemeler ve paket içine katıştırdığınızda kaynak bağlantısı yürütülür. Mac için Visual Studio ' de kaynak bağlantısı etkinleştirildiğinde IDE, yüklü paketler için kaynak dosyalarının kullanılabilir olup olmadığını algılar. Mac için Visual Studio, paket kodunda adım adım ilerlemenize imkan tanıyan bunları indirmek için teklif eder. Kaynak bağlantısı, Xamarin projeleri için mono temel sınıf kitaplığı kodu ile de birlikte çalışarak .NET Framework kodu de adım adım görmenize olanak tanır. Kaynak bağlantısı, harika bir hata ayıklama deneyimi oluşturmak için kaynak denetimi meta verileri sağlar.
 
 > [!NOTE]
-> Mac için Visual Studio şu anda sembol sunucularını desteklemiyor. Bu nedenle, sembol sunucularında barındırılan meta verilere sahip Kaynak Bağlantı desteklenmez.
+> Mac için Visual Studio şu anda sembol sunucularını desteklememektedir. Bu nedenle, sembol sunucularında barındırılan meta verilerle kaynak bağlantı desteklenmez.
 
-## <a name="enable-source-link"></a>Kaynak Bağlantısını Etkinleştir
+## <a name="enable-source-link"></a>Kaynak bağlantısını etkinleştir
 
-Mac için Visual Studio'da Kaynak Bağlantısını etkinleştirmek için **Visual Studio > Preferences... > Projeler > Hata Ayıklayıcı'ya** göz atın ve **Dış Koda Adım** onay kutusunun işaretli olduğundan emin olun.
+Mac için Visual Studio ' de kaynak bağlantısını etkinleştirmek için **Visual Studio > Preferences... > proje hata ayıklayıcısını >** gidin ve **dış kod** onay kutusunun işaretli olduğundan emin olun.
 
-![Dış kod onay kutusuna Adım'ı gösteren tercihler iletişim kutusunun ekran görüntüsü](media/source-link1.png)
+![Dış koda adım gösteren Tercihler iletişim kutusunun ekran görüntüsü](media/source-link1.png)
 
-**Dış Kodu İndir** ayarını tercihlerinize uyacak şekilde değiştirebilirsiniz:
-* Sor: Mac için Visual Studio harici kodu indirmek ister
-* Her zaman: Mac için Visual Studio harici kodu otomatik olarak indirecek
-* Asla: Mac için Visual Studio ilgili harici kodu indirmez
+**Dış kod indirme** bölümündeki ayarı tercihlerinize uyacak şekilde değiştirebilirsiniz:
+* Sorun: Mac için Visual Studio dış kodu indirmek isteyip istemediğinizi sorar
+* Always: Mac için Visual Studio dış kodu otomatik olarak indirecek
+* Hiçbir şekilde: Mac için Visual Studio ilgili harici kodu indirmez
 
-Varsayılan olarak, **Ask** seçilir. NuGet paketi için harici kod bulunduğunda aşağıdaki komut istemini alırsınız:
+Varsayılan olarak, **ask** seçilidir. Bir NuGet paketi için dış kod bulunduğunda aşağıdaki istemi alırsınız:
 
-![NuGet paketi için harici kod bulunduğunda görünen istem ekran görüntüsü](media/source-link2.png)
+![NuGet paketi için dış kod bulunduğunda görüntülenen istem ekran görüntüsü](media/source-link2.png)
 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kaynak Link GitHub deposu](https://github.com/dotnet/sourcelink/blob/master/README.md)
-- [.NET belgeleri](https://docs.microsoft.com/dotnet/standard/library-guidance/sourcelink) Kaynak Bağlantı ve paketlere Kaynak Bağlantı desteği nasıl ekleyeceğiniz hakkında daha fazla bilgi için
+- [Kaynak bağlantısı GitHub deposu](https://github.com/dotnet/sourcelink/blob/master/README.md)
+- Kaynak bağlantısı ve paketlere kaynak bağlantısı desteği ekleme hakkında daha fazla bilgi için bkz. [.net belgeleri](https://docs.microsoft.com/dotnet/standard/library-guidance/sourcelink)

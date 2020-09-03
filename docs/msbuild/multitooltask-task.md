@@ -1,5 +1,5 @@
 ---
-title: MultiToolTask Görev | Microsoft Dokümanlar
+title: MultiToolTask görevi | Microsoft Docs
 ms.date: 03/10/2019
 ms.topic: reference
 f1_keywords:
@@ -18,29 +18,29 @@ ms.author: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: d9e8b23492f23d39977b4eb26f8ee633b8463f27
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75565220"
 ---
 # <a name="multitooltask-task"></a>MultiToolTask görevi
 
-Tarifi yok.
+Açıklama yok.
 
 ## <a name="parameters"></a>Parametreler
 
-Aşağıdaki tabloda **MultiToolTask** görevparametreleri açıklanmaktadır.
+Aşağıdaki tabloda, **Multitooltask** görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|**ÇevreVariablesToSet**|İsteğe bağlı **dize[]** parametresi.|
+|**EnvironmentVariablesToSet**|İsteğe bağlı **dize []** parametresi.|
 |**SemaphoreProcCount**|İsteğe bağlı **dize** parametresi.|
-|**SchedulerFonksiyonu**|İsteğe bağlı **dize** parametresi.|
-|**ZamanlayıcıVerbose**|İsteğe bağlı **bool** parametresi.|
-|**Kaynak**|Gerekli **ITaskItem[]** parametresi.|
-|**GörevMontaj Adı**|İsteğe bağlı **dize** parametresi.|
-|**Görevadı**|Gerekli **dize** parametresi.|
+|**SchedulerFunction**|İsteğe bağlı **dize** parametresi.|
+|**SchedulerVerbose**|İsteğe bağlı **bool** parametresi.|
+|**Kaynaklar**|Gerekli **ıtaskitem []** parametresi.|
+|**TaskAssemblyName**|İsteğe bağlı **dize** parametresi.|
+|**Silinecek**|Gerekli **dize** parametresi.|
 |**TrackerLogDirectory**|Gerekli **dize** parametresi.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
