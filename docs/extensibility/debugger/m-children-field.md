@@ -1,5 +1,5 @@
 ---
-title: m_children Alanı | Microsoft Dokümanlar
+title: m_children alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,31 +11,31 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 07933fd4c9f359e72714600abdf8b4ee29268f84
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738431"
 ---
 # <a name="m_children-field"></a>m_children alanı
-Bu göreve kayıtlı alt görevlerin listesi.
+Bu görevle kaydedilen alt görevlerin listesi.
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Montaj:** mscorlib *(mscorlib.dll*olarak)
+ **Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
 
- Bu iç üyeye .NET Framework'den erişemediğinizden, aşağıdaki sözdizimi Ortak Ara Dil 'de (CIL) sağlanır.
+ Bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```csharp
 .field public class System.Collections.Generic.List`1<class System.Threading.Tasks.Task> m_children
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- Görev çalışırken, yalnızca görevi yürüten iş parçacığı bu diziye erişmelidir.
+ Görev çalışırken, yalnızca görevi yürüten iş parçacığının bu diziye erişmesi gerekir.
 
- Görev tamamlanırsa, diğer iş parçacıkları bu alana bir şey eklemedikleri veya ondan bir şey kaldırmadıkları sürece erişebilir.
+ Görev tamamlanırsa, diğer iş parçacıkları buna hiçbir şey eklemedikleri veya bundan herhangi bir şeyi kaldırabileceği sürece bu alana erişebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ContingentProperties sınıfı](../../extensibility/debugger/contingentproperties-class-internal-members.md)
+- [Kıgentproperties sınıfı](../../extensibility/debugger/contingentproperties-class-internal-members.md)

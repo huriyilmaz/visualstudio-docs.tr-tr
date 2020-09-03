@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ce96f2a3df901c1fea0aa4caa97d29c07db5e681
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72654947"
 ---
 # <a name="customizing-the-model-explorer"></a>Model Gezginini Özelleştirme
@@ -37,14 +37,14 @@ Etki alanına özgü dil tasarlayana ait Gezgin görünümünü ve davranışın
  Oluşturulan gezgin 'in pencere başlığını değiştirmek için, **DSL Gezgini**'Nde **Gezgin davranışı** ' nı seçin ve ardından **Özellikler** penceresinde **başlık** özelliğini istediğiniz başlığa ayarlayın.
 
 ## <a name="changing-the-tab-icon"></a>Sekme simgesini değiştirme
- Gezgin 'in sekme simgesini değiştirmek için. BMP dosyasında 16x16 piksellik bir simge kullanın. Simge dosyasını \DslPackage\Resources\ klasörüne yerleştirin ve ardından dosya adını **Modelexplorertoolwindowbitmap. bmp**olarak değiştirin. Örneğin, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Setup. ico simge dosyasını. bmp biçiminde değiştirebilir ve **DSLLanguageName\DslPackage\Resources\ModelExplorerToolWindowBitmaps.bmp**olarak yeniden adlandırabilirsiniz. Oluşturulan tasarımcı, **Çözüm Gezgini**birlikte yuvalandığında, bu simgeyi gezgin 'in sekmesinde görüntüler.
+ Gezgin 'in sekme simgesini değiştirmek için. BMP dosyasında 16x16 piksellik bir simge kullanın. Simge dosyasını \DslPackage\Resources\ klasörüne yerleştirin ve ardından dosya adını **ModelExplorerToolWindowBitmaps.bmp**değiştirin. Örneğin, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Setup. ico simge dosyasını. bmp biçiminde değiştirebilir ve **DSLLanguageName\DslPackage\Resources\ModelExplorerToolWindowBitmaps.bmp**olarak yeniden adlandırabilirsiniz. Oluşturulan tasarımcı, **Çözüm Gezgini**birlikte yuvalandığında, bu simgeyi gezgin 'in sekmesinde görüntüler.
 
 ## <a name="setting-custom-icons-on-explorer-nodes"></a>Gezgin düğümlerinde özel simgeler ayarlama
  Gezgin düğüm ayarlarını kullanarak, gezginizdeki düğümleri özelleştirebilirsiniz. Aşağıdaki yordam, bir düğüme bir simgenin nasıl ekleneceğini gösterir.
 
 #### <a name="to-add-an-icon-to-an-explorer-node"></a>Gezgin düğümüne simge eklemek için
 
-1. Görev akışı çözüm şablonunu kullanarak bir [!INCLUDE[dsl](../includes/dsl-md.md)] çözümü oluşturun.
+1. [!INCLUDE[dsl](../includes/dsl-md.md)]Görev akışı çözüm şablonunu kullanarak bir çözüm oluşturun.
 
 2. Çözümdeki **Dsl\resources** klasörüne 16x16 piksellik bir simge içeren bir. bmp dosyası yerleştirin.
 

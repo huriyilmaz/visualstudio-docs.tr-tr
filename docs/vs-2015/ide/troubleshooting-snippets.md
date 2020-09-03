@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f73cb7ba59daf2f8ee957d95dee36bba59f87614
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72654788"
 ---
 # <a name="troubleshooting-snippets"></a>Sorun Giderme Parçacıkları
@@ -29,9 +29,9 @@ IntelliSense kod parçacıkları ile ilgili sorunlar genellikle iki sorun nedeni
 
 ### <a name="the-snippet-cannot-be-dragged-from-file-explorer-to-a-visual-studio-source-file"></a>Kod parçacığı dosya Gezgini 'nden bir Visual Studio kaynak dosyasına Sürüklenemiyor
 
-- Kod parçacığı dosyasındaki XML bozuk olabilir. @No__t_1 içindeki **XML Düzenleyicisi** , XML yapısındaki sorunları bulabilir.
+- Kod parçacığı dosyasındaki XML bozuk olabilir. İçindeki **XML Düzenleyicisi** , [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] XML yapısındaki sorunları bulabilir.
 
-- Kod parçacığı dosyası, kod parçacığı şemasıyla uyumlu olmayabilir. @No__t_1 içindeki **XML Düzenleyicisi** , XML yapısındaki sorunları bulabilir.
+- Kod parçacığı dosyası, kod parçacığı şemasıyla uyumlu olmayabilir. İçindeki **XML Düzenleyicisi** , [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] XML yapısındaki sorunları bulabilir.
 
 ### <a name="the-code-has-compiler-errors-that-are-not-highlighted"></a>Kodda vurgulanmayan derleyici hataları var
 

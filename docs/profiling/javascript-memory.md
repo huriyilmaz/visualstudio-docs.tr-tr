@@ -21,10 +21,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 22a9c7a4b58613c0c4bd94ea4f4ce6162f620553
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85331275"
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>UWP uygulamalarında JavaScript bellek kullanımını analiz etme
@@ -167,7 +167,7 @@ JavaScript hafıza Çözümleyicisi, Visual Studio 'da, bellek kullanımını an
 ## <a name="view-live-memory-usage-summary"></a>Canlı bellek kullanım özetini görüntüle
  Canlı bellek kullanım Özeti Görünümü, çalışan uygulama için bir bellek kullanımı grafiği ve tüm anlık görüntü Özeti kutucuklarının bir koleksiyonu sağlar. Bu görünümde anlık görüntü alma, Özet bilgileri çözümleme ve diğer görünümlere gitme gibi temel görevleri gerçekleştirebilirsiniz. Veri toplamayı durdurduğunuzda, bellek grafiği kaybolur ve yalnızca [anlık görüntü Özeti](#view-a-snapshot-summary) görünümünü görürsünüz.
 
- Bellek grafiğinde, Özel baytlar, yerel bellek ve JavaScript yığını dahil olmak üzere uygulamanın işlem belleğinin canlı bir görünümü gösterilir. Bellek grafiği, işlem belleğinin kaydırılabilir bir görünümüdür. Şöyle görünür:
+ Bellek grafiğinde, Özel baytlar, yerel bellek ve JavaScript yığını dahil olmak üzere uygulamanın işlem belleğinin canlı bir görünümü gösterilir. Bellek grafiği, işlem belleğinin kaydırılabilir bir görünümüdür. Şu şekilde görünür:
 
  ![JavaScript bellek Çözümleyicisi bellek grafiği](../profiling/media/js_mem_memory_graph.png "JS_Mem_Memory_Graph")
 
@@ -317,9 +317,9 @@ JavaScript hafıza Çözümleyicisi, Visual Studio 'da, bellek kullanımını an
 
   Kaynak kodunuzda aşağıdaki komutları kullanabilirsiniz:
 
-- `console.takeHeapSnapshot`JavaScript bellek Çözümleyicisi 'nde görüntülenen bir yığın anlık görüntüsünü alır. Bu komut, [JavaScript Konsol komutlarından](../debugger/javascript-console-commands.md)biridir.
+- `console.takeHeapSnapshot` JavaScript bellek Çözümleyicisi 'nde görüntülenen bir yığın anlık görüntüsünü alır. Bu komut, [JavaScript Konsol komutlarından](../debugger/javascript-console-commands.md)biridir.
 
-- `performance.mark`Uygulama çalışırken Özet görünümündeki bellek grafiğinin zaman çizelgesinde görünen bir kullanıcı işareti (ters üçgen) ayarlar. Bu komut, olayı açıklayan ve bellek grafiğinde araç ipucu olarak görünen bir dize bağımsız değişkeni alır. Bu açıklamanın 100 karakteri aşmaması gerekir.
+- `performance.mark` Uygulama çalışırken Özet görünümündeki bellek grafiğinin zaman çizelgesinde görünen bir kullanıcı işareti (ters üçgen) ayarlar. Bu komut, olayı açıklayan ve bellek grafiğinde araç ipucu olarak görünen bir dize bağımsız değişkeni alır. Bu açıklamanın 100 karakteri aşmaması gerekir.
 
 > [!TIP]
 > `console.takeHeapSnapshot`Bellek kullanım senaryolarını yinelemek için çözümlemeyi hızlandırmak üzere kullanın.

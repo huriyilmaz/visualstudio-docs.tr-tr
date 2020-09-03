@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b6b35bbb0592f7ec9f8defcd9d78dbba5a6a47a5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655019"
 ---
 # <a name="customizing-element-tools"></a>Öğe Araçlarını Özelleştirme
@@ -24,7 +24,7 @@ Bazı DSL tanımlarında, tek bir kavramı öğe grubu olarak temsil edersiniz. 
  Ayrıca araç diyagrama veya bir öğeye sürüklendiğinde ne olacağını geçersiz kılabilirsiniz.
 
 ## <a name="customizing-the-content-of-an-element-tool"></a>Öğe aracının Içeriğini özelleştirme
- Her öğe aracı bir veya daha fazla model öğesi ve bağlantısının serileştirilmiş bir sürümünü içeren bir <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> (EGP) örneğini depolar. Varsayılan olarak, bir öğe aracının EGP 'si, araç için belirttiğiniz sınıfın bir örneğini içerir. Bunu, *dil* `ToolboxHelper.CreateElementToolPrototype` geçersiz kılarak değiştirebilirsiniz. Bu yöntem DSL paketi yüklendiğinde çağrılır.
+ Her öğe aracı bir <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> veya daha fazla model öğesi ve bağlantısının serileştirilmiş bir sürümünü içeren bir (EGP) örneğini depolar. Varsayılan olarak, bir öğe aracının EGP 'si, araç için belirttiğiniz sınıfın bir örneğini içerir. Bunu, dilini geçersiz kılarak değiştirebilirsiniz *YourLanguage* `ToolboxHelper.CreateElementToolPrototype` . Bu yöntem DSL paketi yüklendiğinde çağrılır.
 
  Yöntemin parametresi, DSL tanımında belirttiğiniz sınıfın KIMLIĞIDIR. Yöntemi ilgilendiğiniz sınıfla çağrıldığında, EGP içine ek öğeler ekleyebilirsiniz.
 

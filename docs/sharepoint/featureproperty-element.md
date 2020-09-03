@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 61eeea33c6941624ed18a00db482590590a44a8f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546529"
 ---
 # <a name="featureproperty-element"></a>FeatureProperty öğesi
@@ -36,7 +36,7 @@ ms.locfileid: "85546529"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|**Anahtar**|Gerekli **xs: String** özniteliği.<br /><br /> Özellik değerini depolamak ve almak için kullanılan anahtar. Her özellik, özelliği içinde benzersiz olan bir anahtara sahip olmalıdır.|
+|**Key**|Gerekli **xs: String** özniteliği.<br /><br /> Özellik değerini depolamak ve almak için kullanılan anahtar. Her özellik, özelliği içinde benzersiz olan bir anahtara sahip olmalıdır.|
 |**Değer**|Gerekli **xs: String** özniteliği.<br /><br /> Özellik değeri.|
 
 ### <a name="child-elements"></a>Alt öğeleri

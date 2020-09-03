@@ -1,5 +1,5 @@
 ---
-title: m_parent Alanı | Microsoft Dokümanlar
+title: m_parent alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,23 +11,23 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 2d9d21cdd7fd89e075d15c0db1b0696deaa5cb46
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738404"
 ---
 # <a name="m_parent-field"></a>m_parent alanı
 
-Görevin üst <xref:System.Threading.Tasks.Task>öğesi için destek alanı.
+Görevin üst öğesi için yedekleme alanı <xref:System.Threading.Tasks.Task> .
 
 **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
-**Montaj:** mscorlib *(mscorlib.dll*olarak)
+**Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
 
-Bu iç üyeye .NET Framework'den erişemediğinizden, aşağıdaki sözdizimi Ortak Ara Dil 'de (CIL) sağlanır.
+Bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```csharp
 .field private initonly class System.Threading.Tasks.Task m_parent

@@ -1,5 +1,5 @@
 ---
-title: m_stateFlags Alanı | Microsoft Dokümanlar
+title: m_stateFlags alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,31 +11,31 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b504d134c8951072795dc2e202cf05082b12cb64
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738384"
 ---
 # <a name="m_stateflags-field"></a>m_stateFlags alanı
-<xref:System.Threading.Tasks.Task> Nesnenin geçerli durumu yla ilgili bilgileri depolar.
+Nesnenin geçerli durumu hakkında bilgi depolar <xref:System.Threading.Tasks.Task> .
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Montaj:** mscorlib *(mscorlib.dll*olarak)
+ **Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
 
- Bu iç üyeye .NET Framework'den erişemediğinizden, aşağıdaki sözdizimi Ortak Ara Dil 'de (CIL) sağlanır.
+ Bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```csharp
 .field assembly int32 modreq(System.Runtime.CompilerServices.IsVolatile) m_stateFlags
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- Bu değere <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=fullName> erişmek için genellikle özelliği kullanırsınız.
+ <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=fullName>Bu değere erişmek için genellikle özelliğini kullanın.
 
- Bu üye aşağıdaki değerlerin herhangi bir kombinasyonu olabilir:
+ Bu üye aşağıdaki değerlerden herhangi bir bileşim olabilir:
 
 - [TASK_STATE_EXECUTED](../../extensibility/debugger/task-state-executed-field.md)
 

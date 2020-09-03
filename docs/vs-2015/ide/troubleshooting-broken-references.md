@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a1dd1312fc5728fbb68994fb6e70e253fa19172e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72654794"
 ---
 # <a name="troubleshooting-broken-references"></a>Bozuk Başvurularda Sorun Giderme
@@ -43,9 +43,9 @@ Uygulamanız bozuk bir başvuru kullanmayı denerse, bir özel durum hatası olu
 > Derlemelerdeki dosyalara proje dosyasındaki mutlak yollarla başvurulur. Bu nedenle, birden çok geliştirici ortamında çalışan kullanıcıların yerel ortamlarında başvurulan bir derlemeyi eksik olması mümkündür. Bu hatalardan kaçınmak için, bu durumlarda projeden projeye başvurular eklemek daha iyidir. Daha fazla bilgi için bkz. [nib nasıl yapılır: Başvuru Ekle Iletişim kutusunu](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9) ve [Derlemelerle programlama](https://msdn.microsoft.com/library/25918b15-701d-42c7-95fc-c290d08648d6)kullanarak başvuru ekleme veya kaldırma.
 
 ## <a name="reference-path-is-incorrect"></a>Başvuru yolu yanlış
- Projeler farklı bilgisayarlarda paylaşılmışsa, bir bileşen her bilgisayarda farklı bir dizinde bulunuyorsa bazı başvurular bulunamamıştır. Başvurular, bileşen dosyasının adı altında depolanır (örneğin, MyComponent). Bir projeye başvuru eklendiğinde, bileşen dosyasının klasör konumu (örneğin, C:\MyComponents \\) **ReferencePath** proje özelliğine eklenir.
+ Projeler farklı bilgisayarlarda paylaşılmışsa, bir bileşen her bilgisayarda farklı bir dizinde bulunuyorsa bazı başvurular bulunamamıştır. Başvurular, bileşen dosyasının adı altında depolanır (örneğin, MyComponent). Bir projeye başvuru eklendiğinde, bileşen dosyasının klasör konumu (örneğin, C:\MyComponents \\ ) **ReferencePath** proje özelliğine eklenir.
 
- Proje açıldığında, başvuru yolundaki dizinlere bakarak bu başvurulan bileşen dosyalarını bulmaya çalışır. Proje, bileşeni D:\MyComponents \\ gibi farklı bir dizinde depolayan bir bilgisayarda açılırsa, başvuru bulunamamıştır ve Görev Listesi bir hata görünür.
+ Proje açıldığında, başvuru yolundaki dizinlere bakarak bu başvurulan bileşen dosyalarını bulmaya çalışır. Proje, bileşeni D:\MyComponents gibi farklı bir dizinde depolayan bir bilgisayarda açılırsa \\ , başvuru bulunamaz ve görev listesi bir hata görünür.
 
  Bu sorunu gidermek için bozuk başvuruyu silebilir ve ardından Başvuru Ekle iletişim kutusunu kullanarak bunu değiştirebilirsiniz. Başka bir çözüm, projenin özellik sayfalarındaki **başvuru yolu** öğesini kullanmak ve listedeki klasörleri doğru konumlara işaret etmek için değiştirmektir. Her bilgisayardaki her bir kullanıcı için **başvuru yolu** özelliği kalıcıdır. Bu nedenle, başvuru yolunuzda değişiklik yapmak projenin diğer kullanıcılarını etkilemez.
 
@@ -60,9 +60,9 @@ Uygulamanız bozuk bir başvuru kullanmayı denerse, bir özel durum hatası olu
 
 3. Visual Basic kullanıyorsanız, **Başvurular** sayfasını seçin ve **başvuru yolları** düğmesine tıklayın. **Başvuru yolları** iletişim kutusunda, **klasör** alanına başvurmak istediğiniz öğeyi içeren klasörün yolunu yazın ve ardından **Klasör Ekle** düğmesine tıklayın.
 
-     veya
+     -veya-
 
-     Görsel C#kullanıyorsanız, **başvuru yolları** sayfasını seçin. **Klasör** alanına, başvurmak istediğiniz öğeyi içeren klasörün yolunu yazın ve ardından **Klasör Ekle** düğmesine tıklayın.
+     Visual C# kullanıyorsanız, **başvuru yolları** sayfasını seçin. **Klasör** alanına, başvurmak istediğiniz öğeyi içeren klasörün yolunu yazın ve ardından **Klasör Ekle** düğmesine tıklayın.
 
 ## <a name="referenced-file-has-been-deleted"></a>Başvurulan dosya silindi
  Başvurulan dosya silinmiş ve sürücüde artık yok olabilir.

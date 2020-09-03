@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::SetReferenceType | Microsoft Dokümanlar
+title: 'IDebugReference2:: SetReferenceType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 346a95f553b8bb7f246a37555dc191b0fb22ac9b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80720358"
 ---
 # <a name="idebugreference2setreferencetype"></a>IDebugReference2::SetReferenceType
 Başvuru türünü ayarlar. Daha sonraki kullanımlar için ayrılmıştır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT SetReferenceType ( 
@@ -41,7 +41,7 @@ int SetReferenceType ( 
 
 ## <a name="parameters"></a>Parametreler
 `dwRefType`\
-[içinde] Referans türünü belirten [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) numaralandırmadeğeri.
+'ndaki [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) numaralandırmasından başvuru türünü belirten bir değer.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Her zaman `E_NOTIMPL` döndürür.

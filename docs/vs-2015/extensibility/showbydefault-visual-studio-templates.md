@@ -14,22 +14,22 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 98779743f1e7c68f579334d74d3651357c6ee0b4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184123"
 ---
 # <a name="showbydefault-visual-studio-templates"></a>ShowByDefault (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Varsa `false`, şablonu yalnızca görüntüleneceğini belirten belirtilen adla [Templategroupıd](../extensibility/templategroupid-element-visual-studio-templates.md).  
+Varsa `false` , şablonun yalnızca belirtilen [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)altında görüntülendiğini belirtir.  
   
- \<VSTemplate >  
- \<TemplateData >  
- \<ShowByDefault >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<ShowByDefault>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <ShowByDefault> true/false </ShowByDefault>  
@@ -48,18 +48,18 @@ Varsa `false`, şablonu yalnızca görüntüleneceğini belirten belirtilen adla
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|  
   
 ## <a name="text-value"></a>Metin Değeri  
  Bir metin değeri gereklidir.  
   
- Metin olmalıdır `true` veya `false`. TRUE ise, şablonu için tüm proje türleri görüntülenir belirtir. False, şablonu yalnızca görüntülenip görüntülenmeyeceğini belirtilen adla `TemplateGroupID`.  
+ Metin ya da olmalıdır `true` `false` . True ise, şablonun tüm proje türleri için görüntülendiğini belirtir. False ise, şablon yalnızca belirtilen altında görüntülenir `TemplateGroupID` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ShowByDefault` İsteğe bağlı bir öğedir. Varsayılan değer `true` şeklindedir.  
+ `ShowByDefault` isteğe bağlı bir öğedir. Varsayılan değer: `true`.  
   
 ## <a name="example"></a>Örnek  
- Meta veriler için aşağıdaki örnekte bir [!INCLUDE[csprcs](../includes/csprcs-md.md)] şablonu.  
+ Aşağıdaki örnek, bir şablon için meta verileri gösterir [!INCLUDE[csprcs](../includes/csprcs-md.md)] .  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  

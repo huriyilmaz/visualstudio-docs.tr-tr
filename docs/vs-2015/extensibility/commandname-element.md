@@ -12,18 +12,18 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 113f420aa4cbbed9454df1ee0c0dd8aafd09a548
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184326"
 ---
 # <a name="commandname-element"></a>CommandName Öğesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`CommandName` Öğesi klavye kategorisinde görüntülenen metni belirtir **seçenekleri** iletişim kutusu ve **komutları** listesinde **Özelleştir** iletişim bir kutu.  
+`CommandName`Öğesi, **Seçenekler** iletişim kutusundaki klavye kategorisinde ve **Özelleştir** iletişim kutusundaki **Komutlar** listesinde görüntülenen metni belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <CommandName>MyCommand</CommandName>  
@@ -42,7 +42,7 @@ ms.locfileid: "68184326"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[Strings Öğesi](../extensibility/strings-element.md)|Metin öğeleri gibi gruplar `ButtonText` ve `CommandName`.|  
+|[Dizeler öğesi](../extensibility/strings-element.md)|Ve gibi metin öğelerini gruplandırır `ButtonText` `CommandName` .|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Studio Komut Tablosu (.Vsct) Dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

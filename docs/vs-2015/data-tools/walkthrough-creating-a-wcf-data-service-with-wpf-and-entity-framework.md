@@ -15,32 +15,32 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4d825e625313febfa67cfb85f6a9c6bccb7f3608
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75844282"
 ---
-# <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>İzlenecek yol: WPF ve Entity Framework bir WCF veri hizmeti oluşturma
+# <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>İzlenecek Yol: WPF ve Entity Framework ile WCF Veri Hizmeti Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulamasında barındırılan basit bir [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] oluşturma ve ardından Windows Forms uygulamasından erişme gösterilmektedir.
+Bu izlenecek yol [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] , bir Web uygulamasında barındırılan basit bir oluşturma [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ve ardından bu uygulamaya Windows Forms bir uygulamadan erişme işlemlerinin nasıl yapılacağını gösterir.
 
  Bu izlenecek yolda yapacaklarınız:
 
-- [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]barındırmak için bir Web uygulaması oluşturun.
+- Barındırmak için bir Web uygulaması oluşturun [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] .
 
-- Northwind veritabanındaki Customers tablosunu temsil eden bir [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] oluşturun.
+- [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)]Northwind veritabanındaki Customers tablosunu temsil eden bir oluştur.
 
-- Oluşturma bir [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)].
+- Oluşturun [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] .
 
-- Bir istemci uygulaması oluşturun ve [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]bir başvuru ekleyin.
+- Bir istemci uygulaması oluşturun ve öğesine bir başvuru ekleyin [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] .
 
 - Hizmete veri bağlamayı etkinleştirin ve kullanıcı arabirimini oluşturun.
 
 - İsteğe bağlı olarak, uygulamaya filtreleme yetenekleri ekleyin.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Northwind örnek veritabanı.
@@ -48,7 +48,7 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
      Geliştirme bilgisayarınızda bu veritabanı yoksa, [Microsoft Indirme merkezi](https://www.microsoft.com/downloads)' nden indirebilirsiniz. Yönergeler için bkz. [örnek veritabanlarını indirme](https://msdn.microsoft.com/library/ef9d69a1-9461-43fe-94bb-7c836754bcb5).
 
 ## <a name="creating-the-service"></a>Hizmeti Oluşturma
- [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]oluşturmak için bir Web projesi ekleyin, bir [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)]oluşturun ve sonra modelden hizmeti oluşturun.
+ Oluşturmak için [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] , bir Web projesi ekler, bir oluşturup [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] , sonra modelden hizmeti oluşturursunuz.
 
  İlk adımda hizmeti barındırmak için bir Web projesi ekleyeceksiniz.
 
@@ -56,15 +56,15 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
 
 #### <a name="to-create-the-web-project"></a>Web projesini oluşturmak için
 
-1. Menü çubuğunda **Dosya**, **Yeni**, **Proje**' yi seçin.
+1. Menü çubuğunda **Dosya**, **Yeni**,  **Proje**' yi seçin.
 
-2. **Yeni proje** iletişim kutusunda **Visual Basic** veya **Visual C#**  ve **Web** düğümlerini genişletin ve **ASP.NET Web uygulaması** şablonunu seçin.
+2. **Yeni proje** iletişim kutusunda **Visual Basic** veya **Visual C#** ve **Web** düğümlerini genişletin ve **ASP.NET Web uygulaması** şablonunu seçin.
 
 3. **Ad** metin kutusuna **NorthwindWeb**yazın ve sonra **Tamam** düğmesini seçin.
 
 4. **Yeni ASP.NET projesi** iletişim kutusunda, **bir şablon seçin** listesinde **boş**' ı seçin ve ardından **Tamam** düğmesini seçin.
 
-   Bu adımda, Northwind veritabanındaki Customers tablosunu temsil eden bir [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] oluşturacaksınız.
+   Bu adımda, [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] Northwind veritabanındaki Customers tablosunu temsil eden bir oluşturacaksınız.
 
 #### <a name="to-create-the-entity-data-model"></a>Varlık Veri Modeli'ni oluşturmak için
 
@@ -72,7 +72,7 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
 
 2. **Yeni öğe Ekle** iletişim kutusunda, **veri** düğümünü seçin ve ardından **ADO.net varlık veri modeli** öğesini seçin.
 
-3. **Ad** metin kutusuna `NorthwindModel`girin ve sonra **Ekle** düğmesini seçin.
+3. **Ad** metin kutusuna girin `NorthwindModel` ve sonra **Ekle** düğmesini seçin.
 
     Varlık Veri Modeli Sihirbazı görüntülenir.
 
@@ -82,7 +82,7 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
 
    - Northwind örnek veritabanıyla kurulan veri bağlantısı aşağı açılan listede kullanılabilir durumdaysa bunu seçin.
 
-        veya
+        -veya-
 
    - Yeni bir veri bağlantısı yapılandırmak için **Yeni bağlantı** düğmesini seçin. Daha fazla bilgi için bkz. [yeni bağlantılar ekleme](../data-tools/add-new-connections.md).
 
@@ -108,23 +108,23 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
 
 2. **Yeni öğe Ekle** Iletişim kutusunda **Web** düğümünü seçin ve ardından **WCF veri hizmeti 5,6** öğesini seçin.
 
-3. **Ad** metin kutusuna `NorthwindCustomers`girin ve sonra **Ekle** düğmesini seçin.
+3. **Ad** metin kutusuna girin `NorthwindCustomers` ve sonra **Ekle** düğmesini seçin.
 
     NorthwindCustomers. svc dosyası **kod düzenleyicisinde**görüntülenir.
 
-4. **Kod Düzenleyicisi**'nde, ilk `TODO:` açıklamasını bulun ve kodu aşağıdaki kodla değiştirin:
+4. **Kod Düzenleyicisi**'nde, ilk `TODO:` yorumu bulun ve kodu aşağıdaki kodla değiştirin:
 
     [!code-csharp[WCFDataServiceWalkthrough#1](../snippets/csharp/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/cs/northwindcustomers.svc.cs#1)]
     [!code-vb[WCFDataServiceWalkthrough#1](../snippets/visualbasic/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/vb/northwindcustomers.svc.vb#1)]
 
-5. `InitializeService` olay işleyicisindeki açıklamaları aşağıdaki kodla değiştirin:
+5. `InitializeService`Olay işleyicisindeki açıklamaları şu kodla değiştirin:
 
     [!code-csharp[WCFDataServiceWalkthrough#2](../snippets/csharp/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/cs/northwindcustomers.svc.cs#2)]
     [!code-vb[WCFDataServiceWalkthrough#2](../snippets/visualbasic/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/vb/northwindcustomers.svc.vb#2)]
 
 6. Hizmeti çalıştırmak için menü çubuğunda **Hata Ayıkla**, **hata ayıklama olmadan Başlat** ' ı seçin. Bir tarayıcı penceresi açılır ve hizmet için XML şeması görüntülenir.
 
-7. **Adres** çubuğunda, NorthwindCustomers. svc URL 'sinin sonuna `Customers` girin ve **ENTER** tuşunu seçin.
+7. **Adres** çubuğunda, `Customers` NorthwindCustomers. svc URL 'sinin sonuna yazın ve **ENTER** tuşunu seçin.
 
     Müşteriler tablosundaki verilerin bir XML gösterimi görüntülenir.
 
@@ -144,15 +144,15 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
 
 1. Menü çubuğunda, dosya, **Ekle**, **Yeni proje**' yi seçin.
 
-2. **Yeni proje** iletişim kutusunda, **Visual Basic** veya **görsel C#**  düğümünü genişletin ve **Windows** düğümünü seçin ve sonra **Windows Forms uygulama**' yı seçin.
+2. **Yeni proje** iletişim kutusunda, **Visual Basic** veya **Visual C#** düğümünü genişletin ve **Windows** düğümünü seçin ve ardından **Windows Forms uygulama**' yı seçin.
 
-3. **Ad** metin kutusuna `NorthwindClient`girin ve sonra **Tamam** düğmesini seçin.
+3. **Ad** metin kutusuna girin `NorthwindClient` ve sonra **Tamam** düğmesini seçin.
 
 4. **Çözüm Gezgini**, **NorthwindClient** proje düğümünü seçin.
 
 5. Menü çubuğunda **Proje**, **Başlangıç projesi olarak ayarla**' yı seçin.
 
-   Bu adımda, Web projesindeki [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] bir hizmet başvurusu ekleyeceksiniz.
+   Bu adımda, Web projesindeki öğesine bir hizmet başvurusu ekleyeceksiniz [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] .
 
 #### <a name="to-add-a-service-reference"></a>Hizmet başvurusu eklemek için
 
@@ -186,7 +186,7 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
 
 2. **Form1. vb** veya **Form1.cs** form tasarımcısında, kısayol menüsünü açın ve **Yapıştır**' ı seçin.
 
-    <xref:System.Windows.Forms.DataGridView> denetim, bir <xref:System.Windows.Forms.BindingSource> bileşeni ve bir <xref:System.Windows.Forms.BindingNavigator> bileşeni forma eklenir.
+    Bir <xref:System.Windows.Forms.DataGridView> Denetim, <xref:System.Windows.Forms.BindingSource> bileşen ve <xref:System.Windows.Forms.BindingNavigator> bileşen forma eklenir.
 
 3. **CustomersDataGridView** denetimini seçin ve ardından **Özellikler** penceresinde **Dock** özelliğini **Fill**olarak ayarlayın.
 
@@ -200,7 +200,7 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
    using NorthwindClient.ServiceReference1;
    ```
 
-5. `Form1_Load` olay işleyicisine aşağıdaki kodu ekleyin:
+5. Aşağıdaki kodu `Form1_Load` olay işleyicisine ekleyin:
 
    ```vb
    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -223,11 +223,11 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
 
 7. Internet Explorer adres çubuğundan URL'yi kopyalayın.
 
-8. Adım 4 ' te eklediğiniz kodda `http://localhost:53161/NorthwindCustomers.svc/` ' yi seçin ve yeni kopyaladığınız URL ile değiştirin.
+8. 4. adımda eklediğiniz kodda, öğesini seçin `http://localhost:53161/NorthwindCustomers.svc/` ve yeni KOPYALADıĞıNıZ URL ile değiştirin.
 
 9. Uygulamayı çalıştırmak için menü çubuğunda **Hata Ayıkla**, **hata ayıklamayı Başlat** ' ı seçin. Müşteri bilgileri görüntülenir.
 
-   Artık, NorthwindCustomers hizmetinden müşterilerin listesini görüntüleyen çalışır bir uygulamanız var. Hizmet aracılığıyla ek verileri kullanıma sunmak istiyorsanız, [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] Northwind veritabanından ek tablolar içerecek şekilde değiştirebilirsiniz.
+   Artık, NorthwindCustomers hizmetinden müşterilerin listesini görüntüleyen çalışır bir uygulamanız var. Hizmet aracılığıyla ek verileri kullanıma sunmak istiyorsanız, öğesini [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] Northwind veritabanından ek tablolar içerecek şekilde değiştirebilirsiniz.
 
    Bir sonraki isteğe bağlı adımda hizmetin döndürdüğü verileri filtrelemeyi öğreneceksiniz.
 
@@ -238,9 +238,9 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
 
 1. **Çözüm Gezgini**, **Form1. vb** veya **Form1.cs** düğümünün kısayol menüsünü açın ve **Aç**' ı seçin.
 
-2. **Araç kutusundan** forma bir <xref:System.Windows.Forms.TextBox> denetimi ve bir <xref:System.Windows.Forms.Button> denetimi ekleyin.
+2. <xref:System.Windows.Forms.TextBox> <xref:System.Windows.Forms.Button> **Araç kutusundan** forma bir denetim ve denetim ekleyin.
 
-3. <xref:System.Windows.Forms.Button> denetiminin kısayol menüsünü açın ve **kodu görüntüle**' yi seçin ve ardından aşağıdaki kodu `Button1_Click` olay işleyicisine ekleyin:
+3. Denetim için kısayol menüsünü açın <xref:System.Windows.Forms.Button> ve **kodu görüntüle**' yi seçin ve olay işleyicisine aşağıdaki kodu ekleyin `Button1_Click` :
 
     ```vb
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -269,7 +269,7 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
     }
     ```
 
-4. Önceki kodda, `http://localhost:53161/NorthwindCustomers.svc` `Form1_Load` olay işleyicisindeki URL ile değiştirin.
+4. Önceki kodda, `http://localhost:53161/NorthwindCustomers.svc` `Form1_Load` olay IŞLEYICISINDEKI URL ile değiştirin.
 
 5. Uygulamayı çalıştırmak için menü çubuğunda **Hata Ayıkla**, **hata ayıklamayı Başlat** ' ı seçin.
 

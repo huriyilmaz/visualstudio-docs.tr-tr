@@ -1,5 +1,5 @@
 ---
-title: Platformlar arası C++ mobil geliştirme için Visual 'i yükler | Microsoft Docs
+title: Çoklu Platform Mobil Uygulama Geliştirme için Visual C++ yüklensin | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-mobile
@@ -12,24 +12,24 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 70f1266581bb633086fa33a28b43e04befc7e6f9
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75844324"
 ---
 # <a name="install-visual-c-for-cross-platform-mobile-development"></a>Çoklu Platform Mobil Uygulama Geliştirme için Visual C++’ı yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Platformlar C++ arası mobil geliştirme için görsel] (https://go.microsoft.com/fwlink/p/?LinkId=536383), visual Studio 2015 ' in yüklenebilir bir bileşenidir. Platformlar arası Visual Studio şablonları içerir ve platformlar arası araçları ve SDK 'larını, kolayca kullanmaya başlamak için, onları kendiniz bulmaya, indirmeye ve yapılandırmaya gerek kalmadan yükler. Çoklu platform projelerini kolayca oluşturmak, düzenlemek, hatalarını ayıklamak ve test etmek için Visual Studio 'da bu araçları kullanabilirsiniz. Bu konu başlığında, Visual Studio kullanarak platformlar arası uygulamalar geliştirmek için gereken araçların ve üçüncü taraf yazılımların nasıl yükleneceği açıklanır. Bileşene genel bakış için bkz. [Visual C++ platformlar arası mobil](https://go.microsoft.com/fwlink/p/?LinkId=536387)  
+Çoklu Platform Mobil Uygulama Geliştirme için Visual C++] ( https://go.microsoft.com/fwlink/p/?LinkId=536383) Visual Studio 2015 ' nin yüklenebilir bir bileşenidir. Platformlar arası Visual Studio şablonları içerir ve platformlar arası araçları ve SDK 'larını, kolayca kullanmaya başlamak için, onları kendiniz bulmaya, indirmeye ve yapılandırmaya gerek kalmadan yükler. Çoklu platform projelerini kolayca oluşturmak, düzenlemek, hatalarını ayıklamak ve test etmek için Visual Studio 'da bu araçları kullanabilirsiniz. Bu konu başlığında, Visual Studio kullanarak platformlar arası uygulamalar geliştirmek için gereken araçların ve üçüncü taraf yazılımların nasıl yükleneceği açıklanır. Bileşene genel bakış için bkz. [platformlar arası mobil Visual C++](https://go.microsoft.com/fwlink/p/?LinkId=536387)  
   
- [Gereksinimler](#Requirements)   
- [Araçları  alın](#GetTheTools)  
- [Araçları  yüklemesi](#InstallTheTools)  
- [İOS  için araçları yükler](#InstallForiOS)  
+ [Gereklilik](#Requirements)   
+ [Araçları edinme](#GetTheTools)   
+ [Araçları yükler](#InstallTheTools)   
+ [İOS için araçları yükler](#InstallForiOS)   
  [Bağımlılıkları el ile yükler veya güncelleştirir](#ThirdParty)  
   
-## <a name="Requirements"></a> Gereksinimleri  
+## <a name="requirements"></a><a name="Requirements"></a> Gereklilik  
   
 - Yükleme gereksinimleri için bkz. [Visual Studio 2015 sistem gereksinimleri](https://www.visualstudio.com/visual-studio-2015-system-requirements-vs).  
   
@@ -44,33 +44,33 @@ Platformlar C++ arası mobil geliştirme için görsel] (https://go.microsoft.co
   
 - İOS için kod oluşturma, bir Apple KIMLIĞI, bir iOS Geliştirici Programı hesabı ve [Xcode 6](https://go.microsoft.com/fwlink/p/?LinkId=536387) veya sonraki sürümleri Işletim sistemi X Mavericks veya üzeri sürümlerde çalışabilen bir Mac bilgisayar gerektirir. Basit yükleme adımları için bkz. [iOS Için yükleme araçları](#InstallForiOS).  
   
-## <a name="GetTheTools"></a>Araçları edinme  
- Platformlar C++ arası mobil geliştirme Için Visual Studio Community, Professional ve Enterprise sürümlerinde yer alan yüklenebilir bir bileşendir. Visual Studio 'yu almak için [Visual studio 2015 İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına gidin ve güncelleştirme 2 veya sonraki sürümüyle visual Studio 2015 ' yi indirin.  
+## <a name="get-the-tools"></a><a name="GetTheTools"></a> Araçları edinme  
+ Çoklu Platform Mobil Uygulama Geliştirme için Visual C++, Visual Studio Community, Professional ve Enterprise sürümlerinde bulunan yüklenebilir bir bileşendir. Visual Studio 'yu almak için [Visual studio 2015 İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına gidin ve güncelleştirme 2 veya sonraki sürümüyle visual Studio 2015 ' yi indirin.  
   
-## <a name="InstallTheTools"></a>Araçları yükler  
- Visual Studio 2015 için yükleyici, platformlar arası mobil geliştirme için Visual C++ yükleme seçeneği içerir. Bu, gerekli C++ dil araçlarını, Visual Studio için şablonları ve bileşenleri, Android derlemeleri ve hata ayıklama için gereken GCC ve Clang araç kümelerini ve iOS geliştirmesi Için bir Mac ile iletişim kurmayı sağlar. Ayrıca iOS ve Android uygulama geliştirmeyi desteklemek için gereken tüm üçüncü taraf araçları ve yazılım geliştirme setleri de yüklenir. Bu üçüncü taraf araçların çoğu, Android Platform desteği için gereken açık kaynaklı yazılımdır.  
+## <a name="install-the-tools"></a><a name="InstallTheTools"></a> Araçları yükler  
+ Visual Studio 2015 için yükleyici, Çoklu Platform Mobil Uygulama Geliştirme için Visual C++ yükleme seçeneği içerir. Bu, gerekli C++ dil araçlarını, Visual Studio için şablonları ve bileşenleri, Android derlemeleri ve hata ayıklama için gereken GCC ve Clang araç kümelerini ve iOS geliştirmesi için bir Mac ile iletişim kurmayı sağlar. Ayrıca iOS ve Android uygulama geliştirmeyi desteklemek için gereken tüm üçüncü taraf araçları ve yazılım geliştirme setleri de yüklenir. Bu üçüncü taraf araçların çoğu, Android Platform desteği için gereken açık kaynaklı yazılımdır.  
   
-- Android platformunu hedefleyen kod derlemek C++ Için Android yerel geliştirme SETI (NDK) gereklidir.  
+- Android platformunu hedefleyen C++ kodu derlemek için Android yerel geliştirme seti (NDK) gereklidir.  
   
 - Android SDK, Apache Ant ve Java SE Development Kit Android derleme işlemi için gereklidir.  
   
 - Android için Microsoft Visual Studio Öykünücüsü, kodunuzun sınanması ve hata ayıklaması için kullanışlı, isteğe bağlı bir yüksek performanslı öykünücü.  
   
-#### <a name="to-install-visual-c-for-cross-platform-mobile-development-and-the-third-party-tools"></a>Platformlar arası mobil C++ geliştirme ve üçüncü taraf araçları için Visual yüklemek üzere  
+#### <a name="to-install-visual-c-for-cross-platform-mobile-development-and-the-third-party-tools"></a>Çoklu Platform Mobil Uygulama Geliştirme için Visual C++ ve üçüncü taraf araçları yüklemek için  
   
 1. [Araçları edinme](#GetTheTools)bağlantısındaki bağlantıyı Izleyerek Indirdiğiniz Visual Studio 2015 yükleyicisini çalıştırın. İsteğe bağlı bileşenleri yüklemek için yükleme türü olarak **özel** ' i seçin. Yüklenecek isteğe bağlı bileşenleri seçmek için **İleri** ' yi seçin.  
   
-2. Özellikleri Seç bölümünde, **platformlar arası mobil geliştirme** ' ı genişletin **ve C++ görsel mobil geliştirme**' yi inceleyin.  
+2. Özellikleri Seç bölümünde, **platformlar arası mobil geliştirme** ' ı genişletin ve **mobil geliştirme Visual C++** denetleyin.  
   
-     ![Visual C&#43; &#43; mobil geliştirme 'yi seçin](../cross-platform/media/cppmdd-install-vcmdd.png "CPPMDD_Install_VCMDD")  
+     ![Visual C&#43;&#43; Mobile Development 'ı seçin](../cross-platform/media/cppmdd-install-vcmdd.png "CPPMDD_Install_VCMDD")  
   
-     Varsayılan olarak, **Visual C++ mobil geliştirme**' yi seçtiğinizde, **programlama dilleri** seçeneği **C++görseli**yükleyecek şekilde ayarlanır ve **ortak araçlar ve yazılım geliştirme setleri** seçenekleri gereken üçüncü taraf bileşenleri yüklenmek üzere ayarlanır. İhtiyacınız varsa ek bileşenleri seçebilirsiniz. Varsayılan olarak **Android için Microsoft Visual Studio öykünücüsü** de seçilidir. Zaten yüklü olan bileşenler listede etkin değil olarak görünür.  
+     Varsayılan olarak, **Visual C++ Mobile Development**' ı seçtiğinizde, **programlama dilleri** seçeneği **Visual C++** yükleyecek şekilde ayarlanır ve  **ortak araçlar ve yazılım geliştirme setleri** seçenekleri gereken üçüncü taraf bileşenleri yüklemek üzere ayarlanır. İhtiyacınız varsa ek bileşenleri seçebilirsiniz. Varsayılan olarak **Android için Microsoft Visual Studio öykünücüsü** de seçilidir. Zaten yüklü olan bileşenler listede etkin değil olarak görünür.  
   
-     Evrensel Windows uygulamaları oluşturmak ve bunlar arasında, Android ve iOS projeleriniz arasında kod paylaşmak için, **seçme özellikleri**' nde **Windows ve Web geliştirme** ' yi genişletin ve **Evrensel Windows uygulaması geliştirme araçları**' nı işaretleyin. Evrensel Windows uygulamaları oluşturmayı planlamıyorsanız, bu seçeneği atlayabilirsiniz.  
+     Evrensel Windows uygulamaları oluşturmak ve bunlar arasında, Android ve iOS projeleriniz arasında kod paylaşmak için,  **seçme özellikleri**' nde **Windows ve Web geliştirme** ' yi genişletin ve **Evrensel Windows uygulaması geliştirme araçları**' nı işaretleyin. Evrensel Windows uygulamaları oluşturmayı planlamıyorsanız, bu seçeneği atlayabilirsiniz.  
   
      Devam etmek için **İleri**’yi seçin.  
   
-3. Üçüncü taraf bileşenlerinin kendi lisans koşulları vardır. Lisans koşullarını her bileşenin yanındaki **Lisans koşulları** bağlantısını seçerek görüntüleyebilirsiniz. Bileşenleri eklemek ve platformlar arası mobil geliştirme Için Visual Studio 'Yu ve C++ Visual Studio 'yu yüklemek için yüklemeyi seçin.  
+3. Üçüncü taraf bileşenlerinin kendi lisans koşulları vardır. Lisans koşullarını her bileşenin yanındaki **Lisans koşulları** bağlantısını seçerek görüntüleyebilirsiniz. Bileşenleri eklemek ve Visual Studio ve Çoklu Platform Mobil Uygulama Geliştirme için Visual C++ yüklemek için **yüklemeyi** seçin.  
   
 4. Yükleme tamamlandığında, yükleyiciyi kapatın ve bilgisayarınızı yeniden başlatın. Üçüncü taraf bileşenleri için bazı kurulum eylemleri, bilgisayar yeniden başlatılana kadar etkili olmaz.  
   
@@ -82,13 +82,13 @@ Platformlar C++ arası mobil geliştirme için görsel] (https://go.microsoft.co
     > [!NOTE]
     > Bilgisayarınız veya Windows sürümünüz Hyper-V ' yi desteklemiyorsa Android için Microsoft Visual Studio Öykünücüsü bileşenini kullanamazsınız. Windows Home Edition, Hyper-V desteğini içermez.  
   
-5. Visual Studio'yu açın. Visual Studio 'Yu ilk kez çalıştırırsanız, yapılandırmak ve oturum açmak biraz zaman alabilir. Visual Studio hazırlanıyor, **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler**, **güncelleştirmeler**' i seçin. Platformlar arası mobil geliştirme C++ Için Visual Studio güncelleştirmeleri veya Android için Microsoft Visual Studio öykünücüsü için kullanılabilir.  
+5. Visual Studio'yu açın. Visual Studio 'Yu ilk kez çalıştırırsanız, yapılandırmak ve oturum açmak biraz zaman alabilir. Visual Studio hazırlanıyor, **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler**, **güncelleştirmeler**' i seçin. Çoklu Platform Mobil Uygulama Geliştirme için Visual C++ için veya Android için Microsoft Visual Studio Öykünücüsü için kullanılabilir Visual Studio güncelleştirmeleri varsa, bunları yükler.  
   
-## <a name="InstallForiOS"></a>İOS için araçları yükler  
- İOS kodu ile iOS C++ simülatörünü veya bir iOS cihazını düzenlemek, hatalarını ayıklamak ve dağıtmak için Visual, platformlar arası mobil geliştirme için kullanabilirsiniz, ancak lisanslama kısıtlamalarından dolayı kodun bir Mac üzerinde uzaktan oluşturulması gerekir. Visual Studio kullanarak iOS uygulamaları derlemek ve çalıştırmak için, Mac 'inizde uzak aracıyı ayarlamanız ve yapılandırmanız gerekir. Ayrıntılı yükleme yönergeleri, Önkoşullar ve yapılandırma seçenekleri için bkz. [iOS kullanarak derlemek Için araçları yükleme ve yapılandırma](../cross-platform/install-and-configure-tools-to-build-using-ios.md). İOS için derleme yapıyorsanız, bu adımı atlayabilirsiniz.  
+## <a name="install-tools-for-ios"></a><a name="InstallForiOS"></a> İOS için araçları yükler  
+ İOS kodu 'nı iOS simülatörünü veya bir iOS cihazını düzenlemek, hatalarını ayıklamak ve dağıtmak için Çoklu Platform Mobil Uygulama Geliştirme için Visual C++ kullanabilirsiniz, ancak lisanslama kısıtlamaları nedeniyle, kod bir Mac üzerinde uzaktan oluşturulmalıdır. Visual Studio kullanarak iOS uygulamaları derlemek ve çalıştırmak için, Mac 'inizde uzak aracıyı ayarlamanız ve yapılandırmanız gerekir. Ayrıntılı yükleme yönergeleri, Önkoşullar ve yapılandırma seçenekleri için bkz. [iOS kullanarak derlemek Için araçları yükleme ve yapılandırma](../cross-platform/install-and-configure-tools-to-build-using-ios.md). İOS için derleme yapıyorsanız, bu adımı atlayabilirsiniz.  
   
-## <a name="ThirdParty"></a>Bağımlılıkları el ile yükler veya güncelleştirir  
- Visual Studio yükleyicisi 'ni kullanarak bir veya daha fazla üçüncü taraf bağımlılığı yüklememeye karar verirseniz, Visual C++ mobil geliştirme seçeneğini yüklediğinizde, [araçları yükleme](#InstallTheTools)adımlarını kullanarak bunları daha sonra yükleyebilirsiniz. Ayrıca, bunları Visual Studio 'dan bağımsız olarak yükleyebilir veya güncelleştirebilirsiniz.  
+## <a name="install-or-update-dependencies-manually"></a><a name="ThirdParty"></a> Bağımlılıkları el ile yükler veya güncelleştirir  
+ Visual Studio yükleyicisi 'ni kullanarak bir veya daha fazla üçüncü taraf bağımlılığı yüklememeye karar verirseniz Visual C++ Mobile Development seçeneğini yüklediğinizde, [araçları yükleme](#InstallTheTools)adımlarını kullanarak bunları daha sonra yükleyebilirsiniz. Ayrıca, bunları Visual Studio 'dan bağımsız olarak yükleyebilir veya güncelleştirebilirsiniz.  
   
 > [!CAUTION]
 > Bağımlılıkları Java dışında herhangi bir sıraya yükleyebilirsiniz. Android SDK yüklemeden önce JDK 'yi yükleyip yapılandırmanız gerekir.  
@@ -125,14 +125,14 @@ Platformlar C++ arası mobil geliştirme için görsel] (https://go.microsoft.co
   
 1. Visual Studio menü çubuğunda **Araçlar**, **Seçenekler**' i seçin.  
   
-2. **Seçenekler** iletişim kutusunda, **platformlar arası**' **C++** ı genişletin ve **Android**' i seçin.  
+2. **Seçenekler** iletişim kutusunda **platformlar arası**, **C++** ve **Android**' i seçin.  
   
      ![Android araç yolu seçenekleri](../cross-platform/media/cppmdd-options-android.PNG "CPPMDD_Options_Android")  
   
-3. Bir araç tarafından kullanılan yolu değiştirmek için yolun yanındaki onay kutusunu işaretleyin ve metin kutusunda klasör yolunu düzenleyin. Klasörü seçmek için bir **Konum Seç** iletişim kutusunu açmak için de ( **...** ) düğmesini kullanabilirsiniz.  
+3. Bir araç tarafından kullanılan yolu değiştirmek için yolun yanındaki onay kutusunu işaretleyin ve metin kutusunda klasör yolunu düzenleyin. Klasörü seçmek için bir **Konum Seç** iletişim kutusunu açmak için de (**...**) düğmesini kullanabilirsiniz.  
   
 4. Özel araç klasörü konumlarını kaydetmek için **Tamam ' ı** seçin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İOS  kullanarak derlemek Için Araçlar yükleyip yapılandırın](../cross-platform/install-and-configure-tools-to-build-using-ios.md)  
- [Visual C++ platformlar arası mobil](https://www.visualstudio.com/explore/cplusplus-mdd-vs.aspx)
+ [İOS kullanarak derlemek için Araçlar yükleyip yapılandırma](../cross-platform/install-and-configure-tools-to-build-using-ios.md)   
+ [Platformlar arası mobil Visual C++](https://www.visualstudio.com/explore/cplusplus-mdd-vs.aspx)

@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4b72f419331b2a02c55d885a2b8855070698879a
-ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "78167617"
 ---
 # <a name="fxcopcmd-tool-errors"></a>FxCopCmd aracı hataları
@@ -25,10 +25,10 @@ Aşağıdaki tabloda, FxCopCmd tarafından döndürülen hata kodları açıklan
 
 |Hata|Sayısal değer|
 |-----------|-------------------|
-|Hata yok|0x0|
+|Hata yok|'dır|
 |Analiz hatası|0x1|
 |Kural özel durumları|0x2|
-|Proje yükleme hatası|0x4|
+|Proje yükleme hatası|4,|
 |Derleme yükleme hatası|0x8|
 |Kural kitaplığı yükleme hatası|0x10|
 |Rapor yükleme hatasını içeri aktar|0x20|
@@ -54,4 +54,4 @@ Aşağıdaki tabloda, FxCopCmd tarafından döndürülen hata kodları açıklan
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod Çözümleme Uygulama Hataları](../code-quality/code-analysis-application-errors.md)
+- [Kod Analizi uygulama hataları](../code-quality/code-analysis-application-errors.md)

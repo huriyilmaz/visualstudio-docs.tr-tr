@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: a4787831be31e2f91d668d4e3e7ca91496d7595a
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72985545"
 ---
 # <a name="trust-office-solutions-by-using-inclusion-lists"></a>Ekleme listelerini kullanarak Office çözümlerine güvenme
@@ -27,13 +27,13 @@ ms.locfileid: "72985545"
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
- Kullanıcı bu kullanıcı için güven verilmemiş bir Office çözümünü başlattığında Microsoft Office çözümü, [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] güven istemiyle bir güvenlik kararı ister. Kullanıcı çözüme güvenmeyi seçerseniz, özelleştirme çalışır ve Kullanıcı bir sonraki sefer istenmez.
+ Kullanıcı, bu kullanıcı için güven verilmemiş bir Office çözümünü başlattığında Microsoft Office çözümü, bir güven istemiyle ilgili bir güvenlik kararı ister [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Kullanıcı çözüme güvenmeyi seçerseniz, özelleştirme çalışır ve Kullanıcı bir sonraki sefer istenmez.
 
 ## <a name="inclusion-list-and-windows-installer"></a>Ekleme listesi ve Windows Installer
  Windows Installer kullanarak *Program dosyaları* dizinine Office çözümlerini yükleme, yönetici hakları gerektirir. *Program Files* dizinindeki Office çözümleri için, Office çözümlerine zaten FullTrust izni verildiğinden, Office çalışma zamanı Visual Studio Araçları artık ekleme listesini denetlemediğinden.
 
 ## <a name="clickonce-trust-prompt"></a>ClickOnce güven istemi
- Yöneticiler, Office çözümleri için [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] uygulamasını kullanarak, istemek, sorma devre dışı bırakmak veya güvenilir bir sertifika istemek için güven istemi düzeyini yapılandırabilir. Bu yapılandırma, ekleme listesine erişimi denetleyen bir kayıt defteri anahtarı kullanılarak yapılır.
+ [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]Yöneticiler, Office çözümleri için uygulamasını kullanarak, istemek, sorma devre dışı bırakmak veya güvenilir bir sertifika istemek için güven istemi düzeyini yapılandırabilir. Bu yapılandırma, ekleme listesine erişimi denetleyen bir kayıt defteri anahtarı kullanılarak yapılır.
 
  İstem devre dışıysa, yalnızca güvenilen ve bilinen sertifikaya sahip çözümler yüklenebilir. İstem düzeyi Authenticode gerekli olarak ayarlandıysa, çözüm bilinen bir yetkilinin sertifikası ile imzalanmalıdır, ancak güvenilen bir kök yetkilisine (güvenilen bir sertifika) zincirden bir sertifika gerektirmez. Sorulma izin veriliyorsa, çözüm bilinmeyen kimliğe sahip bir sertifikayla imzalanabilir. Bu senaryoda, güven kararı son kullanıcıya ertelenir ve geçici bir sertifika bir çözümü yüklemek için yeterli olacaktır.
 

@@ -10,10 +10,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 1b6782a95793f222ba15fe8f928ecd9d7337c90f
-ms.sourcegitcommit: 50bbb62525c91c5a31bab57e1caf37c5638872c8
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87913320"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Visual Studio 'da Python ortamları oluşturma ve yönetme
@@ -160,11 +160,11 @@ Conda ortamı, `conda` Aracı kullanılarak veya Visual Studio 2017 sürüm 15,7
     | Alan | Açıklama |
     | --- | --- |
     | Project | Ortamın oluşturulacağı proje (aynı Visual Studio çözümünde birden çok projeniz varsa). |
-    | Ad | Conda ortamının adı. |
+    | Name | Conda ortamının adı. |
     | Paket ekle | Bağımlılıklarınızı tanımlayan bir *Environment. yıml* dosyanız varsa **ortam dosyası** ' nı seçin veya **bir veya daha fazla Anaconda paketi adı** seçin ve en az bir Python paketi veya aşağıdaki alanda bir Python sürümü listeleyin. Paket listesi, Conda 'ın Python ortamı oluşturmasını söyler. Python 'un en son sürümünü yüklemek için; kullanın `python` ; belirli bir sürümü yüklemek için `python=,major>.<minor>` içinde olarak kullanın `python=3.7` . Ayrıca, bir dizi menüden Python sürümlerini ve ortak paketleri seçmek için paket düğmesini de kullanabilirsiniz. |
     | Geçerli ortam olarak ayarla | Ortam oluşturulduktan sonra seçili projede yeni ortamı etkinleştirir. |
     | Yeni projeler için varsayılan ortam olarak ayarla | , Conda ortamını Visual Studio 'da oluşturulan tüm yeni projelerde otomatik olarak ayarlar ve etkinleştirir. Bu seçenek, **Python ortamları** penceresinde **yeni projeler için bu varsayılan ortamı yap** ' ın kullanılmasıyla aynıdır. |
-    | Python ortamları penceresinde görüntüle | Ortamı oluşturduktan sonra **Python ortamları** penceresinin gösterilip gösterilmeyeceğini belirtir. |
+    | Python ortamları penceresinde görüntüle | Ortamı oluşturduktan sonra  **Python ortamları** penceresinin gösterilip gösterilmeyeceğini belirtir. |
 
     > [!Important]
     > Bir Conda ortamı oluştururken, ya da paket listesini kullanarak en az bir Python sürümü veya Python paketi belirttiğinizden emin olun `environments.yml` . Bu, ortamın bir Python çalışma zamanı içerdiğinden emin olmanızı sağlar. Aksi halde, Visual Studio ortamı yoksayar: ortam, **Python ortamları** penceresinde hiçbir yerde görünmez, bir proje için geçerli ortam olarak ayarlanmamış ve genel bir ortam olarak kullanılamaz.
@@ -225,7 +225,7 @@ Standart olmayan bir konumda yüklü olan bir ortamı (Visual Studio 2017 sürü
 
 1. Alanlar istediğiniz değerleri içeriyorsa, yapılandırmayı kaydetmek için **Uygula** ' yı seçin. Artık ortamı, Visual Studio içinde başka herhangi bir gibi kullanabilirsiniz.
 
-1. El ile tanımlanmış bir ortamı kaldırmanız gerekiyorsa, **Yapılandır** sekmesinde **Kaldır** komutunu seçin. otomatik algılanan ortamlar bu seçeneği sağlamaz. Daha fazla bilgi için bkz. [Configure Tab](python-environments-window-tab-reference.md#configure-tab).
+1. El ile tanımlanmış bir ortamı kaldırmanız gerekiyorsa, **Yapılandır** sekmesinde **Kaldır** komutunu seçin. Otomatik algılanan ortamlar bu seçeneği sağlamaz. Daha fazla bilgi için bkz. [Configure Tab](python-environments-window-tab-reference.md#configure-tab).
 
 ::: moniker-end
 
