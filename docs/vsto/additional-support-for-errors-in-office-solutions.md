@@ -57,10 +57,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 01b225b27dfe9c5e1f006105b8e2676a509234b9
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72984632"
 ---
 # <a name="additional-support-for-errors-in-office-solutions"></a>Office çözümlerinde hatalar için ek destek

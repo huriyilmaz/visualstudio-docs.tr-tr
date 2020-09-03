@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b974f3450b88ab22e58e284881f270c1b3d72298
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72619269"
 ---
 # <a name="create-jsdoc-comments-for-javascript-intellisense"></a>JavaScript IntelliSense için JSDoc Açıklamaları Oluşturma
@@ -24,19 +24,19 @@ Visual Studio 'da IntelliSense, standart JSDoc açıklamalarını kullanarak bir
 ## <a name="jsdoc-comment-tags"></a>JSDoc açıklama etiketleri
  Aşağıdaki standart JSDoc açıklama etiketleri IntelliSense tarafından kodunuz hakkında bilgi göstermek için kullanılır.
 
-|  JSDoc etiketi   |                       Sözdizimi                        |                                                     Notlar                                                      |
+|  JSDoc etiketi   |                       Syntax                        |                                                     Notlar                                                      |
 |--------------|-----------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| @deprecated  |              @deprecated *açıklaması*              |                                   Kullanım dışı bırakılan bir işlevi veya yöntemi belirtir.                                   |
-| @description |             @description *açıklaması*              |                              Bir işlev veya yöntem için açıklama belirtir.                               |
-|    @param    | @param {*Type*} *ParameterName*<em>açıklaması</em> | Bir işlev veya metot içindeki bir parametre için bilgi belirtir.<br /><br /> TypeScript Ayrıca @paramTag destekler. |
+| @deprecated  |              @deprecated*Açıklama*              |                                   Kullanım dışı bırakılan bir işlevi veya yöntemi belirtir.                                   |
+| @description |             @description*Açıklama*              |                              Bir işlev veya yöntem için açıklama belirtir.                               |
+|    @param    | @param {*Type*} *ParameterName*<em>açıklaması</em> | Bir işlev veya metot içindeki bir parametre için bilgi belirtir.<br /><br /> TypeScript Ayrıca destekler @paramTag . |
 |  @property   |          @property {*Type*} *PropertyName*          |   Bir nesne için tanımlanmış bir alan veya üye için bir açıklama dahil olmak üzere bilgileri belirtir.    |
-|   @returns   |                  @returns {*Type*}                  |           Bir dönüş değeri belirtir.<br /><br /> TypeScript için @returns yerine @returnType kullanın.           |
-|   @summary   |               @summary *açıklaması*                |                   Bir işlev veya yöntem için açıklamayı belirtir (@description ile aynı).                   |
+|   @returns   |                  @returns {*Type*}                  |           Bir dönüş değeri belirtir.<br /><br /> TypeScript için yerine kullanın @returnType @returns .           |
+|   @summary   |               @summary*Açıklama*                |                   Bir işlev veya yöntem için açıklama belirtir (ile aynı @description ).                   |
 |    @type     |                   @type {*Type*}                    |                                Bir sabit veya değişken türünü belirtir.                                |
-|   @typedef   |         @typedef {*Type*} *customtypename*          |                                            Özel bir tür belirtir.                                            |
+|   @typedef   |         @typedef {*Type*} *Customtypename*          |                                            Özel bir tür belirtir.                                            |
 
 ### <a name="examples"></a>Örnekler
- Aşağıdaki örnek, `getArea` adlı bir işlev için @description, @param ve @return JSDoc etiketlerinin kullanımını gösterir.
+ Aşağıdaki örnek @description @param @return adlı bir işlev için,, ve JSDoc etiketlerinin kullanımını gösterir `getArea` .
 
 ```javascript
 /** @description Determines the area of a circle that has the specified radius parameter.
@@ -50,11 +50,11 @@ function getArea(radius) {
 }
 ```
 
- Yukarıdaki örnekte, IntelliSense `getArea` için açma ayracı yazdığınızda açıklama, parametre ve dönüş bilgilerini gösterir.
+ Yukarıdaki örnekte, IntelliSense, için açılış ayracını yazdığınızda açıklama, parametre ve dönüş bilgilerini gösterir `getArea` .
 
  ![Bir işlev için IntelliSense bilgileri](../ide/media/js-intellisense-jsdoc-comments.png "JS_IntelliSense_JSDoc_Comments")
 
- Aşağıdaki örnek, @typedef etiketinin @property etiketiyle nasıl kullanılacağını gösterir.
+ Aşağıdaki örnek etiketi ile etiketinin nasıl kullanılacağını gösterir @typedef @property .
 
 ```javascript
 /**
@@ -67,7 +67,7 @@ function getForecast(Weather) {
 var w = new Weather();
 ```
 
- Aşağıdaki örnek @type JSDoc etiketlerinin kullanımını gösterir. Bu örnekte gösterildiği gibi, başlangıçtaki yıldız çiftini (\* \*) izleyen tek yıldız işareti (*) gerekli değildir.
+ Aşağıdaki örnek, @type JSDoc etiketlerinin kullanımını gösterir. Bu örnekte gösterildiği gibi, başlangıçtaki yıldız çiftini () izleyen tek yıldız işareti (*) \* \* gerekli değildir.
 
 ```javascript
 /**

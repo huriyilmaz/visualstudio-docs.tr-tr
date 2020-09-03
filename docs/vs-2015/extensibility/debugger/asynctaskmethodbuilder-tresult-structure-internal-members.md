@@ -1,5 +1,5 @@
 ---
-title: AsyncTaskMethodBuilder&lt;TResult&gt; yapısı - dahili üyeler | Microsoft Docs
+title: AsyncTaskMethodBuilder &lt; TResult &gt; yapısı-iç Üyeler | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,24 +12,24 @@ caps.latest.revision: 5
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7e4999b71ae8f654aa3d362ba16c6cf5bc6574da
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68182260"
 ---
-# <a name="asynctaskmethodbuilderlttresultgt-structure---internal-members"></a>AsyncTaskMethodBuilder&lt;TResult&gt; yapısı - dahili üyeler
+# <a name="asynctaskmethodbuilderlttresultgt-structure---internal-members"></a>AsyncTaskMethodBuilder &lt; TResult &gt; yapısı-iç Üyeler
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu konu, iç üyelerini açıklar <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> sınıfı. Bu sınıf hakkında genel bilgi için bkz: <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> başvuru konusu.  
+Bu konu, sınıfının iç üyelerini açıklar <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> . Bu sınıf hakkında genel bilgi için <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> başvuru konusuna bakın.  
   
- **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
+ **Ad alanı:**<xref:System.Runtime.CompilerServices?displayProperty=fullName>  
   
- **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll içinde)  
+ **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll)  
   
- Bu iç üyeleri .NET Framework'ten erişemediği için aşağıdaki söz dizimini ortak Ara dil (CIL) sağlanır.  
+ Bu iç üyelere .NET Framework erişemediği için, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 .class public sequential ansi sealed beforefieldinit System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult>  
@@ -37,12 +37,12 @@ Bu konu, iç üyelerini açıklar <xref:System.Runtime.CompilerServices.AsyncTas
        implements System.Runtime.CompilerServices.IAsyncMethodBuilder  
 ```  
   
-## <a name="internal-members"></a>Dahili üyeler  
+## <a name="internal-members"></a>İç Üyeler  
   
 |Ad|Açıklama|  
 |----------|-----------------|  
-|[ObjectIdForDebugger özelliği](../../extensibility/debugger/asynctaskmethodbuilder-tresult-objectidfordebugger-property.md)|Hata ayıklayıcı bu oluşturucuya benzersiz olarak tanımlanabilmesi için kullanılabilecek bir nesneyi alır.|  
-|[m_task alan](../../extensibility/debugger/asynctaskmethodbuilder-tresult-m-task-field.md)|Gevşek başlatılan görev yerleşik temsil eder.|  
+|[ObjectIdForDebugger özelliği](../../extensibility/debugger/asynctaskmethodbuilder-tresult-objectidfordebugger-property.md)|Bu oluşturucuyu hata ayıklayıcıya benzersiz bir şekilde tanımlamak için kullanılabilecek bir nesne alır.|  
+|[m_task alanı](../../extensibility/debugger/asynctaskmethodbuilder-tresult-m-task-field.md)|Geç tarafından başlatılan oluşturulmuş görevi temsil eder.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601>   
