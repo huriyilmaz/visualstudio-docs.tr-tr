@@ -1,5 +1,5 @@
 ---
-title: IEEDataStorage::GetData | Microsoft Docs
+title: 'IEEDataStorage:: GetData | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a58f644a71601b16317c4fe63271f4f816da77d4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149293"
 ---
 # <a name="ieedatastoragegetdata"></a>IEEDataStorage::GetData
@@ -24,7 +24,7 @@ ms.locfileid: "68149293"
 
 Nesneden belirtilen bayt sayısını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetData(  
@@ -44,19 +44,19 @@ int GetData(
   
 #### <a name="parameters"></a>Parametreler  
  `dataSize`  
- [in] Alınacak bayt sayısı ( `data` dizi gerekir tutmak en az bu bayt sayısı).  
+ 'ndaki Alınacak bayt sayısı ( `data` dizi en az bu sayıda bayt olmalıdır).  
   
  `sizeGotten`  
- [out] Gerçekte alınan bayt sayısını döndürür.  
+ dışı Gerçekten alınan bayt sayısını döndürür.  
   
  `data`  
- [out içinde] İstenen veriler ile doldurulacak dizisi.  
+ [in, out] İstenen verilerle doldurulacak dizi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Önerilen bu yöntemin bayt alma işleminde atlamayı mümkün olduğundan tüm veri baytı yerel bir diziye almak için kullanılır. Bu durumda, parametre `dataSize` değeri olarak döndürülmelidir [GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md) yöntemi.  
+ Bu yöntemin önerilen kullanımı, alma işlemindeki baytları atlamak için bir yol olmadığından, tüm veri baytlarını yerel bir diziye almak olacaktır. Bu durumda, parametresi `dataSize` [GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md) yönteminin döndürdüğü değer olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)   

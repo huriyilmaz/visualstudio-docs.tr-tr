@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ffaeff850c739cd81569a88ae980acf837c413c1
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84184217"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısına ilk bakış
@@ -37,7 +37,7 @@ Kod Düzenleyicisi 'nde açık bir dosyanız varsa, bir kod satırının solunda
 
 Kod satırını veya kodun ayrıntılı olarak incelemek istediğiniz bölümünü bildiğiniz kesme noktaları yararlı bir özelliktir.
 
-## <a name="navigate-code-in-the-debugger-using-step-commands"></a><a name="navigate"></a>Adım komutlarını kullanarak hata ayıklayıcıda kodda gezinin
+## <a name="navigate-code-in-the-debugger-using-step-commands"></a><a name="navigate"></a> Adım komutlarını kullanarak hata ayıklayıcıda kodda gezinin
 
 Çoğu komut için klavye kısayolları sağlıyoruz, çünkü uygulama kodunuzun daha hızlı bir şekilde gezinmesine dikkat edin. (Menü komutları gibi eşdeğer komutlar parantez içinde gösterilir.)
 
@@ -183,7 +183,7 @@ Bir kod satırına çift tıklayarak bu kaynak koda bakabilir ve ayrıca hata ay
 
 Ayrıca, **çağrı yığını** penceresindeki diğer işlemleri yapmak için sağ tıklama menülerini de kullanabilirsiniz. Örneğin, belirli işlevlere kesme noktaları ekleyebilirsiniz, uygulamayı **Imlece Çalıştır**' ı kullanarak yeniden başlatabilir ve kaynak kodunu inceleyebilirsiniz. Bkz. [nasıl yapılır: çağrı yığınını İnceleme](../debugger/how-to-use-the-call-stack-window.md).
 
-## <a name="examine-an-exception"></a><a name="exception"></a>Özel durumu inceleyin
+## <a name="examine-an-exception"></a><a name="exception"></a> Özel durumu inceleyin
 
 Uygulamanız bir özel durum oluşturduğunda, hata ayıklayıcı sizi özel durumu oluşturan kod satırına götürür.
 

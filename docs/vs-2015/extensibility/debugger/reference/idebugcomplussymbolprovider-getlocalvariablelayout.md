@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetLocalVariablelayout | Microsoft Docs
+title: 'IDebugComPlusSymbolProvider:: GetLocalVariablelayout | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a39bd508c1c52cb24a18ba80d252798c6afee535
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194748"
 ---
 # <a name="idebugcomplussymbolprovidergetlocalvariablelayout"></a>IDebugComPlusSymbolProvider::GetLocalVariablelayout
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Yerel değişkenler için bir dizi yöntem düzenini alır.  
+Bir dizi yöntem için yerel değişkenlerin yerleşimini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetLocalVariablelayout(  
@@ -47,25 +47,25 @@ int GetLocalVariablelayout(
   
 #### <a name="parameters"></a>Parametreler  
  `ulAppDomainID`  
- [in] Uygulama etki alanı tanımlayıcısı.  
+ 'ndaki Uygulama etki alanının tanımlayıcısı.  
   
  `guidModule`  
- [in] Modülün benzersiz tanımlayıcısı.  
+ 'ndaki Modülün benzersiz tanıtıcısı.  
   
  `cMethods`  
- [in] Yöntem sayısı belirteçler içinde `rgMethodTokens` dizisi.  
+ 'ndaki Dizideki Yöntem belirteçleri sayısı `rgMethodTokens` .  
   
  `rgMethodTokens`  
- [in] Yöntem belirteçleri dizisi.  
+ 'ndaki Yöntem belirteçleri dizisi.  
   
  `pStreamLayout`  
- [out] Metin akışına değişken düzeni içerir.  
+ dışı Değişken düzeni içeren bir metin akışı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **CDebugSymbolProvider** gösteren nesne [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimi.  
+ Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::GetLocalVariablelayout(  

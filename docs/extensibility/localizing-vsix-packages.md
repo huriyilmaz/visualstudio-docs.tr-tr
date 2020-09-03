@@ -1,5 +1,5 @@
 ---
-title: VSIX Paketlerinin Yerelleştirilmesi | Microsoft Dokümanlar
+title: VSıX paketlerini yerelleştirme | Microsoft Docs
 ms.date: 10/26/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,21 +13,21 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 7d2d4222e45d56447951e86d558af9983a0d1cc9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80702895"
 ---
 # <a name="localizing-vsix-packages"></a>VSIX Paketlerini Yerelleştirme
 
-Her hedef dil için bir *Extension.vsixlangpack* dosyası oluşturup doğru klasöre koyarak bir VSIX paketini yerelleştirebilirsiniz. Yerelleştirilmiş bir paket yüklendiğinde, uzantının yerelleştirilmiş adı yerelleştirilmiş bir açıklamayla birlikte görüntülenir. Yerelleştirilmiş bir lisans dosyası veya yerelleştirilmiş bilgilere işaret eden bir URL sağlarsanız, bunlar da görüntülenir.
+Her hedef dil için bir *extension. valtlangpack* dosyası oluşturarak ve ardından bunları doğru klasöre YERLEŞTIREREK bir VSIX paketini yerelleştirebilirsiniz. Yerelleştirilmiş bir paket yüklendiğinde, uzantının yerelleştirilmiş adı yerelleştirilmiş bir açıklamayla birlikte görüntülenir. Yerelleştirilmiş bir lisans dosyası ya da yerelleştirilmiş bilgilere işaret eden bir URL sağlarsanız, bunlar da görüntülenir.
 
-VSIX paketinizin içeriği menü komutları veya başka kullanıcı arabirimi ekleyen bir VSPackage içeriyorsa, yeni Kullanıcı Arabirimi öğelerini yerelleştirme hakkında bilgi için [yerelleştir menüsü komutlarına](../extensibility/localizing-menu-commands.md) bakın.
+VSıX paketinizin içeriği menü komutları veya diğer kullanıcı arabirimi ekleyen bir VSPackage içeriyorsa, yeni kullanıcı arabirimi öğelerini yerelleştirme hakkında bilgi için bkz. [yerelleştirmek menü komutları](../extensibility/localizing-menu-commands.md) .
 
 ## <a name="directory-structure"></a>Dizin yapısı
 
- Bir kullanıcı bir uzantı yüklediğinde, **Uzantılar ve Güncelleştirmeler,** vsix paketinin üst düzeyini, adı hedef bilgisayarın Visual Studio yerel alanıyla eşleşen bir klasör için denetler. **Uzantılar ve Güncelleştirmeler** klasörde bir *.vsixlangpack* dosyası bulursa, o dosyadaki yerelleştirilmiş değerleri *.vsixmanifest* dosyasındaki karşılık gelen değerleryerine verir. Uzantı yüklenirken bu değerler görüntülenir. Aşağıdaki örnek, İspanyolca (es-ES) ve Fransızca (fr-FR) olarak yerelleştirilmiş bir VSIX paketinin dizin yapısını gösterir.
+ Kullanıcı bir uzantı yüklediğinde, **Uzantılar ve güncelleştirmeler** adı hedef bilgisayarın Visual Studio yerel ayarıyla eşleşen bir klasör için VSIX paketinin en üst düzeyini denetler. **Uzantılar ve güncelleştirmeler** klasörde bir *. valtlangpack* dosyası bulursa, *. valtmanifest* dosyasındaki karşılık gelen değerler için bu dosyadaki yerelleştirilmiş değerleri değiştirir. Bu değerler, uzantı yüklenirken görüntülenir. Aşağıdaki örnek, Ispanyolca (ES-ES) ve Fransızca (fr-FR) olarak yerelleştirilmiş bir VSıX paketinin dizin yapısını gösterir.
 
 ```text
 .
@@ -41,29 +41,29 @@ VSIX paketinizin içeriği menü komutları veya başka kullanıcı arabirimi ek
 ```
 
 > [!NOTE]
-> VSIX destekli proje şablonları bir [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] VSIX bildirimi oluşturmak ve *source.extension.vsixmanifest*adı . Visual Studio projeyi oluşturduğunda, bu dosyanın içeriğini VSIX paketinde Extension.VsixManifest olarak kopyalar.
+> VSıX için desteklenen proje şablonları [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] BIR VSIX bildirimi oluşturur ve bunu *kaynak. Extension. valtmanifest*olarak adlandırın. Visual Studio projeyi oluşturduğunda, bu dosyanın içeriğini VSıX paketindeki. Valtmanifest uzantısına kopyalar.
 
-## <a name="the-extensionvsixlangpack-file"></a>Extension.vsixlangpack dosyası
+## <a name="the-extensionvsixlangpack-file"></a>. Valtlangpack dosyası uzantısı
 
-*Extension.vsixlangpack* dosyası [VSIX Dil Paketi şema 2.0](../extensibility/vsix-language-pack-schema-2-0-reference.md)izler. Bu şema bir `PackageLanguagePackManifest`, hemen bir `Metadata` çocuk öğesi tarafından takip edilir. Metaveri öğesi en fazla 6 alt `DisplayName` `Description`öğe `MoreInfo` `License`içerebilir, , , `ReleaseNotes`, , ve `Icon`. Bu `DisplayName`alt `Description` *öğeler, Extension.vsixmanifest* dosyasının `Metadata` öğesinin , , `MoreInfo` `License`, , `ReleaseNotes`ve `Icon` alt öğelerine karşılık gelir.
+*Uzantı. valtlangpack* dosyası [VSIX dil paketi şeması 2,0](../extensibility/vsix-language-pack-schema-2-0-reference.md)' i izler. Bu şemada `PackageLanguagePackManifest` , hemen arkasından bir `Metadata` alt öğe gelen bir öğesi vardır. Meta veri öğesi en fazla 6 alt öğe içerebilir,,,, `DisplayName` `Description` `MoreInfo` `License` , `ReleaseNotes` ve `Icon` . Bu alt öğeler `DisplayName` , `Description` `MoreInfo` `License` `ReleaseNotes` `Icon` `Metadata` *uzantısı. valtmanifest* dosyası öğesinin,,,, ve alt öğelerine karşılık gelir.
 
-Bir vsixlangpack dosyası oluşturduğunuzda, `Include in Vsix` özelliği `true`' ye ayarlamanız gerekir. Aksi takdirde, yerelleştirilmiş yükleme metni yoksayılır.
+Bir valtlangpack dosyası oluşturduğunuzda, `Include in Vsix` özelliğini olarak ayarlamanız gerekir `true` . Aksi takdirde, yerelleştirilmiş yükleme metni yok sayılır.
 
-### <a name="to-set-the-include-in-vsix-property"></a>Vsix özelliğine Ekle'yi ayarlamak için
+### <a name="to-set-the-include-in-vsix-property"></a>VSIX özelliğinde Içerme özelliğini ayarlamak için
 
-1. **Çözüm Gezgini'nde,** Extension.vsixlangpack dosyasına sağ tıklayın ve ardından **Özellikler'i**tıklatın.
+1. **Çözüm Gezgini**, Extension. valtlangpack dosyasına sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-2. Özellik **Izgara'sında** **Vsix'e Ekle'yi**tıklatın ve değerini `true`.
+2. **Özellik kılavuzunda** **VSIX 'e Ekle**' ye tıklayın ve değerini olarak ayarlayın `true` .
 
 ## <a name="example"></a>Örnek
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 
-Aşağıdaki örnek, *Bir Extension.vsixmanifest* dosyasının ilgili bölümlerini gösterir. Dosya da İspanyolca için ilgili *Extension.vsixlangpack* dosyaiçerir. Hedef bilgisayarın Visual Studio yerel bilgisayarı İspanyolca olarak ayarlanmışsa, dil paketindeki değerler bildirimdeki değerleri değiştirir.
+Aşağıdaki örnekte bir *extension. valtmanifest* dosyasının ilgili bölümleri gösterilmektedir. Bu dosya, Ispanyolca için karşılık gelen *extension. valtlangpack* dosyasını da içerir. Dil paketindeki değerler, hedef bilgisayarın Visual Studio yerel ayarı Ispanyolca olarak ayarlandıysa, bildirim içindeki değerleri değiştirin.
 
 ### <a name="code"></a>Kod
 
-- [*Uzantı.vsixmanifest*]
+- [*Extension. valtmanifest*]
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -83,7 +83,7 @@ Aşağıdaki örnek, *Bir Extension.vsixmanifest* dosyasının ilgili bölümler
 </PackageManifest>
 ```
 
-- [*Uzantı.vsixlangpack*]
+- [*Extension. valtlangpack*]
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -103,6 +103,6 @@ Aşağıdaki örnek, *Bir Extension.vsixmanifest* dosyasının ilgili bölümler
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[VSIX Dil Paketi şema 2.0 referans](vsix-language-pack-schema-2-0-reference.md)|VSIX dil paketi,.vsix dağıtım dosyasının yerelleştirme bilgilerini açıklar.|
-|[VSIX paketinin anatomisi](../extensibility/anatomy-of-a-vsix-package.md)|VSix paketinin yapısını ve içeriğini açıklar.|
-|[Menü komutlarını yerelleştir](../extensibility/localizing-menu-commands.md)|Uzantıdaki diğer metin kaynaklarını nasıl yerelleştirini gösterir.|
+|[VSıX dil paketi şeması 2,0 başvurusu](vsix-language-pack-schema-2-0-reference.md)|VSıX dil paketi bir. vsix dağıtım dosyasının yerelleştirme bilgilerini tanımlar.|
+|[VSıX paketinin anatomumu](../extensibility/anatomy-of-a-vsix-package.md)|VSIX paketinin yapısını ve içeriğini açıklar.|
+|[Yerelleştirmek menü komutları](../extensibility/localizing-menu-commands.md)|Bir uzantıdaki diğer metin kaynaklarının nasıl yerelleştirileceğini gösterir.|

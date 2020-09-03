@@ -8,10 +8,10 @@ ms.technology: vs-ide-general
 ms.assetid: D07FA43B-9D18-4DFA-8343-CD538FAD84DB
 ms.topic: how-to
 ms.openlocfilehash: da9c8b3470fee406b577b136b6c55d76c9346e44
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85950656"
 ---
 # <a name="getting-started-building-games-with-unity-in-visual-studio-for-mac"></a>Mac için Visual Studio Unity ile Oyunlar oluşturmaya başlama
@@ -20,12 +20,12 @@ Unity, C# dilinde oyun geliştirmenize olanak sağlayan bir oyun altyapısıdır
 
 Unity için Mac için Visual Studio Araçları, Mac için Visual Studio yüklenen ücretsiz bir uzantıdır. Unity geliştiricilerinin, mükemmel IntelliSense desteği, hata ayıklama özellikleri ve daha fazlasını içeren Mac için Visual Studio üretkenlik özelliklerinden yararlanmasını sağlar.
 
-## <a name="objectives"></a>Amaçlar
+## <a name="objectives"></a>Hedefler
 
 > [!div class="checklist"]
 > * Mac için Visual Studio ile Unity geliştirme hakkında bilgi edinin
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Mac için Visual Studio ( [https://www.visualstudio.com/vs/mac](https://www.visualstudio.com/vs/visual-studio-mac) )
 - Unity 5.6.1 Personal Edition veya üzeri ( [https://store.unity.com](https://store.unity.com/) , çalıştırmak için bir Unity.com hesabı gerekir)

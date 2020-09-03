@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProviderDirect::GetMetaDataImport | Microsoft Docs
+title: 'Idebugsymbolproviderdirect:: Getmetadataımport | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 738169ece185bfc4b861b8f8220199dbf3c762b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155122"
 ---
 # <a name="idebugsymbolproviderdirectgetmetadataimport"></a>IDebugSymbolProviderDirect::GetMetaDataImport
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Meta veri alma bilgilerini alır.  
+Meta veri içeri aktarma bilgilerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetMetaDataImport (  
@@ -43,16 +43,16 @@ int GetMetaDataImport (
   
 #### <a name="parameters"></a>Parametreler  
  `guid`  
- [in] Modül için benzersiz tanımlayıcı.  
+ 'ndaki Modül için benzersiz tanımlayıcı.  
   
  `appID`  
- [in] Uygulama etki alanı için tanımlayıcı.  
+ 'ndaki Uygulama etki alanı için tanımlayıcı.  
   
  `ppImport`  
- [out] Bir meta veriler içeren bir nesne döndürür, bilgi alın.  
+ dışı Meta veri içeri aktarma bilgilerini içeren bir nesne döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

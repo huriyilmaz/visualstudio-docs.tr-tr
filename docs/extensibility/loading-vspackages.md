@@ -1,5 +1,5 @@
 ---
-title: VSPackages Yükleme | Microsoft Dokümanlar
+title: VSPackages yükleniyor | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,23 +12,23 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b1c221bf06ef3b7e37e2afc1856f3e54fe5ad95e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80702962"
 ---
-# <a name="load-vspackages"></a>Yük VSPackages
-VSPackages Visual Studio'ya yalnızca işlevsellikleri gerektiğinde yüklenir. Örneğin, Visual Studio bir proje fabrikasını veya VSPackage'ın uyguladığı bir hizmeti kullandığında bir VSPackage yüklenir. Bu özellik, performansı artırmak için mümkün olduğunda kullanılan gecikmeli yükleme olarak adlandırılır.
+# <a name="load-vspackages"></a>VSPackages yükleme
+VSPackages, yalnızca işlevleri gerekli olduğunda Visual Studio 'ya yüklenir. Örneğin, Visual Studio bir proje fabrikası veya VSPackage 'ın uyguladığı bir hizmet kullandığında VSPackage yüklenir. Bu özellik Gecikmeli yükleme olarak adlandırılır ve performansı artırmak için kullanılır.
 
 > [!NOTE]
-> Visual Studio, VSPackage'ı yüklemeden, bir VSPackage'ın sunduğu komutlar gibi belirli VSPackage bilgilerini belirleyebilir.
+> Visual Studio, VSPackage 'ı yüklemeden VSPackage tarafından sunulan komutlar gibi belirli VSPackage bilgilerini belirleyebilir.
 
- VSPackages belirli bir kullanıcı arabirimi (UI) bağlamında otomatik olarak ayarlanabilir, örneğin, bir çözüm açık olduğunda. Öznitelik <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> bu bağlamı ayarlar.
+ VSPackages, belirli bir kullanıcı arabirimi (UI) bağlamında, örneğin bir çözüm açık olduğunda, tekrar yükleme olarak ayarlanabilir. <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute>Özniteliği bu bağlamı ayarlar.
 
-### <a name="autoload-a-vspackage-in-a-specific-context"></a>Bir VSPackage'ı belirli bir bağlamda otomatik yükleme
+### <a name="autoload-a-vspackage-in-a-specific-context"></a>Belirli bir bağlamda VSPackage 'ı oto yükleme
 
-- VSPackage `ProvideAutoLoad` özniteliklerine öznitelik ekleyin:
+- `ProvideAutoLoad`Özniteliğini VSPackage özniteliklerine ekleyin:
 
     ```csharp
     [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\14.0")]
@@ -39,22 +39,22 @@ VSPackages Visual Studio'ya yalnızca işlevsellikleri gerektiğinde yüklenir. 
     {. . .}
     ```
 
-     UI bağlamlarının ve <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> GUID değerlerinin listesi için numaralandırılmış alanlarına bakın.
+     <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>Kullanıcı arabirimi bağlamlarının listesi ve BUNLARıN GUID değerleri için bkz. öğesinin numaralandırılmış alanları.
 
-- <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> Yöntemde bir kesme noktası ayarlayın.
+- Yönteminde bir kesme noktası ayarlayın <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> .
 
-- VSPackage'ı oluşturun ve hata ayıklamaya başlayın.
+- VSPackage oluşturun ve hata ayıklamayı başlatın.
 
-- Bir çözüm yükleyin veya bir çözüm oluşturun.
+- Bir çözüm yükleyin veya oluşturun.
 
-     VSPackage, kesme noktasında yükler ve durur.
+     VSPackage, kesme noktasında yüklenir ve duraklar.
 
-## <a name="force-a-vspackage-to-load"></a>VsPackage'ı yüklemeye zorla
- Bazı durumlarda bir VSPackage başka bir VSPackage yüklenmesi için zorlamak zorunda kalabilir. Örneğin, hafif bir VSPackage, CMDUIContext olarak kullanılamayan bir bağlamda daha büyük bir VSPackage yükleyebilir.
+## <a name="force-a-vspackage-to-load"></a>VSPackage yüklemesine zorla
+ Bazı koşullarda, bir VSPackage 'ın başka bir VSPackage 'ın yüklenmesine zorlamak gerekebilir. Örneğin, hafif VSPackage, CMDUIContext olarak kullanılamayan bir bağlamda daha büyük bir VSPackage yükleyebilir.
 
- Bir VSPackage'ı yüklemeye zorlamak için <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackage%2A> yöntemi kullanabilirsiniz.
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackage%2A>Bir VSPackage yüklemesine zorlamak için yöntemini kullanabilirsiniz.
 
-- Bu kodu, başka <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> bir VSPackage'ı yüklemeye zorlayan VSPackage yöntemine ekleyin:
+- Bu kodu <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> , başka bir VSPackage yüklemesine zorlayan VSPackage yöntemine ekleyin:
 
     ```csharp
     IVsShell shell = GetService(typeof(SVsShell)) as IVsShell;
@@ -67,9 +67,9 @@ VSPackages Visual Studio'ya yalnızca işlevsellikleri gerektiğinde yüklenir. 
 
     ```
 
-     VSPackage başharfe atıldığında, `PackageToBeLoaded` yüklemeye zorlanır.
+     VSPackage başlatıldığında `PackageToBeLoaded` yüklenmeye zorlanır.
 
-     VSPackage iletişimi için kuvvet yüklemesi kullanılmamalıdır. Kullanımı kullanın ve bunun yerine [hizmetleri sağlayın.](../extensibility/using-and-providing-services.md)
+     Zorla yükleme, VSPackage iletişimi için kullanılmamalıdır. [Kullanın ve bunun yerine hizmetleri sağlayın](../extensibility/using-and-providing-services.md) .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPackage’lar](../extensibility/internals/vspackages.md)

@@ -10,29 +10,29 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: cc13cffe8352d9fb57f5bb991c3af615eddb2a14
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68740051"
 ---
 # <a name="convert-switch-statement-to-switch-expression"></a>Switch deyimini switch ifadesine dönüştürme
 
-Bu yeniden düzenleme aşağıdakiler için geçerlidir:
+Bu yeniden düzenleme için geçerlidir:
 
 - C#
 
-**Ne:** Bir [anahtar deyimini](/dotnet/csharp/language-reference/keywords/switch) C# 8.0 [anahtar ifadesine](/dotnet/csharp/whats-new/csharp-8#switch-expressions)dönüştürün.
+**Ne:** [Switch deyimini](/dotnet/csharp/language-reference/keywords/switch) C# 8,0 [anahtar ifadesine](/dotnet/csharp/whats-new/csharp-8#switch-expressions)Dönüştür.
 
-**Ne zaman:** Bir `switch` deyimi bir `switch` ifadeye dönüştürmek istiyorsunuz ve bunun tersi de var. 
+**Ne zaman:** Bir deyimi ifadeye dönüştürmek istiyorsunuz, `switch` `switch` tersi de geçerlidir. 
 
-**Neden:** Yalnızca ifadeler kullanıyorsanız, bu yeniden düzenleme geleneksel `switch` ifadelerden kolay bir geçiş sağlar.
+**Neden:** Yalnızca ifadeler kullanıyorsanız, bu yeniden düzenleme geleneksel deyimlerden kolay bir geçişe izin vermez `switch` .
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. Proje dosyanızda, ifadeler yeni bir `switch` C# 8.0 özelliği olduğundan [dil sürümünü önizlemeye ayarlayın.](/dotnet/csharp/language-reference/configure-language-version#edit-the-project-file)
-2. İmlecinizi anahtar `switch` kelimeye yerleştirin ve **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
-3. **Geçiş ifadesini ifadeye dönüştür'ü**seçin.
+1. Proje dosyanızda, ifadeler yeni bir C# 8,0 özelliği olduğundan, [dil sürümünü önizleme olarak ayarlayın](/dotnet/csharp/language-reference/configure-language-version#edit-the-project-file) `switch` .
+2. İmlecinizi `switch` anahtar sözcüğe yerleştirip **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+3. **Switch deyimini Ifadeye Dönüştür**' ü seçin.
 
    ![Switch deyimini switch ifadesine dönüştürme](media/convert-switch-statement-to-switch-expression.png) 
 

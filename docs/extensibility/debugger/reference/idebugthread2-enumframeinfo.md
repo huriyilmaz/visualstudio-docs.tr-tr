@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::EnumFrameInfo | Microsoft Dokümanlar
+title: 'IDebugThread2:: EnumFrameInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 8bd3c6d46a577930cc7a2b87c85cd82a55f8cf66
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718853"
 ---
 # <a name="idebugthread2enumframeinfo"></a>IDebugThread2::EnumFrameInfo
-Bu iş parçacığı için yığın çerçevelerinin listesini alır.
+Bu iş parçacığının yığın çerçevelerinin bir listesini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT EnumFrameInfo ( 
@@ -45,19 +45,19 @@ int EnumFrameInfo ( 
 
 ## <a name="parameters"></a>Parametreler
 `dwFieldSpec`\
-[içinde] [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) yapılarının hangi alanlarının dolduruleceğini belirten [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) numaralandırmadan gelen bayrakların birleşimi. Işlev `FIF_FUNCNAME_FORMAT` adını tek bir dize halinde biçimlendirmek için bayrağı belirtin.
+'ndaki [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) Numaralandırmadaki, [frameInfo](../../../extensibility/debugger/reference/frameinfo.md) yapılarının hangi alanlarının doldurulacağını belirten bayrakların birleşimi. `FIF_FUNCNAME_FORMAT` İşlev adını tek bir dizeye biçimlendirmek için bayrak belirtin.
 
 `nRadix`\
-[içinde] Radix, sayısal bilgileri sayısal olarak biçimlendirmede kullanılır.
+'ndaki Numaralandırıcı içindeki sayısal bilgileri biçimlendirmede kullanılan Radix.
 
 `ppEnum`\
-[çıkış] Yığın çerçevesini açıklayan [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) yapılarının listesini içeren bir [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) nesnesi döndürür.
+dışı Yığın çerçevesini açıklayan [frameInfo](../../../extensibility/debugger/reference/frameinfo.md) yapılarının listesini Içeren bir [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- İş parçacığının çerçeveleri sırayla numaralandırılır ve geçerli çerçeve ilk sırada numaralandırılır ve en eski çerçeve en son numaralandırılır.
+ İş parçacığının çerçeveleri, ilk olarak numaralandırılan geçerli çerçeveye ve son numaralandırılan en eski çerçeveye göre sırayla numaralandırılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

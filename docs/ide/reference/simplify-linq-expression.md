@@ -1,5 +1,5 @@
 ---
-title: LINQ ifadesini Basitleştir
+title: LINQ ifadesini basitleştirme
 ms.date: 08/12/2020
 ms.topic: reference
 author: m-redding
@@ -10,13 +10,13 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 04485d6ce67c822fd0620bd63f3557851db6dbb9
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88251317"
 ---
-# <a name="simplify-linq-expression"></a>LINQ ifadesini Basitleştir
+# <a name="simplify-linq-expression"></a>LINQ ifadesini basitleştirme
 
 Bu yeniden düzenleme için geçerlidir:
 
@@ -34,7 +34,7 @@ Bu yeniden düzenleme için geçerlidir:
 2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 3. Bir **LINQ Ifadesini Basitleştir** seçeneğini belirleyin
 
-   ![Typeof 'ı NameOf öğesine Dönüştür](media/simplify-linq-expression.png)
+   ![typeof ifadesini nameof ifadesine dönüştürme](media/simplify-linq-expression.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerService::GetPropertyProxy | Microsoft Docs
+title: 'IEEVisualizerService:: GetPropertyProxy | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5d5fa9df1e0d0dea321f967a6d16971728ea2e94
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155096"
 ---
 # <a name="ieevisualizerservicegetpropertyproxy"></a>IEEVisualizerService::GetPropertyProxy
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu yöntem, özellik nesnesi için bir proxy döndürür.  
+Bu yöntem, bir özellik nesnesi için bir proxy döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetPropertyProxy(  
@@ -42,18 +42,18 @@ int GetPropertyProxy(
   
 #### <a name="parameters"></a>Parametreler  
  `dwID`  
- [in] Alınacak özelliği proxy kimliği.  
+ 'ndaki Alınacak Özellik proxy 'sinin KIMLIĞI.  
   
  `proxy`  
- [out] Uygulanan proxy istenen bir [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) arabirimi.  
+ dışı İstenen proxy bir [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) arabiriminde uygulandı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) istek için bu yöntem için tür görselleştiricileri desteğini bir parçası olarak geçirir.  
+ [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) , tür Görselleştiriciler desteğinin bir parçası olarak bu yönteme isteği geçirir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)   
+ [Ieevisualizerhizmeti](../../../extensibility/debugger/reference/ieevisualizerservice.md)   
  [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)   
  [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md)

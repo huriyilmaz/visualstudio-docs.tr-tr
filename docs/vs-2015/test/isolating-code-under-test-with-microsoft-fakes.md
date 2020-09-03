@@ -9,10 +9,10 @@ caps.latest.revision: 18
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3c272906aa402c124b98e6b9f5556d8c825ee963
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660473"
 ---
 # <a name="isolating-code-under-test-with-microsoft-fakes"></a>Microsoft Fakes ile Test Edilen Kodu Yalıtma
@@ -28,7 +28,7 @@ Microsoft Fakes, uygulamanın diğer bölümlerini *saplamalar* *veya parçalar*
 
   ![Fakes diğer bileşenleri değiştirir](../test/media/fakes-2.png "Fakes-2")
 
-  **Requirements**
+  **Gereksinimler**
 
 - Visual Studio Enterprise
 
@@ -43,7 +43,7 @@ Microsoft Fakes, uygulamanın diğer bölümlerini *saplamalar* *veya parçalar*
 
  **Statik yöntemler, korumalı türler.** Arayüzleri uygulamak için yalnızca saptamalar kullanabilirsiniz. Bu nedenle saptama türleri statik yöntemler, sanal olmayan yöntemler, korumalı sanal yöntemler, korumalı türlerdeki yöntemler gibi yöntemlerle kullanılamaz.
 
- **İç türler.** Hem saplamalar hem de parçalar, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> derleme özniteliği kullanılarak erişilebilir hale getirilen iç türlerle birlikte kullanılabilir.
+ **İç türler.** Hem saplamalar hem de parçalar, derleme özniteliği kullanılarak erişilebilir hale getirilen iç türlerle birlikte kullanılabilir <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> .
 
  **Özel yöntemler.** Dolgular, bir yöntem imzasındaki tüm türler görünür durumdaysa çağrıları özel yöntemlerle değiştirebilir. Saptamalar yalnızca görünür yöntemlerle değiştirilebilir.
 
@@ -51,7 +51,7 @@ Microsoft Fakes, uygulamanın diğer bölümlerini *saplamalar* *veya parçalar*
 
  Genel olarak saptama türlerini kod temelindeki bağımlılıkları ayırmak için kullanmanızı öneririz. Bunu bileşenleri arayüzlerin arkasına gizleyerek yapabilirsiniz. Dolgu türleri, test edilebilir API sağlamayan üçüncü taraf bileşenlerden ayırmak için kullanılabilir.
 
-## <a name="stubs"></a>Saplamalarla çalışmaya başlama
+## <a name="getting-started-with-stubs"></a><a name="stubs"></a> Saplamalarla çalışmaya başlama
  Daha ayrıntılı bir açıklama için, [birim testi için uygulamanızın parçalarını birbirinden yalıtmak üzere saplamaları kullanma](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md)konusuna bakın.
 
 1. **Arabirim Ekle**
@@ -141,14 +141,14 @@ Microsoft Fakes, uygulamanın diğer bölümlerini *saplamalar* *veya parçalar*
 
     ```
 
-     Burada Magic 'in özel parçası `StubIStockFeed` sınıftır. Başvurulan derlemedeki her arabirim için saptama sınıfı Microsoft Fakes mekanizması oluşturur. Saplama sınıfının adı, arabirimin adından türetilir, ön ek olarak "`Fakes.Stub`" ve parametre türü adları eklenir.
+     Burada Magic 'in özel parçası sınıftır `StubIStockFeed` . Başvurulan derlemedeki her arabirim için saptama sınıfı Microsoft Fakes mekanizması oluşturur. Saplama sınıfının adı, arabirim adından türetilir, `Fakes.Stub` ön ek olarak "" ve parametre türü adları eklenir.
 
      Saptamalar ayrıca olaylar ve genel yöntemlerle ilgili olarak özellik okuyucu ve ayarlayıcılar için oluşturulur. Daha fazla bilgi için, [birim testi için uygulamanızın parçalarını birbirinden yalıtmak üzere saplamalar kullanma](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md)konusuna bakın.
 
-## <a name="shims"></a>Dolgu ile çalışmaya başlama
+## <a name="getting-started-with-shims"></a><a name="shims"></a> Dolgu ile çalışmaya başlama
  (Daha ayrıntılı bir açıklama için bkz. [birim testi için uygulamanızı diğer derlemelerden yalıtmak için dolgu kullanma](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).)
 
- Bileşeninizin `DateTime.Now` çağrıları içerdiğini varsayalım:
+ Bileşeninizin şu çağrıları içerdiğini varsayalım `DateTime.Now` :
 
 ```csharp
 // Code under test:
@@ -159,13 +159,13 @@ Microsoft Fakes, uygulamanın diğer bölümlerini *saplamalar* *veya parçalar*
 
 ```
 
- Sınama sırasında, gerçek sürüm uygun şekilde her çağrıda farklı bir değer döndürdüğünden `Now` özelliğini dolgu yapmak istersiniz.
+ Sınama sırasında, `Now` gerçek sürüm uygun şekilde her çağrıda farklı bir değer döndürdüğünden, özelliği dolgu yapmak istersiniz.
 
  Dolgu verileri kullanmak için uygulama kodunu değiştirmeniz veya belirli bir biçimde yazmanız gerekmez.
 
 1. **Fakes derlemesi Ekle**
 
-    Çözüm Gezgini'nde birim testi projenizin başvurularını açın ve sahtesini oluşturmak istediğiniz yöntemi içeren derlemenin başvurusunu seçin. Bu örnekte, `DateTime` sınıfı **System. dll**' dir.  Visual Basic projesindeki başvuruları görmek için **tüm dosyaları göster**' i seçin.
+    Çözüm Gezgini'nde birim testi projenizin başvurularını açın ve sahtesini oluşturmak istediğiniz yöntemi içeren derlemenin başvurusunu seçin. Bu örnekte, `DateTime` sınıfı **System.dll**.  Visual Basic projesindeki başvuruları görmek için **tüm dosyaları göster**' i seçin.
 
     **Fakes derlemesi Ekle**' yi seçin.
 
@@ -230,9 +230,9 @@ Microsoft Fakes, uygulamanın diğer bölümlerini *saplamalar* *veya parçalar*
    End Class
    ```
 
-    Dolgu sınıfı adları, özgün tür adına `Fakes.Shim` önüne eklenerek yapılır. Parametre adları yöntem adına eklenir. (System. Fakes 'e herhangi bir derleme başvurusu eklemeniz gerekmez.)
+    Dolgu sınıfı adları `Fakes.Shim` orijinal tür adının önüne eklenerek yapılır. Parametre adları yöntem adına eklenir. (System. Fakes 'e herhangi bir derleme başvurusu eklemeniz gerekmez.)
 
-   Önceki örnek statik yöntem olarak bir dolgu kullanır. Bir örnek yöntemi için dolgu kullanmak üzere tür adı ve Yöntem adı arasında `AllInstances` yazın:
+   Önceki örnek statik yöntem olarak bir dolgu kullanır. Bir örnek yöntemi için dolgu kullanmak üzere `AllInstances` tür adı ve Yöntem adı arasına yazın:
 
 ```
 System.IO.Fakes.ShimFile.AllInstances.ReadToEnd = ...

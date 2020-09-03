@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolSearchEvent2::GetSymbolSearchInfo | Microsoft Dokümanlar
+title: 'IDebugSymbolSearchEvent2:: GetSymbolSearchInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: be498154a8141c61f114682893d0aaf8b841cf95
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718892"
 ---
 # <a name="idebugsymbolsearchevent2getsymbolsearchinfo"></a>IDebugSymbolSearchEvent2::GetSymbolSearchInfo
-Sembol yükleme işlemiyle ilgili sonuçları almak için olay işleyicisi tarafından çağrılır.
+Bir sembol yükleme işlemi hakkındaki sonuçları almak için bir olay işleyicisi tarafından çağırılır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetSymbolSearchInfo(
@@ -45,22 +45,22 @@ int GetSymbolSearchInfo(
 
 ## <a name="parameters"></a>Parametreler
 `pModule`\
-[çıkış] Sembollerin yüklendiği modülü temsil eden bir IDebugModule3 nesnesi.
+dışı Sembollerin yüklendiği modülü temsil eden bir IDebugModule3 nesnesi.
 
 `pbstrDebugMessage`\
-[içinde, dışarı] Modülden herhangi bir hata iletisi içeren bir dize döndürür. Hata yoksa, bu dize yalnızca modülün adını içerir, ancak hiçbir zaman boş olmaz.
+[in, out] Modülden herhangi bir hata iletisi içeren bir dize döndürür. Hata yoksa, bu dize yalnızca modülün adını içerir, ancak hiçbir şekilde boştur.
 
 > [!NOTE]
-> [C++] `pbstrDebugMessage` ile `NULL` serbest bırakılamaz `SysFreeString`ve serbest bırakılmalıdır.
+> [C++] `pbstrDebugMessage` `NULL` ile serbest bırakılmalıdır `SysFreeString` .
 
 `pdwModuleInfoFlags`\
-[çıkış] Herhangi bir sembollerin yüklenip yüklenmediğini gösteren [MODULE_INFO_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md) numaralandırmadan gelen bayrakların birleşimi.
+dışı [MODULE_INFO_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md) numaralandırmasından herhangi bir sembolün yüklenip yüklenmediğini gösteren bayrakların birleşimi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir işleyici, bir modül için hata ayıklama simgelerini yükleme girişiminde bulunulduktan sonra [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md) olayını aldığında, işleyici bu yükün sonuçlarını belirlemek için bu yöntemi arayabilir.
+ Bir işleyici, bir modül için hata ayıklama sembolleri yükleme denemesinden sonra [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md) olayını aldığında, işleyicinin bu yükün sonuçlarını belirlemesi için thismetodunu çağırabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)

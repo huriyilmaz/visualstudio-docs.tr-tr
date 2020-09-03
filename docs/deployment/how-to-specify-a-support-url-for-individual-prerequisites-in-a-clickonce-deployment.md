@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bf474e4926403a9475860bfdc620ee4a6860f8aa
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85381736"
 ---
 # <a name="how-to-specify-a-support-url-for-individual-prerequisites-in-a-clickonce-deployment"></a>Nasıl yapılır: bir ClickOnce dağıtımında tek Önkoşullar için destek URL 'SI belirtme
@@ -84,6 +84,6 @@ ms.locfileid: "85381736"
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Mage.exe (Bildirim Oluşturma ve Düzenleme Aracı)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)
 - [İzlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)
-- [\<compatibleFrameworks>dosyalarında](../deployment/compatibleframeworks-element-clickonce-deployment.md)
+- [\<compatibleFrameworks> dosyalarında](../deployment/compatibleframeworks-element-clickonce-deployment.md)
 - [ClickOnce ve Authenticode](../deployment/clickonce-and-authenticode.md)
 - [Uygulama dağıtımının önkoşulları](../deployment/application-deployment-prerequisites.md)

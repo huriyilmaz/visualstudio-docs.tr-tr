@@ -10,17 +10,17 @@ manager: unniravindranathan
 ms.prod: visual-studio-mac
 ms.topic: how-to
 ms.openlocfilehash: ab461327a0af5d072689e4a5cb357525b42018ba
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85950490"
 ---
 # <a name="publish-to-a-folder-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak bir klasöre yayımlama
 
 .NET Core konsolunu veya ASP.NET Core uygulamalarını bir klasöre yayımlamak için Yayımla aracını kullanabilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - .NET Core etkinken [Mac Için Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2019) yüklendi.
 - Bir .NET Core konsolu veya ASP.NET Core projesi. Zaten bir projeniz yoksa [Yeni bir tane oluşturabilirsiniz](/visualstudio/mac/create-new-projects?view=vsmac-2019).

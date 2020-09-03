@@ -1,5 +1,5 @@
 ---
-title: Dize Uzunluklarındaki Kısıtlamalar | Microsoft Dokümanlar
+title: Dize uzunlukları için kısıtlamalar | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,16 +11,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: df6e068ba612d5e8876e4fa01fbc0751759d5a80
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701486"
 ---
-# <a name="restrictions-on-string-lengths"></a>Dize uzunluklarındaki kısıtlamalar
-Kaynak Denetimi Eklentisi API' si, çeşitli işlevlerde kullanılan dizelerin uzunluklarını sınırlar.
+# <a name="restrictions-on-string-lengths"></a>Dize uzunlukları kısıtlamaları
+Kaynak denetimi eklentisi API 'SI, çeşitli işlevlerde kullanılan dizelerin uzunluklarının sınırlarını sınırlar.
 
-## <a name="string-length-values"></a>Dize uzunluk değerleri
+## <a name="string-length-values"></a>Dize uzunluğu değerleri
 
 |Sabit|Değer|
 |--------------|-----------|
@@ -30,7 +30,7 @@ Kaynak Denetimi Eklentisi API' si, çeşitli işlevlerde kullanılan dizelerin u
 |`SCC_PRJPATH_LEN`|300|
 
 > [!NOTE]
-> Uzunluk sonlandırmayı `null`içermez. "_LEN" yerine "_SIZE" ekine sahip diğer sabitler sonlandırma `null`için alan içerir.
+> Uzunluk Sonlandırıcı içermez `null` . "_LEN" yerine "_SIZE" sonekine sahip diğer sabitler, Sonlandırıcı için alan içerir `null` .
 
 |Sabit|Değer|
 |--------------|-----------|
@@ -40,4 +40,4 @@ Kaynak Denetimi Eklentisi API' si, çeşitli işlevlerde kullanılan dizelerin u
 |SCC_PRJPATH_SIZE|301|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak kontrol eklentileri](../extensibility/source-control-plug-ins.md)
+- [Kaynak denetimi eklentileri](../extensibility/source-control-plug-ins.md)

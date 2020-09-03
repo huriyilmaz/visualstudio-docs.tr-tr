@@ -1,5 +1,5 @@
 ---
-title: COM sunucusunda ve kapsayıcısında hata ayıklama | Microsoft Docs
+title: COM sunucusu ve kapsayıcı hata ayıklaması | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -23,39 +23,39 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 631b1d35a0878bfc362b03751f35909839c7da19
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161561"
 ---
 # <a name="com-server-and-container-debugging"></a>COM Sunucusunda ve Kapsayıcısında Hata Ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-COM uygulamaları programcının doğrudan denetimi dışında görevleri gerçekleştirin. DLL'ler arasındaki iletişim, kullanım nesneler üzerinde sayar ve beklenmeyen davranışlara burada karşılaşabileceğiniz alanları birkaçı Pano işlemlerdir. Bu durumda, ilk adımınız sorunun kaynağını izlemektir.  
+COM uygulamaları, programcının doğrudan denetimi dışında çeşitli görevler gerçekleştirir. Dll 'Ler, nesnelerde kullanım sayıları ve Pano işlemlerinde iletişim, beklenmeyen davranışlarla karşılaşabileceğiniz alanlardan yalnızca birkaçı. Bu durumda, ilk adımınız sorunun kaynağını izlemenizde olur.  
   
- Visual Studio hata ayıklayıcı üzerinden ve kapsayıcılar ve sunucular içine Adımlama destekler. Bu uzaktan yordam çağrısı (RPC) adım yeteneğini içerir.  
+ Visual Studio hata ayıklayıcı, kapsayıcılar ve sunucular üzerinde ve içinde adımlamayı destekler. Bu, uzak yordam çağrılarında (RPC) adım adım özelliği içerir.  
   
-## <a name="BKMK_COMServerandContainerintheSameSolution"></a> Aynı çözümdeki bir COM sunucusu ve hata ayıklama  
- COM sunucusunda ve aynı çözüm içinde iki proje kullanarak kapsayıcı ayıklayabilirsiniz. Her bir proje ve hata ayıklama uygun kesme noktaları ayarlayın. Kapsayıcı içine bir kesme noktasına denk gelir sunucunun bir çağrı yaptığında, kapsayıcı (diğer bir deyişle, hata ayıklama bitene kadar), sunucu kodu dönene kadar bekler.  
+## <a name="debugging-a-com-server-and-container-in-the-same-solution"></a><a name="BKMK_COMServerandContainerintheSameSolution"></a> Aynı çözümde bir COM sunucusunda ve kapsayıcıda hata ayıklama  
+ Aynı çözüm içinde iki proje kullanarak bir COM sunucusunda ve kapsayıcıda hata ayıklaması yapabilirsiniz. Her projede uygun kesme noktaları ayarlayın ve hata ayıklayın. Kapsayıcı, bir kesme noktasına isabet eden sunucuya bir çağrı yaptığında, kapsayıcı sunucu kodu dönene kadar bekler (yani, hata ayıklamayı bitirmeden).  
   
- Bir COM kapsayıcısında hata ayıklama standart bir programın hatalarının ayıklanmasına benzer. Olaya (örneğin, veri üzerinde kapsayıcı uygulaması sürükleyerek), bir geri çağırma oluşturur hata ayıklaması yaparken bir farktır. Bu durumda, bir kesme noktası içindeki geri arama işlevi ayarlamanız gerekir.  
+ COM kapsayıcısının hata ayıklaması, Standart programda hata ayıklamaya benzer. Bir fark, geri çağırma üreten bir olayda hata ayıkladığınızda (örneğin, kapsayıcı uygulama üzerinde veri sürükleme). Bu durumda, geri arama işlevinde bir kesme noktası ayarlamanız gerekir.  
   
-## <a name="BKMK_ServerApplicationWithoutContainerInformation"></a> Kapsayıcı bilgileri olmadan bir sunucu uygulamasında hata ayıklama  
- Sahip değil ya da kapsayıcı uygulamanızı hata ayıklama bilgilerini kullanmak istiyor musunuz, sunucu uygulamasının hata ayıklamayı başlatma işlemi üç adımdan şöyledir:  
+## <a name="debugging-a-server-application-without-container-information"></a><a name="BKMK_ServerApplicationWithoutContainerInformation"></a> Kapsayıcı bilgileri olmadan sunucu uygulamasında hata ayıklama  
+ Kapsayıcı uygulamanız için hata ayıklama bilgilerini kullanmak veya istemiyorsanız, sunucu uygulamasında hata ayıklamaya başlamak üç adımlı bir işlemdir:  
   
-1. Sunucunun normal bir uygulama olarak hatalarını ayıklamaya başlayın.  
+1. Normal bir uygulama olarak sunucuda hata ayıklamayı başlatın.  
   
-2. Kesme noktaları, istediğiniz şekilde ayarlayın.  
+2. Kesme noktalarını istediğiniz gibi ayarlayın.  
   
 3. Kapsayıcı uygulamasını başlatın.  
   
-## <a name="BKMK_DebuggingaServerandDomainIsolationSDIApplication"></a> Bir sunucu veya etki alanı yalıtımı (SDI) uygulama hata ayıklama  
- Bir SDI sunucu uygulaması hata ayıklaması yaptığınız varsa, belirtmeniz gerekir `/Embedding` veya `/Automation` içinde **komut satırı bağımsız değişkenleri** özelliğinde *proje* özellik sayfaları iletişim kutusu için C/C++, C#, veya Visual Basic projeleri.  
+## <a name="debugging-a-server-and-domain-isolation-sdi-application"></a><a name="BKMK_DebuggingaServerandDomainIsolationSDIApplication"></a> Sunucu ve etki alanı yalıtımı (SDI) uygulamasında hata ayıklama  
+ Bir SDI Sunucu uygulamasında hata ayıklaması yapıyorsanız, `/Embedding` `/Automation` C/C++, C# veya Visual Basic projeleri için *Proje* Özellik sayfaları iletişim kutusundaki **komut satırı bağımsız değişkenleri** özelliğini belirtmeniz gerekir.  
   
- Bu komut satırı bağımsız değişkenleri ile onu başlatan bir kapsayıcıdan artırmadığı hata ayıklayıcı sunucu uygulaması başlatabilirsiniz. Program Yöneticisi'nden veya Dosya Yöneticisi kapsayıcıyı başlangıç hata ayıklayıcıda çalışmaya server örneğini kullanmak için kapsayıcısını neden olur.  
+ Bu komut satırı bağımsız değişkenleriyle, hata ayıklayıcı sunucu uygulamasını bir kapsayıcıdan başlatılmış gibi başlatabilir. Kapsayıcının Program Yöneticisi 'nden veya dosya yöneticisinden başlatılması, kapsayıcının hata ayıklayıcıda başlatılan sunucu örneğini kullanmasına neden olur.  
   
- Erişim için *proje* özellik sayfaları iletişim kutusu, Çözüm Gezgini'nde projenize sağ tıklayın ve kısayol menüsünden Özellikler'i seçin. Komut satırı bağımsız değişkenleri özelliğini bulmak için yapılandırma özellikleri kategoriyi genişletmek ve hata ayıklama Sayfası'nı tıklatın.  
+ *Proje* Özellik sayfaları iletişim kutusuna erişmek için Çözüm Gezgini ' de projenize sağ tıklayın ve ardından kısayol menüsünden Özellikler ' i seçin. Komut satırı bağımsız değişkenleri özelliğini bulmak için yapılandırma özellikleri kategorisini genişletin ve hata ayıklama sayfasına tıklayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [COM ve ActiveX Hata Ayıklaması](../debugger/com-and-activex-debugging.md)

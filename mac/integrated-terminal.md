@@ -6,10 +6,10 @@ ms.author: jomatthi
 ms.date: 05/14/2020
 ms.assetid: EFD53CE9-8174-4FE4-8863-2984D22FD921
 ms.openlocfilehash: d362938e8f0075591ea5d4ed8461d11395680b5c
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84185205"
 ---
 # <a name="integrated-terminal"></a>Tümleşik Terminal
@@ -26,7 +26,7 @@ Varsayılan olarak, Terminal başlatıldığında şu şekilde olur:
 - Çalışma dizinini geçerli çözümün yolu olarak ayarlayın.
 - Varsayılan sistem kabuğunu yükleyin.
 
-## <a name="search"></a>Arama
+## <a name="search"></a>Arayın
 Terminal penceresinin içeriğinde **arama > bul...** menüsünü kullanarak arama yapabilirsiniz.
 
 ![* Mac için Visual Studio tümleşik terminalde arama deneyimi *](media/integrated-terminal-search.png)

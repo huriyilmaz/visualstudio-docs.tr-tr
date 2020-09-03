@@ -1,5 +1,5 @@
 ---
-title: Nesneleri | Microsoft Docs
+title: Nesneler | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,30 +11,30 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 903c9fef18990be0aee78309fcdfadb80a95f384
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194160"
 ---
 # <a name="objects"></a>Nesneler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Aşağıdaki başvuru bilgileri, temel metin düzenleyici örneği oluşturmak için kullanılan nesneleri açıklanır.  
+Aşağıdaki başvuru bilgileri, çekirdek metin düzenleyicisinin bir örneğini oluşturmak için kullanılan nesneleri açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [VSCodeWindow Nesnesi](../extensibility/vscodewindow-object.md)  
- Kod pencere nesnesi, bir veya daha fazla metin görünümleri içine bir özel belge penceresi açıklar.  
+ Bir veya daha fazla metin görünümünü kapsayan özelleşmiş bir belge penceresi olan kod penceresi nesnesini açıklar.  
   
  [VSCodeWindowManager Nesnesi](../extensibility/vscodewindowmanager-object.md)  
- Dil hizmeti tarafından uygulanan ve Kenarlıklar yönetmekten sorumlu olan kod penceresinde manager nesnesi tanımlar.  
+ Dil hizmeti tarafından uygulanan ve donatılanların yönetiminden sorumlu kod penceresi Yöneticisi nesnesini açıklar.  
   
  [VSTextBuffer Nesnesi](../extensibility/vstextbuffer-object.md)  
- Unicode metin dosyası için veri akışını temsil eden metin arabelleği nesneyi tanımlar.  
+ Bir dosyanın verileri olan Unicode metin akışını temsil eden metin arabelleği nesnesini açıklar.  
   
  [VSTextView Nesnesi](../extensibility/vstextview-object.md)  
- Metin arabelleğinin Unicode metni görüntüleyin ve düzenleyin kullanıcıların olanak sağlayan bir pencere metin görünümünü açıklar.  
+ Kullanıcıların metin arabelleğinin Unicode metnini görüntülemesine ve düzenlemesine izin veren bir pencere olan metin görünümünü açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Visual Studio SDK Başvurusu](../extensibility/visual-studio-sdk-reference.md)  
- Başvuru konuları bir listesini sunar.
+ Başvuru konularının bir listesini gösterir.

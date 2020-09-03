@@ -9,10 +9,10 @@ caps.latest.revision: 26
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ce4c6ceec9489abcd3573c126aefe98a268187c3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660438"
 ---
 # <a name="test-windows-uwp-and-81-store-apps-with-coded-ui-tests"></a>Kodlanmış UI Testleriyle Windows UWP ve 8.1 Mağaza Uygulamalarını Test Etme
@@ -24,7 +24,7 @@ UWP uygulamaları ve XAML tabanlı mağaza 8,1 uygulamaları için UI testleri o
 
 1. XAML tabanlı Windows Mağazası uygulamanız için kodlanmış UI testlerini çalıştırmak istiyorsanız, [her bir denetimi tanımlayan benzersiz bir Otomasyon özelliği ayarlamanız](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md)gerekir.
 
-     **Araçlar** menüsünde **Seçenekler** ' in üzerine gelin ve ardından **metin Düzenleyicisi**, sonra **xaml**ve son ' u seçin.
+     **Araçlar** menüsünde **Seçenekler** ' in üzerine gelin ve ardından **metin Düzenleyicisi**, sonra **xaml**ve son ' u seçin **Miscellaneous**.
 
      Etkileşimli öğeleri oluşturma sırasında otomatik olarak adlandırmak için onay kutusunu seçin.
 
@@ -32,7 +32,7 @@ UWP uygulamaları ve XAML tabanlı mağaza 8,1 uygulamaları için UI testleri o
 
 2. Visual C# veya Visual Basic şablonu kullanarak boş bir XAML tabanlı Windows Mağazası uygulaması için yeni bir proje oluşturun.
 
-     ![Windows Mağazası boş uygulama &#40;xaml oluşturma&#41;](../test/media/cuit-windowsstoreapp-newproject-blankstoreapp.png "CUIT_WindowsStoreApp_NewProject_BlankStoreApp")
+     ![&#40;XAML&#41;Windows Mağazası boş uygulaması oluşturma ](../test/media/cuit-windowsstoreapp-newproject-blankstoreapp.png "CUIT_WindowsStoreApp_NewProject_BlankStoreApp")
 
 3. Çözüm Gezgini, MainPage. xaml ' yi açın. Araç kutusundan bir düğme denetimini ve bir TextBox denetimini tasarım yüzeyine sürükleyin.
 
@@ -66,7 +66,7 @@ UWP uygulamaları ve XAML tabanlı mağaza 8,1 uygulamaları için UI testleri o
 
 1. Windows Mağazası uygulaması için yeni bir kodlanmış UI test projesi oluşturun.
 
-    ![Yeni kodlanmış UI Tet Project &#40;Windows Mağazası uygulamaları&#41;](../test/media/cuit-windowsstore-newproject.png "CUIT_WindowsStore_NewProject")
+    ![Windows Mağazası uygulamaları &#40;yeni kodlanmış UI Tet Project&#41;](../test/media/cuit-windowsstore-newproject.png "CUIT_WindowsStore_NewProject")
 
 2. İnce artı aracını kullanarak UI haritasını düzenlemeyi seçin.
 
@@ -94,19 +94,19 @@ UWP uygulamaları ve XAML tabanlı mağaza 8,1 uygulamaları için UI testleri o
 
 8. Onay ekleyin. Değerin doğru olduğunu doğrulamak için testte kullanılacaktır.
 
-    ![İnce&#45;artı ile test kutusu seçin ve onaylama ekleyin](../test/media/cuit-windowsstoreapp-textbox-addassertion.png "CUIT_WindowsStoreApp_Textbox_AddAssertion")
+    ![Çapraz&#45;saç ve onaylama ekleme ile test kutusu seçin](../test/media/cuit-windowsstoreapp-textbox-addassertion.png "CUIT_WindowsStoreApp_Textbox_AddAssertion")
 
 9. Onaylama için kod ekleyin ve oluşturun.
 
      ![TextBox onaylama için kod oluştur](../test/media/cuit-windowsstoreapp-textbox-generate-assertion.png "CUIT_WindowsStoreApp_Textbox_Generate_Assertion")
 
-10. **Visual C#**
+10. **Visual C #**
 
      Çözüm Gezgini, onay yöntemi ve denetimler için eklenen kodu görüntülemek üzere UIMap.Designer.cs dosyasını açın.
 
      **Visual Basic**
 
-     Çözüm Gezgini, CodedUITest1. vb dosyasını açın ve ardından CodedUITestMethod1 () test yöntemi kodunda, `Me.UIMap.AssertMethod1()` otomatik olarak eklenen onaylama yöntemine yapılan çağrıya sağ tıklayın ve **Tanıma Git**' i seçin. Bu işlem, kod düzenleyicisinde UIMap. Designer. vb dosyasını açar, böylece onay yöntemi ve denetimler için eklenen kodu görüntüleyin.
+     Çözüm Gezgini, CodedUITest1. vb dosyasını açın ve ardından CodedUITestMethod1 () test yöntemi kodunda, otomatik olarak eklenen onaylama yöntemine yapılan çağrıya sağ tıklayın `Me.UIMap.AssertMethod1()` ve **Tanıma Git**' i seçin. Bu işlem, kod düzenleyicisinde UIMap. Designer. vb dosyasını açar, böylece onay yöntemi ve denetimler için eklenen kodu görüntüleyin.
 
     > [!WARNING]
     > UIMap.designer.cs veya UIMap. Designer. vb dosyasını doğrudan değiştirmeyin. Bunu yaparsanız, dosya üzerinde yapılan değişikliklerin test her oluşturulduğunda üzerine yazılır.
@@ -292,7 +292,7 @@ UWP uygulamaları ve XAML tabanlı mağaza 8,1 uygulamaları için UI testleri o
 
      ![Test Gezgini 'nde geçilen test ekranları](../test/media/cuit-windowsstorapp-passedtest.png "CUIT_WindowsStorApp_PassedTest")
 
-## <a name="q--a"></a>soru-cevap &
+## <a name="q--a"></a>Soru-Cevap
 
 - **S: kodlanmış UI testi iletişim kutusu için kod üret içinde, kodlanmış UI testimi kaydetme seçeneğini neden görmüyorum?**
 
@@ -319,7 +319,7 @@ UWP uygulamaları ve XAML tabanlı mağaza 8,1 uygulamaları için UI testleri o
 
 - **S: UIMap. Designer dosyasındaki kodu neden değiştiremiyorum?**
 
-   Y: UıMAP kodlu UI test oluşturucuyu kullanarak her kod oluşturduğunuzda UIMapDesigner.cs dosyasında yaptığınız tüm kod değişikliklerinin üzerine yazılır. Kayıtlı bir yöntemi değiştirmeniz gerekiyorsa, yöntemi UIMap.cs dosyasına kopyalayıp yeniden adlandırmanız gerekir. UIMap.cs dosyası, UIMapDesigner.cs dosyasındaki yöntemleri ve özellikleri geçersiz kılmak için kullanılabilir. Kodlanmış UITest.cs dosyasındaki orijinal yönteme başvuruyu kaldırıp yeniden adlandırılan yöntem adıyla değiştirmelisiniz.
+   **A**Y: UıMAP kodlu UI test oluşturucuyu kullanarak her kod oluşturduğunuzda UIMapDesigner.cs dosyasında yaptığınız tüm kod değişikliklerinin üzerine yazılır. Kayıtlı bir yöntemi değiştirmeniz gerekiyorsa, yöntemi UIMap.cs dosyasına kopyalayıp yeniden adlandırmanız gerekir. UIMap.cs dosyası, UIMapDesigner.cs dosyasındaki yöntemleri ve özellikleri geçersiz kılmak için kullanılabilir. Kodlanmış UITest.cs dosyasındaki orijinal yönteme başvuruyu kaldırıp yeniden adlandırılan yöntem adıyla değiştirmelisiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [UI otomasyonunu kullanarak kodunuzu test etmek](../test/use-ui-automation-to-test-your-code.md) Için [Windows Mağazası denetimleri Için benzersiz bir Otomasyon özelliği ayarlayın](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md)
