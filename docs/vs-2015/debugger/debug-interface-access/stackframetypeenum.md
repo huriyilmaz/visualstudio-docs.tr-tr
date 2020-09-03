@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 655911bac1efbafe1838e24e2056282f9036479b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179195"
 ---
 # <a name="stackframetypeenum"></a>StackFrameTypeEnum
@@ -25,7 +25,7 @@ ms.locfileid: "68179195"
 
 Yığın çerçeve türünü belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 enum StackFrameTypeEnum {  
@@ -40,29 +40,29 @@ enum StackFrameTypeEnum {
   
 ## <a name="elements"></a>Öğeler  
  `FrameTypeFPO`  
- Çerçeve işaretçisini; atlanmış FPO bilgisi yok.  
+ Çerçeve işaretçisi atlandı; Mi bilgileri kullanılabilir.  
   
  `FrameTypeTrap`  
- Çekirdek yakalama çerçevesi.  
+ Çekirdek Tuzak Çerçevesi.  
   
  `FrameTypeTSS`  
- Çekirdek yakalama çerçevesi.  
+ Çekirdek Tuzak Çerçevesi.  
   
  `FrameTypeStandard`  
  Standart EBP yığın çerçevesi.  
   
  `FrameTypeFrameData`  
- Çerçeve işaretçisini; atlanmış Çerçeve veri bilgileri kullanılabilir.  
+ Çerçeve işaretçisi atlandı; Çerçeve veri bilgileri kullanılabilir.  
   
  `FrameTypeUnknown`  
- Çerçeve herhangi bir hata ayıklama bilgisi yok.  
+ Herhangi bir hata ayıklama bilgisi olmayan çerçeve.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu numaralandırma değerleri için yapılan bir çağrı tarafından döndürülen [Idiastackframe::get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md) yöntemi.  
+ Bu Numaralandırmadaki değerler, [IDiaStackFrame:: get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md) metoduna yapılan bir çağrı tarafından döndürülür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: cvconst.h  
+ Üst bilgi: cvconst. h  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri ve yapıları](../../debugger/debug-interface-access/enumerations-and-structures.md)   
+ [Numaralandırmalar ve yapılar](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaStackFrame::get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md)

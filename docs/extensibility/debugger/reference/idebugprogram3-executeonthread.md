@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram3::ExecuteOnThread | Microsoft Dokümanlar
+title: 'IDebugProgram3:: ExecuteOnThread | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +14,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 201c08352bc5b616298349c52197529ef3f1a7d2
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80722654"
 ---
 # <a name="idebugprogram3executeonthread"></a>IDebugProgram3::ExecuteOnThread
-Hata ayıklama programını yürütür. İş parçacığı, kullanıcının programı yürüdürken görüntülediği iş parçacığı hakkında hata ayıklama bilgileri vermek için döndürülür.
+Hata ayıklayıcı programını yürütür. İş parçacığı, Kullanıcı tarafından program yürütürken hangi iş parçacığının görüntülemekte olduğunu hata ayıklayıcı bilgilerini vermek üzere döndürülür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT ExecuteOnThread(
@@ -38,22 +38,22 @@ int ExecuteOnThread(
 
 ## <a name="parameters"></a>Parametreler
 `pThread`\
-[içinde] Bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
+'ndaki Bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Hata ayıklamanın durdurulduktan sonra yürütmeye devam edilebebileceği üç farklı yol vardır:
+ Hata ayıklayıcının çalışmayı durdurduktan sonra sürdürüleceği üç farklı yol vardır:
 
-- Yürütme: Önceki herhangi bir adımı iptal edin ve bir sonraki kesme noktasına kadar çalıştırın ve benzeri.
+- Yürüt: önceki adımları Iptal edin ve sonraki kesme noktasına kadar çalıştırın.
 
-- Adım: Herhangi bir eski adımı iptal edin ve yeni adım tamamlanana kadar çalıştırın.
+- Adım: herhangi bir eski adımı Iptal edin ve yeni adım tamamlanana kadar çalıştırın.
 
-- Devam et: Yeniden çalıştırın ve eski bir adımı etkin bırakın.
+- Devam: tekrar çalıştırın ve eski bir adımı etkin bırakın.
 
-  Hangi adımı `ExecuteOnThread` iptal edin karar verirken geçirilen iş parçacığı yararlıdır. İş parçacığı bilmiyorsanız, çalıştırın tüm adımları iptal eder. Iş parçacığı bilgisi ile, sadece etkin iş parçacığı üzerinde adım iptal etmek gerekir.
+  Öğesine geçirilen iş parçacığı, `ExecuteOnThread` hangi adımın iptal edildiğini saptarken yararlı olur. İş parçacığını bilinmediğinizde yürütme çalıştırıldığında tüm adımlar iptal edilir. İş parçacığı hakkında bilgi sahibi olarak yalnızca etkin iş parçacığında adımı iptal etmeniz gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yürütmek](../../../extensibility/debugger/reference/idebugprogram2-execute.md)
+- [Yürütme](../../../extensibility/debugger/reference/idebugprogram2-execute.md)
 - [IDebugProgram3](../../../extensibility/debugger/reference/idebugprogram3.md)

@@ -22,10 +22,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 959bd36995ca4086bf64020816b00aee6f777fbe
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662081"
 ---
 # <a name="properties-window"></a>Özellikler Penceresi
@@ -51,17 +51,17 @@ Düzenleyicilerde ve tasarımcılarda bulunan seçili nesnelerin tasarım zaman�
  Olaylar bir nesne için olayları görüntüler.
 
 > [!NOTE]
-> Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca bir form veya denetim Tasarımcısı [!INCLUDE[csprcs](../../includes/csprcs-md.md)] projesi bağlamında etkin olduğunda kullanılabilir. XAML dosyaları düzenlenirken, olaylar Özellikler penceresinin ayrı bir sekmesinde görünür.
+> Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca bir form veya denetim Tasarımcısı bir proje bağlamında etkin olduğunda kullanılabilir [!INCLUDE[csprcs](../../includes/csprcs-md.md)] . XAML dosyaları düzenlenirken, olaylar Özellikler penceresinin ayrı bir sekmesinde görünür.
 
  İletiler tüm Windows iletilerini listeler. Seçili sınıf için belirtilen işlemler için belirtilen işleyici işlevlerini eklemenize veya silmesine izin verir.
 
 > [!NOTE]
-> Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca **sınıf görünümü** bir [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] projesi bağlamında etkin pencere olduğunda kullanılabilir.
+> Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca **sınıf görünümü** bir proje bağlamında etkin pencere olduğunda kullanılabilir [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] .
 
  Geçersiz kılmalar seçili sınıf için tüm sanal işlevleri listeler ve geçersiz kılma işlevlerini eklemenize veya kaldırmanıza olanak sağlar.
 
 > [!NOTE]
-> Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca **sınıf görünümü** bir [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] projesi bağlamında etkin pencere olduğunda kullanılabilir.
+> Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca **sınıf görünümü** bir proje bağlamında etkin pencere olduğunda kullanılabilir [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] .
 
  Açıklama bölmesi Özellik türünü ve özelliğin kısa bir açıklamasını gösterir. Özelliğin açıklamasını, kısayol menüsünde Açıklama komutunu kullanarak ve üzerinde açabilirsiniz.
 

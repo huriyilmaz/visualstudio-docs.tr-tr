@@ -23,10 +23,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 668e95c340348eeb1fa509622aa44d99b65b6efc
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72431811"
 ---
 # <a name="debug-multithreaded-applications-in-visual-studio"></a>Visual Studio 'da çok iş parçacıklı uygulamalarda hata ayıklama
@@ -42,7 +42,7 @@ Visual Studio, çok iş parçacıklı uygulamalarda hata ayıklamada kullanmak i
 
 - İş parçacıkları için, hata ayıklama iş parçacıklarının birincil araçları **Iş parçacıkları** penceresidir, kaynak pencerelerin iş parçacığı Işaretçileri, **Paralel Yığınlar** penceresi, **paralel Izleme** penceresi ve **hata ayıklama konumu** araç çubuğudur. **Iş parçacıkları** penceresi ve **hata ayıklama konumu** araç çubuğu hakkında bilgi edinmek Için bkz. [izlenecek yol: Iş parçacıkları penceresini kullanarak hata ayıklama](../debugger/how-to-use-the-threads-window.md) **Paralel yığınları** ve **paralel izleme** pencerelerini nasıl kullanacağınızı öğrenmek için bkz. çok [iş parçacıklı bir uygulamada hata ayıklamaya başlama](../debugger/get-started-debugging-multithreaded-apps.md). Her iki konuda de iş parçacığı işaretlerinin nasıl kullanılacağı gösterilmektedir.
 
-- [Görev paralel kitaplığı (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) veya [Eşzamanlılık çalışma zamanı](/cpp/parallel/concrt/concurrency-runtime/)kullanan kod için, hata ayıklama Için birincil Araçlar **Paralel Yığınlar** penceresi, **paralel izleme** penceresi ve ayrıca, **görev** penceresi de desteklenir JavaScript. Başlamak için bkz. [Izlenecek yol: paralel uygulamada hata ayıklama](../debugger/walkthrough-debugging-a-parallel-application.md) ve [izlenecek yol: bir C++ amp uygulamasında hata ayıklama](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application).
+- [Görev paralel kitaplığı (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) veya [Eşzamanlılık çalışma zamanı](/cpp/parallel/concrt/concurrency-runtime/)kullanan kod için, hata ayıklama Için birincil Araçlar **Paralel Yığınlar** penceresi, **paralel izleme** penceresi ve ayrıca JavaScript 'i de destekleyen **Görevler** penceresidir. Başlamak için bkz. [Izlenecek yol: paralel uygulamada hata ayıklama](../debugger/walkthrough-debugging-a-parallel-application.md) ve [izlenecek yol: C++ amp uygulamasında hata ayıklama](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application).
 
 - GPU 'daki iş parçacıkları hata ayıklaması için, birincil araç **GPU Iş parçacıkları** penceresidir. Bkz. [nasıl yapılır: GPU Iş parçacıkları penceresini kullanma](../debugger/how-to-use-the-gpu-threads-window.md).
 
@@ -86,22 +86,22 @@ Hata ayıklama sırasında özel dikkat sağlamak istediğiniz iş parçacıklar
 
 Yüksek performanslı kümede çalışan bir uygulamada hata ayıklama teknikleri.
 
- [Yerel kod iş parçacıklarında hata ayıklama ipuçları](../debugger/tips-for-debugging-threads-in-native-code.md)
+ [Yerel koddaki iş parçacıkları hata ayıklama ipuçları](../debugger/tips-for-debugging-threads-in-native-code.md)
 
 Yerel iş parçacıkları için hata ayıklama yararlı olabilecek basit teknikler.
 
- [Nasıl yapılır: Yerel kodda iş parçacığı adı ayarlama](../debugger/how-to-set-a-thread-name-in-native-code.md)
+ [Nasıl yapılır: yerel kodda iş parçacığı adı ayarlama](../debugger/how-to-set-a-thread-name-in-native-code.md)
 
 İş parçacığına, **Iş parçacıkları** penceresinde görüntülediğiniz bir ad verin.
 
- [Nasıl yapılır: Yönetilen kodda iş parçacığı adı ayarlama](../debugger/how-to-set-a-thread-name-in-managed-code.md)
+ [Nasıl yapılır: yönetilen kodda iş parçacığı adı ayarlama](../debugger/how-to-set-a-thread-name-in-managed-code.md)
 
 İş parçacığına, **Iş parçacıkları** penceresinde görüntülediğiniz bir ad verin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kesme noktalarınıullanma](../debugger/using-breakpoints.md)
-- [İş parçacığı oluşturma](/dotnet/standard/threading/index)
+- [Kesme noktalarını kullanma](../debugger/using-breakpoints.md)
+- [İş Parçacığı Oluşturma](/dotnet/standard/threading/index)
 - [Bileşenlerde çoklu iş parçacığı](https://msdn.microsoft.com/Library/2fc31e68-fb71-4544-b654-0ce720478779)
 - [Eski kod için çoklu iş parçacığı desteği](/cpp/parallel/multithreading-support-for-older-code-visual-cpp)
 - [Hata ayıklama iş parçacıkları ve süreçler](../debugger/debug-threads-and-processes.md)

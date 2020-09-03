@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: b3b8a67d1b01d7f3a3ada7b391423676b9294e8d
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85286329"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>İzlenecek yol: C 'de Görselleştirici Yazma\#
@@ -56,7 +56,7 @@ Görselleştirici oluşturmak için aşağıdaki görevleri izleyin.
 2. Adı Class1.cs, DebuggerSide.cs gibi anlamlı bir şekilde değiştirin.
 
    > [!NOTE]
-   > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]DebuggerSide.cs içindeki sınıf bildirimini yeni dosya adıyla eşleşecek şekilde otomatik olarak değiştirir.
+   > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] DebuggerSide.cs içindeki sınıf bildirimini yeni dosya adıyla eşleşecek şekilde otomatik olarak değiştirir.
 
 3. **Çözüm Gezgini**' de, **Başvurular** ' a sağ tıklayın ve kısayol menüsünde **Başvuru Ekle** ' yi seçin.
 
@@ -64,7 +64,7 @@ Görselleştirici oluşturmak için aşağıdaki görevleri izleyin.
 
     DLL 'yi, Visual Studio 'nun yükleme dizininin * \<Visual Studio Install Directory> \Common7\IDE\PublicAssemblies* alt dizininde bulabilirsiniz.
 
-5. **Tamam**'a tıklayın.
+5. **Tamam**’a tıklayın.
 
 6. DebuggerSide.cs içinde aşağıdaki `using` yönergelere ekleyin:
 
@@ -88,7 +88,7 @@ Görselleştirici oluşturmak için aşağıdaki görevleri izleyin.
    public class DebuggerSide : DialogDebuggerVisualizer
    ```
 
-   `DialogDebuggerVisualizer`geçersiz kılmanız gereken bir soyut yönteme ( `Show` ) sahiptir.
+   `DialogDebuggerVisualizer` geçersiz kılmanız gereken bir soyut yönteme ( `Show` ) sahiptir.
 
 #### <a name="to-override-the-dialogdebuggervisualizershow-method"></a>DialogDebuggerVisualizer. Show metodunu geçersiz kılmak için
 
@@ -110,7 +110,7 @@ Görselleştirici oluşturmak için aşağıdaki görevleri izleyin.
 
     DLL 'yi *C:\Windows\Microsoft.NET\Framework\v4.0.30319*içinde bulabilirsiniz.
 
-3. **Tamam**'a tıklayın.
+3. **Tamam**’a tıklayın.
 
 4. DebuggerSide.cs içinde aşağıdaki `using` yönergelere ekleyin:
 
@@ -189,13 +189,13 @@ Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ay�
 
 2. **Başvuru Ekle** iletişim kutusunda, sekme sekmesine **gidip** Microsoft.VisualStudio.DebuggerVisualizers.DLL öğesini seçin.
 
-3. **Tamam**'a tıklayın.
+3. **Tamam**’a tıklayın.
 
 4. **MyTestConsole** ' a sağ tıklayın ve **Başvuru Ekle** ' yi seçin.
 
 5. **Başvuru Ekle** iletişim kutusunda, **Projeler** sekmesine tıklayın ve ardından myfirstgörselleştiricisi ' e tıklayın.
 
-6. **Tamam**'a tıklayın.
+6. **Tamam**’a tıklayın.
 
    Şimdi, test bandı sona ermesini sağlayacak kodu ekleyeceksiniz.
 
@@ -206,7 +206,7 @@ Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ay�
 2. Program.cs ' dan adı, TestConsole.cs gibi daha anlamlı bir değere düzenleyin.
 
     > [!NOTE]
-    > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]TestConsole.cs içindeki sınıf bildirimini yeni dosya adıyla eşleşecek şekilde otomatik olarak değiştirir.
+    > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] TestConsole.cs içindeki sınıf bildirimini yeni dosya adıyla eşleşecek şekilde otomatik olarak değiştirir.
 
 3. TestConsole.cs ' de aşağıdaki kodu `using` yönergelere ekleyin:
 
@@ -253,7 +253,7 @@ Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ay�
 
 4. **Ad** kutusuna, sınıf kitaplığı Için MySecondVisualizer gibi uygun bir ad yazın.
 
-5. **Tamam**'a tıklayın.
+5. **Tamam**’a tıklayın.
 
    Şimdi, buna bir Görselleştirici öğesi ekleyebilirsiniz:
 

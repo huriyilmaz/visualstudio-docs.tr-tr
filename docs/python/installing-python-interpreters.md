@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: fb1c657789e232307672d494710f330758780a67
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540731"
 ---
 # <a name="install-python-interpreters"></a>Python yorumlayıcılarını yükleme
@@ -40,7 +40,7 @@ Visual Studio yüklü bir ortamı algılamazsa, bkz. [var olan bir ortamı el il
 
 Visual Studio, [**Python ortamları**](managing-python-environments-in-visual-studio.md#the-python-environments-window) penceresinde bilinen tüm ortamları gösterir ve mevcut yorumlayıcılara yönelik güncelleştirmeleri otomatik olarak algılar.
 
-| Sından | Açıklama |
+| Sından | Description |
 | --- | --- |
 | [CPython](https://www.python.org/) | 32-bit ve 64 bit sürümlerde kullanılabilen "yerel" ve en yaygın olarak kullanılan yorumlayıcı (32-bit önerilir). En son dil özelliklerini, en yüksek Python paketi uyumluluğunu, tam hata ayıklama desteğini ve [IPython](https://ipython.org/)ile birlikte çalışabilirliği içerir. Ayrıca bkz: [Python 2 veya Python 3 mi kullanmalıyım?](https://wiki.python.org/moin/Python2orPython3). Visual Studio 2015 ve önceki sürümleri Python 3.6 + ' yı desteklemediğine ve **Desteklenmeyen Python sürümü 3,6**gibi hatalara olanak sunmadığını unutmayın. Bunun yerine Python 3,5 veya önceki bir sürümünü kullanın. |
 | [IronPython](https://github.com/IronLanguages/ironpython2) | 32-bit ve 64 bit sürümlerde kullanılabilen, .NET API 'Leri, standart Python hata ayıklama (C++ karışık mod hata ayıklama) ve karışık IronPython/C# hata ayıklama sağlayan bir Python .NET uygulamasıdır. Ancak IronPython, sanal ortamları desteklemez. |

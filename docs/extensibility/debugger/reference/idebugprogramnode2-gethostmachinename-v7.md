@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::GetHostMachineName_V7 | Microsoft Dokümanlar
+title: 'IDebugProgramNode2:: GetHostMachineName_V7 | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,18 +16,18 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a8c328c83ebe52f842b1990debe07aed3fd764c1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80722091"
 ---
 # <a name="idebugprogramnode2gethostmachinename_v7"></a>IDebugProgramNode2::GetHostMachineName_V7
 
 > [!Note]
-> Kaldırıl -mış. KULLANMAYıN.
+> Kullanım dışı. KULLANMAYıN.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetHostMachineName_V7 (
@@ -44,16 +44,16 @@ int GetHostMachineName_V7 (
 ## <a name="parameters"></a>Parametreler
 
 `pbstrHostMachineName`\
-[çıkış] Programın çalıştırıldığı makinenin adını verir.
+dışı Programın çalıştırıldığı makinenin adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
 
-Bir uygulama her `E_NOTIMPL`zaman dönmelidir.
+Bir uygulama her zaman döndürmelidir `E_NOTIMPL` .
 
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> Visual Studio 2005 itibariyle, bu yöntem artık kullanılmaz ve her zaman geri dönmelidir. `E_NOTIMPL`
+> Visual Studio 2005 itibariyle, bu yöntem artık kullanılmamaktadır ve her zaman döndürmelidir `E_NOTIMPL` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

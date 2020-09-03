@@ -13,45 +13,45 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 640d4586d851be6f4335ed346e0e155acb4ae902
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68181200"
 ---
 # <a name="menu-commands"></a>Menü Komutları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Spy ++ menülerde kullanılabilir komutları bu bölümdeki Yardım konuları listeler.  
+Bu bölümdeki yardım konuları, Spy + + menülerinde kullanılabilen komutları listeler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Spy Menü Komutları](../debugger/spy-menu-commands.md)  
- Her komut kullanılabilir açıklar **Spy** menüsü.  
+ **Spy** menüsünde kullanılabilen her bir komutu açıklar.  
   
  [Ağaç Menü Komutları](../debugger/tree-menu-commands.md)  
- Her komut kullanılabilir açıklar **ağaç** menüsü.  
+ **Ağaç** menüsünde kullanılabilen her bir komutu açıklar.  
   
  [Arama Menü Komutları](../debugger/search-menu-commands.md)  
- Her komut kullanılabilir açıklar **arama** menüsü.  
+ **Arama** menüsünde kullanılabilen her bir komutu açıklar.  
   
  [Görünüm Menü Komutları](../debugger/view-menu-commands.md)  
- Her komut kullanılabilir açıklar **görünümü** menüsü.  
+ **Görünüm** menüsünde kullanılabilen her bir komutu açıklar.  
   
  [İletiler Menü Komutları](../debugger/messages-menu-commands.md)  
- Her komut kullanılabilir açıklar **iletileri** menüsü.  
+ **İletiler** menüsünde kullanılabilen her bir komutu açıklar.  
   
  [Pencere Menü Komutları](../debugger/window-menu-commands.md)  
- Her komut kullanılabilir açıklar **penceresi** menüsü.  
+ **Pencere** menüsünde kullanılabilen her bir komutu açıklar.  
   
  [Yardım Menü Komutları](../debugger/help-menu-commands.md)  
- Her komut kullanılabilir açıklar **yardımcı** menüsü.  
+ **Yardım** menüsünden kullanılabilen her bir komutu açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Spy++ kullanma](../debugger/using-spy-increment.md)  
- Spy ++ araç tanıtır ve nasıl kullanılacağını açıklar.  
+ [Spy++ Kullanma](../debugger/using-spy-increment.md)  
+ Spy + + aracını tanıtır ve nasıl kullanılabileceğini açıklar.  
   
  [Spy++ Görünümleri](../debugger/spy-increment-views.md)  
- Spy ++ ağaç görünümlerini windows, iletileri, süreçleri ve iş parçacıkları açıklar.  
+ Windows, ileti, işlem ve iş parçacıklarının Spy + + ağaç görünümlerini açıklar.  
   
  [Spy++ Başvurusu](../debugger/spy-increment-reference.md)  
- Bu bölüm içerir ve her Spy ++ iletişim kutusu tanımlayan bölümler.
+ Bu bölümü ve her Spy + + iletişim kutusunu açıklayan bölümleri içerir.

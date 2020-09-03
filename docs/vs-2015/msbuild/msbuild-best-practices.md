@@ -1,5 +1,5 @@
 ---
-title: MSBuild en iyi yöntemler | Microsoft Docs
+title: MSBuild En Iyi yöntemleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -13,18 +13,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e597b10913ad495193545ab304b3b324d8f66b41
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68181123"
 ---
 # <a name="msbuild-best-practices"></a>MSBuild En İyi Yöntemleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-MSBuild komut dosyaları yazmak için aşağıdaki en iyi yöntemleri öneririz:  
+MSBuild betikleri yazmak için aşağıdaki en iyi yöntemleri öneririz:  
   
-- Varsayılan özellik değerleri, kullanarak en iyi şekilde işlenir `Condition` özniteliği ve komut satırında bildirme varsayılan değerini geçersiz kılınabilir bir özellik tarafından. Örneğin, kullanın  
+- Varsayılan özellik değerleri `Condition` , varsayılan değeri komut satırında geçersiz kılınabilen bir özellik bildirerek değil, özniteliği kullanılarak en iyi şekilde işlenir. Örneğin,  
   
      `<MyProperty Condition="$(MyProperty)" == ''>`  
   
@@ -32,7 +32,7 @@ MSBuild komut dosyaları yazmak için aşağıdaki en iyi yöntemleri öneririz:
   
      `</MyProperty>`  
   
-- Öğe seçtiğinizde joker karakterler kaçının. Bunun yerine, dosyaları açıkça belirtin. Bu, eklediğinizde veya dosyaları silme oluşabilecek hatalar izlemenizi kolaylaştırır.  
+- Öğeleri seçtiğinizde Joker karakterlerden kaçının. Bunun yerine, dosyaları açıkça belirtin. Bu, dosya ekleme veya silme sırasında oluşabilecek hataların izlenmesini kolaylaştırır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş Kavramlar](../msbuild/msbuild-advanced-concepts.md)
+ [Gelişmiş kavramlar](../msbuild/msbuild-advanced-concepts.md)

@@ -14,54 +14,54 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: eebcf2c6796723e51c3aefdb12575aa89779429f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75593869"
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings (devenv.exe)
 
-Visual Studio varsayılan ayarlarını geri yükler ve Visual Studio IDE'yi otomatik olarak başlatın. Bu anahtar, ayarları isteğe bağlı olarak belirli bir ayarlar dosyasına sıfırlar.
+Visual Studio varsayılan ayarlarını geri yükler ve Visual Studio IDE 'yi otomatik olarak başlatır. Bu anahtar isteğe bağlı olarak ayarları belirtilen ayarlar dosyasına sıfırlar.
 
-Varsayılan ayarlar Visual Studio ilk başlatıldığında seçilen profilden gelir.
+Varsayılan ayarlar, Visual Studio ilk kez başlatıldığında seçili olan profilden gelir.
 
 > [!TIP]
-> Tümleşik geliştirme ortamını (IDE) kullanarak ayarları sıfırlamayı öğrenmek [için, ayarları sıfırla'ya](../environment-settings.md#reset-settings)bakın.
+> Tümleşik geliştirme ortamı (IDE) kullanarak ayarları sıfırlama hakkında bilgi edinmek için bkz. [ayarları sıfırlama](../environment-settings.md#reset-settings).
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```shell
 devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
 - *SettingsFile*
 
-  İsteğe bağlı. Visual Studio'ya uygulanacak ayarlar dosyasının tam yolu ve adı.
+  İsteğe bağlı. Visual Studio 'ya uygulanacak ayarlar dosyasının tam yolu ve adı.
 
-- *VarsayılanKoleksiyonSpecifier*
+- *Defaultcollectionbelirleyicisi*
 
-  İsteğe bağlı. Geri yüklenir varsayılan bir ayar koleksiyonunu temsil eden bir belirtim. Tabloda listelenen varsayılan koleksiyon belirtecilerbirini seçin.
+  İsteğe bağlı. Geri yüklenecek varsayılan ayar koleksiyonunu temsil eden bir tanımlayıcı. Tabloda listelenen varsayılan koleksiyon belirticilerden birini seçin.
 
-  | Varsayılan koleksiyon adı | Koleksiyon belirtimi |
+  | Varsayılan koleksiyon adı | Koleksiyon Belirleyicisi |
   | --- | --- |
   | **Genel** | `General` |
-  | **Javascript** | `JavaScript` |
+  | **JavaScript** | `JavaScript` |
   | **Visual Basic** | `VB` |
-  | **Görsel C #** | `CSharp` |
+  | **Visual C #** | `CSharp` |
   | **Visual C++** | `VC` |
-  | **Web Geliştirme** | `Web` |
-  | **Web Geliştirme (Yalnızca Kod)** | `WebCode` |
+  | ** Web Geliştirme** | `Web` |
+  | **Web geliştirme (yalnızca kod)** | `WebCode` |
 
 ## <a name="remarks"></a>Açıklamalar
 
-*SettingsFile* belirtilmemişse, IDE varolan ayarları kullanarak açılır.
+*SettingsFile* BELIRTILMEMIŞSE, IDE var olan ayarları kullanarak açılır.
 
 ## <a name="example"></a>Örnek
 
-İlk örnek, dosyada `MySettings.vssettings`depolanan ayarları uygular.
+İlk örnek dosyada depolanan ayarları uygular `MySettings.vssettings` .
 
 İkinci örnek, Visual C# varsayılan profilini geri yükler.
 
@@ -74,5 +74,5 @@ devenv /resetsettings CSharp
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Ortam ayarları](../environment-settings.md)
-- [Visual Studio IDE'yi kişiselleştirin](../../ide/personalizing-the-visual-studio-ide.md)
+- [Visual Studio IDE 'yi kişiselleştirme](../../ide/personalizing-the-visual-studio-ide.md)
 - [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md)

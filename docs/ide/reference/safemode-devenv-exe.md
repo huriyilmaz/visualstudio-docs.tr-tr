@@ -13,17 +13,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f180a45b274ec3042b7e150a43b5e8681fafcfed
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75593596"
 ---
 # <a name="safemode-devenvexe"></a>/SafeMode (devenv.exe)
 
-Visual Studio'yu güvenli modda başlatArak yalnızca varsayılan ortamı ve hizmetleri yükler.
+Visual Studio 'Yu güvenli modda başlatır, yalnızca varsayılan ortam ve Hizmetleri yükleyerek.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```shell
 devenv /SafeMode
@@ -31,11 +31,11 @@ devenv /SafeMode
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu anahtar, Visual Studio başladığında tüm üçüncü taraf VSPackages'ın yüklenmesine engel olarak kararlı yürütmesağlar.
+Bu anahtar, Visual Studio başlatıldığında tüm üçüncü taraf VSPackages 'nin yüklenmesini engeller ve kararlı yürütmeye izin verir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, Visual Studio'yu güvenli modda başlatır.
+Aşağıdaki örnekte, Visual Studio güvenli modda başlatılır.
 
 ```shell
 devenv /safemode

@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9977ea604af65c288bde49dcf0f44eeb1e241b6b
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85463913"
 ---
 # <a name="idiasymbolget_farreturn"></a>IDiaSymbol::get_farReturn
@@ -33,7 +33,7 @@ HRESULT get_farReturn(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-'ndaki `TRUE`İşlev bir en son döndürme kullanıyorsa, aksi takdirde, döndürür `FALSE` .
+'ndaki `TRUE` İşlev bir en son döndürme kullanıyorsa, aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
@@ -43,7 +43,7 @@ HRESULT get_farReturn(
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Açıklama|
+|Gereksinim|Description|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|

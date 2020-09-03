@@ -23,10 +23,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 06428a633aec41489a8a77655d6ea9442ffffaa0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540094"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Visual Studio'da verilere WPF denetimleri bağlama
@@ -34,7 +34,7 @@ ms.locfileid: "85540094"
 
 Veri [!INCLUDE[TLA#tla_titlewinclient](../includes/tlasharptla-titlewinclient-md.md)] **kaynakları** penceresini kullanarak veriye göre bağlantılı denetimler oluşturabilirsiniz. İlk olarak, **veri kaynakları** penceresine bir veri kaynağı ekleyin. Ardından, öğeleri **veri kaynakları** penceresinden**WPF tasarımcısına**sürükleyin.
 
-## <a name="add-a-data-source-to-the-data-sources-window"></a><a name="adding"></a>Veri Kaynakları penceresine veri kaynağı ekleme
+## <a name="add-a-data-source-to-the-data-sources-window"></a><a name="adding"></a> Veri Kaynakları penceresine veri kaynağı ekleme
  Veriye dayalı denetimler oluşturabilmeniz için önce **veri kaynakları** penceresine bir veri kaynağı eklemeniz gerekir.
 
 #### <a name="to-add-a-data-source-to-the-data-sources-window"></a>Veri Kaynakları penceresine veri kaynağı eklemek için
@@ -53,7 +53,7 @@ Veri [!INCLUDE[TLA#tla_titlewinclient](../includes/tlasharptla-titlewinclient-md
 
     - [Tasarımcıdaki verileri varolan denetimlere bağlama](#existing).
 
-## <a name="create-a-control-that-is-bound-to-a-single-field-of-data"></a><a name="simple"></a>Tek bir veri alanına bağlanan bir denetim oluşturma
+## <a name="create-a-control-that-is-bound-to-a-single-field-of-data"></a><a name="simple"></a> Tek bir veri alanına bağlanan bir denetim oluşturma
  Veri **kaynakları** penceresine bir veri kaynağı ekledikten sonra, veya gibi tek bir veri alanını görüntüleyen yeni bir veri bağlantılı denetim oluşturabilirsiniz <xref:System.Windows.Controls.ComboBox> <xref:System.Windows.Controls.TextBox> .
 
 #### <a name="to-create-a-control-that-is-bound-to-a-single-field-of-data"></a>Tek bir veri alanına bağlanan bir denetim oluşturmak için
@@ -66,9 +66,9 @@ Veri [!INCLUDE[TLA#tla_titlewinclient](../includes/tlasharptla-titlewinclient-md
 
 3. Öğeyi tasarımcıda geçerli bir kapsayıcıya sürükleyin. Geçerli kapsayıcılar hakkında daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Yeni veri bağlantılı denetimi ve kapsayıcıda uygun bir şekilde <xref:System.Windows.Controls.Label> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Ayrıca, [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] denetimi verilere bağlamak için ve kodu oluşturur. Daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Yeni veri bağlantılı denetimi ve kapsayıcıda uygun bir şekilde <xref:System.Windows.Controls.Label> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Ayrıca, [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] denetimi verilere bağlamak için ve kodu oluşturur. Daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
-## <a name="create-a-control-that-is-bound-to-multiple-fields-of-data"></a><a name="complex"></a>Birden çok veri alanına bağlanan bir denetim oluşturma
+## <a name="create-a-control-that-is-bound-to-multiple-fields-of-data"></a><a name="complex"></a> Birden çok veri alanına bağlanan bir denetim oluşturma
  Veri **kaynakları** penceresine bir veri kaynağı ekledikten sonra, veya gibi birden çok veri alanını görüntüleyen yeni bir veri bağlantılı denetim oluşturabilirsiniz <xref:System.Windows.Controls.DataGrid> <xref:System.Windows.Controls.ListView> .
 
 #### <a name="to-create-a-control-that-is-bound-to-multiple-fields-of-data"></a>Birden çok veri alanına bağlanan bir denetim oluşturmak için
@@ -84,9 +84,9 @@ Veri [!INCLUDE[TLA#tla_titlewinclient](../includes/tlasharptla-titlewinclient-md
 
 3. Öğeyi tasarımcıda geçerli bir kapsayıcıya sürükleyin (örneğin,) <xref:System.Windows.Controls.Grid> . Geçerli kapsayıcılar hakkında daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]kapsayıcıda veri bağlantılı yeni denetimi oluşturur. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Ayrıca, [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] denetimi verilere bağlamak için ve kodu oluşturur. Daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kapsayıcıda veri bağlantılı yeni denetimi oluşturur. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Ayrıca, [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] denetimi verilere bağlamak için ve kodu oluşturur. Daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
-## <a name="create-a-set-of-controls-that-are-bound-to-multiple-fields-of-data"></a><a name="details"></a>Birden çok veri alanına bağlanan bir denetim kümesi oluşturma
+## <a name="create-a-set-of-controls-that-are-bound-to-multiple-fields-of-data"></a><a name="details"></a> Birden çok veri alanına bağlanan bir denetim kümesi oluşturma
  Veri **kaynakları** penceresine bir veri kaynağı ekledikten sonra bir veri tablosu veya nesnesini bir denetim kümesine bağlayabilirsiniz. Tablo veya nesne içindeki her sütun veya özellik için farklı bir denetim oluşturulur.
 
 #### <a name="to-create-a-set-of-controls-that-are-bound-to-multiple-fields-of-data"></a>Birden çok veri alanına bağlanan bir denetim kümesi oluşturmak için
@@ -100,9 +100,9 @@ Veri [!INCLUDE[TLA#tla_titlewinclient](../includes/tlasharptla-titlewinclient-md
 
 3. Öğeyi tasarımcıda geçerli bir kapsayıcıya sürükleyin (örneğin,) <xref:System.Windows.Controls.Grid> . Geçerli kapsayıcılar hakkında daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]kapsayıcıda yeni veri bağlantılı denetimleri oluşturur. Her denetim farklı bir sütuna veya özelliğe bağlanır ve her denetim, uygun şekilde adlandırılmış bir denetimle birlikte bulunur <xref:System.Windows.Controls.Label> . [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Ayrıca, [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] denetimleri verilere bağlamak için ve kodu oluşturur. Daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kapsayıcıda yeni veri bağlantılı denetimleri oluşturur. Her denetim farklı bir sütuna veya özelliğe bağlanır ve her denetim, uygun şekilde adlandırılmış bir denetimle birlikte bulunur <xref:System.Windows.Controls.Label> . [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Ayrıca, [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] denetimleri verilere bağlamak için ve kodu oluşturur. Daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
-## <a name="binddata-to-existing-controls-in-the-designer"></a><a name="existing"></a>Tasarımcıda varolan denetimlere yönelik binddata
+## <a name="binddata-to-existing-controls-in-the-designer"></a><a name="existing"></a> Tasarımcıda varolan denetimlere yönelik binddata
  Veri **kaynakları** penceresine bir veri kaynağı ekledikten sonra, Tasarımcıda varolan bir denetime veri bağlama ekleyebilirsiniz.
 
 #### <a name="to-bind-data-to-an-existing-control-in-the-designer"></a>Tasarımcıda varolan bir denetime veri bağlamak için

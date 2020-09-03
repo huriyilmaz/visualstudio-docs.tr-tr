@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: beed26b3f5556216c55e2c32c2c100642d112db5
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85464214"
 ---
 # <a name="idiasymbolget_basesymbolid"></a>IDiaSymbol::get_baseSymbolId
@@ -30,7 +30,7 @@ HRESULT get_baseSymbolId(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `DWORD`İşaretçisinin temel aldığı sembol kimliğini tutan bir işaretçisi.
+dışı `DWORD` İşaretçisinin temel aldığı sembol kimliğini tutan bir işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.

@@ -9,10 +9,10 @@ ms.topic: how-to
 ms.date: 01/27/2020
 ms.author: ghogen
 ms.openlocfilehash: 43bd06fba795c09bfa341ce7b61a3ced0fe15214
-ms.sourcegitcommit: 510a928153470e2f96ef28b808f1d038506cce0c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/17/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86454169"
 ---
 # <a name="deploy-an-aspnet-core-container-to-azure-app-service-using-visual-studio"></a>Visual Studio kullanarak Azure App Service ASP.NET Core kapsayıcısını dağıtma

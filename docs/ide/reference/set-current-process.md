@@ -12,28 +12,28 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a3440c66d79fef3eac3744681870c9ce1ed0e97b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75593557"
 ---
 # <a name="set-current-process"></a>Geçerli Süreci Ayarla
-Belirtilen işlemi hata ayıklamadaki etkin işlem olarak ayarlar.
+Belirtilen işlemi hata ayıklayıcıda etkin işlem olarak ayarlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cmd
 Debug.SetCurrentProcess index
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 `index`
 
-Gereklidir. Sürecin dizini.
+Gereklidir. İşlemin dizini.
 
 ## <a name="remarks"></a>Açıklamalar
-Hata ayıklama sırasında birden çok işleme ekleyebilirsiniz, ancak herhangi bir zamanda dublajda yalnızca bir işlem etkindir. Etkin işlemi `SetCurrentProcess` ayarlamak için komutu kullanabilirsiniz.
+Hata ayıklarken birden çok işleme iliştirebilirsiniz, ancak belirli bir zamanda Dubber içinde yalnızca bir işlem etkin olur. `SetCurrentProcess`Etkin işlemi ayarlamak için komutunu kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
@@ -43,6 +43,6 @@ Hata ayıklama sırasında birden çok işleme ekleyebilirsiniz, ancak herhangi 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
-- [Komut Penceresi](../../ide/reference/command-window.md)
+- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Komut penceresi](../../ide/reference/command-window.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

@@ -10,19 +10,19 @@ author: steved0x
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 84f74b4718a7f976b386197a79692256ab49caa4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659130"
 ---
-# <a name="how-to-use-search-in-the-workflow-designer"></a>Nasıl yapılır: İş Akışı Tasarımcısı arama kullanma
+# <a name="how-to-use-search-in-the-workflow-designer"></a>Nasıl yapılır: İş Akışı Tasarımcısında Aramayı kullanma
 Daha büyük, daha karmaşık iş akışları oluşturmayı kolaylaştırmak için arama İş Akışı Tasarımcısı öğeleri anahtar sözcüğe göre bulmak için kullanılabilir. Tasarımcının değiştirme 'yi desteklemediğine unutmayın. Arama, tasarımcıda aşağıdakileri bulur:
 
-## <a name="quick-find"></a>Hızlı bul
+## <a name="quick-find"></a>Hızlı Bul
  Hızlı bul, tasarımcıda aşağıdakileri bulur:
 
-- @No__t_0 nesnelerinin özellikleri, <xref:System.Activities.Statements.FlowNode> nesneleri, <xref:System.Activities.Statements.State> nesneleri, geçişleri ve diğer özel akış denetimi öğeleri.
+- <xref:System.Activities.Activity>Nesnelerin, <xref:System.Activities.Statements.FlowNode> nesnelerin, <xref:System.Activities.Statements.State> nesnelerin, geçişlerin ve diğer özel akış denetimi öğelerinin özellikleri.
 
 - Değişkenler
 
@@ -49,4 +49,4 @@ Daha büyük, daha karmaşık iş akışları oluşturmayı kolaylaştırmak iç
 
 2. **Aranan metin kutusuna** arama öğesini girin ve **Tümünü Bul** ' a tıklayın.
 
-3. Bulma sonucu [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]**sonucu bul** görünümünde gösterilir. Bir sonuç öğesine çift tıklamak, iş akışı tasarımcısında eşleşmeyi içeren etkinliğe gidecektir.
+3. Bulma sonucu [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] **bul sonucu** görünümünde gösterilir. Bir sonuç öğesine çift tıklamak, iş akışı tasarımcısında eşleşmeyi içeren etkinliğe gidecektir.

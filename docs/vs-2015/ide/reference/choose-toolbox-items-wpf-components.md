@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5c7967635d8e5d64907587fcd1a9b4d84a31d569
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660925"
 ---
 # <a name="choose-toolbox-items-wpf-components"></a>Araç Kutusu Öğelerini, WPF Bileşenlerini Seçme
@@ -56,13 +56,13 @@ ms.locfileid: "72660925"
  **Dil** Seçili WPF denetimini içeren derlemenin yerelleştirilmiş dilini gösterir.
 
 ## <a name="limitations"></a>Sınırlamalar
- Araç kutusuna özel denetim veya <xref:System.Windows.Controls.UserControl> eklemek aşağıdaki sınırlamalara sahiptir.
+ Özel bir denetim veya <xref:System.Windows.Controls.UserControl> araç kutusu eklemek aşağıdaki sınırlamalara sahiptir.
 
 - Yalnızca geçerli proje dışında tanımlanan özel denetimler için geçerlidir.
 
 - Çözüm yapılandırmasını hata ayıklamadan Yayınla veya yayından hata ayıklama olarak değiştirdiğinizde doğru şekilde güncelleştirmez. Bunun nedeni, başvurunun bir proje başvurusu olmaması, ancak bunun yerine diskteki derleme içindir. Denetim, geçerli çözümün parçasıysa, hata ayıklamadan yayın olarak değiştirdiğinizde, projeniz denetimin hata ayıklama sürümüne başvurmaya devam eder.
 
-  Ayrıca, tasarım zamanı meta verileri özel denetime uygulanırsa ve bu meta veriler [ToolboxBrowsableAttribute](/previous-versions/visualstudio/visual-studio-2010/bb547991(v=vs.100)) `false` olarak ayarlandığını belirtiyorsa, Denetim araç kutusunda görünmez.
+  Ayrıca, tasarım zamanı meta verileri özel denetime uygulanırsa ve bu meta veriler [ToolboxBrowsableAttribute](/previous-versions/visualstudio/visual-studio-2010/bb547991(v=vs.100)) ' nin olarak ayarlandığını belirtiyorsa `false` , Denetim araç kutusunda görünmez.
 
   Denetimlerinizin ad alanını ve derlemesini eşleyerek doğrudan XAML görünümünde denetimlerine başvurabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: XAML 'de ad alanı Içeri aktarma](https://msdn.microsoft.com/6cda7c7a-369c-47dd-9c2d-13a35dcf737c).
 

@@ -12,20 +12,20 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6f7bc701c4a7009d402c778356a290ce4e129bb3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658966"
 ---
 # <a name="keyboard-shortcuts-in-the-workflow-designer"></a>İş Akışı Tasarımcısında Klavye Kısayolları
-@No__t_0 tüm temel işlevlerine klavye tarafından erişilebilir.
+Uygulamasının tüm temel işlevlerine [!INCLUDE[wfd1](../includes/wfd1-md.md)] klavye tarafından erişilebilir.
 
 ## <a name="navigating-the-workflow-designer-using-the-keyboard"></a>Klavyeyi kullanarak İş Akışı Tasarımcısı gezinme
- @No__t_0 içinde, genel kısayollar ve hata ayıklama kısayolları [!INCLUDE[wfd2](../includes/wfd2-md.md)] için geçerlidir. Ayrıca, bazı [!INCLUDE[wfd2](../includes/wfd2-md.md)] belirli klavye kısayolları oluşturulmuştur. @No__t_0, tüm klavye kısayolları yeniden eşlenir. Ancak, yeniden barındırılan bir uygulamada, bu klavye kısayolları sabit olarak kodlanmıştır.
+ İçinde [!INCLUDE[vs2010](../includes/vs2010-md.md)] , genel kısayollar ve hata ayıklama kısayolları için geçerlidir [!INCLUDE[wfd2](../includes/wfd2-md.md)] . Ayrıca, bazı [!INCLUDE[wfd2](../includes/wfd2-md.md)] belirli klavye kısayolları oluşturulmuştur. [!INCLUDE[vs2010](../includes/vs2010-md.md)]' De, tüm klavye kısayolları yeniden eşlenir. Ancak, yeniden barındırılan bir uygulamada, bu klavye kısayolları sabit olarak kodlanmıştır.
 
 ### <a name="workflow-designer-keyboard-shortcuts"></a>Klavye kısayollarını İş Akışı Tasarımcısı
- Aşağıdaki tabloda [!INCLUDE[wfd2](../includes/wfd2-md.md)] komutlarına atanan varsayılan klavye kısayolları özetlenmektedir.
+ Aşağıdaki tabloda, komutlara atanan varsayılan klavye kısayolları özetlenmektedir [!INCLUDE[wfd2](../includes/wfd2-md.md)] .
 
 |Kısayol|Amaç|
 |--------------|-------------|
@@ -44,7 +44,7 @@ ms.locfileid: "72658966"
 |CTRL + ALT + F6|Klavye odağını geçerli kullanıcı arabirimi alanından dizideki bir sonraki alana kaydırır. Sıra aşağıdaki gibidir:<br /><br /> 1. içerik haritası gezinti çubuğu.<br />2. tasarımcı yüzeyi<br />3. açık ise bağımsız değişkenler/değişkenler/Içeri aktarma Tasarımcısı<br />4. Shell|
 
 ### <a name="flowchart"></a>Akış Çizelgesi
- Aşağıdaki listede klavye tarafından akış çizelgesi oluşturmak için kullanılan hareketler gösterilmektedir. @No__t_0 kalanında olduğu gibi, Etkinlikler, [!INCLUDE[vs2010](../includes/vs2010-md.md)] birlikte sunulan genel araç kutusu kısayollarını kullanarak tasarımcı yüzeyine eklenir.
+ Aşağıdaki listede klavye tarafından akış çizelgesi oluşturmak için kullanılan hareketler gösterilmektedir. ' In geri kalanında olduğu gibi [!INCLUDE[wfd2](../includes/wfd2-md.md)] Etkinlikler, ile birlikte sunulan genel araç kutusu kısayollarını kullanarak tasarımcı yüzeyine eklenir [!INCLUDE[vs2010](../includes/vs2010-md.md)] .
 
 - Bir etkinliği taşımak için etkinliği seçin ve ok tuşlarını kullanarak yeniden konumlandırın.
 
@@ -71,7 +71,7 @@ ms.locfileid: "72658966"
 - Seçime bir **flowkararı** dahil edildiğinde ve **flowkararının** giden bağlayıcıları yoksa, bağlayıcı **doğru** dala yerleştirilir.
 
 ### <a name="expression-editing"></a>İfade düzenlemesi
- Varsayılan olarak, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] metin düzenleme için varsayılan klavye kısayolları aşağıdaki sınırlamalarla birlikte [!INCLUDE[wfd2](../includes/wfd2-md.md)] ifade Düzenleyicisi içinde geçerlidir:
+ Varsayılan olarak, metin düzenleme için varsayılan klavye kısayolları [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] , içindeki ifade Düzenleyicisi içinde [!INCLUDE[wfd2](../includes/wfd2-md.md)] aşağıdaki sınırlamalara göre geçerlidir:
 
 - Aşağıdaki komutlar için klavye kısayollarının yeniden eşleştirbir etkisi yoktur. Bir ifadeyi düzenlediğinizde bu komutlara erişmek için yalnızca varsayılan klavye kısayollarını kullanabilirsiniz.
 
@@ -83,8 +83,8 @@ ms.locfileid: "72658966"
 
     4. Tümünü Seç
 
-    5. Komutunu
+    5. Geri Al
 
     6. Yinele
 
-- @No__t_1 [!INCLUDE[wfd2](../includes/wfd2-md.md)] içindeki ifade düzenleme komutlarının klavye kısayollarını yeniden eşlemek için [!INCLUDE[wfd2](../includes/wfd2-md.md)] kapsamındaki kısayolları düzenleyin. Metin düzenleyici kapsamında yapılan değişiklikler [!INCLUDE[wfd2](../includes/wfd2-md.md)] için otomatik olarak uygulanmaz. Her iki yerde de kısayolları yeniden eşlemek isterseniz, değişiklikleri iki kez uygulamanız gerekir (her kapsam için bir kez).
+- İçindeki içindeki ifade düzenleme komutlarının klavye kısayollarını yeniden eşlemek için [!INCLUDE[wfd2](../includes/wfd2-md.md)] [!INCLUDE[vs2010](../includes/vs2010-md.md)] , kapsamdaki kısayolları düzenleyin [!INCLUDE[wfd2](../includes/wfd2-md.md)] . Metin düzenleyici kapsamında yapılan değişiklikler için otomatik olarak uygulanmaz [!INCLUDE[wfd2](../includes/wfd2-md.md)] . Her iki yerde de kısayolları yeniden eşlemek isterseniz, değişiklikleri iki kez uygulamanız gerekir (her kapsam için bir kez).

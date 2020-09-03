@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsectioncontribs::Clone | Microsoft Docs
+title: 'IDiaEnumSectionContribs:: Clone | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 56267cbbffd6b5ff123dcf08ee71200a9b343fac
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190019"
 ---
 # <a name="idiaenumsectioncontribsclone"></a>IDiaEnumSectionContribs::Clone
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Geçerli Numaralandırıcı aynı numaralandırma duruma içeren bir numaralandırıcı oluşturur.  
+Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Clone(   
@@ -34,11 +34,11 @@ HRESULT Clone( 
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- ppenum  
- [out] Döndürür bir [Idiaenumsectioncontribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) Numaralandırıcı bir kopyasını içeren nesne. Yinelenen Katkıları olmayan bölüm, yalnızca Numaralandırıcı.  
+ ppEnum  
+ dışı Numaralandırıcı yinelenen içeren bir [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) nesnesi döndürür. Bölüm katkıları yinelenmez, yalnızca Numaralandırıcı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)

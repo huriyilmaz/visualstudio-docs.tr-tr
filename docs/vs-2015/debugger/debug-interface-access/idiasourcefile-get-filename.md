@@ -1,5 +1,5 @@
 ---
-title: Idiasourcefile::get_filename | Microsoft Docs
+title: 'IDiaSourceFile:: get_fileName | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 718b84720c3dbfc03552b6b64a95645e72951057
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190657"
 ---
-# <a name="idiasourcefilegetfilename"></a>IDiaSourceFile::get_fileName
+# <a name="idiasourcefileget_filename"></a>IDiaSourceFile::get_fileName
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 Kaynak dosya adını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_fileName (   
@@ -35,10 +35,10 @@ HRESULT get_fileName ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Kaynak dosya adını döndürür.  
+ dışı Kaynak dosya adını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

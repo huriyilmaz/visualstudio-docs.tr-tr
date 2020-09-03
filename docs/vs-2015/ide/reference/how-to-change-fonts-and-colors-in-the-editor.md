@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4eca05b76a55fb45539da7bb15479495b8a3449f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72661232"
 ---
 # <a name="how-to-change-fonts-and-colors-in-the-editor"></a>Nasıl Yapılır: Düzenleyicideki Yazı Tiplerini ve Renkleri Değiştirme
@@ -27,7 +27,7 @@ ms.locfileid: "72661232"
 
 Varsayılan yazı tipi yüzünü değiştirebilir, yazı tipi boyutunu ayarlayabilir ve kod düzenleyicisinde çeşitli metin **görüntüleme öğeleri** için ön plan ve arka plan renklerini değiştirebilirsiniz. Yazı tipi ayarlarını değiştirirken aşağıdaki bilgileri aklınızda bulundurun:
 
-- **Yazı tipi** ve **Boyut** ayarları, tüm [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] düzenleyicilerde tüm metin öğeleri için geneldir.
+- **Yazı tipi** ve **Boyut** ayarları, tüm düzenleyicilerde tüm metin öğeleri için geneldir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .
 
 - Sabit genişlikli yazı tiplerinin adları kalın olarak listelenmiştir.
 
@@ -51,7 +51,7 @@ Varsayılan yazı tipi yüzünü değiştirebilir, yazı tipi boyutunu ayarlayab
     > [!TIP]
     > Varsayılan ayarları sıfırlamak için **Varsayılanları Kullan** ' a tıklayın.
 
-5. **Tamam**'a tıklayın.
+5. **Tamam**’a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Düzenleyici](../../ide/customizing-the-editor.md) [metin düzenleyici seçenekleri iletişim kutusunu](../../ide/reference/text-editor-options-dialog-box.md) [kod yazma](../../ide/writing-code-in-the-code-and-text-editor.md) [nasıl yapılır: yazı tiplerini ve renkleri değiştirme](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)

@@ -23,10 +23,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 25b144409ae58f006602706a5b5cb498c0535ea2
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540172"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Visual Studio'da verilere WPF denetimleri bağlama
@@ -58,8 +58,8 @@ Verileri denetimlere bağlayarak uygulamanızın kullanıcılarına verileri gö
 |-----------------|-----------------------------------------------------------|--------------------------------------------------------|
 |Veri kümesi|Yes|Yes|
 |[!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)]|Yes|Yes|
-|Hizmet|Evet|Hayır|
-|Nesne|Evet|Hayır|
+|Hizmet|Yes|Hayır|
+|Nesne|Yes|Hayır|
 
 ### <a name="datasets"></a>Veri kümeleri
  **Veri kaynakları** penceresinden tasarımcıya bir tablo veya sütun sürüklediğinizde, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] şunları yapar:
@@ -68,7 +68,7 @@ Verileri denetimlere bağlayarak uygulamanızın kullanıcılarına verileri gö
 
 - Denetim için bir veri bağlama oluşturur. Öğeyi tasarımcıda varolan bir denetime sürüklerseniz, XAML denetimi öğeye bağlar. Öğeyi bir kapsayıcıya sürüklerseniz, XAML sürüklenen öğe için seçilmiş olan denetimi oluşturur ve denetimi öğeye bağlar. Denetim yeni bir içinde oluşturulur <xref:System.Windows.Controls.Grid> .
 
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]arka plan kod dosyasında aşağıdaki değişiklikleri de yapar:
+  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] arka plan kod dosyasında aşağıdaki değişiklikleri de yapar:
 
 - <xref:System.Windows.FrameworkElement.Loaded>Denetimi içeren öğe için bir olay işleyicisi oluşturur [!INCLUDE[TLA2#tla_ui](../includes/tla2sharptla-ui-md.md)] . Olay işleyicisi tabloyu verilerle doldurur, <xref:System.Windows.Data.CollectionViewSource> kapsayıcının kaynaklarından öğesini alır ve ardından ilk veri öğesini geçerli öğe yapar. Bir <xref:System.Windows.FrameworkElement.Loaded> olay işleyicisi zaten varsa, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Bu kodu var olan olay işleyicisine ekler.
 

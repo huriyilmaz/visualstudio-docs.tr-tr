@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5e0d8839daac2d470f4275257bfcfbc83fc7a62f
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72911400"
 ---
 # <a name="frequently-asked-questions-for-snapshot-debugging-in-visual-studio"></a>Visual Studio 'da anlık görüntü hata ayıklaması için sık sorulan sorular
@@ -50,7 +50,7 @@ Evet, anlık görüntü hata ayıklaması yük altındaki sunucular için çalı
 App Service Snapshot Debugger site uzantısını aşağıdaki adımlarla kaldırabilirsiniz:
 
 1. App Service, Visual Studio veya Azure portal bulut Gezgini aracılığıyla kapatın.
-1. App Service kudu sitenize (yani, yourappservice) gidin. **SCM**. azurewebsites.net) ve **site uzantılarına**gidin.
+1. App Service kudu sitenize (yani, yourappservice) gidin.** SCM**. azurewebsites.net) ve **site uzantılarına**gidin.
 1. Kaldırmak için Snapshot Debugger site uzantısında X öğesine tıklayın.
 
 #### <a name="why-are-ports-opened-during-a-snapshot-debugger-session"></a>Snapshot Debugger oturumu sırasında bağlantı noktaları neden açıldı?
@@ -95,7 +95,7 @@ Sanal makine/sanal makine ölçek kümeleri için uzaktan hata ayıklayıcı uza
          ```
 
       - Azure portal aracılığıyla uzaktan hata ayıklayıcıyı devre dışı bırakın
-         - Azure portal sanal makineniz/sanal makine ölçek kümeleri kaynak dikey penceresi > Uzantıları >
+         - Azure portal sanal makineniz/sanal makine ölçek kümeleri kaynak dikey penceresi > uzantıları >
          - Microsoft. VisualStudio. Azure. RemoteDebug. VSRemoteDebugger uzantısını kaldır
 
          > [!NOTE]
@@ -125,7 +125,7 @@ Sanal makine/sanal makine ölçek kümeleri için uzaktan hata ayıklayıcı uza
 
    - Sunucu sertifikası
       - Karşılık gelen sunucu sertifikası parmak izi, Azure Keykasasında gizli dizi olarak dağıtılır. VS, sanal makine veya sanal makine ölçek kümeleri kaynağına karşılık gelen bölgede MSVSAZ * önekiyle bir Keykasası bulmayı veya oluşturmayı dener. Bu bölgeye dağıtılan tüm sanal makine veya sanal makine ölçek kümeleri kaynakları aynı anahtar kasasını paylaşır.
-      - Sunucu sertifikası parmak izi gizli anahtarını silmek için Azure portal gidin ve parolanızı barındıran bölgede MSVSAZ * Keykasasını bulun. Etiketlenmesi gereken gizli anahtarı silin `remotedebugcert<<ResourceName>>`
+      - Sunucu sertifikası parmak izi gizli anahtarını silmek için Azure portal gidin ve parolanızı barındıran bölgede MSVSAZ * Keykasasını bulun. Etiketlenmesi gereken gizli anahtarı sil `remotedebugcert<<ResourceName>>`
       - Ayrıca, PowerShell aracılığıyla kaynağından sunucu parolasını da silmeniz gerekir.
 
       Sanal makineler için:
@@ -179,7 +179,7 @@ Sanal makine/sanal makine ölçek kümeleri için:
 Snapshot Debugger devre dışı bırakmak için birkaç yol vardır:
 - Bulut Gezgini > sanal makineniz/sanal makine ölçek kümesi kaynağınız > tanılamayı devre dışı bırak
 
-- Azure portal > sanal makineniz/sanal makine ölçek kümesi kaynak dikey penceresi > Uzantıları > Microsoft. Insights. VMDiagnosticsSettings uzantısını kaldır
+- Azure portal > sanal makineniz/sanal makine ölçek kümesi kaynak dikey penceresi > uzantıları > Microsoft. Insights. VMDiagnosticsSettings uzantısını kaldır
 
 - [Az PowerShell](/powershell/azure/overview) 'Den PowerShell cmdlet 'leri
 
@@ -198,7 +198,7 @@ Snapshot Debugger devre dışı bırakmak için birkaç yol vardır:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio’da hata ayıklama](../debugger/index.yml)
+- [Visual Studio'da Hata Ayıklama](../debugger/index.yml)
 - [Snapshot Debugger kullanarak canlı ASP.NET uygulamalarında hata ayıklama](../debugger/debug-live-azure-applications.md)
 - [Snapshot Debugger kullanarak canlı ASP.NET Azure sanal makine ölçek kümelerinde hata ayıkla](../debugger/debug-live-azure-virtual-machines.md)
 - [Snapshot Debugger kullanarak canlı ASP.NET Azure Kubernetes hatalarını ayıklama](../debugger/debug-live-azure-kubernetes.md)

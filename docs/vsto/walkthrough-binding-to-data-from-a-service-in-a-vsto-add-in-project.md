@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 75d984617b56525e640a74aa4badd6f520c0b892
-ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72381314"
 ---
 # <a name="walkthrough-bind-to-data-from-a-service-in-a-vsto-add-in-project"></a>İzlenecek yol: VSTO eklenti projesindeki bir hizmetten veriye bağlama
@@ -28,15 +28,15 @@ ms.locfileid: "72381314"
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Çalışma zamanında belgeye <xref:Microsoft.Office.Tools.Word.RichTextContentControl> denetimi ekleme.
+- Çalışma zamanında <xref:Microsoft.Office.Tools.Word.RichTextContentControl> belgeye denetim ekleme.
 
-- @No__t-0 denetimini bir Web hizmetinden veriye bağlama.
+- <xref:Microsoft.Office.Tools.Word.RichTextContentControl>Denetimi bir Web hizmetinden veriye bağlama.
 
-- Bir <xref:Microsoft.Office.Tools.Word.RichTextContentControl> denetiminin <xref:Microsoft.Office.Tools.Word.ContentControlBase.Entering> olayına yanıt verme.
+- <xref:Microsoft.Office.Tools.Word.ContentControlBase.Entering>Bir denetimin olayına yanıt verme <xref:Microsoft.Office.Tools.Word.RichTextContentControl> .
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "72381314"
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Visual Basic veya C#kullanarak **MTPS içerik hizmeti**adlı bir Word VSTO eklentisi projesi oluşturun.
+1. Visual Basic veya C# kullanarak **MTPS Içerik hizmeti**adlı BIR Word VSTO eklentisi projesi oluşturun.
 
      Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio `ThisAddIn.vb` veya `ThisAddIn.cs` dosyasını açar ve projeyi **Çözüm Gezgini**ekler.
+     Visual Studio, `ThisAddIn.vb` veya `ThisAddIn.cs` dosyasını açar ve projeyi **Çözüm Gezgini**ekler.
 
 ## <a name="add-a-web-service"></a>Web hizmeti Ekle
  Bu izlenecek yol için, MTPS Içerik hizmeti adlı bir Web hizmeti kullanın. Bu Web hizmeti, bir XML dizesi veya düz metin biçiminde belirtilen bir MSDN makalesindeki bilgileri döndürür. Daha sonraki bir adımda, döndürülen bilgilerin bir içerik denetiminde nasıl görüntüleneceği gösterilmektedir.
@@ -78,17 +78,17 @@ ms.locfileid: "72381314"
 
 ### <a name="to-add-a-content-control-and-bind-to-data"></a>İçerik denetimi eklemek ve verilere bağlamak için
 
-1. @No__t-0 sınıfında, MTPS Içerik hizmeti, içerik denetimi ve veri bağlama için değişkenleri bildirin.
+1. Sınıfında, `ThisAddIn` MTPS Içerik hizmeti, içerik denetimi ve veri bağlama için değişkenleri bildirin.
 
      [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#2](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#2)]
      [!code-vb[Trin_WordAddIn_BindingDataToContentControl#2](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#2)]
 
-2. Aşağıdaki yöntemi `ThisAddIn` sınıfına ekleyin. Bu yöntem, etkin belgenin başlangıcında bir içerik denetimi oluşturur.
+2. Sınıfına aşağıdaki yöntemi ekleyin `ThisAddIn` . Bu yöntem, etkin belgenin başlangıcında bir içerik denetimi oluşturur.
 
      [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#4](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#4)]
      [!code-vb[Trin_WordAddIn_BindingDataToContentControl#4](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#4)]
 
-3. Aşağıdaki yöntemi `ThisAddIn` sınıfına ekleyin. Bu yöntem, Web hizmetine bir istek oluşturmak ve göndermek için gereken nesneleri başlatır.
+3. Sınıfına aşağıdaki yöntemi ekleyin `ThisAddIn` . Bu yöntem, Web hizmetine bir istek oluşturmak ve göndermek için gereken nesneleri başlatır.
 
      [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#6](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#6)]
      [!code-vb[Trin_WordAddIn_BindingDataToContentControl#6](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#6)]
@@ -98,13 +98,13 @@ ms.locfileid: "72381314"
      [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#5](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#5)]
      [!code-vb[Trin_WordAddIn_BindingDataToContentControl#5](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#5)]
 
-5. @No__t-2 yönteminden `AddRichTextControlAtRange` ve `InitializeServiceObjects` yöntemlerini çağırın. Programcılar C# için bir olay işleyicisi ekleyin.
+5. `AddRichTextControlAtRange` `InitializeServiceObjects` Yönteminden ve yöntemlerini çağırın `ThisAddIn_Startup` . C# programcıları için bir olay işleyicisi ekleyin.
 
      [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#3](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#3)]
      [!code-vb[Trin_WordAddIn_BindingDataToContentControl#3](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#3)]
 
 ## <a name="test-the-add-in"></a>Eklentiyi test etme
- Word 'Ü açtığınızda <xref:Microsoft.Office.Tools.Word.RichTextContentControl> denetimi görünür. Denetimdeki metin, içinde tıkladığınızda değişir.
+ Word 'Ü açtığınızda <xref:Microsoft.Office.Tools.Word.RichTextContentControl> Denetim görüntülenir. Denetimdeki metin, içinde tıkladığınızda değişir.
 
 ### <a name="to-test-the-vsto-add-in"></a>VSTO eklentisini test etmek için
 

@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1a3a76c0927efad18e667a786b1678262da6ac4d
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85463969"
 ---
 # <a name="idiasymbolget_customcallingconvention"></a>IDiaSymbol::get_customCallingConvention
@@ -33,7 +33,7 @@ HRESULT get_customCallingConvention(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı `TRUE`İşlevin özel bir çağırma kuralına sahip olup olmadığını döndürür; Aksi takdirde, `FALSE` işlevinin bilinen bir çağırma kuralı vardır.
+dışı `TRUE` İşlevin özel bir çağırma kuralına sahip olup olmadığını döndürür; Aksi takdirde, `FALSE` işlevinin bilinen bir çağırma kuralı vardır.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
@@ -43,7 +43,7 @@ dışı `TRUE`İşlevin özel bir çağırma kuralına sahip olup olmadığını
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Açıklama|
+|Gereksinim|Description|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|

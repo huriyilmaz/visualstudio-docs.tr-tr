@@ -1,5 +1,5 @@
 ---
-title: C/C++ onaylama | Microsoft Docs
+title: C/C++ Onayları | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -29,16 +29,16 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f7ac27b46252582b3982082a2a9a90a09223574f
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72911613"
 ---
 # <a name="cc-assertions"></a>C/C++ Onayları
 Bir onaylama deyimi, programınızdaki bir noktada doğru olması beklenen bir koşulu belirtir. Bu koşul doğru değilse, onaylama başarısız olur, programınızın yürütülmesi kesintiye uğrar ve [onaylama başarısız iletişim kutusu](../debugger/assertion-failed-dialog-box.md) görüntülenir.
 
-Visual Studio, C++ aşağıdaki yapıları temel alan onay deyimlerini destekler:
+Visual Studio, aşağıdaki yapıları temel alan C++ onaylama deyimlerini destekler:
 
 - MFC programları için MFC onayları.
 
@@ -46,11 +46,11 @@ Visual Studio, C++ aşağıdaki yapıları temel alan onay deyimlerini destekler
 
 - C çalışma zamanı kitaplığını kullanan programlar için CRT onaylamaları.
 
-- Diğer C/C++ PROGRAMLARı için ANSI [onaylama işlevi](/cpp/c-runtime-library/reference/assert-macro-assert-wassert) .
+- Diğer C/C++ programları için ANSI [onaylama işlevi](/cpp/c-runtime-library/reference/assert-macro-assert-wassert) .
 
   Onaylama işlemlerini, mantık hatalarını yakalamak, bir işlemin sonuçlarını denetlemek ve işlenmeli test hata koşulları 'nı kullanabilirsiniz.
 
-## <a name="BKMK_In_this_topic"></a>Bu konuda
+## <a name="in-this-topic"></a><a name="BKMK_In_this_topic"></a> Bu konuda
 [Onaylamalar nasıl çalışır?](#BKMK_How_assertions_work)
 
 [Hata ayıklama ve sürüm Derlemeleriyle onaylama işlemleri](#BKMK_Assertions_in_Debug_and_Release_builds)
@@ -73,24 +73,24 @@ Visual Studio, C++ aşağıdaki yapıları temel alan onay deyimlerini destekler
 
 - [İşlenmemiş hataları bulma](#BKMK_Testing_error_conditions_)
 
-## <a name="BKMK_How_assertions_work"></a>Onaylamalar nasıl çalışır?
+## <a name="how-assertions-work"></a><a name="BKMK_How_assertions_work"></a> Onaylamalar nasıl çalışır?
 Bir MFC veya C çalışma zamanı kitaplığı onaylaması nedeniyle hata ayıklayıcı başlatıldığında, kaynak kullanılabiliyorsa, hata ayıklayıcı onaylama işlemi gerçekleştiği kaynak dosyadaki noktaya gider. Onaylama iletisi hem [Çıkış penceresinde](../ide/reference/output-window.md) hem de **onaylama başarısız** iletişim kutusunda görünür. Daha sonra başvurmak üzere kaydetmek istiyorsanız, onay iletisini **Çıkış** penceresinden bir metin penceresine kopyalayabilirsiniz. **Çıkış** penceresinde diğer hata iletileri de bulunabilir. Onaylama hatasının nedenine ilişkin ipuçları sağladığından bu iletileri dikkatle inceleyin.
 
 Geliştirme sırasında hataları algılamak için onaylamaları kullanın. Kural olarak, her varsayım için bir onaylama kullanın. Örneğin, bir bağımsız değişkenin NULL olmadığını varsaydıysanız, Bu varsayımını sınamak için bir onaylama işlemi kullanın.
 
 [Bu konuda](#BKMK_In_this_topic)
 
-## <a name="BKMK_Assertions_in_Debug_and_Release_builds"></a>Hata ayıklama ve sürüm Derlemeleriyle onaylama işlemleri
-Onaylama deyimleri yalnızca `_DEBUG` tanımlanmışsa derlenir. Aksi takdirde, derleyici onayları null deyimler olarak değerlendirir. Bu nedenle, onay deyimleri son sürüm programınızda bir ek yük veya performans maliyeti vermez ve `#ifdef` yönergeleri kullanmaktan kaçınmanızı sağlar.
+## <a name="assertions-in-debug-and-release-builds"></a><a name="BKMK_Assertions_in_Debug_and_Release_builds"></a> Hata ayıklama ve sürüm Derlemeleriyle onaylama işlemleri
+Onaylama deyimleri yalnızca tanımlanmışsa derlenir `_DEBUG` . Aksi takdirde, derleyici onayları null deyimler olarak değerlendirir. Bu nedenle, onay deyimleri son sürüm programınızda bir ek yük veya performans maliyeti vermez ve yönergeleri kullanmaktan kaçınmanızı sağlar `#ifdef` .
 
-## <a name="BKMK_Side_effects_of_using_assertions"></a>Onayları kullanmanın yan etkileri
-Kodunuza onaylama eklediğinizde, onayların yan etkileri olmadığından emin olun. Örneğin, `nM` değerini değiştiren aşağıdaki onay onayını göz önünde bulundurun:
+## <a name="side-effects-of-using-assertions"></a><a name="BKMK_Side_effects_of_using_assertions"></a> Onayları kullanmanın yan etkileri
+Kodunuza onaylama eklediğinizde, onayların yan etkileri olmadığından emin olun. Örneğin, bu değeri değiştiren aşağıdaki onay onayını göz önünde bulundurun `nM` :
 
 ```cpp
 ASSERT(nM++ > 0); // Don't do this!
 ```
 
-`ASSERT` ifadesi programınızın yayın sürümünde değerlendirilmediği için, `nM` hata ayıklama ve sürüm sürümlerinde farklı değerlere sahip olur. MFC 'deki bu sorundan kaçınmak için `ASSERT` yerine [VERIFY](/cpp/mfc/reference/diagnostic-services#verify) makrosunu kullanabilirsiniz. `VERIFY`, ifadeyi tüm sürümlerde değerlendirir ancak yayın sürümündeki sonucu denetlemez.
+`ASSERT`İfade programınızın yayın sürümünde değerlendirilmediği için, `nM` hata ayıklama ve yayın sürümlerinde farklı değerlere sahip olur. MFC 'deki bu sorundan kaçınmak için yerine [VERIFY](/cpp/mfc/reference/diagnostic-services#verify) makrosunu kullanabilirsiniz `ASSERT` . `VERIFY` tüm sürümlerde ifadeyi değerlendirir ancak yayın sürümünde sonucu denetlemez.
 
 Bir işlevin değerlendirilmesi beklenmeyen yan etkilere sahip olabileceğinden, özellikle onaylama deyimlerinde işlev çağrıları kullanma konusunda dikkatli olun.
 
@@ -99,21 +99,21 @@ ASSERT ( myFnctn(0)==1 ) // unsafe if myFnctn has side effects
 VERIFY ( myFnctn(0)==1 ) // safe
 ```
 
-`myFnctn`, hem hata ayıklama hem de sürüm sürümlerinde  ' i çağırır, bu nedenle kullanılması kabul edilebilir. Ancak `VERIFY` kullanmak, yayın sürümündeki gereksiz bir işlev çağrısının ek yükünü uygular.
+`VERIFY``myFnctn`hem hata ayıklama hem de sürüm sürümlerinde çağrılır, bu nedenle kullanılması kabul edilebilir. Ancak, kullanma, `VERIFY` yayın sürümünde gereksiz bir işlev çağrısının yükünü uygular.
 
 [Bu konuda](#BKMK_In_this_topic)
 
-## <a name="BKMK_CRT_assertions"></a>CRT onayları
-CRTDBG. H üst bilgi dosyası [_onaylama ve _ASSERTE makrolarını](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros) onaylama denetimi için tanımlar.
+## <a name="crt-assertions"></a><a name="BKMK_CRT_assertions"></a> CRT onayları
+CRTDBG. H üstbilgi dosyası, onaylama denetimi için [_assert ve _ASSERTE makrolarını](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros) tanımlar.
 
 | Makroya | Sonuç |
 |------------| - |
-| `_ASSERT` | Belirtilen ifade FALSE olarak değerlendirilirse, `_ASSERT`dosya adı ve satır numarası. |
-| `_ASSERTE` | `_ASSERT`ile aynı ve uygulanan ifadenin dize temsili. |
+| `_ASSERT` | Belirtilen ifade FALSE olarak değerlendirilirse, öğesinin dosya adı ve satır numarası `_ASSERT` . |
+| `_ASSERTE` | İle aynı `_ASSERT` , ve onaylanan ifadenin dize temsili. |
 
-`_ASSERTE`, yanlış olarak kapatılmış olan onaylanan ifadeyi bildirdiğinden daha güçlüdür. Bu, kaynak koda başvurulmadan sorunu belirlemek için yeterli olabilir. Ancak, uygulamanızın hata ayıklama sürümü, `_ASSERTE`kullanılarak onaylanan her bir ifade için bir dize sabiti içerecektir. Birçok `_ASSERTE` makro kullanıyorsanız, bu dize ifadeleri önemli miktarda bellek alır. Bu, bir sorun olduğunu kanıtlar, bellek kazanmak için `_ASSERT` kullanın.
+`_ASSERTE` , yanlış olarak kapatılmış olan onaylanan ifadeyi bildirdiğinden daha güçlüdür. Bu, kaynak koda başvurulmadan sorunu belirlemek için yeterli olabilir. Ancak, uygulamanızın hata ayıklama sürümü kullanılarak onaylanan her bir ifade için bir dize sabiti içerecektir `_ASSERTE` . Çok sayıda makro kullanıyorsanız `_ASSERTE` , bu dize ifadeleri önemli miktarda bellek alır. Bu, bir sorun olduğunu kanıtlar, `_ASSERT` belleği kaydetmek için kullanın.
 
-`_DEBUG` tanımlandığında, `_ASSERTE` makrosu aşağıdaki gibi tanımlanır:
+`_DEBUG`Tanımlandığında, `_ASSERTE` makro aşağıdaki gibi tanımlanır:
 
 ```cpp
 #define _ASSERTE(expr) \
@@ -124,30 +124,30 @@ CRTDBG. H üst bilgi dosyası [_onaylama ve _ASSERTE makrolarını](/cpp/c-runti
     } while (0)
 ```
 
-Onaylanan ifade FALSE olarak değerlendirilirse, onaylama hatasını raporlamak için [_Crtdbgreport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw) çağırılır (varsayılan olarak bir ileti iletişim kutusu kullanarak). İleti iletişim kutusunda **yeniden dene** ' yi seçerseniz `_CrtDbgReport` 1 döndürür ve `_CrtDbgBreak` hata ayıklayıcıyı `DebugBreak`çağırır.
+Onaylanan ifade FALSE olarak değerlendirilirse, onaylama hatasını raporlamak için [_CrtDbgReport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw) çağırılır (varsayılan olarak bir ileti iletişim kutusu kullanarak). İleti iletişim kutusunda **yeniden dene** ' yi seçerseniz, `_CrtDbgReport` 1 döndürür ve `_CrtDbgBreak` hata ayıklayıcıyı aracılığıyla çağırır `DebugBreak` .
 
 ### <a name="checking-for-heap-corruption"></a>Yığın bozulması denetleniyor
-Aşağıdaki örnek, yığın bozulmasını denetlemek için [_Crtcheckmemory](/cpp/c-runtime-library/reference/crtcheckmemory) kullanır:
+Aşağıdaki örnek, yığın bozulmasını denetlemek için [_CrtCheckMemory](/cpp/c-runtime-library/reference/crtcheckmemory) kullanır:
 
 ```cpp
 _ASSERTE(_CrtCheckMemory());
 ```
 
 ### <a name="checking-pointer-validity"></a>Işaretçi geçerliliği denetleniyor
-Aşağıdaki örnek, belirli bir bellek aralığının okuma veya yazma için geçerli olduğunu doğrulamak için [_Crtıvalpointer](/cpp/c-runtime-library/reference/crtisvalidpointer) kullanır.
+Aşağıdaki örnek, belirli bir bellek aralığının okuma veya yazma için geçerli olduğunu doğrulamak için [_CrtIsValidPointer](/cpp/c-runtime-library/reference/crtisvalidpointer) kullanır.
 
 ```cpp
 _ASSERTE(_CrtIsValidPointer( address, size, TRUE );
 ```
 
-Aşağıdaki örnek, bir işaretçinin yerel yığında belleğe işaret ettiğini doğrulamak için [_Crtıvalheappointer](/cpp/c-runtime-library/reference/crtisvalidheappointer) kullanır (C çalışma zamanı kitaplığı 'nın bu örneği tarafından oluşturulan ve yönetilen yığın), bir dll kendi kitaplığı örneğine ve bu nedenle kendi yığınına sahip olabilir. Uygulama yığınının dışında). Bu onaylama yalnızca null veya sınırların dışında bir adresi değil, statik değişkenlerin, yığın değişkenlerinin ve diğer yerel olmayan belleğin işaretçilerini de işaretçiler.
+Aşağıdaki örnek, bir işaretçinin yerel yığında belleğe işaret ettiğini doğrulamak için [_CrtIsValidHeapPointer](/cpp/c-runtime-library/reference/crtisvalidheappointer) kullanır (C çalışma zamanı kitaplığı 'nın bu örneği tarafından oluşturulan ve yönetilen yığın), bir dll, kendi kitaplığı örneğine ve bu nedenle uygulama yığınının dışında kendi yığınına sahip olabilir. Bu onaylama yalnızca null veya sınırların dışında bir adresi değil, statik değişkenlerin, yığın değişkenlerinin ve diğer yerel olmayan belleğin işaretçilerini de işaretçiler.
 
 ```cpp
 _ASSERTE(_CrtIsValidPointer( myData );
 ```
 
 ### <a name="checking-a-memory-block"></a>Bellek bloğu denetleniyor
-Aşağıdaki örnek, bir bellek bloğunun yerel yığında olduğunu ve geçerli bir blok türüne sahip olduğunu doğrulamak için [_Crtımemoryblock](/cpp/c-runtime-library/reference/crtismemoryblock) kullanır.
+Aşağıdaki örnek, bir bellek bloğunun yerel yığında olduğunu ve geçerli bir blok türüne sahip olduğunu doğrulamak için [_CrtIsMemoryBlock](/cpp/c-runtime-library/reference/crtismemoryblock) kullanır.
 
 ```cpp
 _ASSERTE(_CrtIsMemoryBlock (myData, size, &requestNumber, &filename, &linenumber));
@@ -155,14 +155,14 @@ _ASSERTE(_CrtIsMemoryBlock (myData, size, &requestNumber, &filename, &linenumber
 
 [Bu konuda](#BKMK_In_this_topic)
 
-## <a name="BKMK_MFC_assertions"></a>MFC onayları
-MFC, onaylama denetimi için [onaylama](https://msdn.microsoft.com/Library/1e70902d-d58c-4e7b-9f69-2aeb6cbe476c) makrosunu tanımlar. Ayrıca, `CObject`türetilmiş bir nesnenin iç durumunu denetlemek için `MFC ASSERT_VALID` ve `CObject::AssertValid` yöntemlerini tanımlar.
+## <a name="mfc-assertions"></a><a name="BKMK_MFC_assertions"></a> MFC onayları
+MFC, onaylama denetimi için [onaylama](https://msdn.microsoft.com/Library/1e70902d-d58c-4e7b-9f69-2aeb6cbe476c) makrosunu tanımlar. Ayrıca, `MFC ASSERT_VALID` `CObject::AssertValid` bir türetilmiş nesnenin iç durumunu denetlemek için ve yöntemlerini tanımlar `CObject` .
 
-MFC `ASSERT` makrosunun bağımsız değişkeni sıfır veya false olarak değerlendirilirse, makro program yürütmesini durdurur ve kullanıcıyı uyarır; Aksi takdirde, yürütme devam eder.
+MFC makrosunun bağımsız değişkeni `ASSERT` sıfır veya false olarak değerlendirilirse, makro program yürütmesini durdurur ve kullanıcıyı uyarır; Aksi takdirde yürütme devam eder.
 
 Bir onaylama başarısız olduğunda, bir ileti iletişim kutusunda kaynak dosyanın adı ve onaylama satır numarası gösterilir. İletişim kutusunda yeniden dene ' yi seçerseniz, [AfxDebugBreak](/cpp/mfc/reference/diagnostic-services#afxdebugbreak) çağrısı yürütmenin hata ayıklayıcıya kesilmesine neden olur. Bu noktada, çağrının başarısız olduğunu anlamak için çağrı yığınını inceleyebilir ve diğer hata ayıklayıcı tesislerini kullanabilirsiniz. [Tam zamanında hata ayıklamayı](../debugger/just-in-time-debugging-in-visual-studio.md)etkinleştirdiyseniz ve hata ayıklayıcı zaten çalışmıyorsa, iletişim kutusu hata ayıklayıcıyı başlatabilir.
 
-Aşağıdaki örnek, bir işlevin dönüş değerini denetlemek için `ASSERT` ' ın nasıl kullanılacağını gösterir:
+Aşağıdaki örnek, `ASSERT` bir işlevin dönüş değerini denetlemek için nasıl kullanılacağını gösterir:
 
 ```cpp
 int x = SomeFunc(y);
@@ -175,12 +175,12 @@ ASSERT(x >= 0);   //  Assertion fails if x is negative
 ASSERT( pObject1->IsKindOf( RUNTIME_CLASS( CPerson ) ) );
 ```
 
-`ASSERT` makro yayın sürümünde kod üretmez. Yayın sürümündeki ifadeyi değerlendirmeniz gerekiyorsa, onaylama yerine [VERIFY](https://msdn.microsoft.com/library/s8c29sw2.aspx#verify) makrosunu kullanın.
+`ASSERT`Makro yayın sürümünde kod üretmez. Yayın sürümündeki ifadeyi değerlendirmeniz gerekiyorsa, onaylama yerine [VERIFY](https://msdn.microsoft.com/library/s8c29sw2.aspx#verify) makrosunu kullanın.
 
-### <a name="BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid"></a>MFC ASSERT_VALID ve CObject:: AssertValid
-[CObject:: AssertValid](/cpp/mfc/reference/cobject-class#assertvalid) yöntemi, bir nesnenin iç durumunun çalışma zamanı denetimleri sağlar. `AssertValid` sınıfınızı `CObject`türettiğinizde geçersiz kılmanız gerekli olmasa da, bunu yaparak sınıfınızı daha güvenilir hale getirebilirsiniz. `AssertValid` ' ın geçerli değerler içerdiğini doğrulamak için tüm nesnenin üye değişkenlerinin üzerinde onaylama işlemleri gerçekleştirmesi gerekir. Örneğin, işaretçi üye değişkenlerinin NULL olmadığını denetlemelidir.
+### <a name="mfc-assert_valid-and-cobjectassertvalid"></a><a name="BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid"></a> MFC ASSERT_VALID ve CObject:: AssertValid
+[CObject:: AssertValid](/cpp/mfc/reference/cobject-class#assertvalid) yöntemi, bir nesnenin iç durumunun çalışma zamanı denetimleri sağlar. `AssertValid`Sınıfınızı ' den türettiğinizde geçersiz kılmanız gerekli olmasa da `CObject` , bunu yaparak sınıfınızı daha güvenilir hale getirebilirsiniz. `AssertValid` geçerli değerler içerdiklerinden emin olmak için nesnenin tüm üye değişkenlerine onay gerçekleştirmelidir. Örneğin, işaretçi üye değişkenlerinin NULL olmadığını denetlemelidir.
 
-Aşağıdaki örnek, `AssertValid` işlevinin nasıl bildirilemeyeceğini göstermektedir:
+Aşağıdaki örnek, bir işlevin nasıl bildirilemeyeceğini göstermektedir `AssertValid` :
 
 ```cpp
 class CPerson : public CObject
@@ -197,7 +197,7 @@ public:
 };
 ```
 
-`AssertValid`geçersiz kıldığınızda, kendi kontrollerinizi gerçekleştirmeden önce `AssertValid` temel sınıf sürümünü çağırın. Ardından, burada gösterildiği gibi, türetilmiş sınıfınıza özgü üyeleri denetlemek için onay makrosunu kullanın:
+Geçersiz kıldığınızda `AssertValid` , `AssertValid` kendi kontrollerinizi gerçekleştirmeden önce temel sınıf sürümünü çağırın. Ardından, burada gösterildiği gibi, türetilmiş sınıfınıza özgü üyeleri denetlemek için onay makrosunu kullanın:
 
 ```cpp
 #ifdef _DEBUG
@@ -215,9 +215,9 @@ void CPerson::AssertValid() const
 #endif
 ```
 
-Üye değişkenlerinizin herhangi biri nesneleri depoladıysanız, iç geçerliliğini sınamak için `ASSERT_VALID` makrosunu kullanabilirsiniz (sınıfları `AssertValid`geçersiz kılar).
+Üye değişkenlerinizin herhangi biri nesneleri depoladıysanız, `ASSERT_VALID` iç geçerliliğini test etmek için makroyu kullanabilirsiniz (sınıfları geçersiz kılınsın `AssertValid` ).
 
-Örneğin, bir sınıf `CMyData` göz önünde bulundurun. Bu, bir [CObList](/cpp/mfc/reference/coblist-class) öğesini üye değişkenlerinden birinde depolar. `CObList` değişkeni `m_DataList`, `CPerson` nesnelerinin bir koleksiyonunu depolar. `CMyData` kısaltılmış bildirimi şöyle görünür:
+Örneğin, bir `CMyData` [CObList](/cpp/mfc/reference/coblist-class) öğesini üye değişkenlerinden birinde depolayan bir sınıfı düşünün. `CObList`Değişkeni, `m_DataList` bir nesne koleksiyonunu depolar `CPerson` . Kısaltılmış bildirimi `CMyData` Şuna benzer:
 
 ```cpp
 class CMyData : public CObject
@@ -235,7 +235,7 @@ class CMyData : public CObject
 };
 ```
 
-`AssertValid` geçersiz kılma `CMyData` şöyle görünür:
+`AssertValid`Geçersiz kılma `CMyData` Şuna benzer:
 
 ```cpp
 #ifdef _DEBUG
@@ -250,25 +250,25 @@ void CMyData::AssertValid( ) const
 #endif
 ```
 
-`CMyData`, veri üyesinde depolanan nesnelerin geçerliliğini sınamak için `AssertValid` mekanizmasını kullanır. `CMyData` `AssertValid` geçersiz kılma, kendi m_pDataList member değişkeni için `ASSERT_VALID` makrosunu çağırır.
+`CMyData` , `AssertValid` kendi veri üyesinde depolanan nesnelerin geçerliliğini test etmek için mekanizmasını kullanır. Geçersiz kılma `AssertValid` , `CMyData` `ASSERT_VALID` makroyu kendi m_pDataList üye değişkeni için çağırır.
 
-`CObList` sınıfı aynı zamanda `AssertValid`geçersiz kıldığından, geçerlilik testi bu düzeyde durmaz. Bu geçersiz kılma, listenin iç durumunda ek geçerlilik testi gerçekleştirir. Bu nedenle, `CMyData` nesnesi üzerindeki bir geçerlilik testi, depolanan `CObList` liste nesnesinin iç durumları için ek geçerlilik testlerine yol açar.
+Bu düzeyde, sınıf `CObList` da geçersiz kılındığından geçerlilik testi durdurulmaz `AssertValid` . Bu geçersiz kılma, listenin iç durumunda ek geçerlilik testi gerçekleştirir. Bu nedenle, bir nesne üzerindeki bir geçerlilik testi, `CMyData` depolanan liste nesnesinin iç durumları için ek geçerlilik testlerine yol açar `CObList` .
 
-Daha fazla iş sayesinde, listede depolanan `CPerson` nesnelerine yönelik geçerlilik testleri de ekleyebilirsiniz. `CObList` bir sınıf `CPersonList` türetebilir ve `AssertValid`geçersiz kılabilirsiniz. Geçersiz kılmada `CObject::AssertValid` çağırır ve sonra listede saklanan her bir `CPerson` nesnesi üzerinde `AssertValid` çağırarak listeyi yineleyebilirsiniz. Bu konunun başında gösterilen `CPerson` sınıfı zaten `AssertValid` ' i geçersiz kılar.
+Daha fazla iş sayesinde, `CPerson` listede depolanan nesneler için de geçerlilik testleri ekleyebilirsiniz. Sınıfından bir sınıf türetebilirsiniz `CPersonList` `CObList` ve geçersiz kılabilirsiniz `AssertValid` . Geçersiz kılmada, listede `CObject::AssertValid` depolanan her bir nesneye çağrı yapan ve sonra listede yineleme yapılır `AssertValid` `CPerson` . `CPerson`Bu konunun başlangıcında gösterilen sınıf zaten geçersiz kılar `AssertValid` .
 
 Bu, hata ayıklama için derleme yaparken güçlü bir mekanizmadır. Daha sonra yayın için derleme yaptığınızda mekanizma otomatik olarak kapatılır.
 
-### <a name="BKMK_Limitations_of_AssertValid"></a>AssertValid sınırlamaları
+### <a name="limitations-of-assertvalid"></a><a name="BKMK_Limitations_of_AssertValid"></a> AssertValid sınırlamaları
 Tetiklenen bir onaylama, nesnenin kesinlikle hatalı olduğunu ve yürütmenin durmayacağını gösterir. Ancak, onaylaması olmaması yalnızca bir sorun bulunamadığını gösterir, ancak nesnenin iyi olduğu garanti edilmez.
 
 [Bu konuda](#BKMK_In_this_topic)
 
-## <a name="BKMK_Using_assertions"></a>Onayları kullanma
+## <a name="using-assertions"></a><a name="BKMK_Using_assertions"></a> Onayları kullanma
 
-### <a name="BKMK_Catching_logic_errors"></a>Mantık hatalarını yakalama
+### <a name="catching-logic-errors"></a><a name="BKMK_Catching_logic_errors"></a> Mantık hatalarını yakalama
 Programınızın mantığına göre doğru olması gereken bir koşul üzerinde onay ayarlayabilirsiniz. Bir mantık hatası oluşmadığı takdirde onaylama etkisizdir.
 
-Örneğin, bir kapsayıcıda gaz molecules benzetimi olduğunu ve `numMols` değişkeninin toplam molecules sayısını temsil ettiğini varsayalım. Bu sayı sıfırdan küçük olamaz, bu nedenle buna benzer bir MFC onaylama deyimi ekleyebilirsiniz:
+Örneğin, bir kapsayıcıda gaz molecules benzetimi olduğunu ve değişkeni de `numMols` Toplam molecules sayısını temsil ettiğini varsayalım. Bu sayı sıfırdan küçük olamaz, bu nedenle buna benzer bir MFC onaylama deyimi ekleyebilirsiniz:
 
 ```cpp
 ASSERT(numMols >= 0);
@@ -280,14 +280,14 @@ Ya da şunun gibi bir CRT onay ekleyebilirsiniz:
 _ASSERT(numMols >= 0);
 ```
 
-Programınız doğru çalışıyorsa, bu deyimler hiçbir şey yapmaz. Bir mantık hatası `numMols` ' dan küçük olmasına neden olur, ancak onaylama işlemi programınızın yürütülmesini durdurur ve [onaylama başarısız Iletişim kutusunu](../debugger/assertion-failed-dialog-box.md)görüntüler.
+Programınız doğru çalışıyorsa, bu deyimler hiçbir şey yapmaz. Ancak bir mantık hatası sıfırdan küçük olmasına neden oluyorsa `numMols` , onaylama işlemi programınızın yürütülmesini durdurur ve [onaylama başarısız iletişim kutusunu](../debugger/assertion-failed-dialog-box.md)görüntüler.
 
 [Bu konuda](#BKMK_In_this_topic)
 
-### <a name="BKMK_Checking_results_"></a>Sonuçlar denetleniyor
+### <a name="checking-results"></a><a name="BKMK_Checking_results_"></a> Sonuçlar denetleniyor
 Onaylamalar, sonuçları hızlı bir görsel incelemeden daha belirgin olmayan test işlemleri için değerlidir.
 
-Örneğin, `mols` tarafından işaret edilen bağlantılı listenin içeriğine göre `iMols` değişkenini güncelleştiren aşağıdaki kodu göz önünde bulundurun:
+Örneğin, aşağıdaki kodu göz önünde bulundurun. Bu, değişkeni `iMols` tarafından işaret edilen bağlantılı listenin içeriğine göre güncelleştirir `mols` :
 
 ```cpp
 /* This code assumes that type has overloaded the != operator
@@ -303,11 +303,11 @@ ASSERT(iMols<=numMols); // MFC version
 _ASSERT(iMols<=numMols); // CRT version
 ```
 
-`iMols` tarafından sayılan motacules sayısı, her zaman motacules, `numMols`sayısından küçük veya buna eşit olmalıdır. Döngünün görsel denetlemesi bunun durum olarak olduğunu göstermez, bu nedenle bu koşul için test etme döngüsünden sonra bir onaylama deyimi kullanılır.
+Sayılan motacules sayısı `iMols` , her zaman motacules 'in toplam sayısından küçük veya buna eşit olmalıdır `numMols` . Döngünün görsel denetlemesi bunun durum olarak olduğunu göstermez, bu nedenle bu koşul için test etme döngüsünden sonra bir onaylama deyimi kullanılır.
 
 [Bu konuda](#BKMK_In_this_topic)
 
-### <a name="BKMK_Testing_error_conditions_"></a>İşlenmemiş hataları bulma
+### <a name="finding-unhandled-errors"></a><a name="BKMK_Testing_error_conditions_"></a> İşlenmemiş hataları bulma
 Kodunuzun herhangi bir hata işlendiği bir noktada hata koşullarını test etmek için onaylamaları kullanabilirsiniz. Aşağıdaki örnekte, bir grafik yordamı başarılı için bir hata kodu veya sıfır döndürür.
 
 ```cpp
@@ -320,7 +320,7 @@ ASSERT(!myErr); -- MFC version
 _ASSERT(!myErr); -- CRT version
 ```
 
-Hata işleme kodu düzgün çalışıyorsa, onaylamaya ulaşılmadan önce hatanın işlenmesi ve `myErr` ' ı sıfıra sıfırlanması gerekir. `myErr` başka bir değer varsa, onaylama başarısız olur, program çöktüler ve [onaylama başarısız Iletişim kutusu](../debugger/assertion-failed-dialog-box.md) görüntülenir.
+Hata işleme kodu düzgün çalışıyorsa, `myErr` onaylamaya ulaşılmadan önce hatanın işlenmesi ve sıfıra sıfırlanması gerekir. `myErr`Başka bir değer varsa, onaylama başarısız olur, program çöktüler ve [onaylama başarısız iletişim kutusu](../debugger/assertion-failed-dialog-box.md) görüntülenir.
 
 Ancak, onaylama deyimleri hata işleme kodu için bir değiştirme değildir. Aşağıdaki örnek, son sürüm kodundaki sorunlara yol açabilecek bir onaylama deyimi gösterir:
 
@@ -333,12 +333,12 @@ ASSERT(!myErr); // Don't do this!
 _ASSERT(!myErr); // Don't do this, either!
 ```
 
-Bu kod, hata koşulunu işlemek için assertion deyimine bağımlıdır. Sonuç olarak, `myGraphRoutine` tarafından döndürülen tüm hata kodları son sürüm kodunda yakalanacaktır.
+Bu kod, hata koşulunu işlemek için assertion deyimine bağımlıdır. Sonuç olarak, tarafından döndürülen tüm hata kodları `myGraphRoutine` son sürüm kodunda yakalanacaktır.
 
 [Bu konuda](#BKMK_In_this_topic)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
+- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)
-- [Yönetilen Koddaki Onaylamalar](../debugger/assertions-in-managed-code.md)
+- [Yönetilen Koddaki Onaylar](../debugger/assertions-in-managed-code.md)

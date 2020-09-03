@@ -16,28 +16,28 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2918826d6923efa3db42f4f572c416b9668513a9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660895"
 ---
 # <a name="code-snippet-picker"></a>Kod Parçacığı Seçici
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-@No__t_0 kod Düzenleyicisi, birkaç fare tıklamasına izin veren bir **kod parçacığı seçici** sağlar ve bu sayede, etkin belgeye kullanıma hazırlanmış kod blokları ekleyebilirsiniz.
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Kod Düzenleyicisi, birkaç fare tıklamasına izin veren bir **kod parçacığı seçici** sağlar ve bu sayede, etkin belgeye kullanıma hazırlanmış kod blokları ekleyebilirsiniz.
 
  **Kod parçacığı seçiciyi** görüntüleme yordamı, kullanmakta olduğunuz dile göre değişir.
 
-- [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], kısayol menüsünü göstermek için kod düzenleyicisinde istenen konuma sağ tıklayın ve kod **parçacığı Ekle**' yi seçin.
+- [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Kısayol menüsünü göstermek için, kod düzenleyicisinde istenen konuma sağ tıklayın ve kod **parçacığı Ekle**' yi seçin.
 
-- [!INCLUDE[csprcs](../../includes/csprcs-md.md)], kısayol menüsünü göstermek için kod düzenleyicisinde istenen konuma sağ tıklayın ve **parçacık Ekle** veya şununla **Çevrele**' ye tıklayın.
+- [!INCLUDE[csprcs](../../includes/csprcs-md.md)]-Kısayol menüsünü göstermek için, kod düzenleyicisinde istenen konuma sağ tıklayın ve kod parçacığı veya **çevreleme** **Ekle** ' ye tıklayın.
 
-- [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)]- **kod parçacığı seçici** kullanılamıyor.
+- [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] - **Kod parçacığı seçici** kullanılamıyor.
 
-- Görsel F# - **kod parçacığı seçici** kullanılamıyor.
+- Visual F#- **kod parçacığı seçici** kullanılamıyor.
 
-- [!INCLUDE[jsprjscript](../../includes/jsprjscript-md.md)]--kısayol menüsünü göstermek için kod düzenleyicisinde istenen konuma sağ tıklayın ve **parçacık Ekle** veya şununla **Çevrele**' ye tıklayın.
+- [!INCLUDE[jsprjscript](../../includes/jsprjscript-md.md)]--Kısayol menüsünü göstermek için, kod düzenleyicisinde istenen konuma sağ tıklayın ve kod parçacığı veya **çevreleme** **Ekle** ' ye tıklayın.
 
 - XML: kısayol menüsünü göstermek için, kod düzenleyicisinde istenen konuma sağ tıklayın ve **parçacık Ekle** veya şununla **Çevrele**' ye tıklayın.
 

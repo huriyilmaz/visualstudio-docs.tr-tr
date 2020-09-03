@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 42bb554f8e57c036d41a89fdc2657a25ecc74e20
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540289"
 ---
 # <a name="ca2232-mark-windows-forms-entry-points-with-stathread"></a>CA2232: Windows Forms giriş noktalarını STAThread ile işaretleyin
@@ -36,10 +36,10 @@ ms.locfileid: "85540289"
  Bir bütünleştirilmiş kod <xref:System.Windows.Forms> ad alanına başvurur ve giriş noktası <xref:System.STAThreadAttribute?displayProperty=fullName> özniteliğiyle işaretlenmez.
 
 ## <a name="rule-description"></a>Kural Tanımı
- <xref:System.STAThreadAttribute>uygulama için COM iş parçacığı modelinin tek iş parçacıklı apartman olduğunu gösterir. Bu öznitelik Windows Forms kullanan herhangi bir uygulamanın girişinde sunulur; atlanırsa, Windows bileşenleri doğru çalışmayabilir. Özniteliği yoksa, uygulama Windows Forms için desteklenmeyen çok iş parçacıklı grup modelini kullanır.
+ <xref:System.STAThreadAttribute> uygulama için COM iş parçacığı modelinin tek iş parçacıklı apartman olduğunu gösterir. Bu öznitelik Windows Forms kullanan herhangi bir uygulamanın girişinde sunulur; atlanırsa, Windows bileşenleri doğru çalışmayabilir. Özniteliği yoksa, uygulama Windows Forms için desteklenmeyen çok iş parçacıklı grup modelini kullanır.
 
 > [!NOTE]
-> [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]Uygulama çerçevesini kullanan projeler, STAThread ile **Main** metodunu işaretlemek zorunda değildir. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]Derleyici bunu otomatik olarak yapar.
+> [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Uygulama çerçevesini kullanan projeler, STAThread ile **Main** metodunu işaretlemek zorunda değildir. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]Derleyici bunu otomatik olarak yapar.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kuralın ihlalini onarmak için, <xref:System.STAThreadAttribute> giriş noktasına özniteliğini ekleyin. <xref:System.MTAThreadAttribute?displayProperty=fullName>Öznitelik varsa kaldırın.

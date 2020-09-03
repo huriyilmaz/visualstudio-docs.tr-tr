@@ -12,10 +12,10 @@ ms.workload:
 - data-science
 - azure
 ms.openlocfilehash: 3c756f3d9a89294ecce054650037be3f7b26c291
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540939"
 ---
 # <a name="configure-python-web-apps-for-iis"></a>IIS için Python Web Apps 'i yapılandırma
@@ -25,7 +25,7 @@ Windows bilgisayarda Internet Information Services (IIS) Web sunucusu olarak kul
 > [!Note]
 > Bu makale daha önce Windows üzerinde Azure App Service Python yapılandırma kılavuzunu içeriyordu. Bu senaryoda kullanılan Python uzantıları ve Windows Konakları, Linux üzerinde Azure App Service kullanım dışı bırakılmıştır. Daha fazla bilgi için bkz. [Python uygulamalarını Azure App Service (Linux) Ile yayımlama](publishing-python-web-applications-to-azure-from-visual-studio.md). Ancak önceki makale, [Python uzantılarıyla Windows üzerinde App Service yönetirken](managing-python-on-azure-app-service.md)hala kullanılabilir.
 
-## <a name="install-python-on-windows"></a>Windows 'a Python 'u yükler
+## <a name="install-python-on-windows"></a>Windows üzerinde Python’ı yükleme
 
 Bir Web uygulamasını çalıştırmak için, Python [yorumlayıcıları](installing-python-interpreters.md)'nı oluşturma bölümünde açıklandığı gibi, önce gerekli Python sürümünüzü doğrudan Windows ana makinesine yüklemeniz gerekir.
 
@@ -100,8 +100,8 @@ Daha sonra, *python.exe* ve *wfastcgi.py* için tam yolları içerecek şekilde 
     Bu `<appSettings>` değerler, uygulamanız için ortam değişkenleri olarak kullanılabilir:
 
     - Değeri, `PYTHONPATH` ücretsiz olarak genişletilebilir, ancak uygulamanızın kökünü içermelidir.
-    - `WSGI_HANDLER`uygulamanızdan bir WSGI uygulaması Importable öğesine işaret etmelidir.
-    - `WSGI_LOG`isteğe bağlıdır, ancak uygulamanızda hata ayıklama için önerilir.
+    - `WSGI_HANDLER` uygulamanızdan bir WSGI uygulaması Importable öğesine işaret etmelidir.
+    - `WSGI_LOG` isteğe bağlıdır, ancak uygulamanızda hata ayıklama için önerilir.
 
 1. `WSGI_HANDLER` *web.config* girişi, kullanmakta olduğunuz çerçeveye uygun şekilde ayarlayın:
 
