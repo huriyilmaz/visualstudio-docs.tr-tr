@@ -14,24 +14,24 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 10c894f3507ae760624b6ae18f785aae6016cd5e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184700"
 ---
 # <a name="assembly-element-visual-studio-templates"></a>Assembly Öğesi (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Projelere derlemeye bir başvuru eklemek için şablonu kullanan bir derlemeyle ilgili bilgileri belirtir.  
+Şablonun projelere Bu derlemenin bir başvurusunu eklemek için kullandığı bir derleme hakkındaki bilgileri belirtir.  
   
- \<VSTemplate >  
- \<TemplateContent >  
- \<Başvuru >  
- \<Başvuru >  
- \<Derleme >  
+ \<VSTemplate>  
+ \<TemplateContent>  
+ \<References>  
+ \<Reference>  
+ \<Assembly>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Assembly> AssemblyName </Assembly>  
@@ -50,14 +50,14 @@ Projelere derlemeye bir başvuru eklemek için şablonu kullanan bir derlemeyle 
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[Başvuru](../extensibility/reference-element-visual-studio-templates.md)|Öğe bir projeye eklendiğinde eklemek için derleme başvurusu belirtir.|  
+|[Başvuru](../extensibility/reference-element-visual-studio-templates.md)|Öğe projeye eklendiğinde Eklenecek derleme başvurusunu belirtir.|  
   
 ## <a name="text-value"></a>Metin Değeri  
  Bir metin değeri gereklidir.  
   
- Bu metin, öğe şablonu örneği oluşturulduğunda bir projeye Eklenecek derlemeyi belirtir. Bu derleme adı aşağıdaki yollardan birinde belirtilmelidir:  
+ Bu metin, öğe şablonu örneği oluşturulduğunda bir projeye eklenecek derlemeyi belirtir. Bu derleme adı aşağıdaki yollarla belirtilmelidir:  
   
-- Tam derleme adı. Örneğin:  
+- Tam derleme adı olarak. Örneğin:  
   
     ```  
     <Assembly>  
@@ -65,19 +65,19 @@ Projelere derlemeye bir başvuru eklemek için şablonu kullanan bir derlemeyle 
     </Assembly>  
     ```  
   
-- Basit metin başvuru olarak. Örneğin:  
+- Basit metin başvurusu olarak. Örneğin:  
   
     ```  
     <Assembly> System </Assembly>  
     ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Assembly` gerekli alt öğesi olan `Reference`.  
+ `Assembly` , öğesinin gerekli bir alt öğesidir `Reference` .  
   
- `Reference`, `References,` Ve `Assembly` öğeleri olan .vstemplate dosyaları yalnızca kullanılabilir bir `Type` öznitelik değerini `Item`.  
+ `Reference`, `References,` Ve `Assembly` öğeleri yalnızca özniteliği değeri olan. vstemplate dosyalarında kullanılabilir `Type` `Item` .  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte gösterilmiştir `TemplateContent` öğe şablonu öğesidir. Bu XML System.dll ve System.Data.dll derlemelerine başvurular ekler.  
+ Aşağıdaki örnek `TemplateContent` bir öğe şablonunun öğesini gösterir. Bu XML System.dll ve System.Data.dll derlemelerine başvurular ekler.  
   
 ```  
 <TemplateContent>  

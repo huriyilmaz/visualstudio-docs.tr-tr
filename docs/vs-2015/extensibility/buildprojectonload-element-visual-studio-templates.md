@@ -9,22 +9,22 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 464c427008c739f23431c58bd647aaa3b1f5609d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184660"
 ---
 # <a name="buildprojectonload-element-visual-studio-templates"></a>BuildProjectOnload Öğesi (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yalnızca yeni projeler oluşturmak ve bunları bir çözüme eklemek gibi oluşturur. Tüm çözüm hazırladılar değil.  
+Oluştururken yalnızca yeni projeler oluşturur ve bunları bir çözüme ekler. Tüm çözüm derlenmez.  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<BuildProjectOnLoad>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 <BuildProjectOnLoad> true/false </BuildOnLoad>  
@@ -43,18 +43,18 @@ Yalnızca yeni projeler oluşturmak ve bunları bir çözüme eklemek gibi oluş
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|TemplateData|Şablonu kategorilere ayırır ve her ikisinde de görüntülenme şeklini tanımlayan **yeni proje** ve **Yeni Öğe Ekle** iletişim kutuları.|  
+|TemplateData|Şablonu kategorilere ayırır ve hem **Yeni proje** hem de **Yeni öğe Ekle** iletişim kutularında nasıl göründüğünü tanımlar.|  
   
 ## <a name="text-value"></a>Metin Değeri  
  Bir metin değeri gereklidir.  
   
- Metin olmalıdır `true` veya `false` şablondan oluşturulduğunda, yalnızca yeni projeyi derlemek gösteren.  
+ Metin ya da `true` `false` şablondan oluşturulduğunda yalnızca yeni proje oluşturulup oluşturulmayacağını göstermek için olmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `BuildProjectOnLoad` İsteğe bağlı bir öğedir. Varsayılan değer `false` şeklindedir.  
+ `BuildProjectOnLoad` isteğe bağlı bir öğedir. Varsayılan değer: `false`.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir Visual C# şablonu meta verileri gösterir.  
+ Aşağıdaki örnek, bir Visual C# şablonu için meta verileri gösterir.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  

@@ -19,18 +19,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1a3c9b3a6ae2ed11e8512f8cf8857d27b3d0043b
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850069"
 ---
 # <a name="debug-layout-using-dom-explorer"></a>DOM Gezgini'ni kullanarak düzen hatalarını ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Windows ve Windows Phone için geçerlidir] (.. /Image/windows_and_phone_content.png "windows_and_phone_content")  
+Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content.png "windows_and_phone_content")  
   
- DOM Gezgini 'nin **Düzen** sekmesi, bir [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulamasında seçili öğe için [CSS kutusu modelini](https://www.w3.org/TR/CSS2/box.html) , Windows Phone mağaza uygulamasını veya Apache Cordova Visual Studio araçları kullanılarak oluşturulan bir uygulamayı gösterir. Öğelerin görünümünü etkileyen düzenle ilgili değerleri belirlemek ve değiştirmek için Box modelinin bu görsel gösterimini kullanabilirsiniz.  
+ DOM Gezgini 'nin **Düzen** sekmesi, bir uygulamadaki seçili öğe için [CSS kutusu modelini](https://www.w3.org/TR/CSS2/box.html) [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] , Windows Phone mağaza uygulamasını veya Apache Cordova için Visual Studio araçları kullanılarak oluşturulan bir uygulamayı gösterir. Öğelerin görünümünü etkileyen düzenle ilgili değerleri belirlemek ve değiştirmek için Box modelinin bu görsel gösterimini kullanabilirsiniz.  
   
 > [!TIP]
 > **Düzen** sekmesinde yaptığınız değişiklikler kalıcı değildir. Kaynak kodunuzda kalıcı değişiklikler yapabilir ve ardından hata ayıklama araç çubuğunda **Windows uygulamasını Yenile** düğmesini (yalnızca Windows mağazası ve Windows Phone mağaza uygulamaları) kullanarak uygulamanızı yenileyebilirsiniz. Bu şekilde, hata ayıklayıcıyı yeniden başlatmanıza engel olabilirsiniz.  
@@ -78,7 +78,7 @@ Windows ve Windows Phone için geçerlidir] (.. /Image/windows_and_phone_content
     > [!TIP]
     > Visual Studio penceresinin hemen yanındaki telefon öykünücüsünü veya simülatörünü, CSS stillerinde yaptığınız seçimlerin ve değişikliklerinizin sonuçlarını hemen görebilirsiniz.  
   
-     4\. Bölüm yüklendiğinde, küçük görüntülerin doğru olmadığına bakabilirsiniz. Her öğe görüntüsü yarım (sol yarısı eksik) olarak kesilir.  
+     4. Bölüm yüklendiğinde, küçük görüntülerin doğru olmadığına bakabilirsiniz. Her öğe görüntüsü yarım (sol yarısı eksik) olarak kesilir.  
   
 8. Visual Studio 'ya geçin ve DOM Gezgini 'nde **öğe seç** ' i seçin (veya CTRL + B tuşlarına basın). Böylece seçim modu değişir ve öğeyi tıklatarak seçebilirsiniz ve uygulama da önplana gelir. Tek tıklatmadan sonra mod geri döner.  
   
@@ -105,7 +105,7 @@ Windows ve Windows Phone için geçerlidir] (.. /Image/windows_and_phone_content
   
      Bu görünüm öğesi hakkında bazı yararlı bilgiler sağlar:  
   
-    - Renkler, öğelerin üzerine gelindiğinde simülatör içinde görüntülenen kutu vurgulaması için karşılık gelir. Mavi renk \<img > öğe boyutlarını temsil eder. Tan rengi, kenar boşluğu değerlerini temsil eder.  
+    - Renkler, öğelerin üzerine gelindiğinde simülatör içinde görüntülenen kutu vurgulaması için karşılık gelir. Mavi renk \<img> öğe boyutlarını temsil eder. Tan rengi, kenar boşluğu değerlerini temsil eder.  
   
     - Sol kenar boşluğu (kenar boşluğu-sol), belirtiyle eşleştiğinden (görüntülerin sol tarafında siyah), bu sorunun nedenini gösteren bir deyişle belirlenir.  
   
@@ -114,7 +114,7 @@ Windows ve Windows Phone için geçerlidir] (.. /Image/windows_and_phone_content
 11. Kenar boşluğu sol kuralının nasıl uygulandığını görmek için, **hesaplanan** sekmesini seçin ve sol kenar boşluğu kuralı altına bakın. Bu kuralın bir 5em değeri ile ayarlandığını görebilirsiniz, ancak hedef cihazınıza bağlı olarak, hesaplanan değer 66.66 px ya da 146.66 px olur.  
   
     > [!TIP]
-    > **Hesaplanan** sekme, sol kenar boşluğunun `..hubpage .hub. section4 .sub-image-row img` CSS seçicisinde ayarlandığı, hub. css dosyasında bulunduğunu gösterir. Bu tanıtım uygulamasında, bu, çözümü yapmanız gereken yerdir.  
+    > **Hesaplanan** sekme, sol kenar boşluğunun, The The The The The The `..hubpage .hub. section4 .sub-image-row img` CS. css ' de bulunan CSS seçicisinde ayarlandığını gösterir. Bu tanıtım uygulamasında, bu, çözümü yapmanız gereken yerdir.  
   
      Düzen değerlerinde yapılan değişiklikleri test etmek için de **Düzen** sekmesini kullanabilirsiniz.  
   
@@ -122,7 +122,7 @@ Windows ve Windows Phone için geçerlidir] (.. /Image/windows_and_phone_content
   
 13. `0` yazıp Enter tuşuna basın. (Değeri değiştirmek için yukarı ok ve aşağı ok tuşlarını da kullanabilirsiniz.)  
   
-14. DOM Gezgini 'nde diğer \<img > öğelerini seçin ve kenar boşluğu sol değerlerini 0 olarak değiştirin.  
+14. \<img>DOM Gezgini 'nde diğer öğeleri seçin ve kenar boşluğu sol değerlerini 0 olarak değiştirin.  
   
 15. Telefon öykünücüye veya benzeticide geçiş yapın. Güncelleştirilmiş kenar boşluğu-sol değerleri Bölüm 4 görüntülerine uygulandı. Bu değerler ayrıca, sol taraftaki kenar boşluğu kuralı altındaki **hesaplanan** sekmede de güncelleştirilir.  
   

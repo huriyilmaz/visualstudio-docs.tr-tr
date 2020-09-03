@@ -15,16 +15,16 @@ caps.latest.revision: 26
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: aa346ebfe321e4672ea3fa71a4dcc872ebf22cda
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850227"
 ---
 # <a name="shell-isolated-or-integrated"></a>Kabuk (Yalıtılmış veya Tümleşik)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kendi Visual Studio tabanlı uygulamanızı tümleşik ya da yalıtılmış modda oluşturabilirsiniz. Tümleşik modda, uygulamanıza ek olarak birçok Visual Studio özelliği kullanılabilir. Yalıtılmış modda, kendi uzantınızla birlikte dağıtmak istediğiniz Visual Studio özelliklerinin bir alt kümesini seçebilirsiniz.  
+Kendi Visual Studio tabanlı uygulamanızı tümleşik ya da yalıtılmış modda oluşturabilirsiniz. Tümleşik modda, uygulamanıza ek olarak birçok Visual Studio özelliği de mevcuttur. Yalıtılmış modda, kendi uzantınızla birlikte dağıtmak istediğiniz Visual Studio özelliklerinin bir alt kümesini seçersiniz.  
   
 ## <a name="integrated-mode"></a>Tümleşik mod  
  Tümleşik mod, kullanıcılarınızın özel araçlarınızla birlikte standart Visual Studio özelliklerini kullanmasına olanak sağlar. Tümleşik Kabuk öncelikle programlama dillerini ve yazılım geliştirme araçlarını barındırmak için tasarlanmıştır.  

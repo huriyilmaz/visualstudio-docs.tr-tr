@@ -18,10 +18,10 @@ monikerRange: vs-2017
 ms.workload:
 - uwp
 ms.openlocfilehash: 9fdc2b7fc459d655748444759913cab903dfe782
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85331419"
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>Evrensel Windows uygulamalarında HTML UI yanıt hızını çözümleme
@@ -71,7 +71,7 @@ Bu konuda, Evrensel Windows uygulamaları için kullanılabilen bir performans a
 ## <a name="isolate-an-issue"></a>Bir sorunu yalıtmak
  Aşağıdaki bölümde, performans sorunlarını yalıtmanıza yardımcı olacak öneriler sunulmaktadır. Örnek performans testi uygulaması kullanarak performans sorunlarını belirleme ve çözme hakkında adım adım bir açıklama için bkz. [Izlenecek yol: UI yanıt hızını geliştirme (HTML)](html-ui-responsiveness.md).
 
-### <a name="isolate-a-ui-responsiveness-problem"></a><a name="Workflow"></a>UI yanıtlama hızı sorununu yalıtma
+### <a name="isolate-a-ui-responsiveness-problem"></a><a name="Workflow"></a> UI yanıtlama hızı sorununu yalıtma
  Bu adımlar, UI yanıtlama hızı profil oluşturucuyu daha verimli bir şekilde kullanmanıza yardımcı olabilecek önerilen bir iş akışı sağlar:
 
 1. Uygulamanızı Visual Studio 'da açın.
@@ -128,12 +128,12 @@ Bu konuda, Evrensel Windows uygulamaları için kullanılabilen bir performans a
 
 13. Yakınlaştırıldığında, CPU kullanımı veya görsel işleme grafiğinin bir kısmını seçin. Bir seçim yaptığınızda, profil oluşturucunun alt bölmesindeki zaman çizelgesi ayrıntıları grafı yalnızca seçilen zaman dilimini gösterecek şekilde değişir.
 
-### <a name="isolate-a-visual-throughput-problem"></a><a name="IsolateVisualThroughput"></a>Görsel aktarım hızı sorununu yalıtma
+### <a name="isolate-a-visual-throughput-problem"></a><a name="IsolateVisualThroughput"></a> Görsel aktarım hızı sorununu yalıtma
  Aşırı CPU kullanımının süreleri, düşük veya tutarsız kare oranlarına neden olabilir. Zengin medya uygulamaları ve oyunları geliştirirseniz, görsel verimlilik grafiği CPU kullanımı grafiğinden daha önemli veriler sağlayabilir.
 
  Bir görsel işleme sorununu yalıtmak için, önceki bölümde açıklanan adımları izleyin, ancak temel veri noktalarından biri olarak görsel üretilen iş grafiğini kullanın.
 
-### <a name="mark-code-for-analysis"></a><a name="ProfileMark"></a>Kodu analiz için işaretle
+### <a name="mark-code-for-analysis"></a><a name="ProfileMark"></a> Kodu analiz için işaretle
  Grafiklerde görüntülenen verilerle ilişkili uygulama kodu bölümünü yalıtmak için uygulamanıza bir işlev çağrısı ekleyebilirsiniz. böylece, profil oluşturucunun, zaman çizelgesinde işlevin yürütüldüğü sırada bir kullanıcı işareti (ters üçgen) eklemesini sağlar. Eklediğiniz herhangi bir kullanıcı işareti, CPU kullanımı grafiğinin, görsel verimlilik grafiğinin ve zaman çizelgesi ayrıntıları grafiğinin zaman çizelgesinde görüntülenir.
 
  Kullanıcı işareti eklemek için, uygulamanıza aşağıdaki kodu ekleyin. Bu örnek, olayın açıklaması olarak "veri alma" kullanır.
@@ -172,7 +172,7 @@ if (performance.mark && performance.measure) {
 ## <a name="analyze-data"></a>Verileri çözümleme
  Aşağıdaki bölümler, profil oluşturucuda görüntülenen verileri yorumlamaya yardımcı olacak bilgiler sağlar.
 
-### <a name="view-the-diagnostic-session-timeline"></a><a name="Ruler"></a>Tanılama oturumu zaman çizelgesini görüntüleme
+### <a name="view-the-diagnostic-session-timeline"></a><a name="Ruler"></a> Tanılama oturumu zaman çizelgesini görüntüleme
  Profil oluşturucunun en üstündeki cetvel profili oluşturulmuş bilgiler için zaman çizelgesini gösterir. Bu zaman çizelgesi hem CPU kullanımı grafiği hem de görsel işleme grafiği için geçerlidir.
 
  Tanılama oturumu zaman çizelgesinin çeşitli uygulama yaşam döngüsü olayları için gösterilen bir araç ipucuyla nasıl göründüğü aşağıda verilmiştir:
@@ -183,11 +183,11 @@ if (performance.mark && performance.measure) {
 
  Uygulama yaşam döngüsü olayları, elmas sembolleri olarak görünür. Bunlar, aşağıdakiler dahil olmak üzere DOM olaylardır:
 
-- `DOMContentLoaded`ve `Load` genellikle kodunuzda etkinleştirilen olay işleyicisinde gerçekleşen olaylar. Olay için bir araç ipucu, belirli bir olayı ve URL 'YI gösterir.
+- `DOMContentLoaded` ve `Load` genellikle kodunuzda etkinleştirilen olay işleyicisinde gerçekleşen olaylar. Olay için bir araç ipucu, belirli bir olayı ve URL 'YI gösterir.
 
 - Farklı bir sayfaya gittiğinizde oluşan bir gezinti olayı. Olay için bir araç ipucu hedef sayfa URL 'sini gösterir.
 
-### <a name="view-cpu-utilization"></a><a name="CPUUtilization"></a>CPU kullanımını görüntüle
+### <a name="view-cpu-utilization"></a><a name="CPUUtilization"></a> CPU kullanımını görüntüle
  CPU kullanımı grafiği, aşırı CPU etkinliğinin zaman aralıklarını tanımlamanızı sağlar. Uygulamanın, bir süre boyunca ortalama CPU kullanımı hakkında bilgi sağlar. Bilgiler, aşağıdaki belirli kategorileri temsil edecek şekilde renk kodludur: **yükleme**, **betik oluşturma**, çöp toplama (**GC**), **Stil**oluşturma, **işleme**ve **görüntü kod çözme**. Bu Kategoriler hakkında daha fazla bilgi için bu konunun ilerleyen kısımlarında [Profil Oluşturucu olay başvurusu](#profiler-event-reference) bölümüne bakın.
 
  CPU kullanım grafiğinde, bir veya daha fazla CPU için CPU kullanım değerlerini tek bir yüzde değeri olarak birleştiren tüm uygulama iş parçacıklarında harcanan süre miktarı gösterilir. Birden fazla CPU kullanımda olduğunda CPU kullanım değeri yüzde 100 ' ü aşabilir.
@@ -209,7 +209,7 @@ if (performance.mark && performance.measure) {
 
   Grafiği kullanma hakkında daha fazla bilgi için, bkz. bu konuda [UI yanıtlama hızı sorununu yalıtma](#Workflow) .
 
-### <a name="view-visual-throughput-fps"></a><a name="VisualThroughput"></a>Görsel aktarım hızını (FPS) görüntüleme
+### <a name="view-visual-throughput-fps"></a><a name="VisualThroughput"></a> Görsel aktarım hızını (FPS) görüntüleme
  Görsel üretilen iş grafiği, çerçeve hızının bırakılmakta olduğu zaman aralıklarını tanımlamanızı sağlar. Uygulamanın saniye başına (FPS) kare sayısını gösterir. Bu grafik, oyunların ve zengin medya uygulamalarının geliştirilmesi için en yararlı seçenektir.
 
  Görüntülenmekte olan FPS değeri, gerçek kare oranından farklı bir değer içerebilir. Bu Grafikteki verileri incelerken bu bilgileri göz önünde bulundurun:
@@ -232,7 +232,7 @@ if (performance.mark && performance.measure) {
 
 - **Yakınlaştır** düğmesini seçerek seçili bir zaman döneminin daha ayrıntılı bir görünümünü alın.
 
-### <a name="view-timeline-details"></a><a name="TimelineDetails"></a>Zaman çizelgesi ayrıntılarını görüntüle
+### <a name="view-timeline-details"></a><a name="TimelineDetails"></a> Zaman çizelgesi ayrıntılarını görüntüle
  Zaman çizelgesi ayrıntıları grafiği, UI yanıtlama hızı profil oluşturucunun alt bölmesinde görünür. Seçilen zaman aralıklarında en fazla CPU süresini tüketen olaylar hakkında sıralı ve hiyerarşik bilgiler sağlar. Bu grafik, belirli bir olayı neyin tetikleyeceğini ve bazı olaylar için olayın kaynak koda nasıl geri eşlendiğini belirlemenize yardımcı olabilir. Bu grafik, ekranda görsel güncelleştirmeleri boyamak için gereken süreyi belirlemenize de yardımcı olur.
 
  Grafik, UI iş parçacığı çalıştığını ve yavaş görsel güncelleştirmelere katkıda bulunan arka plan iş parçacıklarında çalışmayı gösterir. Grafik, JavaScript JıT işini, zaman uyumsuz GPU işini, ana bilgisayar işleminin dışında (RuntimeBroker.exe ve dwm.exe iş) veya daha önce profil oluşturma (disk g/ç) için henüz eklenmemiş Windows Çalışma Zamanı alanlarında çalışmayı göstermez.
@@ -271,12 +271,12 @@ if (performance.mark && performance.measure) {
   > [!TIP]
   > Zaman çizelgesi ayrıntıları grafiği ve **kapsamlı zaman Özeti** , en iyi duruma getirme alanını belirlemenize yardımcı olabilir. Bu görünümlerden biri çok sayıda küçük görevi gösteriyorsa, olay iyileştirme için bir aday olabilir. Örneğin, bir uygulama DOM öğelerinin sıklıkla yenilenmesi, çok sayıda düzen ve HTML Ayrıştırma olayına neden olabilir. Bu işi toplu olarak gerçekleştirerek performansı iyileştirebilirsiniz.
 
-### <a name="filter-timeline-details"></a><a name="FilterTimelineDetails"></a>Zaman çizelgesi ayrıntılarını filtrele
+### <a name="filter-timeline-details"></a><a name="FilterTimelineDetails"></a> Zaman çizelgesi ayrıntılarını filtrele
  Belirli bir olay için bağlam menüsünden **olaya filtrele ' i** seçerek zaman çizelgesi ayrıntılarında görünümü belirli bir olaya filtreleyebilirsiniz. Bu seçeneği belirlediğinizde, zaman çizelgesi ve kılavuz görünümü seçili olaya göre kapsamlandırılır. CPU kullanımı grafiğindeki seçim Ayrıca belirli bir olaya kapsamlar sağlar.
 
  ![Zaman çizelgesini bir olaya filtreleme](../profiling/media/js_htmlvizprofiler_filtertoevent.png "JS_HTMLVizProfiler_FilterToEvent")
 
-### <a name="filter-events"></a><a name="FilterEvents"></a>Olayları Filtrele
+### <a name="filter-events"></a><a name="FilterEvents"></a> Olayları Filtrele
  Verilerdeki paraziti azaltmak veya performans senaryonuz için ilginç olmayan verileri ortadan kaldırmak için zaman çizelgesi ayrıntıları grafiğindeki bazı olayları filtreleyebilirsiniz. Olay adına veya olay süresine göre veya burada açıklanan belirli filtrelere göre filtreleyebilirsiniz.
 
  Görüntü kodunu çözme, yansımalı indirme ve GC olaylarını filtrelemek için alt bölmedeki filtre simgesinden **arka plan etkinliği** seçeneğini temizleyin. Bu olaylar çok fazla kullanılabilir olmadığından, varsayılan olarak gizlidir.
@@ -292,7 +292,7 @@ if (performance.mark && performance.measure) {
 
  Kullanıcı ölçülerini filtrelemek için **Kullanıcı ölçüleri** seçeneğini temizleyin. Kullanıcı ölçüleri alt düzey olmayan en üst düzey olaylardır.
 
-### <a name="group-events-by-frame"></a><a name="GroupFrames"></a>Olayları çerçeveye göre Gruplandır
+### <a name="group-events-by-frame"></a><a name="GroupFrames"></a> Olayları çerçeveye göre Gruplandır
  Zaman çizelgesi ayrıntıları görünümünde görünen olayları tek tek çerçevelere gruplayabilirsiniz. Bu çerçeve olayları, araç tarafından oluşturulan olaylardır ve boyama olayları arasında gerçekleşen tüm UI iş parçacığı işleri için üst düzey olay kapsayıcılarını temsil eder. Bu görünümü etkinleştirmek için **çerçevelere göre grup üst düzey olayları**' nı seçin.
 
  ![Üst düzey olayları çerçeveye göre Gruplandır](../profiling/media/js_htmlvizprofiler_frame_grouping_button.png "JS_HTMLVizProfiler_Frame_Grouping_Button")

@@ -20,16 +20,16 @@ ms.author: jillfra
 manager: jillfra
 robots: noindex,nofollow
 ms.openlocfilehash: 8116d4ab4a2f20f79f3849ae7f8b324af9832dd5
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850248"
 ---
 # <a name="walkthrough-displaying-related-data-in-a-wpf-application"></a>İzlenecek Yol: Bir WPF Uygulamasında İlgili Verileri Görüntüleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu kılavuzda, üst/alt ilişkisi olan veritabanı tablolarından veri görüntüleyen bir WPF uygulaması oluşturacaksınız. Veriler bir Varlık Veri Modeli varlıklarda kapsüllenir. Üst varlık, bir dizi siparişin genel bakış bilgilerini içerir. Bu varlığın her özelliği, uygulamadaki farklı bir denetime bağlanır. Alt varlık her bir siparişin ayrıntılarını içerir. Bu veri kümesi bir <xref:System.Windows.Controls.DataGrid> denetimine bağlanır.
+Bu kılavuzda, üst/alt ilişkisi olan veritabanı tablolarından veri görüntüleyen bir WPF uygulaması oluşturacaksınız. Veriler bir Varlık Veri Modeli varlıklarda kapsüllenir. Üst varlık, bir dizi siparişin genel bakış bilgilerini içerir. Bu varlığın her özelliği, uygulamadaki farklı bir denetime bağlanır. Alt varlık her bir siparişin ayrıntılarını içerir. Bu veri kümesi bir <xref:System.Windows.Controls.DataGrid> denetime bağlanır.
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
@@ -37,11 +37,11 @@ Bu kılavuzda, üst/alt ilişkisi olan veritabanı tablolarından veri görünt�
 
 - Bir dizi siparişin genel bakış bilgilerini görüntüleyen bir veri bağlantılı denetimler kümesi oluşturma. Denetimleri, bir üst varlığı **veri kaynakları** penceresinden **WPF tasarımcısına**sürükleyerek oluşturabilirsiniz.
 
-- Seçili her sipariş için ilgili ayrıntıları görüntüleyen bir <xref:System.Windows.Controls.DataGrid> denetimi oluşturma. Bir alt varlığı, **veri kaynakları** penceresinden **WPF Tasarımcısında**bir pencereye sürükleyerek oluşturabilirsiniz.
+- <xref:System.Windows.Controls.DataGrid>Seçili her sipariş için ilgili ayrıntıları görüntüleyen bir denetim oluşturma. Bir alt varlığı, **veri kaynakları** penceresinden **WPF Tasarımcısında**bir pencereye sürükleyerek oluşturabilirsiniz.
 
    [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
@@ -65,17 +65,17 @@ Bu kılavuzda, üst/alt ilişkisi olan veritabanı tablolarından veri görünt�
 
 2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
 
-3. **C# Görsel** veya **Visual Basic**öğesini genişletin ve ardından **Windows**' u seçin.
+3. **Visual C#** veya **Visual Basic**öğesini genişletin ve ardından **Windows**' u seçin.
 
-4. İletişim kutusunun üst kısmındaki Birleşik giriş kutusunda **.NET Framework 4** ' ün seçildiğinden emin olun. Bu izlenecek yolda kullandığınız <xref:System.Windows.Controls.DataGrid> denetimi yalnızca .NET Framework 4 ' te kullanılabilir.
+4. İletişim kutusunun üst kısmındaki Birleşik giriş kutusunda **.NET Framework 4** ' ün seçildiğinden emin olun. <xref:System.Windows.Controls.DataGrid>Bu izlenecek yolda kullandığınız denetim yalnızca .NET Framework 4 ' te kullanılabilir.
 
 5. **WPF uygulaması** proje şablonunu seçin.
 
 6. **Ad** kutusuna `AdventureWorksOrdersViewer` yazın.
 
-7. **Tamam**'ı tıklatın.
+7. **Tamam**’a tıklayın.
 
-     Visual Studio `AdventureWorksOrdersViewer` projesi oluşturur.
+     Visual Studio projeyi oluşturur `AdventureWorksOrdersViewer` .
 
 ## <a name="creating-an-entity-data-model-for-the-application"></a>Uygulama için Varlık Veri Modeli oluşturma
  Veriye dayalı denetimler oluşturabilmeniz için önce uygulamanız için bir veri modeli tanımlamanız ve **veri kaynakları** penceresine eklemeniz gerekir. Bu kılavuzda, veri modeli bir Varlık Veri Modeli.
@@ -94,11 +94,11 @@ Bu kılavuzda, üst/alt ilişkisi olan veritabanı tablolarından veri görünt�
 
    - Aşağı açılan listede AdventureWorksLT örnek veritabanıyla bir veri bağlantısı varsa, bunu seçin.
 
-      veya
+      -veya-
 
    - **Yeni bağlantı** ' ya tıklayın ve AdventureWorksLT veritabanına bir bağlantı oluşturun.
 
-     **App. config dosyasındaki varlık bağlantısı ayarlarını kaydet** seçeneğinin belirlendiğinden emin olun ve ardından **İleri**' ye tıklayın.
+     **Varlık bağlantısı ayarlarının App.Config olarak Kaydet ' in** seçildiğinden emin olun ve ardından **İleri**' ye tıklayın.
 
 6. **Veritabanı nesnelerinizi seçin** sayfasında **Tablolar**' ı genişletin ve ardından aşağıdaki tabloları seçin:
 
@@ -108,10 +108,10 @@ Bu kılavuzda, üst/alt ilişkisi olan veritabanı tablolarından veri görünt�
 
 7. **Son**'a tıklayın.
 
-8. Projeyi oluşturun.
+8. Projeyi derleyin.
 
 ## <a name="creating-data-bound-controls-that-display-the-orders"></a>Siparişleri görüntüleyen veri bağlantılı denetimler oluşturma
- **Veri kaynakları** penceresinden WPF tasarımcısına `SalesOrderHeaders` varlığını sürükleyerek sıra kayıtlarını görüntüleyen denetimler oluşturun.
+ `SalesOrderHeaders`Varlığı **veri kaynakları** penceresinden WPF tasarımcısına sürükleyerek sıralama kayıtlarını görüntüleyen denetimler oluşturun.
 
 #### <a name="to-create-data-bound-controls-that-display-the-order-records"></a>Sipariş kayıtlarını görüntüleyen veriye dayalı denetimler oluşturmak için
 
@@ -143,7 +143,7 @@ Bu kılavuzda, üst/alt ilişkisi olan veritabanı tablolarından veri görünt�
 
    - **TaxAmt**
 
-   - **Liye**
+   - **Nakliye**
 
    - **rowguid**
 
@@ -160,7 +160,7 @@ Bu kılavuzda, üst/alt ilişkisi olan veritabanı tablolarından veri görünt�
 9. **Özellikler** penceresinde, **IsReadOnly** özelliğinin yanındaki onay kutusunu işaretleyin.
 
 ## <a name="creating-a-datagrid-that-displays-the-order-details"></a>Sıra ayrıntılarını görüntüleyen bir DataGrid oluşturma
- **Veri kaynakları** penceresinden WPF tasarımcısına `SalesOrderDetails` varlığını sürükleyerek sıra ayrıntılarını görüntüleyen bir <xref:System.Windows.Controls.DataGrid> denetimi oluşturun.
+ <xref:System.Windows.Controls.DataGrid> `SalesOrderDetails` Varlığı **VERI kaynakları** penceresinden WPF tasarımcısına sürükleyerek sıra ayrıntılarını görüntüleyen bir denetim oluşturun.
 
 #### <a name="to-create-a-datagrid-that-displays-the-order-details"></a>Sıra ayrıntılarını görüntüleyen bir DataGrid oluşturmak için
 
@@ -181,11 +181,11 @@ Bu kılavuzda, üst/alt ilişkisi olan veritabanı tablolarından veri görünt�
 
    - **ModifiedDate & lt**
 
-     Bu eylem, Visual Studio 'Nun bu verileri bir sonraki adımda oluşturduğunuz <xref:System.Windows.Controls.DataGrid> denetimine eklenmesini engeller. Bu izlenecek yol için, son kullanıcının bu verileri görmesini gerektirmeyen varsayılır.
+     Bu eylem, Visual Studio 'Nun bu verileri bir <xref:System.Windows.Controls.DataGrid> sonraki adımda oluşturduğunuz denetime dahil etmesini engeller. Bu izlenecek yol için, son kullanıcının bu verileri görmesini gerektirmeyen varsayılır.
 
 4. **Veri kaynakları** penceresinde, alt **SALESORDERDETAILS** düğümünü **WPF Tasarımcısında**pencereye sürükleyin.
 
-    Visual Studio, yeni bir veri bağlantılı <xref:System.Windows.Controls.DataGrid> denetimi tanımlamak için XAML oluşturur ve denetim tasarımcıda görünür. Visual Studio Ayrıca, arka plan kod dosyasındaki oluşturulan `GetSalesOrderHeadersQuery` yöntemini, verileri **SalesOrderDetails** varlığına dahil etmek için de güncelleştirir.
+    Visual Studio, yeni bir veri bağlantılı denetim tanımlamak için XAML oluşturur <xref:System.Windows.Controls.DataGrid> ve denetim tasarımcıda görünür. Visual Studio Ayrıca, `GetSalesOrderHeadersQuery` arka plan kod dosyasındaki oluşturulan yöntemi, verileri **SalesOrderDetails** varlığına dahil etmek için de güncelleştirir.
 
 ## <a name="testing-the-application"></a>Uygulamayı Test Etme
  Sipariş kayıtlarını görüntülediğini doğrulamak için uygulamayı derleyin ve çalıştırın.
@@ -198,7 +198,7 @@ Bu kılavuzda, üst/alt ilişkisi olan veritabanı tablolarından veri görünt�
 
     - **Satış SIPARIŞI kimliği** açılan kutusu **71774**görüntüler. Bu, varlıktaki ilk sipariş KIMLIĞIDIR.
 
-    - **Satış SIPARIŞI kimliği** Birleşik giriş kutusunda seçtiğiniz her sipariş için <xref:System.Windows.Controls.DataGrid>ayrıntılı sipariş bilgileri görüntülenir.
+    - **Satış SIPARIŞI kimliği** Birleşik giriş kutusunda seçtiğiniz her sıra için ayrıntılı sipariş bilgileri içinde görüntülenir <xref:System.Windows.Controls.DataGrid> .
 
 2. Uygulamayı kapatın.
 

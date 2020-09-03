@@ -14,14 +14,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 00df917b05f5073634b0956a0b44e5b0fc6026a6
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75846327"
 ---
 # <a name="rule-condition-editor-dialog-box-legacy"></a>Kural Koşulu Düzenleyicisi İletişim Kutusu (Eski)
-Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]**kural koşulu Düzenleyicisi** iletişim kutusunun nasıl kullanılacağı açıklanmaktadır. Eski kullanın [!INCLUDE[wfd2](../includes/wfd2-md.md)] hedeflemek gerektiğinde [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Bu konuda, eski sürümündeki **kural koşulu Düzenleyicisi** iletişim kutusunun nasıl kullanıldığı açıklanmaktadır [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Ya da ' i hedefliyorsanız, eski kullanın [!INCLUDE[wfd2](../includes/wfd2-md.md)] [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  **Kural koşulu Düzenleyicisi** iletişim kutusunu kullanarak bildirime dayalı kural koşulları oluşturun ve değiştirirsiniz. Bu kural koşulları, aşağıdaki Windows Workflow Foundation hazır etkinlikler üzerinde özellikler olarak sunulur:
 
@@ -47,23 +47,23 @@ Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]**kur
 |**Tamam**|Kural koşulunu kaydetmek için tıklayın.|
 
 ## <a name="entering-condition-expressions"></a>Koşul Ifadelerini girme
- Koşul ifadeleri metin olarak girilir. **Bunu yazabilirsiniz.** bir IntelliSense benzeri bir menü kullanarak iş akışında kullanılan alanlara, özelliklere ve yöntemlere başvurmak için düzenleyiciye. Ya da doğrudan bir iş akışı üye adı yazabilirsiniz. Koşula mantıksal işleçler ekleyebilirsiniz, örneğin ve, veya. Ayrıca, koşullar da ekleyebilirsiniz. Bir koşul, ikili bir işleçtir ve iki işleçtir. Desteklenen ikili işleçler **==** , **>** , **\<** , **>=** ve **<=** . Desteklenen işlenenler sabit değer, aritmetik işlev ve kapsamlı ortak üyeleridir.
+ Koşul ifadeleri metin olarak girilir. **Bunu yazabilirsiniz.** bir IntelliSense benzeri bir menü kullanarak iş akışında kullanılan alanlara, özelliklere ve yöntemlere başvurmak için düzenleyiciye. Ya da doğrudan bir iş akışı üye adı yazabilirsiniz. Koşula mantıksal işleçler ekleyebilirsiniz, örneğin ve, veya. Ayrıca, koşullar da ekleyebilirsiniz. Bir koşul, ikili bir işleçtir ve iki işleçtir. Desteklenen ikili işleçler,, **==** ve ' dir **>** **\<**, **>=** **<=** . Desteklenen işlenenler sabit değer, aritmetik işlev ve kapsamlı ortak üyeleridir.
 
- Karşılaştırma için türü belirtebilir ve **null** ya da boş bir dize ile karşılaştırabilirsiniz. Karmaşık bir tür içeren bir değişkende (örneğin, `this.Address.State == "WA"`iç içe çağrılar yapabilirsiniz.
+ Karşılaştırma için türü belirtebilir ve **null** ya da boş bir dize ile karşılaştırabilirsiniz. Karmaşık bir tür içeren bir değişkende bulunan üyelere iç içe çağrılar yapabilirsiniz, örneğin, `this.Address.State == "WA"` .
 
  Kural koşulu Düzenleyicisi aşağıdaki işleçleri destekler:
 
 - İlişkisel işleçler: = =, =,! =
 
-- Karşılaştırma işleçleri: <, \<=, >, > =
+- Karşılaştırma işleçleri: <, \<=, > , >=
 
 - Aritmetik işleçler: +,-, *,/, MOD
 
-- Mantıksal işleçler: ve, & &, veya, &#124; &#124;, Not,!
+- Mantıksal işleçler: ve,  &&, OR,  &#124;&#124;, NOT,!
 
-- Bit düzeyinde işleçler: &,&#124;
+- Bit düzeyinde işleçler: &, &#124;
 
-  İfade işleci önceliği, C# işleç öncelik kurallarını izler.
+  İfade işleci önceliği C# işleç öncelik kurallarını izler.
 
   Kural koşulu Düzenleyicisi aşağıdaki sayısal ifadeleri destekler:
 
@@ -82,4 +82,4 @@ Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]**kur
   Koşullar hakkında daha fazla bilgi için bkz. [Iş akışlarında koşulları kullanma](https://msdn2.microsoft.com/library/bb628447.aspx).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [IfElseActivity](https://msdn2.microsoft.com/library/system.workflow.activities.ifelseactivity.aspx) [ConditionedActivityGroup](https://msdn2.microsoft.com/library/system.workflow.activities.conditionedactivitygroup.aspx) [ReplicatorActivity](https://msdn2.microsoft.com/library/system.workflow.activities.replicatoractivity.aspx) [WhileActivity](https://msdn2.microsoft.com/library/system.workflow.activities.whileactivity.aspx) [Koşul Seç iletişim kutusu (eski)](../workflow-designer/select-condition-dialog-box-legacy.md) [](https://msdn2.microsoft.com/library/bb628447.aspx) [Kullanıcı arabiriminde eski tasarımcı Windows Workflow Foundation UI Yardımı](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)
+ [IfElseActivity](https://msdn2.microsoft.com/library/system.workflow.activities.ifelseactivity.aspx) [ConditionedActivityGroup](https://msdn2.microsoft.com/library/system.workflow.activities.conditionedactivitygroup.aspx) [ReplicatorActivity](https://msdn2.microsoft.com/library/system.workflow.activities.replicatoractivity.aspx) [WhileActivity](https://msdn2.microsoft.com/library/system.workflow.activities.whileactivity.aspx) [Koşul Seç iletişim kutusu (eski)](../workflow-designer/select-condition-dialog-box-legacy.md) [Using Conditions in Workflows](https://msdn2.microsoft.com/library/bb628447.aspx) [Kullanıcı arabiriminde eski tasarımcı Windows Workflow Foundation UI Yardımı](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)

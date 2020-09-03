@@ -1,5 +1,5 @@
 ---
-title: Eski API'yi kullanarak görünüm ayarlarını değiştirme | Microsoft Docs
+title: Eski API 'YI kullanarak görünüm ayarlarını değiştirme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,40 +11,40 @@ caps.latest.revision: 19
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a7d58d1477b9d7f58242f8cb4db7c3c360c248b9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184472"
 ---
 # <a name="changing-view-settings-by-using-the-legacy-api"></a>Eski API'yi Kullanarak Görünüm Ayarlarını Değiştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Sözcük kaydırma ve seçim boşluğu sanal alanı gibi temel Düzenleyici özellikleri için ayarları yoluyla kullanıcı tarafından değiştirilebilir **seçenekleri** iletişim kutusu. Ancak, aynı zamanda bu ayarları değiştirmek mümkündür programlı olarak.  
+Sözcük kaydırması, seçim kenar boşluğu ve sanal alan gibi çekirdek Düzenleyici özellikleri için ayarlar, **Seçenekler** iletişim kutusu aracılığıyla Kullanıcı tarafından değiştirilebilir. Ancak, bu ayarları program aracılığıyla değiştirmek de mümkündür.  
   
-## <a name="changing-settings-by-using-the-legacy-api"></a>Eski API'yi kullanarak ayarlarını değiştirme  
- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer> Arabirim bir metin düzenleyicisi özellik kümesi sunar. Metin görünümü için metin görünümünü programlı olarak değiştirilen ayar grubu temsil eden bir kategori özelliklerinin (GUID_EditPropCategory_View_MasterSettings) içerir. Görünüm ayarlarını bu şekilde değiştirilmiş sonra bunların içinde değiştirilemez **seçenekleri** sıfırlanana kadar iletişim kutusu.  
+## <a name="changing-settings-by-using-the-legacy-api"></a>Eski API 'YI kullanarak ayarları değiştirme  
+ <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer>Arabirim bir metin Düzenleyicisi özellikleri kümesi sunar. Metin görünümü, metin görünümü için programlı olarak değiştirilen ayarların grubunu temsil eden bir özellikler kategorisi (GUID_EditPropCategory_View_MasterSettings) içerir. Görünüm ayarları bu şekilde değiştirildikten sonra, bunlar sıfırlanana kadar **Seçenekler** iletişim kutusunda değiştirilemez.  
   
- Aşağıdaki çekirdek Düzenleyici örneği görünüm ayarlarını değiştirmek için tipik bir işlemdir.  
+ Aşağıda, bir çekirdek Düzenleyicisi örneğinin görünüm ayarlarını değiştirmek için tipik bir işlem verilmiştir.  
   
-1. Çağrı `QueryInterface` üzerinde (<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>) için <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer> arabirimi.  
+1. `QueryInterface` <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> Arabirimi için () çağırın <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer> .  
   
-2. Çağrı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer.GetPropertyCategory%2A> yöntemi için GUID_EditPropCategory_View_MasterSettings değerini belirterek `rguidCategory` parametresi.  
+2. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer.GetPropertyCategory%2A>Parametresi için bir GUID_EditPropCategory_View_MasterSettings değeri belirterek yöntemi çağırın `rguidCategory` .  
   
-     Bunun yapılması, bir işaretçi döndürür <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer> görünüm için zorlanan bir özellikler kümesini içeren arabirimi. Bu gruptaki herhangi bir ayarı kalıcı olarak zorlanır. Bu grupta bir ayar değil sonra belirtilen seçenekleri izleyeceği **seçenekleri** iletişim kutusu veya kullanıcının komutları.  
+     Bunu yapmak, bu, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer> görünüm için zorlanan özellikler kümesini içeren arabirime bir işaretçi döndürür. Bu gruptaki tüm ayarlar kalıcı olarak zorlanır. Bir ayar bu grupta değilse, **Seçenekler** iletişim kutusunda veya Kullanıcı komutlarında belirtilen seçenekleri takip eder.  
   
-3. Çağrı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A> yöntemi, uygun ayarları değeri belirterek `idprop` parametresi.  
+3. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A>Parametresinde uygun ayarlar değerini belirterek yöntemi çağırın `idprop` .  
   
-     Örneğin, sözcük kaydırma zorlamak için çağrı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A> ve VSEDITPROPID_ViewLangOpt_WordWrap, bir değer belirleyebilirsiniz `vt` için `idprop` parametresi. Bu çağrıda `vt` VT_BOOL türünde bir değişken olduğu ve `vt.boolVal` VARIANT_TRUE olduğu.  
+     Örneğin, sözcük kaydırmayı zorlamak için, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A> parametresi için VSEDITPROPID_ViewLangOpt_WordWrap değerini çağırın ve bir değer belirtin `vt` `idprop` . Bu çağrıda `vt` VT_BOOL türünde BIR değişkendir ve `vt.boolVal` VARIANT_TRUE.  
   
 ## <a name="resetting-changed-view-settings"></a>Değiştirilen görünüm ayarlarını sıfırlama  
- Tüm değiştirilmiş görünüm çekirdek Düzenleyici örneği için ayarını sıfırlamak için çağrı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.RemoveProperty%2A> yöntemi ve uygun ayar değeri belirtin `idprop` parametresi.  
+ Çekirdek düzenleyicinin bir örneği için değiştirilen görünüm ayarlarını sıfırlamak için, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.RemoveProperty%2A> yöntemini çağırın ve parametresinde uygun ayar değerini belirtin `idprop` .  
   
- Örneğin, sözcük kaydırma serbestçe kaydırmak izin vermek için özellik kategorisinden çağırarak kaldırmadan <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.RemoveProperty%2A> VSEDITPROPID_ViewLangOpt_WordWrap için değerini belirterek `idprop` parametresi.  
+ Örneğin, sözcük kaydırma özelliğinin serbestçe kaydırılmasına izin vermek için, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.RemoveProperty%2A> parametre için bir VSEDITPROPID_ViewLangOpt_WordWrap değeri çağırarak ve belirterek Özellik kategorisinden kaldırılır `idprop` .  
   
- Değişen tüm çekirdek Düzenleyici ayarlarını kaldırmak için VSEDITPROPID_ViewComposite_AllCodeWindowDefaults, için vt değerini belirtirseniz `idprop` parametresi. Bu çağrı içinde vt VT_BOOL türünde bir değişken ve vt.boolVal VARIANT_TRUE şeklindedir.  
+ Çekirdek düzenleyicinin tüm değiştirilen ayarlarını aynı anda kaldırmak için, parametre için bir VSEDITPROPID_ViewComposite_AllCodeWindowDefaults, VT değeri belirtin `idprop` . Bu çağrıda, VT VT_BOOL ve VT. boolVal VARIANT_TRUE türünde bir DEĞIŞKENDIR.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çekirdek Düzenleyicisi içinde](../extensibility/inside-the-core-editor.md)   
- [Eski API'yi kullanarak erişen erişimcisinde görüntüle](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)   
- [Seçenekler İletişim Kutusu](../ide/reference/options-dialog-box-visual-studio.md)
+ [Çekirdek düzenleyicinin içinde](../extensibility/inside-the-core-editor.md)   
+ [Eski API kullanarak metin görünümüne erişme](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)   
+ [Seçenekler Iletişim kutusu](../ide/reference/options-dialog-box-visual-studio.md)

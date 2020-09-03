@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 54626c07fb8d15f585e800f03911dd465395d795
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850255"
 ---
 # <a name="da0012-significant-amount-of-reflection"></a>DA0012: Önemli miktarda Yansıma
@@ -30,7 +30,7 @@ Kural kimliği | DA0012 |
 | İleti | Yansımayı aşırı kullanıyor olabilirsiniz. Bu, pahalı bir işlemdir. |  
 | Kural türü | Uyarı |  
   
-## <a name="cause"></a>Sebep  
+## <a name="cause"></a>Nedeni  
  InvokeMember ve GetMember gibi System. Reflection yöntemlerine veya MemberInvoke gibi Yöntem türlerine yapılan çağrılar, profil oluşturma verilerinin önemli bir orandır. Mümkün olduğunda, bu yöntemleri bağımlı derlemelerin yöntemlerine erken bağlama ile değiştirmeyi göz önünde bulundurun.  
   
 ## <a name="rule-description"></a>Kural Tanımı  

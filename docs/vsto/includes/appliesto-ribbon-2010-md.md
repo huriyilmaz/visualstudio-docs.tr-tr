@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 533ea78324774ab3764caa8ae8202bb40ff8e55a
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "71256044"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89324782"
 ---
-  **Uygulama hedefi:** Bu konudaki bilgiler, şu uygulamalar için belge\-düzeyi projelerine ve VSTO eklentisi\-projelerine yöneliktir: Excel InfoPath 2013 ve InfoPath 2010; Office Programlarında Proje \ Sözcük. Daha fazla bilgi için bkz. [Office uygulaması ve proje türü tarafından kullanılabilen özellikler](../../vsto/features-available-by-office-application-and-project-type.md).
+  **Uygulama hedefi:** Bu konudaki bilgiler, \- Şu uygulamalar için belge düzeyi projelerine ve VSTO eklentisi \- projelerine yöneliktir: Excel; InfoPath 2013 ve InfoPath 2010; Office Programlarında Proje \ Sözcük. Daha fazla bilgi için bkz. [Office uygulaması ve proje türü tarafından kullanılabilen özellikler](../../vsto/features-available-by-office-application-and-project-type.md).

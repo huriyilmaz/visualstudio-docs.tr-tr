@@ -9,19 +9,19 @@ caps.latest.revision: 3
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9293d1f0f0b1f3c34c8ee603c3952d17fd653a73
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184776"
 ---
-# <a name="archive"></a>Arşivleme
+# <a name="archive"></a>Arşiv
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu bölüm, tartışma hala desteklenmektedir, ancak daha yeni değişiklik teknolojileri sahip olan Visual Studio genişletilebilirlik teknolojileri içerir.  
+Bu bölüm, hala desteklenen ancak daha yeni bir değiştirme teknolojileri olan Visual Studio genişletilebilirlik teknolojilerinin tartışmalarını içerir.  
   
 ## <a name="legacy-interfaces-in-the-editor"></a>Düzenleyicideki Eski Arabirimler  
- Bu bölümde, yeni MEF kodu daha eski (Ivs *) arabirimleri düzenleyiciyle erişmeye açıklanmaktadır: [Eski arabirimleri Düzenleyicisi'nde](../extensibility/legacy-interfaces-in-the-editor.md).  
+ Bu bölümde, düzenleyiciden daha yeni MEF kodu yerine eski (IVs *) arabirimleriyle nasıl erişebileceğiniz açıklanmaktadır: [düzenleyicide eski arabirimler](../extensibility/legacy-interfaces-in-the-editor.md).  
   
 ## <a name="tool-windows-in-the-registry"></a>Kayıt Defterindeki Araç Pencereleri  
- Bu bölümde, doğrudan kayıt defterinde araç pencerelerini ayarlama açıklanmaktadır: [Aracı Windows kayıt defterinde](../extensibility/tool-windows-in-the-registry.md).
+ Bu bölümde araç [pencerelerinin kayıt defterinde](../extensibility/tool-windows-in-the-registry.md)doğrudan kayıt defterinde nasıl ayarlanacağı açıklanmaktadır.

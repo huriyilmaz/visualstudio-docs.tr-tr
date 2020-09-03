@@ -9,31 +9,31 @@ caps.latest.revision: 4
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c95f3aefc0d2815b3846a4b720f3e3938d2a0f00
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184805"
 ---
 # <a name="adding-commands-to-toolbars"></a>Araç Çubuklarına Komut Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir araç çubuğu düğmeleri bağlı komutları içeren bir yatay veya Dikey Şerit bulunur. Visual Studio'da birçok farklı windows çubuklarında kendi komutları ekleyebilirsiniz: ana Visual Studio penceresinde, Çözüm Gezgini ve kendi özel araç pencereleri.  
+Bir araç çubuğu, komutlara bağlanan düğmeleri içeren yatay veya dikey bir şerit olur. Visual Studio 'daki birçok farklı Windows için araç çubuklarına kendi komutlarınızı ekleyebilirsiniz: ana Visual Studio penceresi, Çözüm Gezgini ve kendi özel araç pencereniz.  
   
- Bu bölüm, araç çubukları üzerindeki komutları ile yapabileceğiniz çok şey sayısını gösterir.  
+ Bu bölümde, araç çubuklarında komutlarla gerçekleştirebileceğiniz bazı noktalar gösterilmektedir.  
   
 ## <a name="in-this-section"></a>Bu Bölümdekiler  
  [Araç Çubuğu Ekleme](../extensibility/adding-a-toolbar.md)  
- Araç çubuğu araç çubukları ana Visual Studio penceresinde kümesine ekleme işlemi açıklanmaktadır.  
+ Ana Visual Studio penceresinde araç çubuğu kümesine bir araç çubuğunun nasıl ekleneceğini açıklar.  
   
  [Araç Penceresine Araç Çubuğu Ekleme](../extensibility/adding-a-toolbar-to-a-tool-window.md)  
- Araç penceresine araç çubuğu ekleme işlemi açıklanmaktadır.  
+ Araç penceresine bir araç çubuğunun nasıl ekleneceğini açıklar.  
   
  [Çözüm Gezgini Araç Çubuğuna Komut Ekleme](../extensibility/adding-a-command-to-the-solution-explorer-toolbar.md)  
- Çözüm Gezgini araç için komut ekleme açıklanmaktadır.  
+ Çözüm Gezgini araç çubuğuna bir komutun nasıl ekleneceğini açıklar.  
   
  [Araç Çubuğuna Menü Denetleyicisi Ekleme](../extensibility/adding-a-menu-controller-to-a-toolbar.md)  
- Araç çubuğuna menü denetleyicisi ekleme açıklanmaktadır.  
+ Bir araç çubuğuna bir menü denetleyicisinin nasıl ekleneceğini açıklar.  
   
  [Dinamik Olarak Menü Öğeleri Ekleme](../extensibility/dynamically-adding-menu-items.md)  
- Farklı bağlamda dinamik olarak menü öğeleri ekleme açıklanmaktadır.
+ Farklı bağlamlarda menü öğelerinin dinamik olarak nasıl ekleneceğini açıklar.

@@ -14,22 +14,22 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 209f015103a291940f2d43ccdbfd140d71c9e8ce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184608"
 ---
 # <a name="buildprojectonload-visual-studio-templates"></a>BuildProjectOnLoad (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Oluşturulduktan hemen sonra projeyi oluşturmak belirtir.  
+Oluşturulduktan sonra projenin hemen oluşturulup derlenmeyeceğini belirtir.  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<BuildProjectOnLoad>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <BuildProjectOnLoad> true/false </BuildProjectOnLoad>  
@@ -48,18 +48,18 @@ Oluşturulduktan hemen sonra projeyi oluşturmak belirtir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|  
   
 ## <a name="text-value"></a>Metin Değeri  
  Bir metin değeri gereklidir.  
   
- Metin olmalıdır `true` veya `false`, oluşturulduktan hemen sonra projeyi derlemek etkinleştirilip etkinleştirilmeyeceğini belirten.  
+ Metin `true` veya oluşturulduktan `false` sonra projenin hemen oluşturulup derlenmeyeceğini belirten olmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `BuildProjectOnLoad` İsteğe bağlı bir özniteliktir. Varsayılan değer `false` şeklindedir.  
+ `BuildProjectOnLoad` isteğe bağlı bir özniteliktir. Varsayılan değer: `false`.  
   
 ## <a name="example"></a>Örnek  
- Meta veriler için aşağıdaki örnekte bir [!INCLUDE[csprcs](../includes/csprcs-md.md)] şablonu.  
+ Aşağıdaki örnek, bir şablon için meta verileri gösterir [!INCLUDE[csprcs](../includes/csprcs-md.md)] .  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  

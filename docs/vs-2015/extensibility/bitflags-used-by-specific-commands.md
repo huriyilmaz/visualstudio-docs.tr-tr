@@ -1,5 +1,5 @@
 ---
-title: Özel komutlar tarafından kullanılan bit bayrakları | Microsoft Docs
+title: Belirli komutlar tarafından kullanılan bitflags | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,101 +11,101 @@ caps.latest.revision: 25
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 43dc083812bc172fe4a9f80335742b3faab2e1f4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184689"
 ---
 # <a name="bitflags-used-by-specific-commands"></a>Özel Komutlar Tarafından Kullanılan Bit Bayrakları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kaynak Denetimi Eklentisi API işlevleri bir dizi davranışını bir veya daha fazla BITS tek bir değer olarak ayarlayarak değiştirilebilir. Bu değerleri bit bayrakları bilinir. Kaynak Denetimi Eklentisi API tarafından kullanılan çeşitli bit bayrakları, bunları kullanan bir işlev tarafından gruplandırılmış burada açıklanmıştır.  
+Kaynak denetimi eklentisi API 'sindeki bir dizi işlevin davranışı tek bir değerde bir veya daha fazla bit ayarlanarak değiştirilebilir. Bu değerler bitflags olarak bilinir. Kaynak denetimi eklentisi API 'SI tarafından kullanılan çeşitli bitflags burada, bunları kullanan işleve göre gruplanmış olarak ayrıntılıdır.  
   
-## <a name="checked-out-flag"></a>Bayrağı işaretli  
- Bu bayrak için ayarlanabilir [SccAdd](../extensibility/sccadd-function.md) veya [SccCheckin](../extensibility/scccheckin-function.md).  
+## <a name="checked-out-flag"></a>Kullanıma alınan bayrak  
+ Bu bayrak, [SccAdd](../extensibility/sccadd-function.md) veya [SccCheckin](../extensibility/scccheckin-function.md)için ayarlanabilir.  
   
-|Bayrağı|Değer|Açıklama|  
+|Bayrak|Değer|Açıklama|  
 |----------|-----------|-----------------|  
-|`SCC_KEEP_CHECKEDOUT`|0x1000|Dosyayı kullanıma tutun.|  
+|`SCC_KEEP_CHECKEDOUT`|0x1000|Dosyayı kullanıma alınmış olarak tutun.|  
   
 ## <a name="add-flags"></a>Bayrak Ekle  
- Bu bayraklar tarafından kullanılan [SccAdd](../extensibility/sccadd-function.md).  
+ Bu bayraklar [SccAdd](../extensibility/sccadd-function.md)tarafından kullanılır.  
   
-|Bayrağı|Değer|Açıklama|  
+|Bayrak|Değer|Açıklama|  
 |----------|-----------|-----------------|  
-|`SCC_FILETYPE_AUTO`|0x00|Kaynak Denetimi Eklentisi otomatik olarak metin veya ikili dosyanın olup olmadığını algılamak için bekleniyor.|  
+|`SCC_FILETYPE_AUTO`|-|Kaynak denetimi eklentisinin, dosyanın metin mi yoksa ikili mi olduğunu otomatik olarak algılaması beklenmektedir.|  
 |`SCC_FILETYPE_TEXT`|0x01|Dosya türü metindir.|  
-|`SCC_FILETYPE_BINARY`|0x04|İkili dosya türü. **Not:** `SCC_FILETYPE_TEXT` ve `SCC_FILETYPE_BINARY` bayrakları karşılıklı olarak birbirini dışlar. Tam olarak bir ya da hiçbiri olarak ayarlayın.|  
-|`SCC_ADD_STORELATEST`|0x02|Yalnızca en son sürümü (deltaları yok) Store.|  
+|`SCC_FILETYPE_BINARY`|0x04|Dosya türü binary. **Note:** `SCC_FILETYPE_TEXT` ve `SCC_FILETYPE_BINARY` bayrakları birbirini dışlıyor.   Tam olarak bir veya hiçbiri olarak ayarlayın.|  
+|`SCC_ADD_STORELATEST`|0x02|Yalnızca en son sürümü depola (deltas olmadan).|  
   
 ## <a name="diff-flags"></a>Fark bayrakları  
- [SccDiff](../extensibility/sccdiff-function.md) Bu bayraklar fark oluşturma işlemiyle kapsamını tanımlamak için kullanır. `SCC_DIFF_QD_xxx` Bayrakları karşılıklı olarak birbirini dışlar. Herhangi biri belirtilirse, hiçbir görsel geri bildirim verilecek olan. "Hızlı fark" olarak (QD) eklentisi nasıl dosya yalnızca farklı olması durumunda farklı olduğunu belirlemez. Hiçbiri bu bayraklar "görsel fark" Bitti belirtilir; ayrıntılı dosya farklılıklarını hesaplanan ve görüntülenir. İstenen QD desteklenmiyorsa, eklenti için bir sonraki en iyi taşır. Örneği için bir sağlama toplamı IDE ister ve eklenti desteklemediği eklenti yoksa tam içeriği (yine de çok daha hızlı bir görüntü) kontrol edin.  
+ [SccDiff](../extensibility/sccdiff-function.md) , bir fark işleminin kapsamını tanımlamak için bu bayrakları kullanır. `SCC_DIFF_QD_xxx`Bayraklar birbirini dışlıyor. Bunlardan herhangi biri belirtilmişse, hiçbir görsel geri bildirim verilsağlanmaz. Bir "hızlı fark" (QD) içinde eklenti, dosyanın farklı olduğunu, ancak farklı olduğunu belirlemez. Bu bayraklardan Hiçbiri belirtilmediyse, "görsel fark" yapılır; ayrıntılı dosya farklılıkları hesaplanır ve görüntülenir. İstenen QTıD desteklenmiyorsa, eklenti bir sonraki en iyi ifadeye gider. Örneğin, IDE bir sağlama toplamı isterse ve eklenti bunu desteklemiyorsa, eklenti tam içerik denetimi yapar (bir görsel ekranda hala çok daha hızlıdır).  
   
-|Bayrağı|Değer|Açıklama|  
+|Bayrak|Değer|Açıklama|  
 |----------|-----------|-----------------|  
-|`SCC_DIFF_IGNORECASE`|0x0002|Büyük/küçük harf farklılıkları yoksayın.|  
-|`SCC_DIFF_IGNORESPACE`|0x0004|Boşluk farklılıkları yoksayın. **Not:**  `SCC_DIFF_IGNORECASE` Ve `SCC_DIFF_IGNORESPACE` bayraklar isteğe bağlı bit bayrakları.|  
-|`SCC_DIFF_QD_CONTENTS`|0x0010|Tüm dosya içeriğini karşılaştırarak QD.|  
-|`SCC_DIFF_QD_CHECKSUM`|0x0020|QD tarafından sağlama toplamı.|  
-|`SCC_DIFF_QD_TIME`|0x0040|QD dosya tarih/saat damgasının tarafından.|  
-|`SCC_DIFF_QUICK_DIFF`|0x0070|Bu, tüm QD bit bayrakları kontrol etmek için kullanılan bir maskesidir. Bir işleve geçirilmemelidir; üç QD bit bayrakları karşılıklı olarak birbirini dışlar. QD her zaman kullanıcı arabiriminin bir görüntü yok anlamına gelir.|  
+|`SCC_DIFF_IGNORECASE`|0x0002|Büyük/küçük harf farklılıklarını yoksayın.|  
+|`SCC_DIFF_IGNORESPACE`|0x0004|Boşluk farklarını yoksayın. **Note:**  `SCC_DIFF_IGNORECASE` Ve `SCC_DIFF_IGNORESPACE` bayrakları isteğe bağlı bitflags.|  
+|`SCC_DIFF_QD_CONTENTS`|0x0010|Tüm dosya içeriklerini karşılaştırarak QD.|  
+|`SCC_DIFF_QD_CHECKSUM`|0x0020|Sağlama toplamı ile QD.|  
+|`SCC_DIFF_QD_TIME`|0x0040|Dosya tarih/saat damgasına göre QD.|  
+|`SCC_DIFF_QUICK_DIFF`|0x0070|Bu, tüm QD bit bayraklarını denetlemek için kullanılan bir maskedir. Bir işleve geçirilmemelidir; Üç QD bitflags birbirini dışlıyor. QD her zaman UI gösterimi anlamına gelir.|  
   
 ## <a name="populatelist-flag"></a>PopulateList bayrağı  
- Bu bayrağı tarafından kullanılan [SccPopulateList](../extensibility/sccpopulatelist-function.md) içinde `fOptions` parametresi.  
+ Bu bayrak, parametresindeki [SccPopulateList](../extensibility/sccpopulatelist-function.md) tarafından kullanılır `fOptions` .  
   
-|Bayrağı|Değer|Açıklama|  
+|Bayrak|Değer|Açıklama|  
 |----------|-----------|-----------------|  
-|`SCC_PL_DIR`|0x00000001L|IDE, dizinleri, dosyaları değil geçiyor.|  
+|`SCC_PL_DIR`|0x00000001L|IDE, dosyaları değil dizinleri geçiyor.|  
   
 ## <a name="populatedirlist-flags"></a>PopulateDirList bayrakları  
- Bu bayraklar tarafından kullanılan [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) içinde `fOptions` parametresi.  
+ Bu bayraklar, parametresindeki [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) tarafından kullanılır `fOptions` .  
   
 |Seçenek değeri|Değer|Açıklama|  
 |------------------|-----------|-----------------|  
-|SCC_PDL_ONELEVEL|0x0000|Tek düzey dizinleri (varsayılan değer budur) dizinler için inceleyin.|  
-|SCC_PDL_RECURSIVE|0x0001|Yinelemeli olarak verilen her dizin altındaki tüm dizinleri inceleyin.|  
-|SCC_PDL_INCLUDEFILES|0x0002|Dosya adları İnceleme işleminde içerir.|  
+|SCC_PDL_ONELEVEL|0x0000|Dizinler için yalnızca bir dizin düzeyini inceleyin (bu varsayılandır).|  
+|SCC_PDL_RECURSIVE|0x0001|Belirli her bir dizin altındaki tüm dizinleri yinelemeli olarak inceleyin.|  
+|SCC_PDL_INCLUDEFILES|0x0002|İnceleme işlemine dosya adlarını ekleyin.|  
   
 ## <a name="openproject-flags"></a>OpenProject bayrakları  
- Bu bayraklar tarafından kullanılan [SccOpenProject](../extensibility/sccopenproject-function.md) içinde `dwFlags` parametresi.  
+ Bu bayraklar, parametresindeki [SccOpenProject](../extensibility/sccopenproject-function.md) tarafından kullanılır `dwFlags` .  
   
 |Seçenek değeri|Değer|Açıklama|  
 |------------------|-----------|-----------------|  
-|SCC_OP_CREATEIFNEW|0x00000001L|Proje kaynak denetiminde yoksa, oluşturun. Bu bayrak ayarlanmazsa oluşturmak için proje kullanıcıdan (sürece `SCC_OP_SILENTOPEN` bayrağı belirtildi).|  
-|SCC_OP_SILENTOPEN|0x00000002L|Bir proje oluşturmak için kullanıcıya sorma; sadece dönüş `SCC_E_UNKNOWNPROJECT`.|  
+|SCC_OP_CREATEIFNEW|0x00000001L|Proje kaynak denetiminde yoksa, oluşturun. Bu bayrak ayarlanmamışsa, projenin Kullanıcı tarafından oluşturulmasını sor ( `SCC_OP_SILENTOPEN` bayrak belirtilmediyse).|  
+|SCC_OP_SILENTOPEN|0x00000002L|Kullanıcının bir proje oluşturmasını isteme; yalnızca geri dönün `SCC_E_UNKNOWNPROJECT` .|  
   
-## <a name="get-flags"></a>Bayrakları Al  
- Bu bayraklar tarafından kullanılan [SccGet](../extensibility/sccget-function.md) ve [SccCheckout](../extensibility/scccheckout-function.md).  
+## <a name="get-flags"></a>Bayrakları al  
+ Bu bayraklar [SccGet](../extensibility/sccget-function.md) ve [SccCheckout](../extensibility/scccheckout-function.md)tarafından kullanılır.  
   
-|Bayrağı|Değer|Açıklama|  
+|Bayrak|Değer|Açıklama|  
 |----------|-----------|-----------------|  
-|`SCC_GET_ALL`|0x00000001L|IDE, dizinleri, dosyaları değil geçiyor: Bu dizinlerdeki tüm dosyaları alın.|  
-|`SCC_GET_RECURSIVE`|0x00000002L|IDE dizinleri geçiyor: Bu dizinler ve bunların tüm alt klasörleri alın.|  
+|`SCC_GET_ALL`|0x00000001L|IDE, dosyaları değil, dizinleri geçiyor: bu dizinlerdeki tüm dosyaları al.|  
+|`SCC_GET_RECURSIVE`|0x00000002L|IDE, dizinleri geçiyor: Bu dizinleri ve tüm alt dizinlerini al.|  
   
-## <a name="noption-values"></a>nOption değerleri  
- Bu bayraklar tarafından kullanılan [SccSetOption](../extensibility/sccsetoption-function.md) içinde `nOption` parametresi.  
+## <a name="noption-values"></a>Önemli değerler  
+ Bu bayraklar, parametresindeki [SccSetOption](../extensibility/sccsetoption-function.md) tarafından kullanılır `nOption` .  
   
-|Bayrağı|Değer|Açıklama|  
+|Bayrak|Değer|Açıklama|  
 |----------|-----------|-----------------|  
-|`SCC_OPT_EVENTQUEUE`|0x00000001L|Olay sırasındaki durumunu ayarlayın.|  
-|`SCC_OPT_USERDATA`|0x00000002L|Kullanıcı verilerini belirtin `SCC_OPT_NAMECHANGEPFN`.|  
-|`SCC_OPT_HASCANCELMODE`|0x00000003L|IDE iptal işleyebilir|  
-|`SCC_OPT_NAMECHANGEPFN`|0x00000004L|Ad değişiklikleri için bir geri çağırma ayarlayın.|  
-|`SCC_OPT_SCCCHECKOUTONLY`|0x00000005L|Kaynak Denetimi Eklentisi kullanıcı Arabirimi kullanıma alma devre dışı bırakın ve çalışma dizinini ayarlamayın.|  
-|`SCC_OPT_SHARESUBPROJ`|0x00000006L|Bir çalışma dizini belirtmek için kaynak denetim sisteminden ekleyin. Doğrudan alt öğesi ise ilişkili projeye paylaşmayı deneyin.|  
+|`SCC_OPT_EVENTQUEUE`|0x00000001L|Olay kuyruğunun durumunu ayarlayın.|  
+|`SCC_OPT_USERDATA`|0x00000002L|İçin Kullanıcı verilerini belirtin `SCC_OPT_NAMECHANGEPFN` .|  
+|`SCC_OPT_HASCANCELMODE`|0x00000003L|IDE iptal işlemini işleyebilir|  
+|`SCC_OPT_NAMECHANGEPFN`|0x00000004L|Ad değişiklikleri için bir geri arama ayarlayın.|  
+|`SCC_OPT_SCCCHECKOUTONLY`|0x00000005L|Kaynak denetimi eklentisi Kullanıcı arabirimi kullanıma almayı devre dışı bırakın ve çalışma dizinini ayarlamayın.|  
+|`SCC_OPT_SHARESUBPROJ`|0x00000006L|Çalışma dizinini belirtmek için kaynak denetim sisteminden ekleyin. Doğrudan alt öğe ise ilişkili projeyle paylaşmayı deneyin.|  
   
-## <a name="dwval-bitflags"></a>dwVal bit bayrakları  
- Bu bayraklar tarafından kullanılan [SccSetOption](../extensibility/sccsetoption-function.md) içinde `dwVal` parametresi.  
+## <a name="dwval-bitflags"></a>dwVal Bitflags  
+ Bu bayraklar, parametresindeki [SccSetOption](../extensibility/sccsetoption-function.md) tarafından kullanılır `dwVal` .  
   
-|Bayrağı|Değer|Açıklama|Tarafından kullanılan `nOption` değeri|  
+|Bayrak|Değer|Açıklama|Değer tarafından kullanılan `nOption`|  
 |----------|-----------|-----------------|-----------------------------|  
-|`SCC_OPT_EQ_DISABLE`|0x00L|Olay sırası etkinlik askıya alır.|`SCC_OPT_EVENTQUEUE`|  
-|`SCC_OPT_EQ_ENABLE`|0x01L|Olay sırası günlük kaydını etkinleştirir.|`SCC_OPT_EVENTQUEUE`|  
-|`SCC_OPT_HCM_NO`|0 M|(Varsayılan) İptal modu yok; sahip. Eklenti isterseniz sağlamalısınız.|`SCC_OPT_HASCANCELMODE`|  
-|`SCC_OPT_HCM_YES`|1 M|IDE iptal işler.|`SCC_OPT_HASCANCELMODE`|  
-|`SCC_OPT_SCO_NO`|0 M|(Varsayılan) Eklenti kullanıcı Arabiriminden kullanıma için Tamam'ı tıklatın; Çalışma dizini ayarlanır.|`SCC_OPT_SCCCHECKOUTONLY`|  
-|`SCC_OPT_SCO_YES`|1 M|Hiçbir eklenti kullanıcı Arabirimi kullanıma alma, çalışma dizini yok.|`SCC_OPT_SCCCHECKOUTONLY`|  
+|`SCC_OPT_EQ_DISABLE`|0x00L|Olay kuyruğu etkinliğini askıya alır.|`SCC_OPT_EVENTQUEUE`|  
+|`SCC_OPT_EQ_ENABLE`|0x01L|Olay sırası günlüğe kaydetmeyi etkinleştir.|`SCC_OPT_EVENTQUEUE`|  
+|`SCC_OPT_HCM_NO`|0L|Varsayılanını İptal moduna sahip değildir; eklentinin istenirse sağlaması gerekir.|`SCC_OPT_HASCANCELMODE`|  
+|`SCC_OPT_HCM_YES`|1L|IDE, Cancel işlemini gerçekleştirir.|`SCC_OPT_HASCANCELMODE`|  
+|`SCC_OPT_SCO_NO`|0L|Varsayılanını Eklenti kullanıcı arabiriminden kullanıma almak için Tamam; çalışma dizini ayarlandı.|`SCC_OPT_SCCCHECKOUTONLY`|  
+|`SCC_OPT_SCO_YES`|1L|Çalışma dizini olmadan eklenti Kullanıcı arabirimi kullanıma alma yok.|`SCC_OPT_SCCCHECKOUTONLY`|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Kaynak Denetimi Eklentileri](../extensibility/source-control-plug-ins.md)

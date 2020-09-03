@@ -1,5 +1,5 @@
 ---
-title: Button öğesi | Microsoft Docs
+title: Düğme öğesi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 58f63968ed02f49b0ccfa4dda24f684fed339bc4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184548"
 ---
 # <a name="button-element"></a>Button Öğesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kullanıcının etkileşime geçtiği bir öğe tanımlar. Düğmeler, farklı türde olabilir: Düğme, MenuButton ve SplitDropDown.  
+Kullanıcının etkileşime girebileceği bir öğe tanımlar. Düğmeler farklı türlerde olabilir: Button, Menubtan ve SplitDropDown.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Button guid="guidMyCommandSet" id="MyCommand" priority="0x102" type="button">  
@@ -41,21 +41,21 @@ Kullanıcının etkileşime geçtiği bir öğe tanımlar. Düğmeler, farklı t
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|guid|Gerekli. GUID/ID komut tanımlayıcısı GUİD'si.|  
-|kimlik|Gerekli. Kimliği bir GUID/ID komut tanımlayıcısı.|  
-|priority|İsteğe bağlı. Bir sayısal değer yönelik önceliği belirtir.|  
-|türü|İsteğe bağlı. Düğme türünü belirten bir numaralandırılmış değeri.<br /><br /> Belirtilmemişse, düğme kullanır.<br /><br /> Düğme<br /> Araç çubuklarında (genellikle icon bir düğme olarak), menüler ve bağlam menüleri görünür bir standart komutu.<br /><br /> MenuButton<br /> Komut yürütme değil, ancak başka bir menü üreten bir menü öğesi.<br /><br /> SplitDropDown<br /> Microsoft Word standart araç çubuğundaki Geri Al ve Yinele düğmeler gibi denetimler.|  
-|Koşul|İsteğe bağlı. Bkz: [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|guid|Gereklidir. GUID/ID komut tanımlayıcısının GUID 'SI.|  
+|kimlik|Gereklidir. GUID/ID komut tanımlayıcısının KIMLIĞI.|  
+|Priority|İsteğe bağlı. Önceliği belirten sayısal bir değer.|  
+|tür|İsteğe bağlı. Düğme türünü belirten numaralandırılmış bir değer.<br /><br /> Verilmezse, düğme kullanır.<br /><br /> Düğme<br /> Araç çubuklarında (genellikle absolut düğmesi olarak), menülerde ve bağlam menülerinde görüntülenen standart bir komut.<br /><br /> MenuButton<br /> Bir komut yürütülemez ancak başka bir menü üreten bir menü öğesi.<br /><br /> Bölünmüş aşağı açılan<br /> Microsoft Word 'deki Standart araç çubuğunda yer alan geri al ve Yinele düğmeleri gibi denetimler.|  
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[Parent Öğesi](../extensibility/parent-element.md)|İsteğe bağlı. Düğmenin üst öğe.|  
+|[Üst Öğe](../extensibility/parent-element.md)|İsteğe bağlı. Düğmenin üst öğesi.|  
 |[Icon Öğesi](../extensibility/icon-element.md)|İsteğe bağlı. Düğme ile ilişkili simge.|  
-|[Command Flag Öğesi](../extensibility/command-flag-element.md)|Gerekli. Bir düğme için geçerli CommandFlag değerler aşağıdaki gibidir.<br /><br /> -AllowParams<br /><br /> -CommandWellOnly<br /><br /> -DefaultDisabled<br /><br /> -DefaultInvisible<br /><br /> -DontCache<br /><br /> -DynamicItemStart<br /><br /> -DynamicVisibility<br /><br /> -FixMenuController<br /><br /> -IconAndText<br /><br /> -NoButtonCustomize<br /><br /> -NoCustomize<br /><br /> -NoKeyCustomize<br /><br /> -NoShowOnMenuController<br /><br /> -PICT<br /><br /> -PostExec<br /><br /> -ProfferedCmd<br /><br /> -RouteToDocs<br /><br /> -TextCascadeUseBtn<br /><br /> -TextMenuUseButton<br /><br /> -TextChanges<br /><br /> -TextChangesButton<br /><br /> -TextContextUseButton<br /><br /> -TextMenuCtrlUseMenu<br /><br /> -TextMenuUseButton<br /><br /> -TextOnly|  
-|[Strings Öğesi](../extensibility/strings-element.md)|Gerekli. Alt [ButtonText öğesi](../extensibility/buttontext-element.md) tanımlanması gerekir.|  
-|Ek Açıklama|İsteğe bağlı bir açıklama.|  
+|[Command Flag Öğesi](../extensibility/command-flag-element.md)|Gereklidir. Bir düğme için geçerli CommandFlag değerleri aşağıdaki gibidir.<br /><br /> -AllowParams<br /><br /> -CommandWellOnly<br /><br /> -DefaultDisabled<br /><br /> -DefaultInvisible<br /><br /> - DontCache<br /><br /> -DynamicItemStart<br /><br /> -DynamicVisibility<br /><br /> -FixMenuController<br /><br /> -IconAndText<br /><br /> -NoButtonCustomize<br /><br /> -NoCustomize<br /><br /> -NoKeyCustomize<br /><br /> -NoShowOnMenuController<br /><br /> -PICT<br /><br /> -PostExec<br /><br /> -ProfferedCmd<br /><br /> -RouteToDocs<br /><br /> -Textbasamakdeusebtn<br /><br /> -TextMenuUseButton<br /><br /> -TextChanges<br /><br /> -TextChangesButton<br /><br /> -TextContextUseButton<br /><br /> - TextMenuCtrlUseMenu<br /><br /> -TextMenuUseButton<br /><br /> -TextOnly|  
+|[Dizeler öğesi](../extensibility/strings-element.md)|Gereklidir. Alt [ButtonText öğesi](../extensibility/buttontext-element.md) tanımlanmalıdır.|  
+|Ek Açıklama|İsteğe bağlı açıklama.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -64,7 +64,7 @@ Kullanıcının etkileşime geçtiği bir öğe tanımlar. Düğmeler, farklı t
 |[Buttons Öğesi](../extensibility/buttons-element.md)|Düğme öğelerini gruplandırır.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir düğme .vsct dosyası tanımlar.  
+ Aşağıdaki örnek, bir. vsct dosyasındaki bir düğmeyi tanımlar.  
    
  ```xml
 <Button guid="guidMenuTextCmdSet" id="cmdidMyCommand" priority="0x0100" type="Button">

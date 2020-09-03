@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: başarısız proje yükseltmelerinde sorun giderme | Microsoft Docs'
+title: 'Nasıl yapılır: başarısız proje yükseltmeleriyle Ilgili sorunları giderme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -19,42 +19,42 @@ author: kraigb
 ms.author: kraigb
 manager: jillfra
 ms.openlocfilehash: 65059e285777e48633da5eb7e8723e3997f37dfa
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75844446"
 ---
 # <a name="how-to-troubleshoot-unsuccessful-visual-studio-project-upgrades"></a>Nasıl Yapılır: Başarısız Visual Studio Proje Yükseltmelerinde Sorun Giderme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bazı durumlarda Visual Studio tam olarak bir proje önceki bir sürümünü dönüştürülemiyor [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Aşağıdaki bölümlerde ipuçları belirli sorununuzu çözmezse, daha ayrıntılı bilgi TechNet'te olanağınız olabilir [Wiki: geliştirme portalı](https://social.technet.microsoft.com/wiki/contents/articles/706.wiki-development-portal.aspx#Visual_Studio).
+Bazen Visual Studio, bir projeyi daha önceki bir sürümünden tamamen dönüştüremiyor [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Aşağıdaki bölümlerde yer alan ipuçları belirli bir sorunu gidermezse TechNet [wiki: geliştirme portalı](https://social.technet.microsoft.com/wiki/contents/articles/706.wiki-development-portal.aspx#Visual_Studio)hakkında daha fazla bilgi bulabilirsiniz.
 
-## <a name="the-project-does-not-run-because-files-are-not-found"></a>Proje dosyaları bulunamadı çünkü çalışmaz
- Sabit kodlu dosya yollarının bir proje dosyasını içeren, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] F5 tuşuna bastığınızda, projeyi çalıştırmak için kullanır. Bu yolları konumunu devenv.exe ve diğer gerekli dosyaları içerebilir. Yükseltilmiş sürümünü de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], bu dosyaların yollarını değişmiş olabilir.
+## <a name="the-project-does-not-run-because-files-are-not-found"></a>Dosyalar bulunamadığı için proje çalışmıyor
+ Proje dosyası [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , F5 tuşuna bastığınızda projeyi çalıştırmak için kullanan sabit kodlanmış dosya yollarını içerir. Bu yollarda devenv.exe ve diğer gerekli dosyaların konumu bulunabilir. Uygulamasının yükseltilen bir sürümünde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , bu dosyaların yolları değiştirilmiş olabilir.
 
-#### <a name="to-resolve-incorrect-file-paths"></a>Hatalı dosya yollarını çözmek için
+#### <a name="to-resolve-incorrect-file-paths"></a>Hatalı dosya yollarını çözümlemek için
 
-1. Proje dosyanız, bir metin düzenleyicisinde açın.
+1. Proje dosyanızı bir metin düzenleyicisinde açın.
 
-2. Hatalı dosya yolları için özellikle içeren tarama bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sürüm numarası.
+2. Yanlış olabilecek, özellikle de sürüm numarası içeren dosya yollarını tarayın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
-3. Hatalı dosya yolları yeni hedefe işaret edecek şekilde değiştirin.
+3. Hatalı dosya yollarını yeni hedeflere işaret eden şekilde değiştirin.
 
-## <a name="the-project-does-not-build-because-references-are-not-valid"></a>Proje başvuruları geçerli olmadığından oluşturmuyor
- Yükseltme yaptığınızda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], ayrıca yükseltme [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürümü. Projenize yeni üretilmeyen başvurular içeriyorsa [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürümü, bunlar değil çözebilir doğru. Örneğin, sürüm numaralarını içeren başvuruları için özellikle büyük olasılıkla budur `Microsoft.VisualStudio.Shell.Interop.8.0`.
+## <a name="the-project-does-not-build-because-references-are-not-valid"></a>Başvurular geçerli olmadığından proje derlenmiyor
+ Yükselttiğinizde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , sürümünü de yükseltmeniz de gerekebilir [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] . Projeniz yeni sürümde kullanımdan kaldırılmıştır başvurular içeriyorsa [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] , doğru çözümlenmeyebilir. Bu özellikle, örneğin, sürüm numaralarını içeren başvurular için olasıdır `Microsoft.VisualStudio.Shell.Interop.8.0` .
 
- Kodunuzu birçok geçersiz başvurular varsa, multi-targeting'e özelliğini kullanmak için kolay bir çözüm olabilir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] önceki bir sürümünü hedefleyecek şekilde [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].
+ Kodunuzun çok sayıda geçersiz başvurusu varsa en kolay çözüm, uygulamasının [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] önceki bir sürümünü hedeflemek için Çoklu hedefleme özelliğini kullanmak olabilir [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .
 
-#### <a name="to-resolve-incorrect-references"></a>Yanlış başvurularını çözümlemek için
+#### <a name="to-resolve-incorrect-references"></a>Hatalı başvuruları çözümlemek için
 
-1. Proje dosyanız, bir metin düzenleyicisinde açın.
+1. Proje dosyanızı bir metin düzenleyicisinde açın.
 
 2. Proje özelliklerini açın.
 
-3. Doğru seçin **hedef Framework'ü** değeri. Alternatif olarak, değerini değiştirebilirsiniz `<TargetFrameworkVersion>` doğrudan proje dosyasında öğesi.
+3. Doğru **hedef çerçeve** değerini seçin. Alternatif olarak, `<TargetFrameworkVersion>` öğesinin değerini proje dosyasında doğrudan değiştirebilirsiniz.
 
-   Yükseltilen çalıştırmak üzere projenizi isteyip istemediğinizi [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürümü, proje başvurularını güncelleştirme ve ayrıca güncelleştirin `Imports` veya `Using` çağrısı deyimleri. Projenizi IDE'de yüklerse kullanarak başvurular güncelleştirebilirsiniz **Çözüm Gezgini** veya **başvuru Yöneticisi** iletişim kutusu.
+   Projenizin yükseltilen sürümde çalışmasını istiyorsanız, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] projenin başvurularını güncelleştirmeniz ve ayrıca `Imports` başvuruları çağıran tüm ya da deyimleri güncelleştirmeniz gerekir `Using` . Projeniz IDE 'de yüklenirse, **Çözüm Gezgini** veya **başvuru Yöneticisi** iletişim kutusunu kullanarak başvuruları güncelleştirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [/ Yükseltme (devenv.exe)](../ide/reference/upgrade-devenv-exe.md) [ASP.NET 4 için dönüştürme](https://msdn.microsoft.com/library/790147c6-36c1-41b5-a52d-30b9ccd2bd10)
+ [/Upgrade (devenv.exe)](../ide/reference/upgrade-devenv-exe.md) [ASP.NET 4 ' e dönüştürülüyor](https://msdn.microsoft.com/library/790147c6-36c1-41b5-a52d-30b9ccd2bd10)
