@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3f83cdb163881366a1a0bede95a07e1dae1fc50a
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461100"
 ---
 # <a name="stackframetypeenum"></a>StackFrameTypeEnum
@@ -36,17 +36,17 @@ enum StackFrameTypeEnum {
 ```
 
 ## <a name="elements"></a>Öğeler
-`FrameTypeFPO`Çerçeve işaretçisi atlandı; Mi bilgileri kullanılabilir.
+`FrameTypeFPO` Çerçeve işaretçisi atlandı; Mi bilgileri kullanılabilir.
 
-`FrameTypeTrap`Çekirdek Tuzak Çerçevesi.
+`FrameTypeTrap` Çekirdek Tuzak Çerçevesi.
 
-`FrameTypeTSS`Çekirdek Tuzak Çerçevesi.
+`FrameTypeTSS` Çekirdek Tuzak Çerçevesi.
 
-`FrameTypeStandard`Standart EBP yığın çerçevesi.
+`FrameTypeStandard` Standart EBP yığın çerçevesi.
 
-`FrameTypeFrameData`Çerçeve işaretçisi atlandı; Çerçeve veri bilgileri kullanılabilir.
+`FrameTypeFrameData` Çerçeve işaretçisi atlandı; Çerçeve veri bilgileri kullanılabilir.
 
-`FrameTypeUnknown`Herhangi bir hata ayıklama bilgisi olmayan çerçeve.
+`FrameTypeUnknown` Herhangi bir hata ayıklama bilgisi olmayan çerçeve.
 
 ## <a name="remarks"></a>Açıklamalar
 Bu Numaralandırmadaki değerler, [IDiaStackFrame:: get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md) metoduna yapılan bir çağrı tarafından döndürülür.

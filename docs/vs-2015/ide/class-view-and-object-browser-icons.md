@@ -19,10 +19,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3e67763234ff7b3778cccabaed45fbbc0bc04d30
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72620477"
 ---
 # <a name="class-view-and-object-browser-icons"></a>Sınıf Görünümü ve Nesne Tarayıcısı Simgeleri
@@ -33,16 +33,16 @@ Sınıf Görünümü * * ve **nesne tarayıcısı** ; Örneğin, ad alanları, s
 |Simge|Açıklama|Simge|Açıklama|
 |----------|-----------------|----------|-----------------|
 |![Ad alanı simgesi](../ide/media/vxnamespace-icon.gif "vxNamespace_Icon")|Ad Alanı|![Bildirim simgesi](../ide/media/vxmethod-icon.gif "vxMethod_Icon")|Yöntem veya Işlev|
-|![Sınıf simgesi](../ide/media/vxclass-icon.gif "vxClass_Icon")|örneği|![İşleç simgesi](../ide/media/vxoperator-icon.gif "vxOperator_Icon")|İşleç|
+|![Sınıf simgesi](../ide/media/vxclass-icon.gif "vxClass_Icon")|Sınıf|![İşleç simgesi](../ide/media/vxoperator-icon.gif "vxOperator_Icon")|Operatör|
 |![Lolipop arabirimi simgesi](../ide/media/vxinterface-icon.gif "vxInterface_Icon")|Arabirim|![Özellik simgesi](../ide/media/vxproperty-icon.gif "vxProperty_Icon")|Özellik|
 |![Yapı simgesi](../ide/media/vxstruct-icon.gif "vxStruct_Icon")|Yapı|![Alan simgesi](../ide/media/vxfield-icon.gif "vxField_Icon")|Alan veya değişken|
-|![Birleşim simgesi](../ide/media/vxunion-icon.gif "vxUnion_Icon")|UNION|![Olay simgesi](../ide/media/vxevent-icon.gif "vxEvent_Icon")|Olay|
-|![Sabit Listesi simgesi](../ide/media/vxenum-icon.gif "vxEnum_Icon")|Enum|![Sabit simgesi](../ide/media/vxconstant-icon.gif "vxConstant_Icon")|Sabit|
+|![Birleşim simgesi](../ide/media/vxunion-icon.gif "vxUnion_Icon")|Birleşim|![Olay simgesi](../ide/media/vxevent-icon.gif "vxEvent_Icon")|Olay|
+|![Sabit Listesi simgesi](../ide/media/vxenum-icon.gif "vxEnum_Icon")|Sabit listesi|![Sabit simgesi](../ide/media/vxconstant-icon.gif "vxConstant_Icon")|Sabit|
 |![Tür tanımı simgesi](../ide/media/vxtypedef-icon.gif "vxTypeDef_Icon")|Genişletiyor|![Öğe sembolünü numaralandır](../ide/media/vxenumitem-icon.gif "vxEnumItem_Icon")|Enum öğesi|
 |![Visual Studio modül simgesi](../ide/media/vxmodule-icon.gif "vxModule_Icon")|Modül|![Harita öğesi simgesi](../ide/media/vxmapitem-icon.gif "vxMapItem_Icon")|Eşleme öğesi|
 |![Uzantı yöntemi simgesi](../ide/media/extensionmethod.gif "ExtensionMethod")|Genişletme yöntemi|![Bildirim simgesi](../ide/media/vxmethod-icon.gif "vxMethod_Icon")|Dış bildirim|
 |![Temsilci simgesi](../ide/media/vxdelegate-icon.gif "vxDelegate_Icon")|Temsilci|![Sınıf Görünümü ve Nesne Tarayıcısı için hata simgesi](../ide/media/erroricon.gif "ErrorIcon")|Hata|
-|![Özel durum simgesi](../ide/media/vxexception-icon.gif "vxException_Icon")|Özel Durum|![Şablon simgesi](../ide/media/vxtemplate-icon.gif "vxTemplate_Icon")|Şablon|
+|![Özel durum simgesi](../ide/media/vxexception-icon.gif "vxException_Icon")|Özel durum|![Şablon simgesi](../ide/media/vxtemplate-icon.gif "vxTemplate_Icon")|Şablon|
 |![Harita simgesi](../ide/media/vxmap-icon.gif "vxMap_Icon")|Harita|![Hata ünlem noktası simgesi](../ide/media/vxerror-icon.gif "vxError_Icon")|Bilinmiyor|
 |![Tür Iletme simgesi](../ide/media/ob-type-forward.gif "ob_type_forward")|Tür Iletme|||
 
@@ -54,11 +54,11 @@ Sınıf Görünümü * * ve **nesne tarayıcısı** ; Örneğin, ad alanları, s
 
 |Simge|Açıklama|
 |----------|-----------------|
-|\<No sinyal simgesi >|Geneldir. Bu bileşenin her yerinden ve ona başvuran herhangi bir bileşenden erişilebilir.|
+|\<No Signal Icon>|Geneldir. Bu bileşenin her yerinden ve ona başvuran herhangi bir bileşenden erişilebilir.|
 |![Sinyal korumalı simgesi](../ide/media/vxsignal-icon-key.gif "vxSignal_Icon_Key")|Korunamadı. Kapsayan sınıf veya türden ya da kapsayan sınıf veya türden türeten erişilebilir.|
 |![Sinyal özel simgesi](../ide/media/vxsignal-icon-lock.gif "vxSignal_Icon_Lock")|Özelleştirme. Yalnızca kapsayan sınıfta veya türünde erişilebilir.|
 |![Sinyal korumalı simgesi](../ide/media/vxsignal-icon-envelope.gif "vxSignal_Icon_Envelope")|Sealed.|
-|![Sinyal arkadaş&#47;iç simgesi](../ide/media/vxsignal-icon-diamond.gif "vxSignal_Icon_Diamond")|Arkadaş/Iç. Yalnızca projeden erişilebilir.|
+|![Sinyal arkadaş&#47;Iç simge](../ide/media/vxsignal-icon-diamond.gif "vxSignal_Icon_Diamond")|Arkadaş/Iç. Yalnızca projeden erişilebilir.|
 |![Sinyal simgesi ok](../ide/media/vxsignal-icon-arrow.gif "vxSignal_Icon_Arrow")|Kısayol. Nesnenin bir kısayolu.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.

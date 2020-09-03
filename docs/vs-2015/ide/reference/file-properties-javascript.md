@@ -27,10 +27,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 719a956558141684c7d755aafb6929f4368482f7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657717"
 ---
 # <a name="file-properties-javascript"></a>Dosya Özellikleri, JavaScript
@@ -66,9 +66,9 @@ Dosya özelliklerini, proje sisteminin dosyalarda hangi işlemleri yapması gere
  Dosyanın tam yolunu salt okuma değeri olarak görüntüler. Dosyanın yolunu değiştirmek için Çözüm Gezgini dosyayı sürükleyip bırakabilirsiniz.
 
 ## <a name="reference-file-properties"></a>Başvuru dosyası özellikleri
- Bu bölümde, bir [!INCLUDE[win8_app_js](../../includes/win8-app-js-md.md)] başvurulan dosyalar için ortak özellikler açıklanmaktadır. Bir. winmd dosyası, bir SDK başvurusu, bir projeden projeye başvuru veya Çözüm Gezgini bir derleme başvurusu gibi bir başvuruyu seçtiğinizde, diğer özellikler dosya türüne göre Özellikler penceresi gösterebilir.
+ Bu bölümde, bir tarafından başvurulan dosyalar için ortak özellikler açıklanmaktadır [!INCLUDE[win8_app_js](../../includes/win8-app-js-md.md)] . Bir. winmd dosyası, bir SDK başvurusu, bir projeden projeye başvuru veya Çözüm Gezgini bir derleme başvurusu gibi bir başvuruyu seçtiğinizde, diğer özellikler dosya türüne göre Özellikler penceresi gösterebilir.
 
-### <a name="culture"></a>ayarı
+### <a name="culture"></a>Kültür
  Başvuru ile ilişkili dili görüntüler.
 
 ### <a name="file-type"></a>Dosya türü
@@ -92,7 +92,7 @@ Dosya özelliklerini, proje sisteminin dosyalarda hangi işlemleri yapması gere
 ### <a name="uri"></a>Kullanılmamışsa
  Dosyayı kaynak dosya olarak dahil etmek için projenin HTML veya JavaScript dosyalarına dahil olması gereken URI 'yi görüntüler.
 
-### <a name="version"></a>Version
+### <a name="version"></a>Sürüm
  Başvurunun sürümünü görüntüler.
 
 ## <a name="see-also"></a>Ayrıca Bkz.

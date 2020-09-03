@@ -15,17 +15,17 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 26beadbe6963a685f10aef1db7bd8779434927d2
-ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85419282"
 ---
 # <a name="tutorial-create-a-simple-application-with-c"></a>Öğretici: C ile basit bir uygulama oluşturma\#
 
 Bu öğreticiyi tamamlayarak, Visual Studio ile uygulama geliştirirken kullanabileceğiniz birçok araç, iletişim kutusu ve tasarımcı hakkında bilgi sahibi olacaksınız. Tümleşik geliştirme ortamında ([IDE](visual-studio-ide.md)) çalışmayı öğrenirken, "Merhaba, Dünya" uygulaması, Kullanıcı arabirimini tasarlayacağınız, kod ekleyerek ve hata ayıkladığınızda bir "Hello, World" uygulaması oluşturacaksınız.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 ::: moniker range="vs-2017"
 Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?) sayfasına giderek ücretsiz olarak yükleme yapın.
@@ -296,7 +296,7 @@ Hata ayıklamayı durdurmak için şimdi uygulama penceresini kapatın.
 
 Hata ayıklama sırasında bazı kesme noktaları ekleyerek kodu test edebilirsiniz. Kesme **Debug**  >  **noktası geçiş noktasını**seçerek, kesmenin gerçekleşmesini istediğiniz kod satırının yanındaki düzenleyicinin sol kenar boşluğuna tıklayarak veya **F9**tuşuna basarak kesme noktaları ekleyebilirsiniz.
 
-#### <a name="add-breakpoints"></a>Kesme noktaları Ekle
+#### <a name="add-breakpoints"></a>Kesme noktası ekleme
 
 1. *Greetings.xaml.cs*açın ve aşağıdaki satırı seçin:`MessageBox.Show("Hello.")`
 

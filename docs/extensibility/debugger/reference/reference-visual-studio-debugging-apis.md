@@ -1,5 +1,5 @@
 ---
-title: Referans (Visual Studio Hata Ayıklama API'leri) | Microsoft Dokümanlar
+title: Başvuru (Visual Studio hata ayıklama API 'Leri) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -13,27 +13,27 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8a85979c53d61d4b8d5a4f4b26d3ed3a1e19e952
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713634"
 ---
 # <a name="reference-visual-studio-debugging-apis"></a>Başvuru (Visual Studio Hata Ayıklama API’leri)
 
-Visual Studio Hata Ayıklama SDK başvuruları, hata ayıklama nın ve bileşenlerinin çalışma zamanı mimarisi ve işlevselliği için temel modeli ana hatlar. Belgeler, arabirimler aracılığıyla tanımladığı davranış dışında, tanımladığı bileşenler ve arabirimler hakkında mümkün olduğunca az varsayımyapar.
+Visual Studio hata ayıklama SDK 'Sı, hata ayıklayıcının ve bileşenlerinin çalışma zamanı mimarisi ve işlevselliği için temel modelde ana hatlarıyla başvurur. Belgeler, açıkladığı bileşenler ve arabirimler hakkında mümkün olduğunca az varsayım sağlar ve bu, arabirimler aracılığıyla tanımladığı davranışlardan ayrı olur.
 
-Başvuru bölümünün amacı, mümkün olduğunca çeşitli diller, çalışma süreleri ve işletim sistemleri kümesine destek sağlamaktır.
+Başvuru bölümünün amacı, mümkün olduğunca farklı diller, çalışma zamanları ve işletim sistemleri için destek sağlamaktır.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
 [API Başvurusu](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)
 
-Visual Studio Hata Ayıklama API arabirimleri, sayısallaştırıcılar ve yapıları için belgeler içerir.
+Visual Studio hata ayıklama API 'sinin arabirimleri, numaralandırıcıları ve yapıları için belgeler içerir.
 
 [Sözlük](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md)
 
-Hata ayıklamayla ilgili terimlerin ve bunların tanımlarının bir listesini sağlar.
+Hata ayıklama ile ilgili koşulların ve tanımlarının bir listesini sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 76234eea6c689459728e0da876b6a9cce7c290a5
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76114596"
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>Değişiklikleri Modelin Dışına Yayan Olay İşleyicileri
@@ -25,21 +25,21 @@ Grafik yüzeyi ve diğer kullanıcı arabirimi denetimleri, depo olayları taraf
 
 ### <a name="to-define-a-store-event"></a>Bir mağaza olayını tanımlamak için
 
-1. İzlemek istediğiniz olay türünü seçin. Tam liste için <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory>özelliklerine bakın. Her özellik bir olay türüne karşılık gelir. En sık kullanılan olay türleri şunlardır:
+1. İzlemek istediğiniz olay türünü seçin. Tam liste için özelliklerine bakın <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory> . Her özellik bir olay türüne karşılık gelir. En sık kullanılan olay türleri şunlardır:
 
-    - `ElementAdded`-bir model öğesi, ilişki bağlantısı, şekil veya bağlayıcı oluşturulduğunda tetiklenir.
+    - `ElementAdded` -bir model öğesi, ilişki bağlantısı, şekil veya bağlayıcı oluşturulduğunda tetiklenir.
 
-    - ElementPropertyChanged-`Normal` bir etki alanı özelliğinin değeri değiştirildiğinde tetiklenir. Olay yalnızca yeni ve eski değerler eşit değilse tetiklenir. Olay, hesaplanan ve özel depolama özelliklerine uygulanamaz.
+    - ElementPropertyChanged-bir `Normal` etki alanı özelliğinin değeri değiştiğinde tetiklenir. Olay yalnızca yeni ve eski değerler eşit değilse tetiklenir. Olay, hesaplanan ve özel depolama özelliklerine uygulanamaz.
 
-         İlişki bağlantılarına karşılık gelen rol özelliklerine uygulanamaz. Bunun yerine, etki alanı ilişkisini izlemek için `ElementAdded` kullanın.
+         İlişki bağlantılarına karşılık gelen rol özelliklerine uygulanamaz. Bunun yerine, `ElementAdded` etki alanı ilişkisini izlemek için kullanın.
 
-    - `ElementDeleted`-bir model öğesi, ilişki, şekil veya bağlayıcı silindikten sonra tetiklenir. Öğesinin özellik değerlerine erişmeye devam edebilirsiniz, ancak diğer öğelerle hiçbir ilişkisi olmayacaktır.
+    - `ElementDeleted` -bir model öğesi, ilişki, şekil veya bağlayıcı silindikten sonra tetiklenir. Öğesinin özellik değerlerine erişmeye devam edebilirsiniz, ancak diğer öğelerle hiçbir ilişkisi olmayacaktır.
 
 2. **DslPackage** projesindeki ayrı bir kod dosyasında, _yourdsl_**DocData** için kısmi bir sınıf tanımı ekleyin.
 
-3. Aşağıdaki örnekte olduğu gibi olayın kodunu Yöntem olarak yazın. `DocData`erişmek istemediğiniz müddetçe `static`olabilir.
+3. Aşağıdaki örnekte olduğu gibi olayın kodunu Yöntem olarak yazın. `static`Erişmek istemediğiniz müddetçe olabilir `DocData` .
 
-4. İşleyiciyi kaydetmek için `OnDocumentLoaded()` geçersiz kılın. Birden fazla işleyiciniz varsa, bunları aynı yerde kaydedebilirsiniz.
+4. `OnDocumentLoaded()`İşleyiciyi kaydetmek için geçersiz kılın. Birden fazla işleyiciniz varsa, bunları aynı yerde kaydedebilirsiniz.
 
 Kayıt kodunun konumu önemli değil. `DocView.LoadView()` alternatif bir konumdur.
 
@@ -90,7 +90,7 @@ namespace Company.MusicLib
 
 ## <a name="use-events-to-make-undoable-adjustments-in-the-store"></a>Depoda geri alınamaz ayarlamalar yapmak için olayları kullanma
 
-Olay işleyicisi işlem tamamlandıktan sonra yürütüldüğü için mağaza olayları normalde mağaza içindeki değişiklikleri yayılırken kullanılmaz. Bunun yerine, bir mağaza kuralı kullanırsınız. Daha fazla bilgi için [kuralları yaymak değişiklikleri içinde modeli](../modeling/rules-propagate-changes-within-the-model.md).
+Olay işleyicisi işlem tamamlandıktan sonra yürütüldüğü için mağaza olayları normalde mağaza içindeki değişiklikleri yayılırken kullanılmaz. Bunun yerine, bir mağaza kuralı kullanırsınız. Daha fazla bilgi için bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).
 
 Ancak, kullanıcının ek güncelleştirmeleri özgün olaydan ayrı olarak geri almak istiyorsanız, depoya ek güncelleştirmeler yapmak için bir olay işleyicisi kullanabilirsiniz. Örneğin, küçük harf karakterlerinin albüm başlıkları için normal kural olduğunu varsayalım. Kullanıcı büyük harfe yazıldıktan sonra başlığı küçük harfe düzelten bir mağaza olay işleyicisi yazabilirsiniz. Ancak Kullanıcı, geri al komutunu kullanarak, büyük harf karakterlerini geri yükleyerek düzeltmeyi iptal edebilir. İkinci bir geri alma kullanıcının değişikliğini kaldırır.
 
@@ -160,9 +160,9 @@ private static void AlbumTitleAdjuster(object sender,
 
 Mağazayı güncelleştiren bir olay yazarsanız:
 
-- Geri al 'da model öğelerinde değişiklik yapmaktan kaçınmak için `store.InUndoRedoOrRollback` kullanın. İşlem Yöneticisi depodaki her şeyi özgün durumuna geri ayarlayacaktır.
+- `store.InUndoRedoOrRollback`Geri al 'da model öğelerinde değişiklik yapmaktan kaçınmak için kullanın. İşlem Yöneticisi depodaki her şeyi özgün durumuna geri ayarlayacaktır.
 
-- Model dosyadan yüklenirken değişiklik yapmaktan kaçınmak için `store.InSerializationTransaction` kullanın.
+- `store.InSerializationTransaction`Model dosyadan yüklenirken değişiklik yapmaktan kaçınmak için kullanın.
 
 - Değişiklikleriniz, daha fazla olayın tetiklenmesi için yol açacaktır. Sonsuz bir döngüden kaçındığınızdan emin olun.
 

@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 984b9d5d9bfd5c3800ec816e1f57489e0348f53c
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461289"
 ---
 # <a name="idiatable"></a>IDiaTable
@@ -66,7 +66,7 @@ Aşağıdaki arabirimler `IDiaTable` arabirimiyle uygulanır (yani, `IDiaTable` 
 İlk işlev, `ShowTableNames` oturumdaki tüm tabloların adlarını görüntüler. İkinci işlevi, `GetTable` belirtilen bir arabirimi uygulayan bir tablo için tüm tabloları arar. Üçüncü işlevi, `UseTable` işlevinin nasıl kullanılacağını gösterir `GetTable` .
 
 > [!NOTE]
-> `CDiaBSTR`, `BSTR` örnekleme kapsam dışına geçtiğinde bir ve otomatik olarak dizeyi serbest bırakma olarak işleyen bir sınıftır.
+> `CDiaBSTR` , `BSTR` örnekleme kapsam dışına geçtiğinde bir ve otomatik olarak dizeyi serbest bırakma olarak işleyen bir sınıftır.
 
 ```C++
 void ShowTableNames(IDiaSession *pSession)

@@ -14,18 +14,18 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 12945998b215e9082591fad514bd9c16ab789405
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203887"
 ---
 # <a name="intellisensehostflags"></a>IntelliSenseHostFlags
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-IntelliSense konak bayrakları belirtir.  
+IntelliSense ana bilgisayar bayraklarını belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 enum IntellisenseHostFlags  
@@ -42,14 +42,14 @@ enum IntellisenseHostFlags
   
 |Üyeler|Açıklama|  
 |-------------|-----------------|  
-|`IHF_READONLYCONTEXT`|Bağlamı arabelleğine salt okunur.|  
-|`IHF_NOSEPARATESUBJECT`|Konu metin yok. Bağlamı arabelleğine IntelliSense hedef içerir (gelir `!IHF_READONLYCONTEXT`).|  
-|`IHF_SINGLELINESUBJECT`|Konu metnini çok-satırı özelliğine sahip değil.|  
-|`IHF_FORCECOMMITTOCONTEXT`|Aynı `CanCommitIntoReadOnlyBuffer`.|  
-|`IHF_OVERTYPE`|(Konu veya bağlam) düzenleme, üzerine yazma modunda yapılmalıdır.|  
+|`IHF_READONLYCONTEXT`|Bağlam arabelleği salt okunurdur.|  
+|`IHF_NOSEPARATESUBJECT`|Konu metni yok. Bağlam arabelleği IntelliSense-target (anlamına gelir `!IHF_READONLYCONTEXT` ) içerir.|  
+|`IHF_SINGLELINESUBJECT`|Konu metni çok satırlı özellikli değil.|  
+|`IHF_FORCECOMMITTOCONTEXT`|Aynı `CanCommitIntoReadOnlyBuffer` .|  
+|`IHF_OVERTYPE`|Düzenlemenin (konu veya bağlamda) üzerine yazma modunda yapılması gerekir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- SingleFileeditor.idl  
+ SingleFileeditor. IDL  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualStudio.TextManager.Interop>

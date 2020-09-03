@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8c75d3cae07101363f6c986a1defb375f602f466
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815129"
 ---
 # <a name="walkthrough-debug-an-xslt-style-sheet"></a>İzlenecek yol: XSLT stil sayfasında hata ayıklama
@@ -70,7 +70,7 @@ Giriş dosyası işlendiğinde değerlerini inceleyebileceğiniz için, **1. gö
 
 3. Sonraki satırda, `self::node()` **ad** alanına yazın ve ardından **ENTER**tuşuna basın.
 
-   `self::node()`, geçerli bağlam düğümünü değerlendiren bir XPath ifadesidir. `self::node()`XPath ifadesinin değeri ilk kitap düğümüdür. Bu, dönüşümde ilerlemede olduğu gibi değişir.
+   `self::node()` , geçerli bağlam düğümünü değerlendiren bir XPath ifadesidir. `self::node()`XPath ifadesinin değeri ilk kitap düğümüdür. Bu, dönüşümde ilerlemede olduğu gibi değişir.
 
 4. Düğümünü genişletin `self::node()` ve ardından değeri olan düğümü genişletin `price` .
 

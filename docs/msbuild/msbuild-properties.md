@@ -1,5 +1,5 @@
 ---
-title: MSBuild Özellikleri | Microsoft Dokümanlar
+title: MSBuild özellikleri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,19 +11,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 39f1f612244fedcc707475d067e67500dc76e1d9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633297"
 ---
 # <a name="msbuild-properties"></a>MSBuild özellikleri
 
 Özellikler, yapıları yapılandırmak için kullanılabilen ad-değer çiftleridir. Özellikler, değerlerin görevlere geçirilmesinde, koşulların değerlendirilmesinde ve proje dosyası boyunca başvurulacak olan değerlerin depolanmasında yararlıdır.
 
-## <a name="define-and-reference-properties-in-a-project-file"></a>Proje dosyasındaki özellikleri tanımlama ve başvuru
+## <a name="define-and-reference-properties-in-a-project-file"></a>Proje dosyasında özellikleri tanımlama ve başvuru
 
- Özellikler, özellik grubunun bir [özelliğinin](../msbuild/propertygroup-element-msbuild.md) alt öğesi olarak adını içeren bir öğe oluşturarak bildirilir. Örneğin aşağıdaki XML, bir `BuildDir` değerine sahip olan `Build` adında bir özellik oluşturur.
+ Özellikler, bir [PropertyGroup](../msbuild/propertygroup-element-msbuild.md) öğesinin alt öğesi olarak özelliğin adına sahip bir öğe oluşturularak belirtilir. Örneğin aşağıdaki XML, bir `BuildDir` değerine sahip olan `Build` adında bir özellik oluşturur.
 
 ```xml
 <PropertyGroup>
@@ -31,7 +31,7 @@ ms.locfileid: "77633297"
 </PropertyGroup>
 ```
 
- Proje dosyası boyunca, özellikler sözdizimi $(PropertyName\<>) kullanılarak başvurulmaktadır. Örneğin, önceki örnekteki özellik $(BuildDir) kullanılarak başvurulur.
+ Proje dosyası boyunca özelliklere $(\<PropertyName>) söz dizimi kullanılarak başvurulur. Örneğin, önceki örnekteki özellik $(BuildDir) kullanılarak başvurulur.
 
  Özelliği yeniden tanımlayarak özellik değerlerini değiştirebilirsiniz. Aşağıdaki XML kullanılarak `BuildDir` özelliğine yeni bir değer verilebilir:
 
@@ -43,11 +43,11 @@ ms.locfileid: "77633297"
 
  Özellikler, proje dosyasında göründükleri sırayla değerlendirilir. `BuildDir` öğesine ait yeni değerin, eski değer atandıktan sonra bildirilmesi gerekir.
 
-## <a name="reserved-properties"></a>Ayrılmış özellikler
+## <a name="reserved-properties"></a>Ayrılmış Özellikler
 
  MSBuild, proje dosyası ve MSBuild ikili dosyaları hakkındaki bilgileri depolamak için bazı özellik adlarını saklar. Bu özellikler, diğer özelliklere benzer şekilde $ simgesi kullanılarak başvurulur. Örneğin $(MSBuildProjectFile), dosya adı uzantısı dahil olmak üzere proje dosyasının tüm dosya adını döndürür.
 
- Daha fazla bilgi için [bkz: Proje dosyasının adını veya konumunu ve](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md) [MSBuild ayrılmış ve iyi bilinen özellikleri](../msbuild/msbuild-reserved-and-well-known-properties.md)başvurun.
+ Daha fazla bilgi için bkz. [nasıl yapılır: proje dosyasının adına veya konumuna başvurma](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md) ve özel olarak [bilinen MSBuild ve tanınmış Özellikler](../msbuild/msbuild-reserved-and-well-known-properties.md).
 
 ## <a name="environment-properties"></a>Ortam özellikleri
 
@@ -55,16 +55,16 @@ ms.locfileid: "77633297"
 
  Her MSBuild projesi bir yalıtılmış ortam bloğuna sahiptir; yalnızca kendi bloğundaki okumaları ve yazmaları görür.  Proje dosyası değerlendirilmeden veya oluşturulmadan önce MSBuild, özellik koleksiyonunu başlattığında yalnızca ortam değişkenlerini okur. Bunun ardından bu ortam özellikleri statiktir, yani her bir araç aynı adlar ve değerler ile başlar.
 
- Ortam değişkenlerinin geçerli değerini yumurtlanan bir aracın içinden almak için System.Environment.GetEnvironmentVariable [özelliği işlevlerini](../msbuild/property-functions.md) kullanın. Ancak tercih edilen yöntem, <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A> görev parametresinin kullanılmasıdır. Bu dize dizisinde ayarlanan ortam özellikleri, sistem ortamı değişkenlerini etkilemeden oluşturulan araca gönderilebilir.
+ Oluşturulan bir araç içinden ortam değişkenlerinin geçerli değerini almak için System. Environment. GetEnvironmentVariable [özelliğini](../msbuild/property-functions.md) kullanın. Ancak tercih edilen yöntem, <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A> görev parametresinin kullanılmasıdır. Bu dize dizisinde ayarlanan ortam özellikleri, sistem ortamı değişkenlerini etkilemeden oluşturulan araca gönderilebilir.
 
 > [!TIP]
-> Tüm ortam değişkenleri, başlangıç özellikleri olması için okunmaz. Adı "386" gibi geçerli bir MSBuild özellik adı olmayan tüm ortam değişkeni yoksayılır.
+> Tüm ortam değişkenleri, başlangıç özellikleri olması için okunmaz. Adı geçerli bir MSBuild özellik adı olmayan ("386" gibi) herhangi bir ortam değişkeni yok sayılır.
 
- Daha fazla bilgi için [bkz: Yapıdaki ortam değişkenlerini kullanın.](../msbuild/how-to-use-environment-variables-in-a-build.md)
+ Daha fazla bilgi için bkz. [nasıl yapılır: bir derlemede ortam değişkenlerini kullanma](../msbuild/how-to-use-environment-variables-in-a-build.md).
 
 ## <a name="registry-properties"></a>Kayıt defteri özellikleri
 
- Aşağıdaki sözdizimini kullanarak sistem kayıt defteri değerlerini `Hive` okuyabilirsiniz, kayıt defteri kovanı `MyKey` nerede (örneğin, `MySubKey` `Value` **HKEY_LOCAL_MACHINE),** anahtar adıdır, alt anahtar adıdır ve alt anahtarın değeridir.
+ Aşağıdaki sözdizimini kullanarak sistem kayıt defteri değerlerini okuyabilirsiniz, burada `Hive` kayıt defteri Hive (örneğin, **HKEY_LOCAL_MACHINE**), `MyKey` anahtar adı, `MySubKey` alt anahtar adıdır ve `Value` alt anahtarın değeridir.
 
 ```xml
 $(registry:Hive\MyKey\MySubKey@Value)
@@ -86,9 +86,9 @@ $(registry:Hive\MyKey\MySubKey)
 <PropertyGroup>
 ```
 
-## <a name="global-properties"></a>Genel özellikler
+## <a name="global-properties"></a>Genel Özellikler
 
- **MSBuild, -özellik** (veya **-p)** anahtarını kullanarak komut satırındaki özellikleri ayarlamanızı sağlar. Bu genel özellik değerleri proje dosyasında ayarlanan özellik değerlerini geçersiz kılar. Bu ortam özellikleri içerir, ancak değiştirilemeyen ayrılmış özellikleri içermez.
+ MSBuild, **-Property** (veya **-p**) anahtarını kullanarak komut satırında özellikleri ayarlamanıza olanak sağlar. Bu genel özellik değerleri proje dosyasında ayarlanan özellik değerlerini geçersiz kılar. Bu ortam özellikleri içerir, ancak değiştirilemeyen ayrılmış özellikleri içermez.
 
  Aşağıdaki örnek genel `Configuration` özelliğini `DEBUG` olarak ayarlar.
 
@@ -96,9 +96,9 @@ $(registry:Hive\MyKey\MySubKey)
 msbuild.exe MyProj.proj -p:Configuration=DEBUG
 ```
 
- Genel özellikler, MSBuild görevinin `Properties` özniteliğini kullanarak aynı zamanda çoklu bir proje yapısındaki alt projeler için ayarlanabilir veya değiştirilebilir. MSBuild görevinin özniteliği, iletilmeyecek özelliklerin listesini belirtmek için kullanılmadığı sürece, `RemoveProperties` genel özellikler de alt projelere iletilir. Daha fazla bilgi için [MSBuild görevine](../msbuild/msbuild-task.md)bakın.
+ Genel özellikler, MSBuild görevinin `Properties` özniteliğini kullanarak aynı zamanda çoklu bir proje yapısındaki alt projeler için ayarlanabilir veya değiştirilebilir. Genel Özellikler Ayrıca, `RemoveProperties` MSBuild görevinin özniteliği iletilmeyecek özelliklerin listesini belirtmek için kullanılmadığı takdirde alt projelere iletilir. Daha fazla bilgi için bkz. [MSBuild görevi](../msbuild/msbuild-task.md).
 
- Bir proje etiketinde `TreatAsLocalProperty` özniteliğini kullanarak bir özellik belirtirseniz bu genel özellik değeri, proje dosyasında ayarlanan özellik değerini geçersiz kılmaz. Daha fazla bilgi için [Bkz. Proje öğesi (MSBuild)](../msbuild/project-element-msbuild.md) ve [Nasıl Yapılır: Farklı seçeneklerle aynı kaynak dosyaları oluşturun.](../msbuild/how-to-build-the-same-source-files-with-different-options.md)
+ Bir proje etiketinde `TreatAsLocalProperty` özniteliğini kullanarak bir özellik belirtirseniz bu genel özellik değeri, proje dosyasında ayarlanan özellik değerini geçersiz kılmaz. Daha fazla bilgi için bkz. [Proje öğesi (MSBuild)](../msbuild/project-element-msbuild.md) ve [nasıl yapılır: farklı seçeneklerle aynı kaynak dosyaları oluşturma](../msbuild/how-to-build-the-same-source-files-with-different-options.md).
 
 ## <a name="property-functions"></a>Özellik işlevleri
 
@@ -110,21 +110,21 @@ msbuild.exe MyProj.proj -p:Configuration=DEBUG
 <Today>$([System.DateTime]::Now.ToString("yyyy.MM.dd"))</Today>
 ```
 
- Daha fazla bilgi ve özellik işlevlerinin listesi için Bkz. [Özellik işlevleri.](../msbuild/property-functions.md)
+ Daha fazla bilgi ve özellik işlevlerinin bir listesi için bkz. [özellik işlevleri](../msbuild/property-functions.md).
 
-## <a name="create-properties-during-execution"></a>Yürütme sırasında özellik oluşturma
+## <a name="create-properties-during-execution"></a>Yürütme sırasında özellikler oluşturma
 
  `Target` öğeleri dışında konumlanan özelliklere, bir yapının değerlendirme aşamasında değerler atanır. Sonraki yürütme aşamasında özellikler aşağıdaki şekilde oluşturulabilir veya değiştirilebilir:
 
-- Bir özellik herhangi bir görev tarafından yayılabilir. Bir özellik yalamak için [Görev](../msbuild/task-element-msbuild.md) öğesinin özniteliği olan `PropertyName` bir alt [çıktı](../msbuild/output-element-msbuild.md) öğesi olması gerekir.
+- Bir özellik herhangi bir görev tarafından yayılabilir. Bir özelliği göstermek için, [görev](../msbuild/task-element-msbuild.md) öğesinin özniteliğine sahip bir alt [Çıkış](../msbuild/output-element-msbuild.md) öğesi olması gerekir `PropertyName` .
 
-- Bir özellik [CreateProperty](../msbuild/createproperty-task.md) görevi tarafından yayımlanabilir. Bu kullanım önerilmiyor.
+- Bir özellik [CreateProperty](../msbuild/createproperty-task.md) görevi tarafından dağıtılabilir. Bu kullanım önerilmiyor.
 
 - .NET Framework 3.5'de başlayarak `Target` öğeleri, özellik bildirimlerini içerebilen `PropertyGroup` öğelerini içerebilir.
 
-## <a name="store-xml-in-properties"></a>XML özelliklerini depola
+## <a name="store-xml-in-properties"></a>Özelliklerde XML 'yi depola
 
- Özellikler, değerlerin görevlere geçirilmesini veya günlük bilgilerin görüntülenmesini sağlayabilecek rastgele bir XML içerebilir. Aşağıdaki örnek, XML ve diğer özellik başvurularını içeren bir değere sahip olan `ConfigTemplate` özelliğini gösterir. MSBuild, ilgili özellik değerlerini kullanarak özellik başvurularını değiştirir. Özellik değerleri göründükleri sırayla atanır. Bu nedenle bu örnekte, `$(MySupportedVersion)`, `$(MyRequiredVersion)` ve `$(MySafeMode)` öğelerinin önceden tanımlanmış olması gerekir.
+ Özellikler, değerlerin görevlere geçirilmesini veya günlük bilgilerin görüntülenmesini sağlayabilecek rastgele bir XML içerebilir. Aşağıdaki örnek, XML ve diğer özellik başvurularını içeren bir değere sahip olan `ConfigTemplate` özelliğini gösterir. MSBuild, özellik başvurularını kendi ilgili özellik değerlerini kullanarak değiştirir. Özellik değerleri göründükleri sırayla atanır. Bu nedenle bu örnekte, `$(MySupportedVersion)`, `$(MyRequiredVersion)` ve `$(MySafeMode)` öğelerinin önceden tanımlanmış olması gerekir.
 
 ```xml
 <PropertyGroup>
@@ -147,9 +147,9 @@ msbuild.exe MyProj.proj -p:Configuration=DEBUG
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
-- [Msbuild](../msbuild/msbuild.md)
-- [Nasıl kullanılır: Yapıda ortam değişkenlerini kullanma](../msbuild/how-to-use-environment-variables-in-a-build.md)
-- [Nasıl yapilir: Proje dosyasının adını veya konumunu başvurun](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md)
-- [Nasıl yapılı: Farklı seçeneklerle aynı kaynak dosyaları oluşturma](../msbuild/how-to-build-the-same-source-files-with-different-options.md)
-- [MSBuild ayrılmış ve iyi bilinen özellikleri](../msbuild/msbuild-reserved-and-well-known-properties.md)
-- [Özellik öğesi (MSBuild)](../msbuild/property-element-msbuild.md)
+- [MSBUILD](../msbuild/msbuild.md)
+- [Nasıl yapılır: bir derlemede ortam değişkenlerini kullanma](../msbuild/how-to-use-environment-variables-in-a-build.md)
+- [Nasıl yapılır: proje dosyasının adına veya konumuna başvurma](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md)
+- [Nasıl yapılır: farklı seçeneklerle aynı kaynak dosyaları derleme](../msbuild/how-to-build-the-same-source-files-with-different-options.md)
+- [MSBuild ayrılmış ve tanınmış özellikleri](../msbuild/msbuild-reserved-and-well-known-properties.md)
+- [Property öğesi (MSBuild)](../msbuild/property-element-msbuild.md)

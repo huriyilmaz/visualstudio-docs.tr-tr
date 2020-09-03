@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: adfd23cfcee69ef3242545f6d0680d7316be8156
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75917700"
 ---
 # <a name="talk-to-us"></a>Bizimle İletişime Geçin
@@ -26,10 +26,10 @@ Visual Studio ile ilgili en son belgeler için bkz. [bizimle Iletişim kurun](/v
 Belgelerimizi iyileştirmek için fikirlerinizi ilgileniyoruz. Kişisel olarak yanıt veremiyoruz, ancak geri bildirimin doğru kişiyi aldığından emin olacaksınız.
 
 ## <a name="i-likedislike-something-in-the-visual-studio-documentation"></a>Visual Studio belgelerindeki bir şeyi beğendim/beğendim
- Sayfanın altındaki geri bildirim düğümüzü (**Bu sayfa yardımcı oldu mu?** ) kullanın. Bu düğmeyi tüm MSDN sayfalarında bulabilirsiniz. Bir Yanıt arıyorsanız ve bulamıyorsanız, lütfen bize aradığınız bilgileri söyleyin.
+ Sayfanın altındaki geri bildirim düğümüzü (**Bu sayfa yardımcı oldu mu?**) kullanın. Bu düğmeyi tüm MSDN sayfalarında bulabilirsiniz. Bir Yanıt arıyorsanız ve bulamıyorsanız, lütfen bize aradığınız bilgileri söyleyin.
 
 ## <a name="i-would-like-to-report-a-problem-with-visual-studio"></a>Visual Studio ile ilgili bir sorun bildirmek istiyorum
- Kilitlenmeler, yavaş performans, beklenmeyen davranış vb. gibi Visual Studio 'Yu kullanarak sorunlarla karşılaşırsanız, lütfen **Hızlı Başlat**' ın yanındaki geri bildirim simgesine sağ tıklayıp veya ana menüden **bir sorun bildir hakkında geri &#124; bildirim &#124; gönder** ' i seçerek sorunu bize bildirin. Daha fazla bilgi için bkz. [Visual Studio Ile sorun bildirme](../ide/how-to-report-a-problem-with-visual-studio-2015.md).
+ Kilitlenmeler, yavaş performans, beklenmeyen davranış vb. gibi Visual Studio 'Yu kullanarak sorunlarla karşılaşırsanız lütfen **Hızlı Başlat**' ın yanındaki geribildirim simgesine sağ tıklayıp veya ana menüden **sorun bildir &#124; yardım &#124; geri bildirim gönder** ' i seçerek sorunu bize bildirin. Daha fazla bilgi için bkz. [Visual Studio Ile sorun bildirme](../ide/how-to-report-a-problem-with-visual-studio-2015.md).
 
 ## <a name="i-want-to-make-a-suggestion-about-visual-studio-features"></a>Visual Studio özellikleri hakkında öneride bulunmak istiyorum
  Daha iyi bir şey yapabilmemiz için lütfen bize bildirin! Visual Studio ekibine bir özellik veya değişiklik önermek için **öneri sağla** ' yı seçin.

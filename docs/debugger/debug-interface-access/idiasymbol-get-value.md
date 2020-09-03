@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c9a36da3feecfe1af664e35fa50d616d2a94fb0a
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461513"
 ---
 # <a name="idiasymbolget_value"></a>IDiaSymbol::get_value
@@ -33,7 +33,7 @@ HRESULT get_value (
 #### <a name="parameters"></a>Parametreler
 `pRetVal`
 
-[in, out] `VARIANT`Bir sabit değeri ile doldurulmuş bir nesne.
+[in, out] `VARIANT` Bir sabit değeri ile doldurulmuş bir nesne.
 
 ## <a name="return-value"></a>Dönüş Değeri
 Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.

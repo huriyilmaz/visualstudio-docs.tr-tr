@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cf88661f9ec15e1a3a25e7eb6a40bbd82335a7f4
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918718"
 ---
 # <a name="how-to-respond-to-changes-in-a-uml-model"></a>Nasıl yapılır: Bir UML Modelindeki Değişikliklere Yanıt Verme
@@ -23,5 +23,5 @@ Visual Studio 'da bir UML modelinde her değişiklik olduğunda yürütülen kod
 > Bu teknikler UML API tarafından desteklenmez. Bunlar, Visual Studio 'nun gelecek sürümlerinde çalışmayabilir.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [](../modeling/navigate-the-uml-model.md) [Değişiklikleri model dışında yayan UML model olay işleyicilerinde](../modeling/event-handlers-propagate-changes-outside-the-model.md) gezin
+ [Navigate the UML model](../modeling/navigate-the-uml-model.md) [Değişiklikleri model dışında yayan UML model olay işleyicilerinde](../modeling/event-handlers-propagate-changes-outside-the-model.md) gezin
  

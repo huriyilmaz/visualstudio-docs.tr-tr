@@ -1,5 +1,5 @@
 ---
-title: Uyarı Görevi | Microsoft Dokümanlar
+title: Uyarı görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,38 +19,38 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2e95b59b4ccc0bd2df89e45512a5bdd05c027556
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77631100"
 ---
 # <a name="warning-task"></a>Uyarı görevi
 
-Değerlendirilmiş koşullu bir bildirime dayalı bir yapı sırasında bir uyarı yığlar.
+Değerlendirilen bir koşullu ifadeye dayanan bir derleme sırasında bir uyarı kaydeder.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda görevparametreleri `Warning` açıklanmaktadır.
+ Aşağıdaki tablo, görevin parametrelerini açıklar `Warning` .
 
 | Parametre | Açıklama |
 |---------------| - |
-| `Code` | İsteğe bağlı `String` parametre.<br /><br /> Uyarı ile ilişkilendirmek için uyarı kodu. |
-| `File` | İsteğe bağlı `String` parametre.<br /><br /> Varsa ilgili dosyayı belirtir. Dosya sağlanmadıysa, Uyarı görevini içeren dosya kullanılır. |
-| `HelpKeyword` | İsteğe bağlı `String` parametre.<br /><br /> Uyarıyla ilişkilendirmek için Yardım anahtar sözcüğü. |
-| `Text` | İsteğe bağlı `String` parametre.<br /><br /> `Condition` Parametre ' nin değerlendirilmesi durumunda MSBuild'in günlük olduğu uyarı `true`metni. |
+| `Code` | İsteğe bağlı `String` parametre.<br /><br /> Uyarıyla ilişkilendirilecek uyarı kodu. |
+| `File` | İsteğe bağlı `String` parametre.<br /><br /> Varsa ilgili dosyayı belirtir. Dosya sağlanmazsa, uyarı görevini içeren dosya kullanılır. |
+| `HelpKeyword` | İsteğe bağlı `String` parametre.<br /><br /> Uyarıyla ilişkilendirilecek Yardım anahtar sözcüğü. |
+| `Text` | İsteğe bağlı `String` parametre.<br /><br /> Parametresi olarak değerlendirilirse MSBuild 'in kaydettiği uyarı metni `Condition` `true` . |
 
 ## <a name="remarks"></a>Açıklamalar
 
- Görev, `Warning` MSBuild projelerinin bir sonraki yapı adımına geçmeden önce gerekli yapılandırmaveya özelliğin varlığını denetlemesine olanak tanır.
+ `Warning`Görev, MSBuild projelerinin bir sonraki derleme adımına geçmeden önce gerekli bir yapılandırmanın veya özelliğin varlığını denetlemesini sağlar.
 
- Görevin `Condition` parametresi `true`değerlendirirse, `Text` parametrenin değeri günlüğe kaydedilir ve yapı yürütmeye devam eder. `Warning` Parametre `Condition` yoksa, uyarı metni günlüğe kaydedilir. Günlüğe kaydetme hakkında daha fazla bilgi için [bkz.](../msbuild/obtaining-build-logs-with-msbuild.md)
+ `Condition` `Warning` Görevin parametresi olarak değerlendirilirse `true` , `Text` parametrenin değeri günlüğe kaydedilir ve derleme yürütülmeye devam eder. Bir `Condition` parametre yoksa, uyarı metni günlüğe kaydedilir. Günlüğe kaydetme hakkında daha fazla bilgi için bkz. [Derleme günlüklerini alma](../msbuild/obtaining-build-logs-with-msbuild.md).
 
- Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
+ Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki kod örneği komut satırında ayarlanan özellikleri denetler. Ayarlanmış özellikler yoksa, proje bir uyarı olayı yükseltir ve `Text` `Warning` görevin parametresinin değerini günlüğe kaydeder.
+ Aşağıdaki kod örneği, komut satırında ayarlanan özellikleri denetler. Hiçbir özellik ayarlanmamışsa, proje bir uyarı olayı oluşturur ve görevin parametresinin değerini günlüğe kaydeder `Text` `Warning` .
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -68,5 +68,5 @@ Değerlendirilmiş koşullu bir bildirime dayalı bir yapı sırasında bir uyar
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yapı günlükleri edinme](../msbuild/obtaining-build-logs-with-msbuild.md)
+- [Derleme günlüklerini al](../msbuild/obtaining-build-logs-with-msbuild.md)
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)

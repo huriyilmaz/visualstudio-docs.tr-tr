@@ -1,5 +1,5 @@
 ---
-title: Xamarin kullanılarak yerel UI ile uygulamalar oluşturun
+title: Xamarin kullanarak yerel kullanıcı arabirimi ile uygulama oluşturma
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: tgt-pltfrm-cross-plat
@@ -9,100 +9,100 @@ caps.latest.revision: 33
 ms.author: crdun
 manager: crdun
 ms.openlocfilehash: 204d3ee68aace07ed19e5913309a122d6d775a0e
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918338"
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio’da Xamarin kullanarak yerel kullanıcı arabirimi ile uygulama oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Adımları yaptıktan sonra [Kurulum ve yükleme](../cross-platform/setup-and-install.md) ve [Xamarin ortamınızı doğrulama](../cross-platform/verify-your-xamarin-environment.md), bu izlenecek yol (aşağıda ile yerel UI Katmanlar gösterilmiştir) temel bir Xamarin uygulamasının nasıl oluşturulacağını gösterir. Yerel UI ile paylaşılan kodun bir taşınabilir sınıf kitaplığı (PCL) yer alıyor ve ayrı bir platform projeleri kullanıcı Arabirimi tanımları içerir.
+[Xamarin ortamınızı](../cross-platform/verify-your-xamarin-environment.md) [Kurulum ve](../cross-platform/setup-and-install.md) doğrulama adımlarını tamamladıktan sonra Bu izlenecek yol, yerel kullanıcı arabirimi katmanları ile temel bir Xamarin uygulamasının (aşağıda gösterilmiştir) nasıl oluşturulacağını gösterir. Yerel Kullanıcı arabirimi ile, paylaşılan kod taşınabilir bir sınıf kitaplığında (PCL) bulunur ve tek platform projeleri Kullanıcı arabirimi tanımlarını içerir.
 
  ![Android ve Windows Phone 'de Xamarin uygulaması](../cross-platform/media/cross-plat-xamarin-build-1.png "Çapraz Plat Xamarin derleme 1")
 
- Derlemek için bu işlemleri yapmanız:
+ Bunu oluşturmak için şunları yapabilirsiniz:
 
 - [Çözümünüzü ayarlama](#solution)
 
-- [Paylaşılan veri hizmeti kod yazma](#dataservice)
+- [Paylaşılan veri hizmeti kodu yaz](#dataservice)
 
-- [Android için kullanıcı Arabirimi tasarımı](#Android)
+- [Android için tasarım kullanıcı arabirimi](#Android)
 
-- [Windows Phone için kullanıcı Arabirimi tasarımı](#Windows)
+- [Windows Phone için tasarım kullanıcı arabirimi](#Windows)
 
 - [Sonraki adımlar](#next)
 
 > [!TIP]
-> Bu proje için tam kaynak kodunu bulabilirsiniz [github'daki mobil-samples deposuna](https://github.com/xamarin/mobile-samples/tree/master/Weather).
+> Bu proje için tam kaynak kodunu [GitHub 'daki mobil örnekler deposunda](https://github.com/xamarin/mobile-samples/tree/master/Weather)bulabilirsiniz.
 >
-> Güçlük veya hatalarla karşılaşırsanız lütfen hakkında sorularınızı [forums.xamarin.com](https://forums.xamarin.com/). Birçok hataları açıklanan olan en son SDK Xamarin tarafından gerekli güncelleştirerek çözülebilir [Xamarin sürüm notları](https://developer.xamarin.com/) her platform için.
+> Zorluklarla karşılaşıyorsanız veya hatalarla karşılaşırsanız lütfen [forums.Xamarin.com](https://forums.xamarin.com/)adresindeki sorularınızı gönderin. Birçok hata, her platform için  [Xamarin sürüm notlarında](https://developer.xamarin.com/) açıklanan Xamarin 'in gerektirdiği en son SDK 'lara güncelleştirilerek çözülebilir.
 >
 > [!NOTE]
-> Xamarin Geliştirici belgeleri, aşağıda listelenen birkaç izlenecek yollar hem hızlı başlangıç hem de yakından bölümleri ile de sunar. Tüm bu sayfalarda "Visual Studio" Visual Studio özel Kılavuzlar görmek için sağ üst köşede sayfanın seçili olduğundan emin olun.
+> Xamarin 'in geliştirici belgeleri aşağıda listelenen hem hızlı başlangıç hem de derinlemesine bakış bölümleri ile çeşitli izlenecek yollar sunar. Bu sayfaların tümünde, Visual Studio 'ya özgü izlenecek yolları görmek için sayfanın sağ üst kısmında "Visual Studio" öğesinin seçildiğinden emin olun.
 >
-> - Xamarin uygulamaları yerel UI ile:
+> - Yerel UI ile Xamarin uygulamaları:
 >
->   - [Hello, Android](https://developer.xamarin.com/guides/android/getting_started/hello,android/) (tek ekranlı basit uygulama)
->   - [Hello, Android çoklu ekranı](https://developer.xamarin.com/guides/android/getting_started/hello,android_multiscreen/) (ekranlar arasında gezintiyi uygulamayla)
->   - [Android parçaları izlenecek](/xamarin/android/platform/fragments/implementing-with-fragments/) (diğer özelliklerin yanı sıra ana/ayrıntı ekranları için kullanılır)
+>   - [Merhaba, Android](https://developer.xamarin.com/guides/android/getting_started/hello,android/) (tek ekranlı basit uygulama)
+>   - [Merhaba, Android multiscreen](https://developer.xamarin.com/guides/android/getting_started/hello,android_multiscreen/) (ekranlar arasında gezinle uygulama)
+>   - [Android parçaları](/xamarin/android/platform/fragments/implementing-with-fragments/) Kılavuzu (diğer şeyler arasında ana/ayrıntı ekranları için kullanılır)
 >   - [Hello, iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)
->   - [Çok Ekranlı Hello, iOS ](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS_multiscreen/)
->   - Xamarin.Forms (paylaşılan UI) ile Xamarin uygulamaları
+>   - [Çok Ekranlı Hello, iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS_multiscreen/)
+>   - Xamarin. Forms ile Xamarin uygulamaları (paylaşılan kullanıcı arabirimi)
 >
 >   - [Hello, Xamarin.Forms](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms/quickstart/)
 >   - [Hello, Xamarin.Forms Multiscreen](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms-multiscreen/)
 
-## <a name="solution"></a> Çözümünüzü ayarlama
- Bu adımlar paylaşılan kod için bir PCL ve iki eklenen NuGet paketi içeren yerel UI ile bir Xamarin çözümü oluşturun.
+## <a name="set-up-your-solution"></a><a name="solution"></a> Çözümünüzü ayarlama
+ Bu adımlar, paylaşılan kod için PCL ve iki adet eklenen NuGet paketi içeren yerel kullanıcı arabirimine sahip bir Xamarin çözümü oluşturur.
 
-1. Visual Studio'da yeni bir oluşturma **boş uygulama (yerel taşınabilir)** çözüm ve adlandırın **WeatherApp**. Girerek bu şablon en bir kolayca bulabilirsiniz **yerel taşınabilir** arama alanına.
+1. Visual Studio 'da yeni bir **boş uygulama (yerel taşınabilir)** çözümü oluşturun ve bunu bir **hava uygulama**adıyla adlandırın. Bu şablonu, **Yerel taşınabilen** arama alanına girerek en kolay şekilde bulabilirsiniz.
 
-    Yoksa, olabilir Xamarin'i yükleyin veya Visual Studio 2015 özelliğini etkinleştirmek için bkz: [Kurulum ve yükleme](../cross-platform/setup-and-install.md).
+    Bu yoksa, Xamarin 'i yüklemek veya Visual Studio 2015 özelliğini etkinleştirmek zorunda kalabilirsiniz. [Kurulum ve yükleme](../cross-platform/setup-and-install.md)bölümüne bakın.
 
-2. Çözümü oluşturmak için Tamam'a tıkladıktan sonra bir dizi ayrı projeler gerekir:
+2. Çözümü oluşturmak için Tamam ' a tıkladıktan sonra bir dizi bağımsız projeniz olacaktır:
 
-   - **WeatherApp (taşınabilir)** : Burada, dahil olmak üzere genel iş mantığı ve UI kodunu kullanarak Xamarin.Forms ile platformlar arasında paylaşılan kod yazma PCL.
+   - **Dalgalı uygulama (taşınabilir)**: Xamarin. Forms ile kullanılan ortak iş mantığı ve Kullanıcı arabirimi kodu dahil olmak üzere platformlar arasında paylaşılan kod yazacağınız PCL.
 
-   - **WeatherApp.Droid**: projenin yerel Android kodunu içerir. Bu, varsayılan başlangıç projesi olarak ayarlanır.
+   - **Dalgalı uygulama. DROID**: Yerel Android kodunu içeren proje. Bu, varsayılan başlangıç projesi olarak ayarlanır.
 
-   - **WeatherApp.iOS**: yerel iOS kodu içeren bir proje.
+   - **Dalgalı uygulama. iOS**: Yerel iOS kodunu içeren proje.
 
-   - **(Windows Phone 8.1) WeatherApp.WinPhone**: yerel Windows Phone kod içeren bir proje.
+   - **Dalgalı uygulama. WinPhone (Windows Phone 8,1)**: yerel Windows Phone kodunu içeren proje.
 
-     Her yerel proje içinde karşılık gelen bir platform için yerel Tasarımcı erişimi vardır ve platform belirli ekranları uygulayabilirsiniz.
+     Her yerel projede, karşılık gelen platform için yerel tasarımcıya erişiminiz vardır ve platforma özel ekranlar uygulayabilir.
 
-3. Ekleme **Newtonsoft.Json** ve hava durumu verileri hizmetten alınan bilgi işlem için kullanacağınız PCL projesine NuGet paketi:
+3. **Newtonsoft.Js** ve NuGet paketini bir hava durumu veri hizmetinden alınan bilgileri işlemek IÇIN kullanacağınız PCL projesine ekleyin:
 
-   - Sağ **çözüm 'WeatherApp'** Çözüm Gezgini seçip **çözüm için NuGet paketlerini Yönet...** .
+   - Çözüm Gezgini 'nde **Çözüm ' Katheruyg '** öğesine sağ tıklayın ve **çözüm Için NuGet Paketlerini Yönet..**. seçeneğini belirleyin.
 
-        NuGet penceresinde **Gözat** sekmesinde ve arama **Newtonsoft**.
+        NuGet penceresinde, **Gözden** geçirme sekmesini seçin ve **Newtonsoft**için arama yapın.
 
-   - Seçin **Newtonsoft.Json**.
+   - **Newtonsoft.Js**seçin.
 
-   - Pencerenin sağ tarafında denetleyin **WeatherApp** (Bu, gerektiği paketini yüklemek yalnızca proje) projesi.
+   - Pencerenin sağ tarafında, **dalgalı uygulama** projesini denetleyin (Bu, paketi yüklemeniz gereken tek projem olur).
 
-   - Olun **sürüm** ayarlanmış **en son kararlı** sürümü.
+   - **Sürüm** alanının **en son kararlı** sürüme ayarlandığından emin olun.
 
-   - **Yükle**'ye tıklatın.
+   - **Yükle**'ye tıklayın.
 
-   - ![Newtonsoft. JSON NuGet paketini bulma ve yükleme](../cross-platform/media/crossplat-xamarin-formsguide-5.png "Çapraz Splat Xamarin FormsGuide 5")
+   - ![NuGet paketine Newtonsoft.Jsbulma ve yükleme](../cross-platform/media/crossplat-xamarin-formsguide-5.png "Çapraz Splat Xamarin FormsGuide 5")
 
-4. Bulmak ve yüklemek için 3. adımı yineleyin **Microsoft.Net.Http** paket.
+4. **Microsoft.net. http** paketini bulmak ve yüklemek için 3. adımı yineleyin.
 
-5. Çözümünüzü oluşturun ve herhangi bir yapı hatası olmadığını doğrulayın.
+5. Çözümünüzü derleyin ve derleme hatası olmadığını doğrulayın.
 
-## <a name="dataservice"></a> Paylaşılan veri hizmeti kod yazma
- **WeatherApp (taşınabilir)** projedir burada tüm platformlar arasında paylaşılan taşınabilir sınıf kitaplığı (PCL) kod yazacaksınız. PCL otomatik olarak derlenmiş iOS, Android ve Windows Phone uygulama paketleri dahil edilir.
+## <a name="write-shared-data-service-code"></a><a name="dataservice"></a> Paylaşılan veri hizmeti kodu yaz
+ **Hava uygulama (taşınabilir)** projesi, tüm platformlarda paylaşılan taşınabilir sınıf KITAPLıĞı (PCL) için kod yazacağınız yerdir. PCL, iOS, Android ve Windows Phone projeleri tarafından oluşturulan uygulama paketlerine otomatik olarak eklenir.
 
- Aşağıdaki adımlar bu durumda, hava durumu hizmetinden veri depolamak ve erişmek için PCL kodu ekleyin:
+ Aşağıdaki adımlar, bu hava durumu hizmetine erişmek ve verileri depolamak için PCL 'e kod ekler:
 
-1. Gereken önce kaydolmanız boş bir API anahtarı için bu örneği çalıştırmak için [ http://openweathermap.org/appid ](https://openweathermap.org/appid).
+1. Bu örneği çalıştırmak için, ilk olarak bir ücretsiz API anahtarına kaydolmanız gerekir [http://openweathermap.org/appid](https://openweathermap.org/appid) .
 
-2. Sağ **WeatherApp** seçin ve proje **Ekle > sınıfı...** . İçinde **Yeni Öğe Ekle** iletişim kutusunda, dosya adı **Weather.cs**. Bu sınıf, hava durumu verileri hizmetten alınan verileri depolamak için kullanacaksınız.
+2. **Dalgalı uygulama** projesine sağ tıklayın ve **> Sınıf Ekle...** seçeneğini belirleyin. **Yeni öğe Ekle** iletişim kutusunda dosyayı **Weather.cs**olarak adlandırın. Bu sınıfı, hava durumu verileri hizmetinden veri depolamak için kullanacaksınız.
 
-3. Tüm içeriğini değiştirin **Weather.cs** aşağıdaki:
+3. **Weather.cs** öğesinin tüm içeriğini aşağıdaki kodla değiştirin:
 
     ```csharp
     namespace WeatherApp
@@ -133,9 +133,9 @@ Adımları yaptıktan sonra [Kurulum ve yükleme](../cross-platform/setup-and-in
     }
     ```
 
-4. Başka bir sınıf adlı PCL projesine ekleyin **DataService.cs** içinde JSON verilerini işleme için hava durumu verileri hizmetten kullanacaksınız.
+4. **DataService.cs** adlı PCL projesine, hava durumu VERI hizmetindeki JSON verilerini işlemek için kullanacağınız başka bir sınıf ekleyin.
 
-5. Tüm içeriğini değiştirin **DataService.cs** aşağıdaki kod ile:
+5. **DataService.cs** öğesinin tüm içeriğini aşağıdaki kodla değiştirin:
 
     ```csharp
     using System.Threading.Tasks;
@@ -164,9 +164,9 @@ Adımları yaptıktan sonra [Kurulum ve yükleme](../cross-platform/setup-and-in
     }
     ```
 
-6. Bir üçüncü sınıf adlı PCL ekleyin **çekirdek** bir posta kodu, bir sorgu dizesi forms mantıksal hava durumu verileri hizmet çağrıları ve örneğini doldurur gibi iş mantığını burada giriyorum paylaşılan **hava durumu**sınıfı.
+6. Bir veri kümesi kodu ile bir sorgu dizesi oluşturan, hava durumu verileri hizmetini çağıran ve **Hava durumu** sınıfının bir örneğini dolduran Logic gibi paylaşılan iş mantığını YERLEŞTIRECEĞINIZ, PCL adlı **çekirdeğe** üçüncü bir sınıf ekleyin.
 
-7. Öğesinin içeriğini değiştirin **Core.cs** aşağıdaki:
+7. **Core.cs** içeriğini aşağıdaki kodla değiştirin:
 
     ```csharp
     using System;
@@ -216,51 +216,51 @@ Adımları yaptıktan sonra [Kurulum ve yükleme](../cross-platform/setup-and-in
     }
     ```
 
-8. Değiştirin *burada bilgisayarınızı anahtarı* elde ettiğiniz API anahtarını içeren kodu (hala ihtiyaç tırnak içine) 1. adım.
+8. Kodunuzda *ANAHTARıNıZı burada* , 1. adımda elde ettiğiniz API anahtarıyla değiştirin (yine de çevresinde tırnak işareti olması gerekir).
 
-9. Biz bunu Loaded MyClass.cs PCL içinde silin.
+9. Bunu kullanmayabilmemiz için PCL 'de MyClass.cs silin.
 
-10. Derleme **WeatherApp** PCL projeye kodu doğru olduğundan emin olun.
+10. Kodun doğru olduğundan emin olmak için **dalgalı uygulama** PCL projesi oluşturun.
 
-## <a name="Android"></a> Android için kullanıcı Arabirimi tasarımı
- Şimdi biz kullanıcı arabirimini tasarlayabileceğiniz paylaşılan kodunuza bağlayın ve sonra uygulamayı çalıştırın.
+## <a name="design-ui-for-android"></a><a name="Android"></a> Android için tasarım kullanıcı arabirimi
+ Şimdi Kullanıcı arabirimini tasarlayacağız, paylaşılan kodunuza bağlayacağız ve sonra uygulamayı çalıştıracağız.
 
-### <a name="design-the-look-and-feel-of-your-app"></a>Tasarım görünümü uygulama
+### <a name="design-the-look-and-feel-of-your-app"></a>Uygulamanızın görünümünü tasarlama
 
-1. İçinde **Çözüm Gezgini**, genişletme **WeatherApp.Droid**>**kaynakları**>**Düzen** klasörü ve Açık **Main.axml**. Bu dosya Görsel tasarımcıda açılır. (Java ile ilgili bir hata varsa, bkz. Bu [blog gönderisi](https://forums.xamarin.com/discussion/32365/connection-to-the-layout-renderer-failed-in-xs-5-7-and-xamarinvs-3-9).)
-
-    > [!TIP]
-    > Projede diğer birçok dosyası vardır. Bunları keşfetmeye biraz daha fazla, bir Android projesi yapısına başlamak istiyorsanız ancak bu konunun kapsamı dışında olup [Kısım 2 yakından](/xamarin/android/get-started/hello-android/hello-android-deepdive?pivots=windows) xamarin.com üzerinde Hello Android konu.
-
-2. Seçip Tasarımcısı'nda görüntülenen varsayılan düğme silin.
-
-3. Araç kutusu açın **Görünüm > diğer Windows > Araç kutusu**.
-
-4. Gelen **araç kutusu**, sürükleyin bir **RelativeLayout** tasarımcıya denetim. Bu denetim, diğer denetimler için üst kapsayıcı olarak kullanacaksınız.
+1. **Çözüm Gezgini**, **gentherapp. DROID** > **kaynakları** > **Düzen** klasörünü genişletin ve **Main. axml**' yi açın. Bu, dosyayı görsel tasarımcıda açar. (Java ile ilgili bir hata görünürse, bu [blog gönderisine](https://forums.xamarin.com/discussion/32365/connection-to-the-layout-renderer-failed-in-xs-5-7-and-xamarinvs-3-9)bakın.)
 
     > [!TIP]
-    > Herhangi bir zamanda düzenini düzgün görüntülenmesi yaramadı, dosyayı kaydedin ve arasında geçiş yapma **tasarım** ve **kaynak** yenilemek için sekmeler.
+    > Projede birçok başka dosya vardır. Bu konunun kapsamı ötesinde, ancak bir Android projesinin yapısına biraz daha fazla bilgi almak istiyorsanız, xamarin.com adresindeki Merhaba Android konusunun [2. bölümünü](/xamarin/android/get-started/hello-android/hello-android-deepdive?pivots=windows) inceleyin.
 
-5. İçinde **özellikleri** penceresinde **arka plan** (stil grubunda) özelliğine `#545454`.
+2. Tasarımcıda görünen varsayılan düğmeyi seçin ve silin.
 
-6. Gelen **araç kutusu**, sürükleyin bir **TextView** denetimi **RelativeLayout** denetimi.
+3. **> diğer Windows > araç kutusu**Ile araç kutusunu açın.
 
-7. İçinde **özellikleri** bu Özellikler penceresinde ayarlayın (Not: alfabetik olarak sırala düğmesine Özellikler penceresi araç kullanarak sıralamak için yardımcı olabilir):
+4. **Araç kutusundan**bir **RelativeLayout** denetimini tasarımcıya sürükleyin. Bu denetimi, diğer denetimler için bir üst kapsayıcı olarak kullanacaksınız.
+
+    > [!TIP]
+    > Herhangi bir zamanda düzen doğru şekilde görüntülenemeyebilir, dosyayı kaydedin ve yenileme için **Tasarım** ve **kaynak** sekmeleri arasında geçiş yapın.
+
+5. **Özellikler** penceresinde, **Arkaplan** özelliğini (stil grubunda) olarak ayarlayın `#545454` .
+
+6. **Araç kutusundan**, bir **TextView** denetimini **RelativeLayout** denetimine sürükleyin.
+
+7. **Özellikler** penceresinde, bu özellikleri ayarlayın (note: Özellikler penceresi araç çubuğundaki sıralama düğmesini kullanarak listeyi alfabetik olarak sıralamanıza yardımcı olabilir):
 
     |Özellik|Değer|
     |--------------|-----------|
-    |**text**|**Posta kodu göre ara**|
+    |**metinleri**|**ZIP koduna göre ara**|
     |**id**|`@+id/ZipCodeSearchLabel`|
     |**layout_marginLeft**|`10dp`|
     |**textColor**|`@android:color/white`|
-    |**metin stili**|`bold`|
+    |**Oluşturdu**|`bold`|
 
     > [!TIP]
-    > Pek çok özellik seçebileceğiniz değerler, aşağı açılan listesini içermeyen dikkat edin.  Belirli bir özellik için kullanılacak dize değeri tahmin etmek zor olabilir. Öneriler için bir özelliğin adını aramayı deneyin [R.attr](https://developer.android.com/reference/android/R.attr.html) sınıfı sayfası.
+    > Birçok özellik, seçebileceğiniz değerlerin açılan bir listesini içermediğine dikkat edin.  Verilen herhangi bir özellik için kullanılacak dize değerini tahmin etmek zor olabilir. Öneriler için, [R. attr](https://developer.android.com/reference/android/R.attr.html) sınıfı sayfasında bir özelliğin adını aramayı deneyin.
     >
-    >  Ayrıca, hızlı web arama genellikle bir sayfaya müşteri adayları [ http://stackoverflow.com/ ](https://stackoverflow.com/) başkalarının kullanıldığı aynı özellik.
+    >  Ayrıca, hızlı bir Web araması genellikle [http://stackoverflow.com/](https://stackoverflow.com/) diğerlerinin aynı özelliği kullandığı bir sayfaya yol açar.
 
-     Geçiş yaparsanız, başvuru için **kaynak** görünümü, bu öğe için şu kodu görürsünüz:
+     Başvuru için, **kaynak** görünümüne geçerseniz, bu öğe için aşağıdaki kodu görmeniz gerekir:
 
     ```xml
     <TextView
@@ -275,18 +275,18 @@ Adımları yaptıktan sonra [Kurulum ve yükleme](../cross-platform/setup-and-in
 
     ```
 
-8. Gelen **araç kutusu**, sürükleyin bir **TextView** denetimi **RelativeLayout** denetlemek ve ZipCodeSearchLabel denetimi yerleştirin. Bunun için yeni denetimi varolan bir denetimi uygun kenarında bırakarak; Bunun için biraz tasarımcıda yakınlaştırmak için yardımcı olur.
+8. **Araç kutusundan**, bir **TextView** denetimini **RelativeLayout** denetimine sürükleyin ve zipcodesearchlabel denetiminin altına yerleştirin. Bunu, yeni denetimi varolan denetimin uygun kenarına bırakarak yapabilirsiniz; Bu, tasarımcı 'nın bu şekilde yakınlaştırmasına yardımcı olur.
 
-9. İçinde **özellikleri** penceresinde bu özellikleri ayarlayın:
+9. **Özellikler** penceresinde, aşağıdaki özellikleri ayarlayın:
 
     |Özellik|Değer|
     |--------------|-----------|
-    |**text**|**Posta Kodu**|
+    |**metinleri**|**Posta Kodu**|
     |**id**|`@+id/ZipCodeLabel`|
     |**layout_marginLeft**|`10dp`|
     |**layout_marginTop**|`5dp`|
 
-     Kodda **kaynak** görünümü, şu şekilde görünmelidir:
+     **Kaynak** görünümündeki Kod şöyle görünmelidir:
 
     ```xml
     <TextView
@@ -299,7 +299,7 @@ Adımları yaptıktan sonra [Kurulum ve yükleme](../cross-platform/setup-and-in
         android:layout_marginLeft="10dp" />
     ```
 
-10. Gelen **araç kutusu**, sürükleyin bir **numarası** denetimi **RelativeLayout**, aşağıdaki konumlandırın **posta kodu** etiketi. Ardından aşağıdaki özellikleri ayarlayın:
+10. **Araç kutusundan**bir **sayı** denetimini **RelativeLayout**üzerine sürükleyin, **ZIP kodu** etiketinin altına yerleştirin. Ardından aşağıdaki özellikleri ayarlayın:
 
     |Özellik|Değer|
     |--------------|-----------|
@@ -308,7 +308,7 @@ Adımları yaptıktan sonra [Kurulum ve yükleme](../cross-platform/setup-and-in
     |**layout_marginBottom**|`10dp`|
     |**Genişlik**|`165dp`|
 
-     Kodu yeniden:
+     Yeniden, kod:
 
     ```xml
     <EditText
@@ -322,12 +322,12 @@ Adımları yaptıktan sonra [Kurulum ve yükleme](../cross-platform/setup-and-in
         android:width="165dp" />
     ```
 
-11. Gelen **araç kutusu**, sürükleyin bir **düğmesi** üzerine **RelativeLayout** denetlemek ve zipCodeEntry denetimi sağa konumlandırın. Bu özellikleri ayarlayın:
+11. **Araç kutusundan**, bir **düğmeyi** **RelativeLayout** denetimine sürükleyin ve zipcodeentry denetiminin sağına konumlandırın. Sonra bu özellikleri ayarlayın:
 
     |Özellik|Değer|
     |--------------|-----------|
     |**id**|`@+id/weatherBtn`|
-    |**text**|**Hava durumunu alın**|
+    |**metinleri**|**Hava durumu Al**|
     |**layout_marginLeft**|`20dp`|
     |**layout_alignBottom**|`@id/zipCodeEntry`|
     |**Genişlik**|`165dp`|
@@ -343,7 +343,7 @@ Adımları yaptıktan sonra [Kurulum ve yükleme](../cross-platform/setup-and-in
         android:width="165dp" />
     ```
 
-12. Artık Android designer kullanarak temel bir kullanıcı Arabirimi oluşturmak için yeterli bir deneyimi vardır. Biçimlendirme doğrudan sayfanın .asxml dosyasına ekleyerek, bir kullanıcı Arabirimi de oluşturabilirsiniz. Bu şekilde kullanıcı arabiriminin geri kalan oluşturmak için kaynağı görünümü Tasarımcısı'nı ve ardından aşağıdaki biçimlendirme geçmiş geçin *altındaki* `</RelativeLayout>` etiketi (etiketi altında... Bu Evet, bu öğeleri olmayan ReleativeLayout içinde yer alan).
+12. Artık Android tasarımcısını kullanarak temel bir kullanıcı arabirimi oluşturmak için yeterli deneyimle karşılaşırsınız. Ayrıca, sayfanın. ASXML dosyasına doğrudan biçimlendirme ekleyerek bir kullanıcı arabirimi oluşturabilirsiniz. Kullanıcı arabiriminin geri kalanını oluşturmak için, tasarımcıda kaynak görünümüne geçiş yapın, ardından etiketin *altında* bulunan aşağıdaki biçimlendirmeyi geçmiş `</RelativeLayout>` (Evet, etiketin altında... Bu öğeler ReleativeLayout) içinde yer alır.
 
     ```xml
     <TextView
@@ -448,11 +448,11 @@ Adımları yaptıktan sonra [Kurulum ve yükleme](../cross-platform/setup-and-in
 
     ```
 
-13. Dosyayı kaydedin ve geçiş **tasarım** görünümü. Kullanıcı Arabirimi aşağıdaki gibi görünmelidir:
+13. Dosyayı kaydedin ve **Tasarım** görünümüne geçin. Kullanıcı arabiriminizi aşağıdaki gibi görünmelidir:
 
      ![Android uygulaması için Kullanıcı arabirimi](../cross-platform/media/xamarin-androidui.png "Xamarin_AndroidUI")
 
-14. Açık **MainActivity.cs** ve satırları Sil *OnCreate* daha önce kaldırılan varsayılan düğme başvuran yöntemi. İşiniz bittiğinde, kod şu şekilde görünmelidir:
+14. **MainActivity.cs** açın ve daha önce kaldırılan varsayılan düğmeye başvuran *OnCreate* yöntemindeki satırları silin. Bitirdiğinizde kod aşağıdaki gibi görünmelidir:
 
     ```
     protected override void OnCreate (Bundle bundle)
@@ -464,11 +464,11 @@ Adımları yaptıktan sonra [Kurulum ve yükleme](../cross-platform/setup-and-in
     }
     ```
 
-15. İş kontrol etmek için Android projesi oluşturun. Yapı ekler Not denetlemek için kimlikleri **Resource.Designer.cs** kod ada göre denetimlere başvurabilmeniz için dosya.
+15. İşinizi denetlemek için Android projesi oluşturun. Derleme, **Resource.Designer.cs** dosyasına denetim kimliği eklediğine ve böylece, koddaki ada göre denetimlere başvurabilirsiniz.
 
-### <a name="consume-your-shared-code"></a>Paylaşılan kod kullanma
+### <a name="consume-your-shared-code"></a>Paylaşılan kodunuzu tüketme
 
-1. Açık **MainActivity.cs** dosya **WeatherApp** Kod Düzenleyicisi'nde proje ve içeriğini aşağıdaki kodla değiştirin. Bu kod `GetWeather` paylaşılan kodunuzda tanımlanan yöntemi. Ardından kullanıcı Arabiriminde uygulamanın Bu yöntemden alınan verileri gösterir.
+1. Kod düzenleyicisinde **MainActivity.cs** dosyasını açın ve **WeatherApp** içeriğini aşağıdaki kodla değiştirin. Bu kod, `GetWeather` paylaşılan kodunuzda tanımladığınız yöntemi çağırır. Ardından, uygulamanın kullanıcı arabiriminde, bu yöntemden alınan verileri gösterir.
 
     ```csharp
     using System;
@@ -512,26 +512,26 @@ Adımları yaptıktan sonra [Kurulum ve yükleme](../cross-platform/setup-and-in
     }
     ```
 
-### <a name="run-the-app-and-see-how-it-looks"></a>Uygulamayı çalıştırın ve nasıl göründüğüne bakın
+### <a name="run-the-app-and-see-how-it-looks"></a>Uygulamayı çalıştırın ve nasıl göründüğünü görün
 
-1. İçinde **Çözüm Gezgini**, emin **WeatherApp.Droid** projeyi başlangıç projesi olarak ayarlayın.
+1. **Çözüm Gezgini**, **dalgalı uygulama. DROID** projesinin başlangıç projesi olarak ayarlandığından emin olun.
 
-2. Bir uygun cihaz veya öykünücü hedef seçin ve ardından F5 tuşuna basarak uygulamayı başlatın.
+2. Uygun bir cihaz veya öykünücü hedefi seçin, sonra F5 tuşuna basarak uygulamayı başlatın.
 
-3. Cihazda veya öykünücüde düzenleme kutusuna geçerli bir Amerika Birleşik Devletleri posta kodu yazın (örneğin: 60601) ve basın **hava durumunu alın**. Bu bölge için hava durumu verileri, ardından denetimleri görünür.
+3. Cihazda veya Öykünücüde, düzenleme kutusuna geçerli bir Birleşik Devletler posta kodu yazın (örneğin: 60601) ve **Hava durumu Al**' a basın. Bu bölge için hava durumu verileri daha sonra denetimlerde görüntülenir.
 
      ![Android ve Windows Phone için hava durumu uygulaması](../cross-platform/media/xamarin-getstarted-results.png "Xamarin_GetStarted_Results")
 
 > [!TIP]
-> Bu proje için tam kaynak kodu [github'daki mobil-samples deposuna](https://github.com/xamarin/mobile-samples/tree/master/Weather).
+> Bu proje için tam kaynak kodu [GitHub 'daki mobil örnek depodadır](https://github.com/xamarin/mobile-samples/tree/master/Weather).
 
-## <a name="Windows"></a> Windows Phone için kullanıcı Arabirimi tasarımı
- Şimdi biz Windows Phone için kullanıcı arabirimini tasarlayabileceğiniz paylaşılan kodunuza bağlayın ve sonra uygulamayı çalıştırın.
+## <a name="design-ui-for-windows-phone"></a><a name="Windows"></a> Windows Phone için tasarım kullanıcı arabirimi
+ Artık Windows Phone için Kullanıcı arabirimini tasarlayacağız, paylaşılan kodunuza bağlayacağız ve sonra uygulamayı çalıştıracağız.
 
-### <a name="design-the-look-and-feel-of-your-app"></a>Tasarım görünümü uygulama
- Yerel Windows Phone kullanıcı Arabiriminde bir Xamarin uygulaması tasarlama işlemi herhangi diğer yerel Windows Phone uygulamasından farklı değildir. Bu nedenle, biz ayrıntıları tasarımcıyı nasıl kullanacağınızı, burada gitmiyor. Bunun için başvurmak [XAML Tasarımcısını kullanarak kullanıcı Arabirimi oluşturma](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md).
+### <a name="design-the-look-and-feel-of-your-app"></a>Uygulamanızın görünümünü tasarlama
+ Bir Xamarin uygulamasında yerel Windows Phone UI tasarlama işlemi, başka bir yerel Windows Phone uygulamasından farklı değildir. Bu nedenle, tasarımcı 'yı nasıl kullanacağınızı öğrenmek için buradaki ayrıntılara gidemeyeceğiz. [Bunun için XAML Tasarımcısı kullanarak bir kullanıcı arabirimi oluşturma](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)bölümüne bakın.
 
- Bunun yerine, basitçe mainpage.XAML dosyasını açın ve tüm XAML kodu aşağıdakiyle değiştirin:
+ Bunun yerine, MainPage. xaml ' yi açmanız ve tüm XAML kodunu aşağıdaki gibi değiştirmeniz yeterlidir:
 
 ```xaml
 <Page
@@ -577,23 +577,23 @@ Adımları yaptıktan sonra [Kurulum ve yükleme](../cross-platform/setup-and-in
 </Page>
 ```
 
- Tasarım görünümünde, kullanıcı Arabirimi aşağıdaki gibi görünmelidir:
+ Tasarım görünümünde, Kullanıcı arabiriminizi aşağıdaki gibi görünmelidir:
 
  ![Windows Phone uygulama kullanıcı arabirimi](../cross-platform/media/xamarin-winphone-finalui.png "Xamarin_WinPhone_FinalUI")
 
-### <a name="consume-your-shared-code"></a>Paylaşılan kod kullanma
+### <a name="consume-your-shared-code"></a>Paylaşılan kodunuzu tüketme
 
-1. Tasarımcıda seçin **hava durumunu alın** düğmesi.
+1. Tasarımcıda **Hava durumu Al** düğmesini seçin.
 
 2. **Özellikler** penceresinde olay işleyicisi düğmesini (![Visual Studio olay işleyicileri simgesi](../cross-platform/media/blend-vs-eventhandlers-icon.png "blend_VS_EventHandlers_icon")) seçin.
 
-     Bu simge üst köşesinde görünür **özellikleri** penceresi.
+     Bu simge, **Özellikler** penceresinin üst köşesinde görüntülenir.
 
-3. Yanındaki **tıklayın** olay, türü **GetWeatherButton_Click**ve ardından ENTER tuşuna basın.
+3. **Click** olayının yanındaki **GETWEATHERBUTTON_CLICK**yazın ve ENTER tuşuna basın.
 
-     Bu adlı bir olay işleyicisi oluşturur. `GetWeatherButton_Click`. Kod Düzenleyicisi açılır ve imlecinizi olay işleyicisine kod bloğunun içine yerleştirir.  Not: düzenleyicide ENTER tuşuna basıldığında açık değilse, yalnızca olay adına çift tıklayın.
+     Bu, adlı bir olay işleyicisi oluşturur `GetWeatherButton_Click` . Kod Düzenleyicisi açılır ve imlecinizi olay işleyicisi kod bloğunun içine koyar.  Note: ENTER tuşuna basıldığında düzenleyici açılmazsa, yalnızca olay adına çift tıklayın.
 
-4. Bu olay işleyicisi aşağıdaki kodla değiştirin.
+4. Bu olay işleyicisini aşağıdaki kodla değiştirin.
 
     ```csharp
     private async void GetWeatherButton_Click(object sender, RoutedEventArgs e)
@@ -614,33 +614,33 @@ Adımları yaptıktan sonra [Kurulum ve yükleme](../cross-platform/setup-and-in
     }
     ```
 
-     Bu kod `GetWeather` paylaşılan kodunuzda tanımlanan yöntemi. Bu Android uygulamanızda çağrılan yöntem ile aynıdır. Bu kod Ayrıca, uygulamanızın kullanıcı Arabirimi denetimleri yönteminde alınan verileri gösterir.
+     Bu kod, `GetWeather` paylaşılan kodunuzda tanımladığınız yöntemi çağırır. Bu, Android uygulamanızda çağrın aynı yöntemidir. Bu kod ayrıca, uygulamanızın kullanıcı arabirimi denetimlerinde Bu yöntemden alınan verileri gösterir.
 
-5. İçindeki tüm kodu açık olan MainPage.xaml.cs dosyasında Sil **OnNavigatedTo** yöntemi. Bu kod, sadece biz MainPage.xaml içeriği değiştirildiğinde kaldırılan varsayılan düğme işlenir.
+5. Açık olan MainPage.xaml.cs içinde, **OnNavigatedTo** yöntemi içindeki tüm kodu silin. Bu kod yalnızca MainPage. XAML içeriğini değiştirdiğimiz sırada kaldırılan varsayılan düğmeyi ele alır.
 
-### <a name="run-the-app-and-see-how-it-looks"></a>Uygulamayı çalıştırın ve nasıl göründüğüne bakın
+### <a name="run-the-app-and-see-how-it-looks"></a>Uygulamayı çalıştırın ve nasıl göründüğünü görün
 
-1. İçinde **Çözüm Gezgini**ayarlayın **WeatherApp.WinPhone** projeyi başlangıç projesi olarak.
+1. **Çözüm Gezgini**' de, **dalgalı uygulama. WinPhone** projesini başlangıç projesi olarak ayarlayın.
 
 2. F5 tuşuna basarak uygulamayı başlatın.
 
-3. Windows Phone öykünücüsü'nde geçerli bir Amerika Birleşik Devletleri posta kodu düzenleme kutusuna yazın (örneğin: 60601) ve basın **hava durumunu alın**. Bu bölge için hava durumu verileri, ardından denetimleri görünür.
+3. Windows Phone öykünücüsünde, düzenleme kutusuna geçerli bir Birleşik Devletler posta kodu yazın (örneğin: 60601) ve **Hava durumu Al**' a basın. Bu bölge için hava durumu verileri daha sonra denetimlerde görüntülenir.
 
      ![Çalışan uygulamanın Windows sürümü](../cross-platform/media/xamarin-getstarted-results-windows.png "Xamarin_GetStarted_Results_Windows")
 
 > [!TIP]
-> Bu proje için tam kaynak kodu [github'daki mobil-samples deposuna](https://github.com/xamarin/mobile-samples/tree/master/Weather).
+> Bu proje için tam kaynak kodu [GitHub 'daki mobil örnek depodadır](https://github.com/xamarin/mobile-samples/tree/master/Weather).
 
-## <a name="next"></a> Sonraki adımlar
- **Kullanıcı Arabirimi, iOS için çözüme ekleyin.**
+## <a name="next-steps"></a><a name="next"></a> Sonraki adımlar
+ **Çözüme iOS için Kullanıcı arabirimi ekleme**
 
- Bu örnek, iOS için yerel UI ekleyerek genişletin. Bunun için yerel ağınızda Xcode sahip bir mac'e bağlanmanız gerekir ve Xamarin yüklü. Bunu yaptığınızda, doğrudan Visual Studio'da iOS Tasarımcısı'nı kullanabilirsiniz. Bkz: [github'daki mobil-samples deposuna](https://github.com/xamarin/mobile-samples/tree/master/Weather) tamamlanan uygulama için.
+ İOS için yerel UI ekleyerek bu örneği genişletin. Bunun için, yerel ağınızda Xcode ve Xamarin yüklü bir Mac 'e bağlanmanız gerekir. Bunu yaptıktan sonra doğrudan Visual Studio 'da iOS tasarımcısını kullanabilirsiniz. Tamamlanmış bir uygulama için [GitHub 'daki mobil örnekler deposuna](https://github.com/xamarin/mobile-samples/tree/master/Weather) bakın.
 
- Ayrıca bkz [Hello, iOS](/xamarin/ios/get-started/hello-ios/hello-ios-quickstart?pivots=windows) (xamarin.com) Gözden geçirme. Yönerge kümesini doğru görünür, bu sayfada emin "Visual Studio" Not sağ üst köşesinde sayfaları xamarin.com üzerinde seçilir.
+ Ayrıca, [Merhaba, iOS](/xamarin/ios/get-started/hello-ios/hello-ios-quickstart?pivots=windows) (Xamarin.com) açıklamasına bakın. Bu sayfada, doğru yönerge kümesinin görünmesi için xamarin.com üzerindeki sayfaların sağ üst köşesinde "Visual Studio" öğesinin seçili olduğundan emin olun.
 
- **Paylaşılan projede platforma özgü kod ekleyin**
+ **Paylaşılan bir projeye platforma özel kod ekleme**
 
- PCL kez derlenir ve her platforma özgü uygulama paketinde bir PCL paylaşılan kodu platformdan bağımsız olmasıdır. Koşullu derleme platforma özgü kod yalıtmak için kullandığı paylaşılan kod yazmak istiyorsanız, kullanabileceğiniz bir *paylaşılan* proje. Daha fazla ayrıntı için [ode paylaşım seçeneklerini](/xamarin/cross-platform/app-fundamentals/code-sharing) (xamarin.com).
+ PCL 'in bir kez derlenmesi ve platforma özgü her uygulama paketine dahil olması nedeniyle, bir PCL içindeki paylaşılan kod, platformdan bağımsız bir uygulamadır. Platforma özgü kodu yalıtmak için koşullu derleme kullanan paylaşılan kod yazmak isterseniz, *paylaşılan* bir proje kullanabilirsiniz. Daha ayrıntılı bilgi için bkz. [ODE Sharing seçenekleri](/xamarin/cross-platform/app-fundamentals/code-sharing) (Xamarin.com).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Xamarin Geliştirici sitesinde](/xamarin/) [Windows Dev Center](https://dev.windows.com/en-us) [Swift ve C# hızlı başvuru posteri](https://aka.ms/scposter)
+ [Xamarin geliştirici sitesi](/xamarin/) [Windows Dev Center](https://dev.windows.com/en-us) [Swift ve C# hızlı başvuru poster](https://aka.ms/scposter)

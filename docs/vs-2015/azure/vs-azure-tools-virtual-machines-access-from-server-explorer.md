@@ -12,10 +12,10 @@ ms.topic: conceptual
 ms.date: 8/31/2017
 ms.author: ghogen
 ms.openlocfilehash: f4c1ff547d9d550cbbc2e77435b159543fc16bf6
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75917091"
 ---
 # <a name="accessing-azure-virtual-machines-from-server-explorer"></a>Sunucu Gezgini'nden Azure Sanal Makineler'e erişme
@@ -28,7 +28,7 @@ Azure tarafından barındırılan sanal makineleriniz varsa bunlara Sunucu Gezgi
 
    | Özellik | Açıklama |
    | --- | --- |
-   | DNS adı |Sanal makinenin Internet adresine sahip URL. |
+   | DNS Adı |Sanal makinenin Internet adresine sahip URL. |
    | Ortam |Bir sanal makine için, bu özelliğin değeri her zaman üretime yöneliktir. |
    | Name |Sanal makinenin adı. |
    | Boyut |Kullanılabilir bellek ve disk alanı miktarını yansıtan sanal makinenin boyutu. Daha fazla bilgi için bkz. [sanal makine boyutları](/azure/cloud-services/cloud-services-sizes-specs). |
@@ -39,7 +39,7 @@ Azure tarafından barındırılan sanal makineleriniz varsa bunlara Sunucu Gezgi
 
    | Özellik | Açıklama |
    | --- | --- |
-   | Name |Uç nokta için bir tanımlayıcı. |
+   | Ad |Uç nokta için bir tanımlayıcı. |
    | Özel bağlantı noktası |Uygulamanıza iç ağ erişimi için bağlantı noktası. |
    | Protokol |Bu uç noktanın aktarım katmanının, TCP veya UDP kullandığı protokol. |
-   | Genel bağlantı noktası |Uygulamanıza genel erişim için kullanılan bağlantı noktası. |
+   | Genel Bağlantı Noktası |Uygulamanıza genel erişim için kullanılan bağlantı noktası. |

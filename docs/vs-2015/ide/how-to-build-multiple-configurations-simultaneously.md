@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 719b31e834b5410dd137a0c5b69cc07ae01651e3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645467"
 ---
 # <a name="how-to-build-multiple-configurations-simultaneously"></a>Nasıl yapılır: Aynı Anda Birden Fazla Yapılandırma Derleme
@@ -21,7 +21,7 @@ ms.locfileid: "72645467"
 
 **Toplu Iş oluşturma** iletişim kutusunu kullanarak, aynı anda birden çok proje türünü, yapı yapılandırmalarının birden çok kez veya hatta tamamını oluşturabilirsiniz. Ancak, aynı anda birden çok yapı yapılandırmasında aşağıdaki proje türlerini derleyebilirsiniz:
 
-1. JavaScript kullanarak Windows için oluşturulmuş uygulamalar [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)].
+1. [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] JavaScript kullanarak Windows için oluşturulmuş uygulamalar.
 
 2. Tüm Visual Basic projeleri.
 

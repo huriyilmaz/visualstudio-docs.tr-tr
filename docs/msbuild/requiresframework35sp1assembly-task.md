@@ -1,5 +1,5 @@
 ---
-title: RequiresFramework35SP1Assembly Görev | Microsoft Dokümanlar
+title: RequiresFramework35SP1Assembly görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,37 +17,37 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: caefe0887ca23cd4cee60c3a4ba2a6133e9893df
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77632777"
 ---
 # <a name="requiresframework35sp1assembly-task"></a>RequiresFramework35SP1Assembly görevi
 
-Uygulamanın .NET Framework 3.5 SP1 gerekip gerekmediğini belirler.
+Uygulamanın .NET Framework 3,5 SP1 gerektirip gerektirmediğini belirler.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda görevparametreleri `RequiresFramework35SP1Assembly` açıklanmaktadır.
+ Aşağıdaki tablo, görevin parametrelerini açıklar `RequiresFramework35SP1Assembly` .
 
 |Parametre|Açıklama|
 |---------------|-----------------|
 |`Assemblies`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Uygulamada başvurulan derlemeleri belirtir.|
-|`CreateDesktopShortcut`|İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer, `true`yükleme sırasında masaüstünde bir kısayol simgesi oluşturur.|
-|`DeploymentManifestEntryPoint`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Uygulama için bildirim dosya adını belirtir.|
+|`CreateDesktopShortcut`|İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , yükleme sırasında masaüstünde bir kısayol simgesi oluşturur.|
+|`DeploymentManifestEntryPoint`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Uygulamanın bildirim dosyası adını belirtir.|
 |`EntryPoint`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Uygulama çalıştırıldığında yürütülmesi gereken derlemeyi belirtir.|
 |`ErrorReportUrl`|İsteğe bağlı `String` parametre.<br /><br /> ClickOnce yüklemeleri sırasında karşılaşılan iletişim kutularında görüntülenen Web sitesini belirtir.|
 |`Files`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Uygulama yayımlandığında dağıtılacak dosyaların listesini belirtir.|
 |`ReferencedAssemblies`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Projede başvurulan derlemeleri belirtir.|
-|`RequiresMinimumFramework35SP1`|İsteğe bağlı `Boolean` çıktı parametresi.<br /><br /> Eğer `true`, uygulama gerektirir .NET Framework 3.5 SP1.|
-|`SigningManifests`|İsteğe bağlı `Boolean` çıktı parametresi.<br /><br /> `true`, ClickOnce bildirimleri imzalanırsa.|
-|`SuiteName`|İsteğe bağlı `String` parametre.<br /><br /> Uygulamanın yüklendiği **Başlat** menüsündeki klasörün adını belirtir.|
-|`TargetFrameworkVersion`|İsteğe bağlı `String` parametre.<br /><br /> .NET Framework sürümünü belirtir, bu uygulama nın hedeflemesi.|
+|`RequiresMinimumFramework35SP1`|İsteğe bağlı `Boolean` çıkış parametresi.<br /><br /> `true`Uygulama için .NET Framework 3,5 SP1 gerekir.|
+|`SigningManifests`|İsteğe bağlı `Boolean` çıkış parametresi.<br /><br /> Varsa `true` , ClickOnce bildirimleri imzalanır.|
+|`SuiteName`|İsteğe bağlı `String` parametre.<br /><br /> Uygulamanın yükleneceği **Başlangıç** menüsünde klasörün adını belirtir.|
+|`TargetFrameworkVersion`|İsteğe bağlı `String` parametre.<br /><br /> Bu uygulamanın hedeflediği .NET Framework sürümünü belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Tabloda listelenen parametrelere sahip olmanın yanı sıra, bu görev <xref:Microsoft.Build.Tasks.TaskExtension> sınıftan devralınan parametreleri de devralır. <xref:Microsoft.Build.Utilities.Task> Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
+ Bu görev, tabloda listelenen parametrelere sahip olmanın yanı sıra sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

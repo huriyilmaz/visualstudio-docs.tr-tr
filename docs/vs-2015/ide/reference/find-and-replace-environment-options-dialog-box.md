@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c17b25d8a837f751b8bd8ec108c0b821d58c6df0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657691"
 ---
 # <a name="find-and-replace-environment-options-dialog-box"></a>Bul ve Değiştir, Ortam, Seçenekler İletişim Kutusu
@@ -40,7 +40,7 @@ ms.locfileid: "72657691"
 > [!NOTE]
 > Bu seçenek, **her zaman bu iletiyi göster** seçeneğini görüntülemezken bilgi iletilerini **Bul ve Değiştir** seçeneklerini etkilemez.
 
- **Uyarı Iletilerini görüntüle** **Her zaman bu iletiyi göster** seçeneğini içeren tüm uyarı bul ve Değiştir iletilerini görüntülemek için bu seçeneği belirleyin. Örneğin, şu anda düzenlenmek üzere açılmayan dosyalarda değişiklik yapmaya çalıştığınızda görüntülenen **Tüm** uyarı iletisini görüntülememayı seçtiyseniz, bu seçeneğin belirlenmesi, bu uyarı iletisinin bir kez daha yeniden görüntülenmesine neden olur. Tümünü Değiştir.
+ **Uyarı Iletilerini görüntüle** **Her zaman bu iletiyi göster** seçeneğini içeren tüm uyarı bul ve Değiştir iletilerini görüntülemek için bu seçeneği belirleyin. Örneğin, şu anda düzenlenmek üzere açılmayan dosyalarda değişiklik yapmaya çalıştığınızda görüntülenen **Tüm** uyarı iletisini görüntülememayı seçtiyseniz, bu seçeneğin belirlenmesi, tümünü değiştirmeyi denediğinizde bu uyarı iletisinin yeniden görüntülenmesine neden olur.
 
  Bul ve Değiştir için herhangi bir uyarı iletisi görmek istemiyorsanız, bu seçeneği temizleyin.
 

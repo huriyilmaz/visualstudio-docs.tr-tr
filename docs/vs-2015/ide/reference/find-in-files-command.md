@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 831a67fe567c2e6ae1e288d1bc7ee91026ff2273
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651032"
 ---
 # <a name="find-in-files-command"></a>Dosyalarda Bul Komutu
@@ -26,7 +26,7 @@ ms.locfileid: "72651032"
 
 **Bul ve Değiştir** penceresinin **dosyalarda bul** sekmesinde bulunan seçeneklerin bir alt kümesini kullanarak dosyaları arayın.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Edit.FindinFiles findwhat [/case] [/ext:extensions]
@@ -34,35 +34,35 @@ Edit.FindinFiles findwhat [/case] [/ext:extensions]
 [/text2] [/wild|/regex] [/word]
 ```
 
-## <a name="arguments"></a>Arguments
- `findwhat` gerekiyor. Eşleştirilecek metin.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `findwhat` Gerekli. Eşleştirilecek metin.
 
 ## <a name="switches"></a>Anahtarlar
- /Case veya/c Isteğe bağlı. Eşleşmeler yalnızca, büyük harf ve küçük harf karakterlerinin `findwhat` bağımsız değişkeninde belirtilen olanlarla tam olarak eşleşmesi durumunda meydana gelir.
+ /Case veya/c Isteğe bağlı. Eşleşmeler yalnızca büyük ve küçük harfli karakterler bağımsız değişkende belirtilen olanlarla tam olarak eşleşiyorsa oluşur `findwhat` .
 
- /ext: Isteğe bağlı `extensions`. Aranacak dosyalar için dosya uzantılarını belirtir. Belirtilmemişse, önceki uzantı daha önce girilmişse kullanılır.
+ /ext: `extensions` isteğe bağlı. Aranacak dosyalar için dosya uzantılarını belirtir. Belirtilmemişse, önceki uzantı daha önce girilmişse kullanılır.
 
- /lookin: Isteğe bağlı `searchpath`. Aranacak dizin. Yol boşluk içeriyorsa, tüm yolu tırnak işaretleri içine alın.
+ /LOOKIN: `searchpath` isteğe bağlı. Aranacak dizin. Yol boşluk içeriyorsa, tüm yolu tırnak işaretleri içine alın.
 
  /Names veya/n optional. Eşleşmeler içeren dosya adlarının listesini görüntüler.
 
  /Options veya/t Isteğe bağlı. Geçerli bulma seçeneği ayarlarının listesini görüntüler ve arama yapmaz.
 
- /Regex veya/r Isteğe bağlıdır. @No__t_0 bağımsız değişkeninde, sabit karakterler yerine metin desenlerini temsil eden gösterimler olarak önceden tanımlanmış özel karakterler kullanır. Normal ifade karakterlerinin tüm listesi için bkz. [normal ifadeler](../../ide/using-regular-expressions-in-visual-studio.md).
+ /Regex veya/r Isteğe bağlıdır. Bağımsız değişkende önceden tanımlanmış özel karakterleri `findwhat` , değişmez karakterler yerine metin desenlerini temsil eden gösterimler olarak kullanır. Normal ifade karakterlerinin tüm listesi için bkz. [normal ifadeler](../../ide/using-regular-expressions-in-visual-studio.md).
 
  /Reset süpürmeden veya/e Isteğe bağlı. Bulma seçeneklerini varsayılan ayarlarına döndürür ve arama yapmaz.
 
- /Stop Isteğe bağlı. Devam eden bir işlem varsa geçerli arama işlemini durdurur. @No__t_0 belirtildiğinde arama diğer tüm bağımsız değişkenleri yoksayar. Örneğin, geçerli aramayı durdurmak için şunu girin:
+ /Stop Isteğe bağlı. Devam eden bir işlem varsa geçerli arama işlemini durdurur. Arama, belirtildiğinde diğer tüm bağımsız değişkenleri yoksayar `/stop` . Örneğin, geçerli aramayı durdurmak için şunu girin:
 
 ```
 >Edit.FindinFiles /stop
 ```
 
- /Sub seçeneklerini veya/s isteğe bağlı. /Lookin: `searchpath` bağımsız değişkeninde belirtilen dizin içindeki alt klasörleri arar.
+ /Sub seçeneklerini veya/s isteğe bağlı. /Lookin: bağımsız değişkeninde belirtilen dizin içindeki alt klasörleri arar `searchpath` .
 
  /text2 veya/2 Isteğe bağlı. Arama sonuçlarını bul 2 penceresinde görüntüler.
 
- /joker veya/l Isteğe bağlı. Bir karakteri veya karakter dizisini göstermek için `findwhat` bağımsız değişkeninde gösterimler olarak önceden tanımlanmış özel karakterleri kullanır.
+ /joker veya/l Isteğe bağlı. `findwhat`Bağımsız değişkende, bir karakter veya karakter dizisini temsil etmek için önceden tanımlanmış özel karakterleri gösterimler olarak kullanır.
 
  /Word veya/w Isteğe bağlı. Yalnızca tam sözcükleri arar.
 

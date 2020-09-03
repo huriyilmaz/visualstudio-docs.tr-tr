@@ -9,10 +9,10 @@ ms.technology: vs-unity-tools
 ms.workload:
 - unity
 ms.openlocfilehash: e824951556124f080f14cdd9f440037decf5146f
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815142"
 ---
 # <a name="using-net-4x-in-unity"></a>Unity’de .NET 4.x kullanma
@@ -21,7 +21,7 @@ Unity betiği temel alan teknolojiler olan C# ve .NET, Microsoft tarafından ilk
 
 Unity 2017,1 sürümü ile Unity, betik çalışma zamanının bir .NET 4,6, C# 6 uyumlu sürümüne yükseltildiğini deneysel bir sürümünü sunmuştur. Unity 2018,1 ' de, .NET 4. x eşdeğeri çalışma zamanı artık deneysel olarak değerlendirilmez, ancak eski .NET 3,5 denk çalışma zamanı artık eski sürüm olarak kabul edilir. Unity 2018,3 sürümü sayesinde Unity, yükseltilen betik çalışma zamanını varsayılan seçimi yapmak ve C# 7 ' ye daha da sonra güncelleştirmek için yansıtılacak. Bu yol haritasında daha fazla bilgi ve en son güncelleştirmeler için Unity 'nin [blog postasını](https://blogs.unity3d.com/2018/07/11/scripting-runtime-improvements-in-unity-2018-2/) okuyun veya [deneysel betik önizlemeleri forumunu](https://forum.unity.com/forums/experimental-scripting-previews.107/)ziyaret edin. Bu sırada, artık .NET 4. x Scripting Runtime ile kullanılabilen yeni özellikler hakkında daha fazla bilgi edinmek için aşağıdaki bölümlere göz atın.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * [Unity 2017,1 veya üzeri](https://unity3d.com/) (2018,2 önerilir)
 * [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)

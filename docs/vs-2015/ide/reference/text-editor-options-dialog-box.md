@@ -22,10 +22,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7a8ff19ab503efe58e207d36a87babb5b8a80b28
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645387"
 ---
 # <a name="text-editor-options-dialog-box"></a>Metin Düzenleyici Seçenekleri İletişim Kutusu
@@ -54,15 +54,15 @@ ms.locfileid: "72645387"
 
  [Seçenekler, metin düzenleyici, temel (Visual Basic)](../../ide/reference/options-text-editor-basic-visual-basic.md) Visual Basic seçenekleri açıklanmaktadır.
 
- [Seçenekler, metin düzenleyici, C/C++, biçimlendirme](../../ide/reference/options-text-editor-c-cpp-formatting.md) c/C++ biçimlendirme seçeneklerini açıklar.
+ [Seçenekler, metin düzenleyici, C/C++, biçimlendirme](../../ide/reference/options-text-editor-c-cpp-formatting.md) C/C++ biçimlendirme seçeneklerini açıklar.
 
- [Seçenekler, metin düzenleyici, C/C++, gelişmiş](../../ide/reference/options-text-editor-c-cpp-advanced.md) seçenekleri c/C++ gelişmiş seçenekleri açıklar.
+ [Seçenekler, metin düzenleyici, C/C++, gelişmiş](../../ide/reference/options-text-editor-c-cpp-advanced.md) C/C++ Gelişmiş seçeneklerini açıklar.
 
- [Seçenekler, metin düzenleyici, C#biçimlendirme](../../ide/reference/options-text-editor-csharp-formatting.md) biçimlendirme seçeneklerini C# açıklar.
+ [Seçenekler, metin düzenleyici, C#, biçimlendirme](../../ide/reference/options-text-editor-csharp-formatting.md) C# biçimlendirme seçeneklerini açıklar.
 
- [Seçenekler, metin düzenleyici, C#gelişmiş](../../ide/reference/options-text-editor-csharp-advanced.md) seçenekleri açıklar C# .
+ [Seçenekler, metin düzenleyici, C#, gelişmiş](../../ide/reference/options-text-editor-csharp-advanced.md) C# Gelişmiş seçeneklerini açıklar.
 
- [Seçenekler, metin düzenleyici C#](../../ide/reference/options-text-editor-csharp-intellisense.md) , IntelliSense, IntelliSense seçeneklerini açıklar. C#
+ [Seçenekler, metin düzenleyici, C#, IntelliSense](../../ide/reference/options-text-editor-csharp-intellisense.md) C# IntelliSense seçeneklerini açıklar.
 
  [Seçenekler, metin düzenleyici, JavaScript, biçimlendirme](../../ide/reference/options-text-editor-javascript-formatting.md) JavaScript biçimlendirme seçeneklerini açıklar.
 

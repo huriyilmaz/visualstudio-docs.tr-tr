@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: eea557035ef4e5f1ffa2585e620a331fb6b5cce2
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75852074"
 ---
 # <a name="create-layer-diagrams-from-your-code"></a>Kodunuz aracılığıyla katman diyagramları oluşturma
@@ -30,7 +30,7 @@ Yazılım sisteminizin üst düzey, mantıksal mimarisini görselleştirmek içi
 
  Katman diyagramı, Visual Studio çözüm öğelerini *Katmanlar*olarak adlandırılan mantıksal, soyut gruplar halinde düzenlemenize olanak tanır. Bu yapıların gerçekleştirdiği temel görevleri veya sistemin ana bileşenlerini açıklamak için katmanları kullanabilirsiniz. Her katman, daha ayrıntılı görevleri açıklayan başka katmanlar içerebilir. Katmanlar arasında amaçlanan veya var olan *bağımlılıkları* da belirtebilirsiniz. Oklar olarak temsil edilen bu bağımlılıklar, hangi katmanların diğer katmanlar tarafından temsil edilen işlevi kullanabileceğini veya kullanmakta olduğunu gösterir. Kodunun mimari denetimini sağlamak için diyagram üzerinde hedeflenen bağımlılıkları gösterin ve ardından kodu diyagrama karşı doğrulayın.
 
-## <a name="CreateDiagram"></a>Katman diyagramı oluşturma
+## <a name="create-a-layer-diagram"></a><a name="CreateDiagram"></a> Katman diyagramı oluşturma
  Bir katman diyagramı oluşturmadan önce, çözümünüzde bir modelle projesi olduğundan emin olun. Bkz. [UML modelleme projeleri ve diyagramları oluşturma](../modeling/create-uml-modeling-projects-and-diagrams.md).
 
 > [!IMPORTANT]
@@ -48,7 +48,7 @@ Yazılım sisteminizin üst düzey, mantıksal mimarisini görselleştirmek içi
 
 4. **Modelleme projesine ekle**' de, çözümünüzde var olan bir modelleme projesine gidin ve seçin.
 
-     veya
+     -veya-
 
      Çözüme yeni modelleme projesi eklemek için **Yeni modelleme projesi oluştur** ' a tıklayın.
 
@@ -57,14 +57,14 @@ Yazılım sisteminizin üst düzey, mantıksal mimarisini görselleştirmek içi
 
 5. Hem modelleme projesini hem de katman diyagramını kaydettiğinizden emin olun.
 
-## <a name="CreateLayers"></a>Yapıtlardan katmanlar oluşturma
+## <a name="create-layers-from-artifacts"></a><a name="CreateLayers"></a> Yapıtlardan katmanlar oluşturma
  Visual Studio çözüm öğelerinden projeler, kod dosyaları, ad alanları, sınıflar ve yöntemler gibi katmanlar oluşturabilirsiniz. Bu, katmanlar ve öğeler arasında otomatik olarak bağlantılar oluşturarak bunları katman doğrulama işlemine dahil eder.
 
  Katmanları Word belgeleri veya PowerPoint sunumları gibi doğrulamayı desteklemeyen öğelere de ekleyebilir ve böylece bir katmanı belirtimlerle veya planlarla ilişkilendirebilirsiniz. Katmanları birden fazla uygulama arasında paylaşılan projelerdeki dosyalara da bağlayabilirsiniz, ancak doğrulama işlemi "Katman 1" ve "Katman 2" gibi genel adlarla görünen bu katmanları içermez.
 
  Bağlı bir öğenin doğrulamayı destekleyip desteklemediğini görmek için **Katman Gezgini** ' ni açın ve öğenin **doğrulamayı destekler** özelliğini inceleyin. Bkz. [yapıtlara bağlantıları yönetme](#Managing).
 
-|**Alıcı**|**Bu adımları izleyin**|
+|**Amaç**|**Bu adımları izleyin**|
 |------------|----------------------------|
 |Tek bir yapı için katman oluşturma|<ol><li>Öğeyi şu kaynaklardaki katman diyagramına sürükleyin:<br /><br /> <ul><li>**Çözüm Gezgini**<br /><br />         Örneğin, dosyaları veya projeleri sürükleyebilirsiniz.</li><li>Kod eşlemeleri<br /><br />         Bkz. [çözümlerinizde harita bağımlılıkları](../modeling/map-dependencies-across-your-solutions.md) ve [uygulamalarınızda hata ayıklamak Için kod haritaları kullanın](../modeling/use-code-maps-to-debug-your-applications.md).</li><li>**Sınıf görünümü** veya **nesne tarayıcısı**</li></ul><br />     Katman, diyagramda görünür ve yapıya bağlanır.</li><li>İlişkili kodun veya yapıların sorumluluklarını yansıtmak için katmanı yeniden adlandırın.</li></ol> **Önemli:**  İkili dosyaları katman diyagramına sürüklemek, başvurularını otomatik olarak modelleme projesine eklemez. Doğrulamak istediğiniz ikili dosyaları el ile modelleme projesine eklemeniz gerekir. **Modelleme projesine ikili dosyalar eklemek için** <ol><li>**Çözüm Gezgini**, modelleme projesi için kısayol menüsünü açın ve ardından **Varolan öğe Ekle**' yi seçin.</li><li>**Varolan öğe Ekle** iletişim kutusunda, ikili dosyalar ' a gidin, bunları seçin ve ardından **Tamam**' ı seçin.     İkili dosyalar modelleme projesinde görünür.</li><li>**Çözüm Gezgini**, eklediğiniz bir ikili dosyayı seçin ve ardından **Özellikler** penceresini açmak için **F4** tuşuna basın.</li><li>Her ikili dosyada, **derleme eylemi** özelliğini **doğrulanacak**olarak ayarlayın.</li></ol>|
 |Seçilen tüm yapılar için tek bir katman oluşturma|Tüm yapıları aynı anda katman diyagramına sürükleyin.<br /><br /> Katman diyagramda görünür ve tüm yapılara bağlıdır.|
@@ -74,9 +74,9 @@ Yazılım sisteminizin üst düzey, mantıksal mimarisini görselleştirmek içi
 |İç içe katmanlar oluşturma|Varolan katmanı başka bir katmanın üzerine sürükleyin.<br /><br /> - veya -<br /><br /> Katman için kısayol menüsünü açın, **Ekle**' yi ve ardından **Katman**' ı seçin.|
 |Varolan iki veya daha fazla katmanı içeren yeni bir katman oluşturma|Katmanları seçin, seçiminizin kısayol menüsünü açın ve **Grup**' u seçin.|
 |Katmanın rengini değiştirme|**Color** özelliğini istediğiniz renge ayarlayın.|
-|Bir katman ile ilişkili yapıların belirli ad alanlarına ait olmaması gerektiğini belirtme|Katmanın **yasak ad alanları** özelliğindeki ad alanlarını yazın. Ad alanlarını ayırmak için noktalı virgül ( **;** ) kullanın.|
-|Bir katman ile ilişkili yapıların belirli ad alanlarına bağlı olamayacağını belirtme|Katmanın **yasak ad alanı bağımlılıkları** özelliğindeki ad alanlarını yazın. Ad alanlarını ayırmak için noktalı virgül ( **;** ) kullanın.|
-|Bir katman ile ilişkili yapıların belirli ad alanlarından birine ait olması gerektiğini belirtme|Katmanın **gerekli ad alanları** özelliğindeki ad alanını yazın. Ad alanlarını ayırmak için noktalı virgül ( **;** ) kullanın.|
+|Bir katman ile ilişkili yapıların belirli ad alanlarına ait olmaması gerektiğini belirtme|Katmanın **yasak ad alanları** özelliğindeki ad alanlarını yazın. Ad alanlarını ayırmak için noktalı virgül (**;**) kullanın.|
+|Bir katman ile ilişkili yapıların belirli ad alanlarına bağlı olamayacağını belirtme|Katmanın **yasak ad alanı bağımlılıkları** özelliğindeki ad alanlarını yazın. Ad alanlarını ayırmak için noktalı virgül (**;**) kullanın.|
+|Bir katman ile ilişkili yapıların belirli ad alanlarından birine ait olması gerektiğini belirtme|Katmanın **gerekli ad alanları** özelliğindeki ad alanını yazın. Ad alanlarını ayırmak için noktalı virgül (**;**) kullanın.|
 
  Bir katmandaki sayı, katmana bağlı olan yapıların sayısını gösterir. Ancak, bu sayıyı okurken, aşağıdakileri unutmayın:
 
@@ -86,7 +86,7 @@ Yazılım sisteminizin üst düzey, mantıksal mimarisini görselleştirmek içi
 
 - Bir katman yapılarla bağlantılı diğer katmanları içeriyorsa, kapsayıcı katman da üzerindeki sayı bu yapıları içermese bile bu yapılara bağlıdır.
 
-## <a name="Managing"></a>Katmanlar ve yapıtlar arasındaki bağlantıları yönetme
+## <a name="manage-links-between-layers-and-artifacts"></a><a name="Managing"></a> Katmanlar ve yapıtlar arasındaki bağlantıları yönetme
 
 1. Katman diyagramında katmanın kısayol menüsünü açın ve **bağlantıları görüntüle**' yi seçin.
 
@@ -94,7 +94,7 @@ Yazılım sisteminizin üst düzey, mantıksal mimarisini görselleştirmek içi
 
 2. Bu bağlantıları yönetmek için aşağıdaki görevleri kullanın.
 
-|**Alıcı**|**Katman Gezgini 'nde**|
+|**Amaç**|**Katman Gezgini 'nde**|
 |------------|---------------------------|
 |Katman ve yapı arasındaki bağlantıyı silme|Yapıt bağlantısının kısayol menüsünü açın ve **Sil**' i seçin.|
 |Bağlantıyı bir katmandan diğerine taşıma|Yapı bağlantısını diyagramda varolan bir katmana sürükleyin.<br /><br /> - veya -<br /><br /> 1. yapıt bağlantısının kısayol menüsünü açın ve **Kes**' i seçin.<br />2. katman diyagramında katmanın kısayol menüsünü açın ve **Yapıştır**' ı seçin.|
@@ -102,7 +102,7 @@ Yazılım sisteminizin üst düzey, mantıksal mimarisini görselleştirmek içi
 |Varolan yapı bağlantısından yeni bir katman oluşturma|Yapı bağlantısını diyagramdaki boş bir alana sürükleyin.|
 |Bağlantılı bir yapının, katman diyagramına karşı doğrulamayı desteklediğini onaylayın.|Yapıt bağlantısı için **doğrulama sütununu destekler** bölümüne bakın.|
 
-## <a name="Discovering"></a>Mevcut bağımlılıklara ters mühendislik Uygula
+## <a name="reverse-engineer-existing-dependencies"></a><a name="Discovering"></a> Mevcut bağımlılıklara ters mühendislik Uygula
  Bir bağımlılık, bir katman ile ilişkili yapının başka bir katman ile ilişkili bir yapıya başvurusu olduğu yerde var olur. Örneğin, bir katmandaki sınıf başka bir katmanda sınıfı olan değişkeni bildirir. Diyagramdaki katmanlara bağlanmış yapılar için varolan bağımlılıklara ters mühendislik uygulayabilirsiniz.
 
 > [!NOTE]
@@ -112,26 +112,26 @@ Yazılım sisteminizin üst düzey, mantıksal mimarisini görselleştirmek içi
 
   Genellikle var olmaması gereken bazı bağımlılıklar göreceksiniz. Bu bağımlılıkları hedeflenen tasarım ile uyumlu hale getirmek için düzenleyebilirsiniz.
 
-## <a name="EditDependencies"></a>Tasarlanan tasarımı göstermek için katmanları ve bağımlılıkları düzenleyin
+## <a name="edit-layers-and-dependencies-to-show-the-intended-design"></a><a name="EditDependencies"></a> Tasarlanan tasarımı göstermek için katmanları ve bağımlılıkları düzenleyin
  Sisteminizde veya hedeflenen mimaride yapmayı planladığınız değişiklikleri açıklamak için katman diyagramını düzenleyin:
 
-|**Alıcı**|**Bu adımları gerçekleştirin**|
+|**Amaç**|**Bu adımları gerçekleştirin**|
 |------------|-----------------------------|
 |Bağımlılık yönünü değiştirme veya kısıtlama|**Direction** özelliğini ayarlayın.|
 |Yeni bağımlılıklar oluşturma|**Bağımlılık** ve **çift yönlü bağımlılık** araçlarını kullanın.<br /><br /> Çoklu bağımlılıklar çizmek için araca çift tıklayın. İşiniz bittiğinde **işaretçi** aracını seçin veya **ESC** tuşuna basın.|
-|Bir katman ile ilişkili yapıların belirli ad alanlarına bağlı olamayacağını belirtme|Katmanın **yasak ad alanı bağımlılıkları** özelliğindeki ad alanlarını yazın. Ad alanlarını ayırmak için noktalı virgül ( **;** ) kullanın.|
-|Bir katman ile ilişkili yapıların belirli ad alanlarına ait olmaması gerektiğini belirtme|Katmanın **yasak ad alanları** özelliğindeki ad alanlarını yazın. Ad alanlarını ayırmak için noktalı virgül ( **;** ) kullanın.|
-|Bir katman ile ilişkili yapıların belirli ad alanlarından birine ait olması gerektiğini belirtme|Katmanın **gerekli ad alanları** özelliğindeki ad alanını yazın. Ad alanlarını ayırmak için noktalı virgül ( **;** ) kullanın.|
+|Bir katman ile ilişkili yapıların belirli ad alanlarına bağlı olamayacağını belirtme|Katmanın **yasak ad alanı bağımlılıkları** özelliğindeki ad alanlarını yazın. Ad alanlarını ayırmak için noktalı virgül (**;**) kullanın.|
+|Bir katman ile ilişkili yapıların belirli ad alanlarına ait olmaması gerektiğini belirtme|Katmanın **yasak ad alanları** özelliğindeki ad alanlarını yazın. Ad alanlarını ayırmak için noktalı virgül (**;**) kullanın.|
+|Bir katman ile ilişkili yapıların belirli ad alanlarından birine ait olması gerektiğini belirtme|Katmanın **gerekli ad alanları** özelliğindeki ad alanını yazın. Ad alanlarını ayırmak için noktalı virgül (**;**) kullanın.|
 
-## <a name="EditLayout"></a>Öğelerin diyagramda görünme şeklini değiştirme
+## <a name="change-how-elements-appear-on-the-diagram"></a><a name="EditLayout"></a> Öğelerin diyagramda görünme şeklini değiştirme
  Özelliklerini düzenleyerek katmanların boyutunu, şeklini, rengini ve konumunu veya bağımlılıkların rengini değiştirebilirsiniz.
 
-## <a name="Codemaps"></a>Kod haritasında desenleri ve bağımlılıkları bulma
+## <a name="discover-patterns-and-dependencies-on-a-code-map"></a><a name="Codemaps"></a> Kod haritasında desenleri ve bağımlılıkları bulma
  Katman diyagramları oluştururken, **kod haritaları**da oluşturabilirsiniz. Bu diyagramlar, kodu araştırırken desenleri ve bağımlılıkları keşfetmenize yardımcı olabilir. Derlemeleri, ad alanlarını ve sınıfları araştırmak için Çözüm Gezgini, Sınıf Görünümü veya Nesne Tarayıcısı kullanın; Bu, genellikle mevcut katmanlara iyi karşılık gelir. Kod eşlemeleri hakkında daha fazla bilgi için bkz.
 
 - [Çözümlerinizdeki bağımlılıkları eşleme](../modeling/map-dependencies-across-your-solutions.md)
 
-- [Uygulamalarınızda hata ayıklamak için kod haritalarını kullanma](../modeling/use-code-maps-to-debug-your-applications.md)
+- [Uygulamalarınızda hata ayıklamak için kod eşlemelerini kullanma](../modeling/use-code-maps-to-debug-your-applications.md)
 
 - [Kod haritası çözümleyicilerini kullanarak olası sorunları bulma](../modeling/find-potential-problems-using-code-map-analyzers.md)
 

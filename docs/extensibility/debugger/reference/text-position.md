@@ -1,5 +1,5 @@
 ---
-title: TEXT_POSITION | Microsoft Dokümanlar
+title: TEXT_POSITION | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 1a36c585a09afbd1dec60e1d4399dca258399ae3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713421"
 ---
 # <a name="text_position"></a>TEXT_POSITION
 Verilen metindeki satır ve sütun konumunu açıklar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _tagTEXT_POSITION { 
@@ -44,16 +44,16 @@ public struct TEXT_POSITION { 
 ## <a name="members"></a>Üyeler
 
 `dwLine`\
-Kaynak dosyasındaki satır dizini.
+Kaynak dosyadaki satır dizini.
 
 `dwColumn`\
-Karakter çizgiye ofset.
+Satıra karakter boşluğu.
 
 ## <a name="remarks"></a>Açıklamalar
 
 Bu yapı [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) ve [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) yapılarında kullanılır.
 
-Bu yapı, aşağıdaki yöntemlere yapılan bir çağrı ile doldurulur:
+Bu yapı aşağıdaki yöntemlere bir çağrı ile doldurulur:
 
 - [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)
 
@@ -63,7 +63,7 @@ Bu yapı, aşağıdaki yöntemlere yapılan bir çağrı ile doldurulur:
 
 - [GetOffset](../../../extensibility/debugger/reference/idebugfunctionposition2-getoffset.md)
 
-Bu yapı aşağıdaki yöntemlere parametre olarak geçirilir:
+Bu yapı aşağıdaki yöntemlere bir parametre olarak geçirilir:
 
 - [GetText](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)
 
@@ -77,11 +77,11 @@ Bu yapı aşağıdaki yöntemlere parametre olarak geçirilir:
 
 ## <a name="requirements"></a>Gereksinimler
 
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

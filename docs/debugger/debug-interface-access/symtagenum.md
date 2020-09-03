@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 29bbb4eed485d3ff354757ab8c83a60b92f566aa
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461051"
 ---
 # <a name="symtagenum"></a>SymTagEnum
@@ -67,79 +67,79 @@ enum SymTagEnum {
 ```
 
 ## <a name="elements"></a>Öğeler
-`SymTagNull`Simgenin tür içermediğini belirtir.
+`SymTagNull` Simgenin tür içermediğini belirtir.
 
-`SymTagExe`Simgenin bir. exe dosyası olduğunu gösterir. `SymTagExe`Sembol deposu başına yalnızca bir sembol vardır. Genel kapsam olarak işlev görür ve bir üst öğeye sahip değildir.
+`SymTagExe` Simgenin bir. exe dosyası olduğunu gösterir. `SymTagExe`Sembol deposu başına yalnızca bir sembol vardır. Genel kapsam olarak işlev görür ve bir üst öğeye sahip değildir.
 
-`SymTagCompiland`Sembol deposunun her compiland bileşeni için compiland sembolünü gösterir. Yerel uygulamalar için, `SymTagCompiland` semboller görüntüye bağlı nesne dosyalarına karşılık gelir. Bazı Microsoft ara dil (MSIL) görüntüleri için, sınıf başına bir compiland vardır.
+`SymTagCompiland` Sembol deposunun her compiland bileşeni için compiland sembolünü gösterir. Yerel uygulamalar için, `SymTagCompiland` semboller görüntüye bağlı nesne dosyalarına karşılık gelir. Bazı Microsoft ara dil (MSIL) görüntüleri için, sınıf başına bir compiland vardır.
 
-`SymTagCompilandDetails`Simgenin compiland 'ın genişletilmiş özniteliklerini içerdiğini belirtir. Bu özelliklerin alınması için compiland sembolleri yüklenmesi gerekebilir.
+`SymTagCompilandDetails` Simgenin compiland 'ın genişletilmiş özniteliklerini içerdiğini belirtir. Bu özelliklerin alınması için compiland sembolleri yüklenmesi gerekebilir.
 
-`SymTagCompilandEnv`Simgenin compiland için tanımlanan bir ortam dizesi olduğunu gösterir.
+`SymTagCompilandEnv` Simgenin compiland için tanımlanan bir ortam dizesi olduğunu gösterir.
 
-`SymTagFunction`Simgenin bir işlev olduğunu belirtir.
+`SymTagFunction` Simgenin bir işlev olduğunu belirtir.
 
-`SymTagBlock`Simgenin iç içe geçmiş bir blok olduğunu gösterir.
+`SymTagBlock` Simgenin iç içe geçmiş bir blok olduğunu gösterir.
 
-`SymTagData`Simgenin veri olduğunu gösterir.
+`SymTagData` Simgenin veri olduğunu gösterir.
 
-`SymTagAnnotation`Simgenin bir kod ek açıklaması için olduğunu gösterir. Bu sembolün alt öğeleri sabit veri dizeleridir ( `SymTagData` , `LocIsConstant` , `DataIsConstant` ). Çoğu istemci bu simgeyi yoksayar.
+`SymTagAnnotation` Simgenin bir kod ek açıklaması için olduğunu gösterir. Bu sembolün alt öğeleri sabit veri dizeleridir ( `SymTagData` , `LocIsConstant` , `DataIsConstant` ). Çoğu istemci bu simgeyi yoksayar.
 
-`SymTagLabel`Simgenin bir etiket olduğunu gösterir.
+`SymTagLabel` Simgenin bir etiket olduğunu gösterir.
 
-`SymTagPublicSymbol`Simgenin ortak bir sembol olduğunu gösterir. Yerel uygulamalar için bu simge, görüntü bağlanırken karşılaşılan COFF dış sembolüdür.
+`SymTagPublicSymbol` Simgenin ortak bir sembol olduğunu gösterir. Yerel uygulamalar için bu simge, görüntü bağlanırken karşılaşılan COFF dış sembolüdür.
 
-`SymTagUDT`Simgenin Kullanıcı tanımlı bir tür (yapı, sınıf veya birleşim) olduğunu gösterir.
+`SymTagUDT` Simgenin Kullanıcı tanımlı bir tür (yapı, sınıf veya birleşim) olduğunu gösterir.
 
-`SymTagEnum`Simgenin bir numaralandırma olduğunu gösterir.
+`SymTagEnum` Simgenin bir numaralandırma olduğunu gösterir.
 
-`SymTagFunctionType`Simgenin bir işlev imza türü olduğunu gösterir.
+`SymTagFunctionType` Simgenin bir işlev imza türü olduğunu gösterir.
 
-`SymTagPointerType`Simgenin bir işaretçi türü olduğunu gösterir.
+`SymTagPointerType` Simgenin bir işaretçi türü olduğunu gösterir.
 
-`SymTagArrayType`Simgenin bir dizi türü olduğunu gösterir.
+`SymTagArrayType` Simgenin bir dizi türü olduğunu gösterir.
 
-`SymTagBaseType`Simgenin bir temel tür olduğunu gösterir.
+`SymTagBaseType` Simgenin bir temel tür olduğunu gösterir.
 
-`SymTagTypedef`Simgenin bir, diğer bir `typedef` tür için diğer ad olduğunu gösterir.
+`SymTagTypedef` Simgenin bir, diğer bir `typedef` tür için diğer ad olduğunu gösterir.
 
-`SymTagBaseClass`Simgenin Kullanıcı tanımlı bir türün temel sınıfı olduğunu gösterir.
+`SymTagBaseClass` Simgenin Kullanıcı tanımlı bir türün temel sınıfı olduğunu gösterir.
 
-`SymTagFriend`Simgenin Kullanıcı tanımlı bir türün arkadaş olduğunu gösterir.
+`SymTagFriend` Simgenin Kullanıcı tanımlı bir türün arkadaş olduğunu gösterir.
 
-`SymTagFunctionArgType`Simgenin bir işlev bağımsız değişkeni olduğunu gösterir.
+`SymTagFunctionArgType` Simgenin bir işlev bağımsız değişkeni olduğunu gösterir.
 
-`SymTagFuncDebugStart`Simgenin, işlevin prolog kodunun bitiş konumu olduğunu gösterir.
+`SymTagFuncDebugStart` Simgenin, işlevin prolog kodunun bitiş konumu olduğunu gösterir.
 
-`SymTagFuncDebugEnd`Simgenin, işlevin epıg kodunun başlangıç konumu olduğunu gösterir.
+`SymTagFuncDebugEnd` Simgenin, işlevin epıg kodunun başlangıç konumu olduğunu gösterir.
 
-`SymTagUsingNamespace`Simgenin, geçerli kapsamda etkin olan bir ad alanı adı olduğunu gösterir.
+`SymTagUsingNamespace` Simgenin, geçerli kapsamda etkin olan bir ad alanı adı olduğunu gösterir.
 
-`SymTagVTableShape`Simgenin bir sanal tablo açıklaması olduğunu gösterir.
+`SymTagVTableShape` Simgenin bir sanal tablo açıklaması olduğunu gösterir.
 
-`SymTagVTable`Simgenin bir sanal tablo işaretçisi olduğunu gösterir.
+`SymTagVTable` Simgenin bir sanal tablo işaretçisi olduğunu gösterir.
 
-`SymTagCustom`Simgenin özel bir sembol olduğunu ve DIA tarafından yorumlanmadığını gösterir.
+`SymTagCustom` Simgenin özel bir sembol olduğunu ve DIA tarafından yorumlanmadığını gösterir.
 
-`SymTagThunk`Simgenin 16 ila 32 bit kod arasında veri paylaşımında kullanılan bir dönüştürücü olduğunu gösterir.
+`SymTagThunk` Simgenin 16 ila 32 bit kod arasında veri paylaşımında kullanılan bir dönüştürücü olduğunu gösterir.
 
-`SymTagCustomType`Simgenin özel bir derleyici simgesi olduğunu gösterir.
+`SymTagCustomType` Simgenin özel bir derleyici simgesi olduğunu gösterir.
 
-`SymTagManagedType`Simgenin meta verilerde olduğunu gösterir.
+`SymTagManagedType` Simgenin meta verilerde olduğunu gösterir.
 
-`SymTagDimension`Simgenin bir FORTRAN çok boyutlu dizisi olduğunu gösterir.
+`SymTagDimension` Simgenin bir FORTRAN çok boyutlu dizisi olduğunu gösterir.
 
-`SymTagCallSite`Simgenin çağrı sitesini temsil ettiğini belirtir.
+`SymTagCallSite` Simgenin çağrı sitesini temsil ettiğini belirtir.
 
-`SymTagInlineSite`Simgenin satır içi siteyi temsil ettiğini belirtir.
+`SymTagInlineSite` Simgenin satır içi siteyi temsil ettiğini belirtir.
 
-`SymTagBaseInterface`Simgenin bir temel arabirim olduğunu gösterir.
+`SymTagBaseInterface` Simgenin bir temel arabirim olduğunu gösterir.
 
-`SymTagVectorType`Simgenin bir vektör türü olduğunu gösterir.
+`SymTagVectorType` Simgenin bir vektör türü olduğunu gösterir.
 
-`SymTagMatrixType`Simgenin bir matris türü olduğunu gösterir.
+`SymTagMatrixType` Simgenin bir matris türü olduğunu gösterir.
 
-`SymTagHLSLType`Simgenin yüksek düzey gölgelendirici dil türü olduğunu gösterir.
+`SymTagHLSLType` Simgenin yüksek düzey gölgelendirici dil türü olduğunu gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
 Bir hata ayıklama dosyası içindeki tüm semboller, simgenin türünü belirten bir tanımlama etiketine sahiptir.

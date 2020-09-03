@@ -1,5 +1,5 @@
 ---
-title: PROVIDER_FIELDS | Microsoft Dokümanlar
+title: PROVIDER_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 37f64b455ab0331f9b8f08da1f29a3e2c1b82fdf
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713797"
 ---
 # <a name="provider_fields"></a>PROVIDER_FIELDS
-Program sağlayıcısıyla ilişkili özellikleri belirtir.
+Bir program sağlayıcısıyla ilişkili özellikleri belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_PROVIDER_FIELDS {
@@ -44,23 +44,23 @@ public enum enum_PROVIDER_FIELDS {
 
 ## <a name="fields"></a>Alanlar
  `PFIELD_PROGRAM_NODES`\
- Alan `ProgramNodes` geçerlidir.
+ `ProgramNodes`Alan geçerli.
 
  `PFIELD_IS_DEBUGGER_PRESENT`\
- Alan `fIsDebuggerPresent` geçerlidir.
+ `fIsDebuggerPresent`Alan geçerli.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu değerler, yapının `Fields` hangi alanlarının açıkça doldurulduklarını belirtmek için [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) yapısının üyesi olarak döndürülür.
+ Bu değerler, `Fields` yapının hangi alanlarının açıkça doldurulduğunu göstermek için [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) yapısının üyesine döndürülür.
 
- Bu değerler bitwise `OR`ile birleştirilebilir.
+ Bu değerler, bit düzeyinde birleştirilebilir `OR` .
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)

@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 696ad3e659b503b27da73056dafb57c5852d5133
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461177"
 ---
 # <a name="namesearchoptions"></a>NameSearchOptions
@@ -43,17 +43,17 @@ enum NameSearchOptions {
 ```
 
 ## <a name="elements"></a>Öğeler
-`nsNone`Hiçbir seçenek belirtilmedi.
+`nsNone` Hiçbir seçenek belirtilmedi.
 
-`nsfCaseSensitive`Büyük/küçük harfe duyarlı bir ad eşleşmesi uygular.
+`nsfCaseSensitive` Büyük/küçük harfe duyarlı bir ad eşleşmesi uygular.
 
-`nsfCaseInsensitive`Büyük/küçük harf duyarsız bir ad eşleşmesi uygular.
+`nsfCaseInsensitive` Büyük/küçük harf duyarsız bir ad eşleşmesi uygular.
 
-`nsfFNameExt`Adları yollar olarak değerlendirir ve bir FileName. ext adı eşleşmesi uygular.
+`nsfFNameExt` Adları yollar olarak değerlendirir ve bir FileName. ext adı eşleşmesi uygular.
 
-`nsfRegularExpression`Joker karakter olarak yıldız (*) ve soru işareti (?) kullanarak büyük/küçük harfe duyarlı bir ad eşleşmesi uygular. (Diğer yaygın normal ifade karakterleri desteklenmez.)
+`nsfRegularExpression` Joker karakter olarak yıldız (*) ve soru işareti (?) kullanarak büyük/küçük harfe duyarlı bir ad eşleşmesi uygular. (Diğer yaygın normal ifade karakterleri desteklenmez.)
 
-`nsfUndecoratedName`Yalnızca, hem düzenlenmiş hem de düzenlenmiş adlara sahip semboller için geçerlidir.
+`nsfUndecoratedName` Yalnızca, hem düzenlenmiş hem de düzenlenmiş adlara sahip semboller için geçerlidir.
 
 ## <a name="remarks"></a>Açıklamalar
 Bu Numaralandırmadaki değerler aşağıdaki yöntemlere geçirilir:

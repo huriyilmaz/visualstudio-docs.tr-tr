@@ -11,15 +11,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9d2a0b0f7c76b392d5d2d0135c3ab6e370f8678e
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76114301"
 ---
 # <a name="add-correlationinitializers-dialog-box"></a>CorrelationInitializer Ekle İletişim Kutusu
 
-<xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>ve <xref:System.ServiceModel.Activities.ReceiveReply> etkinliklerinin **correlationbaşlatıcıları** özelliklerini yapılandırmak Için iş akışı Tasarımcısı **bağıntı başlatıcıları Ekle** iletişim kutusu kullanılır. Bu kutuyu kullanan etkinlik tasarımcıları hakkında daha fazla bilgi için [gönderme](../workflow-designer/send-activity-designer.md), [alma](../workflow-designer/receive-activity-designer.md), [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)ve [SendAndReceiveReply](../workflow-designer/sendandreceivereply-template-designer.md) konularına bakın.
+**Bağıntı başlatıcıları Ekle** iletişim kutusu,,, ve etkinliklerinin **correlationbaşlatıcıları** özelliklerini yapılandırmak için iş akışı Tasarımcısı kullanılır <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.Receive> <xref:System.ServiceModel.Activities.SendReply> <xref:System.ServiceModel.Activities.ReceiveReply> . Bu kutuyu kullanan etkinlik tasarımcıları hakkında daha fazla bilgi için [gönderme](../workflow-designer/send-activity-designer.md), [alma](../workflow-designer/receive-activity-designer.md), [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)ve [SendAndReceiveReply](../workflow-designer/sendandreceivereply-template-designer.md) konularına bakın.
 
 Bu iletişim kutusuyla belirtilen koleksiyondaki bağıntı başlatıcıları, mesajlaşma etkinlikleri arasında aşağıdaki bağıntıları başlatabilir:
 
@@ -30,17 +30,17 @@ Bu iletişim kutusuyla belirtilen koleksiyondaki bağıntı başlatıcıları, m
 
 Aşağıdaki tabloda **bağıntı başlatıcıları Ekle** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır:
 
-|Arabirim Öğesi|Açıklama|
+|Arabirim Öğesi|Description|
 |-|-----------------|
 |**Başlatıcı Ekle**|Koleksiyona ek bir başlatıcı eklemek için **başlatma Ekle** kutusuna tıklayın.|
-|**Bağıntı türü**|Bağıntı başlatıcısı türünü belirtir. Aralarından seçim yapabileceğiniz dört tür vardır:<br /><br /> 1. bir <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>belirtmek için bir geri çağırma bağıntı başlatıcısı.<br />2. bir <xref:System.ServiceModel.Activities.CorrelationInitializer>belirtmek için bağlam bağıntı başlatıcısı.<br />3. bir istek-bir <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>belirtmek için bir istek-yanıt bağıntı başlatıcısı.<br />4. bir <xref:System.ServiceModel.Activities.QueryCorrelationInitializer>belirtmek için bir sorgu bağıntı başlatıcısı.<br /><br /> **CorrelationType** 'ı düzenlemek için<br /><br /> 1. **ekleme Başlatıcı** DataGrid içindeki belirli bir satıra ait sekme.<br />2. bkz. **CorrelationTypeComboBox**'a odaklanmak için **CTRL**+**Tab**tuşlarına basın.<br />3 **. açılan pencereyi tıklatıp düzenlemek** için alt + aşağı tuşlarına basın.|
-|**XPath sorguları**|Gelen ve giden iletilerden bağıntı verilerini ayıklamak için kullanılan sorguları içeren bir anahtar/değer çifti. Bu liste yalnızca <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> türleri kullanılırken geçerlidir.|
+|**Bağıntı türü**|Bağıntı başlatıcısı türünü belirtir. Aralarından seçim yapabileceğiniz dört tür vardır:<br /><br /> 1. belirtmek için bir geri çağırma bağıntı Başlatıcısı <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer> .<br />2. belirtmek için bir bağlam bağıntı Başlatıcısı <xref:System.ServiceModel.Activities.CorrelationInitializer> .<br />3. bir istek-bir belirtmek için bağıntı başlatıcısı yanıtlayın <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> .<br />4. belirtmek için bir sorgu bağıntı Başlatıcısı <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> .<br /><br /> **CorrelationType** 'ı düzenlemek için<br /><br /> 1. **ekleme Başlatıcı** DataGrid içindeki belirli bir satıra ait sekme.<br />2. bkz. **CorrelationTypeComboBox**'a odaklanmak için **CTRL**tuşuna basın + **Tab**.<br />3 **. açılan pencereyi tıklatıp düzenlemek** için alt + aşağı tuşlarına basın.|
+|**XPath sorguları**|Gelen ve giden iletilerden bağıntı verilerini ayıklamak için kullanılan sorguları içeren bir anahtar/değer çifti. Bu liste yalnızca türler kullanılırken geçerlidir <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> .|
 
 ## <a name="to-launch-the-add-correlation-initializers-dialog-box"></a>Bağıntı başlatıcıları Ekle iletişim kutusunu başlatmak için
 
  **Bağıntı başlatıcıları Ekle** iletişim kutusu, **Send**, **Receive**, **ReceiveAndSendReply**ve **SendAndReceiveReply** tasarımcıları tarafından kullanılır. Bunlara erişmek her durumda benzerdir ve **alma** tasarımcısını içeren durum burada yordamı göstermek için kullanılır.
 
- **Alma** etkinliği Tasarımcısı **araç kutusundan** sürüklenip, etkinliklerin yerleştirildiği her yerde iş akışı Tasarımcısı yüzeyine bırakılabilir. **Alma** etkinliği Tasarımcısı ' nın atılması, varsayılan alma <xref:System.Activities.Activity.DisplayName%2A> bir <xref:System.ServiceModel.Activities.Receive> etkinlik oluşturur. **Alma** etkinliği tasarımcısını seçin ve **bağıntı başlatıcıları Ekle** iletişim kutusunun görünmesi Için özellik kılavuzunda bulunan **correlationbaşlatıcıları** özelliğinin yanındaki üç nokta düğmesine tıklayın.
+ **Alma** etkinliği Tasarımcısı **araç kutusundan** sürüklenip, etkinliklerin yerleştirildiği her yerde iş akışı Tasarımcısı yüzeyine bırakılabilir. **Alma** etkinliği Tasarımcısı ' nın atılması, <xref:System.ServiceModel.Activities.Receive> Varsayılan alma için bir etkinlik oluşturur <xref:System.Activities.Activity.DisplayName%2A> . **Alma** etkinliği tasarımcısını seçin ve **bağıntı başlatıcıları Ekle** iletişim kutusunun görünmesi Için özellik kılavuzunda bulunan **correlationbaşlatıcıları** özelliğinin yanındaki üç nokta düğmesine tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: Wpf. Hedef Dosyaları | Microsoft Dokümanlar
+title: WPF. Hedef dosyalar | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -18,15 +18,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d3225777c020272a24ac124bf6d039c2154e2ff3
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77630957"
 ---
 # <a name="wpf-targets-files"></a>WPF .targets dosyaları
 
-Windows Sunu Temeli (WPF), özel bir *.targets* dosyası olan *Microsoft.WinFX.targets'da*birleştirilen WPF'ye özgü bir dizi görev ekleyerek MSBuild'i genişletir. Bu dosya, WPF'de bir MSBuild projesi oluşturmak için gereken MSBuild görevleri kümesini birleştirir.
+Windows Presentation Foundation (WPF), özel bir *. targets* dosyası olan *Microsoft. WinFX. targets*içine birleştirilmiş bir WPF 'e özgü görevler kümesini ekleyerek MSBuild 'i genişletir. Bu dosya, WPF 'de bir MSBuild projesi oluşturmak için gereken MSBuild görevlerinin kümesini birleştirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

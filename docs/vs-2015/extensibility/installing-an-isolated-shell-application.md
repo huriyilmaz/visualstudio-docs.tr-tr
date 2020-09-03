@@ -12,10 +12,10 @@ caps.latest.revision: 41
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0adc81cfe9ea4462940c31a02c6429be89709565
-ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75944258"
 ---
 # <a name="installing-an-isolated-shell-application"></a>Yalıtılmış Kabuk Uygulaması Yükleme
@@ -31,10 +31,10 @@ Bir kabuk uygulamasını yüklemek için aşağıdaki adımları gerçekleştirm
   
   Bu belgedeki örnek kodun tamamı, MSDN Web sitesindeki kod galerisinden indirebileceğiniz [Kabuk dağıtım örneğinden](https://code.msdn.microsoft.com/Sample-setup-program-for-81ca73f7)gelir. Örnek, bu adımların her birini gerçekleştirme sonuçlarını gösterir.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Ön koşullar  
  Bu konunun açıkladığı yordamları gerçekleştirmek için, bilgisayarınızda aşağıdaki araçların yüklü olması gerekir.  
   
-- Visual Studio SDK  
+- Visual Studio SDK 'Sı  
   
 - [WINDOWS Installer XML araç takımı](https://documentation.help/WiX-Toolset/index.html/) 3,6 sürümü  
   
@@ -47,7 +47,7 @@ Bir kabuk uygulamasını yüklemek için aşağıdaki adımları gerçekleştirm
   
 1. Çözümünüzde her. valtmanifest dosyasını düzenleyin.  
   
-     `Identifier` öğesinde, bir `InstalledByMSI` öğesi ve bir `SystemComponent` öğesi ekleyin ve ardından değerlerini `true`olarak ayarlayın.  
+     `Identifier`Öğesinde bir `InstalledByMSI` öğesi ve bir `SystemComponent` öğesi ekleyin ve sonra değerlerini olarak ayarlayın `true` .  
   
      Bu öğeler VSıX yükleyicisinin, **uzantıları ve güncelleştirmeler** iletişim kutusunu kullanarak bileşenlerinizi yüklemeyi ve Kullanıcı tarafından kaldırılmasını engeller.  
   
@@ -61,7 +61,7 @@ Bir kabuk uygulamasını yüklemek için aşağıdaki adımları gerçekleştirm
  Ardından, çözümünüz için. reg dosyasında ve ApplicationRegistry. WXS ' de kayıt defteri girişleri oluşturun.  
   
 ### <a name="detection-blocks"></a>Algılama blokları  
- Bir algılama bloğu, algılamak için önkoşulları belirten bir `Property` öğeden oluşur ve önkoşul bilgisayarda yoksa döndürülecek bir ileti belirten bir `Condition` öğesidir. Örneğin, kabuk uygulamanız Microsoft Visual Studio Shell yeniden dağıtılabilir ve algılama bloğu aşağıdaki biçimlendirmeye benzeyecektir.  
+ Bir algılama bloğu, `Property` algılanabilmesi için önkoşulları belirten bir öğeden ve `Condition` Önkoşul bilgisayarda yoksa döndürülecek bir ileti belirten bir öğeden oluşur. Örneğin, kabuk uygulamanız Microsoft Visual Studio Shell yeniden dağıtılabilir ve algılama bloğu aşağıdaki biçimlendirmeye benzeyecektir.  
   
 ```xml  
 <Property Id="ISOSHELLSFX">  
@@ -85,7 +85,7 @@ Bir kabuk uygulamasını yüklemek için aşağıdaki adımları gerçekleştirm
   
 ##### <a name="to-set-the-layout-of-shell-components"></a>Kabuk bileşenlerinin yerleşimini ayarlamak için  
   
-1. Aşağıdaki örnekte gösterildiği gibi, hedef bilgisayardaki dosya sisteminde oluşturulacak tüm dizinleri temsil eden bir `Directory` öğeleri hiyerarşisi oluşturun.  
+1. `Directory`Aşağıdaki örnekte gösterildiği gibi, hedef bilgisayardaki dosya sisteminde oluşturulacak tüm dizinleri temsil eden bir öğe hiyerarşisi oluşturun.  
   
     ```xml  
     <Directory Id="TARGETDIR" Name="SourceDir">  
@@ -103,7 +103,7 @@ Bir kabuk uygulamasını yüklemek için aşağıdaki adımları gerçekleştirm
     </Directory>  
     ```  
   
-     Bu dizinlere, yüklenmesi gereken dosyalar belirtildiğinde `Id` tarafından başvurulur.  
+     Bu dizinlere, `Id` yüklenmesi gereken dosyalar belirtildiğinde başvurulur.  
   
 2. Aşağıdaki örnekte gösterildiği gibi, kabuğun ve kabuk uygulamanızın gerektirdiği bileşenleri belirler.  
   
@@ -123,7 +123,7 @@ Bir kabuk uygulamasını yüklemek için aşağıdaki adımları gerçekleştirm
     </Feature>  
     ```  
   
-    1. `ComponentRef` öğesi, geçerli bileşenin gerektirdiği dosyaları tanımlayan başka bir. WXS dosyası anlamına gelir. Örneğin, GeneralProfile, Helpate. WXS içinde aşağıdaki tanıma sahiptir.  
+    1. `ComponentRef`Öğesi, geçerli bileşenin gerektirdiği dosyaları tanımlayan başka bir. WXS dosyası anlamına gelir. Örneğin, GeneralProfile, Helpate. WXS içinde aşağıdaki tanıma sahiptir.  
   
         ```xml  
         <Fragment Id="FragmentProfiles">  
@@ -137,9 +137,9 @@ Bir kabuk uygulamasını yüklemek için aşağıdaki adımları gerçekleştirm
         </Fragment>  
         ```  
   
-         `DirectoryRef` öğesi bu dosyaların kullanıcının bilgisayarında nerede olduğunu belirtir. `Directory` öğesi, bir alt dizine yükleneceğini belirtir ve her bir `File` öğesi, çözümün bir parçası olarak oluşturulan ya da var olan bir dosyayı temsil eder ve MSI dosyası oluşturulduğunda dosyayı nerede bulabileceğini tanımlar.  
+         `DirectoryRef`Öğesi, bu dosyaların kullanıcının bilgisayarında nerede olduğunu belirtir. `Directory`Öğesi bir alt dizine yükleneceğini belirtir ve her `File` öğe, çözümün bir parçası olarak oluşturulan ya da var olan bir dosyayı temsil eder ve MSI dosyası oluşturulduğunda dosyayı nerede bulabileceğini tanımlar.  
   
-    2. `ComponentGroupRef` öğesi, başka bir bileşenler grubuna (veya bileşenler ve bileşen grupları) başvurur. Örneğin, ApplicationGroup altında `ComponentGroupRef` Application. WXS içinde aşağıdaki gibi tanımlanmıştır.  
+    2. `ComponentGroupRef`Öğesi, başka bir bileşenler grubuna (veya bileşenler ve bileşen grupları) başvurur. Örneğin, `ComponentGroupRef` ApplicationGroup altında Application. WXS içinde aşağıdaki gibi tanımlanmıştır.  
   
         ```xml  
         <ComponentGroup Id="ApplicationGroup">  
@@ -178,10 +178,10 @@ Bir kabuk uygulamasını yüklemek için aşağıdaki adımları gerçekleştirm
   
     |*ProjectName*. reg|Applicationkayıt. WXS|  
     |-----------------------|----------------------------|  
-    |[HKEY_CLASSES_ROOT \CLSıD\\{bb431796-A179-4df7-b65d-c0df6bda7cc6}]<br /><br /> @ = "PhotoStudio DTE nesnesi"|\<RegistryKey ID = ' DteClsidRegKey ' root = ' HKCR ' Key = ' $ (var. DteClsidRegKey) ' Action = ' createAndRemoveOnUninstall ' ><br /><br /> \<RegistryValue Type = ' dize ' name = ' @ ' Value = ' $ (var. ShortProductName) DTE nesnesi '/><br /><br /> \</RegistryKey >|  
-    |[HKEY_CLASSES_ROOT \CLSıD\\{bb431796-A179-4df7-b65d-c0df6bda7cc6} \LocalServer32]<br /><br /> @="$RootFolder$\PhotoStudio.exe"|\<RegistryKey ID = ' DteLocSrv32RegKey ' root = ' HKCR ' Key = ' $ (var. DteClsidRegKey) \LocalServer32 ' Action = ' createAndRemoveOnUninstall ' ><br /><br /> \<RegistryValue Type = ' dize ' name = ' @ ' Value = ' [ıNSTALLDIR] $ (var. ShortProductName). exe '/><br /><br /> \</RegistryKey >|  
+    |[HKEY_CLASSES_ROOT \CLSıD \\ {bb431796-a179-4df7-b65d-c0df6bda7cc6}]<br /><br /> @ = "PhotoStudio DTE nesnesi"|\<RegistryKey Id='DteClsidRegKey' Root='HKCR' Key='$(var.DteClsidRegKey)' Action='createAndRemoveOnUninstall'><br /><br /> \<RegistryValue Type='string' Name='@' Value='$(var.ShortProductName) DTE Object' /><br /><br /> \</RegistryKey>|  
+    |[HKEY_CLASSES_ROOT \CLSıD \\ {bb431796-A179-4df7-b65d-c0df6bda7cc6} \LocalServer32]<br /><br /> @ = "$RootFolder $\PhotoStudio.exe"|\<RegistryKey Id='DteLocSrv32RegKey' Root='HKCR' Key='$(var.DteClsidRegKey)\LocalServer32' Action='createAndRemoveOnUninstall'><br /><br /> \<RegistryValue Type='string' Name='@' Value='[INSTALLDIR]$(var.ShortProductName).exe' /><br /><br /> \</RegistryKey>|  
   
-     Bu örnekte, var. DteClsidRegKey, en üst satırdaki kayıt defteri anahtarına çözümleniyor. Var. ShortProductName `PhotoStudio`çözümleniyor.  
+     Bu örnekte, var. DteClsidRegKey, en üst satırdaki kayıt defteri anahtarına çözümleniyor. Var. ShortProductName, olarak çözümlenir `PhotoStudio` .  
   
 ## <a name="creating-a-setup-bootstrapper"></a>Kurulum Önyükleyicisi oluşturma  
  Tamamlanan MSI, yalnızca tüm önkoşulların yüklenmesi durumunda yüklenir. Son Kullanıcı deneyimini kolaylaştırmak için, uygulamanızı yüklemeden önce tüm önkoşulları toplayan ve yükleyen bir kurulum programı oluşturun. Yüklemenin başarılı olmasını sağlamak için aşağıdaki eylemleri gerçekleştirin:  
@@ -197,7 +197,7 @@ Bir kabuk uygulamasını yüklemek için aşağıdaki adımları gerçekleştirm
 - MSI 'nizi çalıştırın.  
   
 ### <a name="enforcing-installation-by-administrator"></a>Yönetici tarafından yüklemeyi zorunlu tutma  
- Bu yordam, Kurulum programının \Program Files\\gibi gerekli dizinlere erişmesini etkinleştirmek için gereklidir.  
+ Bu yordam, Kurulum programının \Program Files gibi gerekli dizinlere erişmesini etkinleştirmek için gereklidir \\ .  
   
 ##### <a name="to-enforce-installation-by-administrator"></a>Yüklemeyi yöneticiye zorlamak için  
   
@@ -215,9 +215,9 @@ Bir kabuk uygulamasını yüklemek için aşağıdaki adımları gerçekleştirm
   
  HKLM\Software\Microsoft\AppEnv\14.0\ShellFolder, Visual Studio kabuğunun yüklendiği konumu belirtir ve burada dosyaları kontrol edebilirsiniz.  
   
- Bir kabuk yüklemesinin nasıl algılanacağını gösteren bir örnek için, Kabuk dağıtım örneğindeki Utilities. cpp ' nin `GetProductDirFromReg` işlevine bakın.  
+ Bir kabuk yüklemesinin nasıl algılanacağını gösteren bir örnek için, `GetProductDirFromReg` Kabuk dağıtım örneğindeki Utilities. cpp işlevine bakın.  
   
- Paketinizin gerek duyduğu Visual Studio kabukların biri veya her ikisi bilgisayarda yüklü değilse, bunları yüklemek için bileşenleri listenize eklemeniz gerekir. Bir örnek için, Kabuk dağıtım örneğindeki ComponentsPage. cpp `ComponentsPage::OnInitDialog` işlevine bakın.  
+ Paketinizin gerek duyduğu Visual Studio kabukların biri veya her ikisi bilgisayarda yüklü değilse, bunları yüklemek için bileşenleri listenize eklemeniz gerekir. Bir örnek için, `ComponentsPage::OnInitDialog` Kabuk dağıtım örneğindeki ComponentsPage. cpp işlevine bakın.  
   
 ### <a name="running-the-shell-installers"></a>Kabuk yükleyicilerini çalıştırma  
  Kabuk yükleyicilerini çalıştırmak için, doğru komut satırı bağımsız değişkenlerini kullanarak Visual Studio Shell yeniden dağıtılabilir 'i çağırın. En azından, bir sonraki yapmanız gerekenleri belirlemek için, **/norestart/q** komut satırı bağımsız değişkenlerini kullanmanız ve dönüş kodunu izlemeniz gerekir. Aşağıdaki örnek, yeniden dağıtılabilir kabuk (yalıtılmış) çalıştırır.  
@@ -235,9 +235,9 @@ dwResult = ExecCmd("Vs_IsoShellLP.exe /norestart /q", TRUE);
 ```  
   
 ### <a name="deciphering-return-values"></a>Dönüş değerlerini çözme  
- Bazı işletim sistemlerinde, Visual Studio Kabuğu (yalıtılmış) yüklemesi için yeniden başlatma gerekir. Bu durum `ExecCmd`çağrısının dönüş kodu tarafından belirlenebilir.  
+ Bazı işletim sistemlerinde, Visual Studio Kabuğu (yalıtılmış) yüklemesi için yeniden başlatma gerekir. Bu durum, çağrısının dönüş kodu tarafından belirlenebilir `ExecCmd` .  
   
-|Dönüş Değeri|Açıklama|  
+|Dönüş Değeri|Description|  
 |------------------|-----------------|  
 |ERROR_SUCCESS|Yükleme tamamlandı. Artık uygulamanızı yükleyebilirsiniz.|  
 |ERROR_SUCCESS_REBOOT_REQUIRED|Yükleme tamamlandı. Bilgisayar yeniden başlatıldıktan sonra uygulamanızı yükleyebilirsiniz.|  
@@ -351,7 +351,7 @@ CString GetSetupPath()
 ```  
   
 ### <a name="running-the-application-msi"></a>Uygulama MSI 'sini çalıştırma  
- Visual Studio Kabuğu yükleyicisi ERROR_SUCCESS döndürdüğünde, uygulamanız için MSI 'yi çalıştırabilirsiniz. Kurulum programınız Kullanıcı arabirimini sağladığından, aşağıdaki örnekte gösterildiği gibi, MSI 'nizi sessiz modda ( **/q**) ve günlüğe kaydetme ( **/l**) ile başlatın.  
+ Visual Studio Kabuğu yükleyicisi ERROR_SUCCESS döndürdüğünde, uygulamanız için MSI 'yi çalıştırabilirsiniz. Kurulum programınız Kullanıcı arabirimini sağladığından, aşağıdaki örnekte gösterildiği gibi, MSI 'nizi sessiz modda (**/q**) ve günlüğe kaydetme (**/l**) ile başlatın.  
   
 ```cpp#  
 TCHAR temp[MAX_PATH];  

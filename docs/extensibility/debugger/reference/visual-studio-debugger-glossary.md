@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Debugger Sözlük | Microsoft Dokümanlar
+title: Visual Studio hata ayıklayıcısı sözlüğü | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,59 +12,59 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 954532311fe6b63fc288877a6d41722e6ea47581
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713355"
 ---
 # <a name="visual-studio-debugger-glossary"></a>Visual Studio Hata Ayıklayıcısı Sözlüğü
-Hata [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] Ayıklama SDK'da kullanılan terimler aşağıda verilmiştir.
+Aşağıdakiler [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] hata ayıklama SDK 'sında kullanılan terimlerdir.
 
-## <a name="terms"></a>Koşullar
- bağlama kesme noktası Kodda ayarlanan bir kesme noktası için soyutlama. Bağlı kesme noktası ile kod akışında bir kesme noktası yönergesi arasında bire bir ilişki vardır. Kod boşaltıldığında, bağlı kesme noktaları çözülebilir.
+## <a name="terms"></a>Terimler
+ bağlantılı kesme noktası, kodda ayarlanan kesme noktası için bir soyutlama. Bir ilişkili kesme noktası ve kod akışında bir kesme noktası yönergesi arasında bire bir ilişki vardır. Kod kaldırıldığında, bağlantılı kesme noktaları kesilebilir.
 
- nedensellik Birden çok fiziksel iş parçacığı, işlem ve makine arasında yürütme mantıksal bir iş parçacığı izlemek ve bu iş parçacığının ömrü içinde herhangi bir noktada bu mantıksal iş parçacığı çağrı yığını nı yeniden oluşturma olanağı sağlar.
+ causlık, birden çok fiziksel iş parçacığı, işlem ve makine arasında yürütülen bir mantıksal iş parçacığını izleme ve bu mantıksal iş parçacığının çağrı yığınını o iş parçacığı ömrü boyunca belirli bir noktada yeniden oluşturmak için olanak sağlar.
 
- kod bağlamı Hata ayıklama altyapısı tarafından bilinen koddaki bir konumun soyutlamasını sağlar. Çoğu çalışma zamanı mimarisi için kod bağlamı, programın yönerge akışındaki bir adrestir. Kodun yönergeler tarafından temsil edilemeyen geleneksel olmayan dilleriçin, kod bağlamı başka yollarla temsil edilebilir.
+ kod bağlamı, hata ayıklama altyapısına bilinen kodda bir konumun soyutlamasını sağlar. Çoğu çalışma zamanı mimarilerinde, kod bağlamı bir programın yönerge akışındaki bir adrestir. Geleneksel olmayan dillerde, kodun yönergelerle temsil edilemeyebilir, bir kod bağlamı başka yollarla temsil edilebilir.
 
- kod yolu Bir dalı alınan veya işlev çağrısıyapılan koddaki bir yürütme noktasını temsil eder. Yığın izleme aslında işlev çağrı kodu yollarının bir listesidir.
+ kod yolu, bir dalın alındığı veya bir işlev çağrısının yapıldığı koddaki yürütme noktasını temsil eder. Yığın izlemesi aslında işlev çağrı kodu yollarının listesidir.
 
- hata ayıklama motoru (DE) Çalışma zamanı mimarisinin hata ayıklanmasına izin veren bir bileşen. Hata ayıklama altyapısı, yorumlayıcı veya işletim sistemiyle birlikte çalışır ve yürütme denetimi, kesme noktaları ve ifade değerlendirmesi gibi hata ayıklama hizmetleri sağlar.
+ çalışma zamanı mimarisinin hata ayıklamasına izin veren bir bileşen hata ayıklama altyapısı (DE). Bir hata ayıklama altyapısı, yorumlayıcı veya işletim sistemiyle birlikte çalışarak yürütme denetimi, kesme noktaları ve ifade değerlendirmesi gibi hata ayıklama hizmetleri sağlar.
 
- belge bağlamı Hata Ayıklama altyapısı tarafından bilinen bir kaynak dosya belgesindeki bir pozisyonun soyutlamasını sağlar. Çoğu dil için belge bağlamı kaynak dosyasındaki bir konumdur. Kaynak dosyanın metin olmadığı geleneksel olmayan diller için, belge bağlamı başka yollarla temsil edilebilir. *Ayrıca*bkz.
+ Belge bağlamı, hata ayıklama altyapısı tarafından bilinen kaynak dosya belgesinde bir konumun soyutlamasını sağlar. Çoğu dil için bir belge bağlamı, kaynak dosyadaki bir konumudur. Kaynak dosyanın metin olamayacağı geleneksel olmayan diller için bir belge bağlamı başka yollarla temsil edilebilir. Ayrıca bkz. *belge konumu*.
 
- belge konumu IDE tarafından bilinen bir kaynak dosyadaki bir konumun soyutlamasını sağlar. Çoğu dil için belge konumu kaynak dosyasındaki bir konumdur. Geleneksel olmayan diller için belge konumu başka şekillerde temsil edilebilir. Ayrıca *bkz.*
+ belge konumu, IDE tarafından bilinen bir kaynak dosyasında konumun bir soyutlamasını sağlar. Çoğu dil için, bir belge konumu kaynak dosyadaki bir konum olur. Geleneksel olmayan diller için bir belge konumu başka yollarla gösterilebilir. Ayrıca bkz. *belge bağlamı*.
 
- hata kesme noktası Bekleyen bir kesme noktasında bir hatayı açıklamak için soyutlama. Hata kesme noktası, bekleyen kesme noktasının konumundaki bir hatayı, bekleyen kesme noktasıyla ilişkili ifadeyi veya bekleyen kesme noktasının kod konumuna bağlanmasını engelleyen diğer bilgileri açıklayabilir.
+ hata kesme noktası bekleyen bir kesme noktasında hatayı açıklamak için bir soyutlama. Bir hata kesme noktası, bekleyen kesme noktasının konumundaki bir hatayı, bekleyen kesme noktasıyla ilişkili ifadeyi veya bekleyen kesme noktasının bir kod konumuna bağlamasını önleyen diğer bilgileri açıklayabilir.
 
- değerlendirme bağlamı Ifade değerlendirmesi için bir programlama bağlamının soyutlanması sağlar. Genellikle, bir değerlendirme bağlamı bir kapsamdır. İfade bağlamında ifade değerlendirmesi yaparken, ifade bağlamı oluşturma noktasıyla eşleşen kapsam kuralları sağlar. Örneğin, yığın çerçevesinde oluşturulan bir ifade bağlamı, yerel değişkenleri, yöntem parametrelerini, sınıf üyelerini (varsa) ve genel değişkenleri değerlendirmek için bağlamı sağlar.
+ değerlendirme bağlamı, ifade değerlendirmesi için programlama bağlamının bir soyutlamasını sağlar. Genellikle, bir değerlendirme bağlamı bir kapsamdır. İfade bağlamında ifade değerlendirmesi yaparken ifade bağlamı, oluşturma noktasıyla eşleşen kapsam kuralları sağlar. Örneğin, yığın çerçevesinde oluşturulan bir ifade bağlamı yerel değişkenleri, yöntem parametrelerini, sınıf üyelerini (varsa) ve genel değişkenleri değerlendirmeye yönelik bağlamı sağlayacaktır.
 
- yakalanan özel durum Geçerli yığın çerçevesinde hiçbir özel durum işleme mekanizması yerinde olsa bile, hata ayıklama altyapısı tarafından yakalanan bir özel durum.
+ geçerli yığın çerçevesinde özel durum işleme mekanizması gerçekleşmese bile, bir hata ayıklama altyapısı tarafından kesilen özel durum ele alınmaz.
 
- JustMyCode Kaynak kodu bu sistem kodu için kullanılabilir olsa bile, yalnızca bir kullanıcıya ait kodu hata ayıklama ve sistem kodu gibi tüm ara kodları yok sayma kavramı.
+ Bu sistem kodu için kaynak kodu kullanılabilir olsa bile, yalnızca bir kullanıcıya ait kodu hata ayıklama ve sistem kodu gibi tüm ara kodları yok sayma kavramı.
 
- bekleyen kesme noktası Kod yüklenmeden önce, sırasında ve sonrasında kesme noktaları için bir soyutlama ve kesme noktalarını sanallaştırmanın bir yolunu sağlar. Bekleyen bir kesme noktası:
+ bekleyen kesme noktası, kod yüklenmeden önce, sırasında ve sonrasında kesme noktaları için bir soyutlama ve kesme noktalarını sanallaştırmaya yönelik bir yol sağlar. Bekleyen bir kesme noktası:
 
-- Bir veya daha fazla programda bir kesme noktasını koda bağlamak için gereken tüm bilgileri içerir.
+- Bir veya daha fazla programda koda bir kesme noktası bağlamak için gereken tüm bilgileri içerir.
 
-- Bir veya daha fazla programda birden çok kod konumuna bağlanabilir.
+- , Bir veya daha fazla programda birden çok kod konumuna bağlanamaz.
 
-- Asla kendini koda bağlamaz.
+- Kendisini koda hiçbir şekilde bağlamamalıdır.
 
-  Kod yüklenir her zaman, bir programda bekleyen tüm kesme noktaları bağlanıp bağlanamayacaklarını görmek için denetlenir. Bekleyen bir kesme noktasının, bağladığının tüm bağlı kesme noktalarını içerdiği söylenir.
+  Her kod yüklendiğinde, bir programdaki tüm bekleyen kesme noktaları bağlanıp bağlanamazlar. Bekleyen bir kesme noktası, bağlandığı tüm bağlı kesme noktalarını içeriyor olarak kabul edilir.
 
-  fiziksel bir Win32 işlemi. Bir işlem birden çok program içerebilir. *Ayrıca*bkz.
+  fiziksel bir Win32 işlemini işleyin. Bir işlem birden çok program içerebilir. Ayrıca bkz. *Program*.
 
-  program Belirli bir çalışma zamanı mimarisi içinde çalışan tek bir ad alanı. *Ayrıca*bkz.
+  belirli bir çalışma zamanı mimarisinin içinde çalışan tek bir ad alanı program. Ayrıca bkz. *işlem*.
 
-  oturum hata ayıklama yöneticisi (SDM) Herhangi bir sayıda makinede birden çok işlemdeki herhangi bir sayıda programda hata ayıklama hata ayıklama olan herhangi bir sayıda hata ayıklama motorunu yönetir. Temel düzeyde, SDM hata ayıklama motorlarının bir çoklayıcısidir. Ayrıca, SDM IDE'ye hata ayıklama oturumunun birleşik bir görünümünü sağlar.
+  oturum hata ayıklama Yöneticisi (SDM), herhangi bir sayıdaki makinede birden çok işlemde bulunan sayıda programda hata ayıklamanın herhangi bir sayıda hata ayıklama altyapısını yönetir. Temel düzeyde, SDM hata ayıklama altyapılarının çoğullayıcısı olur. Ayrıca, SDM, IDE 'ye hata ayıklama oturumunun Birleşik bir görünümünü sağlar.
 
-  yığın çerçevesi Belirli bir çerçevedeki hesaplama durumunu ve iç içe geçirilmiş işlev çağrılarının belirli düzeyini temsil eder.
+  yığın çerçevesi, belirli bir çerçevedeki hesaplamanın durumunu ve belirli bir iç içe işlev çağrılarının düzeyini temsil eder.
 
-  thread En az bir programda çalışan yığın tabanlı yönerge yürütme genelleştirilmiş kavramı.
+  en az bir programda çalışan yığın tabanlı yönerge yürütmesinin Genelleştirilmiş kavramına iş parçacığı.
 
-  uyarı kesme noktası Bekleyen bir kesme noktasında bir uyarıyı açıklamak için soyutlama. Uyarı kesme noktası, bekleyen kesme noktasının henüz bir kod konumuna bağlı olmamasının nedenini açıklar. Bu, kodun bekleyen kesme noktası tarafından açıklanan konum için henüz yüklenmemiş olması veya başka bir nedenle olması olabilir.
+  Uyarı kesme noktası bekleyen bir kesme noktasında uyarı tanımlamak için bir soyutlama. Uyarı kesme noktası, bekleyen kesme noktasının henüz bir kod konumuna bağlanmamasının nedenini açıklar. Bu, kodun, bekleyen kesme noktası tarafından tanımlanan konum veya başka bir nedenden dolayı henüz yüklenmemiş olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio Hata Ayıklayıcı Genişletilebilirliği](../../../extensibility/debugger/visual-studio-debugger-extensibility.md)

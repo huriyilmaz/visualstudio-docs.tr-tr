@@ -19,42 +19,42 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cabbf36adb5019543b3cfb72b0b0e56976517d2d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77557940"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
 
-IDE içindeki metin, para birimi ve diğer değerler için kullanılan varsayılan dili ayarlar.
+Metin, para birimi ve IDE içindeki diğer değerler için kullanılan varsayılan dili ayarlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```shell
 devenv {/LCID|/L} LocaleID
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
-- *Localeıd*
+- *LocaleID*
 
-  Gereklidir. Belirttiğiniz dilin yerel tanımlayıcısı (LCID).
+  Gereklidir. Belirttiğiniz dilin Yerel ayar tanıtıcısı (LCıD).
 
 ## <a name="remarks"></a>Açıklamalar
 
-IDE yükler ve ortam için varsayılan doğal dili ayarlar. Bu değişiklik oturumlar arasında devam eder ve IDE bu değişikliği **Araçlar** > **Seçenekleri** > **Ortamı** > **Uluslararası Ayarlar** > **Dili** kutusunda gösterir.
+IDE 'yi yükler ve ortam için varsayılan doğal dili ayarlar. Bu değişiklik oturumlar arasında kalıcıdır ve IDE, bu değişikliği **Araçlar**  >  **Seçenekler**  >  **ortamı**  >  **Uluslararası ayarlar**  >  **dil** kutusunda gösterir.
 
-Belirtilen dil sisteminizde kullanılamıyorsa, `/LCID` anahtar yoksayılır.
+Belirtilen dil sisteminizde yoksa, `/LCID` anahtar yok sayılır.
 
-Aşağıdaki tabloda Visual Studio tarafından desteklenen dillerin LCID'leri listelenir.
+Aşağıdaki tabloda, Visual Studio tarafından desteklenen dillerin LCID 'Ler listelenmiştir.
 
 |Dil|LCID|
 |--------------|----------|
-|Çince (Basitleştirilmiş)|2052|
-|seçenekleri yerine|1028|
+|Basitleştirilmiş Çince|2052|
+|Geleneksel Çince|1028|
 |Çekçe|1029|
-|Türkçe|1033|
+|İngilizce|1033|
 |Fransızca|1036|
 |Almanca|1031|
 |İtalyanca|1040|
@@ -68,7 +68,7 @@ Aşağıdaki tabloda Visual Studio tarafından desteklenen dillerin LCID'leri li
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, IDE'yi İngilizce kaynak dizeleriyle yükler.
+Bu örnek, IDE 'yi Ingilizce kaynak dizeleri ile yükler.
 
 ```shell
 devenv /LCID 1033

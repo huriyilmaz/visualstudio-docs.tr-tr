@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1676f438b876757ab66d8b9e9b1ee09bde442ef9
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75852051"
 ---
 # <a name="accessibility-products-and-services-from-microsoft"></a>Microsoft'tan Erişilebilirlik Ürünleri ve Hizmetleri
@@ -42,7 +42,7 @@ Microsoft ürünlerinin ve hizmetlerinin kullanımını herkes için daha kolay 
 > [!NOTE]
 > Bu bölümdeki bilgiler yalnızca Microsoft ürünlerini ABD'de lisanslayan kullanıcılar için geçerlidir. Bu ürünü Birleşik Devletler dışında edindiyseniz, Microsoft Destek Hizmetleri telefon numaraları ve adreslerinin bir listesi için yazılım paketinizle birlikte gelen yan kuruluş bilgi kartını kullanabilir veya [Microsoft Erişilebilirlik Web sitesini](https://www.microsoft.com/enable/default.aspx) ziyaret edebilirsiniz. Bu bölümde açıklanan ürün ve hizmet türlerinin bölgeniz için uygun olup olmadığını bulmak amacıyla yan kuruluşa başvurabilirsiniz. Erişilebilirlik hakkında bilgiler Japonca ve Fransızca'nın dahil olduğu farklı dillerde mevcuttur.
 
-## <a name="windows"></a>Windows 'un erişilebilirlik özellikleri
+## <a name="accessibility-features-of-windows"></a><a name="windows"></a> Windows 'un erişilebilirlik özellikleri
  Windows işletim sistemi yazmada veya fare kullanmada zorluk yaşayan kişiler, görme engelli veya görme zorluğu yaşayan kişiler veya işitme engelli veya işitme zorluğu yaşayan kişiler için birçok erişilebilirlik özelliğine sahiptir. Özellikler Kurulum sırasında yüklenir. Bu özellikler hakkında daha fazla bilgi için bkz. Windows ve [Microsoft Erişilebilirlik Web sitesinde](https://www.microsoft.com/enable/default.aspx)yardım.
 
 ### <a name="free-step-by-step-tutorials"></a>Ücretsiz Adım Adım Öğreticiler
@@ -55,18 +55,18 @@ Microsoft ürünlerinin ve hizmetlerinin kullanımını herkes için daha kolay 
 
  Yardımcı teknoloji kullanıyorsanız, yazılımınızı veya donanımınızı yükseltmeden önce olası uyumluluk sorunlarına karşı yardımcı teknoloji satıcınızla iletişime geçin.
 
-## <a name="altfortmats"></a>Alternatif biçimlerdeki belgeler
+## <a name="documentation-in-alternative-formats"></a><a name="altfortmats"></a> Alternatif biçimlerdeki belgeler
  Yazdırılan malzemelerin okunmasında veya yönetilmesinde zorluk yaşıyorsanız, bir Microsoft ürününe yönelik belgeleri daha erişilebilir bir biçimde edinebilirsiniz. [Microsoft Erişilebilirlik Web sitesinde](https://www.microsoft.com/enable/default.aspx)erişilebilir ürün belgelerinin dizinini görüntüleyebilirsiniz.
 
- Ayrıca, Recording for the Blind & Dyslexic, Inc (RFB&D) sitesinde ek Microsoft yayınları bulabilirsiniz. RFB&D bu belgeleri kendi dağıtım hizmetine kayıtlı ve uygun üyelerine dağıtmaktadır. Microsoft ürün belgelerinin ve Microsoft Press kitaplarının uygunluğu hakkında bilgi için şuraya başvurun:
+ Ayrıca, Recording for the Blind & Dyslexic, Inc (RFB&D) için daha fazla Microsoft yayını elde edebilirsiniz. RFB&D bu belgeleri dağıtım hizmetinin kayıtlı ve uygun üyelerine dağıtır. Microsoft ürün belgelerinin ve Microsoft Press kitaplarının uygunluğu hakkında bilgi için şuraya başvurun:
 
 |Learning Ally|
 |----------------------------------------------|
-|20 Roszel Road<br /><br /> Princeton, NJ 08540<br /><br /> Öğrenerek Web sitesi: [http://www.learningally.org](https://learningally.org/).|
+|20 Roszel Road<br /><br /> Princeton, NJ 08540<br /><br /> Öğrenerek Web sitesi: [http://www.learningally.org](https://learningally.org/) .|
 
  Web adresleri değişebilir, bu nedenle burada söz edilen web sitelerine veya sitelere bağlanamayabilirsiniz.
 
-## <a name="hearing"></a>Işitme engelli kişiler için müşteri hizmetleri
+## <a name="customer-service-for-people-with-hearing-impairments"></a><a name="hearing"></a> Işitme engelli kişiler için müşteri hizmetleri
  İşitme engelliyseniz veya işitme zorluğu yaşıyorsanız, Microsoft ürün ve müşteri hizmetlerine tam erişim metin telefonu (TTY/TDD) hizmeti üzerinden kullanılabilir:
 
 - Müşteri hizmetleri için, tatiller hariç Pazartesi - Cuma 6:30 ve 17:30 (Pasifik Saati) saatleri arasında (800) 892-5234 no'lu telefondan Microsoft Sales Information Center'a başvurun.
@@ -75,7 +75,7 @@ Microsoft ürünlerinin ve hizmetlerinin kullanımını herkes için daha kolay 
 
   Microsoft Destek Hizmetleri hizmetin kullanıldığı andaki ücretlendirmeye, hüküm ve koşullara tabidir.
 
-## <a name="moreinfo"></a>Daha fazla bilgi için
+## <a name="for-more-information"></a><a name="moreinfo"></a> Daha fazla bilgi için
  Bilgisayarlar için erişilebilir teknolojinin Engelli kişilerin yaşamlarını iyileştirmeye nasıl yardımcı olduğu hakkında daha fazla bilgi için bkz. [Microsoft Erişilebilirlik Web sitesi](https://www.microsoft.com/enable/default.aspx).
 
 ## <a name="see-also"></a>Ayrıca Bkz.

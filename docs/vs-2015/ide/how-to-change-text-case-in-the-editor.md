@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1ae92d5eea521a3f609024c3333d0567b7e52c54
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645458"
 ---
 # <a name="how-to-change-text-case-in-the-editor"></a>Nasıl Yapılır: Düzenleyicide Büyük/Küçük Harf Değiştirme
@@ -35,11 +35,11 @@ Seçilen metnin büyük/küçük harflere veya tüm küçük harflere dönüşt�
 
 2. **Düzenle** menüsünde **Gelişmiş**' i seçin.
 
-3. Metni büyük harflere dönüştürmek için, **büyük harf yap**' ı seçin veya **CTRL** +**SHIFT** +**U**tuşlarına basın.
+3. Metni büyük harflere dönüştürmek için, **büyük harf yap**' ı seçin veya **CTRL** + **SHIFT** + **U**tuşlarına basın.
 
      veya
 
-     Metni küçük harfe dönüştürmek için **küçük harf yap**' ı seçin veya **CTRL** +**U**tuşlarına basın.
+     Metni küçük harfe dönüştürmek için **küçük harf yap**' ı seçin veya **CTRL** + **U**tuşlarına basın.
 
     > [!TIP]
     > Bu değişiklikten önce önceki durum biçimlendirmesine dönmek için, **Düzenle** menüsünden **geri al** ' ı seçin.

@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c5088fc04f4440260bdb9d3f040d99061c05d243
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72620345"
 ---
 # <a name="advanced-search-operators-in-search-expressions"></a>Arama İfadelerindeki Gelişmiş Arama İşleçleri
@@ -31,16 +31,16 @@ Gelişmiş arama işleçlerini kullanarak, daha karmaşık arama ifadelerini dah
 > [!WARNING]
 > Gelişmiş arama işleçlerini, son iki nokta ile ve arama altyapısının bunları tanıması için iki nokta üst üste gelmeden önce boşluk olmadan girmeniz gerekir.
 
-|Arama yapmak için|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|Örnek|Sonuç|
+|Arama yapmak için|Kullanın|Örnek|Sonuç|
 |-------------------|---------|-------------|------------|
 |Konunun başlığındaki bir terim|başlık:|Başlık: BinaryReader|Başlıklarında "BinaryReader" içeren konular.|
-|Kod örneğinde bir terim|kodudur|kod: Read|Kod örneğinde "readDouble" içeren konular.|
+|Kod örneğinde bir terim|kod:|kod: Read|Kod örneğinde "readDouble" içeren konular.|
 |Belirli bir programlama diline örnek olarak bir terim|kod: vb:|kod: vb: dize|Bir Visual Basic örneğinde "String" içeren konular.|
 |Belirli bir dizin anahtar sözcüğüyle ilişkili bir konu|sözcükle|anahtar sözcük: ReadByte|"ReadByte" Dizin anahtar sözcüğüyle ilişkili konular.|
 
  Birkaç programlama dili ile ilgili içerik bulmak için Code: işlecini kullanabilirsiniz, ancak sonuçları yalnızca belirli bir programlama diliyle işaretlenmiş içerikler için döndürür. Aşağıdaki tabloda, bu işlecin desteklediği programlama dilleri listelenmektedir:
 
-|Programlama dili|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|
+|Programlama Dili|Kullanın|
 |--------------------------|---------|
 |Visual Basic|kod: vb<br /><br /> veya<br /><br /> kod: VisualBasic|
 |C#|kod: c #<br /><br /> veya<br /><br /> kod: CSharp|

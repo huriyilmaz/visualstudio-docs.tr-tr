@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 43b9d201a146538cd74e9528340845fd9fd92597
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918574"
 ---
 # <a name="walkthrough-generating-code-by-using-text-templates"></a>İzlenecek Yol: Metin Şablonları Kullanarak Kod Oluşturma
@@ -25,12 +25,12 @@ ms.locfileid: "75918574"
 Kod üretimi, kesin olarak yazılmış program kodu oluşturmanıza ve kaynak model değiştiğinde kolayca değiştirilebilmesini sağlar. Bunu, daha esnek olan bir yapılandırma dosyasını kabul eden tamamen genel bir program yazmanın alternatif tekniğinin aksine, ancak bu, daha kolay okunması ve değişmemesi ya da bu iyi performansa sahip olmayan koda neden olur. Bu anlatımda bu avantaj gösterilmektedir.
 
 ## <a name="typed-code-for-reading-xml"></a>XML okumak için yazılan kod
- System. xml ad alanı, bir XML belgesi yüklemeye ve sonra bellekte ücretsiz olarak gezinerek kapsamlı araçlar sağlar. Ne yazık ki, tüm düğümlerin aynı türde ve XmlNode vardır. Bu nedenle, yanlış türde alt düğüm veya yanlış öznitelikleri bekleyen bir programlama hatası yapmak çok kolaydır.
+ System.Xml ad alanı, bir XML belgesi yüklemek ve ardından bellekte serbestçe gezinmek için kapsamlı araçlar sağlar. Ne yazık ki, tüm düğümlerin aynı türde ve XmlNode vardır. Bu nedenle, yanlış türde alt düğüm veya yanlış öznitelikleri bekleyen bir programlama hatası yapmak çok kolaydır.
 
  Bu örnek projede, bir şablon örnek bir XML dosyası okur ve her bir düğüm türüne karşılık gelen sınıflar oluşturur. El ile yazılmış kodda, XML dosyasında gezinmek için bu sınıfları kullanabilirsiniz. Uygulamanızı aynı düğüm türlerini kullanan başka herhangi bir dosya üzerinde de çalıştırabilirsiniz. Örnek XML dosyasının amacı, uygulamanızın ilgilenmesi için istediğiniz tüm düğüm türlerine örnekler sağlamaktır.
 
 > [!NOTE]
-> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ile birlikte gelen [XSD. exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe)UYGULAMASı, XML dosyalarından kesin türü belirtilmiş sınıflar oluşturabilir. Burada gösterilen şablon bir örnek olarak sunulmaktadır.
+> İle birlikte bulunan uygulama [xsd.exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe), [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] XML dosyalarından kesin türü belirtilmiş sınıflar oluşturabilir. Burada gösterilen şablon bir örnek olarak sunulmaktadır.
 
  Örnek dosya aşağıda verilmiştir:
 
@@ -81,17 +81,17 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 
 ## <a name="setting-up-the-project"></a>Projeyi ayarlama
 
-### <a name="create-or-open-a-c-project"></a>C# Proje oluşturun veya açın
- Bu tekniği, herhangi bir kod projesine uygulayabilirsiniz. Bu izlenecek yol bir C# proje kullanır ve test amaçları için bir konsol uygulaması kullanıyoruz.
+### <a name="create-or-open-a-c-project"></a>C# projesi oluşturma veya açma
+ Bu tekniği, herhangi bir kod projesine uygulayabilirsiniz. Bu izlenecek yol bir C# projesi kullanır ve test amaçları için bir konsol uygulaması kullanıyoruz.
 
 ##### <a name="to-create-the-project"></a>Proje oluşturmak için
 
 1. **Dosya** menüsünde **Yeni** ' ye ve ardından **Proje**' ye tıklayın.
 
-2. **Görsel C#**  düğümüne tıklayın ve ardından **Şablonlar** bölmesinde **konsol uygulaması** ' na tıklayın.
+2. **Visual C#** düğümüne tıklayın ve ardından **Şablonlar** bölmesinde **konsol uygulaması** ' na tıklayın.
 
 ### <a name="add-a-prototype-xml-file-to-the-project"></a>Projeye prototip XML dosyası ekleyin
- Bu dosyanın amacı, uygulamanızın okuyabilmesini istediğiniz XML düğüm türlerinin örneklerini sağlamaktır. Bu, uygulamanızı test etmek için kullanılacak bir dosya olabilir. Şablon, bu dosyadaki her C# düğüm türü için bir sınıf oluşturur.
+ Bu dosyanın amacı, uygulamanızın okuyabilmesini istediğiniz XML düğüm türlerinin örneklerini sağlamaktır. Bu, uygulamanızı test etmek için kullanılacak bir dosya olabilir. Şablon, bu dosyadaki her düğüm türü için bir C# sınıfı oluşturur.
 
  Şablonun okuyabilmesi için dosyanın projenin bir parçası olması gerekir, ancak derlenen uygulamada derlenmeyecektir.
 
@@ -103,12 +103,12 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 
 3. Örnek içeriğinizi dosyaya ekleyin.
 
-4. Bu izlenecek yol için `exampleXml.xml`dosyayı adlandırın. Dosyanın içeriğini önceki bölümde gösterilen XML olacak şekilde ayarlayın.
+4. Bu izlenecek yol için dosyayı adlandırın `exampleXml.xml` . Dosyanın içeriğini önceki bölümde gösterilen XML olacak şekilde ayarlayın.
 
-   .
+   ..
 
 ### <a name="add-a-test-code-file"></a>Test kodu dosyası Ekle
- Projenize bir C# dosya ekleyin ve yazabilmesi istediğiniz kodun bir örneğini yazın. Örneğin:
+ Projenize bir C# dosyası ekleyin ve yazmak istediğiniz kodun bir örneğini yazın. Örneğin:
 
 ```
 using System;
@@ -144,11 +144,11 @@ namespace MyProject
    > [!NOTE]
    > Önceden Işlenmiş bir metin şablonu değil, bir metin şablonu eklediğinizden emin olun.
 
-3. Dosyasında, şablon yönergesinde `hostspecific` özniteliğini `true`olarak değiştirin.
+3. Dosyasında, şablon yönergesinde `hostspecific` özniteliğini olarak değiştirin `true` .
 
-    Bu değişiklik, şablon kodunun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hizmetlerine erişim sağlamasına olanak sağlar.
+    Bu değişiklik, şablon kodunun hizmetlere erişim elde etmesine imkan sağlar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
-4. Output yönergesinde uzantı özniteliğini ". cs" olarak değiştirin, böylece şablon bir C# dosya oluşturur. Visual Basic bir projede, bunu ". vb" olarak değiştirirsiniz.
+4. Output yönergesinde uzantı özniteliğini ". cs" olarak değiştirin, böylece şablon bir C# dosyası oluşturur. Visual Basic bir projede, bunu ". vb" olarak değiştirirsiniz.
 
 5. Dosyayı kaydedin. Bu aşamada, metin şablonu dosyası şu satırları içermelidir:
 
@@ -161,7 +161,7 @@ namespace MyProject
 
    Bir. cs dosyasının şablon dosyasının yan kuruluşu olarak Çözüm Gezgini göründüğünü unutmayın. Şablon dosyasının adının yanındaki [+] simgesini tıklatarak görebilirsiniz. Bu dosya, Şablon dosyasından odağı her kaydedişinizde veya taşıdığınızda şablon dosyasından oluşturulur. Oluşturulan dosya, projenizin bir parçası olarak derlenir.
 
-   Şablon dosyasını geliştirirken kolaylık sağlaması için, şablon dosyasının ve oluşturulan dosyanın pencerelerini birbirlerinin yanında görebilmeniz için düzenleyin. Bu, şablonunuzun hemen çıktısını görmenizi sağlar. Ayrıca, şablonunuz geçersiz C# kod oluşturduğunda hata iletisi penceresinde hataların göründüğünü fark edersiniz.
+   Şablon dosyasını geliştirirken kolaylık sağlaması için, şablon dosyasının ve oluşturulan dosyanın pencerelerini birbirlerinin yanında görebilmeniz için düzenleyin. Bu, şablonunuzun hemen çıktısını görmenizi sağlar. Ayrıca, şablonunuz geçersiz C# kodu oluşturduğunda hata iletisi penceresinde hataların göründüğünü fark edersiniz.
 
    Şablon dosyasını her kaydettiğinizde, oluşturulan dosyada doğrudan gerçekleştirdiğiniz düzenlemeler kaybedilir. Bu nedenle, oluşturulan dosyanın düzenlenmesinden kaçının ya da yalnızca Short denemeleri için düzenleme yapmanız gerekir. IntelliSense 'in işlem içinde olduğu üretilen dosyadaki kodun kısa bir parçasını denemek ve şablon dosyasına kopyalayabilmesini bazen yararlı olur.
 
@@ -202,18 +202,18 @@ class Song {}
 
  Dosya yolunu, projeniz için doğru yol ile değiştirin.
 
- Kod bloğu sınırlayıcılarının `<#...#>`dikkat edin. Bu sınırlayıcılar, metni oluşturan program kodunun bir parçasını ayraç içine koyun. İfade blok sınırlayıcıları `<#=...#>` bir dizeye değerlendirilebilen bir ifadenin ayracı.
+ Kod bloğu sınırlayıcılarını unutmayın `<#...#>` . Bu sınırlayıcılar, metni oluşturan program kodunun bir parçasını ayraç içine koyun. İfade blok sınırlayıcıları `<#=...#>` köşeli ayraç bir dizeye değerlendirilebilecek bir ifade.
 
  Uygulamanız için kaynak kodu üreten bir şablon yazarken, iki ayrı program metni ile ilgilenolursunuz. Kod bloğu sınırlayıcılarının içindeki program, şablonu her kaydettiğinizde veya odağı başka bir pencereye taşıdığınızda çalışır. Oluşturduğu metin, sınırlayıcılar dışında görünen metin oluşturulan dosyaya kopyalanır ve uygulama kodunuzun bir parçası haline gelir.
 
- `<#@assembly#>` yönergesi bir başvuru gibi davranır ve derlemeyi şablon kodu için kullanılabilir hale getirir. Şablon tarafından görülen derlemelerin listesi, uygulama projesindeki başvuruların listesinden ayrıdır.
+ `<#@assembly#>`Yönerge, bir başvuru gibi davranır ve derlemeyi şablon kodu için kullanılabilir hale getirir. Şablon tarafından görülen derlemelerin listesi, uygulama projesindeki başvuruların listesinden ayrıdır.
 
- `<#@import#>` yönergesi `using` bir ifade gibi davranır ve içeri aktarılan ad alanındaki sınıfların kısa adlarını kullanmanıza olanak sağlar.
+ `<#@import#>`Yönergesi bir ifade gibi davranır `using` ve içeri aktarılan ad alanındaki sınıfların kısa adlarını kullanmanıza olanak sağlar.
 
- Ne yazık ki bu şablon kod üretse de, örnek XML dosyasındaki her düğüm için bir sınıf bildirimi oluşturur, böylece `<song>` düğümünün birkaç örneği varsa, sınıf şarkının çeşitli bildirimleri görünür.
+ Ne yazık ki, bu şablon kod üretse de örnek XML dosyasındaki her düğüm için bir sınıf bildirimi oluşturur; bu sayede, düğümün birden fazla örneği varsa `<song>` , sınıf şarkının çeşitli bildirimleri görünür olur.
 
 ### <a name="read-the-model-file-then-generate-the-code"></a>Model dosyasını okuyun, sonra kodu oluşturun
- Birçok metin şablonu, şablonun ilk bölümünün kaynak dosyayı okuduğunu ve ikinci bölüm şablonu oluşturduğu bir kalıbı izler. İçerdiği düğüm türlerini özetlemek için örnek dosyanın tümünü okudum ve sonra sınıf bildirimleri oluşturacaktır. `Dictionary<>:` kullanabilmemiz için başka bir `<#@import#>` gerekir
+ Birçok metin şablonu, şablonun ilk bölümünün kaynak dosyayı okuduğunu ve ikinci bölüm şablonu oluşturduğu bir kalıbı izler. İçerdiği düğüm türlerini özetlemek için örnek dosyanın tümünü okudum ve sonra sınıf bildirimleri oluşturacaktır. `<#@import#>`Bunu kullanabilmeniz için bir diğeri gerekir`Dictionary<>:`
 
 ```
 <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -242,7 +242,7 @@ class Song {}
 ```
 
 ### <a name="add-an-auxiliary-method"></a>Yardımcı yöntem Ekle
- Sınıf özelliği denetim bloğu, yardımcı yöntemleri tanımlayabilmeniz için kullanabileceğiniz bir bloğudur. Blok `<#+...#>` sınırlandırılır ve dosyada son blok olarak görünmelidir.
+ Sınıf özelliği denetim bloğu, yardımcı yöntemleri tanımlayabilmeniz için kullanabileceğiniz bir bloğudur. Bloğu tarafından sınırlandırılır `<#+...#>` ve dosyada son blok olarak görünmelidir.
 
  Sınıf adlarını büyük harfle başlayacak şekilde tercih ediyorsanız, şablonun son bölümünü aşağıdaki şablon kodu ile değiştirebilirsiniz:
 
@@ -272,7 +272,7 @@ public partial class Song {}
  Alt düğümlerin, özniteliklerin ve iç metnin özellikleri gibi ayrıntılar aynı yaklaşım kullanılarak eklenebilir.
 
 ### <a name="accessing-the-visual-studio-api"></a>Visual Studio API 'sine erişme
- `<#@template#>` yönergesinin `hostspecific` özniteliği ayarlandığında, şablonun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] API 'sine erişimi elde etmesine izin verir. Şablon, Şablon kodunda mutlak bir dosya yolu kullanmaktan kaçınmak için bunu proje dosyalarının konumunu almak için kullanabilir.
+ `hostspecific`Yönergesinin özniteliği ayarlandığında, `<#@template#>` şablonun API 'ye erişim elde etmesine izin verir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Şablon, Şablon kodunda mutlak bir dosya yolu kullanmaktan kaçınmak için bunu proje dosyalarının konumunu almak için kullanabilir.
 
 ```
 <#@ template debug="false" hostspecific="true" language="C#" #>

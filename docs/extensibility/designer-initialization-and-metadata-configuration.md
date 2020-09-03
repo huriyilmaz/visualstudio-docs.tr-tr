@@ -1,5 +1,5 @@
 ---
-title: Tasarımcı Başlatma ve Metaveri Yapılandırması | Microsoft Dokümanlar
+title: Tasarımcı başlatma ve meta veri yapılandırması | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,94 +12,94 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: e876dd9e6fa95bbe180d1737bc8c4911f16e1e9a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80712222"
 ---
-# <a name="designer-initialization-and-metadata-configuration"></a>Tasarımcı başlatma ve meta veri yapılandırması
+# <a name="designer-initialization-and-metadata-configuration"></a>Tasarımcı başlatması ve meta veri yapılandırması
 
-Tasarımcı veya tasarımcı bileşeni ile ilişkili meta veri ve filtre özniteliklerinin manipülasyonu, tasarımcı kullanılabilir olduğunda <xref:System.Type> belirli bir tasarımcı tarafından farklı nesneleri (veri yapıları, sınıflar veya grafik varlıklar gibi) işlemek için hangi araçların kullanıldığını ve Visual Studio IDE'nin tasarımcıyı destekleyecek şekilde nasıl yapılandırılacağını (örneğin, **araç kutusu** kategorisi veya sekmesinin kullanılabilir olduğunu) tanımlayan uygulamalar için bir mekanizma sağlar.
+Bir tasarımcı veya tasarımcı bileşeniyle ilişkili meta veri ve filtre özniteliklerinin düzenlemesi, belirli bir tasarımcı tarafından farklı <xref:System.Type> nesneleri (veri yapıları, sınıflar veya grafik varlıklar gibi) işlemek için hangi araçların kullanıldığını, tasarımcı 'nın kullanılabilir olduğunu ve Visual STUDIO IDE 'nin tasarımcıyı destekleyecek şekilde nasıl yapılandırıldığını (örneğin, **araç kutusu** kategorisi veya sekmenin kullanılabildiği) tanımlamak için bir mekanizma sağlar.
 
-Bir [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] tasarımcının veya tasarımcı bileşeninin başlatılmasını ve meta verilerinin bir VSPackage tarafından manipüle ediletilmesinin denetimini kolaylaştırmak için çeşitli mekanizmalar sağlar.
+, [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] Bir tasarımcının veya tasarımcı bileşeninin başlatılmasının denetimini ve meta verilerinin VSPackage tarafından düzenlenmesini kolaylaştırmak için çeşitli mekanizmalar sağlar.
 
 ## <a name="initialize-metadata-and-configuration-information"></a>Meta verileri ve yapılandırma bilgilerini başlatma
- İsteğe bağlı olarak yüklendikleri için VSPackages, bir tasarımcının anında yüklenmeden önce Visual Studio ortamı tarafından yüklenmemiş olabilir. Bu nedenle, VSPackages bir <xref:System.ComponentModel.Design.IDesignerEventService.DesignerCreated> olay işlemek için oluşturma, bir tasarımcı veya tasarımcı bileşeni yapılandırmak için standart mekanizma kullanamazsınız. Bunun yerine, VSPackage arabirimin <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> bir örneğini uygular ve tasarım yüzeyi uzantıları olarak adlandırılan özelleştirmeler sağlamak için kendisini kaydeder.
+ İsteğe bağlı olarak yüklendiği için VSPackages, tasarımcı örneklemesinin öncesinde Visual Studio ortamı tarafından yüklenmemiş olabilir. Bu nedenle, VSPackages, bir olayı işlemek için kullanılan oluşturma sırasında tasarımcı veya Tasarımcı bileşeni yapılandırmak için standart mekanizmayı kullanamaz <xref:System.ComponentModel.Design.IDesignerEventService.DesignerCreated> . Bunun yerine, VSPackage arabirimin bir örneğini uygular <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> ve tasarım yüzeyi uzantıları olarak adlandırılan özelleştirmeler sağlamak için kendisini kaydeder.
 
 ### <a name="customize-initialization"></a>Başlatmayı özelleştirme
 
-Bir tasarımcıyı, bileşeni veya tasarımcı yüzeyini özelleştirmek şunları içerir:
+Tasarımcı, bileşen veya tasarımcı yüzeyini özelleştirme şunları içerir:
 
-1. Tasarımcı meta verilerini değiştirme ve belirli <xref:System.Type> bir verilere nasıl erişilebildiğini veya dönüştürüldüğünü etkili bir şekilde değiştirmek.
+1. Tasarımcı meta verilerini değiştirme ve belirli bir şekilde nasıl <xref:System.Type> erişildiğini veya dönüştürüldüğünü değiştirme.
 
-    Bu genellikle <xref:System.Drawing.Design.UITypeEditor> veya <xref:System.ComponentModel.TypeConverter> mekanizmaları aracılığıyla yapılır.
+    Bu genellikle veya mekanizmaları aracılığıyla yapılır <xref:System.Drawing.Design.UITypeEditor> <xref:System.ComponentModel.TypeConverter> .
 
-    Örneğin, <xref:System.Windows.Forms>tabanlı tasarımcılar baş harfe döndüğünde, Visual Studio ortamı, dosya sistemi yerine bit eşlemleri elde etmek <xref:System.Drawing.Design.UITypeEditor> için kaynak yöneticisini kullanmak için tasarımcıyla birlikte kullanılan nesneler için <xref:System.Web.UI.WebControls.Image> değiştirir.
+    Örneğin, <xref:System.Windows.Forms> -tabanlı tasarımcılar başlatıldığında, Visual Studio ortamı <xref:System.Drawing.Design.UITypeEditor> <xref:System.Web.UI.WebControls.Image> dosya sistemi yerine bit eşlemler elde etmek üzere Kaynak Yöneticisi 'ni kullanmak üzere Tasarımcı ile kullanılan nesneleri için değiştirir.
 
-2. Örneğin, olaylara abone olarak veya proje yapılandırma bilgilerini alarak ortamla bütünleştirme. Arayüz alarak proje yapılandırma bilgilerini alabilir ve <xref:System.ComponentModel.Design.ITypeResolutionService> etkinliklere abone olabilirsiniz.
+2. Örneğin, olaylara abone olarak veya proje yapılandırma bilgilerini alarak ortamla tümleştirme. Arabirimi alarak, proje yapılandırma bilgilerini alabilir ve olaylara abone olabilirsiniz <xref:System.ComponentModel.Design.ITypeResolutionService> .
 
-3. Uygun **Araç Kutusu** kategorilerini etkinleştirerek veya <xref:System.ComponentModel.ToolboxItemFilterAttribute> sınıfın bir örneğini tasarımcıya uygulayarak tasarımcının uygulanabilirliğini kısıtlayarak kullanıcı ortamının değiştirilmesi.
+3. Uygun **araç kutusu** kategorilerini etkinleştirerek veya bir sınıfın örneğini tasarımcıya uygulayarak tasarımcı uygulanabilirliğini kısıtlayarak Kullanıcı ortamının değiştirilmesi <xref:System.ComponentModel.ToolboxItemFilterAttribute> .
 
-### <a name="designer-initialization-by-a-vspackage"></a>VSPackage ile tasarımcı başlatma
+### <a name="designer-initialization-by-a-vspackage"></a>VSPackage tarafından tasarımcı başlatması
 
-Bir VSPackage tarafından tasarımcı başlatma ele almalıdır:
+VSPackage, tasarımcı başlatmasını şu şekilde işlemelidir:
 
-1. <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> Sınıfı uygulayan bir nesne oluşturma.
+1. Sınıfı uygulayan bir nesne oluşturma <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> .
 
    > [!NOTE]
-   > Sınıf, <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> <xref:Microsoft.VisualStudio.Shell.Package> sınıfla aynı nesne üzerinde asla uygulanmamalıdır.
+   > <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>Sınıfı asla sınıfla aynı nesneye uygulanmamalıdır <xref:Microsoft.VisualStudio.Shell.Package> .
 
-2. VSPackage'ın tasarımcı <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> uzantıları için destek sağlamak olarak uygulayan sınıfa kaydolmak. VSPackage'ın uygulanmasını sağlayan <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtensionAttribute>sınıfa <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> ve vspackage'ın uygulamalarını sağlayan sınıfa , ve <xref:Microsoft.VisualStudio.Shell.Package> <xref:Microsoft.VisualStudio.Shell.ProvideObjectAttribute>' örneklerini uygulayarak sınıfa kaydolun.
+2. Uygulayan sınıfı, <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> VSPackage 'ın Tasarımcı uzantıları için destek sağlayan şekilde kaydetme. <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtensionAttribute>, <xref:Microsoft.VisualStudio.Shell.ProvideObjectAttribute> , Ve örneklerini, <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> VSPackage 'ın uygulamasını sağlayan sınıfına uygulayarak sınıfı kaydedin <xref:Microsoft.VisualStudio.Shell.Package> .
 
-Bir tasarımcı veya tasarımcı bileşeni oluşturulduğunda, Visual Studio ortamı:
+Bir tasarımcı veya Tasarımcı bileşeni oluşturulduğunda, Visual Studio ortamı:
 
-- Her kayıtlı tasarım yüzeyi uzantısı sağlayıcısına erişir.
+- Kayıtlı her tasarım yüzeyi uzantı sağlayıcısına erişir.
 
-- Her tasarım yüzey uzantısı sağlayıcısının <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> nesnesinin bir örneğini anında laştırır ve ortaya çıkar.
+- Her tasarım yüzeyi uzantısı sağlayıcısının nesnesinin bir örneğini oluşturur ve başlatır <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> .
 
-- Her tasarım yüzey uzantısı <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension.OnDesignerCreated%2A> sağlayıcısının <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension.OnComponentCreated%2A> yöntemini veya yöntemini (uygun olarak) çağırır.
+- Her tasarım yüzeyi uzantısı sağlayıcısının <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension.OnDesignerCreated%2A> yöntemini veya <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension.OnComponentCreated%2A> yöntemini (uygun şekilde) çağırır.
 
-Nesneyi <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> bir VSPackage üyesi olarak uygularken, aşağıdakileri anlamak önemlidir:
+<xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>Nesneyi VSPackage 'un bir üyesi olarak uygularken, bunun anlaşılması önemlidir:
 
-- Visual Studio ortamı, belirli `DesignSurfaceExtension` bir sağlayıcının hangi meta veri veya diğer yapılandırma ayarlarını değiştirip değiştirmediği üzerinde herhangi bir denetim sağlamaz. İki veya daha fazla `DesignSurfaceExtension` sağlayıcının aynı tasarımcı özelliğini çakışan şekillerde değiştirmesi ve son değişikliğin kesin olması mümkündür. En son hangi değişikliğin uygulandığı belirsizdir.
+- Visual Studio ortamı, belirli bir sağlayıcının değişiklik yaptığı meta veriler veya diğer yapılandırma ayarları üzerinde herhangi bir denetim sağlamaz `DesignSurfaceExtension` . İki veya daha fazla sağlayıcı, en `DesignSurfaceExtension` son değişiklikle birlikte çakışan yöntemlerle aynı tasarımcı özelliğini değiştiriyor olabilir. En son hangi değişikliğin uygulandığını belirsiz hale gelir.
 
-- Bu uygulamaya örneklerini <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> <xref:System.ComponentModel.ToolboxItemFilterAttribute> uygulayarak nesnenin uygulanmasını belirli tasarımcılarla açıkça kısıtlamak mümkündür. **Toolbox** öğesi filtreleme hakkında daha <xref:System.ComponentModel.ToolboxItemFilterAttribute> fazla <xref:System.ComponentModel.ToolboxItemFilterType>bilgi için bkz.
+- <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>Bu uygulamaya örnekler uygulayarak nesnenin bir uygulamasını belirli tasarımcılara açıkça kısıtlamak mümkündür <xref:System.ComponentModel.ToolboxItemFilterAttribute> . **Araç kutusu** öğe filtrelemesi hakkında daha fazla bilgi için bkz <xref:System.ComponentModel.ToolboxItemFilterAttribute> <xref:System.ComponentModel.ToolboxItemFilterType> . ve.
 
 ## <a name="additional-metadata-provisioning"></a>Ek meta veri sağlama
 
-VSPackage, tasarım zamanı dışında bir tasarımcı veya tasarımcı bileşeninin yapılandırmasını değiştirebilir.
+VSPackage tasarım zamanı dışında bir tasarımcı veya Tasarımcı bileşeni yapılandırmasını değiştirebilir.
 
-Sınıf <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> programlı olarak kullanılabilir veya bir tasarımcı sağlayan bir VSPackage uygulanabilir.
+<xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute>Sınıf programlı bir şekilde kullanılabilir veya tasarımcı sağlayan bir VSPackage 'a uygulanabilir.
 
-<xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> Sınıfın bir örneği, tasarım yüzeyinde oluşturulan bileşenlerin meta verilerini değiştirmek için kullanılır. Örneğin, nesneler tarafından <xref:System.Windows.Forms.CommonDialog> kullanılan varsayılan özellik tarayıcısı özel bir özellik tarayıcısı ile değiştirilebilir.
+<xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute>Bir tasarım yüzeyinde oluşturulan bileşenlerin meta verilerini değiştirmek için sınıfının bir örneği kullanılır. Örneğin, bir tane, <xref:System.Windows.Forms.CommonDialog> özel bir özellik tarayıcısı olan nesneler tarafından kullanılan varsayılan bir özellik tarayıcısını değiştirebilir.
 
-VSPackage'ın uygulanmasına <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> uygulanan bir örnek tarafından <xref:Microsoft.VisualStudio.Shell.Package> sağlanan değişiklikler iki kapsamdan birine sahip olabilir:
+VSPackage 'ın uygulamasına uygulanan bir örneği tarafından sağlanmış değişiklikler <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> <xref:Microsoft.VisualStudio.Shell.Package> iki kapsamdan birine sahip olabilir:
 
-- Global -- belirli bir bileşenin tüm yeni örnekleri için
+- Genel--belirli bir bileşenin tüm yeni örnekleri için
 
-- Yerel -- yalnızca geçerli VSPackage tarafından sağlanan bir tasarım yüzeyinde oluşturulan bileşenin örneğine ilişkindir.
+- Yerel--yalnızca geçerli VSPackage tarafından sunulan bir tasarım yüzeyinde oluşturulan bileşenin örneği ile ilgili.
 
-VSPackage uygulamasına uygulanan `IsGlobal` <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> örneğin özelliği bu <xref:Microsoft.VisualStudio.Shell.Package> kapsamı belirler.
+`IsGlobal` <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> VSPackage 'ın uygulamasına uygulanan örneğinin özelliği <xref:Microsoft.VisualStudio.Shell.Package> Bu kapsamı belirler.
 
-Aşağıdaki <xref:Microsoft.VisualStudio.Shell.Package> gibi ayarlanan <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute.IsGlobal%2A> <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> `true`nesnenin özelliği ile bir uygulamaya öznitelik uygulanması, tüm Visual Studio ortamı için tarayıcı değiştirir:
+Özniteliği, ' a ' <xref:Microsoft.VisualStudio.Shell.Package> <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute.IsGlobal%2A> öğesine ayarlanan nesnenin özelliği ile uygulamasına uygulama, <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> `true` aşağıdaki gibi, tüm Visual Studio ortamı için tarayıcıyı değiştirir:
 
 `[ProvideDesignerMetadata(typeof(Color), typeof(CustomBrowser),`   `IsGlobal=true`  `)]`
 
 `internal class MyPackage : Package {}`
 
-Genel bayrak `false`ayarlanmışsa, meta veri değişikliği geçerli VSPackage tarafından desteklenen geçerli tasarımcı için yereldir:
+Genel bayrak olarak ayarlandıysa `false` , meta veri değişikliği geçerli VSPackage tarafından desteklenen geçerli Tasarımcı için yereldir:
 
 `[ProvideDesignerMetadata(typeof(Color), typeof(CustomBrowser),`   `IsGlobal=false`  `)]`
 
 `internal class MyPackage : Package {}`
 
 > [!NOTE]
-> Tasarım yüzeyi yalnızca bileşenleri oluşturmayı destekler ve bu nedenle yalnızca bileşenler yerel meta verilere sahip olabilir. Yukarıdaki örnekte, bir nesnenin `Color` özelliği gibi bir özelliği değiştirmeye çalışıyorduk. Eğer `false` küresel bayrak için geçirilirse, `CustomBrowser` tasarımcı asla görünmez, çünkü `Color`tasarımcı hiçbir zaman .'ın bir örneğini oluşturmaz. Genel bayrağı niçin `false` ayarla, denetimler, zamanlayıcılar ve iletişim kutuları gibi bileşenler için yararlıdır.
+> Tasarım yüzeyi yalnızca bileşen oluşturmayı destekler ve bu nedenle yalnızca bileşenlerin yerel meta verileri olabilir. Yukarıdaki örnekte, bir nesnenin özelliği gibi bir özelliği değiştirmeye çalışıyoruz `Color` . `false`Genel bayrak için geçirilmemişse, `CustomBrowser` Tasarımcı hiçbir şekilde bir örneğini oluşturmadığından hiçbir şekilde görünmez `Color` . Genel bayrağını olarak ayarlamak, `false` denetimler, zamanlayıcılar ve iletişim kutuları gibi bileşenler için kullanışlıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>
 - <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtensionAttribute>
 - <xref:System.ComponentModel.ToolboxItemFilterType>
-- [Tasarım süresi desteğini genişletme](https://msdn.microsoft.com/Library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
+- [Tasarım zamanı desteğini genişletme](https://msdn.microsoft.com/Library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)

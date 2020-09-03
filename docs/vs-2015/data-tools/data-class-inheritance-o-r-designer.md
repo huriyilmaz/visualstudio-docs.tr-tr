@@ -37,7 +37,7 @@ Diğer nesneler gibi, [!INCLUDE[vbtecdlinq](../includes/vbtecdlinq-md.md)] sın�
 
  Devralma kullanan ve ilişkisel verilere karşılık gelen bir nesne modeli oluşturmak biraz kafa karıştırıcı olabilir. Bu konuda, devralmayı yapılandırmak için gerekli olan temel kavramlar ve tek tek özellikler hakkında bilgi verilmektedir. Aşağıdaki konularda, ile devralmayı yapılandırma hakkında daha net bir açıklama sağlanmaktadır [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] .
 
-|Konu|Description|
+|Konu|Açıklama|
 |-----------|-----------------|
 |[Nasıl yapılır: O/R Tasarımcısı kullanarak devralmayı yapılandırma](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md)|Kullanarak tek tablo devralma kullanan varlık sınıflarının nasıl yapılandırılacağını açıklar [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] .|
 |[İzlenecek Yol: Tek Tablo Devralma Kullanarak LINQ to SQL Sınıfı Oluşturma (O/R Tasarımcısı)](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md)|Kullanılarak tek tablo devralma kullanan varlık sınıflarının nasıl yapılandırılacağı hakkında adım adım yönergeler sağlar [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] .|

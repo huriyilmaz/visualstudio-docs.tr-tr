@@ -19,22 +19,22 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b648134b7ad27a8f622ce270dc0f05e0a7e6516c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72637418"
 ---
 # <a name="walkthrough-create-a-custom-installer-for-a-clickonce-application"></a>İzlenecek yol: ClickOnce uygulaması için özel bir yükleyici oluşturma
-Bir *. exe* dosyasını temel alan herhangi bir ClickOnce uygulaması sessizce yüklenebilir ve özel bir yükleyici tarafından güncelleştirilir. Özel bir yükleyici, yükleme sırasında güvenlik ve bakım işlemlerine yönelik özel iletişim kutuları dahil olmak üzere özel kullanıcı deneyimi uygulayabilir. Yükleme işlemlerini gerçekleştirmek için, özel yükleyici <xref:System.Deployment.Application.InPlaceHostingManager> sınıfını kullanır. Bu izlenecek yol, bir ClickOnce uygulamasını sessizce yükleyen özel bir yükleyicinin nasıl oluşturulacağını göstermektedir.
+Bir *. exe* dosyasını temel alan herhangi bir ClickOnce uygulaması sessizce yüklenebilir ve özel bir yükleyici tarafından güncelleştirilir. Özel bir yükleyici, yükleme sırasında güvenlik ve bakım işlemlerine yönelik özel iletişim kutuları dahil olmak üzere özel kullanıcı deneyimi uygulayabilir. Yükleme işlemlerini gerçekleştirmek için özel yükleyici <xref:System.Deployment.Application.InPlaceHostingManager> sınıfını kullanır. Bu izlenecek yol, bir ClickOnce uygulamasını sessizce yükleyen özel bir yükleyicinin nasıl oluşturulacağını göstermektedir.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Ön koşullar
 
 ### <a name="to-create-a-custom-clickonce-application-installer"></a>Özel bir ClickOnce uygulama yükleyicisi oluşturmak için
 
 1. ClickOnce uygulamanızda, System. Deployment ve System. Windows. Forms 'a başvurular ekleyin.
 
-2. Uygulamanıza yeni bir sınıf ekleyin ve herhangi bir ad belirtin. Bu izlenecek yol `MyInstaller` adını kullanır.
+2. Uygulamanıza yeni bir sınıf ekleyin ve herhangi bir ad belirtin. Bu izlenecek yol, adını kullanır `MyInstaller` .
 
 3. Aşağıdaki `Imports` veya `using` yönergelerini Yeni sınıfınızın en üstüne ekleyin.
 
@@ -50,7 +50,7 @@ Bir *. exe* dosyasını temel alan herhangi bir ClickOnce uygulaması sessizce y
 
 4. Sınıfınıza aşağıdaki yöntemleri ekleyin.
 
-     Bu yöntemler dağıtım bildirimini indirmek için <xref:System.Deployment.Application.InPlaceHostingManager> Yöntemler çağırır, uygun izinleri onaylama, kullanıcıdan yükleme iznini isteme ve uygulamayı ClickOnce önbelleğine yükleme ve yükleme. Özel bir yükleyici ClickOnce uygulamasının önceden güvenilir olduğunu belirtebilir veya <xref:System.Deployment.Application.InPlaceHostingManager.AssertApplicationRequirements%2A> yöntemi çağrısına güven kararını erteleyebilirsiniz. Bu kod, uygulamaya önceden güvenir.
+     Bu yöntemler <xref:System.Deployment.Application.InPlaceHostingManager> dağıtım bildirimini indirme, uygun izinleri onaylama, kullanıcıdan yükleme iznini isteme ve uygulamayı ClickOnce önbelleğine yükleme ve yükleme yöntemlerini çağırır. Özel bir yükleyici, ClickOnce uygulamasının önceden güvenilir olduğunu belirtebilir veya yöntem çağrısına güven kararını erteleyebilirsiniz <xref:System.Deployment.Application.InPlaceHostingManager.AssertApplicationRequirements%2A> . Bu kod, uygulamaya önceden güvenir.
 
     > [!NOTE]
     > Önceden güvenme tarafından atanan izinler, özel yükleyici kodunun izinlerini aşamaz.
@@ -58,7 +58,7 @@ Bir *. exe* dosyasını temel alan herhangi bir ClickOnce uygulaması sessizce y
      [!code-vb[System.Deployment.Application.InPlaceHostingManager#1](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-installer-for-a-clickonce-application_1.vb)]
      [!code-csharp[System.Deployment.Application.InPlaceHostingManager#1](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-installer-for-a-clickonce-application_1.cs)]
 
-5. Kodunuzda yükleme yapmayı denemek için `InstallApplication` yöntemini çağırın. Örneğin, sınıfınızı `MyInstaller` olarak adlandırdıysanız aşağıdaki şekilde `InstallApplication` çağırabilirsiniz.
+5. Kodunuzda yükleme yapmayı denemek için `InstallApplication` yöntemini çağırın. Örneğin, sınıfınızı adlandırdıysanız `MyInstaller` `InstallApplication` aşağıdaki şekilde çağrı yapabilirsiniz.
 
     ```vb
     Dim installer As New MyInstaller()
@@ -73,8 +73,8 @@ Bir *. exe* dosyasını temel alan herhangi bir ClickOnce uygulaması sessizce y
     ```
 
 ## <a name="next-steps"></a>Sonraki adımlar
- ClickOnce uygulaması, güncelleştirme işlemi sırasında gösterilecek özel bir kullanıcı arabirimi de dahil olmak üzere özel güncelleştirme mantığı da ekleyebilir. Daha fazla bilgi için bkz. <xref:System.Deployment.Application.UpdateCheckInfo>. Bir ClickOnce uygulaması, bir `<customUX>` öğesi kullanarak standart Başlat menüsü girdisi, kısayol ve Program Ekle veya Kaldır girişini de engelleyebilir. Daha fazla bilgi için bkz. [\<entryPoint > öğesi](../deployment/entrypoint-element-clickonce-application.md) ve <xref:System.Deployment.Application.DownloadApplicationCompletedEventArgs.ShortcutAppId%2A>.
+ ClickOnce uygulaması, güncelleştirme işlemi sırasında gösterilecek özel bir kullanıcı arabirimi de dahil olmak üzere özel güncelleştirme mantığı da ekleyebilir. Daha fazla bilgi için bkz. <xref:System.Deployment.Application.UpdateCheckInfo>. ClickOnce uygulaması ayrıca bir öğesi kullanarak standart Başlat menüsü girdisi, kısayol ve Program Ekle veya Kaldır girişini de engelleyebilir `<customUX>` . Daha fazla bilgi için bkz. [ \<entryPoint> öğesi](../deployment/entrypoint-element-clickonce-application.md) ve <xref:System.Deployment.Application.DownloadApplicationCompletedEventArgs.ShortcutAppId%2A> .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)
-- [\<entryPoint > öğesi](../deployment/entrypoint-element-clickonce-application.md)
+- [\<entryPoint> dosyalarında](../deployment/entrypoint-element-clickonce-application.md)

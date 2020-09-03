@@ -10,10 +10,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: cc3a18fe1ce76b6214766ba45fc5441e80c56cef
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918485"
 ---
 # <a name="visual-studio-lifecycle-policy-exceptions"></a>Visual Studio Yaşam Döngüsü İlkesine Yönelik Özel Durumlar
@@ -27,14 +27,14 @@ Visual Studio, derleyiciler, diller, çalışma zamanları, ortamlar ve diğer k
 |ÜRÜN AILESI|DıŞ AD|  
 |--------------------|-------------------|  
 |[.NET 3,5](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=net%20framework%203.5&Filter=FilterNO)|.NET 3.5 SDK<br /><br /> Windows Identity Foundation|  
-|[.NET 4,5](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=net%20framework%204.5&Filter=FilterNO)|.NET 4.5 SDK|  
+|[.NET 4.5](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=net%20framework%204.5&Filter=FilterNO)|.NET 4.5 SDK|  
 |[.NET 4.5.1](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=.NET%20Framework%204.5.1&Filter=FilterNO)|.NET 4.5.1 MT Pack (Klasik)<br /><br /> .NET 4.5.1 Çoklu Sürüm Desteği Paketi (Mağaza)<br /><br /> .NET 4.5.1 OOB MSU<br /><br /> .NET 4.5.1 Redist<br /><br /> .NET 4.5.1 Yeniden Dağıtılabilir Dil Paketleri<br /><br /> .NET 4.5.1 SDK|  
-|[ASP.NET Web Yığını](https://support.microsoft.com/kb/2902020)|ASP.NET MVC 4<br /><br /> ASP.NET MVC 5<br /><br /> ASP.NET Web API<br /><br /> ASP.NET Web API 2<br /><br /> ASP.NET Web Pages 2<br /><br /> ASP.NET Web Sayfaları 3|  
+|[ASP.NET Web Yığını](https://support.microsoft.com/kb/2902020)|ASP.NET MVC 4<br /><br /> ASP.NET MVC 5<br /><br /> ASP.NET Web API<br /><br /> ASP.NET Web API 2<br /><br /> ASP.NET Web Sayfaları 2<br /><br /> ASP.NET Web Sayfaları 3|  
 |[Entity Framework 6](https://support.microsoft.com/kb/2902020)|Entity Framework 6|  
 |[Exchange 2013](https://support.microsoft.com/kb/2902020)|Exchange Web Hizmetleri|  
 |[Microsoft OWIN](https://support.microsoft.com/kb/2902020)|Microsoft OWIN|  
 |[Microsoft Web Geliştirici Araçları 2013](https://support.microsoft.com/kb/2902020)|Microsoft Web Geliştirici Araçları 2013|  
-|Bu bileşenlerde yapılan güncelleştirmeler NuGet üzerinden dağıtılır ve standart Microsoft yaşam döngüsü ilkelerine uymaz.  Daha fazla bilgi için bkz. [http://docs.nuget.org/](/nuget/)|Microsoft .NET Framework 4,5 için JSON Web Token Işleyicisi<br /><br /> NuGet 2.7<br /><br /> SignalR<br /><br /> Web Optimization Framework<br /><br /> WebGrease|  
+|Bu bileşenlerde yapılan güncelleştirmeler NuGet üzerinden dağıtılır ve standart Microsoft yaşam döngüsü ilkelerine uymaz.  [http://docs.nuget.org/](/nuget/)Daha fazla bilgi için bkz..|Microsoft .NET Framework 4,5 için JSON Web Token Işleyicisi<br /><br /> NuGet 2.7<br /><br /> SignalR<br /><br /> Web Optimization Framework<br /><br /> WebGrease|  
 |[ODataLib](https://support.microsoft.com/kb/2902020)|ODataLib|  
 |[Office 2013](https://support.microsoft.com/lifecycle/search/?p1=16674)|Open XML SDK|  
 |[Çevrimiçi hizmetler Ilkesi](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy)|Microsoft Ads SDK|  
@@ -43,10 +43,10 @@ Visual Studio, derleyiciler, diller, çalışma zamanları, ortamlar ve diğer k
 |[SQL Server 2008 R2](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=SQL%20Server%202008%20R2&Filter=FilterNO)|SQL Sistem CLR Türleri (SQL Server 2008 R2)|  
 |[SQL Server 2012](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=SQL%20Server%202012&Filter=FilterNO)|DACFx (DACFramework)<br /><br /> SMO (SharedManagementObjects)<br /><br /> SQL Komut Satırı Yardımcı Programları<br /><br /> SQL dil hizmeti-IntelliSense (TSQLLanguageService)<br /><br /> SQL LocalDB<br /><br /> SQL Yerel İstemcisi (Sqlncli)<br /><br /> SQL Server Express 2012 SP1<br /><br /> SQL Sistemi CLR Türleri (SQL Server 2012)<br /><br /> SQLDOM|  
 |[SQL Server 2014](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=SQL%20Server%202014&Filter=FilterNO)|DACFx (DACFramework)<br /><br /> SMO (SharedManagementObjects)<br /><br /> SQL Komut Satırı Yardımcı Programları<br /><br /> SQL dil hizmeti-IntelliSense (TSQLLanguageService)<br /><br /> SQL LocalDB<br /><br /> SQL Yerel İstemcisi (Sqlncli)<br /><br /> SQL Server Express 2014<br /><br /> SQL Sistem CLR Türleri (SQL Server 2014)<br /><br /> SQLDOM|  
-|[SQL Server Compact Edition 4,0](https://support.microsoft.com/lifecycle/search/?p1=16106)|SQL Server Compact Edition 4.0|  
-|[WCF RıA Hizmetleri v 1.0 SP2](https://support.microsoft.com/kb/2902020)|WCF RIA Services v1.0 SP2|  
+|[SQL Server Compact Edition 4.0](https://support.microsoft.com/lifecycle/search/?p1=16106)|SQL Server Compact Edition 4.0|  
+|[WCF RIA Services v1.0 SP2](https://support.microsoft.com/kb/2902020)|WCF RIA Services v1.0 SP2|  
 |[Windows Server 2008](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=Windows%20Server%202008&Filter=FilterNO)|Windows Server 2008 için Windows Web Hizmetleri (WWS)|  
-|[Windows 7](https://support.microsoft.com/lifecycle/search/?c2=14019)|Windows 7 SDK|  
+|[Windows 7](https://support.microsoft.com/lifecycle/search/?c2=14019)|Windows 7 SDK|  
 |[Windows 8](https://support.microsoft.com/lifecycle/search/?c2=16796)|Windows 8 SDK|  
 |[Windows 8.1](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=windows%208.1&Filter=FilterNO)|Windows 8.1 SDK<br /><br /> JavaScript için Windows Kitaplığı (WinJS)|  
 |[Microsoft Azure](https://support.microsoft.com/help/18486/lifecycle-faq-azure)<br /><br /> <br />> Ayrıca bkz: [çevrimiçi yaşam döngüsü ilkesi](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy)|Microsoft Azure Mobile Services SDK<br /><br /> Microsoft Azure Mobile Services Araçları|

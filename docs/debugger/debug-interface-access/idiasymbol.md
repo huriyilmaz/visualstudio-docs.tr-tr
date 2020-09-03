@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0214d3e8d097efa31b3f8b02e67f419226a093a4
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461345"
 ---
 # <a name="idiasymbol"></a>IDiaSymbol
@@ -261,7 +261,7 @@ Aşağıdaki yöntemlerden birini çağırarak bu arabirimi edinin:
 Bu örnek, belirli bir göreli sanal adreste bir işlev için yerel değişkenlerin nasıl görüntüleneceğini gösterir. Ayrıca farklı türlerin simgelerinin birbirleriyle nasıl ilişkili olduğunu gösterir.
 
 > [!NOTE]
-> `CDiaBSTR`, `BSTR` örnekleme kapsam dışına geçtiğinde bir ve otomatik olarak dizeyi serbest bırakma olarak işleyen bir sınıftır.
+> `CDiaBSTR` , `BSTR` örnekleme kapsam dışına geçtiğinde bir ve otomatik olarak dizeyi serbest bırakma olarak işleyen bir sınıftır.
 
 ```C++
 void DumpLocalVars( DWORD rva, IDiaSession *pSession )
@@ -336,7 +336,7 @@ void DumpLocalVars( DWORD rva, IDiaSession *pSession )
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-`Header:`Dia2. h
+`Header:` Dia2. h
 
 Kitaplık: diaguid. lib
 
