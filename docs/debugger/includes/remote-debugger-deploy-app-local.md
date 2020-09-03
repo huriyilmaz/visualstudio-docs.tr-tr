@@ -1,6 +1,6 @@
 ---
-title: Yerel klasöre dağıtma
-description: Uygulama bir yerel klasöre dağıtma
+title: Yerel klasöre dağıt
+description: Bir uygulamayı yerel bir klasöre dağıtma
 services: ''
 author: mikejo5000
 ms.service: ''
@@ -9,42 +9,42 @@ ms.date: 05/23/2018
 ms.author: mikejo
 ms.custom: include file
 ms.openlocfilehash: 3fa0569739ee81ec4b2aa0eec8157068ffc949cd
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68149214"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89324724"
 ---
-1. İçinde **Çözüm Gezgini**, proje düğümüne sağ tıklayıp **Yayımla** (Web formları için **Web uygulaması yayımlama**).
+1. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Yayımla** ' yı (Web Forms, **Web uygulaması Yayımla**) seçin.
 
-    Tüm yayımlama profilleri, daha önce yapılandırdıysanız **Yayımla** bölmesi görünür. Tıklayın **yeni profili**.
+    Daha önce herhangi bir yayımlama profili yapılandırdıysanız, **Yayımla** bölmesi görüntülenir. **Yeni profil**' e tıklayın.
 
-1. İçinde **Yayımla** iletişim kutusunda **klasör**, tıklayın **Gözat**ve yeni bir klasör oluşturun **C:\Publish**.
+1. **Yayımla** Iletişim kutusunda **klasör**' i seçin, **Araştır**' a tıklayın ve yeni bir klasör oluşturun, **C:\publish**.
 
     ![RemoteDBG_Publish_Local](../media/remotedbg_publish_local.png "RemoteDBG_Publish_Local")
 
-    Bir Web Forms uygulaması için seçin **özel** Yayımla iletişim kutusunda, bir profil adı girin ve seçin **Tamam**.
+    Web Forms uygulama için Yayımla iletişim kutusunda **özel** ' i seçin, bir profil adı girin ve **Tamam**' ı seçin.
 
-1. Tıklayın **profili oluşturma** aşağı açılan listesinde (**Yayımla** varsayılan değerdir).
+1. Açılan listede **Profil oluştur** ' a tıklayın (**Publish** varsayılan değerdir).
 
-1. İçinde **Yayımla** iletişim kutusu, tıklayın **ayarları** bağlantısını ve ardından **ayarları** sekmesi.
+1. **Yayımla** Iletişim kutusunda **Ayarlar** bağlantısına tıklayın ve ardından **Ayarlar** sekmesini seçin.
 
-1. Yapılandırmayı ayarlamak **hata ayıklama**seçin **var olan tüm dosyaları yayımlama öncesi silme**ve ardından **Kaydet**.
+1. Yapılandırmayı **Hata Ayıkla**olarak ayarlayın, **yayımlamadan önce tüm mevcut dosyaları sil**' i seçin ve ardından **Kaydet**' e tıklayın.
 
     > [!NOTE]
-    > Yayın derlemesi kullanırsanız, yayımladığınızda, web.config dosyasında hata ayıklamayı devre dışı.
+    > Yayın derlemesi kullanıyorsanız, yayımladığınızda web.config dosyasında hata ayıklamayı devre dışı bırakabilirsiniz.
 
-1. Tıklayın **yayımlama**.
+1. **Yayımla**’ya tıklayın.
 
     ![RemoteDBG_Publish_Debug_Config](../media/remotedbg_publish_debug_config.png "RemoteDBG_Publish_Debug_Config")
 
-    Uygulamanın yayınlar bir **hata ayıklama** yerel klasörde proje yapılandırması. Çıkış penceresinde ilerleme durumunu gösterir.
+    Uygulama, projenin **hata ayıklama** yapılandırmasını yerel klasöre yayımlar. İlerleme, çıkış penceresinde görüntülenir.
 
-1. ASP.NET proje dizini Visual Studio bilgisayarı ASP.NET uygulaması için yapılandırılan yerel dizine kopyalayın (Bu örnekte, **C:\Publish**) Windows Server bilgisayarında. Bu öğreticide, el ile kopyalama ve PowerShell, Xcopy veya Robocopy gibi diğer araçları kullanabilirsiniz varsayıyoruz.
+1. Visual Studio bilgisayarından ASP.NET proje dizinini, Windows Server bilgisayarındaki ASP.NET uygulaması (Bu örnekte, **C:\publish**) için yapılandırılmış yerel dizine kopyalayın. Bu öğreticide, el ile kopyaladığınızı varsayıyoruz, ancak PowerShell, xcopy veya Robocopy gibi diğer araçları da kullanabilirsiniz.
 
     > [!CAUTION]
-    > Kod veya yeniden oluşturma için değişiklikler yapmanız gerekirse yeniden yayımlamanız ve bu adımı yineleyin. Yerel kaynak ve simgeler, uzak makineye kopyaladığınız yürütülebilir dosyanın tam olarak eşleşmelidir.    Bu alırsınız gerçekleştirmezseniz bir `cannot find or open the PDB file` Visual Studio'da hata ayıklama işlemini denediğinizde uyarı.
+    > Kodda değişiklik yapmanız veya yeniden oluşturmanız gerekiyorsa, bu adımı yeniden yayımlamanız ve yinelemeniz gerekir. Uzak makineye kopyaladığınız yürütülebilir dosya yerel kaynak ve sembollerle tam olarak eşleşmelidir.    Bunu yapmazsanız `cannot find or open the PDB file` , işlemde hata ayıklamaya çalıştığınızda Visual Studio 'da bir uyarı alırsınız.
 
-1. Windows Server'da, uygulamanın doğru şekilde uygulamayı tarayıcınızda açarak çalıştırabildiğinizi doğrulayın.
+1. Windows Server 'da uygulamayı tarayıcınızda açarak uygulamayı doğru şekilde çalıştırabildiğinizi doğrulayın.
 
-    Uygulamayı doğru şekilde çalışmazsa, ASP.NET sunucunuz hem de Visual Studio makinenizde yüklü sürümü arasında bir uyuşmazlık olabilir ya da IIS veya Web sitesi yapılandırma ile bir sorun olabilir. Önceki adımları yeniden denetleyin.
+    Uygulama düzgün çalışmazsa, sunucunuzda ve Visual Studio makinenizde yüklü olan ASP.NET sürümü arasında uyuşmazlık olabilir veya IIS veya Web sitesi yapılandırmanızda bir sorun olabilir. Önceki adımları yeniden denetleyin.

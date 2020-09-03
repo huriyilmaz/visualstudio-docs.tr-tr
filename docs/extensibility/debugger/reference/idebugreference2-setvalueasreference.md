@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::SetValueAsReference | Microsoft Dokümanlar
+title: 'IDebugReference2:: SetValueAsReference | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f4767dbe08e716d64ea03c18a1c4a6f7d6690a7b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80720301"
 ---
 # <a name="idebugreference2setvalueasreference"></a>IDebugReference2::SetValueAsReference
-Başka bir başvurudan başvurudeğerini ayarlar. Daha sonraki kullanımlar için ayrılmıştır.
+Başka bir başvurudan başvurunun değerini ayarlar. Daha sonraki kullanımlar için ayrılmıştır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT SetValueAsReference ( 
@@ -47,16 +47,16 @@ int SetValueAsReference ( 
 
 ## <a name="parameters"></a>Parametreler
 `rgpArgs`\
-[içinde] Başvuru değerinin nasıl ayarlanabildiğini belirlemek için kullanılan Bir Dizi [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi.
+'ndaki Başvuru değerinin nasıl ayarlanacağını belirlemekte kullanılan bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesneleri dizisi.
 
 `dwArgCount`\
-[içinde] Dizideki başvuru sayısı.
+'ndaki Dizideki başvuruların sayısı.
 
 `pValue`\
-[içinde] Özellik değerini ayarlamak için bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi.
+'ndaki Özellik değerinin ayarlanacağı bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi.
 
 `dwTimeout`\
-[içinde] Bu yöntemden dönmeden önce beklemek için milisaniye cinsinden maksimum süre. Süresiz beklemek için kullanın. `INFINITE`
+'ndaki Bu yöntemden dönmeden önce beklenecek en uzun süre (milisaniye cinsinden). `INFINITE`Sonsuza kadar beklemek için kullanın.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Her zaman `E_NOTIMPL` döndürür.

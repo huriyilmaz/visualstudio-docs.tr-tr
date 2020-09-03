@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::SetValueAsString | Microsoft Dokümanlar
+title: 'IDebugReference2:: SetValueAsString | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c8414ce5f53acec2a30ff681ff0bab8ddc919310
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80720289"
 ---
 # <a name="idebugreference2setvalueasstring"></a>IDebugReference2::SetValueAsString
-Bir dizeden başvuru değerini ayarlar. Daha sonraki kullanımlar için ayrılmıştır.
+Bir dizeden başvurunun değerini ayarlar. Daha sonraki kullanımlar için ayrılmıştır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT SetValueAsString ( 
@@ -45,13 +45,13 @@ int SetValueAsString ( 
 
 ## <a name="parameters"></a>Parametreler
 `pszValue`\
-[içinde] Bir dize olarak değer.
+'ndaki Değer bir dize olarak.
 
 `dwRadix`\
-[içinde] Herhangi bir sayısal bilgi biçimlendirmede kullanılacak radix.
+'ndaki Herhangi bir sayısal bilgiyi biçimlendirmede kullanılacak taban tabanı.
 
 `dwTimeout`\
-[içinde] Bu yöntemden dönmeden önce beklemek için milisaniye cinsinden maksimum süre. Süresiz beklemek için kullanın. `INFINITE`
+'ndaki Bu yöntemden dönmeden önce beklenecek en uzun süre (milisaniye cinsinden). `INFINITE`Sonsuza kadar beklemek için kullanın.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Her zaman `E_NOTIMPL` döndürür.

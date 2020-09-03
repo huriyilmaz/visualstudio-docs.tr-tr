@@ -7,10 +7,10 @@ ms.date: 01/10/2020
 ms.technology: vs-azure
 ms.topic: include
 ms.openlocfilehash: f20c3580d3082c69bbadb3b866d08e2c260a6827
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88711670"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>Öğretici: Docker Compose ile çok kapsayıcılı bir uygulama oluşturma

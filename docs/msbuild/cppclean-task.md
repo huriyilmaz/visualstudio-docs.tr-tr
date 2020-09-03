@@ -1,5 +1,5 @@
 ---
-title: CPPClean Görev | Microsoft Dokümanlar
+title: CPPClean görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -20,15 +20,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 331a96c7cd67b933e521e3fe5f2d7a909ffa5d03
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77634350"
 ---
 # <a name="cppclean-task"></a>CPPClean Görevi
 
-Bir C++ projesi oluşturulurken MSBuild'in oluşturduğu geçici dosyaları siler. Yapı dosyalarını silme işlemi *temizleme*olarak bilinir.
+Bir C++ projesi yapılandırıldığında MSBuild 'in oluşturduğu geçici dosyaları siler. Derleme dosyalarını silme işlemi *Temizleme*olarak bilinir.
 
 ## <a name="parameters"></a>Parametreler
 
@@ -36,11 +36,11 @@ Bir C++ projesi oluşturulurken MSBuild'in oluşturduğu geçici dosyaları sile
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|**Silinen Dosyalar**|İsteğe bağlı `ITaskItem[]` çıktı parametresi.<br /><br /> Görevler tarafından tüketilebilen ve yayılabilen bir dizi MSBuild çıktı dosyası öğesi tanımlar.|
-|**DoDelete**|İsteğe bağlı **Boolean** parametresi.<br /><br /> Eğer, `true`geçici yapı dosyalarını temizleyin.|
-|**FilePatternstodeleteonClean**|Gerekli `String` parametre.<br /><br /> Temizleyecek dosyaların dosya uzantılarının yarı sütunlu sınırlı bir listesini belirtir.|
-|**FilesExcludedFromClean**|İsteğe bağlı `String` parametre.<br /><br /> Temizlenmemesi gereken yarı sütunlu sınırlı bir dosya listesi belirtir.|
-|**KlasörlerToClean**|Gerekli `String` parametre.<br /><br /> Temizleyecek yarı sütunlu dizinler listesini belirtir. Tam veya göreceli bir yol belirtebilirsiniz ve yol joker karakter simgesini (*) içerebilir.|
+|**DeletedFiles**|İsteğe bağlı `ITaskItem[]` çıkış parametresi.<br /><br /> Görevler tarafından tüketilen ve yayılan MSBuild çıkış dosyası öğelerinin dizisini tanımlar.|
+|**DoDelete**|İsteğe bağlı **Boolean** parametresi.<br /><br /> Eğer `true` , geçici derleme dosyalarını temizleyin.|
+|**FilePatternsToDeleteOnClean**|Gerekli `String` parametre.<br /><br /> Temizleyen dosyaların dosya uzantılarının noktalı virgülle ayrılmış bir listesini belirtir.|
+|**Filesexcludedfromcyalın**|İsteğe bağlı `String` parametre.<br /><br /> Temizleyememelidir dosyaların noktalı virgülle ayrılmış bir listesini belirtir.|
+|**FoldersToClean**|Gerekli `String` parametre.<br /><br /> Temizleyen dizinlerin noktalı virgülle ayrılmış bir listesini belirtir. Tam veya göreli bir yol belirtebilirsiniz ve yol joker karakter simgesini (*) içerebilir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 195a3a36b53e5f84f6052a15e01007bb5ed77fac
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75844197"
 ---
 # <a name="walkthrough-creating-an-n-tier-data-application"></a>İzlenecek Yol: N Katmanlı Bir Veri Uygulaması Oluşturma
@@ -31,7 +31,7 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
 
  N katmanlı uygulamada çeşitli katmanları ayırma yollarından biri, uygulamanıza eklemek istediğiniz her katman için ayrı projeler oluşturmaktır. Türü belirtilmiş veri kümelerinde, üretilen veri kümesinin ve `DataSet Project` kodunun gitmesi gereken projeleri belirleyen bir `TableAdapter` özelliği bulunur.
 
- Bu izlenecek yol, **veri kümesi Tasarımcısı**kullanılarak veri kümesini ve `TableAdapter` kodu ayrık sınıf kitaplığı projelerine nasıl ayırabileceğinizi gösterir. Veri kümesini ve TableAdapter kodunu ayırdıktan sonra, veri erişim katmanına çağırmak için [Visual Studio hizmetinde bir Windows Communication Foundation Hizmetleri ve WCF veri Hizmetleri](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md) oluşturacaksınız. Son olarak, sunu katmanı olarak bir Windows Forms uygulaması oluşturacaksınız. Bu katman veri hizmetindeki verilere erişir.
+ Bu izlenecek yol `TableAdapter` , **veri kümesi Tasarımcısı**kullanarak veri kümesini ve kodu ayrık sınıf kitaplığı projelerine nasıl ayırabileceğinizi gösterir. Veri kümesini ve TableAdapter kodunu ayırdıktan sonra, veri erişim katmanına çağırmak için [Visual Studio hizmetinde bir Windows Communication Foundation Hizmetleri ve WCF veri Hizmetleri](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md) oluşturacaksınız. Son olarak, sunu katmanı olarak bir Windows Forms uygulaması oluşturacaksınız. Bu katman veri hizmetindeki verilere erişir.
 
  Bu kılavuzda aşağıdaki adımları gerçekleştireceksiniz:
 
@@ -55,7 +55,7 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
 
   ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz. [video nasıl yapılır: N katmanlı veri uygulaması oluşturma](https://msdn2.microsoft.com/library/cc178916.aspx).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Bu kılavuzu tamamlamak için gerekenler:
 
 - Northwind örnek veritabanına erişim.
@@ -71,7 +71,7 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
 1. **Dosya** menüsünden Yeni bir proje oluşturun.
 
     > [!NOTE]
-    > **Veri Kümesi Tasarımcısı** [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ve C# projelerinde desteklenir. Yeni projeyi bu dillerden birinde oluşturun.
+    > **Veri kümesi Tasarımcısı** [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ve C# projelerinde desteklenir. Yeni projeyi bu dillerden birinde oluşturun.
 
 2. **Yeni proje** iletişim kutusunda, **Proje türleri** bölmesinde **Windows**' a tıklayın.
 
@@ -81,12 +81,12 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
 
 5. Çözüm **NTierWalkthrough**olarak adlandırın.
 
-6. **Tamam**'ı tıklatın.
+6. **Tamam**’a tıklayın.
 
      DataEntityTier projesini içeren bir NTierWalkthrough Çözümü oluşturulup **Çözüm Gezgini**eklenir.
 
 ## <a name="creating-the-class-library-to-hold-the-tableadapters-dataaccesstier"></a>TableAdapter Bağdaştırıcılarını Tutacak Sınıf Kitaplığı Oluşturma (DataAccessTier)
- DataEntityTier projesini oluşturduktan sonraki adım başka bir sınıf kitaplığı projesi oluşturmaktır. Bu proje, oluşturulan `TableAdapter`s ' i tutacak ve uygulamanın *veri erişim katmanı* olarak adlandırılacaktır. Veri erişim katmanında, veritabanına bağlanmak için gereken bilgiler bulunur ve genelde orta katmanda yer alır.
+ DataEntityTier projesini oluşturduktan sonraki adım başka bir sınıf kitaplığı projesi oluşturmaktır. Bu proje oluşturulan öğeleri tutacaktır `TableAdapter` ve uygulamanın *veri erişim katmanı* olarak adlandırılır. Veri erişim katmanında, veritabanına bağlanmak için gereken bilgiler bulunur ve genelde orta katmanda yer alır.
 
 #### <a name="to-create-the-new-class-library-for-the-tableadapters"></a>TableAdapter bağdaştırıcılarına yönelik yeni sınıf kitaplığı oluşturmak için
 
@@ -99,7 +99,7 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
      DataAccessTier projesi oluşturulur ve NTierWalkthrough çözümüne eklenir.
 
 ## <a name="creating-the-dataset"></a>Veri Kümesi Oluşturma
- Sonraki adım türü belirtilmiş bir veri kümesi oluşturmaktır. Türü belirtilmiş veri kümeleri, her iki veri kümesi sınıfıyla (DataTable sınıfları dahil) ve `TableAdapter` sınıflarıyla tek bir projede oluşturulur. (Tüm sınıflar tek bir dosyada oluşturulur.) Veri kümesini ve `TableAdapter`öğeleri farklı projelere ayırdığınızda, bu, diğer projeye taşınan ve `TableAdapter` sınıfları orijinal projede bırakarak veri kümesi sınıfıdır. Bu nedenle, veri kümesini sonuçta `TableAdapter` bağdaştırıcılarını içerecek projede oluşturun (DataAccessTier projesi). **Veri kümesini veri kaynağı Yapılandırma Sihirbazı**' nı kullanarak oluşturacaksınız.
+ Sonraki adım türü belirtilmiş bir veri kümesi oluşturmaktır. Türü belirtilmiş veri kümeleri, her iki veri kümesi sınıfıyla (DataTable sınıfları dahil) ve `TableAdapter` sınıflarıyla tek bir projede oluşturulur. (Tüm sınıflar tek bir dosyada oluşturulur.) Veri kümesini ve `TableAdapter` öğeleri farklı projelere ayırdığınızda, bu sınıf, özgün projedeki sınıfları bırakarak diğer projeye taşınan veri kümesi sınıfıdır `TableAdapter` . Bu nedenle, veri kümesini sonuçta `TableAdapter` bağdaştırıcılarını içerecek projede oluşturun (DataAccessTier projesi). **Veri kümesini veri kaynağı Yapılandırma Sihirbazı**' nı kullanarak oluşturacaksınız.
 
 > [!NOTE]
 > Bağlantıyı oluşturmak için Northwind örnek veritabanına erişiminizin olması gerekir.
@@ -108,7 +108,7 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
 
 1. **Çözüm Gezgini**'de DataAccessTier ' ye tıklayın.
 
-2. Üzerinde **veri** menüsünü tıklatın **veri kaynaklarını Göster**.
+2. **Veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
 
 3. Veri **kaynakları** penceresinde, **veri kaynağı Yapılandırma Sihirbazı**' nı başlatmak Için **Yeni veri kaynağı Ekle** ' ye tıklayın.
 
@@ -118,7 +118,7 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
 
      Northwind örnek veritabanıyla kurulan veri bağlantısı açılan listede kullanılabilir durumdaysa bu bağlantıya tıklayın.
 
-     veya
+     -veya-
 
      **Yeni bağlantı** ' ya tıklayarak **bağlantı ekle** iletişim kutusunu açın.
 
@@ -148,7 +148,7 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
 
 4. **Veri kümesi projesi** listesinde **DataEntityTier**' e tıklayın.
 
-5. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
+5. **Yapı** menüsünde **Yapı Çözümü**’ne tıklayın.
 
    Veri kümesi ve TableAdapter bağdaştırıcıları iki sınıf kitaplığı projesine ayrılır. Başlangıçta tüm veri kümesini (DataAccessTier) içeren projede şimdi yalnızca TableAdapter bağdaştırıcıları bulunur. **DataSet proje** özelliğinde (DataEntityTier) belirtilen proje türü belirtilmiş veri kümesini Içerir: NorthwindDataSet. DataSet. Designer. vb (veya NorthwindDataSet.DataSet.Designer.cs).
 
@@ -201,7 +201,7 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
 
 6. **Son**'a tıklayın.
 
-7. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
+7. **Yapı** menüsünde **Yapı Çözümü**’ne tıklayın.
 
 ## <a name="adding-a-reference-to-the-data-entity-and-data-access-tiers-to-the-data-service"></a>Veri Hizmetinin Veri Varlığı ve Veri Erişimi Katmanlarına Başvuru Ekleme
  Veri hizmetinin veri kümesinden ve TableAdapter bağdaştırıcılarından bilgi alması gerektiğinden DataEntityTier ve DataAccessTier projelerine başvurular ekleyin.
@@ -214,7 +214,7 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
 
 3. Hem **DataAccessTier** hem de **DataEntityTier** projelerini seçin.
 
-4. **Tamam**'ı tıklatın.
+4. **Tamam**’a tıklayın.
 
 ## <a name="adding-functions-to-the-service-to-call-the-getcustomers-and-getorders-methods-in-the-data-access-tier"></a>Veri Erişim Katmanındaki GetCustomers ve GetOrder Yöntemlerini Çağırmak İçin Hizmete İşlev Ekleme
  Şimdi veri erişim katmanında veri döndürme yöntemleri bulunduğuna göre, veri erişim katmanındaki yöntemleri çağırmak için veri hizmetinde yöntemler oluşturun.
@@ -280,7 +280,7 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
     }
     ```
 
-5. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
+5. **Yapı** menüsünde **Yapı Çözümü**’ne tıklayın.
 
 ## <a name="creating-a-presentation-tier-to-display-data-from-the-data-service"></a>Veri Hizmetinden Verileri Görüntülemek İçin Bir Sunu Katmanı Oluşturma
  Şimdi çözümde veri erişim katmanına çağrı gönderen yöntemler bulunduğuna göre, veri hizmetine çağrı gönderecek ve verileri kullanıcılara sunacak başka bir proje oluşturun. Bu kılavuz için bir Windows Forms uygulaması oluşturun; bu n katmanlı uygulamanın sunu katmanıdır.
@@ -341,7 +341,7 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
 
 6. Formda boş bir alanı çift tıklayarak bir `Form1_Load` olay işleyicisi oluşturun.
 
-7. `Form1_Load` olay işleyicisine aşağıdaki kodu ekleyin.
+7. Olay işleyicisine aşağıdaki kodu ekleyin `Form1_Load` .
 
     ```vb
     Dim DataSvc As New ServiceReference1.Service1Client
@@ -365,9 +365,9 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
 
 #### <a name="to-increase-the-maxreceivedmessagesize-value"></a>MaxReceivedMessageSize değerini artırmak için
 
-1. **Çözüm Gezgini**, PresentationTier projesindeki App. config dosyasına çift tıklayın.
+1. **Çözüm Gezgini**, PresentationTier projesindeki app.config dosyasına çift tıklayın.
 
-2. **Maxreceived ileti** boyutu özniteliğini bulun ve değeri `6553600`değiştirin.
+2. **Maxreceived ileti** boyutu özniteliğini bulun ve değerini olarak değiştirin `6553600` .
 
 ## <a name="testing-the-application"></a>Uygulamayı Test Etme
  Uygulamayı çalıştırın. Veriler veri hizmetinden alınır ve formda görüntülenir.

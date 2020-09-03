@@ -1,5 +1,5 @@
 ---
-title: NotifyDebuggerOfWaitCompletion Yöntemi | Microsoft Dokümanlar
+title: NotifyDebuggerOfWaitCompletion yöntemi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,27 +11,27 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8963e29a067754c0e8c89b9db336b239ac682ce1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738338"
 ---
 # <a name="notifydebuggerofwaitcompletion-method"></a>NotifyDebuggerOfWaitCompletion yöntemi
-Yer tutucu yöntemi hata ayıklama tarafından kesme noktası hedefi olarak kullanılır. Bu yöntem inlined veya optimize edilmemelidir.
+Hata ayıklayıcı tarafından bir kesme noktası hedefi olarak kullanılan yer tutucu yöntemi. Bu yöntem satır içine alınmalıdır veya iyileştirilmemelidir.
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Montaj:** mscorlib *(mscorlib.dll*olarak)
+ **Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 private void NotifyDebuggerOfWaitCompletion()
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- Bir görevle tüm birleştirme işlemleri, hata ayıklama bildirim biti ayarlanmışsa bu yöntemi aramalıdır.
+ Bir görevle tüm JOIN işlemleri, hata ayıklayıcı bildirim biti ayarlandıysa bu yöntemi çağırmalıdır.
 
 ## <a name="requirements"></a>Gereksinimler
 

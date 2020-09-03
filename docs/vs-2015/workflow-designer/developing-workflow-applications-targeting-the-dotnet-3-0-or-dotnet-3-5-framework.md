@@ -12,16 +12,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fcace8b2ed9576ff5c3c4f4a0c526a70b2d4228a
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75843869"
 ---
 # <a name="developing-workflow-applications-targeting-the-net-30-or-net-35-framework"></a>.NET 3.0 veya .NET 3.5 Framework’ü Hedefleyen İş Akışı Uygulamaları Geliştirme
-[!INCLUDE[vs2010](../includes/vs2010-md.md)], [!INCLUDE[netfx40_long](../includes/netfx40-long-md.md)]hedefleyen [!INCLUDE[wf](../includes/wf-md.md)] uygulamalar oluşturmak için [!INCLUDE[wfd1](../includes/wfd1-md.md)] sağlar. Tasarımcı, iş akışı uygulamalarında grafik oluşturma ve hata ayıklama için tanıdık [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Kullanıcı arabirimini kullanır.
+[!INCLUDE[vs2010](../includes/vs2010-md.md)] , öğesini [!INCLUDE[wfd1](../includes/wfd1-md.md)] hedefleyen uygulamalar oluşturmak için sağlar [!INCLUDE[wf](../includes/wf-md.md)] [!INCLUDE[netfx40_long](../includes/netfx40-long-md.md)] . Tasarımcı, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] iş akışı uygulamalarında grafik oluşturma ve hata ayıklama için tanıdık kullanıcı arabirimini kullanır.
 
- [!INCLUDE[vs2010](../includes/vs2010-md.md)] Ayrıca, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]hedeflemek için kullanılabilecek eski bir iş akışı tasarımcısına erişim sağlar. Bu bölüm, bu eski tasarımcıyı kullanma hakkında rehberlik içerir.
+ [!INCLUDE[vs2010](../includes/vs2010-md.md)] Ayrıca, veya ' i hedeflemek için kullanılabilecek eski bir iş akışı tasarımcısına erişim sağlar [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] . Bu bölüm, bu eski tasarımcıyı kullanma hakkında rehberlik içerir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
  [Eski İş Akışı Tasarımcısını Kullanma](../workflow-designer/using-the-legacy-workflow-designer.md)

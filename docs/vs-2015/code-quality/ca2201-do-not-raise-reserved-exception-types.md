@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 9533a597a33deaed17ff2a73d56ef306ea7b5613
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546347"
 ---
 # <a name="ca2201-do-not-raise-reserved-exception-types"></a>CA2201: Ayrılmış özel durum türlerini harekete geçirmeyin
@@ -66,19 +66,19 @@ ms.locfileid: "85546347"
 
 |Parametre açıklaması|Özel durum|
 |---------------------------|---------------|
-|`null`başvurunun|<xref:System.ArgumentNullException?displayProperty=fullName>|
+|`null` başvurunun|<xref:System.ArgumentNullException?displayProperty=fullName>|
 |İzin verilen değer aralığının dışında (bir koleksiyon veya liste için Dizin gibi)|<xref:System.ArgumentOutOfRangeException?displayProperty=fullName>|
 |Geçersiz `enum` değer|<xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=fullName>|
 |Bir yöntemin parametre belirtimlerini karşılamayan bir biçim içerir (örneğin, için biçim dizesi gibi `ToString(String)` )|<xref:System.FormatException?displayProperty=fullName>|
 |Aksi takdirde geçersiz|<xref:System.ArgumentException?displayProperty=fullName>|
 
- Bir nesnenin geçerli durumu için geçersiz bir işlem<xref:System.InvalidOperationException?displayProperty=fullName>
+ Bir nesnenin geçerli durumu için geçersiz bir işlem <xref:System.InvalidOperationException?displayProperty=fullName>
 
- Atılmış bir nesne üzerinde bir işlem gerçekleştirildiğinde<xref:System.ObjectDisposedException?displayProperty=fullName>
+ Atılmış bir nesne üzerinde bir işlem gerçekleştirildiğinde <xref:System.ObjectDisposedException?displayProperty=fullName>
 
- Bir işlem desteklenmadığında (örneğin, geçersiz kılınan bir **akışta** ) throw<xref:System.NotSupportedException?displayProperty=fullName>
+ Bir işlem desteklenmadığında (örneğin, geçersiz kılınan bir **akışta** ) throw <xref:System.NotSupportedException?displayProperty=fullName>
 
- Bir dönüştürme bir taşma ile sonuçlanacaksa (örneğin, açık bir atama işleci aşırı yüklemesi) throw<xref:System.OverflowException?displayProperty=fullName>
+ Bir dönüştürme bir taşma ile sonuçlanacaksa (örneğin, açık bir atama işleci aşırı yüklemesi) throw <xref:System.OverflowException?displayProperty=fullName>
 
  Diğer tüm durumlar için, ' den türetilen kendi türünü oluşturmayı düşünün <xref:System.Exception> ve bunu oluşturun.
 

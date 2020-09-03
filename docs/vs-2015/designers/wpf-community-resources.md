@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 167fc2f80a8eaeddb121d208f714fe134c63a198
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75843888"
 ---
 # <a name="wpf-community-resources"></a>WPF Topluluk Kaynakları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Microsoft, WPF ekibi üyeleri ve topluluk liderleri, Forumlar ve Microsoft Connect geri bildirimi ile oluşturulan blogların de dahil olduğu Windows Presentation Foundation (WPF) hakkında bilgi edinmek, tartışmak ve geri bildirimde bulunmak için kullanabileceğiniz çeşitli topluluk kaynaklarını kullanıma sunar. merkezinden.
+Microsoft, WPF ekibi üyeleri ve topluluk liderleri, Forumlar ve Microsoft Connect feedback Center tarafından oluşturulan blogların da dahil olduğu Windows Presentation Foundation (WPF) hakkında bilgi edinmek, tartışmak ve geri bildirimde bulunmak için kullanabileceğiniz çeşitli topluluk kaynaklarını kullanıma sunar.
 
 ## <a name="community"></a>Topluluk
  [WPF Forumu](https://social.msdn.microsoft.com/forums/en-US/wpf/threads/)

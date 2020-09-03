@@ -1,5 +1,5 @@
 ---
-title: m_taskId Alanı | Microsoft Dokümanlar
+title: m_taskId alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,22 +11,22 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c031d225010c6e1e6d8a7c681e47699efe56ed9c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738362"
 ---
 # <a name="m_taskid-field"></a>m_taskId alanı
-<xref:System.Threading.Tasks.Task.Id%2A?displayProperty=fullName> Mülkün destek alanı.
+Özelliği için yedekleme alanı <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=fullName> .
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Montaj:** mscorlib *(mscorlib.dll*olarak)
+ **Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
 
- Bu iç üyeye .NET Framework'den erişemediğinizden, aşağıdaki sözdizimi Ortak Ara Dil 'de (CIL) sağlanır.
+ Bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```csharp
 .field private int32 m_taskId
