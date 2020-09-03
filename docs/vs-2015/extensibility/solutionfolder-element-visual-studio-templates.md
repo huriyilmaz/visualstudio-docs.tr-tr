@@ -14,10 +14,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 84d0c1765a14f60363b71fcdec182d448cb4f112
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205536"
 ---
 # <a name="solutionfolder-element-visual-studio-templates"></a>SolutionFolder Öğesi (Visual Studio Şablonları)
@@ -25,12 +25,12 @@ ms.locfileid: "68205536"
 
 Birden fazla projeli şablonlardaki projeleri gruplandırır.  
   
- \<VSTemplate >  
- \<TemplateContent >  
- \<ProjectCollection >  
- \<SolutionFolder >  
+ \<VSTemplate>  
+ \<TemplateContent>  
+ \<ProjectCollection>  
+ \<SolutionFolder>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <SolutionFolder Name="DirectoryName">  
@@ -45,7 +45,7 @@ Birden fazla projeli şablonlardaki projeleri gruplandırır.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`Name`|Gerekli öznitelik.<br /><br /> Çözüm klasör'ünün adı.|  
+|`Name`|Gerekli öznitelik.<br /><br /> Çözüm klasörünün adı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
@@ -62,10 +62,10 @@ Birden fazla projeli şablonlardaki projeleri gruplandırır.
 |`SolutionFolder`|Birden fazla projeli şablonlardaki projeleri gruplandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Birden fazla projeli şablonlar, iki veya daha fazla proje için kapsayıcı olarak davranır. `SolutionFolder` Öğe şablonu projelerinde gruplar halinde düzenlemek için kullanılır. Tarafından belirtilen klasörler `SolutionFolder` çözüm klasörleri projede olarak oluşturulmuş öğelere [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Birden fazla projeli Şablonlar hakkında daha fazla bilgi için bkz. [nasıl yapılır: Birden çok proje şablonu oluşturma](../ide/how-to-create-multi-project-templates.md).  
+ Birden fazla projeli şablonlar, iki veya daha fazla proje için kapsayıcı olarak davranır. `SolutionFolder`Öğesi şablondaki projeleri gruplar halinde düzenlemek için kullanılır. Öğeleri tarafından belirtilen klasörler, `SolutionFolder` içindeki projede çözüm klasörleri olarak oluşturulur [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Çoklu proje şablonları hakkında daha fazla bilgi için bkz. [nasıl yapılır: çoklu proje şablonları oluşturma](../ide/how-to-create-multi-project-templates.md).  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `SolutionFolder` birden çok proje şablonu iki gruplara bölmek için öğe `Math Classes` ve `Graphics Classes`. Bu şablon, ikisi her çözüm klasöründe yer alır, dört proje içerir.  
+ Bu örnek, `SolutionFolder` Çoklu proje şablonunu iki gruba bölmek için öğesini kullanır `Math Classes` ve `Graphics Classes` . Şablon, her bir çözüm klasörüne yerleştirilmiş dört proje içerir.  
   
 ```  
 <VSTemplate Version="3.0.0" Type="ProjectGroup"  
@@ -102,4 +102,4 @@ Birden fazla projeli şablonlardaki projeleri gruplandırır.
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)   
  [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)   
- [Nasıl yapılır: Birden Çok Proje Şablonu Oluşturma](../ide/how-to-create-multi-project-templates.md)
+ [Nasıl Yapılır: Birden Çok Proje Şablonu Oluşturma](../ide/how-to-create-multi-project-templates.md)

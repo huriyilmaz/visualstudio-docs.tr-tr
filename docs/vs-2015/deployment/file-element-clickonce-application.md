@@ -1,5 +1,5 @@
 ---
-title: '&lt;Dosya&gt; öğesi (ClickOnce uygulaması) | Microsoft Docs'
+title: '&lt;Dosya &gt; öğesi (ClickOnce uygulaması) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -24,18 +24,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 88fce548d5adbd6d4dc930db767fd3e52690490b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68148772"
 ---
-# <a name="ltfilegt-element-clickonce-application"></a>&lt;Dosya&gt; öğesi (ClickOnce uygulaması)
+# <a name="ltfilegt-element-clickonce-application"></a>&lt;Dosya &gt; öğesi (ClickOnce uygulaması)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İndirilen ve uygulama tarafından kullanılan tüm nonassembly dosyaları tanımlar.  
+İndirilen ve uygulama tarafından kullanılan tüm derleme olmayan dosyaları tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <file  
@@ -87,107 +87,107 @@ ms.locfileid: "68148772"
 ```  
   
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler  
- `file` Öğesi, isteğe bağlıdır. Öğe, aşağıdaki özniteliklere sahiptir.  
+ `file`Öğesi isteğe bağlıdır. Öğesi aşağıdaki özniteliklere sahiptir.  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`name`|Gerekli. Dosya adını tanımlar.|  
-|`size`|Gerekli. Dosyanın bayt cinsinden boyutunu belirtir.|  
-|`group`|İsteğe bağlı `optional` özniteliği belirtilmemişse veya kümesine `false`; kullanılmıyorsa gereklidir `optional` olduğu `true`. Bu dosyanın ait olduğu grubu adı. Adı herhangi bir Unicode dize değeri geliştirici tarafından seçmiş olabilir ve dosya ile isteğe bağlı yükleme için kullanılan <xref:System.Deployment.Application.ApplicationDeployment> sınıfı.|  
-|`optional`|İsteğe bağlı. Bu dosya gerekip gerekmediğini uygulamanın ilk çalıştırıldığında veya isteğe bağlı olarak uygulama isteğe bağlı olarak edene kadar dosya yalnızca sunucuda olup bulunmalıdır belirtir. Varsa `false` ya da tanımlanmamışsa, uygulamayı ilk kez çalıştırdığınızda veya dosyası indirilir. Varsa `true`, `group` uygulama bildirimi geçerli olması belirtilmelidir. `optional` TRUE olamaz, `writeableType` değeriyle belirtilen `applicationData`.|  
-|`writeableType`|İsteğe bağlı. Bu dosyanın bir veri dosyası olduğunu belirtir. Şu anda geçerli olan `applicationData`.|  
+|`name`|Gereklidir. Dosyanın adını tanımlar.|  
+|`size`|Gereklidir. Dosyanın boyutunu bayt cinsinden belirtir.|  
+|`group`|`optional`Öznitelik belirtilmemişse veya olarak ayarlandıysa isteğe bağlı `false` ; ise gereklidir `optional` `true` . Bu dosyanın ait olduğu grubun adı. Ad, geliştirici tarafından seçilen herhangi bir Unicode dize değeri olabilir ve sınıfı ile isteğe bağlı dosyaları indirmek için kullanılır <xref:System.Deployment.Application.ApplicationDeployment> .|  
+|`optional`|İsteğe bağlı. Uygulama ilk çalıştırıldığında bu dosyanın indirilmesinin gerekip gerekmediğini veya uygulamanın istek üzerine istemesi için dosyanın yalnızca sunucuda bulunup bulunmaması gerektiğini belirtir. `false`Veya tanımlanmamışsa, uygulama ilk kez çalıştırıldığında veya yüklendiğinde dosya indirilir. `true` `group` Uygulama bildiriminin geçerli olması için bir belirtilmesi gerekir. `optional``writeableType`değeri ile belirtilirse true olamaz `applicationData` .|  
+|`writeableType`|İsteğe bağlı. Bu dosyanın bir veri dosyası olduğunu belirtir. Şu anda tek geçerli değer `applicationData` .|  
   
-## <a name="typelib"></a>tür kitaplığı  
- `typelib` Dosya öğesi için isteğe bağlı bir alt öğesidir. COM bileşenine ait tür kitaplığını açıklar. Öğe, aşağıdaki özniteliklere sahiptir.  
+## <a name="typelib"></a>TypeLib  
+ `typelib`Öğesi, dosya öğesinin isteğe bağlı bir alt öğesidir. Öğesi, COM bileşenine ait olan tür kitaplığını tanımlar. Öğesi aşağıdaki özniteliklere sahiptir.  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`tlbid`|Gerekli. Tür Kitaplığı'na atanan GUID.|  
-|`version`|Gerekli. Tür kitaplığı sürüm sayısı.|  
-|`helpdir`|Gerekli. Bileşen için Yardım dosyalarını içeren dizin. Sıfır uzunluğunda olabilir.|  
-|`resourceid`|İsteğe bağlı. Yerel ayar tanıtıcısı (LCID) onaltılık dize gösterimi. Bu, bir ile dört onaltılık basamak 0 x öneki ve önünde sıfır olmadan olur. LCID nötr alt dili tanımlayıcı sahip olabilir.|  
-|`flags`|İsteğe bağlı. Bu tür kitaplığı için tür kitaplığı bayrakları dize gösterimi. Özellikle, "RESTRICTED", "CONTROL", "Gizli" ve "HASDISKIMAGE" biri olmalıdır.|  
+|`tlbid`|Gereklidir. Tür kitaplığına atanan GUID.|  
+|`version`|Gereklidir. Tür kitaplığının sürüm numarası.|  
+|`helpdir`|Gereklidir. Bileşen için yardım dosyalarını içeren dizin. Sıfır uzunlukta olabilir.|  
+|`resourceid`|İsteğe bağlı. Yerel ayar tanımlayıcısının (LCıD) onaltılık dize temsili. 0x ön eki olmadan ve önünde sıfır olmadan, en çok dört onaltılık basamak olur. LCıD bağımsız bir alt dil tanımlayıcısına sahip olabilir.|  
+|`flags`|İsteğe bağlı. Bu tür kitaplığı için tür kitaplığı bayraklarının dize temsili. Özellikle, "RESTRICTED", "CONTROL", "HIDDEN" ve "HASDISKıMAGE" gibi bir tane olmalıdır.|  
   
 ## <a name="comclass"></a>comClass  
- `comClass` İsteğe bağlı bir alt öğedir `file` öğesi, ancak gereklidir, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] düşünüyor kayıt gerektirmeyen com kullanarak dağıtmak için bir COM bileşeni, uygulama içerir Öğe, aşağıdaki özniteliklere sahiptir.  
+ Öğesi, `comClass` öğesinin isteğe bağlı bir alt öğesidir `file` , ancak [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama kayıtsız com kullanarak DAĞıTMAYı amaçlayan bir com bileşeni içeriyorsa gereklidir. Öğesi aşağıdaki özniteliklere sahiptir.  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`clsid`|Gerekli. Sınıf kimliği bir GUID olarak ifade edilen COM bileşeni.|  
+|`clsid`|Gereklidir. GUID olarak ifade edilen COM bileşeninin sınıf KIMLIĞI.|  
 |`description`|İsteğe bağlı. Sınıf adı.|  
-|`threadingModel`|İsteğe bağlı. İşlemde COM sınıfları tarafından kullanılan iş parçacığı modeli. Bu özellik null ise, iş parçacığı modeli kullanılır. Bileşen istemci ana iş parçacığı üzerinde oluşturulur ve diğer iş parçacıklarını çağrılarından bu iş parçacığı için hazırlanırlar. Aşağıdaki liste, geçerli değerleri gösterir:<br /><br /> `Apartment`, `Free`, `Both`, ve `Neutral`.|  
-|`tlbid`|İsteğe bağlı. Bu COM bileşeni için tür kitaplığı için GUID.|  
-|`progid`|İsteğe bağlı. Sürüme bağımlı programlı tanımlayıcısı COM bileşeni ile ilişkili. Biçimi bir `ProgID` olduğu `<vendor>.<component>.<version>`.|  
-|`miscStatus`|İsteğe bağlı. Derlemedeki çoğaltır tarafından sağlanan bilgileri `MiscStatus` kayıt defteri anahtarı. Değilse değerleri `miscStatusIcon`, `miscStatusContent`, `miscStatusDocprint`, veya `miscStatusThumbnail` öznitelikler bulunamadı, listelenen karşılık gelen varsayılan değerin `miscStatus` eksik öznitelikleri için kullanılır. Değer, öznitelik değerleri aşağıdaki tabloda, virgülle ayrılmış listesini olabilir. COM sınıfı gerektiren bir OCX sınıfı ise bu özniteliği kullanabilirsiniz `MiscStatus` kayıt defteri anahtarı değerleri.|  
-|`miscStatusIcon`|İsteğe bağlı. Derlemedeki DVASPECT_ICON tarafından sağlanan bilgileri çoğaltır. Bu, bir nesnenin bir simge sağlayabilir. Değer, öznitelik değerleri aşağıdaki tabloda, virgülle ayrılmış listesini olabilir. COM sınıfı gerektiren bir OCX sınıfı ise bu özniteliği kullanabilirsiniz `Miscstatus` kayıt defteri anahtarı değerleri.|  
-|`miscStatusContent`|İsteğe bağlı. Derlemedeki DVASPECT_ICON tarafından sağlanan bilgileri çoğaltır. Bunu bir ekran veya yazıcı için görüntülenebilir bir bileşik belge sağlayabilirsiniz. Değer, öznitelik değerleri aşağıdaki tabloda, virgülle ayrılmış listesini olabilir. COM sınıfı gerektiren bir OCX sınıfı ise bu özniteliği kullanabilirsiniz `MiscStatus` kayıt defteri anahtarı değerleri.|  
-|`miscStatusDocPrint`|İsteğe bağlı. Derlemedeki DVASPECT_ICON tarafından sağlanan bilgileri çoğaltır. Bir yazıcıya yokmuş gibi bir nesne temsili görüntülenebilir ekranda sağlayabilir. Değer, öznitelik değerleri aşağıdaki tabloda, virgülle ayrılmış listesini olabilir. COM sınıfı gerektiren bir OCX sınıfı ise bu özniteliği kullanabilirsiniz `MiscStatus` kayıt defteri anahtarı değerleri.|  
-|`miscStatusThumbnail`|İsteğe bağlı. Bir derlemede desteklemek istiyorsanız tarafından sağlanan bilgileri çoğaltır. Bu tarama aracı içinde görüntülenebilen bir nesnenin bir küçük resim sağlayabilir. Değer, öznitelik değerleri aşağıdaki tabloda, virgülle ayrılmış listesini olabilir. COM sınıfı gerektiren bir OCX sınıfı ise bu özniteliği kullanabilirsiniz `MiscStatus` kayıt defteri anahtarı değerleri.|  
+|`threadingModel`|İsteğe bağlı. İşlem içi COM sınıfları tarafından kullanılan iş parçacığı modeli. Bu özellik null ise, iş parçacığı modeli kullanılmaz. Bileşen, istemcinin ana iş parçacığında oluşturulur ve diğer iş parçacıklarından çağrılar bu iş parçacığına hazırlanır. Aşağıdaki listede geçerli değerler gösterilmektedir:<br /><br /> `Apartment`, `Free` , `Both` , ve `Neutral` .|  
+|`tlbid`|İsteğe bağlı. Bu COM bileşenine ait tür kitaplığı için GUID.|  
+|`progid`|İsteğe bağlı. COM bileşeniyle ilişkili sürüme bağımlı programlama tanımlayıcısı. Öğesinin biçimi `ProgID` `<vendor>.<component>.<version>` .|  
+|`miscStatus`|İsteğe bağlı. Bütünleştirilmiş kod bildiriminde yinelenen öğeler `MiscStatus` kayıt defteri anahtarı tarafından belirtilen bilgileri. `miscStatusIcon`,, `miscStatusContent` `miscStatusDocprint` , Veya `miscStatusThumbnail` özniteliklerinin değerleri bulunamazsa, içinde listelenen karşılık gelen varsayılan değer `miscStatus` eksik öznitelikler için kullanılır. Değer, aşağıdaki tablodaki öznitelik değerlerinin virgülle ayrılmış bir listesi olabilir. COM sınıfı, `MiscStatus` kayıt defteri anahtarı değerleri gerektiren BIR ocx sınıfınise bu özniteliği kullanabilirsiniz.|  
+|`miscStatusIcon`|İsteğe bağlı. Bütünleştirilmiş kod bildiriminde yinelenen DVASPECT_ICON tarafından belirtilen bilgiler. Bir nesnenin simgesini sağlayabilir. Değer, aşağıdaki tablodaki öznitelik değerlerinin virgülle ayrılmış bir listesi olabilir. COM sınıfı, `Miscstatus` kayıt defteri anahtarı değerleri gerektiren BIR ocx sınıfınise bu özniteliği kullanabilirsiniz.|  
+|`miscStatusContent`|İsteğe bağlı. Bütünleştirilmiş kod bildiriminde yinelenen DVASPECT_CONTENT tarafından belirtilen bilgiler. Bu, bir ekran veya yazıcı için görüntülenebilen bir bileşik belge sağlayabilir. Değer, aşağıdaki tablodaki öznitelik değerlerinin virgülle ayrılmış bir listesi olabilir. COM sınıfı, `MiscStatus` kayıt defteri anahtarı değerleri gerektiren BIR ocx sınıfınise bu özniteliği kullanabilirsiniz.|  
+|`miscStatusDocPrint`|İsteğe bağlı. Bütünleştirilmiş kod bildiriminde yinelenen DVASPECT_DOCPRINT tarafından belirtilen bilgiler. Bir yazıcıya yazdırılmış gibi ekranda görüntülenebilen bir nesne temsili sağlayabilir. Değer, aşağıdaki tablodaki öznitelik değerlerinin virgülle ayrılmış bir listesi olabilir. COM sınıfı, `MiscStatus` kayıt defteri anahtarı değerleri gerektiren BIR ocx sınıfınise bu özniteliği kullanabilirsiniz.|  
+|`miscStatusThumbnail`|İsteğe bağlı. Bütünleştirilmiş kod bildiriminde yinelenen DVASPECT_THUMBNAIL tarafından belirtilen bilgiler. Göz atma aracında görüntülenebilen bir nesnenin küçük resmini sağlayabilir. Değer, aşağıdaki tablodaki öznitelik değerlerinin virgülle ayrılmış bir listesi olabilir. COM sınıfı, `MiscStatus` kayıt defteri anahtarı değerleri gerektiren BIR ocx sınıfınise bu özniteliği kullanabilirsiniz.|  
   
 ## <a name="cominterfaceexternalproxystub"></a>comInterfaceExternalProxyStub  
- `comInterfaceExternalProxyStub` İsteğe bağlı bir alt öğedir `file` öğesinde, gerekli olabilir ancak [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] düşünüyor kayıt gerektirmeyen com kullanarak dağıtmak için bir COM bileşeni içeren uygulama Öğe, aşağıdaki öznitelikleri içerir.  
+ Öğesi, `comInterfaceExternalProxyStub` öğesinin isteğe bağlı bir alt öğesidir `file` , ancak [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama kayıtsız com kullanarak dağıtmayı amaçladığı bir com bileşeni içeriyorsa, gerekli olabilir. Öğesi aşağıdaki öznitelikleri içerir.  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`iid`|Gerekli. Bu proxy tarafından hizmet Kimliğini (IID) arabirim. IID çevreleyen küme ayraçları olmalıdır.|  
-|`baseInterface`|İsteğe bağlı. Arabirim başvuruyor arabirimi Laboratuvardaki `iid` türetilir.|  
-|`numMethods`|İsteğe bağlı. Arabirimi tarafından uygulanan yöntemlerin sayısı.|  
-|`name`|İsteğe bağlı. Bu arabirim adını kodda görünür.|  
-|`tlbid`|İsteğe bağlı. Tarafından belirtilen arabirim açıklamasını içeren bir tür kitaplığı `iid` özniteliği.|  
-|`proxyStubClass32`|İsteğe bağlı. CLSID 32-bit proxy'sinde DLL'ler için bir IID eşler.|  
+|`iid`|Gereklidir. Bu proxy tarafından sunulan arabirim KIMLIĞI (IID). IID 'nin çevreleyen ayraçları olmalıdır.|  
+|`baseInterface`|İsteğe bağlı. Tarafından başvurulan arabirimin türetildiği arabirimin IID `iid` 'si.|  
+|`numMethods`|İsteğe bağlı. Arabirim tarafından uygulanan yöntemlerin sayısı.|  
+|`name`|İsteğe bağlı. Arabirimin, kodda görüneceği şekilde adı.|  
+|`tlbid`|İsteğe bağlı. Özniteliği tarafından belirtilen arabirimin açıklamasını içeren tür kitaplığı `iid` .|  
+|`proxyStubClass32`|İsteğe bağlı. Bir IID 'yi 32 bitlik ara dll 'lerde bir CLSID ile eşleştirir.|  
   
 ## <a name="cominterfaceproxystub"></a>comInterfaceProxyStub  
- `comInterfaceProxyStub` İsteğe bağlı bir alt öğedir `file` öğesinde, gerekli olabilir ancak [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] düşünüyor kayıt gerektirmeyen com kullanarak dağıtmak için bir COM bileşeni içeren uygulama Öğe, aşağıdaki öznitelikleri içerir.  
+ Öğesi, `comInterfaceProxyStub` öğesinin isteğe bağlı bir alt öğesidir `file` , ancak [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama kayıtsız com kullanarak dağıtmayı amaçladığı bir com bileşeni içeriyorsa, gerekli olabilir. Öğesi aşağıdaki öznitelikleri içerir.  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`iid`|Gerekli. Bu proxy tarafından hizmet Kimliğini (IID) arabirim. IID çevreleyen küme ayraçları olmalıdır.|  
-|`baseInterface`|İsteğe bağlı. Arabirim başvuruyor arabirimi Laboratuvardaki `iid` türetilir.|  
-|`numMethods`|İsteğe bağlı. Arabirimi tarafından uygulanan yöntemlerin sayısı.|  
-|`Name`|İsteğe bağlı. Bu arabirim adını kodda görünür.|  
-|`Tlbid`|İsteğe bağlı. Tarafından belirtilen arabirim açıklamasını içeren bir tür kitaplığı `iid` özniteliği.|  
-|`proxyStubClass32`|İsteğe bağlı. CLSID 32-bit proxy'sinde DLL'ler için bir IID eşler.|  
-|`threadingModel`|İsteğe bağlı. İsteğe bağlı. İşlemde COM sınıfları tarafından kullanılan iş parçacığı modeli. Bu özellik null ise, iş parçacığı modeli kullanılır. Bileşen istemci ana iş parçacığı üzerinde oluşturulur ve diğer iş parçacıklarını çağrılarından bu iş parçacığı için hazırlanırlar. Aşağıdaki liste, geçerli değerleri gösterir:<br /><br /> `Apartment`, `Free`, `Both`, ve `Neutral`.|  
+|`iid`|Gereklidir. Bu proxy tarafından sunulan arabirim KIMLIĞI (IID). IID 'nin çevreleyen ayraçları olmalıdır.|  
+|`baseInterface`|İsteğe bağlı. Tarafından başvurulan arabirimin türetildiği arabirimin IID `iid` 'si.|  
+|`numMethods`|İsteğe bağlı. Arabirim tarafından uygulanan yöntemlerin sayısı.|  
+|`Name`|İsteğe bağlı. Arabirimin, kodda görüneceği şekilde adı.|  
+|`Tlbid`|İsteğe bağlı. Özniteliği tarafından belirtilen arabirimin açıklamasını içeren tür kitaplığı `iid` .|  
+|`proxyStubClass32`|İsteğe bağlı. Bir IID 'yi 32 bitlik ara dll 'lerde bir CLSID ile eşleştirir.|  
+|`threadingModel`|İsteğe bağlı. İsteğe bağlı. İşlem içi COM sınıfları tarafından kullanılan iş parçacığı modeli. Bu özellik null ise, iş parçacığı modeli kullanılmaz. Bileşen, istemcinin ana iş parçacığında oluşturulur ve diğer iş parçacıklarından çağrılar bu iş parçacığına hazırlanır. Aşağıdaki listede geçerli değerler gösterilmektedir:<br /><br /> `Apartment`, `Free` , `Both` , ve `Neutral` .|  
   
 ## <a name="windowclass"></a>windowClass  
- `windowClass` İsteğe bağlı bir alt öğedir `file` öğesinde, gerekli olabilir ancak [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] düşünüyor kayıt gerektirmeyen com kullanarak dağıtmak için bir COM bileşeni içeren uygulama Öğe uygulanmış bir sürüme sahip bir COM bileşeni tarafından tanımlanan bir pencere sınıfını gösterir. Öğe, aşağıdaki öznitelikleri içerir.  
+ Öğesi, `windowClass` öğesinin isteğe bağlı bir alt öğesidir `file` , ancak [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama kayıtsız com kullanarak dağıtmayı amaçladığı bir com bileşeni içeriyorsa, gerekli olabilir. Öğesi, bir sürümü uygulanmış olması gereken COM bileşeni tarafından tanımlanan bir pencere sınıfına başvurur. Öğesi aşağıdaki öznitelikleri içerir.  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`versioned`|İsteğe bağlı. Pencere sınıfını içeren derleme sürümünü içeren iç pencere sınıf kaydında kullanılan adı olup olmadığını denetler. Bu özniteliğin değeri olabilir `yes` veya `no`. Varsayılan, `yes` değeridir. Değer `no` yalnızca aynı pencere sınıfı bir yan yana bileşeni ve bir eşdeğer-yana olmayan bileşeni tarafından tanımlanır ve aynı pencere sınıfı olarak değerlendirilecek istiyorsanız kullanılmalıdır. Pencere sınıfı kaydı hakkında genel kurallar uygulamak not — yalnızca kendisine uygulanan bir sürüm olmadığı için pencere sınıfını kaydeder ilk bileşen, kaydetmek mümkün olacaktır.|  
+|`versioned`|İsteğe bağlı. Kayıt sırasında kullanılan iç pencere sınıfı adının, pencere sınıfını içeren derlemenin sürümünü içerip içermediğini denetler. Bu özniteliğin değeri `yes` veya olabilir `no` . Varsayılan değer: `yes`. Değer `no` yalnızca, aynı pencere sınıfı yan yana bir bileşen ve yan yana olmayan bir bileşen tarafından tanımlanmışsa ve bunları aynı pencere sınıfı olarak değerlendirmek istiyorsanız kullanılmalıdır. Pencere sınıfı kaydına ilişkin olağan kuralların, yalnızca pencere sınıfını kaydeden ilk bileşen kendisine uygulanan bir sürüme sahip olmadığı için bu uygulamayı kaydedebileceğini unutmayın.|  
   
 ## <a name="hash"></a>hash  
- `hash` İsteğe bağlı bir alt öğedir `file` öğesi. `hash` Öğesi özniteliklere sahip değildir.  
+ `hash`Öğesi, öğesinin isteğe bağlı bir alt öğesidir `file` . `hash`Öğesinde hiç öznitelik yok.  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] bir uygulamadaki tüm dosyaların algoritmik bir karma güvenlik denetimi, dosyaların hiçbiri dağıtımdan sonra değişmediğinden emin olmak için kullanır. Varsa `hash` öğesi dahil değildir, bu denetimi gerçekleştirilmeyecek. Bu nedenle, atlama `hash` öğesi önerilmez.  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] herhangi bir dosyanın dağıtımdan sonra değişmediğinden emin olmak için, bir uygulamadaki tüm dosyaların bir güvenlik denetimi olarak algoritmik karmasını kullanır. `hash`Öğe dahil değilse, bu denetim gerçekleştirilmez. Bu nedenle, `hash` öğesinin atlanması önerilmez.  
   
- Bir bildirim değil karma bir dosya içeriyorsa, bu bildirimi dijital olarak olamaz kullanıcılar bütün bir dosyanın içeriğini doğrulayamadığı için imzalanmış.  
+ Bir bildirim, karma olmayan bir dosya içeriyorsa, kullanıcılar karma olmayan bir dosyanın içeriğini doğrulayamadığından, bu bildirim dijital olarak imzalanamıyor.  
   
-## <a name="dsigtransforms"></a>dsig:TRANSFORMS  
- `dsig:Transforms` Öğesi gerekli alt öğesi olan `hash` öğesi. `dsig:Transforms` Öğesi özniteliklere sahip değildir.  
+## <a name="dsigtransforms"></a>dsig: dönüşümler  
+ `dsig:Transforms`Öğesi, öğesinin gerekli bir alt öğesidir `hash` . `dsig:Transforms`Öğesinde hiç öznitelik yok.  
   
-## <a name="dsigtransform"></a>dsig:Transform  
- `dsig:Transform` Öğesi gerekli alt öğesi olan `dsig:Transforms` öğesi. `dsig:Transform` Öğesinde şu öznitelikler bulunur.  
-  
-|Öznitelik|Açıklama|  
-|---------------|-----------------|  
-|`Algorithm`|Bu dosya için Özet hesaplamak için kullanılan algoritma. Şu anda kullanılan tek değer [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] olduğu `urn:schemas-microsoft-com:HashTransforms.Identity`.|  
-  
-## <a name="dsigdigestmethod"></a>dsig  
- `dsig:DigestMethod` Öğesi gerekli alt öğesi olan `hash` öğesi. `dsig:DigestMethod` Öğesinde şu öznitelikler bulunur.  
+## <a name="dsigtransform"></a>dsig: dönüştürme  
+ `dsig:Transform`Öğesi, öğesinin gerekli bir alt öğesidir `dsig:Transforms` . `dsig:Transform`Öğesi aşağıdaki özniteliklere sahiptir.  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`Algorithm`|Bu dosya için Özet hesaplamak için kullanılan algoritma. Şu anda kullanılan tek değer [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] olduğu `http://www.w3.org/2000/09/xmldsig#sha1`.|  
+|`Algorithm`|Bu dosya için Özeti hesaplamak için kullanılan algoritma. Şu anda tarafından kullanılan tek değer [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] `urn:schemas-microsoft-com:HashTransforms.Identity` .|  
   
-## <a name="dsigdigestvalue"></a>DigestValue  
- `dsig:DigestValue` Öğesi gerekli alt öğesi olan `hash` öğesi. `dsig:DigestValue` Öğesi özniteliklere sahip değildir. Metin değeri, belirtilen dosya için hesaplanan karmasıdır.  
+## <a name="dsigdigestmethod"></a>dsig: DigestMethod  
+ `dsig:DigestMethod`Öğesi, öğesinin gerekli bir alt öğesidir `hash` . `dsig:DigestMethod`Öğesi aşağıdaki özniteliklere sahiptir.  
+  
+|Öznitelik|Açıklama|  
+|---------------|-----------------|  
+|`Algorithm`|Bu dosya için Özeti hesaplamak için kullanılan algoritma. Şu anda tarafından kullanılan tek değer [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] `http://www.w3.org/2000/09/xmldsig#sha1` .|  
+  
+## <a name="dsigdigestvalue"></a>dsig: DigestValue  
+ `dsig:DigestValue`Öğesi, öğesinin gerekli bir alt öğesidir `hash` . `dsig:DigestValue`Öğesinde hiç öznitelik yok. Metin değeri, belirtilen dosya için hesaplanan karmadır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe, uygulamayı oluşturan tüm nonassembly dosyaları tanımlar ve özellikle karma değerlerini dosya doğrulama. Bu öğe, dosya ile ilgili Bileşen Nesne Modeli (COM) yalıtım verileri de içerebilir. Bir dosya değiştiğinde değişimi yansıtmak için uygulama bildirim dosyasına da güncelleştirilmesi gerekir.  
+ Bu öğe, uygulamayı oluşturan tüm derleme olmayan dosyaları ve özellikle de dosya doğrulaması için karma değerleri tanımlar. Bu öğe ayrıca dosyayla ilişkili bileşen nesne modeli (COM) yalıtım verilerini de içerebilir. Bir dosya değişirse, uygulama bildirim dosyasının değişikliği yansıtması için de güncelleştirilmeleri gerekir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde gösterilmiştir `file` bildiriminde bir uygulamada kullanılarak dağıtılan bir uygulama için [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)].  
+ Aşağıdaki kod örneği, `file` kullanılarak dağıtılan bir uygulama için bir uygulama bildirimindeki öğeleri gösterir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] .  
   
 ```  
 <file name="Icon.ico" size="9216">  
@@ -202,4 +202,4 @@ ms.locfileid: "68148772"
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ClickOnce Uygulama Bildirimi](../deployment/clickonce-application-manifest.md)
+ [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

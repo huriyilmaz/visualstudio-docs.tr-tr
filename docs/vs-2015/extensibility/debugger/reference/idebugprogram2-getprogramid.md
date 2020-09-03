@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::GetProgramId | Microsoft Docs
+title: 'IDebugProgram2:: GetProgramId | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 19c29b5cec555f9e3ad5157d7b4581777be42c98
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68148670"
 ---
 # <a name="idebugprogram2getprogramid"></a>IDebugProgram2::GetProgramId
@@ -24,7 +24,7 @@ ms.locfileid: "68148670"
 
 Bu program için bir GUID alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetProgramId(   
@@ -40,15 +40,15 @@ int GetProgramId( 
   
 #### <a name="parameters"></a>Parametreler  
  `pguidProgramId`  
- [out] Döndürür `GUID` Bu program için.  
+ dışı `GUID` Bu program için döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklama altyapısı (DE) geçirilen ilk program tanımlayıcısı döndürmelidir [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) veya [iliştirme](../../../extensibility/debugger/reference/idebugengine2-attach.md) yöntemleri. Bu program kimliği arasında hata ayıklayıcı bileşenleri sağlar.  
+ Bir hata ayıklama altyapısı (DE), ilk olarak [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) veya [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) yöntemlerine geçirilen program tanımlayıcısını döndürmelidir. Bu, programın hata ayıklayıcı bileşenleri arasında tanımlanmasını sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md)   
- [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)
+ [İliştir](../../../extensibility/debugger/reference/idebugengine2-attach.md)

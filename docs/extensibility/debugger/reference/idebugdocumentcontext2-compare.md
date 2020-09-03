@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::Karşılaştır | Microsoft Dokümanlar
+title: 'IDebugDocumentContext2:: Compare | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b0e46f765c8e4c0e12c3bb9447e0713919fae7b8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80731888"
 ---
 # <a name="idebugdocumentcontext2compare"></a>IDebugDocumentContext2::Compare
-Bu belge bağlamını belirli bir belge bağlamı dizisiyle karşılaştırır.
+Bu belge bağlamını, belirli bir belge bağlamı dizisiyle karşılaştırır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT Compare( 
@@ -47,22 +47,22 @@ int Compare( 
 
 ## <a name="parameters"></a>Parametreler
 `compare`\
-[içinde] Karşılaştırma türünü belirten [numaralandırma DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md) bir değer.
+'ndaki [DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md) numaralandırmasından karşılaştırma türünü belirten bir değer.
 
 `rgpDocContextSet`\
-[içinde] Karşılaştırılan belge bağlamlarını temsil eden bir dizi [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) nesnesi.
+'ndaki Karşılaştırılan belge bağlamlarını temsil eden bir [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) nesneleri dizisi.
 
 `dwDocContextSetLen`\
-[içinde] Karşılaştırılacak belge bağlamları dizisinin uzunluğu.
+'ndaki Karşılaştırılacak belge bağlamlarının dizisi uzunluğu.
 
 `pdwDocContext`\
-[çıkış] Dizin, karşılaştırmayı tatmin eden ilk belge bağlamının `rgpDocContextSet` dizilimine döndürür.
+dışı `rgpDocContextSet` Karşılaştırmayı karşılayan ilk belge bağlamının dizisine dizini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Eşleşme `S_OK` bulunursa döndürür. Eşleşme `S_FALSE` bulunamadıysa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ `S_OK`Bir eşleşme bulunursa döndürür. `S_FALSE`Eşleşme bulunmazsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Dizide geçirilen [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) nesneleri, çağrılan `IDebugDocumentContext2` nesneyi uygulayan aynı hata ayıklama altyapısı tarafından uygulanmalıdır; aksi takdirde, karşılaştırma geçerli değildir.
+ Dizide geçirilen [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) nesnelerinin, üzerinde çağrılan nesneyi uygulayan aynı hata ayıklama altyapısı tarafından uygulanması gerekir `IDebugDocumentContext2` ; Aksi takdirde, karşılaştırma geçerli değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)

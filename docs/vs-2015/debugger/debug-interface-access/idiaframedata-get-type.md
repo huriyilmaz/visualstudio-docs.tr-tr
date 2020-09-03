@@ -1,5 +1,5 @@
 ---
-title: Idiaframedata::get_type | Microsoft Docs
+title: 'IDiaFrameData:: get_type | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 95232ab69d6f30435807764e1177d15d6e4622d5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161433"
 ---
-# <a name="idiaframedatagettype"></a>IDiaFrameData::get_type
+# <a name="idiaframedataget_type"></a>IDiaFrameData::get_type
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Derleyici özel çerçeve türünü alır.  
+Derleyiciye özgü çerçeve türünü alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_type (   
@@ -35,11 +35,11 @@ HRESULT get_type ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Bir değer döndürür [StackFrameTypeEnum numaralandırması](../../debugger/debug-interface-access/stackframetypeenum.md) derleyici özgü çerçeve türünü belirten sabit listesi.  
+ dışı , Derleyiciye özgü çerçeve türünü gösteren [StackFrameTypeEnum numaralandırma](../../debugger/debug-interface-access/stackframetypeenum.md) numaralandırmasından bir değer döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiaframedata](../../debugger/debug-interface-access/idiaframedata.md)   
+ [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)   
  [StackFrameTypeEnum Numaralandırması](../../debugger/debug-interface-access/stackframetypeenum.md)

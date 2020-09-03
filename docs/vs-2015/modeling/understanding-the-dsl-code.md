@@ -12,16 +12,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3e8d82712a2fb8e30b13f9f369bf87be5292c199
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659483"
 ---
 # <a name="understanding-the-dsl-code"></a>DSL Kodunu Anlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Etki alanına özgü dil (DSL) çözümü, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ' deki DSL örneklerini okumak ve güncelleştirmek için kullanabileceğiniz bir API oluşturur. Bu API, DSL tanımından oluşturulan kodda tanımlanmıştır. Bu konuda, oluşturulan API açıklanmaktadır.
+Etki alanına özgü dil (DSL) çözümü, içindeki DSL örneklerini okumak ve güncelleştirmek için kullanabileceğiniz bir API oluşturur [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Bu API, DSL tanımından oluşturulan kodda tanımlanmıştır. Bu konuda, oluşturulan API açıklanmaktadır.
 
 ## <a name="the-example-solution-component-diagrams"></a>Örnek çözüm: Bileşen diyagramları
  Bu konudaki örneklerin çoğunun kaynağı olan çözümü oluşturmak için **bileşen modelleri** çözüm ŞABLONUNDAN bir DSL oluşturun. Bu, yeni bir DSL çözümü oluştururken görüntülenen standart şablonlardan biridir.
@@ -34,14 +34,14 @@ Etki alanına özgü dil (DSL) çözümü, [!INCLUDE[vsprvs](../includes/vsprvs-
  ![Bileşenler ve birbirine bağlı bağlantı noktaları](../modeling/media/componentsample.png "ComponentSample")
 
 ## <a name="the-structure-of-the-dsl-solution"></a>DSL çözümünün yapısı
- **DSL** projesi DSL için API 'yi tanımlar. **DslPackage** projesi, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ile nasıl tümleştiğini tanımlar. Ayrıca, modelden oluşturulan kodu da içerebilen kendi projelerinizi ekleyebilirsiniz.
+ **DSL** projesi DSL için API 'yi tanımlar. **DslPackage** projesi, ile nasıl tümleştiğini tanımlar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Ayrıca, modelden oluşturulan kodu da içerebilen kendi projelerinizi ekleyebilirsiniz.
 
 ### <a name="the-code-directories"></a>Kod dizinleri
  Bu projelerin her birinde bulunan kodun çoğu **Dsl\dsldefinition.exe**' den oluşturulmuştur. Oluşturulan kod, **oluşturulan kod** klasöründedir. Oluşturulan bir dosyayı görmek için üretilen **. tt** dosyasının yanındaki **[+]** düğmesine tıklayın.
 
  DSL 'yi anlamanıza yardımcı olması için üretilen kodu incelemenizi öneririz. Oluşturulan dosyaları görmek için Çözüm Gezgini içindeki *. tt dosyalarını genişletin.
 
- @No__t_0. tt dosyaları çok az üretilen kod içerir. Bunun yerine, paylaşılan şablon dosyalarını eklemek için `<#include>` yönergeleri kullanırlar. Paylaşılan dosyalar **\Program Files\Microsoft Visual Studio 10.0 \ Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates** dizininde bulunabilir
+ \*. Tt dosyaları çok az üretilen kod içerir. Bunun yerine, `<#include>` paylaşılan şablon dosyalarını dahil etmek için yönergeleri kullanırlar. Paylaşılan dosyalar **\Program Files\Microsoft Visual Studio 10.0 \ Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates** dizininde bulunabilir
 
  Kendi program kodunuzu DSL çözümüne eklediğinizde, oluşturulan kod klasörünün dışında ayrı bir dosyaya ekleyin. **Özel bir kod** klasörü oluşturmak isteyebilirsiniz. (Özel bir klasöre yeni bir kod dosyası eklediğinizde, ilk kod isketadaki ad alanını düzeltmeyi unutmayın.)
 
@@ -55,12 +55,12 @@ Etki alanına özgü dil (DSL) çözümü, [!INCLUDE[vsprvs](../includes/vsprvs-
 
      Örneğin, bir etki alanı sınıfına ait **özel Oluşturucu** seçeneğini ayarlarsanız ve sonra çözümü oluşturursanız, hata iletilerini görürsünüz. Bu hata iletilerinden birine çift tıkladığınızda, oluşturulan kodda özel kodunuzun ne sağlaması gerektiğini açıklayan Yorumlar görürsünüz.
 
-- Uygulamanıza özel kod oluşturmak için kendi metin şablonlarınızı yazın. Birçok projede ortak olan şablonların parçalarını paylaşmak için içerme dosyalarını kullanabilir ve kendi dosya yapınız ile başlatılan projeleri ayarlamak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] proje şablonları oluşturabilirsiniz.
+- Uygulamanıza özel kod oluşturmak için kendi metin şablonlarınızı yazın. Birçok projede ortak olan şablonların parçalarını paylaşmak için içerme dosyalarını kullanabilir ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kendi dosya yapınız ile başlatılan projeleri ayarlamak için proje şablonları oluşturabilirsiniz.
 
 ## <a name="generated-files-in-dsl"></a>DSL 'de oluşturulan dosyalar
  Aşağıdaki oluşturulan dosyalar **DSL** projesinde görüntülenir.
 
- *Yourdsl* `Schema.xsd`
+ *Yourdsl*`Schema.xsd`
 
  DSL örneklerini içeren dosyalar için şema. Bu dosya, derleme (**bin**) dizinine kopyalanır. DSL 'yi yüklediğinizde, model dosyalarının doğrulanması için bu dosyayı **\Program Files\Microsoft Visual Studio 11.0 \ Xml\Schemas dizinine** kopyalayabilirsiniz. Daha fazla bilgi için bkz. [etki alanına özgü dil çözümlerini dağıtma](../modeling/deploying-domain-specific-language-solutions.md).
 
@@ -76,7 +76,7 @@ Etki alanına özgü dil (DSL) çözümü, [!INCLUDE[vsprvs](../includes/vsprvs-
 
  `CommentReferencesSubject(sourceAccepted, targetAccepted);`
 
- Her Oluşturucu sınıfı, DSL Gezgini 'ndeki **bağlantı oluşturucuları** bölümünde bir düğümden oluşturulur. Bir `Connect` yöntemi, bir veya daha fazla etki alanı sınıfı çifti arasında ilişkiler oluşturabilir. Her bir çift, bir bağlantı bağlama yönergesi tarafından tanımlanır ve bu,, Oluşturucu düğümü altında DSL Gezgini 'nde bulabilirsiniz.
+ Her Oluşturucu sınıfı, DSL Gezgini 'ndeki **bağlantı oluşturucuları** bölümünde bir düğümden oluşturulur. Bir `Connect` Yöntem, bir veya daha fazla etki alanı sınıfı çifti arasında ilişkiler oluşturabilir. Her bir çift, bir bağlantı bağlama yönergesi tarafından tanımlanır ve bu,, Oluşturucu düğümü altında DSL Gezgini 'nde bulabilirsiniz.
 
  Örneğin, örnek DSL 'deki üç ilişki türünün her biri için bir bağlantı Oluşturucu bağlantı bağlama yönergeleri ekleyebilirsiniz. Bu, kullanıcıya tek bir bağlantı aracı sağlar. Oluşturulan ilişki türü, Kullanıcı tarafından seçilen kaynak ve hedef öğelerin türlerine bağlıdır.  Bağlantı bağlama yönergeleri eklemek için DSL Gezgininde bir oluşturucuya sağ tıklayın.
 
@@ -86,51 +86,51 @@ Etki alanına özgü dil (DSL) çözümü, [!INCLUDE[vsprvs](../includes/vsprvs-
 
  `Connectors.cs`
 
- Genellikle başvuru ilişkilerini temsil eden diyagram öğeleri olan bağlayıcıların sınıflarını içerir. Her sınıf DSL tanımındaki bir bağlayıcıdan oluşturulur. Her bağlayıcı sınıfı <xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape> türetilir
+ Genellikle başvuru ilişkilerini temsil eden diyagram öğeleri olan bağlayıcıların sınıflarını içerir. Her sınıf DSL tanımındaki bir bağlayıcıdan oluşturulur. Her bağlayıcı sınıfı, öğesinden türetilir <xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape>
 
  Çalışma zamanında rengi ve diğer stil özellikleri değişkenlerini yapmak için, DSL tanımı diyagramında sınıfa sağ tıklayın ve **sunulan Ekle**' ye gelin.
 
- Çalışma zamanında ek stil özellikleri değişkeni yapmak için bkz. Örneğin <xref:Microsoft.VisualStudio.Modeling.Diagrams.TextField> ve <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement>.
+ Çalışma zamanında ek stil özellikleri değişkeni yapmak için bkz <xref:Microsoft.VisualStudio.Modeling.Diagrams.TextField> . Örneğin ve <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement> .
 
  `Diagram.cs`
 
- Diyagramı tanımlayan sınıfı içerir. @No__t_0 türetilir.
+ Diyagramı tanımlayan sınıfı içerir. Öğesinden türetilir <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> .
 
  Çalışma zamanında rengi ve diğer stil özellikleri değişkenlerini yapmak için, DSL tanımı diyagramında sınıfa sağ tıklayın ve **sunulan Ekle**' ye gelin.
 
- Ayrıca, bu dosya modele yeni bir öğe eklendiğinde yanıt veren `FixupDiagram` kuralını içerir. Kural yeni bir şekil ekler ve şekli model öğesine bağlar.
+ Ayrıca, bu dosya, `FixupDiagram` modele yeni bir öğe eklendiğinde yanıt veren kuralını içerir. Kural yeni bir şekil ekler ve şekli model öğesine bağlar.
 
  `DirectiveProcessor.cs`
 
- Bu yönerge işlemcisi, kullanıcılarınızın DSL örneğini okuyan metin şablonları yazmasına yardımcı olur. Yönerge işlemcisi DSL için derlemeleri (dll 'Ler) yükler ve ad alanınız için etkin bir şekilde `using` deyimlerini ekler. Bu, metin şablonlarındaki kodun DSL 'de tanımladığınız sınıfları ve ilişkileri kullanmasına izin verir.
+ Bu yönerge işlemcisi, kullanıcılarınızın DSL örneğini okuyan metin şablonları yazmasına yardımcı olur. Yönerge işlemcisi, DSL 'niz için derlemeleri (dll 'Ler) yükler ve `using` ad alanınız için etkin bir şekilde deyimler ekler. Bu, metin şablonlarındaki kodun DSL 'de tanımladığınız sınıfları ve ilişkileri kullanmasına izin verir.
 
  Daha fazla bilgi için bkz. [etki alanına özgü dilden kod oluşturma](../modeling/generating-code-from-a-domain-specific-language.md) ve [özel T4 metin şablonu yönerge işlemcileri oluşturma](../modeling/creating-custom-t4-text-template-directive-processors.md).
 
  `DomainClasses.cs`
 
- Soyut sınıflar ve model kök sınıfı dahil, tanımladığınız etki alanı sınıflarının uygulamaları. @No__t_0 türetilir.
+ Soyut sınıflar ve model kök sınıfı dahil, tanımladığınız etki alanı sınıflarının uygulamaları. Bunlar öğesinden türetilir <xref:Microsoft.VisualStudio.Modeling.ModelElement> .
 
  Her etki alanı sınıfı şunları içerir:
 
 - Her etki alanı özelliği için bir özellik tanımı ve iç içe geçmiş işleyici sınıfı. OnValueChanging () ve OnValueChanged () öğesini geçersiz kılabilirsiniz. Daha fazla bilgi için bkz. [etki alanı özellik değeri değişiklik işleyicileri](../modeling/domain-property-value-change-handlers.md).
 
-   Örnek DSL 'de, `Comment` sınıfı bir özellik `Text` ve bir işleyici sınıfı `TextPropertyHandler` içerir.
+   Örnek DSL 'de, `Comment` sınıfı bir özellik `Text` ve bir işleyici sınıfı içerir `TextPropertyHandler` .
 
 - Bu alan sınıfının katıldığı ilişkiler için erişimci özellikleri. (Rol özellikleri için iç içe bir sınıf yoktur.)
 
-   Örnek DSL 'de `Comment` sınıfı, katıştırma ilişkisi `ComponentModelHasComments` aracılığıyla üst modeline erişen erişimcileri içerir.
+   Örnek DSL 'de, sınıfı, `Comment` katıştırma ilişkisi aracılığıyla üst modeline erişen erişimcileri içerir `ComponentModelHasComments` .
 
 - Kurucu. Bunları geçersiz kılmak istiyorsanız, set alanı sınıfında **özel Oluşturucusu vardır** .
 
 - Öğe grubu prototipi (EGP) işleyici yöntemleri. Bu, Kullanıcı bu sınıfın örneklerine başka bir öğe *birleştirecan* (eklemek) için gereklidir. Genellikle Kullanıcı bunu bir öğe aracından veya başka bir şekilden sürükleyerek veya yapıştırarak yapar.
 
-   Örnek DSL 'de, bir giriş bağlantı noktası veya çıkış bağlantı noktası bir bileşen üzerinde birleştirilebilir. Ayrıca, bileşenler ve açıklamalar model üzerinde birleştirilebilir. Bu
+   Örnek DSL 'de, bir giriş bağlantı noktası veya çıkış bağlantı noktası bir bileşen üzerinde birleştirilebilir. Ayrıca, bileşenler ve açıklamalar model üzerinde birleştirilebilir. Sanal Makineye (VM) bağlı bir veya birden çok işletim sistemi diski içerdiği için
 
    Bileşen sınıfındaki EGP işleyici yöntemleri, bir bileşenin bağlantı noktalarını kabul etmesine izin vermez, ancak açıklamaları kabul etmez. Kök model sınıfındaki EGP işleyicisi açıklamaları ve bileşenleri kabul eder, ancak bağlantı noktalarını kabul etmez.
 
   `DomainModel.cs`
 
-  Etki alanı modelini temsil eden sınıf. @No__t_0 türetilir.
+  Etki alanı modelini temsil eden sınıf. Öğesinden türetilir <xref:Microsoft.VisualStudio.Modeling.DomainModel> .
 
 > [!NOTE]
 > Bu, modelin kök sınıfıyla aynı değildir.
@@ -145,7 +145,7 @@ Etki alanına özgü dil (DSL) çözümü, [!INCLUDE[vsprvs](../includes/vsprvs-
 
  `DomainRelationships.cs`
 
- Bir modeldeki iki öğe arasındaki her bağlantı, bir etki alanı ilişki sınıfının örneğiyle temsil edilir. Tüm ilişki sınıfları <xref:Microsoft.VisualStudio.Modeling.ElementLink> türetilir ve bu, sırasıyla <xref:Microsoft.VisualStudio.Modeling.ModelElement> türetilir. Bir ModelElement olduğundan, ilişkinin bir örneği özelliklere sahip olabilir ve bir ilişkinin kaynağı veya hedefi olabilir.
+ Bir modeldeki iki öğe arasındaki her bağlantı, bir etki alanı ilişki sınıfının örneğiyle temsil edilir. Tüm ilişki sınıfları öğesinden türetilir <xref:Microsoft.VisualStudio.Modeling.ElementLink> ve bu, sırasıyla öğesinden türetilir <xref:Microsoft.VisualStudio.Modeling.ModelElement> . Bir ModelElement olduğundan, ilişkinin bir örneği özelliklere sahip olabilir ve bir ilişkinin kaynağı veya hedefi olabilir.
 
  `HelpKeywordHelper.cs`
 
@@ -153,7 +153,7 @@ Etki alanına özgü dil (DSL) çözümü, [!INCLUDE[vsprvs](../includes/vsprvs-
 
  `MultiplicityValidation.cs`
 
- 1\... 1 veya 1.. * çokluğunu belirttiğiniz ilişki rollerinde, Kullanıcı ilişkinin en az bir örneğinin gerekli olduğu konusunda uyarılmalıdır. Bu dosya, bu uyarıları uygulayan doğrulama kısıtlamalarını sağlar. 1\.. 1 gömme üst öğesine bağlantı doğrulanmadı.
+ 1... 1 veya 1.. * çokluğunu belirttiğiniz ilişki rollerinde, Kullanıcı ilişkinin en az bir örneğinin gerekli olduğu konusunda uyarılmalıdır. Bu dosya, bu uyarıları uygulayan doğrulama kısıtlamalarını sağlar. 1.. 1 gömme üst öğesine bağlantı doğrulanmadı.
 
  Bu kısıtlamaların yürütülmesi için DSL Gezgini 'ndeki **Editor\validation** düğümündeki **...** seçeneklerinden birini ayarlamış olmanız gerekir. Daha fazla bilgi için bkz. [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md).
 
@@ -175,7 +175,7 @@ Etki alanına özgü dil (DSL) çözümü, [!INCLUDE[vsprvs](../includes/vsprvs-
 
   `Shapes.cs`
 
-  DSL tanımındaki her şekil sınıfı için bir sınıf. Şekiller <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape> türetilir. Daha fazla bilgi için bkz. [Dosya depolamayı ve XML Serileştirmeyi özelleştirme](../modeling/customizing-file-storage-and-xml-serialization.md).
+  DSL tanımındaki her şekil sınıfı için bir sınıf. Şekiller öğesinden türetilir <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape> . Daha fazla bilgi için bkz. [Dosya depolamayı ve XML Serileştirmeyi özelleştirme](../modeling/customizing-file-storage-and-xml-serialization.md).
 
   Oluşturulan yöntemleri kısmi bir sınıfta kendi yöntemleriniz ile geçersiz kılmak için, küme, DSL tanımındaki bağlayıcı için **çift türetilmiş oluştur oluşturur** . Bir oluşturucuyu kendi kodunuzla değiştirmek için, kümesinin **özel Oluşturucusu vardır**.
 
@@ -187,10 +187,10 @@ Etki alanına özgü dil (DSL) çözümü, [!INCLUDE[vsprvs](../includes/vsprvs-
 
   Öğesi grup prototiplerini öğe araçlarına yükleyerek araç kutusunu ayarlar. Bu prototiptürlerin kopyaları, Kullanıcı aracı çalıştırdığında hedef öğelerle birleştirilir.
 
-  Birkaç nesne grubunu oluşturan bir araç kutusu öğesini tanımlamak için `CreateElementPrototype()` geçersiz kılabilirsiniz. Örneğin, alt bileşenlere sahip nesneleri temsil etmek için bir öğe tanımlayabilirsiniz. Kodu değiştirdikten sonra, araç kutusu önbelleğini temizlemek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Deneysel örneğini sıfırlayın.
+  `CreateElementPrototype()`Birkaç nesne grubunu oluşturan bir araç kutusu öğesi tanımlamak için geçersiz kılabilirsiniz. Örneğin, alt bileşenlere sahip nesneleri temsil etmek için bir öğe tanımlayabilirsiniz. Kodu değiştirdikten sonra, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] araç kutusu önbelleğini temizlemek için Deneysel örneğini sıfırlayın.
 
 ## <a name="generated-files-in-the-dslpackage-project"></a>DslPackage projesinde oluşturulan dosyalar
- DslPackage,, pencereyi, araç kutusunu ve menü komutlarını yönetmek için DSL modelini [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Shell 'e bağar. Sınıfların çoğu çift türetilir, böylece yöntemlerinden herhangi birini geçersiz kılabilirsiniz.
+ DslPackage,, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pencereyi, araç kutusunu ve menü komutlarını yönetmek IÇIN DSL modelini kabuğa bağar. Sınıfların çoğu çift türetilir, böylece yöntemlerinden herhangi birini geçersiz kılabilirsiniz.
 
  `CommandSet.cs`
 
@@ -202,13 +202,13 @@ Etki alanına özgü dil (DSL) çözümü, [!INCLUDE[vsprvs](../includes/vsprvs-
 
  `DocData.cs`
 
- *Yourdsl* `DocData`, bir modeli dosyaya yüklemeyi ve kaydetmeyi yönetir ve mağaza örneğini oluşturur.
+ *Yourdsl* `DocData` bir modelin yüklenmesini ve dosyaya kaydedilmesini yönetir ve mağaza örneği oluşturur.
 
- Örneğin, DSL 'yi bir dosya yerine bir veritabanına kaydetmek istiyorsanız `Load` ve `Save` yöntemlerini geçersiz kılabilirsiniz.
+ Örneğin, DSL 'yi bir dosya yerine bir veritabanına kaydetmek istiyorsanız, `Load` ve yöntemlerini geçersiz kılabilirsiniz `Save` .
 
  `DocView.cs`
 
- *Yourdsl* `DocView` diyagramın göründüğü pencereyi yönetir. Örneğin, diyagramı bir Windows formu içine katabilirsiniz:
+ *Yourdsl* `DocView` Diyagramın göründüğü pencereyi yönetir. Örneğin, diyagramı bir Windows formu içine katabilirsiniz:
 
  DslPackage projesine bir kullanıcı denetim dosyası ekleyin. Diyagramın görüntülenebileceği bir panel ekleyin. Düğmeleri ve diğer denetimleri ekleyin. Formun kod görünümünde, aşağıdaki kodu ekleyerek adı DSL 'nize göre ayarlama:
 
@@ -281,7 +281,7 @@ namespace Company.EmbedInForm
 
  `EditorFactory.cs`
 
- @No__t_0 ve `DocView` örnekleyen. DSL paketiniz başlatıldığında bir düzenleyiciyi açmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kullanılan standart bir arabirimi karşılar. Package.cs içinde `ProvideEditorFactory` özniteliğinde başvurulur
+ `DocData`Ve oluşturur `DocView` . [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]DSL paketiniz başlatıldığında bir düzenleyiciyi açmak için kullanan standart bir arabirimi karşılar. `ProvideEditorFactory`Package.cs içindeki özniteliğinde başvurulur
 
  `GeneratedVSCT.vsct`
 
@@ -291,7 +291,7 @@ namespace Company.EmbedInForm
 
  DSL için model Gezginini tanımlar. Bu, kullanıcının diyagram ile birlikte gördüğü modelin ağaç görünümüdür.
 
- Örneğin, öğelerin model Gezgininde görünme sırasını değiştirmek için `InsertTreeView()` geçersiz kılabilirsiniz.
+ Örneğin, `InsertTreeView()` model Gezgininde öğelerin görünme sırasını değiştirmek için geçersiz kılabilirsiniz.
 
  Model Gezgini 'ndeki seçimin diyagram seçimiyle eşitlenmiş kalmasını istiyorsanız aşağıdaki kodu kullanabilirsiniz:
 
@@ -337,14 +337,14 @@ explorerWindow.TreeContainer.ObjectModelBrowser.SelectedNode = treeNode;
 
  `Package.cs`
 
- Bu dosya, DSL 'nin [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nasıl tümleştirildiğini tanımlar. Paket sınıfındaki öznitelikler, dosya uzantınızı içeren dosyalar için bir işleyici olarak DSL 'yi kaydeder, onun araç kutusunu tanımlar ve yeni bir pencerenin nasıl açılacağını tanımlar. Initialize () yöntemi, ilk DSL bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneğine yüklendiğinde bir kez çağrılır.
+ Bu dosya, DSL 'nin nasıl tümleştirildiğini tanımlar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Paket sınıfındaki öznitelikler, dosya uzantınızı içeren dosyalar için bir işleyici olarak DSL 'yi kaydeder, onun araç kutusunu tanımlar ve yeni bir pencerenin nasıl açılacağını tanımlar. Initialize () yöntemi ilk DSL bir örneğe yüklendiğinde bir kez çağrılır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
  `Source.extension.vsixmanifest`
 
- Bu dosyayı özelleştirmek için `.tt` dosyasını düzenleyin.
+ Bu dosyayı özelleştirmek için `.tt` dosyayı düzenleyin.
 
 > [!WARNING]
-> . Tt dosyasını simgeler veya görüntüler gibi kaynakları içerecek şekilde düzenlerseniz, kaynağın VSıX derlemesinde bulunduğundan emin olun. Çözüm Gezgini, dosyayı seçin ve **VSIX özelliğinde içer** özelliğinin `True` olduğundan emin olun.
+> . Tt dosyasını simgeler veya görüntüler gibi kaynakları içerecek şekilde düzenlerseniz, kaynağın VSıX derlemesinde bulunduğundan emin olun. Çözüm Gezgini, dosyayı seçin ve **VSIX 'e dahil et** özelliğinin olduğundan emin olun `True` .
 
  Bu dosya, DSL 'nin bir Visual Studio Tümleştirme Uzantısı 'na (VSıX) nasıl paketlendiğini denetler. Daha fazla bilgi için bkz. [etki alanına özgü dil çözümlerini dağıtma](../modeling/deploying-domain-specific-language-solutions.md).
 

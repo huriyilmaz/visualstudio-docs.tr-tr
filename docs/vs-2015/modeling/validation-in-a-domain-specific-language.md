@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9a19ebab7b0c820e336965b4020eff2c2f9726cd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659360"
 ---
 # <a name="validation-in-a-domain-specific-language"></a>Etki Alanına Özgü bir Dilde Doğrulama
@@ -62,7 +62,7 @@ Etki alanına özgü dilin (DSL) yazarı olarak, Kullanıcı tarafından oluştu
 
    2. DSL Gezgini ' nde **Düzenleyici** düğümünü genişletin ve **doğrulama**' yı seçin.
 
-   3. Özellikler penceresi, **kullanım** özelliklerini `true` olarak ayarlayın. Bu özelliklerin tümünü ayarlamak en kolay yöntemdir.
+   3. Özellikler penceresi, **kullanımları**  özelliklerini olarak ayarlayın `true` . Bu özelliklerin tümünü ayarlamak en kolay yöntemdir.
 
    4. Çözüm Gezgini araç çubuğunda **Tüm Şablonları Dönüştür** ' e tıklayın.
 
@@ -74,11 +74,11 @@ Etki alanına özgü dilin (DSL) yazarı olarak, Kullanıcı tarafından oluştu
    [ValidationState(ValidationState.Enabled)]
    ```
 
-   - Bu öznitelik, varsayılan olarak türetilmiş sınıflar için doğrulamayı de etkinleştirir. Belirli bir türetilmiş sınıf için doğrulamayı devre dışı bırakmak istiyorsanız `ValidationState.Disabled` kullanabilirsiniz.
+   - Bu öznitelik, varsayılan olarak türetilmiş sınıflar için doğrulamayı de etkinleştirir. Belirli bir türetilmiş sınıf için doğrulamayı devre dışı bırakmak istiyorsanız, kullanabilirsiniz `ValidationState.Disabled` .
 
-4. Sınıflara doğrulama yöntemleri ekleyin. Her doğrulama yöntemi herhangi bir ada sahip olabilir, ancak <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationContext> türünde bir parametreye sahip olabilir.
+4. Sınıflara doğrulama yöntemleri ekleyin. Her doğrulama yöntemi herhangi bir ada sahip olabilir, ancak türünde bir parametreye sahip olabilir <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationContext> .
 
-    Ön eki bir veya daha fazla `ValidationMethod` özniteliği olmalıdır:
+    Ön eki bir veya daha fazla özniteliğe sahip olmalıdır `ValidationMethod` :
 
    ```csharp
    [ValidationMethod (ValidationCategories.Open | ValidationCategories.Save | ValidationCategories.Menu ) ]
@@ -129,13 +129,13 @@ public partial class ParentsHaveChildren
 
  Bu kodla ilgili aşağıdaki noktalara dikkat edin:
 
-- , Etki alanı sınıflarına veya etki alanı ilişkilerine doğrulama yöntemleri ekleyebilirsiniz. Bu türlerin kodu **Dsl\generated Code\Domain \*. cs**' dir.
+- , Etki alanı sınıflarına veya etki alanı ilişkilerine doğrulama yöntemleri ekleyebilirsiniz. Bu türlerin kodu **Dsl\generated Code\Domain \* . cs**dosyasında bulunur.
 
 - Her doğrulama yöntemi, sınıfının ve alt sınıflarının her örneğine uygulanır. Bir etki alanı ilişkisi söz konusu olduğunda, her örnek iki model öğesi arasında bir bağlantıdır.
 
 - Doğrulama yöntemleri belirtilen sırada uygulanmaz ve her yöntem, öngörülebilir bir sırada sınıfının örneklerine uygulanmaz.
 
-- Genellikle, bu durum tutarsız sonuçlara yol açacağından, depolama içeriğini güncelleştirmek için bir doğrulama yöntemi için hatalı uygulamadır. Bunun yerine, yöntemi `context.LogError`, `LogWarning` veya `LogInfo` çağırarak herhangi bir hata bildirmelidir.
+- Genellikle, bu durum tutarsız sonuçlara yol açacağından, depolama içeriğini güncelleştirmek için bir doğrulama yöntemi için hatalı uygulamadır. Bunun yerine, yöntemi veya çağırarak herhangi bir hata bildirmeli `context.LogError` `LogWarning` `LogInfo` .
 
 - LogError çağrısında, Kullanıcı hata iletisine çift tıkladığında seçilecek model öğelerinin veya ilişki bağlantılarının bir listesini sağlayabilirsiniz.
 
@@ -146,7 +146,7 @@ public partial class ParentsHaveChildren
   ![DSL tanımı diyagramı &#45; aile ağacı modeli](../modeling/media/familyt-person.png "FamilyT_Person")
 
 ## <a name="validation-categories"></a>Doğrulama kategorileri
- @No__t_0 özniteliğinde, doğrulama yönteminin ne zaman yürütülmesi gerektiğini belirtirsiniz.
+ <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute>Özniteliğinde, doğrulama yönteminin ne zaman yürütülmesi gerektiğini belirtirsiniz.
 
 |Kategori|Yürütme|
 |--------------|---------------|
@@ -180,7 +180,7 @@ public partial class Person
 
  **Doğrulama kısıtlamalarını toplama.** Doğrulamayı öngörülebilir bir sırayla uygulamak için, modelinizin kök öğesi gibi bir sahip sınıfında tek bir doğrulama yöntemi tanımlayın. Bu teknik, birden çok hata raporunu tek bir iletide toplamanızı sağlar.
 
- Dezavantajları, birleştirilmiş metodun yönetilmesi daha kolaydır ve kısıtlamaların tümünün aynı `ValidationCategories` sahip olması gerekir. Bu nedenle, mümkünse her kısıtlamayı ayrı bir yöntemde tutmanızı öneririz.
+ Dezavantajları, birleştirilmiş metodun yönetilmesi daha kolaydır ve kısıtlamaların hepsi aynı olmalıdır `ValidationCategories` . Bu nedenle, mümkünse her kısıtlamayı ayrı bir yöntemde tutmanızı öneririz.
 
  **Bağlam önbelleğindeki değerleri geçirme.** Bağlam parametresinde, içine rastgele değerler yerleştirebileceğiniz bir sözlük bulunur. Sözlük, doğrulama çalışmasının ömrü boyunca devam ettirir. Belirli bir doğrulama yöntemi, örneğin, bağlamda hata sayısını tutabilir ve yinelenen iletilerle hata penceresinin taşmasını önlemek için kullanabilirsiniz. Örneğin:
 
@@ -199,7 +199,7 @@ if (erroneousLinks.Count < 5) { context.LogError( ... ); }
 
  Bir etki alanı ilişkisinin bir rolünün çokluğunu 1.. * veya 1.. 1 olacak şekilde ayarlarsanız, Kullanıcı bu ilişkinin bir bağlantısını oluşturmaz, bir doğrulama hata iletisi görüntülenir.
 
- Örneğin, DSL 'niz kişi ve kasaya sahip bir ilişkiye sahip olan bir ilişki olan bir ilişki olan bir ilişki olan **1... \\** * adlı ilişki, şehir rolü olan her kişi için bir hata mesajı görüntülenir.
+ Örneğin, DSL 'niz kişi ve kasalara sahipse ve ilişki 1 olan bir ilişkiye sahip olan bir ilişki **. \\ ** * Town rolünde, şehir olmayan her kişi için bir hata mesajı görüntülenir.
 
 ## <a name="running-validation-from-program-code"></a>Program kodundan doğrulama çalıştırma
  Doğrulaması, bir ValidationController 'a erişerek veya oluşturarak çalıştırabilirsiniz. Hataların hata penceresinde kullanıcıya görüntülenmesini istiyorsanız, diyagramınızın DocData 'a eklenmiş olan ValidationController ' ı kullanın. Örneğin, bir menü komutu yazıyorsanız, `CurrentDocData.ValidationController` komut kümesi sınıfında kullanılabilir:
@@ -241,7 +241,7 @@ if (!validator.Validate(store, ValidationCategories.Save))
 ## <a name="running-validation-when-a-change-occurs"></a>Değişiklik gerçekleştiğinde doğrulama çalıştırma
  Modelin geçersiz hale gelmesi durumunda kullanıcının hemen uyarı olduğundan emin olmak istiyorsanız, doğrulamayı çalıştıran bir depo olayı tanımlayabilirsiniz. Mağaza olayları hakkında daha fazla bilgi için bkz. [olay Işleyicileri değişiklikleri model dışında yayma](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
- Doğrulama koduna ek olarak, aşağıdaki örneğe benzer içeriğe sahip **DslPackage** projenize özel bir kod dosyası ekleyin. Bu kod, belgeye bağlı `ValidationController` kullanır. Bu denetleyici [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hata listesindeki doğrulama hatalarını görüntüler.
+ Doğrulama koduna ek olarak, aşağıdaki örneğe benzer içeriğe sahip **DslPackage** projenize özel bir kod dosyası ekleyin. Bu kod, `ValidationController` belgeye eklenmiş olan öğesini kullanır. Bu denetleyici hata listesindeki doğrulama hatalarını görüntüler [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 ```csharp
 using System;
@@ -304,7 +304,7 @@ namespace Company.FamilyTree
 
  İşleyiciler, bağlantıları veya öğeleri etkileyen geri alma veya yineleme işlemlerinden sonra da çağrılır.
 
-## <a name="custom"></a>Özel doğrulama kategorileri
+## <a name="custom-validation-categories"></a><a name="custom"></a> Özel doğrulama kategorileri
  Menü ve açık gibi standart doğrulama kategorilerinin yanı sıra kendi kategorilerinizi de tanımlayabilirsiniz. Bu kategorileri program kodundan çağırabilirsiniz. Kullanıcı bunları doğrudan çağıramıyor.
 
  Özel kategoriler için tipik bir kullanım, modelin belirli bir aracın ön koşulları 'nı karşılayıp karşılamadığını test eden bir kategori tanımlamaktır.
@@ -320,7 +320,7 @@ private void TestForCircularLinks(ValidationContext context)
 ```
 
 > [!NOTE]
-> Bir yöntemi istediğiniz sayıda `[ValidationMethod()]` özniteliğine önek olarak ekleyebilirsiniz. Hem özel hem de standart kategorilere bir yöntem ekleyebilirsiniz.
+> Bir yöntemi istediğiniz kadar çok özniteliğe önek olarak ekleyebilirsiniz `[ValidationMethod()]` . Hem özel hem de standart kategorilere bir yöntem ekleyebilirsiniz.
 
  Özel bir doğrulama çağırmak için:
 
@@ -332,17 +332,17 @@ validationController.ValidateCustom
    "PreconditionsForGeneratePartsList");
 ```
 
-## <a name="alternatives"></a>Doğrulamanın alternatifleri
+## <a name="alternatives-to-validation"></a><a name="alternatives"></a> Doğrulamanın alternatifleri
  Doğrulama kısıtlamaları hataları raporlar, ancak modeli değiştirmez. Bunun yerine, modelin geçersiz hale gelmesini engellemek isterseniz, diğer teknikleri kullanabilirsiniz.
 
  Ancak, bu teknikler önerilmez. Kullanıcının geçersiz bir modeli nasıl düzelteceğine karar vermesini sağlamak genellikle daha iyidir.
 
  **Modeli doğruluğuna geri yüklemek için değişikliği ayarlayın.** Örneğin, Kullanıcı izin verilen en büyük düzeyin üzerinde bir özellik ayarlarsa, özelliği maksimum değere sıfırlayabilirsiniz. Bunu yapmak için bir kural tanımlayın. Daha fazla bilgi için bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).
 
- **Geçersiz bir değişiklik denendiğinde işlemi geri alın.** Ayrıca, bu amaçla bir kural tanımlayabilirsiniz, ancak bazı durumlarda **OnValueChanging ()** Özellik işleyicisini geçersiz kılmak veya bir işlemi geri almak için `OnDeleted().` gibi bir yöntemi geçersiz kılmak için, daha fazla bilgi için `this.Store.TransactionManager.CurrentTransaction.Rollback().` kullanın, bkz. [etki alanı özelliği Değer değişiklik Işleyicileri](../modeling/domain-property-value-change-handlers.md).
+ **Geçersiz bir değişiklik denendiğinde işlemi geri alın.** Ayrıca, bu amaçla bir kural tanımlayabilirsiniz, ancak bazı durumlarda **OnValueChanging ()** Özellik işleyicisini geçersiz kılmak veya bir işlemi geri almak için gibi bir yöntemi geçersiz kılmak için, `OnDeleted().` `this.Store.TransactionManager.CurrentTransaction.Rollback().` daha fazla bilgi Için, bkz. [etki alanı özellik değeri değişiklik işleyicileri](../modeling/domain-property-value-change-handlers.md).
 
 > [!WARNING]
-> Kullanıcının değişikliğin ayarlandığını veya geri alındı olduğunu bildiğinden emin olun. Örneğin, `System.Windows.Forms.MessageBox.Show("message").` kullanın
+> Kullanıcının değişikliğin ayarlandığını veya geri alındı olduğunu bildiğinden emin olun. Örneğin, `System.Windows.Forms.MessageBox.Show("message").`
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Program kodu olay Işleyicilerinde bir modeli gezinme ve güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md) [, değişiklikleri model dışında yayma](../modeling/event-handlers-propagate-changes-outside-the-model.md)

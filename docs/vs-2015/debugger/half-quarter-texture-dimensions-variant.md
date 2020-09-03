@@ -1,5 +1,5 @@
 ---
-title: Yarı Çeyrek doku boyutları çeşidi | Microsoft Docs
+title: Yarı çeyrek doku boyutları varyantı | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,42 +10,42 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 03485a3b9df9c06b1ef4755a5758cf2c8c997d1e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161153"
 ---
 # <a name="halfquarter-texture-dimensions-variant"></a>Yarı/Çeyrek Doku Boyutları Çeşidi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Doku boyutlarını hedefleri işlenmeyebilir dokular üzerinde azaltır.  
+İşleme hedefi olmayan dokuların doku boyutlarını azaltır.  
   
-## <a name="interpretation"></a>Yorumu  
- Daha küçük dokular daha az bellek kaplar ve bu nedenle daha az bellek bant genişliği tüketebilir ve GPU'nun doku önbelleğinin Basıncı azaltın. Ancak, özellikle bunlar yakından 3B Sahne görüntülenebilir veya büyütme altında görüntülenen zaman, daha az ayrıntılı daha düşük bir görüntü kalitesini neden olabilir.  
+## <a name="interpretation"></a>Yorumlama  
+ Küçük dokular daha az bellek kaplar ve bu nedenle daha az bellek bant genişliği tüketir ve GPU 'nun doku önbelleğinde basınç azalır. Ancak, özellikle de 3-b sahnede yakından görüntülendiklerinde veya büyütme bölümünde görüntülenirken, daha az ayrıntı, daha az görüntü kalitesine neden olabilir.  
   
- Bu değişken, bir büyük bir performans kazancı gösteriyorsa, uygulamanızın çok fazla bellek bant genişliği, doku önbelleğe verimsiz kullanan veya her ikisi de kullandığı belirtebilirsiniz. Doku kullanılabilir bellekten daha fazlasını GPU sistem belleği disk belleğine alınacak dokular neden kaplayabilir olduğunu gösterebilir.  
+ Bu çeşit büyük bir performans kazancı gösteriyorsa, uygulamanızın çok fazla bellek bant genişliği tükettiğini, doku önbelleğinin yeterince veya her ikisini de kullandığını gösterebilir. Ayrıca dokularınızın kullanılabilir olandan daha fazla GPU belleği kapladığını belirtebilir ve bu da dokuların sistem belleğine disk belleğine alınmasına neden olur.  
   
- Uygulamanız çok fazla bellek bant genişliği ya da verimsiz doku önbelleğinin kullanıyorsa, dokular, ancak yalnızca, mip eşlemeleri için uygun dokular etkinleştirmeyi düşünün sonra boyutunu küçültmeyi düşünün. Daha küçük dokular gibi daha az bellek bant genişliği MIP eşlemeli dokular tüketen — bunlar daha fazla GPU bellek kaplayan olsa da — ve artışı önbellek kullanımı, ancak doku ayrıntı azaltmak yok. Sistem belleği disk belleğine alınacak dokular bellek kullanımının artmasına neden olduğunda mip eşlemeleri öneririz.  
+ Uygulamanız çok fazla bellek bant genişliği kullanıyorsa veya doku önbelleğini yeterince tercih edebiliyorsa, dokularınızın boyutunu azaltmayı göz önünde bulundurun, ancak yalnızca uygun dokular için MIP haritalarını etkinleştirmeyi düşünün. Daha küçük dokulara benzer şekilde, MIP eşlenmiş dokular, daha fazla GPU belleği kaplamakla birlikte daha az bellek bant genişliği tüketir ve önbellek kullanımını artırabilir, ancak doku ayrıntılarını azaltmazlar. Yüksek bellek kullanımı, dokuların sistem belleğine disk belleğine alınmasına neden olmadığı durumlarda MIP haritaları öneririz.  
   
- Kullanılabilir alandan daha fazla GPU bellek, doku kaplayabilir, dokular, ancak yalnızca uygun doku sıkıştırma dikkate almanız sonra boyutunu küçültmeyi düşünün. Daha küçük dokular gibi sıkıştırılmış dokular daha az bellek kaplar ve sistem bellek sayfasına ihtiyacınızı azaltır, ancak kendi rengi güvenilirlik azalır. Sıkıştırma içeriğine bağlı olarak tüm dokular için uygun değildir — Örneğin, önemli olanlar küçük bir alanı varyasyonu renk — ancak birçok doku için kendi boyutunu küçültmeyi daha iyi genel görüntü kalitesini sıkıştırma koruyabilirsiniz.  
+ Dokularınız kullanılabilir olandan daha fazla GPU belleği kapladığında dokuların boyutunu azaltmayı göz önünde bulundurun, ancak yalnızca uygun dokuları sıkıştırmayı düşünün. Küçük dokular gibi, sıkıştırılan dokular daha az bellek kaplar ve sistem belleğine sayfa ihtiyacını azaltır, ancak renk uygunluğuna düşürülür. Sıkıştırma, içeriğine bağlı olarak tüm dokuların (örneğin, küçük bir alanda önemli renk varyasyonlarına sahip olanlar) uygun değildir, ancak birçok dokuda sıkıştırma, boyutlarını azaltmadan daha iyi genel görüntü kalitesini koruyabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Doku boyutlarını üzerinde yapılan her çağrı sınırlı `ID3D11Device::CreateTexture2D` kaynak doku oluşturur. Doku boyutlarını D3D11_TEXTURE2D_DESC nesneden olduğunda özellikle azaltılır `pDesc` işlemede kullanılan; olan bir doku açıklar:  
+ Doku boyutları, `ID3D11Device::CreateTexture2D` kaynak dokusu oluşturan her çağrıda azaltılır. Özellikle, geçirilen D3D11_TEXTURE2D_DESC nesne, `pDesc` işlemede kullanılan bir dokuyu açıkladığı zaman doku boyutları azaltılır; bu:  
   
-- Yalnızca D3D11_BIND_SHADER_RESOURCE bayrağı ayarlanmış BindFlags üye var.  
+- BindFlags üyesi yalnızca D3D11_BIND_SHADER_RESOURCE bayrak kümesine sahiptir.  
   
-- D3D11_RESOURCE_MISC_TILE_POOL bayrağı veya (döşenmiş kaynakları değil boyutlandırılır) D3D11_RESOURCE_MISC_TILED bayrağı ayarlanmış MiscFlags üye yok.  
+- MiscFlags üyesinde D3D11_RESOURCE_MISC_TILE_POOL bayrağı yok veya D3D11_RESOURCE_MISC_TILED bayrağı ayarlı değil (döşeli kaynaklar yeniden boyutlandırılmaz).  
   
-- Bir işleme hedefi doku biçimi destekleniyor — D3D11_FORMAT_SUPPORT_RENDER_TARGET tarafından belirlenen şekilde — doku boyutunu azaltmak için gerekli olan. İşleme hedefleri olarak desteklenmeyen olsa bile BC1, BC2 ve BC3 biçimleri de desteklenir.  
+- Doku biçimi, doku boyutunu azaltmak için gereken D3D11_FORMAT_SUPPORT_RENDER_TARGET tarafından belirlendiği şekilde bir işleme hedefi olarak desteklenir. BC1, BC2 ve BC3 biçimleri, işleme hedefleri olarak desteklenmese de desteklenir.  
   
-  İlk veri uygulama tarafından sağlanmazsa, doku oluşturmadan önce bu değişken doku verilere uygun boyutta ölçeklendirir. İlk veri BC1, BC2 veya BC3 gibi blok sıkıştırılmış bir biçimde sağlanırsa, çözülmüş, ölçeklendirilebilir ve daha küçük bir doku oluşturmak için kullanılmadan önce yeniden kodlanmış. (Blok tabanlı sıkıştırma yapısını ek kod çözme-ölçeklendirme-kodlama işlemi neredeyse her zaman blok sıkıştırılmış bir doku değil önceden kodlanmış doku ölçeklendirilmiş bir sürümünden oluşturulduğunda daha düşük görüntü kalitesini neden anlamına gelir.)  
+  İlk veriler uygulama tarafından sağlandıysa, bu değişken doku verilerini dokuyu oluşturmadan önce uygun boyuta ölçeklendirir. İlk veriler, BC1, BC2 veya BC3 gibi bir blok ile sıkıştırılmış biçimde sağlanırsa, daha küçük dokuyu oluşturmak için kullanılmadan önce kodu çözülür, ölçeklendirilir ve yeniden kodlanır. (Blok tabanlı sıkıştırma yapısı, ek kod çözme-kodlama işleminin neredeyse her zaman daha önce kodlanmayan bir dokusunun ölçeklendirilen sürümünden oluşturulduğu zaman daha düşük görüntü kalitesine neden olur.)  
   
-  Mip eşlemeleri için doku etkinleştirilirse, değişken mip düzeyi sayısı buna uygun olarak azaltır — üç boyutlu ölçeklendirme, bir yarı boyutlu ölçeklerken daha az ya da iki daha az.  
+  Doku için MIP eşlemeleri etkinleştirilmişse, varyant, MIP düzeylerinin sayısını buna uygun şekilde azaltır; çeyrek boyutuna ölçeklendirirken yarı boyutlu veya iki daha az ölçeklendirirken bir daha az.  
   
 ## <a name="example"></a>Örnek  
- Bu değişken dokular çağırmadan önce çalışma zamanında yeniden boyutlandırır `CreateTexture2D`. Üretim kodu için bu yaklaşım karşı daha fazla disk alanı tam boyutlu dokuları tükettiği için ek bir adım yükleme süreleri uygulamanızda artırabildiğinden öneririz — özellikle sıkıştırılmış dokular gerektiren önemli hesaplama kodlamak için kaynaklar. Bunun yerine, bir Resim Düzenleyicisi veya derleme işlem hattınızı parçası olan resim işlemci kullanarak çevrimdışı, doku yeniden boyutlandırma öneririz. Bu yaklaşımların disk alanı gereksinimlerini azaltmak ve uygulamanızdaki çalışma zamanı ek yükü ortadan kaldırmak ve daha fazla işleme süresi en iyi görüntü kalitesini küçültme veya, doku sıkıştırma tutabildiğiniz göze.  
+ Bu varyant, çağrısından önce çalışma zamanında dokuları yeniden boyutlandırır `CreateTexture2D` . Tam boyutlu dokular daha fazla disk alanı kullandığından ve ek adım uygulamanızdaki yükleme sürelerini arttıracağından ve özellikle de daha fazla bilgi işlem kaynakları kodlamak için önemli bir hesaplama kaynağı gerektiren, üretim kodu için bu yaklaşıma önerilir. Bunun yerine, yapı işlem hattınızın bir parçası olan bir görüntü Düzenleyicisi veya görüntü işlemcisi kullanarak dokularınızı çevrimdışı olarak yeniden boyutlandırmanızı öneririz. Bu yaklaşımlar, disk alanı gereksinimlerini azaltır ve uygulamanızda çalışma zamanı ek yükünü ortadan kaldırır ve dokularınızı küçülterek veya sıkıştırırken en iyi görüntü kalitesini sürdürebilmeniz için daha fazla işleme süresi elde edebilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Mip-map oluşturma çeşidi](../debugger/mip-map-generation-variant.md)   
+ [MİP eşleme oluşturma varyantı](../debugger/mip-map-generation-variant.md)   
  [BC Doku Sıkıştırma Çeşidi](../debugger/bc-texture-compression-variant.md)

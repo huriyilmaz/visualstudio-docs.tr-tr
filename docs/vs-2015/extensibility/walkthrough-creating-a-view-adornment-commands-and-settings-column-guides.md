@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Görünüm kenarlığı, komutlar ve ayarlar (sütun kılavuzları) oluşturma | Microsoft Docs'
+title: 'İzlenecek yol: Görünüm kenarlığı, komutlar ve ayarlar oluşturma (sütun Kılavuzu) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -9,69 +9,69 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0cab24a373595ca1257cbdaa50c009eefa713ea7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68148836"
 ---
-# <a name="walkthrough-creating-a-view-adornment-commands-and-settings-column-guides"></a>İzlenecek yol: Görünüm Kenarlığı, Komutlar ve Ayarlar (Sütun Kılavuzları) Oluşturma
+# <a name="walkthrough-creating-a-view-adornment-commands-and-settings-column-guides"></a>İzlenecek Yol: Görünüm Kenarlığı, Komutlar ve Ayarlar (Sütun Kılavuzları) Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio metin/Kod Düzenleyicisi komutları ve görünüm efektleriyle genişletebilirsiniz. Bu konuda, bir popüler uzantısı özelliği, sütun kılavuzları ile çalışmaya başlama işlemini göstermektedir. Sütun, kodunuzda belirli sütun genişliklerini yönetmenize yardımcı olmak için metin düzenleyici görünümünde görsel olarak ışık çizgileri kılavuzlardır. Özel olarak biçimlendirilmiş kod belgeleri, blog gönderileri, dahil etmek veya hata raporları örnekleri için önemli olabilir.
+Visual Studio metin/kod düzenleyicisini komutlarla genişletebilir ve etkileri görüntüleyebilirsiniz. Bu konu başlığı altında, popüler bir uzantı özelliği olan sütun kılavuzlarıyla nasıl başlacağınız gösterilmektedir. Sütun kılavuzlarında, kodunuzun belirli sütun genişliklerine yönetilmesine yardımcı olmak için metin düzenleyici görünümünde çizilmiş görsel açıdan açık çizgiler bulunur. Belgelere, blog gönderilerine veya hata raporlarına eklediğiniz örnekler için özellikle biçimlendirilen kod önemli olabilir.
 
-Bu izlenecek yolda yapacaklarınız:
+Bu bölümde şunları yapacaksınız:
 
-- VSIX projesi oluşturun
-- Bir düzenleyici görünüm kenarlığı Ekle
-- Kaydetme ve (çizim sütun kılavuzları ve bunların renk için) ayarları almak için destek eklendi
-- Komutları eklendi (sütun kılavuzları Ekle/Kaldır, kendi rengi değiştirme)
-- Düzen menüsü ve metin belgesi bağlam menüleri komutları koyun
-- Visual Studio komut penceresinde komutlar yürütmesini desteği eklendi  
+- VSıX projesi oluşturma
+- Bir düzenleyici görünümü kenarlığı ekleme
+- Ayarları kaydetme ve alma (sütun kılavuzlarını ve bunların renklerini çizme) için destek ekleme
+- Komut ekleme (sütun kılavuzlarını Ekle/Kaldır, renklerini değiştir)
+- Komutları düzenleme menüsüne ve metin belgesi bağlam menülerine yerleştirin
+- Visual Studio komut penceresinden komutları çağırmaya yönelik destek ekleyin  
   
-  Bu Visual Studio Galerisi sütun kılavuzları özelliğiyle sürümünü deneyebilirsiniz[uzantısı](https://visualstudiogallery.msdn.microsoft.com/da227a0b-0e31-4a11-8f6b-3a149cf2e459?SRC=Home).  
+  Bu Visual Studio Galerisi[uzantısıyla](https://visualstudiogallery.msdn.microsoft.com/da227a0b-0e31-4a11-8f6b-3a149cf2e459?SRC=Home)bir sütun kılavuzu özelliğinin bir sürümünü deneyebilirsiniz.  
   
-  **Not**: Bu kılavuzda visual studio uzantı şablonları tarafından oluşturulan bazı dosyalara bir sürü kod yapıştırın, ancak yakında bu kılavuzda github'da diğer uzantı örnekleriyle tamamlanmış bir çözüm başvuracaktır. Tamamlanan kodu generictemplate simgeler kullanmak yerine gerçek komut simgeleri sahip, biraz farklıdır.
+  **Note**: Bu kılavuzda, Visual Studio Uzantı şablonları tarafından oluşturulan birkaç dosyaya çok sayıda kod yapıştırırsınız, ancak yakında Bu izlenecek yol, diğer uzantı örnekleriyle GitHub 'daki tamamlanmış bir çözüme başvuracaktır. Tamamlanan kod, generictemplate simgeleri kullanmak yerine gerçek komut simgelerine sahip olan biraz farklıdır.
 
 ## <a name="getting-started"></a>Başlarken
-Visual Studio 2015'ten başlayarak, size Visual Studio SDK İndirme Merkezi'nden yüklemeyin. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için [Visual Studio SDK'sını yükleme](../extensibility/installing-the-visual-studio-sdk.md).
+Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="setting-up-the-solution"></a>Çözümünü ayarlama
-İlk bir VSIX projesi oluşturun, bir düzenleyici görünüm kenarlığı ekleyin ve ardından (komut sahibi VSPackage ekleyen) bir komut ekleyin. Temel mimari aşağıdaki gibidir:
+## <a name="setting-up-the-solution"></a>Çözümü kurma
+İlk olarak bir VSıX projesi oluşturur, bir düzenleyici görünümü kenarlığı ekleyin ve ardından bir komut (komutuna bir VSPackage ekler) ekleyin. Temel mimari aşağıdaki gibidir:
 
-- Oluşturur bir metin görünümünü oluşturma dinleyici sahip bir `ColumnGuideAdornment` görünüm başına nesne. Bu nesne görünümü değiştirme hakkında olayları dinleyen veya ayarları değiştirme, güncelleştirme veya yeniden sütun gerektiği şekilde kılavuzluk eder.
-- Var olan bir `GuidesSettingsManager` Visual Studio ayarları depolamadan yazma ve okuma işler. Ayarlar Yöneticisi ayrıca kullanıcı komutları destek ayarları güncelleştirmek için işlemleri vardır (sütun ekleme, sütun kaldırmak, rengini değiştirme).
-- Kullanıcı komutları varsa gerekli olan bir VSIP paket, ancak yalnızca komutlar uygulama nesnesini başlatır Demirbaş kod değil.
-- Var olan bir `ColumnGuideCommands` uygulayan kullanıcı komutları ve komutlar için komut işleyicileri'kurmak kancaları nesne .vsct dosyası içinde bildirilmiş.
+- Görünüm başına nesne oluşturan bir metin görünümü oluşturma dinleyicisine sahipsiniz `ColumnGuideAdornment` . Bu nesne, sütun kılavuzlarını gerektiği şekilde değiştirme, güncelleştirme veya yeniden çizme gibi ayarlarla ilgili olayları dinler.
+- `GuidesSettingsManager`Visual Studio Settings Storage 'dan okumayı ve yazmayı işleyen bir bir vardır. Ayarlar Yöneticisi, Kullanıcı komutlarını destekleyen ayarları güncelleştirme (sütun Ekle, sütunu Kaldır, rengi değiştir) için de işlemler içerir.
+- Kullanıcı komutlarınız varsa gerekli bir VSıP paketi vardır ancak komutlar uygulama nesnesini Başlatan yalnızca ortak koddur.
+- `ColumnGuideCommands`Kullanıcı komutlarını uygulayan bir nesne vardır ve. vsct dosyasında belirtilen komutlar için komut işleyicilerini takar.
   
-  **VSIX**. Kullanım **dosya &#124; yeni...** bir proje oluşturmak için komutu. Sol Gezinti Bölmesi'nde genişletilebilirlik düğümünde C# ' ı seçin ve **VSIX projesi** sağ bölmede. ColumnGuides adını girin ve seçin **Tamam** projeyi oluşturmak için.
+  **VSIX**. **Yeni &#124; dosya kullan...** bir proje oluşturmak için komut. Sol gezinti bölmesindeki C# altında genişletilebilirlik düğümünü seçin ve sağ bölmedeki **VSIX projesi** ' ni seçin. ColumnGuides adını girip projeyi oluşturmak için **Tamam** ' ı seçin.
   
-  **Kenarlığı görüntüleyin**. Çözüm Gezgini'nde proje düğümüne sağ işaretçi düğmesine basın. Seçin **ekleme &#124; yeni öğe...** Yeni bir görünüm kenarlığı öğe eklemek için komutu. Seçin **genişletilebilirlik &#124; Düzenleyicisi** sol gezinti bölmesinde seçin **Düzenleyicisi Görünüm penceresi kenarlığı** sağ bölmede. Öğe adı ColumnGuideAdornment adı girin ve seçin **Ekle** ekleyin.
+  **Kenarlığı görüntüleyin**. Çözüm Gezgini proje düğümünde sağ işaretçi düğmesine basın. **&#124; yeni öğe Ekle... öğesini** seçin Yeni bir View kenarlığı öğesi eklemek için komutu. Sol gezinti bölmesinde **genişletilebilirlik &#124; düzenleyici** ' yi seçin ve sağ bölmedeki **Düzenleyici Görünüm penceresi kenarlığı** ' ni seçin. Öğe adı olarak ColumnGuideAdornment adını girin ve eklemek için **Ekle** ' yi seçin.
   
-  Bu öğe Şablonu proje (yanı sıra başvuruları vb.) iki dosya eklendi görebilirsiniz: ColumnGuideAdornment.cs ve ColumnGuideAdornmentTextViewCreationListener.cs. Şablonlar, yalnızca görünümünde mor renkli bir dikdörtgen çizin. Aşağıda birkaç görünüm oluşturma dinleyici satırları değiştirin ve ColumnGuideAdornment.cs içeriğini değiştirin.
+  Bu öğe şablonunun projeye iki dosya eklediğine (Ayrıca, başvurular vb.) sahip olduğunu görebilirsiniz: ColumnGuideAdornment.cs ve ColumnGuideAdornmentTextViewCreationListener.cs. Şablonlar yalnızca görünümde mor bir dikdörtgen çizer. Aşağıda, görünüm oluşturma dinleyicisinde birkaç satırı değiştirecek ve ColumnGuideAdornment.cs içeriğini değiştirmelisiniz.
   
-  **Komutları**. Çözüm Gezgini'nde proje düğümüne sağ işaretçi düğmesine basın. Seçin **ekleme &#124; yeni öğe...** Yeni bir görünüm kenarlığı öğe eklemek için komutu. Seçin **genişletilebilirlik &#124; VSPackage** sol gezinti bölmesinde seçin **özel komut** sağ bölmede. Öğe adı ColumnGuideCommands adı girin ve seçin **Ekle** ekleyin. Birkaç başvurulara ek komutlar ve paket ekleme ColumnGuideCommands.cs ColumnGuideCommandsPackage.cs ve ColumnGuideCommandsPackage.vsct eklendi. Aşağıdaki komutlar tanımlaması ve ilk ve son dosyaların içeriğini yerini alır.
+  **Komutlar**. Çözüm Gezgini proje düğümünde sağ işaretçi düğmesine basın. **&#124; yeni öğe Ekle... öğesini** seçin Yeni bir View kenarlığı öğesi eklemek için komutu. Sol gezinti bölmesinde **genişletilebilirlik &#124; VSPackage** ' ı seçin ve sağ bölmedeki **özel komut** ' yi seçin. Sütun adı olarak Columnkılavuz komutlarını girin ve eklemek için **Ekle** öğesini seçin. Birkaç başvuruya ek olarak, ColumnGuideCommands.cs, ColumnGuideCommandsPackage.cs ve Columnkılavuz Commandspackage. vsct eklenen komutları ve paketi ekleyerek. Aşağıda komutları tanımlamak ve uygulamak için ilk ve son dosyaların içeriğini değiştirirsiniz.
 
-## <a name="setting-up-the-text-view-creation-listener"></a>Metin görünümü oluşturma dinleyici ayarlama
-ColumnGuideAdornmentTextViewCreationListener.cs düzenleyicide açın. Bu kod, her Visual Studio metin görünümler oluşturur için bir işleyici uygular. İşleyici görünümün özelliklere bağlı olarak ne zaman çağrıldığını denetleyen öznitelikleri vardır.
+## <a name="setting-up-the-text-view-creation-listener"></a>Metin görünümü oluşturma dinleyicisi ayarlanıyor
+Düzenleyicide ColumnGuideAdornmentTextViewCreationListener.cs açın. Bu kod, Visual Studio 'Nun metin görünümlerini her oluşturduğunda bir işleyici uygular. İşleyicinin, görünümün özelliklerine bağlı olarak ne zaman çağrıldığını denetleyen öznitelikler vardır.
 
-Kod ayrıca kenarlığı katman bildirmeniz gerekir. Düzenleyici güncelleştirmeler görünümleri, görünüme ait kenarlığı katmanları alır ve buradan kenarlığı öğeleri alır. Başkalarının göre katmanınızdaki öznitelikleriyle sıralama bildirebilirsiniz. Şu satırı değiştirin:
+Kod ayrıca bir kenarlığı katmanı bildirmelidir. Düzenleyici görünümleri güncelleştirdiğinde, görünüm için kenarlığı katmanlarını alır ve bu kenarlığı öğelerini alır. Katman sıralamasına göre, diğer özelliklere göre katmanınızı bildirebilirsiniz. Aşağıdaki satırı değiştirin:
 
 ```csharp
 [Order(After = PredefinedAdornmentLayers.Caret)]
 ```
 
- şu iki satırı ile:
+ Şu iki satır ile:
 
 ```csharp
 [Order(Before = PredefinedAdornmentLayers.Text)]
 [TextViewRole(PredefinedTextViewRoles.Document)]
 ```
 
-Kenarlığı katman declare öznitelikleri içinde değiştirdiğiniz satırı grubudur.  İlk satırı sütun kılavuz çizgileri göründüğü yalnızca değişiklikler değiştirildi. "Önce" Görünüm içindeki metni arkasına veya aşağıdaki metni göründükleri anlamına gelir. satırlar çizme. İkinci satır, sütun kılavuzu kenarlıklar, bir belge kavramı uyan metin varlıklar için geçerlidir, ancak, kenarlığı, örneğin, yalnızca iş için düzenlenebilir metin bildirebilirsiniz bildirir. Daha fazla bilgi bulunmaktadır [dil hizmeti ve düzenleyici uzantı noktaları](../extensibility/language-service-and-editor-extension-points.md)
+Değiştirdiğiniz çizgi, bir kenarlığı katmanını bildiren bir öznitelik grubu içinde yer alır.  Değiştirdiğiniz ilk satır yalnızca sütun kılavuzu çizgilerinin göründüğü değişikliklerle değiştirilir. "Önce" satırlarını çizme, görünümdeki metin metnin arkasında veya altında göründüğü anlamına gelir. İkinci satır, sütun kılavuzunun bir belge kavramına uyan metin varlıkları için geçerli olduğunu bildirir, ancak örneğin yalnızca düzenlenebilir metin için çalışmak üzere kenarlığı bildirebilirsiniz. [Dil hizmeti ve Düzenleyici uzantı noktalarında](../extensibility/language-service-and-editor-extension-points.md) daha fazla bilgi mevcuttur
 
-## <a name="implementing-the-settings-manager"></a>Ayarları Yöneticisi uygulama
-GuidesSettingsManager.cs içeriğini (aşağıda açıklanmıştır) aşağıdaki kodla değiştirin:
+## <a name="implementing-the-settings-manager"></a>Ayarlar yöneticisini uygulama
+GuidesSettingsManager.cs içeriğini aşağıdaki kodla değiştirin (aşağıda açıklanmıştır):
 
 ```csharp
 using Microsoft.VisualStudio.Settings;
@@ -322,32 +322,32 @@ namespace ColumnGuides
 
 ```
 
-Bu kod çoğu yalnızca oluşturur ve ayarları biçimi ayrıştırır: "RGB (\<int >,\<int >,\<int >) \<int >, \<int >,...". Son sütun kılavuzları istediğiniz bir tabanlı sütunları tamsayılardır. Sütun kılavuzları uzantısı tek ayar değer dizesi, tüm ayarlarını yakalar.
+Bu kodun çoğu yalnızca ayarlar biçimini oluşturur ve ayrıştırır: "RGB ( \<int> , \<int> , \<int> ) \<int> , \<int> ,...". Sonundaki tamsayılar, sütun kılavuzlarını istediğiniz tek tabanlı sütunlardır. Sütun kılavuzu uzantısı, tüm ayarlarını tek bir ayar değeri dizesinde yakalar.
 
-Bazı bölümlerini vurgulama değer kod vardır. Aşağıdaki kod satırını ayarları depolama alanı için Visual Studio yönetilen sarmalayıcı alır. Çoğunlukla, bunu Windows kayıt defteri soyutlar, ancak bu API, depolama mekanizması bağımsızdır.
+Kod vurgulamanın bazı bölümleri vardır. Aşağıdaki kod satırı, ayarlar depolama için Visual Studio tarafından yönetilen sarmalayıcı alır. Çoğu bölüm için, bu Windows kayıt defteri üzerinden soyutlanıyor, ancak bu API depolama mekanizmasından bağımsızdır.
 
 ```csharp
 internal static SettingsManager VsManagedSettingsManager =
     new ShellSettingsManager(ServiceProvider.GlobalProvider);
 ```
 
- Visual Studio ayarları depolama, tüm ayarlarını benzersiz olarak tanımlanabilmesi için kategorisi tanımlayıcısı ve bir ayar tanımlayıcısı kullanır:
+ Visual Studio Settings Storage, tüm ayarları benzersiz şekilde tanımlamak için bir kategori tanımlayıcısı ve bir ayar tanımlayıcısı kullanır:
 
 ```csharp
 private const string _collectionSettingsName = "Text Editor";
 private const string _settingName = "Guides";
 ```
 
-Kullanmak zorunda değil `“Text Editor”` kategori olarak adı ve istediğiniz her şeyi seçebilirsiniz.
+`“Text Editor”`Kategori adı olarak kullanmanız gerekmez ve istediğiniz herhangi bir şeyi seçebilirsiniz.
 
-İlk birkaç işlevi ayarlarını değiştirmek için giriş noktalarıdır. Bunlar, sayısı izin verilen kılavuzları gibi üst düzey kısıtlamalar kontrol edin. Bunlar çağrı `WriteSettings` ayarları dize ölçeklemesini ve özelliği ayarlar `GuideLinesConfiguration`. Bu özelliğin ayarlanması kaydeder ayarları değeri etkinleşir ve Visual Studio ayarları deposu `SettingsChanged` tümünü güncelleştirmek için olay `ColumnGuideAdornment` nesneler, her bir metin görünümü ile ilişkilendirilmiş.
+İlk birkaç işlev, ayarları değiştirmek için giriş noktalarıdır. İzin verilen en fazla kılavuz sayısı gibi üst düzey kısıtlamaları kontrol ederler. Ardından `WriteSettings` , bir ayar dizesi oluşturan ve özelliğini ayarlayan çağırır `GuideLinesConfiguration` . Bu özellik ayarlandığında ayarlar değeri Visual Studio ayarları deposuna kaydedilir ve `SettingsChanged` `ColumnGuideAdornment` her biri bir metin görünümüyle ilişkili olan tüm nesneleri güncelleştirmek için olayı tetikler.
 
-Birkaç vardır giriş noktası işlevlerin gibi `CanAddGuideline`, ayarları değiştirmek komutları uygulamak için kullanılır. Visual Studio menü gösterir, bu sorgular komutu şu anda, onun adı nedir etkin olup olmadığını görmek için komutun uygulamalarında, vs. Aşağıda, bu komutun uygulamalarında giriş noktaları denetime nasıl görürsünüz. Bkz: [genişletme menüler ve komutlar](../extensibility/extending-menus-and-commands.md) komutlar hakkında daha fazla bilgi için.
+`CanAddGuideline`Ayarları değiştiren komutları uygulamak için kullanılan gibi birkaç giriş noktası işlevi vardır. Visual Studio 'Nun menüleri gösterdiği zaman, komutun Şu anda etkin olup olmadığını, adının ne olduğunu, vb. olduğunu görmek için komut uygulamalarını sorgular. Aşağıda, komut uygulamaları için bu giriş noktalarını nasıl yedeklendirilecektir. Komutlar hakkında daha fazla bilgi için bkz. [menüleri ve komutları genişletme](../extensibility/extending-menus-and-commands.md) .
 
-## <a name="implementing-the-columnguideadornment-class"></a>ColumnGuideAdornment sınıfı
-`ColumnGuideAdornment` Kenarlıklar olabilir her metin görünümünü sınıfı örneği. Bu sınıf görünümü değiştirme hakkında olayları dinleyen veya ayarları değiştirme, güncelleştirme veya yeniden sütun gerektiği şekilde kılavuzluk eder.
+## <a name="implementing-the-columnguideadornment-class"></a>ColumnGuideAdornment sınıfını uygulama
+`ColumnGuideAdornment`Sınıfı, donatılamalarda bulunan her metin görünümü için oluşturulur. Bu sınıf, gereken şekilde sütun kılavuzlarını değiştirme, güncelleştirme veya yeniden çizme gibi ayarlarla ilgili olayları dinler.
 
-ColumnGuideAdornment.cs içeriğini (aşağıda açıklanmıştır) aşağıdaki kodla değiştirin:
+ColumnGuideAdornment.cs içeriğini aşağıdaki kodla değiştirin (aşağıda açıklanmıştır):
 
 ```csharp
 using System;
@@ -489,33 +489,33 @@ namespace ColumnGuides
 }
 ```
 
-Bu sınıfın örnekleri tutan ilişkili <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> ve listesini `Line` görünümünde çizilen nesneler.
+Bu sınıfın örnekleri, <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> görünümde çizilen bir nesne listesini ve ilişkili bir listesini tutar `Line` .
 
-Oluşturucu (çağrılır `ColumnGuideAdornmentTextViewCreationListener` Visual Studio, yeni görünümler oluşturduğunda) sütun kılavuzu oluşturur `Line` nesneleri. Oluşturucu işleyiciler için de ekler; `SettingsChanged` olay (tanımlanan `GuidesSettingsManager`) ve olaylarını görüntüleme `LayoutChanged` ve `Closed`.
+Oluşturucu ( `ColumnGuideAdornmentTextViewCreationListener` Visual Studio yeni görünümler oluşturduğunda çağrılır), sütun Kılavuzu `Line` nesnelerini oluşturur. Oluşturucu Ayrıca olay için işleyiciler ekler `SettingsChanged` (içinde tanımlanmıştır `GuidesSettingsManager` ) ve olayları görüntüleme `LayoutChanged` ve `Closed` .
 
-`LayoutChanged` Değişiklikleri görünümünde, Visual Studio görünüm oluşturduğunda dahil olmak üzere çeşitli türlerde nedeniyle olay harekete geçirilir. `OnViewLayoutChanged` İşleyicisi çağrılarını `AddGuidelinesToAdornmentLayer` yürütülecek. Kodda `OnViewLayoutChanged` yazı tipi boyutu değişiklikleri, görünüm boşluğu, yatay kaydırma ve benzeri gibi değişikliklere göre satır konumlarını güncelleştirme gerekip gerekmediğini belirler. Kodda `UpdatePositions` karakter veya metin satırının belirtilen karakter uzaklığı olan metin sütunu hemen sonra çizmek kılavuz çizgilerini neden olur.
+`LayoutChanged`Visual Studio 'nun görünümü oluştururken de dahil olmak üzere, görünümdeki çeşitli değişiklik türleri nedeniyle olay ateşlenir. `OnViewLayoutChanged`İşleyici `AddGuidelinesToAdornmentLayer` yürütmek için çağırır. İçindeki kod, `OnViewLayoutChanged` yazı tipi boyutu değişiklikleri, görüntüleme boşluğu, yatay kaydırma vb. gibi değişikliklere göre satır konumlarını güncelleştirme gerekip gerekmediğini belirler. İçindeki kod, `UpdatePositions` kılavuz çizgilerinin, metin satırındaki belirtilen karakter kaydırmasında yer alan metin sütununun arasına veya sonuna kadar çizim yapmasına neden olur.
 
-Zaman ayarları `SettingsChanged` işlevi yalnızca yeniden oluşturur tüm `Line` hangi yeni ayarlar ile nesneleri. Kod satırı pozisyonları ayarladıktan sonra önceki tüm kaldırır `Line` nesnelerin `ColumnGuideAdornment` kenarlığı katman ve yenilerini ekler.
+Her ayar işlevi değiştirdiğinde, `SettingsChanged` tüm `Line` nesneleri yeni ayarların bulunduğu her şey yeniden oluşturur. Satır konumlarını ayarladıktan sonra kod, önceki tüm `Line` nesneleri `ColumnGuideAdornment` kenarlığı katmanından kaldırır ve yenilerini ekler.
 
-## <a name="defining-the-commands-menus-and-menu-placements"></a>Komutlar, menüler ve menü yerleşimi tanımlama
-Olabilir çok için komut işleyicileri ' takma komutlar ve menüler bildirme ve diğer çeşitli menülerde komutları ya da menü grubuna yerleştirerek. Bu izlenecek yol, bu uzantıdaki ancak daha ayrıntılı bilgi için komutları nasıl çalıştığını vurgular, bkz: [genişletme menüler ve komutlar](../extensibility/extending-menus-and-commands.md).
+## <a name="defining-the-commands-menus-and-menu-placements"></a>Komutları, menüleri ve menü yerleştirmelerinin tanımlanması
+Komutların ve menülerin bildirilmesi, çeşitli diğer menülere komut veya menü grupları yerleştirilmesi ve komut işleyicilerini bağlamak çok fazla olabilir. Bu kılavuzda, komutların bu uzantıda nasıl çalıştığı vurgulanmıştır, ancak daha ayrıntılı bilgi için bkz. [genişletme menüleri ve komutları](../extensibility/extending-menus-and-commands.md).
 
-### <a name="introduction-to-the-code"></a>Kod giriş
-Sütun kılavuzları uzantısı gösterir birlikte ait komut grubuyla ilgili bildirme (sütun ekleme, sütun kaldırmak, çizgi rengini değiştirin) ve ardından bu grubun düzenleyicinin bağlam menüsünün alt menüde yerleştirme. Sütun kılavuzları uzantı komutları ana de ekler. **Düzenle** menü ancak tutar bunları görünmez, aşağıdaki yaygın desen olarak ele alınan.
+### <a name="introduction-to-the-code"></a>Koda giriş
+Sütun kılavuzu uzantısı, bir dizi komutun (sütun Ekle, sütun Kaldır, satır rengini değiştir) ve ardından bu grubu düzenleyicinin bağlam menüsünün bir alt menüsüne yerleştirmekte olan bir komut grubu bildirimi gösterir. Sütun kılavuzu uzantısı Ayrıca komutları ana **düzenleme** menüsüne ekler, ancak aşağıda ortak bir düzen olarak ele alınmıştır.
 
-Komutları uygulama üç bölümü vardır: ColumnGuideCommandsPackage.cs ColumnGuideCommandsPackage.vsct ve ColumnGuideCommands.cs. Şablonları tarafından oluşturulan kodu bir komut yerleştirir **Araçları** uygulama olarak bir iletişim kutusu açılır menü. Oldukça olduğundan nasıl, .vsct ve ColumnGuideCommands.cs dosyalarında uygulanır bakabilirsiniz. Bu dosyalar aşağıdaki kodda yerini alır.
+Komutlar uygulamasının üç bölümü vardır: ColumnGuideCommandsPackage.cs, Columnkılavuz Commandspackage. vsct ve ColumnGuideCommands.cs. Şablonlar tarafından oluşturulan kod, uygulama olarak bir iletişim kutusu açılan **Araçlar** menüsüne bir komut koyar. . Vsct ve ColumnGuideCommands.cs dosyalarında, oldukça basittir bu yana nasıl uygulandığını göz atabilirsiniz. Aşağıdaki dosyalardaki kodu değiştirirsiniz.
 
-Paket, Visual Studio için uzantı komutları ve komutlar yerleştirileceği yeri sunduğunu keşfedin gerekli olan ortak bildirimleri kodudur. Paket başlatır, bu örneği komutları uygulama sınıfı. Komutlarına ilişkin paketleri hakkında daha fazla bilgi için yukarıda bağlantı komutları bakın.
+Paket kodu, uzantının komutlar sunduğunu ve komutların nereye yerleştirileceğini bulması için Visual Studio için gereken ortak bildirimlerdir. Paket başlatıldığında, komutlar uygulama sınıfının örneğini oluşturur. Komutlarla ilgili paketler hakkında daha fazla bilgi için yukarıdaki komutlar bağlantısına bakın.
 
-### <a name="a-common-commands-pattern"></a>Bir ortak desen komutları
-Visual Studio'da çok yaygın bir düzen örneği sütun kılavuzları uzantısında komutlardır. İlgili komutları bir gruba yerleştirmek ve o grubun ana menüde, sık sık ile yerleştirdiğiniz "`<CommandFlag>CommandWellOnly</CommandFlag>`" komutu görünmez yapmak için ayarlayın. Ana menülerde komutları koyma (gibi **Düzenle**) bu şekilde bunları kullanışlı adlar sağlar (gibi **Edit.AddColumnGuide**) komutları, tuş bağlamaları yeniden atarken bulmak için yararlı olan  **Araçlar Seçenekler** ve komutları çağrılırken tamamlama alma **komut penceresi**.
+### <a name="a-common-commands-pattern"></a>Ortak bir komutlar deseninin
+Sütun kılavuzlarındaki komutlar, Visual Studio 'daki çok yaygın bir düzene örnektir. İlgili komutları bir gruba koyabilirsiniz ve bu grubu, genellikle "" ile birlikte, `<CommandFlag>CommandWellOnly</CommandFlag>` komutu görünmez hale getirmek için bir ana menüye yerleştirebilirsiniz. Komutları ana menülere ( **düzenleme**gibi) koymak bu şekilde bu şekilde, **Araçlar seçeneklerinde** anahtar bağlamaları yeniden atarken ve **komut penceresinden**komutları çağırırken tamamlanması gereken, komutları bulmak Için yararlı olan kolay adlar ( **Edit. addcolumnguide**gibi) sağlar.
 
-Ardından komut grubunu bağlam menüleri ekleme veya alt menü komutlarını kullanmak için kullanıcı beklediğiniz yerde. Visual Studio işler `CommandWellOnly` olarak yalnızca ana menüler bir görünmezlik bayrağı. Bir bağlam menüsü veya alt menü komutları aynı kullanıcı grubu yerleştirdiğinizde, komutları görülebilir.
+Ardından, bağlam menülerine veya kullanıcının komutları kullanmasını istediğiniz alt menülere komut grubunu eklersiniz. Visual Studio `CommandWellOnly` yalnızca ana menüler için bir eksik bayrak olarak davranır. Aynı komut grubunu bir bağlam menüsüne veya alt menüye yerleştirdiğinizde, komutlar görünür.
 
-Sık karşılaşılan desenini bir parçası olarak, bir tek alt menü tutan ikinci bir grup sütun kılavuzları uzantısı oluşturur. Alt menü sırayla ilk grupla dört sütun kılavuzu komutlarını içerir. Alt menü tutan ikinci grup alt menü bu bağlam menüleri getirecek çeşitli bağlam menüleri üzerinde yerleştirdiğiniz yeniden kullanılabilir varlıktır.
+Ortak düzenin bir parçası olarak, sütun kılavuzu uzantısı tek bir alt menüyü tutan ikinci bir grup oluşturur. Sırasıyla alt menü, dört sütunlu kılavuz komutlarına sahip ilk grubu içerir. Alt menüyü tutan ikinci grup, bu bağlam menülerine bir alt menü yerleştiren çeşitli bağlam menülerine yerleştirdiğiniz yeniden kullanılabilir bir varlıktır.
 
-### <a name="the-vsct-file"></a>.Vsct dosyası
-.Vsct dosyası, komutlar ve bunlar, birlikte simgeler vb. nereye bildirir. .Vsct dosyası içeriğini (aşağıda açıklanmıştır) aşağıdaki kodla değiştirin:
+### <a name="the-vsct-file"></a>. Vsct dosyası
+. Vsct dosyası komutları ve nereye gittikleri, simgelerle birlikte ve benzerlerini bildirir. . Vsct dosyasının içeriğini aşağıdaki kodla değiştirin (aşağıda açıklanmıştır):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -751,22 +751,22 @@ Sık karşılaşılan desenini bir parçası olarak, bir tek alt menü tutan iki
 
 ```
 
-**GUID'LER**. GUID (proje öğesi Şablonu oluşturulan) ColumnGuideCommandsPackage.cs dosyasında bildirilen paketi GUID (yukarıdaki kopyalandı .vsct dosyası bildirilen paket karşılamasını sağlamak gereken Visual Studio'nın, komut işleyicileri bulabilir ve bunları çağırma ). Bu örnek kod yeniden kullanımı, böylece herkes ile bu kodu kopyalamış olmanız çakışmadığından farklı bir GUID olduğundan emin olun.
+**GUID 'ler**. Visual Studio 'nun komut işleyicilerinizi bulmasını ve çağırabilmesini sağlamak için, ColumnGuideCommandsPackage.cs dosyasında (proje öğesi şablonundan oluşturulan) belirtilen paket GUID 'sinin. vsct dosyasında (yukarıdan kopyalanmış) belirtilen paket GUID 'siyle eşleştiğinden emin olmanız gerekir. Bu örnek kodu yeniden kullanıyorsanız, bu kodu kopyalamış olabilecek diğer kişilerle çakışmamasını sağlamak için farklı bir GUID olduğundan emin olmanız gerekir.
 
-ColumnGuideCommandsPackage.cs içinde şu satırı bulun ve tırnak işaretleri arasındaki GUID kopyalayın:
+Bu satırı ColumnGuideCommandsPackage.cs ' de bulun ve tırnak işaretleri arasından GUID 'yi kopyalayın:
 
 ```csharp
 public const string PackageGuidString = "ef726849-5447-4f73-8de5-01b9e930f7cd";
 ```
 
-Böylece aşağıdaki satırı sahip GUID .vsct dosyaya yapıştırın, `Symbols` bildirimleri:
+Ardından, bildirimlerinizde aşağıdaki satırı kullanabilmeniz için. vsct dosyasına GUID 'yi yapıştırın `Symbols` :
 
 ```xml
 <GuidSymbol name="guidColumnGuideCommandsPkg" 
             value="{ef726849-5447-4f73-8de5-01b9e930f7cd}" />
 ```
 
-Komut için GUID'leri ayarlayın ve bit eşlem resim dosyası çok uzantılarınızı için benzersiz olmalıdır:
+Komut kümesi ve bit eşlem resim dosyası için GUID 'Ler, uzantılarınız için benzersiz olmalıdır:
 
 ```xml
 <GuidSymbol name="guidColumnGuidesCommandSet"
@@ -774,36 +774,36 @@ Komut için GUID'leri ayarlayın ve bit eşlem resim dosyası çok uzantıların
 <GuidSymbol name="guidImages" value="{2C99F852-587C-43AF-AA2D-F605DE2E46EF}">
 ```
 
-Bununla birlikte, komut kümesini değiştirin ve çalışmak için kodu almak için bu kılavuzda GUID'leri görüntü bit eşlem gerekmez. Ayarla komutu GUID ColumnGuideCommands.cs dosya bildiriminde eşleşmesi gerekiyor, ancak bu dosyanın içeriğini çok yerini alır; Bu nedenle, GUID'leri eşleşir.
+Ancak, kodun çalışmasını sağlamak için bu kılavuzda komut kümesi ve bit eşlem resim GUID 'Lerini değiştirmeniz gerekmez. Komut kümesi GUID 'inin ColumnGuideCommands.cs dosyasındaki bildirimle eşleşmesi gerekir, ancak bu dosyanın içeriğini de değiştirirsiniz. Bu nedenle, GUID 'Ler eşleşir.
 
-Hiçbir zaman değiştirmek için sütun kılavuzu komutlarını eklendiği önceden varolan menülerin .vsct dosyası diğer GUID'leri belirleyin.
+. Vsct dosyasındaki diğer GUID 'Ler, sütun kılavuzu komutlarının eklendiği, önceden var olan menüleri belirler, bu nedenle hiçbir şekilde değişmez.
 
-**Dosya bölümleri**. .vsct üç dış bölümü vardır: komutları, yerleşimi ve semboller. Komutları bölümüne komut gruplarını, menüler, düğmeler veya menü öğeleri ve simgeleri için bit eşlemler tanımlar. Yerleşimi bölüm grupları menüleri veya önceden mevcut olan menüleri üzerine ek yerleşimi nereye bildirir. Semboller bölümü .vsct kod daha okunabilir GUID'leri ve onaltılık sayı her yerde olması daha yapar .vsct dosyası başka bir yerde kullanılan tanımlayıcıları bildirir.
+**Dosya bölümleri**. . Vsct üç dış bölüme sahiptir: komutlar, placements ve symbols. Komutlar bölümünde komut grupları, menüler, düğmeler veya menü öğeleri ve simgeler için bit eşlemler tanımlanmaktadır. Yerleştirme bölümü, grupların menülere veya daha önceden var olan menülere nasıl gidebileceği hakkında daha fazla yer olduğunu bildirir. Semboller bölümü,. vsct dosyasında başka yerlerde kullanılan tanımlayıcıları bildirir. Bu,. vsct kodunu, her yerde GUID 'Leri ve onaltılık sayıları daha okunaklı hale getirir.
 
-**Komutları bölümü, tanımlarını gruplar**. Komutları bölümüne ilk komut gruplarını tanımlar. Menülerde gruplara ayırarak hafif gri satırıyla gördüğünüz komutları komutları gruplarıdır. Bir grup da bu örnekte olduğu gibi tüm alt menüsünde, doldurmanız ve bu durumda satırları ayırmak gri görmezsiniz. .Vsct dosyaları iki gruba bildirir `GuidesMenuItemsGroup` için shapemap `IDM_VS_MENU_EDIT` (ana **Düzenle** menüsü) ve `GuidesContextMenuGroup` için shapemap `IDM_VS_CTXT_CODEWIN` (Kod Düzenleyicisi'nin bağlam menüsü).
+**Komutlar bölümü, gruplar tanımlar**. Komutlar bölümü ilk olarak komut gruplarını tanımlar. Komut grupları, menülerde gördüğünüz ve grupları ayıran hafif gri çizgileri olan komutlardır. Ayrıca, bu örnekte olduğu gibi bir grup tüm alt menüyü de doldurabilir ve bu durumda çizgileri ayıran gri bir şekilde görmeyebilirsiniz. . Vsct dosyaları iki grup bildirir, bu, `GuidesMenuItemsGroup` üst öğesi olan `IDM_VS_MENU_EDIT` (ana **Düzen** menüsü) ve `GuidesContextMenuGroup` `IDM_VS_CTXT_CODEWIN` (kod düzenleyicisinin bağlam menüsü) üst öğesi.
 
-İkinci grup bildirime sahip bir `0x0600` önceliği:
+İkinci grup bildiriminin `0x0600` önceliği vardır:
 
 ```xml
 <Group guid="guidColumnGuidesCommandSet" id="GuidesContextMenuGroup"
              priority="0x0600">
 ```
 
-Sütun yerleştirmek için alt menü alt menü grubu ekleyeceğiz, herhangi bir bağlam menüsü, sonunda kılavuzları olur. Ancak, en iyi bildiğiniz ve önceliği kullanarak her zaman son olacak şekilde alt menü zorla varsayımında bulunmamalıdır `0xFFFF`. Bu sayı, alt menü yerleştirdiğiniz yere bağlam menüleri nereden kaynaklandığını görmek için gerçekleştirebileceğiniz işlemleri gerekir. Bu durumda `0x0600` görebiliriz ancak kendi uzantı isteniliyorsa sütun kılavuzları uzantıyı düşük olacak şekilde tasarlamak için başka birinin yer bırakır kadar menüleri sonunda koymak için yüksek.
+Düşünce, alt menü grubunu eklediğimiz herhangi bir bağlam menüsünün sonuna sütun kılavuzlarını alt menüsünü koyuyoruz. Bununla birlikte, en iyi şekilde haberdar olduğunuzu varsaymamalıdır ve alt menüyü her zaman bir önceliği kullanarak en son olacak şekilde zorlarsınız `0xFFFF` . Alt menünüzün, yerleştirdiğiniz bağlam menülerinde nerede olduğunu görmek için bu sayıyla birlikte oynayabilmeniz gerekir. Bu durumda `0x0600` , görebilmemiz için menülerin sonuna kadar çok büyük olur, ancak bu istenirse, başka birinin uzantısının tasarımını daha düşük bir şekilde tasarlaması için yer bırakır.
 
-**Bölümünde, menü tanımı komutları**. Sonraki alt menü komutu bölümüne tanımlar `GuidesSubMenu`, üst öğeye sahip için `GuidesContextMenuGroup`. `GuidesContextMenuGroup` Grup için tüm ilgili bağlam menüleri ekleriz. Yerleşimi bölümünde kod dört sütun kılavuzu komutlarını grubuyla bu alt menüde yerleştirir.
+**Komutlar bölümü, menü tanımı**. Ardından komut bölümü, üst öğesi olan alt menüyü tanımlar `GuidesSubMenu` `GuidesContextMenuGroup` . , `GuidesContextMenuGroup` İlgili tüm bağlam menülerine eklediğimiz gruptur. Yerleştirme bölümünde, kod grubu bu alt menüdeki dört sütunlu kılavuz komutları ile koyar.
 
-**Komutları bölümü, tanımları düğmeleri**. Komutları bölümüne sonra menü öğelerini tanımlar veya dört sütun düğmelerinden komutları size yol gösterir. `CommandWellOnly`, yukarıda açıklanan, komutları bir ana menüsündeki yerleştirildiğinde görünmez anlamına gelir. Menü öğesinin iki düğme bildirimleri (Kılavuzu ekleme ve kaldırma Kılavuzu) de bir `AllowParams` bayrağı:
+**Komutlar bölümü, düğme tanımları**. Komutlar bölümü daha sonra dört sütunlu kılavuz komutları olan menü öğelerini veya düğmeleri tanımlar. `CommandWellOnly`Yukarıda açıklanan, bir ana menüye yerleştirildiğinde komutların görünmez olduğu anlamına gelir. Menü öğesi düğme bildirimlerinin ikisi de (kılavuz Ekle ve Kaldır Kılavuzu) Ayrıca bir bayrak de vardır `AllowParams` :
 
 ```xml
 <CommandFlag>AllowParams</CommandFlag>
 ```
 
-Bu bayrak, bunların ile ana menü yerleşimi, Visual Studio komut işleyici çağırır bağımsız değişkenlerini almak için komut olmak sağlar. Kullanıcı komut penceresinden komut çağırırsa, geçirilen bağımsız değişken komut işleyicisi için olay bağımsız değişkenleri.
+Bu bayrak, ana menü yerleştirmelerinin yanı, Visual Studio komut işleyicisini çağırdığında bağımsız değişken alma komutunu etkinleştirir. Kullanıcı komut penceresinden komutu çağırdığında, bağımsız değişken olay bağımsız değişkenlerinde komut işleyicisine geçirilir.
 
-**Komutunu bölümler, bit eşlemler tanımları**. Son olarak bit eşlemler veya komutlar için kullanılan simgeler komutları bölümüne bildirir. Proje kaynağı tanımlar ve kullanılan simge bir tabanlı dizinleri listeler basit bir bildirimin budur. .Vsct dosyası sembolleri bölümünü dizin kullanılan tanımlayıcıları değerlerini bildirir. Bu izlenecek yol, projeye özel komut öğe şablonu ile sağlanan bit eşlem Şerit kullanır.
+**Komut bölümleri, bit eşlem tanımları**. Son olarak komutlar bölümü, komutlar için kullanılan bit eşlemleri veya simgeleri bildirir. Bu, proje kaynağını tanımlayan ve kullanılan simgelerin tek tabanlı dizinlerini listeleyen basit bir bildirimidir. . Vsct dosyasının semboller bölümü, dizin olarak kullanılan tanımlayıcıların değerlerini bildirir. Bu izlenecek yol, projeye eklenen özel komut öğesi şablonuyla birlikte sunulan bit eşlem şeridi kullanır.
 
-**Yerleşimi bölüm**. Komutlarından sonra bölümü yerleşimi bölümdür. İlki, açıklanan ilk grup dört sütun Kılavuzu alt menü komutları komutları göründüğü tutan kod burada ekler şöyledir:
+**Placements bölümü**. Komutlar bölümü, yerleştirme bölümünden sonra. Birincisi, kodun, komutların göründüğü alt menüye dört sütunlu kılavuz komutunu tutan yukarıdaki ilk grubu eklemesi gerekir:
 
 ```xml
 <CommandPlacement guid="guidColumnGuidesCommandSet" id="GuidesMenuItemsGroup"
@@ -812,14 +812,14 @@ Bu bayrak, bunların ile ana menü yerleşimi, Visual Studio komut işleyici ça
 </CommandPlacement>
 ```
 
-Tüm diğer yerleşimi eklemek `GuidesContextMenuGroup` (içeren `GuidesSubMenu`) için diğer Düzenleyici bağlam menüleri. Kod zaman bildirilen `GuidesContextMenuGroup`, Kod Düzenleyicisi'nin bağlam menüsüne shapemap. Bir yerleştirme için Kod Düzenleyicisi'nin bağlam menüsünü görmezsiniz nedeni budur.
+Diğer tüm Place, `GuidesContextMenuGroup` `GuidesSubMenu` diğer düzenleyici bağlam menülerine (öğesini içeren) ekler. Kod tarafından bildirildiğinde `GuidesContextMenuGroup` , kod düzenleyicisinin bağlam menüsünün üst öğesi. Kod düzenleyicisinin bağlam menüsü için bir yerleşim görmemenizin nedeni budur.
 
-**Semboller bölüm**. Yukarıda belirtildiği gibi simgeler bölümü .vsct kod daha okunabilir GUID'leri ve onaltılık sayı her yerde olması daha yapar .vsct dosyası başka bir yerde kullanılan tanımlayıcıları bildirir. Bu bölümdeki önemli noktaları, paket GUID'ini GUID ile komut uygulama sınıf bildiriminde kabul etmelisiniz bildirim paket sınıfı ve komut kümesi ile kabul etmelisiniz ' dir.
+**Simgeler bölümü**. Yukarıda belirtildiği gibi, semboller bölümü. vsct dosyasında başka yerlerde kullanılan tanımlayıcıları bildirir ve bu da. vsct kodunu, her yerde GUID 'Leri ve onaltılık sayıları daha okunaklı hale getirir. Bu bölümdeki önemli noktalara, paket GUID 'inin paket sınıfındaki bildirimle kabul edilmesi ve komut kümesi GUID 'inin komut uygulama sınıfındaki bildirimle kabul edilmesi gerekir.
 
 ## <a name="implementing-the-commands"></a>Komutları uygulama
-ColumnGuideCommands.cs dosya komutları uygular ve işleyicileri kancaları. Visual Studio Paketi yükler ve başlatır, paket sırayla çağırır `Initialize` komutları uygulama sınıfı üzerinde. Komutları başlatma, yalnızca sınıfın örneğini oluşturur ve komut işleyicileri Oluşturucu kancaları.
+ColumnGuideCommands.cs dosyası komutları uygular ve işleyicileri takar. Visual Studio paketi yüklediğinde ve başlattığında paket, `Initialize` Komutlar uygulama sınıfında çağırır. Komutları başlatmak yalnızca sınıfını örnekleyen ve Oluşturucu tüm komut işleyicilerini takar.
 
-ColumnGuideCommands.cs dosyasının içeriğini (aşağıda açıklanmıştır) aşağıdaki kodla değiştirin:
+ColumnGuideCommands.cs dosyasının içeriğini aşağıdaki kodla değiştirin (aşağıda açıklanmıştır):
 
 ```csharp
 using System;
@@ -1160,11 +1160,11 @@ namespace ColumnGuides
 
 ```
 
-**Başvuruları düzelt**. Bu noktada bir başvuru eksik olabilir. Çözüm Gezgini'ndeki başvurular düğümü üzerinde doğru işaretçi düğmesine basın. Seçin **Ekle...** komutu. **Başvuru Ekle** iletişim sağ üst köşedeki arama kutusuna sahiptir. "Düzenleyicisi" (çift tırnak işaretleri olmadan) girin. Seçin **Microsoft.VisualStudio.Editor** (kontrol gerekir yalnızca select öğenin sol kutusuna öğe) öğesi seçin **Tamam** başvuru eklenemiyor.
+**Başvuruları düzeltir**. Bu noktada bir başvurunuz eksik. Çözüm Gezgini başvurular düğümünde sağ işaretçi düğmesine basın. **Ekle...** öğesini seçin komutundaki. **Başvuru Ekle** iletişim kutusunda sağ üst köşedeki bir arama kutusu bulunur. "Düzenleyici" (çift tırnak işaretleri olmadan) girin. **Microsoft. VisualStudio. Editor** öğesini seçin (öğenin sol tarafındaki kutuyu denetlemeniz gerekir, yalnızca öğeyi seçin) ve başvuruyu eklemek için **Tamam** ' ı seçin.
 
-**Başlatma**. Paket sınıfı başlatır, çağrı `Initialize` komutları uygulama sınıfı üzerinde. `ColumnGuideCommands` Başlatma sınıfın örneğini oluşturur ve sınıf üyeleri sınıf örneği ve paket başvurusu kaydeder.
+**Başlatma**. Paket sınıfı başlatıldığında, `Initialize` Komutlar uygulama sınıfında çağırır. Başlatma, sınıfını `ColumnGuideCommands` başlatır ve sınıf üyelerine ve paket başvurusunu sınıf üyelerine kaydeder.
 
-Komut işleyici kanca ups birini sınıf oluşturucusunda bakalım:
+Sınıf oluşturucusundan bir komut işleyici kancalarından birine göz atalım:
 
 ```csharp
 _addGuidelineCommand =
@@ -1175,17 +1175,17 @@ _addGuidelineCommand =
 
 ```
 
-Oluşturduğunuz bir `OleMenuCommand`. Visual Studio, Microsoft Office komut sistemi kullanır. Anahtar bağımsız değişkenleri bir OleMenuCommand örnekleme komutu uygulayan işlevi olduğunda (`AddColumnGuideExecuted`), Visual Studio bir menü komutu ile gösterdiğinde çağrılacak işlevin (`AddColumnGuideBeforeQueryStatus`) ve komut kimliği. Visual studio komut kendisini görünmez veya menüsünün belirli bir ekran için gri yapabilmeleri için bir komutu menüde göstermeden önce sorgu durumu işlevi çağırır (örneğin, devre dışı bırakma **kopyalama** seçim yok ise), simgesini, değiştirme veya bile adını (örneğin, çerçevedeki ekleme bir şeyi kaldırmak için) değiştirin ve benzeri. Komut kimliği .vsct dosyası içinde bildirilen bir komut kimliği ile eşleşmelidir. Komut için dizeleri ayarlamak ve sütun kılavuzları komut ColumnGuideCommands.cs .vsct dosyası arasında eşleşmelidir ekleyin.
+Oluşturduğunuz bir `OleMenuCommand` . Visual Studio Microsoft Office komut sistemini kullanır. Bir OleMenuCommand örneği oluşturulurken anahtar bağımsız değişkenler, komutunu uygulayan işlevdir ( `AddColumnGuideExecuted` ), Visual Studio Command ( `AddColumnGuideBeforeQueryStatus` ) ve komut kimliği ile bir menü gösterdiği zaman çağrılacak işlev. Komutun belirli bir görünüm (örneğin, seçim yoksa **kopyayı** devre dışı bırakma), simgesini değiştirmek veya adını değiştirmek (örneğin, bir şeyi kaldırmak Için bir öğe Ekle) gibi bir menü üzerinde bir komutu göstermeden, Visual Studio sorgu durumu işlevini çağırır. Komut KIMLIĞI,. vsct dosyasında belirtilen bir komut KIMLIĞIYLE eşleşmelidir. Komut kümesi ve sütun kılavuzu ekleme komutu için dizeler,. vsct dosyası ve ColumnGuideCommands.cs arasında eşleşmelidir.
 
-Kullanıcılar (aşağıda açıklanmıştır) komut penceresinde komutuyla çağırdığınızda Yardım almak için aşağıdaki satırı sağlar:
+Aşağıdaki satırda, kullanıcıların komut penceresi (aşağıda açıklanmıştır) aracılığıyla komutu çağırması için yardım sağlanmaktadır:
 
 ```csharp
 _addGuidelineCommand.ParametersDescription = "<column>";
 ```
 
-**Sorgu durumu**. Sorgu durumu işlevleri `AddColumnGuideBeforeQueryStatus` ve `RemoveColumnGuideBeforeQueryStatus` bazı ayarları (örneğin, en fazla sayı kılavuzları ve en fazla sütun) kontrol edin veya kaldırmak için sütun kılavuzunu ise. Koşullar doğru olduğunda bunlar komutlar sağlar. Sorgu durumu işlevleri Visual Studio menüsünde her komut için bir menü gösterir. her zaman çalıştırdığı nedeni çok verimli olması gerekir.
+**Sorgu durumu**. Sorgu durumu işlevleri, `AddColumnGuideBeforeQueryStatus` `RemoveColumnGuideBeforeQueryStatus` bazı ayarları (en fazla kılavuz sayısı veya en fazla sütun) veya kaldırılacak bir sütun kılavuzu varsa denetler. Koşullar doğru ise komutları etkinleştirir. Sorgu durumu işlevlerinin her bir menü, menüdeki her komut için her bir menü gösterdiği her seferinde çalıştıkları için çok verimli olması gerekir.
 
-**AddColumnGuideExecuted işlevi**. Bir kılavuz ekleme ilginç bölümü geçerli Düzenleyici görünümü ve giriş işareti konumunu çıkarılıyor. Önce bu işlevi çağıran `GetApplicableColumn` denetleyen komut işleyicinin olay bağımsız değişkenlerini bir kullanıcı tarafından sağlanan bağımsız değişken yoktur ve varsa hiçbiri, işlev Düzenleyicisi'nin görünümü denetler:
+**Addcolumnkılavuz yürütüldü işlevi**. Kılavuz eklemenin ilginç bölümü, geçerli düzenleyici görünümü ve giriş işareti konumunu gösterir. İlk bu işlev, `GetApplicableColumn` komut işleyicisinin olay bağımsız değişkenlerinde Kullanıcı tarafından sağlanan bir bağımsız değişken olup olmadığını denetler ve hiçbiri yoksa, işlev düzenleyicinin görünümünü denetler:
 
 ```csharp
 private int GetApplicableColumn(EventArgs e)
@@ -1204,7 +1204,7 @@ private int GetApplicableColumn(EventArgs e)
 
 ```
 
-`GetCurrentEditorColumn` almak için biraz incelemek için bir <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> kod görünümü. Aracılığıyla izleme, `GetActiveTextView`, `GetActiveView`, ve `GetTextViewFromVsTextView`, bunun nasıl yapılacağını görebilirsiniz. Geçerli seçimi ile başlayan seçimin çerçeve alma sonra çerçeve DocView olarak alma soyutlanır, ilgili kodu verilmiştir bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>, ardından alınırken bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData> Ivstextview ve ardından bir görünüm ana alınıyor gelen ve Son olarak Iwpftextview:
+`GetCurrentEditorColumn` kodun bir görünümünü almak için biraz şey yapmanız gerekebilir <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> . , Ve ile izleyebilirsiniz `GetActiveTextView` , `GetActiveView` `GetTextViewFromVsTextView` bunun nasıl yapılacağını görebilirsiniz. Aşağıdaki ilgili kod, geçerli seçim ile başlayıp sonra seçimin çerçevesini alarak, sonra da bir çerçeve DocView 'ı bir olarak alarak, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData> IVsTextView 'tan alma, sonra da bir görünüm ana bilgisayarı ve son olarak IWpfTextView 'dan elde edilir.
 
 ```csharp
    IVsMonitorSelection selection =
@@ -1260,7 +1260,7 @@ ErrorHandler.ThrowOnFailure(selection.GetCurrentElementValue(
 
 ```
 
-Bir Iwpftextview aldıktan sonra düzeltme işaretinin bulunduğu sütun alabilirsiniz:
+Bir IWpfTextView olduktan sonra, giriş işaretinin bulunduğu sütunu alabilirsiniz:
 
 ```csharp
 private static int GetCaretColumn(IWpfTextView textView)
@@ -1275,19 +1275,19 @@ private static int GetCaretColumn(IWpfTextView textView)
 
 ```
 
-Kullanıcı tıkladı olduğunda, geçerli sütun ele kod yalnızca eklemek veya sütunu kaldırmak için ayarları Yöneticisi çağırır. Ayarlar Yöneticisi için tüm olay harekete `ColumnGuideAdornment` nesneleri dinleyin. Olay oluşturulduğunda, bu nesneler, ilişkili metin görünümleri ile yeni bir sütun kılavuzu ayarlarını güncelleştirin.
+Kullanıcının tıklandığı geçerli sütun ile, kod, sütunu eklemek veya kaldırmak için yalnızca ayarlar Yöneticisi üzerinde çağrılır. Ayarlar Yöneticisi tüm `ColumnGuideAdornment` nesnelerin dinleme olayını tetikler. Olay tetiklendiğinde, bu nesneler ilgili metin görünümlerini yeni sütun Kılavuzu ayarları ile güncelleştirir.
 
-## <a name="invoking-command-from-the-command-window"></a>Komut penceresinden çağrılıyor komutu
-Sütun kılavuzları örnek, kullanıcıların iki komutu komut penceresinden genişletilebilirlik biçimi çağrılacak sağlar. Kullanırsanız **görünümü &#124; diğer Windows &#124; komut penceresi** komut, komut penceresinde görebilirsiniz. "Düzenle" girerek komut penceresi ile etkileşime geçebilir ve komut adı tamamlama ve bağımsız değişken 120 sağlayarak, aşağıdakilere sahip:
+## <a name="invoking-command-from-the-command-window"></a>Komut penceresinden komut çağırma
+Sütun kılavuzu örneği, kullanıcıların komut penceresinden bir genişletilebilirlik formu olarak iki komut çağırmasına olanak sağlar. **&#124; diğer Windows &#124; komut penceresini görüntüle** komutunu kullanırsanız, komut penceresini görebilirsiniz. "Düzenle" yazarak ve komut adı tamamlamada ve 120 bağımsız değişkenini sağlayarak komut penceresiyle etkileşime geçebilirsiniz:
 
 ```
 > Edit.AddColumnGuide 120
 >
 ```
 
-Bu olan .vsct dosyası bildirimlerinde sağlayan örnek parçalarını `ColumnGuideCommands` komut işleyicileri ve olay bağımsız değişkenleri denetleyin komut işleyicisi uygulamaları kancaları sınıf oluşturucusu.
+Bunu etkinleştiren örnek parçaları. vsct dosya bildirimlerinde, `ColumnGuideCommands` sınıf oluşturucu komut işleyicilerini kancasında ve olay bağımsız değişkenlerini denetleyen komut işleyicisi uygulamalarıdır.
 
-Gördüğünüz "`<CommandFlag>CommandWellOnly</CommandFlag>`".vsct dosyası yanı sıra düzenleme ana menüsündeki yerleşimi olsa bile değil göstereceğiz komutlar **Düzenle** menüsünde kullanıcı Arabirimi. Bunları ana Düzen menüsündeki sahip sağlayan gibi adları **Edit.AddColumnGuide**. Komutları doğrudan Düzen menüsündeki dört komuttan grubuna yerleştirilen tutan bildirimi Grup:
+`<CommandFlag>CommandWellOnly</CommandFlag>` **Düzenleme** menüsü Kullanıcı arabirimindeki komutları göstermediğimiz halde,. vsct dosyasında ve düzenleme ana menüsündeki yerleştirme "" öğesini gördünüz. Bunları ana düzenleme menüsünde yapmanız, **düzenleme. AddColumnGuide**gibi adlar sağlar. Dört komutu tutan komutlar grubu bildirimi, grubu doğrudan düzenleme menüsüne yerleştirdi:
 
 ```xml
 <Group guid="guidColumnGuidesCommandSet" id="GuidesMenuItemsGroup"
@@ -1297,7 +1297,7 @@ Gördüğünüz "`<CommandFlag>CommandWellOnly</CommandFlag>`".vsct dosyası yan
 
 ```
 
-Daha sonra bildirilen komutları düğmeleri bölümünü `CommandWellOnly` bunları ana menüde görünmez tutmak için ve bunları ile bildirilen `AllowParams`:
+Daha sonra düğmeler bölümü, `CommandWellOnly` bunları ana menüde görünmez tutmak için komutları ve bunlarla birlikte bu şekilde bildirilmiştir `AllowParams` :
 
 ```xml
 <Button guid="guidColumnGuidesCommandSet" id="cmdidAddColumnGuide" 
@@ -1309,14 +1309,14 @@ Daha sonra bildirilen komutları düğmeleri bölümünü `CommandWellOnly` bunl
 
 ```
 
-Kod içinde bağlama komut işleyici gördüğünüz `ColumnGuideCommands` sınıf oluşturucusu sağlanan izin verilen parametre açıklaması:
+`ColumnGuideCommands`Sınıf oluşturucusunda, izin verilen parametrenin açıklamasını verilen komut işleyici kancası kodunu gördünüz:
 
 ```csharp
 _addGuidelineCommand.ParametersDescription = "<column>";
 
 ```
 
-Gördüğünüz `GetApplicableColumn` işlev denetimleri `OleMenuCmdEventArgs` Düzenleyicisi'nin görünümü geçerli bir sütun için iade etmeden önce bir değer için:
+`GetApplicableColumn` `OleMenuCmdEventArgs` Geçerli bir sütun için düzenleyicinin görünümünü denetlemeden önce bir değer için işlev denetimlerini gördünüz:
 
 ```csharp
 private int GetApplicableColumn(EventArgs e)
@@ -1332,20 +1332,20 @@ private int GetApplicableColumn(EventArgs e)
 
 ```
 
-## <a name="trying-your-extension"></a>Uzantınızı çalışıyor
-Artık basabilirsiniz **F5** sütun kılavuzları uzantınızı yürütülecek. Bir metin dosyasını açın ve kılavuz çizgileri ekleme, bunları kaldırmanız ve bunların rengini değiştirmek için düzenleyicinin bağlam menüsünü kullanın. Metinde'ye tıklamanız (boşluk değil, satır sonu geçildi) bir sütun eklemek için kılavuz veya düzenleyici satırın son sütunu ekler. Komut penceresini kullanın ve bağımsız değişken ile komutları çağırır, herhangi bir sütun kılavuzları ekleyebilirsiniz.
+## <a name="trying-your-extension"></a>Uzantınızı deniyor
+Artık sütun kılavuzlarınızın uzantısını yürütmek için **F5** 'e basabilirsiniz. Bir metin dosyası açın ve düzenleyicinin bağlam menüsünü kullanarak kılavuz çizgileri ekleyin, bunları kaldırın ve rengini değiştirin. Sütun kılavuzu eklemek için metne tıkladınız (satırın sonuna kadar boşluk değil), ya da düzenleyici bunu satırdaki son sütuna ekler. Komut penceresini kullanır ve komutları bir bağımsız değişkenle çalıştırırsanız, her yere sütun kılavuzu ekleyebilirsiniz.
 
-Farklı komut yerleşimi deneyin, adlarını değiştirmek, simgeler vb. değiştirmek istediğiniz ve Visual Studio menülerinde en son kodu gösteren herhangi bir sorun varsa, hata ayıklaması yaptığınız Deneysel hive sıfırlayabilirsiniz. Ortaya çıkarmak **Windows Başlat menüsündeki** ve "Sıfırla" yazın. Arayın ve çağırmak **sonraki Visual Studio Deneysel örneğini sıfırlama**. Bu, tüm uzantı bileşenlerinin Deneysel kayıt defteri kovanı temizler. Mevcut bileşenlerinden temizleme ayarları şekilde Visual Studio'nun Deneysel hive'ı kapattığınızda sahip tüm kılavuzları hala alınmaz vardır, kodunuzun sonraki başlatmada ayarlar deposu okur.
+Farklı komut yerleşimi denemek istiyorsanız, adları değiştirin, simgeleri değiştirin, vb. ve menülerde en son kodu gösteren Visual Studio ile ilgili herhangi bir sorununuz varsa, hata ayıkladığınızda deneysel Hive 'yi sıfırlayabilirsiniz. **Windows Başlat menüsünü** açın ve "Sıfırla" yazın. **Sonraki Visual Studio Deneysel örneğini sıfırlayın**ve çağırın. Bu, tüm uzantı bileşenlerinin Deneysel kayıt defteri kovanını temizler. Bileşenlerin ayarları temizlemediği için, Visual Studio 'nun deneysel Hive 'yi kapattığınızda sahip olduğunuz tüm kılavuzlar yine de kodunuz sonraki başlatmada ayarlar deposunu okuduğunda orada olacaktır.
 
-## <a name="finished-code-project"></a>Tamamlanmış kod projesini
-Bir GitHub projesini Visual Studio genişletilebilirliği örnekleri yakında ve projeyi olacak. Bu konuda, bu durum oluştuğunda var. işaret edecek şekilde güncelleştireceğiz. Tamamlanan örnek proje, farklı GUID'leri olabilir ve farklı bit eşlemler Şerit komut simgeler için gerekir.
+## <a name="finished-code-project"></a>Kod projesi tamamlandı
+Yakında Visual Studio genişletilebilirlik örneklerinden oluşan bir GitHub projesi olacaktır ve tamamlanmış proje orada olacaktır. Bu konuyu, ne zaman yapılacağını göstermek için güncelleştireceğiz. Tamamlanan örnek projenin GUID 'leri farklı olabilir ve komut simgeleri için farklı bit eşlem şeridine sahip olur.
 
-Bu Visual Studio Galerisi sütun kılavuzları özelliğiyle sürümünü deneyebilirsiniz[uzantısı](https://visualstudiogallery.msdn.microsoft.com/da227a0b-0e31-4a11-8f6b-3a149cf2e459?SRC=Home).
+Bu Visual Studio Galerisi[uzantısıyla](https://visualstudiogallery.msdn.microsoft.com/da227a0b-0e31-4a11-8f6b-3a149cf2e459?SRC=Home)bir sütun kılavuzu özelliğinin bir sürümünü deneyebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Düzenleyici içinde](../extensibility/inside-the-editor.md)
-[düzenleyiciyi ve dil hizmetlerini genişletme](../extensibility/extending-the-editor-and-language-services.md)
-[dil hizmeti ve düzenleyici uzantı noktaları](../extensibility/language-service-and-editor-extension-points.md) 
- [Menüler ve komutlar genişletme](../extensibility/extending-menus-and-commands.md)
-[menüye alt menü ekleme](../extensibility/adding-a-submenu-to-a-menu.md)
-[bir düzenleyici öğesi şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md)
+[Düzenleyicinin içinde](../extensibility/inside-the-editor.md) 
+ [Düzenleyici ve dil hizmetlerini genişletme](../extensibility/extending-the-editor-and-language-services.md) 
+ [Dil hizmeti ve Düzenleyici uzantı noktaları](../extensibility/language-service-and-editor-extension-points.md) 
+ [Menüleri ve komutları genişletme](../extensibility/extending-menus-and-commands.md) 
+ Menüye alt menü [ekleme](../extensibility/adding-a-submenu-to-a-menu.md) 
+ [Düzenleyici öğe şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md)

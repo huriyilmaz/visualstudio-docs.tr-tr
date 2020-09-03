@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerDataProvider | Microsoft Dokümanlar
+title: IEEVisualizerDataProvider | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,48 +16,48 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a10f306b6c507f6db7add17931b8a38d926a37d9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718057"
 ---
 # <a name="ieevisualizerdataprovider"></a>IEEVisualizerDataProvider
 > [!IMPORTANT]
-> Visual Studio 2015'te ifade değerlendiricilerinin bu şekilde uygulanması amortismana uymaktadır. CLR ifade değerlendiricilerinin uygulanması hakkında bilgi için lütfen [CLR İfade Değerlendiriciler](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [Yönetilen İfade Değerlendirici Örneği'ne](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)bakın.
+> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Bu arabirim, bir tür görselleştiricisi aracılığıyla nesnenin değerini değiştirme olanağı sağlar.
+ Bu arabirim, bir nesnenin değerini tür görselleştiricisi aracılığıyla değiştirme olanağı sağlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IEEVisualizerDataProvider : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- İfade değerlendiricisi, bir tür görselleştiricisi aracılığıyla özellik nesnesi üzerindeki verileri değiştirmeyi desteklemek için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ İfade değerlendirici, bir tür görselleştiricisi aracılığıyla bir özellik nesnesindeki verileri değiştirmeyi desteklemek için bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bu arabirim [CreateVisualizerService](../../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md)için bir çağrı yoluyla [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md) nesne oluştururken kullanılır. Daha fazla ayrıntı için [Verileri Görselleştirme ve Görüntüleme'ye](../../../extensibility/debugger/visualizing-and-viewing-data.md) bakın.
+ Bu arabirim, [CreateVisualizerService](../../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md)çağrısıyla [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md) nesnesini oluşturmak için kullanılır. Daha fazla ayrıntı için bkz. [verileri görselleştirme ve görüntüleme](../../../extensibility/debugger/visualizing-and-viewing-data.md) .
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasına göre yöntemler
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[CanSetObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-cansetobjectforvisualizer.md)|Bu görselleştiricinin temsil ettiği nesneyi (ve daha sonra değerini) güncelleştirmenin mümkün olup olmadığını belirler.|
-|[GetNewObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-getnewobjectforvisualizer.md)|Bu görselleştirici için nesnenin yeniden değerlendirilmesini zorlar.|
-|[GetObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-getobjectforvisualizer.md)|Bu görselleştirici için varolan bir nesne alır (değerlendirme yapılmaz).|
-|[SetObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-setobjectforvisualizer.md)|Bu görselleştiriciiçin nesneyi güncelleştirir ve böylece görselleştiricinin sunduğu değeri değiştirir.|
+|[CanSetObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-cansetobjectforvisualizer.md)|Bu Görselleştirici temsil ettiği nesnenin (ve daha sonra da bu değerin) güncelleştirilmesi mümkün olup olmadığını belirler.|
+|[GetNewObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-getnewobjectforvisualizer.md)|Bu Görselleştirici için nesnenin yeniden değerlendirilmesini zorlar.|
+|[GetObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-getobjectforvisualizer.md)|Bu Görselleştirici için var olan bir nesneyi alır (değerlendirme yapılmaz).|
+|[SetObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-setobjectforvisualizer.md)|Bu Görselleştirici için nesneyi güncelleştirir, böylece Görselleştirici sunduğu değeri değiştirir.|
 
 ## <a name="remarks"></a>Açıklamalar
- Visualizer hizmeti [(IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md) arabirimi tarafından temsil edildiği ve [CreateVisualizerService](../../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md)tarafından döndürülen) `IEEVisualizerDataProvider` arabirimi uygulayan nesneye bir referans tutar. Sonuç olarak, `IEEVisualizerDataProvider` bu nesne `IEEVisualizerService` nesneye bir başvuru tutarsa, arabirim [IDebugProperty2'yi](../../../extensibility/debugger/reference/idebugproperty2.md) uygulayan nesne üzerinde uygulanmamalıdır: nesneler yok edildiğinde dairesel bir başvuru sonuçları ve bir kilitlenme oluşur. Önerilen yaklaşım, nesnenin `IEEVisualizerDataProvider` `IDebugProperty2` onu çağırmadan `IUnknown::AddRef` devraldığı ayrı bir nesne üzerinde uygulamaktır.
+ Görselleştiricisi hizmeti ( [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md) arabirimi tarafından temsil edilen ve [CreateVisualizerService](../../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md)tarafından döndürülen), arabirimi uygulayan nesneye bir başvuru tutar `IEEVisualizerDataProvider` . Sonuç olarak, `IEEVisualizerDataProvider` Bu nesnenin nesneye bir başvuru elde etmesi durumunda arabirim, [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) uygulayan aynı nesneye uygulanmamalıdır `IEEVisualizerService` : döngüsel bir başvuru sonuçları ve nesneler yok edildiğinde kilitlenme oluşur. Önerilen yaklaşım, `IEEVisualizerDataProvider` `IDebugProperty2` nesnesine çağrı yapmadan nesnenin temsilci olarak ekleneceği ayrı bir nesneye uygulanır `IUnknown::AddRef` .
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: ee.h
+ Üstbilgi: ee. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İfade Değerlendirme Arabirimleri](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)

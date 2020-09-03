@@ -12,24 +12,24 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 94685a2b06b14c232d9e1f79a1d7440e1ceb765b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161339"
 ---
 # <a name="starting-a-build-from-within-the-ide"></a>IDE İçinden Derleme Başlatma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Özel proje sistemleri kullanmalıdır <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> yapıları başlatmak için. Bu konu bunun nedenlerini açıklar ve yordamı açıklar.  
+Özel proje sistemleri, <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> yapıları başlatmak için kullanılmalıdır. Bu konu, bunun nedenlerini açıklar ve yordamı özetler.  
   
-## <a name="parallel-builds-and-threads"></a>Paralel yapılar ve iş parçacıkları  
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Ortak kaynaklara erişim için dolayımlama gerektiren paralel yapılar sağlar. Proje sistemleri çalıştırabilirsiniz yapıları zaman uyumsuz olarak, ancak bu tür sistemleri çağrı içinden yapı işlevlerini çağırmamalıdır telefonla geri yapı yöneticisine sağlanan.  
+## <a name="parallel-builds-and-threads"></a>Paralel derlemeler ve Iş parçacıkları  
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ortak kaynaklara erişim için ortam gerektiren paralel derlemelere izin verir. Proje sistemleri derlemeleri zaman uyumsuz olarak çalıştırabilir, ancak bu tür sistemler derleme yöneticisine çağrı geri alma işlemleri içinden çağrı gerçekleştirmemelidir.  
   
- Proje sistemi ortam değişkenlerini değiştiriyorsa, yapı Outofproc olarak ayarlaması gerekir. Bu, bunlar işlemde düğüm gerektirdiklerinden, ana bilgisayar nesnelerini kullanamayacağınız anlamına gelir.  
+ Proje sistemi ortam değişkenlerini değiştirirse, derleme için Nodebenzeşimini OutOfProc olarak ayarlaması gerekir. Yani, işlem içi düğümü gerektirdiğinden konak nesnelerini kullanamazsınız.  
   
-## <a name="using-ivsbuildmanageraccessor"></a>Ivsbuildmanageraccessor kullanma  
- Aşağıdaki kod, proje sistemi bir derlemeyi başlatmak için kullanabileceğiniz bir yöntemin anahatlarını vermektedir:  
+## <a name="using-ivsbuildmanageraccessor"></a>IVSBuildManagerAccessor kullanma  
+ Aşağıdaki kod, bir proje sisteminin bir derlemeyi başlatmak için kullanabileceği bir yöntemi özetler:  
   
 ```  
   
