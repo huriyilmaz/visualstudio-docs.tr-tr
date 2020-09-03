@@ -9,10 +9,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 27d837c09e5f2f90796c149bf58d1114d7e6352d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546321"
 ---
 # <a name="ca2153-avoid-handling-corrupted-state-exceptions"></a>CA2153: Bozuk Durum Özel Durumlarını İşlemekten Kaçının
@@ -68,7 +68,7 @@ void TestMethod1()
 }
 ```
 
-### <a name="solution-1"></a>Çözüm 1
+### <a name="solution-1"></a>1\. Çözüm
  HandleProcessCorruptedExceptions özniteliğini kaldırmak, özel durumların işlenmemesini sağlar.
 
 ```
@@ -89,7 +89,7 @@ void TestMethod1()
 }
 ```
 
-### <a name="solution-2"></a>Çözüm 2
+### <a name="solution-2"></a>2\. Çözüm
  Genel catch işleyicisini kaldırın ve yalnızca belirli özel durum türlerini yakalayın.
 
 ```
@@ -110,7 +110,7 @@ void TestMethod1()
 }
 ```
 
-### <a name="solution-3"></a>Çözüm 3
+### <a name="solution-3"></a>3\. Çözüm
  Özel durumu yeniden oluşturun.
 
 ```

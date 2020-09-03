@@ -1,5 +1,5 @@
 ---
-title: IDebugSettingsCallback2::EnumEEs | Microsoft Dokümanlar
+title: 'IDebugSettingsCallback2:: Trmees | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +14,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 19e0763ad74b3486b8bc2548ec129d9e95feb771
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80720244"
 ---
 # <a name="idebugsettingscallback2enumees"></a>IDebugSettingsCallback2::EnumEEs
-Dil ve satıcı tanımlayıcıları verilen kullanılabilir ifade değerlendiricilerini oyalar.
+Dil ve satıcı tanımlayıcıları verilen kullanılabilir ifade değerlendiricileri numaralandırır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT EnumEEs(
@@ -45,19 +45,19 @@ public int EnumEEs(
 
 ## <a name="parameters"></a>Parametreler
 `celtBuffer`\
-[içinde] `pceltEEs` Arabellekteki öğe sayısı.
+'ndaki Arabellekteki öğe sayısı `pceltEEs` .
 
 `rgguidLang`\
-[içinde, dışarı] Programlama dili için benzersiz tanımlayıcı.
+[in, out] Programlama dili için benzersiz tanımlayıcı.
 
 `rgguidVendor`\
-[içinde, dışarı] Satıcı için benzersiz tanımlayıcı.
+[in, out] Satıcı için benzersiz tanımlayıcı.
 
 `pceltEEs`\
-[içinde, dışarı] İfade değerlendiriciler dizisi.
+[in, out] Değerlendiricileri ifadesinin dizisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

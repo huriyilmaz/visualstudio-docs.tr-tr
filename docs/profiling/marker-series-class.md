@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8f7df74624ea602b5c996d5523a45826137119f5
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85330718"
 ---
 # <a name="marker_series-class"></a>marker_series sınıfı
@@ -32,14 +32,14 @@ class marker_series;
 
 ### <a name="public-constructors"></a>Ortak oluşturucular
 
-|Name|Description|
+|Ad|Açıklama|
 |----------|-----------------|
 |[marker_series:: marker_series Oluşturucusu](../profiling/marker-series-marker-series-constructor.md)|`marker_series` sınıfının yeni bir örneğini başlatır.|
 |[marker_series:: ~ marker_series yok edici](../profiling/marker-series-tilde-marker-series-destructor.md)|Marker_series nesnesini yok eder ve tüm ayrılmış kaynakları serbest bırakır.|
 
 ### <a name="public-methods"></a>Ortak Yöntemler
 
-|Name|Description|
+|Ad|Açıklama|
 |----------|-----------------|
 |[marker_series:: is_enabled yöntemi](../profiling/marker-series-is-enabled-method.md)|Sağlayıcının herhangi bir oturumun etkinleştirilip etkinleştirilmediğini belirler.|
 |[marker_series:: write_alert yöntemi](../profiling/marker-series-write-alert-method.md)|Eşzamanlılık görselleştiricisi izleme dosyasına bir uyarı yazar.|

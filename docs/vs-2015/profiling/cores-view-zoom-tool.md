@@ -1,5 +1,5 @@
 ---
-title: Çekirdekler görünümü Yakınlaştırma aracı | Microsoft Docs
+title: Çekirdekler Görünümü Yakınlaştırma aracı | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,22 +14,22 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 28e307bd91d468e0efff840d2b6f469b000f243f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68183786"
 ---
 # <a name="cores-view-zoom-tool"></a>Çekirdekler Görünümü Yakınlaştırma Aracı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yakınlaştırma, belirli ilgi alanlarına odaklanabilmeniz için zaman çizelgesinde yakınlaştırma ve uzaklaştırma olanak sağlayan bir kaydırıcı denetimidir. Bu denetim üzerinde geçerli görünüm merkezinin yakınlaştırır, ekranı önce görünümü şekilde ayarlayın.  
+Yakınlaştırma denetimi, belirli bir ilgilendiğiniz alanlara odaklanabilmeniz için zaman çizelgesinde yakınlaştırıp uzaklaşmanızı sağlayan bir kaydırıcıdır. Bu denetim geçerli görünümün ortasına yakınlaşarak, yakınlaştırma yapmadan önce görünümü ayarlayın.  
   
-## <a name="other-ways-to-zoom"></a>Yakınlaştırma diğer yolları  
+## <a name="other-ways-to-zoom"></a>Yakınlaştırmak için diğer yollar  
   
-- Yakınlaştırmayı: Zaman Çizelgesi Görünümü'nde bir alan seçmek için sürükleyin. Fare düğmesini bıraktığınızda, zaman çizelgesi görünümü seçili aralıkta yakınlaştırır.  
+- Yakınlaştırma: zaman çizelgesi görünümündeki bir alanı seçmek için sürükleyin. Fare düğmesini serbest bırakırsanız, zaman çizelgesi görünümü seçili aralığa göre yakınlaştırılır.  
   
-- Yakınlaştırma ve uzaklaştırma: Zaman çizelgesi üzerinde gelin ve sonra fare tekerleğini taşırken CTRL tuşuna basın.  
+- Yakınlaştırma ve uzaklaştırma: zaman çizelgesinin üzerine gelin ve fare tekerleğini taşırken CTRL tuşuna basın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Çekirdekler Görünümü](../profiling/cores-view.md)

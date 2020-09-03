@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4dccd82ea260c6d113ffaf077922c5e22946bbbd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651882"
 ---
 # <a name="how-to-find-topics-in-the-table-of-contents"></a>Nasıl yapılır: İçindekilerde Konu Bulma
@@ -32,7 +32,7 @@ ms.locfileid: "72651882"
 > TOC 'de bulunan konuların kapsamı, seçtiğiniz filtreye bağlıdır.
 
 ## <a name="filter-the-toc"></a>TOC 'yi filtrele
- **İçindekiler** sekmesinde görünen konuların kapsamını DARALTMAK için TOC 'ye filtre uygulayabilirsiniz. başlıklar listede yalnızca belirttiğiniz terimin kökünü içeriyorsa görünür. Örneğin, bir filtre olarak "sorun giderme" belirtirseniz, yalnızca "sorun giderme" veya "sorun giderme" içeren başlıklar görüntülenir. Başlıkları terimi olmayan düğümler, üç nokta (...) ile tek bir düğüme daraltılır.
+ **İçindekiler** sekmesinde görüntülenen konuların kapsamını DARALTMAK için TOC 'ye filtre uygulayabilirsiniz. Başlıklar listede yalnızca belirttiğiniz terimin kökünü içeriyorsa görüntülenir. Örneğin, bir filtre olarak "sorun giderme" belirtirseniz, yalnızca "sorun giderme" veya "sorun giderme" içeren başlıklar görüntülenir. Başlıkları terimi olmayan düğümler, üç nokta (...) ile tek bir düğüme daraltılır.
 
 #### <a name="to-filter-the-toc"></a>TOC 'yi filtrelemek için
 
@@ -41,7 +41,7 @@ ms.locfileid: "72651882"
 2. **Filtre içeriği** metin kutusuna bir terim girin.
 
 > [!NOTE]
-> Filtrenin çalışması uzun sürerse, `title:` gelişmiş arama işlecini kullanarak sonuçları daha hızlı görüntüleyebilirsiniz.
+> Filtrenin çalışması uzun sürüyorsa, gelişmiş arama işlecini kullanarak sonuçları daha hızlı bir şekilde görüntüleyebilirsiniz `title:` .
 
 ## <a name="synchronize-a-topic-with-the-toc"></a>Bir konuyu TOC ile senkronize etme
  Dizin veya tam metin arama özelliklerini kullanarak bir konu açtıysanız, TOC 'yi konu penceresiyle eşitleyerek bu konunun TOC 'de nerede olduğunu belirleyebilirsiniz.

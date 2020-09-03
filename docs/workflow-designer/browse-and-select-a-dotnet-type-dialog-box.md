@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: a526bc9504f4f63a7a135978ade02654bbe63ffd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75597119"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>.NET Türüne Gözat ve Seç İletişim Kutusu
@@ -28,7 +28,7 @@ Bu iletişim kutusu, aşağıdakiler de dahil olmak üzere çeşitli Kullanıcı
 
 - Genel etkinlik için bir tür seçerken.
 
-- <xref:System.Activities.Statements.TryCatch> etkinliğine bir catch eklenirken.
+- Etkinliğe bir catch eklenirken <xref:System.Activities.Statements.TryCatch> .
 
 > [!NOTE]
 > Tür tarayıcısı Visual Basic basit dizi türleri görüntüleyebilir, ancak çok boyutlu dizi türleri gösterebilir. Ayrıntılar için bkz. [pürüzlü Diziler](/previous-versions/visualstudio/visual-studio-2008/hkhhsz9t(v=vs.90)) ve [çok boyutlu diziler](/previous-versions/visualstudio/visual-studio-2008/d2de1t93(v=vs.90)) .
@@ -39,7 +39,7 @@ Bu iletişim kutusu, aşağıdakiler de dahil olmak üzere çeşitli Kullanıcı
 
 1. **Tür adı** kutusuna, kullanmak istediğiniz türün adını girin.
 
-2. Aşağıdakilerden birini yapın:
+2. Şunlardan birini yapın:
 
     - Kullanmak istediğiniz türün adı, **tür adı** kutusundaki ağaçta göründüğünde, seçmek için türe çift tıklayın.
 
@@ -57,7 +57,7 @@ Bu iletişim kutusu, aşağıdakiler de dahil olmak üzere çeşitli Kullanıcı
 
 Tür tarayıcısında görünen türler, tür tarayıcısının nasıl başlatıldığına bağlı olarak farklılık gösterebilir. Tür tarayıcısı **VS2010**içindeki bir iş akışı projesinden başlatılmışsa, varsayılan olarak başvurulan derlemelerdeki tüm türler ve başvurulan projeler gösterilir. Tür tarayıcısı bir **VS2010** projesi sisteminin dışından (örneğin, yeniden barındırılan bir iş akışı uygulamasında veya tek başına bir iş akışı dosyasında) başlatılmışsa, varsayılan olarak, uygulama etki alanında yüklü derlemelerin tümünün türleri gösterilir.
 
-Tür tarayıcısındaki türler, etkinlik Tasarımcısı geliştiricilerine göre filtrelenebilir. Belirli bir etkinlik için yalnızca türlerin bir alt kümesini görebilirsiniz. Örneğin, <xref:System.Activities.Statements.TryCatch> etkinliğinde, tür tarayıcısında yalnızca <xref:System.Exception> türetilen türler gösterilir.
+Tür tarayıcısındaki türler, etkinlik Tasarımcısı geliştiricilerine göre filtrelenebilir. Belirli bir etkinlik için yalnızca türlerin bir alt kümesini görebilirsiniz. Örneğin, <xref:System.Activities.Statements.TryCatch> etkinliğinde, türü tarayıcıda yalnızca öğesinden türetilmiş türler <xref:System.Exception> gösterilir.
 
 ## <a name="filtering-search-results-in-the-type-browser"></a>Arama sonuçlarını tür tarayıcısında filtreleme
 
@@ -65,13 +65,13 @@ Tür tarayıcısındaki türler, etkinlik Tasarımcısı geliştiricilerine gör
 
 Örneğin:
 
-1. Yazma **işlemi** <xref:System.OperationCanceledException> eşleşir, ancak <xref:System.InvalidOperationException>eşleşmez. <xref:System.InvalidOperationException>eşleştirmek için, System. ı veya geçersiz yazmaya başlayın.
+1. Yazma **işlemi** eşleşiyor <xref:System.OperationCanceledException> ancak eşleşmiyor <xref:System.InvalidOperationException> . Eşleştirmek için <xref:System.InvalidOperationException> , System. ı veya geçersiz yazmaya başlayın.
 
-2. **Genel** eşleşmeler yazmak <xref:System.GenericUriParser>, <xref:System.Collections.Generic> ad alanındaki türleri değil. <xref:System.Collections.Generic> ad alanındaki türleri aramak için ad alanının tam adını yazın.
+2. **Genel** eşleşmeler yazma <xref:System.GenericUriParser> , ancak <xref:System.Collections.Generic> ad alanındaki türler değil. Ad alanındaki türleri aramak için <xref:System.Collections.Generic> ad alanının tam adını yazın.
 
 ## <a name="selecting-a-service-contract-using-the-type-browser-dialog"></a>Tarayıcı türü iletişim kutusunu kullanarak bir hizmet sözleşmesi seçme
 
-Bir hizmet sözleşmesi türü seçerken tür tarayıcısı yalnızca <xref:System.ServiceModel.ServiceContractAttribute> özniteliğine sahip türleri gösterir.
+Bir hizmet sözleşmesi türü seçerken tür tarayıcısı yalnızca özniteliği olan türleri gösterir <xref:System.ServiceModel.ServiceContractAttribute> .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

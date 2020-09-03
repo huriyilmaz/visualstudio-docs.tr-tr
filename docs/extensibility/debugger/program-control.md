@@ -1,5 +1,5 @@
 ---
-title: Program Kontrolü | Microsoft Dokümanlar
+title: Program denetimi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,40 +11,40 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4e77e233050c5ce10aef5053f82c8d26cb984b85
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738236"
 ---
-# <a name="program-control"></a>Program kontrolü
-Visual Studio hata ayıklama, aşağıdaki adımlama ve devam rutinleri tüm program düzeyinde oluşur:
+# <a name="program-control"></a>Program denetimi
+Visual Studio Hata ayıklamasında, aşağıdaki Adımlama ve devam etme yordamlarının hepsi program düzeyinde oluşur:
 
-- Bir sonraki ifadeyi ayarlama, diğer bir deyişle, bilgisayarınızı belirli bir çerçeve ortamında yürütülecek bir sonraki yönergeye ayar
+- Sonraki ifadeyi ayarlama, diğer bir deyişle, bilgisayarınızı belirli bir çerçeve ortamında yürütülecek sonraki yönergeye ayarlama
 
-- Yürütme, diğer bir süre, atlama modundan çıkmaya devam
+- Yürütme, diğer bir deyişle, Adımlama modundan çıkmadan devam ediyor
 
-- Bir sonraki yönergeye adım atma
+- Sonraki yönergeye adımla
 
-- Geçerli adımlama moduna devam etme
+- Geçerli Adımlama moduna devam etme
 
 - Programın içerdiği iş parçacıklarını askıya alma
 
-- Programın içerdiği iş parçacıklarına devam etme
+- Programın içerdiği iş parçacıklarını sürdürme
 
 > [!NOTE]
-> Arama yığınının görüntülenmesi iş parçacığı düzeyinde uygulanır. Bir iş parçacığı için çağrı yığınını görüntülerken çerçeve bilgilerini sayısallandırmak [için, IEnumDebugFrameInfo2](../../extensibility/debugger/reference/ienumdebugframeinfo2.md) arabiriminin tüm yöntemlerini uygulamanız gerekir.
+> Çağrı yığınını görüntülemek iş parçacığı düzeyinde uygulanır. Bir iş parçacığının çağrı yığınını görüntülerken çerçeve bilgilerini numaralandırmak için, [IEnumDebugFrameInfo2](../../extensibility/debugger/reference/ienumdebugframeinfo2.md) arabiriminin tüm yöntemlerini uygulamanız gerekir.
 
-## <a name="methods-of-program-control"></a>Program kontrol yöntemleri
- Aşağıdaki tablo, en az işlevsel hata ayıklama altyapısı (DE) ve yürütme denetimi için uygulanması gereken [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) yöntemlerini gösterir.
+## <a name="methods-of-program-control"></a>Program denetimi yöntemleri
+ Aşağıdaki tabloda, en düşük düzeyde işlevsel hata ayıklama altyapısı (DE) ve yürütme denetimi için uygulanması gereken [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) yöntemleri gösterilmektedir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDebugProgram2::Execute](../../extensibility/debugger/reference/idebugprogram2-execute.md)|Bir program tarafından bulunan tüm iş parçacıklarını durmuş durumdan çalıştırmaya devam eder. Yürütme kontrolü için gereklidir.|
-|[IDebugProgram2::Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md)|Bir program tarafından bulunan tüm iş parçacıklarını durmuş durumdan çalıştırmaya devam eder. Yürütme kontrolü için gereklidir.|
-|[IDebugProgram2::Step](../../extensibility/debugger/reference/idebugprogram2-step.md)|Verilen iş parçacığı üzerinde bir adım gerçekleştirir. Program tarafından bulunan diğer tüm iş parçacıklarını çalıştırmaya devam eder. Yürütme kontrolü için gereklidir.|
+|[IDebugProgram2::Execute](../../extensibility/debugger/reference/idebugprogram2-execute.md)|Bir programın içerdiği tüm iş parçacıklarını durdurulmuş bir durumdan çalıştırmaya devam eder. Yürütme denetimi için gereklidir.|
+|[IDebugProgram2::Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md)|Bir programın içerdiği tüm iş parçacıklarını durdurulmuş bir durumdan çalıştırmaya devam eder. Yürütme denetimi için gereklidir.|
+|[IDebugProgram2::Step](../../extensibility/debugger/reference/idebugprogram2-step.md)|Verilen iş parçacığında bir adım gerçekleştirir. Programın içerdiği tüm diğer iş parçacıklarını çalıştırmaya devam eder. Yürütme denetimi için gereklidir.|
 
- Çok iş parçacığı lı programlar için, [IDebugProgram2::EnumThreads](../../extensibility/debugger/reference/idebugprogram2-enumthreads.md) yöntemini ve [IEnumDebugThreads2](../../extensibility/debugger/reference/ienumdebugthreads2.md) arabiriminin tüm yöntemlerini de uygulamanız gerekir.
+ Çok iş parçacıklı programlar için, [IDebugProgram2:: EnumThreads](../../extensibility/debugger/reference/idebugprogram2-enumthreads.md) yöntemini ve [IEnumDebugThreads2](../../extensibility/debugger/reference/ienumdebugthreads2.md) arabiriminin tüm yöntemlerini de uygulamalısınız.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yürütme kontrolü ve durum değerlendirmesi](../../extensibility/debugger/execution-control-and-state-evaluation.md)
+- [Yürütme denetimi ve durum değerlendirmesi](../../extensibility/debugger/execution-control-and-state-evaluation.md)

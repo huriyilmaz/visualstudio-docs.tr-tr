@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 49da7d5e7f6a7731a708accb3d52fb6383ff1017
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72652220"
 ---
 # <a name="anonymous-methods-and-code-analysis"></a>Anonim Yöntemler ve Kod Analizi
@@ -67,7 +67,7 @@ class Class
 ```
 
 ## <a name="inline-anonymous-methods"></a>Satır içi anonim Yöntemler
- Bir alana satır içi atama olarak belirtilen anonim bir yöntemin uyarıları ve ölçümleri, Oluşturucu ile ilişkilendirilir. Alan `static` (`Shared` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) olarak bildirilirse, uyarılar ve ölçümler sınıf oluşturucusuyla ilişkilendirilir; Aksi takdirde, örnek Oluşturucu ile ilişkilendirilir.
+ Bir alana satır içi atama olarak belirtilen anonim bir yöntemin uyarıları ve ölçümleri, Oluşturucu ile ilişkilendirilir. Alan `static` ( `Shared` içinde) olarak bildirilirse [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] , uyarılar ve ölçümler sınıf oluşturucusuyla ilişkilendirilir; Aksi takdirde, örnek Oluşturucu ile ilişkilendirilir.
 
  Örneğin, aşağıdaki sınıfta, **anonymousMethod1** bildiriminde bulunan tüm uyarılar, **sınıfının**örtük olarak oluşturulan varsayılan oluşturucusuna göre oluşturulacaktır. Ancak, **anonymousMethod2** ' de bulunan bulunanlar örtük olarak oluşturulan sınıf oluşturucusuna göre uygulanır.
 

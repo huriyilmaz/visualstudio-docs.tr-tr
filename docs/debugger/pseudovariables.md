@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b5b0369a30e69fc69782bbc4a0f5b0c4518cac07
-ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75776095"
 ---
 # <a name="pseudovariables-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısında sahte değişkenler
@@ -36,24 +36,24 @@ Sözde değişkenler, belirli bilgileri bir değişken penceresinde veya **Quick
 
 |Sözde değişken|İşlev|
 |--------------------|--------------|
-|`$err`|SetLastError işleviyle birlikte ayarlanan son hata değerini görüntüler. Görüntülenen değer, GetLastError işlevinin ne döndürüleceğini gösterir.<br /><br /> Bu değerin kodu çözülmüş biçimini görmek için `$err,hr` kullanın. Örneğin, son hata 3 ise `$err,hr` görüntülenir `ERROR_PATH_NOT_FOUND : The system cannot find the path specified.`|
+|`$err`|SetLastError işleviyle birlikte ayarlanan son hata değerini görüntüler. Görüntülenen değer, GetLastError işlevinin ne döndürüleceğini gösterir.<br /><br /> `$err,hr`Bu değerin kodu çözülmüş biçimini görmek için kullanın. Örneğin, son hata 3 ise, şu şekilde `$err,hr` görüntülenir `ERROR_PATH_NOT_FOUND : The system cannot find the path specified.`|
 |`$handles`|Uygulamanızda ayrılan tanıtıcı sayısını görüntüler.|
 |`$vframe`|Geçerli yığın çerçevesinin adresini görüntüler.|
 |`$tid`|Geçerli iş parçacığının iş parçacığı KIMLIĞINI görüntüler.|
 |`$env`|Dize görüntüleyicisinde ortam bloğunu görüntüler.|
 |`$cmdline`|Programı başlatan komut satırı dizesini görüntüler.|
 |`$pid`|İşlem KIMLIĞINI görüntüler.|
-|`$` *RegisterName*<br /><br /> veya<br /><br /> `@` *RegisterName*|Kayıt *RegisterName*'in içeriğini görüntüler.<br /><br /> Normalde kayıt adını girerek kayıt içeriğini görüntüleyebilirsiniz. Bu söz dizimini kullanmanız gereken tek zaman, YAZMAÇ adının bir değişken adını aşırı yükleyidir. Kayıt adı, geçerli kapsamdaki bir değişken adıyla aynıysa, hata ayıklayıcı adı değişken adı olarak yorumlar. Bu, `$`*RegisterName* veya `@`*RegisterName* 'in yararlı olduğu durumlarda vardır.|
+|`$`*RegisterName*<br /><br /> veya<br /><br /> `@`*RegisterName*|Kayıt *RegisterName*'in içeriğini görüntüler.<br /><br /> Normalde kayıt adını girerek kayıt içeriğini görüntüleyebilirsiniz. Bu söz dizimini kullanmanız gereken tek zaman, YAZMAÇ adının bir değişken adını aşırı yükleyidir. Kayıt adı, geçerli kapsamdaki bir değişken adıyla aynıysa, hata ayıklayıcı adı değişken adı olarak yorumlar. Bu, `$` *RegisterName* veya `@` *RegisterName* yararlı olarak sunulur.|
 |`$clk`|Saat döngülerinde saati görüntüler.|
 |`$user`|Uygulamayı çalıştıran hesap için hesap bilgilerine sahip bir yapı görüntüler. Güvenlik nedenleriyle parola bilgileri gösterilmez.|
-|`$exceptionstack`|Geçerli Windows Çalışma Zamanı özel durumunun yığın izlemesini görüntüler. `$ exceptionstack` yalnızca UWP uygulamalarında kullanılabilir. `$ exceptionstack`, ve SEH özel C++ durumları için desteklenmez|
+|`$exceptionstack`|Geçerli Windows Çalışma Zamanı özel durumunun yığın izlemesini görüntüler. `$ exceptionstack` yalnızca UWP uygulamalarında işe yarar. `$ exceptionstack` C++ ve SEH özel durumları için desteklenmez|
 |`$returnvalue`|Bir yöntemin dönüş değerini görüntüler.|
 
- ' C# De, aşağıdaki tabloda gösterilen sözde değişkenleri kullanabilirsiniz:
+ C# ' de, aşağıdaki tabloda gösterilen sözde değişkenleri kullanabilirsiniz:
 
 |Sözde değişken|İşlev|
 |--------------------|--------------|
-|`$exception`|Son özel durum hakkındaki bilgileri görüntüler. Hiçbir özel durum oluştuysa, değerlendirme `$exception` bir hata mesajı görüntüler.<br /><br /> Özel durum Yardımcısı devre dışı bırakıldığında, bir özel durum oluştuğunda `$exception` **Yereller** penceresine otomatik olarak eklenir.|
+|`$exception`|Son özel durum hakkındaki bilgileri görüntüler. Bir özel durum oluştuysa, değerlendirmek `$exception` bir hata mesajı görüntüler.<br /><br /> Özel durum Yardımcısı devre dışı bırakıldığında, `$exception` bir özel durum oluştuğunda **Yereller** penceresine otomatik olarak eklenir.|
 |`$user`|Uygulamayı çalıştıran hesap için hesap bilgilerine sahip bir yapı görüntüler. Güvenlik nedenleriyle parola bilgileri gösterilmez.|
 |`$returnvalue`|Bir .NET yönteminin dönüş değerini görüntüler.|
 
@@ -61,11 +61,11 @@ Sözde değişkenler, belirli bilgileri bir değişken penceresinde veya **Quick
 
 |Sözde değişken|İşlev|
 |--------------------|--------------|
-|`$exception`|Son özel durum hakkındaki bilgileri görüntüler. Hiçbir özel durum oluştuysa, değerlendirme `$exception` bir hata mesajı görüntüler.|
-|`$delete` veya `$$delete`|**Komut** penceresinde oluşturulan örtük bir değişkeni siler. Söz dizimi `$delete,` *değişken* veya`$delete,` *değişkenidir*`.`|
-|`$objectids` veya `$listobjectids`|Tüm etkin nesne kimliklerini belirtilen ifadenin alt öğesi olarak görüntüler. Söz dizimi `$objectid,` *ifade* veya`$listobjectids,` *ifade*`.`|
+|`$exception`|Son özel durum hakkındaki bilgileri görüntüler. Bir özel durum oluştuysa, değerlendirmek `$exception` bir hata mesajı görüntüler.|
+|`$delete` veya `$$delete`|**Komut** penceresinde oluşturulan örtük bir değişkeni siler. Söz dizimi `$delete,` *değişken* veya `$delete,` *değişkendir*`.`|
+|`$objectids` veya `$listobjectids`|Tüm etkin nesne kimliklerini belirtilen ifadenin alt öğesi olarak görüntüler. Söz dizimi `$objectid,` *ifade* veya `$listobjectids,` *ifadedir*`.`|
 |`$` *N* `#`|Nesne KIMLIĞIYLE birlikte *N*değerine eşit olan nesneyi görüntüler.|
-|`$dynamic`|`IDynamicMetaObjectProvider`uygulayan bir nesne için özel **Dinamik görünüm** düğümünü görüntüler. Arayüz. Söz dizimi `$dynamic,` *nesnesidir*. Bu özellik yalnızca .NET Framework sürüm 4 veya üstünü kullanan kod için geçerlidir.|
+|`$dynamic`|Uygulayan bir nesne için özel **Dinamik görünüm** düğümünü görüntüler `IDynamicMetaObjectProvider` . Arayüz. Sözdizimi `$dynamic,` *Object*. Bu özellik yalnızca .NET Framework sürüm 4 veya üstünü kullanan kod için geçerlidir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İzleme ve Hızlı İzleme Pencereleri](../debugger/watch-and-quickwatch-windows.md)

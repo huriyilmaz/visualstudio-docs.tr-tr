@@ -15,28 +15,28 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5d393890e6166b4a4ef53c9520a556e9a9edd64d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75597327"
 ---
 # <a name="toggle-breakpoint-command"></a>Kesim Noktasını Değiştir Komutu
-Kesme noktasını, geçerli durumuna bağlı olarak dosyadaki geçerli konumda açar veya kapatır.
+Dosyadaki geçerli konumda, geçerli durumuna bağlı olarak, kesme noktasını açar veya kapatır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Debug.ToggleBreakpoint [text]
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
 `text`\
-İsteğe bağlı. Metin belirtilirse, satır adlandırılmış bir kesme noktası olarak işaretlenir. Aksi takdirde, satır f9 tuşuna bastığında ne olur benzer bir adsız kesme noktası olarak işaretlenir.
+İsteğe bağlı. Metin belirtilirse, satır adlandırılmış bir kesme noktası olarak işaretlenir. Aksi takdirde, çizgi adlandırılmamış bir kesme noktası olarak işaretlenir ve bu, F9 tuşuna bastığınızda ne olacağı ile benzerdir.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, geçerli kesme noktasını geçişini.
+Aşağıdaki örnek, geçerli kesme noktasına geçiş yapar.
 
 ```
 >Debug.ToggleBreakpoint
@@ -44,7 +44,7 @@ Aşağıdaki örnek, geçerli kesme noktasını geçişini.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
-- [Komut Penceresi](../../ide/reference/command-window.md)
-- [Bul/Komut Kutusu](../../ide/find-command-box.md)
+- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Komut penceresi](../../ide/reference/command-window.md)
+- [Bul/komut kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

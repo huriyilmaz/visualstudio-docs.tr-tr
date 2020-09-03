@@ -8,10 +8,10 @@ ms.date: 03/02/2020
 ms.topic: conceptual
 description: Diğer adlar veya kolay adlar kullanılıyorsa oturum açma başarısız olabilir
 ms.openlocfilehash: 1b6c465bc3e850d8582abde200ac9e5bd995e431
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87234646"
 ---
 # <a name="signing-into-visual-studio-subscriptions-may-fail-when-using-aliases"></a>Diğer adlar kullanılırken Visual Studio aboneliklerinde oturum açma başarısız olabilir
@@ -40,7 +40,7 @@ Bir şirket, UserPrincipalName (UPN) birincil SMTP adresi ile aynı olmayan bir 
 
 #### <a name="how-to-fix-a-upn-mismatch"></a>UPN uyuşmazlığını çözme
 
-1. Visual Studio yönetim yönetim portalına erişin[https://manage.visualstudio.com](https://manage.visualstudio.com) 
+1. Visual Studio yönetim yönetim portalına erişin [https://manage.visualstudio.com](https://manage.visualstudio.com) 
 
 2. UPN uyumsuzluğu sorununa sahip abonenin konumunu bulun. ( [Filtre](search-license.md) özelliği abone bulmayı kolaylaştırabilir.)
 
@@ -56,7 +56,7 @@ Aynı zamanda, Visual Studio abonelikleri portalında oturum açmak için kullan
 
 #### <a name="how-to-detect-if-your-personal-subscription-account-is-impacted-by-an-aliasing-issue"></a>Kişisel abonelik hesabınızın bir diğer ad sorunuyla etkilenip etkilenmediğinizi algılama
 
-1. Oturum açmak için[https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions)
+1. Oturum açmak için [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions)
 
 0. Sayfanın sağ üst kısmında listelenen oturum açma e-posta adresinin, oturum açmak için kullandığınız adresle eşleştiğini doğrulayın.  Oturum açılan e-posta adresi, Web sitesine erişmek için kullanılan e-posta adresiyle aynı değilse, hesabınız ve diğer ad arasında bir çakışma vardır.
 
@@ -82,7 +82,7 @@ Yönetici olarak, abonelerinizin üzerinde başarılı bir oturum açma deneyimi
 - İkinci seçenek (daha az güvenli), abonelerin Dizin e-posta adresinden farklı bir e-posta adresi kullanarak oturum açmalarına izin vermektir.
 
 Bu seçeneklerin her ikisi de aşağıdaki adımları tamamlayarak yönetim portalında yapılandırılır:  
-1. Oturum aç[https://manage.visualstudio.com](https://manage.visualstudio.com) 
+1. Oturum aç [https://manage.visualstudio.com](https://manage.visualstudio.com) 
 
 0. Tek bir kullanıcıyı değiştirirseniz, tabloda bu kullanıcı ' yı seçin ve düzenlemek için sağ tıklayın. Bu, oturum açma e-posta adresini değiştirebileceğiniz bir panel açar. Oturum açma e-posta adresi alanında gerekli güncelleştirmeleri yapın. Kaydet ' e tıkladığınızda değişiklikler geçerli olur.  
 

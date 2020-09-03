@@ -1,5 +1,5 @@
 ---
-title: .NET Framework için Paralel Uzantı İçI | Microsoft Dokümanlar
+title: .NET Framework için paralel uzantı Iç Işlevleri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,30 +11,30 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 6a3583e94a0bfff4474db03aa9d083add921f3da
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738266"
 ---
-# <a name="parallel-extension-internals-for-the-net-framework"></a>.NET Framework için paralel uzantı dahili
-Bu bölümde, .NET Framework'e paralel uzantılar için özel bir hata ayıklama uygulamanıza yardımcı olan iç sınıf türleri, yöntemleri ve alanları açıklanmaktadır.
+# <a name="parallel-extension-internals-for-the-net-framework"></a>.NET Framework için paralel uzantı iç işlevleri
+Bu bölüm, .NET Framework paralel uzantıları için özel bir hata ayıklayıcı uygulamanıza yardımcı olan sınıfların iç türlerini, yöntemlerini ve alanlarını açıklamaktadır.
 
 ## <a name="in-this-section"></a>Bu bölümde
- [Görev sınıfı](../../extensibility/debugger/task-class-internal-members.md) <xref:System.Threading.Tasks.Task?displayProperty=fullName> Sınıfın iç veri üyelerini açıklar.
+ [Görev sınıfı](../../extensibility/debugger/task-class-internal-members.md) Sınıfının iç veri üyelerini açıklar <xref:System.Threading.Tasks.Task?displayProperty=fullName> .
 
- [TaskScheduler sınıfı](../../extensibility/debugger/taskscheduler-class-internal-members.md) <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> Sınıfın iç veri üyelerini açıklar.
+ [TaskScheduler sınıfı](../../extensibility/debugger/taskscheduler-class-internal-members.md) Sınıfının iç veri üyelerini açıklar <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> .
 
- [ContingentProperties sınıfı](../../extensibility/debugger/contingentproperties-class-internal-members.md) `System.Threading.Tasks.ContingentProperties` Sınıfın iç veri üyelerini açıklar.
+ [Kıgentproperties sınıfı](../../extensibility/debugger/contingentproperties-class-internal-members.md) Sınıfının iç veri üyelerini açıklar `System.Threading.Tasks.ContingentProperties` .
 
- [AsyncTaskMethodBuilder yapısı](../../extensibility/debugger/asynctaskmethodbuilder-structure-internal-members.md) Yapının <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> iç üyelerini açıklar.
+ [AsyncTaskMethodBuilder yapısı](../../extensibility/debugger/asynctaskmethodbuilder-structure-internal-members.md) Yapının iç üyelerini açıklar <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> .
 
- [AsyncTaskMethodBuilder\<TResult>](../../extensibility/debugger/asynctaskmethodbuilder-tresult-structure-internal-members.md) <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> yapısı Yapının iç üyelerini açıklar.
+ [AsyncTaskMethodBuilder \<TResult> yapısı](../../extensibility/debugger/asynctaskmethodbuilder-tresult-structure-internal-members.md) , yapının iç üyelerini açıklar <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> .
 
- [AsyncVoidMethodBuilder yapısı](../../extensibility/debugger/asyncvoidmethodbuilder-structure-internal-members.md) Yapının <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder> iç üyelerini açıklar.
+ [AsyncVoidMethodBuilder yapısı](../../extensibility/debugger/asyncvoidmethodbuilder-structure-internal-members.md) Yapının iç üyelerini açıklar <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder> .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Threading.Tasks.Task?displayProperty=fullName>
 - <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName>
-- [Visual Studio hata ayıklama genişletilebilirlik](../../extensibility/debugger/visual-studio-debugger-extensibility.md)
+- [Visual Studio hata ayıklayıcı genişletilebilirliği](../../extensibility/debugger/visual-studio-debugger-extensibility.md)
 - [Paralel programlama](/dotnet/standard/parallel-programming/index)

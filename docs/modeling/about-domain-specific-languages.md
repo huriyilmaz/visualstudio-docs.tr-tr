@@ -10,15 +10,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bfd073b07902e3c0a9e33dfe9ae50d4947a50ef2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75597275"
 ---
 # <a name="about-domain-specific-languages"></a>Etki Alanına Özgü Diller Hakkında
 
-C# Veya UML gibi genel amaçlı bir dilden farklı olarak, etki alanına özgü DIL (DSL) belirli bir sorun alanı veya etki alanındaki deyimleri ifade etmek için tasarlanmıştır.
+C# veya UML gibi genel amaçlı bir dilin aksine, etki alanına özgü dil (DSL) belirli bir sorun alanı veya etki alanındaki deyimleri ifade etmek için tasarlanmıştır.
 
 İyi bilinen DSLs 'ler, normal ifadeleri ve SQL 'i içerir. Her DSL, metin dizelerindeki veya bir veritabanında işlemleri açıklamak için genel amaçlı dilden çok daha iyidir, ancak kendi kapsamı dışında kalan fikirleri açıklamak için çok daha kötülük olur. Her sektörde kendi DSLs 'Leri de vardır. Örneğin, telekomünikasyon sektöründe çağrı açıklaması dilleri bir telefon çağrısındaki durumların sırasını belirtmek için yaygın olarak kullanılır ve hava yolculuğu sektöründe uçuş rezervasyonlarını anlatmak için standart DSL kullanılır.
 
@@ -52,7 +52,7 @@ Ayrıca, kullanıcıların DSL 'yi doğru şekilde kullanmasının yanı sıra k
 
 Genellikle, bir geliştirme ekibinin çeşitli ürünler için benzer kod yazması gerektiğinde, etki alanına özgü bir dil oluşturulur. Örneğin, Bagaj işleme sistemlerinde uzmanlaşmış bir şirket, her yükleme için kodun bir kısmını oluşturabileceği bir Bagaj iz DSL tanımlayabilir. DSL 'nin avantajları, müşterileri tarafından anlaşılabilmesini, bundan üretilen kodun güvenilir olmasını ve müşterilerin gereksinimlerinin değiştirilmesi durumunda sistemin hızla güncelleştirilemeyebilir.
 
-[!INCLUDE[dsl](../modeling/includes/dsl_md.md)], kendi grafik tasarlamanızı ve kendi diyagram gösteriminizi içeren, etki alanına özgü bir dil oluşturmanızı ve ardından bu dili kullanarak her proje için uygun kaynak kodu oluşturmayı sağlar.
+[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] kendi grafik tasarlamanızı ve kendi diyagram gösteriminizi içeren, etki alanına özgü bir dil oluşturmanızı sağlar ve ardından bu dili kullanarak her proje için uygun kaynak kodu oluşturabilirsiniz.
 
 ## <a name="domain-specific-development"></a>Etki alanına özgü geliştirme
 
@@ -74,23 +74,23 @@ Grafik etki alanına özgü dil aşağıdaki özellikleri içermelidir:
 
 ### <a name="notation"></a>Gösterim
 
-Alana özgü bir dilin, etki alanına özgü yapıları temsil etmek üzere kolayca tanımlanabilen ve genişletilebilen, makul bir öğe kümesine sahip olması gerekir. Bir gösterim, bir grafik diyagram yüzeyinde öğeler arasındaki ilişkileri temsil eden öğeleri ve bağlayıcıları temsil eden şekillerden oluşur. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], şekiller, etki alanına özgü dilin öğelerini göstermek için genişletilebilir ve iyileştirilmiş olabilir.
+Alana özgü bir dilin, etki alanına özgü yapıları temsil etmek üzere kolayca tanımlanabilen ve genişletilebilen, makul bir öğe kümesine sahip olması gerekir. Bir gösterim, bir grafik diyagram yüzeyinde öğeler arasındaki ilişkileri temsil eden öğeleri ve bağlayıcıları temsil eden şekillerden oluşur. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]' De, şekiller, etki alanına özgü dilin öğelerini göstermek için genişletilebilir ve iyileştirilmiş olabilir.
 
 ### <a name="domain-model"></a>Etki alanı modeli
 
-Etki alanına özgü bir dilin öğe kümesini ve bunlarla arasındaki ilişkileri tutarlı bir dilbilgisinde birleştirmelidir. Ayrıca, öğe ve ilişkilerin birleşimlerinin geçerli olup olmadığını da tanımlamalıdır. Örneğin, programlama dilleri genellikle, bir sınıfın ikinci bir sınıftan türetildiği ve ikinci sınıf birinci sınıftan türetildiği dairesel devralmayı önler. Kısıtlamalar, iş mantığını ifade etmek için de kullanılabilir. Örneğin, bir kişi hımself öğesinin bağımlı olamaz. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], etki alanına özgü dillerin çoğu için gereken kısıtlama türlerini ifade etmek için kısıtlamaları kullanır.
+Etki alanına özgü bir dilin öğe kümesini ve bunlarla arasındaki ilişkileri tutarlı bir dilbilgisinde birleştirmelidir. Ayrıca, öğe ve ilişkilerin birleşimlerinin geçerli olup olmadığını da tanımlamalıdır. Örneğin, programlama dilleri genellikle, bir sınıfın ikinci bir sınıftan türetildiği ve ikinci sınıf birinci sınıftan türetildiği dairesel devralmayı önler. Kısıtlamalar, iş mantığını ifade etmek için de kullanılabilir. Örneğin, bir kişi hımself öğesinin bağımlı olamaz. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] , etki alanına özgü dillerin çoğunun gerektirdiği kısıtlama türlerini ifade etmek için kısıtlamaları kullanır.
 
 ### <a name="artifact-generation"></a>Yapıt oluşturma
 
-Etki alanına özgü dilin ana amaçlarından biri, örneğin, kaynak kodu, XML dosyası veya başka bir kullanılabilir veri gibi bir yapıt oluşturmak içindir. Genellikle modeldeki bir değişiklik yapıtın bir değişikliği anlamına gelir. Yapıtları oluşturmak ve modeli değiştirirken yeniden oluşturmak için [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] kullanabilirsiniz.
+Etki alanına özgü dilin ana amaçlarından biri, örneğin, kaynak kodu, XML dosyası veya başka bir kullanılabilir veri gibi bir yapıt oluşturmak içindir. Genellikle modeldeki bir değişiklik yapıtın bir değişikliği anlamına gelir. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]Yapıtları oluşturmak ve modeli değiştirirken yeniden oluşturmak için ' i kullanabilirsiniz.
 
 ### <a name="serialization"></a>Serileştirme
 
-Düzenlenebilen, kaydedilebilen, kapatılan ve yeniden yüklenmiş bir biçimde, etki alanına özgü bir dilin kalıcı olması gerekir. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], etki alanına özgü dilin serileştirilme veya kalıcı hale getirilme şeklini tanımlamanıza ve özelleştirmenize imkan tanıyan bir XML biçimi kullanır.
+Düzenlenebilen, kaydedilebilen, kapatılan ve yeniden yüklenmiş bir biçimde, etki alanına özgü bir dilin kalıcı olması gerekir. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] , etki alanına özgü dilin serileştirilme veya kalıcı hale getirilme şeklini tanımlamanıza ve özelleştirmenize imkan tanıyan bir XML biçimi kullanır.
 
 ### <a name="integration-with-visual-studio"></a>Visual Studio ile Tümleştirme
 
-[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Visual Studio 'da barındırıldığından, birçok Visual Studio pencerelerini ve denetimini genişletir. Ayrıca, menü komutlarının, araç kutusu öğelerinin ve Kullanıcı arabiriminin diğer öğelerinin davranışını özelleştirmenizi sağlar.
+[!INCLUDE[dsl](../modeling/includes/dsl_md.md)], Visual Studio 'da barındırıldığından birçok Visual Studio pencerelerini ve denetimini genişletir. Ayrıca, menü komutlarının, araç kutusu öğelerinin ve Kullanıcı arabiriminin diğer öğelerinin davranışını özelleştirmenizi sağlar.
 
 Ayrıca, etki alanına özgü diliniz için bir model veri yolu bağdaştırıcısı da oluşturabilirsiniz. Bu bağdaştırıcı, bir model içindeki model ve öğelere başvurmanıza ve DSL örneğine erişebilen ve güncelleştiren bir kod yazmanıza olanak tanır. Güçlü model veri yolu mekanizmasını kullanarak, birden çok modelle çalışan Visual Studio uzantıları yazabilirsiniz. Ayrıca, modellerle çalışan tek başına uygulamalar yazabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio ModelBus kullanarak modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
 

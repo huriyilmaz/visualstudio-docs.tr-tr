@@ -15,29 +15,29 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 01417d9c08491edc882f7f758bb36e6184500e52
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72985367"
 ---
 # <a name="xmlmappedrange-control"></a>XmlMappedRange denetimi
-  <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> denetimi, yalnızca tekrarsız bir şema öğesi Microsoft Office Excel içindeki bir hücreyle eşlendiğinde oluşturulan bir aralıktır. Örneğin, bir şema öğesinin `maxOccurs` özniteliği 1 ' e eşitse. Visual Studio XML eşlenmiş aralığı oluşturduktan sonra, Excel nesne modelinde geçiş yapmak zorunda kalmadan doğrudan buna karşı programlama yapabilirsiniz. Excel içindeki bir <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> denetimini, öğe eşleme kaldırıldığında silebilirsiniz.
+  <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>Denetim, yalnızca tekrarsız bir şema öğesi Microsoft Office Excel içindeki bir hücreyle eşlendiğinde oluşturulan bir aralıktır. Örneğin, `maxOccurs` bir şema öğesinin özniteliği 1 ' e eşitse. Visual Studio XML eşlenmiş aralığı oluşturduktan sonra, Excel nesne modelinde geçiş yapmak zorunda kalmadan doğrudan buna karşı programlama yapabilirsiniz. <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>Excel içindeki bir denetimi, öğe eşleme kaldırıldığında silebilirsiniz.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
 ## <a name="bind-data-to-the-control"></a>Verileri denetime bağlama
- <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> denetim tek bir veri alanına bağlamayı destekler (basit veri bağlama). <xref:Microsoft.Office.Tools.Excel.ListObject> denetimi karmaşık veri bağlamasını destekler ve yinelenen bir şema öğesi bir hücreyle eşlendiğinde otomatik olarak oluşturulur. Daha fazla bilgi için bkz. [ListObject denetimi](../vsto/listobject-control.md).
+ <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>Denetim, tek bir veri alanına bağlamayı destekler (basit veri bağlama). <xref:Microsoft.Office.Tools.Excel.ListObject>Denetim karmaşık veri bağlamasını destekler ve yinelenen bir şema öğesi bir hücreyle eşlendiğinde otomatik olarak oluşturulur. Daha fazla bilgi için bkz. [ListObject denetimi](../vsto/listobject-control.md).
 
- <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> denetimi, <xref:System.Windows.Forms.Control.DataBindings%2A> özelliğini kullanarak bir veri kaynağına bağlanır. Çalışma sayfası hücresine bir <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> eklendiğinde, Visual Studio otomatik olarak eşlenmiş hücrelerdeki verilerden bir veri kümesi oluşturur ve denetimi bu veri kümesine bağlar. <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> varsayılan veri bağlama özelliği <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value2%2A>.
+ <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>Denetim, özelliğini kullanarak bir veri kaynağına bağlanır <xref:System.Windows.Forms.Control.DataBindings%2A> . Bir <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> çalışma sayfası hücresine eklendiğinde, Visual Studio otomatik olarak eşlenmiş hücrelerdeki verilerden bir veri kümesi oluşturur ve bu veri kümesine denetimi bağlar. Öğesinin varsayılan veri bağlama özelliği <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value2%2A> .
 
- Bağlantılı veri kümesindeki veriler herhangi bir mekanizma aracılığıyla güncelleştirilirse, <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> denetimi değişiklikleri yansıtır.
+ Bağlantılı veri kümesindeki veriler herhangi bir mekanizma aracılığıyla güncelleştirilirse, <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> Denetim değişiklikleri yansıtır.
 
 ## <a name="formatting"></a>Biçimlendirme
- Aynı biçimlendirmeyi bir <xref:Microsoft.Office.Interop.Excel.Range>uygulayabileceğiniz bir <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> denetimine uygulayabilirsiniz. Buna kenarlık, yazı tipi, sayı biçimi ve stil dahildir.
+ Aynı biçimlendirmeyi <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> öğesine uygulayabileceğiniz bir denetime uygulayabilirsiniz <xref:Microsoft.Office.Interop.Excel.Range> . Buna kenarlık, yazı tipi, sayı biçimi ve stil dahildir.
 
-## <a name="events"></a>Olaylar
- <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> denetimi için kullanılabilen olaylar şunlardır:
+## <a name="events"></a>Ekinlikler
+ Denetim için kullanılabilen olaylar <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> şunlardır:
 
 - <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.BeforeDoubleClick>
 

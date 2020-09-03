@@ -1,5 +1,5 @@
 ---
-title: Hata Görevi | Microsoft Dokümanlar
+title: Hata görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,38 +19,38 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bd5dd3214c9575a34e9265c33061b024648a221c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77634233"
 ---
 # <a name="error-task"></a>Hata görevi
 
-Yapıyı durdurur ve değerlendirilmiş koşullu deyimi temel alan bir hatayı günlüğe kaydeder.
+Bir derlemeyi durdurup değerlendirilen bir koşullu ifadeye göre bir hata kaydeder.
 
 ## <a name="parameters"></a>Parametreler
 
-Aşağıdaki tabloda görevparametreleri `Error` açıklanmaktadır.
+Aşağıdaki tablo, görevin parametrelerini açıklar `Error` .
 
 | Parametre | Açıklama |
 |---------------| - |
-| `Code` | İsteğe bağlı `String` parametre.<br /><br /> Hata ile ilişkilendirmek için hata kodu. |
-| `File` | İsteğe bağlı `String` parametre.<br /><br /> Hatayı içeren dosyanın adı. Dosya adı sağlanmazsa, Hata görevini içeren dosya kullanılır. |
-| `HelpKeyword` | İsteğe bağlı `String` parametre.<br /><br /> Hatayla ilişkilendirmek için Yardım anahtar sözcüğü. |
-| `Text` | İsteğe bağlı `String` parametre.<br /><br /> `Condition` Parametre ' nin `true`değerlendirilmesi durumunda MSBuild'in günlük olduğu hata metni. |
+| `Code` | İsteğe bağlı `String` parametre.<br /><br /> Hatayla ilişkilendirilecek hata kodu. |
+| `File` | İsteğe bağlı `String` parametre.<br /><br /> Hatayı içeren dosyanın adı. Dosya adı sağlanmazsa, hata görevini içeren dosya kullanılacaktır. |
+| `HelpKeyword` | İsteğe bağlı `String` parametre.<br /><br /> Hatayla ilişkilendirilecek Yardım anahtar sözcüğü. |
+| `Text` | İsteğe bağlı `String` parametre.<br /><br /> Parametresi olarak değerlendirilirse, günlükleri MSBuild tarafından kullanılan hata metni `Condition` `true` . |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Görev, `Error` MSBuild projelerinin loggers'a hata metni vermesini ve yapı yürütmesini durdurmasına olanak tanır.
+`Error`Görev, MSBuild projelerinin günlüğe hata metni vermesini ve derleme yürütmeyi durdurmasını sağlar.
 
-`Condition` Parametre , yapı `true`durdurulur ve bir hata günlüğe kaydedilir değerlendirilmesi. Bir `Condition` parametre yoksa, hata günlüğe kaydedilir ve yürütme yapısı durur. Günlüğe kaydetme hakkında daha fazla bilgi için [bkz.](../msbuild/obtaining-build-logs-with-msbuild.md)
+`Condition`Parametresi olarak değerlendirilirse `true` , derleme durdurulur ve bir hata günlüğe kaydedilir. Bir `Condition` parametre yoksa, hata günlüğe kaydedilir ve derleme yürütmesi duraklar. Günlüğe kaydetme hakkında daha fazla bilgi için bkz. [Derleme günlüklerini alma](../msbuild/obtaining-build-logs-with-msbuild.md).
 
-Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
+Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneği, gerekli tüm özelliklerin ayarlı olduğunu doğrular. Bunlar ayarlanmazsa, proje bir hata olayı yükseltir ve `Text` `Error` görevin parametresinin değerini günlüğe kaydeder.
+Aşağıdaki kod örneği, tüm gerekli özelliklerinin ayarlandığını doğrular. Bunlar ayarlanmamışsa, proje bir hata olayı oluşturur ve görevin parametresinin değerini günlüğe kaydeder `Text` `Error` .
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -69,4 +69,4 @@ Aşağıdaki kod örneği, gerekli tüm özelliklerin ayarlı olduğunu doğrula
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
-- [Yapı günlükleri edinme](../msbuild/obtaining-build-logs-with-msbuild.md)
+- [Derleme günlüklerini al](../msbuild/obtaining-build-logs-with-msbuild.md)

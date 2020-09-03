@@ -1,5 +1,5 @@
 ---
-title: Kaynak dosyalar ve C++ üstbilgi dosyaları arasındaki bağımlılıklara bakın
+title: C++ kaynak dosyaları ve üstbilgi dosyaları arasındaki bağımlılıklara bakın
 ms.date: 05/16/2018
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -8,19 +8,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a17015c7efbb51027450e06bd1fb571ef9820d48
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75597249"
 ---
-# <a name="code-maps-for-c-projects"></a>Projeler için C++ kod haritaları
+# <a name="code-maps-for-c-projects"></a>C++ projeleri için kod haritaları
 
-Projeler için C++ daha fazla kapsamlı haritalar oluşturmak istiyorsanız, bu projelerde tarama bilgileri derleyici seçeneğini ( **/fr**) ayarlayın. Aksi durumda, bir ileti görüntülenir ve bu seçeneği ayarlamanızı ister. **Tamam**' ı seçerseniz, bu seçeneği yalnızca geçerli harita için ayarlar. İletiyi sonraki tüm haritalar için gizlemeyi seçebilirsiniz.
+C++ projeleri için daha fazla eşleme oluşturmak istiyorsanız, bu projelerde tarama bilgileri derleyici seçeneğini (**/fr**) ayarlayın. Aksi durumda, bir ileti görüntülenir ve bu seçeneği ayarlamanızı ister. **Tamam**' ı seçerseniz, bu seçeneği yalnızca geçerli harita için ayarlar. İletiyi sonraki tüm haritalar için gizlemeyi seçebilirsiniz.
 
-Visual C++ projeleri içeren bir çözümü açtığınızda, IntelliSense veritabanını güncelleştirmek biraz zaman alabilir. Bu süre boyunca, IntelliSense veritabanı güncelleştirmeyi bitirene kadar üstbilgi ( *. h* veya `#include`) dosyaları için kod haritaları oluşturmeyebilirsiniz. Visual Studio durum çubuğunda güncelleştirme ilerleme durumunu izleyebilirsiniz.
+Visual C++ projeleri içeren bir çözümü açtığınızda, IntelliSense veritabanını güncelleştirmek biraz zaman alabilir. Bu süre boyunca, IntelliSense veritabanı güncelleştirmeyi bitirene kadar üstbilgi (*. h* veya) dosyaları için kod haritaları oluşturmeyebilirsiniz `#include` . Visual Studio durum çubuğunda güncelleştirme ilerleme durumunu izleyebilirsiniz.
 
-- Çözümünüzdeki tüm kaynak dosyaları ve üstbilgi dosyaları arasındaki bağımlılıkları görmek için **mimari** > **Içerme dosyaları grafiğini oluştur**' u seçin.
+- Çözümünüzdeki tüm kaynak dosyaları ve üstbilgi dosyaları arasındaki bağımlılıkları görmek için, **Architecture**  >  **içerme dosyaları**için mimari oluştur ' u seçin.
 
    ![Yerel kod için bağımlılık grafiği](../modeling/media/dependencygraphgeneral_nativecode.png)
 
@@ -28,26 +28,26 @@ Visual C++ projeleri içeren bir çözümü açtığınızda, IntelliSense verit
 
    ![. H dosyası için birinci düzey bağımlılık grafiği](../modeling/media/dependencygraph_native_firstlevel.png)
 
-## <a name="troubleshoot-code-maps-for-c-and-c-code"></a>C ve C++ Code için kod haritaları sorunlarını giderme
+## <a name="troubleshoot-code-maps-for-c-and-c-code"></a>C ve C++ kodu için kod haritaları sorunlarını giderme
 
-Bu öğeler C ve C++ Code için desteklenmez:
+Bu öğeler C ve C++ kodu için desteklenmez:
 
 - Temel türler, üst hiyerarşiyi içeren haritalar üzerinde görünmez.
 
-- Çoğu **göster** menü öğesi C ve C++ Code için kullanılamaz.
+- Çoğu **göster** menü öğesi C ve C++ kodu için kullanılamaz.
 
-Bu sorunlar, C ve C++ Code için kod haritaları oluşturduğunuzda oluşabilir:
+Bu sorunlar, C ve C++ kodu için kod eşlemeleri oluşturduğunuzda oluşabilir:
 
-|**Sorun**|**Olası nedeni**|**Çözümleme**|
+|**Sorun**|**Olası nedeni**|**Çözünürlük**|
 |-|-|-|
 |Kod eşlemesi oluşturulamadı.|Çözümdeki hiçbir proje başarıyla oluşturulmadı.|Oluşan yapı hatalarını giderip eşlemeyi yeniden oluşturun.|
 |**Mimari** menüsünden bir kod Haritası oluşturmaya çalıştığınızda Visual Studio yanıt vermemeye çalışır.|Program veritabanı (.pdb) dosyası bozulmuş olabilir.<br /><br /> .pdb dosyası; tür, yöntem ve kaynak dosya bilgileri gibi hata ayıklama bilgilerini depolar.|Çözümü yeniden oluşturun ve tekrar deneyin.|
-|IntelliSense göz atma veritabanı için belirli ayarlar devre dışı bırakılır.|Visual Studio **seçenekleri** iletişim kutusunda belirli IntelliSense ayarları devre dışı bırakılabilir.|Bunları etkinleştirmek için ayarları etkinleştirin.<br /><br /> Bkz. [Seçenekler, metin düzenleyici, CC++/, gelişmiş](../ide/reference/options-text-editor-c-cpp-advanced.md).|
+|IntelliSense göz atma veritabanı için belirli ayarlar devre dışı bırakılır.|Visual Studio **seçenekleri** iletişim kutusunda belirli IntelliSense ayarları devre dışı bırakılabilir.|Bunları etkinleştirmek için ayarları etkinleştirin.<br /><br /> Bkz. [Seçenekler, metin düzenleyici, C/C++, gelişmiş](../ide/reference/options-text-editor-c-cpp-advanced.md).|
 |**Bilinmeyen Yöntemler** bir yöntem düğümünde görünür.<br /><br /> Yöntemin adı çözümlenemediği için bu sorun oluşur.|İkili dosya temel konum değişikliği tablosuna sahip olmayabilir.|Bağlayıcının **/fixed: No** seçeneğini açın.|
 ||Program veritabanı (.pdb) dosyası oluşturulmamış olabilir.<br /><br /> .pdb dosyası; tür, yöntem ve kaynak dosya bilgileri gibi hata ayıklama bilgilerini depolar.|Bağlayıcının **/Debug** seçeneğini açın.|
 ||.pdb dosyasını beklenen konumda açamıyor veya bulamıyor.|.pdb dosyasının beklenen konumlarda var olduğundan emin olun.|
 ||Hata ayıklama bilgileri, .pdb dosyasından çıkarıldı.|Bağlayıcı içinde **/Pdbçıkarıldı** seçeneği kullanıldıysa, bunun yerine tüm. pdb dosyasını dahil edin.|
-||Arayan bir işlev değildir ve ikili dosyada bir dönüştürücü ya da veri bölümünde bir işaretçidir.|Çağıran bir dönüştürücü olduğunda, dönüştürücü kullanmaktan kaçınmak için `_declspec(dllimport)` kullanmayı deneyin.|
+||Arayan bir işlev değildir ve ikili dosyada bir dönüştürücü ya da veri bölümünde bir işaretçidir.|Çağıran bir dönüştürücü olduğunda, `_declspec(dllimport)` dönüştürücü kullanmaktan kaçınmak için kullanmayı deneyin.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

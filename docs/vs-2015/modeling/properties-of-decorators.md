@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cb837c9b3d465d229f64fac08dac02af8d50f5fa
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72652012"
 ---
 # <a name="properties-of-decorators"></a>Dekoratörlerin Özellikleri
@@ -31,7 +31,7 @@ Dekoratörler, diyagramdaki şekiller veya bağlayıcılar üzerinde görünebil
 |--------------|-----------------|-------------|
 |DisplayName|Oluşturulan tasarımcıda görüntülenecek dekoratörün adı.|Daraltma dekoratörü Genişlet|
 |Name|Dekoratörün adı.|ExpandCollapseDecorator|
-|Notlar|Bu dekoratör ile ilişkili resmi olmayan notlar.|\<none >|
+|Notlar|Bu dekoratör ile ilişkili resmi olmayan notlar.|\<none>|
 |Horizontalkayması|Dekoratörün varsayılan konumuna göre inç cinsinden yatay konum. (Yalnızca şekiller üzerinde.)|0|
 |Verticalsapmayı|Dekoratörün varsayılan konumuna göre inç cinsinden dikey konum. (Yalnızca şekiller üzerinde.)|0|
 |OffsetFromLine|Dekoratörün, varsayılan konumuna (inç olarak) göre, çizgi arasındaki fark. (Yalnızca bağlayıcılar üzerinde.)|0|
@@ -42,10 +42,10 @@ Dekoratörler, diyagramdaki şekiller veya bağlayıcılar üzerinde görünebil
 
 |Özellik|Açıklama|Varsayılan|
 |--------------|-----------------|-------------|
-|DefaultIcon|Görüntülenecek simgenin veya resim dosyasının yolu.|\<none >|
+|DefaultIcon|Görüntülenecek simgenin veya resim dosyasının yolu.|\<none>|
 |DisplayName|Oluşturulan tasarımcıda görüntülenecek dekoratör adı.|Simge dekoratör|
 |Name|Dekoratörün adı.|Şeklindeki IconDecorator|
-|Notlar|Dekoratör ile ilişkili resmi olmayan notlar.|\<none >|
+|Notlar|Dekoratör ile ilişkili resmi olmayan notlar.|\<none>|
 |Horizontalkayması|Dekoratörün varsayılan konumuna göre inç cinsinden yatay konum. (Yalnızca şekiller üzerinde.)|0|
 |Verticalsapmayı|Dekoratörün varsayılan konumuna göre inç cinsinden dikey konum. (Yalnızca şekiller üzerinde.)|0|
 |OffsetFromLine|Dekoratörün, varsayılan konumuna (inç olarak) göre, çizgi arasındaki fark. (Yalnızca bağlayıcılar üzerinde.)|0|
@@ -59,9 +59,9 @@ Dekoratörler, diyagramdaki şekiller veya bağlayıcılar üzerinde görünebil
 |Ise DefaultText|Görüntülenecek varsayılan metin.|Etiketle|
 |DisplayName|Oluşturulan tasarımcıda görüntülenecek dekoratör adı.|Etiketle|
 |FontSize|Dekoratör içinde görüntülenen metnin yazı tipi boyutu.|8|
-|FontStyle|Dekoratör içinde görüntülenen metnin yazı tipi stili.|Aralıklarla|
+|FontStyle|Dekoratör içinde görüntülenen metnin yazı tipi stili.|Düzenli|
 |Name|Dekoratörün adı.|Etiketle|
-|Notlar|Dekoratör ile ilişkili resmi olmayan notlar.|\<none >|
+|Notlar|Dekoratör ile ilişkili resmi olmayan notlar.|\<none>|
 |Horizontalkayması|Dekoratörün varsayılan konumuna göre inç cinsinden yatay konum. (Yalnızca şekiller üzerinde.)|0|
 |Verticalsapmayı|Dekoratörün varsayılan konumuna göre inç cinsinden dikey konum. (Yalnızca şekiller üzerinde.)|0|
 |OffsetFromLine|Dekoratörün, varsayılan konumuna (inç olarak) göre, çizgi arasındaki fark. (Yalnızca bağlayıcılar üzerinde.)|0|

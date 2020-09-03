@@ -21,10 +21,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6e14165ba2111f40898c00b3d01950425c042070
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72652909"
 ---
 # <a name="pass-data-between-forms"></a>Formlar arasında veri geçirme
@@ -51,7 +51,7 @@ Bu izlenecek yol, verileri bir formdan diğerine geçirmek için adım adım yö
 
 - Formlar arasında veri geçirme.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yolu tamamlamak için şunlar gerekir:
 
 - Northwind örnek veritabanına erişim.
@@ -62,7 +62,7 @@ Bu izlenecek yol, verileri bir formdan diğerine geçirmek için adım adım yö
 
 1. **Dosya** menüsünden Yeni bir proje oluşturun.
 
-2. Projeyi `PassingDataBetweenForms` olarak adlandırın.
+2. Projeyi adlandırın `PassingDataBetweenForms` .
 
 3. **Windows Forms uygulama**' yı seçin ve **Tamam**' ı tıklatın. Daha fazla bilgi için bkz. [Istemci uygulamaları](https://msdn.microsoft.com/library/2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68).
 
@@ -97,13 +97,13 @@ Bu izlenecek yol, verileri bir formdan diğerine geçirmek için adım adım yö
      **NorthwindDataSet** , projenize eklenir ve **müşteriler** ve **siparişler** tabloları **veri kaynakları** penceresinde görünür.
 
 ## <a name="create-the-first-form-form1"></a>İlk formu oluşturma (Form1)
- **Müşteriler** düğümünü **veri kaynakları** penceresinden form üzerine sürükleyerek veri bağlantılı bir kılavuz (<xref:System.Windows.Forms.DataGridView> denetimi) oluşturabilirsiniz.
+ <xref:System.Windows.Forms.DataGridView> **Müşteriler** düğümünü **veri kaynakları** penceresinden form üzerine sürükleyerek veriye dayalı bir kılavuz (bir denetim) oluşturabilirsiniz.
 
 #### <a name="to-create-a-data-bound-grid-on-the-form"></a>Formda veriye bağlı bir kılavuz oluşturmak için
 
 - Ana **müşteriler** düğümünü **veri kaynakları** penceresinden **Form1**üzerine sürükleyin.
 
-     Kayıtlar üzerinde gezinmek için bir <xref:System.Windows.Forms.DataGridView> ve araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) **Form1**üzerinde görünür. Bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
+     <xref:System.Windows.Forms.DataGridView>Kayıt gezinmek için bir ve araç şeridi ( <xref:System.Windows.Forms.BindingNavigator> ) **Form1**üzerinde görünür. Bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
 
 ## <a name="create-the-second-form-form2"></a>İkinci formu oluşturma (Form2)
 
@@ -115,7 +115,7 @@ Bu izlenecek yol, verileri bir formdan diğerine geçirmek için adım adım yö
 
 3. Ana **siparişler** düğümünü **veri kaynakları** penceresinden **Form2**üzerine sürükleyin.
 
-     Kayıtlar üzerinde gezinmek için bir <xref:System.Windows.Forms.DataGridView> ve araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) **Form2**üzerinde görünür. Bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
+     <xref:System.Windows.Forms.DataGridView>Kayıtlar üzerinde gezinmek için bir ve araç şeridi ( <xref:System.Windows.Forms.BindingNavigator> ) **Form2**üzerinde görünür. Bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
 
 4. Bileşen tepsisinden **OrdersBindingNavigator** öğesini silin.
 
@@ -133,7 +133,7 @@ Bu izlenecek yol, verileri bir formdan diğerine geçirmek için adım adım yö
 
 4. **Satırları döndüren Seç**varsayılan seçeneğini bırakın ve ardından **İleri**' ye tıklayın.
 
-5. @No__t_1 göre `Orders` döndürmek için sorguya bir WHERE yan tümcesi ekleyin. Sorgu aşağıdakine benzemelidir:
+5. Temelinde döndürmek için sorguya bir WHERE yan tümcesi ekleyin `Orders` `CustomerID` . Sorgu aşağıdakine benzemelidir:
 
     ```
     SELECT OrderID, CustomerID, EmployeeID, OrderDate, RequiredDate, ShippedDate, ShipVia, Freight, ShipName, ShipAddress, ShipCity, ShipRegion, ShipPostalCode, ShipCountry
@@ -142,11 +142,11 @@ Bu izlenecek yol, verileri bir formdan diğerine geçirmek için adım adım yö
     ```
 
     > [!NOTE]
-    > Veritabanınız için doğru parametre söz dizimini doğrulayın. Örneğin, Microsoft Access 'te WHERE yan tümcesi şöyle görünür: `WHERE CustomerID = ?`.
+    > Veritabanınız için doğru parametre söz dizimini doğrulayın. Örneğin, Microsoft Access 'te WHERE yan tümcesi şöyle görünür: `WHERE CustomerID = ?` .
 
-6. **İleri**'ye tıklayın.
+6. **İleri**’ye tıklayın.
 
-7. **Bir DataTableMethod adı doldur**için `FillByCustomerID` yazın.
+7. **DataTableMethod adı doldur**için yazın `FillByCustomerID` .
 
 8. **Bir DataTable döndürün** seçeneğinin işaretini kaldırın ve ardından **İleri**' ye tıklayın.
 
@@ -158,7 +158,7 @@ Bu izlenecek yol, verileri bir formdan diğerine geçirmek için adım adım yö
 
 1. **Form2**' e sağ tıklayın ve **Kod Düzenleyicisi**'nde **Form2** ' yi açmak için **kodu görüntüle** ' yi seçin.
 
-2. @No__t_1 yönteminden sonra **Form2** ' ye aşağıdaki kodu ekleyin:
+2. Aşağıdaki kodu yönteminden sonra **Form2** öğesine ekleyin `Form2_Load` :
 
      [!code-csharp[VbRaddataDisplaying#1](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataDisplaying/CS/Form2.cs#1)]
      [!code-vb[VbRaddataDisplaying#1](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataDisplaying/VB/Form2.vb#1)]
@@ -184,7 +184,7 @@ Bu izlenecek yol, verileri bir formdan diğerine geçirmek için adım adım yö
 
 #### <a name="to-run-the-application"></a>Uygulamayı çalıştırmak için
 
-- Uygulamayı çalıştırmak için F5 tuşuna basın.
+- Uygulamayı çalıştırmak için F5'e basın.
 
 - Bu müşterinin siparişleriyle **Form2** açmak için **Form1** içindeki bir müşteri kaydına çift tıklayın.
 

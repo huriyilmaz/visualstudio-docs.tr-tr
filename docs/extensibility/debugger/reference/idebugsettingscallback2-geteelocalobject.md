@@ -1,5 +1,5 @@
 ---
-title: IDebugSettingsCallback2::GetEELocalObject | Microsoft Dokümanlar
+title: 'IDebugSettingsCallback2:: GetEELocalObject | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +14,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fc205392f325a014bfe07b02b64cd8b0050ce079
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80720076"
 ---
 # <a name="idebugsettingscallback2geteelocalobject"></a>IDebugSettingsCallback2::GetEELocalObject
-Metrik ad verilen bir ifade değerlendirici yerel nesnealır.
+Ölçüm adı verilen bir ifade değerlendirici yerel nesnesi alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetEELocalObject(
@@ -45,19 +45,19 @@ private int GetEELocalObject(
 
 ## <a name="parameters"></a>Parametreler
 `guidLang`\
-[içinde] Programlama dilinin benzersiz tanımlayıcısı.
+'ndaki Programlama dilinin benzersiz tanıtıcısı.
 
 `guidVendor`\
-[içinde] Satıcının benzersiz tanımlayıcısı.
+'ndaki Satıcının benzersiz tanıtıcısı.
 
 `pszMetric`\
-[içinde] Metnin adı.
+'ndaki Ölçümün adı.
 
 `ppUnk`\
-[çıkış] İfade değerlendirici yerel nesneyi döndürür.
+dışı İfade değerlendirici yerel nesnesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

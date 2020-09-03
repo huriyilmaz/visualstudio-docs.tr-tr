@@ -1,5 +1,5 @@
 ---
-title: Dosya Takibi | Microsoft Dokümanlar
+title: Dosya Izleme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,30 +11,30 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9335ca6608d36edbd17e47a441e13aecaa41c890
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77634207"
 ---
 # <a name="file-tracking"></a>Dosya izleme
 
-Dosya izleme günlükleri, bir işlem ve alt işlemleri için Windows dosya sistemine çağrılar. Aşağıda listelenen işlevleri arayarak, programlar bu günlüğe kaydetmeve kapatmayı ne zaman kullanacağını denetler ve kullanılacak günlük dosyasını belirtir.
+Dosya izleme, bir işlem ve alt işlemleri için Windows dosya sistemine yapılan çağrıları kaydeder. Aşağıda listelenen işlevleri çağırarak, programlar bu oturum açma işleminin ne zaman açık ve kapalı olduğunu denetler ve kullanılacak günlük dosyasını belirtir.
 
-- [EndTrackingBağlam](../msbuild/endtrackingcontext.md) Geçerli bağlamı izlemeyi durdurun.
+- [EndTrackingContext](../msbuild/endtrackingcontext.md) Geçerli bağlamı izlemeyi durdur.
 
-- [Özgeçmiş Takibi](../msbuild/resumetracking.md) [SuspendTracking](../msbuild/suspendtracking.md)için bir aramadan sonra izleme devam edin.
+- [ResumeTracking](../msbuild/resumetracking.md) [SuspendTracking](../msbuild/suspendtracking.md)çağrısından sonra izlemeyi sürdürür.
 
 - [SetThreadCount](../msbuild/setthreadcount.md) İzleme için kullanılacak iş parçacığı sayısını ayarlayın.
 
-- [Başlangıç İzleme Bağlamı](../msbuild/starttrackingcontext.md) Yeni bir izleme bağlamı başlatın.
+- [StartTrackingContext](../msbuild/starttrackingcontext.md) Yeni bir izleme bağlamı başlatın.
 
-- [Başlangıç İzlemeBağlamWithroot](../msbuild/starttrackingcontextwithroot.md) Belirtilen bir kökle yeni bir izleme bağlamı başlatın.
+- [StartTrackingContextWithRoot](../msbuild/starttrackingcontextwithroot.md) Belirtilen köke sahip yeni bir izleme bağlamı başlatın.
 
-- [StopTrackingAndCleanup](../msbuild/stoptrackingandcleanup.md) Kullanılan izleme ve serbest bırakma kaynaklarını sonla.
+- [StopTrackingAndCleanup](../msbuild/stoptrackingandcleanup.md) Son izleme ve sürüm kaynakları kullanıldı.
 
-- [Askıya Alma İzleme](../msbuild/suspendtracking.md) İzlemeyi geçici olarak askıya alın.
+- [SuspendTracking](../msbuild/suspendtracking.md) İzlemeyi geçici olarak askıya alın.
 
 - [WriteAllTLogs](../msbuild/writealltlogs.md) Tüm bağlamlar için izleme günlüklerini yazın.
 
-- [YazmaContextTLogs](../msbuild/writecontexttlogs.md) Geçerli bağlam için izleme günlüğünü yazın.
+- [WriteContextTLogs](../msbuild/writecontexttlogs.md) Geçerli bağlam için izleme günlüğünü yazın.

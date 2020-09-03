@@ -16,10 +16,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: caf145213c41215d518cf42d0a69975c8580e817
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85330011"
 ---
 # <a name="vsperfcmd"></a>VSPerfCmd
@@ -31,9 +31,9 @@ VSPerfCmd [/U] [/options]
 
  Aşağıdaki tablolarda *VSPerfCmd.exe* araç seçenekleri açıklanır.
 
-|Seçenek|Description|
+|Seçenek|Açıklama|
 |------------|-----------------|
-|**Larınız**|Yeniden yönlendirilen konsol çıkışı Unicode olarak yazılmıştır. Belirtilen ilk seçenek olmalıdır.|
+|**U**|Yeniden yönlendirilen konsol çıkışı Unicode olarak yazılmıştır. Belirtilen ilk seçenek olmalıdır.|
 |[Başlangıç](../profiling/start.md) **:**`mode`|Profil oluşturma hizmetini belirtilen modda başlatır.|
 |[Çıkış](../profiling/output.md) **:**`filename`|Çıkış dosyası adını belirtir. Yalnızca **Start**ile kullanın.|
 |[Çapraz oturum&#124;CS](../profiling/crosssession.md)|Windows oturumlarında profil oluşturmayı etkinleştirilir. Yalnızca **Start**, **Attach** **veya Launch**ile kullanın.|
@@ -57,7 +57,7 @@ VSPerfCmd [/U] [/options]
 ## <a name="sample-method-options"></a>Örnek Yöntem seçenekleri
  Aşağıdaki seçenekler yalnızca örnekleme profili oluşturma yöntemi kullanılırken kullanılabilir.
 
-|Seçenek|Description|
+|Seçenek|Açıklama|
 |------------|-----------------|
 |[Başlatma](../profiling/launch.md) **:** *yürütülebilir*|Belirtilen uygulamayı başlatır ve profil oluşturmaya başlar.|
 |[Args](../profiling/args.md) **:** *bağımsız değişkenler*|Başlatılan uygulamaya geçirilecek komut satırı bağımsız değişkenlerini belirtir.|
@@ -69,7 +69,7 @@ VSPerfCmd [/U] [/options]
 ### <a name="sample-interval-options"></a>Örnek Aralık seçenekleri
  Aşağıdaki seçenekler, örnekleme aralıklarının türünü ve süresini belirtir. Varsayılan değer **Zamanlayıcı**' dır. Ayrıca, **sayaç** seçeneğini kullanarak Aralık olarak bir CPU sayacı belirtebilirsiniz. Bu seçenekler yalnızca **başlatma** ile veya profil oluşturma oturumunun ilk **iliştirme** ile belirtilebilir.
 
-|Seçenek|Description|
+|Seçenek|Açıklama|
 |------------|-----------------|
 |[PF](../profiling/pf.md)[**:**_n_]|Her n. sayfa hatasında örnekler (varsayılan = 10).|
 |[Sys](../profiling/sys-vsperfcmd.md)[**:**_n_]|Her n. sistem çağrısında örnekler (varsayılan = 10).|
@@ -80,9 +80,9 @@ VSPerfCmd [/U] [/options]
 
  Yönetici seçeneklerinin, yönetici kimlik bilgileriyle çalışan bir komut isteminde yürütülmesi gerekir.
 
-|Seçenek|Description|
+|Seçenek|Açıklama|
 |------------|-----------------|
-|**Yönetici: güvenlik**, \<**ALLOW&#124;DENY**> *sağ*[ *sağ*],\<*User*&#124;*Group*>|Profil oluşturma hizmetleri için belirtilen kullanıcı veya grup erişimine izin verir veya reddeder.<br /><br /> `Right`şunları yapabilirsiniz:<br /><br /> CrossSession-oturum açmaya yönelik profili oluşturmak için kullanıcıya hizmete erişim sağlar.<br /><br /> Sampleprofil oluşturma-örnekleme profil oluşturmayı etkinleştirmek için kullanıcıya sürücüye erişim sağlar. İzleme profili oluşturma sırasında çekirdek geçiş bilgilerine erişmek için de kullanılır.<br /><br /> FullAccess-kullanıcıya hem CrossSession hem de Sampleprofil oluşturma erişimi verir.|
+|**Yönetici: güvenlik**, \<**ALLOW&#124;DENY**> *sağ*[ *sağ*], \<*User*&#124;*Group*>|Profil oluşturma hizmetleri için belirtilen kullanıcı veya grup erişimine izin verir veya reddeder.<br /><br /> `Right` şunları yapabilirsiniz:<br /><br /> CrossSession-oturum açmaya yönelik profili oluşturmak için kullanıcıya hizmete erişim sağlar.<br /><br /> Sampleprofil oluşturma-örnekleme profil oluşturmayı etkinleştirmek için kullanıcıya sürücüye erişim sağlar. İzleme profili oluşturma sırasında çekirdek geçiş bilgilerine erişmek için de kullanılır.<br /><br /> FullAccess-kullanıcıya hem CrossSession hem de Sampleprofil oluşturma erişimi verir.|
 |**Yönetici: güvenlik, liste**|Profil oluşturma hizmetlerinin geçerli durumunu listeler ve Kullanıcı izinlerini listeler.|
 |**Yönetici:**\<*Service*&#124;*Driver*>\<**START**&#124;**STOP**&#124;**INSTALL**&#124;**UNINSTALL**>|Profil oluşturma hizmeti bileşenini (hizmet) veya çekirdek modu cihaz sürücüsünü (sürücü) başlatır, sonlandırır, kaldırır veya kaldırır.|
 |**Yönetici:** \<*Service*&#124;*Driver*> Otomatik **Başlat**\<**ON**&#124;**OFF**>|Yeniden başlatmadan sonra profil oluşturma hizmeti 'nin (hizmet) veya çekirdek modu cihaz sürücüsünün (sürücü) otomatik olarak başlatılmasını etkinleştirilir veya devre dışı bırakır.|

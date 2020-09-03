@@ -1,5 +1,5 @@
 ---
-title: Etki Alanına Özgü Dil Araçlarına Genel Bakış | Microsoft Dokümanlar
+title: Alana Özgü Dil Araçları genel bakış | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -12,71 +12,71 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d38aed17d7fdaa694c8c5753705b28b0390dedfc
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72652141"
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>Etki Alanına Özgü Dil Araçlarına Genel Bakış
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Barındırılan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Etki Alanına Özgü Dil Araçları (DSL Araçları), etki alanına özgü bir dil tasarlamanızı ve ardından kullanıcıların dile dayalı modeller oluşturmak için sahip olması gereken her şeyi oluşturmanıza izin verir.
+' De barındırılan Alana Özgü Dil Araçları (DSL araçları) [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , etki alanına özgü bir dil tasarlamanızı ve ardından kullanıcıların dile göre modeller oluşturmak için sahip olmaları gereken her şeyi oluşturmanıza imkan tanır.
 
- Aşağıdaki araçlar DSL Tools'a dahildir:
+ Aşağıdaki araçlar DSL araçlarına dahildir:
 
-- Etki alanına özgü dilinizi geliştirmeye başlamanıza yardımcı olmak için farklı çözüm şablonları kullanan bir proje sihirbazı.
+- Etki alanına özgü dili geliştirmeye başlamanıza yardımcı olması için farklı çözüm şablonları kullanan bir proje Sihirbazı.
 
-- Etki alanına özgü dil tanımınızı oluşturmak ve düzenlemek için grafik tasarımcı.
+- Etki alanına özgü dil tanımınızı oluşturmak ve düzenlemekte bir grafik tasarlayıcı.
 
-- Etki alanına özgü dil tanımının iyi biçimlendirilmiş olmasını sağlayan ve sorun varsa hataları ve uyarıları görüntüleyen bir doğrulama altyapısı.
+- Etki alanına özgü dil tanımının doğru biçimlendirildiğinden emin olan ve sorunlar varsa hataları ve uyarıları görüntüleyen bir doğrulama altyapısı.
 
-- Giriş olarak etki alanına özgü bir dil tanımı alan ve çıktı olarak kaynak kodu üreten bir kod üreteci.
+- Girdi olarak etki alanına özgü dil tanımı alan ve çıkış olarak kaynak kodu üreten bir kod Oluşturucu.
 
-## <a name="the-dsl-tools-solution"></a>DSL Araçları Çözümü
- Etki Alanına Özgü Tasarımcı Sihirbazı aşağıdaki çözüm şablonlarını sağlar:
+## <a name="the-dsl-tools-solution"></a>DSL araçları çözümü
+ Etki alanına özgü Tasarımcı Sihirbazı aşağıdaki çözüm şablonlarını sağlar:
 
-- Görev Akışı
+- Görev akışı
 
-- Sınıf Diyagramları
+- Sınıf diyagramları
 
-- Minimal Dil
+- En az dil
 
-- Bileşen Modelleri
+- Bileşen modelleri
 
-- Minimum WPF
+- En az WPF
 
-- Minimal Windows.Forms
+- En az Windows. Forms
 
-- DSL Kitaplığı
+- DSL kitaplığı
 
-  Daha fazla bilgi için [bkz.](../modeling/choosing-a-domain-specific-language-solution-template.md)
+  Daha fazla bilgi için bkz. [etki alanına özgü dil çözümü şablonu seçme](../modeling/choosing-a-domain-specific-language-solution-template.md).
 
-  Sihirbaz, aşağıdaki [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projeleri içeren bir çözüm oluşturur:
+  Sihirbaz, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] aşağıdaki projelere sahip bir çözüm oluşturur:
 
-- Dsl
+- DSL
 
-   Dsl projesi etki alanına özgü dili ve düzenleme ve işleme araçlarını tanımlar.
+   DSL projesi, etki alanına özgü dili ve onun düzen ve işleme araçlarını tanımlar.
 
-- **Dslpackage**
+- **DslPackage**
 
-   DslPackage projesi, dil araçlarının nasıl [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]entegre olduğunu belirler.
+   DslPackage projesi dil araçlarının ile nasıl tümleşmesini belirler [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
-## <a name="the-dsl-tools-graphical-interface"></a>DSL Araçları Grafik Arabirimi
- Etki alanına özgü dilinize öğeler ve ilişkiler eklemek için DSL Tools grafik arabirimini kullanabilirsiniz. Öğeleri ekledikten sonra, şekilleri eşleyerek, renkleri özelleştirerek ve dekoratörler ekleyerek görünümlerini tanımlayabilirsiniz. Öğeleri araç kutusuna da ekleyebilirsiniz.
+## <a name="the-dsl-tools-graphical-interface"></a>DSL araçları grafik arabirimi
+ Etki alanına özgü dilinize öğe ve ilişki eklemek için DSL araçları grafik arabirimini kullanabilirsiniz. Öğeleri ekledikten sonra şekilleri şekillere eşleyerek, renkleri özelleştirerek ve dekoratörler ekleyerek görünümlerini tanımlayabilirsiniz. Öğeleri araç kutusuna da ekleyebilirsiniz.
 
-## <a name="validation-in-dsl-tools"></a>DSL Araçlarda Doğrulama
- Dsl, etki alanı modelinin kod oluşturma için temel gereksinimleri karşıladığından emin olmak için bir doğrulama düzeyi sağlar. Genellikle, kendi etki alanına özgü dilinizi oluşturduğunuzda, iş mantığı kurallarınızı ifade etmek için kendi doğrulamanızı eklersiniz. Özel doğrulama hakkında daha fazla bilgi için, [Etki Alanına Özgü Bir Dilde Doğrulama'ya](../modeling/validation-in-a-domain-specific-language.md)bakın.
+## <a name="validation-in-dsl-tools"></a>DSL araçlarında doğrulama
+ DSL, etki alanı modelinin kod oluşturma için temel gereksinimleri karşıladığından emin olmak için bir doğrulama düzeyi sağlar. Genellikle, etki alanına özgü dilinizi oluşturduğunuzda, iş mantığı kurallarınızı ifade etmek için kendi doğrulama bilgilerinizi eklersiniz. Özel doğrulama hakkında daha fazla bilgi için bkz. [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md).
 
- Etki alanına özel dilinizi tasarlarken sık sık doğrulamanızı öneririz. Etki alanına özgü dilinizin doğrulama hataları varsa, kaynak kodu oluşturamazsınız. Şablonlardan kaynak kodu oluşturma işlemi, Solution Explorer'ın araç çubuğundaki **Tüm Şablonları Dönüştür'e** tıklayarak gerçekleştirilir. Dil tanımını her değiştirdiğinizde, **Tüm Şablonları**Dönüştürdüğünüzden de emin olun. Daha fazla bilgi için [bkz: Etki Alanına Özel Dil Çözümü Oluşturun.](../modeling/how-to-create-a-domain-specific-language-solution.md)
+ Tasarlarken, etki alanına özgü dilinizi genellikle doğrulamanızı öneririz. Etki alanına özgü dilinizin doğrulama hataları varsa, kaynak kodu oluşturamazsınız. Şablonlardan kaynak kodu oluşturma işlemi, Çözüm Gezgini araç çubuğundaki **Tüm Şablonları Dönüştür** ' ü tıklatarak gerçekleştirilir. Dil tanımını her değiştirdiğinizde, **tüm şablonları dönüştürdiğinizden**de emin olun. Daha fazla bilgi için bkz. [nasıl yapılır: etki alanına özgü dil çözümü oluşturma](../modeling/how-to-create-a-domain-specific-language-solution.md).
 
-## <a name="customization-of-dsl-tools"></a>DSL Araçlarının Özelleştirilmesi
- Modelin davranışını hassaslaştırmak ve diliniz üzerindeki kısıtlamaları tanımlamak için ek kod sağlayabilirsiniz. Gerekirse, metin şablonlarını değiştirerek önemli değişiklikler yapabilirsiniz.
+## <a name="customization-of-dsl-tools"></a>DSL araçlarının özelleştirilmesi
+ Modelin davranışını iyileştirmek ve dilinizdeki kısıtlamaları tanımlamak için ek kod sağlayabilirsiniz. Gerekirse, metin şablonlarını değiştirerek önemli değişiklikler yapabilirsiniz.
 
-## <a name="distributing-your-dsl-solution"></a>DSL Çözümünüzü Dağıtma
- DSL Tools, 'de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]barındırılan bir paket oluşturur. Paket, kullanıcıların etki alanına özgü dilinizi kullanarak modeller oluşturmasına izin veren bir araç kutusu, bir DSL gezgini ve diğer Kullanıcı Arabirimi öğelerini görüntüler.
+## <a name="distributing-your-dsl-solution"></a>DSL çözümünüzü dağıtma
+ DSL Araçları ' de barındırılan bir paket oluşturur [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Paket, bir araç kutusu, DSL Gezgini ve kullanıcıların, etki alanına özgü dilinizi kullanarak modeller oluşturmalarına izin veren diğer kullanıcı arabirimi öğelerini görüntüler.
 
- DSL Tools çözümünün oluşturulmasını [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ve çalıştırDığınızda, ikinci bir örnekte etki alanına özgü dilinizin dilin kullanıcısına nasıl göründüğünü [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] gösterir. Her şeyin doğru çalıştığını doğruladıktan sonra, `.vsix` DslPackage projesinin yapı klasöründe bulacağınız dosyayı dağıtabilirsiniz. Bu dosya, DSL'yi diğer [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bilgisayarlara uzantı olarak yüklemek için kullanılabilir.  Daha fazla bilgi için [bkz.](../modeling/deploying-domain-specific-language-solutions.md)
+ ' De DSL araçları çözümünü oluşturup çalıştırdığınızda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , ikinci bir örneği, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] etki alanına özgü dilinizin dilin kullanıcısına nasıl göründüğünü gösterir. Her şeyin düzgün çalıştığını doğruladıktan sonra, `.vsix` bulacağınız dosyayı DslPackage projesinin Build klasöründe dağıtabilirsiniz. Bu dosya, DSL 'yi diğer bilgisayarlara uzantı olarak yüklemek için kullanılabilir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  Daha fazla bilgi için bkz. [etki alanına özgü dil çözümlerini dağıtma](../modeling/deploying-domain-specific-language-solutions.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Deneysel Örnek](../extensibility/the-experimental-instance.md) [Etki Alanına Özel Dil Araçları Sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+ [Deneysel örnek](../extensibility/the-experimental-instance.md) [alana özgü dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

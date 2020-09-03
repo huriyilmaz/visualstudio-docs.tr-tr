@@ -8,19 +8,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 56b857770ac793e7df7f75ecee03cb089df1eeb2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75597221"
 ---
 # <a name="api-reference-for-t4-text-templates"></a>T4 Metin Şablonları için API Başvurusu
 
 Metin şablonu oluşturma API 'SI, [metin şablonlarının](../modeling/code-generation-and-t4-text-templates.md)dönüşümünü çağırmanıza ve özelleştirmenize olanak sağlar.
 
-## <a name="namespaces"></a>{1&gt;Ad alanları&lt;1}
+## <a name="namespaces"></a>Ad alanları
 
-|Ad alanı|Amaç|
+|Ad Alanı|Amaç|
 |-|-|
 |<xref:Microsoft.VisualStudio.TextTemplating?displayProperty=fullName>|Metin şablonu dönüştürme işlevselliği için sınıflar içerir. Metin şablonu dönüştürme altyapısı Visual Studio ile tümleşiktir ve metin şablonu dosyalarını oluşturulan metin çıkış dosyalarına dönüştürür.|
 |[Microsoft. VisualStudio. Textşablon oluşturma. modelleme](/previous-versions/ee844312(v=vs.140))|UML modelleriyle ve Visual Studio ModelBus erişim gibi alana özgü dillerle ilgili metin dönüştürme olanakları sağlar.|

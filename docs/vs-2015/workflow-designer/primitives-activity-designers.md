@@ -10,32 +10,32 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 90794b658204fb955e6dfaebed0377f91d9792ba
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672534"
 ---
 # <a name="primitives-activity-designers"></a>Temel Öğeler Etkinlik Tasarımcıları
-Temel elemanlar etkinlik tasarımcıları, <xref:System.Activities.Statements> ad alanında Assign ve Delay gibi çeşitli etkinlikleri oluşturmak ve yapılandırmak için kullanılır. Bu bölümde yer alan konular [!INCLUDE[wfd2](../includes/wfd2-md.md)] etkinliğinin ve Şablon tasarımcılarının nasıl kullanılacağına ilişkin yönergeler sağlar.
+Temel elemanlar etkinlik tasarımcıları, <xref:System.Activities.Statements> ad alanında Assign ve Delay gibi çeşitli etkinlikleri oluşturmak ve yapılandırmak için kullanılır. Bu bölümde yer alan konular, [!INCLUDE[wfd2](../includes/wfd2-md.md)] etkinliğin ve Şablon tasarımcılarının nasıl kullanılacağına ilişkin yönergeler sağlar.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [Ata](../workflow-designer/assign-activity-designer.md) @No__t_1 etkinliği oluşturmak ve yapılandırmak için kullanılır.
+ [Ata](../workflow-designer/assign-activity-designer.md) Etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.Assign> .
 
- [Gecikme](../workflow-designer/delay-activity-designer.md) @No__t_1 etkinliği oluşturmak ve yapılandırmak için kullanılır.
+ [Gecikme](../workflow-designer/delay-activity-designer.md) Etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.Delay> .
 
- [InvokeMethod](../workflow-designer/invokemethod-activity-designer.md) @No__t_1 etkinliği oluşturmak ve yapılandırmak için kullanılır.
+ [InvokeMethod](../workflow-designer/invokemethod-activity-designer.md) Etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.InvokeMethod> .
 
- [WriteLine](../workflow-designer/writeline-activity-designer.md) @No__t_1 etkinliği oluşturmak ve yapılandırmak için kullanılır.
+ [WriteLine](../workflow-designer/writeline-activity-designer.md) Etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.WriteLine> .
 
 ## <a name="reference"></a>Başvuru
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [Denetim Akışı](../workflow-designer/control-flow-activity-designers.md)
+ [Denetim akışı](../workflow-designer/control-flow-activity-designers.md)
 
  [Akış Çizelgesi](../workflow-designer/flowchart-activity-designers.md)
 
- [Messaging](../workflow-designer/messaging-activity-designers.md)
+ [Mesajlaşma](../workflow-designer/messaging-activity-designers.md)
 
  [Çalışma Zamanı](../workflow-designer/runtime-activity-designers.md)
 
@@ -43,8 +43,8 @@ Temel elemanlar etkinlik tasarımcıları, <xref:System.Activities.Statements> a
 
  [Koleksiyon](../workflow-designer/collection-activity-designers.md)
 
- [Hata İşleme](../workflow-designer/error-handling-activity-designers.md)
+ [Hata Işleme](../workflow-designer/error-handling-activity-designers.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-[etkinlik tasarımcılarını kullanarak](../workflow-designer/using-the-activity-designers.md) -
+-[Etkinlik tasarımcılarını kullanma](../workflow-designer/using-the-activity-designers.md)

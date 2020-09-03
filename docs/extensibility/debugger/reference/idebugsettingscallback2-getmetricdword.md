@@ -1,5 +1,5 @@
 ---
-title: IDebugSettingsCallback2::GetMetricDword | Microsoft Dokümanlar
+title: 'IDebugSettingsCallback2:: GetMetricDword | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +14,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 3b8890cb76d8f15ff0519db5e20d3b8e8866d4eb
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80720029"
 ---
 # <a name="idebugsettingscallback2getmetricdword"></a>IDebugSettingsCallback2::GetMetricDword
-Adı verilen bir metnin değerini alır.
+Bir ölçümün adını verilen değerini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetMetricDword(
@@ -45,19 +45,19 @@ private int GetMetricDword(
 
 ## <a name="parameters"></a>Parametreler
 `pszType`\
-[içinde] Metrik türü.
+'ndaki Ölçüm türü.
 
 `guidSection`\
-[içinde] Bölümün benzersiz tanımlayıcısı.
+'ndaki Bölümün benzersiz tanıtıcısı.
 
 `pszMetric`\
-[içinde] Metnin adı.
+'ndaki Ölçümün adı.
 
 `pdwValue`\
-[çıkış] Ölçümün değerini verir.
+dışı Ölçümün değerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

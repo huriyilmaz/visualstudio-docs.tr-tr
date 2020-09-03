@@ -19,10 +19,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 19367f812a87d6aa585e123100f1d08144c57ff9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672367"
 ---
 # <a name="extend-the-functionality-of-a-tableadapter"></a>Bir TableAdapter’ın işlevselliğini genişletme
@@ -35,17 +35,17 @@ TableAdapter 'ın kısmi sınıf dosyasına kod ekleyerek bir TableAdapter 'ın 
  Kısmi sınıflar, belirli bir sınıf için kodun birden fazla fiziksel Dosya arasında bölünmesine izin verir. Daha fazla bilgi için bkz. [kısmi](https://msdn.microsoft.com/library/7adaef80-f435-46e1-970a-269fff63b448) veya [kısmi (tür)](https://msdn.microsoft.com/library/27320743-a22e-4c7b-b0b3-53afe3607334).
 
 ## <a name="locate-tableadapters-in-code"></a>Kodda TableAdapters bulma
- TableAdapters, **veri kümesi Tasarımcısı**ile tasarlanırken, oluşturulan TableAdapter sınıfları <xref:System.Data.DataSet> iç içe geçmiş sınıfları değildir. TableAdapters, TableAdapter 'ın ilişkili veri kümesinin adını temel alan bir ad alanında bulunur. Örneğin, uygulamanız `HRDataSet` adlı bir veri kümesi içeriyorsa, TableAdapters ad alanında yer `HRDataSetTableAdapters` alır. (Adlandırma kuralı şu düzene uyar: *DataSetName*  +  `TableAdapters`).
+ TableAdapters, **veri kümesi Tasarımcısı**ile tasarlanırken, oluşturulan TableAdapter sınıfları iç içe geçmiş sınıfları değildir <xref:System.Data.DataSet> . TableAdapters, TableAdapter 'ın ilişkili veri kümesinin adını temel alan bir ad alanında bulunur. Örneğin, uygulamanız adlı bir veri kümesi içeriyorsa `HRDataSet` , TableAdapters `HRDataSetTableAdapters` ad alanında yer alır. (Adlandırma kuralı şu düzene uyar: *DataSetName*  +  `TableAdapters` ).
 
- Aşağıdaki örnek, `NorthwindDataSet` bir projede `CustomersTableAdapter`is adında bir TableAdapter olduğunu varsayar.
+ Aşağıdaki örnek, adlı bir TableAdapter `CustomersTableAdapter` 'ın ile bir projede olduğunu varsayar `NorthwindDataSet` .
 
 #### <a name="to-create-a-partial-class-for-a-tableadapter"></a>TableAdapter için kısmi bir sınıf oluşturmak için
 
 1. **Proje** menüsüne gidip**Sınıf Ekle**öğesini seçerek projenize yeni bir sınıf ekleyin.
 
-2. @No__t_0 sınıfı adlandırın.
+2. Sınıfı adlandırın `CustomersTableAdapterExtended` .
 
-3. **Ekle**' yi seçin.
+3. **Add (Ekle)** seçeneğini belirleyin.
 
 4. Kodu, projeniz için doğru ad alanı ve kısmi sınıf adı ile aşağıdaki gibi değiştirin:
 

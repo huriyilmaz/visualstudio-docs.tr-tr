@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: d79c9d0d1b9c62d5afd78696ee2654c4eecdbe57
-ms.sourcegitcommit: cb0c6e55ae560960a493df9ab56e3e9d9bc50100
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86972367"
 ---
 # <a name="create-a-c-extension-for-python"></a>Python için C++ uzantısı oluşturma
@@ -36,7 +36,7 @@ Bu ve diğer yollardan bir karşılaştırma, bu makalenin sonundaki [alternatif
 
 Bu izlenecek yolda tamamlanan örnek [Python-Samples-vs-cpp-Extension](https://github.com/Microsoft/python-sample-vs-cpp-extension) (GitHub) üzerinde bulunabilir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Visual Studio 2017 veya üzeri, **C++ Ile masaüstü geliştirme** ve **Python geliştirme** iş yükleri için varsayılan seçeneklerle birlikte yüklenir.
 - **Python geliştirme** iş yükünde, **Python yerel geliştirme araçları**için sağdaki kutuyu da seçin. Bu seçenek, bu makalede açıklanan yapılandırmanın çoğunu ayarlar. (Bu seçenek ayrıca C++ iş yükünü otomatik olarak içerir.)
@@ -131,7 +131,7 @@ Daha fazla bilgi için bkz. Visual Studio 'nun diğer sürümlerini kullanma dah
     | **Bağlayıcı**  >  **Genel** | **Ek kitaplık dizinleri** | Yükleme için uygun şekilde *. lib* dosyaları içeren Python *Kitaplıklar* klasörünü ekleyin (örneğin,) `c:\Python36\libs` . (. Lib *dosyalarını Içeren* *LIB* klasörünü *değil* , *. lib* dosyalarını içeren *LIBS* klasörünü işaret ettiğinizden emin olun.) |
 
     > [!Tip]
-    > Proje özelliklerinde C/C++ sekmesini görmüyorsanız, proje C/C++ kaynak dosyaları olarak tanımladığı herhangi bir dosya içermediği için olur. *. C* veya *. cpp* uzantısı olmadan bir kaynak dosyası oluşturursanız bu durum oluşabilir. Örneğin, `module.coo` `module.cpp` daha önce yeni öğe iletişim kutusu yerine yanlışlıkla girdiyseniz, Visual Studio dosyayı oluşturur ancak dosya türünü "C/C + Code" olarak (c/C++ özellikleri sekmesini etkinleştirir) olarak ayarlar. Bu tür hatalı kimlik, dosyayı ile yeniden adlandırsanız bile durum durumunda kalır `.cpp` . Dosya türünü düzgün bir şekilde ayarlamak için **Çözüm Gezgini**dosyasında dosyaya sağ tıklayın, **Özellikler**' i seçin ve ardından **dosya türünü** **C/C++ kodu**olarak ayarlayın.
+    > Proje özelliklerinde C/C++ sekmesini görmüyorsanız, proje C/C++ kaynak dosyaları olarak tanımladığı herhangi bir dosya içermediği için olur. *. C* veya *. cpp* uzantısı olmadan bir kaynak dosyası oluşturursanız bu durum oluşabilir. Örneğin, `module.coo` `module.cpp` daha önce yeni öğe iletişim kutusu yerine yanlışlıkla girdiyseniz, Visual Studio dosyayı oluşturur ancak dosya türünü "C/C + Code" olarak (c/C++ özellikleri sekmesini etkinleştirir) olarak ayarlar. Bu tür hatalı kimlik, dosyayı ile yeniden adlandırsanız bile durum durumunda kalır `.cpp` . Dosya türünü düzgün bir şekilde ayarlamak için **Çözüm Gezgini**dosyasında dosyaya sağ tıklayın, **Özellikler**' i seçin ve ardından  **dosya türünü** **C/C++ kodu**olarak ayarlayın.
 
     > [!Warning]
     > Hata ayıklama **C/C++**  >  **Code Generation**  >  olmayan Python ikililerinin ile oluşturulduğu durum, bu ayar, hata ayıklama yapılandırması için bile C/C++ kod oluşturma**çalışma zamanı kitaplığı** seçeneğini her zaman **çok iş parçacıklı DLL (/MD)** olarak ayarlayın. CPython ile, **çok iş parçacıklı hata ayıklama dll (/MDd)** seçeneğini ayarlamanız durumunda, hata **ayıklama** yapılandırması oluşturmak **C1189, Py_TRACE_REFS ve Py_REF_DEBUG Py_DEBUG uyumlu değildir: Py_LIMITED_API**. Ayrıca, `Py_LIMITED_API` derleme hatasını önlemek için (CPython, PyBind11 değil) öğesini kaldırırsanız, modül içeri aktarmaya çalışırken Python kilitleniyor. (Kilitlenme, DLL 'in `PyModule_Create` , **önemli Python hatası: PyThreadState_Get: geçerli iş parçacığı olmayan**çıkış iletisiyle daha sonra açıklanan çağrısı içinde olur.)

@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 4f0d4eee6714d29a1609f6f6531ab18c132d5527
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87234698"
 ---
 # <a name="troubleshoot-errors-in-office-solutions"></a>Office çözümlerinde hata giderme sorunları
@@ -40,7 +40,7 @@ ms.locfileid: "87234698"
 
 - [Hata ayıklama projeleri](#debugging)
 
-## <a name="create-upgrade-and-open-projects"></a><a name="creating"></a>Projeleri oluşturun, yükseltin ve açın
+## <a name="create-upgrade-and-open-projects"></a><a name="creating"></a> Projeleri oluşturun, yükseltin ve açın
  Office projelerini oluştururken veya açtığınızda aşağıdaki hatalarla karşılaşabilirsiniz.
 
 ### <a name="the-project-cannot-be-created"></a>Proje oluşturulamıyor
@@ -84,7 +84,7 @@ ms.locfileid: "87234698"
 
  Projeyi yükseltmeyi tamamladıktan sonra, diğer Office çözümleri tarafından kullanılmıyorsa Office Second Edition çalışma zamanı için Visual Studio 2005 araçları 'nı geliştirme bilgisayarından kaldırabilirsiniz.
 
-## <a name="use-the-designers"></a><a name="designers"></a>Tasarımcıları kullanma
+## <a name="use-the-designers"></a><a name="designers"></a> Tasarımcıları kullanma
  Belge düzeyi projelerde belge, çalışma kitabı veya çalışma sayfası tasarımcısı ile çalışırken aşağıdaki hatalarla karşılaşabilirsiniz.
 
 ### <a name="designer-failed-to-load-correctly"></a>Tasarımcı doğru şekilde yüklenemedi
@@ -105,7 +105,7 @@ ms.locfileid: "87234698"
 ### <a name="insert-clip-art-command-does-nothing-in-the-visual-studio-designer"></a>Küçük resim Ekle komutu Visual Studio tasarımcısında hiçbir şey yapmaz
  Excel veya Word Visual Studio tasarımcısında açıldığında, Şeritteki **çizimler** sekmesinde bulunan **küçük resim** düğmesine tıklamak, **küçük resim** görev bölmesini açmaz. Küçük resim eklemek için, Visual Studio dışında ana proje klasöründeki ( *\Bin* klasöründe olan kopya değil) çalışma kitabının veya belgenin kopyasını açmanız, küçük resmi eklemeniz ve sonra çalışma kitabını veya belgeyi kaydetmeniz gerekir.
 
-## <a name="write-code"></a><a name="code"></a>Kod Yaz
+## <a name="write-code"></a><a name="code"></a> Kod Yaz
  Office projelerinde kod yazdığınızda aşağıdaki hatalarla karşılaşabilirsiniz.
 
 ### <a name="some-events-of-office-objects-are-not-accessible-when-using-c"></a>C kullanırken Office nesnelerinin bazı olaylarına erişilemez\#
@@ -170,7 +170,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
 
  Word veya Excel ad alanını içeri aktarmış olsanız ve içindeki tüm sınıflara erişebilseniz de, ad alanı belirsizi kaldırmak için Word veya Excel ile tüm türleri tamamen nitelemeniz gerekir.
 
-## <a name="build-projects"></a><a name="building"></a>Yapı projeleri
+## <a name="build-projects"></a><a name="building"></a> Yapı projeleri
  Office projelerini oluştururken aşağıdaki hatalarla karşılaşabilirsiniz.
 
 ### <a name="cannot-build-a-document-level-project-that-is-based-on-a-document-with-restricted-permissions"></a>Kısıtlanmış izinlere sahip bir belgeyi temel alan belge düzeyi projesi oluşturulamaz
@@ -183,7 +183,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
 ### <a name="compiler-errors-occur-after-a-namedrange-control-is-deleted"></a>NamedRange denetimi silindikten sonra derleyici hataları oluşur
  <xref:Microsoft.Office.Tools.Excel.NamedRange>Tasarımcıda etkin çalışma sayfası olmayan bir çalışma sayfasından bir denetimi silerseniz, otomatik olarak oluşturulan kod projenizden kaldırılmayabilir ve derleyici hataları oluşabilir. Kodun kaldırıldığından emin olmak için, <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimi silmeden önce etkin çalışma sayfası yapmak üzere denetimi içeren çalışma sayfasını her zaman seçmelisiniz. Denetimi sildiğinizde otomatik olarak oluşturulan kod silinmemişse, tasarımcı 'nın çalışma sayfasını etkinleştirerek ve çalışma sayfasının değiştirilmiş olarak işaretlendiğinden bir değişiklik yaparak kodu silmesine neden olabilirsiniz. Projeyi yeniden oluşturduğunuzda kod kaldırılır.
 
-## <a name="debug-projects"></a><a name="debugging"></a>Hata ayıklama projeleri
+## <a name="debug-projects"></a><a name="debugging"></a> Hata ayıklama projeleri
  Office projelerinde hata ayıklarken aşağıdaki hatalarla karşılaşabilirsiniz.
 
 ### <a name="prompt-to-uninstall-appears-when-you-publish-and-install-a-solution-on-the-development-computer"></a>Geliştirme bilgisayarında bir çözüm yayımladığınızda ve yüklediğinizde yüklemeyi kaldırma istemi görüntülenir

@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 31fb06512457f919b67d41c3fb4096e4c3477426
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72652024"
 ---
 # <a name="properties-of-diagrams"></a>Diyagramların Özellikleri
@@ -31,23 +31,23 @@ Diyagramların oluşturulan tasarımcıda nasıl görüneceğini belirten özell
 
 |Özellik|Açıklama|Varsayılan|
 |--------------|-----------------|-------------|
-|Rengi doldur|Diyagram için doldur rengi.|be|
-|Metin rengi|Diyagramda görüntülenen metnin rengi.|siyah|
-|Erişim değiştiricisi|Sınıfın erişim değiştiricisi (genel veya iç).|Ortak|
-|Özel Öznitelikler|Oluşturulan kod sınıfına öznitelik eklemek için kullanılır.|\<none >|
-|Double türevi üretir|@No__t_0, hem temel sınıf hem de kısmi bir sınıf (geçersiz kılmaları kullanarak özelleştirmeyi desteklemek için) oluşturulur. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|False|
-|Özel Oluşturucusu vardır|@No__t_0, kaynak kodda özel bir Oluşturucu sağlanacaktır. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md)..|False|
-|Devralma değiştiricisi|Diyagramdan oluşturulan kaynak kodu sınıfının devralım türünü açıklar (`none`, `abstract` veya `sealed`).|Yok.|
-|Temel diyagram|Bu diyagramın temel sınıfı.|seçim|
+|Dolgu Rengi|Diyagram için doldur rengi.|Beyaz|
+|Metin rengi|Diyagramda görüntülenen metnin rengi.|Siyahi|
+|Erişim değiştiricisi|Sınıfın erişim değiştiricisi (genel veya iç).|Genel|
+|Özel Öznitelikler|Oluşturulan kod sınıfına öznitelik eklemek için kullanılır.|\<none>|
+|Double türevi üretir|Eğer `True` bir temel sınıf ve kısmi bir sınıf (geçersiz kılmaları özelleştirmeyi desteklemek için) oluşturulur. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|Yanlış|
+|Özel Oluşturucusu vardır|İse `True` , kaynak kodda özel bir Oluşturucu sağlanacaktır. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md)..|Yanlış|
+|Devralma değiştiricisi|Diyagramdan oluşturulan kaynak kodu sınıfının devralım türünü açıklar ( `none` `abstract` veya `sealed` ).|Hiçbiri|
+|Temel diyagram|Bu diyagramın temel sınıfı.|(yok)|
 |Name|Bu diyagramın adı.|Geçerli ad|
 |Ad Alanı|Bu diyagramla ilişkili ad alanı.|Geçerli ad alanı|
 |Temsil edilen sınıf|Bu diyagramın temsil ettiği kök etki alanı sınıfı.|Geçerliyse geçerli kök sınıfı|
-|Notlar|Bu öğeyle ilişkili resmi olmayan notlar.|\<none >|
-|Dolgu rengini özellik olarak gösterir|@No__t_0, Kullanıcı oluşturulan tasarımcının diyagramının Fill rengini ayarlayabilir. Bunu ayarlamak için diyagram şekline sağ tıklayın ve **Açılım Ekle**' ye tıklayın.|False|
-|Metin rengini özellik olarak gösterir|@No__t_0, Kullanıcı oluşturulan tasarımcıda diyagramın metin rengini ayarlayabilir. Bunu ayarlamak için diyagram şekline sağ tıklayın ve **Açılım Ekle**' ye tıklayın.|False|
-|Açıklama|Oluşturulan tasarımcıyı belgelemek için kullanılan açıklama.|\<none >|
-|Görünen ad|Bu diyagram için oluşturulan tasarımcıda görüntülenecek ad.|\<none >|
-|Help anahtar sözcüğü|Bu diyagram için F1 yardımını dizine eklemek için kullanılan anahtar sözcük.|\<none >|
+|Notlar|Bu öğeyle ilişkili resmi olmayan notlar.|\<none>|
+|Dolgu rengini özellik olarak gösterir|İse `True` , Kullanıcı oluşturulan tasarımcının diyagramının Fill rengini ayarlayabilir. Bunu ayarlamak için diyagram şekline sağ tıklayın ve **Açılım Ekle**' ye tıklayın.|Yanlış|
+|Metin rengini özellik olarak gösterir|Eğer `True` Kullanıcı, oluşturulan tasarımcıda diyagramın metin rengini ayarlayabilir. Bunu ayarlamak için diyagram şekline sağ tıklayın ve **Açılım Ekle**' ye tıklayın.|Yanlış|
+|Description|Oluşturulan tasarımcıyı belgelemek için kullanılan açıklama.|\<none>|
+|Görünen Ad|Bu diyagram için oluşturulan tasarımcıda görüntülenecek ad.|\<none>|
+|Help anahtar sözcüğü|Bu diyagram için F1 yardımını dizine eklemek için kullanılan anahtar sözcük.|\<none>|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

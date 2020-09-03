@@ -1,5 +1,5 @@
 ---
-title: Projeleri | Microsoft Docs
+title: Projeler | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -15,33 +15,33 @@ caps.latest.revision: 44
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a251af12ccf4be5f0f48f789ac59fedaed3299b0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68183944"
 ---
 # <a name="projects"></a>Projeler
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Visual Studio'da projeler kaynak kodu dosyaları ve görüntülenen diğer kaynakları düzenlemek için geliştiricilerin kullanan kapsayıcılardır **Çözüm Gezgini**. Genellikle depolama başvurularının kaynak kod dosyalarını ve kaynak bit eşlem dosyaları gibi dosyalar (örneğin, bir C# projesi için .csproj dosyası) projelerdir. Düzenleme, derleme, hata ayıklama ve kaynak kodunu Dağıt let projeleri, Web Hizmetleri ve veritabanları ve diğer kaynaklara başvuruyor. VSPackage'ları, Visual Studio Proje sistemi üç temel şekilde genişletebilir: *proje türleri*, *proje alt türleri*, ve *özel Araçlar*.  
+Visual Studio 'da projeler, geliştiricilerin kaynak kodu dosyalarını ve **Çözüm Gezgini**görünen diğer kaynakları düzenlemek için kullandığı kapsayıcılardır. Genellikle projeler, kaynak kodu dosyalarına ve bit eşlem dosyaları gibi kaynaklara başvuruları depolayan dosyalardır (örneğin, C# projesi için bir. csproj dosyası). Projeler, kaynak kodu, Web Hizmetleri ve veritabanlarına yönelik başvuruları ve diğer kaynakları düzenlemenize, oluşturmanıza, hata ayıklamanıza ve dağıtmanıza olanak tanır. VSPackages, Visual Studio proje sistemini üç ana şekilde genişletebilirler: *Proje türleri*, *Proje alt türleri*ve *özel araçlar*.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Proje Türleri](../../extensibility/internals/project-types.md)  
- *Proje türleri* programlama gibi projeler, yeni türleri için destek eklendi. Örneğin, Visual Studio'nun desteklediği her bir dilin kendi proje türünde ve IronPython dil için bir proje türü IronPython tümleştirme örneği içerir. C# veya Visual Basic nasıl öğeler yerleşik, hata ayıklama, dağıtılan ve görüntülenen özelleştirmek için dışındaki diller için bir proje türü oluşturmalısınız **Çözüm Gezgini**. Daha fazla bilgi için [proje türleri](../../extensibility/internals/project-types.md).  
+ *Proje türleri* , programlama dilleri gibi yeni proje türleri için destek ekler. Örneğin, Visual Studio 'Nun desteklediği her dilin kendi proje türü vardır ve IronPython tümleştirme örneği IronPython dili için bir proje türü içerir. Öğelerin nasıl oluşturulduğunu, ayıklanmadığını, dağıtıldığını ve **Çözüm Gezgini**görüntülendiğini özelleştirmek Için C# veya Visual Basic dışındaki diller için bir proje türü oluşturmanız gerekir. Daha fazla bilgi için bkz. [Proje türleri](../../extensibility/internals/project-types.md).  
   
  [Proje Alt Türleri](../../extensibility/internals/project-subtypes.md)  
- *Proje alt türleri* proje türlerine dayanmaktadır ve projeleri yerleşik, hata ayıklama ve dağıtılan biçimini özelleştirmek için kullanılabilir. Visual Studio Proje alt türleri ile akıllı cihaz projeleri kullanır; Bunlar, yeni oluşturulan bir program geliştirme bilgisayarınızdan hedef cihaza kopyalayarak dağıtımı özelleştirin. C# ve Visual Basic proje türleri için proje alt türleri temeli olarak kullanılabilir; C++ proje türleri olamaz. Kendi proje türleri için temel olarak proje alt türleri için de kullanılabilir. Daha fazla bilgi için [proje alt türleri](../../extensibility/internals/project-subtypes.md).  
+ *Proje* alt türleri proje türlerine dayalıdır ve projelerin oluşturulduğu, hatalarının ayıklanması ve dağıtılma biçimini özelleştirmek için kullanılabilir. Visual Studio, akıllı cihaz projeleri ile proje alt türlerini kullanır; Yeni oluşturulan bir programı bir geliştirme bilgisayarından hedef cihaza kopyalayarak dağıtımı özelleştirir. C# ve Visual Basic proje türleri, proje alt türleri için temel olarak kullanılabilir; C++ proje türleri olamaz. Kendi proje türleriniz, proje alt türleri için temel olarak da kullanılabilir. Daha fazla bilgi için bkz. [Proje alt türleri](../../extensibility/internals/project-subtypes.md).  
   
  [Web Projeleri](../../extensibility/internals/web-projects.md)  
- Hangi sırayla Web uygulamaları oluşturmak ve Web projesi açıklar.  
+ Web uygulamasını açıklar ve bu Web uygulamaları oluşturur.  
   
- [Yeni Proje Oluşturma: Bir altyapı öğeleri, bölüm](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md) ve [yeni proje oluşturma: Arka Plan, 2. Bölüm](../../extensibility/internals/new-project-generation-under-the-hood-part-two.md)  
- Yeni bir proje oluşturduğunuzda, aslında neler olduğunu açıklar.  
+ [Yeni proje oluşturma: devlet, birinci bölüm](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md) ve [Yeni proje oluşturma altında: ikinci bölüm](../../extensibility/internals/new-project-generation-under-the-hood-part-two.md)  
+ Yeni bir proje oluşturduğunuzda gerçekte ne olduğunu açıklar.  
   
  [VSSDK örnekleri](../../misc/vssdk-samples.md)  
- Projeler ve çözümler ile uğraşmak VSSDK örneklerinde açıklar.  
+ VSSDK 'de projelerle ve çözümlerle ilgilenen örnekleri açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Visual Studio SDK’nın İçinde](../../extensibility/internals/inside-the-visual-studio-sdk.md)  
- Visual Studio genişletilebilirlik farklı yönlerini açıklar.
+ Visual Studio genişletilebilirliğine ait farklı yönleri açıklayın.

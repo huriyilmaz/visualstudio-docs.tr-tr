@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3f13689b6e3ac4db2d58c1def3a5d0dd05c219f2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672327"
 ---
 # <a name="list-source-command"></a>Kaynağı Listele Komutu
@@ -27,7 +27,7 @@ ms.locfileid: "72672327"
 
 Belirtilen kaynak kodu satırlarını görüntüler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 Debug.ListSource [/Count:number] [/Current] [/File:filename]
@@ -35,15 +35,15 @@ Debug.ListSource [/Count:number] [/Current] [/File:filename]
 ```
 
 ## <a name="switches"></a>Anahtarlar
- /Count: Isteğe bağlı `number`. Görüntülenecek satır sayısını belirtir.
+ /Count: `number` isteğe bağlı. Görüntülenecek satır sayısını belirtir.
 
  /Current Isteğe bağlı. Geçerli satırı gösterir.
 
- /File: Isteğe bağlı `filename`. Gösterilecek dosyanın yolu. Dosya adı belirtilmemişse, komut geçerli deyimin satırı için kaynak kodunu gösterir.
+ /File: `filename` isteğe bağlı. Gösterilecek dosyanın yolu. Dosya adı belirtilmemişse, komut geçerli deyimin satırı için kaynak kodunu gösterir.
 
- /Line: Isteğe bağlı `number`. Belirli bir satır numarasını gösterir.
+ /Line: `number` isteğe bağlı. Belirli bir satır numarasını gösterir.
 
- /ShowLineNumbers: Isteğe bağlı `yes|no`. Satır numaralarının görüntülenip görüntülenmeyeceğini belirtir.
+ /ShowLineNumbers: `yes|no` isteğe bağlı. Satır numaralarının görüntülenip görüntülenmeyeceğini belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
 

@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 01cfe55964a1d61c2ad200c9538ced9ff0aa5599
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72985464"
 ---
 # <a name="walkthrough-design-an-outlook-form-region"></a>İzlenecek yol: Outlook form bölgesi tasarlama
@@ -39,7 +39,7 @@ ms.locfileid: "72985464"
 > [!NOTE]
 > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "72985464"
 
 ### <a name="to-create-a-new-outlook-vsto-add-in-project"></a>Yeni bir Outlook VSTO eklentisi projesi oluşturmak için
 
-1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], **MapItAddIn**adlı BIR Outlook VSTO eklentisi projesi oluşturun.
+1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , **MapItAddIn**ADLı bir Outlook VSTO eklentisi projesi oluşturun.
 
 2. **Yeni proje** iletişim kutusunda, **çözüm için dizin oluştur**' u seçin.
 
@@ -120,18 +120,18 @@ ms.locfileid: "72985464"
 
 2. **Form bölgesi fabrikası** kod bölgesini genişletin.
 
-    `MapItFactory` adlı form bölgesi fabrikası sınıfı sunulur.
+    Adlı form bölgesi fabrikası sınıfı `MapItFactory` sunulur.
 
-3. `MapItFactory_FormRegionInitializing` olay işleyicisine aşağıdaki kodu ekleyin. Bu olay işleyicisi, Kullanıcı bir kişi öğesi açtığında çağrılır. Aşağıdaki kod, kişi öğesinin bir adres içerip içermediğini belirler. Kişi öğesi bir adres içermiyorsa, bu kod <xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs> sınıfının <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> özelliğini **true** olarak ayarlar ve form bölgesi gösterilmez. Aksi halde, VSTO eklentisi <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> olayını oluşturur ve form bölgesini görüntüler.
+3. Olay işleyicisine aşağıdaki kodu ekleyin `MapItFactory_FormRegionInitializing` . Bu olay işleyicisi, Kullanıcı bir kişi öğesi açtığında çağrılır. Aşağıdaki kod, kişi öğesinin bir adres içerip içermediğini belirler. Kişi öğesi bir adres içermiyorsa, bu kod <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> <xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs> sınıfın özelliğini **true** olarak ayarlar ve form bölgesi görüntülenmez. Aksi halde, VSTO eklentisi <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> olayı oluşturur ve form bölgesini görüntüler.
 
     [!code-csharp[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#1)]
     [!code-vb[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#1)]
 
-4. <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> olay işleyicisine aşağıdaki kodu ekleyin. Bu kod aşağıdaki görevleri gerçekleştirir:
+4. Olay işleyicisine aşağıdaki kodu ekleyin <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> . Bu kod aşağıdaki görevleri gerçekleştirir:
 
    - Kişi öğesindeki her adresi birleştirir ve bir URL dizesi oluşturur.
 
-   - <xref:System.Windows.Forms.WebBrowser> nesnesinin <xref:System.Windows.Forms.WebBrowser.Navigate%2A> yöntemini çağırır ve URL dizesini parametre olarak geçirir.
+   - <xref:System.Windows.Forms.WebBrowser.Navigate%2A>Nesnesinin yöntemini çağırır <xref:System.Windows.Forms.WebBrowser> ve URL dizesini parametre olarak geçirir.
 
      Yerel arama Web sitesi Map It form bölgesinde görünür ve her adresi karalama panelinde sunar.
 
@@ -151,10 +151,10 @@ ms.locfileid: "72985464"
 
 3. Kişi formunda, iletişim adı olarak **Ann beeyazın** ve ardından aşağıdaki üç adresi belirtin.
 
-    |Adres türü|Adrestir|
+    |Adres Türü|Adres|
     |------------------|-------------|
-    |**Business**|**4567 Main St. Buffalo, NY**|
-    |**Sayfa**|**1234 Kuzey St. Buffalo, NY**|
+    |**İş**|**4567 Main St. Buffalo, NY**|
+    |**Giriş**|**1234 Kuzey St. Buffalo, NY**|
     |**Diğer**|**3456 Main St. Seattle, WA**|
 
 4. Kişi öğesini kaydedin ve kapatın.
