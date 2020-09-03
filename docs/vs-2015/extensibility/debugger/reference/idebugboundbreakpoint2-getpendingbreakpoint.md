@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::GetPendingBreakpoint | Microsoft Docs
+title: 'IDebugBoundBreakpoint2:: GetPendingBreakpoint | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,18 +14,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2030de26c384405bafaa22582145130a6a2e5da6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156236"
 ---
 # <a name="idebugboundbreakpoint2getpendingbreakpoint"></a>IDebugBoundBreakpoint2::GetPendingBreakpoint
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Belirtilen bağlı Kesme noktasının oluşturulduğu bekleyen kesme noktasının alır.  
+Belirtilen bağlantılı kesme noktasının oluşturulduğu bekleyen kesme noktasını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetPendingBreakpoint(   
@@ -41,16 +41,16 @@ int GetPendingBreakpoint( 
   
 #### <a name="parameters"></a>Parametreler  
  `ppPendingBreakpoint`  
- [out] Döndürür [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) bağlı kesme noktası oluşturmak için kullanılan bekleyen kesme noktasının temsil eden nesne.  
+ dışı Bu bağlantılı kesme noktasını oluşturmak için kullanılan bekleyen kesme noktasını temsil eden [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) nesnesini döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bekleyen kesme noktası, bir kesme noktası için bir veya daha çok programlar uygulanabilir kodu bağlamak için gereken tüm gerekli bilgileri koleksiyonu olarak düşünülebilir.  
+ Bekleyen bir kesme noktası, bir veya daha fazla program için uygulanabilen bir kesme noktasını bağlamak için gereken tüm gerekli bilgilerin bir koleksiyonu olarak düşünülebilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CBoundBreakpoint` gösteren nesne [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) arabirimi.  
+ Aşağıdaki örnek, `CBoundBreakpoint` [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) arabirimini kullanıma sunan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.  
   
 ```  
 HRESULT CBoundBreakpoint::GetPendingBreakpoint(  

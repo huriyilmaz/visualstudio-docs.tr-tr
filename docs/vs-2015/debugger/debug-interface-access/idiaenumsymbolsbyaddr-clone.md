@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsymbolsbyaddr::Clone | Microsoft Docs
+title: 'IDiaEnumSymbolsByAddr:: Clone | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: be2252d089c058423997101d20886bbc9352aae8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68189666"
 ---
 # <a name="idiaenumsymbolsbyaddrclone"></a>IDiaEnumSymbolsByAddr::Clone
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Nesnenin bir kopyasını oluşturur.  
+Bir nesnenin kopyasını oluşturur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Clone (   
@@ -34,11 +34,11 @@ HRESULT Clone ( 
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- ppenum  
- [out] Döndürür bir [Idiaenumsymbolsbyaddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md) Numaralandırıcı bir kopyasını içeren nesne. Simgeleri çoğaltılmadığından, numaralandırıcı.  
+ ppEnum  
+ dışı Numaralandırıcı yinelenen içeren bir [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md) nesnesi döndürür. Semboller yinelenmez, yalnızca Numaralandırıcı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)

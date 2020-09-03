@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Betik belgelerini görüntüleme | Microsoft Docs'
+title: 'Nasıl yapılır: betik belgelerini görüntüleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -17,38 +17,38 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 88f923ab0447f1ac7d57e84d94f0ab442d912d67
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68189596"
 ---
-# <a name="how-to-view-script-documents"></a>Nasıl yapılır: Betik Belgelerini Görüntüleme
+# <a name="how-to-view-script-documents"></a>Nasıl Yapılır: Betik Belgelerini Görüntüleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Önceki sürümlerinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], sunucu tarafı betiğinden oluşturulan istemci tarafı komut dosyaları betik Gezgini penceresinde görüntülenmektedir. İstemci tarafı komut dosyası kullanılabilirliğini her zaman açık değil, betik Gezgini penceresi genellikle, gizli olduğu.  
+Önceki sürümlerinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , sunucu tarafı betikten oluşturulan istemci tarafı betik dosyaları betik Gezgini penceresinde göründü. Komut dosyası Gezgini penceresi genellikle gizlidir, böylece istemci tarafı komut dosyasının kullanılabilirliği her zaman belirgin değildir.  
   
- İçinde [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)], sunucu tarafı betiğinden oluşturulan istemci tarafı komut dosyaları, varsayılan olarak görünen Çözüm Gezgini'nde görünür. Betik Gezgini penceresi ortadan kaldırılmıştır.  
+ [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]' De, sunucu tarafı komut dosyasından oluşturulan istemci tarafı betik dosyaları Çözüm Gezgini ' de görünür ve bu varsayılan olarak görünür. Betik Gezgini penceresi ortadan kaldırıldı.  
   
- Yalnızca hata ayıklama modunda veya kesme modunda olduğunda istemci tarafı betiklerinin görülebilir. Görünürler **betik belgelerini** düğümü.  
+ İstemci tarafı betik dosyaları yalnızca hata ayıklama modundayken veya kesme modundayken görülebilir. **Betik belgeleri** düğümünde görünürler.  
   
- Sunucu tarafı komut dosyaları her zaman görünürdür. Görünürler  **\<Web sitesi Pathname >** düğümü. Düğümün adını şu örnektekine benzer: `c:\...\Website2\`  
+ Sunucu tarafı betik dosyaları her zaman görünürdür. Düğüm içinde görünürler **\<Website Pathname>** . Düğümün adı bu örneğe benzer: `c:\...\Website2\`  
   
-### <a name="to-view-a-server-side-script-document"></a>Bir sunucu tarafı komut dosyası belgesini görüntülemek için  
+### <a name="to-view-a-server-side-script-document"></a>Sunucu tarafı betik belgesini görüntülemek için  
   
-1. İçinde **Çözüm Gezgini**açın  **\<Web sitesi Pathname >** düğümü.  
+1. **Çözüm Gezgini**, **\<Website Pathname>** düğümünü açın.  
   
-2. Görüntülemek istediğiniz komut dosyasına çift tıklayın.  
+2. Görüntülemek istediğiniz betik dosyasına çift tıklayın.  
   
-     Sunucu tarafı komut dosyası, bir kaynak penceresinde açılır.  
+     Sunucu tarafı betik dosyası bir kaynak penceresinde açılır.  
   
-### <a name="to-view-a-client-side-script-document"></a>İstemci tarafı komut dosyası belgeyi görüntülemek için  
+### <a name="to-view-a-client-side-script-document"></a>İstemci tarafı betik belgesini görüntülemek için  
   
-1. İçinde **Çözüm Gezgini**açın **betik belgelerini** düğümü.  
+1. **Çözüm Gezgini**, **komut dosyası belgeleri** düğümünü açın.  
   
-2. Görüntülemek istediğiniz komut dosyasına çift tıklayın.  
+2. Görüntülemek istediğiniz betik dosyasına çift tıklayın.  
   
-     İstemci tarafı komut dosyası, bir kaynak penceresinde açılır.  
+     İstemci tarafı betik dosyası bir kaynak penceresinde açılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hata Ayıklayıcıda Verileri Görüntüleme](../debugger/viewing-data-in-the-debugger.md)

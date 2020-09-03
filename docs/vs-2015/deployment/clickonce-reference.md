@@ -17,38 +17,38 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c7086d5bab5be2df4cc1249cc629468883c9247a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156092"
 ---
 # <a name="clickonce-reference"></a>ClickOnce Başvurusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Aşağıdaki sayfalar, ClickOnce uygulamaları göstermek için kullanılan XML dosyalarını yapısını açıklar.  
+Aşağıdaki sayfalarda ClickOnce uygulamalarını temsil etmek için kullanılan XML dosyalarının yapısı açıklanır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ClickOnce Uygulama Bildirimi](../deployment/clickonce-application-manifest.md)  
- Listeler ve bir uygulama bildirimi oluşturan öznitelikleri ve öğeleri açıklar.  
+ [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)  
+ Uygulama bildirimini oluşturan öğeleri ve öznitelikleri listeler ve tanımlar.  
   
  [ClickOnce Dağıtım Bildirimi](../deployment/clickonce-deployment-manifest.md)  
- Listeler ve bir dağıtım bildirimi oluşturan öznitelikleri ve öğeleri açıklar.  
+ , Bir dağıtım bildirimi oluşturan öğeleri ve öznitelikleri listeler ve tanımlar.  
   
  [Ürün ve Paket Şema Başvurusu](../deployment/product-and-package-schema-reference.md)  
  Ürün ve paket dosyası öğelerini listeler.  
   
  [ClickOnce Yönetilmeyen API Başvurusu](../deployment/clickonce-unmanaged-api-reference.md)  
- Dfshim.DLL'den yönetilmeyen genel API'ler listeler.  
+ dfshim.dll 'ten yönetilmeyen ortak API 'Leri listeler.  
   
 ## <a name="reference"></a>Başvuru  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [ClickOnce Güvenliği ve Dağıtımı](../deployment/clickonce-security-and-deployment.md)  
+ [ClickOnce güvenliği ve dağıtımı](../deployment/clickonce-security-and-deployment.md)  
  ClickOnce dağıtımı hakkında ayrıntılı kavramsal bilgiler sağlar.  
   
  <xref:System.Deployment.Application>  
- Yönetilen kod içinde ClickOnce destekleyen ortak sınıfların belgelerine başvurmak için bağlantılar sağlar.  
+ Yönetilen kod içinde ClickOnce 'ı destekleyen ortak sınıfların başvuru belgelerine bağlantılar sağlar.  
   
  [ClickOnce Uygulamalarını Yayımlama](../deployment/publishing-clickonce-applications.md)  
- İzlenecek yollar sağlar ve nasıl-için ClickOnce görevleri gerçekleştiren kullanıcının.
+ , ClickOnce görevlerini gerçekleştiren izlenecek yollar ve nasıl yapılır.

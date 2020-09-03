@@ -20,19 +20,19 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a1ce11edac37368b9c4993a87a8c2b3e734b7862
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68189370"
 ---
 # <a name="msbuild-response-files"></a>MSBuild Yanıt Dosyaları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yanıt (.rsp), MSBuild.exe komut satırı anahtarları içeren metin dosyalarını dosyalarıdır. Her anahtar ayrı bir satıra olabilir veya tek bir satırda tüm anahtarlar olabilir. Yorum Satırları ile giriş yapılmış bir **#** simgesi. **@** Başka bir yanıt dosyası MSBuild.exe'ye geçirilecek anahtar kullanılır.  
+Yanıt (. rsp) dosyaları MSBuild.exe komut satırı anahtarları içeren metin dosyalarıdır. Her anahtar ayrı bir satırda olabilir veya tüm anahtarlar tek bir satırda olabilir. Açıklama satırları bir sembol ile önceden başlar **#** . **@** Anahtar, MSBuild.exe başka bir yanıt dosyası geçirmek için kullanılır.  
   
- Otomatik yanıt dosyası bir proje derlenirken MSBuild.exe kullanan bir özel .rsp dosyasıdır. Bu dosya, MSBuild.rsp, MSBuild.exe ile aynı dizinde olmalıdır, aksi takdirde, bulunmaz. Varsayılan komut satırında MSBuild.exe geçer belirtmek için bu dosyayı düzenleyebilirsiniz. Örneğin, aynı Günlükçü kullanıyorsanız, bir projeyi her derlediğinizde, ekleyebileceğiniz **/logger** geçiş için MSBuild.rsp ve bir proje her zaman MSBuild.exe Günlükçü kullanır.  
+ Otomatik yanıt dosyası, MSBuild.exe otomatik olarak bir proje oluştururken kullanılan özel bir. rsp dosyasıdır. Bu dosya, MSBuild. rsp, MSBuild.exe ile aynı dizinde olmalıdır, aksi halde bulunamacaktır. Bu dosyayı, MSBuild.exe için varsayılan komut satırı anahtarlarını belirtmek üzere düzenleyebilirsiniz. Örneğin, bir proje oluşturduğunuzda aynı günlükçüsü kullanırsanız, **/günlükçü** anahtarını MSBuild. rsp ' ye ekleyebilirsiniz ve MSBuild.exe bir proje oluşturulduğunda günlükçü kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [MSBuild başvurusu](../msbuild/msbuild-reference.md)   
- [Komut Satırı Başvurusu](../msbuild/msbuild-command-line-reference.md)
+ [Komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md)
