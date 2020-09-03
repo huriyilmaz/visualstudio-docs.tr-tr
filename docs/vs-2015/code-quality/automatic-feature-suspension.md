@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: b9c80ba76ba2da978c9cb475299ba0fc9e614120
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655146"
 ---
 # <a name="automatic-feature-suspension"></a>Otomatik özelliği askıya alma
@@ -29,9 +29,9 @@ Kullanılabilir sistem belleğiniz 200 MB veya daha az kalırsa, Visual Studio k
 
  Düşük bellek koşulunda aşağıdakiler gerçekleşir:
 
-- Görsel C# ve Visual Basic için tam çözüm Analizi devre dışı bırakıldı.
+- Visual C# ve Visual Basic için tam çözüm Analizi devre dışı bırakıldı.
 
-- Görsel C# ve Visual Basic Için [çöp toplama](https://msdn.microsoft.com/library/22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9) (GC) düşük gecikme modu devre dışı bırakıldı.
+- Visual C# için [çöp toplama](https://msdn.microsoft.com/library/22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9) (GC) düşük gecikme modu ve Visual Basic devre dışı bırakıldı.
 
 - Visual Studio önbellekleri temizlendi.
 
@@ -39,7 +39,7 @@ Kullanılabilir sistem belleğiniz 200 MB veya daha az kalırsa, Visual Studio k
  Büyük çözümlerle veya düşük bellek koşullarıyla çalışırken Visual Studio performansının nasıl iyileştirecağıyla ilgili ipuçları ve püf noktaları için bkz. [büyük çözümler Için performans konuları](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions).
 
 ## <a name="full-solution-analysis-suspended"></a>Tam çözüm Analizi askıya alındı
- Varsayılan olarak, tam çözüm Analizi Visual Basic için etkinleştirilmiştir ve görsel C#için devre dışı bırakılır. Ancak, düşük bellek koşulunda, Seçenekler iletişim kutusundaki ayarlarından bağımsız olarak hem Visual Basic hem de görsel C#için tam çözüm Analizi otomatik olarak devre dışıdır. Ancak, Seçenekler iletişim kutusunda **tam çözüm analizini etkinleştir** onay kutusunu seçerek veya Visual Studio 'yu yeniden başlatarak, görüntülenen bilgi çubuğundaki **yeniden etkinleştir** düğmesini seçerek tam çözüm analizini yeniden etkinleştirebilirsiniz. Seçenekler iletişim kutusu her zaman geçerli tam çözüm Analizi ayarlarını gösterir. Daha fazla bilgi için bkz. [nasıl yapılır: tam çözüm analizini etkinleştirme ve devre dışı bırakma](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md).
+ Varsayılan olarak, tam çözüm Analizi Visual Basic için etkinleştirilmiştir ve Visual C# için devre dışı bırakılır. Ancak, düşük bellek koşulunda, Seçenekler iletişim kutusundaki ayarlarından bağımsız olarak hem Visual Basic hem de Visual C# için tam çözüm Analizi otomatik olarak devre dışıdır. Ancak, Seçenekler iletişim kutusunda **tam çözüm analizini etkinleştir** onay kutusunu seçerek veya Visual Studio 'yu yeniden başlatarak, görüntülenen bilgi çubuğundaki **yeniden etkinleştir** düğmesini seçerek tam çözüm analizini yeniden etkinleştirebilirsiniz. Seçenekler iletişim kutusu her zaman geçerli tam çözüm Analizi ayarlarını gösterir. Daha fazla bilgi için bkz. [nasıl yapılır: tam çözüm analizini etkinleştirme ve devre dışı bırakma](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md).
 
 ## <a name="gc-low-latency-disabled"></a>GC düşük gecikme süresi devre dışı
  GC düşük gecikmeli modunu yeniden etkinleştirmek için Visual Studio 'Yu yeniden başlatın.  Varsayılan olarak, yazılarınızın herhangi bir GC işlemini engellemediğinden emin olmak için her yazarken, Visual Studio GC düşük gecikme süresi modunu sağlar. Ancak, düşük bellek durumu Visual Studio 'Nun otomatik askıya alma uyarısını görüntülemesine neden oluyorsa, GC düşük gecikme modu bu oturum için devre dışıdır. Visual Studio 'Yu yeniden başlatmak, varsayılan GC davranışını yeniden etkinleştirir. Daha fazla bilgi için bkz. <xref:System.Runtime.GCLatencyMode>.
@@ -57,7 +57,7 @@ Tüm Visual Studio önbellekler hemen boşaltılır, ancak geçerli geliştirme 
 Ayrıca, iç Visual Studio işlemleri için kullanılan önbellekler da temizlenir.
 
 > [!NOTE]
-> Otomatik Özellik askıya alma uyarısı, her oturum için değil, her çözüm temelinde yalnızca bir kez gerçekleşir. Bu, Visual Basic 'den görsele C# (veya tam tersi) geçiş yaptıysanız ve başka bir düşük bellek koşuluyla çalıştırırsanız, başka bir otomatik özellik askıya alma uyarısı elde edebilirsiniz.
+> Otomatik Özellik askıya alma uyarısı, her oturum için değil, her çözüm temelinde yalnızca bir kez gerçekleşir. Bu, Visual Basic 'den Visual C# ' ye (veya tam tersi) geçiş yaptıysanız ve başka bir düşük bellek koşuluyla çalıştırırsanız, başka bir otomatik özellik askıya alma uyarısı elde edebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

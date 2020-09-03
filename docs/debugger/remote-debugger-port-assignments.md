@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2d99a1aff2c241e81e8914a247d2f6d8981ee273
-ms.sourcegitcommit: 9c7d8693108ecd2042a70c04cebe3c44af657baf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74239451"
 ---
 # <a name="remote-debugger-port-assignments"></a>Uzaktan Hata Ayıklayıcı Bağlantı Noktası Atamaları
@@ -42,7 +42,7 @@ Diğer bir deyişle, uzaktan hata ayıklayıcıya atanan bağlantı noktasının
 
  Uzaktan hata ayıklayıcı penceresinde **araçlar > seçenekler**' e tıklayın ve TCP/IP bağlantı noktası numarasını ayarlayın.
 
- Komut satırında, uzaktan hata ayıklayıcıyı **/Port** anahtarıyla başlatın: **msvsmon/Port \<bağlantı noktası numarası >** .
+ Komut satırında, **/Port** anahtarı: **msvsmon/Port \<port number> **ile uzaktan hata ayıklayıcıyı başlatın.
 
  Uzaktan hata ayıklama yardımında tüm uzaktan hata ayıklayıcı komut satırı anahtarlarını bulabilir (uzaktan hata ayıklayıcı penceresinde **F1** ' e basın veya **Yardım > yardım** ' a tıklayabilirsiniz).
 
@@ -54,12 +54,12 @@ Diğer bir deyişle, uzaktan hata ayıklayıcıya atanan bağlantı noktasının
  Uzaktan hata ayıklayıcının 64 bit sürümü başlatıldığında, varsayılan olarak ana bağlantı noktasını (4022) kullanır.  32 bitlik bir işlemde hata ayıklaması yaparsanız, uzaktan hata ayıklayıcı 'nın 64 bit sürümü, bağlantı noktası 4023 (1 ile artırılan ana bağlantı noktası numarası) üzerinde uzaktan hata ayıklayıcı 'nın 32 bit sürümünü başlatır. 32 bitlik uzaktan hata ayıklayıcıyı çalıştırırsanız, 4022 kullanır ve 4023 kullanılmaz.
 :::moniker-end
 
- Bu bağlantı noktası komut satırından yapılandırılabilir: **msvsmon/wow64port \<bağlantı noktası numarası >** .
+ Bu bağlantı noktası komut satırından yapılandırılabilir: **msvsmon/wow64port \<port number> **.
 
 ## <a name="the-discovery-port"></a>Bulma bağlantı noktası
  UDP 3702, ağda uzaktan hata ayıklayıcının çalışan örneklerini bulmak için kullanılır (örneğin, **Işleme İliştir** Iletişim kutusunda **bul** iletişim kutusu). Yalnızca uzaktan hata ayıklayıcıyı çalıştıran bir makineyi bulmak için kullanılır; bu nedenle, hedef bilgisayarın makine adını veya IP adresini bilmenin başka bir yolu varsa bu isteğe bağlıdır. Bu, bulma için standart bir bağlantı noktasıdır, bu nedenle bağlantı noktası numarası yapılandırılamaz.
 
- Bulmayı etkinleştirmek istemiyorsanız, msvsmon 'yi bulma devre dışı: **msvsmon/nodiscovery**ile komut satırından başlatabilirsiniz.
+ Bulmayı etkinleştirmek istemiyorsanız, msvsmon 'yi bulma devre dışı:  **msvsmon/nodiscovery**ile komut satırından başlatabilirsiniz.
 
 ## <a name="remote-debugger-ports-on-azure"></a>Azure 'da uzaktan hata ayıklayıcı bağlantı noktaları
  Aşağıdaki bağlantı noktaları, Azure 'da uzaktan hata ayıklayıcı tarafından kullanılır. Bulut hizmetindeki bağlantı noktaları, tek bir VM 'deki bağlantı noktalarıyla eşleştirilir. Tüm bağlantı noktaları TCP ' dir.
@@ -72,4 +72,4 @@ Diğer bir deyişle, uzaktan hata ayıklayıcıya atanan bağlantı noktasının
 |Microsoft. WindowsAzure. Eklentiler. RemoteDebugger. FileUpload|32400|32398|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)
+- [Uzaktan hata ayıklama](../debugger/remote-debugging.md)

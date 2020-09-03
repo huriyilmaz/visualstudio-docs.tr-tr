@@ -20,16 +20,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ce987f5ef90448c41da45a39c62710b968e11199
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655416"
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>TableAdapter DBDirect metotlarıyla veri kaydetme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu izlenecek yol, bir TableAdapter 'ın DBDirect yöntemlerini kullanarak SQL deyimlerini doğrudan bir veritabanına karşı çalıştırmaya yönelik ayrıntılı yönergeler sağlar. Bir TableAdapter 'ın DBDirect yöntemleri, veritabanı güncelleştirmeleriniz üzerinde ince bir denetim düzeyi sağlar. Uygulamanızı gerektiği gibi bireysel `Insert`, `Update` ve `Delete` yöntemlerini çağırarak belirli SQL deyimlerini ve saklı yordamları çalıştırmak için bunları kullanabilirsiniz (GÜNCELLEŞTIRMEYI gerçekleştiren aşırı yüklenmiş `Update` yönteminin aksine, Ekle ve deyimleri tek bir çağrıda sıler).
+Bu izlenecek yol, bir TableAdapter 'ın DBDirect yöntemlerini kullanarak SQL deyimlerini doğrudan bir veritabanına karşı çalıştırmaya yönelik ayrıntılı yönergeler sağlar. Bir TableAdapter 'ın DBDirect yöntemleri, veritabanı güncelleştirmeleriniz üzerinde ince bir denetim düzeyi sağlar. Bu uygulamaları, uygulamanız için gerekli olan bireysel, ve yöntemleri çağırarak belirli SQL deyimlerini ve saklı yordamları çalıştırmak için kullanabilirsiniz `Insert` `Update` `Delete` ( `Update` Tümünü tek BIR çağrıda GÜNCELLEŞTIRME, ekleme ve silme deyimlerini gerçekleştiren aşırı yüklenmiş yönteme karşılık).
 
  Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
@@ -43,7 +43,7 @@ Bu izlenecek yol, bir TableAdapter 'ın DBDirect yöntemlerini kullanarak SQL de
 
 - Veritabanına doğrudan erişmek ve ekleme, güncelleştirme ve silme işlemleri gerçekleştirmek için yöntemler ekleyin.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yolu tamamlamak için şunlar gerekir:
 
 - Northwind örnek veritabanına erişim.
@@ -62,7 +62,7 @@ Bu izlenecek yol, bir TableAdapter 'ın DBDirect yöntemlerini kullanarak SQL de
      **TableAdapterDbDirectMethodsWalkthrough** projesi oluşturulup **Çözüm Gezgini**eklenir.
 
 ## <a name="create-a-data-source-from-your-database"></a>Veritabanınızdan bir veri kaynağı oluşturun
- Bu adım, Northwind örnek veritabanındaki `Region` tablosuna dayalı bir veri kaynağı oluşturmak için **veri kaynağı Yapılandırma Sihirbazı** ' nı kullanır. Bağlantıyı oluşturmak için Northwind örnek veritabanına erişiminizin olması gerekir.
+ Bu adım, Northwind örnek veritabanındaki tabloya dayalı bir veri kaynağı oluşturmak için **veri kaynağı Yapılandırma Sihirbazı** ' nı kullanır `Region` . Bağlantıyı oluşturmak için Northwind örnek veritabanına erişiminizin olması gerekir.
 
 #### <a name="to-create-the-data-source"></a>Veri kaynağı oluşturmak için
 
@@ -76,7 +76,7 @@ Bu izlenecek yol, bir TableAdapter 'ın DBDirect yöntemlerini kullanarak SQL de
 
     - Northwind örnek veritabanıyla kurulan veri bağlantısı aşağı açılan listede kullanılabilir durumdaysa bunu seçin.
 
-         veya
+         -veya-
 
     - **Yeni bağlantı** ' yı seçerek **Bağlantı Ekle/Değiştir** iletişim kutusunu başlatın.
 
@@ -86,9 +86,9 @@ Bu izlenecek yol, bir TableAdapter 'ın DBDirect yöntemlerini kullanarak SQL de
 
 7. **Veritabanı nesnelerinizi seçin** ekranında **Tablolar** düğümünü genişletin.
 
-8. @No__t_0 tablosunu seçip **son**' u seçin.
+8. Tabloyu seçin `Region` ve ardından **son**' u seçin.
 
-     **NorthwindDataSet** , projenize eklenir ve `Region` tablosu **veri kaynakları** penceresinde görünür.
+     **NorthwindDataSet** , projenize eklenir ve `Region` tablo **veri kaynakları** penceresinde görünür.
 
 ## <a name="addcontrols-to-the-form-to-display-the-data"></a>Verileri göstermek için forma addcontrols
  Veri **kaynakları** penceresinden formunuza öğe sürükleyerek veri bağlantılı denetimler oluşturun.
@@ -97,25 +97,25 @@ Bu izlenecek yol, bir TableAdapter 'ın DBDirect yöntemlerini kullanarak SQL de
 
 - Ana **bölge** düğümünü **veri kaynakları** penceresinden form üzerine sürükleyin.
 
-     Kayıtlar üzerinde gezinmek için bir <xref:System.Windows.Forms.DataGridView> denetimi ve araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) formda görüntülenir. Bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), regiontableadapter, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
+     <xref:System.Windows.Forms.DataGridView>Kayıtlar üzerinde gezinmek için bir denetim ve araç şeridi ( <xref:System.Windows.Forms.BindingNavigator> ) formda görüntülenir. Bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), RegionTableAdapter, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
 
 #### <a name="to-add-buttons-that-will-call-the-individual-tableadapter-dbdirect-methods"></a>Bireysel TableAdapter DbDirect yöntemlerini çağıran düğmeler eklemek için
 
-1. **Araç kutusundan** üç <xref:System.Windows.Forms.Button> denetimini **Form1** üzerine sürükleyin ( **RegionDataGridView**altında).
+1. <xref:System.Windows.Forms.Button> **Araç kutusundan** üç denetimi **Form1** ( **RegionDataGridView**altında) üzerine sürükleyin.
 
 2. Her düğme için aşağıdaki **ad** ve **metin** özelliklerini ayarlayın.
 
     |Name|Metin|
     |----------|----------|
-    |`InsertButton`|**Ekleyin**|
-    |`UpdateButton`|**Güncelleştir**|
-    |`DeleteButton`|**Delete**|
+    |`InsertButton`|**Ekle**|
+    |`UpdateButton`|**Güncelleştirme**|
+    |`DeleteButton`|**Silme**|
 
 #### <a name="to-add-code-to-insert-new-records-into-the-database"></a>Veritabanına yeni kayıtlar eklemek üzere kod eklemek için
 
 1. Tıklama olayı için bir olay işleyicisi oluşturmak ve kod düzenleyicisinde formunuzu açmak için **InsertButton** öğesini seçin.
 
-2. @No__t_0 olay işleyicisini aşağıdaki kodla değiştirin:
+2. `InsertButton_Click`Olay işleyicisini aşağıdaki kodla değiştirin:
 
      [!code-csharp[VbRaddataSaving#1](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form1.cs#1)]
      [!code-vb[VbRaddataSaving#1](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form1.vb#1)]
@@ -124,7 +124,7 @@ Bu izlenecek yol, bir TableAdapter 'ın DBDirect yöntemlerini kullanarak SQL de
 
 1. Tıklama olayı için bir olay işleyicisi oluşturmak ve formunuzu Kod düzenleyicisinde açmak için **UpdateButton** öğesine çift tıklayın.
 
-2. @No__t_0 olay işleyicisini aşağıdaki kodla değiştirin:
+2. `UpdateButton_Click`Olay işleyicisini aşağıdaki kodla değiştirin:
 
      [!code-csharp[VbRaddataSaving#2](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form1.cs#2)]
      [!code-vb[VbRaddataSaving#2](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form1.vb#2)]
@@ -133,7 +133,7 @@ Bu izlenecek yol, bir TableAdapter 'ın DBDirect yöntemlerini kullanarak SQL de
 
 1. Tıklama olayı için bir olay işleyicisi oluşturmak üzere **DeleteButton** ' ı seçin ve formunuzu Kod düzenleyicisinde açın.
 
-2. @No__t_0 olay işleyicisini aşağıdaki kodla değiştirin:
+2. `DeleteButton_Click`Olay işleyicisini aşağıdaki kodla değiştirin:
 
      [!code-csharp[VbRaddataSaving#3](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form1.cs#3)]
      [!code-vb[VbRaddataSaving#3](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form1.vb#3)]

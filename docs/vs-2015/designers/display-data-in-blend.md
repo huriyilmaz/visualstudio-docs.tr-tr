@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2ed51eaef8594695d4d594401ab9375563525b10
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74294571"
 ---
 # <a name="display-data-in-blend"></a>Blend'de verileri görüntüleme
@@ -23,7 +23,7 @@ Sayfalarınızın yerleşimini özelleştirirken, tasarımcılarınızdan örnek
 
  **Bu konuda:**
 
-- [Örnek veri oluştur](#Scratch)
+- [Örnek veri oluşturma](#Scratch)
 
 - [Bir sınıftan örnek veri oluşturma](#Existing)
 
@@ -31,14 +31,14 @@ Sayfalarınızın yerleşimini özelleştirirken, tasarımcılarınızdan örnek
 
 - [Canlı verileri bir mağaza veya telefon uygulamasında göster](#LiveStore)
 
-## <a name="Scratch"></a>Örnek veri oluştur
- Örnek veriler oluşturmak için bir XAML belgesi açın. **Veri** panelinde, **örnek veri** ![ ](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png "30540d76-7256-43ce-b5d9-4b2edf3d339f") Oluştur düğmesini seçin ve ardından **Yeni örnek veriler**' i seçin.
+## <a name="generate-sample-data"></a><a name="Scratch"></a> Örnek veri oluştur
+ Örnek veriler oluşturmak için bir XAML belgesi açın. **Veri** panelinde, **örnek veri oluştur** ![](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png "30540d76-7256-43ce-b5d9-4b2edf3d339f") düğmesini seçin ve ardından **Yeni örnek veriler**' i seçin.
 
  **Veri panelinde verilerinizin** yapısını tanımlayın ve sonra herhangi BIR sayfadaki UI öğelerine bağlayın.
 
  ![](../designers/media/496d7ebc-fe46-42f6-95a8-57b0e5be5d49.png "496d7ebc-fe46-42f6-95a8-57b0e5be5d49")
 
- Uygulamayı çalıştırdığınızda örnek verilerinizin sayfalarınızda görünmesini istiyorsanız, **veri kaynağı seçenekleri** ![ ](../designers/media/ae1fd260-4f84-420d-b196-45fde357d81d.png "ae1fd260-4f84-420d-b196-45fde357d81d")' ni seçin ve ardından **uygulamayı çalıştırırken etkinleştir**' i seçin.
+ Uygulamayı çalıştırdığınızda örnek verilerinizin sayfalarınızda görünmesini istiyorsanız, **veri kaynağı seçenekleri** ![](../designers/media/ae1fd260-4f84-420d-b196-45fde357d81d.png "ae1fd260-4f84-420d-b196-45fde357d81d") ' ni seçin ve ardından **uygulamayı çalıştırırken etkinleştir**' i seçin.
 
  ![](../designers/media/05d5356d-91bb-4e6b-b3f7-29b76852c4b3.png "05d5356d-91bb-4e6b-b3f7-29b76852c4b3")
 
@@ -46,19 +46,19 @@ Sayfalarınızın yerleşimini özelleştirirken, tasarımcılarınızdan örnek
 
  **Kısa bir video izleyin:** [Blend ile bazı veri bağlamasını karıştırma](https://www.youtube.com/watch?v=LSwPB6CAvjg) ![yüklü özellikleri yapılandırın](../designers/media/bldadminconsoleinitialconfigicon.PNG "Bldadminconsoleınitialconfigıcon") .
 
-## <a name="Existing"></a>Bir sınıftan örnek veri oluşturma
+## <a name="generate-sample-data-from-a-class"></a><a name="Existing"></a> Bir sınıftan örnek veri oluşturma
  Verilerinizin yapısını tanımlayan sınıflar zaten oluşturduysanız, bunlardan örnek veri oluşturabilirsiniz.
 
- Bir sınıftan örnek veri oluşturmak için bir xaml belgesi açın ve **veri** panelinde, **örnek veri** ![ ](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png "30540d76-7256-43ce-b5d9-4b2edf3d339f") Oluştur düğmesine tıklayın ve ardından **sınıftan örnek veri oluştur**' a tıklayın.
+ Bir sınıftan örnek veri oluşturmak için bir XAML belgesi açın ve **veri** panelinde, **örnek veri oluştur** ![](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png "30540d76-7256-43ce-b5d9-4b2edf3d339f") düğmesine tıklayın ve ardından **sınıftan örnek veri oluştur**' a tıklayın.
 
  **Kısa bir video izleyin:** ![yüklü özellikleri yapılandırma](../designers/media/bldadminconsoleinitialconfigicon.PNG "Bldadminconsoleınitialconfigıcon") [bir sınıftan örnek veri oluşturma](https://channel9.msdn.com/Shows/Inside+Windows+Phone/IWP54--Windows-Phone-Data-Binding-and-the-Magic-of-XAML).
 
  **Kısa bir video izleyin:** [Blend ile bazı veri bağlamasını karıştırma](https://www.youtube.com/watch?v=LSwPB6CAvjg) ![yüklü özellikleri yapılandırın](../designers/media/bldadminconsoleinitialconfigicon.PNG "Bldadminconsoleınitialconfigıcon") .
 
-## <a name="LiveWPF"></a>Bir WPF uygulamasında canlı verileri gösterme
+## <a name="show-live-data-in-a-wpf-application"></a><a name="LiveWPF"></a> Bir WPF uygulamasında canlı verileri gösterme
  **Kısa bir video izleyin:** ![yüklü ÖZELLIKLERI yapılandırma](../designers/media/bldadminconsoleinitialconfigicon.PNG "Bldadminconsoleınitialconfigıcon") [bir XML veri kaynağı oluşturma](https://www.youtube.com/watch?v=RjQueappjqk&feature=youtube_gdata).
 
-## <a name="LiveStore"></a>Canlı verileri bir mağaza veya telefon uygulamasında göster
+## <a name="show-live-data-in-a-store-or-phone-app"></a><a name="LiveStore"></a> Canlı verileri bir mağaza veya telefon uygulamasında göster
  Bkz. [veri ve dosyalarla çalışma (XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/br229562.aspx).
 
 ## <a name="see-also"></a>Ayrıca Bkz.

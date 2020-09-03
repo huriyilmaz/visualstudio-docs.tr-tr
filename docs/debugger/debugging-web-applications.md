@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b1a7727f93e3f4fe279bb9cc009e61a3fdd70a15
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73714456"
 ---
 # <a name="debugging-web-applications"></a>Web Uygulamalarında Hata Ayıklama
@@ -26,7 +26,7 @@ Bu makalede, farklı türlerde Web uygulamalarında hata ayıklamanıza yardımc
 
 - ASP.NET uygulamalarında hata ayıklama
 
-  [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] uygulamalarında hata ayıklamayı etkinleştirmek için gereken adımlar için bkz. [Debug ASP.net Applications](how-to-enable-debugging-for-aspnet-applications.md).
+  Uygulamalarda hata ayıklamayı etkinleştirmek için gereken adımlar için [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] bkz. [Debug ASP.net Applications](how-to-enable-debugging-for-aspnet-applications.md).
 
 - ASP.NET 'de istemci tarafı komut dosyasında hata ayıkla
 
@@ -48,4 +48,4 @@ Bu makalede, farklı türlerde Web uygulamalarında hata ayıklamanıza yardımc
 
 - [Hata Ayıklayıcısı Ayarları ve Hazırlığı](../debugger/debugger-settings-and-preparation.md)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
-- [Visual Studio’da hata ayıklama](../debugger/index.yml)
+- [Visual Studio'da Hata Ayıklama](../debugger/index.yml)

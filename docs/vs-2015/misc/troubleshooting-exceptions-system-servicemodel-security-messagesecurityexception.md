@@ -13,26 +13,26 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9b8ce3f16c1439d62cfa1e2cff344b70e6724c42
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655361"
 ---
 # <a name="troubleshooting-exceptions-systemservicemodelsecuritymessagesecurityexception"></a>Özel Durum Sorunlarını Giderme: System.ServiceModel.Security.MessageSecurityException
-@No__t_1 bir iletinin doğru bir şekilde güvenli olmadığını veya üzerinde oynandığını belirlediğinde, <xref:System.ServiceModel.Security.MessageSecurityException> bir özel durum oluşturulur. Aşağıdaki koşullar doğru olduğunda hata en sık meydana gelir:
+<xref:System.ServiceModel.Security.MessageSecurityException> [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] Bir iletinin doğru bir şekilde güvenli olmadığını veya üzerinde oynandığını belirlediğinde, bir özel durum oluşturulur. Aşağıdaki koşullar doğru olduğunda hata en sık meydana gelir:
 
 - Bir Web sitesi veya Web uygulaması projesindeki WCF hizmeti (. svc) ile iletişim kurmak için Uzak Masaüstü Bağlantısı veya Terminal Hizmetleri gibi uzak bir bağlantı üzerinden bir WCF hizmet başvurusu kullanırsınız.
 
 - Uzak site üzerinde yönetici izinleriniz yok.
 
-- Uzak sitedeki localhost 'a gönderilen istekler [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] geliştirme sunucusu tarafından işlenir.
+- Uzak sitedeki localhost 'a gönderilen istekler [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] geliştirme sunucusu tarafından işleniyor.
 
 ## <a name="associated-tips"></a>İlişkili Ipuçları
  **ASP.Net geliştirme sunucusunu kullanırken NTLM kimlik doğrulama sorunlarını çözün.**
-@No__t_0 geliştirme sunucusu genellikle Windows NT Challenge/Response (NTLM) güvenliği devre dışıdır ve bu da anonim erişime izin verir. Varsayılan olarak, bir Terminal Hizmetleri oturumu çalıştırdığınızda veya uzak bir bağlantı kullandığınızda, NTLM güvenliği etkinleştirilir. NTLM etkinleştirildiğinde, tüm localhost istekleri [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] geliştirme sunucusunu başlatan kullanıcı veya işlemin kimlik bilgileriyle onaylanır. Bu, güvenlik tehditlerini azaltır. Bununla birlikte, WCF kendi kimlik doğrulamasını da gerçekleştirir ve yönetici olmayan bir hesabın WCF hizmetlerini kullanmasına izin vermez.
+[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]Geliştirme sunucusu genellikle WINDOWS NT Challenge/Response (NTLM) güvenliği devre dışıdır ve bu da anonim erişime izin verir. Varsayılan olarak, bir Terminal Hizmetleri oturumu çalıştırdığınızda veya uzak bir bağlantı kullandığınızda, NTLM güvenliği etkinleştirilir. NTLM etkinleştirildiğinde, tüm localhost istekleri geliştirme sunucusunu başlatan kullanıcı veya işlemin kimlik bilgileriyle onaylanır [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] . Bu, güvenlik tehditlerini azaltır. Bununla birlikte, WCF kendi kimlik doğrulamasını da gerçekleştirir ve yönetici olmayan bir hesabın WCF hizmetlerini kullanmasına izin vermez.
 
- Uzak bir Kullanıcı [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] geliştirme sunucusunu kullanarak Web sitesini çalıştırabilirler ve ayrıca bir Web hizmeti veya WCF hizmeti ile birlikte çalışarak, özel bir hizmet bağlaması oluşturabilir veya NTLM güvenliğini kapatabilirsiniz.
+ Uzak bir Kullanıcı geliştirme sunucusunu kullanarak Web sitesini çalıştırabilirler [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ve ayrıca bir Web hizmeti veya WCF hizmeti ile birlikte çalışarak, özel bir hizmet bağlaması oluşturabilir veya NTLM güvenliğini kapatabilirsiniz.
 
 > [!IMPORTANT]
 > NTLM güvenliğini kapatmak önerilmez ve bir güvenlik tehdidi oluşturabilir.
@@ -43,9 +43,9 @@ ms.locfileid: "72655361"
 
 #### <a name="to-create-a-custom-service-binding-for-the-wcf-service-hosted-inside-the-aspnet-development-server"></a>ASP.NET Development Server içinde barındırılan WCF hizmeti için özel bir hizmet bağlaması oluşturmak için
 
-1. Özel durumu oluşturan WCF hizmeti için Web. config dosyasını açın.
+1. Özel durumu oluşturan WCF hizmeti için Web.config dosyasını açın.
 
-2. Web. config dosyasına aşağıdaki bilgileri girin.
+2. Web.config dosyasına aşağıdaki bilgileri girin.
 
    ```
    <bindings>
@@ -59,7 +59,7 @@ ms.locfileid: "72655361"
    </bindings>
    ```
 
-3. Web. config dosyasını kaydedin ve kapatın.
+3. Web.config dosyasını kaydedin ve kapatın.
 
 4. WCF veya Web hizmeti kodunda, uç nokta değerini aşağıdaki şekilde değiştirin:
 
@@ -82,7 +82,7 @@ ms.locfileid: "72655361"
 
 2. **Başlangıç seçenekleri**' ni seçin ve **NTLM kimlik doğrulaması** onay kutusunu temizleyin.
 
-3. **Tamam**'a tıklayın.
+3. **Tamam**’a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [özel durum yardımcısını kullanmak](https://msdn.microsoft.com/library/e0a78c50-7318-4d54-af51-40c00aea8711) <xref:System.ServiceModel.Security.MessageSecurityException>
+ <xref:System.ServiceModel.Security.MessageSecurityException>[Özel durum yardımcısını kullanma](https://msdn.microsoft.com/library/e0a78c50-7318-4d54-af51-40c00aea8711)

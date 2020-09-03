@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7b0c54975cdd5bc86f77dddbd5ca1a56c1896394
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655314"
 ---
 # <a name="add-commands-and-gestures-to-layer-diagrams"></a>Katman diyagramlarına komut ve hareket ekleme
@@ -45,7 +45,7 @@ Visual Studio 'da katman diyagramlarında bağlam menüsü komutları ve hareket
 
 3. Uzantıyı test etmek için **CTRL + F5** veya **F5**tuşlarına basın.
 
-    Deneysel bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneği başlar. Bu örnekte, bir katman diyagramı oluşturun. Komut veya hareket uzantınızın bu diyagramda çalışması gerekir.
+    Deneysel bir örneği [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] başlar. Bu örnekte, bir katman diyagramı oluşturun. Komut veya hareket uzantınızın bu diyagramda çalışması gerekir.
 
 4. Deneysel örneği kapatın ve örnek kodu değiştirin. Daha fazla bilgi için bkz. [Program kodundaki katman modellerini gezinme ve güncelleştirme](../modeling/navigate-and-update-layer-models-in-program-code.md).
 
@@ -55,21 +55,21 @@ Visual Studio 'da katman diyagramlarında bağlam menüsü komutları ve hareket
 
     [Hareket Işleyicisi tanımlama](#gesture)
 
-6. Uzantıyı [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ana örneğine veya başka bir bilgisayara yüklemek için, *bin \\* **. vsix** dosyasını bulun. Onu yüklemek istediğiniz bilgisayara kopyalayın ve çift tıklayın. Kaldırmak için, **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler** ' i kullanın.
+6. Uzantıyı ana örneğine [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] veya başka bir bilgisayara yüklemek için, *bin \\ *içinde **. vsix** dosyasını bulun. Onu yüklemek istediğiniz bilgisayara kopyalayın ve çift tıklayın. Kaldırmak için, **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler** ' i kullanın.
 
 ## <a name="adding-a-command-or-gesture-to-a-separate-vsix"></a>Ayrı bir VSıX 'e komut veya hareket ekleme
  Komutları, katman Doğrulayıcıları ve diğer uzantıları içeren bir VSıX oluşturmak istiyorsanız, VSıX tanımlamak için bir proje oluşturmanızı ve işleyiciler için ayrı projeler oluşturmanızı öneririz. Diğer modelleme uzantısı türleri hakkında daha fazla bilgi için bkz. [UML modellerini ve Diyagramları Genişletme](../modeling/extend-uml-models-and-diagrams.md).
 
 #### <a name="to-add-layer-extensions-to-a-separate-vsix"></a>Ayrı bir VSıX 'e katman uzantıları eklemek için
 
-1. Yeni veya mevcut bir Visual Studio çözümünde bir sınıf kitaplığı projesi oluşturun. **Yeni proje** iletişim kutusunda,  **C# görsel** ' e ve ardından **sınıf kitaplığı**' na tıklayın. Bu proje komut veya hareket işleyicisi sınıfları içerecektir.
+1. Yeni veya mevcut bir Visual Studio çözümünde bir sınıf kitaplığı projesi oluşturun. **Yeni proje** iletişim kutusunda, **Visual C#** ' ye ve ardından **sınıf kitaplığı**' na tıklayın. Bu proje komut veya hareket işleyicisi sınıfları içerecektir.
 
     > [!NOTE]
     > Tek bir sınıf kitaplığında birden fazla komut veya hareket işleyicisi sınıfı tanımlayabilirsiniz, ancak katman doğrulama sınıflarını ayrı bir sınıf kitaplığında tanımlamanız gerekir.
 
 2. Çözümünüzde bir VSıX projesi oluşturun veya oluşturun. VSıX projesi, **kaynak. Extension. valtmanifest**adlı bir dosya içerir. VSıX projesi eklemek için:
 
-    1. **Yeni proje** iletişim kutusunda, **görsel C#** ' i genişletin, ardından **genişletilebilirlik**' e ve **VSIX projesi**' ne tıklayın.
+    1. **Yeni proje** iletişim kutusunda, **Visual C#**' ı genişletin, ardından **genişletilebilirlik**' e ve **VSIX projesi**' ne tıklayın.
 
     2. Çözüm Gezgini, VSıX projesine sağ tıklayın ve ardından **Başlangıç projesi olarak ayarla**' ya tıklayın.
 
@@ -96,7 +96,7 @@ Visual Studio 'da katman diyagramlarında bağlam menüsü komutları ve hareket
 |Microsoft. VisualStudio. model. SDK. sürümünüze|Modelleme uzantıları tanımlama|
 |Microsoft. VisualStudio. model. SDK. diyagramlar. sürümünüze|Şekilleri ve diyagramları güncelleştirme|
 
-1. Uzantınızın kodunu içermesi için C# Sınıf Kitaplığı projesindeki sınıf dosyasını düzenleyin. Daha fazla bilgi için, aşağıdaki bölümlerden birine bakın:
+1. Uzantınızın kodunu içerecek şekilde C# Sınıf Kitaplığı projesindeki sınıf dosyasını düzenleyin. Daha fazla bilgi için, aşağıdaki bölümlerden birine bakın:
 
      [Menü komutu tanımlama](#command)
 
@@ -104,13 +104,13 @@ Visual Studio 'da katman diyagramlarında bağlam menüsü komutları ve hareket
 
      Ayrıca bkz. [Program kodundaki katman modellerini de gezinme ve güncelleştirme](../modeling/navigate-and-update-layer-models-in-program-code.md).
 
-2. Özelliği test etmek için CTRL + F5 veya F5 tuşlarına basın. Deneysel bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneği açılır. Bu örnekte, bir katman diyagramı oluşturun veya açın.
+2. Özelliği test etmek için CTRL + F5 veya F5 tuşlarına basın. Deneysel bir örneği [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] açılır. Bu örnekte, bir katman diyagramı oluşturun veya açın.
 
-3. VSıX 'i [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ana örneğine veya başka bir bilgisayara yüklemek için VSıX projesinin **bin** dizininde **. vsix** dosyasını bulun. VSıX 'i yüklemek istediğiniz bilgisayara kopyalayın. Windows Gezgini 'nde (Windows 8 ' de dosya Gezgini) VSıX dosyasına çift tıklayın.
+3. VSıX [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ' i ana örneğine veya başka bir bilgisayara yüklemek IÇIN VSIX projesinin **bin** dizininde **. vsix** dosyasını bulun. VSıX 'i yüklemek istediğiniz bilgisayara kopyalayın. Windows Gezgini 'nde (Windows 8 ' de dosya Gezgini) VSıX dosyasına çift tıklayın.
 
      Kaldırmak için, **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler** ' i kullanın.
 
-## <a name="command"></a>Menü komutu tanımlama
+## <a name="defining-a-menu-command"></a><a name="command"></a> Menü komutu tanımlama
  Varolan bir hareket veya komut projesine daha fazla menü komut tanımı ekleyebilirsiniz. Her komut, aşağıdaki özelliklere sahip bir sınıf tarafından tanımlanır:
 
 - Sınıfı şu şekilde bildirilmiştir:
@@ -119,19 +119,19 @@ Visual Studio 'da katman diyagramlarında bağlam menüsü komutları ve hareket
 
    `[Export(typeof(ICommandExtension))]`
 
-   `public class`*Mylayercommand* `: ICommandExtension { ... }`
+   `public class`  *Mylayerkomutu*  `: ICommandExtension { ... }`
 
 - Ad alanı ve sınıfın adı önemli değildir.
 
-- @No__t_0 uygulayan yöntemler şunlardır:
+- Uygulayan yöntemler şunlardır `ICommandExtension` :
 
-  - `string Text {get;}`-menüde görünen etiket.
+  - `string Text {get;}` -Menüde görünen etiket.
 
-  - `void QueryStatus(IMenuCommand command)`-kullanıcı diyagrama sağ tıkladığında çağrılır ve komutun kullanıcının geçerli seçimi için görünür ve etkin olup olmayacağını belirler.
+  - `void QueryStatus(IMenuCommand command)` -Kullanıcı diyagrama sağ tıkladığında çağrılır ve komutun kullanıcının geçerli seçimi için görünür ve etkin olup olmayacağını belirler.
 
-  - `void Execute(IMenuCommand command)`-Kullanıcı komutu seçtiğinde çağırılır.
+  - `void Execute(IMenuCommand command)` -Kullanıcı komutu seçtiğinde çağırılır.
 
-- Geçerli seçimi belirleyebilmek için `IDiagramContext` içeri aktarabilirsiniz:
+- Geçerli seçimi belirleyebilmek için şunları içeri aktarabilirsiniz `IDiagramContext` :
 
    `[Import]`
 
@@ -215,7 +215,7 @@ namespace MyLayerExtension // Change to your preference.
 }
 ```
 
-## <a name="gesture"></a>Hareket Işleyicisi tanımlama
+## <a name="defining-a-gesture-handler"></a><a name="gesture"></a> Hareket Işleyicisi tanımlama
  Bir hareket işleyicisi, kullanıcı öğeleri katman diyagramına sürüklediğinde ve Kullanıcı diyagramda herhangi bir yere çift tıkladığında yanıt verir.
 
  Mevcut komutunuz veya hareket işleyicisi VSıX projeniz için, bir hareket işleyicisini tanımlayan bir kod dosyası ekleyebilirsiniz:
@@ -239,7 +239,7 @@ namespace MyLayerExtensions // change to your preference
 
  Hareket işleyicileri hakkında aşağıdaki noktalara dikkat edin:
 
-- @No__t_0 üyeleri aşağıdaki gibidir:
+- Üyeleri aşağıdaki gibidir `IGestureExtension` :
 
    **OnDoubleClick** -kullanıcı diyagram üzerinde herhangi bir yere çift tıkladığında çağırılır.
 
@@ -247,7 +247,7 @@ namespace MyLayerExtensions // change to your preference
 
    **OnDragDrop** -kullanıcı diyagram üzerine bir öğe bırakıdüğünde çağırılır.
 
-- Her yöntemin ilk bağımsız değişkeni, katman öğesini alabileceğiniz bir `IShape`. Örneğin:
+- Her yöntemin ilk bağımsız değişkeni, `IShape` katman öğesini alabileceğiniz bir öğesidir. Örneğin:
 
   ```
   public void OnDragDrop(IShape target, IDataObject data)

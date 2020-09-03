@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 67d489b1446e7205d72b53e160a8c7ca87f216d7
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74292329"
 ---
 # <a name="add-stereotypes-to-uml-model-elements"></a>UML model öğelerine stereotipler ekleme
@@ -63,15 +63,15 @@ UML model öğesine açıklama eklemek ve özelleştirilmiş özellikler sağlam
 
     - Bir UML sınıf diyagramında, bir öğe için araca tıklayın ve sonra diyagramdaki paketin içine tıklayın.
 
-         \- veya-
+         \- veya
 
     - UML Model Gezgini ' nde pakete sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından bir öğe türüne tıklayın.
 
-         \- veya-
+         \- veya
 
     - UML Model Gezgini ' nde, varolan bir öğeyi pakete sürükleyin.
 
-         \- veya-
+         \- veya
 
     - Bir diyagramı pakete bağlayın ve sonra diyagram içinde öğeleri oluşturun.
 

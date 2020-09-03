@@ -13,16 +13,16 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 11e739fc1b0516c2b6e34421ecee7a329830de14
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73983792"
 ---
 # <a name="how-to-locate-the-visual-studio-product-key"></a>Nasıl Yapılır: Visual Studio Ürün Anahtarını Bulma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Müşteri desteğiyle çalışırken, deneme sürümünden yükseltirken veya kendi kayıtlarınızı güncelleştirirken [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] için ürün anahtarını bulmak isteyebilirsiniz.
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Müşteri desteği ile çalışırken, deneme sürümünden yükseltirken veya kendi kayıtlarınızı güncelleştirirken, için ürün anahtarını bulmak isteyebilirsiniz.
 
 ### <a name="to-find-the-product-key-for-visual-studio"></a>Visual Studio ürün anahtarını bulmak için
 
@@ -36,5 +36,5 @@ Müşteri desteğiyle çalışırken, deneme sürümünden yükseltirken veya ke
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  * [Nasıl Yapılır. Visual Studio Deneme Sürümünden Yükseltme](../install/how-to-upgrade-from-a-trial-edition-of-visual-studio.md)
- * [Visual Studio'yu yükleyin](../install/install-visual-studio-2015.md)
+ * [Visual Studio'yu yükleme](../install/install-visual-studio-2015.md)
  * [Visual Studio lisanslama teknik Incelemesi](https://www.microsoft.com/download/details.aspx?id=13350)

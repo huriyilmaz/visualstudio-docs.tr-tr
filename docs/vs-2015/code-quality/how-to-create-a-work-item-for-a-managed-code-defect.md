@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 8a3e9277ca29a20d817b04bf06cde120c0f073d8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655130"
 ---
 # <a name="how-to-create-a-work-item-for-a-managed-code-defect"></a>Nasıl yapılır: Yönetilen bir Kod Hatası için bir İş Öğesi Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Çalışma öğesini [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] içinden kaydetmek için çalışma öğesi izleme özelliğini kullanabilirsiniz. Bu özelliği kullanmak için, projenizin [!INCLUDE[esprfound](../includes/esprfound-md.md)] takım projesinin bir parçası olması gerekir.
+Çalışma öğesini içinden kaydetmek için çalışma öğesi izleme özelliğini kullanabilirsiniz [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] . Bu özelliği kullanmak için projenizin içindeki takım projesinin bir parçası olması gerekir [!INCLUDE[esprfound](../includes/esprfound-md.md)] .
 
 ### <a name="to-create-a-work-item-for-managed-code-defect"></a>Yönetilen kod hatası için bir iş öğesi oluşturmak için
 

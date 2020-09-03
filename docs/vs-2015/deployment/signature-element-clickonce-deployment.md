@@ -1,5 +1,5 @@
 ---
-title: '&lt;Signature&gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
+title: '&lt;Signature &gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -16,18 +16,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: db696546fdd64199753054b38fa2ac554f6a774f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74295071"
 ---
-# <a name="ltsignaturegt-element-clickonce-deployment"></a>&lt;Signature&gt; öğesi (ClickOnce dağıtımı)
+# <a name="ltsignaturegt-element-clickonce-deployment"></a>&lt;Signature &gt; öğesi (ClickOnce dağıtımı)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu dağıtım bildirimini dijital olarak imzalamak için gereken bilgileri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -37,12 +37,12 @@ Bu dağıtım bildirimini dijital olarak imzalamak için gereken bilgileri içer
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir zarf imzasını kullanarak bir dağıtım bildirimini imzalama isteğe bağlıdır, ancak önerilir. XML dosyalarını imzalama hakkında daha fazla bilgi için, [http://www.w3.org/TR/xmldsig-core/](https://www.w3.org/TR/xmldsig-core/)açıklanan World Wide Web Konsorsiyumu önerisi, "XML imzası sözdizimi ve işleme" başlığına bakın.  
+ Bir zarf imzasını kullanarak bir dağıtım bildirimini imzalama isteğe bağlıdır, ancak önerilir. XML dosyalarını imzalama hakkında daha fazla bilgi için, "XML Imzası sözdizimi ve Işleme" başlıklı World Wide Web Konsorsiyumu önerisine bakın [http://www.w3.org/TR/xmldsig-core/](https://www.w3.org/TR/xmldsig-core/) .  
   
  Bildiriminizi imzalamak istiyorsanız tüm dosyalar için karmaların sağlanması gerekir. Karma olmayan dosyaları olan bir bildirim, kullanıcılar karma olmayan dosyaların içeriğini doğrulayamadığından imzalanamıyor.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] dağıtımında kullanılan bir dağıtım bildiriminde bir `Signature` öğesi gösterir.  
+ Aşağıdaki kod örneği, bir `Signature` dağıtımda kullanılan bir dağıtım bildiriminde bir öğe gösterir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] .  
   
 ```  
 <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">  

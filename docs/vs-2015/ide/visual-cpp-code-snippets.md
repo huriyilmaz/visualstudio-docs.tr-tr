@@ -1,5 +1,5 @@
 ---
-title: Görsel C++ kod parçacıkları | Microsoft Docs
+title: Kod parçacıkları Visual C++ | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 213f4299ac71c08118563a008abe065f2c02423e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655398"
 ---
 # <a name="visual-c-code-snippets"></a>Visual C++ Kod Parçacıkları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 'da kod dosyalarınıza yaygın olarak kullanılan kodu C++ eklemek için kod parçacıklarını kullanabilirsiniz. Genel olarak, kod parçacıklarını ile aynı şekilde kullanabilirsiniz C#, ancak varsayılan kod parçacıkları kümesi farklıdır.
+Visual Studio 'da, C++ kod dosyalarınıza yaygın olarak kullanılan kodu eklemek için kod parçacıklarını kullanabilirsiniz. Genel olarak, kod parçacıklarını C# ile aynı şekilde kullanabilirsiniz, ancak varsayılan kod parçacıkları kümesi farklıdır.
 
  Kodunuzda belirli bir konuma (ekleme) bir kod parçacığı ekleyebilir veya seçili bir kodu kod parçacığı ile çevreleyin.
 
@@ -61,8 +61,8 @@ Visual Studio 'da kod dosyalarınıza yaygın olarak kullanılan kodu C++ ekleme
 
  Daha sonra 0 değerini doğru koşulla değiştirebilirsiniz.
 
-## <a name="where-can-i-find-a-complete-list-of-the-c-code-snippets"></a>C++ Kod parçacıklarının tamamen bir listesini nerede bulabilirim?
- Kod parçacıkları **yöneticisine** ( **Araçlar** menüsünde) C++ gidip **dili** **C++görsele**ayarlayarak kod parçacıklarının tüm listesini bulabilirsiniz. Aşağıdaki pencerede, **görsel C++** ' i genişletin. Tüm C++ kod parçacıklarının adlarını alfabetik sırada görmeniz gerekir.
+## <a name="where-can-i-find-a-complete-list-of-the-c-code-snippets"></a>C++ kod parçacıklarının tamamen bir listesini nerede bulabilirim?
+ C++ kod parçacıklarının tüm listesini **kod parçacıkları Yöneticisi** ' ne giderek ( **Araçlar** menüsünde) ve **dili** **Visual C++** olarak ayarlayarak bulabilirsiniz. Aşağıdaki pencerede **Visual C++**' ı genişletin. Tüm C++ kod parçacıklarının adlarını alfabetik sırada görmeniz gerekir.
 
  Çoğu kod parçacıklarının adı kendi kendine açıklayıcıdır, ancak bazı adlar kafa karıştırıcı olabilir.
 
@@ -111,7 +111,7 @@ private:
 ## <a name="for-vs-foreach-vs-forr-vs-rfor"></a>Vs. ForEach vs. öğrencilerinize vs rfor için
  Farklı türlerde döngüler sağlayan kod parçacıkları için dört farklı vardır.
 
- **For** kod parçacığında, koşulun bir nesnenin uzunluğuna (`size_t`) dayalı olduğu `for` bir döngüsü sağlar:
+ **For** kod parçacığında, `for` koşulun bir nesnenin uzunluğuna (içindeki) göre kullanıldığı bir döngü sağlar `size_t` :
 
 ```cpp
 for (size_t i = 0; i < length; i++)
@@ -120,7 +120,7 @@ for (size_t i = 0; i < length; i++)
 }
 ```
 
- **Foreach** parçacığı, bir koleksiyonun üyeleri üzerinde yineleme yapan bir `for each` döngüsü sağlar:
+ **Foreach** parçacığı, `for each` bir koleksiyonun üyeleri üzerinde yineleme yapan bir döngü sağlar:
 
 ```cpp
 for each (object var in collection_to_loop)
@@ -129,7 +129,7 @@ for each (object var in collection_to_loop)
 }
 ```
 
- **Öğrencilerinize** kod parçacığı, koşulun bir nesnenin uzunluğuna (tamsayı cinsinden) dayanmakta olduğu bir ters `for` döngüsü sağlar:
+ **Öğrencilerinize** kod parçacığı, `for` koşulun bir nesnenin uzunluğuna (tamsayı cinsinden) dayanmakta olduğu ters bir döngü sağlar:
 
 ```cpp
 for (int i = length - 1; i >= 0; i--)
