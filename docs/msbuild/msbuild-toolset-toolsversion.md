@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b6aaa6309e04f5143b70ff233c0b621ab2350b9c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b77ea7f04377a1c531efeff780e9303f0bd3eb79
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633128"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426969"
 ---
 # <a name="msbuild-toolset-toolsversion"></a>MSBuild Araç Takımı (ToolsVersion)
 
@@ -45,7 +45,7 @@ MSBuild bir uygulama oluşturmak için bir görev, hedef ve araç araç kümesi 
 ::: moniker-end
 
 > [!NOTE]
-> Bazı proje türleri `sdk` yerine özniteliğini kullanır `ToolsVersion` . Daha fazla bilgi için bkz. [.NET Core için csproj biçimine](/dotnet/core/tools/csproj)yönelik [paketler, meta veriler ve çerçeveler](/dotnet/core/packages) ve eklemeler.
+> Bazı proje türleri `sdk` yerine özniteliğini kullanır `ToolsVersion` . Daha fazla bilgi için bkz. [.NET Core için csproj biçimine ekleme](/dotnet/core/tools/csproj).
 
 ## <a name="how-the-toolsversion-attribute-works"></a>Araçları sürüm özniteliği nasıl kullanılır?
 

@@ -1,5 +1,5 @@
 ---
-title: N Katmanlı Veri Uygulamalarına Genel Bakış
+title: N katmanlı veri uygulamalarına genel bakış
 ms.date: 11/04/2016
 ms.topic: overview
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 14527e84d5bbd2d06b2d091ba7a9d4daa9763462
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 445826a2ada7b22201b7dd82948bc8bd5dd3d296
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281961"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426869"
 ---
 # <a name="n-tier-data-applications-overview"></a>N katmanlı veri uygulamalarına genel bakış
 *N katmanlı* veri uygulamaları *, birden fazla*katmana ayrılan veri uygulamalarıdır. Ayrıca, "dağıtılmış uygulamalar" ve "çok katmanlı uygulamalar" olarak da bilinen n katmanlı uygulamalar, istemci ile sunucu arasında dağıtılan ayrı katmanlara ayrı işlem ayırır. Veriye erişen uygulamalar geliştirirken, uygulamayı oluşturan çeşitli katmanlar arasında açık bir ayrımı olması gerekir.

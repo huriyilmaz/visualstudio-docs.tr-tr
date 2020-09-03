@@ -15,12 +15,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8589be1bd1c1e9ad86a412d4f8bd2630c93a42ac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8c392862f884fd8082b30cbb673aab116756fdfe
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85535999"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426778"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>T4 Metin Şablonları Kullanarak Tasarım Zamanı Kodu Oluşturma
 
@@ -248,7 +248,7 @@ Bir dosyayı metin şablonuna göre bir konumdan yüklemek için kullanabilirsin
 Daha sonra yazabilirsiniz, örneğin:
 
 ```csharp
-<# string fileName = this.Host.ResolvePath("filename.txt");
+<# string filename = this.Host.ResolvePath("filename.txt");
   string [] properties = File.ReadLines(filename);
 #>
 ...
@@ -257,7 +257,7 @@ Daha sonra yazabilirsiniz, örneğin:
 ```
 
 ```vb
-<# Dim fileName = Me.Host.ResolvePath("propertyList.txt")
+<# Dim filename = Me.Host.ResolvePath("propertyList.txt")
    Dim properties = File.ReadLines(filename)
 #>
 ...

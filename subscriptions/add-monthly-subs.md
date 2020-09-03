@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 36f0d9f1-fe28-469f-a54c-dc46638270a8
-ms.date: 06/23/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 description: Abonelik yönetim portalına yeni aylık Visual Studio abonelikleri satın alma hakkında bilgi edinin
-ms.openlocfilehash: 778a3adbc9ca2117b0328a10d52904921bd0b80c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 209484968e85613da7cf38af3dce6944413c678a
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904705"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426842"
 ---
 # <a name="add-new-monthly-visual-studio-subscriptions-to-the-subscriptions-administration-portal"></a>Yeni aylık Visual Studio aboneliklerini abonelikler yönetim portalına ekleme
 Bir Azure aboneliği kullanarak yeni aylık Visual Studio abonelikleri satın aldığınızda kullanıcılara atamak için bunları abonelikler yönetim portalına eklemeniz gerekebilir.  
@@ -25,7 +25,7 @@ Aylık abonelikler ekleme adımları, kuruluşunuzun zaten sahip olduğu aboneli
 
 ## <a name="how-to-add-monthly-subscriptions"></a>Aylık abonelikler ekleme
 1. Konumundaki abonelikler yönetim portalında oturum açın <https://manage.visualstudio.com>
-1. **Aboneleri Yönet** sekmesinde **Yeni anlaşma** açılan ' yı seçin. 
+1. **Aboneleri Yönet** sekmesinde, **anlaşma Ekle** açılan ' yı seçin. 
 1. Açılan kutudan **yeni aylık abonelikler** seçin
    > [!div class="mx-imgBorder"]
    > ![Yeni aylık abonelik Ekle açılan](_img/add-monthly-subs/add-subs-drop-down.png)

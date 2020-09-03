@@ -1,18 +1,18 @@
 ---
 title: Yönetim portalında süper yönetici ve yönetici rolleri
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 6601c395-f778-48c1-ab76-cf454b9193e4
-ms.date: 04/07/2020
+ms.date: 09/03/2020
 ms.topic: conceptual
 description: Süper yönetici ve yönetici rolleri ve yöneticiler atama hakkında bilgi edinin.
-ms.openlocfilehash: bf10b95d44a960fea50bff6b2fba7b9a8dc98a26
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f70545de45e0de284788ff3552667e9fa9bfb73f
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88248445"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426765"
 ---
 # <a name="super-admins-and-administrators-for-visual-studio-subscription-agreements"></a>Visual Studio abonelik anlaşmaları için süper Yöneticiler ve Yöneticiler
 
@@ -22,23 +22,24 @@ Toplu lisanslama müşterileri için yeni Visual Studio abonelikleri yönetim po
 
 **Yöneticiler:** Yönetici yalnızca bir süper yönetici tarafından atanabilir. Bir yönetici yalnızca süper yönetici tarafından bu anlaşmalara atayan abonelikleri yönetebilir.
 
+Yöneticilerin nasıl yönetileceği hakkında bir tanıtım izleyin. 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4th6L]
 
 ## <a name="assigning-administrators"></a>Yöneticiler atama
 Yeni Yöneticiler (Yöneticiler) atamak için:
 1. https://manage.visualstudio.comAboneliklerin satın alındığı anlaşmada süper yönetici olarak atanmış bir e-posta adresi kullanarak oturum açın.
-2. **Yöneticileri Yönet**etiketli sekmeyi seçin.
-3. **Add (Ekle)** seçeneğini belirleyin.
+2. **Yöneticileri Yönet**etiketli sekmeye tıklayın.
+3. **Ekle**'ye tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Yönetici Ekle](_img/admin-roles/add-admins.png "Yöneticileri Yönet dikey penceresini seçin ve ardından yeni yöneticiler atamak için Ekle ' yi seçin.")
+   > ![Yönetici Ekle](_img/admin-roles/add-admins.png "Yöneticileri Yönet dikey penceresine tıklayın ve sonra yeni yöneticiler atamak için Ekle ' ye tıklayın.")
 4. Formu yeni yönetici bilgileriyle doldurun.  
    > [!div class="mx-imgBorder"]
-   > ![Yönetici formu Ekle](_img/admin-roles/add-form.png "Yeni yönetici için oturum açma bilgilerini girin ve bir süper yönetici yapıp yapmayacağını seçin.  Ardından Ekle ' yi seçin.")
+   > ![Yönetici formu Ekle](_img/admin-roles/add-form.png "Yeni yönetici için oturum açma bilgilerini girin ve bir süper yönetici yapıp yapmayacağını seçin.  Ardından Ekle ' ye tıklayın.")
 
    > [!NOTE]
    > Bu yöneticinin ek yöneticiler atayabilmesini istiyorsanız, **süper yönetici** kutusunu kontrol etmeyi unutmayın.
 
-5. Yeni yönetici atamak için **Ekle** ' yi seçtikten sonra, portalda oturum açmak için bu kişilere davet eden bir e-posta gönderilir.  
+5. Yeni yönetici atamak için **Ekle** ' ye tıkladıktan sonra, portalda oturum açmak üzere bu kişilere davet eden bir e-posta gönderilir.  
 
 ## <a name="resources"></a>Kaynaklar
 - [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)

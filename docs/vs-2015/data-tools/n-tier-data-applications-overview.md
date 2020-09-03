@@ -19,17 +19,17 @@ caps.latest.revision: 29
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0f124e997669370e71819cf37423d0c2d6a414d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7c8e0b0eb1c1016ac8e5351ff55df23b44d26824
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72658065"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426713"
 ---
 # <a name="n-tier-data-applications-overview"></a>N Katmanlı Veri Uygulamalarına Genel Bakış
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-N katmanlı * veri uygulamaları *, birden fazla*katmana ayrılan veri uygulamalarıdır. Ayrıca, "dağıtılmış uygulamalar" ve "çok katmanlı uygulamalar" olarak da bilinen n katmanlı uygulamalar, istemci ile sunucu arasında dağıtılan ayrı katmanlara ayrı işlem ayırır. Veriye erişen uygulamalar geliştirirken, uygulamayı oluşturan çeşitli katmanlar arasında açık bir ayrımı olması gerekir.
+*N katmanlı* veri uygulamaları *, birden fazla*katmana ayrılan veri uygulamalarıdır. Ayrıca, "dağıtılmış uygulamalar" ve "çok katmanlı uygulamalar" olarak da bilinen n katmanlı uygulamalar, istemci ile sunucu arasında dağıtılan ayrı katmanlara ayrı işlem ayırır. Veriye erişen uygulamalar geliştirirken, uygulamayı oluşturan çeşitli katmanlar arasında açık bir ayrımı olması gerekir.
 
  Tipik n katmanlı bir uygulama, bir sunum katmanı, orta katman ve veri katmanı içerir. N katmanlı bir uygulamadaki çeşitli katmanları ayırmanın en kolay yolu, uygulamanıza dahil etmek istediğiniz her katman için ayrı projeler oluşturmaktır. Örneğin, sunum katmanı bir Windows Forms uygulaması olabilir, ancak veri erişim mantığı Orta katmanda bulunan bir sınıf kitaplığı olabilir. Ayrıca, sunu katmanı, hizmet gibi bir hizmet aracılığıyla orta katmandaki veri erişim mantığı ile iletişim kurabilir. Uygulama bileşenlerini ayrı katmanlara ayırmak, uygulamanın bakım ve ölçeklenebilirlik düzeyini artırır. Bu, tüm çözümü yeniden tasarlama gereksinimi olmadan tek bir katmana uygulanabilecek yeni teknolojilerin kullanımını daha kolay benimseyerek etkinleştirir. Bunlara ek olarak, n katmanlı uygulamalar genellikle hassas bilgileri Orta katmanda depolar ve bu da sunum katmanından yalıtımı korur.
 

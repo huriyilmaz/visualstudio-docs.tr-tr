@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/06/2017
 ms.author: ghogen
-ms.openlocfilehash: 1776aebbe827295cbc7902f72417bc57e03a4196
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7f207afc600402924969e4d2eee6df229c3d6f09
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85280641"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426726"
 ---
 # <a name="configure-an-azure-cloud-service-project-with-visual-studio"></a>Visual Studio ile Azure bulut hizmeti projesini yapılandırma
 Bu projenin gereksinimlerine bağlı olarak bir Azure bulut hizmeti projesi yapılandırabilirsiniz. Projenin özelliklerini aşağıdaki kategoriler için ayarlayabilirsiniz:

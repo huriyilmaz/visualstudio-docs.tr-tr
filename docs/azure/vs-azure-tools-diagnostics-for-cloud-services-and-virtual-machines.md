@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 06/28/2018
 ms.author: mikejo
-ms.openlocfilehash: d8da94fc7b4735198eafa33edfe72cba0eb1ea59
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2312c636f465bd39cdcbc4ca0ab63c107151c5be
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911861"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426739"
 ---
 # <a name="set-up-diagnostics-for-azure-cloud-services-and-virtual-machines"></a>Azure Cloud Services ve sanal makineler için tanılamayı ayarlama
 Bir Azure bulut hizmetinde veya sanal makinede sorun gidermeniz gerektiğinde Azure Tanılama daha kolay bir şekilde kurmak için Visual Studio 'Yu kullanabilirsiniz. Tanılama, bulut hizmetinizi çalıştıran sanal makinelerde ve sanal makine örneklerinde sistem verilerini ve günlük verilerini yakalar. Tanılama verileri, seçtiğiniz bir depolama hesabına aktarılır. Azure 'da tanılama günlüğü hakkında daha fazla bilgi için bkz. [Azure App Service Web Apps için tanılama günlüğünü etkinleştirme](/azure/app-service/web-sites-enable-diagnostic-log).
@@ -77,7 +77,7 @@ Visual Studio 'da, dağıtımdan önce hizmet öykünücüsünde hizmeti çalı�
 
     ![Depolama hesabı iletişim kutusu](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC796662.png)
 
-   * **Microsoft Azure depolama öykünücüsü**' nü seçerseniz bağlantı dizesi olarak ayarlanır `UseDevelopmentStorage=true` .
+   * **Microsoft Azure depolama öykünücüsü**' yi seçerseniz bağlantı dizesi olarak ayarlanır `UseDevelopmentStorage=true` .
    * **Aboneliğinizi**seçerseniz, kullanmak istediğiniz Azure aboneliğini seçip hesap adını girebilirsiniz. Azure aboneliklerinizi yönetmek için **hesapları Yönet**' i seçin.
    * **El ile girilen kimlik bilgilerini**seçerseniz, kullanmak istediğiniz Azure hesabının adını ve anahtarını girin.
 5. **Tanılama yapılandırması** iletişim kutusunu görüntülemek için **Yapılandır**' ı seçin. **Genel** ve **günlük dizinleri**hariç her sekme, toplayacağınız bir tanılama veri kaynağını temsil eder. Varsayılan **genel** sekmesi aşağıdaki tanılama veri toplama seçeneklerini sunar: **Yalnızca hatalar**, **tüm bilgiler**ve **özel plan**. Yalnızca varsayılan **hatalar** seçeneği, uyarıları veya izleme iletilerini aktarmadığı için en az depolama alanı miktarını kullanır. **Tüm bilgi** seçeneği en çok bilgiyi aktarır, en çok depolama alanını kullanır ve bu nedenle en pahalı seçenektir.
@@ -216,7 +216,7 @@ Bir bulut hizmeti veya sanal makine için tanılama verilerini topladıktan sonr
     Bulut Gezgini ' nde veya Sunucu Gezgini, dağıtımla ilişkili depolama hesabını açın.
 3. Tablo görüntüleyicisinde tanılama tablolarını açın ve ardından topladığınız verileri gözden geçirin. IIS günlükleri ve özel Günlükler için bir blob kapsayıcısı açabilirsiniz. Aşağıdaki tabloda, farklı günlük dosyaları için verileri içeren tablolar veya blob kapsayıcıları listelenmektedir. Bu günlük dosyası için verilere ek olarak, tablo girişleri **Eventtickcount**, **DeploymentId**, **rol**ve **roleınstance**, verileri hangi sanal makine ve rolün oluşturulduğunu belirlemenize yardımcı olur.
 
-   | Tanılama verileri | Description | Konum |
+   | Tanılama verileri | Açıklama | Konum |
    | --- | --- | --- |
    | Uygulama günlükleri |**System. Diagnostics. Trace** sınıfının yöntemlerini çağırarak kodunuzun oluşturduğu Günlükler. |WADLogsTable |
    | Olay günlükleri |Sanal makinelerdeki Windows olay günlüklerinden alınan veriler. Windows, bilgileri bu günlüklerde depolar, ancak uygulamalar ve hizmetler, hataları veya günlük bilgilerini raporlamak için günlükleri de kullanır. |WADWindowsEventLogsTable |

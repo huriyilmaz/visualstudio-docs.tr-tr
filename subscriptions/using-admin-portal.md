@@ -2,21 +2,23 @@
 title: Abonelikler yönetim portalını kullanmaya başlama | Visual Studio Market
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 4c099fe8-883e-4789-9468-387ce5697dfe
-ms.date: 03/03/2020
+ms.date: 09/03/2020
 ms.topic: overview
 description: Abonelik yönetim portalı ile kuruluşunuzun Visual Studio aboneliklerini yönetmeye nasıl başlaleyeceğinizi öğrenin.
-ms.openlocfilehash: 7687a899b1c10e95ce161973c0d84701ce91fde6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d857d4a1c9bb5568a6e4330851e0cc8a21988146
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88249858"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426882"
 ---
 # <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio abonelikleri yönetici portalına genel bakış
 
 Visual Studio abonelikleri yönetim portalı, kuruluşunuzun aboneliklerini tek bir yerde yönetmeye yönelik araçlar sağlar. 
+
+Portalın turuna katılın.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4t9aW]
 
@@ -34,15 +36,15 @@ Abonelikleri atadıktan sonra, aboneleri Yönet sekmesi, aboneler hakkında aşa
 - Kendisine atanmış olan abonelik düzeyi.
 - Aboneliklerinden kendilerine atandığı tarih.
 - Abonelikleri için sona erme tarihi.
-- İsteğe bağlı bir metin açıklaması.
-- Abone indirmelerinin etkinleştirilip etkinleştirilmediğini veya devre dışı bırakıldığını belirten bir gösterge.
+- Ek notlar için bir başvuru alanı.
+- Abone indirmelerinin etkin veya devre dışı olup olmadığının bir göstergesi.
 - Bulundukları ülke.
 - Yönetim portalından atama iletişim e-postası için kendi dil tercihi.
 - Oturum açma dışındaki iletişimler için kullanılan farklı bir e-posta adresi için isteğe bağlı alan.
 
 Sayfanın sol üst kısmında, bir abonelik atamasına genel bakış, anlaşma ayrıntıları ve en yüksek kullanım raporu açığa çıkarmak için seçebileceğiniz çeşitli simgeler vardır.
 
-Her anlaşma için kuruluşunuzda satın alınan, atanan ve hala kullanılabilir olan abonelik lisanslarının sayısı hakkında ek bilgileri görmek için, slayt panelini etkinleştirmek üzere üstteki simgeyi seçin.
+Her anlaşma için kuruluşunuzda satın alınan, atanan ve hala kullanılabilir olan abonelik lisanslarının sayısı hakkında ek bilgileri görmek için, üstteki simgeye tıklayarak slayt panelini etkinleştirin.
 > [!div class="mx-imgBorder"]
 > ![Visual Studio abonelikleri Yönetici portalı aboneleri sayfası](_img/using-admin-portal/subscribers-page.png)
 

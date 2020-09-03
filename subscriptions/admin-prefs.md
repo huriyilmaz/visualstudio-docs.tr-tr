@@ -1,18 +1,18 @@
 ---
 title: Yönetim portalında anlaşma tercihlerini ayarlama
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 0fe9eaa4-f589-429e-a443-13bf86637d5a
-ms.date: 03/17/2020
+ms.date: 09/03/2020
 ms.topic: conceptual
 description: Yönetim portalında dil, kişiler, abonelik düzeyi ve diğer kullanıcılara yönelik tercihleri ayarlama hakkında bilgi edinin
-ms.openlocfilehash: e34b9cf1ed32abc81b9c2ebb3ef7c370818c9089
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7f562e6ca0087a92fcc02550165aa32d23321955
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87234620"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426815"
 ---
 # <a name="set-preferences-for-your-agreements-in-the-administration-portal"></a>Yönetim portalında anlaşmalarda tercihleri ayarlama
 Süper Yöneticiler yönetim portalında (Yönetim Portalı) her anlaşma için global olarak uygulanacak belirli tercihleri ayarlayabilir.  Bu tercihler, aboneler eklendiğinde yönetici için abonelik ayrıntılarını otomatik olarak dolduracaktır ve yalnızca süper yöneticiler tarafından genel olarak değiştirilebilir.  
@@ -22,12 +22,12 @@ Tercihleri görüntülemek veya değiştirmek için sözleşmede süper yönetic
 
 Tercihlerinizi ayarlamak için:
 1. Yönetim portalında süper yönetici ayrıcalıklarına sahip bir KIMLIKLE oturum açın.
-2. **Yöneticileri Yönet** sekmesine tıklayın.
+2. Sol bölmedeki ayar simgesine tıklayın.
    > [!div class="mx-imgBorder"]
    > ![Yönetici tercihleri düğmesi](_img/admin-prefs/admin-prefs-button.png "Tercihleri Yönet ' e tıklayarak yöneticileri görüntüleyin")
 
 3. **Anlaşma tercihleri**' ne tıklayın.
-Sağ tarafta bir panel açılır ve kullanılabilir tercihleriniz görüntülenir. 
+Sol tarafta bir panel açılır ve kullanılabilir tercihleriniz görüntülenir. 
 
    > [!div class="mx-imgBorder"]
    > ![Yönetici tercihleri açılır kutusu](_img/admin-prefs/admin-prefs-flyout.png "Tercihlerinizi ayarlayın ve Kaydet ' e tıklayın.")
@@ -36,9 +36,9 @@ Sağ tarafta bir panel açılır ve kullanılabilir tercihleriniz görüntüleni
 Kullanılabilir tercihlerin her birini ve etkilerini keşfedelim. 
 
 ### <a name="agreement"></a>Sözleşme
-Süper yönetici olduğunuz birden çok anlaşmanız varsa, açılan kutuda istediğiniz sözleşmeyi seçebilirsiniz.  Ayarladığınız Tercihler yalnızca bu sözleşme için geçerlidir.  Bireysel Yöneticiler, abonelikleri atarken bu tercihlerden bazılarını büyük/küçük harfe göre geçersiz kılabilir. 
+Süper yönetici olduğunuz birden çok anlaşmanız varsa, genişletilmiş ayarlar panelinin sağ tarafındaki açılan kutuda istediğiniz sözleşmeyi seçebilirsiniz.  Ayarladığınız Tercihler yalnızca bu sözleşme için geçerlidir.  Bireysel Yöneticiler, abonelikleri atarken bu tercihlerden bazılarını büyük/küçük harfe göre geçersiz kılabilir. 
 
-Oturum açmak için kullandığınız e-posta adresiyle ilişkili yalnızca bir anlaşma varsa, görüntülenir ve açılır liste devre dışı bırakılır. 
+Oturum açmak için kullandığınız e-posta adresiyle ilişkili yalnızca bir anlaşma varsa, genişletilmiş ayarlar panelinin sağında görüntülenir ve açılır liste devre dışı bırakılır. 
 
 ### <a name="contact-email-address"></a>İletişim e-posta adresi
 Bu tercih, abonelerinizin abone portalının [abonelikler sayfasında](https://my.visualstudio.com/subscriptions) **yöneticime başvur** düğmesini kullanarak yöneticilere ulaşabilmesi için bir yol sağlar.  Bu tercih boş bırakılırsa, abone iletileri anlaşmada tüm yöneticilere ve süper yöneticilere iletilir.  Bu iletişim e-postasına yönelik kitlelerinizi uyarlamak için bir grup e-posta diğer adı veya güvenlik grubu kullanmanızı öneririz. İsterseniz, tek bir e-posta adresi girişi yapmayı da tercih edebilirsiniz.
@@ -46,17 +46,18 @@ Bu tercih, abonelerinizin abone portalının [abonelikler sayfasında](https://m
 > [!NOTE]
 > Burada listeettiğiniz e-posta adresi abonelere sağlanmaz.  Bir abone abone portalında **yönetici isteime bir iletişim** gönderdiğinde ileti, abone üzerinde kullanıma sunulmadan diğer ada iletilir. 
 
+### <a name="default-subscription-level"></a>Varsayılan abonelik düzeyi
+Bu ayarı, bir kullanıcıya bir abonelik atandığında, sözleşmenizde bulunan abonelik düzeylerinin hangisinin varsayılan olarak seçili olduğunu anlamak için kullanabilirsiniz.  Yöneticiler ayarı sözleşmenizde herhangi bir abonelik düzeyiyle değiştirebilir; bu, en sık kullanılan seçiminizi sürekli olarak yapmayı önler. 
+
+### <a name="default-communication-preferences"></a>Varsayılan iletişim tercihleri
+Varsayılan bir iletişim dili ve yerel ayar ayarlamak, abonelikleri atama sürecini kolaylaştırabilir.  Örneğin, geliştirme ekibiniz yönetici takımından farklı bir ülkeyi temel alıyorsa, abonelerin konumuna en uygun tercihleri ayarlayabilirsiniz. Bu ayarlar, bireysel aboneler için tüm yöneticiler tarafından hala değiştirilebilir. 
+
 ### <a name="default-external-subscribers-setting"></a>Varsayılan dış aboneler ayarı
 Bu tercih, yöneticilerin kuruluşunuzun kiracı/Dizin dışından abone ekleyip ekleyemeyeceğine karar vermenize olanak tanır.  Bunu kapatırsanız, dış abonelere izin verilmez.  Bunu etkinleştirirseniz ve bir yöneticinin dış abone ekleme denemeleri varsa, bu kullanıcıların kendi seçimini onaylamasını istenir ve aboneliği atamasına izin verilir. Yöneticiler bu ayarı geçersiz kılamaz. 
 
 ### <a name="default-downloads-setting"></a>Varsayılan indirmeler ayarı
 Varsayılan olarak açık olan bu ayarın etkinleştirilmesi, yöneticilerin yeni abonelikler oluştururken indirmelere erişmesini sağlayacaktır.  Yöneticiler, ayrı bir abonelik temelinde İndirmeleri hala devre dışı bırakabilir.  İndirmelere erişimin devre dışı bırakılması, ürün anahtarlarına erişimi de devre dışı bırakır.  
 
-### <a name="default-subscription-level"></a>Varsayılan abonelik düzeyi
-Bu ayarı, bir kullanıcıya bir abonelik atandığında, sözleşmenizde bulunan abonelik düzeylerinin hangisinin varsayılan olarak seçili olduğunu anlamak için kullanabilirsiniz.  Yöneticiler ayarı sözleşmenizde herhangi bir abonelik düzeyiyle değiştirebilir; bu, en sık kullanılan seçiminizi sürekli olarak yapmayı önler. 
-
-### <a name="default-communication-preferences"></a>Varsayılan iletişim tercihleri
-Varsayılan bir iletişim dili ve yerel ayar ayarlamak, abonelikleri atama sürecini kolaylaştırabilir.  Örneğin, geliştirme ekibiniz yönetici takımından farklı bir ülkeyi temel alıyorsa, abonelerin konumuna en uygun tercihleri ayarlayabilirsiniz. Bu ayarlar, bireysel aboneler için tüm yöneticiler tarafından hala değiştirilebilir. 
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 ### <a name="q--can-i-disable-the-contact-email-address-so-subscribers-cannot-contact-administrators"></a>S: abonelerin yöneticilerle iletişim kurabilmesi için **iletişim e-posta adresini** devre dışı bırakabilir miyim?
