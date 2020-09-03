@@ -1,5 +1,5 @@
 ---
-title: BP_COND_STYLE | Microsoft Dokümanlar
+title: BP_COND_STYLE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ca704ca186308ea9e44c4fa7edc6617cbac806eb
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738118"
 ---
 # <a name="bp_cond_style"></a>BP_COND_STYLE
-Bekleyen ve bağlı kesme noktaları için kesme noktası koşul stilini belirtir.
+Bekleyen ve bağlantılı kesme noktaları için kesme noktası koşul stilini belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_BP_COND_STYLE {
@@ -46,24 +46,24 @@ public enum enum_BP_COND_STYLE {
 
 ## <a name="fields"></a>Alanlar
 `BP_COND_NONE`\
-Kesme noktasının konumuna ulaşıldığında kesme noktasını yakalır. Kesme noktası koşulu belirtilmedi.
+Kesme noktasının konumuna ulaşıldığında kesme noktası ateşlenir. Kesme noktası koşulu belirtilmedi.
 
 `BP_COND_WHEN_TRUE`\
-Kesme noktası, yalnızca kesme noktasıyla ilişkili koşullu ifade `true`yi değerlendirdiğinde kesme noktasını yaslar.
+Kesme noktası yalnızca kesme noktasıyla ilişkili koşullu ifade olarak değerlendirildiğinde ateşlenir `true` .
 
 `BP_COND_WHEN_CHANGED`\
-Kesme noktasını yalnızca kesme noktasıyla ilişkili koşullu ifadenin değeri önceki değerlendirmesinden değiştirdiğinde yatir.
+Kesme noktası yalnızca kesme noktasıyla ilişkili koşullu ifadenin değeri önceki değerlendirmeden değiştirildiğinde harekete geçirilir.
 
 ## <a name="remarks"></a>Açıklamalar
-`styleCondition` [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) yapının üyesi için kullanılır.
+`styleCondition` [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) yapısının üyesi için kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)

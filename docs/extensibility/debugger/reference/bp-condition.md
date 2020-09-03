@@ -1,5 +1,5 @@
 ---
-title: BP_CONDITION | Microsoft Dokümanlar
+title: BP_CONDITION | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 88ed6b6468c5765c8f987c1f15f3e4e8ade9c8c6
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738097"
 ---
 # <a name="bp_condition"></a>BP_CONDITION
-Bir kırılma noktasının hangi koşullar altında ateşlediği açıklanır.
+Bir kesme noktasının tetiklendiği koşulları açıklar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _BP_CONDITION {
@@ -49,31 +49,31 @@ public struct BP_CONDITION {
 
 ## <a name="members"></a>Üyeler
 `pThread`\
-Kesme noktasını içeren uygulamanın etkin iş parçacığını temsil eden [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
+Kesme noktasını içeren uygulama için etkin iş parçacığını temsil eden [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
 
 `styleCondition`\
-Bu kesme noktası koşulunun stilini açıklayan [BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md) numaralandırmadeğeri.
+Bu kesme noktası koşulunun stilini açıklayan [BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md) numaralandırmasından bir değer.
 
 `bstrContext`\
 Kesme noktasının konumu.
 
 `bstrCondition`\
-Kırılma noktasının ateşleme durumu.
+Kesme noktasının Tetikleme koşulu.
 
 `nRadix`\
-Radix herhangi bir sayısal bilgi değerlendirilmesinde kullanılacak.
+Herhangi bir sayısal bilgiyi değerlendirmek için kullanılan Radix.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) ve [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) yapıların bir üyesidir.
+Bu yapı, [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) ve [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) yapılarının bir üyesidir.
 
-Bu yapı, [SetCondition](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setcondition.md) ve [SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md) yöntemlerine parametre olarak da geçirilir.
+Bu yapı ayrıca [SetCondition](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setcondition.md) ve [SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md) yöntemlerine bir parametre olarak geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

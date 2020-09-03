@@ -1,5 +1,5 @@
 ---
-title: Çok İşlemcili Kaydediciler Yazma | Microsoft Dokümanlar
+title: Çok Işlemcili oturum defterleri yazma | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,37 +13,37 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 886e012b026ef17b512a7e134d080382744783ef
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77630753"
 ---
-# <a name="write-multi-processor-aware-loggers"></a>Çok işlemcili bilgine duyarlı kaydediciler yazma
+# <a name="write-multi-processor-aware-loggers"></a>Multi-Processor-Aware Günlükçüler yazma
 
-MSBuild'in birden çok işlemciden yararlanma yeteneği proje oluşturma süresini kısaltabilir, ancak olay günlüğe kaydetme oluşturmak için karmaşıklık da ekler. Tek işlemcili bir ortamda, olaylar, iletiler, uyarılar ve hatalar kaydediciye öngörülebilir, sıralı bir şekilde ulaşır. Ancak, çok işlemcili bir ortamda, farklı kaynaklardan gelen olaylar aynı anda veya sıra dışı gelebilir. Bunu sağlamak için, MSBuild çok işlemcili bir logger ve yeni bir günlük modeli sağlar ve özel "yönlendirme loggers oluşturmanıza olanak sağlar."
+MSBuild 'in birden çok işlemciyi destekleme yeteneği, proje derleme süresini azaltabilir, ancak olay günlüğü oluşturmak için karmaşıklık de ekler. Tek işlemcili bir ortamda, olaylar, iletiler, uyarılar ve hatalar günlükçü 'e öngörülebilir ve sıralı bir biçimde ulaşır. Ancak, çok işlemcili bir ortamda, farklı kaynaklardan gelen olaylar aynı anda veya sıra dışında gelebilir. Bunu sağlamak için, MSBuild çok işlemcili bir günlükçü ve yeni bir günlük modeli sağlar ve özel "iletme Günlükçüleri" oluşturmanıza imkan tanır.
 
-## <a name="multi-processor-logging-challenges"></a>Çok işlemcili günlük zorlukları
+## <a name="multi-processor-logging-challenges"></a>Çok işlemcili günlüğe kaydetme sorunları
 
- Çok işlemcili veya çok çekirdekli bir sistemde bir veya daha fazla proje oluşturduğunuzda, tüm projeler için MSBuild yapı olayları aynı anda oluşturulur. Olay iletilerinin çığ aynı anda veya sıra dışında logger gelebilir. BIR MSBuild 2.0 kaydedici bu durumu işlemek için tasarlanmadığından, logger'ı bastırabilir ve daha fazla yapı sürelerine, yanlış kaydedici çıkışına ve hatta bozuk bir yapıya neden olabilir. Bu sorunları gidermek için logger (MSBuild 3.5'ten başlayarak) sıra dışı olayları işleyebilir ve olayları ve kaynaklarını ilişkilendirebilir.
+ Çok işlemcili veya çok çekirdekli bir sistemde bir veya daha fazla proje oluşturduğunuzda, tüm projeler için MSBuild derleme olayları aynı anda oluşturulur. Olay iletilerinin bir Avalanche, günlükçü üzerinde aynı anda veya sıra dışında gelebilir. MSBuild 2,0 günlükçüsü bu durumu işleyecek şekilde tasarlanmadığı için, günlükçü 'yi açabilir ve derleme sürelerinin artmasına, yanlış günlükçü çıktısına veya hatta bozuk bir yapıya neden olabilir. Bu sorunları gidermek için, günlükçü (MSBuild 3,5 ' den başlayarak), dizi dışı olayları işleyebilir ve olayları ve bunların kaynaklarını ilişkilendirebilir.
 
- Özel bir yönlendirme kaydedici oluşturarak günlük verimliliğini daha da artırabilirsiniz. Özel bir iletme kaydedicisi, yalnızca izlemek istediğiniz olayları oluşturmadan önce seçmenize izin vererek bir filtre görevi görür. Özel bir iletme kaydedicisi kullandığınızda, istenmeyen olaylar logger'ı bastıramaz, günlüklerinizi yıkamaz veya yavaş yapım süreleri.
+ Özel bir iletme günlükçüsü oluşturarak günlüğe kaydetme verimliliğini daha da artırabilirsiniz. Özel bir iletme günlükçüsü, oluşturmadan önce, yalnızca izlemek istediğiniz olayları seçmenizi sağlayarak bir filtre işlevi görür. Özel bir iletme günlükçüsü kullandığınızda, istenmeyen olaylar günlükçü sayısını düşürebilir, günlüklerinizi kalabalıklığını veya yavaş derleme süreleriyle başa çıkıp.
 
 ## <a name="multi-processor-logging-models"></a>Çok işlemcili günlük modelleri
 
- Çok işlemciyle ilgili yapı sorunlarını sağlamak için MSBuild, merkezi ve dağıtılmış iki günlük modelini destekler.
+ MSBuild, çok işlemcili ilgili derleme sorunları için sağlamak üzere iki günlük modelini destekler, merkezi ve dağıtılır.
 
 ### <a name="central-logging-model"></a>Merkezi günlük modeli
 
- Merkezi günlük modelinde, *MSBuild.exe'nin* tek bir örneği "merkezi düğüm" olarak hareket eder ve merkezi düğümün alt örnekleri ("ikincil düğümler") yapı görevlerini gerçekleştirmesine yardımcı olmak için merkezi düğüme bağlanır.
+ Merkezi günlük modelinde, tek bir *MSBuild.exe* örneği "Merkezi düğüm" olarak hareket eder ve merkezi düğümün ("ikincil düğümler") alt örnekleri, derleme görevlerini gerçekleştirmeye yardımcı olmak üzere merkezi düğüme iliştirilemiyor.
 
- ![Merkezi Logger Modeli](../msbuild/media/centralnode.png "CentralNode")
+ ![Merkezi günlükçü modeli](../msbuild/media/centralnode.png "Merkezileştirme düğümü")
 
- Merkezi düğüme iliştirilen çeşitli türlerdeki loggers "merkezi loggers" olarak bilinir. Her logger türünden yalnızca bir örnek aynı anda merkezi düğüme eklenebilir.
+ Merkezi düğüme eklenen çeşitli türlerin Günlükçüleri "Merkezi Günlükçüler" olarak bilinir. Her Günlükçü türünün yalnızca bir örneği merkezi düğüme aynı anda iliştirilebilir.
 
- Bir yapı oluştuğunda, ikincil düğümler yapı olaylarını merkezi düğüme yönlendirir. Merkezi düğüm, tüm olayları ve aynı zamanda ikincil düğümleri bağlı merkezi kaydedicilerden bir veya daha fazlasına yönlendirir. Kaydediciler daha sonra gelen verileri temel alan günlük dosyaları oluşturur.
+ Bir derleme gerçekleştiğinde, ikincil düğümler derleme olaylarını merkezi düğüme yönlendirir. Merkezi düğüm tüm olaylarını ve ayrıca ikincil düğümleri bir veya daha fazla bağlı merkezi Günlükçüler için yönlendirir. Günlükçüler daha sonra gelen verileri temel alan günlük dosyaları oluşturur.
 
- Yalnızca <xref:Microsoft.Build.Framework.ILogger> merkezi kaydedici tarafından uygulanması gerekmesine rağmen, merkezi kaydedicinin <xref:Microsoft.Build.Framework.INodeLogger> yapıya katılan düğüm sayısıyla birlikte başlatılmasını da öneririz. Yöntemin <xref:Microsoft.Build.Framework.ILogger.Initialize%2A> aşağıdaki aşırı yüklemesi, motor logger'ı başlattığında çağırır.
+ Yalnızca <xref:Microsoft.Build.Framework.ILogger> merkezi günlükçü tarafından uygulanması gerekse de, <xref:Microsoft.Build.Framework.INodeLogger> merkezi günlükçü 'nin yapıya katılan düğüm sayısıyla başlatılması için de uygulamanızı öneririz. Aşağıdaki yöntem aşırı yüklemesi, <xref:Microsoft.Build.Framework.ILogger.Initialize%2A> motor günlükçü başlattığında çağırır.
 
 ```csharp
 public interface INodeLogger: ILogger
@@ -52,72 +52,72 @@ public interface INodeLogger: ILogger
 }
 ```
 
- Önceden varolan <xref:Microsoft.Build.Framework.ILogger>tabanlı loggers merkezi loggers olarak hareket edebilir ve yapı ekleyebilirsiniz. Ancak, çok işlemcili günlük senaryoları ve sıra dışı olaylar için açık destek olmadan yazılan merkezi kaydediciler bir yapıyı bozabilir veya anlamsız çıktı lar üretebilir.
+ Önceden var olan tüm <xref:Microsoft.Build.Framework.ILogger> oturum defterleri, merkezi Günlükçüler olarak davranabilir ve yapıya eklenebilir. Ancak, çok işlemcili günlük senaryolar ve sıra dışı olaylar için açık destek olmadan yazılan merkezi Günlükçüler bir derlemeyi bozabilir veya anlamsız bir çıkış üretebilir.
 
 ### <a name="distributed-logging-model"></a>Dağıtılmış günlük modeli
 
- Merkezi günlüğe kaydetme modelinde, çok fazla gelen ileti trafiği, örneğin birçok proje aynı anda inşa edildiğinde, merkezi düğümü bastırabilir. Bu, sistem kaynaklarını strese alabilir ve yapı performansını düşürebilir. Bu sorunu hafifletmek için, MSBuild dağıtılmış bir günlük modelini destekler.
+ Merkezi günlük modelinde, çok fazla gelen ileti trafiği merkezi düğümü, örneğin birçok projenin aynı anda ne zaman derlenebileceğini de açabilir. Bu, sistem kaynaklarını stres ve derleme performansını düşürebilir. Bu sorunu kolaylaştırmak için MSBuild, dağıtılmış bir günlük modelini destekler.
 
- ![Dağıtılmış Günlük Modeli](../msbuild/media/distnode.png "DistNode")
+ ![Dağıtılmış günlük modeli](../msbuild/media/distnode.png "DistNode")
 
- Dağıtılmış günlük modeli, bir iletme kaydedici oluşturmanıza izin vererek merkezi günlük modelini genişletir.
+ Dağıtılmış günlük kaydı modeli, bir iletme günlükçüsü oluşturmanıza izin vererek Merkezi günlük modelini genişletir.
 
-#### <a name="forwarding-loggers"></a>Yönlendirme kaydediciler
+#### <a name="forwarding-loggers"></a>Günlükçüleri iletme
 
- İletici kaydedici, ikincil bir düğüme bağlanan ve bu düğümden gelen yapı olayları alan bir olay filtresi olan ikincil, hafif bir kaydedicidir. Gelen olayları filtreler ve yalnızca merkezi düğüme belirttiğiniz olayları iletin. Bu, merkezi düğüme gönderilen ileti trafiğini azaltır ve genel yapı performansını artırır.
+ Bir iletme günlükçüsü, ikincil bir düğüme bağlanan ve gelen derleme olaylarını bu düğümden alan bir olay filtresi olan ikincil, hafif bir günlükçüdür. Gelen olayları filtreler ve yalnızca belirttiğiniz olanları merkezi düğüme iletir. Bu, merkezi düğüme gönderilen ileti trafiğini azaltır ve genel derleme performansını geliştirir.
 
- Dağıtılmış günlüğe kaydetmeyi kullanmanın iki yolu vardır:
+ Dağıtılmış günlük kullanmanın iki yolu şunlardır:
 
-- Adlı <xref:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger>önceden imal edilmiş yönlendirme kaydedicisini özelleştirin.
+- Adlı önceden fabriciletme günlükçüsü ' ni özelleştirin <xref:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger> .
 
-- Kendi özel yönlendirme kaydedicinizi yazın.
+- Kendi özel iletme günlüklerinizi yazın.
 
-ConfigurableForwardingLogger'ı gereksinimlerinize uyacak şekilde değiştirebilirsiniz. Bunu yapmak için, *MSBuild.exe*kullanarak komut satırında logger arayın ve kaydedici merkezi düğüme iletmek istediğiniz yapı olayları listele.
+Configurableforwardinggünlükçü ' i gereksinimlerinize uyacak şekilde değiştirebilirsiniz. Bunu yapmak için, komut satırında *MSBuild.exe*kullanarak günlükçü çağırın ve günlükçü 'nin merkezi düğüme iletilmesini istediğiniz derleme olaylarını listeleyin.
 
-Alternatif olarak, özel bir iletme kaydedici oluşturabilirsiniz. Özel bir iletme kaydedici oluşturarak, kaydedicinin davranışında ince ayar yapabilirsiniz. Ancak, özel bir iletme kaydedici oluşturma sadece ConfigurableForwardingLogger özelleştirme daha karmaşıktır. Daha fazla bilgi için [bkz.](../msbuild/creating-forwarding-loggers.md)
+Alternatif olarak, özel bir iletme günlükçüsü oluşturabilirsiniz. Özel bir iletme günlükçüsü oluşturarak, günlükçü davranışını hassas şekilde ayarlayabilirsiniz. Ancak, özel bir iletme günlükçü oluşturmak yalnızca Configurableforwardinggünlükçü özelleştirilerek daha karmaşıktır. Daha fazla bilgi için bkz. [iletme Günlükçüleri oluşturma](../msbuild/creating-forwarding-loggers.md).
 
-## <a name="using-the-configurableforwardinglogger-for-simple-distributed-logging"></a>Basit dağıtılmış günlük için ConfigurableForwardingLogger kullanma
+## <a name="using-the-configurableforwardinglogger-for-simple-distributed-logging"></a>Basit Dağıtılmış günlük için Configurableforwardinggünlükçü kullanma
 
- ConfigurableForwardingLogger veya özel bir iletme kaydedici eklemek `-distributedlogger` için,`-dl` anahtarı (kısaca) bir *MSBuild.exe* komut satırı yapısında kullanın. Logger türlerinin ve sınıfların adlarını belirtme biçimi, dağıtılmış `-logger` bir kaydedicinin her zaman bir yerine iki günlük sınıfı, ileti kaydedici kaydedici ve merkezi kaydedici olması dışında, geçiş için aynıdır. Aşağıda, XMLForwardingLogger adlı özel bir iletme kaydedicisinin nasıl eklenebildiğini gösteren bir örnek verilmiştir.
+ Bir Configurableforwardinggünlükçü veya özel bir iletme günlükçüsü eklemek için `-distributedlogger` `-dl` *MSBuild.exe* komut satırı derlemesinde anahtarı (Short için) kullanın. Bir `-logger` Dağıtılmış günlükçü her zaman bir yerine iki günlük sınıfı, iletme günlükçüsü ve merkezi günlükçüsü olmak üzere, günlükçü türleri ve sınıflarının adlarını belirtme biçimi, anahtar ile aynıdır. Aşağıda, Xmlforwardinggünlükçü adlı özel bir iletme günlükçüsü eklemenin bir örneği verilmiştir.
 
 ```cmd
 msbuild.exe myproj.proj -distributedlogger:XMLCentralLogger,MyLogger,Version=1.0.2,Culture=neutral*XMLForwardingLogger,MyLogger,Version=1.0.2,Culture=neutral
 ```
 
 > [!NOTE]
-> Yıldız işareti (*) `-dl` anahtardaki iki logger adını ayırmalıdır.
+> Bir yıldız işareti (*), anahtardaki iki günlükçü adını ayırmalıdır `-dl` .
 
- ConfigurableForwardingLogger'ı kullanmak, tipik MSBuild logger yerine ConfigurableForwardingLogger logger'ı takmanız ve ConfigurableForwardingLogger'ın merkezi düğüme geçmesini istediğiniz olayları parametreler olarak belirtmeniz dışında, başka bir logger [(yapı günlüklerini edinmede](../msbuild/obtaining-build-logs-with-msbuild.md)belirtildiği gibi) kullanmak gibidir.
+ Configurableforwardinggünlükçü kullanılması, tipik MSBuild günlükçüsü yerine Configurableforwardinggünlükçü günlükçüsü 'yi iliştirmeniz ve ardından parametre olarak, Configurableforwardinggünlükçü 'nin merkezi düğüme geçmesini istediğiniz olayları belirtmeniz dışında, başka bir günlükçü ( [derleme günlükleri alma](../msbuild/obtaining-build-logs-with-msbuild.md)bölümünde açıklandığı gibi) kullanma gibidir.
 
- Örneğin, yalnızca bir yapı başlayıp sona erdiğinde ve bir hata oluştuğunda, parametre `BUILDSTARTEDEVENT` `BUILDFINISHEDEVENT`olarak `ERROREVENT` , "geçeceği" bildirilir. Birden fazla parametre yarı-kolon ile ayırarak geçirilebilir. Aşağıdaki, ConfigurableForwardingLogger'ın yalnızca , `BUILDSTARTEDEVENT` `BUILDFINISHEDEVENT`ve `ERROREVENT` olayları iletmek için nasıl kullanılacağına bir örnektir.
+ Örneğin, yalnızca bir derleme başladığında ve sona erdiğinde bildirim almak istiyorsanız ve bir hata oluştuğunda,, `BUILDSTARTEDEVENT` `BUILDFINISHEDEVENT` ve parametreleri olarak ' i geçitirsiniz `ERROREVENT` . Çoklu parametreler, noktalı virgülle ayırarak geçirilebilir. Aşağıda `BUILDSTARTEDEVENT` ,, `BUILDFINISHEDEVENT` , ve olaylarını Iletmek Için Configurableforwardinggünlükçü kullanmanın bir örneği verilmiştir `ERROREVENT` .
 
 ```cmd
 msbuild.exe myproj.proj -distributedlogger:XMLCentralLogger,MyLogger,Version=1.0.2,Culture=neutral*ConfigureableForwardingLogger,C:\My.dll;BUILDSTARTEDEVENT; BUILDFINISHEDEVENT;ERROREVENT
 ```
 
- Aşağıdaki kullanılabilir ConfigurableForwardingLogger parametrelerinin bir listesidir.
+ Aşağıda, kullanılabilir Configurableforwardinggünlükçü parametrelerinin bir listesi verilmiştir.
 
-|Yapılandırılabilir ForwardingLogger Parametreleri|
+|Configurableforwardinggünlükçü parametreleri|
 | - |
 |BUILDSTARTEDEVENT|
-|BUILDFINISHEDEVENT|
-|PROJEYe BAŞLADI ETKINLIK|
-|PROJELİ ETKİnLİk|
-|HEDEF BAŞLATTI OLAY|
-|HEDEFFINISHEDEVENT|
-|TASKSTARTEDOLAY|
-|TASKFINISHEDOLAY|
-|Errorevent|
-|UYARI OLAYI|
-|HIGHMESSAGEOLAY|
-|NORMALMESAJ OLAYI|
-|LOWMESSAGEOLAY|
+|BUILDSONLANDıRHEDEVENT|
+|PROJECTSTARTEDEVENT|
+|PROJECTSONLANDıRHEDEVENT|
+|TARGETSTARTEDEVENT|
+|TARGETSONLANDıRHEDEVENT|
+|TASKSTARTEDEVENT|
+|TASKSONLANDıRHEDEVENT|
+|ERROREVENT|
+|WARNINGEVENT|
+|HIGHMESSAGEEVENT|
+|NORMALMESSAGEEVENT|
+|LOWMESSAGEEVENT|
 |CUSTOMEVENT|
-|Commandline|
-|PERFORMANS ÖZETİ|
+|KOMUT SATıRı|
+|PERFORMANSLı gün|
 |NOSUMMARY|
 |SHOWCOMMANDLINE|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönlendirme kaydediciler oluşturma](../msbuild/creating-forwarding-loggers.md)
+- [İletme günlükçüleri oluşturma](../msbuild/creating-forwarding-loggers.md)

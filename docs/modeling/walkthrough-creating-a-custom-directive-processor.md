@@ -14,10 +14,10 @@ dev_langs:
 - CSharp
 - VB
 ms.openlocfilehash: 4efe12b9871dc07bd7427e1567973701d3c6c527
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532242"
 ---
 # <a name="walkthrough-create-a-custom-directive-processor"></a>İzlenecek yol: Özel Yönerge İşlemcisi Oluşturma
@@ -601,7 +601,7 @@ End Property
 
 4. Yalnızca Visual Basic için, **Proje** menüsünü açın ve **CustomDP özellikleri**' ne tıklayın. **Uygulama** sekmesinde, **kök ad alanında**varsayılan değeri silin `CustomDP` .
 
-5. **Dosya** menüsünde **Tümünü Kaydet**' e tıklayın.
+5. **Dosya** menüsünde **Tümünü Kaydet**’e tıklayın.
 
 6. **Yapı** menüsünde **Yapı Çözümü**’ne tıklayın.
 
@@ -654,7 +654,7 @@ Bu bölümde, özel bir yönerge işlemciniz için aynı konumda kayıt defterin
 
      Kayıt defteri anahtarınız aşağıdaki değerlere sahip olmalı:
 
-   | Name | Tür | Veriler |
+   | Ad | Tür | Veriler |
    |-|-|-|
    | (Varsayılan) | REG_SZ | (değer ayarlı değil) |
    | Sınıf | REG_SZ | CustomDP.CustomDirectiveProcessor |
@@ -662,13 +662,13 @@ Bu bölümde, özel bir yönerge işlemciniz için aynı konumda kayıt defterin
 
      Derlemeyi GAC içine koyduysanız, değerler aşağıdaki gibi görünmelidir:
 
-   | Name | Tür | Veriler |
+   | Ad | Tür | Veriler |
    |-|-|-|
    | (Varsayılan) | REG_SZ | (değer ayarlı değil) |
    | Sınıf | REG_SZ | CustomDP.CustomDirectiveProcessor |
    | Bütünleştirilmiş Kod | REG_SZ | CustomDP.dll |
 
-6. Visual Studio'yu yeniden başlatın.
+6. Visual Studio’yu yeniden başlatın.
 
 ## <a name="test-the-directive-processor"></a>Yönerge Işlemcisini test etme
 

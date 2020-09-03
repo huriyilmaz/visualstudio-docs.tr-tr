@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_CODE_CONTEXT | Microsoft Dokümanlar
+title: BP_LOCATION_CODE_CONTEXT | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,16 +15,16 @@ ms.workload:
 dev_langs:
 - CPP
 ms.openlocfilehash: 4dcb8ffb1a1debcf6aeeca8dc4d21c1ab5f18b90
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738024"
 ---
 # <a name="bp_location_code_context"></a>BP_LOCATION_CODE_CONTEXT
-Programda doğrudan bir adrese bağlanan bir kesme noktasının konumunu açıklar.
+Hata ayıklanan programdaki bir adrese doğrudan bağlanan bir kesme noktasının konumunu açıklar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _BP_LOCATION_CODE_CONTEXT {
@@ -37,14 +37,14 @@ typedef struct _BP_LOCATION_CODE_CONTEXT {
 Koddaki kesme noktasının konumunu tanımlayan [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı, bir birliğin parçası olarak [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapının bir üyesidir.
+Bu yapı, bir birleşimin parçası olarak [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapısının bir üyesidir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

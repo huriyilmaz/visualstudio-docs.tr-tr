@@ -1,5 +1,5 @@
 ---
-title: ATTACH_REASON | Microsoft Dokümanlar
+title: ATTACH_REASON | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ca871d9dac2b6f37018af925eece5c1a6f3d1585
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738132"
 ---
 # <a name="attach_reason"></a>ATTACH_REASON
-Hata ayıklama altyapısının (DE) bir program düğümüne eklenmesinin nedenini belirtir.
+Hata ayıklama altyapısının (DE) bir program düğümüne iliştirme nedenini belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_ATTACH_REASON {
@@ -46,25 +46,25 @@ public enum enum_ATTACH_REASON {
 
 ## <a name="fields"></a>Alanlar
 `ATTACH_REASON_AUTO`\
-İşlem şu anda hata ayıklama modunda olduğundan ekleyin.
+İşlem şu anda hata ayıklama modunda olduğundan iliştirme.
 
 `ATTACH_REASON_LAUNCH`\
-İşlem başlatıldığı için ekle.
+İşlem başlatıldığından iliştirme.
 
 `ATTACH_REASON_USER`\
-Kullanıcı isteği nedeniyle ekle.
+Kullanıcı isteği nedeniyle iliştirme.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu değerler [Ekle](../../../extensibility/debugger/reference/idebugengine2-attach.md) ve [Ekle](../../../extensibility/debugger/reference/idebugprogramex2-attach.md) yöntemlerine parametre olarak kullanılır.
+Bu değerler, [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) ve [Attach](../../../extensibility/debugger/reference/idebugprogramex2-attach.md) yöntemlerine parametre olarak kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [İliştir](../../../extensibility/debugger/reference/idebugengine2-attach.md)
 - [İliştir](../../../extensibility/debugger/reference/idebugprogramex2-attach.md)

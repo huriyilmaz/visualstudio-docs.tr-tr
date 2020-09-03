@@ -10,15 +10,15 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 03de870da2cd75c8a254010db682903f314cc10d
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287980"
 ---
 # <a name="how-to-create-a-request-level-plug-in"></a>Nasıl yapılır: istek düzeyi eklentisi oluşturma
 
-*İstekler* , Web performans testlerini oluşturan bildirime dayalı deyimlerdir. Web performans testi eklentileri, Web performans testinizde ana bildirim deyimleri dışında kodu yalıtmanızı ve yeniden kullanmanıza olanak tanır. Eklentiler oluşturabilir ve bunları içeren Web performans testine ve tek bir isteğe da ekleyebilirsiniz. Özelleştirilmiş bir *istek eklentisi* bir Web performans testinde belirli bir istek çalıştırıldığı için kodu çağırmak için bir yol sunar.
+*İstekler* , Web performans testlerini oluşturan bildirime dayalı deyimlerdir. Web performans testi eklentileri, Web performans testinizde ana bildirim deyimleri dışında kodu yalıtmanızı ve yeniden kullanmanıza olanak tanır. Eklentiler oluşturabilir ve bunları içeren Web performans testine ve tek bir isteğe da ekleyebilirsiniz. Özelleştirilmiş bir  *istek eklentisi* bir Web performans testinde belirli bir istek çalıştırıldığı için kodu çağırmak için bir yol sunar.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 

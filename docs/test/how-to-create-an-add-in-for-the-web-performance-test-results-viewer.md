@@ -10,10 +10,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 736c43a83a956c02b760b4909a427a82c6fa9e4c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287837"
 ---
 # <a name="how-to-create-an-add-in-for-the-web-performance-test-results-viewer"></a>Nasıl yapılır: Web performans Test Sonuçları Görüntüleyicisi için eklenti oluşturma
@@ -324,7 +324,7 @@ Bu makalenin sonundaki **eklenti yöneticisini** kullanacaksınız.
 
 Kötü amaçlı eklentilerin otomatik olarak etkinleşmesini önlemeye karşı güvenliği artırmak için, Visual Studio, **eklenti/makro güvenliği**adlı bir **araç seçenekleri** sayfasında ayarlar sağlar.
 
-Ayrıca, bu seçenekler sayfası, Visual Studio 'Nun arayacağı klasörleri belirtmenize olanak tanır *. Eklenti* kayıt dosyaları. Bu, konumunu nerede sınırlayabilmenizi sağlayarak güvenliği geliştirir *. Eklenti* kayıt dosyaları okunabilir. Bu, kötü amaçlı olarak önlemeye yardımcı olur *. *İstemeden kullanılan eklenti dosyaları.
+Ayrıca, bu seçenekler sayfası, Visual Studio 'Nun arayacağı klasörleri belirtmenize olanak tanır *. Eklenti* kayıt dosyaları. Bu, konumunu nerede sınırlayabilmenizi sağlayarak güvenliği geliştirir *. Eklenti* kayıt dosyaları okunabilir. Bu, kötü amaçlı olarak önlemeye yardımcı olur *. * İstemeden kullanılan eklenti dosyaları.
 
 **Eklenti güvenlik ayarları**
 

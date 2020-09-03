@@ -14,17 +14,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0b1e2739532512bde5edeed4facc92b807187293
-ms.sourcegitcommit: a86ee68e3ec23869b6eaaf6c6b7946b1d9a88d01
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77144791"
 ---
 # <a name="debugging-gpu-code"></a>GPU Kodunda Hata Ayıklama
-Grafik işleme birimi C++ (GPU) üzerinde çalışan kodda hata ayıklama yapabilirsiniz. Visual Studio 'da GPU hata ayıklama desteği, yarış algılama, işlem başlatma ve bunlara ekleme ve hata ayıklama pencerelerini tümleştirme içerir.
+Grafik işleme birimi (GPU) üzerinde çalışan C++ kodunda hata ayıklaması yapabilirsiniz. Visual Studio 'da GPU hata ayıklama desteği, yarış algılama, işlem başlatma ve bunlara ekleme ve hata ayıklama pencerelerini tümleştirme içerir.
 
 ## <a name="supported-platforms"></a>Desteklenen Platformlar
- [!INCLUDE[win7](../debugger/includes/win7_md.md)], [!INCLUDE[win8](../debugger/includes/win8_md.md)], Windows 10, [!INCLUDE[winsvr08_r2](../debugger/includes/winsvr08_r2_md.md)], [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)] ve Windows Server 2016 ' de hata ayıklama desteklenir. Yazılım öykünücüsü, [!INCLUDE[win8](../debugger/includes/win8_md.md)], Windows 10 veya [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)]hata ayıklama için Windows Server 2016 gereklidir. Donanımda hata ayıklama için, grafik kartınızın sürücülerini yüklemelisiniz. Tüm donanım satıcıları tüm hata ayıklayıcı özelliklerini uygulamaz. Sınırlamalar için satıcı belgelerine bakın.
+ Hata ayıklama,, [!INCLUDE[win7](../debugger/includes/win7_md.md)] [!INCLUDE[win8](../debugger/includes/win8_md.md)] Windows 10, [!INCLUDE[winsvr08_r2](../debugger/includes/winsvr08_r2_md.md)] [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)] ve Windows Server 2016 ' de desteklenir. Yazılım öykünücüsünde hata ayıklama için, [!INCLUDE[win8](../debugger/includes/win8_md.md)] Windows 10 veya [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)] windows Server 2016 gereklidir. Donanımda hata ayıklama için, grafik kartınızın sürücülerini yüklemelisiniz. Tüm donanım satıcıları tüm hata ayıklayıcı özelliklerini uygulamaz. Sınırlamalar için satıcı belgelerine bakın.
 
 > [!NOTE]
 > Visual Studio 'da GPU hata ayıklamayı desteklemek isteyen bağımsız donanım satıcıları, VSD3DDebug arabirimini uygulayan ve kendi sürücülerini hedefleyen bir DLL oluşturmanız gerekir.
@@ -53,11 +53,11 @@ Grafik işleme birimi C++ (GPU) üzerinde çalışan kodda hata ayıklama yapabi
 
 - [Görevleri Penceresini Kullanma](../debugger/using-the-tasks-window.md)
 
-- [Nasıl Yapılır: Paralel İzleme Penceresini Kullanma](../debugger/how-to-use-the-parallel-watch-window.md)
+- [Nasıl yapılır: paralel Izleme penceresini kullanma](../debugger/how-to-use-the-parallel-watch-window.md)
 
 - [Hata ayıklama Iş parçacıkları ve süreçler](../debugger/debug-threads-and-processes.md) (hata ayıklama konumu araç çubuğu)
 
-- [Nasıl Yapılır: GPU İş Parçacıkları Penceresini Kullanma](../debugger/how-to-use-the-gpu-threads-window.md)
+- [Nasıl yapılır: GPU Iş parçacıkları penceresini kullanma](../debugger/how-to-use-the-gpu-threads-window.md)
 
 ## <a name="data-synchronization-exceptions"></a>Veri eşitleme özel durumları
  Hata ayıklayıcı yürütme sırasında çeşitli veri eşitleme koşullarını tanımlayabilir. Bir koşul algılandığında, hata ayıklayıcı kesme durumuna girer. İki seçeneğiniz vardır:**Break** veya **Continue**. **Özel durumlar** iletişim kutusunu kullanarak, hata ayıklayıcının bu koşulları algıladığını ve ayrıca hangi koşulları kesmeyeceğini yapılandırabilirsiniz. Daha fazla bilgi için bkz. [hata ayıklayıcı Ile özel durumları yönetme](../debugger/managing-exceptions-with-the-debugger.md). Ayrıca, yazılan veriler verilerin değerini değiştirmezse hata ayıklayıcının özel durumları yoksayması gerektiğini belirtmek için **Seçenekler** iletişim kutusunu da kullanabilirsiniz. Daha fazla bilgi için bkz. [Genel, hata ayıklama, Seçenekler Iletişim kutusu](../debugger/general-debugging-options-dialog-box.md).
@@ -65,21 +65,21 @@ Grafik işleme birimi C++ (GPU) üzerinde çalışan kodda hata ayıklama yapabi
 ## <a name="troubleshooting"></a>Sorun giderme
 
 ### <a name="specifying-an-accelerator"></a>Hızlandırıcı belirtme
- GPU kodundaki kesme noktaları yalnızca, kod [Hızlandırıcı::d irect3d_ref](/cpp/parallel/amp/reference/accelerator-class#direct3d_ref) (Ref) hızlandırıcısında çalışıyorsa isabet alır. Kodunuzda bir Hızlandırıcı belirtmezseniz, başvuru Hızlandırıcısı proje özelliklerinde **hata ayıklama Hızlandırıcı türü** olarak otomatik seçilir. Kodunuz açıkça bir Hızlandırıcı seçerse, başvuru Hızlandırıcısı hata ayıklama sırasında kullanılmaz ve GPU donanımınızın hata ayıklama desteği yoksa kesme noktaları isabet etmez. Hata ayıklama sırasında başvuru hızlandırıcıyı kullanması için kodunuzu yazarak bunu ortadan kaldırabilirsiniz. Daha fazla bilgi için bkz. proje özellikleri ve [ C++ hata ayıklama yapılandırması için](../debugger/project-settings-for-a-cpp-debug-configuration.md) [Hızlandırıcı ve accelerator_view nesneleri](/cpp/parallel/amp/using-accelerator-and-accelerator-view-objects) ve proje ayarları.
+ GPU kodundaki kesme noktaları yalnızca, kod [Hızlandırıcı::d irect3d_ref](/cpp/parallel/amp/reference/accelerator-class#direct3d_ref) (Ref) hızlandırıcısında çalışıyorsa isabet alır. Kodunuzda bir Hızlandırıcı belirtmezseniz, başvuru Hızlandırıcısı proje özelliklerinde **hata ayıklama Hızlandırıcı türü** olarak otomatik seçilir. Kodunuz açıkça bir Hızlandırıcı seçerse, başvuru Hızlandırıcısı hata ayıklama sırasında kullanılmaz ve GPU donanımınızın hata ayıklama desteği yoksa kesme noktaları isabet etmez. Hata ayıklama sırasında başvuru hızlandırıcıyı kullanması için kodunuzu yazarak bunu ortadan kaldırabilirsiniz. Daha fazla bilgi için bkz. proje özellikleri ve [bir C++ hata ayıklama yapılandırması için](../debugger/project-settings-for-a-cpp-debug-configuration.md) [accelerator_view nesneleri](/cpp/parallel/amp/using-accelerator-and-accelerator-view-objects) ve proje ayarlarını kullanma.
 
 ### <a name="conditional-breakpoints"></a>Koşullu kesme noktaları
  GPU kodundaki koşullu kesme noktaları desteklenir, ancak cihazda her ifade değerlendirilemiyor. Bir ifade cihazda değerlendirilemez, hata ayıklayıcıda değerlendirilir. Hata ayıklayıcının cihazdan daha yavaş çalışması olasıdır.
 
 ### <a name="error-there-is-a-configuration-issue-with-the-selected-debugging-accelerator-type"></a>Hata: Seçili hata ayıklama Hızlandırıcı türünde bir yapılandırma sorunu var.
- Bu hata, proje ayarları ile hata ayıkladığınız BILGISAYARıN yapılandırması arasında bir tutarsızlık olduğunda meydana gelir. Daha fazla bilgi için bkz. [ C++ hata ayıklama yapılandırması için proje ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md).
+ Bu hata, proje ayarları ile hata ayıkladığınız BILGISAYARıN yapılandırması arasında bir tutarsızlık olduğunda meydana gelir. Daha fazla bilgi için bkz. [C++ hata ayıklama yapılandırması Için proje ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md).
 
 ### <a name="error-the-debug-driver-for-the-selected-debugging-accelerator-type-is-not-installed-on-the-target-machine"></a>Hata: Seçili hata ayıklama Hızlandırıcı türü için hata ayıklama sürücüsü hedef makinede yüklü değil.
  Uzak bir bılgısayarda hata ayıklaması yapıyorsanız bu hata oluşur. Hata ayıklayıcı, sürücülerin uzak BILGISAYARA yüklenip yüklenmediğine bakılmaksızın çalışma zamanına kadar belirleyemez. Sürücüler, grafik kartının üreticisinden kullanılabilir.
 
 ### <a name="error-timeout-detection-and-recovery-tdr-must-be-disabled-at-the-remote-site"></a>Hata: uzak sitede zaman aşımı algılama ve kurtarma (TDR) devre dışı bırakılmalıdır.
- C++ Amp hesaplamaları, Windows zaman aşımı algılama ve kurtarma işlemi (TDR) tarafından ayarlanan varsayılan zaman aralığını aşacak şekilde mümkündür. Bu durumda, hesaplama iptal edilir ve veriler kaybolur. Daha fazla bilgi için bkz. [amp 'Da C++ TDRs işleme](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/06/handling-tdrs-in-c-amp/).
+ C++ AMP hesaplamaların, Windows zaman aşımı algılama ve kurtarma işlemi (TDR) tarafından ayarlanan varsayılan zaman aralığını aşması mümkündür. Bu durumda, hesaplama iptal edilir ve veriler kaybolur. Daha fazla bilgi için bkz. [C++ amp Içindeki TDRs işleme](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/06/handling-tdrs-in-c-amp/).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: C++ AMP Uygulamasında Hata Ayıklama](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)
+- [İzlenecek yol: C++ AMP uygulamasında hata ayıklama](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)
 - [C++ Hata Ayıklama Yapılandırması Proje Ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md)
 - [Visual Studio 'da GPU hata ayıklamayı başlatma](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/17/start-gpu-debugging-in-visual-studio-2012/)

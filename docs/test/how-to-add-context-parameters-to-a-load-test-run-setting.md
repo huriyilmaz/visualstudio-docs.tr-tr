@@ -10,10 +10,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 10a410b18391b3fbaee98f10be56cdc70c0f3562
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288422"
 ---
 # <a name="how-to-add-context-parameters-to-a-load-test-run-setting"></a>Nasıl yapılır: yük testi çalışma ayarına bağlam parametreleri ekleme
@@ -36,9 +36,9 @@ WebServer1 context parametresinin değerini sürümüne atarsanız `http://Corpo
 
 Ayrıca, farklı yük testi çalışma ayarlarında aynı adı kullanarak bir bağlam parametresine farklı değerler atayarak, farklı ortamları kullanarak yük testini çalıştırabilirsiniz:
 
-- Kurumsal hazırlama Web sunucusu çalıştırma ayarı: adlı bağlam parametresi`WebServer1=http://CorporateStagingWebServer`
+- Kurumsal hazırlama Web sunucusu çalıştırma ayarı: adlı bağlam parametresi `WebServer1=http://CorporateStagingWebServer`
 
-- Kurumsal üretim Web sunucusu çalıştırma ayarı: adlı bağlam parametresi`WebServer1=http://CorporateProductionWebServer`
+- Kurumsal üretim Web sunucusu çalıştırma ayarı: adlı bağlam parametresi `WebServer1=http://CorporateProductionWebServer`
 
   **Çalıştırma ayarını komut satırından değiştirme**
 

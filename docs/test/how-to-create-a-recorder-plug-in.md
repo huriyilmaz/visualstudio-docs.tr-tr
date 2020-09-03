@@ -9,10 +9,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3f75114683a4f456d0514af20c1c201c373bd4b0
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288019"
 ---
 # <a name="how-to-create-a-recorder-plug-in"></a>Nasıl yapılır: Kaydedici eklentisi oluşturma
@@ -67,7 +67,7 @@ Aşağıdaki yordamlarda, kaydedici eklentisi için ilkel kodu oluşturma, eklen
      Olay bağımsız değişkenleri, birlikte çalışmak için iki nesne verecektir: kayıtlı sonuç ve kayıtlı Web performans testi. Bu, belirli değerleri bulmak için sonuç boyunca yineleme yapmanızı sağlar ve sonra değişiklik yapmak için Web performans testinde aynı isteğe atlayın. Web performans testini de yalnızca bir bağlam parametresi eklemek veya URL 'nin parçalarını parametreleştirmek istediğinizde değiştirebilirsiniz.
 
     > [!NOTE]
-    > Web performans testini değiştirirseniz, <xref:Microsoft.VisualStudio.TestTools.WebTesting.PostWebTestRecordingEventArgs.RecordedWebTestModified*> özelliği de true olarak ayarlamanız gerekecektir:`e.RecordedWebTestModified = true;`
+    > Web performans testini değiştirirseniz, <xref:Microsoft.VisualStudio.TestTools.WebTesting.PostWebTestRecordingEventArgs.RecordedWebTestModified*> özelliği de true olarak ayarlamanız gerekecektir: `e.RecordedWebTestModified = true;`
 
 8. Web kaydı oluştuktan sonra kaydedici eklentisinin yürütmesini istediğiniz koda göre daha fazla kod ekleyin. Örneğin, aşağıdaki örnekte gösterildiği gibi özel bağıntıyı işleyecek bir kod ekleyebilirsiniz. Ayrıca, yorumları işlemlere dönüştürme veya Web başarım testine doğrulama kuralları ekleme gibi şeyler için bir kaydedici eklentisi de oluşturabilirsiniz.
 

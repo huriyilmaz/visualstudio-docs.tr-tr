@@ -11,10 +11,10 @@ ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
 ms.openlocfilehash: 190e75579c8388a572c3186c36cb57114284690a
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75915573"
 ---
 # <a name="using-emulator-express-to-run-and-debug-an-azure-cloud-service-on-a-local-machine"></a>Emulator Express kullanarak Azure bulut hizmetini yerel makinede çalıştırma ve hatalarını ayıklama
@@ -23,9 +23,9 @@ ms.locfileid: "75915573"
 ## <a name="using-emulator-express-in-visual-studio"></a>Visual Studio 'da öykünücü Express 'ı kullanma
 Azure SDK 2,3 veya sonraki sürümlerde bir Azure projesi oluşturduğunuzda, öykünücü Express otomatik olarak kullanılır. Azure SDK 'sının önceki bir sürümüyle oluşturulmuş mevcut projeler için, öykünücü Express ' i seçmek için aşağıdaki adımları kullanın:
 
-1. Oluşturun veya bir Azure bulut hizmeti projesini Visual Studio'da açın.
+1. Visual Studio 'da bir Azure bulut hizmeti projesi oluşturun veya açın.
 
-1. İçinde **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünden seçin **özellikleri**.
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünden **Özellikler**' i seçin.
 
 1. Projeler Özellikler sayfasında, **Web** sekmesini seçin.
 

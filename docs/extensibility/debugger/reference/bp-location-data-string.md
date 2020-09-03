@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_DATA_STRING | Microsoft Dokümanlar
+title: BP_LOCATION_DATA_STRING | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,16 +15,16 @@ ms.workload:
 dev_langs:
 - CPP
 ms.openlocfilehash: 75f881feaaa2068abd98d771a63024f20435d98f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737973"
 ---
 # <a name="bp_location_data_string"></a>BP_LOCATION_DATA_STRING
-Kullanıcının tümleşik geliştirme ortamından (IDE) girebileceği bir dizeyi temel alan veri kesme noktalarını ayarlamak için kullanılır.
+Kullanıcının tümleşik geliştirme ortamından (IDE) girebileceği bir dizeyi temel alan veri kesme noktaları ayarlamak için kullanılır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _BP_LOCATION_DATA_STRING {
@@ -37,26 +37,26 @@ typedef struct _BP_LOCATION_DATA_STRING {
 
 ## <a name="members"></a>Üyeler
 `pThread`\
-Kesme noktasının oluştuğu iş parçacığı temsil eden [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
+Kesme noktasının gerçekleştiği iş parçacığını temsil eden [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
 
 `bstrContext`\
-Kod içindeki kesme noktasıbağlamı, genellikle bir çağrı yığınında görüldüğü gibi bir yöntem veya işlev adı.
+Bir çağrı yığınında görülen, genellikle bir yöntem veya işlev adı içindeki kesme noktasının bağlamı.
 
 `bstrDataExpr`\
-Kesme noktasını ayarlamak için kullanıcının girdiği veri dizesi.
+Kullanıcının kesme noktasını ayarlamak için girdiği veri dizesi.
 
 `dwNumElements`\
-Kesme noktasının oluştuğu veri dizesindeki öğe sayısı.
+Kesme noktasının gerçekleştiği veri dizesindeki öğe sayısı.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı, bir birliğin parçası olarak [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapının bir üyesidir.
+Bu yapı, bir birleşimin parçası olarak [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapısının bir üyesidir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

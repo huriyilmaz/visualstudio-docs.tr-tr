@@ -1,5 +1,5 @@
 ---
-title: BP_STATE | Microsoft Dokümanlar
+title: BP_STATE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2721028c0635af274174574e4a264546c1909778
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737802"
 ---
 # <a name="bp_state"></a>BP_STATE
-Bağlı bir kesme noktasının varlığını belirtir ve etkinleştirilip etkinleştirilemeyişep etkinleştirİlmeyişe bilip olmadığını da belirtir.
+Bir bağlantılı kesme noktasının varlığını belirtir ve ayrıca etkinleştirilip etkinleştirilmediğini belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_BP_STATE {
@@ -48,27 +48,27 @@ public enum enum_BP_STATE {
 
 ## <a name="fields"></a>Alanlar
 `BPS_NONE`\
-Kesme noktası nın bulunmadığını belirtir.
+Kesme noktası olmadığını belirtir.
 
 `BPS_DELETED`\
 Kesme noktasının silindiğini belirtir.
 
 `BPS_DISABLED`\
-Kesme noktasının devre dışı bırakıldığını belirtir.
+Kesme noktasının devre dışı olduğunu belirtir.
 
 `BPS_ENABLED`\
-Kesme noktasının etkin olduğunu belirtir.
+Kesme noktasının etkinleştirildiğini belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
-[GetState](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md) yönteminden döndürülür.
+[GetState](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md) yönteminden döndürüldü.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetState](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md)

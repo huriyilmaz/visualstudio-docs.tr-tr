@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4581d7ea0b40e2b6b519f0beafaee8744e0b46c1
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85284925"
 ---
 # <a name="how-to-search-for-topics"></a>Nasıl yapılır: konu arama
@@ -72,7 +72,7 @@ Arama algoritması, arama sonuçlarının sonuçlar listesinde daha yüksek veya
 
 3. Arama sözcüklerinin daha yüksek bir yoğunluğunu içeren içerik, arama sözcüklerini daha düşük bir yoğunlukta olan içerikten daha yüksek olarak derecelendirilir.
 
-### <a name=""></a><a name="stopwords">Aramalardaki sözcükler yoksayıldı (sözcükleri Durdur)</a>
+### <a name=""></a><a name="stopwords"> Aramalardaki sözcükler yoksayıldı (sözcükleri Durdur) </a>
 
 Genellikle durdurma kelimeleri olarak adlandırılan yaygın olarak oluşan sözcükler veya sayılar, tam metin araması sırasında otomatik olarak yoksayılır. Örneğin, "pass through" ifadesini arıyorsanız, arama sonuçları "pass" sözcüğünü içeren, ancak "Through" sözcüğünü içeren konuları görüntüler.
 

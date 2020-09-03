@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 5d14abdd9ba6547a3aaf131084168be2e453dd04
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77558179"
 ---
 # <a name="publish-wizard-office-development-in-visual-studio"></a>Yayımlama Sihirbazı (Visual Studio 'da Office geliştirme)
@@ -39,14 +39,14 @@ ms.locfileid: "77558179"
 
 - *C:\deploy\myapplication* veya *\MyApplication*gibi standart Windows biçiminde göreli veya mutlak bir yol.
 
-- *\\\ServerName\MyApplication\\*gibi bir evrensel adlandırma KURALı (UNC) yolu.
+- * \\ \ServerName\MyApplication \\ *gibi bir evrensel adlandırma kuralı (UNC) yolu.
 
-- `http://www.contoso.com/MyApplication`gibi bir Web sitesinin URL 'SI.
+- Bir Web sitesinin URL 'SI, örneğin `http://www.contoso.com/MyApplication` .
 
-  Varsayılan olarak, yayımlama konumu IIS yüklüyse *http://localhost/projectname/* veya IIS yüklü değilse Yayımla \ dizinidir.
+  Varsayılan olarak, yayımlama konumu *http://localhost/projectname/* IIS yüklü veya IIS yüklü değilse Yayımla \ dizinine sahipsiniz.
 
 > [!NOTE]
-> Hedef bilgisayarda Windows Vista çalışıyorsa daha fazla dikkat edilecek noktalar vardır. Yerel yayımlama seçeneğini kullanmak için Windows Vista bilgisayarında bir yönetici olmanız gerekir. Ayrıca, IIS 'nin yüklü olup olmamasından bağımsız olarak, varsayılan konum her zaman *yayımla\\* dizinidir.
+> Hedef bilgisayarda Windows Vista çalışıyorsa daha fazla dikkat edilecek noktalar vardır. Yerel yayımlama seçeneğini kullanmak için Windows Vista bilgisayarında bir yönetici olmanız gerekir. Ayrıca, IIS 'nin yüklü olup olmamasından bağımsız olarak varsayılan konum her zaman *Yayımla \\ * dizinidir.
 
 ## <a name="what-is-the-default-installation-path-on-end-user-computers"></a>Son kullanıcı bilgisayarlarında varsayılan yükleme yolu nedir?
  Yükleme yolu isteğe bağlıdır. İsterseniz yükleme yolunu daha sonra ayarlayabilirsiniz. Ayrıntılar için bkz. [nasıl yapılır: bir Office çözümünün yükleme yolunu değiştirme](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd).
@@ -63,5 +63,5 @@ ms.locfileid: "77558179"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce kullanarak Office çözümü dağıtma](../vsto/deploying-an-office-solution-by-using-clickonce.md)
-- [Yayımla sayfası, Visual Studio &#40;'Da proje Tasarımcısı Office geliştirme&#41;](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)
+- [Visual Studio 'da Office geliştirme &#40;yayımlama sayfası, proje Tasarımcısı&#41;](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)

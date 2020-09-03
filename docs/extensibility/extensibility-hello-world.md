@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 796cb53ea5124662c695cce55241794802f042c0
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905930"
 ---
 # <a name="tutorial---create-your-first-extension-hello-world"></a>Öğretici-ilk uzantınızı oluşturun: Merhaba Dünya
@@ -33,7 +33,7 @@ Bu örnekte, "deyin Merhaba Dünya!" adlı özel bir menü düğmesi eklemek Iç
 > [!NOTE]
 > Bu makale Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio genişletilebilirlik](/visualstudio/mac/extending-visual-studio-mac-walkthrough)Kılavuzu.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Başlamadan önce, ihtiyacınız olan VSıX şablonunu ve örnek kodu içeren **Visual Studio uzantısı geliştirme** iş yükünü yüklediğinizden emin olun.
 
@@ -76,7 +76,7 @@ Adım 2. Projeye sağ tıklayın (çözüme değil). Bağlam menüsünde **Ekle*
 
 3. Adım **Genişletilebilirlik** bölümünü ve ardından **komut**öğesini seçin.
 
-4. Adım. Alttaki **ad** alanında, *Command.cs*gibi bir dosya adı girin.
+4. Adım: Alttaki **ad** alanında, *Command.cs*gibi bir dosya adı girin.
 
 ![özel komut](media/hello-world-vsix-command.png)
 

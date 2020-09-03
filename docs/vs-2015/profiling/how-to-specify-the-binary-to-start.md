@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Başlatma için ikili dosya belirtme | Microsoft Docs'
+title: 'Nasıl yapılır: başlatılacak Ikiliyi belirtme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -16,16 +16,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 919e84393cf4aef929a504aadbefe905afe24bfb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203435"
 ---
-# <a name="how-to-specify-the-binary-to-start"></a>Nasıl yapılır: Başlatma İçin İkili Dosya Belirtme
+# <a name="how-to-specify-the-binary-to-start"></a>Nasıl yapılır: Başlatma için İkili Dosya Belirtme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İçin profil ikili dosyaları, DLL'ler gibi bilgileri girmeniz gerekir  **\<hedef > özellik sayfaları** iletişim kutusu. Bu bilgiler, DLL projesi çağıran uygulama nereden gösterir.  
+Dll 'Ler gibi ikili dosyaların profilini almak için ** \<Target> Özellik sayfaları** iletişim kutusuna bilgi girmeniz gerekir. Bu bilgi, DLL projesinin çağıran uygulamayı bulabileceği yeri gösterir.  
   
  **Gereksinimler**  
   
@@ -33,19 +33,19 @@ ms.locfileid: "68203435"
   
 ### <a name="to-specify-the-executable-to-start"></a>Başlatılacak yürütülebilir dosyayı belirtmek için  
   
-1. İçinde **performans Gezgini**ikili hedef sağ tıklayın ve ardından **özellikleri**.  
+1. **Performans Gezgini**, hedef ikiliye sağ tıklayın ve ardından **Özellikler**' e tıklayın.  
   
-2. İçinde **özellik sayfaları** iletişim kutusu, tıklayın **başlatma** özellikleri.  
+2. **Özellik sayfaları** iletişim kutusunda, **başlatma** özellikleri ' ne tıklayın.  
   
-3. Seçin **proje özelliklerini geçersiz kılma** onay kutusu.  
+3. **Proje özelliklerini geçersiz kıl** onay kutusunu seçin.  
   
-4. İçinde **başlatılacak yürütülebilir** metin kutusunda, dosya konumunu belirtin.  
+4. **Başlatılacak yürütülebilir** metin kutusunda dosya konumunu belirtin.  
   
-5. İçinde **bağımsız değişkenleri** metin kutusunda, uygulamayı başlatmak için gerekli bağımsız değişkenleri belirtin.  
+5. **Bağımsız değişkenler** metin kutusunda, uygulamayı başlatmak için gereken bağımsız değişkenleri belirtin.  
   
-6. İçinde **çalışma dizini** metin kutusunda, dizin konumunu belirtin.  
+6. **Çalışma dizini** metin kutusunda dizin konumunu belirtin.  
   
-7.           **Tamam**'ı tıklatın.  
+7. **Tamam**’a tıklayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Performans Oturumlarını Yapılandırma](../profiling/configuring-performance-sessions.md)

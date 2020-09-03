@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: faac29c59b78d8f3f1a0260b0b7a8ace16169f9d
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75916794"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>Nasıl yapılır: Etki Alanına Özgü Dil Tasarımcısını Genişletme
@@ -26,11 +26,11 @@ Bir tasarımcıda DSL tanımlarını düzenlemek için kullandığınız uzantı
 
 #### <a name="to-create-a-dsl-designer-extension-solution"></a>DSL Tasarımcısı uzantısı çözümü oluşturmak için
 
-1. Sınıf kitaplığı proje şablonunu kullanarak yeni bir proje oluşturun. **Yeni proje** iletişim kutusunda,  **C# görsel** ' e tıklayın ve ardından orta penceredeki **sınıf kitaplığı**' na tıklayın.
+1. Sınıf kitaplığı proje şablonunu kullanarak yeni bir proje oluşturun. **Yeni proje** iletişim kutusunda, **Visual C#** ' ye tıklayın ve ardından orta penceredeki **sınıf kitaplığı**' na tıklayın.
 
      Bu proje, uzantılarınızın kodunu içerecektir.
 
-2. VSıX proje şablonunu kullanarak yeni bir proje oluşturun. **Yeni proje** iletişim kutusunda, **görsel C#** ' i genişletin, **genişletilebilirlik**' e tıklayın ve ardından ortadaki pencerede **VSIX projesi**' ni seçin.
+2. VSıX proje şablonunu kullanarak yeni bir proje oluşturun. **Yeni proje** iletişim kutusunda, **Visual C#**' ı genişletin, **genişletilebilirlik**' e tıklayın ve ardından ortadaki pencerede **VSIX projesi**' ni seçin.
 
      **Çözüme Ekle**' yi seçin.
 
@@ -46,45 +46,45 @@ Bir tasarımcıda DSL tanımlarını düzenlemek için kullandığınız uzantı
 
 7. Sınıf kitaplığı projesinde, aşağıdaki derlemelere başvurular ekleyin:
 
-     Microsoft.VisualStudio.CoreUtility
+     Microsoft. VisualStudio. CoreUtility
 
-     Microsoft.VisualStudio.Modeling.Sdk.11.0
+     Microsoft. VisualStudio. model. SDK. 11.0
 
-     Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
+     Microsoft. VisualStudio. modellemesi. SDK. diyagramlar. 11.0
 
-     Microsoft.VisualStudio.Modeling.Sdk.DslDefinition.11.0
+     Microsoft. VisualStudio. modellemesi. SDK. DslDefinition. 11.0
 
-     Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0
+     Microsoft. VisualStudio. model. SDK. Integration. 11.0
 
-     System.ComponentModel.Composition
+     System. ComponentModel. Composition
 
-     System.Drawing
+     System. Drawing
 
-     System.Drawing.Design
+     System. Drawing. Design
 
-     System.Windows.Forms
+     System. Windows. Forms
 
 ## <a name="testing-and-deployment"></a>Test ve dağıtım
- Bu konudaki herhangi bir uzantıyı test etmek için çözümü derleyin ve çalıştırın. Deneysel bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneği açılır. Bu örnekte, bir DSL çözümü açın. DslDefinition diyagramını düzenleyin. Uzantı davranışı görülebilir.
+ Bu konudaki herhangi bir uzantıyı test etmek için çözümü derleyin ve çalıştırın. Deneysel bir örneği [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] açılır. Bu örnekte, bir DSL çözümü açın. DslDefinition diyagramını düzenleyin. Uzantı davranışı görülebilir.
 
- Uzantıları ana [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ve diğer bilgisayarlara dağıtmak için aşağıdaki adımları izleyin:
+ Uzantıları ana [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ve diğer bilgisayarlara dağıtmak için aşağıdaki adımları izleyin:
 
-1. VSIX projenizde depo VSIX yükleme dosyasını bulmak\\*\*\\\*.vsix
+1. VSIX projenizde VSIX yükleme dosyasını bin \\ * \\ \* . vsix ' de bulun
 
 2. Bu dosyayı hedef bilgisayara kopyalayın ve ardından Windows Gezgini 'nde (veya dosya Gezgini) çift tıklayın.
 
-    Uzantının yüklendiğini doğrulamak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantısı Yöneticisi açılır.
+    Uzantının [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yüklendiğini doğrulamak için Uzantı Yöneticisi açılır.
 
    Uzantıyı kaldırmak için şu adımları izleyin:
 
-3. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], **Araçlar** menüsünde **Uzantı Yöneticisi**' ne tıklayın.
+3. ' nde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , **Araçlar** menüsünde **Uzantı Yöneticisi**' ne tıklayın.
 
 4. Uzantıyı seçin ve silin.
 
 ## <a name="adding-a-shortcut-menu-command"></a>Kısayol menü komutu ekleme
  DSL Tasarımcısı yüzeyinde veya DSL Gezgini penceresinde kısayol menü komutu görünmesini sağlamak için, aşağıdaki gibi bir sınıf yazın.
 
- Sınıf `ICommandExtension` uygulamalıdır ve özniteliği `DslDefinitionModelCommandExtension`sahip olmalıdır.
+ Sınıfının uygulanması `ICommandExtension` ve özniteliğine sahip olması gerekir `DslDefinitionModelCommandExtension` .
 
 ```
 using System.Collections.Generic;

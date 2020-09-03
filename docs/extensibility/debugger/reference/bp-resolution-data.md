@@ -1,5 +1,5 @@
 ---
-title: BP_RESOLUTION_DATA | Microsoft Dokümanlar
+title: BP_RESOLUTION_DATA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 93a78f84c10af047e596459b68211b885d3c3085
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737846"
 ---
 # <a name="bp_resolution_data"></a>BP_RESOLUTION_DATA
-Veri kesme noktasını bağlamanın sonucunu açıklar.
+Veri kesme noktası bağlamanın sonucunu açıklar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _BP_RESOLUTION_DATA {
@@ -50,23 +50,23 @@ public struct BP_RESOLUTION_DATA {
 Bağlanan veri ifadesi.
 
 `bstrFunc`\
-Veri kesme noktasının bağlı olduğu işlevin adı (varsa).
+Veri kesme noktasının bağlandığı işlevin adı (varsa).
 
 `bstrImage`\
-Veri kesme noktasının bağlı olduğu modülün adı (MyModule.dll, örneğin).
+Veri kesme noktasının bağlandığı modülün adı (örneğin MyModule.dll).
 
 `dwFlags`\
-Veri kesme noktasının nasıl uygulandığını açıklayan [BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md) numaralandırmadeğeri.
+[BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md) numaralandırmasından, veri kesme noktasının nasıl uygulandığını açıklayan bir değer.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu [yapı,](../../../extensibility/debugger/reference/bp-resolution-location.md) [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) yöntemi yle döndürülen [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) yapının bir üyesi olan BP_RESOLUTION_LOCATION yapının bir üyesidir.
+Bu yapı, [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) yöntemi tarafından döndürülen [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) yapısının bir üyesini döndüren [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) yapısının bir üyesidir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

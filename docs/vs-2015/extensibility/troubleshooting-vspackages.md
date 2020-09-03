@@ -12,10 +12,10 @@ caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e740860046ee9d18a137dbd513202e259e90bf79
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77557977"
 ---
 # <a name="troubleshooting-vspackages"></a>VSPackage Sorunlarını Giderme
@@ -25,11 +25,11 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
   
 ### <a name="to-troubleshoot-a-vspackage-that-keeps-visual-studio-from-starting"></a>Visual Studio 'Nun başlamasını engelleyen bir VSPackage sorunlarını gidermek için  
   
-- Güvenli modda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] başlatın.  
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Güvenli modda başlatın.  
   
-     Güvenli modda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] başlatmak için komut isteminde **devenv. exe/safemode**yazın.  
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Güvenli modda başlamak için, bir komut isteminde **devenv.exe/safemode**yazın.  
   
-     Bu işlem sırasında, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]eklenen VSPackages dışında VSPackages yüklenmez.  
+     Bu işlem sırasında, ile birlikte gelen VSPackages 'lar hariç hiçbir VSPackages yüklenmez [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
 ### <a name="to-troubleshoot-a-vspackage-that-does-not-load"></a>Yüklenmeyen bir VSPackage sorunlarını gidermek için  
   
@@ -37,7 +37,7 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
   
      Daha fazla bilgi için bkz. [deneysel örnek](../extensibility/the-experimental-instance.md).  
   
-2. VSPackage, Deneysel kayıt defteri kökünde çalışmayı hedeflediyse, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Deneysel sürümünü çalıştırdığınızdan emin olun.  
+2. VSPackage, Deneysel kayıt defteri kökünde çalışmayı hedeflediyse, Deneysel sürümünü çalıştırdığınızdan emin olun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
      Deneysel sürümü çalıştırmak için, komut penceresine şunu yazın: **devenv/rootsuffix exp**.  
   
@@ -45,10 +45,10 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
   
      Daha fazla bilgi için bkz. [VSPackages 'Yi kaydetme](internals/registering-vspackages.md) ve [VSPackages 'i yönetme](../extensibility/managing-vspackages.md).  
   
-4. VSPackage yüklemesi başarısız olan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneğinin **Çıkış** penceresini açın. VSPackage 'ın neden yükleme başarısız olduğuna ilişkin bilgiler bu pencerede görüntülenebilir.  
+4. **Output** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] VSPackage yüklemesi başarısız olan örneğinin çıkış penceresini açın. VSPackage 'ın neden yükleme başarısız olduğuna ilişkin bilgiler bu pencerede görüntülenebilir.  
   
     > [!NOTE]
-    > [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] tümleşik geliştirme ortamından (IDE) [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Deneysel sürümünü başlatıyorsanız her iki sürümün de **Çıkış** penceresini inceleyin.  
+    > ' In Deneysel sürümünü [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tümleşik geliştirme ORTAMıNDAN (IDE) başlatıyorsanız, her iki sürümün de **Çıkış** penceresini inceleyin.  
   
 5. Etkinlik günlüğünü inceleyin.  
   
@@ -62,13 +62,13 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
   
 ### <a name="to-troubleshoot-a-command-that-is-not-visible-or-that-generates-an-error-when-you-click-a-command"></a>Görünür olmayan veya bir komuta tıkladığınızda hata üreten bir komutun sorunlarını gidermek için  
   
-1. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] komut Istemine aşağıdakini yazarak yeni veya değiştirilmiş menü komutlarını ve IDE 'de zaten mevcut olanları birleştirin: **devenv/rootsuffix exp/Setup**.  
+1. Komut Istemine aşağıdaki komutu yazarak yeni veya değiştirilmiş menü komutlarını ve IDE 'de zaten var olanları birleştirin [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] : **devenv/rootsuffix exp/Setup**.  
   
-2. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], VSPackage için UI. dll ' nin bulabileceği emin olun.  
+2. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]VSPackage için UI.dll bulabileceğinizi doğrulayın.  
   
     1. Kayıt defterinin paketler bölümünde VSPackage 'un CLSID 'sini bulun:  
   
-         HKLM\Software\Microsoft\Visual Studio\\*\<sürümü >* \packages  
+         HKLM\Software\Microsoft\Visual Studio \\ *\<version>* \packages  
   
     2. SatelliteDll alt anahtarı tarafından verilen yolun doğru olduğundan emin olun.  
   
@@ -115,11 +115,11 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
   
    2. **Özellik sayfaları** Iletişim kutusundaki **Başvurular** sekmesini seçin ve tüm yolların doğru olduğundan emin olun. Alternatif olarak, başvurulan nesnelere gitmek için **nesne tarayıcısı** kullanabilirsiniz.  
   
-        Yönetilen kod için, başarısız derleme yüklerinin ayrıntılarını göstermek üzere [Fuslogvw. exe ' yi (derleme bağlama günlük Görüntüleyicisi)](/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer) kullanabilirsiniz.  
+        Yönetilen kod için, başarısız derleme yüklerinin ayrıntılarını göstermek üzere [Fuslogvw.exe (derleme bağlama günlük Görüntüleyicisi)](/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer) kullanabilirsiniz.  
   
-2. Yönetilmeyen kod için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] CLSID kayıt defteri düğümünde VSPackage CLSID 'sini bulun:  
+2. Yönetilmeyen kod için, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] CLSID kayıt defteri düğümünde VSPackage CLSID 'sini bulun:  
   
-    HKLM\Software\Microsoft\Visual Studio\\*\<sürümü >* \CLSID  
+    HKLM\Software\Microsoft\Visual Studio \\ *\<version>* \CLSID  
   
    Inprocserver32 girişinin VSPackage dll dosyasının doğru yoluna sahip olduğundan emin olun.  
   

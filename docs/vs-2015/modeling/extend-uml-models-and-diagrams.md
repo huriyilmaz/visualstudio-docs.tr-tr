@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ee4e307040f22078ed66f897eaa868ccfd259577
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586722"
 ---
 # <a name="extend-uml-models-and-diagrams"></a>UML modellerini ve diyagramları genişletme
@@ -32,7 +32,7 @@ Bu konu başlığı altında, Visual Studio 'Ya dahil edilen UML modelleme araç
 
  Daha fazla bilgi için bkz. Bu video: ![video MSDN 'ye bağlantı](../data-tools/media/playvideo.gif "PlayVideo")[MSDN nasıl yapılır serisi: UML araçları ve genişletilebilirliği](https://msdn.microsoft.com/vstudio/ff859492).
 
-## <a name="requirements"></a><a name="Requirements"></a>Gereklilik
+## <a name="requirements"></a><a name="Requirements"></a> Gereklilik
 
 - [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
 
@@ -58,7 +58,7 @@ Bu konu başlığı altında, Visual Studio 'Ya dahil edilen UML modelleme araç
  Daha fazla bilgi için bkz. [UML modelleri için doğrulama kısıtlamaları tanımlama](../modeling/define-validation-constraints-for-uml-models.md).
 
 ## <a name="menu-commands"></a>Menü Komutları
- Kullanıcıların bir UML diyagramında öğelere sağ tıklayıp çağırabileceği komutları tanımlayabilirsiniz. Komutlar, modeli ve diyagramları güncelleştirebilir veya ' de [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]başka işlemler gerçekleştirebilir.
+ Kullanıcıların bir UML diyagramında öğelere sağ tıklayıp çağırabileceği komutları tanımlayabilirsiniz. Komutlar, modeli ve diyagramları güncelleştirebilir veya ' de başka işlemler gerçekleştirebilir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] .
 
  Fabrikam, bir iade masası oluşturma ve onu seçili bir taşıyıcı bandına bağlama veya bir diyagramı şirketin düzen kurallarına göre yeniden düzenleme gibi sık gerçekleştirilen işlemleri otomatikleştirmek için menü komutlarını tanımlar.
 
@@ -79,7 +79,7 @@ Bu konu başlığı altında, Visual Studio 'Ya dahil edilen UML modelleme araç
  Daha fazla bilgi için bkz. [nasıl yapılır: UML modeldeki değişikliklere yanıt verme](../misc/how-to-respond-to-changes-in-a-uml-model.md).
 
 ## <a name="model-bus"></a>Model veri yolu
- Model veri yolu, başka bir diyagramdan veya başka [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] bir uzantıdan bir diyagrama veya modele erişmenizi sağlar. Bunun yanı sıra, birden fazla kişinin aynı anda birleştirilmiş modelde çalışabilmesi için birden fazla model arasında bilgi yaymanızı sağlar.
+ Model veri yolu, başka bir diyagramdan veya başka bir uzantıdan bir diyagrama veya modele erişmenizi sağlar [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] . Bunun yanı sıra, birden fazla kişinin aynı anda birleştirilmiş modelde çalışabilmesi için birden fazla model arasında bilgi yaymanızı sağlar.
 
  Fabrikam, Bagaj işleme donanımını göstermek için Etkinlik diyagramlarındaki öğeleri kullanır. Her bir ekipman öğesi, başka bir modelde olabilen başka bir diyagramda daha ayrıntılı bir belirtime sahip olabilir. Bagaj akış diyagramındaki doğrulama kısıtlamaları, donatımın ilgili özelliklerini diğer diyagramlardan alabilir. Diğer diyagramların başvuruları, stereotiplerde tanımlanan ek özelliklerde depolanır.
 
