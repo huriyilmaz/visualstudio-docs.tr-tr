@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 605b6ff67963c8df3e711c3f0b000c23f82050cd
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85289254"
 ---
 # <a name="msbuild-concepts"></a>MSBuild kavramları
@@ -32,7 +32,7 @@ MSBuild, derleme platformunun yazılım derleme şeklini denetlemek için kullan
 | [Özellikleri ve öğeleri karşılaştırma](../msbuild/comparing-properties-and-items.md) | MSBuild özelliklerini ve öğelerini karşılaştırır. Her ikisi de görevlere bilgi geçirmek, koşulları değerlendirmek ve proje dosyası genelinde başvurulabilen değerleri depolamak için kullanılır. |
 | [MSBuild özel karakterleri](../msbuild/msbuild-special-characters.md) | MSBuild 'in özel bağlamlarda özel kullanım için ayrılmış olduğu bazı karakterleri nasıl atladığını açıklar. |
 | [İzlenecek yol: Sıfırdan MSBuild proje dosyası oluşturma](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md) | Yalnızca bir metin düzenleyicisi kullanarak basit bir proje dosyasının artımlı olarak nasıl oluşturulacağını gösterir. |
-| [İzlenecek Yol: MSBuild Kullanma](../msbuild/walkthrough-using-msbuild.md) | MSBuild 'in yapı taşlarını tanıtır ve Visual Studio tümleşik geliştirme ortamı 'nı (IDE) kapatmadan MSBuild projelerinin nasıl yazılacağını, değiştirileceğini ve hata ayıklacağınızı gösterir. |
-| [MSBuild 'in projeleri nasıl oluşturur](build-process-overview.md) | MSBuild içinde kullanılan iç derleme işlemini açıklar |
+| [İzlenecek yol: MSBuild Kullanma](../msbuild/walkthrough-using-msbuild.md) | MSBuild 'in yapı taşlarını tanıtır ve Visual Studio tümleşik geliştirme ortamı 'nı (IDE) kapatmadan MSBuild projelerinin nasıl yazılacağını, değiştirileceğini ve hata ayıklacağınızı gösterir. |
+| [MSBuild nasıl proje oluşturur](build-process-overview.md) | MSBuild içinde kullanılan iç derleme işlemini açıklar |
 | [MSBuild başvurusu](../msbuild/msbuild-reference.md) | Başvuru bilgilerini içeren belgelerin bağlantıları. |
 | [MSBUILD](../msbuild/msbuild.md) | Bir proje dosyasının XML şemasına genel bir bakış sunar ve yazılım oluşturan işlemlerin nasıl kontrol etdiğini gösterir. |

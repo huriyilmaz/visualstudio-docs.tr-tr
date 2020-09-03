@@ -1,5 +1,5 @@
 ---
-title: OnError Öğesi (MSBuild) | Microsoft Dokümanlar
+title: HataDurumunda öğe (MSBuild) | Microsoft Docs
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -19,19 +19,20 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 18edfe06a4f2cb98fcb41e93c920b03c53daea8c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633089"
 ---
-# <a name="onerror-element-msbuild"></a>OnError öğesi (MSBuild)
+# <a name="onerror-element-msbuild"></a>HataDurumunda öğesi (MSBuild)
 
-Öznitelik başarısız bir görev `ContinueOnError` içinse, `false` bir veya daha fazla hedefin yürütülmesine neden olur.
+`ContinueOnError`Öznitelik `false` başarısız bir görev için ise, bir veya daha fazla hedefin yürütülmesine neden olur.
 
- \<Proje \<> \<Hedef> OnError>
+ \<Project> \<Target>
+ \<OnError>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <OnError ExecuteTargets="TargetName"
@@ -46,8 +47,8 @@ ms.locfileid: "77633089"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek durum. Daha fazla bilgi için [Koşullar'a](../msbuild/msbuild-conditions.md)bakın.|
-|`ExecuteTargets`|Gerekli öznitelik.<br /><br /> Bir görev başarısız olursa yürütülecek hedefler. Birden fazla hedefi yarı kolonlu olarak ayırın. Belirtilen sırada birden çok hedef yürütülür.|
+|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
+|`ExecuteTargets`|Gerekli öznitelik.<br /><br /> Bir görev başarısız olursa yürütülecek hedefler. Birden çok hedefi noktalı virgülle ayırın. Birden çok hedef belirtilen sırada yürütülür.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -61,13 +62,13 @@ ms.locfileid: "77633089"
 
 ## <a name="remarks"></a>Açıklamalar
 
- MSBuild, `OnError` öğenin `Target` görevlerinden biri `ContinueOnError` `ErrorAndStop` (veya) `false`olarak ayarlanan öznitelikte başarısız olursa öğeyi yürütür. Görev başarısız olduğunda, öznitelikte `ExecuteTargets` belirtilen hedefler yürütülür. Hedefte birden `OnError` fazla öğe varsa, `OnError` görev başarısız olduğunda öğeler sırayla yürütülür.
+ MSBuild, öğe öğesinin `OnError` `Target` görevlerden biri `ContinueOnError` `ErrorAndStop` (veya) olarak ayarlanan öznitelik ile başarısız olursa öğesini yürütür `false` . Görev başarısız olduğunda, özniteliğinde belirtilen hedefler `ExecuteTargets` yürütülür. Hedefte birden fazla `OnError` öğe varsa, `OnError` görev başarısız olduğunda öğeler sırayla yürütülür.
 
- Öznitelik hakkında `ContinueOnError` bilgi için [Görev öğesine (MSBuild)](../msbuild/task-element-msbuild.md)bakın. Hedefler hakkında bilgi için [Bkz. Hedefler.](../msbuild/msbuild-targets.md)
+ Özniteliği hakkında daha fazla bilgi için `ContinueOnError` , bkz. [görev öğesi (MSBuild)](../msbuild/task-element-msbuild.md). Hedefler hakkında daha fazla bilgi için bkz. [targets](../msbuild/msbuild-targets.md).
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki kod ve `TaskOne` `TaskTwo` görevleri yürütür. Başarısız `TaskOne` olursa, MSBuild `OnError` öğeyi değerlendirir `OtherTarget` ve hedefi yürütür.
+ Aşağıdaki kod `TaskOne` ve `TaskTwo` görevlerini yürütür. `TaskOne`Başarısız olursa, MSBuild öğeyi değerlendirir `OnError` ve `OtherTarget` hedefi yürütür.
 
 ```xml
 <Target Name="ThisTarget">
@@ -82,4 +83,4 @@ ms.locfileid: "77633089"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
-- [Hedef](../msbuild/msbuild-targets.md)
+- [Targets](../msbuild/msbuild-targets.md)

@@ -1,5 +1,5 @@
 ---
-title: Interop Meclislerinde Komuta Sözleşmeleri | Microsoft Dokümanlar
+title: Birlikte çalışma derlemelerindeki komut sözleşmeleri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,22 +12,22 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4f20a4f479d62cd1b64c3b13ff6e1a949656a668
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80709682"
 ---
-# <a name="command-contracts-in-interop-assemblies"></a>Interop montajlarında komuta sözleşmeleri
-<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> Arabirim üzerinden komutları işlemek için temel sözleşme, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> ortamın komutun desteklenip desteklenmediğini belirlemek için yöntemi ve desteklenirse durumunu ve metnini belirlemek için çağrılmasıdır. Ardından, ortam komutu <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> yürütmek için yöntemi çağırır.
+# <a name="command-contracts-in-interop-assemblies"></a>Birlikte çalışma derlemelerindeki komut sözleşmeleri
+Arabirim aracılığıyla komutları işlemeye yönelik temel sözleşme, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> ortamın, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> özelliğin desteklenip desteklenmediğini ve desteklenip desteklenmediğini, durumunu ve metnini belirlemede, desteklenip desteklenmediğini belirlemede metodunu çağırdığı durumdur. Daha sonra ortam, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> komutu yürütmek için yöntemini çağırır.
 
- Yöntem, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> tüm komutlar için aynı şekilde işlenir. Daha fazla iletişim, gerekirse (örneğin, açılır listeler ile), <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> uygun parametrelere sahip yöntem çağırArak yönetilir. Bu parametrelerin yorumlanması belirtilen komuta bağlıdır.
+ <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>Yöntemi tüm komutlar için aynı şekilde işlenir. Gerekirse daha fazla iletişim (örneğin, açılan listelerle), <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> yöntemi uygun parametrelerle çağırarak yönetilir. Bu parametrelerin yorumu, belirtilen komuta bağlıdır.
 
- Komut hedefi çıkış parametresindeki değerleri döndürürse, arayan her zaman ayrılan kaynakları serbest bırakmaktan sorumludur. Bu parametre bir varyant olduğundan, varyantı temizlemek kaynakları serbest bırakmaktadır.
+ Komut hedefi çıkış parametresindeki değerleri döndürürse, çağıran tüm kaynakları boşaltmaktan her zaman sorumludur. Bu parametre bir değişken olduğundan, varyantın temizlenmesi kaynakları serbest bırakır.
 
- Komutların bir hiyerarşi penceresi içinde çalışması gereken <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> durumlarda, arabirim kullanılmalıdır. Arayüzü benzer yöntemlerle benzer bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A>sözleşme vardır: ve . <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>
+ Komutların bir hiyerarşi penceresi içinde çalışması gereken durumlarda, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> arabirimin kullanılması gerekir. <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>Arabirim, benzer yöntemlere sahip benzer bir sözleşmeye sahiptir: <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> .
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [VSPackages kullanıcı arabirimi öğelerini nasıl ekler?](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [VSPackages komut yönlendirme](../../extensibility/internals/command-routing-in-vspackages.md)
-- [Komut uygulaması](../../extensibility/internals/command-implementation.md)
+- [VSPackages Kullanıcı arabirimi öğeleri ekleme](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [VSPackages 'de komut yönlendirme](../../extensibility/internals/command-routing-in-vspackages.md)
+- [Komut uygulama](../../extensibility/internals/command-implementation.md)

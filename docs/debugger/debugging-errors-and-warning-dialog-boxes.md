@@ -22,10 +22,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d9c52c76bbd8623f9ec9b0ce8f3e5463c638d8f7
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75916444"
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>Hataları Ayıklama ve Uyarı İletişim Kutuları
@@ -38,7 +38,7 @@ Uygulamanızda hata ayıklarken karşılaşabileceğiniz hatalar ve uyarı ileti
 
  [Hata Ayıklayıcı Kaynak Kodu veya Ayrıştırılmış Kodu Görüntüleyemez](../debugger/debugger-cannot-display-source-code-or-disassembly.md)
  
- [Hata ayıklayıcı Hizmetleri belleği azalıyor](../debugger/error-debugger-services-no-memory.md)
+ [Belleği Dolan Hata Ayıklayıcı Hizmetleri](../debugger/error-debugger-services-no-memory.md)
 
  [Hata Ayıklama Oturumu İçin Yürütülebilir İletişim Kutusu](../debugger/executable-for-debugging-session-dialog-box.md)
 
@@ -56,7 +56,7 @@ Uygulamanızda hata ayıklarken karşılaşabileceğiniz hatalar ve uyarı ileti
 
  [Makineye bağlanılamıyor](../debugger/error-unable-to-connect-to-the-machine-name-the-machine-cannot-be-found-on-the-network.md)
 
- [Hata: Sistemde Çekirdek Hata Ayıklayıcı Etkinleştirildiğinden Hata Ayıklama Mümkün Değil](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)
+ [Hata: sistemde bir çekirdek hata ayıklayıcısı etkinleştirildiğinden hata ayıklama mümkün değil](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)
 
 ## <a name="related-sections"></a>İlgili Bölümler
  [Betik ve Web 'de hata ayıklama: hatalar ve sorun giderme](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
@@ -67,6 +67,6 @@ Uygulamanızda hata ayıklarken karşılaşabileceğiniz hatalar ve uyarı ileti
 
  [SQL hata ayıklama kurulumu sorunlarını giderme](/previous-versions/visualstudio/visual-studio-2010/s7ahaxtd(v=vs.100))
 
- [Yerel kodda hata ayıklama SSS](../debugger/debugging-native-code-faqs.md)
+ [Yerel kod SSS hatalarını ayıklama](../debugger/debugging-native-code-faqs.md)
 
- [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
+ [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)

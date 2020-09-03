@@ -1,5 +1,5 @@
 ---
-title: '4\. Adım: TableLayoutPanel denetimi ile formunuzu düzenleyin | Microsoft Docs'
+title: '4. Adım: TableLayoutPanel denetimi ile formunuzu düzenleyin | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,28 +10,28 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f61a308fcd68b03852176087438c22c245078693
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851541"
 ---
-# <a name="step-4-lay-out-your-form-with-a-tablelayoutpanel-control"></a>4\. Adım: TableLayoutPanel Denetimi ile Formunuzu Düzenleme
+# <a name="step-4-lay-out-your-form-with-a-tablelayoutpanel-control"></a>4. Adım: TableLayoutPanel Denetimi ile Formunuzu Düzenleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu adımda formunuza bir `TableLayoutPanel` denetimi eklersiniz. TableLayoutPanel, daha sonra ekleyeceğiniz formdaki denetimleri düzgün şekilde hizalamaya yardımcı olur.
+Bu adımda `TableLayoutPanel` formunuza bir denetim eklersiniz. TableLayoutPanel, daha sonra ekleyeceğiniz formdaki denetimleri düzgün şekilde hizalamaya yardımcı olur.
 
- ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 2](https://msdn.microsoft.com/vbasic/gg315945.aspx) veya [öğretici 1: video 2 ' de C# bir resim görüntüleyici oluşturma](https://msdn.microsoft.com/vcsharp/gg278410.aspx). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
+ ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 2](https://msdn.microsoft.com/vbasic/gg315945.aspx) veya [öğretici 1: C# içinde resim görüntüleyici oluşturma-video 2](https://msdn.microsoft.com/vcsharp/gg278410.aspx). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
 
 ### <a name="to-lay-out-your-form-with-a-tablelayoutpanel-control"></a>Bir TableLayoutPanel denetimiyle formunuzu düzenlemek için
 
-1. Visual Studio IDE 'nin sol tarafında, **araç kutusu** sekmesini bulun. **araç** kutusu sekmesini seçin ve araç kutusu görüntülenir. (Veya menü çubuğunda **Görünüm**, **araç kutusu**' nu seçin.)
+1. Visual Studio IDE 'nin sol tarafında **araç kutusu** sekmesini bulun. **Araç kutusu** sekmesini seçin ve araç kutusu görüntülenir. (Veya menü çubuğunda **Görünüm**, **araç kutusu**' nu seçin.)
 
 2. Aşağıdaki resimde gösterildiği gibi, açmak için **kapsayıcılar** grubunun yanındaki küçük üçgen sembolünü seçin.
 
      ![Kapsayıcılar grubu](../ide/media/express-toolbox.png "Express_Toolbox") Kapsayıcılar grubu
 
-3. Formunuza düğmeler, onay kutuları ve Etiketler gibi denetimler ekleyebilirsiniz. Araç kutusunda `TableLayoutPanel` denetimine çift tıklayın. (Veya, denetimi araç kutusu ' ndan form üzerine sürükleyebilirsiniz.) Bunu yaptığınızda, IDE aşağıdaki resimde gösterildiği gibi formunuza bir `TableLayoutPanel` denetimi ekler.
+3. Formunuza düğmeler, onay kutuları ve Etiketler gibi denetimler ekleyebilirsiniz. `TableLayoutPanel`Araç kutusunda denetime çift tıklayın. (Veya, denetimi araç kutusu ' ndan form üzerine sürükleyebilirsiniz.) Bunu yaptığınızda, IDE `TableLayoutPanel` Aşağıdaki resimde gösterildiği gibi formunuza bir denetim ekler.
 
      ![TableLayoutPanel denetimi](../ide/media/express-formtablelayout.png "Express_FormTableLayout") TableLayoutPanel denetimi
 
@@ -48,7 +48,7 @@ Bu adımda formunuza bir `TableLayoutPanel` denetimi eklersiniz. TableLayoutPane
 
 5. **Özellikler** penceresinde araç çubuğundan **alfabetik** düğmesini seçin. Bu **, Özellikler penceresindeki özelliklerin** listesinin alfabetik sırayla görüntülenmesine neden olur, bu da bu öğreticide özellikleri bulmayı kolaylaştırır.
 
-6. Denetim Seçicisi, **Özellikler** penceresinin üst kısmındaki açılan bir listesidir. Bu örnekte, `tableLayoutPanel1` adlı bir denetimin seçili olduğunu gösterir. Windows Form Tasarımcısı bir alanı seçerek veya denetim seçicinden seçim yaparak denetimleri seçebilirsiniz. Artık `TableLayoutPanel` seçili olduğuna göre **Dock** özelliğini bulun ve **yok**olarak ayarlanması gereken **Yerleştir**' i seçin. Değerin yanında bir açılan okun göründüğünü unutmayın. Oku seçin ve ardından aşağıdaki resimde gösterildiği gibi **doldur** düğmesini (ortadaki büyük düğme) seçin.
+6. Denetim Seçicisi, **Özellikler** penceresinin üst kısmındaki açılan bir listesidir. Bu örnekte, çağrılan bir denetimin seçili olduğunu gösterir `tableLayoutPanel1` . Windows Form Tasarımcısı bir alanı seçerek veya denetim seçicinden seçim yaparak denetimleri seçebilirsiniz. Artık `TableLayoutPanel` Seçili olan **Dock** özelliğini bulun ve **yok**olarak ayarlanması gereken **Yerleştir**' i seçin. Değerin yanında bir açılan okun göründüğünü unutmayın. Oku seçin ve ardından aşağıdaki resimde gösterildiği gibi **doldur** düğmesini (ortadaki büyük düğme) seçin.
 
      ![Dolguyla Özellikler penceresi seçili](../ide/media/express-docktable.png "Express_DockTable") Dolguyla Özellikler penceresi seçili
 
@@ -57,7 +57,7 @@ Bu adımda formunuza bir `TableLayoutPanel` denetimi eklersiniz. TableLayoutPane
 7. TableLayoutPanel **Dock** özelliğini **Fill**olarak ayarladıktan sonra, panel formun tamamını doldurur. Formu yeniden boyutlandırırsanız, TableLayoutPanel sabitlenmiş kalır ve kendisini sığacak şekilde yeniden boyutlandırır.
 
     > [!NOTE]
-    > TableLayoutPanel Microsoft Office Word 'de bir tablo gibi çalışmaktadır: satırlar ve sütunlar bulunur ve tek bir hücre birden çok satıra ve sütuna yayılabilir. Her hücre bir denetim (bir düğme, onay kutusu veya etiket gibi) tutabilir. TableLayoutPanel 'niz, en üst satırının tamamını kapsayan bir `PictureBox` denetimine, sol alt hücresinde bir `CheckBox` denetimine ve sağ alt hücresindeki dört `Button` denetime sahip olur.
+    > TableLayoutPanel Microsoft Office Word 'de bir tablo gibi çalışmaktadır: satırlar ve sütunlar bulunur ve tek bir hücre birden çok satıra ve sütuna yayılabilir. Her hücre bir denetim (bir düğme, onay kutusu veya etiket gibi) tutabilir. TableLayoutPanel 'niz `PictureBox` , en üstteki satırı, `CheckBox` sol alt hücresinde bir denetimi ve `Button` sağ alt hücresinde dört denetimi kapsayan bir denetime sahip olur.
 
 8. Şu anda TableLayoutPanel 'in iki eşit boyutta satırı ve iki eşit boyutlu sütunu vardır. En üstteki satır ve sağ sütunun her ikisi de daha büyük olması için bunları yeniden boyutlandırmanız gerekiyor. Windows Form Tasarımcısı, TableLayoutPanel ' i seçin. Sağ üst köşede, aşağıdaki gibi görünen küçük bir siyah üçgen düğmesi vardır.
 
@@ -69,13 +69,13 @@ Bu adımda formunuza bir `TableLayoutPanel` denetimi eklersiniz. TableLayoutPane
 
      ![TableLayoutPanel görevleri](../ide/media/express-tablepanel.png "Express_TablePanel") TableLayoutPanel görevleri
 
-10. **Sütun ve satır stilleri** penceresini göstermek için **satırları ve sütunları Düzenle** görevini seçin. **Sütun1**' yi seçin ve yüzde düğmesinin seçili olduğundan emin olun ve **yüzde** kutusuna `15` girerek **boyutunu yüzde 15** olarak ayarlayın. (Bu, sonraki bir öğreticide kullanacağınız bir `NumericUpDown` denetimidir.) **Sütun2** 'yi seçin ve yüzde 85 olarak ayarlayın. Pencere kapandığı için **Tamam** düğmesini henüz seçmeyin. (Ancak bunu yaparsanız, görev listesini kullanarak yeniden açabilirsiniz.)
+10. **Sütun ve satır stilleri** penceresini göstermek için **satırları ve sütunları Düzenle** görevini seçin. **Sütun1**' yi seçin ve yüzde düğmesinin seçili olduğundan ve yüzde kutusuna girerek boyutunu **yüzde 15** olarak ayarlayın `15` . **Percent** (Bu `NumericUpDown` , sonraki bir öğreticide kullanacağınız bir denetimdir.) **Sütun2** 'yi seçin ve yüzde 85 olarak ayarlayın. Pencere kapandığı için **Tamam** düğmesini henüz seçmeyin. (Ancak bunu yaparsanız, görev listesini kullanarak yeniden açabilirsiniz.)
 
      ![TableLayoutPanel sütunu ve satır stilleri](../ide/media/vs-tablelayoutpanel-setup.png "VS_TableLayoutPanel_Setup") TableLayoutPanel sütunu ve satır stilleri
 
 11. Pencerenin üst kısmındaki **göster** açılan listesinden **Satırlar**' ı seçin. **Row1** değerini yüzde 90 ve **Row2** olarak ayarlayın.
 
-12. Seçin **Tamam** düğmesi. TableLayoutPanel, artık büyük bir üst satıra, küçük bir alt satıra, küçük bir sol sütuna ve büyük bir sağ sütuna sahip olmalıdır. TableLayoutPanel içindeki satırları ve sütunları formda tableLayoutPanel1 seçerek ve sonra satır ve sütun kenarlıklarını sürükleyerek yeniden boyutlandırabilirsiniz.
+12. **Tamam** düğmesini seçin. TableLayoutPanel, artık büyük bir üst satıra, küçük bir alt satıra, küçük bir sol sütuna ve büyük bir sağ sütuna sahip olmalıdır. TableLayoutPanel içindeki satırları ve sütunları formda tableLayoutPanel1 seçerek ve sonra satır ve sütun kenarlıklarını sürükleyerek yeniden boyutlandırabilirsiniz.
 
      Yeniden ![boyutlandırılmış TableLayoutPanel Ile Form1](../ide/media/vs-formafterlayoutpanel.png "VS_FormAfterLayoutPanel") Yeniden boyutlandırılmış TableLayoutPanel ile Form1
 

@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ae11860aaa64448cd4d23b5602cf4c2da1575ce3
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75916215"
 ---
 # <a name="jit-optimization-and-debugging"></a>JIT İyileştirmesi ve Hata Ayıklaması
@@ -30,14 +30,14 @@ Kodda hata ayıklamaya çalışıyorsanız, bu kod en iyi duruma **getirilmeyen*
 > JıT (tam zamanında) hata ayıklama hakkında daha fazla bilgi için [Bu belgeleri](../debugger/debug-using-the-just-in-time-debugger.md)okuyun.
 
 ## <a name="how-optimizations-work-in-net"></a>İyileştirmeler .NET 'te nasıl çalışır? 
-Normalde yayın derleme yapılandırması iyileştirilmiş kod oluşturuyor ve hata ayıklama derleme yapılandırması değil. `Optimize` MSBuild özelliği, derleyicinin kodu iyileştirip söyetkinleştirilmeyeceğini denetler.
+Normalde yayın derleme yapılandırması iyileştirilmiş kod oluşturuyor ve hata ayıklama derleme yapılandırması değil. `Optimize`MSBuild özelliği, derleyicinin kodu iyileştirip söyetkinleştirilmeyeceğini denetler.
 
-.NET ekosisteminde, kod iki adımlı bir işlemde kaynaktan CPU yönergelerine açıktır: ilk olarak, C# derleyici YAZDıĞıNıZ metni MSIL adlı bir ara ikili biçime dönüştürür ve MSIL 'yi. dll dosyalarına yazar. Daha sonra, .NET çalışma zamanı bu MSIL 'yi CPU yönergelerine dönüştürür. Her iki adım da bir ölçüde iyileştirebilirler, ancak .NET çalışma zamanı tarafından gerçekleştirilen ikinci adım daha önemli iyileştirmeleri gerçekleştirir.
+.NET ekosisteminde, kod iki adımlı bir işlemde kaynaktan CPU yönergelerine açıktır: ilk olarak, C# derleyicisi yazdığınız metni MSIL adlı bir ara ikili biçime dönüştürür ve MSIL 'yi. dll dosyalarına yazar. Daha sonra, .NET çalışma zamanı bu MSIL 'yi CPU yönergelerine dönüştürür. Her iki adım da bir ölçüde iyileştirebilirler, ancak .NET çalışma zamanı tarafından gerçekleştirilen ikinci adım daha önemli iyileştirmeleri gerçekleştirir.
 
 ## <a name="the-suppress-jit-optimization-on-module-load-managed-only-option"></a>' Modül yüklemesinde JıT iyileştirmesini bastır (yalnızca yönetilen) ' seçeneği
 Hata ayıklayıcı, hedef işlemin içinde iyileştirmeler etkinken derlenen bir DLL yüklendiğinde ne olacağını denetleyen bir seçenek sunar. Bu seçenek işaretli değilse (varsayılan durum), .NET çalışma zamanı MSIL kodunu CPU koduna derlediğinde, iyileştirmeler etkin kalır. Seçenek işaretliyse, hata ayıklayıcı iyileştirmelerin devre dışı bırakıldığını ister.
 
-**Modül YÜKLEMESINDE JIT iyileştirmesini gösterme (yalnızca yönetilen)** seçeneğini bulmak için **Araçlar** > **Seçenekler**' i seçin ve ardından **hata ayıklama** düğümünün altındaki **genel** sayfasını seçin.
+**Modül yüklemesinde JIT iyileştirmesini gösterme (yalnızca yönetilen)** seçeneğini bulmak için **Araçlar**  >  **Seçenekler**' i seçin ve ardından **hata ayıklama** düğümünün altındaki **genel** sayfasını seçin.
 
 ![JıT Iyileştirmesini bastır](../debugger/media/suppress-jit-tool-options.png "JıT Iyileştirmesini bastır")
 
@@ -59,7 +59,7 @@ Bu seçeneği **açmak, bu** iki durum vardır:
     > .NET Core 'un .NET Framework veya daha eski bir sürümünü (2. x veya daha düşük) hedefliyorsanız, ' COMPlus_ZapDisable ' ortam değişkenini de ekleyin ve ' 1 ' olarak ayarlayın
 
     **Visual Studio 'da .NET Core projesi için bir ortam değişkeni ayarlamak için:**
-    1. **Çözüm Gezgini**, proje dosyasına **sağ tıklayın ve Özellikler ' i** seçin.
+    1. **Çözüm Gezgini**, proje dosyasına **sağ tıklayın ve Özellikler ' i** seçin. **Properties**
     2. **Hata Ayıkla** sekmesine gidin ve **ortam değişkenleri**altında **Ekle** düğmesine tıklayın.
     3. Adı (anahtar) **COMPlus_ReadyToRun** olarak ayarlayın ve değeri **0**olarak ayarlayın.
 
@@ -70,4 +70,4 @@ Bu seçeneği **açmak, bu** iki durum vardır:
 - [Yönetilen Kodda Hata Ayıklama](../debugger/debugging-managed-code.md)
 - [Hata Ayıklayıcısı ile Kodlarda gezinme](../debugger/navigating-through-code-with-the-debugger.md)
 - [Çalıştırma İşlemine İliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
-- [Yönetilen Yürütme İşlemi](/dotnet/standard/managed-execution-process)
+- [Yönetilen yürütme Işlemi](/dotnet/standard/managed-execution-process)

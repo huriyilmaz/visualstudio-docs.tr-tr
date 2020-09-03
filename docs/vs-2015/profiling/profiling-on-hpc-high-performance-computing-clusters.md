@@ -22,10 +22,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b63f9ddf29ff74a4aa4bf089c266e12e37bb2f50
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535544"
 ---
 # <a name="profiling-on-hpc-high-performance-computing-clusters"></a>HPC (Yüksek Performanslı Hesaplama) Kümelerinde Profil Oluşturma
@@ -52,7 +52,7 @@ Veya Profil Oluşturma Araçları örnekleme yöntemini kullanarak Microsoft Win
   
     3. `clusrun /all /scheduler:`*% Headnode%% ProfilerPath%*`/q /norestart`  
   
-|Söz dizimi öğesi|Açıklama|  
+|Söz dizimi öğesi|Description|  
 |-|-|  
 |*Baş düğümüne*|Kümenin baş düğümünün adı.|  
 |*% FxPath%*|[!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)]Yükleyicinin yolu. [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)]Yükleme medyasında yol: WCU\dotNetFramework\dotNetFx40_Full_x86_x64.exe|  

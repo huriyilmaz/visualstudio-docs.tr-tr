@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 21fdc15b161b7d1cef30effe82e518a174bc9666
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72619541"
 ---
 # <a name="create-xml-documentation-comments-for-javascript-intellisense"></a>JavaScript IntelliSense için XML belge açıklamaları oluşturma
@@ -26,14 +26,14 @@ ms.locfileid: "72619541"
 
 *XML belge açıklamaları* , işlevler, alanlar ve değişkenler gibi kod öğeleri hakkında bilgi sağlamak için bir betiğe eklediğiniz JavaScript açıklamalardır. Visual Studio 'da, komut dosyası işlevine başvurduğunuzda IntelliSense ile bu metin açıklamaları görüntülenir.
 
- Bu konu, XML belge açıklamalarını kullanmaya ilişkin temel bir öğretici sağlar. [@No__t_1var >](../ide/var-javascript.md) ve [\<value >](../ide/value-javascript.md)gibi diğer öğeleri kullanma hakkında daha fazla bilgi Için, bkz. [XML belge açıklamaları](../ide/xml-documentation-comments-javascript.md). @No__t_0 gibi zaman uyumsuz geri çağırma için IntelliSense bilgilerini sağlama hakkında bilgi için, bkz. [\<returns >](../ide/returns-javascript.md).
+ Bu konu, XML belge açıklamalarını kullanmaya ilişkin temel bir öğretici sağlar. Ve gibi diğer öğeleri kullanma hakkında daha fazla bilgi için, [\<var>](../ide/var-javascript.md) [\<value>](../ide/value-javascript.md) bkz. [XML belge açıklamaları](../ide/xml-documentation-comments-javascript.md). Gibi zaman uyumsuz geri çağırma için IntelliSense bilgilerini sağlama hakkında bilgi için `Promise` , bkz [\<returns>](../ide/returns-javascript.md) ..
 
 > [!NOTE]
 > XML belgeleri yorumlarına yalnızca dosyalardan, derlemelerden ve hizmetlerden ulaşılabilir.
 
 ### <a name="to-create-xml-documentation-comments-for-a-javascript-function"></a>JavaScript işlevi için XML belge açıklamaları oluşturmak için
 
-- İşlevinde [\<summary >](../ide/summary-javascript.md), [\<param >](../ide/param-javascript.md)ve [\<returns](../ide/returns-javascript.md) > öğelerini ekleyin ve her öğeden önce üç eğik çizgi işareti (//) ile önce önüne alın.
+- İşlevinde,, [\<summary>](../ide/summary-javascript.md) [\<param>](../ide/param-javascript.md) ve [\<returns>](../ide/returns-javascript.md) öğelerini ekleyin ve her öğeden önce üç eğik çizgi işareti (///) ile önce gelmeli.
 
     > [!NOTE]
     > Her öğe tek bir satırda olmalıdır.
@@ -62,9 +62,9 @@ ms.locfileid: "72619541"
 
 ### <a name="to-create-xml-documentation-comments-for-a-javascript-field"></a>JavaScript alanı için XML belge açıklamaları oluşturmak için
 
-- Bir Oluşturucu işlevinde veya nesne tanımında, önünde üç eğik çizgi (///) işaretinden [\<field >](../ide/field-javascript.md) öğesi ekleyin.
+- Bir Oluşturucu işlevinde veya nesne tanımında, [\<field>](../ide/field-javascript.md) önünde üç eğik çizgi (///) işaretinden önce bir öğe ekleyin.
 
-     Aşağıdaki örnek, bir Oluşturucu işlevinde `<field>` öğesinin kullanımını gösterir. Daha fazla örnek için bkz. [\<field >](../ide/field-javascript.md).
+     Aşağıdaki örnek, `<field>` bir Oluşturucu işlevindeki öğesinin kullanımını gösterir. Daha fazla örnek için bkz [\<field>](../ide/field-javascript.md) ..
 
     ```javascript
     function Engine() {
@@ -87,7 +87,7 @@ ms.locfileid: "72619541"
 
 ### <a name="to-create-xml-documentation-comments-for-an-overloaded-function"></a>Aşırı yüklenmiş bir işlev için XML belge açıklamaları oluşturmak için
 
-1. İşlevinde, her aşırı yükleme için bir [\<signature >](../ide/signature-javascript.md) öğesi ekleyin. Bu öğelerde, `<summary>`, `<param>` ve `<returns>`, her öğeden önceki üç eğik çizgi işareti (//) gibi diğer öğeleri ekleyin.
+1. İşlevinde, [\<signature>](../ide/signature-javascript.md) her aşırı yükleme için bir öğe ekleyin. Bu öğelerde,, ve gibi diğer öğeleri `<summary>` `<param>` `<returns>` üç eğik çizgi işareti (///) ile önce ekleyin.
 
      Aşağıdaki örnekte, aşırı yüklenmiş bir JavaScript işlevi gösterilmektedir. Bu örnekte, aşırı yüklemeler parametre türüne göre farklılık gösterir.
 
@@ -118,9 +118,9 @@ ms.locfileid: "72619541"
 1. OpenAjax Messagedemeti biçiminde belge açıklamalarını içeren bir XML dosyası oluşturun.
 
     > [!IMPORTANT]
-    > Messagedemeti önerilen biçimdir. Bu biçim Microsoft Ajax veya. winmd dosyalarında desteklenmez. Alternatif `VSDoc` biçimini kullanma hakkında daha fazla bilgi için bkz. [\<loc >](../ide/loc-javascript.md).
+    > Messagedemeti önerilen biçimdir. Bu biçim Microsoft Ajax veya. winmd dosyalarında desteklenmez. Alternatif biçimi kullanma hakkında daha fazla bilgi için `VSDoc` bkz [\<loc>](../ide/loc-javascript.md) ..
 
-     Aşağıdaki örnek, yerelleştirilmiş IntelliSense bilgilerini içeren bir sepet dosyasındaki içeriği gösterir. Bu, JA gibi kültüre özgü bir klasörde bulunan bir XML dosyasıdır. Klasör, `<loc>` öğesini içeren. js dosyası ile aynı konumda olmalıdır. XML dosyasının dosya adı, `<loc>` öğesinde belirtilen `filename` parametresiyle aynı olmalıdır.
+     Aşağıdaki örnek, yerelleştirilmiş IntelliSense bilgilerini içeren bir sepet dosyasındaki içeriği gösterir. Bu, JA gibi kültüre özgü bir klasörde bulunan bir XML dosyasıdır. Klasör, öğesini içeren. js dosyası ile aynı konumda olmalıdır `<loc>` . XML dosyasının dosya adı `filename` , öğesinde belirtilen parametreyle aynı olmalıdır `<loc>` .
 
     ```
     <messagebundle>
@@ -131,14 +131,14 @@ ms.locfileid: "72619541"
 
     ```
 
-2. . Js dosyanıza aşağıdaki kodu ekleyin. @No__t_0 öğesi herhangi bir betikten önce bildirilmelidir ve `<reference>` öğesiyle aynı kullanım kurallarını takip etmelidir. Daha fazla bilgi için bkz. [JavaScript IntelliSense](../ide/javascript-intellisense.md) ve [\<loc >](../ide/loc-javascript.md).
+2. . Js dosyanıza aşağıdaki kodu ekleyin. `<loc>`Öğe herhangi bir betikten önce bildirilmelidir ve öğesiyle aynı kullanım kurallarını takip etmelidir `<reference>` . Daha fazla bilgi için bkz. [JavaScript IntelliSense](../ide/javascript-intellisense.md) ve [\<loc>](../ide/loc-javascript.md) .
 
     ```javascript
     /// <loc filename="messageFilename.xml" format="messagebundle"/>
 
     ```
 
-3. . Js dosyanızda XML belge öğelerini ve varsayılan açıklamaları ekleyin. @No__t_0 öznitelik değerlerini, sepet dosyasındaki karşılık gelen `name` öznitelik değerleriyle eşleşecek şekilde ayarlayın. Varsayılan açıklamalar, varsa yerelleştirilmiş IntelliSense bilgileri ile değiştirilirler.
+3. . Js dosyanızda XML belge öğelerini ve varsayılan açıklamaları ekleyin. `locid`Öznitelik değerlerini, `name` sepet dosyasındaki karşılık gelen öznitelik değerleriyle eşleşecek şekilde ayarlayın. Varsayılan açıklamalar, varsa yerelleştirilmiş IntelliSense bilgileri ile değiştirilirler.
 
     ```javascript
     function add(a,b)

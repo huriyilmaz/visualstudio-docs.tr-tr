@@ -30,10 +30,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a095cd909dcd4d378fddc91c9151cf28e34a8ee5
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75852204"
 ---
 # <a name="additional-information-about-class-designer-errors"></a>Sınıf Tasarımcısı Hataları Hakkında Ek Bilgiler
@@ -43,7 +43,7 @@ Sınıf Tasarımcısı, kaynak dosyalarınızın konumunu izlememez, bu nedenle 
 
  Aşağıdaki kaynaklarda diğer hatalar ve uyarılarla ilgili yardım bulabilirsiniz:
 
- [Görsel C++ kodla çalışma (sınıf Tasarımcısı)](../ide/working-with-visual-cpp-code-class-designer.md) bir sınıf diyagramında görüntüleme C++ ile ilgili sorun giderme bilgilerini içerir.
+ [Visual C++ kodla çalışma (sınıf Tasarımcısı)](../ide/working-with-visual-cpp-code-class-designer.md) Sınıf diyagramında C++ görüntüleme ile ilgili sorun giderme bilgilerini içerir.
 
  [Visual Studio Sınıf Tasarımcısı Forumu](https://social.msdn.microsoft.com/Forums/en-US/vsclassdesigner/threads?page=1) Sınıf Tasarımcısı hakkında sorularınız için bir forum sağlar.
 

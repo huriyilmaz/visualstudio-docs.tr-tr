@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3ccb29f0ea6322a3f6bbfac5c3c0817892f74644
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288903"
 ---
 # <a name="how-to-configure-targets-and-tasks"></a>Nasıl yapılır: hedefleri ve görevleri yapılandırma
@@ -105,7 +105,7 @@ Diğer görev parametreleri gibi, `MSBuildRuntime` `MSBuildArchitecture` derleme
 Diğer görev parametrelerinin aksine, `MSBuildRuntime` ve `MSBuildArchitecture` görevin kendisi için görünür değildir. Çalıştırıldığı bağlamı algılayan bir görev yazmak için, .NET Framework çağırarak bağlamı test etmeniz veya yapı özelliklerini kullanarak bağlam bilgilerini diğer görev parametreleriyle geçirebilirsiniz.
 
 > [!NOTE]
-> `UsingTask`Öznitelikler, araç kümesi ve ortam özelliklerinden ayarlanabilir.
+> `UsingTask` Öznitelikler, araç kümesi ve ortam özelliklerinden ayarlanabilir.
 
 `MSBuildRuntime`Ve `MSBuildArchitecture` parametreleri, hedef bağlamını ayarlamak için en esnek yolu sağlar, aynı zamanda en sınırlı kapsam kapsamını da sunar. Tek seferde, görev örneği üzerinde ayarlandığı ve görev çalışmak üzere değerlendirilene kadar değerlendirilmediği için, her iki değerlendirme zamanı ve derleme zamanında kullanılabilen özelliklerin tam kapsamından değerlerini türetebilirler. Diğer taraftan, bu parametreler yalnızca belirli bir hedefteki bir görevin belirli bir örneği için geçerlidir.
 

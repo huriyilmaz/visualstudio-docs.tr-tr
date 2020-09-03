@@ -17,19 +17,19 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c9a9ec5f83a6df3dab262e24aac5c36b2d65ef00
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75852373"
 ---
 # <a name="how-to-use-the-keyboard-exclusively"></a>Nasıl Yapılır: Klavyeyi Özel Olarak Kullanma
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], tümleşik geliştirme ortamı (IDE) içinde gezinmeyi ve kodu daha kolay hale getirmek için birçok varsayılan kısayol tuşu kombinasyonu sağlar. Visual Studio 'da kullanılan kısayol tuşlarının tam listesi için bkz. [varsayılan klavye kısayolları](../../ide/default-keyboard-shortcuts-in-visual-studio.md). Diğer Microsoft ürünleri için kullanılabilen klavye kısayolları hakkında bilgi için bkz. [http://www.microsoft.com/enable/products/keyboard.aspx](https://www.microsoft.com/enable/products/keyboard.aspx).
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , tümleşik geliştirme ortamı (IDE) içinde gezinmeyi ve kodu daha kolay hale getirmek için birçok varsayılan kısayol tuşu kombinasyonu sağlar. Visual Studio 'da kullanılan kısayol tuşlarının tam listesi için bkz. [varsayılan klavye kısayolları](../../ide/default-keyboard-shortcuts-in-visual-studio.md). Diğer Microsoft ürünleri için kullanılabilen klavye kısayolları hakkında bilgi için bkz [http://www.microsoft.com/enable/products/keyboard.aspx](https://www.microsoft.com/enable/products/keyboard.aspx) ..
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
 ## <a name="toolbox-controls"></a>Araç kutusu denetimleri
  Araç kutusu üzerinde klavyeyi kullanarak bir form veya tasarımcı üzerinde bir denetim ekleyebilirsiniz.
@@ -59,11 +59,11 @@ ms.locfileid: "75852373"
 
     - Onay kutuları için, Seçilecek veya seçimini kaldırmak için **Ara çubuğu** kullanın.
 
-    - Aşağı açılan listelerde, öğeleri göstermek için **ALT** + **aşağı oku** kullanın ve ardından seçili öğeyi değiştirmek Için **yukarı ok** ve **aşağı ok** tuşlarını kullanın.
+    - Aşağı açılan listelerde, öğeleri göstermek için **alt aşağı**  +  **Oku** kullanın ve ardından seçili öğeyi değiştirmek için **yukarı ok** ve **aşağı ok** tuşlarını kullanın.
 
     - Düğmeler için, çağırmak için **ENTER** tuşuna basın.
 
-    - Kılavuzlar için, gezinmek için ok tuşlarını kullanın. Kılavuzlardaki aşağı açılan listeler için **shıft** + **alt** + **aşağı ok** tuşlarını kullanarak öğeleri görüntüleyin, sonra da seçili öğeyi değiştirmek için **yukarı ok** ve **aşağı ok** tuşlarını kullanın.
+    - Kılavuzlar için, gezinmek için ok tuşlarını kullanın. Kılavuzlardaki açılan listede, öğeleri göstermek için **SHIFT**  +  **alt**aşağı  +  **ok** tuşlarını kullanın ve ardından seçili öğeyi değiştirmek için **yukarı ok** ve **aşağı ok** tuşlarını kullanın.
 
 ## <a name="window-and-file-navigation"></a>Pencere ve dosya gezintisi
  IDE, klavyeyi kullanarak açık araç ve belge pencereleri arasında geçiş yapmak için çeşitli yollar sağlar. Ayrıca, klavyeyi kullanarak araç pencerelerini farklı konumlarda taşıyabilir ve yerleştirebilirsiniz.
@@ -80,7 +80,7 @@ ms.locfileid: "75852373"
 
 2. **Pencere** menüsünde, **dockable**' ye tıklayın.
 
-3. **ALT** + **boşluk** tuşuna basın ve ardından **Taşı**' yı seçin.
+3. **Alt**  +  **boşluk** tuşuna basın ve ardından **Taşı**' yı seçin.
 
      Yerleştirme Kılavuzu elmas görünür.
 
@@ -92,7 +92,7 @@ ms.locfileid: "75852373"
 
      Yeni yerleştirme konumunda araç penceresinin ana hattı görüntülenir.
 
-6. **ENTER**'a basın.
+6. **ENTER**tuşuna basın.
 
      Araç penceresi yeni yerleştirme konumunda yer içine yapışır.
 

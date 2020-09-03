@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4762ad21f117bebe22ecfce1c846f15d154b1bf5
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536025"
 ---
 # <a name="deploying-a-custom-directive-processor"></a>Özel Yönerge İşlemcisi Dağıtma
@@ -62,7 +62,7 @@ Bir .vsix dosyası oluşturmanın birkaç yolu vardır. Aşağıdaki yordam bir 
 
     1. Bir metin dosyası oluşturun ve \<*assemblyName*> . pkgdef olarak adlandırın.
 
-         \<*assemblyName*>genellikle projenin adı ile aynıdır.
+         \<*assemblyName*> genellikle projenin adı ile aynıdır.
 
     2. Çözüm Gezgini'nde seçin ve özelliklerini aşağıdaki gibi ayarlayın:
 
@@ -107,7 +107,7 @@ Bir .vsix dosyası oluşturmanın birkaç yolu vardır. Aşağıdaki yordam bir 
 
 3. .vsix dosyasına çift tıklatın. Visual Studio Uzantı Yükleyicisi görüntülenir.
 
-4. Visual Studio'yu yeniden başlatın. Artık, özel yönerge işlemcisine başvuran yönergeleri içeren metin şablonlarını çalıştırmak mümkün olacaktır. Her yönerge bu şekildedir:
+4. Visual Studio’yu yeniden başlatın. Artık, özel yönerge işlemcisine başvuran yönergeleri içeren metin şablonlarını çalıştırmak mümkün olacaktır. Her yönerge bu şekildedir:
 
      `<#@ CustomDirective Processor="CustomDirectiveProcessorName" parameter1="value1" ... #>`
 
@@ -182,15 +182,15 @@ Bir .vsix dosyası oluşturmanın birkaç yolu vardır. Aşağıdaki yordam bir 
 
    Özel yönerge işlemcisi GAC'de değilse, kayıt defteri alt anahtarları aşağıdaki tabloda gibi görünmelidir:
 
-|Name|Tür|Veri|
+|Ad|Tür|Veriler|
 |-|-|-|
 |(Varsayılan)|REG_SZ|(değer ayarlı değil)|
 |Sınıf|REG_SZ|**\<Namespace Name>.\<Class Name>**|
-|CodeBase|REG_SZ|**\<Your Path>\\Derleme adınızı<\>**|
+|CodeBase|REG_SZ|**\<Your Path>\\ Derleme adınızı<\>**|
 
  Derleme GAC'deyse, kayıt defteri alt anahtarları aşağıdaki tabloda gibi görünmelidir:
 
-|Name|Tür|Veri|
+|Ad|Tür|Veriler|
 |-|-|-|
 |(Varsayılan)|REG_SZ|(değer ayarlı değil)|
 |Sınıf|REG_SZ|\<**Your Fully Qualified Class Name**>|

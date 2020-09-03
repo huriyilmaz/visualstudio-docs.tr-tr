@@ -14,20 +14,20 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7546f752ef7ee1053d1b0b785334a8da814720c6
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851477"
 ---
 # <a name="activity-views-legacy"></a>Etkinlik Görünümleri (Eski)
-[!INCLUDE[wf](../includes/wf-md.md)]tarafından sağlanan etkinliklerin birçoğu, iş akışlarının oluştuğu, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]birçok tasarım görünümüne sahip olabilir. **Araç kutusundan** bir etkinlik Tasarımcısını Tasarım yüzeyine sürüklediğinizde ve bundan sonra etkinliği her seçtiğinizde, **iş akışı** menüsünü kullanarak veya seçili etkinliğe sağ tıklayarak farklı tasarım görünümleri arasında geçiş yapabilirsiniz. Ayrıca, işaretçiyi seçili bir etkinliğin adının üzerine getirdiğinizde, farklı görünümler arasında geçiş yapmak için kullanabileceğiniz bir aşağı açılan sekme kümesi görüntülenir.
+Tarafından sağlanan etkinliklerin birçoğu [!INCLUDE[wf](../includes/wf-md.md)] , iş akışlarının oluşturulduğu, eski sürümünde birçok tasarım görünümüne sahip olabilir [!INCLUDE[wfd1](../includes/wfd1-md.md)] . **Araç kutusundan** bir etkinlik Tasarımcısını Tasarım yüzeyine sürüklediğinizde ve bundan sonra etkinliği her seçtiğinizde, **iş akışı** menüsünü kullanarak veya seçili etkinliğe sağ tıklayarak farklı tasarım görünümleri arasında geçiş yapabilirsiniz. Ayrıca, işaretçiyi seçili bir etkinliğin adının üzerine getirdiğinizde, farklı görünümler arasında geçiş yapmak için kullanabileceğiniz bir aşağı açılan sekme kümesi görüntülenir.
 
  Her etkinliğin en az bir görünümü vardır; Bu, **araç kutusundan** bir etkinlik Tasarımcısını Tasarım yüzeyine sürüklediğinizde gösterilen varsayılan görünümüdür. Bu etkinlik varsayılan görünümü menülerde ve sekmede **Görünüm [etkinlik türü]** seçeneği olarak kullanılabilir (örneğin, **paralel görünüm**). Etkinliklerin çoğunda ek görünümler ve farklı etkinlikler farklı görünümlere sahip olabilir. Örneğin, [TransactionScopeActivity](https://msdn2.microsoft.com/library/system.workflow.componentmodel.transactionscopeactivity.aspx) etkinliği Dengeleme görünümüne sahiptir ve [EventHandlingScopeActivity](https://msdn2.microsoft.com/library/system.workflow.activities.eventhandlingscopeactivity.aspx) etkinliği bir olay görünümü içerir. Windows Workflow Foundation ile birlikte gelen etkinliklerin birçoğu, [CancellationHandlerActivity](https://msdn2.microsoft.com/library/system.workflow.componentmodel.cancellationhandleractivity.aspx) ve bunlarla Ilişkili bir [FaultHandlersActivity](https://msdn2.microsoft.com/library/system.workflow.componentmodel.faulthandlersactivity.aspx) görüntülemek Için, aynı görüntüleme **iptali işleyicisine** sahiptir ve hata tasarım görünümlerini **görüntüler** .
 
  Aşağıdaki tabloda her bir görünümün adı ve açıklaması listelenmektedir.
 
-|Menü/sekme seçeneği|Açıklama|
+|Menü/sekme seçeneği|Description|
 |----------------------|-----------------|
 |**Görünüm [etkinlik türü]**|Seçilen etkinliğin varsayılan grafik temsilini görüntülemek için bu menüyü veya sekme seçeneğini belirleyin.|
 |**Iptal Işleyicisini görüntüle**|Seçili etkinlikle ilişkili [CancellationHandlerActivity](https://msdn2.microsoft.com/library/system.workflow.componentmodel.cancellationhandleractivity.aspx) görüntülemek için bu menüyü veya sekme seçenek görünümünü seçin.|

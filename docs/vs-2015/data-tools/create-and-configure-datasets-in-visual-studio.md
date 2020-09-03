@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3c84105387c708fa16e0b1d5c3294ef909466524
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72631198"
 ---
 # <a name="create-and-configure-datasets-in-visual-studio"></a>Visual Studio’da veri kümeleri oluşturma ve yapılandırma
@@ -29,7 +29,7 @@ ms.locfileid: "72631198"
 
 Veri *kümesi* , bellekteki bir veritabanından veri depolayan ve değişiklik izlemeyi destekleyen bir nesne kümesidir ve veritabanına her zaman bağlı olmaları gerekmeden bu verilerde oluşturma, okuma, güncelleştirme ve SILME (CRUD) işlemlerini etkinleştirir. Veri kümeleri, veri iş uygulamaları *üzerinde basit formlar* için tasarlanmıştır. Yeni uygulamalar için, verileri bellekte depolamak ve modellemek üzere Entity Framework kullanmayı düşünün. Veri kümeleriyle çalışmak için, veritabanı kavramlarıyla ilgili temel bilgilere sahip olmanız gerekir.
 
- Tasarım zamanında **veri kaynağı Yapılandırma Sihirbazı**'Nı kullanarak Visual Studio 'da türü belirlenmiş bir <xref:System.Data.DataSet> sınıfı oluşturursunuz. Program aracılığıyla veri kümeleri oluşturma hakkında daha fazla bilgi için bkz. [veri kümesi oluşturma](https://msdn.microsoft.com/library/57629d8f-393e-4677-8b83-29ffde27f5fc).
+ <xref:System.Data.DataSet>Tasarım zamanında **veri kaynağı Yapılandırma Sihirbazı**'Nı kullanarak Visual Studio 'da türsüz bir sınıf oluşturursunuz. Program aracılığıyla veri kümeleri oluşturma hakkında daha fazla bilgi için bkz. [veri kümesi oluşturma](https://msdn.microsoft.com/library/57629d8f-393e-4677-8b83-29ffde27f5fc).
 
 ## <a name="create-a-new-dataset-by-using-the-data-source-configuration-wizard"></a>Veri kaynağı Yapılandırma Sihirbazı 'Nı kullanarak yeni bir veri kümesi oluşturma
 
@@ -37,7 +37,7 @@ Veri *kümesi* , bellekteki bir veritabanından veri depolayan ve değişiklik i
 
 2. Bağlanacağınız veri kaynağı türünü seçin.
 
-     ![Veri kaynağı Yapılandırma Sihirbazı](../data-tools/media/data-source-configuration-wizard.png "Veri Kaynağı Yapılandırma Sihirbazı")
+     ![Veri Kaynağı Yapılandırma Sihirbazı](../data-tools/media/data-source-configuration-wizard.png "Veri Kaynağı Yapılandırma Sihirbazı")
 
 3. Veritabanları için veri kümeniz için veri kaynağı olacak veritabanını veya veritabanlarını seçin.
 
@@ -76,7 +76,7 @@ Veri *kümesi* , bellekteki bir veritabanından veri depolayan ve değişiklik i
 
 1. Veri kümesi tasarımcısını odağa getirmek için **Çözüm Gezgini** veri kümesi düğümüne tıklayın.
 
-2. Visual Studio 'nun sol kenarındaki **veri kaynakları** sekmesine tıklayın veya **hızlı Başlat**'a `Data Sources` girin.
+2. Visual Studio 'nun sol kenarındaki **veri kaynakları** sekmesine tıklayın veya `Data Sources` **Hızlı Başlat**'a girin.
 
 3. Veri kümesi düğümüne sağ tıklayın ve **veri kaynağını sihirbazla Yapılandır** ' ı seçin.
 
@@ -88,8 +88,8 @@ Veri *kümesi* , bellekteki bir veritabanından veri depolayan ve değişiklik i
 
 1. Veri kümenizi **veri kümesi Tasarımcısı**açın.
 
-2. **Araç kutusunun** **veri kümesi** sekmesinden bir <xref:System.Data.DataTable> sınıfını **veri kümesi Tasarımcısı**üzerine sürükleyin.
+2. <xref:System.Data.DataTable> **Araç kutusunun** **veri kümesi** sekmesinden bir sınıfı **veri kümesi Tasarımcısı**sürükleyin.
 
 3. Veri tablonuzu tanımlamak için sütun ekleyin. Daha fazla bilgi için bkz. [nasıl yapılır: DataTable 'A sütun ekleme](https://msdn.microsoft.com/library/8ca21f77-b99a-47a7-a656-7cfd7a1bd9df).
 
-4. Tek başına tabloların, verileri verilerle doldurmanız için tek başına tablolarda `Fill` mantığı uygulaması gerekir. Tek başına veri tablolarını doldurma hakkında daha fazla bilgi için bkz. [DataAdapter nesnesinden veri kümesini doldurma](https://msdn.microsoft.com/library/3fa0ac7d-e266-4954-bfac-3fbe2f913153).
+4. Tek başına tabloların, `Fill` verileri verilerle doldurmanız için tek başına tablolarda mantık uygulaması gerekir. Tek başına veri tablolarını doldurma hakkında daha fazla bilgi için bkz. [DataAdapter nesnesinden veri kümesini doldurma](https://msdn.microsoft.com/library/3fa0ac7d-e266-4954-bfac-3fbe2f913153).

@@ -1,5 +1,5 @@
 ---
-title: Nesne Yöneticisine Sağlanan Sembollerin Listelerini Göster | Microsoft Dokümanlar
+title: Nesne yöneticisine sunulan simgelerin listesini kullanıma sunma | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,25 +15,25 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: bb15b7d9b29c578a0acf43fd1aa9cfdea88e23ae
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80708081"
 ---
-# <a name="how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager"></a>Nasıl yapilir: Kitaplık tarafından sağlanan sembollerin listelerini nesne yöneticisine göster
-Sembol tarama araçları, **Sınıf Görünümü**, **Nesne Tarayıcısı**, **Tarayıcı yı Çağır** ve Sembol Sonuçlarını **Bul**, yeni veri isteklerini nesne yöneticisine [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] iletin. Nesne yöneticisi uygun kitaplıkları bulur ve yeni sembol listeleri ister. Kitaplıklar, arabirim üzerinden nesne [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yöneticisine istenen verileri sağlayarak yanıt verir. <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Nesne yöneticisi, verileri <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> elde etmek için arabirimdeki yöntemleri çağırır ve simge tarama araçlarının görünümlerini doldurmak veya güncelleştirmek için kullanır.
+# <a name="how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager"></a>Nasıl yapılır: kitaplık tarafından nesne yöneticisine sunulan simgelerin listesini kullanıma sunma
+Sembol tarama araçları, **sınıf görünümü**, **nesne tarayıcısı** **çağrı tarayıcısı** ve **sembol sonuçları bul**, yeni veriler için istekleri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nesne yöneticisine geçirin. Nesne Yöneticisi uygun kitaplıkları bulur ve sembol yeni listesini ister. Kitaplıklar, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] arabirim aracılığıyla nesne yöneticisine istenen verileri sağlayarak yanıt verir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Nesne Yöneticisi, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> verileri almak için arabirimindeki yöntemleri çağırır ve sembol tarama araçlarının görünümlerini doldurmak veya güncelleştirmek için onu kullanır.
 
- Kitaplık, araç çağrıldığı, düğüm genişletildiğinde veya görünüm yenilendiğinde veri için istekler alabilir. Bir sembol tarama aracı ilk kez çağrıldığınızda, nesne yöneticisi kitaplığı üst düzey listeyi sağlamasını ister. Kullanıcı bir liste düğümünün genişletilmesinde, kitaplık bu düğümün altındaki alt çocukların listesini sağlar. Her nesne yöneticisi sorgulama ilgi öğesinin bir dizin içerir. Yeni bir liste görüntülemek için nesne yöneticisinin listede kaç öğe olduğunu, öğelerin türünü, adlarını, erişilebilirliğini ve diğer özelliklerini belirlemesi gerekir.
+ Bir kitaplık, araç çağrıldığında veri istekleri alabilir, düğüm genişletilir veya görünüm yenilenir. Bir sembol tarama aracı ilk kez çağrıldığında, nesne Yöneticisi, üst düzey listeyi sağlamak için kitaplığı ister. Kullanıcı bir liste düğümünü genişlediğinde, kitaplık bu düğüm altındaki alt öğelerin bir listesini sağlar. Her nesne yöneticisi sorgusu, ilgilendiğiniz öğenin bir dizinini içerir. Yeni bir liste göstermek için, nesne Yöneticisi listede kaç öğe olduğunu, öğe türünü, adları, erişilebilirliği ve diğer özellikleri belirlememelidir.
 
 > [!NOTE]
-> Aşağıdaki yönetilen kod örnekleri, arabirimi uygulayarak sembol <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> listelerinin nasıl sağverilebildiğini gösterir. Nesne yöneticisi bu arabirimdeki yöntemleri çağırır ve sembol tarama araçlarını doldurmak veya güncelleştirmek için elde edilen verileri kullanır.
+> Aşağıdaki yönetilen kod örnekleri, arabirimi uygulama aracılığıyla sembol listelerinin nasıl sağlanması gerektiğini gösterir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> . Nesne Yöneticisi bu arabirimdeki yöntemleri çağırır ve sembol tarama araçlarını doldurmak veya güncelleştirmek için alınan verileri kullanır.
 >
-> Yerel kod sembolü sağlayıcısı uygulaması <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectList2> için arabirimi kullanın.
+> Yerel kod sembol sağlayıcısı uygulamasında <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectList2> arabirimini kullanın.
 
-## <a name="to-provide-lists-of-symbols-to-the-object-manager"></a>Nesne yöneticisine sembol listeleri sağlamak için
+## <a name="to-provide-lists-of-symbols-to-the-object-manager"></a>Nesne yöneticisine sembol listesi sağlamak için
 
-1. <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetItemCount%2A> Yöntemi uygulayarak semboller listesindeki öğelerin sayısını alın. Aşağıdaki örnek, nesne yöneticisinin listedeki madde sayısıyla ilgili bilgileri nasıl elde edebildiğini gösterir.
+1. Yöntemi uygulayarak sembol listesindeki öğelerin sayısını alın <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetItemCount%2A> . Aşağıdaki örnek, nesne yöneticisinin bilgileri listedeki öğelerin sayısı hakkında nasıl alacağını gösterir.
 
     ```vb
     Protected m_Methods As System.Collections.Generic.SortedList(Of String, Method) = New System.Collections.Generic.SortedList(Of String, Method)()
@@ -55,7 +55,7 @@ Sembol tarama araçları, **Sınıf Görünümü**, **Nesne Tarayıcısı**, **T
 
     ```
 
-2. <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetCategoryField2%2A> Yöntemi uygulayarak belirli bir liste öğesinin kategorileri ve öznitelikleri hakkında bilgi alın. Madde kategorileri numaralandırmada <xref:Microsoft.VisualStudio.Shell.Interop.LIB_CATEGORY> belirtilir. Aşağıdaki örnek, nesne yöneticisinin belirli bir kategori için öğelerin özniteliklerini nasıl elde ettiğigösterilir.
+2. Yöntemi uygulayarak belirli bir liste öğesinin kategorileri ve öznitelikleri hakkında bilgi alın <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetCategoryField2%2A> . Öğe kategorileri <xref:Microsoft.VisualStudio.Shell.Interop.LIB_CATEGORY> numaralandırmada belirtilmiştir. Aşağıdaki örnek, nesne yöneticisinin belirli bir kategori için öğelerin özniteliklerini nasıl alacağını gösterir.
 
     ```vb
     Public Function GetCategoryField2(ByVal index As UInteger, ByVal Category As Integer, ByRef pfCatField As UInteger) As Integer
@@ -150,7 +150,7 @@ Sembol tarama araçları, **Sınıf Görünümü**, **Nesne Tarayıcısı**, **T
 
     ```
 
-3. Yöntemi uygulayarak belirli bir liste öğesinin <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetTextWithOwnership%2A> metin gösterimini alın. Aşağıdaki örnek, belirli bir öğenin tam adının nasıl elde edileceğini gösterir.
+3. Yöntemi uygulayarak belirli bir liste öğesinin metin temsilini alın <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetTextWithOwnership%2A> . Aşağıdaki örnek, belirli bir öğenin tam adının nasıl alınacağını gösterir.
 
     ```vb
     Public Function GetTextWithOwnership(<System.Runtime.InteropServices.ComAliasNameAttribute("Microsoft.VisualStudio.OLE.Interop.ULONG")> ByVal index As UInteger, <System.Runtime.InteropServices.ComAliasNameAttribute("Microsoft.VisualStudio.Shell.Interop.VSTREETEXTOPTIONS")> ByVal tto As Microsoft.VisualStudio.Shell.Interop.VSTREETEXTOPTIONS, <System.Runtime.InteropServices.ComAliasNameAttribute("Microsoft.VisualStudio.OLE.Interop.WCHAR")> ByRef ppszText As String) As Integer
@@ -168,7 +168,7 @@ Sembol tarama araçları, **Sınıf Görünümü**, **Nesne Tarayıcısı**, **T
 
     ```
 
-4. Yöntemi uygulayarak belirli bir liste öğesinin <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetDisplayData%2A> simge bilgilerini alın. Simge, bir liste öğesinin türünü (sınıf, yöntem vb.) ve erişilebilirliğini (özel, genel vb.) temsil eder. Aşağıdaki örnek, simge bilgilerinin belirli bir öğe özniteliklerine dayalı olarak nasıl elde edileceğini gösterir.
+4. Yöntemi uygulayarak belirli bir liste öğesi için simge bilgilerini alın <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetDisplayData%2A> . Simge, liste öğesinin türünü (sınıf, yöntem, vb.) ve erişilebilirliği (özel, genel, vb.) temsil eder. Aşağıdaki örnek, belirli bir öğe özniteliklerine göre simge bilgisinin nasıl alınacağını gösterir.
 
     ```vb
     Public Overridable Function GetDisplayData(ByVal index As UInteger, ByVal pData As Microsoft.VisualStudio.Shell.Interop.VSTREEDISPLAYDATA()) As Integer
@@ -250,7 +250,7 @@ Sembol tarama araçları, **Sınıf Görünümü**, **Nesne Tarayıcısı**, **T
 
     ```
 
-5. <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetExpandable3%2A> Yöntemi uygulayarak belirli bir liste öğesinin genişletilebilir olup olmadığı hakkında bilgi alın. Aşağıdaki örnek, belirli bir öğenin genişletilip genişletilemeyeceği ne kadar bilgi alınabileceğini gösterir.
+5. Yöntemi uygulayarak belirli bir liste öğesinin Genişletilebilir olup olmadığı hakkında bilgi alın <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetExpandable3%2A> . Aşağıdaki örnek, belirli bir öğenin Genişletilebilir olup olmadığı hakkında bilgilerin nasıl alınacağını gösterir.
 
     ```vb
     Public Function GetExpandable(ByVal index As UInteger, ByRef pfExpandable As Integer) As Integer
@@ -277,7 +277,7 @@ Sembol tarama araçları, **Sınıf Görünümü**, **Nesne Tarayıcısı**, **T
 
     ```
 
-6. <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetList2%2A> Yöntemi uygulayarak belirli bir liste öğesinin simgelerinin alt listesini alın. Aşağıdaki örnek, **Çağrı** veya **Arayanlar** grafikleri için belirli bir öğenin simgelerinin alt listesinin nasıl alınıldığını gösterir.
+6. Yöntemi uygulayarak belirli bir liste öğesinin simgelerinin alt listesini alın <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetList2%2A> . Aşağıdaki örnek, **çağrı** veya **çağıranlar** grafikleri için belirli bir öğenin semboller alt listesini nasıl elde leyeceğinizi gösterir.
 
     ```vb
     ' Call graph list.
@@ -465,7 +465,7 @@ Sembol tarama araçları, **Sınıf Görünümü**, **Nesne Tarayıcısı**, **T
     ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sembol tarama araçlarını destekleme](../../extensibility/internals/supporting-symbol-browsing-tools.md)
-- [Nasıl yapilir: Kitaplığı nesne yöneticisine kaydedin](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)
-- [Nasıl yapilir: Kitaplıktaki sembolleri tanımlama](../../extensibility/internals/how-to-identify-symbols-in-a-library.md)
-- [Eski dil hizmeti genişletilebilirlik](../../extensibility/internals/legacy-language-service-extensibility.md)
+- [Destek sembolü-tarama araçları](../../extensibility/internals/supporting-symbol-browsing-tools.md)
+- [Nasıl yapılır: bir kitaplığı nesne yöneticisiyle kaydetme](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)
+- [Nasıl yapılır: kitaplıkta sembolleri belirleme](../../extensibility/internals/how-to-identify-symbols-in-a-library.md)
+- [Eski dil hizmeti genişletilebilirliği](../../extensibility/internals/legacy-language-service-extensibility.md)

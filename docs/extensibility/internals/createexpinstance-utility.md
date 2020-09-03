@@ -1,5 +1,5 @@
 ---
-title: CreateExpInstance Programı | Microsoft Dokümanlar
+title: CreateExpInstance yardımcı programı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,44 +15,44 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 6a6b302976495e6067fad14317856cda4ac4625f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80709238"
 ---
 # <a name="createexpinstance-utility"></a>CreateExpInstance yardımcı programı
-Visual Studio'nun deneysel bir örneğini oluşturmak, sıfırlamak veya silmek için **CreateExpInstance** yardımcı programını kullanın. Temel ürünü değiştirmeden Visual Studio uzantılarını hata ayıklamak ve test etmek için deneysel örneği kullanabilirsiniz.
+Visual Studio 'nun deneysel bir örneğini oluşturmak, sıfırlamak veya silmek için **CreateExpInstance** yardımcı programını kullanın. Temel ürünü değiştirmeden Visual Studio uzantıları hatalarını ayıklamak ve test etmek için deneysel örneği kullanabilirsiniz.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 CreateExpInstance.exe [/Create | /Reset | /Clean] /VSInstance=VsInstance /RootSuffix=Suffix
 ```
 
 ## <a name="parameters"></a>Parametreler
- **/Oluştur** Deneysel örneği oluşturur.
+ **/Create** Deneysel örneği oluşturur.
 
- **/Sıfırlama** Deneme örneğini siler ve sonra yeni bir örnek oluşturur.
+ **/Reset** Deneysel örneği siler ve yeni bir tane oluşturur.
 
- **/Temiz** Deneme örneğini siler.
+ **/Clean** Deneysel örneği siler.
 
- **/VSInstance** Kopyalanması gereken temel Visual Studio örneğini içeren dizinin adı.
+ **/Vsınstance** Kopyalanacak temel Visual Studio örneğini içeren dizinin adı.
 
- **/RootSuffix** Deney örneği dizininin adını eklemek için sonek.
+ **/Rootsuffix** Deneysel örnek dizininin adına eklenecek sonek.
 
 ## <a name="remarks"></a>Açıklamalar
- Visual Studio uzantısı üzerinde çalışırken, varsayılan deneme örneğini açmak ve geçerli uzantıyı yüklemek için F5 tuşuna basabilirsiniz. Deneme örneği yoksa, Visual Studio varsayılan ayarlara sahip bir örnek oluşturur.
+ Visual Studio uzantısı üzerinde çalışırken, F5 tuşuna basarak varsayılan Deneysel örneği açabilir ve geçerli uzantıyı yükleyebilirsiniz. Deneysel örnek yoksa, Visual Studio varsayılan ayarlara sahip bir tane oluşturur.
 
- Deneme örneğinin varsayılan konumu Visual Studio sürüm numarasına bağlıdır. Örneğin, Visual Studio 2015 için konum *\\%localappdata%\Microsoft\VisualStudio\14.0Exp'dir.* Dizin konumundaki tüm dosyalar bu örneğin bir parçası olarak kabul edilir. Dizin adı varsayılan konuma değiştirilmedikçe, ek deneysel örnekler Visual Studio tarafından yüklenmez.
+ Deneysel Örneğin varsayılan konumu, Visual Studio sürüm numarasına bağlıdır. Örneğin, Visual Studio 2015 için konum *%LocalAppData%\Microsoft\VisualStudio\14.0Exp \\ *' dir. Dizin konumundaki tüm dosyalar, bu örneğin bir parçası olarak kabul edilir. Dizin adı varsayılan konum olarak değiştirilmediği takdirde, diğer deneysel örnekler Visual Studio tarafından yüklenmez.
 
- Visual Studio, deneme örneğini açtığında sistem kayıt defterine erişmez. Bu, kayıt kovanının deneysel bir sürümünü kullanan Visual Studio'nun önceki sürümlerinden farklıdır.
+ Visual Studio deneysel örneği açtığında sistem kayıt defterine erişemez. Bu, Visual Studio 'nun, kayıt defteri kovanının deneysel bir sürümünü kullanan önceki sürümlerinden farklıdır.
 
- **CreateExpInstance** yardımcı programı **VsRegEx** yardımcı programının yerini alır.
+ **CreateExpInstance** yardımcı programı, **VsRegEx** yardımcı programının yerini alır.
 
- Aşağıdaki örnek, Visual Studio'nun varsayılan deneysel örneğini sıfırlar:
+ Aşağıdaki örnek, Visual Studio 'nun varsayılan Deneysel örneğini sıfırlar:
 
- **CreateExpInstance.exe /Reset /VSInstance=14.0 /RootSuffix=Exp**
+ **CreateExpInstance.exe/Reset/Vsınstance = 14.0/RootSuffix = exp**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPackage’lar](../../extensibility/internals/vspackages.md)

@@ -12,7 +12,7 @@
   items:
     - name: Hata ayıklayıcıya ilk bakış
       href: debugger-feature-tour.md
-    - name: 'Bir C# veya Visual Basic uygulamasında hata ayıklama'
+    - name: Bir C# veya Visual Basic uygulamasında hata ayıklama
       href: quickstart-debug-with-managed.md
     - name: Bir C++ uygulamasında hata ayıklama
       href: quickstart-debug-with-cplusplus.md
@@ -20,7 +20,7 @@
       href: quickstart-debug-aspnet.md
 - name: Öğreticiler
   items:
-    - name: 'C#’ta hata ayıklamayı öğrenin'
+    - name: C#’ta hata ayıklamayı öğrenin
       href: /visualstudio/get-started/csharp/tutorial-debugger?toc=/visualstudio/debugger/toc.json
     - name: C++’ta hata ayıklamayı öğrenin
       href: getting-started-with-the-debugger-cpp.md
@@ -30,7 +30,7 @@
       href: ../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md
     - name: Canlı bir Azure uygulamasında hata ayıklama
       href: debug-live-azure-applications.md
-    - name: 'C# ve C++ kodunda hata ayıklama'
+    - name: C# ve C++ kodunda hata ayıklama
       href: how-to-debug-managed-and-native-code.md
     - name: Önceki uygulama durumlarını inceleme
       href: view-historical-application-state.md
@@ -46,7 +46,7 @@
           href: using-breakpoints.md
         - name: Kesme noktalarıyla ilgili sorun giderme
           href: troubleshooting-breakpoints.md
-        - name: 'C# veri kesme noktalarıyla ilgili sorun giderme'
+        - name: C# veri kesme noktalarıyla ilgili sorun giderme
           href: troubleshoot-data-breakpoint-errors.md
     - name: Veri inceleme
       items:
@@ -64,11 +64,11 @@
               items:
                 - name: Hata ayıklayıcı ifadeleri kullanma
                   href: expressions-in-the-debugger.md
-                - name: 'C# dilinde biçim belirticileri'
+                - name: C# dilinde biçim belirticileri
                   href: format-specifiers-in-cpp.md
                 - name: Bağlam işleci (C++)
                   href: context-operator-cpp.md
-                - name: 'C# dilinde biçim belirticileri'
+                - name: C# dilinde biçim belirticileri
                   href: format-specifiers-in-csharp.md
                 - name: Sözde Değişkenler
                   href: pseudovariables.md
@@ -118,11 +118,11 @@
               href: edit-and-continue-visual-cpp.md
             - name: Desteklenen Kod Değişiklikleri (C++)
               href: supported-code-changes-cpp.md
-        - name: 'Düzenle ve Devam Et (Visual C#)'
+        - name: Düzenle ve Devam Et (Visual C#)
           items:
-            - name: 'C# için Düzenle ve Devam Et'
+            - name: C# için Düzenle ve Devam Et
               href: edit-and-continue-visual-csharp.md
-            - name: 'Düzenle ve Devam Et’i kullanma (C#)'
+            - name: Düzenle ve Devam Et’i kullanma (C#)
               href: how-to-use-edit-and-continue-csharp.md
             - name: Desteklenen Kod Değişiklikleri
               href: supported-code-changes-csharp.md
@@ -138,7 +138,7 @@
               href: ../xaml-tools/xaml-hot-reload.md?toc=/visualstudio/debugger/toc.json
             - name: XAML Çalışırken Yeniden Yükleme ile ilgili sorunları giderme
               href: ../xaml-tools/xaml-hot-reload-troubleshooting.md?toc=/visualstudio/debugger/toc.json
-        - name: 'F# için Düzenle ve Devam Et desteklenmez'
+        - name: F# için Düzenle ve Devam Et desteklenmez
           href: edit-and-continue-not-supported-for-f-hash.md
     - name: Çıkış penceresine kaydetme
       href: using-tracepoints.md
@@ -210,7 +210,7 @@
                       href: enabling-debug-features-in-visual-cpp-d-debug.md
                 - name: Web projeleri özellik sayfası ayarları
                   href: property-pages-settings-for-web-projects.md
-                - name: 'C# hata ayıklama yapılandırması proje ayarları'
+                - name: C# hata ayıklama yapılandırması proje ayarları
                   href: project-settings-for-csharp-debug-configurations.md
                 - name: Visual Basic hata ayıklama yapılandırması proje ayarları
                   href: project-settings-for-a-visual-basic-debug-configuration.md
@@ -282,7 +282,7 @@
           href: remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md
         - name: Azure’da ASP.NET Core hatalarını uzaktan ayıklama
           href: remote-debugging-azure.md
-        - name: 'Uzaktan C# veya Visual Basic projesi hatası ayıklama'
+        - name: Uzaktan C# veya Visual Basic projesi hatası ayıklama
           href: remote-debugging-csharp.md
         - name: C++ projesinin hatalarını uzaktan ayıklama
           href: remote-debugging-cpp.md
@@ -512,7 +512,7 @@
                   href: how-to-use-the-wpf-tree-visualizer.md
                 - name: WPF izleme bilgilerini görüntüleme
                   href: how-to-display-wpf-trace-information.md
-            - name: 'F# hatalarını ayıklama'
+            - name: F# hatalarını ayıklama
               href: debugging-f-hash.md
         - name: C/C++ kodu
           items:

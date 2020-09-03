@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 74da305b69a9561573466d385c5d7b686da3693f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72620320"
 ---
 # <a name="best-practices-for-using-code-snippets"></a>Kod Parçacıkları İçin En İyi Uygulamalar
@@ -32,9 +32,9 @@ Kod parçacığındaki kod yalnızca bir şeyi yapmanın en temel yolunu göster
 
 - Erişilebilir bir konum bulma. Kullanıcıların, bilgisayarın Program Files klasörüne erişimi olmayabilir, bu nedenle dosyaları uygulama dosyalarıyla depolamak çalışmayabilir.
 
-- Güvenli bir konum bulma. Dosyaların kök klasörde depolanması (C: \\) güvenli değildir. Uygulama verileri için \Application Data klasörünü öneririz. Uygulama, bireysel kullanıcı verileri için, her kullanıcı için \Documents klasöründe bir dosya oluşturabilir.
+- Güvenli bir konum bulma. Dosyaların kök klasörde depolanması (C: \\ ) güvenli değildir. Uygulama verileri için \Application Data klasörünü öneririz. Uygulama, bireysel kullanıcı verileri için, her kullanıcı için \Documents klasöründe bir dosya oluşturabilir.
 
-- Geçerli bir dosya adı kullanılıyor. Geçersiz dosya adlarının olasılığını azaltmak için <xref:System.Windows.Forms.OpenFileDialog> ve <xref:System.Windows.Forms.SaveFileDialog> denetimlerini kullanabilirsiniz. Kullanıcının bir dosyayı seçtiği zaman ve kodunuzun dosyayı ne zaman kullandığı zaman arasında, dosyanın silinmiş olabileceğini unutmayın. Ayrıca, kullanıcının dosyaya yazma izni olmayabilir.
+- Geçerli bir dosya adı kullanılıyor. <xref:System.Windows.Forms.OpenFileDialog>Ve <xref:System.Windows.Forms.SaveFileDialog> denetimlerini, geçersiz dosya adlarının olasılığını azaltmak için kullanabilirsiniz. Kullanıcının bir dosyayı seçtiği zaman ve kodunuzun dosyayı ne zaman kullandığı zaman arasında, dosyanın silinmiş olabileceğini unutmayın. Ayrıca, kullanıcının dosyaya yazma izni olmayabilir.
 
 ## <a name="security"></a>Güvenlik
  Bir parçacığı güvenli hale getirme, kaynak kodda kullanıldığı yere ve kodda olduktan sonra nasıl değiştirildiği üzerine bağlıdır. Aşağıdaki liste, göz önünde bulundurulması gereken birkaç alanı içerir.

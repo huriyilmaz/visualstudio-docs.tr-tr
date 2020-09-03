@@ -1,5 +1,5 @@
 ---
-title: MSBuild'te Oturum Açma | Microsoft Dokümanlar
+title: MSBuild 'te günlüğe kaydetme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,38 +11,38 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a66164426b760798571fc35e5288158a8dae9943
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633557"
 ---
 # <a name="logging-in-msbuild"></a>MSBuild'de Günlük Kaydı
 
-Günlüğe kaydetme, bir yapının ilerlemesini izlemeniz için bir yol sağlar. Günlüğe kaydetme, günlük dosyasındaki yapı olayları, iletiler, uyarılar ve hataları yakalar.
+Günlüğe kaydetme, bir yapı ilerlemesini izlemeniz için bir yol sağlar. Günlüğe kaydetme, bir günlük dosyasındaki derleme olaylarını, iletileri, uyarıları ve hataları yakalar.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-- [Yapı günlükleri edinme](../msbuild/obtaining-build-logs-with-msbuild.md)
+- [Derleme günlüklerini al](../msbuild/obtaining-build-logs-with-msbuild.md)
 
- MSBuild'te günlüğe kaydetmenin çeşitli yönlerini açıklar.
+ MSBuild 'de günlüğe kaydetmenin çeşitli yönlerini açıklar.
 
-- [Loggers oluşturun](../msbuild/build-loggers.md)
+- [Günlükçüleri derleme](../msbuild/build-loggers.md)
 
- Tek işlemcili kaydedici oluşturmak için gereken adımları özetler.
+ Tek işlemcili günlükçü oluşturmak için gereken adımları özetler.
 
-- [Çok işlemcili ortamda günlüğe kaydetme](../msbuild/logging-in-a-multi-processor-environment.md)
+- [Birden çok işlemcili ortamda oturum açma](../msbuild/logging-in-a-multi-processor-environment.md)
 
- Çok işlemcili bir ortamda günlüğe kaydetmenin nasıl çalıştığını ve iki çok işlemcili günlük modelini açıklar.
+ Günlüğe kaydetmenin çok işlemcili bir ortamda ve iki çok işlemcili günlüğe kaydetme modelinde nasıl çalıştığını açıklar.
 
-- [Çok işlemcili bilgine duyarlı kaydediciler yazma](../msbuild/writing-multi-processor-aware-loggers.md)
+- [Multi-Processor-Aware Günlükçüler yazma](../msbuild/writing-multi-processor-aware-loggers.md)
 
- Çok işlemcili kaydedicilerin nasıl oluşturulacak ve ConfigurableForwardingLogger'ın nasıl kullanılacağını özetler.
+ Çok işlemcili, oturum defterleri oluşturmayı ve Configurableforwardinggünlükçü kullanmayı açıklar.
 
-- [Yönlendirme kaydediciler oluşturma](../msbuild/creating-forwarding-loggers.md)
+- [İletme Günlükçüleri oluşturma](../msbuild/creating-forwarding-loggers.md)
 
- Özel iletme kaydediciler nasıl oluşturulacak özetler.
+ Özel iletme Günlükçüleri oluşturmayı açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Paralel olarak birden çok proje oluşturma](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md) Birden çok projeyi paralel olarak çalıştırarak nasıl daha hızlı oluşturuğunu açıklar.
+- [Paralel olarak birden çok proje oluşturun](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md) Paralel olarak çalıştırarak birden çok projenin daha hızlı bir şekilde nasıl oluşturulacağını açıklar.

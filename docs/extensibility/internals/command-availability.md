@@ -1,5 +1,5 @@
 ---
-title: Komut Kullanılabilirliği | Microsoft Dokümanlar
+title: Komut kullanılabilirliği | Microsoft Docs
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,48 +12,48 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: dca47d9ed9968c101e3b6b859b51c1cd8d7404db
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80709692"
 ---
 # <a name="command-availability"></a>Komut kullanılabilirliği
 
-Visual Studio bağlamı hangi komutların kullanılabilir olduğunu belirler. Bağlam, geçerli projeye, geçerli düzenleyiciye, yüklenen VSPackages'e ve tümleşik geliştirme ortamının (IDE) diğer yönlerine bağlı olarak değişebilir.
+Visual Studio bağlamı hangi komutların kullanılabilir olduğunu belirler. Bağlam geçerli projeye, geçerli düzenleyiciye, yüklenen VSPackages ve tümleşik geliştirme ortamının (IDE) diğer yönlerini bağlı olarak değişebilir.
 
 ## <a name="command-contexts"></a>Komut bağlamları
 
-Aşağıdaki komut bağlamları en yaygın şunlardır:
+Aşağıdaki komut bağlamları en yaygın olarak verilmiştir:
 
 - IDE: IDE tarafından sağlanan komutlar her zaman kullanılabilir.
 
-- VSPackage: VSPackages komutları görüntülenecek veya gizli ne zaman tanımlayabilirsiniz.
+- VSPackage:, komutların ne zaman görüntüleneceğini veya gizlendiğini tanımlayabilir.
 
-- Proje: Proje komutları yalnızca şu anda seçili proje için görünür.
+- Proje: proje komutları yalnızca şu anda seçili proje için görünür.
 
-- Editör: Aynı anda yalnızca bir düzenleyici etkin olabilir. Etkin düzenleyicinin komutları kullanılabilir. Editör, bir dil hizmetiyle yakın çalışır. Dil hizmeti, komutlarını ilişkili düzenleyici bağlamında işlemelidir.
+- Düzenleyici: tek seferde yalnızca bir düzenleyici etkin olabilir. Etkin düzenleyiciden komutlar var. Bir düzenleyici, dil hizmetiyle yakından birlikte çalışmaktadır. Dil hizmeti, komutlarını ilişkili düzenleyicinin bağlamında işlemelidir.
 
-- Dosya türü: Düzenleyici birden fazla dosya türü yükleyebilir. Kullanılabilir komutlar dosya türüne bağlı olarak değişebilir.
+- Dosya türü: bir düzenleyici, birden fazla dosya türü yükleyebilir. Kullanılabilir komutlar dosya türüne bağlı olarak değişebilir.
 
-- Etkin pencere: Son etkin belge penceresi, anahtar bağlamaları için kullanıcı arabirimi (UI) bağlamını ayarlar. Ancak, dahili web tarayıcısı benzer bir anahtar bağlama tablosu olan bir araç penceresi de UI bağlamını ayarlayabilirsiniz. HTML düzenleyicisi gibi çok sekmeli belge pencereleri için her sekmede farklı bir komut bağlamı GUID bulunur. Bir araç penceresi kaydedildikten sonra, **görünüm** menüsünde her zaman kullanılabilir.
+- Etkin pencere: son etkin belge penceresi, anahtar bağlamaları için Kullanıcı arabirimi (UI) bağlamını ayarlar. Ancak, iç Web tarayıcısına benzer bir anahtar bağlama tablosuna sahip bir araç penceresi de UI bağlamını ayarlayabilir. HTML Düzenleyicisi gibi çok sekmeli belge pencereleri için her sekmenin farklı bir komut bağlamı GUID 'i vardır. Bir araç penceresi kaydedildikten sonra, **Görünüm** menüsünde her zaman kullanılabilir.
 
-- UI bağlamı: Arabirimi bağlamları, örneğin <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT> çözüm <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionBuilding_guid> oluşturulurken veya <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.Debugging_guid> hata ayıklayıcı etkin olduğunda sınıfın değerleriyle tanımlanır. Birden çok Ara Bilgi bağlamı aynı anda etkin olabilir.
+- UI bağlamı: UI bağlamları, sınıf değerleri tarafından tanımlanır <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT> , örneğin, <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionBuilding_guid> çözüm derlenmekte veya <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.Debugging_guid> hata ayıklayıcı etkin olduğunda. Aynı anda birden çok UI bağlamı etkin olabilir.
 
-## <a name="define-custom-context-guids"></a>Özel bağlam GUID'leri tanımlama
+## <a name="define-custom-context-guids"></a>Özel bağlam GUID 'Leri tanımla
 
-Uygun bir komut bağlamı GUID zaten tanımlanmamışsa, VSPackage'ınızda bir tane tanımlayabilir ve komutlarınızın görünürlüğünü denetlemek için gerektiğinde etkin veya etkin olmaması için programlayabilirsiniz:
+Uygun bir komut bağlamı GUID 'SI zaten tanımlanmamışsa, VSPackage içinde bir tane tanımlayabilir ve ardından komutlarınızın görünürlüğünü denetlemek için gerektiğinde etkin veya devre dışı olarak programlayabilirsiniz:
 
-1. Yöntemi arayarak bağlam GUIDs kaydedin. <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.GetCmdUIContextCookie%2A>
+1. Metodu çağırarak bağlam GUID 'Lerini kaydettirin <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.GetCmdUIContextCookie%2A> .
 
-2. <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A> Yöntemi arayarak bir bağlam GUID durumunu alın.
+2. Yöntemini çağırarak bağlam GUID 'inin durumunu alın <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A> .
 
-3. <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.SetCmdUIContext%2A> Yöntemi arayarak bağlam GUID'lerini açıp kapatın.
+3. Yöntemini çağırarak bağlam GUID 'Lerini açın ve kapatın <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.SetCmdUIContext%2A> .
 
 > [!CAUTION]
-> VSPackage'ınızın varolan bağlam GUID'lerini etkilemediğinden emin olun, çünkü diğer VSPackage'lar bunlara bağlı olabilir.
+> Diğer VSPackages bunlara bağlı olabileceğinden VSPackage 'ın var olan herhangi bir bağlam GUID 'i etkilemediğinden emin olun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Seçim bağlamı nesneleri](../../extensibility/internals/selection-context-objects.md)
-- [VSPackages kullanıcı arabirimi öğelerini nasıl ekler?](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [VSPackages Kullanıcı arabirimi öğeleri ekleme](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)

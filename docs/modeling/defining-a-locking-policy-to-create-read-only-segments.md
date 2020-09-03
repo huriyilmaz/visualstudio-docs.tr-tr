@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0778df98ff5f9665da7220fe40972c9a8f8d8e1d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536090"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>Salt Okunur Kesimler Oluşturmak için Kilitleme İlkesi Tanımlama
@@ -100,7 +100,7 @@ partition.SetLocks(Locks.Delete);
 - Bu sınıfı, DSL 'nizin DocData aracılığıyla kullanılabilen hizmetlere ekleyin.
 
 ### <a name="to-define-a-locking-policy"></a>Kilitleme ilkesi tanımlamak için
- <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy>Aşağıdaki tanıma sahiptir:
+ <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy> Aşağıdaki tanıma sahiptir:
 
 ```csharp
 public interface ILockingPolicy
@@ -142,7 +142,7 @@ namespace Company.YourDsl.DslPackage // Change
     }
 ```
 
- Diğer kod çağrısa bile kullanıcıların her zaman öğeleri silebilse emin olmak için`SetLocks(Lock.Delete):`
+ Diğer kod çağrısa bile kullanıcıların her zaman öğeleri silebilse emin olmak için `SetLocks(Lock.Delete):`
 
  `return proposedLocks & (Locks.All ^ Locks.Delete);`
 

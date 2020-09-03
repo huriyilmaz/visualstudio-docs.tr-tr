@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bdf1111198c7f874d03596382372fe25851e37d3
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75852125"
 ---
 # <a name="programming-with-the-uml-api"></a>UML API ile Programlama
@@ -40,33 +40,33 @@ Visual Studio 'nun UML API 'SI, UML modellerini ve diyagramlarını oluşturmak,
 |[Katman diyagramlarını genişletme](../modeling/extend-layer-diagrams.md)|ILayer, ılayerdiagram|Katman diyagramları oluşturmak ve düzenlemek için kod yazabilir ve ayrıca program kodunu bunlara karşı doğrulayabilirsiniz.|
 
 ## <a name="about-the-implementation"></a>Uygulama hakkında
- UML modelleme araçları [!INCLUDE[dsl](../includes/dsl-md.md)]kurulmuştur. Her bir paket ve her diyagram bir [!INCLUDE[dsl](../includes/dsl-md.md)] modeliyle temsil edilir ve bir kural ve diğer yöntem koleksiyonu aralarında tutarlılığı sağlar.
+ UML modelleme araçları üzerine kurulmuştur [!INCLUDE[dsl](../includes/dsl-md.md)] . Her bir paket ve her diyagram bir model tarafından temsil edilir [!INCLUDE[dsl](../includes/dsl-md.md)] ve bir kural ve diğer yöntem koleksiyonu aralarında tutarlılığı korur.
 
- Bu platformdaki türler, UML uzantıları yazmak için başvurduğunuz bazı derlemelerde görünür. UML araçlarına [!INCLUDE[dsl](../includes/dsl-md.md)] API 'sine erişerek uzantılar yapabilirsiniz, ancak aşağıdaki noktaları göz önünde bulundurmanız gerekir:
+ Bu platformdaki türler, UML uzantıları yazmak için başvurduğunuz bazı derlemelerde görünür. API 'ye erişerek UML araçlarına uzantılar yapabilirsiniz [!INCLUDE[dsl](../includes/dsl-md.md)] , ancak aşağıdaki noktaları göz önünde bulundurmanız gerekir:
 
 - Görünüşe göre bazı basit değişikliklerin tutarsızlıklar ve beklenmeyen etkileri tanıtmasının fark edebilirsiniz.
 
-- Uygulama gelecekte değişebilir, bu sayede [!INCLUDE[dsl](../includes/dsl-md.md)] API 'sini kullanarak yaptığınız uyarlamalar artık işe mayabilir.
+- Uygulama gelecekte değişebilir, bu sayede API 'yi kullanarak yaptığınız uyarlamalar [!INCLUDE[dsl](../includes/dsl-md.md)] artık işe mayabilir.
 
 ## <a name="the-api-assemblies"></a>API derlemeleri
  Bu tablo, UML araçları için genişletilebilirlik sağlayan derlemeleri ve kullanmanız önerilen ad alanlarını özetler.
 
-|Derleme|{1&gt;Ad alanları&lt;1}|Erişim sağlar:|
+|Bütünleştirilmiş Kod|Ad alanları|Erişim sağlar:|
 |--------------|----------------|-------------------------|
-|Microsoft.VisualStudio.Uml.Interfaces|(Tümü)|UML türleri.|
+|Microsoft. VisualStudio. Uml. Interfaces|(Tümü)|UML türleri.|
 |Microsoft. VisualStudio. mimari Turetools. Extensibility|Microsoft. VisualStudio. mimari Turetools. Extensibility. Uml|[Oluşturma yöntemleri](../modeling/create-elements-and-relationships-in-uml-models.md)|
 ||Microsoft. VisualStudio. mimari Turetools. Extensibility. Presentation|[Diyagramlar ve şekiller](../modeling/display-a-uml-model-on-diagrams.md)|
 ||Microsoft. VisualStudio. mimari Turetools. Extensibility|[Modelleme projesi](../modeling/read-a-uml-model-in-program-code.md)|
-|Microsoft.VisualStudio.Modeling.Sdk.[version]|<xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement>|[Menü komut uzantısı](../modeling/define-a-menu-command-on-a-modeling-diagram.md).<br /><br /> [Bağlı geri alma işlemleri](../modeling/link-uml-model-updates-by-using-transactions.md).|
-||<xref:Microsoft.VisualStudio.Modeling.Validation>|[Doğrulama](../modeling/define-validation-constraints-for-uml-models.md)|
+|Microsoft. VisualStudio. model. SDK. sürümünüze|<xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement>|[Menü komut uzantısı](../modeling/define-a-menu-command-on-a-modeling-diagram.md).<br /><br /> [Bağlı geri alma işlemleri](../modeling/link-uml-model-updates-by-using-transactions.md).|
+||<xref:Microsoft.VisualStudio.Modeling.Validation>|[Doğrulamasına](../modeling/define-validation-constraints-for-uml-models.md)|
 ||(diğer ad alanları)|Yalnızca Gelişmiş kullanım için önerilir.|
 |Microsoft. VisualStudio. model. SDK. diyagramlar. sürümünüze|<xref:Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement>|[Hareket işleyicileri](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md).|
 ||(diğer ad alanları)|Yalnızca Gelişmiş kullanım için önerilir.|
 |Microsoft. VisualStudio. TeamFoundation. WorkItemTracking|Microsoft. VisualStudio. TeamFoundation. WorkItemTracking|[İş öğelerinin bağlantıları](../modeling/define-a-work-item-link-handler.md).|
 |Microsoft. TeamFoundation. WorkItemTracking. Client|Microsoft. TeamFoundation. WorkItemTracking. Client|[İş öğeleri ve alanları](../modeling/define-a-work-item-link-handler.md).|
 |Microsoft. TeamFoundation. Client|Microsoft. TeamFoundation. Client|[İş öğeleri ve alanları](../modeling/define-a-work-item-link-handler.md).|
-|System.ComponentModel.Composition|<xref:System.ComponentModel.Composition>|[MEF bileşenleri için dışarı ve Içeri aktarma](../modeling/define-and-install-a-modeling-extension.md)|
-|System. Linq|<xref:System.Linq>|[Özellikle ilişkilerle ilgilenirken koleksiyonların kolay düzenlemesi](../modeling/navigate-relationships-with-the-uml-api.md).|
+|System. ComponentModel. Composition|<xref:System.ComponentModel.Composition>|[MEF bileşenleri için dışarı ve Içeri aktarma](../modeling/define-and-install-a-modeling-extension.md)|
+|System.Linq|<xref:System.Linq>|[Özellikle ilişkilerle ilgilenirken koleksiyonların kolay düzenlemesi](../modeling/navigate-relationships-with-the-uml-api.md).|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  UML [modelleme genişletilebilirliği IÇIN](../modeling/api-reference-for-uml-modeling-extensibility.md) [UML modellerini ve Diyagramları Genişletme](../modeling/extend-uml-models-and-diagrams.md) API başvurusu

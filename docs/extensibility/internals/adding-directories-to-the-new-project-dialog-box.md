@@ -1,5 +1,5 @@
 ---
-title: Yeni Proje İletişim Kutusuna Dizin Ekleme | Microsoft Dokümanlar
+title: Yeni proje Iletişim kutusuna dizin ekleme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,20 +11,20 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 827e383bba13c9742deb654bf3d680adeb3c109b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80710240"
 ---
-# <a name="add-directories-to-the-new-project-dialog-box"></a>Yeni Proje iletişim kutusuna dizin ekleme
-Yeni proje türleri oluşturduğunuzda, **yeni** proje iletişim kutusuna yeni bir dizin kaydedebilirsiniz. Aşağıdaki kod örneği, düğüm olarak da bilinen yeni bir dizinin nasıl kaydedilenin açıklanmaktadır. Örnekte, *CLSID_Package*VSPackage tarafından ortaya çıkarılan şablonlar kaydedilir. Sonuç olarak, **Yeni Proje** iletişim kutusunun sol *tarafında, Folder_Label_ResID* kaynağı tarafından belirlenen bir adla eklenen düğüm sunar. Bu kaynak VSPackage uydu DLL yüklenir.
+# <a name="add-directories-to-the-new-project-dialog-box"></a>Yeni proje iletişim kutusuna dizin ekleme
+Yeni proje türleri oluşturduğunuzda, yeni **Proje** iletişim kutusunda şablon olarak kullanmak üzere yeni bir dizin de kaydedebilirsiniz. Aşağıdaki kod örneğinde, düğüm olarak da bilinen yeni bir dizinin nasıl kaydedileceği açıklanmaktadır. Örnekte, VSPackage, *CLSID_Package*tarafından kullanıma sunulan şablonlar kaydedilir. Sonuç olarak, **Yeni proje** iletişim kutusunun sol tarafı, eklenen düğümü *Folder_Label_ResID* kaynak tarafından belirlenen bir adla birlikte sunar. Bu kaynak VSPackage uydu DLL 'sinden yüklenir.
 
- **Klasör** değeri, *Folder_Label_ResID* düğümünün görüntülendiği bir klasörün GUID'ini temsil eder. Örnekte GUID, **Yeni** **Proje** iletişim kutusunun Proje **Türleri** bölmesinde Diğer Projeler klasörünü temsil eder. Diğer **Projeler** değeri yoksa, etiket en üst düzeyde konumlandırılır.
+ **Klasör** değeri, *Folder_Label_ResID* düğümünün görüntülendiği bir klasörün GUID 'sini temsil eder. Örnekte GUID, **Yeni proje** Iletişim kutusunun **Proje türleri** bölmesinde **diğer projeler** klasörünü temsil eder. **Diğer projeler** değeri yoksa, etiket en üst düzeyde konumlandırılır.
 
- Değer, `TemplatesDir` proje şablonlarını içeren dizinin tam yolunu belirtir. Bu dosyalar *klonlanacak .vsz* dosyaları veya tipik şablon dosyaları olabilir.
+ `TemplatesDir`Değer, proje şablonlarını içeren dizinin tam yolunu belirtir. Bu dosyalar, klonlanacak *. vsz* dosyası ya da tipik şablon dosyaları olabilir.
 
- Belirtirseniz, `TemplatesLocalizedSubDir`yerelleştirilmiş şablonları tutan alt dizinini adlandıran `TemplatesDir` bir dizenin kaynak kimliği olmalıdır. Dize kaynağını bir uydu DLL'den yükler, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] çünkü varsa, her uydu DLL farklı bir alt dizin adı içerebilir. Değer `SortPriority` bir sıralama önceliği belirtir.
+ Belirtirseniz `TemplatesLocalizedSubDir` , `TemplatesDir` yerelleştirilmiş şablonları tutan öğesinin alt dizinini isimeden bir DIZENIN kaynak kimliği olmalıdır. , [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Varsa, bir uydu dll 'sinden dize kaynağını yükler, her uydu dll farklı bir alt dizin adı içerebilir. `SortPriority`Değer bir sıralama önceliği belirtir.
 
 ```
 NoRemove NewProjectTemplates
@@ -46,6 +46,6 @@ NoRemove NewProjectTemplates
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Proje ve madde şablonlarını kaydetme](../../extensibility/internals/registering-project-and-item-templates.md)
-- [Yeni Öğe Ekle iletişim kutusuna öğe ekleme](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
-- [Yeni Öğe Ekle iletişim kutusuna dizin ekleme](../../extensibility/internals/adding-directories-to-the-add-new-item-dialog-box.md)
+- [Proje ve öğe şablonlarını Kaydet](../../extensibility/internals/registering-project-and-item-templates.md)
+- [Yeni öğe Ekle iletişim kutusuna öğe ekleme](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
+- [Yeni öğe Ekle iletişim kutusuna dizin ekleme](../../extensibility/internals/adding-directories-to-the-add-new-item-dialog-box.md)

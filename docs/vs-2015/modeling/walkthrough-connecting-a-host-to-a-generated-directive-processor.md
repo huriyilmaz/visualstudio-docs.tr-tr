@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 377bf06ceffe9f4f3004be665dec1c5d3629202a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532970"
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>İzlenecek yol: Üretilen bir Yönerge İşlemcisine Ana Bilgisayar Bağlama
@@ -37,7 +37,7 @@ Metin şablonlarını işleyen kendi ana bilgisayarınızı yazabilirsiniz. [Izl
 
 - Özel ana bilgisayarı oluşturulan yönerge işlemcisi ile test etme.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bir DSL tanımlamak için aşağıdaki bileşenleri yüklemiş olmanız gerekir:
 
 |Ürün|İndirme bağlantısı|
@@ -227,7 +227,7 @@ Metin şablonlarını işleyen kendi ana bilgisayarınızı yazabilirsiniz. [Izl
             }
     ```
 
-7. **Dosya** menüsünde **Tümünü Kaydet**' e tıklayın.
+7. **Dosya** menüsünde **Tümünü Kaydet**’e tıklayın.
 
 8. **Yapı** menüsünde **Yapı Çözümü**’ne tıklayın.
 

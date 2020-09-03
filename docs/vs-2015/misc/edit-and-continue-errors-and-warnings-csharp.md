@@ -1,5 +1,5 @@
 ---
-title: Düzenle ve devam et hataları ve uyarılarıC#() | Microsoft Docs
+title: Düzenle ve devam et hataları ve uyarıları (C#) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -62,26 +62,26 @@ caps.latest.revision: 11
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: eec40bc584e831f8b43b79c9bc7cee5a48a291aa
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850969"
 ---
 # <a name="edit-and-continue-errors-and-warnings-c"></a>Düzenle ve Devam Et Hataları ve Uyarıları (C#)
-Visual C# Edit ve Continue içinde izin verilmeyen bir kod bölümüne düzenleme yaptınız.  
+Visual C# Düzenle ve devam et 'de izin verilmeyen bir kod bölümüne düzenleme yaptınız.  
   
  [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)] Düzenle ve devam et, program yürütmeyi kesme modunda durdurmanızı, yürütülen kodda değişiklikler yapmanızı ve ardından yeni eklenen değişikliklerle program yürütmeyi sürdürmenizi sağlar.  
   
  Bir sınıfın ortak yapısını etkileyen bildirime dayalı kod düzenlemeleri genellikle yasaktır ve bir yöntem, Özellik gövdesi veya bir sınıf içindeki özel bildirimlere yaptığınız bazı düzenlemelere izin verilmez. Mümkün olduğunda, Düzenle ve devam et açık gri olarak düzenlenemeyen kodu işaretler ve bir hata iletisi görüntüler.  
   
- [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)]Düzenle ve devam et 'de desteklenen düzenlemeler hakkında daha fazla bilgi için bkz. [desteklenen kod değişiklikleriC#()](../debugger/supported-code-changes-csharp.md). Belirli bir hata veya uyarı hakkında daha fazla bilgiye ihtiyacınız varsa, MSDN [Visual C# IDE forumundan](https://social.msdn.microsoft.com/Forums/en-US/csharpide/threads)arama veya gönderi gönderebilirsiniz.  
+ Düzenle ve devam et 'de desteklenen düzenlemeler hakkında daha fazla bilgi için [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)] bkz. [desteklenen kod değişiklikleri (C#)](../debugger/supported-code-changes-csharp.md). Belirli bir hata veya uyarı hakkında daha fazla bilgiye ihtiyacınız varsa, MSDN [VISUAL C# IDE forumundan](https://social.msdn.microsoft.com/Forums/en-US/csharpide/threads)arama veya gönderi gönderebilirsiniz.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
 1. **Hata Ayıkla** menüsünde, değişikliği geri almak Için **geri al** ' ı seçin.  
   
-     veya  
+     -veya-  
   
 2. Hata ayıklama oturumunu durdurun, düzenlemelerinizi yapın ve yeni bir hata ayıklama oturumu başlatın.  
   
