@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram3 | Microsoft Dokümanlar
+title: IDebugProgram3 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,43 +11,43 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9da63d54f64a4ef7592fdbc4d36e2b31220f82df
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80722649"
 ---
 # <a name="idebugprogram3"></a>IDebugProgram3
-Bu arabirim, bir işlemde çalışan bir programı temsil eder ve iş parçacığı bilgileri sağlayarak [Execute'ı](../../../extensibility/debugger/reference/idebugprogram2-execute.md) genişletir.
+Bu arabirim, bir işlemde çalışan ve iş parçacığı bilgileri sağlayarak [yürütmeyi](../../../extensibility/debugger/reference/idebugprogram2-execute.md) genişleten bir programı temsil eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugProgram3 : IDebugProgram3
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Hata ayıklama altyapısı (DE) ve özel bir bağlantı noktası tedarikçisi, bir işlemdeki programı temsil etmek için bu arabirimi uygular. Oturum hata ayıklama yöneticisi (SDM) de [ekle'ye](../../../extensibility/debugger/reference/idebugprogram2-attach.md)bilgi sağlamak için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Hata ayıklama altyapısı (DE) ve özel bir bağlantı noktası sağlayıcısı, bu arabirimi bir işlem içindeki bir programı temsil etmek için uygular. Oturum hata ayıklama Yöneticisi (SDM), [iliştirilecek](../../../extensibility/debugger/reference/idebugprogram2-attach.md)bilgileri sağlamak için bu arabirimi de uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) etkinliği yeni bir program için bu arabirimi döndürür. Bu arabirim aynı zamanda birden çok arabirimdeki birçok yöntem için bir parametre olarak da kullanılır.
+ [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) olayı yeni bir program için bu arabirimi döndürür. Bu arabirim, birden fazla arabirimde birçok yöntem için bir parametre olarak da kullanılır.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
- Aşağıdaki tabloda `IDebugProgram3`.
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugProgram3` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[ExecuteOnThread](../../../extensibility/debugger/reference/idebugprogram3-executeonthread.md)|Programı yürütür. İş parçacığı, kullanıcının yürüterken görüntülediği iş parçacığı hakkında hata ayıklama bilgileri vermek için döndürülür.|
+|[ExecuteOnThread](../../../extensibility/debugger/reference/idebugprogram3-executeonthread.md)|Programı yürütür. İş parçacığı, çalıştırıldığında kullanıcı tarafından hangi iş parçacığının görüntülemekte olduğunu hata ayıklayıcı bilgilerini vermek üzere döndürülür.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="remarks"></a>Açıklamalar
- Bir işlem bir veya daha fazla programdan oluşurken, program belirli bir çalışma zamanı mimarisinde çalışan bir iş parçacığı kapsayıcısa.
+ Bir program, belirli bir çalışma zamanı mimarisinde çalışan bir iş parçacığı kapsayıcısıdır ve bir işlem bir veya daha fazla programdan oluşur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

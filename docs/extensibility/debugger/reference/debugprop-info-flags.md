@@ -1,5 +1,5 @@
 ---
-title: DEBUGPROP_INFO_FLAGS | Microsoft Dokümanlar
+title: DEBUGPROP_INFO_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fa7e4a498188dc91f2a47b3ccf27f367f15ec77b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737398"
 ---
 # <a name="debugprop_info_flags"></a>DEBUGPROP_INFO_FLAGS
-Hata ayıklama özelliği nesnesi hakkında hangi bilgilerin alıncaya kadar alınacağa ilişkindir.
+Bir hata ayıklama özelliği nesnesi hakkında hangi bilgilerin alınması gerektiğini belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_DEBUGPROP_INFO_FLAGS {
@@ -72,60 +72,60 @@ public enum enum_DEBUGPROP_INFO_FLAGS {
 
 ## <a name="fields"></a>Alanlar
 `DEBUGPROP_INFO_FULLNAME`\
-`bstrFullName` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `bstrFullName` .
 
 `DEBUGPROP_INFO_NAME`\
-`bstrName` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `bstrName` .
 
 `DEBUGPROP_INFO_TYPE`\
-`bstrType` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `bstrType` .
 
 `DEBUGPROP_INFO_VALUE`\
-`bstrValue` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `bstrValue` .
 
 `DEBUGPROP_INFO_ATTRIB`\
-`dwAttrib` Alanı başlatma/kullanma.
+Alanı başlatın/kullanın `dwAttrib` .
 
 `DEBUGPROP_INFO_PROP`\
-`pProperty` [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) arabirimi içeren alanı başlatma/kullanma.
+`pProperty` [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) arabirimi içeren alanı başlatın/kullanın.
 
 `DEBUGPROP_INFO_VALUE_AUTOEXPAND`\
-Değer alanının, varsa bu tür bir nesne için otomatik olarak genişletilmiş değeri içermesi gerektiğini belirtir.
+Değer alanının, varsa, bu nesne türü için otomatik genişletilmiş değeri içermesi gerektiğini belirtir.
 
 `DEBUGPROP_INFO_VALUE_NOFUNCEVAL`\
 Kullanım dışı.
 
 `DEBUGPROP_INFO_VALUE_RAW`\
-Güzelleştirilmiş değerleri veya üyeleri döndürmeyin (diğer bir şekilde değerleri biçimlendirmeyin).
+Herhangi bir beautified değeri veya üye döndürmeyin (yani, değerleri biçimlendirmeyin).
 
 `DEBUGPROP_INFO_VALUE_NO_TOSTRING`\
-Sentezlenmiş özel değerler döndürmeyin (örneğin, bir `ToString()` değer üretmek için bir nesneyi çağırmayın).
+Özel bir sentezlenmiş değer döndürmez (örneğin, `ToString()` bir değer üretmek için bir nesne üzerinde çağırmayın).
 
 `DEBUGPROP_INFO_NONE`\
-Bayrak ların ayarlatılolmadığını belirtir.
+Hiçbir bayrak ayarlanolmadığını belirtir.
 
 `DEBUGPROP_INFO_STANDARD`\
-Initialize/use `dwAttrib`, `bstrName` `bstrType`, `bstrValue` ve alanları.
+`dwAttrib`,, `bstrName` `bstrType` Ve alanlarını başlatın/kullanın `bstrValue` .
 
 `DEBUGPROP_INFO_All`\
-Tüm bayrakların maskesini gösterir.
+Tüm bayrakların maskesini belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu değerler, [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapısının hangi alanların başharfe geçirileceğini belirtmek için [GetPropertyInfo,](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)ve [EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) yöntemlerine aktarılır.
+Bu değerler, [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapısını hangi alanların başlattığını göstermek Için [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md), [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)ve [EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) yöntemlerine geçirilir.
 
-Bu değerler, `dwFields` `DEBUG_PROPERTY_INFO` yapının hangi alanlarının kullanıldığını belirtmek için yapının üyesi için de kullanılır ve yapı döndürüldüğünde geçerlidir.
+Bu değerler, yapının üyesi için yapının `dwFields` `DEBUG_PROPERTY_INFO` hangi alanların kullanıldığını ve yapı döndürüldüğünde geçerli olduğunu göstermek için de kullanılır.
 
-Bu değerler biraz ile `OR`birleştirilebilir.
+Bu değerler, bit düzeyinde birleştirilebilir `OR` .
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)
 - [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)
 - [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)

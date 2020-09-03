@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Virgülle ayrılmış bir öğe listesini görüntüleme | Microsoft Docs'
+title: 'Nasıl yapılır: virgülle ayrılmış bir öğe listesini görüntüleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -13,42 +13,42 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 93451d6d49082621df48c734de951e6a4bc7e281
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156634"
 ---
-# <a name="how-to-display-an-item-list-separated-with-commas"></a>Nasıl yapılır: Virgülle Ayrılmış Bir Öğe Listesini Görüntüleme
+# <a name="how-to-display-an-item-list-separated-with-commas"></a>Nasıl Yapılır: Virgülle Ayrılmış Bir Öğe Listesini Görüntüleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Öğesi ile çalışırken listeleri [!INCLUDE[vstecmsbuildengine](../includes/vstecmsbuildengine-md.md)] ([!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]), bu öğe listeleri içeriğini okumak kolay bir şekilde görüntülemek bazen kullanışlıdır. Veya özel ayırıcı dize ile ayrılmış olan öğelerin listesini alan bir görev olabilir. Her iki durumda, bir öğe listesi için bir ayırıcı dize belirtebilirsiniz.  
+() İçindeki öğe listeleriyle çalışırken [!INCLUDE[vstecmsbuildengine](../includes/vstecmsbuildengine-md.md)] [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] , bu öğe listelerinin içeriğini okunması kolay bir şekilde göstermek bazen yararlı olur. Ya da özel bir ayırıcı dizesiyle ayrılan öğelerin listesini alan bir göreviniz olabilir. Bu iki durumda da, bir öğe listesi için bir ayırıcı dize belirtebilirsiniz.  
   
-## <a name="separating-items-in-a-list-with-commas"></a>Bir listedeki öğeler virgülle ayırma  
- Varsayılan olarak, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] listedeki öğeleri ayırmak için noktalı virgül kullanır. Örneğin, bir `Message` şu değere sahip öğe:  
+## <a name="separating-items-in-a-list-with-commas"></a>Listedeki öğeleri virgülle ayırma  
+ Varsayılan olarak, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] bir listedeki öğeleri ayırmak için noktalı virgül kullanır. Örneğin, `Message` aşağıdaki değere sahip bir öğe düşünün:  
   
  `<Message Text="This is my list of TXT files: @(TXTFile)"/>`  
   
- Zaman `@(TXTFile)` öğe listesi App1.txt App2.txt ve App3.txt öğeleri içeren, ileti şöyle:  
+ `@(TXTFile)`Öğe listesi App1.txt, App2.txt ve App3.txt öğelerini içerdiğinde ileti şu şekilde olur:  
   
  `This is my list of TXT files: App1.txt;App2.txt;App3.txt`  
   
- Varsayılan davranışı değiştirmek isterseniz, kendi ayırıcı belirtebilirsiniz. Bir öğe liste ayırıcı belirtmek için sözdizimi aşağıdaki gibidir:  
+ Varsayılan davranışı değiştirmek istiyorsanız kendi ayırıcıınızı belirtebilirsiniz. Öğe listesi ayırıcısını belirtmek için sözdizimi şöyledir:  
   
  `@(ItemListName, '<separator>')`  
   
- Ayırıcı, tek bir karakter veya bir dize olabilir ve tek tırnak içine alınmalıdır.  
+ Ayırıcı tek bir karakter veya dize olabilir ve tek tırnak içine alınmalıdır.  
   
-#### <a name="to-insert-a-comma-and-a-space-between-items"></a>Bir virgül ve öğeleri arasına boşluk eklemek için  
+#### <a name="to-insert-a-comma-and-a-space-between-items"></a>Öğeler arasına virgül ve boşluk eklemek için  
   
-- Aşağıdakine benzer bir öğe gösterimini kullanın:  
+- Aşağıdakine benzer öğe gösterimini kullanın:  
   
      `@(TXTFile, ', ')`  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, [Exec](../msbuild/exec-task.md) görev Phrases.txt dosyasında belirtilen metin dizelerini bulmak için findstr aracını çalıştırır. Findstr komut içinde değişmez değer dizeleri tarafından belirtilen **/c:** geçiş, bunu öğesi ayırıcısı `/c:` bulunan öğeler arasındaki eklenen `@(Phrase)` öğe listesi.  
+ Bu örnekte, [Exec](../msbuild/exec-task.md) görevi dosyada belirtilen metin dizelerini bulmak için Findstr aracını çalıştırır Phrases.txt. Findstr komutunda, değişmez değer arama dizeleri **/c:** anahtarıyla gösterilir, bu nedenle öğe ayırıcısı öğe `/c:` listesindeki öğeler arasına eklenir `@(Phrase)` .  
   
- Bu örnekte, eşdeğer komut satırı komutudur:  
+ Bu örnek için, eşdeğer komut satırı komutu:  
   
  `findstr /i /c:hello /c:world /c:msbuild phrases.txt`  
   

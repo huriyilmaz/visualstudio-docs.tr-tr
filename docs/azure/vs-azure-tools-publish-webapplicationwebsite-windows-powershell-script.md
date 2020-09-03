@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
 ms.openlocfilehash: c5eff35247c85783659f66b13d03c3a5f781df07
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72911765"
 ---
 # <a name="publish-webapplicationwebsite-windows-powershell-script"></a>Publish-WebApplicationWebSite (Windows PowerShell betiği)
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 Bir Web projesini bir Azure Web sitesinde yayımlar. Komut dosyası, mevcut değilse, Azure aboneliğinizde gerekli kaynakları oluşturur.
 
 ```
@@ -39,8 +39,8 @@ Dağıtımın ayrıntılarını açıklayan JSON yapılandırma dosyasının yol
 | Gerekli mi? |true |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| İşlem hattı girişi kabul edilsin mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ## <a name="subscriptionname"></a>SubscriptionName
 Web sitesini oluşturmak istediğiniz Azure aboneliğinin adı.
@@ -48,11 +48,11 @@ Web sitesini oluşturmak istediğiniz Azure aboneliğinin adı.
 | Parametre | Varsayılan değer |
 | --- | --- |
 | Diğer adlar |yok |
-| Gerekli mi? |false |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| İşlem hattı girişi kabul edilsin mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ## <a name="webdeploypackage"></a>WebDeployPackage
 Web sitesinde yayımlanacak Web dağıtım paketinin yolu. Bu paketi Visual Studio 'daki Web 'i Yayımla Sihirbazı 'nı kullanarak oluşturabilirsiniz. Daha fazla bilgi için bkz. [Azure Cloud Services ve ASP.NET ile çalışmaya başlama](vs-azure-tools-publish-webapplicationwebsite-windows-powershell-script.md).
@@ -60,11 +60,11 @@ Web sitesinde yayımlanacak Web dağıtım paketinin yolu. Bu paketi Visual Stud
 | Parametre | Varsayılan değer |
 | --- | --- |
 | Diğer adlar |yok |
-| Gerekli mi? |false |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| İşlem hattı girişi kabul edilsin mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ## <a name="databaseserverpassword"></a>DatabaseServerPassword
 Azure 'da SQL veritabanı için Kullanıcı adı ve parola.
@@ -72,11 +72,11 @@ Azure 'da SQL veritabanı için Kullanıcı adı ve parola.
 | Parametre | Varsayılan değer |
 | --- | --- |
 | Diğer adlar |yok |
-| Gerekli mi? |false |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| İşlem hattı girişi kabul edilsin mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ## <a name="sendhostmessagestooutput"></a>Sendhostiletitooutput
 Doğru ise, komut dosyasından çıkış akışına iletileri yazdırın.
@@ -84,11 +84,11 @@ Doğru ise, komut dosyasından çıkış akışına iletileri yazdırın.
 | Parametre | Varsayılan değer |
 | --- | --- |
 | Diğer adlar |yok |
-| Gerekli mi? |false |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
-| Varsayılan değer |false |
-| İşlem hattı girişi kabul edilsin mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| Varsayılan değer |yanlış |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ## <a name="remarks"></a>Açıklamalar
 Geliştirme ve test ortamları oluşturmak için betiğin nasıl kullanılacağına ilişkin ayrıntılı bir açıklama için, bkz. [geliştirme ve test ortamlarında yayımlamak Için Windows PowerShell betiklerini kullanma](vs-azure-tools-publishing-using-powershell-scripts.md).

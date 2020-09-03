@@ -27,10 +27,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a7e7c184fd150c46b3a8be0ec583d4223487ad32
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672765"
 ---
 # <a name="understanding-build-configurations"></a>Yapı Yapılandırmalarını Anlama
@@ -39,9 +39,9 @@ ms.locfileid: "72672765"
 Farklı türlerde derlemelerde kullanmak üzere çözüm ve proje özelliklerinin farklı yapılandırmalarının depolanmasını sağlayabilirsiniz. Bir yapılandırma oluşturmak, seçmek, değiştirmek veya silmek için **Configuration Manager**kullanabilirsiniz. Açmak için, menü çubuğunda **Oluştur**, **Configuration Manager**veya **Hızlı Başlat** kutusunda **yapılandırma** yazın ' ı seçin. Bir yapılandırma seçmek veya **Configuration Manager**açmak için **Standart** araç çubuğundaki **çözüm yapılandırmaları** listesini de kullanabilirsiniz.
 
 > [!NOTE]
-> Araç çubuğunda çözüm yapılandırma ayarlarını bulamazsanız ve **Configuration Manager**erişemeyebilirsiniz [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] geliştirme ayarları uygulanabilir. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Basic Geliştirici ayarları uygulanmış konfigürasyonları yönetme](../ide/how-to-manage-build-configurations-with-visual-basic-developer-settings-applied.md).
+> Araç çubuğunda çözüm yapılandırma ayarlarını bulamazsanız ve **Configuration Manager** [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] erişemeyebilirsiniz, geliştirme ayarları uygulanabilir. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Basic Geliştirici ayarları uygulanmış konfigürasyonları yönetme](../ide/how-to-manage-build-configurations-with-visual-basic-developer-settings-applied.md).
 
- Varsayılan olarak, hata ayıklama ve sürüm yapılandırmalarının [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] şablonlar kullanılarak oluşturulan projelere dahildir. Bir hata ayıklama yapılandırması, bir uygulamanın hata ayıklamasını destekler ve bir sürüm yapılandırması, uygulamasının dağıtılabilecek bir sürümünü oluşturur. Daha fazla bilgi için bkz. [nasıl yapılır: hata ayıklama ve yayın yapılandırmasını ayarlama](../debugger/how-to-set-debug-and-release-configurations.md). Ayrıca, özel çözüm konfigürasyonları ve proje yapılandırması da oluşturabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: yapılandırma oluşturma ve düzenleme](../ide/how-to-create-and-edit-configurations.md).
+ Varsayılan olarak, hata ayıklama ve sürüm yapılandırmalarının şablonlar kullanılarak oluşturulan projelere dahildir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Bir hata ayıklama yapılandırması, bir uygulamanın hata ayıklamasını destekler ve bir sürüm yapılandırması, uygulamasının dağıtılabilecek bir sürümünü oluşturur. Daha fazla bilgi için bkz. [nasıl yapılır: hata ayıklama ve yayın yapılandırmasını ayarlama](../debugger/how-to-set-debug-and-release-configurations.md). Ayrıca, özel çözüm konfigürasyonları ve proje yapılandırması da oluşturabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: yapılandırma oluşturma ve düzenleme](../ide/how-to-create-and-edit-configurations.md).
 
 ## <a name="solution-configurations"></a>Çözüm yapılandırması
  Çözüm yapılandırması, çözümdeki projelerin nasıl oluşturulup dağıtılacağını belirler. Bir çözüm yapılandırmasını değiştirmek veya yeni bir tane tanımlamak için **Configuration Manager**, **etkin çözüm yapılandırması**altında **Düzenle** veya **Yeni**' yi seçin.
@@ -69,20 +69,20 @@ Farklı türlerde derlemelerde kullanmak üzere çözüm ve proje özelliklerini
 ## <a name="how-visual-studio-assigns-project-configurations"></a>Visual Studio proje yapılandırmasını nasıl atar
  Yeni bir çözüm yapılandırması tanımladığınızda ve ayarları var olan bir sunucudan kopyalamazsanız, Visual Studio varsayılan proje yapılandırmalarını atamak için aşağıdaki ölçütleri kullanır. Ölçütler gösterilen sırayla değerlendirilir.
 
-1. Projenin, yeni çözüm yapılandırmasının adıyla tam olarak eşleşen bir yapılandırma adı ( *\<configuration adı > \<platform ad >* ) varsa, bu yapılandırma atanır. Yapılandırma adları büyük/küçük harfe duyarlı değildir.
+1. Projenin yeni çözüm yapılandırması adıyla tam olarak eşleşen* \<configuration name> \<platform name> *bir yapılandırma adı () varsa, bu yapılandırma atanır. Yapılandırma adları büyük/küçük harfe duyarlı değildir.
 
 2. Projenin, yapılandırma adı bölümünün yeni çözüm yapılandırmasıyla eşleştiği bir yapılandırma adı varsa, bu yapılandırma atanır ve platform bölümünün eşleşip eşleşmediğini belirtir.
 
 3. Hala eşleşme yoksa, projede listelenen ilk yapılandırma atanır.
 
 ## <a name="how-visual-studio-assigns-solution-configurations"></a>Visual Studio 'Nun çözüm yapılandırması nasıl atanır
- Bir proje yapılandırması oluşturduğunuzda ( **Configuration Manager**, bu projenin **yapılandırma** sütunundaki açılan menüden **Yeni** ' yi seçerek) ve **yeni çözüm yapılandırmaları oluştur** onay kutusunu seçin ve görsel Studio, desteklediği her platformda projeyi derlemek için benzer adlı bir çözüm yapılandırması arar. Bazı durumlarda, Visual Studio mevcut çözüm yapılandırmalarının adını değiştirir veya yenilerini tanımlar.
+ Bir proje yapılandırması oluşturduğunuzda ( **Configuration Manager**, bu projenin **yapılandırma** sütunundaki açılan menüde **Yeni** ' yi seçerek) ve **yeni çözüm yapılandırmaları oluştur** onay kutusunu işaretlediğinizde, Visual Studio desteklediği her platformda projeyi derlemek için benzer adlı bir çözüm yapılandırması arar. Bazı durumlarda, Visual Studio mevcut çözüm yapılandırmalarının adını değiştirir veya yenilerini tanımlar.
 
  Visual Studio, çözüm yapılandırması atamak için aşağıdaki ölçütleri kullanır.
 
-- Bir proje yapılandırması bir platform belirtmezse veya yalnızca bir platform belirtirse, adı yeni proje yapılandırmasıyla eşleşen bir çözüm yapılandırması bulundu veya eklendi. Bu çözüm yapılandırmasının varsayılan adı bir platform adı içermez; form *\<project yapılandırma adı >* alır.
+- Bir proje yapılandırması bir platform belirtmezse veya yalnızca bir platform belirtirse, adı yeni proje yapılandırmasıyla eşleşen bir çözüm yapılandırması bulundu veya eklendi. Bu çözüm yapılandırmasının varsayılan adı bir platform adı içermez; formu alır *\<project configuration name>* .
 
-- Bir proje birden çok platformu destekliyorsa, desteklenen her platform için bir çözüm yapılandırması bulunur ya da eklenir. Her çözüm yapılandırmasının adı hem proje yapılandırma adını hem de platform adını içerir ve form *\<project yapılandırma adı > \<platform adı >* vardır.
+- Bir proje birden çok platformu destekliyorsa, desteklenen her platform için bir çözüm yapılandırması bulunur ya da eklenir. Her çözüm yapılandırmasının adı hem proje yapılandırma adını hem de platform adını içerir ve forma * \<project configuration name> \<platform name> *sahiptir.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [İzlenecek yol: uygulama oluşturma](../ide/walkthrough-building-an-application.md) [ve derleme](../ide/compiling-and-building-in-visual-studio.md) [ve proje](../ide/solutions-and-projects-in-visual-studio.md) [C++ ](https://msdn.microsoft.com/library/100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d) oluşturma [Devenv komut satırı anahtarları](../ide/reference/devenv-command-line-switches.md) oluşturma
+ [Izlenecek yol: uygulama oluşturma](../ide/walkthrough-building-an-application.md) [ve derleme](../ide/compiling-and-building-in-visual-studio.md) [ve proje](../ide/solutions-and-projects-in-visual-studio.md) oluşturma [C/C++ oluşturma başvuru](https://msdn.microsoft.com/library/100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d) [Devenv komut satırı anahtarları](../ide/reference/devenv-command-line-switches.md)

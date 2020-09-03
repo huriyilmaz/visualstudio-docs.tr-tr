@@ -1,5 +1,5 @@
 ---
-title: DisassemblyData | Microsoft Dokümanlar
+title: DisassemblyData | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 9dcf3316ba57bbb25ee171cba7e4edc4923fa270
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737276"
 ---
 # <a name="disassemblydata"></a>DisassemblyData
-Tümleşik geliştirme ortamının (IDE) görüntülenmesi için bir sökme yönergesi açıklar.
+Görüntülenecek tümleşik geliştirme ortamı (IDE) için bir ayrıştırılmış tek derleme yönergesini açıklar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct tagDisassemblyData {
@@ -65,56 +65,56 @@ public struct DisassemblyData { 
 
 ## <a name="members"></a>Üyeler
 `dwFields`\
-Hangi alanların doldurulduğuna işaret eden [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) sabiti.
+Hangi alanların doldurulacağını belirten [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) sabiti.
 
 `bstrAddress`\
-Bazı başlangıç noktasından ofset olarak adres (genellikle ilişkili işlevin başlangıcı).
+Bir başlangıç noktasından (genellikle ilişkili işlevin başlangıcı) bir konum olarak adres.
 
 `bstrCodeBytes`\
-Bu talimat için kod bayt.
+Bu yönergenin kod baytları.
 
 `bstrOpcode`\
-Bu talimatın opkodu.
+Bu yönerge için opcode.
 
 `bstrOperands`\
-Bu talimat için operands.
+Bu yönergenin işlenenleri.
 
 `bstrSymbol`\
-Adresle ilişkili sembol adı (genel sembol, etiket vb.) ile ilişkilidir.
+Varsa, adres (genel simge, etiket, vb.) ile ilişkili simge adı.
 
 `uCodeLocationId`\
-Bu sökülen satırın kod konum tanımlayıcısı. Bir satırın kod bağlam adresi diğerinin kod bağlamı adresinden büyükse, ilkinin sökülen kod konumu tanımlayıcısı da ikinci satırın kod konumu tanımlayıcıdan daha büyük olacaktır.
+Bu ayrıştırılmış çizgi için kod konum tanımlayıcısı. Bir satırın kod bağlamı adresi diğerinin kod bağlamı adresinden büyükse, birincinin ayrıştırılmış kod konumu tanımlayıcısı ikincinin kod konumu tanımlayıcısından de daha büyük olur.
 
 `posBeg`\
-Sökme verilerinin başladığı belgedeki konuma karşılık gelen [TEXT_POSITION.](../../../extensibility/debugger/reference/text-position.md)
+Ayrıştırılmış verilerin başladığı bir belgedeki konuma karşılık gelen [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) .
 
 `posEnd`\
-Sökme verilerinin sona erdiği bir belgedeki konuma karşılık gelen [TEXT_POSITION.](../../../extensibility/debugger/reference/text-position.md)
+Ayrıştırılmış verilerin bittiği bir belgedeki konuma karşılık gelen [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) .
 
 `bstrDocumentUrl`\
-Dosya adı olarak temsil edilebilen metin `bstrDocumentUrl` belgeleri için alan, biçimi `file://file name`kullanılarak kaynağın bulunabileceği dosya adı ile doldurulur.
+Dosya adı olarak gösterilebilen metin belgeleri için, bu alan, `bstrDocumentUrl` biçimi kullanılarak kaynağın bulunabileceği dosya adıyla doldurulur `file://file name` .
 
-Dosya adı olarak gösterilemeyecek metin `bstrDocumentUrl` belgeleri için, belge için benzersiz bir tanımlayıcıdır ve hata ayıklama altyapısının [GetDocument](../../../extensibility/debugger/reference/idebugdisassemblystream2-getdocument.md) yöntemini uygulaması gerekir.
+Dosya adı olarak temsil edilemeyecek metin belgeleri için, `bstrDocumentUrl` belge için benzersiz bir tanımlayıcıdır ve hata ayıklama motorunun [GetDocument](../../../extensibility/debugger/reference/idebugdisassemblystream2-getdocument.md) yöntemini uygulaması gerekir.
 
-Bu alan, checksums hakkında ek bilgiler de içerebilir. Ayrıntılar için Açıklamalar'a bakın.
+Bu alan Ayrıca, sağlama toplamı hakkında ek bilgiler de içerebilir. Ayrıntılar için bkz. açıklamalar.
 
 `dwByteOffset`\
-Yönergedeki bayt sayısı kod satırının başından itibarendir.
+Yönergenin kod satırının başından itibaren olduğu bayt sayısı.
 
 `dwFlags`\
 Hangi bayrakların etkin olduğunu belirten [DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md) sabiti.
 
 ## <a name="remarks"></a>Açıklamalar
-Her `DisassemblyData` yapı bir sökme talimatı açıklar. Bu yapıların bir dizi [Oku](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) yönteminden döndürülür.
+Her `DisassemblyData` Yapı, ayrıştırılmış bir tek derleme yönergesini açıklar. [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) yönteminden bu yapıların bir dizisi döndürülür.
 
-[TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) yapısı yalnızca metin tabanlı belgeler için kullanılır. Bu yönerge için kaynak kod aralığı yalnızca bir deyim veya satırdan oluşturulan `dwByteOffset == 0`ilk yönerge için doldurulur, örneğin, .
+[TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) yapısı yalnızca metin tabanlı belgeler için kullanılır. Bu yönergenin kaynak kodu aralığı yalnızca bir deyimden veya satırdan oluşturulan ilk yönerge için doldurulmuştur, örneğin, ne zaman `dwByteOffset == 0` .
 
-Metin seli olmayan belgeler için, koddan bir belge bağlamı `bstrDocumentUrl` elde edilebilir ve alan boş bir değer olmalıdır. Alan `bstrDocumentUrl` önceki `bstrDocumentUrl` `DisassemblyData` dizi öğesindeki alanla aynıysa, null `bstrDocumentUrl` değeri ayarlayın.
+Metinsel olmayan belgeler için, koddan bir belge bağlamı elde edilebilir ve `bstrDocumentUrl` alan null bir değer olmalıdır. Alan, `bstrDocumentUrl` `bstrDocumentUrl` önceki Array öğesindeki alanla aynı ise, öğesini `DisassemblyData` `bstrDocumentUrl` null bir değer olarak ayarlayın.
 
-Alan `dwFlags` `DF_DOCUMENT_CHECKSUM` bayrak kümesi varsa, ek checksum bilgileri `bstrDocumentUrl` alan tarafından işaret dize izler. Özellikle, null string sonlandırıcısonra, sırayla çekler bayt sayısını gösteren bir 4 bayt değeri takip ve sırayla checksum bayt tarafından takip checksum algoritması tanımlayan bir GUID izler. Bu alanın nasıl kodlanıp çözüleceklerine ilişkin bu [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)]konudaki örneğe bakın.
+`dwFlags`Alan `DF_DOCUMENT_CHECKSUM` bayrak ayarlandıysa, ek sağlama bilgileri alanı tarafından işaret edilen dizeyi izler `bstrDocumentUrl` . Özellikle, null dize sonlandırıcısının ardından, sağlama toplamı algoritmasını tanımlayan bir GUID, ardından, sağlama toplamı içindeki bayt sayısını belirten 4 baytlık bir değer ve sırasıyla sağlama toplamı baytları tarafından izlenir. Bu alanın içindeki bu alanı kodlama ve kodunu çözme hakkında bu konudaki örneğe bakın [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)] .
 
 ## <a name="example"></a>Örnek
-`DF_DOCUMENT_CHECKSUM` Bayrak ayarlanmışsa, `bstrDocumentUrl` alan dize dışında ek bilgiler içerebilir. Bu kodlanmış dize oluşturma ve okuma [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)]işlemi basittir. Ancak, [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)]içinde , başka bir konudur. Merak edenler için, aşağıdaki örnek kodlanmış dize oluşturmak için [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)] bir yol ve kodlanmış dize [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)]çözmek için bir yol gösterir.
+`bstrDocumentUrl`Bayrak ayarlandıysa, alan bir dize dışında ek bilgiler içerebilir `DF_DOCUMENT_CHECKSUM` . Bu kodlanmış dize oluşturma ve okuma işlemi açıktır [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] . Bununla birlikte, ' de, [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)] başka bir önemi vardır. Merak eden kişiler için aşağıdaki örnek, ' [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)] deki kodlanmış dizenin kodunun çözülmesi için bir yol ve bir yolu gösterir [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)] .
 
 ```csharp
 using System;

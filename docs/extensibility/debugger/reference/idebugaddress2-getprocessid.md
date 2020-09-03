@@ -1,5 +1,5 @@
 ---
-title: IDebugAddress2::GetProcessID | Microsoft Dokümanlar
+title: 'IDebugAddress2:: GetProcessId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 94873e9a9c05a0c5e9253ce53240ab6b4ca39064
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736581"
 ---
 # <a name="idebugaddress2getprocessid"></a>IDebugAddress2::GetProcessID
-Bu [IDebugAddress2](../../../extensibility/debugger/reference/idebugaddress2.md) arabirimi tarafından temsil edilen nesnenin sahibi olan işlemin kimliğini alır.
+Bu [IDebugAddress2](../../../extensibility/debugger/reference/idebugaddress2.md) arabirimi tarafından temsil edilen nesneye sahip olan işlemin kimliğini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetProcessID (
@@ -41,10 +41,10 @@ int GetProcessID (
 
 ## <a name="parameters"></a>Parametreler
 `pProcID`\
-[çıkış] İşlem kimliği.
+dışı İşlem KIMLIĞI.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugAddress2](../../../extensibility/debugger/reference/idebugaddress2.md)

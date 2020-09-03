@@ -1,5 +1,5 @@
 ---
-title: FIELD_KIND | Microsoft Dokümanlar
+title: FIELD_KIND | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: cafe4a34745f3b34070f7d8fed1a246c806375a4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736868"
 ---
 # <a name="field_kind"></a>FIELD_KIND
-[Bir IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinde bulunan alan türünü belirtir.
+Bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinde bulunan alan türünü belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_FIELD_KIND {
@@ -129,22 +129,22 @@ public enum enum_FIELD_KIND {
 Alanın yalnızca bir tür olduğunu gösterir.
 
 `FIELD_KIND_SYMBOL`\
-Alanın türü, adı ve diğer bilgileri içeren bir sembol olduğunu gösterir.
+Alanın, tür, ad ve diğer bilgilerle bir sembol olduğunu gösterir.
 
 `FIELD_TYPE_PRIMITIVE`\
-Alanın ilkel bir veri türü olduğunu gösterir.
+Alanın temel bir veri türü olduğunu gösterir.
 
 `FIELD_TYPE_STRUCT`\
 Alanın bir yapı olduğunu gösterir.
 
 `FIELD_TYPE_CLASS`\
-Alanın bir sınıf olduğunu gösterir.
+Alanın bir sınıf olduğunu belirtir.
 
 `FIELD_TYPE_INTERFACE`\
 Alanın bir arabirim olduğunu gösterir.
 
 `FIELD_TYPE_UNION`\
-Alanın bir birlik olduğunu gösterir.
+Alanın bir Union olduğunu gösterir.
 
 `FIELD_TYPE_ARRAY`\
 Alanın bir dizi olduğunu gösterir.
@@ -168,7 +168,7 @@ Alanın bir etiket olduğunu gösterir.
 Alanın bir typedef olduğunu gösterir.
 
 `FIELD_TYPE_BITFIELD`\
-Alanın bir bit alanı olduğunu gösterir.
+Alanın bir bitfield olduğunu gösterir.
 
 `FIELD_TYPE_NAMESPACE`\
 Alanın bir ad alanı olduğunu gösterir.
@@ -201,13 +201,13 @@ Alanın yerel olduğunu gösterir.
 Alanın bir parametre olduğunu gösterir.
 
 `FIELD_SYM_THIS`\
-Alanın "bu" işaretçisi olduğunu gösterir.
+Alanın "This" işaretçisi olduğunu gösterir.
 
 `FIELD_SYM_GLOBAL`\
 Alanın genel olduğunu gösterir.
 
 `FIELD_SYM_PROP_GETTER`\
-Alanın özellikleri aldığını gösterir.
+Alanın özellikleri alacağını belirtir.
 
 `FIELD_SYM_PROP_SETTER`\
 Alanın özellikleri ayarladığını gösterir.
@@ -222,22 +222,22 @@ Alan türleri için bir maske gösterir.
 Alan türleri için bir maske gösterir.
 
 `FIELD_SYM_MASK`\
-Sembol bilgileri için bir maskeyi gösterir.
+Sembol bilgileri için bir maske gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
-[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) yöntemine yapılan bir aramadan döndürülür.
+[Getkinleştirilen d](../../../extensibility/debugger/reference/idebugfield-getkind.md) metoduna yapılan çağrıdan döndürülür.
 
-Alanın türüne bağlı olarak, [QueryInterface](/cpp/atl/queryinterface) daha özel bir arabirim biçimi için [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabiriminde çağrılabilir. Örneğin, [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) dönerse, `FIELD_TYPE_METHOD` `QueryInterface` [iDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) arabirimini almak için I'i`DebugField` arayabilirsiniz.
+Alan türüne bağlı olarak, [QueryInterface](/cpp/atl/queryinterface) daha belirli bir arabirim formu Için [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabiriminde çağrılabilir. Örneğin, [Getkinleştirme d](../../../extensibility/debugger/reference/idebugfield-getkind.md) döndürülürse `FIELD_TYPE_METHOD` , `QueryInterface` `DebugField` [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) arabirimini elde etmek için i 'yi çağırabilirsiniz.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: sh.h
+Üstbilgi: SH. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)
 - [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

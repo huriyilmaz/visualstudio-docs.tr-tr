@@ -10,38 +10,38 @@ ms.topic: conceptual
 ms.date: 11/18/2016
 ms.author: ghogen
 ms.openlocfilehash: 13ca51a6c7b505605409cbb6bb2f17e618c45179
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72911655"
 ---
 # <a name="constructing-filter-strings-for-the-table-designer"></a>Tablo Tasarımcısı için Filtre Dizelerini Oluşturma
-## <a name="overview"></a>Genel bakış
+## <a name="overview"></a>Genel Bakış
 Visual Studio **Tablo Tasarımcısı**görüntülenen bir Azure tablosundaki verileri filtrelemek için bir filtre dizesi oluşturur ve bunu filtre alanına girersiniz. Filtre dizesi sözdizimi WCF Veri Hizmetleri tarafından tanımlanır ve bir SQL WHERE yan tümcesine benzerdir, ancak bir HTTP isteği aracılığıyla tablo hizmetine gönderilir. **Tablo Tasarımcısı** , sizin için uygun kodlamayı işler, böylece istenen özellik değerini filtrelemek için filtre alanına yalnızca özellik adı, karşılaştırma işleci, ölçüt değeri ve isteğe bağlı olarak Boolean işlecini girmeniz gerekir. [Depolama hizmetleri REST API başvurusu](/rest/api/storageservices/)aracılığıyla tabloyu sorgulamak IÇIN bir URL oluştururken yaptığınız gibi $Filter sorgu seçeneğini de eklemeniz gerekmez.
 
-WCF Veri Hizmetleri, [Açık Veri Protokolü 'nü](https://www.odata.org/) (OData) temel alır. Filtre sistemi sorgu seçeneği ( **$Filter**) hakkında daha fazla bilgi için bkz. [OData URI kuralları belirtimi](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
+WCF Veri Hizmetleri, [Açık Veri Protokolü 'nü](https://www.odata.org/) (OData) temel alır. Filtre sistemi sorgu seçeneği (**$Filter**) hakkında daha fazla bilgi için bkz. [OData URI kuralları belirtimi](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
 
 ## <a name="comparison-operators"></a>Karşılaştırma İşleçleri
 Aşağıdaki mantıksal işleçler tüm özellik türleri için desteklenir:
 
-| Mantıksal işleç | Açıklama | Örnek filtre dizesi |
+| Mantıksal işleç | Description | Örnek filtre dizesi |
 | --- | --- | --- |
-| EQ |Eşittir |Şehir EQ ' Redmond ' |
+| eq |Eşittir |Şehir EQ ' Redmond ' |
 | gt |Büyüktür |Fiyat gt 20 |
-| Birleştir |Büyüktür veya eşittir |Fiyat GE 10 |
+| ge |Büyüktür veya eşittir |Fiyat GE 10 |
 | lt |Küçüktür |Fiyat lt 20 |
-| Le |Küçük veya eşittir |Fiyat Le 100 |
-| Savaşı |Eşit değildir |Şehir ne ' Londra ' |
-| and |' |Fiyat Le 200 ve fiyat gt 3,5 |
+| le |Küçüktür veya eşittir |Fiyat Le 100 |
+| ne |Eşit değildir |Şehir ne ' Londra ' |
+| ve |And |Fiyat Le 200 ve fiyat gt 3,5 |
 | veya |Veya |Fiyat Le 3,5 veya fiyat gt 200 |
-| not |Başlatılmadı |ıısavailable yok |
+| not |Not |ıısavailable yok |
 
 Bir filtre dizesi oluştururken aşağıdaki kurallar önemlidir:
 
 * Bir özelliği bir değerle karşılaştırmak için mantıksal işleçleri kullanın. Bir özelliği dinamik bir değerle karşılaştırmak mümkün değildir; ifadenin bir tarafı bir sabit olmalıdır.
-* Filtre dizesinin tüm bölümleri büyük/küçük harfe duyarlıdır.
-* Filtrenin geçerli sonuçları döndürmesi için sabit değerin özelliği ile aynı veri türünde olması gerekir. Desteklenen özellik türleri hakkında daha fazla bilgi için bkz. [Tablo hizmeti veri modelini anlama](/rest/api/storageservices/Understanding-the-Table-Service-Data-Model).
+* Filtre dizesinin tüm kısımları büyük/küçük harfe duyarlıdır.
+* Filtrenin geçerli sonuçlar döndürmesi için sabit değer, özellikle aynı veri türünde olmalıdır. Desteklenen özellik türleri hakkında daha fazla bilgi için bkz. [Tablo Hizmeti Veri Modelini anlama](/rest/api/storageservices/Understanding-the-Table-Service-Data-Model).
 
 ## <a name="filtering-on-string-properties"></a>Dize özelliklerinde filtreleme
 Dize özelliklerine filtre uyguladığınızda, dize sabitini tek tırnak işaretleri içine alın.

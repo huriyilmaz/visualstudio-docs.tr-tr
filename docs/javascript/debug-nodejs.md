@@ -12,10 +12,10 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: 801ea23430d13dbefd9498c57b07881235275961
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85285198"
 ---
 # <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>Visual Studio 'da JavaScript veya TypeScript uygulamasında hata ayıklama
@@ -58,7 +58,7 @@ Kaynağınız TypeScript veya Babel gibi bir transpiler tarafından küçültül
 
 Kaynak haritaları oluşturmaya yönelik yardım için bkz. [hata ayıklama için kaynak haritaları oluşturma](#generate_source_maps).
 
-### <a name="prepare-the-browser-for-debugging"></a><a name="prepare_the_browser_for_debugging"></a>Tarayıcıyı hata ayıklama için hazırlama
+### <a name="prepare-the-browser-for-debugging"></a><a name="prepare_the_browser_for_debugging"></a> Tarayıcıyı hata ayıklama için hazırlama
 
 ::: moniker range=">=vs-2019"
 Bu senaryo için, IDE veya Chrome 'da **Microsoft Edge Beta** adlı Microsoft Edge (Kmıum) kullanın.
@@ -162,7 +162,7 @@ Hata ayıklayıcıyı Visual Studio 'dan iliştirmek ve istemci tarafı kodda is
 
    * Bir transpiled JavaScript dosyasındaki kodu kesmeniz gerekiyorsa (örneğin, *app-bundle.js*) ve bunu yapamadığından, *filename.js. map*kaynak eşleme dosyasını kaldırın.
 
-### <a name="troubleshooting-breakpoints-and-source-maps"></a><a name="troubleshooting_source_maps"></a>Kesme noktaları ve kaynak haritaları sorunlarını giderme
+### <a name="troubleshooting-breakpoints-and-source-maps"></a><a name="troubleshooting_source_maps"></a> Kesme noktaları ve kaynak haritaları sorunlarını giderme
 
 Bir TypeScript veya JSX kaynak dosyasındaki kodu kesmeniz gerekirse ve bunu yapamaması gerekiyorsa, hata ayıklayıcıyı iliştirmek için önceki adımlarda açıklandığı gibi **işlemek Için İliştir** ' i kullanın. Ortamınızın doğru ayarlandığından emin olun:
 
@@ -174,7 +174,7 @@ Bir TypeScript veya JSX kaynak dosyasındaki kodu kesmeniz gerekirse ve bunu yap
 
 Alternatif olarak, bir kaynak dosyada (örneğin, *app. TSX*) kodu kesmeniz gerekiyorsa ve bunu yapamazsanız, `debugger;` kaynak dosyadaki ifadesini kullanmayı deneyin veya bunun yerine Chrome Geliştirici Araçları (veya Microsoft Edge için F12 araçları) kesme noktaları ayarlayın.
 
-## <a name="generate-source-maps-for-debugging"></a><a name="generate_source_maps"></a>Hata ayıklama için kaynak haritaları oluştur
+## <a name="generate-source-maps-for-debugging"></a><a name="generate_source_maps"></a> Hata ayıklama için kaynak haritaları oluştur
 
 Visual Studio, JavaScript kaynak dosyalarında kaynak haritaları kullanma ve oluşturma özelliğine sahiptir. Bu genellikle, kaynağınız TypeScript veya Babel gibi bir transpiler tarafından küçültülmüş veya oluşturulduysa gereklidir. Kullanılabilir seçenekler proje türüne bağlıdır.
 
@@ -197,7 +197,7 @@ Visual Studio kullanarak hata ayıklamayı etkinleştirmek için, oluşturulan k
   },
 ```
 
-Şu kodla:
+yerine şu kodu yazın:
 
 ```javascript
   output: {
@@ -210,7 +210,7 @@ Bu, Visual Studio 'da istemci tarafı kodda hata ayıklamayı etkinleştirmek i�
 
 Karmaşık senaryolar için tarayıcı araçları (**F12**) bazen hata ayıklama için en iyi şekilde çalışır, çünkü özel öneklere değişiklik gerektirmez.
 
-### <a name="configure-source-maps-using-a-tsconfigjson-file"></a><a name="configure_source_maps"></a>Dosya tsconfig.jskullanarak kaynak haritaları yapılandırma
+### <a name="configure-source-maps-using-a-tsconfigjson-file"></a><a name="configure_source_maps"></a> Dosya tsconfig.jskullanarak kaynak haritaları yapılandırma
 
 Projenize bir *tsconfig.js* eklerseniz, Visual Studio Dizin kökünü bir TypeScript projesi olarak değerlendirir. Dosyayı eklemek için Çözüm Gezgini ' de projenize sağ tıklayın ve ardından **> yeni öğe > TYPESCRIPT JSON yapılandırma dosyası Ekle**' yi seçin. Aşağıdaki gibi bir dosyadaki *tsconfig.js* projenize eklenir.
 

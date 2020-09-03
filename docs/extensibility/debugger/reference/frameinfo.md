@@ -1,5 +1,5 @@
 ---
-title: FRAMEINFO | Microsoft Dokümanlar
+title: FRAMEıNFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c40361a9739bf468de2038df4325fa1ac98337c1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736787"
 ---
 # <a name="frameinfo"></a>FRAMEINFO
-Yığın çerçeveyi açıklar.
+Yığın çerçevesini açıklar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct tagFRAMEINFO {
@@ -65,28 +65,28 @@ public struct FRAMEINFO {
 
 ## <a name="members"></a>Üyeler
 `m_dwValidFields`\
-Hangi alanların [doldurulduğuna](../../../extensibility/debugger/reference/frameinfo-flags.md) FRAMEINFO_FLAGS numaralandırmadan gelen bayrakların birleşimi.
+[FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) Numaralandırmadaki, doldurulacak alanları belirten bayrakların birleşimi.
 
 `m_bstrFuncName`\
-Yığın çerçevesiile ilişkili işlev adı.
+Yığın çerçevesiyle ilişkili işlev adı.
 
 `m_bstrReturnType`\
-Yığın çerçevesiile ilişkili iade türü.
+Yığın çerçevesiyle ilişkili dönüş türü.
 
 `m_bstrArgs`\
-Yığın çerçevesi ile ilişkili işlevin bağımsız değişkenleri.
+Yığın çerçevesiyle ilişkili işlevin bağımsız değişkenleri.
 
 `m_bstrLanguage`\
 İşlevin uygulandığı dil.
 
 `m_bstrModule`\
-Yığın çerçevesiile ilişkili modül adı.
+Yığın çerçevesiyle ilişkili modül adı.
 
 `m_addrMin`\
-Minimum fiziksel yığın adresi.
+En düşük fiziksel yığın adresi.
 
 `m_addrMAX`\
-Maksimum fiziksel yığın adresi.
+En büyük fiziksel yığın adresi.
 
 `m_pFrame`\
 Bu yığın çerçevesini temsil eden [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) nesnesi.
@@ -95,23 +95,23 @@ Bu yığın çerçevesini temsil eden [IDebugStackFrame2](../../../extensibility
 Bu yığın çerçevesini içeren modülü temsil eden [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) nesnesi.
 
 `m_fHasDebugInfo`\
-Verilen çerçevede`TRUE`hata ayıklama bilgisi varsa sıfır olmayan ( )
+`TRUE`Verilen çerçevede hata ayıklama bilgileri varsa sıfır olmayan ().
 
 `m_fStaleCode`\
-Yığın çerçevesi`TRUE`artık geçerli olmayan kodla ilişkiliyse sıfır dışı ( )
+`TRUE`Yığın çerçevesi artık geçerli olmayan kodla ilişkilendirilirse sıfır olmayan ().
 
 `m_fAnnotatedFrame`\
-Yığın çerçevesi`TRUE`oturum hata ayıklama yöneticisi (SDM) tarafından açıklamalı ise sıfır olmayan ( )
+`TRUE`Yığın çerçevesine oturum hata ayıklama Yöneticisi (SDM) tarafından açıklama eklendiğinde sıfır olmayan ().
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı doldurulmak üzere [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) yöntemine geçirilir. Bu yapı, Sırayla, [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) yöntemine bir çağrı döndürülür [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) arabiriminde bulunan bir listede yer almaktadır.
+Bu yapı, doldurulacak [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) yöntemine geçirilir. Bu yapı Ayrıca, [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) yöntemine yapılan çağrıdan döndürülen [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) arabiriminde bulunan bir listede de bulunur.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

@@ -9,21 +9,21 @@ ms.workload:
 - cplusplus
 author: corob-msft
 ms.openlocfilehash: a9393fd248f4e6520c261d405bc624a75d8cf69f
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287122"
 ---
 # <a name="use-the-microsoft-unit-testing-framework-for-c-in-visual-studio"></a>Visual Studio 'da C++ için Microsoft birim testi çerçevesini kullanma
 
 C++ için Microsoft birim testi çerçevesi, C++ iş yüküne **sahip masaüstü geliştirmeye** varsayılan olarak dahildir.
 
-## <a name="to-write-unit-tests-in-a-separate-project"></a><a name="separate_project"></a>Birim testlerini ayrı bir projede yazmak için
+## <a name="to-write-unit-tests-in-a-separate-project"></a><a name="separate_project"></a> Birim testlerini ayrı bir projede yazmak için
 
 Genellikle, test kodunuzu test etmek istediğiniz kodla aynı çözümde kendi projesinde çalıştırırsınız. Yeni bir test projesi ayarlamak ve yapılandırmak için bkz. [C/C++ için birim testleri yazma](writing-unit-tests-for-c-cpp.md).
 
-## <a name="to-write-unit-tests-in-the-same-project"></a><a name="same_project"></a>Aynı projedeki birim testlerini yazmak için
+## <a name="to-write-unit-tests-in-the-same-project"></a><a name="same_project"></a> Aynı projedeki birim testlerini yazmak için
 
 Bazı durumlarda, örneğin, bir DLL 'de verilemeyen işlevleri test ederken, test etmekte olduğunuz programla aynı projede testleri oluşturmanız gerekebilir. Aynı projedeki birim testlerini yazmak için:
 
@@ -44,7 +44,7 @@ Bazı durumlarda, örneğin, bir DLL 'de verilemeyen işlevleri test ederken, te
 
    - **Çözüm Gezgini** ' de proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe**  >  **C++ dosyası (. cpp)** Ekle ' yi seçin.
 
-## <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="object_files"></a>Testleri nesne veya kitaplık dosyalarına bağlamak için
+## <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="object_files"></a> Testleri nesne veya kitaplık dosyalarına bağlamak için
 
 Test edilen kod test etmek istediğiniz işlevleri dışa aktarmazsa, Output **. obj** veya **. lib** dosyasını test projesinin bağımlılıklarına ekleyebilirsiniz. Test projesinin özelliklerini, birim testi için gereken üst bilgileri ve kitaplığı ya da nesne dosyalarını içerecek şekilde değiştirin.
 

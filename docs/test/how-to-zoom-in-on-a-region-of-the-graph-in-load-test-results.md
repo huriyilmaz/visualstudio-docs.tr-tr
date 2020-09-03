@@ -12,10 +12,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 836e4f30e2c84bf0093366f4cc38a2cb7f58b545
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287031"
 ---
 # <a name="how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results"></a>Nasıl yapılır: yük testi sonuçlarında grafiğin bir bölgesini yakınlaştırma
@@ -55,7 +55,7 @@ Grafikleri göstermek için:
 
 2. Yük testi çalıştırmasının sonunda, yük testi sonuçları deposundan sonuçları görüntülemeyi soran iletişim kutusunda **Evet** ' i seçin.
 
-     \-veya
+     \- veya
 
      Daha önce çalıştırılan bir yük testinin ayrıntılarını görüntüleyin. Daha fazla bilgi için bkz. [nasıl yapılır: çözümleme için yük testi sonuçlarına erişme](../test/how-to-access-load-test-results-for-analysis.md).
 

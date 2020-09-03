@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.date: 8/11/2017
 ms.author: ghogen
 ms.openlocfilehash: 55fc29117b1b01bd6c9b214d1db111af72127871
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72911693"
 ---
 # <a name="how-to-manage-service-configurations-and-profiles"></a>Hizmet yapılandırmalarını ve profillerini yönetme
-## <a name="overview"></a>Genel bakış
+## <a name="overview"></a>Genel Bakış
 Bir bulut hizmeti yayımladığınızda, Visual Studio yapılandırma bilgilerini iki tür yapılandırma dosyasında depolar: hizmet yapılandırmaları ve profiller. Hizmet yapılandırma (. cscfg dosyaları) bir Azure bulut hizmeti için dağıtım ortamları için depolama ayarları. Azure, bulut hizmetlerinizi yönetirken bu yapılandırma dosyalarını kullanır. Diğer yandan, profiller (. azurePubxml dosyaları), bulut hizmetleri için yayımlama ayarlarını depolar. Bu ayarlar, Yayımlama Sihirbazı 'nı kullanırken seçtiğiniz ayarların bir kaydıdır ve Visual Studio tarafından yerel olarak kullanılır. Bu konu, her iki yapılandırma dosyası türüyle nasıl çalışılacağını açıklamaktadır.
 
 ## <a name="service-configurations"></a>Hizmet yapılandırması
@@ -43,7 +43,7 @@ Ayrıca rolün özellik sayfalarındaki **konfigürasyonları Yönet** iletişim
 
     **Hizmet yapılandırmasını Yönet** iletişim kutusu görüntülenir.
 2. Bir hizmet yapılandırmasını silmek için, **ad** listesinden silmek istediğiniz yapılandırmayı seçin ve ardından **Kaldır**' ı seçin. Bu yapılandırmayı silmek istediğinizi doğrulayan bir iletişim kutusu görünür.
-3. **Sil**' i seçin.
+3. **Sil**’i seçin.
 
      Hizmet yapılandırma dosyası Çözüm Gezgini Azure projesinden kaldırılır.
 
@@ -59,7 +59,7 @@ Ayrıca rolün özellik sayfalarındaki **konfigürasyonları Yönet** iletişim
 * Bir hizmet yapılandırmasını değiştirmek isterseniz, Azure projesinde değiştirmek istediğiniz belirli rolün kısayol menüsünü açın ve ardından **Özellikler**' i seçin. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio Ile Azure bulut hizmeti Için rolleri yapılandırma](vs-azure-tools-configure-roles-for-cloud-service.md) .
 
 ## <a name="make-different-setting-combinations-by-using-profiles"></a>Profilleri kullanarak farklı ayar birleşimleri yapın
-Bir profil kullanarak, farklı amaçlar için farklı ayarlar birleşimleriyle **Yayımla Sihirbazı** ' nı otomatik olarak doldurabilirsiniz. Örneğin, hata ayıklama için bir profiliniz ve yayın yapıları için bir profil oluşturabilirsiniz. Bu durumda, **hata ayıklama** profilinizde **IntelliTrace** etkin ve **hata ayıklama** yapılandırması seçili olur ve **yayın** profilinizde **IntelliTrace** devre dışı bırakılır ve **Sürüm** yapılandırması seçildiğinde. Farklı bir depolama hesabı kullanarak bir hizmeti dağıtmak için farklı profiller de kullanabilirsiniz.
+Bir profil kullanarak, farklı amaçlar için farklı ayarlar birleşimleriyle **Yayımla Sihirbazı** ' nı otomatik olarak doldurabilirsiniz. Örneğin, hata ayıklama için bir profiliniz ve yayın yapıları için bir profil oluşturabilirsiniz. Bu durumda, **hata ayıklama** profilinizde **IntelliTrace** etkin ve **hata ayıklama** yapılandırması seçili olur ve **yayın** profilinizde **IntelliTrace** devre dışı bırakılır ve **Sürüm** yapılandırması seçilidir. Farklı bir depolama hesabı kullanarak bir hizmeti dağıtmak için farklı profiller de kullanabilirsiniz.
 
 Sihirbazı ilk kez çalıştırdığınızda varsayılan bir profil oluşturulur. Visual Studio **profili, profil klasörü altında** Azure projenize eklenen. azurePubXml uzantısına sahip bir dosyada depolar. Sihirbazı daha sonra çalıştırdığınızda farklı seçimleri el ile belirtirseniz dosya otomatik olarak güncelleştirilir. Aşağıdaki yordamı çalıştırmadan önce, zaten bulut hizmetinizi en az bir kez yayımladınız.
 
@@ -68,7 +68,7 @@ Sihirbazı ilk kez çalıştırdığınızda varsayılan bir profil oluşturulur
 2. Aşağıdaki çizimde gösterildiği gibi, **hedef profil** listesinin yanındaki **profili kaydet** düğmesini seçin. Bu, sizin için bir profil oluşturur.
 
     ![Yeni bir profil oluşturun](./media/vs-azure-tools-service-configurations-and-profiles-how-to-manage/create-new-profile.png)
-3. Profil oluşturulduktan sonra **yönet < seçin...**  **hedef profil** listesinde >.
+3. Profil oluşturulduktan sonra **hedef profil** listesinde **<Yönet... >** öğesini seçin.
 
     Aşağıdaki çizimde gösterildiği gibi **profilleri Yönet** iletişim kutusu görünür.
 
@@ -86,7 +86,7 @@ Sihirbazı ilk kez çalıştırdığınızda varsayılan bir profil oluşturulur
 2. **Hedef profil** listesinde **Yönet**' i seçin.
 3. **Profilleri Yönet** iletişim kutusunda, silmek istediğiniz profili seçin ve ardından **Kaldır**' ı seçin.
 4. Görüntülenen onay iletişim kutusunda **Tamam**' ı seçin.
-5. **Kapat**' ı seçin.
+5. **Kapat**’ı seçin.
 
 ### <a name="to-change-a-profile"></a>Bir profili değiştirmek için
 1. Azure projeniz için kısayol menüsünü açın ve ardından **Yayımla**' yı seçin.

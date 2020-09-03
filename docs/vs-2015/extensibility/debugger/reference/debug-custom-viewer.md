@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d10e0811044d7169eaf46f48f53389fa7b3076ec
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179162"
 ---
-# <a name="debugcustomviewer"></a>DEBUG_CUSTOM_VIEWER
+# <a name="debug_custom_viewer"></a>DEBUG_CUSTOM_VIEWER
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Özel bir Görüntüleyici tanımlayan bir yapı Görselleştirici yazın.  
+Özel bir Görüntüleyici veya tür görselleştiricisi tanımlayan bir yapı.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct tagDEBUG_CUSTOM_VIEWER {  
@@ -49,33 +49,33 @@ public struct DEBUG_CUSTOM_VIEWER {
 ```  
   
 ## <a name="members"></a>Üyeler  
- dwID  
- Birden çok İzleyici mi tarafından uygulanan görselleştiricileri ayırt etmek için bir kimlik `GUID`.  
+ Dwıd  
+ Tek bir tarafından uygulanan birden çok izleyiciyi veya görselleştiricileri ayırt etmek için bir KIMLIK `GUID` .  
   
  bstrMenuName  
- Açılan menüde görüntülenen metin.  
+ Açılan menüde görünecek olan metin.  
   
  bstrDescription  
- (Bir null değer kullanılmazsa olmalıdır) tür görselleştiricisi ve özel Görüntüleyici açıklaması.  
+ Özel Görüntüleyici veya tür görselleştiricisi açıklaması (kullanılmazsa null değer olmalıdır).  
   
  guidLang  
- Sağlayan bir ifade değerlendiricisi dili.  
+ İfade değerlendiricisi sağlama dili.  
   
  guidVendor  
- Satıcısına sağlayan bir ifade değerlendiricisi.  
+ İfade değerlendirici sağlayan satıcı.  
   
  bstrMetric  
- Ölçüm hangi tür görselleştiricisi ve özel Görüntüleyici `CLSID` depolanır.  
+ Özel Görüntüleyici veya tür görselleştiricinin `CLSID` depolandığı ölçüm.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapının bir liste için bir çağrı tarafından döndürülen [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) yöntemi (ve uzantısı tarafından [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) yöntemi).  
+ Bu yapının bir listesi, [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) yöntemine yapılan bir çağrı (ve uzantıya göre [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) yöntemi) tarafından döndürülür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılar ve birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)   

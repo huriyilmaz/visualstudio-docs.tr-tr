@@ -1,5 +1,5 @@
 ---
-title: Kaynak Kontrol VSPackage Mimarisi | Microsoft Dokümanlar
+title: Kaynak denetimi VSPackage mimarisi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,41 +11,41 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d6e62aa9e2d725e982f0605e2721f0bfeb3cc5ee
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80705078"
 ---
 # <a name="source-control-vspackage-architecture"></a>Kaynak Denetimi VSPackage’ı Mimarisi
-Kaynak kontrol paketi, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE'nin sağladığı hizmetleri kullanan bir VSPackage'dir. Buna karşılık, bir kaynak denetim paketi bir kaynak denetim hizmeti olarak işlevselliğini sağlar. Ayrıca, kaynak kontrol paketi, kaynak denetimini [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
+Kaynak denetimi paketi, IDE 'nin sağladığı Hizmetleri kullanan bir VSPackage [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Sonuç olarak, kaynak denetimi paketi işlevlerini kaynak denetimi hizmeti olarak sağlar. Ayrıca, kaynak denetimi paketi, kaynak denetimi ile tümleştirme için bir kaynak denetimi eklentisinin daha çok yönlü bir alternatifidir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
- Kaynak Denetimi Eklentisi API'sini uygulayan bir kaynak denetim eklentisi sıkı bir sözleşmeye uyar. Örneğin, bir eklenti varsayılan [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kullanıcı arabiriminin (UI) yerini alamaz. Ayrıca, Kaynak Denetimi Eklentisi API'si bir eklentinin kendi kaynak denetim modelini uygulamasına olanak sağlamaz. Ancak bir kaynak denetim paketi, bu sınırlamaların her ikisini de aşar. Kaynak denetim paketi, bir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kullanıcının kaynak denetim deneyimi üzerinde tam denetime sahiptir. Ayrıca, bir kaynak denetim paketi kendi kaynak denetim modelini ve mantığını kullanabilir ve kaynak denetimiyle ilgili tüm kullanıcı arabirimlerini tanımlayabilir.
+ Katı bir sözleşmeye göre kaynak denetimi eklentisi API 'leri uygulayan bir kaynak denetimi eklentisi. Örneğin, bir eklenti varsayılan [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Kullanıcı arabirimini (UI) değiştirmez. Üstelik, kaynak denetimi eklentisi API 'SI, bir eklentinin kendi kaynak denetim modelini uygulamasına izin vermez. Ancak, bir kaynak denetimi paketi, bu sınırlamaların her ikisini de içerir. Bir kaynak denetimi paketi, bir kullanıcının kaynak denetimi deneyimi üzerinde tam denetime sahiptir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Ayrıca, bir kaynak denetimi paketi kendi kaynak denetim modelini ve mantığını kullanabilir ve kaynak denetimi ile ilgili tüm kullanıcı arabirimlerini tanımlayabilir.
 
-## <a name="source-control-package-components"></a>Kaynak Kontrol Paketi Bileşenleri
- Mimari diyagramda gösterildiği gibi, Kaynak Denetim Saplaması adlı bir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bileşen, bir kaynak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]denetim paketini .
+## <a name="source-control-package-components"></a>Kaynak denetimi paket bileşenleri
+ Mimari diyagramında gösterildiği gibi, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaynak denetimi saplaması adlı bir bileşen, ile bir kaynak denetimi paketini tümleştiren bir VSPackage ' dır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
- Kaynak Denetim Saplama aşağıdaki görevleri işler.
+ Kaynak denetimi saplaması aşağıdaki görevleri gerçekleştirir.
 
-- Kaynak denetimi paketi kaydı için gerekli olan ortak kullanıcı arabirimi sağlar.
+- Kaynak denetimi paket kaydı için gerekli olan ortak kullanıcı arabirimini sağlar.
 
-- Bir kaynak kontrol paketi yükler.
+- Kaynak denetimi paketini yükler.
 
-- Bir kaynak kontrol paketini etkin/etkin olmayan olarak ayarlar.
+- Kaynak denetimi paketini etkin/devre dışı olarak ayarlar.
 
-  Kaynak Kontrol Saplaması, kaynak kontrol paketi için etkin hizmeti arar ve IDE'den gelen tüm servis çağrılarını bu pakete yönlendirir.
+  Kaynak denetimi saplaması, kaynak denetimi paketi için etkin hizmeti arar ve IDE 'deki tüm gelen hizmet çağrılarını bu pakete yönlendirir.
 
-  Kaynak Kontrol Bağdaştırıcı Paketi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sağlayan özel bir kaynak kontrol paketidir. Bu paket, Kaynak Denetimi Eklentisi API'sini temel alan kaynak denetimi eklentilerini desteklemek için merkezi bileşendir. Bir kaynak kontrol eklentisi etkin eklenti olduğunda, Kaynak Denetim Saplaması olaylarını Kaynak Denetim Bağdaştırıcı Paketi'ne gönderir. Buna karşılık, Kaynak Denetim Bağdaştırıcı Paketi Kaynak Denetimi Eklentisi API'sini kullanarak kaynak denetimi eklentisi ile iletişim kurar ve ayrıca tüm kaynak denetimi eklentileri için ortak olan varsayılan bir kullanıcı arabirimi sağlar.
+  Kaynak denetim bağdaştırıcısı paketi, sağlayan özel bir kaynak denetimi paketidir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Bu paket, kaynak denetimi eklentisi API 'sine bağlı olarak kaynak denetimi eklentilerini desteklemek için merkezi bileşendir. Bir kaynak denetimi eklentisi etkin eklentidir, kaynak denetimi saplaması, olaylarını kaynak denetimi bağdaştırıcı paketine gönderir. Kaynak denetim bağdaştırıcısı paketi, kaynak denetimi eklentisi API 'sini kullanarak kaynak denetim eklentisi ile iletişim kurar ve ayrıca tüm kaynak denetimi eklentileri için ortak olan varsayılan bir kullanıcı arabirimi sağlar.
 
-  Bir kaynak kontrol paketi etkin paket olduğunda, diğer taraftan, Kaynak Kontrol Saplaması [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] Kaynak Kontrol Paketi arabirimlerini kullanarak paketle doğrudan iletişim kurar. Kaynak kontrol paketi, kendi kaynak denetimi uI barındırma sorumludur.
+  Kaynak denetimi paketi etkin paket olduğunda, diğer yandan kaynak denetimi saplaması, kaynak denetimi paket arabirimlerini kullanarak doğrudan paketiyle iletişim kurar [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] . Kaynak denetimi paketi kendi kaynak denetimi kullanıcı arabirimini barındırmaktan sorumludur.
 
-  ![Kaynak Kontrol Mimarisi grafiği](../../extensibility/internals/media/vsipsccarch.gif "VSIPSCCArch")
+  ![Kaynak Denetim Mimarisi grafiği](../../extensibility/internals/media/vsipsccarch.gif "VSIPSCCArch")
 
-  Kaynak denetim paketi için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaynak denetim kodu veya tümleştirme için API sağlamaz. Bunu, kaynak denetim [eklentisinin](../../extensibility/internals/creating-a-source-control-plug-in.md) katı bir işlev ler ve geri çağırmalar kümesi uygulamak zorunda olduğu bir Kaynak Denetim Eklentisi Oluşturma'da özetlenen yaklaşımla karşılaştırın.
+  Kaynak denetimi paketi için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaynak denetim kodu veya tümleştirme için BIR API sağlamaz. Bunu, kaynak denetimi eklentisinin bir grup işlev ve geri çağırma kümesi uygulaması gereken bir [kaynak denetimi eklentisi oluşturma](../../extensibility/internals/creating-a-source-control-plug-in.md) bölümünde açıklanan yaklaşımla kontrast sağlar.
 
-  Herhangi bir VSPackage gibi, bir kaynak kontrol paketi kullanılarak `CoCreateInstance`oluşturulabilir bir COM nesnesidir. VSPackage uygulayarak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>IDE için kullanılabilir hale getirir. Bir örnek oluşturulduğunda, VSPackage bir site işaretçisi ve IDE'deki kullanılabilir hizmetlere ve arabirimlere VSPackage erişimi sağlayan bir <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> arabirim alır.
+  Herhangi bir VSPackage gibi, kaynak denetimi paketi kullanılarak oluşturulabilen bir COM nesnesidir `CoCreateInstance` . VSPackage, uygulayarak kendisini IDE için kullanılabilir hale getirir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> . Bir örnek oluşturulduğunda, VSPackage, <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> IDE 'deki kullanılabilir hizmetlere ve arabirimlere VSPackage erişimi sağlayan bir site işaretçisi ve arabirim alır.
 
-  VSPackage tabanlı kaynak kontrol paketi yazmak, Kaynak Denetimi Eklentisi API tabanlı eklenti yazmaktan daha gelişmiş programlama uzmanlığı gerektirir.
+  VSPackage tabanlı bir kaynak denetimi paketi yazmak, kaynak denetimi eklentisi API tabanlı eklentisi yazmadan daha gelişmiş programlama uzmanlığını gerektirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>

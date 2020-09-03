@@ -1,5 +1,5 @@
 ---
-title: Eşzamanlı Visualizer Command-Line Utility (CVCollectionCmd) | Microsoft Dokümanlar
+title: Eşzamanlılık görselleştiricisi komut satırı yardımcı programı (CVCollectionCmd) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,88 +11,88 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2721798ee9f0c7e006acdedbecaecbd56068be3f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72911201"
 ---
-# <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>Eşzamanlı Visualizer komut satırı yardımcı programı (CVCollectionCmd)
-Visual Studio için Eşzamanlılık Görselleştiricisi'nde görüntüleyebilmeniz için komut satırından izleme toplamak için Eşzamanlı Visualizer komut satırı yardımcı programını *(CVCollectionCmd.exe)* kullanabilirsiniz. Araçlar Visual Studio yüklü olmayan bilgisayarlarda kullanılabilir.
+# <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>Eşzamanlılık görselleştiricisi komut satırı yardımcı programı (CVCollectionCmd)
+Eşzamanlılık görselleştiricisi komut satırı yardımcı programını (*CVCollectionCmd.exe*) kullanarak, bunları Visual Studio Için eşzamanlılık görselleştiricisi içinde görüntüleyebilmeniz için komut satırından izleme toplayabilirsiniz. Araçlar, Visual Studio yüklü olmayan bilgisayarlarda kullanılabilir.
 
 > [!NOTE]
-> Visual Studio 2013'ten itibaren Eşzamanlı Görüntüleyici isteğe bağlı bir uzantıdır. (Daha önce Visual Studio dahil edilmişti.) Visual Studio [2015 için Eşzamanlı Visualizer toplama araçlarını](https://www.microsoft.com/download/details.aspx?id=49103) Download Center'dan indirebilirsiniz.
+> Visual Studio 2013 başlayarak eşzamanlılık görselleştiricisi isteğe bağlı bir uzantıdır. (Daha önce Visual Studio 'Ya eklenmiştir.) [Visual Studio 2015 Için eşzamanlılık görselleştiricisi koleksiyon araçları](https://www.microsoft.com/download/details.aspx?id=49103) 'Nı indirme merkezi ' nden indirebilirsiniz.
 
-## <a name="download-the-concurrency-visualizer-command-line-utility"></a>Eşzamanlı Visualizer komut satırı yardımcı programını indirin
- Komut satırı yardımcı programını indirmek ve yüklemek [için Visual Studio 2015 için Eşzamanlı Visualizer Collection Tools'a](https://www.microsoft.com/download/details.aspx?id=49103) gidin ve talimatları izleyin. Varsayılan *olarak, CVCollectionCmd.exe* x64 bilgisayarlarda %ProgramFiles%\Microsoft Concurrency Visualizer Collection Tools\ (%ProgramFiles(x86)%\Microsoft Concurrency Visualizer Collection Tools\ olarak yüklenir.
+## <a name="download-the-concurrency-visualizer-command-line-utility"></a>Eşzamanlılık görselleştiricisi komut satırı yardımcı programını indirin
+ Komut satırı yardımcı programını indirip yüklemek için, [Visual Studio 2015 Için eşzamanlılık görselleştiricisi koleksiyon araçları](https://www.microsoft.com/download/details.aspx?id=49103) ' na gidin ve yönergeleri izleyin. Varsayılan olarak, *CVCollectionCmd.exe* %ProgramFiles%\Microsoft concurrency Visualizer koleksiyon araçları \ (% ProgramFiles (x86)% \ Microsoft eşzamanlılık görselleştiricisi koleksiyon araçları \ x64 bilgisayarlarda yüklü).
 
-## <a name="collect-a-trace-with-cvcollectioncmd"></a>CVCollectionCmd ile bir iz toplamak
- Uygulamayı CVCollectionCmd ile başlatarak veya ekleyerek bir izleme toplayabilirsiniz. Seçenekleriniz için aşağıdaki komut başvurusuna bakın. Örneğin:
+## <a name="collect-a-trace-with-cvcollectioncmd"></a>CVCollectionCmd ile izleme toplama
+ Uygulamayı CVCollectionCmd ile başlatarak veya buna ekleyerek bir izleme toplayabilirsiniz. Seçenekleriniz için aşağıdaki komut başvurusuna bakın. Örneğin:
 
 ```cmd
 <Path>CVCollectionCmd /launch c:\myapp\myapp.exe /outdir c:\myapp\data
 ```
 
 ## <a name="commands-and-parameters"></a>Komutlar ve parametreler
- Komut satırı yardımcı programındaki komutlar ve parametreler hakkında yardım almak için bunu komut istemine yazın:
+ Komut satırı yardımcı programındaki komutlar ve parametreler hakkında yardım almak için komut istemine şunu yazın:
 
- **CvCollectionCmd /?**
+ **CvCollectionCmd/?**
 
-|Seçenek|Açıklama|Parametreler|Döndürülen değerler|
+|Seçenek|Açıklama|Parametreler|Dönüş değerleri|
 |------------|-----------------|----------------|-------------------|
-|Sorgu|Koleksiyonun başlatılıp başlatılamayacağına dair verir.|None|Toplama başlamaya hazırsa 0.<br /><br /> Toplama zaten devam ediyorsa 1.<br /><br /> 2 toplama devam etmiyorsa, ancak gerekli [ETW](/dotnet/framework/wcf/samples/etw-tracing) oturumlarından biri veya daha fazlası zaten etkin.|
-|Başlat|Eşzamanlılık Görselleştiricisi altında belirtilen işlemi çalıştırır.|Yürütülebilir yolun.|0 eğer koşmak başarılı oldu.<br /><br /> Hedef uygulama başlatılamadığı için çalıştırılan 1 başarısız oldu.<br /><br /> CVCollectionCmd belirtilen çıktı dizini yazmak için yeterli izinleri vardır çünkü çalıştırılmaz 13.|
-|İliştir|Sistem çapında bir izleme toplamaya başlar; aksi takdirde, bir işlem belirtilirse bağlanır.|Yok.|Eki başarılı olursa 0.<br /><br /> Belirtilen işlem geçersiz veya belirsiz olduğundan eki başarısız olduysa 1.<br /><br /> CVCollectionCmd belirtilen çıktı dizini yazmak için yeterli izinleri vardır çünkü eki başarısız oldu 13.|
-|Ayır|Toplamayı durdurur.|Yok.|Müfreze başarılı olursa 0.<br /><br /> Toplama şu anda devam etmediği için ayırma başarısız olduysa 1.<br /><br /> Toplama durdurulamadığından ayırma başarısız olduysa 2.|
-|Çözümleme|Belirtilen izi analiz eder.|CVTrace dosyasının tam yolu.|Analiz başarılı olursa 0.<br /><br /> 1 belirtilen izleme sistem çapında olduğu için çözümleme başlanamıyorsa, ancak hedef işlem belirtilmedi.<br /><br /> 2, izleme sistem çapında olmadığı ve bir işlem belirtildiği için çözümlemeye başlayamıyorsa.<br /><br /> Belirtilen işlem geçersiz olduğu için çözümleme başarısız olduysa 3.<br /><br /> Belirtilen CVTrace dosyası geçersiz olduğu için çözümleme başarısız olduysa 4.|
-|LaunchArgs|Hedef yürütülebilir bağımsız değişkenleri belirtir. Bu seçenek yalnızca Başlat komutu için geçerlidir.|Uygulamaya komut satırı bağımsız değişkenleri.|Yok.|
-|Outdir|İzleme dosyalarını kaydetmek için dizini belirtir. Başlat ve Ekle komutları için geçerlidir.|Dizin yolu veya göreli yol.|Yok.|
-|İşleme|Ekle komutu yürütüldüğünde eklenecek işlemi veya Çözümle komutu yürütüldüğünde çözümlemek için bir izlemedeki işlemi belirtir. Ekle ve Çözümle komutları için geçerlidir.|PID veya işlemin adı.|Yok.|
-|Config|Varsayılanlar dışında toplama ayarları istiyorsanız yapılandırma dosyasının yolunu belirtir.   Başlat, Ekle ve Çözümle komutları için geçerlidir.|XML yapılandırma dosyasının dizin yolu veya göreli yolu.|Yok.|
+|Sorgu|Koleksiyonun başlatılıp başlatılmayacağını döndürür.|Hiçbiri|koleksiyon başlamaya hazırsanız 0.<br /><br /> 1 koleksiyon zaten devam ediyorsa.<br /><br /> 2 koleksiyon devam etmiyor, ancak bir veya daha fazla gerekli [ETW](/dotnet/framework/wcf/samples/etw-tracing) oturumu zaten etkin.|
+|Başlat|Belirtilen işlemi eşzamanlılık görselleştiricisi altında çalıştırır.|Yürütülebilir dosyanın yolu.|çalışma başarılı olursa 0.<br /><br /> 1 hedef uygulama başlatılamadığından çalıştırma başarısız olduysa.<br /><br /> Bu, CVCollectionCmd 'nin belirtilen çıkış dizinine yazmak için yeterli izinlere sahip olduğu için, çalıştırma başarısız olursa 13.|
+|İliştir|Sistem genelinde izleme toplamaya başlar; Aksi takdirde, bir işlem belirtilmişse bir işleme iliştirir.|Yok.|ek başarılı olursa 0.<br /><br /> Belirtilen işlem geçersiz veya belirsiz olduğundan ek başarısız olursa 1.<br /><br /> CVCollectionCmd 'nin belirtilen çıkış dizinine yazmak için izinleri yetersiz olduğundan, ek başarısız olursa 13.|
+|Ayır|Koleksiyonu durduruyor.|Yok.|Bu, kesilmesi başarılı olursa 0 ' dır.<br /><br /> 1 Şu anda devam eden bir dağıtım başarısız olduğu için çıkarılabilir işlem başarısız oldu.<br /><br /> 2, koleksiyon durdurulamadığından gönderilemedi.|
+|Çözümleme|Belirtilen izlemeyi analiz eder.|CVTrace dosyasının tam yolu.|analiz başarılı olursa 0.<br /><br /> 1 analiz başlatılamıyor, çünkü belirtilen izleme sistem genelinde, ancak hedef işlem belirtilmedi.<br /><br /> 2 analiz başlatılamıyor, çünkü izleme sistem genelinde değil ve bir işlem belirtildi.<br /><br /> 3 belirtilen işlem geçersiz olduğundan analiz başarısız oldu.<br /><br /> 4 belirtilen CVTrace dosyası geçersiz olduğundan analiz başarısız oldu.|
+|LaunchArgs|Hedef yürütülebilir bağımsız değişkenleri belirtir. Bu seçenek yalnızca başlatma komutu için geçerlidir.|Uygulamanın komut satırı bağımsız değişkenleri.|Yok.|
+|OutDir|İzleme dosyalarının kaydedileceği dizini belirtir. Başlatma ve Iliştirme komutları için geçerlidir.|Dizin yolu veya göreli yol.|Yok.|
+|İşleme|Attach komutu yürütüldüğünde iliştirilecek veya çözümle komutu yürütüldüğünde analiz edilecek işlem olan işlemi belirtir. Ekle ve çözümle komutları için geçerlidir.|İşlemin PID 'SI veya adı.|Yok.|
+|Config|Koleksiyon ayarlarının varsayılanlar dışında olmasını istiyorsanız, yapılandırma dosyasının yolunu belirtir.   Başlat, Ekle ve çözümle komutları için geçerlidir.|XML yapılandırma dosyasının dizin yolu veya göreli yolu.|Yok.|
 
 ## <a name="customize-configuration-settings"></a>Yapılandırma ayarlarını özelleştirme
- İzlemeleri toplamak için CVCollectionCmd kullanıyorsanız ve koleksiyon ayarlarını özelleştirmek istiyorsanız, bunları belirtmek için bir yapılandırma dosyası kullanın.
+ İzlemeleri toplamak için CVCollectionCmd kullanırsanız ve koleksiyon ayarlarını özelleştirmek istiyorsanız, bunları belirtmek için bir yapılandırma dosyası kullanın.
 
 > [!NOTE]
-> İzlemeleri toplamak için Visual Studio'yu kullandığınızda, yapılandırma dosyasını doğrudan değiştirmeyin.  Bunun yerine, ayarları değiştirmek için [Gelişmiş Ayarlar](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) iletişim kutusunu kullanın.
+> İzlemeleri toplamak için Visual Studio kullandığınızda, yapılandırma dosyasını doğrudan değiştirmeyin.  Bunun yerine, ayarları değiştirmek için [Gelişmiş ayarlar](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) iletişim kutusunu kullanın.
 
- Koleksiyon ayarlarını değiştirmek için, makinede CVCollectionCmd yardımcı programını çalıştıracağınız bir yapılandırma dosyası oluşturun. Yapılandırma dosyasını sıfırdan oluşturabilir veya Visual Studio yüklü olan bilgisayardaki yapılandırma dosyasını kopyalayabilir ve bunu değiştirebilirsiniz. Dosya *userConfig.xml* olarak adlandırılır ve *Yerel AppData* klasöründe yer alır. Yardımcı programı çalıştırdığınızda, Başlat, Ekle veya Çözümle komutuyla birlikte Config seçeneğini kullanın.  Config seçeneğiyle ilişkili parametrede yapılandırma dosyasının yolunu belirtin.
+ Koleksiyon ayarlarını değiştirmek için, CVCollectionCmd yardımcı programını çalıştıracağınız makinede bir yapılandırma dosyası oluşturun. Yapılandırma dosyasını sıfırdan oluşturabilir veya Visual Studio 'nun yüklü olduğu bilgisayarda yapılandırma dosyasını kopyalayabilir ve bunu değiştirebilirsiniz. Dosya *UserConfig.xml* olarak adlandırılır ve *Yerel AppData* klasöründe bulunur. Yardımcı programını çalıştırdığınızda, başlatma, Iliştirme veya çözümle komutuyla birlikte yapılandırma seçeneğini kullanın.  Yapılandırma seçeneği ile ilişkili parametrede, yapılandırma dosyasının yolunu belirtin.
 
-### <a name="configuration-file-tags"></a>Yapılandırma dosya etiketleri
- Yapılandırma dosyası XML tabanlıdır. Geçerli etiketler ve değerler şunlardır:
+### <a name="configuration-file-tags"></a>Yapılandırma dosyası etiketleri
+ Yapılandırma dosyası XML tabanlıdır. Geçerli Etiketler ve değerler şunlardır:
 
-| Etiket | Açıklama | Değerler |
+| Etiket | Description | Değerler |
 |-------------------------| - | - |
-| Config | Genel config dosyasını çizer. | Bu öğeleri içermelidir:<br /><br /> - MinorVersion<br />- MajorVersion |
-| MajorVersion | Config dosyasının ana sürümünü belirtir. | Projeler için [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 1 olmalıdır. 1 değilse, yardımcı program çalışmaz. |
-| MinorVersion | Config dosyasının küçük sürümünü belirtir. | Projeler için [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 0 olmalıdır. 0 değilse, yardımcı program çalışmaz. |
-| IncludeEnvSymbolPath | Ortam sembolü yolunun (_NT_SYMBOL_PATH) kullanılıp kullanılmadığını belirleyen bir değer ayarlar. | - Doğru<br />- Yanlış |
-| DeleteEtlsAfterAnalysis | Çözümleme tamamlandığında ETL dosyalarının silinip silinmeyeceğini belirleyen bir değer ayarlar. | - Doğru<br />- Yanlış |
-| SymbolPath | Sembol sunucusunun yolunu belirtir. Daha fazla bilgi için hata [ayıklama simgesi dosyaları elde etmek için Microsoft Symbol Server'ı kullanın'a](/windows/win32/dxtecharts/debugging-with-symbols)bakın. | Dizin adı veya URL. |
-| İşaretler | İşaretleyici sağlayıcılarının listesini içerir. | Sıfır veya daha fazla MarkerSağlayıcı öğesi içerebilir. |
-| MarkerSağlayıcı | Tek bir işaret sağlayıcı belirtir. | Bu öğeleri içermelidir:<br /><br /> - Seviye<br />- YOL GÖSTERICI<br />- Adı<br /><br /> Bu öğeleri içerebilir:<br /><br /> - Kategoriler<br />- Etkin |
-| Düzey | MarkerSağlayıcı'nın önem düzeyini ayarlar. | - Düşük<br />- Normal<br />- Yüksek<br />- Kritik<br />- Her şey |
-| Guid | ETW işaretleyici sağlayıcısının genel olarak benzersiz tanımlayıcısı. | Bİr REHBER. |
-| Adı | İşaretleyici sağlayıcısının açıklamasını belirtir. | Bir ip. |
-| Kategoriler | İşaretleyici sağlayıcısı için toplanan kategorileri belirtir. | Virgülle sınırlı sayı veya sayı aralıkları dizesi. |
-| IsEnabled | İşaretçi sağlayıcısının koleksiyon için etkin olup olmadığını belirleyen bir değer ayarlar. | - Doğru<br />- Yanlış |
-| FiltreConfig | Koleksiyondan filtrelenen ETW olaylarının yapılandırma seçenekleri listesini belirtir. | Bu öğeleri içerebilir:<br /><br /> - CollectClrEvents<br />- ClrCollectionSeçenekleri<br />- CollectSampleEvents<br />- CollectGpuEvents<br />- CollectFileio |
-| CollectClrEvents | CLR olaylarının toplanıp toplanmadığını belirleyen bir değer ayarlayın. | - Doğru<br />- Yanlış |
-| ClrCollectionSeçenekleri | Yerel uygulamalar için CLR etkinliklerinin toplanıp toplanmayacağını ve NGEN özet etkinliklerini toplayıp toplayamayacağını belirtir. | Bu değerlerden birini, her ikisini de veya hiçbirini içerebilir:<br /><br /> - CollectFornative<br />- DisableNGenRundown |
-| CollectSampleEvents | Örnek olayların toplanıp toplanmadığını belirleyen bir değer ayarlar. | - Doğru<br />- Yanlış |
-| CollectGpuEvents | DX tarafından oluşturulan olayların toplanıp toplanmadığını belirleyen bir değer ayarlar. | - Doğru<br />- Yanlış |
-| CollectFileio | Dosya G/Ç olaylarının toplanıp toplanmadığını belirleyen bir değer ayarlar. | - Doğru<br />- Yanlış |
-| UserBufferAyarlar | Kullanıcı arabellek ayarları parametreleri listesini belirtir. | Bu öğeleri içermelidir:<br /><br /> - BufferFlushTimer<br />- ArabellekBoyut<br />- Minimum Buffers<br />- MaximumBuffers |
-| KernelBufferAyarlar | Çekirdek arabellek ayarları parametreleri listesini belirtir. | Bu öğeleri içermelidir:<br /><br /> - BufferFlushTimer<br />- ArabellekBoyut<br />- Minimum Buffers<br />- MaximumBuffers |
-| BufferFlushTimer | ETW arabelleklerinin floş zamanlayıcısını belirtir. | Pozitif bir tamsayı. |
-| Buffersize | Her olay izleme oturumu arabelleği için kilobayt olarak ayrılan bellek miktarı. | 0'dan 1024'e kadar bir sayı. |
-| Minimum Buffers | Olay izleme oturumunun arabellek havuzuiçin ayrılan en az arabellek sayısı. | Mantıksal çekirdek sayısından iki kat daha büyük veya eşit pozitif bir tamsayı. |
-| MaximumBuffers | Olay izleme oturumunun arabellek havuzuiçin ayrılan maksimum arabellek sayısı. | MinimumBuffers'dan daha büyük veya eşit bir sayı. |
-| JustMyCode | Just My Code dizinlerinin listesini belirtir. | Sıfır veya daha fazla MyCodeDirectory öğesi listesi. |
+| Config | Genel yapılandırma dosyasını kaldırır. | Şu öğeleri içermelidir:<br /><br /> -MinorVersion<br />-MajorVersion |
+| MajorVersion | Yapılandırma dosyasının ana sürümünü belirtir. | Projeler için 1 olmalıdır [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] . 1 değilse, yardımcı program çalışmaz. |
+| MinorVersion | Yapılandırma dosyasının ikincil sürümünü belirtir. | Projeler için 0 olmalıdır [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] . 0 değilse, yardımcı program çalışmaz. |
+| Includeenvsymbolpath | Ortam sembol yolunun (_NT_SYMBOL_PATH) kullanılıp kullanılmayacağını belirleyen bir değer ayarlar. | -True<br />-False |
+| DeleteEtlsAfterAnalysis | Analiz tamamlandığında ETL dosyalarının silinip silinmediğini belirleyen bir değer ayarlar. | -True<br />-False |
+| SymbolPath | Sembol sunucusunun yolunu belirtir. Daha fazla bilgi için bkz. [hata ayıklama sembol dosyalarını almak Için Microsoft sembol sunucusunu kullanma](/windows/win32/dxtecharts/debugging-with-symbols). | Bir dizin adı veya URL 'SI. |
+| İşaretleyiciler | İşaretleyici sağlayıcılarının listesini içerir. | Sıfır veya daha fazla MarkerProvider öğesi içerebilir. |
+| MarkerProvider | Tek bir işaret sağlayıcısını belirtir. | Şu öğeleri içermelidir:<br /><br /> -Düzey<br />-GUID<br />-Ad<br /><br /> Şu öğeleri içerebilir:<br /><br /> -Kategoriler<br />-IsEnabled |
+| Düzey | Bir MarkerProvider 'ın önem düzeyini ayarlar. | -Düşük<br />-Normal<br />-Yüksek<br />-Kritik<br />-Her şey |
+| Guid | ETW işaretleyici sağlayıcısının genel benzersiz tanımlayıcısı. | BIR GUıD. |
+| Name | İşaret sağlayıcısının açıklamasını belirtir. | Bir dize. |
+| Kategoriler | İşaretleyici sağlayıcısı için toplanan kategorileri belirtir. | Virgülle ayrılmış sayı veya sayı aralığı dizesi. |
+| IsEnabled | İşaretleyici sağlayıcının koleksiyon için etkinleştirilip etkinleştirilmeyeceğini belirleyen bir değer ayarlar. | -True<br />-False |
+| FilterConfig | Koleksiyondan filtrelenen ETW olaylarının yapılandırma seçeneklerinin listesini belirtir. | Şu öğeleri içerebilir:<br /><br /> - CollectClrEvents<br />-ClrCollectionOptions<br />-CollectSampleEvents<br />-CollectGpuEvents<br />-CollectFileIO |
+| CollectClrEvents | CLR olaylarının toplanıp toplanmayacağını belirleyen bir değer ayarlayın. | -True<br />-False |
+| ClrCollectionOptions | Yerel uygulamalar için CLR olayları toplayıp toplamayacağını ve NGEN Özet olaylarının toplanmasını isteyip istemediğinizi belirtir. | Şu değerlerden birini, her ikisini birden içerebilir:<br /><br /> -CollectForNative<br />-Disablengenrunaşağı |
+| CollectSampleEvents | Örnek olayların toplanıp toplanmayacağını belirleyen bir değer ayarlar. | -True<br />-False |
+| CollectGpuEvents | DX tarafından oluşturulan olayların toplanıp toplanmadığını belirleyen bir değer belirler. | -True<br />-False |
+| CollectFileIO | Dosya g/ç olaylarının toplanıp toplanmayacağını belirleyen bir değer ayarlar. | -True<br />-False |
+| UserBufferSettings | Kullanıcı arabelleği-ayarlar parametrelerinin listesini belirtir. | Şu öğeleri içermelidir:<br /><br /> -BufferFlushTimer<br />-BufferSize<br />-MinimumBuffers<br />-MaximumBuffers |
+| KernelBufferSettings | Çekirdek arabellek ayarları parametrelerinin listesini belirtir. | Şu öğeleri içermelidir:<br /><br /> -BufferFlushTimer<br />-BufferSize<br />-MinimumBuffers<br />-MaximumBuffers |
+| BufferFlushTimer | ETW arabelleklerinin Temizleme zamanlayıcısını belirtir. | Pozitif bir tamsayı. |
+| Boyutu | Her olay izleme oturumu arabelleği için ayrılan bellek miktarı (kilobayt cinsinden). | 0 ile 1024 arasında bir sayı. |
+| MinimumBuffers | Olay izleme oturumunun arabellek havuzu için ayrılan arabellek sayısı alt sınırı. | Mantıksal çekirdek sayısının iki katına eşit veya daha büyük pozitif bir tamsayı. |
+| MaximumBuffers | Olay izleme oturumunun arabellek havuzu için ayrılan en fazla arabellek sayısı. | MinimumBuffers değerinden büyük veya buna eşit bir sayı. |
+| Adatmycode | Yalnızca kendi kodum dizinlerin listesini belirtir. | Sıfır veya daha fazla MyCodeDirectory öğesi listesi. |
 | MyCodeDirectory | Kodunuzu içeren bir dizini belirtir. | Mutlak bir yol. |
 
 ### <a name="example"></a>Örnek
- En başından itibaren bir yapılandırma dosyası oluşturmak yerine, aşağıdaki örneği kopyalayabilir ve gereksinimlerinizi karşılayacak şekilde değiştirebilirsiniz.
+ Baştan itibaren bir yapılandırma dosyası oluşturmak yerine, aşağıdaki örneği kopyalayabilir ve gereksinimlerinizi karşılayacak şekilde değiştirebilirsiniz.
 
 ```xml
 <?xml version="1.0"?>
