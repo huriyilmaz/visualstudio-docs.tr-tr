@@ -1,5 +1,5 @@
 ---
-title: Gecikmiş Belge Yükleme | Microsoft Dokümanlar
+title: Gecikmeli belge yükleme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fb07b8e2-a4e3-4cb0-b04f-8eb11c491f35
@@ -9,25 +9,25 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 2f78d49013c1f0bd359d4439b73620a159a9ccc0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80708808"
 ---
-# <a name="delayed-document-loading"></a>Gecikmiş belge yükleme
+# <a name="delayed-document-loading"></a>Gecikmeli belge yükleme
 
-Bir kullanıcı Visual Studio çözümünün yeniden açılmasıyla, ilişkili belgelerin çoğu hemen yüklenmez. Belge penceresi çerçevesi bekleyen bir başlatma durumunda oluşturulur ve bir yer tutucu belge (saplama çerçevesi olarak adlandırılır) Çalışan Belge tablosuna (RDT) yerleştirilir.
+Bir Kullanıcı bir Visual Studio çözümünü yeniden açtığında, ilişkili belgelerin çoğu hemen yüklenmez. Belge penceresi çerçevesi, bekleyen bir başlatma durumunda oluşturulur ve bir yer tutucu belge (saplama çerçevesi denir) çalışan belge tablosuna (RDT) yerleştirilir.
 
-Uzantınız, proje belgelerinin yüklenmeden önce belgelerdeki öğeleri sorgulayarak gereksiz yere yüklenmesine neden olabilir ve bu da Visual Studio'nun genel bellek ayak izini artırabilir.
+Uzantınız, belgelerde yüklenmeden önce öğeleri sorgulayarak, Visual Studio için genel bellek ayak izini artırabilen, proje belgelerinin gereksiz yere yüklenmesine neden olabilir.
 
 ## <a name="document-loading"></a>Belge yükleme
 
-Saplama çerçevesi ve belge, örneğin pencere çerçevesinin sekmesini seçerek, kullanıcı belgeye eriştığında tamamen başolarak açılır. Belge, belge verilerini doğrudan elde etmek için RDT'ye erişerek veya aşağıdaki aramalardan birini yaparak dolaylı olarak RDT'ye erişerek belgenin verilerini isteyen bir uzantı tarafından da önolarak önolarak lanse edilebilir:
+Saplama çerçevesi ve belge, Kullanıcı belgeye eriştiğinde, örneğin pencere çerçevesinin sekmesini seçerek tamamen başlatılır. Belge, doğrudan belge verilerini almak için RDT 'e erişerek ya da aşağıdaki çağrılardan birini yaparak RDT 'e dolaylı olarak erişerek belge verilerini isteyen bir uzantı tarafından da başlatılabilir:
 
 - Pencere çerçevesi <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A> yöntemi.
 
-- Aşağıdaki özelliklerden herhangi birinde pencere çerçevesi <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> yöntemi:
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>Aşağıdaki özelliklerden herhangi birinde pencere çerçevesi yöntemi:
 
   - [__VSFPROPID. VSFPROPID_DocView](<xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID.VSFPROPID_DocView>)
 
@@ -41,28 +41,28 @@ Saplama çerçevesi ve belge, örneğin pencere çerçevesinin sekmesini seçere
 
   - [__VSFPROPID. VSFPROPID_SPProjContext](<xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID.VSFPROPID_SPProjContext>)
 
-- Uzantınız yönetilen kodu kullanıyorsa, belgenin bekleyen başlatma durumunda olmadığından emin değilseniz veya belgenin tamamen başlatılmasını istemiyorsanız aramamalısınız. <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.GetDocumentInfo%2A> Bunun nedeni, yöntemin her zaman doc veri nesnesini döndürerek gerekirse oluşturmasıdır. Bunun yerine, `IVsRunningDocumentTable4` arabirimdeki yöntemlerden birini aramalısınız.
+- Uzantınızın yönetilen kodu kullanması durumunda, <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.GetDocumentInfo%2A> belgenin bekleyen başlatma durumunda olmaması veya belgenin tamamen başlatılmasını istiyorsanız, çağrı yapmadığınız bir durumdur. Bunun nedeni, yöntemin her zaman belge veri nesnesini döndürmesi, gerekirse oluşturulması. Bunun yerine, arabirimindeki yöntemlerden birini çağırmanız gerekir `IVsRunningDocumentTable4` .
 
-- Uzantınız C++'ı kullanıyorsa, istemediğiniz parametreleri geçirebilirsiniz. `null`
+- Uzantınız C++ kullanıyorsa, istemediğiniz parametrelere geçiş yapabilirsiniz `null` .
 
-- Diğer özellikleri sormadan önce ilgili özellikleri sormadan önce aşağıdaki yöntemlerden birini arayarak gereksiz belge yüklemesini önleyebilirsiniz:
+- Diğer özellikleri sormadan önce ilgili özellikleri sormadan önce aşağıdaki yöntemlerden birini çağırarak gereksiz belge yüklemekten kaçınabilirsiniz:
 
-  - <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>[__VSFPROPID6 kullanarak. VSFPROPID_PendingInitialization](<xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID6.VSFPROPID_PendingInitialization>).
+  - <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>[__VSFPROPID6 kullanma. VSFPROPID_PendingInitialization](<xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID6.VSFPROPID_PendingInitialization>).
 
-  - <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentFlags%2A>. Bu yöntem, <xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4> _VSRDTFLAGS4 için bir değer içeren bir nesne döndürür. [ belge](<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4.RDT_PendingInitialization>) henüz başharfe edilmemişse RDT_PendingInitialization.
+  - <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentFlags%2A>. Bu yöntem <xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4> , _VSRDTFLAGS4 için bir değer içeren bir nesnesi döndürür [. ](<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4.RDT_PendingInitialization>) Belge henüz başlatılmamışsa RDT_PendingInitialization.
 
-Bir belge tamamen paraflandığında yükseltilen RDT olayına abone olarak bir belgenin ne zaman yüklendiğini öğrenebilirsiniz. İki olasılık vardır:
+Belge tam olarak başlatıldığında oluşturulan RDT olayına abone olunarak bir belgenin ne zaman yüklendiğini öğrenebilirsiniz. İki olasılık vardır:
 
-- Olay lavabo uygularsa, <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents2>abone <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents2.OnAfterAttributeChangeEx%2A>olabilirsiniz ,
+- Olay havuzu uygularsa, <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents2> abone olabilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents2.OnAfterAttributeChangeEx%2A> ,
 
-- Aksi takdirde, abone <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnAfterAttributeChange%2A>olabilirsiniz.
+- Aksi takdirde, abone olabilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnAfterAttributeChange%2A> .
 
-Aşağıdaki örnek varsayımsal bir belge erişim senaryosudur: Visual Studio uzantısı, örneğin kilit sayısını ve belge verileriyle ilgili bir şey gibi açık belgeler le ilgili bazı bilgileri görüntülemek ister. RDT'deki belgeleri kullanarak <xref:Microsoft.VisualStudio.Shell.Interop.IEnumRunningDocuments>sıralar, ardından <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.GetDocumentInfo%2A> düzenkilidi sayısını ve belge verilerini almak için her belgeyi çağırır. Belge bekleyen başlatma durumundaysa, belge verilerinin istenmesi gereksiz yere başlatılmasına neden olur.
+Aşağıdaki örnek bir kuramsal belge erişim senaryosudur: bir Visual Studio uzantısı, açık belgeler hakkında bazı bilgileri, örneğin düzenleme kilidi sayısını ve belge verileriyle ilgili bir şeyi göstermek istemektedir. Kullanarak RDT içindeki belgeleri numaralandırır <xref:Microsoft.VisualStudio.Shell.Interop.IEnumRunningDocuments> <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.GetDocumentInfo%2A> ve ardından her belge için, düzenleme kilidi sayısını ve belge verilerini almak için çağırır. Belge bekleyen başlatma durumundaysa, belge verileri istemek bunun gereksiz şekilde başlatılmasına neden olur.
 
-Bir belgeye erişmenin daha etkili <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentEditLockCount%2A> bir yolu, kilit sayısını edin ve belgenin baş olarak başolarak başolarak başlayıp başlatmadığını belirlemek için kullanmaktır. <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentFlags%2A> Bayraklar _VSRDTFLAGS4 içermiyorsa. [ RDT_PendingInitialization,](<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4.RDT_PendingInitialization>)belge zaten başharfe alındı ve belge <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentData%2A> verilerini istemek gereksiz bir başlatmaya neden olmaz. Bayraklar _VSRDTFLAGS4 [içeriyorsa. RDT_PendingInitialization,](<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4.RDT_PendingInitialization>)uzantı, belge başolarak başolarak başlatıldıktan önce belge verilerini istemekten kaçınmalıdır. Bu başlatma olay işleyicisi `OnAfterAttributeChange(Ex)` algılanabilir.
+Belgeye erişmenin daha verimli bir yolu, <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentEditLockCount%2A> düzenleme kilidi sayısını almak için kullanılır ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentFlags%2A> belgenin başlatılmış olup olmadığını anlamak için öğesini kullanır. Bayraklar [_VSRDTFLAGS4 içermiyorsa. RDT_PendingInitialization](<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4.RDT_PendingInitialization>), belge zaten başlatılmış ve belge verilerinin ile istenmesine <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentData%2A> gerek yok, hiçbir gereksiz başlatmaya neden olmaz. Bayraklar [_VSRDTFLAGS4 içeriyorsa. RDT_PendingInitialization](<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4.RDT_PendingInitialization>), uzantı belge başlatılmadan belge verilerinin istenmesine engel olmalıdır. Bu başlatma `OnAfterAttributeChange(Ex)` olay işleyicisinde algılanabilir.
 
-## <a name="test-extensions-to-see-if-they-force-initialization"></a>Başlatmayı zorlayıp zorlamadıklarını görmek için uzantıları test etme
+## <a name="test-extensions-to-see-if-they-force-initialization"></a>Başlatmayı zorlarsa görmek için test uzantıları
 
-Belgenin başolarak başharfe mi başlandığını belirtmek için görünür bir işaret yoktur, bu nedenle uzantınızın başlatmayı zorlayıp zorlamadığını bulmak zor olabilir. Doğrulamayı kolaylaştıran bir kayıt defteri anahtarı ayarlayabilirsiniz, çünkü başlıkta metin *[Stub]* olması için tam olarak başharfe fişeği olmayan her belgenin başlığına neden olur.
+Bir belgenin başlatılmış olup olmadığını göstermek için görünür bir ipucu yoktur, bu nedenle uzantınızın başlatmayı zorluyor olup olmadığına ulaşmak zor olabilir. Bir kaydı daha kolay hale getiren bir kayıt defteri anahtarı ayarlayabilirsiniz, çünkü tam olarak başlatılmamış her belge başlığına, başlığında *[stub]* metni sahip olacak şekilde neden olur.
 
-**HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\BackgroundSolutionLoad**, **Set StubTabTitleFormatString** * {0} [Stub]* için.
+**HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\14.0\BackgroundSolutionLoad**, **StubTabTitleFormatString** öğesini * {0} [stub]* olarak ayarlayın.

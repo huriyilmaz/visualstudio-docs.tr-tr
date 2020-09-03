@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 27d0c14bcf09a3b0d30cd23dea0f8348c45fcab7
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85282887"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Visual Studio'da verilere WPF denetimleri bağlama
@@ -54,8 +54,8 @@ Aşağıdaki tabloda, [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasha
 | - | - | - |
 | Veri kümesi | Yes | Yes |
 | [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] | Yes | Yes |
-| Hizmet | Evet | Hayır |
-| Nesne | Evet | Hayır |
+| Hizmet | Yes | Hayır |
+| Nesne | Yes | Hayır |
 
 ### <a name="datasets"></a>Veri kümeleri
 

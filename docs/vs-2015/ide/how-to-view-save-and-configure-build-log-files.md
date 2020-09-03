@@ -43,7 +43,7 @@ Visual Studio IDE 'de bir proje oluşturduktan sonra, bu yapı hakkındaki bilgi
 
 3. **MSBuild proje derleme çıkışı ayrıntı** listesinde, aşağıdaki değerlerden birini seçin ve ardından **Tamam** düğmesini seçin.
 
-    |Ayrıntı düzeyi|Description|
+    |Ayrıntı düzeyi|Açıklama|
     |---------------------|-----------------|
     |Quiet|Yalnızca yapı özetini görüntüler.|
     |En az|Derleme ve hataların, uyarıların ve son derece önemli olarak sınıflandırılan mesajların özetini görüntüler.|

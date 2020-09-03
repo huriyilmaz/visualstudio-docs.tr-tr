@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0f3904f214967b411a79a8db5cff0bec7727be4d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200796"
 ---
 # <a name="cores-view-timeline"></a>Çekirdekler Görünümü Zaman Çizelgesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Her satırda bir zaman çizelgesi profili oluşturulmuş sistemdeki bir mantıksal işlemci çekirdeği temsil eder. Her satır için yatay ekseni hangi iş parçacığının zaman içinde belirli bir noktada mantıksal çekirdek üzerinde çalıştığı gösterir. Bir renk ilgilendiğiniz iş parçacığı tanımlayan bir araç ipucu döndürmek için bir zaman çizelgesindeki üzerine gelerek. İş parçacığı kimliği yardımcı olmak için ne her rengidir pencerenin alt kısmındaki gösterge gösterir. Yakınlaştırma ve uzaklaştırma tıklatarak ve sürükleyerek veya CTRL tuşuna basarak ve fare tekerleğini taşımak için Yakınlaştırma aracını kullanın. Çekirdekler görünümü ve iş parçacıkları görünümü arasında geçiş yaptığınızda yakınlaştırma tutarlılık korunur.  
+Zaman çizelgesindeki her satır, profili oluşturulmuş sistemdeki mantıksal bir işlemci çekirdeğini temsil eder. Her satır için yatay eksen, belirli bir noktadaki mantıksal bir çekirdek üzerinde hangi iş parçacığının çalıştığını gösterir. İş parçacığını tanımlayan bir araç ipucunu döndürmek için bir zaman çizelgesinde ilgilendiğiniz bir rengin üzerine gelebilmeniz gerekir. İş parçacığı kimliği konusunda yardımcı olmak için pencerenin alt kısmındaki gösterge, her rengin ne temsil ettiğini gösterir. Yakınlaştırmak ve kapatmak için Yakınlaştır aracını kullanın ve CTRL tuşuna basarak veya fare tekerleğini taşıyarak yakınlaştırın. Çekirdek görünümü ve Iş parçacıkları görünümü arasında geçiş yaptığınızda yakınlaştırma tutarlılığı sürdürülür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Çekirdekler görünümü](../profiling/cores-view.md)   

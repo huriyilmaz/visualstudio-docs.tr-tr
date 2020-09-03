@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2b7d206852101a1d99a08eac710d88e93afe4a04
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671200"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>Diyagram Üzerinde Arka Plan Görüntüsü Ayarlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Görselleştirme ve modelleme SDK [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], özel kod kullanarak oluşturulan tasarımcı için arka plan görüntüsünü ayarlayabilirsiniz.
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Görselleştirme ve modelleme SDK 'sında, özel kod kullanarak oluşturulan tasarımcı için arka plan resmini ayarlayabilirsiniz.
 
 ## <a name="setting-the-background-image"></a>Arka plan görüntüsünü ayarlama
 
@@ -47,7 +47,7 @@ Görselleştirme ve modelleme SDK [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], 
 
 11. Resources.Designer.cs eksikse **Çözüm Gezgini**' de resources. resx dosyasına tıklayın.
 
-12. **Özellikler** penceresinde `Custom Tool` özelliğini `ResXFileCodeGenerator` olarak ayarlayın.
+12. **Özellikler** penceresinde, `Custom Tool` özelliğini olarak ayarlayın `ResXFileCodeGenerator` .
 
 13. **Çözüm Gezgini**, DSL projesine sağ tıklayın, **Ekle**' nin üzerine gelin ve **Yeni klasör**' e tıklayın.
 
@@ -57,7 +57,7 @@ Görselleştirme ve modelleme SDK [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], 
 
 16. **Yeni öğe Ekle** iletişim kutusunda, **Şablonlar** listesinde, **kod dosyası**' na tıklayın.
 
-17. **Ad** kutusuna `BackgroundImage.cs` yazın ve **Ekle**' ye tıklayın.
+17. **Ad** kutusuna yazın `BackgroundImage.cs` ve **Ekle**' ye tıklayın.
 
 18. Aşağıdaki kodu BackgroundImage.cs dosyasına kopyalayın, ad alanı, diyagram sınıf adı ve görüntü dosyası kaynak adı ' nı ayarlama.
 

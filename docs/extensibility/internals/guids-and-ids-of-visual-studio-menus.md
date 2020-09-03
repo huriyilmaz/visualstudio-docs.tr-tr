@@ -1,5 +1,5 @@
 ---
-title: Görsel Stüdyo Menülerinin GUID'leri ve T'leri | Microsoft Dokümanlar
+title: Visual Studio menülerinin GUID 'Leri ve kimlikleri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,127 +16,127 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a656d5cb9a126a9dc3988d70a290fceb3e56439e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80708238"
 ---
-# <a name="guids-and-ids-of-visual-studio-menus"></a>Visual Studio menülerinin GUID'leri ve kılıkları
-Bu makalede, Visual Studio menü çubuğundaki menü ve grupların GUID ve kimlik değerlerini kaydedebilirsiniz. Bu değerler Visual Studio SDK'nın bir parçası olarak yüklenen *.vsct* dosyalarında tanımlanır. Daha fazla bilgi için [IDE tanımlı komutlar, menüler ve gruplara](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)bakın.
+# <a name="guids-and-ids-of-visual-studio-menus"></a>Visual Studio menülerinin GUID 'Leri ve kimlikleri
+Bu makalede, Visual Studio menü çubuğundaki menülerin ve grupların GUID ve KIMLIK değerleri numaralandırılır. Bu değerler, Visual Studio SDK 'nin bir parçası olarak yüklenen *. vsct* dosyalarında tanımlanmıştır. Daha fazla bilgi için bkz. [IDE tanımlı komutlar, menüler ve gruplar](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
 
- *.vsct* dosyalarında tanımlanan tümleşik geliştirme ortamı (IDE) nesneleri ile nasıl çalışacağıhakkında daha fazla bilgi için [bkz.](../../extensibility/extending-menus-and-commands.md)
+ *. Vsct* dosyalarında tanımlanan tümleşik geliştirme ORTAMı (IDE) nesneleriyle nasıl çalışılacağı hakkında daha fazla bilgi için bkz. [menüleri ve komutları genişletme](../../extensibility/extending-menus-and-commands.md).
 
- Visual Studio menü çubuğundaki menüler ve `guidSHLMainMenu`gruplar GUID'i kullanır. Menü çubuğunun `IDM_VS_TOOL_MAINMENU`kendisi nde bir kimlik var.
+ Visual Studio menü çubuğundaki menüler ve gruplar GUID 'YI kullanır `guidSHLMainMenu` . Menü çubuğunun KIMLIĞI vardır `IDM_VS_TOOL_MAINMENU` .
 
 ## <a name="groups-on-the-visual-studio-menu-bar"></a>Visual Studio menü çubuğundaki gruplar
- Menü çubuğuna menü eklemek için, bu gruplardan birini üst öğesi olarak ayarlayın.
+ Menü çubuğuna bir menü eklemek için bu gruplardan birini üst öğesi olarak ayarlayın.
 
-|Grup|Kimlik|
+|Gruplama|ID|
 |-----------|--------|
-|Dosya/Edit/Görünüm|IDG_VS_MM_FILEEDITVIEW|
+|Dosya/düzenleme/görüntüleme|IDG_VS_MM_FILEEDITVIEW|
 |Yeniden Düzenle|IDG_VS_MM_REFACTORING:|
 |Project|IDG_VS_MM_PROJECT|
-|Yapı|IDG_VS_MM_BUILDDEBUGRUN|
+|Oluşturma|IDG_VS_MM_BUILDDEBUGRUN|
 |Biçim/Araçlar|IDG_VS_MM_TOOLSADDINS|
-|Pencere/Yardım/Topluluk|IDG_VS_MM_WINDOWHELP|
+|Pencere/yardım/topluluk|IDG_VS_MM_WINDOWHELP|
 |Eklentiler|IDG_VS_MM_MACROS|
 |FullScreenBar|IDG_VS_MM_FULLSCREENBAR|
 
 ## <a name="menus-on-the-visual-studio-menu-bar"></a>Visual Studio menü çubuğundaki menüler
- Varolan visual studio menüsüne bir grup eklemek için, aşağıdaki menülerden birini üst öğesi olarak ayarlayın. Alt menüler bu listeye dahil edilmez.
+ Var olan bir Visual Studio menüsüne bir grup eklemek için aşağıdaki menülerden birini üst öğesi olarak ayarlayın. Alt menüler bu listeye dahil edilmez.
 
-|Menü|Kimlik|
+|Menü|ID|
 |----------|--------|
 |Dosya|IDM_VS_MENU_FILE|
 |Düzenle|IDM_VS_MENU_EDIT|
-|Görüntüle|IDM_VS_MENU_VIEW|
-|Yeniden Düzenleme (Refactor)|IDM_VS_MENU_REFACTORING|
+|Görünüm|IDM_VS_MENU_VIEW|
+|Yeniden düzenleme|IDM_VS_MENU_REFACTORING|
 |Project|IDM_VS_MENU_PROJECT|
-|Yapı|IDM_VS_MENU_BUILD|
+|Oluşturma|IDM_VS_MENU_BUILD|
 |Biçimlendir|IDM_VS_MENU_FORMAT|
 |Araçlar|IDM_VS_MENU_TOOLS|
-|Uzantıları|IDM_VS_MENU_EXTENSIONS|
+|Uzantılar|IDM_VS_MENU_EXTENSIONS|
 |Pencere|IDM_VS_MENU_WINDOW|
 |Eklentiler|IDM_VS_MENU_ADDINS|
 |Topluluk|IDM_VS_MENU_COMMUNITY|
 |Yardım|IDM_VS_MENU_HELP|
 
-## <a name="groups-on-visual-studio-menus"></a>Visual Studio menülerinde gruplar
- Aşağıdaki listeler, Visual Studio menü çubuğundaki menülerden doğrudan gelen grupları gösterir. Visual Studio menüsüne komut eklemenin en hızlı yolu, bu gruplardan birini ebeveyn olarak ayarlamaktır. Alt menülerden gelen gruplar bu bölümde görünmez.
+## <a name="groups-on-visual-studio-menus"></a>Visual Studio menülerindeki gruplar
+ Aşağıdaki listelerde, doğrudan Visual Studio menü çubuğundaki menülerden gelen gruplar gösterilmektedir. Bir Visual Studio menüsüne komut eklemenin en hızlı yolu, bu gruplardan birini üst öğe olarak ayarlamanıza olanak sağlar. Alt menülerinden gösterilen gruplar bu bölümde görünmez.
 
-### <a name="file-menu-groups"></a>Dosya menü grupları
+### <a name="file-menu-groups"></a>Dosya menüsü grupları
 
-|Grup|Kimlik|
+|Gruplama|ID|
 |-----------|--------|
-|Yeni /Açık|IDG_VS_FILE_FILE|
+|Yeni/açık|IDG_VS_FILE_FILE|
 |Ekle|IDG_VS_FILE_ADD|
 |Çözüm|IDG_VS_FILE_SOLUTION|
 |Çeşitli|IDG_VS_FILE_MISC|
 |Kaydet|IDG_VS_FILE_SAVE|
 |Rename|IDG_VS_FILE_RENAME|
 |Tarayıcı|IDG_VS_FILE_BROWSER|
-|Yazdır|IDG_VS_FILE_PRINT|
-|En Son Kullanılanlar|IDG_VS_FILE_MRU|
+|Yazdırma|IDG_VS_FILE_PRINT|
+|En son kullanılan|IDG_VS_FILE_MRU|
 |Taşı|IDG_VS_FILE_MOVE|
-|Çık|IDG_VS_FILE_EXIT|
+|Çıkış|IDG_VS_FILE_EXIT|
 
-### <a name="edit-menu-groups"></a>Menü gruplarını edin
+### <a name="edit-menu-groups"></a>Menü gruplarını düzenle
 
-|Grup|Kimlik|
+|Gruplama|ID|
 |-----------|--------|
-|Geri/Yeniden Yap|IDG_VS_EDIT_UNDOREDO|
-|Kes/Kopyala/Yapıştır|IDG_VS_EDIT_CUTCOPY|
-|Şunu seçin:|IDG_VS_EDIT_SELECT|
-|Goto|IDG_VS_EDIT_GOTO|
+|Geri Al/Yinele|IDG_VS_EDIT_UNDOREDO|
+|Kes/kopyala/yapıştır|IDG_VS_EDIT_CUTCOPY|
+|Seçim|IDG_VS_EDIT_SELECT|
+|Git|IDG_VS_EDIT_GOTO|
 |Bul|IDG_VS_EDIT_FIND|
 |Nesneler|IDG_VS_EDIT_OBJECTS|
-|OLE Fiilleri|IDG_VS_EDIT_OLEVERBS|
-|Komut Kuyusu|IDG_VS_EDIT_COMMANDWELL|
+|OLE fiilleri|IDG_VS_EDIT_OLEVERBS|
+|Komut kutusu|IDG_VS_EDIT_COMMANDWELL|
 
-### <a name="refactor-menu-groups"></a>Menü gruplarını yeniden düzenleme
+### <a name="refactor-menu-groups"></a>Menü gruplarını yeniden Düzenle
 
-|Grup|Kimlik|
+|Gruplama|ID|
 |-----------|--------|
 |Common|IDG_REFACTORING_COMMON|
 |Gelişmiş|IDG_REFACTORING_ADVANCED|
 
-### <a name="view-menu-groups"></a>Menü gruplarını görüntüleme
+### <a name="view-menu-groups"></a>Menü gruplarını görüntüle
 
-|Grup|Kimlik|
+|Gruplama|ID|
 |-----------|--------|
-|Form Kodu|IDG_VS_VIEW_FORMCODE|
+|Form kodu|IDG_VS_VIEW_FORMCODE|
 |Tarayıcı|IDG_VS_VIEW_BROWSER|
-|Görünümleri Tanımla|IDG_VS_VIEW_DEFINEVIEWS|
+|Görünümleri tanımlama|IDG_VS_VIEW_DEFINEVIEWS|
 |Windows|IDG_VS_VIEW_WINDOWS|
-|Mimar Pencereler|IDG_VS_VIEW_ARCH_WINDOWS|
-|Kuruluş Pencereleri|IDG_VS_VIEW_ORG_WINDOWS|
-|Kod Tarayıcı|IDG_VS_VIEW_CODEBROWSENAV_WINDOWS|
-|Dev Windows|IDG_VS_VIEW_DEV_WINDOWS|
+|Pencereleri mimarın|IDG_VS_VIEW_ARCH_WINDOWS|
+|Kuruluş pencereleri|IDG_VS_VIEW_ORG_WINDOWS|
+|Kod tarayıcısı|IDG_VS_VIEW_CODEBROWSENAV_WINDOWS|
+|Geliştirme pencereleri|IDG_VS_VIEW_DEV_WINDOWS|
 |Araç Çubukları|IDG_VS_VIEW_TOOLBARS|
 |Simgeleri|IDG_VS_VIEW_SYMBOLNAVIGATE|
 |Gidin|IDG_VS_VIEW_NAVIGATE|
-|Küçük Gezinme|IDG_VS_VIEW_SMALLNAVIGATE|
+|Küçük gezinme|IDG_VS_VIEW_SMALLNAVIGATE|
 |Nesne Tarayıcısı|IDG_VS_VIEW_OBJBRWSR|
-|Komut Kuyusu|IDG_VS_VIEW_COMMANDWELL|
+|Komut kutusu|IDG_VS_VIEW_COMMANDWELL|
 |Özellik Sayfaları|IDG_VS_VIEW_PROPPAGES|
 |Yenile|IDG_VS_VIEW_REFRESH|
 
-### <a name="project-menu-groups"></a>Proje menü grupları
+### <a name="project-menu-groups"></a>Proje menüsü grupları
 
-|Grup|Kimlik|
+|Gruplama|ID|
 |-----------|--------|
-|Çeşitli Ekle|IDG_VS_PROJ_MISCADD|
+|Çeşitli ekleme|IDG_VS_PROJ_MISCADD|
 |Ekle|IDG_VS_PROJ_ADD|
 |Klasör|IDG_VS_PROJ_FOLDER|
-|Boşaltma/Yeniden Yükleme|IDG_VS_PROJ_UNLOADRELOAD|
+|Kaldırma/yeniden yükleme|IDG_VS_PROJ_UNLOADRELOAD|
 |Başvuru|IDG_VS_PROJ_REFERENCE|
 |Seçenekler|IDG_VS_PROJ_OPTIONS|
 |Ayarlar|IDG_VS_PROJ_SETTINGS|
 
-### <a name="build-menu-groups"></a>Menü grupları oluşturma
+### <a name="build-menu-groups"></a>Yapı menüsü grupları
 
-|Grup|Kimlik|
+|Gruplama|ID|
 |-----------|--------|
 |Çözüm|IDG_VS_BUILD_SOLUTION|
 |Seçim|IDG_VS_BUILD_SELECTION|
@@ -144,42 +144,42 @@ Bu makalede, Visual Studio menü çubuğundaki menü ve grupların GUID ve kimli
 |Çeşitli|IDG_VS_BUILD_MISC|
 |İptal|IDG_VS_BUILD_CANCEL|
 
-### <a name="tools-menu-groups"></a>Araçlar menü grupları
+### <a name="tools-menu-groups"></a>Araçlar menüsü grupları
 
-|Grup|Kimlik|
+|Gruplama|ID|
 |-----------|--------|
 |Komut Satırı|IDG_VS_TOOLS_CMDLINE|
 |Kod Parçacıkları|IDG_VS_TOOLS_SNIPPETS|
-|Nesne Alt Kümesi|IDG_VS_TOOLS_OBJSUBSET|
+|Nesne alt kümesi|IDG_VS_TOOLS_OBJSUBSET|
 |Seçenekler|IDG_VS_TOOLS_OPTIONS|
 |Diğer 2|IDG_VS_TOOLS_OTHER2|
-|Harici Araçlar|IDG_VS_TOOLS_EXT_TOOLS|
-|Dış Özelleştirmeler|IDG_VS_TOOLS_EXT_CUST|
+|Dış Araçlar|IDG_VS_TOOLS_EXT_TOOLS|
+|Dış özelleştirmeler|IDG_VS_TOOLS_EXT_CUST|
 
-### <a name="window-menu-groups"></a>Pencere menü grupları
+### <a name="window-menu-groups"></a>Pencere menüsü grupları
 
-|Grup|Kimlik|
+|Gruplama|ID|
 |-----------|--------|
 |Yeni|IDG_VS_WINDOW_NEW|
-|Dock/Kapat|IDG_VS_DOCKCLOSE|
-|Dock /Gizle|IDG_VS_DOCKHIDE|
+|Yerleştir/kapat|IDG_VS_DOCKCLOSE|
+|Yerleştir/gizle|IDG_VS_DOCKHIDE|
 |Yerleştir|IDG_VS_WINDOW_ARRANGE|
 |Gezinti|IDG_VS_WINDOW_NAVIGATION|
 |Liste|IDG_VS_WINDOW_LIST|
 
 ### <a name="help-menu-groups"></a>Yardım menüsü grupları
 
-|Grup|Kimlik|
+|Gruplama|ID|
 |-----------|--------|
 |Örnekler|IDG_VS_HELP_SAMPLES|
 |Destek|IDG_VS_HELP_SUPPORT|
 |Hakkında|IDG_VS_HELP_ABOUT|
 
 ## <a name="submenus-of-visual-studio-menus"></a>Visual Studio menülerinin alt menüleri
- Aşağıdaki hiyerarşi, Visual Studio menü çubuğundaki menülerle ilişkili alt menüleri gösterir. Yalnızca bir grubun üst menüsü olabileceğinden, her alt menünün doğrudan menüden değil, menüdeki bir gruptan inmesi gerekir. Menüler, gruplar ve alt menüler arasındaki ilişki hakkında daha fazla bilgi için [bkz.](../../extensibility/adding-a-submenu-to-a-menu.md)
+ Aşağıdaki hiyerarşi, Visual Studio menü çubuğundaki menülerle ilişkili alt menüleri gösterir. Yalnızca bir grubun üst öğesi olarak bir menüsü olabileceğinden, her alt menü, doğrudan menüden değil, menüdeki bir gruptan önce olmalıdır. Menüler, gruplar ve alt menüler arasındaki ilişki hakkında daha fazla bilgi için, bkz. [menüye alt menü ekleme](../../extensibility/adding-a-submenu-to-a-menu.md).
 
 > [!NOTE]
-> Visual Studio menü çubuğundaki menülerin adları bu hiyerarşide ayrı olarak gösterilmez, çünkü Bunlar IDE'deki gruplar için adlandırma kuralından çıkarılabilirler: *IDG_VS_\<Menü Adı\>_\<Grup Adı\>*.
+> Visual Studio menü çubuğundaki menülerin adları, IDE içindeki gruplar için adlandırma kuralından çıkarsanabileceğinden, şu şekilde bu hiyerarşide ayrı olarak gösterilmemektedir: *IDG_VS_ \<Menu Name\> _ \<Group Name\> *.
 
 |Üst grup|Alt menü|Alt gruplar|
 |------------------|-------------|------------------|
@@ -194,7 +194,7 @@ Bu makalede, Visual Studio menü çubuğundaki menü ve grupların GUID ve kimli
 |||IDG_VS_FILE_MOVE_PICKER|
 |IDG_VS_VIEW_DEV_WINDOWS|IDM_VS_CSCD_FINDRESULTS|IDG_VS_WNDO_FINDRESULTS|
 ||IDM_VS_CSCD_WINDOWS|IDG_VS_VIEW_CALLBROWSER|
-|||IDG_VS_WNDO_OTRWNDWS1... 6|
+|||IDG_VS_WNDO_OTRWNDWS1... inç|
 |||IDG_VS_WNDO_WINDOWS2|
 |IDG_VS_VIEW_TOOLBARS|IDM_VS_CSCD_COMMANDBARS||
 |IDG_VS_EDIT_GOTO|IDM_VS_EDITOR_FIND_MENU||
@@ -214,6 +214,6 @@ Bu makalede, Visual Studio menü çubuğundaki menü ve grupların GUID ve kimli
 |||IDG_VS_PGO_BUILD_CASCADE_RUN|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio araç çubuklarının GUID'leri ve kılıkları](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)
-- [Visual Studio komutlarının GUID'leri ve kılıkları](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md)
-- [Visual Studio komut tablosu (.vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio araç çubuklarının GUID 'Leri ve kimlikleri](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)
+- [Visual Studio komutlarının GUID 'Leri ve kimlikleri](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md)
+- [Visual Studio komut tablosu (. vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

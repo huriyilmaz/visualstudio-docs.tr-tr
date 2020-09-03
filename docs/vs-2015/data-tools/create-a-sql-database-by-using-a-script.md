@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3bef7c4be2f38d0f50b2a13c7745cb212204769b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670088"
 ---
 # <a name="create-a-sql-database-by-using-a-script"></a>Betik kullanarak SQL veritabanı oluşturma
@@ -34,14 +34,14 @@ Bu kılavuzda, [ADO.NET kullanarak basit bir veri uygulaması oluşturmak](../da
 
 - [Veritabanını dağıtma](../data-tools/create-a-sql-database-by-using-a-script.md#DeployDatabase)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Bu yönergeyi tamamlamak için, SQL Server Express LocalDB veya başka bir SQL veritabanınızın yüklü olması gerekir.
 
-## <a name="CreateScript"></a>Veritabanı şeması içeren bir komut dosyası oluşturma
+## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a> Veritabanı şeması içeren bir komut dosyası oluşturma
 
 #### <a name="to-create-a-script-from-which-you-can-import-a-schema"></a>Bir şemayı içeri aktarabileceğiniz bir komut dosyası oluşturmak için
 
-1. @No__t_0 menüsünde, menü çubuğunda **dosya**  > **Yeni**  > **dosyası**' nı seçin.
+1. ' Nde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , menü çubuğunda **Dosya**  >  **Yeni**  >  **Dosya**' yı seçin.
 
      **Yeni dosya** iletişim kutusu görüntülenir.
 
@@ -213,30 +213,30 @@ Bu kılavuzda, [ADO.NET kullanarak basit bir veri uygulaması oluşturmak](../da
     GO
     ```
 
-5. Menü çubuğunda **dosya**  > **SqlQuery_1. SQL dosyasını farklı kaydet**' i seçin.
+5. Menü çubuğunda **Dosya**  >  **Kaydet SqlQuery_1. SQL**' i seçin.
 
      **Dosyayı farklı kaydet** iletişim kutusu görüntülenir.
 
-6. **Dosya adı** kutusuna `SampleImportScript.sql` girin, dosyayı kaydedeceğiniz konuma göz önünde **saklayın ve Kaydet** düğmesini seçin.
+6. **Dosya adı** kutusunda, yazın `SampleImportScript.sql` , dosyayı kaydedeceğiniz konuma göz önünde **saklayın ve Kaydet** düğmesini seçin.
 
-7. Menü çubuğunda **dosya**  > **çözümü kapat**' ı seçin.
+7. Menü çubuğunda **Dosya**  >  **Kapat çözüm**' ü seçin.
 
      Sonra, bir veritabanı projesi oluşturun ve sonra oluşturduğunuz betikten şemayı içeri aktarın.
 
-## <a name="CreateProject"></a>Veritabanı projesi oluşturma ve bir şemayı içeri aktarma
+## <a name="create-a-database-project-and-import-a-schema"></a><a name="CreateProject"></a> Veritabanı projesi oluşturma ve bir şemayı içeri aktarma
 
 #### <a name="to-create-a-database-project"></a>Veritabanı projesi oluşturmak için
 
-1. Menü çubuğunda **dosya**  > **Yeni**  > **projesi**' ni seçin.
+1. Menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
 
-     **Yeni proje** iletişim kutusu görüntülenir.
+     **Yeni Proje** iletişim kutusu görünür.
 
 2. **Yüklü**altında **Şablonlar** düğümünü genişletin, **diğer diller** düğümünü genişletin, **SQL Server** kategorisini seçin ve **SQL Server veritabanı projesi** şablonunu seçin.
 
     > [!NOTE]
     > **Diğer diller** düğümü, Visual Studio 'nun tüm yüklemelerinde görünmez.
 
-3. **Ad** kutusuna `Small Database` girin.
+3. **Ad** kutusuna girin `Small Database` .
 
 4. Henüz seçili değilse, **çözüm için dizin oluştur** onay kutusunu seçin.
 
@@ -248,7 +248,7 @@ Bu kılavuzda, [ADO.NET kullanarak basit bir veri uygulaması oluşturmak](../da
 
 #### <a name="to-import-a-database-schema-from-a-script"></a>Bir komut dosyasından veritabanı şemasını içeri aktarmak için
 
-1. Menü çubuğunda **proje**  >   > **betiği** **içeri aktar** ' ı seçin.
+1. Menü çubuğunda **Proje**  >  **içeri aktarma**  >  **betiği**' ni seçin.
 
 2. **Hoş geldiniz** sayfasında, metni gözden geçirin ve ardından **İleri** düğmesini seçin.
 
@@ -270,5 +270,5 @@ Bu kılavuzda, [ADO.NET kullanarak basit bir veri uygulaması oluşturmak](../da
 
      Bu noktada, veritabanı yalnızca tablolar ve saklı yordamlar gibi sistem nesnelerini içerir. Veritabanını dağıttıktan sonra, komut dosyalarının tanımladıkları Kullanıcı tablolarını ve saklı yordamları içerir.
 
-## <a name="DeployDatabase"></a>Veritabanını dağıtma
+## <a name="deploy-the-database"></a><a name="DeployDatabase"></a> Veritabanını dağıtma
  **F5** tuşuna bastığınızda veritabanını varsayılan olarak bir LocalDB veritabanına dağıtır (veya yayımlayabilirsiniz). Projenin Özellikler sayfasını açıp **Hata Ayıkla** sekmesini seçerek ve sonra bağlantı dizesini değiştirerek veritabanını farklı bir konuma dağıtabilirsiniz.

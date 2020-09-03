@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointEvent2::EnumBreakpoints | Microsoft Dokümanlar
+title: 'IDebugBreakpointEvent2:: Envazgeçmiş noktaları | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 8744ec272fa121630e67f516ef1839c70b1a2d41
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735038"
 ---
 # <a name="idebugbreakpointevent2enumbreakpoints"></a>IDebugBreakpointEvent2::EnumBreakpoints
-Geçerli kod konumunda çalışan tüm kesme noktaları için bir sayı işaretleri oluşturur.
+Geçerli kod konumunda tetiklenen tüm kesme noktaları için bir Numaralandırıcı oluşturur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT EnumBreakpoints(
@@ -41,13 +41,13 @@ int EnumBreakpoints(
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-[çıkış] Geçerli kod konumuyla ilişkili tüm kesme noktalarını ayıklayan bir [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) nesnesi döndürür.
+dışı Geçerli kod konumuyla ilişkili tüm kesme noktalarını numaralandırır bir [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Belirli bir konumdaki tüm kesme noktaları belirli bir anda ateş olmayabilir (örneğin, bu koşul yerine gelene kadar bir koşula sahip bir kesme noktası ateş etmez).
+ Belirli bir konumdaki tüm kesme noktaları belirli bir zamanda tetiklemeyebilir (örneğin, koşulu olan bir kesme noktası söz konusu koşul karşılanana kadar harekete geçmeyecektir).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)

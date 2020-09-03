@@ -26,7 +26,7 @@ ms.locfileid: "72670158"
 
  Aşağıdaki tabloda, **tür koleksiyonu** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır.
 
-|Arabirim Öğesi|Description|
+|Arabirim Öğesi|Açıklama|
 |----------------|-----------------|
 |**Tür Listesi**|Eklenmiş veya kaldırılmış türlerin listesi.|
 

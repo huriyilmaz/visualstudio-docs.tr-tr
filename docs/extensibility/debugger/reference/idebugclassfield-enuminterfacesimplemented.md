@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::EnumInterfacesUygulanmış | Microsoft Dokümanlar
+title: 'IDebugClassField:: Enumınterfacesimpted | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 91d9cac6b695ba2a0d34da776fa79ba62ba2e015
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734492"
 ---
 # <a name="idebugclassfieldenuminterfacesimplemented"></a>IDebugClassField::EnumInterfacesImplemented
-Bu sınıf tarafından uygulanan arabirimler için bir sayısallaştırıcı oluşturur.
+Bu sınıf tarafından uygulanan arabirimler için bir Numaralandırıcı oluşturur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT EnumInterfacesImplemented( 
@@ -41,13 +41,13 @@ int EnumInterfacesImplemented(
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-[çıkış] Uygulanan arabirimler listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Arabirim yoksa null değeri döndürür.
+dışı Uygulanan arabirimlerin listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Arabirim yoksa, null bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, bu sınıfta uygulanan arabirim yoksa S_FALSE S_OK döndürür veya döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, bu sınıfta hiçbir arabirim uygulandıysa S_OK veya S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Numaralandırmanın her öğesi, arabirimi açıklayan bir [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) nesnesidir. Yönetilmeyen [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] kodun arabirimleri ayrı bir varlık olarak kullanmadığını, bu nedenle bu [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] yöntemin her zaman yönetilmeyen kod için null bir değer döndürdüğüne dikkat edin.
+ Sabit listesinin her öğesi, bir arabirimi tanımlayan bir [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) nesnesidir. Yönetilmeyen [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] kodun arabirimleri ayrık bir varlık olarak kullanmadığından, bu yöntemin yönetilmeyen kod için her zaman null bir değer döndürdüğünden emin olduğunu unutmayın [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

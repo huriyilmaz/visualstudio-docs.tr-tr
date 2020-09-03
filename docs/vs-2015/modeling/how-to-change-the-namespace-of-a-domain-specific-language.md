@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Etki alanına özgü dilin ad alanını değiştirme | Microsoft Docs'
+title: 'Nasıl yapılır: etki alanına özgü dilin ad alanını değiştirme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -12,13 +12,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8b61b248876f701e9d5286063f28b4f71d73e18b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671728"
 ---
-# <a name="how-to-change-the-namespace-of-a-domain-specific-language"></a>Nasıl Yapılır: Alana Özgü bir Dilin Ad Alanını Değiştirme
+# <a name="how-to-change-the-namespace-of-a-domain-specific-language"></a>Nasıl yapılır: Etki Alanına Özgü bir Dilin Ad Alanını Değiştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Etki alanına özgü dilin ad alanını değiştirebilirsiniz. Bu değişikliği DSL paketinin özelliklerinde ve derleme bilgilerinde, **DSL Gezgini**'nde yapmanız gerekir.
@@ -49,7 +49,7 @@ Etki alanına özgü dilin ad alanını değiştirebilirsiniz. Bu değişikliği
 
 10. Visual Studio Deneysel örneğini sıfırlayın.
 
-    1. **\Users \\** _{Name}_ **\appdata\local\microsoft\visualstudio \\ silme \*Exp**
+    1. **\Users \\ **_{Name}_**\appdata\local\microsoft\visualstudio \\ \* Exp** silme
 
     2. Windows **Başlat** menüsünde **tüm programlar**, **Microsoft Visual Studio 2010 SDK**, **Araçlar**, **deneysel örneği Sıfırla**' yı seçin.
 

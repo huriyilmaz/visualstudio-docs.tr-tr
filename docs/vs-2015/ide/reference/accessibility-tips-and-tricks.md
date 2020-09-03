@@ -32,7 +32,7 @@ ms.locfileid: "72670241"
 ## <a name="common-windows-shortcut-key-combinations"></a>Ortak Windows kısayol tuşu birleşimleri
  İçindeki görevleri gerçekleştirmek için standart Windows kısayol tuşu birleşimlerinin birçoğunu kullanabilirsiniz [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Bu kısayol tuşu birleşimlerinin bazıları şunlardır:
 
-|Description|Anahtar birleşimi|
+|Açıklama|Anahtar birleşimi|
 |-----------------|---------------------|
 |Yüksek Karşıtlık aç ve Kapat|Sol **alt + sol SHIFT + PRINT Screen**|
 |İletişim kutusunda onay kutusu seçeneğini seçme veya temizleme|**'NU**|

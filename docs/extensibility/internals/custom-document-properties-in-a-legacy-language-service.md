@@ -1,5 +1,5 @@
 ---
-title: Eski Dil Hizmetinde Özel Belge Özellikleri | Microsoft Dokümanlar
+title: Eski dil hizmetindeki özel belge özellikleri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,25 +13,25 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1b3db7f4cfa45ea96e3da3056f39c2a5c78a25ed
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80708964"
 ---
-# <a name="custom-document-properties-in-a-legacy-language-service"></a>Eski bir dil hizmetinde özel belge özellikleri
-Belge özellikleri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Özellikler** penceresinde görüntülenebilir. Programlama dilleri genellikle tek tek kaynak dosyaları ile ilişkili özelliklere sahip değildir. Ancak, XML kodlama, şema ve stil sayfasını etkileyen belge özelliklerini destekler.
+# <a name="custom-document-properties-in-a-legacy-language-service"></a>Eski dil hizmetindeki özel belge özellikleri
+Belge özellikleri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Özellikler** penceresinde gösterilebilir. Programlama dillerinin genellikle ayrı kaynak dosyalarla ilişkili özellikleri yoktur. Ancak, XML kodlama, şema ve stil sayfasını etkileyen belge özelliklerini destekler.
 
 ## <a name="discussion"></a>Tartışma
- Diliniz özel belge özelliklerine ihtiyaç duyarsa, <xref:Microsoft.VisualStudio.Package.DocumentProperties> sınıftan bir sınıf türetmeniz ve türemiş sınıfınızda gerekli özellikleri uygulamanız gerekir.
+ Diliniz özel belge özelliklerine ihtiyaç duyuyorsa, sınıftan bir sınıf türetmeniz <xref:Microsoft.VisualStudio.Package.DocumentProperties> ve türetilmiş sınıfınıza gerekli özellikleri uygulamanız gerekir.
 
- Ayrıca, belge özellikleri genellikle kaynak dosyanın kendisinde depolanır. Bu, dil hizmetinin kaynak dosyadaki özellik bilgilerini **Özellikler** penceresinde görüntülemek üzere ayrıştırmasını ve **Özellikler** penceresindeki belge özelliklerinde değişiklik yapıldığında kaynak dosyayı güncelleştirmesini gerektirir.
+ Ayrıca, belge özellikleri genellikle kaynak dosyanın kendisinde depolanır. Bu, dil hizmetinin Özellik bilgilerini **Özellikler** penceresinde görüntülenecek şekilde kaynak dosyadan ayrıştırması ve **Özellikler** penceresindeki belge özelliklerinde değişiklik yapıldığında kaynak dosyanın güncelleştirilmesini gerektirir.
 
 ## <a name="customize-the-documentproperties-class"></a>DocumentProperties sınıfını özelleştirme
- Özel belge özelliklerini desteklemek <xref:Microsoft.VisualStudio.Package.DocumentProperties> için, sınıftan bir sınıf türetmeniz ve istediğiniz kadar özellik eklemeniz gerekir. **Ayrıca, Özellikler** penceresinde bunları düzenlemek için kullanıcı öznitelikleri sağlamanız gerekir. Bir özelliğin yalnızca `get` bir erişimcisi varsa, **Özellikler** penceresinde salt okunur olarak gösterilir. Bir özellikte `get` hem `set` de erişime sahipse, **özellik Özellikler** penceresinde de güncelleştirilebilir.
+ Özel belge özelliklerini desteklemek için, sınıfından bir sınıf türetmeniz <xref:Microsoft.VisualStudio.Package.DocumentProperties> ve ihtiyacınız olan kadar çok özellik eklemeniz gerekir. Ayrıca, **Özellikler** penceresi görünümü ' nde bunları düzenlemek için Kullanıcı öznitelikleri sağlamanız gerekir. Bir özelliğin yalnızca bir erişimcisi varsa `get` , **Özellikler** penceresinde salt okuma olarak gösterilir. Bir özellikte hem hem de `get` `set` erişimcileri varsa, özellik **Özellikler** penceresinde de güncelleştirilemeyebilir.
 
 ### <a name="example"></a>Örnek
- Burada, iki özelliği <xref:Microsoft.VisualStudio.Package.DocumentProperties>gösteren bir örnek `Filename` `Description`sınıf ve . Bir özellik güncelleştirildiğinde, özelliği <xref:Microsoft.VisualStudio.Package.LanguageService> kaynak dosyaya yazmak için sınıftaki özel bir yöntem çağrılır.
+ Aşağıda, <xref:Microsoft.VisualStudio.Package.DocumentProperties> iki özelliği gösteren ve ' den türetilmiş bir örnek sınıf `Filename` verilmiştir `Description` . Bir özellik güncelleştirildiği zaman, <xref:Microsoft.VisualStudio.Package.LanguageService> kaynak dosyaya özelliği yazmak için sınıfında özel bir yöntem çağırılır.
 
 ```csharp
 using System.ComponentModel;
@@ -120,8 +120,8 @@ namespace TestLanguagePackage
 }
 ```
 
-## <a name="instantiate-the-custom-documentproperties-class"></a>Özel DocumentProperties sınıfını anında aygıt
- Özel belge özellikleri sınıfınızı anında yapmak için, <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A> sınıfınızın tek bir <xref:Microsoft.VisualStudio.Package.LanguageService> örneğini döndürmek için <xref:Microsoft.VisualStudio.Package.DocumentProperties> sınıfın sürümündeki yöntemi geçersiz kılmanız gerekir.
+## <a name="instantiate-the-custom-documentproperties-class"></a>Özel DocumentProperties sınıfının örneğini oluşturma
+ Özel belge özellikleri sınıfınızı oluşturmak için, sınıfınızın <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A> <xref:Microsoft.VisualStudio.Package.LanguageService> tek bir örneğini döndürmek üzere sınıfının sürümündeki yöntemini geçersiz kılmanız gerekir <xref:Microsoft.VisualStudio.Package.DocumentProperties> .
 
 ### <a name="example"></a>Örnek
 
@@ -147,20 +147,20 @@ namespace TestLanguagePackage
 }
 ```
 
-## <a name="properties-in-the-source-file"></a>Kaynak dosyadaki özellikler
- Belge özellikleri genellikle kaynak dosyaya özgü olduğundan, değerler kaynak dosyanın kendisinde depolanır. Bu, bu özellikleri tanımlamak için dil parser veya tarayıcı desteği gerektirir. Örneğin, bir XML belgenin özellikleri kök düğümünde depolanır. **Özellikler** penceresi değerleri değiştirildiğinde kök düğümündeki değerler değiştirilir ve kök düğüm düzenleyicide güncelleştirilir.
+## <a name="properties-in-the-source-file"></a>Kaynak dosyadaki Özellikler
+ Belge özellikleri genellikle kaynak dosyaya özel olduğundan, değerler kaynak dosyasında depolanır. Bu özellikleri tanımlamak için dil ayrıştırıcısında veya tarayıcıda destek gerekir. Örneğin, bir XML belgesinin özellikleri kök düğümünde depolanır. Kök düğümdeki değerler, **Özellikler** penceresi değerleri değiştirildiğinde değiştirilir ve kök düğüm düzenleyicide güncelleştirilir.
 
 ### <a name="example"></a>Örnek
- Bu örnek, `Filename` özellikleri `Description` depolar ve kaynak dosyanın ilk iki satırında, özel bir yorum üstbilgisinde katıştırılmış, aşağıdaki gibi:
+ Bu örnek, aşağıdaki `Filename` `Description` gibi özel bir yorum başlığına gömülü olan kaynak dosyanın ilk iki satırını ve özelliklerini depolar:
 
 ```
 //!Filename = file.testext
 //!Description = A sample file
 ```
 
- Bu örnek, kaynak dosyanın ilk iki satırından belge özelliklerini almak ve ayarlamak için gereken iki yöntemi ve kullanıcı kaynak dosyayı doğrudan değiştirirse özelliklerin nasıl güncelleştirilebildiğini gösterir. Burada `SetPropertyValue` gösterilen örnekteki yöntem, `TestDocumentProperties` *DocumentProperties sınıfını Özelleştirme* bölümünde gösterildiği gibi sınıftan çağrılan yöntemle aynıdır.
+ Bu örnek, belge özelliklerini almak ve kaynak dosyanın ilk iki satırının yanı sıra Kullanıcı kaynak dosyayı doğrudan değiştirirse özelliklerin nasıl güncelleştirileceğini gösteren iki yöntemi gösterir. `SetPropertyValue`Burada gösterilen örnekteki yöntemi, `TestDocumentProperties` *DocumentProperties sınıfını özelleştirme* bölümünde gösterildiği gibi sınıfından çağrılan bir yöntemdir.
 
- Bu örnek, ilk iki satırdaki belirteçlerin türünü belirlemek için tarayıcıyı kullanır. Bu örnek yalnızca açıklayıcı amaçlar içindir. Bu duruma daha tipik bir yaklaşım, kaynak dosyayı, ağacın her düğümünün belirli bir belirteç hakkında bilgi içerdiği ayrıştırıcı ağaç olarak adlandırılan dosyaya ayrıştırmaktır. Kök düğüm belge özelliklerini içerir.
+ Bu örnek, ilk iki satırlardaki belirteçlerin türünü belirleyebilmek için tarayıcıyı kullanır. Bu örnek yalnızca tanım amaçlıdır. Bu duruma yönelik daha yaygın bir yaklaşım, kaynak dosyayı ağacın her bir düğümünün belirli bir belirteç hakkında bilgi içerdiği bir ayrıştırma ağacı olarak ayrıştırmaktır. Kök düğüm belge özelliklerini içerir.
 
 ```csharp
 using System.ComponentModel;

@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: db3dc649d979c87960a42d38ffa211e352be175b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671409"
 ---
 # <a name="properties-of-elements-on-uml-use-case-diagrams"></a>UML kullanım durumu diyagramlarındaki öğelerin özellikleri
@@ -36,14 +36,14 @@ UML Kullanım örneği diyagramında, diyagramdaki her bir öğenin özellikleri
 |**Ad**|Varsayılan ad|Tümü|Öğesi tanımlar.|
 |**Tam ad**|Paket:: Name|Tümü|Öğeyi benzersiz bir şekilde tanımlar. Ön eki içeren paketin tam adı.|
 |**İş öğeleri**|0 ilişkili|Tümü|Bu öğeyle ilişkili iş öğelerinin sayısı. İş öğelerini ilişkilendirmek için bkz. [bağlantı modeli öğeleri ve iş öğeleri](../modeling/link-model-elements-and-work-items.md).|
-|**Açıklama**|seçim|Tümü|Öğe hakkında genel notları buradan yapabilirsiniz.|
-|**Renk**|varsayılanını|Tümü|Şeklin rengi. Diğer özelliklerden farklı olarak, bu, şeklin gösterdiği öğenin bir özelliği değildir.|
-|**Görüntü yolu**|seçim|Aktör|Varsayılan aktör simgesi yerine kullanılması gereken bir görüntünün dosya yolu. Simgenin Visual Studio projesi içindeki bir kaynak dosyası olması gerekir.|
-|**Konular**|seçim|Kullanım örneği|Kullanım örneğine sahip olan alt sistem veya diğer tür.<br /><br /> Bu ayarı, kullanım durumunu diyagramdaki bir alt sisteme yerleştirerek ayarlayabilirsiniz.|
-|**Görünürlük**|Ortak|Kullanım örneği, aktör, alt sistem|**Genel** -genel olarak görünür.<br /><br /> **Paket** -paket içinde görünür.|
-|**IsAbstract**|False|Kullanım örneği, aktör, alt sistem|True ise tür başlatılamaz ve diğer tanımlara göre özelleştirme için temel olarak tasarlanmıştır.|
-|**Dolaylı olarak örneklenmiştir**|Doğru|sistemin|Alt sistem yalnızca tasarım yapıtı olarak mevcuttur. Çalışma zamanında yalnızca kendi parçaları vardır.|
-|**Bağlanan**|seçim|Deposunun|Yapıtın bir bağlantı sağladığı diyagramın veya belgenin URL veya dosya yolu.|
+|**Açıklama**|(yok)|Tümü|Öğe hakkında genel notları buradan yapabilirsiniz.|
+|**Color**|(varsayılan)|Tümü|Şeklin rengi. Diğer özelliklerden farklı olarak, bu, şeklin gösterdiği öğenin bir özelliği değildir.|
+|**Görüntü yolu**|(yok)|Actor (Oyuncu)|Varsayılan aktör simgesi yerine kullanılması gereken bir görüntünün dosya yolu. Simgenin Visual Studio projesi içindeki bir kaynak dosyası olması gerekir.|
+|**Konular**|(yok)|Kullanım Örneği|Kullanım örneğine sahip olan alt sistem veya diğer tür.<br /><br /> Bu ayarı, kullanım durumunu diyagramdaki bir alt sisteme yerleştirerek ayarlayabilirsiniz.|
+|**Görünürlük**|Genel|Kullanım örneği, aktör, alt sistem|**Genel** -genel olarak görünür.<br /><br /> **Paket** -paket içinde görünür.|
+|**IsAbstract**|Yanlış|Kullanım örneği, aktör, alt sistem|True ise tür başlatılamaz ve diğer tanımlara göre özelleştirme için temel olarak tasarlanmıştır.|
+|**Dolaylı olarak örneklenmiştir**|Doğru|Sistemin|Alt sistem yalnızca tasarım yapıtı olarak mevcuttur. Çalışma zamanında yalnızca kendi parçaları vardır.|
+|**Köprü**|(yok)|Yapıt|Yapıtın bir bağlantı sağladığı diyagramın veya belgenin URL veya dosya yolu.|
 
  İlişkilerin özelliklerinin bir listesi için bkz. [UML sınıf diyagramlarındaki Ilişkilerin özellikleri](../modeling/properties-of-associations-on-uml-class-diagrams.md).
 

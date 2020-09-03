@@ -1,5 +1,5 @@
 ---
-title: Hata Ayıklama için Dil Hizmeti Desteği | Microsoft Dokümanlar
+title: Hata ayıklama için dil hizmeti desteği | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,22 +12,22 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8c80e8e1f584b1728f342cb596b689f6a22c9297
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80707431"
 ---
 # <a name="language-service-support-for-debugging"></a>Hata Ayıklama için Dil Hizmeti Desteği
-Dil hizmeti, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageDebugInfo> arabirim üzerinden hata ayıklama yı destekleyen özellikler sağlayabilir. Bu özellikler, kesme noktalarını doğrulamayı ve Otomatik **Ler** penceresine ifadelerin listesini sağlamayı içerir.
+Bir dil hizmeti, arabirim aracılığıyla bir hata ayıklayıcıyı destekleyen özellikler sağlayabilir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageDebugInfo> . Bu özellikler, kesme noktalarını doğrulamayı ve **oto** penceresine ifadelerin bir listesini sağlamayı içerir.
 
- Ancak, dilinizi hata ayıklamak için bir ifade değerlendiriciniz olması gerekir. İfade değerlendiricisi hata ayıklama sırasında değer üretmek için ifadeleri değerlendirmekten sorumludur. CLR ifade değerlendiricilerinin uygulanması hakkında bilgi için lütfen bkz:
+ Ancak, dilinizdeki hata ayıklaması için bir ifade değerlendiricisi olması gerekir. İfade değerlendirici, hata ayıklama sırasında değerlerin üretilmesi için ifadelerin hesaplanmasından sorumludur. CLR ifadesi değerlendiricileri uygulama hakkında daha fazla bilgi için lütfen bkz:
 
-- [CLR İfade Değerlendiriciler](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)
+- [CLR Ifadesi değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)
 
-- [Yönetilen İfade Değerlendirici Örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)
+- [Yönetilen Ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)
 
-## <a name="compiler-output"></a>Derleyici Çıktısı
- Derleyici türü, diliniz için hata ayıklama uygulamak için ne yapmanız gerektiğini belirler. Derleyiciniz Windows işletim sistemini hedef alıyor sa ve bir .pdb dosyası yazıyorsa, Visual Studio'ya entegre edilmiş yerel kod hata ayıklama motoruyla programları hata ayıklayabilirsiniz. Derleyiciniz Microsoft ara dili (MSIL) üretiyorsa, Visual Studio'ya da entegre edilmiş yönetilen kod hata ayıklama motoruyla programları hata ayıklayabilirsiniz. Derleyiciniz özel bir işletim sistemini veya farklı bir çalışma zamanı ortamını hedefliyorsa, kendi hata ayıklama motorunuzu yazmanız gerekir.
+## <a name="compiler-output"></a>Derleyici çıkışı
+ Derleyicinin türü, dilinize yönelik hata ayıklamayı uygulamak için ne yapmanız gerektiğini belirler. Derleyici Windows işletim sistemini hedefliyorsa ve bir. pdb dosyası yazıyorsa, Visual Studio ile tümleştirilmiş yerel kod hata ayıklama altyapısı ile programlarda hata ayıklaması yapabilirsiniz. Derleyici Microsoft ara dili (MSIL) üretirse, Visual Studio ile tümleştirilmiş olan yönetilen kod hata ayıklama altyapısı ile programlarda hata ayıklaması yapabilirsiniz. Derleyicisinde özel bir işletim sistemi veya farklı bir çalışma zamanı ortamı hedeflerse, kendi hata ayıklama motorunuzu yazmanız gerekir.
 
- Diliniz için hata ayıklama uygulaması hakkında daha fazla bilgi için Visual Studio Hata Ayıklama SDK'da [Başlarken](../../extensibility/debugger/getting-started-with-debugger-extensibility.md) bölümüne bakın.
+ Diliniz için hata ayıklamayı uygulama hakkında daha fazla bilgi için bkz. Visual Studio hata ayıklama SDK 'sında [çalışmaya](../../extensibility/debugger/getting-started-with-debugger-extensibility.md) başlama.

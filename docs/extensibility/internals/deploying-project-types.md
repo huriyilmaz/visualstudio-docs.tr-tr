@@ -1,5 +1,5 @@
 ---
-title: Proje Türlerinin Dağıtılması | Microsoft Dokümanlar
+title: Proje türlerini dağıtma | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +12,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 835e85ade4d309d0b5692aa9b857476cd6b5927a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80708782"
 ---
-# <a name="deploy-project-types"></a>Proje türlerini dağıtma
-[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]yeni bir proje tipi toplayıcı *(ProjectAggregator2.dll)* ve yeniden dağıtım için bir Windows Yükleyici paketi *(ProjectAggregator2.msi)* yükler. Yönetilen kod proje türleri için yeni toplayıcı kullanmanız gerekir. ProjectAggregator2, yönetilen kod [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] proje türlerinin doğru çalışmasını engelleyen proje toplayıcısındaki sınırlamalar etrafında çalışır. Aşağıdaki adımlar, yeni toplayıcıyı kullanmak için VSPackage'ınızı nasıl değiştireceğinizaçıklanmıştır.
+# <a name="deploy-project-types"></a>Proje türlerini dağıt
+[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] Yeni bir proje türü toplayıcısı (*ProjectAggregator2.dll*) ve ayrıca yeniden dağıtım için bir Windows Installer paketi (*ProjectAggregator2.msi*) yüklenir. Yönetilen kod proje türleri için yeni toplayıcısı 'nı kullanmanız gerekir. ProjectAggregator2, proje toplayıcısı 'nda, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yönetilen kod proje türlerinin düzgün çalışmasını engelleyen sınırlamalar çerçevesinde çalışır. Aşağıdaki adımlarda, VSPackage 'ın yeni toplayıcısı 'nı kullanacak şekilde nasıl değiştirileceği açıklanır.
 
-1. NativeHiyerarşiWrapper projesini çözümünüzden kaldırın.
+1. NativeHierarchyWrapper projesini çözümünüzden kaldırın.
 
-2. Herhangi bir NativeHiyerarşiWrapper ikililerini kurulumunuzdan kaldırın.
+2. Tüm NativeHierarchyWrapper ikililerini kurulumınızdan kaldırın.
 
-3. Kurulumunuza *ProjectAggregator2.msi* ekleyin.
+3. *ProjectAggregator2.msi* , kuruluma ekleyin.

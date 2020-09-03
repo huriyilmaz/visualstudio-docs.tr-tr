@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5a8c14f59b87be1e59b5d115ea84b555677cda32
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770226"
 ---
 # <a name="how-to-use-the-keyboard-exclusively"></a>Klavye kullanımı özel
@@ -93,7 +93,7 @@ Bir iletişim kutusundaki seçenekler arasında ilerlemek ve seçenek ayarların
 
    Yeni yerleştirme konumunda araç penceresinin ana hattı görüntülenir.
 
-6. **Enter**'a basın.
+6.  **Enter** tuşuna basın.
 
    Araç penceresi yeni yerleştirme konumunda yer içine yapışır.
 

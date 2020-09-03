@@ -15,10 +15,10 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: ad371f987ab7ff0e50dc7d2fe4effeba5205e74e
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770980"
 ---
 # <a name="how-to-create-a-nullable-type-in-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı null yapılabilir bir tür oluşturma
@@ -29,9 +29,9 @@ Null *yapılabilir bir tür* , genişlettiğinizi, bu tür için tipik değer ar
 
 Null yapılabilir türler <xref:System.Nullable%601> yapının örnekleridir. Null yapılabilir bir türdeki her bir örnek, iki ortak salt okuma özelliği içerir `HasValue` ve `Value` :
 
-- `HasValue`türündedir `bool` ve değişkenin tanımlanmış bir değer içerip içermediğini gösterir. `True`değişkenin null olmayan bir değer içerdiği anlamına gelir. Veya gibi bir ifade kullanarak tanımlanmış bir değer için test edebilirsiniz `if (x.HasValue)` `if (y != null)` .
+- `HasValue` türündedir `bool` ve değişkenin tanımlanmış bir değer içerip içermediğini gösterir. `True` değişkenin null olmayan bir değer içerdiği anlamına gelir. Veya gibi bir ifade kullanarak tanımlanmış bir değer için test edebilirsiniz `if (x.HasValue)` `if (y != null)` .
 
-- `Value`, temel alınan türle aynı türde. `HasValue`İse `True` , `Value` anlamlı bir değer içerir. `HasValue`İse `False` , erişim `Value` geçersiz bir işlem özel durumu oluşturur.
+- `Value` , temel alınan türle aynı türde. `HasValue`İse `True` , `Value` anlamlı bir değer içerir. `HasValue`İse `False` , erişim `Value` geçersiz bir işlem özel durumu oluşturur.
 
 Varsayılan olarak, bir değişkeni null yapılabilir bir tür olarak bildirdiğinizde, `HasValue` `False` temel alınan değer türünün varsayılan değerinden başka bir tanımlı değer (yani) yoktur.
 
@@ -55,7 +55,7 @@ C# ' de Nullable türler hakkında daha fazla bilgi için bkz. [Nullable türler
 
 6. **Sınıf Ayrıntıları** penceresinin **tür** sütununda, aşağıdakini belirterek türü null yapılabilir bir tür olarak bildirin:
 
-    - `int?`(Visual C#)
+    - `int?` (Visual C#)
     - `Nullable(Of Integer)` (Visual Basic)
 
 ## <a name="to-add-a-nullable-type-by-using-the-code-editor"></a>Kod düzenleyicisini kullanarak null yapılabilir bir tür eklemek için

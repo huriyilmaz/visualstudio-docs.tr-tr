@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9d01c56b04a9b046f695a19d61a9b47fcac73e06
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592340"
 ---
 # <a name="xml-schemas-dialog-box"></a>XML Şemaları iletişim kutusu
@@ -25,21 +25,21 @@ Belge Özellikleri penceresinde **şemalar** düğmesine tıklayarak veya **XML*
 
 ## <a name="uielement-list"></a>UIElement Listesi
 
-**Kullanma**
+**Kullanın**
 
 XML şemasının nasıl kullanılacağını seçin.
 
-- **Otomatik**. Bu şema geçerli belge tarafından kullanımda değil, ancak otomatik ilişkilendirme için kullanılabilir. XML belgesi, bu şemanın `targetNamespace` eşleşen bir ad alanı bildiriyorsa, şema otomatik olarak ilişkilendirilir ve şema kümesine dahil edilir.
+- **Otomatik**. Bu şema geçerli belge tarafından kullanımda değil, ancak otomatik ilişkilendirme için kullanılabilir. XML belgesi, bu şemanın ile eşleşen bir ad alanı bildiriyorsa `targetNamespace` , şema otomatik olarak ilişkilendirilir ve şema kümesine dahil edilir.
 
-- **Bu şemayı kullanın**. Bu şema geçerli belge tarafından kullanılıyor. Kullanıcı, bu şemanın bu sütuna tıklanarak kullanılmasını açıkça istedi, ya da şema eşleşen bir `targetNamespace`göre otomatik olarak ilişkilendirildi.
+- **Bu şemayı kullanın**. Bu şema geçerli belge tarafından kullanılıyor. Kullanıcı, bu şemanın bu sütuna tıklanarak kullanılmasını açıkça istedi, ya da şema eşleşen bir temel alınarak otomatik olarak ilişkilendirildi `targetNamespace` .
 
-- **Seçili şemaları kullanmayın**. Şema eşleşen bir `targetNamespace`olsa bile, bu şema geçerli belge tarafından kullanılmaz. Bu ayar, şema önbelleğinde veya çözümünde aynı şemanın birden fazla sürümü olduğunda çakışmaları çözümlemek için yararlı olabilir.
+- **Seçili şemaları kullanmayın**. Bu şema, şemanın eşleşen bir eşleşmesine sahip olsa bile geçerli belge tarafından kullanılmaz `targetNamespace` . Bu ayar, şema önbelleğinde veya çözümünde aynı şemanın birden fazla sürümü olduğunda çakışmaları çözümlemek için yararlı olabilir.
 
 **Hedef ad alanı**
 
 XML şemasıyla ilişkili hedef ad alanını görüntüler.
 
-**Dosya adı**
+**Dosya Adı**
 
 XML şeması dosya adını görüntüler.
 

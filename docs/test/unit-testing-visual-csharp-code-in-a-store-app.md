@@ -1,5 +1,5 @@
 ---
-title: Ünite test Görsel C# kodu
+title: Birim testi Visual C# kodu
 ms.date: 09/27/2019
 ms.topic: conceptual
 ms.author: mikejo
@@ -8,37 +8,37 @@ manager: jillfra
 ms.workload:
 - uwp
 ms.openlocfilehash: 31fbbfaa5d16dd51776f592b89a7846936b3013f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75590871"
 ---
 # <a name="unit-test-c-code"></a>C# birim testi sınıfı
 
-Bu makalede, UWP uygulamasında c# sınıfı için birim testleri oluşturmanın bir yolu açıklanmaktadır.
+Bu makalede, UWP uygulamasında bir C# sınıfı için birim testleri oluşturmanın bir yolu açıklanmaktadır.
 
-Test altındaki sınıf olan **Rooter** sınıfı, belirli bir sayının kare kökünün tahminini hesaplayan bir işlev uygular.
+Test altındaki sınıf olan **Rooter** sınıfı, belirli bir sayının kare kökünü tahmin eden bir işlevi uygular.
 
-Bu makalede, *test odaklı geliştirme*göstermektedir. Bu yaklaşımda, önce test ettiğiniz sistemde belirli bir davranışı doğrulayan bir test yazarsınız, sonra da testi geçen kodu yazarsınız.
+Bu makalede, *test odaklı geliştirme*gösterilmektedir. Bu yaklaşımda, öncelikle test ettiğiniz sistemde belirli bir davranışı doğrulayan bir test yazar ve ardından testi geçiren kodu yazarsınız.
 
-## <a name="create-the-solution-and-the-unit-test-project"></a>Çözümü ve birim test projesini oluşturun
+## <a name="create-the-solution-and-the-unit-test-project"></a>Çözüm ve birim testi projesi oluşturma
 
-1. **Dosya** menüsünde **Yeni** > **Proje'yi**seçin.
+1. **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
 
-2. **Boş Uygulama (Evrensel Windows)** proje şablonunu arayın ve seçin.
+2. **Boş uygulama (Evrensel Windows)** proje şablonunu arayın ve seçin.
 
-3. Proje **Matematik**adı .
+3. Projeyi **Maaltı**olarak adlandırın.
 
-4. **Çözüm Gezgini'nde,** çözüme sağ tıklayın ve**Yeni Proje** **Ekle'yi** > seçin.
+4. **Çözüm Gezgini**, çözüme sağ tıklayın ve **Add**  >  **Yeni proje**Ekle ' yi seçin.
 
-5. **Birim Test Uygulaması (Evrensel Windows)** proje şablonunu arayın ve seçin.
+5. **Birim testi uygulaması (Evrensel Windows)** proje şablonunu arayın ve seçin.
 
-6. Test projesi **RooterTests**adı.
+6. Test projesi kökü \ **tertest**adını adlandırın.
 
-## <a name="verify-that-the-tests-run-in-test-explorer"></a>Testlerin Test Gezgini'nde çalıştırıldığını doğrulama
+## <a name="verify-that-the-tests-run-in-test-explorer"></a>Test Gezgini 'nde testlerin çalıştırıldığını doğrulama
 
-1. *UnitTest.cs* dosyasına **TestMethod1'e** bazı test kodu ekleyin:
+1. *UnitTest.cs* dosyasına **testyöntemi1** ' ye bazı test kodu ekleyin:
 
    ```csharp
    [TestMethod]
@@ -48,29 +48,29 @@ Bu makalede, *test odaklı geliştirme*göstermektedir. Bu yaklaşımda, önce t
    }
    ```
 
-   Sınıf, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> test yöntemleriyle sonuçları doğrulamak için kullanabileceğiniz birkaç statik yöntem sağlar.
+   <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>Sınıfı, test yöntemlerinde sonuçları doğrulamak için kullanabileceğiniz çeşitli statik yöntemler sağlar.
 
 ::: moniker range="vs-2017"
 
-2. **Test** menüsünde Tüm Testleri **Çalıştır'ı** > **All Tests**seçin.
+2. **Test** menüsünde **Run** > **tüm testleri**Çalıştır ' ı seçin.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. **Test** menüsünde **Tüm Testleri Çalıştır'ı**seçin.
+2. **Test** menüsünde **Tüm Testleri Çalıştır**' ı seçin.
 
 ::: moniker-end
 
-   Test projesi oluşturur ve çalışır. Sabırlı olun çünkü biraz zaman alabilir. **Test Gezgini** penceresi görüntülenir ve test **Geçti Testleri**altında listelenir. Pencerenin altındaki **Özet** bölmesi, seçili test hakkında ek ayrıntılar sağlar.
+   Test projesi oluşturulup çalışır. Biraz uzun sürebileceğinden sabırlı olun. **Test Gezgini** penceresi görünür ve test **geçilen testler**altında listelenir. Pencerenin alt kısmındaki **Özet** bölmesi, seçilen test hakkında ek ayrıntılar sağlar.
 
-## <a name="add-the-rooter-class-to-the-maths-project"></a>Matematik projesine Rooter sınıfını ekle
+## <a name="add-the-rooter-class-to-the-maths-project"></a>Rooter sınıfını Maon projesine ekleyin
 
-1. **Çözüm Gezgini'nde,** **Matematik** projesine sağ tıklayın ve ardından**Sınıf** **Ekle'yi** > seçin.
+1. **Çözüm Gezgini**, **maaltı** projeye sağ tıklayın ve ardından sınıf **Ekle**' yi seçin  >  **Class**.
 
-2. Sınıf dosyasını *Rooter.cs.*
+2. Sınıf dosyasını *Rooter.cs*olarak adlandırın.
 
-3. **Rooter** sınıfı *Rooter.cs* dosyasına aşağıdaki kodu ekleyin:
+3. Aşağıdaki kodu **Rooter** sınıfı *Rooter.cs* dosyasına ekleyin:
 
    ```csharp
    public Rooter()
@@ -84,35 +84,35 @@ Bu makalede, *test odaklı geliştirme*göstermektedir. Bu yaklaşımda, önce t
    }
    ```
 
-   **Rooter** sınıfı bir oluşturucu ve **SquareRoot** tahminci yöntemi bildirir. **SquareRoot** yöntemi yalnızca en az uygulama, sadece test kurulumu temel yapısını test etmek için yeterlidir.
+   **Rooter** sınıfı bir Oluşturucu ve **SquareRoot** tahmin aracı metodunu bildirir. **SquareRoot** yöntemi yalnızca en az bir uygulama, test kurulumunun temel yapısını test etmek için yeterlidir.
 
-4. Test `public` kodu erişebilsin diye anahtar sözcüğü **Rooter** sınıfı bildirimine ekleyin.
+4. `public`Anahtar sözcüğünü **Rooter** sınıfı bildirimine ekleyin, böylece test kodu buna erişebilir.
 
    ```csharp
    public class Rooter
    ```
 
-## <a name="add-a-project-reference"></a>Proje başvurusu ekleme
+## <a name="add-a-project-reference"></a>Proje başvurusu Ekle
 
-1. Maths uygulamasına RooterTests projesinden bir başvuru ekleyin.
+1. RooterTests projesinden Maon uygulamasına bir başvuru ekleyin.
 
-    1. **Çözüm Gezgini'nde** **RooterTests** projesine sağ tıklayın ve ardından**Kaynak** **Ekle'yi** > seçin.
+    1. **Çözüm Gezgini**, **RooterTests** projesine sağ tıklayın ve ardından başvuru **Ekle**' yi seçin  >  **Reference**.
 
-    2. Başvuru **Ekle - RooterTests** iletişim kutusunda, **Çözümü** genişletin ve **Projeler'i**seçin. **Matematik** projesini seçin.
+    2. **Başvuru Ekle-RooterTests** Iletişim kutusunda **çözüm** ' i genişletin ve **Projeler**' i seçin. **Maaltı** projeyi seçin.
 
-        ![Matematik projesine referans ekleme](../test/media/ute_cs_windows_addreference.png)
+        ![Maaltı projeye başvuru ekleme](../test/media/ute_cs_windows_addreference.png)
 
-2. UnitTest.cs `using` dosyasına *UnitTest.cs* bir deyim ekleyin:
+2. `using` *UnitTest.cs* dosyasına bir ifade ekleyin:
 
-    1. Açık *UnitTest.cs*.
+    1. *UnitTest.cs*'i açın.
 
-    2. Bu kodu satırın `using Microsoft.VisualStudio.TestTools.UnitTesting;` altına ekleyin:
+    2. Bu kodu satırın altına ekleyin `using Microsoft.VisualStudio.TestTools.UnitTesting;` :
 
        ```csharp
        using Maths;
        ```
 
-3. **Rooter** işlevini kullanan bir test ekleyin. *UnitTest.cs*için aşağıdaki kodu ekleyin:
+3. **Rooter** işlevini kullanan bir test ekleyin. Aşağıdaki kodu *UnitTest.cs*öğesine ekleyin:
 
    ```csharp
    [TestMethod]
@@ -126,35 +126,35 @@ Bu makalede, *test odaklı geliştirme*göstermektedir. Bu yaklaşımda, önce t
    }
    ```
 
-   Yeni test, Test **Gezgini'nde** **Çalıştırılmayan Testler** düğümünde görünür.
+   Yeni test, **Test Gezgini** 'Nde, **çalıştırma testleri** düğümünde görünür.
 
-4. "Yük aynı hedef yolu olan iki veya daha fazla dosya içerir" hatasını önlemek **için, Solution**Explorer'da, **Maths** projesi altındaki **Özellikler** düğümünü genişletin ve ardından *Varsayılan.rd.xml* dosyasını silin.
+4. "Yükün aynı hedef yolu ile iki veya daha fazla dosya içermesi" hatasını önlemek için, **Çözüm Gezgini**' de, **masekiz** projenin altındaki **özellikler** düğümünü genişletin ve ardından *Default.rd.xml* dosyasını silin.
 
 ::: moniker range="vs-2017"
 
-6. **Test Gezgini'nde,** **Tümlerini Çalıştır'ı**seçin.
+6. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
 
-   Çözüm oluşturur ve testler çalışır ve geçer.
+   Çözüm oluşturulur ve testler çalışır ve geçer.
 
-   ![Test Gezgini'nde temel test geçti](../test/media/ute_cpp_testexplorer_basictest.png)
+   ![Test Gezgini 'nde BasicTest geçildi](../test/media/ute_cpp_testexplorer_basictest.png)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-6. **Test Gezgini'nde,** Tüm **Testleri Çalıştır'ı**seçin.
+6. **Test Gezgini**'Nde **Tüm Testleri Çalıştır**' ı seçin.
 
-   Çözüm oluşturur ve testler çalışır ve geçer.
+   Çözüm oluşturulur ve testler çalışır ve geçer.
 
-   ![Test Gezgini'nde Temel Test geçti](../test/media/vs-2019/test-explorer-uwp-app.png)
+   ![Test Gezgini 'nde temel test geçildi](../test/media/vs-2019/test-explorer-uwp-app.png)
 
 ::: moniker-end
 
-Test ve uygulama projelerini ayarladınız ve uygulama projesinde işlevleri arayan testleri çalıştırabileceğinizi doğruladınız. Şimdi gerçek testler ve kod yazmaya başlayabilirsiniz.
+Test ve uygulama projelerini ayarlamış ve uygulama projesindeki işlevleri çağıran testleri çalıştıracağınızı doğruladınız. Artık gerçek testleri ve kodu yazmaya başlayabilirsiniz.
 
-## <a name="iteratively-augment-the-tests-and-make-them-pass"></a>Testleri yinelemeli bir şekilde artırın ve geçmelerini
+## <a name="iteratively-augment-the-tests-and-make-them-pass"></a>Testleri tekrarlayarak ve geçiş yapın
 
-1. **RangeTest**adlı yeni bir test ekle:
+1. **Rangetest**adlı yeni bir test ekleyin:
 
    ```csharp
    [TestMethod]
@@ -172,16 +172,16 @@ Test ve uygulama projelerini ayarladınız ve uygulama projesinde işlevleri ara
    ```
 
    > [!TIP]
-   > Geçen testleri değiştirmemenizi öneririz. Bunun yerine yeni bir test ekleyin.
+   > Geçilen testleri değiştirmenizi öneririz. Bunun yerine yeni bir test ekleyin.
 
-2. **RangeTest** testini çalıştırın ve başarısız olduğunu doğrulayın.
+2. **Rangetest** testini çalıştırın ve başarısız olduğunu doğrulayın.
 
-   ![RangeTest başarısız olur](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
+   ![RangeTest başarısız oluyor](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
 
    > [!TIP]
-   > Bir test yazdıktan hemen sonra, başarısız olduğunu doğrulamak için çalıştırın. Bu, asla başarısız olmayan bir test yazmanın kolay hatasını önlemenize yardımcı olur.
+   > Test yazdıktan hemen sonra, başarısız olduğunu doğrulamak için çalıştırın. Bu, hiç başarısız olmayan bir testi yazmanın kolay bir hata yaşamadan kaçınmanıza yardımcı olur.
 
-3. Yeni testin geçmesi için test altındaki kodu geliştirin. Rooter.cs'daki *Rooter.cs* **SquareRoot** işlevini şu şekilde değiştirin:
+3. Yeni testin başarılı olması için test kapsamındaki kodu geliştirin. *Rooter.cs* içindeki **SquareRoot** işlevini şu şekilde değiştirin:
 
    ```csharp
    public double SquareRoot(double x)
@@ -200,28 +200,28 @@ Test ve uygulama projelerini ayarladınız ve uygulama projesinde işlevleri ara
 
 ::: moniker range="vs-2017"
 
-4. **Test Gezgini'nde,** **Tümlerini Çalıştır'ı**seçin.
+4. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. **Test Gezgini'nde,** Tüm **Testleri Çalıştır'ı**seçin.
+4. **Test Gezgini**'Nde **Tüm Testleri Çalıştır**' ı seçin.
 
 ::: moniker-end
 
-   Üç test de geçti.
+   Tüm üç test artık geçer.
 
 > [!TIP]
-> Testleri teker teker ekleyerek kod geliştirin. Tüm testlerin her yinelemeden sonra geçtiğinden emin olun.
+> Her seferinde bir test ekleyerek kod geliştirin. Her yinelemeden sonra tüm testlerin başarılı olduğundan emin olun.
 
 ## <a name="refactor-the-code"></a>Kodu yeniden düzenleme
 
-Bu bölümde, hem uygulama hem de test kodunu yeniden küçlersiniz, ardından testleri yineleyip geçtiklerinden emin olursunuz.
+Bu bölümde, hem uygulama hem de test kodunu yeniden düzenleyin ve ardından devam ettiğinden emin olmak için testleri yeniden çalıştırın.
 
-### <a name="simplify-the-square-root-estimation"></a>Kare kök tahminini basitleştirin
+### <a name="simplify-the-square-root-estimation"></a>Kare kök tahmini 'ni basitleştirme
 
-1. Bir kod satırını değiştirerek **SquareRoot** işlevindeki merkezi hesaplamayı basitleştirin:
+1. Bir kod satırını aşağıdaki gibi değiştirerek **SquareRoot** işlevindeki merkezi hesaplamayı kolaylaştırın:
 
     ```csharp
     // Old code
@@ -231,16 +231,16 @@ Bu bölümde, hem uygulama hem de test kodunu yeniden küçlersiniz, ardından t
     estimate = (estimate + x/estimate) / 2.0;
     ```
 
-2. Bir gerileme getirmediğinden emin olmak için tüm testleri çalıştırın. Hepsi geçmeli.
+2. Bir gerileme sunmadığınızdan emin olmak için tüm testleri çalıştırın. Hepsi başarılı olmalıdır.
 
 > [!TIP]
-> İyi birim testleri kararlı bir dizi kodu değiştirdiğinizde hataları tanıttı değil güven verir.
+> Kararlı bir iyi birim testi kümesi, kodu değiştirirken hata sunmaabileceğinizden emin olmanızı sağlar.
 
-### <a name="eliminate-duplicated-code"></a>Yinelenen kodu ortadan kaldırma
+### <a name="eliminate-duplicated-code"></a>Yinelenen kodu kaldırın
 
-**RangeTest** yöntemi, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> yönteme geçirilen *tolerans* değişkeninin paydasını sabit kodlar. Aynı tolerans hesaplamasını kullanan ek testler eklemeyi planlıyorsanız, birden çok konumda sabit kodlanmış bir değerin kullanılması kodun korunmasını zorlaştırır.
+**Rangetest** yöntemi, yöntemine geçirilen *tolerans* değişkeninin paydasını sabit olarak kodlar <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> . Aynı tolerans hesaplamasını kullanan ek testler eklemeyi planlıyorsanız, sabit kodlanmış bir değerin birden çok konumda kullanılması kodun bakımını daha zor hale getirir.
 
-1. Tolerans değerini hesaplamak için **UnitTest1** sınıfına özel bir yardımcı yöntemi ekleyin ve ardından bu yöntemi **RangeTest'ten**arayın.
+1. Tolerans değerini hesaplamak için **UnitTest1** sınıfına özel bir yardımcı yöntemi ekleyin ve sonra bu yöntemi **rangetest**' ten çağırın.
 
     ```csharp
     private double ToleranceHelper(double expected)
@@ -263,11 +263,11 @@ Bu bölümde, hem uygulama hem de test kodunu yeniden küçlersiniz, ardından t
     ...
     ```
 
-2. Hala geçtiğinden emin olmak için **RangeTest'i** çalıştırın.
+2. Hala başarılı olduğundan emin olmak için **Rangetest** çalıştırın.
 
 > [!TIP]
-> Bir test sınıfına yardımcı yöntem eklerseniz ve **test gezgininde**görünmesini istemiyorsanız, yönteme <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> öznitelik eklemeyin.
+> Test sınıfına bir yardımcı yöntemi eklerseniz ve **Test Gezgini**'nde görünmesini istemiyorsanız, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> yöntemine özniteliğini eklemeyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Walkthrough: Test Gezgini'ni kullanarak test odaklı geliştirme](quick-start-test-driven-development-with-test-explorer.md)
+- [İzlenecek yol: test Gezginini kullanarak test odaklı geliştirme](quick-start-test-driven-development-with-test-explorer.md)

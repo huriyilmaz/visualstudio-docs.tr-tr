@@ -11,57 +11,57 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0f8dd5567fb21fafbac3c63b84dae1e0e33b0b91
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200627"
 ---
 # <a name="debugger-concepts"></a>Hata Ayıklayıcı Kavramları
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Visual Studio hata ayıklama paketi oluşturmak için kullanılan paket tasarlamada mimari kavramlarını tanımanız gerekir.  
+Visual Studio hata ayıklama paketi üzerinde derlemek için, paketi tasarlarken kullanılan mimari kavramlarını tanımanız gerekir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Oturum Hatalarını Ayıklama](../../extensibility/debugger/debug-session.md)  
- Rol oturumunun hata ayıklama mimarisi açıklanmaktadır.  
+ Hata ayıklama mimarisinde bir oturumun rolünü açıklar.  
   
  [Sunucular](../../extensibility/debugger/servers-visual-studio-sdk.md)  
- Tanımlar hangi bir mimari, hata ayıklama açısından hem soyut hem de fiziksel koşullarını sunucusudur.  
+ Bir sunucunun hata ayıklama mimarisi açısından, hem soyut hem de fiziksel koşullarda ne olduğunu tanımlar.  
   
  [Bağlantı Noktası Sağlayıcıları](../../extensibility/debugger/port-suppliers.md)  
- Tanımlar mimarisi hata ayıklama açısından bağlantı noktası sağlayıcısı değildir.  
+ Bir bağlantı noktası tedarikçinin hata ayıklama mimarisi açısından ne olduğunu tanımlar.  
   
- [Bağlantı Noktaları](../../extensibility/debugger/ports.md)  
- Tanımlar hata ayıklama mimarisi bakımından hangi bağlantı noktasıdır.  
+ [Bağlantı noktaları](../../extensibility/debugger/ports.md)  
+ Bir bağlantı noktasının hata ayıklama mimarisi açısından ne olduğunu tanımlar.  
   
  [İşlemler](../../extensibility/debugger/processes.md)  
- Tanımlar hata ayıklama mimarisi bakımından, hangi bir işlemdir.  
+ Bir işlemin hata ayıklama mimarisi açısından ne olduğunu tanımlar.  
   
  [Program Düğümleri](../../extensibility/debugger/program-nodes.md)  
- Mimari, kendisi ve onu çalıştıran işlemin nasıl tanımlamak de dahil olmak üzere hata ayıklama açısından bir program düğümü tanımlar.  
+ Bir program düğümünü, hata ayıklama mimarisi açısından, kendisini ve üzerinde çalıştığı işlemi nasıl tanımlayabileceğini de içerecek şekilde tanımlar.  
   
  [Programlar](../../extensibility/debugger/programs.md)  
- Bir programı hata ayıklama mimarisi bakımından tanımlar.  
+ Hata ayıklama mimarisi açısından bir program tanımlar.  
   
  [İş Parçacıkları](../../extensibility/debugger/threads.md)  
- İş parçacığı hata ayıklama mimarisi bakımından özelliklerini tanımlar.  
+ Hata ayıklama mimarisi açısından iş parçacıklarının özelliklerini tanımlar.  
   
  [Yığın Çerçeveleri](../../extensibility/debugger/stack-frames.md)  
- Hata ayıklama mimarisi bakımından bir yığın çerçevesini tanımlar. Bir yığın çerçevesi, bir iş parçacığı yürütme bağlamı sağlayan bir yığının bir soyutlamadır.  
+ Hata ayıklama mimarisi bakımından bir yığın çerçevesini tanımlar. Yığın çerçevesi, bir iş parçacığının Yürütme bağlamını sağlayan bir yığın soyutlamasıdır.  
   
- [Modüller](../../extensibility/debugger/modules.md)  
- Mimari, fiziksel bir yürütülebilir dosya veya bir DLL gibi bir kod kapsayıcısı olarak hata ayıklama açısından bir modül tanımlar.  
+ [Modül](../../extensibility/debugger/modules.md)  
+ Hata ayıklama mimarisi açısından, yürütülebilir dosya veya DLL gibi bir fiziksel kod kapsayıcısı olarak bir modülü tanımlar.  
   
- [Kesme Noktaları](../../extensibility/debugger/breakpoints-visual-studio-sdk.md)  
- Kesme noktaları üç tür tanımlar — beklemede, bağlama ve hata — hata ayıklama mimarisi bakımından.  
+ [Kesme noktaları](../../extensibility/debugger/breakpoints-visual-studio-sdk.md)  
+ Hata ayıklama mimarisi açısından, bekleyen, bağlantılı ve hata gibi üç kesme noktası türünü tanımlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Hata Ayıklayıcı Bağlamları](../../extensibility/debugger/debugger-contexts.md)  
- Nasıl hata ayıklama altyapısı (DE) aynı anda kod, belgeler ve ifade değerlendirme bağlamı içinde çalıştığı açıklanmaktadır. , Her üç bağlamları, konumu, konum veya değerlendirme için ilgili açıklar.  
+ Hata ayıklama altyapısının (DE) kod, belge ve ifade değerlendirme bağlamlarının eşzamanlı olarak nasıl çalıştığını açıklar. Üç bağlamın her biri için, bu konuyla ilgili konum, konum veya değerlendirmeyi açıklar.  
   
  [Hata Ayıklayıcı Bileşenleri](../../extensibility/debugger/debugger-components.md)  
- Hata ayıklama altyapısı (DE) ifade değerlendiricisi (EE) ve sembol işleyici (SH) Visual Studio hata ayıklama Bileşenleri'ne genel bakış sağlar.  
+ Hata ayıklama altyapısı (DE), ifade değerlendiricisi (EE) ve sembol işleyici (SH) dahil Visual Studio hata ayıklama bileşenlerine genel bakış sağlar.  
   
  [Hata Ayıklama Görevleri](../../extensibility/debugger/debugging-tasks.md)  
- Program başlatma ve ifadeleri değerlendirme gibi çeşitli hata ayıklama görevlerini bağlantılar içerir.
+ Bir program başlatma ve ifadeleri değerlendirme gibi çeşitli hata ayıklama görevlerinin bağlantılarını içerir.

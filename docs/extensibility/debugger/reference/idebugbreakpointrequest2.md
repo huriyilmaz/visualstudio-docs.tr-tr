@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointRequest2 | Microsoft Dokümanlar
+title: IDebugBreakpointRequest2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,46 +13,46 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: f30f9698c9c81322edd6935b40c16cad6f46024c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734922"
 ---
 # <a name="idebugbreakpointrequest2"></a>IDebugBreakpointRequest2
-Bu arabirim, herhangi bir kesme noktası oluşturmak ve bağlamak için gereken bilgileri temsil eder.
+Bu arabirim, herhangi bir kesme noktası türü oluşturmak ve bağlamak için gereken bilgileri temsil eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugBreakpointRequest2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Oturum hata ayıklama yöneticisi (SDM) genellikle bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Oturum hata ayıklama Yöneticisi (SDM), bu arabirimi genellikle uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Hata ayıklama altyapısı (DE) bekleyen bir kesme noktası oluşturmak için [CreatePendingBreakpoint'e](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) yapılan bir çağrı aracılığıyla bu arabirimi alır. [GetBreakpointRequest](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md) için bir çağrı DE bu arabirimi alabilirsiniz.
+ Hata ayıklama altyapısı (DE), bekleyen bir kesme noktası oluşturmak için bu arabirimi [CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) çağrısı aracılığıyla alır. [Getbreakpointrequest](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md) çağrısı, bu arabirimi de öğesinden alabilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
- Aşağıdaki tabloda `IDebugBreakpointRequest2`.
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugBreakpointRequest2` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
 |[GetLocationType](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getlocationtype.md)|Bu kesme noktası isteğinin kesme noktası konum türünü alır.|
-|[GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md)|Bu kesme noktası isteğini açıklayan kesme noktası isteği bilgilerini alır.|
+|[GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md)|Bu kesme noktası isteğini açıklayan kesme noktası istek bilgilerini alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Program debugged yüklendikten sonra, [Bind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) için bir arama programda istenen konuma bekleyen bir kesme noktası bağlar.
+ Hata Ayıklanan program yüklendikten sonra [bağlama](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) çağrısı, bekleyen bir kesme noktasını programda istenen konuma bağlar.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md)
 - [GetBreakpointRequest](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md)
-- [Bağla](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)
+- [Bağladığınızda](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)

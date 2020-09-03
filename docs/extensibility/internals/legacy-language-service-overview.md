@@ -1,5 +1,5 @@
 ---
-title: Eski Dil Hizmetine Genel Bakış | Microsoft Dokümanlar
+title: Eski dil hizmetine genel bakış | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,23 +11,23 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: aed653ec200063e72434fc758c7920e6caabafe1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80707355"
 ---
 # <a name="legacy-language-service-overview"></a>Eski Dil Hizmetine Genel Bakış
-Dil hizmeti, belirli [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] özellikleri uygulamanıza olanak tanıyan düzenleyici desteği sağlar. Yönetilen Paket Çerçevesi (MPF) dil hizmeti sınıfları, sık kullanılan özellikler için tam destek ve diğer özellikler için kısmi destek sağlar.
+Dil hizmeti, belirli özellikleri uygulamanıza olanak sağlayan düzenleyici desteği sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Yönetilen paket çerçevesi (MPF) dil hizmeti sınıfları, sık kullanılan özellikler ve diğer özellikler için kısmi destek için tam destek sağlar.
 
-## <a name="fully-supported-features-in-the-mpf"></a>MPF'de Tam Desteklenen Özellikler
+## <a name="fully-supported-features-in-the-mpf"></a>MPF 'de tam olarak desteklenen özellikler
  MPF dil hizmeti sınıfları aşağıdaki özellikleri destekler:
 
-- Sözdizimi vurgulama
+- Söz dizimi vurgulama
 
 - Anahat Oluşturma
 
-- Açıklama kod blokları
+- Kod blokları açıklama oluşturma
 
 - Ayraç eşleştirme
 
@@ -37,25 +37,25 @@ Dil hizmeti, belirli [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)
 
 - IntelliSense parametre bilgileri
 
-- IntelliSense Hızlı Bilgi
+- IntelliSense hızlı bilgi
 
-- IntelliSense üye tamamlama
+- IntelliSense üye Tamamlama
 
-- IntelliSense kelime tamamlama
+- IntelliSense sözcük tamamlama
 
-## <a name="partially-supported-features-in-the-mpf"></a>MPF'de Kısmen Desteklenen Özellikler
- MPF, aşağıdaki özellikler için yalnızca kısmi destek sağlar. Bu, MPF tarafından çağrılan yöntemleri uygulamanız gerektiği anlamına gelir.
+## <a name="partially-supported-features-in-the-mpf"></a>MPF 'de kısmen desteklenen özellikler
+ MPF aşağıdaki özellikler için yalnızca kısmi destek sağlar. Bu, MPF tarafından çağrılan yöntemleri uygulamanız gerektiği anlamına gelir.
 
-- Kodu yeniden biçimlendirme. Yeniden biçimlendirmeyi uygulayan kodu siz sağlıyorsunuz.
+- Kodu yeniden biçimlendirme. Yeniden biçimlendirmeyi uygulayan kodu sağlarsınız.
 
-- Geçerli kod açıklıklarını tanımlayarak kesme noktalarını doğrulayın. Kod yayılmalarını tanımlayan kodu siz sağlıyorsunuz.
+- Geçerli kod yayılmalarını tanımlayarak kesme noktaları doğrulanıyor. Kod yayılma alanlarını tanımlayan kodu sağlarsınız.
 
-- Değişkenleri görüntülemek için hata ayıklama **Autos** penceresini destekleme. Pencerede ne gösterilenleri belirleyen kodu siz sağlıyorsunuz.
+- Değişkenleri görüntülemek için hata ayıklayıcı **oto** penceresini destekleme. Pencerede neyin gösterileceğini belirleyen kodu sağlarsınız.
 
-- Türleri ve üyeleri arasında hızlı gezinme için **Gezinti çubuğunu** destekleme. **Gezinti çubuğu** açılan kutularındaki listeleri dolduran bir yardımcı sınıf uygular ve döndürün.
+- Türler ve Üyeler arasında hızlı gezinme için **Gezinti çubuğunu** destekleme. **Gezinti çubuğu** Birleşik giriş kutularındaki listeleri dolduran bir yardımcı sınıfı uygular ve döndürür.
 
 ## <a name="implementation"></a>Uygulama
- Dil hizmetinin kendisini ve diliniz için desteklemek istediğiniz dil hizmeti özelliklerini uygulamak için birkaç adımı tamamlamanız gerekir. Bu adımlar aşağıdaki konularda ele alınmıştır:
+ Dil hizmetinin kendisini ve diliniz için desteklemek istediğiniz dil hizmeti özelliklerini uygulamak için birkaç adımı tamamlamalısınız. Bu adımlar aşağıdaki konularda ele alınmıştır:
 
 - [Eski Dil Hizmeti Uygulama](../../extensibility/internals/implementing-a-legacy-language-service2.md)
 
@@ -75,7 +75,7 @@ Dil hizmeti, belirli [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)
 
 - [Eski Dil Hizmetinde Kod Parçacıkları için Destek](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md)
 
-- [Eski Dil Hizmetinde Otomatik Değişkenler Penceresi için Destek](../../extensibility/internals/support-for-the-navigation-bar-in-a-legacy-language-service.md)
+- [Eski Dil Hizmetinde Gezinti Çubuğu için Destek](../../extensibility/internals/support-for-the-navigation-bar-in-a-legacy-language-service.md)
 
 - [Eski Dil Hizmetinde Sözcük Tamamlama](../../extensibility/internals/word-completion-in-a-legacy-language-service.md)
 

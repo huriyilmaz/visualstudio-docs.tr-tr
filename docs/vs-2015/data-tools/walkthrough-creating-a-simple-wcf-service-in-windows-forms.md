@@ -15,16 +15,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 366567a13ad23ab19ffd88f19997b92025abe952
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671070"
 ---
-# <a name="walkthrough-creating-a-simple-wcf-service-in-windows-forms"></a>İzlenecek yol: Windows Forms içinde basit bir WCF hizmeti oluşturma
+# <a name="walkthrough-creating-a-simple-wcf-service-in-windows-forms"></a>İzlenecek yol: Windows Forms içinde basit bir WCF Hizmeti oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu izlenecek yol, basit bir [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] hizmeti oluşturmayı, test etme ve sonra bir Windows Forms uygulamasından erişmeyi gösterir.
+Bu izlenecek yol, basit bir hizmetin nasıl oluşturulacağını [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] , test yapıldığını ve daha sonra bu uygulamaya nasıl Windows Forms bir uygulamadan erişebileceğini gösterir.
 
  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
@@ -34,7 +34,7 @@ Bu izlenecek yol, basit bir [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] hiz
 
 1. **Dosya** menüsünde, **Yeni** ' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
 
-2. **Yeni proje** iletişim kutusunda, **Visual Basic** veya **görsel C#**  düğümünü genişletin ve ardından WCF **hizmet kitaplığı**' **na tıklayın.** Projeyi açmak için **Tamam** ' ı tıklatın.
+2. **Yeni proje** iletişim kutusunda, **Visual Basic** veya **Visual C#** düğümünü genişletin ve ardından WCF **hizmet kitaplığı**' **na tıklayın.** Projeyi açmak için **Tamam** ' ı tıklatın.
 
      ![WCF hizmet kitaplığı projesi](../data-tools/media/wcf1.PNG "wcf1")
 
@@ -48,12 +48,12 @@ Bu izlenecek yol, basit bir [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] hiz
      [!code-csharp[WCFWalkthrough#4](../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/iservice1_2.cs#4)]
      [!code-vb[WCFWalkthrough#4](../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/iservice1_2.vb#4)]
 
-     @No__t_0 parametresinin türünü `String` olarak değiştirin:
+     Parametresinin türünü şu şekilde değiştirin `value` `String` :
 
      [!code-csharp[WCFWalkthrough#1](../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/iservice1.cs#1)]
      [!code-vb[WCFWalkthrough#1](../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/iservice1.vb#1)]
 
-     Yukarıdaki kodda `<OperationContract()>` veya `[OperationContract]` özniteliklerini aklınızda edin. Bu öznitelikler, hizmet tarafından sunulan herhangi bir yöntem için gereklidir.
+     Yukarıdaki kodda, veya özniteliklerini aklınızda edin `<OperationContract()>` `[OperationContract]` . Bu öznitelikler, hizmet tarafından sunulan herhangi bir yöntem için gereklidir.
 
 4. ![Service1 dosyası](../data-tools/media/wcf3.png "wcf3")
 
@@ -62,7 +62,7 @@ Bu izlenecek yol, basit bir [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] hiz
      [!code-csharp[WCFWalkthrough#5](../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/service1_2.cs#5)]
      [!code-vb[WCFWalkthrough#5](../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/service1_2.vb#5)]
 
-     Değer parametresinin türünü `String` olarak değiştirin:
+     Değer parametresinin türünü şu şekilde değiştirin `String` :
 
      [!code-csharp[WCFWalkthrough#2](../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/service1.cs#2)]
      [!code-vb[WCFWalkthrough#2](../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/service1.vb#2)]
@@ -75,9 +75,9 @@ Bu izlenecek yol, basit bir [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] hiz
 
 2. **WCF Test istemcisi** formunda, **IService1**altındaki **GetData ()** yöntemine çift tıklayın. **GetData** sekmesi görüntülenir.
 
-     ![GetData&#40; &#41; yöntemi](../data-tools/media/wcf4.png "wcf4")
+     ![GetData&#40;&#41; yöntemi](../data-tools/media/wcf4.png "wcf4")
 
-3. **İstek** kutusunda **değer** alanı ' nı seçin ve `Hello` yazın.
+3. **İstek** kutusunda **değer** alanını ve türünü seçin `Hello` .
 
      ![Değer alanı](../data-tools/media/wcf5.png "wcf5")
 
@@ -93,7 +93,7 @@ Bu izlenecek yol, basit bir [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] hiz
 
 1. **Dosya** menüsünde, **Ekle** ' nin üzerine gelin ve ardından **Yeni proje**' ye tıklayın.
 
-2. **Yeni proje** iletişim kutusunda, **Visual Basic** veya **görsel C#**  düğümünü genişletin ve **Windows**' u seçin ve ardından **Windows Forms uygulama**' yı seçin. Projeyi açmak için **Tamam** ' ı tıklatın.
+2. **Yeni proje** iletişim kutusunda, **Visual Basic** veya **Visual C#** düğümünü genişletin ve **Windows**' u seçin ve ardından **Windows Forms uygulama**' yı seçin. Projeyi açmak için **Tamam** ' ı tıklatın.
 
      ![Windows Forms uygulama projesi](../data-tools/media/wcf7.png "wcf7")
 
@@ -111,11 +111,11 @@ Bu izlenecek yol, basit bir [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] hiz
 
 1. **Çözüm Gezgini**, zaten açık değilse Windows Form Tasarımcısı açmak için **Form1. vb** veya **Form1.cs** öğesine çift tıklayın.
 
-2. **Araç kutusundan**bir `TextBox` denetimini, bir `Label` denetimini ve `Button` denetimini form üzerine sürükleyin.
+2. **Araç kutusundan**bir `TextBox` denetimi, `Label` denetimi ve `Button` denetimi form üzerine sürükleyin.
 
      ![Forma denetim ekleme](../data-tools/media/wcf9.png "wcf9")
 
-3. @No__t_0 çift tıklayın ve `Click` olay işleyicisine aşağıdaki kodu ekleyin:
+3. Öğesine çift tıklayın `Button` ve olay işleyicisine aşağıdaki kodu ekleyin `Click` :
 
      [!code-csharp[WCFWalkthrough#3](../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/form1.cs#3)]
      [!code-vb[WCFWalkthrough#3](../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/form1.vb#3)]

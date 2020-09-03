@@ -15,16 +15,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 37b8b89f1dfc8d3539101080ebbed20615da2c01
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671249"
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>T4 Metin Şablonları İle Çalışma Süresi Metni Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Çalışma zamanında [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çalışma zamanı metin şablonları kullanarak uygulamanızda metin dizeleri oluşturabilirsiniz. Uygulamanın çalıştırıldığı bilgisayarın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sahip olması gerekmez. Çalışma zamanı şablonları bazen "önceden işlenmiş metin şablonları" olarak adlandırılır, çünkü derleme sırasında şablon çalışma zamanında yürütülen kodu oluşturur.
+Çalışma zamanı metin şablonlarını kullanarak uygulamanızda çalışma zamanında metin dizeleri oluşturabilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Uygulamanın çalıştırıldığı bilgisayarın sahip olması gerekmez [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Çalışma zamanı şablonları bazen "önceden işlenmiş metin şablonları" olarak adlandırılır, çünkü derleme sırasında şablon çalışma zamanında yürütülen kodu oluşturur.
 
  Her şablon, oluşturulan dizede ve program kodu parçaları görünecek şekilde metnin bir karışımdır. Program parçaları, dizenin değişken bölümlerinin değerlerini sağlar ve ayrıca koşullu ve yinelenen bölümleri denetler.
 
@@ -55,7 +55,7 @@ This report is Company Confidential.
 
 1. Çözüm Gezgini, projenizin kısayol menüsünde, **Ekle**, **Yeni öğe**' yi seçin.
 
-2. **Yeni öğe Ekle** Iletişim kutusunda **çalışma zamanı metin şablonu**' nu seçin. (@No__t_0 **genel ıtem\general**altında görünür.)
+2. **Yeni öğe Ekle** Iletişim kutusunda **çalışma zamanı metin şablonu**' nu seçin. ( [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] **Yaygın ıtemk\genel**' in altına bakın.)
 
 3. Şablon dosyanız için bir ad yazın.
 
@@ -90,7 +90,7 @@ This report is Company Confidential.
 
 4. Dosya adının ana kısmından boşlukları veya noktalama işaretlerini kaldırın. Örneğin, "My Web Page.tt" yanlış olacaktır, ancak "MyWebPage.tt" doğru. Dosya adı, oluşturulan kodda bir sınıf adı olarak kullanılır.
 
-5. Dosyanın başına aşağıdaki satırı ekleyin. Bir Visual Basic projesinde çalışıyorsanız, "C#" DEĞERINI "vb" ile değiştirin.
+5. Dosyanın başına aşağıdaki satırı ekleyin. Bir Visual Basic projesinde çalışıyorsanız, "C#" yerine "VB" koyun.
 
      `<#@ template language="C#" #>`
 
@@ -115,7 +115,7 @@ This report is Company Confidential.
 ```
 
 ### <a name="embedded-program-code"></a>Gömülü program kodu
- @No__t_0 ve `#>` arasında program kodu ekleyebilirsiniz. Örneğin:
+ Ve arasında program kodu ekleyebilirsiniz `<#` `#>` . Örneğin:
 
 ```csharp
 <table>
@@ -141,14 +141,14 @@ This report is Company Confidential.
 
 ```
 
- Deyimlerin `<# ... #>` ve ifadeler arasına `<#= ... #>` arasına eklendiğine dikkat edin. Daha fazla bilgi için bkz. [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md).
+ Deyimlerinin arasına ve deyimlerini arasına eklendiğine dikkat edin `<# ... #>` `<#= ... #>` . Daha fazla bilgi için bkz. [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md).
 
 ## <a name="using-the-template"></a>Şablonu kullanma
 
 ### <a name="the-code-built-from-the-template"></a>Şablondan oluşturulan kod
  **. Tt** dosyasını her kaydedişinizde, bir yan kuruluş **. cs** veya **. vb** dosyası oluşturulur. Bu dosyayı Çözüm Gezgini görmek için **. tt** dosya düğümünü genişletin. Visual Basic bir projede, Çözüm Gezgini araç çubuğunda **tüm dosyaları göster** ' e tıkladıktan sonra düğümü genişletebilirsiniz.
 
- Bu alt dosya dosyasının `TransformText()` adlı bir yöntemi içeren kısmi bir sınıf içerdiğine dikkat edin. Bu yöntemi uygulamanızdan çağırabilirsiniz.
+ Bu yan şirket dosyasının adlı bir yöntemi içeren kısmi bir sınıf içerdiğine dikkat edin `TransformText()` . Bu yöntemi uygulamanızdan çağırabilirsiniz.
 
 ### <a name="generating-text-at-run-time"></a>Çalışma zamanında metin üretiliyor
  Uygulama kodunuzda, aşağıdaki gibi bir çağrı kullanarak şablonunuzun içeriğini oluşturabilirsiniz:
@@ -211,7 +211,7 @@ System.IO.File.WriteAllText("outputPage.html", pageContent);
 ```
 
 #### <a name="constructor-parameters-in-visual-basic"></a>Visual Basic içindeki Oluşturucu parametreleri
- @No__t_0, **MyWebPageCode. vb** dosyasını içeren ayrı dosya şunları içerir:
+ [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]' De, farklı dosya **MyWebPageCode. vb** şunu içerir:
 
 ```vb
 Namespace My.Templates
@@ -257,7 +257,7 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
 ```
 
 #### <a name="passing-data-in-template-properties"></a>Şablon özelliklerinde veri geçirme
- Verileri şablona geçirmenin alternatif bir yöntemi, genel özellikleri kısmi bir sınıf tanımındaki şablon sınıfına eklemektir. Uygulamanız `TransformText()` çağırmadan önce özellikleri ayarlayabilir.
+ Verileri şablona geçirmenin alternatif bir yöntemi, genel özellikleri kısmi bir sınıf tanımındaki şablon sınıfına eklemektir. Uygulamanız, çağırmadan önce özellikleri ayarlayabilir `TransformText()` .
 
  Ayrıca, kısmi bir tanımda şablon sınıfınıza alanlar ekleyebilirsiniz. Bu, şablonun birbirini izleyen yürütmeleri arasında veri geçirmenize olanak sağlar.
 
@@ -265,15 +265,15 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
  Birçok geliştirici, şablonlarda büyük gövdeler kodun yazılmasını önlemeye tercih eder. Bunun yerine, şablon dosyasıyla aynı ada sahip kısmi bir sınıfta yöntemleri tanımlayın. Bu yöntemleri şablondan çağırın. Bu şekilde, şablon hedef çıktı dizesinin nasıl görüneceğine daha açık bir şekilde görünür. Sonucun görünümü hakkındaki tartışmalar, görüntülediği verileri oluşturma mantığıyla ayrılabilir.
 
 ### <a name="assemblies-and-references"></a>Derlemeler ve başvurular
- Şablon kodunuzun bir .NET veya **System. xml. dll**gibi başka bir derlemeye başvurması isterseniz, bunu projenizin **başvurularına** her zamanki şekilde eklemeniz gerekir.
+ Şablon kodunuzun **System.Xml.dll**gibi bir .NET veya başka bir derlemeye başvurması istiyorsanız, bu dosyayı her zamanki şekilde projenizin **başvurularına** eklemeniz gerekir.
 
- Bir ad alanını `using` ifadesiyle aynı şekilde içeri aktarmak istiyorsanız, bunu `import` yönergesi ile yapabilirsiniz:
+ Bir ad alanını deyimle aynı şekilde içeri aktarmak istiyorsanız `using` , bunu `import` yönergeyle yapabilirsiniz:
 
 ```
 <#@ import namespace="System.Xml" #>
 ```
 
- Bu yönergelerin, `<#@template` yönergesinden hemen sonra dosyanın başına yerleştirilmesi gerekir.
+ Bu yönergeler dosyanın başında, yönergesinden hemen sonra yerleştirilmelidir `<#@template` .
 
 ### <a name="shared-content"></a>Paylaşılan içerik
  Çeşitli şablonlar arasında paylaşılan bir metniniz varsa, onu ayrı bir dosyaya yerleştirebilir ve görünmesi gereken her dosyaya dahil edebilirsiniz:
@@ -287,18 +287,18 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
  Include yönergesi, bir şablon dosyası veya dahil edilen bir dosyanın metin içinde herhangi bir yerde kullanılabilir.
 
 ### <a name="inheritance-between-run-time-text-templates"></a>Çalışma zamanı metin şablonları arasında devralma
- Özet olabilecek bir temel sınıf şablonu yazarak çalışma zamanı şablonları arasında içerik paylaşabilirsiniz. Başka bir çalışma zamanı şablon sınıfına başvurmak için `<@#template#>` yönergesinin `inherits` parametresini kullanın.
+ Özet olabilecek bir temel sınıf şablonu yazarak çalışma zamanı şablonları arasında içerik paylaşabilirsiniz. `inherits` `<@#template#>` Başka bir çalışma zamanı şablon sınıfına başvurmak için yönergesinin parametresini kullanın.
 
 #### <a name="inheritance-pattern-fragments-in-base-methods"></a>Devralma stili: taban metotlarda parçalar
  Aşağıdaki örnekte kullanılan düzende aşağıdaki noktalara dikkat edin:
 
-- Temel sınıf `SharedFragments` sınıf özelliği blokları `<#+ ... #>` içindeki yöntemleri tanımlar.
+- Temel sınıf, `SharedFragments` sınıf özellik blokları içindeki yöntemleri tanımlar `<#+ ... #>` .
 
 - Temel sınıf boş metin içermiyor. Bunun yerine, tüm metin blokları sınıf özelliği yöntemleri içinde oluşur.
 
-- Türetilmiş sınıf, `SharedFragments` tanımlanan yöntemleri çağırır.
+- Türetilmiş sınıf, içinde tanımlanan yöntemleri çağırır `SharedFragments` .
 
-- Uygulama, türetilmiş sınıfın `TextTransform()` yöntemini çağırır, ancak temel sınıf `SharedFragments` dönüştürmez.
+- Uygulama `TextTransform()` türetilmiş sınıfın yöntemini çağırır, ancak temel sınıfı dönüştürmez `SharedFragments` .
 
 - Hem temel hem de türetilmiş sınıflar çalışma zamanı metin şablonlarıdır: diğer bir deyişle, **özel araç** özelliği **Texttemplatingfileönişlemci**olarak ayarlanır.
 
@@ -423,7 +423,7 @@ End material for DerivedTemplate1.
 ## <a name="related-topics"></a>İlgili Konular
  Tasarım zamanı şablonları: uygulamanızın bir parçası haline gelen kodu oluşturmak için bir şablon kullanmak istiyorsanız, bkz. [T4 Metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
 
- Çalışma zamanı şablonları, şablonların ve içeriklerinin derleme zamanında belirlendiği herhangi bir uygulamada kullanılabilir. Ancak çalışma zamanında değişen şablonlardan metin üreten bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantısı yazmak isterseniz, bkz. [BIR vs uzantısında metin dönüştürmeyi çağırma](../modeling/invoking-text-transformation-in-a-vs-extension.md).
+ Çalışma zamanı şablonları, şablonların ve içeriklerinin derleme zamanında belirlendiği herhangi bir uygulamada kullanılabilir. Ancak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çalışma zamanında değişen şablonlardan metin üreten bir uzantı yazmak isterseniz, bkz. [bir vs uzantısında metin dönüştürmeyi çağırma](../modeling/invoking-text-transformation-in-a-vs-extension.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  T4 [metin şablonu yazan](../modeling/writing-a-t4-text-template.md) [kod oluşturma ve T4 Metin şablonları](../modeling/code-generation-and-t4-text-templates.md) [T4: Oleg Sych tarafından önceden işlenmiş metin şablonlarını anlama](https://github.com/olegsych/T4Toolbox)

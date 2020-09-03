@@ -1,5 +1,5 @@
 ---
-title: '3\. Adım: geri sayım Zamanlayıcısı ekleme | Microsoft Docs'
+title: '3. Adım: geri sayım Zamanlayıcısı ekleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bae5b4a81864cc591491c21218a5d8253dfc61bb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671841"
 ---
-# <a name="step-3-add-a-countdown-timer"></a>3\. Adım: Geri Sayım Zamanlayıcısı Ekleme
+# <a name="step-3-add-a-countdown-timer"></a>3. Adım: Geri Sayım Zamanlayıcısı Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu öğreticinin üçüncü bölümünde, bir geri sayım süreölçeri ekleyerek, test takici 'in tamamlaması için kalan saniye sayısını izleyebilirsiniz.
@@ -33,7 +33,7 @@ Bu öğreticinin üçüncü bölümünde, bir geri sayım süreölçeri ekleyere
 
      Artık, belirttiğiniz süre sonunda bir olay harekete geçiren bir zamanlayıcı gibi saniye sayısını sayan bir yönteme ihtiyacınız vardır.
 
-2. Tasarım penceresinde, araç kutusu **bileşen** kategorisinden bir `Timer` denetimini formunuza taşıyın.
+2. Tasarım penceresinde `Timer` araç kutusu **bileşen** kategorisinden bir denetimi formunuza taşıyın.
 
      Denetim, tasarım penceresinin altındaki gri alanda görüntülenir.
 
@@ -50,11 +50,11 @@ Bu öğreticinin üçüncü bölümünde, bir geri sayım süreölçeri ekleyere
      [!code-csharp[VbExpressTutorial3Step3#6](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step3/cs/form1.cs#6)]
      [!code-vb[VbExpressTutorial3Step3#6](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step3/vb/form1.vb#6)]
 
-     Ne eklediklerinize bağlı olarak Zamanlayıcı, **timeleft** tamsayı değişkeninin 0 ' dan büyük olup olmadığını belirleyerek, zaman aşımına uğrar ve sürenin bitmediğini denetler. Varsa, zaman hala kalır. Zamanlayıcı ilk olarak 1 ' den zaman kaldı ve sonra da `timeLabel` denetiminin **Text** özelliğini güncelleştirir ve bu da testi, kaç saniyelik kaldığını gösterir.
+     Ne eklediklerinize bağlı olarak Zamanlayıcı, **timeleft** tamsayı değişkeninin 0 ' dan büyük olup olmadığını belirleyerek, zaman aşımına uğrar ve sürenin bitmediğini denetler. Varsa, zaman hala kalır. Süreölçer ilk olarak 1 ' den zaman kaldı ve sonra denetimin **Text** özelliğini, bu da `timeLabel` kaç saniye kaldığını test eden bir şekilde gösterecek şekilde güncelleştirir.
 
-     Zaman yoksa, süreölçer yanıt vermez ve `timeLabel` denetimi metnini, **zaman yukarı** gelecek şekilde gösterir. Bir ileti kutusu, sınavın daha fazla olduğunu ve yanıtın ortaya çıkarduğunu duyurduğunu ve bu durumda addend1 ve addend2 ekleyerek ortaya çıkarduğunu duyurur. @No__t_1 denetiminin **Enabled** özelliği, `true` olarak ayarlanır, böylece test takici başka bir test başlatabilir.
+     Zaman yoksa, süreölçer yanıt vermez ve `timeLabel` denetimin metnini **zaman yukarı** görüntüleyecek şekilde değiştirir! Bir ileti kutusu, sınavın daha fazla olduğunu ve yanıtın ortaya çıkarduğunu duyurduğunu ve bu durumda addend1 ve addend2 ekleyerek ortaya çıkarduğunu duyurur. Denetimin **Enabled** özelliği, `startButton` `true` Test takici başka bir test başlatabilmesi için olarak ayarlanır.
 
-     Yalnızca bir `if else` ifadesini eklemiş olursunuz, bu, programları kararlar almak için nasıl söylersiniz. @No__t_0 bir ifade aşağıdaki gibi görünür.
+     Yeni bir ifade eklediniz `if else` , bu, programları kararlar almak için nasıl söylersiniz. Bir `if else` ifade aşağıdaki gibi görünür.
 
     > [!NOTE]
     > Aşağıdaki örnek yalnızca gösterim amaçlıdır; projenize eklemeyin.
@@ -82,21 +82,21 @@ Bu öğreticinin üçüncü bölümünde, bir geri sayım süreölçeri ekleyere
     }
     ```
 
-     Ek probleme yanıtını göstermek için `else` bloğuna eklediğiniz ifadeye yakından bakın.
+     `else`Ek probleme yanıtını göstermek için bloğa eklediğiniz ifadeye yakından bakın.
 
      [!code-csharp[VbExpressTutorial3Step3#24](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step3/cs/form1.cs#24)]
      [!code-vb[VbExpressTutorial3Step3#24](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step3/vb/form1.vb#24)]
 
-     İfade `addend1 + addend2` iki değişkendeki değerleri birlikte ekler. İlk parça (`sum.Value`) doğru yanıtı göstermek için Sum `NumericUpDown` denetiminin **Value** özelliğini kullanır. Daha sonra test yanıtlarını denetlemek için aynı özelliği kullanırsınız.
+     İfade, `addend1 + addend2` değerleri iki değişkene birlikte ekler. İlk kısım ( `sum.Value` ), **Value** `NumericUpDown` doğru yanıtı göstermek için Sum denetiminin Value özelliğini kullanır. Daha sonra test yanıtlarını denetlemek için aynı özelliği kullanırsınız.
 
-     Test sahipleri `NumericUpDown` bir denetim kullanarak daha kolay sayı girebilir, bu da matematik sorunlarına yönelik yanıtlar için bir tane kullanmanızı sağlar. Tüm olası yanıtlar 0 ile 100 arasında tüm sayılardır. **Minimum**, **Maksimum**ve **DecimalPlaces** özelliklerinin varsayılan değerlerini bırakarak, test takipçilerin ondalık sayı, negatif sayı veya çok yüksek sayı girememesini sağlayabilirsiniz. (Test takipçilerin 3,141 girmelerini, ancak 3,1415 değil, izin vermek istiyorsanız, **DecimalPlaces** özelliğini 3 olarak ayarlayabilirsiniz.)
+     Test sahipleri, bir denetimi kullanarak daha kolay sayı girebilir `NumericUpDown` , bu da matematik sorunlarına yanıtlar için bir tane kullanmanızı sağlar. Tüm olası yanıtlar 0 ile 100 arasında tüm sayılardır. **Minimum**, **Maksimum**ve **DecimalPlaces** özelliklerinin varsayılan değerlerini bırakarak, test takipçilerin ondalık sayı, negatif sayı veya çok yüksek sayı girememesini sağlayabilirsiniz. (Test takipçilerin 3,141 girmelerini, ancak 3,1415 değil, izin vermek istiyorsanız, **DecimalPlaces** özelliğini 3 olarak ayarlayabilirsiniz.)
 
-6. @No__t_0 yönteminin sonuna üç satır ekleyin, bu nedenle kod aşağıdaki gibi görünür.
+6. Yöntemin sonuna üç satır ekleyin `StartTheQuiz()` , bu nedenle kod aşağıdaki gibi görünür.
 
      [!code-csharp[VbExpressTutorial3Step3#7](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step3/cs/form1.cs#7)]
      [!code-vb[VbExpressTutorial3Step3#7](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step3/vb/form1.vb#7)]
 
-     Artık, test başladıktan sonra **timeleft** değişkeni 30 olarak ayarlanır ve `timeLabel` denetiminin **Text** özelliği 30 saniyeye ayarlanır. Sonra `Timer` denetiminin `Start()` yöntemi geri sayıma başlar. (Test yanıtı henüz denetlemez.)
+     Artık, test başladıktan sonra **timeleft** değişkeni 30 olarak ayarlanır ve denetimin **Text** özelliği `timeLabel` 30 saniyeye ayarlanır. Sonra `Start()` `Timer` denetim yöntemi geri sayıma başlar. (Test yanıtı henüz denetlemez.)
 
 7. Programınızı kaydedin, çalıştırın ve ardından formdaki **Başlat** düğmesini seçin.
 

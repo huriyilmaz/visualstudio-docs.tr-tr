@@ -1,5 +1,5 @@
 ---
-title: IDebugCodeContext2::GetLanguageInfo | Microsoft Dokümanlar
+title: 'IDebugCodeContext2:: GetLanguageInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 465cc07b3ca75835afe0737fb22ba403acc4098b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734236"
 ---
 # <a name="idebugcodecontext2getlanguageinfo"></a>IDebugCodeContext2::GetLanguageInfo
-Bu kod bağlamı için dil bilgilerini alır.
+Bu kod bağlamı için dil bilgisini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetLanguageInfo( 
@@ -43,13 +43,13 @@ int GetLanguageInfo( 
 
 ## <a name="parameters"></a>Parametreler
 `pbstrLanguage`\
-[içinde, dışarı] "C++" gibi dilin adını içeren bir dize döndürür.
+[in, out] "C++" gibi dilin adını içeren bir dize döndürür.
 
 `pguidLanguage`\
-[içinde, dışarı] Örneğin, kod bağlamının dili için GUID'i `guidCPPLang`döndürür.
+[in, out] Kod bağlamı dilinin GUID 'sini döndürür; Örneğin, `guidCPPLang` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
  Parametrelerden en az birinin null olmayan bir değer döndürmesi gerekir.

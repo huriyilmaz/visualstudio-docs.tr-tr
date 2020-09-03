@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b216e89e6a04fb38537f9c45336d07cf6df4abdc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671264"
 ---
 # <a name="responding-to-and-propagating-changes"></a>Değişikliklere Yanıt Verme ve Değişiklikleri Yayma
@@ -26,7 +26,7 @@ Bir öğe oluşturulduğunda, silindiğinde veya güncelleştirilirken, değişi
 ## <a name="in-this-section"></a>Bu Bölümde
  Bir kılavuz olarak aşağıdaki şekilde bu teknikleri göz önünde bulundurun:
 
-|Teknik|Senaryolar|Daha fazla bilgi için|
+|Teknik|Senaryolar|Daha fazla bilgi edinmek için|
 |---------------|---------------|--------------------------|
 |Hesaplanan bir etki alanı özelliği tanımlayın.|Değeri modeldeki diğer özelliklerden hesaplanan bir alan özelliği. Örneğin, ilgili öğelerin fiyatlarının toplamı olan bir fiyat.|[Hesaplanan ve Özel Depolama Özellikleri](../modeling/calculated-and-custom-storage-properties.md)|
 |Özel bir depolama alanı özelliği tanımlayın.|Modelin diğer bölümlerinde veya dışarıdan depolanan bir etki alanı özelliği. Örneğin, bir ifade dizesini modeldeki bir ağaca ayrıştırabilirsiniz.|[Hesaplanan ve Özel Depolama Özellikleri](../modeling/calculated-and-custom-storage-properties.md)|
@@ -47,11 +47,11 @@ Bir öğe oluşturulduğunda, silindiğinde veya güncelleştirilirken, değişi
 
 - **Özel kurallar oluşturma** Bir soyut kuraldan türetilmiş sınıf olarak özel bir kural oluşturursunuz. Ayrıca, özel kural hakkında çatıya bildirimde bulunmalıdır. Daha fazla bilgi için bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).
 
-- **Olaylara abone olma** Bir olaya abone olabilmek için önce bir olay işleyicisi ve temsilci oluşturun. Sonra olaya abone olmak için <xref:Microsoft.VisualStudio.Modeling.Store.EventManagerDirectory%2A>property kullanın. Daha fazla bilgi için bkz. [olay Işleyicileri değişiklikleri model dışında yayma](../modeling/event-handlers-propagate-changes-outside-the-model.md).
+- **Olaylara abone olma** Bir olaya abone olabilmek için önce bir olay işleyicisi ve temsilci oluşturun. Ardından, <xref:Microsoft.VisualStudio.Modeling.Store.EventManagerDirectory%2A> olaya abone olmak için özelliğini kullanın. Daha fazla bilgi için bkz. [olay Işleyicileri değişiklikleri model dışında yayma](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
 - **Değişiklikler geri alınıyor** Bir işlemi geri aldığınızda, olaylar tetiklenir, ancak kurallar uygulanmaz. Bir kural bir değeri değiştirirse ve bu değişikliği geri alırsanız, geri alma eylemi sırasında değer özgün değere sıfırlanır. Bir olay ortaya çıktığında, değeri el ile özgün değerine geri değiştirmeniz gerekir. Transactons ve geri alma hakkında daha fazla bilgi edinmek için bkz. [nasıl yapılır: modeli güncelleştirmek Için Işlemleri kullanma](../modeling/how-to-use-transactions-to-update-the-model.md).
 
-- **Olay bağımsız değişkenlerini kurallara ve olaylara geçirme** Her iki olay ve kurala de modelin nasıl değiştiği hakkında bilgi içeren bir `EventArgs` parametresi iletilir.
+- **Olay bağımsız değişkenlerini kurallara ve olaylara geçirme** Her iki olay ve kurala de `EventArgs` modelin nasıl değiştiği hakkında bilgi içeren bir parametre iletilir.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  Nasıl yapılır: [etki alanına özgü dili özelleştirmek için](../modeling/writing-code-to-customise-a-domain-specific-language.md) bir [şekle tıklama veya dekoratörü](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md) kodu yazma

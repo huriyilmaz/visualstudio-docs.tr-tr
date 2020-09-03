@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4d0753ea7396c9f21addcbb01ab7b90be066356a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671423"
 ---
 # <a name="properties-of-elements-on-uml-sequence-diagrams"></a>UML sıralı diyagramlarındaki öğelerin özellikleri
@@ -38,12 +38,12 @@ UML sıralı diyagramında, diyagramdaki her bir öğenin özellikleri vardır. 
 |**Tam ad**|Paket:: Name|Tümü|Öğeyi benzersiz bir şekilde tanımlar. Ön eki içeren paketin tam adı.|
 |**İş öğeleri**|0 ilişkili|Tümü|Bu öğeyle ilişkili iş öğelerinin sayısı. İş öğelerini ilişkilendirmek için bkz. [bağlantı modeli öğeleri ve iş öğeleri](../modeling/link-model-elements-and-work-items.md).|
 |**Açıklama**|adet|Tümü|Öğe hakkında genel notları buradan yapabilirsiniz.|
-|**Renk**|(öğe türü için varsayılan)|Yaşam çizgisi, Ileti|Şeklin rengi. Bu, gösterdiği öğe yerine şeklin bir özelliğidir.|
-|**Türüyle**|adet|Yaşam|Yaşam çizgisinin temsil ettiği örnek türü.<br /><br /> Yaşam çizgisinin üstbilgisinde bir başvuru sembolü varsa, bu sınıf veya arabirim UML Model Gezgini 'nde ayrı olarak bulunur ve bir sınıf diyagramında görüntülenebilir.|
-|**Aktör**|False|Yaşam|Yaşam çizgisinin, diyagramın ilgili olduğu bileşenin dışında bir Kullanıcı, cihaz veya yazılım bileşenini temsil ettiğini belirtir.|
-|**Denetlenmesi**|**Tam** -gönderici ve alıcıya sahip bir ileti.<br /><br /> **Bulundu** -belirlenemeyen bir göndereni olan ileti.<br /><br /> **Kayıp** -belirtilmeyen bir alıcıya sahip bir ileti.|İleti|Bir iletinin hangi uçlarını bir yaşam çizgisine iliştirildiğini gösterir.<br /><br /> Bu özelliği değiştiremezsiniz. İletiyi oluşturduğunuzda ayarlanır.|
-|**Düzenine**|**AsynchCall** -zaman uyumsuz bir ileti.<br /><br /> **Eşlenmiş çağrı** -zaman uyumlu bir ileti.<br /><br /> **Yanıtla** -zaman uyumlu bir iletinin dönüş bölümü.<br /><br /> **CreateMessage** -bir örnek oluşturma iletisi.|İleti|İleti türü. Bu özelliği değiştiremezsiniz. İletiyi oluşturmak için kullandığınız araç tarafından belirlenir.|
-|**Çalışmasını**|olmamalıdır|İleti|Alıcı yaşam çizgisinde ileti tarafından çağrılan bir yöntem.<br /><br /> Yalnızca alıcı yaşam çizgisi bir arabirime veya sınıfa bağlıysa görünür.|
+|**Color**|(öğe türü için varsayılan)|Yaşam çizgisi, Ileti|Şeklin rengi. Bu, gösterdiği öğe yerine şeklin bir özelliğidir.|
+|**Tür**|adet|Yaşam|Yaşam çizgisinin temsil ettiği örnek türü.<br /><br /> Yaşam çizgisinin üstbilgisinde bir başvuru sembolü varsa, bu sınıf veya arabirim UML Model Gezgini 'nde ayrı olarak bulunur ve bir sınıf diyagramında görüntülenebilir.|
+|**Actor** (Oyuncu)|Yanlış|Yaşam|Yaşam çizgisinin, diyagramın ilgili olduğu bileşenin dışında bir Kullanıcı, cihaz veya yazılım bileşenini temsil ettiğini belirtir.|
+|**Tip**|**Tam** -gönderici ve alıcıya sahip bir ileti.<br /><br /> **Bulundu** -belirlenemeyen bir göndereni olan ileti.<br /><br /> **Kayıp** -belirtilmeyen bir alıcıya sahip bir ileti.|İleti|Bir iletinin hangi uçlarını bir yaşam çizgisine iliştirildiğini gösterir.<br /><br /> Bu özelliği değiştiremezsiniz. İletiyi oluşturduğunuzda ayarlanır.|
+|**Sırala**|**AsynchCall** -zaman uyumsuz bir ileti.<br /><br /> **Eşlenmiş çağrı** -zaman uyumlu bir ileti.<br /><br /> **Yanıtla** -zaman uyumlu bir iletinin dönüş bölümü.<br /><br /> **CreateMessage** -bir örnek oluşturma iletisi.|İleti|İleti türü. Bu özelliği değiştiremezsiniz. İletiyi oluşturmak için kullandığınız araç tarafından belirlenir.|
+|**İşlem**|olmamalıdır|İleti|Alıcı yaşam çizgisinde ileti tarafından çağrılan bir yöntem.<br /><br /> Yalnızca alıcı yaşam çizgisi bir arabirime veya sınıfa bağlıysa görünür.|
 |**Başvurduğu yer**|Sıralı diyagram|Etkileşim kullanımı|Bu etkileşim kullanımı tarafından çağrılan sıralı diyagram.|
 |**Etkileşim operatörü**|Komutu **Ile çevrelemeyi** kullandığınızda ayarlayın|Birleşik parça|Bu parça veya parçalar koleksiyonu tarafından temsil edilen işleç.|
 |**Guard**|olmamalıdır|Birleşik bir parçadaki etkileşim Işleneni|Koruyucu true olmadığı takdirde parçadaki sıra gerçekleşmeyecektir.<br /><br /> Birleşik parçaların en üst parçasını seçmek için parça başlığının altına tıklayın.|

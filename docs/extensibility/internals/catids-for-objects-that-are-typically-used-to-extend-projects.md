@@ -1,5 +1,5 @@
 ---
-title: Genellikle Proje Genişletmek için Kullanılan Nesnelerin KAT'ları | Microsoft Dokümanlar
+title: Projeleri genişletmek için genellikle kullanılan nesneler için CATIDs | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,26 +13,26 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 5754e53f24731eb44dba128ccfcf4b474e833d16
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80709859"
 ---
-# <a name="catids-for-objects-that-are-typically-used-to-extend-projects"></a>Genellikle projeleri genişletmek için kullanılan nesnelerin CATID'leri
-Aşağıdaki tabloda, nesneleri ve projeleri genişletmek `Project` `ProjectItem` ve [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] otomasyonu [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]için kullanılan CATI'ler listelenir. Bu CATIDs *VSLangProj.olb*tanımlanır.
+# <a name="catids-for-objects-that-are-typically-used-to-extend-projects"></a>Projeleri genişletmek için genellikle kullanılan nesneler için CATIDs
+Aşağıdaki tabloda `Project` `ProjectItem` [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] , ve projeleri için nesneleri genişletmek ve otomasyon Için kullanılan catids listelenmiştir [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] . Bu CATIDs, *VSLangProj. olb*içinde tanımlanmıştır.
 
 ## <a name="listing-of-catids"></a>CATIDs listesi
 
-|Adı|GUID|
+|Name|GUID|
 |----------|----------|
 |<xref:VSLangProj.PrjCATID.prjCATIDProject>|{610D4614-D0D5-11D2-8599-006097C68E81}|
 |<xref:VSLangProj.PrjCATID.prjCATIDProjectItem>|{610D4615-D0D5-11D2-8599-006097C68E81}|
 
-## <a name="visual-basic-catids"></a>Görsel Temel KATİLER
- Aşağıdaki tabloda, nesnelere göz atma [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] süresini uzatmak için kullanılan CATI'ler listelenir. Hepsi *VSLangProj.olb*tanımlanır.
+## <a name="visual-basic-catids"></a>Visual Basic CATIDs
+ Aşağıdaki tabloda, tarama nesnelerini genişletmek için kullanılan CATIDs listelenmiştir [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] . Hepsi *VSLangProj. olb*içinde tanımlanmıştır.
 
-|Adı|GUID|
+|Name|GUID|
 |----------|----------|
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDVBProjectBrowseObject>|{E0FDC879-C32A-4751-A3D3-0B3824BD575F}|
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDVBProjectConfigBrowseObject>|{67F8DD11-14EB-489b-87F0-F01C52AF3870}|
@@ -40,10 +40,10 @@ Aşağıdaki tabloda, nesneleri ve projeleri genişletmek `Project` `ProjectItem
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDVBFolderBrowseObject>|{932DC619-2EAA-4192-B7E6-3D15AD31DF49}|
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDVBReferenceBrowseObject>|{2289B812-8191-4e81-B7B3-174045AB0CB5}|
 
-## <a name="visual-c-catids"></a>Görsel C# CATIDs
- Aşağıdaki CATID'ler göz atma [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] nesnelerini genişletmek için kullanılabilir. Hepsi *VSLangProj.olb*tanımlanır.
+## <a name="visual-c-catids"></a>Visual C# CATIDs
+ Aşağıdaki CATIDs 'Ler, gezinme nesnelerini genişletmek için kullanılabilir [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] . Hepsi *VSLangProj. olb*içinde tanımlanmıştır.
 
-|Adı|GUID|
+|Name|GUID|
 |----------|----------|
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDCSharpProjectBrowseObject>|{4EF9F003-DE95-4d60-96B0-212979F2A857}|
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDCSharpProjectConfigBrowseObject>|{A12CE10A-227F-4963-ADB6-3A43388513CA}|
@@ -51,16 +51,16 @@ Aşağıdaki tabloda, nesneleri ve projeleri genişletmek `Project` `ProjectItem
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDCSharpFolderBrowseObject>|{914FE278-054A-45DB-BF9E-5F22484CC84C}|
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDCSharpReferenceBrowseObject>|{2F0FA3B8-C855-4a4e-95A5-CB45C67D6C27}|
 
-## <a name="c-catids"></a>C++ KATIDLAR
- Aşağıdaki [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] proje sistemi CATID'leri .NET [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 2003'teki tür kitaplıklarında açıklanmaz ve bu proje nesnelerini genişletmek istediğinizde kodunuza eklenmeniz gerekir. Bu CATID'ler daha sonraki sürümlerde tür [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]kitaplıklarına dahil edilecektir.
+## <a name="c-catids"></a>C++ CATIDs
+ Aşağıdaki [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] Proje sistemi CATIDs, .net 2003 ' deki tür kitaplıklarında gösterilmez [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve bu proje nesnelerini genişletmek istediğiniz her seferinde kodunuza dahil edilmemelidir. Bu CATIDs, daha sonraki sürümlerindeki tür kitaplıklarına dahil edilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
-|Adı|GUID|
+|Name|GUID|
 |----------|----------|
 |`CVCProjectNode`|{EE8299CB-19B6-4f20-ABEA-E1FD9A33B683}|
 |`CVCFolderNode`|{EE8299CA-19B6-4f20-ABEA-E1FD9A33B683}|
 |`CVCFileNode`|{EE8299C9-19B6-4f20-ABEA-E1FD9A33B683}|
 
- Aşağıdaki kod örneği, bu CATI'lerin kodunuzda nasıl programlanır olduğunu gösterir.
+ Aşağıdaki kod örneği, kodunuzda bu CATIDs 'nin nasıl çalıştığını gösterir.
 
 ```
 const LPOLESTR CVCProjectNode::s_wszCATID = L"{EE8299CB-19B6-4f20-ABEA-E1FD9A33B683}";
@@ -68,16 +68,16 @@ const LPOLESTR CVCFolderNode::s_wszCATID = L"{EE8299CA-19B6-4f20-ABEA-E1FD9A33B6
 const LPOLESTR CVCFileNode::s_wszCATID = L"{EE8299C9-19B6-4f20-ABEA-E1FD9A33B683}";
 ```
 
- Aşağıdaki [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] proje sistemi CATID'leri de .NET [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 2003'teki tür kitaplıklarında açıklanmaz ve bu proje nesnelerini genişletmek istediğinizde kodunuza dahil edilmelidir. Bu CATID'ler yalnızca [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .NET 2003'te kullanılabilir ve daha [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]sonraki sürümlerde kullanılamaz.
+ Aşağıdaki [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] Proje sistemi kasaları ayrıca .net 2003 ' deki tür kitaplıklarında gösterilmez [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve bu proje nesnelerini genişletmek istediğiniz her seferinde kodunuza dahil edilmemelidir. Bu CATIDs yalnızca .NET 2003 ' de kullanılabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve sonraki sürümlerinde kullanılamaz [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
-|Adı|GUID|
+|Name|GUID|
 |----------|----------|
 |`CVCAssemblyReferenceNode`|{FE8299C9-19B6-4f20-ABEA-E1FD9A33B683}|
 |`CVCProjectReferenceNode`|{593DCFCE-20A7-48e4-ACA1-49ADE9049887}|
 |`CVCActiveXReferenceNode`|{9E8182D3-C60A-44f4-A74B-14C90EF9CACE}|
 |`CVCReferences`|{FE8299CA-19B6-4f20-ABEA-E1FD9A33B683}|
 
- Aşağıdaki kod örneği, bu CATI'lerin kodunuzda nasıl programlanır olduğunu gösterir:
+ Aşağıdaki kod örneği, kodunuzda bu CATIDs 'nin nasıl programlanacağını göstermektedir:
 
 ```
 const LPOLESTR CVCAssemblyReferenceNode::s_wszCATID = L"{FE8299C9-19B6-4f20-ABEA-E1FD9A33B683}";
@@ -86,7 +86,7 @@ const LPOLESTR CVCActiveXReferenceNode::s_wszCATID = L"{9E8182D3-C60A-44f4-A74B-
 const LPOLESTR CVCReferences::s_wszCATID = L"{FE8299CA-19B6-4f20-ABEA-E1FD9A33B683}";
 ```
 
- Ve [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] proje türlerine [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] ait GUID'ler aşağıdaki tabloda gösterilmiştir.
+ [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]Ve proje türleri Için GUID 'ler [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] Aşağıdaki tabloda gösterilmiştir.
 
 | Proje türü | GUID |
 | - | - |
@@ -95,4 +95,4 @@ const LPOLESTR CVCReferences::s_wszCATID = L"{FE8299CA-19B6-4f20-ABEA-E1FD9A33B6
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Proje ve proje öğesi şablonları ekleme](../../extensibility/internals/adding-project-and-project-item-templates.md)
-- [Proje ve madde şablonlarını kaydetme](../../extensibility/internals/registering-project-and-item-templates.md)
+- [Proje ve öğe şablonlarını Kaydet](../../extensibility/internals/registering-project-and-item-templates.md)

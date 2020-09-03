@@ -1,5 +1,5 @@
 ---
-title: '&lt;signature &gt; (JavaScript) | Microsoft Docs'
+title: '&lt;imza &gt; (JavaScript) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,18 +13,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b4c640c28ada16a8a03943fcd1362d4fd521772c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671125"
 ---
-# <a name="ltsignaturegt-javascript"></a>&lt;signature &gt; (JavaScript)
+# <a name="ltsignaturegt-javascript"></a>&lt;imza &gt; (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Aşırı yüklenmiş işlevlere yönelik belgeler sağlamak üzere bir işlev veya yöntem için ilgili öğelerin bir kümesini gruplandırır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 <signature externalid="id" externalFile="filename"
@@ -33,21 +33,21 @@ Aşırı yüklenmiş işlevlere yönelik belgeler sağlamak üzere bir işlev ve
 ```
 
 #### <a name="parameters"></a>Parametreler
- Isteğe bağlı `externalid`. [@No__t_2loc >](../ide/loc-javascript.md) öğesi için `format` özniteliği `vsdoc` ise, bu öznitelik IMZAYLA ilişkili XML kodunu bulmak için kullanılan üye kimliğini belirtir. @No__t_0 özniteliğinin aksine, bu öznitelik, bu KIMLIĞE sahip olan üyenin tüm öğelerinin yüklü olması gerektiğini belirtir. XML kodunda bulunan ilişkili açıklama bilgileri de İmzada belirtilen öğelerle birleştirilir. Bu, `<capability>` gibi ek öğeleri kaynak dosyasında belirtmeden, sepet dosyasında belirtmenize olanak sağlar. `externalid`, isteğe bağlı bir özniteliktir.
+ `externalid` Seçim. `format`Öğesi için özniteliği [\<loc>](../ide/loc-javascript.md) ise `vsdoc` , bu ÖZNITELIK imzayla ilişkili XML kodunu bulmak IÇIN kullanılan üye kimliğini belirtir. Özniteliğin aksine `locid` , bu öznitelik bu kimliğe sahip olan üyenin tüm öğelerinin yüklü olması gerektiğini belirtir. XML kodunda bulunan ilişkili açıklama bilgileri de İmzada belirtilen öğelerle birleştirilir. Bu, `<capability>` kaynak dosyada belirtmeden, gibi ek öğeler belirtmenize olanak sağlar. `externalid` isteğe bağlı bir özniteliktir.
 
- Isteğe bağlı `externalFile`. @No__t_0 bulunacak dosyanın adını belirtir. @No__t_0 yoksa bu öznitelik yoksayılır. Bu, isteğe bağlı bir özniteliktir. Varsayılan değer,. js yerine. xml dosya uzantısıyla geçerli dosyanın adıdır. Varsayılan olarak, yerelleştirme için yönetilen kaynak arama kuralları dosyayı bulmak için kullanılır.
+ `externalFile` Seçim. İçinde bulunacak dosyanın adını belirtir `externalid` . Bu öznitelik, yoksa yok sayılır `externalid` . Bu, isteğe bağlı bir özniteliktir. Varsayılan değer,. js yerine. xml dosya uzantısıyla geçerli dosyanın adıdır. Varsayılan olarak, yerelleştirme için yönetilen kaynak arama kuralları dosyayı bulmak için kullanılır.
 
- Isteğe bağlı `helpKeyword`. F1 Yardım anahtar sözcüğü.
+ `helpKeyword` Seçim. F1 Yardım anahtar sözcüğü.
 
- Isteğe bağlı `locid`. Alanla ilgili yerelleştirme bilgileri için tanımlayıcı. Tanımlayıcı, bir üye KIMLIĞI ya da OpenAjax meta verileri tarafından tanımlanan bir ileti grubundaki `name` öznitelik değerine karşılık gelir. Tanımlayıcı türü, [\<loc >](../ide/loc-javascript.md) etiketinde belirtilen biçime bağlıdır.
+ `locid` Seçim. Alanla ilgili yerelleştirme bilgileri için tanımlayıcı. Tanımlayıcı, bir üye KIMLIĞI ya da `name` OpenAjax meta verileri tarafından tanımlanan bir ileti grubundaki öznitelik değerine karşılık gelir. Tanımlayıcı türü, etiketinde belirtilen biçime bağlıdır [\<loc>](../ide/loc-javascript.md) .
 
 ## <a name="remarks"></a>Açıklamalar
- . Js dosyasındaki her bir aşırı yüklenmiş işlev açıklaması için bir `<signature>` öğesi kullanın veya belirtilen her dış üye KIMLIĞI için bir `<signature>` öğesi kullanın.
+ `<signature>`. Js dosyasındaki her bir aşırı yüklenmiş işlev açıklaması için bir öğe kullanın veya `<signature>` belirtilen her dış üye kimliği için bir öğe kullanın.
 
- @No__t_0 öğesi, hiçbir deyimden önce işlev gövdesine yerleştirilmelidir. @No__t_5returns öğesi ile [\<summary >](../ide/summary-javascript.md), [\<param >](../ide/param-javascript.md)veya [>](../ide/returns-javascript.md) öğelerini kullanırken, diğer öğeleri `<signature>` bloğunun içine yerleştirin.
+ `<signature>`Öğe, hiçbir deyimden önce işlev gövdesine yerleştirilmelidir. [\<summary>](../ide/summary-javascript.md) [\<param>](../ide/param-javascript.md) [\<returns>](../ide/returns-javascript.md) Öğesi ile, veya öğelerini kullanırken `<signature>` , diğer öğeleri bloğunun içine yerleştirin `<signature>` .
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, `<signature>` öğesinin nasıl kullanılacağını gösterir.
+ Aşağıdaki kod örneği, öğesinin nasıl kullanılacağını gösterir `<signature>` .
 
 ```javascript
 // Use of <signature> with externalid.
@@ -90,4 +90,4 @@ function add(a, b) {
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [XML Belge Açıklamaları](../ide/xml-documentation-comments-javascript.md)
+ [XML belge açıklamaları](../ide/xml-documentation-comments-javascript.md)
