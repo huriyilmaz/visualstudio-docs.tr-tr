@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5865059e60907397ae7d69b230676ac63a5c3386
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543123"
 ---
 # <a name="keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer"></a>Sınıf Diyagramında ve Sınıf Ayrıntıları Penceresinde Klavye ve Fare Kısayolları (Sınıf Tasarımcısı)
@@ -36,7 +36,7 @@ Sınıf Tasarımcısı ve **Sınıf Ayrıntıları** penceresinde gezinme eyleml
 
 - [Sınıf Detayları Penceresi klavyeyi kullanma](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md#KeyboardClassDetails)
 
-## <a name="using-the-mouse-in-class-designer"></a><a name="MouseClassDesigner"></a>Sınıf Tasarımcısı fare kullanma
+## <a name="using-the-mouse-in-class-designer"></a><a name="MouseClassDesigner"></a> Sınıf Tasarımcısı fare kullanma
  Aşağıdaki fare eylemleri sınıf diyagramlarında desteklenir:
 
 |Fare birleşimi|Bağlam|Description|
@@ -49,7 +49,7 @@ Sınıf Tasarımcısı ve **Sınıf Ayrıntıları** penceresinde gezinme eyleml
 |CTRL + fare tekerleği|Sınıf diyagramı|Yakınlaştırma.|
 |CTRL + SHIFT + tıklama|Sınıf diyagramı|Yakınlaştırma.|
 
-## <a name="using-the-mouse-in-the-class-details-window"></a><a name="MouseClassDetails"></a>Sınıf Detayları Penceresi fare kullanma
+## <a name="using-the-mouse-in-the-class-details-window"></a><a name="MouseClassDetails"></a> Sınıf Detayları Penceresi fare kullanma
  Bir fare kullanarak, sınıf ayrıntıları penceresinin ve görüntülediği verilerin görünümünü aşağıdaki yollarla değiştirebilirsiniz:
 
 - Herhangi bir düzenlenebilir hücreyi tıklatmak, bu hücrenin içeriğini düzenlemenizi sağlar. Değişiklikleriniz, Özellikler penceresi ve kaynak kodunda da dahil olmak üzere verilerin depolandığı veya görüntülendiği her yerde yansıtılır.
@@ -62,7 +62,7 @@ Sınıf Tasarımcısı ve **Sınıf Ayrıntıları** penceresinde gezinme eyleml
 
 - Sınıf Detayları Penceresi, geçerli sınıfta yeni üyeler oluşturmak ve Sınıf Detayları Penceresi kılavuzundaki Üyeler arasında gezinmek için çeşitli düğmeler sunmaktadır. Daha fazla bilgi için bkz. Sınıf Detayları Penceresi düğmeleri.
 
-## <a name="using-the-keyboard-in-class-designer"></a><a name="KeyboardClassDesigner"></a>Sınıf Tasarımcısı klavye kullanma
+## <a name="using-the-keyboard-in-class-designer"></a><a name="KeyboardClassDesigner"></a> Sınıf Tasarımcısı klavye kullanma
  Aşağıdaki klavye eylemleri sınıf diyagramlarında desteklenir:
 
 |Anahtar|Bağlam|Description|
@@ -89,7 +89,7 @@ Sınıf Tasarımcısı ve **Sınıf Ayrıntıları** penceresinde gezinme eyleml
 |SHIFT+TAB|Tüm bağlamlar|Aynı üst öğe içinde önceki alt öğeye gider (kaydırmayı destekler).|
 |BOŞLU|Tüm bağlamlar|Geçerli öğedeki seçime geçiş yapar.|
 
-## <a name="using-the-keyboard-in-the-class-details-window"></a><a name="KeyboardClassDetails"></a>Sınıf Detayları Penceresi klavyeyi kullanma
+## <a name="using-the-keyboard-in-the-class-details-window"></a><a name="KeyboardClassDetails"></a> Sınıf Detayları Penceresi klavyeyi kullanma
 
 > [!NOTE]
 > Kod yazma deneyimini taklit etmek için aşağıdaki anahtar bağlamaları seçildi.

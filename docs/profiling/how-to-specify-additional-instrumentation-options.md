@@ -15,10 +15,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 8390c4aab0624aa59f62397e0b41bcbcc1c80cdd
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85331985"
 ---
 # <a name="how-to-specify-additional-instrumentation-options"></a>Nasıl yapılır: Ek izleme seçeneklerini belirtme
@@ -38,7 +38,7 @@ Visual Studio IDE 'yi kullanarak veya komut satırı araçlarını kullanarak ik
 
      Örneğin, profil oluşturma düzeyini belirtmek için/CONTROL: THREAD komutunu kullanın. Seçeneklerin tamamı listesi için bkz. [vsinstr](../profiling/vsinstr.md).
 
-4. **Tamam**'a tıklayın.
+4. **Tamam**’a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

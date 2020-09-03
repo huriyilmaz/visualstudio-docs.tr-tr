@@ -13,23 +13,23 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 63d405b0e62735c0c1e3d7bb716ea2db29bc19fe
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651569"
 ---
 # <a name="in-source-suppression-overview"></a>Kaynak Bastırmaya Genel Bakış
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kaynak içi gizleme, hatalara neden olan kod segmentlerine **SuppressMessage** özniteliğini ekleyerek Yönetilen koddaki kod çözümleme ihlallerini gösterme veya yoksayma olanağıdır. **SuppressMessage** özniteliği, yönetilen kod DERLEMELERINIZIN Il meta verilerine dahil olan ve derleme zamanında CODE_ANALYSIS derleme sembolü tanımlanmışsa koşullu bir özniteliktir.
+Kaynak içi gizleme, hatalara neden olan kod segmentlerine **SuppressMessage** özniteliğini ekleyerek Yönetilen koddaki kod çözümleme ihlallerini gösterme veya yoksayma olanağıdır. **SuppressMessage** özniteliği, yönetilen kod DERLEMELERINIZIN Il meta verilerinde yer alan koşullu bir özniteliktir ve yalnızca CODE_ANALYSIS derleme simgesi derleme zamanında tanımlıysa.
 
- C++/CLI ' da özniteliği eklemek için ÜSTBILGI dosyasındaki CA_SUPPRESS_MESSAGE veya CA_GLOBAL_SUPPRESS_MESSAGE makrolarını kullanın.
+ C++/CLı ' da özniteliği eklemek için CA_SUPPRESS_MESSAGE makroları veya üstbilgi dosyasındaki CA_GLOBAL_SUPPRESS_MESSAGE kullanın.
 
  Kaynak gizleme verilerinin yanlışlıkla serbest bırakılmasını engellemek için sürüm yapılarında kaynak üzerinde gizlemeleri kullanmamalısınız. Kaynak içi göstermeme işleminin işlem maliyeti nedeniyle uygulamanızın performansı, kaynak listesi gizleme meta verileri eklenerek de azaltılabilir.
 
 > [!NOTE]
-> Bu öznitelikleri kendiniz kodlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: menü öğesini kullanarak uyarıları gösterme](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md). Menü öğesi kod için C++ kullanılamaz.
+> Bu öznitelikleri kendiniz kodlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: menü öğesini kullanarak uyarıları gösterme](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md). Menü öğesi C++ kodu için kullanılamaz.
 
 ## <a name="suppressmessage-attribute"></a>SuppressMessage özniteliği
  **Hata listesi** bir kod analizi uyarısına sağ tıklayıp iletileri göster ' e tıkladığınızda, kodunuzda veya projenin Global **gizlemeleri**dosyasına bir **SuppressMessage** özniteliği eklenir.
@@ -52,7 +52,7 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 ```
 
- Konum:
+ Burada:
 
 - **Kural kategorisi** -kuralın tanımlandığı kategori. Kod analizi kural kategorileri hakkında daha fazla bilgi için bkz. [yönetilen kod uyarıları Için kod analizi](../code-quality/code-analysis-for-managed-code-warnings.md).
 

@@ -7,10 +7,10 @@ caps.latest.revision: 15
 ms.author: crdun
 manager: crdun
 ms.openlocfilehash: 98925402b91bea62e10b47312e7834ed92a1a178
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918749"
 ---
 # <a name="verify-your-xamarin-environment"></a>Xamarin ortamınızı doğrulama
@@ -27,12 +27,12 @@ Yükleyiciler tamamlandığında (bkz. [Kurulum ve yükleme](../cross-platform/s
 ## <a name="all-platforms"></a>Tüm platformlar  
  İlk olarak **araçlar > seçenekler**' i seçin, **Xamarin > diğer**' i genişletin ve güncelleştirmeler için **Şimdi Denetle** bağlantısına tıklayın. Önceki lisanslama sorunlarından kaçınmak için Xamarin 4.0.3.214 veya üstünü kullanmanız gerekir.  
   
- Daha sonra Visual Studio 'da **Yeni proje > dosya**kullanarak yeni bir Xamarin çözümü oluşturun, ardından Iletişim kutusunda **Şablonlar > diğer diller > Visual C# > platformlar arası**' ı genişletin, **boş uygulama (yerel taşınabilir)** seçeneğini belirleyip Tamam ' a tıklayın. Bu, paylaşılan bir taşınabilir sınıf kitaplığı projesiyle ve Android, iOS ve Windows için bireysel projelerle bir çözüm oluşturur:  
+ Daha sonra Visual Studio 'da **Yeni proje > dosya**kullanarak yeni bir Xamarin çözümü oluşturun, ardından Iletişim kutusunda **Şablonlar > diğer diller > Visual C# > platformlar arası**' ı genişletin, **boş uygulama (yerel taşınabilir)** öğesini seçin ve Tamam 'a tıklayın. Bu, paylaşılan bir taşınabilir sınıf kitaplığı projesiyle ve Android, iOS ve Windows için bireysel projelerle bir çözüm oluşturur:  
   
- ![Boş uygulama &#40;yerel taşınabilir&#41; şablonundan yeni bir proje oluşturma sonuçları](../cross-platform/media/crossplat-xamarin-verify-1.png "Çapraz Splat Xamarin Verify 1")  
+ ![Yerel taşınabilir&#41; şablonu &#40;boş uygulamadan yeni bir proje oluşturma sonuçları](../cross-platform/media/crossplat-xamarin-verify-1.png "Çapraz Splat Xamarin Verify 1")  
   
 > [!NOTE]
-> Şablonlar orada yoksa, [Xamarin proje şablonları eksik mi? ](#missing)Bu sayfanın en altında bunu deneyin.  
+> Şablonlar orada yoksa, [Xamarin proje şablonları eksik mi? ](#missing) Bu sayfanın en altında bunu deneyin.  
   
 ## <a name="android"></a>Android  
   
@@ -86,11 +86,11 @@ Yükleyiciler tamamlandığında (bkz. [Kurulum ve yükleme](../cross-platform/s
   
     1. Çözüm Gezgini ' de iOS projesine sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.  
   
-    2. Aşağıda gösterildiği gibi, Visual Studio 'nun Build açılır listesinden **iPhoneSimulator** hedefini veya bir tethered cihazınız varsa **iPhone** hedefini seçin. Bir simülatörleri listelenmiyorsa, Mac 'inizde Xcode 'u başlatın, **Xcode-> tercihleri**' ni seçin ve **İndir**' e tıklayın. **Bileşenler** altında, indirileceği simülatör sürümlerini görmeniz gerekir. Hata ayıklama için ek yönergeler Xamarin 'in [hata ayıklama](https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/#Debugging_on_the_Simulator) sayfasında (Xamarin.com) bulunabilir.  
+    2. Aşağıda gösterildiği gibi, Visual Studio 'nun Build açılır listesinden **iPhoneSimulator** hedefini veya bir tethered cihazınız varsa **iPhone** hedefini seçin. Bir simülatörleri listelenmiyorsa, Mac 'inizde Xcode 'u başlatın, **Xcode->tercihleri**' ni seçin ve **İndir**' e tıklayın. **Bileşenler** altında, indirileceği simülatör sürümlerini görmeniz gerekir. Hata ayıklama için ek yönergeler Xamarin 'in [hata ayıklama](https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/#Debugging_on_the_Simulator) sayfasında (Xamarin.com) bulunabilir.  
   
          ![İPhoneSimulator Build hedefini seçme](../cross-platform/media/crossplat-xamarin-verify-5.png "Çapraz Splat Xamarin Verify 5")  
   
-    3. Aşağıda gösterildiği gibi, Visual Studio 'nun hata ayıklama açılan listesinden bir iPhone hedefi seçin ve F5 'e basarak hata ayıklayıcıyı başlatın. Bu, Visual Studio 'da hata ayıklama gerçekleştiğinde, uygulama ile etkileşim kuracak olan Mac üzerinde simülatörünü başlatır. Mac 'e bağlı bir fiziksel iPhone veya iPad varsa, burada görünür ve bunun yerine seçebilirsiniz. Listelenmiş herhangi bir cihaz veya simülatörleri görmüyorsanız, yukarıdaki 1. adımda bağlantılı konuyu inceleyerek veya **araçlar** >**IOS** >**Xamarin Mac Aracısı** ' na giderek Mac 'e bağlantıyı denetleyin  
+    3. Aşağıda gösterildiği gibi, Visual Studio 'nun hata ayıklama açılan listesinden bir iPhone hedefi seçin ve F5 'e basarak hata ayıklayıcıyı başlatın. Bu, Visual Studio 'da hata ayıklama gerçekleştiğinde, uygulama ile etkileşim kuracak olan Mac üzerinde simülatörünü başlatır. Mac 'e bağlı bir fiziksel iPhone veya iPad varsa, burada görünür ve bunun yerine seçebilirsiniz. Listelenmiş herhangi bir cihaz veya simülatörleri görmüyorsanız, yukarıdaki 1. adımda bağlı konuyu inceleyerek veya **Araçlar**  > **iOS**  > **Xamarin Mac Aracısı** ' na giderek Mac 'e bağlantıyı denetleyin.  
   
          ![İPhone hata ayıklama hedefini seçme](../cross-platform/media/crossplat-xamarin-verify-6.png "Çapraz Splat Xamarin doğrulama 6")  
   
@@ -104,7 +104,7 @@ Yükleyiciler tamamlandığında (bkz. [Kurulum ve yükleme](../cross-platform/s
   
         - İOS paket imzalama sekmesindeki iOS proje özelliklerinde, etkin hata ayıklama yapılandırması için özel yetkilendirme alanının boş olduğunu doğrulayın.  Note: Bu ayarı yalnızca yukarıdaki hata iletisiyle karşılaştıysanız kaldırmayı denemelisiniz.  
   
-## <a name="missing"></a>Xamarin proje şablonları eksik mi? Şunu deneyin  
+## <a name="are-the-xamarin-project-templates-missing-try-this"></a><a name="missing"></a> Xamarin proje şablonları eksik mi? Şunu deneyin  
  Xamarin 'i doğrudan Xamarin Web sitesinden yüklerseniz ve Visual Studio 2013 ve Visual Studio 2015 yan yana yüklüyse şablonlar eksik olabilir. Daha kolay bir çözüm vardır, ancak Xamarin Kurulum programındaki **Visual Studio Için xamarin 2015** özelliğini etkinleştirmeniz yeterlidir.  
   
 1. Denetim Masası 'nda **Programlar ve Özellikler**' i açın, **Xamarin** öğesini seçin ve **Değiştir**' e tıklayın.  
