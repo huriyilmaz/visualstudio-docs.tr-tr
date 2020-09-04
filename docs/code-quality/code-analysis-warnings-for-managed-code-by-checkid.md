@@ -172,6 +172,7 @@ f1_keywords:
 - CA1831
 - CA1832
 - CA1833
+- CA1834
 - CA1835
 - CA1836
 - CA1837
@@ -298,18 +299,18 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 05937cef7187726134a7116edae4d74ee004de1d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ad6cddfd974c1082e83ffc96609d3c3863e7a6af
+ms.sourcegitcommit: 6a43ace7b84c401ebd03f65abc17ae1d2a21a130
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89219757"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89471240"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>CheckId tarafından yönetilen kod için kod analizi uyarıları
 
 Aşağıdaki tablo uyarının CheckId tanımlayıcısı tarafından yönetilen kodu için Kod Çözümleyicisi uyarılarını listeler.
 
-| CheckId | Uyarı | Description |
+| CheckId | Uyarı | Açıklama |
 |---------| - | - |
 | CA1000 | [CA1000: Genel türlerde statik üyeler belirtme](../code-quality/ca1000.md) | Genel türün statik üyesi çağrıldığında tür bağımsız değişkeni tür için belirlenmelidir. Destek çıkarımı desteklenmeyen genel örnek üyesi çağrıldığında tür bağımsız değişkeni üye için belirlenmelidir. Bu iki durumda tür bağımsız değişkenini belirleyen sözdizimi farklıdır ve kolaylıkla karıştırılır. |
 | CA1001 | [CA1001: Atılabilen alanlara sahip türler atılabilir olmalıdır](../code-quality/ca1001.md) | Bir sınıf System.IDisposable tipi örnek alanını derler ve uygular ve sınıf IDisposable'ı uygulamaz. IDisposable alanını derleyen sınıf, yönetilmeyen kaynağı dolaylı yoldan sahiplenir ve IDisposable arayüzünü uygulamalıdır. |
@@ -385,10 +386,10 @@ Aşağıdaki tablo uyarının CheckId tanımlayıcısı tarafından yönetilen k
 | CA1304 | [CA1304: CultureInfo belirt](../code-quality/ca1304.md) | Yöntem veya Oluşturucu System.Globalization.CultureInfo parametre kabul eden aşırı yüklenmiş üye arar ve yöntem veya oluşturucu CultureInfo parametresi aşırı yükleme çağıramaz. Bir CultureInfo veya System.IFormatProvider nesnesi sağlanamadığında, aşırı yüklü üye tarafından sağlanan varsayılan değer, tüm yerel ayarlarda istediğiniz etkiyi vermeyebilir. |
 | CA1305 | [CA1305: IFormatProvider belirt](../code-quality/ca1305.md) | Yöntem veya oluşturucu System.IFormatProvider parametresini kabul eden aşırı yüklü bir veya daha fazla üye arar ve yöntem veya oluşturucu IFormatProvider parametre yüklemesini çağırmaz. Bir System.Globalization.CultureInfo veya IFormatProvider nesnesi sağlanamadığında, aşırı yüklü üye tarafından sağlanan varsayılan değer, tüm yerel ayarlarda istediğiniz etkiyi vermeyebilir. |
 | CA1306 | [CA1306: Veri türleri için yereli ayarlayın](../code-quality/ca1306.md) | Yerel ayarlar, veri için kültür-özel sunum öğelerini, örneğin para birimi sembolleri, sayısal değerler için biçimleri ve sıralama düzeni için kullanılan biçimlendirme gibi değerleri belirler. Bir DataTable veya DataSet oluşturduğunuzda, yerel ayarı açık olarak ayarlamanız gerekir. |
-| CA1307 | [CA1307: açıklık için StringComparison belirtin](../code-quality/ca1307.md) | StringComparison parametresi ayarlanmamış bir yöntemi aşırı bir dize karşılaştırma işleminde kullanır. |
+| CA1307 | [CA1307: Daha anlaşılır olması için StringComparison belirtin](../code-quality/ca1307.md) | StringComparison parametresi ayarlanmamış bir yöntemi aşırı bir dize karşılaştırma işleminde kullanır. |
 | CA1308 |[CA1308: Dizeleri büyük harfe normalleştirin](../code-quality/ca1308.md) | Dizeler büyük harfe normalleştirilmeli. Küçük bir karakter grubu küçük harfe dönüştürüldüğünde gidiş dönüş yapamaz. |
 | CA1309 | [CA1309: Sıralı StringComparison kullanın](../code-quality/ca1309.md) | StringComparison parametresini Ordinal ya da OrdinalIgnoreCase'a ayarlayamayan dilbilimsel olmayan dize karşılaştırma işlemi. Açıkça StringComparison.Ordinal veya StringComparison.OrdinalIgnoreCase için parametre ayarıyla kodunuz genellikle hızlanır, daha doğru olur ve daha güvenilir hale gelir. |
-| CA1310 | [CA1310: dize karşılaştırmayı doğruluk için belirtin](../code-quality/ca1310.md) | Dize karşılaştırma işlemi, StringComparison parametresi ayarlanmamış ve varsayılan olarak kültüre özgü dize karşılaştırmayı kullanan bir yöntem aşırı yüklemesi kullanır. |
+| CA1310 | [CA1310: Doğruluk için StringComparison belirtin](../code-quality/ca1310.md) | Dize karşılaştırma işlemi, StringComparison parametresi ayarlanmamış ve varsayılan olarak kültüre özgü dize karşılaştırmayı kullanan bir yöntem aşırı yüklemesi kullanır. |
 | CA1400 | [CA1400: P/Invoke giriş noktaları bulunmalıdır](../code-quality/ca1400.md) |Ortak veya korumalı yöntem System.Runtime.InteropServices.DllImportAttribute özniteliği kullanılarak işaretlenir. Yönetilmeyen kitaplık bulunamadı ya da yöntem için bir işlev kitaplığında eşleştirilemedi. |
 | CA1401 | [CA1401: P/Invoke görünür olmamalıdır](../code-quality/ca1401.md) | Ortak bir türdeki ortak veya korumalı yöntemin System.Runtime.InteropServices.DllImportAttribute özniteliği vardır (Ayrıca içindeki Declare anahtar sözcüğü tarafından uygulanır [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ). Bu tür yöntemler açıkta kalmamalıdır. |
 | CA1402 |[CA1402: COM görünebilir arabirimler içinde aşırı yüklemelerden kaçının](../code-quality/ca1402.md) | Aşırı yüklenmiş yöntemler COM istemcilerine maruz kaldığında, sadece ilk yöntem aşırı yüklemesi adını korur. Sonraki aşırı yüklemeler adının sonuna alt çizgi karakteri (_) eklenerek ve aşırı yüklemenin tanımını karşılayacak şekilde bir tam sayı eklenerek benzersiz olarak yeniden adlandırılır. |
@@ -469,6 +470,7 @@ Aşağıdaki tablo uyarının CheckId tanımlayıcısı tarafından yönetilen k
 | CA1831 |[CA1831: Uygun olduğunda dize için Aralık tabanlı dizin oluşturucular yerine AsSpan kullanın](../code-quality/ca1831.md) | Bir dizede Aralık Dizin Oluşturucu kullanırken ve değeri örtük olarak ReadOnlySpan &lt; char türüne atamak için &gt; , yöntemi <xref:System.String.Substring%2A?#System_String_Substring_System_Int32_System_Int32_> <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> , dizenin istenen bölümünün bir kopyasını üreten yerine kullanılır. |
 | CA1832 |[CA1832: Bir dizinin ReadOnlySpan veya ReadOnlyMemory kısmını almak için Aralık tabanlı dizin oluşturucular yerine AsSpan ya da AsMemory kullanın](../code-quality/ca1832.md) | Bir dizide Aralık Dizin Oluşturucu kullanırken ve değeri örtük olarak bir <xref:System.ReadOnlySpan%601> veya <xref:System.ReadOnlyMemory%601> türüne atandığında, yöntemi <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> , dizinin istenen bölümünün bir kopyasını üreten yerine kullanılır. |
 | CA1833 |[CA1833: Bir dizinin Span veya Memory kısmını almak için Aralık tabanlı dizin oluşturucular yerine AsSpan ya da AsMemory kullanın](../code-quality/ca1833.md) | Bir dizide Aralık Dizin Oluşturucu kullanırken ve değeri örtük olarak bir <xref:System.Span%601> veya <xref:System.Memory%601> türüne atandığında, yöntemi <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> , dizinin istenen bölümünün bir kopyasını üreten yerine kullanılır. |
+| CA1834 |[CA1834: tek karakter dizeleri için StringBuilder. Append (Char) kullanın](../code-quality/ca1834.md) | <xref:System.Text.StringBuilder> , `Append` bağımsız değişkeni olarak bir olan aşırı yüküne sahiptir `char` . `char`Performans nedenleriyle aşırı yüklemeyi çağırmayı tercih edin. |
 | CA1835 |[CA1835: ' ReadAsync ' ve ' WriteAsync ' için ' Memory' tabanlı aşırı yüklemeleri tercih et](../code-quality/ca1835.md) | ' Stream ', &lt; &gt; ilk bağımsız değişken olarak ' bellek baytı ' ve &lt; &gt; ilk bağımsız değişken olarak ' readonlymemory byte ' olan bir ' WriteAsync ' aşırı yüklemesi olan ' ReadAsync ' aşırı yüklemesine sahip. Daha verimli olan bellek tabanlı aşırı yüklemeleri çağırmayı tercih edin. |
 | CA1836 |[CA1836: `IsEmpty` `Count` kullanılabilir olduğunda tercih et](../code-quality/ca1836.md) | `IsEmpty` `Count` `Length` <xref:System.Linq.Enumerable.Count%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> <xref:System.Linq.Enumerable.LongCount%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> Nesnenin bir öğe içerip içermediğini ya da olmadığını anlamak için, veya ' den daha verimli bir özellik tercih edin. |
 | CA1837 | [CA1837: `Environment.ProcessId` yerine kullanın `Process.GetCurrentProcess().Id`](../code-quality/ca1837.md) | `Environment.ProcessId` daha basit ve daha hızlıdır `Process.GetCurrentProcess().Id` . |
