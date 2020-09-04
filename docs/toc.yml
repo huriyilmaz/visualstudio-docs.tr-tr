@@ -1411,6 +1411,8 @@
       href: ide/whats-new-visual-studio-2019.md
     - name: Visual Studio belgelerindeki yenilikler
       href: ide/whats-new-visual-studio-docs.md
+    - name: Visual Studio belgelerindeki yeniliklerin geçmişi
+      href: ide/whats-new-visual-studio-docs-history.md
     - name: Sürüm notları ve sistem gereksinimleri
       items:
         - name: Yayınlama sıklığı
