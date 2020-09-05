@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: b8470c8d7708bc51916a6f57f5aa135c3267e355
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fb92f5aae84a7c164f04145abe24eb32d7792056
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89178433"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89485447"
 ---
 # <a name="build-and-run-the-todo-sample-app"></a>Todo örnek uygulamasını derleyin ve çalıştırın
 
@@ -55,6 +55,8 @@ Uygulamayı derlemek için, kullanmanız gerekir `Dockerfile` . Dockerfile, yaln
     ```bash
     docker build -t getting-started .
     ```
+
+    Alternatif olarak, Dockerfile dosyasına sağ tıklayıp **resim oluştur...** öğesini seçip, ardından istemde etiketi belirtebilirsiniz.
 
     Bu komut, yeni bir kapsayıcı görüntüsü oluşturmak için Dockerfile 'ı kullandı. Çok sayıda "katman" indirdiğini fark etmiş olabilirsiniz. Bunun nedeni, görüntüden başlamasını istediğiniz oluşturucuyu istedik `node:12-alpine` . Ancak makinenizde bu olduğundan, bu görüntünün indirilmesi gerekir.
 

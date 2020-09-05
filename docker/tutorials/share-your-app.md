@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: d5bd7a2d79bf6da710fd0f5803c2415781160143
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 46f91b3bf163f3847492a7727fa72a39908d441c
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89178437"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89485543"
 ---
 # <a name="share-your-app"></a>Uygulamanızı paylaşma
 
@@ -63,6 +63,8 @@ Sayfanın sağ tarafına bakarsanız **Docker komutları**adlı bir bölüm gör
     ```bash
     docker push <username>/getting-started
     ```
+
+    Komut satırı yerine, Docker görünümündeki **görüntüler** bölümünde görüntü etiketine sağ tıklayıp **Push..**. ' ı ve sonra da **Docker Hub**' **ı seçin.**
 
 ## <a name="run-the-image-on-a-new-instance"></a>Görüntüyü yeni bir örnekte Çalıştır
 

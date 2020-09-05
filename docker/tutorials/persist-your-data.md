@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 34b3cb9465c1efb946260917d755729e25c4e259
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a4eb5062f8f1b01e8ad5e5165d7ec9ede636124
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89178414"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89485592"
 ---
 # <a name="persist-your-data"></a>Verilerinizi kalıcı hale getirme
 
@@ -86,7 +86,7 @@ Belirtildiği gibi, **adlandırılmış bir birim**kullanacaksınız. Adlandır�
     docker volume create todo-db
     ```
 
-1. Kalıcı Birim kullanılmadan çalışmaya devam ettiği için, panoda (veya ile) Todo uygulama kapsayıcısını bir kez daha durdurun `docker rm -f <id>` .
+1. Kalıcı Birim kullanılmadan çalışmaya devam ettiği için, Docker görünümünde (veya ile) Todo uygulama kapsayıcısını bir kez daha durdurun `docker rm -f <id>` .
 
 1. Todo uygulama kapsayıcısını başlatın, ancak `-v` bir birim bağlama belirtmek için bayrağı ekleyin. adlandırılmış birimi kullanacaksınız ve ' a bağlayacaksınız. Bu, `/etc/todos` yolda oluşturulan tüm dosyaları yakalar.
 
@@ -98,7 +98,7 @@ Belirtildiği gibi, **adlandırılmış bir birim**kullanacaksınız. Adlandır�
 
     ![Yapılacaklar listesine eklenen öğeler](media/items-added.png)
 
-1. ToDo uygulaması için kapsayıcıyı kaldırın. Panoyu veya `docker ps` kimliği almak Için panoyu kullanın ve ardından `docker rm -f <id>` kaldırın.
+1. ToDo uygulaması için kapsayıcıyı kaldırın. `docker ps`Kodu almak ve kaldırmak Için Docker görünümünü kullanın `docker rm -f <id>` .
 
 1. Yukarıdaki komutu kullanarak yeni bir kapsayıcı başlatın.
 

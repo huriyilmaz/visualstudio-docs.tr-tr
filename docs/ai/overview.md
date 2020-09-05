@@ -8,12 +8,12 @@ ms.date: 11/13/2017
 ms.topic: overview
 ms.workload:
 - multiple
-ms.openlocfilehash: c138d09ec229343e38edc8bbba50a5cac73e000a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f4d04e64589ca8db9c53d5c4128391974b297d0
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85371514"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89485391"
 ---
 # <a name="overview-of-visual-studio-tools-for-ai"></a>Visual Studio Tools for AI genel bakış
 
@@ -40,4 +40,4 @@ Bulut öğreticisindeki [bir TensorFlow modelini eğitme](tensorflow-vm.md) konu
 Visual Studio Tools for AI hakkında daha fazla bilgi edinmek için sistem gereksinimleri ve destek seçenekleri dahil olmak üzere, [hakkında Visual Studio Tools for AI](about-ai-tools.md) sayfasına bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-[Visual Studio genişletilebilirliği](/visualstudio/extensibility/?view=vs-2017)
+[Visual Studio genişletilebilirliği](../extensibility/index.yml?view=vs-2017)

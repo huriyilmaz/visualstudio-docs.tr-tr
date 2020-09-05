@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.date: 07/23/2019
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: cd17726d5ba09dcb901fd529e6bdfd97dee52f31
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2a6db2771525010d73fdeeea12ff4aebd99a1bd2
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88168666"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89485144"
 ---
 # <a name="deploy-to-docker-hub"></a>Docker Hub’a dağıtma
 
@@ -57,4 +57,4 @@ Docker Hub deponuz yoksa, [Docker Hub](https://hub.docker.com/)'da bir tane olu�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [Azure App Service dağıtma](deploy-app-service.md) 
- [Visual Studio kapsayıcı araçları](/visualstudio/containers/).
+ [Visual Studio kapsayıcı araçları](./index.yml).

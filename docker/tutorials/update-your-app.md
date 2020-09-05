@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 4a1cba71481608803522336ad5c0f6b6354bca32
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e8f17047902ccf6c7fad164e788e64fe0b17cf14
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89178441"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89485434"
 ---
 # <a name="update-the-app"></a>Uygulamayı güncelleştirme
 
@@ -82,7 +82,7 @@ Bir kapsayıcıyı kaldırmak için öncelikle durdurulması gerekir. Durduktan 
 > [!TIP]
 > Komutuna "zorla" bayrağını ekleyerek tek bir komutta kapsayıcıyı durdurabilir ve kaldırabilirsiniz `docker rm` . Örnek: `docker rm -f <the-container-id>`
 
-### <a name="remove-a-container-using-the-docker-dashboard"></a>Docker panosunu kullanarak kapsayıcıyı kaldırma
+### <a name="remove-a-container-using-the-docker-view"></a>Docker görünümünü kullanarak kapsayıcıyı kaldırma
 
 VS Code uzantısını açarsanız, iki tıklamayla bir kapsayıcıyı kaldırabilirsiniz! Kapsayıcı KIMLIĞINI aramak ve kaldırmak zorunda kalmadan kesinlikle çok daha kolay.
 
@@ -92,7 +92,7 @@ VS Code uzantısını açarsanız, iki tıklamayla bir kapsayıcıyı kaldırabi
 
 1. Kaldırmayı onaylayın ve işiniz bitti!
 
-![Docker panosu-kapsayıcıyı kaldırma](media/vs-removing-container.png)
+![Docker görünümü-kapsayıcıyı kaldırma](media/vs-removing-container.png)
 
 ### <a name="start-the-updated-app-container"></a>Güncelleştirilmiş uygulama kapsayıcısını Başlat
 
