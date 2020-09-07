@@ -567,6 +567,8 @@
                   href: ca1832.md
                 - name: 'CA1833: Bir dizinin Span veya Memory kısmını almak için Aralık tabanlı dizin oluşturucular yerine AsSpan ya da AsMemory kullanın'
                   href: ca1833.md
+                - name: 'CA1834: Tek karakterli dizeler için StringBuilder.Append(char) kullanın'
+                  href: ca1834.md
                 - name: 'CA1835: Akış ReadAsync/WriteAsync metotlarının bellek aşırı yüklemelerini tercih edin'
                   href: ca1835.md
                 - name: 'CA1836: Kullanılabilir olduğunda Count yerine IsEmpty tercih edin'

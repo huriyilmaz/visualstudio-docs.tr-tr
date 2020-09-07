@@ -248,7 +248,7 @@
           items:
             - name: Visual Studio'da veritabanları ve veri katmanı uygulamaları oluşturma ve yönetme
               href: creating-and-managing-databases-and-data-tier-applications-in-visual-studio.md
-            - name: N Katmanı Veri Uygulaması Oluşturma
+            - name: N katmanlı Veri Uygulaması oluşturma
               href: walkthrough-creating-an-n-tier-data-application.md
             - name: N Katmanlı Veri Uygulamalarına Genel Bakış
               href: n-tier-data-applications-overview.md
