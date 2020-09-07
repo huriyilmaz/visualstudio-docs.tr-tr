@@ -8,18 +8,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 49fe666884c3a96a5c8eb632308e7f732150805e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c7ce330a8a2994f827234aae8b8db416da016b29
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75929218"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509880"
 ---
 # <a name="security-rules-rule-set-for-managed-code"></a>Yönetilen kod için Güvenlik Kuralları kural kümesi
 
 Bildirilen olası güvenlik sorunlarının sayısını en üst düzeye çıkarmak için eski kod analizi için Microsoft güvenlik kuralları kural kümesini kullanın.
 
-|Kural|Description|
+|Kural|Açıklama|
 |----------|-----------------|
 |[CA2100](../code-quality/ca2100.md)|SQL sorgularını güvenlik açıkları için inceleyin|
 |[CA2102](../code-quality/ca2102.md)|CLSCompliant olmayan özel durumları genel işleyiciler içinde yakalayın|

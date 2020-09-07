@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7c7aa1544f998a88424c0087fadceab63757d23b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 36fc3d3fd0b002c110e9184a6d7b15c9fa367c48
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77272082"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509841"
 ---
 # <a name="work-with-data-in-visual-studio"></a>Visual Studio’da verilerle çalışma
 
@@ -89,7 +89,7 @@ Birçok veritabanı satıcısı ve üçüncü taraf, NuGet paketleri tarafından
 
 ASP.NET ile ilgili veri erişimi belgeleri için bkz. ASP.NET sitesindeki [verilerle çalışma](https://www.asp.net/web-forms/overview/presenting-and-managing-data) . ASP.NET MVC ile Entity Framework kullanmaya yönelik bir öğretici için bkz. [MVC 5 kullanarak Entity Framework 6 Code First](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)kullanmaya başlama.
 
-C# veya Visual Basic Evrensel Windows Platformu (UWP) uygulamaları, Azure depolama ve diğer Azure hizmetlerine erişmek için .NET için Microsoft Azure SDK kullanabilir. Windows. Web. HttpClient sınıfı, herhangi bir yeniden iletişim hizmeti ile iletişime izin verebilir. Daha fazla bilgi için bkz. [Windows. Web. http kullanarak http sunucusuna bağlanma](https://msdn.microsoft.com/library/windows/apps/dn469430.aspx).
+C# veya Visual Basic Evrensel Windows Platformu (UWP) uygulamaları, Azure depolama ve diğer Azure hizmetlerine erişmek için .NET için Microsoft Azure SDK kullanabilir. Windows. Web. HttpClient sınıfı, herhangi bir yeniden iletişim hizmeti ile iletişime izin verebilir. Daha fazla bilgi için bkz. [Windows. Web. http kullanarak http sunucusuna bağlanma](/previous-versions/windows/apps/dn469430(v=win.10)).
 
 Yerel makinedeki veri depolama için önerilen yaklaşım, uygulamayla aynı işlemde çalışan SQLite ' ı kullanmaktır. Nesne ilişkisel eşleme (ORM) katmanı gerekliyse Entity Framework kullanabilirsiniz. Daha fazla bilgi için bkz. Windows Geliştirici Merkezi 'nde [veri erişimi](/windows/uwp/data-access/index) .
 

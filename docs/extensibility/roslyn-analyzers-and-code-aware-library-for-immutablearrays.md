@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2076bc9fe3cabbfef8d3f3fb0248724835fa83f5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d66ed0ab2d93bb46983becd191b1dcc2de648659
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81444576"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509412"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Immutablearışın için Roslyn Çözümleyicileri ve kod duyarlı kitaplık
 
@@ -25,7 +25,7 @@ Bu örneği derlemek için aşağıdakilere ihtiyacınız vardır:
 
 * Visual Studio 2015 (Express Edition değil) veya sonraki bir sürüm. Ücretsiz [Visual Studio Community Edition](https://visualstudio.microsoft.com/vs/community/) 'ı kullanabilirsiniz
 * [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md). Ayrıca, Visual Studio 'Yu yüklerken SDK 'yı aynı anda yüklemek için **ortak araçların** altındaki **Visual Studio genişletilebilirlik Araçları** kontrol edebilirsiniz. Visual Studio 'yu zaten yüklediyseniz, ana menü **dosyasına**  >  **Yeni**  >  **Proje**' yi, sol gezinti bölmesinde **C#** ' ı ve sonra da **genişletilebilirlik**' i seçerek de bu SDK 'yı yükleyebilirsiniz. "**Visual Studio genişletilebilirlik Araçları**" içerik haritası proje şablonu ' nu seçtiğinizde, SDK 'yı indirip yüklemenizi ister.
-* [.Net Compiler platform ("Roslyn") SDK](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.NETCompilerPlatformSDK). Bu SDK 'yı Ayrıca ana menü **dosyasına**  >  **Yeni**  >  **Proje**' yi, sol gezinti bölmesinde **C#** ' ı seçip **genişletilebilirlik**' i seçerek de yükleyebilirsiniz. "**.Net COMPILER Platform SDK 'Yı indir**" içerik haritası proje şablonu ' nu seçtiğinizde, SDK 'yı indirip yüklemenizi ister. Bu SDK, [Roslyn Syntax Visualizer](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer)içerir. Bu faydalı araç, çözümleyicinizdeki için aramanız gereken kod modeli türlerini bulmanıza yardımcı olur. Çözümleyici altyapısı, belirli kod modeli türleri için kodunuzu çağırır, bu nedenle kodunuz yalnızca gerektiğinde yürütülür ve yalnızca ilgili kodu analiz etmeye odaklanabilir.
+* [.Net Compiler platform ("Roslyn") SDK](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.NETCompilerPlatformSDK). Bu SDK 'yı Ayrıca ana menü **dosyasına**  >  **Yeni**  >  **Proje**' yi, sol gezinti bölmesinde **C#** ' ı seçip **genişletilebilirlik**' i seçerek de yükleyebilirsiniz. "**.Net COMPILER Platform SDK 'Yı indir**" içerik haritası proje şablonu ' nu seçtiğinizde, SDK 'yı indirip yüklemenizi ister. Bu SDK, [Roslyn Syntax Visualizer](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Syntax-Visualizer.md)içerir. Bu faydalı araç, çözümleyicinizdeki için aramanız gereken kod modeli türlerini bulmanıza yardımcı olur. Çözümleyici altyapısı, belirli kod modeli türleri için kodunuzu çağırır, bu nedenle kodunuz yalnızca gerektiğinde yürütülür ve yalnızca ilgili kodu analiz etmeye odaklanabilir.
 
 ## <a name="whats-the-problem"></a>Sorun nedir?
 

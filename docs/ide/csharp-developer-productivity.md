@@ -10,12 +10,12 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0aa8e19f2be78671587dd1d9bc6254306c82a78c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f6cf9e1c3f0011a282048939a994e47b897a314b
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75567508"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509945"
 ---
 # <a name="visual-studio-productivity-guide-for-c-developers"></a>C# geliştiricileri için Visual Studio üretkenlik Kılavuzu
 
@@ -52,7 +52,7 @@ Popüler Visual Studio kısayollarından bazıları aşağıda verilmiştir:
 | **CTRL** + **D** | Yinelenen satır | İmlecin bulunduğu kod satırını çoğaltır ( **Visual Studio 2017 sürüm 15,6** ve üzeri sürümlerde kullanılabilir) |
 | **SHIFT** + **Alt**+**+**/**-** | Genişlet/sözleşme seçimi | Düzenleyicideki geçerli seçimi genişletir veya sözleşmelerini ( **Visual Studio 2017 sürüm 15,5** ve üzeri sürümlerde bulunur) |
 | **SHIFT**  +  **Alt**  +  **.** | Sonraki eşleşen giriş Işaretini Ekle | Geçerli seçimle eşleşen bir sonraki konuma bir seçim ve giriş işareti ekler ( **Visual Studio 2017 sürüm 15,8** ve üzeri sürümlerde kullanılabilir) |
-| **CTRL** + **Soru-cevap** | Arayın | Tüm Visual Studio ayarlarında ara |
+| **CTRL** + **Soru-cevap** | Ara | Tüm Visual Studio ayarlarında ara |
 | **F5** | Hata ayıklamayı Başlat | Uygulamanızda hata ayıklamayı başlatma |
 | **CTRL** + **F5** | Hata ayıklama olmadan Çalıştır | Uygulamanızı hata ayıklama olmadan yerel olarak çalıştırma |
 | **CTRL** + **K**,**d** (varsayılan profil) veya **CTRL** + **E**,**D** (C# profili) | Belgeyi Biçimlendir | Yeni satır, Aralık ve girintileme ayarlarınıza göre dosyanızdaki biçimlendirme ihlallerini temizler |
@@ -139,7 +139,7 @@ Popüler hızlı düzeltmeler ve yeniden düzenlemeler şunları içerir:
 
 Daha fazla bilgi için bkz. [kod oluşturma özellikleri](code-generation-in-visual-studio.md).
 
-Kod sorunlarını işaretlemek için [FxCop çözümleyicileri yükleyebilirsiniz](../code-quality/install-fxcop-analyzers.md) . Ya da [Roslyn çözümleyicilerine](https://github.com/dotnet/roslyn/wiki/Getting-Started-Writing-a-Custom-Analyzer-&-Code-Fix)sahip kendi yeniden düzenleme veya kod düzeltmesini yazın.
+Kod sorunlarını işaretlemek için [FxCop çözümleyicileri yükleyebilirsiniz](../code-quality/install-fxcop-analyzers.md) . Ya da [Roslyn çözümleyicilerine](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Getting-Started-Writing-a-Custom-Analyzer-&-Code-Fix.md)sahip kendi yeniden düzenleme veya kod düzeltmesini yazın.
 
 Birçok topluluk üyesi, ek kod İncelemeleri ekleyen ücretsiz uzantılar yazdı:
 
@@ -154,7 +154,7 @@ Birçok topluluk üyesi, ek kod İncelemeleri ekleyen ücretsiz uzantılar yazd�
 
 Visual Studio 'da, [kodunuzda gezinmenize ve gezinmenize](../ide/navigating-code.md)yardımcı olacak birçok özellik bulunur.
 
-| Öne çıkan özelliği | Kısayol | Ayrıntılar/geliştirmeler |
+| Özellik | Kısayol | Ayrıntılar/geliştirmeler |
 |- | - | -|
 | Tüm Başvuruları Bul | **SHIFT** + **F12**| Sonuçlar renklendirilir ve okuma veya yazma gibi proje, tanım ve başvuru türüne göre gruplanabilir. Ayrıca "kilitle" sonuçlarını da kullanabilirsiniz. |
 | Uygulamaya git | **CTRL** + **F12** | `override`Geçersiz kılınan üyeye gitmek için anahtar sözcüğü üzerinde go to Definition kullanabilirsiniz |
@@ -226,7 +226,7 @@ Visual Studio 'da kodunuzu depolamak ve güncelleştirmek için git veya TFVC ku
 
 Kod yazmayı daha verimli hale getirmek için düzenleyici ve üretkenlik özelliklerinin bir listesi aşağıda verilmiştir. Varsayılan olarak kapalı olduklarından bazı özelliklerin etkinleştirilmesi gerekebilir (bunlar makinenizde dizin oluşturabilir, controversıal veya şu anda deneysel).
 
-| Öne çıkan özelliği | Ayrıntılar | Nasıl etkinleştirilir |
+| Özellik | Ayrıntılar | Nasıl etkinleştirilir |
 |-|-|-|
 | Dosyayı Çözüm Gezgini bul | **Çözüm Gezgini** 'de etkin dosyayı vurgular | **Araçlar**  >  **Seçenekler**  >  **Projeler ve çözümler**  >  **Çözüm Gezgini etkin öğeyi izle** |
 | Başvuru derlemelerindeki ve NuGet paketlerindeki türler için using 'ler ekleyin | Başvurulmayan bir tür için NuGet paketini yüklemek üzere kod düzeltmesinin bulunduğu bir hata ampul gösterir | **Araçlar**  >  **Seçenekler**  >  **Metin düzenleyici**  >  **C#**  >  **Gelişmiş**  >  **Başvuru derlemelerindeki türler için kullanımlar önerin** ve **NuGet paketlerindeki türler için kullanımlar** önerin |

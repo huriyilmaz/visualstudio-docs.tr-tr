@@ -7,12 +7,12 @@ ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
 ms.date: 08/04/2020
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerine dahil edilen Pluralsel eğitim aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: 85001d4473e504bd149a1cd1402a9f4dd01f2a13
-ms.sourcegitcommit: 1d74273a50ede5a90d9d64372d93aad357daef42
+ms.openlocfilehash: 87cc42e2a0d4c8c95c771a88413b4a8af70bdc14
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89365914"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509763"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde pluralalsel eğitim avantajları
 
@@ -27,6 +27,7 @@ Aşağıdaki tabloda, her bir Visual Studio abonelik türü için Pluralalsel ab
    > [!div class="mx-imgBorder"]
    > ![Pluralaltim avantajı kutucuğu](_img/vs-pluralsight/vs-pluralsight-tile.png "Avantajınızı talep etmek için etkinleştir 'e tıklayın")
 
+(Yukarıdaki kutucuk, Visual Studio Enterprise abonenin neleri görebileceğini bir örnektir.  Farklı bir Visual Studio aboneliği kullanıyorsanız, Pluralalsel avantajınız için farklılık fark edilir.  Ayrıntılar için uygunluk tablosuna bakın.)
 1. Visual Studio aboneliğinize dahil olan avantajdan dolayı Pluralalsel sayfasına yönlendirilirsiniz.
    - Formda istenen iletişim bilgilerini sağlayın
    - Kullanım koşullarını kabul etmek için onay kutusuna tıklayın

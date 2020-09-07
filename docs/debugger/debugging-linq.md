@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 256dadfeea4108f12e24864017b6e1752ece25a5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 146519b33be19da1103aed958e42ec5ffaee8bd0
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738199"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509776"
 ---
 # <a name="debugging-linq"></a>LINQ'de Hata Ayıklama
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , dil ile tümleşik sorgu (LINQ) kodunda hata ayıklamayı destekler, bazı sınırlamalar vardır. Çoğu hata ayıklama özelliğinin adım adım, kesme noktaları ayarlama ve sonuçları hata ayıklayıcı penceresinde görüntüleme dahil olmak üzere LINQ deyimleriyle birlikte çalışır. Bu konu, LINQ hata ayıklamanın başlıca sınırlamalarını açıklamaktadır.
@@ -43,7 +43,7 @@ ms.locfileid: "72738199"
 ## <a name="stepping-and-linq"></a><a name="BKMK_SteppingAndLinq"></a> Adımlama ve LINQ
  LINQ Code hata ayıklarken, adımlamayı bilmeniz gereken bazı davranış farklılıkları vardır.
 
-### <a name="linq-to-sql"></a>LINQ to SQL
+### <a name="linq-to-sql"></a>LINQ - SQL
  LINQ to SQL sorgularda, koşul kodu hata ayıklayıcı denetiminin ötesinde olur. Bu nedenle, koşul koduna ilerlenemez. Bir ifade ağacına derlenen herhangi bir sorgu, hata ayıklayıcının denetiminin ötesinde bir kod üretir.
 
 ### <a name="stepping-in-visual-basic"></a>Visual Basic adımla
@@ -105,7 +105,7 @@ End Function
  Düzeltilen sorgu `IsEven` , her geçişte işlevini aracılığıyla çağırır `items` . Hata ayıklayıcı pencerelerini her bir öğenin belirtilen koşulu karşılayıp karşılamadığını görmek için kullanabilir ve içindeki kodda ilerlemeyeceğinizi görebilirsiniz `IsEven` . Bu örnekteki koşul oldukça basittir. Ancak, hata ayıklaması yapmanız için daha zor bir koşul varsa, bu teknik çok faydalı olabilir.
 
 ## <a name="edit-and-continue-not-supported-for-linq"></a><a name="BKMK_EditandContinueNotSupportedforLINQ"></a> Düzenle ve devam et LINQ için desteklenmiyor
- Düzenle ve devam et, LINQ sorgularında yapılan değişiklikleri sınırlamalara göre destekler. Ayrıntılar için bkz. [ENC tarafından desteklenen değişiklikler](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))
+ Düzenle ve devam et, LINQ sorgularında yapılan değişiklikleri sınırlamalara göre destekler. Ayrıntılar için bkz. [ENC tarafından desteklenen değişiklikler](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

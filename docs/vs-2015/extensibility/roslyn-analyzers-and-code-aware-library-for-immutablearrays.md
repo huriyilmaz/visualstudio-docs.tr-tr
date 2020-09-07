@@ -8,12 +8,12 @@ ms.assetid: 0b0afa22-3fca-4d59-908e-352464c1d903
 caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 65849a3d9ad1cdd073551f96e61997fe5f91118a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2b57fb96bf06f5dcafd87e44522575126d7bac55
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81444915"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509828"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>ImmutableArray’ler için Roslyn Çözümleyicileri ve Kod Algılayan Kitaplık
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,7 +27,7 @@ Bu örneği derlemek için aşağıdakilere ihtiyacınız vardır:
 
 - [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md). Ayrıca, Visual Studio 'Yu yüklerken SDK 'yı aynı anda yüklemek için ortak araçların altındaki Visual Studio Genişletilebilirlik Araçları kontrol edebilirsiniz. Visual Studio 'Yu zaten yüklediyseniz, bu SDK 'yı Ayrıca ana menü **dosyasına &#124; yeni &#124;projesi...**' yi seçerek, sol gezinti bölmesinde C# ' ı ve ardından Genişletilebilirlik ' i seçerek de yükleyebilirsiniz. "**Visual Studio genişletilebilirlik Araçları**" içerik haritası proje şablonu ' nu seçtiğinizde, SDK 'yı indirip yüklemenizi ister.
 
-- [.Net Compiler platform ("Roslyn") SDK](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.NETCompilerPlatformSDK). Bu SDK 'Yı Ayrıca, **yeni &#124; proje... &#124;**, sol gezinti bölmesinde **C#** ' ı ve sonra da **genişletilebilirlik**' i seçerek de yükleyebilirsiniz. "**.Net COMPILER Platform SDK 'Yı indir**" içerik haritası proje şablonu ' nu seçtiğinizde, SDK 'yı indirip yüklemenizi ister. Bu SDK, [Roslyn Syntax Visualizer](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer)içerir. Bu son derece faydalı araç, çözümleyicinizdeki için aramanız gereken kod modeli türlerini bulmanıza yardımcı olur. Çözümleyici altyapısı, belirli kod modeli türleri için kodunuzu çağırır, bu nedenle kodunuz yalnızca gerektiğinde yürütülür ve yalnızca ilgili kodu analiz etmeye odaklanabilir.
+- [.Net Compiler platform ("Roslyn") SDK](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.NETCompilerPlatformSDK). Bu SDK 'Yı Ayrıca, **yeni &#124; proje... &#124;**, sol gezinti bölmesinde **C#** ' ı ve sonra da **genişletilebilirlik**' i seçerek de yükleyebilirsiniz. "**.Net COMPILER Platform SDK 'Yı indir**" içerik haritası proje şablonu ' nu seçtiğinizde, SDK 'yı indirip yüklemenizi ister. Bu SDK, [Roslyn Syntax Visualizer](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Syntax-Visualizer.md)içerir. Bu son derece faydalı araç, çözümleyicinizdeki için aramanız gereken kod modeli türlerini bulmanıza yardımcı olur. Çözümleyici altyapısı, belirli kod modeli türleri için kodunuzu çağırır, bu nedenle kodunuz yalnızca gerektiğinde yürütülür ve yalnızca ilgili kodu analiz etmeye odaklanabilir.
 
 ## <a name="whats-the-problem"></a>Sorun nedir?
 ImmutableArray (örneğin,) desteğinin bulunduğu bir kitaplık sağladığınızı düşünelim <xref:System.Collections.Immutable.ImmutableArray%601?displayProperty=fullName> . C# geliştiricilerinin .NET dizileri ile çok sayıda deneyimi vardır. Ancak uygulamada kullanılan ımmutablearışın ve iyileştirme teknikleri doğası gereği, C# Geliştirici ıntuıtions, kitaplığınızın kullanıcılarının aşağıda açıklandığı gibi bozuk kod yazmasına neden olur. Ayrıca, kullanıcılar çalışma zamanına kadar kendi hatalarını görmez. Bu, .NET ile Visual Studio 'da kullanıldıkları kalite deneyimi değildir.

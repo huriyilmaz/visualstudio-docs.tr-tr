@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 66d78988ef70e4f991dd02cb16a164cbf48e55f1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dd2f5919b0f48290ecc14cf71295e2af0bac4748
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89176084"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509724"
 ---
 # <a name="usage-warnings"></a>Kullanım Uyarıları
 
@@ -27,38 +27,26 @@ Kullanım uyarıları .NET 'in uygun kullanımını destekler.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-|Kural|Description|
+|Kural|Açıklama|
 |----------|-----------------|
 |[CA1801: Kullanılmayan parametreleri gözden geçirin](../code-quality/ca1801.md)|Yöntem imzası, yöntemin gövdesinde kullanılmayan bir parametre içerir.|
-|[CA1806: Metot sonuçlarını yoksaymayın](../code-quality/ca1806.md)|Yeni bir nesne oluşturulur, ancak hiç kullanılmaz veya çağrılan yeni dizeyi oluşturur ve döndürür ve yeni dize hiç kullanılmaz ya da COM veya P/Invoke yöntemi, bir HRESULT ya da hiç kullanılmayan hata kodu döndürür.|
 |[CA1816: GC.SuppressFinalize'ı doğru çağırın](../code-quality/ca1816.md)|Dispose uygulamasının bir yöntemi GC çağrısını yapmaz. SuppressFinalize ya da Dispose çağrılarının uygulanması olmayan bir yöntem GC. SuppressFinalize ya da bir yöntemi GC çağırır. SuppressFinalize ve bu (Visual Basic) dışında bir şey geçirir.|
 |[CA2200: Yığın ayrıntılarını korumak için yeniden fırlatın](../code-quality/ca2200.md)|Tekrar fırlatılan bir özel durum ve fırlatma açıklamasında açıkça belirtilen özel durum. Bir özel durum throw deyiminde özel durum belirterek yeniden fırlatılırsa yöntem listesi özel durum döndüren özgün yöntem ile kaybolan geçerli yöntem arasında çağırır.|
 |[CA2201: Ayrılmış özel durum türlerini harekete geçirmeyin](../code-quality/ca2201.md)|Bu, özgün hatayı algılamaya ve hata ayıklamasına keskin hale getirir.|
 |[CA2202: Nesneleri birden çok kez atmayın](../code-quality/ca2202.md)|Yöntem uygulaması, aynı nesne üzerinde System.IDisposable.Dispose veya bir Dispose eşdeğer (örneğin, bazı türleri üzerinde Close() yöntemi) için birden fazla çağrı kodu yolları içerir.|
-|[CA2204: Harfler doğru yazılmalıdır](../code-quality/ca2204.md)|Bir yöntemin gövdesi içinde hazır bilgi dizesi Microsoft yazım denetimi kitaplığı tarafından tanınmayan bir veya birkaç sözcük içerir.|
-|[CA2205: Win32 API'sinin yönetilen eşdeğerlerini kullanın](../code-quality/ca2205.md)|Platform çağırma yöntemi tanımlanır ve eşdeğer işlevselliğe sahip bir .NET yöntemi kullanılabilir.|
 |[CA2207: Değer türü statik alanları satır içi başlatın](../code-quality/ca2207.md)|Bir değer türü açık bir statik oluşturucu bildirir. Bu kural ihlalini düzeltmek için bildirildiğinde, tüm statik veriyi başlatın ve statik oluşturucuyu kaldırın.|
 |[CA2208: Bağımsız değişken özel durumlarını doğru örnekleyin](../code-quality/ca2208.md)|Varsayılan (parametresiz) kurucu veya ArgumentException türeyen özel bir durum türü için çağrı yapılır veya hatalı dize bağımsız değişkeni parametreli bir kurucu veya ArgumentException türeyen bir özel durum türü iletilir.|
 |[CA2211: Sabit olmayan alanlar görünür olmamalıdır](../code-quality/ca2211.md)|Sabit veya salt okuma olmayan statik alanlar iş parçacığı açısından güvenli değildir. Bu tür bir alana erişimin dikkatle denetlenmesi ve sınıf nesnesine erişimin eşitlenmesi için gelişmiş programlama teknikleri olması gerekir.|
-|[CA2212: Servis verilen bileşenleri WebMethod ile işaretlemeyin](../code-quality/ca2212.md)|System. EnterpriseServices. ServicedComponent 'tan devralan bir türdeki yöntem System. Web. Services. WebMethodAttribute ile işaretlenir. WebMethodAttribute ve bir ServicedComponent yönteminin çakışan davranışları ve bağlam ve işlem akışı için gereksinimleri olduğu için, bazı senaryolarda yöntemin davranışı yanlış olacaktır.|
 |[CA2213: Atılabilen alanlar atılmalıdır](../code-quality/ca2213.md)|IDisposable uygulayan türlerin alanları System.IDisposable uygulayan bir türle bildirilir. Bir Dispose yöntemi alanının tanıtıcısının bildirim türü Dispose yöntemi tarafından çağrılmaz.|
 |[CA2214: Geçersiz kılınabilir metotları oluşturucular içinde çağırmayın](../code-quality/ca2214.md)|Bir Oluşturucu sanal bir yöntemi çağırdığında, yöntemi çağıran örnek için olan oluşturucunun yürütülmemiş olması mümkündür.|
 |[CA2215: Atma metotları taban sınıf atmayı çağırmalıdır](../code-quality/ca2215.md)|Tür atılabilen bir türden devralınırsa, kendi Dispose yönteminden basit tür olan Dispose yöntemini çağırmalıdır.|
 |[CA2216: Atılabilir türler sonlandırıcıyı bildirmelidir](../code-quality/ca2216.md)|System. IDisposable uygulayan ve yönetilmeyen kaynakların kullanımını öneren alanlar içeren bir tür, Object. Finalize tarafından açıklandığı şekilde bir Sonlandırıcı uygulamaz.|
 |[CA2217: Sabit listelerini FlagsAttribute ile işaretlemeyin](../code-quality/ca2217.md)|Dışarıdan görünür bir numaralandırma FlagsAttribute ile işaretlenir ve Numaralandırmadaki bir veya daha fazla değere sahip bir veya daha fazla değer, Numaralandırmadaki diğer tanımlanmış değerlerin bir birleşimi.|
-|[CA2218: GetHashCode'u Eşittir'i geçersiz kılarak geçersiz kılın](../code-quality/ca2218.md)|GetHashCode, karma algoritmalar ve karma tablolar gibi veri yapıları için uygun olan geçerli örneği temel alan bir değer döndürür. Aynı türdeki ve eşit olan iki nesnenin aynı karma kodu döndürmesi gerekir.|
 |[CA2219: Özel durum yan tümceleri içinde özel durum harekete geçirmeyin](../code-quality/ca2219.md)|Bir istisna sonlandırıcı ya da arıza yan tümcesine neden olduğunda, yeni istisna aktif istisnayı saklar. Filtre yan tümcesinde bir özel durum ortaya çıktığında, çalışma zamanı özel durumu sessizce yakalar. Bu, özgün hatayı algılamaya ve hata ayıklamasına keskin hale getirir.|
-|[CA2220: Sonlandırıcılar taban tür sonlandırıcıları çağırmalıdır](../code-quality/ca2220.md)|Sonlandırılma, devralma hiyerarşisi aracılığıyla gönderilmelidir. Bunu güvence altına almak için, türler basit sınıflarının kendi Finalize yönteminde Finalize yöntemini çağırmalıdır.|
-|[CA2221: Sonlandırıcılar korunmalıdır](../code-quality/ca2221.md)|Sonlandırıcılar aile erişim değiştiricisi kullanmalıdır.|
-|[CA2222: Devralınan üye görünürlüğünü azaltmayın](../code-quality/ca2222.md)|Devralınan Üyeler için erişim değiştiricisini değiştirmeyin. Devralınmış bir üyeyi özel olarak değiştirme, arayanların yöntemin temel sınıf uygulamasına erişmesini engellemez.|
-|[CA2223: Üyeler dönüş türünden daha fazla farklı olmalıdır](../code-quality/ca2223.md)|Ortak dil çalışma zamanı, aynı üyeler arasında ayrım yapmak için dönüş türleri kullanımına izin verir, ancak bu özelliği ne ortak dil belirtimi ne de .NET programlama dillerinin ortak özelliğidir.|
-|[CA2224: Eşittir işlecini aşırı yüklerken Equals'ı geçersiz kılın](../code-quality/ca2224.md)|Ortak tür eşitlik işlecini uygular, ancak Object. Equals öğesini geçersiz kılmaz.|
 |[CA2225: İşleç aşırı yüklemeleri adlandırılmış alternatiflere sahiptir](../code-quality/ca2225.md)|Operatör aşırı yüklemesi bulundu ve beklenen adlandırılmış alternatif yöntem bulunamadı. Adlandırılmış alternatif üye, işleçle aynı işlevselliğe erişim sağlar ve aşırı yüklenmiş işleçleri desteklemeyen dillerde programlayan geliştiriciler için sağlanır.|
 |[CA2226: İşleçler simetrik aşırı yüklemelere sahip olmalıdır](../code-quality/ca2226.md)|Bir tür eşitlik veya eşitsizlik işlecini uygular ve karşıt işleci uygulamaz.|
 |[CA2227: Koleksiyon özellikleri salt okunur olmalıdır](../code-quality/ca2227.md)|Yazılabilir koleksiyon özelliği kullanıcının koleksiyonun tamamını farklı bir koleksiyonla değiştirmesine izin verir. Salt okunur özelliği değiştirilmesini durdurur ancak yine de tekil üyelerin ayarlamasına izin verir.|
-|[CA2228: Yayımlanmamış kaynak biçimlerini yollamayın](../code-quality/ca2228.md)|.NET 'in yayın öncesi sürümleri kullanılarak oluşturulan kaynak dosyaları, .NET 'in desteklenen sürümleri tarafından kullanılamayabilir.|
 |[CA2229: Serileştirme oluşturucularını uygulayın](../code-quality/ca2229.md)|Bu kural ihlalini düzeltmek için seri hale getirme yapıcısını uygular. Kapalı bir sınıf için kurucusunu özel yapın; aksi takdirde korunmuş yapın.|
-|[CA2230: Değişken bağımsız değişkenler için params kullanın](../code-quality/ca2230.md)|Ortak veya korumalı tür VarArgs çağırma kuralı params anahtar sözcüğünü kullanan bir ortak veya korumalı yöntem içerir.|
 |[CA2231: Eşittir işlecini ValueType.Equals'ı geçersiz kılarak aşırı yükleyin](../code-quality/ca2231.md)|Değer türü geçersiz kılınır `Object.Equals` ancak eşitlik işlecini uygulamaz.|
 |[CA2232: Windows Forms giriş noktalarını STAThread ile işaretleyin](../code-quality/ca2232.md)|STAThreadAttribute, COM uygulama modelinin tek bir iş parçacıklı grup olduğunu gösterir. Bu öznitelik Windows Forms kullanan herhangi bir uygulamanın girişinde sunulur; atlanırsa, Windows bileşenleri doğru çalışmayabilir.|
 |[CA2233: İşleçler taşmamalıdır](../code-quality/ca2233.md)|İşlemin sonucunun, dahil edilen veri türleri için olası değerler aralığının dışında olmadığından emin olmak için, aritmetik işlemler önce işlenenleri doğrulamadan gerçekleştirilmemelidir.|
@@ -77,4 +65,4 @@ Kullanım uyarıları .NET 'in uygun kullanımını destekler.
 |[CA2246: Sembol ve üyesini aynı deyime atama](../code-quality/ca2246.md)|Bir sembol ve üyesini atama, diğer bir deyişle, bir alan veya özellik, aynı deyimde önerilmez. Üye erişiminin, bu deyimdeki atamadan önce simgenin eski değerini veya atamasından yeni değeri kullanması amaçlandıysa, bu, net değildir.|
 |[CA2247: TaskCompletionSource oluşturucusuna geçirilen bağımsız değişken TaskContinuationOptions sabit listesi yerine TaskCreationOptions sabit listesi olmalı](../code-quality/ca2246.md)|TaskCompletionSource, temel alınan görevi denetleyen TaskCreationOptions ve görevde saklanan nesne durumunu alan oluşturucuların bulunduğu oluşturuculara sahiptir.  TaskCreationOptions yerine bir TaskContinuationOptions 'ı yanlışlıkla geçirmek, çağrının durum olarak kabul edilmesine neden olur.|
 |[CA2248: ' Enum. HasFlag ' için doğru ' Enum ' bağımsız değişkenini sağlayın](../code-quality/ca2248.md)|Yöntem çağrısına bir bağımsız değişken olarak geçirilen sabit listesi türü, `HasFlag` çağıran enum türünden farklı.|
-|[CA2249: String. IndexOf yerine String. Contains kullanmayı düşünün](../code-quality/ca2249.md)|`string.IndexOf`Sonucun varlığı veya bir alt dizenin yokluğunu denetlemek için kullanıldığı yere yapılan çağrılar, ile değiştirilebilir `string.Contains` .|
+|[CA2249: String.IndexOf yerine String.Contains kullanmayı düşünün](../code-quality/ca2249.md)|`string.IndexOf`Sonucun varlığı veya bir alt dizenin yokluğunu denetlemek için kullanıldığı yere yapılan çağrılar, ile değiştirilebilir `string.Contains` .|

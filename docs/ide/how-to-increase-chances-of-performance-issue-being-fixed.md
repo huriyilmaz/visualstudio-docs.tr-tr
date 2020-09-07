@@ -5,12 +5,12 @@ author: madskristensen
 ms.author: madsk
 ms.date: 11/19/2019
 ms.topic: conceptual
-ms.openlocfilehash: 50d1ed4edd2e1fa52661995f4d72466646dfd879
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9fc83ac1be1a6c1db7b46845c74a4b0e7bf6017f
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250511"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509932"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Bir performans sorununun düzeltilme olasılığını artırma
 
@@ -171,7 +171,7 @@ Geliştirici topluluğu Web sitesinde mevcut geri bildirim öğelerine doğrudan
 
 **Gelişmiş performans Izlemeleri**
 
-Rapor-sorun aracında izleme koleksiyonu özellikleri çoğu senaryo için yeterlidir. Ancak, izleme koleksiyonu üzerinde daha fazla denetim gerekli olduğunda (örneğin, daha büyük bir arabellek boyutu ile izleme), bu durumda PerfView kullanmak için harika bir araçtır. PerfView aracını kullanarak performans izlemesini el ile kaydetme adımları, [PerfView Ile kaydetme performansı izlemeleri](https://github.com/dotnet/roslyn/wiki/Recording-performance-traces-with-PerfView) sayfasında bulunabilir.
+Rapor-sorun aracında izleme koleksiyonu özellikleri çoğu senaryo için yeterlidir. Ancak, izleme koleksiyonu üzerinde daha fazla denetim gerekli olduğunda (örneğin, daha büyük bir arabellek boyutu ile izleme), bu durumda PerfView kullanmak için harika bir araçtır. PerfView aracını kullanarak performans izlemesini el ile kaydetme adımları, [PerfView Ile kaydetme performansı izlemeleri](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Recording-performance-traces-with-PerfView.md) sayfasında bulunabilir.
 
 ## <a name="out-of-process-issues"></a>Işlem dışı sorunlar
 
