@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
-ms.openlocfilehash: 04e3ee89498447f7743fc1b5119e129f046b4fcc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5c92a2bb2349f1b5543672d7ecd944e3d82bb500
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911775"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508437"
 ---
 # <a name="testing-the-performance-of-a-cloud-service"></a>Bulut hizmetinin performansını test etme
 ## <a name="overview"></a>Genel Bakış
@@ -54,7 +54,7 @@ Genellikle, normal veya stres koşullarında bulut hizmetlerini test etmek için
 ## <a name="profiling-a-cloud-service-in-azure"></a>Azure 'da bir bulut hizmetinin profilini oluşturma
 Bulut hizmetinizi Visual Studio 'dan yayımladığınızda, hizmeti profilin profilini oluşturup istediğiniz bilgileri sağlayan profil oluşturma ayarlarını belirtebilirsiniz. Bir rol örneği için profil oluşturma oturumu başlatılır. Hizmetinizi Visual Studio 'dan yayımlama hakkında daha fazla bilgi için bkz. [Visual Studio 'Dan Azure bulut hizmetinde yayımlama](vs-azure-tools-publishing-a-cloud-service.md).
 
-Visual Studio 'da performans profili oluşturma hakkında daha fazla bilgi edinmek için bkz. [Yeni başlayanlar kılavuzu, performans profili oluşturma](https://msdn.microsoft.com/library/azure/ms182372.aspx) ve [profil oluşturma araçları kullanarak uygulama performansını çözümleme](https://msdn.microsoft.com/library/azure/z9z62c29.aspx).
+Visual Studio 'da performans profili oluşturma hakkında daha fazla bilgi edinmek için bkz. [Yeni başlayanlar kılavuzu, performans profili oluşturma](../profiling/beginners-guide-to-performance-profiling.md) ve [profil oluşturma araçları kullanarak uygulama performansını çözümleme](../profiling/performance-explorer.md).
 
 > [!NOTE]
 > Bulut hizmetinizi yayımladığınızda IntelliTrace veya profil oluşturma seçeneklerinden birini etkinleştirebilirsiniz. Her ikisini de etkinleştiremezsiniz.
@@ -68,7 +68,7 @@ Profil oluşturma için performans sorunlarınızı temel alarak farklı koleksi
 * **İzleme** -bu yöntem, odaklanmış analizler ve giriş/çıkış performans sorunlarını analiz etmek için yararlı olan ayrıntılı zamanlama verilerini toplar. İzleme yöntemi, bir profil oluşturma işlemi sırasında bir modüldeki işlevlerin her bir girdisini, çıkış ve işlev çağrısını kaydeder. Bu yöntem, kodunuzun bir bölümü hakkında ayrıntılı zamanlama bilgileri toplamak ve giriş ve çıkış işlemlerinin uygulama performansı üzerinde etkisini anlamak için yararlıdır. Bu yöntem, 32 bitlik bir işletim sistemi çalıştıran bir bilgisayar için devre dışıdır. Bu seçenek yalnızca, bulut hizmetini işlem öykünücüsünde yerel olarak değil, Azure 'da çalıştırdığınızda kullanılabilir.
 * **.Net bellek ayırma** -bu yöntem, örnekleme profil oluşturma yöntemini kullanarak .NET Framework bellek ayırma verileri toplar. Toplanan veriler, ayrılan nesnelerin sayısını ve boyutunu içerir.
 * **Eşzamanlılık** -bu yöntem, çok iş parçacıklı ve çok işlem yapan uygulamaları çözümlemede yararlı olan kaynak çekişmesini ve işlem ve iş parçacığı yürütme verilerini toplar. Eşzamanlılık yöntemi, kodunuzun yürütülmesini engelleyen her olay için veri toplar; Örneğin, bir iş parçacığı, bir uygulama kaynağına yönelik kilitli erişimin serbest gelmesini bekler. Bu yöntem, çok iş parçacıklı uygulamaların çözümlenmesi için yararlıdır.
-* Ayrıca, bir veya daha fazla veritabanıyla iletişim kuran çok katmanlı uygulamaların işlevlerinde zaman uyumlu ADO.NET çağrılarının yürütme zamanları hakkında ek bilgiler sağlayan **katman etkileşim profilini**de etkinleştirebilirsiniz. Herhangi bir profil oluşturma yönteminden katman etkileşim verileri toplayabilirsiniz. Katman etkileşimi profili oluşturma hakkında daha fazla bilgi için bkz. [Katman etkileşimleri görünümü](https://msdn.microsoft.com/library/azure/dd557764.aspx).
+* Ayrıca, bir veya daha fazla veritabanıyla iletişim kuran çok katmanlı uygulamaların işlevlerinde zaman uyumlu ADO.NET çağrılarının yürütme zamanları hakkında ek bilgiler sağlayan **katman etkileşim profilini**de etkinleştirebilirsiniz. Herhangi bir profil oluşturma yönteminden katman etkileşim verileri toplayabilirsiniz. Katman etkileşimi profili oluşturma hakkında daha fazla bilgi için bkz. [Katman etkileşimleri görünümü](../profiling/tier-interactions-view.md).
 
 ## <a name="configuring-profiling-settings"></a>Profil oluşturma ayarlarını yapılandırma
 Aşağıdaki çizimde, profil oluşturma ayarlarınızı Azure uygulaması yayımlama iletişim kutusundan yapılandırma gösterilmektedir.
@@ -102,7 +102,7 @@ Bulut hizmetinizde bir rolün her örneği için bir profil oluşturma oturumu o
 3. Bir örneğin profil oluşturma raporlarını görüntülemek için, hizmette rolü seçin, belirli bir örnek için kısayol menüsünü açın ve **profil oluşturma raporunu görüntüle**' yi seçin.
 
     Bu rapor, bir. vsp dosyası artık Azure 'dan indirilir ve indirme durumu Azure etkinlik günlüğünde görüntülenir. İndirme işlemi tamamlandığında, profil oluşturma raporu Visual Studio Düzenleyicisi 'nde <rol adı \> *<örnek numarası \> *<Identifier. vsp adlı bir sekmede görüntülenir \> . Raporun özet verileri görüntülenir.
-4. Raporun farklı görünümlerini görüntülemek için, geçerli görünüm listesinde istediğiniz görünüm türünü seçin. Daha fazla bilgi için bkz. [profil oluşturma araçları rapor görünümleri](https://msdn.microsoft.com/library/azure/bb385755.aspx).
+4. Raporun farklı görünümlerini görüntülemek için, geçerli görünüm listesinde istediğiniz görünüm türünü seçin. Daha fazla bilgi için bkz. [profil oluşturma araçları rapor görünümleri](../profiling/performance-report-views.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 [Hata ayıklama Cloud Services](vs-azure-tools-debug-cloud-services-virtual-machines.md)

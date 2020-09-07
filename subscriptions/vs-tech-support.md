@@ -7,12 +7,12 @@ ms.assetid: 2e0fd8bb-8f20-487c-b350-b8fde405ea5e
 ms.date: 09/02/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinizle birlikte sunulan teknik destek avantajını nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: 3081836b94fbc5fdda277d694086acc18db6eb44
-ms.sourcegitcommit: 1d74273a50ede5a90d9d64372d93aad357daef42
+ms.openlocfilehash: ba4a80f604116a10901d98229980f2732956c0df
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89365852"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508944"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde teknik destek avantajını etkinleştirin ve kullanın
 Visual Studio aboneliklerinde teknik destek avantajı, hala [destek yaşam döngüsünün](https://support.microsoft.com/lifecycle/search)temel destek aşamasında olan ürünlere yönelik **Üretim dışı ortamlarda** onarım sorunlarını çözmeye yöneliktir. Visual Studio Enterprise standart ve yıllık bulut abonelikleri dört olay alır, Visual Studio Professional ancak standart ve yıllık bulut abonelikleri, avantajı etkinleştirmede 1 yıla kadar olmak üzere iki olay alır. Abonelik geçerli olduğunda avantajı etkinleştirme gerçekleşmelidir.
@@ -33,7 +33,13 @@ Visual Studio aboneliklerinden indirilen geliştirici olmayan ürünler (SQL, Wi
 Ürün düzeyi açıklamaları: **kullanılamayan destek planlarını**genişletin. **Belirtilen ürüne (kod: 8) destek için destek planı kullanılmıyorsa**, destek sözleşmeniz seçtiğiniz ürün sürümü için kullanılamaz.
 
 > [!IMPORTANT]
-> Belirtilen destek olayları, onarım desteği içindir.  Microsoft ekipleri, Microsoft Office, Microsoft SharePoint veya Microsoft Outlook ile ilgili kodlama/geliştirme sorunlarıyla ilgili yardım için kullanılamayabilir
+> Belirtilen destek olayları, onarım desteği içindir.  Bunlar, aşağıdaki ürünlerle ilgili kodlama/geliştirme sorunlarıyla ilgili yardım için kullanılamayabilir:
+> - Microsoft Teams
+> - Microsoft Office
+> - Microsoft SharePoint
+> - Microsoft Exchange
+> - Microsoft Graph
+> - Microsoft Outlook
 
 ## <a name="how-to-activate-the-benefit"></a>Avantajı etkinleştirme
 1. Git ' e gidin <https://my.visualstudio.com/Benefits> , destek bölümüne gidin ve teknik destek kutucuğunda **etkinleştirmek için sohbet**' e tıklayın.

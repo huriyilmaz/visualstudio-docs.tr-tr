@@ -8,12 +8,12 @@ ms.assetid: 99e5566d-450e-4660-9bca-454e1c056a02
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 8f135247241e8cf441cba2c1f63984dc69f7114c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9e95466094f15b4fa166bfdb20c85836da32df96
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64850655"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508593"
 ---
 # <a name="walkthrough-displaying-light-bulb-suggestions"></a>İzlenecek Yol: Ampul Önerilerini Görüntüleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -22,9 +22,9 @@ Hafif bulbs, Visual Studio düzenleyicisinde, yerleşik kod Çözümleyicileri v
   
  Visual C# ve Visual Basic düzenleyicilerinde Ayrıca, açık bulbs 'leri otomatik olarak görüntüleyen eylemlerle kendi kod Çözümleyicileri yazmak ve paketlemek için .NET Compiler Platform ("Roslyn") de kullanabilirsiniz. Daha fazla bilgi için bkz.  
   
-- [Nasıl yapılır: C# tanısı ve kod onarımı yazma](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix)  
+- [Nasıl yapılır: C# tanısı ve kod onarımı yazma](https://github.com/dotnet/roslyn/blob/master/docs/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix.md)  
   
-- [Nasıl yapılır: Visual Basic tanılama ve kod onarımı yazma](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix)  
+- [Nasıl yapılır: Visual Basic tanılama ve kod onarımı yazma](https://github.com/dotnet/roslyn/blob/master/docs/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix.md)  
   
   C++ gibi diğer diller Ayrıca, söz konusu işlevin saplama uygulamasını oluşturma önerisi gibi bazı hızlı eylemler için hafif bulbs sağlar.  
   

@@ -8,12 +8,12 @@ ms.assetid: E2C9420F-A5D5-4472-9020-2B63FB27A133
 ms.technology: vs-unity-tools
 ms.workload:
 - unity
-ms.openlocfilehash: e824951556124f080f14cdd9f440037decf5146f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a53db2d7cb73fbbb8ea694386dbada3186957ee
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815142"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508983"
 ---
 # <a name="using-net-4x-in-unity"></a>Unity’de .NET 4.x kullanma
 
@@ -21,7 +21,7 @@ Unity betiği temel alan teknolojiler olan C# ve .NET, Microsoft tarafından ilk
 
 Unity 2017,1 sürümü ile Unity, betik çalışma zamanının bir .NET 4,6, C# 6 uyumlu sürümüne yükseltildiğini deneysel bir sürümünü sunmuştur. Unity 2018,1 ' de, .NET 4. x eşdeğeri çalışma zamanı artık deneysel olarak değerlendirilmez, ancak eski .NET 3,5 denk çalışma zamanı artık eski sürüm olarak kabul edilir. Unity 2018,3 sürümü sayesinde Unity, yükseltilen betik çalışma zamanını varsayılan seçimi yapmak ve C# 7 ' ye daha da sonra güncelleştirmek için yansıtılacak. Bu yol haritasında daha fazla bilgi ve en son güncelleştirmeler için Unity 'nin [blog postasını](https://blogs.unity3d.com/2018/07/11/scripting-runtime-improvements-in-unity-2018-2/) okuyun veya [deneysel betik önizlemeleri forumunu](https://forum.unity.com/forums/experimental-scripting-previews.107/)ziyaret edin. Bu sırada, artık .NET 4. x Scripting Runtime ile kullanılabilen yeni özellikler hakkında daha fazla bilgi edinmek için aşağıdaki bölümlere göz atın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 * [Unity 2017,1 veya üzeri](https://unity3d.com/) (2018,2 önerilir)
 * [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
@@ -233,7 +233,7 @@ Bu ipuçları Unity 'de dokunarak çalışmaya başlamanıza yardımcı olabilir
 * Bir görevi döndüren zaman uyumsuz işlevlerin adlarına **"Async"** soneki eklenmiş olması gerekir. "Async" soneki, bir işlevin her zaman beklenmiş olması gerektiğini belirtmenize yardımcı olur.
 * Yalnızca `async void` geleneksel zaman uyumlu koddan zaman uyumsuz işlevleri çalıştıran işlevler için dönüş türünü kullanın. Bu işlevlerin kendisi beklenmez ve adlarında "Async" sonekine sahip olmamalıdır.
 * Unity, zaman uyumsuz işlevlerin varsayılan olarak ana iş parçacığında çalışmasını sağlamak için UnitySynchronizationContext kullanır. Unity API 'SI ana iş parçacığı dışında erişilebilir değildir.
-* Görevleri, ve gibi yöntemlerle arka plan iş parçacıklarında çalıştırmak mümkündür [`Task.Run`](https://msdn.microsoft.com/library/hh195051.aspx) [`Task.ConfigureAwait(false)`](https://msdn.microsoft.com/library/system.threading.tasks.task.configureawait.aspx) . Bu teknik, performansı geliştirmek için ana iş parçacığından pahalı işlemleri devrederde yararlıdır. Ancak, arka plan iş parçacıklarını kullanmak, [yarış durumları](https://wikipedia.org/wiki/Race_condition)gibi hata ayıklama zor olan sorunlara yol açabilir.
+* Görevleri, ve gibi yöntemlerle arka plan iş parçacıklarında çalıştırmak mümkündür [`Task.Run`](/dotnet/api/system.threading.tasks.task.run) [`Task.ConfigureAwait(false)`](/dotnet/api/system.threading.tasks.task.configureawait) . Bu teknik, performansı geliştirmek için ana iş parçacığından pahalı işlemleri devrederde yararlıdır. Ancak, arka plan iş parçacıklarını kullanmak, [yarış durumları](https://wikipedia.org/wiki/Race_condition)gibi hata ayıklama zor olan sorunlara yol açabilir.
 * Unity API 'SI ana iş parçacığı dışında erişilebilir değildir.
 * İş parçacıklarını kullanan görevler Unity WebGL Derlemeleriyle desteklenmez.
 

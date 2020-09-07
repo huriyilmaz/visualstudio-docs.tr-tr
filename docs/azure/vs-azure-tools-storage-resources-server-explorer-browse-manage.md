@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/24/2017
 ms.author: ghogen
-ms.openlocfilehash: 1a36dc743108d2cfbf9e5405af727b79aeda4808
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8702b9814214a902a644cc5854250b600c301caa
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800482"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508450"
 ---
 # <a name="browse-and-manage-storage-resources-by-using-server-explorer"></a>Sunucu Gezgini'ni kullanarak depolama kaynaklarına göz atma ve bu kaynakları yönetme
 
@@ -126,7 +126,7 @@ Karşıya yüklenecek bir veya daha fazla dosya seçebilir ve herhangi bir türd
 
 Azure uygulamanızdaki verileri günlüğe kaydetmek için Azure Tanılama kullanıyorsanız ve günlükleri depolama hesabınıza aktardıysanız, Azure 'un bu Günlükler için oluşturduğu kapsayıcıları görürsünüz. Bu günlükleri Sunucu Gezgini ' de görüntülemek, özellikle Azure 'a dağıtılırsa, uygulamanızla ilgili sorunları belirlemenin kolay bir yoludur.
 
-Azure Tanılama hakkında daha fazla bilgi için bkz. [Azure Tanılama kullanarak günlük verilerini toplama](https://msdn.microsoft.com/library/azure/gg433048.aspx).
+Azure Tanılama hakkında daha fazla bilgi için bkz. [Azure Tanılama kullanarak günlük verilerini toplama](/azure/cloud-services/cloud-services-dotnet-diagnostics).
 
 ### <a name="to-get-the-url-for-a-blob"></a>Bir Blobun URL 'sini almak için
 
@@ -275,7 +275,7 @@ Yeni depolama hesabı Çözüm Gezgini ' deki **depolama** listesinde görüntü
 
    * Eklemek istediğiniz mevcut depolama hesabının adı.
    * Seçilen depolama hesabı için anahtar. Bu değer genellikle bir depolama hesabı seçtiğinizde sizin için sağlanır. Visual Studio 'Nun depolama hesabı anahtarını anımsamasını istiyorsanız, **hesap anahtarını anımsa** onay kutusunu seçin.
-   * HTTP, HTTPS veya özel bir uç nokta gibi depolama hesabına bağlanmak için kullanılacak protokol. Özel uç noktalar hakkında daha fazla bilgi için bkz. [bağlantı dizelerini yapılandırma](https://msdn.microsoft.com/library/azure/ee758697.aspx).
+   * HTTP, HTTPS veya özel bir uç nokta gibi depolama hesabına bağlanmak için kullanılacak protokol. Özel uç noktalar hakkında daha fazla bilgi için bkz. [bağlantı dizelerini yapılandırma](/azure/storage/common/storage-configure-connection-string).
 
 ### <a name="to-view-the-secondary-endpoints"></a>İkincil uç noktaları görüntülemek için
 

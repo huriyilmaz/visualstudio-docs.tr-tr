@@ -12,12 +12,12 @@ caps.latest.revision: 8
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b9c80ba76ba2da978c9cb475299ba0fc9e614120
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1dddc235131322a61cdb0106d866b138040d8c18
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72655146"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508242"
 ---
 # <a name="automatic-feature-suspension"></a>Otomatik özelliği askıya alma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +36,7 @@ Kullanılabilir sistem belleğiniz 200 MB veya daha az kalırsa, Visual Studio k
 - Visual Studio önbellekleri temizlendi.
 
 ## <a name="improve-visual-studio-performance"></a>Visual Studio performansını geliştirme
- Büyük çözümlerle veya düşük bellek koşullarıyla çalışırken Visual Studio performansının nasıl iyileştirecağıyla ilgili ipuçları ve püf noktaları için bkz. [büyük çözümler Için performans konuları](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions).
+ Büyük çözümlerle veya düşük bellek koşullarıyla çalışırken Visual Studio performansının nasıl iyileştirecağıyla ilgili ipuçları ve püf noktaları için bkz. [büyük çözümler Için performans konuları](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Performance-considerations-for-large-solutions.md).
 
 ## <a name="full-solution-analysis-suspended"></a>Tam çözüm Analizi askıya alındı
  Varsayılan olarak, tam çözüm Analizi Visual Basic için etkinleştirilmiştir ve Visual C# için devre dışı bırakılır. Ancak, düşük bellek koşulunda, Seçenekler iletişim kutusundaki ayarlarından bağımsız olarak hem Visual Basic hem de Visual C# için tam çözüm Analizi otomatik olarak devre dışıdır. Ancak, Seçenekler iletişim kutusunda **tam çözüm analizini etkinleştir** onay kutusunu seçerek veya Visual Studio 'yu yeniden başlatarak, görüntülenen bilgi çubuğundaki **yeniden etkinleştir** düğmesini seçerek tam çözüm analizini yeniden etkinleştirebilirsiniz. Seçenekler iletişim kutusu her zaman geçerli tam çözüm Analizi ayarlarını gösterir. Daha fazla bilgi için bkz. [nasıl yapılır: tam çözüm analizini etkinleştirme ve devre dışı bırakma](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md).
@@ -63,4 +63,4 @@ Ayrıca, iç Visual Studio işlemleri için kullanılan önbellekler da temizlen
 
 - [Nasıl Yapılır: Tam Çözüm Analizini Etkinleştirme ve Devre Dışı Bırakma](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md)
 - [Atık Toplamanın Temelleri](https://msdn.microsoft.com/library/67c5a20d-1be1-4ea7-8a9a-92b0b08658d2)
-- [Büyük çözümler için performans konuları](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)
+- [Büyük çözümler için performans konuları](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Performance-considerations-for-large-solutions.md)

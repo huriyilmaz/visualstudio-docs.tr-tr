@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 25943a6b3edc1a55c6d27d3c2737a9893edf5032
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f7e2f79b5e7daea577693bc0fd54cef70bb7e4a
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84179966"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508411"
 ---
 # <a name="using-windows-powershell-scripts-to-publish-to-dev-and-test-environments"></a>Windows PowerShell betiklerini kullanarak geliştirme ve test ortamlarına yayımlama
 
@@ -22,7 +22,7 @@ Visual Studio 'da bir Web uygulaması oluşturduğunuzda, daha sonra Web siteniz
 
 Bu betikleri kullanarak, geçici kullanım için sitenizin özelleştirilmiş sürümlerini (geliştirme ve test ortamları olarak da bilinir) sağlayabilirsiniz. Örneğin, bir Azure sanal makinesinde veya bir Web sitesindeki hazırlama yuvasında bir test paketini çalıştırmak, bir hatayı yeniden oluşturmak, bir hata düzeltmesini test etmek, önerilen bir değişikliği denemek veya bir demo ya da sunum için özel bir ortam ayarlamak üzere Web sitenizin belirli bir sürümünü kurabilirsiniz. Projenizi yayımlayan bir betik oluşturduktan sonra, komut dosyasını gerektiği gibi yeniden çalıştırarak özdeş ortamları yeniden oluşturabilir veya test için özel bir ortam oluşturmak üzere betiği kendi Web uygulamanızın derlemesi ile çalıştırabilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 * **Azure iş yükü** yüklü olan veya Visual Studio 2013 ve azure SDK 2,3 veya sonraki bir sürümünü Içeren Visual Studio 2015 veya üzeri. Bkz. [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads). (Web projelerine yönelik betikleri oluşturmak için Azure SDK 'ya ihtiyacınız yoktur. Bu özellik, bulut hizmetlerinde Web rolleri değil Web projelerine yöneliktir.)
 * Azure PowerShell 0.7.4 veya üzeri. Bkz. [Azure PowerShell'i yükleme ve yapılandırma](/powershell/azure/overview).
@@ -154,7 +154,7 @@ Daha önce bir Windows PowerShell betiği çalıştırmadıysanız, önce komut 
 
    ![Web Dağıtımı Paketi Oluştur](./media/vs-azure-tools-publishing-using-powershell-scripts/IC767885.png)
 
-   Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Web dağıtım paketi oluşturma](https://msdn.microsoft.com/library/dd465323.aspx). Ayrıca, [Yayımlama betiklerini özelleştirme ve genişletme](#customizing-and-extending-the-publish-scripts)bölümünde açıklandığı gibi Web dağıtımı paketinizin oluşturulmasını otomatik hale getirebilirsiniz.
+   Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Web dağıtım paketi oluşturma](/previous-versions/aspnet/dd465323(v=vs.110)). Ayrıca, [Yayımlama betiklerini özelleştirme ve genişletme](#customizing-and-extending-the-publish-scripts)bölümünde açıklandığı gibi Web dağıtımı paketinizin oluşturulmasını otomatik hale getirebilirsiniz.
 
 1. **Çözüm Gezgini**' de, betiğin bağlam menüsünü açın ve ardından **PowerShell ISE ile aç**' ı seçin.
 1. Bu bilgisayarda ilk kez Windows PowerShell betikleri çalıştırıyorsanız, yönetici ayrıcalıklarıyla bir komut istemi penceresi açın ve aşağıdaki komutu yazın:
@@ -310,7 +310,7 @@ Windows PowerShell komut isteminde kullanabileceğiniz işlevler hakkında yard�
 
 **AzureWebAppPublishModule**
 
-| İşlev adı | Description |
+| İşlev adı | Açıklama |
 | --- | --- |
 | Add-Azuressqldatabase |Yeni bir Azure SQL veritabanı oluşturur. |
 | Add-Azuressqldatabases |Visual Studio 'Nun oluşturduğu JSON yapılandırma dosyasındaki değerlerden Azure SQL veritabanları oluşturur. |
@@ -339,7 +339,7 @@ Windows PowerShell komut isteminde kullanabileceğiniz işlevler hakkında yard�
 
 **Yayımla-WebApplication**
 
-| İşlev adı | Description |
+| İşlev adı | Açıklama |
 | --- | --- |
 | New-AzureWebApplicationEnvironment |Bir Web sitesi veya sanal makine gibi Azure kaynakları oluşturur. |
 | New-WebDeployPackage |Bu işlev uygulanmadı. Projenizi derlemek için bu işleve komutlar ekleyebilirsiniz. |

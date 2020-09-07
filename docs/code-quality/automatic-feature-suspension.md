@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 236a95cd8d4af8da91199bf79e7c9fe3aa0d49af
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 976e676cda09d50e34acb88a12551b1531595888
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769481"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508385"
 ---
 # <a name="automatic-feature-suspension"></a>Otomatik özelliği askıya alma
 
@@ -40,7 +40,7 @@ Düşük bellek koşulunda aşağıdaki işlemler gerçekleşir:
 
 ## <a name="improve-visual-studio-performance"></a>Visual Studio performansını geliştirme
 
-Büyük çözümlerle veya düşük bellek koşullarıyla çalışırken Visual Studio performansının nasıl iyileştirecağıyla ilgili ipuçları ve püf noktaları için bkz. [büyük çözümler Için performans konuları](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions).
+Büyük çözümlerle veya düşük bellek koşullarıyla çalışırken Visual Studio performansının nasıl iyileştirecağıyla ilgili ipuçları ve püf noktaları için bkz. [büyük çözümler Için performans konuları](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Performance-considerations-for-large-solutions.md).
 
 ## <a name="live-code-analysis-is-reduced-to-minimal-scope"></a>Canlı Kod Analizi, en az sayıda kapsama indirgenmiş
 
@@ -69,4 +69,4 @@ Ayrıca, iç Visual Studio işlemleri için kullanılan önbellekler da temizlen
 
 - [Nasıl yapılır: yönetilen kod için canlı kod analizi kapsamını yapılandırma](./configure-live-code-analysis-scope-managed-code.md)
 - [Atık Toplamanın Temelleri](/dotnet/standard/garbage-collection/fundamentals)
-- [Büyük çözümler için performans konuları](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)
+- [Büyük çözümler için performans konuları](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Performance-considerations-for-large-solutions.md)

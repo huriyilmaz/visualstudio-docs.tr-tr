@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: 6f05f97155427d75b88bb509a6bfb09644d8c686
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 960bd86a1e0993e4d2c57514a29ceecca34cca3d
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250851"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508515"
 ---
 # <a name="configure-azure-cloud-service-roles-with-visual-studio"></a>Visual Studio ile Azure bulut hizmeti rollerini yapılandırma
 Bir Azure bulut hizmetinde bir veya daha fazla çalışan veya Web rolü olabilir. Her rol için, bu rolün nasıl ayarlandığını tanımlamanız ve ayrıca bu rolün nasıl çalıştığını tanımlamanız gerekir. Bulut hizmetlerindeki roller hakkında daha fazla bilgi edinmek için bkz. [Azure 'A giriş videosu Cloud Services](https://channel9.msdn.com/Series/Windows-Azure-Cloud-Services-Tutorials/Introduction-to-Windows-Azure-Cloud-Services).
@@ -140,7 +140,7 @@ Aşağıdaki adımlarda, C# kullanarak bir bağlantı dizesine programlı olarak
     ```
 
 ## <a name="add-custom-settings-to-use-in-your-azure-cloud-service"></a>Azure bulut hizmetinizde kullanmak üzere özel ayarlar ekleme
-Hizmet yapılandırma dosyasındaki özel ayarlar, belirli bir hizmet yapılandırması için bir dize adı ve değeri eklemenize olanak tanır. Bu ayarı, ayarın değerini okuyarak ve kodunuzda mantığı denetlemek için bu değeri kullanarak bulut hizmetinizdeki bir özelliği yapılandırmak için kullanmayı tercih edebilirsiniz. Hizmet paketinizi yeniden derlemek zorunda kalmadan veya bulut hizmetiniz çalışırken bu hizmet yapılandırma değerlerini değiştirebilirsiniz. Kodunuz, bir ayarın ne zaman değiştiği hakkında bildirimleri denetleyebilir. Bkz [. Roleenvironment. Changing olayı](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.changing.aspx).
+Hizmet yapılandırma dosyasındaki özel ayarlar, belirli bir hizmet yapılandırması için bir dize adı ve değeri eklemenize olanak tanır. Bu ayarı, ayarın değerini okuyarak ve kodunuzda mantığı denetlemek için bu değeri kullanarak bulut hizmetinizdeki bir özelliği yapılandırmak için kullanmayı tercih edebilirsiniz. Hizmet paketinizi yeniden derlemek zorunda kalmadan veya bulut hizmetiniz çalışırken bu hizmet yapılandırma değerlerini değiştirebilirsiniz. Kodunuz, bir ayarın ne zaman değiştiği hakkında bildirimleri denetleyebilir. Bkz [. Roleenvironment. Changing olayı](/previous-versions/azure/reference/ee758134(v=azure.100)).
 
 Hizmet yapılandırmalara yönelik özel ayarları ekleyebilir, kaldırabilir veya değiştirebilirsiniz. Farklı hizmet yapılandırmalarında bu dizeler için farklı değerler isteyebilirsiniz.
 
@@ -269,4 +269,4 @@ using (FileStream writeStream = File.Create(filePath))
 1. Windows Gezgini penceresi açıldığında **arama** metin kutusuna 'MyLocalStorageTest.txt' ' girin ve aramayı başlatmak için **ENTER** ' u seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
-[Azure projesi yapılandırmayı](vs-azure-tools-configuring-an-azure-project.md)okuyarak, Visual Studio 'da Azure projeleri hakkında daha fazla bilgi edinin. [Şema başvurusunu](https://msdn.microsoft.com/library/azure/dd179398)okuyarak bulut hizmeti şeması hakkında daha fazla bilgi edinin.
+[Azure projesi yapılandırmayı](vs-azure-tools-configuring-an-azure-project.md)okuyarak, Visual Studio 'da Azure projeleri hakkında daha fazla bilgi edinin. [Şema başvurusunu](/previous-versions/azure/dd179398(v=azure.100))okuyarak bulut hizmeti şeması hakkında daha fazla bilgi edinin.

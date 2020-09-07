@@ -10,12 +10,12 @@ ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
 ms.technology: vs-ide-debug
-ms.openlocfilehash: 68b64b3097d2b26d30593ac63de5e531d6cc7736
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 00b6d001a8764d3519f0584de88a55a000447054
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800495"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508489"
 ---
 # <a name="debugging-an-azure-cloud-service-or-virtual-machine-in-visual-studio"></a>Visual Studio 'da bir Azure bulut hizmetinde veya sanal makinede hata ayıklama
 
@@ -75,7 +75,7 @@ Bir bulut hizmeti için uzaktan hata ayıklamayı etkinleştirirseniz, performan
 
     ![Hata ayıklayıcı Ekle](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746719.gif)
 
-3. Hata ayıklayıcı bir örneğe eklendikten sonra, her zamanki gibi hata ayıklayın. Hata ayıklayıcı, rolünüz için uygun ana bilgisayar işlemine otomatik olarak eklenir. Rolün ne olduğuna bağlı olarak, hata ayıklayıcı w3wp.exe, WaWorkerHost.exe veya WaIISHost.exe iliştirir. Hata ayıklayıcının eklendiği işlemi doğrulamak için Sunucu Gezgini ' deki örnek düğümünü genişletin. Azure işlemleriyle ilgili daha fazla bilgi için bkz. [Azure rol mimarisi](https://blogs.msdn.microsoft.com/kwill/2011/05/05/windows-azure-role-architecture/) .
+3. Hata ayıklayıcı bir örneğe eklendikten sonra, her zamanki gibi hata ayıklayın. Hata ayıklayıcı, rolünüz için uygun ana bilgisayar işlemine otomatik olarak eklenir. Rolün ne olduğuna bağlı olarak, hata ayıklayıcı w3wp.exe, WaWorkerHost.exe veya WaIISHost.exe iliştirir. Hata ayıklayıcının eklendiği işlemi doğrulamak için Sunucu Gezgini ' deki örnek düğümünü genişletin. Azure işlemleriyle ilgili daha fazla bilgi için bkz. [Azure rol mimarisi](/archive/blogs/kwill/windows-azure-role-architecture) .
 
     ![Kod türünü seç iletişim kutusu](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
@@ -128,7 +128,7 @@ Visual Studio 'da Sunucu Gezgini kullanarak Azure sanal makinelerinde çalışan
 
     ![Kod türünü seç iletişim kutusu](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-5. Sanal makinede hata ayıklamak istediğiniz işlemi seçin ve ardından **Ekle**' yi seçin. Örneğin, sanal makinede bir Web uygulamasında hata ayıklamak istiyorsanız w3wp.exe işlemini seçebilirsiniz. Daha fazla bilgi için bkz. Visual Studio ve [Azure rol mimarisinde](https://blogs.msdn.microsoft.com/kwill/2011/05/05/windows-azure-role-architecture/) [bir veya daha fazla işlemde hata ayıklama](https://msdn.microsoft.com/library/jj919165.aspx) .
+5. Sanal makinede hata ayıklamak istediğiniz işlemi seçin ve ardından **Ekle**' yi seçin. Örneğin, sanal makinede bir Web uygulamasında hata ayıklamak istiyorsanız w3wp.exe işlemini seçebilirsiniz. Daha fazla bilgi için bkz. Visual Studio ve [Azure rol mimarisinde](/archive/blogs/kwill/windows-azure-role-architecture) [bir veya daha fazla işlemde hata ayıklama](../debugger/debug-multiple-processes.md) .
 
 ## <a name="create-a-web-project-and-a-virtual-machine-for-debugging"></a>Hata ayıklama için bir Web projesi ve sanal makine oluşturma
 
@@ -167,7 +167,7 @@ Visual Studio ASP.NET projeleri, uygulama testi için kullanabileceğiniz kullan
 
     ![Azure etkinlik günlüğü](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746721.png)
 
-6. Projenizi [nasıl yapılır: Visual Studio 'Da tek tıklamayla yayımlama kullanarak Web projesi dağıtma](https://msdn.microsoft.com/library/dd465337.aspx)bölümünde açıklandığı şekilde yayımlayın. Sanal makinede hata ayıklamak istediğiniz için, **Web 'ı Yayımla** sihirbazının **Ayarlar** sayfasında, yapılandırma olarak **Hata Ayıkla** ' yı seçin. Bu, hata ayıklama sırasında kod simgelerinin kullanılabilir olmasını sağlar.
+6. Projenizi [nasıl yapılır: Visual Studio 'Da tek tıklamayla yayımlama kullanarak Web projesi dağıtma](/previous-versions/aspnet/dd465337(v=vs.110))bölümünde açıklandığı şekilde yayımlayın. Sanal makinede hata ayıklamak istediğiniz için, **Web 'ı Yayımla** sihirbazının **Ayarlar** sayfasında, yapılandırma olarak **Hata Ayıkla** ' yı seçin. Bu, hata ayıklama sırasında kod simgelerinin kullanılabilir olmasını sağlar.
 
     ![Yayımlama ayarları](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718349.png)
 
@@ -183,7 +183,7 @@ Visual Studio ASP.NET projeleri, uygulama testi için kullanabileceğiniz kullan
 
     ![Kod türünü seç iletişim kutusu](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-10. Sanal makinede hata ayıklamak istediğiniz işlemi seçin ve ardından **Ekle**' yi seçin. Örneğin, sanal makinede bir Web uygulamasında hata ayıklamak istiyorsanız w3wp.exe işlemini seçebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'Da bir veya daha fazla Işlemde hata ayıklama](https://msdn.microsoft.com/library/jj919165.aspx) .
+10. Sanal makinede hata ayıklamak istediğiniz işlemi seçin ve ardından **Ekle**' yi seçin. Örneğin, sanal makinede bir Web uygulamasında hata ayıklamak istiyorsanız w3wp.exe işlemini seçebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'Da bir veya daha fazla Işlemde hata ayıklama](../debugger/debug-multiple-processes.md) .
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 57841baaf147c2aae02ac89a8401c46d3bd64ca3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 42d1f394cb4e65a3794e3e869f182ba81237eeef
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911677"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508398"
 ---
 # <a name="set-up-named-authentication-credentials"></a>Adlandırılmış kimlik doğrulama bilgilerini ayarlama
 
@@ -33,7 +33,7 @@ Sunucu Gezgini, **Azure** düğümüne sağ tıklayın ve **abonelikleri Yönet 
 - Etkin bir abonelik seçin ve kimlik doğrulamasında kullanılmak üzere mevcut bir aboneliği düzenlediğiniz bir iletişim kutusu açan **Düzenle**' yi seçin.
 - Yeni **abonelik** iletişim kutusunu açmak için **Yeni** ' yi seçin ve gereken ayrıntıları sağlayın. Sertifikayı bulut hizmetinize yüklemek için iletişim kutusunda, Azure portal oturum açın, bulut hizmetinize gidin, **ayarlar > yönetim sertifikaları**' nı seçin, **karşıya yükle**' yi seçin, sonra dosyanın yolunu belirtin `.cer` .
 
-Kendiniz bir sertifika oluşturmak isterseniz, [Azure için bir yönetim sertifikası oluşturma ve yükleme](https://msdn.microsoft.com/library/windowsazure/gg551722.aspx) ' deki yönergelere başvurabilirsiniz ve sonra sertifikayı [Azure Portal](https://portal.azure.com/)el ile yükleyebilirsiniz.
+Kendiniz bir sertifika oluşturmak isterseniz, [Azure için bir yönetim sertifikası oluşturma ve yükleme](/azure/cloud-services/cloud-services-certs-create) ' deki yönergelere başvurabilirsiniz ve sonra sertifikayı [Azure Portal](https://portal.azure.com/)el ile yükleyebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

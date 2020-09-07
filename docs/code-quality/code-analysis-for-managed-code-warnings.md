@@ -15,12 +15,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a72512eef8490f18f1179ae149b9a39c2ddaad4e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8238de0760f300b6fa418a5e3eb47eac3db77272
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89285716"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509022"
 ---
 # <a name="net-code-analysis-rules"></a>.NET kod analizi kuralları
 Yönetilen Kod Analizi Aracı, yönetilen kod kitaplıklarında kural ihlallerini belirten uyarılar sağlar. Uyarılar, tasarım, yerelleştirme, performans ve güvenlik gibi kural alanlarında düzenlenir. Her uyarı, yönetilen kod analizi kuralının ihlal edildiğini belirtir. Bu bölümde, her bir yönetilen kod analizi uyarısıyla ilgili ayrıntılı tartışmalar ve örnekler sağlanmaktadır.
@@ -44,18 +44,15 @@ Yönetilen Kod Analizi Aracı, yönetilen kod kitaplıklarında kural ihlallerin
 
 |Kategori|Açıklama|
 |-|-|
-|[CheckId 'ye göre uyarılar](../code-quality/code-analysis-warnings-for-managed-code-by-checkid.md)|Tüm uyarıları CheckId 'ye göre listeler|
-|[Şifreleme uyarıları](../code-quality/cryptography-warnings.md)|Şifrelemeyi doğru şekilde kullanarak daha güvenli kitaplıkları ve uygulamaları destekleyen uyarılar.|
-|[Tasarım uyarıları](../code-quality/design-warnings.md)|.NET tasarım yönergeleri tarafından belirtilen şekilde doğru kitaplık tasarımını destekleyen uyarılar.|
-|[Belge Uyarıları](../code-quality/documentation-warnings.md)|XML belgelerinin açıklamalarını doğru kullanarak iyi belgelenmiş kitaplık tasarımını destekleyen uyarılar.|
-|[Genelleştirme Uyarıları](../code-quality/globalization-warnings.md)|Uluslararası kitaplıkları ve uygulamaları destekleyen uyarılar.|
-|[Birlikte çalışabilirlik uyarıları](../code-quality/interoperability-warnings.md)|COM istemcileriyle etkileşimi destekleyen uyarılar.|
-|[Bakımsız uyarılar](../code-quality/maintainability-warnings.md)|Kitaplığı ve uygulama bakımını destekleyen uyarılar.|
-|[Mobility uyarıları](../code-quality/mobility-warnings.md)|Verimli güç kullanımını destekleyen uyarılar.|
-|[Adlandırma uyarıları](../code-quality/naming-warnings.md)|.NET Tasarım Yönergelerinin adlandırma kurallarına uygunluğunu destekleyen uyarılar.|
-|[Performans uyarıları](../code-quality/performance-warnings.md)|Yüksek performanslı kitaplıkları ve uygulamaları destekleyen uyarılar.|
-|[Taşınabilirlik uyarıları](../code-quality/portability-warnings.md)|Farklı platformlarda taşınabilirliği destekleyen uyarılar.|
-|[Güvenilirlik uyarıları](../code-quality/reliability-warnings.md)|Doğru bellek ve iş parçacığı kullanımı gibi kitaplık ve uygulama güvenilirliğini destekleyen uyarılar.|
-|[Güvenlik uyarıları](../code-quality/security-warnings.md)|Daha güvenli kitaplıkları ve uygulamaları destekleyen uyarılar.|
-|[Kullanım uyarıları](../code-quality/usage-warnings.md)|.NET ' in uygun kullanımını destekleyen uyarılar.|
-|[Kod Analiz İlkesi Hataları](../code-quality/code-analysis-policy-errors.md)|Kod Analizi ilkesi iadede karşılanmıyorsa oluşan hatalar.|
+|[KIMLIĞE göre kurallar](../code-quality/code-analysis-warnings-for-managed-code-by-checkid.md)|RuleId tarafından tüm kuralları listeler|
+|[Tasarım kuralları](../code-quality/design-warnings.md)|.NET tasarım yönergeleri tarafından belirtilen şekilde doğru kitaplık tasarımını destekleyen kurallar.|
+|[Belge kuralları](../code-quality/documentation-warnings.md)|XML belgelerinin açıklamalarını doğru kullanarak iyi belgelenmiş kitaplık tasarımını destekleyen kurallar.|
+|[Genelleştirme Kuralları](../code-quality/globalization-warnings.md)|Uluslararası kitaplıkları ve uygulamaları destekleyen kurallar.|
+|[Bakım kuralları](../code-quality/maintainability-warnings.md)|Kitaplığı ve uygulama bakımını destekleyen kurallar.|
+|[Adlandırma kuralları](../code-quality/naming-warnings.md)|.NET Tasarım Yönergelerinin adlandırma kurallarına uygunluğunu destekleyen kurallar.|
+|[Performans Kuralları](../code-quality/performance-warnings.md)|Yüksek performanslı kitaplıkları ve uygulamaları destekleyen kurallar.|
+|[Taşınabilirlik ve birlikte çalışabilirlik kuralları](../code-quality/interoperability-warnings.md)|Farklı platformlar genelinde taşınabilirliği ve COM istemcileriyle etkileşimi destekleyen kurallar.|
+|[Kuralları Yayımla](../code-quality/publish-warnings.md)|.NET uygulamaları için uygun yayımlamayı destekleyen kurallar.|
+|[Güvenilirlik kuralları](../code-quality/reliability-warnings.md)|Doğru bellek ve iş parçacığı kullanımı gibi kitaplık ve uygulama güvenilirliğini destekleyen kurallar.|
+|[Güvenlik Kuralları](../code-quality/security-warnings.md)|Daha güvenli kitaplıkları ve uygulamaları destekleyen kurallar.|
+|[Kullanım kuralları](../code-quality/usage-warnings.md)|.NET ' in uygun kullanımını destekleyen kurallar.|

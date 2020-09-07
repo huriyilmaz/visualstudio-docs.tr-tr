@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 06/28/2018
 ms.author: mikejo
-ms.openlocfilehash: 2312c636f465bd39cdcbc4ca0ab63c107151c5be
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: 9912a7fa0e83c5433e0eba1c7ffa23763331af6b
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426739"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508502"
 ---
 # <a name="set-up-diagnostics-for-azure-cloud-services-and-virtual-machines"></a>Azure Cloud Services ve sanal makineler için tanılamayı ayarlama
 Bir Azure bulut hizmetinde veya sanal makinede sorun gidermeniz gerektiğinde Azure Tanılama daha kolay bir şekilde kurmak için Visual Studio 'Yu kullanabilirsiniz. Tanılama, bulut hizmetinizi çalıştıran sanal makinelerde ve sanal makine örneklerinde sistem verilerini ve günlük verilerini yakalar. Tanılama verileri, seçtiğiniz bir depolama hesabına aktarılır. Azure 'da tanılama günlüğü hakkında daha fazla bilgi için bkz. [Azure App Service Web Apps için tanılama günlüğünü etkinleştirme](/azure/app-service/web-sites-enable-diagnostic-log).
@@ -156,18 +156,18 @@ Azure SDK 2,5 kullanıyorsanız ve özel bir veri kaynağı belirtmek istiyorsan
 ```
 
 ### <a name="performance-counters"></a>Performans sayaçları
-Performans sayacı bilgileri, sistem performans sorunlarını bulmanıza ve sistem ve uygulama performansını ayarlamanıza yardımcı olabilir. Daha fazla bilgi için bkz. [Azure uygulamasında performans sayaçlarını oluşturma ve kullanma](https://msdn.microsoft.com/library/azure/hh411542.aspx). Performans sayaçlarını yakalamak için, **performans sayaçlarını aktarmayı etkinleştir** onay kutusunu seçin. Olay günlüklerinin depolama hesabınıza aktarılması arasındaki aralığı artırmak veya azaltmak için, **aktarım süresi (dk)** değerini değiştirin. İzlemek istediğiniz performans sayaçlarının onay kutularını seçin.
+Performans sayacı bilgileri, sistem performans sorunlarını bulmanıza ve sistem ve uygulama performansını ayarlamanıza yardımcı olabilir. Daha fazla bilgi için bkz. [Azure uygulamasında performans sayaçlarını oluşturma ve kullanma](/azure/cloud-services/diagnostics-performance-counters). Performans sayaçlarını yakalamak için, **performans sayaçlarını aktarmayı etkinleştir** onay kutusunu seçin. Olay günlüklerinin depolama hesabınıza aktarılması arasındaki aralığı artırmak veya azaltmak için, **aktarım süresi (dk)** değerini değiştirin. İzlemek istediğiniz performans sayaçlarının onay kutularını seçin.
 
 ![Performans sayaçları](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC758147.png)
 
-Listelenmeyen bir performans sayacını izlemek için önerilen sözdizimini kullanarak performans sayacını girin. sonra **Ekle**' yi seçin. Sanal makinedeki işletim sistemi, hangi performans sayaçlarını izleyebileceğinizi belirler. Sözdizimi hakkında daha fazla bilgi için bkz. [sayaç yolu belirtme](https://msdn.microsoft.com/library/windows/desktop/aa373193.aspx).
+Listelenmeyen bir performans sayacını izlemek için önerilen sözdizimini kullanarak performans sayacını girin. sonra **Ekle**' yi seçin. Sanal makinedeki işletim sistemi, hangi performans sayaçlarını izleyebileceğinizi belirler. Sözdizimi hakkında daha fazla bilgi için bkz. [sayaç yolu belirtme](/windows/win32/perfctrs/specifying-a-counter-path).
 
 ### <a name="infrastructure-logs"></a>Altyapı günlükleri
 Altyapı günlüklerinde Azure tanılama altyapısı, RemoteAccess modülü ve RemoteForwarder modülü hakkında bilgiler vardır. Altyapı günlükleri hakkında bilgi toplamak için, **altyapı günlüklerinin aktarımını etkinleştir** onay kutusunu seçin. Altyapı günlüklerinin depolama hesabınıza aktarılması arasındaki aralığı artırmak veya azaltmak için, **aktarım süresi (dk)** değerini değiştirin.
 
 ![Tanılama altyapı günlükleri](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC758148.png)
 
-Daha fazla bilgi için bkz. [Azure Tanılama kullanarak günlük verilerini toplama](https://msdn.microsoft.com/library/azure/gg433048.aspx).
+Daha fazla bilgi için bkz. [Azure Tanılama kullanarak günlük verilerini toplama](/azure/cloud-services/cloud-services-dotnet-diagnostics).
 
 ### <a name="log-directories"></a>Günlük dizinleri
 Günlük dizinleri, Internet Information Services (IIS) istekleri, başarısız istekler veya seçtiğiniz klasörler için günlük dizinlerinden toplanan verilere sahiptir. Günlük dizinlerini yakalamak için, **günlük dizinlerinin aktarımını etkinleştir** onay kutusunu seçin. Depolama hesabınıza günlüklerin aktarımı arasındaki aralığı artırmak veya azaltmak için, **aktarım süresi (dk)** değerini değiştirin.
@@ -185,7 +185,7 @@ Olaylar, belirttiğiniz olay kaynaklarından ve olay bildirimlerinden yakalanır
 
 ![ETW günlükleri](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC766025.png)
 
-ETW çerçevesi, [System. Diagnostics. aspx](https://msdn.microsoft.com/library/system.diagnostics(v=vs.110)) ad alanındaki sınıflar aracılığıyla ASP.net desteklenir. Standart [System. Diagnostics. aspx](https://msdn.microsoft.com/library/system.diagnostics(v=vs.110)) sınıflarını devralan ve genişleten Microsoft. WindowsAzure. Diagnostics ad alanı, Azure ortamında bir günlük oluşturma çerçevesi olarak [System. Diagnostics. aspx](https://msdn.microsoft.com/library/system.diagnostics(v=vs.110)) kullanımını mümkün kılar. Daha fazla bilgi için bkz. [Microsoft Azure 'da günlüğe kaydetme ve izleme denetimi yapın](https://msdn.microsoft.com/magazine/ff714589.aspx) ve [Azure Cloud Services ve sanal makinelerde tanılamayı etkinleştirin](/azure/cloud-services/cloud-services-dotnet-diagnostics).
+ETW çerçevesi, [System. Diagnostics. aspx](/dotnet/api/system.diagnostics) ad alanındaki sınıflar aracılığıyla ASP.net desteklenir. Standart [System. Diagnostics. aspx](/dotnet/api/system.diagnostics) sınıflarını devralan ve genişleten Microsoft. WindowsAzure. Diagnostics ad alanı, Azure ortamında bir günlük oluşturma çerçevesi olarak [System. Diagnostics. aspx](/dotnet/api/system.diagnostics) kullanımını mümkün kılar. Daha fazla bilgi için bkz. [Microsoft Azure 'da günlüğe kaydetme ve izleme denetimi yapın](/archive/msdn-magazine/2010/june/msdn-magazine-cloud-diagnostics-take-control-of-logging-and-tracing-in-windows-azure) ve [Azure Cloud Services ve sanal makinelerde tanılamayı etkinleştirin](/azure/cloud-services/cloud-services-dotnet-diagnostics).
 
 ### <a name="crash-dumps"></a>Kilitlenme bilgi dökümleri
 Bir rol örneğinin çöktüğü hakkında bilgi yakalamak için **kilitlenme dökümlerinin aktarımını etkinleştir** onay kutusunu seçin. (ASP.NET çoğu özel durumu işleyeceğinden, bu genellikle yalnızca çalışan rolleri için yararlıdır.) Kilitlenme dökümlerinde ayrılan depolama alanı yüzdesini artırmak veya azaltmak için **Dizin kotası (%)** değerini değiştirin. Kilitlenme dökümlerinin depolandığı depolama kapsayıcısını değiştirebilir ve **tam** ya da **mini** döküm yakalamak isteyip istemediğinizi seçebilirsiniz.
@@ -194,7 +194,7 @@ Bir rol örneğinin çöktüğü hakkında bilgi yakalamak için **kilitlenme d�
 
 ![Kilitlenme bilgi dökümleri](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC766026.png)
 
-Daha fazla bilgi için bkz. [Microsoft Azure 'da günlüğe kaydetme ve izleme denetimi alma](https://msdn.microsoft.com/magazine/ff714589.aspx) ve [Bölüm 4: özel günlük bileşenleri ve Azure Tanılama 1,3 değişiklikleri Microsoft Azure tanılama](https://www.red-gate.com/simple-talk/cloud/platform-as-a-service/microsoft-azure-diagnostics-part-4-custom-logging-components-and-azure-diagnostics-1.3-changes/).
+Daha fazla bilgi için bkz. [Microsoft Azure 'da günlüğe kaydetme ve izleme denetimi alma](/archive/msdn-magazine/2010/june/msdn-magazine-cloud-diagnostics-take-control-of-logging-and-tracing-in-windows-azure) ve [Bölüm 4: özel günlük bileşenleri ve Azure Tanılama 1,3 değişiklikleri Microsoft Azure tanılama](https://www.red-gate.com/simple-talk/cloud/platform-as-a-service/microsoft-azure-diagnostics-part-4-custom-logging-components-and-azure-diagnostics-1.3-changes/).
 
 ## <a name="view-the-diagnostics-data"></a>Tanılama verilerini görüntüle
 Bir bulut hizmeti veya sanal makine için tanılama verilerini topladıktan sonra, bunu görüntüleyebilirsiniz.
@@ -256,7 +256,7 @@ Zaten çalışmakta olan bir bulut hizmetiyle ilgili bir sorunu araştırıyorsa
     Sunucu Gezgini ' de veri toplamayı değiştirirseniz, bulut hizmetinizi tamamen yeniden dağıtana kadar değişiklikler etkin kalır. Varsayılan yayımlama ayarlarını kullanırsanız, değişikliklerin üzerine yazılmaz. Varsayılan yayımlama ayarı, tam yeniden dağıtım yapmak yerine mevcut dağıtımı güncelleştirmedir. Dağıtım zamanında ayarların açık olduğundan emin olmak için, yayımlama sihirbazındaki **Gelişmiş ayarlar** sekmesine gidin ve ardından **dağıtım güncelleştirmesi** onay kutusunu temizleyin. Bu onay kutusu temizlenerek, ayarlar. wadcfgx (veya. wadcfg) dosyasında, rol için **Özellikler** Düzenleyicisi aracılığıyla ayarlanmış olanlarla döndürülür. Dağıtımınızı güncelleştirirseniz, Azure önceki ayarları tutar.
 
 ## <a name="troubleshoot-azure-cloud-service-issues"></a>Azure bulut hizmeti sorunlarını giderme
-Bulut hizmeti projelerinizle ilgili sorunlar yaşıyorsanız ("meşgul" durumunda kalmış olan bir rol ya da bir iç sunucu hatası oluşturursa, sorunu tanılamak ve onarmak için kullanabileceğiniz araçlar ve teknikler vardır. Yaygın sorunların ve çözümlerin belirli örnekleri için ve bu hataları tanılamak ve onarmak üzere kullanabileceğiniz kavram ve araçlara genel bir bakış için bkz. [Azure PaaS işlem Tanılama verileri](https://blogs.msdn.microsoft.com/kwill/2013/08/09/windows-azure-paas-compute-diagnostics-data/).
+Bulut hizmeti projelerinizle ilgili sorunlar yaşıyorsanız ("meşgul" durumunda kalmış olan bir rol ya da bir iç sunucu hatası oluşturursa, sorunu tanılamak ve onarmak için kullanabileceğiniz araçlar ve teknikler vardır. Yaygın sorunların ve çözümlerin belirli örnekleri için ve bu hataları tanılamak ve onarmak üzere kullanabileceğiniz kavram ve araçlara genel bir bakış için bkz. [Azure PaaS işlem Tanılama verileri](/archive/blogs/kwill/windows-azure-paas-compute-diagnostics-data).
 
 ## <a name="q--a"></a>Soru-Cevap
 **Arabellek boyutu nedir ve ne kadar çok olmalıdır?**
