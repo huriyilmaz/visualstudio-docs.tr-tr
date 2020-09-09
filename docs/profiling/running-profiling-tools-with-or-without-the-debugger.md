@@ -8,16 +8,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b3d50f8fcad0294adec032322229e9dd6cedac2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 147a7dbc029ae894a0054837e92feb0108dc19b4
+ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88508086"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89561594"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçları çalıştırma
 
-Visual Studio, performans ölçümü ve profil oluşturma araçlarının bir seçimini sunmaktadır. CPU kullanımı ve bellek kullanımı gibi bazı araçlar, hata ayıklayıcı ile veya olmadan çalışabilir ve derleme yapılandırmalarında yayın veya hata ayıklama yapabilir. Uygulama Zaman Çizelgesi gibi performans profil oluşturucu araçları, hata ayıklama veya sürüm yapılarında çalıştırılabilir. Hata ayıklayıcı ile tümleşik araçlar, Tanılama Araçları penceresi ve olayları sekmesi gibi yalnızca hata ayıklama oturumlarında çalıştırılır.
+Visual Studio, performans ölçümü ve profil oluşturma araçlarının bir seçimini sunmaktadır. CPU kullanımı ve bellek kullanımı gibi bazı araçlar, hata ayıklayıcı ile veya olmadan çalışabilir ve derleme yapılandırmalarında yayın veya hata ayıklama yapabilir. [Tanılama Araçları penceresinde](../profiling/profiling-feature-tour.md#view-performance-while-debugging) görüntülenen araçlar yalnızca hata ayıklama oturumu sırasında çalışır. [Performans Profilcisi](../profiling/profiling-feature-tour.md#post_mortem) 'nde görüntülenen araçlar hata ayıklayıcı olmadan çalışır ve verileri durdurup toplamayı seçtikten sonra sonuçları çözümleyebilirsiniz (mortem analizi için).
 
 >[!NOTE]
 >Windows 7 ve üzeri ile hata ayıklayıcı olmayan performans araçlarını kullanabilirsiniz. Hata ayıklayıcı ile tümleşik profil oluşturma araçlarını çalıştırmak için Windows 8 veya üzeri gereklidir.
@@ -46,6 +46,11 @@ Hangi araçların ve sonuçların kullanılacağına karar vermek için aşağı
 - Visual Studio Enterprise çalıştırıyorsanız, **araç**  >  **seçenekleri**  >  **IntelliTrace**'e giderek IntelliTrace 'i etkinleştirebilir veya devre dışı bırakabilirsiniz.
 
 Hata ayıklamayı durdurduğunuzda Tanılama oturumu sonlanır.
+
+Daha fazla bilgi için bkz.
+
+- [CPU kullanımını çözümleyerek uygulama performansını ölçme](../profiling/beginners-guide-to-performance-profiling.md)
+- [Visual Studio 'da bellek kullanımını ölçme](../profiling/memory-usage.md)
 
 ### <a name="the-events-tab"></a>Olaylar sekmesi
 
@@ -86,6 +91,15 @@ Performans verilerini hata ayıklama olmadan toplamak için, performans profil O
 Raporları kaydedebilir ve Tanılama Araçları başlatma sayfasında **son açılan oturumlar** listesinden açabilirsiniz.
 
 ![Tanılama Araçları son açılan oturumlar listesinin ekran görüntüsü](../profiling/media/diaghubopenexistingdiagsession.png "PDHUB_OpenExistingDiagSession")
+
+Daha fazla bilgi için bkz.
+
+- [CPU kullanımını çözümle](../profiling/cpu-usage.md)
+- [.NET kodu için bellek kullanımını analiz etme](../profiling/dotnet-alloc-tool.md)
+- [Bellek kullanımını analiz etme](../profiling/analyze-memory-usage.md)
+- [.NET zaman uyumsuz kodunun performansını çözümleme](../profiling/analyze-async.md)
+- [Veritabanı performansını çözümleme](../profiling/analyze-database.md)
+- [GPU kullanımını analiz etme](../profiling/gpu-usage.md)
 
 ## <a name="collect-profiling-data-from-the-command-line"></a>Komut satırından profil oluşturma verilerini toplama
 

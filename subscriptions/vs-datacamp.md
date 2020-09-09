@@ -1,18 +1,18 @@
 ---
-title: Veri bilimi becerilerinizi, seçilen Visual Studio aboneliklerindeki DataCamp avantajını kullanarak geliştirin. | Microsoft Belgeleri
+title: Visual Studio aboneliklerinde DataCamp ile veri bilimi yeteneklerini büyütün | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: fc33d419-78cf-485e-b558-5b7efa900f14
 ms.date: 04/17/2020
 ms.topic: how-to
 description: Seçili Visual Studio abonelikleriyle birlikte bulunan veri Camp eğitim aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: 49370b4b3425effc4b8eeef704684420edfd3d41
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b164dc4be4a06151b970ecd5522b82bde9aaeec7
+ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904520"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89561500"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde DataCamp eğitimi avantajı
 Uygun Visual Studio abonelikleri, DataCamp abonelikleri içerir.  DataCamp ile, tarayıcınızın rahatlığıyla ihtiyacınız olan tüm veri bilimi yeteneklerini öğrenebilirsiniz. Ne zaman ve ne zaman öğreneceğinizi seçebilirsiniz. Yüklenecek yazılım olmadan ve özel donanım gereksinimleri olmadan öğrenme veri bilimi her zamankinden daha kolay.

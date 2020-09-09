@@ -1,5 +1,5 @@
 ---
-title: Visual Studio aboneliklerinde kurumsal avantaj için Microsoft 365 uygulamalar | Microsoft Docs
+title: Visual Studio aboneliklerinde Enterprise için Microsoft 365 uygulamalar | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
@@ -7,12 +7,12 @@ ms.assetid: d1257931-392a-4a65-bf26-177737505122
 ms.date: 06/24/2020
 ms.topic: how-to
 description: Enterprise için Microsoft 365 uygulamalar hakkında bilgi edinin ve bunları yükler
-ms.openlocfilehash: eb9f87273cbd8439f5053f60411e41fac41e4161
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0249f2c97ba93c49985629143dabb842447c196f
+ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800820"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89561258"
 ---
 # <a name="microsoft-365-apps-for-enterprise-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Enterprise için Microsoft 365 uygulamalar
 Enterprise (eskiden Office 365 Pro Plus) için Microsoft 365 uygulamalar, seçilen Visual Studio aboneliklerinde kullanılabilir. 

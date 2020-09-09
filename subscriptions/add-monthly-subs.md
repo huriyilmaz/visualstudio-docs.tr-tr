@@ -1,5 +1,5 @@
 ---
-title: Abonelik yönetim portalına yeni aylık Visual Studio abonelikleri ekleme | Microsoft Docs
+title: Abonelik yönetim portalına yeni aylık abonelikler ekleme | Microsoft Docs
 author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
@@ -7,12 +7,12 @@ ms.assetid: 36f0d9f1-fe28-469f-a54c-dc46638270a8
 ms.date: 09/03/2020
 ms.topic: how-to
 description: Abonelik yönetim portalına yeni aylık Visual Studio abonelikleri satın alma hakkında bilgi edinin
-ms.openlocfilehash: 209484968e85613da7cf38af3dce6944413c678a
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: d765e03d2c499c8e96bb97fc532596b7cfd0b903
+ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426842"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89561409"
 ---
 # <a name="add-new-monthly-visual-studio-subscriptions-to-the-subscriptions-administration-portal"></a>Yeni aylık Visual Studio aboneliklerini abonelikler yönetim portalına ekleme
 Bir Azure aboneliği kullanarak yeni aylık Visual Studio abonelikleri satın aldığınızda kullanıcılara atamak için bunları abonelikler yönetim portalına eklemeniz gerekebilir.  
@@ -28,14 +28,14 @@ Aylık abonelikler ekleme adımları, kuruluşunuzun zaten sahip olduğu aboneli
 1. **Aboneleri Yönet** sekmesinde, **anlaşma Ekle** açılan ' yı seçin. 
 1. Açılan kutudan **yeni aylık abonelikler** seçin
    > [!div class="mx-imgBorder"]
-   > ![Yeni aylık abonelik Ekle açılan](_img/add-monthly-subs/add-subs-drop-down.png)
+   > ![Yeni aylık abonelik Ekle açılan](_img/add-monthly-subs/add-subs-drop-down.png "' Sözleşme Ekle ' ve ardından ' yeni aylık abonelikler ' i seçin.")
 1. Sistem, üzerinde Kullanıcı erişimi olan yönetici haklarına sahip olduğunuz herhangi bir Azure aboneliğini arar ve bu Azure abonelikleriyle satın alınan tüm Visual Studio aboneliklerini içeri aktaracaktır.
 1. Üzerinde Kullanıcı erişimi yönetici haklarına sahip olduğunuz bir Azure aboneliği bulunursa veya uygun Azure abonelikleri bulunursa ancak Visual Studio abonelikleri bulunamazsa, şu iletiyi alırsınız:
    > [!div class="mx-imgBorder"]
-   > ![Yeni aylık abonelik bulunamadı](_img/add-monthly-subs/no-subs-found.png)
+   > ![Yeni aylık abonelik bulunamadı](_img/add-monthly-subs/no-subs-found.png "Azure aboneliğinin veya Visual Studio aboneliklerinin size uygun olduğunu belirten hata iletisi.")
 1. Yeni aylık abonelikler bulunursa, bir onay iletisi alırsınız
    > [!div class="mx-imgBorder"]
-   > ![Abonelik eklendi onay iletisi](_img/add-monthly-subs/subs-added-confirmation.png)
+   > ![Abonelik eklendi onay iletisi](_img/add-monthly-subs/subs-added-confirmation.png "Bir onay iletisi, eklediğiniz abonelikleri görüntüler.")
 
 ## <a name="things-to-keep-in-mind"></a>Akılda tutulması gereken noktalar
 - Yeni aylık abonelikler ekleme seçeneği, yalnızca ilk satın alma işleminde kullanılabilir olacaktır.  Aylık abonelikler ekledikten sonra portalda her oturum açışınızda yeni abonelikler denetliyoruz. 

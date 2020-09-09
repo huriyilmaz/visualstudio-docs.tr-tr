@@ -1,18 +1,18 @@
 ---
-title: Visual Studio abonelikleri, Startup 'lar için Microsoft programı aracılığıyla Startup 'lar 'e sunuluyor
+title: Visual Studio abonelikleri, Startup 'lar programı için Microsoft aracılığıyla Startup 'lar 'e sunuluyor | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 71af88da-b9fa-4d12-999c-7d461f3df0ec
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Aboneliklerle ilgili ayrıntılar, Microsoft for Startups programı aracılığıyla sunulur.
-ms.openlocfilehash: 6c2fdcfc9fa71c1906a1033ac719b07cb0b157a4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 600f2e92843ee734766ea5e2d797620cd622892b
+ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80233249"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89561461"
 ---
 # <a name="visual-studio-subscriptions-offered-to-startups"></a>Başlatmalar için sunulan Visual Studio abonelikleri
 Startup 'lar için Microsoft 'a katılan nitelikli başlatmalar, [aylık bulut abonelikleri](https://visualstudio.microsoft.com/vs/pricing/)5 Visual Studio Enterprise elde edebilir. 

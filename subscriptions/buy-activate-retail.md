@@ -1,18 +1,18 @@
 ---
-title: Visual Studio abonelikleri Microsoft Store satın alınabilir | Microsoft Docs
+title: Microsoft Store 'de bulunan Visual Studio abonelikleri | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 76654645-08ee-445d-b9ee-123126d1f0fb
 ms.date: 04/13/2020
 ms.topic: how-to
 description: Visual Studio aboneliklerini Microsoft Store nasıl satın alabileceğinizi ve bunları Visual Studio abonelikleri portalında nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: f6fdb8dcc8b0e3eaa5e67692e7c3dd92f1467c5a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9eb4812d22096e9d36089e464dc9a37478480458
+ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88247481"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89561581"
 ---
 # <a name="visual-studio-subscriptions-are-available-through-the-microsoft-store"></a>Visual Studio abonelikleri Microsoft Store aracılığıyla kullanılabilir
 Visual Studio abonelikleri, [toplu lisanslama](https://www.microsoft.com/licensing/default), bulut çözümü sağlayıcıları, [Visual Studio Market](https://marketplace.visualstudio.com/subscriptions)ve Microsoft Store dahil olmak üzere çeşitli kanallar aracılığıyla kullanılabilir.  Bu makale, [Microsoft Store](https://www.microsoft.com/store/collections/visualstudio)aracılığıyla abonelikleri satın almayı ve etkinleştirmeyi keşfedecektir.  

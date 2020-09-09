@@ -1,18 +1,18 @@
 ---
-title: Microsoft ürün ve hizmet sözleşmesi 'nde (MPSA) Visual Studio abonelikleri | Microsoft Docs
+title: MPSA 'da Visual Studio abonelikleri | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: b331c837-3524-42b7-820e-b4fdd5e12793
 ms.date: 09/03/2020
 ms.topic: conceptual
-description: Microsoft ürün ve hizmet anlaşmasındaki (MPSA) Visual Studio abonelikleri
-ms.openlocfilehash: c5ba75038c1e87415eecdcb669698cfe5bbcacd2
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+description: Microsoft ürün ve hizmet sözleşmesi 'nde (MPSA) Visual Studio aboneliklerini yönetme hakkında bilgi edinin
+ms.openlocfilehash: 9d26bccebb11a59933c37ec0f29a9b6e30e86c5b
+ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426752"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89561396"
 ---
 # <a name="visual-studio-subscriptions-in-a-microsoft-products-and-services-agreement-mpsa"></a>Microsoft ürün ve hizmet anlaşmasındaki (MPSA) Visual Studio abonelikleri
 MPSA programı aracılığıyla Visual Studio abonelikleri satın aldıysanız, Visual Studio abonelikleri Yöneticisi olmaya ve kullanıcılarınıza abonelik atamadan önce bilmeniz gereken birkaç nokta vardır. Zaten yönetici olarak ayarladıysanız, doğrudan Visual Studio abonelikleri [Yönetim portalına](https://manage.visualstudio.com/)gidebilirsiniz.
