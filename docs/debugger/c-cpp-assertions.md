@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7ac27b46252582b3982082a2a9a90a09223574f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: abea0f45609c74e02cd95d6c21bbe8879d46eea1
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911613"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600210"
 ---
 # <a name="cc-assertions"></a>C/C++ Onayları
 Bir onaylama deyimi, programınızdaki bir noktada doğru olması beklenen bir koşulu belirtir. Bu koşul doğru değilse, onaylama başarısız olur, programınızın yürütülmesi kesintiye uğrar ve [onaylama başarısız iletişim kutusu](../debugger/assertion-failed-dialog-box.md) görüntülenir.
@@ -156,7 +156,7 @@ _ASSERTE(_CrtIsMemoryBlock (myData, size, &requestNumber, &filename, &linenumber
 [Bu konuda](#BKMK_In_this_topic)
 
 ## <a name="mfc-assertions"></a><a name="BKMK_MFC_assertions"></a> MFC onayları
-MFC, onaylama denetimi için [onaylama](https://msdn.microsoft.com/Library/1e70902d-d58c-4e7b-9f69-2aeb6cbe476c) makrosunu tanımlar. Ayrıca, `MFC ASSERT_VALID` `CObject::AssertValid` bir türetilmiş nesnenin iç durumunu denetlemek için ve yöntemlerini tanımlar `CObject` .
+MFC, onaylama denetimi için [onaylama](/previous-versions/ew16s3zc(v=vs.140)) makrosunu tanımlar. Ayrıca, `MFC ASSERT_VALID` `CObject::AssertValid` bir türetilmiş nesnenin iç durumunu denetlemek için ve yöntemlerini tanımlar `CObject` .
 
 MFC makrosunun bağımsız değişkeni `ASSERT` sıfır veya false olarak değerlendirilirse, makro program yürütmesini durdurur ve kullanıcıyı uyarır; Aksi takdirde yürütme devam eder.
 
@@ -175,7 +175,7 @@ ASSERT(x >= 0);   //  Assertion fails if x is negative
 ASSERT( pObject1->IsKindOf( RUNTIME_CLASS( CPerson ) ) );
 ```
 
-`ASSERT`Makro yayın sürümünde kod üretmez. Yayın sürümündeki ifadeyi değerlendirmeniz gerekiyorsa, onaylama yerine [VERIFY](https://msdn.microsoft.com/library/s8c29sw2.aspx#verify) makrosunu kullanın.
+`ASSERT`Makro yayın sürümünde kod üretmez. Yayın sürümündeki ifadeyi değerlendirmeniz gerekiyorsa, onaylama yerine [VERIFY](/cpp/mfc/reference/diagnostic-services#verify) makrosunu kullanın.
 
 ### <a name="mfc-assert_valid-and-cobjectassertvalid"></a><a name="BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid"></a> MFC ASSERT_VALID ve CObject:: AssertValid
 [CObject:: AssertValid](/cpp/mfc/reference/cobject-class#assertvalid) yöntemi, bir nesnenin iç durumunun çalışma zamanı denetimleri sağlar. `AssertValid`Sınıfınızı ' den türettiğinizde geçersiz kılmanız gerekli olmasa da `CObject` , bunu yaparak sınıfınızı daha güvenilir hale getirebilirsiniz. `AssertValid` geçerli değerler içerdiklerinden emin olmak için nesnenin tüm üye değişkenlerine onay gerçekleştirmelidir. Örneğin, işaretçi üye değişkenlerinin NULL olmadığını denetlemelidir.

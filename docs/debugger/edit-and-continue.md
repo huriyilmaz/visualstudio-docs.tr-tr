@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2accfed995415a508a47e492837ded7acea150d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d3da21a833764745a7b6fc7dd001eeb4995f44d
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72737889"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599639"
 ---
 # <a name="edit-code-and-continue-debugging-in-visual-studio-c-vb-c"></a>Visual Studio 'da kod düzenleme ve hata ayıklamaya devam etme (C#, VB, C++)
 Düzenle ve devam et, programınız kesme modundayken kaynak kodunuzda değişiklik yapmanızı sağlayan bir zaman tasarrufu özelliğidir. **Devam et** veya **adım**gibi bir yürütme komutu seçerek program yürütmeye devam ettiğinizde, Düzenle ve devam et, kod değişikliklerini bazı sınırlamalara göre otomatik olarak uygular. Bu, hata ayıklama oturumu sırasında kodunuzda değişiklik yapmanıza, tüm programınızı yeniden derlemenize ve hata ayıklama oturumunu yeniden başlatmanıza olanak tanır.
@@ -47,5 +47,4 @@ Düzenle ve devam et, programınız kesme modundayken kaynak kodunuzda değişik
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
-- [Düzenle ve devam et, hata ayıklama, Seçenekler Iletişim kutusu](https://msdn.microsoft.com/library/bcew296c.aspx)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)

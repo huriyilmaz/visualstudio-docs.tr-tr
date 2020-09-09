@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a89e60a47e5bab6580c78275357234bb9d3f1c56
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d8b7ac2aed43bcb39b4bb5924ad6f1cf2c438b64
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80527922"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600080"
 ---
 # <a name="debugger-security"></a>Hata Ayıklama Güvenliği
 Başka bir işlemde hata ayıklama özelliği, özellikle de uzaktan hata ayıklarken, daha önce sahip olmamanıza izin veren son derece geniş bir üstür sağlar. Kötü amaçlı bir hata ayıklayıcı, hata ayıklanan makinede yaygın olarak hasar verebilir.
@@ -57,7 +57,7 @@ Başka bir işlemde hata ayıklama özelliği, özellikle de uzaktan hata ayıkl
  Msvsmon yapılandırma hakkında daha fazla bilgi için bkz. [Uzaktan hata ayıklayıcıyı ayarlama](../debugger/remote-debugging.md#bkmk_setup).
 
 ### <a name="web-services-debugging-security"></a>Web Hizmetleri hata ayıklama güvenliği
- Yerel olarak hata ayıklamak daha güvenlidir, ancak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Web sunucusunda yüklü olmadığından, yerel hata ayıklama pratik olmayabilir. Genellikle, Web hizmetlerinde hata ayıklama geliştirme sırasında uzaktan yapılır, bu nedenle uzaktan hata ayıklama güvenliği için öneriler Web Hizmetleri hata ayıklaması için de geçerlidir. İşte bazı ek en iyi yöntemler. Daha fazla bilgi için bkz. [XML Web hizmetlerinde hata ayıklama](https://msdn.microsoft.com/library/c900b137-9fbd-4f59-91b5-9c2c6ce06f00).
+ Yerel olarak hata ayıklamak daha güvenlidir, ancak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Web sunucusunda yüklü olmadığından, yerel hata ayıklama pratik olmayabilir. Genellikle, Web hizmetlerinde hata ayıklama geliştirme sırasında uzaktan yapılır, bu nedenle uzaktan hata ayıklama güvenliği için öneriler Web Hizmetleri hata ayıklaması için de geçerlidir. İşte bazı ek en iyi yöntemler. Daha fazla bilgi için bkz. [XML Web hizmetlerinde hata ayıklama](/previous-versions/ms241873(v=vs.100)).
 
 - Güvenliği aşılmış bir Web sunucusunda hata ayıklamayı etkinleştirmeyin.
 

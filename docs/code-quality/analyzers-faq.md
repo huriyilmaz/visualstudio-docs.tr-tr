@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b060ae550fd0188728c827cac01c12d51930b57
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6109c1becfae51ebf3824b5683bc66a5d89b74a0
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88711553"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599613"
 ---
 # <a name="code-analysis-faq"></a>Kod Analizi hakkında SSS
 
@@ -92,7 +92,7 @@ Y **: kod**Analizi uyarılarının hata olarak değerlendirilmesini engellemek i
 
 **S**: çözüm Için kod analizi Özellik sayfası nerede?
 
-Y **: çözüm**düzeyindeki kod analizi Özellik sayfası, daha güvenilir paylaşılan özellik grubunun kullanım aşamasında kaldırılmıştır. Proje düzeyinde kod analizini yönetmek için, kod analizi Özellik sayfası hala kullanılabilir. (Yönetilen projeler için kural yapılandırması için RuleSets 'ten EditorConfig 'e geçiş de öneriyoruz.)  Bir çözüm ya da depodaki birden çok/tüm projede kural kümelerini paylaştırmak için, paylaşılan bir props/targets dosyasında veya dizin. props/Directory. targets dosyasında CodeAnalysisRuleSet özelliği ile bir özellik grubu tanımlamayı öneririz. Tüm projelerinizi içeri aktardıkları böyle bir ortak props veya hedefiniz yoksa, bu [tür bir özellik grubunu bir dizin. props veya bir dizin. targets, dizinde veya alt dizinlerinde tanımlanan tüm proje dosyalarına otomatik olarak içeri aktarılan bir en üst düzey çözüm dizinine eklemeyi](https://docs.microsoft.com/visualstudio/msbuild/customize-your-build?directorybuildprops-and-directorybuildtargets)göz önünde bulundurmanız gerekir.
+Y **: çözüm**düzeyindeki kod analizi Özellik sayfası, daha güvenilir paylaşılan özellik grubunun kullanım aşamasında kaldırılmıştır. Proje düzeyinde kod analizini yönetmek için, kod analizi Özellik sayfası hala kullanılabilir. (Yönetilen projeler için kural yapılandırması için RuleSets 'ten EditorConfig 'e geçiş de öneriyoruz.)  Bir çözüm ya da depodaki birden çok/tüm projede kural kümelerini paylaştırmak için, paylaşılan bir props/targets dosyasında veya dizin. props/Directory. targets dosyasında CodeAnalysisRuleSet özelliği ile bir özellik grubu tanımlamayı öneririz. Tüm projelerinizi içeri aktardıkları böyle bir ortak props veya hedefiniz yoksa, bu [tür bir özellik grubunu bir dizin. props veya bir dizin. targets, dizinde veya alt dizinlerinde tanımlanan tüm proje dosyalarına otomatik olarak içeri aktarılan bir en üst düzey çözüm dizinine eklemeyi](../msbuild/customize-your-build.md)göz önünde bulundurmanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

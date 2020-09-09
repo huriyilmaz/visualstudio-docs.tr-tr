@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 668e95c340348eeb1fa509622aa44d99b65b6efc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b99f7b44168a451e8e927e5e0d2ca1a7f8d0bf93
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72431811"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600327"
 ---
 # <a name="debug-multithreaded-applications-in-visual-studio"></a>Visual Studio 'da çok iş parçacıklı uygulamalarda hata ayıklama
 İş parçacığı, işletim sisteminin işlemci zamanı verdiği bir yönergeler dizisidir. İşletim sisteminde çalışan her işlem en az bir iş parçacığından oluşur. Birden fazla iş parçacığına sahip işlemlere çok iş parçacığı denir.
@@ -102,7 +102,7 @@ Yerel iş parçacıkları için hata ayıklama yararlı olabilecek basit teknikl
 
 - [Kesme noktalarını kullanma](../debugger/using-breakpoints.md)
 - [İş Parçacığı Oluşturma](/dotnet/standard/threading/index)
-- [Bileşenlerde çoklu iş parçacığı](https://msdn.microsoft.com/Library/2fc31e68-fb71-4544-b654-0ce720478779)
+- [Bileşenlerde çoklu iş parçacığı](/previous-versions/3es4b6yy(v=vs.140))
 - [Eski kod için çoklu iş parçacığı desteği](/cpp/parallel/multithreading-support-for-older-code-visual-cpp)
 - [Hata ayıklama iş parçacıkları ve süreçler](../debugger/debug-threads-and-processes.md)
 - [Uzaktan hata ayıklama](../debugger/remote-debugging.md)

@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75d044ed5ddaf4b7eb7a66bc09c8b3de3502a50f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e2157b55915f82e79dfdac5d300046850a93879
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350504"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600309"
 ---
 # <a name="inspect-an-exception-using-the-exception-helper"></a>Özel durum yardımcısını kullanarak özel bir durum inceleyin 
 
@@ -50,7 +50,7 @@ Visual Studio 2017 ' den başlayarak, hem .net hem de C/C++ kodu için, bir `Nul
 Özel durum Yardımcısı 'nın **özel durum ayarları** bölümünden geçerli türde bir özel durum oluştuğunda, hata ayıklayıcıyı kesilecek şekilde yapılandırabilirsiniz. Hata ayıklayıcı oluşturulan bir özel durum üzerinde duraklatılmışsa, gelecekte oluşturulduğunda bu özel durum türünün kesilmesini devre dışı bırakmak için onay kutusunu kullanabilirsiniz. Bu belirli bir modülde oluşturulan bu özel durumun kesilmesini istemiyorsanız, **özel durum ayarları** penceresinde, ' **den şunun dışında:** ' ın altında modül adıyla onay kutusunu işaretleyin. 
 
 ## <a name="inspect-inner-exceptions"></a>İç özel durumları incele 
-Özel durumun iç özel durumları varsa ([InnerException](https://docs.microsoft.com/dotnet/api/system.exception.innerexception), bunları özel durum Yardımcısı 'nda görüntüleyebilirsiniz. Birden çok özel durum varsa, çağrı yığınının üzerinde gösterilen sol ve sağ okları kullanarak bunlar arasında gezinebilirsiniz.
+Özel durumun iç özel durumları varsa ([InnerException](/dotnet/api/system.exception.innerexception), bunları özel durum Yardımcısı 'nda görüntüleyebilirsiniz. Birden çok özel durum varsa, çağrı yığınının üzerinde gösterilen sol ve sağ okları kullanarak bunlar arasında gezinebilirsiniz.
 
 ![İç özel durum ile özel durum Yardımcısı](media/debugger-exception-helper-innerexception.png)
 
@@ -60,4 +60,4 @@ Bir özel durumun özel durum Yardımcısı olduğu durumlarda, özel durumun ol
 ![Yeniden oluşturulan özel durumlarla özel durum Yardımcısı](media/debugger-exception-helper-innerexception.png)
 
 ## <a name="share-a-debug-session-with-live-share"></a>Live Share bir hata ayıklama oturumu paylaşma
-Özel durum Yardımcısı ' ndan, bağlantı **başlatma Live Share oturumu..**. ' yi kullanarak bir [live share](https://docs.microsoft.com/visualstudio/liveshare/) oturumu başlatabilirsiniz. Live Share oturumuna katılan herkes, diğer hata ayıklama bilgileriyle birlikte özel durum Yardımcısı 'nı görebilir.
+Özel durum Yardımcısı ' ndan, bağlantı **başlatma Live Share oturumu..**. ' yi kullanarak bir [live share](/visualstudio/liveshare/) oturumu başlatabilirsiniz. Live Share oturumuna katılan herkes, diğer hata ayıklama bilgileriyle birlikte özel durum Yardımcısı 'nı görebilir.

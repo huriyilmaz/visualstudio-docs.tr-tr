@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c1208db68f2ae65775c6e0a5b6cf4bda0fb35d8
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: a40273c3230854e4b1d1a11a3fd02de54d5df745
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509464"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599962"
 ---
 # <a name="security-warnings"></a>Güvenlik uyarıları
 
@@ -33,7 +33,7 @@ Güvenlik uyarıları, daha güvenli kütüphaneleri ve uygulamaları destekler.
 |[CA2100: SQL sorgularını güvenlik açıkları için inceleyin](../code-quality/ca2100.md)|Bir yöntem, yönteme dize değişkeninden oluşturulmuş dize kullanarak System.Data.IDbCommand.CommandText özelliğini ayarlar. Bu kural, dize değişkeninin kullanıcı girişi içerdiğini varsayar. Kullanıcı girişi ile oluşan SQL komut dizesi, SQL enjeksiyon saldırılarına karşı savunmasız durumdadır.|
 |[CA2109: Görünen olay işleyicilerini gözden geçirin](../code-quality/ca2109.md)|Ortak veya korunan olay işleme yöntemi algılandı. Olay işleme yöntemleri kesinlikle gerekli olmadığı sürece maruz bırakılmamalıdır.|
 |[CA2119: Özel arabirimleri karşılayan metotları mühürleyin](../code-quality/ca2119.md)|Devralınabilir bir ortak tür, bir iç (Visual Basic arkadaş) arabirimin geçersiz kılınabilir bir yöntem uygulamasını sağlar. Bu kuralın ihlalini düzeltmek için yöntemin, derlemenin dışından geçersiz kılınmasını önleyin.|
-|[CA2153: Bozuk Durum Özel Durumlarını İşlemekten Kaçının](../code-quality/ca2153.md)|[Bozuk durum özel durumları (CSE)](https://msdn.microsoft.com/magazine/dd419661.aspx) , işlemde belleğin bozulma olduğunu gösterir. Bir saldırgan bozuk bellek bölgesine bir yararlanma işlemi gerçekleştirilebileceği takdirde, işlemin çökmesine izin vermek yerine bunları yakalama güvenlik açıklarına yol açabilir.|
+|[CA2153: Bozuk Durum Özel Durumlarını İşlemekten Kaçının](../code-quality/ca2153.md)|[Bozuk durum özel durumları (CSE)](/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions) , işlemde belleğin bozulma olduğunu gösterir. Bir saldırgan bozuk bellek bölgesine bir yararlanma işlemi gerçekleştirilebileceği takdirde, işlemin çökmesine izin vermek yerine bunları yakalama güvenlik açıklarına yol açabilir.|
 |[CA2300: Güvenli olmayan seri durumdan çıkarıcı BinaryFormatter kullanmayın](../code-quality/ca2300.md)|Güvenilmeyen verilerin serisi kaldırılırken güvenli olmayan seri hale getiriciler savunmasızdır. Saldırgan, kötü amaçlı yan etkileri olan nesneleri eklemek için seri hale getirilmiş verileri beklenmedik türleri içerecek şekilde değiştirebilir.|
 |[CA2301: İlk olarak BinaryFormatter.Binder öğesini ayarlamadan önce BinaryFormatter.Deserialize çağırmayın](../code-quality/ca2301.md)|Güvenilmeyen verilerin serisi kaldırılırken güvenli olmayan seri hale getiriciler savunmasızdır. Saldırgan, kötü amaçlı yan etkileri olan nesneleri eklemek için seri hale getirilmiş verileri beklenmedik türleri içerecek şekilde değiştirebilir.|
 |[CA2302: BinaryFormatter.Deserialize çağırmadan önce BinaryFormatter.Binder öğesinin ayarlandığından emin olun](../code-quality/ca2302.md)|Güvenilmeyen verilerin serisi kaldırılırken güvenli olmayan seri hale getiriciler savunmasızdır. Saldırgan, kötü amaçlı yan etkileri olan nesneleri eklemek için seri hale getirilmiş verileri beklenmedik türleri içerecek şekilde değiştirebilir.|

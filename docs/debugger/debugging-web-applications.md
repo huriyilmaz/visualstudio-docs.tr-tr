@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b1a7727f93e3f4fe279bb9cc009e61a3fdd70a15
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e2f54e80059896345abb00e955a827a00b5a35a5
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73714456"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600118"
 ---
 # <a name="debugging-web-applications"></a>Web Uygulamalarında Hata Ayıklama
 
@@ -42,7 +42,7 @@ Bu makalede, farklı türlerde Web uygulamalarında hata ayıklamanıza yardımc
 
 - AJAX betik uygulamalarında hata ayıklama
 
-  AJAX özellikli Web uygulamaları, komut dosyası kodunun yoğun bir şekilde kullanılmasını sağlar ve özel hata ayıklama zorluklarını yapar. AJAX hata ayıklama teknikleri hakkında bilgi için bkz. [hata ayıklama ve Izleme Ajax uygulamalarına genel bakış](https://msdn.microsoft.com/Library/92684ea0-7bb4-4a34-9203-3aa6394ce375).
+  AJAX özellikli Web uygulamaları, komut dosyası kodunun yoğun bir şekilde kullanılmasını sağlar ve özel hata ayıklama zorluklarını yapar. AJAX hata ayıklama teknikleri hakkında bilgi için bkz. [hata ayıklama ve Izleme Ajax uygulamalarına genel bakış](/previous-versions/bb398817(v=vs.140)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

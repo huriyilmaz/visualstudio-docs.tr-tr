@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68cbd19b65eb25405dc994100baf4fddeef9479d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 00a802c0083a9e67a145077ff8ec5842b30eb607
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350465"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600102"
 ---
 # <a name="getting-started-with-visual-studio-graphics-diagnostics"></a>Visual Studio Grafik Tanılama’ya Başlarken
 Bu bölümde Grafik Tanılama ilk kez kullanmaya hazırlarsınız, sonra Direct3D uygulamasından çerçeveler yakalayıp grafik Çözümleyicisi 'nde inceleyebilirsiniz.
@@ -56,7 +56,7 @@ Bu bölümde Grafik Tanılama ilk kez kullanmaya hazırlarsınız, sonra Direct3
 İle Grafik Tanılama araştırmak için kendi Direct3D uygulamanız zaten varsa harika! Aksi takdirde, aşağıdakilerden birini kullanın:
 
 ::: moniker range=">=vs-2019"
-[Direct3D oyun örneğinden](https://docs.microsoft.com/samples/microsoft/windows-universal-samples/simple3dgamedx/)bir örnek indirin.
+[Direct3D oyun örneğinden](/samples/microsoft/windows-universal-samples/simple3dgamedx/)bir örnek indirin.
 ::: moniker-end
 ::: moniker range="vs-2017"
 - Windows 10 için **DirectX 11 uygulaması (Evrensel Windows)** veya **DirectX 12 uygulaması (Evrensel Windows)** proje şablonları.

@@ -17,18 +17,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4deaf03013b6e28ea02e6ec7412bd23a05f1b87e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 10b370b653590dd5061dc98d31d74d3351180dc6
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738258"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600312"
 ---
 # <a name="about-the-registers-window-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio 'da Yazmaçları penceresi hakkında (C#, C++, Visual Basic, F #)
 
 **Yazmaçları** penceresi yalnızca, **Seçenekler** Iletişim kutusunda, **hata ayıklama** düğümünde adres düzeyi hata ayıklama etkinse kullanılabilir.
 
- Yazmaçları, işlemcinin etkin bir şekilde çalıştığı küçük veri parçalarını depolamak için kullanılan bir işlemci (CPU) içindeki özel konumlardır. Kaynak kodu derlemek veya yorumlamak, verileri bellekten kayıtlara taşıdığınızda ve gerektiğinde yeniden geri alan yönergeler oluşturur. Kayıt içindeki verilere erişmek, bellekteki verilere erişirken çok hızlıdır. bu nedenle, işlemcinin verileri bir kasada bulundurmasına ve bu işlem, işlemcinin kayıtları sürekli olarak yüklemesini ve kaldırmayı gerektiren koddan daha hızlı bir şekilde çalışmasına olanak tanır. Derleyicinin verileri Yazmaçlarda tutmasını ve diğer iyileştirmeler gerçekleştirmesini kolaylaştırmak için, genel değişkenleri kullanmaktan kaçının ve yerel değişkenlere mümkün olduğunca güvenmelisiniz. Bu şekilde yazılan kod, başvurunun doğru yere sahip olduğu söylenir. C/C++ gibi bazı dillerde, programcılar bir yazmaç değişkeni bildirebilir, bu da derleyiciye değişkeni her zaman bir kasada tutmak için en iyi şekilde denemesini söyler. Daha fazla bilgi için bkz. [register anahtar sözcüğü](https://msdn.microsoft.com/library/5b66905a-2f7f-4918-bb55-5e66d4bc50f9).
+ Yazmaçları, işlemcinin etkin bir şekilde çalıştığı küçük veri parçalarını depolamak için kullanılan bir işlemci (CPU) içindeki özel konumlardır. Kaynak kodu derlemek veya yorumlamak, verileri bellekten kayıtlara taşıdığınızda ve gerektiğinde yeniden geri alan yönergeler oluşturur. Kayıt içindeki verilere erişmek, bellekteki verilere erişirken çok hızlıdır. bu nedenle, işlemcinin verileri bir kasada bulundurmasına ve bu işlem, işlemcinin kayıtları sürekli olarak yüklemesini ve kaldırmayı gerektiren koddan daha hızlı bir şekilde çalışmasına olanak tanır. Derleyicinin verileri Yazmaçlarda tutmasını ve diğer iyileştirmeler gerçekleştirmesini kolaylaştırmak için, genel değişkenleri kullanmaktan kaçının ve yerel değişkenlere mümkün olduğunca güvenmelisiniz. Bu şekilde yazılan kod, başvurunun doğru yere sahip olduğu söylenir. C/C++ gibi bazı dillerde, programcılar bir yazmaç değişkeni bildirebilir, bu da derleyiciye değişkeni her zaman bir kasada tutmak için en iyi şekilde denemesini söyler. Daha fazla bilgi için bkz. [register anahtar sözcüğü](/previous-versions/482s4fy9(v=vs.140)).
 
  Yazmaçları iki türe ayrılabilir: genel amaçlı ve özel amaç. Genel amaçlı kayıt kayıtları, iki sayı ekleme veya bir dizideki bir öğeye başvurma gibi genel işlemlere yönelik verileri tutar. Özel amaçlı kayıtların belirli amaçları ve özelleştirilmiş anlamları vardır. İyi bir örnek, işlemcinin programın çağrı yığınını izlemek için kullandığı yığın işaretçisi kayıt örneğidir. Bir programcı olarak, büyük olasılıkla yığın işaretçisini doğrudan işlemeyecektir. Ancak, yığın işaretçisi olmadığında, işlemcinin bir işlev çağrısının sonunda nereye dönebileceklerini bilmez hale getirmediği için, programınızın düzgün çalışması önemlidir.
 

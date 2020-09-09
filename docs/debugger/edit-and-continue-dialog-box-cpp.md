@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d708b4f74777fb40eccc2fef9b782689f830e092
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ba7b133594d016d1a80efae4d18d1fb55a96398d
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72737966"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599547"
 ---
 # <a name="edit-and-continue-dialog-box-c"></a>Düzenle ve Devam Et İletişim Kutusu (C++)
 Düzenle ve devam et, yerel kodunuzda yaptığınız değişiklikleri uygulayamadı. Bu geçici bir durum olabilir. Bazen Düzenle ve devam et yerel kod değişikliklerini hemen uygulayamaz, ancak hata ayıklama oturumu sırasında daha sonra (örneğin, şu anda yürütülmekte olan yordama yapılan geçerli çağrının tamamlanmasından sonra) uygulanabilir. Daha fazla bilgi için bkz. [Düzenle ve devam et](../debugger/edit-and-continue.md).
@@ -32,4 +32,4 @@ Düzenle ve devam et, yerel kodunuzda yaptığınız değişiklikleri uygulayama
  Hata ayıklarken hatayı gidermek için kodu düzenleyebilir, hata ayıklamayı durdurup kodu düzeltemedi veya hatayı yoksayıp hata ayıklamaya devam edebilirsiniz. Bu çözümü yapmadan devam ederseniz, kod değişiklikleriniz hemen uygulanmaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Düzenle ve devam et, hata ayıklama, Seçenekler Iletişim kutusu](https://msdn.microsoft.com/library/bcew296c.aspx)
+- [Düzenle ve devam et, hata ayıklama, Seçenekler Iletişim kutusu](./edit-and-continue.md)

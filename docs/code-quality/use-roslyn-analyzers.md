@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ac5103b15cee6e44650d9b8aef6fdf755874b2d2
-ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
+ms.openlocfilehash: 22a82abab6b0c11ed57780ac69b4af9e1290ac2d
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89490293"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599973"
 ---
 # <a name="use-code-analyzers"></a>Kod Çözümleyicileri kullanma
 
@@ -118,7 +118,7 @@ Belirli bir kural KIMLIĞI için geçerli olan birden çok girdiniz varsa, uygul
 - Tek bir kural için önem derecesi girişi, bir kategori için önem derecesine göre öncelik alır.
 - Bir kategori için önem derecesi, tüm çözümleyici kuralları için önem derecesine göre öncelik girişi alır.
 
-Aşağıdaki EditorConfig örneğini göz önünde bulundurun, burada [CA1822](https://docs.microsoft.com/visualstudio/code-quality/ca1822) "Performance" kategorisine sahiptir:
+Aşağıdaki EditorConfig örneğini göz önünde bulundurun, burada [CA1822](./ca1822.md) "Performance" kategorisine sahiptir:
 
    ```ini
    [*.cs]

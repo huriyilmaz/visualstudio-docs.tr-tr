@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e9de4e43346c0c7261bbd834349f09619b262e17
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 824ee989f17b6a341679f541f95906056cf6f8de
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72737936"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599533"
 ---
 # <a name="edit-and-continue-dialog-box"></a>Düzenle ve Devam Et İletişim Kutusu
 (Yalnızca yerel) Bu iletişim kutusu hata ayıklama sırasında kodu düzenlediyseniz ve **Düzenle ve devam et** işlevinin kod değişikliklerini uygulayabileceğini algıladığında görüntülenir. Daha fazla bilgi için bkz. [Düzenle ve devam et](../debugger/edit-and-continue.md).
@@ -31,4 +31,4 @@ ms.locfileid: "72737936"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
-- [Düzenle ve devam et, hata ayıklama, Seçenekler Iletişim kutusu](https://msdn.microsoft.com/library/bcew296c.aspx)
+- [Düzenle ve devam et, hata ayıklama, Seçenekler Iletişim kutusu](./edit-and-continue.md)

@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: b7d9ed2f2ceeae21b85fdb8227e65715cb07bc8b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 87f8fbec389e3735b6f1c39cdd671a391c7334d7
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350569"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600110"
 ---
 # <a name="generate-source-code-from-net-assemblies-while-debugging"></a>Hata ayıklama sırasında .NET derlemelerinden kaynak kodu oluşturma
 
@@ -27,7 +27,7 @@ Bir .NET uygulamasında hata ayıklarken, sahip olmadığınız kaynak kodu gör
 > [!NOTE]
 > * Kaynak kodu oluşturma (ayrıştırılmış) yalnızca .NET uygulamalarında kullanılabilir ve açık kaynaklı [ılspy](https://github.com/icsharpcode/ILSpy) projesini temel alır.
 > * Decompilation yalnızca Visual Studio 2019 16,5 ve üzeri sürümlerde kullanılabilir.
-> * Bir derlemeye veya modüle [Suppressildasmattribute](https://docs.microsoft.com/dotnet/api/system.runtime.compilerservices.suppressildasmattribute) özniteliğini uygulamak, Visual Studio 'nun derlemeyi kaldırma girişiminde bulunmasını engeller.
+> * Bir derlemeye veya modüle [Suppressildasmattribute](/dotnet/api/system.runtime.compilerservices.suppressildasmattribute) özniteliğini uygulamak, Visual Studio 'nun derlemeyi kaldırma girişiminde bulunmasını engeller.
 
 ## <a name="generate-source-code"></a>Kaynak kodu oluştur
 
@@ -99,7 +99,7 @@ GitHub sorunu: [pdb Oluşturucu durumu](https://github.com/icsharpcode/ILSpy/iss
 
 ### <a name="just-my-code"></a>Yalnızca Kendi Kodum
 
-[Yalnızca kendi kodum (JMC)](https://docs.microsoft.com/visualstudio/debugger/just-my-code) ayarları, Visual Studio 'nun sistem, çerçeve, kitaplık ve diğer kullanıcı olmayan çağrılar üzerinde ilermasına olanak tanır. Bir hata ayıklama oturumu sırasında **modüller** penceresi, hata ayıklayıcının kodum (Kullanıcı kodu) olarak hangi kod modüllerine davranılması gerektiğini gösterir.
+[Yalnızca kendi kodum (JMC)](./just-my-code.md) ayarları, Visual Studio 'nun sistem, çerçeve, kitaplık ve diğer kullanıcı olmayan çağrılar üzerinde ilermasına olanak tanır. Bir hata ayıklama oturumu sırasında **modüller** penceresi, hata ayıklayıcının kodum (Kullanıcı kodu) olarak hangi kod modüllerine davranılması gerektiğini gösterir.
 
 En iyileştirilmiş veya yayın modüllerinin derlenmesi Kullanıcı olmayan kod üretir. Hata ayıklayıcı, derlenmiş Kullanıcı olmayan kodunuzda kaparsa **kaynak** penceresi görünmez. Yalnızca kendi kodum devre dışı bırakmak için, **Tools**  >  Genel hata ayıklama > Araçlar**Seçenekler** (veya **hata ayıklama**  >  **seçenekleri**) bölümüne gidin **Debugging**  >  **General**ve **yalnızca kendi kodum etkinleştir**seçimini kaldırın.
 

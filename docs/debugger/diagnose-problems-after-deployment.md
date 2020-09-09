@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a4ae5e4f6f21208f02cbfd6513b3c5eb28124a8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 659167b02703cd3a51751fbe90fbd9408b5e623d
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350595"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599561"
 ---
 # <a name="diagnose-problems-after-deployment-using-intellitrace-c-visual-basic"></a>IntelliTrace kullanarak dağıtımdan sonra sorunları tanılama (C#, Visual Basic)
 
@@ -153,7 +153,7 @@ Visual Studio 2017 ve sonraki sürümleri, kullanım dışı bırakılmış ve k
  **/p: BuildSymbolStorePath =**\<*path to symbols*>
 
 ## <a name="step-2-release-your-app"></a><a name="DeployRelease"></a> 2. Adım: uygulamanızı serbest bırakma
- Uygulamanızı dağıtmak için derleme işleminiz tarafından oluşturulan [Web. deploy paketini](https://msdn.microsoft.com/library/dd394698.aspx) kullanırsanız, derleme bildirimi otomatik olarak "*ProjectName*.BuildInfo.config" iken "BuildInfo.config" olarak yeniden adlandırılır ve Web sunucunuzdaki uygulamanızın Web.config dosyası ile aynı klasöre konur.
+ Uygulamanızı dağıtmak için derleme işleminiz tarafından oluşturulan [Web. deploy paketini](/previous-versions/aspnet/dd394698(v=vs.110)) kullanırsanız, derleme bildirimi otomatik olarak "*ProjectName*.BuildInfo.config" iken "BuildInfo.config" olarak yeniden adlandırılır ve Web sunucunuzdaki uygulamanızın Web.config dosyası ile aynı klasöre konur.
 
  Uygulamanızı dağıtmak için başka yöntemler kullanıyorsanız, Derleme bildiriminin "*ProjectName*.BuildInfo.config" iken "BuildInfo.config" olarak yeniden adlandırıldığından ve Web sunucusundaki uygulamanızın Web.config dosyası ile aynı klasöre yerleştirdiğinizden emin olun.
 
