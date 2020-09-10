@@ -10,12 +10,12 @@ metadata:
   ms.author: mikejo
   manager: jillfra
   ms.date: 09/20/2019
-  ms.openlocfilehash: f1d2a1577f01dcca9763a775a28f27691928bb43
-  ms.sourcegitcommit: ad13d7b427303b0e801d54dc521dfb3c1e2bf6e4
+  ms.openlocfilehash: f65c41b4647a811377d1d090635c889a784678ae
+  ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 07/15/2020
-  ms.locfileid: "86405428"
+  ms.lasthandoff: 09/09/2020
+  ms.locfileid: "89600134"
 landingContent:
 - title: Hata ayıklama hakkında
   linkLists:
@@ -34,11 +34,11 @@ landingContent:
     - text: Başlayanlar için hata ayıklama
       url: debugging-absolute-beginners.md
     - text: C#’ta hata ayıklamayı öğrenin
-      url: /visualstudio/get-started/csharp/tutorial-debugger?toc=/visualstudio/debugger/toc.json
+      url: ../get-started/csharp/tutorial-debugger.md?toc=%252fvisualstudio%252fdebugger%252ftoc.json
     - text: C++’ta hata ayıklamayı öğrenin
       url: getting-started-with-the-debugger-cpp.md
     - text: Visual Basic’te hata ayıklamayı öğrenin
-      url: /visualstudio/get-started/visual-basic/tutorial-debugger?toc=/visualstudio/debugger/toc.json
+      url: ../get-started/visual-basic/tutorial-debugger.md?toc=%252fvisualstudio%252fdebugger%252ftoc.json
     - text: Hata ayıklayıcıda Python kodu çalıştırma >>
       url: ../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md
 - title: Duraklatma ve koda gitme
@@ -68,7 +68,7 @@ landingContent:
     - text: Hata ayıklayıcısı ipuçları ve püf noktaları
       url: debugger-tips-and-tricks.md
     - text: XAML kodu çalıştırarak yazma ve hata ayıklama
-      url: xaml-hot-reload.md
+      url: ../xaml-tools/xaml-hot-reload.md
     - text: Canlı bir Azure uygulamasında hata ayıklama
       url: debug-live-azure-applications.md
     - text: Hata ayıklayıcıya ne göstereceğini söyleme

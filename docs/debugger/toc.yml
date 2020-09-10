@@ -21,11 +21,11 @@
 - name: Öğreticiler
   items:
     - name: C#’ta hata ayıklamayı öğrenin
-      href: /visualstudio/get-started/csharp/tutorial-debugger?toc=/visualstudio/debugger/toc.json
+      href: ../get-started/csharp/tutorial-debugger.md?toc=%252fvisualstudio%252fdebugger%252ftoc.json
     - name: C++’ta hata ayıklamayı öğrenin
       href: getting-started-with-the-debugger-cpp.md
     - name: Visual Basic’te hata ayıklamayı öğrenin
-      href: /visualstudio/get-started/visual-basic/tutorial-debugger?toc=/visualstudio/debugger/toc.json
+      href: ../get-started/visual-basic/tutorial-debugger.md?toc=%252fvisualstudio%252fdebugger%252ftoc.json
     - name: Hata ayıklayıcıda Python kodu çalıştırma...
       href: ../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md
     - name: Canlı bir Azure uygulamasında hata ayıklama
@@ -313,7 +313,7 @@
             - name: DNS'nin hedef bilgisayarda doğru yapılandırıldığından emin olun
               href: error-ensure-that-dns-is-correctly-configured-on-the-target-computer.md
             - name: Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi (MSVSMON.EXE) uzak bilgisayar üzerinde çalışıyor görünmüyor.
-              href: /visualstudio/debugger/error-remote-debugging-monitor-msvsmon-exe-does-not-appear-to-be-running
+              href: ./error-remote-debugging-monitor-msvsmon-exe-does-not-appear-to-be-running.md
             - name: Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi'ne bağlanılamıyor
               href: unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor.md
             - name: DCOM iletişimi başlatılamıyor
@@ -445,7 +445,7 @@
             - name: Yüklü uygulama paketinin hatalarını ayıklama
               href: debug-installed-app-package.md
             - name: Hata ayıklama sırasında XAML özelliklerini denetleme
-              href: inspect-xaml-properties-while-debugging.md
+              href: ../xaml-tools/inspect-xaml-properties-while-debugging.md
             - name: XAML kodu çalıştırarak yazma ve hata ayıklama
               href: ../xaml-tools/xaml-hot-reload.md
             - name: Blend'de XAML hatalarını ayıklama
@@ -505,7 +505,7 @@
                 - name: WPF hatalarını ayıklama
                   href: debugging-wpf.md
                 - name: Hata ayıklama sırasında XAML özelliklerini denetleme
-                  href: inspect-xaml-properties-while-debugging.md
+                  href: ../xaml-tools/inspect-xaml-properties-while-debugging.md
                 - name: XAML kodu çalıştırarak yazma ve hata ayıklama
                   href: ../xaml-tools/xaml-hot-reload.md
                 - name: WPF Ağacı Görselleştiricisini kullanma
