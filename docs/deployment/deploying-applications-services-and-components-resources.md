@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7125be46a894072f034bf1fce3060d2bda564aff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 20524a02cf6ff38e8336ae715162f9f197d46590
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800845"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641643"
 ---
 # <a name="deploy-your-app-to-a-folder-iis-azure-or-another-destination"></a>Uygulamanızı bir klasöre, IIS 'ye, Azure 'a veya başka bir hedefe dağıtın
 
@@ -84,7 +84,7 @@ App Service yayımlama hakkında daha fazla bilgi için bkz.:
 
 Sanal makinelerde barındırılan bir uygulamanın ölçeklendirilmesi, ek VM 'Lerin talebe göre dönmesini ve gerekli yazılımları dağıtmasını içerir. Bu ek denetim düzeyi farklı genel bölgelerde farklı ölçeklendirmenize imkan tanır. Örneğin, uygulamanız çeşitli bölgesel ofislerde çalışanlara hizmet verirse, sanal makinelerinizi bu bölgelerdeki çalışanların sayısına göre ölçeklendirebilir, böylece maliyetleri azaltabilirsiniz.
 
-Daha fazla bilgi için, Visual Studio 'daki özel seçeneğini kullanarak dağıtım hedefi olarak kullanabileceğiniz Azure App Service, Azure sanal makineleri ve diğer Azure hizmetleri arasındaki [ayrıntılı karşılaştırmaya](https://azure.microsoft.com/documentation/articles/choose-web-site-cloud-service-vm/) bakın.
+Daha fazla bilgi için, Visual Studio 'daki özel seçeneğini kullanarak dağıtım hedefi olarak kullanabileceğiniz Azure App Service, Azure sanal makineleri ve diğer Azure hizmetleri arasındaki [ayrıntılı karşılaştırmaya](/azure/architecture/guide/technology-choices/compute-decision-tree) bakın.
 
 #### <a name="when-to-choose-azure-virtual-machines"></a>Azure sanal makinelerini seçme
 

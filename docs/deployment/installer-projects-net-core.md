@@ -11,12 +11,12 @@ manager: MSLukeWest
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: c35e6a12262083d09575b51f6c9f918ba30a27b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a057e655df643c5ddfd85064ba84260a2644dffd
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88714452"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641584"
 ---
 # <a name="visual-studio-installer-projects-extension-and-net-core-31"></a>Visual Studio Yükleyicisi Projeleri Uzantısı ve .NET Core 3.1
 
@@ -31,7 +31,7 @@ Uzantıyı buradan indirebilirsiniz: [Visual Studio yükleyicisi projeler](https
 
 - Kendi içinde bulunan uygulamalar çalışma zamanını içerir.
 
-Bu dağıtım stratejileri hakkında daha fazla bilgi edinmek için bkz. [.NET Core uygulama yayımlamaya genel bakış](https://docs.microsoft.com/dotnet/core/deploying/).
+Bu dağıtım stratejileri hakkında daha fazla bilgi edinmek için bkz. [.NET Core uygulama yayımlamaya genel bakış](/dotnet/core/deploying/).
 
 ### <a name="workflow-changes-for-net-core-31"></a>.NET Core 3,1 için iş akışı değişiklikleri
 

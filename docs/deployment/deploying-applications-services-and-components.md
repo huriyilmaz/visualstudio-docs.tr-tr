@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab0d62efb8abc3cfbae365312a009bc6d2efea43
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8eeb44d08f4b966bed4aef526c12263bdd1a2b77
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286368"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641673"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>Visual Studio 'da dağıtıma ilk bakış
 
@@ -140,7 +140,7 @@ Uygulamanızın sürekli dağıtımını etkinleştirmek için Azure Pipelines k
 | --- | --- | --- |
 | **Office uygulaması** | Office için bir eklentiyi Visual Studio 'dan yayımlayabilirsiniz. | [Office eklentisini dağıtma ve yayımlama](https://dev.office.com/docs/add-ins/publish/publish) |
 | **WCF veya OData hizmeti** | Diğer uygulamalar, bir Web sunucusuna dağıttığınız WCF RıA hizmetlerini kullanabilir. | [WCF Veri Hizmetleri geliştirme ve dağıtma](/dotnet/framework/data/wcf/developing-and-deploying-wcf-data-services) |
-| **LightSwitch** | LightSwitch artık Visual Studio 2017 ' den itibaren desteklenmemektedir, ancak Visual Studio 2015 ve önceki sürümlerden yine de dağıtılabilir. | [LightSwitch uygulamalarını dağıtma](https://msdn.microsoft.com/Library/4818d933-295c-4ecc-9148-7ad9ca28dcdb) |
+| **LightSwitch** | LightSwitch artık Visual Studio 2017 ' den itibaren desteklenmemektedir, ancak Visual Studio 2015 ve önceki sürümlerden yine de dağıtılabilir. | [LightSwitch uygulamalarını dağıtma](/previous-versions/ff872288(v=vs.140)) |
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

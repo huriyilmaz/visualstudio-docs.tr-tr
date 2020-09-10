@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b9b0e22f56ab68be521eda7a765a2be7e23bbf92
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ed7945dac94527df51dcdd601113f8874cd36142
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79093955"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641627"
 ---
 # <a name="clickonce-and-authenticode"></a>ClickOnce ve Authenticode
 *Authenticode* , uygulama kodunu uygulama yayımcısının orijinalliğini doğrulayan dijital sertifikalarla imzalamak için sektör standardı şifrelemeyi kullanan bir Microsoft teknolojisidir. Uygulama dağıtımı için Authenticode kullanarak [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bir Truva atı riskini azaltır. Truva atı, kötü amaçlı üçüncü tarafın oluşturulmuş, güvenilir bir kaynaktan gelen yasal bir program olarak yanlış temsil ettiği bir virüs veya diğer zararlı programdır. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Dijital sertifikayla imzalama dağıtımları, derlemelerin ve dosyaların değiştirilmediğini doğrulamak için isteğe bağlı bir adımdır.
@@ -48,7 +48,7 @@ ms.locfileid: "79093955"
 
  Buna karşılık, sertifika satıcısı veya kuruluşunuzdaki bir departman gibi bir CA 'dan sertifika alırsanız, sertifika kullanıcılarınız için daha fazla güvenlik sağlar. Yalnızca imzalı yazılımın yayımcısını tanımlamaz, ancak onu imzalayan CA ile kontrol ederek kimliği doğrular. CA kök yetkili değilse, CA 'nın sertifika verme yetkisine sahip olduğunu doğrulamak için, Authenticode da kök yetkiliye geri gönderilir. Daha fazla güvenlik için, mümkün olduğunda CA tarafından verilen bir sertifika kullanmanız gerekir.
 
- Self-cert oluşturma hakkında daha fazla bilgi için, bkz. [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate) veya [MakeCert](/windows/desktop/SecCrypto/makecert).
+ Self-cert oluşturma hakkında daha fazla bilgi için, bkz. [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) veya [MakeCert](/windows/desktop/SecCrypto/makecert).
 
 ### <a name="timestamps"></a>Zaman damgaları
  Uygulamaları imzalamak için kullanılan sertifikalar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , genellikle on iki ay boyunca belirli bir süre sonra sona erer. Uygulamaları yeni sertifikalarla sürekli olarak yeniden imzalama gereksinimini ortadan kaldırmak için [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] zaman damgasını destekler. Bir uygulama bir zaman damgasıyla imzalanmışsa, zaman damgası geçerli olduğundan, sertifikanın süresi dolduktan sonra bile kabul edilmesine devam edilir. Bu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , zaman aşımına uğradı, ancak geçerli zaman damgalarına sahip uygulamaların indirilip çalıştırılmasını sağlar. Ayrıca, güncelleştirmeleri indirmeye ve yüklemeye devam etmek için, süre dolma sertifikaları olan yüklü uygulamalara da izin verir.

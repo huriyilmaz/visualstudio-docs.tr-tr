@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 41cd62e8831ac4edd5b37337c1e72dd0b2e662e4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41f8a790decbd3af20141c1c95fcaed678a2ec6a
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536298"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641546"
 ---
 # <a name="publish-clickonce-applications"></a>ClickOnce uygulamalarını yayımlama
 Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamayı ilk kez yayımlarken yayımlama özellikleri, Yayımlama Sihirbazı kullanılarak ayarlanabilir. Sihirbazda yalnızca birkaç özellik mevcuttur; diğer tüm özellikler varsayılan değerlerine ayarlanır.
@@ -96,7 +96,7 @@ Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamay�
 |[İzlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)|ClickOnce uygulamanızı dağıtmak için .NET Framework yardımcı programlarının nasıl kullanılacağını açıklar.|
 |[İzlenecek yol: yeniden imzalama gerektirmeyen ve marka bilgilerini koruyan bir ClickOnce uygulamasını El Ile dağıtın](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md)|Bildirimleri yeniden imzalamadan ClickOnce uygulamanızı dağıtmak için .NET Framework yardımcı programlarının nasıl kullanılacağını açıklar.|
 |[Nasıl yapılır: projeleri hedef platformlar için yapılandırma](../ide/how-to-configure-projects-to-target-platforms.md)|Projenizdeki **hedef CPU** veya **Platform hedefi** özelliğini değiştirerek 64 bitlik bir işlemcinin nasıl yayımlanacağını açıklar.|
-|[İzlenecek yol: ClickOnce uygulamasını birden çok .NET Framework sürümünde çalışacak şekilde etkinleştirme](https://msdn.microsoft.com/library/7f4383af-ed87-4853-b4d4-02a3967a5fd9)|Bir ClickOnce uygulamasının, NET Framework 'ün birden çok sürümünü yüklemek ve çalıştırmak için nasıl etkinleştirileceğini açıklar.|
+|[İzlenecek yol: ClickOnce uygulamasını birden çok .NET Framework sürümünde çalışacak şekilde etkinleştirme](/previous-versions/dd996998(v=vs.100))|Bir ClickOnce uygulamasının, NET Framework 'ün birden çok sürümünü yüklemek ve çalıştırmak için nasıl etkinleştirileceğini açıklar.|
 |[İzlenecek yol: ClickOnce uygulaması için özel bir yükleyici oluşturma](../deployment/walkthrough-creating-a-custom-installer-for-a-clickonce-application.md)|ClickOnce uygulamasını yüklemek için özel bir yükleyicinin nasıl oluşturulacağını açıklar.|
 |[Nasıl yapılır: görsel stiller etkinken WPF uygulaması yayımlama](../deployment/how-to-publish-a-wpf-application-with-visual-styles-enabled.md)|Görsel stillerin etkin kıldığı bir WPF uygulamasını yayımlamak istediğinizde görüntülenen bir hatayı gidermek için adım adım yönergeler sağlar.|
 

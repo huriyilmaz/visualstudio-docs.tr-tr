@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d0e177f1d41655ffa6fb6b6bbfa52cfc29d15fd6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dc94691eda319607510619dbb37e24265bcae522
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382191"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641596"
 ---
 # <a name="how-to-retrieve-query-string-information-in-an-online-clickonce-application"></a>Nasıl yapılır: çevrimiçi bir ClickOnce uygulamasında sorgu dize bilgilerini alma
 *Sorgu dizesi* , bir URL 'nin *adı = değer*biçiminde rastgele bilgiler içeren bir soru işareti (?) ile başlayan bölümüdür. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Üzerinde barındırdığınızı adlı bir uygulamanız olduğunu `WindowsApp1` `servername` ve uygulama başlatıldığında değişken için bir değer geçirmek istediğinizi varsayalım `username` . URL 'niz aşağıdakine benzer şekilde görünebilir:
@@ -76,7 +76,7 @@ ms.locfileid: "85382191"
  Uygulamanız yalnızca çevrimiçi ise, her zaman bir URL aracılığıyla etkinleştirilir. Ancak, bu durumda bile sorgu dizesi parametreleri eksik veya bozuksa uygulamanızın düzgün çalışması için yazılması gerekir.
 
 ## <a name="net-framework-security"></a>.NET Framework güvenliği
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Yalnızca herhangi bir kötü amaçlı karakter girişini kullanmadan önce, UYGULAMANıZA URL parametreleri geçirilmesine izin verin. Örneğin, tırnak işaretleri, eğik çizgi veya noktalı virgülle gömülü bir dize, bir SQL sorgusunda bir veritabanında filtrelenmemiş olarak kullanılırsa rastgele veri işlemleri gerçekleştirebilir. Sorgu dizesi güvenliği hakkında daha fazla bilgi için bkz. [komut dosyası kötüye bakış](https://msdn.microsoft.com/Library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Yalnızca herhangi bir kötü amaçlı karakter girişini kullanmadan önce, UYGULAMANıZA URL parametreleri geçirilmesine izin verin. Örneğin, tırnak işaretleri, eğik çizgi veya noktalı virgülle gömülü bir dize, bir SQL sorgusunda bir veritabanında filtrelenmemiş olarak kullanılırsa rastgele veri işlemleri gerçekleştirebilir. Sorgu dizesi güvenliği hakkında daha fazla bilgi için bkz. [komut dosyası kötüye bakış](/previous-versions/w1sw53ds(v=vs.140)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce uygulamalarını koruma](../deployment/securing-clickonce-applications.md)

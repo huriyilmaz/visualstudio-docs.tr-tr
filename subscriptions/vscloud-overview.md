@@ -7,12 +7,12 @@ ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
 ms.date: 03/24/2020
 ms.topic: overview
 description: Uzun vadeli bir sözleşme olmadan bir ayda ayda veya yıllık esasına göre Visual Studio Professional veya Visual Studio Enterprise.
-ms.openlocfilehash: 5f289c5eb51ccaf95c88bc7e2d66a4be5e904e03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1ea727572fc5c6aeb09f23594de54a08adbacc90
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88248347"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641562"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Visual Studio Professional ve Visual Studio Enterprise bulut abonelikleri satın alın
 [Visual Studio Market](https://marketplace.visualstudio.com) [Visual Studio Professional ve Visual Studio Enterprise abonelikleri](https://visualstudio.microsoft.com/subscriptions/) satın alabilirsiniz. Bunlar **"bulut abonelikleri"** olarak adlandırılır.
@@ -26,7 +26,7 @@ ms.locfileid: "88248347"
 Satın alımlarınızı faturalamak için bir [Azure aboneliğine](https://azure.microsoft.com/pricing/purchase-options/)ihtiyacınız vardır. İlk satın alımınızın önüne veya Visual Studio Market ilk satın alma sırasında [kaydolabilirsiniz](https://portal.azure.com) .
 
 ## <a name="who-can-buy-visual-studio-cloud-subscriptions"></a>Visual Studio bulut abonelikleri kimler alabilir?
-Azure aboneliğine [sahip](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), [Hizmet Yöneticisi veya ortak yönetici](https://docs.microsoft.com/azure/billing/billing-add-change-azure-subscription-administrator#assign-a-subscription-administrator) erişimi olan herkes bulut abonelikleri satın alabilir.
+Bulut abonelikleri satın almak üzere EA aboneliğiniz için oluşturulmuş bir Azure aboneliğine katkıda bulunan veya daha yüksek bir katkı olması gerekir.
 
 ## <a name="how-to-buy-cloud-subscriptions"></a>Bulut abonelikleri satın alma
 

@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f84f91ebedd47df8c0804adee35dcbec18d8551
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 17ac6fdb6b2eaf80d927407e717954842f6e6b1b
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89314868"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641656"
 ---
 # <a name="create-bootstrapper-packages"></a>Önyükleyici paketleri oluşturma
 Kurulum programı, Windows Installer (*. msi*) dosyaları ve yürütülebilir programlar gibi yeniden dağıtılabilir bileşenleri tespit etmek ve yüklemek için yapılandırılabilecek genel bir yükleyicidir. Yükleyici, önyükleyici olarak da bilinir. Bileşenin yüklenmesini yönetmek için meta verileri belirten bir XML bildirimleri kümesi aracılığıyla programlanır.  ClickOnce için **Önkoşullar** iletişim kutusunda görünen her yeniden dağıtılabilir bileşen veya önkoşul, bir önyükleyici paketidir. Önyükleyici paketi, önkoşulun nasıl yükleneceğini tanımlayan bildirim dosyalarını içeren bir dizin ve dosya grubudur.
@@ -122,4 +122,4 @@ Yeniden dağıtılabilir liste, şu biçimi kullanarak ad almanız gereken bir X
 - [Nasıl yapılır: ClickOnce uygulamasıyla önkoşulları yüklemek](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)
 - [Önkoşullar iletişim kutusu](../ide/reference/prerequisites-dialog-box.md)
 - [Ürün ve paket şema başvurusu](../deployment/product-and-package-schema-reference.md)
-- [Yüklemeyi başlatmak için Visual Studio 2005 önyükleyici kullanın](https://msdn.microsoft.com/magazine/cc163899.aspx)
+- [Yüklemeyi başlatmak için Visual Studio 2005 önyükleyici kullanın](/archive/msdn-magazine/2004/october/visual-studio-2005-bootstrapper-start-kick-your-installation)

@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3fa32e6155959df6e665a807af3b364923ba3f54
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b9c7da96df8c68de0b9f6ba3e341d93596200934
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85533464"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641479"
 ---
 # <a name="language-conventions"></a>Dil kuralları
 
@@ -1050,6 +1050,30 @@ Dim v = If(o IsNot Nothing, o.ToString(), Nothing)
 | **Değerler** | `true` -Tercih edilen başvuru eşitlik yöntemi üzerinde null denetimi<br /><br />`false` -Başvuru eşitlik yönteminin üzerinde olmasını tercih et null denetimi |
 | **Visual Studio varsayılanı** | `true:silent` |
 
+Kod örnekleri:
+
+```csharp
+// dotnet_style_prefer_is_null_check_over_reference_equality_method = true
+if (value is null)
+    return;
+
+// dotnet_style_prefer_is_null_check_over_reference_equality_method = false
+if (object.ReferenceEquals(value, null))
+    return;
+```
+
+```vb
+' dotnet_style_prefer_is_null_check_over_reference_equality_method = true
+If value Is Nothing
+    Return
+End If
+
+' dotnet_style_prefer_is_null_check_over_reference_equality_method = false
+If Object.ReferenceEquals(value, Nothing)
+    Return
+End If
+```
+
 ## <a name="net-code-quality-settings"></a>.NET kod kalitesi ayarları
 
 Bu bölümdeki kalite kuralları hem C# hem de Visual Basic kodu için geçerlidir. Visual Studio tümleşik geliştirme ortamında (IDE) yerleşik olarak bulunan kod Çözümleyicileri yapılandırmak için kullanılırlar. Bir EditorConfig dosyası ile FxCop çözümleyicileri yapılandırma hakkında bilgi için bkz. [FxCop çözümleyicileri yapılandırma](../code-quality/configure-fxcop-analyzers.md).
@@ -1118,7 +1142,7 @@ Bu bölümdeki stil kuralları yalnızca C# için geçerlidir.
   - CSharp \_ Style \_ ifadesi \_ bodied_accessors
   - CSharp \_ Style \_ ifadesi \_ bodied_lambdas
   - CSharp \_ Style \_ ifadesi \_ gövdeli \_ local_functions
-- [Desen eşleştirme](#pattern-matching)
+- [Model eşleştirme](#pattern-matching)
   - \_ \_ \_ \_ \_ \_ cast_check ile eşleşen \_ CSharp Style Model desenli
   - \_ \_ \_ \_ \_ \_ null_check ile birlikte farklı \_ CSharp stili model karşılaştırması
 - [Satır içi değişken bildirimleri](#inlined-variable-declarations)

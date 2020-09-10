@@ -7,12 +7,12 @@ ms.assetid: 21e0471d-ad59-4d21-9c6f-13f7147569af
 ms.date: 09/08/2020
 ms.topic: conceptual
 description: Bulut abonelikleri için faturalandırma soruları.
-ms.openlocfilehash: 8ef98fc3c6e81071984cdc0fb8ef6f6dab626b48
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 987dddcf54f218d63580995b363ad838f2de83b4
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561331"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641439"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Visual Studio Cloud abonelikleri faturalama hakkında SSS
 Bulut ve standart Visual Studio abonelikleri arasındaki karşılaştırmalar, abone avantajları hakkındaki ayrıntılar ve daha fazlası ile her bir Visual Studio aboneliğinin avantajlarını anlamak için [bulut aboneliği avantajlarını ve fiyatlandırmasını karşılaştırdığınızdan](https://visualstudio.microsoft.com/vs/pricing/) emin olun.
@@ -31,7 +31,7 @@ Y: hiç değil. Yalnızca Azure aracılığıyla Visual Studio bulut abonelikler
 
 ## <a name="enterprise-agreement-ea-customers"></a>Kurumsal Anlaşma (EA) müşterileri
 ### <a name="q-can-i-use-an-enterprise-agreement-to-buy-visual-studio-cloud-subscriptions"></a>S: Kurumsal Anlaşma kullanarak Visual Studio bulut abonelikleri satın alabilir miyim?
-Y: Evet, bunu yapabilirsiniz. EA 'niz için oluşturulmuş bir Azure aboneliğine sahip veya katılımcı olmanız gerekir. Lütfen satın alımlarınızı Visual Studio bulut abonelikleri için Visual Studio Market doğrudan yaptığınızdan emin olun. Satın alma siparişi kullanarak Visual Studio bulut abonelikleri satın alınamaz.
+Y: Evet, bunu yapabilirsiniz. EA 'niz için oluşturulmuş bir Azure aboneliğine katkıda bulunan veya daha yüksek bir rol olmanız gerekir. Lütfen satın alımlarınızı Visual Studio bulut abonelikleri için Visual Studio Market doğrudan yaptığınızdan emin olun. Satın alma siparişi kullanarak Visual Studio bulut abonelikleri satın alınamaz.
 
 ### <a name="q-how-can-i-tell-whether-i-have-the-necessary-privileges-to-buy-services-in-the-visual-studio-marketplace-through-my-organizations-enterprise-agreement"></a>S: Kuruluşumun Kurumsal Anlaşma üzerinden Visual Studio Market hizmetleri satın almak için gerekli ayrıcalıklara sahip olup olmadığını nasıl anlayabilirim?
 Y: doğru ayrıcalıklara sahip olup olmadığınızı belirlemek için en kolay yaklaşım, Visual Studio Market sunulan bir hizmetin **satın alma** düğmesini seçmektir.

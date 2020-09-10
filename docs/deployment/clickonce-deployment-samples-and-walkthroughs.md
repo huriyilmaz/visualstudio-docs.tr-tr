@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 651f981117cdd9b9cfb26aae61bbd4e2747e921d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8083ed11537975bfd05f546843264881fe7a7aa0
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900392"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641463"
 ---
 # <a name="clickonce-deployment-samples-and-walkthroughs"></a>ClickOnce dağıtım örnekleri ve yönergeler
 Bu bölüm örnek uygulamalar, örnek kod ve Windows Forms, WPF ve Konsol uygulamalarını dağıtmak için kullanılan sözdizimi, yapı ve teknikleri gösteren adım adım yönergeler içerir.
@@ -39,4 +39,4 @@ Bu bölüm örnek uygulamalar, örnek kod ve Windows Forms, WPF ve Konsol uygula
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio izlenecek yolları](https://msdn.microsoft.com/library/f5399a1f-2d3d-42fb-b989-134ccda2159f)
+- [Visual Studio izlenecek yolları](/previous-versions/szatc41e(v=vs.110))
