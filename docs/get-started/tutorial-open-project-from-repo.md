@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3af54d663cee1ad2b2dd4e8241678b88c635d376
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ad609e9cf6a00a1b966e5d63589592239f215b01
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "70180431"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743030"
 ---
 # <a name="tutorial-open-a-project-from-a-repo"></a>Öğretici: bir depodan bir proje açın
 
@@ -180,8 +180,8 @@ Visual Studio ile kod oluşturmaya hazırsanız, dile özgü aşağıdaki öğre
 - [Visual Studio öğreticileri | **C#**](./csharp/index.yml)
 - [Visual Studio öğreticileri | **Visual Basic**](./visual-basic/index.yml)
 - [Visual Studio öğreticileri | **C++**](/cpp/get-started/tutorial-console-cpp)
-- [Visual Studio öğreticileri | **Python**](/visualstudio/python/)
-- [Visual Studio öğreticileri | **JavaScript**, **TypeScript**ve **Node.js**](/visualstudio/javascript/)
+- [Visual Studio öğreticileri | **Python**](../python/index.yml)
+- [Visual Studio öğreticileri | **JavaScript**, **TypeScript**ve **Node.js**](../javascript/index.yml)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

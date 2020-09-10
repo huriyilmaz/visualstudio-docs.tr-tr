@@ -1,5 +1,6 @@
 ---
-title: Bir ilişki oluşturulamıyor-Özellik iki kez listelenmiş
+title: Özellik iki kez listelendi
+description: Bir ilişki oluşturulamıyor-Özellik iki kez listelenmiş
 ms.date: 11/04/2016
 ms.topic: error-reference
 ms.technology: vs-data-tools
@@ -9,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 50c9311ef09172ea082d2419495f26b51ff1d6a4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3c496a25b093c88cca68d31bd22ccc6deca9a33a
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536805"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743207"
 ---
 # <a name="cannot-create-an-association-ltassociation-namegt---property-listed-twice"></a>İlişki &lt; ilişkilendirme adı oluşturulamıyor &gt; -özellik iki kez listelendi
 
@@ -32,7 +33,7 @@ ms.locfileid: "85536805"
 
 - **Ilişki özelliklerini** inceleyin ve yinelenen girdileri kaldırın.
 
-- **Tamam**’a tıklayın.
+- **Tamam**'a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

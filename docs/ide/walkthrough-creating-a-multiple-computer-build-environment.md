@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Birden çok bilgisayarda derleme ortamı oluşturma'
+title: Birden çok bilgisayarda derleme ortamı oluşturma
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 11b158854a0026de28cb2fb0a582bbaf764eeaa4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bec0ada652da4ac02c457cdc280778487e4b27a1
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68461532"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743121"
 ---
 # <a name="walkthrough-create-a-multiple-computer-build-environment"></a>İzlenecek yol: Birden çok bilgisayarda derleme ortamı oluşturma
 
@@ -42,7 +42,7 @@ Birden çok bilgisayar ortamı, bu tür uygulamaları oluşturmak için kullanı
 - UWP uygulamaları. UWP uygulamaları oluşturmak için, Visual Studio 'Yu yapı bilgisayarına yüklemelisiniz.
 - .NET Framework 4 veya önceki sürümleri hedefleyen masaüstü uygulamaları. Bu tür uygulamaları oluşturmak için, Yapı bilgisayarında Visual Studio 'Yu veya .NET başvuru derlemelerini ve araçlarını (Windows 7,1 SDK 'dan) yüklemelisiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 **.Net masaüstü geliştirme** iş yükü yüklü Visual Studio.
 

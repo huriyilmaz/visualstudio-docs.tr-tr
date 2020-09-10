@@ -1,5 +1,5 @@
 ---
-title: Projeler ve düzenleyicilerle ilgili ek kaynak denetimi yönergeleri | Microsoft Docs
+title: Projeler ve düzenleyicilerle ilgili kaynak denetimi yönergeleri
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 181f6c10ff7ce95cd3a37151f117353d1bb47d41
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b783fdf7231bd3f440686a1bef2a038d9b32f2e4
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710118"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743398"
 ---
 # <a name="additional-source-control-guidelines-for-projects-and-editors"></a>Projeler ve düzenleyiciler için ek kaynak denetimi yönergeleri
 Projeler ve düzenleyicilerin kaynak denetimini desteklemek için uyması gereken birçok yönerge vardır.

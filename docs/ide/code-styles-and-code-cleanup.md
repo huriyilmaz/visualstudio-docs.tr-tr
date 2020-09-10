@@ -10,12 +10,12 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Basic.Code_Style.General
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d540339ca25fc42fc05df4818a6d05204ccae0e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4faeff1e60fa77e3bf9e995c61c841f626468a1b
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89312593"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743337"
 ---
 # <a name="code-style-preferences"></a>Kod stili tercihleri
 
@@ -59,6 +59,14 @@ Bu pencerede ayarlanan seçenekler, Visual Studio kişiselleştirme hesabınız 
 ### <a name="preference-and-severity"></a>Tercih ve önem derecesi
 
 Bu sayfadaki her kod stili ayarı için, her satırdaki açılan listeleri kullanarak **tercih** ve **önem derecesi** değerlerini ayarlayabilirsiniz. Önem derecesi **yalnızca yeniden düzenleme**, **öneri**, **Uyarı**veya **hata**olarak ayarlanabilir. Bir kod stili için [hızlı eylemleri](../ide/quick-actions.md) etkinleştirmek Istiyorsanız, **önem derecesi** ayarının **yalnızca yeniden düzenleme**dışında bir değere ayarlandığından emin olun. **Quick Actions** ![ ](media/light-bulb-dropdown.png) Tercih edilen stile otomatik olarak yeniden yazmak için hızlı eylemler ampul ışığı ampulü, hata ampulü ![ hatası ampul ](media/error-bulb.png) veya screwsürücü ![ screwdriver ](media/screwdriver.png) simgesi görüntülenir ve **hızlı eylemler** listesinde bir seçeneği belirleyebilirsiniz.
+
+::: moniker range=">=vs-2019"
+
+## <a name="enforce-code-styles-on-build"></a>Derlemede kod stilleri zorla
+
+.NET 5,0 RC2 SDK 'sını içeren Visual Studio 2019 sürüm 16,8 ' den itibaren, tüm .NET projeleri için [derleme üzerinde .net kodlama kurallarını zorunlu](/dotnet/fundamentals/productivity/code-analysis.md#code-style-analysis) kılabilirsiniz. Derleme zamanında, .NET kod stili ihlalleri uyarı veya "IDE" ön eki ile hatalar olarak görünür. Bu, kod tabanınızda tutarlı kod stillerini kesinlikle zorlamanıza olanak sağlar.
+
+::: moniker-end
 
 ## <a name="apply-code-styles"></a>Kod stillerini Uygula
 

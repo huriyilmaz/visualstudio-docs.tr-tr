@@ -1,5 +1,6 @@
 ---
-title: İlgili hizmetler ve arabirimler (kaynak denetimi VSPackage) | Microsoft Docs
+title: İlgili Hizmetler ve Arabirimler (Kaynak Denetimi VSPackage’ı)
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +12,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 533f1bf4fcfbaebb25ec10908abf4a46ddacd521
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e0806ca278305a530a4f4f3e0d4abdf7977067e
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705622"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743070"
 ---
 # <a name="related-services-and-interfaces-source-control-vspackage"></a>İlgili Hizmetler ve Arabirimler (Kaynak Denetimi VSPackage’ı)
+
 Bu bölümde, içindeki tüm kaynak denetimi VSPackage ile ilgili arabirimlerin listesi yer almaktadır [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] . Kaynak denetimi VSPackage, bu arabirimlerden bazılarını uygular ve kaynak denetimi görevlerini gerçekleştirmek için diğerlerini kullanır.
 
 ## <a name="interfaces-implemented-by-and-for-source-control-vspackages"></a>Kaynak denetimi VSPackages için ve tarafından uygulanan arabirimler
+
  Aşağıdaki arabirimler içinde açıklanmaktadır [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] ve kaynak denetimi VSPackage, istenen özellik kümesine bağlı olarak bunların bir alt kümesini uygular. Bazı arabirimler gerekli olarak işaretlenir ve her kaynak denetimi VSPackage tarafından uygulanmalıdır.
 
  Bir paketin uygulamadığından bu arabirimler için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] varsayılan bir uygulama sağlar. Varsayılan uygulamanın, VSPackage kayıtlı olmadığında ve proje denetleniyorsa, bu durum için tasarlandığını unutmayın. Düzgün şekilde yazılmış bir kaynak denetimi VSPackage, bu arabirimlerin varsayılan uygulamasına ayrılmaktansa tüm gerekli arabirimleri uygular.

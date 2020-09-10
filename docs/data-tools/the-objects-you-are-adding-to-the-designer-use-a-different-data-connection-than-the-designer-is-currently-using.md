@@ -1,5 +1,6 @@
 ---
-title: Tasarımcıya eklenen nesneler farklı bir veri bağlantısı kullanır
+title: Nesneler farklı bağlantı kullanıyor
+description: Tasarımcıya eklenen nesneler farklı bir veri bağlantısı kullanır
 ms.date: 11/04/2016
 ms.topic: error-reference
 ms.assetid: 332ed2f3-3377-4d51-8e3b-fdb98231978e
@@ -8,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 38fa361536f9e99c013f9a13330fe1a68e53641a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6394b31d7ace183e3fdb479988c7cc726f009bba
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281415"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743288"
 ---
 # <a name="the-objects-you-are-adding-to-the-designer-use-a-different-data-connection-than-the-designer"></a>Tasarımcıya eklemekte olduğunuz nesneler tasarımcıdan farklı bir veri bağlantısı kullanır
 

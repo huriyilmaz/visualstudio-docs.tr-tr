@@ -1,5 +1,6 @@
 ---
 title: Visual Basic geliştirici ayarlarıyla derleme yapılandırmalarını yönetme
+titleSuffix: ''
 ms.date: 11/21/2018
 ms.technology: vs-ide-compile
 ms.topic: how-to
@@ -14,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8593f32b31dc70be08c777e86ae404da0578c48d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b3feaf36cb250339bd94e0d80a152a8104e75680
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284236"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743225"
 ---
 # <a name="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied"></a>Nasıl yapılır: Visual Basic Geliştirici ayarları uygulanmış derleme yapılandırmasını yönetme
 
@@ -38,7 +39,7 @@ Varsayılan olarak Visual Basic Geliştirici ayarları, [Proje tasarımcısında
 
 3. **Gelişmiş derleme yapılandırmasını göster**' e tıklayın.
 
-4. **Tamam**’a tıklayın.
+4. **Tamam**'a tıklayın.
 
      **Configuration Manager** artık **derleme** menüsünde kullanılabilir ve **yapılandırma** ve **Platform** listeleri **Proje tasarımcısında**görünür.
 
