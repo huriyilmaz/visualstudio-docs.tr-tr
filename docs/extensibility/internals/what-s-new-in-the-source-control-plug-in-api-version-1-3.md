@@ -1,5 +1,5 @@
 ---
-title: "&apos;Kaynak denetimi EKLENTISI API sürümü 1,3 ' deki yenilikler | Microsoft Docs"
+title: "&apos;Kaynak denetimi EKLENTISI apı 1,3 ' deki yenilikler"
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ec24e9ee3079d3b02ac13759b6ab5bdee8c07a84
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0eb580d018bbb858cd0214970bdba3d4ab4f391c
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88706457"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741538"
 ---
 # <a name="what39s-new-in-the-source-control-plug-in-api-version-13"></a>Kaynak denetimi eklentisi API sürüm 1,3 ' deki yenilikler&#39;
 Kaynak denetimi eklentisi API sürümü 1,3, daha gelişmiş denetim sağlamak için aşağıdaki yeni işlevleri sunmaktadır.
@@ -24,7 +24,7 @@ Kaynak denetimi eklentisi API sürümü 1,3, daha gelişmiş denetim sağlamak i
 ## <a name="changes"></a>Değişiklikler
  Aşağıdaki işlevler, kaynak denetimi eklentisi API sürümü 1,3 ' de yenidir:
 
-|İşlev|Genel bakış|
+|İşlev|Genel Bakış|
 |--------------|--------------|
 |[SccGetExtendedCapabilities](../../extensibility/sccgetextendedcapabilities-function.md)|Ek özellik bitlerinin raporlanmasını sağlar|
 |[SccEnumChangedFiles](../../extensibility/sccenumchangedfiles-function.md)|Sürüm denetimi veritabanında yeni sürümlere sahip dosyaların yerel diskten incelemesini sağlar|

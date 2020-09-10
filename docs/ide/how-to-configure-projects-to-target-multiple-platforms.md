@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: birden çok platformu hedeflemek için projeleri yapılandırma'
+title: Projeleri birden çok platformu hedefleyecek şekilde yapılandırma
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: how-to
@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0618d571258817b5e9653a38a7801c2e4d14e687
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fb94043d238cba706ad1b1d712b244da4e245c24
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284574"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741465"
 ---
 # <a name="how-to-configure-projects-to-target-multiple-platforms"></a>Nasıl yapılır: birden çok platformu hedeflemek için projeleri yapılandırma
 

@@ -1,5 +1,6 @@
 ---
-title: EnableLocationBrowseButton öğesi (Visual Studio şablonları) | Microsoft Docs
+title: EnableLocationBrowseButton Öğesi (Visual Studio Şablonları)
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 263157d5c6fefc208f28caa55475ba329a0d230f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1b04152864b77c33e3821e4e1ba415cc4fa9f502
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711983"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743000"
 ---
 # <a name="enablelocationbrowsebutton-element-visual-studio-templates"></a>EnableLocationBrowseButton öğesi (Visual Studio şablonları)
 Kullanıcıların yeni bir projenin kaydedildiği varsayılan dizini kolayca değiştirebilmeleri için **Yeni proje** iletişim kutusunda, **tarayıcı** düğmesinin kullanılabilir olup olmadığını belirtir.
@@ -28,7 +29,7 @@ Kullanıcıların yeni bir projenin kaydedildiği varsayılan dizini kolayca de�
 
 ## <a name="syntax"></a>Syntax
 
-```
+```xml
 <EnableLocationBrowseButton> true/false </EnableLocationBrowseButton>
 ```
 
@@ -60,7 +61,7 @@ Kullanıcıların yeni bir projenin kaydedildiği varsayılan dizini kolayca de�
 ## <a name="example"></a>Örnek
  Aşağıdaki örnek, bir Windows uygulaması için meta verileri gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
 
-```
+```xml
 <VSTemplate Type="Project" Version="3.0.0"
     xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
     <TemplateData>

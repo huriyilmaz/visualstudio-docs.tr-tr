@@ -1,5 +1,5 @@
 ---
-title: Web uygulamasını Azure Cloud Service 'e geçirme & yayımlama
+title: Web uygulamasını bir bulut hizmetine geçirme ve yayımlama
 description: Visual Studio 'Yu kullanarak Web uygulamanızı bir Azure bulut hizmetine geçirmeyi ve yayımlamayı öğrenin
 author: ghogen
 manager: jillfra
@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 11/10/2017
 ms.author: ghogen
-ms.openlocfilehash: c95c96815872c259cab761d8b4af36141f866dbd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06b283e7382fc135e3cd327db0200622de4f5228
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85280563"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89739981"
 ---
 # <a name="how-to-migrate-and-publish-a-web-application-to-an-azure-cloud-service-from-visual-studio"></a>Nasıl yapılır: bir Web uygulamasını Visual Studio 'dan Azure bulut hizmeti 'ne geçirme ve yayımlama
 

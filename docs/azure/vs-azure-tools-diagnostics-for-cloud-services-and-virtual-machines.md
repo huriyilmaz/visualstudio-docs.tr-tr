@@ -1,5 +1,5 @@
 ---
-title: Azure Cloud Services ve sanal makineler için tanılama
+title: Azure Cloud Services ve VM 'Ler için tanılama
 description: Visual Studio 'da Azure bulut hizmetlerinde ve sanal makinelerde (VM) hata ayıklama için tanılamayı ayarlamayı öğrenin.
 author: ghogen
 manager: jillfra
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 06/28/2018
 ms.author: mikejo
-ms.openlocfilehash: 9912a7fa0e83c5433e0eba1c7ffa23763331af6b
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 7e0d261edfd946aed5d459ec732f652448fc46c0
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508502"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89740135"
 ---
 # <a name="set-up-diagnostics-for-azure-cloud-services-and-virtual-machines"></a>Azure Cloud Services ve sanal makineler için tanılamayı ayarlama
 Bir Azure bulut hizmetinde veya sanal makinede sorun gidermeniz gerektiğinde Azure Tanılama daha kolay bir şekilde kurmak için Visual Studio 'Yu kullanabilirsiniz. Tanılama, bulut hizmetinizi çalıştıran sanal makinelerde ve sanal makine örneklerinde sistem verilerini ve günlük verilerini yakalar. Tanılama verileri, seçtiğiniz bir depolama hesabına aktarılır. Azure 'da tanılama günlüğü hakkında daha fazla bilgi için bkz. [Azure App Service Web Apps için tanılama günlüğünü etkinleştirme](/azure/app-service/web-sites-enable-diagnostic-log).

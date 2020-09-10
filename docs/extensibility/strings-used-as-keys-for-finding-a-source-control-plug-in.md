@@ -1,5 +1,5 @@
 ---
-title: Kaynak denetimi eklentisini bulmak için anahtar olarak kullanılan dizeler | Microsoft Docs
+title: Kaynak denetim eklentisi bulmak için anahtar olarak kullanılan dizeler
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f9333ff1b6742ca14dc5541bd15e92b2eb39085
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 038441f7bcea9fa1dafdd61505d4150ecf28a966
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699709"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741782"
 ---
 # <a name="strings-used-as-keys-for-finding-a-source-control-plug-in"></a>Kaynak Denetimi Eklentisi Bulmak için Anahtar Olarak Kullanılan Dizeler
 Aşağıdaki dizeler, kaynak denetimi eklentisi hakkındaki bilgileri bulmak için kayıt defterine erişim anahtarlardır.

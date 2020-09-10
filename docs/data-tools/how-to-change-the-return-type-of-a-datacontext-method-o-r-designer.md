@@ -1,5 +1,5 @@
 ---
-title: DataContext metodunun dönüş türünü değiştir (O-R Designer)
+title: DataContext metodunun dönüş türünü değiştir
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: c5b66bff-6dbb-43c0-bffa-317133ca5b9e
@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c232e3e4261008fa736377801183d92420ffbf4c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b40851323efdf3c2cbf0900ae323f3c9c0a1ec17
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282273"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89737038"
 ---
 # <a name="how-to-change-the-return-type-of-a-datacontext-method-or-designer"></a>Nasıl yapılır: Bir DataContext metodunun dönüş türünü değiştirme (O/R Tasarımcısı)
 Bir yöntemin dönüş türü <xref:System.Data.Linq.DataContext> (saklı yordam veya işlevi temel alınarak oluşturulur), saklı yordamı veya Işlevi **O/R tasarımcısında**nerede bıraktığınızda olduğuna bağlı olarak farklılık gösterir. Bir öğeyi doğrudan mevcut bir varlık sınıfına bırakırsanız, <xref:System.Data.Linq.DataContext> varlık sınıfının dönüş türüne sahip bir yöntem oluşturulur (saklı yordam veya işlev tarafından döndürülen verilerin şeması, varlık sınıfının şekliyle eşleşiyorsa). Bir öğeyi **O/R tasarımcısının**boş bir alanına bırakırsanız, <xref:System.Data.Linq.DataContext> otomatik olarak oluşturulan bir tür döndüren bir yöntem oluşturulur. Bir yöntemin dönüş türünü <xref:System.Data.Linq.DataContext> Yöntemler bölmesine ekledikten sonra değiştirebilirsiniz. Bir yöntemin dönüş türünü incelemek veya değiştirmek için <xref:System.Data.Linq.DataContext> , seçin ve **Özellikler** penceresinde **dönüş türü** özelliğine tıklayın.
@@ -42,6 +42,6 @@ Bir yöntemin dönüş türü <xref:System.Data.Linq.DataContext> (saklı yordam
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
-- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
+- [LINQ - SQL](/dotnet/framework/data/adonet/sql/linq/index)
 - [DataContext yöntemleri (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md)
 - [Nasıl yapılır: Saklı yordamlarla eşlenen DataContext metotları oluşturma (O/R Tasarımcısı)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)

@@ -1,5 +1,5 @@
 ---
-title: Kaynak denetimi eklentileri için uyumluluk uyarılarını kapatma | Microsoft Docs
+title: Kaynak denetimi eklentileri için uyarıları kapatma
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 22dd3821426aa1dae6265c520ddac60dd93e1c5e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 33cf57aa86608cca96924faa2caeb9eec7fbdc0e
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710722"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89742778"
 ---
 # <a name="how-to-turn-off-compatibility-warnings-for-source-control-plug-ins"></a>Nasıl yapılır: kaynak denetimi eklentileri için uyumluluk uyarılarını kapatma
+
 Bir kullanıcı içinde kaynak denetimi kullanırken çeşitli uyumluluk uyarıları görebilir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Sunulan uyarılar, kaynak denetimi eklentisinin özelliklerine bağlıdır ve burada ayrıntılı olarak devre dışı bırakılabilir.
 
 ### <a name="to-disable-the-warning-to-ensure-optimal-source-control-integration-with-visual-studio"></a>Uyarıyı devre dışı bırakmak için: "Visual Studio ile en iyi kaynak denetimi tümleştirmesini sağlamak Için"
@@ -42,4 +43,5 @@ Bir kullanıcı içinde kaynak denetimi kullanırken çeşitli uyumluluk uyarıl
      Yeniden giriş (yetenek) desteklemek en iyisidir `SCC_CAP_REENTRANT` ; bunun yapılması, bu uyarıyı kaldırır. Ancak, bu destek mümkün değilse, bu kayıt defteri girdileri ayarlanabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yetenek bayrakları](../extensibility/capability-flags.md)

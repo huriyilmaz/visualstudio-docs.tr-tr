@@ -1,5 +1,5 @@
 ---
-title: Eski dil hizmetinde gezinti çubuğu desteği | Microsoft Docs
+title: Eski dil hizmetinde gezinti çubuğunu destekleme
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f86dabb0594b1e33c45808efb387fcbe313e3de3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f22aaf552cc69074c500508621ab4d9e288ef449
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704856"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741897"
 ---
 # <a name="support-for-the-navigation-bar-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Gezinti Çubuğu için Destek
 Düzenleyici görünümünün en üstündeki gezinti çubuğu, dosyadaki türleri ve üyeleri görüntüler. Türler sol açılır kutuda gösterilir ve Üyeler sağ tarafta gösterilir. Kullanıcı bir tür seçtiğinde, giriş işareti, türün ilk satırına yerleştirilir. Kullanıcı bir üye seçtiğinde, giriş işareti üyenin tanımına yerleştirilir. Açılan kutular, giriş işaretinin geçerli konumunu yansıtacak şekilde güncelleştirilir.

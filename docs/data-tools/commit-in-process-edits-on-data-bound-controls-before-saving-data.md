@@ -1,5 +1,6 @@
 ---
-title: Kaydetmeden önce veri bağlantılı denetimlerde işlem içi düzenlemeleri işleme
+title: Kaydedilmemiş düzenlemeler
+description: Kaydetmeden önce veri bağlantılı denetimlerde işlem içi düzenlemeleri işleme
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: f0369f4410c1eaf5a168a5291feebf64dbc9ee65
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: accf31187318c70ded0cc347763664b8fd51d479
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282715"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89739276"
 ---
 # <a name="commit-in-process-edits-on-data-bound-controls-before-saving-data"></a>Verileri kaydetmeden önce verilere bağlı denetimler üzerinde işlem içi düzenlemeler yürütme
 

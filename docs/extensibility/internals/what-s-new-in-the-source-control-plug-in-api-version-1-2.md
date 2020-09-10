@@ -1,5 +1,5 @@
 ---
-title: "&apos;Kaynak denetimi EKLENTISI API sürümü 1,2 ' deki yenilikler | Microsoft Docs"
+title: "&apos;Kaynak denetimi EKLENTISI apı 1,2 ' deki yenilikler"
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 913fec8b820b5f32f564c84aba52a78df82efac1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 29a3d81c3a03f4a8dcb8236057e931993f06f6ec
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88711761"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741545"
 ---
 # <a name="what39s-new-in-the-source-control-plug-in-api-version-12"></a>Kaynak denetimi eklentisi API sürüm 1,2 ' deki yenilikler&#39;
 Bu bölüm, kaynak denetimi eklentisi API 'SI sürüm 1,2 ' daki gelişmiş kaynak kodu denetim işlevlerini vurgular. Aşağıda sürüm 1,2 ' deki yeni özellikler listelenmektedir:

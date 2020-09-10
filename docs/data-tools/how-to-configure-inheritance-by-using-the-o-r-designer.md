@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: O-R tasarımcısını kullanarak devralmayı yapılandırma'
+title: O-R tasarımcısını kullanarak devralmayı yapılandırma
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: e594af12-e777-434a-bc08-7dd2dac84cdc
@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: e31e5e78d5c72167f9d1c1eaab974155a4c369f3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f9ae6d1bd7048ad9e6dc974bca67e6de15ba5fa
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282247"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89742950"
 ---
 # <a name="how-to-configure-inheritance-by-using-the-or-designer"></a>Nasıl yapılır: O/R Tasarımcısı kullanarak devralmayı yapılandırma
 **Nesne ilişkisel Tasarımcısı** (**O/R Designer**), genellikle ilişkisel sistemlerde uygulanan tek tablo devralma kavramını destekler. Tek tablo Devralmada, hem üst bilgiler hem de alt bilgi için alanlar içeren tek bir veritabanı tablosu vardır. İlişkisel veriler ile, bir Ayrıştırıcı sütunu herhangi bir kaydın hangi sınıfa ait olduğunu belirleyen değeri içerir.
@@ -55,7 +55,7 @@ Devralmayı kullanan (ve ilişkisel verilere karşılık gelen) bir nesne modeli
 - [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [İzlenecek yol: LINQ to SQL sınıfları oluşturma (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
 - [Visual Studio'da verilere erişime](../data-tools/accessing-data-in-visual-studio.md)
-- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
+- [LINQ - SQL](/dotnet/framework/data/adonet/sql/linq/index)
 - [İzlenecek yol: tek tablo devralma (O/R Designer) kullanarak LINQ to SQL sınıfları oluşturma](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md)
 - [Devralma Temelleri (Visual Basic)](/dotnet/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics)
 - [Devralma](/dotnet/csharp/programming-guide/classes-and-structs/inheritance)

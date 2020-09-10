@@ -1,5 +1,5 @@
 ---
-title: Projeleri genişletmek için genellikle kullanılan nesneler için CATIDs | Microsoft Docs
+title: Projeleri genişletmek için genellikle kullanılan nesneler için CATIDs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5754e53f24731eb44dba128ccfcf4b474e833d16
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf67b12288408feebebff2c33f525713416d4990
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709859"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89742839"
 ---
 # <a name="catids-for-objects-that-are-typically-used-to-extend-projects"></a>Projeleri genişletmek için genellikle kullanılan nesneler için CATIDs
 Aşağıdaki tabloda `Project` `ProjectItem` [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] , ve projeleri için nesneleri genişletmek ve otomasyon Için kullanılan catids listelenmiştir [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] . Bu CATIDs, *VSLangProj. olb*içinde tanımlanmıştır.

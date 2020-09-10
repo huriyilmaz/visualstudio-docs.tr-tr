@@ -1,5 +1,5 @@
 ---
-title: Eski dil hizmetindeki özel belge özellikleri | Microsoft Docs
+title: Eski dil hizmetlerindeki özel belge özellikleri
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b3db7f4cfa45ea96e3da3056f39c2a5c78a25ed
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3605658dc7baa45579cc47ccfbf824c3099aa63
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708964"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741810"
 ---
 # <a name="custom-document-properties-in-a-legacy-language-service"></a>Eski dil hizmetindeki özel belge özellikleri
 Belge özellikleri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Özellikler** penceresinde gösterilebilir. Programlama dillerinin genellikle ayrı kaynak dosyalarla ilişkili özellikleri yoktur. Ancak, XML kodlama, şema ve stil sayfasını etkileyen belge özelliklerini destekler.

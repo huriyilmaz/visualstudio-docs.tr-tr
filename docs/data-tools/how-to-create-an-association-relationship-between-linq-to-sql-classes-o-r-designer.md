@@ -1,5 +1,5 @@
 ---
-title: LINQ to SQL sınıfları arasındaki ilişkiler (O/R Tasarımcısı)
+title: LINQ to SQL sınıfları arasındaki ilişkiler
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 56133e65-81f3-44c3-bc28-ffdd0671a0d2
@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b081e989932ea03a3aaf3203bdc7383f90b9b7ed
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a45b93ffe1621b5cd56578fc4969a4f14b28355
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282156"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89742947"
 ---
 # <a name="how-to-create-an-association-between-linq-to-sql-classes-or-designer"></a>Nasıl yapılır: LINQ to SQL sınıfları arasında ilişki oluşturma (O/R Designer)
 İçindeki varlık sınıfları arasındaki ilişkilendirmeler [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] , bir veritabanındaki tablolar arasındaki ilişkilerle benzerdir. **Ilişki düzenleyici** iletişim kutusunu kullanarak varlık sınıfları arasında ilişkiler oluşturabilirsiniz.
@@ -50,6 +50,6 @@ Bir ilişki oluşturduktan sonra, **O/R tasarımcısında**ilişkilendirmeyi se�
 
 - [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [İzlenecek yol: LINQ to SQL sınıfları oluşturma](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
-- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
+- [LINQ - SQL](/dotnet/framework/data/adonet/sql/linq/index)
 - [DataContext yöntemleri (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md)
 - [Nasıl yapılır: birincil anahtarları temsil etme](/dotnet/framework/data/adonet/sql/linq/how-to-represent-primary-keys)

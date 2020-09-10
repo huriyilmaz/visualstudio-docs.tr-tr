@@ -1,5 +1,5 @@
 ---
-title: Verileri güncelleştirmek için LINQ to SQL saklı yordamları kullanma (O/R Designer)
+title: Verileri güncelleştirmek için LINQ to SQL depolanan yordamları kullanın
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: e88224ab-ff61-4a3a-b6b8-6f3694546cac
@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: e657de71fbf1e7c29074a09f5c51211be7b4395f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ba6ee706a7c18545a17683233e30283559542890
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282325"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743007"
 ---
 # <a name="how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-or-designer"></a>Nasıl yapılır: Güncelleştirme, ekleme ve silme işlemleri gerçekleştirmek için saklı yordamlar atama (O/R Tasarımcısı)
 

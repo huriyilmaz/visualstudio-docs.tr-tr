@@ -1,5 +1,5 @@
 ---
-title: Eski dil hizmetindeki oto penceresi için destek | Microsoft Docs
+title: Eski dil hizmetinde oto penceresini destekleme
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,19 +11,21 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 75f8c761721dde5dad4bb75b8675f71f678b06df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3567739dabe68bc028a1bb935337c149637cfd20
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704892"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741458"
 ---
-# <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Otomatik Değişkenler Penceresi için Destek
+# <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>Eski dil hizmetindeki oto penceresi için destek
+
 Bu **pencere,** hata ayıklamakta olan program duraklatıldığında (kesme noktası ya da bir özel durum nedeniyle) kapsamdaki değişkenler ve parametreler gibi ifadeleri görüntüler. İfadeler, yerel kapsamda değiştirilmiş değişkenleri, yerel veya genel ve parametreleri içerebilir. Ayrıca **, bir** sınıf, yapı veya başka bir türün örneklemeleri de içerebilir. Bir ifade değerlendirici 'nin değerlendirebileceği her türlü şey, **oto** penceresinde görüntülenebilir.
 
  Yönetilen paket çerçevesi (MPF), **oto** penceresi için doğrudan destek sağlamaz. Ancak, yöntemini geçersiz kılarsınız <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> , **oto** penceresinde sunulacak ifadelerin bir listesini döndürebilirsiniz.
 
 ## <a name="implementing-support-for-the-autos-window"></a>Oto penceresi için destek uygulama
+
  **Oto** penceresini desteklemek için yapmanız gereken tek şey, <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> yöntemi <xref:Microsoft.VisualStudio.Package.LanguageService> sınıfına uygulamaktır. Uygulamanız kaynak dosyasında bir konum verilmeye karar vermelidir, hangi ifadeler **oto** penceresinde görünmelidir. Yöntemi, her bir dizenin tek bir ifadeyi temsil ettiği dizelerin listesini döndürür. Dönüş değeri, <xref:Microsoft.VisualStudio.VSConstants.S_OK> listenin ifadeler içerdiğini, ancak <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> gösterilecek hiçbir ifade olmadığını gösterir.
 
  Döndürülen gerçek ifadeler, koddaki bu konumda görünen değişkenlerin veya parametrelerin adlarıdır. Bu adlar, daha sonra **oto** penceresinde görüntülenen değerleri ve türleri almak için ifade değerlendirici 'e geçirilir.

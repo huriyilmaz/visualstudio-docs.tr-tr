@@ -1,5 +1,6 @@
 ---
-title: EnableEditOfLocationField öğesi (Visual Studio şablonları) | Microsoft Docs
+title: EnableEditOfLocationField Öğesi (Visual Studio Şablonları)
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e15e2f5c070b8a8c565497c6ba3fc6490b87591
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9baee9e7497f5b65022b8a0b938f4a8a63140ab2
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712002"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741713"
 ---
 # <a name="enableeditoflocationfield-element-visual-studio-templates"></a>EnableEditOfLocationField öğesi (Visual Studio şablonları)
 Kullanıcının konum alanını düzenleyip düzenleyebiliyorsanız belirtir.
@@ -34,10 +35,10 @@ Kullanıcının konum alanını düzenleyip düzenleyebiliyorsanız belirtir.
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
 ### <a name="attributes"></a>Öznitelikler
- Hiçbiri
+ Yok
 
 ### <a name="child-elements"></a>Alt öğeleri
- Hiçbiri
+ Yok
 
 ### <a name="parent-elements"></a>Üst öğeler
 

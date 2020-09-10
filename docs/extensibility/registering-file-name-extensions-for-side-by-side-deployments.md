@@ -1,5 +1,5 @@
 ---
-title: Yan yana dağıtımlar için dosya adı uzantılarını kaydetme | Microsoft Docs
+title: Yan yana Ides için dosya adı uzantılarını Kaydet
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6717625a44b48a25d293f68d01cd9fa3c7c24853
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 68c343646055e6ce877d7bd15892ab1db0d0cbc5
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701547"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741708"
 ---
 # <a name="register-file-name-extensions-for-side-by-side-deployments"></a>Yan yana dağıtımlar için dosya adı uzantılarını kaydetme
 Yan yana bir ortamda dağıtılan VSPackages 'ler için, dosyaları doğru sürümü ile ilişkilendirmek üzere dosya adı uzantılarını kaydetmeniz gerekir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Sürüme özgü bir dosya adı uzantısı kullanmıyorsanız, kayıt, kullanıcıların projenizi ve proje öğesi dosyalarını uygun sürümünde açmasına olanak sağlar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .

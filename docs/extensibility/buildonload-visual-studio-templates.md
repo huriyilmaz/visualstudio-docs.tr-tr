@@ -1,5 +1,6 @@
 ---
 title: BuildOnLoad özniteliği ve öğesi (Visual Studio şablonları)
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3be4016822ccaaae2f1352f91ecc10f09273a889
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 077724bf7038a3ca7010de730993b0f290a66ca4
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739962"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89739143"
 ---
 # <a name="buildonload-attribute-and-element"></a>BuildOnLoad özniteliği ve öğesi
 

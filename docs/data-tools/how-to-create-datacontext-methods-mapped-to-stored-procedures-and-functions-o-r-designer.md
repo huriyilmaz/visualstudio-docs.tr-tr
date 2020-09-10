@@ -1,5 +1,5 @@
 ---
-title: DataContext metotlarını sprocs ve işlevlerle eşleyin (O-R Designer)
+title: DataContext metotlarını sprocs ve işlevlerle eşleyin
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: e7ca32f1-50b3-48af-ad92-ceafd749296a
@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0c1545313ba6852765bc86d57f2149b4481e5f57
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 21ea455e6cc29d17f9050e54dd2f8d11033320ac
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282143"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89742906"
 ---
 # <a name="how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-or-designer"></a>Nasıl yapılır: Saklı yordamlarla eşlenen DataContext metotları oluşturma (O/R Tasarımcısı)
 
@@ -55,6 +55,6 @@ Saklı yordamları ve işlevleri Yöntem olarak **O/R tasarımcısına** ekleyeb
 - [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [DataContext yöntemleri (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md)
 - [İzlenecek yol: LINQ to SQL sınıfları oluşturma](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
-- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
+- [LINQ - SQL](/dotnet/framework/data/adonet/sql/linq/index)
 - [Visual Basic'de LINQ'e Giriş](/dotnet/visual-basic/programming-guide/language-features/linq/introduction-to-linq)
 - [C# üzerinde LINQ](/dotnet/csharp/linq/linq-in-csharp)

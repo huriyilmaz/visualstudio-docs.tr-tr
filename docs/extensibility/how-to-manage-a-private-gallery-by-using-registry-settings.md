@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: kayıt defteri ayarlarını kullanarak özel galeri yönetme | Microsoft Docs'
+title: Kayıt defteri ayarlarını kullanarak özel bir galeri yönetme
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a2630fc71bea40a4d05e616ae336759ba62431a0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 989426feaab04c62c31bf09ddb0431f18222e115
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710929"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89742862"
 ---
 # <a name="how-to-manage-a-private-gallery-by-using-registry-settings"></a>Nasıl yapılır: kayıt defteri ayarlarını kullanarak özel galeri yönetme
 Bir Yöneticiyseniz veya yalıtılmış bir kabuk uzantısının geliştiricisiyseniz, Visual Studio galerisinde, örnekler galerisinde veya özel galerilerinde denetimlere, şablonlara ve araçlara erişimi kontrol edebilirsiniz. Bir galeriyi kullanılabilir hale getirmek veya devre dışı bırakmak için, değiştirilmiş kayıt defteri anahtarlarını ve bunların değerlerini açıklayan bir *. pkgdef* dosyası oluşturun.
@@ -68,4 +68,4 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Özel Galeriler](../extensibility/private-galleries.md)
+- [Özel galeriler](../extensibility/private-galleries.md)

@@ -1,5 +1,5 @@
 ---
-title: Geliştirme ve test ortamlarında yayımlanacak PowerShell betikleri
+title: Geliştirme ve test ortamlarına yayımlamak için PowerShell 'i kullanma
 description: Geliştirme ve test ortamlarında yayımlamak üzere Visual Studio 'da Windows PowerShell betiklerini nasıl kullanacağınızı öğrenin.
 author: ghogen
 manager: jillfra
@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 5f7e2f79b5e7daea577693bc0fd54cef70bb7e4a
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: cec8f700e3ba4ce4b08bc57599570e2ef40bef2c
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508411"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89739969"
 ---
 # <a name="using-windows-powershell-scripts-to-publish-to-dev-and-test-environments"></a>Windows PowerShell betiklerini kullanarak geliştirme ve test ortamlarına yayımlama
 
@@ -22,7 +22,7 @@ Visual Studio 'da bir Web uygulaması oluşturduğunuzda, daha sonra Web siteniz
 
 Bu betikleri kullanarak, geçici kullanım için sitenizin özelleştirilmiş sürümlerini (geliştirme ve test ortamları olarak da bilinir) sağlayabilirsiniz. Örneğin, bir Azure sanal makinesinde veya bir Web sitesindeki hazırlama yuvasında bir test paketini çalıştırmak, bir hatayı yeniden oluşturmak, bir hata düzeltmesini test etmek, önerilen bir değişikliği denemek veya bir demo ya da sunum için özel bir ortam ayarlamak üzere Web sitenizin belirli bir sürümünü kurabilirsiniz. Projenizi yayımlayan bir betik oluşturduktan sonra, komut dosyasını gerektiği gibi yeniden çalıştırarak özdeş ortamları yeniden oluşturabilir veya test için özel bir ortam oluşturmak üzere betiği kendi Web uygulamanızın derlemesi ile çalıştırabilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * **Azure iş yükü** yüklü olan veya Visual Studio 2013 ve azure SDK 2,3 veya sonraki bir sürümünü Içeren Visual Studio 2015 veya üzeri. Bkz. [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads). (Web projelerine yönelik betikleri oluşturmak için Azure SDK 'ya ihtiyacınız yoktur. Bu özellik, bulut hizmetlerinde Web rolleri değil Web projelerine yöneliktir.)
 * Azure PowerShell 0.7.4 veya üzeri. Bkz. [Azure PowerShell'i yükleme ve yapılandırma](/powershell/azure/overview).

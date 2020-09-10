@@ -1,5 +1,5 @@
 ---
-title: Varlık sınıflarının ekleme/güncelleştirme/silme davranışını özelleştirme
+title: Ekleme/güncelleştirme/silme davranışını özelleştirme
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 105519153e92e3944971f60ae2ff6151fa6a3fdf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 01fe4cf160ed3a7548fd8b8bed003838abee3d04
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585957"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741819"
 ---
 # <a name="walkthrough-customize-the-insert-update-and-delete-behavior-of-entity-classes"></a>İzlenecek yol: varlık sınıflarının INSERT, Update ve DELETE davranışını özelleştirme
 
@@ -229,7 +229,7 @@ Varsayılan olarak, Kaydet düğmesi etkin değildir ve Kaydet işlevi uygulanma
 
 18. **Original_CustomerID** yöntemi bağımsız değişkenini **CustomerID (orijinal)** sınıf özelliği ile eşleyin.
 
-19. **Tamam**’a tıklayın.
+19. **Tamam**'a tıklayın.
 
 > [!NOTE]
 > Bu izlenecek yol için bir sorun olmasa da, LINQ to SQL kimlik (otomatik artırma), ROWGUIDCOL (veritabanı tarafından üretilen GUID) ve ekleme ve güncelleştirme sırasında zaman damgası sütunları için veritabanı tarafından oluşturulan değerleri otomatik olarak işlediğini belirten bir değer. Diğer sütun türlerindeki veritabanı tarafından oluşturulan değerler beklenmedik bir şekilde null değer oluşmasına neden olur. Veritabanı tarafından oluşturulan değerleri döndürmek için, aşağıdakilerden birine el ile ve olarak ayarlamanız gerekir <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> `true` <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> : [oto Sync. Always](<xref:System.Data.Linq.Mapping.AutoSync.Always>), [oto Sync. OnInsert](<xref:System.Data.Linq.Mapping.AutoSync.OnInsert>)veya [oto Sync. OnUpdate](<xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>).
@@ -274,5 +274,5 @@ Uygulama gereksinimlerinize bağlı olarak, LINQ to SQL varlık sınıfları olu
 - [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [DataContext metotları](../data-tools/datacontext-methods-o-r-designer.md)
 - [Nasıl yapılır: güncelleştirme, ekleme ve silme işlemleri gerçekleştirmek için saklı yordamlar atama](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)
-- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
+- [LINQ - SQL](/dotnet/framework/data/adonet/sql/linq/index)
 - [LINQ to SQL sorguları](/dotnet/framework/data/adonet/sql/linq/linq-to-sql-queries)

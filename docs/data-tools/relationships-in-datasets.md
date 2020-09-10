@@ -1,5 +1,5 @@
 ---
-title: Veri kümeleri arasında ilişkiler oluşturmak için DataRelation 'ı kullanma
+title: Veri kümeleri arasında ilişki oluşturma
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 95476e56ceecfca84251c1b43cf0bb9ddf84f8b5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6c30fb068a9a25c3cd8a6b6237aefbccc666e49e
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281766"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89739234"
 ---
 # <a name="create-relationships-between-datasets"></a>Veri kümeleri arasında ilişki oluşturma
 İlişkili veri tabloları içeren veri kümeleri <xref:System.Data.DataRelation> , tablolar arasında bir üst/alt ilişkiyi temsil etmek ve birbiriyle ilişkili kayıtları döndürmek için nesneleri kullanır. **Veri kaynağı Yapılandırma Sihirbazı**' nı kullanarak veya **veri kümesi tasarımcısı**, ilgili tabloları veri kümelerine eklemek <xref:System.Data.DataRelation> sizin için nesneyi oluşturur ve yapılandırır.

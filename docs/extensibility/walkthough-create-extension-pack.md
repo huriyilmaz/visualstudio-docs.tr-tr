@@ -1,5 +1,6 @@
 ---
-title: Uzantı paketi öğe şablonuyla bir uzantı paketi oluşturma | Microsoft Docs
+title: Uzantı Paketi Oluşturma
+description: Uzantı paketi öğe şablonuyla bir uzantı paketi oluşturmayı öğrenin
 ms.date: 07/27/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,18 +11,18 @@ ms.author: anthc
 manager: Meng
 ms.workload:
 - vssdk
-ms.openlocfilehash: fa1c141e18a3870eaad4b155d816e30ee207f45d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b5a0021061aefceafc2b048a3e231d9c0300db7b
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697745"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89742922"
 ---
 # <a name="walkthrough-create-an-extension-pack"></a>İzlenecek yol: Uzantı Paketi Oluşturma
 
 Uzantı paketi, birlikte yüklenebilen bir uzantılar kümesidir. Uzantı paketleri, sık kullandığınız uzantıları diğer kullanıcılarla kolayca paylaşmanıza veya belirli bir senaryo için bir dizi uzantıyı birlikte paketlemenize olanak tanır.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Visual Studio 2015 ' den başlayarak Visual Studio SDK, Visual Studio Kurulumu 'nda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
 

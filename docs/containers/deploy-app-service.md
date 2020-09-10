@@ -1,6 +1,6 @@
 ---
-title: Azure App Service bir ASP.NET Core Docker kapsayıcısı dağıtın | Microsoft Docs
-description: ASP.NET Core Web uygulamasını dağıtmak için Visual Studio kapsayıcı araçlarını kullanmayı öğrenin Azure App Service
+title: Azure App Service ASP.NET Core kapsayıcısını dağıtma
+description: Bir Docker kapsayıcısında ASP.NET Core Web uygulamasını dağıtmak için Visual Studio kapsayıcı araçları 'nı kullanmayı öğrenin Azure App Service
 author: ghogen
 manager: jillfra
 ms.technology: vs-azure
@@ -8,12 +8,12 @@ ms.devlang: dotnet
 ms.topic: how-to
 ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: 43bd06fba795c09bfa341ce7b61a3ced0fe15214
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3a0742daa1f5e6e6510f5fa5d7f56d76c1eb4da
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86454169"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741870"
 ---
 # <a name="deploy-an-aspnet-core-container-to-azure-app-service-using-visual-studio"></a>Visual Studio kullanarak Azure App Service ASP.NET Core kapsayıcısını dağıtma
 
@@ -21,7 +21,7 @@ Bu öğretici, Kapsayıcılı ASP.NET Core Web uygulamanızı bir [Azure App Ser
 
 Azure aboneliğiniz yoksa başlamadan önce [ücretsiz bir hesap](https://azure.microsoft.com/free/dotnet/?utm_source=acr-publish-doc&utm_medium=docs&utm_campaign=docs) oluşturun.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu öğreticiyi tamamlamak için:
 

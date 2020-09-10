@@ -1,5 +1,5 @@
 ---
-title: Projeler ve NuGet paketleri için derleyici uyarılarını gösterme
+title: Projeler ve NuGet paketleri için uyarıları bastır
 ms.date: 01/24/2018
 ms.technology: vs-ide-compile
 ms.topic: how-to
@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 53db72495b64236441b9ce517c0eb25dc09a207c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0fd0def717fec9261c71c18499d142a8dd379a65
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283963"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89737936"
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>Nasıl yapılır: derleyici uyarılarını gösterme
 

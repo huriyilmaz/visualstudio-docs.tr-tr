@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f383b173e012a7836d67a916ad9c16132e984602
-ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
+ms.openlocfilehash: 62709c496b9eec631a42c0e227210d3b57ecb5ef
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89402289"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741768"
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig için .NET kodlama kuralı ayarları
 
@@ -43,6 +43,14 @@ Desteklenen üç .NET kodlama kuralı kategorisi vardır:
 - [Adlandırma kuralları](../ide/editorconfig-naming-conventions.md)
 
    Kod öğelerinin adlandırılmasıyla ilgili kurallar. Örneğin, `async` yöntemlerin "Async" ile bitmesi gerektiğini belirtebilirsiniz.
+
+::: moniker range=">=vs-2019"
+
+## <a name="enforce-coding-conventions-on-build"></a>Derleme üzerinde kodlama kurallarını zorla
+
+.NET 5,0 RC2 SDK 'sını içeren Visual Studio 2019 sürüm 16,8 ' den itibaren, tüm .NET projeleri için [derleme üzerinde .net kodlama kurallarını zorunlu](/dotnet/fundamentals/productivity/code-analysis.md#code-style-analysis) kılabilirsiniz. Derleme zamanında, .NET kod stili ihlalleri uyarı veya "IDE" ön eki ile hatalar olarak görünür. Bu, kod tabanınızda tutarlı kod stillerini kesinlikle zorlamanıza olanak sağlar.
+
+::: moniker-end
 
 ## <a name="example-editorconfig-file"></a>Örnek EditorConfig dosyası
 
