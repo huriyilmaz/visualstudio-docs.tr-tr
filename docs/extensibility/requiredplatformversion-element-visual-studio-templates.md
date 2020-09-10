@@ -1,5 +1,6 @@
 ---
-title: RequiredPlatformVersion öğesi (Visual Studio şablonları) | Microsoft Docs
+title: RequiredPlatformVersion Öğesi (Visual Studio Şablonları)
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,14 +10,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3bc22f97401fe5e3724f2e44c873c72acbf65be1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a3873a8107c60802edd07b567d65205a37dc213
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701491"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741674"
 ---
 # <a name="requiredplatformversion-element-visual-studio-templates"></a>RequiredPlatformVersion öğesi (Visual Studio şablonları)
+
 Proje şablonunun doğru çalışması için gereken en düşük işletim sistemi sürümünü belirtir. Bu öğe, uygulama oluşturan proje şablonları için kullanılır [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] .
 
  `RequiredPlatformVersion`Değer, işletim sisteminin sürümü ile doğrudan karşılaştırılır. , `RequiredPlatformVersion` İşletim sistemi sürümünden daha yüksekse, şablon **Yeni proje** iletişim kutusunda görünmez. Veya üzeri bir şablon belirtmek için [!INCLUDE[win8](../debugger/includes/win8_md.md)] , `RequiredPlatformVersion` 6.2.0 olarak ayarlayın. Veya üzeri bir şablon belirtmek için [!INCLUDE[win81](../debugger/includes/win81_md.md)] , `RequiredPlatformVersion` 6.3.0 olarak ayarlayın.
@@ -32,12 +34,15 @@ Proje şablonunun doğru çalışması için gereken en düşük işletim sistem
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
  Yok.
 
 ### <a name="attributes"></a>Öznitelikler
+
  Yok.
 
 ### <a name="child-elements"></a>Alt öğeleri
+
  Yok.
 
 ### <a name="parent-elements"></a>Üst öğeler
@@ -47,12 +52,15 @@ Proje şablonunun doğru çalışması için gereken en düşük işletim sistem
 |[TemplatePlatformName](../extensibility/templatedata-element-visual-studio-templates.md)|Proje şablonunun hedeflediği platformu belirtir.|
 
 ## <a name="text-value"></a>Metin değeri
+
  Bir metin değeri gereklidir.
 
 ## <a name="remarks"></a>Açıklamalar
+
  Bu metin, şablonun gerektirdiği en düşük işletim sistemi sürümünü belirtir.
 
 ## <a name="example"></a>Örnek
+
  Bu örnek, proje şablonunun hedeflediği [!INCLUDE[win8](../debugger/includes/win8_md.md)] veya daha sonraki bir sürümünü belirtir.
 
 ```xml
@@ -69,6 +77,7 @@ Proje şablonunun doğru çalışması için gereken en düşük işletim sistem
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [TargetPlatformName öğesi (Visual Studio şablonları)](../extensibility/targetplatformname-element-visual-studio-templates.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
 - [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
