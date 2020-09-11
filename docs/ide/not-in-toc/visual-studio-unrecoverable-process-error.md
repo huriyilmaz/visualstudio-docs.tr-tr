@@ -1,6 +1,6 @@
 ---
 title: Bir işlem kurtarılamaz bir hatayla karşılaştı
-ms.date: 06/22/2018
+ms.date: 09/10/2020
 ms.topic: troubleshooting
 helpviewer_keywords:
 - unrecoverable error
@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c30ac5950ca9bf775b05e9f77867c119b7c7565d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e1c9dc5053e2168482f4463f805bdc5e724ef6b0
+ms.sourcegitcommit: d9dd86c421532cfca6c0c5761d160f35829419c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81544347"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90025571"
 ---
 # <a name="visual-studio-unrecoverable-process-error"></a>Visual Studio kurtarılamaz işlem hatası
 
@@ -51,3 +51,6 @@ Aşağıda, Visual Studio tarafından kullanılan işlem dışı işlemlerin bir
 - WindowsAzureTelemetryService.exe
 
 Bu işlemlerden herhangi biri beklenmedik bir şekilde sonlandırılırsa, Visual Studio içindeki bazı işlevler çalışmayı durdurur. Bazı süreçler için işlevsellik kaybı önemli olabilir. Diğerleri için, Visual Studio 'nun kararlılığı etkilendi ve bir hata iletisi görüntülenir.
+
+> [!NOTE]
+> Bu sayfada başvurulmayan bir sorunla karşılaşırsanız, lütfen Visual Studio Yükleyicisi ve Visual Studio IDE içinde görüntülenen [sorun bildir](../../ide/how-to-report-a-problem-with-visual-studio.md) aracını kullanarak bize bildirin.
