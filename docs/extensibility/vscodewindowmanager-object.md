@@ -13,19 +13,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 17bc9462af55ec9621654bd39cd65a2091f3f73f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fea97c8784402c55947c108f42f2f3153f322d9c
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740409"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012392"
 ---
 # <a name="vscodewindowmanager-object"></a>VSCodeWindowManager nesnesi
 
-Dil hizmeti, kod penceresi yöneticisini uygular ve donatılabilen (örneğin, açılan çubuğun) yönetilirken sorumludur. Daha fazla bilgi için bkz. [eskı API 'Yi kullanarak kod pencerelerini özelleştirme](/visualstudio/extensibility/customizing-code-windows-by-using-the-legacy-api?view=vs-2015).
+Dil hizmeti, kod penceresi yöneticisini uygular ve donatılabilen (örneğin, açılan çubuğun) yönetilirken sorumludur. Daha fazla bilgi için bkz. [eskı API 'Yi kullanarak kod pencerelerini özelleştirme](../vs-2015/extensibility/customizing-code-windows-by-using-the-legacy-api.md?view=vs-2015).
 
 Aşağıdaki tabloda, nesnesindeki arabirimler gösterilmektedir `VSCodeWindowManager` .
 
-|Arabirim|Description|
+|Arabirim|Açıklama|
 |---------------|-----------------|
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Donatılabilen (açılan çubuklar gibi) bir kod penceresine eklenmesine veya kaldırılmasına izin verir.|

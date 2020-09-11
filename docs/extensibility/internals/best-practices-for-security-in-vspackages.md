@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d4309feeed3233d2149586afb1bf4efafacb21ec
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e73be2af3d24a6a719f353fbd0ab25dbdf86fe09
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709902"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012145"
 ---
 # <a name="best-practices-for-security-in-vspackages"></a>VSPackages içindeki güvenlik için en iyi uygulamalar
 Bilgisayarınıza yüklemek için [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] yönetici kimlik bilgilerine sahip bir bağlamda çalıştırıyor olmanız gerekir. Temel güvenlik ve uygulamanın dağıtım birimi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] [VSPackage](../../extensibility/internals/vspackages.md)' dır. Bir VSPackage [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , yönetim kimlik bilgileri gerektiren kullanılarak kaydedilmelidir.
@@ -31,5 +31,5 @@ Bilgisayarınıza yüklemek için [!INCLUDE[vsipsdk](../../extensibility/include
  Daha fazla bilgi için bkz. [.NET Framework Için güvenli kodlama yönergeleri](/previous-versions/visualstudio/visual-studio-2008/d55zzx87(v=vs.90)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Eklenti Güvenliği](https://msdn.microsoft.com/Library/44a5c651-6246-4310-b371-65378917c799)
-- [DDEX güvenliği](https://msdn.microsoft.com/library/44a52a70-5c98-450e-993d-4a3b32f69ba8)
+- [Eklenti Güvenliği](/previous-versions/1326zbk3(v=vs.140))
+- [DDEX güvenliği](/previous-versions/bb163703(v=vs.140))

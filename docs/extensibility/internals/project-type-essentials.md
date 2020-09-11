@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b44da532207668d9526aec0ccdcab027b94184e6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b7634802899d72eb6abcb0aa837b8fb6a532b966
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706377"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012067"
 ---
 # <a name="project-type-essentials"></a>Proje Türü Temel Bileşenleri
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , veya gibi diller için birçok proje türü [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] içerir [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Ayrıca kendi proje türlerinizi oluşturmanıza imkan tanır.
@@ -52,7 +52,7 @@ ms.locfileid: "80706377"
 
 - Proje türleri, beklenen arabirim kümesini uygulayan bir VSPackage nesneleridir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Bir proje türü geliştirmek Için C# kullanıyorsanız, yönetilen paket çerçevesi proje sınıfları sizin için gerekli arabirimleri uygular ve bu uygulamayı devralmasını sağlar. Daha fazla bilgi için bkz. [bir proje türü uygulamak Için yönetilen paket çerçevesini kullanma (C#)](../../extensibility/internals/using-the-managed-package-framework-to-implement-a-project-type-csharp.md).
 
-- C++ geliştiricileri için, HierUtil kitaplığındaki sınıflar benzer bir şekilde çalışır. Daha fazla bilgi için bkz. [derlemede değil: bir proje türü uygulamak Için HierUtil7 proje sınıflarını kullanma (C++)](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346).
+- C++ geliştiricileri için, HierUtil kitaplığındaki sınıflar benzer bir şekilde çalışır. Daha fazla bilgi için bkz. [derlemede değil: bir proje türü uygulamak Için HierUtil7 proje sınıflarını kullanma (C++)](/previous-versions/bb166212(v=vs.100)).
 
 - Proje türleri, bir. exe veya. dll derlemesine oluşturan tipik kaynak kodu dosyalarından farklı verileri destekleyebilir. Örneğin, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] veritabanı projeleri disk üzerinde depolanan betik ve sorgu dosyalarının başvurularını içerir ve bir veritabanına karşı betikleri ve sorguları yürütmek için **Çözüm Gezgini** komutlar ekler, ancak projeler derleme davranışını desteklemez. Daha fazla bilgi için bkz. [Proje öğelerini açma ve kaydetme](../../extensibility/internals/opening-and-saving-project-items.md).
 

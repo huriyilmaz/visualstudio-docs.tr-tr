@@ -9,16 +9,16 @@ ms.author: heaths
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a7187fbcc3e3aca990846176676a47f5d17aaf00
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 93a6f39a9240002cd8008c9368799e10ab63b78d
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64878153"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012483"
 ---
 # <a name="locate-visual-studio"></a>Visual Studio’yu Bulma
 
-Visual Studio 2017 ' den itibaren, aynı sürümden veya hatta sürümden daha fazla örnek yükleyebilirsiniz. Bu, önceki yüklemenizi korurken birincil geliştirme makinenizdeki yeni işlevselliği önizlemek istediğinizde yararlıdır. Bu değişiklikler nedeniyle, bir örneği bulmak için kullanabileceğiniz tek bir ortam değişkeni veya kayıt defteri değeri yoktur. Bunun yerine, uzantınızla ilgili ölçütlere göre örnekleri bulmak için bir [com sorgu API 'si](https://msdn.microsoft.com/library/microsoft.visualstudio.setup.configuration.aspx) kullanabilirsiniz.
+Visual Studio 2017 ' den itibaren, aynı sürümden veya hatta sürümden daha fazla örnek yükleyebilirsiniz. Bu, önceki yüklemenizi korurken birincil geliştirme makinenizdeki yeni işlevselliği önizlemek istediğinizde yararlıdır. Bu değişiklikler nedeniyle, bir örneği bulmak için kullanabileceğiniz tek bir ortam değişkeni veya kayıt defteri değeri yoktur. Bunun yerine, uzantınızla ilgili ölçütlere göre örnekleri bulmak için bir [com sorgu API 'si](/dotnet/api/microsoft.visualstudio.setup.configuration) kullanabilirsiniz.
 
 Bu, yerel ve yönetilen kod için kullanılabilen NuGet paketlerine sahip hızlı, salt okunurdur bir API 'dir.
 

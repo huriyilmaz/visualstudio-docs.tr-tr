@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4634eb5edaab16752bc5df82d70371a580845d28
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f15895a7dab5c57d8312787b1276acac89c28796
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706393"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011859"
 ---
 # <a name="project-property-user-interface"></a>Proje Özelliği Kullanıcı Arabirimi
 
@@ -55,7 +55,7 @@ Proje kapsamı için CATIDs 'yi belirlemekte, proje alt türü [Vsitemıd için 
 
 Proje alt türü nesneyi topladığından <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> , hangi **Özellik sayfaları** iletişim kutularının görüntülendiğini denetlemek için bu özelliklerin tanımını geçersiz kılabilir. Proje alt türü, bu özellikleri iç temel projeden alabilir ve ardından gerekirse CLSID 'leri ekleyebilir veya kaldırabilir.
 
-Bir proje alt türü tarafından eklenen yeni özellik sayfaları, temel proje uygulamasından bir proje yapılandırması nesnesine sahiptir. Bu proje yapılandırma nesnesi Otomasyon Genişleticilerini destekler. Automationextender 'Lar hakkında daha fazla bilgi için bkz. [Otomasyon Genişleticilerini uygulama ve kullanma](https://msdn.microsoft.com/Library/0d5c218c-f412-4b28-ab0c-33a611f62356). Proje alt türü tarafından uygulanan Özellik sayfaları, <xref:EnvDTE.Project.Extender%2A> temel projenin yapılandırma Gözat nesnesini genişleten kendi proje alt tür yapılandırması nesnesine gözatabiliyor.
+Bir proje alt türü tarafından eklenen yeni özellik sayfaları, temel proje uygulamasından bir proje yapılandırması nesnesine sahiptir. Bu proje yapılandırma nesnesi Otomasyon Genişleticilerini destekler. Automationextender 'Lar hakkında daha fazla bilgi için bkz. [Otomasyon Genişleticilerini uygulama ve kullanma](/previous-versions/0y92k2w2(v=vs.140)). Proje alt türü tarafından uygulanan Özellik sayfaları, <xref:EnvDTE.Project.Extender%2A> temel projenin yapılandırma Gözat nesnesini genişleten kendi proje alt tür yapılandırması nesnesine gözatabiliyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

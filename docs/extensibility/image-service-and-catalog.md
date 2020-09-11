@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7df93a801b5ec34a433849baa41f2fd255790c86
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 26d8a3c4f3458c3659ccdd3a4cde802293342e5c
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536337"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011963"
 ---
 # <a name="image-service-and-catalog"></a>Görüntü hizmeti ve kataloğu
 Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de tanıtılan görüntü kataloğunu benimseme için rehberlik ve en iyi uygulamaları içerir.
@@ -164,7 +164,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 
 Bir \<Source> öğe, aşağıdaki isteğe bağlı alt öğeler için tam olarak birine sahip olabilir:
 
-|**Öğe**|**Öznitelikler (tüm gerekli)**|**Tanım**|
+|**Dosyalarında**|**Öznitelikler (tüm gerekli)**|**Tanım**|
 |-|-|-|
 |\<Size>|Değer|Kaynak, verilen boyutun (cihaz birimlerinde) görüntüleri için kullanılacaktır. Resim kare olacak.|
 |\<SizeRange>|MinSize, MaxSize|Kaynak, MinSize ' den MaxSize 'a (cihaz birimlerinde) dahil olmak üzere, dahil edilecek görüntüler için kullanılacaktır. Resim kare olacak.|
@@ -712,7 +712,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 3. Kodu, güncelleştirilmiş eşleme aracılığıyla takma ad istemek üzere görüntü hizmetini kullanacak şekilde güncelleştirin. (Bu, yönetilen kod için **çapraz görüntülerin** güncelleştirilmesi veya görüntü hizmetinden hbit eşlemler ya da hcons istemek ve yerel kod için bu dosyaları iletmek anlamına gelebilir.)
 
 ## <a name="testing-your-images"></a>Görüntülerinizi test etme
- Her şeyin doğru yazıldığından emin olmak için görüntü bildirimlerinizi test etmek üzere görüntü kitaplığı Görüntüleyicisi aracını kullanabilirsiniz. Aracı [Visual Studio 2015 SDK 'sında](visual-studio-sdk.md)bulabilirsiniz. Bu araç için belgeler ve diğerleri [burada](/visualstudio/extensibility/internals/vssdk-utilities?view=vs-2015)bulunabilir.
+ Her şeyin doğru yazıldığından emin olmak için görüntü bildirimlerinizi test etmek üzere görüntü kitaplığı Görüntüleyicisi aracını kullanabilirsiniz. Aracı [Visual Studio 2015 SDK 'sında](visual-studio-sdk.md)bulabilirsiniz. Bu araç için belgeler ve diğerleri [burada](./internals/vssdk-utilities.md?view=vs-2015)bulunabilir.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

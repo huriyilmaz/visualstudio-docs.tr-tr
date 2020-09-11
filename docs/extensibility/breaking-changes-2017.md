@@ -9,12 +9,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7b3a04c925ef897171de51c73c90973a12c3b17d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d872003b319773401ef4da72c1fac8dc177ecbdb
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739976"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011794"
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 genişletilebilirlikteki değişiklikler
 
@@ -97,7 +97,7 @@ Visual Studio temel derlemelerinin çoğu artık GAC 'ye yüklenmez. Visual Stud
 
 ### <a name="global-com-registration"></a>Genel COM kaydı
 
-* Daha önce, Visual Studio yerel COM kaydını desteklemek için HKEY_CLASSES_ROOT ve HKEY_LOCAL_MACHINE kovanına birçok kayıt defteri anahtarı yükledi. Bu etkiyi ortadan kaldırmak için, Visual Studio artık [com bileşenleri Için kayıtsız etkinleştirme](https://msdn.microsoft.com/library/ms973913.aspx)kullanır.
+* Daha önce, Visual Studio yerel COM kaydını desteklemek için HKEY_CLASSES_ROOT ve HKEY_LOCAL_MACHINE kovanına birçok kayıt defteri anahtarı yükledi. Bu etkiyi ortadan kaldırmak için, Visual Studio artık [com bileşenleri Için kayıtsız etkinleştirme](/previous-versions/dotnet/articles/ms973913(v=msdn.10))kullanır.
 * Sonuç olarak,% ProgramFiles (x86)% \ Common Files\Microsoft Shared\MSEnv altındaki TLB/OLB/DLL dosyaları artık Visual Studio tarafından varsayılan olarak yüklenmez. Bu dosyalar artık, Visual Studio konak işlemi tarafından kullanılan ilgili kayıtsız COM bildirimleri ile [ıNSTALLDIR] altına yüklenir.
 * Sonuç olarak, Visual Studio COM arabirimleri için genel COM kaydına dayanan dış kod artık bu kayıtları bulamaz. Visual Studio işleminin içinde çalışan kod, bir fark görmez.
 

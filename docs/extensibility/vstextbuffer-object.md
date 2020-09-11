@@ -13,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a5ea44d2b22c96d49f334f2ea33f9db8d69b5eb0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 856a685cbf962f8b26f77932c738c758edcf1f91
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697720"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012197"
 ---
 # <a name="vstextbuffer-object"></a>VSTextBuffer nesnesi
 Metin buffer nesnesi, genellikle bir dosyayla ilişkili olan Unicode metin akışını temsil eder. Bir <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> nesnesi, bir sihirbaz içinde olduğu gibi çekirdek Düzenleyici 'nin bağlamı dışında kullanılabilir.
@@ -41,7 +41,7 @@ Metin buffer nesnesi, genellikle bir dosyayla ilişkili olan Unicode metin akı�
 |<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer>|Olaylar için bağlantı noktalarını destekler.|
 
 ## <a name="remarks"></a>Açıklamalar
- `VSTextBuffer`Genellikle `QueryInterface` üzerinde bir çağrısıyla bulunur `IVsTextBuffer` . Daha fazla bilgi için bkz. [metin arabelleği](/visualstudio/extensibility/accessing-the-text-buffer-by-using-the-legacy-api?view=vs-2015).
+ `VSTextBuffer`Genellikle `QueryInterface` üzerinde bir çağrısıyla bulunur `IVsTextBuffer` . Daha fazla bilgi için bkz. [metin arabelleği](../vs-2015/extensibility/accessing-the-text-buffer-by-using-the-legacy-api.md?view=vs-2015).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>

@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0ddfe2b61c8ef08d77fbb7c841b3bb69c167af2f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64edfe1088e7fb8888933d85eeef096bd8c2006a
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903743"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012275"
 ---
 # <a name="create-custom-editors-and-designers"></a>Özel düzenleyiciler ve tasarımcılar oluşturma
 
@@ -59,7 +59,7 @@ Visual Studio çekirdek Düzenleyicisi hakkında daha fazla bilgi için bkz. [d�
 
 - Düzenleyicinizde ActiveX denetimleri barındırmı gerekiyor?
 
-   Düzenleyiciniz ActiveX denetimleri barındırıyorsa, yerinde [etkinleştirme](/visualstudio/misc/in-place-activation?view=vs-2015)' de açıklandığı gibi bir yerinde etkinleştirme Düzenleyicisi uygulayın. ActiveX denetimleri barındırmadığından, Basitleştirilmiş bir katıştırma düzenleyicisi kullanın veya [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] varsayılan düzenleyiciyi özelleştirin.
+   Düzenleyiciniz ActiveX denetimleri barındırıyorsa, yerinde [etkinleştirme](../vs-2015/misc/in-place-activation.md?view=vs-2015)' de açıklandığı gibi bir yerinde etkinleştirme Düzenleyicisi uygulayın. ActiveX denetimleri barındırmadığından, Basitleştirilmiş bir katıştırma düzenleyicisi kullanın veya [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] varsayılan düzenleyiciyi özelleştirin.
 
 - Düzenleyiciniz birden fazla görünümü destekliyor mu? Düzenleyicinizdeki görünümlerin varsayılan düzenleyiciyle aynı anda görünür olmasını istiyorsanız birden çok görünümü desteklemeniz gerekir.
 
@@ -93,7 +93,7 @@ Belge verilerinin ve belge görünümlerinin özel düzenleyicilerde nasıl uygu
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-[Düzenleyicideki eski arabirimler](/visualstudio/extensibility/legacy-interfaces-in-the-editor?view=vs-2015)\
+[Düzenleyicideki eski arabirimler](../vs-2015/extensibility/legacy-interfaces-in-the-editor.md?view=vs-2015)\
 Çekirdek düzenleyiciye, eski API 'nin yoluyla nasıl erişebileceğinizi açıklar.
 
 [Eski dil hizmeti geliştirme](../extensibility/internals/developing-a-legacy-language-service.md)\

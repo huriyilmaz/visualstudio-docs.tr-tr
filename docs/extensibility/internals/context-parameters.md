@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6673ad8f26c94165635b5f1bc652b91dcbbfd24f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d1a8c83ef9794479c35cd36609d77ef94621732
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709305"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012457"
 ---
 # <a name="context-parameters"></a>Bağlam parametreleri
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamında (IDE), **yeni projeye**sihirbaz ekleyebilir, **Yeni öğe ekleyebilir**veya **alt proje** iletişim kutuları ekleyebilirsiniz. Eklenen sihirbazlar **Dosya** menüsünde veya **Çözüm Gezgini**bir projeye sağ tıklanarak kullanılabilir. IDE, sihirbazın uygulamasına bağlam parametrelerini geçirir. Bağlam parametreleri, IDE Sihirbazı çağırdığında projenin durumunu tanımlar.
@@ -64,4 +64,4 @@ ms.locfileid: "80709305"
 - [Özel parametreler](../../extensibility/internals/custom-parameters.md)
 - [Sihirbazlar](../../extensibility/internals/wizards.md)
 - [Sihirbaz (. vsz) dosyası](../../extensibility/internals/wizard-dot-vsz-file.md)
-- [Sihirbazları başlatmak için bağlam parametreleri](https://msdn.microsoft.com/Library/051a10f4-9e45-4604-b344-123044f33a24)
+- [Sihirbazları başlatmak için bağlam parametreleri](/previous-versions/tz690efs(v=vs.140))

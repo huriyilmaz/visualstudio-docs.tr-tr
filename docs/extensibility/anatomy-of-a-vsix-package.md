@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c52f87426b9f06ad40d77c2cc9e7be1627d2c82d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 33cecb4767193010d7e7ca330d891d1835091875
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250822"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012340"
 ---
 # <a name="anatomy-of-a-vsix-package"></a>VSıX paketinin anatomumu
 VSıX paketi, Visual Studio 'Nun uzantıları sınıflandırmak ve yüklemek için kullandığı meta verilerle birlikte bir veya daha fazla Visual Studio uzantısı içeren bir *. VSIX* dosyasıdır. Bu meta veriler VSıX bildiriminde ve *[Content_Types]. xml* dosyasında bulunur. Bir VSıX paketi ayrıca yerelleştirilmiş kurulum metni sağlamak için bir veya daha fazla *extension. valtlangpack* dosyası içerebilir ve bağımlılıkları yüklemek IÇIN ek VSIX paketleri içerebilir.
@@ -28,7 +28,7 @@ VSıX paketi, Visual Studio 'Nun uzantıları sınıflandırmak ve yüklemek iç
 > VSıX paketlerine dahil edilen dosyaların adları, [ \[ rfc2396 \] ](https://www.rfc-editor.org/rfc/rfc2396.txt)altında tanımlandığı gibi Tekdüzen Kaynak tanımlayıcılarında (URI) ayrılan boşluk veya karakterleri içermemelidir.
 
 ## <a name="the-vsix-manifest"></a>VSıX bildirimi
- VSıX bildirimi yüklenecek uzantı hakkında bilgiler içerir ve VSX şemasını izler. Daha fazla bilgi için bkz. [VSIX uzantı şeması 1,0 başvurusu](https://msdn.microsoft.com/library/76e410ec-b1fb-4652-ac98-4a4c52e09a2b). Örnek VSıX bildirimi için bkz. [PackageManifest öğesi (root öğesi, VSX şeması)](https://msdn.microsoft.com/library/f8ae42ba-775a-4d2b-976a-f556e147f187).
+ VSıX bildirimi yüklenecek uzantı hakkında bilgiler içerir ve VSX şemasını izler. Daha fazla bilgi için bkz. [VSIX uzantı şeması 1,0 başvurusu](/previous-versions/dd393700(v=vs.110)). Örnek VSıX bildirimi için bkz. [PackageManifest öğesi (root öğesi, VSX şeması)](/previous-versions/dd393754(v=vs.110)).
 
  VSıX bildiriminin `extension.vsixmanifest` bir ^. VSIX * dosyasına dahil edildiğinde adlandırılması gerekir.
 
@@ -52,9 +52,9 @@ VSıX paketi, Visual Studio 'Nun uzantıları sınıflandırmak ve yüklemek iç
 ## <a name="installation-location"></a>Yükleme konumu
  Yükleme sırasında, **Uzantılar ve güncelleştirmeler** , VSIX paketinin içeriğini *%LocalAppData%\Microsoft\VisualStudio\14.0\Extensions*altındaki bir klasörde arar.
 
- Varsayılan olarak, yükleme yalnızca geçerli kullanıcı için geçerlidir, çünkü *% LocalAppData%* kullanıcıya özgü bir dizindir. Ancak, bildirimin [ALLUSERS](https://msdn.microsoft.com/library/ac817f50-3276-4ddb-b467-8bbb1432455b) öğesini olarak ayarlarsanız `True` , uzantı altına yüklenir <em>. \\ </em> VisualStudioInstallationFolder<em>\Common7\IDE\Extensions</em> ve bilgisayarın tüm kullanıcıları tarafından kullanılabilir.
+ Varsayılan olarak, yükleme yalnızca geçerli kullanıcı için geçerlidir, çünkü *% LocalAppData%* kullanıcıya özgü bir dizindir. Ancak, bildirimin [ALLUSERS](/previous-versions/ee191547(v=vs.110)) öğesini olarak ayarlarsanız `True` , uzantı altına yüklenir <em>. \\ </em> VisualStudioInstallationFolder<em>\Common7\IDE\Extensions</em> ve bilgisayarın tüm kullanıcıları tarafından kullanılabilir.
 
 ## <a name="content_typesxml"></a>[Content_Types]. xml
  *[Content_Types]. xml* dosyası Genişletilmiş *. vsix* dosyasındaki dosya türlerini tanımlar. Visual Studio, paketin yüklenmesi sırasında bu dosyayı kullanır, ancak dosyanın kendisini yüklemez. Bu dosya hakkında daha fazla bilgi için bkz. [[Content_Types]. xml dosyasının yapısı](the-structure-of-the-content-types-dot-xml-file.md).
 
- Açık paketleme kuralları (OPC) standardı için bir *[Content_Types]. xml* dosyası gereklidir. OPC hakkında daha fazla bilgi için bkz. [OPC: msdn Web sitesinde verilerinizi paketlemeye yönelik yeni bir standart](https://blogs.msdn.microsoft.com/msdnmagazine/2007/08/08/opc-a-new-standard-for-packaging-your-data/) .
+ Açık paketleme kuralları (OPC) standardı için bir *[Content_Types]. xml* dosyası gereklidir. OPC hakkında daha fazla bilgi için bkz. [OPC: msdn Web sitesinde verilerinizi paketlemeye yönelik yeni bir standart](/archive/blogs/msdnmagazine/opc-a-new-standard-for-packaging-your-data) .

@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 3cd21242bd4b5a3bdb0da9691d6efb32288d3444
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: a3c4470ea1e54178ea9104af2645c3766d79f18a
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89742874"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012288"
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>Nasıl yapılır: genişletilebilirlik projelerini Visual Studio 2017 'ye geçirme
 
@@ -180,7 +180,7 @@ Hata Ayıklayıcısı | Tam zamanında hata ayıklayıcı | Microsoft. VisualStu
 
 ## <a name="find-component-ids"></a>Bileşen kimliklerini bul
 
-Visual Studio ürününe göre sıralanan bileşenlerin listesi, [Visual studio 2017 iş yükü ve bileşen kimlikleridir](/visualstudio/install/workload-and-component-ids?view=vs-2019). Bildiriminizde önkoşul kimlikleriniz için bu bileşen kimliklerini kullanın.
+Visual Studio ürününe göre sıralanan bileşenlerin listesi, [Visual studio 2017 iş yükü ve bileşen kimlikleridir](../install/workload-and-component-ids.md?view=vs-2019). Bildiriminizde önkoşul kimlikleriniz için bu bileşen kimliklerini kullanın.
 
 Hangi bileşenin belirli bir ikiliye sahip olduğundan emin değilseniz, [bileşen-> ikili eşleme elektronik tablosunu](https://aka.ms/vs2017componentid-binaries)indirin.
 

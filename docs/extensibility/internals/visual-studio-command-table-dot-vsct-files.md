@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d18367436d1ee1b889558a35723e4e3cec865945
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 24ebac7aee2294d2ad8cee06cd88102bb8d3fd78
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704031"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012353"
 ---
 # <a name="visual-studio-command-table-vsct-files"></a>Visual Studio Komut Tablosu (.Vsct) Dosyaları
 Komut tablosu yapılandırma dosyası, VSPackage 'un içerdiği komut kümesini açıklayan bir metin dosyasıdır. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Komut tablosu (vsct) derleyicisi, XML tabanlı yapılandırma dosyalarını (. vsct dosyaları) ikili komut tablosu çıktısı (. CTO) dosyalarına derler. Sonuç. CTO dosyaları,. ctc yapılandırma dosyalarını derlemek için komut tablosu (CTC) derleyicisi kullanılarak oluşturulmuş olanlarla aynıdır. Ancak, XML tabanlı. vsct dosyaları, XML Düzenleyicisi ve XML IntelliSense gibi bazı avantajlara sahiptir.
@@ -37,7 +37,7 @@ Komut tablosu yapılandırma dosyası, VSPackage 'un içerdiği komut kümesini 
 
  Komut tablosu XML yapılandırma dosyasının her bölümü hakkındaki ayrıntıları sağlar.
 
- [Komut tablosu yapılandırması (. CTC) dosyaları](https://msdn.microsoft.com/library/3413dda1-f372-4669-bcf0-c64d3463842c) , kullanım dışı. CTC dosya biçimine bir genel bakış sunar.
+ [Komut tablosu yapılandırması (. CTC) dosyaları](/previous-versions/bb165153(v=vs.100)) , kullanım dışı. CTC dosya biçimine bir genel bakış sunar.
 
  [VSPackage’ların Kullanıcı Arabirimi Öğeleri Eklemesi](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 

@@ -13,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 063767f8f50793253c236db5d5b90e1d6db1bff4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b7ee7cbc4dee800351689386056389d274e07f4f
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905875"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012236"
 ---
 # <a name="how-to-add-a-dependency-to-a-vsix-package"></a>Nasıl yapılır: VSıX paketine bağımlılık ekleme
 
@@ -48,6 +48,6 @@ Valtıyükleyicisi, Visual Studio 'nun önceki sürümlerini algılayacak ve kul
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [VSıX uzantı şeması 1,0 başvurusu](https://msdn.microsoft.com/library/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)
+- [VSıX uzantı şeması 1,0 başvurusu](/previous-versions/dd393700(v=vs.110))
 - [VSıX paketinin anatomumu](../extensibility/anatomy-of-a-vsix-package.md)
 - [Windows Installer dağıtımı için uzantıları hazırlama](../extensibility/preparing-extensions-for-windows-installer-deployment.md)

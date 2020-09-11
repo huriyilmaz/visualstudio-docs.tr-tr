@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e2ab6389f1e0d369dd095290d12c97431c44155
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dfff8e4e6cc8ba3974ec70e6466b25e9ff7432e4
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705857"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012054"
 ---
 # <a name="registering-interop-assembly-command-handlers"></a>Birlikte Çalışma Bütünleştirilmiş Kodu Komut İşleyicilerini Kaydetme
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamı (IDE) komutlarının düzgün şekilde yönlendirildiği için bir VSPackage ile kaydolmalıdır.
@@ -25,7 +25,7 @@ ms.locfileid: "80705857"
 
  Yönetilen paket çerçevesi (MPF), sınıfı aracılığıyla bu işlevselliği sağlar <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> .
 
-- [Komut tablosu biçimi başvuru](https://msdn.microsoft.com/library/09e9c6ef-9863-48de-9483-d45b7b7c798f) kaynakları, YÖNETILMEYEN uydu UI dll 'lerinde bulunur.
+- [Komut tablosu biçimi başvuru](/previous-versions/bb164647(v=vs.100)) kaynakları, YÖNETILMEYEN uydu UI dll 'lerinde bulunur.
 
 ## <a name="command-handler-registration-of-a-vspackage"></a>VSPackage komut Işleyicisi kaydı
  Kullanıcı arabirimi (UI) tabanlı komutlar için işleyici olarak davranan bir VSPackage, VSPackage 'tan sonra adlı bir kayıt defteri girişi gerektirir `GUID` . Bu kayıt defteri girdisi, VSPackage 'un Kullanıcı arabirimi kaynak dosyasının ve bu dosya içindeki menü kaynağının konumunu belirtir. Kayıt defteri girişinin kendisi HKEY_LOCAL_MACHINE \Software\Microsoft\VisualStudio \\ *\<Version>* \Menus altında bulunur *\<Version>* [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . örneğin, sürümü, 9,0.

@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b17f5bab02e49951eb1647af95641af807c44863
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bc6f0643066aaca4ba12d9818d449785f6edb752
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80721529"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011872"
 ---
 # <a name="idebugprogrampublisher2"></a>IDebugProgramPublisher2
 Bu arabirim, hata ayıklama altyapısı (DE) veya özel bağlantı noktası sağlayıcılarının, programları hata ayıklama için kaydetmesini sağlar.
@@ -56,7 +56,7 @@ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="example"></a>Örnek
-Bu örnek, Program yayımcısının örneğini oluşturma ve program düğümünü kaydetme işlemlerinin nasıl yapılacağını gösterir. Bu, [Program düğümünü yayımlayan](https://msdn.microsoft.com/library/d0100e02-4e2b-4e72-9e90-f7bc11777bae)öğreticiden alınmıştır.
+Bu örnek, Program yayımcısının örneğini oluşturma ve program düğümünü kaydetme işlemlerinin nasıl yapılacağını gösterir. Bu, [Program düğümünü yayımlayan](/previous-versions/bb161795(v=vs.90))öğreticiden alınmıştır.
 
 ```cpp
 // This is how m_srpProgramPublisher is defined in the class definition:

@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9067f88b4bf1334e23a548bc6a2cbeb3eac6ad33
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 48aa8a729b5cc38d3cee08a7f5ec143d5e84931a
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708433"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012536"
 ---
 # <a name="expose-types-to-visual-designers"></a>Türleri görsel tasarımcılara sunun
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] görsel bir tasarımcıyı göstermek için tasarım zamanında sınıf ve tür tanımlarına erişimi olmalıdır. Sınıflar, geçerli projenin tüm bağımlılık kümesini (başvurular artı bunların bağımlılıkları) içeren önceden tanımlanmış bir derleme kümesinden yüklenir. Görsel tasarımcılarının özel araçlar tarafından oluşturulan dosyalarda tanımlanan sınıflara ve türlere erişmesi de gerekebilir.
@@ -44,6 +44,6 @@ ms.locfileid: "80708433"
      Geçici bir PE derlendiğinde, derleyiciye sunulan tek kaynak dosya özel araç çıktıdır. Bu nedenle, geçici bir PE kullanan özel bir araç, projedeki diğer dosyalardan bağımsız olarak derlenebilecek çıkış dosyaları üretmelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [BuildManager nesnesine giriş](https://msdn.microsoft.com/library/50080ec2-c1c9-412c-98ef-18d7f895e7fa)
+- [BuildManager nesnesine giriş](/previous-versions/8f9kffa8(v=vs.140))
 - [Tek dosya oluşturucularını uygulama](../../extensibility/internals/implementing-single-file-generators.md)
 - [Tek dosya oluşturucularını Kaydet](../../extensibility/internals/registering-single-file-generators.md)

@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 861250dac25288f353cbd5c57f510bf67dadce70
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd5caea4d07ff34af8c8cee83c24ae20e8b8f108
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703427"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012015"
 ---
 # <a name="when-to-create-project-types"></a>Proje Türlerinin Oluşturulacağı Durumlar
 Yeni bir proje türü oluşturmak, kullanıcılarınız için özelleştirme için temel sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Ancak, yeni bir proje türü oluşturmak tüm özelleştirmeler için gerekli değildir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Aşağıdaki kılavuzlar, senaryonuz için yeni bir proje türünün gerekli olup olmadığını belirlemenize yardımcı olmalıdır.
@@ -50,7 +50,7 @@ Yeni bir proje türü oluşturmak, kullanıcılarınız için özelleştirme iç
 |Görev|Açıklama|
 |----------|-----------------|
 |Komutları işleme|Herhangi bir VSPackage, komutları işleyebilir.|
-|Düzenleyici oluşturma|Özel düzenleyiciler kaydedilebilir. Daha fazla bilgi için bkz. [belge pencereleri ve düzenleyicilerle](https://msdn.microsoft.com/library/603625e1-62b6-413a-bc44-089346e166bc).|
+|Düzenleyici oluşturma|Özel düzenleyiciler kaydedilebilir. Daha fazla bilgi için bkz. [belge pencereleri ve düzenleyicilerle](/previous-versions/bb165691(v=vs.100)).|
 |Sahip olan pencereler|Yeni bir proje türü eklemeden araç ve belge pencerelerini de oluşturabilirsiniz.|
 |Özellikler penceresi özellikleri gösterme|Tüm nesneler özellikleri kullanıma sunabilir.|
 
@@ -58,6 +58,6 @@ Yeni bir proje türü oluşturmak, kullanıcılarınız için özelleştirme iç
  Proje alt türlerini, bir yönetilen proje türünü yeni bir proje türü oluşturmak zorunda kalmadan genişletmek için kullanabilirsiniz. Proje alt türleri, Microsoft veya içinde yazılmış yönetilen projeleri genişletmek için COM toplamayı kullanır [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] . COM toplama sayesinde, yönetilen proje sistemi uygulamasının çoğunu yeniden kullanabilir ve toplama ve destekleyici arabirimlerin kullanımı aracılığıyla belirli bir senaryo için özelleştirme yapabilirsiniz. Proje alt türleri hakkında daha fazla bilgi için bkz. [Proje alt türleri](../../extensibility/internals/project-subtypes.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Belge pencereleri ve düzenleyicilerle](https://msdn.microsoft.com/library/603625e1-62b6-413a-bc44-089346e166bc)
+- [Belge pencereleri ve düzenleyicilerle](/previous-versions/bb165691(v=vs.100))
 - [Yapılacaklar listesi: Yeni Proje Türleri Oluşturma](../../extensibility/internals/checklist-creating-new-project-types.md)
 - [Visual Studio’da Hiyerarşiler](../../extensibility/internals/hierarchies-in-visual-studio.md)

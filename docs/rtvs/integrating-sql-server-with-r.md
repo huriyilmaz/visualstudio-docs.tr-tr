@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 2b239059f445d92a5be6709ee7b7a26cb8bb7164
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2d1eb4cc53b6123acbba9741d33d3401d44cf6d7
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88144720"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011885"
 ---
 # <a name="work-with-sql-server-and-r"></a>SQL Server ve R ile çalışma
 
@@ -50,7 +50,7 @@ Bağlantı kurulduktan sonra sorguları çalıştırabilir ve sonuçları göreb
 ![SQL penceresi sorgu sonuçları](media/sql-query-results.png)
 
 Transact-SQL Düzenleyicisi, sorgu için yürütme planını ve sorgu hata ayıklayıcısını görüntüleme gibi diğer birçok özelliği destekler.
-Daha fazla bilgi için bkz. [komut dosyalarını düzenlemek ve yürütmek Için Transact-SQL düzenleyicisini kullanma](https://msdn.microsoft.com/library/hh272706.aspx).
+Daha fazla bilgi için bkz. [komut dosyalarını düzenlemek ve yürütmek Için Transact-SQL düzenleyicisini kullanma](/previous-versions/sql/sql-server-data-tools/hh272706(v=vs.103)).
 
 ## <a name="work-with-sql-server-stored-procedures"></a>SQL Server saklı yordamlarla çalışma
 

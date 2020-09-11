@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 21fefb776fceeeef4db6997a5bd12a8b987af7d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 96386c2d3b7d1e822fdd1dd6632d754740f86301
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739879"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011937"
 ---
 # <a name="choose-between-shared-and-versioned-vspackages"></a>Paylaşılan ve sürümlenmiş VSPackages arasında seçim yapın
 Visual Studio 'nun farklı sürümleri aynı bilgisayarda bulunabilir. VSPackages, sürümlerin herhangi bir karışımını destekleyebilir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
@@ -35,7 +35,7 @@ Visual Studio 'nun farklı sürümleri aynı bilgisayarda bulunabilir. VSPackage
 
   - VSPackage 'ı, çalıştığı sürümünü uyarlayacak şekilde programlayın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Daha sonra, yeni hizmetler için sorgular başarısız olursa, VSPackage daha eski sürümlerinde desteklenen diğer hizmetleri sunabilir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
-- VSPackage 'ı uygun şekilde kaydedin. Daha fazla bilgi için bkz. [VSPackage kaydı](../extensibility/internals/vspackage-registration.md) ve [Yönetilen VSPackage kaydı](https://msdn.microsoft.com/library/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1).
+- VSPackage 'ı uygun şekilde kaydedin. Daha fazla bilgi için bkz. [VSPackage kaydı](../extensibility/internals/vspackage-registration.md) ve [Yönetilen VSPackage kaydı](/previous-versions/bb166783(v=vs.100)).
 
 - Dosya uzantılarını uygun şekilde kaydedin. Daha fazla bilgi için bkz. [yan yana dağıtımlar için dosya adı uzantılarını kaydetme](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md).
 

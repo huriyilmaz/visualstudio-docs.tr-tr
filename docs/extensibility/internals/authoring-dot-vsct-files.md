@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f02c7ec0e453f0758ba2ab13145fcdff11b442a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a4a3dba370594397d2f247de90063f69c4195cb6
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84173609"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012158"
 ---
 # <a name="author-vsct-files"></a>Author. vsct dosyaları
 Bu belgede, Visual Studio tümleşik geliştirme ortamına (IDE) menü öğeleri, araç çubukları ve diğer kullanıcı arabirimi (UI) öğeleri eklemek için bir *. vsct* dosyasının nasıl yazılacağı gösterilmektedir. Zaten bir *. vsct* dosyası olmayan bir Visual Studio paketine (VSPackage) Kullanıcı arabirimi öğeleri eklediğinizde bu adımları kullanın.
@@ -108,7 +108,7 @@ Bu belgede, Visual Studio tümleşik geliştirme ortamına (IDE) menü öğeleri
        > [!NOTE]
        > Araç çubuğu düğmelerinde simgeler olmalıdır.
 
-   Daha fazla bilgi için bkz. [MenuCommands vs. OleMenuCommands](/visualstudio/misc/menucommands-vs-olemenucommands?view=vs-2015).
+   Daha fazla bilgi için bkz. [MenuCommands vs. OleMenuCommands](../../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015).
 
 4. Komutlarınızın herhangi biri simge gerektiriyorsa, öğeye bir [bit eşlem](../../extensibility/bitmaps-element.md) öğesi ekleyin `Commands` . Ardından, her simge için öğesine bir [bit eşlem](../../extensibility/bitmap-element.md) öğesi ekleyin `Bitmaps` . Bu, bit eşlem kaynağının konumunu belirlediğiniz yerdir. Daha fazla bilgi için bkz. [menü komutlarına simgeler ekleme](../../extensibility/adding-icons-to-menu-commands.md).
 

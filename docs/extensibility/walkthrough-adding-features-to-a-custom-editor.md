@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d7605307d24aa320d2f892dc332f9ff78e14114e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0dc781160b5cc9cb60da12d063f5b6d11844f3ac
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905946"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012093"
 ---
 # <a name="walkthrough-add-features-to-a-custom-editor"></a>İzlenecek yol: özel düzenleyiciye özellikler ekleme
 Özel bir düzenleyici oluşturduktan sonra, ona daha fazla özellik ekleyebilirsiniz.
@@ -34,11 +34,11 @@ ms.locfileid: "85905946"
 
 3. Arabirimi ayarlayarak bir düzenleyici fabrikası uygulayın <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> .
 
-     Daha fazla bilgi için bkz. [Düzenleyici fabrikaları](/visualstudio/extensibility/editor-factories?view=vs-2015).
+     Daha fazla bilgi için bkz. [Düzenleyici fabrikaları](../vs-2015/extensibility/editor-factories.md?view=vs-2015).
 
 4. Düzenleyici 'nin belge görünümü nesne penceresini yönetmek için yerinde etkinleştirme veya Basitleştirilmiş ekleme kullanmasını isteyip istemediğinize karar verin.
 
-     Basitleştirilmiş bir katıştırma Düzenleyicisi penceresi, standart bir belge görünümü barındırır, ancak yerinde etkinleştirme Düzenleyicisi penceresi, belge görünümü olarak bir ActiveX denetimi veya başka bir etkin nesne barındırır. Daha fazla bilgi için bkz. [Basitleştirilmiş ekleme](../extensibility/simplified-embedding.md) ve [yerinde etkinleştirme](/visualstudio/misc/in-place-activation?view=vs-2015).
+     Basitleştirilmiş bir katıştırma Düzenleyicisi penceresi, standart bir belge görünümü barındırır, ancak yerinde etkinleştirme Düzenleyicisi penceresi, belge görünümü olarak bir ActiveX denetimi veya başka bir etkin nesne barındırır. Daha fazla bilgi için bkz. [Basitleştirilmiş ekleme](../extensibility/simplified-embedding.md) ve [yerinde etkinleştirme](../vs-2015/misc/in-place-activation.md?view=vs-2015).
 
 5. <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>Komutları işlemek için arabirimini uygulayın.
 
@@ -51,7 +51,7 @@ ms.locfileid: "85905946"
         > [!NOTE]
         > `QueryService`' <xref:Microsoft.VisualStudio.Shell.Interop.SVsFileChangeEx> A bir işaretçi almak için öğesini çağırın `IVsFileChangeEx` .
 
-7. Belgeyi koordine et kaynak kodu denetimiyle olayları düzenleyin. Şu adımları uygulayın:
+7. Belgeyi koordine et kaynak kodu denetimiyle olayları düzenleyin. Şu adımları izleyin:
 
     1. Öğesine çağırarak bir işaretçi alın `IVsQueryEditQuerySave2` `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave> .
 
@@ -63,13 +63,13 @@ ms.locfileid: "85905946"
 
          Bu yöntem, kullanıcının kaydedilmediyse veya son kaydetme işleminden sonra değiştirildiyse dosyayı kaydetmesini ister.
 
-8. Düzenleyicide Seçilen metnin özelliklerini göstermek için **Özellikler** penceresini etkinleştirin. Şu adımları uygulayın:
+8. Düzenleyicide Seçilen metnin özelliklerini göstermek için **Özellikler** penceresini etkinleştirin. Şu adımları izleyin:
 
     1. <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A>Metin seçimi her değiştiğinde, uygulamanızda geçiş yapılan her seferinde çağrı yapın <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> .
 
     2. `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> İçin bir işaretçi almak üzere hizmette çağrı yapın <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> .
 
-9. Kullanıcıların, düzenleyici ve **araç kutusu**arasında veya dış düzenleyiciler (Microsoft Word gibi) ve **araç kutusu**arasında öğeleri sürükleyip bırakması için izin sağlayın. Şu adımları uygulayın:
+9. Kullanıcıların, düzenleyici ve **araç kutusu**arasında veya dış düzenleyiciler (Microsoft Word gibi) ve **araç kutusu**arasında öğeleri sürükleyip bırakması için izin sağlayın. Şu adımları izleyin:
 
     1. `IDropTarget`Düzenleyicinize bir bırakma hedefi olduğunu IDE 'yi uyarmak için düzenleyicinize uygulayın.
 
@@ -115,7 +115,7 @@ ms.locfileid: "85905946"
 
 12. Bağlama duyarlı yardım desteği uygulayın.
 
-     Bu adım, düzenleyicinizdeki öğeler için F1 yardımı ve dinamik Yardım penceresi desteği sağlamanıza olanak tanır. Daha fazla bilgi için bkz. [nasıl yapılır: düzenleyiciler için bağlam sağlama](/visualstudio/extensibility/how-to-provide-context-for-editors?view=vs-2015).
+     Bu adım, düzenleyicinizdeki öğeler için F1 yardımı ve dinamik Yardım penceresi desteği sağlamanıza olanak tanır. Daha fazla bilgi için bkz. [nasıl yapılır: düzenleyiciler için bağlam sağlama](../vs-2015/extensibility/how-to-provide-context-for-editors.md?view=vs-2015).
 
 13. Arabirimi uygulayarak düzenleyicinizden bir Otomasyon nesne modeli sunun `IDispatch` .
 

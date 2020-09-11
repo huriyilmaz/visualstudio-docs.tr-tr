@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2c7d8a02de9331f268cd06ad35e19faab6494fe0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1ba6e9af922a7a7ab4dffe555aa55d3ab7bb9dd
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699859"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012106"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Visual Studio İçin Renkler ve Stil
 
@@ -283,7 +283,7 @@ Yüksek Karşıtlık temaları için yalnızca el ile sistem renkleri kullanıla
 
 ### <a name="system-color-set"></a>Sistem renk kümesi
 
-[WPF ekibi blogu 'ndaki tablo: SystemColors başvurusu](https://blogs.msdn.microsoft.com/wpf/2010/11/30/systemcolors-reference/) , tüm sistem renk adları kümesini ve her Temada görünen ilgili kuları gösterir.
+[WPF ekibi blogu 'ndaki tablo: SystemColors başvurusu](/archive/blogs/wpf/systemcolors-reference) , tüm sistem renk adları kümesini ve her Temada görünen ilgili kuları gösterir.
 
 Bu sınırlı renk kümesini Kullanıcı arabirimine uygularken, *"normal" temalarda bulunan hafif ayrıntıları kaybedeceğinizi bekliyorcaksınız*. Bir araç penceresi içindeki alanı ayırt etmek için kullanılan, hafif gri renkler içeren Kullanıcı arabirimine bir örnek aşağıda verilmiştir. Yüksek Karşıtlık modunda görüntülenen aynı pencereyle eşleştirildiği zaman, tüm arka planların aynı ton olduğunu ve bu alanların kenarlıklarının tek başına gösterilerek gösterildiğini görebilirsiniz:
 
@@ -340,7 +340,7 @@ Bazen, bir kod Düzenleyicisi veya tasarım yüzeyi oluştururken olduğu gibi s
 
 VSPackage, yazı tiplerini ve renkleri özel kategoriler aracılığıyla denetleyebilir ve yazı tipleri ve renkler Özellik sayfasında öğeleri görüntüler. Bu mekanizmayı kullanırken VSPackages [IVsFontAndColorDefaultsProvider](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider) arabirimini ve ilişkili arabirimlerini uygulamalıdır.
 
-Bu mekanizma, var olan tüm görüntüleme öğelerini ve bunları içeren kategorileri değiştirmek için kullanılabilir. Ancak, metin düzenleyici kategorisini veya görüntüleme öğelerini değiştirmek için kullanılmamalıdır. Metin düzenleyici kategorisi hakkında daha fazla bilgi için bkz. [yazı tipi ve renge genel bakış](/visualstudio/extensibility/font-and-color-overview?view=vs-2015).
+Bu mekanizma, var olan tüm görüntüleme öğelerini ve bunları içeren kategorileri değiştirmek için kullanılabilir. Ancak, metin düzenleyici kategorisini veya görüntüleme öğelerini değiştirmek için kullanılmamalıdır. Metin düzenleyici kategorisi hakkında daha fazla bilgi için bkz. [yazı tipi ve renge genel bakış](../../vs-2015/extensibility/font-and-color-overview.md?view=vs-2015).
 
 Özel kategoriler uygulamak veya öğeleri göstermek için bir VSPackage gerekir:
 
@@ -358,7 +358,7 @@ Altında `[HKLM\SOFTWARE\Microsoft \Visual Studio\\<Visual Studio version\>\Font
 
 Kayıt defterini iki değerle doldurun:
 
-| Ad | Tür | Veriler | Description |
+| Ad | Tür | Veriler | Açıklama |
 | --- | --- | --- | --- |
 | Kategori | REG_SZ | GUID | Kategoriyi tanımlamak için oluşturulmuş bir GUID |
 | Paket | REG_SZ | GUID | Kategoriyi destekleyen VSPackage hizmetinin GUID 'SI |
@@ -371,7 +371,7 @@ Kayıt defterini iki değerle doldurun:
 
 Kayıt defterini iki değerle doldurun:
 
-| Ad | Tür | Veriler | Description |
+| Ad | Tür | Veriler | Açıklama |
 |--- | --- | --- | --- |
 | Kategori | REG_SZ | GUID | Kategoriyi tanımlamak için oluşturulmuş bir GUID |
 | Paket | REG_SZ | GUID | Kategoriyi destekleyen VSPackage hizmetinin GUID 'SI |
@@ -423,7 +423,7 @@ Bunu yapmak için bir VSPackage gerekir:
 
   **VEYA**
 
-- **IDE 'yi değişiklikler için yoklayın**. Bu işlem, sistem tarafından uygulanan [IVsFontAndColorStorage](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) arabirimi aracılığıyla yapılabilir. Birincil olarak kalıcılık desteği için, [GetItem](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem) yöntemi görüntüleme öğeleri için yazı tipi ve renk bilgilerini alabilir. Yazı tipi ve renk ayarları hakkında daha fazla bilgi için, [depolanan yazı tipine ve renk ayarlarına erişme](/visualstudio/extensibility/accessing-stored-font-and-color-settings?view=vs-2015)başlıklı MSDN makalesine bakın.
+- **IDE 'yi değişiklikler için yoklayın**. Bu işlem, sistem tarafından uygulanan [IVsFontAndColorStorage](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) arabirimi aracılığıyla yapılabilir. Birincil olarak kalıcılık desteği için, [GetItem](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem) yöntemi görüntüleme öğeleri için yazı tipi ve renk bilgilerini alabilir. Yazı tipi ve renk ayarları hakkında daha fazla bilgi için, [depolanan yazı tipine ve renk ayarlarına erişme](../../vs-2015/extensibility/accessing-stored-font-and-color-settings.md?view=vs-2015)başlıklı MSDN makalesine bakın.
 
 > [!NOTE]
 > Yoklama sonuçlarının doğru olduğundan emin olmak için [ıvsfontandcolorcachestorage Manager](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager) arabirimini kullanarak [IVsFontAndColorStorage](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) arabiriminin alma yöntemleri çağrılmadan önce bir önbellek temizleme ve güncelleştirme gerekip gerekmediğini saptayın.
