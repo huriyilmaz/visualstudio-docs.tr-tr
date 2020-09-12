@@ -9,12 +9,12 @@ ms.author: esherrer
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 49091ba472637d480c04c39f0170c2aee00595d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6f690b77b7e573fdf1c54fdaeca6237c6bbc146
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85290670"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037549"
 ---
 # <a name="analyze-performance-of-net-asynchronous-code"></a>.NET zaman uyumsuz kodunun performansını çözümleme
 
@@ -41,7 +41,7 @@ Uygulamanızda zaman uyumsuz kodun performansını çözümlemek için .NET Asyn
 
 Zaman uyumsuz olaylar kronolojik olarak Etkinlikler halinde düzenlenir. Her biri başlangıç saatini, bitiş saatini ve süresini görüntüler.
 
-Bir [göreve](https://docs.microsoft.com/dotnet/api/system.threading.tasks) karşılık gelen her satır **ad** sütununda etiketlidir. Çözümlenemeyen herhangi bir görev adı için, etiketteki bir **görev** görüntülenir. Bunun ardından görevin gerçekleştiği yöntemin adı gelir. Bir zaman uyumsuz etkinlik koleksiyon oturumunda tamamlanmazsa, **bitiş zamanı** sütununda **tamamlanmamış** bir etiket görüntülenir.
+Bir [göreve](/dotnet/api/system.threading.tasks) karşılık gelen her satır **ad** sütununda etiketlidir. Çözümlenemeyen herhangi bir görev adı için, etiketteki bir **görev** görüntülenir. Bunun ardından görevin gerçekleştiği yöntemin adı gelir. Bir zaman uyumsuz etkinlik koleksiyon oturumunda tamamlanmazsa, **bitiş zamanı** sütununda **tamamlanmamış** bir etiket görüntülenir.
 
 Belirli bir görevi veya etkinliği daha fazla araştırmak için, satıra sağ tıklayın. Ardından, kodunuzun etkinlik meydana geldiğini görmek için **kaynak dosyasına git** ' i seçin.
 

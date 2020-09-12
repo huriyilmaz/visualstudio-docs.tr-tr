@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 7ec0e4eed9036a0548c4f8f162331e92a416c0cb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4c1cdbea77f8a14e8f4cedcd53b54e2eac65cf75
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88144694"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037230"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>DevOps 'niz için laboratuvar ortamı kullanma
 
@@ -129,23 +129,23 @@ Devam etmeden önce bilmeniz gereken bazı ek kavramlar aşağıda verilmiştir:
 
 Laboratuvar Yönetimi hakkında daha fazla bilgi için bkz.
 
-* [Laboratuvarınızı planlayın](https://msdn.microsoft.com/library/ff756575%28v=vs.140%29.aspx)
-* [Laboratuvarınızı yönetin](https://msdn.microsoft.com/library/dd936084%28v=vs.140%29.aspx)
-* [SCVMM ortamları için ayarlama](https://msdn.microsoft.com/library/dd380687%28v=vs.140%29.aspx)
-* [İzinleri yönetme](https://msdn.microsoft.com/library/dd380760%28v=vs.140%29.aspx)
-* [Değişiklik kurulumu](https://msdn.microsoft.com/library/ee704508%28v=vs.140%29.aspx)
-* [Sorun giderme](https://msdn.microsoft.com/library/ee853230%28v=vs.140%29.aspx)
+* [Laboratuvarınızı planlayın](/previous-versions/ff756575(v=vs.140))
+* [Laboratuvarınızı yönetin](/previous-versions/dd936084(v=vs.140))
+* [SCVMM ortamları için ayarlama](/previous-versions/dd380687(v=vs.140))
+* [İzinleri yönetme](/previous-versions/dd380760(v=vs.140))
+* [Değişiklik kurulumu](/previous-versions/ee704508(v=vs.140))
+* [Sorun giderme](/previous-versions/ee853230(v=vs.140))
 
 Ortamları ayarlama hakkında daha fazla bilgi için bkz.:
 
 * [Bulut ortamlarını derleme ve yayınlama](use-build-or-rm-instead-of-lab-management.md)
-* [Standart laboratuar ortamları](https://msdn.microsoft.com/library/ee390842.aspx)
-* [SCVMM (sanal) ortamları](https://msdn.microsoft.com/library/ee943322.aspx)
-* [Ağ yalıtımlı ortam oluşturma ve kullanma](https://msdn.microsoft.com/library/ee518924.aspx)
+* [Standart laboratuar ortamları](/previous-versions/ee390842(v=vs.140))
+* [SCVMM (sanal) ortamları](/previous-versions/ee943322(v=vs.140))
+* [Ağ yalıtımlı ortam oluşturma ve kullanma](/previous-versions/ee518924(v=vs.140))
 ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Test aracılarını yükleme ve yapılandırma](../../test/lab-management/install-configure-test-agents.md)
-* [Visual Studio Laboratuvar Yönetimi Kılavuzu](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2015/04/22/library-of-tooling-and-guidance-solutions-aka-msvsarsolutions/)
+* [Visual Studio Laboratuvar Yönetimi Kılavuzu](/archive/blogs/visualstudioalmrangers/library-of-tooling-and-guidance-solutions-aka-msvsarsolutions)
 * [Microsoft DevOps Blogu](https://devblogs.microsoft.com/devops/)

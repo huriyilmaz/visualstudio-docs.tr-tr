@@ -1,16 +1,17 @@
 ---
 title: Docker Compose ile çok Kapsayıcılı uygulama
 description: Birden fazla kapsayıcıyı yönetmeyi ve Mac için Visual Studio aralarında iletişim kurmayı öğrenin
+ms.custom: SEO-VS-2020
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 07/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 4dd8695ccf8f1fcf13b9b52387d28c68f8812aec
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e46a66ab9ec05f8e7ad13091fdced01bffbd93b5
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800729"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038679"
 ---
 # <a name="create-a-multi-container-app-with-docker-compose"></a>Docker Compose ile Çok Kapsayıcılı Uygulama Oluşturma
 

@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: e45df63f36947b5f6f0aad77bb8eebcab4aca731
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d68e26e8503fb450d6b163ecec31c0cb6485f6c
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585567"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038627"
 ---
 # <a name="use-the-mstest-framework-in-unit-tests"></a>Birim testlerinde MSTest çerçevesini kullanma
 
@@ -43,7 +43,7 @@ Veri tabanlı birim testlerini ayarlamak için aşağıdaki öğeleri kullanın.
 
 ## <a name="attributes-used-to-establish-a-calling-order"></a>Arama sırası oluşturmak için kullanılan öznitelikler
 
-Aşağıdaki özniteliklerden biriyle donatılmış bir kod öğesi, belirttiğiniz anda çağırılır. Daha fazla bilgi için bkz. [birim testinin anatomi](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144).
+Aşağıdaki özniteliklerden biriyle donatılmış bir kod öğesi, belirttiğiniz anda çağırılır. Daha fazla bilgi için bkz. [birim testinin anatomi](/previous-versions/ms182517(v=vs.110)).
 
 ### <a name="attributes-for-assemblies"></a>Derlemeler için öznitelikler
 
@@ -69,7 +69,7 @@ Sınıfınız yüklenmeden ve sınıfınız bellekten kaldırılmadan önce Clas
 
 ## <a name="attributes-used-to-identify-test-classes-and-methods"></a>Test sınıflarını ve yöntemlerini tanımlamak için kullanılan öznitelikler
 
-Her test sınıfının `TestClass` özniteliği olmalıdır ve her test yönteminin `TestMethod` özniteliği olmalıdır. Daha fazla bilgi için bkz. [birim testinin anatomi](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144).
+Her test sınıfının `TestClass` özniteliği olmalıdır ve her test yönteminin `TestMethod` özniteliği olmalıdır. Daha fazla bilgi için bkz. [birim testinin anatomi](/previous-versions/ms182517(v=vs.110)).
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>
 

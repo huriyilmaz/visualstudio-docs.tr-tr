@@ -8,12 +8,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3938e7dc1b3ec33c8a4cf74b6957067bbdfd6185
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 03c5897f4cbf06ad7c9dc7541a032f5b86e45d4c
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778433"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038614"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 ve Windows Server 2012 uygulamalarında performans araçları
 
@@ -42,9 +42,9 @@ UWP uygulamalarının profilini oluşturma hakkında daha fazla bilgi için aşa
 - [Uzak makinede UWP uygulamaları çalıştırma](../debugger/run-windows-store-apps-on-a-remote-machine.md)
 - [Profil oluşturma araçlarına ilk bakış](profiling-feature-tour.md)
 - [JavaScript belleği](../profiling/javascript-memory.md)
-- [Yerel bir makinedeki UWP uygulamalarında profil Visual C++, Visual C# ve Visual Basic kodu](https://msdn.microsoft.com/2d0c939e-0bac-48c5-b727-46f6c6113060)
-- [Uzak cihazdaki UWP uygulamalarında profil Visual C++, Visual C# ve Visual Basic kodu](https://msdn.microsoft.com/b932a2be-11b0-40fd-b996-75c6b6a79d22)
-- [UWP uygulamalarında Visual C++, Visual C# ve Visual Basic kodu için performans verilerini çözümleme](https://msdn.microsoft.com/5de4a413-d924-425f-afc4-e1ecfb0fca18)
+- [Yerel bir makinedeki UWP uygulamalarında profil Visual C++, Visual C# ve Visual Basic kodu](/previous-versions/hh696631(v=vs.140))
+- [Uzak cihazdaki UWP uygulamalarında profil Visual C++, Visual C# ve Visual Basic kodu](/previous-versions/hh972878(v=vs.140))
+- [UWP uygulamalarında Visual C++, Visual C# ve Visual Basic kodu için performans verilerini çözümleme](/previous-versions/hh780914(v=vs.140))
 
 ## <a name="collect-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-from-the-visual-studio-ide"></a>Visual Studio IDE 'den Windows 8 masaüstü veya Windows Server 2012 üzerinde çalışan uygulamalar üzerinde veri toplama
 

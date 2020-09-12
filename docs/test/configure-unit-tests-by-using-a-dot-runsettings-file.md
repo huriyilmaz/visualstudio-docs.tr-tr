@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: f638d60b7bd4416bb7a19cc960cac1159c755ab3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 38e542fed0f26422a88644577ec864ef006855c5
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86972302"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038445"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>*. Runsettings* dosyasını kullanarak birim testlerini yapılandırma
 
@@ -107,7 +107,7 @@ Proje dosyası ya da bir dizin. Build. props dosyası aracılığıyla bir proje
 
 - Proje düzeyi çalışma ayarları şu anda C#, VB, C++ ve F # projelerinde destekleniyor.
 - Bir proje için belirtilen dosya, çözümde belirtilen diğer çalışma ayarları dosyalarını geçersiz kılar.
-- [Bu MSBuild özellikleri](https://docs.microsoft.com/visualstudio/msbuild/msbuild-reserved-and-well-known-properties?view=vs-2019) , runsettings dosyasının yolunu belirtmek için kullanılabilir. 
+- [Bu MSBuild özellikleri](../msbuild/msbuild-reserved-and-well-known-properties.md) , runsettings dosyasının yolunu belirtmek için kullanılabilir. 
 
 Bir proje için *. runsettings* dosyası belirtme örneği:
     
@@ -307,7 +307,7 @@ Bu ayarlar, özniteliğine sahip test yöntemlerini çalıştıran test bağdaş
 |Yapılandırma|Varsayılan|Değerler|
 |-|-|-|
 |**ForcedLegacyMode**|yanlış|Visual Studio 2012 ' de, MSTest bağdaştırıcısı daha hızlı ve daha ölçeklenebilir hale getirmek için iyileştirildi. Testlerin çalışma sırası gibi bazı davranışlar Visual Studio'nun önceki sürümlerindekiyle aynı olmayabilir. Eski test bağdaştırıcısını kullanmak için bu değeri **true** olarak ayarlayın.<br /><br />Örneğin, birim testi için belirtilen bir *app.config* dosyanız varsa bu ayarı kullanabilirsiniz.<br /><br />Daha yeni bağdaştırıcı kullanmanıza olanak vermek için testlerinizi yeniden düzenlemenizi öneririz.|
-|**IgnoreTestImpact**|yanlış|Test etkisi özelliği, son değişikliklerden etkilenen testleri, MSTest 'te veya Microsoft Test Yöneticisi (Visual Studio 2017 ' de kullanım dışı) çalıştırıldığında önceliklendirir. Bu ayar özelliği devre dışı bırakır. Daha fazla bilgi için bkz. [önceki bir derlemeden bu yana hangi testlerin çalıştırılması gerekir](https://msdn.microsoft.com/library/dd286589).|
+|**IgnoreTestImpact**|yanlış|Test etkisi özelliği, son değişikliklerden etkilenen testleri, MSTest 'te veya Microsoft Test Yöneticisi (Visual Studio 2017 ' de kullanım dışı) çalıştırıldığında önceliklendirir. Bu ayar özelliği devre dışı bırakır. Daha fazla bilgi için bkz. [önceki bir derlemeden bu yana hangi testlerin çalıştırılması gerekir](/previous-versions/dd286589(v=vs.140)).|
 |**SettingsFile**||Burada MSTest bağdaştırıcısıyla kullanılacak bir test ayarları dosyası belirtebilirsiniz. Ayrıca [, Ayarlar menüsünden](#specify-a-run-settings-file-in-the-ide)bir test ayarları dosyası belirtebilirsiniz.<br /><br />Bu değeri belirtirseniz, **Forcedlegacymode** öğesini de **true**olarak ayarlamanız gerekir.<br /><br />`<ForcedLegacyMode>true</ForcedLegacyMode>`|
 |**KeepExecutorAliveAfterLegacyRun**|yanlış|Test çalıştırması tamamlandıktan sonra MSTest kapatılır. Testin bir parçası olarak başlatılan tüm işlemler de sonlandırıldı. Test yürütücüsünü canlı tutmak istiyorsanız, değeri **true**olarak ayarlayın. Örneğin, bu ayarı, tarayıcının kodlanmış UI testleri arasında çalışmasını sağlamak için kullanabilirsiniz.|
 |**DeploymentEnabled**|true|Değeri **false**olarak ayarlarsanız, test yöntetiniz içinde belirttiğiniz dağıtım öğeleri dağıtım dizinine kopyalanmaz.|
@@ -463,4 +463,3 @@ Aşağıdaki kod, ortam değişkenlerini geçiren örnek bir *. runsettings* dos
 - [Test çalıştırması yapılandırma](https://github.com/microsoft/vstest-docs/blob/master/docs/configure.md)
 - [Kod kapsamı analizini özelleştirme](../test/customizing-code-coverage-analysis.md)
 - [Visual Studio test görevi (Azure Test Plans)](/azure/devops/pipelines/tasks/test/vstest?view=vsts)
-

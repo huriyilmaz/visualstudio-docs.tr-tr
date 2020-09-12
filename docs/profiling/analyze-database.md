@@ -9,19 +9,19 @@ ms.author: esherrer
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: b369fe6998cd7ef134af765d6d849f41bc93527c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4ea74fd587119105577062f571b4ec8e3de76a4f
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85290667"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037536"
 ---
 # <a name="analyze-database-performance-using-the-database-tool"></a>Veritabanı aracını kullanarak veritabanı performansını çözümleme
 
 Tanılama oturumu sırasında uygulamanızın yaptığı veritabanı sorgularını kaydetmek için veritabanı aracını kullanın. Daha sonra, uygulamanızın performansını iyileştirecek yerleri bulmak üzere ayrı sorgular hakkındaki bilgileri çözümleyebilirsiniz.
 
 > [!NOTE]
-> Veritabanı aracı, [ADO.net]( https://docs.microsoft.com/dotnet/framework/data/adonet/ado-net-overview) veya [Entity Framework Core](https://docs.microsoft.com/ef/core/)kullanarak Visual Studio 2019 sürüm 16,3 veya üstünü ve Windows üzerinde .NET Core projesi gerektirir.
+> Veritabanı aracı, [ADO.net]( https://docs.microsoft.com/dotnet/framework/data/adonet/ado-net-overview) veya [Entity Framework Core](/ef/core/)kullanarak Visual Studio 2019 sürüm 16,3 veya üstünü ve Windows üzerinde .NET Core projesi gerektirir.
 
 ## <a name="setup"></a>Kurulum
 
@@ -50,7 +50,7 @@ Araştırmak istediğiniz bir sorgu bulduktan sonra sorguya sağ tıklayın. Son
 
 ![Kaynak dosyasına git seçili](./media/db-gotosource.png "Kaynak dosyasına git seçili")
 
-Grafik üzerinde bir zaman aralığı seçerseniz, sorgu tablosu yalnızca o zaman aralığında gerçekleşen sorguları gösterir. Bu davranış, özellikle de [CPU kullanımı aracını](https://docs.microsoft.com/visualstudio/profiling/cpu-usage?view=vs-2019)çalıştırdığınızda yararlı olur.
+Grafik üzerinde bir zaman aralığı seçerseniz, sorgu tablosu yalnızca o zaman aralığında gerçekleşen sorguları gösterir. Bu davranış, özellikle de [CPU kullanımı aracını](./cpu-usage.md?view=vs-2019)çalıştırdığınızda yararlı olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

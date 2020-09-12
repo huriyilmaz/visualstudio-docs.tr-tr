@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4aec033266ccb2a6e6dcd0342669b7c31082488a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a70e77b63aa923aa51188c3db8cb0feaaf6daf0
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62788931"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038510"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>Hatalı davranan çok iş parçacıklı uygulamalar için ortak desenler
 
@@ -30,7 +30,7 @@ Bazı durumlarda, çok sayıda iş parçacığı olmasına rağmen bilgisayar ye
 
 Aşağıdaki çizimde gösterildiği gibi eşzamanlılık görselleştiricisi de bu belirtiyi CPU kullanımı görünümünde kullanıma sunabileceğinden, burada birden çok iş parçacığı varlığına rağmen uygulama yalnızca bir mantıksal çekirdek tüketir.
 
-Daha fazla bilgi için, bkz. MSDN Magazine makalesi [Iş parçacığı performans-kaynak çekişme profili Visual Studio 2010](https://msdn.microsoft.com/magazine/ff714587.aspx).
+Daha fazla bilgi için, bkz. MSDN Magazine makalesi [Iş parçacığı performans-kaynak çekişme profili Visual Studio 2010](/archive/msdn-magazine/2010/june/msdn-magazine-thread-performance-resource-contention-concurrency-profiling-in-visual-studio-2010).
 
 ![Kilit çakışması](../profiling/media/lockcontention_2.png "LockContention_2")
 

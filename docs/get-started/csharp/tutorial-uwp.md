@@ -1,8 +1,8 @@
 ---
-title: 'Visual Studio ve C ile Evrensel Windows Platformu (UWP) uygulaması oluşturma #'
+title: 'Visual Studio ve C ile UWP uygulaması oluşturma #'
 description: "Visual Studio 'da XAML ve C ile bir UWP uygulaması oluşturma #"
 titleSuffix: ''
-ms.custom: seodec18, get-started
+ms.custom: seodec18, get-started, SEO-VS-2020
 ms.date: 09/20/2019
 ms.technology: vs-ide-general
 ms.topic: tutorial
@@ -14,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: aec4b72e8393e241039e8c005d05275ab61111bb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3c1f541c94804f8f5f454f6299a116a8bd1386e7
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88249248"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037282"
 ---
 # <a name="tutorial-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>Öğretici: Visual Studio 'da XAML ve C ile ilk Evrensel Windows Platformu uygulamanızı oluşturma&#35;
 
@@ -72,7 +72,7 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
 1. **Yeni Evrensel Windows platformu projesi** iletişim kutusunda varsayılan **hedef sürümü** ve **En düşük sürüm** ayarlarını kabul edin.
 
-   ![Yeni Evrensel Windows Platformu Projesi iletişim kutusunda varsayılan hedef sürümü ve en düşük sürüm ayarlarını kabul edin](media/vs-2019/new-uwp-project-target-minver-dialog.png)
+   ![Yeni Evrensel Windows Platformu Projesi iletişim kutusunda varsayılan hedef sürümü ve en düşük sürüm ayarlarını kabul et](media/vs-2019/new-uwp-project-target-minver-dialog.png)
 ::: moniker-end
 
    > [!NOTE]
@@ -114,7 +114,7 @@ Geliştirmeye başlama zamanı. Düğme denetimi ekleyecek, düğmeye bir eylem 
 
    **Xaml düzenleyicisinde**koda bakarsanız, düğmenin de bu şekilde eklendiğini görürsünüz:
 
-   ![Düğme denetimine tıklayın ve tasarım tuvaline sürükleyin](media/uwp-xaml-control-code-window.png)
+   ![XAML düzenleyicisinde düğmeyi göster](media/uwp-xaml-control-code-window.png)
 
 ### <a name="add-a-label-to-the-button"></a>Düğmeye etiket ekleyin
 
@@ -211,5 +211,5 @@ Tebrikler, bu öğreticiyi tamamlama! UWP ve Visual Studio IDE hakkında bazı t
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UWP genel bakış](/windows/uwp/get-started/universal-application-platform-guide)
+- [UWP’ye genel bakış](/windows/uwp/get-started/universal-application-platform-guide)
 - [UWP uygulama örnekleri al](/windows/uwp/get-started/get-uwp-app-samples)

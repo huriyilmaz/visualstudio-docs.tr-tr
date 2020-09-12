@@ -1,16 +1,17 @@
 ---
 title: Bir performans sorununun düzeltilme olasılığını artırma
 description: Visual Studio 'da performans sorunları göndermek için ek bilgiler ve en iyi uygulamalar
+ms.custom: SEO-VS-2020
 author: madskristensen
 ms.author: madsk
 ms.date: 11/19/2019
 ms.topic: conceptual
-ms.openlocfilehash: fac6dd284abc04e8018ba7c36ae3a22022890f95
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 627b597d9c8f4d68fdb90235ebf51339111374f1
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743043"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038601"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Bir performans sorununun düzeltilme olasılığını artırma
 

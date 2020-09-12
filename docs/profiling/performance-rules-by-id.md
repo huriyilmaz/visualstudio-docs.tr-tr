@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b7ef6975fe5d9d19ebd2cbb0ed10951ca6f3219
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1762f12d791f220161867af73a823f88b9f86ec0
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778446"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037334"
 ---
 # <a name="performance-rules-by-id"></a>Kimliğe göre performans kuralları
 
@@ -28,7 +28,7 @@ ms.locfileid: "74778446"
 | [DA0006: Değer türleri için Equals() üzerine yazın](../profiling/da0006-override-equals-parens-for-value-types.md) | Eşittir yöntemine veya bir ortak değer türünün eşitlik işleçlerine yapılan çağrılar, profil oluşturma verilerinin önemli bir orandır. Daha verimli bir yöntem uygulamayı düşünün. |
 | [DA0007: Denetim akışı için özel durumlar kullanmaktan kaçının](../profiling/da0007-avoid-using-exceptions-for-control-flow.md) | Profil oluşturma verilerinde yüksek oranda .NET Framework özel durum işleyicileri çağrıldı. Oluşturulan özel durumların sayısını azaltmak için diğer denetim akışı mantığını kullanmayı göz önünde bulundurun. |
 | [DA0008: Az sayıda örnek toplandı](../profiling/da0008-few-samples-collected.md) | Profil oluşturma çalıştırmasında yalnızca birkaç örnek toplandı. Daha önemli sonuçlar için daha uzun bir çalıştırma veya daha hızlı örnekleme oranı düşünün. |
-| [DA0009: JıT içinde yüksek% Time](https://msdn.microsoft.com/b60c1767-515c-41d9-81c2-c70d0b7024fd) | Tam zamanında (JıT) derleyicisinde uygulama yürütme zamanının önemli bir yüzdesi harcanmıştı. |
+| [DA0009: JıT içinde yüksek% Time](/previous-versions/dd264972(v=vs.100)) | Tam zamanında (JıT) derleyicisinde uygulama yürütme zamanının önemli bir yüzdesi harcanmıştı. |
 | [DA0010: Pahalı GetHashCode](../profiling/da0010-expensive-gethashcode.md) | Türün GetHashCode yöntemine yapılan çağrılar, profil oluşturma verilerinin önemli bir oranıyla veya yöntemin belleği ayırır. |
 | [DA0011: Pahalı CompareTo](../profiling/da0011-expensive-compareto.md) | Türün CompareTo yöntemi pahalıdır veya bellek ayırır. |
 | [DA0012: Önemli miktarda Yansıma](../profiling/da0012-significant-amount-of-reflection.md) | InvokeMember ve GetMember gibi System. Reflection yöntemlerine veya MemberInvoke gibi Yöntem türlerine yapılan çağrılar, profil oluşturma verilerinin önemli bir orandır. Bunu yaptığınızda, bu yöntemleri bağımlı derlemelerin yöntemlerine erken bağlama ile değiştirmeyi göz önünde bulundurun. |

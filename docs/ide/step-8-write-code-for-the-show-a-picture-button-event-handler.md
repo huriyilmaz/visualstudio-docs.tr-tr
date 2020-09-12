@@ -1,6 +1,8 @@
 ---
-title: '8. Adım: resim göster düğmesi olay işleyicisi için kod yazma'
+title: Resim göster düğmesi olay işleyicisi için kod yazma
+description: Resim görüntüleme Görüntüleyici öğreticisinde resim göster düğmesi olay işleyicisi için kod yazın.
 ms.date: 08/30/2019
+ms.custom: SEO-VS-2020
 ms.assetid: 07f4ec00-cda4-42f4-98bb-37edc7167de7
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d74c9ecda0e3ab23c1f2ab1cb2180a60701c069a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5718bd976952557d9ff5f92a0522a672757a54e8
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579812"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038666"
 ---
 # <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>8. Adım: resim göster düğmesi olay işleyicisi için kod yazma
 

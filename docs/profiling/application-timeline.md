@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 0bb76de0d62ab504090d9ac1864ba7ee5627f69d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d7f3d943d621708efab8df1e2f69402a0c5f26c
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537286"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038354"
 ---
 # <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>Kaynak tüketimini ve UI iş parçacığı etkinliğini çözümleme (XAML)
 
@@ -29,7 +29,7 @@ Bu aracı aşağıdaki platformlarda kullanabilirsiniz:
 - Evrensel Windows uygulamaları (Windows 10 ' da)
 - Windows 8.1
 - Windows Presentation Foundation (.NET 4,0 ve üzeri)
-- Windows 7
+- Windows 7
 
 > [!NOTE]
 > **Uygulama zaman çizelgesi** VERILERIYLE birlikte CPU kullanım verilerini ve enerji tüketimi verilerini toplayıp analiz edebilirsiniz. Bkz. [hata ayıklayıcı ile veya olmayan profil oluşturma araçlarını çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
@@ -125,7 +125,7 @@ Aşağıdaki olaylar desteklenir:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WPF ekibi blogu: WPF uygulamaları için yeni UI performans Analizi Aracı](https://blogs.msdn.microsoft.com/wpf/2015/01/16/new-ui-performance-analysis-tool-for-wpf-applications/)
+- [WPF ekibi blogu: WPF uygulamaları için yeni UI performans Analizi Aracı](/archive/blogs/wpf/new-ui-performance-analysis-tool-for-wpf-applications)
 - [C++, C# ve Visual Basic kullanarak UWP uygulamaları için en iyi performans uygulamaları](/previous-versions/windows/apps/hh750313\(v\=win.10\))
 - [WPF uygulama performansını iyileştirme](/dotnet/framework/wpf/advanced/optimizing-wpf-application-performance)
 - [Visual Studio 'da profil oluşturma](../profiling/index.yml)

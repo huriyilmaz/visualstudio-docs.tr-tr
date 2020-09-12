@@ -1,5 +1,6 @@
 ---
 title: Oluşturma öncesi olay-oluşturma sonrası olay komut satırı iletişim kutusu
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: reference
@@ -34,12 +35,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a2c2b191c4c50fd89936a798a704844b20aa0d3
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 9a9ec2acb6802c19b48ba6254fb0a8812935d400
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741504"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038367"
 ---
 # <a name="pre-build-eventpost-build-event-command-line-dialog-box"></a>Oluşturma öncesi olay/oluşturma sonrası olay komut satırı iletişim kutusu
 
@@ -73,7 +74,7 @@ Makro tablosunda seçilen makro komut satırı düzenleme kutusuna ekler.
 
 Bu makroların herhangi birini dosya konumları belirtmek için veya birden çok seçim durumunda giriş dosyasının gerçek adını almak için kullanabilirsiniz. Bu makrolar büyük/küçük harfe duyarlı değildir.
 
-|Makroya|Açıklama|
+|Makroya|Description|
 |-----------|-----------------|
 |`$(ConfigurationName)`|Geçerli proje yapılandırmasının adı, örneğin "Debug".|
 |`$(OutDir)`|Proje dizinine göre çıkış dosyası dizininin yolu. Bu, çıkış dizini özelliğinin değerini çözümler. ' ' Sonunda ters eğik çizgi içeriyor \\ .|

@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 28969dd6f5adf1d0f32fe419a17f14ac4069a298
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4afddf8c0b25d262161df991f1a2a9d447a9a655
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85539925"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037204"
 ---
 # <a name="da0005-frequent-gc2-collections"></a>DA0005: Sık kullanılan GC2 koleksiyonları
 
@@ -39,9 +39,9 @@ ms.locfileid: "85539925"
 
  Nesil 0 içindeki nesneler sık ve genellikle çok verimli bir şekilde toplanır. 1. nesil nesneler daha az ve daha az verimli bir şekilde toplanır. Son olarak, kuşak 2 ' deki uzun süreli nesneler daha az sıklıkta toplanmalıdır. Eksiksiz bir atık toplama çalıştırması olan 2. nesil koleksiyon, ayrıca en pahalı işlemdir.
 
- Bu kural, çok fazla 2. nesil atık toplama işlemi meydana geldiğinde ateşlenir. Çok fazla sayıda kısa süreli nesne, 1. kuşak ve daha sonra 2. nesil bir tam koleksiyonda toplanabiliyor ise, bellek yönetiminin maliyeti kolayca aşırı kullanılabilir hale gelebilir. Daha fazla bilgi için, MSDN Web sitesindeki Riko [maridın](https://blogs.msdn.microsoft.com/ricom/2003/12/04/mid-life-crisis/) performans katmanını ' na bakın.
+ Bu kural, çok fazla 2. nesil atık toplama işlemi meydana geldiğinde ateşlenir. Çok fazla sayıda kısa süreli nesne, 1. kuşak ve daha sonra 2. nesil bir tam koleksiyonda toplanabiliyor ise, bellek yönetiminin maliyeti kolayca aşırı kullanılabilir hale gelebilir. Daha fazla bilgi için, MSDN Web sitesindeki Riko [maridın](/archive/blogs/ricom/mid-life-crisis) performans katmanını ' na bakın.
 
 ## <a name="how-to-investigate-a-warning"></a>Uyarı araştırma
  Uygulamanın bellek ayırma düzenlerini anlamak için [.net bellek verileri görünümleri](../profiling/dotnet-memory-data-views.md) raporlarını gözden geçirin. Programın veri nesnelerinin hangisinin 2. nesil ve sonra geri kazanılır olduğunu anlamak için [nesne ömrü görünümünü](../profiling/object-lifetime-view.md) kullanın. Bu ayırmalara neden olan yürütme yolunu öğrenmek için [ayırmalar görünümünü](../profiling/dotnet-memory-allocations-view.md) kullanın.
 
- Çöp toplama performansını geliştirme hakkında daha fazla bilgi için bkz. Microsoft Web sitesinde [çöp toplayıcı temelleri ve performans ipuçları](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) . Otomatik atık toplama ek yükü hakkında daha fazla bilgi için bkz. [büyük nesne yığını kapsanmamış](https://msdn.microsoft.com/magazine/cc534993.aspx).
+ Çöp toplama performansını geliştirme hakkında daha fazla bilgi için bkz. Microsoft Web sitesinde [çöp toplayıcı temelleri ve performans ipuçları](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) . Otomatik atık toplama ek yükü hakkında daha fazla bilgi için bkz. [büyük nesne yığını kapsanmamış](/archive/msdn-magazine/2008/june/clr-inside-out-large-object-heap-uncovered).
