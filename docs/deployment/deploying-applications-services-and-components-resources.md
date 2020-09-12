@@ -14,39 +14,67 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 20524a02cf6ff38e8336ae715162f9f197d46590
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: cccba4c299d5b12bdc00666a0b00f073fba12278
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641643"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036708"
 ---
 # <a name="deploy-your-app-to-a-folder-iis-azure-or-another-destination"></a>Uygulamanızı bir klasöre, IIS 'ye, Azure 'a veya başka bir hedefe dağıtın
 
 Bir uygulamayı, hizmeti ya da bileşeni dağıtarak bunu diğer bilgisayarlardaki, cihazlardaki, sunuculardaki ya da buluttaki yükleme için dağıtmış olursunuz. İhtiyacınız olan dağıtım türü için uygun yöntemi Visual Studio'da seçebilirsiniz.
 
-Birçok ortak uygulama türü için, uygulamanızı Visual Studio 'daki Çözüm Gezgini doğrudan dağıtabilirsiniz. Bu özelliğe hızlı bir tur için bkz. [dağıtıma ilk bakış](../deployment/deploying-applications-services-and-components.md).
+Dağıtım göreviniz için yardım alın:
 
-![Yayımlama seçeneği seçin](../deployment/media/quickstart-publish-dialog.png)
+- Hangi dağıtım seçeneğinin seçdiğinizden emin değil misiniz? [Benim Için hangi yayımlama seçeneklerinin](#what-publishing-options-are-right-for-me) uygun olduğunu görün?
+- Azure App Service veya IIS dağıtım sorunlarıyla ilgili yardım için bkz. [Azure App Service ve IIS 'de ASP.NET Core sorunlarını giderme](/aspnet/core/test/troubleshoot-azure-iis).
+- .NET dağıtım ayarlarını yapılandırma konusunda yardım için bkz. [.NET dağıtım ayarlarını yapılandırma](#configure-net-deployment-settings).
+- Yeni bir hedefe dağıtmak için, daha önce bir yayımlama profili oluşturduysanız, yapılandırılan bir profil için **Yayımla** penceresinden **Yeni** ' yi seçin.
+
+   ![Yeni bir yayımlama profili oluşturun](../deployment/media/create-a-new-publish-profile.png)
+
+   Ardından, Yayımla penceresinde bir dağıtım seçeneği belirleyin. Yayımlama seçenekleriniz hakkında daha fazla bilgi için aşağıdaki bölümlere bakın.
 
 ## <a name="what-publishing-options-are-right-for-me"></a>Benim için hangi yayımlama seçenekleri uygun?
 
 Visual Studio içinden uygulamalar doğrudan aşağıdaki hedeflere yayımlanabilir:
 
+::: moniker range=">=vs-2019"
 - [Azure](#azure)
 - [Docker Container Registry](#docker-container-registry)
 - [Klasör](#folder)
 - [FTP/FTPS sunucusu](#ftpftps-server)
 - [Web sunucusu (IIS)](#web-server-iis)
 - [Profili içeri aktar](#import-profile)
+::: moniker-end
+::: moniker range="vs-2017"
+- [App Service](#azure-app-service)
+- [App Service Linux](#azure-app-service)
+- [IIS (IIS, FTP, vb. seçin)](#web-server-iis)
+- [FTP/FTPS (IIS, FTP, vb. seçin)](#ftpftps-server)
+- [Klasör](#folder)
+- [Profili içeri aktar](#import-profile)
+::: moniker-end
+
+Yukarıdaki seçenekler, yeni bir yayımlama profili oluştururken aşağıdaki çizimde gösterildiği gibi görünür.
+
+::: moniker range=">=vs-2019"
+![Yayımlama seçeneği seçin](../deployment/media/quickstart-publish-dialog.png)
+::: moniker-end
+::: moniker range="vs-2017"
+![Yayımlama seçeneği seçin](../deployment/media/quickstart-publish-dialog-vs-2017.png)
+::: moniker-end
+
+Daha genel uygulama dağıtımı seçeneklerinin hızlı bir turu için bkz. [dağıtıma ilk bakış](../deployment/deploying-applications-services-and-components.md).
 
 ## <a name="azure"></a>Azure 
 
 Azure 'u seçtiğinizde şunları seçebilirsiniz:
 
-- Windows, Linux veya Docker görüntüsü olarak çalışan Azure App Service
-- Azure Container Registry dağıtılan bir Docker görüntüsü
-- Azure Sanal Makinesi
+- Windows, Linux veya Docker görüntüsü olarak çalışan [Azure App Service](#azure-app-service)
+- [Azure Container Registry](#azure-container-registry) dağıtılan bir Docker görüntüsü
+- Bir [Azure sanal makinesi](#azure-virtual-machine)
 
 ![Bir Azure hizmeti seçin](../deployment/media/quickstart-choose-azure-service.png)
 
@@ -66,7 +94,9 @@ Bir App Service bir [fiyatlandırma katmanı veya](/azure/app-service/azure-web-
 > Kendi veri merkezinizde veya diğer şirket içi bilgisayarlarınızda Azure App Service kullanmak istiyorsanız, [Azure Stack](https://azure.microsoft.com/overview/azure-stack/)kullanarak bunu yapabilirsiniz.
 
 App Service yayımlama hakkında daha fazla bilgi için bkz.:
-- [Hızlı başlangıç-Azure App Service](quickstart-deploy-to-azure.md) ve [hızlı başlangıç-ASP.NET Core Linux](quickstart-deploy-to-linux.md)'ta yayımlayın.
+- [Hızlı başlangıç-Azure App Service yayımlama](quickstart-deploy-to-azure.md)
+- [Hızlı başlangıç-ASP.NET Core Linux 'Ta yayımlayın](quickstart-deploy-to-linux.md).
+- [Azure App Service için ASP.NET Core uygulaması yayımlama](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)
 - [Azure App Service ve IIS 'de ASP.NET Core sorunlarını giderin](/aspnet/core/test/troubleshoot-azure-iis).
 
 ### <a name="azure-container-registry"></a>Azure Container Registry
@@ -78,7 +108,11 @@ App Service yayımlama hakkında daha fazla bilgi için bkz.:
 - Mevcut bir Docker kapsayıcısı geliştirme ve dağıtım işlem hattınızı kullandığınızda.
 - Azure 'da Docker kapsayıcı görüntüleri oluşturmak istediğinizde.
 
-### <a name="azure-virtual-machines"></a>Azure Sanal Makineler
+Daha fazla bilgi için:
+
+- [Bir kapsayıcı kayıt defterine ASP.NET kapsayıcısı dağıtma](../containers/hosting-web-apps-in-docker.md)
+
+### <a name="azure-virtual-machine"></a>Azure Sanal Makinesi
 
 [Azure sanal makineleri (VM 'ler)](https://azure.microsoft.com/documentation/services/virtual-machines/) , bulutta istediğiniz sayıda bilgi işlem kaynağı oluşturmanıza ve yönetmenize olanak sağlar. VM 'lerde tüm yazılım ve güncelleştirmelerin sorumluluğunu varsayarak, bunları uygulamanızın gerektirdiği kadar istediğiniz kadar özelleştirebilirsiniz. Sanal makinelere Uzak Masaüstü aracılığıyla doğrudan erişebilirsiniz ve her biri, istenen IP adresini istendiği sürece korur.
 
@@ -95,13 +129,18 @@ Daha fazla bilgi için, Visual Studio 'daki özel seçeneğini kullanarak dağı
 
 > Azure sanal makinelerini kendi veri merkezinizde veya diğer şirket içi bilgisayarlarda kullanmak istiyorsanız, [Azure Stack](https://azure.microsoft.com/overview/azure-stack/)kullanarak bunu yapabilirsiniz.
 
-## <a name="docker-container-registry"></a>Docker Container Registry
+## <a name="docker-container-registry"></a>Docker kapsayıcı kayıt defteri
 
-Uygulamanız Docker kullanıyorsa, Kapsayıcılı uygulamanızı bir Docker Container Registry yayımlayabilirsiniz.
+Uygulamanız Docker kullanıyorsa Kapsayıcılı uygulamanızı bir Docker kapsayıcı kayıt defterine yayımlayabilirsiniz.
 
 ### <a name="when-to-choose-docker-container-registry"></a>Docker Container Registry seçme
 
 - Kapsayıcılı bir uygulama dağıtmak istiyorsunuz
+
+Daha fazla bilgi için, aşağıdakilere bakın:
+
+- [Bir kapsayıcı kayıt defterine ASP.NET kapsayıcısı dağıtma](../containers/hosting-web-apps-in-docker.md)
+- [Docker Hub’a dağıtma](../containers/deploy-docker-hub.md)
 
 ## <a name="folder"></a>Klasör
 
@@ -117,7 +156,13 @@ Herhangi bir nedenle (örneğin, makine erişimi gibi) Azure App Service veya Az
 - Yalnızca bir yerel test dağıtımına ihtiyacınız vardır.
 - Uygulama dosyalarını başka bir dağıtım hedefine göndermeden önce bir şekilde incelemek ve potansiyel olarak değiştirmek istiyorsunuz.
 
-Daha fazla bilgi için bkz. [hızlı başlangıç-yerel bir klasöre dağıtma](quickstart-deploy-to-local-folder.md)
+Daha fazla bilgi için bkz. [hızlı başlangıç-yerel bir klasöre dağıtma](quickstart-deploy-to-local-folder.md).
+
+Ayarlarınızı seçme konusunda ek yardım için aşağıdakilere bakın:
+
+- [Çerçeveye bağımlı ve kendinden bağımsız dağıtım](/dotnet/core/deploying/)
+- [Hedef çalışma zamanı tanımlayıcıları (taşınabilir RID, et)](/dotnet/core/rid-catalog)
+- [Hata ayıklama ve sürüm yapılandırması](../ide/understanding-build-configurations.md)
 
 ## <a name="ftpftps-server"></a>FTP/FTPS sunucusu
 
@@ -157,7 +202,9 @@ Visual Studio 'da istediğiniz sayıda IIS Web sunucusu dağıtım profili oluş
 - Visual Studio 'da kullandığınız veya doğrudan Azure hesaplarınıza bağlanmış olan kimlik bilgilerini kullanarak dağıtım yapmak isteyebilirsiniz.
 - Her dağıtım sırasında hedeften dosya silmek istiyorsunuz.
 
-Daha fazla bilgi için bkz. [hızlı başlangıç-bir Web sitesine dağıtma](quickstart-deploy-to-a-web-site.md). IIS 'de ASP.NET Core sorun giderme konusunda yardım için bkz. [Azure App Service ve IIS 'de ASP.NET Core sorun giderme](/aspnet/core/test/troubleshoot-azure-iis).
+Daha fazla bilgi için bkz. [hızlı başlangıç-bir Web sitesine dağıtma](quickstart-deploy-to-a-web-site.md).
+
+IIS 'de ASP.NET Core sorun giderme konusunda yardım için bkz. [Azure App Service ve IIS 'de ASP.NET Core sorun giderme](/aspnet/core/test/troubleshoot-azure-iis).
 
 ## <a name="import-profile"></a>Profili içeri aktar
 
@@ -174,6 +221,14 @@ Daha fazla bilgi için, aşağıdakilere bakın:
 
 - [Yayımlama ayarlarını içeri aktarma ve IIS’ye dağıtma](tutorial-import-publish-settings-iis.md)
 - [Yayımlama ayarlarını içeri aktarma ve Azure’a dağıtma](tutorial-import-publish-settings-azure.md)
+
+## <a name="configure-net-deployment-settings"></a>.NET dağıtım ayarlarını yapılandır
+
+Ayarlarınızı seçme konusunda ek yardım için aşağıdakilere bakın:
+
+- [Çerçeveye bağımlı ve kendinden bağımsız dağıtım](/dotnet/core/deploying/)
+- [Hedef çalışma zamanı tanımlayıcıları (taşınabilir RID, et)](/dotnet/core/rid-catalog)
+- [Hata ayıklama ve sürüm yapılandırması](../ide/understanding-build-configurations.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

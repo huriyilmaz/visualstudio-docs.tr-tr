@@ -15,17 +15,17 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8238de0760f300b6fa418a5e3eb47eac3db77272
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 77428bfc815a963e8fae4ddae5e5e7a7b7d991fe
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509022"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90034110"
 ---
 # <a name="net-code-analysis-rules"></a>.NET kod analizi kuralları
-Yönetilen Kod Analizi Aracı, yönetilen kod kitaplıklarında kural ihlallerini belirten uyarılar sağlar. Uyarılar, tasarım, yerelleştirme, performans ve güvenlik gibi kural alanlarında düzenlenir. Her uyarı, yönetilen kod analizi kuralının ihlal edildiğini belirtir. Bu bölümde, her bir yönetilen kod analizi uyarısıyla ilgili ayrıntılı tartışmalar ve örnekler sağlanmaktadır.
+.NET kod analizi, kod kalitesi ihlallerini veya kod kalitesini geliştirmenin önerilerini belirten kurallar sağlar. Kurallar tasarım, yerelleştirme, performans ve güvenlik gibi kural alanlarında düzenlenir. Bazı kurallar .NET API kullanımına özgüdür, kalan kurallar genel kod kalitesi ile ilgilidir. Bu bölümde, her kurala yönelik ayrıntılı tartışmalar ve örnekler sağlanmaktadır.
 
- Aşağıdaki tabloda her uyarı için belirtilen bilgi türü gösterilmektedir.
+ Aşağıdaki tabloda her bir tanılama için sunulan bilgi türü gösterilmektedir.
 
 |Öğe|Açıklama|
 |----------|-----------------|
@@ -34,7 +34,7 @@ Yönetilen Kod Analizi Aracı, yönetilen kod kitaplıklarında kural ihlallerin
 |Kategori|Uyarının kategorisi.|
 |Son değişiklik|Kural ihlalinin düzeltilme düzeltmesinin önemli bir değişiklik olup olmadığı. Son değişiklik, ihlale neden olan hedefe bağımlılığı olan bir derlemenin yeni sabit sürümle yeniden derlenmeyeceği veya değişiklik nedeniyle çalışma zamanında başarısız olabileceği anlamına gelir. Birden çok düzeltme kullanılabilir olduğunda ve en az bir düzeltme, Son değişiklik olduğunda ve bir düzeltme yoksa, ' kırılmamış ' ve ' kırılmamış ' seçeneklerinin her ikisi de belirtilir.|
 |Nedeni|Kuralın bir uyarı oluşturmasına neden olan özel yönetilen kod.|
-|Açıklama|Uyarının arkasındaki sorunları açıklar.|
+|Description|Uyarının arkasındaki sorunları açıklar.|
 |İhlaller Nasıl Düzeltilir?|Kaynak kodun kuralı karşılamak için nasıl değiştirileceğini ve bir uyarı oluşturmasını engellemesini açıklar.|
 |Uyarılar Bastırıldığında|Kuraldan bir uyarı bastırmasının ne kadar güvenli olduğunu açıklar.|
 |Örnek kod|Kuralı ihlal eden örnekleri ve kuralı karşılayan örnekleri düzeltildi.|

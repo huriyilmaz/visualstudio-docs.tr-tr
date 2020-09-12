@@ -2,16 +2,17 @@
 title: Docker Compose derleme ayarları
 author: ghogen
 description: Kapsayıcı araçları derleme işlemine genel bakış
+ms.custom: SEO-VS-2020
 ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: deed01e2aa719df7ffeb038f022ef9d6d4b8cc71
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: a25aca5082d8a55eccff861d542d16095c178a4f
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741865"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036307"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose derleme özellikleri
 
@@ -33,7 +34,7 @@ Bir özelliğin değerini ayarlamak için proje dosyasını düzenleyin. Docker 
 
 Aşağıdaki tabloda Docker Compose projeleri için kullanılabilen MSBuild özellikleri gösterilmektedir.
 
-| Özellik adı | Konum | Açıklama | Varsayılan değer  |
+| Özellik adı | Konum | Description | Varsayılan değer  |
 |---------------|----------|-------------|----------------|
 |AdditionalComposeFilePaths|dcproj|Tüm komutlar için docker-compose.exe gönderilmek üzere, noktalı virgülle ayrılmış bir listede ek oluşturma dosyaları belirtir. Docker-Compose proje dosyasından (dcproj) göreli yollara izin verilir.|-|
 |DockerComposeBaseFilePath|dcproj|Docker-Compose dosyalarının dosya adlarının ilk kısmını *. yıml* uzantısı olmadan belirtir. Örneğin: <br>1. DockerComposeBaseFilePath = null/tanımsız: *Docker-Compose*taban dosya yolunu kullanın ve dosyalar *Docker-Compose. yml* ve *Docker-Compose. override. yml* olarak adlandırılır<br>2. DockerComposeBaseFilePath = *mydockercompose*: dosyalar *mydockercompose. yml* ve *mydockercompose. override. yml* olarak adlandırılacak<br> 3. DockerComposeBaseFilePath = *.. \mydockercompose*: dosyalar bir düzey yukarı kalacak. |Docker-Compose|
@@ -104,7 +105,7 @@ services:
 
 Yukarıdaki örnekte olduğu gibi, değerlerin etrafında çift tırnak işareti kullanın ve ters eğik çizgiyi yollarda ters eğik çizgi için kaçış karakteri olarak kullanın.
 
-|Etiket adı|Açıklama|
+|Etiket adı|Description|
 |----------|-----------|
 |com. Microsoft. VisualStudio. debugayıklanan. Arguments|Hata ayıklama başlatılırken programa geçirilen bağımsız değişkenler. .NET Core uygulamaları için, bu bağımsız değişkenler genellikle NuGet paketleri için ek arama yollarıdır ve ardından projenin çıkış derlemesinin yoludur.|
 |com. Microsoft. VisualStudio. debugayıklanan. killprogram|Bu komut, kapsayıcının içinde çalışan hata ayıklanan programı durdurmak için kullanılır (gerektiğinde).|

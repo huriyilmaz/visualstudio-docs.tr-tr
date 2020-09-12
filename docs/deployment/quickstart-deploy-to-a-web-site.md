@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ec5ea0b52c5d0708630a30b7d2b80be2275f3a9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 89d8acfa4bf0f5dd9f1f387389b9f7f523c153a7
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84173713"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036411"
 ---
 # <a name="publish-a-web-app-to-a-web-site-using-visual-studio"></a>Web uygulamasını Visual Studio kullanarak Web sitesinde yayımlama
 
@@ -32,9 +32,9 @@ ms.locfileid: "84173713"
 
     ![Çözüm Gezgini içindeki proje bağlam menüsündeki Yayımla komutu](../deployment/media/quickstart-publish.png "Yayımla ' yı seçin")
 
-1. Daha önce herhangi bir yayımlama profili yapılandırdıysanız, **Yayımla** bölmesi görüntülenir. **Yeni Profil oluştur**' u seçin.
+1. Daha önce herhangi bir yayımlama profili yapılandırdıysanız, **Yayımla** bölmesi görüntülenir. **Yeni**’yi seçin.
 
-1. **Yayımla** Iletişim kutusunda **Web sunucusu (IIS)** öğesini seçin.
+1. **Yayımla** penceresinde **Web sunucusu (IIS)** öğesini seçin.
 
     ![Yayımlama hedefini seçin](../deployment/media/quickstart-publish-iis.png "IIS, FTP, vb. seçin.")
 
@@ -47,6 +47,8 @@ ms.locfileid: "84173713"
     ![Web Dağıtımı bağlantı ayrıntıları](../deployment/media/quickstart-publish-iis-web-deploy-connection-details.png)
 
 1. Yayımlamak için Özet sayfasında **Yayımla** ' yı seçin. Çıkış penceresinde dağıtım ilerleme durumu ve sonuçları gösterilir.
+
+   IIS 'de ASP.NET Core sorun giderme konusunda yardıma ihtiyacınız varsa bkz. [Azure App Service ve IIS 'de ASP.NET Core sorunlarını giderme](/aspnet/core/test/troubleshoot-azure-iis).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

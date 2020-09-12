@@ -1,21 +1,22 @@
 ---
 title: Visual Studio’da oturum açma
+description: Visual Studio 'da oturum açmayı öğrenin.
 titleSuffix: ''
-ms.custom: seodec18
-ms.date: 07/24/2020
-ms.topic: conceptual
+ms.custom: seodec18, contperfq1
+ms.date: 09/11/2020
+ms.topic: how-to
 ms.assetid: b9531c25-e4cf-43ae-b331-a9f31a8cd171
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d6bf69050348cbe078cfdf7ae2d419f1dd13745
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 870d5005cb74a3c130af3d720991a6797bb53bc5
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87235205"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036177"
 ---
 # <a name="sign-in-to-visual-studio"></a>Visual Studio’da oturum açma
 

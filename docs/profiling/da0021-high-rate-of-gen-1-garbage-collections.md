@@ -13,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b22341f1e4944b91f86a16af19494a85a2abd013
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 391ce629eea295f1436708b363b54fb0213914a4
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544696"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036164"
 ---
 # <a name="da0021-high-rate-of-gen-1-garbage-collections"></a>DA0021: Yüksek oranda 1. nesil atık toplama
 
@@ -40,11 +40,11 @@ ms.locfileid: "85544696"
 
  Nesil 0 içindeki nesneler sık ve genellikle çok verimli bir şekilde toplanır. 1. nesil nesneler daha az ve daha az verimli bir şekilde toplanır. Son olarak, kuşak 2 ' deki uzun süreli nesneler daha az sıklıkta toplanmalıdır. Eksiksiz bir atık toplama çalıştırması olan 2. nesil koleksiyon, ayrıca en pahalı işlemdir.
 
- Bu kural, çok fazla 1. nesil atık toplama işlemi meydana geldiğinde ateşlenir. Çok sayıda çok kısa süreli nesne nesil 0 toplama işlemi devam ediyor ancak daha sonra 1. nesil bir koleksiyonda toplanıyorsa, bellek yönetiminin maliyeti aşırı olabilir. Daha fazla bilgi için, MSDN Web sitesindeki Riko [maridın](https://blogs.msdn.microsoft.com/ricom/2003/12/04/mid-life-crisis/) performans katmanını ' na bakın.
+ Bu kural, çok fazla 1. nesil atık toplama işlemi meydana geldiğinde ateşlenir. Çok sayıda çok kısa süreli nesne nesil 0 toplama işlemi devam ediyor ancak daha sonra 1. nesil bir koleksiyonda toplanıyorsa, bellek yönetiminin maliyeti aşırı olabilir. Daha fazla bilgi için, MSDN Web sitesindeki Riko [maridın](/archive/blogs/ricom/mid-life-crisis) performans katmanını ' na bakın.
 
 ## <a name="how-to-investigate-a-warning"></a>Uyarı araştırma
  Profil oluşturma verilerinin [Işaretler görünümüne](../profiling/marks-view.md) gitmek Için hatalar Listesi penceresinde iletiye çift tıklayın. ** \\ Gen 0 KOLEKSIYONLARıNıN .NET CLR bellek** sayısını ve ** \\ Genel 1 koleksiyonlar sütunlarının .NET CLR bellek sayısını** bulun. Çöp toplamanın daha sık gerçekleştiği program yürütmesinin belirli aşamaları olup olmadığını saptayın. Yönetilen bellek ayırmaları deseninin aşırı bellek yönetimi ek yüküne neden olup olmadığını görmek için bu değerleri **GC sütunundaki% Time** ile karşılaştırın.
 
  Uygulamanın yönetilen bellek kullanımı modelini anlamak için, a.NET bellek ayırma profilini ve istek nesnesi yaşam süresi ölçümlerini çalıştıran bir kez daha profilini yeniden çalıştırın.
 
- Çöp toplama performansını geliştirme hakkında daha fazla bilgi için bkz. Microsoft Web sitesinde [çöp toplayıcı temelleri ve performans ipuçları](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) . Otomatik atık toplama ek yükü hakkında daha fazla bilgi için bkz. [büyük nesne yığını kapsanmamış](https://msdn.microsoft.com/magazine/cc534993.aspx).
+ Çöp toplama performansını geliştirme hakkında daha fazla bilgi için bkz. Microsoft Web sitesinde [çöp toplayıcı temelleri ve performans ipuçları](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) . Otomatik atık toplama ek yükü hakkında daha fazla bilgi için bkz. [büyük nesne yığını kapsanmamış](/archive/msdn-magazine/2008/june/clr-inside-out-large-object-heap-uncovered).

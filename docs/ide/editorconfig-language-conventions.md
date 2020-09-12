@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b9c7da96df8c68de0b9f6ba3e341d93596200934
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: cbe2b18b9edd6f2d4634ede41d676519f1b80ad3
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641479"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90035726"
 ---
 # <a name="language-conventions"></a>Dil kuralları
 
@@ -76,7 +76,7 @@ Kod stili kuralını değiştirmek için:
 
    Visual Studio, önizleme kutusunda gösterildiği gibi EditorConfig dosyasındaki yapılandırma ayarını ekler veya değiştirir.
 
-Kod stili ihlalinin önem derecesini değiştirmek için, aynı adımları izleyin, ancak ** \<rule ID> kod stilini yapılandırmak**yerine ** \<rule ID> önem derecesi Yapılandır** ' ı seçin. Daha fazla bilgi için bkz. [kural önem derecesini otomatik olarak yapılandırma](../code-quality/use-roslyn-analyzers.md#automatically-configure-rule-severity).
+Kod stili ihlalinin önem derecesini değiştirmek için, aynı adımları izleyin, ancak ** \<rule ID> kod stilini yapılandırmak**yerine ** \<rule ID> önem derecesi Yapılandır** ' ı seçin. Daha fazla bilgi için bkz. [kural önem derecesini otomatik olarak yapılandırma](../code-quality/use-roslyn-analyzers.md#set-rule-severity-from-the-light-bulb-menu).
 
 ::: moniker-end
 
@@ -1142,7 +1142,7 @@ Bu bölümdeki stil kuralları yalnızca C# için geçerlidir.
   - CSharp \_ Style \_ ifadesi \_ bodied_accessors
   - CSharp \_ Style \_ ifadesi \_ bodied_lambdas
   - CSharp \_ Style \_ ifadesi \_ gövdeli \_ local_functions
-- [Model eşleştirme](#pattern-matching)
+- [Desen eşleştirme](#pattern-matching)
   - \_ \_ \_ \_ \_ \_ cast_check ile eşleşen \_ CSharp Style Model desenli
   - \_ \_ \_ \_ \_ \_ null_check ile birlikte farklı \_ CSharp stili model karşılaştırması
 - [Satır içi değişken bildirimleri](#inlined-variable-declarations)

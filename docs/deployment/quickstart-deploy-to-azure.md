@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: deef5aeaa802d5f5b46ba81f711173dc81a32357
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 60b3d471191f58a5eb612d9942b72c9d5e90e8af
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800313"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036424"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>Visual Studio’yu kullanarak Azure App Service'e Web uygulaması yayımlama
 
@@ -23,7 +23,7 @@ ASP.NET, ASP.NET Core, Node.js ve .NET Core uygulamaları için aşağıdaki yö
 
 * Uygulamaların sürekli (veya otomatik) dağıtımı için [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops)Ile Azure DevOps kullanın.
 
-* Uygulamaların tek seferlik (veya el ile) dağıtımı için, Visual Studio 'daki **Yayımla** aracını kullanarak Linux için Azure App Service veya App Service (kapsayıcılar kullanarak) ASP.NET, ASP.NET Core, Node.js ve .NET Core uygulamaları dağıtın. Python uygulamaları için, [Azure App Service Python-Publish](../python/publishing-python-web-applications-to-azure-from-visual-studio.md)üzerindeki adımları izleyin.
+* Uygulamaların tek seferlik (veya el ile) dağıtımı için, Visual Studio 'daki **Yayımla** aracını kullanarak [Linux için](../deployment/quickstart-deploy-to-linux.md) Azure App Service veya App Service (kapsayıcılar kullanarak) ASP.NET, ASP.NET Core, Node.js ve .NET Core uygulamaları dağıtın. Python uygulamaları için, [Azure App Service Python-Publish](../python/publishing-python-web-applications-to-azure-from-visual-studio.md)üzerindeki adımları izleyin.
 
 Bu makalede, tek seferlik dağıtım için **Yayımla** aracının nasıl kullanılacağı açıklanır.
 
@@ -35,7 +35,9 @@ Bu makalede, tek seferlik dağıtım için **Yayımla** aracının nasıl kullan
 
     ![Çözüm Gezgini içindeki proje bağlam menüsündeki Yayımla komutu](../deployment/media/quickstart-publish.png "Yayımla ' yı seçin")
 
-1. **Yayımla** Iletişim kutusunda **Azure**' u seçin.
+1. Daha önce herhangi bir yayımlama profili yapılandırdıysanız, **Yayımla** penceresi görüntülenir. **Yeni**’yi seçin.
+
+1. **Yayımla** penceresinde **Azure**' ı seçin.
 
     ![Yayımlama hedefini seçin](../deployment/media/quickstart-publish-azure-new.png)
 

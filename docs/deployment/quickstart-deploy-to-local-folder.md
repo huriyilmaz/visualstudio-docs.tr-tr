@@ -10,21 +10,21 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: da13cb2b249146c7a29abbab03b66f77594abf4b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 800059dc8d5a3e6ccfb72c588fbb61423a338cba
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285418"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036398"
 ---
-# <a name="deploy-an-app-to-a-local-folder-using-visual-studio"></a>Visual Studio kullanarak bir uygulamayı yerel bir klasöre dağıtma
+# <a name="deploy-an-app-to-a-folder-using-visual-studio"></a>Visual Studio 'Yu kullanarak bir klasöre uygulama dağıtma
 
-**Yayımla** aracını, Visual Studio 'dan yerel bir klasöre ASP.NET, ASP.NET Core, .NET Core ve Python uygulamaları yayımlamak için kullanabilirsiniz. Node.js, adımlar desteklenir, ancak kullanıcı arabirimi farklıdır.
+**Yayımla** aracını, Visual Studio 'daki bir klasöre ASP.NET, ASP.NET Core, .NET Core ve Python uygulamaları yayımlamak için kullanabilirsiniz. Node.js, adımlar desteklenir, ancak kullanıcı arabirimi farklıdır.
 
 [!INCLUDE [quickstart-prereqs](includes/quickstart-prereqs.md)]
 
 > [!NOTE]
-> Bir Windows masaüstü uygulamasını yerel bir klasöre yayımlamanız gerekiyorsa bkz. [ClickOnce kullanarak masaüstü uygulaması dağıtma](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) (C# veya Visual Basic). C++/CLR için bkz. [ClickOnce kullanarak yerel uygulama dağıtma](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) veya C/C++ için bkz. [Kurulum projesi kullanarak yerel uygulama dağıtma](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
+> Bir Windows masaüstü uygulamasını bir klasöre yayımlamanız gerekiyorsa bkz. [ClickOnce kullanarak masaüstü uygulaması dağıtma](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) (C# veya Visual Basic). C++/CLR için bkz. [ClickOnce kullanarak yerel uygulama dağıtma](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) veya C/C++ için bkz. [Kurulum projesi kullanarak yerel uygulama dağıtma](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
 
 ## <a name="deploy-to-a-local-folder"></a>Yerel klasöre dağıtma
 
@@ -32,7 +32,9 @@ ms.locfileid: "85285418"
 
     ![Çözüm Gezgini içindeki proje bağlam menüsündeki Yayımla komutu](../deployment/media/quickstart-publish.png "Yayımla ' yı seçin")
 
-1. **Yayımla** Iletişim kutusunda **klasör**' i seçin.
+1. Daha önce herhangi bir yayımlama profili yapılandırdıysanız, **Yayımla** penceresi görüntülenir. **Yeni**’yi seçin.
+
+1. **Yayımla** penceresinde **klasör**' ü seçin.
 
     ![Yayımla hedefi olarak klasör seçin](../deployment/media/quickstart-publish-folder-new.png "Klasör Seç")
 
@@ -46,7 +48,15 @@ ms.locfileid: "85285418"
 
 1. Dağıtım ayarlarını yapılandırmak için, yayımlama profili özetinde **Düzenle** ' yi seçin ve **Ayarlar** sekmesini seçin.
 
+   Gördüğünüz ayarlar uygulama türüne bağlıdır. Aşağıdaki çizimde bir ASP.NET Core uygulamasının örnek ayarları gösterilmektedir.
+
     ![Profil ayarları](../deployment/media/quickstart-profile-settings.png "Profil ayarları")
+
+    .NET ' te ayarları seçmek için ek yardım için aşağıdakilere bakın:
+
+    - [Çerçeveye bağımlı ve kendinden bağımsız dağıtım](/dotnet/core/deploying/)
+    - [Hedef çalışma zamanı tanımlayıcıları (taşınabilir RID, et)](/dotnet/core/rid-catalog)
+    - [Hata ayıklama ve sürüm yapılandırması](../ide/understanding-build-configurations.md)
 
 1. Bir hata ayıklama veya sürüm yapılandırması dağıtıp dağıtmayacağı gibi seçenekleri yapılandırın ve ardından **Kaydet**' i seçin.
 
@@ -56,6 +66,8 @@ Yayınlanan dosyaları dilediğiniz gibi dağıtın. Örneğin, bunları bir *. 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Yayımla aracıyla .NET Core uygulaması dağıtma](/dotnet/core/deploying/deploy-with-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
-- [Bir masaüstü uygulamasını Microsoft Store için paketleme (Masaüstü Köprüsü)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
-- .Net [.NET Framework ve uygulamaları dağıtma](/dotnet/framework/deployment/)
+.NET uygulamaları için:
+
+- [Yayımla aracıyla .NET Core uygulaması dağıtma](/dotnet/core/deploying/deploy-with-vs)
+- [.NET Core uygulaması yayımlama (çerçeveye bağlı ve kendinden bağımsız dağıtımlar)](/dotnet/core/deploying/)
+- [.NET Framework ve uygulamaları dağıtma](/dotnet/framework/deployment/)

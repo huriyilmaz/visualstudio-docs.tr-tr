@@ -1,5 +1,6 @@
 ---
 title: Proje dosyasının adına veya konumuna başvurma
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 44168acda7becee1dc071b4cc94237a4f1ff2c72
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 29960de09b512a419a56a61f493702485c287475
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743408"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036463"
 ---
 # <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>Nasıl yapılır: proje dosyasının adına veya konumuna başvurma
 
@@ -95,5 +96,5 @@ Projenin adını veya konumunu, kendi özelliğini oluşturmak zorunda kalmadan 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [MSBUILD](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)
 - [MSBuild ayrılmış ve tanınmış özellikleri](../msbuild/msbuild-reserved-and-well-known-properties.md)

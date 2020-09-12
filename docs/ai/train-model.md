@@ -1,6 +1,7 @@
 ---
-title: Azure Batch AI modeli eğitme işi gönder
-description: Model bulutu eğitme
+title: Bir modeli eğitme işi gönderme
+description: Azure Batch AI kullanarak bir modeli eğitme işi gönderme
+ms.custom: SEO-VS-2020
 keywords: AI, Visual Studio, eğitme modeli, bulut
 author: jillre
 ms.author: jillfra
@@ -10,12 +11,12 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - azure
-ms.openlocfilehash: 4d705cbff1ce4e25892dfc5df896418e6d58b632
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 110468de264370b22d64dae40cf55e9766804c31
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85371657"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036619"
 ---
 # <a name="train-ai-models-in-azure-batch-ai"></a>Azure Batch AI AI modellerini eğitme
 

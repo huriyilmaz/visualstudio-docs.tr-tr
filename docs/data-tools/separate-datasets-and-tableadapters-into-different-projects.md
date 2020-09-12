@@ -3,6 +3,7 @@ title: Ayrı projeler kullanma hatası
 description: Veri kümeleri ile TableAdapter’ları farklı projelere ayırma
 ms.date: 11/04/2016
 ms.topic: how-to
+ms.custom: SEO-VS-2020
 helpviewer_keywords:
 - TableAdapters, n-tier applications
 - n-tier applications, separating Datasets and TableAdapters
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0e54a28a7d5c5dc9ae8353266f49234ef8468410
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 4ed815b73cade73c38b52528d918b4af4de2a618
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743117"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036281"
 ---
 # <a name="separate-datasets-and-tableadapters-into-different-projects"></a>Veri kümeleri ile TableAdapter’ları farklı projelere ayırma
 Türü belirtilmiş veri kümeleri, [TableAdapters](create-and-configure-tableadapters.md) ve DataSet sınıflarının ayrı projelere üretilebilmeleri için geliştirilmiştir. Bu, uygulama katmanlarını hızlıca ayırmanızı ve n katmanlı veri uygulamaları oluşturmanıza olanak sağlar.

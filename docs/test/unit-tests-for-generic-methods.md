@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 2158c889aefc85c908aa9ee42d45858fd11d557e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 40255c4ab86d407da4e851bd84cb65e5b4a0f8c9
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590819"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90035683"
 ---
 # <a name="unit-tests-for-generic-methods"></a>Genel metotlar için birim testleri
 
@@ -115,7 +115,7 @@ public void SizeOfLinkedListTest()
 ```
 
 > [!NOTE]
-> SizeOfLinkedListTest testi çalıştığında, TestHelper yöntemi iki kez çağrılır. Onaylama bildiriminin her geçmesi için, her seferinde true olarak değerlendirilmelidir. Test başarısız olursa, belirtilen çağrının `<int>` veya belirtilen çağrının başarısız olmasına neden olup olmadığı temizlenmeyebilir `<char>` . Yanıtı bulmak için çağrı yığınını inceleyebilirsiniz veya test yönteminizin kesme noktaları ayarlayabilir ve testi çalıştırırken hata ayıklayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: ASP.net çözümünde test çalıştırırken hata ayıklama](https://msdn.microsoft.com/Library/de4d7aa1-4a1e-467e-a19b-4a85ec245b8b).
+> SizeOfLinkedListTest testi çalıştığında, TestHelper yöntemi iki kez çağrılır. Onaylama bildiriminin her geçmesi için, her seferinde true olarak değerlendirilmelidir. Test başarısız olursa, belirtilen çağrının `<int>` veya belirtilen çağrının başarısız olmasına neden olup olmadığı temizlenmeyebilir `<char>` . Yanıtı bulmak için çağrı yığınını inceleyebilirsiniz veya test yönteminizin kesme noktaları ayarlayabilir ve testi çalıştırırken hata ayıklayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: ASP.net çözümünde test çalıştırırken hata ayıklama](/previous-versions/ms243172(v=vs.140)).
 
 ### <a name="example-2-using-a-type-constraint"></a><a name="TypeConstraintNotSatisfied"></a> Örnek 2: tür kısıtlaması kullanma
 Bu örnek, karşılanmamış bir tür kısıtlaması kullanan genel bir yöntem için bir birim testi gösterir. İlk bölüm kodun altındaki test projesinden kodu gösterir. Tür kısıtlaması vurgulanır.

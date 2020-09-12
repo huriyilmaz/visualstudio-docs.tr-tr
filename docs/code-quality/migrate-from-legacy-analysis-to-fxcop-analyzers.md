@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9157d47278f835232308dc497965afebb294f8fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76f8da407c0917a3f974a55fd02a1227db5b5d63
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "78937583"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036580"
 ---
 # <a name="migrate-from-legacy-analysis-fxcop-to-source-analysis-fxcop-analyzers"></a>Eski analizden (FxCop) kaynak analizine (FxCop çözümleyicileri) geçiş
 
@@ -27,11 +27,11 @@ Birçok eski analiz (FxCop) kuralı, bir Roslyn kod Çözümleyicileri kümesi o
 
 Eski analiz ve kaynak analizi arasındaki farklılıklar hakkında daha fazla bilgi için aşağıdakilere bakın:
 
-- [Kaynak kodu analizi ve eski analiz karşılaştırması](../code-quality/roslyn-analyzers-overview.md#source-code-analysis-versus-legacy-analysis)
+- [Kaynak kodu analizi ve eski analiz karşılaştırması](../code-quality/fxcop-analyzers-faq.md#whats-the-difference-between-legacy-fxcop-and-fxcop-analyzers)
 
 - [FxCop çözümleyicileri hakkında SSS](../code-quality/fxcop-analyzers-faq.md)
 
-Kaynak analizine geçiş yapmak için [FxCop çözümleyicileri](../code-quality/install-fxcop-analyzers.md)' ni yükler. Eski analiz kuralı ihlallerine benzer şekilde, kaynak kodu çözümleme ihlalleri Visual Studio 'daki Hata Listesi penceresinde görüntülenir. Ayrıca, kaynak kodu çözümleme ihlalleri, kod Düzenleyicisi 'nde, sorunlu kodun altında *dalgalı çizgiler* olarak da görünür. Dalgalı çizginin rengi kuralın [önem derecesi ayarına](../code-quality/use-roslyn-analyzers.md#rule-severity) bağlıdır. Yeni FxCop çözümleyicilerine yapılan kuralların durumunu görmek için bkz. bağlantı noktası [ve olmayan kurallar](../code-quality/fxcop-rule-port-status.md).
+Kaynak analizine geçiş yapmak için [FxCop çözümleyicileri](../code-quality/install-fxcop-analyzers.md)' ni yükler. Eski analiz kuralı ihlallerine benzer şekilde, kaynak kodu çözümleme ihlalleri Visual Studio 'daki Hata Listesi penceresinde görüntülenir. Ayrıca, kaynak kodu çözümleme ihlalleri, kod Düzenleyicisi 'nde, sorunlu kodun altında *dalgalı çizgiler* olarak da görünür. Dalgalı çizginin rengi kuralın [önem derecesi ayarına](../code-quality/use-roslyn-analyzers.md#configure-severity-levels) bağlıdır. Yeni FxCop çözümleyicilerine yapılan kuralların durumunu görmek için bkz. bağlantı noktası [ve olmayan kurallar](../code-quality/fxcop-rule-port-status.md).
 
 FxCop çözümleyicileri 'nin nasıl yapılandırılacağı hakkında daha fazla bilgi edinmek için:
 

@@ -1,5 +1,6 @@
 ---
 title: Veri Kümesi Tasarımcısı bir veri kümesi oluşturma
+ms.custom: SEO-VS-2020
 ms.date: 09/11/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,18 +14,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 07d61ec32d48e5cb9b5421e397d743cd8c95b523
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 20cd8bdc4f7d72cd0ed3920f75a4955ee57d2a68
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89742933"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036788"
 ---
 # <a name="walkthrough-create-a-dataset-with-the-dataset-designer"></a>İzlenecek yol: Veri Kümesi Tasarımcısı bir veri kümesi oluşturma
 
 Bu izlenecek yolda, **veri kümesi Tasarımcısı**kullanarak bir veri kümesi oluşturursunuz. Makale, yeni bir proje oluşturma ve buna yeni bir **veri kümesi** öğesi ekleme sürecinde size kılavuzluk eden bir işlemdir. Bir sihirbaz kullanmadan bir veritabanındaki tabloları temel alan tablolar oluşturmayı öğreneceksiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 

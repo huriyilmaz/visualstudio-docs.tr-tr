@@ -1,5 +1,6 @@
 ---
 title: Ekleme/güncelleştirme/silme davranışını özelleştirme
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -11,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 01fe4cf160ed3a7548fd8b8bed003838abee3d04
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 5323cfa41dc4931db514977238fd359b4f38ab3f
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741819"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036749"
 ---
 # <a name="walkthrough-customize-the-insert-update-and-delete-behavior-of-entity-classes"></a>İzlenecek yol: varlık sınıflarının INSERT, Update ve DELETE davranışını özelleştirme
 
@@ -45,7 +46,7 @@ Bu kılavuzda, aşağıdaki görevlerin nasıl gerçekleştirileceğini öğrene
 
 - `Customer`Ekleme, güncelleştirme ve silme işlemlerini gerçekleştirmek üzere saklı yordamları kullanmak için sınıfını yapılandırın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
@@ -229,7 +230,7 @@ Varsayılan olarak, Kaydet düğmesi etkin değildir ve Kaydet işlevi uygulanma
 
 18. **Original_CustomerID** yöntemi bağımsız değişkenini **CustomerID (orijinal)** sınıf özelliği ile eşleyin.
 
-19. **Tamam**'a tıklayın.
+19. **Tamam**’a tıklayın.
 
 > [!NOTE]
 > Bu izlenecek yol için bir sorun olmasa da, LINQ to SQL kimlik (otomatik artırma), ROWGUIDCOL (veritabanı tarafından üretilen GUID) ve ekleme ve güncelleştirme sırasında zaman damgası sütunları için veritabanı tarafından oluşturulan değerleri otomatik olarak işlediğini belirten bir değer. Diğer sütun türlerindeki veritabanı tarafından oluşturulan değerler beklenmedik bir şekilde null değer oluşmasına neden olur. Veritabanı tarafından oluşturulan değerleri döndürmek için, aşağıdakilerden birine el ile ve olarak ayarlamanız gerekir <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> `true` <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> : [oto Sync. Always](<xref:System.Data.Linq.Mapping.AutoSync.Always>), [oto Sync. OnInsert](<xref:System.Data.Linq.Mapping.AutoSync.OnInsert>)veya [oto Sync. OnUpdate](<xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>).

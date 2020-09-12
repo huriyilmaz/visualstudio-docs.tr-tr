@@ -13,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c17c27c8827c8612f08298667f09eda89f90f8d9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eb1834bf395d3a9c5d4f516a9fec1693d40ff378
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544683"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90035696"
 ---
 # <a name="da0022-high-rate-of-gen-2-garbage-collections"></a>DA0022: Yüksek oranda 2. nesil atık toplama
 
@@ -51,4 +51,4 @@ ms.locfileid: "85544683"
 
  Uygulamanın yönetilen bellek kullanımı modelini anlamak için, a.NET bellek ayırma profilini çalıştıran bir kez daha profilini oluşturup nesne ömrü profil oluşturma seçeneğini belirleyin.
 
- Çöp toplama performansını geliştirme hakkında daha fazla bilgi için bkz. Microsoft Web sitesinde [çöp toplayıcı temelleri ve performans ipuçları](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) . Otomatik atık toplama ek yükü hakkında daha fazla bilgi için bkz. [büyük nesne yığını kapsanmamış](https://msdn.microsoft.com/magazine/cc534993.aspx).
+ Çöp toplama performansını geliştirme hakkında daha fazla bilgi için bkz. Microsoft Web sitesinde [çöp toplayıcı temelleri ve performans ipuçları](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) . Otomatik atık toplama ek yükü hakkında daha fazla bilgi için bkz. [büyük nesne yığını kapsanmamış](/archive/msdn-magazine/2008/june/clr-inside-out-large-object-heap-uncovered).

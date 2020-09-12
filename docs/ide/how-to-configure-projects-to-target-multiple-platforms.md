@@ -1,5 +1,6 @@
 ---
 title: Projeleri birden çok platformu hedefleyecek şekilde yapılandırma
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: how-to
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fb94043d238cba706ad1b1d712b244da4e245c24
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 2643e7f413a68d820780db80c87818dd0b8b9c03
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741465"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036515"
 ---
 # <a name="how-to-configure-projects-to-target-multiple-platforms"></a>Nasıl yapılır: birden çok platformu hedeflemek için projeleri yapılandırma
 

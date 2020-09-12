@@ -1,34 +1,34 @@
 ---
-title: Yönetilen kod için canlı kod analizi kapsamını yapılandırma
-ms.date: 03/23/2018
+title: .NET için canlı kod analizi kapsamını yapılandırma
+ms.date: 09/01/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - live code analysis
 - background analysis
 - analysis scope
 - full solution analysis
-author: Mikejo5000
-ms.author: mikejo
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6df882d50d0c1d052191246605af856743ffdf3d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 57ff963de193360712e92b76f3cafd7a75ee6b89
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88249189"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90035423"
 ---
-# <a name="how-to-configure-live-code-analysis-scope-for-managed-code"></a>Nasıl yapılır: yönetilen kod için canlı kod analizi kapsamını yapılandırma
+# <a name="configure-live-code-analysis-for-net"></a>.NET için Canlı Kod analizini yapılandırma
 
-## <a name="what-is-live-code-analysis-for-managed-code"></a>Yönetilen kod için "canlı kod analizi" nedir?
 Visual Studio, düzenleyicide kaynak dosyaları düzenlediğinizde *arka plan Analizi*olarak da adlandırılan, bir dizi Canlı Kod analizini yürütür. Bir kısmı, kabul edilebilir bir Visual Studio IDE düzenlemesi deneyimi için en az analiz gerektirir. Bazıları IDE özellikleri için iyileştirilmiş yanıt verme içindir. Bu bir nedenle, Roslyn çözümleyicilerinin tanılama ve kod düzeltmeleri gibi ek IDE işlevlerini etkinleştirmektir. İşlevlere bağlı olarak, bu çözümlemeler aşağıdaki gibi gruplandırılabilir:
 
 - **Tanılama arka plan hesaplama**: kaynak dosyalardaki hataları, uyarıları ve önerileri hesaplamak için analiz. Bu Tanılamalar, hata listesinde ve düzenleyicide dalgalı çizgiler olarak giriş gösterir. Bunlar iki kategoride sınıflandırılabilirler:
   - C# ve Visual Basic derleyici tanılaması
   - Şunları içeren Roslyn Çözümleyicisi tanılaması:
 
-    - Yerleşik IDE, kod stili önerilerini ve
+    - Kod stili önerileri için yerleşik IDE Çözümleyicileri
+    - Kod kalitesi önerileri için yerleşik CA Çözümleyicileri
     - Geçerli çözümdeki projeler için [yüklenen](./install-roslyn-analyzers.md) üçüncü taraf çözümleyici paketleri.
 
 - **Diğer arka plan analizleri**: IDE özelliklerine yönelik yanıt verme ve Visual Studio etkileşimini artırmaya yönelik analiz. Bu analizler için bazı örnekler şunlardır:

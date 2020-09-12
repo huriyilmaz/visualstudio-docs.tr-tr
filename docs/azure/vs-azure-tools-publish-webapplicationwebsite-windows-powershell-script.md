@@ -1,20 +1,20 @@
 ---
 title: PowerShell betiği kullanarak bir Web uygulaması yayımlama
 description: Bir Web projesini Azure Web sitesinde yayımlamayı öğrenin. Bu betik, mevcut değilse, Azure aboneliğinizde gerekli kaynakları oluşturur.
+ms.custom: vs-azure
 author: ghogen
 manager: jillfra
 assetId: 63cfaa2d-f04d-40dc-8677-345385c278d5
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 3d8a6a73f50c331c516f1e433d7d9b1104731380
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: e91fed105ce61dfc7e1cd2779ebcca0b33a06c97
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89739883"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036502"
 ---
 # <a name="publish-webapplicationwebsite-windows-powershell-script"></a>Publish-WebApplicationWebSite (Windows PowerShell betiği)
 ## <a name="syntax"></a>Syntax

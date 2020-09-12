@@ -1,24 +1,25 @@
 ---
 title: ASP.NET Core ve React.js sahip Visual Studio kapsayıcı araçları
 titleSuffix: ''
+ms.custom: SEO-VS-2020
 author: ghogen
 description: Visual Studio kapsayıcı araçları 'nı ve Docker for Windows kullanmayı öğrenin
 ms.author: ghogen
 ms.date: 05/14/2020
 ms.technology: vs-azure
 ms.topic: quickstart
-ms.openlocfilehash: 2ac295982bb6ac0f6eaf6408106e3d95024af14d
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 45dc1f16f1655c5c738804a1c4e0093dd9c8b1f8
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741885"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036333"
 ---
 # <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>Hızlı başlangıç: Visual Studio 'da bir tepki verme tek sayfalı uygulamayla Docker kullanma
 
 Visual Studio ile, React.js tek sayfalı uygulama gibi istemci tarafı JavaScript ve bunları Azure Container Registry (ACR), Docker Hub, Azure App Service veya kendi kapsayıcı kayıt defterinizde yayımlamak gibi Kapsayıcılı ASP.NET Core uygulamaları da kolayca oluşturabilir, hata ayıklayın ve çalıştırabilirsiniz. Bu makalede ACR 'ye yayımlanacak.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 ::: moniker range="vs-2017"
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
