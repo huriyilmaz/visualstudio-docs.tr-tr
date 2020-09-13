@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 5eb619269dfd8922919999249b4ced0b9b98ebb7
-ms.sourcegitcommit: ee12b14f306ad8f49b77b08d3a16d9f54426e7ca
+ms.openlocfilehash: f986d6727433dc01732232754b2d65d0d7c4ef8f
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80256211"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038289"
 ---
 # <a name="overview-of-microsoft-intellitest"></a>Microsoft IntelliTest’e Genel Bakış
 
@@ -97,7 +97,7 @@ Bu kadar kolay!
 
 Ek kaynaklar:
   * [Channel 9 videosunu](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Intellitest) izleyin
-  * Bu [MSDN Magazine genel bakışını](https://msdn.microsoft.com/magazine/dn904672.aspx) okuyun
+  * Bu [MSDN Magazine genel bakışını](/archive/msdn-magazine/2015/february/visual-studio-2015-build-better-software-with-smart-unit-tests) okuyun
 
 ## <a name="important-attributes"></a>Önemli öznitelikler
 

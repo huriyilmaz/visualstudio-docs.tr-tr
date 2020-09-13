@@ -20,12 +20,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 22a9c7a4b58613c0c4bd94ea4f4ce6162f620553
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 86a1b857639d8a58ffc7686569ad8e103674f136
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331275"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037490"
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>UWP uygulamalarında JavaScript bellek kullanımını analiz etme
 JavaScript hafıza Çözümleyicisi, Visual Studio 'da, bellek kullanımını anlamanıza ve JavaScript kullanarak Windows için tasarlanan UWP uygulamalarınızda bellek sızıntılarını bulmanıza yardımcı olmak için kullanılabilir. Desteklenen uygulamalar, Evrensel Windows uygulamalarına yönelik uygulamalar içerir.
@@ -363,7 +363,7 @@ if (performance && performance.mark) {
 
 - [Bu videonun](https://channel9.msdn.com/Events/Build/2013/3-316) , JavaScript bellek Çözümleyicisi hakkında Build 2013 konferansında ikinci bölümünü izleyin.
 
-- [UWP uygulamalarında belleği yönetme](https://msdn.microsoft.com/magazine/jj651575.aspx)makalesini okuyun.
+- [UWP uygulamalarında belleği yönetme](/archive/msdn-magazine/2012/windows-8-special-issue/javascript-managing-memory-in-windows-store-apps)makalesini okuyun.
 
 - Sorunları yalıtmak için kodu geçici olarak değiştirmeyi düşünün. Örneğin, şunları yapmak isteyebilirsiniz:
 

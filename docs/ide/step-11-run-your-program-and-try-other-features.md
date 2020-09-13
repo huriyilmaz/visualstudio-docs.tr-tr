@@ -1,6 +1,8 @@
 ---
-title: '11. Adım: resim görüntüleyici uygulamanızı çalıştırma ve diğer özellikleri deneme'
+title: Resim görüntüleyici uygulamanızı çalıştırın ve diğer özellikleri deneyin
+description: Resim görüntüleyici uygulamanızı çalıştırın ve resim görüntüleyici oluşturma öğreticisinde diğer özellikleri deneyin.
 ms.date: 09/11/2019
+ms.custom: SEO-VS-2020
 ms.assetid: 656614d0-4fe7-4a67-8edc-c10919377d09
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -10,12 +12,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 865064bd85d45ccb24129d289b48143321486ca1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 47a2efac2e317fc8e3d168f4b8b19bfb10014cf2
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579896"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036944"
 ---
 # <a name="step-11-run-your-picture-viewer-app-and-try-other-features"></a>11. Adım: resim görüntüleyici uygulamanızı çalıştırma ve diğer özellikleri deneme
 

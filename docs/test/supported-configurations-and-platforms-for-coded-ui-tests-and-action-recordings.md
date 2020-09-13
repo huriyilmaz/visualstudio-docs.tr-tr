@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: e18e50537f35080f9796f4a090b3806953ae5170
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3636f87db5c395f1660d9271d0eed5cacec99161
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75845805"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036905"
 ---
 # <a name="supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings"></a>Kodlanmış UI testleri ve eylem kayıtları için desteklenen konfigürasyonlar ve platformlar
 
@@ -59,11 +59,11 @@ Visual Studio Enterprise için kodlanmış UI testleri için desteklenen yapıla
 | Windows Forms 2.0 ve ileri sürümü | Tam olarak desteklendi. **Note:**  NetFx denetimleri tam olarak desteklenir, ancak tüm üçüncü taraf denetimleri desteklenmez. |
 | WPF 3.5 ve ileri sürümü | Tam olarak desteklendi.<br /><br /> **Göz önünde** NetFx denetimleri tam olarak desteklenir, ancak tüm üçüncü taraf denetimleri desteklenmez. |
 | Windows Win32 | Bazı bilinen sorunlar ile çalışabilir, ancak resmi olarak desteklenmez. |
-| MFC | Kısmen desteklenir. Desteklenen özelliklerin ayrıntıları için bkz. [UITest Framework](https://blogs.msdn.microsoft.com/vstsqualitytools/2010/04/15/uitest-framework-mfc-support-in-vs-2010/) . |
+| MFC | Kısmen desteklenir. Desteklenen özelliklerin ayrıntıları için bkz. [UITest Framework](/archive/blogs/vstsqualitytools/uitest-framework-mfc-support-in-vs-2010) . |
 | SharePoint | Tam olarak desteklendi. |
 | Office İstemci Uygulamaları | Desteklenmez. |
 | Dynamics CRM web istemcisi | Tam olarak desteklendi. |
-| Dynamics (Ax) 2012 işlemcisi | Eylem kaydı ve kayıttan yürütme kısmen desteklenir. Ayrıntılar için bkz. [Microsoft Dynamics Için Visual Studio 10 kodlu UI/eylem kayıtları desteği](https://blogs.msdn.microsoft.com/dave_froslie/2011/09/01/visual-studio-10-coded-ui-action-recordings-support-for-microsoft-dynamics-ax-2012/) . |
+| Dynamics (Ax) 2012 işlemcisi | Eylem kaydı ve kayıttan yürütme kısmen desteklenir. Ayrıntılar için bkz. [Microsoft Dynamics Için Visual Studio 10 kodlu UI/eylem kayıtları desteği](/archive/blogs/dave_froslie/visual-studio-10-coded-ui-action-recordings-support-for-microsoft-dynamics-ax-2012) . |
 | SAP | Desteklenmez. |
 | Citrix/Terminal Hizmetleri | Bir Terminal sunucusunda eylemlerin kaydedilmesini önermeyiz. Kaydedici aynı anda birden çok örnek çalıştırmayı desteklemez. |
 | PowerBuilder | Kısmen desteklenir.<br /><br /> Desteğin kapsamı, PowerBuilder denetimleri için erişilebilirliğin etkin olduğu kadardır. |

@@ -1,5 +1,6 @@
 ---
 title: Veri bağlamada arama tablolarını kullanma-Windows Forms
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a68121cc98a1bdbc1f7f1bfa69ce8ee0d1d797bb
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: fe2289a54dba0c3b3e34de54991e9b7cfbee4c93
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743353"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037399"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-lookup-data-binding"></a>Arama veri bağlama modelini destekleyen bir Windows Forms kullanıcı denetimi oluşturma
 
@@ -54,7 +55,7 @@ Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
 - Yeni denetimdeki verileri göstermek için bir form oluşturun.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
@@ -155,7 +156,7 @@ Bu adım, **Data Source Configuration** `Customers` `Orders` Northwind örnek ve
 
 6. **Veri Kullanıcı arabirimi özelleştirme seçenekleri** Iletişim kutusunda **Ilişkili denetimler** listesinden **LookupBox** ' ı seçin.
 
-7. **Tamam**'a tıklayın.
+7. **Tamam**’a tıklayın.
 
 8. **MüşteriNo** sütunundaki açılan oka tıklayın ve **LookupBox**' ı seçin.
 

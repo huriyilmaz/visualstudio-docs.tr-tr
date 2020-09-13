@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e890a3d595b98276883c7e75547bb7edb338ca55
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 268273b39db83a831a65805a8cc1cafc28a103ec
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87507995"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036931"
 ---
 # <a name="first-look-at-profiling-tools"></a>Profil oluşturma araçlarına ilk bakış
 
@@ -147,7 +147,7 @@ UWP uygulamalarınızda **Tanılama araçları** penceresinde **UI analizini** e
 
 ## <a name="analyze-gpu-usage-direct3d"></a>GPU kullanımını analiz etme (Direct3D)
 
-Direct3D uygulamalarında (Direct3D bileşenleri C++ ' da olmalıdır) GPU 'daki etkinliği inceleyebilir ve performans sorunlarını çözümleyebilirsiniz. Daha fazla bilgi için bkz. [GPU kullanımı](/visualstudio/debugger/graphics/gpu-usage). Aracı kullanmak için performans Profilcisi ' nde **GPU kullanımı** ' nı seçin ve ardından **Başlat**' ı seçin. Uygulamanızda, profil oluşturma konusunda ilgilendiğiniz senaryoya gidin ve ardından bir rapor oluşturmak için **toplamayı durdur** ' u seçin.
+Direct3D uygulamalarında (Direct3D bileşenleri C++ ' da olmalıdır) GPU 'daki etkinliği inceleyebilir ve performans sorunlarını çözümleyebilirsiniz. Daha fazla bilgi için bkz. [GPU kullanımı](./gpu-usage.md). Aracı kullanmak için performans Profilcisi ' nde **GPU kullanımı** ' nı seçin ve ardından **Başlat**' ı seçin. Uygulamanızda, profil oluşturma konusunda ilgilendiğiniz senaryoya gidin ve ardından bir rapor oluşturmak için **toplamayı durdur** ' u seçin.
 
 Grafiklerde bir zaman aralığı seçip **Ayrıntıları görüntüle**' yi seçtiğinizde, alt bölmede ayrıntılı bir görünüm görüntülenir. Ayrıntılı görünümde, her CPU ve GPU üzerinde ne kadar etkinlik olduğunu inceleyebilirsiniz. Zaman çizelgesinde açılan pencereleri almak için en düşük bölmedeki olayları seçin. Örneğin, **var** olan çağrı açılan pencere görüntülenecek **olan olayı seçin** . (Açık gri dikey vsync çizgileri, belirli bir **mevcut** çağrının vsync kaçırılmadığını anlamak için başvuru olarak kullanılabilir. Uygulamanın artmasıyla ile 60 FPS 'e kadar olması için her iki VNET arasında bir tane **mevcut** çağrı olması gerekir.)
 
@@ -203,10 +203,10 @@ Aşağıda, Visual Studio tekliflerinin farklı araçları ve bunları kullanabi
 |Performans aracı|Windows masaüstü|UWP|ASP.NET/ASP.NET Core|
 |----------------------|---------------------|-------------|-------------|
 |[PerfTips](../profiling/perftips.md)|evet|evet|evet|
-|[CPU Kullanımı](../profiling/cpu-usage.md)|evet|evet|evet|
+|[CPU kullanımı](../profiling/cpu-usage.md)|evet|evet|evet|
 |[Bellek Kullanımı](../profiling/memory-usage.md)|evet|evet|evet|
 |[.NET nesne ayırma](../profiling/dotnet-alloc-tool.md)|Evet (yalnızca .NET)|evet|evet|
-|[GPU Kullanımı](/visualstudio/debugger/graphics/gpu-usage)|evet|evet|hayır|
+|[GPU Kullanımı](./gpu-usage.md)|evet|evet|hayır|
 |[Uygulama Zaman Çizelgesi](../profiling/application-timeline.md)|evet|evet|hayır|
 |[Olay Görüntüleyicisi](../profiling/events-viewer.md)|evet|evet|evet|
 |[.NET Async](../profiling/analyze-async.md)|Evet (yalnızca .NET)|evet|evet|
@@ -218,9 +218,9 @@ Aşağıda, Visual Studio tekliflerinin farklı araçları ve bunları kullanabi
 ::: moniker range="vs-2017"
 |Performans aracı|Windows masaüstü|UWP|ASP.NET/ASP.NET Core|
 |----------------------|---------------------|-------------|-------------|
-|[CPU Kullanımı](../profiling/cpu-usage.md)|evet|evet|evet|
+|[CPU kullanımı](../profiling/cpu-usage.md)|evet|evet|evet|
 |[Bellek Kullanımı](../profiling/memory-usage.md)|evet|evet|evet|
-|[GPU Kullanımı](/visualstudio/debugger/graphics/gpu-usage)|evet|evet|hayır|
+|[GPU Kullanımı](./gpu-usage.md)|evet|evet|hayır|
 |[Uygulama Zaman Çizelgesi](../profiling/application-timeline.md)|evet|evet|hayır|
 |[PerfTips](../profiling/perftips.md)|evet|XAML için Evet, HTML için Hayır|evet|
 |[Performans Gezgini](../profiling/performance-explorer.md)|evet|hayır|evet|
