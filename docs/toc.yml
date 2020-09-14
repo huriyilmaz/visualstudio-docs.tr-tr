@@ -127,6 +127,8 @@
               href: install/visual-studio-build-numbers-and-release-dates.md
     - name: Azure sanal makinesinden Visual Studio'yu kullanma
       href: install/using-visual-studio-vm.md
+    - name: ARM cihazında Visual Studio kullanma
+      href: install/visual-studio-on-arm-devices.md
     - name: Kapsayıcılar
       items:
         - name: Derleme Araçlarını Bir Kapsayıcıya Yükleme

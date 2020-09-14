@@ -14,7 +14,7 @@
       href: quickstart-deploy-to-linux.md
     - name: Web sitesine dağıtma
       href: quickstart-deploy-to-a-web-site.md
-    - name: Yerel klasöre dağıtma
+    - name: Klasöre dağıtma
       href: quickstart-deploy-to-local-folder.md
 - name: Öğreticiler
   items:
