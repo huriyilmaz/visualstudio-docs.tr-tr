@@ -1,5 +1,5 @@
 ---
-title: Visual Studio adım 2, görünümler ve sayfa şablonlarında Docgo öğreticisini öğrenin
+title: Visual Studio adım 2, görünümler ve sayfa şablonunda Docgo öğreticisini öğrenin
 titleSuffix: ''
 description: Visual Studio projeleri bağlamında, özellikle bir uygulama oluşturma ve görünümleri ve şablonları kullanma adımları için Docgo 'nun temel bilgileri.
 ms.date: 11/19/2018
@@ -7,16 +7,16 @@ ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5befdfb5f6974ff7b042319121a27c3628757b6e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8d91e587f354efe14db7cd669fa89a0f4658a538
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89314179"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90097313"
 ---
 # <a name="step-2-create-a-django-app-with-views-and-page-templates"></a>2. Adım: görünümler ve sayfa şablonlarıyla bir Docgo uygulaması oluşturma
 
