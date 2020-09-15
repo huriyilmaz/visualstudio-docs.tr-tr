@@ -14,12 +14,12 @@ manager: jillfra
 ms.workload:
 - uwp
 monikerRange: vs-2017
-ms.openlocfilehash: 524eb76696414cbbdba72266cc732ccb7e089f86
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2945ef9879e83567f37ebe410ba9f265bfd64760
+ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537247"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075463"
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>UWP uygulamalarında enerji kullanımını analiz etme
 
@@ -91,7 +91,7 @@ if (performance && performance.mark) {
 
 1. **Hata Ayıkla** menüsünde, **hata ayıklama olmadan Tanılamayı Başlat**' ı seçin.
 
-     ![Tanılama merkezinde enerji tüketimini seçin](../profiling/media/energyprof_diagnosticshub.png "ENERGYPROF_DiagnosticsHub")
+     ![Performans profil oluşturucusu 'nda enerji tüketimini seçme](../profiling/media/energyprof_diagnosticshub.png "ENERGYPROF_DiagnosticsHub")
 
 2. **Enerji tüketimini** seçin ve ardından **Başlat**' ı seçin.
 
@@ -113,7 +113,7 @@ if (performance && performance.mark) {
 
 2. **Yüklü uygulama paketini Seç** listesinden hedefi seçin.
 
-3. Tanılama hub 'ı sayfasında **enerji tüketimini** seçin.
+3. Performans profili Oluşturucu sayfasında **enerji tüketimini** seçin.
 
 4. Profil oluşturmaya başlamak için **Başlat** ' ı seçin.
 
@@ -124,7 +124,7 @@ if (performance && performance.mark) {
 
  ![Enerji profili Oluşturucu rapor sayfası](../profiling/media/energyprof_all.png "ENERGYPROF_All")
 
-|Görüntü|Description|
+|Görüntü|Açıklama|
 |-|-|
 |![1. Adım](../profiling/media/procguid_1.png "ProcGuid_1")|Rapor dosyası, Report*YYYYMMDD-SSMM*. diagsession olarak adlandırılır. Raporu kaydetmeye karar verirseniz adını değiştirebilirsiniz.|
 |![2. Adım](../profiling/media/procguid_2.png "ProcGuid_2")|Zaman çizelgesi profil oluşturma oturumunun uzunluğunu, uygulama yaşam döngüsü etkinleştirme olaylarını ve kullanıcı işaretlerini gösterir.|

@@ -8,30 +8,32 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 147a7dbc029ae894a0054837e92feb0108dc19b4
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 7db7e704eab7f5d00b20051811c503b143608e2f
+ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561594"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90074962"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçları çalıştırma
 
-Visual Studio, performans ölçümü ve profil oluşturma araçlarının bir seçimini sunmaktadır. CPU kullanımı ve bellek kullanımı gibi bazı araçlar, hata ayıklayıcı ile veya olmadan çalışabilir ve derleme yapılandırmalarında yayın veya hata ayıklama yapabilir. [Tanılama Araçları penceresinde](../profiling/profiling-feature-tour.md#view-performance-while-debugging) görüntülenen araçlar yalnızca hata ayıklama oturumu sırasında çalışır. [Performans Profilcisi](../profiling/profiling-feature-tour.md#post_mortem) 'nde görüntülenen araçlar hata ayıklayıcı olmadan çalışır ve verileri durdurup toplamayı seçtikten sonra sonuçları çözümleyebilirsiniz (mortem analizi için).
+Visual Studio, performans ölçümü ve profil oluşturma araçlarının bir seçimini sunmaktadır. CPU kullanımı ve bellek kullanımı gibi bazı araçlar, hata ayıklayıcı ile veya olmadan çalışabilir ve derleme yapılandırmalarında yayın veya hata ayıklama yapabilir. [Tanılama Araçları penceresinde](../profiling/profiling-feature-tour.md#measure-performance-while-debugging) görüntülenen araçlar yalnızca hata ayıklama oturumu sırasında çalışır. [Performans Profilcisi](../profiling/profiling-feature-tour.md#post_mortem) 'nde görüntülenen araçlar hata ayıklayıcı olmadan çalışır ve verileri durdurup toplamayı seçtikten sonra sonuçları çözümleyebilirsiniz (mortem analizi için).
 
 >[!NOTE]
 >Windows 7 ve üzeri ile hata ayıklayıcı olmayan performans araçlarını kullanabilirsiniz. Hata ayıklayıcı ile tümleşik profil oluşturma araçlarını çalıştırmak için Windows 8 veya üzeri gereklidir.
 
-Hata ayıklayıcı olmayan performans profil oluşturucusu ve hata ayıklayıcı ile tümleşik Tanılama Araçları, farklı bilgi ve deneyimler sağlar. Hata ayıklayıcı ile tümleşik araçlar, kesme noktaları ve değişken değerleri gösterir. Hata ayıklayıcı olmayan araçlar, son kullanıcı deneyimine daha yakın sonuçlar verir.
+Hata ayıklayıcı olmayan performans profil oluşturucusu ve hata ayıklayıcı ile tümleşik Tanılama Araçları, farklı bilgi ve deneyimler sağlar. Hata ayıklayıcı ile tümleşik araçlar, değişken değerleri gösterir ve kesme noktaları kullanmanıza izin verir. Hata ayıklayıcı olmayan araçlar, son kullanıcı deneyimine daha yakın sonuçlar verir.
 
 Hangi araçların ve sonuçların kullanılacağına karar vermek için aşağıdakileri göz önünde bulundurun:
 
-- Dosya g/ç veya ağ yanıtlama hızı sorunları gibi dış performans sorunları, hata ayıklayıcıda veya hata ayıklayıcı olmayan araçlarda çok daha farklı bir şekilde görünmez.
-- CPU yoğunluklu çağrıların neden olduğu sorunlar için, yayın ve hata ayıklama derlemeleri arasında önemli performans farklılıkları olabilir. Sorunun yayın yapılarında mevcut olup olmadığını denetleyin.
-- Sorun yalnızca hata ayıklama derlemeleri sırasında gerçekleşirse, muhtemelen hata ayıklayıcı olmayan araçları çalıştırmanız gerekmez. Yayın derlemesi sorunları için, hata ayıklayıcı araçlarının daha fazla araştırma için yardım edilip edilmeyeceğini belirleyin.
-- Yayın yapıları, işlev çağrıları ve sabitler gibi iyileştirmeler sağlar, kullanılmayan kod yollarını ayıklamalar ve hata ayıklayıcı tarafından kullanılamayan yollarla değişkenleri depolar. Hata ayıklayıcı ile tümleşik araçlarındaki performans numaraları, hata ayıklama derlemeleri bu iyileştirmelerin olmadığından daha az doğrudur.
-- Hata ayıklayıcı, özel durum ve modül yükleme olayları gibi gerekli hata ayıklama işlemlerini yaptığı için performans sürelerini değiştirir.
-- Performans profil oluşturucu araçlarındaki yayın derlemesi performans numaraları en kesin ve doğru. Hata ayıklayıcı ile tümleşik araç sonuçları, hata ayıklama ile ilgili diğer ölçülerle kıyaslamak için en yararlı seçenektir.
+- Hata ayıklayıcı-tümleşik araç ve hata ayıklayıcı olmayan aracı karşılaştırması
+  - Dosya g/ç veya ağ yanıtlama hızı sorunları gibi dış performans sorunları, hata ayıklayıcıda veya hata ayıklayıcı olmayan araçlarda çok daha farklı bir şekilde görünmez.
+  - Hata ayıklayıcı, özel durum ve modül yükleme olayları gibi gerekli hata ayıklama işlemlerini yaptığı için performans sürelerini değiştirir.
+  - Performans profil oluşturucu araçlarındaki yayın derlemesi performans numaraları en kesin ve doğru. Hata ayıklayıcı ile tümleşik araç sonuçları, hata ayıklama ile ilgili diğer ölçülerle kıyaslamak veya hata ayıklayıcı özelliklerini kullanmak için yararlıdır.
+- Hata ayıklama ve yayın derlemesi
+  - CPU yoğunluklu çağrıların neden olduğu sorunlar için, yayın ve hata ayıklama derlemeleri arasında önemli performans farklılıkları olabilir. Sorunun yayın yapılarında mevcut olup olmadığını denetleyin.
+  - Sorun yalnızca hata ayıklama derlemeleri sırasında gerçekleşirse, muhtemelen hata ayıklayıcı olmayan araçları çalıştırmanız gerekmez. Yayın derlemesi sorunları için, hata ayıklayıcı ile tümleşik araçlar tarafından sağlanan özelliklerin sorunu nasıl bulmamaya yardımcı olacağını belirleyin.
+  - Yayın yapıları, işlev çağrıları ve sabitler gibi iyileştirmeler sağlar, kullanılmayan kod yollarını ayıklamalar ve hata ayıklayıcı tarafından kullanılamayan yollarla değişkenleri depolar. Hata ayıklama derlemelerinden performans numaraları bu iyileştirmelerin olmadığı için daha az doğrudur.
 
 ## <a name="collect-profiling-data-while-debugging"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a> Hata ayıklarken profil oluşturma verilerini topla
 
@@ -82,7 +84,7 @@ Performans verilerini hata ayıklama olmadan toplamak için, performans profil O
 
    Oturum çalışırken, bazı araçlar tanılama araçları sayfasındaki gerçek zamanlı verilerin grafiklerini, ayrıca veri toplamayı duraklatma ve sürdürmeye yönelik denetimleri gösterir.
 
-    ![Performans ve Tanılama merkezinde veri toplamanın ekran görüntüsü](../profiling/media/diaghubcollectdata.png "Merkez verileri topla")
+    ![Performans Profiler 'daki veri koleksiyonunun ekran görüntüsü](../profiling/media/diaghubcollectdata.png "Merkez verileri topla")
 
 1. Tanılama oturumunu sonlandırmak için, **toplamayı durdur**' u seçin.
 

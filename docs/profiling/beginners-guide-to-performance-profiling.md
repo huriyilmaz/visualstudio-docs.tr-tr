@@ -17,33 +17,29 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3a7c5eb8aa489da9ced0803e0f83855734825ff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: caac02510d2fce95fa67340d2061341ed77ac13e
+ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537377"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075437"
 ---
 # <a name="measure-application-performance-by-analyzing-cpu-usage"></a>CPU kullanımını çözümleyerek uygulama performansını ölçme
 
-Uygulamanızdaki performans sorunlarını analiz etmek için Visual Studio profil oluşturma araçları 'nı kullanabilirsiniz. Bu makalede, uygulamanızın performans verilerini almak için tanılama araçlarının **CPU kullanımı** sekmesinin nasıl kullanılacağı gösterilmektedir.
+Hata ayıklayıcı ile tümleşik **CPU kullanımı** Tanılama aracı ile hata ayıklarken performans sorunlarını bulun.  Ayrıca, bir hata ayıklayıcı ekli veya çalışan bir uygulamayı hedefleyerek CPU kullanımını çözümleyebilirsiniz. Daha fazla bilgi için bkz. [hata ayıklayıcı ile veya olmayan profil oluşturma araçlarını çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
-Hata ayıklayıcı durakladığında, **CPU kullanımı** aracı uygulamanızda yürütülen işlevlerle ilgili bilgiler toplar. Araç, çalışmayı gerçekleştiren işlevleri listeler ve örnekleme oturumunun belirli kesimlerine odaklanmak için kullanabileceğiniz bir zaman çizelgesi grafiği sağlar.
-
-Tanılama hub 'ı, tanılama oturumunuzu çalıştırmak ve yönetmek için size çok sayıda seçenek sunar. **CPU kullanımı** size ihtiyacınız olan verileri sağlamıyorsa, [diğer profil oluşturma araçları](../profiling/profiling-feature-tour.md) sizin için yararlı olabilecek farklı türde bilgiler sağlar. Çoğu durumda, uygulamanızın performans sorununa bellek, işleme Kullanıcı arabirimi veya ağ isteği süresi gibi CPU 'nuzun bir neden olabilir. Tanılama hub 'ı, bu tür verileri kaydetmek ve analiz etmek için size çok sayıda seçenek sunar.
+Hata ayıklayıcı durakladığında, Tanılama Araçları penceresindeki **CPU kullanımı** aracı uygulamanızda yürütülen işlevlerle ilgili bilgiler toplar. Araç, çalışmayı gerçekleştiren işlevleri listeler ve örnekleme oturumunun belirli kesimlerine odaklanmak için kullanabileceğiniz bir zaman çizelgesi grafiği sağlar.
 
 > [!Important]
-> Tanılama araçları, ASP.NET dahil olmak üzere Visual Studio 'da .NET geliştirme ve yerel/C++ geliştirmesi için desteklenir.
-
-Bu makalede, normal hata ayıklama iş akışınızda CPU kullanımını çözümlemeyi tartışacağız. Ayrıca, bir hata ayıklayıcı ekli veya çalışan bir uygulamayı hedefleyerek CPU kullanımını çözümleyebilirsiniz. Daha fazla bilgi için bkz. [hata ayıklayıcı ile veya olmayan profil oluşturma araçlarını çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md). Ayrıca, kod içinde ilerlemek ve belirli işlevlerin veya kod bloklarının ne kadar sürdüğünü belirlemek için başka bir profil oluşturma aracı olan [PerfTips](../profiling/perftips.md)kullanabilirsiniz.
-
-Profil oluşturma araçlarını Windows 7 ve üzeri bir hata ayıklayıcı olmadan kullanabilirsiniz. Hata ayıklayıcı (**Tanılama araçları** penceresi) ile profil oluşturma araçlarını çalıştırmak için Windows 8 ve üzeri gereklidir.
+> Hata ayıklayıcı ile tümleşik tanılama araçları, Visual Studio 'da ASP.NET, ASP.NET Core ve yerel/C++ geliştirmesi gibi .NET geliştirme için desteklenir. Hata ayıklayıcı (**Tanılama araçları** penceresi) ile profil oluşturma araçlarını çalıştırmak için Windows 8 ve üzeri gereklidir.
 
 Bu öğreticide şunları yapacaksınız:
 
 > [!div class="checklist"]
 > * CPU kullanım verilerini topla
 > * CPU kullanım verilerini çözümleme
+
+**CPU kullanımı** size ihtiyacınız olan verileri sağlamıyorsa, [performans Profiler](../profiling/profiling-feature-tour.md#post_mortem) 'daki diğer profil oluşturma araçları sizin için yararlı olabilecek farklı türde bilgiler sağlar. Çoğu durumda, uygulamanızın performans sorununa bellek, işleme Kullanıcı arabirimi veya ağ isteği süresi gibi CPU 'nuzun bir neden olabilir.
 
 ## <a name="step-1-collect-profiling-data"></a>1. Adım: profil oluşturma verilerini toplama
 
@@ -134,7 +130,7 @@ CPU kullanımı altındaki işlevlerin listesini inceleyerek, en çok iş yapan 
     ![Tanılama araçları çağrı ağacı](../profiling/media/diag-tools-call-tree.png "DiagToolsCallTree")
     ::: moniker-end
 
-    |Görüntü|Description|
+    |Görüntü|Açıklama|
     |-|-|
     |![1. Adım](../profiling/media/ProcGuid_1.png "ProcGuid_1")|CPU kullanım çağrısı ağaçlarında en üst düzey düğüm bir sözde düğümdür|
     |![2. Adım](../profiling/media/ProcGuid_2.png "ProcGuid_2")|Çoğu uygulamalarda, [dış kodu göster](#view-external-code) seçeneği devre dışı bırakıldığında, ikinci düzey düğüm, uygulamayı başlatan ve durduran sistem ve çerçeve kodunu içeren bir **[Dış kod]** düğümüdür, Kullanıcı arabirimini çizer, iş parçacığı zamanlamasını denetler ve uygulamaya diğer alt düzey hizmetler sağlar.|

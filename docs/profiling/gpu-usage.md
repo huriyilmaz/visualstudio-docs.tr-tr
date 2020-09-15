@@ -7,16 +7,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6aa4cce032a5eb80a11568a83c1166b5690bd688
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a738490933c6f2d1cdf89e7e974a268540af991
+ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85279892"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90074975"
 ---
 # <a name="gpu-usage"></a>GPU kullanımı
 
-Direct3D uygulamanızın üst düzey donanım kullanımını daha iyi anlamak için Visual Studio performans ve tanılama hub 'ındaki GPU kullanımı aracını kullanın. Uygulamanızın performansının CPU ile bağlantılı veya GPU ile bağlantılı olup olmadığını görmenizi sağlar ve platformun donanımını daha etkin bir şekilde nasıl kullanabileceğinizi öğrenin. GPU kullanımı, Direct3D 12, Direct3D 11 ve Direct3D 10 kullanan uygulamaları destekler. Direct2D veya OpenGL gibi diğer grafik API 'Lerini desteklemez.
+Direct3D uygulamanızın üst düzey donanım kullanımını daha iyi anlamak için performans Profiler 'daki GPU kullanımı aracını kullanın. Uygulamanızın performansının CPU ile bağlantılı veya GPU ile bağlantılı olup olmadığını görmenizi sağlar ve platformun donanımını daha etkin bir şekilde nasıl kullanabileceğinizi öğrenin. GPU kullanımı, Direct3D 12, Direct3D 11 ve Direct3D 10 kullanan uygulamaları destekler. Direct2D veya OpenGL gibi diğer grafik API 'Lerini desteklemez.
 
 **GPU kullanım raporu** penceresi şöyle görünür:
 
@@ -43,7 +43,7 @@ GPU kullanım aracı 'nı başlatmak için:
 
 2. **Performans ve tanılama** hub 'ında **GPU kullanımı**' nın yanındaki kutuyu işaretleyin. İsteğe bağlı olarak, ilgilendiğiniz diğer araçların yanındaki kutuları işaretleyin. Uygulamanızın performansının daha ayrıntılı bir görüntüsünü almak için çeşitli performans ve tanılama araçlarını eşzamanlı olarak çalıştırabilirsiniz.
 
-    ![GPU kullanımı seçili olan performans ve tanılama hub 'ı ekran görüntüsü](media/gpuusageselected.png "GPU kullanımı seçildi")
+    ![GPU kullanımı seçili olan performans Profiler 'ın ekran görüntüsü](media/gpuusageselected.png "GPU kullanımı seçildi")
 
    > [!NOTE]
    > Tüm performans ve tanılama araçları aynı anda kullanılamaz.
@@ -96,7 +96,7 @@ Aradığınızı bulmaya yardımcı olması için, işlem adlarına, iş parçac
 
  Daha fazla ayrıntı aşağıdadır:
 
-|Filtre denetimi|Description|
+|Filtre denetimi|Açıklama|
 |--------------------|-----------------|
 |**İşleme**|İlgilendiğiniz işlemin adı. Tanılama oturumu sırasında GPU kullanan tüm süreçler bu açılan listeye dahil edilir. İşlemle ilişkili renk, iş parçacıklarının zaman çizelgelerine ait etkinliğinin rengidir.|
 |**Zincirinin**|İlgilendiğiniz iş parçacığı KIMLIĞI. Çok iş parçacıklı bir uygulamada, bu bilgiler ilgilendiğiniz işleme ait olan belirli iş parçacıklarını yalıtmanıza yardımcı olabilir. Seçilen iş parçacığıyla ilişkili olaylar her bir zaman çizelgesinde vurgulanır.|

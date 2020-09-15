@@ -9,35 +9,34 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc0d97b1e2b2e27ebc8ddb898795c1767155c1cb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3e1e6951aebac63494aada4e64c5c072eb79c6a9
+ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80256198"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90074988"
 ---
 # <a name="measure-memory-usage-in-visual-studio"></a>Visual Studio 'da bellek kullanımını ölçme
 
-Hata ayıklayıcı ile tümleşik **bellek kullanımı** Tanılama aracı ile hata ayıklarken bellek sızıntılarını ve verimsiz belleği bulun. Bellek kullanımı aracı, nesne türlerinin bellek kullanımının etkisini anlamanıza yardımcı olmak için yönetilen ve yerel bellek yığınının bir veya daha fazla *anlık görüntüsünü* almanızı sağlar. .NET, yerel veya karma mod (.NET ve yerel) uygulamalarının anlık görüntülerini toplayabilirsiniz.
-
-Aşağıdaki grafikte **Tanılama araçları** penceresi gösterilmektedir (Visual Studio 2015 güncelleştirme 1 ve sonraki sürümlerinde kullanılabilir):
-
-![DiagnosticTools&#45;güncelleştirme 1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-güncelleştirme 1")
+Hata ayıklayıcı ile tümleşik **bellek kullanımı** Tanılama aracı ile hata ayıklarken bellek sızıntılarını ve verimsiz belleği bulun. Bellek kullanımı aracı, nesne türlerinin bellek kullanımının etkisini anlamanıza yardımcı olmak için yönetilen ve yerel bellek yığınının bir veya daha fazla *anlık görüntüsünü* almanızı sağlar. Ayrıca, bir hata ayıklayıcı ekli veya çalışan bir uygulamayı hedefleyerek bellek kullanımını çözümleyebilirsiniz. Daha fazla bilgi için bkz. [hata ayıklayıcı ile veya olmayan profil oluşturma araçlarını çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
 Bellek **kullanım** aracında istediğiniz zaman bellek anlık görüntülerini toplayabilmenize karşın, performans sorunlarını araştırırken uygulamanızın nasıl yürütüldüğünü denetlemek Için Visual Studio hata ayıklayıcısını kullanabilirsiniz. Kesme noktaları, Adımlama, tümünü Böl ve diğer hata ayıklayıcı eylemlerinin ayarlanması, performans araştırmalarınızın en ilgili kod yollarına odaklanmasına yardımcı olabilir. Uygulamanız çalışırken bu eylemlerin gerçekleştirilmesi, sizi ilgilendiremeyen koddan paraziti ortadan kaldırabilir ve bir sorunu tanılamak için gereken süreyi önemli ölçüde azaltabilir.
 
-Bellek aracını hata ayıklayıcı dışında da kullanabilirsiniz. [Hata ayıklama olmadan bellek kullanımını](../profiling/memory-usage-without-debugging2.md)görün. Profil oluşturma araçlarını, Windows 7 ve üzeri bir hata ayıklayıcı ekli olmadan kullanabilirsiniz. Hata ayıklayıcı (**Tanılama araçları** penceresi) ile profil oluşturma araçlarını çalıştırmak için Windows 8 ve üzeri gereklidir.
-
-> [!NOTE]
-> **Özel ayırıcı desteği** Yerel bellek profili Oluşturucu çalışma zamanında yayılan ayırma [ETW](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) olay verileri toplanarak çalışır.  CRT ve Windows SDK ayırıcıları, ayırma verilerinin yakalanabilmesi için kaynak düzeyinde açıklanmalıdır. Kendi ayırıcılarınızı yazıyorsanız, yeni ayrılan yığın belleğine bir işaretçi döndüren işlevler, myMalloc için bu örnekte görüldüğü gibi [__declspec](/cpp/cpp/declspec)(ayırıcı) ile birlikte kullanılabilir.
->
-> `__declspec(allocator) void* myMalloc(size_t size)`
+> [!Important]
+> Hata ayıklayıcı ile tümleşik tanılama araçları, Visual Studio 'da ASP.NET, ASP.NET Core, Native/C++ geliştirme ve karma mod (.NET ve yerel) uygulamaları dahil .NET geliştirmesi için desteklenir. Hata ayıklayıcı (**Tanılama araçları** penceresi) ile profil oluşturma araçlarını çalıştırmak için Windows 8 ve üzeri gereklidir.
 
 Bu öğreticide şunları yapacaksınız:
 
 > [!div class="checklist"]
 > * Belleğin anlık görüntülerini al
 > * Bellek kullanım verilerini analiz etme
+
+**Bellek kullanımı** size ihtiyacınız olan verileri sağlamıyorsa, [performans Profiler](../profiling/profiling-feature-tour.md#post_mortem) 'daki diğer profil oluşturma araçları sizin için yararlı olabilecek farklı türde bilgiler sağlar. Çoğu durumda, uygulamanızın performans sorunu, CPU, işleme Kullanıcı arabirimi veya ağ isteği süresi gibi belleğinizin dışında bir şey olabilir.
+
+> [!NOTE]
+> **Özel ayırıcı desteği** Yerel bellek profili Oluşturucu çalışma zamanında yayılan ayırma [ETW](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) olay verileri toplanarak çalışır.  CRT ve Windows SDK ayırıcıları, ayırma verilerinin yakalanabilmesi için kaynak düzeyinde açıklanmalıdır. Kendi ayırıcılarınızı yazıyorsanız, yeni ayrılan yığın belleğine bir işaretçi döndüren işlevler, myMalloc için bu örnekte görüldüğü gibi [__declspec](/cpp/cpp/declspec)(ayırıcı) ile birlikte kullanılabilir.
+>
+> `__declspec(allocator) void* myMalloc(size_t size)`
 
 ## <a name="collect-memory-usage-data"></a>Bellek kullanım verilerini topla
 
