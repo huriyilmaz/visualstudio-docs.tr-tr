@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 914acae2f5fbb9bd3f47669eea699935fcfa5e4d
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: ebacdd78cbb72bbd1cb90a0b5c719d0c753a95ca
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038393"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90093360"
 ---
 # <a name="how-to-use-visual-studio-with-accounts-that-require-multi-factor-authentication"></a>Multi-Factor Authentication gerektiren hesaplarla Visual Studio 'Yu kullanma
 
@@ -50,10 +50,11 @@ Sistem Web tarayıcısı iş akışı etkinleştirildikten sonra, hesap ayarlar�
 
 Bu eylem, sisteminizin varsayılan Web tarayıcısını açar, hesabınızda oturum açmanızı ve gerekli MFA ilkelerini doğrulamanızı ister.
 
-Geliştirme etkinliklerinizi ve kaynak yapılandırmanıza bağlı olarak, oturumunuz sırasında kimlik bilgilerinizi yeniden girmeniz istenebilir. Bu, yeni bir kaynak eklediğinizde veya daha önce CA/MFA yetkilendirme gereksinimlerini karşılamadan bir kaynağa erişmeyi denediğinizde ortaya çıkabilir.
+Oturum açma işlemi sırasında, oturum açmanızı isteyip istemediğinizi soran bir ek istem alabilirsiniz. Bu istem muhtemelen, oturum açmak için bir hesabın kullanıldığı ikinci zamanı gösterir. Kimlik bilgilerinizi yeniden girme gereksinimini en aza indirmek için **Evet**' i seçmenizi öneririz. Bu, kimlik bilgilerinizin tarayıcı oturumlarında korunmasını sağlar.
 
-> [!NOTE] 
-> En iyi deneyim için, kaynaklarınız için tüm CA/MFA ilkeleri doğrulanmadan tarayıcınızı açık tutun. Tarayıcının kapatılması, önceden oluşturulmuş MFA durumunun kaybolmasına neden olabilir ve ek yetkilendirme istemleri isteyebilir.
+:::image type="content" source="media/kmsi.png" alt-text="Oturum açık kalsın mı?":::
+
+Geliştirme etkinliklerinizi ve kaynak yapılandırmanıza bağlı olarak, oturumunuz sırasında kimlik bilgilerinizi yeniden girmeniz istenebilir. Bu, yeni bir kaynak eklediğinizde veya daha önce CA/MFA yetkilendirme gereksinimlerini karşılamadan bir kaynağa erişmeyi denediğinizde ortaya çıkabilir.
 
 ## <a name="reauthenticating-an-account"></a>Bir hesabı yeniden doğrularken  
 Hesabınızla ilgili bir sorun varsa, Visual Studio sizden hesap kimlik bilgilerinizi yeniden girmeniz istenebilir.  
