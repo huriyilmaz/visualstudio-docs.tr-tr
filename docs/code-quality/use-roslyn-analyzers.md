@@ -1,5 +1,5 @@
 ---
-title: Kod kalitesi analizi
+title: Çözümleyici yapılandırması
 ms.date: 09/02/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +11,16 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4cbe22571a2485d163960cc7af58975f0a299bf9
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 6a950a005a4669e74722742b23527a9e85ab5f02
+ms.sourcegitcommit: d77da260d79471ab139973c51d65b04e0f80fe2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036385"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90560755"
 ---
-# <a name="configure-code-quality-analysis"></a>Kod kalitesi analizini yapılandırma
+# <a name="overview"></a>Genel Bakış
 
-.NET 5,0 ' den başlayarak, kod kalitesi Çözümleyicileri .NET SDK 'ya dahildir. (Daha önce bu Çözümleyicileri bir NuGet paketi olarak yüklediniz.) Kod Analizi, .NET 5,0 veya üstünü hedefleyen projeler için varsayılan olarak etkindir. [Enablenetçözümleyiciler](/dotnet/core/project-sdk/msbuild-props#enablenetanalyzers) özelliğini olarak ayarlayarak, önceki .NET sürümlerini hedefleyen projelerde Kod analizini etkinleştirebilirsiniz `true` . Ayrıca, olarak ayarlayarak projeniz için kod analizini devre dışı bırakabilirsiniz `EnableNETAnalyzers` `false` .
-
-Her kod *kalitesi Çözümleyicisi veya* kuralı, projeniz için üzerine yazılamayacağını ve özelleştirilebilecek bir varsayılan önem derecesi ve gizleme durumu içerir. Bu makalede, kod kalitesi Çözümleyicisi önem dereceleri ayarlanıyor ve çözümleyici ihlallerini gizleme ele alınmaktadır.
+Her bir Roslyn *Çözümleyicisi veya* kuralı, bir varsayılan önem ve gizleme durumuna sahiptir ve projeniz için bu geçersiz kılınabilir ve özelleştirilebilir. Bu makalede, çözümleyici önem derecelerine ayarlama ve çözümleyici ihlallerinin gizlenmesi ele alınmaktadır.
 
 ## <a name="configure-severity-levels"></a>Önem düzeylerini yapılandırma
 
