@@ -1,18 +1,20 @@
 ---
-title: Windows Forms Tabanlı Etki Alanına Özgü Dil Oluşturma
+title: Windows Forms Tabanlı bir Alana Özgü Dil Oluşturma
+description: Etki alanına özgü dil modelinin durumunu göstermek için Windows Forms kullanma hakkında bilgi sağlar.
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
+ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: c52b3bd352c2ecb2272ad8e229a0fe52a9ee5b41
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e4c712eed732830da4bc1b158c8ad53a65a45d8
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238367"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100459"
 ---
 # <a name="create-a-windows-forms-based-domain-specific-language"></a>Windows Forms tabanlı bir etki alanına özgü dil oluşturma
 
@@ -67,9 +69,9 @@ Dsl tanım dosyasını kendi DSL 'yi tanımlayacak şekilde güncelleştirdiğin
 
 ## <a name="update-the-dsl-definition"></a>DSL tanımını güncelleştirme
 
-Bu kılavuzda aşağıdaki DSL tanımı kullanılır.
+Aşağıdaki görüntü, bu kılavuzda kullanılan DSL tanımıdır.
 
-![DSL&#45;WPF&#45;1](../modeling/media/dsl-wpf-1.png)
+![DSL tanımı](../modeling/media/dsl-wpf-1.png)
 
 1. DSL tasarımcısında DslDefinition. dsl 'yi açın.
 
@@ -127,7 +129,7 @@ Artık DSL modelinde depolanan bilgileri görüntüleyecek yeni bir kullanıcı 
 
      Model sınıfınızın özellikleri ve ilişkileri veri kaynakları penceresinde görünür.
 
-     ![DslWpf&#45;3](../modeling/media/dslwpf-3.png)
+     ![Veri kaynakları penceresi](../modeling/media/dslwpf-3.png)
 
 ### <a name="connect-your-model-to-a-form"></a>Modelinizi bir forma bağlama
 
@@ -172,7 +174,9 @@ Artık DSL modelinde depolanan bilgileri görüntüleyecek yeni bir kullanıcı 
 
 - Kullanıcı bir satır seçtiğinde Özellikler penceresi, veri kılavuzu satırı yerine karşılık gelen model öğesinin özelliklerini görüntülediğinden emin olur.
 
-  ![](../modeling/media/dslwpf4.png)Veri kaynakları ve görünümler arasındaki bağlantıların DslWpf4 şeması.
+  ![DSL bağlamasının şeması](../modeling/media/dslwpf4.png)
+  
+  Veri kaynakları ve görünümler arasındaki bağlantıların şeması.
 
 ### <a name="complete-the-bindings-to-the-dsl"></a>DSL bağlantılarını doldurun
 
@@ -298,7 +302,7 @@ DSL çözümü artık oluşturabilir ve çalıştırılabilir, ancak daha sonra 
 
     Veri kılavuzu görünümünde öğenin adını düzenleyebilmelisiniz. Ayrıca, oradan da silebilirsiniz.
 
-   ![DSL&#45;WPF&#45;2](../modeling/media/dsl-wpf-2.png)
+   ![Örnek veri kılavuzu görünümü](../modeling/media/dsl-wpf-2.png)
 
 ### <a name="about-the-code-to-add-an-element"></a>Öğe ekleme kodu hakkında
 

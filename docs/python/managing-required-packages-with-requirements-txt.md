@@ -1,21 +1,21 @@
 ---
-title: Bir requirements.txt dosyası ile paket bağımlılıklarını yönetme
+title: requirements.txt ile paket bağımlılıklarını yönetme
 description: Bir requirements.txt dosyası projenin bağımlılıklarını açıklar. Bir requirements.txt dosyası içeren bir proje alıyorsanız, bu bağımlılıkları tek bir adımda kolayca yükleyebilirsiniz.
 ms.date: 03/18/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9179ca2b77e7a6d3ae5b5dffded06524114a0f8d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b65072e7a9ffa5d3767a5ff66fda25b231c622ef
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544124"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100545"
 ---
 # <a name="manage-required-packages-with-requirementstxt"></a>Gerekli paketleri requirements.txt ile yönetme
 

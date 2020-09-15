@@ -1,21 +1,21 @@
 ---
-title: Hızlı başlangıç-Cookiecutter kullanarak bir Python projesi oluşturma
+title: Hızlı başlangıç-Cookiecutter kullanarak Python projeleri oluşturma
 description: Bu hızlı başlangıçta, bir Cookiecutter şablonu kullanarak Python için bir Visual Studio projesi oluşturacaksınız.
 ms.date: 02/25/2019
 ms.topic: quickstart
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3f3e7f56f4a36a7958cba9bd7092f38d735123d4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6868b4c581674c8015d30bf81f64f2ab24ea2ee0
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62954524"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100741"
 ---
 # <a name="quickstart-create-a-project-from-a-cookiecutter-template"></a>Hızlı başlangıç: Cookiecutter şablonundan proje oluşturma
 

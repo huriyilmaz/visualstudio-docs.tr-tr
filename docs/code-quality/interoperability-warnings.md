@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 306c2477e6e5f731ed6dbf20b2cf4d03d4556467
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 9f09ccafb79a87dff5c18bb4af11a12e1b1729a4
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509919"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100506"
 ---
 # <a name="portability-and-interoperability-warnings"></a>Taşınabilirlik ve birlikte çalışabilirlik uyarıları
 
@@ -33,4 +33,5 @@ Taşınabilirlik uyarıları, farklı platformlarda taşınabilirliği destekler
 | Kural | Açıklama |
 | - | - |
 | [CA1401: P/Invoke görünür olmamalıdır](../code-quality/ca1401.md) | Ortak bir türdeki ortak veya korumalı yöntemin System.Runtime.InteropServices.DllImportAttribute özniteliği vardır (Ayrıca, Visual Basic Declare anahtar sözcüğü tarafından uygulanır). Bu tür yöntemler açıkta kalmamalıdır. |
+| [CA1416: platform uyumluluğunu doğrulama](../code-quality/ca1416.md) | Bir bileşende platforma bağımlı API 'Lerin kullanılması, kodun artık tüm platformlarda çalışmamasına neden olur. |
 | [CA1417: `OutAttribute` P/Invoke için dize parametrelerinde kullanmayın](../code-quality/ca1417.md) | Değeri ile geçirilen dize parametreleri, `OutAttribute` dize birbirine bağlı bir dizeyse çalışma zamanının kararlılığını bozabilir. |

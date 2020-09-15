@@ -1,18 +1,20 @@
 ---
-title: C++ kaynak dosyaları ve üstbilgi dosyaları arasındaki bağımlılıklara bakın
+title: C++ kaynak ve üstbilgi dosyaları arasındaki bağımlılıklara bakın
+description: C++ projeleri için kod eşlemeleri hakkında bilgi sağlar.
 ms.date: 05/16/2018
 ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
+ms.custom: SEO-VS-2020
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a17015c7efbb51027450e06bd1fb571ef9820d48
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b33e9400926dd7d1f7a2dc5a66a33ec2fb244b1b
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597249"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100446"
 ---
 # <a name="code-maps-for-c-projects"></a>C++ projeleri için kod haritaları
 

@@ -1,5 +1,5 @@
 ---
-title: Profil oluşturma araçlarıyla performansı ölçme
+title: Profil oluşturma araçlarıyla çalışmaya başlama
 description: Visual Studio 'da bulunan farklı tanılama araçlarına göz atın.
 ms.custom: ''
 ms.date: 09/08/2020
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ebc2a2e7c4b10d835a20abcdd8392fb1851596a
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: 28f382e8d20f3aa623ea241702e4795854e12f9a
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90074935"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100780"
 ---
 # <a name="first-look-at-profiling-tools"></a>Profil oluşturma araçlarına ilk bakış
 
@@ -57,7 +57,7 @@ Performans Profiler 'daki Araçlar **yayın** derlemeleri için analiz sağlamak
 
 ![Performans Profili Oluşturucu](../profiling/media/prof-tour-performance-profiler.png "Performans Profili Oluşturucu")
 
-Bazı senaryolarda, pencere [birden çok profil oluşturma aracı](../profiling/use-multiple-profiler-tools-simultaneously.md)seçmenize olanak sağlar. CPU kullanımı gibi araçlar, analizinizdeki yardım için kullanabileceğiniz tamamlayıcı veriler sağlayabilir. Birden çok profil oluşturma aracı içeren senaryoları etkinleştirmek için [komut satırı profil oluşturucuyu](../profiling/profile-apps-from-command-line.md) de kullanabilirsiniz.
+Performans Profiler 'da CPU kullanımı veya bellek kullanımı aracını kullanma hakkında daha fazla bilgi için bkz. hata ayıklayıcı ile tümleşik araçlar, bkz. [profil oluşturma araçlarını hata ayıklayıcı ile veya olmadan çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md). 
 
 Performans Profiler 'da bulunan araçlar şunları içerir:
 
@@ -70,7 +70,7 @@ Performans Profiler 'da bulunan araçlar şunları içerir:
 
 Farklı uygulama türleri için profil oluşturma araç desteğini görmek için bkz. [hangi aracı kullanmalıyım?](#which-tool-should-i-use)
 
-Performans Profiler 'da CPU kullanımı veya bellek kullanımı aracını kullanma hakkında daha fazla bilgi için bkz. hata ayıklayıcı ile tümleşik araçlar, bkz. [profil oluşturma araçlarını hata ayıklayıcı ile veya olmadan çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md). 
+Bazı senaryolarda, pencere [birden çok profil oluşturma aracı](../profiling/use-multiple-profiler-tools-simultaneously.md)seçmenize olanak sağlar. CPU kullanımı gibi araçlar, analizinizdeki yardım için kullanabileceğiniz tamamlayıcı veriler sağlayabilir. Birden çok profil oluşturma aracı içeren senaryoları etkinleştirmek için [komut satırı profil oluşturucuyu](../profiling/profile-apps-from-command-line.md) de kullanabilirsiniz.
 
 ## <a name="examine-performance-using-perftips"></a>PerfTips kullanarak performansı inceleyin
 

@@ -1,18 +1,20 @@
 ---
-title: 'İzlenecek yol: Modele Erişen Metin Şablonunda Hata Ayıklama'
+title: 'İzlenecek yol: modele erişen metin şablonlarında hata ayıklama'
+description: Bir modele erişen metin şablonunda hata ayıklama hakkında bilgi sağlar.
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
+ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: e33297bba899c1843b8601c031d7669531a1bd3f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cb5065ed50afe3b9ee31b361be88c1b5c18138af
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546906"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100793"
 ---
 # <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>İzlenecek yol: Modele Erişen Metin Şablonunda Hata Ayıklama
 Etki alanına özgü dil çözümünde metin şablonlarını değiştirirken veya eklediğinizde, motor şablonu kaynak koda dönüştürdiğinde veya üretilen kodu derlediğinde hata alabilirsiniz. Aşağıdaki kılavuzda, bir metin şablonunda hata ayıklamak için yapabileceğiniz bazı şeyler gösterilmektedir.

@@ -1,5 +1,6 @@
 ---
-title: "Hızlı başlangıç: Python web uygulaması oluşturmak için Visual Studio 'Yu kullanma"
+title: 'Hızlı başlangıç: Visual Studio ile Python web uygulaması oluşturma'
+titleSuffix: ''
 description: Bu hızlı başlangıçta, Python 'da basit bir Web uygulaması oluşturmak için Visual Studio ve Flask çerçevesini kullanırsınız.
 ms.date: 03/07/2019
 ms.technology: vs-python
@@ -7,15 +8,16 @@ ms.topic: quickstart
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
+ms.custom: SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 649f933c3d0fc2962ed0f7efc2ab09449bdd72ba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4318cd98de166210a8e8744840967942006b8ea6
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81444953"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100519"
 ---
 # <a name="quickstart-create-your-first-python-web-app-using-visual-studio"></a>Hızlı başlangıç: Visual Studio kullanarak ilk Python web uygulamanızı oluşturma
 

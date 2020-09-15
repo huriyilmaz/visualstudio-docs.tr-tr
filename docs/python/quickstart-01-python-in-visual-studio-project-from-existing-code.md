@@ -1,21 +1,21 @@
 ---
-title: Hızlı başlangıç-mevcut koddan bir Python projesi oluşturma
+title: Hızlı başlangıç-koddan bir Python projesi oluşturma
 description: Bu hızlı başlangıçta, uygun bir şablon kullanarak var olan bir klasörden Python için bir Visual Studio projesi oluşturacaksınız.
 ms.date: 12/06/2018
 ms.topic: quickstart
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8fbbd8c49ecc367a0dd01d9ab775735b93174fe6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 39be066e63a04c08eecd92395757d09b88333965
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62429098"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100754"
 ---
 # <a name="quickstart-create-a-python-project-from-existing-code"></a>Hızlı başlangıç: mevcut koddan bir Python projesi oluşturma
 
