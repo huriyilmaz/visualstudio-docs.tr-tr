@@ -15,12 +15,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 77428bfc815a963e8fae4ddae5e5e7a7b7d991fe
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 566b9827f42f646cd9350cfc015a460485212a09
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90034110"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90094336"
 ---
 # <a name="net-code-analysis-rules"></a>.NET kod analizi kuralları
 .NET kod analizi, kod kalitesi ihlallerini veya kod kalitesini geliştirmenin önerilerini belirten kurallar sağlar. Kurallar tasarım, yerelleştirme, performans ve güvenlik gibi kural alanlarında düzenlenir. Bazı kurallar .NET API kullanımına özgüdür, kalan kurallar genel kod kalitesi ile ilgilidir. Bu bölümde, her kurala yönelik ayrıntılı tartışmalar ve örnekler sağlanmaktadır.
@@ -30,11 +30,11 @@ ms.locfileid: "90034110"
 |Öğe|Açıklama|
 |----------|-----------------|
 |Tür|Kural için TypeName.|
-|CheckId|Kural için benzersiz tanımlayıcı. CheckId ve Category bir uyarının kaynak üzerinde gizlemesi için kullanılır.|
+|RuleId|Kural için benzersiz tanımlayıcı. RuleId ve Category bir uyarının kaynak üzerinde gizlemesi için kullanılır.|
 |Kategori|Uyarının kategorisi.|
 |Son değişiklik|Kural ihlalinin düzeltilme düzeltmesinin önemli bir değişiklik olup olmadığı. Son değişiklik, ihlale neden olan hedefe bağımlılığı olan bir derlemenin yeni sabit sürümle yeniden derlenmeyeceği veya değişiklik nedeniyle çalışma zamanında başarısız olabileceği anlamına gelir. Birden çok düzeltme kullanılabilir olduğunda ve en az bir düzeltme, Son değişiklik olduğunda ve bir düzeltme yoksa, ' kırılmamış ' ve ' kırılmamış ' seçeneklerinin her ikisi de belirtilir.|
 |Nedeni|Kuralın bir uyarı oluşturmasına neden olan özel yönetilen kod.|
-|Description|Uyarının arkasındaki sorunları açıklar.|
+|Açıklama|Uyarının arkasındaki sorunları açıklar.|
 |İhlaller Nasıl Düzeltilir?|Kaynak kodun kuralı karşılamak için nasıl değiştirileceğini ve bir uyarı oluşturmasını engellemesini açıklar.|
 |Uyarılar Bastırıldığında|Kuraldan bir uyarı bastırmasının ne kadar güvenli olduğunu açıklar.|
 |Örnek kod|Kuralı ihlal eden örnekleri ve kuralı karşılayan örnekleri düzeltildi.|

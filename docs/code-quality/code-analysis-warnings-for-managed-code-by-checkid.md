@@ -62,6 +62,7 @@ f1_keywords:
 - CA1309
 - CA1310
 - CA1401
+- CA1416
 - CA1417
 - CA1501
 - CA1502
@@ -253,18 +254,18 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a298ab142ae6a44c1fb24b2cb1b752f6beb4a68e
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 24f7dbcdd324620f2076f5fab8247c9ba99a72cb
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037243"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90094232"
 ---
 # <a name="code-quality-analysis-rules-by-rule-id"></a>Kural KIMLIĞINE göre kod kalitesi analiz kuralları
 
 Aşağıdaki tabloda, kural tanımlayıcısına göre kod kalitesi analiz kuralları listelenmektedir.
 
-| CheckId | Uyarı | Description |
+| RuleId | Uyarı | Açıklama |
 |---------| - | - |
 | CA1000 | [CA1000: Genel türlerde statik üyeler belirtme](../code-quality/ca1000.md) | Genel türün statik üyesi çağrıldığında tür bağımsız değişkeni tür için belirlenmelidir. Destek çıkarımı desteklenmeyen genel örnek üyesi çağrıldığında tür bağımsız değişkeni üye için belirlenmelidir. Bu iki durumda tür bağımsız değişkenini belirleyen sözdizimi farklıdır ve kolaylıkla karıştırılır. |
 | CA1001 | [CA1001: Atılabilen alanlara sahip türler atılabilir olmalıdır](../code-quality/ca1001.md) | Bir sınıf System.IDisposable tipi örnek alanını derler ve uygular ve sınıf IDisposable'ı uygulamaz. IDisposable alanını derleyen sınıf, yönetilmeyen kaynağı dolaylı yoldan sahiplenir ve IDisposable arayüzünü uygulamalıdır. |
@@ -324,6 +325,7 @@ Aşağıdaki tabloda, kural tanımlayıcısına göre kod kalitesi analiz kurall
 | CA1309 | [CA1309: Sıralı StringComparison kullanın](../code-quality/ca1309.md) | StringComparison parametresini Ordinal ya da OrdinalIgnoreCase'a ayarlayamayan dilbilimsel olmayan dize karşılaştırma işlemi. Açıkça StringComparison.Ordinal veya StringComparison.OrdinalIgnoreCase için parametre ayarıyla kodunuz genellikle hızlanır, daha doğru olur ve daha güvenilir hale gelir. |
 | CA1310 | [CA1310: Doğruluk için StringComparison belirtin](../code-quality/ca1310.md) | Dize karşılaştırma işlemi, StringComparison parametresi ayarlanmamış ve varsayılan olarak kültüre özgü dize karşılaştırmayı kullanan bir yöntem aşırı yüklemesi kullanır. |
 | CA1401 | [CA1401: P/Invoke görünür olmamalıdır](../code-quality/ca1401.md) | Ortak bir türdeki ortak veya korumalı yöntemin System.Runtime.InteropServices.DllImportAttribute özniteliği vardır (Ayrıca içindeki Declare anahtar sözcüğü tarafından uygulanır [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ). Bu tür yöntemler açıkta kalmamalıdır. |
+| CA1416 | [CA1416: platform uyumluluğunu doğrulama](../code-quality/ca1416.md) | Bir bileşende platforma bağımlı API 'Lerin kullanılması, kodun artık tüm platformlarda çalışmamasına neden olur. |
 | CA1417 | [CA1417: `OutAttribute` P/Invoke için dize parametrelerinde kullanmayın](../code-quality/ca1417.md) | Değeri ile geçirilen dize parametreleri, `OutAttribute` dize birbirine bağlı bir dizeyse çalışma zamanının kararlılığını bozabilir. |
 | CA1501 | [CA1501: Aşırı devralmadan kaçının](../code-quality/ca1501.md) | Devralma hiyerarşisinde düzeyleri dörtten fazla olan türdür. İç içe yuvalanmış hiyerarşileri izlemek, anlamak ve muhafaza etmek zor olabilir. |
 | CA1502 | [CA1502: Aşırı karmaşıklıktan kaçının](../code-quality/ca1502.md) | Bu kural, sayılarla ve şartlı şubelerle tanımlanan, yönteme giden doğrusal bağımsız yolların sayısını ölçer. |
@@ -466,7 +468,7 @@ Aşağıdaki tabloda, kural tanımlayıcısına göre kod kalitesi analiz kurall
 | CA5358 | [CA5358: Güvenli Olmayan Şifreleme Modlarını Kullanmayın](../code-quality/ca5358.md) | Güvenli Olmayan Şifreleme Modlarını Kullanmayın |
 | CA5359 | [CA5359 sertifika doğrulamayı devre dışı bırakma](../code-quality/ca5359.md) | Bir sertifika, sunucunun kimliğini doğrulamaya yardımcı olabilir. İsteklerin hedeflenen sunucuya gönderilmesini sağlamak için istemciler sunucu sertifikasını doğrulamalıdır. ServerCertificateValidationCallback her zaman döndürüyorsa `true` , tüm sertifikalar doğrulamayı geçer. |
 | CA5360 | [CA5360, seri durumdan çıkarma sırasında tehlikeli yöntemleri çağırmayın](../code-quality/ca5360.md) | Güvenli olmayan seri kaldırma, güvenilir olmayan veriler bir uygulamanın mantığını kötüye kullanma, bir hizmet reddi (DoS) saldırısı veya hatta seri hale getirilmesi sırasında rastgele kod yürütme için kullanıldığında oluşan bir güvenlik açığıdır. Kötü amaçlı kullanıcıların, denetimi altında olan güvenilmeyen verileri seri durumdan çıkarılırken, bu, bu kaldırma özelliklerini kötüye kullanma olasılığı vardır. Özel olarak, seri durumdan çıkarma sürecinde tehlikeli Yöntemler çağırın. Güvenli olmayan güvenli seri kaldırma saldırıları, bir saldırganın DoS saldırıları, kimlik doğrulaması atlanır ve uzaktan kod yürütme gibi saldırıları çalıştırmasına izin verebilir. |
-| CA5361 | [CA5361: Schannel sağlam şifreleme kullanımını devre dışı bırakma](../code-quality/ca5361.md) | `Switch.System.Net.DontEnableSchUseStrongCrypto` `true` Giden Aktarım katmanı GÜVENLIĞI (TLS) bağlantılarında kullanılan şifrelemeyi zayıf olacak şekilde ayarlama. Daha zayıf şifreleme, uygulamanız ve sunucu arasındaki iletişimin gizliliğini tehlikeye atabilir ve saldırganlar hassas verileri daha fazla dinlemesine olanak sağlar. |
+| CA5361 | [CA5361: Güçlü şifrelemenin Schannel kullanımını devre dışı bırakma](../code-quality/ca5361.md) | `Switch.System.Net.DontEnableSchUseStrongCrypto` `true` Giden Aktarım katmanı GÜVENLIĞI (TLS) bağlantılarında kullanılan şifrelemeyi zayıf olacak şekilde ayarlama. Daha zayıf şifreleme, uygulamanız ve sunucu arasındaki iletişimin gizliliğini tehlikeye atabilir ve saldırganlar hassas verileri daha fazla dinlemesine olanak sağlar. |
 | CA5362 | [CA5362 olası başvuru döngüsünü seri durumdan çıkarılan nesne grafiğinde](../code-quality/ca5362.md) | Güvenilmeyen verilerin serisini kaldırıyorsa, serisi kaldırılan nesne grafiğinin herhangi bir kodu, sınırsız döngülere geçmeden başvuru döngülerini işlemeye ihtiyaç duyuyor. Bu, seri durumdan çıkarma geri çağrısının parçası olan kodu ve serisini kaldırma tamamlandıktan sonra nesne grafiğini işleyen kodu içerir. Aksi takdirde, bir saldırgan başvuru döngüsünü içeren kötü amaçlı verilerle bir hizmet reddi saldırısı gerçekleştirebilir. |
 | CA5363 | [CA5363: İstek doğrulamayı devre dışı bırakmayın](../code-quality/ca5363.md) | İstek doğrulaması, HTTP isteklerini inceleyen ve siteler arası komut dosyası oluşturma da dahil olmak üzere ekleme saldırılarına yol açabilecek potansiyel olarak tehlikeli içerik içerip içermediğini belirleyen bir ASP.NET özelliğidir. |
 | CA5364 | [CA5364: Kullanım Dışı Güvenlik Protokollerini Kullanmayın](../code-quality/ca5364.md) | Aktarım Katmanı Güvenliği (TLS), genellikle Köprü Metni Aktarım Protokolü güvenli (HTTPS) ile bilgisayarlar arasındaki iletişimin güvenliğini sağlar. TLS 'nin eski protokol sürümleri TLS 1,2 ve TLS 1,3 ' den daha az güvenlidir ve yeni güvenlik açıklarına sahip olma olasılığı yüksektir. Riski en aza indirmek için eski protokol sürümlerinden kaçının. |
