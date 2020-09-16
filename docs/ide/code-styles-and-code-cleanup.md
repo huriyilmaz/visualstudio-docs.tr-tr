@@ -10,12 +10,12 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Basic.Code_Style.General
 ms.workload:
 - multiple
-ms.openlocfilehash: 4faeff1e60fa77e3bf9e995c61c841f626468a1b
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 75b301f66f597f8b53a2561ffbbe05dfb8a4cb1c
+ms.sourcegitcommit: 5a5f31a1a91bf243852c7da872211e63ab37fdaa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743337"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682693"
 ---
 # <a name="code-style-preferences"></a>Kod stili tercihleri
 
@@ -64,7 +64,7 @@ Bu sayfadaki her kod stili ayarı için, her satırdaki açılan listeleri kulla
 
 ## <a name="enforce-code-styles-on-build"></a>Derlemede kod stilleri zorla
 
-.NET 5,0 RC2 SDK 'sını içeren Visual Studio 2019 sürüm 16,8 ' den itibaren, tüm .NET projeleri için [derleme üzerinde .net kodlama kurallarını zorunlu](/dotnet/fundamentals/productivity/code-analysis.md#code-style-analysis) kılabilirsiniz. Derleme zamanında, .NET kod stili ihlalleri uyarı veya "IDE" ön eki ile hatalar olarak görünür. Bu, kod tabanınızda tutarlı kod stillerini kesinlikle zorlamanıza olanak sağlar.
+.NET 5,0 RC2 SDK 'sını içeren Visual Studio 2019 sürüm 16,8 ' den itibaren, tüm .NET projeleri için [derleme üzerinde .net kodlama kurallarını zorunlu](/dotnet/fundamentals/productivity/code-analysis#code-style-analysis) kılabilirsiniz. Derleme zamanında, .NET kod stili ihlalleri uyarı veya "IDE" ön eki ile hatalar olarak görünür. Bu, kod tabanınızda tutarlı kod stillerini kesinlikle zorlamanıza olanak sağlar.
 
 ::: moniker-end
 
