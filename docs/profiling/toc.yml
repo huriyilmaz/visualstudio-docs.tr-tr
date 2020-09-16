@@ -16,9 +16,9 @@
       href: quickstart-cpu-usage-aspnet.md
 - name: Öğreticiler
   items:
-    - name: Visual Studio’da uygulama performansının profili oluşturma
+    - name: Visual Studio’da uygulama performansını ölçme
       href: beginners-guide-to-performance-profiling.md
-    - name: Visual Studio’da bellek kullanımının profilini oluşturma
+    - name: Visual Studio’da bellek kullanımını ölçme
       href: memory-usage.md
 - name: Kavramlar
   items:
