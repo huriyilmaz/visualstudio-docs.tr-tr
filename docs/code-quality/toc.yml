@@ -10,12 +10,10 @@
         - name: Yapılandırma
           expanded: true
           items:
+            - name: Genel Bakış
+              href: use-roslyn-analyzers.md
             - name: Kod kalitesi
-              items:
-                - name: Genel Bakış
-                  href: use-roslyn-analyzers.md
-                - name: Kod kalitesi analizini EditorConfig ile yapılandırma
-                  href: configure-fxcop-analyzers.md
+              href: configure-fxcop-analyzers.md
             - name: Canlı kod analizini yapılandırma
               href: configure-live-code-analysis-scope-managed-code.md
             - name: Kod analizini el ile çalıştırma
