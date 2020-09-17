@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eef35457b9f28864929ad42919fff4e9afdcb0d5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b8f9ed7822dc231fdd4888d3e44c4e3218357f95
+ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114812"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90713483"
 ---
 # <a name="transactionscope-activity-designer"></a>TransactionScope Etkinlik Tasarımcısı
 
@@ -39,7 +39,7 @@ Aşağıdaki tabloda <xref:System.Activities.Statements.TransactionScope> Özell
 |<xref:System.Activities.Statements.TransactionScope.Body%2A>|Doğru|Tek bir işlemde yürütülecek etkinliği belirtir. Etkinliği eklemek için <xref:System.Activities.Statements.TransactionScope.Body%2A> , **araç kutusundan** bir etkinliği, metin kutusundan **TransactionScope** etkinlik Tasarımcısı ' nın **gövde** kutusuna bırakın ve ipucu metni "etkinliği buraya bırak" yazın.|
 |<xref:System.Activities.Statements.TransactionScope.IsolationLevel%2A>|Doğru|<xref:System.Transactions.IsolationLevel>Bunun için belirtir <xref:System.Activities.Statements.TransactionScope> .|
 |<xref:System.Activities.Statements.TransactionScope.Timeout%2A>|Yanlış|İşlemin tamamlanmasının 00:00:00 gerektiği zaman aralığını belirtir (Saat: dakika: saniye). Varsayılan değer 1 dakikadır (00:01:00).|
-|[System. Activities. deyimlerini. TransactionScope. AbortInstanceOnTransactionFailure](https://msdn.microsoft.com/library/system.activities.statements.transactionscope.abortinstanceontransactionfailure.aspx)|Doğru|İşlem iptal edildikten sonra iş akışının durdurulmayacağını belirten değeri belirtir.|
+|<xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure*>|Doğru|İşlem iptal edildikten sonra iş akışının durdurulmayacağını belirten değeri belirtir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

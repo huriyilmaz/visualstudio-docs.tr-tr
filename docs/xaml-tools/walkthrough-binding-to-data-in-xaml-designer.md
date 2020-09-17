@@ -10,12 +10,12 @@ dev_langs:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: f57d4f24348ff805669832ce6db9e8e4e79e4569
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9cc5348004f344bd62e66aa03a20b0dd61017692
+ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85330749"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90713431"
 ---
 # <a name="walkthrough-bind-to-data-in-xaml-designer"></a>İzlenecek yol: XAML Tasarımcısı’nda verilere bağlama
 
@@ -98,4 +98,4 @@ XAML Tasarımcısı, çalışma yüzeyini ve Özellikler penceresi kullanarak ve
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [XAML Tasarımcısı’nı kullanarak bir kullanıcı arabirimi oluşturma](../xaml-tools/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)
-- [Değer Dönüştürücüsü Ekle iletişim kutusu](https://msdn.microsoft.com/library/c5f3d110-a541-4b55-8bca-928f77778af8)
+- [Değer Dönüştürücüsü Ekle iletişim kutusu](/previous-versions/hh965588(v=vs.140))

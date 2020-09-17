@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.openlocfilehash: 717a9cd3f4157c276ce7d0dd5c41cac625581ba6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b0e5a2d09cad35266bacc73580b2284f66bd32f5
+ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250250"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90713470"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>Visual Studio sürümlerini yan yana yükleme
 
@@ -50,7 +50,7 @@ Sürümleri yan yana yüklemeden önce aşağıdaki koşulları gözden geçirin
 
 Visual Studio 'nun bir alt sürümünden bir sonrakine yükseltirken, Visual Studio yükleyicisi geçerli yüklemenizi varsayılan olarak o kanaldaki bir sonraki sürüme güncelleştirir. Örneğin, 16.6.4 önizlemesi yüklenirken, her iki sürüm 16,6 Önizleme kanalında olduğundan, yükleyici geçerli 16.6.3 Preview yüklemenizi değiştirmeye çalışacaktır. Bu, Visual Studio 'nun eski sürümlerinin makinenizde yer kaplamadığından emin olmanıza yardımcı olur. Bazı belirli durumlarda, ikincil yayınları yan yana yüklemek faydalı olabilir. Örneğimizde bu, hem 16.6.3 hem de 16.6.4 aynı makinede yer alır.
 
-1. Visual Studio 'nun mevcut sürümleriyle yan yana yüklemek istediğiniz ikincil sürüm için [Visual Studio önyükleyici dosyasını](https://docs.microsoft.com/visualstudio/releases/2019/history#installing-an-earlier-release) indirin.
+1. Visual Studio 'nun mevcut sürümleriyle yan yana yüklemek istediğiniz ikincil sürüm için [Visual Studio önyükleyici dosyasını](/visualstudio/releases/2019/history#installing-an-earlier-release) indirin.
 2. Komut istemi 'ni yönetici modunda açın. Bunu yapmak için, Windows Başlat menüsünü açın, "cmd" yazın, komut Istemi arama sonuçlarına sağ tıklayın ve **yönetici olarak çalıştır**' ı seçin. Komut isteminde dizinini, Visual Studio önyükleyici dosyanızın bulunduğu klasör olarak değiştirin.
 3. Yükleme konumu için yeni bir klasör yolu belirterek ve. exe dosya adını yüklemekte olduğunuz Visual Studio sürümü için uygun önyükleyici adıyla değiştirerek aşağıdaki komutu çalıştırın. . Exe dosya adı eşleşmelidir veya aşağıdaki dosyalardan birine benzer olmalıdır:
    * Visual Studio Community için vs_community.exe

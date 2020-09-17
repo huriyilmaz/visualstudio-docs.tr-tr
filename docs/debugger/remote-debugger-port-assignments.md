@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d99a1aff2c241e81e8914a247d2f6d8981ee273
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6fcd0159e5bd315009c1c468dc7a19b5ba5a9c61
+ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74239451"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90713509"
 ---
 # <a name="remote-debugger-port-assignments"></a>Uzaktan Hata Ayıklayıcı Bağlantı Noktası Atamaları
 Visual Studio Uzaktan Hata Ayıklayıcı, bir uygulama veya arka plan hizmeti olarak çalıştırılabilir. Uygulama olarak çalıştırıldığında, varsayılan olarak aşağıdaki şekilde atanmış bir bağlantı noktası kullanır:
@@ -29,7 +29,7 @@ Visual Studio Uzaktan Hata Ayıklayıcı, bir uygulama veya arka plan hizmeti ol
 
 - Visual Studio 2012:4016
 
-Diğer bir deyişle, uzaktan hata ayıklayıcıya atanan bağlantı noktasının numarası, her sürüm için 2 ile artırılır. Dilediğiniz farklı bir bağlantı noktası numarası belirleyebilirsiniz. Daha sonraki bir bölümde bağlantı noktası numaralarının nasıl ayarlanacağını açıklayacağız.
+Diğer bir deyişle, uzaktan hata ayıklayıcıya atanan bağlantı noktasının numarası, her sürüm için 2 ile artırılır. İsterseniz farklı bir bağlantı noktası numarası belirleyebilirsiniz. Daha sonraki bir bölümde bağlantı noktası numaralarının nasıl ayarlanacağını açıklayacağız.
 
 ## <a name="the-remote-debugger-port-on-32-bit-operating-systems"></a>32 bit Işletim sistemlerinde uzaktan hata ayıklayıcı bağlantı noktası
 

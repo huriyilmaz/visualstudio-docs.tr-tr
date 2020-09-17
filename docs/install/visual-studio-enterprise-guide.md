@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 02ce09aebae0d6e5225ba1cdfa7484aa887135fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 56a6142d7217d6afa7d48ea708c642a32d8cb3c8
+ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88247636"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90713444"
 ---
 # <a name="visual-studio-enterprise-guide"></a>Visual Studio Enterprise kılavuzu
 Şirket Visual Studio 'da çalışır durumdayken zamandan tasarruf ediyorsanız, buradan başlayın. Bu kurumsal kılavuz, Visual Studio 'Yu ortak kurumsal senaryolarda yüklemenize ve güncelleştirmenize yardımcı olabilecek ipuçları ve daha fazla yardıma ihtiyacınız varsa bir sorunu nasıl bildirebileceğinizi öğrenmek içerir. 
@@ -63,7 +63,7 @@ Visual Studio 'Yu başarıyla güncelleştirme ve güncelleştirme sorunlarını
 
 - **Güncelleştirme sorunlarını gidermek Için [Visual Studio 'yu onarın](repair-visual-studio.md) **. Bazen Visual Studio yüklemenizin hasar görmüş veya bozuk hale gelir. Güncelleştirme, güncelleştirmeleri de dahil olmak üzere tüm yük işlemlerinde karşıya yüklenmeye yönelik sorunları düzeltmek için faydalıdır. 
 
-- ** [Windows Güvenlik temellerini](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines)izleyin**. Microsoft, müşterilerine Windows 10 ve Windows Server gibi güvenli işletim sistemleri ve Microsoft Edge gibi güvenli uygulamalar sağlamak için ayrılmıştır. Microsoft, ürünlerinin güvenlik güvencesine ek olarak çeşitli yapılandırma özellikleri sunarak ortamlarınız üzerinde ince denetim sağlamanıza da imkan sağlar. 
+- ** [Windows Güvenlik temellerini](/windows/security/threat-protection/windows-security-baselines)izleyin**. Microsoft, müşterilerine Windows 10 ve Windows Server gibi güvenli işletim sistemleri ve Microsoft Edge gibi güvenli uygulamalar sağlamak için ayrılmıştır. Microsoft, ürünlerinin güvenlik güvencesine ek olarak çeşitli yapılandırma özellikleri sunarak ortamlarınız üzerinde ince denetim sağlamanıza da imkan sağlar. 
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
