@@ -1,5 +1,6 @@
 ---
-title: ClickOnce dağıtım hataları için özel günlük dosyası konumu ayarlama
+title: Özel günlük dosyası konumu ayarlama (ClickOnce dağıtım hataları)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 05ffd1cf32f8c7ea93e63232f7026c6c926f9308
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5b5cf73a685eb68e389e6531022200acbefbfd2
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382178"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809748"
 ---
 # <a name="how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors"></a>Nasıl yapılır: ClickOnce dağıtım hataları için özel günlük dosyası konumu ayarlama
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] tüm dağıtımlar için etkinleştirme günlük dosyalarını tutar. Bu Günlükler, bir dağıtımı yükleme ve başlatma ile ilgili tüm hataları belgeleyin [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Varsayılan olarak, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] her dağıtım etkinleştirmesi için bir günlük dosyası oluşturur. Bu günlük dosyalarını Temporary Internet Files klasöründe depolar. Bir dağıtım için günlük dosyası, bir etkinleştirme hatası oluştuğunda kullanıcıya gösterilir ve Kullanıcı ortaya çıkan hata iletişim kutusunda **Ayrıntılar** ' a tıklar.

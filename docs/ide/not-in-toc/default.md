@@ -10,12 +10,12 @@ f1_keywords:
 manager: jillfra
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: 0ab7f2d9fac02cf370e7b3803adc7fd3016d22ad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2c62a10e87b3a866956e4818a3b279eb0d4b833e
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800456"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808239"
 ---
 # <a name="f1-help"></a>F1 yardımı
 
@@ -25,7 +25,7 @@ Aradığınız şeyi bulamadık gibi görünüyor ve özür dileriz. Bu sayfanı
 
 Bir pencere, anahtar sözcük veya API adı hakkında F1 yardımı arıyorsanız:
 
-- [Docs.Microsoft.com](https://docs.microsoft.com) üzerinde aramayı deneyin
+- [Docs.Microsoft.com](/) üzerinde aramayı deneyin
 - Arama altyapısını kullanarak aramayı deneyin.
 
 ## <a name="find-help-on-a-keyword-or-api"></a>Anahtar sözcük veya API üzerinde yardım bulun

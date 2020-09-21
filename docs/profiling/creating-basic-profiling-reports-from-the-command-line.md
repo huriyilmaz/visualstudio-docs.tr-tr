@@ -1,5 +1,6 @@
 ---
-title: Komut satırından temel profil oluşturma raporları oluşturma | Microsoft Docs
+title: Profil oluşturma komut satırı-temel raporlar oluşturma
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 6d73e21e-c04e-48ea-91cc-e517a5f2cd3f
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: bca944b67b19fdbb4138c479acf5693994d1c717
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c9ee74732c917ee4267e08f7ff1c60715971ed71
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329046"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808857"
 ---
 # <a name="create-basic-profiling-reports-from-the-command-line"></a>Komut satırından temel profil oluşturma raporları oluşturma
 Bu makalede, virgülle ayrılmış değer (.* CSV*) bir. *VSP* veya. *vsps* profil oluşturma veri dosyası. Tüm rapor seçeneklerinin açıklaması için bkz. [VSPerfReport](../profiling/vsperfreport.md).
@@ -39,7 +40,7 @@ Bu makalede, virgülle ayrılmış değer (.* CSV*) bir. *VSP* veya. *vsps* prof
 |**Sayaç**|Profil oluşturma çalıştırma sırasında toplanan profil oluşturma işaretlerini ve Windows performans sayacı değerlerini listeler.|-   [İşaretler görünümü](../profiling/marks-view.md)|
 |**IP**|Yönergeye göre profil oluşturma verilerini listeler.|-   [Örnekleme verileri](../profiling/instruction-pointers-ips-view-sampling-data.md)<br />-   [.NET Bellek Örnekleme verileri](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)<br />-   [Çekişme verileri](../profiling/instruction-pointers-ips-view-contention-data.md)|
 |**Hay**|Ayrılan nesnelerin ömrünü listeler.|-   [Nesne ömrü görünümü](../profiling/object-lifetime-view.md)|
-|**Çizgi**|Kaynak kodu satırına göre profil oluşturma verilerini listeler.|-   [Örnekleme verileri](../profiling/lines-view-sampling-data.md)<br />-   [.NET Bellek Örnekleme verileri](../profiling/lines-view-dotnet-memory-sampling-data.md)<br />-   [Çekişme verileri](../profiling/lines-view-contention-data.md)|
+|**Satırı**|Kaynak kodu satırına göre profil oluşturma verilerini listeler.|-   [Örnekleme verileri](../profiling/lines-view-sampling-data.md)<br />-   [.NET Bellek Örnekleme verileri](../profiling/lines-view-dotnet-memory-sampling-data.md)<br />-   [Çekişme verileri](../profiling/lines-view-contention-data.md)|
 |**Üst bilgi**|Profil oluşturma veri dosyası üstbilgi bilgileri.|Dosyaya özgüdür.|
 |**İşaret**|Profil oluşturma çalıştırmasında toplanan profil oluşturma işaretleri.|-   [İşaretler görünümü](../profiling/marks-view.md)|
 |**Modül**|Modüller için profil oluşturma verilerini listeler.|-   [Örnekleme verileri](../profiling/modules-view-sampling-data.md)<br />-   [İzleme verileri](../profiling/modules-view-instrumentation-data.md)<br />-   [.NET Bellek Örnekleme verileri](../profiling/modules-view-dotnet-memory-sampling-data.md)<br />-   [.NET bellek Izleme verileri](../profiling/modules-view-dotnet-memory-instrumentation-data.md)<br />-   [Çekişme verileri](../profiling/modules-view-contention-data.md)|

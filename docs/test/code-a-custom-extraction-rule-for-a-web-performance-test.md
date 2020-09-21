@@ -1,5 +1,6 @@
 ---
-title: Web performans testi için özel bir ayıklama kuralı kodlama
+title: Özel bir ayıklama kuralı (Web performans testi) kodu
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +14,12 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 00001662667ed7020909d23cf3cfbd4b8437eabf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d29bb2d0bfa1bbea7d0dd8dedbb17f9704a9c66d
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288890"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810633"
 ---
 # <a name="code-a-custom-extraction-rule-for-a-web-performance-test"></a>Web performans testi için özel bir ayıklama kuralı kodlayın
 

@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1b6782a95793f222ba15fe8f928ecd9d7337c90f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9416862ad18bc297696e765d6664a4d08f2cc8dc
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87913320"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809917"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Visual Studio 'da Python ortamları oluşturma ve yönetme
 
@@ -33,7 +33,7 @@ Windows üzerinde Visual Studio 'da, bu makalede açıklandığı gibi, ortamlar
 Visual Studio 'da Python 'a yeni başladıysanız, aşağıdaki makaleler genel arka plandan de sağlanır:
 
 - [Visual Studio 'da Python ile çalışma](overview-of-python-tools-for-visual-studio.md)
-- [Visual Studio 'da Python desteği 'ni yükler](installing-python-support-in-visual-studio.md)
+- [Visual Studio’da Python desteğini yükleme](installing-python-support-in-visual-studio.md)
 
 ::: moniker range="vs-2017"
 > [!Note]
@@ -124,7 +124,7 @@ Bu nedenle, geliştiriciler genellikle proje için bir *sanal ortam* oluşturur.
 
 Visual Studio, bir proje için sanal ortam oluşturmaya yönelik doğrudan destek sağlar. Örneğin, bir *requirements.txt*içeren bir projeyi açarsanız veya bu dosyayı içeren şablondan bir proje oluşturursanız, Visual Studio otomatik olarak bir sanal ortam oluşturmanızı ve bu bağımlılıkları yüklemenizi ister.
 
-Açık bir proje içinde dilediğiniz zaman yeni bir sanal ortam oluşturabilirsiniz. **Çözüm Gezgini**, proje düğümünü genişletin, **Python ortamları**' na sağ tıklayın ve "sanal ortam ekle" seçeneğini belirleyin. Daha fazla bilgi için bkz. [sanal ortam oluşturma](/visualstudio/python/selecting-a-python-environment-for-a-project?view=vs-2019#create-a-virtual-environment-1).
+Açık bir proje içinde dilediğiniz zaman yeni bir sanal ortam oluşturabilirsiniz. **Çözüm Gezgini**, proje düğümünü genişletin, **Python ortamları**' na sağ tıklayın ve "sanal ortam ekle" seçeneğini belirleyin. Daha fazla bilgi için bkz. [sanal ortam oluşturma](./selecting-a-python-environment-for-a-project.md?view=vs-2019#create-a-virtual-environment-1).
 
 Visual Studio Ayrıca, sanal bir ortamdan bir *requirements.txt* dosyası oluşturmak için bir komut sağlar, böylece ortamı diğer bilgisayarlarda yeniden oluşturmayı kolaylaştırır. Daha fazla bilgi için bkz. [sanal ortamları kullanma](selecting-a-python-environment-for-a-project.md#use-virtual-environments).
 

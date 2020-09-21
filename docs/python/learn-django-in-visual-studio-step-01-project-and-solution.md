@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b41ed3901cd4ad18a1b52ddbdc7ee6fd82cb5380
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3b21268b488eb0061c5c329e0afcb57ef1ec6e3a
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62962257"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809930"
 ---
 # <a name="tutorial-get-started-with-the-django-web-framework-in-visual-studio"></a>Öğretici: Visual Studio 'da Docgo Web çerçevesini kullanmaya başlama
 
@@ -111,7 +111,7 @@ Yeni **Proje** iletişim kutusunda **Yeni git deposu oluştur** ' u seçtiğiniz
 
 Cevap: başlangıçtan itibaren kaynak denetimini kullanarak, özellikle de uzak bir depo kullanıyorsanız, projenizin düzenli olarak şirket dışı yedeklemesini sağlar. Yalnızca yerel bir dosya sistemindeki bir projeyi korumanın aksine, kaynak denetimi tam bir değişiklik geçmişi ve tek bir dosyayı ya da projenin tamamını önceki bir duruma geri döndürmenin kolay bir özelliğini sağlar. Bu değişiklik geçmişi, gerilemelerin nedenini (test arızaları) belirlemenize yardımcı olur. Ayrıca, bir proje üzerinde birden fazla kişi çalışıyorsa, kaynak denetimi, üzerine yazma işlemlerini yönetirken ve çakışma çözümü sağladığından gereklidir. Son olarak, otomasyon bir form olan kaynak denetimi, yapıları, testi ve yayın yönetimini otomatikleştirmek için size en iyi şekilde ayarlanır. Bu aslında bir proje için DevOps kullanmanın ilk adımıdır ve giriş engelleri bu kadar düşük olduğundan, kaynak denetimini baştan kullanmanın gerçekten bir nedeni yoktur.
 
-Otomasyon olarak kaynak denetimi hakkında daha fazla bilgi için bkz. [Truth 'Nın kaynağı: DevOps 'Daki depoların rolü](https://msdn.microsoft.com/magazine/mt763232), MSDN Magazine 'teki Web Apps için de geçerli olan mobil uygulamalar için yazılmış bir makaledir.
+Otomasyon olarak kaynak denetimi hakkında daha fazla bilgi için bkz. [Truth 'Nın kaynağı: DevOps 'Daki depoların rolü](/archive/msdn-magazine/2016/september/mobile-devops-the-source-of-truth-the-role-of-repositories-in-devops), MSDN Magazine 'teki Web Apps için de geçerli olan mobil uygulamalar için yazılmış bir makaledir.
 
 ### <a name="question-can-i-prevent-visual-studio-from-auto-committing-a-new-project"></a>Soru: Visual Studio 'Nun yeni bir projeyi otomatik olarak çalıştırmasını engelleyebilir miyim?
 

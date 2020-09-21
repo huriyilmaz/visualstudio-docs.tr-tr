@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e6be79bc38e9283493bf5b7428a21c17cf9d3e0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 287ef3ccfd344786bd98098c5f28d0a2bd6573f6
+ms.sourcegitcommit: 4a9689890f271f9b8b73c3333e0699cce84a95d8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62896626"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90832326"
 ---
 # <a name="format-specifiers-for-c-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısında C++ için biçim belirticileri
 Biçim belirticilerini kullanarak, bir değerin **Watch**, **oto**ve **Yereller** pencerelerinde görüntüleneceği biçimi değiştirebilirsiniz.
@@ -78,7 +78,7 @@ Aşağıdaki tablolarda, Visual Studio 'da kullanabileceğiniz biçim belirticil
 |bb|işaretsiz ikili tamsayı (önde 0b olmadan)|25|00000000000000000000000000011001|
 |e|bilimsel gösterim|25000000|2.500000 e + 07|
 |g|bilimsel veya kayan noktanın kısalı|25000000|2.5 e + 07|
-|c|tek karakter|0x0065, c|101 ' e '|
+|c|tek karakter|0x0065|101 ' e '|
 |s|const char * dizesi (tırnak işaretleriyle birlikte)|\<location> "Merhaba Dünya"|"Merhaba Dünya"|
 |**ise**|const char * dizesi (tırnak işareti yok)|\<location> "Merhaba Dünya"|Merhaba Dünya|
 |S8|UTF-8 dizesi|\<location> "Bu bir UTF-8 kahve kupa â ̃ •"|"Bu bir UTF-8 kahve kupa ☕"|
@@ -89,7 +89,7 @@ Aşağıdaki tablolarda, Visual Studio 'da kullanabileceğiniz biçim belirticil
 |env|Ortam bloğu (çift boş sonlandırılmış dize)|\<location>L "=:: =:: \\ \\ "|L "=:: =:: \\ \\ \\ 0 = C: = C: \\ \\ Windows \\ \\ system32 \\ 0allusersprofıle =...|
 |**s32**|UTF-32 dizesi (tırnak işaretleriyle birlikte)|\<location> U "Merhaba Dünya"|U "Merhaba Dünya"|
 |**s32b**|UTF-32 dizesi (tırnak işareti yok)|\<location> U "Merhaba Dünya"|Merhaba Dünya|
-|**Em**|enum|Cumartesi (6)|Cumartesi|
+|**en**|enum|Cumartesi (6)|Cumartesi|
 |**HV**|İşaretçi türü-incelenen işaretçi değerinin, bir dizinin yığın ayırma sonucunun (örneğin,) sonucu olduğunu gösterir `new int[3]` .|\<location>{\<first member>}|\<location>{\<first member>, \<second member>, ...}|
 |**yana**|Bir nesnenin bir işaretçisinin bellek adresini bastırır.|\<location>, {member = değer...}|{member = değer...}|
 |**on**|Türetilmiş sınıfları yoksayarak yalnızca temel sınıf bilgisini görüntüler|`(Shape*) square` temel sınıf ve türetilmiş sınıf bilgilerini içerir|Yalnızca temel sınıf bilgisini görüntüler|
@@ -121,7 +121,7 @@ Aşağıdaki tablolarda, Visual Studio 'da kullanabileceğiniz biçim belirticil
 |env|Ortam bloğu (çift boş sonlandırılmış dize)|\<location>L "=:: =:: \\ \\ "|L "=:: =:: \\ \\ \\ 0 = C: = C: \\ \\ Windows \\ \\ system32 \\ 0allusersprofıle =...|
 |**s32**|UTF-32 dizesi (tırnak işaretleriyle birlikte)|\<location> U "Merhaba Dünya"|U "Merhaba Dünya"|
 |**s32b**|UTF-32 dizesi (tırnak işareti yok)|\<location> U "Merhaba Dünya"|Merhaba Dünya|
-|**Em**|enum|Cumartesi (6)|Cumartesi|
+|**en**|enum|Cumartesi (6)|Cumartesi|
 |**HV**|İşaretçi türü-incelenen işaretçi değerinin, bir dizinin yığın ayırma sonucunun (örneğin,) sonucu olduğunu gösterir `new int[3]` .|\<location>{\<first member>}|\<location>{\<first member>, \<second member>, ...}|
 |**yana**|Bir nesnenin bir işaretçisinin bellek adresini bastırır.|\<location>, {member = değer...}|{member = değer...}|
 |**on**|Türetilmiş sınıfları yoksayarak yalnızca temel sınıf bilgisini görüntüler|`(Shape*) square` temel sınıf ve türetilmiş sınıf bilgilerini içerir|Yalnızca temel sınıf bilgisini görüntüler|

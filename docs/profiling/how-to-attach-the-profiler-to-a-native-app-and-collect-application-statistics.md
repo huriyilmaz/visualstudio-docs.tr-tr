@@ -1,6 +1,6 @@
 ---
-title: Profil oluşturucuyu yerel bir uygulamaya ekleyin ve uygulama istatistiklerini toplayın
-ms.custom: seodec18
+title: Uygulama istatistiklerini toplamak & yerel uygulamaya profil oluşturucu iliştirme
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: df44fe42-281b-4398-b3fc-277b62ae41f1
@@ -10,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d463413833ad476b8d6ad90369f53267e3f7cff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5b696a9bddeee4dc7b309945aab66c1d9c801307
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85328674"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811090"
 ---
 # <a name="how-to-attach-the-profiler-to-a-native-stand-alone-application-and-collect-application-statistics-by-using-the-command-line"></a>Nasıl yapılır: Profil oluşturucu komut satırını kullanarak yerel bir tek başına uygulamaya profil oluşturucu ekleme ve uygulama istatistikleri toplama
 Bu makalede, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] profil oluşturucuyu çalışan bir yerel tek başına (istemci) uygulamasına eklemek ve örnekleme yöntemini kullanarak performans istatistikleri toplamak için profil oluşturma araçları komut satırı araçlarının nasıl kullanılacağı açıklanır.
@@ -60,7 +60,7 @@ Bu makalede, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] profil ol
 
     Varsayılan olarak, performans verileri 10.000.000 her durdurulmayan işlemci saati döngüsünde örneklenir. Bu, her saniyede yaklaşık 100 kez bir 1 GH işlemcide. Saat çevrimi aralığını değiştirmek veya farklı bir örnekleme olayı belirtmek için aşağıdaki seçeneklerden birini belirtebilirsiniz.
 
-   |Örnek olay|Description|
+   |Örnek olay|Açıklama|
    |------------------|-----------------|
    |[/Timer](../profiling/timer.md) **:**`Interval`|Örnekleme aralığını, tarafından belirtilen durdurulmayan saat döngüsü sayısına dönüştürür `Interval` .|
    |[/PF](../profiling/pf.md)[**:** `Interval` ]|Örnekleme olayını sayfa hatalarına dönüştürür. `Interval`Belirtilmişse, örnekler arasındaki sayfa hatalarının sayısını ayarlar. Varsayılan değer 10 ' dur.|

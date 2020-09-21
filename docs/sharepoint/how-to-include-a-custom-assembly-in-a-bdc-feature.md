@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 772cdbaca67cc82fc6b7eb2c5ef5adb6508df34a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 79336e241b822e5fa9f84dbb771aa4187ea5eadb
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015258"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740077"
 ---
 # <a name="how-to-include-a-custom-assembly-in-a-bdc-feature"></a>Nasıl yapılır: bir BDC özelliğine özel bütünleştirilmiş kod ekleme
   Projeniz aynı çözümdeki diğer projelerden derlemelere başvurabilir. Ancak, **başvurulan derlemeleri LobSystems 'A ata** iletişim kutusunu kullanarak bu derlemeleri projenin özellik dosyasına eklemeniz gerekir.
@@ -40,7 +40,7 @@ ms.locfileid: "86015258"
 4. **Bir derleme seçin** listesinde özel derlemeyi seçin.
 
     > [!NOTE]
-    > Derlemeler, derlemeyi içeren projeye bir başvuru eklediyseniz, yalnızca **başvurulan derlemeleri LobSystems 'A ata** iletişim kutusunda görünür. Daha fazla bilgi için bkz. [nasıl yapılır: Başvuru Ekle Iletişim kutusunu kullanarak başvuru ekleme veya kaldırma](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9).
+    > Derlemeler, derlemeyi içeren projeye bir başvuru eklediyseniz, yalnızca **başvurulan derlemeleri LobSystems 'A ata** iletişim kutusunda görünür. Daha fazla bilgi için bkz. [nasıl yapılır: Başvuru Ekle Iletişim kutusunu kullanarak başvuru ekleme veya kaldırma](/previous-versions/wkze6zky(v=vs.140)).
 
 5. **Başvuru özellikleri** grubunda, **LobSystem Scope** özelliği için görüntülenen listeyi açın, özel derlemeyi kullanan yöntemlerin lob sistemini seçin ve **Tamam** düğmesini seçin.
 

@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: abb58d30e33ab5cfe713175b40cd32f593921ae9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5c1e9ce9ff2ab0a55de0a7e51325885d86c2fbf1
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80543944"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811025"
 ---
 # <a name="office-solutions-development-overview-vsto"></a>Office çözümleri geliştirmesine genel bakış (VSTO)
   Çözüm için ön uç olarak Microsoft Office kullanarak, Word 'deki sözcük işleme özellikleri, Excel 'in veri analizi özellikleri ve Outlook 'un e-posta yönetimi özellikleri gibi tanıdık Microsoft Office Kullanıcı arabirimleri ve araçlarından faydalanabilirsiniz. Visual Studio 'da Office uygulamalarını özelleştirmek ve iş işlemleriniz için gereken belirli özellikleri eklemek için çözümler geliştirebilirsiniz. Örneğin, Word 'Ü, düzenlenebilir veya düzenlenemez hale getirilen, önceden var olan parçaların dışına çeviren sözleşmeleri bir sözleşme oluşturucusuna dönüştürebilirsiniz. Excel ile, farklı projeler için özelleştirilmiş bir otomatik bütçe çalışma sayfası oluşturabilirsiniz. Kullanıcılarınız Ayrıca, Web tabanlı bir mimari kullanıyorsanız, karmaşık çözümlerin daha pratik olmasını sağlayan Office çözümlerini çevrimdışına alabilir.
@@ -80,7 +80,7 @@ ms.locfileid: "80543944"
  İçindeki Office geliştirme araçlarını kullanarak oluşturduğunuz çözümleri dağıtmak için ClickOnce veya Windows Installer kullanın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . ClickOnce dağıtımı, en az kullanıcı etkileşimi ile yüklenebilen ve çalıştırılabilen kendi kendini güncelleştiren çözümler oluşturmanıza olanak sağlar. Windows Installer (*. msi*) dosyaları, son kullanıcı bilgisayarlarına kolayca dağıtılabilir veya Systems Management Server (SMS) kullanılarak dağıtılabilir. VSTO Office çözümlerini dağıtma hakkında daha fazla bilgi için bkz. [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md).
 
 ### <a name="install-prerequisites"></a>Ön koşulları yükleme
- Son kullanıcıların ' de Office geliştirme araçları 'nı kullanarak oluşturduğunuz bir çözümü çalıştırabilmeleri için [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bilgisayarlarının belirli önkoşulların yüklü olması gerekir. Çözümünüzü ClickOnce kullanarak veya bir Windows Installer dosyası oluşturarak dağıtırsanız, bu önkoşullar çözümünüzle birlikte yüklenebilir. Daha fazla bilgi için bkz. [dağıtım Için Office çözüm önkoşulları](https://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e) ve [nasıl yapılır: Office çözümlerini çalıştırmak için son kullanıcı bilgisayarlarına önkoşulları yüklemek](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98).
+ Son kullanıcıların ' de Office geliştirme araçları 'nı kullanarak oluşturduğunuz bir çözümü çalıştırabilmeleri için [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bilgisayarlarının belirli önkoşulların yüklü olması gerekir. Çözümünüzü ClickOnce kullanarak veya bir Windows Installer dosyası oluşturarak dağıtırsanız, bu önkoşullar çözümünüzle birlikte yüklenebilir. Daha fazla bilgi için bkz. [dağıtım Için Office çözüm önkoşulları](/previous-versions/bb608617(v=vs.110)) ve [nasıl yapılır: Office çözümlerini çalıştırmak için son kullanıcı bilgisayarlarına önkoşulları yüklemek](/previous-versions/bb608608(v=vs.110)).
 
 ### <a name="security"></a>Güvenlik
  VSTO Office çözümleri için güvenlik, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] çözümü yüklediğinde ve yüklediğinde yaptığı bir dizi denetim tarafından zorlanır. Bu denetimler, dağıtım bildiriminin konumunun güvenilip güvenilmediğini veya dağıtım bildirimini imzalamak için kullanılan sertifikanın güvenilir olup olmadığını doğrulamaya dahildir. Daha fazla bilgi için bkz. [güvenli Office çözümleri](../vsto/securing-office-solutions.md).

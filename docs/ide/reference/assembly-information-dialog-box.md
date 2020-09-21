@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae70a2bf989b73dedc5becaac6f4b49bd0108730
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c1813c4e399a125aca0185436b4a7216b72b5842
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595793"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809013"
 ---
 # <a name="assembly-information-dialog-box"></a>Derleme Bilgileri iletişim kutusu
 
@@ -68,4 +68,4 @@ Derlemedeki türlerin COM tarafından kullanılabilir olup olmayacağını belir
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Uygulama Sayfası, Proje Tasarımcısı (Visual Basic)](../../ide/reference/application-page-project-designer-visual-basic.md)
-- [Öznitelikler](https://msdn.microsoft.com/Library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)
+- [Öznitelikler](/previous-versions/z0w1kczw(v=vs.140))

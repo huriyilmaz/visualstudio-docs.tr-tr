@@ -1,5 +1,6 @@
 ---
-title: ClickOnce tarafından hangi dosyaların yayımlandığını belirleme | Microsoft Docs
+title: Yayımlanacak dosyaları belirtme (ClickOnce)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c7ab6d724b40168f84227edb6ccfafc6245c30e0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: afa77b8a69151509455e149c168cbf94e5ad56f8
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85381788"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809498"
 ---
 # <a name="how-to-specify-which-files-are-published-by-clickonce"></a>Nasıl yapılır: ClickOnce tarafından hangi dosyaların yayımlandığını belirtme
 Bir uygulamayı yayımlarken [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , projedeki tüm kod olmayan dosyalar uygulamayla birlikte dağıtılır. Bazı durumlarda, belirli dosyaları yayımlamanıza veya yayımlamanız gerekebilir ya da koşullara göre belirli dosyaları yüklemek isteyebilirsiniz. Visual Studio, dosyaları hariç tutma, dosyaları veri dosyaları veya önkoşulları olarak işaretleme ve koşullu yükleme için dosya grupları oluşturma olanakları sağlar.

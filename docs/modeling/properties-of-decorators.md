@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3374c07cac01104354b2ce41abddbeabbec0a373
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 14965f829530ba5a2f6a7797291e9d1cfab0ae2d
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75566143"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810060"
 ---
 # <a name="properties-of-decorators"></a>Dekoratörlerin Özellikleri
 Dekoratörler, diyagramdaki şekiller veya bağlayıcılar üzerinde görünebilen simgelerle, metin veya genişletme/daraltma köşeli ayraçlardır. Aşağıdaki tablolarda, üç dekoratörün çeşitinin özellikleri gösterilmektedir. Bazı özellikler yalnızca şekil dekoratlarını veya yalnızca bağlayıcı dekoratlarını üzerinde görünür.
@@ -66,4 +66,4 @@ Dekoratörler, diyagramdaki şekiller veya bağlayıcılar üzerinde görünebil
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Alana Özgü Dil Araçları sözlüğü](/previous-versions/bb126564(v=vs.100))

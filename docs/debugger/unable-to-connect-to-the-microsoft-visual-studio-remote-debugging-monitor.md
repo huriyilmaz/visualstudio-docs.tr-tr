@@ -1,5 +1,5 @@
 ---
-title: Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi bağlantı kurulamıyor | Microsoft Docs
+title: Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi'ne Bağlanılamıyor.
 ms.date: 04/14/2020
 ms.topic: reference
 f1_keywords:
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d6173d6b3525a1bd723bc859d34b889b3796d295
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 63bd6fba7305c8dd266ecc935ea00d04633c6aec
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81397382"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809342"
 ---
 # <a name="unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor"></a>Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi'ne Bağlanılamıyor.
 Bu ileti, uzaktan hata ayıklama İzleyicisi uzak makinede düzgün şekilde ayarlanmadığından veya ağ sorunları veya bir güvenlik duvarının varlığı nedeniyle uzak makineye erişilemediğinden oluşabilir.

@@ -1,6 +1,6 @@
 ---
-title: Bellek verileri toplamak için profil oluşturucuyu bir ASP.NET uygulamasına iliştirme
-ms.custom: seodec18
+title: Bellek verileri toplamak için ASP.NET 'e profil oluşturucu iliştirme
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: d608f85a-41ae-4ca7-85e6-b96624dbc83c
@@ -10,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: edf9fec93b8fed4e89e5e7cf0525d4f11ed326fa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 22a3f7d20b02839ae677b12e5ce8454e63358914
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329343"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90807982"
 ---
 # <a name="how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line"></a>Nasıl yapılır: komut satırını kullanarak bellek verileri toplamak için profil oluşturucuyu bir ASP.NET Web uygulamasına Iliştirme
 Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web uygulamasına Profiler eklemek ve .NET Framework bellek ayırmalarının sayısı ve boyutu hakkında veri toplamak için profil oluşturma araçları komut satırı araçlarının nasıl kullanılacağı açıklanır. Ayrıca, .NET Framework bellek nesnelerinin yaşam süresi hakkında veri toplayabilirsiniz.

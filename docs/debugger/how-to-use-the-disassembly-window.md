@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0570aec5e8571e75cf64418a2c8c7c95cf507d31
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 23f297aa3fc549714a9b6327232a8a0b69c6138f
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348710"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808174"
 ---
 # <a name="view-disassembly-code-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Visual Studio hata ayıklayıcısında ayrıştırılmış kodu görüntüleme (C#, C++, Visual Basic, F #)
 
@@ -58,7 +58,7 @@ Makine kodu yönergelerini, derleme dili yerine ham sayısal biçiminde görünt
 
 ## <a name="use-the-disassembly-window"></a>Ayrıştırma penceresini kullanma
 
-**Ayrıştırma** penceresini etkinleştirmek için, **Araçlar**  >  **Seçenekler** (veya **Araçlar**  >  **Seçenekler**) altında **hata ayıklama**>, **Adres düzeyinde hata ayıklamayı etkinleştir**' i seçin.
+**Ayrıştırma** penceresini etkinleştirmek için, **Araçlar**  >  **Seçenekler**  >  **hata ayıklama**altında **Adres düzeyinde hata ayıklamayı etkinleştir**' i seçin.
 
 Hata ayıklama sırasında **ayrıştırma** penceresini açmak için **Windows**  >  **ayrıştırılmış derleme** ' yi seçin veya **alt** + **8**' e basın.
 

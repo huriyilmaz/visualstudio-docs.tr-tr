@@ -7,12 +7,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa4a768f8ebd8b39918fa3ba51d4eb9b3f773151
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a10b1f9b3dd6dda643a2775cf7b89221fba71d8
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89219770"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808148"
 ---
 # <a name="productivity-guide-for-visual-studio"></a>Visual Studio için üretkenlik Kılavuzu
 
@@ -20,7 +20,7 @@ Kodu yazarken zaman kazanmak istiyorsanız, doğru yerde olursunuz. Bu üretkenl
 
 Faydalı klavye kısayolları hakkında daha fazla bilgi için bkz. [üretkenlik kısayolları](../ide/productivity-shortcuts.md). Komut kısayollarının tüm listesi için bkz. [varsayılan klavye kısayolları](../ide/default-keyboard-shortcuts-in-visual-studio.md).
 
-## <a name="get-started"></a>başlarken
+## <a name="get-started"></a>Kullanmaya başlayın
 
 Komutlar, ayarlar, belgeler ve Install seçenekleri de dahil olmak üzere ihtiyacınız olan her şeyi hızlıca arayarak menüler aracılığıyla zaman ayırarak tasarruf edin. Visual Studio 'da arama sonuçlarınızda bulunan komutlara yönelik klavye kısayollarına bakın. böylece bunları daha kolay bir şekilde yeniden deneyebilirsiniz. 
 
@@ -32,9 +32,9 @@ Komutlar, ayarlar, belgeler ve Install seçenekleri de dahil olmak üzere ihtiya
 
 - **Visual Studio 'yu daha erişilebilir hale getirin**. Visual Studio, ekran okuyucular ve diğer yardımcı teknolojilerle uyumlu yerleşik erişilebilirlik özelliklerine sahiptir. Kullanılabilir özelliklerin tam listesi için bkz. [Visual Studio Için erişilebilirlik ipuçları ve püf noktaları](../ide/reference/accessibility-tips-and-tricks.md) . 
 
-- **Visual Studio ürün yaşam döngüsünü ve bakımını inceleyin**. Visual Studio güncelleştirmelerini alma hakkında daha fazla bilgi için, Enterprise ve Professional müşterilerine yönelik destek seçenekleri, Visual Studio 'nun eski sürümleri için destek ve Visual Studio hizmetinin kapsamadığı bileşenler için bkz. [Visual Studio ürün yaşam döngüsü ve bakımı](https://docs.microsoft.com/visualstudio/releases/2019/servicing). 
+- **Visual Studio ürün yaşam döngüsünü ve bakımını inceleyin**. Visual Studio güncelleştirmelerini alma hakkında daha fazla bilgi için, Enterprise ve Professional müşterilerine yönelik destek seçenekleri, Visual Studio 'nun eski sürümleri için destek ve Visual Studio hizmetinin kapsamadığı bileşenler için bkz. [Visual Studio ürün yaşam döngüsü ve bakımı](/visualstudio/releases/2019/servicing). 
 
-- **Visual Studio 'Da NuGet paketlerini yükleyip yönetin**. Windows üzerinde Visual Studio 'daki NuGet Paket Yöneticisi Kullanıcı arabirimi, projelerde ve çözümlerde NuGet paketlerini kolayca yüklemenize, kaldırmanıza ve güncelleştirmenize olanak tanır. Daha fazla bilgi için bkz. [NuGet paket yöneticisini kullanarak Visual Studio 'da paketleri yükleyip yönetme](https://docs.microsoft.com/nuget/consume-packages/install-use-packages-visual-studio).
+- **Visual Studio 'Da NuGet paketlerini yükleyip yönetin**. Windows üzerinde Visual Studio 'daki NuGet Paket Yöneticisi Kullanıcı arabirimi, projelerde ve çözümlerde NuGet paketlerini kolayca yüklemenize, kaldırmanıza ve güncelleştirmenize olanak tanır. Daha fazla bilgi için bkz. [NuGet paket yöneticisini kullanarak Visual Studio 'da paketleri yükleyip yönetme](/nuget/consume-packages/install-use-packages-visual-studio).
 
 ## <a name="write-code"></a>Kod yazma
 
@@ -60,7 +60,7 @@ Aşağıdaki özellikleri kullanarak daha hızlı bir şekilde kod yazın.
 
 - **Örnek uygulamaları kullanın**. [Microsoft Developer Network](https://code.msdn.microsoft.com/)'ten örnek uygulamalar indirerek ve yükleyerek uygulama geliştirmeyi hızlandırabilirsiniz. Ayrıca, bu alana yönelik bir örnek paketi indirerek ve inceleyerek belirli bir teknoloji veya programlama kavramı de öğrenebilirsiniz.
 
-- **Biçimlendirme/yeni satırlarla küme ayracı biçimlendirmesini değiştirin**. Yeni satırlar dahil olmak üzere kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için **biçimlendirme**  seçenekleri sayfasını kullanın. Bu ayarın C# ' de nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Seçenekler iletişim kutusu: metin düzenleyici > C# > kod stili > biçimlendirme](../ide/reference/options-text-editor-csharp-formatting.md). C++ için bkz. [Visual Studio 'Da c++ kodlama tercihlerinizi ayarlama](https://docs.microsoft.com/cpp/ide/how-to-set-preferences). Python için bkz. [Python kodunu biçimlendirme](../python/formatting-python-code.md).
+- **Biçimlendirme/yeni satırlarla küme ayracı biçimlendirmesini değiştirin**. Yeni satırlar dahil olmak üzere kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için **biçimlendirme**  seçenekleri sayfasını kullanın. Bu ayarın C# ' de nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Seçenekler iletişim kutusu: metin düzenleyici > C# > kod stili > biçimlendirme](../ide/reference/options-text-editor-csharp-formatting.md). C++ için bkz. [Visual Studio 'Da c++ kodlama tercihlerinizi ayarlama](/cpp/ide/how-to-set-preferences). Python için bkz. [Python kodunu biçimlendirme](../python/formatting-python-code.md).
 
 - **Girintilerinizi sekmelerle değiştirin**. Farklı düzenleyicilerde ve sdes 'lerde aynı projede çalışan birden çok geliştirici için tutarlı kodlama stillerini zorlamak üzere her kod tabanına uyarlanmış özel düzenleyici ayarlarını kullanın. Tüm takımınızın aynı dil kurallarına, adlandırma kurallarına ve biçimlendirme kurallarına uyduğundan emin olun. Bu özel ayarlar taşınabilir olduğundan ve kodunuzla birlikte gezindiğinden, Visual Studio dışında bile kodlama stillerini zorunlu kılabilirsiniz. Daha fazla bilgi için bkz. [Seçenekler, metin düzenleyici, tüm diller, sekmeler](../ide/reference/options-text-editor-all-languages-tabs.md#tabs).
 
@@ -118,7 +118,7 @@ Hata ayıklama çok fazla zaman alabilir, ancak aşağıdaki ipuçları süreci 
 
 - **Visual Studio hata ayıklayıcısı araçları 'Nı kullanın**. Visual Studio bağlamında, uygulamanızda *hata ayıklarken*, genellikle uygulamayı hata ayıklayıcı modunda çalıştırdığınız anlamına gelir. Hata ayıklayıcı, çalışma sırasında kodunuzun ne yaptığını görmek için birçok yol sunar. Başlamak için bir kılavuz için bkz. [Visual Studio hata ayıklayıcısına](../debugger/debugger-feature-tour.md) bakın. 
 
-- **Aynı sayfayı, uygulamayı veya siteyi farklı tarayıcılarda test edin**. Kodunuzun hatalarını ayıkladığınızda, [sayfa denetçisi (Visual Studio)](https://msdn.microsoft.com/Library/65880969-1ad2-47be-85b9-bb12c81bf209)dahil olmak üzere yüklü Web tarayıcıları arasında kolayca geçiş **yapabilirsiniz iletişim kutusunu** açmaya gerek yoktur. Hata ayıklama **Başlat** düğmesinin yanındaki **Standart** araç çubuğunda bulunan **hata ayıklama hedefi** listesini kullanabilirsiniz. Bu işlem, hata ayıklama veya sayfaları görüntüleme olarak hangi tarayıcıyı kullandığınızı hızlıca doğrulamak için kullanılır.
+- **Aynı sayfayı, uygulamayı veya siteyi farklı tarayıcılarda test edin**. Kodunuzun hatalarını ayıkladığınızda, [sayfa denetçisi (Visual Studio)](/previous-versions/hh974728(v=vs.140))dahil olmak üzere yüklü Web tarayıcıları arasında kolayca geçiş **yapabilirsiniz iletişim kutusunu** açmaya gerek yoktur. Hata ayıklama **Başlat** düğmesinin yanındaki **Standart** araç çubuğunda bulunan **hata ayıklama hedefi** listesini kullanabilirsiniz. Bu işlem, hata ayıklama veya sayfaları görüntüleme olarak hangi tarayıcıyı kullandığınızı hızlıca doğrulamak için kullanılır.
 
     ![Web tarayıcısı hata ayıklama seçeneklerini belirleyin](../ide/media/webbrowserdropdowntoolbar.png)
 
@@ -140,7 +140,7 @@ Hata ayıklama çok fazla zaman alabilir, ancak aşağıdaki ipuçları süreci 
 
 - **[CodeLens ile kod değişikliklerini ve diğer geçmişi bulun](../ide/find-code-changes-and-other-history-with-codelens.md)**. CodeLens, Düzenleyiciden çıkmadan kodunuzda ne olduğunu öğrenirken çalışmanıza odaklanmanızı sağlar &mdash; . Kod parçasına, kodunuzda değişikliklere, bağlantılı hatalara, iş öğelerine, kod incelemelerine ve birim testlerine yönelik başvuruları bulabilirsiniz.
 
-- **Diğer kişilerle gerçek zamanlı hata ayıklamak için Live Share kullanın**. Live Share, kullandığınız programlama dillerinden veya oluşturduğunuz uygulama türlerinden bağımsız olarak başkalarıyla gerçek zamanlı işbirliği yaparak kodu düzenlemenize ve hataları ayıklamanıza olanak tanır. Daha fazla bilgi için bkz. [Visual Studio Live Share nedir?](https://docs.microsoft.com/visualstudio/liveshare/)
+- **Diğer kişilerle gerçek zamanlı hata ayıklamak için Live Share kullanın**. Live Share, kullandığınız programlama dillerinden veya oluşturduğunuz uygulama türlerinden bağımsız olarak başkalarıyla gerçek zamanlı işbirliği yaparak kodu düzenlemenize ve hataları ayıklamanıza olanak tanır. Daha fazla bilgi için bkz. [Visual Studio Live Share nedir?](/visualstudio/liveshare/)
 
 - **Küçük kod yazmak ve test etmek Için etkileşimli pencere kullanın**. Visual Studio, rastgele bir kod girmenize ve anında sonuçları görebilmenizi sağlayan etkileşimli bir okuma-değerlendirme-Yazdır-döngüsü (REPL) penceresi sağlar. Bu kodlama yöntemi, API 'Leri ve kitaplıkları öğrenmenize ve denemenize ve etkileşimli olarak, projelerinize dahil etmek üzere çalışma kodu geliştirmenize yardımcı olur. Python için bkz. [Python etkileşimli penceresiyle çalışma](../python/python-interactive-repl-in-visual-studio.md). Etkileşimli pencere özelliği C# için de kullanılabilir. 
 

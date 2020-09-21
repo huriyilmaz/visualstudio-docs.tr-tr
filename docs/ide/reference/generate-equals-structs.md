@@ -7,12 +7,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ccc5be9debbdc2b4901d4aad15a0dc4d2bf1bb9f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ee695169f52036858fc70598f81f375638ab03f
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85290570"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808122"
 ---
 # <a name="generate-iequatable-operators-when-generating-equals-for-structs"></a>Yapılar için Equals oluştururken IEquatable işleçleri oluştur
 
@@ -20,7 +20,7 @@ Bu kod üretimi için geçerlidir:
 
 - C#
 
-**Ne:** [Yapılar](https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/struct)için **Equals** ve **IEquatable** işleçleri oluşturmanıza imkan tanır.
+**Ne:** [Yapılar](/dotnet/csharp/language-reference/builtin-types/struct)için **Equals** ve **IEquatable** işleçleri oluşturmanıza imkan tanır.
 
 **Ne zaman:** Sizin için IEquatable ve eşittir işleçlerinin yanı sıra, sizin için otomatik olarak bir yapı oluşturacaksınız.
 

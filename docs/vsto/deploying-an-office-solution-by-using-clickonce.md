@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f4adbd08d13d26c717beeb454bd323185bb88640
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bb495b30950105d1ff19a1f4fb13da1ee624b228
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79416568"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809355"
 ---
 # <a name="deploy-an-office-solution-by-using-clickonce"></a>ClickOnce kullanarak Office çözümü dağıtma
   ClickOnce kullanıyorsanız Office çözümünüzü daha az adımda dağıtabilirsiniz. Güncelleştirmeleri yayımlarsanız, çözümünüz bunları otomatik olarak algılar ve yükler. Bununla birlikte, ClickOnce, çözümünüzü bir bilgisayarın her kullanıcısı için ayrı ayrı yüklemenizi gerektirir. Bu nedenle, birden fazla Kullanıcı çözümünüzü aynı bilgisayarda çalıştırabileceğinden, Windows Installer (*. msi*) kullanmayı düşünmelisiniz.
@@ -358,7 +358,7 @@ ms.locfileid: "79416568"
 |Hata Kodu|Tanım|
 |----------------|----------------|
 |0|Çözüm başarıyla yüklendi ya da kaldırıldı veya VSTOInstaller Yardımı görüntülendi.|
-|-100|Bir veya daha fazla komut satırı seçeneği geçerli değil veya birden çok kez ayarlanmış. Daha fazla bilgi için "vstoinstaller/?" girin veya bkz. [bir ClickOnce Office çözümü için özel yükleyici oluşturma](https://msdn.microsoft.com/3e5887ed-155f-485d-b8f6-3c02c074085e).|
+|-100|Bir veya daha fazla komut satırı seçeneği geçerli değil veya birden çok kez ayarlanmış. Daha fazla bilgi için "vstoinstaller/?" girin veya bkz. [bir ClickOnce Office çözümü için özel yükleyici oluşturma](/previous-versions/bb772078(v=vs.110)).|
 |-101|Bir veya daha fazla komut satırı seçeneği geçerli değil. Daha fazla bilgi için "vstoinstaller /?" girin.|
 |-200|Dağıtım bildirimi URI 'SI geçerli değil. Daha fazla bilgi için "vstoinstaller /?" girin.|
 |-201|Dağıtım bildirimi geçerli olmadığından çözüm yüklenemedi. Bkz. [Office çözümleri Için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md).|
@@ -460,7 +460,7 @@ ms.locfileid: "79416568"
 
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
 - [Office çözümlerini yayımlama](../vsto/deploying-an-office-solution-by-using-clickonce.md)
-- [Nasıl yapılır: ClickOnce kullanarak bir Office çözümünü yayımlama](https://msdn.microsoft.com/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)
-- [Nasıl yapılır: ClickOnce Office çözümü yüklemesi](https://msdn.microsoft.com/14702f48-9161-4190-994c-78211fe18065)
-- [Nasıl yapılır: ClickOnce kullanarak belge düzeyi Office çözümünü SharePoint sunucusuna yayımlama](https://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58)
-- [ClickOnce Office çözümü için özel bir yükleyici oluşturma](https://msdn.microsoft.com/3e5887ed-155f-485d-b8f6-3c02c074085e)
+- [Nasıl yapılır: ClickOnce kullanarak bir Office çözümünü yayımlama](/previous-versions/bb386095(v=vs.110))
+- [Nasıl yapılır: ClickOnce Office çözümü yüklemesi](/previous-versions/bb608592(v=vs.110))
+- [Nasıl yapılır: ClickOnce kullanarak belge düzeyi Office çözümünü SharePoint sunucusuna yayımlama](/previous-versions/bb608595(v=vs.110))
+- [ClickOnce Office çözümü için özel bir yükleyici oluşturma](/previous-versions/bb772078(v=vs.110))

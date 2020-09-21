@@ -1,5 +1,6 @@
 ---
-title: Son kullanıcıların yükleneceği konumu belirtme | Microsoft Docs
+title: Son kullanıcıların yükleneceği konumu belirtin
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,14 +18,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e28ad8353858b35fc1c4e83f0511a58b4162dc9d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1ba02b1cf8947fa2d1907d6316e36af8f8f54a77
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85381944"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808730"
 ---
 # <a name="how-to-specify-the-location-where-end-users-will-install-from"></a>Nasıl yapılır: son kullanıcıların yükleneceği konumu belirtme
+
 Bir uygulamayı yayımlarken [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , kullanıcıların uygulamayı indirmek ve yüklemek için gideceği konum, uygulamayı ilk olarak yayımladığınız konum değildir. Örneğin, bazı kuruluşlarda bir geliştirici bir uygulamayı hazırlama sunucusuna yayımlayabilir ve ardından Yönetici uygulamayı bir Web sunucusuna taşır.
 
 Bu durumda, `Installation URL` kullanıcıların uygulamayı indirmek için Gideceleceği Web sunucusunu belirtmek için özelliğini kullanabilirsiniz. Bu, uygulama bildiriminin güncelleştirmelerin nerede bakacağını bilmesini sağlamak için gereklidir.

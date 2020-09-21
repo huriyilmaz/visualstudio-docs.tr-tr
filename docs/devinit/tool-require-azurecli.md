@@ -1,0 +1,59 @@
+---
+title: gerektir-azurecli
+description: devinit aracı-azurecli gerektirir.
+ms.date: 08/28/2020
+ms.topic: reference
+author: andster
+ms.author: andster
+manager: jillfra
+ms.workload:
+- multiple
+monikerRange: '>= vs-2019'
+ms.prod: visual-studio-windows
+ms.technology: devinit
+ms.openlocfilehash: e730807cd4658a23c4e39e06ed837f622e0f0e39
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810894"
+---
+# <a name="require-azurecli"></a>gerektir-azurecli
+
+Araç Azure CLI `require-azurecli` MSI aracılığıyla [Azure CLI](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest&preserve-view=true) 'yı yüklemek için kullanılır.
+
+## <a name="usage"></a>Kullanım
+
+Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, araç aşağıda ayrıntılı olarak açıklanan [varsayılan](#default-behavior) davranışı izler.
+
+| Ad                                             | Tür   | Gerekli | Değer                                                                          |
+|--------------------------------------------------|--------|----------|--------------------------------------------------------------------------------|
+| **açıklamaları**                                     | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                          |
+| [**girişinin**](#input)                              | dize | No       | Kullanılmadı. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                               |
+| [**additionalOptions**](#additional-options)     | dize | No       | Kullanılmadı. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.     |
+
+### <a name="input"></a>Giriş
+
+Kullanılmadı.
+
+### <a name="additional-options"></a>Ek seçenekler
+
+Kullanılmadı.
+
+### <a name="default-behavior"></a>Varsayılan davranış
+
+Aracın varsayılan davranışı, `require-azurecli` en son Azure CLI sürümünü yüklemek ve yola eklemektir (yalnızca Windows).
+
+## <a name="example-usage"></a>Örnek kullanım
+
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-2.0",
+    "run": [
+        {
+            "comments": "Example that will trigger the Default behavior of installing the Azure CLI.",
+            "tool": "require-azurecli"
+        }
+    ]
+}
+```

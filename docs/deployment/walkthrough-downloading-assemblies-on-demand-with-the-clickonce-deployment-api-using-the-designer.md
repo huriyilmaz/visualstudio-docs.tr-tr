@@ -1,5 +1,6 @@
 ---
-title: Tasarımcıyı kullanarak ClickOnce ile isteğe bağlı derlemeleri indirme
+title: Tasarımcı kullanarak isteğe bağlı derlemeleri indirme (ClickOnce API)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a8c5def5c4ebdf8f34efef50dca8dc4656bbd7d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4451f5f4075d512c76119faceb02d2a92fff120c
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66263431"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809269"
 ---
 # <a name="walkthrough-download-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>İzlenecek yol: Tasarımcıyı kullanarak ClickOnce dağıtım API 'SI ile isteğe bağlı derlemeleri Indirme
 Varsayılan olarak, uygulama ilk çalıştırıldığında bir uygulamaya dahil edilen tüm derlemeler [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] indirilir. Ancak, uygulamanızın küçük bir kullanıcı kümesi tarafından kullanılan bölümleri olabilir. Bu durumda, bir derlemeyi yalnızca türlerinden birini oluştururken indirmek istersiniz. Aşağıdaki izlenecek yol, uygulamanızda belirli derlemelerin "isteğe bağlı" olarak nasıl işaretleneceğini ve <xref:System.Deployment.Application> ortak dil çalışma zamanı tarafından talep edildiğinde ad alanındaki sınıfları kullanarak nasıl indirileceğini gösterir.

@@ -10,17 +10,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7a79b4a3b91f087c5f238afd3627a1393c558daa
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 33f935158077e566a5a9bc14645acaae79201347
+ms.sourcegitcommit: 4a9689890f271f9b8b73c3333e0699cce84a95d8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511113"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90832183"
 ---
 # <a name="deprecated-rules"></a>Kullanım dışı kurallar
 
 Aşağıdaki FxCop eski analiz kuralları kullanım dışıdır ve çözümleyiciler olarak uygulanmaz. Daha fazla bilgi için, [Roslyn-çözümleyiciler GitHub sorunları sayfasında](https://github.com/dotnet/roslyn-analyzers/issues?utf8=%E2%9C%93&q=is:issue+label:FxCop-Port)kural kimliğine göre arama yapabilirsiniz (örneğin, **CA1009**).
 
+- [CA1006](ca1006.md)
 - [CA1009](ca1009.md)
 - [CA1020](ca1020.md)
 - [CA1025](ca1025.md)

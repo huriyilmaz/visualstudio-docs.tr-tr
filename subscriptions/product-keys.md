@@ -1,18 +1,18 @@
 ---
 title: Ürün anahtarlarını kullanma | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 89e3fcf9-fe5d-4266-8dd7-5567d05fe869
-ms.date: 03/09/2020
+ms.date: 09/18/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde ürün anahtarlarınızı edinme ve yönetme hakkında bilgi edinin.
-ms.openlocfilehash: 10b09275dc1ba3d20e47c097888677e733e21ced
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a7a2551b98672332af88210a0347c9ee3faf2cc
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183931"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809165"
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde ürün anahtarlarını kullanma
 
@@ -52,12 +52,12 @@ Araştırmamız, çoğu abonelerin aboneliklerine dahil edilen ürün anahtarı 
 Bazı ürünler ürünün birden çok sürümünü tek bir indirme halinde paketler. Bu durumlarda, girilen ürün anahtarı ürünün hangi sürümünün yüklü olduğunu belirler.
 Etkinleştirme gerekli olmadığından, bazı anahtarlar, "static" anahtarları gibi otomatik olarak sağlanır. Diğer anahtarların, ürün için **anahtar al** bağlantısı seçilerek talep alınmalıdır.
 > [!div class="mx-imgBorder"]
-> ![Indirmeler sayfasından anahtar al](_img/product-keys/download-get-key.png)
+> ![Indirmeler sayfasından anahtar al](_img/product-keys/download-get-key.png "İndirdiğiniz ürün için bir anahtar talep etmek üzere anahtar al ' a tıklayın.")
 
 Tüm anahtarlar, [ürün anahtarları](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) sayfasında toplu olarak da kullanılabilir. Bu sayfada, bir ürünün tüm kullanıcıları için çalışan statik anahtarları bulabilir, yalnızca kullanım için özel anahtarlar alabilir, anahtar talep limitlerinizin durumunu görebilir ve tüm ürün anahtarlarınızı dışarı aktarabilirsiniz. 
 
 > [!div class="mx-imgBorder"]
-> ![Ürün anahtarları sayfası](_img/product-keys/product-keys-page.png)
+> ![Ürün anahtarları sayfası](_img/product-keys/product-keys-page.png "Ürün anahtarları sayfası, belirli aboneliğiniz için tüm ürün anahtarı bilgilerini sağlar.")
 
 Ürüne bağlı olarak çeşitli anahtar türleri mevcuttur.
 
@@ -66,7 +66,7 @@ Tüm anahtarlar, [ürün anahtarları](https://my.visualstudio.com/productkeys?w
 |    Anahtar türü           |    Açıklama                                                                                                                                                                                                           |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Geçerli değil                    |    Bu ürünü yüklemek için gereken anahtar yok.                                                       |
-|    Retail                     |    Perakende tuşları çoklu etkinleştirmeleri sağlar ve ürünün perakende yapıları için kullanılır. Çoğu durumda, her anahtar için 10 etkinleştirmeye izin verilir, ancak aynı makinede genellikle daha fazlasına izin verilir.                                                       |
+|    Perakende                     |    Perakende tuşları çoklu etkinleştirmeleri sağlar ve ürünün perakende yapıları için kullanılır. Çoğu durumda, her anahtar için 10 etkinleştirmeye izin verilir, ancak aynı makinede genellikle daha fazlasına izin verilir.                                                       |
 |    Çoklu etkinleştirme        |    Çoklu etkinleştirme anahtarı (MAK), aynı anahtarla bir ürünün birden çok yüklemesini etkinleştirmenizi sağlar. Mak 'leri, genellikle ürünlerin toplu lisanslama sürümleriyle kullanılır. Genellikle, abonelik başına yalnızca bir MAK anahtarı sağlanır.    |
 |    Statik etkinleştirme anahtarı    |    Statik etkinleştirme anahtarları, etkinleştirme gerektirmeyen ürünler için sağlanır. Bunlar, herhangi bir sayıda yükleme için kullanılabilir.                                                                                                                  |
 |    Özel anahtar                 |    Özel anahtarlar, ürünü etkinleştirmek veya yüklemek için özel eylemler veya bilgiler sağlar.                                                                                                                                                                |

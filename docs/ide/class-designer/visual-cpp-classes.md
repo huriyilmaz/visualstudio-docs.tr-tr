@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d68391bbd4c6c873940bbc2714ee41db8309b629
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d7af49e94045e519e32aacd12ec33a4a31a4c905
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590741"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808135"
 ---
 # <a name="c-classes-in-class-designer"></a>Sınıf Tasarımcısı C++ sınıfları
 
@@ -54,7 +54,7 @@ Bir sınıf şekline sağ tıklayıp, **temel sınıfları göster** ' e tıklad
 > [!NOTE]
 > **Türetilmiş sınıfları göster** komutu C++ kodu için desteklenmez. Türetilmiş sınıfları **sınıf görünümü**giderek, tür düğümünü genişleterek, **türetilmiş türler** alt klasörünü genişleterek ve ardından bu türleri sınıf diyagramına sürükleyerek görüntüleyebilirsiniz.
 
-Birden çok sınıf devralma hakkında daha fazla bilgi için bkz. [birden fazla devralma](https://msdn.microsoft.com/library/6td5yws2.aspx) ve [birden çok temel sınıf](/cpp/cpp/multiple-base-classes).
+Birden çok sınıf devralma hakkında daha fazla bilgi için bkz. [birden fazla devralma](/previous-versions/6td5yws2(v=vs.140)) ve [birden çok temel sınıf](/cpp/cpp/multiple-base-classes).
 
 ## <a name="abstract-classes"></a>Soyut sınıflar
 
@@ -175,8 +175,8 @@ Aşağıdaki tabloda, kurallı özelleştirilmiş sınıf bağlantısının baz�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C++ kodu ile çalışma](working-with-visual-cpp-code.md)
-- [Sınıflar ve Yapılar](/cpp/cpp/classes-and-structs-cpp)
+- [Sınıflar ve yapılar](/cpp/cpp/classes-and-structs-cpp)
 - [Anonim sınıf türleri](/cpp/cpp/anonymous-class-types)
-- [Birden çok devralma](https://msdn.microsoft.com/library/6td5yws2.aspx)
+- [Birden çok devralma](/previous-versions/6td5yws2(v=vs.140))
 - [Birden çok temel sınıf](/cpp/cpp/multiple-base-classes)
 - [Şablonlar](/cpp/cpp/templates-cpp)

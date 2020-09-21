@@ -9,12 +9,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e5f64ebdf93384b7def728ac5d01bcbaf6b0271
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b2deb3f8ff19c2d7805031c0c3ba02bc82b8a3e7
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88584581"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810880"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>Visual Studio veya Visual Studio Yükleyicisi ilgili bir sorunu bildirme
 
@@ -87,7 +87,7 @@ Rapor almak için bir sorun yoksa ancak bir özellik önermek istiyorsanız, bun
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Geliştirici topluluğu yönergeleri](https://docs.microsoft.com/visualstudio/ide/developer-community-guidelines)
+* [Geliştirici topluluğu yönergeleri](./developer-community-guidelines.md)
 * [Visual Studio geri bildirim seçenekleri](../ide/feedback-options.md)
 * [Mac için Visual Studio sorun bildirme](/visualstudio/mac/report-a-problem)
 * [C++ ile ilgili sorun bildirme](/cpp/how-to-report-a-problem-with-the-visual-cpp-toolset)

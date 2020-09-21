@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5df10e2da9e6b4c31894dce0669e9aa0e580b92f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d79bf66f88a7cbaa5321887b676cc9eca798a92
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015073"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739934"
 ---
 # <a name="walkthrough-create-a-sharepoint-project-extension"></a>İzlenecek yol: SharePoint Proje uzantısı oluşturma
   Bu izlenecek yol, SharePoint projeleri için bir uzantı oluşturmayı gösterir. Projenin eklenmesi, silinmesi veya yeniden adlandırılması gibi proje düzeyindeki olaylara yanıt vermek için bir proje uzantısı kullanabilirsiniz. Ayrıca bir özellik değeri değiştiğinde özel özellikler ekleyebilir veya yanıt verebilirsiniz. Proje öğesi uzantılarının aksine, proje uzantıları belirli bir SharePoint proje türüyle ilişkilendirilemez. Bir proje uzantısı oluşturduğunuzda uzantı, içinde herhangi bir tür SharePoint projesi açıldığında yüklenir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
@@ -128,7 +128,7 @@ ms.locfileid: "86015073"
 
 1. **Çözüm Gezgini**, Source. Extension. valtmanifest dosyası için kısayol menüsünü açın ve **Aç** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] dosyayı bildirim tasarımcısında açar. **Meta veriler** sekmesinde görüntülenen bilgiler **Uzantılar ve güncelleştirmeler**' de görünür. Tüm VSıX paketleri. valtmanifest dosyası uzantısını gerektirir. Bu dosya hakkında daha fazla bilgi için bkz. [VSIX uzantı şeması 1,0 başvurusu](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] dosyayı bildirim tasarımcısında açar. **Meta veriler** sekmesinde görüntülenen bilgiler **Uzantılar ve güncelleştirmeler**' de görünür. Tüm VSıX paketleri. valtmanifest dosyası uzantısını gerektirir. Bu dosya hakkında daha fazla bilgi için bkz. [VSIX uzantı şeması 1,0 başvurusu](/previous-versions/dd393700(v=vs.110)).
 
 2. **Ürün adı** kutusuna **özel proje özelliği**girin.
 

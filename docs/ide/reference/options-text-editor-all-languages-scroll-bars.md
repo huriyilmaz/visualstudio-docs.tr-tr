@@ -32,12 +32,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 54ce07537adc436f719de8596657d1367afcb87d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c89be8a79aad9a2e3e0cdbc8601a08a99c1ad1aa
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75588804"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808096"
 ---
 # <a name="options-text-editor-all-languages-scroll-bars"></a>Seçenekler, metin düzenleyici, tüm diller, kaydırma çubukları
 Bu iletişim kutusu, kod Düzenleyicisi kaydırma çubuğunun varsayılan davranışını değiştirmenize olanak sağlar. Bu seçenekleri göstermek için, **Araçlar** menüsünden **Seçenekler** ' i seçin. **Metin Düzenleyicisi** klasörü Içinde **tüm diller** alt klasörünü genişletin ve ardından **kaydırma çubukları**' nı seçin.
@@ -69,7 +69,7 @@ Dikey kaydırma çubuğunun aşağıdaki ek açıklamaları gösterilip gösteri
 
 Büyük bir kod dosyası açarak ve dosyadaki birkaç yerde oluşan bazı metinleri değiştirerek deneyin. Kaydırma çubuğu, değişikliklerinizin etkisini gösterir. bu sayede, sahip olmayan bir şeyi değiştirdiyseniz değişikliklerinizi geri alabilirsiniz.
 
-Kod düzenlenirken çeşitli renklerin ve simgelerin anlamı olan [Gelişmiş kaydırma çubuğu](https://blogs.msdn.microsoft.com/cdnstudents/2014/01/21/visual-studio-tips-and-tricks-enhanced-scroll-bar/) blog gönderisine bakın.
+Kod düzenlenirken çeşitli renklerin ve simgelerin anlamı olan [Gelişmiş kaydırma çubuğu](/archive/blogs/cdnstudents/visual-studio-tips-and-tricks-enhanced-scroll-bar) blog gönderisine bakın.
 
 ## <a name="behavior"></a>Davranış
 

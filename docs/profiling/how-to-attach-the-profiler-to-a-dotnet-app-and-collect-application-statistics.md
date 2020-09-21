@@ -1,6 +1,6 @@
 ---
-title: Tek başına uygulamaya .NET Framework profil oluşturucu ekleyin; Uygulama istatistiklerini al
-ms.custom: seodec18
+title: .NET tek başına uygulamasına profil oluşturucu ekleyin; Uygulama istatistiklerini al
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: b62fcbc1-791f-474e-890a-a6c332e0c9ea
@@ -10,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 68450129d9bb3e9e67793c0a4155e953abbccc3d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 89c7f4141459f612f55a2253e37a6e56349fcb6a
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85531813"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808057"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-and-collect-application-statistics-by-using-the-command-line"></a>Nasıl yapılır: Komut satırını kullanarak profil oluşturucuyu tek başına bir .NET Framework uygulamasına ekleme ve uygulama istatistikleri toplama
 Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , profil oluşturucuyu çalışan bir .NET Framework tek başına (istemci) uygulamasına eklemek ve örnekleme yöntemini kullanarak performans istatistikleri toplamak için profil oluşturma araçları komut satırı araçlarının nasıl kullanılacağı açıklanır.
@@ -73,7 +73,7 @@ Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , profil o
 
    - Varsayılan olarak, performans verileri 10.000.000 her durdurulmayan işlemci saati döngüsünde örneklenir. Bu, yaklaşık bir adet 1 GH işlemcide her 10 saniyede bir kez olur. Saat çevrimi aralığını değiştirmek veya farklı bir örnekleme olayı belirtmek için aşağıdaki seçeneklerden birini belirtebilirsiniz. [/targetclr](../profiling/targetclr.md)**:** `Version` bir uygulamaya çalışma zamanının birden fazla sürümü yüklendiğinde, profil için CLR sürümünü belirtir. İsteğe bağlı.
 
-   |Örnek olay|Description|
+   |Örnek olay|Açıklama|
    |-|-|
    |[/Timer](../profiling/timer.md) **:**`Interval`|Örnekleme aralığını, tarafından belirtilen durdurulmayan saat döngüsü sayısına dönüştürür `Interval` .|
    |[/PF](../profiling/pf.md) [**:** `Interval` ]|Örnekleme olayını sayfa hatalarına dönüştürür. `Interval`Belirtilmişse, örnekler arasındaki sayfa hatalarının sayısını ayarlar. Varsayılan değer 10 ' dur.|

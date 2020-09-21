@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 82ae3f8a43b65e6ff617192dc38149691d229455
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 773a4dd319d00487b919721bf3390a7d58c8b03c
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66836067"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810973"
 ---
 # <a name="required-changes-to-run-office-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 ' e veya .NET Framework 4,5 ' ye geçirebileceğiniz Office projelerini çalıştırmak için gereken değişiklikler
   Bir Office projesinin hedef çatısı [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] .NET Framework önceki bir sürümünden veya daha sonraki bir sürüme değiştirilmişse, çözümün geliştirme bilgisayarında ve son kullanıcı bilgisayarlarında çalışmasını sağlamak için aşağıdaki görevleri gerçekleştirmeniz gerekir:
@@ -64,7 +64,7 @@ ms.locfileid: "66836067"
 ## <a name="update-the-prerequisites-for-deployment"></a>Dağıtım önkoşullarını güncelleştirme
  Office projesini [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya daha yeni bir sürümüne yeniden hedeflediğinizde, **Önkoşullar** iletişim kutusunda karşılık gelen .NET Framework önkoşulu da güncelleştirmeniz gerekir. Aksi takdirde, ClickOnce dağıtımı veya InstallShield Limited Edition projesi .NET Framework önceki bir sürümünü denetler ve kurar.
 
- Son kullanıcı bilgisayarlarına dağıtım önkoşullarını güncelleştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Office çözümlerini çalıştırmak için son kullanıcı bilgisayarlarına önkoşulları yüklemek](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98).
+ Son kullanıcı bilgisayarlarına dağıtım önkoşullarını güncelleştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Office çözümlerini çalıştırmak için son kullanıcı bilgisayarlarına önkoşulları yüklemek](/previous-versions/bb608608(v=vs.110)).
 
 ## <a name="reinstall-solutions-on-end-user-computers"></a>Son kullanıcı bilgisayarlarına çözümleri yeniden yükleme
  .NET Framework 3,5 ' i hedefleyen bir Office çözümünü dağıtmak için ClickOnce kullanırsanız ve ardından projeyi [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya sonraki bir sürümüne yeniden hedeflemeniz durumunda, son kullanıcılar çözümü kaldırmalı ve sonra çözümü yeniden yayınladıktan sonra yeniden yüklemektir. Yeniden hedeflenen çözümü yeniden yayımlarsanız ve çözüm son kullanıcı bilgisayarlarında güncelleştirilirse, son kullanıcılar <xref:System.Runtime.InteropServices.COMException> güncelleştirilmiş çözümü çalıştırırken bir alır.

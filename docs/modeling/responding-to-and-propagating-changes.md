@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fbe09c242fce137d90b90ff2d6c547cee1ed2dc7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0c9f108529931fc99946e18f15492f72384e1578
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595403"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809995"
 ---
 # <a name="respond-to-and-propagate-changes"></a>Değişiklikleri yanıtlama ve yayma
 
@@ -32,7 +32,7 @@ Bir kılavuz olarak aşağıdaki şekilde bu teknikleri göz önünde bulundurun
 |Kurallar|Yalnızca bir değişikliğin gerçekleştiği işlemin sonundan önce yürütülmek üzere kuyruğa alınan kuralları tanımlayabilirsiniz. Bunlar geri alma veya yineleme sırasında yürütülmez. Depolama alanının bir bölümünü başka bir ile eşitlenmiş halde tutmak için bunları kullanın.|[Değişiklikleri Modelin İçinde Yayan Kurallar](../modeling/rules-propagate-changes-within-the-model.md)|
 |Olayları depola|Modelleme deposu bir öğe veya bağlantı ekleme veya silme ya da bir özelliğin değerini değiştirme gibi olayların bildirimlerini sağlar. Olay Ayrıca geri al ve Yinele ' de yürütülür. Depoda olmayan değerleri güncelleştirmek için mağaza olaylarını kullanın.|[Değişiklikleri Modelin Dışına Yayan Olay İşleyicileri](../modeling/event-handlers-propagate-changes-outside-the-model.md)|
 |.NET etkinlikleri|Şekillerin fare tıklamalarına ve diğer hareketlere yanıt veren olay işleyicileri vardır. Her nesne için bu olaylara kaydolmanız gerekir. Kayıt genellikle ınitializeınstanceresogenellerinin geçersiz kılması sırasında yapılır ve her öğe için yapılmalıdır.<br /><br /> Bu olaylar genellikle bir işlemin dışında oluşur.|[Nasıl yapılır: Şekil veya Dekoratörde bir Click için Araya Girme](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)|
-|Sınır kuralları|Sınır kuralı özellikle bir şeklin sınırlarını kısıtlamak için kullanılır.|[BoundsRules Şekil Konumunu ve Boyutunu Kısıtlamama](/visualstudio/modeling/boundsrules-constrain-shape-location-and-size?view=vs-2015)|
+|Sınır kuralları|Sınır kuralı özellikle bir şeklin sınırlarını kısıtlamak için kullanılır.|[BoundsRules Şekil Konumunu ve Boyutunu Kısıtlamama](../vs-2015/modeling/boundsrules-constrain-shape-location-and-size.md?view=vs-2015)|
 |Seçim kuralları|Seçim kuralları, kullanıcının neleri seçbileceklerini özellikle kısıtlar.|[Nasıl yapılır: Geçerli Seçime Erişme ve Seçimi Kısıtlama](../modeling/how-to-access-and-constrain-the-current-selection.md)|
 |OnAssocatedPropertyChanged|Model öğelerinin durumlarını gölge, ok uçları, renk ve çizgi genişlikleri ve stil gibi şekillerin ve bağlayıcıların özelliklerini kullanarak belirtin.|[Modeli Yansıtacak Şekilleri ve Bağlayıcıları Güncelleştirme](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md)|
 

@@ -10,12 +10,12 @@ author: mikejo5000
 dev_langs:
 - VB
 - CSharp
-ms.openlocfilehash: f92fe91c31f2b352d9d47a2d908a25f7bfdf2a7c
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 9ef41b8645e77a28c8422fff49111b41215ba971
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038419"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739882"
 ---
 # <a name="isolate-code-under-test-with-microsoft-fakes"></a>Microsoft Fakes ile test edilen kodu yalıtma
 
@@ -146,7 +146,7 @@ Daha ayrıntılı bir açıklama için, [birim testi için uygulamanızın parç
 
     ```
 
-    Burada Magic 'in özel parçası sınıftır `StubIStockFeed` . Başvurulan derlemedeki her arabirim için saptama sınıfı Microsoft Fakes mekanizması oluşturur. Saplama sınıfının adı, " `Fakes.Stub` " öneki ve parametre türü adları eklenmiş şekilde arabirimin adından türetilir.
+    Burada Magic 'in özel parçası sınıftır `StubIStockFeed` . Başvurulan derlemedeki her arabirim için saptama sınıfı Microsoft Fakes mekanizması oluşturur. Saplama sınıfının adı, arabirim adından türetilir, `Fakes.Stub` ön ek olarak "" ve parametre türü adları eklenir.
 
     Saptamalar ayrıca olaylar ve genel yöntemlerle ilgili olarak özellik okuyucu ve ayarlayıcılar için oluşturulur. Daha fazla bilgi için bkz. [birim testi için uygulamanızın parçalarını birbirinden yalıtmak üzere saplamalar kullanma](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md).
 

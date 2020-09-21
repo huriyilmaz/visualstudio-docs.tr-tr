@@ -12,12 +12,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 47a2efac2e317fc8e3d168f4b8b19bfb10014cf2
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: f7ac5967d13aa6572b36989150561363555a9705
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036944"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809204"
 ---
 # <a name="step-11-run-your-picture-viewer-app-and-try-other-features"></a>11. Adım: resim görüntüleyici uygulamanızı çalıştırma ve diğer özellikleri deneme
 
@@ -60,6 +60,6 @@ Daha fazla bilgi edinmek için aşağıdaki öğreticiyle devam edin:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Diğer C# öğreticileri](/visualstudio/get-started/csharp/)
-* [Daha fazla Visual Basic öğretici](/visualstudio/get-started/visual-basic/)
+* [Diğer C# öğreticileri](../get-started/csharp/index.yml)
+* [Daha fazla Visual Basic öğretici](../get-started/visual-basic/index.yml)
 * [C++ öğreticisi](/cpp/get-started/tutorial-console-cpp)

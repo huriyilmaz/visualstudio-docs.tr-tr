@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1222e6603ea45e1a4172af84b9062c17a407c28c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e8cd25b8c4c70067641468dd6fa321e9e4fbe39
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986156"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809368"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>Visual Studio kullanarak Office için VSTO Eklentileri oluşturma
   Office 'i genişleten .NET Framework uygulamalar oluşturmak için Visual Studio 'daki Microsoft Office Geliştirici Araçları ' nı kullanabilirsiniz. Bu uygulamalar *Office çözümleri*olarak da adlandırılır.
@@ -116,6 +116,6 @@ ms.locfileid: "72986156"
 
 - [MSDN Kitaplığı 'nın Microsoft Office geliştirme bölümü](/previous-versions/office/office-12/bb726434(v=office.12)) MSDN Kitaplığı 'nın çeşitli Office sürümleri (Visual Studio kullanarak Office geliştirmeye özgü değil) için çözümler geliştirme hakkında makaleler ve başvuru belgeleri bulabileceğiniz alanı.
 
-- [Visual Studio 'Da uygulama geliştirme](https://msdn.microsoft.com/97490c1b-a247-41fb-8f2c-bc4c201eff68) Web uygulamaları, XML Web Hizmetleri ve geleneksel istemci uygulamaları tasarlamak, geliştirmek, hatalarını ayıklamak ve dağıtmak için Visual Studio 'Yu nasıl kullanabileceğinizi açıklayan konuların bağlantılarını içerir.
+- [Visual Studio 'Da uygulama geliştirme](/previous-versions/h8w79z10(v=vs.140)) Web uygulamaları, XML Web Hizmetleri ve geleneksel istemci uygulamaları tasarlamak, geliştirmek, hatalarını ayıklamak ve dağıtmak için Visual Studio 'Yu nasıl kullanabileceğinizi açıklayan konuların bağlantılarını içerir.
 
 - [Visual Studio 'da .NET Framework programlama](/previous-versions/visualstudio/visual-studio-2010/k1s94fta(v=vs.100)) Visual Basic ve Visual C# ' de .NET Framework ile uygulama geliştirmeyi anlatır.

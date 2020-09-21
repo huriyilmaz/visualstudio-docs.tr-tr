@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8ac7beac67a2f1d0010ee64ae7af31108d7ec3b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 49963df35aa5bebd126aa241fca6cb1712a0b111
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "70107846"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809000"
 ---
 # <a name="resources-for-designing-accessible-applications"></a>Erişilebilir uygulamalar tasarlamak için kaynaklar
 
@@ -48,9 +48,9 @@ Erişilebilir tasarımı destekleyen teknolojiler hakkında daha fazla bilgi edi
 
 ## <a name="websites"></a>Web Siteleri
 
-- [Izlenecek yol: görüntü denetimleri, menü denetimleri ve AutoPostBack kullanımı Için erişilebilirlik yönergeleri](https://msdn.microsoft.com/Library/ff7b5021-48b3-46bf-921f-9fe1e0e32202) Bu makalede, örnek bir Web sayfasına erişilebilir denetimler dahil etmek için adım adım yönergeler sağlanmaktadır. Ayrıca, Web için bazı erişilebilirlik tasarımı ipuçları sağlar.
+- [Izlenecek yol: görüntü denetimleri, menü denetimleri ve AutoPostBack kullanımı Için erişilebilirlik yönergeleri](/previous-versions/3has1x30(v=vs.140)) Bu makalede, örnek bir Web sayfasına erişilebilir denetimler dahil etmek için adım adım yönergeler sağlanmaktadır. Ayrıca, Web için bazı erişilebilirlik tasarımı ipuçları sağlar.
 
-- **DHTML Ile erişilebilir Web sayfaları oluşturma** Bu teknik makalede, erişilebilir web tasarımı ipuçlarının yanı sıra erişilebilir HTML 4,0 öğeleri listelenir. Daha fazla bilgi için bkz. [DHTML ile erişilebilir Web sayfaları oluşturma](https://msdn.microsoft.com/library/ms528445.aspx).
+- **DHTML Ile erişilebilir Web sayfaları oluşturma** Bu teknik makalede, erişilebilir web tasarımı ipuçlarının yanı sıra erişilebilir HTML 4,0 öğeleri listelenir. Daha fazla bilgi için bkz. [DHTML ile erişilebilir Web sayfaları oluşturma](/previous-versions//ms528445(v=vs.85)).
 
 ### <a name="third-party-resources"></a>Üçüncü taraf kaynakları
 

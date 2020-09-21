@@ -21,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ce0084d6bf734ee8a9de63b0cf3da73504b0d4e4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bc1241a39707eedc4b34e0ef3531ab65e49b8238
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800950"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811038"
 ---
 # <a name="office-and-sharepoint-development-in-visual-studio"></a>Visual Studio 'da Office ve SharePoint geliştirme
   Kullanıcıların [Office mağazasından](https://store.office.com/) veya bir kuruluş kataloğundan indirerek bir basit uygulama ya da eklenti oluşturarak ya da kullanıcıların bir bilgisayara yükleyen .NET Framework tabanlı bir çözüm oluşturarak Microsoft Office ve SharePoint 'i genişletebilirsiniz.
@@ -57,12 +57,12 @@ ms.locfileid: "88800950"
 
  ![Office için içerik uygulaması](../vsto/media/appforoffice.png "Office için içerik uygulaması")
 
- **Daha fazla bilgi**
+ **Daha fazla bilgi edinin**
 
 |Amaç|Bkz.|
 |--------|---------|
 |Office eklentileri hakkında daha fazla bilgi edinin ve ardından bir tane oluşturun.|[Office eklentileri](/office/dev/add-ins/publish/publish)|
-|Office 'i genişletebileceğiniz farklı yolları karşılaştırın ve bir uygulama mı yoksa Office eklentisi mi kullanacağınızı belirleyin.|[Office eklentileri, VSTO ve VBA için yol haritası](https://blogs.msdn.microsoft.com/officeapps/2013/06/18/roadmap-for-apps-for-office-vsto-and-vba/)|
+|Office 'i genişletebileceğiniz farklı yolları karşılaştırın ve bir uygulama mı yoksa Office eklentisi mi kullanacağınızı belirleyin.|[Office eklentileri, VSTO ve VBA için yol haritası](/archive/blogs/officeapps/roadmap-for-apps-for-office-vsto-and-vba)|
 
 ### <a name="build-a-sharepoint-add-in"></a>SharePoint eklentisi oluşturma
  Kullanıcılarınıza yönelik SharePoint 'i genişletmek için bir SharePoint eklentisi oluşturun. Bu temelde, kullanıcılarınız veya işletmeniz için ihtiyacı çözen küçük, kullanımı kolay, tek başına bir uygulamadır.
@@ -73,7 +73,7 @@ ms.locfileid: "88800950"
 
  ![SharePoint için Business Contact Manager uygulaması](../vsto/media/appforsharepoint.png "SharePoint için Business Contact Manager uygulaması")
 
- **Daha fazla bilgi**
+ **Daha fazla bilgi edinin**
 
 |Amaç|Bkz.|
 |--------|---------|
@@ -88,11 +88,11 @@ ms.locfileid: "88800950"
 
  ![PowerPoint eklentisi çözümü](../vsto/media/powerpointaddin.png "PowerPoint eklentisi çözümü")
 
- **Daha fazla bilgi**
+ **Daha fazla bilgi edinin**
 
 |Amaç|Okuma|
 |--------|----------|
-|Office 'i genişletebileceğiniz farklı yolları karşılaştırın ve bir VSTO eklentisi mi yoksa Office eklentisi mi kullanacağınızı belirleyin.|[Office eklentileri, VSTO ve VBA için yol haritası](https://blogs.msdn.microsoft.com/officeapps/2013/06/18/roadmap-for-apps-for-office-vsto-and-vba/)|
+|Office 'i genişletebileceğiniz farklı yolları karşılaştırın ve bir VSTO eklentisi mi yoksa Office eklentisi mi kullanacağınızı belirleyin.|[Office eklentileri, VSTO ve VBA için yol haritası](/archive/blogs/officeapps/roadmap-for-apps-for-office-vsto-and-vba)|
 |VSTO eklentisi oluşturun.|[Visual Studio ile VSTO eklentileri oluşturma](create-vsto-add-ins-for-office-by-using-visual-studio.md)|
 
 ## <a name="create-a-sharepoint-solution"></a><a name="Solutions"></a> SharePoint çözümü oluşturma
@@ -100,7 +100,7 @@ ms.locfileid: "88800950"
 
  SharePoint çözümleri, şirket içi SharePoint grubu sunucuları gerektirir. Yöneticiler bu yüklemeleri yüklemelidir ve SharePoint 'te çözümler yürütültiğinden, sunucunun performansını etkileyebilirler. Ancak, çözümler SharePoint nesnelerine daha derin erişim sağlar. Ayrıca, bir SharePoint çözümü oluşturduğunuzda .NET Framework kullanabilir ve C# ve Visual Basic kullanarak SharePoint nesneleriyle etkileşim kurabilirsiniz.
 
- **Daha fazla bilgi**
+ **Daha fazla bilgi edinin**
 
 |Amaç|Bkz.|
 |--------|---------|

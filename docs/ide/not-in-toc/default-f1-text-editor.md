@@ -10,12 +10,12 @@ f1_keywords:
 manager: jillfra
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: 726d0daed76212e9bda498a5afca0c84cd84281e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7a26e102ad71025edf92a499a1439022d9735eab
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88802281"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808252"
 ---
 # <a name="f1-help-for-the-text-editor"></a>Metin Düzenleyicisi için F1 yardımı
 
@@ -37,7 +37,7 @@ Bir anahtar sözcük veya API adı hakkında F1 yardımı arıyorsanız **F1**'e
 ## <a name="search-for-help-on-a-keyword-or-api-name"></a>Anahtar sözcük veya API adı üzerinde yardım arayın
 
 Bir anahtar sözcük veya API adı hakkında F1 yardımı arıyorsanız:
-- [Docs.Microsoft.com](https://docs.microsoft.com) üzerinde aramayı deneyin
+- [Docs.Microsoft.com](/) üzerinde aramayı deneyin
 - Arama altyapısını kullanarak aramayı deneyin.
 - [.NET API tarayıcısı](/dotnet/api/)ile ilgili başvuru belgelerini arayın.
 

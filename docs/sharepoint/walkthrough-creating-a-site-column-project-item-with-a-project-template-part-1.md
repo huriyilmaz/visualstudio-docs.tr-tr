@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fea425da8a6e49643997151c6273fbbffc7033db
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eceaa4db4bb31870ee66fbffae8882fc93d9abbb
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016511"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739921"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-1"></a>İzlenecek yol: proje şablonu, Bölüm 1 ile bir site sütunu proje öğesi oluşturma
   SharePoint projeleri bir veya daha fazla SharePoint proje öğesi için kapsayıcılardır. Visual Studio 'da, kendi SharePoint proje öğesi türlerinizi oluşturup bunları bir proje şablonuyla ilişkilendirerek SharePoint proje sistemini genişletebilirsiniz. Bu kılavuzda, bir site sütunu oluşturmak için bir proje öğesi türü tanımlayacaksınız ve sonra bir site sütunu proje öğesi içeren yeni bir proje oluşturmak için kullanılabilecek bir proje şablonu oluşturacaksınız.
@@ -639,7 +639,7 @@ ms.locfileid: "86016511"
 
 1. **Çözüm Gezgini**, **SiteColumnProjectItem** projesinde, bildirim düzenleyicisinde source. Extension. valtmanifest dosyasını açın.
 
-     Source. Extension. valtmanifest dosyası, tüm VSıX paketlerinin gerektirdiği uzantı. valtmanifest dosyasının temelini oluşturur. Bu dosya hakkında daha fazla bilgi için bkz. [VSIX uzantı şeması 1,0 başvurusu](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).
+     Source. Extension. valtmanifest dosyası, tüm VSıX paketlerinin gerektirdiği uzantı. valtmanifest dosyasının temelini oluşturur. Bu dosya hakkında daha fazla bilgi için bkz. [VSIX uzantı şeması 1,0 başvurusu](/previous-versions/dd393700(v=vs.110)).
 
 2. **Ürün adı** kutusuna **site sütununu**girin.
 
