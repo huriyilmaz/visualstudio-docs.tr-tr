@@ -1,30 +1,30 @@
 ---
-title: Güvenlik Uyarıları
+title: Güvenlik kuralları
 ms.date: 10/02/2019
 ms.topic: reference
 f1_keywords:
 - vs.codeanalysis.securityrules
 helpviewer_keywords:
 - security [Visual Studio ALM], Enterprise Templates
-- security warnings
-- managed code analysis warnings, security warnings
-- warnings, security
+- security rules
+- managed code analysis rules, security rules
+- rules, security
 ms.assetid: 60d4e8ea-230a-494f-aa6a-b91db77540e4
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a40273c3230854e4b1d1a11a3fd02de54d5df745
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 2eb2356628099246aa010c0332f473955a3e976d
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599962"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90807930"
 ---
-# <a name="security-warnings"></a>Güvenlik uyarıları
+# <a name="security-rules"></a>Güvenlik kuralları
 
-Güvenlik uyarıları, daha güvenli kütüphaneleri ve uygulamaları destekler. Bu uyarılar, programınızdaki güvenlik açıklarını önlemeye yardımcı olur. Bu uyarılardan birini devre dışı bırakırsanız, bunun sebebini kodunuzda açıkça işaretlemelisiniz ve ayrıca geliştirme projeniz için güvenlik çalışanını bilgilendirmelisiniz.
+Güvenlik kuralları, daha güvenli kitaplıkları ve uygulamaları destekler. Bu kurallar, programınızdaki güvenlik kusurları önlemeye yardımcı olur. Bu kuralların herhangi birini devre dışı bırakırsanız, kodun nedenini açıkça işaretlemeniz ve ayrıca geliştirme projeniz için belirlenen güvenlik müdürü hakkında bilgi almanız gerekir.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
@@ -79,7 +79,7 @@ Güvenlik uyarıları, daha güvenli kütüphaneleri ve uygulamaları destekler.
 |[CA5358: Güvenli Olmayan Şifreleme Modlarını Kullanmayın](../code-quality/ca5358.md)|Güvenli Olmayan Şifreleme Modlarını Kullanmayın|
 |[CA5359: Sertifika doğrulamasını devre dışı bırakma](../code-quality/ca5359.md)|Bir sertifika, sunucunun kimliğini doğrulamaya yardımcı olabilir. İsteklerin hedeflenen sunucuya gönderilmesini sağlamak için istemciler sunucu sertifikasını doğrulamalıdır. ServerCertificateValidationCallback her zaman döndürüyorsa `true` , tüm sertifikalar doğrulamayı geçer.|
 |[CA5360: Seri durumdan çıkarırken tehlikeli metotlar çağırmayın](../code-quality/ca5360.md)|Güvenli olmayan seri kaldırma, güvenilir olmayan veriler bir uygulamanın mantığını kötüye kullanma, bir hizmet reddi (DoS) saldırısı veya hatta seri hale getirilmesi sırasında rastgele kod yürütme için kullanıldığında oluşan bir güvenlik açığıdır. Kötü amaçlı kullanıcıların, denetimi altında olan güvenilmeyen verileri seri durumdan çıkarılırken, bu, bu kaldırma özelliklerini kötüye kullanma olasılığı vardır. Özel olarak, seri durumdan çıkarma sürecinde tehlikeli Yöntemler çağırın. Güvenli olmayan güvenli seri kaldırma saldırıları, bir saldırganın DoS saldırıları, kimlik doğrulaması atlanır ve uzaktan kod yürütme gibi saldırıları çalıştırmasına izin verebilir.|
-|[CA5361: Güçlü Şifrelemenin SChannel Kullanımını Devre Dışı Bırakma](../code-quality/ca5361.md)|`Switch.System.Net.DontEnableSchUseStrongCrypto` `true` Giden Aktarım katmanı GÜVENLIĞI (TLS) bağlantılarında kullanılan şifrelemeyi zayıf olacak şekilde ayarlama. Daha zayıf şifreleme, uygulamanız ve sunucu arasındaki iletişimin gizliliğini tehlikeye atabilir ve saldırganlar hassas verileri daha fazla dinlemesine olanak sağlar.|
+|[CA5361: SChannel sağlam şifreleme kullanımını devre dışı bırakma](../code-quality/ca5361.md)|`Switch.System.Net.DontEnableSchUseStrongCrypto` `true` Giden Aktarım katmanı GÜVENLIĞI (TLS) bağlantılarında kullanılan şifrelemeyi zayıf olacak şekilde ayarlama. Daha zayıf şifreleme, uygulamanız ve sunucu arasındaki iletişimin gizliliğini tehlikeye atabilir ve saldırganlar hassas verileri daha fazla dinlemesine olanak sağlar.|
 |[CA5362: Seri durumdan çıkarılan nesne grafındaki olası başvuru döngüsü](../code-quality/ca5362.md)|Güvenilmeyen verilerin serisini kaldırıyorsa, serisi kaldırılan nesne grafiğinin herhangi bir kodu, sınırsız döngülere geçmeden başvuru döngülerini işlemeye ihtiyaç duyuyor. Bu, seri durumdan çıkarma geri çağrısının parçası olan kodu ve serisini kaldırma tamamlandıktan sonra nesne grafiğini işleyen kodu içerir. Aksi takdirde, bir saldırgan başvuru döngüsünü içeren kötü amaçlı verilerle bir hizmet reddi saldırısı gerçekleştirebilir.|
 |[CA5363: İstek doğrulamayı devre dışı bırakmayın](../code-quality/ca5363.md)|İstek doğrulaması, HTTP isteklerini inceleyen ve siteler arası komut dosyası oluşturma da dahil olmak üzere ekleme saldırılarına yol açabilecek potansiyel olarak tehlikeli içerik içerip içermediğini belirleyen bir ASP.NET özelliğidir.|
 |[CA5364: Kullanım Dışı Güvenlik Protokollerini Kullanmayın](../code-quality/ca5364.md)|Aktarım Katmanı Güvenliği (TLS), genellikle Köprü Metni Aktarım Protokolü güvenli (HTTPS) ile bilgisayarlar arasındaki iletişimin güvenliğini sağlar. TLS 'nin eski protokol sürümleri TLS 1,2 ve TLS 1,3 ' den daha az güvenlidir ve yeni güvenlik açıklarına sahip olma olasılığı yüksektir. Riski en aza indirmek için eski protokol sürümlerinden kaçının.|

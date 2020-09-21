@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be028af8ab9f458c1fadad6f8b2fcbd6aaa49a04
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2f820fe2f3cca0eddb709462961f328c906f6f2d
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75567989"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810369"
 ---
 # <a name="output-window"></a>Çıktı penceresi
 
@@ -76,7 +76,7 @@ C++ ' da, uyarıları ve hataları **Çıkış** bölmesinde görüntülenen ve 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çıkış penceresindeki tanılama iletileri](../../debugger/diagnostic-messages-in-the-output-window.md)
-- [Nasıl yapılır: çıkış penceresini denetleme](https://msdn.microsoft.com/Library/91aebd15-8854-4a7a-9f7d-57376fb4e858)
+- [Nasıl yapılır: çıkış penceresini denetleme](/previous-versions/ht6z4e28(v=vs.140))
 - [Derleme ve oluşturma](../../ide/compiling-and-building-in-visual-studio.md)
 - [Derleme yapılandırmalarını anlama](../../ide/understanding-build-configurations.md)
 - [Sınıf kitaplığına genel bakış](/dotnet/standard/class-library-overview)

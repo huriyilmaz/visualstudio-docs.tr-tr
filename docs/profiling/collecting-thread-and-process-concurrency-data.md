@@ -1,5 +1,6 @@
 ---
-title: Iş parçacığı toplama ve eşzamanlılık verilerini Işleme | Microsoft Docs
+title: İş parçacığı toplama & eşzamanlılık verilerini işleme
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 39f33f2df5ad4723a612a44d1d0301bd60ed80d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4f44b7785306fc486c8f550c41bcac199825b8ed
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331606"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810724"
 ---
 # <a name="collect-thread-and-process-concurrency-data"></a>İş parçacığı ve işlem eşzamanlılık verileri toplama
 

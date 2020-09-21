@@ -13,12 +13,12 @@ manager: jillfra
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: 549726d16a5fc1129f8c773ef143267e4c9bc31e
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: 62dee3372f9d0c667c138e72c2ad58c886388f7a
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90100728"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808109"
 ---
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>Etki Alanına Özgü Dil Araçları Kullanıcı Arabirimine Genel Bakış
 Visual Studio 'da ilk olarak bir Alana Özgü Dil Araçları (DSL araçları) çözümü açtığınızda, Kullanıcı arabirimi aşağıdaki resme benzeyecektir.
@@ -51,5 +51,5 @@ Visual Studio 'da ilk olarak bir Alana Özgü Dil Araçları (DSL araçları) ç
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Etki Alanına Özgü Dil Araçlarına Genel Bakış](../modeling/overview-of-domain-specific-language-tools.md)
-- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Alana Özgü Dil Araçları sözlüğü](/previous-versions/bb126564(v=vs.100))
 - [Etki Alanına Özgü Dili Özelleştirme ve Genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md)

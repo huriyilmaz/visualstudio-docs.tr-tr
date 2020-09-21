@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 619e64dc09858b7d29e05804e3c3c353882f90ef
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd1b3b90cf4e284e558be02608cac953dc71584b
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62561770"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811012"
 ---
 # <a name="project-upgrade-options-dialog-box"></a>Proje yükseltme, Seçenekler iletişim kutusu
   Visual Studio 'Nun VSTO eklenti projelerini, geliştirme bilgisayarında yüklü Office sürümünü hedeflemek üzere otomatik olarak değiştirmeyeceğini belirtmek için **Proje yükseltme** sayfasını kullanın.
@@ -33,4 +33,4 @@ ms.locfileid: "62561770"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office çözümlerini yükseltme ve geçirme](../vsto/upgrading-and-migrating-office-solutions.md)
-- [Nasıl yapılır: Office çözümlerini yükseltme](https://msdn.microsoft.com/a269e539-b717-4680-a568-2152b070347e)
+- [Nasıl yapılır: Office çözümlerini yükseltme](/previous-versions/4bez6837(v=vs.140))

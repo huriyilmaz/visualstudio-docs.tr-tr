@@ -7,12 +7,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2c69f73989e898c44bdef6cf008d48f6c918652a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 44c3b64d9fb8944a578d054b7d98d4bf39bde3bc
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801327"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810382"
 ---
 # <a name="add-file-header"></a>Dosya üst bilgisi ekleme
 
@@ -22,7 +22,7 @@ Bu kod üretimi için geçerlidir:
 
 - Visual Basic
 
-**Ne:** Bir [Editorconfig](https://docs.microsoft.com/visualstudio/ide/create-portable-custom-editor-options#add-an-editorconfig-file-to-a-project)kullanarak var olan dosyalara, projelere ve çözümlere dosya üstbilgileri ekleyin.
+**Ne:** Bir [Editorconfig](../create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project)kullanarak var olan dosyalara, projelere ve çözümlere dosya üstbilgileri ekleyin.
 
 **Ne zaman:** Dosyalara, projelere ve çözümlere kolayca bir dosya üstbilgisi eklemek istiyorsunuz.
 
@@ -30,7 +30,7 @@ Bu kod üretimi için geçerlidir:
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. Henüz bir tane yoksa bir projeye veya çözüme bir [Editorconfig](https://docs.microsoft.com/visualstudio/ide/create-portable-custom-editor-options#add-an-editorconfig-file-to-a-project) ekleyin.
+1. Henüz bir tane yoksa bir projeye veya çözüme bir [Editorconfig](../create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project) ekleyin.
 
 2. Aşağıdaki kuralı EditorConfig dosyanıza ekleyin: *file_header_template*.
 

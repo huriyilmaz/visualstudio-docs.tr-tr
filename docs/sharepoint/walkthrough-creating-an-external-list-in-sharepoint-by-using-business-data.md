@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 29f6c4e170bce8ae7bacfc7178ebd9386f2d4416
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9f4fe79c3a6f158eb61d624ce6c5e1566925e3fd
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015827"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740064"
 ---
 # <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>İzlenecek yol: iş verileri kullanarak SharePoint 'te dış liste oluşturma
 
@@ -80,7 +80,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 2. SQL Server AdventureWorks örnek veritabanına bir bağlantı ekleyin.
 
-     Daha fazla bilgi için bkz. [Bağlantı Ekle/Değiştir (Microsoft SQL Server)](https://msdn.microsoft.com/fa400910-26c3-4df7-b9d1-115e688b4ea3).
+     Daha fazla bilgi için bkz. [Bağlantı Ekle/Değiştir (Microsoft SQL Server)](/previous-versions/dxb6fxah(v=vs.140)).
 
 3. **Çözüm Gezgini**, proje düğümünü seçin.
 
@@ -182,7 +182,7 @@ BDC hizmetinin belirli bir kişiyi göstermesini sağlamak için belirli bir bul
 
 10. Aşağıdaki alanların her biri için bir tür tanımlayıcısı oluşturmak üzere 6. adımı tekrarlayın.
 
-    |Name|Tür adı|
+    |Ad|Tür adı|
     |----------|---------------|
     |FirstName|System. String|
     |LastName|System. String|

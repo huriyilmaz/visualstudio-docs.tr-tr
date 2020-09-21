@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 58603db021d7aeebe3272711e5ba92d96eb22075
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7d70f1e95ce2dd5163eb017684620c403a77f74a
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250177"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740038"
 ---
 # <a name="compile-typescript-code-nodejs"></a>TypeScript kodunu derle (Node.js)
 
@@ -27,7 +27,7 @@ ASP.NET Core projeleri için, bunun yerine [NuGet paketini](../javascript/compil
 
 [TypeScript NPM paketi](https://www.npmjs.com/package/typescript) TypeScript desteği ekler. TypeScript 2,1 veya üzeri için NPM paketi projenize yüklendiğinde, TypeScript dil hizmeti 'nin karşılık gelen sürümü düzenleyicide yüklenir.
 
-1. Node.js geliştirme iş yükünü ve Node.js çalışma zamanını yüklemek için [yönergeleri izleyin](/visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json) .
+1. Node.js geliştirme iş yükünü ve Node.js çalışma zamanını yüklemek için [yönergeleri izleyin](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json) .
 
    Visual Studio ile en basit tümleştirme için, boş Node.js Web uygulaması şablonu gibi Node.js TypeScript şablonlarından birini kullanarak projenizi oluşturun. Aksi takdirde, Visual Studio ile birlikte gelen Node.js JavaScript şablonunu kullanın ve buradaki yönergeleri izleyin veya [açık bir klasör](../javascript/develop-javascript-code-without-solutions-projects.md) projesi kullanın.
 

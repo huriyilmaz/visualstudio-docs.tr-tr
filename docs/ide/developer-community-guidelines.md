@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b39b62ade75687a61981712c47e9876a0ef082fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7da5a229ec345a4f360aeb6051dc33130fa3d99a
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87972479"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810125"
 ---
 # <a name="developer-community-guidelines"></a>Geliştirici Topluluğu yönergeleri
 
@@ -57,7 +57,7 @@ Zengin ayrıntılar içeren sorunlar da dahil olmak üzere sorunu yeniden oluşt
 
 Bir sorunu önceliklendirme, özellik ekibi içinde işbirliği yapılan çok adımlı bir işlemdir. Üçlü yaşlandırma genellikle bir hafta sürer, ancak daha uzun sürebilir. Üç aylık dönemin amacı, sorununuzun ne olduğunu net bir şekilde anlamanızı sağlar. Örneğin, önceliklendirme sonrasında sorununuzu gidermeyi planlıyoruz veya daha fazla topluluk geri bildirimi bekleyebilirsiniz.
 
-Bir sorunu bildirdikten sonra, durumlar, Gönderimlerinizin yaşam döngüsünün nerede olduğunu gösterir. Visual Studio ürün ekipleri geri bildiriminizi gözden geçirdikten sonra uygun bir durumla ayarlanırlar. Sorun [durumlarına ve SSS](https://docs.microsoft.com/visualstudio/ide/report-a-problem)'ye başvurarak sorun raporlarınız ilerlemesini izleyin.
+Bir sorunu bildirdikten sonra, durumlar, Gönderimlerinizin yaşam döngüsünün nerede olduğunu gösterir. Visual Studio ürün ekipleri geri bildiriminizi gözden geçirdikten sonra uygun bir durumla ayarlanırlar. Sorun [durumlarına ve SSS](./report-a-problem.md)'ye başvurarak sorun raporlarınız ilerlemesini izleyin.
 
 Bir sorun için önemli bilgiler eksik olduğunda, _Ihtiyaçları daha fazla bilgi_ durumuna atacağız. İhtiyaç duyduğumuz belirli bilgilerle ilgili sorun hakkında yorum yaptık ve bir e-posta bildirimi alacaksınız. Bilgileri yedi gün içinde almadığımızda size bir anımsatıcı göndereceğiz. Bundan sonra, 14 gün etkin olmama sonrasında bilet kapattık.
 
@@ -78,8 +78,8 @@ Bu durumda, sorunu kapatacaktır ve diğer ürünle açmanız istenir. Bu sorunl
 
 #### <a name="additional-information"></a>Ek bilgiler
 
-- [Bir performans sorununun düzeltilme olasılığını artırma](https://docs.microsoft.com/visualstudio/ide/how-to-increase-chances-of-performance-issue-being-fixed)
-- [MSBuild sorunları için sorun giderme ve günlük oluşturma](https://docs.microsoft.com/visualstudio/ide/msbuild-logs)
+- [Bir performans sorununun düzeltilme olasılığını artırma](./how-to-increase-chances-of-performance-issue-being-fixed.md)
+- [MSBuild sorunları için sorun giderme ve günlük oluşturma](./msbuild-logs.md)
 
 ## <a name="managing-feature-suggestions"></a>Özellik önerilerini yönetme
 
@@ -91,7 +91,7 @@ Karar verme sürecimizde, özellik önerisi hakkında aşağıdaki özelliklere 
 
 - Genel ürün yönümüzle eşleşiyor mu?
 - Derleyip bakımını yapabilir mi?
-- Genel [yol haritası](https://docs.microsoft.com/visualstudio/productinfo/vs-roadmap) stratejimize göre hizalansın mı?
+- Genel [yol haritası](/visualstudio/productinfo/vs-roadmap) stratejimize göre hizalansın mı?
 - Oylarda ve açıklamalarda gösterildiği gibi topluluk desteği mi var?
 - Düşük topluluk desteğiyle bile bu dosyayı sevtik mı?
 
@@ -99,7 +99,7 @@ Bu sorulardan herhangi birine "Evet" Yanıt vermiyoruz. Ancak genellikle öneri,
 
 Bir öneri genel ürün yönümüzle eşleşmezse, bunu *kapsam dışı*olarak kapalarız. Örneğin, Visual Studio ürün ailesinin diğer üyelerinde benzer yatırımları olabilir. Ya da önerilen özellik yalnızca birkaç kişiyle ilgili olabilir, bu da uzantının sağlanması daha uygun hale gelir.
 
-[Öneri durumlarına ve SSS](https://docs.microsoft.com/visualstudio/ide/report-a-problem)'ye başvurarak Özellik önerinizin ilerlemesini izleyin.
+[Öneri durumlarına ve SSS](./report-a-problem.md)'ye başvurarak Özellik önerinizin ilerlemesini izleyin.
 
 ## <a name="discussion-etiquette"></a>Tartışma etiği
 
@@ -111,7 +111,7 @@ Tartışmaya yönelik herhangi bir ihlal, açıklamanın kaldırılmasına ve so
 
 ## <a name="data-privacy"></a>Veri gizliliği
 
-Açıklamalar ve yanıtlar herkese açık bir şekilde görünür, ancak ekli dosyalar yalnızca Microsoft ile özel olarak paylaşılır. Bu görünürlük, tüm topluluğun diğer kullanıcılar tarafından bulunan sorunları ve çözümleri görmesini sağladığından faydalıdır. Verilerinizin veya kimliğinizin gizliliğiyle ilgileniyorsanız, seçenekleriniz vardır. [Geliştirici topluluğu veri gizliliği](https://docs.microsoft.com/visualstudio/ide/developer-community-privacy)hakkında daha fazla bilgi edinin.
+Açıklamalar ve yanıtlar herkese açık bir şekilde görünür, ancak ekli dosyalar yalnızca Microsoft ile özel olarak paylaşılır. Bu görünürlük, tüm topluluğun diğer kullanıcılar tarafından bulunan sorunları ve çözümleri görmesini sağladığından faydalıdır. Verilerinizin veya kimliğinizin gizliliğiyle ilgileniyorsanız, seçenekleriniz vardır. [Geliştirici topluluğu veri gizliliği](./developer-community-privacy.md)hakkında daha fazla bilgi edinin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

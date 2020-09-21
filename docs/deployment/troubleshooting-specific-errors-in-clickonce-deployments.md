@@ -1,5 +1,6 @@
 ---
-title: ClickOnce dağıtımlarında belirli hataların sorunlarını giderme | Microsoft Docs
+title: Sorun giderme hataları (ClickOnce dağıtımları)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -19,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fac7f18244aaa32667514766ad6d393408997e51
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 351aad83fe28251fcb769c76dd3d63b61b108b6b
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87235166"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809459"
 ---
 # <a name="troubleshoot-specific-errors-in-clickonce-deployments"></a>ClickOnce dağıtımları içinde belirli hataları giderme
 Bu makalede, bir uygulamayı dağıtırken oluşabilecek aşağıdaki yaygın hatalar listelenir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ve her bir sorunu çözmek için adımlar sağlanır.
@@ -122,7 +123,7 @@ Bu makalede, bir uygulamayı dağıtırken oluşabilecek aşağıdaki yaygın ha
 ## <a name="additional-errors"></a>Ek hatalar
  Aşağıdaki tabloda, Kullanıcı bir uygulama yüklediğinde istemci-bilgisayar kullanıcısının alabileceği bazı yaygın hata iletileri gösterilmektedir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Her hata iletisi, hatanın en olası nedeni açıklamasının yanında listelenir.
 
-| Hata iletisi | Description |
+| Hata iletisi | Açıklama |
 | - | - |
 | Uygulama başlatılamıyor. Uygulama yayımcısına başvurun.<br /><br /> Uygulama başlatılamıyor. Yardım almak için uygulama satıcısına başvurun. | Bunlar, uygulama başlatılmadan oluşan genel hata iletilerdir ve başka bir özel neden bulunamamalıdır. Bu, genellikle uygulamanın bozulmuş olduğu veya deponun bozuk olduğu anlamına gelir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . |
 | Devam edilemiyor. Uygulama Hatalı biçimli. Yardım almak için uygulama yayımcısına başvurun.<br /><br /> Uygulama doğrulaması başarılı olmadı. Devam edilemiyor.<br /><br /> Uygulama dosyaları alınamıyor. Dağıtımdaki dosyalar bozuk. | Dağıtımdaki bildirim dosyalarından biri sözdizimsel olarak geçerli değil veya karşılık gelen dosyayla mutabık kılınabilecek bir karma içeriyor. Bu hata, bir derleme içine gömülü bildirimin bozuk olduğunu da gösterebilir. Dağıtımınızı yeniden oluşturun ve uygulamanızı yeniden derleyin ya da bildirimlerinizde el ile hataları bulup onarın. |

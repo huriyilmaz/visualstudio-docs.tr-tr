@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: a9c71837b83aa31b56ba1bd8ccb3384e4552d1be
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3b50ec910c6d5880ead2df48db2ef763753379bb
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770002"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90807891"
 ---
 # <a name="visual-studio-feedback-options"></a>Visual Studio geri bildirim seçenekleri
 
@@ -71,7 +71,7 @@ Ardından, Visual Studio, fikir paylaşmak için oturum açmak üzere kullanabil
 Belgeleri iyileştirmemize yardımcı olmak için iki yol vardır:
 
 * Herhangi bir belge sayfasının sağ üst kısmında **Bu sayfa faydalı?** yanıt aracını kullanın.
-* [Docs.Microsoft.com](/visualstudio/)üzerindeki tüm Visual Studio sayfaları için geri bildirim sağlamak için GitHub hesabınızı kullanın. Bunu yapmak için **Send feedback about**  >  herhangi bir belge sayfasının altındaki**Bu sayfayla** ilgili geri bildirim gönder düğmesini seçin.
+* [Docs.Microsoft.com](../index.yml)üzerindeki tüm Visual Studio sayfaları için geri bildirim sağlamak için GitHub hesabınızı kullanın. Bunu yapmak için **Send feedback about**  >  herhangi bir belge sayfasının altındaki**Bu sayfayla** ilgili geri bildirim gönder düğmesini seçin.
 
 ## <a name="contact-microsoft-support"></a>Microsoft desteğine başvurma
 

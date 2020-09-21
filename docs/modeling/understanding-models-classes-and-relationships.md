@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2e8891307520ee841fbed1591565624f2016939
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 08981e4f63c84d19d4086c75fe33a8b19a515ccf
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565909"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809982"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>Modelleri, Sınıfları ve İlişkileri Anlama
 Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodları ile birlikte DSL tanım dosyası tarafından tanımlanır. DSL çözümünde program kodunun çoğu bu dosyadan oluşturulur.
@@ -132,7 +132,7 @@ Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodlar
 
  Diyagram üzerine yazarak veya `Multiplicity` **Özellikler** penceresinde özelliğini değiştirerek bir rolün çoğulluğu yapılandırın. Aşağıdaki tabloda bu özelliğin ayarları açıklanmaktadır.
 
-|Çokluk türü|Description|
+|Çokluk türü|Açıklama|
 |-|-|
 |0.. * (sıfırdan fazla)|Alan sınıfının her örneği, ilişkinin birden fazla örneğine veya ilişkinin örneklerine sahip olabilir.|
 |0.. 1 (sıfır-bir)|Alan sınıfının her örneği, ilişkinin birden fazla örneğine veya ilişkinin örneklerine sahip olamaz.|
@@ -150,4 +150,4 @@ Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodlar
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Alana Özgü Dil Araçları sözlüğü](/previous-versions/bb126564(v=vs.100))

@@ -1,5 +1,6 @@
 ---
-title: Windows 8 & Windows Server 2012 uygulamalarında performans araçları
+title: Windows 8 & WS 2012 uygulamalarında performans araçları
+ms.custom: SEO-VS-2020
 ms.date: 06/19/2017
 ms.topic: conceptual
 author: mikejo5000
@@ -8,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 03c5897f4cbf06ad7c9dc7541a032f5b86e45d4c
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: cc44eddc2af2e2d85f7c4bb9c876d336ccd1b546
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038614"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90807839"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 ve Windows Server 2012 uygulamalarında performans araçları
 
@@ -64,7 +65,7 @@ Bu profil oluşturma özellikleri ve seçenekleri, örnekleme yöntemi kullanıl
 
 Visual Studio yüklemesi olmayan aygıtlar da dahil olmak üzere Windows 8 ve Windows Server 2012 cihazlarında profil oluşturma verilerini toplamak için iki komut satırı aracını kullanın:
 
-|Araç adı|Description|
+|Araç adı|Açıklama|
 |---------------|-----------------|
 |[VSPerf](../profiling/vsperf.md)|UWP uygulamalarından profil oluşturma verilerini toplar ve Windows 8 Masaüstü uygulamalarından ve Windows Server 2012 uygulamalarından örnek profil oluşturma verilerini toplar.|
 |[VSPerfCmd](../profiling/vsperfcmd.md)|Windows 8 masaüstü veya Windows Server 2012 üzerinde çalışan uygulamalardan izleme, eşzamanlılık ve katman etkileşimi profil oluşturma verilerini toplar. Önceki Windows sürümlerinden tüm profil oluşturma verisi türlerini toplar.|

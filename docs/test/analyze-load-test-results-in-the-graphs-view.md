@@ -1,5 +1,6 @@
 ---
-title: Yük Testi Çözümleyicisinin grafik görünümünde Yük testi sonuçlarını çözümleme
+title: Yük testi sonuçlarını analiz etme-Grafikler görünümü (Yük Testi Çözümleyicisi)
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +16,12 @@ ms.assetid: 4a919cd8-541c-40ee-be3b-352fabc56140
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: dac639b8513e8ef675c6246476791b9351241130
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b48162da7a753516ce0c1ae0dba4cfe1f94387e4
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591274"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810659"
 ---
 # <a name="analyze-load-test-results-in-the-graphs-view-of-the-load-test-analyzer"></a>Yük Testi Çözümleyicisinin grafik görünümünde Yük testi sonuçlarını çözümleme
 
@@ -38,7 +39,7 @@ Birkaç yerleşik grafik sağlanır. Yerleşik grafikleri olduğu gibi kullanabi
 
 Aşağıdaki tabloda, yük testi sonuçlarını çözümlemek için kullanılabilen yerleşik grafikler listelenmektedir.
 
-|Grafik adı|Description|
+|Grafik adı|Açıklama|
 |-|-|
 |Anahtar göstergeleri|Kullanıcı yükü, aktarım hızı ve yanıt süresi gibi test performansının temel yönlerini tanımlayan sayaçlar.|
 |Sınama yanıt süresi|Testlerin çalıştırılması için gereken süre hakkındaki veriler.|
@@ -70,7 +71,7 @@ Gösterge şu sütunları içerir:
 |Color|Grafikteki çizginin rengi.|
 |Aralık|Bu sayacın grafiğinde 100 ile temsil edilen sayıyı gösterir. Örneğin, üst değeri 10.000 olan bir Aralık için, grafiğin en üstündeki 100 etiketi 10.000 ' ı temsil eder.|
 |Min|Sayaç için en küçük değeri milisaniye cinsinden gösterir.|
-|Maks|Sayaç için milisaniye olarak en büyük değeri gösterir.|
+|En yüksek değer|Sayaç için milisaniye olarak en büyük değeri gösterir.|
 |Ort|Sayacın ortalama değerini milisaniye cinsinden gösterir.|
 |Son|En son örnekleme aralığı sırasında sayacın değerini milisaniye cinsinden gösterir.|
 

@@ -1,5 +1,6 @@
 ---
-title: Profil oluşturucu komut satırı-hizmet zamanlama ayrıntısı almak için gereç
+title: Profil oluşturucu komut satırı-bir hizmet için zamanlama verileri al
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 6116e1df-ed3e-4b0d-ac7f-22f7d7ac00ea
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 502ae620dc8641fabc8a5f6225b5673d5530c7f0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9fa021ea7602b2268c720bf3e02bab0ed93af775
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331797"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810763"
 ---
 # <a name="collect-detailed-timing-data-for-services-by-using-the-instrumentation-method-from-the-profiler-command-line"></a>Profil oluşturucu komut satırından izleme yöntemini kullanarak hizmetler için ayrıntılı zamanlama verileri toplama
 Bu bölümde, komut satırından izleme yöntemini kullanarak Windows Hizmetleri için ayrıntılı performans verileri toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır.

@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 86d575b254209b547504ea6d746d03853990bfb4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4dfa575bea4e629c7521cc7f4c5a79707462714c
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67328998"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810999"
 ---
 # <a name="publish-page-project-designer-office-development-in-visual-studio"></a>Yayımlama sayfası, proje Tasarımcısı (Visual Studio 'da Office geliştirme)
   **Proje Tasarımcısı** ' nın **Yayımla** sayfası, dağıtımın özelliklerini yapılandırmak için kullanılır.
@@ -29,7 +29,7 @@ ms.locfileid: "67328998"
  Bu sayfaya erişmek için **Çözüm Gezgini**' de projeyi seçin ve ardından **Proje** menüsünde *ProjectName* **Özellikler**' i seçin. **Yayımla** sayfası görüntülenmiyorsa, **Yayımla** sekmesini seçin.
 
 > [!NOTE]
-> Yayımlama **Sihirbazı**' nda yayımlama konumunu da ayarlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce kullanarak Office çözümü yayımlama](https://msdn.microsoft.com/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8).
+> Yayımlama **Sihirbazı**' nda yayımlama konumunu da ayarlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce kullanarak Office çözümü yayımlama](/previous-versions/bb386095(v=vs.110)).
 
 ## <a name="uielement-list"></a>UIElement listesi
  **Yayımlama klasörü konumu (Web sitesi, FTP sunucusu veya dosya yolu)** Gerekli.
@@ -50,7 +50,7 @@ ms.locfileid: "67328998"
 
  Yükleme dosyaları belge veya Kurulum programı ile ilişkili bir konumdaysa (örneğin, CD seçeneğinde), bu kutuyu boş bırakın.
 
- Bu değer, daha sonra bir yönetici tarafından atanabilir. Daha fazla bilgi için bkz. [nasıl yapılır: bir Office çözümünün yükleme yolunu değiştirme](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd).
+ Bu değer, daha sonra bir yönetici tarafından atanabilir. Daha fazla bilgi için bkz. [nasıl yapılır: bir Office çözümünün yükleme yolunu değiştirme](/previous-versions/bb608626(v=vs.110)).
 
  **Önkoşullar** Önkoşullar Kurulum programına dahil edilebilir veya yükleme sırasında isteğe bağlı olarak indirilebilir.
 
@@ -102,4 +102,4 @@ ms.locfileid: "67328998"
 
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
 - [ClickOnce kullanarak Office çözümü dağıtma](../vsto/deploying-an-office-solution-by-using-clickonce.md)
-- [Dağıtım için Office çözüm önkoşulları](https://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e)
+- [Dağıtım için Office çözüm önkoşulları](/previous-versions/bb608617(v=vs.110))

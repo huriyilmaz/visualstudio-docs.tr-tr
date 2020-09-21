@@ -1,7 +1,7 @@
 ---
-title: Zaman gezme hata ayıklama canlı ASP.NET Azure sanal makineleri
+title: Zaman gezme hata ayıklama Azure VM 'de canlı ASP.NET
 description: Snapshot Debugger kullanarak Azure sanal makinelerinde canlı ASP.NET uygulamalarını kaydetme ve yeniden oynatma hakkında bilgi edinin.
-ms.custom: ''
+ms.custom: SEO-VS-2020
 ms.date: 04/11/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +13,12 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: a44ecd7faeb3ec4cea7665678050580d7e4063a9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eb0db0bab5295925f71a81645e64fdeb5f2077df
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350634"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809576"
 ---
 # <a name="record-and-replay-live-aspnet-apps-on-azure-virtual-machines-using-the-snapshot-debugger"></a>Snapshot Debugger kullanarak Azure sanal makinelerinde canlı ASP.NET uygulamalarını kaydedin ve yeniden yürütün
 
@@ -35,7 +35,7 @@ Bu öğreticide şunları yapacaksınız:
 > * Anlık görüntü noktası ayarlama ve zaman gezme kaydı toplama
 > * Zaman gezme kaydında hata ayıklamayı Başlat
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * Azure sanal makineler (VM) için zaman seyahat hata ayıklaması, **Azure geliştirme iş yükü**Ile yalnızca Visual Studio 2019 Enterprise veya üzeri sürümlerde kullanılabilir. ( **Tek tek bileşenler** sekmesinde, **hata ayıklama ve test**  >  altında bulabilirsiniz **Anlık görüntü hata ayıklayıcısı**.)
 

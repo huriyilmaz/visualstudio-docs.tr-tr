@@ -9,12 +9,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: d0571c01217441d4a39fbfe6fb58ccfe95fd0c5a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0242c8c89848e3e76673ddfbca8a27c20605048d
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85290619"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810356"
 ---
 # <a name="simplify-conditional-expression-refactoring"></a>Koşullu ifade yeniden düzenlemeyi basitleştirme
 
@@ -22,7 +22,7 @@ Bu yeniden düzenleme için geçerlidir:
 
 - C#
 
-**Ne:** [Koşullu bir ifadeyi](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/conditional-operator)basitleştirmenizi sağlar.
+**Ne:** [Koşullu bir ifadeyi](/dotnet/csharp/language-reference/operators/conditional-operator)basitleştirmenizi sağlar.
 
 **Ne zaman:** Daha fazla açıklık sağlamak için gereksiz kodu kaldırmak istiyorsunuz.
 

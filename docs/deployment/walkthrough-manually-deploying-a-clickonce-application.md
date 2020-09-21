@@ -1,5 +1,6 @@
 ---
-title: 'İzlenecek yol: ClickOnce uygulamasını El Ile dağıtma | Microsoft Docs'
+title: ClickOnce uygulamasını el ile dağıtma
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -20,17 +21,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4aad87832a5bdae0d28d461d4cc289551eee7fee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 16f01b87a9d90f285ebefd70956ae3c6ccffedf5
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88249976"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809485"
 ---
 # <a name="walkthrough-manually-deploy-a-clickonce-application"></a>İzlenecek yol: ClickOnce uygulamasını el ile dağıtma
 Uygulamanızı dağıtmak için Visual Studio 'Yu kullandıysanız [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] veya güvenilir uygulama dağıtımı gibi gelişmiş dağıtım özelliklerini kullanmanız gerekiyorsa, bildirimlerinizi oluşturmak için *Mage.exe* komut satırı aracını kullanmanız gerekir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Bu izlenecek yolda, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bildirim oluşturma ve düzenleme aracı komut satırı sürümü (*Mage.exe*) veya grafik sürümü (*MageUI.exe*) kullanılarak nasıl dağıtım oluşturacağınız açıklanmaktadır.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu kılavuzda, bir dağıtım oluşturmadan önce belirlemeniz gereken bazı Önkoşullar ve seçenekler bulunur.
 
 - *Mage.exe* ve *MageUI.exe*yükler.

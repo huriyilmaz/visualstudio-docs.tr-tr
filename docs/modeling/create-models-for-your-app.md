@@ -21,12 +21,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b7015583fef2323e3c53b8e786c9e8a529e0fab6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 452832785db879e75825b1c862e8e9b1b6e69f1d
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590533"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810815"
 ---
 # <a name="create-models-for-your-app"></a>Uygulamanız için model oluşturma
 
@@ -44,13 +44,13 @@ Bir sistemin veya varolan kodun mimarisini görselleştirmek için aşağıdaki 
 
 ## <a name="related-tasks"></a>İlgili görevler
 
-|**İlerde**|**Görev**|
+|**Konu**|**Görev**|
 |-|-|
 |[Kodu görselleştirme](../modeling/visualize-code.md)|Bilmediğiniz kodu daha iyi anlamak için kod haritaları ve bağımlılık diyagramları oluşturun.|
 |[Kullanıcı gereksinimlerini modelleme](../modeling/model-user-requirements.md)|Kullanıcıların ihtiyaçlarını netleştirmek ve iletmek için modeller kullanın.|
 |[Uygulama mimarinizi modelleme](../modeling/model-your-app-s-architecture.md)|Sisteminizin genel yapısını ve davranışını ve kullanıcıların ihtiyaçlarını karşıladığından emin olmak için modelleri kullanın.|
 |[Geliştirme sırasında sisteminizi doğrulama](../modeling/validate-your-system-during-development.md)|Yazılımınızın kullanıcılarınızın ihtiyaçlarına ve sisteminizin genel mimarisine uygun olduğundan emin olun.|
-|[Geliştirme sürecinizde modelleri kullanma](../modeling/use-models-in-your-development-process.md)<br /><br /> [Çevik geliştirmede modelleri kullanma](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)|Geliştirme sırasında sisteminizi anlamanıza ve değiştirmenize yardımcı olması için modeller kullanın.|
+|[Geliştirme sürecinizde modelleri kullanma](../modeling/use-models-in-your-development-process.md)<br /><br /> [Çevik geliştirmede modelleri kullanma](/previous-versions/ff398061(v=vs.140))|Geliştirme sırasında sisteminizi anlamanıza ve değiştirmenize yardımcı olması için modeller kullanın.|
 |[Modelleme çözümünüzün yapısını oluşturma](../modeling/structure-your-modeling-solution.md)|Büyük veya orta ölçekli bir projede modelleri düzenleyin.|
 
 ## <a name="resources"></a>Kaynaklar

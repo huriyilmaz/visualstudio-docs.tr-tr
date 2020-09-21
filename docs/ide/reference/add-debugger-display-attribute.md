@@ -7,12 +7,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 611df048d4ce569c10ae933be9053acf1174c06f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: db49bfd1672866a755cce6780527520da2cad420
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85290586"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810395"
 ---
 # <a name="add-debuggerdisplay-attribute"></a>DebuggerDisplay özniteliği Ekle
 
@@ -20,9 +20,9 @@ Bu kod üretimi için geçerlidir:
 
 - C#
 
-**Ne:** [DebuggerDisplay özniteliği](https://docs.microsoft.com/visualstudio/debugger/using-the-debuggerdisplay-attribute) bir nesne, özellik veya alanın hata ayıklayıcı değişken pencerelerinin nasıl görüntülendiğini denetler.
+**Ne:** [DebuggerDisplay özniteliği](../../debugger/using-the-debuggerdisplay-attribute.md) bir nesne, özellik veya alanın hata ayıklayıcı değişken pencerelerinin nasıl görüntülendiğini denetler.
 
-**Ne zaman:** Kodunuzda hata ayıklayıcı içindeki özellikleri programlama yoluyla [sabitlemek](https://docs.microsoft.com/visualstudio/debugger/view-data-values-in-data-tips-in-the-code-editor#pin-properties-in-datatips) istiyorsunuz.
+**Ne zaman:** Kodunuzda hata ayıklayıcı içindeki özellikleri programlama yoluyla [sabitlemek](../../debugger/view-data-values-in-data-tips-in-the-code-editor.md#pin-properties-in-datatips) istiyorsunuz.
 
 **Neden:** Sabitleme özellikleri, nesne hata ayıklayıcı içindeki özellik listesinin en üstüne bu özelliği ayıklayana ekleyerek nesneleri özelliklerine göre hızlıca incelemenizi sağlar. 
 

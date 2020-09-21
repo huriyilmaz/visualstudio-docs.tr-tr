@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: fb92f5aae84a7c164f04145abe24eb32d7792056
-ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
+ms.openlocfilehash: d4538becdf7627cc63ac94f65ac456123c5d9c47
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89485447"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739986"
 ---
 # <a name="build-and-run-the-todo-sample-app"></a>Todo örnek uygulamasını derleyin ve çalıştırın
 
@@ -28,7 +28,7 @@ Bu noktada, geliştirme ekibiniz oldukça küçüktür ve MVP 'nizi (en az uygul
 
 Uygulamayı çalıştırmadan önce, makinenizde uygulama kaynak kodunu almanız gerekir. Gerçek projeler için genellikle depoyu kopyalacaksınız. Ancak, bu öğretici için, uygulamayı içeren bir ZIP dosyası oluşturdunuz.
 
-1. [ZIP 'ı indirin](/assets/app.zip). ZIP dosyasını açın ve içeriği ayıkladığınızdan emin olun.
+1. [ZIP 'ı indirin](http://localhost/assets/app.zip). ZIP dosyasını açın ve içeriği ayıkladığınızdan emin olun.
 
 1. Ayıkladıktan sonra, en sevdiğiniz kod düzenleyicinizi kullanarak projeyi açın. Düzenleyicinizde ihtiyacınız varsa [Visual Studio Code](https://code.visualstudio.com/)kullanabilirsiniz. `package.json`Ve iki alt dizin görmeniz gerekir ( `src` ve `spec` ).
 

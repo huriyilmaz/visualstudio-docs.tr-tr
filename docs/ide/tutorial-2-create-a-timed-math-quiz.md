@@ -9,12 +9,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b1f3620ef462228ff6a3461f44019e9c515a1c0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 738d32186a0bb0f1d4655f9afea3d236bf53ad4c
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579310"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810854"
 ---
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>Öğretici 2: süreli bir matematik testi oluşturma
 
@@ -58,6 +58,6 @@ Ayrıca harika, ücretsiz video öğrenimi kaynakları da mevcuttur. C# dilinde 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Diğer C# öğreticileri](/visualstudio/get-started/csharp/)
-* [Visual Basic öğreticileri](/visualstudio/get-started/visual-basic/)
+* [Diğer C# öğreticileri](../get-started/csharp/index.yml)
+* [Visual Basic öğreticileri](../get-started/visual-basic/index.yml)
 * [C++ öğreticileri](/cpp/get-started/tutorial-console-cpp)
