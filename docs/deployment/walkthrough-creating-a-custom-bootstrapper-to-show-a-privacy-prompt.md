@@ -1,5 +1,6 @@
 ---
-title: 'İzlenecek yol: Gizlilik istemiyle özel bir önyükleyici oluşturma | Microsoft Docs'
+title: Bir gizlilik istemiyle özel bir önyükleyici oluşturma
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,19 +20,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 00c5266d57ae5633313465796c718d989f783ea6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a8fbb05fcfdb1a639855ca31e9574d3037559610
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64811430"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809282"
 ---
 # <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>İzlenecek yol: Bir gizlilik istemiyle özel bir önyükleyici oluşturma
 ClickOnce uygulamalarını, daha yeni dosya sürümlerine ve derleme sürümlerine sahip derlemeler kullanılabilir olduğunda otomatik olarak güncelleştirilecek şekilde yapılandırabilirsiniz. Müşterilerinizin Bu davranışa izin vermesini sağlamak için bir gizlilik istemi görüntüleyebilirsiniz. Ardından, uygulamaya otomatik olarak güncelleştirme izni verip vermeyeceğinizi seçebilirler. Uygulamanın otomatik olarak güncelleştirmesine izin verilmiyorsa, yüklemez.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Visual Studio 2010.

@@ -1,5 +1,6 @@
 ---
-title: Profil oluşturucu komut satırı-.NET Framework Hizmetleri bellek verilerini al
+title: Profil oluşturucu komut satırı-.NET Hizmetleri bellek verilerini al
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: b1361333-8a09-4a65-87a9-4ac94ceb2d9f
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 67ad8341dc47b5e9275a02950c5335264e619541
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f07cb03979baf62d436b4bdb319620364a88ddad
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331687"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809407"
 ---
 # <a name="collect-memory-data-from-net-framework-services-by-using-the-profiler-command-line"></a>Profil oluşturucu komut satırını kullanarak .NET Framework hizmetlerinden bellek verileri toplama
 Bu bölümde, komut satırından örnekleme yöntemi kullanılarak bir .NET Framework hizmeti için bellek ayırma ve nesne yaşam süresi verilerini toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır.

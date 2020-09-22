@@ -1,5 +1,6 @@
 ---
-title: ClickOnce uygulaması için özel Izinleri ayarlama | Microsoft Docs
+title: Özel izinleri ayarlama (ClickOnce uygulaması)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 17cd398468bd1640e50f6a58004905cfdf6c2ff0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5c9952573be69299e14dc87f345febb14cdef0ec
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382152"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809722"
 ---
 # <a name="how-to-set-custom-permissions-for-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Internet veya yerel Intranet bölgeleri için varsayılan izinleri kullanan bir uygulamayı dağıtabilirsiniz. Alternatif olarak, uygulamanın ihtiyacı olan özel izinler için özel bir bölge oluşturabilirsiniz. Bunu, **Proje Tasarımcısı**'nın **güvenlik** sayfasında güvenlik izinlerini özelleştirerek yapabilirsiniz.

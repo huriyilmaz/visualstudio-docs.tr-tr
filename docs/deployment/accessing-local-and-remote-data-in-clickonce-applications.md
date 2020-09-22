@@ -1,5 +1,6 @@
 ---
-title: ClickOnce uygulamalarında yerel ve uzak verilere erişme | Microsoft Docs
+title: Yerel & uzak veriye erişme (ClickOnce uygulamaları)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c2a4f2e9fe66ab049113111f13338cdced4e39e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e93c8479e917e74d31c3eedbb00d9d5911442b92
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66746077"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810477"
 ---
 # <a name="access-local-and-remote-data-in-clickonce-applications"></a>ClickOnce uygulamalarında yerel ve uzak veri erişimi
 Çoğu uygulama veri kullanır veya üretir. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , hem yerel olarak hem de uzaktan veri okumak ve yazmak için çeşitli seçenekler sunar.

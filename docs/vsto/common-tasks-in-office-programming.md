@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1b0856d3832d31dd7027b2f264dd0a9cd1d657ec
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c82b4dec0c92f19933b045040ed0f1fcecb5b10b
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "63007333"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809865"
 ---
 # <a name="common-tasks-in-office-programming"></a>Office programlamada ortak görevler
   Bu konu, Visual Studio kullanarak Office çözümlerini programlamaya yönelik aşağıdaki yaygın soruların yanıtlarını bulmanıza yardımcı olmak için tasarlanmıştır.
@@ -44,7 +44,7 @@ ms.locfileid: "63007333"
 
 - [Nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-- [Nasıl yapılır: Office çözümlerini yükseltme](https://msdn.microsoft.com/a269e539-b717-4680-a568-2152b070347e).
+- [Nasıl yapılır: Office çözümlerini yükseltme](/previous-versions/4bez6837(v=vs.140)).
 
 - [Nasıl yapılır: Office birincil birlikte çalışma derlemelerini yüklemek](../vsto/how-to-install-office-primary-interop-assemblies.md).
 
@@ -216,19 +216,19 @@ ms.locfileid: "63007333"
 
 ## <a name="deployment-tasks"></a><a name="deployment"></a> Dağıtım görevleri
 
-- [Nasıl yapılır: ClickOnce kullanarak bir Office çözümünü yayımlama](https://msdn.microsoft.com/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8).
+- [Nasıl yapılır: ClickOnce kullanarak bir Office çözümünü yayımlama](/previous-versions/bb386095(v=vs.110)).
 
-- [Nasıl yapılır: ClickOnce kullanarak belge düzeyi Office çözümünü SharePoint sunucusuna yayımlama](https://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58).
+- [Nasıl yapılır: ClickOnce kullanarak belge düzeyi Office çözümünü SharePoint sunucusuna yayımlama](/previous-versions/bb608595(v=vs.110)).
 
-- [Nasıl yapılır: ClickOnce Office çözümünü yüklemek](https://msdn.microsoft.com/14702f48-9161-4190-994c-78211fe18065).
+- [Nasıl yapılır: ClickOnce Office çözümünü yüklemek](/previous-versions/bb608592(v=vs.110)).
 
-- [Nasıl yapılır: Office çözümlerini çalıştırmak için son kullanıcı bilgisayarlarına önkoşulları yükler](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98).
+- [Nasıl yapılır: Office çözümlerini çalıştırmak için son kullanıcı bilgisayarlarına önkoşulları yükler](/previous-versions/bb608608(v=vs.110)).
 
-- [Nasıl yapılır: Office çözümlerini dağıtmak IÇIN IIS 'ı hazırlama](https://msdn.microsoft.com/f62bce70-81d4-4f8b-86e6-2f2afec5d9b4).
+- [Nasıl yapılır: Office çözümlerini dağıtmak IÇIN IIS 'ı hazırlama](/previous-versions/bb608629(v=vs.110)).
 
-- [Nasıl yapılır: dağıtılan Office çözümlerini güncelleştirme](https://msdn.microsoft.com/be96db53-b6ea-46ab-b8d9-b76b098b3b13).
+- [Nasıl yapılır: dağıtılan Office çözümlerini güncelleştirme](/previous-versions/bb157871(v=vs.110)).
 
-- [Nasıl yapılır: bir Office çözümünün yükleme yolunu değiştirme](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd).
+- [Nasıl yapılır: bir Office çözümünün yükleme yolunu değiştirme](/previous-versions/bb608626(v=vs.110)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio 'da Office geliştirme &#40;kullanmaya başlama&#41;](../vsto/getting-started-office-development-in-visual-studio.md)

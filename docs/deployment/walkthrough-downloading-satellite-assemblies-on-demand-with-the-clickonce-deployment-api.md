@@ -1,5 +1,6 @@
 ---
-title: ClickOnce dağıtım API 'SI ile isteğe bağlı uydu derlemesini indirin
+title: Uydu derlemesini isteğe bağlı olarak indirin (ClickOnce API)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -21,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34cde3a2444525e48455e445894fd5ab1c66fab8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cda69b1aad8e70dce14bb3f25e6bf935103642bf
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66262964"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809243"
 ---
 # <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api"></a>İzlenecek yol: ClickOnce dağıtım API 'SI ile isteğe bağlı uydu derlemelerini Indirme
 Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür için yapılandırılabilir. *Uydu derlemesi* , uygulamanın varsayılan kültürü dışında bir kültür için uygulama kaynakları içeren bir derlemedir.
@@ -38,7 +39,7 @@ Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür i
 > [!NOTE]
 > Test amacıyla, aşağıdaki kod örneği program aracılığıyla kültürü olarak ayarlar `ja-JP` . Üretim ortamı için bu kodu ayarlama hakkında daha fazla bilgi için bu konunun ilerleyen kısımlarında yer alan "sonraki adımlar" bölümüne bakın.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu konu başlığında, Visual Studio kullanarak uygulamanıza nasıl yerelleştirilmiş kaynaklar ekleneceğini bildiğiniz varsayılmaktadır. Ayrıntılı yönergeler için bkz. [Izlenecek yol: Windows Forms 'U yerelleştirin](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100)).
 
 ### <a name="to-download-satellite-assemblies-on-demand"></a>Uydu derlemelerini isteğe bağlı olarak indirmek için

@@ -1,5 +1,6 @@
 ---
-title: Eşzamanlılık görselleştiricisi komut satırı yardımcı programı (CVCollectionCmd) | Microsoft Docs
+title: Eşzamanlılık görselleştiricisi komut satırı yardımcı programı
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2721798ee9f0c7e006acdedbecaecbd56068be3f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 762a3563e64a3437c34b9e12e372f5d578e0c7ac
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911201"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808909"
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>Eşzamanlılık görselleştiricisi komut satırı yardımcı programı (CVCollectionCmd)
 Eşzamanlılık görselleştiricisi komut satırı yardımcı programını (*CVCollectionCmd.exe*) kullanarak, bunları Visual Studio Için eşzamanlılık görselleştiricisi içinde görüntüleyebilmeniz için komut satırından izleme toplayabilirsiniz. Araçlar, Visual Studio yüklü olmayan bilgisayarlarda kullanılabilir.
@@ -44,7 +45,7 @@ Eşzamanlılık görselleştiricisi komut satırı yardımcı programını (*CVC
 |Başlat|Belirtilen işlemi eşzamanlılık görselleştiricisi altında çalıştırır.|Yürütülebilir dosyanın yolu.|çalışma başarılı olursa 0.<br /><br /> 1 hedef uygulama başlatılamadığından çalıştırma başarısız olduysa.<br /><br /> Bu, CVCollectionCmd 'nin belirtilen çıkış dizinine yazmak için yeterli izinlere sahip olduğu için, çalıştırma başarısız olursa 13.|
 |İliştir|Sistem genelinde izleme toplamaya başlar; Aksi takdirde, bir işlem belirtilmişse bir işleme iliştirir.|Yok.|ek başarılı olursa 0.<br /><br /> Belirtilen işlem geçersiz veya belirsiz olduğundan ek başarısız olursa 1.<br /><br /> CVCollectionCmd 'nin belirtilen çıkış dizinine yazmak için izinleri yetersiz olduğundan, ek başarısız olursa 13.|
 |Ayır|Koleksiyonu durduruyor.|Yok.|Bu, kesilmesi başarılı olursa 0 ' dır.<br /><br /> 1 Şu anda devam eden bir dağıtım başarısız olduğu için çıkarılabilir işlem başarısız oldu.<br /><br /> 2, koleksiyon durdurulamadığından gönderilemedi.|
-|Çözümleme|Belirtilen izlemeyi analiz eder.|CVTrace dosyasının tam yolu.|analiz başarılı olursa 0.<br /><br /> 1 analiz başlatılamıyor, çünkü belirtilen izleme sistem genelinde, ancak hedef işlem belirtilmedi.<br /><br /> 2 analiz başlatılamıyor, çünkü izleme sistem genelinde değil ve bir işlem belirtildi.<br /><br /> 3 belirtilen işlem geçersiz olduğundan analiz başarısız oldu.<br /><br /> 4 belirtilen CVTrace dosyası geçersiz olduğundan analiz başarısız oldu.|
+|Analiz|Belirtilen izlemeyi analiz eder.|CVTrace dosyasının tam yolu.|analiz başarılı olursa 0.<br /><br /> 1 analiz başlatılamıyor, çünkü belirtilen izleme sistem genelinde, ancak hedef işlem belirtilmedi.<br /><br /> 2 analiz başlatılamıyor, çünkü izleme sistem genelinde değil ve bir işlem belirtildi.<br /><br /> 3 belirtilen işlem geçersiz olduğundan analiz başarısız oldu.<br /><br /> 4 belirtilen CVTrace dosyası geçersiz olduğundan analiz başarısız oldu.|
 |LaunchArgs|Hedef yürütülebilir bağımsız değişkenleri belirtir. Bu seçenek yalnızca başlatma komutu için geçerlidir.|Uygulamanın komut satırı bağımsız değişkenleri.|Yok.|
 |OutDir|İzleme dosyalarının kaydedileceği dizini belirtir. Başlatma ve Iliştirme komutları için geçerlidir.|Dizin yolu veya göreli yol.|Yok.|
 |İşleme|Attach komutu yürütüldüğünde iliştirilecek veya çözümle komutu yürütüldüğünde analiz edilecek işlem olan işlemi belirtir. Ekle ve çözümle komutları için geçerlidir.|İşlemin PID 'SI veya adı.|Yok.|
@@ -61,7 +62,7 @@ Eşzamanlılık görselleştiricisi komut satırı yardımcı programını (*CVC
 ### <a name="configuration-file-tags"></a>Yapılandırma dosyası etiketleri
  Yapılandırma dosyası XML tabanlıdır. Geçerli Etiketler ve değerler şunlardır:
 
-| Etiket | Description | Değerler |
+| Etiket | Açıklama | Değerler |
 |-------------------------| - | - |
 | Config | Genel yapılandırma dosyasını kaldırır. | Şu öğeleri içermelidir:<br /><br /> -MinorVersion<br />-MajorVersion |
 | MajorVersion | Yapılandırma dosyasının ana sürümünü belirtir. | Projeler için 1 olmalıdır [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] . 1 değilse, yardımcı program çalışmaz. |
