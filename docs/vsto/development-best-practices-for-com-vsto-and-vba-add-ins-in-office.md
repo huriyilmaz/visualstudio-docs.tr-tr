@@ -11,12 +11,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d5dd8864484e2b41a1146f1da495251663afdb6a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: be48e7ce721c84656362a019e0cc5eec1ae2ee17
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801509"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808213"
 ---
 # <a name="development-best-practices-for-com-vsto-and-vba-add-ins-in-office"></a>Office 'te COM, VSTO ve VBA eklentileri için geliştirme için en iyi yöntemler
   Office için COM, VSTO veya VBA eklentileri geliştiriyorsanız, bu makalede açıklanan en iyi geliştirme uygulamalarını izleyin.   Bu, şunları sağlamanıza yardımcı olur:
@@ -31,7 +31,7 @@ ms.locfileid: "88801509"
  Eklentinin, eklenti yükleme işlemi sırasında Office 'in yüklü olup olmadığını algılamasını önermeyiz. Office yüklü değilse, eklentiyi yükleyebilirsiniz ve Office yüklendikten sonra Kullanıcı bu eklentiye erişebilir.
 
 ## <a name="use-embedded-interop-types-nopia"></a>Gömülü birlikte çalışma türlerini kullan (Nopıa)
-Çözümünüz .NET 4,0 veya sonraki bir sürümü kullanıyorsa, Office birincil birlikte çalışma derlemeleri (PIA) yeniden dağıtılabilir öğesine göre değil, gömülü birlikte çalışma türleri (Nopıa) kullanın. Tür ekleme kullanmak çözümünüzün yükleme boyutunu azaltır ve ileride uyumlulukla uyumluluk sağlar. Office 2010, PIA Redistributable çalıştıran Office 'in son sürümüdür. Daha fazla bilgi için bkz. [Izlenecek yol: Microsoft Office Derlemelerinden tür bilgilerini katıştırma](https://msdn.microsoft.com/library/ee317478.aspx) ve [tür denklik ve katıştırılmış birlikte çalışma türleri](/windows/uwp/porting/desktop-to-uwp-root).
+Çözümünüz .NET 4,0 veya sonraki bir sürümü kullanıyorsa, Office birincil birlikte çalışma derlemeleri (PIA) yeniden dağıtılabilir öğesine göre değil, gömülü birlikte çalışma türleri (Nopıa) kullanın. Tür ekleme kullanmak çözümünüzün yükleme boyutunu azaltır ve ileride uyumlulukla uyumluluk sağlar. Office 2010, PIA Redistributable çalıştıran Office 'in son sürümüdür. Daha fazla bilgi için bkz. [Izlenecek yol: Microsoft Office Derlemelerinden tür bilgilerini katıştırma](/previous-versions/ee317478(v=vs.140)) ve [tür denklik ve katıştırılmış birlikte çalışma türleri](/windows/uwp/porting/desktop-to-uwp-root).
 
 Çözümünüz .NET 'in önceki bir sürümünü kullanıyorsa, çözümünüzü .NET 4,0 veya üstünü kullanacak şekilde güncelleştirmenizi öneririz. .NET 4,0 veya sonraki bir sürümünü kullanmak, Windows 'un daha yeni sürümlerindeki çalışma zamanı önkoşullarını azaltır.
 

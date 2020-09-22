@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: 960bd86a1e0993e4d2c57514a29ceecca34cca3d
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 7107e7f9b156f4f62e798b7f4ffb283fb8a6678c
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508515"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740051"
 ---
 # <a name="configure-azure-cloud-service-roles-with-visual-studio"></a>Visual Studio ile Azure bulut hizmeti rollerini yapılandırma
 Bir Azure bulut hizmetinde bir veya daha fazla çalışan veya Web rolü olabilir. Her rol için, bu rolün nasıl ayarlandığını tanımlamanız ve ayrıca bu rolün nasıl çalıştığını tanımlamanız gerekir. Bulut hizmetlerindeki roller hakkında daha fazla bilgi edinmek için bkz. [Azure 'A giriş videosu Cloud Services](https://channel9.msdn.com/Series/Windows-Azure-Cloud-Services-Tutorials/Introduction-to-Windows-Azure-Cloud-Services).

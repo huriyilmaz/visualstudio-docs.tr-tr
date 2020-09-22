@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 6b53fb34b3cff444e57491f878f8385bdb523c6e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1269049adad3fe2d26caa79721452f7f313e60d5
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285055"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739908"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>Visual Studio 'da NPM paketlerini yönetme
 
@@ -40,9 +40,9 @@ Node.js projeleri için aşağıdaki görevleri gerçekleştirebilirsiniz:
 
 Bu özellikler birlikte çalışarak proje sistemiyle ve projedeki *package.js* dosya ile eşitlenir.
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 
-Projenize NPM desteği eklemek için **Node.js geliştirme** iş yükü ve Node.js çalışma zamanının yüklü olması gerekir. Ayrıntılı adımlar için bkz. [Node.js projesi oluşturma](/visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json).
+Projenize NPM desteği eklemek için **Node.js geliştirme** iş yükü ve Node.js çalışma zamanının yüklü olması gerekir. Ayrıntılı adımlar için bkz. [Node.js projesi oluşturma](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json).
 
 > [!NOTE]
 > Mevcut Node.js projeleri için, projenizde NPM 'yi etkinleştirmek üzere **mevcut Node.js kodu** çözüm şablonunu veya [açık klasör (Node.js)](../javascript/develop-javascript-code-without-solutions-projects.md) proje türünü kullanın.
@@ -86,12 +86,12 @@ Aşağıdaki eylemlerden birini gerçekleştirmek için **NPM** düğümüne sa�
 
 * **Yeni NPM paketleri 'Ni yükler** Yeni paketleri yüklemek için Kullanıcı arabirimini açar.
 * **NPM paketlerini yükler** * Üzerindepackage.js*listelenen tüm paketleri yüklemek için NPM install komutunu çalıştırır. (Çalıştırır `npm install` .)
-* **NPM paketlerini Güncelleştir** Paketi, *package.json*' da belirtilen semver aralığına göre, pastest sürümlerine güncelleştirir. (Çalıştırır `npm update --save` .). Semver aralıkları genellikle "~" veya "^" kullanılarak belirtilir. Daha fazla bilgi için, [ yapılandırmapackage.js](../javascript/configure-packages-with-package-json.md).
+* **NPM paketlerini Güncelleştir** , Paketi en son sürümlere, *package.jsüzerinde*belirtilen anlamsal sürüm oluşturma (semver) aralığına göre güncelleştirir. (Çalıştırır `npm update --save` .). Semver aralıkları genellikle "~" veya "^" kullanılarak belirtilir. Daha fazla bilgi için, [ yapılandırmapackage.js](../javascript/configure-packages-with-package-json.md).
 
 Aşağıdaki eylemlerden birini gerçekleştirmek için bir paket düğümüne sağ tıklayın:
 
 * **NPM paketlerini yükler** *package.js*' de listelenen paket sürümünü yüklemek için NPM install komutunu çalıştırır. (Çalıştırır `npm install` .)
-* **NPM paketlerini Güncelleştir** Paketi, *package.json*' da belirtilen semver aralığına göre, bu sürümü temel alarak güncelleştirir. (Çalıştır `npm update --save` .) Semver aralıkları genellikle "~" veya "^" kullanılarak belirtilir.
+* **NPM paketlerini Güncelleştir** *package.json*' da belirtilen semver aralığına göre paketi en son sürüme güncelleştirir. (Çalıştır `npm update --save` .) Semver aralıkları genellikle "~" veya "^" kullanılarak belirtilir.
 * **NPM paketlerini kaldır** Paketi kaldırır ve * üzerindepackage.js* kaldırır (çalışır `npm uninstall --save` .)
 ::: moniker-end
 ::: moniker range="vs-2017"
@@ -126,7 +126,7 @@ ASP.NET Core projeleri gibi projeler için, projenizde NPM desteğini tümleşti
 * [package.jskullanarak paket yüklemesi](#npmInstallPackage)
 
 >[!NOTE]
-> ASP.NET Core projeleri için, istemci tarafı JavaScript ve CSS dosyalarını yüklemek üzere NPM yerine [Kitaplık Yöneticisi](https://docs.microsoft.com/aspnet/core/client-side/libman/?view=aspnetcore-3.1) 'ni veya Yarn 'yi de kullanabilirsiniz.
+> ASP.NET Core projeleri için, istemci tarafı JavaScript ve CSS dosyalarını yüklemek üzere NPM yerine [Kitaplık Yöneticisi](/aspnet/core/client-side/libman/?view=aspnetcore-3.1) 'ni veya Yarn 'yi de kullanabilirsiniz.
 
 ### <a name="add-npm-support-to-a-project-aspnet-core"></a><a name="npmAdd"></a> Bir projeye NPM desteği ekleme (ASP.NET Core)
 
@@ -181,4 +181,3 @@ Bir paketin yüklenmesi birkaç dakika sürebilir. **Çıkış** penceresindeki 
 * Bazı senaryolarda, [burada](https://github.com/aspnet/Tooling/issues/479)açıklanan bilinen bir sorundan dolayı yüklü NPM paketleri için doğru durumu gösteremeyebilir Çözüm Gezgini. Örneğin, paket yüklendiğinde yüklü değil olarak görünebilir. Çoğu durumda, *package.js*Çözüm Gezgini güncelleştirebilir, Visual Studio 'yu yeniden başlatarak ve bu makalede daha önce anlatıldığı gibi *package.js* dosyaya yeniden ekleyebilirsiniz. Ya da paketleri yüklerken, yükleme durumunu doğrulamak için NPM çıkış penceresini kullanabilirsiniz.
 
 * Uygulamanızı veya transpiling TypeScript kodunuzu oluştururken herhangi bir hata görürseniz olası hata kaynakları olarak NPM paket uyumsuzluklarını denetleyin. Hataları belirlemede yardımcı olması için, bu makalede daha önce açıklandığı gibi paketleri yüklerken NPM çıkış penceresini kontrol edin. Örneğin, bir veya daha fazla NPM paket sürümü kullanım dışı bırakılmış ve bir hatayla sonuçlanmışsa, hataları onarmak için daha yeni bir sürüm yüklemeniz gerekebilir. NPM paket sürümlerini denetlemek için * üzerindepackage.js* kullanma hakkında bilgi için bkz. [package.jsyapılandırma](../javascript/configure-packages-with-package-json.md).
-

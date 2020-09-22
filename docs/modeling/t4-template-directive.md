@@ -7,12 +7,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f7ada5558cfdfaadca5793d9edc61f13a6d4d11b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2763ca540a6b0518eed8bf757412716616d3ae3e
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591846"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808070"
 ---
 # <a name="t4-template-directive"></a>T4 Şablon Yönergesi
 
@@ -96,7 +96,7 @@ Bu özniteliğin değerini olarak ayarlarsanız `true` , `Host` metin şablonunu
 
 Bu özelliğin türü ana bilgisayarın türüne bağlı olduğundan, yalnızca belirli bir ana bilgisayar ile çalışan bir metin şablonu yazıyorsanız faydalıdır. [Tasarım zamanı şablonları](../modeling/design-time-code-generation-by-using-t4-text-templates.md), ancak [çalışma zamanı şablonları](../modeling/run-time-text-generation-with-t4-text-templates.md)için geçerlidir.
 
-Ne `hostspecific` zaman `true` ve Visual Studio 'yu kullanıyorsanız, `this.Host` Visual Studio özelliklerine erişmek için IServiceProvider 'a çevirebilirsiniz. `Host.ResolvePath(filename)`Projedeki bir dosyanın mutlak yolunu elde etmek için de kullanabilirsiniz. Örneğin:
+Ne `hostspecific` zaman `true` ve Visual Studio 'yu kullanıyorsanız, `this.Host` Visual Studio özelliklerine erişmek için IServiceProvider 'a çevirebilirsiniz. `Host.ResolvePath(filename)`Projedeki bir dosyanın mutlak yolunu elde etmek için de kullanabilirsiniz. Örnek:
 
 ```csharp
 <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -134,7 +134,7 @@ Geçerli değerler:
 
 `language`Özniteliği, [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] deyim ve ifade blokları içindeki kaynak kodu için kullanılacak dili (veya) belirtir. Çıktının oluşturulmasında kullanılan ara kod dosyası bu dili kullanır. Bu dil, şablonunuzun oluşturduğu ve herhangi bir türdeki bir metin olabilecek dille ilişkili değildir.
 
-Örneğin:
+Örnek:
 
 ```vb
 <#@ template language="VB" #>
@@ -235,7 +235,7 @@ Tasarım zamanı metin şablonu, **özel aracın** **TextTemplatingFileGenerator
 
 Tasarım zamanı metin şablonu için, öğesinden türetilmiş herhangi bir temel sınıfı belirtebilirsiniz <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> . `<#@assembly#>`Temel sınıfı içeren derlemeyi veya projeyi yüklemek için yönergesini kullanın.
 
-Daha fazla bilgi için, [Gareth Jones ' bloguna "metin şablonlarına devralma"](https://blogs.msdn.microsoft.com/garethj/2011/01/03/vs2010-sp1-t4-template-inheritance-part-i-sample-metadata/)konusuna bakın.
+Daha fazla bilgi için, [Gareth Jones ' bloguna "metin şablonlarına devralma"](/archive/blogs/garethj/vs2010-sp1-t4-template-inheritance-part-i-sample-metadata)konusuna bakın.
 
 ## <a name="linepragmas-attribute"></a>linePragmas özniteliği
 

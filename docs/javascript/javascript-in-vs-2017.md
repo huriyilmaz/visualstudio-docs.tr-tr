@@ -12,12 +12,12 @@ caps.latest.revision: 1
 author: bowdenk7
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9df1b66f1a2407d523e38cd71fc9ffa993cd2d92
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fdb59c51fe38e3d2e3f2f1fd0b00db285b0de7f1
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649623"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739895"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>Visual Studio 2017’de JavaScript
 
@@ -116,7 +116,7 @@ exports.default = Subscription_1.Subscription;
 
 ## <a name="better-intellisense"></a>Daha iyi IntelliSense
 
-İçindeki JavaScript IntelliSense [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] , artık parametreler ve üye listeleri hakkında daha fazla bilgi görüntüler. Bu yeni bilgiler, kodunuzu daha iyi anlamak için arka planda statik analiz kullanan TypeScript dil hizmeti tarafından sağlanır. Yeni IntelliSense deneyimi ve nasıl çalıştığı hakkında daha fazla bilgi [edinebilirsiniz.](/visualstudio/ide/javascript-intellisense/)
+İçindeki JavaScript IntelliSense [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] , artık parametreler ve üye listeleri hakkında daha fazla bilgi görüntüler. Bu yeni bilgiler, kodunuzu daha iyi anlamak için arka planda statik analiz kullanan TypeScript dil hizmeti tarafından sağlanır. Yeni IntelliSense deneyimi ve nasıl çalıştığı hakkında daha fazla bilgi [edinebilirsiniz.](../ide/javascript-intellisense.md)
 
 ## <a name="jsx-syntax-support"></a><a name="JSX"></a> JSX sözdizimi desteği
 
@@ -241,7 +241,7 @@ En önemli değişiklikler, VSDoc 'ın JSDoc ile değiştirilmesi, özel `.intel
 
 Daha önce, IntelliSense kapsamınızda hangi dosyaların olduğunu belirli bir anda anlamak oldukça karmaşıktır. Bazen tüm dosyalarınıza kapsam içinde ve diğer zamanlarda sahip olmak ve bu da el ile başvuru yönetimi içeren karmaşık yapılandırmalara yol açmasının istenmiş olması önerilir. Artık başvuru yönetimi hakkında düşünmenize gerek kalmaz, bu nedenle, Üçlü eğik çizgi başvuruları yorumlara veya dosyalara ihtiyacınız yoktur `_references.js` .
 
-IntelliSense 'In nasıl çalıştığı hakkında daha fazla bilgi için bkz. [JavaScript IntelliSense](/visualstudio/ide/javascript-intellisense/) sayfası.
+IntelliSense 'In nasıl çalıştığı hakkında daha fazla bilgi için bkz. [JavaScript IntelliSense](../ide/javascript-intellisense.md) sayfası.
 
 ### <a name="vsdoc"></a>VSDoc
 
@@ -250,7 +250,7 @@ VSDoc, yazma daha kolay olan [JSDoc](https://jsdoc.app/about-getting-started.htm
 
 ### <a name="intellisensejs-extensions"></a>`.intellisense.js` uzantılardan
 
-Daha önce, üçüncü taraf kitaplıklar için özel tamamlanma sonuçları eklemenize olanak tanıyan [IntelliSense uzantıları](https://msdn.microsoft.com/library/hh874692.aspx) yazabilirsiniz.
+Daha önce, üçüncü taraf kitaplıklar için özel tamamlanma sonuçları eklemenize olanak tanıyan [IntelliSense uzantıları](../vs-2015/ide/extending-javascript-intellisense.md) yazabilirsiniz.
 Bu uzantıların yazma ve yükleme ve bunlara başvurulması oldukça zordur, bu nedenle yeni dil hizmetinin iletilmesi bu dosyaları desteklemez.
 Daha kolay bir alternatif olarak, eski uzantılarla aynı IntelliSense avantajlarını sağlamak için bir TypeScript tanım dosyası yazabilirsiniz `.intellisense.js` .
 Burada bildirim ( `.d.ts` ) dosyası yazma hakkında daha fazla bilgi [here](http://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)edinebilirsiniz.
