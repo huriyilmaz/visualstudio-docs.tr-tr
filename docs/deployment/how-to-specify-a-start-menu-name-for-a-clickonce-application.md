@@ -1,5 +1,6 @@
 ---
-title: ClickOnce uygulaması için başlangıç menüsü adı belirtme | Microsoft Docs
+title: ClickOnce uygulaması için Başlat menüsü adı belirtme
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 882d6f7471530a101404040368dbc6088e9b5d96
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d60985d0fdf766fb49348bb9eb5d14d62d7e4d5
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85381931"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808769"
 ---
 # <a name="how-to-specify-a-start-menu-name-for-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulaması için Başlat menüsü adı belirtme
 Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama hem çevrimiçi hem de çevrimdışı kullanım için yüklendiğinde, **Başlat** menüsüne ve **Program Ekle/Kaldır** listesine bir giriş eklenir. Varsayılan olarak, görünen ad uygulama derlemesinin adıyla aynıdır, ancak **Yayımlama seçenekleri** Iletişim kutusunda **ürün adı** ' nı ayarlayarak görünen adı değiştirebilirsiniz.

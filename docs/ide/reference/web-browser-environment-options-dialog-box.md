@@ -21,12 +21,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8915bef3bba477dd515b1d176971cfb9949e9899
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 85592076b99cf54991d21e1249cf30c609413733
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596508"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808684"
 ---
 # <a name="options-dialog-box-environment--web-browser"></a>Seçenekler iletişim kutusu: ortam \> Web tarayıcısı
 
@@ -52,7 +52,7 @@ IDE Web tarayıcısını açtığınızda görünen sayfayı ayarlar.
 
 - **Kaynak Düzenleyicisi** [Düzenleyicide](../../ide/writing-code-in-the-code-and-text-editor.md)kaynağı görüntülemek için seçin.
 
-- **HTML Düzenleyicisi** Kaynağı [HTML Tasarımcısı](https://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477)'nda görüntülemek için seçin. Web sayfasını iki görünümden birinde düzenlemek için bu seçimi kullanın: Tasarım görünümü veya standart metin tabanlı kaynak görünümü.
+- **HTML Düzenleyicisi** Kaynağı [HTML Tasarımcısı](/previous-versions/ex0hkwbx(v=vs.140))'nda görüntülemek için seçin. Web sayfasını iki görünümden birinde düzenlemek için bu seçimi kullanın: Tasarım görünümü veya standart metin tabanlı kaynak görünümü.
 
 - **Dış düzenleyici** Kaynağı başka bir düzenleyicide görüntülemek için seçin. Seçtiğiniz düzenleyicinin yolunu belirtin, örneğin Notepad.exe.
 
@@ -66,4 +66,4 @@ IDE Web tarayıcısını açtığınızda görünen sayfayı ayarlar.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Genel, Ortam, Seçenekler İletişim Kutusu](../../ide/reference/general-environment-options-dialog-box.md)
-- [HTML Tasarımcısı](https://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477)
+- [HTML Tasarımcısı](/previous-versions/ex0hkwbx(v=vs.140))

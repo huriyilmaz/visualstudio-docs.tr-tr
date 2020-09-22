@@ -1,5 +1,5 @@
 ---
-title: Programınızın hangi DLL 'de kilitlendiğini bulma | Microsoft Docs
+title: Programınızın hangi DLL 'de kilitlendiğini bulun | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 155fd74dc6e01f88bf04fe21b77ebdae6b04437f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c4432378e10590c2ba930edf0920b9146e450f96
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349542"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852080"
 ---
 # <a name="how-to-find-which-dll-your-program-crashed-in-c-c-visual-basic-f"></a>Nasıl yapılır: programınızın hangi DLL 'de kilitlendiğini bulma (C#, C++, Visual Basic, F #)
 

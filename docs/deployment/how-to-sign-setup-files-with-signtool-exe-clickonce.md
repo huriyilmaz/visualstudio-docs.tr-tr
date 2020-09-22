@@ -1,5 +1,6 @@
 ---
-title: Kurulum dosyalarını SignTool.exe ile Imzalama (ClickOnce) | Microsoft Docs
+title: Kurulum dosyalarını SignTool.exe ile imzalama (ClickOnce)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9e1911b6e86058b7f078f40fa10ca5e0e4e53c0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 138e84637acb123c445839dc4810547ed8bc2ed3
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382074"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809511"
 ---
 # <a name="how-to-sign-setup-files-with-signtoolexe-clickonce"></a>Nasıl yapılır: kurulum dosyalarını SignTool.exe ile Imzalama (ClickOnce)
 Bir kurulum programını imzalamak için *SignTool.exe* kullanabilirsiniz (*setup.exe*). Bu işlem, değiştirilen dosyaların son kullanıcı bilgisayarlarında yüklü olmamasını sağlamaya yardımcı olur.

@@ -1,5 +1,5 @@
 ---
-title: Bellekte nasıl çalışır veya küçültüme? | Microsoft Docs
+title: Bellekte sayfa yukarı veya aşağı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 79216ba29047101c9b9d2c6618cae013640542b8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ee4e4e2037e39df7ce343143ff64235f1de0364f
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349425"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852054"
 ---
 # <a name="how-to-page-up-or-down-in-memory"></a>Nasıl Yapılır: Bellekte Sayfa Yukarı veya Aşağı Gitme
 

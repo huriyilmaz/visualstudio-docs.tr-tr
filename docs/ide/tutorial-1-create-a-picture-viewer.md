@@ -10,12 +10,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f1431d56516c749004cef1b35ada482a6c53446
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 44fe22aa1d4549d1daba4324349160afcd3133ba
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579715"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811220"
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>Öğretici 1: resim görüntüleyici oluşturma
 
@@ -68,6 +68,6 @@ Ayrıca harika, ücretsiz video öğrenimi kaynakları da mevcuttur. C# dilinde 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Diğer C# öğreticileri](/visualstudio/get-started/csharp/)
-* [Visual Basic öğreticileri](/visualstudio/get-started/visual-basic/)
+* [Diğer C# öğreticileri](../get-started/csharp/index.yml)
+* [Visual Basic öğreticileri](../get-started/visual-basic/index.yml)
 * [C++ öğreticileri](/cpp/get-started/tutorial-console-cpp)

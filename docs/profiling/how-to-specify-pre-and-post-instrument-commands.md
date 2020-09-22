@@ -1,5 +1,5 @@
 ---
-title: Nasıl yapılır-ve araç sonrası komutları belirtme | Microsoft Docs
+title: Ön ve araç sonrası komutları belirtin | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +15,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ba91e04342b9b78e3c6acae5296857a6f00f2aba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 904a5086af4fbbd9c1ef174cae63013cb8c96ad9
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85328997"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851807"
 ---
 # <a name="how-to-specify-pre--and-post-instrument-commands"></a>Nasıl yapılır: ön ve araç sonrası komutları belirtme
 

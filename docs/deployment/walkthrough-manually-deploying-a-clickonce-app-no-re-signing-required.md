@@ -1,5 +1,6 @@
 ---
-title: Bir marka dağıtımını koruyan ClickOnce uygulamalarını el ile dağıtın
+title: Marka tutmayı & ClickOnce uygulamasını el ile dağıtın
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -22,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 47db202d07fd88bfb5e922964caf2cdd5008c6fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9e3f21f9e377b7d3e2d71d499eed25079c7769c7
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66263419"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809230"
 ---
 # <a name="walkthrough-manually-deploy-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information"></a>İzlenecek yol: yeniden imzalama gerektirmeyen ve marka bilgilerini koruyan bir ClickOnce uygulamasını El Ile dağıtın
 Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama oluşturup bu uygulamayı yayımlamak ve dağıtmak üzere bir müşteriye verdiğinizde, müşterinin genellikle dağıtım bildirimini güncelleştirmesi ve yeniden imzalaması gerekiyordu. Çoğu durumda hala tercih edilen yöntem olsa da, 3,5 .NET Framework, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Yeni bir dağıtım bildirimini yeniden oluşturmak zorunda kalmadan müşteriler tarafından dağıtılabilecek dağıtımlar oluşturmanıza olanak sağlar. Daha fazla bilgi için bkz. [sınama ve üretim sunucuları için teslim etmeden ClickOnce uygulamaları dağıtma](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md).
@@ -37,7 +38,7 @@ Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama o
 > [!NOTE]
 > Bu kılavuzda, komut satırı aracı *Mage.exe* veya grafik araç *MageUI.exe*kullanarak dağıtımları el ile oluşturabilirsiniz. El ile dağıtımlar hakkında daha fazla bilgi için bkz. [Izlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolda bulunan adımları gerçekleştirmek için aşağıdakiler gerekir:
 
 - Dağıtmaya hazırsanız Windows Forms bir uygulama. Bu uygulama *WindowsFormsApp1*olarak anılacaktır.

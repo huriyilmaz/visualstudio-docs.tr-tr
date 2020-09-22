@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b5f00b3e71f0deb15d6266640db39751f2ae22f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c55f229550dfe74606f4dfb0880b4e91d689d5ad
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76269098"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809039"
 ---
 # <a name="compile-and-build-in-visual-studio"></a>Visual Studio 'da derleme ve derleme
 
@@ -55,6 +55,6 @@ Buradan, diğer birçok görevi inceleyebilirsiniz:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Web sitesi projelerini derleme (derleme)](https://msdn.microsoft.com/Library/a9cbb88c-8fff-4c67-848b-98fbfd823193)
+- [Web sitesi projelerini derleme (derleme)](/previous-versions/hwxa5aha(v=vs.140))
 - [Derle ve derle (Mac için Visual Studio)](/visualstudio/mac/compiling-and-building)
 - [Visual Studio 'da CMake projeleri](/cpp/build/cmake-projects-in-visual-studio)

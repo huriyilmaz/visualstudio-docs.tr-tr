@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 389315d7ec48c85fbab96b5270cbcef54faf7e8e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5e99dc9e6a4e555d586c5007fd603350c9fa4e7c
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801067"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90850988"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019’daki yenilikler
 
@@ -118,7 +118,7 @@ Daha fazla bilgi için bkz. [Visual Studio 2019 blog gönderisi Ile daha iyi ço
 
 Daha fazla bilgi için bkz. [.NET Core 3,0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/) blog gönderisi duyurusu.
 
-## <a name="collaborate"></a>İşbirliği
+## <a name="collaborate"></a>İşbirliği yapma
 
 Sorunları çözmek için nasıl ekip sağlayabileceğiniz hakkında daha fazla bilgi edinmek için aşağıdaki videoyu görüntüleyin. <br><br>*Video uzunluğu: 4,22 dakika*
 
@@ -214,11 +214,11 @@ Visual Studio 2019 ' i genellikle geliştirme deneyiminizi daha da iyi hale geti
 
 Bu sırada, şu anda çalışmadaki yeni özelliklerden bazıları aşağıda verilmiştir.
 
-- **Visual Studio Code Spaces için Visual Studio 2019 desteği (Önizleme)**
+- **GitHub Codespaces için Visual Studio 2019 desteği (Önizleme)**
 
-  Artık her zamankinden daha fazla, geliştiriciler iş üzerinde ve evde birden fazla projeyi daha da kolaylaştırıyor. Yeni özellikler, hata düzeltmeleri, çekme isteği incelemeleri, &amp; prototipler, zaman için rekabet ve sabit bağlam geçişi gerektirir. [Visual Studio Codespaces](https://visualstudio.microsoft.com/services/visual-studio-codespaces/) yardımcı olabilir. Tamamen bulutta geliştirebilir ve birkaç dakika içinde projelerinizden her biri için ayrılmış özel ortamlar oluşturabilirsiniz. Visual Studio 2019 ile codespace 'e bağlanabilir ve yerel olarak olduğu gibi çalışabilirsiniz.
+  Artık her zamankinden daha fazla, geliştiriciler iş üzerinde ve evde birden fazla projeyi daha da kolaylaştırıyor. Yeni özellikler, hata düzeltmeleri, çekme isteği incelemeleri, &amp; prototipler, zaman için rekabet ve sabit bağlam geçişi gerektirir. [GitHub Codespaces](https://github.com/features/codespaces) yardımcı olabilir. Tamamen bulutta geliştirebilir ve birkaç dakika içinde projelerinizden her biri için ayrılmış özel ortamlar oluşturabilirsiniz. Visual Studio 2019 ile codespace 'e bağlanabilir ve yerel olarak olduğu gibi çalışabilirsiniz.
 
-  Daha fazla bilgi için bkz. [Visual Studio Codespaces nedir](/visualstudio/codespaces/overview/what-is-vsonline/) sayfası.
+  Daha fazla bilgi için bkz. [GitHub Codespaces nedir](codespaces/codespaces-overview.md) sayfası.
 
 - **Visual Studio 2019 'de gelişmiş git deneyimi (Önizleme)**
 

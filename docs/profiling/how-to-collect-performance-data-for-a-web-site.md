@@ -1,5 +1,5 @@
 ---
-title: Web sitesi için performans verilerini toplama | Microsoft Docs
+title: Bir Web sitesi için performans verilerini toplama | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -18,12 +18,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c2f8169716bda09e3c4d89ce06dc907c726adee2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7ea4e3309fc003a4fc4fc73377e8b2bbe12cd567
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85330957"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851482"
 ---
 # <a name="how-to-collect-performance-data-for-a-web-site"></a>Nasıl yapılır: bir Web sitesi için performans verilerini toplama
 

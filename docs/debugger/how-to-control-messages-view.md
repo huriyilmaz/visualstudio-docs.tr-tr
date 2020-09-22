@@ -1,5 +1,5 @@
 ---
-title: Ileti görünümünü denetleme | Microsoft Docs
+title: Denetim Iletileri görünümü | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a95e257950a93ff61c27f7ea599b0de12e09677d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 917fc2af5ab09544201a6aa35c34611a89d7a277
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350257"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90850975"
 ---
 # <a name="how-to-control-messages-view"></a>Nasıl yapılır: İletiler Görünümünü Denetleme
 Spy + + ile bir [Iletiler görünümü](../debugger/messages-view.md) penceresinin içeriği üzerinde önemli bir denetiminiz vardır. Her zaman iletileri görüntülemeyi [başlatabilir ve durdurabilirsiniz](../debugger/how-to-start-and-stop-the-message-log-display.md) ve şunları belirtebilirsiniz:

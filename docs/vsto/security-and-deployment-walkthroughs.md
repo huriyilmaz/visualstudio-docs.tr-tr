@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4c1325ebb49e500c3afa40ee074be1f9b859100e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 014b59efb945f6390877a2e9764e24b6c4cd639b
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62978438"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810947"
 ---
 # <a name="security-and-deployment-walkthroughs"></a>Güvenlik ve dağıtım talimatları
   Aşağıdaki konularda, çözümünüzün çalışmasına ve Office çözümünüzü nasıl dağıtabileceğinizi sağlayacak güvenlik ilkesini nasıl ayarlayabileceğiniz gösterilmektedir.
@@ -31,19 +31,19 @@ ms.locfileid: "62978438"
 - [Nasıl yapılır: ekleme listesi güvenliğini yapılandırma](../vsto/how-to-configure-inclusion-list-security.md) [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] Son kullanıcılara Office çözümlerini yükleme seçeneği verilip verilmediğini denetlemek için güven isteminin nasıl yapılandırılacağını açıklar.
 
 ## <a name="deployment-topics"></a>Dağıtım konuları
-- [Nasıl yapılır: ClickOnce kullanarak bir Office çözümünü yayımlama](https://msdn.microsoft.com/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8) Office çözümlerini yayımlamak için **Yayımla sihirbazının** veya proje Tasarımcısı ' nın **Yayımla** sayfasının nasıl kullanılacağına ilişkin bilgiler sağlar.
+- [Nasıl yapılır: ClickOnce kullanarak bir Office çözümünü yayımlama](/previous-versions/bb386095(v=vs.110)) Office çözümlerini yayımlamak için **Yayımla sihirbazının** veya proje Tasarımcısı ' nın **Yayımla** sayfasının nasıl kullanılacağına ilişkin bilgiler sağlar.
 
-- [Nasıl yapılır: ClickOnce kullanarak belge düzeyi Office çözümünü SharePoint sunucusuna yayımlama](https://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58) Bir SharePoint sunucusuna dağıtma adımlarını açıklar.
+- [Nasıl yapılır: ClickOnce kullanarak belge düzeyi Office çözümünü SharePoint sunucusuna yayımlama](/previous-versions/bb608595(v=vs.110)) Bir SharePoint sunucusuna dağıtma adımlarını açıklar.
 
-- [Nasıl yapılır: ClickOnce Office çözümü yüklemesi](https://msdn.microsoft.com/14702f48-9161-4190-994c-78211fe18065) Yayımlama işlemi sırasında oluşturulan Kurulum programını çalıştırarak Office çözümlerini yükleme adımlarını sağlar; Dağıtım bildirim dosyası açılıyor; ya da özelleştirilmiş bir belge veya çalışma kitabı açılıyor.
+- [Nasıl yapılır: ClickOnce Office çözümü yüklemesi](/previous-versions/bb608592(v=vs.110)) Yayımlama işlemi sırasında oluşturulan Kurulum programını çalıştırarak Office çözümlerini yükleme adımlarını sağlar; Dağıtım bildirim dosyası açılıyor; ya da özelleştirilmiş bir belge veya çalışma kitabı açılıyor.
 
-- [Nasıl yapılır: Office çözümlerini çalıştırmak için son kullanıcı bilgisayarlarına önkoşulları yükler](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98) Çözüm bileşenlerini yüklemeden önce önkoşulları denetleyen bir kurulum programını nasıl oluşturabileceğiniz açıklanmaktadır.
+- [Nasıl yapılır: Office çözümlerini çalıştırmak için son kullanıcı bilgisayarlarına önkoşulları yükler](/previous-versions/bb608608(v=vs.110)) Çözüm bileşenlerini yüklemeden önce önkoşulları denetleyen bir kurulum programını nasıl oluşturabileceğiniz açıklanmaktadır.
 
-- [Nasıl yapılır: Office çözümlerini dağıtmak IÇIN IIS 'Yi hazırlama](https://msdn.microsoft.com/f62bce70-81d4-4f8b-86e6-2f2afec5d9b4) Dağıtım bildirimi için Microsoft Internet Information Services (IIS) üzerinde MIME türünün nasıl yapılandırılacağını açıklar.
+- [Nasıl yapılır: Office çözümlerini dağıtmak IÇIN IIS 'Yi hazırlama](/previous-versions/bb608629(v=vs.110)) Dağıtım bildirimi için Microsoft Internet Information Services (IIS) üzerinde MIME türünün nasıl yapılandırılacağını açıklar.
 
-- [Nasıl yapılır: dağıtılan Office çözümlerini güncelleştirme](https://msdn.microsoft.com/be96db53-b6ea-46ab-b8d9-b76b098b3b13) **Yayımlama sihirbazını**kullanarak bir Office çözümünü güncelleştirme hakkında bilgi sağlar.
+- [Nasıl yapılır: dağıtılan Office çözümlerini güncelleştirme](/previous-versions/bb157871(v=vs.110)) **Yayımlama sihirbazını**kullanarak bir Office çözümünü güncelleştirme hakkında bilgi sağlar.
 
-- [Nasıl yapılır: bir Office çözümünün yükleme yolunu değiştirme](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd) Bir Office çözümünün yükleme yolunun nasıl değiştirileceği hakkında bilgi sağlar.
+- [Nasıl yapılır: bir Office çözümünün yükleme yolunu değiştirme](/previous-versions/bb608626(v=vs.110)) Bir Office çözümünün yükleme yolunun nasıl değiştirileceği hakkında bilgi sağlar.
 
 ## <a name="related-sections"></a>İlgili bölümler
 - [Word kullanarak Izlenecek yollar](../vsto/walkthroughs-using-word.md) Visual Studio 'da Office çözümlerine giriş sağlayan ve Word 'den faydalanan uygulamaları nasıl oluşturabileceğiniz konusunda yardımcı olan adım adım kılavuzlarla ilgili bilgi verilmektedir.

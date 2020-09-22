@@ -1,5 +1,5 @@
 ---
-title: Performans veri toplamayı başlatma ve bitirme | Microsoft Docs
+title: Performans verileri toplamayı başlatma ve bitirme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: eedc7f42f2372452fa2cb96279e8b936bdc15e27
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4d1f22a09070aea8d2a63979c9d6d1bd267269cf
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331336"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851118"
 ---
 # <a name="how-to-start-and-end-performance-data-collection"></a>Nasıl yapılır: performans veri toplamayı başlatma ve bitirme
 Profil oluşturmaya başlamadan önce, profil oluşturmak istediğiniz hedef ikiliyi performans oturumuna eklemeniz gerekir. Bir hedef eklemek için **Performans Gezgini**içinde **hedefler** ' e sağ tıklayın ve ardından **hedef ikilisi Ekle**' ye tıklayın. **Hedef Ikili Ekle** iletişim kutusunda, dosya adını seçin ve ardından **Aç**' a tıklayın. Yeni bir ikili eklenir.

@@ -7,12 +7,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f4aefa741352e80f4a20a51fa1ab36e617403c9c
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: a5531a85bcdff90db816e942d196e0bab3b66139
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427008"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810330"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio performans ipuçları ve püf noktaları
 
@@ -63,7 +63,7 @@ Genellikle hata ayıklama oturumları sırasında belleği azaldıysanız, bir v
 
     Seçenekleri **tüm modüller** yerine **yalnızca belirtilen modüller** olarak ayarlayın ve ardından hangi modülleri yüklemek istediğinizi belirtin. Hata ayıklama sırasında, Ayrıca, simge yüküne bir modül eklemek için **modüller** penceresindeki belirli modüller ' e sağ tıklayabilirsiniz. (Hata ayıklarken pencereyi açmak için **Hata Ayıkla**  >  ' yı seçin. **Windows**  >  **Modüller**.)
 
-    Daha fazla bilgi için bkz. [sembol dosyalarını anlama](/visualstudio/ide/visual-studio-performance-tips-and-tricks?view=vs-2019).
+    Daha fazla bilgi için bkz. [sembol dosyalarını anlama](?view=vs-2019).
 
 - **Tanılama Araçları devre dışı bırak**
 

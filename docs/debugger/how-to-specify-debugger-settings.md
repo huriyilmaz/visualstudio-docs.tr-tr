@@ -1,5 +1,5 @@
 ---
-title: Hata ayıklayıcı ayarlarını belirtme | Microsoft Docs
+title: Hata ayıklayıcı ayarlarını belirtin | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa88d941950cdabe0da873f9184b420c81d5a348
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: b831ae0329adc218ba76fc27206e1f47d0ac8f9c
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599861"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851950"
 ---
 # <a name="how-to-specify-debugger-settings"></a>Nasıl Yapılır: Hata Ayıklama Ayarlarını Belirtme
 İçinde [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , değişkenlerin nasıl görüntülendiğini, belirli uyarıların sunulduğunu, kesme noktalarının nasıl ayarlandığını ve çalışan programları nasıl etkilediğini de içeren hata ayıklayıcı davranışı için çeşitli ayarlar belirtebilirsiniz. **Seçenekler** iletişim kutusunda hata ayıklayıcı ayarlarını belirtirsiniz.

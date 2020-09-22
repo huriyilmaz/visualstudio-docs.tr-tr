@@ -1,5 +1,5 @@
 ---
-title: Windows sembol bilgilerine başvurma | Microsoft Docs
+title: Başvuru pencereleri sembol bilgileri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 88df7c676e6dbd95704716eb8a361f2fce7f66d4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d1527a9fde739ed72af5861a4863dce8e39cbaf
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85328833"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851365"
 ---
 # <a name="how-to-reference-windows-symbol-information"></a>Nasıl yapılır: Başvuru pencereleri sembol bilgileri
 Visual Studio Profil Oluşturma Araçları sembol kullanın (.* pdb*) dosyaları, program ikili dosyalarında işlev adları gibi sembolik adları çözümlemek için. Doğru şekilde indirmek ve güncelleştirmek için aşağıdaki adımları izleyebilirsiniz. Yerel bilgisayardaki Windows sürümü için *pdb* dosyaları.
