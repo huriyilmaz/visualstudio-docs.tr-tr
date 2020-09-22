@@ -1,5 +1,5 @@
 ---
-title: Hata-site IP adresini kullanıyor | Microsoft Docs
+title: Site, IP adresini kullanır | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 58db12ba9dbbc9526ac86262a6be5b2c0a7f765e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b869a536ca3445069d9caf84eb862e407dfbe6dc
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85460552"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852543"
 ---
 # <a name="error-site-uses-ip-address"></a>Hata: Site IP Adresi Kullanıyor
 Hata ayıklayıcı bir IP adresi kullanan bir Web uygulamasına otomatik olarak iliştirmeye çalıştığında bu hata oluşur. Bu durum, **Web sitesi KIMLIĞINI** IIS 'de **belirli IP adresini kullanacak** şekilde değiştirirseniz oluşur.

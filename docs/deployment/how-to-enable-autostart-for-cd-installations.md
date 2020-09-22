@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ff96cdfe412e5016c04daa2b22922b0ec47a3a3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 28fa4830c3ea5ff840e0d58f6d31f718c28ec3fb
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382451"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90850949"
 ---
 # <a name="how-to-enable-autostart-for-cd-installations"></a>Nasıl yapılır: CD yüklemeleri için AutoStart 'ı etkinleştirme
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Uygulama, CD-ROM veya DVD-ROM gibi çıkarılabilir medya aracılığıyla dağıtıldığında, `AutoStart` [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] medya takıldığında uygulamanın otomatik olarak başlatılmasını sağlayabilirsiniz.

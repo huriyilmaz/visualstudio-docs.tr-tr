@@ -1,5 +1,6 @@
 ---
-title: Eski analizden (FxCop) kaynak analizine (FxCop çözümleyicileri) geçiş
+title: FxCop 'den kaynak analizine (FxCop çözümleyicileri) geçiş
+ms.custom: SEO-VS-2020
 description: Kodu ilk kez analiz etmeyi veya ikili analizden (FxCop) kaynak analizini (FxCop çözümleyicileri) kullanarak yönetilen kodu analiz etmenin yeni yoluna nasıl geçireceğinizi öğrenin.
 ms.date: 03/06/2020
 ms.topic: conceptual
@@ -12,12 +13,12 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 76f8da407c0917a3f974a55fd02a1227db5b5d63
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 2109d7cbcaaf56600812e27c3055fb3198848228
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036580"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810213"
 ---
 # <a name="migrate-from-legacy-analysis-fxcop-to-source-analysis-fxcop-analyzers"></a>Eski analizden (FxCop) kaynak analizine (FxCop çözümleyicileri) geçiş
 

@@ -1,5 +1,6 @@
 ---
-title: ClickOnce uygulamaları için istemci bilgisayara güvenilir yayımcı ekleme
+title: Güvenilen yayımcıyı istemci kutusuna Ekle (ClickOnce)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 594c012aaa49a5b62e9f254f924a71f4934d1ebe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4146efe0790e2bfd4abfa9e30897811aba182916
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382620"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809813"
 ---
 # <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>Nasıl yapılır: ClickOnce uygulamaları için bir istemci bilgisayara güvenilir yayımcı ekleme
 Güvenilen uygulama dağıtımı ile, istemci bilgisayarlarını, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamalarınızın kullanıcıya sormadan daha yüksek bir güven düzeyiyle çalışmasını sağlayacak şekilde yapılandırabilirsiniz. Aşağıdaki yordamlarda, bir yayımcının sertifikasını bir istemci bilgisayarındaki Güvenilen Yayımcılar deposuna eklemek için CertMgr.exe komut satırı aracının nasıl kullanılacağı gösterilmektedir.

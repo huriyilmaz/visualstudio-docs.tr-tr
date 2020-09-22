@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a44781c6fea0ecf75dcdb8a5ab2e2b3bed8e52e9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1336af7469b030492b486004940b730d372760bb
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986146"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90807969"
 ---
 # <a name="deploy-an-office-solution-by-using-windows-installer"></a>Windows Installer kullanarak bir Office çözümünü dağıtma
 
@@ -504,7 +504,7 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dağıtım için Office çözüm önkoşulları](https://msdn.microsoft.com/library/9f672809-43a3-40a1-9057-397ce3b5126e)
+- [Dağıtım için Office çözüm önkoşulları](/previous-versions/bb608617(v=vs.110))
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
 - [VSTO eklentileri için kayıt defteri girişleri](../vsto/registry-entries-for-vsto-add-ins.md)
 - [Özel belge özelliklerine genel bakış](../vsto/custom-document-properties-overview.md)

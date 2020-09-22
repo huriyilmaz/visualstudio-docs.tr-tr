@@ -1,5 +1,5 @@
 ---
-title: Hata-sunucuda otomatik olarak adımla | Microsoft Docs
+title: Sunucuda otomatik olarak adımaktarılamıyor | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 647f51314d5506e817fa6982aa693b62f62125cf
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 60c7fac588985c692cd3e432235637e3f82ee852
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599916"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852686"
 ---
 # <a name="error-unable-to-automatically-step-into-the-server"></a>Hata: Sunucunun İçine Otomatik Olarak Adımlanamıyor
 Hata şunu okur:

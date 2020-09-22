@@ -1,5 +1,6 @@
 ---
-title: Kaynak dosyaları/ortak özellikler/çözüm özellik sayfalarında hata ayıkla
+title: Kaynak dosyaları/çözüm özelliği sayfalarında hata ayıkla
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -22,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 735432db485277e2265479e625f5e8acaa2cc2e3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3057a6a94edb09018836493257e8d875d938b839
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738396"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809550"
 ---
 # <a name="debug-source-files-common-properties-solution-property-pages-dialog-box"></a>Kaynak Dosyalarda Hata Ayıklama, Ortak Özellikler, Çözüm Özellik Sayfaları İletişim Kutusu
 Bu özellik sayfası, çözüm hata ayıkladığında hata ayıklayıcının kaynak dosyaları arayacağı yeri belirtir.

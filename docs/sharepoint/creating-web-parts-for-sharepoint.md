@@ -23,12 +23,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3825ef7d2c1c90f63a90f5028063c74332543841
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4824c358f81f2cf757f037611ed70ba9b8935130
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015053"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740163"
 ---
 # <a name="create-web-parts-for-sharepoint"></a>SharePoint için Web bölümleri oluşturma
   Web bölümleri 'ni kullanarak bir SharePoint sitesinin sayfalarının içeriğini, görünümünü ve davranışını bir tarayıcı kullanarak değiştirebilirsiniz. Web bölümleri, bir Web Bölümü sayfası içinde çalışan sunucu tarafı denetimleridir: bir SharePoint sitesinde görünen sayfaların yapı taşlarıdır. Bkz. [Yapı bloğu: Web bölümleri](/previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14)).
@@ -85,7 +85,7 @@ ms.locfileid: "86015053"
 
 - Görsel Web bölümleri $SPUrl gibi SharePoint Server belirteçlerini doğrudan desteklemez. Daha fazla bilgi için [SharePoint çözümlerinin sorunlarını giderme](../sharepoint/troubleshooting-sharepoint-solutions.md)konusundaki "korumalı Visual Web bölümleri 'Da belirteç kısıtlamaları" konusuna bakın.
 
-- Bir korumalı çözüm içindeki Visual Web bölümleri bazen hata alır, "korumalı kod ana bilgisayar hizmeti isteği işleyemeyecek kadar meşgul olduğu için korumalı kod yürütme isteği reddedildi." Bu hata hakkında daha fazla bilgi için [SharePoint Geliştirici ekibi bloguna](https://blogs.msdn.microsoft.com/sharepointdev/2011/02/08/error-the-sandboxed-code-execution-request-was-refused-because-the-sandboxed-code-host-service-was-too-busy-to-handle-the-request-ricky-kirkham/#10149157)bu gönderisine bakın.
+- Bir korumalı çözüm içindeki Visual Web bölümleri bazen hata alır, "korumalı kod ana bilgisayar hizmeti isteği işleyemeyecek kadar meşgul olduğu için korumalı kod yürütme isteği reddedildi." Bu hata hakkında daha fazla bilgi için [SharePoint Geliştirici ekibi bloguna](/archive/blogs/sharepointdev/error-the-sandboxed-code-execution-request-was-refused-because-the-sandboxed-code-host-service-was-too-busy-to-handle-the-request-ricky-kirkham#10149157)bu gönderisine bakın.
 
 - Sunucu tarafı JavaScript hata ayıklaması Visual Studio 'da desteklenmez, ancak istemci tarafı JavaScript hata ayıklaması desteklenir.
 

@@ -1,5 +1,6 @@
 ---
-title: Izleme kullanarak ayrıntılı zamanlama verileri toplama | Microsoft Docs
+title: İzleme kullanarak ayrıntılı zamanlama verileri toplama
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 682ae4bf31f44f3dff5f6dfadf7b8c316d9d9721
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2b5082066de22bee3954b297f30eebb7d89ec607
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331853"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810776"
 ---
 # <a name="collect-detailed-timing-data-by-using-instrumentation"></a>İzleme kullanarak ayrıntılı zamanlama verileri toplama
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Profil oluşturma araçları izleme yöntemi, profil oluşturma kodunu bir modülün kopyasına çıkarır. Kod, bir profil oluşturma çalışması sırasında modüldeki işlevlerin her bir girdisini, çıkış ve işlev çağrısını kaydeder. İzleme yöntemi, kodunuzun bir bölümü hakkında ayrıntılı zamanlama bilgileri toplamak ve giriş ve çıkış işlemlerinin uygulama performansı üzerinde etkisini anlamak için yararlıdır.

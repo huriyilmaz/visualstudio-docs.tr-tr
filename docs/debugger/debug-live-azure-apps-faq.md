@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e0d8839daac2d470f4275257bfcfbc83fc7a62f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f8afc67b92a943dd571847bb1a00fb7e4db4514b
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911400"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851105"
 ---
 # <a name="frequently-asked-questions-for-snapshot-debugging-in-visual-studio"></a>Visual Studio 'da anlık görüntü hata ayıklaması için sık sorulan sorular
 
@@ -103,7 +103,7 @@ Sanal makine/sanal makine ölçek kümeleri için uzaktan hata ayıklayıcı uza
 
 2. Sertifikaları ve Azure Keykasasını kaldırma
 
-   Sanal makine veya sanal makine ölçek kümeleri için uzaktan hata ayıklayıcı uzantısı yüklenirken, Azure sanal makinesi/sanal makine ölçek kümeleri kaynaklarıyla VS istemcisinin kimliğini doğrulamak için hem istemci hem de sunucu sertifikaları oluşturulur.
+   Sanal makine veya sanal makine ölçek kümeleri için uzaktan hata ayıklayıcı uzantısı yüklenirken, Visual Studio istemcisinin kimliğini Azure sanal makinesi/sanal makine ölçek kümeleri kaynaklarıyla doğrulamak için hem istemci hem de sunucu sertifikaları oluşturulur.
 
    - Istemci sertifikası
 
@@ -124,7 +124,7 @@ Sanal makine/sanal makine ölçek kümeleri için uzaktan hata ayıklayıcı uza
       ```
 
    - Sunucu sertifikası
-      - Karşılık gelen sunucu sertifikası parmak izi, Azure Keykasasında gizli dizi olarak dağıtılır. VS, sanal makine veya sanal makine ölçek kümeleri kaynağına karşılık gelen bölgede MSVSAZ * önekiyle bir Keykasası bulmayı veya oluşturmayı dener. Bu bölgeye dağıtılan tüm sanal makine veya sanal makine ölçek kümeleri kaynakları aynı anahtar kasasını paylaşır.
+      - Karşılık gelen sunucu sertifikası parmak izi, Azure Keykasasında gizli dizi olarak dağıtılır. Visual Studio, sanal makine veya sanal makine ölçek kümeleri kaynağına karşılık gelen bölgede MSVSAZ * önekiyle bir Keykasası bulmayı veya oluşturmayı dener. Bu bölgeye dağıtılan tüm sanal makine veya sanal makine ölçek kümeleri kaynakları aynı anahtar kasasını paylaşır.
       - Sunucu sertifikası parmak izi gizli anahtarını silmek için Azure portal gidin ve parolanızı barındıran bölgede MSVSAZ * Keykasasını bulun. Etiketlenmesi gereken gizli anahtarı sil `remotedebugcert<<ResourceName>>`
       - Ayrıca, PowerShell aracılığıyla kaynağından sunucu parolasını da silmeniz gerekir.
 

@@ -1,5 +1,6 @@
 ---
-title: ClickOnce uygulaması ile önkoşulları nasıl yüklenir | Microsoft Docs
+title: ClickOnce uygulamasıyla önkoşulları yükler
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ce4ad97439d330a6fc51e741e9ea05ef53a5798a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 52e815c45f776635d811c073114e22c3bd002de0
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382386"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809126"
 ---
 # <a name="how-to-install-prerequisites-with-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulamasıyla önkoşulları yüklemek
 Tüm [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamalar, çalıştırılmadan önce bir bilgisayara .NET Framework 'nin doğru sürümünün yüklü olmasını gerektirir; birçok uygulamanın da başka önkoşulları da vardır. Bir uygulamayı yayımlarken [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , uygulamanızla birlikte paketlenebilmeniz için bir önkoşul bileşenleri kümesi seçebilirsiniz. Yükleme zamanında, her önkoşul için, zaten mevcut olup olmadığını belirlemede bir denetim gerçekleştirilecek. Aksi takdirde, uygulama yüklenmeden önce yüklenir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .

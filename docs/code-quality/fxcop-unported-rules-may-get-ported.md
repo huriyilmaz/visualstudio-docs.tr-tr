@@ -1,5 +1,5 @@
 ---
-title: Desteklenmeyen kuralların kaldırılması
+title: Taşınabilir kaldırılmış kurallar
 ms.date: 05/21/2019
 ms.topic: reference
 helpviewer_keywords:
@@ -10,21 +10,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 904ce26ee05c6e5b9bd3d2f36a12fd7882edffc3
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: abb79b8e726bd7dd116ab3298180497f61481c61
+ms.sourcegitcommit: 4a9689890f271f9b8b73c3333e0699cce84a95d8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511108"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90832170"
 ---
-# <a name="unported-rules-that-may-be-ported"></a>Desteklenmeyen kuralların kaldırılması
+# <a name="unported-rules-that-may-be-ported"></a>Taşınabilir kaldırılmış kurallar
 
 Aşağıdaki FxCop eski analiz kuralları henüz çözümleyiciler olarak uygulanmadı, ancak yine de olabilir. Bunun nedeni, bir engelleme teknik nedeni veya kuralın daha düşük öncelikli olması olabilir. Her kuralın taşıma durumu hakkında daha fazla bilgi için, **izleme sorunu** sütunundaki bağlantıya tıklayın.
 
 Kural Kimliği | Sorun izleniyor
 --- | ---
 [CA1004](ca1004.md) | [https://github.com/dotnet/roslyn-analyzers/issues/370](https://github.com/dotnet/roslyn-analyzers/issues/370)
-[CA1006](ca1006.md) | [https://github.com/dotnet/roslyn-analyzers/issues/372](https://github.com/dotnet/roslyn-analyzers/issues/372)
 [CA1007](ca1007.md) | [https://github.com/dotnet/roslyn-analyzers/issues/373](https://github.com/dotnet/roslyn-analyzers/issues/373)
 [CA1011](ca1011.md) | [https://github.com/dotnet/roslyn-analyzers/issues/375](https://github.com/dotnet/roslyn-analyzers/issues/375)
 [CA1013](ca1013.md) | [https://github.com/dotnet/roslyn-analyzers/issues/376](https://github.com/dotnet/roslyn-analyzers/issues/376)

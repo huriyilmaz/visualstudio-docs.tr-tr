@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1000504ad83706bd028af4bd668da7483e478b7a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c838eddea5b3118c28fb33411a8c58a19d7b4a2d
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62978386"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810960"
 ---
 # <a name="secure-deployment"></a>Güvenli dağıtım
   Bir Office çözümü oluşturduğunuzda, projenizdeki kodun çalışmasına izin vermek için geliştirme bilgisayarınız otomatik olarak güncelleştirilir. Bununla birlikte, çözümünüzü dağıtırken, çözümü bir sertifikayla imzalayarak veya güven istemi anahtarını kullanarak bir güven kararı temelleyen kanıt sağlamanız gerekir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Daha fazla bilgi için bkz. [Office çözümlerine güven verme](../vsto/granting-trust-to-office-solutions.md).
@@ -46,5 +46,5 @@ ms.locfileid: "62978386"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
-- [Bilgisayarları çalıştırmak veya Office çözümlerini barındırmak için hazırlama](https://msdn.microsoft.com/be1b173f-7261-4d74-aa4e-94ccd43db8d8)
+- [Bilgisayarları çalıştırmak veya Office çözümlerini barındırmak için hazırlama](/previous-versions/bb772092(v=vs.110))
 - [Güvenli Office çözümleri](../vsto/securing-office-solutions.md)

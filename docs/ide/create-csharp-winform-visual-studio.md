@@ -13,12 +13,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 79fb60f05d12b1105febc12a218b1f36ee498deb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a06a6885c3d0858f60c8de48dd61054534aad40f
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88248735"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809052"
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-c"></a>C ile Visual Studio 'da Windows Forms uygulaması oluşturma\#
 
@@ -164,6 +164,6 @@ Daha fazla bilgi edinmek için aşağıdaki öğreticiyle devam edin:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Diğer C# öğreticileri](/visualstudio/get-started/csharp/)
-* [Visual Basic öğreticileri](/visualstudio/get-started/visual-basic/)
+* [Diğer C# öğreticileri](../get-started/csharp/index.yml)
+* [Visual Basic öğreticileri](../get-started/visual-basic/index.yml)
 * [C++ öğreticileri](/cpp/get-started/tutorial-console-cpp)

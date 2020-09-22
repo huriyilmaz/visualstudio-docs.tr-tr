@@ -1,5 +1,5 @@
 ---
-title: Uygulama ve dağıtım bildirimlerini yeniden imzalama | Microsoft Docs
+title: Uygulama ve dağıtım bildirimlerini yeniden imzala | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c8c76a789ac4a50e1128dc0897b9a08a185117a
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: 2a221eea7314ad79020437208bdba4fcb6b6972e
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641602"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851690"
 ---
 # <a name="how-to-re-sign-application-and-deployment-manifests"></a>Nasıl yapılır: uygulama ve dağıtım bildirimlerini yeniden imzalama
 Uygulama bildiriminde Windows Forms uygulamalar, Windows Presentation Foundation uygulamalar (XBAP) veya Office çözümleri için dağıtım özelliklerinde değişiklikler yaptıktan sonra, hem uygulama hem de dağıtım bildirimlerini bir sertifikayla yeniden imzalamanız gerekir. Bu işlem, değiştirilen dosyaların son kullanıcı bilgisayarlarında yüklü olmamasını sağlamaya yardımcı olur.

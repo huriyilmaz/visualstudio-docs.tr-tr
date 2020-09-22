@@ -1,5 +1,5 @@
 ---
-title: Pencere özelliklerini görüntüleme | Microsoft Docs
+title: Pencere özelliklerini görüntüle | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d90ecf7745c609bac6267eaa9abd75b5bfe755c7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c2eed4d85d01711fedd6235a45f5e8ea3a3340ca
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349776"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852289"
 ---
 # <a name="how-to-display-window-properties"></a>Nasıl yapılır: Pencere Özelliklerini Görüntüleme
 [Windows görünümünde](../debugger/windows-view.md)listelenen bir pencere hakkında daha fazla bilgi edinmek Için [Pencere özellikleri iletişim kutusunu](../debugger/window-properties-dialog-box.md)kullanın.

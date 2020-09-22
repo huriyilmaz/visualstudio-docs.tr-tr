@@ -1,5 +1,5 @@
 ---
-title: Hata-Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi (MSVSMON.EXE) uzak bilgisayarda çalışmıyor gibi görünüyor.
+title: Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi (MSVSMON.EXE) uzak bilgisayar üzerinde çalışıyor görünmüyor.
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 11/04/2016
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ba7fb30bcb5ac04a823b4ba654382ac23a966fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fe0fc33c142c1bc70655817f833ae7c80fc628e7
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85460617"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852582"
 ---
 # <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a>Hata: Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi (MSVSMON.EXE) uzak bilgisayar üzerinde çalışıyor görünmüyor.
 Bu hata iletisi, Visual Studio 'nun uzak bilgisayarda doğru Visual Studio Uzaktan Hata Ayıklama İzleyicisi örneğini bulamadığı anlamına gelir. Uzaktan hata ayıklamanın çalışması için Visual Studio Uzaktan Hata Ayıklama İzleyicisi yüklü olmalıdır. Uzaktan hata ayıklayıcıyı indirme ve ayarlama hakkında daha fazla bilgi için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).

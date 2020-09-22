@@ -1,5 +1,5 @@
 ---
-title: Hata-RPC kimlik doğrulaması gerektiriyor | Microsoft Docs
+title: RPC kimlik doğrulaması gerektiriyor | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e98daf3697c86eec7767135c9ad85d67cd6e958a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9bb172455226ab290a74da07e97fc40deb30b6ba
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85460591"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852556"
 ---
 # <a name="error-rpc-requires-authentication"></a>Hata: RPC Kimlik Doğrulaması Gerektiriyor
 Visual Studio hata ayıklayıcı uzak bilgisayara bağlanamıyor. Yerel bilgisayarda uzaktan hata ayıklamayı önleyen bir RPC ilkesi etkinleştirilir.

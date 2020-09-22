@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 53e36d993e72da759c87e7d2d2f908818b3d9024
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0e7bcb4c03a274c958b097ab7869cb58120b0ee7
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62580650"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740150"
 ---
 # <a name="deploy-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Visual Studio 'da SharePoint araçları için uzantıları dağıtma
 
@@ -234,11 +234,11 @@ SharePoint araçları uzantınızın VSıX paketini el ile oluşturmak isterseni
 
     - `Microsoft.VisualStudio.MefComponent`Öğesinin altına bir öğesi ekleyin `Assets` ve ardından New ÖĞESININ değerini VSIX paketinde uzantınızı uygulayan derlemenin göreli yolu olarak ayarlayın. Daha fazla bilgi için bkz. [MefComponent öğesi (VSX şeması)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\)).
 
-    - Uzantınız SharePoint için sunucu nesne modeline çağıran bir SharePoint komutu içeriyorsa, `Microsoft.VisualStudio.Assembly` öğe altına bir öğe ekleyin `Assets` . Yeni öğenin değerini VSıX paketindeki SharePoint komutunu uygulayan derlemenin göreli yoluna ayarlayın. Daha fazla bilgi için bkz. [varlık öğesi (VSX şeması)](https://msdn.microsoft.com/9fcfc098-edc7-484b-9d4c-acd17829d737).
+    - Uzantınız SharePoint için sunucu nesne modeline çağıran bir SharePoint komutu içeriyorsa, `Microsoft.VisualStudio.Assembly` öğe altına bir öğe ekleyin `Assets` . Yeni öğenin değerini VSıX paketindeki SharePoint komutunu uygulayan derlemenin göreli yoluna ayarlayın. Daha fazla bilgi için bkz. [varlık öğesi (VSX şeması)](/previous-versions/dd393737(v=vs.110)).
 
     - Uzantınız bir proje şablonu veya öğe şablonu içeriyorsa, `ProjectTemplate` öğe altına bir veya `ItemTemplate` öğesi ekleyin `Assets` . Yeni öğenin değerini VSıX paketindeki şablonu içeren klasörün göreli yoluna ayarlayın. Daha fazla bilgi için bkz. [ProjectTemplate öğesi (VSX şeması)](/previous-versions/visualstudio/visual-studio-2010/dd393735\(v\=vs.100\)) ve [ItemTemplate öğesi (VSX şeması)](/previous-versions/visualstudio/visual-studio-2010/dd393681\(v\=vs.100\)).
 
-    - Uzantınız bir proje şablonu veya öğe şablonu için özel bir sihirbaz içeriyorsa, `Assembly` öğe altına bir öğe ekleyin `Assets` . Yeni öğenin değerini VSıX paketindeki derlemenin göreli yoluna ayarlayın ve ardından `AssemblyName` özniteliği tam derleme adı (sürüm, kültür ve ortak anahtar belirteci dahil) olarak ayarlayın. Daha fazla bilgi için bkz. [dependency öğesi (VSX şeması)](https://msdn.microsoft.com/1f63f60a-98ad-48ec-8e44-4eba383d3e37).
+    - Uzantınız bir proje şablonu veya öğe şablonu için özel bir sihirbaz içeriyorsa, `Assembly` öğe altına bir öğe ekleyin `Assets` . Yeni öğenin değerini VSıX paketindeki derlemenin göreli yoluna ayarlayın ve ardından `AssemblyName` özniteliği tam derleme adı (sürüm, kültür ve ortak anahtar belirteci dahil) olarak ayarlayın. Daha fazla bilgi için bkz. [dependency öğesi (VSX şeması)](/previous-versions/dd393682(v=vs.110)).
 
 ### <a name="example"></a>Örnek
 

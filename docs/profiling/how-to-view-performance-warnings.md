@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c7121b3c860a43efde6268c240adb9a8287fc261
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: acd6fea43fcf256b91b4bdafad10f47c11523f92
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331329"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851326"
 ---
 # <a name="how-to-view-performance-warnings"></a>Nasıl yapılır: Performans uyarılarını görüntüleme
 Profil Oluşturma Araçları Profil Oluşturma Araçları performans uyarıları, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] programın yürütülmesini yavaşlatabilecek, profili oluşturulmuş bir uygulamadaki sorunları gösterir. Uyarılar Ayrıca daha faydalı veriler toplamak için koleksiyon yöntemlerini değiştirmek isteyebileceğiniz anlamına da gelebilir. Performans uyarıları bir profil oluşturma oturumunda otomatik olarak oluşturulur ve bir profil oluşturma veri dosyası IDE 'de açıldığında **hata listesi** penceresinde görüntülenir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
