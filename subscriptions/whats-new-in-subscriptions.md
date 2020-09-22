@@ -8,12 +8,12 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 2dc938b5-37e9-4dfc-8676-5d0a91d366ab
-ms.openlocfilehash: c19bb72a7d5262c5d0864d12d44266c8ef016acf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c7276666b5ff02fbee03ebe8f88987257b0e50c1
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649689"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005296"
 ---
 # <a name="what39s-new-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde ne&#39;yenidir
 
@@ -33,7 +33,7 @@ Ayrıca, bir açılan menü **+ Ekle** menüsünde birlikte bulunan ve toplu ekl
 Microsoft hesaplarını (MSA) kullanan aboneleri Azure Active Directory (Azure AD) ile eşleştirmeye çok daha kolay hale getirebiliyoruz. böylece, iki kimliği hızlıca bağlayabilirsiniz.  Azure AD kimliklerini kullanmak daha yüksek güvenlik ve daha kolay abonelik yönetimi sağlar.  Daha fazla bilgi için [kişisel oturum açma makalemize](personal-email-sign-ins.md) göz atın. 
 
 #### <a name="add-subscribers-using-azure-active-directory-groups"></a>Azure Active Directory grupları kullanarak abone ekleme
-Kuruluşunuz Azure Active Directory (Azure AD) kullanıyorsa, artık Azure AD gruplarını kullanarak abonelikleri yönetebilirsiniz.  Gruplara abonelik atamak, birden çok kullanıcıya aynı türdeki abonelikleri çok hızlı bir şekilde sağlama olanağı sunar.  Azure AD grubuna yeni kullanıcılar eklendiğinde, bu kullanıcılara otomatik olarak bir abonelik atanır.  Bir Kullanıcı Azure AD grubundan kaldırılırsa, abonelikleri de kaldırılır.  Bu, kuruluşunuzun abonelik yönetimini otomatikleştirmesine, yönetim ve zaman ve çaba tasarrufu sağlamanıza yardımcı olur.  Ayrıntılar için belgelerimizde [birden çok Kullanıcı Ekle](https://docs.microsoft.com/visualstudio/subscriptions/assign-license-bulk#use-azure-active-directory-groups-to-assign-subscriptions) makalesine göz atın. 
+Kuruluşunuz Azure Active Directory (Azure AD) kullanıyorsa, artık Azure AD gruplarını kullanarak abonelikleri yönetebilirsiniz.  Gruplara abonelik atamak, birden çok kullanıcıya aynı türdeki abonelikleri çok hızlı bir şekilde sağlama olanağı sunar.  Azure AD grubuna yeni kullanıcılar eklendiğinde, bu kullanıcılara otomatik olarak bir abonelik atanır.  Bir Kullanıcı Azure AD grubundan kaldırılırsa, abonelikleri de kaldırılır.  Bu, kuruluşunuzun abonelik yönetimini otomatikleştirmesine, yönetim ve zaman ve çaba tasarrufu sağlamanıza yardımcı olur.  Ayrıntılar için belgelerimizde [birden çok Kullanıcı Ekle](./assign-license-bulk.md#use-azure-active-directory-groups-to-assign-subscriptions) makalesine göz atın. 
 
 ### <a name="cast-highlight"></a>CAST Highlight
 İş ortağımız, atama Vurgumız tarafından sunulan avantajların bir genişletmesinin duyurulduğu için mutluyuz. 

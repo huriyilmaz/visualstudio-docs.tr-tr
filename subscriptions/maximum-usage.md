@@ -7,12 +7,12 @@ ms.assetid: c473b01f-2dfe-4cc2-ad29-bb5e2a268123
 ms.date: 09/16/2020
 ms.topic: conceptual
 description: Yönetici portalında en fazla atanmış abonelik sayısını görüntülemeyi öğrenin
-ms.openlocfilehash: 60f9961d400e8ce675e6cfb228f9f7bee36c74a0
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: f13fc75d2c359b05f74d781a3d6a8d0de99d39ff
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90807943"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005878"
 ---
 # <a name="use-the-maximum-usage-feature-to-track-the-number-of-assigned-subscriptions"></a>Atanan aboneliklerin sayısını izlemek için en yüksek kullanım özelliğini kullanın
 Visual Studio abonelikleri yönetim portalındaki yeni bir özellik, satın almış ve atanan aboneliklerin sayısını izlemenize ve atadığınız her bir düzeyin abonelik sayısını, hem geçmiş yıl içinde hem de sözleşmenizin süresi boyunca ne kadar yüksek olduğunu belirlemenize yardımcı olur. 
@@ -48,12 +48,11 @@ Y: genel görünümde bulunan bilgiler, her abonelik düzeyi için *geçerli* at
 - [Toplu Lisanslama Koşulları](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 - Abonelik atamaları veya yönetim portalının diğer yönleri hakkında sorularınız varsa, lütfen https://visualstudio.microsoft.com/subscriptions/support/ Yardım için iletişime geçin. 
 - Fazla [yüklemeleri](handle-overclaimed-license.md)olarak adlandırılan, satın aldığınız daha fazla abonelik atarsanız yapılacaklar hakkında daha fazla bilgi edinin.
-

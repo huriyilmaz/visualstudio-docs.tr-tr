@@ -7,12 +7,12 @@ ms.assetid: 89e3fcf9-fe5d-4266-8dd7-5567d05fe869
 ms.date: 09/18/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde ürün anahtarlarınızı edinme ve yönetme hakkında bilgi edinin.
-ms.openlocfilehash: 8a7a2551b98672332af88210a0347c9ee3faf2cc
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 389a57fb2e8fe0ea6ee81ee163fed052c441c209
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809165"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005852"
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde ürün anahtarlarını kullanma
 
@@ -66,7 +66,7 @@ Tüm anahtarlar, [ürün anahtarları](https://my.visualstudio.com/productkeys?w
 |    Anahtar türü           |    Açıklama                                                                                                                                                                                                           |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Geçerli değil                    |    Bu ürünü yüklemek için gereken anahtar yok.                                                       |
-|    Perakende                     |    Perakende tuşları çoklu etkinleştirmeleri sağlar ve ürünün perakende yapıları için kullanılır. Çoğu durumda, her anahtar için 10 etkinleştirmeye izin verilir, ancak aynı makinede genellikle daha fazlasına izin verilir.                                                       |
+|    Retail                     |    Perakende tuşları çoklu etkinleştirmeleri sağlar ve ürünün perakende yapıları için kullanılır. Çoğu durumda, her anahtar için 10 etkinleştirmeye izin verilir, ancak aynı makinede genellikle daha fazlasına izin verilir.                                                       |
 |    Çoklu etkinleştirme        |    Çoklu etkinleştirme anahtarı (MAK), aynı anahtarla bir ürünün birden çok yüklemesini etkinleştirmenizi sağlar. Mak 'leri, genellikle ürünlerin toplu lisanslama sürümleriyle kullanılır. Genellikle, abonelik başına yalnızca bir MAK anahtarı sağlanır.    |
 |    Statik etkinleştirme anahtarı    |    Statik etkinleştirme anahtarları, etkinleştirme gerektirmeyen ürünler için sağlanır. Bunlar, herhangi bir sayıda yükleme için kullanılabilir.                                                                                                                  |
 |    Özel anahtar                 |    Özel anahtarlar, ürünü etkinleştirmek veya yüklemek için özel eylemler veya bilgiler sağlar.                                                                                                                                                                |
@@ -80,10 +80,10 @@ Tüm anahtarlar, [ürün anahtarları](https://my.visualstudio.com/productkeys?w
 Ürünün karşıdan yükleme sayfasından bir anahtar talep edebilir veya [ürün anahtarları](https://my.visualstudio.com/productkeys) sayfasında ihtiyacınız olan anahtarı arayabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Anahtarları talep etmek için adresini ziyaret edin https://my.visualstudio.com/productkeys .  

@@ -7,12 +7,12 @@ ms.assetid: 21e0471d-ad59-4d21-9c6f-13f7147569af
 ms.date: 09/08/2020
 ms.topic: conceptual
 description: Bulut abonelikleri için faturalandırma soruları.
-ms.openlocfilehash: 987dddcf54f218d63580995b363ad838f2de83b4
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: ae99e6e843636efc6d81a0c4feebfd3e306f6319
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641439"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006010"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Visual Studio Cloud abonelikleri faturalama hakkında SSS
 Bulut ve standart Visual Studio abonelikleri arasındaki karşılaştırmalar, abone avantajları hakkındaki ayrıntılar ve daha fazlası ile her bir Visual Studio aboneliğinin avantajlarını anlamak için [bulut aboneliği avantajlarını ve fiyatlandırmasını karşılaştırdığınızdan](https://visualstudio.microsoft.com/vs/pricing/) emin olun.
@@ -97,10 +97,10 @@ Y: Evet, satıcınız bulut çözümü sağlayıcısı (CSP) programına katıl�
 - [CSP 'Ler için Visual Studio bulut aboneliği satın alma](vscloud-csp.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Bulut aboneliklerini şimdi satın alın

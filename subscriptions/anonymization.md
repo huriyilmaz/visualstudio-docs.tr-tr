@@ -7,12 +7,12 @@ ms.assetid: ce5fc8a4-484c-4df6-97c3-cb60174fb66b
 ms.date: 02/20/2020
 ms.topic: conceptual
 description: Aboneliklerde erişim kesildiğinde abone verilerinin nasıl anonimleştirilmemiş olduğunu öğrenin.
-ms.openlocfilehash: b65673d2fe61f62bf9e7731d20763bcd8c6f74bf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1b3cbd56123c80a96f36925ae98c171e84860798
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80232734"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006195"
 ---
 # <a name="anonymization-of-visual-studio-subscriber-information"></a>Visual Studio abone bilgilerini anonimleştirme
 Bir aboneliğin kullanım süresi veya bir abonenin oturum açma hesabı silme gibi bir abonelik kullanımını engelleyen bir olay meydana geldiğinde, kullanıcının ad ve oturum açma hesabı gibi kişisel bilgileri, bunları kullanılamaz hale getirecek şekilde karmaşıklamaz.  Bu, abonenin kişisel bilgilerini korumak için yapılır.
@@ -43,12 +43,10 @@ Y: Bu sorunu önlemenin iki yolu vardır:
 - AAD ve MSA kimliklerini kiracı aracılığıyla ilişkilendirin. 
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-[MSA ve AAD kimliklerini ilişkilendirerek](https://docs.microsoft.com/azure/active-directory/b2b/add-users-administrator)anonimleştirme yapmayı nasıl önleyeceğinizi öğrenin.
-
-
+[MSA ve AAD kimliklerini ilişkilendirerek](/azure/active-directory/b2b/add-users-administrator)anonimleştirme yapmayı nasıl önleyeceğinizi öğrenin.

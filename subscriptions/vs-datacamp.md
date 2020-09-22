@@ -7,12 +7,12 @@ ms.assetid: fc33d419-78cf-485e-b558-5b7efa900f14
 ms.date: 04/17/2020
 ms.topic: how-to
 description: Seçili Visual Studio abonelikleriyle birlikte bulunan veri Camp eğitim aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: b164dc4be4a06151b970ecd5522b82bde9aaeec7
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 67fa9a68a22ee909c4c483246be7dc26c789c5f0
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561500"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006338"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde DataCamp eğitimi avantajı
 Uygun Visual Studio abonelikleri, DataCamp abonelikleri içerir.  DataCamp ile, tarayıcınızın rahatlığıyla ihtiyacınız olan tüm veri bilimi yeteneklerini öğrenebilirsiniz. Ne zaman ve ne zaman öğreneceğinizi seçebilirsiniz. Yüklenecek yazılım olmadan ve özel donanım gereksinimleri olmadan öğrenme veri bilimi her zamankinden daha kolay.
@@ -84,10 +84,10 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.vi
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Aboneliğinizde daha fazla profesyonel geliştirme fırsatına göz atın:

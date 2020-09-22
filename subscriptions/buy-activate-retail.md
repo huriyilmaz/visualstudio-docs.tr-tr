@@ -7,12 +7,12 @@ ms.assetid: 76654645-08ee-445d-b9ee-123126d1f0fb
 ms.date: 04/13/2020
 ms.topic: how-to
 description: Visual Studio aboneliklerini Microsoft Store nasıl satın alabileceğinizi ve bunları Visual Studio abonelikleri portalında nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: 9eb4812d22096e9d36089e464dc9a37478480458
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 244d6e6a0e5ccd6bf98b0e95d2165459cbe492c4
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561581"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005969"
 ---
 # <a name="visual-studio-subscriptions-are-available-through-the-microsoft-store"></a>Visual Studio abonelikleri Microsoft Store aracılığıyla kullanılabilir
 Visual Studio abonelikleri, [toplu lisanslama](https://www.microsoft.com/licensing/default), bulut çözümü sağlayıcıları, [Visual Studio Market](https://marketplace.visualstudio.com/subscriptions)ve Microsoft Store dahil olmak üzere çeşitli kanallar aracılığıyla kullanılabilir.  Bu makale, [Microsoft Store](https://www.microsoft.com/store/collections/visualstudio)aracılığıyla abonelikleri satın almayı ve etkinleştirmeyi keşfedecektir.  
@@ -48,10 +48,10 @@ Microsoft Store aracılığıyla bir Visual Studio aboneliği satın aldıktan s
 Microsoft Store aracılığıyla satın alma hakkında sorularınız varsa, yardım sunulmaktadır.  [Desteğe Microsoft Store](https://support.microsoft.com/help/28808/microsoft-store-contact-support?ocid=MSCOMStoreFooter-ContactUs)başvurun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Aboneliğinizi etkinleştirdikten sonra, aboneliklerinize dahil olan tüm araçlar, hizmetler, eğitimler ve destek avantajlarını görmek için [avantajlar](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) sayfasını ziyaret edin.  Başlamak için bu avantajları ayarlamayı öneririz:

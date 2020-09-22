@@ -7,12 +7,12 @@ ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
 ms.date: 08/04/2020
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerine dahil edilen Pluralsel eğitim aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: 87cc42e2a0d4c8c95c771a88413b4a8af70bdc14
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 26056c823dc4ab67f576eb430b85caac26d854af
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509763"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005348"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde pluralalsel eğitim avantajları
 
@@ -111,12 +111,12 @@ Y: ücretsiz çoğul aboneliğin sonunda, doğrudan Pluraldan bir abonelik satı
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Hesabınızı oluşturduktan sonra eğitime başlamaya hazırsınız demektir.  [https://www.pluralsight.com](https://www.pluralsight.com)Yeni bir kurs başlatmak veya sürmekte olan bir kursa geri dönmek için sayfanın sağ üst köşesindeki **oturum aç** ' ı ziyaret edin ve dokunun.
 
-[Azure DevTest bireysel kredilerinizi](vs-azure.md)etkinleştirerek kendi geliştirme korumalı ağınızın avantajlarından yararlanın. 
+[Azure DevTest bireysel kredilerinizi](vs-azure.md)etkinleştirerek kendi geliştirme korumalı ağınızın avantajlarından yararlanın.

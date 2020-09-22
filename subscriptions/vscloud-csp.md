@@ -7,12 +7,12 @@ ms.assetid: d2ab13ed-ef79-4ef0-8736-eccd04bc6020
 ms.date: 03/24/2020
 ms.topic: conceptual
 description: Müşterileriniz için Visual Studio bulut aboneliklerinin nasıl satın alınacağı ve yönetileceği ile ilgili bulut çözümü sağlayıcılarına yönelik bilgiler.
-ms.openlocfilehash: 76c56759fdc07104290c45d1c4fc345bf0bad8b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9c263486259529e7eb4e19ea4cc3f8ad8520b039
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80273874"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006234"
 ---
 # <a name="buy-and-manage-visual-studio-cloud-subscriptions-for-your-customers"></a>Müşterileriniz için Visual Studio bulut abonelikleri satın alın ve yönetin
 [Bulut çözümü sağlayıcısı (CSP)](https://partner.microsoft.com/cloud-solution-provider) programındaki iş ortakları, müşterileri için Visual Studio Enterprise ve Visual Studio Professional bulut abonelikleri satın alabilir.
@@ -22,7 +22,7 @@ ms.locfileid: "80273874"
 > [!NOTE]
 > Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) Visual Studio 'yu satın almaya yönelik farklı seçeneklere göz atın.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 Önce müşteri kiracınızı Iş Ortağı Merkezi ' nde ayarlamanız ve bu kiracı için bir Azure aboneliği oluşturmanız gerekir.
 
 [Daha fazla bilgi edinin](/azure/devops/organizations/billing/csp/set-up-csp-customer)
@@ -69,9 +69,9 @@ CSP iş ortakları için Visual Studio fiyatlandırmasını görüntülemek içi
 
 Bu elektronik tabloda gördüklerinizi nasıl yorumlayacağınız aşağıda verilmiştir:
 
-| Ölçüm kategorisi    |   Name                 |  Birimler                                |           Bu nedir?                          |
+| Ölçüm kategorisi    |   Ad                 |  Birimler                                |           Bu nedir?                          |
 |-------------------|------------------------|---------------------------------------|-------------------------------------------------|
-| Visual Studio     | Enterprise             |  Abonelik                         | Visual Studio Enterprise aylık abonelik   |
+| Visual Studio     | Kurumsal             |  Abonelik                         | Visual Studio Enterprise aylık abonelik   |
 | Visual Studio     | Professional           |  Abonelik                         | Visual Studio Professional aylık abonelik |
 
 Her bir Visual Studio aboneliğinin her bir gününde satın aldığınız 6. birim (belirli bir müşteri için) için %5 indirim sunuyoruz. Bu nedenle her abonelik seçeneği için iki satır görürsünüz. Bir satırda, 1 ile 5 arasındaki birimler için temel fiyat olarak yorumlanbilmeniz gereken, "minimum değer" değeri gösterilir. Diğer satırda "minimum değer" değeri gösterilir. bu nedenle, 6 ve üzeri birimler için geçerli olan %5 indirimli fiyattan oluşur.
@@ -107,10 +107,10 @@ Y: Hayır, Visual Studio abonelikleri için fiyatlar sabit. Yeni abonelikler iç
 Y: Şu anda değil. Müşterileriniz [Azure geliştirme ve test fiyatlandırmasının](https://azure.microsoft.com/pricing/dev-test/)avantajlarından yararlanabilir, ancak CSP 'ler için özel olarak hiçbir şey yapmayız.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Genel faturalama sorularına yanıt vermek için [bulut faturalaması hakkında SSS](vscloud-billing-faq.md) bölümüne bakın.  
+Genel faturalama sorularına yanıt vermek için [bulut faturalaması hakkında SSS](vscloud-billing-faq.md) bölümüne bakın.

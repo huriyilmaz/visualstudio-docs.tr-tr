@@ -7,12 +7,12 @@ ms.assetid: 19038bb0-2858-49df-9624-cbf8bfbb5d39
 ms.date: 09/08/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinizde Microsoft hesabınızla oturum açma (MSA)
-ms.openlocfilehash: d0193c3731840d694bc13764542b1df31c808027
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 52882fcf50a784812752dbf606b21db1ddc5c3ea
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561448"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005943"
 ---
 # <a name="signing-in-to-your-visual-studio-subscriptions-with-your-microsoft-account-msa"></a>Microsoft hesabınızla Visual Studio abonelikleriniz (MSA) ile oturum açma
 
@@ -43,10 +43,10 @@ Y: birçok kullanıcının birden fazla aboneliği vardır.  Abonelik portalınd
 Hala sorun yaşıyorsanız, yardım için [abonelik destek](https://visualstudio.microsoft.com/subscriptions/support/) ekibimize ulaşabilirsiniz.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Abonelikler portalında başarıyla oturum açtıktan sonra, sunulan avantajlar sayfasını ziyaret etmenizi https://my.visualstudio.com/benefits ve size sunulan harika araçları, hizmetleri ve teklifleri keşfetmenizi öneririz.  
+Abonelikler portalında başarıyla oturum açtıktan sonra, sunulan avantajlar sayfasını ziyaret etmenizi https://my.visualstudio.com/benefits ve size sunulan harika araçları, hizmetleri ve teklifleri keşfetmenizi öneririz.

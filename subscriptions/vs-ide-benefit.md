@@ -7,12 +7,12 @@ ms.assetid: c4b13464-76be-40f1-ad60-ed79ee264b12
 ms.date: 04/17/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen Visual Studio IDE 'yi indirme ve yükleme hakkında bilgi edinin.
-ms.openlocfilehash: b5c47c6b484d5b74f31ab8569f3895ae9ce0f984
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e955cc0c9e2437da07e48fc7db1c1b4df9e168e7
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904438"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006312"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Visual Studio 2019 avantajı
 
@@ -62,12 +62,12 @@ IDE 'yi indirmek için:
 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Evet          |
-| GitHub Enterprise ile Visual Studio Enterprise   | VL | Kullanılabilir       |  Evet          |
-| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                       | Kullanılabilir                                                            |  Evet          |
-| GitHub Enterprise ile Visual Studio Professional | VL   | Kullanılabilir              |  Evet          |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir                                             |  Evet         |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              |  YOK          |
+| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Yes          |
+| GitHub Enterprise ile Visual Studio Enterprise   | VL | Kullanılabilir       |  Yes          |
+| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                       | Kullanılabilir                                                            |  Yes          |
+| GitHub Enterprise ile Visual Studio Professional | VL   | Kullanılabilir              |  Yes          |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir                                             |  Yes         |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              |  Yok          |
 
 <sup>1</sup>  *şunları Içerir: for SATıL (NFR), Visual Studio Endüstri ortağı (vsıp), Microsoft iş ortağı ağı (MPN), FTE, mct Software & Services Geliştirici, BizSpark, Imagine, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD).  Dışlar: MCT Software & Hizmetleri.*
 
@@ -83,10 +83,10 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.vi
 - Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Visual Studio 'Yu yükledikten sonra, bu diğer önemli avantajları etkinleştirmeyi unutmayın:

@@ -7,12 +7,12 @@ ms.assetid: 92e8957f-c690-46bd-a812-3efd06a2bc6b
 ms.date: 03/02/2020
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerinde bulunan atama vurgusu avantajı hakkında bilgi edinin
-ms.openlocfilehash: 565dd9326447757cd2af23e83dfcf7f2d4553054
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3273ffb718249a0503531d20b882334cb76f9428
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85906069"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005956"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde atama vurgulaması avantajı
 Geliştiricilerin, buluta geçiş yaparken yazılım üzerinde kritik Öngörüler olması gerekir. ATAMA vurgulaması sayesinde, Visual Studio aboneleri, Azure 'a geçiş için uygulamalarının bulut hazırlığını belirlemek üzere uygulama kaynak kodunu hızla tarayabilir ve bir geçiş sırasında ve sonrasında uygulamasının ilerlemesini izler.
@@ -81,10 +81,10 @@ Geliştiricilerin, buluta geçiş yaparken yazılım üzerinde kritik Öngörül
 | GitHub Enterprise ile Visual Studio Enterprise  | VL | Üç ay boyunca 5 uygulama değerlendirin|  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
 | Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Üç ay boyunca 1 uygulamayı değerlendirme                                                             |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir                  |
 | GitHub Enterprise ile Visual Studio Professional | VL                                       | Üç ay boyunca 1 uygulamayı değerlendirme                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir                  |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                             |  YOK           |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              |  YOK          |
-| Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Kullanılamaz  | YOK |
-| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | YOK |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                             |  Yok           |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              |  Yok          |
+| Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Kullanılamaz  | Yok |
+| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |
 
 <sup>1</sup>  *şunları içerir: iş için değil (NFR), FTE, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), Microsoft iş ortağı ağı (MPN), Visual Studio Endüstri ortağı (VSIP), Microsoft Sertifikalı Trainer, BizSpark, Imagine*
 
@@ -102,10 +102,10 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.vi
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Aboneliğinizle birlikte gelen Azure DevTest bireysel kredi avantajını henüz etkinleştirmediyseniz, [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) Azure aboneliğinizi kurmak ve Azure DevTest bireysel kredilerinizi kullanmak Için Araçlar kategorisindeki Azure kutucuğuna gidin ve tıklayın.

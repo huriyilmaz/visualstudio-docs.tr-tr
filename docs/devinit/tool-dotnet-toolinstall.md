@@ -1,9 +1,9 @@
 ---
-title: DotNet-toolınstall
+title: dotnet-toolinstall
 description: devinit aracı DotNet-toolınstall.
 ms.date: 08/28/2020
 ms.topic: reference
-author: andster
+author: andysterland
 ms.author: andster
 manager: jillfra
 ms.workload:
@@ -11,14 +11,14 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: afc200bca49617dff40697210ac783d18ff5f532
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: cb19cab0c03b87894029a18f682f05def6a2197c
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810146"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005547"
 ---
-# <a name="dotnet-toolinstall"></a>DotNet-toolınstall
+# <a name="dotnet-toolinstall"></a>dotnet-toolinstall
 
 `dotnet-toolinstall`Araç, [.NET Core araçları](https://dotnet.microsoft.com/) 'nı komut aracılığıyla yüklemek için kullanılır `dotnet tool update` .
 

@@ -7,12 +7,12 @@ ms.assetid: 00c1f300-d04e-4695-815e-775ffbf0f931
 ms.date: 04/20/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen parasoft Virtualınitialize/SOA Test Professional aboneliğini nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: 8472c27e0196ec5837fccb17535061ea9b1b4867
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f5f32a15b0c2ab292f55c5ec5153161f03598ef4
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904385"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006273"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde parasoft Virtualınitialize/SOAtest Professional Desktop
 
@@ -95,10 +95,10 @@ Daha önce ve daha sık test edin.  Kullanılamayan gelişen uygulamalar ve sist
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-[Azure DevTest bireysel kredilerinizi](vs-azure.md)etkinleştirerek kendi geliştirme korumalı ağınızın avantajlarından yararlanın. 
+[Azure DevTest bireysel kredilerinizi](vs-azure.md)etkinleştirerek kendi geliştirme korumalı ağınızın avantajlarından yararlanın.

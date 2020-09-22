@@ -7,12 +7,12 @@ ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 04/28/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen Azure DevTest bireysel kredi avantajını nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: 276475393de374970685202079831bb06bedea6f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41d85c939c05a9d29c80c15d1702258ff5b7d5e5
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88247332"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91003852"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Microsoft Azure kullanma
 Bir Visual Studio abonesi olarak, ek ücret ödemeden Microsoft Azure kullanabilirsiniz.  [Aylık Azure DevTest krediniz](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)sayesinde Azure, geliştirme ve test için kişisel korumalı alanınız.  Sanal makineleri, bulut hizmetlerini ve diğer Azure kaynaklarını sağlayabilirsiniz.  Kredi tutarları abonelik düzeyine göre farklılık gösterir.
@@ -48,21 +48,21 @@ Visual Studio aboneliğinizin süresi dolarsa veya kaldırılırsa, aylık Azure
 > [!IMPORTANT]
 > Geçerli Azure aboneliğiniz devre dışı bırakılmadan önce kaynaklarınızı başka bir Azure aboneliğine aktarmanız gerekir, aksi bir deyişle verilerinize erişiminizi kaybetmezsiniz.  
 
-Azure için aylık krediyi kullanmaya devam etmenin birkaç yolu vardır.  Azure kaynaklarınızı kaydetmek için, aşağıda seçtiğiniz eylemden bağımsız olarak [kaynaklarınızı](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription) başka bir Azure aboneliğine aktarmanız gerekir. 
+Azure için aylık krediyi kullanmaya devam etmenin birkaç yolu vardır.  Azure kaynaklarınızı kaydetmek için, aşağıda seçtiğiniz eylemden bağımsız olarak [kaynaklarınızı](/azure/azure-resource-manager/management/move-resource-group-and-subscription) başka bir Azure aboneliğine aktarmanız gerekir. 
 
 - **Visual Studio aboneliğinizi doğrudan satın aldıysanız**, yeni bir abonelik satın alın veya aboneliğinizi Microsoft Store ile yenileyin.  
     - [Visual Studio Enterprise](https://www.microsoft.com/p/visual-studio-enterprise-subscription/dg7gmgf0dst4?activetab=pivot%3aoverviewtab)
     - [Visual Studio Professional](https://www.microsoft.com/p/visual-studio-professional-subscription/dg7gmgf0dst3?activetab=pivot%3aoverviewtab)
     - [Visual Studio Test Professional](https://www.microsoft.com/p/visual-studio-test-professional-subscription/dg7gmgf0dst6?activetab=pivot%3aoverviewtab)
-- **Kuruluşunuzdaki bir kişi kuruluşunuz için abonelikler satın alıyorsa**, [Visual Studio abonelik yöneticinize başvurun](https://docs.microsoft.com/visualstudio/subscriptions/contact-my-admin) ve ihtiyacınız olan aylık krediyi sağlayan bir abonelik isteyin.  
-- Başka bir Microsoft hesabı ilişkili abonelik düzeyinde **başka bir etkin Visual Studio aboneliğiniz varsa** , Visual Studio [abonelikleri portalına](https://my.visualstudio.com/subscriptions) [alternatif bir hesap ekleyerek](https://docs.microsoft.com/visualstudio/subscriptions/manage-vs-subscriptions#managing-my-profile) Azure avantajını başka bir etkin Visual Studio aboneliğine aktarabilirsiniz.  
+- **Kuruluşunuzdaki bir kişi kuruluşunuz için abonelikler satın alıyorsa**, [Visual Studio abonelik yöneticinize başvurun](./contact-my-admin.md) ve ihtiyacınız olan aylık krediyi sağlayan bir abonelik isteyin.  
+- Başka bir Microsoft hesabı ilişkili abonelik düzeyinde **başka bir etkin Visual Studio aboneliğiniz varsa** , Visual Studio [abonelikleri portalına](https://my.visualstudio.com/subscriptions) [alternatif bir hesap ekleyerek](./manage-vs-subscriptions.md#managing-my-profile) Azure avantajını başka bir etkin Visual Studio aboneliğine aktarabilirsiniz.  
 
 Her abonelik türüne kaç kredi ekleneceğini öğrenmek için aşağıdaki Uygunluk tablosunu kullanın.  
 
 
 ## <a name="convert-your-azure-subscription-to-pay-as-you-go"></a>Azure aboneliğinizi Kullandıkça Öde için dönüştürün
 
-Artık bir Visual Studio aboneliğine veya kredisine ihtiyacınız yoksa ancak Azure kaynaklarınızı kullanmaya devam etmek, kaynaklarınızı başka bir Azure aboneliğine [aktarmak](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription) veya [harcama sınırınızı kaldırarak](https://docs.microsoft.com/azure/cost-management-billing/manage/spending-limit#remove-the-spending-limit-in-azure-portal)Azure aboneliğinizi Kullandıkça Öde fiyatlandırmasına dönüştürmek istiyorsanız. 
+Artık bir Visual Studio aboneliğine veya kredisine ihtiyacınız yoksa ancak Azure kaynaklarınızı kullanmaya devam etmek, kaynaklarınızı başka bir Azure aboneliğine [aktarmak](/azure/azure-resource-manager/management/move-resource-group-and-subscription) veya [harcama sınırınızı kaldırarak](/azure/cost-management-billing/manage/spending-limit#remove-the-spending-limit-in-azure-portal)Azure aboneliğinizi Kullandıkça Öde fiyatlandırmasına dönüştürmek istiyorsanız. 
 
 Bu eylemlerden birini yapmazsanız, Azure aboneliğiniz, e-posta bildirimi alındıktan sonra 30 gün sonra devre dışı bırakılır ve silinir.  
 
@@ -117,10 +117,10 @@ Y: Bu şirket tarafından sağlanan kaynaklar üzerinde oluşturulan bir çalı�
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Microsoft araçları ve hizmetleri hakkında daha fazla bilgi için belgelere bakın:

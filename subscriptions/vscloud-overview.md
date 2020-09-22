@@ -7,12 +7,12 @@ ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
 ms.date: 03/24/2020
 ms.topic: overview
 description: Uzun vadeli bir sözleşme olmadan bir ayda ayda veya yıllık esasına göre Visual Studio Professional veya Visual Studio Enterprise.
-ms.openlocfilehash: 1ea727572fc5c6aeb09f23594de54a08adbacc90
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: d92d11321529e7ab8053ea657b2b5f4688c55aa0
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641562"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005322"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Visual Studio Professional ve Visual Studio Enterprise bulut abonelikleri satın alın
 [Visual Studio Market](https://marketplace.visualstudio.com) [Visual Studio Professional ve Visual Studio Enterprise abonelikleri](https://visualstudio.microsoft.com/subscriptions/) satın alabilirsiniz. Bunlar **"bulut abonelikleri"** olarak adlandırılır.
@@ -127,10 +127,10 @@ Y: başka bir bulut yıllık aboneliği satın alaamayacak olsa da, Visual Studi
 - [CSP 'Ler için Visual Studio bulut aboneliği satın alma](vscloud-csp.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Bulut abonelikleri satın alma

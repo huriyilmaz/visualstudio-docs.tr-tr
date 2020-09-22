@@ -7,12 +7,12 @@ ms.assetid: 86f2856c-8adf-4085-9962-f4136679e5ed
 ms.date: 07/19/2019
 ms.topic: conceptual
 description: Azure DevOps ve Azure için kullanmak üzere Visual Studio aboneliğiniz için alternatif bir kimlik ekleme
-ms.openlocfilehash: 0e19bff8885810e505dbe6481340e7a112160af0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5eee6c1d59141c1975a6039f2ab9256b4c9dc735
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800781"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005720"
 ---
 # <a name="identities-for-visual-studio-subscribers"></a>Visual Studio aboneleri için kimlikler
 Visual Studio aboneliğinizi etkinleştirdiğinizde, Visual Studio aboneliğiyle etkinleştirme sırasında kullandığınız kimliği (veya oturum açma) bağlayacağız. Bu şekilde, sizi [Visual Studio abone portalı](https://my.visualstudio.com?wt.mc_id=o~msft~docs), Azure DevOps ve Azure 'da tanıyabiliriz.
@@ -58,10 +58,10 @@ Y: birincil veya alternatif kimliğinizi kullanarak oturum açtığınızda Azur
 Azure DevOps hala aboneliğinizi tanımıyorsa [Azure DevOps desteğine](https://azure.microsoft.com/support/devops/)başvurun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar 
 Azure, Azure DevOps veya Visual Studio IDE kullanma hakkında daha fazla bilgi için şu kaynaklara göz atın:

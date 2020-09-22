@@ -1,9 +1,9 @@
 ---
-title: azurecli-oturum açma
+title: azurecli-login
 description: devinit aracı azurecli-oturum açma.
 ms.date: 08/28/2020
 ms.topic: reference
-author: andster
+author: andysterland
 ms.author: andster
 manager: jillfra
 ms.workload:
@@ -11,14 +11,14 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: e95bc70540ae73c73a17a94b4cadfc399c8557e5
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 74c8144d9442c786bddeae78024fc4cf0d1e0d4a
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810174"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006045"
 ---
-# <a name="azurecli-login"></a>azurecli-oturum açma
+# <a name="azurecli-login"></a>azurecli-login
 
 `azurecli-login`Araç, [Azure clı](https://docs.microsoft.com/cli/azure/authenticate-azure-cli?view=azure-cli-latest&preserve-view=true)aracılığıyla Azure Active Directory oturum açmak için kullanılır. Bu araç Azure CLı komutunu kullanır: `az login --use-device-code` , oturum açma işleminin tamamlanabilmesi için konsola yazdırılan yönergeleri izlemeniz gerekir.
 

@@ -7,12 +7,12 @@ ms.assetid: 97bf7474-c6c2-49b3-b2c9-f1b2808eed1a
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: Diğer adlar veya kolay adlar kullanılıyorsa oturum açma başarısız olabilir
-ms.openlocfilehash: 1b6c465bc3e850d8582abde200ac9e5bd995e431
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f73aa52be518de627d468e8e1171de5f3145753b
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87234646"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006221"
 ---
 # <a name="signing-into-visual-studio-subscriptions-may-fail-when-using-aliases"></a>Diğer adlar kullanılırken Visual Studio aboneliklerinde oturum açma başarısız olabilir
 Oturum açmak için kullanılan hesap türüne bağlı olarak, kullanılabilir abonelikler ' de oturum açarken doğru görüntülenmeyebilir [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) . Olası bir neden, aboneliğin atandığı oturum açma kimliği yerine "diğer adlar" veya "kolay adlar" in kullanılması olabilir. Bu "diğer ad" olarak adlandırılır.
@@ -86,16 +86,16 @@ Bu seçeneklerin her ikisi de aşağıdaki adımları tamamlayarak yönetim port
 
 0. Tek bir kullanıcıyı değiştirirseniz, tabloda bu kullanıcı ' yı seçin ve düzenlemek için sağ tıklayın. Bu, oturum açma e-posta adresini değiştirebileceğiniz bir panel açar. Oturum açma e-posta adresi alanında gerekli güncelleştirmeleri yapın. Kaydet ' e tıkladığınızda değişiklikler geçerli olur.  
 
-0. Bu değişiklikleri büyük miktarda kullanıcıya yapmanız gerekirse toplu düzenleme özelliğinden yararlanabilirsiniz. Daha fazla bilgi için [toplu düzenleme kullanarak birden çok aboneyi Düzenle](https://docs.microsoft.com/visualstudio/subscriptions/edit-license#edit-multiple-subscribers-using-bulk-edit) makalesini okuyun.
+0. Bu değişiklikleri büyük miktarda kullanıcıya yapmanız gerekirse toplu düzenleme özelliğinden yararlanabilirsiniz. Daha fazla bilgi için [toplu düzenleme kullanarak birden çok aboneyi Düzenle](./edit-license.md#edit-multiple-subscribers-using-bulk-edit) makalesini okuyun.
 
 > [!NOTE]
 > Bireysel ve toplu değişiklikler için abonelere, oturum açma e-posta adresinin değiştiği ve güncelleştirilmiş e-posta adresini kullanarak oturum açması gereken yönergeler içeren bir e-posta gönderilir. Abone, daha önce diğer oturum açma adresi altında daha fazla avantaj sunduklarında, bunlara erişmek için diğer oturum açma adresini kullanmaya devam etmek için de önemlidir.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 
 ## <a name="next-steps"></a>Sonraki adımlar
@@ -104,5 +104,3 @@ Visual Studio aboneliklerini yönetme hakkında daha fazla bilgi edinin.
 - [Birden çok abonelik atama](assign-license-bulk.md)
 - [Abonelikleri düzenleme](edit-license.md)
 - [En fazla kullanımı belirleme](maximum-usage.md)
-
-

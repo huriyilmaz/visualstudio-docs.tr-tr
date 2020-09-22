@@ -7,12 +7,12 @@ ms.assetid: b331c837-3524-42b7-820e-b4fdd5e12793
 ms.date: 09/03/2020
 ms.topic: conceptual
 description: Microsoft ürün ve hizmet sözleşmesi 'nde (MPSA) Visual Studio aboneliklerini yönetme hakkında bilgi edinin
-ms.openlocfilehash: 9d26bccebb11a59933c37ec0f29a9b6e30e86c5b
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: f0e894272f13b08af20f36579aea807cba7a882a
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561396"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006091"
 ---
 # <a name="visual-studio-subscriptions-in-a-microsoft-products-and-services-agreement-mpsa"></a>Microsoft ürün ve hizmet anlaşmasındaki (MPSA) Visual Studio abonelikleri
 MPSA programı aracılığıyla Visual Studio abonelikleri satın aldıysanız, Visual Studio abonelikleri Yöneticisi olmaya ve kullanıcılarınıza abonelik atamadan önce bilmeniz gereken birkaç nokta vardır. Zaten yönetici olarak ayarladıysanız, doğrudan Visual Studio abonelikleri [Yönetim portalına](https://manage.visualstudio.com/)gidebilirsiniz.
@@ -63,10 +63,10 @@ Bu işlemle ilgili daha ayrıntılı bir açıklama için [hızlı başlangıç 
 > Etki alanı alma işlemini tamamladıktan sonra, kiracı Ilişkilendirmesi (yönetilen) bölümündeki beş adımdan oluşan ölçütlere uymalısınız. Ölçütler karşılandıktan sonra, yalnızca ek Visual Studio abonelikleri yöneticileri sağlamak için MPSA desteğiyle iletişim kurmanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Visual Studio aboneliklerini yönetme hakkında daha fazla bilgi edinin.

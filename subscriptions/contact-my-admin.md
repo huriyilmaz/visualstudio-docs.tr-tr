@@ -7,12 +7,12 @@ ms.assetid: 64455e79-229a-42f0-9d65-c2cca8ab8513
 ms.date: 09/08/2020
 ms.topic: how-to
 description: Sorular veya sorunlarla ilgili yardım almak için abonelik yöneticinize nasıl başvurabileceğiniz hakkında bilgi edinin.
-ms.openlocfilehash: 43a0c4ac090331bb9e9c65c232f5277aaee890a7
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 6e2192f81a7003c3c3dcbbc9583ae537ac60cb4b
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561422"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005694"
 ---
 # <a name="get-assistance-from-your-subscriptions-administrator"></a>Abonelik yöneticinizden yardım alın
 Visual Studio aboneliğiniz sizin veya okulunuz tarafından size sağlanmışsa, size bir abonelik Yöneticisi veya "Yönetici" tarafından atanmıştı.  Yöneticiler abonelikleri atayabilir veya kaldırabilir, oturum açma e-posta adreslerini değiştirebilir, yazılım indirebilme ve aboneliğiniz ile ilgili başka işlevler gerçekleştirmenize izin verebilir.
@@ -36,10 +36,10 @@ Birçok kuruluşun boyut ve karmaşıklığı göz önüne alındığında, yön
 - [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Daha önce yapmadıysanız, Visual Studio aboneliğinizden en iyi şekilde yararlanmak için bu avantajların etkinleştirilmesi önerilir:
@@ -48,4 +48,3 @@ Daha önce yapmadıysanız, Visual Studio aboneliğinizden en iyi şekilde yarar
 - [Azure DevOps](vs-azure-devops.md)
 
 Bu avantajlar ve daha fazlası, adresinde bulunabilir https://my.visualstudio.com/benefits .
-

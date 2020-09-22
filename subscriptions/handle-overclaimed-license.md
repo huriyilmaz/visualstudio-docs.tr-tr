@@ -7,12 +7,12 @@ ms.assetid: a747100c-6f08-41a4-aaad-05099741742b
 ms.date: 03/03/2020
 ms.topic: conceptual
 description: Yöneticilerin aşırı yüklenmiş abonelikleri nasıl çözebileceğinizi öğrenin
-ms.openlocfilehash: b518dc9300862e7c39af0489734734668097ef9f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d34f80e4d206e13219d5b9e33f72caddfeffb1b6
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87453720"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91004752"
 ---
 # <a name="over-allocated-subscriptions"></a>Fazla ayrılmış abonelikler
 Bazen abonelik eklendikten sonra siparişler değişir, bu da şirketiniz tarafından sahip olunan lisanslardan daha fazla abonelik olmasına neden olabilir. Bu, "aşırı ayırma" olarak adlandırılır.  
@@ -42,10 +42,10 @@ Kuruluşunuzda bir Kurumsal Anlaşma (EA) varsa, Yöneticiler bu abonelikleri sa
 > Bu aboneliğin lisans gereksinimleriyle uyumlu kalmasını sağlamak için, atanan her GitHub aboneliğine ait bir GitHub aboneliğinin atandığı ilgili bir Visual Studio olduğundan emin olunması müşterinin sorumluluğudur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 - [GitHub Enterprise Ile Visual Studio aboneliklerini](assign-github.md)yönetme hakkında daha fazla bilgi edinin.

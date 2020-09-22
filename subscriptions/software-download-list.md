@@ -7,12 +7,12 @@ ms.assetid: c2878e28-eb5d-4adb-8d7d-a95ffea703a9
 ms.date: 03/11/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil olan yazılım indirmelerinin bir listesini bulun.
-ms.openlocfilehash: 767d53c38aeaa9a9717ecacffcc08813950c008a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dc1a3c607aa919bd2ad6c24a8ba6870433e9302b
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250694"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91004017"
 ---
 # <a name="what-software-is-available-for-download"></a>İndirileceği yazılım nedir?
 
@@ -31,10 +31,10 @@ Zaten bir Visual Studio aboneliğiniz varsa:
 Ayrıca, her abonelik türü için [kullanılabilir yazılım başlıklarının](https://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Visual_Studio_by_Subscription_Level.xlsx) kapsamlı bir listesini Içeren bir Excel elektronik tablosu indirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 [Yazılım indirme](download-software.md) veya [ürün anahtarlarını](product-keys.md)edinme ve yönetme hakkında daha fazla bilgi edinebilirsiniz.

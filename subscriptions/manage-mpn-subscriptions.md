@@ -7,12 +7,12 @@ ms.assetid: 83efe4ee-9a9d-4776-b27c-852d89dadafd
 ms.date: 09/08/2020
 ms.topic: how-to
 description: MPN iş ortakları için son kullanıcılarınıza Visual Studio abonelikleri atama.
-ms.openlocfilehash: ecd85967c0d58166da17025bc7b2246b335a5736
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 75b4b188bcd0a7df9414e430c8a1922f8fda9d5e
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561383"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005891"
 ---
 # <a name="manage-visual-studio-subscriptions-offered-through-the-microsoft-partner-network-mpn"></a>Microsoft İş Ortağı Ağı (MPN) ile sunulan Visual Studio aboneliklerini yönetme
 Bir uzmanlığa sahip olan veya MPN 'de Eylem Paketi satın alan iş ortakları, Visual Studio aboneliklerini kullanmaya uygundur. Bu abonelikler Kullanıcı başına lisanslanır ve yalnızca iş ortağı şirketi için çalışan belirli bir adlandırılmış kullanıcıya atandığında geçerlidir.
@@ -61,12 +61,10 @@ Microsoft Eylem Paketi abonesi ve Visual Studio abonelikleri
   - Pg 8: uzmanlığa sahip Iş ortakları için Visual Studio abonelikleri atama
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Aboneler ve program yöneticileri, aboneliklere erişen aboneler ile ilgili sorunları çözmek için doğrudan Microsoft İş Ortağı Ağı destek ekibiyle çalışmalıdır. Yardım için [Iş ortakları desteği](https://partner.microsoft.com/support) sayfasını ziyaret edin. (MPN oturum açma kimlik bilgileriniz gerekecektir.)
-
-

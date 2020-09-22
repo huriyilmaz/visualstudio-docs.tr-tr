@@ -1,9 +1,9 @@
 ---
-title: NuGet-geri yükleme
+title: nuget-restore
 description: devinit aracı NuGet-restore.
 ms.date: 08/28/2020
 ms.topic: reference
-author: andster
+author: andysterland
 ms.author: andster
 manager: jillfra
 ms.workload:
@@ -11,14 +11,14 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 446498f77d7f9a26c9876f6a163d819a97df1ff9
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 7671d336e3c4f86cae8b6bba7fe1b35443aa0632
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810921"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005119"
 ---
-# <a name="nuget-restore"></a>NuGet-geri yükleme
+# <a name="nuget-restore"></a>nuget-restore
 
 `nuget-restore`Araç geri yükleme bağımlılıkları ve proje dosyasında belirtilen projeye özgü araçlar. NuGet geri yükleme hakkında daha fazla bilgi için [buraya](https://docs.microsoft.com/nuget/reference/cli-reference/cli-ref-restore)tıklayın.
 

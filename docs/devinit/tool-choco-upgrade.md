@@ -1,9 +1,9 @@
 ---
-title: Choco-Upgrade
+title: choco-upgrade
 description: devinit aracı Choco-Upgrade.
 ms.date: 08/28/2020
 ms.topic: reference
-author: andster
+author: andysterland
 ms.author: andster
 manager: jillfra
 ms.workload:
@@ -11,14 +11,14 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 7b7c2d3dd005c54edb882e059679d45e77e539be
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 5a735b60fd318d86e97dc4db7570e952a0fcdfd8
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810160"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006038"
 ---
-# <a name="choco-upgrade"></a>Choco-Upgrade
+# <a name="choco-upgrade"></a>choco-upgrade
 
 `choco-upgrade`Araç, [Chocolatey](https://chocolatey.org/docs/commandsupgrade) paketlerini yüklemek ve güncelleştirmek için kullanılabilir.
 

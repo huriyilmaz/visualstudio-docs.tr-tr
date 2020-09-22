@@ -7,12 +7,12 @@ ms.assetid: 196c6d04-9a33-47d5-b0f1-038e7c3a7ac9
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinizden en iyi şekilde nasıl yararlanalabileceğinizi öğrenin
-ms.openlocfilehash: 10333c801057bb3f11aeda1f9d0ac13e38c3bc80
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 59bfac51eb7888bbad4cc07bf2df25b8c35980fd
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90807956"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005904"
 ---
 # <a name="managing-subscriptions"></a>Abonelikleri yönetme
 
@@ -114,10 +114,10 @@ Y: satın alma kanalına bağlı olarak Microsoft, müşteri verilerini farklı 
 > - Etkin abonelikleriniz varsa tüm kişisel verilerinizi tam olarak kaldırmayacak.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Kuruluşunuz için abonelikleri yönetiyoruz musunuz?  Visual Studio aboneliklerini yönetme hakkında daha fazla bilgi edinin:

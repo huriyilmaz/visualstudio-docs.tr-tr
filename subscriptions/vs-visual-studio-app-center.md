@@ -7,12 +7,12 @@ ms.assetid: badd1d4a-90a6-46de-a037-945a91e6019b
 ms.date: 04/20/2020
 ms.topic: how-to
 description: Visual Studio aboneliklerine dahil Visual Studio App Center avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 27d2e060cf3f4ab1aad8b81c39a5cef52ac0e770
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 69d010afddca1f8fc51f77d806c75dc1b7b34256
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85906041"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005733"
 ---
 # <a name="visual-studio-app-center-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Visual Studio App Center
 
@@ -42,12 +42,12 @@ Visual Studio App Center kullanmaya başlamak kolaydır.
 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, NFR<sup>1</sup> | Dahil       |  Evet          |
-| GitHub Enterprise ile Visual Studio Enterprise  | VL | Dahil       |  Evet          |
-| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                       | Dahil                                                            |Evet |
-| GitHub Enterprise ile Visual Studio Professional | VL                                      | Dahil                                                            |Evet |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Dahil                                                            |Evet |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Dahil                                                            |Evet |
+| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, NFR<sup>1</sup> | Dahil       |  Yes          |
+| GitHub Enterprise ile Visual Studio Enterprise  | VL | Dahil       |  Yes          |
+| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                       | Dahil                                                            |Yes |
+| GitHub Enterprise ile Visual Studio Professional | VL                                      | Dahil                                                            |Yes |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Dahil                                                            |Yes |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Dahil                                                            |Yes |
 ||
 
 <sup>1</sup>  *şunları Içerir: for SATıL (NFR), FTE, Visual Studio Endüstri ortağı (VSIP), ımagine, Microsoft iş ortağı ağı (MPN), mct yazılım & Hizmetleri, mct Software & Services Geliştirici, BizSpark, en DEĞERLI profesyonel (MVP), bölgesel yönetmen (RD).*
@@ -75,10 +75,10 @@ Artık App Center portalına erişebiliyor ve hesabınızı oluşturabileceksini
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Visual Studio aboneliğinizden en iyi şekilde yararlanmak için bu harika avantajları etkinleştirdiğinizden emin olun:

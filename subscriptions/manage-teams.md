@@ -7,12 +7,12 @@ ms.assetid: 3fc57f5f-2446-4774-9f8f-98ea1340f6b2
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Yöneticilerin büyük ekipler ve dış yükleniciler için abonelikleri yönetme sorumluluğu hakkında bilgi edinin.
-ms.openlocfilehash: 9753c7a69b5334abd0e4ccb299ece3a5403517bc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 86848fc7b5c9507c1e5df5bd043ee21217afe313
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80232316"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005567"
 ---
 # <a name="large-teams-and-external-contractors"></a>Büyük takımlar ve dış yükleniciler
 Visual Studio abonelikleri yöneticileri, Visual Studio lisanslı yazılımlarla etkileşim kuran her bir kullanıcının kendi Visual Studio aboneliğiyle uygun şekilde lisanslanmasını sağlamaktan sorumludur.
@@ -35,10 +35,10 @@ Dış yükleniciler, lisansları Visual Studio lisanslı ortamınızdan devreye 
 - [Toplu Lisanslama Koşulları](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:

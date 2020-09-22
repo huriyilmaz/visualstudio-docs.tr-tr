@@ -7,12 +7,12 @@ ms.assetid: 71af88da-b9fa-4d12-999c-7d461f3df0ec
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Aboneliklerle ilgili ayrıntılar, Microsoft for Startups programı aracılığıyla sunulur.
-ms.openlocfilehash: 600f2e92843ee734766ea5e2d797620cd622892b
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 8e46924d0980eed4eca27eef7766e12c8733d851
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561461"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005826"
 ---
 # <a name="visual-studio-subscriptions-offered-to-startups"></a>Başlatmalar için sunulan Visual Studio abonelikleri
 Startup 'lar için Microsoft 'a katılan nitelikli başlatmalar, [aylık bulut abonelikleri](https://visualstudio.microsoft.com/vs/pricing/)5 Visual Studio Enterprise elde edebilir. 
@@ -41,10 +41,10 @@ Aylık bulut abonelikleriyle, iptal eden bir sonraki ayın ilk günü devreye gi
 Yıllık bulut aboneliklerinde, zaman, ilk satın alma işleminden sonraki 12 ay boyunca ayın ilk günü veya son yıllık yenileme ücretinden 12 ay sonra devreye girer. Örneğin Visual Studio Professional yıllık bulut aboneliğini 3 Ocak 2018’de satın aldıysanız, abonelik bir yıl için daha otomatik olarak yenilendiği 1 Şubat 2019’da kadar etkin kalır. O tarihten 1 Şubat 2020’ye kadar herhangi bir anda iptal edersiniz, 1 Şubat 2020’de aboneliğin süresi dolacaktır. Yıllık bulut aboneliklerinde abonelik yılı dolmadan önce iptal etmek indirime hak kazandırmaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 [Başlangıç pencereleri için Microsoft hakkında daha fazla bilgi edinin](https://startups.microsoft.com)

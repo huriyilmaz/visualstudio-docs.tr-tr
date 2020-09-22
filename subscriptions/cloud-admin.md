@@ -7,12 +7,12 @@ ms.assetid: 8b30e2bc-2ac3-4fcc-b296-128731471032
 ms.date: 03/03/2020
 ms.topic: how-to
 description: Aylık abonelikler için yöneticileri ayarlama
-ms.openlocfilehash: 7a0d28e4cd75749db430353234060f72a8f86485
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fbb8d1f7a1519950e84c6f6fe726dd8f52ff29c5
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87434304"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006117"
 ---
 # <a name="set-up-administrators-for-visual-studio-monthly-subscriptions"></a>Visual Studio aylık abonelikleri için yöneticileri ayarlama
 
@@ -60,10 +60,10 @@ Yeni yönetici artık [yönetim portalında](https://manage.visualstudio.com)otu
 Visual Studio aylık abonelikleri hakkında daha fazla bilgi için, satın alma abonelikleri altındaki [genel bakış](vscloud-overview.md) bölümüne bakın. Visual Studio aylık abonelikleri satın almak için Visual Studio Market ziyaret edin [https://marketplace.visualstudio.com/subscriptions](https://marketplace.visualstudio.com/subscription) .
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Visual Studio aboneliklerini yönetme hakkında daha fazla bilgi edinin.
@@ -71,6 +71,3 @@ Visual Studio aboneliklerini yönetme hakkında daha fazla bilgi edinin.
 - [Birden çok abonelik atama](assign-license-bulk.md)
 - [Abonelikleri düzenleme](edit-license.md)
 - [En fazla kullanımı belirleme](maximum-usage.md)
-
-
-

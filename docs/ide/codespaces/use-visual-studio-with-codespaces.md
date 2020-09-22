@@ -11,16 +11,16 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: c6eef7a63ea69611c6df1f6d2b425ed56437f68c
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: c3a2e14236c2d24bc9650fab81150cc295826844
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "90862255"
+ms.locfileid: "91006260"
 ---
 # <a name="how-to-use-visual-studio-with-a-codespace-preview"></a>Visual Studio 'Yu bir codespace ile kullanma (Önizleme)
 
-Visual Studio, GitHub Codespaces 'da geliştirme için harika destek içerir. Bir codespace oluşturup bu alana bağlanabilir ve Visual Studio 'nun tam gücünden uzak, barındırılan bir ortamda projeleriniz üzerinde çalışabilirsiniz. Kaynak kodunuz ve araçlarınız bir codespace içinde olsa da, derleme ve hata ayıklama bulutu bulutta gerçekleşse de, yerel olarak çalıştıkmiş gibi geliştirme deneyiminiz hızlı ve duyarlı bir şekilde ücretsizdir. Visual Studio 2019 Preview içinden bir codespace ile çalışabilirsiniz ([sınırlı genel beta için kaydolabilirsiniz](https://github.com/features/codespaces/signup)).
+Visual Studio, GitHub Codespaces 'da geliştirme için harika destek içerir. Bir codespace oluşturup bu alana bağlanabilir ve Visual Studio 'nun tam gücünden uzak, barındırılan bir ortamda projeleriniz üzerinde çalışabilirsiniz. Kaynak kodunuz ve araçlarınız bir codespace içinde olsa da, derleme ve hata ayıklama bulutu bulutta gerçekleşse de, yerel olarak çalıştıkmiş gibi geliştirme deneyiminiz hızlı ve duyarlı bir şekilde ücretsizdir. Visual Studio 2019 Preview içinden bir codespace ile çalışabilirsiniz ([sınırlı genel beta için kaydolabilirsiniz](https://github.com/features/codespaces/signup-vs)).
 
 > [!NOTE]
 > Bu makale, GitHub Codespaces 'a bağlanmak için özellikle Visual Studio 'Yu kullanmayı açıklamaktadır. [Visual Studio Code](https://docs.github.com/github/developing-online-with-codespaces/connecting-to-your-codespace-from-visual-studio-code) veya [GitHub](https://docs.github.com/github/developing-online-with-codespaces/developing-in-a-codespace) belgelerindeki diğer istemcilerle bir codespace 'e bağlanma hakkında bilgi edinebilirsiniz.

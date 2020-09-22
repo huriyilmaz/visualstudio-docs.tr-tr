@@ -7,12 +7,12 @@ ms.assetid: da8df006-4896-4ff9-b487-698d78deabc3
 ms.date: 07/30/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde ürün anahtarlarını bulma, talep etme ve dışa aktarma hakkında bilgi edinin
-ms.openlocfilehash: e9be61db1f72684dcff12d015ec5180607b41977
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a246f66e429b78647f217468c7c19b703b419062
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250731"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91004973"
 ---
 # <a name="finding-and-claiming-product-keys-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde ürün anahtarlarını bulma ve oluşturma
 Bu makalede ürün anahtarlarının ' den nasıl bulunduğu, talep verilmesi ve dışarı aktarılacağı açıklanmaktadır https://my.visualstudio.com/productkeys .  Bir ürünü anahtar, perakende ve toplu lisans sürümleriyle ve günlük ürün anahtarı talep limitlerine göre etkinleştirme hakkında daha fazla bilgi için lütfen [ürün anahtarlarına genel bakış](product-keys.md)' ı ziyaret edin.
@@ -29,7 +29,7 @@ Etkinleştirme gerekli olmadığından, bazı anahtarlar, "static" anahtarları 
 
 ### <a name="product-key-types"></a>Ürün anahtarı türleri
 
-|    Anahtar türü           |    Description                                                                                                                                                                                                           |
+|    Anahtar türü           |    Açıklama                                                                                                                                                                                                           |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Geçerli değil                    |    Bu ürünü yüklemek için gereken anahtar yok.                                                       |
 |    Retail                     |    Perakende tuşları çoklu etkinleştirmeleri sağlar ve ürünün perakende yapıları için kullanılır. Çoğu durumda, her anahtar için 10 etkinleştirmeye izin verilir, ancak aynı makinede genellikle daha fazlasına izin verilir.                                                       |
@@ -67,10 +67,10 @@ Gördüğünüz gibi, çeşitli sürümler listelenir.  Tek bir anahtar, 16,0 ve
 Anahtarlarınızı dışarı aktarmak için, ürün anahtarları sayfasının en sağındaki **tüm anahtarları dışarı aktar** bağlantısını seçmeniz yeterlidir.  KeysExport.xml adlı bir. xml dosyası oluşturulur ve dosyayı açma veya kaydetme seçeneğiniz olacaktır.  Bu dosyayı .xml dosyalarını işleyebilen bir uygulamayla açmanız gerekir.  Örneğin dosyayı Excel’de salt okunur bir çalışma kitabı olarak açabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Yazılım indirmeye ve anahtarları kullanmaya hazırsanız, adresini ziyaret edin https://my.visualstudio.com/downloads .  Yazılım indirme hakkında daha fazla bilgi için lütfen [indirmeye genel bakış](download-software.md)bölümüne bakın.

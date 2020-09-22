@@ -7,12 +7,12 @@ ms.assetid: 4c099fe8-883e-4789-9468-387ce5697dfe
 ms.date: 09/03/2020
 ms.topic: overview
 description: Abonelik yönetim portalı ile kuruluşunuzun Visual Studio aboneliklerini yönetmeye nasıl başlaleyeceğinizi öğrenin.
-ms.openlocfilehash: d857d4a1c9bb5568a6e4330851e0cc8a21988146
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: 78c66b8db569ce71588a2dba43b3ffb08d6a7d80
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426882"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005231"
 ---
 # <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio abonelikleri yönetici portalına genel bakış
 
@@ -60,10 +60,10 @@ Görüntülemekte olduğunuz anlaşma hakkında daha fazla bilgi için, anlaşma
 - [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:
@@ -72,4 +72,3 @@ Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:
 - [Büyük takımları ve dışarıdan yüklenicileri yönetme](manage-teams.md)
 - [Kullanıcı atamalarını izleme ve siparişleri işleme](assignments-orders.md)
 - Satın alma taahhütlerini izlemek için [maksimum kullanımı](maximum-usage.md) kullanın
-

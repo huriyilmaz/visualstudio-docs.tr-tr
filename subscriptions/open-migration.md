@@ -7,12 +7,12 @@ ms.assetid: 6866dfab-c4fa-428e-bb0d-7b202c81f770
 ms.date: 09/03/2020
 ms.topic: conceptual
 description: İş ortaklarının müşterileri için Visual Studio abonelikleri yönetme hakkında bilgi edinin.
-ms.openlocfilehash: b91959431fb653385c02e6465315a02c8be18c60
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: 2442f3ac1821c81adcee5d029814ebfb79a6fb17
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426557"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006065"
 ---
 # <a name="partners-managing-subscriptions-on-behalf-of-customers"></a>Müşteri adına abonelikleri yöneten iş ortakları
 Visual Studio [abonelikleri yönetim portalındaki](https://manage.visualstudio.com)abonelikleri yönetmek için birkaç adım iş ortağının izlenmesi gerekir. 
@@ -23,7 +23,7 @@ Visual Studio [abonelikleri yönetim portalındaki](https://manage.visualstudio.
 - İş ortaklarının abonelikleri müşteriler adına yönetmesi için yönetim portalı 'na kaydolmaları gerekir. Erişim kazanmanın çeşitli yolları aşağıda listelenmiştir (eklenti açma işlemine benzer).
 
 ## <a name="new-partners-visiting-the-visual-studio-subscriptions-administration-portal-directly"></a>Visual Studio abonelikleri yönetim portalını doğrudan ziyaret eden yeni iş ortakları
-Bu senaryo, zaten yeni açık lisans siparişleri yerleştirmiş ancak [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 'de kaydolmamış ve doğrudan [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio.com)gidebilen yeni iş ortakları için geçerlidir.  Şu adımları uygulayın:
+Bu senaryo, zaten yeni açık lisans siparişleri yerleştirmiş ancak [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 'de kaydolmamış ve doğrudan [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio.com)gidebilen yeni iş ortakları için geçerlidir.  Şu adımları izleyin:
 1. Adresini ziyaret edin <https://manage.visualstudio.com> .
 1. Tanınan bir kullanıcı olmadığı hakkında bir bildirim alırsınız.
 1. **OLP Iş ortakları** kayıt seçeneğini belirleyin ve siparişte kullanılan yetkilendirme numarasını, lisans numarasını, müşteri e-posta adresini girin, onay kutusunu seçin ve **Gönder**' e tıklayın.
@@ -65,10 +65,10 @@ Bu, [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio
 - [Toplu Lisanslama Koşulları](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 - Abonelikleri yönetmek için Visual Studio [abonelikleri yönetim portalını](https://manage.visualstudio.com) ziyaret edin.

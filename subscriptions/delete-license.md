@@ -7,12 +7,12 @@ ms.assetid: e49242bc-e9f2-49e8-8caa-f574d508aba6
 ms.date: 06/16/2020
 ms.topic: how-to
 description: Yöneticilerin Visual Studio abonelikleri yönetim portalındaki abonelik atamalarını nasıl silebileceğinizi öğrenin
-ms.openlocfilehash: c4e55a18bb172588bf1daf777aeee8fee1dca02b
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: a40f1ae5bb8d90217808888ccb44e047f8145b9f
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561357"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005681"
 ---
 # <a name="delete-assignments-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde atamaları silme
 Bir abone artık şirketten ayrıldıklarında, bir projeyi tamamlamada veya yeni bir iş rolüne geçiş yaparken olduğu gibi bir Visual Studio aboneliği gerektirdiğinde, aboneliğini kaldırabilir ve başka birine atayabilirsiniz. Aboneliği yeniden atadığınızda, tüm abone avantajlarının sıfırlanmadığını lütfen unutmayın.  Yeni Kullanıcı, talep edilmemiş anahtarları talep edebilir ve daha önce **talep edilen anahtarları görüntüleyebilir, ancak** talep limitleri sıfırlanmaz.  Kurumsal anlaşmalar (EA) olan kuruluşlar için, özgün kullanıcı tarafından kullanılan Pluralaltim eğitimi gibi tüm avantajlar sıfırlanır. 
@@ -30,14 +30,12 @@ Bir abone artık şirketten ayrıldıklarında, bir projeyi tamamlamada veya yen
    > Şablon kullanılarak toplu silme kullanılamıyor. Azure Active Directory güvenlik grupları aracılığıyla abonelik atamalarını yöneten kuruluşlar için, silme işlemlerinin nasıl gerçekleştiği hakkında daha fazla bilgi için [makalemize](assign-license-bulk.md#use-azure-active-directory-groups-to-assign-subscriptions) bakın.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 - Bir aboneliğin silinmesine gerek kalmadan değiştirilsin mi?  [Abonelikleri nasıl düzenleyeceğinizi](edit-license.md) öğrenin
 - Belirli bir aboneliği bulma konusunda yardım için [bir abonelik aramaya](search-license.md)göz atın.
 - Aboneliklerinizin bir listesini oluşturmanız mı gerekiyor?  Lütfen [abonelikleri dışarı aktarma](exporting-subscriptions.md)bölümüne bakın.
-
-

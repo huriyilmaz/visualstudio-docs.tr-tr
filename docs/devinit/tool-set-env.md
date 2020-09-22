@@ -1,9 +1,9 @@
 ---
-title: Set-env
+title: set-env
 description: devinit aracı gerekli-set-env.
 ms.date: 08/28/2020
 ms.topic: reference
-author: andster
+author: andysterland
 ms.author: andster
 manager: jillfra
 ms.workload:
@@ -11,14 +11,14 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: e7c327fb3f8492af8c1c740044f852d826fffad0
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 2f4ec5489f22e94ad8f57f22ddc7742dc0ae3ade
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810423"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005997"
 ---
-# <a name="set-env"></a>Set-env
+# <a name="set-env"></a>set-env
 
 `set-env`Araç, geçerli işlemde kullanılmak üzere ortam değişkenlerini ayarlamak için kullanılabilir. Ortam değişkenleri yalnızca geçerli işlemde ayarlanır ve `devinit` Bu işlemde çalıştırıldıklarında diğer araçlar tarafından kullanılır.
 
@@ -48,6 +48,10 @@ Bir `input` dize `%userprofile%` , örneğin değer okuma olduğunda genişletil
 ### <a name="additional-options"></a>Ek seçenekler
 
 Kullanılmadı.
+
+## <a name="usage-in-a-codespace"></a>Codespace 'teki kullanım
+
+Bir codespace kullanıyorsanız, codespace 'te kullanılan ortam değişkenlerini, customizating özelliğini kullanarak belirleyebilirsiniz `remoteEnv` [`.devcontainer.json`](https://docs.microsoft.com/visualstudio/codespaces/reference/configuring) .
 
 ## <a name="example-usage"></a>Örnek kullanım
 

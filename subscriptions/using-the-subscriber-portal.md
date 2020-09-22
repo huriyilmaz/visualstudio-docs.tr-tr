@@ -7,18 +7,18 @@ ms.assetid: 8470f035-2a82-4052-9a12-6f24ce796861
 ms.date: 07/19/2019
 ms.topic: overview
 description: Visual Studio abonelikleri portalında kullanabileceğiniz tüm avantajlar hakkında bilgi edinin
-ms.openlocfilehash: b2ace2416950336e7c4a872e378684d8160e2897
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c2b79a1f4bedb9c6e04e7f764befd478e37222e3
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85902879"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005205"
 ---
 # <a name="using-the-subscriber-portal---myvisualstudiocom"></a>Abone portalını kullanma-my.visualstudio.com
 
 Visual Studio abonelikleri portalı, [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) Visual Studio aboneliğiniz aracılığıyla sunulan tüm avantajların avantajlarından yararlanabilmek için hepsi bir arada kaynaktır.
 
-Portalın kullanılması için aboneliğinizle ilişkili kimlikle oturum açmanız gerekir.  Bu, Microsoft hesabınız (MSA) veya bir kuruluş tarafından, işvereniniz veya okulunuz gibi size sağlanmış bir e-posta adresi olabilir.  [Oturum açma](signing-in.md)hakkında bilgi edinin.
+Portalın kullanılması için aboneliğinizle ilişkili kimlikle oturum açmanız gerekir.  Bu, Microsoft hesabınız (MSA) veya bir kuruluş tarafından, işvereniniz veya okulunuz gibi size sağlanmış bir e-posta adresi olabilir.  [Oturum açma](./index.yml)hakkında bilgi edinin.
 
 Portal altı sayfada düzenlenir.  Her sayfa, aboneliğinize dahil edilen farklı ürün veya hizmetlere erişmenizi sağlar.  Altı sayfa avantajlardır, Indirmeler, ürün anahtarları, abonelikler, destek ve Market.
 
@@ -54,10 +54,10 @@ Avantajlar sayfasındaki destek kategorisinde bulunan bireysel avantajlara ek ol
 Bir Visual Studio bulut aboneliğini yenilemeniz mı gerekiyor?  Visual Studio ürün ailesi için en son uzantıları indirmek istiyor musunuz?  Market, kullanıcıların Azure DevOps, Azure DevOps Server ve Visual Studio Code daha da iyi hale getirmek için uzantıları, araçları ve Hizmetleri bulmasına yardımcı olur. Hatta bir Yayımcı olabilir ve Market 'te kendi uzantılarınızı yayımlayabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Adresinde portalda oturum açın [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) ve avantajlarınıza göz atın.  Ayrıca, portalda [Microsoft hesabınızla](sign-in-msa.md) oturum açma hakkında daha fazla bilgi edinebilirsiniz (MSA), [iş veya okul hesabınız](sign-in-work.md)ve hatta [Github hesabınız](sign-in-github.md). 
+Adresinde portalda oturum açın [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) ve avantajlarınıza göz atın.  Ayrıca, portalda [Microsoft hesabınızla](sign-in-msa.md) oturum açma hakkında daha fazla bilgi edinebilirsiniz (MSA), [iş veya okul hesabınız](sign-in-work.md)ve hatta [Github hesabınız](sign-in-github.md).

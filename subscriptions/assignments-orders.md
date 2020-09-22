@@ -7,12 +7,12 @@ ms.assetid: 83a9162a-b9e7-43a4-b07f-6c1fd8580f78
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: Kullanıcı atamalarını ve işlem emirlerini izlemek için Yöneticiler ' responsibilty hakkında bilgi edinin.
-ms.openlocfilehash: 200a6d5f83e762bb91451a0d8d7a1871afab4304
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bfb45b7beae45a0c90bf0a860c84a5b1b6f5830a
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80232695"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005759"
 ---
 # <a name="track-user-assignment-and-process-orders"></a>Kullanıcı atamasını ve işlem emirlerini izleme
 Visual Studio abonelikleri yöneticilerinin, toplu lisanslama sözleşmenizde veya Microsoft ürün ve hizmet anlaşmasındaki ana hatlarıyla belirtilen zamanlamada yapılan kullanımlar için Visual Studio kullanımını ve işlem emirlerini izlemesi beklenmektedir. Yeni Visual Studio abonelikleri yönetim portalı, kullanılabilir ve kullanılan lisanslarınızı gösteren yararlı bir izleyici ile bu basit hale geçti.
@@ -38,10 +38,10 @@ Açık Lisans ve açık değer gibi programlar aracılığıyla veya aylık olar
 Microsoft Kurumsal sözleşmeleri (EA), MPSA ve Select Plus sözleşmeleri, Visual Studio yazılımlarını zaman içinde nasıl kullanacağınızı ve lisanslayabilmeniz için size esneklik sağlar. Visual Studio yöneticileri, yazılım lisanslarını sözleşme dönemi boyunca belirlenen maksimum kullanım sayısına getirmek için yıllık bir doğru sırada olmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:
@@ -49,4 +49,3 @@ Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:
 - [Üretim öncesi ortam envanteri](admin-inventory.md)
 - [Büyük takımları ve dışarıdan yüklenicileri yönetme](manage-teams.md)
 - Satın alma taahhütlerini izlemek için [maksimum kullanımı](maximum-usage.md) kullanın
-

@@ -1,9 +1,9 @@
 ---
-title: gerektir-psmodule
+title: require-psmodule
 description: devinit aracı-psmodule gerektirir.
 ms.date: 08/28/2020
 ms.topic: reference
-author: andster
+author: andysterland
 ms.author: andster
 manager: jillfra
 ms.workload:
@@ -11,14 +11,14 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: f52483065c73f9d0e31f089f3d44aca74588d72f
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 03ebd885f1fae1e7e12d76bb78e03bca0553bab8
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809674"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006024"
 ---
-# <a name="require-psmodule"></a>gerektir-psmodule
+# <a name="require-psmodule"></a>require-psmodule
 
 Araç, PowerShell `require-psmodule` betiklerinizde kullanılabilmesi için, bir [PowerShell modülünü](https://docs.microsoft.com/powershell/scripting/developer/module/understanding-a-windows-powershell-module?view=powershell-7&preserve-view=true) [Install-Module] aracılığıyla [PowerShell Galerisi](https://www.powershellgallery.com/) yüklemek için kullanılır https://docs.microsoft.com/powershell/module/powershellget/install-module?view=powershell-7&preserve-view=true .
 

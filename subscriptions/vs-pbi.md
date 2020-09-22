@@ -7,12 +7,12 @@ ms.assetid: 383fc910-3f4c-474a-a3f8-0f13525f05e9
 ms.date: 03/26/2020
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerine dahil Power BI Pro aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: 9a16e827c45e600ff3b5edc8579b5941aa80ca90
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 82325c090087aea81f43472ebb41a385af51c19d
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801691"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005032"
 ---
 # <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Power BI Pro
 
@@ -114,11 +114,11 @@ Y: Hayır.  Power BI Pro avantajı kamu kiracılarına eklenemiyor.
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 - Power BI Pro avantajınızı etkinleştirmek için, adresini ziyaret edin [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) .
-- [Azure DevTest bireysel kredilerinizi](vs-azure.md)etkinleştirerek kendi geliştirme korumalı ağınızın avantajlarından yararlanın. 
+- [Azure DevTest bireysel kredilerinizi](vs-azure.md)etkinleştirerek kendi geliştirme korumalı ağınızın avantajlarından yararlanın.

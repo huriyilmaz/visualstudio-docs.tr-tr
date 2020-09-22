@@ -7,12 +7,12 @@ ms.assetid: e5768153-2758-46d3-a323-3272def213ee
 ms.date: 03/25/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen kod Magazine avantajı hakkında bilgi edinin.
-ms.openlocfilehash: c7b56074ea9a48f4d94af5c7d79cd93dc2c4a3b8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 30bc728db5aea53d442552ed9b79f506b0f6b6d7
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86387180"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005917"
 ---
 # <a name="code-magazine-included-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerine kod Dergisi dahildir
 
@@ -55,7 +55,7 @@ Abonelik siparişinizi tamamladıktan sonra, aldığınız sorunları görmek i�
 | GitHub Enterprise ile Visual Studio Professional | VL                                      | Kullanılabilir                                                            |  Hayır          |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir                                             |  Hayır          |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir                                              |  Hayır          |
-| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | YOK |
+| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |
 
 <sup>1</sup>  *şunları Içerir: SATıLAMAZ (NFR), Visual Studio Endüstri ortağı (VSıP), FTE, BizSpark, Imagine Premium.  Dışlar: Microsoft İş Ortağı Ağı (MPN), en değerli profesyonel (MVP), bölgesel Müdürü (RD), MCT yazılım & Hizmetleri Geliştirici, MCT yazılım & Hizmetleri, Imagine.*
 
@@ -77,10 +77,10 @@ Y: kod Dergisi, aboneliğin bir yazdırma veya dijital abonelik için, aboneliğ
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Aboneliğinize dahil olan harika avantajların geri kalanında göz atın. Adresini ziyaret edin [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) .

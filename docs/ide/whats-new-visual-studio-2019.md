@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e99dc9e6a4e555d586c5007fd603350c9fa4e7c
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: ff0188a93b8c7b6470aeaeced7e3f48dbad0f28b
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "90850988"
+ms.locfileid: "91005375"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019’daki yenilikler
 
@@ -224,7 +224,7 @@ Bu sırada, şu anda çalışmadaki yeni özelliklerden bazıları aşağıda ve
 
    GitHub, Azure Repos ve diğer uzak barındırma hizmetlerinde kod ile çalışırken üretkenliğinizi iyileştirmeye yönelik bir revaed git deneyiminde yineleme yapmaya devam ediyoruz. Visual Studio 2019 içinden tek bir eylemle başlatabilir ve gönderebilirsiniz (veya ' a tıklayabilirsiniz). Ayrıca yeni dallar oluşturabilir, geçerli dalları yönetebilir ve birleştirme çakışmalarını çözebilirsiniz.
 
-   Daha fazla bilgi için bkz. [Visual Studio 'Da git deneyimine yönelik heyecan verici yeni güncelleştirmeler](https://devblogs.microsoft.com/visualstudio/exciting-new-updates-to-the-git-experience-in-visual-studio/) blog gönderisi.
+   Daha fazla bilgi için bkz. [Visual Studio 'Da yeni git deneyimi](git-with-visual-studio.md) sayfası.
 
 Önizleme sürümü ve bir indirme bağlantısı hakkında daha fazla bilgi için &mdash; &mdash; bkz. **[Visual Studio önizleme](https://visualstudio.microsoft.com/vs/preview/)** sayfası.
 

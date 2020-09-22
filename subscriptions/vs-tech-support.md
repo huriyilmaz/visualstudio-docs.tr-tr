@@ -7,12 +7,12 @@ ms.assetid: 2e0fd8bb-8f20-487c-b350-b8fde405ea5e
 ms.date: 09/02/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinizle birlikte sunulan teknik destek avantajını nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: ba4a80f604116a10901d98229980f2732956c0df
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 6f22273d578c6e1bc30d588fff30c945846a5d8f
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508944"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91004552"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde teknik destek avantajını etkinleştirin ve kullanın
 Visual Studio aboneliklerinde teknik destek avantajı, hala [destek yaşam döngüsünün](https://support.microsoft.com/lifecycle/search)temel destek aşamasında olan ürünlere yönelik **Üretim dışı ortamlarda** onarım sorunlarını çözmeye yöneliktir. Visual Studio Enterprise standart ve yıllık bulut abonelikleri dört olay alır, Visual Studio Professional ancak standart ve yıllık bulut abonelikleri, avantajı etkinleştirmede 1 yıla kadar olmak üzere iki olay alır. Abonelik geçerli olduğunda avantajı etkinleştirme gerçekleşmelidir.
@@ -121,12 +121,12 @@ Azure ile ilgili sorunlar için Visual Studio aboneliğiniz teknik destek avanta
 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | 4 olay       |  Evet|
-| GitHub Enterprise ile Visual Studio Enterprise | VL | 4 olay       |  Evet|
-| Visual Studio Professional (Standart) | VL, Azure, perakende, seçili NFR<sup>2</sup>                                        | 2 olay                                                          |Evet         |
-| GitHub Enterprise ile Visual Studio Professional | VL                                     | 2 olay                                                          |Evet         |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | 2 olay                                             |  Evet         |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | 2 olay                                               | Evet         |
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | 4 olay       |  Yes|
+| GitHub Enterprise ile Visual Studio Enterprise | VL | 4 olay       |  Yes|
+| Visual Studio Professional (Standart) | VL, Azure, perakende, seçili NFR<sup>2</sup>                                        | 2 olay                                                          |Yes         |
+| GitHub Enterprise ile Visual Studio Professional | VL                                     | 2 olay                                                          |Yes         |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | 2 olay                                             |  Yes         |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | 2 olay                                               | Yes         |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|
 ||
 
@@ -137,10 +137,10 @@ Azure ile ilgili sorunlar için Visual Studio aboneliğiniz teknik destek avanta
 Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)E-posta adresinize atanan tüm abonelikleri görmek için bağlantısını yapın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla sahip olabilirsiniz.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Visual Studio aboneliğinizden en iyi şekilde yararlanmak için bu harika avantajları etkinleştirdiğinizden emin olun:

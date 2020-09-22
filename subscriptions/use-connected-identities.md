@@ -8,12 +8,12 @@ ms.date: 03/11/2020
 ms.topic: conceptual
 robots: noindex, nofollow
 description: Bağlı Microsoft hesaplarıyla ve Azure Active Directory kimliklerle çalışmayı öğrenin
-ms.openlocfilehash: f7b2cad08eb94b15e35015db7e8ac3fe084a00ea
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d67576ab715f3ff8a49287155423a3dd6c20867
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87805624"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005244"
 ---
 # <a name="how-to-use-connected-identities-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde bağlı kimlikler kullanma
 Çalışmanız veya okulunuz aracılığıyla bir Visual Studio aboneliği alırsanız ve oturum açmak için Microsoft hesabı (MSA) kullanıyorsanız, abonelik yöneticiniz, MSA 'yı kuruluşunuzun Azure Active Directory (Azure AD) olarak kimliğinize bağlayabilirsiniz.  Bu, aboneliğinize dahil olan avantajlardan bazılarına nasıl erişirsiniz. 
@@ -43,10 +43,10 @@ A: yöneticinizle iletişim kurma hakkında bilgi edinmek için lütfen [aboneli
 Y: bağlı kimlikleri uygulama basittir.  Daha fazla bilgi için [Bu makaleye](personal-email-sign-ins.md) göz atın. 
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Yöneticiniz Azure AD ve MSA hesaplarınızı bağladıktan sonra, [abonelik portalında](https://my.visualstudio.com?wt.mc_id=o~msft~docs) başarıyla oturum açabilmeniz ve Azure DevOps, Visual Studio ve Azure DevTest bireysel krediniz gibi erişim avantajlarına sahip olmanız gerektiğini doğrulamanız önerilir. 
+Yöneticiniz Azure AD ve MSA hesaplarınızı bağladıktan sonra, [abonelik portalında](https://my.visualstudio.com?wt.mc_id=o~msft~docs) başarıyla oturum açabilmeniz ve Azure DevOps, Visual Studio ve Azure DevTest bireysel krediniz gibi erişim avantajlarına sahip olmanız gerektiğini doğrulamanız önerilir.

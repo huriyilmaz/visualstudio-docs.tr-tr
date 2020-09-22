@@ -7,12 +7,12 @@ ms.assetid: 6255b6a3-f101-4b2c-b7fa-851eccc944b2
 ms.date: 03/24/2020
 ms.topic: conceptual
 description: Seçili Visual Studio aboneliklerinde bulunan CloudPilot avantajı hakkında bilgi edinin
-ms.openlocfilehash: bebffb505f5c2b0fff7167ed2cccf629be1e7543
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 642a5b35f41676c76d9eb4e5f1319fbbf57c55df
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80274043"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005930"
 ---
 # <a name="the-cloudpilot-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde CloudPilot avantajı
 Uygulamalarınızı birkaç kolay adımda Microsoft Azure taşıyın. Dakikalar içinde, başarılı geçiş için kod satırına tüm gerekli kod değişikliklerini belirlemek için: kapsayıcılar, VM 'Ler, App Services, SQL Azure ve/veya SQL MI. Ardından, ASR, DMA ve DMS kullanan sihirbazları kullanarak uygulamaları Azure 'a geçirin.
@@ -85,10 +85,10 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.vi
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Aboneliğinizle birlikte gelen Azure DevTest bireysel kredi avantajını henüz etkinleştirmediyseniz, [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) Azure aboneliğinizi kurmak ve Azure DevTest bireysel kredilerinizi kullanmak Için Araçlar kategorisindeki Azure kutucuğuna gidin ve tıklayın.

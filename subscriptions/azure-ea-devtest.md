@@ -7,12 +7,12 @@ ms.assetid: a335ed23-34ee-40cb-83c6-6c93dee57424
 ms.date: 02/23/2020
 ms.topic: how-to
 description: Kurumsal sözleşmeleri olan müşteriler için sunulan özel Azure DevTest fiyatlandırmasının avantajlarından nasıl yararlandığını öğrenin
-ms.openlocfilehash: 6d7ad872568ead5c7c53dcd8d0429f2ff0444095
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 70f7b9877dcc973d2f649eb0cad53599ff6023f3
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903145"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005746"
 ---
 # <a name="azure-enterprise-agreement-devtest-offer"></a>Azure Kurumsal Anlaşma DevTest teklifi
 
@@ -42,10 +42,10 @@ Hesaptaki her abone, şu adımları izleyerek bir abonelik oluşturabilir:
 0. **Satın al**’a tıklayın.  (Bu teklifle, aslında hiçbir şey satın almanız gerekmez.)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Visual Studio aboneliklerini yönetme hakkında daha fazla bilgi edinin.
@@ -54,6 +54,3 @@ Visual Studio aboneliklerini yönetme hakkında daha fazla bilgi edinin.
 - [Abonelikleri düzenleme](edit-license.md)
 - [Abonelikleri silme](delete-license.md)
 - [En fazla kullanımı belirleme](maximum-usage.md)
-
-
-

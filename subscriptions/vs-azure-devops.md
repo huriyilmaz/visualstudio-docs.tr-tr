@@ -7,12 +7,12 @@ ms.assetid: fe826200-9600-4b29-a64e-0d66ba3caf3d
 ms.date: 07/22/2020
 ms.topic: conceptual
 description: Azure DevOps 'u bir Visual Studio abonesi olarak nasıl kullanabileceğinizi anlayın.
-ms.openlocfilehash: 9f715cf5b9bd0278073b4a5f19a0f0a4f6a7a423
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f449d39866cb5891f2b378acffdd84b38b6408c7
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801080"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005092"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio aboneleri için Azure DevOps avantajları
 Etkin bir Visual Studio abonesi olarak, Azure DevOps 'da, aboneliğinize bir avantaj olarak dahil olan bir dizi özelliği kullanabilirsiniz. Bu aynı özellikleri, bir üye olduğunuz her bir Azure DevOps kuruluşunda, organizasyonu oluşturduğunuz veya başka bir kişi tarafından eklenmeksizin kullanabilirsiniz.
@@ -30,17 +30,17 @@ Azure DevOps 'da, Visual Studio aboneliğinizi veya [Alternatif kimliğinizi](vs
 ## <a name="eligibility"></a>Önceliği
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, seçili NFR<sup>1</sup>  | Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans, kendinden barındırılan paralel işler [daha fazla bilgi](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)     |  Evet          |
-| GitHub Enterprise ile Visual Studio Enterprise   | VL| Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans, kendinden barındırılan paralel işler [daha fazla bilgi](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops) |  Evet          |
-| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                        | Azure Boards & depoları (temel<sup>2</sup>) [daha fazla bilgi](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)                                                            |  Evet          |
-| GitHub Enterprise ile Visual Studio Professional | VL| Azure Boards & depoları (temel<sup>2</sup>)  [daha fazla bilgi](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)                                                            |  Evet          |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans [daha fazla bilgi edinin](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)                                             |  Evet          |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans [daha fazla bilgi edinin](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)                                             |  Evet          |
+| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, seçili NFR<sup>1</sup>  | Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans, kendinden barındırılan paralel işler [daha fazla bilgi](/azure/devops/organizations/security/access-levels?view=azure-devops)     |  Yes          |
+| GitHub Enterprise ile Visual Studio Enterprise   | VL| Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans, kendinden barındırılan paralel işler [daha fazla bilgi](/azure/devops/organizations/security/access-levels?view=azure-devops) |  Yes          |
+| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                        | Azure Boards & depoları (temel<sup>2</sup>) [daha fazla bilgi](/azure/devops/organizations/security/access-levels?view=azure-devops)                                                            |  Yes          |
+| GitHub Enterprise ile Visual Studio Professional | VL| Azure Boards & depoları (temel<sup>2</sup>)  [daha fazla bilgi](/azure/devops/organizations/security/access-levels?view=azure-devops)                                                            |  Yes          |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans [daha fazla bilgi edinin](/azure/devops/organizations/security/access-levels?view=azure-devops)                                             |  Yes          |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans [daha fazla bilgi edinin](/azure/devops/organizations/security/access-levels?view=azure-devops)                                             |  Yes          |
 ||
 
 <sup>1</sup>  *şunları Içerir: for SATıM (NFR), en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), Visual Studio Endüstri ortağı (vsıp), Microsoft iş ortağı ağı (Enterprise), BIZSPARK, mct Software & Services Geliştirici, FTE. Dışlar: MCT yazılım & Hizmetleri, Imagine.*
 
-<sup>2</sup> *temel plan, yayın işlem hatlarını ve çok aşamalı SÜREKLI dağıtım (CD) işlem hatlarını tanımlamayı ve dağıtımları denetlemek için onayları ve kapıları kullanmayı Içerir; işlem Hattı Önizleme özelliğine ücretsiz erişim etkinleştirildiğinde, paydaşlar tüm Azure Pipelines özelliklerine erişim kazanır. Planlara dahil olan özellikler hakkında daha fazla bilgi için lütfen Azure 'un [erişim düzeyleri hakkında sayfasına](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)gidin.*
+<sup>2</sup> *temel plan, yayın işlem hatlarını ve çok aşamalı SÜREKLI dağıtım (CD) işlem hatlarını tanımlamayı ve dağıtımları denetlemek için onayları ve kapıları kullanmayı Içerir; işlem Hattı Önizleme özelliğine ücretsiz erişim etkinleştirildiğinde, paydaşlar tüm Azure Pipelines özelliklerine erişim kazanır. Planlara dahil olan özellikler hakkında daha fazla bilgi için lütfen Azure 'un [erişim düzeyleri hakkında sayfasına](/azure/devops/organizations/security/access-levels?view=azure-devops)gidin.*
 
 > [!NOTE]
 > Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) Visual Studio 'yu satın almaya yönelik farklı seçeneklere göz atın.
@@ -58,10 +58,10 @@ Y: Evet. Visual Studio Enterprise aboneler, Team Foundation Server 2017 veya üz
 - [Azure DevOps belgeleri](/azure/devops/).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Azure DevOps özellikleri hakkında daha fazla bilgi edinin:

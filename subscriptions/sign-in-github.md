@@ -7,12 +7,12 @@ ms.assetid: 1bdcb3c9-bba1-4e25-a609-9d7e539d78e0
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: GitHub hesabınızla Visual Studio aboneliğinizde nasıl oturum kullanabileceğinizi öğrenin.
-ms.openlocfilehash: 722eeae315a8b4a6bd93fb1048846b147b294afa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0dcbe5a908a2d149de7c254ec6ac6f3ec1eb6e72
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80233224"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005270"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-github-account"></a>GitHub hesabınızla Visual Studio abonelikleriniz üzerinde oturum açma 
 
@@ -65,10 +65,10 @@ Y: account.microsoft.com ' un [Güvenlik sekmesine](https://account.microsoft.co
 Y: GitHub hesabınızda bir Azure Active Directory e-posta adresiniz varsa, bu, Azure 'a erişebilen ve GitHub kodunuzu kullanarak CI işlem hatlarını çalıştıran bir Microsoft kimliğiniz zaten var demektir. Bu hesabın kullanılması, Azure kaynaklarınızın ve derleme işlem hatlarınızın kurumsal sınırlarınızda kalmasını sağlar. Bununla birlikte, kişisel işler gerçekleştiriyorsanız, bu hesaba her zaman erişebilmenizi sağlamak için GitHub hesabınıza kişisel bir e-posta adresi koymayı öneririz. Bunu yaptıktan sonra yeniden oturum açmayı deneyin ve iş veya okul hesabınızda oturum açmanız istendiğinde **farklı bir e-posta adresi kullan** ' ı seçin. Bu, kişisel e-posta adresini kullanarak yeni bir Microsoft hesabı oluşturmanızı sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Abonelikler portalında başarıyla oturum açtıktan sonra avantajlar sayfasını ziyaret etmenizi https://my.visualstudio.com/benefits ve size sunulan harika araçları, hizmetleri ve teklifleri keşfetmenizi öneririz.  
+Abonelikler portalında başarıyla oturum açtıktan sonra avantajlar sayfasını ziyaret etmenizi https://my.visualstudio.com/benefits ve size sunulan harika araçları, hizmetleri ve teklifleri keşfetmenizi öneririz.

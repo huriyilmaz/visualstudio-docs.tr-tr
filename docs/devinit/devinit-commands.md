@@ -3,7 +3,7 @@ title: devinit komutları
 description: Bileşenleri yüklemek için devinit komutlarının nasıl kullanılacağına ilişkin ayrıntılar.
 ms.date: 08/28/2020
 ms.topic: reference
-author: andster
+author: andysterland
 ms.author: andster
 manager: jillfra
 ms.workload:
@@ -11,18 +11,18 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 545f7ec80b528b759db8ccfde21a18a46959913a
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 1a0bd657d9612bde05a820a591c2ab2c1cfdaad3
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809709"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005533"
 ---
 # <a name="devinit-commands"></a>devinit komutları
 
 ## <a name="init"></a>Init
 
-```batch
+```console
 > devinit init
 ```
 
@@ -41,7 +41,7 @@ Komut için isteğe bağlı seçenekler `devinit init` .
 
 ## <a name="run"></a>Çalıştır
 
-```batch
+```console
 > devinit run -t <toolname>
 ```
 
@@ -91,19 +91,19 @@ Ayrıntılı çıktıyı standart çıktıya yay. Yürütülecek araç ayrıntı
 
 Değerinde bir boşluk içeren bir kullanmak, başka bir kaçış `<arg>` tırnak çifti içermelidir.
 
-```batch
+```console
 > devinit run -t <toolname> -<somearg> "<some value>"
 ```
 
 Belirli bir dizine DotNet yüklemek için `C:\Program Files\dotnet` :
 
-```batch
+```console
 > devinit run -t require-dotnetcoresdk --"-InstallDir \"C:\Program Files\dotnet\""
 ```
 
 ## <a name="list"></a>Liste
 
-```batch
+```console
 > devinit list
 ```
 
@@ -111,7 +111,7 @@ Tüm kullanılabilir araçların listesini yazdırır.
 
 ## <a name="show"></a>Göster
 
-```batch
+```console
 > devinit show -t <toolname>
 ```
 
@@ -123,7 +123,7 @@ Belirli bir araç için yardım bilgilerini yazdırır.
 
 ## <a name="version"></a>Sürüm
 
-```batch
+```console
 > devinit version
 ```
 
@@ -131,7 +131,7 @@ Devinit için geçerli sürüm bilgilerini yazdırır.
 
 ## <a name="help"></a>Yardım
 
-```batch
+```console
 > devinit help
 > devinit help list
 ```

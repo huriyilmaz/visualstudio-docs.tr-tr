@@ -7,12 +7,12 @@ ms.assetid: 9c0b9a4f-b9a3-491c-a68f-6e4bac7f7b3d
 ms.date: 08/10/2020
 ms.topic: how-to
 description: Yöneticilerin yönetim portalında bireysel aboneleri veya grupları nasıl bulabileceğinizi öğrenin.
-ms.openlocfilehash: aea4e0d05eb01a5ec3fcf1da97d34e069aeb964d
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 29354348b423b539b79c36c78f213f7a20d60eb3
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810711"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005309"
 ---
 # <a name="search-and-filter-subscribers-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde aboneleri arama ve filtreleme
 Visual Studio abonelikleri yönetim portalı, çeşitli ölçütlere göre belirli bir abone alt kümesini bulmanızı sağlar. Abone listesini ad, e-posta adresi, abonelik düzeyi ve diğer bilgilere göre filtreleyebilirsiniz.
@@ -38,14 +38,12 @@ Visual Studio abonelikleri yönetim portalı, çeşitli ölçütlere göre belir
 
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 - Bir abonenin nasıl bulunacağını öğrenmiş olduğunuza göre, aboneliğini nasıl [düzenleyeceğinizi](edit-license.md) öğrenin.
 - Yönetim portalını kullanma konusunda yardıma mı ihtiyacınız var?  [Visual Studio yönetim ve abonelikler desteğiyle](https://visualstudio.microsoft.com/support/support-overview-vs)iletişim kurun.
-
-

@@ -7,12 +7,12 @@ ms.assetid: b26b31dc-1eeb-4871-9ce6-2c980e703f1e
 ms.date: 09/03/2019
 ms.topic: conceptual
 description: Abonelik yöneticilerinin sorumlulukları hakkında bilgi edinin.
-ms.openlocfilehash: 242fe28346b1264833939202936fa46a47d4f4d3
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: c0c30eb8bc5b63720bd2377990a390df8a173035
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426895"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006143"
 ---
 # <a name="overview-of-administrator-responsibilities"></a>Yönetici sorumluluklarına genel bakış
 Yönetici olarak, kuruluşunuz için abonelikleri yönetebilirsiniz.  Yönetici rolü Ayrıca, aboneliklerin lisans koşullarına uygun olarak yönetildiğinden emin olmak için sorumlulukları taşır. Bu makalede, yönetici rolünün sorumlulukları, avantajları ve sınırlamaları özetlenmektedir.
@@ -37,10 +37,10 @@ Visual Studio abonelikleri, geliştiricilerin diğer yazılımları tasarlamak, 
 | Son kullanıcılar için özel durum                  | Yazılım geliştirme projesinin sonunda, son kullanıcılar tipik olarak bir uygulamayı gözden geçirir ve sürüm için gerekli ölçütlere uyup uymadığını tespit edin. Bu işleme Kullanıcı kabul testi (UAT) adı verilir. İş destekleyicisi veya ürün yöneticisi gibi takım üyeleri, son kullanıcılar için proxy olarak davranabilir. Visual Studio aboneliğine sahip olmayan son kullanıcılar, yazılımın kullanımı, tüm Visual Studio lisanslama koşullarına uygun değilse, UıAT için yazılıma erişebilirler. Birincil rolü tasarlayan, geliştiren veya test eden birisinin, "Son Kullanıcı" olarak nitelendiriyor olması çok nadir bir durumdur. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
-- [Azure belgeleri](https://docs.microsoft.com/azure/)
-- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:
