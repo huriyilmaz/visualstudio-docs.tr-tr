@@ -1,5 +1,6 @@
 ---
-title: ClickOnce dağıtımlarında sunucu/istemci yapılandırma sorunları
+title: Sunucu/istemci yapılandırma sorunları (ClickOnce)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ec07e71e57c0b3875d690773b7ff2618269b8f4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9af8b864092f56150ff71d0e23b0bf59280aeb6c
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250011"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811240"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce dağıtımlarında sunucu ve istemci yapılandırma sorunları
 Windows Server 'da Internet Information Services (IIS) kullanıyorsanız ve dağıtımınız Windows 'un tanımadığı bir dosya türünü içeriyorsa (örneğin, Microsoft Word dosyası), IIS bu dosyayı aktarmayı reddeder ve dağıtımınız başarılı olmaz.
@@ -94,7 +95,7 @@ Windows Server 'da Internet Information Services (IIS) kullanıyorsanız ve dağ
 ## <a name="ftp-protocol-not-supported-for-installing-applications"></a>FTP protokolü, uygulamaları yüklemek için desteklenmez
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] herhangi bir HTTP 1,1 Web sunucusundan veya dosya sunucusundan uygulama yüklemeyi destekler. FTP, Dosya Aktarım Protokolü, uygulamaları yüklemek için desteklenmez. FTP 'yi yalnızca uygulamaları yayımlamak için kullanabilirsiniz. Aşağıdaki tabloda bu farklılıklar özetlenmektedir:
 
-| URL türü | Description |
+| URL türü | Açıklama |
 |----------| - |
 | ftp:// | [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Bu protokolü kullanarak bir uygulamayı yayımlayabilirsiniz. |
 | http:// | [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Bu protokolü kullanarak bir uygulamayı yükleyebilirsiniz. |
