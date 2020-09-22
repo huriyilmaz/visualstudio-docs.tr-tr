@@ -11,18 +11,18 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: a622bf3a10b47ab535a02deac35e3ed2c2b8aa4c
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: b42ce84bcb2a336e37d0ffafb2bab6c2dba9ba9d
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808704"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852211"
 ---
 # <a name="devinit-and-github-codespaces"></a>devinit ve GitHub Codespaces
 
 devinit, [GitHub codespace](https://github.com/features/codespaces) 'e harika bir fikir ve devinit, katkıda bulunanlar oluşturmak, çalıştırmak ve hata ayıklamak için hemen bir kod alanı kurulumu sağlamak üzere kullanılabilir.
 
-GitHub Codespaces ile tümleştirilmesi için, `devinit` `postCreateCommand` `.devcontainer.json` Depo köküne yerleştirilmiş bir dosyada tanımlanan öğesinden çağrılmalıdır. İçindeki dize (ler), `postCreateCommand` Depo codespace 'e kopyalandıktan sonra varsayılan kabukta yürütülür. `postCreateCommand`GitHub Codespaces [Özelleştirme belgelerindeki](https://docs.GitHub.com/en/GitHub/developing-online-with-codespaces/configuring-codespaces-for-your-project)hakkında daha fazla bilgi edinebilirsiniz. Komutu eklemek için `devinit` `devinit init` `postCreateCommand` Aşağıdaki örneklerde gösterildiği gibi öğesine ekleyebilirsiniz.
+GitHub Codespaces ile tümleştirilmesi için, `devinit` `postCreateCommand` `.devcontainer.json` Depo köküne yerleştirilmiş bir dosyada tanımlanan öğesinden çağrılmalıdır. İçindeki dize (ler), `postCreateCommand` Depo codespace 'e kopyalandıktan sonra varsayılan kabukta yürütülür. `postCreateCommand`GitHub Codespaces [Özelleştirme belgelerindeki](https://docs.github.com/github/developing-online-with-codespaces/configuring-codespaces-for-your-project)hakkında daha fazla bilgi edinebilirsiniz. Komutu eklemek için `devinit` `devinit init` `postCreateCommand` Aşağıdaki örneklerde gösterildiği gibi öğesine ekleyebilirsiniz.
 
 Codespace 'e bağlandıktan `devinit init -f <path to .devinit.json>` sonra Visual Studio tümleşik terminalden da çalıştırabilirsiniz.
 
