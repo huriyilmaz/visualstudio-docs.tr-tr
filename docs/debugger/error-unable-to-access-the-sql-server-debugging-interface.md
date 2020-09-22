@@ -1,5 +1,5 @@
 ---
-title: Hata-SQL Server hata ayıklama arabirimine erişilemiyor | Microsoft Docs
+title: SQL Server hata ayıklama arabirimine erişilemiyor | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d0c0c61fce7f20ea49547bc63a6e70eed284b016
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ae2d0ba3abf66aefe56921c51669787186d49f12
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85460214"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851521"
 ---
 # <a name="error-unable-to-access-the-sql-server-debugging-interface"></a>Hata: SQL Server hata ayıklama arabirimine erişilemiyor
 Bu ileti, SQL hata ayıklamanın etkinleştirilmediği bir makinede SQL hata ayıklamayı denediğinizde oluşur.

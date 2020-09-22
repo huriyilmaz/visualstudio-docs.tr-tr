@@ -1,5 +1,5 @@
 ---
-title: Hata-Web sunucusu Istenen kaynağı bulamadı | Microsoft Docs
+title: Web sunucusu Istenen kaynağı bulamadı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5cce9afe8f27b25a01c0f6276164522a78a2ed9a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3eaa6b3e0cc609c382e8f94383a6bdb6041a2288
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85460357"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90850962"
 ---
 # <a name="error-the-web-server-could-not-find-the-requested-resource"></a>Hata: Web Sunucusu İstenilen Kaynağı Bulamadı
 Güvenlik konuları nedeniyle, IIS genel bir hata döndürdü.

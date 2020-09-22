@@ -1,5 +1,5 @@
 ---
-title: Hata- &apos; sistemde bir çekirdek hata ayıklayıcısı etkinleştirildiğinden hata ayıklama ISN t mümkün | Microsoft Docs
+title: '&apos;Sistemde bir çekirdek hata ayıklayıcısı etkinleştirildiğinden dolayı hata ayıklama yapılamıyor | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c94d605459720722b0e1360ab3a56539667d51e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 569d3d0baf98f5c13d0ccb182df6e51160db93d6
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88706639"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852777"
 ---
 # <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>Hata: sistemde bir çekirdek hata ayıklayıcısı etkinleştirildiğinden, ISN&#39;t hata ayıklaması mümkün
 Yönetilen kodda hata ayıklarken, aşağıdaki hata iletisini alabilirsiniz:

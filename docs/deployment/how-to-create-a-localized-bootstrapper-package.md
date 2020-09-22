@@ -1,5 +1,5 @@
 ---
-title: Yerelleştirilmiş önyükleyici paketi oluşturma | Microsoft Docs
+title: Yerelleştirilmiş önyükleyici paketi oluştur | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 26858dce9c6484c1b7acb94ad2a7f38fd20447a2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2c673c6488b93802877ef088d9d9a1a4793cf50b
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382568"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852491"
 ---
 # <a name="how-to-create-a-localized-bootstrapper-package"></a>Nasıl yapılır: yerelleştirilmiş önyükleyici paketi oluşturma
 Bir önyükleyici paketi oluşturduktan sonra, her yerel ayar için iki farklı dosya oluşturarak Önyükleyici paketinin yerelleştirilmiş sürümlerini oluşturabilirsiniz: bir yazılım lisans koşulları dosyası (örneğin, *EULA. rtf*) ve bir paket bildirimi (*package.xml*).
@@ -51,8 +51,8 @@ Bir önyükleyici paketi oluşturduktan sonra, her yerel ayar için iki farklı 
     |Geleneksel Çince|zh-Hant|
     |Çekçe|'ye|
     |Almanca|seçimini|
-    |İngilizce|tr|
-    |İspanyolca|es|
+    |İngilizce|en|
+    |Spanish|es|
     |Fransızca|kesir|
     |İtalyanca|içerdiği|
     |Korece|dili|

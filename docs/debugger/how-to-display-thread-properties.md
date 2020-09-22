@@ -1,5 +1,5 @@
 ---
-title: Iş parçacığı özelliklerini görüntüleme | Microsoft Docs
+title: Iş parçacığı özelliklerini görüntüle | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab3f98b5a47c6d950f2d95e732e05e5734c783b5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: acc57df5258675be42473c502a8d31d1a73e8c00
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349880"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852315"
 ---
 # <a name="how-to-display-thread-properties"></a>Nasıl yapılır: İş Parçacığı Özelliklerini Görüntüleme
 İş [parçacıkları görünümünde](../debugger/threads-view.md)listelenen bir iş parçacığı hakkında daha fazla bilgi edinmek Için [Iş parçacığı özellikleri iletişim kutusunu](../debugger/thread-properties-dialog-box.md)kullanın.

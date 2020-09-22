@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: dd2da52a84d972e47b0e63905f0c4b6d4f7af9f3
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d926a51ecfa68f6a5caea0bcf84bcafaffddc0a7
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809322"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852478"
 ---
 # <a name="frequently-asked-questions-for-devinit"></a>Devinit için sık sorulan sorular
 
@@ -64,4 +64,4 @@ Devinit 'nin yüklediği herhangi bir şey işletim sisteminin yeniden başlatı
 
 devinit, uygulamanızın sahip olabileceği bağımlılıkları dağıtmak ve yapılandırmak için bir çok geniş ekosistemin kullanımını etkinleştirmeye yönelik olarak tasarlanmıştır. Devınit 'in sunduğu özellikler hakkında bir düşünme karşın devinit, genellikle diğer araçların bildirim temelli bir JSON dosyasından yürütülmesini sağlar.
 
-Bugün, devinit yalnızca Başlarken ve [araç listemiz](/devinit-tool-list.md) yalnızca bir başlangıç.
+Bugün, devinit yalnızca Başlarken ve [araç listemiz](devinit-tool-list.md) yalnızca bir başlangıç.

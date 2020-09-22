@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 58d2a7b7c83f1260427ff0d805510e08ae35c019
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: edc58c74daf3cdd1e80256f9915936f4cef6d3fa
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329799"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851183"
 ---
 # <a name="how-to-customize-report-view-columns"></a>Nasıl yapılır: rapor görünümü sütunlarını özelleştirme
 Visual Studio Team System Development Edition 'daki performans araçları, sorunsuz bir kullanıcı deneyimi sağlamak için tümleşik geliştirme ortamı (IDE) ile tamamen tümleşiktir. Aşağıdaki liste sütunları ekleyerek, kaldırarak ve yeniden düzenleyerek özelleştirilebilen görünümlerin temsilcisidir:

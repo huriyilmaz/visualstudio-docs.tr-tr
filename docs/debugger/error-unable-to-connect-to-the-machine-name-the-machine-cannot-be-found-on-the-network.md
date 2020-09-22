@@ -1,5 +1,5 @@
 ---
-title: Hata-makine &lt; adına bağlanılamıyor &gt; . Makine ağ üzerinde bulunamadı. | Microsoft Belgeleri
+title: Makine adı ile bağlantı kurulamıyor &lt; &gt; . Makine ağ üzerinde bulunamadı. | Microsoft Belgeleri
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8618a15ab4dcd6c9bbc0d9d8ab9bf347552883b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d1ab43773b4aa9d2535eb6ac157ec39333907731
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85460149"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852517"
 ---
 # <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>Hata: makine &lt; adına bağlanılamıyor &gt; . Makine ağ üzerinde bulunamadı.
 Bu davranış, aşağıdaki koşullardan biri doğru olduğunda meydana gelir:

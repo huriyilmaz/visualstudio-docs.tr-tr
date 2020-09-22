@@ -1,5 +1,5 @@
 ---
-title: ASP.NET özel durumları için hata ayıklama | Microsoft Docs
+title: Hata ayıklama ASP.NET özel durumları | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: a6808bff0a38b6ebaa3049f1655e781439f3f735
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 011094eed88245e3cd83b092a3f1b2e47bc77ae8
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350140"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852158"
 ---
 # <a name="how-to-debug-aspnet-exceptions"></a>Nasıl Yapılır: ASP.NET Özel Durumlarında Hata Ayıklama
 Hata ayıklama özel durumları, güçlü bir uygulama geliştirmesinin önemli bir parçasıdır [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] . Özel durumların hata ayıklamasına ilişkin genel bilgiler [hata ayıklayıcı Ile özel durumları yönetmektir](../debugger/managing-exceptions-with-the-debugger.md).

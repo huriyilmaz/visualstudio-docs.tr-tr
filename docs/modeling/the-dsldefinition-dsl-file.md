@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97736dd9893f3a5d0c07f464ae75849395270d4b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 893f39149a9000f3672c5b3043551bcbd53e6b87
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114925"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808961"
 ---
 # <a name="the-dsldefinitiondsl-file"></a>DslDefinition.dsl Dosyası
 
@@ -465,7 +465,7 @@ Serileştirilmiş dosya şunları içerir:
 
 (Bağlantı Ilişkisinin kendi öğesi ve öznitelik adlarını sağlayan kendi XML sınıfı verileri vardır.)
 
-**OmitElement** özniteliği true olarak ayarlanırsa, ilişki rolü adı atılır, bu, serileştirilmiş dosyayı abbreviates ve iki sınıfın birden fazla ilişkisi yoksa çok büyük olur. Örneğin:
+**OmitElement** özniteliği true olarak ayarlanırsa, ilişki rolü adı atılır, bu, serileştirilmiş dosyayı abbreviates ve iki sınıfın birden fazla ilişkisi yoksa çok büyük olur. Örnek:
 
 ```xml
 <component name="Component3">
@@ -579,6 +579,6 @@ Bağlayıcı haritaları, dekoratör haritaları da içerebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Alana Özgü Dil Araçları sözlüğü](/previous-versions/bb126564(v=vs.100))
 - [Nasıl yapılır: Etki Alanına Özgü bir Dili Tanımlama](../modeling/how-to-define-a-domain-specific-language.md)
 - [Modelleri, Sınıfları ve İlişkileri Anlama](../modeling/understanding-models-classes-and-relationships.md)

@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed8ec8e7f990a4a2c5d943a15a105faa5ab23572
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 83acc551c778fdb245b3bacec164a7544253d55f
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75589389"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808697"
 ---
 # <a name="symbol-path-command"></a>Sembol Yolu Komutu
 Hata ayıklayıcının simge araması için dizinlerin listesini ayarlar.
@@ -38,14 +38,14 @@ Debug.SymbolPath pathname1;pathname2;... pathnameN
 ## <a name="remarks"></a>Açıklamalar
 Hayır `pathname` belirtilmemişse, komut geçerli sembol yollarını listeler.
 
-## <a name="example"></a>Örnek
+## <a name="example-1"></a>Örnek 1
 Bu örnek, sembol dizinleri listesine iki yol ekler.
 
 ```
 Debug.SymbolPath C:\Symbol Path 1;C:\Symbol Path 2
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-2"></a>Örnek 2
 Bu örnek, geçerli sembol yollarının noktalı virgülle ayrılmış bir listesini görüntüler.
 
 ```

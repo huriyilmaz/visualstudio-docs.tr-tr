@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0782744236777fb84a6d87f93f59697275df1c11
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9cf33ad094716ee0f8f4c8cc4bb06220db1237e5
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331394"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851586"
 ---
 # <a name="how-to-use-the-concurrency-visualizer-markers-sdk"></a>Nasıl yapılır: eşzamanlılık görselleştiricisi işaretçileri SDK 'sını kullanma
 Bu konu başlığı altında, yayılma ve yazma bayrakları, iletiler ve uyarılar oluşturmak için Eşzamanlılık Görselleştiricisi SDK 'sının nasıl kullanılacağı gösterilmektedir.

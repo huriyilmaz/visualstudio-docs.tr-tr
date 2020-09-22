@@ -1,5 +1,5 @@
 ---
-title: Nasıl yapılır-görünümü yenileme | Microsoft Docs
+title: Görünümü Yenile | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 43c42da3994d75329ced1eaa5b89c7aa6de360c6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d964f0a33b1944255fee2f9fdb7658b04aaedebb
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349399"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852041"
 ---
 # <a name="how-to-refresh-the-view"></a>Nasıl yapılır: Görünümü Yenileme
 Spy + + sistem tablolarının bir "anlık görüntüsünü" alır ve bu bilgilere göre bir görünümü yeniler. Düzenli aralıklarla sistem görünümlerinizi yenilemeniz önemlidir. Açık bir Spy + + görünümleriniz varsa ve görünümü yenilememişse, daha sonra oluşturulan bu işlem, iş parçacığı ve pencereleri görmezsiniz. Ayrıca, artık mevcut olmayan öğeleri de görebilirsiniz. **Yenile** komutu iletiler görünümü dışındaki tüm görünümlerde kullanılabilir.

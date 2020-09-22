@@ -1,5 +1,6 @@
 ---
-title: Yönetilen kod için eski kod analizini el ile çalıştırma
+title: Eski Kod analizini el ile Çalıştır (.NET)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8a6b52a09729cbc76f91eee76f23e652f07c934f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ca865b33d59f87453cafc337e1595c9d772b17a2
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250522"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808619"
 ---
 # <a name="how-to-run-legacy-code-analysis-manually-for-managed-code"></a>Nasıl yapılır: yönetilen kod için eski kod analizini el ile çalıştırma
 

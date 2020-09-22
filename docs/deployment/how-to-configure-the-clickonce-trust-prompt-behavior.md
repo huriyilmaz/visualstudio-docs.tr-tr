@@ -18,19 +18,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7417f9cdce21dc09aeaf306b55834ad7d3a125a6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f4becc0244f42507b581029b2dfe21c71570db6
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382555"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852237"
 ---
 # <a name="how-to-configure-the-clickonce-trust-prompt-behavior"></a>Nasıl yapılır: ClickOnce güven istemi davranışını yapılandırma
 ClickOnce güven istemi ' ni, son kullanıcılara Windows Forms uygulamalar, Windows Presentation Foundation uygulamalar, konsol uygulamaları, WPF tarayıcı uygulamaları ve Office çözümleri gibi ClickOnce uygulamalarını yükleme seçeneği verilip verilmediğini denetlemek için yapılandırabilirsiniz. Her son kullanıcının bilgisayarında kayıt defteri anahtarlarını ayarlayarak güven istemi 'ni yapılandırırsınız.
 
  Aşağıdaki tabloda, beş bölgenin (Internet, UntrustedSites, Bilgisayarım, LocalIntranet ve TrustedSites) her birine uygulanabilen yapılandırma seçenekleri gösterilmektedir.
 
-|Seçenek|Kayıt defteri ayarı değeri|Description|
+|Seçenek|Kayıt defteri ayarı değeri|Açıklama|
 |------------|----------------------------|-----------------|
 |Güven istemi 'ni etkinleştirin.|`Enabled`|ClickOnce güven istemi, son kullanıcıların ClickOnce uygulamalarına güven izni verebilmesi için görüntülenir.|
 |Güven istemi 'ni kısıtlayın.|`AuthenticodeRequired`|ClickOnce güven istemi yalnızca, ClickOnce uygulamaları yayımcıyı tanımlayan bir sertifikayla imzalanmışsa görüntülenir.|
