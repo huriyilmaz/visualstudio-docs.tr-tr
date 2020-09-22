@@ -25,7 +25,7 @@ ms.locfileid: "64796801"
 
 Yerel sembolün geçerli olduğu aralığın başlangıç adresinin konum kısmını döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp#  
 HRESULT get_liveRangeStartAddressOffset (   

@@ -20,6 +20,8 @@
               href: how-to-run-code-analysis-manually-for-managed-code.md
             - name: Kod analizini devre dışı bırakma
               href: disable-code-analysis.md
+            - name: Otomatik özelliği askıya alma
+              href: automatic-feature-suspension.md
             - name: Kod analizi ihlallerini gizleme
               href: in-source-suppression-overview.md
         - name: Üçüncü taraf çözümleyici yükleme
@@ -93,8 +95,6 @@
                   items:
                     - name: 'CA1004: Genel metotlar tür parametresi sağlamalıdır'
                       href: ca1004.md
-                    - name: 'CA1006: Üye imzalarında genel türleri iç içe kullanma'
-                      href: ca1006.md
                     - name: 'CA1007: Uygun yerlerde genel türleri kullanın'
                       href: ca1007.md
                     - name: 'CA1011: Parametre olarak temel türleri geçmeyi düşünün'
@@ -186,6 +186,8 @@
                 - name: Kullanım dışı kurallar
                   href: fxcop-unported-deprecated-rules.md
                   items:
+                    - name: 'CA1006: Üye imzalarında genel türleri iç içe kullanma'
+                      href: ca1006.md
                     - name: 'CA1009: Olay işleyicileri doğru olarak bildirin'
                       href: ca1009.md
                     - name: 'CA1020: Az tür içeren ad alanlarından kaçının'
@@ -437,559 +439,556 @@
           items:
             - name: Genel Bakış
               href: code-analysis-for-managed-code-warnings.md
+            - name: Kimliğe göre kurallar
+              href: code-analysis-warnings-for-managed-code-by-checkid.md
+            - name: Tasarım kuralları
               items:
                 - name: Genel Bakış
-                  href: code-analysis-warnings-for-managed-code-by-checkid.md
-                - name: Tasarım uyarıları
-                  items:
-                    - name: Genel Bakış
-                      displayName: design warnings
-                      href: design-warnings.md
-                    - name: 'CA1000: Genel türlerde statik üyeler belirtme'
-                      href: ca1000.md
-                    - name: 'CA1001: Atılabilen alanlara sahip türler atılabilir olmalıdır'
-                      href: ca1001.md
-                    - name: 'CA1002: Genel listeleri gösterme'
-                      href: ca1002.md
-                    - name: 'CA1003: Genel olay işleyicisi örnekleri kullan'
-                      href: ca1003.md
-                    - name: 'CA1005: Genel türlerde aşırı parametre kullanmaktan kaçının'
-                      href: ca1005.md
-                    - name: 'CA1008: Sabit listelerinin sıfır değeri olmalıdır'
-                      href: ca1008.md
-                    - name: 'CA1010: Koleksiyonlar genel arabirimi uygulamalıdır'
-                      href: ca1010.md
-                    - name: 'CA1012: Soyut türlerin oluşturucuları olmamalıdır'
-                      href: ca1012.md
-                    - name: 'CA1014: Derlemeleri CLSCompliantAttribute ile işaretle'
-                      href: ca1014.md
-                    - name: 'CA1016: Derlemeleri AssemblyVersionAttribute ile işaretleyin'
-                      href: ca1016.md
-                    - name: 'CA1017: Derlemeleri ComVisibleAttribute ile işaretleyin'
-                      href: ca1017.md
-                    - name: 'CA1018: Öznitelikleri AttributeUsageAttribute ile işaretle'
-                      href: ca1018.md
-                    - name: 'CA1019: Öznitelik bağımsız değişkenleri için erişimciler tanımlayın'
-                      href: ca1019.md
-                    - name: 'CA1021: out parametrelerinden kaçının'
-                      href: ca1021.md
-                    - name: 'CA1024: Uygun yerlerde özellikleri kullanın'
-                      href: ca1024.md
-                    - name: 'CA1027: Sabit listelerini FlagsAttribute ile işaretleyin'
-                      href: ca1027.md
-                    - name: 'CA1028: Sabit listesi depolaması Int32 olmalıdır'
-                      href: ca1028.md
-                    - name: 'CA1030: Uygun yerlerde olayları kullanın'
-                      href: ca1030.md
-                    - name: 'CA1031: Genel özel durum türlerini yakalamayın'
-                      href: ca1031.md
-                    - name: 'CA1032: Standart özel durum oluşturucularını uygulayın'
-                      href: ca1032.md
-                    - name: 'CA1033: Arabirim metotları alt türler tarafından çağrılabilmelidir'
-                      href: ca1033.md
-                    - name: 'CA1034: İç içe türler görünür olmamalıdır'
-                      href: ca1034.md
-                    - name: 'CA1036: Karşılaştırılabilir türlerde metotları geçersiz kıl'
-                      href: ca1036.md
-                    - name: 'CA1040: Boş arabirimlerden kaçının'
-                      href: ca1040.md
-                    - name: 'CA1041: ObsoleteAttribute iletisi sağla'
-                      href: ca1041.md
-                    - name: 'CA1043: Dizin oluşturucular için tam sayı veya dize bağımsız değişken kullanın'
-                      href: ca1043.md
-                    - name: 'CA1044: Özellikler salt yazılır olmamalıdır'
-                      href: ca1044.md
-                    - name: 'CA1045: Türleri başvuru olarak geçmeyin'
-                      href: ca1045.md
-                    - name: 'CA1046: Eşittir işlecini başvuru türlerinde aşırı yüklemeyin'
-                      href: ca1046.md
-                    - name: 'CA1047: Sealed türlerde protected üyeler bildirmeyin'
-                      href: ca1047.md
-                    - name: 'CA1050: Ad alanlarında türler bildirin'
-                      href: ca1050.md
-                    - name: 'CA1051: Görünür örnek alanlarını bildirmeyin'
-                      href: ca1051.md
-                    - name: 'CA1052: Static tutucu türler sealed olmalıdır'
-                      href: ca1052.md
-                    - name: 'CA1053: Static tutucu türlerin oluşturucuları olmamalıdır'
-                      href: ca1053.md
-                    - name: 'CA1054: URI parametreleri dize olmamalıdır'
-                      href: ca1054.md
-                    - name: 'CA1055: URI dönüş değerleri dize olmamalıdır'
-                      href: ca1055.md
-                    - name: 'CA1056: URI özellikleri dize olmamalıdır'
-                      href: ca1056.md
-                    - name: 'CA1058: Türler belirli temel türleri aşmamalıdır'
-                      href: ca1058.md
-                    - name: 'CA1060: P-Invokes''u NativeMethods sınıfına taşıyın'
-                      href: ca1060.md
-                    - name: 'CA1061: Temel sınıf metotlarını gizlemeyin'
-                      href: ca1061.md
-                    - name: 'CA1062: Genel metotların bağımsız değişkenlerini doğrulayın'
-                      href: ca1062.md
-                    - name: 'CA1063: IDisposable''ı doğru uygulayın'
-                      href: ca1063.md
-                    - name: 'CA1064: Özel durumlar genel olmalıdır'
-                      href: ca1064.md
-                    - name: 'CA1065: Beklenmeyen konumlarda özel durum harekete geçirmeyin'
-                      href: ca1065.md
-                    - name: 'CA1066: Equals’ı geçersiz kılarken IEquatable uygulayın'
-                      href: ca1066.md
-                    - name: 'CA1067: IEquatable uygularken Equals’ı geçersiz kılın'
-                      href: ca1067.md
-                    - name: 'CA1068: CancellationToken parametreleri en sonda olmalıdır'
-                      href: ca1068.md
-                    - name: 'CA1069: Sabit listeleri yinelenen değerlere sahip olmamalıdır'
-                      href: ca1069.md
-                    - name: 'CA1070: Olay alanlarını sanal olarak bildirme'
-                      href: ca1070.md
-                - name: Belge uyarıları
-                  items:
-                    - name: Genel Bakış
-                      displayName: documentation warnings
-                      href: documentation-warnings.md
-                    - name: 'CA1200: cref etiketlerini ön ek ile kullanmaktan kaçının'
-                      href: ca1200.md
-                - name: Genelleştirme uyarıları
-                  items:
-                    - name: Genel Bakış
-                      displayName: globalization warnings
-                      href: globalization-warnings.md
-                    - name: 'CA1303: Harfleri yerelleştirilmiş parametreler olarak göndermeyin'
-                      href: ca1303.md
-                    - name: 'CA1304: CultureInfo belirt'
-                      href: ca1304.md
-                    - name: 'CA1305: IFormatProvider belirt'
-                      href: ca1305.md
-                    - name: 'CA1307: Daha anlaşılır olması için StringComparison belirtin'
-                      href: ca1307.md
-                    - name: 'CA1308: Dizeleri büyük harfe normalleştirin'
-                      href: ca1308.md
-                    - name: 'CA1309: Sıralı StringComparison kullanın'
-                      href: ca1309.md
-                    - name: 'CA1310: Doğruluk için StringComparison belirtin'
-                      href: ca1310.md
-                    - name: 'CA2101: P-Invoke dize bağımsız değişkenleri için sıralama belirtin'
-                      href: ca2101.md
-                - name: Taşınabilirlik ve birlikte çalışabilirlik uyarıları
-                  items:
-                    - name: Genel Bakış
-                      displayName: portability and interoperability warnings
-                      href: interoperability-warnings.md
-                    - name: 'CA1401: P-Invoke''lar görünür olmamalıdır'
-                      href: ca1401.md
-                    - name: 'CA1416: Platform uyumluluğunu doğrula'
-                      href: ca1416.md
-                    - name: 'CA1417: P/Invokes için dize parametrelerinde OutAttribute kullanmayın'
-                      href: ca1417.md
-                - name: Bakım uyarıları
-                  items:
-                    - name: Genel Bakış
-                      displayName: maintainability warnings
-                      href: maintainability-warnings.md
-                    - name: 'CA1501: Aşırı devralmadan kaçının'
-                      href: ca1501.md
-                    - name: 'CA1502: Aşırı karmaşıklıktan kaçının'
-                      href: ca1502.md
-                    - name: 'CA1505: Bakımı yapılamayan kodlardan kaçının'
-                      href: ca1505.md
-                    - name: 'CA1506: Aşırı sınıf bağlantısından kaçının'
-                      href: ca1506.md
-                    - name: 'CA1507: Dize yerine nameof kullanma'
-                      href: ca1507.md
-                    - name: 'CA1508: Ölü koşullu kodlardan kaçının'
-                      href: ca1508.md
-                    - name: 'CA1509: Kod ölçümleri yapılandırma dosyasında geçersiz girdi'
-                      href: ca1509.md
-                - name: Adlandırma uyarıları
-                  items:
-                    - name: Genel Bakış
-                      displayName: naming warnings
-                      href: naming-warnings.md
-                    - name: 'CA1700: Sabit listesi değerlerini ''Reserved'' olarak adlandırmayın'
-                      href: ca1700.md
-                    - name: 'CA1707: Tanımlayıcılar alt çizgi içermemelidir'
-                      href: ca1707.md
-                    - name: 'CA1708: Tanımlayıcılar yalnızca büyük küçük harfle birbirinden farklı olmamalıdır'
-                      href: ca1708.md
-                    - name: 'CA1710: Tanımlayıcılar doğru soneke sahip olmalıdır'
-                      href: ca1710.md
-                    - name: 'CA1711: Tanımlayıcılar yanlış sonek içermemelidir'
-                      href: ca1711.md
-                    - name: 'CA1712: Sabit listesi değerlerine tür adını önek olarak eklemeyin'
-                      href: ca1712.md
-                    - name: 'CA1713: Olaylar önce ya da sonra önekine sahip olmamalıdır'
-                      href: ca1713.md
-                    - name: 'CA1714: Bayrak sabit listeleri çoğul adlara sahip olmalıdır'
-                      href: ca1714.md
-                    - name: 'CA1715: Tanımlayıcılar doğru ön eke sahip olmalıdır'
-                      href: ca1715.md
-                    - name: 'CA1716: Tanımlayıcılar anahtar sözcükler ile eşleşmemelidir'
-                      href: ca1716.md
-                    - name: 'CA1717: Yalnızca FlagsAttribute sabit listeleri çoğul adlara sahip olmalıdır'
-                      href: ca1717.md
-                    - name: 'CA1720: Tanımlayıcılar tür adları içermemelidir'
-                      href: ca1720.md
-                    - name: 'CA1721: Özellik adları get metotları ile eşleşmemelidir'
-                      href: ca1721.md
-                    - name: 'CA1724: Tür adları ad alanları ile eşleşmemelidir'
-                      href: ca1724.md
-                    - name: 'CA1725: Parametre adları temel bildirimle eşleşmemelidir'
-                      href: ca1725.md
-                - name: Performans uyarıları
-                  items:
-                    - name: Genel Bakış
-                      displayName: performance warnings
-                      href: performance-warnings.md
-                    - name: 'CA1802: Uygun yerlerde sabitleri kullanın'
-                      href: ca1802.md
-                    - name: 'CA1805: Gerekmediği durumlarda başlatmayın'
-                      href: ca1805.md
-                    - name: 'CA1806: Metot sonuçlarını yoksaymayın'
-                      href: ca1806.md
-                    - name: 'CA1810: Başvuru türü statik alanları satır içinden başlatın'
-                      href: ca1810.md
-                    - name: 'CA1812: Örneklenmemiş iç sınıflardan kaçının'
-                      href: ca1812.md
-                    - name: 'CA1813: Mühürsüz özniteliklerden kaçının'
-                      href: ca1813.md
-                    - name: 'CA1814: Çok boyutlu diziler yerine basit dizileri tercih edin'
-                      href: ca1814.md
-                    - name: 'CA1815: Değer türlerinde eşittir ve işleç eşittiri geçersiz kılın'
-                      href: ca1815.md
-                    - name: 'CA1819: Özellikler diziler döndürmemelidir'
-                      href: ca1819.md
-                    - name: 'CA1820: Dize uzunluğunu kullanarak boş dizeleri test edin'
-                      href: ca1820.md
-                    - name: 'CA1821: Boş sonlandırıcıları kaldırın'
-                      href: ca1821.md
-                    - name: 'CA1822: Üyeleri static olarak işaretleyin'
-                      href: ca1822.md
-                    - name: 'CA1823: Kullanılmayan özel alanlardan kaçının'
-                      href: ca1823.md
-                    - name: 'CA1824: Derlemeleri NeutralResourcesLanguageAttribute ile işaretleyin'
-                      href: ca1824.md
-                    - name: 'CA1825: Sıfır uzunluklu dizi ayırmalarından kaçının'
-                      href: ca1825.md
-                    - name: 'CA1826: Linq Numaralandırma metodu yerine property kullan'
-                      href: ca1826.md
-                    - name: 'CA1827: Any kullanılabiliyorsa Count/LongCount kullanma'
-                      href: ca1827.md
-                    - name: 'CA1828: AnyAsync kullanılabiliyorsa CountAsync/LongCountAsync kullanma'
-                      href: ca1828.md
-                    - name: 'CA1829: Enumerable.Count metodu yerine Length/Count özelliğini kullan'
-                      href: ca1829.md
-                    - name: 'CA1830: StringBuilder''da kesin tür belirtilmiş Append ve Insert metodu aşırı yüklemelerini tercih et'
-                      href: ca1830.md
-                    - name: 'CA1831: Uygun olduğunda dize için Aralık tabanlı dizin oluşturucular yerine AsSpan kullanın'
-                      href: ca1831.md
-                    - name: 'CA1832: Bir dizinin ReadOnlySpan veya ReadOnlyMemory kısmını almak için Aralık tabanlı dizin oluşturucular yerine AsSpan ya da AsMemory kullanın'
-                      href: ca1832.md
-                    - name: 'CA1833: Bir dizinin Span veya Memory kısmını almak için Aralık tabanlı dizin oluşturucular yerine AsSpan ya da AsMemory kullanın'
-                      href: ca1833.md
-                    - name: 'CA1834: Tek karakterli dizeler için StringBuilder.Append(char) kullanın'
-                      href: ca1834.md
-                    - name: 'CA1835: Akış ReadAsync/WriteAsync metotlarının bellek aşırı yüklemelerini tercih edin'
-                      href: ca1835.md
-                    - name: 'CA1836: Kullanılabilir olduğunda Count yerine IsEmpty tercih edin'
-                      href: ca1836.md
-                    - name: 'CA1837: Process.GetCurrentProcess().Id yerine Environment.ProcessId kullanın'
-                      href: ca1837.md
-                    - name: 'CA1838: P/Invoke’lar için StringBuilder parametreleri kullanmaktan kaçının'
-                      href: ca1838.md
-                - name: Güvenilirlik uyarıları
-                  items:
-                    - name: Genel Bakış
-                      displayName: reliability warnings
-                      href: reliability-warnings.md
-                    - name: 'CA2000: Kapsamı kaybetmeden önce nesneleri bırakın'
-                      href: ca2000.md
-                    - name: 'CA2002: Zayıf kimliği olan nesneleri kilitlemeyin'
-                      href: ca2002.md
-                    - name: 'CA2007: Doğrudan bir Görevi beklemeyin'
-                      href: ca2007.md
-                    - name: 'CA2008: TaskScheduler geçirmeden görev oluşturmayın'
-                      href: ca2008.md
-                    - name: 'CA2009: Bir ImmutableCollection değeri üzerinde ToImmutableCollection çağırma'
-                      href: ca2009.md
-                    - name: 'CA2011: Özelliği, ayarlayıcısı içinde atama'
-                      href: ca2011.md
-                    - name: 'CA2012: ValueTask’leri doğru kullanın'
-                      href: ca2012.md
-                    - name: 'CA2013: ReferenceEquals metodunu değer türleriyle birlikte kullanmayın'
-                      href: ca2013.md
-                    - name: 'CA2014: Döngülerde stackalloc kullanmayın'
-                      href: ca2014.md
-                    - name: 'CA2015: MemoryManager’dan türetilen türler için sonlandırıcılar tanımlama<T>'
-                      href: ca2015.md
-                    - name: 'CA2016: CancellationToken parametresini, parametre alan metotlara iletin'
-                      href: ca2016.md
-                - name: Güvenlik uyarıları
-                  items:
-                    - name: Genel Bakış
-                      displayName: security warnings
-                      href: security-warnings.md
-                    - name: 'CA2100: SQL sorgularını güvenlik açıkları için inceleyin'
-                      href: ca2100.md
-                    - name: 'CA2109: Görünen olay işleyicilerini gözden geçirin'
-                      href: ca2109.md
-                    - name: 'CA2119: Özel arabirimleri karşılayan metotları mühürleyin'
-                      href: ca2119.md
-                    - name: 'CA2153: Bozuk Durum Özel Durumlarını işlemekten kaçının'
-                      href: ca2153.md
-                    - name: 'CA2153: Bozuk Durum Özel Durumlarını İşlemekten Kaçının'
-                      href: ca2153.md
-                    - name: 'CA2300: Güvenli olmayan seri durumdan çıkarıcı BinaryFormatter kullanmayın'
-                      href: ca2300.md
-                    - name: 'CA2301: İlk olarak BinaryFormatter.Binder öğesini ayarlamadan önce BinaryFormatter.Deserialize çağırmayın'
-                      href: ca2301.md
-                    - name: 'CA2302: BinaryFormatter.Deserialize çağırmadan önce BinaryFormatter.Binder öğesinin ayarlandığından emin olun'
-                      href: ca2302.md
-                    - name: 'CA2305: Güvenli olmayan seri kaldırıcı LosFormatter kullanmayın'
-                      href: ca2305.md
-                    - name: 'CA2310: Güvenli olmayan seri kaldırıcı NetDataContractSerializer kullanmayın'
-                      href: ca2310.md
-                    - name: 'CA2311: İlk olarak NetDataContractSerializer.Binder öğesini ayarlamadan seri durumdan çıkarmayın'
-                      href: ca2311.md
-                    - name: 'CA2312: Seri durumdan çıkarmadan önce NetDataContractSerializer.Binder öğesinin ayarlandığından emin olun'
-                      href: ca2312.md
-                    - name: 'CA2315: Güvenli olmayan seri kaldırıcı ObjectStateFormatter kullanmayın'
-                      href: ca2315.md
-                    - name: 'CA2321: SimpleTypeResolver kullanarak JavaScriptSerializer ile seri durumdan çıkarmayın'
-                      href: ca2321.md
-                    - name: 'CA2322: Seri durumdan çıkarmadan önce SimpleTypeResolver ile JavaScriptSerializer’ın başlatılmadığından emin olun'
-                      href: ca2322.md
-                    - name: 'CA2326: None dışında bir TypeNameHandling değeri kullanmayın'
-                      href: ca2326.md
-                    - name: 'CA2327: Güvenli olmayan JsonSerializerSettings kullanmayın'
-                      href: ca2327.md
-                    - name: 'CA2328: JsonSerializerSettings’in güvenli olduğundan emin olun'
-                      href: ca2328.md
-                    - name: 'CA2329: Güvenli olmayan bir yapılandırma kullanarak JsonSerializer ile seri durumdan çıkarma işlemi yapmayın'
-                      href: ca2329.md
-                    - name: 'CA2350: DataTable.ReadXml() girişinin güvenilir olduğundan emin olun'
-                      href: ca2350.md
-                    - name: 'CA2351: DataSet.ReadXml() girişinin güvenilir olduğundan emin olun'
-                      href: ca2351.md
-                    - name: 'CA2352: Seri duruma getirilebilir türdeki güvenli olmayan DataSet veya DataTable, uzaktan yapılan kod yürütme saldırılarına karşı savunmasız olabilir'
-                      href: ca2352.md
-                    - name: 'CA2353: Seri duruma getirilebilir türdeki güvenli olmayan DataSet veya DataTable'
-                      href: ca2353.md
-                    - name: 'CA2354: Seri durumdan çıkarılmış nesne grafındaki güvenli olmayan DataSet veya DataTable, uzaktan yapılan kod yürütme saldırılarına karşı savunmasız olabilir'
-                      href: ca2354.md
-                    - name: 'CA2355: Seri durumdan çıkarılmış nesne grafındaki güvenli olmayan DataSet veya DataTable'
-                      href: ca2355.md
-                    - name: 'CA2356: Seri durumdan çıkarılmış web nesne grafındaki güvenli olmayan DataSet veya DataTable türü'
-                      href: ca2356.md
-                    - name: 'CA2361: DataSet.ReadXml() içeren bir otomatik oluşturulmuş sınıfın güvenilmeyen verilerle kullanılmadığından emin olun'
-                      href: ca2361.md
-                    - name: 'CA2362: Otomatik oluşturulmuş, seri hale getirilebilir türdeki güvenli olmayan DataSet veya DataTable, uzaktan kod yürütme saldırılarına karşı savunmasız olabilir'
-                      href: ca2362.md
-                    - name: 'CA2330: Seri durumdan çıkarılırken JsonSerializer’ın güvenli bir yapılandırmaya sahip olmasını sağlayın'
-                      href: ca2330.md
-                    - name: 'CA3001: SQL ekleme güvenlik açıkları için inceleme kodu'
-                      href: ca3001.md
-                    - name: 'CA3002: XSS güvenlik açıkları için inceleme kodu'
-                      href: ca3002.md
-                    - name: 'CA3003: Dosya yolu ekleme güvenlik açıkları için inceleme kodu'
-                      href: ca3003.md
-                    - name: 'CA3004: Bilgilerin açığa çıkmasıyla ilgili güvenlik açıkları için inceleme kodu'
-                      href: ca3004.md
-                    - name: 'CA3005: LDAP ekleme güvenlik açıkları için inceleme kodu'
-                      href: ca3005.md
-                    - name: 'CA3006: İşlem komutu ekleme güvenlik açıkları için inceleme kodu'
-                      href: ca3006.md
-                    - name: 'CA3007: Açık yeniden yönlendirme güvenlik açıkları için inceleme kodu'
-                      href: ca3007.md
-                    - name: 'CA3008: XPath ekleme güvenlik açıkları için inceleme kodu'
-                      href: ca3008.md
-                    - name: 'CA3009: XML ekleme güvenlik açıkları için inceleme kodu'
-                      href: ca3009.md
-                    - name: 'CA3010: XAML ekleme güvenlik açıkları için inceleme kodu'
-                      href: ca3010.md
-                    - name: 'CA3011: DLL ekleme güvenlik açıkları için inceleme kodu'
-                      href: ca3011.md
-                    - name: 'CA3012: Normal ifade ekleme güvenlik açıkları için inceleme kodu'
-                      href: ca3012.md
-                    - name: 'CA3061: URL ile şema eklemeyin'
-                      href: ca3061.md
-                    - name: 'CA3075: Güvensiz DTD İşleme'
-                      href: ca3075.md
-                    - name: 'CA3076: Güvensiz XSLT Betiği Yürütme'
-                      href: ca3076.md
-                    - name: 'CA3077: API Tasarımı, XML Belgesi ve XML Metin Okuyucusunda Güvensiz İşleme'
-                      href: ca3077.md
-                    - name: 'CA3147: ValidateAntiForgeryToken ile fiil işleyicilerini işaretleme'
-                      href: ca3147.md
-                    - name: 'CA5350: Zayıf Şifreleme Algoritmaları Kullanmayın'
-                      href: ca5350.md
-                    - name: 'CA5351: Bozuk Şifreleme Algoritmaları Kullanmayın'
-                      href: ca5351.md
-                    - name: 'CA5358: Güvenli Olmayan Şifreleme Modlarını Kullanmayın'
-                      href: ca5358.md
-                    - name: 'CA5359: Sertifika doğrulamasını devre dışı bırakma'
-                      href: ca5359.md
-                    - name: 'CA5360: Seri durumdan çıkarırken tehlikeli metotlar çağırmayın'
-                      href: ca5360.md
-                    - name: 'CA5361: Güçlü şifrelemenin Schannel kullanımını devre dışı bırakma'
-                      href: ca5361.md
-                    - name: 'CA5362: Seri durumdan çıkarılan nesne grafındaki olası başvuru döngüsü'
-                      href: ca5362.md
-                    - name: 'CA5363: İstek doğrulamayı devre dışı bırakmayın'
-                      href: ca5363.md
-                    - name: 'CA5364: Kullanım Dışı Güvenlik Protokollerini Kullanmayın'
-                      href: ca5364.md
-                    - name: 'CA5365: HTTP Üst Bilgi Denetimini Devre Dışı Bırakma'
-                      href: ca5365.md
-                    - name: 'CA5366: DataSet Read XML için XmlReader Kullan'
-                      href: ca5366.md
-                    - name: 'CA5367: İşaretleyici Alanlarıyla Türleri Seri Hale Getirme'
-                      href: ca5367.md
-                    - name: 'CA5368: Sayfadan Türetilmiş Sınıflar için ViewStateUserKey Ayarla'
-                      href: ca5368.md
-                    - name: 'CA5369: Seri durumdan çıkarma için XmlReader kullanma'
-                      href: ca5369.md
-                    - name: 'CA5370: Okuyucuyu doğrulamak için XmlReader kullanma'
-                      href: ca5370.md
-                    - name: 'CA5371: Şema okuma için XmlReader kullanma'
-                      href: ca5371.md
-                    - name: 'CA5372: XPathDocument için XmlReader kullanma'
-                      href: ca5372.md
-                    - name: 'CA5373: Eski anahtar türetme işlevini kullanmayın'
-                      href: ca5373.md
-                    - name: 'CA5374: XslTransform Kullanma'
-                      href: ca5374.md
-                    - name: 'CA5375: Hesabın paylaşılan erişim imzasını kullanmayın'
-                      href: ca5375.md
-                    - name: 'CA5376: SharedAccessProtocol HttpsOnly kullanın'
-                      href: ca5376.md
-                    - name: 'CA5377: Kapsayıcı düzeyinde erişim ilkesi kullan'
-                      href: ca5377.md
-                    - name: 'CA5378: ServicePointManagerSecurityProtocols''u Devre Dışı Bırakma'
-                      href: ca5378.md
-                    - name: 'CA5379: Zayıf anahtar türetme işlevi algoritmasını kullanma'
-                      href: ca5379.md
-                    - name: 'CA5380: Kök depoya sertifika eklemeyin'
-                      href: ca5380.md
-                    - name: 'CA5381: Sertifikaların kök depoya eklenmemiş olduğundan emin olun'
-                      href: ca5381.md
-                    - name: 'CA5382: ASP.NET Core’da güvenli tanımlama bilgileri kullan'
-                      href: ca5382.md
-                    - name: 'CA5383: ASP.Net Core içinde güvenli tanımlama bilgileri kullanılmasını sağla'
-                      href: ca5383.md
-                    - name: 'CA5384: Dijital imza algoritması (DSA) kullanma'
-                      href: ca5384.md
-                    - name: 'CA5385: Yeterli anahtar boyutuna sahip Rivest–Shamir–Adleman (RSA) algoritmasını kullan'
-                      href: ca5385.md
-                    - name: 'CA5386: SecurityProtocolType değerini sabit kodlamaktan kaçının'
-                      href: ca5386.md
-                    - name: 'CA5387: Yetersiz sayıda yineleme ile zayıf anahtar türetme işlevi kullanma'
-                      href: ca5387.md
-                    - name: 'CA5388: Zayıf anahtar türetme işlevini kullanırken yeterli sayıda yineleme sağla'
-                      href: ca5388.md
-                    - name: 'CA5389: Hedef dosya sistemi yoluna arşiv öğesinin yolunu eklemeyin'
-                      href: ca5389.md
-                    - name: 'CA5390: Şifreleme anahtarını sabit olarak kodlama'
-                      href: ca5390.md
-                    - name: 'CA5391: ASP.NET Core MVC denetleyicilerinde sahtecilik önleme belirteçleri kullanın'
-                      href: ca5391.md
-                    - name: 'CA5392: P/Invokes için DefaultDllImportSearchPaths özniteliğini kullanın'
-                      href: ca5392.md
-                    - name: 'CA5393: Güvenli olmayan DllImportSearchPath değeri kullanmayın'
-                      href: ca5393.md
-                    - name: 'CA5394: Güvenli olmayan rastgelelik kullanma'
-                      href: ca5394.md
-                    - name: 'CA5395: Eylem metotları için HttpVerb özniteliği eksik'
-                      href: ca5395.md
-                    - name: 'CA5396: HttpCookie için HttpOnly''yi true olarak ayarla'
-                      href: ca5396.md
-                    - name: 'CA5397: Kullanım dışı SslProtocols değerlerini kullanmayın'
-                      href: ca5397.md
-                    - name: 'CA5398: Sabit kodlanmış SslProtocols değerlerini kullanmaktan kaçının'
-                      href: ca5398.md
-                    - name: 'CA5399: HttpClient sertifika iptal listesi denetimi kesinlikle devre dışı bırak'
-                      href: ca5399.md
-                    - name: 'CA5400: HttpClient sertifika iptal listesi denetiminin devre dışı bırakılmadığından emin olun'
-                      href: ca5400.md
-                    - name: 'CA5401: Varsayılan olmayan IV için CreateEncryptor kullanma'
-                      href: ca5401.md
-                    - name: 'CA5402: Varsayılan IV ile CreateEncryptor kullan'
-                      href: ca5402.md
-                    - name: 'CA5403: Sertifikayı sabit olarak kodlamayın'
-                      href: ca5403.md
-                - name: Kullanım uyarıları
-                  items:
-                    - name: Genel Bakış
-                      displayName: usage warnings
-                      href: usage-warnings.md
-                    - name: 'CA1801: Kullanılmayan parametreleri gözden geçirin'
-                      href: ca1801.md
-                    - name: 'CA1816: GC.SuppressFinalize''ı doğru çağırın'
-                      href: ca1816.md
-                    - name: 'CA2200: Yığın ayrıntılarını korumak için yeniden fırlatın'
-                      href: ca2200.md
-                    - name: 'CA2201: Ayrılmış özel durum türlerini harekete geçirmeyin'
-                      href: ca2201.md
-                    - name: 'CA2207: Değer türü statik alanları satır içi başlatın'
-                      href: ca2207.md
-                    - name: 'CA2208: Bağımsız değişken özel durumlarını doğru örnekleyin'
-                      href: ca2208.md
-                    - name: 'CA2211: Sabit olmayan alanlar görünür olmamalıdır'
-                      href: ca2211.md
-                    - name: 'CA2213: Atılabilen alanlar atılmalıdır'
-                      href: ca2213.md
-                    - name: 'CA2214: Geçersiz kılınabilir metotları oluşturucular içinde çağırmayın'
-                      href: ca2214.md
-                    - name: 'CA2215: Atma metotları taban sınıf atmayı çağırmalıdır'
-                      href: ca2215.md
-                    - name: 'CA2216: Atılabilir türler sonlandırıcıyı bildirmelidir'
-                      href: ca2216.md
-                    - name: 'CA2217: Sabit listelerini FlagsAttribute ile işaretlemeyin'
-                      href: ca2217.md
-                    - name: 'CA2219: Özel durum yan tümceleri içinde özel durum harekete geçirmeyin'
-                      href: ca2219.md
-                    - name: 'CA2225: İşleç aşırı yüklemeleri adlandırılmış alternatiflere sahiptir'
-                      href: ca2225.md
-                    - name: 'CA2226: İşleçler simetrik aşırı yüklemelere sahip olmalıdır'
-                      href: ca2226.md
-                    - name: 'CA2227: Koleksiyon özellikleri salt okunur olmalıdır'
-                      href: ca2227.md
-                    - name: 'CA2229: Serileştirme oluşturucularını uygulayın'
-                      href: ca2229.md
-                    - name: 'CA2231: Eşittir işlecini ValueType.Equals''ı geçersiz kılarak aşırı yükleyin'
-                      href: ca2231.md
-                    - name: 'CA2234: Dizeler yerine System.Uri nesneleri gönderin'
-                      href: ca2234.md
-                    - name: 'CA2235: Tüm serileştirilebilir olmayan alanları işaretleyin'
-                      href: ca2235.md
-                    - name: 'CA2237: ISerializable türleri SerializableAttribute ile işaretleyin'
-                      href: ca2237.md
-                    - name: 'CA2241: Biçimlendirme metotlarına doğru bağımsız değişkenleri sağlayın'
-                      href: ca2241.md
-                    - name: 'CA2242: NaN için doğru test edin'
-                      href: ca2242.md
-                    - name: 'CA2243: Öznitelik dize harfleri doğru çözümlenmelidir'
-                      href: ca2243.md
-                    - name: 'CA2244: Dizine eklenmiş öğe başlatmalarını yineleme'
-                      href: ca2244.md
-                    - name: 'CA2245: Bir özelliği kendisine atama'
-                      href: ca2245.md
-                    - name: 'CA2246: Sembol ve üyesini aynı deyime atama'
-                      href: ca2246.md
-                    - name: 'CA2247: TaskCompletionSource oluşturucusuna geçirilen bağımsız değişken TaskContinuationOptions sabit listesi yerine TaskCreationOptions sabit listesi olmalı'
-                      href: ca2247.md
-                    - name: 'CA2248: Enum.HasFlag için doğru sabit listesi bağımsız değişkenini belirtin'
-                      href: ca2248.md
-                    - name: 'CA2249: String.IndexOf yerine String.Contains kullanmayı düşünün'
-                      href: ca2249.md
-                - name: Otomatik özelliği askıya alma
-                  href: automatic-feature-suspension.md
-                - name: Uyarıları yayımlama
-                  items:
-                    - name: Genel Bakış
-                      displayName: publish warnings
-                      href: publish-warnings.md
-                    - name: 'IL3000: Tek dosya olarak yayımlarken Derleme dosyası yoluna erişmekten kaçının'
-                      href: il3000.md
-                    - name: 'IL3001: Tek dosya olarak yayımlarken Derleme dosyası yoluna erişmekten kaçının'
-                      href: il3001.md
+                  displayName: design rules
+                  href: design-warnings.md
+                - name: 'CA1000: Genel türlerde statik üyeler belirtme'
+                  href: ca1000.md
+                - name: 'CA1001: Atılabilen alanlara sahip türler atılabilir olmalıdır'
+                  href: ca1001.md
+                - name: 'CA1002: Genel listeleri gösterme'
+                  href: ca1002.md
+                - name: 'CA1003: Genel olay işleyicisi örnekleri kullan'
+                  href: ca1003.md
+                - name: 'CA1005: Genel türlerde aşırı parametre kullanmaktan kaçının'
+                  href: ca1005.md
+                - name: 'CA1008: Sabit listelerinin sıfır değeri olmalıdır'
+                  href: ca1008.md
+                - name: 'CA1010: Koleksiyonlar genel arabirimi uygulamalıdır'
+                  href: ca1010.md
+                - name: 'CA1012: Soyut türlerin oluşturucuları olmamalıdır'
+                  href: ca1012.md
+                - name: 'CA1014: Derlemeleri CLSCompliantAttribute ile işaretle'
+                  href: ca1014.md
+                - name: 'CA1016: Derlemeleri AssemblyVersionAttribute ile işaretleyin'
+                  href: ca1016.md
+                - name: 'CA1017: Derlemeleri ComVisibleAttribute ile işaretleyin'
+                  href: ca1017.md
+                - name: 'CA1018: Öznitelikleri AttributeUsageAttribute ile işaretle'
+                  href: ca1018.md
+                - name: 'CA1019: Öznitelik bağımsız değişkenleri için erişimciler tanımlayın'
+                  href: ca1019.md
+                - name: 'CA1021: out parametrelerinden kaçının'
+                  href: ca1021.md
+                - name: 'CA1024: Uygun yerlerde özellikleri kullanın'
+                  href: ca1024.md
+                - name: 'CA1027: Sabit listelerini FlagsAttribute ile işaretleyin'
+                  href: ca1027.md
+                - name: 'CA1028: Sabit listesi depolaması Int32 olmalıdır'
+                  href: ca1028.md
+                - name: 'CA1030: Uygun yerlerde olayları kullanın'
+                  href: ca1030.md
+                - name: 'CA1031: Genel özel durum türlerini yakalamayın'
+                  href: ca1031.md
+                - name: 'CA1032: Standart özel durum oluşturucularını uygulayın'
+                  href: ca1032.md
+                - name: 'CA1033: Arabirim metotları alt türler tarafından çağrılabilmelidir'
+                  href: ca1033.md
+                - name: 'CA1034: İç içe türler görünür olmamalıdır'
+                  href: ca1034.md
+                - name: 'CA1036: Karşılaştırılabilir türlerde metotları geçersiz kıl'
+                  href: ca1036.md
+                - name: 'CA1040: Boş arabirimlerden kaçının'
+                  href: ca1040.md
+                - name: 'CA1041: ObsoleteAttribute iletisi sağla'
+                  href: ca1041.md
+                - name: 'CA1043: Dizin oluşturucular için tam sayı veya dize bağımsız değişken kullanın'
+                  href: ca1043.md
+                - name: 'CA1044: Özellikler salt yazılır olmamalıdır'
+                  href: ca1044.md
+                - name: 'CA1045: Türleri başvuru olarak geçmeyin'
+                  href: ca1045.md
+                - name: 'CA1046: Eşittir işlecini başvuru türlerinde aşırı yüklemeyin'
+                  href: ca1046.md
+                - name: 'CA1047: Sealed türlerde protected üyeler bildirmeyin'
+                  href: ca1047.md
+                - name: 'CA1050: Ad alanlarında türler bildirin'
+                  href: ca1050.md
+                - name: 'CA1051: Görünür örnek alanlarını bildirmeyin'
+                  href: ca1051.md
+                - name: 'CA1052: Static tutucu türler sealed olmalıdır'
+                  href: ca1052.md
+                - name: 'CA1053: Static tutucu türlerin oluşturucuları olmamalıdır'
+                  href: ca1053.md
+                - name: 'CA1054: URI parametreleri dize olmamalıdır'
+                  href: ca1054.md
+                - name: 'CA1055: URI dönüş değerleri dize olmamalıdır'
+                  href: ca1055.md
+                - name: 'CA1056: URI özellikleri dize olmamalıdır'
+                  href: ca1056.md
+                - name: 'CA1058: Türler belirli temel türleri aşmamalıdır'
+                  href: ca1058.md
+                - name: 'CA1060: P-Invokes''u NativeMethods sınıfına taşıyın'
+                  href: ca1060.md
+                - name: 'CA1061: Temel sınıf metotlarını gizlemeyin'
+                  href: ca1061.md
+                - name: 'CA1062: Genel metotların bağımsız değişkenlerini doğrulayın'
+                  href: ca1062.md
+                - name: 'CA1063: IDisposable''ı doğru uygulayın'
+                  href: ca1063.md
+                - name: 'CA1064: Özel durumlar genel olmalıdır'
+                  href: ca1064.md
+                - name: 'CA1065: Beklenmeyen konumlarda özel durum harekete geçirmeyin'
+                  href: ca1065.md
+                - name: 'CA1066: Equals’ı geçersiz kılarken IEquatable uygulayın'
+                  href: ca1066.md
+                - name: 'CA1067: IEquatable uygularken Equals’ı geçersiz kılın'
+                  href: ca1067.md
+                - name: 'CA1068: CancellationToken parametreleri en sonda olmalıdır'
+                  href: ca1068.md
+                - name: 'CA1069: Sabit listeleri yinelenen değerlere sahip olmamalıdır'
+                  href: ca1069.md
+                - name: 'CA1070: Olay alanlarını sanal olarak bildirme'
+                  href: ca1070.md
+            - name: Belge kuralları
+              items:
+                - name: Genel Bakış
+                  displayName: documentation rules
+                  href: documentation-warnings.md
+                - name: 'CA1200: cref etiketlerini ön ek ile kullanmaktan kaçının'
+                  href: ca1200.md
+            - name: Genelleştirme kuralları
+              items:
+                - name: Genel Bakış
+                  displayName: globalization rules
+                  href: globalization-warnings.md
+                - name: 'CA1303: Harfleri yerelleştirilmiş parametreler olarak göndermeyin'
+                  href: ca1303.md
+                - name: 'CA1304: CultureInfo belirt'
+                  href: ca1304.md
+                - name: 'CA1305: IFormatProvider belirt'
+                  href: ca1305.md
+                - name: 'CA1307: Daha anlaşılır olması için StringComparison belirtin'
+                  href: ca1307.md
+                - name: 'CA1308: Dizeleri büyük harfe normalleştirin'
+                  href: ca1308.md
+                - name: 'CA1309: Sıralı StringComparison kullanın'
+                  href: ca1309.md
+                - name: 'CA1310: Doğruluk için StringComparison belirtin'
+                  href: ca1310.md
+                - name: 'CA2101: P-Invoke dize bağımsız değişkenleri için sıralama belirtin'
+                  href: ca2101.md
+            - name: Taşınabilirlik ve Birlikte Çalışabilirlik kuralları
+              items:
+                - name: Genel Bakış
+                  displayName: portability and interoperability rules
+                  href: interoperability-warnings.md
+                - name: 'CA1401: P-Invoke''lar görünür olmamalıdır'
+                  href: ca1401.md
+                - name: 'CA1416: Platform uyumluluğunu doğrula'
+                  href: ca1416.md
+                - name: 'CA1417: P/Invokes için dize parametrelerinde OutAttribute kullanmayın'
+                  href: ca1417.md
+            - name: Bakım kuralları
+              items:
+                - name: Genel Bakış
+                  displayName: maintainability rules
+                  href: maintainability-warnings.md
+                - name: 'CA1501: Aşırı devralmadan kaçının'
+                  href: ca1501.md
+                - name: 'CA1502: Aşırı karmaşıklıktan kaçının'
+                  href: ca1502.md
+                - name: 'CA1505: Bakımı yapılamayan kodlardan kaçının'
+                  href: ca1505.md
+                - name: 'CA1506: Aşırı sınıf bağlantısından kaçının'
+                  href: ca1506.md
+                - name: 'CA1507: Dize yerine nameof kullanma'
+                  href: ca1507.md
+                - name: 'CA1508: Ölü koşullu kodlardan kaçının'
+                  href: ca1508.md
+                - name: 'CA1509: Kod ölçümleri yapılandırma dosyasında geçersiz girdi'
+                  href: ca1509.md
+            - name: Adlandırma kuralları
+              items:
+                - name: Genel Bakış
+                  displayName: naming rules
+                  href: naming-warnings.md
+                - name: 'CA1700: Sabit listesi değerlerini ''Reserved'' olarak adlandırmayın'
+                  href: ca1700.md
+                - name: 'CA1707: Tanımlayıcılar alt çizgi içermemelidir'
+                  href: ca1707.md
+                - name: 'CA1708: Tanımlayıcılar yalnızca büyük küçük harfle birbirinden farklı olmamalıdır'
+                  href: ca1708.md
+                - name: 'CA1710: Tanımlayıcılar doğru soneke sahip olmalıdır'
+                  href: ca1710.md
+                - name: 'CA1711: Tanımlayıcılar yanlış sonek içermemelidir'
+                  href: ca1711.md
+                - name: 'CA1712: Sabit listesi değerlerine tür adını önek olarak eklemeyin'
+                  href: ca1712.md
+                - name: 'CA1713: Olaylar önce ya da sonra önekine sahip olmamalıdır'
+                  href: ca1713.md
+                - name: 'CA1714: Bayrak sabit listeleri çoğul adlara sahip olmalıdır'
+                  href: ca1714.md
+                - name: 'CA1715: Tanımlayıcılar doğru ön eke sahip olmalıdır'
+                  href: ca1715.md
+                - name: 'CA1716: Tanımlayıcılar anahtar sözcükler ile eşleşmemelidir'
+                  href: ca1716.md
+                - name: 'CA1717: Yalnızca FlagsAttribute sabit listeleri çoğul adlara sahip olmalıdır'
+                  href: ca1717.md
+                - name: 'CA1720: Tanımlayıcılar tür adları içermemelidir'
+                  href: ca1720.md
+                - name: 'CA1721: Özellik adları get metotları ile eşleşmemelidir'
+                  href: ca1721.md
+                - name: 'CA1724: Tür adları ad alanları ile eşleşmemelidir'
+                  href: ca1724.md
+                - name: 'CA1725: Parametre adları temel bildirimle eşleşmemelidir'
+                  href: ca1725.md
+            - name: Performans kuralları
+              items:
+                - name: Genel Bakış
+                  displayName: performance rules
+                  href: performance-warnings.md
+                - name: 'CA1802: Uygun yerlerde sabitleri kullanın'
+                  href: ca1802.md
+                - name: 'CA1805: Gerekmediği durumlarda başlatmayın'
+                  href: ca1805.md
+                - name: 'CA1806: Metot sonuçlarını yoksaymayın'
+                  href: ca1806.md
+                - name: 'CA1810: Başvuru türü statik alanları satır içinden başlatın'
+                  href: ca1810.md
+                - name: 'CA1812: Örneklenmemiş iç sınıflardan kaçının'
+                  href: ca1812.md
+                - name: 'CA1813: Mühürsüz özniteliklerden kaçının'
+                  href: ca1813.md
+                - name: 'CA1814: Çok boyutlu diziler yerine basit dizileri tercih edin'
+                  href: ca1814.md
+                - name: 'CA1815: Değer türlerinde eşittir ve işleç eşittiri geçersiz kılın'
+                  href: ca1815.md
+                - name: 'CA1819: Özellikler diziler döndürmemelidir'
+                  href: ca1819.md
+                - name: 'CA1820: Dize uzunluğunu kullanarak boş dizeleri test edin'
+                  href: ca1820.md
+                - name: 'CA1821: Boş sonlandırıcıları kaldırın'
+                  href: ca1821.md
+                - name: 'CA1822: Üyeleri static olarak işaretleyin'
+                  href: ca1822.md
+                - name: 'CA1823: Kullanılmayan özel alanlardan kaçının'
+                  href: ca1823.md
+                - name: 'CA1824: Derlemeleri NeutralResourcesLanguageAttribute ile işaretleyin'
+                  href: ca1824.md
+                - name: 'CA1825: Sıfır uzunluklu dizi ayırmalarından kaçının'
+                  href: ca1825.md
+                - name: 'CA1826: Linq Numaralandırma metodu yerine property kullan'
+                  href: ca1826.md
+                - name: 'CA1827: Any kullanılabiliyorsa Count/LongCount kullanma'
+                  href: ca1827.md
+                - name: 'CA1828: AnyAsync kullanılabiliyorsa CountAsync/LongCountAsync kullanma'
+                  href: ca1828.md
+                - name: 'CA1829: Enumerable.Count metodu yerine Length/Count özelliğini kullan'
+                  href: ca1829.md
+                - name: 'CA1830: StringBuilder''da kesin tür belirtilmiş Append ve Insert metodu aşırı yüklemelerini tercih et'
+                  href: ca1830.md
+                - name: 'CA1831: Uygun olduğunda dize için Aralık tabanlı dizin oluşturucular yerine AsSpan kullanın'
+                  href: ca1831.md
+                - name: 'CA1832: Bir dizinin ReadOnlySpan veya ReadOnlyMemory kısmını almak için Aralık tabanlı dizin oluşturucular yerine AsSpan ya da AsMemory kullanın'
+                  href: ca1832.md
+                - name: 'CA1833: Bir dizinin Span veya Memory kısmını almak için Aralık tabanlı dizin oluşturucular yerine AsSpan ya da AsMemory kullanın'
+                  href: ca1833.md
+                - name: 'CA1834: Tek karakterli dizeler için StringBuilder.Append(char) kullanın'
+                  href: ca1834.md
+                - name: 'CA1835: Akış ReadAsync/WriteAsync metotlarının bellek aşırı yüklemelerini tercih edin'
+                  href: ca1835.md
+                - name: 'CA1836: Kullanılabilir olduğunda Count yerine IsEmpty tercih edin'
+                  href: ca1836.md
+                - name: 'CA1837: Process.GetCurrentProcess().Id yerine Environment.ProcessId kullanın'
+                  href: ca1837.md
+                - name: 'CA1838: P/Invoke’lar için StringBuilder parametreleri kullanmaktan kaçının'
+                  href: ca1838.md
+            - name: Güvenilirlik kuralları
+              items:
+                - name: Genel Bakış
+                  displayName: reliability rules
+                  href: reliability-warnings.md
+                - name: 'CA2000: Kapsamı kaybetmeden önce nesneleri bırakın'
+                  href: ca2000.md
+                - name: 'CA2002: Zayıf kimliği olan nesneleri kilitlemeyin'
+                  href: ca2002.md
+                - name: 'CA2007: Doğrudan bir Görevi beklemeyin'
+                  href: ca2007.md
+                - name: 'CA2008: TaskScheduler geçirmeden görev oluşturmayın'
+                  href: ca2008.md
+                - name: 'CA2009: Bir ImmutableCollection değeri üzerinde ToImmutableCollection çağırma'
+                  href: ca2009.md
+                - name: 'CA2011: Özelliği, ayarlayıcısı içinde atama'
+                  href: ca2011.md
+                - name: 'CA2012: ValueTask’leri doğru kullanın'
+                  href: ca2012.md
+                - name: 'CA2013: ReferenceEquals metodunu değer türleriyle birlikte kullanmayın'
+                  href: ca2013.md
+                - name: 'CA2014: Döngülerde stackalloc kullanmayın'
+                  href: ca2014.md
+                - name: 'CA2015: MemoryManager’dan türetilen türler için sonlandırıcılar tanımlama<T>'
+                  href: ca2015.md
+                - name: 'CA2016: CancellationToken parametresini, parametre alan metotlara iletin'
+                  href: ca2016.md
+            - name: Güvenlik kuralları
+              items:
+                - name: Genel Bakış
+                  displayName: security rules
+                  href: security-warnings.md
+                - name: 'CA2100: SQL sorgularını güvenlik açıkları için inceleyin'
+                  href: ca2100.md
+                - name: 'CA2109: Görünen olay işleyicilerini gözden geçirin'
+                  href: ca2109.md
+                - name: 'CA2119: Özel arabirimleri karşılayan metotları mühürleyin'
+                  href: ca2119.md
+                - name: 'CA2153: Bozuk Durum Özel Durumlarını işlemekten kaçının'
+                  href: ca2153.md
+                - name: 'CA2153: Bozuk Durum Özel Durumlarını İşlemekten Kaçının'
+                  href: ca2153.md
+                - name: 'CA2300: Güvenli olmayan seri durumdan çıkarıcı BinaryFormatter kullanmayın'
+                  href: ca2300.md
+                - name: 'CA2301: İlk olarak BinaryFormatter.Binder öğesini ayarlamadan önce BinaryFormatter.Deserialize çağırmayın'
+                  href: ca2301.md
+                - name: 'CA2302: BinaryFormatter.Deserialize çağırmadan önce BinaryFormatter.Binder öğesinin ayarlandığından emin olun'
+                  href: ca2302.md
+                - name: 'CA2305: Güvenli olmayan seri kaldırıcı LosFormatter kullanmayın'
+                  href: ca2305.md
+                - name: 'CA2310: Güvenli olmayan seri kaldırıcı NetDataContractSerializer kullanmayın'
+                  href: ca2310.md
+                - name: 'CA2311: İlk olarak NetDataContractSerializer.Binder öğesini ayarlamadan seri durumdan çıkarmayın'
+                  href: ca2311.md
+                - name: 'CA2312: Seri durumdan çıkarmadan önce NetDataContractSerializer.Binder öğesinin ayarlandığından emin olun'
+                  href: ca2312.md
+                - name: 'CA2315: Güvenli olmayan seri kaldırıcı ObjectStateFormatter kullanmayın'
+                  href: ca2315.md
+                - name: 'CA2321: SimpleTypeResolver kullanarak JavaScriptSerializer ile seri durumdan çıkarmayın'
+                  href: ca2321.md
+                - name: 'CA2322: Seri durumdan çıkarmadan önce SimpleTypeResolver ile JavaScriptSerializer’ın başlatılmadığından emin olun'
+                  href: ca2322.md
+                - name: 'CA2326: None dışında bir TypeNameHandling değeri kullanmayın'
+                  href: ca2326.md
+                - name: 'CA2327: Güvenli olmayan JsonSerializerSettings kullanmayın'
+                  href: ca2327.md
+                - name: 'CA2328: JsonSerializerSettings’in güvenli olduğundan emin olun'
+                  href: ca2328.md
+                - name: 'CA2329: Güvenli olmayan bir yapılandırma kullanarak JsonSerializer ile seri durumdan çıkarma işlemi yapmayın'
+                  href: ca2329.md
+                - name: 'CA2350: DataTable.ReadXml() girişinin güvenilir olduğundan emin olun'
+                  href: ca2350.md
+                - name: 'CA2351: DataSet.ReadXml() girişinin güvenilir olduğundan emin olun'
+                  href: ca2351.md
+                - name: 'CA2352: Seri duruma getirilebilir türdeki güvenli olmayan DataSet veya DataTable, uzaktan yapılan kod yürütme saldırılarına karşı savunmasız olabilir'
+                  href: ca2352.md
+                - name: 'CA2353: Seri duruma getirilebilir türdeki güvenli olmayan DataSet veya DataTable'
+                  href: ca2353.md
+                - name: 'CA2354: Seri durumdan çıkarılmış nesne grafındaki güvenli olmayan DataSet veya DataTable, uzaktan yapılan kod yürütme saldırılarına karşı savunmasız olabilir'
+                  href: ca2354.md
+                - name: 'CA2355: Seri durumdan çıkarılmış nesne grafındaki güvenli olmayan DataSet veya DataTable'
+                  href: ca2355.md
+                - name: 'CA2356: Seri durumdan çıkarılmış web nesne grafındaki güvenli olmayan DataSet veya DataTable türü'
+                  href: ca2356.md
+                - name: 'CA2361: DataSet.ReadXml() içeren bir otomatik oluşturulmuş sınıfın güvenilmeyen verilerle kullanılmadığından emin olun'
+                  href: ca2361.md
+                - name: 'CA2362: Otomatik oluşturulmuş, seri hale getirilebilir türdeki güvenli olmayan DataSet veya DataTable, uzaktan kod yürütme saldırılarına karşı savunmasız olabilir'
+                  href: ca2362.md
+                - name: 'CA2330: Seri durumdan çıkarılırken JsonSerializer’ın güvenli bir yapılandırmaya sahip olmasını sağlayın'
+                  href: ca2330.md
+                - name: 'CA3001: SQL ekleme güvenlik açıkları için inceleme kodu'
+                  href: ca3001.md
+                - name: 'CA3002: XSS güvenlik açıkları için inceleme kodu'
+                  href: ca3002.md
+                - name: 'CA3003: Dosya yolu ekleme güvenlik açıkları için inceleme kodu'
+                  href: ca3003.md
+                - name: 'CA3004: Bilgilerin açığa çıkmasıyla ilgili güvenlik açıkları için inceleme kodu'
+                  href: ca3004.md
+                - name: 'CA3005: LDAP ekleme güvenlik açıkları için inceleme kodu'
+                  href: ca3005.md
+                - name: 'CA3006: İşlem komutu ekleme güvenlik açıkları için inceleme kodu'
+                  href: ca3006.md
+                - name: 'CA3007: Açık yeniden yönlendirme güvenlik açıkları için inceleme kodu'
+                  href: ca3007.md
+                - name: 'CA3008: XPath ekleme güvenlik açıkları için inceleme kodu'
+                  href: ca3008.md
+                - name: 'CA3009: XML ekleme güvenlik açıkları için inceleme kodu'
+                  href: ca3009.md
+                - name: 'CA3010: XAML ekleme güvenlik açıkları için inceleme kodu'
+                  href: ca3010.md
+                - name: 'CA3011: DLL ekleme güvenlik açıkları için inceleme kodu'
+                  href: ca3011.md
+                - name: 'CA3012: Normal ifade ekleme güvenlik açıkları için inceleme kodu'
+                  href: ca3012.md
+                - name: 'CA3061: URL ile şema eklemeyin'
+                  href: ca3061.md
+                - name: 'CA3075: Güvensiz DTD İşleme'
+                  href: ca3075.md
+                - name: 'CA3076: Güvensiz XSLT Betiği Yürütme'
+                  href: ca3076.md
+                - name: 'CA3077: API Tasarımı, XML Belgesi ve XML Metin Okuyucusunda Güvensiz İşleme'
+                  href: ca3077.md
+                - name: 'CA3147: ValidateAntiForgeryToken ile fiil işleyicilerini işaretleme'
+                  href: ca3147.md
+                - name: 'CA5350: Zayıf Şifreleme Algoritmaları Kullanmayın'
+                  href: ca5350.md
+                - name: 'CA5351: Bozuk Şifreleme Algoritmaları Kullanmayın'
+                  href: ca5351.md
+                - name: 'CA5358: Güvenli Olmayan Şifreleme Modlarını Kullanmayın'
+                  href: ca5358.md
+                - name: 'CA5359: Sertifika doğrulamasını devre dışı bırakma'
+                  href: ca5359.md
+                - name: 'CA5360: Seri durumdan çıkarırken tehlikeli metotlar çağırmayın'
+                  href: ca5360.md
+                - name: 'CA5361: Güçlü şifrelemenin Schannel kullanımını devre dışı bırakma'
+                  href: ca5361.md
+                - name: 'CA5362: Seri durumdan çıkarılan nesne grafındaki olası başvuru döngüsü'
+                  href: ca5362.md
+                - name: 'CA5363: İstek doğrulamayı devre dışı bırakmayın'
+                  href: ca5363.md
+                - name: 'CA5364: Kullanım Dışı Güvenlik Protokollerini Kullanmayın'
+                  href: ca5364.md
+                - name: 'CA5365: HTTP Üst Bilgi Denetimini Devre Dışı Bırakma'
+                  href: ca5365.md
+                - name: 'CA5366: DataSet Read XML için XmlReader Kullan'
+                  href: ca5366.md
+                - name: 'CA5367: İşaretleyici Alanlarıyla Türleri Seri Hale Getirme'
+                  href: ca5367.md
+                - name: 'CA5368: Sayfadan Türetilmiş Sınıflar için ViewStateUserKey Ayarla'
+                  href: ca5368.md
+                - name: 'CA5369: Seri durumdan çıkarma için XmlReader kullanma'
+                  href: ca5369.md
+                - name: 'CA5370: Okuyucuyu doğrulamak için XmlReader kullanma'
+                  href: ca5370.md
+                - name: 'CA5371: Şema okuma için XmlReader kullanma'
+                  href: ca5371.md
+                - name: 'CA5372: XPathDocument için XmlReader kullanma'
+                  href: ca5372.md
+                - name: 'CA5373: Eski anahtar türetme işlevini kullanmayın'
+                  href: ca5373.md
+                - name: 'CA5374: XslTransform Kullanma'
+                  href: ca5374.md
+                - name: 'CA5375: Hesabın paylaşılan erişim imzasını kullanmayın'
+                  href: ca5375.md
+                - name: 'CA5376: SharedAccessProtocol HttpsOnly kullanın'
+                  href: ca5376.md
+                - name: 'CA5377: Kapsayıcı düzeyinde erişim ilkesi kullan'
+                  href: ca5377.md
+                - name: 'CA5378: ServicePointManagerSecurityProtocols''u Devre Dışı Bırakma'
+                  href: ca5378.md
+                - name: 'CA5379: Zayıf anahtar türetme işlevi algoritmasını kullanma'
+                  href: ca5379.md
+                - name: 'CA5380: Kök depoya sertifika eklemeyin'
+                  href: ca5380.md
+                - name: 'CA5381: Sertifikaların kök depoya eklenmemiş olduğundan emin olun'
+                  href: ca5381.md
+                - name: 'CA5382: ASP.NET Core’da güvenli tanımlama bilgileri kullan'
+                  href: ca5382.md
+                - name: 'CA5383: ASP.Net Core içinde güvenli tanımlama bilgileri kullanılmasını sağla'
+                  href: ca5383.md
+                - name: 'CA5384: Dijital imza algoritması (DSA) kullanma'
+                  href: ca5384.md
+                - name: 'CA5385: Yeterli anahtar boyutuna sahip Rivest–Shamir–Adleman (RSA) algoritmasını kullan'
+                  href: ca5385.md
+                - name: 'CA5386: SecurityProtocolType değerini sabit kodlamaktan kaçının'
+                  href: ca5386.md
+                - name: 'CA5387: Yetersiz sayıda yineleme ile zayıf anahtar türetme işlevi kullanma'
+                  href: ca5387.md
+                - name: 'CA5388: Zayıf anahtar türetme işlevini kullanırken yeterli sayıda yineleme sağla'
+                  href: ca5388.md
+                - name: 'CA5389: Hedef dosya sistemi yoluna arşiv öğesinin yolunu eklemeyin'
+                  href: ca5389.md
+                - name: 'CA5390: Şifreleme anahtarını sabit olarak kodlama'
+                  href: ca5390.md
+                - name: 'CA5391: ASP.NET Core MVC denetleyicilerinde sahtecilik önleme belirteçleri kullanın'
+                  href: ca5391.md
+                - name: 'CA5392: P/Invokes için DefaultDllImportSearchPaths özniteliğini kullanın'
+                  href: ca5392.md
+                - name: 'CA5393: Güvenli olmayan DllImportSearchPath değeri kullanmayın'
+                  href: ca5393.md
+                - name: 'CA5394: Güvenli olmayan rastgelelik kullanma'
+                  href: ca5394.md
+                - name: 'CA5395: Eylem metotları için HttpVerb özniteliği eksik'
+                  href: ca5395.md
+                - name: 'CA5396: HttpCookie için HttpOnly''yi true olarak ayarla'
+                  href: ca5396.md
+                - name: 'CA5397: Kullanım dışı SslProtocols değerlerini kullanmayın'
+                  href: ca5397.md
+                - name: 'CA5398: Sabit kodlanmış SslProtocols değerlerini kullanmaktan kaçının'
+                  href: ca5398.md
+                - name: 'CA5399: HttpClient sertifika iptal listesi denetimi kesinlikle devre dışı bırak'
+                  href: ca5399.md
+                - name: 'CA5400: HttpClient sertifika iptal listesi denetiminin devre dışı bırakılmadığından emin olun'
+                  href: ca5400.md
+                - name: 'CA5401: Varsayılan olmayan IV için CreateEncryptor kullanma'
+                  href: ca5401.md
+                - name: 'CA5402: Varsayılan IV ile CreateEncryptor kullan'
+                  href: ca5402.md
+                - name: 'CA5403: Sertifikayı sabit olarak kodlamayın'
+                  href: ca5403.md
+            - name: Kullanım kuralları
+              items:
+                - name: Genel Bakış
+                  displayName: usage rules
+                  href: usage-warnings.md
+                - name: 'CA1801: Kullanılmayan parametreleri gözden geçirin'
+                  href: ca1801.md
+                - name: 'CA1816: GC.SuppressFinalize''ı doğru çağırın'
+                  href: ca1816.md
+                - name: 'CA2200: Yığın ayrıntılarını korumak için yeniden fırlatın'
+                  href: ca2200.md
+                - name: 'CA2201: Ayrılmış özel durum türlerini harekete geçirmeyin'
+                  href: ca2201.md
+                - name: 'CA2207: Değer türü statik alanları satır içi başlatın'
+                  href: ca2207.md
+                - name: 'CA2208: Bağımsız değişken özel durumlarını doğru örnekleyin'
+                  href: ca2208.md
+                - name: 'CA2211: Sabit olmayan alanlar görünür olmamalıdır'
+                  href: ca2211.md
+                - name: 'CA2213: Atılabilen alanlar atılmalıdır'
+                  href: ca2213.md
+                - name: 'CA2214: Geçersiz kılınabilir metotları oluşturucular içinde çağırmayın'
+                  href: ca2214.md
+                - name: 'CA2215: Atma metotları taban sınıf atmayı çağırmalıdır'
+                  href: ca2215.md
+                - name: 'CA2216: Atılabilir türler sonlandırıcıyı bildirmelidir'
+                  href: ca2216.md
+                - name: 'CA2217: Sabit listelerini FlagsAttribute ile işaretlemeyin'
+                  href: ca2217.md
+                - name: 'CA2219: Özel durum yan tümceleri içinde özel durum harekete geçirmeyin'
+                  href: ca2219.md
+                - name: 'CA2225: İşleç aşırı yüklemeleri adlandırılmış alternatiflere sahiptir'
+                  href: ca2225.md
+                - name: 'CA2226: İşleçler simetrik aşırı yüklemelere sahip olmalıdır'
+                  href: ca2226.md
+                - name: 'CA2227: Koleksiyon özellikleri salt okunur olmalıdır'
+                  href: ca2227.md
+                - name: 'CA2229: Serileştirme oluşturucularını uygulayın'
+                  href: ca2229.md
+                - name: 'CA2231: Eşittir işlecini ValueType.Equals''ı geçersiz kılarak aşırı yükleyin'
+                  href: ca2231.md
+                - name: 'CA2234: Dizeler yerine System.Uri nesneleri gönderin'
+                  href: ca2234.md
+                - name: 'CA2235: Tüm serileştirilebilir olmayan alanları işaretleyin'
+                  href: ca2235.md
+                - name: 'CA2237: ISerializable türleri SerializableAttribute ile işaretleyin'
+                  href: ca2237.md
+                - name: 'CA2241: Biçimlendirme metotlarına doğru bağımsız değişkenleri sağlayın'
+                  href: ca2241.md
+                - name: 'CA2242: NaN için doğru test edin'
+                  href: ca2242.md
+                - name: 'CA2243: Öznitelik dize harfleri doğru çözümlenmelidir'
+                  href: ca2243.md
+                - name: 'CA2244: Dizine eklenmiş öğe başlatmalarını yineleme'
+                  href: ca2244.md
+                - name: 'CA2245: Bir özelliği kendisine atama'
+                  href: ca2245.md
+                - name: 'CA2246: Sembol ve üyesini aynı deyime atama'
+                  href: ca2246.md
+                - name: 'CA2247: TaskCompletionSource oluşturucusuna geçirilen bağımsız değişken TaskContinuationOptions sabit listesi yerine TaskCreationOptions sabit listesi olmalı'
+                  href: ca2247.md
+                - name: 'CA2248: Enum.HasFlag için doğru sabit listesi bağımsız değişkenini belirtin'
+                  href: ca2248.md
+                - name: 'CA2249: String.IndexOf yerine String.Contains kullanmayı düşünün'
+                  href: ca2249.md
+            - name: Yayımlama kuralları
+              items:
+                - name: Genel Bakış
+                  displayName: publish rules
+                  href: publish-warnings.md
+                - name: 'IL3000: Tek dosya olarak yayımlarken Derleme dosyası yoluna erişmekten kaçının'
+                  href: il3000.md
+                - name: 'IL3001: Tek dosya olarak yayımlarken Derleme dosyası yoluna erişmekten kaçının'
+                  href: il3001.md

@@ -22,7 +22,7 @@ ms.locfileid: "85463038"
 # <a name="idiasymbolget_liverangestartaddressoffset"></a>IDiaSymbol::get_liveRangeStartAddressOffset
 Yerel sembolün geçerli olduğu aralığın başlangıç adresinin konum kısmını döndürür.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_liveRangeStartAddressOffset ( 
