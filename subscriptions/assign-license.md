@@ -1,18 +1,18 @@
 ---
 title: Visual Studio aboneliklerine lisans atama | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 4e529a43-7aed-4eee-895d-862a631952df
-ms.date: 03/02/2020
+ms.date: 09/21/2020
 ms.topic: conceptual
 description: Yöneticilerin abonelere nasıl lisans atayabileceği hakkında bilgi edinin
-ms.openlocfilehash: f458e12cd27688f910917842de89e6377675fb69
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: cd64aa058ab5c0518fc27bf1ee64acef3b5b79a2
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006208"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022209"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalı 'nda lisans atama
 Visual Studio abonelikleri Yöneticisi olarak, bireysel kullanıcılara ve Kullanıcı gruplarına abonelik atamak için yönetim portalını kullanabilirsiniz.
@@ -24,7 +24,7 @@ Kullanıcı grupları için, abonelikleri nasıl atayacağınızı gösteren se�
 
 
 ## <a name="add-a-single-subscriber"></a>Tek bir abone ekleme
-Abonelik avantajlarına erişebilmeleri için bir Visual Studio aboneliğini yeni bir kullanıcıya atama hakkında daha fazla bilgiyi burada bulabilirsiniz.
+Abonelik avantajlarına erişebilmeleri için bir Visual Studio aboneliğini yeni bir kullanıcıya nasıl atayacağınızı öğrenmek için videoyu izleyin veya okuyun.
 
 <br>
 

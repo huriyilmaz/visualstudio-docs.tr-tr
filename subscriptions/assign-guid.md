@@ -1,21 +1,23 @@
 ---
 title: Visual Studio abonelerine belirli GUID 'Ler atama | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
-ms.date: 04/20/2020
+ms.author: v-evwin
+manager: cabuschl
+ms.date: 09/21/2020
 ms.topic: conceptual
 description: Yöneticilerin abonelere nasıl özel abonelik GUID 'SI olabileceğini öğrenin
-ms.openlocfilehash: e6c50239721d810964f2b95e0ec3509999d2f4d5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 31544718683b10a186d4c38486bf0cd7923cd4cf
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87235192"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022493"
 ---
 # <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalı 'nda belirli abonelikleri atama
 
 Yöneticiler artık bireysel abonelere belirli abonelikler atamak için Visual Studio abonelikleri yönetim portalını kullanabilir.  Bu, kuruluşun kısa bir süre için aboneliğe erişmesi gereken geçici personeli veya satıcıları olduğu durumlarda yararlı olabilir.  Yöneticiler, daha önce kısmen kullanılan bir abonelik atayabilir ve daha uzun süreli kullanım için yeni aboneliklerini bırakır.  
+
+Kullanıcılara belirli aboneliklerin GUID 'Lerinin nasıl atanacağını öğrenmek için videoyu izleyin veya okuyun. 
 
 <br>
 
@@ -57,7 +59,7 @@ Son adım, **toplu ekleme** şablonunu indirmenin yanı sıra atamak istediğini
 > - GUID, zaten dışarıya alınmış listedeki başka bir kullanıcıya atanmamış. 
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
-### <a name="qhow-do-i-change-which-subscription-is-currently-assigned-to-an-individual-user"></a>Soru-cevap kullanıcısına şu anda hangi aboneliğin atandığını nasıl değiştirebilirim?
+### <a name="q-how-do-i-change-which-subscription-is-currently-assigned-to-an-individual-user"></a>S: tek bir kullanıcıya şu anda hangi aboneliğin atandığını Nasıl yaparım? değiştirilsin mi?
 Y: bir kullanıcıya hangi GUID 'nin atandığını değiştirmek istiyorsanız, önce bu kullanıcı için aboneliği silmeniz gerekir.  Daha fazla bilgi için lütfen [abonelik silme](delete-license.md) makalemizi inceleyin.  Bu Kullanıcı için aboneliği sildikten sonra, listeyi dışarı aktarmak ve yeni abonelik bilgilerini karşıya yüklemek için yukarıda özetlenen işlemi kullanın.  
 
 ## <a name="see-also"></a>Ayrıca bkz.

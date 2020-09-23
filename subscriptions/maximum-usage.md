@@ -4,20 +4,21 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: c473b01f-2dfe-4cc2-ad29-bb5e2a268123
-ms.date: 09/16/2020
+ms.date: 09/21/2020
 ms.topic: conceptual
 description: Yönetici portalında en fazla atanmış abonelik sayısını görüntülemeyi öğrenin
-ms.openlocfilehash: f13fc75d2c359b05f74d781a3d6a8d0de99d39ff
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: b9ff33623311e4bfeff6b6067d5631d4e65efda9
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005878"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022183"
 ---
 # <a name="use-the-maximum-usage-feature-to-track-the-number-of-assigned-subscriptions"></a>Atanan aboneliklerin sayısını izlemek için en yüksek kullanım özelliğini kullanın
 Visual Studio abonelikleri yönetim portalındaki yeni bir özellik, satın almış ve atanan aboneliklerin sayısını izlemenize ve atadığınız her bir düzeyin abonelik sayısını, hem geçmiş yıl içinde hem de sözleşmenizin süresi boyunca ne kadar yüksek olduğunu belirlemenize yardımcı olur. 
 
 ## <a name="maximum-usage-overview"></a>En fazla kullanıma genel bakış
+En yüksek kullanım özelliğini kullanmayı öğrenmek için videoyu izleyin veya okumaya devam edin. 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4tdQK] 
 
 ## <a name="view-your-maximum-usage"></a>En büyük kullanım alanınızı görüntüleyin

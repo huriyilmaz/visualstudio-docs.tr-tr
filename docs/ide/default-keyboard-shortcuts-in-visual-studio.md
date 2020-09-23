@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 20f9328b7e048eaf68184925fa1b7ac7a56540af
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eab8798dfb5c1666ef2829361adb8c48202c3981
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85533646"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022223"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio 'da varsayılan klavye kısayolları
 
@@ -32,10 +32,10 @@ Yaygın klavye kısayollarının ve diğer üretkenlik bilgilerinin bir listesi 
 
 Visual Studio 'da erişilebilirlik hakkında daha fazla bilgi için bkz. [erişilebilirlik ipuçları ve püf noktaları](../ide/reference/accessibility-tips-and-tricks.md) ve [nasıl yapılır: klavyeyi özel olarak kullanma](../ide/reference/how-to-use-the-keyboard-exclusively.md).
 
-- [Çözümleme](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_analyze)
+- [Analiz](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_analyze)
 - [Düzenle](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_edit)
 - [Project](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_project)
-- [Sınamanız](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_test)|
+- [Test](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_test)
 - [Mimari](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_architecture)
 - [Düzenleyici bağlam menüleri](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_editorContext)
 - [Proje ve çözüm bağlam menüleri](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_projectContext)
@@ -552,7 +552,7 @@ Bu klavye kısayolları *geneldir*. Bu, herhangi bir Visual Studio penceresi oda
 
 |Komutlar|Klavye kısayolları|
 |--------------| - |
-|Debug.Graphics.CaptureFrame|Hiçbiri|
+|Debug.Graphics.CaptureFrame|Yok|
 |Graphics. Movepixelselectionaşağı|**Shift+Alt+Aşağı Ok**|
 |Graphics. MovePixelSelectionLeft|**Shift+Alt+Sol Ok**|
 |Graphics. MovePixelSelectionRight|**Shift+Alt+Sağ Ok**|
@@ -849,7 +849,7 @@ Bu klavye kısayolları *geneldir*. Bu, herhangi bir Visual Studio penceresi oda
 | Edit.LineEndExtendColumn | **Shift+Alt+End** |
 | Edit.LineOpenAbove | **Ctrl+Enter** |
 | Edit.LineOpenBelow | **Ctrl+Shift+Enter** |
-| Edit.LineStart | **Giriş** |
+| Edit.LineStart | **Giriş Ekranı** |
 | Edit.LineStartExtend | **Shift+Home** |
 | Edit.LineStartExtendColumn | **Shift+Alt+Home** |
 | Edit.LineTranspose | **Shift+Alt+T** |
@@ -1056,7 +1056,7 @@ Bu klavye kısayolları *geneldir*. Bu, herhangi bir Visual Studio penceresi oda
 |Edit.CharRightExtend|**Shift+Sağ Ok**|
 |Edit.DocumentEnd|**Erer**|
 |Edit.DocumentEndExtend|**Shift+End**|
-|Edit.DocumentStart|**Giriş**|
+|Edit.DocumentStart|**Giriş Ekranı**|
 |Edit.DocumentStartExtend|**Shift+Home**|
 |Edit.InsertTab|**Sekmesinde**|
 |Edit.LineDown|**Aşağı Ok**|

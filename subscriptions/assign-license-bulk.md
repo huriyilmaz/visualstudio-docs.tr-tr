@@ -1,23 +1,23 @@
 ---
 title: Visual Studio abonelikleri için Kullanıcı gruplarına lisans atama | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
-ms.date: 05/10/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 description: Yöneticilerin toplu ekleme özelliğini veya Microsoft Azure Active Directory gruplarını kullanarak birden çok aboneye nasıl lisans atayabileceği hakkında bilgi edinin
-ms.openlocfilehash: cbcdab00568e375633ddd9d6d350978d6ec56d2a
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 6154e9796e1ba021eedf86bcee7d508e285b6645
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005772"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022445"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Birden çok kullanıcıya abonelik atama
 Abonelikler yönetim portalı, kullanıcıları tek seferde veya büyük gruplar halinde eklemenize olanak tanır.  Bireysel kullanıcı eklemek için bkz. [tek kullanıcı ekleme](assign-license.md).
 
-Büyük Kullanıcı gruplarını eklemek için toplu ekleme özelliğini kullanabilir veya kuruluşunuz Microsoft Azure Active Directory (Azure AD) kullanıyorsa Azure AD gruplarını kullanabilirsiniz. Bu makalede her iki seçenek için de işlem açıklanacaktır. 
+Büyük Kullanıcı gruplarını eklemek için toplu ekleme özelliğini kullanabilir veya kuruluşunuz Microsoft Azure Active Directory (Azure AD) kullanıyorsa Azure AD gruplarını kullanabilirsiniz. Bu makalede her iki seçenek için de işlem açıklanacaktır.  Toplu ekleme özelliği hakkında daha fazla bilgi edinmek için bu videoyu izleyin veya okumaya devam edin. 
 
 <br>
 
@@ -64,7 +64,8 @@ Büyük Kullanıcı gruplarını eklemek için toplu ekleme özelliğini kullana
 
    Bir hatayla karşılaşırsanız, şu adımları izleyin:
    1. Oluşturduğunuz Excel dosyasını açın, sorunları düzeltin ve dosyayı kaydedin.
-   0. Yönetim portalına dönün ve **Ekle**' yi seçin.
+   0. Yönetim portalına dönün ve hata iletisini kapatın.
+   0. **Ekle**' yi seçin.
    0. **Toplu Ekle**' yi seçin.
    0. Excel dosyası zaten kaydedildiğinden, şablonu indirmeniz gerekmez.  **Araştır**' ı seçin, yeni kaydettiğiniz dosyayı bulun ve **Aç**' ı seçin.
    0. **Tamam**’ı seçin.
@@ -89,6 +90,7 @@ Bu özelliğin kullanılması, abonelik atamalarınızın üstünde kalmasını 
 > - Grubun tüm üyelerinin Azure AD hesabıyla ilişkilendirilmiş bir e-posta adresi olmalıdır.
 > - Azure AD grupları kullanılarak eklenen abonelikler için bildirimler için ayrı e-posta adresleri desteklenmez.  
 
+Azure Active Directory grubu özelliğini kullanarak abone ekleme hakkında daha fazla bilgi edinmek için bu videoyu izleyin veya okumaya devam edin. 
 <br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4rvvW]

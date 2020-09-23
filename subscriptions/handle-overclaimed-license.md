@@ -1,18 +1,18 @@
 ---
 title: Fazla yüklenmiş lisansları işleme | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: a747100c-6f08-41a4-aaad-05099741742b
-ms.date: 03/03/2020
+ms.date: 09/21/2020
 ms.topic: conceptual
 description: Yöneticilerin aşırı yüklenmiş abonelikleri nasıl çözebileceğinizi öğrenin
-ms.openlocfilehash: d34f80e4d206e13219d5b9e33f72caddfeffb1b6
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 452363d09c6036d7edae5dab94e5d71ef87fb8b5
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91004752"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022597"
 ---
 # <a name="over-allocated-subscriptions"></a>Fazla ayrılmış abonelikler
 Bazen abonelik eklendikten sonra siparişler değişir, bu da şirketiniz tarafından sahip olunan lisanslardan daha fazla abonelik olmasına neden olabilir. Bu, "aşırı ayırma" olarak adlandırılır.  
@@ -36,10 +36,6 @@ Fazla yüklemeleri çözümlemek için çeşitli yollar vardır:
 ## <a name="billing-and-true-up"></a>Faturalandırma ve doğru
 Kuruluşunuzda bir Kurumsal Anlaşma (EA) varsa, Yöneticiler bu abonelikleri satın almadan atayabilir ve daha sonra "doğru-yukarı" olarak bilinen bir mutabakat süreci aracılığıyla ödeme yapabilir.  Fazla ayrıldığınızda, kuruluşunuz "true-up" sırasında kullanıcılara atanan maksimum abonelik sayısı için faturalandırılır.  Bu, doğru bir zamanda atanmış en fazla abonelik sayısına sahip olmasanız da geçerlidir.  En fazla kullanımı izleme hakkında daha fazla bilgi edinmek için [en yüksek kullanım](maximum-usage.md) konusunu ziyaret edin.
 
-> [!Important]
-> GitHub Enterprise ile Visual Studio abonelikleri, Visual Studio abonelik yöneticileri tarafından atanmışsa ve bu aboneliklerin hiç satın alınmadıysa, bu abonelikler kuruluş içindeki GitHub Enterprise Admins 'e görünür olmayacaktır. GitHub Enterprise aboneliklerinin görünür olmasını sağlamak için, aboneliklerin ilk kez atandığı GitHub Enterprise veya Visual Studio Enterprise ile **en az bir** Visual Studio Professional içeren bir satın alma yapılmalıdır.
->
-> Bu aboneliğin lisans gereksinimleriyle uyumlu kalmasını sağlamak için, atanan her GitHub aboneliğine ait bir GitHub aboneliğinin atandığı ilgili bir Visual Studio olduğundan emin olunması müşterinin sorumluluğudur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

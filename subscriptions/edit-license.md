@@ -1,18 +1,18 @@
 ---
 title: Yönetim portalında abonelikleri düzenleyin | Microsoft Docs
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 97ac8e4d-7a03-42f8-98cb-15bcaa90ef65
-ms.date: 07/30/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 description: Yöneticilerin abonelik atamalarını nasıl düzenleyebileceğinizi öğrenin.
-ms.openlocfilehash: 3d96610c940dc8e4404212a6f3a3dbaa7fe3ef51
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 060ae7c7679eb1bf9dc4da99ea9a1bf952ebc58b
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005593"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022569"
 ---
 # <a name="edit-visual-studio-subscription-assignments"></a>Visual Studio abonelik atamalarını Düzenle
 Bir abonelik Yöneticisi olarak, kuruluşunuzdaki kişilere atanan aboneliklerde değişiklikler yapabilirsiniz.  Bu makale, yapabileceğiniz değişiklik türlerini açıklar ve gerekli adımları sağlar.
@@ -34,6 +34,7 @@ Abonenin adı, soyadı, abonelik düzeyi, e-posta adresi, ülke, dil, indirmeler
 
 Toplu düzenleme işlemini kullanarak, aynı anda birden çok aboneyi düzenleyebilirsiniz. Bu özellik öncelikle Kurumsal e-posta adresi değişikliklerinden veya bir kuruluşun indirmelere erişimi kısıtlamaya karar verdiği kuruluşlarda kullanılır.
 
+Toplu düzenleme kullanarak birden çok aboneyi nasıl düzenleyeceğinizi öğrenmek için bu videoyu izleyin veya okumaya devam edin. 
 <br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vkAF]

@@ -1,18 +1,18 @@
 ---
 title: Arama ve filtreleme | Microsoft Docs
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 9c0b9a4f-b9a3-491c-a68f-6e4bac7f7b3d
-ms.date: 08/10/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 description: Yöneticilerin yönetim portalında bireysel aboneleri veya grupları nasıl bulabileceğinizi öğrenin.
-ms.openlocfilehash: 29354348b423b539b79c36c78f213f7a20d60eb3
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 341f8e9739b629330775ff8688c5fdf872165e3a
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005309"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022248"
 ---
 # <a name="search-and-filter-subscribers-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde aboneleri arama ve filtreleme
 Visual Studio abonelikleri yönetim portalı, çeşitli ölçütlere göre belirli bir abone alt kümesini bulmanızı sağlar. Abone listesini ad, e-posta adresi, abonelik düzeyi ve diğer bilgilere göre filtreleyebilirsiniz.
@@ -30,7 +30,7 @@ Visual Studio abonelikleri yönetim portalı, çeşitli ölçütlere göre belir
    > [!NOTE]
    > **Ad** alanı adı ilk ada göre sıralanır.
 
-   **Filtre simgesinin** vurgulandığını ve bir filtrenin uygulandığını unutmayın.  **Açık bir filtre** seçeneği de görüntülenir. 
+   **Filtre simgesinin** vurgulandığını ve bir filtrenin uygulandığını unutmayın.  **Açık bir filtre** seçeneği de görüntülenir. Bu örnekte, @outlook.com e-posta adreslerine sahip olanları bulmak için abonelerin listesini filtreliyoruz. 
 
 3. Filtreyi temizlemek ve filtrelenmemiş listeyi geri yüklemek için sağ üst köşedeki **Filtreyi temizle** sekmesine tıklayın. 
    > [!div class="mx-imgBorder"]
