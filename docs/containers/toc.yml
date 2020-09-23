@@ -48,9 +48,9 @@
   items:
     - name: Visual Studio’da Kubernetes
       href: tutorial-kubernetes-tools.md
-    - name: Kubernetes ile Yerel İşlem (Önizleme)
-      href: local-process-kubernetes.md
-    - name: Kubernetes ile Yerel İşlem nasıl çalışır? (Önizleme)
-      href: overview-local-process-kubernetes.md
-    - name: Kubernetes ile Yerel İşlem'i yapılandırma
-      href: configure-local-process-with-kubernetes.md
+    - name: Bridge to Kubernetes
+      href: bridge-to-kubernetes.md
+    - name: Bridge to Kubernetes’in işleyiş biçimi
+      href: overview-bridge-to-kubernetes.md
+    - name: Bridge to Kubernetes’i yapılandırma
+      href: configure-bridge-to-kubernetes.md

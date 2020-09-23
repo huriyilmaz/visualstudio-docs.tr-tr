@@ -260,9 +260,21 @@
         - name: Yapı özelleştirme ve hata ayıklama görevleri
           displayName: makefile tasks.vs.json
           href: ide/customize-build-and-debug-tasks-in-visual-studio.md
+    - name: Codespaces ile uygulama geliştirme (Önizleme)
+      items:
+        - name: Genel Bakış
+          href: ide/codespaces/codespaces-overview.md
+        - name: Codespace ile Visual Studio’yu kullanma
+          href: ide/codespaces/use-visual-studio-with-codespaces.md
+        - name: Codespace’i özelleştirme
+          href: ide/codespaces/customize-codespaces.md
+        - name: Desteklenen Visual Studio özellikleri
+          href: ide/codespaces/supported-features-codespaces.md
     - name: Projeye veya depoya bağlanma
       displayName: Azure DevOps VSTS GitHub
       href: ide/connect-team-project.md
+    - name: Visual Studio’da yeni Git deneyimi (Önizleme)
+      href: ide/git-with-visual-studio.md
     - name: Düzenleyici
       items:
         - name: Düzenleyiciyi kullanma
