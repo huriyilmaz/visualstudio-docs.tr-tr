@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2def56c6a3860ce0476f448f87bdde25c7970807
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7b811cc3538e3bbb108e50acf50c2fe7a977fe3d
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86393527"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211293"
 ---
 # <a name="debug-and-analyze-unit-tests-with-test-explorer"></a>Test Gezgini ile birim testlerini hata ayıklama ve çözümleme
 
@@ -38,11 +38,11 @@ Testleriniz için bir hata ayıklama oturumu başlatmak üzere test Gezgini ' ni
 ## <a name="diagnose-test-method-performance-issues"></a>Test yöntemi performans sorunlarını tanılama
 
 ::: moniker range="vs-2017"
-Bir test yönteminin neden çok fazla zaman aldığını tanılamak için test Gezgini 'nde yöntemi seçin ve sağ tıklama menüsünde **profil seçili test** ' i seçin. Bkz. [izleme profili oluşturma raporu](../profiling/understanding-instrumentation-data-values.md?view=vs-2017).
+Bir test yönteminin neden çok fazla zaman aldığını tanılamak için test Gezgini 'nde yöntemi seçin ve sağ tıklama menüsünde **profil seçili test** ' i seçin. Bkz. [izleme profili oluşturma raporu](../profiling/understanding-instrumentation-data-values.md?view=vs-2017&preserve-view=true).
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
-Test yönteminin neden çok fazla zaman aldığını tanılamak için test Gezgini 'nde yöntemi seçin ve sağ tıklama menüsünde **profil** ' i seçin. Bkz. [izleme profili oluşturma raporu](../profiling/understanding-instrumentation-data-values.md?view=vs-2017).
+Test yönteminin neden çok fazla zaman aldığını tanılamak için test Gezgini 'nde yöntemi seçin ve sağ tıklama menüsünde **profil** ' i seçin. Bkz. [izleme profili oluşturma raporu](../profiling/understanding-instrumentation-data-values.md?view=vs-2017&preserve-view=true).
 ::: moniker-end
 
 > [!NOTE]

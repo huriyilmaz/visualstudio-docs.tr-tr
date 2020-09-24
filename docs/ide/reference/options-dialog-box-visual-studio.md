@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bad4e0b7db883a7604d674b854a9c3f794715d8d
-ms.sourcegitcommit: bccc6503542e1517e0e96a9f02f5a89d69c60c25
+ms.openlocfilehash: 068c80221a572747ab99e41e78945fe55c57c451
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/24/2020
-ms.locfileid: "91135111"
+ms.locfileid: "91211267"
 ---
 # <a name="options-dialog-box-visual-studio"></a>Seçenekler iletişim kutusu (Visual Studio)
 
@@ -33,7 +33,7 @@ ms.locfileid: "91135111"
 Özellik belleğe yüklenene kadar bir IDE özelliğinin seçenekleri gezinti bölmesinde görünmez. Bu nedenle, son ' u sonlandırmış olduğunuz sırada görüntülenen yeni bir oturuma başladığınızda aynı seçenekler görüntülenmeyebilir. Bir proje oluşturduğunuzda veya belirli bir uygulamayı kullanan bir komutu çalıştırdığınızda, ilgili seçeneklerin düğümleri Seçenekler iletişim kutusuna eklenir. Bu eklenen seçenekler, IDE özelliği bellekte kaldığı sürece kullanılabilir olmaya devam edecektir.
 
 > [!NOTE]
-> Bazı ayar koleksiyonları kapsam, Seçenekler iletişim kutusunun Gezinti bölmesinde görünen sayfa sayısını toplar. **Tüm ayarları göster**' i seçerek tüm olası sayfaları görüntülemeyi seçebilirsiniz.
+> Bazı ayar koleksiyonları kapsam, Seçenekler iletişim kutusunun Gezinti bölmesinde görünen sayfa sayısını toplar.
 
 ## <a name="how-options-are-applied"></a>Seçenekler nasıl uygulanır
 

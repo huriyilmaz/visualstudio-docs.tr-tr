@@ -14,16 +14,16 @@ monikerRange: vs-2017
 ms.workload:
 - uwp
 - cordova
-ms.openlocfilehash: b30b59b95b09cac8308474b2b2963f9b96d58146
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 301461caa15321b5a77f42872c93f52f3ec2c9c1
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72731704"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211280"
 ---
 # <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio 'da JavaScript konsol komutları
 
-Komutları kullanarak, Visual Studio 'nun JavaScript Konsol penceresinde ileti gönderebilir ve diğer görevleri gerçekleştirebilirsiniz. Bu pencerenin nasıl kullanılacağını gösteren örnekler için bkz. [hızlı başlangıç: JavaScript hata ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017). Bu konudaki bilgiler, Apache Cordova için Visual Studio Araçları kullanılarak oluşturulan Node.js App, UWP uygulamaları ve uygulamalar için geçerlidir.
+Komutları kullanarak, Visual Studio 'nun JavaScript Konsol penceresinde ileti gönderebilir ve diğer görevleri gerçekleştirebilirsiniz. Bu pencerenin nasıl kullanılacağını gösteren örnekler için bkz. [hızlı başlangıç: JavaScript hata ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017&preserve-view=true). Bu konudaki bilgiler, Apache Cordova için Visual Studio Araçları kullanılarak oluşturulan Node.js App, UWP uygulamaları ve uygulamalar için geçerlidir.
 
 JavaScript Konsolu penceresi kapalıysa, Visual Studio 'da hata ayıklama sırasında **Debug**  >  **Windows**  >  **JavaScript Konsolu**Hata Ayıkla ' yı seçerek açabilirsiniz.
 
@@ -127,5 +127,5 @@ console.log("%s is %f years old!", user.first, user.age);
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hızlı Başlangıç: JavaScript hata ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017)
-- [Hızlı başlangıç: HTML ve CSS hatalarını ayıklama](../debugger/quickstart-debug-html-and-css.md?view=vs-2017)
+- [Hızlı Başlangıç: JavaScript hata ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017&preserve-view=true)
+- [Hızlı başlangıç: HTML ve CSS hatalarını ayıklama](../debugger/quickstart-debug-html-and-css.md?view=vs-2017&preserve-view=true)

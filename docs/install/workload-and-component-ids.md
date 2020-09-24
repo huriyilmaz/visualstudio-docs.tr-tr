@@ -17,12 +17,12 @@ ms.assetid: 34e19ef1-abfb-44fd-aad2-33c5d7874482
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: e5a4cca61b32772f47c5fa350123bc45c8f8d671
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a64eee360c6039350683bb4add5be7126a4d444
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87805806"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211254"
 ---
 # <a name="visual-studio-workload-and-component-ids"></a>Visual Studio iş yükü ve bileşen kimlikleri
 
@@ -45,7 +45,7 @@ Bir komut satırı kullanarak Visual Studio 'Yu yüklemek veya VSıX bildirimind
 | [Visual &nbsp; Studio Test &nbsp; uzmanı &nbsp; 2017](workload-component-id-vs-test-professional.md?vs-2017) | Microsoft. VisualStudio. Product. TestProfessional | Visual Studio Test Uzmanı 2017 |
 | [Visual &nbsp; Studio geri bildirim &nbsp; istemcisi &nbsp; 2017](workload-component-id-vs-feedback-client.md?vs-2017) | Microsoft. VisualStudio. Product. FeedbackClient | Visual Studio Geri Bildirim İstemcisi 2017 |
 
-Bu listelerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Visual Studio 'yu yüklemek için komut satırı parametrelerini kullanma 2017](use-command-line-parameters-to-install-visual-studio.md?view=vs-2017) sayfası ve [nasıl yapılır: genişletilebilirlik projelerini Visual studio 'ya geçirme 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md?view=vs-2017) sayfası.
+Bu listelerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Visual Studio 'yu yüklemek için komut satırı parametrelerini kullanma 2017](use-command-line-parameters-to-install-visual-studio.md?view=vs-2017&preserve-view=true) sayfası ve [nasıl yapılır: genişletilebilirlik projelerini Visual studio 'ya geçirme 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md?view=vs-2017&preserve-view=true) sayfası.
 
 ::: moniker-end
 
@@ -66,7 +66,7 @@ Bu listelerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Vis
 Bu listelerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Visual Studio 'yu yüklemek için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) sayfası ve [nasıl yapılır: genişletilebilirlik projelerini Visual Studio 'ya geçirme](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md?view=vs-2019) sayfası.
 
 > [!NOTE]
-> Önceki sürüm için iş yükünün ve bileşen kimliklerinin bir listesi için bkz. [Visual Studio 2017 iş yükü ve bileşen kimlikleri](workload-and-component-ids.md?view=vs-2017)
+> Önceki sürüm için iş yükünün ve bileşen kimliklerinin bir listesi için bkz. [Visual Studio 2017 iş yükü ve bileşen kimlikleri](workload-and-component-ids.md?view=vs-2017&preserve-view=true)
 
 ::: moniker-end
 

@@ -12,12 +12,12 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 6e7298a920a970205d336e1db792c7becbf89aec
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: cee62e02aa5b35108eec5024edf8eebb3848513f
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005257"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211306"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Visual Studio derleme numaraları ve yayın tarihleri
 
@@ -166,7 +166,7 @@ Aşağıdaki tabloda, Visual Studio 2019 için derleme numaraları ve sürüm ta
 | 16.0.0 | Önizleme 1 | 4 Aralık 2018 | 16.0.28329.73 |
 
 > [!NOTE]
-> Önceki sürümün derleme numaralarının ve sürüm tarihlerinin bir listesi için bkz. [Visual Studio 2017 derleme numaraları ve sürüm tarihleri](visual-studio-build-numbers-and-release-dates.md?view=vs-2017)
+> Önceki sürümün derleme numaralarının ve sürüm tarihlerinin bir listesi için bkz. [Visual Studio 2017 derleme numaraları ve sürüm tarihleri](visual-studio-build-numbers-and-release-dates.md?view=vs-2017&preserve-view=true)
 
 ::: moniker-end
 

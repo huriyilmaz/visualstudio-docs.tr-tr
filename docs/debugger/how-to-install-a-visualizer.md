@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cce59dfb39da71b8ff87efd49de9e2e0f6cdbd0
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 6410e9ba1250da5a0a247c786e4aada310186c4a
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851417"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211371"
 ---
 # <a name="how-to-install-a-visualizer"></a>Nasıl Yapılır: Görselleştiriciyi Yükleme
 Görselleştirici oluşturduktan sonra, ' de kullanılabilir olacak şekilde Görselleştirici 'yı yüklemelisiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Görselleştirici yüklenmesi basit bir işlemdir.
@@ -32,7 +32,7 @@ Görselleştirici oluşturduktan sonra, ' de kullanılabilir olacak şekilde Gö
 
 ::: moniker range=">=vs-2019"
 ### <a name="to-install-a-visualizer-for-visual-studio-2019"></a>Visual Studio 2019 için bir Görselleştirici yüklemek için
-  
+
 1. Oluşturduğunuz Görselleştiriciyi içeren DLL dosyasını bulun.
 
    Genellikle, hem hata ayıklayıcı tarafında DLL hem de hata ayıklanan tarafı DLL 'SI hedef platform olarak **herhangi BIR CPU** belirtse en iyisidir. Hata ayıklayıcı-yan DLL, **herhangi BIR CPU** veya **32 bit**olmalıdır. Hata ayıklanan tarafı DLL için hedef platform, hata ayıklayıcı ayıklanan işleme karşılık gelmelidir.
@@ -42,7 +42,7 @@ Görselleştirici oluşturduktan sonra, ' de kullanılabilir olacak şekilde Gö
     - *VisualStudioInstallPath*`\Common7\Packages\Debugger\Visualizers`
 
     - `My Documents\`*VisualStudioVersion*`\Visualizers`
-    
+
 3. [Hata ayıklanan yan](create-custom-visualizers-of-data.md#to-create-the-visualizer-object-source-for-the-debuggee-side) dll 'yi aşağıdaki konumlardan birine kopyalayın:
 
     - *VisualStudioInstallPath* `\Common7\Packages\Debugger\Visualizers\` *Framework*
@@ -61,7 +61,7 @@ Görselleştirici oluşturduktan sonra, ' de kullanılabilir olacak şekilde Gö
 4. Hata ayıklama oturumunu yeniden başlatın.
 
 > [!NOTE]
-> Yordam, Visual Studio 2017 ve üzeri sürümlerde farklıdır. Bu makalenin [önceki sürümüne](how-to-install-a-visualizer.md?view=vs-2017) bakın.
+> Yordam, Visual Studio 2017 ve üzeri sürümlerde farklıdır. Bu makalenin [önceki sürümüne](how-to-install-a-visualizer.md?view=vs-2017&preserve-view=true) bakın.
 ::: moniker-end
 
 ::: moniker range="vs-2017"

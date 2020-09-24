@@ -19,12 +19,12 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-ms.openlocfilehash: 9c16f16a8c44b50fd7c637dbd921fd8cd3779dc4
-ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
+ms.openlocfilehash: d4ed87e082e5c4fa2722a44fbbfe1dcef803f247
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90713981"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211332"
 ---
 # <a name="project-migration-and-upgrade-reference-for-visual-studio"></a>Visual Studio için proje geçiş ve yükseltme başvurusu
 
@@ -56,7 +56,7 @@ Burada listelenen bir proje veya dosya türü görmüyorsanız, bu [makalenin Vi
 | LightSwitch | LightSwitch artık Visual Studio 2017 ' de desteklenmemektedir. Visual Studio 2012 ve öncesiyle oluşturulan ve Visual Studio 2013 ya da Visual Studio 2015 ' de açılan projeler yükseltilir ve bundan sonra yalnızca Visual Studio 2013 veya Visual Studio 2015 ' de açılabilir. |
 | Visual Studio için Microsoft Azure Araçları | Bu proje türlerini açmak için önce [.net Için Azure SDK](https://azure.microsoft.com/downloads/)'yı yükledikten sonra projeyi açın. Gerekirse, projeniz güncellenir. |
 | Model-View-Controller Framework (ASP.NET MVC) | MVC sürümleri ve Visual Studio için destek:<ul><li>Visual Studio 2010 SP1, MVC 2 ve MVC 3 ' ü destekler; MVC 4 desteği [Visual Studio 2010 SP1 indirmesi için ASP.NET 4 MVC 4](https://www.microsoft.com/download/details.aspx?id=30683) aracılığıyla eklenmiştir</li><li>Visual Studio 2012 yalnızca MVC 3 ve MVC 4 destekler</li><li>Visual Studio 2013 yalnızca MVC 4 ve MVC 5 destekler 5</li><li>Visual Studio 2017 ve Visual Studio 2015, MVC 4 ' ü destekler (mevcut projeleri açabilir ancak yenilerini oluşturamazlar) ve MVC 5</li></ul><br/>MVC sürümlerini yükseltme:<ul><li>MVC 2 ' den MVC 3 ' e otomatik olarak yükseltme hakkında daha fazla bilgi için bkz. [ASP.NET MVC 3 uygulama yükseltme](https://archive.codeplex.com/?p=aspnet).</li><li>MVC 2 ' den MVC 3 ' e el ile yükseltme hakkında bilgi için, bkz. [ASP.NET MVC 2 projesini ASP.NET MVC 3 araç güncelleştirmesine yükseltme](https://archive.codeplex.com/?p=aspnet).</li><li>MVC3 'ten MVC 4 ' e el ile yükseltme hakkında bilgi için bkz. [ASP.NET MVC 3 projesini ASP.NET MVC 4 ' e yükseltme](/aspnet/whitepapers/mvc4-release-notes). Projeniz .NET Framework 3,5 SP1 hedefliyorsa, bunu .NET Framework 4 ' ü kullanacak şekilde yeniden hedeflemeniz gerekir.</li><li>MVC 4 ' ten MVC 5 ' e el ile yükseltme hakkında bilgi için bkz. [ASP.NET MVC 4 ve Web API projesini ASP.NET MVC 5 ve Web API 2 ' ye yükseltme](https://www.asp.net/mvc/overview/releases/how-to-upgrade-an-aspnet-mvc-4-and-web-api-project-to-aspnet-mvc-5-and-web-api-2).</li></ul> |
-| Modelleme | Visual Studio 'Nun projeyi otomatik olarak güncelleştirmesine izin verirseniz, Visual Studio 2015, Visual Studio 2013 veya Visual Studio 2012 ' de açabilirsiniz.<br/><br/>Modelleme projesinin biçimi Visual Studio 2015 ile Visual Studio 2017 arasında değişmemiştir ve proje, her iki sürümde de açılabilir ve değiştirilebilir. Ancak, Visual Studio 2017 ' de davranış farklılıkları vardır:<ul><li>Modelleme projeleri artık menülerde ve şablonlarda "bağımlılık doğrulama" projeleri olarak adlandırılır.</li><li>UML diyagramları artık Visual Studio 2017 ' de desteklenmemektedir. UML dosyaları Çözüm Gezgini ' de olduğu gibi, XML dosyaları olarak açılmış şekilde listelenmiştir. UML diyagramlarını görüntülemek, oluşturmak veya düzenlemek için Visual Studio 2015 kullanın.</li><li>Visual Studio 2017 ' de, modelleme projesi oluşturulduğunda mimari bağımlılıkların doğrulanması artık gerçekleştirilmez. Bunun yerine, her kod projesi derlenildiği için doğrulama yürütülür. Bu değişiklik modelleme projesini etkilemez, ancak doğrulanan kod projelerinde değişiklik yapılmasını gerektirir. Visual Studio 2017, otomatik olarak kod projelerinde gerekli değişiklikleri yapabilir ([daha fazla bilgi](../modeling/validate-code-with-layer-diagrams.md?view=vs-2017#live-dependency-validation)).</li></ul> |
+| Modelleme | Visual Studio 'Nun projeyi otomatik olarak güncelleştirmesine izin verirseniz, Visual Studio 2015, Visual Studio 2013 veya Visual Studio 2012 ' de açabilirsiniz.<br/><br/>Modelleme projesinin biçimi Visual Studio 2015 ile Visual Studio 2017 arasında değişmemiştir ve proje, her iki sürümde de açılabilir ve değiştirilebilir. Ancak, Visual Studio 2017 ' de davranış farklılıkları vardır:<ul><li>Modelleme projeleri artık menülerde ve şablonlarda "bağımlılık doğrulama" projeleri olarak adlandırılır.</li><li>UML diyagramları artık Visual Studio 2017 ' de desteklenmemektedir. UML dosyaları Çözüm Gezgini ' de olduğu gibi, XML dosyaları olarak açılmış şekilde listelenmiştir. UML diyagramlarını görüntülemek, oluşturmak veya düzenlemek için Visual Studio 2015 kullanın.</li><li>Visual Studio 2017 ' de, modelleme projesi oluşturulduğunda mimari bağımlılıkların doğrulanması artık gerçekleştirilmez. Bunun yerine, her kod projesi derlenildiği için doğrulama yürütülür. Bu değişiklik modelleme projesini etkilemez, ancak doğrulanan kod projelerinde değişiklik yapılmasını gerektirir. Visual Studio 2017, otomatik olarak kod projelerinde gerekli değişiklikleri yapabilir ([daha fazla bilgi](../modeling/validate-code-with-layer-diagrams.md?view=vs-2017&preserve-view=true#live-dependency-validation)).</li></ul> |
 | MSI kurulumu (VDPROJ) | InstallShield projelerini inceleyin. |
 | Office 2007 VSTO | Visual Studio 2017 için tek yönlü yükseltme gerektirir. |
 | Office 2010 VSTO | Proje .NET Framework 4 ' ü hedefliyorsa, Visual Studio 2010 SP1 ve sonraki sürümlerde açabilirsiniz. Tüm diğer projeler tek yönlü yükseltme gerektirir. |
@@ -127,7 +127,7 @@ Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 ve Visual Studio 2012
 
 Aşağıdaki listede, Visual Studio 2019 ' de daha önceki sürümlerde oluşturulmuş projeler için destek açıklanmaktadır.
 
-Burada listelenen bir proje veya dosya türü görmüyorsanız, [Bu makalenin Visual Studio 2017 sürümüne](?view=vs-2017)başvurun. **Send feedback about**  >  Projenizin ayrıntılarını sağlamak için bu sayfanın en altındaki**Bu sayfayla** ilgili geri bildirim gönder düğmesini de kullanabilirsiniz. (Anonim ' i kullanırsanız "Bu sayfa yardımcı olur mu?" Denetim, geri bildiriminiz için yanıt veremedik.)
+Burada listelenen bir proje veya dosya türü görmüyorsanız, [Bu makalenin Visual Studio 2017 sürümüne](?view=vs-2017&preserve-view=true)başvurun. **Send feedback about**  >  Projenizin ayrıntılarını sağlamak için bu sayfanın en altındaki**Bu sayfayla** ilgili geri bildirim gönder düğmesini de kullanabilirsiniz. (Anonim ' i kullanırsanız "Bu sayfa yardımcı olur mu?" Denetim, geri bildiriminiz için yanıt veremedik.)
 
 | Proje Türü | Destek |
 | --- | --- |
@@ -200,7 +200,7 @@ Daha fazla tartışma için aşağıdaki makalelere bakın:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 2017 için proje geçiş ve yükseltme başvurusu](?view=vs-2017)
+- [Visual Studio 2017 için proje geçiş ve yükseltme başvurusu](?view=vs-2017&preserve-view=true)
 - [Visual Studio ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing/)
 
 ::: moniker-end

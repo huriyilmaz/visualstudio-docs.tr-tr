@@ -13,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 824d0787de78ddc679d1060179e65043e0bf5299
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 32a3dcc48e34cc3ecc429f7f2b4ca62221263fe0
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72731492"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211345"
 ---
 # <a name="keyboard-shortcuts-html-and-javascript"></a>Klavye kısayolları (HTML ve JavaScript)
 
@@ -59,6 +59,6 @@ HTML ve JavaScript kullanarak UWP uygulamalarında hata ayıklamak için Visual 
 |Seçili CSS değerini 1 azalt|Aşağı Ok|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [JavaScript Konsolu komutları](../debugger/javascript-console-commands.md?view=vs-2017)
-- [Hızlı başlangıç: HTML ve CSS hatalarını ayıklama](../debugger/quickstart-debug-html-and-css.md?view=vs-2017)
-- [Hızlı Başlangıç: JavaScript hata ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017)
+- [JavaScript Konsolu komutları](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)
+- [Hızlı başlangıç: HTML ve CSS hatalarını ayıklama](../debugger/quickstart-debug-html-and-css.md?view=vs-2017&preserve-view=true)
+- [Hızlı Başlangıç: JavaScript hata ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017&preserve-view=true)

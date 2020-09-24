@@ -17,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: a43ac0930c4805d18c60a18e1b48882b2fed76de
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 5e270956fc6c8f1d7432cb65e1eaf37fdc58907c
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600185"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211095"
 ---
 # <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Visual Studio 'da UWP uygulamalarında HTML ve CSS hatalarını ayıklama
 
@@ -237,7 +237,7 @@ Bir uygulamada hata ayıklarken DOM öğelerini üç şekilde seçebilirsiniz:
 
 - **Öğe seç** düğmesini (Ctrl + B) kullanarak.
 
-- `select` [JavaScript Konsol komutlarından](../debugger/javascript-console-commands.md?view=vs-2017)biri olan komutunu kullanarak.
+- `select` [JavaScript Konsol komutlarından](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)biri olan komutunu kullanarak.
 
   Öğeleri seçmek için DOM Gezgini penceresini kullandığınızda ve fare işaretçisini bir öğe üzerine getirdiğinizde, ilgili öğe çalışan uygulamada vurgulanır. Bunu seçmek için DOM Gezgini 'nde öğeye tıklamalısınız veya öğeleri vurgulamak ve seçmek için ok tuşlarını kullanabilirsiniz. DOM Gezgini 'nde **öğe seç** düğmesini kullanarak da öğeleri seçebilirsiniz. Aşağıdaki çizimde **öğe seç** düğmesi gösterilmektedir.
 
@@ -259,7 +259,7 @@ Bir uygulamada hata ayıklarken DOM öğelerini üç şekilde seçebilirsiniz:
 - [Visual Studio’da uygulamaların hatalarını ayıklama](debugging-windows-store-and-windows-universal-apps.md)
 - [Uygulamayı yenileme (JavaScript)](../debugger/refresh-an-app-javascript.md)
 - [WebView denetiminde hata ayıklama](../debugger/debug-a-webview-control.md)
-- [Klavye kısayolları](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017)
-- [JavaScript Konsolu komutları](../debugger/javascript-console-commands.md?view=vs-2017)
+- [Klavye kısayolları](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017&preserve-view=true)
+- [JavaScript Konsolu komutları](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)
 - [HTML, CSS ve JavaScript'te hata ayıklama örnek kodu](../debugger/debug-html-css-and-javascript-sample-code.md)
 - [Ürün desteği ve erişilebilirlik](/previous-versions/tzbxw1af(v=vs.120))

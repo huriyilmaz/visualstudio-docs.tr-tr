@@ -9,12 +9,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b2deb3f8ff19c2d7805031c0c3ba02bc82b8a3e7
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d8e0718eb01f422ad435492304e77d73c14b4dee
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810880"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211181"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>Visual Studio veya Visual Studio Yükleyicisi ilgili bir sorunu bildirme
 
@@ -51,11 +51,11 @@ Visual Studio 'dan veya yükleyicisinden bir sorun rapor edebilirsiniz. Yerleşi
 
     Hassas veya ilişkisiz parçaları kaldırmak için ekran görüntüsünü doğrudan tarayıcıda da kırpabilirsiniz.
 
-4. Visual Studio mühendislik ekibinin sorunu çözmesine yardımcı olmanın en iyi yöntemlerinden biri, bunların görünmesi için bir izleme ve yığın döküm dosyası sağlamaktır. Hataya neden olan adımları kaydederek kolayca bunu yapabilirsiniz. 
+4. Visual Studio mühendislik ekibinin sorunu çözmesine yardımcı olmanın en iyi yöntemlerinden biri, bunların görünmesi için bir izleme ve yığın döküm dosyası sağlamaktır. Hataya neden olan adımları kaydederek kolayca bunu yapabilirsiniz.
 
     ![](../ide/media/feedback-recording.png) *Yalnızca Microsoft mühendisleri, kayıt işlemlerini görebilir*
 
-5. Ekli dosyaları gözden geçirin ve sorunu tanılamanıza yardımcı olacağını düşünüyorsanız ek dosyaları karşıya yükleyin.   
+5. Ekli dosyaları gözden geçirin ve sorunu tanılamanıza yardımcı olacağını düşünüyorsanız ek dosyaları karşıya yükleyin.
 
     ![Ekli dosyalar ](../ide/media/feedback-attachments.png) *yalnızca Microsoft mühendisleri ekli dosyaları görebilir*
 

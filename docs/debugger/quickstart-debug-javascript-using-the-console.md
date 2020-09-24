@@ -16,16 +16,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e56350c2fd0583d3fef4e77e559a4df1fd894663
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aca36c56bfeed4fd5d8b240cce6bea5b55b75d85
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348112"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211082"
 ---
 # <a name="debug-javascript-using-the-console-in-visual-studio"></a>Visual Studio 'da Konsolu kullanarak JavaScript hata ayıklama
 
-JavaScript kullanılarak oluşturulan UWP uygulamalarıyla etkileşim kurmak ve hata ayıklamak için JavaScript Konsol penceresini kullanabilirsiniz. Bu özellikler, Apache Cordova için Visual Studio Araçları kullanılarak oluşturulan UWP uygulamaları ve uygulamaları için desteklenir. Konsol komut başvurusu için bkz. [JavaScript konsol komutları](../debugger/javascript-console-commands.md?view=vs-2017).
+JavaScript kullanılarak oluşturulan UWP uygulamalarıyla etkileşim kurmak ve hata ayıklamak için JavaScript Konsol penceresini kullanabilirsiniz. Bu özellikler, Apache Cordova için Visual Studio Araçları kullanılarak oluşturulan UWP uygulamaları ve uygulamaları için desteklenir. Konsol komut başvurusu için bkz. [JavaScript konsol komutları](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true).
 
 JavaScript Konsolu penceresi şunları yapmanıza olanak sağlar:
 
@@ -39,7 +39,7 @@ JavaScript Konsolu penceresi şunları yapmanıza olanak sağlar:
 
 - Belge Nesne Modeli (DOM) ve Windows Çalışma Zamanı özel durumlara ek olarak JavaScript hatalarını ve özel durumlarını görüntüleyin.
 
-- Ekranı temizleme gibi diğer görevleri gerçekleştirin. Komutların tam listesi için bkz. [JavaScript konsol komutları](../debugger/javascript-console-commands.md?view=vs-2017) .
+- Ekranı temizleme gibi diğer görevleri gerçekleştirin. Komutların tam listesi için bkz. [JavaScript konsol komutları](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true) .
 
 > [!TIP]
 > JavaScript Konsolu penceresi kapalıysa, **Debug** >  **Windows**  >  yeniden açmak için Windows**JavaScript Konsolu** Hata Ayıkla ' yı seçin. Pencere yalnızca bir betik hata ayıklama oturumu sırasında görüntülenir.
@@ -251,9 +251,9 @@ Ayrıca, komutunu kullanarak yürütme bağlamını değiştirebilirsiniz `cd` ,
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio’da uygulamaların hatalarını ayıklama](debugging-windows-store-and-windows-universal-apps.md)
-- [JavaScript Konsolu komutları](../debugger/javascript-console-commands.md?view=vs-2017)
+- [JavaScript Konsolu komutları](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)
 - [Uygulamayı yenileme (JavaScript)](../debugger/refresh-an-app-javascript.md)
-- [Klavye kısayolları](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017)
+- [Klavye kısayolları](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017&preserve-view=true)
 - [HTML, CSS ve JavaScript'te hata ayıklama örnek kodu](../debugger/debug-html-css-and-javascript-sample-code.md)
 - [Hızlı başlangıç: HTML ve CSS hatalarını ayıklama](../debugger/quickstart-debug-html-and-css.md)
 - [WebView denetiminde hata ayıklama](../debugger/debug-a-webview-control.md)
