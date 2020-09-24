@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c864a10af9ad15d47e2342bb148af464b8f2a0d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bad4e0b7db883a7604d674b854a9c3f794715d8d
+ms.sourcegitcommit: bccc6503542e1517e0e96a9f02f5a89d69c60c25
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591508"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91135111"
 ---
 # <a name="options-dialog-box-visual-studio"></a>Seçenekler iletişim kutusu (Visual Studio)
 
@@ -38,10 +38,6 @@ ms.locfileid: "75591508"
 ## <a name="how-options-are-applied"></a>Seçenekler nasıl uygulanır
 
 **Seçenekler** iletişim kutusunda Tamam ' a tıklamak tüm sayfalardaki tüm ayarları kaydeder. Herhangi bir sayfada Iptal ' i tıklamak diğer **Seçenekler** sayfalarında yapılan tüm değişiklik isteklerini iptal eder. Seçenek ayarları, [yazı tipleri ve renkler, ortam, Seçenekler Iletişim kutusu](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md)üzerinde yapılan değişiklikler gibi bazı değişiklikler yalnızca Visual Studio 'yu kapatıp yeniden açtıktan sonra devreye girer.
-
-### <a name="show-all-settings"></a>Tüm ayarları göster
-
-**Tüm ayarları göster** ' i seçmek veya seçimini kaldırmak, henüz **Tamam**' a tıklamasa bile, **Seçenekler** iletişim kutusunda yaptığınız tüm değişiklikleri uygular.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

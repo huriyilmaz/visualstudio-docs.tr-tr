@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 0e127006976c484d1e4fc2fe011af979af7eb7a9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0abe51b9f01d0c1f380c4762a7d0d4f457964aa7
+ms.sourcegitcommit: bccc6503542e1517e0e96a9f02f5a89d69c60c25
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114993"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91135137"
 ---
 # <a name="troubleshoot-network-related-errors-when-you-install-or-use-visual-studio"></a>Visual Studio 'Yu yüklerken veya kullanırken ağla ilgili hatalarda sorun giderme
 
@@ -91,6 +91,22 @@ Bu hata genellikle, kullanıcılar bir ara sunucu üzerinden İnternet 'e bağla
      > Daha fazla bilgi için [ &lt; defaultProxy &gt; öğesi (ağ ayarları)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings/) ve [ &lt; proxy &gt; öğesi (ağ ayarları)](/dotnet/framework/configure-apps/file-schema/network/proxy-element-network-settings) sayfalarına bakın.
 
 ::: moniker-end
+
+## <a name="error-disconnected-from-visual-studio-when-attempting-to-report-a-problem"></a>Hata: bir sorun raporlanmaya çalışılırken "Visual Studio bağlantısı kesildi"
+
+Bu hata genellikle, bir Kullanıcı bir ara sunucu üzerinden İnternet 'e bağlandığında oluşur ve proxy sunucusu, Visual Studio 'Nun bazı ağ kaynaklarına yaptığı çağrıları engeller.
+
+### <a name="to-fix-this-proxy-error"></a>Bu proxy hatasını onarmak için
+
+1. İçinde **feedback.exe.config** (feedback.exe yapılandırma dosyası) bulun: **% ProgramFiles (x86)% \ Microsoft Visual Studio\ınstaller** veya **%ProgramFiles%\Microsoft Visual studio\ınstaller**.
+
+2. Yapılandırma dosyasında aşağıdaki kodun mevcut olup olmadığını kontrol edin; kod yoksa, son satırdan önce ekleyin `</configuration>` .
+
+   ```xml
+   <system.net>
+       <defaultProxy useDefaultCredentials="true" />
+   </system.net>
+   ```
 
 ## <a name="error-the-underlying-connection-was-closed"></a>Hata: "temeldeki bağlantı kapatıldı"
 
