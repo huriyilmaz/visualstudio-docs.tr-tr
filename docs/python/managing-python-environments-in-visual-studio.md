@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9416862ad18bc297696e765d6664a4d08f2cc8dc
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: f331c794c50d6b6573ad9708da6d153c77f4d77c
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809917"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352355"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Visual Studio 'da Python ortamları oluşturma ve yönetme
 
@@ -124,7 +124,7 @@ Bu nedenle, geliştiriciler genellikle proje için bir *sanal ortam* oluşturur.
 
 Visual Studio, bir proje için sanal ortam oluşturmaya yönelik doğrudan destek sağlar. Örneğin, bir *requirements.txt*içeren bir projeyi açarsanız veya bu dosyayı içeren şablondan bir proje oluşturursanız, Visual Studio otomatik olarak bir sanal ortam oluşturmanızı ve bu bağımlılıkları yüklemenizi ister.
 
-Açık bir proje içinde dilediğiniz zaman yeni bir sanal ortam oluşturabilirsiniz. **Çözüm Gezgini**, proje düğümünü genişletin, **Python ortamları**' na sağ tıklayın ve "sanal ortam ekle" seçeneğini belirleyin. Daha fazla bilgi için bkz. [sanal ortam oluşturma](./selecting-a-python-environment-for-a-project.md?view=vs-2019#create-a-virtual-environment-1).
+Açık bir proje içinde dilediğiniz zaman yeni bir sanal ortam oluşturabilirsiniz. **Çözüm Gezgini**, proje düğümünü genişletin, **Python ortamları**' na sağ tıklayın ve "sanal ortam ekle" seçeneğini belirleyin. Daha fazla bilgi için bkz. [sanal ortam oluşturma](./selecting-a-python-environment-for-a-project.md?view=vs-2019&preserve-view=true#create-a-virtual-environment-1).
 
 Visual Studio Ayrıca, sanal bir ortamdan bir *requirements.txt* dosyası oluşturmak için bir komut sağlar, böylece ortamı diğer bilgisayarlarda yeniden oluşturmayı kolaylaştırır. Daha fazla bilgi için bkz. [sanal ortamları kullanma](selecting-a-python-environment-for-a-project.md#use-virtual-environments).
 
@@ -239,7 +239,7 @@ Standart olmayan bir konumda yüklü olan bir ortamı (Visual Studio 2017 sürü
 
     ![Ortam Ekle iletişim kutusunda özel ortam seçeneği](media/environments/environments-custom-2-2019.png)
 
-1. İletişim kutusundaki belirtilen alanlarda, diğer alanların çoğunu dolduran **ön ek yolu**altındaki yorumlayıcı yoluna ( **.**..) girin veya bu yolu inceleyin. Bu değerleri inceledikten ve gerektiğinde değiştirdikten sonra **Ekle**' yi seçin. 
+1. İletişim kutusundaki belirtilen alanlarda, diğer alanların çoğunu dolduran **ön ek yolu**altındaki yorumlayıcı yoluna ( **.**..) girin veya bu yolu inceleyin. Bu değerleri inceledikten ve gerektiğinde değiştirdikten sonra **Ekle**' yi seçin.
 
     ![Ortam Ekle iletişim kutusunda özel ortam seçeneğinin ayrıntılarını belirtme alanları](media/environments/environments-custom-3-2019.png)
 
@@ -271,7 +271,7 @@ Onarma seçeneği olmayan bir ortamı düzeltmek veya geçersiz bir ortamı kald
     - Ortam bilgisayarınızda hala mevcutsa, **ExecutablePath** değerini doğru konum olarak değiştirin. Ayrıca, **(varsayılan)** ve **WindowedExecutablePath** değerlerini gereken şekilde düzeltin.
     - Ortam bilgisayarınızda artık yoksa ve **Python ortamları** penceresinden kaldırmak istiyorsanız, yukarıdaki görüntüde **3,6** gibi **InstallPath**'in üst düğümünü silin.
     - **HKEY_CURRENT_USER \SOFTWARE\Python** 'da geçersiz ayarlar **HKEY_LOCAL_MACHINE \software\python** 'daki ayarları geçersiz kılar
-    
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Python yorumlayıcılarını yükleme](installing-python-interpreters.md)

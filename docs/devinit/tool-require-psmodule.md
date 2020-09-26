@@ -11,20 +11,19 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 03ebd885f1fae1e7e12d76bb78e03bca0553bab8
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 4e30a333812e2c313f9e35934643bcea03cf054c
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006024"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352237"
 ---
 # <a name="require-psmodule"></a>require-psmodule
 
-Araç, PowerShell `require-psmodule` betiklerinizde kullanılabilmesi için, bir [PowerShell modülünü](https://docs.microsoft.com/powershell/scripting/developer/module/understanding-a-windows-powershell-module?view=powershell-7&preserve-view=true) [Install-Module] aracılığıyla [PowerShell Galerisi](https://www.powershellgallery.com/) yüklemek için kullanılır https://docs.microsoft.com/powershell/module/powershellget/install-module?view=powershell-7&preserve-view=true .
+`require-psmodule`Araç, PowerShell betiklerine kullanılabilmesi için [PowerShell Galerisi](https://www.powershellgallery.com/) [install-Module](https://docs.microsoft.com/powershell/module/powershellget/install-module?view=powershell-7&preserve-view=true)aracılığıyla bir [PowerShell modülü](https://docs.microsoft.com/powershell/scripting/developer/module/understanding-a-windows-powershell-module?view=powershell-7&preserve-view=true) yüklemek için kullanılır.
 
->
->! Ipucu bir modül yüklendikten sonra, [Import-Module](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/import-module?view=powershell-7&preserve-view=true)kullanılarak bir betiğe içeri aktarılmalıdır.
->
+> [!TIP] 
+> Modül yüklendikten sonra, [Import-Module](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/import-module?view=powershell-7&preserve-view=true)kullanılarak bir betiğe içeri aktarılmalıdır.
 
 ## <a name="usage"></a>Kullanım
 

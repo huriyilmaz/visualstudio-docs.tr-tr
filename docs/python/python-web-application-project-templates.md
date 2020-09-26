@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 246c23f2eb0cb92a2120db5071b6460ff0efb293
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 572e02d614f0c6b5f782d683ff7e42e954b54441
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809891"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352342"
 ---
 # <a name="python-web-application-project-templates"></a>Python web uygulaması proje şablonları
 
@@ -39,7 +39,7 @@ Diğer tüm şablonlar şişe, Flask veya Docgo Web çerçevelerine dayalıdır 
 
 Tüm **boş \<framework> Web projesi** şablonları, daha fazla veya daha az ortak kod içeren bir proje oluşturur ve bir *requirements.txt* dosyasında belirtilen bağımlılıklardır.
 
-| Şablon | Açıklama |
+| Şablon | Description |
 | --- | --- |
 | **Boş şişe Web projesi** | , İçin bir giriş sayfası *app.py* `/` ve `/hello/<name>` `<name>` çok kısa bir satır içi sayfa şablonu kullanarak yankı sağlayan bir sayfa olan App.py içinde en az bir uygulama oluşturur. |
 | **Boş Docgo Web projesi** | Core Docgo site yapısıyla bir Docgo projesi oluşturur, ancak Docgo uygulaması yoktur. Daha fazla bilgi için bkz. [docgo şablonları](python-django-web-application-project-template.md) ve [docgo 1. adımı öğrenme](learn-django-in-visual-studio-step-01-project-and-solution.md). |
@@ -49,7 +49,7 @@ Tüm **boş \<framework> Web projesi** şablonları, daha fazla veya daha az ort
 
 Tüm ** \<Framework> Web projesi** şablonları, seçilen çerçeveye bakılmaksızın özdeş tasarıma sahip bir başlatıcı Web uygulaması oluşturur. Uygulamanın ana, hakkında ve Iletişim sayfaları, bir gezinti çubuğu ve önyükleme ile hızlı bir şekilde tasarım vardır. Her uygulama statik dosyaları (CSS, JavaScript ve yazı tipleri) sunacak şekilde yapılandırılır ve çerçeveye uygun bir sayfa şablonu mekanizması kullanır.
 
-| Şablon | Açıklama |
+| Şablon | Description |
 | --- | --- |
 | **Şişe Web projesi** | Statik dosyaları *statik* klasörde bulunan ve *app.py*içindeki kodla işlenen bir uygulama oluşturur. Ayrı sayfalar için yönlendirme *Routes.py*içinde bulunur ve *Görünümler* klasörü sayfa şablonlarını içerir.|
 | **Docgo Web projesi** | Üç sayfa, kimlik doğrulama desteği ve bir SQLite veritabanı (ancak veri modeli olmadan) ile bir Docgo projesi ve Docgo uygulaması oluşturur. Daha fazla bilgi için bkz. [docgo şablonları](python-django-web-application-project-template.md) ve [Docgo adım 4](learn-django-in-visual-studio-step-04-full-django-project-template.md). |
@@ -60,7 +60,7 @@ Tüm ** \<Framework> Web projesi** şablonları, seçilen çerçeveye bakılmaks
 
 ** \<framework> Web projesi şablonlarının yokladığı** , kullanıcıların farklı yoklama sorularını oylayabilir bir başlatıcı Web uygulaması oluşturur. Her uygulama, yoklamaları ve kullanıcı yanıtlarını yönetmek üzere bir veritabanı kullanmak için **Web** projesi şablonlarının yapısını oluşturur. Uygulamalar, uygun veri modellerini ve dosyadaki *samples.js* yoklamaları yükleyen özel bir uygulama sayfasını (/Seed) içerir.
 
-| Şablon | Açıklama |
+| Şablon | Description |
 | --- | --- |
 | **Şişe Web projesini yoklar** | Ortam değişkeni kullanılarak yapılandırılan bir bellek içi veritabanı, MongoDB veya Azure Tablo depolama için çalışabilen bir uygulama oluşturur `REPOSITORY_NAME` . Veri modelleri ve veri deposu kodu *modeller* klasöründe bulunur ve *Settings.py* dosyası, hangi veri deposunun kullanıldığını belirleyen kodu içerir. |
 | **Docgo Web projesini yoklar** | Üç sayfa ve bir SQLite veritabanı ile Docgo projesi ve Docgo uygulaması oluşturur. Kimliği doğrulanmış bir yöneticinin yoklamaları oluşturmasına ve yönetmesine izin vermek için Docgo yönetim arabirimine özelleştirmeler içerir. Daha fazla bilgi için bkz. [docgo şablonları](python-django-web-application-project-template.md) ve [docgo 6. adımı öğrenin](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md). |
@@ -75,7 +75,7 @@ Tüm ** \<Framework> Web projesi** şablonları, seçilen çerçeveye bakılmaks
 
 Kaynak denetimi kullanıyorsanız, genellikle bu ortam yalnızca *requirements.txt*kullanılarak yeniden oluşturulabilen sanal ortam klasörünü atlayabilirsiniz. Klasörü hariç tutmak için en iyi yol, yukarıda gösterilen istem içine **kendim yükleyeceğim** , sonra sanal ortam oluşturmadan önce otomatik yürütmeyi devre dışı bırakacağım. Ayrıntılar için bkz. [Docgo öğreticisini öğrenme-adım 1-2 ve 1-3](learn-django-in-visual-studio-step-01-project-and-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository) ve [Flask öğreticisini öğrenme-adımlar 1-2 ve 1-3](learn-flask-visual-studio-step-01-project-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository).
 
-Microsoft Azure App Service ' ye dağıtım yaparken, bir Python sürümünü [site uzantısı](./managing-python-on-azure-app-service.md?view=vs-2019) olarak seçin ve paketleri el ile yükleyebilirsiniz. Ayrıca, Azure App Service Visual Studio 'dan dağıtıldığında *requirements.txt* bir dosyadan **paketleri otomatik olarak yüklemediğinden** , [aka.MS/PythonOnAppService](managing-python-on-azure-app-service.md)adresindeki yapılandırma ayrıntılarını izleyin.
+Microsoft Azure App Service ' ye dağıtım yaparken, bir Python sürümünü [site uzantısı](./managing-python-on-azure-app-service.md?view=vs-2019&preserve-view=true) olarak seçin ve paketleri el ile yükleyebilirsiniz. Ayrıca, Azure App Service Visual Studio 'dan dağıtıldığında *requirements.txt* bir dosyadan **paketleri otomatik olarak yüklemediğinden** , [aka.MS/PythonOnAppService](managing-python-on-azure-app-service.md)adresindeki yapılandırma ayrıntılarını izleyin.
 
 Microsoft Azure Cloud Services *does* *requirements.txt* dosyasını destekler. Ayrıntılar için bkz. [Azure Cloud Service Projects](python-azure-cloud-service-project-template.md) .
 

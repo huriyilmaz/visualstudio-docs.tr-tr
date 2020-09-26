@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 1a0bd657d9612bde05a820a591c2ab2c1cfdaad3
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: a22e0f5a20050e62aa9978c40f2189c82ca3071c
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005533"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352329"
 ---
 # <a name="devinit-commands"></a>devinit komutları
 
@@ -34,10 +34,10 @@ Komut için isteğe bağlı seçenekler `devinit init` .
 
 | Bağımsız Değişken             | Gerekli | Açıklama                                                               |
 |----------------------|----------|---------------------------------------------------------------------------|
-| -f,--dosyası           | Hayır       | Dosyadaki _.devinit.js_ yolu.                                         |
-| --hata-eylem       | Hayır       | Hataların nasıl işleneceğini belirtir. Seçenekler: durdur, Yoksay, devam et (varsayılan).|
-| -v,--verbose         | Hayır       | Ayrıntılı çıktıyı yay.                                                      |
-| -n,--Kuru çalıştırma         | Hayır       | Kuru çalıştırma.                                                                  |
+| -f,--dosyası           | No       | Dosyadaki _.devinit.js_ yolu.                                         |
+| --hata-eylem       | No       | Hataların nasıl işleneceğini belirtir. Seçenekler: durdur, Yoksay, devam et (varsayılan).|
+| -v,--verbose         | No       | Ayrıntılı çıktıyı yay.                                                      |
+| -n,--Kuru çalıştırma         | No       | Kuru çalıştırma.                                                                  |
 
 ## <a name="run"></a>Çalıştır
 
@@ -54,11 +54,11 @@ Komut için Seçenekler `devinit run` .
 | Bağımsız Değişken                                  | Gerekli | Açıklama                                                                          |
 |-------------------------------------------|----------|--------------------------------------------------------------------------------------|
 | -t,--aracı                                 | Yes      | Gereklidir. Araç adı.                                                             |
-| -ı,--girişi                                | Hayır       | Araç giriş değeri. Örneğin, bir dosya adı, paket veya ad.                           |
-| --hata-eylem                            | Hayır       | Araç hatalarının nasıl işleneceğini belirtir: durdur, Yoksay, devam et. Varsayılan değer durdurulur. |
-| -v,--verbose                              | Hayır       | Ayrıntılı çıktıyı yay.                                                                 |
-| -n,--Kuru çalıştırma                              | Hayır       | Kuru çalıştırma.                                                                             |
-| --&lt;arg1 &gt; &lt; arg2 &gt; &lt; argN&gt;  | Hayır       | Araca ek komut satırı bağımsız değişkenleri.                                       |
+| -ı,--girişi                                | No       | Araç giriş değeri. Örneğin, bir dosya adı, paket veya ad.                           |
+| --hata-eylem                            | No       | Araç hatalarının nasıl işleneceğini belirtir: durdur, Yoksay, devam et. Varsayılan değer durdurulur. |
+| -v,--verbose                              | No       | Ayrıntılı çıktıyı yay.                                                                 |
+| -n,--Kuru çalıştırma                              | No       | Kuru çalıştırma.                                                                             |
+| --&lt;arg1 &gt; &lt; arg2 &gt; &lt; argN&gt;  | No       | Araca ek komut satırı bağımsız değişkenleri.                                       |
 
 #### <a name="--file-argument"></a>--Dosya bağımsız değişkeni
 
@@ -67,13 +67,13 @@ Dosyadaki _devinit.jsyolunu belirtir. – File belirtilmemişse, aşağıdaki ko
 * {geçerli-dizin} \\ Üzerinde.devinit.js
 * {geçerli-dizin} \\ . devinit \\.devinit.json
 
-Note: `.` Dizin veya dosya adı üzerinde lider olmayan yollar da eşleşmeyecektir.
+`.`Dizinde veya dosya adında önünde olmayan yollar da eşleşmeyecektir.
 
 #### <a name="--error-action-argument"></a>--hata-eylem bağımsız değişkeni
 
 Bir araç sıfır olmayan bir çıkış kodu döndürürse gerçekleştirilecek eylemi belirtir. Geçerli değerler şunlardır:
 
-| Bağımsız Değişken | Açıklama                                                                                                                                                                                                                                                                           |
+| Bağımsız Değişken | Description                                                                                                                                                                                                                                                                           |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | continue | Standart hataya bir hata gönderdikten sonra diğer araçları işlemeye devam edin. devinit.exe çıkış kodu sıfır değil (hata). Bu davranış durdurma hatası eylemine benzerdir, ancak işleme devam eder. `continue` init komutu için varsayılan hata-eylem.              |
 | yoksayma   | Standart çıktıya bir uyarı yaydıktan sonra diğer araçları işlemeye devam edin. DevInit işlem çıkış kodu her zaman sıfır (başarılı) olmalıdır. `ignore`Ayar tüm hataları yoksayar.                                                                                                      |
@@ -87,7 +87,7 @@ Bir araç sıfır olmayan bir çıkış kodu döndürürse gerçekleştirilecek 
 
 Ayrıntılı çıktıyı standart çıktıya yay. Yürütülecek araç ayrıntılı bir seçeneği destekliyorsa, ayrıntılı anahtarı araca yayın.
 
-#### <a name="note-on-additional-command-line-arguments"></a>Ek komut satırı bağımsız değişkenlerine göz önünde
+#### <a name="additional-command-line-arguments"></a>Ek komut satırı bağımsız değişkenleri
 
 Değerinde bir boşluk içeren bir kullanmak, başka bir kaçış `<arg>` tırnak çifti içermelidir.
 

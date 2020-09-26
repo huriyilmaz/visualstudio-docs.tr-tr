@@ -12,12 +12,12 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: cee62e02aa5b35108eec5024edf8eebb3848513f
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: 9008c859c1bbf0a211e14ff5e777bea6cb3b5819
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211306"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352263"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Visual Studio derleme numaraları ve yayın tarihleri
 
@@ -350,7 +350,7 @@ Aşağıdaki tabloda, Visual Studio 2017 için derleme numaraları ve sürüm ta
 | 15.0.0 | Yayınla | 7 Mart 2017 | 15.0.26228.4 |
 
 > [!NOTE]
-> Visual Studio 'nun sonraki sürümü için derleme numaraları ve sürüm tarihleri hakkında daha fazla bilgi için bkz. [Visual studio 2019 derleme numaraları ve sürüm tarihleri](/visualstudio/install/visual-studio-build-numbers-and-release-dates?view=vs-2019) sayfası.
+> Visual Studio 'nun sonraki sürümü için derleme numaraları ve sürüm tarihleri hakkında daha fazla bilgi için bkz. [Visual studio 2019 derleme numaraları ve sürüm tarihleri](/visualstudio/install/visual-studio-build-numbers-and-release-dates?view=vs-2019&preserve-view=true) sayfası.
 
 ::: moniker-end
 

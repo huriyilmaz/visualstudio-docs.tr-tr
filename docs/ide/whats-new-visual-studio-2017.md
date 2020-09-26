@@ -18,12 +18,12 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 18e373dd8218c9019c2a5ec8a923fdbb2c24cf99
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: db777df991b48d1b6e26d40426d32c07a495efb1
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809524"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352183"
 ---
 # <a name="whats-new-in-visual-studio-2017"></a>Visual Studio 2017’deki yenilikler
 
@@ -104,7 +104,7 @@ Visual Studio 'daki uzantılarınızın listesini görmek için **Araçlar**  > 
 
 Dolaşım uzantısı Yöneticisi yüklediğiniz tüm uzantıları izler, ancak dolaşım listenize hangi olanları eklemek istediğinizi seçebilirsiniz.
 
-![Visual Studio 2017-Uzantılar ve güncelleştirmeler iletişim kutusu](media/vs2017ide-RoamingExtensionManager.png)
+![Visual Studio 2017-dolaşım uzantıları Yöneticisi](media/vs2017ide-RoamingExtensionManager.png)
 
 Dolaşım uzantısı yöneticisini kullandığınızda, listenizde üç simge türü vardır:
 
@@ -222,7 +222,7 @@ Daha fazla bilgi için bkz. [Visual Studio 'da yeni özel durum yardımcısını
 
 **Hata ayıklama** araç çubuğundaki **geri** ve **adım ileri** düğmelerini kullanarak anlık görüntülerle gezinerek görüntüleyebilirsiniz. Bu düğmeler **Tanılama araçları** penceresindeki **Olaylar** sekmesinde görüntülenen olaylara gider. Bir olaya geri veya ileri dönmek, seçili olayda geçmiş hata ayıklamayı otomatik olarak etkinleştirir.
 
-![Visual Studio 'da yeni özel durum Yardımcısı iletişim kutusu](../debugger/media/intellitrace-step-back-icons-description.png  "Geri adımla ve Ilet düğmeleri")
+![Visual Studio 'da IntelliTrace adım geri örneği](../debugger/media/intellitrace-step-back-icons-description.png  "Geri adımla ve Ilet düğmeleri")
 
 Daha fazla bilgi için [IntelliTrace adım geri 'yi kullanarak anlık görüntüleri görüntüleme](../debugger/view-historical-application-state.md) sayfasına bakın.
 

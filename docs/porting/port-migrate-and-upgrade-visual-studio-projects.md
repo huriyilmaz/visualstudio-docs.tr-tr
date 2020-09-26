@@ -19,12 +19,12 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-ms.openlocfilehash: d4ed87e082e5c4fa2722a44fbbfe1dcef803f247
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: 3a9c7bf1c63575df0f6ef55585ba1d14e78e0aa8
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211332"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352309"
 ---
 # <a name="project-migration-and-upgrade-reference-for-visual-studio"></a>Visual Studio için proje geçiş ve yükseltme başvurusu
 
@@ -43,7 +43,7 @@ Bu mevcut makalede, yalnızca Visual Studio 2017 ' nin geçirebilen proje türle
 
 Aşağıdaki listede, Visual Studio 2017 ' de daha önceki sürümlerde oluşturulmuş projeler için destek açıklanmaktadır.
 
-Burada listelenen bir proje veya dosya türü görmüyorsanız, bu [makalenin Visual Studio 2015 sürümüne](../vs-2015/porting/porting-migrating-and-upgrading-visual-studio-projects.md?view=vs-2015) başvurun ve bu sayfanın en altındaki bu sayfayla **ilgili geri bildirim gönder**  >  **This page** düğmesini kullanarak projenizin ayrıntılarını sağlayın. (Anonim ' i kullanırsanız "Bu sayfa yardımcı olur mu?" Denetim, geri bildiriminiz için yanıt veremedik.)
+Burada listelenen bir proje veya dosya türü görmüyorsanız, bu [makalenin Visual Studio 2015 sürümüne](../vs-2015/porting/porting-migrating-and-upgrading-visual-studio-projects.md?view=vs-2015&preserve-view=true) başvurun ve bu sayfanın en altındaki bu sayfayla **ilgili geri bildirim gönder**  >  **This page** düğmesini kullanarak projenizin ayrıntılarını sağlayın. (Anonim ' i kullanırsanız "Bu sayfa yardımcı olur mu?" Denetim, geri bildiriminiz için yanıt veremedik.)
 
 | Proje Türü | Destek |
 | --- | --- |
@@ -106,7 +106,7 @@ Daha fazla tartışma için aşağıdaki makalelere bakın:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 2019 için proje geçiş ve yükseltme başvurusu](port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2019)
+- [Visual Studio 2019 için proje geçiş ve yükseltme başvurusu](port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2019&preserve-view=true)
 - [Visual Studio ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing/)
 
 ::: moniker-end
