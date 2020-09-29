@@ -1,17 +1,17 @@
 ---
 title: Visual Studio 'da DPı tanımayı devre dışı bırak
 description: HDPı izleyicilerinde Windows Form Tasarımcısı sınırlamaları ve Visual Studio 'Yu DPı kullanmayan bir işlem olarak çalıştırmayı açıklar.
-ms.date: 04/05/2019
+ms.date: 09/28/2020
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.topic: conceptual
-ms.openlocfilehash: 749a267d4fc33153cfc609f331ecd1d269706e12
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5444cdf8c82486f3669e82f7bb333607da2afc48
+ms.sourcegitcommit: 822e61c69514e9f564d37ba6ca6832ccf7fbc60d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88249962"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91421800"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Visual Studio 'da DPı tanımayı devre dışı bırak
 
@@ -43,6 +43,9 @@ Görüntü sorununu çözmek için üç seçenek vardır:
 - [Visual Studio 'Yu DPı kullanmayan bir işlem olarak yeniden Başlat](#restart-visual-studio-as-a-dpi-unaware-process)
 - [Kayıt defteri girişi ekleme](#add-a-registry-entry)
 - [Görüntü ölçeklendirme ayarınızı %100 olarak ayarlayın](#set-your-display-scaling-setting-to-100)
+
+> [!TIP]
+> Ayarları komut satırından yönetmeyi tercih ediyorsanız, [`devenv.exe`](../ide/reference/devenv-command-line-switches.md) `/noscale` %100 ölçeklendirme modunda çalıştırmak için bir komut satırı parametresi olarak alır.
 
 ### <a name="restart-visual-studio-as-a-dpi-unaware-process"></a>Visual Studio 'Yu DPı kullanmayan bir işlem olarak yeniden Başlat
 

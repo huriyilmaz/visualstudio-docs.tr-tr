@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d54673ee46c594bd1a4bea2990d3b9bbe90ce1f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 62411229acd2d2f8462984789037fc832dac09b8
+ms.sourcegitcommit: 822e61c69514e9f564d37ba6ca6832ccf7fbc60d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188195"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91421647"
 ---
 # <a name="edit-and-continue-visual-c"></a>Düzenle ve Devam Et (Visual C#)
  C# için Düzenle ve devam et ile, hata ayıklama sırasında kodunuzda kesme modunda değişiklikler yapabilirsiniz. Değişiklikler hata ayıklama oturumunu durdurup yeniden başlatmaya gerek kalmadan uygulanabilir. Çalışma modunda, kaynak Düzenleyici salt okunurdur.
@@ -32,7 +32,7 @@ ms.locfileid: "73188195"
  Düzenle ve devam et, Windows 10 ' da UWP 'de, .NET Framework 4,6 masaüstü veya sonraki sürümlerini hedefleyen x86 ve x64 uygulamalarında desteklenir (.NET Framework yalnızca bir masaüstü sürümüdür).
 
  > [!NOTE]
- > Desteklenmeyen uygulamalar ve platformlar şunlardır ASP.NET 5, Silverlight 5 ve Windows 8.1.
+ > Desteklenmeyen uygulamalar ve platformlar Silverlight 5 ve Windows 8.1.
 
  Düzenle ve devam et etkinleştirildiğinde, bir hata ayıklayıcı yürütme komutunu kullandığınızda, **devam et**, **adımla**, **sonraki ifadeyi ayarla**veya bir hata ayıklayıcı penceresinde işlev değerlendirmesi gerçekleştirme gibi desteklenen değişiklikler otomatik olarak uygulanır.
 

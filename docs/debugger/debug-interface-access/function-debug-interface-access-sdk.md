@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5438e68f7c46b870d6e259e038703c7f01f7cd9c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5c35ce4a58978cd14e274dd2b49c2bbc1bab4844
+ms.sourcegitcommit: 822e61c69514e9f564d37ba6ca6832ccf7fbc60d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468625"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91421787"
 ---
 # <a name="function-debug-interface-access-sdk"></a>İşlev (Arabirim Erişimi SDK'sında Hata Ayıklama)
 Her işlev bir sembol tarafından tanımlanır `SymTagFunction` .
@@ -25,7 +25,7 @@ Her işlev bir sembol tarafından tanımlanır `SymTagFunction` .
 ## <a name="properties"></a>Özellikler
  Aşağıdaki tabloda, bu sembol türü için geçerli olan özellikler gösterilmektedir.
 
-|Özellik|`Data type`|Açıklama|
+|Özellik|Veri türü|Açıklama|
 |--------------|-----------------|-----------------|
 |[IDiaSymbol::get_access](../../debugger/debug-interface-access/idiasymbol-get-access.md)|`DWORD`|[CV_access_e numaralandırmanın](../../debugger/debug-interface-access/cv-access-e.md)değerlerinden biri, işlev bir üye işlevdir.|
 |[IDiaSymbol::get_addressOffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)|`DWORD`|Konumun konum parçası; Ayrıntılar için bkz. [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md).|
