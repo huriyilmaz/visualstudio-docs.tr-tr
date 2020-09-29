@@ -6,12 +6,12 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.topic: conceptual
-ms.openlocfilehash: 5444cdf8c82486f3669e82f7bb333607da2afc48
-ms.sourcegitcommit: 822e61c69514e9f564d37ba6ca6832ccf7fbc60d
+ms.openlocfilehash: 08eb15914ad381fd81a838f5e09a1350bedff4fd
+ms.sourcegitcommit: 31f216b5f7491d5558de5b7ea4ebb0eb1faa3b9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91421800"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91493315"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Visual Studio 'da DPı tanımayı devre dışı bırak
 
