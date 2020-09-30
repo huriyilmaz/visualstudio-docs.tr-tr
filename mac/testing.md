@@ -7,12 +7,12 @@ helpviewer_keywords:
 - unit tests [Visual Studio for Mac]
 ms.author: jomatthi
 author: jmatthiesen
-ms.openlocfilehash: acf34677e8d9b477512763be3c43bb9df0c53c46
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 758bdcb0d854247847e4d0d56152840643402bf4
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88201000"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91580967"
 ---
 # <a name="testing-tools-in-visual-studio-for-mac"></a>Mac için Visual Studio 'de test araçları
 
@@ -24,7 +24,7 @@ Teste başlamak için çözümünüze sağ tıklayıp **> yeni proje Ekle...** m
 ![Web ve konsol > Testleri bölümü seçiliyken xUnit, MSTest ve NUnit projelerini gösteren yeni proje iletişim kutusu](media/create-new-test-project.PNG)
 
 > [!NOTE]
-> .NET Core uygulamalarınızın birim testi ve birim testi çerçeveleri seçme hakkında daha fazla bilgi için bkz. [.NET Core 'Da birim testi ve .NET Standard](https://docs.microsoft.com/dotnet/core/testing/?pivots=xunit) belgeleri.
+> .NET Core uygulamalarınızın birim testi ve birim testi çerçeveleri seçme hakkında daha fazla bilgi için bkz. [.NET Core 'Da birim testi ve .NET Standard](/dotnet/core/testing/?pivots=xunit) belgeleri.
 
 ## <a name="running-tests"></a>Testleri çalıştırma
 Birim **Testleri penceresi,** birim testlerini çalıştırmak için kullanılır ve **> bölmeleri görüntüle > birim testleri** menüsü kullanılarak açılır. Çözümünüzdeki birim testleri otomatik olarak bulunur ve bu pencerede gösterilir. burada, seçtiğiniz tüm testleri veya testlerin bir kümesini çalıştırabilirsiniz.

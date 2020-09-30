@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0dc781160b5cc9cb60da12d063f5b6d11844f3ac
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: e0340b89ed87872833f554fb00e24aca2f4759f3
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012093"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583599"
 ---
 # <a name="walkthrough-add-features-to-a-custom-editor"></a>İzlenecek yol: özel düzenleyiciye özellikler ekleme
 Özel bir düzenleyici oluşturduktan sonra, ona daha fazla özellik ekleyebilirsiniz.
@@ -34,11 +34,11 @@ ms.locfileid: "90012093"
 
 3. Arabirimi ayarlayarak bir düzenleyici fabrikası uygulayın <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> .
 
-     Daha fazla bilgi için bkz. [Düzenleyici fabrikaları](../vs-2015/extensibility/editor-factories.md?view=vs-2015).
+     Daha fazla bilgi için bkz. [Düzenleyici fabrikaları](../vs-2015/extensibility/editor-factories.md?view=vs-2015&preserve-view=true).
 
 4. Düzenleyici 'nin belge görünümü nesne penceresini yönetmek için yerinde etkinleştirme veya Basitleştirilmiş ekleme kullanmasını isteyip istemediğinize karar verin.
 
-     Basitleştirilmiş bir katıştırma Düzenleyicisi penceresi, standart bir belge görünümü barındırır, ancak yerinde etkinleştirme Düzenleyicisi penceresi, belge görünümü olarak bir ActiveX denetimi veya başka bir etkin nesne barındırır. Daha fazla bilgi için bkz. [Basitleştirilmiş ekleme](../extensibility/simplified-embedding.md) ve [yerinde etkinleştirme](../vs-2015/misc/in-place-activation.md?view=vs-2015).
+     Basitleştirilmiş bir katıştırma Düzenleyicisi penceresi, standart bir belge görünümü barındırır, ancak yerinde etkinleştirme Düzenleyicisi penceresi, belge görünümü olarak bir ActiveX denetimi veya başka bir etkin nesne barındırır. Daha fazla bilgi için bkz. [Basitleştirilmiş ekleme](../extensibility/simplified-embedding.md) ve [yerinde etkinleştirme](../vs-2015/misc/in-place-activation.md?view=vs-2015&preserve-view=true).
 
 5. <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>Komutları işlemek için arabirimini uygulayın.
 
@@ -115,7 +115,7 @@ ms.locfileid: "90012093"
 
 12. Bağlama duyarlı yardım desteği uygulayın.
 
-     Bu adım, düzenleyicinizdeki öğeler için F1 yardımı ve dinamik Yardım penceresi desteği sağlamanıza olanak tanır. Daha fazla bilgi için bkz. [nasıl yapılır: düzenleyiciler için bağlam sağlama](../vs-2015/extensibility/how-to-provide-context-for-editors.md?view=vs-2015).
+     Bu adım, düzenleyicinizdeki öğeler için F1 yardımı ve dinamik Yardım penceresi desteği sağlamanıza olanak tanır. Daha fazla bilgi için bkz. [nasıl yapılır: düzenleyiciler için bağlam sağlama](../vs-2015/extensibility/how-to-provide-context-for-editors.md?view=vs-2015&preserve-view=true).
 
 13. Arabirimi uygulayarak düzenleyicinizden bir Otomasyon nesne modeli sunun `IDispatch` .
 

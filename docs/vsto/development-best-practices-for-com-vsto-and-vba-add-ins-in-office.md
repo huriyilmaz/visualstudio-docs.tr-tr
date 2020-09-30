@@ -1,5 +1,6 @@
 ---
 title: "Geliştirme için en iyi Yöntemler: Office 'te COM, VSTO, & VBA eklentileri"
+titleSuffix: ''
 ms.date: 07/25/2017
 ms.topic: conceptual
 dev_langs:
@@ -11,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: be48e7ce721c84656362a019e0cc5eec1ae2ee17
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 4e536c48004d9c8ff729ac5fb064e04e02c6884b
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808213"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91581202"
 ---
 # <a name="development-best-practices-for-com-vsto-and-vba-add-ins-in-office"></a>Office 'te COM, VSTO ve VBA eklentileri için geliştirme için en iyi yöntemler
   Office için COM, VSTO veya VBA eklentileri geliştiriyorsanız, bu makalede açıklanan en iyi geliştirme uygulamalarını izleyin.   Bu, şunları sağlamanıza yardımcı olur:

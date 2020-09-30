@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: içerik denetimlerini kullanarak belge parçalarını koruma'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -18,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b03521023ea0b4d92bd3125f256d2230de9bba03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 813bb829e3be243a9812a8856bf4fcfa6de2fd22
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541355"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91581084"
 ---
 # <a name="how-to-protect-parts-of-documents-by-using-content-controls"></a>Nasıl yapılır: içerik denetimlerini kullanarak belge parçalarını koruma
   Belgenin bir bölümünü koruduğunuzda, kullanıcıların belgenin o bölümündeki içeriği değiştirmesini veya silmesini engelleyebilirsiniz. İçerik denetimlerini kullanarak Microsoft Office Word belgesinin parçalarını koruyabileceğiniz çeşitli yollar vardır:
@@ -49,7 +50,7 @@ ms.locfileid: "85541355"
 
     - Kullanıcıların denetimi silmesini engellemek için **LockContentControl** öğesini **true**olarak ayarlayın.
 
-3. **Tamam**’a tıklayın.
+3. **Tamam**'a tıklayın.
 
 ### <a name="to-protect-a-content-control-at-run-time"></a>Çalışma zamanında bir içerik denetimini korumak için
 
