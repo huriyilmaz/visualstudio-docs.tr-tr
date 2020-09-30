@@ -5,12 +5,12 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 12/16/2019
 ms.assetid: 4bcb8acf-db50-4bd8-a48e-86248f00c90b
-ms.openlocfilehash: 530ad09bbf72d9696621f328c2df40b37f362c13
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 307196dc7e33d268c45a9bb126c002ad426c5558
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75451491"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583924"
 ---
 # <a name="debugging-into-nuget-packages-with-source-link"></a>Kaynak bağlantısı ile NuGet paketlerinde hata ayıklama
 
@@ -38,4 +38,4 @@ Varsayılan olarak, **ask** seçilidir. Bir NuGet paketi için dış kod bulundu
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kaynak bağlantısı GitHub deposu](https://github.com/dotnet/sourcelink/blob/master/README.md)
-- Kaynak bağlantısı ve paketlere kaynak bağlantısı desteği ekleme hakkında daha fazla bilgi için bkz. [.net belgeleri](https://docs.microsoft.com/dotnet/standard/library-guidance/sourcelink)
+- Kaynak bağlantısı ve paketlere kaynak bağlantısı desteği ekleme hakkında daha fazla bilgi için bkz. [.net belgeleri](/dotnet/standard/library-guidance/sourcelink)

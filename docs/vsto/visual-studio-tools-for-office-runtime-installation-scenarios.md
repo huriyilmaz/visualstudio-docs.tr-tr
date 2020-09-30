@@ -1,5 +1,6 @@
 ---
 title: Office çalışma zamanı yükleme senaryoları için Visual Studio Araçları
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 54ca03e0af1b492b09b4c06c2fe0fc0b7e107443
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 95d183d2b767738156fc63f95d2a83ed6a1e5714
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810934"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584379"
 ---
 # <a name="visual-studio-tools-for-office-runtime-installation-scenarios"></a>Office çalışma zamanı yükleme senaryoları için Visual Studio Araçları
   Office çalışma zamanı için Visual Studio 2010 araçları 'nı üç şekilde yükleyebilirsiniz:
@@ -37,10 +38,10 @@ ms.locfileid: "90810934"
 
 |Çalışma zamanı yükleme senaryosu|Office çözüm yükleyicisi|.NET Framework 3,5 için Office uzantıları|İçin Office uzantıları [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]|İçin Office uzantıları [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]|
 |-----------------------------------|----------------------------|--------------------------------------------------| - |---------------------------------------------------------------------------|
-|[!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)]Ve sonraki sürümlerde|Yes|Evet, .NET Framework 3,5 zaten yüklüyse.|Yes|Yes|
-|Kullanılarak [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)]|Yes|Evet, .NET Framework 3,5 zaten yüklüyse.|Hayır|Hayır|
-|Office 2010 Service Pack 1 (SP1) veya üzeri ile|Yes|Evet, .NET Framework 3,5 zaten yüklüyse.|Evet, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] zaten yüklüyse.|Hayır|
-|Yeniden dağıtılabilir çalışma zamanı|Yes|Evet, .NET Framework 3,5 zaten yüklüyse|Evet, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] zaten yüklüyse.|Evet, [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] zaten yüklüyse.|
+|[!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)]Ve sonraki sürümlerde|Evet|Evet, .NET Framework 3,5 zaten yüklüyse.|Evet|Evet|
+|Kullanılarak [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)]|Evet|Evet, .NET Framework 3,5 zaten yüklüyse.|Hayır|Hayır|
+|Office 2010 Service Pack 1 (SP1) veya üzeri ile|Evet|Evet, .NET Framework 3,5 zaten yüklüyse.|Evet, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] zaten yüklüyse.|Hayır|
+|Yeniden dağıtılabilir çalışma zamanı|Evet|Evet, .NET Framework 3,5 zaten yüklüyse|Evet, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] zaten yüklüyse.|Evet, [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] zaten yüklüyse.|
 
 ### <a name="install-the-runtime-with-visual-studio-or-the-microsoft-office-developer-tools-for-visual-studio"></a>Visual Studio veya Visual Studio için Microsoft Office Geliştirici Araçları çalışma zamanını yükler
  Visual Studio 'da Office geliştirici araçları 'nı yüklediğinizde, ve için Office uzantıları [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] her zaman geliştirme bilgisayarında yüklüdür. 3,5 .NET Framework için Office uzantıları, yalnızca geliştirme bilgisayarında .NET Framework 3,5 zaten mevcutsa yüklenir. Yükledikten sonra 3,5 .NET Framework yüklerseniz [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] , çalışma zamanı .NET Framework 3,5 ' i hedefleyen bir Office projesi oluşturduğunuzda, .NET Framework 3,5 Için Office uzantılarını otomatik olarak yükler.

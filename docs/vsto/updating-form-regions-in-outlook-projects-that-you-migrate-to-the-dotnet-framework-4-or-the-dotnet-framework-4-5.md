@@ -1,5 +1,6 @@
 ---
-title: .NET Framework 4, 4,5 ' e geçirilen projelerde Outlook form bölgelerini güncelleştirme
+title: .NET Framework 4,5 ' e geçirildiğinde Outlook form bölgelerini Güncelleştir
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +13,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e7e300cd9f6f7d631a029310b01fbfdad7cb4686
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d8978703630e99ecb930e18e7d128eddff8792f
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66836054"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584405"
 ---
-# <a name="update-form-regions-in-outlook-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 ' e veya .NET Framework 4,5 ' ye geçirebileceğiniz Outlook Projelerindeki Form bölgelerini güncelleştirme
+# <a name="update-outlook-form-regions-when-migrated-to-net-framework-45"></a>.NET Framework 4,5 ' e geçirildiğinde Outlook form bölgelerini Güncelleştir
+
   Bir form bölgesi olan bir Outlook VSTO eklentisi projesinin hedef çatısı [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya daha sonraki bir sürümüne değiştiyse, oluşturulan form bölgesi kodunda ve çalışma zamanında belirli form bölgesi sınıflarını Başlatan tüm kodlar üzerinde bazı değişiklikler yapmanız gerekir.
 
 ## <a name="update-the-generated-form-region-code"></a>Oluşturulan form bölgesi kodunu Güncelleştir

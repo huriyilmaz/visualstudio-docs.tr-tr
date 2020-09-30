@@ -1,5 +1,6 @@
 ---
-title: .NET Framework 4/4,5 ' e geçirilen Excel veya Word projesini güncelleştir
+title: .NET Framework 4,5 ' e geçirilen Excel veya Word projesini güncelleştir
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +13,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4bc211f4d30359c885b22a45910363bbadca236f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06f4742317e3702273c5fe7c91ccc76a153c1b3e
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71253714"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584418"
 ---
-# <a name="update-excel-and-word-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 ' e veya .NET Framework 4,5 ' ye geçirebileceğiniz Excel ve Word projelerini güncelleştirme
+# <a name="update-excel-and-word-projects-that-you-migrate-to-the-net-framework-45"></a>.NET Framework 4,5 ' ye geçirebileceğiniz Excel ve Word projelerini güncelleştirme
   Aşağıdaki özelliklerden herhangi birini kullanan bir Excel veya Word projeniz varsa, hedef Framework veya daha yeni olarak değiştirilirse kodunuzu değiştirmeniz gerekir [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] :
 
 - [GetVstoObject ve HasVstoObject yöntemleri](#GetVstoObject)

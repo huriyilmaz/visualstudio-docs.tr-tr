@@ -1,5 +1,6 @@
 ---
 title: 'İzlenecek yol: bir uygulamayı özel görev bölmesinden otomatikleştirme'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f5135e96125192d7ed125287aa47c839031824fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 52474aeebfbc03fba2a2e119e1b3366c30cf6959
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68871927"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585086"
 ---
 # <a name="walkthrough-automate-an-application-from-a-custom-task-pane"></a>İzlenecek yol: bir uygulamayı özel görev bölmesinden otomatikleştirme
   Bu izlenecek yol, PowerPoint 'i otomatikleştiren özel bir görev bölmesinin nasıl oluşturulacağını gösterir. Özel görev bölmesi, Kullanıcı özel görev bölmesindeki bir denetime tıkladığında tarihleri bir slayda ekler <xref:System.Windows.Forms.MonthCalendar> .
@@ -42,7 +43,7 @@ ms.locfileid: "68871927"
 > [!NOTE]
 > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -87,7 +88,7 @@ ms.locfileid: "68871927"
      [!code-csharp[Trin_TaskPaneMonthCalendar#1](../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/MyUserControl.cs#1)]
      [!code-vb[Trin_TaskPaneMonthCalendar#1](../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/MyUserControl.vb#1)]
 
-3. Sınıfına aşağıdaki kodu ekleyin `MyUserControl` . Bu kod, bir [Şekil](/previous-versions/office/developer/office-2010/ff760244(v=office.14)) nesnesini öğesinin üyesi olarak bildirir `MyUserControl` . Aşağıdaki adımda, etkin sunudaki bir slayda metin kutusu eklemek için bu [şekli](/previous-versions/office/developer/office-2010/ff760244(v=office.14)) kullanacaksınız.
+3. Aşağıdaki kodu `MyUserControl` sınıfına ekleyin. Bu kod, bir [Şekil](/previous-versions/office/developer/office-2010/ff760244(v=office.14)) nesnesini öğesinin üyesi olarak bildirir `MyUserControl` . Aşağıdaki adımda, etkin sunudaki bir slayda metin kutusu eklemek için bu [şekli](/previous-versions/office/developer/office-2010/ff760244(v=office.14)) kullanacaksınız.
 
      [!code-csharp[Trin_TaskPaneMonthCalendar#2](../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/MyUserControl.cs#2)]
      [!code-vb[Trin_TaskPaneMonthCalendar#2](../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/MyUserControl.vb#2)]
@@ -108,7 +109,7 @@ ms.locfileid: "68871927"
 
 2. **ThisAddIn.cs** veya **ThisAddIn. vb** öğesine sağ tıklayın ve **kodu görüntüle**' ye tıklayın.
 
-3. Sınıfına aşağıdaki kodu ekleyin `ThisAddIn` . Bu kod `MyUserControl` <xref:Microsoft.Office.Tools.CustomTaskPane> , sınıfının üyeleri olarak ve örneklerini bildirir `ThisAddIn` .
+3. Aşağıdaki kodu `ThisAddIn` sınıfına ekleyin. Bu kod `MyUserControl` <xref:Microsoft.Office.Tools.CustomTaskPane> , sınıfının üyeleri olarak ve örneklerini bildirir `ThisAddIn` .
 
      [!code-vb[Trin_TaskPaneMonthCalendar#4](../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/ThisAddIn.vb#4)]
      [!code-csharp[Trin_TaskPaneMonthCalendar#4](../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/ThisAddIn.cs#4)]

@@ -6,18 +6,18 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 07/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: e46a66ab9ec05f8e7ad13091fdced01bffbd93b5
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: b883979921b3fa1493188a8d0fe75a1c493d5d97
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038679"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584002"
 ---
 # <a name="create-a-multi-container-app-with-docker-compose"></a>Docker Compose ile Çok Kapsayıcılı Uygulama Oluşturma
 
 Bu öğreticide, birden fazla kapsayıcıyı yönetmeyi ve Mac için Visual Studio Docker Compose kullanırken aralarında iletişim kurmayı öğreneceksiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 * [Mac için Visual Studio 2019](https://visualstudio.microsoft.com/vs/mac)
@@ -84,7 +84,7 @@ Artık çözümünüzde iki ASP.NET projesi var ve her ikisi de Docker desteğiy
    ```
    
     > [!NOTE]
-    > Üretim kodunda, `HttpClient` her istekten sonra atılamaz. En iyi uygulamalar için bkz. [Esnek http isteklerini uygulamak Için HttpClientFactory kullanma](https://docs.microsoft.com/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests).
+    > Üretim kodunda, `HttpClient` her istekten sonra atılamaz. En iyi uygulamalar için bkz. [Esnek http isteklerini uygulamak Için HttpClientFactory kullanma](/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests).
 
 1. *Index. cshtml* dosyasında, `ViewData["Message"]` dosyanın aşağıdaki koda benzeymek üzere görüntülenecek bir satır ekleyin:
 
@@ -102,7 +102,7 @@ Artık çözümünüzde iki ASP.NET projesi var ve her ikisi de Docker desteğiy
       </div>
       ```
   
-1. Hem ön uç hem de Web API projelerinde, bu örnek kod Web API 'sini çağırmak için HTTPS değil HTTP 'yi kullandığından, Startup.cs içindeki yönteminde [Microsoft. AspNetCore. Builder. HttpsPolicyBuilderExtensions. UseHttpsRedirection](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.httpspolicybuilderextensions.usehttpsredirection) çağrısını not edin. `Configure` *Startup.cs*
+1. Hem ön uç hem de Web API projelerinde, bu örnek kod Web API 'sini çağırmak için HTTPS değil HTTP 'yi kullandığından, Startup.cs içindeki yönteminde [Microsoft. AspNetCore. Builder. HttpsPolicyBuilderExtensions. UseHttpsRedirection](/dotnet/api/microsoft.aspnetcore.builder.httpspolicybuilderextensions.usehttpsredirection) çağrısını not edin. `Configure` *Startup.cs*
 
       ```csharp
                   //app.UseHttpsRedirection();

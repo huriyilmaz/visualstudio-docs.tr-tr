@@ -1,7 +1,7 @@
 ---
 title: VSTO sistem projesi oluşturmak/açmak için VBA erişimi
+titleSuffix: ''
 decsprition: You must explicitly enable access to the Office VBA project system before you can create or open a Visual Studio Tools for Office system project
-titleSuffix: Visual Studio Tools for Microsoft Office
 ms.custom: seodec18
 ms.date: 08/14/2019
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3199b23f7ad1bb45fd509d2a9b5cd21da1a49971
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 71e30a89bdf8547eab9ed9c51b07c49e014b7302
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "69551549"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584865"
 ---
 # <a name="enable-access-to-vba-to-create-or-open-a-visual-studio-tools-for-the-microsoft-office-system-project"></a>Microsoft Office sistemi projesi için Visual Studio Araçları oluşturmak veya açmak üzere VBA 'a erişimi etkinleştir
 
@@ -59,7 +59,7 @@ Microsoft Office sistemi projesi için bir Visual Studio Araçları oluşturmada
 
 5. Visual Basic projelerine erişimi etkinleştirmek veya devre dışı bırakmak için **VBA proje nesne modeline güven erişimini** işaretleyin veya işaretini kaldırın.
 
-6. **Tamam**’a tıklayın.
+6. **Tamam**'a tıklayın.
 
 ### <a name="to-enable-or-disable-access-to-visual-basic-projects-with-the-2007-microsoft-office-system"></a>2007 Microsoft Office sistemiyle Visual Basic projelerine erişimi etkinleştirmek veya devre dışı bırakmak için
 
@@ -69,7 +69,7 @@ Microsoft Office sistemi projesi için bir Visual Studio Araçları oluşturmada
 
 3. **Visual Basic projesine erişimi**devre dışı bırakmak veya kaldırmak için seçin.
 
-4. **Tamam**’a tıklayın.
+4. **Tamam**'a tıklayın.
 
 ## <a name="to-set-your-office-macro-security-level"></a>Office makro güvenlik düzeyinizi ayarlamak için
 
@@ -83,7 +83,7 @@ Microsoft Office sistemi projesi için bir Visual Studio Araçları oluşturmada
 
 5. **Makro ayarları** bölümünde, istenen ayarı seçin.
 
-6. **Tamam**’a tıklayın.
+6. **Tamam**'a tıklayın.
 
 ### <a name="to-set-your-office-macro-security-level-with-the-2007-microsoft-office-system"></a>Office makro güvenlik düzeyinizi 2007 Microsoft Office sistemiyle ayarlamak için
 

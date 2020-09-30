@@ -1,5 +1,6 @@
 ---
 title: Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -30,12 +31,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 97b94291a3fd057e82bd79aa4f6c3220020bc24a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 098145ca901b1f16974058513d3781fc4621f217
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255807"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584483"
 ---
 # <a name="programmatic-limitations-of-host-items-and-host-controls"></a>Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları
   Her konak öğesi ve konak denetimi, karşılık gelen bir yerel Microsoft Office kelime veya Microsoft Office Excel nesnesi gibi davranacak şekilde tasarlanmıştır. Ancak, çalışma zamanında konak öğelerinin ve konak denetimlerinin ve yerel Office nesnelerinin davranışları arasında bazı temel farklılıklar vardır.

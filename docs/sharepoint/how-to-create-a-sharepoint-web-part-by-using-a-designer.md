@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: tasarımcı kullanarak SharePoint Web Bölümü oluşturma | Microsoft Docs'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0830cec748d68f010397c42334a5ed83365ee6b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d19822237f61d5404f42e30078541a735eb206bc
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016478"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584119"
 ---
 # <a name="how-to-create-a-sharepoint-web-part-by-using-a-designer"></a>Nasıl yapılır: tasarımcı kullanarak SharePoint Web Bölümü oluşturma
   Herhangi bir SharePoint projesine bir **görsel web bölümü** öğesi ekleyerek bir Web bölümü oluşturabilirsiniz. Bu, Visual Studio 'da web bölümüne denetimler ve kod ekleyebileceğiniz Visual Web Developer Designer 'ı açar. Görsel Web bölümleri, Web bölümleri ile aynı şekilde çalışır. Tek fark, Visual Web Developer Designer 'da görsel Web bölümleri tasarlayamanızdır.

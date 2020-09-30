@@ -1,5 +1,6 @@
 ---
 title: 'İzlenecek yol: sunucudaki çalışma kitabında bulunan önbelleğe alınmış verileri değiştirme'
+titleSuffix: ''
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a88fef7afe198dd15716570b1875ea257d19be8b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 16d3d69482476149b9a340cabe81e957f39ef6f8
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985514"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584340"
 ---
 # <a name="walkthrough-change-cached-data-in-a-workbook-on-a-server"></a>İzlenecek yol: sunucudaki çalışma kitabında bulunan önbelleğe alınmış verileri değiştirme
   Bu izlenecek yol, Microsoft Office bir Excel çalışma kitabında önbelleğe alınmış bir veri kümesinin sınıfını kullanarak Excel 'i başlatmadan nasıl değiştirileceğini gösterir <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> .
@@ -79,7 +80,7 @@ ms.locfileid: "72985514"
 
 7. **Yeni proje** iletişim kutusunda, **çözüm için dizin oluştur** onay kutusunun seçili olmadığından emin olun.
 
-8. **Tamam**’a tıklayın.
+8. **Tamam**'a tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**Çözüm Gezgini** Için bir **AdventureWorksDataSet** projesi ekler ve **Class1.cs** veya **Class1. vb** kod dosyasını açar.
 
@@ -137,7 +138,7 @@ ms.locfileid: "72985514"
 
 5. **Ad** kutusuna **AdventureWorksReport**yazın. Konumu değiştirmeyin.
 
-6. **Tamam**’a tıklayın.
+6. **Tamam**'a tıklayın.
 
      **Office proje sihirbazı Visual Studio Araçları** açılır.
 
@@ -236,7 +237,7 @@ ms.locfileid: "72985514"
 
 4. **Ad** kutusuna **DataWriter**yazın. Konumu değiştirmeyin.
 
-5. **Tamam**’a tıklayın.
+5. **Tamam**'a tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**DataWriter** projesini **Çözüm Gezgini** ekler ve **program.cs** veya **Module1. vb** kod dosyasını açar.
 
@@ -249,7 +250,7 @@ ms.locfileid: "72985514"
 
 2. **.Net** sekmesinde, **Microsoft. VisualStudio. Tools. Applications**' ı seçin.
 
-3. **Tamam**’a tıklayın.
+3. **Tamam**'a tıklayın.
 
 4. **Çözüm Gezgini**, **DataWriter** projesine sağ tıklayın ve **Başvuru Ekle**' ye tıklayın.
 

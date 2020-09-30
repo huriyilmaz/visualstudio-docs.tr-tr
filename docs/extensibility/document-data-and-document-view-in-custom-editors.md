@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 608396c79816606b855d49776390b0b1bf9044d7
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 5d8b5ff72ff72d53556d14ce2c4b6f309aa0836a
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012470"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584600"
 ---
 # <a name="document-data-and-document-view-in-custom-editors"></a>Özel düzenleyicilerde belge verileri ve belge görünümü
 Özel bir düzenleyici iki bölümden oluşur: bir belge veri nesnesi ve bir belge görünümü nesnesi. Adlar gösterildiğinde belge verileri nesnesi görüntülenecek metin verilerini temsil eder. Benzer şekilde, belge görünümü nesnesi (veya "Görünüm"), belge veri nesnesinin görüntüleneceği bir veya daha fazla pencere temsil eder.
@@ -34,7 +34,7 @@ ms.locfileid: "90012470"
 
  IDE, çalışan belge tablosundaki her girdinin bir öğe tanımlayıcısını (ItemId) eşleştirerek olayları (örneğin, bir belge içeren bir çözüm kapatıldığında) hakkında görünümler bildirir. Bu konuda daha fazla bilgi için bkz. [çalışma belge tablosu](../extensibility/internals/running-document-table.md).
 
- Özel bir düzenleyici için bir görünüm oluşturmak için iki seçenek vardır. Bunlardan biri, görünümün bir ActiveX denetimi veya belge veri nesnesi kullanılarak bir pencerede barındırıldığı yerinde etkinleştirme modelidir. İkincisi, görünümün tarafından barındırıldığı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> Pencere komutlarını işlemek için uygulandığı Basitleştirilmiş ekleme modelidir. Yerinde etkinleştirme modeli hakkında daha fazla bilgi için bkz. [yerinde etkinleştirme](../vs-2015/misc/in-place-activation.md?view=vs-2015). Basitleştirilmiş ekleme modeli hakkında daha fazla bilgi için bkz. [Basitleştirilmiş ekleme](../extensibility/simplified-embedding.md).
+ Özel bir düzenleyici için bir görünüm oluşturmak için iki seçenek vardır. Bunlardan biri, görünümün bir ActiveX denetimi veya belge veri nesnesi kullanılarak bir pencerede barındırıldığı yerinde etkinleştirme modelidir. İkincisi, görünümün tarafından barındırıldığı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> Pencere komutlarını işlemek için uygulandığı Basitleştirilmiş ekleme modelidir. Yerinde etkinleştirme modeli hakkında daha fazla bilgi için bkz. [yerinde etkinleştirme](../vs-2015/misc/in-place-activation.md?view=vs-2015&preserve-view=true). Basitleştirilmiş ekleme modeli hakkında daha fazla bilgi için bkz. [Basitleştirilmiş ekleme](../extensibility/simplified-embedding.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

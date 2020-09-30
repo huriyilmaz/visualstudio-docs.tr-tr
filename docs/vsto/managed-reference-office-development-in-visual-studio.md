@@ -1,5 +1,6 @@
 ---
 title: Yönetilen başvuru (Visual Studio 'da Office geliştirme)
+titleSuffix: ''
 ms.date: 08/14/2019
 ms.topic: reference
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 29e8a2206432555e58b47691233bd46c49791046
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 20ae614ceef76a0ab5789c04212a3facfa571662
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85519866"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583755"
 ---
 # <a name="managed-reference-office-development-in-visual-studio"></a>Yönetilen başvuru (Visual Studio 'da Office geliştirme)
   Bu bölüm, veya ' i hedefleyen Office projelerinde kullanılan ad alanları ve türleri için API başvuru belgelerini içerir [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] [!INCLUDE[net_v45](includes/net-v45-md.md)] . .NET Framework 3,5 ' i hedefleyen Office projelerinde kullanılan ad alanları ve türler hakkında API başvuru belgeleri için, Visual Studio belgelerindeki şu başvuru bölümüne bakın: [yönetilen başvuru (Visual Studio 'Da Office geliştirme)](managed-reference-office-development-in-visual-studio.md).

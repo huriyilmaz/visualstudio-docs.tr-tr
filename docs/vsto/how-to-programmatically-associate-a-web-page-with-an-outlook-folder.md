@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: program aracılığıyla bir Web sayfasını Outlook klasörüyle ilişkilendirme'
+title: Bir Web sayfasını Outlook klasörüyle ilişkilendirme
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,14 +14,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b8d44ffc46557243d2681b8f8b4a3b85d1cd9be6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 35eb2dc3b1b595a4bf960af67ac5006cd9839c6e
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546152"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585346"
 ---
-# <a name="how-to-programmatically-associate-a-web-page-with-an-outlook-folder"></a>Nasıl yapılır: program aracılığıyla bir Web sayfasını Outlook klasörüyle ilişkilendirme
+# <a name="associate-a-web-page-with-an-outlook-folder"></a>Bir Web sayfasını Outlook klasörüyle ilişkilendirme
+
   Bu örnek Outlook Microsoft Office adında bir klasör olup olmadığını denetler `HtmlView` . Klasör yoksa, kod klasörü oluşturur ve ona bir Web sayfası atar. Klasör varsa, kod klasör içeriğini görüntüler.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]

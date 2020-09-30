@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f166e0b3280783dac891b3b582acd7822a3974c0
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 0aa4ad83428120c68adb89937afc46f51700dbfe
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011924"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583677"
 ---
 # <a name="checklist-create-new-project-types"></a>Denetim listesi: yeni proje türleri oluşturma
 Yeni bir proje türü oluşturmak için birkaç görevi gerçekleştirmeniz gerekir. Aşağıdaki denetim listesi, bu görevlere rehberlik sağlar:
@@ -33,7 +33,7 @@ Yeni bir proje türü oluşturmak için birkaç görevi gerçekleştirmeniz gere
 
     - Proje fabrikası, yeni proje oluşturmayı ve var olan projeleri açmayı yönetmek için. Daha fazla bilgi için bkz. [Proje fabrikalarını kullanarak proje örnekleri oluşturma](../../extensibility/internals/creating-project-instances-by-using-project-factories.md).
 
-    - Proje hiyerarşisi ve komut işleme. Daha fazla bilgi için bkz. [HierUtil7 proje sınıflarını kullanarak proje türü (C++)](/previous-versions/bb166212(v=vs.100)), [proje modeli öğeleri](../../extensibility/internals/elements-of-a-project-model.md), [proje modeli çekirdek bileşenleri](../../extensibility/internals/project-model-core-components.md)ve [MenuCommands vs. OleMenuCommands](../../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015).
+    - Proje hiyerarşisi ve komut işleme. Daha fazla bilgi için bkz. [HierUtil7 proje sınıflarını kullanarak proje türü (C++)](/previous-versions/bb166212(v=vs.100)), [proje modeli öğeleri](../../extensibility/internals/elements-of-a-project-model.md), [proje modeli çekirdek bileşenleri](../../extensibility/internals/project-model-core-components.md)ve [MenuCommands vs. OleMenuCommands](../../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015&preserve-view=true).
 
     - Proje öğeleri yönetimi, projenizi **Yeni proje** iletişim kutusuna ekleme da dahil. Daha fazla bilgi için bkz. [Proje ve proje öğesi şablonları ekleme](../../extensibility/internals/adding-project-and-project-item-templates.md) ve [Proje ve öğe şablonlarını kaydetme](../../extensibility/internals/registering-project-and-item-templates.md).
 

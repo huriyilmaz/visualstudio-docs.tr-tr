@@ -1,5 +1,6 @@
 ---
-title: .NET Framework 4 ' e geçirilen Office projeleri için gereken değişiklikler 4,5
+title: .NET 4,5 'e geçirilen Office projeleri için gereken değişiklikler
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +13,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 773a4dd319d00487b919721bf3390a7d58c8b03c
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 40db3cd629f2c3a2ced37a781dea3244a3f19957
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810973"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584470"
 ---
-# <a name="required-changes-to-run-office-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 ' e veya .NET Framework 4,5 ' ye geçirebileceğiniz Office projelerini çalıştırmak için gereken değişiklikler
+# <a name="changes-required-for-office-projects-migrated-to-net-45"></a>.NET 4,5 'e geçirilen Office projeleri için gereken değişiklikler
+
   Bir Office projesinin hedef çatısı [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] .NET Framework önceki bir sürümünden veya daha sonraki bir sürüme değiştirilmişse, çözümün geliştirme bilgisayarında ve son kullanıcı bilgisayarlarında çalışmasını sağlamak için aşağıdaki görevleri gerçekleştirmeniz gerekir:
 
 - <xref:System.Security.SecurityTransparentAttribute>Projeyi Visual Studio 2008 ' den yükselttiyseniz projeden kaldırın.

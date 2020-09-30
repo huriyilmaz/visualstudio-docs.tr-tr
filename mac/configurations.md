@@ -5,18 +5,18 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/18/2019
 ms.assetid: 78107CFA-9308-4293-A92A-9B552A259E15
-ms.openlocfilehash: d1511434a34017a7f0f7da65fe1ea6956d45d497
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 911d8d3a65c414bc3c98494bda75c46b778e5b2b
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71128405"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584028"
 ---
 # <a name="understanding-build-configurations"></a>Yapı yapılandırmalarını anlama
 
 Geliştirme süreci sırasında farklı türlerde derlemelerde kullanmak üzere çözüm ve proje özelliklerinin farklı yapılandırmalarının depolanmasını sağlayabilirsiniz. Bir şablon kullanarak Mac için Visual Studio tarafından oluşturulan projeler genellikle, bir uygulamanın hata ayıklamasını ve uygulama dağıtımını destekleyen hata ayıklama ve sürüm yapılandırmalarının dahil edilir. 
 
-Özel yapılandırma oluşturmak isterseniz, bkz. [yapı yapılandırması oluşturma ve bunları Düzenle](/visualstudio/mac/create-and-edit-configurations).
+Özel yapılandırma oluşturmak isterseniz, bkz. [yapı yapılandırması oluşturma ve bunları Düzenle](./create-and-edit-configurations.md).
 
 >[!NOTE]
 >Bu konu Mac için Visual Studio için geçerlidir. Windows üzerinde Visual Studio için bkz. [derleme yapılandırmasını anlama](/visualstudio/ide/understanding-build-configurations).

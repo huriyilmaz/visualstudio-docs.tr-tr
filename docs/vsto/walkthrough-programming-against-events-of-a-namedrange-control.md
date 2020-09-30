@@ -1,5 +1,6 @@
 ---
 title: 'İzlenecek yol: NamedRange denetimi olaylarına karşı programlama'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9b510e7464708891db0cab23d61cb22896a74602
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2e5ce12e2de8274afd2c27d4ece36529563a6386
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64825069"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584943"
 ---
 # <a name="walkthrough-program-against-events-of-a-namedrange-control"></a>İzlenecek yol: NamedRange denetimi olaylarına karşı programlama
   Bu izlenecek yol <xref:Microsoft.Office.Tools.Excel.NamedRange> , Visual Studio 'Da Office geliştirme araçları 'nı kullanarak Microsoft Office Excel çalışma sayfasına ve programına yönelik bir denetimin nasıl ekleneceğini gösterir.
@@ -70,7 +71,7 @@ ms.locfileid: "64825069"
 
 3. **$A $1** ' nin düzenlenebilir metin kutusunda göründüğünü ve **a1** hücresinin seçildiğini doğrulayın. Aksi takdirde, seçmek için **a1** hücresini tıklatın.
 
-4. **Tamam**’a tıklayın.
+4. **Tamam**'a tıklayın.
 
      **A1** hücresi adlı bir aralığa dönüşür `namedRange1` . Çalışma sayfasında görünür bir gösterge yoktur, ancak `namedRange1` **a1** hücresi seçildiğinde **ad** kutusunda (sol taraftaki çalışma sayfasının hemen üzerinde bulunur) görünür.
 
@@ -78,7 +79,7 @@ ms.locfileid: "64825069"
 
 6. **$B $3** ' nin düzenlenebilir metin kutusunda göründüğünü ve **B3** hücresinin seçildiğini doğrulayın. Aksi takdirde, seçmek için hücre **B3** ' e tıklayın.
 
-7. **Tamam**’a tıklayın.
+7. **Tamam**'a tıklayın.
 
      **B3** hücresi adlı bir aralığa dönüşür `namedRange2` .
 

@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 07/03/2020
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
 ms.custom: video
-ms.openlocfilehash: 56af8f7cd30ec8e41ece2772dc63d67a2dbf3976
-ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
+ms.openlocfilehash: a385e58f73edbcea6eb25b7b2e2728e00f9bcb8d
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89402619"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584015"
 ---
 # <a name="visual-studio-2019-for-mac-tour"></a>Mac için Visual Studio 2019 Tur turu
 
@@ -36,7 +36,7 @@ Bu makalede, bu uygulamaların oluşturulmasına yönelik güçlü bir araç hal
 
 Mac için Visual Studio, uygulama dosyalarını ve ayarlarını yönetmek, uygulama kodu oluşturmak ve hata ayıklamak için çeşitli bölümler halinde düzenlenmiştir.
 
-## <a name="getting-started"></a>Başlarken
+## <a name="getting-started"></a>Kullanmaya başlama
 
 Mac için Visual Studio 2019 ' i ilk kez başlattığınızda, yeni kullanıcılar bir oturum açma penceresi görür. Ücretli bir lisansı etkinleştirmek (varsa) veya Azure aboneliklerine bağlanmak için Microsoft hesabı ile oturum açın. Bunu **daha sonra yapacağım** ve daha sonra **Visual Studio > oturum açma** menü öğesi aracılığıyla oturum açacağım.
 
@@ -66,7 +66,7 @@ Aşağıdaki bölümlerde Mac için Visual Studio içindeki önemli alanlara gen
 
 Bu, kaynak kodu, kaynaklar, Kullanıcı arabirimi ve bağımlılıkların dosyaları platforma özgü projelere göre düzenlenir.
 
-Mac için Visual Studio 'de projeleri ve çözümleri kullanma hakkında daha fazla bilgi için, bkz. [Projeler ve çözümler](/visualstudio/mac/projects-and-solutions) makalesi.
+Mac için Visual Studio 'de projeleri ve çözümleri kullanma hakkında daha fazla bilgi için, bkz. [Projeler ve çözümler](./projects-and-solutions.md) makalesi.
 
 ## <a name="assembly-references"></a>Bütünleştirilmiş kod başvuruları
 
@@ -78,7 +78,7 @@ Başvurular klasörüne çift tıklanarak veya bağlam menüsü eylemlerinde **b
 
 ![Başvuruları Düzenle Iletişim kutusu](media/ide-tour-image20.png)
 
-Mac için Visual Studio başvuruları kullanma hakkında daha fazla bilgi için bkz. [bir projede başvuruları yönetme](/visualstudio/mac/managing-references-in-a-project) makalesi.
+Mac için Visual Studio başvuruları kullanma hakkında daha fazla bilgi için bkz. [bir projede başvuruları yönetme](./managing-references-in-a-project.md) makalesi.
 
 ## <a name="dependencies--packages"></a>Bağımlılıklar/paketler
 
@@ -90,7 +90,7 @@ Uygulamanıza bir bağımlılık eklemek için bağımlılıklar/paketler klasö
 
 ![NuGet paketi ekleme](media/ide-tour-image21.png)
 
-Bir uygulamada NuGet paketinin kullanılmasıyla ilgili bilgiler, [Proje makalenize bir NuGet projesi dahil](/visualstudio/mac/nuget-walkthrough) bulunabilir.
+Bir uygulamada NuGet paketinin kullanılmasıyla ilgili bilgiler, [Proje makalenize bir NuGet projesi dahil](./nuget-walkthrough.md) bulunabilir.
 
 ## <a name="source-editor"></a>Kaynak Düzenleyicisi
 
@@ -111,7 +111,7 @@ Bu, aşağıdaki özelliklerden bazılarını getirir:
 * Biçim seçimi
 * Satır içi ampuller
 
-Kaynak düzenleyiciyi Mac için Visual Studio kullanma hakkında daha fazla bilgi için bkz. [kaynak Düzenleyici](/visualstudio/mac/source-editor) belgeleri.
+Kaynak düzenleyiciyi Mac için Visual Studio kullanma hakkında daha fazla bilgi için bkz. [kaynak Düzenleyici](./source-editor.md) belgeleri.
 
 Sekmeleri her zaman görünür tutmak için, onları sabitlemenin avantajlarından yararlanabilirsiniz. Bu, bir projeyi her başlattığınızda, ihtiyacınız olan sekmenin her zaman görünmesini sağlar. Bir sekmeyi sabitlemek için, sekmenin üzerine gelin ve _sabitle_ simgesine tıklayın:
 
@@ -119,15 +119,15 @@ Sekmeleri her zaman görünür tutmak için, onları sabitlemenin avantajlarınd
 
 ## <a name="refactoring"></a>Yeniden Düzenle
 
-Mac için Visual Studio, kodunuzu yeniden düzenleme için iki yararlı yol sağlar: bağlam eylemleri ve kaynak analizi. Yeniden [düzenleme](/visualstudio/mac/refactoring) makalesindeki bunlarla ilgili daha fazla bilgi edinebilirsiniz.
+Mac için Visual Studio, kodunuzu yeniden düzenleme için iki yararlı yol sağlar: bağlam eylemleri ve kaynak analizi. Yeniden [düzenleme](./refactoring.md) makalesindeki bunlarla ilgili daha fazla bilgi edinebilirsiniz.
 
 ## <a name="debugging"></a>Hata Ayıklama
 
-Mac için Visual Studio .NET Core, .NET Framework, Unity ve Xamarin projelerini destekleyen hata ayıklayıcıları vardır. Mac için Visual Studio, .NET Core hata ayıklayıcısını ve mono Soft Debugger 'ı kullanarak IDE 'nin tüm platformlarda yönetilen kodun hatalarını ayıklamasına olanak tanır. Hata ayıklama hakkında daha fazla bilgi için [hata ayıklama](/visualstudio/mac/debugging) makalesini ziyaret edin.
+Mac için Visual Studio .NET Core, .NET Framework, Unity ve Xamarin projelerini destekleyen hata ayıklayıcıları vardır. Mac için Visual Studio, .NET Core hata ayıklayıcısını ve mono Soft Debugger 'ı kullanarak IDE 'nin tüm platformlarda yönetilen kodun hatalarını ayıklamasına olanak tanır. Hata ayıklama hakkında daha fazla bilgi için [hata ayıklama](./debugging.md) makalesini ziyaret edin.
 
 Hata ayıklayıcı, dizeler, renkler, URL 'Ler ve boyutlar, koordinatlar ve Bézier eğrileri gibi özel türler için zengin Görselleştiriciler içerir.
 
-Hata ayıklayıcının veri görselleştirmeleri hakkında daha fazla bilgi için, [veri görselleştirmeleri](/visualstudio/mac/data-visualizations) makalesini ziyaret edin.
+Hata ayıklayıcının veri görselleştirmeleri hakkında daha fazla bilgi için, [veri görselleştirmeleri](./data-visualizations.md) makalesini ziyaret edin.
 
 ## <a name="version-control"></a>Sürüm denetimi
 
@@ -139,7 +139,7 @@ Kaydedilmemiş değişiklikleri olan dosyalar, aşağıdaki görüntüde göster
 
 ![Çözüm panelinde işlenmemiş dosyalar](media/ide-tour-image23.png)
 
-Visual Studio 'da sürüm denetimini kullanma hakkında daha fazla bilgi için [sürüm denetimi](/visualstudio/mac/version-control) makalesine bakın.
+Visual Studio 'da sürüm denetimini kullanma hakkında daha fazla bilgi için [sürüm denetimi](./version-control.md) makalesine bakın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

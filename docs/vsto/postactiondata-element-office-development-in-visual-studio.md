@@ -1,5 +1,6 @@
 ---
-title: "&lt;postActionData &gt; öğesi (Visual Studio 'Da Office geliştirme)"
+title: '&lt;postActionData &gt; öğesi (Office geliştirme)'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -14,17 +15,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 104af55fdc11b6afae757eff95a964dad83418a6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 85e1a02dbb85094cf84e1bba05e900d0e3f2c641
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541875"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583729"
 ---
-# <a name="ltpostactiondatagt-element-office-development-in-visual-studio"></a>&lt;postActionData &gt; öğesi (Visual Studio 'Da Office geliştirme)
+# <a name="ltpostactiondatagt-element-office-development"></a>&lt;postActionData &gt; öğesi (Office geliştirme)
   `postActionData`Ad alanı öğesi, `vstav3` Office çözümleri yüklendikten sonra çalışan dağıtım sonrası eylemleriyle ilişkili verileri belirtir.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```xml
 <postActionData>
@@ -40,7 +41,7 @@ ms.locfileid: "85541875"
 
 ## <a name="post-deployment-action-example"></a>Dağıtım sonrası eylem örneği
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Aşağıdaki kod örneği, `postAction` kullanılarak dağıtılan bir Office çözümünün uygulama bildiriminde bulunan öğesini göstermektedir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod

@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla çalışma kitaplarındaki aralıklara stil uygulama'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d6f115468bccc2d805b019b9a0ef15cea3605f36
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b8b511d195a40f42bf0b1224dd828b6c6d2b9671
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546165"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585359"
 ---
 # <a name="how-to-programmatically-apply-styles-to-ranges-in-workbooks"></a>Nasıl yapılır: program aracılığıyla çalışma kitaplarındaki aralıklara stil uygulama
   Çalışma kitaplarındaki bölgelere adlandırılmış stilleri uygulayabilirsiniz. Excel, önceden tanımlanmış bir dizi stil sağlar.

@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Sunucu Gezgini için özel bir SharePoint düğümü ekleme | Microsoft Docs'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 26a2ea6a7ccbfcc80275b55f9230f1a3152ab545
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a74c9c879df57a5ff6444626870ee9f021fb4e9
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017055"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584891"
 ---
 # <a name="how-to-add-a-custom-sharepoint-node-to-server-explorer"></a>Nasıl yapılır: Sunucu Gezgini için özel bir SharePoint düğümü ekleme
   **Sunucu Gezgini**' de **SharePoint bağlantıları** düğümünün altına özel düğümler ekleyebilirsiniz. Bu, varsayılan olarak **Sunucu Gezgini** görüntülenmeyen ek SharePoint bileşenlerini göstermek istediğinizde yararlıdır. Daha fazla bilgi için, bkz. [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).

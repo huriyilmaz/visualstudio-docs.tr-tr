@@ -1,5 +1,6 @@
 ---
 title: 'Sunucu Gezgini: SharePoint bağlantıları düğümünü genişletme'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bf9bf437c7592641f1b9020cdc16b4d702646015
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: d7f1ac5b0fb1f25d04139d76efa816ebd059d7da
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90740103"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585582"
 ---
 # <a name="walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension"></a>İzlenecek yol: Sunucu Gezgini uzantısında SharePoint istemci nesne modelini çağırma
   Bu izlenecek yolda, SharePoint istemci nesne modelinin **Sunucu Gezgini** **SharePoint bağlantıları** düğümü uzantısından nasıl çağrılacağını gösterir. SharePoint istemci nesne modelini kullanma hakkında daha fazla bilgi için bkz. [SharePoint nesne modellerini çağırma](../sharepoint/calling-into-the-sharepoint-object-models.md).
@@ -38,7 +39,7 @@ ms.locfileid: "90740103"
 > [!NOTE]
 > Bu kılavuzda oluşturduğunuz uzantı, [Izlenecek yol: Sunucu Gezgini Web bölümlerini göstermek Için genişletin](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md). Bu izlenecek yol SharePoint Server nesne modelini kullanır, ancak bu izlenecek yol, istemci nesne modelini kullanarak aynı görevleri gerçekleştirir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için geliştirme bilgisayarında aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Windows, SharePoint ve Visual Studio 'nun desteklenen sürümleri.

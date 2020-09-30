@@ -1,5 +1,6 @@
 ---
 title: "İzlenecek yol: Outlook 'ta tasarlanan form bölgesini Içeri aktarma"
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 23d058e7bdbbe3f12ef4521318236e939e1b22f2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2a0de1a25a5309e99193b7be8bce2819808665b8
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985446"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584982"
 ---
 # <a name="walkthrough-import-a-form-region-that-is-designed-in-outlook"></a>İzlenecek yol: Outlook 'ta tasarlanan form bölgesini Içeri aktarma
   Bu izlenecek yol, Outlook Microsoft Office bir form bölgesinin nasıl tasarlanacağını ve **Yeni form bölgesi** Sihirbazı 'nı kullanarak form bölgesini BIR Outlook VSTO eklentisi projesine aktarmayı gösterir. Form bölgesini Outlook 'ta tasarlamak, Outlook verilerine bağlanan form bölgesine yerel Outlook denetimleri eklemenize olanak tanır. Form bölgesini içeri aktardıktan sonra her bir denetimin olaylarını işleyebilirsiniz.
@@ -161,12 +162,12 @@ ms.locfileid: "72985446"
 
     Kod düzenleyicisinde *TaskFormRegion.cs* veya *TaskFormRegion. vb* açılır.
 
-2. Sınıfına aşağıdaki kodu ekleyin `TaskFormRegion` . Bu kod, form bölgesindeki Birleşik giriş kutusunu Outlook Tasks klasöründeki her görevin konu satırıyla doldurur.
+2. Aşağıdaki kodu `TaskFormRegion` sınıfına ekleyin. Bu kod, form bölgesindeki Birleşik giriş kutusunu Outlook Tasks klasöründeki her görevin konu satırıyla doldurur.
 
     [!code-csharp[Trin_Outlook_FR_Import#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Import/TaskFormRegion.cs#1)]
     [!code-vb[Trin_Outlook_FR_Import#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Import_O12/TaskFormRegion.vb#1)]
 
-3. Sınıfına aşağıdaki kodu ekleyin `TaskFormRegion` . Bu kod aşağıdaki görevleri gerçekleştirir:
+3. Aşağıdaki kodu `TaskFormRegion` sınıfına ekleyin. Bu kod aşağıdaki görevleri gerçekleştirir:
 
    - `Microsoft.Office.Interop.Outlook.TaskItem` `FindTaskBySubjectName` Yardımcı yöntemini çağırarak ve istenen görevin konusunu geçirerek Görevler klasörünü bulur. `FindTaskBySubjectName`Sonraki adımda yardımcı yöntemi ekleyeceksiniz.
 
@@ -177,12 +178,12 @@ ms.locfileid: "72985446"
      [!code-csharp[Trin_Outlook_FR_Import#2](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Import/TaskFormRegion.cs#2)]
      [!code-vb[Trin_Outlook_FR_Import#2](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Import_O12/TaskFormRegion.vb#2)]
 
-4. Sınıfına aşağıdaki kodu ekleyin `TaskFormRegion` . Bu kod, `FindTaskBySubjectName` önceki adımda açıklanan yardımcı yöntemi sağlar.
+4. Aşağıdaki kodu `TaskFormRegion` sınıfına ekleyin. Bu kod, `FindTaskBySubjectName` önceki adımda açıklanan yardımcı yöntemi sağlar.
 
     [!code-csharp[Trin_Outlook_FR_Import#3](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Import/TaskFormRegion.cs#3)]
     [!code-vb[Trin_Outlook_FR_Import#3](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Import_O12/TaskFormRegion.vb#3)]
 
-5. Sınıfına aşağıdaki kodu ekleyin `TaskFormRegion` . Bu kod aşağıdaki görevleri gerçekleştirir:
+5. Aşağıdaki kodu `TaskFormRegion` sınıfına ekleyin. Bu kod aşağıdaki görevleri gerçekleştirir:
 
    - Form bölgesindeki liste kutusunu, her bağımlı görevin geçerli tamamlanma durumuyla yeniler.
 

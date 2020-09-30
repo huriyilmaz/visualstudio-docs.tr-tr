@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: çalışma sayfalarından program aracılığıyla korumayı kaldırma'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 72448f9d1e5c24c917459b8c2c59e317190e0a11
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0660c703d94111d042b943935c64546d87bc61fa
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85519879"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584813"
 ---
 # <a name="how-to-programmatically-remove-protection-from-worksheets"></a>Nasıl yapılır: çalışma sayfalarından program aracılığıyla korumayı kaldırma
   Microsoft Office bir Excel çalışma sayfasından programlı bir şekilde korumayı kaldırabilirsiniz.

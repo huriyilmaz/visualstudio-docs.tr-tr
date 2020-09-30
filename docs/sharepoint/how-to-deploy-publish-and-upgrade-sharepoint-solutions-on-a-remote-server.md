@@ -1,5 +1,6 @@
 ---
 title: SharePoint çözümlerini uzaktan dağıtın, yayımlayın & yükseltin
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f05f42f8aed35696b962e71a5fce86c2956b3661
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5de5128ff19472390e65aa5d9a437aee269ff897
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016804"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585790"
 ---
 # <a name="how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server"></a>Nasıl yapılır: uzak bir sunucuda SharePoint çözümlerini dağıtma, yayımlama ve yükseltme
   SharePoint çözümlerini yerel sisteme dağıtmanın yanı sıra, korumalı SharePoint çözümlerini uzak sitelere veya yerel SharePoint sitelerine de yayımlayabilirsiniz. Uzaktan yayımlama işlemi, *. wsp* dosyasını SharePoint sunucusuna kopyalar, çözümü yüklüyor ve sonra çözümü etkinleştirmenizi sağlar. Ayrıca, bir uzak SharePoint çözüm yüklemesini değişiklikler yapıldıktan sonra yükseltebilirsiniz.

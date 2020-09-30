@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f0387bc15e392d9e9035e4dd1c119fdc1ad00dba
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: d7b82353247776eb2dac8135a0a412b396d571a1
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011976"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584722"
 ---
 # <a name="register-a-tool-window"></a>Araç penceresi kaydetme
 Araç pencerelerini ve kullanarak kaydedebilirsiniz <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute>  <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> .
@@ -35,4 +35,4 @@ public class PackageToolWindow : Package
 {
 ```
 
- Yukarıdaki kodda, <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> `PersistedWindowPane` ve `DynamicWindowPane` araç pencerelerini Visual Studio 'ya kaydeder. Kalıcı araç penceresi **Çözüm Gezgini**ve sekmeli bir şekilde yerleşiktir ve dinamik pencereye varsayılan başlangıç konumu ve boyutu verilir. Dinamik pencere, başlangıçta oluşturulmadığını belirten geçici hale getirilir. Bu `DontForceCreate` `ToolWindows` , sistem kayıt defterindeki anahtara bir değer yazar. Daha fazla bilgi için bkz. [araç penceresi görüntü yapılandırması](../vs-2015/extensibility/tool-window-display-configuration.md?view=vs-2015).
+ Yukarıdaki kodda, <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> `PersistedWindowPane` ve `DynamicWindowPane` araç pencerelerini Visual Studio 'ya kaydeder. Kalıcı araç penceresi **Çözüm Gezgini**ve sekmeli bir şekilde yerleşiktir ve dinamik pencereye varsayılan başlangıç konumu ve boyutu verilir. Dinamik pencere, başlangıçta oluşturulmadığını belirten geçici hale getirilir. Bu `DontForceCreate` `ToolWindows` , sistem kayıt defterindeki anahtara bir değer yazar. Daha fazla bilgi için bkz. [araç penceresi görüntü yapılandırması](../vs-2015/extensibility/tool-window-display-configuration.md?view=vs-2015&preserve-view=true).

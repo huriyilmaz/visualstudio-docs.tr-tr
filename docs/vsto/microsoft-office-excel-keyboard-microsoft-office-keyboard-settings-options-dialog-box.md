@@ -1,5 +1,6 @@
 ---
-title: Office Excel Klavyesi, klavye ayarları, Seçenekler iletişim kutusu
+title: Office Excel Klavyesi, ayarlar, Seçenekler iletişim kutusu
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +17,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 090e943df2b61352c2342218c3c71c8f0e60eaad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8b590f82d5f28c3a71e86e18dfe16b1c3e6c4c5a
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66836030"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584522"
 ---
-# <a name="microsoft-office-excel-keyboard-microsoft-office-keyboard-settings-options-dialog-box"></a>Microsoft Office Excel klavye, Microsoft Office Klavye ayarları, Seçenekler iletişim kutusu
+# <a name="microsoft-office-excel-keyboard-settings-options-dialog-box"></a>Microsoft Office Excel Klavyesi, ayarlar, Seçenekler iletişim kutusu
   Excel ve Visual Studio 'Nun her ikisi de kısayol tuşlarını işler. Microsoft Office Aynı kısayol tuşu birleşimi Excel ve Visual Studio 'daki farklı komutlar için de kullanılabilir. Excel, Visual Studio 'daki belge düzeyi bir projede açıldığında, kısayol tuşu komutlarını yalnızca bir seferde tek bir uygulama alır. Varsayılan olarak, Visual Studio tüm kısayol tuşu komutlarını alır, ancak belge odağa sahip olduğunda, **dinamik klavye düzeni**seçerek Excel 'in bunları almasını sağlayabilirsiniz.
 
  Şu anda kısayol tuşlarını işleyen uygulamada bir komuta atanmamış bir kısayol tuşu kullanırsanız, kısayol tuşu diğer uygulamaya geçirilir.

@@ -1,5 +1,6 @@
 ---
 title: SharePoint uygulama sayfası veya Web bölümü için Kullanıcı denetimi oluşturma
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2fbf1b646ae9e7fb697fcab93adfb8661a4372c6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b9c8a99562d937d7b10c3539888c2dd62eb1d1da
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016979"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584106"
 ---
 # <a name="how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part"></a>Nasıl yapılır: SharePoint uygulama sayfası veya Web bölümü için Kullanıcı denetimi oluşturma
   SharePoint çözümünüz için özel işlevler sağlayan özel kullanıcı denetimleri oluşturabilir ve bu işlevselliği projenizde yeniden kullanabilirsiniz. Kullanıcı denetimlerini bir Web Bölümü veya uygulama sayfasına dahil edebilir, diğer ASP.NET denetimlerini ve SharePoint denetimlerini ekleyebilir ve denetimin özelliklerini ve yöntemlerini tanımlayabilirsiniz. Kullanıcı denetimleri hakkında daha fazla bilgi için bkz. [Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md) ve [SharePoint 'te Kullanıcı denetimleri ve sunucu denetimleri](https://blogs.msdn.microsoft.com/kaevans/2011/04/28/user-controls-and-server-controls-in-sharepoint/)oluşturma.

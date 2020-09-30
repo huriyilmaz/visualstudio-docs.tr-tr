@@ -10,12 +10,12 @@ no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.topic: how-to
-ms.openlocfilehash: ed92205388202c457f4d6c8e3fbba567a0d5944e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7f8795b798b492370a08e55171c5627485c7869a
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86211656"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584067"
 ---
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core Kullanmaya Başlama
 
@@ -23,7 +23,7 @@ ms.locfileid: "86211656"
 
 ## <a name="installing-net-core"></a>.NET Core yükleniyor
 
-.NET Core 3,1, Mac için Visual Studio yüklediğinizde otomatik olarak yüklenir. Mac için Visual Studio sürümünde desteklenen .NET Core sürümleri hakkında daha fazla bilgi için bkz. [.NET Core desteği](/visualstudio/mac/net-core-support).
+.NET Core 3,1, Mac için Visual Studio yüklediğinizde otomatik olarak yüklenir. Mac için Visual Studio sürümünde desteklenen .NET Core sürümleri hakkında daha fazla bilgi için bkz. [.NET Core desteği](./net-core-support.md).
 
 ## <a name="creating-an-aspnet-core-app-in-visual-studio-for-mac"></a>Mac için Visual Studio ASP.NET Core uygulama oluşturma
 

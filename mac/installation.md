@@ -8,12 +8,12 @@ ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: 8020106ed189b1b67b7cc2f475784809fc93aa1e
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: f971237ecc829fcc4ab660263a1b66c701f86f62
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426908"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583963"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>Mac için Visual Studio 2019 'yi yükler
 
@@ -38,7 +38,7 @@ MacOS 'ta yerel, platformlar arası .NET uygulamaları geliştirmeye başlamak i
 
     [![Yüklemeyi başlatmak için büyük oka tıklayın](media/install-installer-sml.png)](media/install-installer.png#lightbox)
 
-3. Internet 'ten indirilen uygulamayla ilgili bir uyarı alabilirsiniz. **Aç**’a tıklayın.
+3. Internet 'ten indirilen uygulamayla ilgili bir uyarı alabilirsiniz. **Aç**'a tıklayın.
 4. Yükleyici sisteminizi denetlerken bekleyin:
 
     [![Yükleyici, sisteminizde yüklü bileşenleri denetler](media/install-checking-sml.png)](media/install-checking.png#lightbox)
@@ -62,7 +62,7 @@ MacOS 'ta yerel, platformlar arası .NET uygulamaları geliştirmeye başlamak i
    |**.NET Core Uygulamaları**|         |**.NET Core** platformunu seçin.|         |
    |**ASP.NET Core Web Uygulamaları**|         |**.NET Core** platformunu seçin.|         |
    |**Azure İşlevleri**|         |**.NET Core** platformunu seçin.|         |
-   |**Platformlar arası Unity oyun geliştirme**|         |Mac için Visual Studio ötesinde ek platform yüklenmesi gerekmez.| Unity uzantısını yükleme hakkında daha fazla bilgi için [Unity kurulum kılavuzuna](/visualstudio/mac/setup-vsmac-tools-unity) bakın.|
+   |**Platformlar arası Unity oyun geliştirme**|         |Mac için Visual Studio ötesinde ek platform yüklenmesi gerekmez.| Unity uzantısını yükleme hakkında daha fazla bilgi için [Unity kurulum kılavuzuna](./setup-vsmac-tools-unity.md) bakın.|
 
 7. Seçimlerinizi yaptıktan sonra, **Install** düğmesine basın.
 8. Yükleyici, Mac için Visual Studio ve seçilen iş yüklerini indirdiği ve yükleyen ilerlemeyi görüntüler. Yükleme için gerekli ayrıcalıkları vermek üzere parolanızı girmeniz istenir.:
@@ -75,7 +75,7 @@ MacOS 'ta yerel, platformlar arası .NET uygulamaları geliştirmeye başlamak i
 
     [![Kullanmak istediğiniz klavye kısayollarını seçin](media/ide-tour-2019-keyboard-shortcut.png)](media/ide-tour-2019-keyboard-shortcut.png#lightbox)
 
-Şirket ortamında yükleme sırasında ağ sorununuz varsa, [bir güvenlik duvarı veya proxy yönergeleri arkasındaki yüklemeyi](/visualstudio/mac/installation#install-visual-studio-for-mac-behind-a-firewall-or-proxy-server) inceleyin.
+Şirket ortamında yükleme sırasında ağ sorununuz varsa, [bir güvenlik duvarı veya proxy yönergeleri arkasındaki yüklemeyi](#install-visual-studio-for-mac-behind-a-firewall-or-proxy-server) inceleyin.
 
 [Sürüm notlarındaki](/visualstudio/releasenotes/vs2019-mac-relnotes)değişiklikler hakkında daha fazla bilgi edinin.
 
@@ -88,7 +88,7 @@ Bir güvenlik duvarının arkasında Mac için Visual Studio yüklemek için, ya
 
 Ağınızı aşağıdaki konumlara erişime izin verecek şekilde yapılandırın:
 
-- [Visual Studio uç noktaları](/visualstudio/mac/install-behind-a-firewall-or-proxy-server)
+- [Visual Studio uç noktaları](./install-behind-a-firewall-or-proxy-server.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
