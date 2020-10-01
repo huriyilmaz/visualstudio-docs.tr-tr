@@ -1,5 +1,5 @@
 ---
-title: Kod Analizi ihlallerini gösterme
+title: Kod analizi ihlallerini gizleme
 ms.date: 08/27/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +14,14 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: aa650197f291c48c0c025563098181ea1cfa19a7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: adf8e969af4a903aa6ed55b1c92f4ddaffcf77e0
+ms.sourcegitcommit: 56a40b7861640d7922e39256985bb542d67b8020
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89091444"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91604641"
 ---
-# <a name="suppress-code-analysis-violations"></a>Kod Analizi ihlallerini gösterme
+# <a name="suppress-code-analysis-violations"></a>Kod analizi ihlallerini gizleme
 
 Bir uyarının geçerli olmadığını göstermek için genellikle yararlı olur. Bu, takım üyelerinin kodun gözden geçirdiğini ve uyarının bastırılamayacağını gösterir. Kaynak içi gizleme (ISS), <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> bir uyarının gösterilmemesi için özniteliğini kullanır. Özniteliği, uyarıyı oluşturan kod kesimine yakın şekilde yerleştirilebilir. <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>Özniteliği içine yazarak kaynak dosyasına ekleyebilir veya **hata listesi** kısayol menüsünü otomatik olarak eklemek için bir uyarı üzerinde kullanabilirsiniz.
 
@@ -183,12 +183,7 @@ Genel gizleme dosyası, bir hedef belirtmeyen küresel düzeyde gizlemeler veya 
 
 Yönetilen kod derleyicileri ve bazı üçüncü taraf araçları, hızlı kod geliştirmeyi kolaylaştırmak için kod üretir. Kaynak dosyalarda görünen derleyici tarafından oluşturulan kod genellikle `GeneratedCodeAttribute` özniteliğiyle işaretlenir.
 
-Kaynak kodu analizi için, projenizin veya çözümünüzün kökündeki [. editorconfig](../code-quality/configure-fxcop-analyzers.md) dosyasını kullanarak oluşturulan koddaki iletileri bastırın. Oluşturulan kodla eşleştirmek için bir dosya kalıbı kullanın. Örneğin, **. Designer.cs* dosyalarında CS1591 uyarılarını dışlamak için bunu yapılandırma dosyasında kullanın.
-
-``` cmd
-[*.designer.cs]
-dotnet_diagnostic.CS1591.severity = none
-```
+Kaynak kodu analizi için bir dosyadaki oluşturulan koddaki iletileri gizleyebilirsiniz `.editorconfig` . Daha fazla bilgi için bkz. [üretilen kodu hariç tutma](/dotnet/fundamentals/code-analysis/configuration-options#exclude-generated-code).
 
 Eski kod analizi için, kod analizi uyarılarını ve üretilen kod hatalarını bastırıp bastırmayacağını seçebilirsiniz. Bu tür uyarıları ve hataları gösterme hakkında daha fazla bilgi için bkz. [nasıl yapılır: üretilen kod uyarılarını gösterme](../code-quality/how-to-suppress-code-analysis-warnings-for-generated-code.md).
 
