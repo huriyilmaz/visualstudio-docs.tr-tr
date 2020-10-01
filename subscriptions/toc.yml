@@ -6,7 +6,7 @@
   items:
     - name: Abonelik satın alma
       items:
-        - name: Retail
+        - name: Perakende
           href: buy-activate-retail.md
         - name: Bulut
           items:
@@ -16,8 +16,6 @@
               href: vscloud-billing-faq.md
             - name: CSP’ler için satın alma
               href: vscloud-csp.md
-        - name: GitHub Enterprise ile Visual Studio
-          href: access-github.md
         - name: Microsoft İş Ortağı Ağı
           items:
             - name: İş ortakları için abonelikler
@@ -64,6 +62,8 @@
               href: vs-cast.md
             - name: CloudPilot
               href: vs-cloudpilot.md
+            - name: GitHub Enterprise
+              href: access-github.md
             - name: Kurumlar için Microsoft 365 uygulamaları
               href: microsoft-365-apps-for-enterprise.md
             - name: Microsoft 365 geliştiricisi

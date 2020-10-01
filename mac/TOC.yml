@@ -185,7 +185,7 @@
         - name: Değişiklik Günlüğü
           href: /visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac?context=visualstudio/mac/context
     - name: Xamarin ile mobil uygulamalar
-      href: /visualstudio/mac/xamarin
+      href: ./xamarin.md
 - name: Erişilebilirlik
   items:
     - name: Genel Bakış

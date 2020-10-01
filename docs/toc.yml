@@ -524,15 +524,7 @@
             - name: C++ EditorConfig biçimlendirme kuralları
               href: ide/cpp-editorconfig-properties.md
             - name: .NET kodlama kuralları
-              items:
-                - name: Genel Bakış
-                  href: ide/editorconfig-code-style-settings-reference.md
-                - name: Dil kuralları
-                  href: ide/editorconfig-language-conventions.md
-                - name: Biçimlendirme kuralları
-                  href: ide/editorconfig-formatting-conventions.md
-                - name: Adlandırma kuralları
-                  href: ide/editorconfig-naming-conventions.md
+              href: /dotnet/fundamentals/code-analysis/code-style-rule-options
         - name: Kaydırma çubuğunu özelleştirme
           href: ide/how-to-track-your-code-by-customizing-the-scrollbar.md
         - name: Kodda yer işaretleri ayarlama
