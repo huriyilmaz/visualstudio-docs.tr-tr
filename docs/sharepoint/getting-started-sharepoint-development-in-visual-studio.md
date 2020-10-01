@@ -31,13 +31,13 @@ ms.locfileid: "91585634"
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|Konu|Açıklama|
+|Konu|Description|
 |-----------|-----------------|
 |[SharePoint hataları için ek bilgiler](../sharepoint/additional-information-for-sharepoint-errors.md)|SharePoint geliştirme ve sorun giderme sırasında yardımın nerede bulunacağını açıklar.|
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-|Konu|Açıklama|
+|Konu|Description|
 |-----------|-----------------|
 |[SharePoint Çözümleri Geliştirme](../sharepoint/developing-sharepoint-solutions.md)|' De SharePoint geliştirmesini açıklar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|
 |[SharePoint için genel bir geliştirme ortamı ayarlama](/sharepoint/dev/general-development/set-up-a-general-development-environment-for-sharepoint)|SharePoint çözümü oluşturmak için gerekli yüklemeleri açıklar|
