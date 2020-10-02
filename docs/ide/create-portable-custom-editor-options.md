@@ -7,12 +7,12 @@ helpviewer_keywords:
 author: mikadumont
 ms.author: midumont
 manager: jillfra
-ms.openlocfilehash: 59e226fc0cc09b1eda5197d6accddfa9bd1a20ed
-ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
+ms.openlocfilehash: 277e5cd03d4006ced0791356be73ca1fcbe5c217
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89402263"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659257"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>EditorConfig ile taşınabilir, özel düzenleyici ayarları oluşturma
 
@@ -68,7 +68,7 @@ Visual Studio 'daki düzenleyici, [Editorconfig özelliklerinin](https://editorc
 - \_final_newline Ekle
 - kök
 
-EditorConfig Düzenleyicisi ayarları, XML hariç tüm Visual Studio tarafından desteklenen dillerde desteklenir. Ayrıca, EditorConfig, C# ve Visual Basic için [dil](../ide/editorconfig-language-conventions.md), [biçimlendirme](../ide/editorconfig-formatting-conventions.md)ve [adlandırma](../ide/editorconfig-naming-conventions.md) kuralları da dahil olmak üzere [kod stili](../ide/editorconfig-code-style-settings-reference.md) kurallarını destekler.
+EditorConfig Düzenleyicisi ayarları, XML hariç tüm Visual Studio tarafından desteklenen dillerde desteklenir. Ayrıca, EditorConfig, C# ve Visual Basic için [dil](/dotnet/fundamentals/code-analysis/style-rules/language-rules), [biçimlendirme](/dotnet/fundamentals/code-analysis/style-rules/formatting-rules)ve [adlandırma](/dotnet/fundamentals/code-analysis/style-rules/naming-rules) kuralları da dahil olmak üzere [kod stili](/dotnet/fundamentals/code-analysis/code-style-rule-options) kurallarını destekler.
 
 ## <a name="add-and-remove-editorconfig-files"></a>EditorConfig dosyalarını ekleme ve kaldırma
 
@@ -90,7 +90,7 @@ Bir EditorConfig dosyasını projenizden veya kod tabanınızdan kaldırırsanı
 
    ![Visual Studio 'da EditorConfig dosyası öğe şablonları](media/editorconfig-item-templates.png)
 
-1. Girinti stili ve boyutu için iki Core EditorConfig seçeneği ile önceden doldurulan bir EditorConfig dosyası eklemek için **Editorconfig dosyası (varsayılan)** şablonunu seçin. Ya da varsayılan [.NET kod stili, biçimlendirme ve adlandırma kurallarıyla](../ide/editorconfig-code-style-settings-reference.md)önceden doldurulan bir editorconfig dosyası eklemek için **editorconfig dosyası (.net)** şablonunu seçin.
+1. Girinti stili ve boyutu için iki Core EditorConfig seçeneği ile önceden doldurulan bir EditorConfig dosyası eklemek için **Editorconfig dosyası (varsayılan)** şablonunu seçin. Ya da varsayılan [.NET kod stili, biçimlendirme ve adlandırma kurallarıyla](/dotnet/fundamentals/code-analysis/code-style-rule-options)önceden doldurulan bir editorconfig dosyası eklemek için **editorconfig dosyası (.net)** şablonunu seçin.
 
    Bir *. editorconfig* dosyası Çözüm Gezgini görünür ve düzenleyicide açılır.
 
@@ -180,7 +180,7 @@ dir .editorconfig /s
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET kodu stil kuralları](../ide/editorconfig-code-style-settings-reference.md)
+- [.NET kodu stil kuralları](/dotnet/fundamentals/code-analysis/code-style-rule-options)
 - [Dil hizmeti için EditorConfig destekleme](../extensibility/supporting-editorconfig.md)
 - [EditorConfig.org](https://editorconfig.org/)
 - [Kod düzenleyicisinin özellikleri](writing-code-in-the-code-and-text-editor.md)

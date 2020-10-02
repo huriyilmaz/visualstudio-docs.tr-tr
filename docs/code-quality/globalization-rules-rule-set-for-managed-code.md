@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2af6126c751d03968dc7ecd87693e3546376c12a
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 0c3b899ec8e19160d9ee4a307a86c576d217004c
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509867"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658548"
 ---
 # <a name="globalization-rules-rule-set-for-managed-code"></a>Yönetilen kod için Genelleştirme Kuralları kural kümesi
 
@@ -21,11 +21,11 @@ Uygulamanızdaki verilerin farklı dillerde, yerel ayarlarda ve kültürlerde do
 
 |Kural|Açıklama|
 |----------|-----------------|
-|[CA1303](../code-quality/ca1303.md)|Harfleri yerelleştirilmiş parametreler olarak göndermeyin|
-|[CA1304](../code-quality/ca1304.md)|CultureInfo belirt|
-|[CA1305](../code-quality/ca1305.md)|IFormatProvider belirt|
-|[CA1307](../code-quality/ca1307.md)|Açıklık için StringComparison belirtin|
-|[CA1308](../code-quality/ca1308.md)|Dizeleri büyük harfe normalleştirin|
-|[CA1309](../code-quality/ca1309.md)|Sıralı StringComparison kullanın|
-|[CA1310](../code-quality/ca1310.md)|Doğruluk için StringComparison belirtin|
-|[CA2101](../code-quality/ca2101.md)|P/Invoke dize bağımsız değişkenleri için sıralama belirtin|
+|[CA1303](/dotnet/fundamentals/code-analysis/quality-rules/ca1303)|Harfleri yerelleştirilmiş parametreler olarak göndermeyin|
+|[CA1304](/dotnet/fundamentals/code-analysis/quality-rules/ca1304)|CultureInfo belirt|
+|[CA1305](/dotnet/fundamentals/code-analysis/quality-rules/ca1305)|IFormatProvider belirt|
+|[CA1307](/dotnet/fundamentals/code-analysis/quality-rules/ca1307)|Açıklık için StringComparison belirtin|
+|[CA1308](/dotnet/fundamentals/code-analysis/quality-rules/ca1308)|Dizeleri büyük harfe normalleştirin|
+|[CA1309](/dotnet/fundamentals/code-analysis/quality-rules/ca1309)|Sıralı StringComparison kullanın|
+|[CA1310](/dotnet/fundamentals/code-analysis/quality-rules/ca1310)|Doğruluk için StringComparison belirtin|
+|[CA2101](/dotnet/fundamentals/code-analysis/quality-rules/ca2101)|P/Invoke dize bağımsız değişkenleri için sıralama belirtin|

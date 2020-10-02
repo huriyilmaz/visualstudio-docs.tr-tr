@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ca48d0cad8ad6e22aa2264390d230590438e8579
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 47019ecd01a4ad432a853a7f1a4f7d7112be163c
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77506458"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659211"
 ---
 # <a name="use-rule-sets-to-group-code-analysis-rules"></a>Kod analizi kurallarını gruplandırmak için kural kümeleri kullanma
 
@@ -24,7 +24,7 @@ Visual Studio 'da Kod analizini yapılandırdığınızda, yerleşik *kural küm
 
 Kural ekleyerek veya silerek veya **hata listesi**kural kümesi özellikleri ' ni uyarı veya hata olarak görünecek şekilde değiştirerek bir kural kümesini özelleştirebilirsiniz. Özelleştirilmiş kural kümeleri, belirli bir geliştirme ortamınız gereksinimini karşılayamıyor. Bir kural kümesini özelleştirdiğinizde, kural kümesi Düzenleyicisi, işlem sırasında size yardımcı olmak için arama ve filtreleme araçları sağlar.
 
-Kural kümeleri, [yönetilen kod analizi](analyzer-rule-sets.md), [yönetilen kodun eski Analizi](how-to-configure-code-analysis-for-a-managed-code-project.md)ve [C++ kod analizi](/cpp/code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run)için kullanılabilir.
+Kural kümeleri, [yönetilen kod analizi](/dotnet/fundamentals/code-analysis/code-quality-rule-options), [yönetilen kodun eski Analizi](how-to-configure-code-analysis-for-a-managed-code-project.md)ve [C++ kod analizi](/cpp/code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run)için kullanılabilir.
 
 ## <a name="rule-set-format"></a>Kural kümesi biçimi
 
@@ -58,7 +58,7 @@ Bir *. RuleSet* dosyasının IÇERIĞI bu XML 'e benzer şekilde görünür:
 
 ## <a name="specify-a-rule-set-for-a-project"></a>Bir proje için kural kümesi belirtme
 
-Bir projenin kural kümesi, Visual Studio proje dosyasındaki **CodeAnalysisRuleSet** özelliği tarafından belirtilir. Örneğin:
+Bir projenin kural kümesi, Visual Studio proje dosyasındaki **CodeAnalysisRuleSet** özelliği tarafından belirtilir. Örnek:
 
 ```xml
 <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

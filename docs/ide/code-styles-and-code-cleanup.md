@@ -2,20 +2,20 @@
 title: Kod stili seçenekleri ve kod Temizleme
 ms.date: 04/25/2019
 ms.topic: conceptual
-author: TerryGLee
-ms.author: tglee
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Code_Style.General
 - VS.ToolsOptionsPages.Text_Editor.Basic.Code_Style.General
 ms.workload:
 - multiple
-ms.openlocfilehash: 75b301f66f597f8b53a2561ffbbe05dfb8a4cb1c
-ms.sourcegitcommit: 5a5f31a1a91bf243852c7da872211e63ab37fdaa
+ms.openlocfilehash: 82eec2a911ec113c42423fe14b06539e465e8bb3
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90682693"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658392"
 ---
 # <a name="code-style-preferences"></a>Kod stili tercihleri
 
@@ -26,7 +26,7 @@ Bir [Editorconfig dosyası](#code-styles-in-editorconfig-files)kullanarak proje 
 
 ## <a name="code-styles-in-editorconfig-files"></a>EditorConfig dosyalarındaki kod stilleri
 
-.NET için [kod stili ayarları](../ide/editorconfig-code-style-settings-reference.md) , projenize bir [editorconfig](create-portable-custom-editor-options.md) dosyası eklenerek belirtilebilir. EditorConfig dosyaları, Visual Studio kişiselleştirme hesabı yerine bir kod temeli ile ilişkilendirilir. Bir EditorConfig dosyasındaki ayarlar, **Seçenekler** iletişim kutusunda belirtilen kod stillerinden önceliklidir. Deponuzda veya projenizde tüm katkıda bulunanlar için kodlama stillerini zorlamak istediğinizde bir EditorConfig dosyası kullanın.
+.NET için [kod stili ayarları](/dotnet/fundamentals/code-analysis/code-style-rule-options) , projenize bir [editorconfig](create-portable-custom-editor-options.md) dosyası eklenerek belirtilebilir. EditorConfig dosyaları, Visual Studio kişiselleştirme hesabı yerine bir kod temeli ile ilişkilendirilir. Bir EditorConfig dosyasındaki ayarlar, **Seçenekler** iletişim kutusunda belirtilen kod stillerinden önceliklidir. Deponuzda veya projenizde tüm katkıda bulunanlar için kodlama stillerini zorlamak istediğinizde bir EditorConfig dosyası kullanın.
 
 ::: moniker range=">=vs-2019"
 
@@ -112,5 +112,5 @@ Kod stili ayarlarınızın bir dosyayı her kaydedişinizde uygulanmasını isti
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hızlı Eylemler](../ide/quick-actions.md)
-- [EditorConfig için .NET kodlama kuralı ayarları](../ide/editorconfig-code-style-settings-reference.md)
+- [EditorConfig için .NET kodlama kuralı ayarları](/dotnet/fundamentals/code-analysis/code-style-rule-options)
 - [Düzenleyici davranışı (Mac için Visual Studio)](/visualstudio/mac/editor-behavior)

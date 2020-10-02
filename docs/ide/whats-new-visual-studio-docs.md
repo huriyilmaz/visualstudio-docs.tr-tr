@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 6abee067465a0595b75df42d05213f9694dd7ed4
-ms.sourcegitcommit: ea3c985a23851b424127f2205f617446b6536578
+ms.openlocfilehash: 62449bd5571ff72cdf5a1c855417611f45f5970f
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91621743"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659322"
 ---
 # <a name="visual-studio-docs-whats-new-for-september-2020"></a>Visual Studio belgeleri: Eylül 2020 ' deki yenilikler
 
@@ -30,14 +30,11 @@ Eylül 2020 için Visual Studio docs 'daki yenilikler 'e hoş geldiniz. Bu makal
 
 **Yeni makaleler**
 
-- [CA1416: platform uyumluluğunu doğrulama](../code-quality/ca1416.md) -CA1416 platform uyumluluğunu doğrula
-- [CA1834: tek karakter dizeleri Için StringBuilder. Append (Char) kullanın](../code-quality/ca1834.md) -CA1834 için docs
+- [CA1416: platform uyumluluğunu doğrulama](/dotnet/fundamentals/code-analysis/quality-rules/ca1416) -CA1416 platform uyumluluğunu doğrula
+- [CA1834: tek karakter dizeleri Için StringBuilder. Append (Char) kullanın](/dotnet/fundamentals/code-analysis/quality-rules/ca1834) -CA1834 için docs
 
 **Güncellendi**
 
-- [.NET kod kalitesi Çözümleyicileri 'ni EditorConfig ile yapılandırma](../code-quality/configure-fxcop-analyzers.md)
-  - CA belgeleri yeniden düzenlemesi için birkaç küçük düzeltme
-  - .NET yeniden düzenleme için kod analizi güncelleştirmeleri
 - [Kaynak kodu analizine genel bakış](../code-quality/roslyn-analyzers-overview.md) -.NET yeniden düzenleme için kod analizi güncelleştirmeleri
 - [Kod kalitesi analizini yapılandırma](../code-quality/use-roslyn-analyzers.md) -.NET yeniden düzenleme için kod analizi güncelleştirmeleri
 
@@ -68,8 +65,8 @@ Eylül 2020 için Visual Studio docs 'daki yenilikler 'e hoş geldiniz. Bu makal
 
 **Güncelleştirilmiş makaleler**
 
-- [EditorConfig için .net kodlama kuralı ayarları](./editorconfig-code-style-settings-reference.md) -güncelleştirilmiş EditorConfig
-- [Dil kuralları](./editorconfig-language-conventions.md) -eksik örnekler
+- [EditorConfig için .net kodlama kuralı ayarları](/dotnet/fundamentals/code-analysis/code-style-rule-options) -güncelleştirilmiş EditorConfig
+- [Dil kuralları](/dotnet/fundamentals/code-analysis/style-rules/language-rules) -eksik örnekler
 
 ## <a name="install"></a>Yükleme
 
@@ -78,6 +75,7 @@ Eylül 2020 için Visual Studio docs 'daki yenilikler 'e hoş geldiniz. Bu makal
 - [ARM ile desteklenen cihazlarda Visual Studio](../install/visual-studio-on-arm-devices.md) -ARM için belge ekleme
 
 **Güncelleştirilmiş makaleler**
+
 - [Visual Studio 'yu yüklediğinizde veya kullanırken ağla ilgili hatalarda sorun giderme](../install/troubleshooting-network-related-errors-in-visual-studio.md) -geri bildirim kimlik doğrulama proxy kilitlenme için geçici çözüm ekleme
 
 ## <a name="profiling"></a>Profil Oluşturma

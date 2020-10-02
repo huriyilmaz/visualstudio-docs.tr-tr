@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e59fd8ef3210a19683b428438d2e58ab816e9a40
-ms.sourcegitcommit: 56a40b7861640d7922e39256985bb542d67b8020
+ms.openlocfilehash: 134f91531b9485f5a887b2d9785a490fcea605fc
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91604591"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659172"
 ---
 # <a name="code-analysis-faq"></a>Kod Analizi hakkında SSS
 
@@ -24,7 +24,7 @@ Bu sayfa, Visual Studio 'da .NET Compiler Platform tabanlı kod analizi hakkınd
 
 **S**: kod stilini denetlemek için kod analizini veya editorconfig 'i kullanmalıdır mi?
 
-Y **: kod**Analizi ve editorconfig dosyaları el ile çalışır. [Bir EditorConfig dosyasında](../ide/editorconfig-code-style-settings-reference.md) veya [metin düzenleyici seçenekleri](../ide/code-styles-and-code-cleanup.md) sayfasında kod stilleri tanımladığınızda aslında Visual Studio 'da yerleşik olarak bulunan kod Çözümleyicileri yapılandırılırsınız. EditorConfig dosyaları, çözümleyici kurallarını etkinleştirmek veya devre dışı bırakmak ve ayrıca NuGet çözümleyici paketlerini yapılandırmak için kullanılabilir.
+Y **: kod**Analizi ve editorconfig dosyaları el ile çalışır. [Bir EditorConfig dosyasında](/dotnet/fundamentals/code-analysis/code-style-rule-options) veya [metin düzenleyici seçenekleri](../ide/code-styles-and-code-cleanup.md) sayfasında kod stilleri tanımladığınızda aslında Visual Studio 'da yerleşik olarak bulunan kod Çözümleyicileri yapılandırılırsınız. EditorConfig dosyaları, çözümleyici kurallarını etkinleştirmek veya devre dışı bırakmak ve ayrıca NuGet çözümleyici paketlerini yapılandırmak için kullanılabilir.
 
 ## <a name="editorconfig-versus-rule-sets"></a>EditorConfig ve kural kümeleri
 
@@ -35,7 +35,7 @@ Y **: kural**kümeleri ve editorconfig dosyaları birlikte bulunabilir ve her ik
 Ancak, EditorConfig dosyaları kuralları yapılandırmak için ek yollar sunar:
 
 - .NET kod kalitesi Çözümleyicileri için, EditorConfig dosyaları [hangi kod türlerini analiz edeceğinizi tanımlamanızı](/dotnet/fundamentals/code-analysis/code-quality-rule-options)sağlar.
-- Visual Studio 'da yerleşik olarak bulunan .NET kod stili Çözümleyicileri için, EditorConfig dosyaları bir kod temeli için [tercih edilen kod stillerini tanımlamanıza](../ide/editorconfig-code-style-settings-reference.md) olanak sağlar.
+- Visual Studio 'da yerleşik olarak bulunan .NET kod stili Çözümleyicileri için, EditorConfig dosyaları bir kod temeli için [tercih edilen kod stillerini tanımlamanıza](/dotnet/fundamentals/code-analysis/code-style-rule-options) olanak sağlar.
 
 Kural kümelerine ve EditorConfig dosyalarına ek olarak, bazı çözümleyiciler C# ve VB derleyicileri için [ek dosyalar](../ide/build-actions.md#build-action-values) olarak işaretlenen metin dosyaları kullanılarak yapılandırılır.
 
@@ -97,4 +97,4 @@ Y **: çözüm**düzeyindeki kod analizi Özellik sayfası, daha güvenilir payl
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çözümleyiciler genel bakış](roslyn-analyzers-overview.md)
-- [EditorConfig için .NET kodlama kuralı ayarları](../ide/editorconfig-code-style-settings-reference.md)
+- [EditorConfig için .NET kodlama kuralı ayarları](/dotnet/fundamentals/code-analysis/code-style-rule-options)

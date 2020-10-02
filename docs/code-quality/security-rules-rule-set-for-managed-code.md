@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c7ce330a8a2994f827234aae8b8db416da016b29
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 5f3205bf3c81bbb9dac19c810e3a89a5fcd2227b
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509880"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658405"
 ---
 # <a name="security-rules-rule-set-for-managed-code"></a>Yönetilen kod için Güvenlik Kuralları kural kümesi
 
@@ -21,7 +21,7 @@ Bildirilen olası güvenlik sorunlarının sayısını en üst düzeye çıkarma
 
 |Kural|Açıklama|
 |----------|-----------------|
-|[CA2100](../code-quality/ca2100.md)|SQL sorgularını güvenlik açıkları için inceleyin|
+|[CA2100](/dotnet/fundamentals/code-analysis/quality-rules/ca2100)|SQL sorgularını güvenlik açıkları için inceleyin|
 |[CA2102](../code-quality/ca2102.md)|CLSCompliant olmayan özel durumları genel işleyiciler içinde yakalayın|
 |[CA2103](../code-quality/ca2103.md)|Kesin temelli güvenliği gözden geçirin|
 |[CA2104](../code-quality/ca2104.md)|Salt okunur kesilebilir başvuru türleri bildirmeyin|
@@ -29,7 +29,7 @@ Bildirilen olası güvenlik sorunlarının sayısını en üst düzeye çıkarma
 |[CA2106](../code-quality/ca2106.md)|Onay deyimlerinin güvenliğini sağlayın|
 |[CA2107](../code-quality/ca2107.md)|Gözden geçirmeyi reddedin ve yalnızca kullanımına izin verin|
 |[CA2108](../code-quality/ca2108.md)|Değer türleri üzerinde bildirimsel güvenliği gözden geçirin|
-|[CA2109](../code-quality/ca2109.md)|Görünen olay işleyicilerini gözden geçirin|
+|[CA2109](/dotnet/fundamentals/code-analysis/quality-rules/ca2109)|Görünen olay işleyicilerini gözden geçirin|
 |[CA2111](../code-quality/ca2111.md)|İşaretçiler görünür olmamalıdır|
 |[CA2112](../code-quality/ca2112.md)|Güvenli türler alanları açığa çıkarmamalıdır|
 |[CA2114](../code-quality/ca2114.md)|Metot güvenliği türün bir üst kümesi olmalıdır|
@@ -37,7 +37,7 @@ Bildirilen olası güvenlik sorunlarının sayısını en üst düzeye çıkarma
 |[CA2116](../code-quality/ca2116.md)|APTCA metotları yalnızca APTCA metotlarını çağırmalıdır|
 |[CA2117](../code-quality/ca2117.md)|APTCA türleri yalnızca APTCA taban türlerini genişletmelidir|
 |[CA2118](../code-quality/ca2118.md)|SuppressUnmanagedCodeSecurityAttribute kullanımını gözden geçirin|
-|[CA2119](../code-quality/ca2119.md)|Özel arabirimleri karşılayan metotları mühürleyin|
+|[CA2119](/dotnet/fundamentals/code-analysis/quality-rules/ca2119)|Özel arabirimleri karşılayan metotları mühürleyin|
 |[CA2120](../code-quality/ca2120.md)|Serileştirme oluşturucularının güvenliğini sağlayın|
 |[CA2121](../code-quality/ca2121.md)|Statik oluşturucular özel olmalıdır|
 |[CA2122](../code-quality/ca2122.md)|Bağlantı talepleri olan metotları dolaylı olarak açığa çıkarmayın|
@@ -64,27 +64,27 @@ Bildirilen olası güvenlik sorunlarının sayısını en üst düzeye çıkarma
 |[CA2147](../code-quality/ca2147.md)|Saydam metotlar güvenlik onay deyimlerini kullanmamalıdır|
 |[CA2149](../code-quality/ca2149.md)|Saydam metotlar yerel kod içine çağırmamalıdır|
 |[CA2210](../code-quality/ca2210.md)|Derlemelerin geçerli tanımlayıcı adları olmalıdır|
-|[CA2300](ca2300.md)|Güvenli olmayan seri durumdan çıkarıcı BinaryFormatter kullanmayın|
-|[CA2301](ca2301.md)|İlk olarak BinaryFormatter.Binder öğesini ayarlamadan önce BinaryFormatter.Deserialize çağırmayın|
-|[CA2302](ca2302.md)|BinaryFormatter.Deserialize çağırmadan önce BinaryFormatter.Binder öğesinin ayarlandığından emin olun|
-|[CA2305](ca2305.md)|Güvenli olmayan seri kaldırıcı LosFormatter kullanmayın|
-|[CA2310](ca2310.md)|Güvenli olmayan seri kaldırıcı NetDataContractSerializer kullanmayın|
-|[CA2311](ca2311.md)|İlk olarak NetDataContractSerializer.Binder öğesini ayarlamadan seri durumdan çıkarmayın|
-|[CA2312](ca2312.md)|Seri durumdan çıkarmadan önce NetDataContractSerializer.Binder öğesinin ayarlandığından emin olun|
-|[CA2315](ca2315.md)|Güvenli olmayan seri kaldırıcı ObjectStateFormatter kullanmayın|
-|[CA2321](ca2321.md)|SimpleTypeResolver kullanarak JavaScriptSerializer ile seri durumdan çıkarmayın|
-|[CA2322](ca2322.md)|Seri durumdan çıkarmadan önce SimpleTypeResolver ile JavaScriptSerializer’ın başlatılmadığından emin olun|
-|[CA3001](../code-quality/ca3001.md)|SQL ekleme güvenlik açıkları için inceleme kodu|
-|[CA3002](../code-quality/ca3002.md)|XSS güvenlik açıkları için inceleme kodu|
-|[CA3003](../code-quality/ca3003.md)|Dosya yolu ekleme güvenlik açıkları için inceleme kodu|
-|[CA3004](../code-quality/ca3004.md)|Bilgilerin açığa çıkmasıyla ilgili güvenlik açıkları için inceleme kodu|
-|[CA3005](../code-quality/ca3005.md)|LDAP ekleme güvenlik açıkları için inceleme kodu|
-|[CA3006](../code-quality/ca3006.md)|İşlem komutu ekleme güvenlik açıkları için inceleme kodu|
-|[CA3007](../code-quality/ca3007.md)|Açık yeniden yönlendirme güvenlik açıkları için inceleme kodu|
-|[CA3008](../code-quality/ca3008.md)|XPath ekleme güvenlik açıkları için inceleme kodu|
-|[CA3009](../code-quality/ca3009.md)|XML ekleme güvenlik açıkları için inceleme kodu|
-|[CA3010](../code-quality/ca3010.md)|XAML ekleme güvenlik açıkları için inceleme kodu|
-|[CA3011](../code-quality/ca3011.md)|DLL ekleme güvenlik açıkları için inceleme kodu|
-|[CA3012](../code-quality/ca3012.md)|Normal ifade ekleme güvenlik açıkları için inceleme kodu|
-|[CA5358](../code-quality/ca5358.md)|Güvenli Olmayan Şifreleme Modlarını Kullanmayın|
-|[CA5403](../code-quality/ca5403.md)|Sertifikayı sabit olarak kodlamayın|
+|[CA2300](/dotnet/fundamentals/code-analysis/quality-rules/ca2300)|Güvenli olmayan seri durumdan çıkarıcı BinaryFormatter kullanmayın|
+|[CA2301](/dotnet/fundamentals/code-analysis/quality-rules/ca2301)|İlk olarak BinaryFormatter.Binder öğesini ayarlamadan önce BinaryFormatter.Deserialize çağırmayın|
+|[CA2302](/dotnet/fundamentals/code-analysis/quality-rules/ca2302)|BinaryFormatter.Deserialize çağırmadan önce BinaryFormatter.Binder öğesinin ayarlandığından emin olun|
+|[CA2305](/dotnet/fundamentals/code-analysis/quality-rules/ca2305)|Güvenli olmayan seri kaldırıcı LosFormatter kullanmayın|
+|[CA2310](/dotnet/fundamentals/code-analysis/quality-rules/ca2310)|Güvenli olmayan seri kaldırıcı NetDataContractSerializer kullanmayın|
+|[CA2311](/dotnet/fundamentals/code-analysis/quality-rules/ca2311)|İlk olarak NetDataContractSerializer.Binder öğesini ayarlamadan seri durumdan çıkarmayın|
+|[CA2312](/dotnet/fundamentals/code-analysis/quality-rules/ca2312)|Seri durumdan çıkarmadan önce NetDataContractSerializer.Binder öğesinin ayarlandığından emin olun|
+|[CA2315](/dotnet/fundamentals/code-analysis/quality-rules/ca2315)|Güvenli olmayan seri kaldırıcı ObjectStateFormatter kullanmayın|
+|[CA2321](/dotnet/fundamentals/code-analysis/quality-rules/ca2321)|SimpleTypeResolver kullanarak JavaScriptSerializer ile seri durumdan çıkarmayın|
+|[CA2322](/dotnet/fundamentals/code-analysis/quality-rules/ca2322)|Seri durumdan çıkarmadan önce SimpleTypeResolver ile JavaScriptSerializer’ın başlatılmadığından emin olun|
+|[CA3001](/dotnet/fundamentals/code-analysis/quality-rules/ca3001)|SQL ekleme güvenlik açıkları için inceleme kodu|
+|[CA3002](/dotnet/fundamentals/code-analysis/quality-rules/ca3002)|XSS güvenlik açıkları için inceleme kodu|
+|[CA3003](/dotnet/fundamentals/code-analysis/quality-rules/ca3003)|Dosya yolu ekleme güvenlik açıkları için inceleme kodu|
+|[CA3004](/dotnet/fundamentals/code-analysis/quality-rules/ca3004)|Bilgilerin açığa çıkmasıyla ilgili güvenlik açıkları için inceleme kodu|
+|[CA3005](/dotnet/fundamentals/code-analysis/quality-rules/ca3005)|LDAP ekleme güvenlik açıkları için inceleme kodu|
+|[CA3006](/dotnet/fundamentals/code-analysis/quality-rules/ca3006)|İşlem komutu ekleme güvenlik açıkları için inceleme kodu|
+|[CA3007](/dotnet/fundamentals/code-analysis/quality-rules/ca3007)|Açık yeniden yönlendirme güvenlik açıkları için inceleme kodu|
+|[CA3008](/dotnet/fundamentals/code-analysis/quality-rules/ca3008)|XPath ekleme güvenlik açıkları için inceleme kodu|
+|[CA3009](/dotnet/fundamentals/code-analysis/quality-rules/ca3009)|XML ekleme güvenlik açıkları için inceleme kodu|
+|[CA3010](/dotnet/fundamentals/code-analysis/quality-rules/ca3010)|XAML ekleme güvenlik açıkları için inceleme kodu|
+|[CA3011](/dotnet/fundamentals/code-analysis/quality-rules/ca3011)|DLL ekleme güvenlik açıkları için inceleme kodu|
+|[CA3012](/dotnet/fundamentals/code-analysis/quality-rules/ca3012)|Normal ifade ekleme güvenlik açıkları için inceleme kodu|
+|[CA5358](/dotnet/fundamentals/code-analysis/quality-rules/ca5358)|Güvenli Olmayan Şifreleme Modlarını Kullanmayın|
+|[CA5403](/dotnet/fundamentals/code-analysis/quality-rules/ca5403)|Sertifikayı sabit olarak kodlamayın|

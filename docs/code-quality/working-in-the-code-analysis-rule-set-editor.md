@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1e53df97c0535f59d0b96e9608ad55f2cb5ab21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ffaf964b24fea41d8e364d610806ba92980b1dc7
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88893313"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659185"
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>Kod analizi kural kümesi düzenleyicisini kullanma
 
@@ -23,7 +23,7 @@ Kod analizi kural kümesi Düzenleyicisi, özel bir kural kümesine dahil edilen
 
 Aşağıdaki tabloda önem derecesi seçenekleri gösterilmektedir:
 
-|Eylem (önem derecesi)|Description|
+|Eylem (önem derecesi)|Açıklama|
 |-|-|
 |Uyarı|**Hata listesi** ve derleme zamanında bir uyarı oluşturur.|
 |Hata|**Hata listesi** ve derleme zamanında bir hata oluşturur.|
@@ -48,7 +48,7 @@ Kural kümesi Düzenleyicisi ' nin araç çubuğunu, kural kümesi kılavuzunda 
 
 Aşağıdaki tabloda, kural kümesi düzenleyicisinin araç çubuğundaki denetimler açıklanmaktadır.
 
-|ToolBar denetimi|Description|
+|ToolBar denetimi|Açıklama|
 |---------------------|-----------------|
 |**Tümünü Genişlet**|Tüm gruplardaki kuralları gösterir.|
 |**Tümünü Daralt**|Tüm gruplardaki kuralları gizler.|
@@ -69,8 +69,8 @@ Aşağıdaki tabloda bir kural kümesi alanları açıklanmaktadır:
 
 |Alan|Açıklama|
 |-----------|-----------------|
-|**ID**|Kuralın tanımlayıcısı.|
-|**Kategori**|Kural kümelerinde üyeliklerine ek olarak, kod analizi kuralları da kategoriye göre gruplandırılır. Daha fazla bilgi için bkz. [Kod Analizi uyarıları](../code-quality/code-analysis-for-managed-code-warnings.md).|
+|**NUMARASıNı**|Kuralın tanımlayıcısı.|
+|**Kategori**|Kural kümelerinde üyeliklerine ek olarak, kod analizi kuralları da kategoriye göre gruplandırılır. Daha fazla bilgi için bkz. [Kod Analizi uyarıları](/dotnet/fundamentals/code-analysis/quality-rules/index).|
 |**Ad**|Kuralın başlığı.|
 |**Ad Alanı**|Kuralın ad alanı.|
 |**Hedef türü**|Kuralın yerel, yönetilen veya veritabanı kodu için olup olmadığını gösterir.|

@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d0b60c548e4e5d42a10e82754d045073f016f8b
-ms.sourcegitcommit: ea3c985a23851b424127f2205f617446b6536578
+ms.openlocfilehash: b9aba6b9c4be882498535ab96020461f22722c10
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91621756"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659309"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Visual Studio belgelerindeki yeniliklerin geçmişi
 
@@ -47,25 +47,25 @@ Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu konu, 2020 Eyl
 
 **Yeni makaleler**
 
-- [CA1310: doğruluk Için StringComparison belirtin](../code-quality/ca1310.md) -CA1307 için CA1310 ve güncelleştirme belgelerine belge ekleyin
-- [CA1837: Process. GetCurrentProcess () yerine Environment. ProcessId kullanın. ](../code-quality/ca1837.md) CA1837 için kimlik-belgeler
-- [CA1838: `StringBuilder` P/Invoke Için parametrelerden KAÇıNıN](../code-quality/ca1838.md) -CA1838 için belge ekleyin
-- [CA2008: TaskScheduler geçirmeden görev oluşturma](../code-quality/ca2008.md) -CA2008 için belge ekleme
-- [CA2249: CA2249 Için String. IndexOf-docs yerine String. Contains kullanmayı düşünün](../code-quality/ca2249.md)
-- [CA2361: DataSet. ReadXml () içeren bir otomatik oluşturulan sınıfın güvenilmeyen verilerle kullanılmadığından emin olun](../code-quality/ca2361.md) -daha fazla veri kümesi/DataTable kuralları
-- [CA2362: otomatik olarak oluşturulabilen seri hale getirilebilir türde veri kümesi veya DataTable, uzaktan kod yürütme saldırılarına karşı savunmasız](../code-quality/ca2362.md) olabilir-daha fazla veri kümesi/DataTable kuralları
-- [IL3000: tek dosya olarak yayımlarken derleme dosyası yoluna erişim kullanmaktan KAÇıNıN](../code-quality/il3000.md) IL3000 için belge Ekle
-- [IL3001: tek bir dosya olarak yayımlarken derleme dosya yoluna erişmenin önüne kaçının](../code-quality/il3001.md) -IL3001 için belge ekleyin
+- [CA1310: doğruluk Için StringComparison belirtin](/dotnet/fundamentals/code-analysis/quality-rules/ca1310) -CA1307 için CA1310 ve güncelleştirme belgelerine belge ekleyin
+- [CA1837: Process. GetCurrentProcess () yerine Environment. ProcessId kullanın. ](/dotnet/fundamentals/code-analysis/quality-rules/ca1837) CA1837 için kimlik-belgeler
+- [CA1838: `StringBuilder` P/Invoke Için parametrelerden KAÇıNıN](/dotnet/fundamentals/code-analysis/quality-rules/ca1838) -CA1838 için belge ekleyin
+- [CA2008: TaskScheduler geçirmeden görev oluşturma](/dotnet/fundamentals/code-analysis/quality-rules/ca2008) -CA2008 için belge ekleme
+- [CA2249: CA2249 Için String. IndexOf-docs yerine String. Contains kullanmayı düşünün](/dotnet/fundamentals/code-analysis/quality-rules/ca2249)
+- [CA2361: DataSet. ReadXml () içeren bir otomatik oluşturulan sınıfın güvenilmeyen verilerle kullanılmadığından emin olun](/dotnet/fundamentals/code-analysis/quality-rules/ca2361) -daha fazla veri kümesi/DataTable kuralları
+- [CA2362: otomatik olarak oluşturulabilen seri hale getirilebilir türde veri kümesi veya DataTable, uzaktan kod yürütme saldırılarına karşı savunmasız](/dotnet/fundamentals/code-analysis/quality-rules/ca2362) olabilir-daha fazla veri kümesi/DataTable kuralları
+- [IL3000: tek dosya olarak yayımlarken derleme dosyası yoluna erişim kullanmaktan KAÇıNıN](/dotnet/fundamentals/code-analysis/quality-rules/il3000) IL3000 için belge Ekle
+- [IL3001: tek bir dosya olarak yayımlarken derleme dosya yoluna erişmenin önüne kaçının](/dotnet/fundamentals/code-analysis/quality-rules/il3001) -IL3001 için belge ekleyin
 
 **Güncellendi**
 
-- [CA1002: genel listeleri](../code-quality/ca1002.md) gösterme-yapılandırılabilirlik-API yüzeyi bölümü ekleme
-- [CA1046: Başvuru türlerinde eşittir işlecini aşırı yüklemeyin](../code-quality/ca1046.md) -yapılandırılabilirliği-API yüzeyi bölümüne ekleyin
-- [CA1307: açıklık Için StringComparison belirtin](../code-quality/ca1307.md) -CA1307 için CA1310 ve güncelleştirme belgelerine belge ekleyin
-- [CA1700: Enum değerlerini &#39;ayrılmış&#39;](../code-quality/ca1700.md) -yapılandırılabilirlik-API yüzeyi bölümü ekleme
-- [CA1707: tanımlayıcılar alt çizgi](../code-quality/ca1707.md) -yapılandırma yapılandırması-API yüzeyi bölümü içermemelidir
-- [CA1822: üyeleri statik olarak işaretle](../code-quality/ca1822.md) -yapılandırılabilirlik-API Surface Bölümü Ekle
-- [CA2351: DataSet. ReadXml () girişinin güvenilir olduğundan](../code-quality/ca2351.md) ve daha fazla veri kümesi/DataTable kuralı olduğundan emin olun
+- [CA1002: genel listeleri](/dotnet/fundamentals/code-analysis/quality-rules/ca1002) gösterme-yapılandırılabilirlik-API yüzeyi bölümü ekleme
+- [CA1046: Başvuru türlerinde eşittir işlecini aşırı yüklemeyin](/dotnet/fundamentals/code-analysis/quality-rules/ca1046) -yapılandırılabilirliği-API yüzeyi bölümüne ekleyin
+- [CA1307: açıklık Için StringComparison belirtin](/dotnet/fundamentals/code-analysis/quality-rules/ca1307) -CA1307 için CA1310 ve güncelleştirme belgelerine belge ekleyin
+- [CA1700: Enum değerlerini &#39;ayrılmış&#39;](/dotnet/fundamentals/code-analysis/quality-rules/ca1700) -yapılandırılabilirlik-API yüzeyi bölümü ekleme
+- [CA1707: tanımlayıcılar alt çizgi](/dotnet/fundamentals/code-analysis/quality-rules/ca1707) -yapılandırma yapılandırması-API yüzeyi bölümü içermemelidir
+- [CA1822: üyeleri statik olarak işaretle](/dotnet/fundamentals/code-analysis/quality-rules/ca1822) -yapılandırılabilirlik-API Surface Bölümü Ekle
+- [CA2351: DataSet. ReadXml () girişinin güvenilir olduğundan](/dotnet/fundamentals/code-analysis/quality-rules/ca2351) ve daha fazla veri kümesi/DataTable kuralı olduğundan emin olun
 - [Üçüncü taraf Çözümleyicileri](../code-quality/install-roslyn-analyzers.md) , kod analizi belgeleri için değiştirilen yapıyı ve başlıkları yükler
 
 ### <a name="containers"></a>Kapsayıcılar
@@ -73,7 +73,7 @@ Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu konu, 2020 Eyl
 **Güncelleştirilmiş makaleler**
 
 - Visual [Studio 'da ASP.net kapsayıcısını bir kapsayıcı kayıt defterine dağıtma](../containers/hosting-web-apps-in-docker.md) visual Studio 16,7 yayımlama Kullanıcı arabirimi Için kapsayıcı Araçları güncelleştirmeleri
-- [Visual Studio Kubernetes araçları ile çalışmaya başlama](../containers/tutorial-kubernetes-tools.md) -Kubernetes öğreticisi: kaldırma adımlarını ekleme
+- [Visual Studio Kubernetes araçları ile çalışmaya başlama](../containers/bridge-to-kubernetes.md) -Kubernetes öğreticisi: kaldırma adımlarını ekleme
 
 ### <a name="deployment"></a>Dağıtım
 
@@ -92,7 +92,7 @@ Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu konu, 2020 Eyl
 - [Proje alt türleri](../extensibility/internals/project-subtypes.md) -liste öğelerini girintileme girintisini çözme
 - [Visual Studio Için renk değeri başvurusu](../extensibility/ux-guidelines/color-value-reference-for-visual-studio.md) -AB # 1759333 düzeltilmesi eksik sütun başlıkları
 
-### <a name="get-started"></a>başlarken
+### <a name="get-started"></a>Kullanmaya başlayın
 
 **Güncelleştirilmiş makaleler**
 
@@ -131,25 +131,25 @@ Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu konu, 2020 Eyl
 
 **Yeni makaleler**
 
-- [CA1417: `OutAttribute` P/Invoke için dize parametrelerinde KULLANMAYıN](../code-quality/ca1417.md) -CA1417 için belge ekleyin
-- [CA1805: gereksiz yere başlatma.](../code-quality/ca1805.md) -CA1805 için belgeler ekleme
-- [CA1836: kullanılabilir olduğunda sayı üzerinde IsEmpty tercih et](../code-quality/ca1836.md) -CA1836 için belge ekleme (Count üzerinde IsEmpty tercih et)
-- [CA2016: CancellationToken parametresini tek bir belge alan yöntemlere Iletme](../code-quality/ca2016.md) CA2016-CancellationToken parametresini bir tane alacak yöntemlere iletme
-- [CA2350: DataTable. ReadXml () girişinin güvenilir olduğundan emin olun](../code-quality/ca2350.md) -Ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri
-- [CA2351: DataSet. ReadXml () girişinin güvenilir olduğundan](../code-quality/ca2351.md) ve Ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri olduğundan emin olun
-- [CA2352: serileştirilebilir türdeki güvenli olmayan veri kümesi veya DataTable, uzaktan kod yürütme saldırılarına karşı savunmasız](../code-quality/ca2352.md) olabilir-Ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri
-- CA2353: Serializable tür-ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri için [güvenli olmayan veri kümesi veya DataTable](../code-quality/ca2353.md)
-- [CA2354: Serisi kaldırılan nesne grafiğinde güvenli olmayan veri kümesi veya DataTable, uzaktan kod yürütme saldırısında savunmasız](../code-quality/ca2354.md) olabilir-Ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri
-- [CA2355: Serisi kaldırılan nesne grafiğinde güvenli olmayan veri kümesi veya DataTable](../code-quality/ca2355.md) -Ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri
-- [CA2356: web serisi kaldırılan nesne grafiğinde güvenli olmayan veri kümesi veya DataTable türü,](../code-quality/ca2356.md) Ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri
+- [CA1417: `OutAttribute` P/Invoke için dize parametrelerinde KULLANMAYıN](/dotnet/fundamentals/code-analysis/quality-rules/ca1417) -CA1417 için belge ekleyin
+- [CA1805: gereksiz yere başlatma.](/dotnet/fundamentals/code-analysis/quality-rules/ca1805) -CA1805 için belgeler ekleme
+- [CA1836: kullanılabilir olduğunda sayı üzerinde IsEmpty tercih et](/dotnet/fundamentals/code-analysis/quality-rules/ca1836) -CA1836 için belge ekleme (Count üzerinde IsEmpty tercih et)
+- [CA2016: CancellationToken parametresini tek bir belge alan yöntemlere Iletme](/dotnet/fundamentals/code-analysis/quality-rules/ca2016) CA2016-CancellationToken parametresini bir tane alacak yöntemlere iletme
+- [CA2350: DataTable. ReadXml () girişinin güvenilir olduğundan emin olun](/dotnet/fundamentals/code-analysis/quality-rules/ca2350) -Ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri
+- [CA2351: DataSet. ReadXml () girişinin güvenilir olduğundan](/dotnet/fundamentals/code-analysis/quality-rules/ca2351) ve Ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri olduğundan emin olun
+- [CA2352: serileştirilebilir türdeki güvenli olmayan veri kümesi veya DataTable, uzaktan kod yürütme saldırılarına karşı savunmasız](/dotnet/fundamentals/code-analysis/quality-rules/ca2352) olabilir-Ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri
+- CA2353: Serializable tür-ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri için [güvenli olmayan veri kümesi veya DataTable](/dotnet/fundamentals/code-analysis/quality-rules/ca2353)
+- [CA2354: Serisi kaldırılan nesne grafiğinde güvenli olmayan veri kümesi veya DataTable, uzaktan kod yürütme saldırısında savunmasız](/dotnet/fundamentals/code-analysis/quality-rules/ca2354) olabilir-Ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri
+- [CA2355: Serisi kaldırılan nesne grafiğinde güvenli olmayan veri kümesi veya DataTable](/dotnet/fundamentals/code-analysis/quality-rules/ca2355) -Ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri
+- [CA2356: web serisi kaldırılan nesne grafiğinde güvenli olmayan veri kümesi veya DataTable türü,](/dotnet/fundamentals/code-analysis/quality-rules/ca2356) Ilk veri kümesi/DataTable serisini kaldırma kuralları belgeleri
 
 ### <a name="containers"></a>Kapsayıcılar
 
 **Yeni makaleler**
 
-- Kubernetes: YAML yapılandırması ile [Yerel Işlemi Kubernetes](../containers/configure-local-process-with-kubernetes.md) -yerel işlemle yapılandırma
-- [Kubernetes (Önizleme) Ile yerel Işlem kullanma](../containers/local-process-kubernetes.md) -dev Spaces geçişi
-- [Kubernetes ile Yerel İşlem nasıl çalışır?](../containers/overview-local-process-kubernetes.md)
+- Kubernetes: YAML yapılandırması ile [Yerel Işlemi Kubernetes](../containers/configure-bridge-to-kubernetes.md) -yerel işlemle yapılandırma
+- [Kubernetes (Önizleme) Ile yerel Işlem kullanma](../containers/bridge-to-kubernetes.md) -dev Spaces geçişi
+- [Kubernetes ile Yerel İşlem nasıl çalışır?](../containers/overview-bridge-to-kubernetes.md)
   - Kubernetes için yerel Işlem: yönlendirme ekleme bölümü
   - Geliştirme alanları geçişi
 
@@ -160,7 +160,7 @@ Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu konu, 2020 Eyl
 - [Değişiklik günlüğü (Unity için Visual Studio Araçları, Windows)](../cross-platform/change-log-visual-studio-tools-for-unity.md) -kabartma VSTU changelog 4.7.1.0
 - [Değişiklik günlüğü (Unity için Visual Studio Araçları, Mac)](../cross-platform/change-log-visual-studio-tools-for-unity-mac.md) -kabartma vstum changelog, 2.7.1.0
 
-### <a name="get-started"></a>başlarken
+### <a name="get-started"></a>Kullanmaya başlayın
 
 **Yeni makaleler**
 

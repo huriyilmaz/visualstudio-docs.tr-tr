@@ -10,12 +10,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: af52761f5cb199c7f842d01589c35501898b09aa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 47aa5a328f158d890908bf1ddcb69a838ad1ed66
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79094599"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659387"
 ---
 # <a name="refactoring-to-convert-between-a-for-loop-and-a-foreach-statement"></a>For döngüsü ve foreach ifadesi arasında dönüştürmek için yeniden düzenleme
 
@@ -83,7 +83,7 @@ Bu yeniden düzenleme için geçerlidir:
 1. Yeniden düzenleme yeni bir yineleme sayısı değişkeni tanıtıldığı için, düzenleyicinin sağ üst köşesinde **Yeniden Adlandır** kutusu görünür. Değişken için farklı bir ad seçmek istiyorsanız, yazın ve **ENTER tuşuna basın** veya **Yeniden Adlandır** kutusuna **Uygula** ' yı seçin. Yeni bir ad seçmek istemiyorsanız, **ESC** tuşuna basın veya **Yeniden Adlandır** kutusunu kapatmak için **Uygula** ' yı seçin.
 
 > [!NOTE]
-> C# için, bu yeniden düzenlemeler tarafından oluşturulan kod, koleksiyondaki öğelerin türü için açık bir tür ya da [var](/dotnet/csharp/language-reference/keywords/var) kullanır. Oluşturulan koddaki tür açık veya örtük, kapsamdaki kod stili ayarlarına bağlıdır. Bu özel kod stili ayarları, **Araçlar**  >  **Seçenekler**  >  **metin düzenleyici**  >  **C#**  >  **kod stili**  >  **genel**  >  ** \' var ' tercihleri**altında makine düzeyinde veya bir [editorconfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) dosyasındaki çözüm düzeyinde yapılandırılır. **Seçenekler**' de bir kod stili ayarını değiştirirseniz değişikliklerin etkili olması için kod dosyasını yeniden açın.
+> C# için, bu yeniden düzenlemeler tarafından oluşturulan kod, koleksiyondaki öğelerin türü için açık bir tür ya da [var](/dotnet/csharp/language-reference/keywords/var) kullanır. Oluşturulan koddaki tür açık veya örtük, kapsamdaki kod stili ayarlarına bağlıdır. Bu özel kod stili ayarları, **Araçlar**  >  **Seçenekler**  >  **metin düzenleyici**  >  **C#**  >  **kod stili**  >  **genel**  >  ** \' var ' tercihleri**altında makine düzeyinde veya bir [editorconfig](/dotnet/fundamentals/code-analysis/style-rules/language-rules#implicit-and-explicit-types) dosyasındaki çözüm düzeyinde yapılandırılır. **Seçenekler**' de bir kod stili ayarını değiştirirseniz değişikliklerin etkili olması için kod dosyasını yeniden açın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: f6cf9e1c3f0011a282048939a994e47b897a314b
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 23b50221845cf2b02b963c98f912a218a60630c6
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509945"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658418"
 ---
 # <a name="visual-studio-productivity-guide-for-c-developers"></a>C# geliştiricileri için Visual Studio üretkenlik Kılavuzu
 
@@ -52,7 +52,7 @@ Popüler Visual Studio kısayollarından bazıları aşağıda verilmiştir:
 | **CTRL** + **D** | Yinelenen satır | İmlecin bulunduğu kod satırını çoğaltır ( **Visual Studio 2017 sürüm 15,6** ve üzeri sürümlerde kullanılabilir) |
 | **SHIFT** + **Alt**+**+**/**-** | Genişlet/sözleşme seçimi | Düzenleyicideki geçerli seçimi genişletir veya sözleşmelerini ( **Visual Studio 2017 sürüm 15,5** ve üzeri sürümlerde bulunur) |
 | **SHIFT**  +  **Alt**  +  **.** | Sonraki eşleşen giriş Işaretini Ekle | Geçerli seçimle eşleşen bir sonraki konuma bir seçim ve giriş işareti ekler ( **Visual Studio 2017 sürüm 15,8** ve üzeri sürümlerde kullanılabilir) |
-| **CTRL** + **Soru-cevap** | Ara | Tüm Visual Studio ayarlarında ara |
+| **CTRL** + **Soru-cevap** | Arayın | Tüm Visual Studio ayarlarında ara |
 | **F5** | Hata ayıklamayı Başlat | Uygulamanızda hata ayıklamayı başlatma |
 | **CTRL** + **F5** | Hata ayıklama olmadan Çalıştır | Uygulamanızı hata ayıklama olmadan yerel olarak çalıştırma |
 | **CTRL** + **K**,**d** (varsayılan profil) veya **CTRL** + **E**,**D** (C# profili) | Belgeyi Biçimlendir | Yeni satır, Aralık ve girintileme ayarlarınıza göre dosyanızdaki biçimlendirme ihlallerini temizler |
@@ -101,7 +101,7 @@ Kodlama kurallarını birlikte kullanmak ve kaynak ile seyahat etmek için bir E
 
    ![Bir kod stili kuralının önem düzeyini doğrudan düzenleyicide yapılandırma](../ide/media/configure-severity-level.png)
 
-[.Net kodlama kuralı seçenekleri](editorconfig-code-style-settings-reference.md) belgelerine göz atın ve bu da tüm editorconfig dosyasına bir örnek içerir.
+[.Net kodlama kuralı seçenekleri](/dotnet/fundamentals/code-analysis/code-style-rule-options) belgelerine göz atın ve bu da tüm editorconfig dosyasına bir örnek içerir.
 
 ::: moniker range=">=vs-2019"
 
