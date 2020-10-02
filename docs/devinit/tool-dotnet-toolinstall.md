@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: cb19cab0c03b87894029a18f682f05def6a2197c
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 3877fd22efa69978c4e209b7fa23998dac7dc95e
+ms.sourcegitcommit: 036b0dfa651f7218ed33e6a19425613599ee58fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005547"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636692"
 ---
 # <a name="dotnet-toolinstall"></a>dotnet-toolinstall
 
@@ -34,7 +34,7 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 
 ### <a name="input"></a>Giriş
 
-`input`Özelliği, .NET Core aracı yüklemesini belirtmek için kullanılır. Adresinden resmi olmayan bir araç listesinde bulunur [https://github.com/natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) .
+`input`Özelliği, yüklenecek .NET Core aracını belirtmek için kullanılır. Adresinden resmi olmayan bir araç listesinde bulunur [https://github.com/natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) .
 
 ### <a name="additional-options"></a>Ek seçenekler
 
