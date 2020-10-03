@@ -1,5 +1,6 @@
 ---
 title: Grafik tanılama | Microsoft Docs
+description: Visual Studio Grafik Tanılama giriş.
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,15 +12,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e69d88bb5764836d82232cec26606009eaf694d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 829c51c0e2020a154dc485dbfc4db25e0b399e57
+ms.sourcegitcommit: a1cb4e2025045c2ad79167645c4c0f33b94b1152
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73187741"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671385"
 ---
 # <a name="visual-studio-graphics-diagnostics"></a>Visual Studio Grafik Tanılama
-Visual Studio*Grafik tanılama* , Direct3D uygulamalarında işleme ve performans sorunlarını kaydetmek ve analiz etmek için bir araç kümesidir. Grafik Tanılama, Windows bilgisayarınızda, Windows cihaz öykünücüsünde veya uzak bir bılgısayarda veya cihazda yerel olarak çalışan uygulamalarda kullanılabilir.
+>[!NOTE]
+> Visual Studio, DirectX 12 oyunları için Windows 'ta PıX önerir. [Windows üzerinde PIX](https://aka.ms/PIXonWindows) , DirectX 12 ' nin tam olarak desteklediği bir performans ayarlama ve hata ayıklama aracıdır. [Daha fazla bilgi edinin](visual-studio-graphics-diagnostics-directx-12.md) veya [buradan indirin](https://aka.ms/downloadPIX).
+
+Visual Studio *Grafik tanılama* , Direct3D uygulamalarında işleme ve performans sorunlarını kaydetmek ve analiz etmek için bir araç kümesidir. Grafik Tanılama, Windows bilgisayarınızda, Windows cihaz öykünücüsünde veya uzak bir bılgısayarda veya cihazda yerel olarak çalışan uygulamalarda kullanılabilir.
 
  Grafik Tanılama iş akışı, uygulamanızın daha sonra hemen, paylaşılan veya daha sonra çözümlenebilmesini sağlayacak şekilde Direct3D 'yi nasıl kullandığı gibi (canlı) bir kayıt yakalayarak başlar. Yakalama oturumları, Visual Studio 'dan veya komut satırı yakalama aracı **dxcap.exe**el ile başlatılabilir ve denetlenebilir. Yakalama oturumları Ayrıca, Grafik Tanılama yakalama API 'Leri kullanılarak programlı bir şekilde başlatılabilir ve denetlenebilir.
 
@@ -68,3 +72,4 @@ Visual Studio*Grafik tanılama* , Direct3D uygulamalarında işleme ve performan
 | - | - |
 | [Hata ayıklayıcı Özellik turu](../debugger-feature-tour.md) | İçindeki hata ayıklama işlevini tanıtır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . |
 | [DirectX grafik ve oyun](/windows/win32/directx) | DirectX grafik teknolojilerini tartışan makaleler sağlar. |
+| [Visual Studio 'da DirectX 12 desteği](visual-studio-graphics-diagnostics-directx-12.md) | Visual Studio 'da DirectX 12 desteği hakkında bilgi edinin |

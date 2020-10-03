@@ -1,5 +1,6 @@
 ---
 title: Grafik tanılama 'ya genel bakış | Microsoft Docs
+description: Visual Studio Grafik Tanılama için üst düzey genel bakış
 ms.custom: seodec18
 ms.date: 02/09/2017
 ms.topic: conceptual
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bf8cbcc699f015cae954400744d9bd724d70c57
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6f9193555ef3c9c69f494a78ac779a3724417f63
+ms.sourcegitcommit: a1cb4e2025045c2ad79167645c4c0f33b94b1152
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73187920"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671412"
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Visual Studio Grafik Tanılama’ya Genel Bakış
 Visual Studio *Grafik tanılama* , Direct3D uygulamalarında işleme ve performans sorunlarını kaydetmek ve analiz etmek için bir araç kümesidir. Grafik Tanılama, Windows bilgisayarınızda veya uzak bir bılgısayarda ya da cihazda yerel olarak çalışan uygulamalarda kullanılabilir.
@@ -27,6 +28,10 @@ Visual Studio *Grafik tanılama* , Direct3D uygulamalarında işleme ve performa
  Grafik Tanılama, Direct3D 10 veya üzerini kullanan uygulamaları destekler ve Direct2D kullanan uygulamalar için sınırlı destek sağlar. Direct3D, DirectDraw veya diğer grafik API'lerinin önceki sürümlerini kullanan uygulamaları desteklemez.
 
 ### <a name="windows-10-and-direct3d-12"></a>Windows 10 ve Direct3D 12
+> [!NOTE]
+> Visual Studio, DirectX 12 oyunları için Windows 'ta PıX önerir. [Windows üzerinde PIX](https://aka.ms/PIXonWindows) , DirectX 12 ' nin tam olarak desteklediği bir performans ayarlama ve hata ayıklama aracıdır. [Daha fazla bilgi edinin](visual-studio-graphics-diagnostics-directx-12.md) veya [buradan indirin](https://aka.ms/downloadPIX).
+
+
  Windows 10, Direct3D 10 ve Direct3D 11 ' den önemli ölçüde farklı olan *Direct3D 12*' yi sunmuştur. Bu farklılıklar, DirectX 'i modern grafik donanımı ile hizalı hale getirir ve tam potansiyelini açığa çıkarır, ancak büyük API değişikliklerini de getirir ve kaynak yaşam sürelerini ve çekişmeyi yönetmek için programcıya daha fazla sorumluluk yerleştirir. Farklılıklara, Direct3D 12 ile Grafik Tanılama, Direct3D 11,2 ile Grafik Tanılama özellik eşliği sağlar.
 
  Windows 10 Ayrıca, Direct3D 'nin önceki sürümleri ve bunlara dayanan Oyunlar ve uygulamalar için destek sağlar. Visual Studio 'daki Grafik Tanılama, Windows 10 ' da Direct3D 10 ve Direct3D 11 ' i desteklemeye devam etmektedir.
