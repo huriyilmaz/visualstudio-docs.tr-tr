@@ -2,6 +2,8 @@
   href: visual-studio-graphics-diagnostics.md
 - name: Visual Studio Grafik Tanılama’ya Genel Bakış
   href: overview-of-visual-studio-graphics-diagnostics.md
+- name: Visual Studio’da DirectX12 Desteği
+  href: visual-studio-graphics-diagnostics-directx-12.md
 - name: Visual Studio Grafik Tanılama’ya Başlarken
   href: getting-started-with-visual-studio-graphics-diagnostics.md
 - name: Grafik Bilgilerini Yakalama
