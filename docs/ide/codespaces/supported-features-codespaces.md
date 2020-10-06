@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: c86fc99fe6bd2ae17b6ce222b04549db07d7687e
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: eee21ca84acdcf5bbf774232d8d23ceda954b730
+ms.sourcegitcommit: 503f82045b9236d457b79712cd71405d4a62a53d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90862272"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91749511"
 ---
 # <a name="supported-visual-studio-features-preview"></a>Desteklenen Visual Studio özellikleri (Önizleme)
 
@@ -42,15 +42,15 @@ IntelliSense, kod gezintisi, Tanılamalar ve öneriler gibi akıllı dil özelli
 * Söz dizimi vurgulama
 * Hızlı bilgi *
 * HTML, CSS, Razor düzenleyicileri *-kısmi destek.
-* JavaScript Düzenleyicisi *-kısmi destek.
+* JavaScript ve TypeScript Düzenleyicisi *-kısmi destek.
 
 Henüz kullanılabilir değil:
 
 * IntelliSense *-bazı otomatik tamamlama/üye listesi filtreleri kullanılamıyor. İçeri aktarılmayan türler için tamamlama ve Gözcü penceresinde IntelliSense henüz kullanılamıyor.
-* Kod gezintisi *-çoğu komut desteklenir, özellikle de yol belirtimine sahip dosyalardaki taban ve bulma özelliği henüz desteklenmiyor.
+* Kod gezintisi *-çoğu komut desteklenir. Yola git ve yol belirtimine sahip dosyalarda bul henüz desteklenmiyor.
 * Hızlı bilgi *-hızlı Info 'da renklendirme desteklenmez.
 * HTML, CSS, Razor düzenleyicileri *-tanılama, IntelliSense tamamlama, hızlı bilgi, akıllı girinti. Şu anda anlam renklendirme, gezinme komutları vb. için destek yoktur.
-* JavaScript Düzenleyicisi *-betik blokları (örneğin, HTML ve CSHTML dosyalarındaki JavaScript içeriği) ve anlam vurgulama henüz desteklenmemektedir. Ampul özellikleriyle ilgili bilinen sorunlar ve Özellikler.
+* JavaScript ve TypeScript Düzenleyicisi *-betik blokları (örneğin, HTML ve CSHTML dosyalarındaki JavaScript içeriği) ve anlam vurgulama henüz desteklenmemektedir. Ampul özellikleriyle ilgili bilinen sorunlar ve Özellikler.
 * CMake hedefleri görünümü
 * CMake proje ayarları Düzenleyicisi
 * Ctrl + F7 (dosyayı Derle)
@@ -72,7 +72,7 @@ Henüz kullanılabilir değil:
 
 Henüz kullanılabilir değil:
 
-* UI tasarımcıları-WinForms ve WPF tasarımcıları
+* UI tasarımcıları-WinForms, WPF ve kaynak tasarımcıları
 * Visual Basic ve F # projeleri
 * Hedeflenen projeleri .NET Framework
 * Docker Compose projeleri
