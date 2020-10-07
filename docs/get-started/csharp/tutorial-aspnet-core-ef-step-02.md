@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 1d382e83aa9672cfdcbdca64b89be79d090f2aac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6852ac1148c9a8001476eb9bb68e9e97d66e3eed
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77580080"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91780992"
 ---
 # <a name="step-2-create-your-first-aspnet-core-web-app"></a>2. Adım: ilk ASP.NET Core Web uygulamanızı oluşturma
 
@@ -54,7 +54,7 @@ Sağ taraftaki Çözüm Gezgini penceresinde, yeni projenin içeriğini görebil
 
 *Sayfalar* klasörü, sitenin Razor Pages barındırır. Varsayılan şablon, uygulama giriş sayfası olan *Index. cshtml* sayfası ve hakkında, ilgili olarak, vb. dahil olmak üzere çeşitli sayfalar sağlar.
 
-### <a name="appsettingsjson"></a>Üzerinde appsettings.js
+### <a name="appsettingsjson"></a>appsettings.json
 
 Bu dosya, JSON biçiminde site için yapılandırma ayarlarını barındırır.
 
@@ -100,7 +100,7 @@ Uygulamayı yeniden çalıştırın. Sayfanın şimdi geçerli saati görüntül
 
 Bir `OnGet` değer atadığımızda yöntemine bir kesme noktası ekleyin `Time` ve bu kez uygulamada hata ayıklamayı başlatın.
 
-Yürütme satırda duraklar ve `DateTime.Today` tarihi de içerir, ancak saat verisi içermediğinden saat her zaman gece yarısı olur. 
+Yürütme satırda duraklar ve `DateTime.Today` tarihi de içerir, ancak saat verisi içermediğinden saat her zaman gece yarısı olur.
 
 ![Visual Studio 2019 ASP.NET Core tarayıcıda proje](media/vs-2019/vs2019-breakpoint.png)
 
@@ -128,4 +128,4 @@ Bir sonraki videoda, uygulamanıza veri desteği eklemeyi öğreneceksiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: ASP.NET Core bir Razor Pages Web uygulaması oluşturma](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1)
+- [Öğretici: ASP.NET Core bir Razor Pages Web uygulaması oluşturma](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1&preserve-view=true)

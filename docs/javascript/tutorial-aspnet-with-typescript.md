@@ -11,16 +11,16 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: e8a12c16c4c53ab2d0850bf5b768488160fa729a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 58e3557d260b821055c533fc703a1f47949c5bfb
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87453692"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91781052"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Öğretici: Visual Studio 'da TypeScript ile ASP.NET Core uygulaması oluşturma
 
-Visual Studio geliştirme ASP.NET Core ve TypeScript için bu öğreticide, basit bir Web uygulaması oluşturun, bazı TypeScript kodu ekleyin ve ardından uygulamayı çalıştırın. 
+Visual Studio geliştirme ASP.NET Core ve TypeScript için bu öğreticide, basit bir Web uygulaması oluşturun, bazı TypeScript kodu ekleyin ve ardından uygulamayı çalıştırın.
 
 ::: moniker range="vs-2017"
 
@@ -219,7 +219,7 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
 1. Projenize bir dosya eklemek için [NPM paket yönetiminde](../javascript/npm-package-management.md#aspnet-core-projects) yönergeleri izleyin `package.json` . Bu, projenize NPM desteği ekler.
 
    >[!NOTE]
-   > ASP.NET Core projeleri için, istemci tarafı JavaScript ve CSS dosyalarını yüklemek üzere NPM yerine [Kitaplık Yöneticisi](https://docs.microsoft.com/aspnet/core/client-side/libman/?view=aspnetcore-3.1) 'ni veya Yarn 'yi de kullanabilirsiniz.
+   > ASP.NET Core projeleri için, istemci tarafı JavaScript ve CSS dosyalarını yüklemek üzere NPM yerine [Kitaplık Yöneticisi](https://docs.microsoft.com/aspnet/core/client-side/libman/?view=aspnetcore-3.1&preserve-view=true) 'ni veya Yarn 'yi de kullanabilirsiniz.
 
 1. Bu örnekte, projenize jQuery için bir TypeScript tanım dosyası ekleyin. *package.js* dosyasına aşağıdakini ekleyin.
 

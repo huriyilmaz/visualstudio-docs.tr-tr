@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87f06746901baaaf14f91032f8968a0d99fc20c2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e02900c96991a402d7ea7b789a47f8f2dea447c3
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595455"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91781012"
 ---
 # <a name="secure-applications"></a>Uygulamaları güvenli hale getirme
 
@@ -43,6 +43,6 @@ Güvenlik Ayrıca derleme sürecinde önemli bir noktadır. Birkaç ek adım, da
 - [.NET içinde güvenlik](/dotnet/standard/security/index)
 - [Azure güvenliği](/azure/security/)
 - [Windows 10 Mobile Güvenlik Kılavuzu](/windows/security/threat-protection/windows-10-mobile-security-guide)
-- [Apache Cordova platformu güvenlik özellikleri](/visualstudio/cross-platform/tools-for-cordova/security/best-practices?view=toolsforcordova-2017)
-- [ASP.NET Core güvenliği](/aspnet/core/security/?view=aspnetcore-2.1)
+- [Apache Cordova platformu güvenlik özellikleri](/visualstudio/cross-platform/tools-for-cordova/security/best-practices?view=toolsforcordova-2017&preserve-view=true)
+- [ASP.NET Core güvenliği](/aspnet/core/security/?view=aspnetcore-2.1&preserve-view=true)
 - [Windows Forms güvenliği](/dotnet/framework/winforms/windows-forms-security)

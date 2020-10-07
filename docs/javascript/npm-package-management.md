@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 1269049adad3fe2d26caa79721452f7f313e60d5
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: fed525f62466d096aa7868cc57c7fd7c75bf46f8
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90739908"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91781027"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>Visual Studio 'da NPM paketlerini yönetme
 
@@ -126,7 +126,7 @@ ASP.NET Core projeleri gibi projeler için, projenizde NPM desteğini tümleşti
 * [package.jskullanarak paket yüklemesi](#npmInstallPackage)
 
 >[!NOTE]
-> ASP.NET Core projeleri için, istemci tarafı JavaScript ve CSS dosyalarını yüklemek üzere NPM yerine [Kitaplık Yöneticisi](/aspnet/core/client-side/libman/?view=aspnetcore-3.1) 'ni veya Yarn 'yi de kullanabilirsiniz.
+> ASP.NET Core projeleri için, istemci tarafı JavaScript ve CSS dosyalarını yüklemek üzere NPM yerine [Kitaplık Yöneticisi](/aspnet/core/client-side/libman/?view=aspnetcore-3.1&preserve-view=true) 'ni veya Yarn 'yi de kullanabilirsiniz.
 
 ### <a name="add-npm-support-to-a-project-aspnet-core"></a><a name="npmAdd"></a> Bir projeye NPM desteği ekleme (ASP.NET Core)
 
@@ -164,7 +164,7 @@ NPM 'nin dahil olduğu projeler için kullanarak NPM paketlerini yapılandırabi
 
 *Üzerindepackage.js* IntelliSense, NPM paketinin belirli bir sürümünü seçmenize yardımcı olur.
 
-:::image type="content" source="../javascript/media/npm-add-package-intellisense.png" alt-text="NPM paket sürümünü seçin" border="true":::
+:::image type="content" source="../javascript/media/npm-add-package-intellisense.png" alt-text="Çözüm Gezgini 'nden yeni NPM paketi 'ni yükler" border="true":::
 
 Dosyayı kaydettiğinizde, Visual Studio Paketi Çözüm Gezgini içindeki **Dependencies/NPM** düğümüne ekler. Düğümü görmüyorsanız, ** üzerindepackage.js** sağ tıklayın ve **paketleri geri yükle**' yi seçin.
 

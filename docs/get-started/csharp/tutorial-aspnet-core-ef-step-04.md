@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 5ea9468bdf86986ab542fb1cabc873c9aeb75fd6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a2ee576808698e19726cadfea7ba560ce3bdb7c
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77580044"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91780932"
 ---
 # <a name="step-4-expose-a-web-api-from-your-aspnet-core-app"></a>4. Adım: ASP.NET Core uygulamanızdan bir Web API 'SI kullanıma sunma
 
@@ -208,7 +208,7 @@ Ardından, aşağıdaki `Configure` yöntemi yöntemine ekleyin `UseMvc` :
 // Enable middleware to serve generated Swagger as a JSON endpoint.
 app.UseSwagger();
 
-// Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), 
+// Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
 // specifying the Swagger JSON endpoint.
 app.UseSwaggerUI(c =>
 {
@@ -216,7 +216,7 @@ app.UseSwaggerUI(c =>
 });
 ```
 
-Artık uygulamanızı derleyip çalıştırabilmelisiniz. Tarayıcıda, adres çubuğunda öğesine gidin `/swagger` . Uygulamanızın API uç noktaları ve modellerinin bir listesini görmeniz gerekir. 
+Artık uygulamanızı derleyip çalıştırabilmelisiniz. Tarayıcıda, adres çubuğunda öğesine gidin `/swagger` . Uygulamanızın API uç noktaları ve modellerinin bir listesini görmeniz gerekir.
 
 ![Visual Studio 2019 Swagger sayfası tarayıcıda](media/vs-2019/vs2019-swagger-browser.png)
 
@@ -230,5 +230,5 @@ Bir sonraki videoda, uygulamanızı Azure 'a dağıtmayı öğreneceksiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Swashbuckle ve ASP.NET Core kullanmaya başlama](/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-2.2&tabs=visual-studio)
-- [Swagger/Openapı ile Web API Yardım sayfaları ASP.NET Core](/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-2.2)
+- [Swashbuckle ve ASP.NET Core kullanmaya başlama](/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-2.2&tabs=visual-studio&preserve-view=true)
+- [Swagger/Openapı ile Web API Yardım sayfaları ASP.NET Core](/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-2.2&preserve-view=true)

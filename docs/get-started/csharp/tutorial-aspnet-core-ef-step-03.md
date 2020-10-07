@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 42bc0442dc5901f92fc8a83b7af41c1fc42f4be4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d01d991daf5c24c02b8cd4976663a9399b251cc
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250799"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91780963"
 ---
 # <a name="step-3-work-with-data-using-entity-framework"></a>3. Adım: Entity Framework kullanarak verilerle çalışma
 
@@ -79,7 +79,7 @@ services.AddDbContext<AppDbContext>(options =>
 
 Ayrıca, `AppDbContext` bağlantı dizesinin dosyanın dosyadaki *appsettings.js* eklendiğini de bulabilirsiniz.
 
-Uygulamayı şimdi çalıştırırsanız, henüz veritabanı oluşturulmadığından başarısız olabilir. [Program.cs 'e kod ekleyerek](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio#update-main)uygulamayı otomatik olarak veritabanını oluşturacak şekilde yapılandırabilirsiniz:
+Uygulamayı şimdi çalıştırırsanız, henüz veritabanı oluşturulmadığından başarısız olabilir. [Program.cs 'e kod ekleyerek](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio&preserve-view=true#update-main)uygulamayı otomatik olarak veritabanını oluşturacak şekilde yapılandırabilirsiniz:
 
 ```csharp
 public static void Main(string[] args)
@@ -135,5 +135,5 @@ Bir sonraki videoda, uygulamanıza Web API desteğinin nasıl ekleneceğini öğ
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ASP.NET Core Entity Framework Core ile Razor Pages](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio)
-- [EF Core ile Razor Pages ASP.NET Core](/aspnet/core/data/?view=aspnetcore-2.1)
+- [ASP.NET Core Entity Framework Core ile Razor Pages](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio&preserve-view=true)
+- [EF Core ile Razor Pages ASP.NET Core](/aspnet/core/data/?view=aspnetcore-2.1&preserve-view=true)
