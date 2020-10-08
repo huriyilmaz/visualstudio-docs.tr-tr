@@ -523,7 +523,7 @@
               href: ide/create-portable-custom-editor-options.md
             - name: C++ EditorConfig biçimlendirme kuralları
               href: ide/cpp-editorconfig-properties.md
-            - name: .NET kodlama kuralları
+            - name: .NET kodlama kuralları >>
               href: /dotnet/fundamentals/code-analysis/code-style-rule-options
         - name: Kaydırma çubuğunu özelleştirme
           href: ide/how-to-track-your-code-by-customizing-the-scrollbar.md

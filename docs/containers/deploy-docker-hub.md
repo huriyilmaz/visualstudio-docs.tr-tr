@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.date: 07/23/2019
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 2a6db2771525010d73fdeeea12ff4aebd99a1bd2
-ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
+ms.openlocfilehash: 5bbdbffa9de9ac7789495249d3e7bfb0a8d65377
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89485144"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829892"
 ---
 # <a name="deploy-to-docker-hub"></a>Docker Hub’a dağıtma
 
@@ -40,7 +40,7 @@ Docker Hub deponuz yoksa, [Docker Hub](https://hub.docker.com/)'da bir tane olu�
 
    ![Docker Hub iletişim kutusunun ekran görüntüsü](media/deploy-docker-hub/container-tools-docker-hub-credentials.png)
 
-1. Kendi deponuza bağlanıyorsanız (bir kuruluşun parçası değil), **kişisel bir depoda yayımlama** onay kutusunu işaretli olarak bırakın. Deponun sahibi bir kuruluşa aitse, onay kutusunu temizleyin ve kuruluş adını girin. Docker hesabınız için, bağlandığınız depoya erişim izni olan Docker Kullanıcı adınızı ve parolanızı girin ve ardından **Kaydet**' i seçin.  
+1. Kendi deponuza bağlanıyorsanız (bir kuruluşun parçası değil), **kişisel bir depoda yayımlama** onay kutusunu işaretli olarak bırakın. Deponun sahibi bir kuruluşa aitse, onay kutusunu temizleyin ve kuruluş adını girin. Docker hesabınız için, bağlandığınız depoya erişim izni olan Docker Kullanıcı adınızı ve parolanızı girin ve ardından **Kaydet**' i seçin.
 
    Visual Studio görüntünüzü Docker Hub 'ına dağıtmaya çalışır.  Başarılı olursa, **Yayımla** ekranı depo görüntüsü, resim etiketi, depo ve derleme yapılandırması (örneğin, **Sürüm**) için URL ile birlikte görüntülenir.
 
@@ -52,7 +52,7 @@ Docker Hub deponuz yoksa, [Docker Hub](https://hub.docker.com/)'da bir tane olu�
 
 [Azure Container Registry dağıtım](hosting-web-apps-in-docker.md)konumundaki adımları izleyerek [Azure Container Registry](/azure/container-registry/) yayımlayın.
 
-[Azure Pipelines](/azure/devops/pipelines/?view=azure-devops)ile sürekli tümleştirme ve teslım (CI/CD) ayarlayın.
+[Azure Pipelines](/azure/devops/pipelines/?view=azure-devops&preserve-view=true)ile sürekli tümleştirme ve teslım (CI/CD) ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

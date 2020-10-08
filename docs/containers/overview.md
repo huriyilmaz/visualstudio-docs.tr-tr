@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.topic: overview
 ms.date: 03/20/2019
 ms.technology: vs-azure
-ms.openlocfilehash: 0d5859016a02de259c24c213c6cfef8cb5fce005
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1473c731dbf9413cf695e1b2331039c3880b8d7
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75916561"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829876"
 ---
 # <a name="container-tools-in-visual-studio"></a>Visual Studio’da Kapsayıcı Araçları
 
@@ -29,7 +29,7 @@ Kapsayıcılarla geliştirmeye yönelik Visual Studio 'ya dahil olan araçların
 
 Docker desteği ASP.NET projeleri, ASP.NET Core projeleri ve .NET Core ve .NET Framework konsol projeleri için kullanılabilir.
 
-Visual Studio 'da Docker desteği, müşteri ihtiyaçlarına yanıt olarak bir dizi yayın üzerinden değişmiştir. Bir projeye ekleyebileceğiniz iki farklı Docker desteği düzeyi vardır ve desteklenen seçenekler proje türüne ve Visual Studio sürümüne göre farklılık gösterir. Desteklenen bazı proje türleriyle, tek bir proje için düzenleme kullanmadan yalnızca bir kapsayıcı istiyorsanız, bunu Docker desteği ekleyerek yapabilirsiniz.  Bir sonraki düzey, seçtiğiniz belirli bir Orchestrator için uygun destek dosyaları ekleyen kapsayıcı düzenleme destedir.  
+Visual Studio 'da Docker desteği, müşteri ihtiyaçlarına yanıt olarak bir dizi yayın üzerinden değişmiştir. Bir projeye ekleyebileceğiniz iki farklı Docker desteği düzeyi vardır ve desteklenen seçenekler proje türüne ve Visual Studio sürümüne göre farklılık gösterir. Desteklenen bazı proje türleriyle, tek bir proje için düzenleme kullanmadan yalnızca bir kapsayıcı istiyorsanız, bunu Docker desteği ekleyerek yapabilirsiniz.  Bir sonraki düzey, seçtiğiniz belirli bir Orchestrator için uygun destek dosyaları ekleyen kapsayıcı düzenleme destedir.
 
 Visual Studio 2017 ile Docker Compose ve Service Fabric kapsayıcı düzenleme hizmetleri olarak kullanabilirsiniz.  Ayrıca, [Kubernetes için Visual Studio Araçları](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-tools-for-kubernetes)yüklerseniz Kubernetes de kullanabilirsiniz.
 
@@ -51,7 +51,7 @@ Visual Studio 2017 ile Docker Compose ve Service Fabric kapsayıcı düzenleme h
 
 Docker desteği ASP.NET projeleri, ASP.NET Core projeleri ve .NET Core ve .NET Framework konsol projeleri için kullanılabilir.
 
-Visual Studio 'da Docker desteği, müşteri ihtiyaçlarına yanıt olarak bir dizi yayın üzerinden değişmiştir. Bir projeye ekleyebileceğiniz iki farklı Docker desteği düzeyi vardır ve desteklenen seçenekler proje türüne ve Visual Studio sürümüne göre farklılık gösterir. Desteklenen bazı proje türleriyle, tek bir proje için düzenleme kullanmadan yalnızca bir kapsayıcı istiyorsanız, bunu Docker desteği ekleyerek yapabilirsiniz.  Bir sonraki düzey, seçtiğiniz belirli bir Orchestrator için uygun destek dosyaları ekleyen kapsayıcı düzenleme destedir.  
+Visual Studio 'da Docker desteği, müşteri ihtiyaçlarına yanıt olarak bir dizi yayın üzerinden değişmiştir. Bir projeye ekleyebileceğiniz iki farklı Docker desteği düzeyi vardır ve desteklenen seçenekler proje türüne ve Visual Studio sürümüne göre farklılık gösterir. Desteklenen bazı proje türleriyle, tek bir proje için düzenleme kullanmadan yalnızca bir kapsayıcı istiyorsanız, bunu Docker desteği ekleyerek yapabilirsiniz.  Bir sonraki düzey, seçtiğiniz belirli bir Orchestrator için uygun destek dosyaları ekleyen kapsayıcı düzenleme destedir.
 
 Visual Studio 2019 ile Docker Compose, Kubernetes ve Service Fabric kapsayıcı düzenleme hizmetleri olarak kullanabilirsiniz.
 
@@ -140,11 +140,11 @@ Azure Service Fabric hakkında daha fazla bilgi için bkz. [Service Fabric](/azu
 
 ## <a name="continuous-delivery-and-continuous-integration-cicd"></a>Sürekli teslim ve sürekli tümleştirme (CI/CD)
 
-Visual Studio, otomatik ve sürekli tümleştirme ve hizmet kodunuzda ve yapılandırmanızda yapılan değişikliklerin teslimi için Azure Pipelines ile tümleşir. Başlamak için bkz. [ilk işlem hattınızı oluşturma](/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=tfs-2018-2).
+Visual Studio, otomatik ve sürekli tümleştirme ve hizmet kodunuzda ve yapılandırmanızda yapılan değişikliklerin teslimi için Azure Pipelines ile tümleşir. Başlamak için bkz. [ilk işlem hattınızı oluşturma](/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=tfs-2018-2&preserve-view=true).
 
 Service Fabric için bkz. [öğretici: ASP.NET Core uygulamanızı Azure 'A dağıtma Service Fabric Azure DevOps Projeleri kullanarak](/azure/devops-project/azure-devops-project-service-fabric).
 
-Kubernetes için bkz. [Azure Kubernetes hizmetine Docker kapsayıcı uygulaması dağıtma](/azure/devops/pipelines/apps/cd/deploy-aks?view=azure-devops).
+Kubernetes için bkz. [Azure Kubernetes hizmetine Docker kapsayıcı uygulaması dağıtma](/azure/devops/pipelines/apps/cd/deploy-aks?view=azure-devops&preserve-view=true).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
