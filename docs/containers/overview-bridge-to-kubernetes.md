@@ -1,5 +1,5 @@
 ---
-title: Kubernetes Köprüsü nasıl çalışacaktır?
+title: Bridge to Kubernetes’in işleyiş biçimi
 ms.technology: vs-azure
 ms.date: 06/02/2020
 ms.topic: conceptual
@@ -9,14 +9,14 @@ monikerRange: '>=vs-2019'
 manager: jillfra
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: fbb3cfe6453c68079cb4b4cc6b57f8494f45c0cc
-ms.sourcegitcommit: f9179a3a6d74fbd871f62b72491e70b9e7b05637
+ms.openlocfilehash: a224135e366c7a266defa525772dadf445208f3b
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90845894"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829889"
 ---
-# <a name="how-bridge-to-kubernetes-works"></a>Kubernetes Köprüsü nasıl çalışacaktır?
+# <a name="how-bridge-to-kubernetes-works"></a>Bridge to Kubernetes’in işleyiş biçimi
 
 Kubernetes Köprüsü, uygulamanızın veya hizmetlerinizin geri kalanı ile Kubernetes kümenize bağlı olmaya devam ederken geliştirme bilgisayarınızda kodu çalıştırmanızı ve hata ayıklamanıza olanak tanır. Örneğin, birbirine bağlı çok sayıda hizmet ve veritabanına sahip büyük bir mikro hizmet mimariniz varsa, bu bağımlılıkların geliştirme bilgisayarınızda çoğaltılması zor olabilir. Ayrıca, iç döngü geliştirme sırasında her kod değişikliği için Kubernetes kümenize kod oluşturup dağıtmak, bir hata ayıklayıcıyla yavaş, zaman alabilir ve kullanılması zor olabilir.
 
@@ -40,7 +40,7 @@ Kubernetes Köprüsü, kümenize bir bağlantı kurduğunda:
 * Küme üzerindeki Pod içindeki kapsayıcıyı, trafiği geliştirme bilgisayarınıza yönlendiren bir uzak Aracı kapsayıcısı ile değiştirir.
 * Geliştirme bilgisayarınızdan gelen trafiği kümenizde çalışan uzak aracıya iletmek için [kubectl bağlantı noktasını][kubectl-port-forward] geliştirme bilgisayarınızda ilet olarak çalıştırır.
 * Uzak aracıyı kullanarak kümenizdeki ortam bilgilerini toplar. Bu ortam bilgileri ortam değişkenlerini, görünür Hizmetleri, birim takmaları ve gizli takmaları içerir.
-* Geliştirme Bilgisayarınızdaki hizmetin, kümede çalışıyor gibi aynı değişkenlere erişebilmesi için Visual Studio 'da ortamı ayarlar.  
+* Geliştirme Bilgisayarınızdaki hizmetin, kümede çalışıyor gibi aynı değişkenlere erişebilmesi için Visual Studio 'da ortamı ayarlar.
 * Ana bilgisayar dosyanızı, kümenizdeki hizmetleri geliştirme bilgisayarınızda yerel IP adresleriyle eşlenecek şekilde güncelleştirir. Bu ana bilgisayar dosya girdileri, geliştirme bilgisayarınızda çalışan kodun kümenizde çalışan diğer hizmetlere istek yapmasına izin verir. Ana bilgisayar dosyanızı güncelleştirmek için, Kubernetes 'e olan köprü, kümenize bağlanırken geliştirme bilgisayarınızda yönetici erişimi ister.
 * Geliştirme bilgisayarınızda kodu çalıştırmaya ve hata ayıklamaya başlar. Gerekirse, Kubernetes 'e olan köprü, şu anda bu bağlantı noktalarını kullanan Hizmetleri veya süreçlerini durdurarak geliştirme bilgisayarınızda gerekli bağlantı noktalarını serbest bırakılır.
 
@@ -72,7 +72,7 @@ Yalıtımda çalışmayı etkinleştirdiğinizde Kubernetes Köprüsü, Kubernet
 Kubernetes Köprüsü, Kubernetes kümenizde Azure Dev Spaces etkinleştirildiğini algılarsa, Kubernetes için köprü kullanabilmeniz için Azure Dev Spaces önce devre dışı bırakmanız istenir.
 
 Yönlendirme Yöneticisi başlatıldığında şunları yapar:
-* Ad alanında bulunan tüm gelen verileri alt etki alanı için *GENERATED_NAME* kullanarak çoğaltır. 
+* Ad alanında bulunan tüm gelen verileri alt etki alanı için *GENERATED_NAME* kullanarak çoğaltır.
 * *GENERATED_NAME* alt etki alanı ile yinelenen giriş ile ilişkili her hizmet için bir haberci Pod oluşturur.
 * Yalıtım aşamasında çalıştığınız hizmet için ek bir haberci Pod oluşturur. Bu, alt etki alanı olan isteklerin geliştirme bilgisayarınıza yönlendirilmesine izin verir.
 * Her haberci pod için yönlendirme kurallarını, alt etki alanı ile hizmetlerin yönlendirilmesini işleyecek şekilde yapılandırır.
@@ -92,7 +92,7 @@ Kümede *GENERATED_NAME* alt etki alanı olmayan bir istek alındığında, iste
 > [!IMPORTANT]
 > Kümenizdeki her hizmet ek istekler yaparken *Kubernetes-Route-as = GENERATED_NAME* üst bilgisini iletmelidir. Örneğin, *Servicea* bir istek aldığında, yanıt döndürmeden önce *serviceb* 'ye bir istek yapar. Bu örnekte, *Servicea* 'nın isteğinde *Kubernetes-Route-as = GENERATED_NAME* üst bilgisini iletmesi *gerekir.* [ASP.net][asp-net-header]gibi bazı dillerin, üst bilgi yaymayı işleme yöntemlerine sahip olabilir.
 
-Kümenizin bağlantısını kestiğinizde, Kubernetes 'e olan köprü, tüm haberci Pod ve yinelenen hizmeti kaldırır. 
+Kümenizin bağlantısını kestiğinizde, Kubernetes 'e olan köprü, tüm haberci Pod ve yinelenen hizmeti kaldırır.
 
 > [!NOTE]
 > Yönlendirme Yöneticisi dağıtımı ve hizmeti, ad alanınız içinde çalışmaya devam edecektir. Dağıtımı ve hizmeti kaldırmak için, ad alanınız için aşağıdaki komutları çalıştırın.
@@ -126,7 +126,7 @@ Yerel geliştirme bilgisayarınıza kümenize bağlanmak için Kubernetes Köpr�
 [asp-net-header]: https://www.nuget.org/packages/Microsoft.AspNetCore.HeaderPropagation/
 [azds-cli]: /azure/dev-spaces/how-to/install-dev-spaces#install-the-client-side-tools
 [azds-tmp-dir]: /azure/dev-spaces/troubleshooting#before-you-begin
-[azure-cli]: /cli/azure/install-azure-cli?view=azure-cli-latest
+[azure-cli]: /cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true
 [bridge-to-kubernetes-vs]: bridge-to-kubernetes.md
 [kubectl-port-forward]: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#port-forward
 [visual-studio]: https://visualstudio.microsoft.com/downloads/

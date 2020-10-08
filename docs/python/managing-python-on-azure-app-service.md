@@ -11,12 +11,12 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 34fd56b37113467b7cbb2dfb8ac6fdba01b79cc6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f96e9123f613cf50eebbedd393f5bce9cfa633d2
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543760"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91830675"
 ---
 # <a name="how-to-set-up-a-python-environment-on-azure-app-service-windows"></a>Azure App Service (Windows) üzerinde Python ortamı ayarlama
 
@@ -211,4 +211,4 @@ Azure portal aracılığıyla kudu konsolunu kullanmak yerine, komutu ' e gönde
 
 Komutlar ve kimlik doğrulama hakkında daha fazla bilgi için bkz. [kudu belgeleri](https://github.com/projectkudu/kudu/wiki/REST-API).
 
-Ayrıca, `az webapp deployment list-publishing-profiles` Azure CLI aracılığıyla komutunu kullanarak kimlik bilgilerini görebilirsiniz (bkz. [az WebApp Deployment](/cli/azure/webapp/deployment?view=azure-cli-latest#az-webapp-deployment-list-publishing-profiles)). [GitHub](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42)'Da kudu komutlarının nakledilmesi için bir yardımcı kitaplık kullanılabilir.
+Ayrıca, `az webapp deployment list-publishing-profiles` Azure CLI aracılığıyla komutunu kullanarak kimlik bilgilerini görebilirsiniz (bkz. [az WebApp Deployment](/cli/azure/webapp/deployment?view=azure-cli-latest&preserve-view=true#az-webapp-deployment-list-publishing-profiles)). [GitHub](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42)'Da kudu komutlarının nakledilmesi için bir yardımcı kitaplık kullanılabilir.

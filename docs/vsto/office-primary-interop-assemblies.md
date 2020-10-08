@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f4677cd2d178781d79b11ac3b1010a76fd6fcf00
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 25dad2d4601974e70e80377e634d05b60523318e
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985710"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91830758"
 ---
 # <a name="office-primary-interop-assemblies"></a>Office birincil birlikte çalışma derlemeleri
 
@@ -100,15 +100,15 @@ Aşağıdaki tabloda, ve için kullanılabilen birincil birlikte çalışma derl
 |-------------------------------------|-----------------------------------|
 |Microsoft Access 14,0 nesne kitaplığı<br /><br /> Microsoft Access 15,0 nesne kitaplığı|Microsoft.Office.Interop.Access.dll|
 |Microsoft Office 14,0 Access Database Engine nesne kitaplığı<br /><br /> Microsoft Office 15,0 Access Database Engine nesne kitaplığı|Microsoft.Office.Interop.Access.Dao.dll|
-|Microsoft Excel 14,0 nesne kitaplığı<br /><br /> Microsoft Excel 15,0 nesne kitaplığı|[Microsoft.Office.Interop.Excel.dll](/dotnet/api/microsoft.office.interop.excel?view=excel-pia)|
+|Microsoft Excel 14,0 nesne kitaplığı<br /><br /> Microsoft Excel 15,0 nesne kitaplığı|[Microsoft.Office.Interop.Excel.dll](/dotnet/api/microsoft.office.interop.excel?view=excel-pia&preserve-view=true)|
 |Microsoft Graph 14,0 nesne kitaplığı (grafikler için PowerPoint, Access ve Word tarafından kullanılır)<br /><br /> Microsoft Graph 15,0 nesne kitaplığı|Microsoft.Office.Interop.Graph.dll|
-|Microsoft InfoPath 2,0 tür kitaplığı (yalnızca InfoPath 2007 için)|[Microsoft.Office.Interop.InfoPath.dll](/dotnet/api/microsoft.office.interop.infopath?view=infopath-form)|
+|Microsoft InfoPath 2,0 tür kitaplığı (yalnızca InfoPath 2007 için)|[Microsoft.Office.Interop.InfoPath.dll](/dotnet/api/microsoft.office.interop.infopath?view=infopath-form&preserve-view=true)|
 |Microsoft InfoPath XML birlikte çalışma derlemesi (yalnızca InfoPath 2007 için)|Microsoft.Office.Interop.InfoPath.Xml.dll|
 |Microsoft Office 14,0 nesne kitaplığı (Office paylaşılan işlevselliği)<br /><br /> Microsoft Office 15,0 nesne kitaplığı (Office paylaşılan işlevselliği)|office.dll|
 |Outlook Görünüm denetimini Microsoft Office (Web sayfalarınızda ve uygulamalarda, gelen kutunuza erişmek için kullanılabilir)|Microsoft.Office.Interop.OutlookViewCtl.dll|
-|Microsoft Outlook 14,0 nesne kitaplığı<br /><br /> Microsoft Outlook 15,0 nesne kitaplığı|[Microsoft.Office.Interop.Outlook.dll](/dotnet/api/microsoft.office.interop.outlook?view=outlook-pia)|
+|Microsoft Outlook 14,0 nesne kitaplığı<br /><br /> Microsoft Outlook 15,0 nesne kitaplığı|[Microsoft.Office.Interop.Outlook.dll](/dotnet/api/microsoft.office.interop.outlook?view=outlook-pia&preserve-view=true)|
 |Microsoft PowerPoint 14,0 nesne kitaplığı<br /><br /> Microsoft PowerPoint 15,0 nesne kitaplığı|Microsoft.Office.Interop.PowerPoint.dll|
-|Microsoft Project 14,0 nesne kitaplığı<br /><br /> Microsoft Project 15,0 nesne kitaplığı|[Microsoft.Office.Interop.MSProject.dll](/dotnet/api/microsoft.office.interop.msproject?view=office-project-server)|
+|Microsoft Project 14,0 nesne kitaplığı<br /><br /> Microsoft Project 15,0 nesne kitaplığı|[Microsoft.Office.Interop.MSProject.dll](/dotnet/api/microsoft.office.interop.msproject?view=office-project-server&preserve-view=true)|
 |Microsoft Publisher 14,0 nesne kitaplığı<br /><br /> Microsoft Publisher 15,0 nesne kitaplığı|Microsoft.Office.Interop.Publisher.dll|
 |Microsoft SharePoint Designer 14,0 Web nesnesi başvuru kitaplığı|Microsoft.Office.Interop.SharePointDesigner.dll|
 |Microsoft SharePoint Designer 14,0 sayfa nesne başvuru kitaplığı|Microsoft.Office.Interop.SharePointDesignerPage.dll|
@@ -116,7 +116,7 @@ Aşağıdaki tabloda, ve için kullanılabilen birincil birlikte çalışma derl
 |Microsoft Visio 14,0 tür kitaplığı<br /><br /> Microsoft Visio 15,0 tür kitaplığı|Microsoft.Office.Interop.Visio.dll|
 |Microsoft Visio 14,0 Web türü kitaplığı olarak kaydet<br /><br /> Microsoft Visio 15,0 Web türü kitaplığı olarak kaydet|Microsoft.Office.Interop.Visio.SaveAsWeb.dll|
 |Microsoft Visio 14,0 çizim denetim türü kitaplığı<br /><br /> Microsoft Visio 15,0 çizim denetim türü kitaplığı|Microsoft.Office.Interop.VisOcx.dll|
-|Microsoft Word 14,0 nesne kitaplığı<br /><br /> Microsoft Word 15,0 nesne kitaplığı|[Microsoft.Office.Interop.Word.dll](/dotnet/api/microsoft.office.interop.word?view=word-pia)|
+|Microsoft Word 14,0 nesne kitaplığı<br /><br /> Microsoft Word 15,0 nesne kitaplığı|[Microsoft.Office.Interop.Word.dll](/dotnet/api/microsoft.office.interop.word?view=word-pia&preserve-view=true)|
 |Microsoft Visual Basic for Applications genişletilebilirliği 5,3|Microsoft.Vbe.Interop.dll|
 
 ### <a name="binding-redirect-assemblies"></a>Bağlama yeniden yönlendirme derlemeleri

@@ -9,18 +9,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: 8130608f7f94efa279775f532e0022df2f2a7f1a
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 790e88edcd5d0d77e09cc349c82c242cd3da876d
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037679"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91830733"
 ---
 # <a name="publish-an-aspnet-core-app-to-app-service-on-linux-using-visual-studio"></a>Visual Studio kullanarak Linux 'ta App Service için ASP.NET Core uygulaması yayımlama
 
 Visual Studio 2017 sürüm 15,7 ' den başlayarak, aşağıdaki yöntemlerden birini kullanarak Linux Azure App Service Linux (kapsayıcılar kullanarak) ASP.NET Core uygulamalar yayımlayabilirsiniz.
 
-* Uygulamaların sürekli (veya otomatik) dağıtımı için [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops)Ile Azure DevOps kullanın.
+* Uygulamaların sürekli (veya otomatik) dağıtımı için [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops&preserve-view=true)Ile Azure DevOps kullanın.
 
 * Uygulamaların tek seferlik (veya el ile) dağıtımı için, Visual Studio 'daki **Yayımla** aracını kullanarak Linux için App Service ASP.NET Core uygulamalar yayımlayın (kapsayıcılar kullanarak).
 

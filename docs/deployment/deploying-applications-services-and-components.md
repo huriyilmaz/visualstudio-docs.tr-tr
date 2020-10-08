@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8eeb44d08f4b966bed4aef526c12263bdd1a2b77
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: 3a8301fcca5fd915b130477600ed9fe0b5b90f46
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641673"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91830770"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>Visual Studio 'da dağıtıma ilk bakış
 
@@ -50,7 +50,7 @@ Yerel bir klasöre dağıtım, genellikle test için veya son dağıtım için b
 
 - **ASP.net**, **ASP.NET Core**, **Python**ve **Node.js**: aşağıdaki yöntemlerden birini kullanarak Azure App Service veya Azure App Service Linux 'ta (kapsayıcılar kullanarak) yayımlayın.
 
-  - Uygulamaların sürekli (veya otomatik) dağıtımı için [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops)Ile Azure DevOps kullanın.
+  - Uygulamaların sürekli (veya otomatik) dağıtımı için [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops&preserve-view=true)Ile Azure DevOps kullanın.
 
   - Uygulamaların tek seferlik (veya el ile) dağıtımı için, Visual Studio 'da **Yayımla** aracını kullanın.
 
@@ -107,7 +107,7 @@ Bir cihazda test için UWP uygulaması dağıtıyorsanız bkz. [Visual Studio 'd
 
 - [WIX araç takımı Visual Studio 2017 uzantısı](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension)kullanılarak MSI tabanlı bir yükleyici paketi oluşturulabilir. Bu bir komut satırı araç takımıdır.
 
-- Esnek dönem yazılımından [InstallShield](https://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer/tab/requirements) KULLANıLARAK bir MSI veya exe yükleyici paketi oluşturulabilir. InstallShield, Visual Studio 2017 ve sonraki sürümlerle kullanılabilir (Community Edition desteklenmiyor). 
+- Esnek dönem yazılımından [InstallShield](https://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer/tab/requirements) KULLANıLARAK bir MSI veya exe yükleyici paketi oluşturulabilir. InstallShield, Visual Studio 2017 ve sonraki sürümlerle kullanılabilir (Community Edition desteklenmiyor).
 
   > [!NOTE]
   > InstallShield Limited Edition artık Visual Studio 'Ya dahil değildir ve Visual Studio 2017 ve sonraki sürümlerinde desteklenmez; gelecekteki kullanılabilirlik hakkında [Esnek dönem yazılımlarla](http://learn.flexerasoftware.com/content/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio) görüşün.
@@ -122,7 +122,7 @@ Uygulamalarınızı sanal ortamlara dağıtarak daha gelişmiş geliştirme ve t
 
 ## <a name="continuous-deployment"></a>Sürekli dağıtım
 
-Uygulamanızın sürekli dağıtımını etkinleştirmek için Azure Pipelines kullanabilirsiniz. Daha fazla bilgi için bkz. [Azure Pipelines](/azure/devops/pipelines/index?view=vsts) ve [Azure 'a dağıtma](/azure/devops/deploy-azure/index?view=vsts).
+Uygulamanızın sürekli dağıtımını etkinleştirmek için Azure Pipelines kullanabilirsiniz. Daha fazla bilgi için bkz. [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true) ve [Azure 'a dağıtma](/azure/devops/deploy-azure/index?view=vsts&preserve-view=true).
 
 ## <a name="deploy-a-sql-database"></a>SQL veritabanı dağıtma
 
