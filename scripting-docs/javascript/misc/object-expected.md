@@ -14,12 +14,12 @@ ms.assetid: 5d88c93d-e5b5-4b11-9bb5-bf1a5e41ccc3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 28eec125914f0207fbdf79a39ea2140dd74d6d0d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2a3b8510c92e15a5b1bf5e15bb774ba031f7181f
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816234"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862118"
 ---
 # <a name="object-expected"></a>Nesne bekleniyor
 Öğesinden farklı bir türün bir nesnesi üzerinde bir yöntem veya özellik çağırmaya çalıştınız `Object` veya bir tür bağımsız değişkenini, `Object` gerekli olduğu zaman dışında başka bir türde geçirtiniz `Object` .  
@@ -47,5 +47,5 @@ ms.locfileid: "85816234"
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Nesne nesnesi](../../javascript/reference/object-object-javascript.md)   
- [Nesneler ve Diziler](../../javascript/objects-and-arrays-javascript.md)
+ [Nesne nesnesi](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)   
+ [Nesneler ve Diziler](https://developer.mozilla.org/docs/Learn/JavaScript/Objects)

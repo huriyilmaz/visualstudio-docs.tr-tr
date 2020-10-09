@@ -14,12 +14,12 @@ ms.assetid: 59a030b0-a6c6-47f2-b90e-c0ed204d5116
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: da272529768f3227ce6e0ee3e0ebbf086140dd15
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 91e32971013d2dfcf0ee2dc901d84681522c7e89
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816130"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91861653"
 ---
 # <a name="conditional-compilation-is-turned-off"></a>Koşullu derleme kapalı
 Koşullu derleme değişkenini, önce koşullu derlemeyi açmadan kullanmaya çalıştınız. Koşullu derlemeyi açmak [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] derleyiciye, koşullu derleme değişkenleri olarak @ ile başlayan tanımlayıcıları yorumlamasını söyler. Bunu, koşullu kodunuzu ifadesiyle başlayarak yapabilirsiniz:  
@@ -37,8 +37,8 @@ Koşullu derleme değişkenini, önce koşullu derlemeyi açmadan kullanmaya ça
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Koşullu derleme](../../javascript/advanced/conditional-compilation-javascript.md)   
- [Koşullu derleme değişkenleri](../../javascript/advanced/conditional-compilation-variables-javascript.md)   
- [@cc_on Ekstre](../../javascript/reference/at-cc-on-statement-javascript.md)   
- [@if Ekstre](../../javascript/reference/at-if-statement-javascript.md)   
- [@set Ekstre](../../javascript/reference/at-set-statement-javascript.md)
+ [Koşullu derleme](/previous-versions/windows/internet-explorer/ie-developer/scripting-articles/121hztk3(v=vs.84))   
+ [Koşullu derleme değişkenleri](/previous-versions/windows/internet-explorer/ie-developer/scripting-articles/s59bkzce(v=vs.84))   
+ [@cc_on Ekstre](https://developer.mozilla.org/docs/Archive/Web/JavaScript/Microsoft_Extensions/at-cc-on)   
+ [@if Ekstre](https://developer.mozilla.org/docs/Archive/Web/JavaScript/Microsoft_Extensions/at-if)   
+ [@set Ekstre](https://developer.mozilla.org/docs/Archive/Web/JavaScript/Microsoft_Extensions/at-set)

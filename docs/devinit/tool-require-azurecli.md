@@ -11,16 +11,16 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: ad76f82a69356f4bbd40d189fb2d8e77a839b31f
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 22029dc101cd73fee3933c5c63587f2f7222e640
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005800"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860849"
 ---
 # <a name="require-azurecli"></a>require-azurecli
 
-Araç Azure CLI `require-azurecli` MSI aracılığıyla [Azure CLI](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest&preserve-view=true) 'yı yüklemek için kullanılır.
+Araç Azure CLI `require-azurecli` MSI aracılığıyla [Azure CLI](/cli/azure/?preserve-view=true&view=azure-cli-latest) 'yı yüklemek için kullanılır.
 
 ## <a name="usage"></a>Kullanım
 

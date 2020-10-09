@@ -7,17 +7,17 @@ ms.date: 11/03/2018
 ms.technology: vs-ide-install
 ms.assetid: 0E1EF257-9DE4-4653-9DF4-805CE007A1A1
 ms.topic: how-to
-ms.openlocfilehash: 6640a03523994b845d90f45ff6323126f462068a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aecc309cfd9bf4af59e10cda8b33e43bb5e75d7c
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950637"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862474"
 ---
 # <a name="install-a-preview-release"></a>Bir önizleme sürümünü yükleme
 
 > [!NOTE]
-> Mac için Visual Studio 2019 Önizleme [artık yükleme ve test için kullanılabilir](/visualstudio/mac/installation/?view=vsmac-2019) .
+> Mac için Visual Studio 2019 Önizleme [artık yükleme ve test için kullanılabilir](./installation.md?view=vsmac-2019) .
 
 ## <a name="install-an-update-for-visual-studio-for-mac"></a>Mac için Visual Studio için bir güncelleştirme yükler
 

@@ -11,16 +11,16 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: ef5de2d8358dae0f5f29b815cfa2dca26a3f1cef
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 401a14930c5405ebb05827768a7571e7aee1181e
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005178"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860709"
 ---
 # <a name="require-nuget"></a>require-nuget
 
-`require-nuget`NUGET CLI indirme ve yol değişkenine ekleme aracı. NuGet CLı, proje dosyalarında değişiklik yapmadan paketleri yüklemek, oluşturmak, yayımlamak ve yönetmek için NuGet işlevlerinin tam kapsamını sağlar. NuGet CLı hakkında [buradan](https://docs.microsoft.com/nuget/reference/nuget-exe-cli-reference)daha fazla bilgi edinin.
+`require-nuget`NUGET CLI indirme ve yol değişkenine ekleme aracı. NuGet CLı, proje dosyalarında değişiklik yapmadan paketleri yüklemek, oluşturmak, yayımlamak ve yönetmek için NuGet işlevlerinin tam kapsamını sağlar. NuGet CLı hakkında [buradan](/nuget/reference/nuget-exe-cli-reference)daha fazla bilgi edinin.
 
 ## <a name="usage"></a>Kullanım
 

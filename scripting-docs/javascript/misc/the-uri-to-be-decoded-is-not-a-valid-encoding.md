@@ -14,12 +14,12 @@ ms.assetid: 029e0790-ffd1-496d-8700-3b3dbac1b6fd
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 98d2ee08a52e86c435c58502da1ab4f68b594905
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 38ea642cece501804b6ee2efaac778c3b8d520fc
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816169"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91861868"
 ---
 # <a name="the-uri-to-be-decoded-is-not-a-valid-encoding"></a>Kodu çözülecek URI geçerli bir kodlamada değil
 Yanlış biçimlendirilmiş bir URI 'yi (Tekdüzen Kaynak tanımlayıcısı) çözmeye çalıştınız. URI 'Ler özel bir sözdizimine sahiptir; bir URI 'de kullanılmadan önce, alfasayısal olmayan çoğu karakter kodlanmalıdır. `encodeURI` `encodeURIComponent` Normal bir DIZEDEN bir URI oluşturmak için ve yöntemlerini kullanabilirsiniz [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] .  
@@ -37,5 +37,5 @@ Yanlış biçimlendirilmiş bir URI 'yi (Tekdüzen Kaynak tanımlayıcısı) ç�
 - Yalnızca geçerli URI 'Leri çözmeye çalışırken emin olun. Normal dizelerin kodunu çözemezsiniz [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] , çünkü bunlar geçersiz karakterler içeriyor olabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [decodeURI Işlevi](../../javascript/reference/decodeuri-function-javascript.md)   
- [decodeURIComponent İşlevi](../../javascript/reference/decodeuricomponent-function-javascript.md)
+ [decodeURI Işlevi](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/decodeuri)   
+ [decodeURIComponent İşlevi](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/decodeuricomponent)

@@ -15,12 +15,12 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 633ed9c37e8ccde0844205910a8fa2dc12d91414
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aa753a4ba3e0254ed7de026653759bbdcfce0631
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817625"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862321"
 ---
 # <a name="circular-reference-in-value-argument-not-supported"></a>Değer bağımsız değişkeninde döngüsel başvuru desteklenmez
 `JSON.stringify`Geçerli olmayan bir değerle Invoke yapılmaya çalışıldı. `value`Bağımsız değişken, bir dizi veya nesne, döngüsel bir başvuru içerir.  
@@ -43,6 +43,6 @@ var error = JSON.stringify(john);
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [JSON nesnesi](../../javascript/reference/json-object-javascript.md)   
- [JSON. Parse Işlevi](../../javascript/reference/json-parse-function-javascript.md)   
- [JavaScript Çalışma zamanı Hataları](../../javascript/reference/javascript-run-time-errors.md)
+ [JSON nesnesi](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON)   
+ [JSON. Parse Işlevi](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)   
+ [JavaScript Çalışma zamanı Hataları](/microsoft-edge/devtools-guide/console/error-and-status-codes#javascript-run-time-errors)

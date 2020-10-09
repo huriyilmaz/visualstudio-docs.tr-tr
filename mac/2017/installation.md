@@ -8,12 +8,12 @@ ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: decbdc244a7947b715b8ba5b27bda5aaf50d2266
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c494f8d8543e0aa51b0c2be0ee52c0cb80aba982
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950611"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862442"
 ---
 # <a name="install-visual-studio-2017-for-mac"></a>Mac için Visual Studio 2017 'yi yükler
 
@@ -68,7 +68,7 @@ Visual Studio 'da iOS ile çalışmaya yönelik olarak aşağıdaki parçalar ge
       - Tam platformlar arası Xamarin uygulamaları – **Android**, **IOS**ve **MacOS** platformları ' nı seçin.
    * **.NET Core uygulamaları** – **.NET Core** platformunu seçin.
    * **Web uygulamalarını ASP.NET Core** – **.NET Core** platformunu seçin.
-   * **Platformlar arası Unity oyun geliştirme** – Mac için Visual Studio dışında hiçbir ek platform yüklenmesi gerekmez. Unity uzantısını yükleme hakkında daha fazla bilgi için [Unity kurulum kılavuzuna](/visualstudio/mac/setup-vsmac-tools-unity) bakın.
+   * **Platformlar arası Unity oyun geliştirme** – Mac için Visual Studio dışında hiçbir ek platform yüklenmesi gerekmez. Unity uzantısını yükleme hakkında daha fazla bilgi için [Unity kurulum kılavuzuna](./setup-vsmac-tools-unity.md) bakın.
 
    Bu yükleme ekranında her bir bileşenin sürümü ve boyutu görüntülenir. Her bir bileşene tıklayarak bu bileşene ait bağımlılıkların bir listesini görüntüleyebilirsiniz (Android için), indirdiği ek paketler (.NET Core için) veya gerekli olan tüm ek uygulamaları (iOS ve macOS için) görüntüleyebilirsiniz:
 
@@ -120,7 +120,7 @@ Mac için Visual Studio yükleme, uygulamalarınız için kod yazmaya başlayabi
 
 ### <a name="net-core-apps-aspnet-core-web-apps-unity-game-development"></a>.NET Core Uygulamaları, ASP.NET Core Web Apps, Unity oyun geliştirme
 
-Diğer Iş yükleri için [Iş yükleri](/visualstudio/mac/workloads) sayfasına bakın.
+Diğer Iş yükleri için [Iş yükleri](./workloads.md) sayfasına bakın.
 
 ## <a name="related-video"></a>İlgili video
 

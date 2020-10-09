@@ -14,12 +14,12 @@ ms.assetid: c2608995-944e-4d35-8b7e-1cfe264d2458
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7ff759681ca3e4f48f264e00f9e376487dfe4d24
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 761e940ae6f88040bf5e24cd3a622a14261fa68e
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817313"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91861623"
 ---
 # <a name="expected-end"></a>' \@ End ' bekleniyor
 Koşullu koda derlenmiş bir kod bloğu oluşturmaya çalıştınız, ancak <strong>@end</strong> sonunda ifadesini içermiyordu. [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] deyimler bir blok içinde çevreleyerek koşullu olarak derlenebilir <strong>@if/@end</strong> .  
@@ -29,5 +29,5 @@ Koşullu koda derlenmiş bir kod bloğu oluşturmaya çalıştınız, ancak <str
 - Karşılık gelen <strong>@end</strong> ifadesini ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Koşullu derleme](../../javascript/advanced/conditional-compilation-javascript.md)   
- [Koşullu Derleme Değişkenleri](../../javascript/advanced/conditional-compilation-variables-javascript.md)
+ [Koşullu derleme](/previous-versions/windows/internet-explorer/ie-developer/scripting-articles/121hztk3(v=vs.84))   
+ [Koşullu Derleme Değişkenleri](/previous-versions/windows/internet-explorer/ie-developer/scripting-articles/s59bkzce(v=vs.84))

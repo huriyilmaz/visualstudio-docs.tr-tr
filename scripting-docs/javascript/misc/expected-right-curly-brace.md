@@ -14,12 +14,12 @@ ms.assetid: dff04495-9a6e-4604-9231-e40433fec152
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b34b44ed0bb1f1848ae37188aa642c6a4d2ce40e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 55f91202184561aff5d0865b326415b3910b99b6
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817079"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862121"
 ---
 # <a name="expected-"></a>'}' bekleniyor
 İşlev gövdesinin, döngüsünün, kod bloğunun veya nesne başlatıcısının sonunu işaretleyen sağ ayracı eklemeyin. Bu hataya örnek olarak, yalnızca sol küme ayracı döngü gövdesini işaretleyen bir **for** döngüsü olacaktır.  
@@ -29,5 +29,5 @@ ms.locfileid: "85817079"
 - İşlevin, döngünün, bloğun veya nesne başlatıcısının bitiğini işaretleyen sağ ayraç ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [İşlev nesnesi](../../javascript/reference/function-object-javascript.md)   
- [Program Akışı Denetimi](../../javascript/controlling-program-flow-javascript.md)
+ [İşlev nesnesi](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function)   
+ [Program Akışı Denetimi](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)

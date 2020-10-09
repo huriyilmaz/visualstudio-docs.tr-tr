@@ -12,12 +12,12 @@ ms.assetid: 3bc55336-912f-4ff8-8d28-1e26e0144840
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 995a286140464e58635bc485478bb570871f5e09
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: de5d26f810fc1ab46c5ef09112fd62fada5d7d9b
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816793"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862085"
 ---
 # <a name="operator-summary-javascript"></a>İşleç Özeti (JavaScript)
 Aşağıdaki tablolarda [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] ilgili kategorilerindeki işleçler listelenmektedir.  
@@ -26,60 +26,60 @@ Aşağıdaki tablolarda [!INCLUDE[javascript](../../javascript/includes/javascri
   
 |Operatör|Sembol|  
 |--------------|------------|  
-|[Toplama](../../javascript/reference/addition-operator-decrement-javascript.md)|+|  
-|[Azaltma](../../javascript/reference/increment-and-decrement-operators-javascript.md)|--|  
-|[Bölüm](../../javascript/reference/division-operator-decrement-javascript.md)|/|  
-|[Artış](../../javascript/reference/increment-and-decrement-operators-javascript.md)|++|  
-|[Kalan](../../javascript/reference/modulus-operator-decrementjavascript.md)|%|  
-|[Çarpma](../../javascript/reference/multiplication-operator-decrement-javascript.md)|*|  
-|[Çıkarma](../../javascript/reference/subtraction-operator-decrement-javascript.md)|-|  
-|[Tekli olumsuzlama](../../javascript/reference/subtraction-operator-decrement-javascript.md)|-|  
+|[Toplama](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|+|  
+|[Azaltma](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Increment)|--|  
+|[Bölüm](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|/|  
+|[Artış](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Increment)|++|  
+|[Kalan](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|%|  
+|[Çarpma](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|*|  
+|[Çıkarma](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|-|  
+|[Tekli olumsuzlama](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|-|  
   
 ## <a name="logical-operators"></a>Mantıksal İşleçler  
   
 |Operatör|Sembol|  
 |--------------|------------|  
-|[Virgül](../../javascript/reference/comma-operator-decrement-javascript.md)|,|  
-|[Koşullu (Üçlü)](../../javascript/reference/conditional-ternary-operator-decrement-javascript.md)|?:|  
-|[Eşitlik](../../javascript/reference/comparison-operators-javascript.md)|==|  
-|[Büyüktür](../../javascript/reference/comparison-operators-javascript.md)|>|  
-|[Büyük veya eşittir](../../javascript/reference/comparison-operators-javascript.md)|>=|  
-|[Kimlik](../../javascript/reference/comparison-operators-javascript.md)|===|  
-|[Eşitsizlik](../../javascript/reference/comparison-operators-javascript.md)|!=|  
-|[Küçüktür](../../javascript/reference/comparison-operators-javascript.md)|<|  
-|[Küçüktür veya eşittir](../../javascript/reference/comparison-operators-javascript.md)|<=|  
-|[Mantıksal AND](../../javascript/reference/logical-and-operator-decrement-javascript.md)|&&|  
-|[Mantıksal NOT](../../javascript/reference/logical-not-operator-decrement-exclpt-javascript.md)|!|  
-|[Mantıksal or](../../javascript/reference/logical-or-operator-decrement-javascript.md)|&#124;&#124;|  
-|[Nonidentity](../../javascript/reference/comparison-operators-javascript.md)|!==|  
+|[Virgül](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Comma_Operatorhttps://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Comma_Operator)|,|  
+|[Koşullu (Üçlü)](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)|?:|  
+|[Eşitlik](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|==|  
+|[Büyüktür](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|>|  
+|[Büyük veya eşittir](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|>=|  
+|[Kimlik](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|===|  
+|[Eşitsizlik](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|!=|  
+|[Küçüktür](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|<|  
+|[Küçüktür veya eşittir](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|<=|  
+|[Mantıksal AND](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|&&|  
+|[Mantıksal NOT](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|!|  
+|[Mantıksal or](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|&#124;&#124;|  
+|[Nonidentity](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|!==|  
   
 ## <a name="bitwise-operators"></a>Bitwise İşleçleri  
   
 |Operatör|Sembol|  
 |--------------|------------|  
-|[Bit düzeyinde AND](../../javascript/reference/bitwise-and-operator-decrement-javascript.md)|&|  
-|[Bit düzeyinde sola kaydırma](../../javascript/reference/bitwise-left-shift-operator-decrement-javascript.md)|<\<|  
-|[Bit düzeyinde DEĞIL](../../javascript/reference/bitwise-not-operator-decrement-tilde-javascript.md)|~|  
-|[Bit düzeyinde OR](../../javascript/reference/bitwise-or-operator-decrement-javascript.md)|&#124;|  
-|[Bit düzeyinde sağa kaydırma](../../javascript/reference/bitwise-right-shift-operator-decrement-javascript.md)|>>|  
-|[Bit düzeyinde XOR](../../javascript/reference/bitwise-xor-operator-decrement-hat-javascript.md)|^|  
-|[İşaretsiz sağ kaydırma](../../javascript/reference/unsigned-right-shift-operator-decrement-javascript.md)|>>>|  
+|[Bit düzeyinde AND](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Bitwise_AND)|&|  
+|[Bit düzeyinde sola kaydırma](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Left_shift)|<\<|  
+|[Bit düzeyinde DEĞIL](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Bitwise_NOT)|~|  
+|[Bit düzeyinde OR](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Bitwise_OR)|&#124;|  
+|[Bit düzeyinde sağa kaydırma](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Right_shift)|>>|  
+|[Bit düzeyinde XOR](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Bitwise_XOR)|^|  
+|[İşaretsiz sağ kaydırma](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Unsigned_right_shift)|>>>|  
   
 ## <a name="assignment-operators"></a>Atama İşleçleri  
- [Atama Işleçleri](../../javascript/reference/assignment-operator-decrement-equal-javascript.md)  
+ [Atama Işleçleri](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Assignment)  
   
- [Bileşik Atama İşleçleri](../../javascript/reference/compound-assignment-operators-javascript.md)  
+ [Bileşik Atama İşleçleri](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Assignment_operators)  
   
 ## <a name="miscellaneous-operators"></a>Çeşitli İşleçler  
- [delete](../../javascript/reference/delete-operator-decrementjavascript.md)  
+ [delete](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/delete)  
   
- [instanceof](../../javascript/reference/instanceof-operator-decrementjavascript.md)  
+ [instanceof](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/instanceof)  
   
- [Yeni](../../javascript/reference/new-operator-decrementjavascript.md)  
+ [Yeni](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/new)  
   
- [typeof](../../javascript/reference/typeof-operator-decrementjavascript.md)  
+ [typeof](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/typeof)  
   
- [void](../../javascript/reference/void-operator-decrementjavascript.md)  
+ [void](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/void)  
   
 ## <a name="requirements"></a>Gereksinimler  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]

@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 28f382e8d20f3aa623ea241702e4795854e12f9a
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: 511874b5dc7d7c45a1584e95e004a53088f8ea09
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90100780"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91861816"
 ---
 # <a name="first-look-at-profiling-tools"></a>Profil oluşturma araçlarına ilk bakış
 
@@ -224,9 +224,9 @@ Aşağıda, Visual Studio tekliflerinin farklı araçları ve bunları kullanabi
 |----------------------|---------------------|-------------|-------------|
 |[PerfTips](../profiling/perftips.md)|evet|evet|evet|
 |[CPU kullanımı](../profiling/beginners-guide-to-performance-profiling.md)|evet|evet|evet|
-|[Bellek Kullanımı](../profiling/memory-usage.md)|evet|evet|evet|
+|[Bellek kullanımı](../profiling/memory-usage.md)|evet|evet|evet|
 |[.NET nesne ayırma](../profiling/dotnet-alloc-tool.md)|Evet (yalnızca .NET)|evet|evet|
-|[GPU Kullanımı](/visualstudio/debugger/graphics/gpu-usage)|evet|evet|hayır|
+|[GPU Kullanımı](./gpu-usage.md)|evet|evet|hayır|
 |[Uygulama Zaman Çizelgesi](../profiling/application-timeline.md)|Evet (XAML)|evet|hayır|
 |[Olay Görüntüleyicisi](../profiling/events-viewer.md)|evet|evet|evet|
 |[.NET Async](../profiling/analyze-async.md)|Evet (yalnızca .NET)|evet|evet|
@@ -239,8 +239,8 @@ Aşağıda, Visual Studio tekliflerinin farklı araçları ve bunları kullanabi
 |Performans aracı|Windows masaüstü|UWP|ASP.NET/ASP.NET Core|
 |----------------------|---------------------|-------------|-------------|
 |[CPU kullanımı](../profiling/beginners-guide-to-performance-profiling.md)|evet|evet|evet|
-|[Bellek Kullanımı](../profiling/memory-usage.md)|evet|evet|evet|
-|[GPU Kullanımı](/visualstudio/debugger/graphics/gpu-usage)|evet|evet|hayır|
+|[Bellek kullanımı](../profiling/memory-usage.md)|evet|evet|evet|
+|[GPU Kullanımı](./gpu-usage.md)|evet|evet|hayır|
 |[Uygulama Zaman Çizelgesi](../profiling/application-timeline.md)|Evet (XAML)|evet|hayır|
 |[PerfTips](../profiling/perftips.md)|evet|XAML için Evet, HTML için Hayır|evet|
 |[Performans Gezgini](../profiling/performance-explorer.md)|evet|hayır|evet|

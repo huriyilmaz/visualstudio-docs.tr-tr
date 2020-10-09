@@ -14,12 +14,12 @@ ms.assetid: b9e34652-190f-4b57-b253-df2e8c4d09c6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ca6f13620bb486cf1663bd5bef9a9a93b2c8a480
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 15b00087cd66b873044b7bafb1bfecf4fc91f8d9
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817365"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862398"
 ---
 # <a name="function-does-not-have-a-valid-prototype-object"></a>İşlevin geçerli bir prototip nesnesi yok
 Bir nesnenin belirli bir **instanceof** işlev sınıfından türetilmişse, ancak nesnenin `prototype` özelliğini ya da `null` bir dış nesne türü (her ikisi de geçerli nesneler) olarak yeniden tanımladıysanız, instanceof öğesini kullanmaya çalıştınız [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] . Dış nesne, ana bilgisayar nesne modelinden (örneğin, Internet Explorer 'ın belgesi veya pencere nesnesi) veya harici bir COM nesnesinden bir nesne olabilir.  
@@ -29,5 +29,5 @@ Bir nesnenin belirli bir **instanceof** işlev sınıfından türetilmişse, anc
 - İşlevin `prototype` özelliğinin geçerli bir nesneye başvurduğundan emin olun [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] .  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [İşlev nesnesi](../../javascript/reference/function-object-javascript.md)   
- [prototype Özelliği (Nesne)](../../javascript/reference/prototype-property-object-javascript.md)
+ [İşlev nesnesi](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function)   
+ [prototype Özelliği (Nesne)](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)

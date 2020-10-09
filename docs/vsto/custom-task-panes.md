@@ -25,12 +25,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 804fbf7e6d9069f6d0fb406e2a5191dcbafbbcee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 361b04edf2b677c2842376bd9d8fee0d6f3bda12
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254393"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862353"
 ---
 # <a name="custom-task-panes"></a>Özel görev bölmeleri
   Görev bölmeleri, genellikle bir Microsoft Office uygulamasındaki bir pencerenin bir tarafına yerleştirilen Kullanıcı arabirimi panolardır. Özel görev bölmeleri, kendi görev bölmenizi oluşturmak ve kullanıcılara çözümünüzün özelliklerine erişmek için tanıdık bir arabirim sağlamak için bir yol sağlar. Örneğin, arabirim, belgeleri değiştirmek veya bir veri kaynağındaki verileri göstermek için kodu çalıştıran denetimleri içerebilir.
@@ -122,7 +122,7 @@ ms.locfileid: "71254393"
 ## <a name="clean-up-resources-used-by-the-task-pane"></a>Görev bölmesi tarafından kullanılan kaynakları Temizleme
  Özel bir görev bölmesi oluşturduktan sonra, <xref:Microsoft.Office.Tools.CustomTaskPane> VSTO eklentisi çalıştığı sürece nesne bellekte kalır. Kullanıcı görev bölmesinin köşesindeki **Kapat** düğmesine (X) tıkladıktan sonra bile, nesne bellekte kalır.
 
- VSTO eklentisi çalışmaya devam ederken görev bölmesi tarafından kullanılan kaynakları temizlemek için, <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> veya <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A> yöntemlerini kullanın. Bu yöntemler <xref:Microsoft.Office.Tools.CustomTaskPane> , belirtilen nesneyi `CustomTaskPanes` koleksiyondan kaldırır ve <xref:Microsoft.Office.Tools.CustomTaskPane.Dispose%2A> nesnenin yöntemini çağırır.
+ VSTO eklentisi çalışmaya devam ederken görev bölmesi tarafından kullanılan kaynakları temizlemek için, <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> veya <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A> yöntemlerini kullanın. Bu yöntemler <xref:Microsoft.Office.Tools.CustomTaskPane> , belirtilen nesneyi `CustomTaskPanes` koleksiyondan kaldırır ve `Dispose` nesnenin yöntemini çağırır.
 
  , [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] VSTO eklentisi kaldırıldığında özel görev bölmesi tarafından kullanılan kaynakları otomatik olarak temizler. <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A> Projenizdeki olay işleyicisinde veya yöntemlerini çağırmayın `ThisAddIn_Shutdown` . <xref:System.ObjectDisposedException>Daha [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] önce nesne tarafından kullanılan kaynakları temizleyerek, bu yöntemler bir oluşturur <xref:Microsoft.Office.Tools.CustomTaskPane> `ThisAddIn_Shutdown` . Hakkında daha fazla bilgi için `ThisAddIn_Shutdown` bkz. [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md).
 
@@ -203,17 +203,17 @@ ms.locfileid: "71254393"
 ### <a name="powerpoint-events"></a>PowerPoint olayları
  PowerPoint 'teki Belge pencerelerinin durumunu izlemek için aşağıdaki olayları işleyebilirsiniz:
 
-- [Microsoft. Office. Interop. PowerPoint. EApplication_Event. AfterNewPresentation](/previous-versions/office/developer/office-2010/ff761105(v%3doffice.14))
+- [Microsoft.Office.Interop.PowerPoint.EApplication_Event. AfterNewPresentation](/previous-versions/office/developer/office-2010/ff761105(v%3doffice.14))
 
-- [Microsoft. Office. Interop. PowerPoint. EApplication_Event. AfterPresentationOpen](/previous-versions/office/developer/office-2010/ff762843(v%3doffice.14))
+- [Microsoft.Office.Interop.PowerPoint.EApplication_Event. AfterPresentationOpen](/previous-versions/office/developer/office-2010/ff762843(v%3doffice.14))
 
-- [Microsoft. Office. Interop. PowerPoint. EApplication_Event. NewPresentation](/previous-versions/office/developer/office-2010/ff761498(v%3doffice.14))
+- [Microsoft.Office.Interop.PowerPoint.EApplication_Event. NewPresentation](/previous-versions/office/developer/office-2010/ff761498(v%3doffice.14))
 
-- [Microsoft. Office. Interop. PowerPoint. EApplication_Event. PresentationOpen](/previous-versions/office/developer/office-2010/ff760423(v=office.14))
+- [Microsoft.Office.Interop.PowerPoint.EApplication_Event. PresentationOpen](/previous-versions/office/developer/office-2010/ff760423(v=office.14))
 
-- [Microsoft. Office. Interop. PowerPoint. EApplication_Event. WindowActivate](/previous-versions/office/developer/office-2010/ff761153(v=office.14))
+- [Microsoft.Office.Interop.PowerPoint.EApplication_Event. WindowActivate](/previous-versions/office/developer/office-2010/ff761153(v=office.14))
 
-- [Microsoft. Office. Interop. PowerPoint. EApplication_Event. WindowDeactivate](/previous-versions/office/developer/office-2010/ff763093(v=office.14))
+- [Microsoft.Office.Interop.PowerPoint.EApplication_Event. WindowDeactivate](/previous-versions/office/developer/office-2010/ff763093(v=office.14))
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl yapılır: uygulamaya özel görev bölmesi ekleme](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)

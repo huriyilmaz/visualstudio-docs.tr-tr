@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: f63dc4989a59256a0a3ad59491b2290912ffd2f8
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 2223aecd66da721ff1afe9877853c8a00c837611
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90862179"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862230"
 ---
 # <a name="how-to-customize-a-codespace-preview"></a>Codespace 'i özelleştirme (Önizleme)
 
@@ -31,7 +31,7 @@ Hemen kullanmaya başlamak için Windows codespaces, zaten yüklü birçok çer�
 | .NET                                        | Yok        | 4,8                |
 | .NET Core Runtime                           | dotnet     | 2,1, 3,1           |
 | .NET Core SDK                               | dotnet     | 2,1, 3.1.3, 3.1.4  |
-| Azure CLI’si                                   | az         | 2.5                |
+| Azure CLI                                   | az         | 2.5                |
 | Chocolatey                                  | Choco      | 0.10.15            |
 | CMake                                       | CMake      | 3,17               |
 | Git                                         | git        | 2,26               |
@@ -57,7 +57,7 @@ Bir codespace oluşturduktan sonra, codespace örneği GitHub Codespaces 'da kul
 
 Visual Studio ile bir codespace 'e bağlıyken, komut satırı araçlarını çalıştırmak için Visual Studio terminalini kullanabilirsiniz. PowerShell veya Windows komut Istemi ' ni, her ikisi de yerel yönetici hesabı altında yükseltilmiş olarak kullanabilirsiniz. Visual Studio terminali hakkında daha fazla bilgi edinmek için bkz. [Visual Studio Terminal duyurusu blogu](https://devblogs.microsoft.com/visualstudio/say-hello-to-the-new-visual-studio-terminal/).
 
-## <a name="customize-a-codespace"></a>Codespace 'i özelleştirme
+## <a name="customize-a-codespace"></a>Codespace’i özelleştirme
 
 GitHub Codespaces 'ın gerçek değeri, bulutta kendi çalışmanız ve ekibiniz için özel olarak tasarlanmış benzersiz ve yinelenebilir geliştirme ortamları oluşturabileceğiniz zaman gelir. Varsayılan bir GitHub Codespaces örneği oluşturarak, yeni bir kod alanı oluştururken nelerin yüklendiğini ve yapılandırıldığını özelleştirebilirsiniz.
 
@@ -92,7 +92,7 @@ GitHub Codespaces, özelliklerde aşağıdaki *devcontainer.js* destekler. Visua
 
 Komut satırını doğrudan çalıştırabilmeniz sırasında, `devinit` çalıştırılacak araçlar kümesini açıklayan yapılandırma dosyalarında [*devinit.js*](../../devinit/devinit-json.md) oluşturmanız önerilir `devinit` . 
 
-Örneğin, [.NET Core SDK](https://docs.microsoft.com/dotnet/core/sdk)yüklemek için bir *.devinit.js* şu şekilde görünür:
+Örneğin, [.NET Core SDK](/dotnet/core/sdk)yüklemek için bir *.devinit.js* şu şekilde görünür:
 
 ```json
 {
@@ -178,7 +178,7 @@ Aşağıda, yerel MS SQL Server 'a bağlanmak için bir bağlantı dizesi örne�
 "Server=(LocalDB);Integrated Security=true;"
 ```
 
-### <a name="azure-cli"></a>Azure CLI’si
+### <a name="azure-cli"></a>Azure CLI
 
 Azure CLı, tüm Windows Codespace ortamlarına yüklenir ve farklı yolda bulunabilir `az` .
 

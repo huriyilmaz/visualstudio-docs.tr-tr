@@ -14,12 +14,12 @@ ms.assetid: 7799ed69-c877-42a1-87cf-ad6739302c10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 192f9a5ca9928e4c325d67c340276ef12de14686
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6cb95c0cb5c4178267241c57cc431c8b7acff21
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816195"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862033"
 ---
 # <a name="syntax-error-in-regular-expression-javascript"></a>Normal ifadede sözdizimi hatası (JavaScript)
 Arama dizeniz yapısı, bir veya daha fazla normal ifadenin dilbilgisi kurallarını ihlal ediyor [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] .  
@@ -29,6 +29,6 @@ Arama dizeniz yapısı, bir veya daha fazla normal ifadenin dilbilgisi kurallar�
 - Normal ifade arama dizinizin yapısının normal ifade sözdizimine uyduğundan emin olun [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] .  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Normal Ifade nesnesi](../../javascript/reference/regular-expression-object-javascript.md)   
- [Normal Ifade sözdizimi (JavaScript)](https://msdn.microsoft.com/library/1400241x)   
- [compile Metodu (Normal İfade)](../../javascript/reference/compile-method-regular-expression-javascript.md)
+ [Normal Ifade nesnesi](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)   
+ [Normal Ifade sözdizimi (JavaScript)](/previous-versions/1400241x(v=vs.100))   
+ [compile Metodu (Normal İfade)](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp/compile)

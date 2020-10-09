@@ -14,25 +14,25 @@ ms.assetid: 82ff8b74-1710-4358-9a26-dc92ab29c53b
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 209a8793c0940511b7ecb2abb32f537a614ebf8b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 98a35421054e4d2236fe509224ed146063b61a79
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85814830"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862305"
 ---
-# <a name="expected-"></a>' \@ ' Bekleniyor
+# <a name="expected-"></a>Beklenen: '\@'
 Deyimi kullanılarak koşullu derleme deyimleriyle kullanılacak bir değişken oluşturmaya çalıştınız `@set` , ancak **@** değişken adından önce bir "" işareti yerleştirmedi.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- **@** Değişken adından hemen önce bir "" işareti ekleyin. Örneğin:  
+- **@** Değişken adından hemen önce bir "" işareti ekleyin. Örnek:  
   
     ```JavaScript  
     @set @myvar = 1  
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [@set Ekstre](../../javascript/reference/at-set-statement-javascript.md)   
- [Koşullu derleme](../../javascript/advanced/conditional-compilation-javascript.md)   
- [Koşullu Derleme Değişkenleri](../../javascript/advanced/conditional-compilation-variables-javascript.md)
+ [@set Ekstre](https://developer.mozilla.org/docs/Archive/Web/JavaScript/Microsoft_Extensions/at-set)   
+ [Koşullu derleme](/previous-versions/windows/internet-explorer/ie-developer/scripting-articles/121hztk3(v=vs.84))   
+ [Koşullu Derleme Değişkenleri](/previous-versions/windows/internet-explorer/ie-developer/scripting-articles/s59bkzce(v=vs.84))

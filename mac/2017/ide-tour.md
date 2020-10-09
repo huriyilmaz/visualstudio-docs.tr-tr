@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 02/07/2019
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
 ms.custom: video
-ms.openlocfilehash: 3d25fced1e9c9dd6431f4056b5b561f476eecb28
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a187796f4f867d397662224509f8a5f72d1cc74
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74984976"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862484"
 ---
 # <a name="visual-studio-2017-for-mac-tour"></a>Mac için Visual Studio 2017 Tur turu
 
@@ -68,7 +68,7 @@ Aşağıdaki bölümlerde Mac için Visual Studio içindeki önemli alanlara gen
 
 Bu, kaynak kodu, kaynaklar, Kullanıcı arabirimi ve bağımlılıkların dosyaları platforma özgü projelere göre düzenlenir.
 
-Mac için Visual Studio 'de projeleri ve çözümleri kullanma hakkında daha fazla bilgi için, bkz. [Projeler ve çözümler](/visualstudio/mac/projects-and-solutions) makalesi.
+Mac için Visual Studio 'de projeleri ve çözümleri kullanma hakkında daha fazla bilgi için, bkz. [Projeler ve çözümler](./projects-and-solutions.md) makalesi.
 
 ## <a name="assembly-references"></a>Bütünleştirilmiş kod başvuruları
 
@@ -80,7 +80,7 @@ Başvurular klasörüne çift tıklanarak veya bağlam menüsü eylemlerinde **b
 
 ![Başvuruları Düzenle Iletişim kutusu](media/ide-tour-image20.png)
 
-Mac için Visual Studio başvuruları kullanma hakkında daha fazla bilgi için bkz. [bir projede başvuruları yönetme](/visualstudio/mac/managing-references-in-a-project) makalesi.
+Mac için Visual Studio başvuruları kullanma hakkında daha fazla bilgi için bkz. [bir projede başvuruları yönetme](./managing-references-in-a-project.md) makalesi.
 
 ## <a name="dependencies--packages"></a>Bağımlılıklar/paketler
 
@@ -92,19 +92,19 @@ Uygulamanıza bir bağımlılık eklemek için bağımlılıklar/paketler klasö
 
 ![NuGet paketi ekleme](media/ide-tour-image21.png)
 
-Bir uygulamada NuGet paketinin kullanılmasıyla ilgili bilgiler, [Proje makalenize bir NuGet projesi dahil](/visualstudio/mac/nuget-walkthrough) bulunabilir.
+Bir uygulamada NuGet paketinin kullanılmasıyla ilgili bilgiler, [Proje makalenize bir NuGet projesi dahil](./nuget-walkthrough.md) bulunabilir.
 
 ## <a name="refactoring"></a>Yeniden Düzenle
 
-Mac için Visual Studio, kodunuzu yeniden düzenleme için iki yararlı yol sağlar: bağlam eylemleri ve kaynak analizi. Yeniden [düzenleme](/visualstudio/mac/refactoring) makalesindeki bunlarla ilgili daha fazla bilgi edinebilirsiniz.
+Mac için Visual Studio, kodunuzu yeniden düzenleme için iki yararlı yol sağlar: bağlam eylemleri ve kaynak analizi. Yeniden [düzenleme](./refactoring.md) makalesindeki bunlarla ilgili daha fazla bilgi edinebilirsiniz.
 
 ## <a name="debugging"></a>Hata Ayıklama
 
-Mac için Visual Studio, Xamarin. iOS, Xamarin. Mac ve Xamarin. Android uygulamaları için hata ayıklama desteğine izin veren yerel bir hata ayıklayıcıya sahiptir. Mac için Visual Studio, mono çalışma zamanına uygulanan, IDE 'nin tüm platformlarda yönetilen kodda hata ayıklamasına izin veren mono yazılım hata ayıklayıcısını kullanır. Hata ayıklama hakkında daha fazla bilgi için [hata ayıklama](/visualstudio/mac/debugging) makalesini ziyaret edin.
+Mac için Visual Studio, Xamarin. iOS, Xamarin. Mac ve Xamarin. Android uygulamaları için hata ayıklama desteğine izin veren yerel bir hata ayıklayıcıya sahiptir. Mac için Visual Studio, mono çalışma zamanına uygulanan, IDE 'nin tüm platformlarda yönetilen kodda hata ayıklamasına izin veren mono yazılım hata ayıklayıcısını kullanır. Hata ayıklama hakkında daha fazla bilgi için [hata ayıklama](./debugging.md) makalesini ziyaret edin.
 
 Hata ayıklayıcı, dizeler, renkler, URL 'Ler ve boyutlar, birlikte ordinklar ve Bézier eğrileri gibi özel türler için zengin Görselleştiriciler içerir.
 
-Hata ayıklayıcının veri görselleştirmeleri hakkında daha fazla bilgi için, [veri görselleştirmeleri](/visualstudio/mac/data-visualizations) makalesini ziyaret edin.
+Hata ayıklayıcının veri görselleştirmeleri hakkında daha fazla bilgi için, [veri görselleştirmeleri](./data-visualizations.md) makalesini ziyaret edin.
 
 ## <a name="version-control"></a>Sürüm Denetimi
 
@@ -116,7 +116,7 @@ Kaydedilmemiş değişiklikleri olan dosyalar, aşağıdaki görüntüde göster
 
 ![Çözüm panelinde işlenmemiş dosyalar](media/ide-tour-image23.png)
 
-Visual Studio 'da sürüm denetimini kullanma hakkında daha fazla bilgi için [sürüm denetimi](/visualstudio/mac/version-control) makalesine bakın.
+Visual Studio 'da sürüm denetimini kullanma hakkında daha fazla bilgi için [sürüm denetimi](./version-control.md) makalesine bakın.
 
 ## <a name="related-video"></a>İlgili video
 
