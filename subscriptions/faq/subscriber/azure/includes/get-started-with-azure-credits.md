@@ -7,13 +7,13 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 4/3/2020
 ms.faqid: q5_3
-ms.openlocfilehash: 9bc53179d50f99d969ca63028d4b7d504abbb6c1
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: 763c62b028c127ed086053b632026388ad292113
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81386583"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91838238"
 ---
 ## <a name="how-do-i-get-started"></a>Nasıl kullanmaya başlayabilirim?
 
-Azure kredilerinizin nasıl ayarlanacağını öğrenmek için [Azure kredisi makalemizin](https://docs.microsoft.com/visualstudio/subscriptions/vs-azure) \'Etkinleştirme adımları\' bölümüne bakın.
+Azure kredilerinizin nasıl ayarlanacağını öğrenmek için [Azure kredisi makalemizin](../../../../vs-azure.md) \'Etkinleştirme adımları\' bölümüne bakın.

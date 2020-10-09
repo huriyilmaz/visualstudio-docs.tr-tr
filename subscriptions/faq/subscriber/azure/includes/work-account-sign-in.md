@@ -7,13 +7,13 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 4/3/2020
 ms.faqid: q5_5
-ms.openlocfilehash: 61bff492eb04a13565d6d6e136334cd397c9c659
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: 138c911efd0abda7fec372bd4b61e5733500d42c
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81386604"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91838383"
 ---
 ## <a name="can-i-use-my-work-account-to-sign-in"></a>Oturum açarken iş hesabımı kullanabilir miyim?
 
-Kredileri etkinleştirmek için Visual Studio aboneliğinizle ilişkilendirilmiş e-postayı veya alternatif hesabınızı kullanmanız gerekir (alternatif kimlikleri kullanma hakkında daha fazla bilgi için [Alternatif kimlikler](https://docs.microsoft.com/visualstudio/subscriptions/vs-alternate-identity) makalemizi gözden geçirin).
+Kredileri etkinleştirmek için Visual Studio aboneliğinizle ilişkilendirilmiş e-postayı veya alternatif hesabınızı kullanmanız gerekir (alternatif kimlikleri kullanma hakkında daha fazla bilgi için [Alternatif kimlikler](../../../../vs-alternate-identity.md) makalemizi gözden geçirin).

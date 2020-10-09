@@ -10,12 +10,12 @@ metadata:
   ms.topic: landing-page
   ms.date: 12/05/2019
   ms.author: ghogen
-  ms.openlocfilehash: 82824b8a2221e710f3f6c8402ae18b7f457c4fe8
-  ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+  ms.openlocfilehash: e2a545d1b9165a158f7d1913668e983386127874
+  ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/07/2020
-  ms.locfileid: "89509750"
+  ms.lasthandoff: 10/09/2020
+  ms.locfileid: "91860532"
 landingContent:
 - title: Azure App Service'e dağıtma
   linkLists:
@@ -54,7 +54,7 @@ landingContent:
     - text: Visual Studio’da kapsayıcı araçları
       url: ../containers/overview.md
     - text: Kubernetes araçları
-      url: ../containers/tutorial-kubernetes-tools.md
+      url: ../containers/bridge-to-kubernetes.md
 - title: Azure hizmetlerinde hata ayıklama ve performans analizi
   linkLists:
   - linkListType: tutorial
@@ -73,7 +73,7 @@ landingContent:
     links:
     - text: Azure Active Directory
       url: /azure/active-directory/develop/vs-active-directory-add-connected-service
-    - text: Redis için Azure Cache
+    - text: Redis için Azure Önbelleği
       url: azure-cache-for-redis-add-connected-service.md
     - text: Azure CosmosDB
       url: azure-cosmosdb-add-connected-service.md

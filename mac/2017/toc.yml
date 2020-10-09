@@ -1,150 +1,150 @@
 - name: Mac için Visual Studio
-  href: /visualstudio/mac/
+  href: ./index.yml
 - name: IDE Turu
   href: ide-tour.md
 - name: Yükleme
   href: installation.md
   items:
     - name: Bir güvenlik duvarı veya ara sunucunun arkasına yükleme ve burada kullanma
-      href: /visualstudio/mac/install-behind-a-firewall-or-proxy-server
+      href: ./install-behind-a-firewall-or-proxy-server.md
     - name: Bir önizleme sürümünü yükleme
-      href: /visualstudio/mac/install-preview
+      href: ./install-preview.md
     - name: Güncelleştirme
-      href: /visualstudio/mac/update
+      href: ./update.md
     - name: Mac için Visual Studio 2019 Güncelleştirmesi
-      href: /visualstudio/mac/update-vsmac-8.0
+      href: ./update-vsmac-8.0.md
     - name: Kaldır
-      href: /visualstudio/mac/uninstall
+      href: ./uninstall.md
 - name: Kullanıcı Hesapları
-  href: /visualstudio/mac/user-accounts
+  href: ./user-accounts.md
   items:
     - name: Oturum Açma
-      href: /visualstudio/mac/signing-in
+      href: ./signing-in.md
     - name: Aboneliği Etkinleştirme
-      href: /visualstudio/mac/enable-subscription
+      href: ./enable-subscription.md
 - name: IDE’yi Özelleştirme
-  href: /visualstudio/mac/customizing-the-ide
+  href: ./customizing-the-ide.md
   items:
     - name: Mac için Visual Studio’yu Genişletme
-      href: /visualstudio/mac/extending-visual-studio-mac
+      href: ./extending-visual-studio-mac.md
 - name: Projeler ve Çözümler
-  href: /visualstudio/mac/projects-and-solutions
+  href: ./projects-and-solutions.md
   items:
     - name: Yeni Projeler oluşturma
-      href: /visualstudio/mac/create-new-projects
+      href: ./create-new-projects.md
     - name: Proje öğeleri ekleme ve kaldırma
-      href: /visualstudio/mac/add-and-remove-project-items
+      href: ./add-and-remove-project-items.md
     - name: Çözümleri ve Proje özelliklerini yönetme
-      href: /visualstudio/mac/managing-solutions-and-project-properties
+      href: ./managing-solutions-and-project-properties.md
     - name: Bir projedeki başvuruları yönetme
-      href: /visualstudio/mac/managing-references-in-a-project
+      href: ./managing-references-in-a-project.md
       items:
         - name: İzlenecek yol - Projenize NuGet paketi ekleme
-          href: /visualstudio/mac/nuget-walkthrough
+          href: ./nuget-walkthrough.md
     - name: Uygulama Kaynaklarını Yönetme
-      href: /visualstudio/mac/managing-app-resources
+      href: ./managing-app-resources.md
     - name: 'Nasıl yapılır: Birden çok çözüm veya örneği açma'
-      href: /visualstudio/mac/open-multiple-solutions
+      href: ./open-multiple-solutions.md
 - name: Kaynak Düzenleyicisi
-  href: /visualstudio/mac/source-editor
+  href: ./source-editor.md
   items:
     - name: Yeniden Düzenle
-      href: /visualstudio/mac/refactoring
+      href: ./refactoring.md
     - name: Açıklamalar
-      href: /visualstudio/mac/comments
+      href: ./comments.md
     - name: Düzenleyici Davranışı
-      href: /visualstudio/mac/editor-behavior
+      href: ./editor-behavior.md
     - name: Görev Açıklamaları
-      href: /visualstudio/mac/task-comments
+      href: ./task-comments.md
     - name: Kod Parçacıkları
-      href: /visualstudio/mac/snippets
+      href: ./snippets.md
     - name: Blok Seçimi
-      href: /visualstudio/mac/block-selection
+      href: ./block-selection.md
     - name: Düzenleyici Temaları
-      href: /visualstudio/mac/editor-themes
+      href: ./editor-themes.md
     - name: EditorConfig
-      href: /visualstudio/mac/editorconfig
+      href: ./editorconfig.md
     - name: Ortak Klavye Kısayolları
-      href: /visualstudio/mac/keyboard-shortcuts
+      href: ./keyboard-shortcuts.md
 - name: Hata Ayıklama
-  href: /visualstudio/mac/debugging
+  href: ./debugging.md
   items:
     - name: Veri Görselleştirmeleri
-      href: /visualstudio/mac/data-visualizations
+      href: ./data-visualizations.md
 - name: Derleme ve Oluşturma
-  href: /visualstudio/mac/compiling-and-building
+  href: ./compiling-and-building.md
   items:
     - name: Projeleri ve Çözümleri Oluşturma ve Temizleme
-      href: /visualstudio/mac/building-and-cleaning-projects-and-solutions
+      href: ./building-and-cleaning-projects-and-solutions.md
     - name: Derleme Eylemleri
-      href: /visualstudio/mac/build-actions
+      href: ./build-actions.md
     - name: Derleme Sistemini Özelleştirme
-      href: /visualstudio/mac/customizing-build-system
+      href: ./customizing-build-system.md
     - name: Yapılandırmalar
-      href: /visualstudio/mac/configurations
+      href: ./configurations.md
       items:
         - name: Yapılandırmaları Oluşturma ve Düzenleme
-          href: /visualstudio/mac/create-and-edit-configurations
+          href: ./create-and-edit-configurations.md
 - name: Sürüm Denetimi
-  href: /visualstudio/mac/version-control
+  href: ./version-control.md
   items:
     - name: TF Sürüm Denetimi
-      href: /visualstudio/mac/tf-version-control
+      href: ./tf-version-control.md
     - name: Git Deposu Ayarlama
-      href: /visualstudio/mac/set-up-git-repository
+      href: ./set-up-git-repository.md
     - name: Git ile çalışma
-      href: /visualstudio/mac/working-with-git
+      href: ./working-with-git.md
     - name: Subversion Deposu Ayarlama
-      href: /visualstudio/mac/set-up-subversion-repository
+      href: ./set-up-subversion-repository.md
     - name: Subversion ile çalışma
-      href: /visualstudio/mac/working-with-subversion
+      href: ./working-with-subversion.md
 - name: Web Uygulaması Dağıtımı
-  href: /visualstudio/mac/web-app-deployment
+  href: ./web-app-deployment.md
   items:
     - name: Azure App Service’e yayımlama
-      href: /visualstudio/mac/publish-app-svc
+      href: ./publish-app-svc.md
     - name: Klasöre Yayımlama
-      href: /visualstudio/mac/publish-folder
+      href: ./publish-folder.md
 - name: İş yükleri
-  href: /visualstudio/mac/workloads
+  href: ./workloads.md
   items:
-    - name: ASP.NET Core
-      href: /visualstudio/mac/asp-net-core
+    - name: ASP.NET Çekirdeği
+      href: ./asp-net-core.md
       items:
         - name: Razor
-          href: /visualstudio/mac/razor
+          href: ./razor.md
         - name: Javascript
-          href: /visualstudio/mac/javascript
+          href: ./javascript.md
     - name: Azure
-      href: /visualstudio/mac/azure-workload
+      href: ./azure-workload.md
       items:
         - name: Azure İşlevleri’ne Giriş
-          href: /visualstudio/mac/azure-functions
+          href: ./azure-functions.md
         - name: 'Öğretici: Azure İşlevleri'
-          href: /visualstudio/mac/azure-functions-lab
+          href: ./azure-functions-lab.md
         - name: Bağlı Hizmetler
-          href: /visualstudio/mac/connected-services
+          href: ./connected-services.md
     - name: Unity Oyun Geliştirme
-      href: /visualstudio/mac/unity-tools
+      href: ./unity-tools.md
       items:
         - name: Kurulum
-          href: /visualstudio/mac/setup-vsmac-tools-unity
+          href: ./setup-vsmac-tools-unity.md
         - name: Unity Araçlarını Kullanma
-          href: /visualstudio/mac/using-vsmac-tools-unity
+          href: ./using-vsmac-tools-unity.md
         - name: Unity’de .NET 4.x kullanma
           href: /visualstudio/cross-platform/unity-scripting-upgrade/?context=visualstudio/mac/context
         - name: Değişiklik Günlüğü
           href: /visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac/?context=visualstudio/mac/context
     - name: Xamarin ile mobil uygulamalar
-      href: /visualstudio/mac/xamarin
+      href: ./xamarin.md
 - name: Erişilebilirlik
-  href: /visualstudio/mac/accessibility
+  href: ./accessibility.md
 - name: Sorun giderme
-  href: /visualstudio/mac/troubleshooting
+  href: ./troubleshooting.md
   items:
     - name: Visual Studio Müşteri Deneyimini Geliştirme Programı
-      href: /visualstudio/mac/visual-studio-experience-improvement-program
+      href: ./visual-studio-experience-improvement-program.md
     - name: Sorun Bildirme
-      href: /visualstudio/mac/report-a-problem
+      href: ./report-a-problem.md
     - name: 'Sorun Giderme: Güncelleştirici, bilgileri alırken hatalarla karşılaşıyor'
       href: updater-troubleshooting.md

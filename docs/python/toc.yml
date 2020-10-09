@@ -86,7 +86,7 @@
         - name: Azure bulut hizmeti şablonu
           href: python-azure-cloud-service-project-template.md
     - name: Python için Azure SDK
-      href: /python/azure/?view=azure-python
+      href: /python/azure/?view=azure-python&preserve-view=true
 - name: Nasıl yapılır kılavuzları
   items:
     - name: Python ortamlarını yönetme

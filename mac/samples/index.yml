@@ -16,11 +16,11 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/'
+          - href: /samples/xamarin/xamarin-forms-samples/todo/
             html: 'Bu örnek, verilerin depolandığı ve verilere yerel bir SQLite veritabanından erişildiği, Xamarin.Form ile oluşturulan bir Yapılacaklar listesi uygulamasını gösterir.'
             image:
               src: ../media/samples/todo.png
-              href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/'
+              href: /samples/xamarin/xamarin-forms-samples/todo/
             title: Todo
           - href: 'https://github.com/xamarinhq/app-myshoppe'
             html: 'Satış temsilcilerine, satış performansını izleme, müşteri adaylarını yönetme, kişilerini görüntüleme, siparişleri yönetme ve ürün kataloğuna göz atma gücü sunan tanıtım uygulaması.'
@@ -40,23 +40,23 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-googleio2014master/'
+          - href: /samples/xamarin/monodroid-samples/android50-googleio2014master/
             html: 'Bu örnek, Android Lollipop’ta sunulan yeni Malzeme Tasarımı API’lerini gösterir.'
             image:
               src: ../media/samples/material-design.png
-              href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-googleio2014master/'
+              href: /samples/xamarin/monodroid-samples/android50-googleio2014master/
             title: Malzeme Tasarımı
-          - href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/googleplayservices/'
+          - href: /samples/xamarin/monodroid-samples/googleplayservices/
             html: 'Bu çözüm, haritalar API’sinin birkaç kullanımını göstermek için Xamarin Google Play Services NuGet kullanır.'
             image:
               src: ../media/samples/gps.png
-              href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/googleplayservices/'
+              href: /samples/xamarin/monodroid-samples/googleplayservices/
             title: Google Play Services
-          - href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager/'
+          - href: /samples/xamarin/monodroid-samples/userinterface-flashcardpager/
             html: 'Bu örnek, bir dizi matematik problemini flash kartlarda sunan bir uygulamayı uygulamak için ViewPager ve PagerTabStrip’in birlikte nasıl kullanılacağını gösterir.'
             image:
               src: ../media/samples/flash.png
-              href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager/'
+              href: /samples/xamarin/monodroid-samples/userinterface-flashcardpager/
             title: Flash Kart Çağrı Cihazı
   - title: Xamarin.iOS
     items:
@@ -64,23 +64,23 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects/'
+          - href: /samples/xamarin/ios-samples/ios11-arkitplacingobjects/
             html: Algılanan yüzeylere nesneleri yerleştirmek için ARKit genişletilmiş gerçeklik tanıtımı.
             image:
               src: ../media/samples/arkit.png
-              href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects/'
+              href: /samples/xamarin/ios-samples/ios11-arkitplacingobjects/
             title: ARKit (iOS 11)
-          - href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample/'
+          - href: /samples/xamarin/ios-samples/ios11-mapkitsample/
             html: 'MapKit’teki yeni iOS 11 özellikleri: yakınlaştırma düzeyi temelinde işaretçileri gruplama ve bölme.'
             image:
               src: ../media/samples/mapkit.png
-              href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample/'
+              href: /samples/xamarin/ios-samples/ios11-mapkitsample/
             title: MapKit (iOS 11)
-          - href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel/'
+          - href: /samples/xamarin/ios-samples/ios11-coremlazuremodel/
             html: Azure’ın Özel Görüntü İşleme Hizmeti ile eğitilmiş bir modeli kullanan iOS 11 Vision çerçevesi ve CoreML.
             image:
               src: ../media/samples/coremlazure.png
-              href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel/'
+              href: /samples/xamarin/ios-samples/ios11-coremlazuremodel/
             title: CoreML ve Azure (iOS 11)
   - title: Xamarin.Mac
     items:
@@ -88,23 +88,23 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac/'
+          - href: /samples/xamarin/mac-samples/hello-mac/
             html: Mac geliştirmesine başlamak için Merhaba Dünya uygulaması.
             image:
               src: ../media/samples/hellomac.png
-              href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac/'
+              href: /samples/xamarin/mac-samples/hello-mac/
             title: 'Hello, Mac'
-          - href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/maccontrols/'
+          - href: /samples/xamarin/mac-samples/maccontrols/
             html: Mac uygulamaları için kullanıcı arabirimi denetimi örnekleri.
             image:
               src: ../media/samples/controls.png
-              href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/maccontrols/'
+              href: /samples/xamarin/mac-samples/maccontrols/
             title: MacControls
-          - href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/macimages/'
+          - href: /samples/xamarin/mac-samples/macimages/
             html: Mac uygulamaları için kullanıcı arabirimi denetimi örnekleri.
             image:
               src: ../media/samples/images.png
-              href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/macimages/'
+              href: /samples/xamarin/mac-samples/macimages/
             title: MacImages
   - title: Tüm Örnekler
     items:
@@ -112,21 +112,21 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
+          - href: /samples/browse/?products=xamarin
             html: Xamarin örnek uygulamalarından ve kod tanıtımlarından oluşan tam bir set.
             image:
               src: ../media/samples/sample-download.svg
-              href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
+              href: /samples/browse/?products=xamarin
             title: Tüm Xamarin örnekleri
-          - href: 'https://docs.microsoft.com/samples/browse/?products=aspnet-core'
+          - href: /samples/browse/?products=aspnet-core
             html: ASP.NET Core örnek uygulamalarından ve kod tanıtımlarından oluşan tam bir set.
             image:
               src: ../media/samples/sample-download.svg
-              href: 'https://docs.microsoft.com/samples/browse/?products=aspnet-core'
+              href: /samples/browse/?products=aspnet-core
             title: Tüm ASP.NET Core örnekleri
-          - href: 'https://docs.microsoft.com/samples/browse/?products=dotnet-core'
+          - href: /samples/browse/?products=dotnet-core
             html: .NET Core örnek uygulamalarından ve kod tanıtımlarından oluşan tam bir set. Bu örneklerden bazılarının Windows’a özgü gereksinimleri olduğunu ve bu nedenle Mac için Visual Studio’da çalışmayacağını unutmayın
             image:
               src: ../media/samples/sample-download.svg
-              href: 'https://docs.microsoft.com/samples/browse/?products=dotnet-core'
+              href: /samples/browse/?products=dotnet-core
             title: Tüm .NET Core örnekleri

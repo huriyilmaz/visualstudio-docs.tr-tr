@@ -7,12 +7,12 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 09/30/2020
 ms.faqid: q3_2
-ms.openlocfilehash: 8dc5e87e5299f735e8c7b21dab1bb7e3afdbc5a7
-ms.sourcegitcommit: ea3c985a23851b424127f2205f617446b6536578
+ms.openlocfilehash: 8c0bcb40d775be6184f420cdd79156645333d260
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91643957"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91838237"
 ---
 ## <a name="how-do-i-use-my-benefits"></a>Avantajlarımı nasıl kullanabilirim?
 
@@ -20,7 +20,7 @@ Avantaj türleri çeşitlilik gösterdiği gibi, bunları etkinleştirme ve kull
 
 Abone Portalında sağlanan her avantajla ilgili olarak, hangi aboneliklerin bunu içeriği ve avantajı etkinleştirme adımları gibi bilgilerin verildiği makaleler sağladık.
 
-[Daha fazla bilgi edinmek için](https://docs.microsoft.com/visualstudio/subscriptions/whats-new-in-subscriptions) belgelerimizi gözden geçirin (sol gezinti bölmeside 'Abonelikler'e tıklayın ve 'Avantajlar'ı seçin).
+[Daha fazla bilgi edinmek için](../../../../whats-new-in-subscriptions.md) belgelerimizi gözden geçirin (sol gezinti bölmeside 'Abonelikler'e tıklayın ve 'Avantajlar'ı seçin).
 
 ## <a name="what-is-the-visual-studio-with-github-enterprise-setup-process"></a>GitHub Enterprise ile Visual Studio kurulum işlemi nasıldır? 
 
@@ -36,4 +36,4 @@ GitHub kuruluş yöneticiniz daveti gönderdiğinde GitHub'dan bir e-posta alır
 
 Siz GitHub kuruluş davetini kabul ettikten sonra, <https://my.visualstudio.com/benefits> konumundaki avantaj kutucuğunda gösterilen “Bekliyor” ifadesi “Etkinleştirildi” olarak değişir ve artık GitHub Enterprise'ı kullanmaya başlayabilirsiniz. 
 
-GitHub Enterprise ayarlama işleminin ayrıntıları hakkında [daha fazla bilgi edinin](https://docs.microsoft.com/visualstudio/subscriptions/access-github.md). 
+GitHub Enterprise ayarlama işleminin ayrıntıları hakkında [daha fazla bilgi edinin](../../../../access-github.md). 

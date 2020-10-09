@@ -7,12 +7,12 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 4/3/2020
 ms.faqid: q2_2
-ms.openlocfilehash: d214130bfdc2832ad540fa6fac274e4f52cced5f
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: e18550018a593c0a3eae0d521148cd240b40f5df
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81386481"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91838279"
 ---
 ## <a name="how-do-i-activate-the-software-i-just-downloaded-using-product-keys"></a>Yeni indirdiğim yazılımı ürün anahtarlarını kullanarak nasıl etkinleştirebilirim?
 
@@ -25,5 +25,5 @@ ms.locfileid: "81386481"
 
 Ürün anahtarlarını alma ve kullanma hakkında daha fazla bilgi için şu makalelere bakın:
 
-- [Ürün anahtarlarına genel bakış](https://docs.microsoft.com/visualstudio/subscriptions/product-keys)
-- [Anahtar bulma ve isteme](https://docs.microsoft.com/visualstudio/subscriptions/find-keys)
+- [Ürün anahtarlarına genel bakış](../../../../product-keys.md)
+- [Anahtar bulma ve isteme](../../../../find-keys.md)
