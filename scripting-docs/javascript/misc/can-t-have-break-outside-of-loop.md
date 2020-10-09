@@ -14,12 +14,12 @@ ms.assetid: 11d02172-2a78-4705-a730-d21111db5f42
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0959bad452d3b24ca1475b66e37fbdab1e9c3e7f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ee177c8070fc5af8123d7fd78e69b1f767a5b700
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817664"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862806"
 ---
 # <a name="cant-have-break-outside-of-loop"></a>Döngü dışında 'break' olamaz
 **Break** anahtar sözcüğünü bir döngü dışında kullanmaya çalıştınız. **Break** anahtar sözcüğü, bir döngüyü veya ifadeyi sonlandırmak için kullanılır `switch` . Bir döngünün veya deyimin gövdesine katıştırılması gerekir `switch` . Ancak, bir **etiket** break anahtar kelimesini izleyebilir.  
@@ -35,6 +35,6 @@ break labelname;
 - **Break** anahtar sözcüğünün kapsayan bir döngü veya switch ifadesinin içinde göründüğünden emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Break ekstresi](../../javascript/reference/break-statement-javascript.md)   
- [Program akışını denetleme](../../javascript/controlling-program-flow-javascript.md)   
- [Komut Dosyalarınızda Sorun Giderme](../../javascript/advanced/troubleshooting-your-scripts-javascript.md)
+ [Break ekstresi](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/break)   
+ [Program akışını denetleme](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)   
+ [Komut Dosyalarınızda Sorun Giderme](https://developer.mozilla.org/docs/Learn/JavaScript/First_steps/What_went_wrong)

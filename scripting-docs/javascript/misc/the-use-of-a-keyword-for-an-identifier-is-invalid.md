@@ -14,16 +14,16 @@ ms.assetid: 04951b3b-a8b5-4d36-94f8-d2daee1ce0f8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5518c865ba1d0c7b1d1f4938983dd9b3278e6557
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9ae4fd36d78ee2d9e17d3fe22c6013a338e85a21
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816049"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862718"
 ---
 # <a name="the-use-of-a-keyword-for-an-identifier-is-invalid"></a>Tanımlayıcı için bir anahtar sözcük kullanımı geçersiz
 1048: tanımlayıcı için bir anahtar sözcük kullanımı geçersiz  
   
  Bir anahtar sözcüğü bir değişken, işlev veya Kullanıcı tanımlı başka tanımlayıcı adı olarak kullanamazsınız.  
   
- Anahtar sözcükler hakkında daha fazla bilgi için bkz. [JavaScript ayrılmış sözcükler](../../javascript/reference/javascript-reserved-words.md) ve [JavaScript gelecek ayrılmış sözcükler](../../javascript/reference/javascript-future-reserved-words.md).
+ Anahtar sözcükler hakkında daha fazla bilgi için bkz. [JavaScript ayrılmış sözcükler](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Lexical_grammar) ve [JavaScript gelecek ayrılmış sözcükler](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Lexical_grammar).

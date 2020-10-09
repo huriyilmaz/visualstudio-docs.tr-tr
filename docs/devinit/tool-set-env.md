@@ -11,18 +11,18 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 2f4ec5489f22e94ad8f57f22ddc7742dc0ae3ade
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 19f635f0d22eacd64726368af89bbf5b7c4c9a11
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005997"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862847"
 ---
 # <a name="set-env"></a>set-env
 
 `set-env`Araç, geçerli işlemde kullanılmak üzere ortam değişkenlerini ayarlamak için kullanılabilir. Ortam değişkenleri yalnızca geçerli işlemde ayarlanır ve `devinit` Bu işlemde çalıştırıldıklarında diğer araçlar tarafından kullanılır.
 
-Bu araç .NET Core API 'sini kullanır `Environment.SetEnvironment` ve bu API ile aynı sınırlamalara sahiptir. Daha fazla bilgi için lütfen [belgelerine](https://docs.microsoft.com/dotnet/api/system.environment.setenvironmentvariable?view=netcore-3.1&preserve-view=true) bakın `Environment.SetEnvironment` .
+Bu araç .NET Core API 'sini kullanır `Environment.SetEnvironment` ve bu API ile aynı sınırlamalara sahiptir. Daha fazla bilgi için lütfen [belgelerine](/dotnet/api/system.environment.setenvironmentvariable?preserve-view=true&view=netcore-3.1) bakın `Environment.SetEnvironment` .
 
 ## <a name="usage"></a>Kullanım
 
@@ -51,7 +51,7 @@ Kullanılmadı.
 
 ## <a name="usage-in-a-codespace"></a>Codespace 'teki kullanım
 
-Bir codespace kullanıyorsanız, codespace 'te kullanılan ortam değişkenlerini, customizating özelliğini kullanarak belirleyebilirsiniz `remoteEnv` [`.devcontainer.json`](https://docs.microsoft.com/visualstudio/codespaces/reference/configuring) .
+Bir codespace kullanıyorsanız, codespace 'te kullanılan ortam değişkenlerini, customizating özelliğini kullanarak belirleyebilirsiniz `remoteEnv` [`.devcontainer.json`](/visualstudio/codespaces/reference/configuring) .
 
 ## <a name="example-usage"></a>Örnek kullanım
 

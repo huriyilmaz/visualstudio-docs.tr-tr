@@ -14,15 +14,15 @@ ms.assetid: 971e9d5a-f88a-47a8-af94-f3c7c4aed5ab
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a81634a96fb85584c9176db8c72bfc5c3468dc2c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 12624d1a0256360ef1e4538a14100923c7de8af8
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816884"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862578"
 ---
 # <a name="invalid-range-in-character-set-javascript"></a>Geçersiz karakter kümesi aralığı (JavaScript)
-Geçersiz karakter kümesi aralığı olan bir normal ifade oluşturmaya çalıştınız. Karakter kümeleri yalnızca-z veya 0-9 gibi tek karakterlerden oluşmalıdır. bir karakter kümesinde \w gibi karakter sınıfları dahil edilemez. Aralıktaki ilk karakter, aralıktaki ikinci karakterden önce de gelmelidir. Örneğin:  
+Geçersiz karakter kümesi aralığı olan bir normal ifade oluşturmaya çalıştınız. Karakter kümeleri yalnızca-z veya 0-9 gibi tek karakterlerden oluşmalıdır. bir karakter kümesinde \w gibi karakter sınıfları dahil edilemez. Aralıktaki ilk karakter, aralıktaki ikinci karakterden önce de gelmelidir. Örnek:  
   
 ```JavaScript  
 var good = /[a-z]/;     // A valid character range - a comes before z.  
@@ -34,5 +34,5 @@ var notGood = /[z-a]/;  // An invalid character range - z does not come before a
 - Normal ifade karakter kümesini oluşturmak için yalnızca tek karakterler kullanın ve doğru sırada olduklarından emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Normal Ifade nesnesi](../../javascript/reference/regular-expression-object-javascript.md)   
- [Normal Ifade sözdizimi (JavaScript)](https://msdn.microsoft.com/library/1400241x)
+ [Normal Ifade nesnesi](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)   
+ [Normal Ifade sözdizimi (JavaScript)](/previous-versions/1400241x(v=vs.100))

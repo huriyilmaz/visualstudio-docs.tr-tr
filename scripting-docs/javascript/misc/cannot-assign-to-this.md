@@ -14,12 +14,12 @@ ms.assetid: ba2b0a2b-f0f8-4698-b335-a4ab6c166671
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f5c52153da64ff477d89b09d4af17169da18e4e1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8985c7201a8e315353dd89ab5e1f5a3ad3b403ea
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817326"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862777"
 ---
 # <a name="cannot-assign-to-this"></a>'this' nesnesine atanamaz
 **Bu**değere bir değer atamaya çalıştınız. **Bu** , [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] aşağıdakilerden birini ifade eden bir anahtar sözcüktür:
@@ -41,5 +41,5 @@ Bir yöntemi içinde, **bunu** geçerli nesneye başvurmak için kullanabilirsin
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [this Deyimi](../../javascript/reference/this-statement-javascript.md)
-- [Komut Dosyalarınızda Sorun Giderme](../../javascript/advanced/troubleshooting-your-scripts-javascript.md)
+- [this Deyimi](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/this)
+- [Komut Dosyalarınızda Sorun Giderme](https://developer.mozilla.org/docs/Learn/JavaScript/First_steps/What_went_wrong)

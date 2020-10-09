@@ -11,16 +11,16 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 7671d336e3c4f86cae8b6bba7fe1b35443aa0632
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 102b6d4284958b80607e991c998f274c6e0e46bf
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005119"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862851"
 ---
 # <a name="nuget-restore"></a>nuget-restore
 
-`nuget-restore`Araç geri yükleme bağımlılıkları ve proje dosyasında belirtilen projeye özgü araçlar. NuGet geri yükleme hakkında daha fazla bilgi için [buraya](https://docs.microsoft.com/nuget/reference/cli-reference/cli-ref-restore)tıklayın.
+`nuget-restore`Araç geri yükleme bağımlılıkları ve proje dosyasında belirtilen projeye özgü araçlar. NuGet geri yükleme hakkında daha fazla bilgi için [buraya](/nuget/reference/cli-reference/cli-ref-restore)tıklayın.
 
 ## <a name="usage"></a>Kullanım
 

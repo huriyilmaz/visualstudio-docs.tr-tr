@@ -14,12 +14,12 @@ ms.assetid: f2998d7d-13a4-4bbe-b872-3ff3316551e4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 09ab257e6c473e2747a24559200e7b1f432d5687
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4b4e6521e5d363c21311b19e2ecc1679981acac3
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815285"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862701"
 ---
 # <a name="vbarray-expected"></a>VBArray bekleniyor
 Bir Visual Basic safeArray olmayan bir nesne (biri beklenirken) sağladınız.  
@@ -35,5 +35,5 @@ new VBArray(safeArray);
 - **VBArray** yapıcısına yalnızca **VBArray** nesneleri geçirdiğinizden emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [VBArray nesnesi](../../javascript/reference/vbarray-object-javascript.md)   
- [Dizileri kullanma](../../javascript/advanced/using-arrays-javascript.md)
+ [VBArray nesnesi](https://developer.mozilla.org/docs/Archive/Web/JavaScript/Microsoft_Extensions/VBArray)   
+ [Dizileri kullanma](https://developer.mozilla.org/docs/Learn/JavaScript/First_steps/Arrays)

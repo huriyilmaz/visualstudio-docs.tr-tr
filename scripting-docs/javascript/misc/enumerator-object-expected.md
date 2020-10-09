@@ -14,12 +14,12 @@ ms.assetid: dc6e32c1-a6e6-4e12-ac99-e3f65f91c8d7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ff61894ce808cd33876e876c596e791a3347ab72
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5e63ee2970c90ffcfff5c02a384d3346b3ea6229
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817599"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862631"
 ---
 # <a name="enumerator-object-expected"></a>Numaralandırıcı nesne bekleniyor
 **Numaralandırıcı. prototype. atEnd, Numaralandırıcı. prototype. Item, Numaralandırıcı. prototype. MoveFirst, ya da** **Numaralandırıcı. prototype. MoveNext** metodunu dışında bir türün nesnesi üzerinde çağırmaya çalıştınız `Enumerator` . Bu tür çağrının nesnesinin türünde olması gerekir `Enumerator` . Bu kuralı kesen bir kod örneği aşağıda verilmiştir:  
@@ -39,4 +39,4 @@ o.f();
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Numaralandırıcı Nesnesi](../../javascript/reference/enumerator-object-javascript.md)
+ [Numaralandırıcı Nesnesi](https://developer.mozilla.org/docs/Archive/Web/JavaScript/Microsoft_Extensions/Enumerator)

@@ -14,12 +14,12 @@ ms.assetid: dbe05d7d-fcf6-4823-9c61-4b814d1ad3c4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1b0eb1d7a53614f48daaf6459aaadee594b6fa11
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3ede65345bdaab22b26274323ad08779313d186e
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816182"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862732"
 ---
 # <a name="the-number-of-fractional-digits-is-out-of-range"></a>Kesir basamakları sayısı aralık dışı
 İşlev numarasına geçersiz bir bağımsız değişken geçirmeye çalıştınız. **prototype. Toüs**. **Toüstel ()** işlevinin bağımsız değişkeni 0 ile 20 (dahil) arasında olmalıdır.  
@@ -29,4 +29,4 @@ ms.locfileid: "85816182"
 - **Toüstel ()** bağımsız değişkeninin çok büyük veya çok küçük olmadığından emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [toExponential Metodu (Sayı)](../../javascript/reference/toexponential-method-number-javascript.md)
+ [toExponential Metodu (Sayı)](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toexponential)

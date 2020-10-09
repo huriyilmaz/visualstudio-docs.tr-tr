@@ -11,16 +11,16 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 1a52027c060917e8c5f692f472427ba5d980b3bb
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 950ca7f1e9c43123b206893dbc6a07da7c3743ec
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005059"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862861"
 ---
 # <a name="wsl-install"></a>wsl-install
 
-`wsl-install`Araç, [Linux için Windows alt sistemi](https://docs.microsoft.com/windows/wsl/) (WSL) için Linux Distro 'lara yüklemek üzere kullanılır.
+`wsl-install`Araç, [Linux için Windows alt sistemi](/windows/wsl/) (WSL) için Linux Distro 'lara yüklemek üzere kullanılır.
 
 `wsl-install`Araç, Windows üzerinde WSL 2 ' nin zaten etkinleştirilmesini gerektirir. Bazı nedenlerle WSL2 etkinleştirilmemişse, [WindowsFeature-Enable](tool-windowsfeature-enable.md) aracını ve özellik adını kullanarak WSL2 'yi etkinleştirebilirsiniz `Microsoft-Windows-Subsystem-Linux` .
 
@@ -31,7 +31,7 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 | Ad                                             | Tür   | Gerekli | Değer                                                             |
 |--------------------------------------------------|--------|----------|-------------------------------------------------------------------|
 | **açıklamaları**                                     | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                             |
-| [**girişinin**](#input)                              | string | Yes      | Yüklemeyi geri çevirme. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.     |
+| [**girişinin**](#input)                              | string | Evet      | Yüklemeyi geri çevirme. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.     |
 | [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.  |
 
 ### <a name="input"></a>Giriş

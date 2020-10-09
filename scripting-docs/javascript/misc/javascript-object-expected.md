@@ -14,12 +14,12 @@ ms.assetid: cc7cc32b-e444-4afa-9be1-802c83fdf5ae
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d6151825391fb01a027f67cb66568eb6b2edfc44
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 754285b22f0da6f45d63f86f774d24279aeb7f22
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816819"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862550"
 ---
 # <a name="javascript-object-expected"></a>JavaScript nesne bekleniyor
 Nesneyi [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] bekleyen bir yerleşik işleve nesne olmayan bir işlev geçirmeye çalıştınız [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] . Çeşitli yerleşik işlevler, içinde tanımlanan nesneleri [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] (konak tarafından tanımlanan nesnelerin aksine veya bir denetim gibi bir dış bileşen) gerektirir.  
@@ -29,5 +29,5 @@ Nesneyi [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] bekle
 - Parametre olarak geçirdiğiniz nesnenin doğru türde olduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Nesneler ve diziler](../../javascript/objects-and-arrays-javascript.md)   
- [Dizileri kullanma](../../javascript/advanced/using-arrays-javascript.md)
+ [Nesneler ve diziler](https://developer.mozilla.org/docs/Learn/JavaScript/Objects)   
+ [Dizileri kullanma](https://developer.mozilla.org/docs/Learn/JavaScript/First_steps/Arrays)

@@ -14,15 +14,15 @@ ms.assetid: 35d71b7f-53fd-44c4-a7c7-b1550c65cfd4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4dbb7e55f6afe6d3edfe4e98749807732ffa05ac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6d88815a33187e209bcba248d3c363afdd91227
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817677"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862656"
 ---
 # <a name="boolean-expected"></a>Boolean bekleniyor
-Dışındaki bir türün nesnesi üzerinde **Boolean. prototype. ToString** veya **Boolean. prototype. değeri** metodunu çağırmaya çalıştınız `Boolean` . Bu tür çağrının nesnesinin türünde olması gerekir `Boolean` . Örneğin:
+Dışındaki bir türün nesnesi üzerinde **Boolean. prototype. ToString** veya **Boolean. prototype. değeri** metodunu çağırmaya çalıştınız `Boolean` . Bu tür çağrının nesnesinin türünde olması gerekir `Boolean` . Örnek:
 
 ```JavaScript
 var o = new Object;
@@ -36,7 +36,7 @@ o.f();
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Boole Nesnesi](../../javascript/reference/boolean-object-javascript.md)
-- [Veri türleri](../../javascript/data-types-javascript.md)
-- [Program Akışı Denetimi](../../javascript/controlling-program-flow-javascript.md)
-- [Verileri Kopyalama, Geçirme ve Karşılaştırma](../../javascript/advanced/copying-passing-and-comparing-data-javascript.md)
+- [Boole Nesnesi](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+- [Veri türleri](https://developer.mozilla.org/docs/Web/JavaScript/Data_structures)
+- [Program Akışı Denetimi](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [Verileri Kopyalama, Geçirme ve Karşılaştırma](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Functions)

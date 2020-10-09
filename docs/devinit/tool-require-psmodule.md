@@ -11,19 +11,19 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 4e30a333812e2c313f9e35934643bcea03cf054c
-ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
+ms.openlocfilehash: 2fd629934355b2462ae9d397046ef8e063a62fc6
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352237"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862832"
 ---
 # <a name="require-psmodule"></a>require-psmodule
 
-`require-psmodule`Araç, PowerShell betiklerine kullanılabilmesi için [PowerShell Galerisi](https://www.powershellgallery.com/) [install-Module](https://docs.microsoft.com/powershell/module/powershellget/install-module?view=powershell-7&preserve-view=true)aracılığıyla bir [PowerShell modülü](https://docs.microsoft.com/powershell/scripting/developer/module/understanding-a-windows-powershell-module?view=powershell-7&preserve-view=true) yüklemek için kullanılır.
+`require-psmodule`Araç, PowerShell betiklerine kullanılabilmesi için [PowerShell Galerisi](https://www.powershellgallery.com/) [install-Module](/powershell/module/powershellget/install-module?preserve-view=true&view=powershell-7)aracılığıyla bir [PowerShell modülü](/powershell/scripting/developer/module/understanding-a-windows-powershell-module?preserve-view=true&view=powershell-7) yüklemek için kullanılır.
 
 > [!TIP] 
-> Modül yüklendikten sonra, [Import-Module](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/import-module?view=powershell-7&preserve-view=true)kullanılarak bir betiğe içeri aktarılmalıdır.
+> Modül yüklendikten sonra, [Import-Module](/powershell/module/microsoft.powershell.core/import-module?preserve-view=true&view=powershell-7)kullanılarak bir betiğe içeri aktarılmalıdır.
 
 ## <a name="usage"></a>Kullanım
 
@@ -32,7 +32,7 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 | Ad                                             | Tür   | Gerekli | Değer                                                                                   |
 |--------------------------------------------------|--------|----------|-----------------------------------------------------------------------------------------|
 | **açıklamaları**                                     | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                                   |
-| [**girişinin**](#input)                              | string | Yes      | Yüklenecek paket (ler). Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                       |
+| [**girişinin**](#input)                              | string | Evet      | Yüklenecek paket (ler). Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                       |
 | [**additionalOptions**](#additional-options)     | dize | No       | Kullanılmadı. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.              |
 
 ### <a name="input"></a>Giriş
@@ -41,7 +41,7 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 
 ### <a name="additional-options"></a>Ek seçenekler
 
-Ek seçenekler doğrudan [Install-Module](https://docs.microsoft.com/powershell/module/powershellget/install-module?view=powershell-7&preserve-view=true) komutuna geçirilir ve [Microsoft docs](https://docs.microsoft.com/powershell/module/powershellget/install-module?view=powershell-7&preserve-view=true)makalesinde belgelenmiştir.
+Ek seçenekler doğrudan [Install-Module](/powershell/module/powershellget/install-module?preserve-view=true&view=powershell-7) komutuna geçirilir ve [Microsoft docs](/powershell/module/powershellget/install-module?preserve-view=true&view=powershell-7)makalesinde belgelenmiştir.
 
 ### <a name="default-behavior"></a>Varsayılan davranış
 
@@ -49,11 +49,11 @@ Aracın varsayılan davranışı, `require-psmodule` gerekli olduğu gibi hatada
 
 ## <a name="builtin-options"></a>Yerleşik Seçenekler
 
-`require-psmodule`Araç, gözetimsiz bir şekilde `Install-Module` çalışmasını sağlamak için bir dizi komut satırı bağımsız değişkeni ayarlar `Install-Module` . Bu bağımsız değişkenler aşağıda listelenmiştir ve bunlara ilişkin belgeler [Install-Module](https://docs.microsoft.com/powershell/module/powershellget/install-module?view=powershell-7&preserve-view=true)içinde bulunabilir.
+`require-psmodule`Araç, gözetimsiz bir şekilde `Install-Module` çalışmasını sağlamak için bir dizi komut satırı bağımsız değişkeni ayarlar `Install-Module` . Bu bağımsız değişkenler aşağıda listelenmiştir ve bunlara ilişkin belgeler [Install-Module](/powershell/module/powershellget/install-module?preserve-view=true&view=powershell-7)içinde bulunabilir.
 
 | Ad         | Açıklama                                                                                                                                                                                                                                                                                                                                                               |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **-Force**   | Modül yükleme çakışmaları hakkında bir modül kurar ve uyarı iletilerini geçersiz kılar. Bilgisayarda aynı ada sahip bir modül zaten varsa, zorla birden çok sürümün yüklenmesine izin verir. Aynı ada ve sürüme sahip mevcut bir modül varsa modülün üzerine yazar. Zorla ve AllowClobber, bir Install-Module komutunda birlikte kullanılabilir. |
+| **-Force**   | Modül yükleme çakışmaları hakkında bir modül kurar ve uyarı iletilerini geçersiz kılar. Bilgisayarda aynı ada sahip bir modül zaten varsa, zorla birden çok sürümün yüklenmesine izin verir. Aynı ada ve sürüme sahip mevcut bir modül varsa modülün üzerine yazar. Zorla ve AllowClobber, Install-Module komutunda birlikte kullanılabilir. |
 | **-WhatIf**  | -WhatIf bayrağı, komut için kuru çalıştırması geçirildiğinde eklenir `devinit` .                                                                                                                                                                                                                                                                                                       |
 | **-Ayrıntılı** | -Verbose komutu için verbose geçirildiğinde verbose bayrağı eklenir `devinit` .                                                                                                                                                                                                                                                                                                      |
 
