@@ -1,5 +1,6 @@
 ---
 title: Konu arayın (Yardım Görüntüleyicisi)
+description: Microsoft Yardım Görüntüleyicisi konularda arama yapmayı öğrenin. Joker karakter ifadeleri, mantıksal işleçler ve gelişmiş arama işleçlerini kullanarak aramaları özelleştirin.
 ms.date: 11/02/2017
 ms.topic: how-to
 ms.assetid: 683f1b0c-1551-4bba-91fe-3855f03fdd69
@@ -8,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4581d7ea0b40e2b6b519f0beafaee8744e0b46c1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 46eb9c21b5bc6f7d0a577b85d043933b48bf60bc
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284925"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91879001"
 ---
 # <a name="how-to-search-for-topics"></a>Nasıl yapılır: konu arama
 
@@ -44,7 +45,7 @@ Sözdiziminin sorgunuzu nasıl etkilediğini anladıysanız, yalnızca ilgilendi
 
 Aşağıdaki tablo, yardım 'da arama sorguları geliştirmeye yönelik bazı temel kuralları ve yönergeleri içerir.
 
-|Syntax|Description|
+|Sözdizimi|Açıklama|
 |------------|-----------------|
 |Büyük/küçük harf duyarlılığı|Aramalar büyük/küçük harfe duyarlı değildir. Büyük veya küçük harfli karakterler kullanarak arama ölçütlerinizi geliştirin. Örneğin, "OLE" ve "OLE" aynı sonuçları döndürür.|
 |Karakter birleşimleri|Yalnızca tek harf (a-z) veya sayı (0-9) için arama yapamazsınız. "And", "from" ve "with" gibi belirli ayrılmış kelimeleri aramaya çalışırsanız, bunlar yok sayılır. Daha fazla bilgi için, bu konunun ilerleyen kısımlarında [bulunan aramalardaki kelimelerin yoksayılan sözcükleri](#stopwords) inceleyin.|

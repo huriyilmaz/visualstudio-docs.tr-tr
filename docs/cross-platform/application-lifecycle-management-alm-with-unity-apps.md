@@ -9,12 +9,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: be42bf1498746ce57f662f43c12ece80ac6ca9be
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 7b4c4dfdb8e603d7dda2ebd55c4382e57414de25
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509048"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928036"
 ---
 # <a name="devops-with-unity-apps"></a>Unity uygulamalarıyla DevOps
 
@@ -26,7 +26,7 @@ Aşağıdaki tablolar, Unity ile çalışırken Visual Studio 'daki DevOps özel
 
 ## <a name="agile-tools"></a>Çevik Araçlar
 
-Başvuru bağlantısı: [Çevik Araçlar ve çevik proje yönetimi hakkında](/azure/devops/boards/backlogs/backlogs-overview?view=vsts) (Team Explorer Everywhere dahil Azure BOARDS veya TFS kullanarak)
+Başvuru bağlantısı: [Çevik Araçlar ve çevik proje yönetimi hakkında](/azure/devops/boards/backlogs/backlogs-overview?view=vsts&preserve-view=true) (Team Explorer Everywhere dahil Azure BOARDS veya TFS kullanarak)
 
 Genel Açıklama: tüm planlama ve izleme özellikleri proje türü ve kodlama dillerinden bağımsızdır.
 
@@ -59,8 +59,8 @@ Genel Açıklama: Bu tasarım özellikleri kodlama dilinden bağımsız olsa da 
 
 |Özellik|Unity ile desteklenir|Ek açıklamalar|
 |-------------|--------------------------|-------------------------|
-|[Team Foundation sürüm denetimi (TFVC)](/azure/devops/repos/tfvc/overview?view=vsts) veya Azure Repos kullanın|Evet|Unity projeleri yalnızca diğer projeler gibi sürüm denetim sistemlerine yerleştirilebilecek bir dosya koleksiyonudur, ancak bu tablodan sonra açıklanan bazı özel noktalar vardır.|
-|[Azure Repos git ile çalışmaya başlama](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio)|Evet|Tablodan sonraki notlara bakın.|
+|[Team Foundation sürüm denetimi (TFVC)](/azure/devops/repos/tfvc/overview?view=vsts&preserve-view=true) veya Azure Repos kullanın|Evet|Unity projeleri yalnızca diğer projeler gibi sürüm denetim sistemlerine yerleştirilebilecek bir dosya koleksiyonudur, ancak bu tablodan sonra açıklanan bazı özel noktalar vardır.|
+|[Azure Repos git ile çalışmaya başlama](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio&preserve-view=true)|Evet|Tablodan sonraki notlara bakın.|
 |[Kod Kalitesini Geliştirme](../test/improve-code-quality.md)|Evet||
 |[Kod değişikliklerini ve diğer geçmişi bulma](../ide/find-code-changes-and-other-history-with-codelens.md)|Evet||
 |[Uygulamalarınızda hata ayıklamak için kod eşlemelerini kullanma](../modeling/use-code-maps-to-debug-your-applications.md)|Evet||
@@ -73,19 +73,19 @@ Unity ile sürüm denetimi için özel hususlar:
 
 3. Unity projesindeki (dokular veya ses dosyaları gibi) ikili varlıklar, büyük miktarda depolama alanı alabilir. Git deposu gibi çeşitli kaynak denetim sistemleri, değişiklik yalnızca dosyanın küçük bir kısmını etkilese bile, yapılan her değişiklik için dosyanın benzersiz bir kopyasını saklar. Bu, git deposunun blok haline gelmesine neden olabilir. Unity geliştiricileri bu şekilde ele almak için genellikle depolarına yalnızca son varlıkları eklemeyi ve OneDrive, DropBox veya git-ek gibi varlıklarının çalışma geçmişini tutmanın farklı bir araçlarını kullanır. Bu yaklaşım, bu tür varlıkların genellikle kaynak kodu değişiklikleriyle birlikte sürüm oluşturulması gerekmediği için geçerlidir. Geliştiriciler ayrıca, genellikle proje düzenleyicisinin varlık serileştirme modunu, metni, sahne dosyalarını, kaynak denetiminde birleştirme yapılmasına izin veren ikili biçim yerine metin halinde depolamaya zorlamak üzere ayarlar. Ayrıntılar için bkz. [Düzenleyici ayarları](https://docs.unity3d.com/Manual/class-EditorManager.html) (Unity belgeleri).
 
-## <a name="build"></a>Oluşturma
+## <a name="build"></a>Yapı
 
-Başvuru bağlantısı: ** [Azure Pipelines](/azure/devops/pipelines/index?view=vsts)**
+Başvuru bağlantısı: ** [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true)**
 
 |Özellik|Unity ile desteklenir|Ek açıklamalar|
 |-------------|--------------------------|-------------------------|
 |Şirket içi Team Foundation Server (TFS)|Üç|Unity projeleri, Visual Studio derleme sistemi aracılığıyla değil Unity ortamı aracılığıyla oluşturulur (Unity için Visual Studio Araçları içinde derleme betikleri derler ancak yürütülebilir bir işlem oluşturmaz). Unity [projelerini komut satırından](https://docs.unity3d.com/Manual/CommandLineArguments.html) (Unity belgeleri) derlemek mümkündür. bu nedenle, Unity 'nin kendisi bu bilgisayarda yüklü olması şartıyla uygun Unity komutlarını yürütmek IÇIN bir TFS sunucusunda MSBuild işlemini yapılandırmak mümkündür.<br /><br /> Unity Ayrıca, bir git veya SVN deposunu izleyen ve düzenli derlemeler çalıştıran [Unity bulut derlemesini](https://build.cloud.unity3d.com/landing/)de sunmaktadır. Şu anda TFVC veya Azure DevOps Services ile çalışmaz.|
-|Azure DevOps Services bağlı şirket içi derleme sunucusu|Üç|Yukarıdaki koşulların aynısını göz önüne alarak, Azure DevOps Services aracılığıyla tetiklenen derlemelerin şirket içi TFS bilgisayarı kullanması daha da olasıdır. Yönergeler için bkz. [Yapı ve sürüm aracıları](/azure/devops/pipelines/agents/agents?view=vsts) .|
+|Azure DevOps Services bağlı şirket içi derleme sunucusu|Üç|Yukarıdaki koşulların aynısını göz önüne alarak, Azure DevOps Services aracılığıyla tetiklenen derlemelerin şirket içi TFS bilgisayarı kullanması daha da olasıdır. Yönergeler için bkz. [Yapı ve sürüm aracıları](/azure/devops/pipelines/agents/agents?view=vsts&preserve-view=true) .|
 |Azure DevOps Services barındırılan denetleyici hizmeti|Hayır|Unity derlemeleri Şu anda desteklenmiyor.|
 |Ön ve son betiklerle derleme tanımları|Evet|Bir derlemeyi çalıştırmak için Unity komut satırını kullanan özel bir derleme tanımı, ön ve derleme sonrası betikler için de yapılandırılabilir.|
 |Geçitli iadeler dahil sürekli tümleştirme|Evet|TFVC için geçitli iadeler, yalnızca git, iadeler yerine bir çekme isteği modelinde çalışmaktadır.|
 
-## <a name="test"></a>Test etme
+## <a name="test"></a>Test
 
 |Özellik|Unity ile desteklenir|Ek açıklamalar|
 |-------------|--------------------------|-------------------------|
@@ -110,7 +110,7 @@ Başvuru bağlantısı: ** [kod kalitesini geliştirme](../test/improve-code-qua
 
 ## <a name="release-management"></a>Yayın yönetimi
 
-Başvuru bağlantısı: [Azure Pipelines ve TFS 'de derleme ve yayınlama](/azure/devops/pipelines/overview?view=vsts)
+Başvuru bağlantısı: [Azure Pipelines ve TFS 'de derleme ve yayınlama](/azure/devops/pipelines/overview?view=vsts&preserve-view=true)
 
 |Özellik|Unity ile desteklenir|Ek açıklamalar|
 |-------------|--------------------------|-------------------------|

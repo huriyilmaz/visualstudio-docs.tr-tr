@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c55f229550dfe74606f4dfb0880b4e91d689d5ad
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 2180d535dbdbdc88290a48cf166879525f10b4bb
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809039"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928547"
 ---
 # <a name="compile-and-build-in-visual-studio"></a>Visual Studio 'da derleme ve derleme
 
@@ -32,7 +32,7 @@ Bir uygulama oluşturmak için aşağıdaki yöntemlerden herhangi birini kullan
 | MSBuild komut satırı| -Visual Studio 'Yu yüklemeden projeler oluşturun.<br />-Tüm proje türleri için çok işlemcili derlemeler çalıştırın.<br />-Yapı sisteminin birçok alanını özelleştirin.|
 | Azure Pipelines | -Derleme işleminizi sürekli tümleştirme/sürekli teslim işlem hattının parçası olarak otomatikleştirin.<br />-Her derleme ile otomatikleştirilmiş testler uygulayın.<br />-Derleme işlemlerinde neredeyse sınırsız sayıda bulut tabanlı kaynak kullanmayı.<br />-Derin özelleştirilmiş görevler gerçekleştirmek için derleme iş akışını değiştirin ve derleme etkinlikleri oluşturun.|
 
-Bu bölümdeki belgeler, IDE tabanlı derleme sürecinin daha ayrıntılı ayrıntılarına gider. Diğer yöntemler hakkında daha fazla bilgi için sırasıyla [MSBuild](../msbuild/msbuild.md) ve [Azure Pipelines](/azure/devops/pipelines/index?view=vsts)bölümüne bakın.
+Bu bölümdeki belgeler, IDE tabanlı derleme sürecinin daha ayrıntılı ayrıntılarına gider. Diğer yöntemler hakkında daha fazla bilgi için sırasıyla [MSBuild](../msbuild/msbuild.md) ve [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true)bölümüne bakın.
 
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için, bkz. [Mac için Visual Studio derleme ve derleme](/visualstudio/mac/compiling-and-building).

@@ -10,28 +10,32 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: fad1a7d1f07009b169480a9e071c5cae8498f600
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 18635e4ecbbdb3c3c52be20b197c01168cdb12ff
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350764"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878741"
 ---
 # <a name="debug-azure-services-in-visual-studio"></a>Visual Studio 'da Azure hizmetlerinde hata ayıklama
 
 Visual Studio 'Yu kullanarak Azure hizmetlerinde farklı senaryolarda hata ayıklama yapabilirsiniz:
 
-- Azure App Service barındırılan bir üretim uygulamasında hata ayıklamak için bkz. [Snapshot Debugger kullanarak canlı ASP.NET uygulamalarında hata ayıklama](../debugger/debug-live-azure-applications.md).
+İçinde barındırılan bir üretim uygulamasında hata ayıklamak için:
 
-- Azure sanal makinesinde veya Azure sanal makine ölçek kümesinde barındırılan bir üretim uygulamasında hata ayıklamak için bkz. [Snapshot Debugger kullanarak canlı ASP.net Azure sanal makinelerinde ve Azure sanal makine ölçek kümelerinde hata ayıkla](../debugger/debug-live-azure-virtual-machines.md).
+- Azure App Service, Visual Studio Enterprise kullanarak bkz. [Snapshot Debugger kullanarak canlı ASP.NET uygulamalarında hata ayıklama](../debugger/debug-live-azure-applications.md).
 
-- Azure Kubernetes hizmetinde barındırılan bir üretim uygulamasında hata ayıklamak için bkz. [Snapshot Debugger kullanarak canlı ASP.net Azure Kubernetes hizmetlerinde hata ayıklama](../debugger/debug-live-azure-kubernetes.md).
+- Azure App Service veya Service Fabric, Application Insights kullanarak bkz. [.NET uygulamalarında özel durumlarla Ilgili hata ayıklama anlık görüntüleri](/azure/application-insights/app-insights-snapshot-debugger).
 
-- Application Insights kullanarak ve Azure App Service veya Service Fabric barındırılan bir üretim uygulamasında hata ayıklamak için bkz. [.NET uygulamalarında özel durumlarla Ilgili hata ayıklama anlık görüntüleri](/azure/application-insights/app-insights-snapshot-debugger).
+- Azure sanal makinesi veya Azure sanal makine ölçek kümesi, bkz. [Snapshot Debugger kullanarak canlı ASP.net Azure sanal makineleri ve Azure sanal makine ölçek kümelerinde hata ayıklayın](../debugger/debug-live-azure-virtual-machines.md).
 
-- IIS 'de (Azure App Service veya bir Azure VM) uzaktan hata ayıklama ASP.NET için bkz. [Azure 'Da uzaktan hata ayıklama ASP.net](remote-debugging-azure.md).
+- Azure Kubernetes hizmeti, bkz. [Snapshot Debugger kullanarak canlı ASP.net Azure Kubernetes hizmetlerinde hata ayıklama](../debugger/debug-live-azure-kubernetes.md).
 
-- Azure Service Fabric 'de uzak hata ayıklama ASP.NET için, bkz. [uzak bir Service Fabric uygulamasında hata ayıklama](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)
+Uzaktan hata ayıklama için:
+
+- IIS (Azure App Service veya bir Azure VM) üzerinde ASP.NET, bkz. [Azure 'Da uzaktan hata ayıklama ASP.net](remote-debugging-azure.md).
+
+- Azure Service Fabric 'de ASP.NET, bkz. [uzak Service Fabric uygulamasında hata ayıklama](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

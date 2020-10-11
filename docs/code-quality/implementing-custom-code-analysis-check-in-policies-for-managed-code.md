@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b9eec66ec24c30b6e0df835d16805ea00eb08ac2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1404386445d24284a2231ed557a65568fdb1ba2b
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85371774"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928023"
 ---
 # <a name="implement-custom-code-analysis-check-in-policies-for-managed-code"></a>Yönetilen Kod için Özel Kod Analizi İade İlkelerini Uygulama
 
@@ -58,7 +58,7 @@ Bir Azure DevOps projesi için özel bir kural kümesi oluşturmak için, ilk ol
 
 1. **Kaynak Denetim Gezgini**' de, yeni klasöre sağ tıklayın ve ardından **öğeleri klasöre Ekle**' ye tıklayın.
 
-     Daha fazla bilgi için bkz. [Git ve Azure Repos](/azure/devops/repos/git/overview?view=vsts).
+     Daha fazla bilgi için bkz. [Git ve Azure Repos](/azure/devops/repos/git/overview?view=vsts&preserve-view=true).
 
 2. Oluşturduğunuz kural kümesi dosyasına tıklayın ve ardından **son**' a tıklayın.
 

@@ -1,5 +1,6 @@
 ---
 title: Yardım Görüntüleyicisi İçindekiler tablosunu kullanın
+description: İçindekiler tablosundaki (TOC) konuları bulmak için Microsoft Yardım Görüntüleyicisi kullanın. TOC, yüklü kitaplar 'daki tüm konuları içeren genişletilebilir bir listesidir.
 ms.date: 11/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9bd332b5767dbfffcfbaa44637e0cc92051f7b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a678b669ca0f389a79438185ffce605143ec71d0
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284938"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91879014"
 ---
 # Nasıl yapılır: İçindekiler tablosunda konuları bulma
 

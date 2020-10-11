@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: kaelli
 author: KathrynEE
 ms.manager: jillfra
-ms.openlocfilehash: b1a956579b527de9df9d24bd09dda6ae48eff961
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fa73894d713ded42696f5e47d40dffb2d2405b1a
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74538570"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928088"
 ---
 # <a name="team-explorer-reference"></a>Takım Gezgini başvurusu
 
@@ -26,7 +26,7 @@ Bir proje geliştirmek ve size, takımınızı ya da projelerinize atanan işler
 - [Web portalı](/azure/devops/project/navigation/index)
 - [Görev panosu](/azure/devops/boards/sprints/task-board)
 
-**Giriş** sayfası, bir [Git](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio) veya [Team Foundation sürüm denetimi (TFVC)](/azure/devops/repos/tfvc/overview) deposuna bağlı olmanıza bağlı olarak farklı işlevlere sahiptir.
+**Giriş** sayfası, bir [Git](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio&preserve-view=true) veya [Team Foundation sürüm denetimi (TFVC)](/azure/devops/repos/tfvc/overview) deposuna bağlı olmanıza bağlı olarak farklı işlevlere sahiptir.
 
 > [!TIP]
 > İki sürüm denetim sisteminin karşılaştırması için bkz. [projeniz için doğru sürüm denetimini seçme (Azure DevOps)](/azure/devops/repos/tfvc/comparison-git-tfvc).

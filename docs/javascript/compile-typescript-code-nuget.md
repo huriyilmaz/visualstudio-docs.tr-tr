@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: ac917248915129b8d93dc776ac7d35a2ed227069
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 16ff335fdf8ca76889562cfd94807ec1adc516d2
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87454603"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91927932"
 ---
 # <a name="compile-typescript-code-aspnet-core"></a>TypeScript kodunu derle (ASP.NET Core)
 
@@ -107,6 +107,10 @@ Visual Studio yüklüyse, onunla paketlenmiş node.exe Visual Studio tarafından
 Uygulamanızı derlemek için görev Çalıştırıcısı ile Gulp kullanma örneği için bkz. [ASP.NET Core ve TypeScript](https://www.typescriptlang.org/docs/handbook/asp-net-core.html).
 
 Visual Studio 'nun Node.js bir sürümünü veya sizin beklediğiniz sürümden farklı bir üçüncü taraf aracını kullandığı sorunlarla karşılaşırsanız, Visual Studio 'nun yolunu kullanacak şekilde ayarlamanız gerekebilir. **Araçlar**  >  **seçeneklerini**belirleyin. **Projeler ve çözümler**altında **Web paket yönetimi**  >  **dış Web araçları**' nı seçin.
+
+### <a name="run-the-application"></a>Uygulamayı çalıştırma
+
+Derlemeden sonra uygulamayı çalıştırma yönergeleri için, bkz. [ilk Node.js uygulamanızı oluşturma](/visualstudio/ide/quickstart-nodejs?toc=%2Fvisualstudio%2Fjavascript%2Ftoc.json#run-the-application).
 
 ### <a name="nuget-package-structure-details"></a>NuGet paket yapısı ayrıntıları
 

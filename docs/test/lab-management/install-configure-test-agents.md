@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c374951b4d4875e4e754035ac52afb7f8fc5a2e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2b75ae05a65ae15e82c45ec0cf43935fb0809160
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286906"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928612"
 ---
 # <a name="install-test-agents-and-test-controllers"></a>Test aracılarını ve test denetleyicilerini yükleme
 
@@ -28,7 +28,7 @@ Aşağıdaki tabloda, Visual Studio için test aracısı veya test denetleyicisi
 
 | Öğe | Gereksinimler |
 | ---- | ------------ |
-| **Aracı** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard ve Datacenter<br />Windows Server 2012 R2 |
+| **Aracısı** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard ve Datacenter<br />Windows Server 2012 R2 |
 | **Kumandasını** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard ve Datacenter<br />Windows Server 2012 R2 |
 | **.NET Framework** | .NET Framework 4.5 |
 
@@ -83,7 +83,7 @@ Aşağıdaki tabloda, Visual Studio 2013 için aracıların desteklediği senary
 
 | Visual Studio 2013 için aracıların desteklediği senaryolar | TFS ve Azure Test Plans alternatifi |
 | - | - |
-| Visual Studio 'da derleme-dağıtma-test iş akışı | Kullanıcılar, TFS 'deki derleme, dağıtım ve test senaryoları için bir [Yapı işlem hattı](/azure/devops/pipelines/index?view=vsts) (XAML derlemesi değil) kullanabilir. |
+| Visual Studio 'da derleme-dağıtma-test iş akışı | Kullanıcılar, TFS 'deki derleme, dağıtım ve test senaryoları için bir [Yapı işlem hattı](/azure/devops/pipelines/index?view=vsts&preserve-view=true) (XAML derlemesi değil) kullanabilir. |
 | Şirket içi uzak makineleri kullanarak yük testi (performans testi) | Şirket içinde yük testlerini çalıştırmak için test denetleyicisi ve test Agents 2013 güncelleştirme 5 ' i kullanın. |
 | Laboratuvar ortamı kullanarak Microsoft Test Yöneticisi (Visual Studio 2017 ' de kullanım dışı) otomatik testlerin uzaktan yürütülmesi | Şu anda bu senaryo için alternatif yoktur. Testleri uzaktan yürütmek için derleme ve sürüm tanımlarında (XAML derlemesinde değil) Işlevsel Testleri Çalıştır görevini kullanmanızı öneririz. |
 | Visual Studio 'da uzak testler yürüten geliştiriciler | Artık desteklenmiyor. |

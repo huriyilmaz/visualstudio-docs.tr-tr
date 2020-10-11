@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bd2a6cc947c5f52212029bebe590d59906f5aee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 07338e83f0c58331345cd3f4c6eb61855a16fd4f
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591170"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928495"
 ---
 # <a name="codeindex-command"></a>CodeIndex komutu
 
@@ -25,12 +25,12 @@ Team Foundation Server kod dizinlemeyi yönetmek için **CodeIndex** komutunu ku
 
 ## <a name="required-permissions"></a>Gerekli izinler
 
-**CodeIndex** komutunu kullanmak Için, **Team Foundation yöneticileri** güvenlik grubunun bir üyesi olmanız gerekir. [Azure DevOps Services ve TFS için tanımlanan izinler ve gruplar](/azure/devops/organizations/security/permissions?view=vsts)bölümüne bakın.
+**CodeIndex** komutunu kullanmak Için, **Team Foundation yöneticileri** güvenlik grubunun bir üyesi olmanız gerekir. [Azure DevOps Services ve TFS için tanımlanan izinler ve gruplar](/azure/devops/organizations/security/permissions?view=vsts&preserve-view=true)bölümüne bakın.
 
 > [!NOTE]
 > Yönetici kimlik bilgileriyle oturum açmış olsanız bile, bu komutu çalıştırmak için yükseltilmiş bir komut Istemi penceresi açmalısınız. Ayrıca, bu komutu Team Foundation uygulama katmanından çalıştırmanız gerekir.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cmd
 TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /ignoreList:[ add | remove | removeAll | view ] ServerPath | /listLargeFiles [/fileCount:FileCount] [/minSize:MinSize] | /reindexAll | /destroyCodeIndex [/noPrompt] | /temporaryDataSizeLimit:[ view | <SizeInGBs> | disable ] | /indexHistoryPeriod:[ view | all | <NumberOfMonths> ] [/collectionName:CollectionName | /collectionId:CollectionId]

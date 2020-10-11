@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 4c1cdbea77f8a14e8f4cedcd53b54e2eac65cf75
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 1a5958b03b9797882b3df37f4ba99c75ff832d22
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037230"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928114"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>DevOps 'niz için laboratuvar ortamı kullanma
 
@@ -28,7 +28,7 @@ Laboratuvar ortamı, uygulama geliştirmek ve test etmek için kullanabileceğin
 
 Yaygın laboratuvar ortamı Topolojilerine örnekler aşağıda verilmiştir:
 
-| Topoloji | Description |
+| Topoloji | Açıklama |
 |---|---|
 |![Yalnızca sunucu topolojisi](../media/topology_backend.png)| Bu laboratuvar ortamında, genellikle sunucu uygulamalarında el ile testleri çalıştırmak için kullanılan ve Test edicilerin ortamdaki hataları doğrulamak için kendi istemci makinelerini kullanmasına izin veren bir *sunucu topolojisi*vardır. Bir arka uç topolojisinde, Laboratuvar ortamınız yalnızca sunucular içerir. Bu tür bir topoloji kullandığınızda, genellikle ortamı parçası olmayan bir istemci makinesini kullanarak Laboratuvar ortamındaki sunuculara bağlanırsınız.|
 |![Bulut Laboratuvarı ortamı](../media/topology_cloud.png)| Bu laboratuvar ortamı _sunucu topolojisi_olarak benzer özellikler ve özellikler sağlar, ancak yerel bir ortamda çalışan fiziksel veya sanal makinelerin gereksinimini ortadan kaldırır; Bu, kurulum süresini azaltabilir, bakımın basitleşebilir ve maliyeti en aza indirir. Özel ağlarla birlikte birden çok Web sitesi ve sanal makine ayarlamak, Microsoft Azure gibi bir bulut ortamında hızlı ve kolaydır.|
@@ -45,7 +45,7 @@ Yaygın laboratuvar ortamı Topolojilerine örnekler aşağıda verilmiştir:
 
 ## <a name="use-the-cloud-with-azure-pipelines-or-team-foundation-server-build-and-release"></a>Azure Pipelines veya Team Foundation Server derleme ve yayınlama ile bulutu kullanın
 
-Team Foundation Server (TFS) ve Azure Test Plans içindeki [derleme ve sürüm](/azure/devops/pipelines/index?view=vsts) özelliklerini kullanarak otomatik test ve yapı-dağıtma-test Otomasyonu yapabilirsiniz. Bazı avantajlar şunlardır:
+Team Foundation Server (TFS) ve Azure Test Plans içindeki [derleme ve sürüm](/azure/devops/pipelines/index?view=vsts&preserve-view=true) özelliklerini kullanarak otomatik test ve yapı-dağıtma-test Otomasyonu yapabilirsiniz. Bazı avantajlar şunlardır:
 
 * Yapı denetleyicisine veya test denetleyicisine ihtiyacınız yoktur.
 * Test Aracısı, derleme veya yayın kapsamında bir görev aracılığıyla yüklenir.
@@ -94,7 +94,7 @@ Visual Studio Laboratuvar Yönetimi: **Standart ortamlar** ve **SCVMM ortamları
 > [!NOTE]
 > Laboratuvar Yönetimi, SCVMM 2016 ' i desteklemez.
 
-SCVMM hakkında daha fazla bilgi için bkz. [Virtual Machine Manager](/azure/devops/pipelines/?view=vsts).
+SCVMM hakkında daha fazla bilgi için bkz. [Virtual Machine Manager](/azure/devops/pipelines/?view=vsts&preserve-view=true).
 
 Standart ortamlar ve SCVMM ortamları, aynı özelliklerin birçoğunu destekler. Ancak göz önünde bulundurmanız gereken bazı önemli farklılıklar vardır. Aşağıdaki tabloda, standart ortamlar ve SCVMM ortamları için kullanılabilen özellikler karşılaştırılır.
 

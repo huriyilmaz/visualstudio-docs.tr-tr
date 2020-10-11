@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 7d70f1e95ce2dd5163eb017684620c403a77f74a
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: bfd019848e62abf4e6f25913d29d26d1a1bde6a5
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90740038"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91927906"
 ---
 # <a name="compile-typescript-code-nodejs"></a>TypeScript kodunu derle (Node.js)
 
@@ -112,6 +112,10 @@ ASP.NET Core projeleri için, bunun yerine [NuGet paketini](../javascript/compil
    Kaynak haritaları oluşturduysanız, *OutDir* seçeneğinde belirtilen klasörü açın ve oluşturulan \* . js dosyalarını oluşturulan \* js. map dosyaları ile birlikte bulabilirsiniz.
 
    [Hata ayıklama](../javascript/debug-nodejs.md)için kaynak eşleme dosyaları gereklidir.
+
+### <a name="run-the-application"></a>Uygulamayı çalıştırma
+
+Derlemeden sonra uygulamayı çalıştırma yönergeleri için, bkz. [ilk Node.js uygulamanızı oluşturma](/visualstudio/ide/quickstart-nodejs?toc=%2Fvisualstudio%2Fjavascript%2Ftoc.json#run-the-application).
 
 ## <a name="automate-build-tasks"></a>Derleme görevlerini otomatikleştirin
 

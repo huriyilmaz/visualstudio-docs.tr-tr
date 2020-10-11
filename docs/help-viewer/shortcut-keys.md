@@ -1,5 +1,6 @@
 ---
 title: Kısayol tuşları (Yardım Görüntüleyicisi)
+description: Microsoft Yardım Görüntüleyicisi kısayol tuşlarının listesine bakın. Gezinti, pencere yönetimi ve içerik yönetimi için kısayol tuşlarını kullanın.
 ms.date: 11/02/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f7c49eadcfa0b73997f9902bdde0b8a9c98065e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 264917d515e25823f8d6c2cb522e85dcc9c47d84
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85533738"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878962"
 ---
 # <a name="shortcut-keys-in-help-viewer"></a>Yardım görüntüleyicisinde kısayol tuşları
 
@@ -47,7 +48,7 @@ Aşağıdaki tablodaki kısayol tuşlarını kullanarak **Microsoft Yardım Gör
 |Konu|**Aşağı Ok**|Tek seferde belgenin sonuna doğru ilerleyin.|
 |Konu|**Page Up**|Belgenin başlangıcına doğru her seferinde bir ekran kaydırın.|
 |Konu|**Page Down**|Belgenin sonuna doğru bir ekran kaydırmak için bir seferde bir ekran.|
-|Konu|**Giriş**|Belgenin başlangıcına gidin.|
+|Konu|**Giriş Ekranı**|Belgenin başlangıcına gidin.|
 |Konu|**Erer**|Belgenin sonuna taşı.|
 |Konu|**CTRL** + **F**|Bu sayfada arama metni bulun.|
 |Konu|**F5**|Geçerli sayfayı yenileyin.|
@@ -74,7 +75,7 @@ Aşağıdaki tablodaki kısayol tuşlarını kullanarak **Microsoft Yardım Gör
 |İçerik & Dizin & arama & Sık Kullanılanlar|**CTRL** + **P**|Belirtilen konuyu yazdır.|
 |İçerik & Dizin & arama & Sık Kullanılanlar|**CTRL** + **F2**|Belirtilen konunun baskı önizlemesini görüntüleyin.|
 |İçerik & Dizin & arama & Sık Kullanılanlar|**CTRL** + **Tıklama**|Konuyu yeni bir sekmede açın.|
-|Arayın|**Esc**|Arama metin kutusunu temizleyin.|
+|Search|**Esc**|Arama metin kutusunu temizleyin.|
 |Görüntüleyici Seçenekleri|**Alt** + **T**|Odağı **metin boyutu** listesiyle değiştirin.|
 |Görüntüleyici Seçenekleri|**Alt** + **S**|Odağı **en fazla arama sonuçları** listesine değiştirin.|
 |Görüntüleyici Seçenekleri|**Alt** + **H**|Odağı, **kaydedilen en fazla geçmiş girdileri** listesine göre değiştirin.|

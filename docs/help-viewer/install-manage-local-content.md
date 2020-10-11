@@ -1,5 +1,6 @@
 ---
 title: Yerel Yardım belgelerini yükler
+description: Microsoft Yardım Görüntüleyicisi kullanarak yerel Yardım belgelerini yükleyip yönetin. Bilgisayarınızda yüklü olan yardım içeriğini ekleyin, kaldırın, güncelleştirin ve taşıyın.
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -23,12 +24,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70bb90856fb88738bbc82434c47e375ea453fd08
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3401c12e35308b07a3c1bb1884af5acda221e71d
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284912"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91879105"
 ---
 # <a name="install-and-manage-local-content"></a>Yerel içerik yükleyip yönetme
 

@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 659167b02703cd3a51751fbe90fbd9408b5e623d
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 97499a88a04b2ae7b61b847c4aec133d297e613a
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599561"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928062"
 ---
 # <a name="diagnose-problems-after-deployment-using-intellitrace-c-visual-basic"></a>IntelliTrace kullanarak dağıtımdan sonra sorunları tanılama (C#, Visual Basic)
 
@@ -49,7 +49,7 @@ Visual Studio 2017 ve sonraki sürümleri, kullanım dışı bırakılmış ve k
 #### <a name="team-foundation-server-2013"></a><a name="TFS2013"></a> Team Foundation Server 2013
  Oluşturma bildirimine (BuildInfo.config dosyasına) kaynak, derleme ve sembollerinizin konumlarını eklemek için derleme işlem hattınızı ayarlayın. Team Foundation derlemesi bu dosyayı otomatik olarak oluşturur ve projenin çıkış klasörüne koyar.
 
-1. [Derleme işlem hattınızı düzenleyin veya yeni bir derleme işlem hattı oluşturun.](/azure/devops/pipelines/get-started-designer?view=vsts)
+1. [Derleme işlem hattınızı düzenleyin veya yeni bir derleme işlem hattı oluşturun.](/azure/devops/pipelines/get-started-designer?view=vsts&preserve-view=true)
 
      ![TFS 2013 ' de derleme işlem hattını görüntüleme](../debugger/media/ffr_tfs2013viewbuilddefinition.png "FFR_TFS2013ViewBuildDefinition")
 
@@ -63,7 +63,7 @@ Visual Studio 2017 ve sonraki sürümleri, kullanım dışı bırakılmış ve k
 
      ![Derleme işlem hattı TFS 2013 ' de simge yolunu ayarlama](../debugger/media/ffr_tfs2013builddefsymbolspath.png "FFR_TFS2013BuildDefSymbolsPath")
 
-     Semboller hakkında daha fazla bilgi için bkz. [Publish symbol Data](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols?view=vsts).
+     Semboller hakkında daha fazla bilgi için bkz. [Publish symbol Data](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols?view=vsts&preserve-view=true).
 
 4. Bu MSBuild bağımsız değişkenini, derleme bildirim dosyasına TFS ve semboller konumlarını içerecek şekilde ekleyin:
 
@@ -319,7 +319,7 @@ Visual Studio 2017 ve sonraki sürümleri, kullanım dışı bırakılmış ve k
 
    `"TeamBuild"`Ya da `"MSBuild"` ve bu gerekli özellikler ile derleme sisteminiz hakkında bilgi:
 
-  - **BuildLabel** (TeamBuild için): derleme adı ve numarası. Bu etiket, dağıtım olayının adı olarak da kullanılır. Derleme numaraları hakkında daha fazla bilgi için bkz. [Tamamlanan yapılara anlamlı adlar sağlamak için yapı numaralarını kullanma](/azure/devops/pipelines/build/options?view=vsts).
+  - **BuildLabel** (TeamBuild için): derleme adı ve numarası. Bu etiket, dağıtım olayının adı olarak da kullanılır. Derleme numaraları hakkında daha fazla bilgi için bkz. [Tamamlanan yapılara anlamlı adlar sağlamak için yapı numaralarını kullanma](/azure/devops/pipelines/build/options?view=vsts&preserve-view=true).
 
   - **SymbolPath** (önerilen): SIMGELER (pdb dosyası) konumlarına yönelik URI 'lerin noktalı virgülle ayrılmış listesi. Bu URI 'Ler URL veya UNCs olabilir. Bu, Visual Studio 'Nun hata ayıklamada size yardımcı olacak eşleşen sembolleri bulmasını kolaylaştırır.
 
@@ -379,7 +379,7 @@ Visual Studio 2017 ve sonraki sürümleri, kullanım dışı bırakılmış ve k
      ![Geçirilen &#45; kaynak denetiminden Aç](../debugger/media/ffr_openprojectfromsourcecontrol_migrated.png "FFR_OpenProjectFromSourceControl_Migrated")
 
 #### <a name="q-whats-a-workspace"></a><a name="WhatWorkspace"></a> S: çalışma alanı nedir?
- Y **:** [Çalışma alanınız kaynağın bir kopyasını depolar](/azure/devops/repos/tfvc/create-work-workspaces?view=vsts) , böylece çalışmalarınızı iade etmeden önce bunları ayrı ayrı geliştirebilir ve test edebilirsiniz. Bulunan çözümle veya projeyle özel olarak eşleşen bir çalışma alanı yoksa, Visual Studio varsayılan çalışma alanı adı olarak bilgisayar adınızla birlikte yeni bir çalışma alanı oluşturmanızı veya mevcut bir çalışma alanı seçmenizi ister.
+ Y **:** [Çalışma alanınız kaynağın bir kopyasını depolar](/azure/devops/repos/tfvc/create-work-workspaces?view=vsts&preserve-view=true) , böylece çalışmalarınızı iade etmeden önce bunları ayrı ayrı geliştirebilir ve test edebilirsiniz. Bulunan çözümle veya projeyle özel olarak eşleşen bir çalışma alanı yoksa, Visual Studio varsayılan çalışma alanı adı olarak bilgisayar adınızla birlikte yeni bir çalışma alanı oluşturmanızı veya mevcut bir çalışma alanı seçmenizi ister.
 
 #### <a name="q-why-do-i-get-this-message-about-untrusted-symbols"></a><a name="UntrustedSymbols"></a> S: güvenilmeyen simgeler hakkında bu iletiyi neden alıyorum?
  ![Güvenilmeyen semboller yoluyla hata ayıklaması yapılsın mı?](../debugger/media/ffr_ituntrustedsymbolpaths.png "FFR_ITUntrustedSymbolPaths")

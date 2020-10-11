@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9859366f6e4b9a0d1c219adc2080e6415b1e44a7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 98bdbecb12897602a70c590b9cee64b992193b7d
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75588661"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928508"
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>CodeLens ile kod değişikliklerini ve diğer geçmişi bulma
 
@@ -172,7 +172,7 @@ Değişikliklerin ne zaman birleştirildiğini görebilirsiniz, böylece dalın�
 
 **Dal** sütunundaki simge, dalın çalıştığınız Dalla nasıl ilişkili olduğunu söyler.
 
-|**Simg**|**Değişikliğin geldiği yer:**|
+|**Simge**|**Değişikliğin geldiği yer:**|
 |--------------| - |
 |![CodeLens: geçerli dal simgesinden Değiştir simgesi](../ide/media/codelensbranchcurrenticon.png)|Geçerli dal|
 |![CodeLens: üst dal simgesinden değiştirme](../ide/media/codelensbranchparenticon.png)|Üst dal|
@@ -217,7 +217,7 @@ C# veya Visual Basic kodunuz için var olan birim testlerini **Test Gezgini**'ni
 
 1. İlişkili [birim test koduna](../test/unit-test-your-code.md)sahip uygulama koduna gidin.
 
-2. Henüz yapmadıysanız CodeLens test göstergelerini yüklemek için uygulamanızı derleyin. 
+2. Henüz yapmadıysanız CodeLens test göstergelerini yüklemek için uygulamanızı derleyin.
 
 3. Alt 3 tuşlarına basarak kodun testlerini gözden geçirin **Alt** + **3**.
 
@@ -268,7 +268,7 @@ Y **:** CodeLens, C# ve yöntem, sınıf, Dizin Oluşturucu ve özellik düzeyin
 
 - Kodunuz TFS 'de depolanıyorsa, [TFS Config komutuyla](/azure/devops/server/command-line/tfsconfig-cmd) [CodeIndex komutunu](../ide/codeindex-command.md) kullanarak kod dizin oluşturma özelliğinin açık olduğundan emin olun.
 
-- DevOps ile ilgili göstergeler yalnızca, iş öğeleri koda bağlandığında ve bağlantılı iş öğelerini açmak için izinleriniz olduğunda görüntülenir. [Ekip üyesi izinleriniz](/azure/devops/organizations/security/view-permissions?view=vsts)olduğunu doğrulayın.
+- DevOps ile ilgili göstergeler yalnızca, iş öğeleri koda bağlandığında ve bağlantılı iş öğelerini açmak için izinleriniz olduğunda görüntülenir. [Ekip üyesi izinleriniz](/azure/devops/organizations/security/view-permissions?view=vsts&preserve-view=true)olduğunu doğrulayın.
 
 - Birim testi göstergeleri, uygulama kodu birim testlerine sahip olmadığında görünmez. Test durumu göstergeleri test projesinde otomatik olarak görüntülenir. Uygulama kodunuzun birim testleri olduğunu biliyorsanız, ancak test göstergeleri görünmüyorsa, çözümü oluşturmayı deneyin (**CTRL** + **vardiyası** + **B**).
 

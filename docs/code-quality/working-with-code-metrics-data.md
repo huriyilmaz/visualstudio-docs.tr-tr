@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d62baf32685832072266438de003b523399137f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c01543b290d991a189c0851c64526c9c513068ba
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75587088"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91927984"
 ---
 # <a name="use-the-code-metrics-results-window"></a>Kod ölçümleri sonuçları penceresini kullanın
 
@@ -82,9 +82,9 @@ Seçilen bir kod Ölçüm verisi satırını, her bir veri sütununun adı ve de
 
 ## <a name="create-a-work-item-based-on-code-metric-results"></a>Kod ölçümü sonuçlarına göre iş öğesi oluşturma
 
-**Kod ölçümü sonuçları** penceresindeki sonuçlara dayalı bir [Azure boards](/azure/devops/boards/index?view=vsts) iş öğesi oluşturabilirsiniz. İş öğesi oluşturulduğunda, Visual Studio otomatik olarak **başlık** alanına bir başlık girer ve **geçmiş** sekmesinin altındaki kod ölçüm verilerini otomatik olarak girer.
+**Kod ölçümü sonuçları** penceresindeki sonuçlara dayalı bir [Azure boards](/azure/devops/boards/index?view=vsts&preserve-view=true) iş öğesi oluşturabilirsiniz. İş öğesi oluşturulduğunda, Visual Studio otomatik olarak **başlık** alanına bir başlık girer ve **geçmiş** sekmesinin altındaki kod ölçüm verilerini otomatik olarak girer.
 
-Azure Boards iş öğeleri hakkında daha fazla bilgi için bkz. [iş öğeleri](/azure/devops/boards/work-items/index?view=vsts).
+Azure Boards iş öğeleri hakkında daha fazla bilgi için bkz. [iş öğeleri](/azure/devops/boards/work-items/index?view=vsts&preserve-view=true).
 
 ### <a name="to-create-a-work-item-based-on-a-result"></a>Bir sonuca göre iş öğesi oluşturmak için
 

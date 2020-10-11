@@ -7,18 +7,18 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 38e542fed0f26422a88644577ec864ef006855c5
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 8998a9e761716b28bd2815120e350b98804a6395
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038445"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928677"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>*. Runsettings* dosyasını kullanarak birim testlerini yapılandırma
 
 Visual Studio 'daki birim testleri, bir *. runsettings* dosyası kullanılarak yapılandırılabilir. Örneğin, testlerin çalıştırıldığı .NET sürümünü, test sonuçlarının dizinini veya bir test çalıştırması sırasında toplanan verileri değiştirebilirsiniz. *. Runsettings* dosyasının ortak kullanımı, [kod kapsamı analizini](../test/customizing-code-coverage-analysis.md)özelleştirecek.
 
-Çalışma ayarları dosyaları, [komut satırından](vstest-console-options.md), IDE 'den veya Azure test Plans ya da Team FOUNDATION Server (TFS) kullanarak bir [derleme iş akışında](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts) çalıştırılan testleri yapılandırmak için kullanılabilir.
+Çalışma ayarları dosyaları, [komut satırından](vstest-console-options.md), IDE 'den veya Azure test Plans ya da Team FOUNDATION Server (TFS) kullanarak bir [derleme iş akışında](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts&preserve-view=true) çalıştırılan testleri yapılandırmak için kullanılabilir.
 
 Çalışma ayarları dosyaları isteğe bağlıdır. Özel yapılandırma gerekmiyorsa *. runsettings* dosyasına ihtiyacınız yoktur.
 
@@ -35,7 +35,7 @@ Visual Studio 'daki birim testleri, bir *. runsettings* dosyası kullanılarak y
 
    - [Visual Studio IDE](#specify-a-run-settings-file-in-the-ide)
    - [Komut satırı](#specify-a-run-settings-file-from-the-command-line)
-   - Azure Test Plans veya Team Foundation Server (TFS) kullanarak [iş akışı oluşturun](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts) .
+   - Azure Test Plans veya Team Foundation Server (TFS) kullanarak [iş akışı oluşturun](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts&preserve-view=true) .
 
 4. Özel çalışma ayarlarını kullanmak için birim testlerini çalıştırın.
 
@@ -83,20 +83,20 @@ Visual Studio 2019 sürüm 16,4 ve sonraki sürümlerde bir çalıştırma ayarl
 Çalışma ayarları dosyasını otomatik hale getirebilir, çözümünüzün köküne yerleştirin.
 
 Çalışma ayarları dosyalarının otomatik algılanması etkinleştirilirse, bu dosyadaki ayarlar tüm testler üzerinde uygulanır. Runsettings dosyalarının otomatik olarak algılanmasını iki yöntemi kullanarak açabilirsiniz:
-  
+
 - **Araç** > **seçeneklerini** seçin > **Test** > **Otomatik Algıla runsettings dosyaları**
 
    ![Visual Studio 2019 'de runsettings dosya seçeneğini otomatik algıla](media/vs-2019/auto-detect-runsettings-tools-window.png)
-      
+
 - **Test** > **Yapılandır çalışma ayarlarını** > **Otomatik Algıla runsettings dosyalarını** seçin
-    
+
    ![Visual Studio 2019 'de runsettings Dosya menüsünü otomatik algıla](media/vs-2019/auto-detect-runsettings-menu.png)
 
 #### <a name="manually-select-the-run-settings-file"></a>Çalışma ayarları dosyasını el ile seçin
 
 IDE 'de **Test** > **Çalıştır ayarlarını yapılandır** > **çözüm genelindeki runsettings dosyasını**seçin ve ardından *. runsettings* dosyasını seçin.
 
-   - Bu dosya, varsa çözüm kökündeki *. runsettings* dosyasını geçersiz kılar ve tüm testler üzerinde uygulanır.  
+   - Bu dosya, varsa çözüm kökündeki *. runsettings* dosyasını geçersiz kılar ve tüm testler üzerinde uygulanır.
    - Bu dosya seçimi yalnızca yerel olarak devam ettirir.
 
 ![Visual Studio 2019 'de çözüm genelinde çalışma ayarları Dosya menüsünü seçin](media/vs-2019/select-solution-settings-file.png)
@@ -107,10 +107,10 @@ Proje dosyası ya da bir dizin. Build. props dosyası aracılığıyla bir proje
 
 - Proje düzeyi çalışma ayarları şu anda C#, VB, C++ ve F # projelerinde destekleniyor.
 - Bir proje için belirtilen dosya, çözümde belirtilen diğer çalışma ayarları dosyalarını geçersiz kılar.
-- [Bu MSBuild özellikleri](../msbuild/msbuild-reserved-and-well-known-properties.md) , runsettings dosyasının yolunu belirtmek için kullanılabilir. 
+- [Bu MSBuild özellikleri](../msbuild/msbuild-reserved-and-well-known-properties.md) , runsettings dosyasının yolunu belirtmek için kullanılabilir.
 
 Bir proje için *. runsettings* dosyası belirtme örneği:
-    
+
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
@@ -186,7 +186,7 @@ Varsayılan bir değere sahip olduğundan, yapılandırma öğelerinin her biri 
 |**Treattestadaptererrorsasuyarılar**|yanlış|yanlış, doğru|
 |**TestAdaptersPaths**||TestAdapters 'nin bulunduğu dizine ait bir veya daha fazla yol|
 |**TestSessionTimeout**||Belirli bir zaman aşımını aştığında kullanıcıların bir test oturumunu sonlanmasına izin verir. Bir zaman aşımı ayarlamak, kaynakların iyi şekilde tüketilmesini ve test oturumlarının bir ayarlama zamanına göre kısıtlanmasını sağlar. Bu ayar, **Visual Studio 2017 sürüm 15,5** ve sonraki sürümlerinde kullanılabilir.|
-|**Dotnewthostpath**||Testhost çalıştırmak için kullanılan DotNet konağının özel yolunu belirtin. Bu, DotNet/Runtime deposunu oluştururken kendi DotNet 'nizi oluştururken kullanışlıdır. Bu seçeneğin belirtilmesi testhost.exe arama işlemini atlar ve testhost.dll her zaman kullanır. 
+|**Dotnewthostpath**||Testhost çalıştırmak için kullanılan DotNet konağının özel yolunu belirtin. Bu, DotNet/Runtime deposunu oluştururken kendi DotNet 'nizi oluştururken kullanışlıdır. Bu seçeneğin belirtilmesi testhost.exe arama işlemini atlar ve testhost.dll her zaman kullanır.
 
 ## <a name="datacollectors-element-diagnostic-data-adapters"></a>Datatoplayıcıları öğesi (tanılama veri bağdaştırıcıları)
 
@@ -231,7 +231,7 @@ Diğer herhangi bir tanılama veri bağdaştırıcısı türünü özelleştirme
 
 ### <a name="blame-data-collector"></a>Blame veri toplayıcısı
 
-Bu seçenek, test ana bilgisayarı kilitlenmesine neden olan sorunlu bir testi yalıtmanıza yardımcı olabilir. Toplayıcıyı *çalıştırmak, test*eden bir çıkış dosyası (*Sequence.xml*) oluşturur ve bu, kilitlenmeden önce testin yürütülme sırasını yakalar. 
+Bu seçenek, test ana bilgisayarı kilitlenmesine neden olan sorunlu bir testi yalıtmanıza yardımcı olabilir. Toplayıcıyı *çalıştırmak, test*eden bir çıkış dosyası (*Sequence.xml*) oluşturur ve bu, kilitlenmeden önce testin yürütülme sırasını yakalar.
 
 ```xml
 <DataCollector friendlyName="blame" enabled="True">
@@ -268,7 +268,7 @@ Bu `LoggerRunSettings` bölüm, test çalıştırması için kullanılacak bir v
 
 ```xml
 <LoggerRunSettings>
-    <Loggers>        
+    <Loggers>
       <Logger friendlyName="console" enabled="True">
         <Configuration>
             <Verbosity>quiet</Verbosity>
@@ -392,10 +392,10 @@ Varsayılan bir değere sahip olduğundan, dosyanın her bir öğesi isteğe ba�
     <Parameter name="webAppUserName" value="Admin" />
     <Parameter name="webAppPassword" value="Password" />
   </TestRunParameters>
-  
+
   <!-- Configuration for loggers -->
   <LoggerRunSettings>
-    <Loggers>      
+    <Loggers>
       <Logger friendlyName="console" enabled="True">
         <Configuration>
             <Verbosity>quiet</Verbosity>
@@ -462,4 +462,4 @@ Aşağıdaki kod, ortam değişkenlerini geçiren örnek bir *. runsettings* dos
 
 - [Test çalıştırması yapılandırma](https://github.com/microsoft/vstest-docs/blob/master/docs/configure.md)
 - [Kod kapsamı analizini özelleştirme](../test/customizing-code-coverage-analysis.md)
-- [Visual Studio test görevi (Azure Test Plans)](/azure/devops/pipelines/tasks/test/vstest?view=vsts)
+- [Visual Studio test görevi (Azure Test Plans)](/azure/devops/pipelines/tasks/test/vstest?view=vsts&preserve-view=true)
