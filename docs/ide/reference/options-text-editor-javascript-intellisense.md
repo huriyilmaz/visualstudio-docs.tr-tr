@@ -1,5 +1,7 @@
 ---
 title: Seçenekler, Metin Düzenleyici, JavaScript, IntelliSense
+description: JavaScript için IntelliSense davranışını etkileyen ayarları değiştirmek için Seçenekler iletişim kutusunun IntelliSense sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.technology: vs-javascript
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e3d030e028332bd57afe66eee31c888713721212
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41256882433bc95db7af380d27cc8dc63fbcd387
+ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68605974"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91947732"
 ---
 # <a name="options-dialog-box-text-editor--javascript--intellisense"></a>Seçenekler iletişim kutusu: metin düzenleyici \> JavaScript \> IntelliSense
 

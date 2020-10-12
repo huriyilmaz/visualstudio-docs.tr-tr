@@ -1,5 +1,7 @@
 ---
 title: Visual Studio IDE’ye ilk bakış
+description: Windows, menüler ve en sık kullanılan diğer kullanıcı arabirimi özellikleri dahil olmak üzere Visual Studio tümleşik geliştirme ortamı (IDE) hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/05/2019
 ms.topic: quickstart
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 41d5d40cc7951f09a8106426f603d42628c61846
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f80dd85e1cc8f93784ed938ef1788730b3c926e8
+ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238874"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91947823"
 ---
 # <a name="first-look-at-the-visual-studio-ide"></a>Visual Studio IDE’ye ilk bakış
 
@@ -33,7 +35,7 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
 ::: moniker range=">=vs-2019"
 
-## <a name="start-window"></a>Başlangıç penceresi
+## <a name="start-window"></a> Başlangıç penceresi
 
 Visual Studio 'Yu başlattıktan sonra ilk olarak göreceğiniz şey başlangıç penceresidir. Başlangıç penceresi, "koda ulaşmak" için daha hızlı yardımcı olacak şekilde tasarlanmıştır. Kodu kapatma veya kullanıma alma, var olan bir projeyi veya çözümü açma, yeni bir proje oluşturma veya yalnızca bazı kod dosyalarını içeren bir klasörü açma seçeneklerine sahiptir.
 

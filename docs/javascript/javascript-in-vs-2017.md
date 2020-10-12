@@ -1,5 +1,7 @@
 ---
 title: JavaScript
+description: Visual Studio IDE 'de JavaScript kodu yazarken Standart Düzen yardımlarının (kod parçacıkları, IntelliSense, vb.) çoğunu veya tümünü kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 01/15/2019
 ms.technology: vs-javascript
 ms.topic: conceptual
@@ -12,12 +14,12 @@ caps.latest.revision: 1
 author: bowdenk7
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fdb59c51fe38e3d2e3f2f1fd0b00db285b0de7f1
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: e8e4d0e337289e2676dc8eb040ad199ae41a8dbc
+ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90739895"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91947784"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>Visual Studio 2017’de JavaScript
 
@@ -260,7 +262,7 @@ Burada bildirim ( `.d.ts` ) dosyası yazma hakkında daha fazla bilgi [here](htt
 Yeni dil hizmeti bir yürütme altyapısı yerine statik analizler tarafından desteklenmediğinden (farklar hakkında bilgi edinmek için [Bu sorunu](https://github.com/Microsoft/TypeScript/issues/4789) okuyun), artık algılanamayan birkaç JavaScript deseni vardır.
 En yaygın olarak kullanılan desenler "daha fazla" modeldir.
 Şu anda dil hizmeti, bildirimde daha sonra bulunan özelliklere sahip nesneler üzerinde IntelliSense sağlayamaz.
-Örneğin:
+Örnek:
 
 ```js
 var obj = {};
