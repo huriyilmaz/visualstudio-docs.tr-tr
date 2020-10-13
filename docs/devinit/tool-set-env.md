@@ -11,18 +11,18 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 19f635f0d22eacd64726368af89bbf5b7c4c9a11
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 7bb545a8e8713159d6833f0ed8d8c2b8784095e1
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862847"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959768"
 ---
 # <a name="set-env"></a>set-env
 
 `set-env`Araç, geçerli işlemde kullanılmak üzere ortam değişkenlerini ayarlamak için kullanılabilir. Ortam değişkenleri yalnızca geçerli işlemde ayarlanır ve `devinit` Bu işlemde çalıştırıldıklarında diğer araçlar tarafından kullanılır.
 
-Bu araç .NET Core API 'sini kullanır `Environment.SetEnvironment` ve bu API ile aynı sınırlamalara sahiptir. Daha fazla bilgi için lütfen [belgelerine](/dotnet/api/system.environment.setenvironmentvariable?preserve-view=true&view=netcore-3.1) bakın `Environment.SetEnvironment` .
+Bu araç .NET Core API 'sini kullanır `Environment.SetEnvironment` ve bu API ile aynı sınırlamalara sahiptir. Daha fazla bilgi için lütfen [belgelerine](/dotnet/api/system.environment.setenvironmentvariable?view=netcore-3.1&preserve-view=true) bakın `Environment.SetEnvironment` .
 
 ## <a name="usage"></a>Kullanım
 
@@ -39,9 +39,9 @@ Bu araç .NET Core API 'sini kullanır `Environment.SetEnvironment` ve bu API il
 | Eylem       | Giriş            | Açıklama                                                                                                                                                              | Örnek             |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
 | **Tümünü Listele** | boş veya atlanmış | Tüm geçerli ortam değişkenlerini listeleyin.                                                                                                                              | `"input":""`        |
-| **liste bir** | string           | Belirli bir ortam değişkeninin değerini ada göre listeleyin.                                                                                                               | `"input":"foo"`     |
-| **add**      | string           | Bir ortam değişkeninin değerini anahtar değer çifti olarak ayarlar. Henüz yoksa yeni bir ortam değişkeni ekler veya var olan bir ortam değişkeninin değerini ayarlar | `"input":"foo=bar"` |
-| **delete**   | string           | Boş bir değer dizesini geçirerek var olan bir ortam değişkenini siler.                                                                                            | `"input":"foo="`    |
+| **liste bir** | dize           | Belirli bir ortam değişkeninin değerini ada göre listeleyin.                                                                                                               | `"input":"foo"`     |
+| **add**      | dize           | Bir ortam değişkeninin değerini anahtar değer çifti olarak ayarlar. Henüz yoksa yeni bir ortam değişkeni ekler veya var olan bir ortam değişkeninin değerini ayarlar | `"input":"foo=bar"` |
+| **delete**   | dize           | Boş bir değer dizesini geçirerek var olan bir ortam değişkenini siler.                                                                                            | `"input":"foo="`    |
 
 Bir `input` dize `%userprofile%` , örneğin değer okuma olduğunda genişletilen bir ortam değişkeni genişletmesi içerebilir.
 

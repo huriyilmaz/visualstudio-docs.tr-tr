@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 36fc3d3fd0b002c110e9184a6d7b15c9fa367c48
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: d1a82cc5fc5ea34f007750a08c0e8140421a9f41
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509841"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959828"
 ---
 # <a name="work-with-data-in-visual-studio"></a>Visual Studio’da verilerle çalışma
 
@@ -113,7 +113,7 @@ Bu teknolojilerden herhangi birini kullanma gereksinimi yoktur. Bazı senaryolar
 
 ## <a name="native-c"></a>Yerel C++
 
-SQL Server bağlanan C++ uygulamaları çoğu durumda [SQL Server Için Microsoft® ODBC sürücü 13,1](https://www.microsoft.com/download/details.aspx?id=53339) ' i kullanmalıdır. Sunucular bağlantısa, OLE DB gereklidir ve [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client)kullanmanız gerekir. Diğer veritabanlarına, [ODBC](/sql/odbc/microsoft-open-database-connectivity-odbc?view=sql-server-2017) veya OLE DB sürücülerini doğrudan kullanarak erişebilirsiniz. ODBC, geçerli standart veritabanı arabirimidir, ancak çoğu veritabanı sistemi ODBC arabiriminden erişilemeyen özel işlevlere sahiptir. OLE DB, hala desteklenen ancak yeni uygulamalar için önerilmeyen eski bir COM veri erişim teknolojisidir. Daha fazla bilgi için bkz. [Visual C++ veri erişimi](/cpp/data/data-access-in-cpp).
+SQL Server bağlanan C++ uygulamaları çoğu durumda [SQL Server Için Microsoft® ODBC sürücü 13,1](https://www.microsoft.com/download/details.aspx?id=53339) ' i kullanmalıdır. Sunucular bağlantısa, OLE DB gereklidir ve [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client)kullanmanız gerekir. Diğer veritabanlarına, [ODBC](/sql/odbc/microsoft-open-database-connectivity-odbc?view=sql-server-2017&preserve-view=true) veya OLE DB sürücülerini doğrudan kullanarak erişebilirsiniz. ODBC, geçerli standart veritabanı arabirimidir, ancak çoğu veritabanı sistemi ODBC arabiriminden erişilemeyen özel işlevlere sahiptir. OLE DB, hala desteklenen ancak yeni uygulamalar için önerilmeyen eski bir COM veri erişim teknolojisidir. Daha fazla bilgi için bkz. [Visual C++ veri erişimi](/cpp/data/data-access-in-cpp).
 
 REST hizmetlerini kullanan c++ programları [C++ Rest SDK 'sını](https://github.com/Microsoft/cpprestsdk)kullanabilir.
 

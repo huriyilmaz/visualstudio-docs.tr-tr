@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 21dd482d100ce87ce942650e27a5dc5a232ddbbb
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 6744e8fb3b42f81f6d0814646cab1f2388ebe577
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862840"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959761"
 ---
 # <a name="vcpkg-install"></a>vcpkg-install
 
@@ -29,7 +29,7 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 | Ad                                             | Tür   | Gerekli | Değer                                                                                   |
 |--------------------------------------------------|--------|----------|-----------------------------------------------------------------------------------------|
 | **açıklamaları**                                     | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                                   |
-| [**girişinin**](#input)                              | string | Evet      | Yüklenecek paket (ler). Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                       |
+| [**girişinin**](#input)                              | dize | Yes      | Yüklenecek paket (ler). Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                       |
 | [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.                        |
 
 ### <a name="input"></a>Giriş
@@ -38,7 +38,7 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 
 ### <a name="additional-options"></a>Ek seçenekler
 
-Ek seçenekler doğrudan [vcpkg](/powershell/module/powershellget/install-module?preserve-view=true&view=powershell-7) komutuna geçirilir ve [Vcpkg GitHub deposu](https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md)'nda belgelenmiştir.
+Ek seçenekler doğrudan [vcpkg](/powershell/module/powershellget/install-module?view=powershell-7&preserve-view=true) komutuna geçirilir ve [Vcpkg GitHub deposu](https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md)'nda belgelenmiştir.
 
 ### <a name="default-behavior"></a>Varsayılan davranış
 

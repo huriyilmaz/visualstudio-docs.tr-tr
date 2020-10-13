@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: a14830e39cf39f0228fcb0e468df779f35f08ebe
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 1b5c3c478f275dac7512c4b3ada9871fe69b0f0e
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860718"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959795"
 ---
 # <a name="require-mssql"></a>require-mssql
 
@@ -51,7 +51,7 @@ Aracın varsayılan davranışı `require-mssql` SQL Server 'ı yüklemektir.
 
 ### <a name="builtin-options"></a>Yerleşik Seçenekler
 
-`require-mssql`Araç, yükleyicinin gözetimsiz olarak çalıştırıladiğinden emin olmak için bir dizi yükleyici komut satırı bağımsız değişkeni ayarlar. Bu bağımsız değişkenler aşağıda listelenmiştir ve bunlar üzerindeki belgeler [SQL yüklemesi belgelerinde](/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?preserve-view=true&view=sql-server-ver15)bulunabilir.
+`require-mssql`Araç, yükleyicinin gözetimsiz olarak çalıştırıladiğinden emin olmak için bir dizi yükleyici komut satırı bağımsız değişkeni ayarlar. Bu bağımsız değişkenler aşağıda listelenmiştir ve bunlar üzerindeki belgeler [SQL yüklemesi belgelerinde](/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-ver15&preserve-view=true)bulunabilir.
 
 | Ad                                                               | Açıklama |
 |--------------------------------------------------------------------|-------------|

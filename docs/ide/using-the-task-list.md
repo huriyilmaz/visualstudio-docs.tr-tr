@@ -1,6 +1,7 @@
 ---
 title: Görev Listesini Kullanma
-ms.date: 11/04/2016
+description: Visual Studio 'daki Görev Listesi kod açıklamalarını daha verimli bir şekilde izlemenize ve kullanmanıza nasıl yardımcı olabileceğini öğrenin.
+ms.date: 10/12/2020
 ms.topic: how-to
 f1_keywords:
 - TaskListWindow
@@ -14,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a3e1c43e9813bce664a63f3675b0fed6e14e3c7
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.openlocfilehash: 8d19794b4fce3e4a1388f864cecf408e0f7e9c53
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91781000"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959808"
 ---
 # <a name="use-the-task-list"></a>Görev Listesini Kullanma
 
@@ -64,12 +65,12 @@ Kodunuzda bir açıklama işaretçisi ve önceden tanımlanmış bir belirteç b
 
 `TODO`, Önceden tanımlanmış bir belirteç olduğundan, bu açıklama listede bir `TODO` görev olarak görünür.
 
-> [!NOTE]
-> Varsayılan belirteçler yalnızca C/C++, C# ve VB dilleri için kullanılabilir.
-
 ### <a name="custom-tokens"></a>Özel belirteçler
 
 Varsayılan olarak, Visual Studio aşağıdaki belirteçleri içerir: `HACK` , `TODO` , `UNDONE` ve `UnresolvedMergeConflict` . Bunlar büyük/küçük harfe duyarlı değildir. Ayrıca kendi özel belirteçlerinizi de oluşturabilirsiniz.
+
+> [!NOTE]
+> Varsayılan belirteçler yalnızca C/C++, C# ve VB dilleri için kullanılabilir. Diğer programlama dillerinde kendi belirteçlerinizi oluşturmak için aşağıdaki adımları kullanın.
 
 Özel belirteç oluşturmak için:
 

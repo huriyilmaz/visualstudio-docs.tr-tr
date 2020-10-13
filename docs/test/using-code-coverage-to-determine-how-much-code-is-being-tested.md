@@ -11,12 +11,12 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 6dd6dde83720c6e6f37bd6827bb5d97526202aa7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2d1b51661d9fc9a5492d123bdacd6c49d241ed87
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585606"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959781"
 ---
 # <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>Kod kapsamını kullanarak ne kadar kodun test edildiğini belirleme
 
@@ -124,7 +124,7 @@ Birleştirme işleminin sonuçlarını kaydetmek için **kod kapsamı sonuçlar�
 > [!TIP]
 > Bir sınıfın dışlanması türetilmiş sınıfları dışlamaz.
 
-Örneğin:
+Örnek:
 
 ```csharp
 using System.Diagnostics.CodeAnalysis;
@@ -272,7 +272,7 @@ Bir *. runsettings* dosyası yazarak kod kapsamı analizi için hangi derlemeler
 
 ## <a name="analyze-code-coverage-in-azure-pipelines"></a>Azure Pipelines kod kapsamını analiz etme
 
-Kodunuzu iade ettiğinizde, testleriniz yapı sunucusunda diğer takım üyelerinden gelen testlerle birlikte çalışır. Tüm projede en güncel ve kapsamlı kapsama görünümünü almak için Azure Pipelines kod kapsamını çözümlemek yararlı olur. Ayrıca, genellikle geliştirme makinelerinde çalıştırılmamaları için otomatikleştirilmiş Sistem testlerini ve diğer kodlanmış testleri de içerir. Daha fazla bilgi için bkz. [Derlemelerinizle birim testlerini çalıştırma](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts).
+Kodunuzu iade ettiğinizde, testleriniz yapı sunucusunda diğer takım üyelerinden gelen testlerle birlikte çalışır. Tüm projede en güncel ve kapsamlı kapsama görünümünü almak için Azure Pipelines kod kapsamını çözümlemek yararlı olur. Ayrıca, genellikle geliştirme makinelerinde çalıştırılmamaları için otomatikleştirilmiş Sistem testlerini ve diğer kodlanmış testleri de içerir. Daha fazla bilgi için bkz. [Derlemelerinizle birim testlerini çalıştırma](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts&preserve-view=true).
 
 ## <a name="analyze-code-coverage-from-the-command-line"></a>Komut satırından kod kapsamını analiz etme
 
