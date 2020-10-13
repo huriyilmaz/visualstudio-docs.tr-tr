@@ -1,5 +1,5 @@
 ---
-title: Hata ayıklama olmadan bellek kullanımını analiz etme | Microsoft Docs
+title: Performans profil oluşturucusu 'nda bellek kullanımını analiz etme
 ms.custom: ''
 ms.date: 04/02/2020
 ms.topic: how-to
@@ -13,18 +13,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fe336962a9d631a01438fdd4620fd27e2affc44
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4e99652e343510962959830b327237ee018c8fa
+ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543357"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92007206"
 ---
-# <a name="analyze-memory-usage-without-the-debugger"></a>Hata ayıklayıcı olmadan bellek kullanımını analiz etme
+# <a name="analyze-memory-usage-without-debugging-in-the-performance-profiler"></a>Performans Profiler 'da hata ayıklama olmadan bellek kullanımını analiz etme
 
-**Bellek kullanımı** Aracı, uygulamanızın bellek kullanımını izler. Visual Studio 'da etkin bir şekilde geliştirmekte olduğunuz senaryoların gerçek zamanlı bellek efektlerini incelemek için aracını kullanabilirsiniz. Uygulamanın bellek durumlarının ayrıntılı anlık görüntülerini alabilir ve bellek sorunlarının ana nedenlerini bulmak için anlık görüntüleri karşılaştırabilirsiniz.
+**Bellek kullanımı** Aracı, uygulamanızın bellek kullanımını izler. Visual Studio 'da etkin bir şekilde geliştirmekte olduğunuz senaryoların gerçek zamanlı bellek efektlerini incelemek için aracını kullanabilirsiniz. Uygulamanın bellek durumlarının ayrıntılı anlık görüntülerini alabilir ve bellek sorunlarının ana nedenlerini bulmak için anlık görüntüleri karşılaştırabilirsiniz. Bellek kullanımı aracı .NET, ASP.NET, C++ veya karma mod (.NET ve yerel) uygulamalarında desteklenir.
 
-**Bellek kullanımı** Aracı, [hata ayıklayıcı ile veya olmadan](../profiling/running-profiling-tools-with-or-without-the-debugger.md)çalıştırılabilir. Bu makalede, Visual Studio **performans profil oluşturucusu**'nda hata ayıklayıcı olmadan **bellek kullanımı** aracının nasıl kullanılacağını göstereceğiz.
+Bellek kullanımı aracı, [hata ayıklayıcı ile veya olmadan](../profiling/running-profiling-tools-with-or-without-the-debugger.md)çalıştırılabilir. Bu makalede, Visual Studio **performans profil oluşturucusu**'nda hata ayıklayıcı olmadan bellek kullanımı aracının nasıl kullanılacağını göstereceğiz.
 
 ## <a name="memory-usage-diagnostic-sessions"></a>Bellek kullanımı tanılama oturumları
 
@@ -32,7 +32,7 @@ ms.locfileid: "85543357"
 
 1. Visual Studio 'da bir proje açın.
 
-   Bellek kullanımı aracı .NET, ASP.NET, Native veya karma mod (.NET ve yerel) uygulamalarını destekler.
+   Bellek kullanımı aracı .NET, ASP.NET, C++ veya karma mod (.NET ve yerel) uygulamalarını destekler.
 
 1. Hata Ayıkla menüsünde, çözüm yapılandırmasını **yayınlama** olarak ayarlayın ve dağıtım hedefi olarak **yerel Windows hata ayıklayıcısı** 'Nı (veya **yerel makine**) seçin.
 
@@ -76,7 +76,7 @@ Numaralar, yeni Visual Studio Windows 'da ayrıntılı **bellek kullanımı** ra
 
   ![Anlık görüntü görünümü bağlantıları](../profiling/media/memuse__snapshotview_numbered.png "Anlık görüntü görünümü bağlantıları")
 
-|Görüntü|Description|
+|Görüntü|Açıklama|
 |-|-|
 |![1. Adım](../profiling/media/procguid_1.png "ProcGuid_1")|Anlık görüntü çekilirken bellekteki toplam bayt sayısı.<br /><br /> Tür örneklerinin toplam boyutuna göre sıralanmış bir anlık görüntü ayrıntıları raporu göstermek için bu bağlantıyı seçin.|
 |![2. Adım](../profiling/media/procguid_2.png "ProcGuid_2")|Anlık görüntü çekilirken bellekteki toplam nesne sayısı.<br /><br /> Bu bağlantıyı, türlerin örnek sayısına göre sıralanmış bir anlık görüntü ayrıntıları raporu göstermek için seçin.|

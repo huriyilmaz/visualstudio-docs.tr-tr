@@ -2,7 +2,7 @@
 title: Visual Studio’yu onarın
 titleSuffix: ''
 description: Visual Studio 2017 yüklemesini onarmayı öğrenin
-ms.date: 06/15/2020
+ms.date: 10/12/2020
 ms.custom: seodec18
 ms.topic: how-to
 author: ornellaalt
@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: fda72206059e5c14c46d332e44ea0de481004296
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7b2fd0a49a235827d3a9094aad6cc0f59a0cd403
+ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85418970"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92007105"
 ---
 # <a name="repair-visual-studio"></a>Visual Studio’yu onarın
 
@@ -63,9 +63,9 @@ Bazen Visual Studio yüklemenizin hasar görmüş veya bozuk hale gelir. Güncel
 
 1. Bilgisayarınızda **Visual Studio yükleyicisi** bulun.
 
-     Örneğin, Windows 10 çalıştıran bir bilgisayarda **Başlat**' ı seçin ve ardından **Visual Studio yükleyicisi**olarak listelendiği **V**harfine gidin.
+     Windows Başlat menüsünde, "yükleyici" için arama yapabilirsiniz.
 
-     ![Visual Studio Yükleyicisi açın](media/vs-2019/vs-installer-windows-start.png "Visual Studio Yükleyicisi açın")
+     ![Visual Studio Yükleyicisi](media/vs-2019/visual-studio-installer.png "Visual Studio Yükleyicisi arayın")
 
      > [!NOTE]
      > Aşağıdaki konumda Visual Studio Yükleyicisi de bulabilirsiniz:

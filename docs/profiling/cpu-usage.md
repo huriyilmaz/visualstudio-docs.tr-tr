@@ -1,6 +1,5 @@
 ---
-title: CPU kullanımını çözümle | Microsoft Docs
-ms.custom: seodec18
+title: Performans Profiler 'da CPU kullanımını analiz etme
 ms.date: 04/02/2020
 ms.topic: how-to
 ms.assetid: 7501a20d-04a1-480f-a69c-201524aa709d
@@ -9,24 +8,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e5ab97f3db8e5d44aa649455c313a5681ed93c8c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 706ffa8d17974894403c22a559edad4c2e4b4ef8
+ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543396"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92007095"
 ---
-# <a name="analyze-cpu-usage"></a>CPU kullanımını analiz etme
+# <a name="analyze-cpu-usage-without-debugging-in-the-performance-profiler"></a>Performans profil oluşturucusu 'nda hata ayıklama olmadan CPU kullanımını çözümleme
 
 Uygulamanızdaki performans sorunlarını araştırmaya başlamak için iyi bir yöntem, CPU kullanımını anlamaktır. **CPU kullanımı** performans aracı, C++, C#/Visual Basic ve JavaScript uygulamalarında kod ÇALıŞTıRıRKEN harcanan CPU süresini ve yüzdesini gösterir.
 
-**CPU kullanımı** aracı açık bir Visual Studio projesi üzerinde, yüklü bir Microsoft Store uygulamasında veya çalışan bir uygulamaya veya işleme bağlı olarak çalışabilir. Daha fazla bilgi için bkz. [hata ayıklayıcı ile veya olmayan profil oluşturma araçlarını çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
+CPU kullanımı aracı açık bir Visual Studio projesi üzerinde, yüklü bir Microsoft Store uygulamasında veya çalışan bir uygulamaya veya işleme bağlı olarak çalışabilir. CPU kullanımı aracını hata ayıklama olmadan veya olmadan çalıştırabilirsiniz. Daha fazla bilgi için bkz. [hata ayıklayıcı ile veya olmayan profil oluşturma araçlarını çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
-**CPU kullanımı** aracını hata ayıklama olmadan veya olmadan çalıştırabilirsiniz. Hata ayıklayıcıda, CPU profil oluşturmayı açıp kapatabilir ve CPU kullanımı için işlev başına dökümünü görebilirsiniz. Yürütme duraklatıldığında, örneğin bir kesme noktasında CPU kullanım sonuçlarını görüntüleyebilirsiniz.
+Aşağıdaki yönergeler, Visual Studio performans profil oluşturucuyu kullanarak, hata ayıklayıcı olmadan CPU kullanımı aracının nasıl kullanılacağını göstermektedir. Örnekler yerel bir makinede bir yayın derlemesi kullanır. Yayın yapıları gerçek uygulama performansının en iyi görünümünü sağlar. Hata ayıklama Derlemeleriyle CPU kullanımını çözümlemek için (hata ayıklayıcı ekli), bkz. [Başlangıç Kılavuzu, performans profili oluşturma](../profiling/beginners-guide-to-performance-profiling.md).
 
-Aşağıdaki yönergeler, Visual Studio **performans profil oluşturucuyu**kullanarak, hata ayıklayıcı olmadan **CPU kullanımı** aracının nasıl kullanılacağını göstermektedir. Örnekler yerel bir makinede bir yayın derlemesi kullanır. Yayın yapıları gerçek uygulama performansının en iyi görünümünü sağlar. Hata ayıklama Derlemeleriyle CPU kullanımını çözümlemek için, bkz. [Başlangıç Kılavuzu, performans profili oluşturma](../profiling/beginners-guide-to-performance-profiling.md).
-
-Genellikle, yerel makine yüklü uygulama yürütmeyi en iyi şekilde çoğaltır. Windows Phone uygulamalar için, verilerin doğrudan cihazdan toplanması en doğru verileri sağlar. Uzak bir cihazdan veri toplamak için, uygulamayı bir Uzak Masaüstü Bağlantısı değil doğrudan cihazda çalıştırın.
+Genellikle, yerel makine yüklü uygulama yürütmeyi en iyi şekilde çoğaltır. Uzak bir cihazdan veri toplamak için, uygulamayı bir Uzak Masaüstü Bağlantısı değil doğrudan cihazda çalıştırın.
 
 >[!NOTE]
 >[Performans profil oluşturucuyu](../profiling/profiling-feature-tour.md)kullanmak için Windows 7 veya üzeri gereklidir.
@@ -80,7 +77,7 @@ Visual Studio 2019 ' den başlayarak, çağrı ağacı görünümünde CPU 'nun 
 ![Çağrı ağacı yapısı](../profiling/media/cpu_use_wt_getmaxnumbercalltree_annotated.png "Çağrı ağacı yapısı")
 ::: moniker-end
 
-|Görüntü|Description|
+|Görüntü|Açıklama|
 |-|-|
 |![1. Adım](../profiling/media/procguid_1.png "ProcGuid_1")|CPU kullanım çağrısı ağaçlarında en üst düzey düğüm bir sözde düğümdür.|
 |![2. Adım](../profiling/media/procguid_2.png "ProcGuid_2")|Çoğu uygulamalarda, **dış kodu göster** seçeneği devre dışı bırakıldığında, ikinci düzey düğüm bir **[Dış kod]** düğümüdür. Düğüm, uygulamayı başlatan ve durduran sistem ve çerçeve kodunu içerir, Kullanıcı arabirimini çizer, iş parçacığı zamanlamasını denetler ve uygulamaya diğer alt düzey hizmetler sağlar.|

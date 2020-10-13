@@ -2,8 +2,9 @@
 title: Visual Studio’yu değiştirme
 titleSuffix: ''
 description: Visual Studio 'Yu nasıl değiştireceğinizi adım adım öğrenin.
-ms.date: 02/10/2019
+ms.date: 10/12/2020
 ms.topic: how-to
+ms.custom: contperfq1
 helpviewer_keywords:
 - modify Visual Studio
 - change visual studio
@@ -17,12 +18,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 75a9d9d95cf2aed0defb9f52179188c64f4de912
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: d4593ed516e308a5e55a93f83fd5345028dc95dc
+ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862279"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92007140"
 ---
 # <a name="modify-visual-studio-by-adding-or-removing-workloads-and-components"></a>İş yüklerini ve bileşenleri ekleyerek veya kaldırarak Visual Studio 'Yu değiştirme
 
@@ -74,11 +75,11 @@ Aşağıdaki adımları uygulayın:
 
 ::: moniker range="vs-2019"
 
-1. Bilgisayarınızda Visual Studio Yükleyicisi bulun.
+1. Bilgisayarınızda **Visual Studio yükleyicisi** bulun.
 
-     Örneğin, Windows 10 çalıştıran bir bilgisayarda **Başlat**' ı seçin ve ardından **Visual Studio yükleyicisi**olarak listelendiği **V**harfine gidin.
+     Windows Başlat menüsünde, "yükleyici" için arama yapabilirsiniz.
 
-     ![Visual Studio Yükleyicisi Windows 'tan açın](media/vs-2019/vs-installer-windows-start.png "Visual Studio Yükleyicisi açın")
+     ![Visual Studio Yükleyicisi](media/vs-2019/visual-studio-installer.png "Visual Studio Yükleyicisi arayın")
 
      > [!NOTE]
      > Aşağıdaki konumda Visual Studio Yükleyicisi de bulabilirsiniz:
@@ -89,7 +90,7 @@ Aşağıdaki adımları uygulayın:
 
 1. Yükleyicide, yüklediğiniz Visual Studio sürümünü bulun ve ardından **Değiştir**' i seçin.
 
-     ![Visual Studio 'Yu güncelleştirme veya değiştirme](media/vs-2019/vs-installer-modify.png "Visual Studio 2019 'yi güncelleştirme veya değiştirme")
+     ![Visual Studio sürümünü seçin ve ardından Değiştir](media/vs-2019/vs-installer-modify.png "Visual Studio 2019 Edition ' ı seçin ve ardından değiştirin")
 
      > [!IMPORTANT]
      > Bekleyen bir güncelleştirmeniz varsa Değiştir düğmesi farklı bir yerdir. Bu şekilde, Visual Studio 'Yu güncelleştirme olmadan değiştirebilirsiniz, isterseniz. **Daha fazla**' yı seçin ve ardından **Değiştir**' i seçin.

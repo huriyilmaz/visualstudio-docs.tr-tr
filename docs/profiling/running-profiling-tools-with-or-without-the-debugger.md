@@ -1,5 +1,6 @@
 ---
 title: Hata ayıklayıcı ile veya olmayan profil oluşturma araçlarını çalıştırın | Microsoft Docs
+description: Profil oluşturma araçları için kullanılabilen farklı modlar arasındaki farklılıklar hakkında bilgi edinin
 ms.date: 5/26/2020
 ms.topic: conceptual
 ms.assetid: 3fcdccad-c1bd-4c67-bcec-bf33a8fb5d63
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7db7e704eab7f5d00b20051811c503b143608e2f
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: 13fd616e9ec596bfcdeb3718a62dc1a3a1bc8137
+ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90074962"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92007158"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçları çalıştırma
 
@@ -29,7 +30,7 @@ Hangi araçların ve sonuçların kullanılacağına karar vermek için aşağı
 - Hata ayıklayıcı-tümleşik araç ve hata ayıklayıcı olmayan aracı karşılaştırması
   - Dosya g/ç veya ağ yanıtlama hızı sorunları gibi dış performans sorunları, hata ayıklayıcıda veya hata ayıklayıcı olmayan araçlarda çok daha farklı bir şekilde görünmez.
   - Hata ayıklayıcı, özel durum ve modül yükleme olayları gibi gerekli hata ayıklama işlemlerini yaptığı için performans sürelerini değiştirir.
-  - Performans profil oluşturucu araçlarındaki yayın derlemesi performans numaraları en kesin ve doğru. Hata ayıklayıcı ile tümleşik araç sonuçları, hata ayıklama ile ilgili diğer ölçülerle kıyaslamak veya hata ayıklayıcı özelliklerini kullanmak için yararlıdır.
+  - Performans Profiler 'daki yayın derlemesi performans numaraları en kesin ve doğru. Hata ayıklayıcı ile tümleşik araç sonuçları, hata ayıklama ile ilgili diğer ölçülerle kıyaslamak veya hata ayıklayıcı özelliklerini kullanmak için yararlıdır.
 - Hata ayıklama ve yayın derlemesi
   - CPU yoğunluklu çağrıların neden olduğu sorunlar için, yayın ve hata ayıklama derlemeleri arasında önemli performans farklılıkları olabilir. Sorunun yayın yapılarında mevcut olup olmadığını denetleyin.
   - Sorun yalnızca hata ayıklama derlemeleri sırasında gerçekleşirse, muhtemelen hata ayıklayıcı olmayan araçları çalıştırmanız gerekmez. Yayın derlemesi sorunları için, hata ayıklayıcı ile tümleşik araçlar tarafından sağlanan özelliklerin sorunu nasıl bulmamaya yardımcı olacağını belirleyin.
@@ -52,7 +53,7 @@ Hata ayıklamayı durdurduğunuzda Tanılama oturumu sonlanır.
 Daha fazla bilgi için bkz.
 
 - [CPU kullanımını çözümleyerek uygulama performansını ölçme](../profiling/beginners-guide-to-performance-profiling.md)
-- [Visual Studio 'da bellek kullanımını ölçme](../profiling/memory-usage.md)
+- [Visual Studio’da bellek kullanımını ölçme](../profiling/memory-usage.md)
 
 ### <a name="the-events-tab"></a>Olaylar sekmesi
 
@@ -98,7 +99,7 @@ Daha fazla bilgi için bkz.
 
 - [CPU kullanımını çözümle](../profiling/cpu-usage.md)
 - [.NET kodu için bellek kullanımını analiz etme](../profiling/dotnet-alloc-tool.md)
-- [Bellek kullanımını analiz etme](../profiling/analyze-memory-usage.md)
+- [Bellek kullanımını analiz etme](../profiling/memory-usage-without-debugging2.md)
 - [.NET zaman uyumsuz kodunun performansını çözümleme](../profiling/analyze-async.md)
 - [Veritabanı performansını çözümleme](../profiling/analyze-database.md)
 - [GPU kullanımını analiz etme](../profiling/gpu-usage.md)
