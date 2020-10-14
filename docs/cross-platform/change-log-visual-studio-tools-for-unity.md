@@ -1,5 +1,6 @@
 ---
 title: Değişiklik günlüğü (Unity için Visual Studio Araçları, Windows) | Microsoft Docs
+description: Unity için Visual Studio Araçları, Windows için değişiklik günlüğünü görüntüleyin. 4.7.0.0 ve dışında 1.0.0.0 sürümündeki değişikliklere bakın.
 ms.custom: ''
 ms.date: 7/30/2020
 ms.technology: vs-unity-tools
@@ -10,12 +11,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 2a069753040be65f963c1047ef376bef653bfbc1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f745cca14202c87386dc276b00e89fb70b399404
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87471525"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039444"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>Değişiklik günlüğü (Unity için Visual Studio Araçları, Windows)
 
@@ -438,7 +439,7 @@ Yayın tarihi 31 Ocak 2019
 
 - **Tümleştirme**
 
-  - Unity Düzenleyicisi ve oynatıcı örneklerini görüntülemek için Kullanıcı deneyimi geliştirildi (Windows artık yeniden boyutlandırılabilir, tek biçimli kenar boşlukları kullanıyor ve bir yeniden boyutlandırma tutamacı görüntülüyor). Unity düzenleyicileri için Işlem kimliği bilgileri eklendi.
+  - Unity Düzenleyicisi ve oynatıcı örneklerini görüntülemek için Kullanıcı deneyimi geliştirildi (Windows artık yeniden boyutlandırılabilir, tek biçimli kenar boşlukları kullanıyor ve bir yeniden boyutlandırma tutamacı görüntülüyor). Unity düzenleyicileri için Process-Id bilgileri eklendi.
 
   - API güncelleştirildi `MonoBehaviour` .
 
@@ -1668,7 +1669,7 @@ Yayımlanma tarihi, 25 Mart 2013
 
 - Paylaşılan bir klasörü Unity 'ye yapılandırma gereksinimini kaldırarak uzaktan hata ayıklamayı kolaylaştırın. Artık yalnızca Windows 'da Unity projenize erişiminizin olması gerekir.
 
-- Özel bir Unity profilini standart .net hedef profili olarak yükler. Bu, ReSharper tarafından gösterebilecek tüm hatalı pozitif durumları düzeltir.
+- Özel bir Unity profilini standart .NET hedef profili olarak yükler. Bu, ReSharper tarafından gösterebilecek tüm hatalı pozitif durumları düzeltir.
 
 - Bir Unity betik altyapısı hatasına geçici olarak çalışın, bu nedenle hata ayıklayıcı düzgün şekilde kaydedilmemiş iş parçacıklarında kesintiye uğramaz.
 
@@ -1678,7 +1679,7 @@ Yayımlanma tarihi, 25 Mart 2013
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Özel .net profiliniz düzeltildi
+- Özel .NET profiliniz düzeltildi
 
 - Tema tümleştirmesi düzeltildi, bu, VS 2012 koyu temasıyla ilgili sorunlarımızı düzeltir.
 
@@ -1776,7 +1777,7 @@ Yayın tarihi, 28 Kasım 2012
 
 - Visual Studio 2012 ' de Unity Proje Gezgini 'nin arka planında düzeltilen gerileme.
 
-- Tam .net profilinin kullanıcıları için sabit proje üretimi.
+- Tam .NET profilinin kullanıcıları için sabit proje üretimi.
 
 - Web hedefinin kullanıcıları için sabit proje üretimi.
 

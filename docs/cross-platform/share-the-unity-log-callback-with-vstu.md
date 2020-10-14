@@ -1,5 +1,6 @@
 ---
 title: VSTU ile Unity günlük geri aramasını paylaşma | Microsoft Docs
+description: Kendi konsolunu Visual Studio 'ya aktarmak için Unity için Visual Studio Araçları (VSTU) ile kaydettirilen bir kayıt ile Unity günlük geri aramasını paylaşabilirsiniz.
 ms.custom: ''
 ms.date: 07/26/2018
 ms.technology: vs-unity-tools
@@ -10,12 +11,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: dc54c51f078e5b800a9cc9f2de687db7b1fa0387
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 88abc27ad757487ae8f65b8bbb66d4dfee9791cc
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815051"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039878"
 ---
 # <a name="share-the-unity-log-callback-with-vstu"></a>VSTU ile Unity günlük geri aramasını paylaşma
 Unity için Visual Studio Araçları, kendi konsolunu Visual Studio 'ya akıkabilmek için Unity ile bir günlük geri çağırma kaydeder. Düzenleyici betikleriniz Ayrıca Unity ile bir günlük geri çağırma işlemini kaydettiğinin, VSTU geri çağırması geri çağırmanızı etkileyebilir. Bu olasılığa engel olmak için, bir `VisualStudioIntegration.LogCallback` olayı, VSTU ile birlikte çalışmak üzere kullanın.

@@ -1,5 +1,6 @@
 ---
 title: Unity uygulamalarıyla uygulama yaşam döngüsü yönetimi (ALM) | Microsoft Docs
+description: Unity uygulamalarıyla uygulama yaşam döngüsü yönetimini (ALM) anlayın. Çevik araçları, modeli, kodu inceleyin, derleme, test edin ve kod kalitesini geliştirin.
 ms.date: 08/21/2018
 ms.technology: vs-unity-tools
 ms.topic: conceptual
@@ -9,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 7b4c4dfdb8e603d7dda2ebd55c4382e57414de25
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 17cfe2dd0a1ba25eeab6b0bb31ad849303207a02
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928036"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039930"
 ---
 # <a name="devops-with-unity-apps"></a>Unity uygulamalarıyla DevOps
 
@@ -32,11 +33,11 @@ Genel Açıklama: tüm planlama ve izleme özellikleri proje türü ve kodlama d
 
 |Özellik|Unity ile desteklenir|Ek açıklamalar|
 |-------------|--------------------------|-------------------------|
-|Biriktirme listeleri ve Sprint 'leri yönetme|Evet||
-|Çalışma izleme|Evet||
-|Takım odası işbirliği|Evet||
-|Kanban panoları|Evet||
-|İlerlemeyi raporla ve görselleştirin|Evet||
+|Biriktirme listeleri ve Sprint 'leri yönetme|Yes||
+|Çalışma izleme|Yes||
+|Takım odası işbirliği|Yes||
+|Kanban panoları|Yes||
+|İlerlemeyi raporla ve görselleştirin|Yes||
 
 ## <a name="modeling"></a>Modelleme
 
@@ -59,11 +60,11 @@ Genel Açıklama: Bu tasarım özellikleri kodlama dilinden bağımsız olsa da 
 
 |Özellik|Unity ile desteklenir|Ek açıklamalar|
 |-------------|--------------------------|-------------------------|
-|[Team Foundation sürüm denetimi (TFVC)](/azure/devops/repos/tfvc/overview?view=vsts&preserve-view=true) veya Azure Repos kullanın|Evet|Unity projeleri yalnızca diğer projeler gibi sürüm denetim sistemlerine yerleştirilebilecek bir dosya koleksiyonudur, ancak bu tablodan sonra açıklanan bazı özel noktalar vardır.|
-|[Azure Repos git ile çalışmaya başlama](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio&preserve-view=true)|Evet|Tablodan sonraki notlara bakın.|
-|[Kod Kalitesini Geliştirme](../test/improve-code-quality.md)|Evet||
-|[Kod değişikliklerini ve diğer geçmişi bulma](../ide/find-code-changes-and-other-history-with-codelens.md)|Evet||
-|[Uygulamalarınızda hata ayıklamak için kod eşlemelerini kullanma](../modeling/use-code-maps-to-debug-your-applications.md)|Evet||
+|[Team Foundation sürüm denetimi (TFVC)](/azure/devops/repos/tfvc/overview?view=vsts&preserve-view=true) veya Azure Repos kullanın|Yes|Unity projeleri yalnızca diğer projeler gibi sürüm denetim sistemlerine yerleştirilebilecek bir dosya koleksiyonudur, ancak bu tablodan sonra açıklanan bazı özel noktalar vardır.|
+|[Azure Repos git ile çalışmaya başlama](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio&preserve-view=true)|Yes|Tablodan sonraki notlara bakın.|
+|[Kod Kalitesini Geliştirme](../test/improve-code-quality.md)|Yes||
+|[Kod değişikliklerini ve diğer geçmişi bulma](../ide/find-code-changes-and-other-history-with-codelens.md)|Yes||
+|[Uygulamalarınızda hata ayıklamak için kod eşlemelerini kullanma](../modeling/use-code-maps-to-debug-your-applications.md)|Yes||
 
 Unity ile sürüm denetimi için özel hususlar:
 
@@ -82,15 +83,15 @@ Başvuru bağlantısı: ** [Azure Pipelines](/azure/devops/pipelines/index?view=
 |Şirket içi Team Foundation Server (TFS)|Üç|Unity projeleri, Visual Studio derleme sistemi aracılığıyla değil Unity ortamı aracılığıyla oluşturulur (Unity için Visual Studio Araçları içinde derleme betikleri derler ancak yürütülebilir bir işlem oluşturmaz). Unity [projelerini komut satırından](https://docs.unity3d.com/Manual/CommandLineArguments.html) (Unity belgeleri) derlemek mümkündür. bu nedenle, Unity 'nin kendisi bu bilgisayarda yüklü olması şartıyla uygun Unity komutlarını yürütmek IÇIN bir TFS sunucusunda MSBuild işlemini yapılandırmak mümkündür.<br /><br /> Unity Ayrıca, bir git veya SVN deposunu izleyen ve düzenli derlemeler çalıştıran [Unity bulut derlemesini](https://build.cloud.unity3d.com/landing/)de sunmaktadır. Şu anda TFVC veya Azure DevOps Services ile çalışmaz.|
 |Azure DevOps Services bağlı şirket içi derleme sunucusu|Üç|Yukarıdaki koşulların aynısını göz önüne alarak, Azure DevOps Services aracılığıyla tetiklenen derlemelerin şirket içi TFS bilgisayarı kullanması daha da olasıdır. Yönergeler için bkz. [Yapı ve sürüm aracıları](/azure/devops/pipelines/agents/agents?view=vsts&preserve-view=true) .|
 |Azure DevOps Services barındırılan denetleyici hizmeti|Hayır|Unity derlemeleri Şu anda desteklenmiyor.|
-|Ön ve son betiklerle derleme tanımları|Evet|Bir derlemeyi çalıştırmak için Unity komut satırını kullanan özel bir derleme tanımı, ön ve derleme sonrası betikler için de yapılandırılabilir.|
-|Geçitli iadeler dahil sürekli tümleştirme|Evet|TFVC için geçitli iadeler, yalnızca git, iadeler yerine bir çekme isteği modelinde çalışmaktadır.|
+|Ön ve son betiklerle derleme tanımları|Yes|Bir derlemeyi çalıştırmak için Unity komut satırını kullanan özel bir derleme tanımı, ön ve derleme sonrası betikler için de yapılandırılabilir.|
+|Geçitli iadeler dahil sürekli tümleştirme|Yes|TFVC için geçitli iadeler, yalnızca git, iadeler yerine bir çekme isteği modelinde çalışmaktadır.|
 
-## <a name="test"></a>Test
+## <a name="test"></a>Test etme
 
 |Özellik|Unity ile desteklenir|Ek açıklamalar|
 |-------------|--------------------------|-------------------------|
-|Testleri planlama, test çalışmaları oluşturma ve test paketlerini düzenleme|Evet||
-|El ile test|Evet||
+|Testleri planlama, test çalışmaları oluşturma ve test paketlerini düzenleme|Yes||
+|El ile test|Yes||
 |Test Yöneticisi (kaydı ve kayıttan yürütme testleri)|Yalnızca Windows cihazları ve Android öykünücüleri||
 |Kod kapsamı|yok|Birim testi, Unity içinde, Visual Studio değil, için geçerli değildir, aşağıya bakın.|
 |[Kodunuzun birim testi](../test/unit-test-your-code.md)|Unity içinde, ancak Visual Studio 'Ya değil|Unity, [Unity test araçlarının](https://assetstore.unity.com/packages/tools/utilities/unity-test-tools-13802) (Unity varlık deposu) bir parçası olarak kendi birim test çerçevesini sağlar. Birim testi sonuçları Unity içinde raporlanır ve Visual Studio içinde kullanıma sunulacaktır.|
@@ -102,9 +103,9 @@ Başvuru bağlantısı: ** [kod kalitesini geliştirme](../test/improve-code-qua
 
 |Özellik|Unity ile desteklenir|Ek açıklamalar|
 |-------------|--------------------------|-------------------------|
-|[Yönetilen kod kalitesini analiz etme](../code-quality/code-analysis-for-managed-code-overview.md)|Evet|, Visual Studio içinde C# komut dosyası kodunu analiz edebilir.|
-|[Kod kopyası algılamayı kullanarak yinelenen kod bulma](/previous-versions/hh205279(v=vs.140))|Evet|, Visual Studio içinde C# komut dosyası kodunu analiz edebilir.|
-|[Yönetilen kodun ölçüm karmaşıklığı ve bakımma](../code-quality/code-metrics-values.md)|Evet|, Visual Studio içinde C# komut dosyası kodunu analiz edebilir.|
+|[Yönetilen kod kalitesini analiz etme](../code-quality/code-analysis-for-managed-code-overview.md)|Yes|, Visual Studio içinde C# komut dosyası kodunu analiz edebilir.|
+|[Kod kopyası algılamayı kullanarak yinelenen kod bulma](/previous-versions/hh205279(v=vs.140))|Yes|, Visual Studio içinde C# komut dosyası kodunu analiz edebilir.|
+|[Yönetilen kodun ölçüm karmaşıklığı ve bakımma](../code-quality/code-metrics-values.md)|Yes|, Visual Studio içinde C# komut dosyası kodunu analiz edebilir.|
 |[Performans araçları](../profiling/performance-explorer.md)|Hayır|[Unity profil oluşturucuyu](https://docs.unity3d.com/Manual/Profiler.html) (Unity Web sitesi) kullanın.|
 |[.NET Framework bellek sorunlarını çözümleme](../vs-2015/misc/analyze-dotnet-framework-memory-issues.md)|Hayır|Visual Studio Araçları, profil oluşturma için mono Framework 'te (Unity tarafından kullanılan) kancalar içermez. [Unity profil oluşturucuyu](http://docs.unity3d.com/Manual/Profiler.html) (Unity belgeleri) kullanın.|
 
@@ -114,8 +115,8 @@ Başvuru bağlantısı: [Azure Pipelines ve TFS 'de derleme ve yayınlama](/azur
 
 |Özellik|Unity ile desteklenir|Ek açıklamalar|
 |-------------|--------------------------|-------------------------|
-|Yayın süreçlerini yönetme|Evet||
-|Betikler aracılığıyla dışarıdan yükleme için sunuculara dağıtım|Evet||
+|Yayın süreçlerini yönetme|Yes||
+|Betikler aracılığıyla dışarıdan yükleme için sunuculara dağıtım|Yes||
 |App Store 'a yükle|Kısmi|Bazı uygulama mağazalarında bu işlemi otomatik hale getirebilen uzantılar vardır. [Azure DevOps Services Için uzantılara](https://marketplace.visualstudio.com/VSTS)bakın; Örneğin, [Google Play için uzantı](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.google-play).|
 
 ## <a name="monitor-with-hockeyapp"></a>HockeyApp ile izleme
@@ -124,4 +125,4 @@ Başvuru bağlantısı: ** [HockeyApp ile izleme](https://www.hockeyapp.net/feat
 
 |Özellik|Unity ile desteklenir|Ek açıklamalar|
 |-------------|--------------------------|-------------------------|
-|Kilitlenme Analizi, telemetri ve Beta dağıtımı|Evet|HockeyApp, Beta dağıtımını işlemek ve kilitlenme raporları almak için öncelikli olarak faydalıdır.<br /><br /> C# betiklerinden telemetri için, Unity tarafından kullanılan .NET sürümünde çalışan herhangi bir analiz çerçevesini kullanmak mümkündür. Ancak bu, yalnızca oyun betikleri içinde analizler ve Unity altyapısının içinde daha derin değildir. Mevcut olan Application Insights için eklenti yoktur, ancak [Unity Analytics](https://assetstore.unity.com/packages/add-ons/services/analytics/unity-analytics-28120) ve [Google Analytics](https://github.com/googleanalytics/google-analytics-plugin-for-unity)gibi diğer analiz çözümleri için eklentiler mevcuttur. Bir Unity projesinin doğasını anlayan, Unity Analytics gibi hizmetler, genel çerçevelerden çok daha anlamlı analizler sunacaktır.|
+|Kilitlenme Analizi, telemetri ve Beta dağıtımı|Yes|HockeyApp, Beta dağıtımını işlemek ve kilitlenme raporları almak için öncelikli olarak faydalıdır.<br /><br /> C# betiklerinden telemetri için, Unity tarafından kullanılan .NET sürümünde çalışan herhangi bir analiz çerçevesini kullanmak mümkündür. Ancak bu, yalnızca oyun betikleri içinde analizler ve Unity altyapısının içinde daha derin değildir. Mevcut olan Application Insights için eklenti yoktur, ancak [Unity Analytics](https://assetstore.unity.com/packages/add-ons/services/analytics/unity-analytics-28120) ve [Google Analytics](https://github.com/googleanalytics/google-analytics-plugin-for-unity)gibi diğer analiz çözümleri için eklentiler mevcuttur. Bir Unity projesinin doğasını anlayan, Unity Analytics gibi hizmetler, genel çerçevelerden çok daha anlamlı analizler sunacaktır.|

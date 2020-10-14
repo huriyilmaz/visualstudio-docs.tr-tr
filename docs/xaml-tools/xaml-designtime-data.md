@@ -7,12 +7,12 @@ author: alihamie
 ms.author: tglee
 manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 6957c1c7d64918e91a95bf569c210c146fec1339
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 9e6daa3e11bc96fe4d0b9499a6a1a7982432583d
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659427"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039917"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>Visual Studio 'da XAML Tasarımcısı tasarım zamanı verilerini kullanma
 
@@ -135,6 +135,43 @@ xmlns:models="clr-namespace:Cities.Models"
 [![ListView ile tasarım zamanı verilerinde gerçek model](media\xaml-design-time-listview-models.png "ListView ile gerçek model tasarım zamanı verileri")](media\xaml-design-time-listview-models.png#lightbox)
 
 Buradaki avantaj, denetimlerinizi modelinizin tasarım zamanı statik sürümüne bağlayabilmeniz için gereken avantajdır.
+
+## <a name="use-design-time-data-with-custom-types-and-properties"></a>Özel türler ve özelliklerle tasarım zamanı verileri kullanma
+
+Bu özellik varsayılan olarak yalnızca platform denetimleri ve özellikleriyle birlikte kullanılabilir. Bu bölümde, kendi özel denetimlerinizi tasarım zamanı denetimleri olarak kullanmanıza olanak tanımak için gereken adımları inceleyeceğiz. Bunu etkinleştirmek için üç gereksinim vardır:
+
+- Özel bir xmlns ad alanı 
+
+    ```xml
+    xmlns:myControls="http://MyCustomControls"
+    ```
+
+- Ad alanınız için tasarım zamanı sürümü. Bu, sonunda/Design eklenerek elde edilebilir.
+
+     ```xml
+    xmlns:myDesignTimeControls="http://MyCustomControls/design"
+    ```
+
+- Tasarım zamanı ön ekini mc: Ignorable 'e ekleme
+
+    ```xml
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d myDesignTimeControls"
+    ```
+
+Tüm bu adımları tamamladıktan sonra, `myDesignTimeControls` Tasarım zamanı denetimlerinizi oluşturmak için ön ekini kullanabilirsiniz.
+
+```xml
+<myDesignTimeControls:MyButton>I am a design time Button</myDesignTimeControls:MyButton>
+```
+
+### <a name="creating-a-custom-xmlns-namespace"></a>Özel bir xmlns ad alanı oluşturma
+
+WPF .NET Core 'da özel bir xmlns ad alanı oluşturmak için özel XML ad alanınızı, denetimlerinizin bulunduğu CLR ad alanına eşlemeniz gerekir. Bunu, `XmlnsDefinition` dosyanıza derleme düzeyi özniteliğini ekleyerek yapabilirsiniz `AssemblyInfo.cs` . Dosya, projenizin kök hiyerarşisinde bulunur.
+
+   ```C#
+[assembly: XmlnsDefinition("http://MyCustomControls", "MyViews.MyButtons")]
+   ```
 
 ## <a name="troubleshooting"></a>Sorun giderme
 

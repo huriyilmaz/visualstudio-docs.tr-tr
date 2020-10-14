@@ -1,5 +1,6 @@
 ---
 title: Sorun giderme ve bilinen sorunlar (Unity için VS Araçları)
+description: Unity için Visual Studio Araçları sorun giderme hakkında bilgi edinin. Bilinen sorunların açıklamalarını inceleyin ve bu sorunların çözümleri hakkında bilgi edinin.
 ms.custom: ''
 ms.date: 07/03/2018
 ms.technology: vs-unity-tools
@@ -10,12 +11,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 41ef89bbb7b3595c24de5a482eed805e75eb2cdb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d096a431b7a345d2218c46969dc1a1a21af1f45a
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87235088"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039839"
 ---
 # <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>Sorun giderme ve bilinen sorunlar (Unity için Visual Studio Araçları)
 
