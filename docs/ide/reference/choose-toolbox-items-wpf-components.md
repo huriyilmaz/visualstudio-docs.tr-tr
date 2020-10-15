@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 731fe05e90e01c60f0a7ff3a14917d6d7625bc1e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 28576fab1ed4b39810b6f4cc32fb2955a7a44039
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75570563"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099355"
 ---
 # <a name="choose-toolbox-items-wpf-components"></a>Araç Kutusu öğelerini, WPF bileşenlerini seçme
 
@@ -41,7 +41,7 @@ Bilgisayarınızın kayıt defterinde bulunan girdilerin bulunduğu WPF denetiml
 
 **Ad Alanı**
 
-Bileşenin yapısını tanımlayan [.NET API](/dotnet/api/?view=netframework-4.7) ad alanı hiyerarşisini görüntüler. Bilgisayarınızda yüklü olan her bir .NET ad alanı içindeki kullanılabilir bileşenleri listelemek için bu sütunda sıralama yapın.
+Bileşenin yapısını tanımlayan [.NET API](/dotnet/api/?view=netframework-4.7&preserve-view=true) ad alanı hiyerarşisini görüntüler. Bilgisayarınızda yüklü olan her bir .NET ad alanı içindeki kullanılabilir bileşenleri listelemek için bu sütunda sıralama yapın.
 
 **Bütünleştirilmiş kod adı**
 

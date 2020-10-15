@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8745acd9af9009a7206eada7ffb64f95759e8399
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 812c5b2366e40226011a15acfc1cae2327e4b897
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286199"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099394"
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Visual Studio Uzantıları Geliştirmeye Başlama
 
@@ -91,7 +91,7 @@ Uygulamada, en çok kişilerin genişletmek istediği özelliklerin komutlar, me
 ## <a name="how-can-i-distribute-my-extension"></a>Uzantımı nasıl dağıtabilirim?
  Uzantınızı başka bir bilgisayara yükleyebilir veya bir. vsix dosyası olarak arkadaşlarınıza gönderebilirsiniz ve bu dosyayı çift tıklayarak yükleyebilirsiniz. VSıX paketleri hakkında daha fazla bilgi edinmek için bkz. [Visual Studio uzantılarını aktarma](../extensibility/shipping-visual-studio-extensions.md).
 
- Uzantınızı Visual Studio Market de yayımlayabilirsiniz. Bu, çok sayıda Visual Studio müşterilerinin görünmesini sağlar. Market 'e uzantı paketleme örneği için bkz. [Izlenecek yol: Visual Studio uzantısı yayımlama](../extensibility/walkthrough-publishing-a-visual-studio-extension.md). Market 'te yayımlamak için yapmanız gerekenler hakkında daha fazla bilgi için bkz. [Visual Studio Için ürünler ve uzantılar](/azure/devops/extend/overview?view=vsts).
+ Uzantınızı Visual Studio Market de yayımlayabilirsiniz. Bu, çok sayıda Visual Studio müşterilerinin görünmesini sağlar. Market 'e uzantı paketleme örneği için bkz. [Izlenecek yol: Visual Studio uzantısı yayımlama](../extensibility/walkthrough-publishing-a-visual-studio-extension.md). Market 'te yayımlamak için yapmanız gerekenler hakkında daha fazla bilgi için bkz. [Visual Studio Için ürünler ve uzantılar](/azure/devops/extend/overview?view=vsts&preserve-view=true).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

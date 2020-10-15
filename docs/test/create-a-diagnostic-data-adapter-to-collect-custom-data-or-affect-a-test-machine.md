@@ -9,12 +9,12 @@ ms.assetid: b0b53fae-7007-4ad9-a604-21685937622f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2a9b6880b2f71079b6b70eeb6c2e9f7b4e81fc19
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 65d311ec522e5ba5b5c92193a8af3e53a9e9eb35
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288747"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099329"
 ---
 # <a name="create-a-diagnostic-data-adapter-to-collect-custom-data-or-affect-a-test-machine"></a>Özel veri toplamak veya bir test makinesini etkilemek için bir tanılama veri bağdaştırıcısı oluşturma
 
@@ -39,7 +39,7 @@ Tanılama veri bağdaştırıcıları oluşturmanıza yardımcı olması için a
 |Görevler|İlişkili Konular|
 |-|-----------------------|
 |**Tanılama veri bağdaştırıcısı oluşturma:** Bir sınıf kitaplığı oluşturarak bir tanılama veri bağdaştırıcısı oluşturun ve ardından, istediğiniz bilgileri toplamak veya testlerinizi çalıştırmak için kullandığınız bir test sistemini etkilemek için tanılama veri bağdaştırıcısı API 'Lerini kullanın.|-   [Nasıl yapılır: tanılama veri bağdaştırıcısı oluşturma](../test/how-to-create-a-diagnostic-data-adapter.md)|
-|**Testler çalıştırıldığında kullanılacak özel bir tanılama veri bağdaştırıcısı seçme:** Testlerinizi çalıştırdığınızda bağdaştırıcının kullanılması için, test ayarlarınız için hangi tanılama veri bağdaştırıcısının kullanılacağını seçebilirsiniz.|-   [Test sırasında tanılama verilerini topla (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts)<br />-   [Tanılama verilerini el ile testlerde topla (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)|
+|**Testler çalıştırıldığında kullanılacak özel bir tanılama veri bağdaştırıcısı seçme:** Testlerinizi çalıştırdığınızda bağdaştırıcının kullanılması için, test ayarlarınız için hangi tanılama veri bağdaştırıcısının kullanılacağını seçebilirsiniz.|-   [Test sırasında tanılama verilerini topla (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts&preserve-view=true)<br />-   [Tanılama verilerini el ile testlerde topla (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts&preserve-view=true)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

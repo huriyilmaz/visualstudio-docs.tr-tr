@@ -8,12 +8,12 @@ ms.assetid: 0c86918b-cd63-4468-8f49-6d547a1276dc
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: e8002373b7ad34796df557686c1aff6a417d49ea
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a485b3648f69276c0d1cc472dda70524a00d9c1c
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288838"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099420"
 ---
 # <a name="configure-load-test-run-settings"></a>Yük testi çalıştırma ayarlarını yapılandır
 
@@ -37,6 +37,6 @@ Yük testinde birden fazla çalışma ayarınız olabilir, ancak çalıştırma 
 |**Yük testi çalıştırma ayarlarında test yineleme sayısını belirtin:** **Test yinelemeleri** özelliğini yapılandırarak yük testlerinizin tüm senaryolarında Web performansının ve birim testlerinin tümünün kaç kez çalıştırılacağını belirtebilirsiniz.|-   [Nasıl yapılır: bir çalışma ayarında test yineleme sayısını belirtme](../test/how-to-specify-the-number-of-test-iterations-in-a-load-test.md)|
 |**Yük testi çalışma ayarı için örnekleme hızını belirtin:** **Örnek hız** özelliğini yapılandırarak yük testinin performans sayacı verilerinin ne sıklıkta toplanacağını belirtebilirsiniz.|-   [Nasıl yapılır: örnek hızı belirtme](../test/how-to-specify-the-sample-rate-for-a-load-test.md)|
 |**Zamanlama Ayrıntıları Depolama seçeneğini belirtin:** **Zamanlama Ayrıntıları Depolama** özelliğini yapılandırarak yük testinin ayrıntılarının nasıl kaydedilmesini istediğinizi belirtebilirsiniz.|-   [Nasıl yapılır: zamanlama ayrıntıları depolama özelliğini belirtme](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md)|
-|**Sınama kaynağı saklama süresini belirtin:** **Kaynak saklama süresi** özelliğini ayarlayarak belirli bir süre için test kaynaklarını koruyarak test > düzeltmesini > yeniden test etme döngüsünü hızlandırın.|-   [Yük testini hızlandırmak için kaynakları koruyun](/azure/devops/test/load-test/getting-started-with-performance-testing?view=vsts)|
+|**Sınama kaynağı saklama süresini belirtin:** **Kaynak saklama süresi** özelliğini ayarlayarak belirli bir süre için test kaynaklarını koruyarak test > düzeltmesini > yeniden test etme döngüsünü hızlandırın.|-   [Yük testini hızlandırmak için kaynakları koruyun](/azure/devops/test/load-test/getting-started-with-performance-testing?view=vsts&preserve-view=true)|
 |**Bağlam parametrelerini kullan:** Bir dizeyi parametreleştirmek için bağlam parametreleri kullanabilirsiniz. Örneğin, yük testiniz parametreli bir Web sunucusu kullanan bir Web performans testi içeriyorsa, farklı bir sunucuya eşlenen çalışma ayarlarına bir bağlam parametresi ekleyebilirsiniz.|-   [Nasıl yapılır: bir çalışma ayarına bağlam parametreleri ekleme](../test/how-to-add-context-parameters-to-a-load-test-run-setting.md)|
 |**Test günlüğü özelliklerini yapılandırma:** Verilerin yük testi çalıştırma ayarlarınızla ilişkili günlüğe ne sıklıkla yazıldığını yapılandırabilirsiniz. Bu, günlük birkaç gigabayt haline gelebileceğinden büyük veya karmaşık bir yük testi çalıştırırken önemli olabilir.<br /><br /> Ayrıca, yük testiniz uygulamanızı hata ayıklamada ve çözümlemede yardımcı olmazsa günlük dosyasını otomatik olarak kaydedilecek şekilde yapılandırabilirsiniz.|-   [Yük testi günlük kaydı ayarlarını değiştirme](../test/modify-load-test-logging-settings.md)|

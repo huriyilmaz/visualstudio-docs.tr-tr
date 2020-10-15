@@ -8,19 +8,19 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: fe6811f4deaa5958b050a8f93f74e48e2dc73f38
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 4e9aea22a63f2eee8f83ee597ed11c90df7f6b1a
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809295"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099407"
 ---
 # <a name="overview-of-test-agents-and-test-controllers-for-running-load-tests"></a>Yük testlerini çalıştırmak için Test aracılarına ve test denetleyicilerine genel bakış
 
 Visual Studio fiziksel veya sanal makineler kullanarak uygulamanız için benzetimli yük oluşturabilir. Bu makinelerin tek bir test denetleyicisi ve bir veya daha fazla test aracısı olarak ayarlanması gerekir. Test denetleyicisini ve test aracılarını, tek bir bilgisayardan yalnızca bir bilgisayarın oluşturabileceğinden daha fazla yük oluşturmak için kullanabilirsiniz.
 
 > [!NOTE]
-> Ayrıca, Web sitenize aynı anda erişen birçok kullanıcının yükünü üreten sanal makineler sağlamak için bulut tabanlı yük testi de kullanabilirsiniz. Ancak, bulutta barındırılan sanal makinelerde test denetleyicisi/test Aracısı kurulumu kullanılması desteklenmez. [Azure test Plans kullanarak yük testlerini Çalıştır](/azure/devops/test/load-test/get-started-simple-cloud-load-test?view=vsts)' da bulut tabanlı yük testi hakkında daha fazla bilgi edinin.
+> Ayrıca, Web sitenize aynı anda erişen birçok kullanıcının yükünü üreten sanal makineler sağlamak için bulut tabanlı yük testi de kullanabilirsiniz. Ancak, bulutta barındırılan sanal makinelerde test denetleyicisi/test Aracısı kurulumu kullanılması desteklenmez. [Azure test Plans kullanarak yük testlerini Çalıştır](/azure/devops/test/load-test/get-started-simple-cloud-load-test?view=vsts&preserve-view=true)' da bulut tabanlı yük testi hakkında daha fazla bilgi edinin.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 

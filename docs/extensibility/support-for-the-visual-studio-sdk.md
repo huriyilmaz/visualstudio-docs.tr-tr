@@ -14,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9b10e4b211bb1a187f51f95aa6eb78d2de451516
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ddcdf62fbfe6d683159cccce24280bdb08cedc2a
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699650"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099381"
 ---
 # <a name="support-for-the-visual-studio-sdk"></a>Visual Studio SDK Desteği
 Visual Studio tümleşik geliştirme ortamının (IDE) nasıl genişletileceği hakkında sorularınız olan müşteriler için çeşitli destek seçenekleri mevcuttur.
@@ -30,7 +30,7 @@ Visual Studio tümleşik geliştirme ortamının (IDE) nasıl genişletileceği 
  Visual Studio geliştirme ekibinin ve Visual Studio 'Yu genişleten diğer geliştiricilerin üyeleri genellikle Microsoft. public. vstudio. Extensibility haber grubuna katılıyorsa. Bu haber grubu, yönetilen bir haber grubundayken. MSDN Universal abonesi değilseniz Microsoft 'un yanıt vermesini sağlamak için istenmeyen posta olmayan bir diğer ad kaydettiğinizden emin olun.
 
 ### <a name="msdn-forums"></a>MSDN Forumları
- [MSDN forumları](https://social.msdn.microsoft.com/Forums/en-US/home) , eşler ve uzmanlar ile sohbet etmek için başka bir yol sağlar. Forumlardan oluşan grafik kullanıcı arabirimi (UI), haber gruplarından daha kolay kullanılmasını sağlamak için tasarlanmıştır. [Visual Studio genişletilebilirlik Forumu](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts) , genişletilebilirlik sorularına yanıt aramaya başlamak için iyi bir yerdir. Bir soru sormadan önce her zaman, başka biri de zaten bir soru sorabileceğinden arama yapın.
+ [MSDN forumları](https://social.msdn.microsoft.com/Forums/en-US/home) , eşler ve uzmanlar ile sohbet etmek için başka bir yol sağlar. Forumlardan oluşan grafik kullanıcı arabirimi (UI), haber gruplarından daha kolay kullanılmasını sağlamak için tasarlanmıştır. [Visual Studio genişletilebilirlik Forumu](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts&preserve-view=true) , genişletilebilirlik sorularına yanıt aramaya başlamak için iyi bir yerdir. Bir soru sormadan önce her zaman, başka biri de zaten bir soru sorabileceğinden arama yapın.
 
 ### <a name="visual-studio-gallery"></a>Visual Studio Galerisi
  [Visual Studio Market](https://marketplace.visualstudio.com/) , uzantıların ve örnek kodun yer aldığı yerdir. Visual Studio ile üretkenliğinizi ve Kullanıcı deneyiminizi geliştiren araçları, VSPackages ve Managed Extensibility Framework (MEF) ve diğer örnek türlerini nasıl kullanacağınızı gösteren örnek uygulamalar bulabilirsiniz.
