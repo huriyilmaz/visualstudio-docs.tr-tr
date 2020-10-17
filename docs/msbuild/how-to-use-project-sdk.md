@@ -9,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 74ccc29417cdee7a9f93c39509c0f7d06a5c72ff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fdcfc9daf2e1e64d61e2f699e0295826894b1920
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76826477"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136842"
 ---
 # <a name="how-to-use-msbuild-project-sdks"></a>Nasıl yapılır: MSBuild proje SDK 'larını kullanma
 
@@ -66,9 +66,6 @@ Proje SDK 'sına başvurmak için üç yol vardır:
     </Project>
     ```
 
-    > [!NOTE]
-    > Bu, şu anda Mac için Visual Studio bir proje SDK 'sına başvurmak için desteklenen bir yoldur.
-
 - En üst düzey öğeyi kullanın `<Sdk/>` :
 
     ```xml
@@ -107,7 +104,7 @@ Proje SDK 'sına başvurmak için üç yol vardır:
 
    Bu çözümleyici yalnızca isteğe bağlı bir sürüm belirttiyseniz etkindir. Bu, herhangi bir özel proje SDK 'Sı için kullanılabilir.
    
-- [.Net CLI](/dotnet/core/tools/)Ile yüklenen SDK 'ları çözen BIR .net CLI Çözümleyicisi.
+- [.NET SDK](/dotnet/core/sdk/)Ile yüklenen MSBuild SDK 'larını çözen BIR .NET SDK Çözümleyicisi.
 
    Bu çözümleyici, `Microsoft.NET.Sdk` ürününün bir parçası olan ve gibi proje SDK 'larını bulur `Microsoft.NET.Sdk.Web` .
    

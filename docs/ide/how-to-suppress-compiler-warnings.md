@@ -1,5 +1,6 @@
 ---
 title: Projeler ve NuGet paketleri için uyarıları bastır
+description: Bir veya daha fazla derleyici uyarısına filtre uygulayarak Visual Studio 'Yu bir derleme günlüğü declutter için nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/24/2018
 ms.technology: vs-ide-compile
@@ -9,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33abc359dea3e1c7982e5d1689debc1f8e881106
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: a59f3706e2d33e87e760d2b88c4c7ba78eca4ef2
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038588"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136373"
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>Nasıl yapılır: derleyici uyarılarını gösterme
 
@@ -88,7 +89,7 @@ Bu örnekte, belirli derleyici uyarılarını gizlemek için *. vbproj* dosyası
     ```
 
    > [!NOTE]
-   > .NET Core projeleri varsayılan olarak derleme yapılandırma Özellik grupları içermez. Bir .NET Core projesinde uyarıları gizlemek için, derleme yapılandırma bölümünü dosyaya el ile ekleyin. Örneğin:
+   > .NET Core projeleri varsayılan olarak derleme yapılandırma Özellik grupları içermez. Bir .NET Core projesinde uyarıları gizlemek için, derleme yapılandırma bölümünü dosyaya el ile ekleyin. Örnek:
    >
    > ```xml
    > <Project Sdk="Microsoft.NET.Sdk">

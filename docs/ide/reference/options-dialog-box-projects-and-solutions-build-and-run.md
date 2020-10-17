@@ -1,6 +1,7 @@
 ---
 title: Seçenekler iletişim kutusu, projeler ve çözümler, derleme ve çalıştırma
-ms.custom: SEO-VS-2020
+description: Visual Studio 'da aynı anda oluşturulabilecek en fazla C++ veya C# projesi sayısını, belirli varsayılan derleme davranışlarını ve bazı derleme günlüğü ayarlarını belirtin.
+'\ms.custom': SEO-VS-2020
 ms.date: 07/14/2017
 ms.technology: vs-ide-compile
 ms.topic: reference
@@ -16,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff1ec236c85aeaeed655c611a88cead4380258f0
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 5c91a016d91addc4f9e4b06acb32614bd6f6a162
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037718"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136777"
 ---
 # <a name="options-dialog-box-projects-and-solutions--build-and-run"></a>Seçenekler iletişim kutusu: projeler ve çözümler \> derleme ve çalıştırma
 

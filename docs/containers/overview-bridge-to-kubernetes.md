@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jillfra
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: a224135e366c7a266defa525772dadf445208f3b
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: afeb612e1d092ebc1f5c33394a62dd9cef6b6a1c
+ms.sourcegitcommit: 54ec951bcfa87fd80a42e3ab4539084634a5ceb4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91829889"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92116109"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Bridge to Kubernetes’in işleyiş biçimi
 
@@ -112,6 +112,8 @@ Kubernetes Köprüsü aşağıdaki sınırlamalara sahiptir:
 
 * Bu hizmete bağlanabilmek için bir hizmetin tek bir pod tarafından desteklenen olması gerekir. Çoğaltmaları olan bir hizmet gibi birden fazla pods içeren bir hizmete bağlanamazsınız.
 * Pod, başarıyla bağlanmak için Kubernetes 'e Köprüsü için bu Pod 'da çalışan tek bir kapsayıcıya sahip olabilir. Kubernetes Köprüsü, hizmet kafesleri tarafından eklenen sepet kapsayıcıları gibi ek kapsayıcıları olan Pod hizmetlerine bağlanamaz.
+* Şu anda, Kubernetes Pod Köprüsü 'nün Linux kapsayıcıları olması gerekir. Windows kapsayıcıları desteklenmez.
+* Yalıtım, HTTPS ile kullanılamaz.
 * Kubernetes köprüsünün, ana bilgisayar Dosyanızı düzenlemek için geliştirme bilgisayarınızda çalışması için yükseltilmiş izinlere sahip olması gerekir.
 * Kubernetes Köprüsü Azure Dev Spaces etkinleştirilmiş kümeler üzerinde kullanılamaz.
 

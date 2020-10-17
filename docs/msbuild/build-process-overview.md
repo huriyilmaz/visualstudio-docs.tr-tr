@@ -9,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3c1cdc4738f60301435932b3700f14377f12172
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 65e386b71c0b7ece3aee8185574d53955b7326a1
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85290685"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136868"
 ---
 # <a name="how-msbuild-builds-projects"></a>MSBuild nasıl proje oluşturur
 
@@ -50,7 +50,7 @@ MSBuild proje dosyaları için SDK özelliği nispeten yenidir. Bu değişiklikt
 
 Bu bölümde, ne yapılacağını belirlemek için bellek içi nesneler oluşturmak üzere bu giriş dosyalarının nasıl işlendiği ve ayrıştırılabileceği açıklanmaktadır.
 
-Değerlendirme aşamasının amacı, giriş XML dosyalarına ve yerel ortama göre bellekte nesne yapıları oluşturmaktır. Değerlendirme aşaması, birincil olarak Özellikler ayarlayıp ayarlanmayacağı veya *Yapı hedeflerini tanımlama* ayarlarına bağlı olarak, proje XML dosyaları veya ve IÇERI aktarılan xml *dosyaları gibi giriş* dosyalarını işleyen beş geçişinden oluşur. Her Pass, projeleri oluşturmak için yürütme aşamasında daha sonra kullanılan bellek içi nesnelerin bir parçasını oluşturur, ancak değerlendirme aşamasında gerçek derleme eylemleri gerçekleşmez. Her geçişte, öğeler göründükleri sırada işlenir.
+Değerlendirme aşamasının amacı, giriş XML dosyalarına ve yerel ortama göre bellekte nesne yapıları oluşturmaktır. Değerlendirme aşaması, proje XML dosyaları veya gibi giriş dosyalarını ve genel olarak *. props* veya *. targets* dosyaları olarak adlandırılan, birincil olarak Özellikler ayarlayıp tanımlamadığınıza veya yapı hedeflerini tanımlamaya bağlı olarak, içeri aktarılan xml dosyalarını işleyen altı geçişinden oluşur. Her Pass, projeleri oluşturmak için yürütme aşamasında daha sonra kullanılan bellek içi nesnelerin bir parçasını oluşturur, ancak değerlendirme aşamasında gerçek derleme eylemleri gerçekleşmez. Her geçişte, öğeler göründükleri sırada işlenir.
 
 Değerlendirme aşamasındaki geçişler aşağıdaki gibidir:
 

@@ -2,7 +2,7 @@
 title: Fare olmadan Visual Studio 'Yu kullanma
 titleSuffix: ''
 description: Yalnızca klavyeyi kullanarak Visual Studio tümleşik geliştirme ortamı (IDE) içinde nasıl gezinme ve kod yazacağınız hakkında bilgi edinin.
-ms.date: 05/10/2019
+ms.date: 10/16/2020
 ms.topic: how-to
 helpviewer_keywords:
 - Toolbox, shortcut keys
@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a8c14f59b87be1e59b5d115ea84b555677cda32
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 52d6bda98ee01dad4faf4a51412e810e1f5e4fa7
+ms.sourcegitcommit: 4eb8fe6eb7f1dc639f1d213db05a7a3007e8087e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770226"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92156567"
 ---
 # <a name="how-to-use-the-keyboard-exclusively"></a>Klavye kullanımı özel
 
@@ -71,9 +71,9 @@ Bir iletişim kutusundaki seçenekler arasında ilerlemek ve seçenek ayarların
 
 ## <a name="navigate-between-windows-and-files"></a>Pencereler ve dosyalar arasında gezinme
 
-- Bir düzenleyici veya tasarımcıda dosyalar arasında geçiş yapmak için, **Ctrl** + **etkin dosyalar** seçiliyken IDE Gezginini göstermek için CTRL**Tab** klavye kısayolunu seçin. Vurgulanan dosyaya gitmek için **ENTER** tuşunu seçin.
+- Bir düzenleyici veya tasarımcı içindeki dosyalar arasında geçiş yapmak için, **Ctrl** + **etkin dosyalar** seçiliyken IDE Gezginini göstermek için CTRL**Tab** klavye kısayolunu kullanın. Vurgulanan dosyaya gitmek için **ENTER** tuşunu seçin.
 
-- Sabitlenmiş araç pencereleri arasında gezinmek için **alt** + **F7** klavye kısayolunu seçerek IDE Gezginini seçili **etkin araç pencereleri** ile görüntüleyin. Vurgulanan pencereye gitmek için **ENTER** tuşunu seçin.
+- Sabitlenmiş araç pencereleri arasında gezinmek için **alt** + **F7** klavye kısayolunu kullanarak IDE Gezginini seçili **etkin araç pencereleri** ile görüntüleyin. Vurgulanan pencereye gitmek için **ENTER** tuşunu seçin.
 
 ## <a name="move-and-dock-tool-windows"></a>Araç pencerelerini taşı ve Yerleştir
 

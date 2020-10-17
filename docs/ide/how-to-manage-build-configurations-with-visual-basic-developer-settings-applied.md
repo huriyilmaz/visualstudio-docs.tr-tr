@@ -1,5 +1,6 @@
 ---
 title: Visual Basic geliştirici ayarlarıyla derleme yapılandırmalarını yönetme
+description: Visual Basic Geliştirici ayarları uygulandığında ve bu derleme ayarlarını el ile etkinleştirmek için gizlenen Gelişmiş derleme yapılandırma seçenekleri hakkında bilgi edinin.
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 ms.date: 11/21/2018
@@ -16,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ee729a0dfe27bf54a64b42ff64b23bf851c14d06
-ms.sourcegitcommit: bccc6503542e1517e0e96a9f02f5a89d69c60c25
+ms.openlocfilehash: bd13c0a9f64ce484d9ba4e3193f7da94d0b1e446
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91135124"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136725"
 ---
 # <a name="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied"></a>Nasıl yapılır: Visual Basic Geliştirici ayarları uygulanmış derleme yapılandırmasını yönetme
 
@@ -37,7 +38,7 @@ Varsayılan olarak Visual Basic Geliştirici ayarları, [Proje tasarımcısında
 
 3. **Gelişmiş derleme yapılandırmasını göster**' e tıklayın.
 
-4. **Tamam**’a tıklayın.
+4. **Tamam**'a tıklayın.
 
      **Configuration Manager** artık **derleme** menüsünde kullanılabilir ve **yapılandırma** ve **Platform** listeleri **Proje tasarımcısında**görünür.
 

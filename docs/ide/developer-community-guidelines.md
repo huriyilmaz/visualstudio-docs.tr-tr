@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7da5a229ec345a4f360aeb6051dc33130fa3d99a
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: dfcdcfc309fb951b2f7e490f0d03dcfe9d381b83
+ms.sourcegitcommit: 54ec951bcfa87fd80a42e3ab4539084634a5ceb4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810125"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92116156"
 ---
 # <a name="developer-community-guidelines"></a>Geliştirici Topluluğu yönergeleri
 
@@ -59,11 +59,13 @@ Bir sorunu önceliklendirme, özellik ekibi içinde işbirliği yapılan çok ad
 
 Bir sorunu bildirdikten sonra, durumlar, Gönderimlerinizin yaşam döngüsünün nerede olduğunu gösterir. Visual Studio ürün ekipleri geri bildiriminizi gözden geçirdikten sonra uygun bir durumla ayarlanırlar. Sorun [durumlarına ve SSS](./report-a-problem.md)'ye başvurarak sorun raporlarınız ilerlemesini izleyin.
 
+### <a name="prioritizing-which-issues-to-fix"></a>Hangi sorunların düzeltilmesine öncelik verme
+
+Bildirilen tüm sorunu düzeltemedi. Bazılarının düzeltilmesi çok pahalıdır, bazıları diğer özellik alanlarında bulunabilir ve bazıları çok düşük bir etkiye sahip olabilir. Bize bir sorun raporu göndermek için zaman ayırdıysanız bunu anladık. Bu projede veya başkaları tarafından katkıda bulunulmuş olsun, hepsi vardı. Bir sorun kapalıysa ve verdiğimiz nedeni karşılamadıysa, kullanım örneğini açıklığa kavuşturmanıza ve sorunu başka bir geçiş için yeniden etkinleştirilecek şekilde istemeniz gerekir. Bu noktada sizden daha fazla bilgi isteyeceğiz.
+
+### <a name="missing-important-information"></a>Eksik önemli bilgiler
+
 Bir sorun için önemli bilgiler eksik olduğunda, _Ihtiyaçları daha fazla bilgi_ durumuna atacağız. İhtiyaç duyduğumuz belirli bilgilerle ilgili sorun hakkında yorum yaptık ve bir e-posta bildirimi alacaksınız. Bilgileri yedi gün içinde almadığımızda size bir anımsatıcı göndereceğiz. Bundan sonra, 14 gün etkin olmama sonrasında bilet kapattık.
-
-### <a name="wont-fix-bugs"></a>Hataları düzeltilmeyecek
-
-Negatif maliyet avantajı bakiyesi olduğunda bazı hataları kapattık. Örneğin, düzeltme çok sayıda kullanıcı için karmaşık BT riskleri açısından karmaşıksa, düzeltme makul olmayabilir. Bunun gibi bir hatayı kapatdığımızda, neden yaptığımız hakkında açıklayacağız.
 
 ### <a name="other-product"></a>Diğer ürün
 

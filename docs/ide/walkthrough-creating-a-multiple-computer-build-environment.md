@@ -1,5 +1,6 @@
 ---
 title: Birden çok bilgisayarda derleme ortamı oluşturma
+description: Visual Studio 'Yu bir ana bilgisayara yükleyerek ve sonra çeşitli dosya ve ayarları başka bir bilgisayara kopyalayarak kuruluşunuzda bir yapı ortamı oluşturun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 595317be1c3f24c9759bc5bb574a758795066659
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 1c8fa7756763a668f6e97d90d8a405c660519189
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038432"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136959"
 ---
 # <a name="walkthrough-create-a-multiple-computer-build-environment"></a>İzlenecek yol: Birden çok bilgisayarda derleme ortamı oluşturma
 
@@ -43,7 +44,7 @@ Birden çok bilgisayar ortamı, bu tür uygulamaları oluşturmak için kullanı
 - UWP uygulamaları. UWP uygulamaları oluşturmak için, Visual Studio 'Yu yapı bilgisayarına yüklemelisiniz.
 - .NET Framework 4 veya önceki sürümleri hedefleyen masaüstü uygulamaları. Bu tür uygulamaları oluşturmak için, Yapı bilgisayarında Visual Studio 'Yu veya .NET başvuru derlemelerini ve araçlarını (Windows 7,1 SDK 'dan) yüklemelisiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 **.Net masaüstü geliştirme** iş yükü yüklü Visual Studio.
 
@@ -55,7 +56,7 @@ Visual Studio 'Yu ana bilgisayara yükleyerek, daha sonra yapı bilgisayarına k
 
 1. Ana bilgisayarda, Visual Studio 'Yu yükler.
 
-2. Yapı bilgisayarında, 4,5 veya sonraki bir sürümü .NET Framework. Yüklendiğini doğrulamak için, **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full** kayıt defteri alt anahtarındaki **Sürüm** girişinin **4,5** veya üzeri bir değere sahip olduğundan emin olun.
+2. Yapı bilgisayarında, 4,5 veya sonraki bir sürümü .NET Framework. Yüklendiğini doğrulamak için, kayıt defteri alt **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full** anahtarındaki **Sürüm** girişinin **4,5** veya daha yüksek bir değere sahip olduğundan emin olun.
 
 ## <a name="copy-files-from-the-host-computer-to-the-build-computer"></a>Dosyaları ana bilgisayardan yapı bilgisayarına Kopyala
 
@@ -193,7 +194,7 @@ Bu bölüm, ana bilgisayardan yapı bilgisayarına belirli dosyaları, derleyici
 
 MSBuild ayarlarını yapılandırmak için kayıt defteri girişleri oluşturmanız gerekir.
 
-1. Kayıt defteri girdileri için üst klasörü belirler. Tüm kayıt defteri girdileri aynı üst anahtar altında oluşturulur. Bir x86 bilgisayarda, üst anahtar **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft**şeklindedir. X64 bilgisayarda, üst anahtar **HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft**şeklindedir. Sistem mimarisinden bağımsız olarak, Bu izlenecek yol% RegistryRoot% olarak ana anahtara başvurur.
+1. Kayıt defteri girdileri için üst klasörü belirler. Tüm kayıt defteri girdileri aynı üst anahtar altında oluşturulur. Bir x86 bilgisayarda, üst anahtar **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft**. X64 bilgisayarda, üst anahtar **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft**. Sistem mimarisinden bağımsız olarak, Bu izlenecek yol% RegistryRoot% olarak ana anahtara başvurur.
 
     > [!NOTE]
     > Ana bilgisayarınızın mimarisi yapı bilgisayarınızdan farklıysa, her bilgisayarda uygun üst anahtarı kullandığınızdan emin olun. Dışarı aktarma işlemini otomatikleştiriyorsanız bu özellikle önemlidir.

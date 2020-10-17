@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99ed79b1654057c4114ceb171b5cb1e1dfdb439f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5cf32bdf56f75ded7d193082f1072b79c3d16b3c
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87425400"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136920"
 ---
 # <a name="common-msbuild-project-items"></a>Yaygın MSBuild proje öğeleri
 
@@ -81,9 +81,15 @@ Başka bir projenin başvurusunu temsil eder. `ProjectReference` öğeler, hedef
 |Öğe meta veri adı|Açıklama|
 |---------------|-----------------|
 |Ad|İsteğe bağlı dize. Başvurunun görünen adı.|
+|GlobalPropertiesToRemove|İsteğe bağlı `string[]` . Başvurulan proje oluşturulurken kaldırılacak özelliklerin adları (örneğin,) `RuntimeIdentifier;PackOnBuild` . Varsayılan olarak boştur.|
 |Project|İsteğe bağlı dize. Formundaki, başvuru için bir GUID {12345678-1234-1234-1234-1234567891234} .|
-|Paket|İsteğe bağlı dize. Başvurulduğu proje dosyasının yolu.|
+|Outputıtemtype|İsteğe bağlı dize. Hedef çıkışları içine yayan öğe türü. Varsayılan değer boştur. Başvuru meta verileri "true" (varsayılan) olarak ayarlandıysa, hedef çıkışlar derleyici için başvurular olur.|
 |ReferenceOutputAssembly|İsteğe bağlı Boolean. , Olarak ayarlanırsa `false` , başvurulan projenin çıktısını bu projenin bir [başvurusu](#reference) olarak içermez, ancak yine de diğer projenin bundan önce derleme yapmalarını sağlar. Varsayılan olarak olur `true` .|
+|SetConfiguration|İsteğe bağlı dize. `Configuration`Başvurulan proje için genel özelliği ayarlar, örneğin `Configuration=Release` .|
+|SetPlatform|İsteğe bağlı dize. `Platform`Başvurulan proje için genel özelliği ayarlar, örneğin `Platform=AnyCPU` .|
+|SetTargetFramework|İsteğe bağlı dize. `TargetFramework`Başvurulan proje için genel özelliği ayarlar, örneğin `TargetFramework=netstandard2.0` .|
+|SkipGetTargetFrameworkProperties|İsteğe bağlı Boolean. İse `true` , başvurulan projeyi en uyumlu değere anlaşmadan oluşturur `TargetFramework` . Varsayılan olarak olur `false` .|
+|Targets|İsteğe bağlı `string[]` . Başvurulan projelerde oluşturulması gereken hedeflerin noktalı virgülle ayrılmış listesi. Varsayılan, varsayılan `$(ProjectReferenceBuildTargets)` hedefleri gösteren varsayılan değeri boş olan değeridir.|
 
 ### <a name="compile"></a>Se
 
@@ -112,7 +118,7 @@ Oluşturulan derlemeye gömülebilen kaynakları temsil eder.
 | CopyToOutputDirectory | İsteğe bağlı dize. Dosyanın çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1. hiçbir şekilde<br />2. her zaman<br />3. Preservenebatı |
 | LogicalName | Gerekli dize. Gömülü kaynağın mantıksal adı. |
 
-### <a name="content"></a>Content
+### <a name="content"></a>İçerik
 
 Projeye derlenmemiş ancak birlikte gömülebilir veya onunla birlikte yayımlanabilir olan dosyaları temsil eder.
 
@@ -162,7 +168,7 @@ Yapı için temel uygulama bildirimini temsil eder ve ClickOnce dağıtımı gü
 
 İçeri aktarılacak FxCop projesini temsil eder.
 
-### <a name="import"></a>İçeri Aktar
+### <a name="import"></a>İçeri Aktarma
 
 Ad alanları Visual Basic Derleyicisi tarafından içeri aktarılması gereken derlemeleri temsil eder.
 

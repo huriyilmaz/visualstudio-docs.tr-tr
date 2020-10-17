@@ -1,6 +1,8 @@
 ---
 title: Kod bölgelerini daraltma ve genişletme
-ms.date: 11/04/2016
+description: Genişletme ve daraltma komutlarını kullanarak Visual Studio 'da ana hat modunda nasıl çalışacağınızı öğrenin
+ms.custom: SEO-VS-2020
+ms.date: 10/15/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - outlining
@@ -15,12 +17,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 07ad01726b57073cad3a5a2876a4b22667d3770a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e45d7192c35ed60442fadf1a3eb302997fbaf381
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545450"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136673"
 ---
 # <a name="outlining"></a>Anahat Oluşturma
 
@@ -36,14 +38,14 @@ Anahatları belirlenmiş kodda çalışırken, üzerinde çalışmak istediğini
 **Düzenle** menüsündeki **geri al** ve **Yinele** komutları bu eylemleri etkiler. **Kopyala**, **Kes**, **Yapıştır**ve sürükle bırak işlemleri, ana hat bilgilerini tutar, ancak daraltılabilir bölgenin durumunu içermez. Örneğin, Daraltılan bir bölgeyi kopyaladığınızda, **Yapıştır** işlemi kopyalanmış metni genişletilmiş bölge olarak yapıştırır.
 
 > [!CAUTION]
-> Anahatları belirlenmiş bir bölgeyi değiştirdiğinizde, ana hat kaybolmuş olabilir. Örneğin, silme veya bulma ve değiştirme işlemleri bölgenin sonunu silebilir.
+> Anahatları belirlenmiş bir bölgeyi değiştirdiğinizde, ana hat kaybolmuş olabilir. Örneğin, silme veya **bulma ve değiştirme** işlemleri bölgenin sonunu silebilir.
 
 Aşağıdaki komutlar, ana **Edit**  >  **hat** Düzenle alt menüsünde bulunabilir.
 
 |Ad|Açıklama|
 |-|-|
 |Seçimi Gizle|(**CTRL** + **M**, **CTRL** + **H**)-bir blok gibi, normalde ana hat için kullanılamayacak seçili kod bloğunu daraltır `if` . Özel bölgeyi kaldırmak için, **geçerli gizlemeyi durdur** (veya **CTRL** + **M**, **CTRL** + **U**) seçeneğini kullanın. Visual Basic ' de kullanılamaz.|
-|Anahat genişletmeyi değiştirme|-İmleç, iç içe daraltılmış bir bölümde yer aldığı zaman, en içteki ana hat bölümünün geçerli gizli veya genişletilmiş durumunu tersine çevirir.|
+|Anahat genişletmeyi değiştirme| (**CTRL** + **A**, **CTRL** + **ı**)-imleç, iç içe daraltılmış bir bölümde yer aldığı zaman, en içteki ana hat bölümünün geçerli gizli veya genişletilmiş durumunu tersine çevirir.|
 |Tüm Anahatlamayı aç|(**CTRL** + **M**, **CTRL** + **L**)-tüm bölgeleri aynı daraltılmış veya genişletilmiş duruma ayarlar. Bazı bölgeler genişletilir ve bazıları daraltıldı, daraltılan bölgeler genişletilir.|
 |Anahat oluşturmayı durdur|(**CTRL** + **M**, **CTRL** + **P**)-tüm belgenin tüm anahat bilgilerini kaldırır.|
 |Geçerli gizlemeyi durdur|(**CTRL** + **M**, **CTRL** + **U**)-Şu anda seçili olan Kullanıcı tanımlı bölgenin ana hat bilgilerini kaldırır. Visual Basic ' de kullanılamaz.|

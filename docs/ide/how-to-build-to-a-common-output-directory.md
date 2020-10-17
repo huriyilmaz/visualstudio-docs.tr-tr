@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: ortak bir çıkış dizinine derleme'
+description: Tüm çıktıları aynı klasöre yerleştirilecek şekilde zorlamak için, projelerinizin yapı çıkış yollarını nasıl değiştirebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: how-to
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a499b5ca5ea64dd9ded10f82b1af43258f346d3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a39dae210c2cb9afe3e4b77962b75ddb3be4baeb
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284782"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136972"
 ---
 # <a name="how-to-build-to-a-common-output-directory"></a>Nasıl yapılır: ortak bir çıkış dizinine derleme
 

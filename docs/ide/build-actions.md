@@ -1,5 +1,7 @@
 ---
 title: Dosyalar için derleme eylemleri
+description: Visual Studio projesindeki tüm dosyaların bir oluşturma eylemine sahip olduğunu ve derleme eylemi, proje derlendiğinde dosyaya ne olduğunu nasıl denetleyeceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/19/2018
 ms.technology: vs-ide-compile
 ms.topic: reference
@@ -8,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 35136ac0b7b0104f1812df7a9bf8ba81f6907374
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8884eaa459fa3a2a7dd8d10f0ffeca5003398afd
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315115"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136738"
 ---
 # <a name="build-actions"></a>Derleme eylemleri
 
@@ -32,7 +34,7 @@ Bir dosyaya yönelik derleme eylemini ayarlamak için, **Çözüm Gezgini** dosy
 
 C# ve Visual Basic proje dosyaları için daha yaygın olarak kullanılan derleme eylemlerinden bazıları şunlardır:
 
-|Derleme eylemi | Proje türleri | Açıklama |
+|Derleme eylemi | Proje türleri | Description |
 |-|-|
 | **AdditionalFiles** | C#, Visual Basic | C# veya Visual Basic derleyicisine giriş olarak geçirilen kaynak olmayan bir metin dosyası. Bu derleme eylemi, genellikle kod kalitesini doğrulamak üzere bir proje tarafından başvurulan [çözümleyiciler](../code-quality/roslyn-analyzers-overview.md) için giriş sağlamak üzere kullanılır. Daha fazla bilgi için bkz. [ek dosyaları kullanma](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Using%20Additional%20Files.md).|
 | **ApplicationDefinition** | WPF | Uygulamanızı tanımlayan dosya. İlk kez bir proje oluşturduğunuzda, bu *app. xaml*' dir. |
@@ -48,7 +50,7 @@ C# ve Visual Basic proje dosyaları için daha yaygın olarak kullanılan derlem
 | **Sayfa** | WPF | Çalışma zamanında daha hızlı yükleme yapmak için bir XAML dosyasını bir binary. BAML dosyasına derleyin. |
 | **Kaynak** | WPF | Dosyayı *. g. resources*uzantısına sahip bir derleme bildirimi kaynak dosyasına katıştırmayı belirtir. |
 | **Gölgeli** | .NET | Her satırda bir tane olmak üzere oluşturulan derleme dosya adlarının listesini içeren bir. accessor dosyası için kullanılır. Listedeki her derleme için, `ClassName_Accessor` yalnızca orijinallere benzeyen, ancak özel yöntemler yerine ortak yöntemlerle ortak sınıflar oluşturun. Birim testi için kullanılır. |
-| **Giriş ekranı** | WPF | Uygulama başlatıldığında çalışma zamanında görüntülenecek bir resim dosyasını belirtir. |
+| **Giriş Ekranı** | WPF | Uygulama başlatıldığında çalışma zamanında görüntülenecek bir resim dosyasını belirtir. |
 | **XamlAppDef** | Windows Workflow Foundation | Derlemeyi, gömülü iş akışıyla bir derlemede iş akışı XAML dosyası oluşturmak için yönlendirir. |
 
 > [!NOTE]
