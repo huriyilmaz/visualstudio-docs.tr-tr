@@ -6,12 +6,12 @@ ms.author: tglee
 author: TerryGLee
 manager: jillfra
 ms.topic: include
-ms.openlocfilehash: 1563efb15f98720352a25eec59c8eca045f77ddc
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 03e5f806b428b7ecf08038ef34d6b1dddcd92f9e
+ms.sourcegitcommit: cea9e5787ff33e0e18aa1942bf4236748e0ef547
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91024994"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92210815"
 ---
 Visual Studio *Tümleşik geliştirme ortamı* , kod düzenlemek, hatalarını ayıklamak ve derlemek ve ardından bir uygulama yayımlamak için kullanabileceğiniz bir yaratıcı başlatma paneliyle bulunur. Tümleşik geliştirme ortamı (IDE), yazılım geliştirmenin birçok yönü için kullanılabilen özellik açısından zengin bir programdır. En çok kullanılan standart düzenleyici ve hata ayıklayıcı üzerinde ve üzerinde, Visual Studio, yazılım geliştirme sürecini kolaylaştırmak için derleyiciler, kod tamamlama araçları, grafik tasarımcıları ve çok daha birçok özellik içerir.
 
@@ -91,12 +91,9 @@ Visual Studio 'da, yazılım geliştirirken daha üretken olmanıza yardımcı o
 
    ![Visual Studio üye listesi](../media/intellisense-list-members.png)
 
-- Arama kutusu
+- [Visual Studio arama](../../ide/visual-studio-search.md)
 
-   Visual Studio çok sayıda menü, seçenek ve özellik ile zaman içinde yoğun görünebilir. Arama kutusu, Visual Studio 'da gerekenleri hızlı bir şekilde bulmanın harika bir yoludur. Aradığınız bir şeyin adını yazmaya başladığınızda, Visual Studio size tam olarak gitmeniz gereken yere sahip olan sonuçları listeler. Visual Studio 'ya işlevsellik eklemeniz gerekiyorsa, örneğin ek bir programlama dili için destek eklemek istiyorsanız, arama kutusu, bir iş yükünü veya tek bir bileşeni yüklemek için Visual Studio Yükleyicisi açan sonuçlar sağlar.
-
-   > [!TIP]
-   > **Ctrl** + Arama kutusunun kısayol olarak Ctrl**Q** tuşuna basın.
+   Visual Studio çok sayıda menü, seçenek ve özellik ile zaman içinde yoğun görünebilir. Visual Studio arama (**CTRL** + **Q**), IDE özelliklerini ve kodu tek bir yerde hızlı bir şekilde bulmanın harika bir yoludur.
 
    ::: moniker range="vs-2017"
 
@@ -109,6 +106,8 @@ Visual Studio 'da, yazılım geliştirirken daha üretken olmanıza yardımcı o
    ::: moniker range="vs-2019"
 
    ![Visual Studio 2019 'de arama kutusu](../media/vs-2019/quick-launch-nuget.png)
+
+    Bilgi ve üretkenlik ipuçları için bkz. [Visual Studio aramasını kullanma](../../ide/visual-studio-search.md).
 
    ::: moniker-end
 

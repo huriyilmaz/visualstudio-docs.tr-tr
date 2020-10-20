@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 981f18857beb83ef2a4902f50985ca8e9f7ed901
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fd0d2b3e112a4bf08481fa8f043f70121d827010
+ms.sourcegitcommit: cea9e5787ff33e0e18aa1942bf4236748e0ef547
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88507962"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197484"
 ---
 # <a name="tutorial-extend-a-simple-c-console-app"></a>Öğretici: basit bir C# konsol uygulamasını genişletme
 
@@ -120,9 +120,10 @@ Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içe
 
 ## <a name="reference-net-libraries-write-to-a-log"></a>Başvuru .NET kitaplıkları: bir günlüğe yazma
 
-1. Artık tüm işlemlerin bir günlüğünü eklemek ve bir metin dosyasına yazmak istediğinizi varsayalım. .NET `Trace` sınıfı bu işlevselliği sağlar. (Temel yazdırma hata ayıklama teknikleri de yararlı olur.)  Trace sınıfı System. Diagnostics içinde olduğundan, bir using yönergesi ekleyerek başlayın:
+1. Artık tüm işlemlerin bir günlüğünü eklemek ve bir metin dosyasına yazmak istediğinizi varsayalım. .NET `Trace` sınıfı bu işlevselliği sağlar. (Temel yazdırma hata ayıklama teknikleri de yararlı olur.)  Trace sınıfı System. Diagnostics içinde bulunur ve gibi System.IO sınıfların olması gerekir `StreamWriter` , bu nedenle using yönergelerini ekleyerek başlayın:
 
    ```csharp
+   using System.IO;
    using System.Diagnostics;
    ```
 
@@ -217,7 +218,7 @@ Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içe
 
    Paket indirilir ve projenize eklenir ve **Çözüm Gezgini**başvurular düğümünde yeni bir giriş görüntülenir.
 
-1. *CalculatorLibrary.cs*'in başındaki Newtonsoft.JsPackage için bir using yönergesi ekleyin.
+1. *CalculatorLibrary.cs*başlangıcında System.IO ve Newtonsoft.Json paketine yönelik bir using yönergesi ekleyin.
 
    ```csharp
    using Newtonsoft.Json;
@@ -307,7 +308,7 @@ Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içe
         }
    ```
 
-1. Uygulamayı derleyin ve çalıştırın ve birkaç işlem girmeyi tamamladıktan sonra, ' n ' komutunu kullanarak uygulamayı düzgün bir şekilde kapatın.  Şimdi dosyada consolelog.jsaçın ve aşağıdakine benzer bir şey görmeniz gerekir:
+1. Uygulamayı derleyin ve çalıştırın ve birkaç işlem girmeyi tamamladıktan sonra, ' n ' komutunu kullanarak uygulamayı düzgün bir şekilde kapatın.  Şimdi dosyada calculatorlog.jsaçın ve aşağıdakine benzer bir şey görmeniz gerekir:
 
    ```json
    {
