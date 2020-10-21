@@ -2,18 +2,18 @@
 title: Visual Studio’da yeni Git deneyimi (Önizleme)
 titleSuffix: ''
 description: Visual Studio 2019 'de yeni tümleşik git deneyimi hakkında bilgi edinin
-ms.date: 09/22/2020
+ms.date: 10/13/2020
 ms.topic: conceptual
 ms.author: tglee
 author: prnadago
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 1f9dc891219e5563ad6ea72085b0ad28469c7171
-ms.sourcegitcommit: a876fcc75321f9c30729121cae83f400973f9d9d
+ms.openlocfilehash: ad75fcff26365afdbc4fb4b02975d7c3211fa79b
+ms.sourcegitcommit: 4450abc99453ccaf8936449bbff437c5b9efa022
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92082063"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92334213"
 ---
 # <a name="new-git-experience-in-visual-studio-preview"></a>Visual Studio’da yeni Git deneyimi (Önizleme)
 
@@ -95,7 +95,7 @@ Ayrıca, hazırlama alanını atlayarak, değiştirilen dosyaları aşamalandır
 
 Visual Studio Ayrıca, **Tümünü Kaydet ve** **Tümünü Yürüt ve Tümünü Kaydet ve Tümünü Yürüt** kısayollarını kullanarak tek bir tıklama ile kaydetmeyi ve eşitlemeyi kolaylaştırır. **Değişiklikler** ve **hazırlanan değişiklikler** bölümlerindeki herhangi bir dosyayı çift tıklattığınızda, dosyanın değiştirilmemiş sürümüyle bir satır satır karşılaştırması görebilirsiniz.
 
-:::image type="content" source="media/git-file-version-compare.png" alt-text="Visual Studio 'da Seçenekler iletişim kutusunun Önizleme özellikleri bölümünün ekran görüntüsü " karakterini kullanarak Azure DevOps iş öğesini bir COMMIT ile ilişkilendirebilirsiniz. Azure DevOps deponuzu Takım Gezgini aracılığıyla bağlayabilirsiniz > bağlantıları yönetebilirsiniz
+:::image type="content" source="media/git-file-version-compare.png" alt-text="Visual Studio 'da Seçenekler iletişim kutusunun Önizleme özellikleri bölümünün ekran görüntüsü " karakterini kullanarak Azure DevOps iş öğesini bir COMMIT ile ilişkilendirebilirsiniz. **Takım Gezgini**  >  **bağlantıları yönetmek**için Azure DevOps deponuzu bağlayabilirsiniz.
 
 ### <a name="select-an-existing-branch"></a>Mevcut bir dalı seçin
 

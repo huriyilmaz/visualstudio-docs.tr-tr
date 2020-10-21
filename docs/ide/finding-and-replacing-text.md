@@ -1,7 +1,6 @@
 ---
 title: Metin bul ve Değiştir ve çok şapka seçimi
-description: Visual Studio Code düzenleyicisinde bul ve Değiştir özelliğini nasıl kullanacağınızı öğrenin.
-ms.date: 08/14/2018
+ms.date: 10/17/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.find
@@ -31,12 +30,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 81a74fa1328a3b0079eef6253fa32fc882876a71
-ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
+ms.openlocfilehash: b878ccbf6714987599d1585ca9c0dc3ceb759144
+ms.sourcegitcommit: 4450abc99453ccaf8936449bbff437c5b9efa022
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 10/21/2020
-ms.locfileid: "92298566"
+ms.locfileid: "92334200"
 ---
 # <a name="find-and-replace-text"></a>Metin bulma ve değiştirme
 
@@ -123,9 +122,9 @@ Birden çok Evcil hayvan seçmek için her zamanki gibi ilk metin seçimini tık
 |**CTRL** + **Alt** + çift tıklama|İkincil sözcük seçimi ekleme|
 |**CTRL** + **Alt** + tıklatıp + sürükleyin|İkincil bir seçim ekleyin|
 |**SHIFT** + **Alt** + **.**|Sonraki eşleşen metni seçim olarak ekle|
-|**CTRL** + **SHIFT** + **Alt** + **,**|Tüm eşleşen metni seçimler olarak ekle|
+|**SHIFT** + **Alt** + **;**|Tüm eşleşen metni seçimler olarak ekle|
 |**SHIFT** + **Alt** + **,**|Son seçili oluşumu kaldır|
-|**CTRL** + **SHIFT** + **Alt** + **.**|Sonraki eşleşen oluşumu atla|
+|**SHIFT** + **Alt**+**/**|Sonraki eşleşen oluşumu atla|
 |**Alt** + tıklama|Kutu seçimi Ekle|
 |**ESC** veya tıklama|Tüm Seçimleri Temizle|
 
