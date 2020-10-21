@@ -1,5 +1,6 @@
 ---
 title: "İzlenecek yol: Visual Basic projesindeki VBA 'dan kod çağırma"
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 46fa903b0025279fec3b33d3c14ce1661d076926
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ad50ed0f55a148a05c0fedc6fe0ccb0dd5b890b9
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64829464"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298268"
 ---
 # <a name="walkthrough-call-code-from-vba-in-a-visual-basic-project"></a>İzlenecek yol: Visual Basic projesindeki VBA 'dan kod çağırma
   Bu izlenecek yol, belgedeki Visual Basic for Applications (VBA) kodundan Microsoft Office Word için belge düzeyi özelleştirmesinde bir yöntemin nasıl çağrılacağını gösterir. Yordamda üç temel adım vardır: konak öğesi sınıfına bir yöntem ekleyin `ThisDocument` , YÖNTEMI VBA koduna sunun ve sonra BELGEDEKI VBA kodundan yöntemi çağırın.
@@ -48,7 +49,7 @@ ms.locfileid: "64829464"
 > [!NOTE]
 > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -105,13 +106,13 @@ ms.locfileid: "64829464"
 
 6. **Ad** kutusuna **CallingCodeFromVBA**yazın.
 
-7. **Tamam**’a tıklayın.
+7. **Tamam**'a tıklayın.
 
      **Office proje sihirbazı Visual Studio Araçları** açılır.
 
 8. **Var olan bir belgeyi Kopyala**' yı seçin ve **var olan belgenin tam yolu** kutusunda, daha önce oluşturduğunuz **DocumentWithVBA** belgesinin konumunu belirtin. Makro içerebilen kendi belgenizi kullanıyorsanız, bunun yerine bu belgenin konumunu belirtin.
 
-9. **Son**'a tıklayın.
+9. **Finish (Son)** düğmesine tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]tasarımcıda **DocumentWithVBA** belgesini açar ve **Çözüm Gezgini**Için **CallingCodeFromVBA** projesini ekler.
 

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 97bf7474-c6c2-49b3-b2c9-f1b2808eed1a
-ms.date: 03/02/2020
+ms.date: 10/20/2020
 ms.topic: conceptual
 description: Diğer adlar veya kolay adlar kullanılıyorsa oturum açma başarısız olabilir
-ms.openlocfilehash: f73aa52be518de627d468e8e1171de5f3145753b
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: c5c211cd674e86edc4528e6e2c5e75bd5b02132d
+ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006221"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92298176"
 ---
 # <a name="signing-into-visual-studio-subscriptions-may-fail-when-using-aliases"></a>Diğer adlar kullanılırken Visual Studio aboneliklerinde oturum açma başarısız olabilir
 Oturum açmak için kullanılan hesap türüne bağlı olarak, kullanılabilir abonelikler ' de oturum açarken doğru görüntülenmeyebilir [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) . Olası bir neden, aboneliğin atandığı oturum açma kimliği yerine "diğer adlar" veya "kolay adlar" in kullanılması olabilir. Bu "diğer ad" olarak adlandırılır.
@@ -33,10 +33,10 @@ Bir şirket, UserPrincipalName (UPN) birincil SMTP adresi ile aynı olmayan bir 
 
 1. https://my.visualstudio.com/subscriptionsAbonelik atama e-postanız bölümünde bahsedilen oturum açma adresini kullanarak oturum açın.
 
-2. Sayfanın sağ üst kısmında listelenen oturum açma e-posta adresinin, oturum açmak için kullandığınız adresle eşleştiğini doğrulayın.  Aksi takdirde, UPN 'niz uyuşmaz ve aboneliğinizi görüntüleyemezsiniz. 
+2. Sayfanın sağ üst köşesindeki adınızın üzerine tıklayın.  Bu, profilinizi açar.  Profilinizde listelenen oturum açma e-posta adresinin, oturum açmak için kullandığınız adresle eşleştiğinden emin olun.  Aksi takdirde, UPN 'niz uyuşmaz ve aboneliğinizi görüntüleyemezsiniz. 
 
 > [!div class="mx-imgBorder"]
-> ![Oturum açma e-posta adresi](_img//aliasing/sign-in-email.png "Sağ üst köşede görünen e-posta adresinin, oturum açmak için kullandığınız bir adresle eşleştiğinden emin olun.")
+> ![Oturum açma e-posta adresi](_img//aliasing/sign-in-email.png "Profilinizde görünen e-posta adresinin, oturum açmak için kullandığınız bir adresle eşleştiğinden emin olun.")
 
 #### <a name="how-to-fix-a-upn-mismatch"></a>UPN uyuşmazlığını çözme
 

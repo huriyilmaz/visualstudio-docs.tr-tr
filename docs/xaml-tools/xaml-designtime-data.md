@@ -7,12 +7,12 @@ author: alihamie
 ms.author: tglee
 manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 9e6daa3e11bc96fe4d0b9499a6a1a7982432583d
-ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
+ms.openlocfilehash: b9477868d265e9ad8b927d9e13b67112c0ea14f7
+ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039917"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92298473"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>Visual Studio 'da XAML Tasarımcısı tasarım zamanı verilerini kullanma
 
@@ -138,7 +138,7 @@ Buradaki avantaj, denetimlerinizi modelinizin tasarım zamanı statik sürümün
 
 ## <a name="use-design-time-data-with-custom-types-and-properties"></a>Özel türler ve özelliklerle tasarım zamanı verileri kullanma
 
-Bu özellik varsayılan olarak yalnızca platform denetimleri ve özellikleriyle birlikte kullanılabilir. Bu bölümde, kendi özel denetimlerinizi tasarım zamanı denetimleri olarak kullanmanıza olanak tanımak için gereken adımları inceleyeceğiz. Bunu etkinleştirmek için üç gereksinim vardır:
+Bu özellik varsayılan olarak yalnızca platform denetimleri ve özellikleriyle birlikte kullanılabilir. Bu bölümde, Visual Studio 2019 Preview sürüm [16,8](/visualstudio/releases/2019/preview-notes) veya sonraki bir sürümünü kullanan müşteriler için yeni bir özellik olan tasarım zamanı denetimleri olarak kendi özel denetimlerinizi kullanmanıza imkan tanımak için gereken adımları inceleyeceğiz. Bunu etkinleştirmek için üç gereksinim vardır:
 
 - Özel bir xmlns ad alanı 
 

@@ -13,12 +13,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 1fd7538782bff80ee12ac0aa0e66c0daa4da2d5c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: af0039fb8c945062bc19fa647b477c40c44d5346
+ms.sourcegitcommit: a876fcc75321f9c30729121cae83f400973f9d9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546724"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92298198"
 ---
 # <a name="invoke-text-transformation-in-the-build-process"></a>Yapı işleminde metin dönüşümünü çağır
 
@@ -153,13 +153,13 @@ Oluşturma işleminde diğer görevlerden önce metin dönüştürme gerçekleş
 <PropertyGroup>
     <BeforeTransform>CustomPreTransform</BeforeTransform>
     <AfterTransform>CustomPostTransform</AfterTransform>
-  </PropertyGroup>
-  <Target Name="CustomPreTransform">
+</PropertyGroup>
+<Target Name="CustomPreTransform">
     <Message Text="In CustomPreTransform..." Importance="High" />
-  </Target>
-  <Target Name="CustomPostTransform">
+</Target>
+<Target Name="CustomPostTransform">
     <Message Text="In CustomPostTransform..." Importance="High" />
-  </Target>
+</Target>
 ```
 
 `AfterTransform`' De, dosya listelerine başvurabilirsiniz:

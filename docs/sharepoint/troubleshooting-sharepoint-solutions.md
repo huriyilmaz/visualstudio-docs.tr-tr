@@ -16,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fcb30056021a865d0b0e605de462ff72ced5a383
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e79a08d3f8dbc4b579a52501afb08ffb7dca33f2
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73661895"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "92298382"
 ---
 # <a name="troubleshoot-sharepoint-solutions"></a>SharePoint Çözümlerinde Sorun giderme
-  Hata ayıklayıcıyı kullanarak SharePoint Çözümlerinde hata ayıklarken aşağıdaki sorunlar veya uyarılar oluşabilir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. [SharePoint 2007 Iş akışı çözümlerinde hata ayıklama](https://msdn.microsoft.com/3a5392f3-66f3-48be-956e-02de23fa6247).
+  Hata ayıklayıcıyı kullanarak SharePoint Çözümlerinde hata ayıklarken aşağıdaki sorunlar veya uyarılar oluşabilir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. [SharePoint 2007 Iş akışı çözümlerinde hata ayıklama](/previous-versions/bb386166(v=vs.100)).
 
 ## <a name="token-restrictions-in-sandboxed-visual-web-parts"></a>Korumalı görsel Web bölümlerinde belirteç kısıtlamaları
  Korumalı çözümlerin Visual Web bölümleri, SharePoint çalışma zamanının desteklediği $SPUrl gibi standart belirteçleri işleyemez. Sonuç olarak, URL çözümlenmez ve Visual Web Bölümü Tasarımcısında Tasarım görünümü içeriği, aşağıdaki örnekte olduğu gibi doğrudan bir betik öğesinde ifade ederseniz önizleyemezsiniz:

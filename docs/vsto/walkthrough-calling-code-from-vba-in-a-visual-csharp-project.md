@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 46f88b47e135331e5f1dc010aa4a73abed520f51
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1c089a3156d005da7d49976f6c96bb10daac0662
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64804152"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "92297935"
 ---
 # <a name="walkthrough-call-code-from-vba-in-a-visual-c-project"></a>İzlenecek yol: Visual C# projesinde VBA 'dan kod çağırma
   Bu izlenecek yol, çalışma kitabındaki Visual Basic for Applications (VBA) kodundan Excel Microsoft Office için belge düzeyi özelleştirmesinde bir yöntemin nasıl çağrılacağını gösterir. Yordamda üç temel adım vardır: konak öğesi sınıfına bir yöntem ekleyin `Sheet1` , yöntemi çalışma KITABıNDA VBA kodu olarak kullanıma sunun ve sonra çalışma KITABıNDAKI VBA kodundan yöntemi çağırın.
@@ -50,7 +50,7 @@ ms.locfileid: "64804152"
 > [!NOTE]
 > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "64804152"
 
 1. Excel 'i başlatın.
 
-2. Etkin belgeyi, **WorkbookWithVBA**adlı bir **Excel makro özellikli çalışma kitabı ( \* . xlsm)** olarak kaydedin. Masaüstü gibi uygun bir konuma kaydedin.
+2. Etkin belgeyi, **WorkbookWithVBA**adlı bir **Excel Macro-Enabled çalışma kitabı ( \* . xlsm)** olarak kaydedin. Masaüstü gibi uygun bir konuma kaydedin.
 
 3. Şeritte **Geliştirici** sekmesine tıklayın.
 
@@ -107,13 +107,13 @@ ms.locfileid: "64804152"
 
 6. **Ad** kutusuna **CallingCodeFromVBA**yazın.
 
-7. **Tamam**’a tıklayın.
+7. **Tamam**'a tıklayın.
 
      **Office proje sihirbazı Visual Studio Araçları** açılır.
 
 8. **Var olan bir belgeyi Kopyala**' yı seçin ve **var olan belgenin tam yolu** kutusunda, daha önce oluşturduğunuz **WorkbookWithVBA** çalışma kitabının konumunu belirtin. Makro içerebilen kendi çalışma kitabınızı kullanıyorsanız, onun yerine bu çalışma kitabının konumunu belirtin.
 
-9. **Son**'a tıklayın.
+9. **Finish (Son)** düğmesine tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]tasarımcıda **WorkbookWithVBA** çalışma kitabını açar ve **Çözüm Gezgini**Için **CallingCodeFromVBA** projesini ekler.
 
@@ -157,11 +157,11 @@ ms.locfileid: "64804152"
 
      **Sheet1.cs** dosyası kod düzenleyicisinde açılır.
 
-2. Sınıfına aşağıdaki kodu ekleyin `Sheet1` . `CreateVstoNamedRange`Yöntemi belirtilen aralıkta yeni bir <xref:Microsoft.Office.Tools.Excel.NamedRange> nesne oluşturur. Bu yöntem, olayı için bir olay işleyicisi de oluşturur <xref:Microsoft.Office.Tools.Excel.NamedRange.Selected> <xref:Microsoft.Office.Tools.Excel.NamedRange> . Bu izlenecek yolda daha sonra, `CreateVstoNamedRange` yöntemi BELGEDEKI VBA kodundan çağıracaksınız.
+2. Aşağıdaki kodu `Sheet1` sınıfına ekleyin. `CreateVstoNamedRange`Yöntemi belirtilen aralıkta yeni bir <xref:Microsoft.Office.Tools.Excel.NamedRange> nesne oluşturur. Bu yöntem, olayı için bir olay işleyicisi de oluşturur <xref:Microsoft.Office.Tools.Excel.NamedRange.Selected> <xref:Microsoft.Office.Tools.Excel.NamedRange> . Bu izlenecek yolda daha sonra, `CreateVstoNamedRange` yöntemi BELGEDEKI VBA kodundan çağıracaksınız.
 
      [!code-csharp[Trin_CallingCSCustomizationFromVBA#2](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#2)]
 
-3. Sınıfına aşağıdaki yöntemi ekleyin `Sheet1` . Bu yöntem, <xref:Microsoft.Office.Tools.Excel.Worksheet.GetAutomationObject%2A> sınıfının geçerli örneğini döndürmek için yöntemini geçersiz kılar `Sheet1` .
+3. Sınıfına aşağıdaki yöntemi ekleyin `Sheet1` . Bu yöntem, <xref:Microsoft.Office.Tools.Excel.WorksheetBase.GetAutomationObject%2A> sınıfının geçerli örneğini döndürmek için yöntemini geçersiz kılar `Sheet1` .
 
      [!code-csharp[Trin_CallingCSCustomizationFromVBA#3](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#3)]
 
@@ -180,7 +180,7 @@ ms.locfileid: "64804152"
 
 3. **Arabirimi Ayıkla** iletişim kutusunda, **arabirim oluşturmak Için ortak Üyeler seçin** kutusunda, yöntemi için girişe tıklayın `CreateVstoNamedRange` .
 
-4. **Tamam**’a tıklayın.
+4. **Tamam**'a tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adlı yeni bir arabirim oluşturur `ISheet1` ve bu arabirimi `Sheet1` arabirimini uygulayan şekilde sınıfın tanımını değiştirir `ISheet1` . [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Ayrıca kod düzenleyicisinde **ISheet1.cs** dosyasını açar.
 

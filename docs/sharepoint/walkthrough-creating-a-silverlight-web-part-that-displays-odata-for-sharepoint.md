@@ -1,5 +1,6 @@
 ---
 title: SharePoint için OData görüntüleyen Silverlight Web Bölümü oluşturma
+titleSuffix: ''
 ms.date: 02/22/2017
 ms.topic: how-to
 f1_keywords:
@@ -12,19 +13,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 75653f0357bcc605e666ee271a527b616985b641
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 652f34e6a062d2c8129266a10c859c8d24abd83e
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017165"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298496"
 ---
 # <a name="walkthrough-create-a-silverlight-web-part-that-displays-odata-for-sharepoint"></a>İzlenecek yol: SharePoint için OData görüntüleyen bir Silverlight Web Bölümü oluşturma
   SharePoint 2010, liste verilerini OData aracılığıyla gösterir. SharePoint 'te OData hizmeti, Reststaservıce ListData. svc tarafından uygulanır. Bu izlenecek yol, bir Silverlight uygulaması barındıran SharePoint Web Bölümü oluşturmayı gösterir. Silverlight uygulaması, ListData. svc kullanarak SharePoint duyuru listesi bilgilerini görüntüler. Daha fazla bilgi için bkz. [SharePoint FOUNDATION Rest arabirimi](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14)) ve [Açık Veri Protokolü](https://www.odata.org/).
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Desteklenen Microsoft Windows ve SharePoint sürümleri.
@@ -68,7 +69,7 @@ ms.locfileid: "86017165"
 
 #### <a name="to-customize-the-silverlight-application"></a>Silverlight uygulamasını özelleştirmek için
 
-1. Silverlight uygulamasındaki System. Windows. Data öğesine bir derleme başvurusu ekleyin. Daha fazla bilgi için bkz. [nasıl yapılır: Başvuru Ekle Iletişim kutusunu kullanarak başvuru ekleme veya kaldırma](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9).
+1. Silverlight uygulamasındaki System. Windows. Data öğesine bir derleme başvurusu ekleyin. Daha fazla bilgi için bkz. [nasıl yapılır: Başvuru Ekle Iletişim kutusunu kullanarak başvuru ekleme veya kaldırma](/previous-versions/wkze6zky(v=vs.140)).
 
 2. **Çözüm Gezgini**' de, **Başvurular**için kısayol menüsünü açın ve **hizmet başvurusu Ekle**öğesini seçin.
 

@@ -1,5 +1,6 @@
 ---
-title: 'Senaryo: Görselleştirme ve modelleme kullanarak tasarımınızı değiştirme'
+title: Görselleştirme ve modelleme kullanarak tasarımınızı değiştirme
+description: Visual Studio 'da görselleştirme ve modelleme araçlarına genel bakış.
 ms.date: 11/04/2016
 ms.topic: overview
 helpviewer_keywords:
@@ -12,15 +13,16 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio ALM], modeling software
 author: JoshuaPartlow
 ms.author: joshuapa
+ms.custom: SEO-VS-2020
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: db584adc01a3f0f161d451d73df6a8deab08b869
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a6ad330c083a97e8a098f05a9e0398a806a9153b
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238900"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "92298597"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>Senaryo: Görselleştirme ve modelleme kullanarak tasarımınızı değiştirme
 
@@ -81,10 +83,10 @@ Aşağıdaki tabloda, bu araçların yazılım geliştirme yaşam döngüsünün
 
 |Araç/rol|Kullanıcı gereksinimleri Modelleme|İş süreci modelleme|Sistem mimarisi & tasarımı|Kod görselleştirme & araştırması|Doğrulama|
 |------|-|-|-|-|-|
-|Etki alanına özgü dil (DSL) diyagramı|Yes|Yes|Yes|||
-|Bağımlılık diyagramı, katman doğrulama|||Yes|Yes|Yes|
-|Kod eşlemesi|||Yes|Yes|Yes|
-|Sınıf Tasarımcısı (kod tabanlı)||||Yes||
+|Domain-Specific Language (DSL) diyagramı|Evet|Evet|Evet|||
+|Bağımlılık diyagramı, katman doğrulama|||Evet|Evet|Evet|
+|Kod eşlemesi|||Evet|Evet|Evet|
+|Sınıf Tasarımcısı (kod tabanlı)||||Evet||
 
 Bağımlılık diyagramları çizmek için, mevcut bir çözümün parçası olarak bir modelleme projesi oluşturmanız veya yeni bir tane oluşturmanız gerekir. Bu diyagramların modelleme projesinde oluşturulması gerekir.
 Bağımlılık diyagramlarındaki öğeler, modelleme projesinde bulunur, ancak ortak modelde depolanmaz. Kod haritaları ve koddan oluşturulan .NET sınıf diyagramları, modelleme projesi dışında bulunur.
@@ -214,9 +216,9 @@ Visual Studio modelleme diyagramları, daha kolay çalışmanızı planlamak, y�
 
 Bkz.
 
-- [Çevik Araçlar ve çevik proje yönetimi hakkında](/azure/devops/boards/backlogs/backlogs-overview?view=vsts)
+- [Çevik Araçlar ve çevik proje yönetimi hakkında](/azure/devops/boards/backlogs/backlogs-overview?view=vsts&preserve-view=true)
 
-- [Grafikler, panolar ve pencere öğeleri (Azure DevOps Services)](/azure/devops/report/dashboards/overview?view=vsts)
+- [Grafikler, panolar ve pencere öğeleri (Azure DevOps Services)](/azure/devops/report/dashboards/overview?view=vsts&preserve-view=true)
 
 - [Projeyi kullanarak kapsamınızı ve görevlerinizi oluşturma](/azure/devops/boards/backlogs/office/create-your-backlog-tasks-using-project)
 
@@ -236,13 +238,13 @@ Kodun tasarıma uyduğundan emin olmak için takımlar Azure DevOps 'daki derlem
 
 Bkz.
 
-- [Uygulamayı test etme](/azure/devops/test/overview?view=vsts)
+- [Uygulamayı test etme](/azure/devops/test/overview?view=vsts&preserve-view=true)
 
 - [Geliştirme sırasında sisteminizi doğrulama](../modeling/validate-your-system-during-development.md)
 
-- [Sürüm denetimini kullanma](/azure/devops/repos/tfvc/overview?view=azure-devops)
+- [Sürüm denetimini kullanma](/azure/devops/repos/tfvc/overview?view=azure-devops&preserve-view=true)
 
-- [Azure Pipelines](/azure/devops/pipelines/index?view=vsts)
+- [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true)
 
 ## <a name="update-the-system-using-visualization-and-modeling"></a>Görselleştirme ve modelleme kullanarak sistemi güncelleştirme
 
@@ -484,5 +486,5 @@ Bağımlılık diyagramları şunları yapmanıza yardımcı olur:
 
 - [Kodu görselleştirme](../modeling/visualize-code.md)
 - [Geliştirme sürecinizde modelleri kullanma](../modeling/use-models-in-your-development-process.md)
-- [Çevik geliştirmede modelleri kullanma](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)
+- [Çevik geliştirmede modelleri kullanma](/previous-versions/ff398061(v=vs.140))
 - [Geliştirme sırasında sisteminizi doğrulama](../modeling/validate-your-system-during-development.md)

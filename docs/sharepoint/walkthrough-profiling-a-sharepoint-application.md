@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c900a1496d3ef864e50d40092379348c05a4706b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a2e4ca528c7f534cc3a7f04d7e1e2832ee9b412
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017099"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "92298631"
 ---
 # <a name="walkthrough-profile-a-sharepoint-application"></a>İzlenecek yol: SharePoint uygulaması profili oluşturma
   Bu izlenecek yol, bir SharePoint uygulamasının performansını iyileştirmek için Visual Studio 'da profil oluşturma araçlarının nasıl kullanılacağını gösterir. Örnek uygulama, özellik olay alıcısının performansını düşürür bir boşta kalma döngüsü içeren bir SharePoint özellik olay alıcıdır. Visual Studio Profiler, projenin *etkin yol*olarak da bilinen en pahalı (en yavaş performanslı) kısmını bulmanıza ve ortadan kaldırmanıza olanak sağlar.
@@ -275,4 +275,4 @@ ms.locfileid: "86017099"
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Performans oturumuna genel bakış](../profiling/performance-session-overview.md)
 - [Performans profili oluşturma için yeni başlayanlar kılavuzu](../profiling/beginners-guide-to-performance-profiling.md)
-- [Visual Studio Profiler ile uygulama darboğazlarını bulma](https://msdn.microsoft.com/magazine/cc337887.aspx)
+- [Visual Studio Profiler ile uygulama darboğazlarını bulma](/archive/msdn-magazine/2008/march/find-application-bottlenecks-with-visual-studio-profiler)

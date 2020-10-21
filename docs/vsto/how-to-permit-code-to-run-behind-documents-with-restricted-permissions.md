@@ -1,5 +1,6 @@
 ---
 title: Kodun, kısıtlı izinlerle belgelerin arkasında çalışmasına izin verme
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 15cfb7ebf2f4f71e892820206f0dd1d006639992
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 14c468a806160fd31c84b164a4b995f904e71fc6
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547517"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298486"
 ---
 # <a name="how-to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>Nasıl yapılır: kodun, kısıtlı izinlerle belgelerin arkasında çalışmasına Izin verme
   Bir belge veya çalışma kitabıyla izinleri kısıtlamak için Microsoft Office bilgi Rights Management (ıRM) özelliğini kullanabilirsiniz. Varsayılan olarak, kısıtlı bir Microsoft Office Word belgesi veya Microsoft Office Excel çalışma kitabının arkasındaki kodun çalışmasına izin verilmez. Varsayılan değer olarak, yönetilen kod uzantılarınızın nesne modeline erişebilmesi ve çözümünüzün çalışması için değiştirebilirsiniz.

@@ -11,29 +11,29 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 305c562c7600dc6955ce0307db92f4e257fc1c21
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79302947"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "92298429"
 ---
 # <a name="extend-dependency-diagrams"></a>Bağımlılık diyagramlarını genişletme
 
-Bağımlılık diyagramları oluşturmak ve güncelleştirmek ve Program kodunuzu Visual Studio'daki bağımlılık diyagramlarına karşı doğrulamak için kod yazabilirsiniz. Diyagramların kısayol (bağlam) menüsünde görünen komutlar ekleyebilir, sürükle ve bırak hareketlerini özelleştirebilir ve metin şablonlarından katman modeline erişebilirsiniz. Bu uzantıları Visual Studio Tümleştirme Uzantısı 'na (VSIX) paketleyebilir ve diğer Visual Studio kullanıcılarına dağıtabilirsiniz.
+Bağımlılık diyagramları oluşturup güncelleştirmek ve Visual Studio 'daki bağımlılık diyagramlarına karşı program kodunuzun yapısını doğrulamak için kod yazabilirsiniz. Diyagramların kısayol (bağlam) menüsünde görünen komutları ekleyebilirsiniz, sürükle ve bırak hareketlerini özelleştirebilir ve metin şablonlarından katman modeline erişebilirsiniz. Bu uzantıları bir Visual Studio Tümleştirme Uzantısı 'na (VSıX) paketleyebilir ve diğer Visual Studio kullanıcılarına dağıtabilirsiniz.
 
 ## <a name="requirements"></a>Gereksinimler
 
-Katman uzantılarınızı geliştirmek istediğiniz bilgisayarda aşağıdakileri yüklemelisiniz:
+Katman uzantılarınızı geliştirmek istediğiniz bilgisayarda aşağıdakilerin yüklü olması gerekir:
 
 - Visual Studio
 
 - [Visual Studio SDK](../extensibility/visual-studio-sdk.md)
 
-- Visual Studio için SDK modelleme
+- Visual Studio için modelleme SDK 'Sı
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-Katman uzantılarınızı çalıştırmak istediğiniz bilgisayarda Visual Studio'nun uygun bir sürümü yüklü olmalıdır. Visual Studio'nun hangi sürümlerinin bağımlılık diyagramlarını desteklediğini görmek [için mimari ve modelleme araçları için Edition desteğine](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)bakın.
+Katman uzantılarınızı çalıştırmak istediğiniz bilgisayarda, uygun bir Visual Studio sürümü yüklü olmalıdır. Hangi Visual Studio sürümlerini bağımlılık diyagramlarını desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

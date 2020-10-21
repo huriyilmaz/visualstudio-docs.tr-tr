@@ -11,12 +11,12 @@ ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: debf44bfe8187a7fd84e04b4362283658f636f17
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 926bd4a6630d9d99726ee6c1479d04c476756c18
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536792"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "92298743"
 ---
 # <a name="remote-debug-aspnet-core-on-iis-in-azure-in-visual-studio"></a>Visual Studio 'da Azure 'da IIS 'de uzaktan hata ayıklama ASP.NET Core
 
@@ -255,7 +255,7 @@ Visual Studio sürümünüz ile eşleşen uzak araçların sürümünü indirin.
 
 6. Uygulamanızı hızlı bir şekilde bulmak için işlem adınızın ilk harfini yazın.
 
-    * IIS 'de [işlem içi barındırma modeli](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1#hosting-models) kullanıyorsanız doğru **w3wp.exe** işlemini seçin. .NET Core 3 ' te başlayarak bu varsayılandır.
+    * IIS 'de [işlem içi barındırma modeli](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1&preserve-view=true#hosting-models) kullanıyorsanız doğru **w3wp.exe** işlemini seçin. .NET Core 3 ' te başlayarak bu varsayılandır.
 
     * Aksi takdirde **dotnet.exe** işlemini seçin. (Bu işlem dışı barındırma modelidir.)
 

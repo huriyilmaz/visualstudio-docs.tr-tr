@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 3d208c59f08ddeb5a322d174a2c6b56dd901c2c4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c8e8305cb454bfc9f0fb0be4b9964ac1a7e4fe96
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348125"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "92298707"
 ---
 # <a name="debug-uwp-apps-on-remote-machines-from-visual-studio"></a>Visual Studio 'dan uzak makinelerde UWP uygulamalarında hata ayıklama
 
@@ -108,5 +108,5 @@ Uzaktan hata ayıklama yerel hata ayıklama ile aynı şekilde çalışmaktadır
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Gelişmiş uzak dağıtım seçenekleri](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)
-- [Visual Studio ile UWP uygulamalarını test etme](/visualstudio/test/create-and-run-unit-tests-for-a-store-app-in-visual-studio/)
+- [Visual Studio ile UWP uygulamalarını test etme](../test/unit-test-your-code.md)
 - [Visual Studio’da UWP uygulamalarının hatalarını ayıklama](debugging-windows-store-and-windows-universal-apps.md)

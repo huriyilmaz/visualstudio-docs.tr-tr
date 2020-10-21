@@ -1,5 +1,6 @@
 ---
 title: 'İzlenecek yol: çalışma zamanında Şeritteki denetimleri güncelleştirme'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 425918ea32c14e6ba905d6b32864a2844d2b5a90
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9c2e870f028b3337fd162adde881281d7050e142
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255347"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298057"
 ---
 # <a name="walkthrough-update-the-controls-on-a-ribbon-at-run-time"></a>İzlenecek yol: çalışma zamanında Şeritteki denetimleri güncelleştirme
 
@@ -157,7 +158,7 @@ Projenize türü belirtilmiş bir veri kümesi eklemek için **veri kaynakları*
 
     4. **Ürünler**
 
-9. **Son**'a tıklayın.
+9. **Finish (Son)** düğmesine tıklayın.
 
 ## <a name="update-controls-in-the-custom-group-at-run-time"></a>Çalışma zamanında özel gruptaki denetimleri Güncelleştir
 
@@ -175,7 +176,7 @@ Aşağıdaki görevleri gerçekleştirmek için şerit nesne modelini kullanın:
 
 2. **Başvuru Ekle** iletişim kutusunda, **.net** sekmesine tıklayın, **System. Data. LINQ** derlemesini seçin ve ardından **Tamam**' a tıklayın.
 
-    Bu derleme, dil ile tümleşik sorguları (LINQ) kullanmak için sınıflar içerir. Özel gruptaki denetimleri Northwind veritabanındaki verilerle doldurmak için LINQ kullanacaksınız.
+    Bu derleme Language-Integrated sorguları (LINQ) kullanmak için sınıflar içerir. Özel gruptaki denetimleri Northwind veritabanındaki verilerle doldurmak için LINQ kullanacaksınız.
 
 3. **Çözüm Gezgini**' de, seçmek için **CustomerRibbon.cs** veya **CustomerRibbon. vb** ' ye tıklayın.
 
@@ -207,7 +208,7 @@ Aşağıdaki görevleri gerçekleştirmek için şerit nesne modelini kullanın:
      [!code-csharp[Trin_Ribbon_Update_At_Runtime#4](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#4)]
      [!code-vb[Trin_Ribbon_Update_At_Runtime#4](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#4)]
 
-9. Sınıfına aşağıdaki kodu ekleyin `CustomerRibbon` . Bu kod, aşağıdaki görevleri gerçekleştirmek için LINQ sorgularını kullanır:
+9. Aşağıdaki kodu `CustomerRibbon` sınıfına ekleyin. Bu kod, aşağıdaki görevleri gerçekleştirmek için LINQ sorgularını kullanır:
 
    - Seçili müşteriyle ilgili her satış siparişi için **ProductsPurchased** menüsüne bir alt menü ekler.
 
@@ -240,7 +241,7 @@ Aşağıdaki görevleri gerçekleştirmek için şerit nesne modelini kullanın:
      [!code-csharp[Trin_Ribbon_Update_At_Runtime#8](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#8)]
      [!code-vb[Trin_Ribbon_Update_At_Runtime#8](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#8)]
 
-14. Sınıfına aşağıdaki kodu ekleyin `CustomerRibbon` . Bu kod aşağıdaki görevleri gerçekleştirir:
+14. Aşağıdaki kodu `CustomerRibbon` sınıfına ekleyin. Bu kod aşağıdaki görevleri gerçekleştirir:
 
     - Şu anda seçili olan müşterinin e-posta adresini kullanarak yeni posta iletilerinin satırına doldurur.
 

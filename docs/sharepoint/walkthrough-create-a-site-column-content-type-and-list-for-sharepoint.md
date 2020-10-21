@@ -1,5 +1,6 @@
 ---
 title: SharePoint için site sütunu, içerik türü ve liste oluşturma
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -19,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9ce76c72bad138a5c6c40afe717aadafec02c677
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 041c0ba5174450fca7acf7247b1cf40a98ac147d
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015274"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298370"
 ---
 # <a name="walkthrough-create-a-site-column-content-type-and-list-for-sharepoint"></a>İzlenecek yol: SharePoint için site sütunu, içerik türü ve liste oluşturma
   Aşağıdaki yordamlarda, özel SharePoint site sütunlarının — veya *alanlarının*yanı sıra site sütunlarını kullanan bir içerik türü oluşturma işlemleri gösterilmektedir. Ayrıca, yeni içerik türünü kullanan bir listenin nasıl oluşturulacağını gösterir.
@@ -217,7 +218,7 @@ ms.locfileid: "86015274"
 
 15. **Sütun adı** listesinde, **hasta adı**' nı seçin, **sıralama** sütununun **artan**olarak ayarlandığından emin olun ve **Tamam** düğmesini seçin.
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
  Artık özel site sütunları, içerik türü ve liste hazır hale gelmiştir, bunları SharePoint 'e dağıtın ve test etmek için uygulamayı çalıştırın.
 
 #### <a name="to-test-the-application"></a>Uygulamayı test etmek için

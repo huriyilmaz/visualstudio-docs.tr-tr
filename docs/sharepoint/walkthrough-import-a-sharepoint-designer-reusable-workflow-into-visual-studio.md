@@ -1,5 +1,6 @@
 ---
-title: "İzlenecek yol: SharePoint Designer yeniden kullanılabilir Iş akışını Visual Studio 'ya aktarma | Microsoft Docs"
+title: 'İzlenecek yol: SharePoint Designer yeniden kullanılabilir iş akışını Içeri aktarma | Microsoft Docs'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -15,14 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6a589f14ea60d50c0062d85be81523f27c81b455
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e6680c6ff95808db56e5bb32e02e0775c935011
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015702"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298023"
 ---
-# <a name="walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio"></a>İzlenecek yol: SharePoint Designer yeniden kullanılabilir iş akışını Visual Studio 'ya aktarma
+# <a name="walkthrough-import-a-sharepoint-designer-reusable-workflow"></a>İzlenecek yol: SharePoint Designer yeniden kullanılabilir iş akışını Içeri aktarma
+
   Bu izlenecek yolda, SharePoint Designer 2010 ' de oluşturulan yeniden kullanılabilir bir iş akışının [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint iş akışı projesine nasıl aktarılacağı gösterilmektedir.
 
  SharePoint Designer veya *bildirim temelli iş akışlarında*oluşturulan iş akışları, [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] kod yerine deyimlerden oluşur. SharePoint Designer 2010, taşınabilir ve SharePoint sitelerindeki farklı listeler tarafından kullanılabilen, bildirim temelli iş akışları olan yeniden *kullanılabilir iş akışlarını*tanıtır.

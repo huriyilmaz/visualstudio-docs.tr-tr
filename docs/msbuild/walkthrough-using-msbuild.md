@@ -1,6 +1,7 @@
 ---
-title: 'İzlenecek yol: MSBuild kullanma | Microsoft Docs'
-ms.date: 03/20/2019
+title: MSBuild kullanma
+description: Öğeler, öğe meta verileri, özellikler, hedefler ve görevler de dahil olmak üzere bir MSBuild proje dosyasının çeşitli parçalarını öğrenin.
+ms.date: 10/19/2020
 ms.topic: conceptual
 ms.custom: contperfq2
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f074e69f23e20ecb92d32efb69fe011c0dbf797
-ms.sourcegitcommit: bccc6503542e1517e0e96a9f02f5a89d69c60c25
+ms.openlocfilehash: b26c13765daf5a82a9961e6509b36e24e18f4e0c
+ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91134824"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92298533"
 ---
 # <a name="walkthrough-use-msbuild"></a>İzlenecek yol: MSBuild kullanma
 
@@ -29,6 +30,24 @@ MSBuild, Microsoft ve Visual Studio için bir yapı platformudur. Bu izlenecek y
 - Yapı öğelerinin kullanılması.
 
 MSBuild 'i Visual Studio 'dan veya **komut penceresinden**çalıştırabilirsiniz. Bu izlenecek yolda, Visual Studio kullanarak bir MSBuild proje dosyası oluşturun. Proje dosyasını Visual Studio 'da düzenleyin ve ardından projeyi derlemek ve sonuçları incelemek için **komut penceresini** kullanın.
+
+## <a name="install-msbuild"></a>MSBuild 'i yükler
+
+::: moniker range="vs-2017"
+
+Visual Studio kullanıyorsanız, MSBuild zaten yüklüdür. MSBuild 15 ' i Visual Studio içermeyen bir sisteme yüklemek için Visual Studio [daha eski indirmeler](https://visualstudio.microsoft.com/vs/older-downloads/)' a gidin, **Visual Studio 2017** ' i genişletin ve **İndir** düğmesini seçin. Visual Studio aboneliğiniz varsa, oturum açın ve **Visual studio 2017 Için derleme araçları**'nın en son sürümünü indirmek üzere bağlantıyı bulun. Visual Studio aboneliğiniz yoksa, derleme araçlarının en son sürümünü yüklemeye devam edebilirsiniz. Bu sayfada, sayfanın 2019 sürümüne geçiş yapmak için sürüm seçiciyi kullanın ve yükleme yönergelerini izleyin.
+::: moniker-end
+
+::: moniker range="vs-2019"
+Visual Studio kullanıyorsanız, MSBuild zaten yüklüdür. Visual Studio 2019 ile Visual Studio yükleme klasörü altına yüklenir. Windows 10 ' daki tipik bir varsayılan yükleme için MSBuild.exe, *Msbuild\current\bin*içindeki yükleme klasörü altında bulunur.
+
+Visual Studio içermeyen bir sisteme MSBuild yüklemek için [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/) ' ne gidin ve **Tüm indirmelere**kaydırın ve ardından **Visual Studio 2019 için Araçlar**' ı genişletin. MSBuild 'i içeren **Visual Studio 2019 Için derleme araçları**'nı veya [.NET Core SDK](/dotnet/core/sdk#acquiring-the-net-core-sdk)'i yükler.
+
+Yükleyicide, kullandığınız iş yükleri için MSBuild araçlarının seçili olduğundan emin olun ve **yükleme**' yi seçin.
+
+![MSBuild yükleniyor](media/walkthrough-using-msbuild/installation-msbuild-tools.png)
+
+::: moniker-end
 
 ## <a name="create-an-msbuild-project"></a>MSBuild projesi oluşturma
 
@@ -100,7 +119,7 @@ Varsayılan hedef proje dosyasında tanımlı değil. Bunun yerine, içeri aktar
 
 İçe aktarılan dosyalar, başvuruldukları proje dosyasına etkili biçimde dahil edilir.
 
-SDK özniteliği bu dosyanın örtülü olarak içeri aktarılmasına neden olduğundan, SDK stili projcts 'de bu içeri aktarma öğesini görmezsiniz.
+SDK özelliği, bu dosyanın örtülü olarak içeri aktarılmasına neden olduğundan, SDK stili projelerde bu içeri aktarma öğesini görmezsiniz.
 
 MSBuild, bir yapının hedeflerini izler ve her bir hedefin birden kereden fazla oluşturulmamasını sağlar.
 

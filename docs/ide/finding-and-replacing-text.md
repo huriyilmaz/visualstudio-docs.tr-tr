@@ -1,5 +1,6 @@
 ---
 title: Metin bul ve Değiştir ve çok şapka seçimi
+description: Visual Studio Code düzenleyicisinde bul ve Değiştir özelliğini nasıl kullanacağınızı öğrenin.
 ms.date: 08/14/2018
 ms.topic: conceptual
 f1_keywords:
@@ -30,12 +31,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ffc31a0d0e2b6878b5dd5173a35ce4f538e135be
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 81a74fa1328a3b0079eef6253fa32fc882876a71
+ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590351"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92298566"
 ---
 # <a name="find-and-replace-text"></a>Metin bulma ve değiştirme
 
@@ -130,7 +131,7 @@ Birden çok Evcil hayvan seçmek için her zamanki gibi ilk metin seçimini tık
 
 Bazı komutlardan biri de **düzenleme** menüsünde, **birden çok sepetin**altında bulunur:
 
-![Visual Studio 'da çoklu Evcil hayvan uçarak çıkış menüsü](media/edit-menu-multiple-carets.png)
+:::image type="content" source="media/edit-menu-multiple-carets-find-replace.png" alt-text="Visual Studio 'da birden çok Evcil hayvan uçarak giriş menüsünün ekran görüntüsü":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

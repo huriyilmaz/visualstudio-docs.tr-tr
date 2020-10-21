@@ -1,5 +1,6 @@
 ---
 title: ServerDocument sınıfını kullanarak bir sunucudaki belgeleri yönetme
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 739946fc7fc6ea7014fb93010ca85094a7fc7056
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e91653734b804693584808478e44443563cdb823
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71251926"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298277"
 ---
 # <a name="manage-documents-on-a-server-by-using-the-serverdocument-class"></a>ServerDocument sınıfını kullanarak bir sunucudaki belgeleri yönetme
   `ServerDocument` [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Microsoft Office Word ve Microsoft Office Excel yüklenmemiş olsa bile belge düzeyi özelleştirmelerinin çeşitli yönlerini yönetmek için içindeki sınıfını kullanabilirsiniz. Şu görevleri gerçekleştirebilirsiniz:

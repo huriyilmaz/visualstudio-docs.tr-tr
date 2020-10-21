@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 4d2f2e2a698063dfb5ac6261d8a9b01a073d112e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 389fe1491a92cacecd772244c2a0facd0d12c887
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84173906"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "92298764"
 ---
 # <a name="remote-debug-aspnet-core-on-a-remote-iis-computer-in-visual-studio"></a>Visual Studio 'da uzak IIS bilgisayarında uzaktan hata ayıklama ASP.NET Core
 
@@ -53,7 +53,7 @@ Bu makalede, Windows Server 'da IIS 'nin temel yapılandırmasını ayarlama ve 
 
 ## <a name="create-the-aspnet-core-application-on-the-visual-studio-computer"></a>Visual Studio bilgisayarında ASP.NET Core uygulamasını oluşturma
 
-1. Yeni bir ASP.NET Core Web uygulaması oluşturun. 
+1. Yeni bir ASP.NET Core Web uygulaması oluşturun.
 
     ::: moniker range=">=vs-2019"
     Visual Studio 2019 ' de **CTRL + Q** yazarak arama kutusunu açın, **ASP.net**yazın, **Şablonlar**' ı seçin ve sonra **Yeni ASP.NET Core Web uygulaması oluştur**' u seçin. Görüntülenen iletişim kutusunda, projeyi **Myaspapp**olarak adlandırın ve ardından **Oluştur**' u seçin. Ardından **Web uygulaması (Model-View-Controller)** öğesini seçin ve ardından **Oluştur**' u seçin.
@@ -209,7 +209,7 @@ Uzaktan hata ayıklayıcıyı bir hizmet olarak çalıştırma hakkında bilgi i
 
 6. Uygulamanızı hızlı bir şekilde bulmak için işlem adınızın ilk harfini yazın.
 
-    * IIS 'de [işlem içi barındırma modeli](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1#hosting-models) kullanıyorsanız doğru **w3wp.exe** işlemini seçin. .NET Core 3 ' te başlayarak bu varsayılandır.
+    * IIS 'de [işlem içi barındırma modeli](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1&preserve-view=true#hosting-models) kullanıyorsanız doğru **w3wp.exe** işlemini seçin. .NET Core 3 ' te başlayarak bu varsayılandır.
 
     * Aksi takdirde **dotnet.exe** işlemini seçin. (Bu işlem dışı barındırma modelidir.)
 

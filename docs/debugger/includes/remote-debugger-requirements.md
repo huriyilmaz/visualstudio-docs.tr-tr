@@ -14,19 +14,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.openlocfilehash: fe2927a7a863b3825a680096da44afa6d68f1cba
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68149174"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "92298699"
 ---
-### <a name="supported-operating-systems"></a>Supported Operating Systems  
+### <a name="supported-operating-systems"></a>Desteklenen İşletim Sistemleri  
 
-Uzak bilgisayarın aşağıdaki işletim sistemlerinden birini çalıştırmalıdır:  
+Uzak bilgisayarın aşağıdaki işletim sistemlerinden birini çalıştırıyor olması gerekir:  
   
 - Windows 10 (telefon değil)
   
-- Windows 8 veya 8.1 (telefon değil)
+- Windows 8 veya 8,1 (telefon değil)
   
 - Windows 7 Service Pack 1  
 
@@ -34,12 +34,12 @@ Uzak bilgisayarın aşağıdaki işletim sistemlerinden birini çalıştırmalı
   
 - Windows Server 2012 veya Windows Server 2012 R2  
   
-- Windows Server 2008 hizmet paketi 2, Windows Server 2008 R2 hizmet paketi 1
+- Windows Server 2008 Service Pack 2, Windows Server 2008 R2 Service Pack 1
 
 > [!NOTE]
-> Windows Phone, hata ayıklamak için bir USB bağlantısı gerekir (Bu uzak araçları gerektirmez).
+> Windows Phone hata ayıklama için USB bağlantısı gerektirir (uzak Araçlar gerektirmez).
   
-### <a name="supported-hardware-configurations"></a>Desteklenen donanım yapılandırmaları  
+### <a name="supported-hardware-configurations"></a>Desteklenen donanım yapılandırması  
   
 - 1,6 GHz veya daha hızlı işlemci  
   
@@ -47,10 +47,10 @@ Uzak bilgisayarın aşağıdaki işletim sistemlerinden birini çalıştırmalı
   
 - 1 GB kullanılabilir sabit disk alanı  
   
-- 5400 RPM sabit sürücü  
+- 5400-RPM sabit sürücü  
   
 - 1024 x 768 veya daha yüksek görüntü çözünürlüğünde çalışan DirectX 9 uyumlu ekran kartı  
   
 ### <a name="network-configuration"></a>Ağ yapılandırması  
 
-Uzak bilgisayar ve Visual Studio bilgisayarı bir ağ, çalışma grubu veya ev grubu bağlı desteklemeli veya doğrudan Ethernet kablosu ile bağlı. Bir proxy üzerinden bağlı iki bilgisayar arasında hata ayıklama desteklenmiyor. Ülkeler yüksek gecikme süresi veya çevirmeli, Internet gibi düşük bant genişliği bağlantı üzerinden veya Internet üzerinden hata ayıklama önerilmez ve başarısız olabilir veya edilemeyecek kadar yavaş.
+Uzak bilgisayar ve Visual Studio bilgisayar bir ağ, çalışma grubu veya ev grubu üzerinden bağlanmış veya başka bir Ethernet kablosu üzerinden doğrudan bağlanmış olmalıdır. Proxy üzerinden bağlı iki bilgisayar arasında hata ayıklama desteklenmez. Yüksek gecikme veya düşük bant genişliğine sahip bir bağlantı (örneğin, Internet veya ülkeler arasında Internet üzerinden) için hata ayıklama önerilmez ve başarısız olabilir veya aşırı derecede yavaş olabilir.

@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9d245ddf00e4005b763bcd4437d3f8c18d05291e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a631e8d8cffe6bfde925dfbae4a7350e6a0ef95a
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986035"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "92298612"
 ---
 # <a name="grant-trust-to-documents"></a>Belgelere güven verme
   Belge düzeyi proje, uygulama düzeyi projelerle aynı güvenlik gereksinimlerine sahiptir: bildirimleri bir sertifikayla imzalama veya güven istemine tıklama. Ayrıca, belge veya çalışma kitabı güvenilen konum olarak belirlenmiş bir dizinde bulunmalıdır.
@@ -41,7 +41,7 @@ ms.locfileid: "72986035"
 
 - Belgenin kendisi güvenilir konumlar kullanılarak güvenilir olsa da, özelleştirmeye güvenmek için ek izinler gerekir. Bir sertifikayla bildirimleri imzalarken, güven istemine tıklayarak veya Office çözümünü *Program Files* dizinine yükleyerek özelleştirmeye tam güven verebilirsiniz.
 
-- Belge düzeyi çözümünün belge veya çalışma kitabını derlemeyle aynı dizinde veya farklı bir dizinde saklayabilirsiniz. Örneğin, belge bir SharePoint sunucusunda bulunabilir ve derleme bir ağ dosya paylaşımında bulunabilir. Daha fazla bilgi için bkz. [nasıl yapılır: belge düzeyi Office çözümünü bir SharePoint sunucusuna ClickOnce kullanarak yayımlama](https://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58).
+- Belge düzeyi çözümünün belge veya çalışma kitabını derlemeyle aynı dizinde veya farklı bir dizinde saklayabilirsiniz. Örneğin, belge bir SharePoint sunucusunda bulunabilir ve derleme bir ağ dosya paylaşımında bulunabilir. Daha fazla bilgi için bkz. [nasıl yapılır: belge düzeyi Office çözümünü bir SharePoint sunucusuna ClickOnce kullanarak yayımlama](/previous-versions/bb608595(v=vs.110)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office çözümlerine güven verme](../vsto/granting-trust-to-office-solutions.md)

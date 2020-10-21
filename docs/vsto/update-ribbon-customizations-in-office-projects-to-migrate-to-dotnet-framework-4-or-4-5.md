@@ -1,5 +1,6 @@
 ---
-title: .NET Framework 4 ' e geçirilen Office Projelerindeki Şerit özelleştirmelerini güncelleştirme 4,5
+title: .NET Framework 4,5 ' e geçirilen şerit özelleştirmelerini güncelleştirme
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +13,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c7d7ab5755f592e57e76dcd68f3dcb9dc2a7eab9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8024d6fba419dfe437ca8492010c7e4786861862
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254357"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298611"
 ---
-# <a name="update-ribbon-customizations-in-office-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 ' e veya .NET Framework 4,5 ' ye geçirebileceğiniz Office Projelerindeki Şerit özelleştirmelerini güncelleştirme
+# <a name="update-ribbon-customizations-migrated-to-net-framework-45"></a>.NET Framework 4,5 ' e geçirilen şerit özelleştirmelerini güncelleştirme
+
   Projeniz **Şerit (görsel Tasarımcı)** proje öğesi kullanılarak oluşturulmuş bir Şerit özelleştirmesi içeriyorsa, hedef Framework [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya daha yeni olarak değiştirilirse proje kodunuzda aşağıdaki değişiklikleri yapmanız gerekir.
 
 - Oluşturulan Şerit kodunu değiştirin.

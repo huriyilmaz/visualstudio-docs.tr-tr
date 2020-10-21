@@ -13,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 844f3eb97ed9e07aa8125688d2bfe8944249b008
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c47b16bbb9fe5eb352171e6e1cf4c13890890265
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541797"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "92298663"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>Nasıl yapılır: Etki Alanına Özgü Dil Çözümü Oluşturma
 Özel bir Visual Studio çözümü kullanılarak, etki alanına özgü dil (DSL) oluşturulur.
@@ -33,7 +33,7 @@ Bu yordamı başlatabilmeniz için önce şu bileşenleri yükleyebilirsiniz:
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="creating-a-domain-specific-language-solution"></a>Etki alanına özgü dil çözümü oluşturma
+## <a name="creating-a-domain-specific-language-solution"></a>Domain-Specific dil çözümü oluşturma
 
 1. Yeni bir **alana özgü dil Tasarımcısı** PROJESI oluşturarak dsl Sihirbazı 'nı başlatın.
 
@@ -48,9 +48,9 @@ Bu yordamı başlatabilmeniz için önce şu bileşenleri yükleyebilirsiniz:
 
 2. DSL şablonu seçin.
 
-    **Etki alanına özgü dil seçeneklerini seç** sayfasında, **en az dil**gibi çözüm şablonlarından birini seçin. Oluşturmak istediğiniz DSL 'ye benzer bir şablon seçin.
+    **Domain-Specific dil seçeneklerini seçin** sayfasında, **en az dil**gibi çözüm şablonlarından birini seçin. Oluşturmak istediğiniz DSL 'ye benzer bir şablon seçin.
 
-    Çözüm şablonları hakkında daha fazla bilgi için bkz. [etki alanına özgü dil çözümü şablonu seçme](../modeling/choosing-a-domain-specific-language-solution-template.md).
+    Çözüm şablonları hakkında daha fazla bilgi için bkz. [Domain-Specific Language çözüm şablonu seçme](../modeling/choosing-a-domain-specific-language-solution-template.md).
 
 3. **Dosya Uzantısı** sayfasında bir dosya adı uzantısı girin. Bu, bilgisayarınızda ve DSL 'yi yüklemek istediğiniz herhangi bir bilgisayarda benzersiz olmalıdır. **Hiçbir uygulama veya Visual Studio Düzenleyicisi bu uzantıyı kullanmamalıdır**iletisini görmeniz gerekir.
 
@@ -70,7 +70,7 @@ Bu yordamı başlatabilmeniz için önce şu bileşenleri yükleyebilirsiniz:
 
 ### <a name="solution-settings-page"></a>Çözüm ayarları sayfası
  **Etki alanına özgü dile hangi şablonu temel almak istiyorsunuz?**
-Oluşturmak istediğiniz DSL 'ye benzer bir şablon seçin. Farklı şablonlar, uygun başlangıç noktaları sağlar. Bir çözüm şablonu seçtiğinizde, sihirbaz bir açıklama görüntüler. Çözüm şablonları hakkında daha fazla bilgi için bkz. [etki alanına özgü dil çözümü şablonu seçme](../modeling/choosing-a-domain-specific-language-solution-template.md).
+Oluşturmak istediğiniz DSL 'ye benzer bir şablon seçin. Farklı şablonlar, uygun başlangıç noktaları sağlar. Bir çözüm şablonu seçtiğinizde, sihirbaz bir açıklama görüntüler. Çözüm şablonları hakkında daha fazla bilgi için bkz. [Domain-Specific Language çözüm şablonu seçme](../modeling/choosing-a-domain-specific-language-solution-template.md).
 
  **Etki alanına özgü dilinizi ne adlandırmak istiyorsunuz?**
 Çözüm adı varsayılan olarak belirlenmiştir. Kod bu değerden oluşturulur. C# sınıf adı olarak geçerli olmalıdır.
@@ -114,9 +114,9 @@ Bu, varsayılan olarak şirketinizden ve ürün adınızdan oluşan bir addır.
 
  **Mevcut tanımlayıcı ad anahtarını kullan** DSL 'nizi başka bir derlemeyle bütünleştirmek istiyorsanız bu seçeneği kullanın.
 
- Tanımlayıcı adlandırma hakkında daha fazla bilgi için bkz. [güçlü adlandırılmış derlemeler oluşturma ve kullanma](/dotnet/standard/assembly/create-use-strong-named).
+ Tanımlayıcı adlandırma hakkında daha fazla bilgi için bkz. [Strong-Named derlemeleri oluşturma ve kullanma](/dotnet/standard/assembly/create-use-strong-named).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nasıl yapılır: Etki Alanına Özgü bir Dili Tanımlama](../modeling/how-to-define-a-domain-specific-language.md)
-- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Alana Özgü Dil Araçları sözlüğü](/previous-versions/bb126564(v=vs.100))

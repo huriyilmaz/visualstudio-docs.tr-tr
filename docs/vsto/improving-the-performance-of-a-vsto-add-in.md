@@ -10,12 +10,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: dccff7206aa9ef71596816d34a863695a10aff6b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7529c69270b5f33cde32e8a7907f1b80589c43b7
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79416555"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "92298518"
 ---
 # <a name="improve-the-performance-of-a-vsto-add-in"></a>VSTO eklentisinin performansını iyileştirme
   Office uygulamaları için oluşturduğunuz VSTO Eklentilerini en iyi duruma getirerek daha iyi bir deneyim verebilirsiniz. bu sayede, öğeleri hızlı bir şekilde başlatabilir, kapatabilir, açık öğeler açabilir ve diğer görevleri gerçekleştirebilirsiniz. VSTO eklentisi Outlook için ise, VSTO eklentisinin kötü performans nedeniyle devre dışı bırakılabilme olasılığını da azaltabilirsiniz. Aşağıdaki stratejileri uygulayarak VSTO eklentisinin performansını artırabilirsiniz:
@@ -115,6 +115,6 @@ ms.locfileid: "79416555"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [VSTO eklentileri talep yükleme](https://blogs.msdn.microsoft.com/andreww/2008/07/14/demand-loading-vsto-add-ins/)
-- [Office eklentilerinde CLR Yükleme gecikmesi](https://blogs.msdn.microsoft.com/andreww/2008/04/19/delay-loading-the-clr-in-office-add-ins/)
+- [VSTO eklentileri talep yükleme](/archive/blogs/andreww/demand-loading-vsto-add-ins)
+- [Office eklentilerinde CLR Yükleme gecikmesi](/archive/blogs/andreww/delay-loading-the-clr-in-office-add-ins)
 - [Visual Studio kullanarak Office için VSTO Eklentileri oluşturma](create-vsto-add-ins-for-office-by-using-visual-studio.md)
