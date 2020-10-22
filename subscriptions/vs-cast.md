@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 92e8957f-c690-46bd-a812-3efd06a2bc6b
-ms.date: 03/02/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerinde bulunan atama vurgusu avantajı hakkında bilgi edinin
-ms.openlocfilehash: 3273ffb718249a0503531d20b882334cb76f9428
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: a6c1836724f05255c5120a336b8976ccae3cadbd
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005956"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353375"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde atama vurgulaması avantajı
 Geliştiricilerin, buluta geçiş yaparken yazılım üzerinde kritik Öngörüler olması gerekir. ATAMA vurgulaması sayesinde, Visual Studio aboneleri, Azure 'a geçiş için uygulamalarının bulut hazırlığını belirlemek üzere uygulama kaynak kodunu hızla tarayabilir ve bir geçiş sırasında ve sonrasında uygulamasının ilerlemesini izler.
@@ -26,14 +26,14 @@ Geliştiricilerin, buluta geçiş yaparken yazılım üzerinde kritik Öngörül
 2. "Araçlar" kategorisindeki atama vurgusu avantajı kutucuğunu bulun ve **kodu al**' a tıklayın.
 
    > [!div class="mx-imgBorder"]
-   > ![ATAMA vurgu avantajı kutucuğu](_img/vs-cast-highlight/vs-cast-highlight-tile.png)
+   > ![ATAMA vurgu avantajı kutucuğu](_img/vs-cast-highlight/vs-cast-highlight-tile.png "Başlamak için atama vurgu avantajı kutucuğunda ' kodu al ' düğmesine tıklayın.")
 
 0. Kodunuzun başarıyla alındığını bildiren bir ileti görürsünüz.  **Etkinleştir**' e tıklayın. (Şimdi etkinleştirmeyi tercih ederseniz, abonelik portalındaki atama vurgusu kutucuğuna her zaman geri dönebilirsiniz.  "Kod al" bağlantısı "etkinleştir" olarak değişir ve tıklatmak etkinleştirme işlemini sürdürür.)
 
 0. Aboneliğinizin özelliklerini keşfedebileceğiniz atama vurgusu sayfasına yönlendirilirsiniz.  Hesabınızı oluşturmaya hazırsanız, iletişim bilgilerinizi Web formunda sağlamanız ve **Gönder**' e tıklamanız yeterlidir.
 
     > [!div class="mx-imgBorder"]
-    > ![ATAMA vurgu giriş sayfası](_img/vs-cast-highlight/vs-cast-highlight-landing.png)
+    > ![ATAMA vurgu giriş sayfası](_img/vs-cast-highlight/vs-cast-highlight-landing.png "Kişisel bilgilerinizi, atama aboneliğinizi etkinleştirme ' ye girin.")
 
    > [!NOTE]
    > ATAMA vurgu avantajı 'nın etkinleştirmeleri, kuruluş başına on ile sınırlıdır.  Kuruluşunuzun on etkinleştirmesi zaten tüketilmişse, atama vurgu avantajını etkinleştiremeyecektir ve daha fazla bilgi içeren bir e-posta alacaksınız.

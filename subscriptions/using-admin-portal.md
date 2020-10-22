@@ -1,18 +1,18 @@
 ---
-title: Abonelikler yönetim portalını kullanmaya başlama | Visual Studio Market
+title: Abonelikler Yönetici portalını kullanmaya başlama | Visual Studio Market
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 4c099fe8-883e-4789-9468-387ce5697dfe
 ms.date: 09/03/2020
 ms.topic: overview
-description: Abonelik yönetim portalı ile kuruluşunuzun Visual Studio aboneliklerini yönetmeye nasıl başlaleyeceğinizi öğrenin.
-ms.openlocfilehash: 78c66b8db569ce71588a2dba43b3ffb08d6a7d80
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+description: Abonelik Yönetici portalı ile kuruluşunuzun Visual Studio aboneliklerini yönetmeye nasıl başlaleyeceğinizi öğrenin.
+ms.openlocfilehash: 8ed9a0b2ed7b9230a245493a2998fa1ca42cae53
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005231"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353310"
 ---
 # <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio abonelikleri yönetici portalına genel bakış
 
@@ -23,7 +23,7 @@ Portalın turuna katılın.
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4t9aW]
 
 ## <a name="important-considerations"></a>Önemli noktalar
-Visual Studio abonelikleri yönetim portalını kullanırken bu noktaları göz önünde bulundurun:
+Visual Studio abonelikleri Yönetici portalını kullanırken bu noktaları aklınızda bulundurun:
 - **Visual Studio abonelikleri Kullanıcı başına lisanslanır.** Her abone, yazılımı geliştirme ve test için gereken sayıda bilgisayar üzerinde kullanabilir.
 - Her abone için, kuruluşunuzun satın aldığı Visual Studio aboneliğine karşılık gelen **yalnızca bir abonelik düzeyi atayın**. Birden fazla abonelik düzeyi atanmış abonelere sahipseniz, ayarlarını yalnızca bir tane olacak şekilde düzenleyin.
 - Abonelik yükseltildiğinde ("adım yukarı" lisans satın alındıktan sonra) veya daha düşük bir düzeyde yenileniyorsa **, abonenin abonelik düzeyinin güncellenmesi gerekir** .
@@ -39,25 +39,25 @@ Abonelikleri atadıktan sonra, aboneleri Yönet sekmesi, aboneler hakkında aşa
 - Ek notlar için bir başvuru alanı.
 - Abone indirmelerinin etkin veya devre dışı olup olmadığının bir göstergesi.
 - Bulundukları ülke.
-- Yönetim portalından atama iletişim e-postası için kendi dil tercihi.
+- Yönetici portalından atama iletişim e-postası için kendi dil tercihi.
 - Oturum açma dışındaki iletişimler için kullanılan farklı bir e-posta adresi için isteğe bağlı alan.
 
 Sayfanın sol üst kısmında, bir abonelik atamasına genel bakış, anlaşma ayrıntıları ve en yüksek kullanım raporu açığa çıkarmak için seçebileceğiniz çeşitli simgeler vardır.
 
 Her anlaşma için kuruluşunuzda satın alınan, atanan ve hala kullanılabilir olan abonelik lisanslarının sayısı hakkında ek bilgileri görmek için, üstteki simgeye tıklayarak slayt panelini etkinleştirin.
 > [!div class="mx-imgBorder"]
-> ![Visual Studio abonelikleri Yönetici portalı aboneleri sayfası](_img/using-admin-portal/subscribers-page.png)
+> ![Visual Studio abonelikleri Yönetici portalı aboneleri sayfası](_img/using-admin-portal/subscribers-page.png "Aboneler sayfasında türe göre abonelik sayıları gösterilir.")
 
 ## <a name="the-details-page"></a>Ayrıntılar sayfası
 Görüntülemekte olduğunuz anlaşma hakkında daha fazla bilgi için, anlaşma ayrıntıları sekmesini görmek üzere ikinci simgeyi seçin. Bu bölmede, anlaşma Durumu, satın alma hesabı, kuruluş ayrıntıları, süper Yöneticiler ve diğer ilgili bilgiler gösterilir.
 > [!div class="mx-imgBorder"]
-> ![Visual Studio abonelikleri yönetim portalı ayrıntıları sayfası](_img/using-admin-portal/details-page.png)
+> ![Visual Studio abonelikleri yönetim portalı ayrıntıları sayfası](_img/using-admin-portal/details-page.png "Ayrıntılar sayfası, süper yöneticilerinizin adları da dahil olmak üzere anlaşmanız hakkındaki bilgileri görüntüler.")
 
 ## <a name="resources"></a>Kaynaklar
 - [Visual Studio lisanslama teknik incelemesi](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Abonelik seçeneklerini ve fiyatlandırmalarını karşılaştırma](https://visualstudio.microsoft.com/vs/pricing)
 - [Visual Studio IDE özelliklerini karşılaştırma](https://visualstudio.microsoft.com/vs/compare)
-- [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
+- [Visual Studio Yöneticisi ve abonelikleri desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

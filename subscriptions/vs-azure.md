@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
-ms.date: 04/28/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen Azure DevTest bireysel kredi avantajını nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: 41d85c939c05a9d29c80c15d1702258ff5b7d5e5
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: de1bfa9591a0dae409ec526429fa0496f3408703
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91003852"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353102"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Microsoft Azure kullanma
 Bir Visual Studio abonesi olarak, ek ücret ödemeden Microsoft Azure kullanabilirsiniz.  [Aylık Azure DevTest krediniz](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)sayesinde Azure, geliştirme ve test için kişisel korumalı alanınız.  Sanal makineleri, bulut hizmetlerini ve diğer Azure kaynaklarını sağlayabilirsiniz.  Kredi tutarları abonelik düzeyine göre farklılık gösterir.
@@ -22,23 +22,23 @@ Bir Visual Studio abonesi olarak, ek ücret ödemeden Microsoft Azure kullanabil
 
 2. Avantajlar sayfasında Araçlar bölümünde Azure kutucuğunu bulun ve avantaj kutucuğunun altındaki bağlantıyı **Etkinleştir** ' i seçin.
    > [!div class="mx-imgBorder"]
-   > ![Azure kutucuğu](_img/vs-azure/vs-azure-tile.png)
+   > ![Azure kutucuğu](_img/vs-azure/vs-azure-tile.png "Başlamak için Azure kutucuğunda ' etkinleştir ' düğmesine tıklayın.")
 
 3. Mevcut bir Azure aboneliğiniz yoksa, Azure aboneliğinizi oluşturmak için gerekli bilgileri doldurmanız istenir.  İlk adım, kişisel bilgilerinizin sağlanması ve sonra **İleri**' yi seçsağlamaktır.
    > [!div class="mx-imgBorder"]
-   > ![Azure kaydolma](_img/vs-azure/vs-azure-about-you.png)
+   > ![Azure kaydolma](_img/vs-azure/vs-azure-about-you.png "Azure aboneliğinize kişisel iletişim bilgilerinizi ekleyin.")
 
 4. Daha sonra, kimliğinizi basit bir doğrulama kodu kullanarak doğrulamanız gerekir. Telefon numaranızı girin ve kodu metin veya telefona göre almak isteyip istemediğinizi seçin.  Aldığınız kodu girin ve **kodu doğrula**' yı seçin.   
    > [!div class="mx-imgBorder"]
-   > ![Azure hazırlanıyor](_img/vs-azure/vs-azure-identity.png)
+   > ![Azure hazırlanıyor](_img/vs-azure/vs-azure-identity.png "Bir doğrulama kodu isteyin ve devam etmek için girin.")
 
 5. Son adım için, koşulları kabul etmek için onay kutusunu işaretleyin ve ardından **Kaydol**' u seçin.  İşte bu kadar!
    > [!div class="mx-imgBorder"]
-   > ![Azure hazırlanıyor](_img/vs-azure/vs-azure-agreement.png)
+   > ![Azure kaydolma](_img/vs-azure/vs-azure-agreement.png "Azure aboneliğinizin oluşturulmasını tamamladıktan sonra ' kaydolun ' düğmesine tıklayın.")
 
 0. Azure panosu hızlı başlangıç merkezi yüklenir.  
    > [!div class="mx-imgBorder"]
-   > ![Azure panosu](_img/vs-azure/vs-azure-quick-start.png) 
+   > ![Azure panosu](_img/vs-azure/vs-azure-quick-start.png "Azure aboneliğiniz oluşturulduktan sonra Azure portal yönlendirilirsiniz.") 
 
 0. Gelecekte kolay erişim için [Azure Portal](https://portal.azure.com) yer işareti ekleyin.
 

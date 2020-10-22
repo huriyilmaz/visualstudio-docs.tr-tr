@@ -7,12 +7,12 @@ ms.assetid: c15f7e18-b280-4902-a60d-2c2598653207
 ms.date: 07/29/2019
 ms.topic: conceptual
 description: Seçili Visual Studio aboneliklerine dahil edilen Azure Community destek avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 8c048103d3ecc2aa21f771e88fa8f9b75ad94b4c
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 000732d2c46d777c68451153dc5965d45087abce
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006247"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353219"
 ---
 # <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Azure Community destek forumu
 Azure Community aracılığıyla destek forumları seçme içindeki Azure ekibinden doğrudan yardım alın.  Azure Community avantajı, Azure ile ilgili konularda odaklanan bir forum koleksiyonuna erişmenizi sağlar.
@@ -41,7 +41,7 @@ Azure Community aracılığıyla destek forumları seçme içindeki Azure ekibin
     :::column:::
         - [Azure SQL Veritabanı](https://social.msdn.microsoft.com/Forums/home?forum=ssdsgetstarted&filter=alltypes&sort=lastpostdesc)  
         - [Azure Stack](https://social.msdn.microsoft.com/forums/home?forum=AzureStack&filter=alltypes&sort=lastpostdesc)  
-        - [Azure Storage](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuredata&filter=alltypes&sort=lastpostdesc)  
+        - [Azure Depolama](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuredata&filter=alltypes&sort=lastpostdesc)  
         - [Azure Sanal Makineler](https://social.msdn.microsoft.com/Forums/home?forum=WAVirtualMachinesforWindows&filter=alltypes&sort=lastpostdesc)  
         - [Azure Web siteleri](https://social.msdn.microsoft.com/Forums/home?forum=windowsazurewebsitespreview&filter=alltypes&sort=lastpostdesc)  
         - [Cloud Services (Web ve çalışan rolleri)](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuredevelopment&filter=alltypes&sort=lastpostdesc)  
@@ -55,15 +55,15 @@ Azure Community 'yi kullanmaya başlamak kolaydır.
 
 2. Destek bölümünde Azure Community kutucuğunu bulun ve **Yardım al** bağlantısına tıklayın.
     > [!div class="mx-imgBorder"]
-    >![Azure Community kutucuğu](_img/vs-azure-community/vs-azure-community-tile.png)
+    >![Azure Community kutucuğu](_img/vs-azure-community/vs-azure-community-tile.png "Başlamak için Azure Community kutucuğunda ' yardım al ' düğmesine tıklayın.")
 
 3. Kullanılabilir forumlardan oluşan bir liste görürsünüz.  Seçtiğiniz foruma tıklamanız yeterlidir.
     > [!div class="mx-imgBorder"]
-    > ![Azure Community forumları](_img/vs-azure-community/vs-azure-community-forums.png)
+    > ![Azure Community forumları](_img/vs-azure-community/vs-azure-community-forums.png "Azure Community desteği sayfasında, Forum seçiminizi seçin.")
 
 4. Forum dahilinde konuları ve yanıtları görüntüleyebilir, sorunuzun yanıtlarını arayabilir veya yeni bir soru gönderebilirsiniz.
     > [!div class="mx-imgBorder"]
-    > ![Azure Community örneği](_img/vs-azure-community/vs-azure-community-example.png)
+    > ![Azure Community örneği](_img/vs-azure-community/vs-azure-community-example.png "Forumda konuları görüntüleyebilir, yanıtları arayabilir veya yeni sorular gönderebilirsiniz.")
 
 ## <a name="eligibility"></a>Önceliği
 Azure Community avantajının kullanılabilirliği, aşağıda gösterildiği gibi abonelik düzeyinize bağlıdır:
@@ -76,7 +76,7 @@ Azure Community avantajının kullanılabilirliği, aşağıda gösterildiği gi
 |                          GitHub Enterprise ile Visual Studio Professional                          | VL, Azure, perakende |   Bir yıl    |    Yes     |
 |                              Visual Studio Test Professional (Standart)                               |    VL, perakende     |   Bir yıl    |    Yes     |
 |                                       MSDN Platformları (Standart)                                       |    VL, perakende     |   Bir yıl    |    Yes     |
-| Visual Studio Enterprise (aylık bulut), Visual Studio Professional (aylık bulut), NFR<sup>1</sup> |        Tümü        | Kullanılamaz |     Hayır     |
+| Visual Studio Enterprise (aylık bulut), Visual Studio Professional (aylık bulut), NFR<sup>1</sup> |        Tümü        | Kullanılamaz |     No     |
 
 <sup>1</sup>  *şunları Içerir: SATıLAMAZ (NFR), Microsoft FTE, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), Visual Studio sektör ortağı (VSIP), BizSpark, Imagine, Microsoft Sertifikalı TRAINER (MCT)*
 

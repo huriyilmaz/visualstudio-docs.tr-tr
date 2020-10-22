@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 5dc7f57e-883a-4cc1-a914-06245a8cb1ff
-ms.date: 04/15/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 description: Azure Kullandıkça Öde hesabınızı ayarlamayı öğrenin.
-ms.openlocfilehash: 111733fb6950e602528fac9ae5b39bba04870d01
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 4071b16c56e67bdd86ba95f2ff982758cd23e150
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005079"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353193"
 ---
 # <a name="azure-devtest-pay-as-you-go-subscriptions"></a>Azure DevTest Kullandıkça Öde abonelikleri
 Bulutta ekibinizle işbirliği yapın.  Birden çok geliştirme ve Test Kullandıkça Öde abonelikleri oluşturun, diğer abonelere işbirliği yaparak Ayrıca takımlar ve ortamlar arasında yalıtımı da sağlar.  Azure 'da abonelik yazılımınız için geliştirme/test ve bulut kullanım hakları için özel indirimli saatlik ücretler alırsınız.
@@ -20,7 +20,7 @@ Bulutta ekibinizle işbirliği yapın.  Birden çok geliştirme ve Test Kulland�
 ## <a name="set-up-a-subscription"></a>Abonelik ayarlama
 1. Azure Kullandıkça Öde abonelik avantajınızı kullanmak için ' de oturum açın [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) ve avantajı kutucuğunun altındaki **Etkinleştir** bağlantısına tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Azure PAYG kutucuğu](_img/vs-azure-payg/vs-azure-payg-tile.png)
+   > ![Azure PAYG kutucuğu](_img/vs-azure-payg/vs-azure-payg-tile.png "Başlamak için DevTest Kullandıkça Öde aboneliği kutucuğunda ' etkinleştir 'e tıklayın.")
 
 2. Abonelik avantajlarınızın bir parçası olarak bir Azure hesabını zaten etkinleştirdiyseniz (örneğin, bir kurumsal aboneliğiniz varsa ve $150 aylık Azure DevTest kredisi etkinleştirdiyseniz), 5. adıma atlayın.
 
@@ -39,7 +39,7 @@ Bulutta ekibinizle işbirliği yapın.  Birden çok geliştirme ve Test Kulland�
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 ### <a name="q--what-if-i-want-to-make-changes-to-this-subscription"></a>S: Bu abonelikte değişiklik yapmak istersem ne yapmalıyım?
 Y: Azure aboneliklerinizden herhangi birinde değişiklik yapmak Için:
-1. [Azure Portal](https://portal.azure.com) oturum açın.
+1. [Azure portalında](https://portal.azure.com) oturum açın.
 2. Sol bölmedeki listede **maliyet yönetimi + faturalandırma**' i seçin.
 3. **Aboneliklerim** kutusunda aboneliklerinizin bir listesini görürsünüz. İstediğiniz aboneliğe tıklayın.
 4. Artık aboneliği yönetme veya iptal etme, yeniden adlandırma, dizini değiştirme veya faturalandırma sahipliğini aktarma seçeneklerine sahip olacaksınız.

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: d2ab13ed-ef79-4ef0-8736-eccd04bc6020
-ms.date: 03/24/2020
+ms.date: 10/21/2020
 ms.topic: conceptual
 description: Müşterileriniz için Visual Studio bulut aboneliklerinin nasıl satın alınacağı ve yönetileceği ile ilgili bulut çözümü sağlayıcılarına yönelik bilgiler.
-ms.openlocfilehash: 9c263486259529e7eb4e19ea4cc3f8ad8520b039
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 632e407aa4455b7c2a87299cc8811bc996c8d5b6
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006234"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353271"
 ---
 # <a name="buy-and-manage-visual-studio-cloud-subscriptions-for-your-customers"></a>Müşterileriniz için Visual Studio bulut abonelikleri satın alın ve yönetin
 [Bulut çözümü sağlayıcısı (CSP)](https://partner.microsoft.com/cloud-solution-provider) programındaki iş ortakları, müşterileri için Visual Studio Enterprise ve Visual Studio Professional bulut abonelikleri satın alabilir.
@@ -22,7 +22,7 @@ ms.locfileid: "91006234"
 > [!NOTE]
 > Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) Visual Studio 'yu satın almaya yönelik farklı seçeneklere göz atın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 Önce müşteri kiracınızı Iş Ortağı Merkezi ' nde ayarlamanız ve bu kiracı için bir Azure aboneliği oluşturmanız gerekir.
 
 [Daha fazla bilgi edinin](/azure/devops/organizations/billing/csp/set-up-csp-customer)
@@ -47,7 +47,7 @@ Azure aboneliğine [sahip veya katılımcı erişimi](https://na01.safelinks.pro
 >[!NOTE]
 > Visual Studio aboneliklerini her bir CSP olarak satın alırken bu adımları izlemeniz gerekir. Şu anda, satın alma otomasyonu için bir API yoktur.
 
-Satın almayı onaylamadan önce, müşterinin son kullanıcılarına abonelik atamak için **Yönet** ' i seçebilirsiniz.  Ayrıca, **hizmet yönetimi**' ni seçerek abonelik yönetim portalına Iş ortağı merkezinden erişebilirsiniz.  Buradan aşağıdaki adımları veya videoları görürsünüz.
+Satın almayı onaylamadan önce, müşterinin son kullanıcılarına abonelik atamak için **Yönet** ' i seçebilirsiniz.  Ayrıca, **hizmet yönetimi**' ni seçerek abonelik Yöneticisi portalına Iş Ortağı Merkezi 'nden erişebilirsiniz.  Buradan aşağıdaki adımları veya videoları görürsünüz.
 
 ## <a name="how-to-manage-visual-studio-cloud-subscriptions-for-your-customer"></a>Müşteriniz için Visual Studio bulut aboneliklerini yönetme
 
@@ -69,7 +69,7 @@ CSP iş ortakları için Visual Studio fiyatlandırmasını görüntülemek içi
 
 Bu elektronik tabloda gördüklerinizi nasıl yorumlayacağınız aşağıda verilmiştir:
 
-| Ölçüm kategorisi    |   Ad                 |  Birimler                                |           Bu nedir?                          |
+| Ölçüm kategorisi    |   Name                 |  Birimler                                |           Bu nedir?                          |
 |-------------------|------------------------|---------------------------------------|-------------------------------------------------|
 | Visual Studio     | Kurumsal             |  Abonelik                         | Visual Studio Enterprise aylık abonelik   |
 | Visual Studio     | Professional           |  Abonelik                         | Visual Studio Professional aylık abonelik |

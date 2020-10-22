@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: dcd99e32-c9f3-4e19-8428-319dfa220463
-ms.date: 03/25/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 description: Visual Studio aboneliklerine dahil olan danışman sohbet avantajı hakkında bilgi edinin.
-ms.openlocfilehash: d7ed217e551057ff12ed4abecedf717c9f3f6ced
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 0aab627d7c870720c0cc0d043ffb6ce556568703
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006325"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353388"
 ---
 # <a name="concierge-chat-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Concierge Sohbeti
 Danışman sohbet hizmeti, ürün bilgilerinin ve teknik belgelerin yanı sıra Visual Studio abonelik avantajlarınızı kullanmayla ilgili yardım sağlar.
@@ -25,7 +25,7 @@ Danışman sohbet hizmeti aracılığıyla yardım almak çok kolaydır.
 
 2. Avantajlar sayfasındaki destek bölümünde danışman sohbet kutucuğunu bulun ve **Şimdi sohbet**' e tıklayın.
     > [!div class="mx-imgBorder"]
-    > ![Concierge sohbet kutucuğu](_img/vs-concierge-chat/vs-concierge-chat-tile.png)
+    > ![Concierge sohbet kutucuğu](_img/vs-concierge-chat/vs-concierge-chat-tile.png "Yeni bir sohbet oturumu başlatmak için ' Şimdi sohbet ' seçeneğine tıklayın.")
 
 3. **Devam**’a tıklayın.
 
@@ -33,7 +33,7 @@ Danışman sohbet hizmeti aracılığıyla yardım almak çok kolaydır.
 
 5. Bir aracı kullanılabilir olduğunda sohbet başlatılır.
     > [!div class="mx-imgBorder"]
-    > ![Concierge sohbet oturumu](_img/vs-concierge-chat/vs-concierge-chat-session.png)
+    > ![Concierge sohbet oturumu](_img/vs-concierge-chat/vs-concierge-chat-session.png "Sohbet oturumu penceresi, bir aracı oturuma katıldığında görüntülenir.")
 
 ## <a name="eligibility"></a>Önceliği
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |

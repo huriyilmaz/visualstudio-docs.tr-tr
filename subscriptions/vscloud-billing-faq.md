@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 21e0471d-ad59-4d21-9c6f-13f7147569af
-ms.date: 09/08/2020
+ms.date: 10/21/2020
 ms.topic: conceptual
 description: Bulut abonelikleri için faturalandırma soruları.
-ms.openlocfilehash: ae99e6e843636efc6d81a0c4feebfd3e306f6319
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 0140a6250f2c04ad33fec962283e035393a03aae
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006010"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353427"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Visual Studio Cloud abonelikleri faturalama hakkında SSS
 Bulut ve standart Visual Studio abonelikleri arasındaki karşılaştırmalar, abone avantajları hakkındaki ayrıntılar ve daha fazlası ile her bir Visual Studio aboneliğinin avantajlarını anlamak için [bulut aboneliği avantajlarını ve fiyatlandırmasını karşılaştırdığınızdan](https://visualstudio.microsoft.com/vs/pricing/) emin olun.
@@ -92,7 +92,7 @@ Y: Evet. Yeni sürümler yayınlanma sırasında onları indirebilir ve çalış
 Y: Evet, satıcınız bulut çözümü sağlayıcısı (CSP) programına katılıyorsa, bunu yapabilirsiniz. Yalnızca sorun.
 
 ## <a name="related-resources"></a>İlgili kaynaklar
-- [Visual Studio abonelikleri yönetim portalı](https://manage.visualstudio.com/)
+- [Visual Studio abonelikleri Yönetici portalı](https://manage.visualstudio.com/)
 - [Visual Studio abonelik desteği](https://visualstudio.microsoft.com/vs/support/)
 - [CSP 'Ler için Visual Studio bulut aboneliği satın alma](vscloud-csp.md)
 

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
-ms.date: 03/24/2020
+ms.date: 10/21/2020
 ms.topic: overview
 description: Uzun vadeli bir sözleşme olmadan bir ayda ayda veya yıllık esasına göre Visual Studio Professional veya Visual Studio Enterprise.
-ms.openlocfilehash: d92d11321529e7ab8053ea657b2b5f4688c55aa0
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 29dd6be56441fd833c56eaea89286bb3d418ec78
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005322"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353453"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Visual Studio Professional ve Visual Studio Enterprise bulut abonelikleri satın alın
 [Visual Studio Market](https://marketplace.visualstudio.com) [Visual Studio Professional ve Visual Studio Enterprise abonelikleri](https://visualstudio.microsoft.com/subscriptions/) satın alabilirsiniz. Bunlar **"bulut abonelikleri"** olarak adlandırılır.
@@ -36,7 +36,7 @@ Bulut abonelikleri satın almak üzere EA aboneliğiniz için oluşturulmuş bir
 
 3. Faturalandırma için kullanılacak Azure aboneliğini seçin. Bir tane yoksa yeni bir Azure aboneliği oluşturabilirsiniz.
     > [!div class="mx-imgBorder"]
-    > ![Faturalandırma için Azure aboneliğini seçin](_img/buy-vs-subscriptions/buy-vs-sub-Azure-sub.png)
+    > ![Faturalandırma için Azure aboneliğini seçin](_img/buy-vs-subscriptions/buy-vs-sub-Azure-sub.png "Aboneliklerinizi satın almak için kullanılacak Azure aboneliğini seçin.")
 
 4. Satın alacağınız aboneliklerin sayısını seçin.
     > [!div class="mx-imgBorder"]
@@ -47,18 +47,21 @@ Bulut abonelikleri satın almak üzere EA aboneliğiniz için oluşturulmuş bir
 5. Satın alımlarınızı onaylayın ve sona erdirin. Kendinize bir abonelik atadıysanız, yazılım indirmeye başlamak ve diğer abone avantajlarından yararlanmak için [Visual Studio abone portalını](https://my.visualstudio.com) ziyaret edebilirsiniz.
 
 > [!div class="mx-imgBorder"]
-> ![Satın alma başarıyla tamamlandı](_img/buy-vs-subscriptions/buy-vs-sub-success.png)
+> ![Satın alma başarıyla tamamlandı](_img/buy-vs-subscriptions/buy-vs-sub-success.png "Başarılı bir satın alma işleminin onayını alacaksınız.")
+
+0. Abone Portalını açmak ve aboneliğinizi kullanmaya başlamak için **aboneliğimi görüntüle** ' ye tıklayın.
 
 > [!div class="mx-imgBorder"]
-> ![Visual Studio abone portalına gidin](_img/buy-vs-subscriptions/view-subscription-benefits-subscriptions-portal.png)
+> ![Visual Studio abone portalına gidin](_img/buy-vs-subscriptions/view-subscription-benefits-subscriptions-portal.png "Visual Studio abonelikleri portalında, aboneliğinizi keşfedebilir ve kullanılabilir avantajları kullanabilirsiniz.")
 
-Birden fazla abonelik satın aldıysanız, başkalarına abonelik atamak için [Visual Studio abonelikleri yönetim portalı](https://manage.visualstudio.com) ' na geçin.  İlk satın aldıysanız, [Yeni aboneliklerinizi](add-monthly-subs.md) yönetim portalına eklemeniz gerekebilir.
-
-> [!div class="mx-imgBorder"]
-> ![Başkalarına abonelik atama](_img/buy-vs-subscriptions/buy-vs-sub-success-many.png)
+Birden fazla abonelik satın aldıysanız, diğer kullanıcılara abonelik atamak için [Visual Studio abonelikleri yönetim portalı](https://manage.visualstudio.com) ' na geçin.  İlk kez satın aldıysanız, [Yeni aboneliklerinizi](add-monthly-subs.md) yönetici portalına eklemeniz gerekebilir.
 
 > [!div class="mx-imgBorder"]
-> ![Abonelikleri görüntüle](_img/buy-vs-subscriptions/assign-subscriptions.png)
+> ![Başkalarına abonelik atama](_img/buy-vs-subscriptions/buy-vs-sub-success-many.png "Kullanıcılarınıza abonelik sağlamak için ' kullanıcılara ata ' seçeneğine tıklayın.")
+
+
+> [!div class="mx-imgBorder"]
+> ![Abonelikleri görüntüle](_img/buy-vs-subscriptions/assign-subscriptions.png "Kullanıcılara abonelik atamak için ' Ekle ' seçeneğine tıklayın")
 
 ## <a name="cancel-renewals-of-cloud-subscriptions-youve-purchased"></a><a name="manage-subscriptions"></a>Satın aldığınız bulut aboneliklerinin yenileme işlemini iptal edin
 
@@ -121,7 +124,7 @@ Y: yöneticiniz [https://manage.visualstudio.com](https://manage.visualstudio.co
 Y: başka bir bulut yıllık aboneliği satın alaamayacak olsa da, Visual Studio abonelikleri satın almak için birçok seçenek vardır.  Daha fazla bilgi edinin [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) .
 
 ## <a name="related-resources"></a>İlgili kaynaklar
-- [Visual Studio abonelikleri yönetim portalı](https://manage.visualstudio.com/)
+- [Visual Studio abonelikleri Yönetici portalı](https://manage.visualstudio.com/)
 - [Visual Studio abonelik desteği](https://visualstudio.microsoft.com/vs/support/)
 - [Visual Studio bulut aboneliği faturalandırma hakkında SSS](vscloud-billing-faq.md)
 - [CSP 'Ler için Visual Studio bulut aboneliği satın alma](vscloud-csp.md)
