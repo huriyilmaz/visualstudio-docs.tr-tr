@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: derlenecek dosyaları seçme | Microsoft Docs'
+description: Her dosyayı ayrı olarak veya joker karakterleri kullanarak, MSBuild proje dosyasında oluşturulacak dosyaları seçme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0566078c7f90faf204c35024e2c308b5ef881c01
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4593fff50feb0176ea81f70dc297bc39d8dd1936
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633817"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436199"
 ---
 # <a name="how-to-select-the-files-to-build"></a>Nasıl yapılır: derlenecek dosyaları seçme
 
@@ -105,7 +107,7 @@ Bir proje dosyasında, bir derleme girişi olarak tüm öğe listesini belirtmek
 >
 > `<CSC Sources="*.cs">...</CSC>`
 
-## <a name="example"></a>Örnek
+## <a name="example-1"></a>Örnek 1
 
 Aşağıdaki kod örneğinde, tüm giriş dosyalarını ayrı ayrı içeren bir proje gösterilmektedir.
 
@@ -140,7 +142,7 @@ Aşağıdaki kod örneğinde, tüm giriş dosyalarını ayrı ayrı içeren bir 
 </Project>
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-2"></a>Örnek 2
 
 Aşağıdaki kod örneği, tüm *. cs* dosyalarını dahil etmek için bir joker karakter kullanır.
 

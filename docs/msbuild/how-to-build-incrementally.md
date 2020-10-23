@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: artımlı olarak derleme | Microsoft Docs'
+description: Artımlı olarak oluşturmak için MSBuild 'i kullanarak daha önce, hala güncel olan daha önce oluşturulmuş bileşenler yeniden oluşturulmazlar.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e4911bb131f5c5c878b82865b3dee61fd7bedbe1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9b7d54db50b4f28277a81d149b4c0c5140b002b0
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634168"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436001"
 ---
 # <a name="how-to-build-incrementally"></a>Nasıl yapılır: Artımlı derleme
 

@@ -1,5 +1,6 @@
 ---
 title: Proje dosyasının adına veya konumuna başvurma
+description: Kendi özelliklerinizi oluşturmak zorunda kalmadan, proje dosya adına veya konumuna başvurmak için MSBuild ayrılmış özelliklerini nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 29960de09b512a419a56a61f493702485c287475
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: ccc356e1859f447db1ac18a437b8fc2317925b0f
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036463"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436345"
 ---
 # <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>Nasıl yapılır: proje dosyasının adına veya konumuna başvurma
 
@@ -49,7 +50,7 @@ Projenin adını veya konumunu, kendi özelliğini oluşturmak zorunda kalmadan 
 > [!NOTE]
 > Ayrılmış Özellikler proje dosyasında yeniden tanımlanamaz.
 
-## <a name="example"></a>Örnek
+## <a name="example-1"></a>Örnek 1
 
  Aşağıdaki örnek proje dosyası, çıkış için adı belirtmek üzere bir ayrılmış özellik olarak proje adına başvurur.
 
@@ -78,7 +79,7 @@ Projenin adını veya konumunu, kendi özelliğini oluşturmak zorunda kalmadan 
 </Project>
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-2"></a>Örnek 2
 
  Aşağıdaki örnek proje dosyası, `MSBuildProjectDirectory` Proje dosyası konumundaki bir dosyanın tam yolunu oluşturmak için ayrılmış özelliği kullanır.
 

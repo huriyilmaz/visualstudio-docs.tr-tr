@@ -2,17 +2,17 @@
 title: Visual Studio aboneliklerinde Windows Geliştirici hesabı avantajı | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
-ms.date: 04/20/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil olan Windows Geliştirici hesabı hakkında bilgi edinin.
-ms.openlocfilehash: 2686034d95c8faf8caed25b6b2fb4cb7ad83d8fe
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 46cb22becd8a5ac852c7fddbd2cf8b473cef47bc
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005388"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92435820"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Windows Geliştirici hesabı
 Seçili Visual Studio aboneliğine dahil olan Windows geliştirici hesabınız, Windows Mağazası 'na ücretsiz ve ücretli Windows uygulamaları göndermenize olanak tanır.
@@ -25,10 +25,10 @@ Bu işlem için bir "özel" tarayıcı penceresi oluşturmanızı öneririz.  Ö
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
 2. Araçlar bölümünde Windows Geliştirici hesabı kutucuğunu bulun ve avantaj kutucuğunun altındaki **kodu al** bağlantısına tıklayın.  Kodu panonuza kopyalayın ve ardından **Etkinleştir**' e tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Windows Geliştirici avantajı kutucuğu](_img/vs-windows-dev/vs-windows-dev-tile.png)
+   > ![Windows Geliştirici avantajı kutucuğu](_img/vs-windows-dev/vs-windows-dev-tile.png "Windows Geliştirici hesabı kutucuğunda ' kodu al ' düğmesine tıklayın ve ardından ' etkinleştir 'e tıklayın.")
 3. [https://developer.microsoft.com/store/register/](https://developer.microsoft.com/store/register/)Sitesinde kayıt işlemini başlatabilirsiniz.  Devam etmek için **Kaydol** ' a tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Windows Geliştirici avantajı kaydı](_img/vs-windows-dev/vs-windows-dev-register1-cropped.png)
+   > ![Windows Geliştirici avantajı kaydı](_img/vs-windows-dev/vs-windows-dev-register1-cropped.png "Hesabınızı oluşturmak için ' kaydolun ' seçeneğine tıklayın.")
 4. Aboneliğinizde oturum açın.  Birden çok hesabınız varsa, kurumsal aboneliğinizle ilişkili olanı seçin.
 0. E-posta adresinizi girin, tercih ettiğiniz dili seçin ve **Kaydet**' e tıklayın.
 5. Sonraki sayfada, yaşadığınız ülke veya bölgeyi seçin ve ardından **İleri**' ye tıklayın.

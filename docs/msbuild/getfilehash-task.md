@@ -1,5 +1,7 @@
 ---
 title: GetFileHash görevi | Microsoft Docs
+description: Bir dosya veya dosya kümesinin içeriklerinin sağlama toplamlarını hesaplamak için MSBuild GetFileHash görevini kullanmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 01/28/2019
 ms.topic: reference
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a8f3de9a4f2fe848e1cbd41e14e82498845ca2cf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5e9e6e30cf8a224bfdfbde2c728545092bd1494b
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77578655"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436852"
 ---
 # <a name="getfilehash-task"></a>GetFileHash görevi
 

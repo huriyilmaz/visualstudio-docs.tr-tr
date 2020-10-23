@@ -1,5 +1,7 @@
 ---
 title: Filesınıflandırıcı görevi | Microsoft Docs
+description: Bir derlemeye eklenecek kaynak kaynakları kümesini sınıflandırmak için MSBuild Filesınıflandırıcı görevini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 46ed1b1f94cd2ef23ff0704912cb2a2194ba7dab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f4a57d60c6e1dae0c42e30dce856a147fda0226
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634194"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436900"
 ---
 # <a name="fileclassifier-task"></a>FileClassifier görevi
 
@@ -47,7 +49,7 @@ ms.locfileid: "77634194"
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, tek bir kaynak dosyayı kaynak olarak sınıflandırır ve ardından Fransızca-Kanada (fr-CA) kültürü için bir uydu derlemesine katıştırır.
+Aşağıdaki örnek, tek bir kaynak dosyayı kaynak olarak sınıflandırır ve sonra French-Canadian (fr-CA) kültürü için bir uydu derlemesine katıştırır.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

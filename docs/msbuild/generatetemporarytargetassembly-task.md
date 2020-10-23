@@ -1,5 +1,7 @@
 ---
 title: GenerateTemporaryTargetAssembly Görevi | Microsoft Docs
+description: Bir proje yerel olarak tanımlanan bir türe başvuruyorsa bir derleme oluşturmak için MSBuild GenerateTemporaryTargetAssembly görevini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 69333b87720513244e90c131f052d11099b62e35
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0a100ad8a3be57288e49a858d6f87851269df303
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634051"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436762"
 ---
 # <a name="generatetemporarytargetassembly-task"></a>GenerateTemporaryTargetAssembly görevi
 

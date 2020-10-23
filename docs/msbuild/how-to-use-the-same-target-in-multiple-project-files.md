@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: birden çok proje dosyasında aynı hedefi kullanma | Microsoft Docs'
+description: Bir MSBuild proje dosyasında bir hedefin nasıl kaydedileceğini ve hedefin kullanması gereken başka bir projeye nasıl içeri aktarılacağını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bc8f3c95c687244162cb3bd977ca40031cd8f39
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d81328ecf17117500a5f686a45f934e451bb5809
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "82255579"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436054"
 ---
 # <a name="how-to-use-the-same-target-in-multiple-project-files"></a>Nasıl yapılır: birden çok proje dosyasında aynı hedefi kullanma
 
@@ -83,7 +85,7 @@ Birkaç MSBuild proje dosyası oluşturduysanız, farklı proje dosyalarında ay
 
 3. Proje dosyasında, içeri aktarılan projedeki özelliklerin ve öğelerin varsayılan tanımlarını geçersiz kılması gereken tüm özellikleri ve öğeleri tanımlayın.
 
-## <a name="example"></a>Örnek
+## <a name="example-1"></a>Örnek 1
 
  Aşağıdaki kod örneği, ikinci kod örneği içe aktardığı *MyCommon. targets* dosyasını gösterir. *. Targets* dosyası, derlemeyi yapılandırmak için içeri aktarma projesinden özellikleri değerlendirir.
 
@@ -102,7 +104,7 @@ Birkaç MSBuild proje dosyası oluşturduysanız, farklı proje dosyalarında ay
 </Project>
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-2"></a>Örnek 2
 
  Aşağıdaki kod örneği *MyCommon. targets* dosyasını içeri aktarır.
 

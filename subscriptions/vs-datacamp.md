@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: fc33d419-78cf-485e-b558-5b7efa900f14
-ms.date: 04/17/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 description: Seçili Visual Studio abonelikleriyle birlikte bulunan veri Camp eğitim aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: 67fa9a68a22ee909c4c483246be7dc26c789c5f0
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 54f2cf98d6e726e8abf8a0a863a54cc891c12523
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006338"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92435883"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde DataCamp eğitimi avantajı
 Uygun Visual Studio abonelikleri, DataCamp abonelikleri içerir.  DataCamp ile, tarayıcınızın rahatlığıyla ihtiyacınız olan tüm veri bilimi yeteneklerini öğrenebilirsiniz. Ne zaman ve ne zaman öğreneceğinizi seçebilirsiniz. Yüklenecek yazılım olmadan ve özel donanım gereksinimleri olmadan öğrenme veri bilimi her zamankinden daha kolay.
@@ -22,7 +22,7 @@ Uygun Visual Studio abonelikleri, DataCamp abonelikleri içerir.  DataCamp ile, 
 
 2. "Profesyonel geliştirme" kategorisinde DataCamp avantajı kutucuğunu bulun ve **Etkinleştir**' e tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![DataCamp avantajı kutucuğu](_img/vs-datacamp/vs-datacamp-tile-2.png)
+   > ![DataCamp avantajı kutucuğu](_img/vs-datacamp/vs-datacamp-tile-2.png "Başlamak için ' etkinleştir 'e tıklayın.")
 
 3. Veri Camp sayfasında yeni bir hesap oluşturabilirsiniz.  Bir e-posta adresi ve parola girmeyi veya Facebook, LinkedIn veya Google 'daki mevcut hesapları kullanarak oturum açmayı seçebilirsiniz.  Oturum açma bilgilerinizi girdikten **sonra başlayın ' a tıklayın.**
 
@@ -36,25 +36,25 @@ Uygun Visual Studio abonelikleri, DataCamp abonelikleri içerir.  DataCamp ile, 
 
    Başlamak için seçtiğiniz yola tıklamanız yeterlidir.
    > [!div class="mx-imgBorder"]
-   > ![DataCamp seçim yolu](_img/vs-datacamp/vs-datacamp-choose-path.png)
+   > ![DataCamp seçim yolu](_img/vs-datacamp/vs-datacamp-choose-path.png "İlgilendiğiniz bir öğrenme yolu seçin.")
 
 5. Yolunuzu seçtikten sonra, bir hedef seçerek öğrenme yolunuzu daha da iyileştirebilirsiniz.  Örneğin, "Data Science Beceri geliştirin" yolunu seçerseniz, aşağıdaki seçenekleri görürsünüz. Bir seçenek belirleyin veya eminim ' e tıklayın **.  ** Daha geniş bir yol oluşturmak için tüm kariyer yollarını göster.
    > [!div class="mx-imgBorder"]
-   > ![DataCamp veri bilimi beceri](_img/vs-datacamp/vs-datacamp-datascience.png)
+   > ![DataCamp veri bilimi beceri](_img/vs-datacamp/vs-datacamp-datascience.png ""Eminim" seçeneğine tıklayın.  Tüm kariyer yollarını göster ' i tüm listeyi görüntüleyecek şekilde görüntüleyin.")
 
 6. Seçtiğiniz yola ve seçeneklere bağlı olarak, kariyer Izlemelerinin bir seçimini görürsünüz.  Seçtiğiniz izleme için **Kaydet** düğmesine tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![DataCamp kariyer Izi](_img/vs-datacamp/vs-datacamp-all-tracks.png)
+   > ![DataCamp kariyer Izi](_img/vs-datacamp/vs-datacamp-all-tracks.png "Başlamak için seçtiğiniz yolda bulunan ' Kaydet ' düğmesine tıklayın.")
 
 7. İzlemenize kaydolduktan sonra, bu izlemenin ilk kursu açılır.  Gezinti ve kurs alıştırmaları hakkında kursla nasıl etkileşim kuracağınızı açıklayan bir öğretici görürsünüz.
 
    > [!div class="mx-imgBorder"]
-   > ![DataCamp Başlarken](_img/vs-datacamp/vs-datacamp-getting-started.png)
+   > ![DataCamp Başlarken](_img/vs-datacamp/vs-datacamp-getting-started.png "Kursların nasıl gezeceğinizi öğrenmek için öğreticiyi izleyin.")
 
 Herhangi bir noktada durabilir ve bir sonraki oturumunuzda öğreticinizi sürdürebilirsiniz.  Yalnızca ziyaret edin [https://www.datacamp.com](https://www.datacamp.com) ve oturum açın.  Panonuzu görürsünüz ve duraklattığınız yerden eğitim sağlayabilirsiniz. **Izlemeye devam et**' e tıklamanız yeterlidir.
 
 > [!div class="mx-imgBorder"]
-> ![DataCamp devam eğitimi](_img/vs-datacamp/vs-datacamp-continue-training.png)
+> ![DataCamp devam eğitimi](_img/vs-datacamp/vs-datacamp-continue-training.png "Eğitimi dilediğiniz zaman sürdürmek için ' Izlemeye devam et ' seçeneğine tıklayın.")
 
 ## <a name="eligibility"></a>Önceliği
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |

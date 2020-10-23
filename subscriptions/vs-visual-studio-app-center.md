@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: badd1d4a-90a6-46de-a037-945a91e6019b
-ms.date: 04/20/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 description: Visual Studio aboneliklerine dahil Visual Studio App Center avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 69d010afddca1f8fc51f77d806c75dc1b7b34256
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 6b1fc94d596f3b771f8354c0857ef533c00e1449
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005733"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92435731"
 ---
 # <a name="visual-studio-app-center-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Visual Studio App Center
 
@@ -28,15 +28,15 @@ Visual Studio App Center kullanmaya başlamak kolaydır.
 
 2. Visual Studio App Center kutucuğunu bulun ve **Başlarken**' e tıklayın.
     > [!div class="mx-imgBorder"]
-    > ![VS App Center kutucuğu](_img/vs-app-center/vs-app-center-tile.png)
+    > ![VS App Center kutucuğu](_img/vs-app-center/vs-app-center-tile.png "Visual Studio App Center kutucuğunda ' kullanmaya başlayın ' seçeneğine tıklayın.")
 
 3. Sonra bir hesap oluşturun.  Oturum açmak için Microsoft, Google, GitHub veya Facebook için mevcut hesapları kullanabilir veya Kullanıcı adınızı, e-postanızı ve parolanızı belirterek yeni bir hesap oluşturabilirsiniz.  Devam etmek için **Hesap oluştur** ' a tıklayın.
     > [!div class="mx-imgBorder"]
-    > ![VS App Center hesap oluşturma](_img/vs-app-center/vs-app-center-create-account.png)
+    > ![VS App Center hesap oluşturma](_img/vs-app-center/vs-app-center-create-account.png "Nasıl oturum açmak istediğinizi seçin.")
 
 4. İşte bu kadar kolay.  Başlamak için **yeni kuruluş Ekle** ' ye veya **Yeni uygulama ekle** ' ye tıklamanız yeterlidir!
     > [!div class="mx-imgBorder"]
-    > ![VS App Center portalı](_img/vs-app-center/vs-app-center-portal.png)
+    > ![VS App Center portalı](_img/vs-app-center/vs-app-center-portal.png "Başlamaya hazırsınız.  Başlamak için ' yeni kuruluş Ekle ' veya ' yeni uygulama Ekle ' seçeneğine tıklayın.")
 
 ## <a name="eligibility"></a>Önceliği
 

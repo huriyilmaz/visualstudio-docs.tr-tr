@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 383fc910-3f4c-474a-a3f8-0f13525f05e9
-ms.date: 03/26/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerine dahil Power BI Pro aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: 82325c090087aea81f43472ebb41a385af51c19d
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: efc7aca0c5729a65a7f622721dbf25931eb89fb8
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005032"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92435780"
 ---
 # <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Power BI Pro
 
@@ -27,33 +27,33 @@ Power BI Pro kullanmak için, bir hesap ayarlamanız veya mevcut bir hesabı kul
 
 2. Avantajlar sayfasındaki Araçlar bölümünde Power BI Pro kutucuğunu bulun. Avantaj kutucuğunun altındaki **kodu al** bağlantısına tıklayın.   Kodun başarıyla alındığını belirten bir bildirim alırsınız.  **Etkinleştir**' e tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Power BI Pro avantajı kutucuğu](_img/vs-pbi/vs-pbi-tile.png)
+   > ![Power BI Pro avantajı kutucuğu](_img/vs-pbi/vs-pbi-tile.png "Power BI Pro kutucuğunda, başlamak için ' kodu al ' ve sonra ' etkinleştir ' seçeneğine tıklayın.")
 
 3. Microsoft 365 Geliştirici aboneliği veya Enterprise Mobility + Security gibi bazı abonelik avantajlarını etkinleştirdiyseniz zaten bir hesabınız olabilir.  Mevcut bir hesap bulunursa, mevcut hesabınıza Power BI Pro aboneliğinizi ekleme veya yeni bir hesap için kaydolma seçeneğiniz vardır.  Farklı avantajlarınıza tek bir Kullanıcı KIMLIĞIYLE erişebilmek için, bunu mevcut hesabınıza eklemeniz önemle tavsiye ederiz.
    > [!div class="mx-imgBorder"]
-   > ![Power BI Pro mevcut hesap avantajı](_img/vs-pbi/vs-pbi-existing-account.png)
+   > ![Power BI Pro mevcut hesap avantajı](_img/vs-pbi/vs-pbi-existing-account.png "Varsa, var olan hesabınıza Power BI Pro ekleyin.")
 
 4. Yeni bir hesap oluşturmak için, iletişim bilgilerinizi girip **İleri**' ye tıklayın.
 
 5. Sonra, Kullanıcı KIMLIĞINIZI ve parolanızı oluşturun.  Zaten bir hesabınız varsa ve yeni bir hesap oluşturuyorsanız, mevcut hesapta kullanılandan farklı bir şirket adı sağlamanız gerekir.  **Hesabımı oluştur**' a tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Power BI Pro avantajı Kullanıcı kimliği oluşturma](_img/vs-pbi/vs-pbi-create-user-id-cropped.png)
+   > ![Power BI Pro avantajı Kullanıcı kimliği oluşturma](_img/vs-pbi/vs-pbi-create-user-id-cropped.png "Yeni hesaplar için bir kullanıcı KIMLIĞI ve parola girin.")
 
 6. Gerçek bir kişinin hesap oluşturduğundan emin olmak için sizden bir onay kodu girmenizi isteyeceğiz.  Lütfen bir telefon numarası girin ve bir telefon araması veya kısa mesaj yoluyla kodunuzu alıp almamanız seçin.  **Bana metin** olarak tıklayın veya **beni çağırın**.
    > [!div class="mx-imgBorder"]
-   > ![Robot değil Power BI Pro avantajı](_img/vs-pbi/vs-pbi-robot1-cropped.png)
+   > ![Robot değil Power BI Pro avantajı](_img/vs-pbi/vs-pbi-robot1-cropped.png "Onay kodunuzu almak için ' metin Me ' veya ' beni çağır ' seçeneğini belirleyin.")
 
 7. Aldığınız kodu girin ve **İleri**' ye tıklayın.
 
 8. İletişim bilgilerinizi girip **İleri**' ye tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Power BI Pro avantajı Iletişim bilgileri](_img/vs-pbi/vs-pbi-contact-cropped.png)
+   > ![Power BI Pro avantajı Iletişim bilgileri](_img/vs-pbi/vs-pbi-contact-cropped.png "Hesabınız için iletişim bilgilerinizi sağlayın.")
 
 9. Sonraki sayfada, Power BI Pro Geliştirici (MSDN) aboneliğinizin $0,00 fiyatı olduğunu doğrulayacaksınız.  **İleri**’ye tıklayın.
 
 10. Son olarak, bazı ödeme bilgilerini toplayacağız.  Endişelenmeyin, hiçbir şey ücretlendirilmezsiniz.  Fiyatın hala $0,00 olduğuna dikkat edin.  Bir kredi kartı, banka hesabı veya fatura bir ödeme formu olarak seçebilirsiniz.  **Fatura**' yı seçerseniz, bu ödeme yöntemini neden tercih edemediğiniz hakkında bazı geri bildirimler istenebilir.  Lütfen tercih ettiğiniz ödeme yönteminiz için istenen bilgileri sağlayın ve **siparişi yerleştir**' e tıklayın.
     > [!div class="mx-imgBorder"]
-    > ![Power BI Pro avantajı Iletişim bilgileri](_img/vs-pbi/vs-pbi-payment-blurred-cropped.png)
+    > ![Power BI Pro avantajı Paymant bilgileri](_img/vs-pbi/vs-pbi-payment-blurred-cropped.png "Ödeme yönteminizi seçin.  Bu teklif için ücretlendirilmeyecek olduğunu unutmayın.")
 
 11. Sonraki sayfa, Power BI Pro kullanmaya başlamak için ayarlandığınızı onaylar.  Bu sayfa, oturum açma sayfasına bir bağlantı sağlar.  Bağlantı, oturum açma sayfasının yanı sıra Kullanıcı KIMLIĞINIZ için de kaydedilmesini öneririz.  (Ayrıca, hesabı ayarlarken verdiğiniz adreste bir hoş geldiniz e-postası da alacaksınız.)  Sorularınız varsa kullanabileceğiniz otomatik bir Microsoft 365 Yardımcısı penceresi de görebilirsiniz.  Devam etmeye **başlayın ' a** tıklayın.
 

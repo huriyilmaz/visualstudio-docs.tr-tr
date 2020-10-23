@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
-ms.date: 10/06/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerine dahil olan LinkedIn Premium aboneliğinin bir parçası olarak dahil olan LinkedIn öğrenme avantajı hakkında bilgi edinin.
-ms.openlocfilehash: f71510b7d77ce79c1697848d505623c8994d8301
-ms.sourcegitcommit: a9fcf189aebe16234919421f2ad73e395e1ab8be
+ms.openlocfilehash: 7a5e15ad5d1101123a03b98da30d48895410313b
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805896"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92435845"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde LinkedIn öğrenme avantajı
 
@@ -27,7 +27,7 @@ LinkedIn Premium aboneliğinizi ve LinkedIn öğrenme avantajını etkinleştirm
 
 2. Eğitim kategorisinde LinkedIn öğrenme kutucuğunu bulun ve **kodu al** bağlantısına tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![LinkedIn öğrenme avantajı kutucuğu](_img/vs-linkedin/vs-linkedin-6-month-tile.png)
+   > ![LinkedIn öğrenme avantajı kutucuğu](_img/vs-linkedin/vs-linkedin-6-month-tile.png "Kodunuzu talep etmek ve başlamak için ' kodu al ' seçeneğine tıklayın.")
 
 3. Zaten bir LinkedIn hesabınız varsa ve otomatik olarak oturum açtıysanız, LinkedIn öğrenme avantajı etkinleştirme sayfasına hemen yönlendirilirsiniz.  LinkedIn hesabınız varsa ancak otomatik olarak oturum açmadıysanız, Kullanıcı adınızı ve parolanızı girip **oturum aç**' a tıklayın.  Teklifinizi etkinleştirmek için lütfen [Bu adıma](#activate-your-offer) atlayın.
 
@@ -57,15 +57,15 @@ LinkedIn Premium aboneliğinizi ve LinkedIn öğrenme avantajını etkinleştirm
 ### <a name="activate-your-offer"></a>Teklifinizi etkinleştirin
 15. LinkedIn hesabınızda oturum açmış olduğunuza veya yeni bir tane oluşturduğumıza göre, Premium aboneliğinizi etkinleştirmeye ve LinkedIn öğrenimini denemeye başlamaya hazırsınız.  **Teklifinizi etkinleştir**' e tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![LinkedIn öğrenme etkinleştirme](_img/vs-linkedin/vs-linkedin-Activate1.png)
+   > ![LinkedIn öğrenme etkinleştirme](_img/vs-linkedin/vs-linkedin-Activate1.png "Öğrenmeye başlamak için ' teklifinizi etkinleştirin ' seçeneğine tıklayın.")
 
 16. İlginizi çeken becerileri keşfetmeye başlayabilirsiniz.  Öneriler listesinden seçim yapın, diğer becerileri arayın veya yetenekler ' i seçmeden devam etmek için **Atla** ' yı tıklatın.
    > [!div class="mx-imgBorder"]
-   > ![LinkedIn öğrenme becerileri](_img/vs-linkedin/vs-linkedin-skills.png)
+   > ![LinkedIn öğrenme becerileri](_img/vs-linkedin/vs-linkedin-skills.png "Araştırmak istediğiniz becerileri seçin.")
 
 17. Premium abonelik teklifinizi başarıyla etkinleştirdiniz ve artık LinkedIn Learning 'i kullanmaya başlayabilir ve Premium 'un diğer avantajlarından yararlanabilirsiniz!
    > [!div class="mx-imgBorder"]
-   > ![LinkedIn öğrenme ana sayfası](_img/vs-linkedin/vs-linkedin-learning-home.png)
+   > ![LinkedIn öğrenme ana sayfası](_img/vs-linkedin/vs-linkedin-learning-home.png "LinkedIn 'e yönelik öğrenme ile LinkedIn Premium 'a hoş geldiniz!")
 
 ## <a name="eligibility"></a>Önceliği
 

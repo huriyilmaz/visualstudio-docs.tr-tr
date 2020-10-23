@@ -1,6 +1,7 @@
 ---
 title: Yapı işlemini uzat
-ms.custom: seodec18
+description: Projenizin yapısını denetlemek ve özelleştirmek için yapı sürecini değiştirmek için çeşitli yollar edinin.
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac3bebc0a64f814e71e7b5ab30282a70fd7eb85e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 07f0312892d9f4f4073cf6fb2c9537ffa52a6267
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88041044"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436362"
 ---
 # <a name="how-to-extend-the-visual-studio-build-process"></a>Nasıl yapılır: Visual Studio derleme işlemini genişletme
 
@@ -58,7 +59,7 @@ Ortak hedefler, yapı işlemindeki ana hedeflerden önce ve sonra çağrılan bi
 
 Aşağıdaki tabloda, güvenle geçersiz kılabileceğiniz ortak hedeflerin tüm hedefleri gösterilmektedir.
 
-|Hedef adı|Açıklama|
+|Hedef adı|Description|
 |-----------------|-----------------|
 |`BeforeCompile`, `AfterCompile`|Bu hedeflerden birine eklenen görevler, temel derlemeden önce veya sonra çalışır. Çoğu özelleştirme, bu iki hedefin birinde yapılır.|
 |`BeforeBuild`, `AfterBuild`|Bu hedeflerden birine eklenen görevler, derlemede bulunan her şeyin öncesinde veya sonrasında çalışır. **Note:**  `BeforeBuild` Ve `AfterBuild` hedefleri çoğu proje dosyasının sonundaki açıklamalarda zaten tanımlanmıştır. Bu, proje dosyanıza kolayca ve oluşturma sonrası olayları kolayca eklemenize olanak tanır.|
@@ -162,7 +163,7 @@ Proje dosyalarınızı içeri aktarma projeleri, yaptığınız özelleştirmele
 
 ### <a name="commonly-overridden-dependson-properties"></a>Yaygın olarak geçersiz kılınan Bağımlıdson özellikleri
 
-|Özellik adı|Açıklama|
+|Özellik adı|Description|
 |-------------------|-----------------|
 |`BuildDependsOn`|Tüm derleme işleminden önce veya sonra özel hedefler eklemek istiyorsanız geçersiz kılınacak özellik.|
 |`CleanDependsOn`|Özel yapı sürecinizden çıktıyı temizlemek istiyorsanız geçersiz kılınacak özellik.|

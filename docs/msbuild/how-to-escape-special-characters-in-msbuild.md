@@ -1,5 +1,7 @@
 ---
 title: "Nasıl yapılır: MSBuild 'de özel karakterleri kaçış | Microsoft Docs"
+description: Bu karakterleri MSBuild proje dosyalarında değişmez değer olarak kullanabilmeniz için özel karakterleri nasıl atlacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9958ae93e2605ad3c89decb4ac9fabc18102148
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 923c517653c42dd0362b398c420c99454ccf4034
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633882"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436407"
 ---
 # <a name="how-to-escape-special-characters-in-msbuild"></a>Nasıl yapılır: MSBuild 'de özel karakterleri kaçış
 
@@ -52,5 +54,5 @@ Dizeleri kaçış için de bir [Özellik işlevi](../msbuild/property-functions.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
-- [MSBUILD](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)
 - [Öğeler](../msbuild/msbuild-items.md)

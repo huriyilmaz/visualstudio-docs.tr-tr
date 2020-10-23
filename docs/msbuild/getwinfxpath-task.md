@@ -1,5 +1,7 @@
 ---
 title: GetWinFXPath görevi | Microsoft Docs
+description: Geçerli .NET çalışma zamanının dizinini döndüren MSBuild GetWinFXPath görevini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab8e15cef722e935dde322072f6834ba00be8bc5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 820ca103d88cde941fe558e59ed1c78622adccd4
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633973"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436776"
 ---
 # <a name="getwinfxpath-task"></a>GetWinFXPath görevi
 

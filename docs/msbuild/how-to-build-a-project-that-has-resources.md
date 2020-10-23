@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: kaynakları olan bir proje derleme | Microsoft Docs'
+description: Kaynakları olan bir proje oluşturma ve MSBuild kullanarak kaynakları derleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a76246096eec8779ce331e93f01be5ab791d1cdb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6a71a34b4ce208b093f7982ba3516b0229c8644
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633960"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436678"
 ---
 # <a name="how-to-build-a-project-that-has-resources"></a>Nasıl yapılır: kaynakları olan bir proje derleme
 
@@ -38,7 +40,7 @@ MSBuild ile birlikte sunulan ortak görevlerin kitaplığı, `GenerateResource` 
 
 4. Öğesinden oluşturulan öğeyi `Output` başka bir görevde giriş olarak kullanın.
 
-## <a name="example"></a>Örnek
+## <a name="example-1"></a>Örnek 1
 
 Aşağıdaki kod örneği, `Output` öğesinin, `OutputResources` `GenerateResource` görev özniteliğinin *Alpha. resources* ve *Beta. resources* derlenmiş kaynak dosyalarını ve bu iki dosyanın öğe listesi içine yerleştirileceğini gösterir `Resources` . Bu *. resources* dosyalarını aynı ada sahip öğelerin bir koleksiyonu olarak tanımlayarak, onları [CSC](../msbuild/csc-task.md) görevi gibi başka bir görevin girişleri olarak kolayca kullanabilirsiniz.
 
@@ -55,7 +57,7 @@ Bu görev, [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generat
 </GenerateResource>
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-2"></a>Örnek 2
 
 Aşağıdaki örnek proje iki görev içerir: `GenerateResource` kaynakları derlemek için görev ve `Csc` hem kaynak kodu dosyalarını hem de derlenen kaynak dosyalarını derlemek için görev. Görev tarafından derlenen kaynak dosyaları `GenerateResource` , `Resources` öğede depolanır ve `Csc` göreve geçirilir.
 
@@ -82,7 +84,7 @@ Aşağıdaki örnek proje iki görev içerir: `GenerateResource` kaynakları der
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [MSBUILD](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)
 - [GenerateResource görevi](../msbuild/generateresource-task.md)
 - [Csc görevi](../msbuild/csc-task.md)
 - [Resgen.exe (kaynak dosya Oluşturucu)](/dotnet/framework/tools/resgen-exe-resource-file-generator)

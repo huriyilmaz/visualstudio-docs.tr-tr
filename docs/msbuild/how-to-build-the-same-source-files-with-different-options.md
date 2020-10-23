@@ -1,5 +1,6 @@
 ---
 title: Aynı kaynak dosyalarını farklı seçeneklerle derleme
+description: Farklı seçeneklerle aynı kaynak dosyaları oluşturmak için farklı MSBuild yapı yapılandırmalarının nasıl oluşturulacağını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23e76145df0fdf3f4cc3a3dfa8e14c6826b0dbdf
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: a2c6a2b27aa08780d440c0e961c9a091c2b2fdb2
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037601"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436914"
 ---
 # <a name="how-to-build-the-same-source-files-with-different-options"></a>Nasıl yapılır: farklı seçeneklerle aynı kaynak dosyaları derleme
 
@@ -88,7 +89,7 @@ Proje dosyanız birden çok yapılandırmayı kabul etmek üzere yazıldıktan s
 
   Bu davranışı `TreatAsLocalProperty` bir proje etiketinde özniteliğini kullanarak değiştirebilirsiniz. Bu öznitelikle listelenen özellik adları için, komut satırında belirtilen özellik değeri proje dosyasındaki değerden önceliklidir. Bu konunun ilerleyen kısımlarında bir örnek bulabilirsiniz.
 
-## <a name="example"></a>Örnek
+## <a name="example-1"></a>Örnek 1
 
 Aşağıdaki kod örneğinde, "Merhaba Dünya" projesi, hata ayıklama derlemesi ve yayın derlemesi oluşturmak için kullanılabilecek iki yeni özellik grubu içerir.
 
@@ -156,7 +157,7 @@ msbuild consolehwcs1.proj -p:flavor=retail
 </Project>
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-2"></a>Örnek 2
 
 Aşağıdaki örnek, özniteliğini nasıl kullanacağınızı gösterir `TreatAsLocalProperty` . `Color`Özelliği `Blue` Proje dosyasında ve `Green` komut satırında değerini içerir. `TreatAsLocalProperty="Color"`Proje etiketinde, komut satırı özelliği ( `Green` ) proje dosyasında tanımlanan özelliği () geçersiz kılmaz `Blue` .
 

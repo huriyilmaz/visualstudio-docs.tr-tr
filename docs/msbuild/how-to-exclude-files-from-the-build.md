@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: derlemeden Dosya dışlama | Microsoft Docs'
+description: MSBuild proje dosyalarındaki derlemelerin dosyalarını açıkça dışarıda bırakma veya koşullu olarak ekleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1914f709a69dbb120e4439ddceeda8b70ad570b4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 48578edd6c7911e858f32b1961b4ef361748788d
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633869"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436367"
 ---
 # <a name="how-to-exclude-files-from-the-build"></a>Nasıl yapılır: derlemeden Dosya dışlama
 
@@ -129,5 +131,5 @@ Bir proje dosyasında, bir derleme için giriş olarak bir dizindeki veya iç i�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Öğeler](../msbuild/msbuild-items.md)
-- [MSBUILD](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)
 - [Nasıl yapılır: derlenecek dosyaları seçme](../msbuild/how-to-select-the-files-to-build.md)

@@ -1,5 +1,7 @@
 ---
 title: GenerateApplicationManifest görevi | Microsoft Docs
+description: ClickOnce uygulama bildirimi veya yerel bildirim oluştururken MSBuild GenerateApplicationManifest görevini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f77420c5ab269e1b0052ce6102c4e3196a3be52b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c4752e4b736a6ba2f8b4a209824b22f94d8036c2
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634103"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436552"
 ---
 # <a name="generateapplicationmanifest-task"></a>GenerateApplicationManifest görevi
 
@@ -84,7 +86,7 @@ Bağımlılıklar ve dosyalar için girişler, her öğe için ek dağıtım dur
 |`TargetPath`|Yolun oluşturulan bildirimde nasıl tanımlanması gerektiğini belirtir. Bu öznitelik tüm dosyalar için geçerlidir. Bu öznitelik belirtilmemişse, öğe belirtimi kullanılır. Bu öznitelik, değerine sahip tüm dosyalar ve Bağımlılıklar için geçerlidir `DependencyType` `Install` .|
 |`IsDataFile`|`Boolean`Dosyanın bir veri dosyası olup olmadığını belirten bir meta veri değeri. Bir veri dosyası, uygulama güncelleştirmeleri arasında geçirilme için özeldir. Bu meta veriler yalnızca dosyalar için geçerlidir. `False` varsayılan değerdir.|
 
-## <a name="example"></a>Örnek
+## <a name="example-1"></a>Örnek 1
 
 Bu örnek, `GenerateApplicationManifest` bir ClickOnce uygulama bildirimi oluşturmak için görevini ve tek bir `GenerateDeploymentManifest` bütünleştirilmiş koda sahip bir uygulama için dağıtım bildirimi oluşturmak için görevini kullanır. Daha sonra bu `SignFile` görevi bildirimleri imzalamak için kullanır.
 
@@ -138,7 +140,7 @@ Bu, tek bir program için ClickOnce bildirimlerinin oluşturulduğu en basit ola
 </Project>
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-2"></a>Örnek 2
 
 Bu örnek, `GenerateApplicationManifest` ve `GenerateDeploymentManifest` bildirimlerinin ad ve kimliğini belirterek tek bir bütünleştirilmiş koda sahip bir uygulama için ClickOnce uygulaması ve dağıtım bildirimleri oluşturmak için ve görevlerini kullanır.
 
@@ -199,7 +201,7 @@ Bu örnek, bildirimlerin adı ve kimliği açıkça belirtildiğinde, önceki ö
 </Project>
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-3"></a>Örnek 3
 
 Bu örnek, `GenerateApplicationManifest` `GenerateDeploymentManifest` birden çok dosya ve derlemeye sahip bir uygulama için ClickOnce uygulaması ve dağıtım bildirimleri oluşturmak için ve görevlerini kullanır.
 
@@ -318,7 +320,7 @@ Bu örnek, `GenerateApplicationManifest` `GenerateDeploymentManifest` birden ço
 </Project>
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-4"></a>Örnek 4
 
 Bu örnek, `GenerateApplicationManifest` uygulama *Test.exe*için yerel bileşen *Alpha.dll* ve yalıtılmış bir com bileşeni *Bravo.dll*başvuruda bulunan bir yerel bildirim oluşturmak için görevini kullanır.
 

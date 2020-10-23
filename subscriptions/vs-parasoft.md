@@ -1,18 +1,18 @@
 ---
-title: Parasoft Virtualınitialize/SOAtest Professional Desktop avantajı | Microsoft Docs
+title: Visual Studio aboneliklerinde parasoft Virtualınitialize/SOAtest Professional | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 00c1f300-d04e-4695-815e-775ffbf0f931
-ms.date: 04/20/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen parasoft Virtualınitialize/SOA Test Professional aboneliğini nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: f5f32a15b0c2ab292f55c5ec5153161f03598ef4
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 6209be915d3744e13aad674ea893e77e0b276044
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006273"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436027"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde parasoft Virtualınitialize/SOAtest Professional Desktop
 
@@ -24,11 +24,11 @@ Daha önce ve daha sık test edin.  Kullanılamayan gelişen uygulamalar ve sist
 
 2. Araçlar bölümünde parasoft kutucuğunu bulun ve avantaj kutucuğunun altındaki **kodu al** bağlantısına tıklayın.   Kodun başarıyla alındığını belirten bir bildirim alırsınız.  **Etkinleştir**' e tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Parasoft avantajı kutucuğu](_img/vs-parasoft/vs-parasoft-tile.png)
+   > ![Parasoft avantajı kutucuğu](_img/vs-parasoft/vs-parasoft-tile.png "Parasoft kutucuğunda ' kodu al ' düğmesine tıklayın ve ardından başlamak için ' etkinleştir 'e tıklayın.")
 
 3. Hesap oluşturacağınız parasoft Web sitesine yönlendirilirsiniz.  İletişim bilgilerinizi girmeniz yeterlidir ve **Gönder**' e tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Parasoft avantajı hesap oluşturma](_img/vs-parasoft/vs-parasoft-new-account.png)
+   > ![Parasoft avantajı hesap oluşturma](_img/vs-parasoft/vs-parasoft-new-account.png "İletişim bilgilerinizi girip, hesabınızı oluşturmak için ' Gönder 'e tıklayın.")
 
    > [!Note]
    > Sayfadaki tabloda, tam yıl için fiyatlandırma ve Visual Studio indirimi gösterilmektedir. Altı aylık aboneliğinizi kullandıktan sonra bu fiyatlandırma geçerli olacaktır.  
@@ -39,7 +39,7 @@ Daha önce ve daha sık test edin.  Kullanılamayan gelişen uygulamalar ve sist
 
 6. İşletim sisteminize karşılık gelen bağlantıya tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Parasoft avantajı hoş geldiniz e-postası](_img/vs-parasoft/vs-parasoft-email.png)
+   > ![Parasoft avantajı hoş geldiniz e-postası](_img/vs-parasoft/vs-parasoft-email.png "İşletim sisteminizle eşleşen indirme bağlantısını seçin.")
 
 7. Kullandığınız tarayıcıya bağlı olarak, yükleyiciyi çalıştırma fırsatını sağlayan farklı iletişim kutuları görebilirsiniz.  Örneğin, Internet Explorer 'da, en üstte listelenen parasoft_soavirt_9.10.2_win32_x86_64.exe son karşıdan yüklemelerin bir listesini görürsünüz. Yükleyiciyi başlatmak için **Çalıştır** ' a tıklayın.
 
@@ -49,7 +49,7 @@ Daha önce ve daha sık test edin.  Kullanılamayan gelişen uygulamalar ve sist
 
 10. Parasoft SOAtest & Sanallaşmayı ayarla Sihirbazı başlatılır.  **İleri**’ye tıklayın.
     > [!div class="mx-imgBorder"]
-    > ![Parasoft avantajı yükleme başlangıcı](_img/vs-parasoft/vs-parasoft-start-install.png)
+    > ![Parasoft avantajı yükleme başlangıcı](_img/vs-parasoft/vs-parasoft-start-install.png "Parasoft SOAtest & Sanallaşmayı yüklemeye başlamak için ' Ileri ' seçeneğine tıklayın.")
 
 11. **Sözleşmeyi kabul ediyorum**' a tıklayın ve ardından **İleri**' ye tıklayın.
 
