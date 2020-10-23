@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 2249b32a-46d7-4e29-b543-4769c71ceda6
-ms.date: 09/28/2020
+ms.date: 10/22/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinin bir parçası olarak GitHub Enterprise 'a erişme hakkında bilgi edinin
-ms.openlocfilehash: 4c3943c9a6229e865bf90a24d12ecbc8b91d2fd5
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: fc4c36e72affb94f0707389d219284cc2a652bfd
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584189"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467524"
 ---
 # <a name="visual-studio-with-github-enterprise-subscriptions"></a>GitHub Enterprise abonelikleriyle Visual Studio
 
@@ -33,7 +33,7 @@ Visual Studio Enterprise, Visual Studio Professional ve GitHub Enterprise da ayr
 
 Avantajlar ve seçenekler hakkında daha fazla bilgi edinmek için lütfen adresini ziyaret edin <https://visualstudio.microsoft.com/subscriptions/visual-studio-github> . 
 
-## <a name="what-is-the-visual-studio-with-github-enterprise-setup-process"></a>GitHub Enterprise kurulum işlemi ile Visual Studio nedir?
+## <a name="what-is-the-visual-studio-with-github-enterprise-setup-process"></a>GitHub Enterprise ile Visual Studio kurulum işlemi nasıldır?
 
 GitHub Enterprise abonelikleriyle Visual Studio iki bölümde yönetilir:
 1. Visual Studio aboneliği (Enterprise veya Professional)
@@ -44,7 +44,7 @@ GitHub aboneliğine sahip bir Visual Studio atadığınızda, Visual Studio abon
    > [!div class="mx-imgBorder"]
    > ![GitHub Enterprise bekleyen kurumsal hesap kurulumu](_img/access-github/pending-account-setup.png "Kuruluşunuzun öncelikle bir kurumsal hesap ayarlaması gerekir.")  
 
-GitHub Enterprise, Visual Studio aboneliklerinden ayrı bir GitHub Yöneticisi tarafından yönetilir.  Şirketiniz bir GitHub Enterprise hesabı ayarlamışsa, GitHub 'dan, Visual Studio aboneliğinizin bağlı olduğunu ve avantajı kutucuğunun aşağıda görüldüğü gibi güncelleştirileceğini bildiren bir e-posta gönderilir.  Bu hesabın ayarlanması biraz zaman alabilir ve kurulum işlemini tamamlamak için şirketinize bağımlıdır. E-postayı aldıktan sonra, kuruluşunuza ve/veya depoya davetiye istemek için uygun GitHub kuruluş yöneticisine ulaşabilirsiniz.  
+GitHub Enterprise, Visual Studio aboneliklerinden ayrı bir GitHub Yöneticisi tarafından yönetilir.  Şirketiniz bir GitHub Enterprise hesabı ayarlamışsa, GitHub 'dan, Visual Studio aboneliğinizin bağlı olduğunu ve avantajı kutucuğunun aşağıda görüldüğü gibi güncelleştirileceğini bildiren bir e-posta gönderilir.  Bu hesabın ayarlanması biraz zaman alabilir ve şirketinizin ayarlama işlemini tamamlamasına bağlıdır. E-postayı aldıktan sonra, kuruluşunuza ve/veya depoya davetiye istemek için uygun GitHub kuruluş yöneticisine ulaşabilirsiniz.  
 
    > [!div class="mx-imgBorder"]
    > ![GitHub Enterprise bekleyen GitHub daveti](_img/access-github/pending-invite.png "GitHub kuruluşuna davetiye istemek için GitHub yöneticinizle görüşün.")  

@@ -8,12 +8,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b740f0882edb2eae9f00bd7826543e7fe1b4597f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 968e4167da1f8fd9bce21784a011d970014e1b4e
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817274"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467563"
 ---
 # <a name="xaml-errors-and-warnings"></a>XAML hataları ve uyarıları
 
@@ -23,11 +23,14 @@ XAML yazarken, Visual Studio kodu yazarken analiz eder. Bir hata algılandığı
 
 Arka planda, birden çok araç XAML 'yi paralel olarak analiz eder. XAML hataları, hatayı algılayan araca bağlı olarak aşağıdaki üç türden birine kategorize edilir:
 
-|**Hata algılanan**|**Hata kodu biçimi**|
-| - |-----------------|
-|XAML dil hizmeti (XAML Düzenleyicisi)|XLSxxxx|
-|XAML Tasarımcısı|XDGxxxx|
-|XAML Düzenle ve devam et|XECxxxx|
+|**Hata algılanan**|**Hata kodu biçimi**|**Visual Studio sürümü**|
+| - |-----------------| - |
+|XAML dil hizmeti (XAML Düzenleyicisi)|XLSxxxx| Tüm sürümler |
+|XAML Tasarımcısı|XDGxxxx| Tüm sürümler | 
+|XAML Düzenleme ve Devam Etme|XECxxxx| Visual Studio 2019 sürüm 16,1 veya öncesi |
+|XAML Çalışırken Yeniden Yükleme | XHRxxxx | Visual Studio 2019 sürüm 16,2 veya üzeri |
+
+XAML düzenleme işleminin yeniden markası hakkında daha fazla ayrıntı için & XAML Hot Reload olarak devam edin. [Sürüm notlarımıza](https://docs.microsoft.com/visualstudio/releases/2019/release-notes-v16.2#wpfuwp-tooling) bakın
 
 > [!Note]
 > Tüm hatalar veya uyarıların karşılık gelen bir kodu yoktur. Bu hatalar genellikle XAML Tasarımcısı hatalardır.

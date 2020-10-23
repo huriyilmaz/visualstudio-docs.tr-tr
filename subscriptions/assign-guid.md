@@ -3,15 +3,15 @@ title: Visual Studio abonelerine belirli GUID 'Ler atama | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
-ms.date: 09/21/2020
+ms.date: 10/22/2020
 ms.topic: conceptual
 description: Yöneticilerin abonelere nasıl özel abonelik GUID 'SI olabileceğini öğrenin
-ms.openlocfilehash: 31544718683b10a186d4c38486bf0cd7923cd4cf
-ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
+ms.openlocfilehash: 1097743d1640fbadba550f3c2ee6908ac694436d
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91022493"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467485"
 ---
 # <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalı 'nda belirli abonelikleri atama
 
@@ -26,7 +26,7 @@ Kullanıcılara belirli aboneliklerin GUID 'Lerinin nasıl atanacağını öğre
 
 ## <a name="assign-specific-subscription-guids-to-users"></a>Kullanıcılara belirli abonelik GUID 'Leri atama
 
-Kişilere belirli abonelikler atama süreci, bireysel kullanıcılara genel olarak benzersiz tanımlayıcılar (GUID 'Ler) atamak için mevcut iki yönetim işleminin kullanılmasını içerir.  Üç adımlı işlem, geçerli aboneliklerinizin ve atamalarınızın listesini, atamak istediğiniz belirli GUID 'Leri tanımlamak için kullanarak ve ardından yeni atamaları karşıya yüklemek için toplu ekleme işlemini kullanarak, bu listeyi kullanarak dışarı aktarmayı içerir.
+Kişilere belirli abonelikler atama süreci, bireysel kullanıcılara genel olarak benzersiz tanımlayıcılar (GUID 'Ler) atamak için mevcut iki yönetici işleminin kullanılmasını içerir.  Üç adımlı işlem, geçerli aboneliklerinizin ve atamalarınızın listesini, atamak istediğiniz belirli GUID 'Leri tanımlamak için kullanarak ve ardından yeni atamaları karşıya yüklemek için toplu ekleme işlemini kullanarak, bu listeyi kullanarak dışarı aktarmayı içerir.
 
 ### <a name="export-your-subscriptions-information"></a>Abonelik bilgilerinizi dışarı aktarın
 
@@ -69,7 +69,7 @@ Y: bir kullanıcıya hangi GUID 'nin atandığını değiştirmek istiyorsanız,
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Artık kullanıcılara abonelikler atadıktan sonra, diğer yönetim görevlerinin nasıl gerçekleştirileceğini öğrenin.
+Artık kullanıcılara abonelikler atadıktan sonra, diğer yönetici görevlerinin nasıl gerçekleştirileceğini öğrenin.
 - [Ayrı abonelikler atama](assign-license.md)
 - [Birden çok abonelik atama](assign-license-bulk.md)
 - [Abonelikleri düzenleme](edit-license.md)

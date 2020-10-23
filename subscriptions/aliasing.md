@@ -1,18 +1,18 @@
 ---
 title: Diğer adlar kullanılırken Visual Studio aboneliklerinde oturum açma başarısız olabilir | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 97bf7474-c6c2-49b3-b2c9-f1b2808eed1a
-ms.date: 10/20/2020
+ms.date: 10/22/2020
 ms.topic: conceptual
 description: Diğer adlar veya kolay adlar kullanılıyorsa oturum açma başarısız olabilir
-ms.openlocfilehash: c5c211cd674e86edc4528e6e2c5e75bd5b02132d
-ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
+ms.openlocfilehash: 4d9b3194cf7636106740e35b230cc02aaab7eded
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92298176"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467615"
 ---
 # <a name="signing-into-visual-studio-subscriptions-may-fail-when-using-aliases"></a>Diğer adlar kullanılırken Visual Studio aboneliklerinde oturum açma başarısız olabilir
 Oturum açmak için kullanılan hesap türüne bağlı olarak, kullanılabilir abonelikler ' de oturum açarken doğru görüntülenmeyebilir [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) . Olası bir neden, aboneliğin atandığı oturum açma kimliği yerine "diğer adlar" veya "kolay adlar" in kullanılması olabilir. Bu "diğer ad" olarak adlandırılır.
@@ -77,7 +77,7 @@ Visual Studio platformu, abonelik ayrıntılarını göstermek için birincil di
 
 ## <a name="preventing-aliasing-issues"></a>Diğer ad sorunlarını önler
 
-Yönetici olarak, abonelerinizin üzerinde başarılı bir oturum açma deneyimine sahip olmasını sağlamak için iki seçenek vardır [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) .
+Yönetici olarak, abonelerinizin üzerinde başarılı bir oturum açma deneyimine sahip olmasını sağlamaya yönelik iki seçenek vardır [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) .
 - İlk seçenek (önerilir), ' de Visual Studio abonelikleri portalının oturum açma adı olarak dizin hesabından faydalanır https://my.visualstudio.com .  
 - İkinci seçenek (daha az güvenli), abonelerin Dizin e-posta adresinden farklı bir e-posta adresi kullanarak oturum açmalarına izin vermektir.
 

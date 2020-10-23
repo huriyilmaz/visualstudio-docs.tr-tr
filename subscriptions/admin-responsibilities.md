@@ -1,24 +1,24 @@
 ---
-title: Yönetici sorumlulukları | Visual Studio Market
+title: Visual Studio aboneliklerinde yönetici sorumlulukları | Visual Studio Market
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: b26b31dc-1eeb-4871-9ce6-2c980e703f1e
-ms.date: 09/03/2019
+ms.date: 10/22/2020
 ms.topic: conceptual
 description: Abonelik yöneticilerinin sorumlulukları hakkında bilgi edinin.
-ms.openlocfilehash: c0c30eb8bc5b63720bd2377990a390df8a173035
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 183209e5e1fa873ae9af6ff2d9b32caf94c5461e
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006143"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467472"
 ---
-# <a name="overview-of-administrator-responsibilities"></a>Yönetici sorumluluklarına genel bakış
-Yönetici olarak, kuruluşunuz için abonelikleri yönetebilirsiniz.  Yönetici rolü Ayrıca, aboneliklerin lisans koşullarına uygun olarak yönetildiğinden emin olmak için sorumlulukları taşır. Bu makalede, yönetici rolünün sorumlulukları, avantajları ve sınırlamaları özetlenmektedir.
+# <a name="overview-of-admin-responsibilities"></a>Yönetici sorumluluklarına genel bakış
+Yönetici olarak, kuruluşunuz için abonelikleri yönetebilirsiniz.  Yönetici rolü Ayrıca, aboneliklerin lisans koşullarına uygun olarak yönetildiğinden emin olmak için sorumluluklar de taşır. Bu makalede, yönetici rolünün sorumlulukları, avantajları ve sınırlamaları özetlenmektedir.
 
 ## <a name="roles--responsibilities"></a>Rol & sorumlulukları
-Visual Studio abonelikleri Yöneticisi dört temel sorumluluklara sahiptir:
+Visual Studio abonelikleri yöneticisinin dört temel sorumluluğu vardır:
 
 1. **Visual Studio aboneliklerinin avantajlarını ve kısıtlamalarını anlayın.** Avantajlarınızı doğru şekilde anlamak, bulut hizmetlerini kullanarak donanım maliyetlerini azaltmanıza ve üretim öncesi ortamlar için Kullanıcı başına lisanslarla Yazılım maliyetlerini azaltmanıza olanak sağlayabilir. 
 2. **Belirli bir adlandırılmış kişiye Visual Studio abonelikleri atayın ve kullanımı teşvik edin.** Sözleşmeniz, Visual Studio aboneliklerinin belirli, adlandırılmış bireylere atanmasını gerektirir. Kendi Visual Studio aboneliklerine dahil olan avantajlardan tam olarak yararlandıklarından emin olmak için abonelere uyun.

@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 5692589192ee4377194f6c42c25d391636f5f42a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f8b7dc9a388699cc9e323085769d17a00ba4fa6a
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800248"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467641"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Visual Studio ve Azure hizmetlerini bir güvenlik duvarı veya proxy sunucusunun arkasında yükleyip kullanma
 
@@ -94,7 +94,7 @@ Bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio veya Azure hi
 | URL<br>çözüm | go.microsoft.com<br><br>aka.ms | | URL 'Leri kısaltmak için kullanılır ve daha uzun URL 'Ler olarak çözümlenir |
 | Başlangıç Sayfası | vsstartpage.blob.core.windows.net | 443 | Başlangıç sayfasında gösterilen geliştirici haberlerini göstermek için kullanılır (yalnızca Visual Studio 2017) |
 | Hedeflenen<br> Bildirim <br>Hizmet | targetednotifications-tm.trafficmanager.net <br><br>www.research.net | 443<br><br>443 | Yalnızca belirli makine/kullanım senaryosu türleri için geçerli olan bir listeye yönelik genel bildirim listesini filtrelemek için kullanılır |
-| Uzantı <br>Güncelleştirme denetimi | marketplace.visualstudio.com<br><br>&#42;. windows.net <br>&#42;. microsoftonline.com <br>&#42;. live.com | 443 | Yüklü bir uzantının kullanılabilir bir güncelleştirmesi olduğunda bildirim sağlamak için kullanılır <br><br> Oturum açma konumu olarak kullanılır |
+| Dahili numara <br>Güncelleştirme denetimi | marketplace.visualstudio.com<br><br>&#42;. windows.net <br>&#42;. microsoftonline.com <br>&#42;. live.com | 443 | Yüklü bir uzantının kullanılabilir bir güncelleştirmesi olduğunda bildirim sağlamak için kullanılır <br><br> Oturum açma konumu olarak kullanılır |
 | AI projesi <br>Tümleştirme | az861674.vo.msecnd.net | 443<br> | Yeni projeleri kayıtlı Application Insights hesabınıza kullanım verilerini gönderecek şekilde yapılandırmak için kullanılır |
 | Kod lens | codelensprodscus1su0. app.<br>codelens.visualstudio.com | 443 | Bir dosyanın en son ne zaman güncelleştirildiği, değişiklikler zaman çizelgesi, değişen iş öğeleri, yazarlar ve daha fazlası ile ilgili düzenleyicide bilgi sağlamak için kullanılır |
 | Deneysel <br>özellik etkinleştirme | visualstudio-devdiv-c2s.msedge.net | 80 | Deneysel yeni özellikleri veya özellik değişikliklerini etkinleştirmek için kullanılır |
@@ -111,7 +111,7 @@ Bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio veya Azure hi
 | Python paketi <br>bulma<br><br>Python paketi <br>yönetim<br><br>Yeni <br>Python <br> proje <br>templates | pypi.org<br> <br>pypi.python.org <br>bootstrap.pypa.io<br><br>go.microsoft.com | https/443 | PIP paketleri arama olanağı sağlar<br><br>Eksik ise PIP 'yi otomatik olarak yüklemek için kullanılır <br><br>Aşağıdaki yeni Python proje şablonlarını cookiecutter şablon URL 'Lerine çözümlemek için kullanılır:<br> -Sınıflandırıcı projesi<br>-Kümeleme projesi <br> -Gerileme projesi <br> -PyKinect kullanan PyGame <br> -Pyvot projesi |
 | Office Web <br>eklenti <br> Bildirim <br>Doğrulama <br>Hizmet | verificationservice.osi.office.net | https/443 | Office Web eklentileri için bildirimleri doğrulamak için kullanılır |
 | SharePoint ve <br>Office Eklentileri | sharepoint.com<br> microsoft.com/microsoft-365<br> microsoftonline.com <br> outlook.com | https/443 | SharePoint ve Office eklentilerini SharePoint Online ve Microsoft 365 yayımlamak ve test etmek için kullanılır |
-| İş akışı Yöneticisi <br>Test hizmeti<br> Konak | | http/12292 | SharePoint eklentilerini iş akışlarıyla test etmek için otomatik olarak oluşturulan bir güvenlik duvarı kuralı |
+| İş akışı Yöneticisi <br>Test hizmeti<br> Ana bilgisayar | | http/12292 | SharePoint eklentilerini iş akışlarıyla test etmek için otomatik olarak oluşturulan bir güvenlik duvarı kuralı |
 | Otomatik olarak toplanan <br>güvenilirlik istatistikleri <br>ve diğer <br>Müşteri deneyimi <br>Geliştirme programları (CEIP)<br> Azure SDK ve <br>SQL araçları için <br><br> | vortex.data.microsoft.com<br> <br>dc.services.visualstudio.com | https/443 | Kullanıcıdan Microsoft 'a güvenilirlik istatistikleri (kilitlenme/yanıt vermeyen veriler) göndermek için kullanılır. Windows Hata Bildirimi etkinse gerçek kilitlenme/yanıt vermeyen dökümler yine de karşıya yüklenir. Yalnızca istatistiksel bilgiler bastırılır; <br>Visual Studio 'ya yönelik Azure Araçları SDK uzantısı için anonim kullanım düzenlerini açığa çıkarmak için ve Visual Studio 'ya SQL araçları için kullanım desenleri için kullanılır |
 | Visual Studio <br> Müşteri deneyimi <br>Geliştirme programı (CEIP) <br><br>PerfWatson.exe | vortex.data.microsoft.com<br>dc.services.visualstudio.com<br>visualstudio-devdiv-c2s.msedge.net<br>az667904.vo.msecnd.net <br>scus-breeziest-in.cloudapp.net<br> | https/443 | Anonim kullanım desenlerini ve hata günlüklerini toplamak için kullanılır <br><br>UI dondurma sorunlarını izlemek için kullanılır |
 | Oluşturma ve<br>Yönetim <br>Azure kaynakları | management.azure.com <br>management.core.windows.net | https/443 | Web uygulamalarının, Azure Işlevlerinin veya Webişlerin yayımlanmasını desteklemek üzere Azure Web siteleri veya diğer kaynaklar oluşturmak için kullanılır |
@@ -134,11 +134,11 @@ Bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio veya Azure hi
 | Geliştirici Topluluğu | sendvsfeedback2.azurewebsites.net/api | https/443 | Geliştirici topluluğu geri bildirim aracı API 'Lerini çağırmak için kullanılır (sorunlarım, arama, oyum, yorum, gönderme, karşıya yükleme, sürdürülme) |
 | Intellicode | \*. intellicode.vsengsaas.visualstudio.com | https/443 | Intellicode API 'Lerini çağırmak için kullanılır |
 | Live Share | \*. liveshare.vsengsaas.visualstudio.com| https/443 | Live Share API 'Leri çağırmak için kullanılır |
-| Visual Studio Codespaces | \*. online.visualstudio.com | https/443 | Visual Studio Codespaces API 'Lerini çağırmak için kullanılır |
+| GitHub Codespaces | \*. online.visualstudio.com | https/443 | GitHub Codespaces API 'Lerini çağırmak için kullanılır |
 | JavaScript otomatik tür alımı | registry.npmjs.org | https/443 | Popüler JavaScript kitaplıkları için IntelliSense sağlamak üzere TypeScript tür tanımlarını yüklemek için kullanılır |
 | Visual Studio abonelikleri Lisanslama hizmeti | app.vssps.visualstudio.com/apis/<br/>Lisanslama/ClientRights | https/443 | Çevrimiçi etkinleştirme için lisanslama |
 | Hata Ayıklayıcısı | 1. <br>vsdebugger.blob.core.windows.net <br>vsdebugger.azureedge.net <br><br>2. <br>download.visualstudio.com/\*/<br/>OneCore \* . Msvsmon. zip<br><br> 3. referencesource.microsoft.com/symbols <br><br> 4. <br>symbols.nuget.org/download/symbols<br><br> 5. visualstudio.com<br><br>6. msdl.microsoft.com/download/symbols | https/443 | 1. <br>SSH üzerinden UNIX/macOS 'ta .NET Core hata ayıklama için hata ayıklayıcı bitlerini indirmek için kullanılır <br><br>2. <br>Uzak Windows Docker kapsayıcısı hata ayıklaması için hata ayıklayıcı bitlerini indirmek için kullanılır<br><br> 3. .NET Framework kaynak adımlaması için kullanılır <br><br> 4. <br>(Kullanıcı tarafından opts) Nuget.org symbol Server 'da yayınlanan sembolleri indirmek için kullanılır.<br><br> 5. (Kullanıcı opvaları) MS sembolleri ve ikili dosyaları indirmek için kullanılıyorsa, dökümdeki yönetilen kodda hata ayıklama için de gerekli olabilir |
-| Visual Studio Codespaces| \*. online.visualstudio.com | https/443 | Visual Studio Codespaces API 'Lerini çağırmak için kullanılır |
+| GitHub Codespaces| \*. online.visualstudio.com | https/443 | GitHub Codespaces API 'Lerini çağırmak için kullanılır |
 | Xamarin Android uygulama yayımlama | \*. googleapis.com <br/> play.google.com <br/>accounts.google.com | https/443 | Xamarin Android uygulamalarını doğrudan Visual Studio 'dan yayınlamak/karşıya yüklemek için Google Play Store hizmetiyle etkileşim kurmak için kullanılır. |
 | Azure Container Registry | *. azurecr.io | https/443 | CICD ardışık düzenleri yapılandırması için Azure 'da barındırılan kapsayıcı kayıt defterlerine erişin |
 | | | | |

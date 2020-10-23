@@ -1,18 +1,18 @@
 ---
 title: Visual Studio + GitHub kurumsal teklifi | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: f271d623-dcde-442a-865c-4dca5ad8a9c5
-ms.date: 09/29/2020
+ms.date: 10/22/2020
 ms.topic: conceptual
 description: Visual Studio + GitHub kurumsal teklifinde abonelikleri yönetme
-ms.openlocfilehash: 79c1a2cfe8eaab9e275c6c53661f1667253ea4f5
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: ef651a75a0daed1e5e975386a26d1bffcf9b4b82
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584132"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467589"
 ---
 # <a name="manage-visual-studio-subscriptions-with-github-enterprise"></a>GitHub Enterprise ile Visual Studio aboneliklerini yönetme
 Microsoft ile kurumsal anlaşma (EA) olan müşteriler, Visual Studio Standard abonelikleri ve GitHub Enterprise 'ı birlikte getiren yeni bir abonelik teklifi satın almaya uygundur. Visual Studio abonelerinin GitHub Enterprise 'ı edinmenin kolay ve ekonomik bir yoludur. 
@@ -32,19 +32,19 @@ Visual Studio aboneliklerini yönetme hakkında daha fazla bilgi için şu konul
 > [!Important]
 > GitHub Enterprise ile Visual Studio abonelikleri, ilk satın almadan Visual Studio abonelik yöneticileri tarafından atanırsa, GitHub kurumsal hesabı oluşturmak istediğinizi hiçbir uyarı verilmez.  **En az bir satın alma** Abonelikler atanmadan önce GitHub kurumsal aboneliğine sahip Visual Studio yapılmalıdır.
 
-## <a name="what-is-the-visual-studio-with-github-enterprise-setup-process"></a>GitHub Enterprise kurulum işlemi ile Visual Studio nedir?
-GitHub Enterprise, Visual Studio aboneliklerinden ayrı olarak ayarlanır ve yönetilir. GitHub Kurumsal satın alma ile bir Visual Studio 'Yu takip eden bir GitHub kurumsal hesap kurulum işlemi, [Manage.VisualStudio.com](https://manage.visualstudio.com)içinde bir sözleşme oluşturma (ancak birbirinden ayrı) ile paralel olarak başlatılır. Bu GitHub kurumsal hesabının kurulması biraz zaman alabilir. 
+## <a name="what-is-the-visual-studio-with-github-enterprise-setup-process"></a>GitHub Enterprise ile Visual Studio kurulum işlemi nasıldır?
+GitHub Enterprise, Visual Studio aboneliklerinden ayrı olarak kurulur ve yönetilir. GitHub Kurumsal satın alma ile bir Visual Studio 'Yu takip eden bir GitHub kurumsal hesap kurulum işlemi, [Manage.VisualStudio.com](https://manage.visualstudio.com)içinde bir sözleşme oluşturma (ancak birbirinden ayrı) ile paralel olarak başlatılır. Bu GitHub Enterprise hesabının oluşturulması biraz zaman alabilir. 
 
-Şirketiniz bir GitHub Enterprise hesabı ayarladıktan sonra, GitHub Enterprise abonelikleriyle Visual Studio atanmış aboneler, Visual Studio aboneliklerinin bağlandığını bildiren GitHub 'dan bir e-posta alır. Aboneler bu e-postayı aldıktan sonra, uygun kuruluşa davetiye almak için GitHub kuruluş yöneticlerine ulaşabilirler.
+Şirketiniz GitHub Enterprise hesabını ayarladıktan sonra, kendilerine GitHub Enterprise ile Visual Studio abonelikleri atanan aboneler GitHub'dan Visual Studio aboneliklerinin bağlandığını bildiren bir e-posta alır. Aboneler bu e-postayı aldıktan sonra, uygun kuruluşa davetiye almak için GitHub kuruluş yöneticilerine ulaşabilirler.
 
 GitHub Enterprise kurulumu hakkında daha fazla bilgi için lütfen [abone belgelerine](access-github.md)başvurun.   
 
 ## <a name="manage-github-enterprise-subscriptions"></a>GitHub Enterprise aboneliklerini yönetme
-GitHub Enterprise abonelikleri satın alındığında, GitHub 'a erişecek ve yöneticileri tanımlayan kuruluşları oluşturmaya ve yapılandırmaya yardımcı olmak üzere müşteriler ile GitHub iş ortakları yapılır.  Bu Yöneticiler daha sonra yöneticiler olarak ayarlandıklarından bir bildirim alır.  
+GitHub Enterprise abonelikleri satın alındığında, GitHub 'a erişecek ve yöneticileri tanımlayan kuruluşları oluşturmaya ve yapılandırmaya yardımcı olacak şekilde GitHub iş ortakları.  Bu Yöneticiler daha sonra yöneticiler olarak ayarlandıklarından bir bildirim alır.  
 
 Bu işlem daha karmaşık olduğundan, kuruluşların ve yöneticilerin tam olarak ayarlanması için abonelikler satın alındıktan sonra birkaç gün sürebilir.
 
-GitHub, bulut tabanlı GitHub.com ya da şirket içi GitHub Enterprise Server olarak kullanılabilir.  İki sürümü yönetmek için süreçler farklılık gösterir.  GitHub, GitHub Enterprise aboneliklerini yönetmenize yardımcı olmak için çeşitli yardım konuları ve yönetici kılavuzlarını sağlar.  Aşağıdaki seçili konulara bağlantılar sağladık.  
+GitHub, bulut tabanlı GitHub.com ya da şirket içi GitHub Enterprise Server olarak kullanılabilir.  İki sürümü yönetmek için süreçler farklılık gösterir.  GitHub, GitHub Enterprise abonelikleri 'ni yönetmenize yardımcı olmak için çeşitli yardım konuları ve yönetici kılavuzlarını sağlar.  Aşağıdaki seçili konulara bağlantılar sağladık.  
 
 ## <a name="support-resources"></a>Destek kaynakları
 

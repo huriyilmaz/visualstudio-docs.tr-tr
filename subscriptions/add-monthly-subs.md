@@ -7,21 +7,21 @@ ms.assetid: 36f0d9f1-fe28-469f-a54c-dc46638270a8
 ms.date: 09/03/2020
 ms.topic: how-to
 description: Abonelik yönetim portalına yeni aylık Visual Studio abonelikleri satın alma hakkında bilgi edinin
-ms.openlocfilehash: 56f4b4f765edec5b624db786795c84969872978a
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: f6b835969fff3a8316a2b46c6e15217ebe3e33b1
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "91005105"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467602"
 ---
 # <a name="add-new-monthly-visual-studio-subscriptions-to-the-subscriptions-administration-portal"></a>Yeni aylık Visual Studio aboneliklerini abonelikler yönetim portalına ekleme
 Bir Azure aboneliği kullanarak yeni aylık Visual Studio abonelikleri satın aldığınızda kullanıcılara atamak için bunları abonelikler yönetim portalına eklemeniz gerekebilir.  
 
 ## <a name="how-do-i-know-if-i-need-to-add-my-subscriptions"></a>Nasıl yaparım? aboneliklerimi eklemem gerekiyor mu?
-Aylık abonelikler ekleme adımları, kuruluşunuzun zaten sahip olduğu abonelik türlerine ve yeni bir yönetici olup olmadığına bağlıdır.
+Aylık abonelikler ekleme adımları, kuruluşunuzun sahip olduğu abonelik türlerine ve yeni bir yönetici olup olmadığına bağlıdır.
 - Yeni bir yöneticiniz varsa, abonelik yönetimi portalında ilk kez oturum açtığınızda kullanıcı erişimi yönetici haklarına sahip olduğunuz Azure aboneliklerini denetleriz.  Sizin için aylık abonelikler bulduk, bunları otomatik olarak ekleyeceğiz. 
 - Aylık abonelikleri daha önce eklediyseniz veya yönetiyoruz, her oturum açışınızda yeni aylık abonelikler için denetim yapıyoruz. 
-- Toplu Lisanslama aracılığıyla elde edilen abonelikler için zaten bir yöneticiyseniz, ancak daha önce bu aylık abonelikler eklenmemiş veya daha önce eklenmediyse, bunları aşağıda belirtilen adımları kullanarak eklemeniz gerekir.
+- Toplu Lisanslama aracılığıyla elde edilen abonelikler için zaten bir yönetici yöneticisiyseniz, ancak daha önce bu aylık abonelikler eklenmemiş veya henüz yönetilmediyse, bunları aşağıda belirtilen adımları kullanarak eklemeniz gerekir.
 
 ## <a name="how-to-add-monthly-subscriptions"></a>Aylık abonelikler ekleme
 1. Konumundaki abonelikler yönetim portalında oturum açın <https://manage.visualstudio.com>

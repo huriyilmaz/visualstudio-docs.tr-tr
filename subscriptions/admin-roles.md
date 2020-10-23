@@ -1,31 +1,31 @@
 ---
-title: Yönetim portalında süper yönetici ve yönetici rolleri
+title: Visual Studio abonelikleri için süper yönetici ve yönetici rolleri
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 6601c395-f778-48c1-ab76-cf454b9193e4
-ms.date: 09/21/2020
+ms.date: 10/22/2020
 ms.topic: conceptual
 description: Süper yönetici ve yönetici rolleri ve yöneticiler atama hakkında bilgi edinin.
-ms.openlocfilehash: fc44845ed403e9bf942761203b75c2277fd1aff2
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: 491a8de27477f68b4344ad17b860b80b4ca96aa9
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "91022720"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467381"
 ---
-# <a name="super-admins-and-administrators-for-visual-studio-subscription-agreements"></a>Visual Studio abonelik anlaşmaları için süper Yöneticiler ve Yöneticiler
+# <a name="super-admins-and-admins-for-visual-studio-subscription-agreements"></a>Visual Studio abonelik anlaşmaları için süper Yöneticiler ve Yöneticiler
 
 Toplu lisanslama müşterileri için yeni Visual Studio abonelikleri yönetim portalında iki farklı rol vardır. Bu roller birincil/bildirim Iletişim rolü ve VLSC 'de var olan abonelik Yöneticisi rolü gibidir.
 
-**Süper Yöneticiler:** Bir kuruluş ilk kez ayarlandığında, birincil veya bildirimler Ilgili kişisi varsayılan olarak bir süper yönetici haline gelir. Birincil veya bildirimler Ilgili kişisi, ek süper Yöneticiler veya Yöneticiler atamayı seçebilir. Süper yönetici, diğer yöneticileri ve aboneler ekleyebilir ve kaldırabilir. Sistemde ikiden fazla süper yönetici varsa, bir süper yönetici, güvenlikle ilgili olarak, son iki ' i de silebilir.
+**Süper Yöneticiler:** Bir kuruluş ilk kez ayarlandığında, birincil veya bildirimler Ilgili kişisi varsayılan olarak bir süper yönetici haline gelir. Birincil veya bildirimler Ilgili kişisi, ek süper Yöneticiler veya Yöneticiler atamayı seçebilir. Süper yönetici, diğer yöneticileri de ve aboneler ekleyebilir ve kaldırabilir. Sistemde ikiden fazla süper yönetici varsa, bir süper yönetici, güvenlikle ilgili olarak, son iki ' i de silebilir.
 
-**Yöneticiler:** Yönetici yalnızca bir süper yönetici tarafından atanabilir. Bir yönetici yalnızca süper yönetici tarafından bu anlaşmalara atayan abonelikleri yönetebilir.
+**Yöneticiler:** Yönetici yalnızca bir süper yönetici tarafından atanabilir. Yönetici yalnızca süper yönetici tarafından bu abonelikleri atayan anlaşmaları yönetebilir.
 
-Yöneticilerin nasıl yönetileceği hakkında bir tanıtım izleyin. 
+Yöneticileri yönetme hakkında bir tanıtım izleyin. 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4th6L]
 
-## <a name="assigning-administrators"></a>Yöneticiler atama
+## <a name="assigning-admins"></a>Yönetici atama
 Yeni Yöneticiler (Yöneticiler) atamak için:
 1. https://manage.visualstudio.comAboneliklerin satın alındığı anlaşmada süper yönetici olarak atanmış bir e-posta adresi kullanarak oturum açın.
 2. **Yöneticileri Yönet**etiketli sekmeye tıklayın.
