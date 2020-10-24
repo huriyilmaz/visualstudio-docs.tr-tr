@@ -10,12 +10,12 @@ ms.date: 08/05/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 204777b0209b2ca0b1c88717e9908828743087d9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd31c04569b373591647cf3601d9afa4e63be882
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87805793"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92470868"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-enterprise-2019"></a>Visual Studio çekirdek Düzenleyicisi (Visual Studio Enterprise 2019 ile birlikte)
 
@@ -25,7 +25,7 @@ ms.locfileid: "87805793"
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. VisualStudio. Component. CoreEditor | Visual Studio temel Düzenleyicisi | 16.1.28811.260 | Gerekli
 Microsoft. VisualStudio. Component. Startpagedenemeler. cpp | C++ kullanıcıları için Visual Studio başlangıç sayfası | 16.0.28315.86 | İsteğe Bağlı
@@ -38,7 +38,7 @@ Microsoft. VisualStudio. Component. Startpagedenemeler. cpp | C++ kullanıcılar
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component. Microsoft. VisualStudio. Çzorexgeri | Razor dil Hizmetleri | 16.0.28714.129 | Gerekli
 Component. Microsoft. VisualStudio. Web. AzureFunctions | Azure Web Işleri araçları | 16.0.28714.129 | Gerekli
@@ -125,7 +125,7 @@ Microsoft. VisualStudio. Component. WCF. Tooling | Windows Communication Foundat
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component. Microsoft. VisualStudio. Çzorexgeri | Razor dil Hizmetleri | 16.0.28714.129 | Önerilen
 Component. Microsoft. Web. LibraryManager | Kitaplık Yöneticisi | 16.0.28315.86 | Önerilen
@@ -181,7 +181,7 @@ Microsoft. VisualStudio. Component. FSharp. Desktop | F # masaüstü dil desteğ
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. Component. PythonTools | Python dil desteği | 16.5.29515.121 | Önerilen
 Microsoft. Component. PythonTools. Minicondax64 | Python miniconda | 16.2.29003.222 | Önerilen
@@ -212,7 +212,7 @@ Microsoft. VisualStudio. Component. Windows10SDK. 18362 | Windows 10 SDK (10.0.1
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Gerekli
 Microsoft.Net. Component. 4.7.2. TargetingPack | .NET Framework 4.7.2 hedefleme paketi | 16.7.30310.162 | Gerekli
@@ -293,7 +293,7 @@ Microsoft. VisualStudio. ComponentGroup. WebToolsExtensions | ASP.NET ve web gel
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft.Net. Component. 3.5. DeveloperTools | .NET Framework 3,5 geliştirme araçları | 16.0.28517.75 | Gerekli
 Microsoft.Net. Component. 4.7.1. TargetingPack | .NET Framework 4.7.1 hedefleme paketi | 16.7.30310.162 | Gerekli
@@ -312,7 +312,7 @@ Component. UnityEngine. x86 | Unity 5,6 32-bit düzenleyici | 16.1.28811.260 | �
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component. MDD. Linux | Linux geliştirme için C++ | 16.5.29515.121 | Gerekli
 Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0.2 | Gerekli
@@ -329,7 +329,7 @@ Component. MDD. Linux. GCC. ARM | Katıştırılmış ve IoT geliştirme araçla
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Gerekli
 Microsoft. VisualStudio. Component. ClassDesigner | Sınıf Tasarımcısı | 16.0.28528.71 | Gerekli
@@ -383,7 +383,7 @@ Microsoft. VisualStudio. ComponentGroup. NativeDesktop. LLVM. Clang | Windows i�
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. VisualStudio. Component. ıntellicode | IntelliCode | 0.2 | Gerekli
 Microsoft. VisualStudio. Component. VC. Coreıde | C++ temel özellikleri | 16.7.30310.162 | Gerekli
@@ -430,7 +430,7 @@ Microsoft. VisualStudio. Component. Windows10SDK. 17763 | Windows 10 SDK (10.0.1
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component. Android. SDK25. Private | Android SDK kurulumu (API düzeyi 25) (C++ ile mobil geliştirme için yerel yükleme) | 16.0.28625.61 | Gerekli
 Component. OpenJDK | OpenJDK (Microsoft dağıtımı) | 16.1.28811.260 | Gerekli
@@ -439,7 +439,7 @@ Microsoft. VisualStudio. Component. VC. Coreıde | C++ temel özellikleri | 16.7
 Component. Android. NDK. R16B | Android NDK (R16B) | 16.7.30316.201 | Önerilen
 Component. ant | Apache Ant (1.9.3) | 1.9.3.8 | Önerilen
 Component. MDD. Android | C++ Android geliştirme araçları | 16.0.28517.75 | Önerilen
-Component. Android. NDK. R16B_3264 | Android NDK (R16B) (32 bit) | 16.7.30316.201 | İsteğe Bağlı
+Component.Android.NDK.R16B_3264 | Android NDK (R16B) (32 bit) | 16.7.30316.201 | İsteğe Bağlı
 Component. Google. Android. öykünücü. API25. Private | Google Android Emulator (API düzeyi 25) (yerel yüklemesi) | 16.1.28810.153 | İsteğe Bağlı
 Component. HAXM. Private | Intel Hardware Accelerated Execution Manager (HAXM) (yerel yüklemesi) | 16.0.28528.71 | İsteğe Bağlı
 Component. IncrediBuild | IncrediBuild-derleme hızlandırma | 16.5.29721.120 | İsteğe Bağlı
@@ -454,7 +454,7 @@ Component. MDD. IOS | C++ iOS geliştirme araçları | 16.0.28517.75 | İsteğe 
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component. Microsoft. VisualStudio. Çzorexgeri | Razor dil Hizmetleri | 16.0.28714.129 | Gerekli
 Component. Microsoft. Web. LibraryManager | Kitaplık Yöneticisi | 16.0.28315.86 | Gerekli
@@ -523,7 +523,7 @@ Microsoft.VisualStudio.ComponentGroup.MSIX. paketleme | MSIX paketleme araçlar�
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component. OpenJDK | OpenJDK (Microsoft dağıtımı) | 16.1.28811.260 | Gerekli
 Component. Xamarin | Xamarin | 16.7.30310.162 | Gerekli
@@ -554,7 +554,7 @@ Component. Android. SDK28 | Android SDK kurulumu (API düzeyi 28) | 16.2.29003.2
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component. Microsoft. VisualStudio. Çzorexgeri | Razor dil Hizmetleri | 16.0.28714.129 | Gerekli
 Component. Microsoft. Web. LibraryManager | Kitaplık Yöneticisi | 16.0.28315.86 | Gerekli
@@ -640,11 +640,11 @@ Microsoft. VisualStudio. ComponentGroup. ıısdevelopment | Geliştirme zamanı 
 
 **Kimliği:** Microsoft. VisualStudio. Workload. Node
 
-**Açıklama:** Zaman uyumsuz olay temelli bir JavaScript çalışma zamanı olan Node.js kullanarak ölçeklenebilir ağ uygulamaları oluşturun. 
+**Açıklama:** Zaman uyumsuz olay temelli bir JavaScript çalışma zamanı olan Node.js kullanarak ölçeklenebilir ağ uygulamaları oluşturun.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. VisualStudio. Component. JavaScript. Diagnostics | JavaScript tanılama | 16.0.28517.75 | Gerekli
 Microsoft. VisualStudio. Component. JavaScript. TypeScript | JavaScript ve TypeScript dil desteği | 16.7.30310.162 | Gerekli
@@ -667,7 +667,7 @@ Microsoft. VisualStudio. Component. VC. Tools. x86. x64 | MSVC v142-VS 2019 C++ 
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component. Microsoft. VisualStudio. Çzorexgeri | Razor dil Hizmetleri | 16.0.28714.129 | Gerekli
 Component. Microsoft. Web. LibraryManager | Kitaplık Yöneticisi | 16.0.28315.86 | Gerekli
@@ -730,7 +730,7 @@ Microsoft. VisualStudio. ComponentGroup. SharePoint. WıF | Windows Identity Fou
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. Component. PythonTools | Python dil desteği | 16.5.29515.121 | Gerekli
 Component. CPython3. x64 | Python 3 64-bit (3.7.8) | 3.7.8 | Önerilen
@@ -794,7 +794,7 @@ Microsoft. VisualStudio. ComponentGroup. Web | ASP.NET ve Web geliştirme araçl
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. Component. NetFX. Native | .NET Yerel | 16.5.29515.121 | Gerekli
 Microsoft. ComponentGroup. Blend | Visual Studio için Blend | 16.0.28315.86 | Gerekli
@@ -848,7 +848,7 @@ Microsoft. VisualStudio. ComponentGroup. UWP. VC. v141 | C++ (v141) Evrensel Win
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Gerekli
 Microsoft.Net. Component. 4.6. TargetingPack | .NET Framework 4,6 hedefleme paketi | 16.0.28517.75 | Gerekli
@@ -872,7 +872,7 @@ Microsoft. VisualStudio. Component. DslTools | Modelleme SDK 'Sı | 16.0.28315.8
 
 Bunlar herhangi bir iş yüküne dahil olmayan, ancak tek bir bileşen olarak seçilebilir olan bileşenlerdir.
 
-Bileşen KIMLIĞI | Name | Sürüm
+Bileşen KIMLIĞI | Ad | Sürüm
 --- | --- | ---
 Component. GitHub. VisualStudio | Visual Studio için GitHub Uzantısı | 2.5.9.5485
 Component. Xamarin. Profiler | Xamarin Profiler | 16.0.28315.86
@@ -888,7 +888,7 @@ Microsoft. net. Core. Component. SDK. 3.0 | .NET Core 3,0 çalışma zamanı (de
 Microsoft. NetCore. ComponentGroup. DevelopmentTools. 2.1 | Geliştirme araçları ve .NET Core 2,1 | 16.3.29207.166
 Microsoft. NetCore. ComponentGroup. Web. 2.1 | Web geliştirme araçları Plus .NET Core 2,1 | 16.3.29207.166
 Microsoft. VisualStudio. Component. AzureDevOps. Officetümleştirmesi | Azure DevOps Office tümleştirmesi | 16.0.28625.61
-Microsoft. VisualStudio. Component. Debugger. VSOnline | Visual Studio Codespaces için hata ayıklayıcı | 16.7.30310.162
+Microsoft. VisualStudio. Component. Debugger. VSOnline | GitHub Codespaces için hata ayıklayıcı | 16.7.30310.162
 Microsoft. VisualStudio. Component. git | Windows için Git | 16.0.28625.61
 Microsoft. VisualStudio. Component. LinqToSql | LINQ to SQL araçları | 16.0.28625.61
 Microsoft. VisualStudio. Component. TestTools. CodedUITest | Kodlanmış UI testi | 16.0.28327.66
