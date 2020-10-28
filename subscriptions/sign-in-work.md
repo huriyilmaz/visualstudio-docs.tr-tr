@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: f39a2672-c283-4755-93d3-31c7c7a032d0
-ms.date: 09/08/2020
+ms.date: 10/28/2020
 ms.topic: how-to
 description: İş veya okul hesabınızla Visual Studio aboneliğinizde nasıl oturum kullanabileceğinizi öğrenin.
-ms.openlocfilehash: 96b111c47e753b343d59c89e65f71eaa90132f6f
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 3ac4e9fedae66656d4dee2155c8a8dcbe9325970
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005813"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903384"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-work-or-school-account"></a>İş veya okul hesabınızla Visual Studio abonelikleriniz üzerinde oturum açma 
 
@@ -28,7 +28,7 @@ Bu makalede, çalışmanız veya okulunuz tarafından sağlanmış bir e-posta a
    > [!NOTE]
    > Bu adres, aldığınız abone hoş geldiniz e-postasında da tanımlanmıştır. Hoş geldiniz e-postasını bulmada sorun yaşıyorsanız lütfen önemsiz posta klasörlerinizi denetleyin.
 
-3. **Devam**’a tıklayın.
+3. **Devam** ’a tıklayın.
 4. Şirket oturum açma sayfanıza yönlendirilirsiniz.
 5. Parolanızı girin.
 6. **Oturum aç** ' a tıklayın
@@ -46,7 +46,7 @@ Ayrıca, şu anda seçili aboneliğinizi sağ üst köşede, Kullanıcı adını
    > [!NOTE]
    > Bu adres, abone Karşılama mektubunda de tanımlanır. Hoş geldiniz mektubu alınmadığında lütfen gereksiz posta klasörlerinizi denetleyin
 
-3. **Devam**’a tıklayın.
+3. **Devam** ’a tıklayın.
 4. Bir karar sayfasına yönlendirilirsiniz.
     - Abonelik, bir Azure Active Directory (AAD) kiracısıyla ilişkili bir "Iş veya okul) hesabıyla ilişkiliyse **iş veya okul hesabı** ' nı seçin.
     - Abonelik bir "Kurumsal" e-posta adresiyle ilişkiliyse, ancak aynı zamanda bir "kişisel" Microsoft hesabına (MSA) dönüştürülmüşse **Kişisel** ' i seçin.
@@ -57,7 +57,7 @@ Ayrıca, şu anda seçili aboneliğinizi sağ üst köşede, Kullanıcı adını
     - Bir yol başarısız olursa, diğerini deneyin.  Abonelik yöneticileri aboneliğinizi değiştirmiş olabilir.
 
 5. Parolanızı girin.
-6. **Oturum aç**’a tıklayın.
+6. **Oturum aç** ’a tıklayın.
 7. Bu noktada, "avantajlar" sayfası görüntülenmelidir.
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular

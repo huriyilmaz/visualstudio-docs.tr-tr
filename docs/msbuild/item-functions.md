@@ -1,5 +1,7 @@
 ---
 title: Öğe Işlevleri | Microsoft Docs
+description: Görev ve hedeflerdeki MSBuild kodunun, projedeki öğeler hakkında bilgi almak için nasıl öğe işlevleri çağırabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3f6299a8be52aef068746ca33e48341da55f778
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 94b94ef7b17633ab78f7eb91f61dd67ea2c8021d
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "82586887"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904633"
 ---
 # <a name="item-functions"></a>Öğe işlevleri
 
@@ -54,7 +56,7 @@ Aşağıdaki örnekte, bu dize öğesi işlevlerinin nasıl kullanılacağı gö
 
 Aşağıdaki tabloda, öğeler için kullanılabilen iç işlevler listelenmiştir.
 
-|İşlev|Örnek|Description|
+|İşlev|Örnek|Açıklama|
 |--------------|-------------|-----------------|
 |`Count`|`@(MyItem->Count())`|Öğelerin sayısını döndürür.|
 |`DirectoryName`|`@(MyItem->DirectoryName())`|`Path.DirectoryName`Her öğe için eşdeğerini döndürür.|

@@ -1,25 +1,25 @@
 ---
 title: Visual Studio aboneliklerinde yazılım başlıklarını indirme | Microsoft Docs
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: cabuschl
 ms.assetid: e2f2619c-7736-47e5-a066-5940d5994db9
-ms.date: 07/29/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde Microsoft yazılım başlıklarını bulmayı ve indirmeyi öğrenin
-ms.openlocfilehash: 4a267db59f1efc4912748846e61774966f0f6abe
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: e6a5b6a1caab199ec2b67108f539c1d68d545551
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "91005606"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903637"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde yazılım başlıkları indiriliyor
 Sahip olduğunuz Visual Studio aboneliğine bağlı olarak, kullanabileceğiniz çok çeşitli Microsoft yazılım başlıkları bulunabilir.  Bu makalede, aboneliğinizden en iyi şekilde yararlanmak için ihtiyacınız olan yazılımın nasıl konumlandırılmaları ve indirileceği açıklanır. 
 
 [Karşıdan yüklemeler](https://my.visualstudio.com/downloads/featured) sayfasında sizin için yalnızca aboneliğinize dahil olan indirmeler görüntülenir.  Birden fazla aboneliğiniz veya program üyeliğiniz varsa, şu anda farklı bir abonelik görüntülüyor olsanız bile, gösterilen İndirilenler **en yüksek abonelik** için olacaktır.  Örneğin, aynı oturum açma KIMLIĞIYLE ilişkili bir Visual Studio Enterprise aboneliğiniz ve Visual Studio Professional aboneliğiniz varsa, şu anda profesyonel abonelik avantajlarınızı görüntülüyor olsanız bile, gösterilen indirmeler kurumsal aboneliğe dahil edilir.  
 
-Aboneliğiniz, iş veya okul 'niz tarafından sağlanmışsa, abonelikler yöneticiniz, indirmelere erişip erişemeyeceğini denetler. İndirmelere erişimin devre dışı bırakılması, ürün anahtarlarına erişimi de devre dışı bırakır. İndirmelere ve ürün anahtarlarına erişiminiz yoksa ve bunları gerekmiyorsa [yöneticinize başvurun](contact-my-admin.md).
+Aboneliğiniz, iş veya okul 'niz tarafından sağlanmışsa, abonelikleriniz yöneticiniz, indirmelere erişip erişemeyeceğini denetler. İndirmelere erişimin devre dışı bırakılması, ürün anahtarlarına erişimi de devre dışı bırakır. İndirilenler ve ürün anahtarlarına erişiminiz yoksa ve bunları gerekmiyorsa [yöneticinizle iletişime geçin](contact-my-admin.md).
 
 > [!NOTE]
 > Microsoft 365 ürün anahtarlarının kullanılabilirliğiyle ilgili bir sorun olduğunu biliyoruz.  Nedeni araştırıyoruz ve sorun çözüldüğünde bu makaleyi güncelleştireceğiz. 

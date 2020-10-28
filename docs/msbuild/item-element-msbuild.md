@@ -1,5 +1,7 @@
 ---
 title: Item öğesi (MSBuild) | Microsoft Docs
+description: MSBuild 'in, Kullanıcı tanımlı bir öğe ve onun meta verilerini içermesi için öğe öğesini nasıl kullandığını öğrenin. Her öğe bir ItemGroup öğesinin alt öğesi olmalıdır.
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f235108c63eb063f0ddcd495385bd3325581332
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 51ecf68cacf0edca90893931642cd7fb6064f972
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85289020"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904641"
 ---
 # <a name="item-element-msbuild"></a>Item öğesi (MSBuild)
 
@@ -99,7 +101,7 @@ Ancak, `Version` meta verileri aşağıdaki sözdiziminde olduğu gibi bir özni
 
 @ () Gösterimini kullanmak \<myType> , türünde öğelerin bir koleksiyonun \<myType> noktalı virgülle ayrılmış bir dize listesine genişletilmesini ve bir parametreye geçirilmesini sağlar. Parametresi tür ise `string` , parametrenin değeri noktalı virgülle ayırarak öğelerin listesidir. Parametresi bir dizeler diziyse ( `string[]` ), her öğe noktalı virgül konumunu temel alarak diziye eklenir. Görev parametresi tür ise <xref:Microsoft.Build.Framework.ITaskItem> `[]` , bu değer, eklenen tüm meta verilerle birlikte öğe koleksiyonunun içeriğidir. Noktalı virgül dışında bir karakter kullanarak her öğeyi sınırlandırmak için @ ( \<myType> , ' \<separator> ') sözdizimini kullanın.
 
-MSBuild altyapısı ve gibi joker karakterleri `*` `?` ve * / \* \* / \* . cs*gibi özyinelemeli joker karakterleri değerlendirebilirler. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).
+MSBuild altyapısı ve gibi joker karakterleri `*` `?` ve */ \* \* / \* . cs* gibi özyinelemeli joker karakterleri değerlendirebilirler. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).
 
 ## <a name="examples"></a>Örnekler
 

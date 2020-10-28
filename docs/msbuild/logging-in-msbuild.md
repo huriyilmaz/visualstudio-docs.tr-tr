@@ -1,5 +1,7 @@
 ---
 title: MSBuild 'te günlüğe kaydetme | Microsoft Docs
+description: MSBuild Logging 'in bir günlük dosyasındaki derleme olaylarını, iletileri, uyarıları ve hataları yakalayıp derleme ilerlemesini izlemek için bir yol sağladığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a66164426b760798571fc35e5288158a8dae9943
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9de830003571f1f648cf06be634d9a773b95269f
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633557"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904335"
 ---
 # <a name="logging-in-msbuild"></a>MSBuild'de Günlük Kaydı
 

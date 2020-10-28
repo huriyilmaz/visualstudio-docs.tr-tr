@@ -1,5 +1,5 @@
 ---
-title: Yönetim portalında abonelikleri düzenleyin | Microsoft Docs
+title: Yönetim portalında Visual Studio aboneliklerini düzenleme | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
@@ -7,15 +7,15 @@ ms.assetid: 97ac8e4d-7a03-42f8-98cb-15bcaa90ef65
 ms.date: 09/21/2020
 ms.topic: how-to
 description: Yöneticilerin abonelik atamalarını nasıl düzenleyebileceğinizi öğrenin.
-ms.openlocfilehash: 060ae7c7679eb1bf9dc4da99ea9a1bf952ebc58b
-ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
+ms.openlocfilehash: d10e9ee779c6fc37c886bb1b5e00e15913bab7e2
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91022569"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904169"
 ---
 # <a name="edit-visual-studio-subscription-assignments"></a>Visual Studio abonelik atamalarını Düzenle
-Bir abonelik Yöneticisi olarak, kuruluşunuzdaki kişilere atanan aboneliklerde değişiklikler yapabilirsiniz.  Bu makale, yapabileceğiniz değişiklik türlerini açıklar ve gerekli adımları sağlar.
+Abonelik Yöneticisi olarak, kuruluşunuzdaki kişilere atanan aboneliklerde değişiklikler yapabilirsiniz.  Bu makale, yapabileceğiniz değişiklik türlerini açıklar ve gerekli adımları sağlar.
 
    > [!NOTE]
    > Azure Active Directory bir grup aracılığıyla atanan bir abonenin abonelik ayrıntılarını değiştirmeniz gerekiyorsa, bunları gruptan kaldırmanız ve tek tek yönetim portalına eklemeniz gerekir.  
@@ -27,7 +27,7 @@ Bir aboneyi düzenlemek için, farenizi onun üzerine getirdiğinizde abonenin e
 > [!div class="mx-imgBorder"]
 > ![Düzenlemek için abone seçin](_img/edit-license/select-subscriber.png "Üç noktaya tıklayın ve Düzenle ' yi seçin.")
 
-Abonenin adı, soyadı, abonelik düzeyi, e-posta adresi, ülke, dil, indirmeler ve başvuru alanını güncelleştirebilirsiniz. Abonenin bilgilerini düzenleyin ve **Kaydet**' e tıklayın.
+Abonenin adı, soyadı, abonelik düzeyi, e-posta adresi, ülke, dil, indirmeler ve başvuru alanını güncelleştirebilirsiniz. Abonenin bilgilerini düzenleyin ve **Kaydet** ' e tıklayın.
 
 ## <a name="edit-multiple-subscribers-using-bulk-edit"></a>Toplu düzenleme kullanarak birden çok aboneyi düzenleme
 
@@ -42,7 +42,7 @@ Toplu düzenleme kullanarak birden çok aboneyi nasıl düzenleyeceğinizi öğr
    > [!IMPORTANT]
    > Abonelik düzeyleri (örn. Enterprise, Professional, vs.) ve abonelik GUID 'Leri toplu düzenleme kullanılarak değiştirilemez.  Kullanıcılarınıza belirli abonelik GUID 'Leri atamanız gerekiyorsa, abonelik KIMLIĞINI seçerek kullanıcı ekleme işlemini kullanın. Toplu düzenleme şablonunda bu öğelerle değiştirilen bir karşıya yüklemeyi denerseniz karşıya yükleme başarısız olur.
 
-1. Birden çok aboneyi aynı anda düzenlemek için, aboneler sekmesine gidin. Üstteki şeritte **toplu düzenleme**' ye tıklayın.
+1. Birden çok aboneyi aynı anda düzenlemek için, aboneler sekmesine gidin. Üstteki şeritte **toplu düzenleme** ' ye tıklayın.
 
 2. Toplu düzenleme, abone bilgilerinde düzenlemeler yapmak için bir Excel şablonu kullanır. Toplu düzenleme kutusunda, tüm bilgileri de dahil olmak üzere geçerli aboneler listesini indirmek için **Bu Excel 'ı dışarı aktar** ' a tıklayın.
    > [!div class="mx-imgBorder"]
@@ -50,7 +50,7 @@ Toplu düzenleme kullanarak birden çok aboneyi nasıl düzenleyeceğinizi öğr
 
 3. Daha sonra, dosyayı kolayca bulabilmek ve karşıya yüklemeden önce gerekli değişiklikleri yapabilmek için dosyayı yerel olarak kaydedin. Başarılı bir karşıya yükleme işlemi sağlamak için, toplu düzenleme dosyasındaki **abonelik düzeyini veya ABONELIK GUID 'sini düzenlemeyin** , yüklemenin başarısız olmasına neden olur.
 
-4. Visual Studio abonelikleri yönetim portalına dönün ve toplu düzenleme iletişim kutusunda, **Araştır**' a tıklayın. Kaydettiğiniz Excel dosyasını seçin ve **Tamam**' a tıklayın. Karşıya yükleme ilerlemesini ekranda görürsünüz.
+4. Visual Studio abonelikleri yönetim portalına dönün ve toplu düzenleme iletişim kutusunda, **Araştır** ' a tıklayın. Kaydettiğiniz Excel dosyasını seçin ve **Tamam** ' a tıklayın. Karşıya yükleme ilerlemesini ekranda görürsünüz.
    > [!div class="mx-imgBorder"]
    > ![Lisans-toplu düzenleme dosya yükleme](_img/edit-license/edit-license-bulk-file-upload1.png "Tamamlanan Excel dosyanızın konumuna gidin, dosyayı seçin ve Tamam ' a tıklayın.")
 

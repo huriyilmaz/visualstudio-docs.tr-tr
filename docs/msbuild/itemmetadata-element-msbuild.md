@@ -1,5 +1,7 @@
 ---
 title: ItemMetadata öğesi (MSBuild) | Microsoft Docs
+description: Meta veri değerine sahip kullanıcı tanımlı bir öğe meta veri anahtarı içeren MSBuild ItemMetadata öğesi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 18e1722fcd6867ca5e8ae52e220ff0a3dd2a3b7f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aba274068d8cba4f22526fdefac36d6c75f9f1e2
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633622"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903597"
 ---
 # <a name="itemmetadata-element-msbuild"></a>ItemMetadata öğesi (MSBuild)
 

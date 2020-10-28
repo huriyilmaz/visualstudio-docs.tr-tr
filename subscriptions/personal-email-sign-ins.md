@@ -1,25 +1,25 @@
 ---
-title: VLSC 'de görünen kişisel e-postalar
+title: VLSC 'de Visual Studio abonelikleri için kişisel e-postalar
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 3f4b0528-03f0-4a02-b3c3-a39292a9bbe1
-ms.date: 09/22/2020
+ms.date: 10/28/2020
 ms.topic: conceptual
 description: Visual Studio abonelikleri – My aboneleri için hotmail veya Gmail adreslerini görüyorum mi?
-ms.openlocfilehash: dc2de6c852f39f789fb07358384ad490d13f137c
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: fda7dab50c2151049e0feffa50609bf4c38e38cc
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "91022680"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904251"
 ---
 # <a name="visual-studio-subscriptions--why-do-i-see-personal-accounts-for-my-subscribers"></a>Visual Studio abonelikleri – aboneler için kişisel hesapları neden görüyorum?
-Şirketler Toplu Lisanslama hizmeti Merkezi 'nden (VLSC) yeni Visual Studio [abonelikleri yönetim portalına](https://manage.visualstudio.com)geçirildikten sonra, Yöneticiler, bazı aboneler Için "oturum açma e-posta adresinin" hotmail veya Outlook gibi kişisel bir e-posta adresi gösterdiğini öğrenmektir.  
+Şirketler Toplu Lisanslama hizmeti Merkezi 'nden (VLSC) yeni Visual Studio [abonelikleri yönetim portalına](https://manage.visualstudio.com)geçirildikten sonra, Yöneticiler, bazı aboneler Için "oturum açma e-posta adresinin" hotmail veya Outlook gibi kişisel bir e-posta adresi gösterdiğini bulmamaktadır.  
 
 ## <a name="cause"></a>Nedeni
 Bu senaryo, eski MSDN abone deneyimiyle ilişkili oturum açma işlemlerinden dolayı oluşur. Kullanıcılar toplu lisans hizmeti Merkezi 'nden (VLSC), değişiklikler olmadan Visual Studio abonelikleri yönetim portalına geçirildi. Yöneticiler, kullanıcıların abonelik avantajlarına erişmek için kişisel hesapları kullandığını fark edemeyebilir. 2016 ' de tamamlanan Visual Studio abonesi geçişleri öncesinde, Visual Studio aboneliğini başarıyla kullanmak için iki eylem gerekiyordu:
-1. "Atanan" Yönetici, iş veya okul e-posta adreslerini kullanarak tek bir abone için aboneliği "atandı".
+1. "Atanmış" Yönetici, iş veya okul e-posta adreslerini kullanarak bireysel bir aboneye abonelik.
 2. Abone "etkinleştirildi".
 
 Abone etkinleştirme işlemi sırasında: oturum açmak için bir Microsoft hesabı (MSA) gerekiyordu. Abone, iş veya okul hesabını (ör. bir MSA) yapmayı denemediyse tasha@contoso.com , yeni BIR MSA oluşturabilir veya var olan bir bu kişinin faydalanabilir. Bunun sonucunda "oturum açma e-posta adresi", "e-posta adresi atandı" olarak farklılık Açamıştı.

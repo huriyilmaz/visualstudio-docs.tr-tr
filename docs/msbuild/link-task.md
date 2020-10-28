@@ -1,5 +1,7 @@
 ---
 title: Bağlantı görevi | Microsoft Docs
+description: MSBuild 'in, COFF nesne dosyalarını ve kitaplıklarını bağlayan link.exe Microsoft C++ bağlayıcı aracını kaydırmak için bağlantı görevini nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -30,16 +32,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01105e3fd4c86d57077df7804e66592e32ebae07
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 160d4fa3a1058e0cb81e5d25720d9194d90fdc39
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "78865355"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904060"
 ---
 # <a name="link-task"></a>Bağlantı görevi
 
-, Microsoft C++ bağlayıcı aracı *link.exe*sarmalanmış. Bağlayıcı aracı ortak nesne dosyası biçimi (COFF) nesne dosyalarını ve kitaplıklarını, yürütülebilir (*. exe*) dosya veya dinamik bağlantı KITAPLıĞı (dll) oluşturmak için bağlar. Daha fazla bilgi için bkz. [bağlayıcı seçenekleri](/cpp/build/reference/linker-options) ve [komut satırından MSBuild 'i kullanma](/cpp/build/msbuild-visual-cpp) ve [komut satırından Microsoft C++ araç takımını kullanma](/cpp/build/building-on-the-command-line).
+, Microsoft C++ bağlayıcı aracı *link.exe* sarmalanmış. Bağlayıcı aracı ortak nesne dosyası biçimi (COFF) nesne dosyalarını ve kitaplıklarını, yürütülebilir ( *. exe* ) dosya veya dinamik bağlantı KITAPLıĞı (dll) oluşturmak için bağlar. Daha fazla bilgi için bkz. [bağlayıcı seçenekleri](/cpp/build/reference/linker-options) ve [komut satırından MSBuild 'i kullanma](/cpp/build/msbuild-visual-cpp) ve [komut satırından Microsoft C++ araç takımını kullanma](/cpp/build/building-on-the-command-line).
 
 ## <a name="parameters"></a>Parametreler
 
@@ -341,7 +343,7 @@ ms.locfileid: "78865355"
 
   İsteğe bağlı **Boolean** parametresi.
 
-  İse `true` , bir *eşleme dosyası*oluşturur. Eşleme dosyasının dosya adı uzantısı *. Map*' dir.
+  İse `true` , bir *eşleme dosyası* oluşturur. Eşleme dosyasının dosya adı uzantısı *. Map* ' dir.
 
   Daha fazla bilgi için bkz. [/Map (mapfile üret)](/cpp/build/reference/map-generate-mapfile).
 
@@ -605,7 +607,7 @@ ms.locfileid: "78865355"
 
   İsteğe bağlı **Boolean** parametresi.
 
-  `true`Çıktıyı kaydet etkinse, kayıt defteri yazmaları **HKEY_CLASSES_ROOT** **HKEY_CURRENT_USER**yeniden yönlendirilmeye zorlar.
+  `true`Çıktıyı kaydet etkinse, kayıt defteri yazmaları **HKEY_CLASSES_ROOT** **HKEY_CURRENT_USER** yeniden yönlendirilmeye zorlar.
 
 - **PreprocessOutput**
 
@@ -699,7 +701,7 @@ ms.locfileid: "78865355"
 
   Daha fazla bilgi için bkz. [/verbose (ilerleme Iletilerini Yazdır)](/cpp/build/reference/verbose-print-progress-messages).
 
-- **Kaynaklar**
+- **Ğına**
 
   Gerekli `ITaskItem[]` parametre.
 

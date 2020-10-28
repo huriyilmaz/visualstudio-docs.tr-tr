@@ -2,17 +2,17 @@
 title: Visual Studio toplu lisans müşterileri için yönetim portalına erişme | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 7aaa4727-00ef-41dc-937d-8d46973aaf56
-ms.date: 10/21/2020
+ms.date: 10/28/2020
 ms.topic: conceptual
 description: Toplu lisans sözleşmeleriyle ilgili yöneticilerin Visual Studio abonelikleri yönetim portalına nasıl erişebileceğinizi öğrenin
-ms.openlocfilehash: e5b95d2afcb9aec822b3a1ec63e76562c9d255e6
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: 85e82eed6b8810e7e6a2f8622aead9d50323841d
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353440"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904217"
 ---
 # <a name="accessing-the-admin-portal-as-an-admin-on-a-volume-license-agreement"></a>Toplu lisans sözleşmesinde yönetici olarak yönetim portalına erişme
 

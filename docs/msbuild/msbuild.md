@@ -1,5 +1,7 @@
 ---
 title: MSBuild | Microsoft Docs
+description: Microsoft Build Engine (MSBuild) platformunun derlemeleri denetlemek için bir XML şemasına sahip bir proje dosyası nasıl sağladığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +13,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e9f4614967f1307bc1faaaaba12a2dde1e8cad0
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: d7e42452d8ee59142c4f906d928378d1fb44bf67
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099277"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904515"
 ---
 # <a name="msbuild"></a>MSBuild
 
 Microsoft Build Engine, uygulama oluşturmaya yönelik bir platformdur. MSBuild olarak da bilinen bu altyapı, derleme platformunun yazılım işleme ve derleme şeklini denetleyen bir proje dosyası için bir XML şeması sağlar. Visual Studio MSBuild kullanır, ancak MSBuild, Visual Studio 'ya bağlı değildir. Proje veya çözüm dosyanızda *msbuild.exe* çağırarak, ürünleri Visual Studio 'nun yüklü olmadığı ortamlarda düzenleyebilir ve oluşturabilirsiniz.
 
- Visual Studio, yönetilen projeleri yüklemek ve derlemek için MSBuild 'i kullanır. Visual Studio 'daki proje dosyaları (*. csproj*, *. vbproj*, *. vcxproj*ve diğerleri), IDE kullanarak bir proje oluşturduğunuzda yürütülen MSBuild xml kodunu içerir. Visual Studio projeleri tipik geliştirme işlerini yapmak için gerekli tüm ayarları ve derleme süreçlerini içeri aktarır, ancak bunları Visual Studio içinden genişletebilir veya bir XML Düzenleyicisi kullanarak değiştirebilirsiniz.
+ Visual Studio, yönetilen projeleri yüklemek ve derlemek için MSBuild 'i kullanır. Visual Studio 'daki proje dosyaları ( *. csproj* , *. vbproj* , *. vcxproj* ve diğerleri), IDE kullanarak bir proje oluşturduğunuzda yürütülen MSBuild xml kodunu içerir. Visual Studio projeleri tipik geliştirme işlerini yapmak için gerekli tüm ayarları ve derleme süreçlerini içeri aktarır, ancak bunları Visual Studio içinden genişletebilir veya bir XML Düzenleyicisi kullanarak değiştirebilirsiniz.
 
  C++ için MSBuild hakkında daha fazla bilgi için bkz. [MSBuild (c++)](/cpp/build/msbuild-visual-cpp).
 
@@ -53,7 +55,7 @@ Bu makalede MSBuild 'e genel bakış sunulmaktadır. Tanıtım öğreticisi içi
 
 ## <a name="use-msbuild-at-a-command-prompt"></a>Bir komut isteminde MSBuild kullanma
 
- MSBuild 'i komut isteminde çalıştırmak için, uygun komut satırı seçenekleriyle birlikte *MSBuild.exe*bir proje dosyası geçirin. Komut satırı seçenekleri özellikleri ayarlamanıza, belirli hedefleri yürütmenizi ve yapı sürecini denetleyen diğer seçenekleri ayarlamanıza olanak sağlar. Örneğin, özelliği olarak ayarlanmış *myproj. proj* dosyasını oluşturmak için aşağıdaki komut satırı sözdizimini kullanın `Configuration` `Debug` .
+ MSBuild 'i komut isteminde çalıştırmak için, uygun komut satırı seçenekleriyle birlikte *MSBuild.exe* bir proje dosyası geçirin. Komut satırı seçenekleri özellikleri ayarlamanıza, belirli hedefleri yürütmenizi ve yapı sürecini denetleyen diğer seçenekleri ayarlamanıza olanak sağlar. Örneğin, özelliği olarak ayarlanmış *myproj. proj* dosyasını oluşturmak için aşağıdaki komut satırı sözdizimini kullanın `Configuration` `Debug` .
 
 ```cmd
 MSBuild.exe MyProj.proj -property:Configuration=Debug
@@ -154,7 +156,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
 ## <a name="use-msbuild-in-visual-studio"></a>Visual Studio 'da MSBuild 'i kullanma
 
- Visual Studio, yönetilen projeler hakkında yapı bilgilerini depolamak için MSBuild proje dosyası biçimini kullanır. Visual Studio arabirimi kullanılarak eklenen veya değiştirilen proje ayarları, içinde yansıtılır *. \* * her proje için oluşturulan proj dosyası. Visual Studio yönetilen projeler oluşturmak için MSBuild 'in barındırılan bir örneğini kullanır. Bu, yönetilen bir projenin Visual Studio 'da veya bir komut isteminde (Visual Studio yüklü olmasa bile) derolabileceği ve sonuçların aynı olacağı anlamına gelir.
+ Visual Studio, yönetilen projeler hakkında yapı bilgilerini depolamak için MSBuild proje dosyası biçimini kullanır. Visual Studio arabirimi kullanılarak eklenen veya değiştirilen proje ayarları, içinde yansıtılır *. \** her proje için oluşturulan proj dosyası. Visual Studio yönetilen projeler oluşturmak için MSBuild 'in barındırılan bir örneğini kullanır. Bu, yönetilen bir projenin Visual Studio 'da veya bir komut isteminde (Visual Studio yüklü olmasa bile) derolabileceği ve sonuçların aynı olacağı anlamına gelir.
 
  Visual Studio 'da MSBuild 'i kullanma hakkında bir öğretici için bkz. [Izlenecek yol: MSBuild kullanma](../msbuild/walkthrough-using-msbuild.md).
 
@@ -168,7 +170,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
 - Örneğin, Silverlight gibi .NET Framework dışındaki çerçeveleri hedefleyebilirsiniz.
 
-- Hedef çerçevenin önceden tanımlanmış bir alt kümesi olan bir *çerçeve profilini*hedefleyebilirsiniz.
+- Hedef çerçevenin önceden tanımlanmış bir alt kümesi olan bir *çerçeve profilini* hedefleyebilirsiniz.
 
 - Geçerli .NET Framework sürümü için bir hizmet paketi yayınlanmışsa, hedefleyebilirsiniz.
 

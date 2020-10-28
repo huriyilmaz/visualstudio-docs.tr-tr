@@ -1,5 +1,7 @@
 ---
 title: LC görevi | Microsoft Docs
+description: MSBuild 'in bir. licx dosyasından bir. License dosyası oluşturan LC.exe kaydırmak için LC görevini nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,16 +20,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 865167b9182ca1f2264900a3e71ddeb4983e25ef
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 70c996d5a8d1d4bf296a395bfb64ead6eba1bb01
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "82167403"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903580"
 ---
 # <a name="lc-task"></a>LC görevi
 
-. *Licx* dosyasından bir *. license* dosyası oluşturan *LC.exe*kaydırır. *LC.exe*hakkında daha fazla bilgi için bkz. [Lc.exe (lisans derleyicisi)](/dotnet/framework/tools/lc-exe-license-compiler).
+. *Licx* dosyasından bir *. license* dosyası oluşturan *LC.exe* kaydırır. *LC.exe* hakkında daha fazla bilgi için bkz. [Lc.exe (lisans derleyicisi)](/dotnet/framework/tools/lc-exe-license-compiler).
 
 ## <a name="parameters"></a>Parametreler
 
@@ -40,7 +42,7 @@ Aşağıdaki tabloda, görevi için parametreler açıklanmaktadır `LC` .
 |`OutputDirectory`|İsteğe bağlı `String` parametre.<br /><br /> Çıkış *. Lisans* dosyalarının yerleştirileceği dizini belirtir.|
 |`OutputLicense`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> çıkış parametresi.<br /><br /> *. Lisanslar* dosyasının adını belirtir. Bir ad belirtmezseniz, *. licx* dosyasının adı kullanılır ve *. lisanslar* dosyası *. licx* dosyasını içeren dizine yerleştirilir.|
 |`ReferencedAssemblies`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> *. License* dosyası oluşturulurken yüklenecek olan başvurulan bileşenleri belirtir.|
-|`SdkToolsPath`|İsteğe bağlı `String` parametre.<br /><br /> *resgen.exe*gibi SDK araçlarının yolunu belirtir.|
+|`SdkToolsPath`|İsteğe bağlı `String` parametre.<br /><br /> *resgen.exe* gibi SDK araçlarının yolunu belirtir.|
 |`Sources`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> *. Lisanslar* dosyasına dahil edilecek lisanslı bileşenleri içeren öğeleri belirtir. Daha fazla bilgi için `/complist` [Lc.exe (lisans derleyicisi)](/dotnet/framework/tools/lc-exe-license-compiler)içindeki anahtara yönelik belgelere bakın.|
 
 [!INCLUDE [ToolTaskExtension arguments](includes/tooltaskextension-base-params.md)]

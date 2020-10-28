@@ -1,18 +1,18 @@
 ---
-title: Abonelikler yönetim portalındaki atamaları silme | Microsoft Docs
+title: Abonelikler yönetim portalındaki Visual Studio abonelik atamalarını silme | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: e49242bc-e9f2-49e8-8caa-f574d508aba6
-ms.date: 10/21/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 description: Yöneticilerin Visual Studio abonelikleri yönetim portalındaki abonelik atamalarını nasıl silebileceğinizi öğrenin
-ms.openlocfilehash: e1c5395bc2cd2002d8eed62d69697ec61d9c0829
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 22a1c55bcaef436d1a29eb84b93a57f407114a1e
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436929"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904482"
 ---
 # <a name="delete-assignments-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde atamaları silme
 Bir abone artık şirketten ayrıldıklarında, bir projeyi tamamlamada veya yeni bir iş rolüne geçiş yaparken olduğu gibi bir Visual Studio aboneliği gerektirdiğinde, aboneliğini kaldırabilir ve başka birine atayabilirsiniz. Aboneliği yeniden atadığınızda, tüm abone avantajlarının sıfırlanmadığını lütfen unutmayın.  Yeni Kullanıcı, talep edilmemiş anahtarları talep edebilir ve daha önce **talep edilen anahtarları görüntüleyebilir, ancak** talep limitleri sıfırlanmaz.  Kurumsal anlaşmalar (EA) olan kuruluşlar için, özgün kullanıcı tarafından kullanılan Pluralaltim eğitimi gibi tüm avantajlar sıfırlanır. 
@@ -23,8 +23,8 @@ Atamaları silme hakkında bilgi edinmek için bu videoyu izleyin veya okumaya d
 
 ## <a name="delete-a-subscription-assignment"></a>Abonelik atamasını silme
 1. Kaldırmak istediğiniz abonenin adına tıklayın. Kaldırmak üzere birden çok abone seçmek için, abone adının solundaki daireye tıklayarak her birini seçebilirsiniz.  Alternatif olarak, **CTRL** tuşunu basılı tutarak kaldırmak istediğiniz her aboneye tıklayabilirsiniz. Bir dizi aboneyi kaldırmak için, ilk birine tıklayın, **SHIFT** tuşuna basın ve son ' a tıklayın.  Tüm aboneleri seçmek ve kaldırmak için **CTRL + A** tuşlarına basın. Bu örnekte, üç adet aboneler, Kai ve Madison-silinir. 
-2. Seçili aboneyi silmek için **Sil**' e tıklayın.
-3. İletiyi silme işlemini onaylamanızı isteyen göründüğünde **Tamam**' a tıklayın.
+2. Seçili aboneyi silmek için **Sil** ' e tıklayın.
+3. İletiyi silme işlemini onaylamanızı isteyen göründüğünde **Tamam** ' a tıklayın.
    > [!div class="mx-imgBorder"]
    > ![Aboneleri Sil](_img/delete-license/delete-subscribers.png "Silmek istediğiniz kullanıcıları seçin ve Sil ' e tıklayın. Birden çok aboneyi seçmek için CTRL ve Shift tuşlarını kullanabilirsiniz.")
 

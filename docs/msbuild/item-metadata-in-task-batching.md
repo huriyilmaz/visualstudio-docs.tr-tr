@@ -1,5 +1,7 @@
 ---
 title: Görev toplu Işleme içindeki öğe meta verileri | Microsoft Docs
+description: MSBuild 'in görev toplu işleminde, öğe listelerini farklı kategorilere veya toplu işlemlere bölmek ve her toplu iş ile bir kez görev çalıştırmak için öğe meta verilerini nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6152b0e64286c3cadedfcafb0ac530616c4012a6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1d67f740857dc93b997e206c43dd52d9887f3e9
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288994"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903727"
 ---
 # <a name="item-metadata-in-task-batching"></a>Toplu görev işlemede öğe meta verileri
 

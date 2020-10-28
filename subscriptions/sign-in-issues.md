@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 176c7f11-b19d-49e9-a6dd-b2e5da5e8480
-ms.date: 03/11/2020
+ms.date: 10/28/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde oturum açarken meydana çıkabilecek sorunlar hakkında bilgi edinin
-ms.openlocfilehash: 05d610a9dbfb3ac8afe3d49cecde37320c2c250f
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: cf89d2deff2a5e9e81d065fbb7efda8097102d03
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005283"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903455"
 ---
 # <a name="issues-signing-in-to-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde oturum açma sorunları
 Visual Studio aboneliğinizi kullanmak için önce oturum açmalısınız.  Aboneliğinize bağlı olarak, bunu bir Microsoft hesabı (MSA) veya bir Azure Active Directory (AAD) kimliğiyle ayarlamış olabilirsiniz.  Bu makalede, aboneliğinizde oturum açarken karşılaşabileceğiniz bazı sorunlar ele alınmaktadır.
@@ -21,7 +21,7 @@ Visual Studio aboneliğinizi kullanmak için önce oturum açmalısınız.  Abon
 E-posta etki alanı Azure AD 'de yapılandırıldığında, iş/okul e-posta adresi kullanarak yeni bir kişisel Microsoft hesabı (MSA) oluşturma olanağına artık izin verilmez. Bu ne anlama geliyor? Kuruluşunuz Microsoft 'un Azure AD 'ye bağlı Microsoft 365 veya diğer iş hizmetlerini kullanıyorsa ve Azure AD kiracınıza bir etki alanı adı eklediyseniz, kullanıcılar artık etki alanındaki bir e-posta adresini kullanarak yeni bir kişisel Microsoft hesabı oluşturamayacak.
 
 ### <a name="why-was-this-change-made"></a>Bu değişiklik neden yapıldı?
-Kullanıcı adı olarak iş adresi olan bir kişisel Microsoft hesabına sahip olmak, son kullanıcılar ve BT departmanlarına benzer sorunlarla karşılaşır. Örnek:
+Kullanıcı adı olarak iş adresi olan bir kişisel Microsoft hesabına sahip olmak, son kullanıcılar ve BT departmanlarına benzer sorunlarla karşılaşır. Örneğin:
 - Kullanıcılar kendi kişisel Microsoft hesabı, iş belgelerini OneDrive 'a kaydederken uyumlu olduğunu düşünebilir.
 - Bir kuruluştan ayrılan kullanıcılar genellikle iş e-posta adreslerine erişimi kaybeder. Kullanıcılar, parolalarını unutduklarında kendi kişisel Microsoft hesabı geri yükleyemeyebilir. Çevirme tarafı, BT departmanının parolalarını sıfırlamasına ve eski çalışanların kişisel hesabına alabilirler.
 - BT departmanlarının hesap sahipliğine ve güvenliğine ilişkin yanlış bir anlamı vardır. Ancak kullanıcıların, iş e-posta adreslerine yalnızca bir kez bir kod gidiş dönüş yapması ve bu hesabın hesabını gelecekte dilediğiniz zaman yeniden adlandırabilmeleri gerekir.
@@ -32,12 +32,12 @@ Bu durum özellikle aynı e-posta adresine sahip iki hesabı olan kullanıcılar
 İş veya okul e-posta adresiyle bir Microsoft tüketici uygulamasına kaydolmayı denerseniz, aşağıdaki iletiyi görürsünüz.
 
    > [!div class="mx-imgBorder"]
-   > ![İş e-postası ile hesap oluşturulamıyor](_img/sign-in-issues/cannot-use-work-email.png)
+   > ![İş e-postası ile hesap oluşturulamıyor](_img/sign-in-issues/cannot-use-work-email.png "Hesabınızı oluşturmak için bir Kullanıcı adı ve parola girin.")
 
 Ancak, kişisel ve iş/okul hesaplarını destekleyen bir Microsoft uygulamasına kaydolmayı denerseniz şu iletiyi görmeniz gerekir:
 
    > [!div class="mx-imgBorder"]
-   > ![Desteklenen iş/okul hesapları](_img/sign-in-issues/existing-account.png)
+   > ![Desteklenen iş/okul hesapları](_img/sign-in-issues/existing-account.png "İş veya okul e-posta adresi ile burada kaydolabilirsiniz...")
 
 ### <a name="are-existing-accounts-affected"></a>Mevcut hesaplar etkileniyor mu?
 Burada açıklanan kaydolma bloğu yalnızca yeni hesapların oluşturulmasını engeller. Zaten bir iş/okul e-posta adresi olan bir Microsoft hesabına sahip olan kullanıcılar üzerinde hiçbir etkisi yoktur. Bu durumda zaten bir kişisel Microsoft hesabı yeniden adlandırmayı daha kolay hale getirdik. Bu [Destek makalesinde](https://windows.microsoft.com/en-US/Windows/rename-personal-microsoft-account) basit adım adım yönergeler sunulmaktadır. Kişisel Microsoft hesabı yeniden adlandırılması, Kullanıcı adının değiştirilmesi anlamına gelir ve iş e-postanızı veya Microsoft 365 gibi iş hizmetlerinde oturum açma şeklini etkilemez. Ayrıca, kişisel öğelerinizi etkilemez; yalnızca oturum açma şeklini değiştirir. Başka bir (kişisel) e-posta adresi kullanabilir, @outlook.com Microsoft 'tan yeni bir e-posta adresi alabilir veya telefon numaranızı yeni bir Kullanıcı adı olarak kullanabilirsiniz.
@@ -61,7 +61,7 @@ Oturum açmak için kullanılan hesap türüne bağlı olarak, kullanılabilir a
 Bir şirketin Dizin oturum açması için bir Microsoft Online hizmetine sahip olması gibi diğer JohnD@contoso.com adlara ve kullanıcılara gibi diğer adlar veya kolay adlar kullanarak e-posta hesaplarına erişim varsa, bu yana de erişilebilir John.Doe@contoso.com . Toplu Lisanslama Hizmet Merkezi (VLSC) üzerinden aboneliklerini yöneten birçok müşteri için, sunulan () e-posta adresi John.Doe@contoso.com JohnD@contoso.com "Iş veya okul hesabı" seçeneği aracılığıyla başarılı kimlik doğrulaması için gereken dizin adresiyle () eşleşmediğinden, bu işlem başarısız oturum açma deneyimine yol açabilir.
 
 ### <a name="what-options-do-i-have"></a>Hangi seçeneklere sahip mıyım?
-Bir abone perspektifinden, şirketinizin kimlik yapılandırmasını anlamak için öncelikle yöneticinizle birlikte çalışmanız önemlidir. Gerekirse, yöneticinizin hesap ayarlarınızı yönetim portalından güncelleştirmesi veya şirket e-posta adresinizi kullanarak bir Microsoft hesabı (MSA) oluşturmanız gerekebilir. MSA oluşturma adımlarını uygulamadan önce, bu eylemi gerçekleştirmek için herhangi bir ilke veya sorunla ilgili olarak yöneticinizle görüşün. 
+Bir abone perspektifinden, şirketinizin kimlik yapılandırmasını anlamak için öncelikle yöneticinizle birlikte çalışmanız önemlidir. Gerekirse, yöneticinizin hesap ayarlarınızı yönetici portalından güncelleştirmesi veya şirket e-posta adresinizi kullanarak bir Microsoft hesabı (MSA) oluşturmanız gerekebilir. MSA oluşturma adımlarını uygulamadan önce, bu eylemi gerçekleştirmek için herhangi bir ilke veya sorunla ilgili olarak yöneticinizle konuşun. 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

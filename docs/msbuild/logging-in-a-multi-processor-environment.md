@@ -1,5 +1,7 @@
 ---
 title: Çok Işlemcili bir ortamda oturum açma | Microsoft Docs
+description: MSBuild 'in çok işlemcili bir günlükçü nasıl sağladığını ve özel "iletme Günlükçüleri" oluşturma işlemini nasıl sağladığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c332fb67e96bdfea0059de11441da7c32871633
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3fe90440e9e9e40312eafef0bda951937ea27ad9
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633570"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904368"
 ---
 # <a name="logging-in-a-multi-processor-environment"></a>Birden çok işlemcili ortamda oturum açma
 
@@ -30,7 +32,7 @@ MSBuild 'in birden çok işlemciyi kullanma yeteneği, proje derleme süresini b
 
 ### <a name="central-logging-model"></a>Merkezi günlük modeli
 
-MSBuild, çok işlemcili yapılar için "Merkezi günlük model" kullanır. Merkezi günlük modelinde, bir *MSBuild.exe* örneği, birincil derleme işlemi veya "Merkezi düğüm" gibi davranır. *MSBuild.exe*ikincil örnekleri veya "ikincil düğümler" merkezi düğüme eklenir. Merkezi düğüme bağlı olan tüm ILogger tabanlı Günlükçüler, "Merkezi oturum defterleri" olarak bilinir ve ikincil düğümlere bağlı olan Günlükçüler "ikincil günlüğe kaydetme" olarak bilinir.
+MSBuild, çok işlemcili yapılar için "Merkezi günlük model" kullanır. Merkezi günlük modelinde, bir *MSBuild.exe* örneği, birincil derleme işlemi veya "Merkezi düğüm" gibi davranır. *MSBuild.exe* ikincil örnekleri veya "ikincil düğümler" merkezi düğüme eklenir. Merkezi düğüme bağlı olan tüm ILogger tabanlı Günlükçüler, "Merkezi oturum defterleri" olarak bilinir ve ikincil düğümlere bağlı olan Günlükçüler "ikincil günlüğe kaydetme" olarak bilinir.
 
 Bir derleme gerçekleştiğinde, ikincil Günlükçüler kendi olay trafiğini merkezi günlükçülere yönlendirir. Olaylar birkaç ikincil düğümden kaynaklandığından, veriler merkezi düğüme aynı anda ulaşır ancak araya eklemeli. Olaydan projeye ve olaydan hedefe başvuruları çözümlemek için, olay bağımsız değişkenleri ek derleme olay bağlamı bilgilerini içerir.
 

@@ -1,5 +1,7 @@
 ---
 title: Artımlı derlemeler | Microsoft Docs
+description: Güncel çıkış dosyalarının yürütülmemesi için iyileştirilmiş MSBuild Artımlı derlemeler hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c7283d67710a3b5b319b2d25a1c5d6535fed83b9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4beb6c676fbd66d7e0d11e4ca1fe2a3fa8188bfe
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633726"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904593"
 ---
 # <a name="incremental-builds"></a>Artımlı derlemeler
 
@@ -24,7 +26,7 @@ Artımlı derlemeler, en iyileştirilmiş derlemelerdir, böylece ilgili giriş 
 > [!NOTE]
 > MSBuild, giriş dosyalarını değerlendirirken, yalnızca geçerli yürütmede listenin içeriği göz önünde bulundurululur. Son derlemeden listedeki değişiklikler otomatik olarak bir hedef güncel değildir.
 
-Tüm çıkış öğeleri güncel ise, MSBuild hedefi atlar. Hedefin bu *artımlı derlemesi* , derleme hızını önemli ölçüde iyileştirebilir. Yalnızca bazı dosyalar güncel ise, MSBuild hedefi yürütür, ancak güncellik öğelerini atlar ve böylece tüm öğeleri güncel hale getirir. Bu işlem *kısmi Artımlı derleme*olarak bilinir.
+Tüm çıkış öğeleri güncel ise, MSBuild hedefi atlar. Hedefin bu *artımlı derlemesi* , derleme hızını önemli ölçüde iyileştirebilir. Yalnızca bazı dosyalar güncel ise, MSBuild hedefi yürütür, ancak güncellik öğelerini atlar ve böylece tüm öğeleri güncel hale getirir. Bu işlem *kısmi Artımlı derleme* olarak bilinir.
 
 1--1 eşlemeleri genellikle öğe dönüştürmeleri tarafından üretilir. Daha fazla bilgi için bkz. [dönüşümler](../msbuild/msbuild-transforms.md).
 
@@ -42,7 +44,7 @@ Tüm çıkış öğeleri güncel ise, MSBuild hedefi atlar. Hedefin bu *artıml�
 
 ## <a name="output-inference"></a>Çıkış çıkarımı
 
-MSBuild, hedefin `Inputs` `Outputs` yürütülüp yürütülmeyeceğini tespit etmek için bir hedefin ve özniteliklerini karşılaştırır. İdeal olarak, bir artımlı derleme tamamlandıktan sonra var olan dosyalar kümesi, ilişkili hedeflerin yürütülüp yürütülmediği gibi aynı kalacaktır. Görevler tarafından oluşturulan veya değiştirilen özellikler ve öğeler derlemeyi etkileyebildiğinden, bunları etkileyen hedef atlansa bile MSBuild, değerlerini çıkarmalıdır. Bu işlem *Çıkış çıkarımı*olarak bilinir.
+MSBuild, hedefin `Inputs` `Outputs` yürütülüp yürütülmeyeceğini tespit etmek için bir hedefin ve özniteliklerini karşılaştırır. İdeal olarak, bir artımlı derleme tamamlandıktan sonra var olan dosyalar kümesi, ilişkili hedeflerin yürütülüp yürütülmediği gibi aynı kalacaktır. Görevler tarafından oluşturulan veya değiştirilen özellikler ve öğeler derlemeyi etkileyebildiğinden, bunları etkileyen hedef atlansa bile MSBuild, değerlerini çıkarmalıdır. Bu işlem *Çıkış çıkarımı* olarak bilinir.
 
 Üç durum vardır:
 

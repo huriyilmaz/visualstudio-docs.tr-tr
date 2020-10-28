@@ -1,6 +1,6 @@
 ---
 title: MSBuild öğeleri | Microsoft Docs
-description: Bir yapıya dahil edilecek dosyaları belirtmek için ItemGroup 'un MSBuild Include özniteliğini kullanın
+description: Bir yapıya dahil edilecek dosyaları belirtmek için ItemGroup 'un MSBuild Include özniteliğini nasıl kullanacağınızı öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 020983182706bd6d9382f4d0bd4885ffa0f86f52
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a28823a1a492cb1e8d5f434f98248fecc5d84e47
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88247594"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904500"
 ---
 # <a name="msbuild-items"></a>MSBuild öğeleri
 
@@ -35,7 +35,7 @@ MSBuild öğeleri, derleme sistemine giriş gösterir ve genellikle dosyaları t
 </ItemGroup>
 ```
 
- Öğe *File2.cs* öğenin yerini almaz *File1.cs*; Bunun yerine, dosya adı öğe türü için değerler listesine eklenir `Compile` .
+ Öğe *File2.cs* öğenin yerini almaz *File1.cs* ; Bunun yerine, dosya adı öğe türü için değerler listesine eklenir `Compile` .
 
  Aşağıdaki XML, her iki dosyayı tek bir öznitelikte bildirerek aynı öğe türünü oluşturur `Include` . Dosya adlarının noktalı virgülle ayrıldığına dikkat edin.
 
@@ -97,7 +97,7 @@ Joker karakterler hakkında daha fazla bilgi için bkz. [nasıl yapılır: oluş
 </ItemGroup>
 ```
 
- `Exclude`Özniteliği yalnızca, `Include` her ikisini de içeren öğe öğesindeki özniteliği tarafından eklenen öğeleri etkiler. Aşağıdaki örnek, önceki item öğesine eklenen *Form1.cs*dosyasını dışlayamazsınız.
+ `Exclude`Özniteliği yalnızca, `Include` her ikisini de içeren öğe öğesindeki özniteliği tarafından eklenen öğeleri etkiler. Aşağıdaki örnek, önceki item öğesine eklenen *Form1.cs* dosyasını dışlayamazsınız.
 
 ```xml
 <Compile Include="*.cs" />
@@ -598,7 +598,7 @@ Item1: notebook
 - [Item öğesi (MSBuild)](../msbuild/item-element-msbuild.md)
 - [Yaygın MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
-- [MSBUILD](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)
 - [Nasıl yapılır: derlenecek dosyaları seçme](../msbuild/how-to-select-the-files-to-build.md)
 - [Nasıl yapılır: derlemeden Dosya dışlama](../msbuild/how-to-exclude-files-from-the-build.md)
 - [Nasıl yapılır: virgülle ayrılmış bir öğe listesini görüntüleme](../msbuild/how-to-display-an-item-list-separated-with-commas.md)

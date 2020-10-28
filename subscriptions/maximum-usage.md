@@ -1,18 +1,18 @@
 ---
-title: Yönetim portalında en yüksek kullanım özelliğini kullanın
+title: Visual Studio aboneliklerinde en yüksek kullanım özelliğini kullanın
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: c473b01f-2dfe-4cc2-ad29-bb5e2a268123
-ms.date: 09/21/2020
+ms.date: 10/28/2020
 ms.topic: conceptual
 description: Yönetici portalında en fazla atanmış abonelik sayısını görüntülemeyi öğrenin
-ms.openlocfilehash: b9ff33623311e4bfeff6b6067d5631d4e65efda9
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: e8ea9aa9001312c792e6f9d356dbc5f7cf58dfb8
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "91022183"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904485"
 ---
 # <a name="use-the-maximum-usage-feature-to-track-the-number-of-assigned-subscriptions"></a>Atanan aboneliklerin sayısını izlemek için en yüksek kullanım özelliğini kullanın
 Visual Studio abonelikleri yönetim portalındaki yeni bir özellik, satın almış ve atanan aboneliklerin sayısını izlemenize ve atadığınız her bir düzeyin abonelik sayısını, hem geçmiş yıl içinde hem de sözleşmenizin süresi boyunca ne kadar yüksek olduğunu belirlemenize yardımcı olur. 
@@ -55,5 +55,5 @@ Y: genel görünümde bulunan bilgiler, her abonelik düzeyi için *geçerli* at
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- Abonelik atamaları veya yönetim portalının diğer yönleri hakkında sorularınız varsa, lütfen https://visualstudio.microsoft.com/subscriptions/support/ Yardım için iletişime geçin. 
+- Abonelik atamaları veya yönetim portalının diğer yönleri hakkında sorularınız varsa, lütfen https://visualstudio.microsoft.com/subscriptions/support/ Yardım için iletişim kurun. 
 - Fazla [yüklemeleri](handle-overclaimed-license.md)olarak adlandırılan, satın aldığınız daha fazla abonelik atarsanız yapılacaklar hakkında daha fazla bilgi edinin.

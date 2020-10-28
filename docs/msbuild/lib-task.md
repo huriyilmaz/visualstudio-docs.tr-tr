@@ -1,5 +1,7 @@
 ---
 title: LıB görevi | Microsoft Docs
+description: MSBuild 'in, bir COFF nesne dosyaları kitaplığı oluşturup yöneten, lib.exe Microsoft 32-bit Kitaplığı Yöneticisi aracını kaydırmak için LIB görevini nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -25,16 +27,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a5794d059a17f39531a7788895b604ae0e9590ce
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3bf1029d42ce40d33e6eea1fcbe5e6434ff85a36
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633596"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904444"
 ---
 # <a name="lib-task"></a>LIB görevi
 
-Microsoft 32-bit Kitaplığı Yöneticisi aracı 'nı sarmalayan *lib.exe*. Kitaplık Yöneticisi ortak nesne dosyası biçimi (COFF) nesne dosyaları kitaplığını oluşturur ve yönetir. Kitaplık Yöneticisi ayrıca dışarı aktarma dosyaları oluşturabilir ve dışarı aktarılan tanımlara başvuru için kitaplıkları içeri aktarabilir. Daha fazla bilgi için bkz. [LIB Reference](/cpp/build/reference/lib-reference) ve [LIB çalışıyor](/cpp/build/reference/running-lib).
+Microsoft 32-bit Kitaplığı Yöneticisi aracı 'nı sarmalayan *lib.exe* . Kitaplık Yöneticisi ortak nesne dosyası biçimi (COFF) nesne dosyaları kitaplığını oluşturur ve yönetir. Kitaplık Yöneticisi ayrıca dışarı aktarma dosyaları oluşturabilir ve dışarı aktarılan tanımlara başvuru için kitaplıkları içeri aktarabilir. Daha fazla bilgi için bkz. [LIB Reference](/cpp/build/reference/lib-reference) ve [LIB çalışıyor](/cpp/build/reference/running-lib).
 
 ## <a name="parameters"></a>Parametreler
 
@@ -54,11 +56,11 @@ Microsoft 32-bit Kitaplığı Yöneticisi aracı 'nı sarmalayan *lib.exe*. Kita
 |**LinkLibraryDependencies**|İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , proje bağımlılıklarından kitaplık çıktılarının otomatik olarak bağlandığını belirtir.|
 |**LinkTimeCodeGeneration**|İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , bağlantı zamanı kod oluşturmayı belirtir.<br /><br /> Bu parametre, *lib.exe* **/LCTG** seçeneğine karşılık gelir.|
 |**MinimumRequiredVersion**|İsteğe bağlı **dize** parametresi.<br /><br /> Alt sistemin gerekli en düşük sürümünü belirtir. 0 ile 65535 arasında ondalık sayıların virgülle ayrılmış bir listesini belirtin.|
-|**ModuleDefinitionFile**|İsteğe bağlı **dize** parametresi.<br /><br /> Modül tanım dosyasının (*. def*) adını belirtir.<br /><br /> Bu parametre, bir bağımsız değişken alan *lib.exe* **/def** seçeneğine karşılık gelir `filename` .|
+|**ModuleDefinitionFile**|İsteğe bağlı **dize** parametresi.<br /><br /> Modül tanım dosyasının ( *. def* ) adını belirtir.<br /><br /> Bu parametre, bir bağımsız değişken alan *lib.exe* **/def** seçeneğine karşılık gelir `filename` .|
 |**Ad**|İsteğe bağlı **dize** parametresi.<br /><br /> İçeri aktarma kitaplığı oluşturulduğunda, içeri aktarma kitaplığının oluşturulduğu DLL 'in adını belirtir.<br /><br /> Bu parametre, bağımsız değişken alan *lib.exe* **/Name** seçeneğine karşılık gelir `filename` .|
 |**Çıktı**|İsteğe bağlı **dize** parametresi.<br /><br /> *lib.exe* oluşturduğu programın varsayılan adını ve konumunu geçersiz kılar.<br /><br /> Bu parametre, bir bağımsız değişken alan *lib.exe* **/Out** seçeneğine karşılık gelir `filename` .|
 |**RemoveObjects**|İsteğe bağlı **dize []** parametresi.<br /><br /> Çıkış kitaplığından belirtilen nesneyi atlar. *Lib.exe* , tüm nesneleri birleştirerek (nesne dosyalarında veya kitaplıklarda) ve ardından bu seçenekle belirtilen tüm nesneleri silerek bir çıktı kitaplığı oluşturur.<br /><br /> Bu parametre, bir bağımsız değişken alan *lib.exe* **/Remove** seçeneğine karşılık gelir `membername` .|
-|**Kaynaklar**|Gerekli `ITaskItem[]` parametre.<br /><br /> Boşluklarla ayrılmış kaynak dosyalarının bir listesini belirtir.|
+|**Ğına**|Gerekli `ITaskItem[]` parametre.<br /><br /> Boşluklarla ayrılmış kaynak dosyalarının bir listesini belirtir.|
 |**Sistemin**|İsteğe bağlı **dize** parametresi.<br /><br /> Yürütülebilir dosyanın ortamını belirtir. Alt sistem seçimi, giriş noktası sembolünü veya giriş noktası işlevini etkiler.<br /><br /> Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.<br /><br /> -   **Konsol**  -  **/Subsystem: Console**<br />-   **Windows**  -  **/Subsystem: WINDOWS**<br />-   **Yerel**  -  **/Subsystem: NATIVE**<br />-   **EFI uygulaması**  -  **/Subsystem: EFI_APPLICATION**<br />-   **EFI Önyükleme hizmeti sürücüsü**  -  **/Subsystem: EFI_BOOT_SERVICE_DRIVER**<br />-   **EFı ROM**  -  **/Subsystem: EFI_ROM**<br />-   **EFI çalışma zamanı**  -  **/Subsystem: EFI_RUNTIME_DRIVER**<br />-   **WindowsCE**  -  **/Subsystem: WINDOWSCE**<br />-   **POSIX**  -  **/Subsystem: POSIX**<br /><br /> Daha fazla bilgi için bkz. [/Subsystem (alt sistemi belirt)](/cpp/build/reference/subsystem-specify-subsystem).|
 |**SuppressStartupBanner**|İsteğe bağlı **Boolean** parametresi.<br /><br /> İse `true` , görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini önler.<br /><br /> Daha fazla bilgi için [LIB çalışma](/cpp/build/reference/running-lib)konumundaki **/nologo** seçeneğine bakın.|
 |**TargetMachine**|İsteğe bağlı **dize** parametresi.<br /><br /> Program veya DLL için hedef platformu belirtir.<br /><br /> Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.<br /><br /> -   **Machineard**  -  **/Machine: ARM**<br />-   **Machineebc**  -  **/Machine: EBC**<br />-   **MachineIA64**  -  **/MACHINE: IA64**<br />-   **Machinemıps**  -  **/MACHINE: MIPS**<br />-   **MachineMIPS16**  -  **/MACHINE: kayıtlardan biri mıps16**<br />-   **Machinemıpsfpu**  - **/MACHINE: MIPSFPU**<br />-   **MachineMIPSFPU16**  -  **/MACHINE: MIPSFPU16**<br />-   **MachineSH4**  -  **/MACHINE: sh4**<br />-   **Machinethumb**  -  **/MACHINE: Thumb**<br />-   **MachineX64**  -  **/Machine: x64**<br />-   **MachineX86**  -  **/Machine: x86**<br /><br /> Daha fazla bilgi için bkz. [/Machine (hedef platformu belirt)](/cpp/build/reference/machine-specify-target-platform).|

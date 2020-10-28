@@ -7,12 +7,12 @@ ms.assetid: b331c837-3524-42b7-820e-b4fdd5e12793
 ms.date: 09/03/2020
 ms.topic: conceptual
 description: Microsoft ürün ve hizmet sözleşmesi 'nde (MPSA) Visual Studio aboneliklerini yönetme hakkında bilgi edinin
-ms.openlocfilehash: f0e894272f13b08af20f36579aea807cba7a882a
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 388c847ce19ca7136efb7757fbc87bffdc35a673
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006091"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903800"
 ---
 # <a name="visual-studio-subscriptions-in-a-microsoft-products-and-services-agreement-mpsa"></a>Microsoft ürün ve hizmet anlaşmasındaki (MPSA) Visual Studio abonelikleri
 MPSA programı aracılığıyla Visual Studio abonelikleri satın aldıysanız, Visual Studio abonelikleri Yöneticisi olmaya ve kullanıcılarınıza abonelik atamadan önce bilmeniz gereken birkaç nokta vardır. Zaten yönetici olarak ayarladıysanız, doğrudan Visual Studio abonelikleri [Yönetim portalına](https://manage.visualstudio.com/)gidebilirsiniz.
@@ -23,7 +23,7 @@ Ayrıca, Visual Studio abonelikleri [Yönetim Portalı](https://manage.visualstu
 
 Kiracıların yönettiği iki tür kiracılar ve yönetilmeyen kiracılar olduğunu lütfen unutmayın. Yönetilen kiracı, kuruluş içindeki Yöneticiler tarafından zaten yönetilen bir kiracıya başvurur.
 
-Yönetilmeyen bir kiracı, hiçbir yönetici atanmamış ve Office 365 gibi çevrimiçi hizmetler için kullanılabilir olmayan bir kiracıya sahip değildir. Yönetilmeyen kiracılar iş merkezine iş hesabı olmayan bir e-posta ile kaydedilirken de oluşturulur. Iş merkezine kaydolurken bir parola oluşturmanız istenirse, e-postanız iş hesabı olmadığı ve yönetilmeyen bir kiracı oluşturduğu anlamına gelir.
+Yönetilmeyen bir kiracı, hiçbir yönetici atanmamış ve Office 365 gibi çevrimiçi hizmetler için kullanılabilir durumda olmayan bir kiracıya sahip değildir. Yönetilmeyen kiracılar iş merkezine iş hesabı olmayan bir e-posta ile kaydedilirken de oluşturulur. Iş merkezine kaydolurken bir parola oluşturmanız istenirse, e-postanız iş hesabı olmadığı ve yönetilmeyen bir kiracı oluşturduğu anlamına gelir.
 
 Kiracı ilişkilendirmesini tamamlamadan önce Visual Studio abonelikleri Yöneticisi olmaya yönelik birkaç gereksinim/adım aşağıda verilmiştir.
 
@@ -39,12 +39,12 @@ Kiracı ilişkilendirmesini tamamlamadan önce Visual Studio abonelikleri Yönet
 
 Yukarıdaki kriterleri karşıladıktan sonra, aşağıdaki adımları izleyerek satın alma hesabınızı kiracınızla ilişkilendirmeye devam edebilirsiniz.
 1. [Iş merkezinde](https://businessaccount.microsoft.com/Customer)oturum açın.
-2. **Hesap** sekmesine tıklayın ve **etki alanlarını ilişkilendir**' i seçin.
+2. **Hesap** sekmesine tıklayın ve **etki alanlarını ilişkilendir** ' i seçin.
 3. **Satın alma hesabınızı** seçin (birden fazla varsa).
 4. **Kiracınızı** (ör. contoso.onmicrosoft.com) seçin.
-5. **Etki alanını ilişkilendir**' e tıklayın.
+5. **Etki alanını ilişkilendir** ' e tıklayın.
 
-İlişkilendirmede, ölçütlere uyan tüm kullanıcılar genellikle dakikalar içinde Visual Studio abonelikleri Yöneticisi olarak temin eder. Ancak, 24 saate kadar zaman alabilir. Kiracınız sağlandıktan sonra Visual Studio abonelikleri yönetim portalına erişebileceksiniz. Bu, 24 saatten uzun sürerse lütfen şu adımları kullanarak MPSA desteğine başvurun:
+İlişkilendirmeden, ölçütlere uyan tüm kullanıcılar genellikle dakikalar içinde Visual Studio abonelikleri yöneticileri olarak temin eder. Ancak, 24 saate kadar zaman alabilir. Kiracınız sağlandıktan sonra Visual Studio abonelikleri yönetim portalına erişebileceksiniz. Bu, 24 saatten uzun sürerse lütfen şu adımları kullanarak MPSA desteğine başvurun:
 1. Bağlan <https://www.microsoft.com/licensing/mpsa/default>
 2. Sayfanın üst kısmındaki **daha fazla** menüye tıklayın. 
 3. **Destek** seçin
@@ -52,7 +52,7 @@ Yukarıdaki kriterleri karşıladıktan sonra, aşağıdaki adımları izleyerek
 5. Gereksinimlerinize en uygun destek seçeneğini belirleyin. 
 
 > [!NOTE]
-> 2 ve 5. adımlarda (ilişkilendirmeden sonra) ölçütlere uyan yeni kullanıcılar varsa MPSA desteğiyle iletişim kurmanız gerekir. MPSA desteği, yeni Visual Studio abonelikleri yöneticilerini sağlamaya yönelik yardım sağlayacaktır.
+> 2 ve 5. adımlarda (ilişkilendirmeden sonra) ölçütlere uyan yeni kullanıcılar varsa MPSA desteğiyle iletişim kurmanız gerekir. MPSA desteği, yeni Visual Studio abonelikleri yöneticilerinin sağlanması için yardım sağlar.
 
 ## <a name="tenant-association-unmanaged"></a>Kiracı ilişkilendirmesi (yönetilmeyen)
 Iş merkezine, yukarıda açıklandığı gibi, iş hesabı olmayan ("Azure AD" Azure Active Directory kayıtlı değil) bir e-posta ile kaydolduysanız, kiracı ilişkilendirmesi biraz farklı olur. "Etki alanı alma" olarak adlandırılan işlemleri gerçekleştirmeniz gerekecektir. Bu işlem sırasında, kiracınızı yönetilmeyecek şekilde değiştirecek genel yönetici yaparsınız.
@@ -60,7 +60,7 @@ Iş merkezine, yukarıda açıklandığı gibi, iş hesabı olmayan ("Azure AD" 
 Bu işlemle ilgili daha ayrıntılı bir açıklama için [hızlı başlangıç kılavuzlarını](https://www.microsoft.com/Licensing/existing-customer/business-center-training-and-resources.aspx)kullanabilirsiniz. Lütfen *"Kurulum ve çevrimiçi hizmetlerinizi kullanma"* adlı Kılavuzu indirerek bir etki alanı alma sırasında size rehberlik edecek şekilde indirin. Bu işlem tamamlandıktan sonra, satın alma hesabınız kiracınızla de ilişkilendirilir.
 
 > [!NOTE]
-> Etki alanı alma işlemini tamamladıktan sonra, kiracı Ilişkilendirmesi (yönetilen) bölümündeki beş adımdan oluşan ölçütlere uymalısınız. Ölçütler karşılandıktan sonra, yalnızca ek Visual Studio abonelikleri yöneticileri sağlamak için MPSA desteğiyle iletişim kurmanız gerekir.
+> Etki alanı alma işlemini tamamladıktan sonra, kiracı Ilişkilendirmesi (yönetilen) bölümündeki beş adımdan oluşan ölçütlere uymalısınız. Ölçütler karşılandıktan sonra, yalnızca ek Visual Studio abonelikleri yöneticilerine sağlamak üzere MPSA desteğiyle iletişim kurmanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

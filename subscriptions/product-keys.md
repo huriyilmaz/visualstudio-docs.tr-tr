@@ -1,18 +1,18 @@
 ---
-title: Ürün anahtarlarını kullanma | Microsoft Docs
+title: Visual Studio aboneliklerinde ürün anahtarlarını kullanma | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 89e3fcf9-fe5d-4266-8dd7-5567d05fe869
-ms.date: 09/18/2020
+ms.date: 10/28/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde ürün anahtarlarınızı edinme ve yönetme hakkında bilgi edinin.
-ms.openlocfilehash: 389a57fb2e8fe0ea6ee81ee163fed052c441c209
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: a5da818a059709d311b87572f71b78a51dbb7deb
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "91005852"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903996"
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde ürün anahtarlarını kullanma
 
@@ -33,7 +33,7 @@ Aboneliğiniz kapsamında kullanılabilir olan tüm ürün anahtarlarını istem
 ## <a name="retail-and-volume-licensing-versions-of-products"></a>Ürünlerin perakende ve toplu lisanslama sürümleri
 Visual Studio abonelikleri, Microsoft ürünlerinin perakende ve toplu lisanslama sürümlerinin bir seçimini sunmaktadır. Belirli ürünler yalnızca perakende sürümünde veya yalnızca toplu lisanslama sürümünde indirilebilir. Bazıları her iki sürümde de kullanılabilir. Genellikle, Windows, Windows Server ve Office istemci ürünleri gibi etkinleştirme gerektiren ürünler yalnızca, karşıdan yüklemeler aracılığıyla perakende sürümünde sunulur.
 
-Toplu lisanslama müşterileri, ürünlerin toplu lisanslama sürümlerini (ve ilgili ürün anahtarlarını) almak için Toplu Lisanslama hizmeti Merkezi 'nden (VLSC) yazılım da indirebilir.  VLSC erişimi, müşterinin kuruluşunda belirlenen yöneticiler tarafından yönetilir.
+Toplu lisanslama müşterileri, ürünlerin toplu lisanslama sürümlerini (ve ilgili ürün anahtarlarını) almak için Toplu Lisanslama hizmeti Merkezi 'nden (VLSC) yazılım da indirebilir.  VLSC erişimi, müşterinin kuruluşu dahilinde belirlenen yöneticiler tarafından yönetilir.
 
 ## <a name="daily-product-key-claim-limits"></a>Günlük ürün anahtarı talep limitleri
 Microsoft, Visual Studio abonelikleri programının bütünlüğünü ve yazılım değerini ve programın yasal abonelerinin yatırım için aldığı avantajları ve avantajlarının korunmasını taahhüt etmektedir. Bu taahhütte destek sayesinde Microsoft, Visual Studio abonelikleri için günlük anahtar talebi sınırlarını uygulamıştır. Günlük anahtar talebi sınırları, abonelik başına günlük talep edilebilir anahtar sayısını kısıtlar.
@@ -63,7 +63,7 @@ Tüm anahtarlar, [ürün anahtarları](https://my.visualstudio.com/productkeys?w
 
 ### <a name="product-key-types"></a>Ürün anahtarı türleri
 
-|    Anahtar türü           |    Description                                                                                                                                                                                                           |
+|    Anahtar türü           |    Açıklama                                                                                                                                                                                                           |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Geçerli değil                    |    Bu ürünü yüklemek için gereken anahtar yok.                                                       |
 |    Retail                     |    Perakende tuşları çoklu etkinleştirmeleri sağlar ve ürünün perakende yapıları için kullanılır. Çoğu durumda, her anahtar için 10 etkinleştirmeye izin verilir, ancak aynı makinede genellikle daha fazlasına izin verilir.                                                       |

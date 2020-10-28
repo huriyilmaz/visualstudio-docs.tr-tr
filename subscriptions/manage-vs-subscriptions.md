@@ -7,12 +7,12 @@ ms.assetid: 196c6d04-9a33-47d5-b0f1-038e7c3a7ac9
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinizden en iyi şekilde nasıl yararlanalabileceğinizi öğrenin
-ms.openlocfilehash: 59bfac51eb7888bbad4cc07bf2df25b8c35980fd
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: a865bfa5cf7d55504e022efb1b134bddde7d231c
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "91005904"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904689"
 ---
 # <a name="managing-subscriptions"></a>Abonelikleri yönetme
 
@@ -71,7 +71,7 @@ Profilinizdeki iletişim bilgilerini ve tercihlerini kolayca değiştirebilirsin
 1. Abone portalının sağ üst köşesinde adınızı seçin.
 2. **Profili Düzenle** düğmesini seçin.
 3. **Hakkında** sekmesinde ad, e-posta, ülke/bölge, profil resminiz ve iletişim tercihlerinizi değiştirebilirsiniz. **Tercihler** sekmesinde tercih ettiğiniz dili, tarih ve saat desenlerini, saat dilimini ve Kullanıcı arabirimi temasını seçebilirsiniz.
-4. Değişikliklerinizi sonuçlandırdığınızda **Kaydet**' i seçin.
+4. Değişikliklerinizi sonuçlandırdığınızda **Kaydet** ' i seçin.
 5. Avantajlar sayfasına geri dönmek için tarayıcınızın **geri** düğmesini seçin.
 
 ### <a name="setting-communications-preferences"></a>İletişim tercihlerini ayarlama
@@ -89,8 +89,8 @@ Alternatif bir hesap eklemek için:
 
 1. [Abone portalında](https://my.visualstudio.com?wt.mc_id=o~msft~docs) Microsoft HESABıNıZLA (MSA) oturum açın.
 2. **Abonelikler** sekmesini seçin.
-3. **Ilgili bağlantılar**altında **Alternatif hesap ekle**' yi seçin.
-4. İş/okul hesabınızın e-posta adresini girin ve **Ekle**' yi seçin.
+3. **Ilgili bağlantılar** altında **Alternatif hesap ekle** ' yi seçin.
+4. İş/okul hesabınızın e-posta adresini girin ve **Ekle** ' yi seçin.
 
 Alternatif bir hesap ekledikten sonra, **abonelikler** sekmesini seçerek ve **ilgili bağlantılar** bölümünde uygun seçeneği belirleyerek istediğiniz zaman onu güncelleştirebilir veya kaldırabilirsiniz.
 
