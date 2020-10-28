@@ -1,6 +1,7 @@
 ---
 title: Şekiller ve yollar çizin
-description: Şekillere ve yollara daha fazla ayrıntı eklemek için Visual Studio için Blend kullanın
+description: Yollar ve şekiller çizmek, bunları değiştirmek ve bunları birleştirmek için Visual Studio için Blend XAML Tasarımcısı özelliklerini kullanın.
+ms.custom: SEO-VS-2020
 titleSuffix: Blend for Visual Studio
 ms.date: 09/22/2020
 ms.topic: conceptual
@@ -10,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 368619a55316e0af59fc5351e187ced8892a6116
-ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
+ms.openlocfilehash: 6c29e2a4718a10193a4c86d1485549ded6ae2c0e
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91022520"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796803"
 ---
 # <a name="draw-shapes-and-paths"></a>Şekiller ve yollar çizin
 
@@ -87,7 +88,7 @@ Yolu seçmek için **seçim** aracını kullanın. Noktayı eklemek istediğiniz
 
 ## <a name="convert-a-shape-to-a-path"></a>Şekli yola dönüştürme
 
-Bir şekli bir yolu değiştirdiğiniz şekilde değiştirmek için şekli bir yola dönüştürün. Şekli seçin ve sonra **Biçim**  >  **yolu**  >  **yola Dönüştür**' nu seçin.
+Bir şekli bir yolu değiştirdiğiniz şekilde değiştirmek için şekli bir yola dönüştürün. Şekli seçin ve sonra **Biçim**  >  **yolu**  >  **yola Dönüştür** ' nu seçin.
 
 **Kısa bir video izleyin:** ![ Yollarla çalışan yüklü özellikleri yapılandırma ](../designers/media/bldadminconsoleinitialconfigicon.png) [: bir şekli yola dönüştürme](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147).
 

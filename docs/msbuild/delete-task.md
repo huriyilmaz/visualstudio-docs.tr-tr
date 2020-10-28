@@ -1,5 +1,7 @@
 ---
 title: Görevi Sil | Microsoft Docs
+description: Belirtilen dosyaları silmek için MSBuild silme görevinin kullanılmasıyla ilgili parametreleri ve konuları öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 06/11/2020
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eddb9804378a4c32de9d1b68f952bc715f32ffd6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41d5312434f87d75db80095ff01734cd37894a94
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288916"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796491"
 ---
 # <a name="delete-task"></a>Silme görevi
 
@@ -37,7 +39,7 @@ Aşağıdaki tablo, görevin parametrelerini açıklar `Delete` .
 |---------------|-----------------|
 |`DeletedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Başarıyla silinen dosyaları belirtir.|
 |`Files`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Silinecek dosyaları belirtir.|
-|`TreatErrorsAsWarnings`|İsteğe bağlı `Boolean` parametre<br /><br /> Varsa `true` , hatalar uyarı olarak günlüğe kaydedilir. Varsayılan değer: `false`.|
+|`TreatErrorsAsWarnings`|İsteğe bağlı `Boolean` parametre<br /><br /> Varsa `true` , hatalar uyarı olarak günlüğe kaydedilir. `false` varsayılan değerdir.|
 
 ## <a name="remarks"></a>Açıklamalar
 

@@ -1,5 +1,7 @@
 ---
 title: Csc görevi | Microsoft Docs
+description: Bu makalede, C# derleyicisini sarmalayan, csc.exe ve. exe,. dll veya. netmodule dosyaları üreten MSBuild Csc görevi açıklanır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,16 +20,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f77a2ab5bfa137ffbab13f92b15707f73c7869e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 16cf1c2505ad61a8c53d18d8981b8c08f9e6e02c
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "82167429"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796569"
 ---
 # <a name="csc-task"></a>Csc görevi
 
-*csc.exe*sarmalanmış ve yürütülebilir dosyalar (*. exe* dosyaları), dinamik bağlantı kitaplıkları (*. dll* dosyaları) veya kod modülleri (*. netmodule* dosyaları) oluşturur. *csc.exe*hakkında daha fazla bilgi için bkz. [C# derleyici seçenekleri](/dotnet/csharp/language-reference/compiler-options/index).
+*csc.exe* sarmalanmış ve yürütülebilir dosyalar ( *. exe* dosyaları), dinamik bağlantı kitaplıkları ( *. dll* dosyaları) veya kod modülleri ( *. netmodule* dosyaları) oluşturur. *csc.exe* hakkında daha fazla bilgi için bkz. [C# derleyici seçenekleri](/dotnet/csharp/language-reference/compiler-options/index).
 
 ## <a name="parameters"></a>Parametreler
 
@@ -60,7 +62,7 @@ Aşağıdaki tablo, görevin parametrelerini açıklar `Csc` .
 | `ModuleAssemblyName` | İsteğe bağlı `String` parametre.<br /><br /> Bu modülün bir parçası olacağı derlemenin adını belirtir. |
 | `NoConfig` | İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , derleyiciye *CSC. rsp* dosyası ile derlenmeyeceğini söyler. Daha fazla bilgi için bkz. [-noconfig (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/noconfig-compiler-option). |
 | `NoLogo` | İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , derleyici başlık bilgilerinin görüntülenmesini önler. Daha fazla bilgi için bkz. [-nologo (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/nologo-compiler-option). |
-| `NoStandardLib` | İsteğe bağlı `Boolean` parametre.<br /><br /> `true`, Tüm sistem ad alanını tanımlayan *mscorlib.dll*içeri aktarmayı önler. Kendi sistem ad alanınızı ve nesnelerinizi tanımlamak veya oluşturmak istiyorsanız bu parametreyi kullanın. Daha fazla bilgi için bkz. [-nostdlib (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/nostdlib-compiler-option). |
+| `NoStandardLib` | İsteğe bağlı `Boolean` parametre.<br /><br /> `true`, Tüm sistem ad alanını tanımlayan *mscorlib.dll* içeri aktarmayı önler. Kendi sistem ad alanınızı ve nesnelerinizi tanımlamak veya oluşturmak istiyorsanız bu parametreyi kullanın. Daha fazla bilgi için bkz. [-nostdlib (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/nostdlib-compiler-option). |
 | `NoWin32Manifest` | İsteğe bağlı `Boolean` parametre.<br /><br /> `true`Varsayılan Win32 bildirimini eklemeyin. |
 | `Optimize` | İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` iyileştirmeleri etkinleştirilir. İse `false` iyileştirmeleri devre dışı bırakır. Daha fazla bilgi için bkz. [-optimize (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/optimize-compiler-option). |
 | `OutputAssembly` | İsteğe bağlı `String` çıkış parametresi.<br /><br /> Çıktı dosyasının adını belirtir. Daha fazla bilgi için bkz. [-Out (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/out-compiler-option). |
@@ -71,16 +73,16 @@ Aşağıdaki tablo, görevin parametrelerini açıklar `Csc` .
 | `Resources` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Bir .NET Framework kaynağını çıkış dosyasına katıştırır.<br /><br /> Bu parametreye geçirilen öğeler, ve adlı isteğe bağlı meta veri girişlerine sahip olabilir `LogicalName` `Access` . `LogicalName``identifier`anahtarın parametresine karşılık gelir `/resource` ve `Access` parametreye karşılık gelir `accessibility-modifier` . Daha fazla bilgi için bkz. [-Resource (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/resource-compiler-option). |
 | `ResponseFiles` | İsteğe bağlı `String` parametre.<br /><br /> Bu görev için komutları içeren yanıt dosyasını belirtir. Daha fazla bilgi için bkz. [@ (yanıt dosyası belirtme)](/dotnet/csharp/language-reference/compiler-options/response-file-compiler-option). |
 | `Sources` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Bir veya daha fazla C# kaynak dosyasını belirtir. |
-| `TargetType` | İsteğe bağlı `String` parametre.<br /><br /> Çıktı dosyasının dosya biçimini belirtir. Bu parametre, bir, bir `library` `exe` `module` Windows programı oluşturan veya bir modül oluşturan bir konsol uygulaması oluşturan bir ' ' değeri olabilir `winexe` . Varsayılan değer: `library`. Daha fazla bilgi için bkz. [-target (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/target-compiler-option). |
+| `TargetType` | İsteğe bağlı `String` parametre.<br /><br /> Çıktı dosyasının dosya biçimini belirtir. Bu parametre, bir, bir `library` `exe` `module` Windows programı oluşturan veya bir modül oluşturan bir konsol uygulaması oluşturan bir ' ' değeri olabilir `winexe` . `library` varsayılan değerdir. Daha fazla bilgi için bkz. [-target (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/target-compiler-option). |
 | `TreatWarningsAsErrors` | İsteğe bağlı `Boolean` parametre.<br /><br /> Varsa `true` , tüm uyarıları hata olarak değerlendirir. Daha fazla bilgi için bkz. [-warnaserror (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option). |
 | `UseHostCompilerIfAvailable` | İsteğe bağlı `Boolean` parametre.<br /><br /> Görev, varsa, işlem içi derleyici nesnesini kullanmasını söyler. Yalnızca Visual Studio tarafından kullanılır. |
 | `Utf8Output` | İsteğe bağlı `Boolean` parametre.<br /><br /> Derleyici çıkışını UTF-8 kodlaması kullanarak günlüğe kaydeder. Daha fazla bilgi için bkz. [-utf8output (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/utf8output-compiler-option). |
 | `WarningLevel` | İsteğe bağlı `Int32` parametre.<br /><br /> Derleyicinin görüntüleyeceği uyarı düzeyini belirtir. Daha fazla bilgi için bkz. [-Warn (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/warn-compiler-option). |
 | `WarningsAsErrors` | İsteğe bağlı `String` parametre.<br /><br /> Hata olarak değerlendirmek için uyarıların listesini belirtir. Daha fazla bilgi için bkz. [-warnaserror (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option).<br /><br /> Bu parametre, parametresini geçersiz kılar `TreatWarningsAsErrors` . |
 | `WarningsNotAsErrors` | İsteğe bağlı `String` parametre.<br /><br /> Hata olarak değerlendirilmediğini belirten uyarıların bir listesini belirtir. Daha fazla bilgi için bkz. [-warnaserror (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option).<br /><br /> Bu parametre yalnızca `TreatWarningsAsErrors` parametresi olarak ayarlandıysa faydalıdır `true` . |
-| `Win32Icon` | İsteğe bağlı `String` parametre.<br /><br /> **Dosya Gezgini**'nde, çıktı dosyasına istenen görünümü sağlayan bir *. ico* dosyasını derlemeye ekler. Daha fazla bilgi için bkz. [-win32icon (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option). |
+| `Win32Icon` | İsteğe bağlı `String` parametre.<br /><br /> **Dosya Gezgini** 'nde, çıktı dosyasına istenen görünümü sağlayan bir *. ico* dosyasını derlemeye ekler. Daha fazla bilgi için bkz. [-win32icon (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option). |
 | `Win32Manifest` | İsteğe bağlı `String` parametre.<br /><br /> Dahil edilecek Win32 bildirimini belirtir. |
-| `Win32Resource` | İsteğe bağlı `String` parametre.<br /><br /> Çıktı dosyasına bir Win32 kaynağı (*. res*) dosyası ekler. Daha fazla bilgi için bkz. [-win32res (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/win32res-compiler-option). |
+| `Win32Resource` | İsteğe bağlı `String` parametre.<br /><br /> Çıktı dosyasına bir Win32 kaynağı ( *. res* ) dosyası ekler. Daha fazla bilgi için bkz. [-win32res (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/win32res-compiler-option). |
 
 [!INCLUDE [ToolTaskExtension arguments](includes/tooltaskextension-base-params.md)]
 

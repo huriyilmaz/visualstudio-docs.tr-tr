@@ -1,5 +1,7 @@
 ---
 title: CreateItem görevi | Microsoft Docs
+description: Öğe koleksiyonlarını giriş öğeleriyle doldurmak için MSBuild CreateItem görevini kullanın, öğelerin bir listeden diğerine kopyalanmasını sağlar.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4364e6c3f637fdf2c3e02a52d3163e5cdd8a5861
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ed964c618b59bf02086329715c5b0540039eb16a
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634337"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796764"
 ---
 # <a name="createitem-task"></a>CreateItem görevi
 
@@ -51,7 +53,7 @@ ms.locfileid: "77634337"
 
  Aşağıdaki kod örneği, öğe koleksiyonundan adlı yeni bir öğe koleksiyonu oluşturur `MySourceItemsWithMetadata` `MySourceItems` . `CreateItem`Görev, yeni öğe koleksiyonunu öğedeki öğelerle doldurur `MySourceItems` . Daha sonra `MyMetadata` , `Hello` Yeni koleksiyondaki her bir öğeye değeri olan adlı ek bir meta veri girişi ekler.
 
- Görev yürütüldükten sonra `MySourceItemsWithMetadata` öğe koleksiyonu, için meta veri girdileriyle birlikte *FILE1. resx* ve *dosya2. resx*öğelerini içerir `MyMetadata` . `MySourceItems`Öğe koleksiyonu değiştirilmez.
+ Görev yürütüldükten sonra `MySourceItemsWithMetadata` öğe koleksiyonu, için meta veri girdileriyle birlikte *FILE1. resx* ve *dosya2. resx* öğelerini içerir `MyMetadata` . `MySourceItems`Öğe koleksiyonu değiştirilmez.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

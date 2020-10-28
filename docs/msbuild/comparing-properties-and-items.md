@@ -1,5 +1,7 @@
 ---
 title: Özellikleri ve öğeleri karşılaştırma | Microsoft Docs
+description: MSBuild özelliklerinin ve öğelerinin görevlere bilgi iletmekte, koşulları değerlendirmenize ve proje dosyasının başvurbileceği değerleri nasıl depoleyeceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a86365ffe839b45fcd09862040fb88f0d4148bc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f00de870986cf020e91ff992dabb2681469ae5b
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634415"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796777"
 ---
 # <a name="compare-properties-and-items"></a>Özellikleri ve öğeleri karşılaştırma
 
@@ -27,7 +29,7 @@ MSBuild özellikleri ve öğeleri, bilgileri görevlere geçirmek, koşulları d
 
 ## <a name="scalars-and-vectors"></a>Dolandırılabilen ve vektörlerini
 
-MSBuild özellikleri yalnızca bir dize değeri olan ad-değer çiftleri olduğundan, genellikle *skaler*olarak tanımlanır. MSBuild öğe türleri öğe listeleri olduğundan, genellikle *vektör*olarak tanımlanır. Ancak, uygulamada Özellikler birden çok değeri temsil edebilir ve öğe türlerinde sıfır veya bir öğe olabilir.
+MSBuild özellikleri yalnızca bir dize değeri olan ad-değer çiftleri olduğundan, genellikle *skaler* olarak tanımlanır. MSBuild öğe türleri öğe listeleri olduğundan, genellikle *vektör* olarak tanımlanır. Ancak, uygulamada Özellikler birden çok değeri temsil edebilir ve öğe türlerinde sıfır veya bir öğe olabilir.
 
 ### <a name="target-dependency-injection"></a>Hedef bağımlılığı ekleme
 

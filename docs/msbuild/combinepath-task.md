@@ -1,5 +1,7 @@
 ---
 title: CombinePath görevi | Microsoft Docs
+description: MSBuild CombinePath görevinin, belirtilen yolları tek bir yolda birleştirmek için nasıl kullanılacağı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f7e6a79198ad54d3432f30fe9b57b3133a94165e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dc33c3a413d788bd9a5a30a7db69c4c7766a3392
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288968"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796621"
 ---
 # <a name="combinepath-task"></a>CombinePath görevi
 
@@ -62,7 +64,7 @@ Belirtilen yolları tek bir yol olarak birleştirir.
   </Target>
 ```
 
-`CombinePath`Bir liste olmasına izin veren tek özellik `Paths` , bu durumda çıktının de bir listesidir. Bu nedenle, `$(PublishRoot)` * \\ C:\site1*ise ve `$(ReleaseDirectory)` * \\ sürümüdür*ve `@(LangDirectories)` *en-US \; fr-fr \\ *ise, bu örnekler klasörleri oluşturur:
+`CombinePath`Bir liste olmasına izin veren tek özellik `Paths` , bu durumda çıktının de bir listesidir. Bu nedenle, `$(PublishRoot)` *\\ C:\site1* ise ve `$(ReleaseDirectory)` *\\ sürümüdür* ve `@(LangDirectories)` *en-US \; fr-fr \\* ise, bu örnekler klasörleri oluşturur:
 
 - C:\Site1\Release\en-us\
 - C:\Site1\Release\fr-fr\

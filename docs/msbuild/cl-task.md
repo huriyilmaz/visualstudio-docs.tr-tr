@@ -1,5 +1,7 @@
 ---
 title: CL görevi | Microsoft Docs
+description: Microsoft C++ derleyici aracı cl.exe sarmalayan MSBuild CL görevinin amacını ve parametrelerini açıklar.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,16 +23,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bb0e1feee1f7e1d271dd436a1879731354cbd8bb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7d930ed8d918a08503a6eaa6b60848abeec7683a
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "78865343"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796842"
 ---
 # <a name="cl-task"></a>CL görevi
 
-Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe*. Derleyici yürütülebilir (*. exe*) dosyalar, dinamik bağlantı kitaplığı (*. dll*) dosyaları veya kod modülü (*. netmodule*) dosyaları oluşturur. Daha fazla bilgi için bkz. [derleyici seçenekleri](/cpp/build/reference/compiler-options) ve [komut satırından MSBuild 'i kullanma](/cpp/build/msbuild-visual-cpp) ve [komut satırından Microsoft C++ araç takımını kullanma](/cpp/build/building-on-the-command-line).
+Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe* . Derleyici yürütülebilir ( *. exe* ) dosyalar, dinamik bağlantı kitaplığı ( *. dll* ) dosyaları veya kod modülü ( *. netmodule* ) dosyaları oluşturur. Daha fazla bilgi için bkz. [derleyici seçenekleri](/cpp/build/reference/compiler-options) ve [komut satırından MSBuild 'i kullanma](/cpp/build/msbuild-visual-cpp) ve [komut satırından Microsoft C++ araç takımını kullanma](/cpp/build/building-on-the-command-line).
 
 ## <a name="parameters"></a>Parametreler
 
@@ -64,7 +66,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe*. Derleyici yürütülebi
 
    İsteğe bağlı dize parametresi.
 
-   Her zaman komut satırına yayılan bir dize. Varsayılan değeri "**/c**" dir.
+   Her zaman komut satırına yayılan bir dize. Varsayılan değeri " **/c** " dir.
 
 - **Lerlistinglocation 'ı birleştirin**
 
@@ -90,7 +92,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe*. Derleyici yürütülebi
 
   - **Tümü**  -  **/FACS**
 
-    Daha fazla bilgi için/fa **,** **/fac**, **/Fas**ve/FA,/FA [(listeleme dosyası)](/cpp/build/reference/fa-fa-listing-file)içindeki **/FACS** seçeneklerine bakın.
+    Daha fazla bilgi için/fa **,** **/fac** , **/Fas** ve/FA,/FA [(listeleme dosyası)](/cpp/build/reference/fa-fa-listing-file)içindeki **/FACS** seçeneklerine bakın.
 
 - **Basicruntimedenetimleri**
 
@@ -196,7 +198,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe*. Derleyici yürütülebi
 
    İsteğe bağlı Boolean parametresi.
 
-   İse `true` derleyiciye, *sık*yama için bir görüntü hazırlamasını söyler. Bu parametre, her işlevin ilk yönergesinin, sık yama için gerekli olan iki bayt olmasını sağlar.
+   İse `true` derleyiciye, *sık* yama için bir görüntü hazırlamasını söyler. Bu parametre, her işlevin ilk yönergesinin, sık yama için gerekli olan iki bayt olmasını sağlar.
 
    Daha fazla bilgi için bkz. [/hotpatch (düzeltme eki eklenebilir görüntü oluşturma)](/cpp/build/reference/hotpatch-create-hotpatchable-image).
 
@@ -204,7 +206,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe*. Derleyici yürütülebi
 
    İsteğe bağlı dize parametresi.
 
-   Programınız için oluşturulan hata ayıklama bilgileri türünü ve bu bilgilerin nesne (*. obj*) dosyalarında mi yoksa bir program VERITABANı (pdb) içinde tutulup tutulmadığını seçer.
+   Programınız için oluşturulan hata ayıklama bilgileri türünü ve bu bilgilerin nesne ( *. obj* ) dosyalarında mi yoksa bir program VERITABANı (pdb) içinde tutulup tutulmadığını seçer.
 
    Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
@@ -220,7 +222,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe*. Derleyici yürütülebi
 
    İsteğe bağlı Boolean parametresi.
 
-   **True**ise, derleyiciye ANSI C veya ANSI C++ ile uyumlu olmayan dil yapıları için bir hata yaymasını söyler.
+   **True** ise, derleyiciye ANSI C veya ANSI C++ ile uyumlu olmayan dil yapıları için bir hata yaymasını söyler.
 
    Daha fazla bilgi için [/za,/Ze (dil uzantılarını devre dışı bırak)](/cpp/build/reference/za-ze-disable-language-extensions)içindeki **/za** seçeneğine bakın.
 
@@ -266,7 +268,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe*. Derleyici yürütülebi
 
    İsteğe bağlı dize parametresi.
 
-   İç derleyici hatası (ıCE) bilgilerini doğrudan Microsoft 'a sağlamanıza olanak tanır. Varsayılan olarak IDE derlemeleri ayarı **Prompt** olur ve komut satırı Derlemeleriyle ayarı **Queue**olur.
+   İç derleyici hatası (ıCE) bilgilerini doğrudan Microsoft 'a sağlamanıza olanak tanır. Varsayılan olarak IDE derlemeleri ayarı **Prompt** olur ve komut satırı Derlemeleriyle ayarı **Queue** olur.
 
    Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
@@ -328,7 +330,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe*. Derleyici yürütülebi
 
    `true`, Güvenilir kayan nokta özel durum modelini etkinleştirmesine izin vermez. Özel durumlar, tetiklendikten hemen sonra oluşturulur.
 
-   Daha fazla bilgi için bkz./fp içindeki/**FP: except** seçeneği [(kayan nokta davranışını belirt)](/cpp/build/reference/fp-specify-floating-point-behavior).
+   Daha fazla bilgi için bkz./fp içindeki/ **FP: except** seçeneği [(kayan nokta davranışını belirt)](/cpp/build/reference/fp-specify-floating-point-behavior).
 
 - **FloatingPointModel**
 
@@ -454,7 +456,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe*. Derleyici yürütülebi
 
    İsteğe bağlı `Boolean` parametre.
 
-   `true`, Nesne (*. obj*) dosyasındaki varsayılan C çalışma zamanı kitaplık adını atlar. Varsayılan olarak, derleyici, bağlayıcıyı doğru kitaplığa yönlendirmek için kitaplığın adını *. obj* dosyasına koyar.
+   `true`, Nesne ( *. obj* ) dosyasındaki varsayılan C çalışma zamanı kitaplık adını atlar. Varsayılan olarak, derleyici, bağlayıcıyı doğru kitaplığa yönlendirmek için kitaplığın adını *. obj* dosyasına koyar.
 
    Daha fazla bilgi için bkz. [/zl (varsayılan kitaplık adını atla)](/cpp/build/reference/zl-omit-default-library-name).
 
@@ -496,7 +498,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe*. Derleyici yürütülebi
 
    İsteğe bağlı **dize** parametresi.
 
-   Derleme sırasında önceden derlenmiş üst bilgi (*. pch*) dosyası oluşturun veya kullanın.
+   Derleme sırasında önceden derlenmiş üst bilgi ( *. pch* ) dosyası oluşturun veya kullanın.
 
    Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
@@ -626,7 +628,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe*. Derleyici yürütülebi
 
    Daha fazla bilgi için [/RTC (çalışma zamanı hata denetimleri)](/cpp/build/reference/rtc-run-time-error-checks)içindeki **/RTCC** seçeneğine bakın.
 
-- **Kaynaklar**
+- **Ğına**
 
    Gerekli `ITaskItem[]` parametre.
 
@@ -782,17 +784,17 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe*. Derleyici yürütülebi
 
    İsteğe bağlı `ITaskItem[]` parametre.
 
-   *Okuma dosyası izleme günlüklerini*temsil eden bir öğe dizisi belirtir.
+   *Okuma dosyası izleme günlüklerini* temsil eden bir öğe dizisi belirtir.
 
-   Okuma dosyası izleme günlüğü (*. TLog*), bir görev tarafından okunan giriş dosyalarının adlarını içerir ve proje yapı sistemi tarafından artımlı derlemeleri desteklemek için kullanılır. Daha fazla bilgi için bu tablodaki **TrackerLogDirectory** ve **TrackFileAccess** parametrelerine bakın.
+   Okuma dosyası izleme günlüğü ( *. TLog* ), bir görev tarafından okunan giriş dosyalarının adlarını içerir ve proje yapı sistemi tarafından artımlı derlemeleri desteklemek için kullanılır. Daha fazla bilgi için bu tablodaki **TrackerLogDirectory** ve **TrackFileAccess** parametrelerine bakın.
 
 - **TLogWriteFiles**
 
    İsteğe bağlı `ITaskItem[]` parametre.
 
-   *Yazma dosyası izleme günlüklerini*temsil eden bir öğe dizisi belirtir.
+   *Yazma dosyası izleme günlüklerini* temsil eden bir öğe dizisi belirtir.
 
-   Yazma dosyası izleme günlüğü (*. TLog*), bir görev tarafından yazılan çıkış dosyalarının adlarını içerir ve proje yapı sistemi tarafından artımlı derlemeleri desteklemek için kullanılır. Daha fazla bilgi için bu tablodaki **TrackerLogDirectory** ve **TrackFileAccess** parametrelerine bakın.
+   Yazma dosyası izleme günlüğü ( *. TLog* ), bir görev tarafından yazılan çıkış dosyalarının adlarını içerir ve proje yapı sistemi tarafından artımlı derlemeleri desteklemek için kullanılır. Daha fazla bilgi için bu tablodaki **TrackerLogDirectory** ve **TrackFileAccess** parametrelerine bakın.
 
 - **TrackFileAccess**
 

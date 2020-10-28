@@ -1,6 +1,6 @@
 ---
 title: OpenCV
-description: OpenCV/OpenCV deposu için devinit kullanan örnek özelleştirme.
+description: OpenCV deposu için hem Linux hem de Windows 'u hedeflemek için devinit kullanan örnek özelleştirme.
 ms.date: 08/28/2020
 ms.topic: reference
 author: andysterland
@@ -11,26 +11,47 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: a1c7f2c78fdae9c70785727cb03c7f8cb1e08cef
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: a2f284e1e464ab41391f60c546ce01d418ff377b
+ms.sourcegitcommit: 8efe6b45d65f9db23f5575c15155fe363fa12cdb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005640"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92750127"
 ---
 # <a name="opencv"></a>OpenCV
 
-Bu örnekte, [OpenCV](https://github.com/opencv/opencv) 'Nin [GitHub codespaces] ile otomatik olarak sağlanması için gereken özelleştirmeler gösterilmektedir https://github.com/features/codespaces) .
+Bu örnekte, [OpenCV/OpenCV](https://github.com/opencv/opencv)gibi çok platformlu projelerle geliştirmek Için [GitHub codespaces](https://github.com/features/codespaces) 'ın nasıl özelleştirileceği gösterilmektedir.
 
-## <a name="devinitjson"></a>.devinit.json
+Aşağıdaki özelleştirmeler [Microsoft/OpenCV](https://github.com/microsoft/opencv) çatalından zaten uygulanmış ve Windows ve Ubuntu hedeflemesi oluşturmaya izin veriyor.
 
-Dosyadaki [_.devinit.js_](devinit-json.md) içeriği. Bu dosyanın _.devcontainer.js_ile aynı klasörde olması gerekir.
+## <a name="customization-with-devcontainerjson-and-devinitjson"></a>Üzerinde devcontainer.jsve devinit.jsile özelleştirme
+
+`.devcontainer`Dizinin aşağıdaki dosyaları içermesi gerekir:
+
+* Üzerinde devcontainer.js
+* Üzerinde devinit.js
+
+### <a name="devcontainerjson"></a>Üzerinde devcontainer.js
+
+_devcontainer.js_ dosyadaki içeriği aşağıda verilmiştir.
+
+```json
+{
+  "postCreateCommand": "devinit init"
+}
+```
+
+, `postCreateCommand` _Üzerindedevinit.js_ tüketen [devinit](devinit-and-codespaces.md) aracını başlatır.
+
+### <a name="devinitjson"></a>Üzerinde devinit.js
+
+[_devinit.js_](devinit-json.md) dosyadaki içeriği aşağıda verilmiştir.
 
 ```json
 {
     "run": [
         {
-            "comments": "Example that will install Ubuntu 20.04 using WSL2, and configure it with various packages.",
+            "comments": "Example that will install Ubuntu 20.04 using WSL2, and configure it with various packages useful for C++ development.",
             "tool": "wsl-install",
             "input": "https://aka.ms/wslubuntu2004",
             "additionalOptions": "--wsl-version 2 --post-create-command 'apt-get update && apt-get install g++ gcc g++-9 gcc-9 cmake gdb ninja-build zip rsync -y'"
@@ -39,12 +60,15 @@ Dosyadaki [_.devinit.js_](devinit-json.md) içeriği. Bu dosyanın _.devcontaine
 }
 ```
 
-## <a name="devcontainerjson"></a>Üzerinde .devcontainer.js
+_devinit.js_ , [devinit](devinit-and-codespaces.md) aracı tarafından tüketilen dosyadır ve _üzerindedevcontainer.js_ aynı dizinde olmalıdır.
 
-Depo kökündeki dosya _.devcontainer.js_ içeriği.
+Bu örnekte, [WSL-install](tool-wsl-install.md) Aracı, Ubuntu 20,04 çalıştıran bir WSL örneği oluşturmak ve bunu temel C++ geliştirme araçlarıyla sağlamak için kullanılır.
+## <a name="targeting-windows-or-linux"></a>Windows veya Linux 'u hedefleme
 
-```json
-{
-  "postCreateCommand": "devinit init"
-}
-```
+Her zaman adlı bir varsayılan derleme yapılandırması hedeflemesi oluşturulur `x64-Debug` .
+
+Yukarıdaki belirtilen dosyaları ekleyerek, Codespace örnek oluşturma sırasında, Visual Studio [Bağlantı Yöneticisi](/cpp/linux/connect-to-your-remote-linux-computer)'nde yenı bir SSH bağlantısı sağlar ve yapılandırma SEÇICIDE, SSH bağlantısı aracılığıyla Ubuntu örneğini hedefleyen yeni bir yapılandırma oluşturur.
+
+![Ubuntu 'ı hedefleyen yapılandırma](media/wsl-ssh-linux-configuration.png).
+
+WSL 'yi hedefleyen vurgulanan yapılandırmayı seçerek, OpenCV 'nin derleme hedeflerini derlemek ve hata ayıklamak mümkündür.

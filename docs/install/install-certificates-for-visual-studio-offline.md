@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: fbc68d232816899d84cc2aead14208b009c933b2
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: ae91cc1982fa41022981c940df5436c5ea5e8e5b
+ms.sourcegitcommit: 8efe6b45d65f9db23f5575c15155fe363fa12cdb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037308"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92750181"
 ---
 # <a name="install-certificates-required-for-visual-studio-offline-installation"></a>Visual Studio çevrimdışı yükleme için gerekli sertifikaları yükleme
 
@@ -38,7 +38,7 @@ Sertifikaları çevrimdışı bir ortamda yüklemek veya güncelleştirmek için
 
 Bir ağ düzeni oluşturduğunuzda, gerekli sertifikalar Sertifikalar klasörüne indirilir. Ardından sertifika dosyalarının her birine çift tıklayarak ve ardından Sertifika Yöneticisi Sihirbazı ' na tıklayarak sertifikaları el ile yükleyebilirsiniz. Parola sorulursa boş bırakın.
 
-**Güncelleştirme**: Visual Studio 2017 sürüm 15,8 Preview 2 veya üzeri için, sertifika dosyalarının her birine sağ tıklayıp sertifikayı Güncelleştir ' i seçerek ve ardından Sertifika Yöneticisi Sihirbazı ' na tıklayarak sertifikaları el ile yükleyebilirsiniz.
+**Güncelleştirme** : Visual Studio 2017 sürüm 15,8 Preview 2 veya üzeri için, sertifika dosyalarının her birine sağ tıklayıp sertifikayı Güncelleştir ' i seçerek ve ardından Sertifika Yöneticisi Sihirbazı ' na tıklayarak sertifikaları el ile yükleyebilirsiniz.
 
 ::: moniker-end
 
@@ -76,7 +76,7 @@ Visual Studio 'nun bir çevrimdışı ortamda istemci iş istasyonlarına dağı
    certmgr.exe -add -c certificates\vs_installer_opc.SignCertificates.p12 -n "Microsoft Root Certificate Authority" -s -r LocalMachine root
    ```
 
-   **Güncelleştirme**: Visual Studio 2017 sürüm 15,8 Preview 2 veya üzeri için, toplu iş dosyasını aşağıdaki komutlarla oluşturun:
+   **Güncelleştirme** : Visual Studio 2017 sürüm 15,8 Preview 2 veya üzeri için, toplu iş dosyasını aşağıdaki komutlarla oluşturun:
 
    ```cmd
    certmgr.exe -add [layout path]\certificates\manifestRootCertificate.cer -n "Microsoft Root Certificate Authority 2011" -s -r LocalMachine root
@@ -117,9 +117,9 @@ Visual Studio 'nun bir çevrimdışı ortamda istemci iş istasyonlarına dağı
    Alternatif olarak, aşağıdaki komutlarla, Windows ile birlikte gelen certutil.exe kullanan bir toplu işlem dosyası oluşturun:
    
       ```cmd
-   certutil.exe -addstore -f "Root" "[layout path]\certificates\manifestRootCertificate.cer
+   certutil.exe -addstore -f "Root" "[layout path]\certificates\manifestRootCertificate.cer"
 
-   certutil.exe -addstore -f "Root" [layout path]\certificates\manifestCounterSignRootCertificate.cer"
+   certutil.exe -addstore -f "Root" "[layout path]\certificates\manifestCounterSignRootCertificate.cer"
 
    certutil.exe -addstore -f "Root" "[layout path]\certificates\vs_installer_opc.RootCertificate.cer"
    ```
@@ -140,7 +140,7 @@ Visual Studio 'nun bir çevrimdışı ortamda istemci iş istasyonlarına dağı
   * Kök sertifika: **Microsoft kök sertifika yetkilisi 2011**
     * En son Windows güncelleştirmeleri yüklü olmayan Windows 7 Service Pack 1 sistemlerinde gereklidir.
 * **Manifestcountersigncertificates. p12** şunları içerir:
-  * Ara sertifika: **Microsoft zaman DAMGASı PCA 2010**
+  * Ara sertifika: **Microsoft Time-Stamp PCA 2010**
     * Gerekli değildir. Varsa, bazı senaryolarda performansı geliştirir.
   * Kök sertifika: **Microsoft kök sertifika yetkilisi 2010**
     * En son Windows güncelleştirmeleri yüklü olmayan Windows 7 Service Pack 1 sistemleri için gereklidir.
@@ -150,7 +150,7 @@ Visual Studio 'nun bir çevrimdışı ortamda istemci iş istasyonlarına dağı
   * Kök sertifika: **Microsoft kök sertifika yetkilisi**
     * Gereklidir. Bu sertifika, Windows 7 veya üzerini çalıştıran sistemlerle birlikte gönderilir.
 
-**Güncelleştirme**: Visual Studio 2017 sürüm 15,8 Preview 2 veya üzeri için, Visual Studio yükleyicisi yalnızca kök sertifikaların sisteme yüklenmesini gerektirir. Bu sertifikalar. p12 yerine. cer dosyalarında depolanır.
+**Güncelleştirme** : Visual Studio 2017 sürüm 15,8 Preview 2 veya üzeri için, Visual Studio yükleyicisi yalnızca kök sertifikaların sisteme yüklenmesini gerektirir. Bu sertifikalar. p12 yerine. cer dosyalarında depolanır.
 
 ::: moniker-end
 
@@ -178,21 +178,21 @@ Bir çevrimiçi ortamda imza doğrulandığında, Windows API 'Leri, sertifikala
 
 Yükleme sistemini denetetmenin bir yolu şu adımları izlemelidir:
 
-1. **mmc.exe**çalıştırın.<br/>
-  a. **Dosya**' ya ve sonra **ek bileşen Ekle/Kaldır**' ı seçin.<br/>
-  b. **Sertifikalar**' a çift tıklayın, **bilgisayar hesabı**' nı seçin ve ardından **İleri**' ye tıklayın.<br/>
-  c. **Yerel bilgisayar**' ı seçin, **son**' a ve ardından **Tamam**' a tıklayın.<br/>
-  d. **Sertifikalar (yerel bilgisayar)**' ı genişletin.<br/>
-  e. **Güvenilen kök sertifika yetkilileri**' ni genişletin ve ardından **Sertifikalar**' ı seçin.<br/>
+1. **mmc.exe** çalıştırın.<br/>
+  a. **Dosya** ' ya ve sonra **ek bileşen Ekle/Kaldır** ' ı seçin.<br/>
+  b. **Sertifikalar** ' a çift tıklayın, **bilgisayar hesabı** ' nı seçin ve ardından **İleri** ' ye tıklayın.<br/>
+  c. **Yerel bilgisayar** ' ı seçin, **son** ' a ve ardından **Tamam** ' a tıklayın.<br/>
+  d. **Sertifikalar (yerel bilgisayar)** ' ı genişletin.<br/>
+  e. **Güvenilen kök sertifika yetkilileri** ' ni genişletin ve ardından **Sertifikalar** ' ı seçin.<br/>
     * Gerekli kök sertifikaları için bu listeyi işaretleyin.<br/>
 
-   f. **Ara sertifika yetkililerini**genişlettikten sonra **Sertifikalar**' ı seçin.<br/>
+   f. **Ara sertifika yetkililerini** genişlettikten sonra **Sertifikalar** ' ı seçin.<br/>
     * Gerekli ara sertifikalar için bu listeyi işaretleyin.<br/>
 
-2. **Dosya**' ya ve sonra **ek bileşen Ekle/Kaldır**' ı seçin.<br/>
-  a. **Sertifikalar**' a çift tıklayın, **Kullanıcı hesabım**' ı seçin, **son**' a ve ardından **Tamam**' a tıklayın.<br/>
-  b. **Sertifikalar – Geçerli Kullanıcı**' yı genişletin.<br/>
-  c. **Ara sertifika yetkililerini**genişlettikten sonra **Sertifikalar**' ı seçin.<br/>
+2. **Dosya** ' ya ve sonra **ek bileşen Ekle/Kaldır** ' ı seçin.<br/>
+  a. **Sertifikalar** ' a çift tıklayın, **Kullanıcı hesabım** ' ı seçin, **son** ' a ve ardından **Tamam** ' a tıklayın.<br/>
+  b. **Sertifikalar – Geçerli Kullanıcı** ' yı genişletin.<br/>
+  c. **Ara sertifika yetkililerini** genişlettikten sonra **Sertifikalar** ' ı seçin.<br/>
     * Gerekli ara sertifikalar için bu listeyi işaretleyin.<br/>
 
 Sertifika adları **verilen** sütunlarda değilse, bunların yüklenmesi gerekir.  Ara sertifika yalnızca **Geçerli Kullanıcı** ara sertifika deposunda ise, yalnızca oturum açan kullanıcı tarafından kullanılabilir. Diğer kullanıcılar için yüklemeniz gerekebilir.

@@ -1,5 +1,7 @@
 ---
 title: CustomBuild görevi | Microsoft Docs
+description: Bu makalede, C++ derleme işlemini özelleştirmeyi desteklemek için MSBuild tarafından kullanılan MSBuild CustomBuild görevi açıklanır.
+ms.custom: SEO-VS-2020
 ms.date: 03/10/2019
 ms.topic: reference
 f1_keywords:
@@ -17,12 +19,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: d95b6e7d4197487adc13050572ac31310701c759
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 640c1e6ae286b45f8700709829140093452a9491
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595351"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796556"
 ---
 # <a name="custombuild-task"></a>CustomBuild görevi
 
@@ -35,7 +37,7 @@ Aşağıdaki tabloda, **CustomBuild** görevinin parametreleri açıklanmaktadı
 |Parametre|Açıklama|
 |---------------|-----------------|
 |**BuildSuffix**|İsteğe bağlı **dize** parametresi.|
-|**Kaynaklar**|Gerekli **ıtaskitem []** parametresi.|
+|**Ğına**|Gerekli **ıtaskitem []** parametresi.|
 |**TrackerLogDirectory**|İsteğe bağlı **dize** parametresi.|
 
 ## <a name="see-also"></a>Ayrıca bkz.

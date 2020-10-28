@@ -1,5 +1,7 @@
 ---
 title: CreateCSharpManifestResourceName görevi | Microsoft Docs
+description: Verilen bir. resx dosya adından veya başka bir kaynaktan C# stili bildirim adı oluşturmak için MSBuild CreateCSharpManifestResourceName görevini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e8e72ef282911ecb36fb9a16838f6cc311e253e1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f13293a6967456b153d14464b65182153eca2549
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634363"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796049"
 ---
 # <a name="createcsharpmanifestresourcename-task"></a>CreateCSharpManifestResourceName görevi
 
@@ -36,7 +38,7 @@ Verilen *. resx* dosya adından veya diğer kaynaklardan C# stili bir bildirim a
 | `ManifestResourceNames` | <xref:Microsoft.Build.Framework.ITaskItem>`[]`salt okuma parametresi çıktı.<br /><br /> Elde edilen bildirim adları. |
 | `ResourceFiles` | Gerekli `String` parametre.<br /><br /> C# bildirim adının oluşturulacağı kaynak dosyasının adı. |
 | `RootNamespace` | İsteğe bağlı `String` parametre.<br /><br /> Kaynak dosyasının genellikle proje dosyasından alınan kök ad alanı. Olabilir `null` . |
-| `PrependCultureAsDirectory` | İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , kültür adı bildirim kaynağı adından hemen önce bir dizin adı olarak eklenir. Varsayılan değer `true` . |
+| `PrependCultureAsDirectory` | İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , kültür adı bildirim kaynağı adından hemen önce bir dizin adı olarak eklenir. Varsayılan değer `true` olarak belirlenmiştir. |
 | `ResourceFilesWithManifestResourceNames` | İsteğe bağlı salt okunurdur `String` çıkış parametresi.<br /><br /> Artık bildirim kaynağı adını içeren kaynak dosyasının adını döndürür. |
 
 ## <a name="remarks"></a>Açıklamalar

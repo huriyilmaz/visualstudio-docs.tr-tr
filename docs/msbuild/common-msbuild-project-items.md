@@ -1,5 +1,7 @@
 ---
 title: Ortak MSBuild proje öğeleri | Microsoft Docs
+description: Ortak MSBuild proje öğeleri hakkında bilgi edinin. Öğeler bir veya daha fazla dosyaya başvuru olarak adlandırılır ve dosya adları, yollar ve sürüm numaraları gibi meta verilere sahiptir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,16 +17,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5cf32bdf56f75ded7d193082f1072b79c3d16b3c
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: b42ba80365b8aedd9527490235efb1228bc2a61d
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136920"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796400"
 ---
 # <a name="common-msbuild-project-items"></a>Yaygın MSBuild proje öğeleri
 
-MSBuild 'de, bir öğe bir veya daha fazla dosyaya adlandırılmış bir başvurudur. Öğeler, dosya adları, yollar ve sürüm numaraları gibi meta verileri içerir. Visual Studio 'daki tüm proje türlerinde ortak olarak birkaç öğe vardır. Bu öğeler *Microsoft. Build. CommonTypes. xsd*dosyasında tanımlanmıştır.
+MSBuild 'de, bir öğe bir veya daha fazla dosyaya adlandırılmış bir başvurudur. Öğeler, dosya adları, yollar ve sürüm numaraları gibi meta verileri içerir. Visual Studio 'daki tüm proje türlerinde ortak olarak birkaç öğe vardır. Bu öğeler *Microsoft. Build. CommonTypes. xsd* dosyasında tanımlanmıştır.
 
 ## <a name="common-items"></a>Ortak öğeler
 
@@ -34,10 +36,10 @@ Tüm ortak proje öğelerinin listesi aşağıda verilmiştir.
 
 Projedeki derleme (yönetilen) başvurusunu temsil eder.
 
-|Öğe meta veri adı|Description|
+|Öğe meta veri adı|Açıklama|
 |---------------|-----------------|
 |HintPath|İsteğe bağlı dize. Derlemenin göreli veya mutlak yolu.|
-|Name|İsteğe bağlı dize. Derlemenin görünen adı, örneğin, "System. Windows. Forms."|
+|Ad|İsteğe bağlı dize. Derlemenin görünen adı, örneğin, "System. Windows. Forms."|
 |FusionName|İsteğe bağlı dize. Öğe için basit veya güçlü Fusion adı belirtir.<br /><br /> Bu öznitelik mevcut olduğunda, derleme dosyası Fusion adını almak için açılmadığından zaman tasarrufu yapabilirsiniz.|
 |Bahsedilen SpecificVersion|İsteğe bağlı Boolean. Yalnızca Fusion adındaki sürümün başvurulması gerekip gerekmediğini belirtir.|
 |Diğer adlar|İsteğe bağlı dize. Başvuru için herhangi bir diğer ad.|
@@ -61,7 +63,7 @@ Projedeki COM (yönetilmeyen) bileşen başvurusunu temsil eder. Bu öğe yalnı
 
 `TypeLibFiles` [ResolveComReference](resolvecomreference-task.md) hedefinin parametresine geçirilen tür kitaplıklarının listesini temsil eder. Bu öğe yalnızca .NET projeleri için geçerlidir.
 
-|Öğe meta veri adı|Description|
+|Öğe meta veri adı|Açıklama|
 |---------------|-----------------|
 |WrapperTool|İsteğe bağlı dize. Bileşende kullanılan sarmalayıcı aracının adı, örneğin, "Tlbimp."|
 
@@ -95,7 +97,7 @@ Başka bir projenin başvurusunu temsil eder. `ProjectReference` öğeler, hedef
 
 Derleyicinin kaynak dosyalarını temsil eder.
 
-| Öğe meta veri adı | Description |
+| Öğe meta veri adı | Açıklama |
 |-----------------------| - |
 | DependentUpon | İsteğe bağlı dize. Doğru derlemek için bu dosyanın bağlı olduğu dosyayı belirtir. |
 | Oto gen | İsteğe bağlı Boolean. Visual Studio tümleşik geliştirme ortamı (IDE) tarafından proje için dosyanın oluşturulup oluşturulmayacağını gösterir. |
@@ -107,7 +109,7 @@ Derleyicinin kaynak dosyalarını temsil eder.
 
 Oluşturulan derlemeye gömülebilen kaynakları temsil eder.
 
-| Öğe meta veri adı | Description |
+| Öğe meta veri adı | Açıklama |
 |-----------------------| - |
 | DependentUpon | İsteğe bağlı dize. Doğru derlemek için bu dosyanın bağlı olduğu dosyayı belirtir |
 | Oluşturucu | Gerekli dize. Bu öğede çalıştırılan herhangi bir dosya oluşturucusunun adı. |
@@ -122,7 +124,7 @@ Oluşturulan derlemeye gömülebilen kaynakları temsil eder.
 
 Projeye derlenmemiş ancak birlikte gömülebilir veya onunla birlikte yayımlanabilir olan dosyaları temsil eder.
 
-| Öğe meta veri adı | Description |
+| Öğe meta veri adı | Açıklama |
 |-----------------------| - |
 | DependentUpon | İsteğe bağlı dize. Doğru derlemek için bu dosyanın bağlı olduğu dosyayı belirtir. |
 | Oluşturucu | Gerekli dize. Bu öğe üzerinde çalışan herhangi bir dosya oluşturucusunun adı. |
@@ -134,11 +136,11 @@ Projeye derlenmemiş ancak birlikte gömülebilir veya onunla birlikte yayımlan
 | Görünür | İsteğe bağlı Boolean. Visual Studio 'da **Çözüm Gezgini** dosyanın görüntülenip görüntülenmeyeceğini gösterir. |
 | CopyToOutputDirectory | İsteğe bağlı dize. Dosyanın çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1. hiçbir şekilde<br />2. her zaman<br />3. Preservenebatı |
 
-### <a name="none"></a>Hiçbiri
+### <a name="none"></a>Yok
 
 Yapı işleminde rolü olmaması gereken dosyaları temsil eder.
 
-| Öğe meta veri adı | Description |
+| Öğe meta veri adı | Açıklama |
 |-----------------------| - |
 | DependentUpon | İsteğe bağlı dize. Doğru derlemek için bu dosyanın bağlı olduğu dosyayı belirtir. |
 | Oluşturucu | Gerekli dize. Bu öğede çalıştırılan herhangi bir dosya oluşturucusunun adı. |
@@ -152,7 +154,7 @@ Yapı işleminde rolü olmaması gereken dosyaları temsil eder.
 
 Olarak oluşturulacak derleme özniteliklerini temsil eder `[AssemblyMetadata(key, value)]` .
 
-| Öğe meta veri adı | Description |
+| Öğe meta veri adı | Açıklama |
 |-----------------------| - |
 | Şunları Dahil Et: | Öznitelik oluşturucusunda ilk parametre (anahtar) olur `AssemblyMetadataAttribute` . |
 | Değer | Gerekli dize. Öznitelik oluşturucusunda ikinci parametre (değer) olur `AssemblyMetadataAttribute` . |
@@ -168,7 +170,7 @@ Yapı için temel uygulama bildirimini temsil eder ve ClickOnce dağıtımı gü
 
 İçeri aktarılacak FxCop projesini temsil eder.
 
-### <a name="import"></a>İçeri Aktarma
+### <a name="import"></a>İçeri Aktar
 
 Ad alanları Visual Basic Derleyicisi tarafından içeri aktarılması gereken derlemeleri temsil eder.
 

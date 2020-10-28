@@ -1,5 +1,7 @@
 ---
 title: CreateVisualBasicManifestResourceName görevi | Microsoft Docs
+description: Verilen bir. resx dosya adından veya başka bir kaynaktan Visual Basic stili bir bildirim adı oluşturmak için MSBuild CreateVisualBasicManifestResourceName görevini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6aa419001d2e890c87873862f0575607b31d22c2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ba80c4d52491a70a7bb8e294c9dd6ca2c9664ec3
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634298"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796738"
 ---
 # <a name="createvisualbasicmanifestresourcename-task"></a>CreateVisualBasicManifestResourceName görevi
 
@@ -36,7 +38,7 @@ Verilen bir *. resx* dosya adından veya başka bir kaynaktan Visual Basic stili
 | `ManifestResourceNames` | <xref:Microsoft.Build.Framework.ITaskItem>`[]`salt okuma parametresi çıktı.<br /><br /> Elde edilen bildirim adları. |
 | `ResourceFiles` | Gerekli `String` parametre.<br /><br /> Visual Basic bildirim adının oluşturulacağı kaynak dosyasının adı. |
 | `RootNamespace` | İsteğe bağlı `String` parametre.<br /><br /> Kaynak dosyasının genellikle proje dosyasından alınan kök ad alanı. Olabilir `null` . |
-| `PrependCultureAsDirectory` | İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , kültür adı bildirim kaynağı adından hemen önce bir dizin adı olarak eklenir. Varsayılan değer `true` . |
+| `PrependCultureAsDirectory` | İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , kültür adı bildirim kaynağı adından hemen önce bir dizin adı olarak eklenir. Varsayılan değer `true` olarak belirlenmiştir. |
 | `ResourceFilesWithManifestResourceNames` | İsteğe bağlı salt okunurdur `String` çıkış parametresi.<br /><br /> Artık bildirim kaynağı adını içeren kaynak dosyasının adını döndürür. |
 
 ## <a name="remarks"></a>Açıklamalar

@@ -9,18 +9,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23bc0fa990a79b1855ec382f42248a0f847c3c9c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2d66181f5e6720348e18c34b735ef29e24c0111a
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "78200925"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796309"
 ---
 # <a name="remote-debug-net-core-on-linux-using-ssh"></a>SSH kullanarak Linux 'ta .NET Core 'da uzaktan hata ayıklama
 
 Visual Studio 2017 ' den başlayarak, SSH üzerinden Linux üzerinde çalışan .NET Core işlemlerine iliştirebilirsiniz. Bu makalede hata ayıklamayı ayarlama ve hata ayıklama işlemlerinin nasıl yapılacağı açıklanır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Visual Studio bilgisayarında, **ASP.net ve Web geliştirme** iş yükünü ya da **.NET Core platformlar arası geliştirme** iş yükünü yüklemeniz gerekir.
 
@@ -34,15 +34,15 @@ sudo apt-get install openssh-server unzip curl
 
 Uygulamanızı hata ayıklamaya hazırlamak için:
 
-- Uygulamayı oluştururken bir hata ayıklama yapılandırması kullanmayı düşünün. Hata ayıklama derlenen koddan perakende koda derlenmiş kodun (sürüm yapılandırması) hata ayıklaması çok daha zordur. Sürüm yapılandırması kullanmanız gerekiyorsa Yalnızca kendi kodum önce devre dışı bırakın. Bu ayarı devre dışı bırakmak için **Araçlar**  >  **Seçenekler**  >  **hata ayıklama**' ı seçin ve ardından **yalnızca kendi kodum etkinleştir**' i kaldırın.
+- Uygulamayı oluştururken bir hata ayıklama yapılandırması kullanmayı düşünün. Hata ayıklama derlenen koddan perakende koda derlenmiş kodun (sürüm yapılandırması) hata ayıklaması çok daha zordur. Sürüm yapılandırması kullanmanız gerekiyorsa Yalnızca kendi kodum önce devre dışı bırakın. Bu ayarı devre dışı bırakmak için **Araçlar**  >  **Seçenekler**  >  **hata ayıklama** ' ı seçin ve ardından **yalnızca kendi kodum etkinleştir** ' i kaldırın.
 
-- Projenizin [Taşınabilir pdb 'leri](https://github.com/OmniSharp/omnisharp-vscode/wiki/Portable-PDBs) (varsayılan ayar) olarak yapılandırıldığından emin olun ve PBX 'lerin dll ile aynı konumda olduğundan emin olun. Visual Studio 'da yapılandırmak için projeye sağ tıklayın ve ardından **Özellikler**  >  **Build**  >  **Gelişmiş**  >  **hata ayıklama bilgileri**oluştur ' u seçin.
+- Projenizin [Taşınabilir pdb 'leri](https://github.com/OmniSharp/omnisharp-vscode/wiki/Portable-PDBs) (varsayılan ayar) olarak yapılandırıldığından emin olun ve PBX 'lerin dll ile aynı konumda olduğundan emin olun. Visual Studio 'da yapılandırmak için projeye sağ tıklayın ve ardından **Özellikler**  >  **Build**  >  **Gelişmiş**  >  **hata ayıklama bilgileri** oluştur ' u seçin.
 
 Hata ayıklamadan önce uygulamayı dağıtmak için çeşitli yöntemler kullanabilirsiniz. Örneğin, şunları yapabilirsiniz:
 
 - Kaynakları hedef bilgisayara kopyalayın ve Linux makinesinde ile derleyin ```dotnet build``` .
 
-- Uygulamayı Windows üzerinde oluşturun ve derleme yapıtlarını Linux makinesine aktarın. (Yapı yapıtları uygulamanın kendisinden, bağlı olabileceği çalışma zamanı kitaplıklarının ve dosyadaki *.deps.js* .)
+- Uygulamayı Windows üzerinde oluşturun ve ardından derleme yapıtlarını Linux makinesine aktarın. (Yapı yapıtları uygulamanın kendisinden, bağlı olabileceği çalışma zamanı kitaplıklarının ve dosyadaki *.deps.js* .)
 
 ## <a name="attach-the-debugger"></a>Hata ayıklayıcıyı iliştirme
 
@@ -50,7 +50,7 @@ Bilgisayarlar yapılandırıldıktan sonra, uygulamayı Linux makinesinde başla
 
 1. Visual Studio 'da **Hata Ayıkla**  >  **işleme Ekle...** seçeneğini belirleyin.
 
-1. **Bağlantı türü** listesinde **SSH**' ı seçin.
+1. **Bağlantı türü** listesinde **SSH** ' ı seçin.
 
 1. **Bağlantı hedefini** hedef bilgisayarın IP adresi veya ana bilgisayar adıyla değiştirin.
 
@@ -62,7 +62,7 @@ Bilgisayarlar yapılandırıldıktan sonra, uygulamayı Linux makinesinde başla
 
    ![Linux işlemine iliştir](media/remote-debug-linux-over-ssh-attach.png)
 
-1. **Ekle**' yi seçin.
+1. **Ekle** ' yi seçin.
 
 1. Görüntülenen iletişim kutusunda, hata ayıklamak istediğiniz kod türünü seçin. **Yönetilen (UNIX için .NET Core)** seçeneğini belirleyin.
 

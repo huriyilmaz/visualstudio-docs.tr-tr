@@ -1,24 +1,26 @@
 ---
 title: Visual Studio 'da ve Visual Studio için Blend XAML tasarlama
 titleSuffix: ''
+description: Visual Studio 'daki görsel tasarım araçlarının özellikleri hakkında bilgi edinin ve XAML 'de UI ve deneyimler oluşturmak için Visual Studio için Blend.
+ms.custom: SEO-VS-2020
 ms.date: 02/28/2020
 ms.topic: conceptual
 ms.assetid: 288e2415-9fcf-408e-bc35-9848315e14fd
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: eb18a2face5d9f1831bec35379a423f272c3e6ce
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5be85715efa3086a5a225da45501697440053cc5
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649819"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796712"
 ---
 # <a name="design-xaml-in-visual-studio-and-blend-for-visual-studio"></a>Visual Studio ve Visual Studio için Blend XAML tasarlama
 
 Visual Studio ve Visual Studio için Blend her ikisi de birçok uygulama türü için XAML ile etkileyici kullanıcı arabirimleri ve zengin medya deneyimleri oluşturmaya yönelik görsel araçlar sağlar. Tümleşik geliştirme ortamları (IDE), Visual XAML Düzenleyicisi (Tasarımcı) dahil olmak üzere ortak bir özellikler kümesini paylaşır. WPF ve UWP platformlarını destekleyen Visual Studio için Blend, görsel durumlar tasarlamak ve animasyonlar oluşturmak için ek araçlar sağlar.
 
-Visual Studio ile Visual Studio için Blend arasında geri dönebilir ve aynı projede her iki Ides içinde de aynı projeyi açabilmenize de sahip olabilirsiniz. Bir IDE 'deki XAML dosyalarına kaydedilen değişiklikler, diğer IDE 'ye geçtiğinizde otomatik yeniden yükleme yoluyla uygulanabilir. **Tools**  >  **Options**  >  **Environment**  >  Her iki IDE 'deki araçlar seçenekleri ortam**belgeleri** ' ne giderek yeniden yükleme davranışını kontrol edebilirsiniz.
+Visual Studio ile Visual Studio için Blend arasında geri dönebilir ve aynı projede her iki Ides içinde de aynı projeyi açabilmenize de sahip olabilirsiniz. Bir IDE 'deki XAML dosyalarına kaydedilen değişiklikler, diğer IDE 'ye geçtiğinizde otomatik yeniden yükleme yoluyla uygulanabilir. **Tools**  >  **Options**  >  **Environment**  >  Her iki IDE 'deki araçlar seçenekleri ortam **belgeleri** ' ne giderek yeniden yükleme davranışını kontrol edebilirsiniz.
 
 ## <a name="installation"></a>Yükleme
 
@@ -42,7 +44,7 @@ Visual Studio ile Visual Studio için Blend arasında geri dönebilir ve aynı p
 
 - **Hata ayıklama:** Çalışan bir uygulamada hata ayıklamak için kod noktalarını ayarlama ve uygulama çalışırken XAML kodunuzu değiştirmek için [sık yeniden yükleme](../xaml-tools/xaml-hot-reload.md) kullanma dahil olmak üzere, [Visual Studio](inspect-xaml-properties-while-debugging.md) ve [Visual Studio için Blend](../xaml-tools/debug-xaml-in-blend.md)hata ayıklaması yapabilirsiniz. Visual Studio ile tutarlı bir hata ayıklama deneyimi sağlamak için Visual Studio için Blend Visual Studio 'nun hata ayıklama pencerelerini ve araç çubuklarının çoğunu içerir.
 
-- **Dosya yeniden yükleme:** XAML dosyalarınızı, Visual Studio veya Visual Studio için Blend düzenleyebilirsiniz. Değiştirilmiş dosyalar, Ides 'ler arasında geçiş yaparken otomatik olarak yeniden yüklenir. **Tools**  >  **Options**  >  **Environment**  >  Her iki IDE 'deki araçlar seçenekleri ortam**belgeleri** ' ne giderek yeniden yükleme davranışını kontrol edebilirsiniz.
+- **Dosya yeniden yükleme:** XAML dosyalarınızı, Visual Studio veya Visual Studio için Blend düzenleyebilirsiniz. Değiştirilmiş dosyalar, Ides 'ler arasında geçiş yaparken otomatik olarak yeniden yüklenir. **Tools**  >  **Options**  >  **Environment**  >  Her iki IDE 'deki araçlar seçenekleri ortam **belgeleri** ' ne giderek yeniden yükleme davranışını kontrol edebilirsiniz.
 
 - **Eşitlenmiş düzenler ve Ayarlar:** Visual Studio veya Visual Studio için Blend için tasarım özelleştirme aracı pencere düzenleri ve ayarları tercihleri, aynı kişiselleştirme hesabıyla oturum açtığınızda cihazlarınız ve sürümleriniz arasında eşitlenir. Bkz. [birden çok bilgisayar üzerinde ayarları eşitler](../ide/synchronized-settings-in-visual-studio.md).
 

@@ -1,5 +1,7 @@
 ---
 title: Görevi Kopyala | Microsoft Docs
+description: Dosya sistemindeki yeni bir dosya veya klasör konumuna dosya kopyalamak için MSBuild kopyalama görevini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c298658c7e9f385e5140ea46f8069512c0bf278
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 00544b6d1e797a1fd8a7a197197480cae5620f10
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508047"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796243"
 ---
 # <a name="copy-task"></a>Kopyalama görevi
 
@@ -74,9 +76,9 @@ Aşağıdakiler dahil olmak üzere uyarılar günlüğe kaydedilir:
 
 Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
-## <a name="example"></a>Örnek
+## <a name="example-1"></a>Örnek 1
 
-Aşağıdaki örnek, `MySourceFiles` öğe koleksiyonundaki öğeleri *C:\myproject\destination*klasörüne kopyalar.
+Aşağıdaki örnek, `MySourceFiles` öğe koleksiyonundaki öğeleri *C:\myproject\destination* klasörüne kopyalar.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -95,9 +97,9 @@ Aşağıdaki örnek, `MySourceFiles` öğe koleksiyonundaki öğeleri *C:\myproj
 </Project>
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-2"></a>Örnek 2
 
-Aşağıdaki örnek, yinelemeli bir kopyalamanın nasıl gerçekleştirileceğini gösterir. Bu proje, dizin yapısını koruyarak tüm dosyaları özyinelemeli olarak *C:\mysourcetree* 'den *c:\mydestinationtree*içine kopyalar.
+Aşağıdaki örnek, yinelemeli bir kopyalamanın nasıl gerçekleştirileceğini gösterir. Bu proje, dizin yapısını koruyarak tüm dosyaları özyinelemeli olarak *C:\mysourcetree* 'den *c:\mydestinationtree* içine kopyalar.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

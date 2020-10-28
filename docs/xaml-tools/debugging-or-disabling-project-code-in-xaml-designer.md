@@ -1,17 +1,19 @@
 ---
 title: XAML Tasarımcısı’nda proje kodu hatalarını ayıklama veya proje kodunu devre dışı bırakma
+description: Visual Studio 'nun başka bir örneğinde çalışan proje kodunun hatalarını ayıklama da dahil olmak üzere XAML Tasarımcısı proje kodunu nasıl ayıklayacağınızı veya devre dışı bırakmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: ac600581-8fc8-49e3-abdf-1569a3483d74
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: fba240c29cb8142a9ec4b4d28c71112c1974a5b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a5db556bfc9106bb18a6ef9d4d5e3e1aa893cc3
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331063"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796751"
 ---
 # <a name="debug-or-disable-project-code-in-xaml-designer"></a>XAML Tasarımcısı’nda proje kodu hatalarını ayıklama veya proje kodunu devre dışı bırakma
 
@@ -53,15 +55,15 @@ Proje kodu devre dışı bırakıldığında, Visual Studio yer tutucular göste
 
 5. Proje kodunuzda bir kesme noktası ayarlayın.
 
-6. Visual Studio 'nun yeni örneğinde, menü çubuğunda, **Debug**  >  **işleme Ekle**Hata Ayıkla ' yı seçin.
+6. Visual Studio 'nun yeni örneğinde, menü çubuğunda, **Debug**  >  **işleme Ekle** Hata Ayıkla ' yı seçin.
 
-7. **Işleme İliştir** iletişim kutusunda, **kullanılabilir işlemler** listesinde **XDesProc.exe**' yi seçin ve ardından **Ekle** düğmesini seçin.
+7. **Işleme İliştir** iletişim kutusunda, **kullanılabilir işlemler** listesinde **XDesProc.exe** ' yi seçin ve ardından **Ekle** düğmesini seçin.
 
      ![XAML Tasarımcısı işlemi](media/xaml_attach.png)
 
      Bu işlem, Visual Studio 'nun ilk örneğindeki XAML Tasarımcısı işlemidir.
 
-8. Visual Studio 'nun ilk örneğinde, menü çubuğunda **Hata Ayıkla**  >  **Başlat hata**Ayıkla ' yı seçin.
+8. Visual Studio 'nun ilk örneğinde, menü çubuğunda **Hata Ayıkla**  >  **Başlat hata** Ayıkla ' yı seçin.
 
      Artık tasarımcıda çalışan kodunuzda bir adım adım ekleyebilirsiniz.
 
@@ -69,7 +71,7 @@ Proje kodu devre dışı bırakıldığında, Visual Studio yer tutucular göste
 
 - İşlenmeyen özel durum iletişim kutusunda, **Çalışan proje kodunu devre dışı bırakmak ve tasarımcı bağlantısını yeniden yüklemek için buraya tıklayın ' ı** seçin.
 
-- Alternatif olarak, **XAML Tasarımcısı**'ndaki araç çubuğunda, **proje kodunu devre dışı bırak** düğmesini seçin.
+- Alternatif olarak, **XAML Tasarımcısı** 'ndaki araç çubuğunda, **proje kodunu devre dışı bırak** düğmesini seçin.
 
      ![Proje kodunu devre dışı bırak düğmesi](media/xaml_disablecode.png)
 
@@ -90,11 +92,11 @@ Proje kodu devre dışı bırakıldığında, Visual Studio yer tutucular göste
 
 XAML tasarımcısında, denetim görüntüleme seçeneklerinizi yalnızca Windows SDK platform denetimlerini görüntüleyecek şekilde değiştirebilirsiniz. Bu, XAML tasarımcısının güvenilirliğini iyileştirebilecek.
 
-Denetim görüntüleme seçeneklerini değiştirmek için, tasarımcı penceresinin sol alt kısmındaki simgeye tıklayın ve sonra **denetim görüntüleme seçenekleri**altında bir seçenek belirleyin:
+Denetim görüntüleme seçeneklerini değiştirmek için, tasarımcı penceresinin sol alt kısmındaki simgeye tıklayın ve sonra **denetim görüntüleme seçenekleri** altında bir seçenek belirleyin:
 
 ![Denetim görüntüleme seçenekleri](media/control_display_options.png)
 
-**Yalnızca platform denetimlerini göster**' i seçtiğinizde, SDK 'lardan, müşteri Kullanıcı denetimlerinden ve daha fazlasına ait tüm özel denetimler tamamen işlenmeyecektir. Bunun yerine, denetimin boyutunu ve konumunu göstermek için geri dönüş denetimleriyle değiştirilirler.
+**Yalnızca platform denetimlerini göster** ' i seçtiğinizde, SDK 'lardan, müşteri Kullanıcı denetimlerinden ve daha fazlasına ait tüm özel denetimler tamamen işlenmeyecektir. Bunun yerine, denetimin boyutunu ve konumunu göstermek için geri dönüş denetimleriyle değiştirilirler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

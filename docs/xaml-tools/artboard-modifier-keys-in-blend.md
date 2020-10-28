@@ -1,5 +1,7 @@
 ---
 title: Blend’de çalışma yüzeyi değiştirici tuşları
+description: Çalışma yüzeyinde yakınlaştırma, yeniden boyutlandırma ve kaydırma gibi eylemleri değiştirmek için Visual Studio için Blend değiştirici tuşlarını kullanarak klavye kısayolları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 50732733-ff49-41ba-8c44-4f6a3875ec1c
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2659f8f4c90bb7476a5c3a51f8ecb9a2e207029
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4b801713e6fdccf65bb580b017f011e65e0b84e
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329577"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796286"
 ---
 # <a name="artboard-modifier-keys-in-blend"></a>Blend’de çalışma yüzeyi değiştirici tuşları
 Bazı klavye kısayolları ilişkili menü öğelerine sahip değildir, bu da [!INCLUDE[blend_subs](../debugger/includes/blend_subs_md.md)] Kullanıcı arabirimini kullanarak bunları keşfedemeyeceğiniz anlamına gelir. Aşağıdaki tabloda, bir nesneyi değiştirme gibi bir eylemi değiştiren kısayollar listelenmektedir.
@@ -24,8 +26,8 @@ Bazı klavye kısayolları ilişkili menü öğelerine sahip değildir, bu da [!
 |**Seçim** aracı seçiliyken seçili nesneleri Sürükle|Ok tuşlarına basın|
 |Çalışma yüzeyini kaydır|**Ara çubuğu** basılı tutun ve çalışma yüzeyini sürükleyin|
 |Çalışma yüzeyini yakınlaştırma ve uzaklaştırma|Fare tekerleğini döndürme|
-|Çalışma yüzeyini yakınlaştırma|**Ctrl** + Çalışma yüzeyinde herhangi bir yere tıklarken Ctrl +**Ara çubuğu** basılı tutun|
-|Çalışma yüzeyinde uzaklaştır|**Ctrl** + **Alt** + Çalışma yüzeyinde herhangi bir yere tıklarken Ctrl alt**Ara çubuğu** tuşunu basılı tutun|
+|Çalışma yüzeyini yakınlaştırma|**Ctrl** + Çalışma yüzeyinde herhangi bir yere tıklarken Ctrl + **Ara çubuğu** basılı tutun|
+|Çalışma yüzeyinde uzaklaştır|**Ctrl** + **Alt** + Çalışma yüzeyinde herhangi bir yere tıklarken Ctrl alt **Ara çubuğu** tuşunu basılı tutun|
 |Çalışma yüzeyini sola ve sağa taşı|**SHIFT** tuşunu basılı tutun ve fare tekerleğini döndürün|
 |Çalışma yüzeyini yukarı ve aşağı taşı|**CTRL** tuşunu basılı tutun ve fare tekerleğini döndürün|
 |Çizilen veya dönüştürülen nesnelerin oranlarını kısıtlama|**SHIFT** tuşunu basılı tutun|

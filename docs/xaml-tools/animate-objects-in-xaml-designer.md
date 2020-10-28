@@ -1,32 +1,34 @@
 ---
 title: XAML Tasarımcısı’nda nesnelere animasyon ekleme
 titleSuffix: Blend for Visual Studio
+description: XAML Tasarımcısı bir nesneye animasyon uygulamak için zaman çizelgesi ve ana kareleri olan bir film şeridi kullanarak Visual Studio için Blend bir animasyon oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 07/31/2019
 ms.topic: how-to
 ms.assetid: fb88fa26-e835-47f5-9771-2f279441c83c
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: e568b5e19d7d5f8034ba2bd3b96e3b6968c4b5fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2c1c4100921430daa0faa0daba3c3c3f5328fb3d
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85328508"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796335"
 ---
 # <a name="animate-objects-in-xaml-designer"></a>XAML Tasarımcısı’nda nesnelere animasyon ekleme
 
 Visual Studio için Blend, nesneleri taşımak veya onları aşağı veya dışarı bir şekilde soluklaştırmak için kolayca bir kısa animasyon oluşturmanızı sağlar.
 
-Animasyon oluşturmak için bir *görsel taslağa*ihtiyacınız vardır. Film şeridi bir veya daha fazla *zaman çizelgesi*içerir. Özellik değişikliklerini işaretlemek için zaman çizelgesinde *ana kareleri* ayarlayın. Daha sonra, animasyonu çalıştırdığınızda Visual Studio için Blend, belirlenen süre içinde özellik değişikliklerini enterpolasyonlar. Sonuç kesintisiz bir geçiştir. Nesneye ait olan herhangi bir özelliğe, hatta görsel olmayan özelliklere animasyon uygulayabilirsiniz.
+Animasyon oluşturmak için bir *görsel taslağa* ihtiyacınız vardır. Film şeridi bir veya daha fazla *zaman çizelgesi* içerir. Özellik değişikliklerini işaretlemek için zaman çizelgesinde *ana kareleri* ayarlayın. Daha sonra, animasyonu çalıştırdığınızda Visual Studio için Blend, belirlenen süre içinde özellik değişikliklerini enterpolasyonlar. Sonuç kesintisiz bir geçiştir. Nesneye ait olan herhangi bir özelliğe, hatta görsel olmayan özelliklere animasyon uygulayabilirsiniz.
 
-Aşağıdaki resimlerde **Storyboard1**adlı bir görsel taslak gösterilmektedir. Zaman çizelgesi, bir dikdörtgenin X ve Y konumunu işaretleyen ana kareleri içerir. Bu animasyon çalıştırıldığında, dikdörtgen bir konumdan diğerine doğru gider.
+Aşağıdaki resimlerde **Storyboard1** adlı bir görsel taslak gösterilmektedir. Zaman çizelgesi, bir dikdörtgenin X ve Y konumunu işaretleyen ana kareleri içerir. Bu animasyon çalıştırıldığında, dikdörtgen bir konumdan diğerine doğru gider.
 
 ![Visual Studio için Blend animasyon için görsel taslak](media/storyboard-timeline.png)
 
 ## <a name="create-an-animation"></a>Animasyon oluşturma
 
-1. Görsel taslak oluşturmak için **nesneler ve zaman çizelgesi** penceresinde **görsel taslak seçenekleri** düğmesini seçin ve ardından **Yeni**' yi seçin.
+1. Görsel taslak oluşturmak için **nesneler ve zaman çizelgesi** penceresinde **görsel taslak seçenekleri** düğmesini seçin ve ardından **Yeni** ' yi seçin.
 
    ![Visual Studio için Blend film şeridi ekleme](media/new-storyboard.png)
 
