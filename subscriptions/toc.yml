@@ -6,11 +6,11 @@
   items:
     - name: Abonelik satın alma
       items:
-        - name: Perakende
+        - name: Retail
           href: buy-activate-retail.md
         - name: Bulut
           items:
-            - name: Genel bakış
+            - name: Genel Bakış
               href: vscloud-overview.md
             - name: Faturalandırma hakkında SSS
               href: vscloud-billing-faq.md
@@ -48,6 +48,8 @@
       href: contact-my-admin.md
     - name: Yararları
       items:
+        - name: Avantajlar hakkında
+          href: about-benefits.md
         - name: Araçlar
           items:
             - name: Azure DevTest bireysel kredisi
@@ -148,7 +150,7 @@
           href: admin-roles.md
         - name: Anlaşma tercihlerini belirleme
           href: admin-prefs.md
-        - name: Genel bakış
+        - name: Genel Bakış
           href: using-admin-portal.md
         - name: Aylık abonelikler ekleme
           href: add-monthly-subs.md
