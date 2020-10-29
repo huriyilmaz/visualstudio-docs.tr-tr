@@ -1,18 +1,18 @@
 ---
-title: Teknik destek avantajı
+title: Visual Studio aboneliklerinde teknik destek avantajı
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 2e0fd8bb-8f20-487c-b350-b8fde405ea5e
-ms.date: 09/02/2020
+ms.date: 10/28/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinizle birlikte sunulan teknik destek avantajını nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: 6f22273d578c6e1bc30d588fff30c945846a5d8f
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 30b47646c26e5bc9fbf9045e2acf59a670aa5e9d
+ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91004552"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92918129"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde teknik destek avantajını etkinleştirin ve kullanın
 Visual Studio aboneliklerinde teknik destek avantajı, hala [destek yaşam döngüsünün](https://support.microsoft.com/lifecycle/search)temel destek aşamasında olan ürünlere yönelik **Üretim dışı ortamlarda** onarım sorunlarını çözmeye yöneliktir. Visual Studio Enterprise standart ve yıllık bulut abonelikleri dört olay alır, Visual Studio Professional ancak standart ve yıllık bulut abonelikleri, avantajı etkinleştirmede 1 yıla kadar olmak üzere iki olay alır. Abonelik geçerli olduğunda avantajı etkinleştirme gerçekleşmelidir.
@@ -30,7 +30,7 @@ Visual Studio IDE ve Azure DevOps Server gibi Geliştirici Araçları, Visual St
 
 Visual Studio aboneliklerinden indirilen geliştirici olmayan ürünler (SQL, Windows, SharePoint gibi) yalnızca temel destek için uygundur. Bu ürünler yalnızca uygulamaları tasarlamak, geliştirmek, test etmek veya göstermek için geliştirme ortamları için lisanslanır. Bu ürünler üretim ortamları için lisanslanmaz.
 
-Ürün düzeyi açıklamaları: **kullanılamayan destek planlarını**genişletin. **Belirtilen ürüne (kod: 8) destek için destek planı kullanılmıyorsa**, destek sözleşmeniz seçtiğiniz ürün sürümü için kullanılamaz.
+Ürün düzeyi açıklamaları: **kullanılamayan destek planlarını** genişletin. **Belirtilen ürüne (kod: 8) destek için destek planı kullanılmıyorsa** , destek sözleşmeniz seçtiğiniz ürün sürümü için kullanılamaz.
 
 > [!IMPORTANT]
 > Belirtilen destek olayları, onarım desteği içindir.  Bunlar, aşağıdaki ürünlerle ilgili kodlama/geliştirme sorunlarıyla ilgili yardım için kullanılamayabilir:
@@ -42,7 +42,7 @@ Visual Studio aboneliklerinden indirilen geliştirici olmayan ürünler (SQL, Wi
 > - Microsoft Outlook
 
 ## <a name="how-to-activate-the-benefit"></a>Avantajı etkinleştirme
-1. Git ' e gidin <https://my.visualstudio.com/Benefits> , destek bölümüne gidin ve teknik destek kutucuğunda **etkinleştirmek için sohbet**' e tıklayın.
+1. Git ' e gidin <https://my.visualstudio.com/Benefits> , destek bölümüne gidin ve teknik destek kutucuğunda **etkinleştirmek için sohbet** ' e tıklayın.
     > [!div class="mx-imgBorder"]
     > ![Teknik destek avantajı kutucuğu](_img/vs-tech-support/vs-tech-support-tile.png)
 2. Bu, **sözleşme kimliği** ve **erişim kimliğiniz** oluşturabileceğiniz bir temsilciyle sohbet oturumu başlatır ve bunları sizin kayıtlarınızda olacak şekilde e-posta yoluyla size sağlayabilir.
@@ -77,27 +77,27 @@ Bir olayı çevrimiçi olarak gönderirken öncelikle oturum açmanız istenir. 
 #### <a name="submitting-an-incident-online"></a>Çevrimiçi olay gönderme
 Bir olayı çevrimiçi olarak gönderirken öncelikle oturum açmanız istenir. Açılan listeyi kullanarak, yardım almak istediğiniz ürünü seçin. Örneğin, Visual Studio Enterprise 2019 için bir olay göndermek için **Geliştirici Araçları** ailesini seçip ürün olarak **Visual Studio 2019** ' i seçin ve ardından sürüm olarak **Visual Studio Enterprise 2019** ' ı seçin.
 
-1. Destek için gereken ürünü seçtikten sonra **İleri**' ye tıklayın.
+1. Destek için gereken ürünü seçtikten sonra **İleri** ' ye tıklayın.
 
    > [!div class="mx-imgBorder"]
    > ![Teknik destek avantajı olay gönderimi adım 1-ürün](_img/vs-tech-support/vs-tech-support-step1.png)
 
-2. Sorununuzu tanıtın ve **İleri**' ye tıklayın.
+2. Sorununuzu tanıtın ve **İleri** ' ye tıklayın.
 
    > [!div class="mx-imgBorder"]
    > ![Teknik destek avantajı olay gönderimi adım 2-sorun](_img/vs-tech-support/vs-tech-support-step2.png)
 
-3. "Destek planı" sayfasında, **bir destek planı eklemek veya satın**almak için aşağı kaydırın, sağdaki oku kullanarak genişletin ve **sözleşme Ekle**' ye tıklayın.
+3. "Destek planı" sayfasında, **bir destek planı eklemek veya satın** almak için aşağı kaydırın, sağdaki oku kullanarak genişletin ve **sözleşme Ekle** ' ye tıklayın.
 
    > [!div class="mx-imgBorder"]
    > ![Teknik destek avantajı olay gönderimi-sözleşme ekleme](_img/vs-tech-support/vs-tech-support-add-contract.png)
 
-4. **ERIŞIM kimliğinizi** ve **sözleşme kimliğinizi**girin.  **Ekle**'ye tıklayın.
+4. **ERIŞIM kimliğinizi** ve **sözleşme kimliğinizi** girin.  **Ekle** 'ye tıklayın.
 
    > [!div class="mx-imgBorder"]
    > ![Teknik destek avantajı olay gönderimi-sözleşme KIMLIĞI Ekle](_img/vs-tech-support/vs-tech-support-add-contract-id.png)
 
-5. Sözleşmeniz eklendikten sonra, en üstteki **bir destek planı seçin** altında görünür. Planınız, başlıkta "MSDN" terimini içerecektir. Seçin, aşağı kaydırın ve **İleri**' ye tıklayın.
+5. Sözleşmeniz eklendikten sonra, en üstteki **bir destek planı seçin** altında görünür. Planınız, başlıkta "MSDN" terimini içerecektir. Seçin, aşağı kaydırın ve **İleri** ' ye tıklayın.
 
    > [!div class="mx-imgBorder"]
    > ![Teknik destek avantajı olay gönderimi-plan seçin](_img/vs-tech-support/vs-tech-support-choose-plan.png)
@@ -121,12 +121,12 @@ Azure ile ilgili sorunlar için Visual Studio aboneliğiniz teknik destek avanta
 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | 4 olay       |  Yes|
-| GitHub Enterprise ile Visual Studio Enterprise | VL | 4 olay       |  Yes|
-| Visual Studio Professional (Standart) | VL, Azure, perakende, seçili NFR<sup>2</sup>                                        | 2 olay                                                          |Yes         |
-| GitHub Enterprise ile Visual Studio Professional | VL                                     | 2 olay                                                          |Yes         |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | 2 olay                                             |  Yes         |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | 2 olay                                               | Yes         |
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | 4 olay       |  Evet|
+| GitHub Enterprise ile Visual Studio Enterprise | VL | 4 olay       |  Evet|
+| Visual Studio Professional (Standart) | VL, Azure, perakende, seçili NFR<sup>2</sup>                                        | 2 olay                                                          |Evet         |
+| GitHub Enterprise ile Visual Studio Professional | VL                                     | 2 olay                                                          |Evet         |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | 2 olay                                             |  Evet         |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | 2 olay                                               | Evet         |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|
 ||
 

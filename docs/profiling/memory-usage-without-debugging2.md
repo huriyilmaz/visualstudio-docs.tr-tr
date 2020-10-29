@@ -13,18 +13,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e4e99652e343510962959830b327237ee018c8fa
-ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
+ms.openlocfilehash: e6e1bd3d38e6303f11ec5da0e88816d56dd43d98
+ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92007206"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92918233"
 ---
 # <a name="analyze-memory-usage-without-debugging-in-the-performance-profiler"></a>Performans Profiler 'da hata ayıklama olmadan bellek kullanımını analiz etme
 
 **Bellek kullanımı** Aracı, uygulamanızın bellek kullanımını izler. Visual Studio 'da etkin bir şekilde geliştirmekte olduğunuz senaryoların gerçek zamanlı bellek efektlerini incelemek için aracını kullanabilirsiniz. Uygulamanın bellek durumlarının ayrıntılı anlık görüntülerini alabilir ve bellek sorunlarının ana nedenlerini bulmak için anlık görüntüleri karşılaştırabilirsiniz. Bellek kullanımı aracı .NET, ASP.NET, C++ veya karma mod (.NET ve yerel) uygulamalarında desteklenir.
 
-Bellek kullanımı aracı, [hata ayıklayıcı ile veya olmadan](../profiling/running-profiling-tools-with-or-without-the-debugger.md)çalıştırılabilir. Bu makalede, Visual Studio **performans profil oluşturucusu**'nda hata ayıklayıcı olmadan bellek kullanımı aracının nasıl kullanılacağını göstereceğiz.
+Bellek kullanımı aracı, [hata ayıklayıcı ile veya olmadan](../profiling/running-profiling-tools-with-or-without-the-debugger.md)çalıştırılabilir. Bu makalede, sürüm derlemeleri için önerilen Visual Studio **performans Profiler** 'da hata ayıklayıcı olmadan bellek kullanımı aracının nasıl kullanılacağını göstereceğiz.
 
 ## <a name="memory-usage-diagnostic-sessions"></a>Bellek kullanımı tanılama oturumları
 
@@ -34,11 +34,11 @@ Bellek kullanımı aracı, [hata ayıklayıcı ile veya olmadan](../profiling/ru
 
    Bellek kullanımı aracı .NET, ASP.NET, C++ veya karma mod (.NET ve yerel) uygulamalarını destekler.
 
-1. Hata Ayıkla menüsünde, çözüm yapılandırmasını **yayınlama** olarak ayarlayın ve dağıtım hedefi olarak **yerel Windows hata ayıklayıcısı** 'Nı (veya **yerel makine**) seçin.
+1. Hata Ayıkla menüsünde, çözüm yapılandırmasını **yayınlama** olarak ayarlayın ve dağıtım hedefi olarak **yerel Windows hata ayıklayıcısı** 'Nı (veya **yerel makine** ) seçin.
 
-1. Menü çubuğunda, **Hata Ayıkla**  >  **performans profil oluşturucusu**' nu seçin.
+1. Menü çubuğunda, **Hata Ayıkla**  >  **performans profil oluşturucusu** ' nu seçin.
 
-1. **Kullanılabilir araçlar**' ın altında **bellek kullanımı**' nı seçin ve ardından **Başlat**' ı seçin.
+1. **Kullanılabilir araçlar** ' ın altında **bellek kullanımı** ' nı seçin ve ardından **Başlat** ' ı seçin.
 
    ![Bellek kullanımı Tanılama oturumu başlatma](../profiling/media/memuse_start_diagnosticssession.png "Bellek kullanımı Tanılama oturumu başlatma")
 
@@ -58,7 +58,7 @@ Anlık görüntü toplamak için bellek verilerini yakalamak istediğinizde **an
 
 ### <a name="close-the-diagnostic-session"></a><a name="BKMK_Close_a_monitoring_session"></a> Tanılama oturumunu kapat
 
-Bir rapor oluşturmadan izleme oturumunu durdurmak için, yalnızca tanılama penceresini kapatmanız yeterlidir. Anlık görüntü toplamayı bitirdiğinizde rapor oluşturmak için, **toplamayı durdur**' u seçin.
+Bir rapor oluşturmadan izleme oturumunu durdurmak için, yalnızca tanılama penceresini kapatmanız yeterlidir. Anlık görüntü toplamayı bitirdiğinizde rapor oluşturmak için, **toplamayı durdur** ' u seçin.
 
 ![Toplamayı durdur](../profiling/media/memuse__stopcollection.png "Toplamayı durdur")
 
@@ -201,7 +201,7 @@ Anlık görüntü farkı raporundaki **yönetilen yığın** ağacı aşağıdak
 
 ![Fark raporundaki başvurulan türler](../profiling/media/memuse_snapshotdiff_referencedtypes.png "Fark raporundaki başvurulan türler")
 
-Bir anlık görüntü farkı raporundaki **başvurulan türler** ağacı aşağıdaki sütunlara sahiptir. **Başvurulan nesneler** ağacının **örneği**, **boyutu (bayt)**, **kapsamlı boyut (bayt)** ve **Modül** sütunları vardır.
+Bir anlık görüntü farkı raporundaki **başvurulan türler** ağacı aşağıdaki sütunlara sahiptir. **Başvurulan nesneler** ağacının **örneği** , **boyutu (bayt)** , **kapsamlı boyut (bayt)** ve **Modül** sütunları vardır.
 
 |Ad|Açıklama|
 |-|-|

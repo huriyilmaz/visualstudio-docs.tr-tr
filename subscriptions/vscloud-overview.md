@@ -2,17 +2,17 @@
 title: Visual Studio bulut abonelikleri satın alma
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
-ms.date: 10/21/2020
+ms.date: 10/28/2020
 ms.topic: overview
 description: Uzun vadeli bir sözleşme olmadan bir ayda ayda veya yıllık esasına göre Visual Studio Professional veya Visual Studio Enterprise.
-ms.openlocfilehash: 29dd6be56441fd833c56eaea89286bb3d418ec78
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: fbb4204ec5b36d865a1c8b3d9c235cdf97b4019e
+ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353453"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92918090"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Visual Studio Professional ve Visual Studio Enterprise bulut abonelikleri satın alın
 [Visual Studio Market](https://marketplace.visualstudio.com) [Visual Studio Professional ve Visual Studio Enterprise abonelikleri](https://visualstudio.microsoft.com/subscriptions/) satın alabilirsiniz. Bunlar **"bulut abonelikleri"** olarak adlandırılır.
@@ -42,7 +42,7 @@ Bulut abonelikleri satın almak üzere EA aboneliğiniz için oluşturulmuş bir
     > [!div class="mx-imgBorder"]
     > ![Abonelik sayısını seçin](_img/buy-vs-subscriptions/buy-vs-sub-users.png "Satın alma yapılacak abonelik sayısını seçin")
 
-    Aboneliklerin kendinize atanmasını istemiyorsanız, **bu aboneliğin bana atamasını**Kaldır ' ı temizleyin.
+    Aboneliklerin kendinize atanmasını istemiyorsanız, **bu aboneliğin bana atamasını** Kaldır ' ı temizleyin.
 
 5. Satın alımlarınızı onaylayın ve sona erdirin. Kendinize bir abonelik atadıysanız, yazılım indirmeye başlamak ve diğer abone avantajlarından yararlanmak için [Visual Studio abone portalını](https://my.visualstudio.com) ziyaret edebilirsiniz.
 
@@ -72,7 +72,7 @@ Abonelikleri iptal etmek için yalnızca anlaşmanızın abonelik sayısını s�
 > [!div class="mx-imgBorder"]
 > ![Abonelik genel bakışını görüntüleme](_img/buy-vs-subscriptions/overview-button.png "Abonelik ayrıntılarını göstermek için genel bakış düğmesini seçin")
 
-4. İptal etmek istediğiniz abonelikler için girişi bulun ve **miktarı değiştir**' i seçin.
+4. İptal etmek istediğiniz abonelikler için girişi bulun ve **miktarı değiştir** ' i seçin.
 1. Miktarı sıfır (0) olarak ayarlayın. Abonelikleriniz, zamanlanan faturalandırma tarihine kadar yerinde kalır, ancak faturalandırma tarihine ulaşıldığında yenilemeyecektir.   
 
 > [!div class="mx-imgBorder"]
@@ -102,7 +102,7 @@ Y: Hayır.  Abonelikleriniz yerinde kalacak ve bu dosyaları bugün yaptığın�
 Y: belirli bir ay boyunca satın alınan yıllık abonelikler, tam bir yıl boyunca hemen ücretlendirilir ve tam yıl için geçerlidir. Bu nedenle, yalnızca satın alımın geçerli ayında lisans sayısını değiştirebilirsiniz (bir yıl için geçerli olur ve bir yıl boyunca ücretlendirilir). Satın alma ayı dışında, abonelik sayısını artırmak artık mümkün değildir.
 
 #### <a name="q-what-if-i-want-to-decrease-the-number-of-subscriptions-for-my-customers"></a>S: müşterilerimin abonelik sayısını azaltmak istersem ne yapmalıyım?
-Y: yöneticiniz https://manage.visualstudio.com abonelik sayısını azaltmak için bu makaledeki yönergeleri ziyaret ederek ve bu makaledeki yönergeleri izleyerek abonelik sayısını azaltabilir. Sistem *, profesyonel olarak derecelendirilmiş* bir kredi oluşturmaz. Para iadesi için Azure Faturalandırma ekibine başvurmanız gerekir.
+Y: yöneticiniz https://manage.visualstudio.com abonelik sayılarını azaltmak için bu makaledeki yönergeleri ziyaret ederek ve bu makaledeki yönergeleri izleyerek abonelik sayısını azaltabilir. Sistem *, profesyonel olarak derecelendirilmiş* bir kredi oluşturmaz. Para iadesi için Azure Faturalandırma ekibine başvurmanız gerekir.
 
 #### <a name="q-if-i-cancel-my-subscription-will-i-be-able-to-buy-another-annual-cloud-subscription-later"></a>S: aboneliğimi iptal ediyorum, daha sonra başka bir yıllık bulut aboneliği satın alabilir miyim?
 Y: başka bir bulut yıllık aboneliği satın alabileceksiniz, ancak Visual Studio abonelikleri satın almaya yönelik birçok seçenek vardır.  Daha fazla bilgi edinin [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) .
@@ -115,10 +115,10 @@ Y: müşterileriniz, yeni Visual Studio bulutu yıllık abonelikleri satın amay
 Y: mevcut müşteriler etkilenmeyecektir. Yeni müşterilerin, Visual Studio 'Da aylık abonelikler satın almak mı yoksa Visual Studio abonelikleri satın almak için toplu lisanslama gibi başka bir kanala mı gitmesi gerektiğine karar vermeniz gerekir.
 
 #### <a name="q-what-if-i-want-to-increase-the-number-of-subscriptions-for-my-customers"></a>S: müşterilerimin abonelik sayısını artırmak istersem ne yapmalıyım?
-A: belirli bir ay boyunca satın alınan yıllık abonelikler, tam yıl boyunca hemen ücretlendirilir ve tam yıl için geçerlidir. Bu nedenle yöneticiniz, satın alma aşamasında yalnızca lisansların sayısını değiştirebilir (1 yıl boyunca geçerli olur ve 1 yıl için ücretlendirilir). Satın alma ayın dışında, abonelik sayısını artırmak artık mümkün değildir.
+A: belirli bir ay boyunca satın alınan yıllık abonelikler, tam yıl boyunca hemen ücretlendirilir ve tam yıl için geçerlidir. Bu nedenle, yöneticiniz yalnızca satın alma ayındaki lisansların sayısını değiştirebilir (1 yıl boyunca geçerli olur ve 1 yıl için ücretlendirilir). Satın alma ayın dışında, abonelik sayısını artırmak artık mümkün değildir.
 
 #### <a name="q-what-if-i-want-to-decrease-the-number-of-subscriptions-for-my-customers"></a>S: müşterilerimin abonelik sayısını azaltmak istersem ne yapmalıyım?
-Y: yöneticiniz [https://manage.visualstudio.com](https://manage.visualstudio.com) abonelik sayısını azaltmak için bu makaledeki yönergeleri ziyaret ederek ve bu makaledeki yönergeleri izleyerek abonelik sayısını azaltabilir. Sistem **, profesyonel olarak derecelendirilmiş** bir kredi oluşturmaz. Para iadesi için Azure Faturalandırma ekibine başvurmanız gerekir.
+Y: yöneticiniz [https://manage.visualstudio.com](https://manage.visualstudio.com) abonelik sayılarını azaltmak için bu makaledeki yönergeleri ziyaret ederek ve bu makaledeki yönergeleri izleyerek abonelik sayısını azaltabilir. Sistem **, profesyonel olarak derecelendirilmiş** bir kredi oluşturmaz. Para iadesi için Azure Faturalandırma ekibine başvurmanız gerekir.
 
 #### <a name="q-if-my-customers-cancel-their-subscriptions-will-they-be-able-to-buy-more-annual-cloud-subscriptions-later"></a>S: müşterilerimiz aboneliklerini iptal edebiliyor, daha sonra yıllık daha fazla bulut aboneliği satın alacak mı?
 Y: başka bir bulut yıllık aboneliği satın alaamayacak olsa da, Visual Studio abonelikleri satın almak için birçok seçenek vardır.  Daha fazla bilgi edinin [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) .

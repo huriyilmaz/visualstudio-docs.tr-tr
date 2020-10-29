@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13fd616e9ec596bfcdeb3718a62dc1a3a1bc8137
-ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
+ms.openlocfilehash: 0bd8f90c586366a298ba96009dfe5d87a042141b
+ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92007158"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92918116"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçları çalıştırma
 
@@ -31,6 +31,7 @@ Hangi araçların ve sonuçların kullanılacağına karar vermek için aşağı
   - Dosya g/ç veya ağ yanıtlama hızı sorunları gibi dış performans sorunları, hata ayıklayıcıda veya hata ayıklayıcı olmayan araçlarda çok daha farklı bir şekilde görünmez.
   - Hata ayıklayıcı, özel durum ve modül yükleme olayları gibi gerekli hata ayıklama işlemlerini yaptığı için performans sürelerini değiştirir.
   - Performans Profiler 'daki yayın derlemesi performans numaraları en kesin ve doğru. Hata ayıklayıcı ile tümleşik araç sonuçları, hata ayıklama ile ilgili diğer ölçülerle kıyaslamak veya hata ayıklayıcı özelliklerini kullanmak için yararlıdır.
+  - .NET nesne ayırma aracı gibi bazı araçlar yalnızca hata ayıklayıcı olmayan senaryolar için kullanılabilir.
 - Hata ayıklama ve yayın derlemesi
   - CPU yoğunluklu çağrıların neden olduğu sorunlar için, yayın ve hata ayıklama derlemeleri arasında önemli performans farklılıkları olabilir. Sorunun yayın yapılarında mevcut olup olmadığını denetleyin.
   - Sorun yalnızca hata ayıklama derlemeleri sırasında gerçekleşirse, muhtemelen hata ayıklayıcı olmayan araçları çalıştırmanız gerekmez. Yayın derlemesi sorunları için, hata ayıklayıcı ile tümleşik araçlar tarafından sağlanan özelliklerin sorunu nasıl bulmamaya yardımcı olacağını belirleyin.
@@ -38,15 +39,15 @@ Hangi araçların ve sonuçların kullanılacağına karar vermek için aşağı
 
 ## <a name="collect-profiling-data-while-debugging"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a> Hata ayıklarken profil oluşturma verilerini topla
 
-**Hata ayıklama**  >  **başlatma hata ayıklamayı**seçerek veya **F5**tuşuna basarak, Visual Studio 'da hata ayıklamayı başlattığınızda, varsayılan olarak **Tanılama araçları** pencere görüntülenir. El ile açmak için **Debug**  >  **Windows**  >  **göster tanılama araçları**Hata Ayıkla ' yı seçin. **Tanılama araçları** pencere, olaylar, işlem belleğı ve CPU kullanımı hakkındaki bilgileri gösterir.
+**Hata ayıklama**  >  **başlatma hata ayıklamayı** seçerek veya **F5** tuşuna basarak, Visual Studio 'da hata ayıklamayı başlattığınızda, varsayılan olarak **Tanılama araçları** pencere görüntülenir. El ile açmak için **Debug**  >  **Windows**  >  **göster tanılama araçları** Hata Ayıkla ' yı seçin. **Tanılama araçları** pencere, olaylar, işlem belleğı ve CPU kullanımı hakkındaki bilgileri gösterir.
 
 ![Tanılama Araçları penceresinin ekran görüntüsü](../profiling/media/diagnostictoolswindow.png " Tanılama Araçları Penceresi")
 
-- **Bellek kullanımını**, **UI analizini**ve **CPU kullanımını**görüntüleyip görüntüleyemeyeceğinizi belirlemek için araç çubuğundaki **Ayarlar** simgesini kullanın.
+- **Bellek kullanımını** , **UI analizini** ve **CPU kullanımını** görüntüleyip görüntüleyemeyeceğinizi belirlemek için araç çubuğundaki **Ayarlar** simgesini kullanın.
 
 - Daha fazla seçenek içeren **Tanılama Araçları özellik sayfalarını** açmak için **Ayarlar** açılan listesinden **Ayarlar** ' ı seçin.
 
-- Visual Studio Enterprise çalıştırıyorsanız, **araç**  >  **seçenekleri**  >  **IntelliTrace**'e giderek IntelliTrace 'i etkinleştirebilir veya devre dışı bırakabilirsiniz.
+- Visual Studio Enterprise çalıştırıyorsanız, **araç**  >  **seçenekleri**  >  **IntelliTrace** 'e giderek IntelliTrace 'i etkinleştirebilir veya devre dışı bırakabilirsiniz.
 
 Hata ayıklamayı durdurduğunuzda Tanılama oturumu sonlanır.
 
@@ -57,7 +58,7 @@ Daha fazla bilgi için bkz.
 
 ### <a name="the-events-tab"></a>Olaylar sekmesi
 
-Bir hata ayıklama oturumu sırasında, Tanılama Araçları penceresinin Olaylar sekmesinde oluşan tanılama olayları listelenir. Kategori ön ekleri *kesme noktası*, *Dosya*ve diğerleri, bir kategorinin listesini hızlıca taramanızı sağlar veya ilgilendiğiniz kategorileri atlar.
+Bir hata ayıklama oturumu sırasında, Tanılama Araçları penceresinin Olaylar sekmesinde oluşan tanılama olayları listelenir. Kategori ön ekleri *kesme noktası* , *Dosya* ve diğerleri, bir kategorinin listesini hızlıca taramanızı sağlar veya ilgilendiğiniz kategorileri atlar.
 
 Belirli olay kategorilerini seçerek veya temizleyerek, olayları görünüm içinde ve dışında filtrelemek için **filtre** açılan listesini kullanın.
 
@@ -73,21 +74,21 @@ Daha fazla bilgi için, [Tanılama Araçları penceresinin Olaylar sekmesinde ar
 
 Performans verilerini hata ayıklama olmadan toplamak için, performans profil Oluşturucu araçlarını çalıştırabilirsiniz.
 
-1. Visual Studio 'da bir proje açıkken, çözüm yapılandırmasını **yayın**olarak ayarlayın ve dağıtım hedefi olarak **yerel Windows hata ayıklayıcısı**'Nı   (veya **yerel makine**) seçin.
+1. Visual Studio 'da bir proje açıkken, çözüm yapılandırmasını **yayın** olarak ayarlayın ve dağıtım hedefi olarak **yerel Windows hata ayıklayıcısı** 'Nı (veya **yerel makine** ) seçin.
 
-1. **Hata ayıklama**  >  **performans profil oluşturucuyu**seçin veya **alt** + **F2**tuşuna basın.
+1. **Hata ayıklama**  >  **performans profil oluşturucuyu** seçin veya **alt** + **F2** tuşuna basın.
 
 1. Tanılama araçları başlatma sayfasında, çalıştırılacak bir veya daha fazla araç seçin. Yalnızca proje türü, işletim sistemi ve programlama dili için geçerli olan araçlar gösterilir. Bu Tanılama oturumu için devre dışı bırakılan araçları görmek için **tüm araçları göster** ' i seçin.
 
    ![Tanılama araçlarının ekran görüntüsü](../profiling/media/diaghubsummarypage.png "DIAG_SelectTool")
 
-1. Tanılama oturumu başlatmak için **Başlat**' ı seçin.
+1. Tanılama oturumu başlatmak için **Başlat** ' ı seçin.
 
    Oturum çalışırken, bazı araçlar tanılama araçları sayfasındaki gerçek zamanlı verilerin grafiklerini, ayrıca veri toplamayı duraklatma ve sürdürmeye yönelik denetimleri gösterir.
 
     ![Performans Profiler 'daki veri koleksiyonunun ekran görüntüsü](../profiling/media/diaghubcollectdata.png "Merkez verileri topla")
 
-1. Tanılama oturumunu sonlandırmak için, **toplamayı durdur**' u seçin.
+1. Tanılama oturumunu sonlandırmak için, **toplamayı durdur** ' u seçin.
 
    Analiz edilen veriler **rapor** sayfasında görünür.
 
