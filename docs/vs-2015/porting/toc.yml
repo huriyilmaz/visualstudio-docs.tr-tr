@@ -1,8 +1,0 @@
-- name: 'Visual Studio Projelerine Taşıma, Geçiş ve Yükseltme'
-  items:
-    - name: 'Visual Studio Projelerine Taşıma, Geçiş ve Yükseltme'
-      href: porting-migrating-and-upgrading-visual-studio-projects.md
-    - name: Visual C++ Projelerini Visual Studio 2015'e Yükseltme
-      href: how-to-upgrade-visual-cpp-projects-to-visual-studio-2015.md
-    - name: Başarısız Visual Studio Proje Yükseltmelerinde Sorun Giderme
-      href: how-to-troubleshoot-unsuccessful-visual-studio-project-upgrades.md
