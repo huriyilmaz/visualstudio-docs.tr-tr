@@ -1,5 +1,7 @@
 ---
 title: XslTransformation görevi | Microsoft Docs
+description: MSBuild 'in XSLT ve çıktı kullanarak bir XML girişini bir çıkış cihazına veya dosyasına dönüştürmek için XslTransformation görevini nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d23799e5ce5bf391915ac459c69c27b990211f0a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: da983f6dc215a5afd651733ecea6b62846ca95cc
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79094549"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047192"
 ---
 # <a name="xsltransformation-task"></a>XslTransformation görevi
 

@@ -1,5 +1,7 @@
 ---
 title: XmlPeek görevi | Microsoft Docs
+description: MSBuild 'in bir XML dosyasındaki XPath sorgusu tarafından belirtilen değerleri döndürmek için XmlPeek görevini nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 27b535af260d205c74ef87d0325680389d1dbe58
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d9a3c03e1301bddf4cc26c76dac9e0381ec726b
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286134"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047259"
 ---
 # <a name="xmlpeek-task"></a>XmlPeek görevi
 

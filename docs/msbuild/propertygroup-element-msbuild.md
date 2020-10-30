@@ -1,5 +1,7 @@
 ---
 title: PropertyGroup öğesi (MSBuild) | Microsoft Docs
+description: Kullanıcı tanımlı bir özellik öğeleri kümesi içeren MSBuild PropertyGroup öğesi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b94cf266be81b81aca9c83fe8d29b9777ee9114b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d276cdfa997bb02cfa44037d8ebe758a4d2704e
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632933"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048798"
 ---
 # <a name="propertygroup-element-msbuild"></a>PropertyGroup öğesi (MSBuild)
 

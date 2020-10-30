@@ -1,5 +1,7 @@
 ---
 title: RemoveDir Görevi | Microsoft Docs
+description: MSBuild 'in, belirtilen dizini ve tüm dosyalarını ve alt dizinlerini kaldırmak için RemoveDir görevini nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 26a6feeca7c89a67e7dd51bd0a1f99a182ffac59
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 925e583582acad2492e9dbe9f4470924ac41d379
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632803"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048736"
 ---
 # <a name="removedir-task"></a>RemoveDir görevi
 

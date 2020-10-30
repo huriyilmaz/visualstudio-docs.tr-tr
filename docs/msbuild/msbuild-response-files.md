@@ -1,5 +1,7 @@
 ---
 title: MSBuild yanıt dosyaları | Microsoft Docs
+description: MSBuild yanıtı veya. rsp dosyaları, MSBuild.exe komut satırı anahtarları içeren metin dosyaları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -18,24 +20,24 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 44d6e3c77fee53b15ec8d18cb74fd7355ee101a8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b18ad00c3be8c3684551f28bc170dbd4a8428533
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315154"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049140"
 ---
 # <a name="msbuild-response-files"></a>MSBuild yanıt dosyaları
 
-Yanıt (*. rsp*) dosyaları *MSBuild.exe* komut satırı anahtarları içeren metin dosyalarıdır. Her anahtar ayrı bir satırda olabilir veya tüm anahtarlar tek bir satırda olabilir. Açıklama satırları bir sembol ile önceden başlar **#** . **@** Anahtar, *MSBuild.exe*başka bir yanıt dosyası geçirmek için kullanılır.
+Yanıt ( *. rsp* ) dosyaları *MSBuild.exe* komut satırı anahtarları içeren metin dosyalarıdır. Her anahtar ayrı bir satırda olabilir veya tüm anahtarlar tek bir satırda olabilir. Açıklama satırları bir sembol ile önceden başlar **#** . **@** Anahtar, *MSBuild.exe* başka bir yanıt dosyası geçirmek için kullanılır.
 
 ## <a name="msbuildrsp"></a>MSBuild. rsp
 
-Otomatik yanıt dosyası, *MSBuild.exe* otomatik olarak bir proje oluştururken kullanılan özel bir *. rsp* dosyasıdır. Bu dosya, *MSBuild. rsp*, *MSBuild.exe*ile aynı dizinde olmalıdır, aksi halde bulunamacaktır. Bu dosyayı, *MSBuild.exe*için varsayılan komut satırı anahtarlarını belirtmek üzere düzenleyebilirsiniz. Örneğin, her proje oluşturduğunuzda aynı günlükçü kullanırsanız, *MSBuild. rsp*' ye **-günlükçü** anahtarını ekleyebilirsiniz ve *MSBuild.exe* bir proje oluşturulduğunda günlükçü kullanılır.
+Otomatik yanıt dosyası, *MSBuild.exe* otomatik olarak bir proje oluştururken kullanılan özel bir *. rsp* dosyasıdır. Bu dosya, *MSBuild. rsp* , *MSBuild.exe* ile aynı dizinde olmalıdır, aksi halde bulunamacaktır. Bu dosyayı, *MSBuild.exe* için varsayılan komut satırı anahtarlarını belirtmek üzere düzenleyebilirsiniz. Örneğin, her proje oluşturduğunuzda aynı günlükçü kullanırsanız, *MSBuild. rsp* ' ye **-günlükçü** anahtarını ekleyebilirsiniz ve *MSBuild.exe* bir proje oluşturulduğunda günlükçü kullanılır.
 
 ## <a name="directorybuildrsp"></a>Directory. Build. rsp
 
-Sürüm 15,6 ve üzeri sürümlerde MSBuild, *Directory. Build. rsp*adlı bir dosya için projenin üst dizinlerini arayacak.  Bu, komut satırı derlemeleri sırasında varsayılan bağımsız değişkenler sağlamak için bir kaynak kod deposunda yararlı olabilir.  Barındırılan yapıların komut satırı bağımsız değişkenlerini belirtmek için de kullanılabilir.
+Sürüm 15,6 ve üzeri sürümlerde MSBuild, *Directory. Build. rsp* adlı bir dosya için projenin üst dizinlerini arayacak.  Bu, komut satırı derlemeleri sırasında varsayılan bağımsız değişkenler sağlamak için bir kaynak kod deposunda yararlı olabilir.  Barındırılan yapıların komut satırı bağımsız değişkenlerini belirtmek için de kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

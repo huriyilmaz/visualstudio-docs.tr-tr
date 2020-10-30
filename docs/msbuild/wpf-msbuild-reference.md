@@ -1,5 +1,7 @@
 ---
 title: WPF MSBuild başvurusu | Microsoft Docs
+description: Windows Presentation Foundation (WPF) ek derleme desteğiyle MSBuild derleme altyapısını nasıl genişlettiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b3f47f41466d8eb7ddf0a4700428b6e28500b61
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d01def43a94e8590d5f776da1231ddf2d40d8d53
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596313"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047540"
 ---
 # <a name="wpf-msbuild-reference"></a>WPF MSBuild başvurusu
 
@@ -59,4 +61,4 @@ Derleme görevi Windows derlemesi.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [MSBUILD](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)

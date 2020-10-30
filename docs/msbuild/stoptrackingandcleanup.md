@@ -1,5 +1,7 @@
 ---
 title: StopTrackingAndCleanup | Microsoft Docs
+description: MSBuild 'in tüm izlemeyi durdurmak ve izleme oturumu tarafından kullanılan belleği boşaltmak için StopTrackingAndCleanup komutunu nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 apiname:
@@ -15,18 +17,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ee30bf031761fa7920dadad04d8f17a1bcc0b3a2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 05aec8bc85ac392670469da8073da02888b2f063
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77631997"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048107"
 ---
 # <a name="stoptrackingandcleanup"></a>StopTrackingAndCleanup
 
 Tüm izlemeyi durduruyor ve izleme oturumu tarafından kullanılan belleği serbest bırakır.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT WINAPI StopTrackingAndCleanup(void);

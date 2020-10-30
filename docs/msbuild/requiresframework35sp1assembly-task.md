@@ -1,5 +1,7 @@
 ---
 title: RequiresFramework35SP1Assembly görevi | Microsoft Docs
+description: MSBuild 'in, uygulamanın .NET Framework 3,5 SP1 gerektirip gerektirmediğini öğrenmek için RequiresFramework35SP1Assembly görevini nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: caefe0887ca23cd4cee60c3a4ba2a6133e9893df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d1819f72cc0eef389a3ef46148d4462fbd610e1a
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632777"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048693"
 ---
 # <a name="requiresframework35sp1assembly-task"></a>RequiresFramework35SP1Assembly görevi
 

@@ -1,5 +1,7 @@
 ---
 title: WPF MSBuild görev başvurusu | Microsoft Docs
+description: MSBuild 'i ek görevlerle genişleten Windows Presentation Foundation (WPF) derleme işlemi için bir görev başvurusuna bakın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70d994e32b717ff566a2e38acee732c7525d1bb0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 395f50db4159e8ace1b317f5926ed676c7462fe3
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77630853"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047523"
 ---
 # <a name="wpf-msbuild-task-reference"></a>WPF MSBuild görev başvurusu
 
@@ -57,7 +59,7 @@ Windows Presentation Foundation (WPF) derleme işlemi, Microsoft Build Engine 'i
 
 - [ResourcesGenerator](../msbuild/resourcesgenerator-task.md)
 
- Bir veya daha fazla kaynağı (*. jpg*, *. ico*, *. bmp*, ikili biçimdeki XAML ve diğer uzantı türlerini) bir *. resources* dosyasına katıştırır.
+ Bir veya daha fazla kaynağı ( *. jpg* , *. ico* , *. bmp* , ikili biçimdeki XAML ve diğer uzantı türlerini) bir *. resources* dosyasına katıştırır.
 
 - [UidManager](../msbuild/uidmanager-task.md)
 
@@ -65,8 +67,8 @@ Windows Presentation Foundation (WPF) derleme işlemi, Microsoft Build Engine 'i
 
 - [UpdateManifestForBrowserApplication](../msbuild/updatemanifestforbrowserapplication-task.md)
 
- **\<hostInBrowser />** XAML tarayıcı uygulaması (XBAP) projesi yapılandırıldığında, öğesini uygulama bildirimine (* \<projectname> . exe. manifest*) ekler.
+ **\<hostInBrowser />** XAML tarayıcı uygulaması (XBAP) projesi yapılandırıldığında, öğesini uygulama bildirimine ( *\<projectname> . exe. manifest* ) ekler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [MSBUILD](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)

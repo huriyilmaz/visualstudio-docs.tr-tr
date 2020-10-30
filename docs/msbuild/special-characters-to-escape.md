@@ -1,5 +1,7 @@
 ---
 title: Kaçış için özel karakterler | Microsoft Docs
+description: Yalnızca kullanıldıkları bağlamda özel anlamlarsa kaçılması gereken özel karakterler hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c3a0feed4177bd41ee2b77edc49336bfda3171b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 433e762bf68b6a3956616e0ccccc229bca8f86b9
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84184048"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048268"
 ---
 # <a name="special-characters-to-escape"></a>Kaçış için özel karakterler
 

@@ -1,5 +1,6 @@
 ---
-title: Proje şablonu ve öğe şablonu yükleme sorunlarını giderme
+title: Proje şablonları ve öğe şablonlarının sorunlarını giderme
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 1bef6a460f1a59823930597565b955b591ab48a0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ddb164dbd43d1d2276fce66641ba6e647b49143e
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591391"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93045707"
 ---
 # <a name="how-to-troubleshoot-templates"></a>Nasıl yapılır: şablonlarda sorun giderme
 
@@ -38,9 +39,9 @@ Bir şablondaki *vstemplate* dosyası Visual Studio şablon şemasına bağlı d
 
 1. *. Zip* dosyasını ayıklayın.
 
-1. Visual Studio 'daki **Dosya** menüsünde Dosya **Aç**' ı seçin  >  **File**.
+1. Visual Studio 'daki **Dosya** menüsünde Dosya **Aç** ' ı seçin  >  **File** .
 
-1. Şablon için *vstemplate* dosyasını seçin ve **Aç**' ı seçin.
+1. Şablon için *vstemplate* dosyasını seçin ve **Aç** ' ı seçin.
 
 1. *Vstemplate* dosyasının XML dosyasının şablon şemasına bağlı olduğunu doğrulayın. *Vstemplate* şeması hakkında daha fazla bilgi için bkz. [Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md).
 
@@ -49,7 +50,7 @@ Bir şablondaki *vstemplate* dosyası Visual Studio şablon şemasına bağlı d
 
 1. *Vstemplate* dosyasını kaydedin ve kapatın.
 
-1. Şablonunuza dahil olan dosyaları seçin, sağ tıklayın ve **Send to**  >  **Sıkıştırılmış (daraltılmış) klasöre**Gönder ' i seçin. Seçtiğiniz dosyalar bir *. zip* dosyasında sıkıştırılır.
+1. Şablonunuza dahil olan dosyaları seçin, sağ tıklayın ve **Send to**  >  **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin. Seçtiğiniz dosyalar bir *. zip* dosyasında sıkıştırılır.
 
 1. Yeni *. zip* dosyasını eski *. zip* dosyası ile aynı dizine yerleştirin.
 

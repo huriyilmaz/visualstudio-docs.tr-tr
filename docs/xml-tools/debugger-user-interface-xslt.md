@@ -1,5 +1,7 @@
 ---
 title: XSLT hata ayıklayıcısı pencereleri
+description: Yereller, çıkış, kesme noktaları, çağrı yığını ve Izleme pencereleri dahil olmak üzere XSLT 'ye özgü hata ayıklama davranışını denetleyen XSLT hata ayıklayıcı kullanıcı arabirimi parçaları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 846fdabd-e5c3-4688-9b0d-a93fbeea1b96
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bb72acf2db63e54da8a1ee001d2abfaa30850fc3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 024a8659d95855c8154ed8d9bed231739648719e
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592886"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93045799"
 ---
 # <a name="debugger-user-interface-xslt"></a>Hata ayıklayıcı kullanıcı arabirimi (XSLT)
 
@@ -56,7 +58,7 @@ Yereller penceresi ayrıca XSLT dönüşümünün bağlamını izleyen önceden 
 **Görev LISTESI** XSLT dosyasındaki betik bloklarından oluşan tüm hataları içerir.
 
 > [!NOTE]
-> XSLT hata ayıklayıcısında hiçbir uyarı yoktur, bu nedenle **görev listesi**hiçbir şekilde görünmez.
+> XSLT hata ayıklayıcısında hiçbir uyarı yoktur, bu nedenle **görev listesi** hiçbir şekilde görünmez.
 
 ## <a name="breakpoints-window"></a>Kesme Noktaları penceresi
 

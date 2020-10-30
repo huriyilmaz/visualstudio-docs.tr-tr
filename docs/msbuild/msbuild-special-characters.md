@@ -1,5 +1,7 @@
 ---
 title: MSBuild özel karakterler | Microsoft Docs
+description: Belirli bağlamlarda özel kullanım için MSBuild ayrılmış karakterleri ve bu karakterlerin ne zaman ve nasıl kaçış hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 06/12/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fdc9024db06fe27fab5dfdf9589300a6eb671368
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 67de0c2e5aa35fa3a1f54e26f425f4b0916cb428
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633219"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049114"
 ---
 # <a name="msbuild-special-characters"></a>MSBuild özel karakterleri
 
@@ -29,7 +31,7 @@ MSBuild belirli bağlamlarda özel kullanım için bazı karakterleri ayırır. 
 
  Aşağıdaki tabloda MSBuild özel karakterleri listelenmiştir:
 
-|**İnde**|**ASCII**|**Ayrılmış kullanım**|
+|**Karakter**|**ASCII**|**Ayrılmış kullanım**|
 |-------------------|---------------|------------------------|
 |%|%25|Meta verilere başvuruluyor|
 |$|%24|Başvuru özellikleri|

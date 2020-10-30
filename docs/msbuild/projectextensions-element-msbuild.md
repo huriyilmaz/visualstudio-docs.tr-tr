@@ -1,5 +1,7 @@
 ---
 title: Projecısions öğesi (MSBuild) | Microsoft Docs
+description: MSBuild proje dosyalarının MSBuild olmayan bilgiler içermesini sağlayan Msbuildprojecısions öğesi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94f2d88aa19bf01ebe6f25c7d80772c812abcc59
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 74f01f9e6a82d89ca99455f160bda1e9b7e24345
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632972"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048841"
 ---
 # <a name="projectextensions-element-msbuild"></a>Projecısions öğesi (MSBuild)
 
@@ -45,11 +47,11 @@ MSBuild proje dosyalarının MSBuild olmayan bilgiler içermesini sağlar. Bir �
 
 ### <a name="attributes"></a>Öznitelikler
 
- Hiçbiri
+ Yok
 
 ### <a name="child-elements"></a>Alt öğeleri
 
- Hiçbiri
+ Yok
 
 ### <a name="parent-elements"></a>Üst öğeler
 
@@ -80,4 +82,4 @@ MSBuild proje dosyalarının MSBuild olmayan bilgiler içermesini sağlar. Bir �
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
-- [MSBUILD](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)

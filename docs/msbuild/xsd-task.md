@@ -1,5 +1,7 @@
 ---
 title: XSD görevi | Microsoft Docs
+description: MSBuild 'in, bir kaynaktan şema veya sınıf dosyaları üreten xsd.exe XML şema tanımı aracını kaydırmak için XSD görevi nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 06/27/2018
 ms.topic: reference
 f1_keywords:
@@ -20,16 +22,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 217e045a731efa1fe3ba1dda63e89eca685d4b75
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5aef78460197796767ec1429179e5598d0f12dbc
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77630788"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047208"
 ---
 # <a name="xsd-task"></a>XSD görevi
 
-Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracını (*xsd.exe*) sarmalanmış olarak kaydırır.
+Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracını ( *xsd.exe* ) sarmalanmış olarak kaydırır.
 
 > [!NOTE]
 > Visual Studio 2017 ' den başlayarak *xsd.exe* için C++ proje desteği kullanım dışıdır. GAC 'ye *CppCodeProvider.dll* El Ile ekleyerek **Microsoft. VisualC. CppCodeProvider** API 'lerini kullanmaya devam edebilirsiniz.
@@ -70,7 +72,7 @@ Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracını
 
      Oluşturulan türleri için çalışma zamanı ad alanını belirtir.
 
-- **Kaynaklar**
+- **Ğına**
 
      Gerekli `ITaskItem[]` parametre.
 

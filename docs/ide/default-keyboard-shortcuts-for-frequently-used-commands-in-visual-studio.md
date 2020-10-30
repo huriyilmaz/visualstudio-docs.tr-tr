@@ -1,5 +1,6 @@
 ---
-title: Sık kullanılan komutlar için varsayılan klavye kısayolları
+title: Sık kullanılan komutlar için klavye kısayolları
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: TerryGLee
@@ -7,12 +8,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c7aebdc4c734f6831dc6ec1315aa7263b73cd30b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64c3a163f706898dfb358b15279e62729f40cf84
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596729"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93045653"
 ---
 # <a name="popular-keyboard-shortcuts-for-visual-studio"></a>Visual Studio için popüler klavye kısayolları
 
@@ -21,7 +22,7 @@ Bu varsayılan klavye kısayolları seçerek Visual Studio'da sık kullanılan k
 *Genel* bağlam, kısayolun Visual Studio 'daki herhangi bir araç penceresinde geçerli olduğu anlamına gelir.
 
 > [!NOTE]
-> **Seçenekler** iletişim kutusunu açıp **ortam** düğümünü genişleterek ve ardından **klavye**' yi seçerek herhangi bir komutun [kısayolunu arayabilirsiniz](identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) .
+> **Seçenekler** iletişim kutusunu açıp **ortam** düğümünü genişleterek ve ardından **klavye** ' yi seçerek herhangi bir komutun [kısayolunu arayabilirsiniz](identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) .
 
 ## <a name="build"></a>Oluşturma
 
@@ -57,9 +58,9 @@ Bu varsayılan klavye kısayolları seçerek Visual Studio'da sık kullanılan k
 |Komutlar|Klavye kısayolları [bağlamlar]|
 |--------------| - |
 |Edit.BreakLine|**ENTER** [metin düzenleyicisi, Rapor Tasarımcısı, Windows Form Tasarımcısı]<br /><br />veya **SHIFT + enter** [metin düzenleyici]|
-|Düzenle. CollapseToDefinitions|**CTRL + M**, **CTRL + O** [metin düzenleyici]|
-|Edit.CommentSelection|**CTRL + K**, **CTRL + C** [metin düzenleyici]|
-|Edit.CompleteWord|**Alt + sağ ok** [metin düzenleyici, iş akışı Tasarımcısı]<br /><br />veya **CTRL + Ara çubuğu** [metin düzenleyici, iş akışı Tasarımcısı]<br /><br />ya da **CTRL + K**, **W** [iş akışı Tasarımcısı]<br /><br />ya da **CTRL + K, CTRL + W** [iş akışı Tasarımcısı]|
+|Düzenle. CollapseToDefinitions|**CTRL + M** , **CTRL + O** [metin düzenleyici]|
+|Edit.CommentSelection|**CTRL + K** , **CTRL + C** [metin düzenleyici]|
+|Edit.CompleteWord|**Alt + sağ ok** [metin düzenleyici, iş akışı Tasarımcısı]<br /><br />veya **CTRL + Ara çubuğu** [metin düzenleyici, iş akışı Tasarımcısı]<br /><br />ya da **CTRL + K** , **W** [iş akışı Tasarımcısı]<br /><br />ya da **CTRL + K, CTRL + W** [iş akışı Tasarımcısı]|
 |Edit.Copy|**CTRL + C** [Genel]<br /><br />veya **CTRL + INSERT** [Genel]|
 |Edit.Cut|**CTRL + X** [Genel]<br /><br />veya **SHIFT + DELETE** [Genel]|
 |Edit.Delete|**Sil** [genel, Takım Gezgini]<br /><br />veya **SHIFT + DELETE** [sıralı DIYAGRAM, UML etkinlik diyagramı, katman diyagramı]<br /><br />ya da **Ctrl + Delete** [sınıf diyagramı]|
@@ -75,7 +76,7 @@ Bu varsayılan klavye kısayolları seçerek Visual Studio'da sık kullanılan k
 |Edit.GoToDefinition|**F12**|
 |Edit.GoToFindCombo|**CTRL + D** [Genel]|
 |Edit.GoToNextLocation|**F8** [Genel]|
-|Edit.InsertSnippet|**CTRL + K**, **CTRL + X** [Genel]|
+|Edit.InsertSnippet|**CTRL + K** , **CTRL + X** [Genel]|
 |Edit.InsertTab|**Sekme** [Rapor Tasarımcısı, Windows Form Tasarımcısı, metin düzenleyici]|
 |Edit.LineCut|**CTRL + L** [metin düzenleyici]|
 |Edit.LineDownExtendColumn|**SHIFT + alt + aşağı ok** [metin düzenleyici]|
@@ -138,7 +139,7 @@ Bu varsayılan klavye kısayolları seçerek Visual Studio'da sık kullanılan k
 |-------------| - |
 |Tools.AttachtoProcess|**Ctrl + Alt + P** [Genel]|
 
-## <a name="view"></a>Görünüm
+## <a name="view"></a>Görüntüle
 
 |Komutlar|Klavye kısayolları [bağlamlar]|
 |--------------| - |

@@ -1,5 +1,7 @@
 ---
 title: MSBuild Dönüşümleri | Microsoft Docs
+description: MSBuild 'in, bir öğe listesinin diğerine nasıl bir öğe listesi dönüştürmeleri kullandığını, projelerin daha verimli bir şekilde nasıl oluşturulacağını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34394ba35a349a1564f6c3fdd43052be3e1fdf03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4eb35554c61c532e0d004e5c974345564e17d4ae
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633115"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048996"
 ---
 # <a name="msbuild-transforms"></a>MSBuild dönüşümleri
 
@@ -32,7 +34,7 @@ Aşağıdaki örnekte, *. resx* dosyalarının bir listesi *. resources* dosyala
 @(RESXFile->'%(filename).resources')
 ```
 
-Örneğin, @ (RESXFile) öğe listesindeki öğeler *Form1. resx*, *Form2. resx*ve *Form3. resx*ise, dönüştürülmüş listedeki çıktılar *Form1. resources*, *Form2. resources*ve *Form3. resources*olur.
+Örneğin, @ (RESXFile) öğe listesindeki öğeler *Form1. resx* , *Form2. resx* ve *Form3. resx* ise, dönüştürülmüş listedeki çıktılar *Form1. resources* , *Form2. resources* ve *Form3. resources* olur.
 
 > [!NOTE]
 > Dönüştürülmüş öğe listesi için bir özel ayırıcı, bir standart öğe listesi için ayırıcı belirttiğiniz şekilde belirtebilirsiniz. Örneğin, varsayılan noktalı virgül (;) yerine virgül (,) kullanarak dönüştürülmüş bir öğe listesini ayırmak için aşağıdaki XML 'i kullanın: `@(RESXFile->'Toolset\%(filename)%(extension)', ',')`
@@ -45,7 +47,7 @@ Aşağıdaki örnekte, *. resx* dosyalarının bir listesi *. resources* dosyala
 @(RESXFile->'Toolset\%(filename)%(extension)')
 ```
 
- Örneğin, öğe listesinde yer alan öğeler `RESXFile` *Project1\Form1.resx*, *Project1\Form2.resx*ve *Project1\Form3.Text*ise, dönüştürülmüş listedeki çıktılar *Toolset\Form1.resx*, *Toolset\Form2.resx*ve *Toolset\Form3.Text*olur.
+ Örneğin, öğe listesinde yer alan öğeler `RESXFile` *Project1\Form1.resx* , *Project1\Form2.resx* ve *Project1\Form3.Text* ise, dönüştürülmüş listedeki çıktılar *Toolset\Form1.resx* , *Toolset\Form2.resx* ve *Toolset\Form3.Text* olur.
 
 ## <a name="dependency-analysis"></a>Bağımlılık Analizi
 
@@ -69,7 +71,7 @@ Aşağıdaki örnekte, *. resx* dosyalarının bir listesi *. resources* dosyala
 
 ### <a name="description"></a>Description
 
- Aşağıdaki örnek, dönüşümler kullanan bir MSBuild proje dosyası gösterir. Bu örnekte, *c:\sub0\sub1\alt 2\sub3* dizininde yalnızca bir *. xsd* dosyasının olduğu ve çalışma dizininin *c:\sub0*olduğu varsayılır.
+ Aşağıdaki örnek, dönüşümler kullanan bir MSBuild proje dosyası gösterir. Bu örnekte, *c:\sub0\sub1\alt 2\sub3* dizininde yalnızca bir *. xsd* dosyasının olduğu ve çalışma dizininin *c:\sub0* olduğu varsayılır.
 
 ### <a name="code"></a>Kod
 

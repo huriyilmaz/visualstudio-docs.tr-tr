@@ -1,5 +1,7 @@
 ---
 title: MSBuild görevi | Microsoft Docs
+description: MSBuild görevinin, başka bir MSBuild projesinden alt projeler oluşturmak için aynı MSBuild işlemini nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 07/30/2019
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab54c5c523c833be60ef4b5d5088b6217a3111a5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a4d1f9fe79ae5092992ff66ddaf5e10729e8b19a
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "82072586"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049070"
 ---
 # <a name="msbuild-task"></a>MSBuild görevi
 
@@ -37,7 +39,7 @@ Başka bir MSBuild projesinden MSBuild projeleri oluşturur.
 |-----------------------------------| - |
 | `BuildInParallel` | İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , parametresinde belirtilen projeler `Projects` Mümkünse paralel olarak oluşturulur. `false` varsayılan değerdir. |
 | `Projects` | Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Oluşturulacak proje dosyalarını belirtir. |
-| `Properties` | İsteğe bağlı `String` parametre.<br /><br /> Alt projeye genel özellikler olarak uygulanacak Özellik adı/değer çiftleri için noktalı virgülle ayrılmış bir liste. Bu parametreyi belirttiğinizde, [*MSBuild.exe*](../msbuild/msbuild-command-line-reference.md)ile oluşturduğunuzda **-Property** anahtarına sahip özellikleri ayarlamaya işlevsel olarak eşdeğerdir. Örneğin:<br /><br /> `Properties="Configuration=Debug;Optimize=$(Optimize)"`<br /><br /> Parametreleri parametre aracılığıyla projeye geçirdiğinizde `Properties` , proje dosyası zaten yüklenmiş olsa bile MSBuild, projenin yeni bir örneğini oluşturabilir. MSBuild, belirli bir proje yolu ve benzersiz bir genel özellikler kümesi için tek bir proje örneği oluşturur. Örneğin, bu davranış, Configuration = sürümü ile *MyProject. proj*' i çağıran birden çok MSBuild görevi oluşturmanıza olanak sağlar ve *MyProject. proj* ' in tek bir örneğini alırsınız (görevde benzersiz özellikler belirtilmemişse). Henüz MSBuild tarafından görülmemiş bir özellik belirtirseniz MSBuild, projenin diğer örneklerine paralel olarak oluşturulan yeni bir örneğini oluşturur. Örneğin, bir sürüm yapılandırması hata ayıklama yapılandırması ile aynı anda derleyebilir.|
+| `Properties` | İsteğe bağlı `String` parametre.<br /><br /> Alt projeye genel özellikler olarak uygulanacak Özellik adı/değer çiftleri için noktalı virgülle ayrılmış bir liste. Bu parametreyi belirttiğinizde, [*MSBuild.exe*](../msbuild/msbuild-command-line-reference.md)ile oluşturduğunuzda **-Property** anahtarına sahip özellikleri ayarlamaya işlevsel olarak eşdeğerdir. Örneğin:<br /><br /> `Properties="Configuration=Debug;Optimize=$(Optimize)"`<br /><br /> Parametreleri parametre aracılığıyla projeye geçirdiğinizde `Properties` , proje dosyası zaten yüklenmiş olsa bile MSBuild, projenin yeni bir örneğini oluşturabilir. MSBuild, belirli bir proje yolu ve benzersiz bir genel özellikler kümesi için tek bir proje örneği oluşturur. Örneğin, bu davranış, Configuration = sürümü ile *MyProject. proj* ' i çağıran birden çok MSBuild görevi oluşturmanıza olanak sağlar ve *MyProject. proj* ' in tek bir örneğini alırsınız (görevde benzersiz özellikler belirtilmemişse). Henüz MSBuild tarafından görülmemiş bir özellik belirtirseniz MSBuild, projenin diğer örneklerine paralel olarak oluşturulan yeni bir örneğini oluşturur. Örneğin, bir sürüm yapılandırması hata ayıklama yapılandırması ile aynı anda derleyebilir.|
 | `RebaseOutputs` | İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer `true` , derleme projelerinin hedef çıkış öğelerinin göreli yollarının, çağıran projeye göreli olarak ayarlanmış yolları vardır. `false` varsayılan değerdir. |
 | `RemoveProperties` | İsteğe bağlı `String` parametre.<br /><br /> Kaldırılacak genel özellikler kümesini belirtir. |
 | `RunEachTargetSeparately` | İsteğe bağlı `Boolean` parametre.<br /><br /> Varsa `true` , MSBuild görevi her bir hedefi aynı anda değil, her seferinde MSBuild 'e geçirilen listede çağırır. Bu parametre, `true` daha önce çağrılan hedefler başarısız olsa bile sonraki hedeflerin çağrılmasını güvence altına almak için ayarlanıyor. Aksi takdirde, bir yapı hatası sonraki tüm hedeflerin çağrılmasını durdurur. `false` varsayılan değerdir. |
@@ -47,13 +49,13 @@ Başka bir MSBuild projesinden MSBuild projeleri oluşturur.
 | `TargetAndPropertyListSeparators` | İsteğe bağlı `String[]` parametre.<br /><br /> Bir hedef ve Özellik listesini `Project` öğe meta verileri olarak belirtir). Ayırıcıların işlenmeden önce önüne atlanacaktır. örn .% 3B (kaçan '; '), kaçışsız bir '; ' gibi değerlendirilir. |
 | `TargetOutputs` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` salt okunurdur çıkış parametresi.<br /><br /> Tüm proje dosyalarından oluşturulan hedeflerin çıkışlarını döndürür. Yalnızca belirtilen hedeflerden gelen çıktılar döndürülür, bu hedeflerin bağımlı olduğu hedeflerde mevcut olabilecek hiçbir çıktı değildir.<br /><br /> `TargetOutputs`Parametresi aşağıdaki meta verileri de içerir:<br /><br /> -   `MSBuildSourceProjectFile`: Çıkışları belirten hedefi içeren MSBuild proje dosyası.<br />-   `MSBuildSourceTargetName`: Çıkışları oluşturan hedef. **Note:**  Her bir proje dosyası veya hedefi için çıktıları ayrı ayrı tanımlamak istiyorsanız, `MSBuild` görevi her proje dosyası veya hedefi için ayrı olarak çalıştırın. `MSBuild`Tüm proje dosyalarını derlemek için görevi yalnızca bir kez çalıştırırsanız, tüm hedeflerin çıktıları tek bir dizide toplanır. |
 | `Targets` | İsteğe bağlı `String` parametre.<br /><br /> Proje dosyalarında oluşturulacak hedef veya hedefleri belirtir. Bir hedef adları listesini ayırmak için noktalı virgül kullanın. Görevde hiçbir hedef belirtilmemişse `MSBuild` , proje dosyalarında belirtilen varsayılan hedefler oluşturulur. **Note:**  Hedefler tüm proje dosyalarında gerçekleşmelidir. Aksi takdirde, bir derleme hatası oluşur. |
-| `ToolsVersion` | İsteğe bağlı `String` parametre.<br /><br /> `ToolsVersion`Bu göreve geçirilen projeleri oluştururken kullanılacak öğesini belirtir.<br /><br /> MSBuild görevinin, projede belirtilenden farklı bir .NET Framework sürümünü hedefleyen bir proje oluşturmasına olanak sağlar. Geçerli değerler `2.0` , ve ' dir `3.0` `3.5` . Varsayılan değer `3.5` . |
+| `ToolsVersion` | İsteğe bağlı `String` parametre.<br /><br /> `ToolsVersion`Bu göreve geçirilen projeleri oluştururken kullanılacak öğesini belirtir.<br /><br /> MSBuild görevinin, projede belirtilenden farklı bir .NET Framework sürümünü hedefleyen bir proje oluşturmasına olanak sağlar. Geçerli değerler `2.0` , ve ' dir `3.0` `3.5` . Varsayılan değer `3.5` olarak belirlenmiştir. |
 
 ## <a name="remarks"></a>Açıklamalar
 
  Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
- *MSBuild.exe*başlatmak için [Exec görevi](../msbuild/exec-task.md) kullanmaktan farklı olarak, bu görev alt projeleri oluşturmak için aynı MSBuild işlemini kullanır. Atlanmak üzere önceden oluşturulmuş hedeflerin listesi, üst ve alt derlemeler arasında paylaşılır. Yeni MSBuild işlemi oluşturulmadığından bu görev da daha hızlıdır.
+ *MSBuild.exe* başlatmak için [Exec görevi](../msbuild/exec-task.md) kullanmaktan farklı olarak, bu görev alt projeleri oluşturmak için aynı MSBuild işlemini kullanır. Atlanmak üzere önceden oluşturulmuş hedeflerin listesi, üst ve alt derlemeler arasında paylaşılır. Yeni MSBuild işlemi oluşturulmadığından bu görev da daha hızlıdır.
 
  Bu görev yalnızca proje dosyalarını değil, çözüm dosyalarını da işleyebilir.
 

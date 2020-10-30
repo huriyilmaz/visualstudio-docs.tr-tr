@@ -1,5 +1,7 @@
 ---
 title: ZipDirectory görevi | Microsoft Docs
+description: MSBuild 'in bir dizin içeriğinden bir. zip arşivi oluşturmak için ZipDirectory görevini nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.reviewer: ''
 ms.suite: ''
@@ -22,12 +24,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1092add6386ccc5bc1de78efcf7b623a617d920b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e2ffdd5e2601501146f0fa21e4adb572094ddbbf
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183073"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046622"
 ---
 # <a name="zipdirectory-task"></a>ZipDirectory görevi
 

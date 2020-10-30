@@ -1,17 +1,19 @@
 ---
 title: XAML Tasarımcısı’nda nesneleri düzen kapsayıcılarına yerleştirme
+description: Bir sayfada, kılavuz, tuval, kenarlık ve Viewbox gibi nesneleri düzenlemek için kullanılan XAML Tasarımcısı düzen bölmeleri ve denetimleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 07/17/2020
 ms.topic: conceptual
 ms.assetid: 29c80c38-0fa3-48d6-b3a8-3b864f482e44
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: ebe96ec84d957c5ac8dcb6bad0a388ba3318c0fb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6df200c5adb4993d13e896eaa6d2041e0e9db044
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86459300"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047347"
 ---
 # <a name="organize-objects-into-layout-containers-in-xaml-designer"></a>XAML Tasarımcısı’nda nesneleri düzen kapsayıcılarına yerleştirme
 
@@ -19,7 +21,7 @@ Bu makalede XAML Tasarımcısı yönelik düzen bölmeleri ve denetimleri açık
 
 Nesnelerin &mdash; görüntüler, düğmeler ve videolar gibi sayfa nesnelerinde görünmesini istediğiniz yeri düşünün. Belki de satırlarda ve sütunlarda, tek bir satırda, dikey veya yatay olarak veya sabit konumlarda görünmesini isteyebilirsiniz.
 
-Sayfanın nasıl görünebileceğini düşünmek için bir şans olduktan sonra bir Düzen paneli seçin. Nesnelerinizi eklediğiniz bir şeye ihtiyacınız olduğundan tüm sayfalar bir ile başlar. Varsayılan olarak bir **kılavuz**olur ancak bunu değiştirebilirsiniz.
+Sayfanın nasıl görünebileceğini düşünmek için bir şans olduktan sonra bir Düzen paneli seçin. Nesnelerinizi eklediğiniz bir şeye ihtiyacınız olduğundan tüm sayfalar bir ile başlar. Varsayılan olarak bir **kılavuz** olur ancak bunu değiştirebilirsiniz.
 
 Düzen panelleri bir sayfadaki nesneleri düzenlemenize yardımcı olur, ancak bundan fazlasını yapın. Bunlar, farklı ekran boyutları ve çözümleri için tasarım yapmanıza yardımcı olur. Kullanıcılar uygulamanızı çalıştırdığında, düzen panelindeki her şey, cihazlarındaki ekran ile eşleşecek şekilde yeniden boyutlandırılır. Kuşkusuz, mizanpajınızı bunu yapmak istemiyorsanız düzenin bir parçası veya tüm düzen için bu davranışı geçersiz kılabilirsiniz. Bunu denetlemek için yükseklik ve genişlik özelliklerini kullanabilirsiniz.
 
@@ -65,7 +67,7 @@ Nesneleri soldan sağa sıralı olarak düzenleyin. Panel, en sağ kenarda yer a
 
 ### <a name="dockpanel"></a>DockPanel
 
-Nesneleri, panelin bir kenarına kalacak veya *sabitler*olacak şekilde düzenleyin.
+Nesneleri, panelin bir kenarına kalacak veya *sabitler* olacak şekilde düzenleyin.
 
 (Yalnızca WPF projeleri için kullanılabilir.)
 
@@ -81,23 +83,23 @@ Aşağıdaki düzen denetimleri en popüler, ancak diğerleri vardır. Tümünü
 
 ### <a name="border"></a>Kenarlık
 
-Bir nesne etrafında kenarlık, arka plan veya her ikisini birden oluşturun. Bir **kenarlığa**yalnızca bir nesne ekleyebilirsiniz. Birden fazla nesne için bir kenarlık veya arka plan uygulamak istiyorsanız, **kenarlığa**bir Düzen paneli ekleyin. Ardından, bu panele veya denetime nesne ekleyin.
+Bir nesne etrafında kenarlık, arka plan veya her ikisini birden oluşturun. Bir **kenarlığa** yalnızca bir nesne ekleyebilirsiniz. Birden fazla nesne için bir kenarlık veya arka plan uygulamak istiyorsanız, **kenarlığa** bir Düzen paneli ekleyin. Ardından, bu panele veya denetime nesne ekleyin.
 
 ![Kenarlık düzeni denetimi](../designers/media/e761238b-99fd-43c5-bbc4-57538b8289ff.png)
 
 ### <a name="popup"></a>Açılan Pencere
 
-Bir penceredeki kullanıcılara bilgi veya seçenek göster. Bir **açılan pencerede**yalnızca bir nesne ekleyebilirsiniz. Varsayılan olarak, bir **açılan pencere** bir **kılavuz**içerir, ancak bunu değiştirebilirsiniz.
+Bir penceredeki kullanıcılara bilgi veya seçenek göster. Bir **açılan pencerede** yalnızca bir nesne ekleyebilirsiniz. Varsayılan olarak, bir **açılan pencere** bir **kılavuz** içerir, ancak bunu değiştirebilirsiniz.
 
 ### <a name="scrollviewer"></a>ScrollViewer
 
-Kullanıcıların bir sayfanın sayfa veya alanını aşağı kaydırıp kaydırmaya izin vermez. Bir **ScrollViewer**'ya yalnızca bir nesne ekleyebilirsiniz, bu yüzden **Grid** veya **StackPanel**gibi bir Düzen paneli eklemek mantıklı olur.
+Kullanıcıların bir sayfanın sayfa veya alanını aşağı kaydırıp kaydırmaya izin vermez. Bir **ScrollViewer** 'ya yalnızca bir nesne ekleyebilirsiniz, bu yüzden **Grid** veya **StackPanel** gibi bir Düzen paneli eklemek mantıklı olur.
 
 ![ScrollViewer düzen denetimi](../designers/media/06b326d4-f23d-41a6-b26b-e1aff37572a7.png)
 
 ### <a name="viewbox"></a>Viewbox
 
-Nesneleri yakınlaştırma denetimiyle yaptığınız gibi ölçeklendirin. **Viewbox**'a yalnızca bir nesne ekleyebilirsiniz. Bu etkiyi birden fazla nesneye uygulamak istiyorsanız, **Viewbox**'a bir Düzen paneli ekleyin ve ardından denetimlerinizi bu düzen paneline ekleyin.
+Nesneleri yakınlaştırma denetimiyle yaptığınız gibi ölçeklendirin. **Viewbox** 'a yalnızca bir nesne ekleyebilirsiniz. Bu etkiyi birden fazla nesneye uygulamak istiyorsanız, **Viewbox** 'a bir Düzen paneli ekleyin ve ardından denetimlerinizi bu düzen paneline ekleyin.
 
 ![ViewBox düzen denetimi](../designers/media/f5b13c66-d918-4141-8a16-bd8f8628687a.png)
 

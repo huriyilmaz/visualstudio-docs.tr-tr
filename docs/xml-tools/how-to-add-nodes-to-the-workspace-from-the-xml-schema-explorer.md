@@ -1,5 +1,7 @@
 ---
 title: XML şema Gezgini 'nden çalışma alanına düğüm ekleme
+description: Bağlam menüsünü kullanarak veya düğümleri bir görünüm üzerine sürükleyip bırakarak XML şema Tasarımcısı çalışma alanına düğüm ekleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 3b5a5749-9693-4b29-b0c2-8e07e0e55514
@@ -8,16 +10,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 751e291188e6357343936d61d56f07bd86f97eaf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: baa4d32d14a85e27bb0bb453c8c81f0bab486379
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816403"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93045720"
 ---
 # <a name="how-to-add-nodes-to-the-workspace-from-the-xml-schema-explorer"></a>Nasıl yapılır: XML şema Gezgini 'nden çalışma alanına düğüm ekleme
 
-Bu konu başlığı altında, XML şema **Gezgini**' nden [XML şema Tasarımcısı çalışma alanına](../xml-tools/xml-schema-designer-workspace.md) düğümlerin nasıl ekleneceği açıklanmaktadır. Bu, düğümleri **XML şema** Gezgininden bir xsd tasarımcı görünümüne sürükleyip bırakarak veya **XML şeması Gezgini 'nin** bağlam menüsünü kullanarak elde edilebilir. Ayrıca, **XML şema Gezgini**tarafından gerçekleştirilen bir aramanın sonucu olarak vurgulanan düğümleri ekleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: şema kümesi arama sonucu düğümlerini çalışma alanına ekleme](../xml-tools/how-to-add-schema-set-search-result-nodes-to-the-workspace.md).
+Bu konu başlığı altında, XML şema **Gezgini** ' nden [XML şema Tasarımcısı çalışma alanına](../xml-tools/xml-schema-designer-workspace.md) düğümlerin nasıl ekleneceği açıklanmaktadır. Bu, düğümleri **XML şema** Gezgininden bir xsd tasarımcı görünümüne sürükleyip bırakarak veya **XML şeması Gezgini 'nin** bağlam menüsünü kullanarak elde edilebilir. Ayrıca, **XML şema Gezgini** tarafından gerçekleştirilen bir aramanın sonucu olarak vurgulanan düğümleri ekleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: şema kümesi arama sonucu düğümlerini çalışma alanına ekleme](../xml-tools/how-to-add-schema-set-search-result-nodes-to-the-workspace.md).
 
 > [!NOTE]
 > [XML şema Tasarımcısı çalışma alanına](../xml-tools/xml-schema-designer-workspace.md)yalnızca genel düğümler eklenebilir.
@@ -34,9 +36,9 @@ Bu konu başlığı altında, XML şema **Gezgini**' nden [XML şema Tasarımcı
 
 1. `PurchaseOrderType`Grafik görünümündeki düğüme sağ tıklayın. **XML şema Gezgininde Göster '** i seçin.
 
-     Düğüm, **XML şema Gezgini**'nde vurgulanır.
+     Düğüm, **XML şema Gezgini** 'nde vurgulanır.
 
-2. `PurchaseOrderType` **XML şema Gezgini** ' nde düğüme sağ tıklayın ve **tüm başvuruları göster**' i seçin.
+2. `PurchaseOrderType` **XML şema Gezgini** ' nde düğüme sağ tıklayın ve **tüm başvuruları göster** ' i seçin.
 
      `purchaseOrder`Düğüm vurgulanır.
 

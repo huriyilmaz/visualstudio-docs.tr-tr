@@ -1,7 +1,8 @@
 ---
 title: Visual Studio Tümleştirmesi (MSBuild)
 titleSuffix: ''
-ms.custom: seodec18
+description: Farklı araçlar tarafından yazılmış ve özelleştirilmiş derleme işlemlerine sahip olsalar bile, Visual Studio 'Nun projeleri MSBuild biçiminde nasıl barındırabilecekleri hakkında bilgi edinin.
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3468ab5a6a185a759ab43229758c0ff4e9d00e35
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 17cb665d1b5ae399647868652f2b1e73fcd4543e
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77631204"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046680"
 ---
 # <a name="visual-studio-integration-msbuild"></a>Visual Studio tümleştirmesi (MSBuild)
 
@@ -37,7 +38,7 @@ Visual Studio, yönetilen projeleri yüklemek ve derlemek için MSBuild barınd�
 
 ## <a name="project-file-name-extensions"></a>Proje dosya adı uzantıları
 
- *MSBuild.exe* , düzeniyle eşleşen herhangi bir proje dosya adı uzantısını tanır *. \* PROJ*. Ancak, Visual Studio yalnızca projeyi yükleyecek dile özgü proje sistemini belirleyen bu proje dosya adı uzantılarının bir alt kümesini tanır. Visual Studio 'Nun dilden bağımsız MSBuild tabanlı proje sistemi yoktur.
+ *MSBuild.exe* , düzeniyle eşleşen herhangi bir proje dosya adı uzantısını tanır *. \* PROJ* . Ancak, Visual Studio yalnızca projeyi yükleyecek dile özgü proje sistemini belirleyen bu proje dosya adı uzantılarının bir alt kümesini tanır. Visual Studio 'Nun dilden bağımsız MSBuild tabanlı proje sistemi yoktur.
 
  Örneğin, C# proje sistemi *. csproj* dosyalarını yükler, ancak Visual Studio bir *. xxproj* dosyasını yükleyemez. Rastgele bir dildeki kaynak dosyaları için bir proje dosyası, Visual Studio 'da yüklenecek Visual Basic veya C# proje dosyaları ile aynı uzantıyı kullanmalıdır.
 
@@ -51,7 +52,7 @@ Visual Studio, yönetilen projeleri yüklemek ve derlemek için MSBuild barınd�
 
 ```xml
 Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "
-Condition=" '$(Configuration)' == 'Release' " 
+Condition=" '$(Configuration)' == 'Release' " 
 Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' "
 ```
 
@@ -59,7 +60,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
 ## <a name="additional-build-actions"></a>Ek derleme eylemleri
 
- Visual Studio, bir projedeki dosyanın öğe türü adını **dosya özellikleri** penceresinin **Build Action** özelliği ile değiştirmenize olanak sağlar. **Derleme**, **EmbeddedResource**, **içerik**ve **none** öğe türü adları her zaman projenizde olan diğer öğe türü adlarıyla birlikte bu menüde listelenir. Bu menüde her zaman özel öğe türü adlarının kullanılabilir olduğundan emin olmak için adları adlı bir öğe türüne ekleyebilirsiniz `AvailableItemName` . Örneğin, proje dosyanıza aşağıdakileri eklemek, özel tür **JScript** 'i içeri aktarılan tüm projeler için bu menüye ekler:
+ Visual Studio, bir projedeki dosyanın öğe türü adını **dosya özellikleri** penceresinin **Build Action** özelliği ile değiştirmenize olanak sağlar. **Derleme** , **EmbeddedResource** , **içerik** ve **none** öğe türü adları her zaman projenizde olan diğer öğe türü adlarıyla birlikte bu menüde listelenir. Bu menüde her zaman özel öğe türü adlarının kullanılabilir olduğundan emin olmak için adları adlı bir öğe türüne ekleyebilirsiniz `AvailableItemName` . Örneğin, proje dosyanıza aşağıdakileri eklemek, özel tür **JScript** 'i içeri aktarılan tüm projeler için bu menüye ekler:
 
 ```xml
 <ItemGroup>
@@ -92,13 +93,13 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
 ## <a name="build-solutions"></a>Çözüm oluşturma
 
- Visual Studio 'da çözüm dosyası ve proje derleme sıralaması, Visual Studio 'Nun kendisi tarafından denetlenir. Komut satırında *msbuild.exe* bir çözüm oluştururken, MSBuild çözüm dosyasını ayrıştırır ve proje yapılarını sıralar. Her iki durumda da, projeler bağımlılık sırasında tek tek oluşturulmuştur ve proje başvurularına proje başvurularına verilmez. Buna karşılık, tek tek projeler *msbuild.exe*ile oluşturulduğunda proje başvurularına proje başvurularına çapraz yapılır.
+ Visual Studio 'da çözüm dosyası ve proje derleme sıralaması, Visual Studio 'Nun kendisi tarafından denetlenir. Komut satırında *msbuild.exe* bir çözüm oluştururken, MSBuild çözüm dosyasını ayrıştırır ve proje yapılarını sıralar. Her iki durumda da, projeler bağımlılık sırasında tek tek oluşturulmuştur ve proje başvurularına proje başvurularına verilmez. Buna karşılık, tek tek projeler *msbuild.exe* ile oluşturulduğunda proje başvurularına proje başvurularına çapraz yapılır.
 
  Visual Studio içinde derlerken, özelliği `$(BuildingInsideVisualStudio)` olarak ayarlanır `true` . Bu, projede veya *. targets* dosyalarında, derleme 'in farklı davranmasına neden olacak şekilde kullanılabilir.
 
 ## <a name="display-properties-and-items"></a>Özellikleri ve öğeleri görüntüle
 
- Visual Studio belirli özellik adlarını ve değerlerini tanır. Örneğin, bir projedeki aşağıdaki özellik, **Windows uygulamasının** **Proje Tasarımcısı**'ndaki **uygulama türü** kutusunda görünmesine neden olur.
+ Visual Studio belirli özellik adlarını ve değerlerini tanır. Örneğin, bir projedeki aşağıdaki özellik, **Windows uygulamasının** **Proje Tasarımcısı** 'ndaki **uygulama türü** kutusunda görünmesine neden olur.
 
 ```xml
 <OutputType>WinExe</OutputType>
@@ -110,7 +111,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
  Rastgele adlara sahip özellikler Visual Studio 'da gösterilmez. Visual Studio 'daki rastgele özellikleri değiştirmek için, proje dosyasını XML düzenleyicisinde açmanız ve bunları el ile düzenlemeniz gerekir. Daha fazla bilgi için bu konunun ilerleyen bölümlerindeki [Visual Studio 'da proje dosyalarını düzenleme](#edit-project-files-in-visual-studio) bölümüne bakın.
 
- Projesinde, rastgele öğe türü adlarıyla tanımlanmış öğeler, varsayılan olarak, Proje düğümleri altında **Çözüm Gezgini** görüntülenir. Bir öğeyi görüntüleme listesinden gizlemek için `Visible` meta verileri olarak ayarlayın `false` . Örneğin, aşağıdaki öğe derleme işlemine katılır, ancak **Çözüm Gezgini**gösterilmez.
+ Projesinde, rastgele öğe türü adlarıyla tanımlanmış öğeler, varsayılan olarak, Proje düğümleri altında **Çözüm Gezgini** görüntülenir. Bir öğeyi görüntüleme listesinden gizlemek için `Visible` meta verileri olarak ayarlayın `false` . Örneğin, aşağıdaki öğe derleme işlemine katılır, ancak **Çözüm Gezgini** gösterilmez.
 
 ```xml
 <ItemGroup>
@@ -123,7 +124,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 > [!NOTE]
 > `Visible`Meta veriler, C++ projeleri için **Çözüm Gezgini** yok sayılır. Öğeler, false olarak ayarlanmış olsa bile her zaman gösterilir `Visible` .
 
- Projeye içeri aktarılan dosyalarda belirtilen öğeler varsayılan olarak görüntülenmez. Yapı işlemi sırasında oluşturulan öğeler **Çözüm Gezgini**hiçbir şekilde gösterilmez.
+ Projeye içeri aktarılan dosyalarda belirtilen öğeler varsayılan olarak görüntülenmez. Yapı işlemi sırasında oluşturulan öğeler **Çözüm Gezgini** hiçbir şekilde gösterilmez.
 
 ## <a name="conditions-on-items-and-properties"></a>Öğeler ve özellikler ile ilgili koşullar
 
@@ -131,7 +132,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
  Görüntülenecek özellik değerlerini belirlerken, Visual Studio 'Nun yapılandırmaya bağımlı olduğunu düşündüğü özellikler, yapılandırmayı birbirinden bağımsız olarak kabul eden özelliklerden farklı şekilde değerlendirilir. Yapılandırmaya bağımlı olduğunu düşündüğü özellikler için, Visual Studio, `Configuration` ve `Platform` özelliklerini uygun şekilde ayarlar ve MSBuild 'i projeyi yeniden değerlendirmeye yönlendirir. Yapılandırmayı bağımsız olarak kabul eden özellikler için, koşulların nasıl değerlendirileceğini belirsiz hale gelir.
 
- Öğelerin **Çözüm Gezgini**gösterilip gösterilmeyeceğine karar vermek amacıyla öğelerdeki Koşullu ifadeler her zaman göz ardı edilir.
+ Öğelerin **Çözüm Gezgini** gösterilip gösterilmeyeceğine karar vermek amacıyla öğelerdeki Koşullu ifadeler her zaman göz ardı edilir.
 
 ## <a name="debugging"></a>Hata Ayıklama
 
@@ -147,23 +148,23 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
 #### <a name="to-unload-and-edit-a-project-file-in-visual-studio"></a>Visual Studio'da bir proje dosyasının yüklemesini kaldırmak ve düzenlemek için
 
-1. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve ardından **Projeyi Kaldır**' ı seçin.
+1. **Çözüm Gezgini** ' de, proje için kısayol menüsünü açın ve ardından **Projeyi Kaldır** ' ı seçin.
 
-     Proje işaretlendi **(kullanılamıyor)**.
+     Proje işaretlendi **(kullanılamıyor)** .
 
-2. **Çözüm Gezgini**' de, kullanılamayan proje için kısayol menüsünü açın ve ardından **Düzenle \<Project File> **' yi seçin.
+2. **Çözüm Gezgini** ' de, kullanılamayan proje için kısayol menüsünü açın ve ardından **Düzenle \<Project File>** ' yi seçin.
 
      Proje dosyası Visual Studio XML düzenleyicisinde açılır.
 
 3. Proje dosyasını düzenleyin, kaydedin ve ardından kapatın.
 
-4. **Çözüm Gezgini**' de, kullanılamayan proje için kısayol menüsünü açın ve ardından **projeyi yeniden yükle**' yi seçin.
+4. **Çözüm Gezgini** ' de, kullanılamayan proje için kısayol menüsünü açın ve ardından **projeyi yeniden yükle** ' yi seçin.
 
 ## <a name="intellisense-and-validation"></a>IntelliSense ve doğrulama
 
- Proje dosyalarını düzenlemek için XML düzenleyicisini kullanırken, IntelliSense ve doğrulama MSBuild şema dosyaları tarafından çalıştırılır. Bunlar, * \<Visual Studio installation directory> \Xml\schemas\1010\msbuild*dizininde bulunan şema önbelleğine yüklenir.
+ Proje dosyalarını düzenlemek için XML düzenleyicisini kullanırken, IntelliSense ve doğrulama MSBuild şema dosyaları tarafından çalıştırılır. Bunlar, *\<Visual Studio installation directory> \Xml\schemas\1010\msbuild* dizininde bulunan şema önbelleğine yüklenir.
 
- Temel MSBuild türleri, Microsoft. Build *. Core. xsd* ve Visual Studio tarafından kullanılan ortak türlerde tanımlanmıştır, *Microsoft. Build. CommonTypes. xsd*dosyasında tanımlanmıştır. Şemaları, özel öğe türü adları, özellikleri ve görevleri için IntelliSense ve doğrulamaya sahip olacak şekilde özelleştirmek için *Microsoft. Build. xsd*' yi düzenleyebilir ya da CommonTypes veya Core şemalarını içeren kendi şemanızı oluşturabilirsiniz. Kendi şemanızı oluşturursanız, **Özellikler** penceresini kullanarak bulmak için XML düzenleyicisini yönlendirirsiniz.
+ Temel MSBuild türleri, Microsoft. Build *. Core. xsd* ve Visual Studio tarafından kullanılan ortak türlerde tanımlanmıştır, *Microsoft. Build. CommonTypes. xsd* dosyasında tanımlanmıştır. Şemaları, özel öğe türü adları, özellikleri ve görevleri için IntelliSense ve doğrulamaya sahip olacak şekilde özelleştirmek için *Microsoft. Build. xsd* ' yi düzenleyebilir ya da CommonTypes veya Core şemalarını içeren kendi şemanızı oluşturabilirsiniz. Kendi şemanızı oluşturursanız, **Özellikler** penceresini kullanarak bulmak için XML düzenleyicisini yönlendirirsiniz.
 
 ## <a name="edit-loaded-project-files"></a>Yüklenen proje dosyalarını Düzenle
 
@@ -197,7 +198,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
 ## <a name="performance-shortcuts"></a>Performans kısayolları
 
- Hata ayıklamayı başlatmak için Visual Studio IDE 'yi kullanırsanız (F5 tuşunu seçerek veya menü çubuğunda **hata**  >  **ayıklamayı Başlat** ' ı seçerek) veya projenizi oluşturmak için (örneğin, **derleme**  >  **çözümü**), yapı işlemi performansı artırmak için hızlı bir güncelleştirme denetimi kullanır. Özelleştirilmiş yapıların, yerleşik olarak oluşturulan dosyalar oluşturmasındaki bazı durumlarda, hızlı güncelleştirme denetimi değiştirilen dosyaları doğru şekilde tanımlamaz. Daha kapsamlı güncelleştirme denetimleri gerektiren projeler, ortam değişkenini ayarlayarak hızlı denetlemeyi kapatabilir `DISABLEFASTUPTODATECHECK=1` . Alternatif olarak, projeler bunu projede veya projenin içeri aktardığı bir dosyada MSBuild özelliği olarak ayarlayabilir.
+ Hata ayıklamayı başlatmak için Visual Studio IDE 'yi kullanırsanız (F5 tuşunu seçerek veya menü çubuğunda **hata**  >  **ayıklamayı Başlat** ' ı seçerek) veya projenizi oluşturmak için (örneğin, **derleme**  >  **çözümü** ), yapı işlemi performansı artırmak için hızlı bir güncelleştirme denetimi kullanır. Özelleştirilmiş yapıların, yerleşik olarak oluşturulan dosyalar oluşturmasındaki bazı durumlarda, hızlı güncelleştirme denetimi değiştirilen dosyaları doğru şekilde tanımlamaz. Daha kapsamlı güncelleştirme denetimleri gerektiren projeler, ortam değişkenini ayarlayarak hızlı denetlemeyi kapatabilir `DISABLEFASTUPTODATECHECK=1` . Alternatif olarak, projeler bunu projede veya projenin içeri aktardığı bir dosyada MSBuild özelliği olarak ayarlayabilir.
 
  Visual Studio 'daki normal derlemeler için hızlı güncelleştirme denetimi uygulanmaz ve proje, derlemeyi bir komut isteminde çağırırı olarak derler.
 

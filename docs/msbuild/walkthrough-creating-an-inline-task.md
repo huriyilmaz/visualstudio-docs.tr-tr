@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: satır Içi görev oluşturma | Microsoft Docs'
+description: Görevi barındırmak için ayrı bir derleme oluşturmak zorunda kalmadan, proje dosyasında satır içi bir MSBuild görevi oluşturma konusunda ilerleyin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d345d532c29931577edbe0441003cc80b069e335
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d2d72745aebedb5dad5efc86d33804a51e36b762
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85289150"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046628"
 ---
 # <a name="walkthrough-create-an-inline-task"></a>İzlenecek yol: satır içi görev oluşturma
 
@@ -32,7 +34,7 @@ MSBuild görevleri genellikle arabirimini uygulayan bir sınıf derlenerek oluş
 
 - İki giriş parametresine sahip bir görev ve bir MSBuild öğesi döndüren bir çıktı parametresi.
 
-Görevleri oluşturmak ve çalıştırmak için, Visual Studio ve **Visual Studio komut Istemi penceresini**aşağıdaki gibi kullanın:
+Görevleri oluşturmak ve çalıştırmak için, Visual Studio ve **Visual Studio komut Istemi penceresini** aşağıdaki gibi kullanın:
 
 1. Visual Studio 'Yu kullanarak bir MSBuild proje dosyası oluşturun.
 
@@ -46,13 +48,13 @@ Görevleri oluşturmak ve çalıştırmak için, Visual Studio ve **Visual Studi
 
 #### <a name="to-create-and-modify-a-project-file"></a>Proje dosyası oluşturmak ve değiştirmek için
 
-1. Visual Studio 'da C# **Windows Forms uygulama** şablonunu kullanarak yeni bir proje oluşturun. **Ad** kutusuna `InlineTasks` yazın. Çözüm için bir **konum** yazın, örneğin, *D: \\ *. **Çözüm için dizin oluştur** ' un seçili olduğundan emin olun, **kaynak denetimine Ekle** ' nin Işaretli olmadığından ve **çözüm adının** **InlineTasks**olması gerekir.
+1. Visual Studio 'da C# **Windows Forms uygulama** şablonunu kullanarak yeni bir proje oluşturun. **Ad** kutusuna `InlineTasks` yazın. Çözüm için bir **konum** yazın, örneğin, *D: \\* . **Çözüm için dizin oluştur** ' un seçili olduğundan emin olun, **kaynak denetimine Ekle** ' nin Işaretli olmadığından ve **çözüm adının** **InlineTasks** olması gerekir.
 
 3. Proje dosyasını oluşturmak için **Tamam** ' ı tıklatın.
 
-3. **Çözüm Gezgini**, **InlineTasks** proje düğümüne sağ tıklayın ve ardından **Projeyi Kaldır**' a tıklayın.
+3. **Çözüm Gezgini** , **InlineTasks** proje düğümüne sağ tıklayın ve ardından **Projeyi Kaldır** ' a tıklayın.
 
-4. Proje düğümüne tekrar sağ tıklayın ve ardından **InlineTasks. csproj öğesini Düzenle**' ye tıklayın.
+4. Proje düğümüne tekrar sağ tıklayın ve ardından **InlineTasks. csproj öğesini Düzenle** ' ye tıklayın.
 
      Proje dosyası kod düzenleyicisinde görüntülenir.
 
@@ -94,20 +96,20 @@ Görevleri oluşturmak ve çalıştırmak için, Visual Studio ve **Visual Studi
 
 ##### <a name="to-run-the-hello-task"></a>Merhaba görevi çalıştırmak için
 
-1. **Başlat**' a tıklayın, **tüm programlar**' a tıklayın ve ardından **Visual Studio Araçları** klasörünü bulun ve **Visual Studio komut istemi**' ne tıklayın.
+1. **Başlat** ' a tıklayın, **tüm programlar** ' a tıklayın ve ardından **Visual Studio Araçları** klasörünü bulun ve **Visual Studio komut istemi** ' ne tıklayın.
 
-2. **Komut Istemi penceresinde**, proje dosyasını içeren klasörü bulun, bu durumda *D:\ınlinetasks\ınlinetasks \\ *.
+2. **Komut Istemi penceresinde** , proje dosyasını içeren klasörü bulun, bu durumda *D:\ınlinetasks\ınlinetasks \\* .
 
-3. Komut anahtarları olmadan **MSBuild** yazın ve ardından **ENTER**tuşuna basın. Bu, varsayılan olarak, *InlineTasks. csproj* dosyasını oluşturur ve varsayılan hedef TestBuild öğesini işler ve bu da Hello görevini çağırır.
+3. Komut anahtarları olmadan **MSBuild** yazın ve ardından **ENTER** tuşuna basın. Bu, varsayılan olarak, *InlineTasks. csproj* dosyasını oluşturur ve varsayılan hedef TestBuild öğesini işler ve bu da Hello görevini çağırır.
 
-4. **Komut Istemi penceresindeki**çıktıyı inceleyin. Şu satırı görmeniz gerekir:
+4. **Komut Istemi penceresindeki** çıktıyı inceleyin. Şu satırı görmeniz gerekir:
 
     `Hello, world!`
 
    > [!NOTE]
    > Merhaba iletisini görmüyorsanız, proje dosyasını tekrar kaydetmeyi deneyin ve ardından Merhaba görevini çalıştırın.
 
-   Kod Düzenleyicisi ve **komut Istemi penceresi**arasında değişiklik yaparak, proje dosyasını değiştirebilir ve sonuçları hızlıca görebilirsiniz.
+   Kod Düzenleyicisi ve **komut Istemi penceresi** arasında değişiklik yaparak, proje dosyasını değiştirebilir ve sonuçları hızlıca görebilirsiniz.
 
 ## <a name="define-the-echo-task"></a>Yankı görevini tanımlama
 
@@ -133,9 +135,9 @@ Görevleri oluşturmak ve çalıştırmak için, Visual Studio ve **Visual Studi
    </Target>
    ```
 
-2. **Komut Istemi penceresinde**, komut anahtarları olmadan **MSBuild** yazın ve ardından **ENTER**tuşuna basın. Varsayılan olarak, bu, Echo görevini çağıran varsayılan hedef TestBuild öğesini işler.
+2. **Komut Istemi penceresinde** , komut anahtarları olmadan **MSBuild** yazın ve ardından **ENTER** tuşuna basın. Varsayılan olarak, bu, Echo görevini çağıran varsayılan hedef TestBuild öğesini işler.
 
-3. **Komut Istemi penceresindeki**çıktıyı inceleyin. Şu satırı görmeniz gerekir:
+3. **Komut Istemi penceresindeki** çıktıyı inceleyin. Şu satırı görmeniz gerekir:
 
     `Greetings!`
 
@@ -170,9 +172,9 @@ Görevleri oluşturmak ve çalıştırmak için, Visual Studio ve **Visual Studi
    </Target>
    ```
 
-2. **Komut Istemi penceresinde**, komut anahtarları olmadan **MSBuild** yazın ve ardından **ENTER**tuşuna basın. Varsayılan olarak, bu, Echo görevini çağıran varsayılan hedef TestBuild öğesini işler.
+2. **Komut Istemi penceresinde** , komut anahtarları olmadan **MSBuild** yazın ve ardından **ENTER** tuşuna basın. Varsayılan olarak, bu, Echo görevini çağıran varsayılan hedef TestBuild öğesini işler.
 
-3. **Komut Istemi penceresindeki**çıktıyı inceleyin. Şu satırı görmeniz gerekir:
+3. **Komut Istemi penceresindeki** çıktıyı inceleyin. Şu satırı görmeniz gerekir:
 
     `The sum is 9`
 
@@ -226,9 +228,9 @@ Görevleri oluşturmak ve çalıştırmak için, Visual Studio ve **Visual Studi
    </Target>
    ```
 
-2. **Komut Istemi penceresinde**, komut anahtarları olmadan **MSBuild** yazın ve ardından **ENTER**tuşuna basın. Varsayılan olarak, bu, RegX görevini çağıran varsayılan hedef TestBuild öğesini işler.
+2. **Komut Istemi penceresinde** , komut anahtarları olmadan **MSBuild** yazın ve ardından **ENTER** tuşuna basın. Varsayılan olarak, bu, RegX görevini çağıran varsayılan hedef TestBuild öğesini işler.
 
-3. **Komut Istemi penceresindeki**çıktıyı inceleyin. Şu satırları görmeniz gerekir:
+3. **Komut Istemi penceresindeki** çıktıyı inceleyin. Şu satırları görmeniz gerekir:
 
    ```
    Input files: Form1.cs;Form1.Designer.cs;Program.cs;Properties\AssemblyInfo.cs;Properties\Resources.Designer.cs;Properties\Settings.Designer.cs

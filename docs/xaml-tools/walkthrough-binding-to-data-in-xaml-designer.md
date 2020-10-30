@@ -1,5 +1,7 @@
 ---
 title: XAML Tasarımcısı’nda verilere bağlama
+description: Çalışma yüzeyini ve Özellikler penceresi kullanarak veri bağlama özelliklerini ayarlayarak XAMl tasarımcısında bir denetime veri bağlamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -10,12 +12,12 @@ dev_langs:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 9cc5348004f344bd62e66aa03a20b0dd61017692
-ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
+ms.openlocfilehash: e07d4a0872f2e93e568bb540edb89e026d25d935
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90713431"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047175"
 ---
 # <a name="walkthrough-bind-to-data-in-xaml-designer"></a>İzlenecek yol: XAML Tasarımcısı’nda verilere bağlama
 
@@ -23,13 +25,13 @@ XAML Tasarımcısı, çalışma yüzeyini ve Özellikler penceresi kullanarak ve
 
 ## <a name="to-create-a-class-to-use-as-a-data-source"></a>Veri kaynağı olarak kullanılacak bir sınıf oluşturmak için
 
-1. **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
+1. **Dosya** menüsünde **Yeni**  >  **Proje** ' yi seçin.
 
 1. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** düğümünü seçin, **Windows Masaüstü** düğümünü genişletin ve ardından **WPF uygulama** şablonunu seçin.
 
-1. Projeyi **BindingTest**olarak adlandırın ve **Tamam** düğmesini seçin.
+1. Projeyi **BindingTest** olarak adlandırın ve **Tamam** düğmesini seçin.
 
-1. **MainWindow.xaml.cs** (veya **MainWindow. xaml. vb**) dosyasını açın ve aşağıdaki kodu ekleyin. C# dilinde, kodu `BindingTest` ad alanına ekleyin (dosyadaki son kapanış parantezinden önce). Visual Basic ' de, yeni sınıfı eklemeniz yeterlidir.
+1. **MainWindow.xaml.cs** (veya **MainWindow. xaml. vb** ) dosyasını açın ve aşağıdaki kodu ekleyin. C# dilinde, kodu `BindingTest` ad alanına ekleyin (dosyadaki son kapanış parantezinden önce). Visual Basic ' de, yeni sınıfı eklemeniz yeterlidir.
 
    ```csharp
    public class ShoppingCart : DependencyObject
@@ -65,11 +67,11 @@ XAML Tasarımcısı, çalışma yüzeyini ve Özellikler penceresi kullanarak ve
 
    Bu kod, [PropertyMetadata](xref:Windows.UI.Xaml.PropertyMetadata) nesnesini kullanarak varsayılan öğe sayısı olarak 0 değerini ayarlar.
 
-1. **Dosya** **menüsünde Build**  >  **Build Solution**öğesini seçin.
+1. **Dosya** **menüsünde Build**  >  **Build Solution** öğesini seçin.
 
 ## <a name="to-bind-the-itemcount-property-to-a-textblock-control"></a>ItemCount özelliğini bir TextBlock denetimine bağlamak için
 
-1. Çözüm Gezgini, **MainWindow. xaml** için kısayol menüsünü açın ve **Görünüm Tasarımcısı**' nı seçin.
+1. Çözüm Gezgini, **MainWindow. xaml** için kısayol menüsünü açın ve **Görünüm Tasarımcısı** ' nı seçin.
 
 1. Araç kutusunda bir [kılavuz](xref:Windows.UI.Xaml.Controls.Grid) denetimi seçin ve forma ekleyin.
 
@@ -81,9 +83,9 @@ XAML Tasarımcısı, çalışma yüzeyini ve Özellikler penceresi kullanarak ve
 
      ![Nesne Seç iletişim kutusu](../designers/media/blendselectobject.png)
 
-1. **Araç kutusunda**, `TextBlock` forma eklemek için bir denetim seçin.
+1. **Araç kutusunda** , `TextBlock` forma eklemek için bir denetim seçin.
 
-1. `TextBlock`Denetim seçiliyken, Özellikler penceresi **metin** özelliğinin sağ tarafındaki özellik işaretini seçin ve sonra **veri bağlama oluştur**' u seçin. (Özellik işaretçisi küçük bir kutu gibi görünür.)
+1. `TextBlock`Denetim seçiliyken, Özellikler penceresi **metin** özelliğinin sağ tarafındaki özellik işaretini seçin ve sonra **veri bağlama oluştur** ' u seçin. (Özellik işaretçisi küçük bir kutu gibi görünür.)
 
 1. Veri bağlamayı oluştur iletişim kutusunda, **yol** kutusunda, **ItemCount: (Int32)** özelliğini seçin ve sonra **Tamam** düğmesini seçin.
 

@@ -1,5 +1,7 @@
 ---
 title: MSBuild hedef çerçevesi ve hedef platform | Microsoft Docs
+description: Hedef .NET Framework sürümünde ve hedef platformda veya yazılım mimarisinde çalıştırmak için MSBuild projesi oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: df6517c5-edd6-4cc4-97ad-b3cdfc78e799
@@ -8,16 +10,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c55ce57adb5b86941b5953732d57a642eb4f943
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d29c4e4659e8e6a5564e3fb41f54615bf29171d2
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350842"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049104"
 ---
 # <a name="msbuild-target-framework-and-target-platform"></a>MSBuild hedef çerçevesi ve hedef platformu
 
-Bir proje, .NET Framework belirli bir sürümü ve belirli bir yazılım mimarisi olan bir *hedef platform*olan bir *hedef çerçeve*üzerinde çalışmak üzere oluşturulabilir.  Örneğin, 80x86 işlemci ailesi ("x86") ile uyumlu bir 32 bit platformda .NET Framework 2,0 ' de çalışacak bir uygulamayı hedefleyebilirsiniz. Hedef Framework ve hedef platformun birleşimi *hedef bağlam*olarak bilinir.
+Bir proje, .NET Framework belirli bir sürümü ve belirli bir yazılım mimarisi olan bir *hedef platform* olan bir *hedef çerçeve* üzerinde çalışmak üzere oluşturulabilir.  Örneğin, 80x86 işlemci ailesi ("x86") ile uyumlu bir 32 bit platformda .NET Framework 2,0 ' de çalışacak bir uygulamayı hedefleyebilirsiniz. Hedef Framework ve hedef platformun birleşimi *hedef bağlam* olarak bilinir.
 
 > [!IMPORTANT]
 > Bu makalede, hedef çerçeve belirtmenin eski yolu gösterilmektedir. SDK stilindeki projeler Netstandard gibi farklı Targetçerçeveleri etkinleştirir. Daha fazla bilgi için bkz. [hedef çerçeveler](/dotnet/standard/frameworks).
@@ -89,7 +91,7 @@ Hedef çerçeve, `TargetFrameworkVersion` Proje dosyasındaki özelliğinde beli
 
 ```
 
-*Hedef yapılandırma* , hedef platformun bir alt kümesidir. Örneğin, `x86` `Debug` yapılandırma çoğu kod iyileştirmesini içermez. Hedef yapılandırma `Configuration` bir proje dosyasındaki Build özelliğinde belirtilir. Proje özellik sayfaları veya **Configuration Manager**kullanarak hedef yapılandırmayı değiştirebilirsiniz.
+*Hedef yapılandırma* , hedef platformun bir alt kümesidir. Örneğin, `x86` `Debug` yapılandırma çoğu kod iyileştirmesini içermez. Hedef yapılandırma `Configuration` bir proje dosyasındaki Build özelliğinde belirtilir. Proje özellik sayfaları veya **Configuration Manager** kullanarak hedef yapılandırmayı değiştirebilirsiniz.
 
 ```xml
 <PropertyGroup>

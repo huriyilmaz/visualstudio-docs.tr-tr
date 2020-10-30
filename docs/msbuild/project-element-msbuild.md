@@ -1,5 +1,7 @@
 ---
 title: Proje öğesi (MSBuild) | Microsoft Docs
+description: MSBuild proje dosyasının gerekli kök öğesi olan MSBuild proje öğesi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: df9eff3e941cc21aaa71c2779a72084e12e8e590
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 223ccd9e823bef4ee458a7aa1ce2d785788c6238
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632985"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048855"
 ---
 # <a name="project-element-msbuild"></a>Proje öğesi (MSBuild)
 
@@ -62,7 +64,7 @@ MSBuild proje dosyasının gerekli kök öğesi.
 | `InitialTargets` | İsteğe bağlı öznitelik.<br /><br /> Öznitelikte veya komut satırında belirtilen hedeflerden önce çalıştırılacak başlangıç hedefi veya hedefleri `DefaultTargets` . Birden çok hedef noktalı virgül ( `;` ) ile ayrılmış. Birden fazla içeri aktarılan dosya tanımlanmışsa `InitialTargets` , belirtilen tüm hedefler içeri aktarmaların karşılaştığı sırada çalıştırılır. |
 | `Sdk` | İsteğe bağlı öznitelik. <br /><br /> . Proj dosyasına eklenen örtük Içeri aktarma deyimleri oluşturmak için kullanılacak SDK adı ve isteğe bağlı sürüm. Sürüm belirtilmemişse, MSBuild varsayılan bir sürümü çözümlemeye çalışır.  Örneğin `<Project Sdk="Microsoft.NET.Sdk" />` veya `<Project Sdk="My.Custom.Sdk/1.0.0" />` olabilir. |
 | `ToolsVersion` | İsteğe bağlı öznitelik.<br /><br /> Araç kümesi MSBuild 'in sürümü, $ (MSBuildBinPath) ve $ (Msbuildaraçları yolu) değerlerini belirlemede kullanır. |
-| `TreatAsLocalProperty` | İsteğe bağlı öznitelik.<br /><br /> Genel olarak değerlendirilmeyecek Özellik adları. Bu öznitelik, belirli komut satırı özelliklerinin bir proje veya hedefler dosyasında ve sonraki tüm içeri aktarmalarda ayarlanan özellik değerlerini geçersiz kılmasını önler. Birden çok özellik noktalı virgül (;) Ted.<br /><br /> Normal olarak, genel özellikler proje veya hedefler dosyasında ayarlanan özellik değerlerini geçersiz kılar. Özellik `TreatAsLocalProperty` değerde listeleniyorsa, genel özellik değeri bu dosyada ve sonraki tüm içeri aktarmalarda ayarlanan özellik değerlerini geçersiz kılmaz. Daha fazla bilgi için bkz. [nasıl yapılır: farklı seçeneklerle aynı kaynak dosyaları oluşturma](../msbuild/how-to-build-the-same-source-files-with-different-options.md). **Note:**  **-Property** (veya **-p**) anahtarını kullanarak bir komut isteminde genel özellikleri ayarlarsınız. Ayrıca, MSBuild görevinin özniteliğini kullanarak çok projeli bir derlemede alt projeler için genel özellikler ayarlayabilir veya değiştirebilirsiniz `Properties` . Daha fazla bilgi için bkz. [MSBuild görevi](../msbuild/msbuild-task.md). |
+| `TreatAsLocalProperty` | İsteğe bağlı öznitelik.<br /><br /> Genel olarak değerlendirilmeyecek Özellik adları. Bu öznitelik, belirli komut satırı özelliklerinin bir proje veya hedefler dosyasında ve sonraki tüm içeri aktarmalarda ayarlanan özellik değerlerini geçersiz kılmasını önler. Birden çok özellik noktalı virgül (;) Ted.<br /><br /> Normal olarak, genel özellikler proje veya hedefler dosyasında ayarlanan özellik değerlerini geçersiz kılar. Özellik `TreatAsLocalProperty` değerde listeleniyorsa, genel özellik değeri bu dosyada ve sonraki tüm içeri aktarmalarda ayarlanan özellik değerlerini geçersiz kılmaz. Daha fazla bilgi için bkz. [nasıl yapılır: farklı seçeneklerle aynı kaynak dosyaları oluşturma](../msbuild/how-to-build-the-same-source-files-with-different-options.md). **Note:**  **-Property** (veya **-p** ) anahtarını kullanarak bir komut isteminde genel özellikleri ayarlarsınız. Ayrıca, MSBuild görevinin özniteliğini kullanarak çok projeli bir derlemede alt projeler için genel özellikler ayarlayabilir veya değiştirebilirsiniz `Properties` . Daha fazla bilgi için bkz. [MSBuild görevi](../msbuild/msbuild-task.md). |
 | `xmlns` | İsteğe bağlı öznitelik.<br /><br /> Belirtildiğinde, `xmlns` özniteliğinin değeri olmalıdır `http://schemas.microsoft.com/developer/msbuild/2003` . |
 
 ### <a name="child-elements"></a>Alt öğeleri
@@ -89,4 +91,4 @@ MSBuild proje dosyasının gerekli kök öğesi.
 - [Nasıl yapılır: önce hangi hedefin oluşturulacağını belirtme](../msbuild/how-to-specify-which-target-to-build-first.md)
 - [Komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md)
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
-- [MSBUILD](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)

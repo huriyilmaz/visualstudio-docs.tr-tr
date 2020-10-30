@@ -1,5 +1,7 @@
 ---
 title: WPF. Hedef dosyalar | Microsoft Docs
+description: Windows Presentation Foundation (WPF) özel bir. targets dosyasına, Microsoft. WinFX. targets öğesine bir WPF 'e özgü görevler kümesi ekleyerek MSBuild 'i nasıl genişlettiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,16 +19,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3225777c020272a24ac124bf6d039c2154e2ff3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a81caf88798f1b02c212b6ee5a802e6ea824758
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77630957"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047525"
 ---
 # <a name="wpf-targets-files"></a>WPF .targets dosyaları
 
-Windows Presentation Foundation (WPF), özel bir *. targets* dosyası olan *Microsoft. WinFX. targets*içine birleştirilmiş bir WPF 'e özgü görevler kümesini ekleyerek MSBuild 'i genişletir. Bu dosya, WPF 'de bir MSBuild projesi oluşturmak için gereken MSBuild görevlerinin kümesini birleştirir.
+Windows Presentation Foundation (WPF), özel bir *. targets* dosyası olan *Microsoft. WinFX. targets* içine birleştirilmiş bir WPF 'e özgü görevler kümesini ekleyerek MSBuild 'i genişletir. Bu dosya, WPF 'de bir MSBuild projesi oluşturmak için gereken MSBuild görevlerinin kümesini birleştirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

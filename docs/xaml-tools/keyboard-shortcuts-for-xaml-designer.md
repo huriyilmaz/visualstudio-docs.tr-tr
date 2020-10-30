@@ -1,17 +1,19 @@
 ---
 title: XAML Tasarımcısı için klavye kısayolları
+description: Çalışma yüzeyinde ve belge anahattı penceresinde öğelerle çalışma için komutlara erişen XAML Tasarımcısı klavye kısayolları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 40211cc7-294a-4943-85a4-941ad6418dad
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: f9f30dd3eaeb6905088e7eec9db1fa9cc2b0f32c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aed3ed43afcad9cfb38dc427a441512106d9749b
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592961"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93045895"
 ---
 # <a name="keyboard-shortcuts-for-xaml-designer"></a>XAML Tasarımcısı için klavye kısayolları
 
@@ -31,10 +33,10 @@ Bu tabloda, çalışma yüzeyinde öğelerle çalışmak için kullanılabilen k
 |Bitişik olmayan birden çok öğe seç|İlk ve son öğeleri seçerken **CTRL** tuşuna basın ve basılı tutun|
 |Seçili öğeleri taşı|Ok tuşlarına basın. (Her tuş tuşuna basarak geçiş mesafesini artırmak için **SHIFT** tuşunu basılı tutabilirsiniz.)|
 |Bir öğeyi 15 derece artışlarla döndürme|Öğeyi döndürürken **SHIFT** tuşunu basılı tutun|
-|Tüm öğeleri seç|**CTRL**tuşuna basın + **A**|
+|Tüm öğeleri seç|**CTRL** tuşuna basın + **A**|
 |Tüm öğelerin seçimini temizle|**CTRL** + **SHIFT** + **A** tuşuna basın|
 |Öğe tutamaçlarını göster veya gizle|**F9** tuşuna basın|
-|Öğe için bir özellik seçin|Seçili bir öğe ve Özellikler penceresi odaklanıldığında **Tab**tuşuna basın. ( **CTRL** + kullanın Odağı Özellikler penceresi değiştirme **sekmesi** .) Aşağı açılan listelerden özellik değerlerini seçmek için ok tuşlarını kullanabilirsiniz.|
+|Öğe için bir özellik seçin|Seçili bir öğe ve Özellikler penceresi odaklanıldığında **Tab** tuşuna basın. ( **CTRL** + kullanın Odağı Özellikler penceresi değiştirme **sekmesi** .) Aşağı açılan listelerden özellik değerlerini seçmek için ok tuşlarını kullanabilirsiniz.|
 
 ## <a name="document-outline-window-shortcuts"></a>Belge ana hat penceresi kısayolları
 

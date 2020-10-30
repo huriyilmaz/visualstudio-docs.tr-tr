@@ -1,5 +1,7 @@
 ---
 title: Görev yazma | Microsoft Docs
+description: MSBuild derleme işlemi sırasında çalışan kodu sağlamak için kendi görevlerinizi nasıl oluşturabileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cbcf47ec83e1b900ba94ab3842c2cfa63fdcc5d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1b614fd1705491e676bb89a9527c75cf86bdd36c
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77631846"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047916"
 ---
 # <a name="task-writing"></a>Görev yazma
 
@@ -100,7 +102,7 @@ namespace MyTasks
  MSBuild dosyası *Microsoft. Common. Tasks* , `UsingTask` MSBuild ile birlikte sağlanan tüm görevleri kaydeden öğelerin listesini içeren bir proje dosyasıdır. Bu dosya, her proje oluşturulurken otomatik olarak eklenir. *Microsoft. Common. Tasks* ' de kayıtlı bir görev aynı zamanda geçerli proje dosyasında kayıtlıysa, geçerli proje dosyası önceliklidir; diğer bir deyişle, aynı ada sahip olan kendi görevinizdeki varsayılan görevi geçersiz kılabilirsiniz.
 
 > [!TIP]
-> *Microsoft. Common. görevlerinin*Içeriğini görüntüleyerek MSBuild ile sağlanan görevlerin bir listesini görebilirsiniz.
+> *Microsoft. Common. görevlerinin* Içeriğini görüntüleyerek MSBuild ile sağlanan görevlerin bir listesini görebilirsiniz.
 
 ## <a name="raise-events-from-a-task"></a>Bir görevden olay oluştur
 
@@ -170,7 +172,7 @@ Bir görev, parametre özelliği ayarlayıcısı çağrısının herhangi bir g�
 
 MSBuild,, ve türündeki özellikleri yerel olarak işler `string` `bool` `ITaskItem` `ITaskItem[]` . Bir görev farklı türde bir parametreyi kabul ediyorsa, MSBuild <xref:System.Convert.ChangeType%2A> 'e `string` (tüm özellik ve öğe başvuruları genişletilmiş olan) hedef türüne dönüştürme yapılacak MSBuild çağırılır. Herhangi bir giriş parametresi için dönüştürme başarısız olursa, MSBuild bir hata yayar ve görevin metodunu çağırmaz `Execute()` .
 
-## <a name="example"></a>Örnek
+## <a name="example-1"></a>Örnek 1
 
 ### <a name="description"></a>Description
 
@@ -195,7 +197,7 @@ namespace SimpleTask1
 }
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-2"></a>Örnek 2
 
 ### <a name="description"></a>Description
 
@@ -231,7 +233,7 @@ namespace SimpleTask2
 }
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-3"></a>Örnek 3
 
 ### <a name="description"></a>Description
 
@@ -241,7 +243,7 @@ Bu C# sınıfı, yardımcı sınıftan türetilen bir görevi gösterir <xref:Mi
 
 [!code-csharp[msbuild_SimpleTask3#1](../msbuild/codesnippet/CSharp/task-writing_1.cs)]
 
-## <a name="example"></a>Örnek
+## <a name="example-4"></a>Örnek 4
 
 ### <a name="description"></a>Description
 

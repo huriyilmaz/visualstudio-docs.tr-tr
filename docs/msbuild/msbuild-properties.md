@@ -1,5 +1,7 @@
 ---
 title: MSBuild özellikleri | Microsoft Docs
+description: MSBuild ad-değer özellik çiftlerinin değerleri görevlere nasıl geçirebileceği, koşulları değerlendirebileceği ve değerleri depolayabileceği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 39f1f612244fedcc707475d067e67500dc76e1d9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 61cff0bfa1db43b196d7f6403b5140f9af2947ba
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633297"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046136"
 ---
 # <a name="msbuild-properties"></a>MSBuild özellikleri
 
@@ -64,7 +66,7 @@ ms.locfileid: "77633297"
 
 ## <a name="registry-properties"></a>Kayıt defteri özellikleri
 
- Aşağıdaki sözdizimini kullanarak sistem kayıt defteri değerlerini okuyabilirsiniz, burada `Hive` kayıt defteri Hive (örneğin, **HKEY_LOCAL_MACHINE**), `MyKey` anahtar adı, `MySubKey` alt anahtar adıdır ve `Value` alt anahtarın değeridir.
+ Aşağıdaki sözdizimini kullanarak sistem kayıt defteri değerlerini okuyabilirsiniz, burada `Hive` kayıt defteri Hive (örneğin, **HKEY_LOCAL_MACHINE** ), `MyKey` anahtar adı, `MySubKey` alt anahtar adıdır ve `Value` alt anahtarın değeridir.
 
 ```xml
 $(registry:Hive\MyKey\MySubKey@Value)
@@ -88,7 +90,7 @@ $(registry:Hive\MyKey\MySubKey)
 
 ## <a name="global-properties"></a>Genel Özellikler
 
- MSBuild, **-Property** (veya **-p**) anahtarını kullanarak komut satırında özellikleri ayarlamanıza olanak sağlar. Bu genel özellik değerleri proje dosyasında ayarlanan özellik değerlerini geçersiz kılar. Bu ortam özellikleri içerir, ancak değiştirilemeyen ayrılmış özellikleri içermez.
+ MSBuild, **-Property** (veya **-p** ) anahtarını kullanarak komut satırında özellikleri ayarlamanıza olanak sağlar. Bu genel özellik değerleri proje dosyasında ayarlanan özellik değerlerini geçersiz kılar. Bu ortam özellikleri içerir, ancak değiştirilemeyen ayrılmış özellikleri içermez.
 
  Aşağıdaki örnek genel `Configuration` özelliğini `DEBUG` olarak ayarlar.
 
@@ -147,7 +149,7 @@ msbuild.exe MyProj.proj -p:Configuration=DEBUG
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
-- [MSBUILD](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)
 - [Nasıl yapılır: bir derlemede ortam değişkenlerini kullanma](../msbuild/how-to-use-environment-variables-in-a-build.md)
 - [Nasıl yapılır: proje dosyasının adına veya konumuna başvurma](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md)
 - [Nasıl yapılır: farklı seçeneklerle aynı kaynak dosyaları derleme](../msbuild/how-to-build-the-same-source-files-with-different-options.md)

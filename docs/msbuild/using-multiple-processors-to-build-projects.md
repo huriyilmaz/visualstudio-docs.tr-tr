@@ -1,5 +1,7 @@
 ---
 title: Projeleri derlemek için birden çok Işlemci kullanma | Microsoft Docs
+description: MSBuild 'in, kullanılabilir her işlemci için ayrı bir yapı işlemi oluşturarak birden çok işlemciyi veya çekirdeği olan sistemlerden nasıl yararlanaldığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5dc62112324f7ad19c47b346ac8c1e3f86570b0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6c523d21a194626805168d6fee3054e77586b19
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77631308"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047577"
 ---
 # <a name="use-multiple-processors-to-build-projects"></a>Projeleri derlemek için birden çok işlemci kullanma
 
@@ -36,7 +38,7 @@ MSBuild, birden çok işlemciyi veya birden çok çekirdekli işlemciyi olan sis
 
 ## <a name="c-project-vcxproj-and-solution-sln-files"></a>C++ projesi (. vcxproj) ve çözüm (. sln) dosyaları
 
- Hem C++ projeleri (*. vcxproj*) hem de çözüm (*. sln*) dosyaları [MSBuild görevine](../msbuild/msbuild-task.md)geçirilebilir. C++ projeleri için VCWrapperProject çağrılır ve sonra iç MSBuild projesi oluşturulur. C++ çözümleri için bir SolutionWrapperProject oluşturulur ve ardından iç MSBuild projesi oluşturulur. Her iki durumda da, sonuçta elde edilen proje diğer MSBuild projesiyle aynı şekilde değerlendirilir.
+ Hem C++ projeleri ( *. vcxproj* ) hem de çözüm ( *. sln* ) dosyaları [MSBuild görevine](../msbuild/msbuild-task.md)geçirilebilir. C++ projeleri için VCWrapperProject çağrılır ve sonra iç MSBuild projesi oluşturulur. C++ çözümleri için bir SolutionWrapperProject oluşturulur ve ardından iç MSBuild projesi oluşturulur. Her iki durumda da, sonuçta elde edilen proje diğer MSBuild projesiyle aynı şekilde değerlendirilir.
 
 ## <a name="multi-process-execution"></a>Çok işlem yürütme
 

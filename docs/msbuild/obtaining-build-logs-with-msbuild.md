@@ -1,5 +1,7 @@
 ---
 title: MSBuild ile derleme günlükleri alma | Microsoft Docs
+description: Ne kadar derleme verisi inceleyeceğinizi ve derleme verilerinin bir veya daha fazla dosyaya kaydedilip edilmeyeceğini belirtmek için MSBuild ile anahtarları kullanmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e3dad3a9b157989ecf993cf951f91fc6296ecdf7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cf13e23d69dfeba967e8e971ad2463cef4546567
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238614"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048959"
 ---
 # <a name="obtain-build-logs-with-msbuild"></a>MSBuild ile derleme günlükleri alma
 
@@ -35,7 +37,7 @@ MSBuild ile anahtarları kullanarak, ne kadar yapı verisi gözden geçirmek ist
 
 - Yapı Özeti.
 
-**-Ayrıntı** (**-v**) anahtarını kullanarak, çıktı günlüğünde ne kadar veri göründüğünü kontrol edebilirsiniz. Sorun giderme için, `detailed` `d` `diagnostic` `diag` en fazla bilgiyi sağlayan () veya () ayrıntı düzeyini kullanın.
+**-Ayrıntı** ( **-v** ) anahtarını kullanarak, çıktı günlüğünde ne kadar veri göründüğünü kontrol edebilirsiniz. Sorun giderme için, `detailed` `d` `diagnostic` `diag` en fazla bilgiyi sağlayan () veya () ayrıntı düzeyini kullanın.
 
 -Ayrıntı düzeyini ' a ayarladığınızda, **-ayrıntı düzeyini** `detailed` ve hatta daha yavaş ayarlarsanız yapı işlemi daha yavaş olabilir **-verbosity** `diagnostic` .
 
@@ -58,13 +60,13 @@ Aşağıdaki tabloda, günlük ayrıntı düzeyi (sütun değerleri) hangi ileti
 
 ## <a name="save-the-build-log-to-a-file"></a>Derleme günlüğünü bir dosyaya kaydetme
 
-Derleme verilerini bir dosyaya kaydetmek için **-filegünlükçü** (**fl**) anahtarını kullanabilirsiniz. Aşağıdaki örnek, yapı verilerini *MSBuild. log*adlı bir dosyaya kaydeder.
+Derleme verilerini bir dosyaya kaydetmek için **-filegünlükçü** ( **fl** ) anahtarını kullanabilirsiniz. Aşağıdaki örnek, yapı verilerini *MSBuild. log* adlı bir dosyaya kaydeder.
 
 ```cmd
 msbuild MyProject.proj -t:go -fileLogger
 ```
 
- Aşağıdaki örnekte, günlük dosyası *Myprojectoutput. log*olarak adlandırılır ve günlük çıkışının ayrıntı düzeyi olarak ayarlanır `diagnostic` . Bu iki ayarı **-FileLoggerParameters** ( `flp` ) anahtarını kullanarak belirtirsiniz.
+ Aşağıdaki örnekte, günlük dosyası *Myprojectoutput. log* olarak adlandırılır ve günlük çıkışının ayrıntı düzeyi olarak ayarlanır `diagnostic` . Bu iki ayarı **-FileLoggerParameters** ( `flp` ) anahtarını kullanarak belirtirsiniz.
 
 ```cmd
 msbuild MyProject.proj -t:go -fl -flp:logfile=MyProjectOutput.log;verbosity=diagnostic
@@ -74,7 +76,7 @@ msbuild MyProject.proj -t:go -fl -flp:logfile=MyProjectOutput.log;verbosity=diag
 
 ## <a name="save-the-log-output-to-multiple-files"></a>Günlük çıktısını birden çok dosyaya kaydetme
 
- Aşağıdaki örnek, tüm günlüğü *msbuild1. log*dosyasına kaydeder, yalnızca bir hata oluştu *. log*ve yalnızca *JustWarnings. log*için uyarılar. Örnek, her üç dosyanın dosya numarasını kullanır. Dosya numaraları **-fl** ve **-FLP** anahtarlarından hemen sonra belirtilir (örneğin, `-fl1` ve `-flp1` ).
+ Aşağıdaki örnek, tüm günlüğü *msbuild1. log* dosyasına kaydeder, yalnızca bir hata oluştu *. log* ve yalnızca *JustWarnings. log* için uyarılar. Örnek, her üç dosyanın dosya numarasını kullanır. Dosya numaraları **-fl** ve **-FLP** anahtarlarından hemen sonra belirtilir (örneğin, `-fl1` ve `-flp1` ).
 
  Dosyalar 2 ve 3 için **-FileLoggerParameters** ( `flp` ) anahtarları her bir dosyanın ne şekilde ekleneceğini ve her dosyaya nelerin ekleneceğini belirtir. Dosya 1 için ad belirtilmedi, bu nedenle varsayılan *msbuild1. log* adı kullanılır.
 
@@ -86,9 +88,9 @@ msbuild MyProject.proj -t:go -fl1 -fl2 -fl3 -flp2:logfile=JustErrors.log;errorso
 
 ## <a name="save-a-binary-log"></a>İkili günlük kaydetme
 
-**-Binarygünlükçü** (**BL**) anahtarını kullanarak günlüğü sıkıştırılmış, ikili biçimde kaydedebilirsiniz. Bu günlük, derleme işleminin ayrıntılı açıklamasını içerir ve belirli günlük analizi araçları tarafından okunabilir.
+**-Binarygünlükçü** ( **BL** ) anahtarını kullanarak günlüğü sıkıştırılmış, ikili biçimde kaydedebilirsiniz. Bu günlük, derleme işleminin ayrıntılı açıklamasını içerir ve belirli günlük analizi araçları tarafından okunabilir.
 
-Aşağıdaki örnekte, *binarylogfilename*adlı bir ikili günlük dosyası oluşturulur.
+Aşağıdaki örnekte, *binarylogfilename* adlı bir ikili günlük dosyası oluşturulur.
 
 ```cmd
 -bl:binarylogfilename.binlog

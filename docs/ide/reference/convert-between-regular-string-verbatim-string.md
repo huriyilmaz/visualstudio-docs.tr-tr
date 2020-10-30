@@ -1,5 +1,6 @@
 ---
-title: Normal dize ve düz metin dizesi değişmez değerleri arasında dönüştürme
+title: Normal ve tam dize değişmez değerleri arasında Dönüştür
+ms.custom: SEO-VS-2020
 ms.date: 06/08/2020
 ms.topic: reference
 author: mikadumont
@@ -9,12 +10,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7e8e239f53f92727072a2fcd6573d6957b7cd3ec
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f411c0ac56adeb30370cbfc6f0f908ffd25bed05
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85290571"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93045904"
 ---
 # <a name="convert-between-regular-string-and-verbatim-string-literals-refactoring"></a>Normal dize ve tam dize değişmez değerlerini yeniden düzenleme arasında Dönüştür
 
@@ -32,9 +33,9 @@ Bu yeniden düzenleme için geçerlidir:
 
 1. Giriş işaretini normal dizeye veya tam dize değişmez değerine yerleştirin:
 
-2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 
-3. Aşağıdaki seçeneklerden birini belirleyin: 
+3. Aşağıdaki seçeneklerden birini belirleyin:
 
     **Normal dizeye dönüştür** seçeneğini belirleyin.
 

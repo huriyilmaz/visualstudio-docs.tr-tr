@@ -1,5 +1,7 @@
 ---
 title: UsingTask öğesi (MSBuild) | Microsoft Docs
+description: Bir görev öğesinde başvurulan görevi, görev uygulamasını içeren derleme ile eşleyen MSBuild UsingTask öğesi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 14556467e0907818333695b3388b2d11f3467ed7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d09f266f5bf51b870dbbbc0f80aa8282e91faa9
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85289163"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046113"
 ---
 # <a name="usingtask-element-msbuild"></a>UsingTask öğesi (MSBuild)
 
@@ -83,7 +85,7 @@ Bir [görev](../msbuild/task-element-msbuild.md) öğesinde başvurulan görevi,
 
 Özel görevi içeren derleme `Task` ilk kullanıldığında yüklenir.
 
-## <a name="example"></a>Örnek
+## <a name="example-1"></a>Örnek 1
 
  Aşağıdaki örnek, `UsingTask` öğesinin bir özniteliğiyle nasıl kullanılacağını gösterir `AssemblyName` .
 
@@ -100,7 +102,7 @@ Bir [görev](../msbuild/task-element-msbuild.md) öğesinde başvurulan görevi,
 </UsingTask>
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-2"></a>Örnek 2
 
  Aşağıdaki örnek, `UsingTask` öğesinin bir özniteliğiyle nasıl kullanılacağını gösterir `AssemblyFile` .
 

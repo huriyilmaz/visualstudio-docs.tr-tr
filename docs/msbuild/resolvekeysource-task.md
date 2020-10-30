@@ -1,5 +1,7 @@
 ---
 title: ResolveKeySource görevi | Microsoft Docs
+description: Tanımlayıcı ad anahtar kaynağını belirleyen MSBuild ResolveKeySource görevinin parametreleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3aa4e2454a0216e697ed12404091eb0ef16416cb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2ed7bf0e831153d1120789d97b2a27aa77822a6b
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632712"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048582"
 ---
 # <a name="resolvekeysource-task"></a>ResolveKeySource görevi
 

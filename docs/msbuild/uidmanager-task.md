@@ -1,5 +1,7 @@
 ---
 title: Uııdmanager görevi | Microsoft Docs
+description: MSBuild Uıdmanager görevinin, kaynak XAML dosyalarındaki tüm XAML öğelerini yerelleştirmek için benzersiz tanımlayıcıları (UID 'ler) nasıl denetleyeceğini, güncelleştirdiğini veya kaldırmadığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37692c541fb2a6e9b2ccf61083dd383e56a79766
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 852b910de742676e1fe7dd0c85129640eb37a9ae
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77631529"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046931"
 ---
 # <a name="uidmanager-task"></a>UidManager görevi
 
@@ -36,7 +38,7 @@ ms.locfileid: "77631529"
 |-------------------------| - |
 | `IntermediateDirectory` | İsteğe bağlı **dize** parametresi.<br /><br /> **MarkupFiles** parametresi tarafından BELIRTILEN kaynak xaml dosyalarını yedeklemek için kullanılan dizini belirtir. |
 | `MarkupFiles` | Gerekli **ıtaskitem []** parametresi.<br /><br /> UID denetimi, güncelleştirilmesi veya kaldırılması için dahil edilecek kaynak XAML dosyalarını belirtir. |
-| `Task` | Gerekli **dize** parametresi.<br /><br /> Gerçekleştirmek istediğiniz UID yönetim görevini belirtir. Geçerli seçenekler **Check**, **Update**veya **Remove**seçenekleridir. |
+| `Task` | Gerekli **dize** parametresi.<br /><br /> Gerçekleştirmek istediğiniz UID yönetim görevini belirtir. Geçerli seçenekler **Check** , **Update** veya **Remove** seçenekleridir. |
 
 ## <a name="example"></a>Örnek
 

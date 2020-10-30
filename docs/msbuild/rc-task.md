@@ -1,5 +1,7 @@
 ---
 title: RC görevi | Microsoft Docs
+description: MSBuild 'in, kaynakları bir. res dosyasında derleyen, rc.exe Microsoft Windows Kaynak derleyicisi aracı 'nı kaydırmak için RC görevini nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -22,16 +24,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13ae844759cb73de6dc7bcce6c8898c21132f9d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 94a1babf518a3579246903f6479f999d8912dfe5
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632920"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048793"
 ---
 # <a name="rc-task"></a>RC görevi
 
-Microsoft Windows Kaynak derleyicisi Aracı ' nı sarmalayan *rc.exe*. **RC** görevi, imleçler, simgeler, bit eşlemler, iletişim kutuları ve yazı tipleri gibi kaynakları bir kaynak (*. res*) dosyasına derler. Daha fazla bilgi için bkz. [kaynak derleyicisi](/windows/desktop/menurc/resource-compiler).
+Microsoft Windows Kaynak derleyicisi Aracı ' nı sarmalayan *rc.exe* . **RC** görevi, imleçler, simgeler, bit eşlemler, iletişim kutuları ve yazı tipleri gibi kaynakları bir kaynak ( *. res* ) dosyasına derler. Daha fazla bilgi için bkz. [kaynak derleyicisi](/windows/desktop/menurc/resource-compiler).
 
 ## <a name="parameters"></a>Parametreler
 

@@ -1,5 +1,7 @@
 ---
 title: WriteContextTLogs | Microsoft Docs
+description: Geçerli bağlam için günlük dosyalarını yazan WriteContextTLogs için sözdizimi, gereksinimler ve dönüş değeri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 apiname:
@@ -15,18 +17,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf34ff63b00cf523ba9ef704f4417be4d5cdbf77
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 622cbebdb4073dfd9b4237e9dfbcb8bbf4a506de
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77630711"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047384"
 ---
 # <a name="writecontexttlogs"></a>WriteContextTLogs
 
 Geçerli bağlam için günlük dosyalarını yazar.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT WINAPI WriteContextTLogs(LPCTSTR intermediateDirectory, LPCTSTR tlogRootName);

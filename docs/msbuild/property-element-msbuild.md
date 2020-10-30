@@ -1,5 +1,7 @@
 ---
 title: Property öğesi (MSBuild) | Microsoft Docs
+description: Bir PropertyGroup öğesinin alt öğesi olarak belirtilmesi gereken kullanıcı tanımlı bir özellik adı ve değeri içeren MSBuild özellik öğesi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e50a6dd66c2dca7fa4159c578ccd334ed1d26cae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8c17906467579e8fc532372371df8be76b40e7f0
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632959"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048829"
 ---
 # <a name="property-element-msbuild"></a>Property öğesi (MSBuild)
 
@@ -65,7 +67,7 @@ Kullanıcı tanımlı özellik adı ve değeri içerir. Bir MSBuild projesinde k
 
 ## <a name="remarks"></a>Açıklamalar
 
- Özellik adları yalnızca ASCII karakterleri ile sınırlıdır. Özellik değerleri, " `$(` " ve "" arasında özellik adı girilerek projede başvurulur `)` . Örneğin, `$(builddir)\classes` *build\classes*olarak çözümleniyordu `builddir` `build` . Özellikler hakkında daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
+ Özellik adları yalnızca ASCII karakterleri ile sınırlıdır. Özellik değerleri, " `$(` " ve "" arasında özellik adı girilerek projede başvurulur `)` . Örneğin, `$(builddir)\classes` *build\classes* olarak çözümleniyordu `builddir` `build` . Özellikler hakkında daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
 
 ## <a name="example"></a>Örnek
 

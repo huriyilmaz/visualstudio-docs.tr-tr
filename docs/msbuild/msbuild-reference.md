@@ -1,5 +1,7 @@
 ---
 title: MSBuild başvurusu | Microsoft Docs
+description: Visual Studio için derleme sistemi olan MSBuild 'e yönelik başvuru bilgilerini içeren makalelere erişin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b164d3d141c66817afd0eb88054fd9220656c0f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e5b7bb9287f26825ad1a90c3f339d7308fd6def1
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633271"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046563"
 ---
 # <a name="msbuild-reference"></a>MSBuild başvurusu
 
@@ -53,7 +55,7 @@ MSBuild, Visual Studio için derleme sistemidir. Aşağıdaki bağlantılar, MSB
  MSBuild.exe ile kullanılabilen bağımsız değişkenleri ve anahtarları açıklar.
 
 - [. Hedef dosyalar](../msbuild/msbuild-dot-targets-files.md)\
- Açıklanır *. * MSBuild 'e dahil edilen hedefler dosyası.
+ Açıklanır *.* MSBuild 'e dahil edilen hedefler dosyası.
 
 - [İyi bilinen öğe meta verileri](../msbuild/msbuild-well-known-item-metadata.md)\
  Her öğeyle birlikte oluşturulan meta verileri listeler.

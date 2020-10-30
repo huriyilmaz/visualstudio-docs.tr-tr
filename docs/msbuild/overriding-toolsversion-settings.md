@@ -1,5 +1,7 @@
 ---
 title: Araçları sürüm ayarlarını geçersiz kılma | Microsoft Docs
+description: Projeler ve çözümler için MSBuild Araç takımının değerini değiştirmek veya geçersiz kılmak için kullanabileceğiniz çeşitli yollar edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13c33f0ef43707390aa32d4c26c0380a8a32883e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 29fed063d4c223cf0b1862384612ea5aa84b52b0
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633024"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048913"
 ---
 # <a name="override-toolsversion-settings"></a>Araçları sürüm ayarlarını geçersiz kıl
 
@@ -121,7 +123,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
 
     1. Ortam değişkeni `MSBUILDDEFAULTTOOLSVERSION` bir `ToolsVersion` varsa, bunu kullanın.
 
-    2. `DefaultOverrideToolsVersion` *MSBuild.exe.config*' de ayarlanırsa, onu kullanın.
+    2. `DefaultOverrideToolsVersion` *MSBuild.exe.config* ' de ayarlanırsa, onu kullanın.
 
     3. `DefaultOverrideToolsVersion`Kayıt defterinde ayarlandıysa, onu kullanın.
 

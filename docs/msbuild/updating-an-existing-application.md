@@ -1,5 +1,7 @@
 ---
 title: Mevcut bir uygulamayı MSBuild 15 ' e güncelleştirme | Microsoft Docs
+description: Uygulamanızın Visual Studio 'da veya MSBuild.exe tarafından gerçekleştirilen derlemeleri eşleştirmeye yönelik programsal yapıların nasıl yapıldığını nasıl sağlayacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: ghogen
@@ -7,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c141d1e35db1e5ce334606b255d99ce2c0afc29b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 65bde46ef959e0d005c9ab90ef8d2807ed240571
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84184035"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047649"
 ---
 # <a name="update-an-existing-application-for-msbuild-15"></a>MSBuild 15 için mevcut bir uygulamayı güncelleştirme
 
@@ -22,7 +24,7 @@ Daha hızlı, daha küçük ve yan yana yüklemeyi desteklemek için, Visual Stu
 
 ## <a name="use-msbuild-from-visual-studio"></a>Visual Studio 'dan MSBuild 'i kullanma
 
-Uygulamanıza ait program derlemelerinin Visual Studio veya *MSBuild.exe*içinde yapılan derlemelerin eşleştiğinden emin olmak Için, Visual Studio 'dan MSBuild derlemelerini yükleyin ve Visual Studio 'Da bulunan SDK 'ları kullanın. Microsoft. Build. Locator NuGet paketi bu işlemi basitleştirir.
+Uygulamanıza ait program derlemelerinin Visual Studio veya *MSBuild.exe* içinde yapılan derlemelerin eşleştiğinden emin olmak Için, Visual Studio 'dan MSBuild derlemelerini yükleyin ve Visual Studio 'Da bulunan SDK 'ları kullanın. Microsoft. Build. Locator NuGet paketi bu işlemi basitleştirir.
 
 ## <a name="use-microsoftbuildlocator"></a>Microsoft. Build. Locator kullanın
 
@@ -69,7 +71,7 @@ Uygulamanızın 15.1.0.0 sürümüne gereken bağlama yeniden yönlendirmelerini
 
 ### <a name="ensure-output-is-clean"></a>Çıktının temiz olduğundan emin olun
 
-Projenizi derleyin ve Microsoft. Build ' ın içermediğinden emin olmak için çıkış dizinini inceleyin *. \* * sonraki adımda eklenen *Microsoft.Build.Locator.dll*dışındaki dll derlemeleri.
+Projenizi derleyin ve Microsoft. Build ' ın içermediğinden emin olmak için çıkış dizinini inceleyin *. \** sonraki adımda eklenen *Microsoft.Build.Locator.dll* dışındaki dll derlemeleri.
 
 ### <a name="add-package-reference-for-microsoftbuildlocator"></a>Microsoft. Build. Locator için paket başvurusu Ekle
 

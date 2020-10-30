@@ -1,5 +1,7 @@
 ---
 title: StartTrackingContextWithRoot | Microsoft Docs
+description: Bir kök işaretleyici belirten yanıt dosyası kullanarak bir izleme bağlamını başlatmak için MSBuild StartTrackingContextWithRoot kullanmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 apiname:
@@ -15,18 +17,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68d585361b9797bf1df9c8b0b31f8a089e9de025
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ccca75a0fe525c4e1d9f421b2264070ebda9bdf3
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632101"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048128"
 ---
 # <a name="starttrackingcontextwithroot"></a>StartTrackingContextWithRoot
 
 Bir kök işaretleyici belirten yanıt dosyası kullanarak izleme bağlamını başlatır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT WINAPI StartTrackingContextWithRoot(LPCTSTR intermediateDirectory, LPCTSTR taskName, LPCTSTR rootMarkerResponseFile);

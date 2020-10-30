@@ -1,5 +1,7 @@
 ---
 title: MSBuild görevleri | Microsoft Docs
+description: MSBuild 'in, oluşturma işlemi sırasında atomik derleme işlemlerini gerçekleştiren görevleri veya yürütülebilir kod birimlerini nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b065ea8cdaea2e2b39aa78a666ea0348f7b254ae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76b359eebe0f4a22bef3ff6c6742a5134aa4520c
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633141"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049051"
 ---
 # <a name="msbuild-tasks"></a>MSBuild görevleri
 
@@ -67,11 +69,11 @@ Derleme platformunun, derleme işlemi sırasında herhangi bir sayıda eylemi y�
 
 ## <a name="overridden-tasks"></a>Geçersiz kılınan görevler
 
- MSBuild, çeşitli konumlarda görevler arar. İlk konum uzantılı dosyalardır *. * .NET Framework dizinlerinde depolanan OverrideTasks. Bu dosyalardaki görevler, proje dosyasındaki görevler de dahil olmak üzere, aynı ada sahip diğer tüm görevleri geçersiz kılar. İkinci konum uzantılı dosyalardır *. * .NET Framework dizinlerindeki görevler. Görev bu konumlardan birinde bulunmazsa, proje dosyasındaki görev kullanılır.
+ MSBuild, çeşitli konumlarda görevler arar. İlk konum uzantılı dosyalardır *.* .NET Framework dizinlerinde depolanan OverrideTasks. Bu dosyalardaki görevler, proje dosyasındaki görevler de dahil olmak üzere, aynı ada sahip diğer tüm görevleri geçersiz kılar. İkinci konum uzantılı dosyalardır *.* .NET Framework dizinlerindeki görevler. Görev bu konumlardan birinde bulunmazsa, proje dosyasındaki görev kullanılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
-- [MSBUILD](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)
 - [Görev yazma](../msbuild/task-writing.md)
 - [Satır içi görevleri](../msbuild/msbuild-inline-tasks.md)

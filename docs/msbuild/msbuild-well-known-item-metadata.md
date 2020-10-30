@@ -1,5 +1,7 @@
 ---
 title: MSBuild Iyi bilinen öğe meta verileri | Microsoft Docs
+description: Oluşturma sırasında her öğeye atanan MSBuild meta verileri ve yapı davranışını denetlemek için tanımlayabileceğiniz bazı isteğe bağlı MSBuild meta verileri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c810e166ef6f04befdbf7a5d18fe20bb65b8a299
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 047fe5ef6edc57681b8382a9f2a1069991e0f513
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87425387"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049017"
 ---
 # <a name="msbuild-well-known-item-metadata"></a>MSBuild tanınmış öğe meta verileri
 
@@ -43,7 +45,7 @@ Bu makaledeki ilk tablo, oluşturma sırasında her öğeye atanan meta verileri
 |% (Uzantı)|Öğenin dosya adı uzantısını içerir. Örneğin:<br /><br /> *.cs*|
 |% (RelativeDir)|`Include`En son ters eğik çizgi () kadar özniteliğinde belirtilen yolu içerir \\ . Örneğin:<br /><br /> *Kaynak\\*<br /><br /> `Include`Öznitelik bir tam yol ise `%(RelativeDir)` kök diziniyle başlar `%(RootDir)` .  Örneğin: <br /><br /> *C:\MyProject\Source\\*|
 |% (Dizin)|Kök dizin olmadan öğenin dizinini içerir. Örneğin:<br /><br /> *MyProject \\ kaynağı\\*|
-|%(RecursiveDir)|`Include`Öznitelik joker karakterini içeriyorsa \* \* , bu meta veri, yolun joker karakter yerine geçen kısmını belirtir. Joker karakterler hakkında daha fazla bilgi için bkz. [nasıl yapılır: oluşturulacak dosyaları seçme](../msbuild/how-to-select-the-files-to-build.md).<br /><br /> * \\ C:\solution\myproject\source* klasörü *program.cs*dosyasını içeriyorsa ve proje dosyası bu öğeyi içeriyorsa:<br /><br /> `<ItemGroup>`<br /><br /> `<MyItem Include="C:\**\Program.cs" />`<br /><br /> `</ItemGroup>`<br /><br /> Bundan sonra değeri `%(MyItem.RecursiveDir)` * \\ Mysolution\myproject\source*olacaktır.|
+|%(RecursiveDir)|`Include`Öznitelik joker karakterini içeriyorsa \* \* , bu meta veri, yolun joker karakter yerine geçen kısmını belirtir. Joker karakterler hakkında daha fazla bilgi için bkz. [nasıl yapılır: oluşturulacak dosyaları seçme](../msbuild/how-to-select-the-files-to-build.md).<br /><br /> *\\ C:\solution\myproject\source* klasörü *program.cs* dosyasını içeriyorsa ve proje dosyası bu öğeyi içeriyorsa:<br /><br /> `<ItemGroup>`<br /><br /> `<MyItem Include="C:\**\Program.cs" />`<br /><br /> `</ItemGroup>`<br /><br /> Bundan sonra değeri `%(MyItem.RecursiveDir)` *\\ Mysolution\myproject\source* olacaktır.|
 |% (Kimlik)|Öznitelikte belirtilen öğe `Include` . Örneğin:<br /><br /> *Source\Program.cs*|
 |% (ModifiedTime)|Öğenin son değiştirildiği zamandan gelen zaman damgasını içerir. Örneğin:<br /><br /> `2004-07-01 00:21:31.5073316`|
 |% (CreatedTime)|Öğenin oluşturulduğu zaman damgasını içerir. Örneğin:<br /><br /> `2004-06-25 09:26:45.8237425`|

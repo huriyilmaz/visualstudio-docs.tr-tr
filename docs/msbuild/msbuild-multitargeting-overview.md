@@ -1,5 +1,7 @@
 ---
 title: MSBuild Multihedefleme 'ye Genel Bakış | Microsoft Docs
+description: .NET Framework çeşitli sürümlerinden herhangi birinde ve çeşitli sistem platformlarından herhangi birinde çalışmak üzere bir uygulamayı derlemek için MSBuild 'i nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: eecbcd65-9fbc-4307-a321-46d3c3b79b12
@@ -8,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 609c764192673e4d3f9fbd99a1bc572e9d78db7f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 47b4ba2c27e130580af961216739289c6c7e9585
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183528"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046313"
 ---
 # <a name="msbuild-multitargeting-overview"></a>MSBuild çoklu sürüm desteğine genel bakış
 
@@ -28,7 +30,7 @@ MSBuild 'i kullanarak, .NET Framework çeşitli sürümlerinden herhangi birini 
 
 - Örneğin, Silverlight çerçevesi gibi .NET Framework dışında bir çerçeveyi hedefleyebilirsiniz.
 
-- Hedef çerçevenin önceden tanımlanmış bir alt kümesi olan bir *çerçeve profilini*hedefleyebilirsiniz.
+- Hedef çerçevenin önceden tanımlanmış bir alt kümesi olan bir *çerçeve profilini* hedefleyebilirsiniz.
 
 - .NET Framework geçerli sürümü için bir hizmet paketi yayımlanmışsa, hedefleyebilirsiniz.
 
@@ -36,11 +38,11 @@ MSBuild 'i kullanarak, .NET Framework çeşitli sürümlerinden herhangi birini 
 
 ## <a name="target-framework-and-platform"></a>Hedef çerçeve ve platform
 
- *Hedef çerçeve* , bir projenin üzerinde çalışmak üzere oluşturulduğu .NET Framework sürümüdür ve *hedef platform* , projenin üzerinde çalışmak üzere oluşturulduğu sistem platformudur.  Örneğin, 80x86 işlemci ailesi (x86) ile uyumlu bir 32 bit platformda çalıştırmak üzere bir .NET Framework 2,0 uygulamasını hedeflemek isteyebilirsiniz. Hedef Framework ve hedef platformun birleşimi *hedef bağlam*olarak bilinir. Daha fazla bilgi için bkz. [hedef Framework ve hedef platform](../msbuild/msbuild-target-framework-and-target-platform.md).
+ *Hedef çerçeve* , bir projenin üzerinde çalışmak üzere oluşturulduğu .NET Framework sürümüdür ve *hedef platform* , projenin üzerinde çalışmak üzere oluşturulduğu sistem platformudur.  Örneğin, 80x86 işlemci ailesi (x86) ile uyumlu bir 32 bit platformda çalıştırmak üzere bir .NET Framework 2,0 uygulamasını hedeflemek isteyebilirsiniz. Hedef Framework ve hedef platformun birleşimi *hedef bağlam* olarak bilinir. Daha fazla bilgi için bkz. [hedef Framework ve hedef platform](../msbuild/msbuild-target-framework-and-target-platform.md).
 
 ## <a name="toolset-toolsversion"></a>Araç Takımı (ToolsVersion)
 
- Araç takımı, uygulamayı oluşturmak için kullanılan araçları, görevleri ve hedefleri birlikte toplar. Araç takımı, *csc.exe* ve *vbc.exe*, ortak hedefler dosyası (*Microsoft. Common. targets*) ve ortak görevler dosyası (*Microsoft. Common. Tasks*) gibi derleyiciler içerir. 4,5 araç takımı, 2,0, 3,0, 3,5, 4 ve 4,5 .NET Framework sürümlerini hedeflemek için kullanılabilir. Ancak, 2,0 araç takımı yalnızca 2,0 sürümünü .NET Framework hedeflemek için kullanılabilir. Daha fazla bilgi için bkz. [araç takımı (araçları sürümü)](../msbuild/msbuild-toolset-toolsversion.md).
+ Araç takımı, uygulamayı oluşturmak için kullanılan araçları, görevleri ve hedefleri birlikte toplar. Araç takımı, *csc.exe* ve *vbc.exe* , ortak hedefler dosyası ( *Microsoft. Common. targets* ) ve ortak görevler dosyası ( *Microsoft. Common. Tasks* ) gibi derleyiciler içerir. 4,5 araç takımı, 2,0, 3,0, 3,5, 4 ve 4,5 .NET Framework sürümlerini hedeflemek için kullanılabilir. Ancak, 2,0 araç takımı yalnızca 2,0 sürümünü .NET Framework hedeflemek için kullanılabilir. Daha fazla bilgi için bkz. [araç takımı (araçları sürümü)](../msbuild/msbuild-toolset-toolsversion.md).
 
 ## <a name="reference-assemblies"></a>Başvuru derlemeleri
 
