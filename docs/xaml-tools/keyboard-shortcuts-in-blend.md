@@ -1,6 +1,8 @@
 ---
 title: Klavye kısayolları
 titleSuffix: Blend for Visual Studio
+description: Projeler, belgeler, nesneler, görünümler ve çalışma alanları ile çalışmaya yönelik komutlara erişen Visual Studio için Blend klavye kısayolları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 3a1b6830-30c2-4a36-bd14-6961f5edf9cb
@@ -9,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a4d0d537dc93479cc791b2e1c3246e9bab74139f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3641edafeed9cf7b5e29f8a967f9dbf26cdd3e8c
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85332233"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049250"
 ---
 # <a name="keyboard-shortcuts-in-blend-for-visual-studio"></a>Visual Studio için Blend klavye kısayolları
 
@@ -40,8 +42,8 @@ ms.locfileid: "85332233"
 |Tüm belgeleri kaydet|**CTRL** + **SHIFT** + **S**|
 |Etkin belgeyi kapat|**CTRL** + **W**|
 |Tüm açık belgeleri kapat|**CTRL** + **SHIFT** + **W**|
-|Son eylemi geri al|**CTRL**+ Z|
-|Geri alınan son eylemi yinele|**CTRL**+ Y veya **CTRL** + **SHIFT** + **Z**|
+|Son eylemi geri al|**CTRL** + Z|
+|Geri alınan son eylemi yinele|**CTRL** + Y veya **CTRL** + **SHIFT** + **Z**|
 |Tasarım zamanı ek açıklaması oluşturma|**CTRL** + **SHIFT** + **T**|
 |Kes|**CTRL** + **X**|
 |Kopyala|**CTRL** + **C**|
@@ -57,7 +59,7 @@ ms.locfileid: "85332233"
 |Yeni bir öğe oluşturun|**CTRL** + **N**|
 |Nesne yineleme|**Alt** tuşunu basılı tutun ve nesneyi sürükleyin|
 |Bir nesne için yeniden üst öğe|Nesneyi bir düzen panelinin üzerine sürükleyin ve **alt** tuşuna basın|
-|Denetimdeki metni düzenleme|**F2** (çıkmak için**ESC** )|
+|Denetimdeki metni düzenleme|**F2** (çıkmak için **ESC** )|
 |Bir denetimi düzenleme (WPF)|**CTRL** + **E**|
 |Seçili nesneleri aynı genişliğe getir|**CTRL** + **SHIFT** + **1**|
 |Seçili nesneleri aynı yüksekliğe getir|**CTRL** + **SHIFT** + **2**|
@@ -95,7 +97,7 @@ ms.locfileid: "85332233"
 
 |Bunu yapmak için|Bunu yapın|
 |----------------|-------------|
-|**Tasarım**, **kod**ve **bölünmüş** görünümler arasında geçiş yapma|**F11**|
+|**Tasarım** , **kod** ve **bölünmüş** görünümler arasında geçiş yapma|**F11**|
 |Çalışma yüzeyini yakınlaştırma|**CTRL** + **Eşittir işareti** ( **=** )|
 |Çalışma yüzeyinde uzaklaştır|**CTRL** + **Eksi işareti** ( **-** )|
 |Çalışma yüzeyini yakınlaştırma veya uzaklaştırma|Fare tekerleğini döndürme|
@@ -105,7 +107,7 @@ ms.locfileid: "85332233"
 |Çalışma yüzeyini gerçek boyutta görüntüleme|**CTRL** + **1**|
 |Tutamaçları göster veya gizle|**F9**|
 |Nesne sınırlarını göster veya gizle|**CTRL** + **SHIFT** + **H**|
-|**Tasarım**, **xaml**ve **bölünmüş** görünümler arasında geçiş yapma|**F11**|
+|**Tasarım** , **xaml** ve **bölünmüş** görünümler arasında geçiş yapma|**F11**|
 
 ## <a name="workspace-shortcuts"></a>Çalışma alanı kısayolları
 

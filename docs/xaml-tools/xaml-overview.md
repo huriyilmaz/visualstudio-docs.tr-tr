@@ -1,16 +1,18 @@
 ---
 title: XAML'ye genel bakış
+description: Visual Studio 'da XAML ve XAML kod Düzenleyicisi ve XAML Tasarımcısı araçları hakkında temel bilgileri öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 06/23/2020
 ms.topic: overview
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: e14e23f9820301374bd435484ba784edf50294bb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 997a35414f38af16d028770044c28652e13149be
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331945"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049192"
 ---
 # <a name="overview-of-xaml"></a>XAML 'ye Genel Bakış
 

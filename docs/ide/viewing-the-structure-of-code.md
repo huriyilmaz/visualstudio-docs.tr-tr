@@ -1,5 +1,6 @@
 ---
-title: Sınıf görünümü, çağrı hiyerarşisi, nesne tarayıcısı, kod tanımı penceresi
+title: Kod yapısını görüntülemek için Araçlar pencerelerini kullanın
+ms.custom: SEO-VS-2020
 ms.date: 09/19/2019
 ms.topic: reference
 f1_keywords:
@@ -25,16 +26,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 210606af0f200d49b639d323456f85e0a7becd06
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76e65dd22ccf1b47559238efcd2be18cf6b81fcb
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543682"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049284"
 ---
-# <a name="view-the-structure-of-code-using-different-tool-windows"></a>Farklı araç pencerelerini kullanarak kodun yapısını görüntüleme
+# <a name="view-the-structure-of-code-by-using-different-tool-windows"></a>Farklı araç pencerelerini kullanarak kodun yapısını görüntüleme
 
-**Sınıf görünümü**, **çağrı hiyerarşisi**, **nesne tarayıcısı**ve **kod tanımı** (yalnızca C++) gibi çeşitli araç pencerelerini kullanarak Visual Studio 'da sınıfları ve üyelerini inceleyebilirsiniz. Bu araç pencereleri Visual Studio projeleri, .NET bileşenleri, COM bileşenleri, dinamik bağlantı kitaplıkları (DLL) ve tür kitaplıkları (TLB) içinde kodu inceleyebilir.
+**Sınıf görünümü** , **çağrı hiyerarşisi** , **nesne tarayıcısı** ve **kod tanımı** (yalnızca C++) gibi çeşitli araç pencerelerini kullanarak Visual Studio 'da sınıfları ve üyelerini inceleyebilirsiniz. Bu araç pencereleri Visual Studio projeleri, .NET bileşenleri, COM bileşenleri, dinamik bağlantı kitaplıkları (DLL) ve tür kitaplıkları (TLB) içinde kodu inceleyebilir.
 
 Ayrıca, projelerinizdeki türlere ve üyelere gözatıp, sembolleri aramak, bir yöntemin Çağrı hiyerarşisini görüntülemek, sembol başvurularını bulmak ve birden çok araç penceresi arasında geçiş yapmak zorunda kalmadan, **Çözüm Gezgini** de kullanabilirsiniz.
 
@@ -44,11 +45,11 @@ Visual Studio Enterprise sürümüne sahipseniz, kodunuzun yapısını ve tüm �
 
 **Sınıf görünümü** , **Çözüm Gezgini** bir parçası olarak ve ayrı bir pencere olarak gösterilir. **Sınıf görünümü** bir uygulamanın öğelerini görüntüler. Üstteki bölmede ad alanları, türler, arabirimler, numaralandırmalar ve sınıflar görüntülenir ve alt bölmede üst bölmede seçilen türe ait Üyeler görüntülenir. Bu pencereyi kullanarak, kaynak kodundaki üye tanımlarına (veya öğe çözümünüz dışında tanımlanmışsa **nesne tarayıcısı** taşıyabilirsiniz) geçebilirsiniz.
 
-**Sınıf görünümü**öğelerini görüntülemek için bir proje derlemek zorunda değilsiniz. Projenizdeki kodu değiştirirken pencere yenilenir.
+**Sınıf görünümü** öğelerini görüntülemek için bir proje derlemek zorunda değilsiniz. Projenizdeki kodu değiştirirken pencere yenilenir.
 
 Proje düğümünü seçerek ve **Ekle** düğmesini seçerek **Yeni öğe Ekle** iletişim kutusunu açmak için projenize kod ekleyebilirsiniz. Kod ayrı bir dosyaya eklenir.
 
-Projeniz kaynak kodu denetimine iade edildiğinde, her **sınıf görünümü** öğesi dosyanın kaynak kodu durumunu gösteren bir simge görüntüler. **Kullanıma alma,** **Iade**etme ve **en son sürümü Al** gibi ortak kaynak kodu denetim komutları, öğesi için kısayol menüsünde de mevcuttur.
+Projeniz kaynak kodu denetimine iade edildiğinde, her **sınıf görünümü** öğesi dosyanın kaynak kodu durumunu gösteren bir simge görüntüler. **Kullanıma alma,** **Iade** etme ve **en son sürümü Al** gibi ortak kaynak kodu denetim komutları, öğesi için kısayol menüsünde de mevcuttur.
 
 ### <a name="class-view-toolbar"></a>Sınıf Görünümü araç çubuğu
 
@@ -56,10 +57,10 @@ Projeniz kaynak kodu denetimine iade edildiğinde, her **sınıf görünümü** 
 
 |Ad|Açıklama|
 |-|-|
-|**Yeni klasör**|Sık kullanılan öğeleri düzenleyebileceğiniz bir sanal klasör veya alt klasör oluşturur. Bunlar, etkin çözüm (*. suo*) dosyasına kaydedilir. Kodunuzda bir öğeyi yeniden adlandırdıktan veya sildikten sonra, bir sanal klasörde hata düğümü olarak görünebilir. Bu sorunu düzeltmek için, hata düğümünü silin. Bir öğeyi yeniden adlandırdıysanız proje hiyerarşisinden klasörü yeniden klasöre taşıyabilirsiniz.|
+|**Yeni klasör**|Sık kullanılan öğeleri düzenleyebileceğiniz bir sanal klasör veya alt klasör oluşturur. Bunlar, etkin çözüm ( *. suo* ) dosyasına kaydedilir. Kodunuzda bir öğeyi yeniden adlandırdıktan veya sildikten sonra, bir sanal klasörde hata düğümü olarak görünebilir. Bu sorunu düzeltmek için, hata düğümünü silin. Bir öğeyi yeniden adlandırdıysanız proje hiyerarşisinden klasörü yeniden klasöre taşıyabilirsiniz.|
 |**Geri**|Daha önce seçilen öğeye gider.|
 |**İleri**|Sonraki seçili öğeye gider.|
-|**Sınıf diyagramını görüntüle** (yalnızca yönetilen kod projeleri)|**Sınıf görünümü**bir ad alanı veya tür seçtiğinizde kullanılabilir hale gelir. Bir ad alanı seçildiğinde, sınıf diyagramı içindeki tüm türleri gösterir. Bir tür seçildiğinde, sınıf diyagramı yalnızca bu türü gösterir.|
+|**Sınıf diyagramını görüntüle** (yalnızca yönetilen kod projeleri)|**Sınıf görünümü** bir ad alanı veya tür seçtiğinizde kullanılabilir hale gelir. Bir ad alanı seçildiğinde, sınıf diyagramı içindeki tüm türleri gösterir. Bir tür seçildiğinde, sınıf diyagramı yalnızca bu türü gösterir.|
 
 ### <a name="class-view-settings"></a>Sınıf Görünümü ayarları
 
@@ -82,10 +83,10 @@ Araç çubuğundaki **Sınıf Görünümü ayarları** düğmesi aşağıdaki ay
 
 |Ad|Açıklama|
 |-|-|
-|**Tanıma Git**|Öğe açık projede tanımlanmamışsa, kaynak kodundaki veya **nesne tarayıcısı**içindeki öğenin tanımını bulur.|
-|**Tanıma gözatatıon**|**Nesne tarayıcısı**seçili öğeyi görüntüler.|
+|**Tanıma Git**|Öğe açık projede tanımlanmamışsa, kaynak kodundaki veya **nesne tarayıcısı** içindeki öğenin tanımını bulur.|
+|**Tanıma gözatatıon**|**Nesne tarayıcısı** seçili öğeyi görüntüler.|
 |**Tüm Başvuruları Bul**|Şu anda seçili olan nesne öğesini bulur ve sonuçları **Bul sonuçları** penceresinde görüntüler.|
-|**Türe Filtre Uygula** (yalnızca yönetilen kod)|Yalnızca seçilen türü veya ad alanını görüntüler. **Bul** kutusunun yanında bulunan **bul** (**X**) düğmesini seçerek filtreyi kaldırabilirsiniz.|
+|**Türe Filtre Uygula** (yalnızca yönetilen kod)|Yalnızca seçilen türü veya ad alanını görüntüler. **Bul** kutusunun yanında bulunan **bul** ( **X** ) düğmesini seçerek filtreyi kaldırabilirsiniz.|
 |**Kopyala**|Öğenin tam adını kopyalar.|
 |**Alfabetik olarak Sırala**|Türleri ve üyeleri ada göre alfabetik olarak listeler.|
 |**Üye türüne göre sırala**|Türlerine göre sırasıyla türler ve üyeleri listeler (Bu tür sınıfların önüne ve arabirimlerin önüne arabirimler ve yöntemlerin önündeki Yöntemler).|
@@ -129,19 +130,19 @@ Pencerenin üst kısmındaki açılan listeyi kullanarak görüntülemek istedi�
 
 ::: moniker range="vs-2017"
 
-Özel ayarlar, Visual Studio Kullanıcı uygulama dizininde, *%AppData%\microsoft\visualstudio\15.0\ObjBrowEX.dat*dizinine kaydedilir.
+Özel ayarlar, Visual Studio Kullanıcı uygulama dizininde, *%AppData%\microsoft\visualstudio\15.0\ObjBrowEX.dat* dizinine kaydedilir.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Özel ayarlar, Visual Studio Kullanıcı uygulama dizininde, *%AppData%\microsoft\visualstudio\16.0\ObjBrowEX.dat*dizinine kaydedilir.
+Özel ayarlar, Visual Studio Kullanıcı uygulama dizininde, *%AppData%\microsoft\visualstudio\16.0\ObjBrowEX.dat* dizinine kaydedilir.
 
 ::: moniker-end
 
 **Nesne tarayıcısı** sol bölmesi derlemeleri gösterir. Derlemeleri içerdikleri ad alanlarını görüntüleyecek şekilde genişletebilir ve ardından içerdikleri türleri göstermek için ad alanlarını genişletebilirsiniz. Bir tür seçtiğinizde, üyeleri (Özellikler ve yöntemler gibi) sağ bölmede listelenir. Sağ alt bölmede seçili öğeyle ilgili ayrıntılı bilgiler görüntülenir.
 
-Pencerenin üst kısmındaki **arama** kutusunu kullanarak belirli bir öğe için arama yapabilirsiniz. Aramalar büyük/küçük harfe duyarlıdır. Arama sonuçları sol bölmede görüntülenir. Bir aramayı temizlemek için **arama** kutusunun yanındaki **Aramayı Temizle** (**X**) düğmesini seçin.
+Pencerenin üst kısmındaki **arama** kutusunu kullanarak belirli bir öğe için arama yapabilirsiniz. Aramalar büyük/küçük harfe duyarlıdır. Arama sonuçları sol bölmede görüntülenir. Bir aramayı temizlemek için **arama** kutusunun yanındaki **Aramayı Temizle** ( **X** ) düğmesini seçin.
 
 **Nesne tarayıcısı** yaptığınız seçimleri izler ve araç çubuğundaki **İleri** ve **geri** düğmelerini kullanarak seçimleriniz arasında gezinebilirsiniz.
 
@@ -213,7 +214,7 @@ Bu pencere salt okunurdur, ancak içinde kesme noktaları veya yer işaretleri a
 |**Ilı**|Bir kesme noktası (veya izleme noktası) ekler.|
 |**Imlece kadar Çalıştır**|Programı hata ayıklama modunda imleç konumuna çalıştırır.|
 |**Kod Parçacığı**||
-|**Kes**, **Kopyala**, **Yapıştır**||
+|**Kes** , **Kopyala** , **Yapıştır**||
 |**Ek Açıklama**||
 |**Anahat Oluşturma**|Standart ana hat komutları.|
 |**İşlemini**||

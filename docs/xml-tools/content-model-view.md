@@ -1,5 +1,7 @@
 ---
 title: XML şema Tasarımcısı Içerik modeli görünümü
+description: XAML şeması tasarımcısında, yerel ve genel şema düğümlerinin ve bileşenlerinin grafik temsilini sağlayan Içerik modeli görünümü hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: e8db7c7d-31cf-479e-9dcc-299759891795
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 830dbdda0027551a25747235e6ad9dffbbc11b23
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a3aee0129516b6c7d377fcfff454f949e199eb5
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592919"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049205"
 ---
 # <a name="content-model-view"></a>İçerik Modeli Görünümü
 
@@ -35,7 +37,7 @@ Düğüm ekleme hakkında daha fazla bilgi için, [XML şema Tasarımcısı çal
 
 Bir düğümün içerik modeli, ağaç düğümleri olarak görünen öğeleri ve öznitelikleri olan bir Genişletilebilir grafik ağacı tarafından temsil edilir. Varsayılan olarak, yalnızca bir düzey genişletilir. Kompozisyon, tür adları, gruplar ve diğer kapsayıcılar gibi diğer bilgiler, içerdikleri öğeler ve öznitelikler üzerinde dikey bir çubuğa (genişletildiklerinde) yerleştirilir. Dikey bir çubuğa çift tıkladığınızda, yatay olur ve ağaç daraltılır. Yatay çubuğa çift tıkladığınızda, dikey olur ve ağaç genişletilir. Dikey çubuğun seçilmesi kapsayıcıdaki tüm düğümleri seçer. Bir öğe genişletilirse veya daraltılabilse, bir düğümün sağında genişleticiler görüntülenir.
 
-Tasarım yüzeyi boşsa, XML Düzenleyicisi, **XML şema Gezgini**ve filigran gösterilir. *Filigran* , tüm XSD tasarımcı görünümlerinin bağlantılarının listesidir. Şema kümesinde hatalar varsa, listenin sonunda aşağıdaki metin görüntülenir: "küme içindeki hataları görüntülemek ve onarmak için Hata Listesi kullanın."
+Tasarım yüzeyi boşsa, XML Düzenleyicisi, **XML şema Gezgini** ve filigran gösterilir. *Filigran* , tüm XSD tasarımcı görünümlerinin bağlantılarının listesidir. Şema kümesinde hatalar varsa, listenin sonunda aşağıdaki metin görüntülenir: "küme içindeki hataları görüntülemek ve onarmak için Hata Listesi kullanın."
 
 ## <a name="breadcrumb-bar"></a>İçerik haritası çubuğu
 
@@ -81,9 +83,9 @@ Içerik modeli görünümü etkinken aşağıdaki XSD Tasarımcı araç çubuğu
 
 |Seçenek|Açıklama|
 |-|-----------------|
-|**Başlangıç görünümünü göster**|[Başlangıç görünümüne](../xml-tools/start-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **1**.|
-|**Içerik modeli görünümünü göster**|[Içerik modeli görünümüne](../xml-tools/content-model-view.md)geçiş yapar. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **2**.|
-|**Graf görünümünü göster**|[Grafik görünümüne](../xml-tools/graph-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **3**.|
+|**Başlangıç görünümünü göster**|[Başlangıç görünümüne](../xml-tools/start-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **1** .|
+|**Içerik modeli görünümünü göster**|[Içerik modeli görünümüne](../xml-tools/content-model-view.md)geçiş yapar. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **2** .|
+|**Graf görünümünü göster**|[Grafik görünümüne](../xml-tools/graph-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **3** .|
 |**Çalışma alanını temizle**|Çalışma alanını ve tasarım yüzeyini temizler.|
 |**Çalışma alanından Kaldır**|Seçili düğümleri çalışma alanından ve tasarım yüzeyinden kaldırır.|
 |**Seçimi çalışma alanından Tümünü Kaldır**|Çalışma alanından ve tasarım yüzeyinden seçilmemiş düğümleri kaldırır.|

@@ -1,5 +1,7 @@
 ---
 title: Kaynak oluşturma ve uygulama
+description: Öğeleri için stilleri ve şablonları depolayabilmeniz ve yeniden kullanabilmeniz için XAML Tasarımcısı bir kaynağı oluşturma ve uygulama hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2301ce14fcd3d2d8a9c5d003a05186513d950cd4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ac8502b3d5058294efe102564453bb23a3eb3b98
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85330110"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049237"
 ---
 # <a name="how-to-create-and-apply-a-resource"></a>Kaynak oluşturma ve uygulama
 
@@ -28,7 +30,7 @@ Varolan bir özellikten, [stille](xref:Windows.UI.Xaml.Style)veya [ControlTempla
 
 1. XAML dosyası XAML Tasarımcısı açın, bir öğesi oluşturun veya belge anahattı penceresinde bir öğe seçin.
 
-2. **Özellikler** penceresinde, özellik değerinin sağında bir kutu simgesi olarak görünen Özellik işaretçisini seçin ve ardından **yeni kaynağa Dönüştür**' ü seçin. Beyaz kutu simgesi bir varsayılan değeri gösterir ve bir siyah kutu sembolü genellikle yerel bir kaynağın uygulandığını belirtir.
+2. **Özellikler** penceresinde, özellik değerinin sağında bir kutu simgesi olarak görünen Özellik işaretçisini seçin ve ardından **yeni kaynağa Dönüştür** ' ü seçin. Beyaz kutu simgesi bir varsayılan değeri gösterir ve bir siyah kutu sembolü genellikle yerel bir kaynağın uygulandığını belirtir.
 
      Bir kaynak oluşturmak için uygun bir iletişim kutusu görüntülenir. Fırçayla kaynak oluşturduğunuzda bu iletişim kutusu görüntülenir:
 
@@ -36,15 +38,15 @@ Varolan bir özellikten, [stille](xref:Windows.UI.Xaml.Style)veya [ControlTempla
 
 3. **Ad (anahtar)** kutusuna bir anahtar adı girin. Bu, diğer öğelerin kaynağa başvuruda bulunmasını istediğinizde kullanabileceğiniz addır.
 
-4. **Içinde tanımla**altında kaynağın tanımlanmasını istediğiniz yeri belirten seçeneği belirleyin:
+4. **Içinde tanımla** altında kaynağın tanımlanmasını istediğiniz yeri belirten seçeneği belirleyin:
 
-    - Kaynağı uygulamanızdaki herhangi bir belge için kullanılabilir hale getirmek için **uygulama**' yı seçin.
+    - Kaynağı uygulamanızdaki herhangi bir belge için kullanılabilir hale getirmek için **uygulama** ' yı seçin.
 
-    - Kaynağı yalnızca geçerli belge için kullanılabilir hale getirmek için **Bu belgeyi**seçin.
+    - Kaynağı yalnızca geçerli belge için kullanılabilir hale getirmek için **Bu belgeyi** seçin.
 
-    - Kaynağı yalnızca kaynağı veya onun alt öğelerini oluşturduğunuz öğe için kullanılabilir hale getirmek için, **Bu belgeyi**seçin ve açılan listeden **öğe**: **ad**' ı seçin.
+    - Kaynağı yalnızca kaynağı veya onun alt öğelerini oluşturduğunuz öğe için kullanılabilir hale getirmek için, **Bu belgeyi** seçin ve açılan listeden **öğe** : **ad** ' ı seçin.
 
-    - Kaynağı diğer projelerde yeniden kullanılabilen bir [kaynak sözlüğü](/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references) dosyasında tanımlamak için **kaynak sözlüğü**' ne tıklayın. Ardından, açılan listede **StandardStyles. xaml**gibi var olan bir kaynak sözlüğü dosyası seçin.
+    - Kaynağı diğer projelerde yeniden kullanılabilen bir [kaynak sözlüğü](/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references) dosyasında tanımlamak için **kaynak sözlüğü** ' ne tıklayın. Ardından, açılan listede **StandardStyles. xaml** gibi var olan bir kaynak sözlüğü dosyası seçin.
 
 5. Kaynağı oluşturmak için **Tamam** düğmesini seçin ve bunu oluşturduğunuz öğeye uygulayın.
 
@@ -52,13 +54,13 @@ Varolan bir özellikten, [stille](xref:Windows.UI.Xaml.Style)veya [ControlTempla
 
 1. Belge Anahattı penceresinde, kaynak uygulamak istediğiniz öğeyi seçin.
 
-2. Şunlardan birini yapın:
+2. Aşağıdakilerden birini yapın:
 
-   - Bir özelliğe kaynak uygulayın. **Özellikler** penceresinde, özellik değerinin yanındaki Özellik işaretçisini seçin, **yerel kaynak** veya **sistem kaynağı**' nı seçin ve açılan listeden kullanılabilir bir kaynak seçin.
+   - Bir özelliğe kaynak uygulayın. **Özellikler** penceresinde, özellik değerinin yanındaki Özellik işaretçisini seçin, **yerel kaynak** veya **sistem kaynağı** ' nı seçin ve açılan listeden kullanılabilir bir kaynak seçin.
 
       Görmeyi düşündüğünüz bir kaynağı görmüyorsanız, bunun nedeni kaynağın türünün özelliğin türüyle eşleşmemesi olabilir.
 
-   - Bir denetime stil veya denetim şablonu kaynağı uygulayın. Belge Anahattı penceresinde bir denetim için sağ tıklama menüsünü (bağlam menüsü) açın, **Şablonu Düzenle** veya **Ek Şablonları Düzenle**' yi seçin, **kaynağı Uygula**' yı seçin ve açılan listeden denetim şablonunun adını seçin.
+   - Bir denetime stil veya denetim şablonu kaynağı uygulayın. Belge Anahattı penceresinde bir denetim için sağ tıklama menüsünü (bağlam menüsü) açın, **Şablonu Düzenle** veya **Ek Şablonları Düzenle** ' yi seçin, **kaynağı Uygula** ' yı seçin ve açılan listeden denetim şablonunun adını seçin.
 
      > [!NOTE]
      > **Şablonu Düzenle** denetim şablonlarını uygular. **Ek Şablonları Düzenle** diğer şablon türlerini uygular.
