@@ -9,10 +9,10 @@ author: prnadago
 ms.manager: jillfra
 monikerRange: vs-2019
 ms.openlocfilehash: ad75fcff26365afdbc4fb4b02975d7c3211fa79b
-ms.sourcegitcommit: 4450abc99453ccaf8936449bbff437c5b9efa022
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2020
+ms.lasthandoff: 10/31/2020
 ms.locfileid: "92334213"
 ---
 # <a name="new-git-experience-in-visual-studio-preview"></a>Visual Studio’da yeni Git deneyimi (Önizleme)
@@ -30,7 +30,7 @@ Yeni git deneyimini değiştirmek için, **Araçlar**  >  **Seçenekler**  >  **
 
 Visual Studio 2019 ' de git kullanmanın üç yolu vardır:
 
-- [Var olan bir Git deposunu açın](#open-an-existing-local-repository). Kodunuz zaten makinenizde ise, **Dosya**  >  **Aç**  >  **Proje/çözüm** (veya **klasör**) kullanarak dosyayı açabilir ve Visual Studio başlatılmış bir git deposu olup olmadığını otomatik olarak algılar.
+- [Var olan bir Git deposunu açın](#open-an-existing-local-repository). Kodunuz zaten makinenizde ise, **Dosya**  >  **Aç**  >  **Proje/çözüm** (veya **klasör** ) kullanarak dosyayı açabilir ve Visual Studio başlatılmış bir git deposu olup olmadığını otomatik olarak algılar.
 - [Yeni bir git deposu oluşturun](#create-a-new-git-repository). Kodunuz git ile ilişkili değilse, yeni bir git deposu oluşturabilirsiniz.
 - [Var olan bir Git deposunu kopyalayın](#clone-an-existing-git-repository). Üzerinde çalışmak istediğiniz kod makinenizde yoksa, var olan uzak depoları kopyalayabilirsiniz.
 
@@ -79,23 +79,23 @@ Visual Studio, Çözüm Gezgini ' de yüklediğiniz görünüm dosyasını temel
 
 Git, çalışmanız sırasında deponuzdaki dosya değişikliklerini izler ve deponuzdaki dosyaları üç kategoriye ayırır. Bu değişiklikler, komut satırına komutu girerken göreceğiniz şekilde eşdeğerdir `git status` :
 
-- **Değiştirilmemiş dosyalar**: Bu dosyalar son işlemenizden bu yana değişmemiştir.
-- **Değiştirilen dosyalar**: Bu dosyalar son işlemenizden sonra değişir, ancak henüz bir sonraki yürütmede hazırlanmadınız.
-- **Hazırlanmış dosyalar**: Bu dosyalar bir sonraki işlemeye eklenecek değişiklikler olur.
+- **Değiştirilmemiş dosyalar** : Bu dosyalar son işlemenizden bu yana değişmemiştir.
+- **Değiştirilen dosyalar** : Bu dosyalar son işlemenizden sonra değişir, ancak henüz bir sonraki yürütmede hazırlanmadınız.
+- **Hazırlanmış dosyalar** : Bu dosyalar bir sonraki işlemeye eklenecek değişiklikler olur.
 
 İşinizi yaparken, Visual Studio **Git değişiklikleri** penceresinin **değişiklikler** bölümünde dosya değişikliklerini projenizde izler.
 
 :::image type="content" source="media/git-changes-window.png" alt-text="Visual Studio 'da Seçenekler iletişim kutusunun Önizleme özellikleri bölümünün ekran görüntüsü ":::
 
-Değişiklikleri aşamalandırmaya hazırsanız, hazırlamak istediğiniz her bir **+** dosyanın (artı) düğmesine tıklayın veya bir dosyaya sağ tıklayıp **aşama**' ü seçin. Ayrıca, **+** **değişiklikler** bölümünün en üstünde bulunan tümü (artı) düğmesini kullanarak, değiştirdiğiniz tüm dosyaları tek tıklamayla de taşıyabilirsiniz.
+Değişiklikleri aşamalandırmaya hazırsanız, hazırlamak istediğiniz her bir **+** dosyanın (artı) düğmesine tıklayın veya bir dosyaya sağ tıklayıp **aşama** ' ü seçin. Ayrıca, **+** **değişiklikler** bölümünün en üstünde bulunan tümü (artı) düğmesini kullanarak, değiştirdiğiniz tüm dosyaları tek tıklamayla de taşıyabilirsiniz.
 
-Bir değişiklik gerçekleştirdiğinizde, Visual Studio **hazırlanmış bir değişiklikler** bölümü oluşturur. Yalnızca **hazırlanan değişiklikler** bölümündeki değişiklikler, **hazırlanan Yürüt**' i seçerek yapabileceğiniz bir sonraki işlemeye eklenir. Değişiklikler ayrıca **–** (eksi) düğmesine tıklanarak de hazırlanarak çalıştırılabilir. Bu eylem için eşdeğer komut `git commit -m "Your commit message"` .
+Bir değişiklik gerçekleştirdiğinizde, Visual Studio **hazırlanmış bir değişiklikler** bölümü oluşturur. Yalnızca **hazırlanan değişiklikler** bölümündeki değişiklikler, **hazırlanan Yürüt** ' i seçerek yapabileceğiniz bir sonraki işlemeye eklenir. Değişiklikler ayrıca **–** (eksi) düğmesine tıklanarak de hazırlanarak çalıştırılabilir. Bu eylem için eşdeğer komut `git commit -m "Your commit message"` .
 
-Ayrıca, hazırlama alanını atlayarak, değiştirilen dosyaları aşamalandırmasını da tercih edebilirsiniz. Bu durumda, Visual Studio, yaptığınız değişiklikleri doğrudan yürütmelerine gerek kalmadan uygulamanıza olanak tanır. Yalnızca tamamlama iletinizi girin ve ardından **Tümünü Kaydet**' i seçin. Bu eylem için eşdeğer komut `git commit -a` .
+Ayrıca, hazırlama alanını atlayarak, değiştirilen dosyaları aşamalandırmasını da tercih edebilirsiniz. Bu durumda, Visual Studio, yaptığınız değişiklikleri doğrudan yürütmelerine gerek kalmadan uygulamanıza olanak tanır. Yalnızca tamamlama iletinizi girin ve ardından **Tümünü Kaydet** ' i seçin. Bu eylem için eşdeğer komut `git commit -a` .
 
 Visual Studio Ayrıca, **Tümünü Kaydet ve** **Tümünü Yürüt ve Tümünü Kaydet ve Tümünü Yürüt** kısayollarını kullanarak tek bir tıklama ile kaydetmeyi ve eşitlemeyi kolaylaştırır. **Değişiklikler** ve **hazırlanan değişiklikler** bölümlerindeki herhangi bir dosyayı çift tıklattığınızda, dosyanın değiştirilmemiş sürümüyle bir satır satır karşılaştırması görebilirsiniz.
 
-:::image type="content" source="media/git-file-version-compare.png" alt-text="Visual Studio 'da Seçenekler iletişim kutusunun Önizleme özellikleri bölümünün ekran görüntüsü " karakterini kullanarak Azure DevOps iş öğesini bir COMMIT ile ilişkilendirebilirsiniz. **Takım Gezgini**  >  **bağlantıları yönetmek**için Azure DevOps deponuzu bağlayabilirsiniz.
+:::image type="content" source="media/git-file-version-compare.png" alt-text="Visual Studio 'da Seçenekler iletişim kutusunun Önizleme özellikleri bölümünün ekran görüntüsü " karakterini kullanarak Azure DevOps iş öğesini bir COMMIT ile ilişkilendirebilirsiniz. **Takım Gezgini**  >  **bağlantıları yönetmek** için Azure DevOps deponuzu bağlayabilirsiniz.
 
 ### <a name="select-an-existing-branch"></a>Mevcut bir dalı seçin
 
@@ -139,7 +139,7 @@ Gösterge Ayrıca **Git deposu** penceresinde bu dalın tamamlama geçmişine gi
 
 #### <a name="commit-details"></a>Kayıt ayrıntıları
 
-Bir **yürütmeyi**çift tıklattığınızda, Visual Studio ayrıntılarını ayrı bir araç penceresinde açar. Buradan işlemeyi geri alabilir, işlemeyi sıfırlayabilir, tamamlama iletisini değiştirebilir veya yürütmede bir etiket oluşturabilirsiniz. İşlemede değiştirilen bir dosyaya tıkladığınızda, Visual Studio, yürütmenin ve onun üst öğesinin yan yana **fark** görünümünü açar.
+Bir **yürütmeyi** çift tıklattığınızda, Visual Studio ayrıntılarını ayrı bir araç penceresinde açar. Buradan işlemeyi geri alabilir, işlemeyi sıfırlayabilir, tamamlama iletisini değiştirebilir veya yürütmede bir etiket oluşturabilirsiniz. İşlemede değiştirilen bir dosyaya tıkladığınızda, Visual Studio, yürütmenin ve onun üst öğesinin yan yana **fark** görünümünü açar.
 
 :::image type="content" source="media/git-branch-commit-details.png" alt-text="Visual Studio 'da Seçenekler iletişim kutusunun Önizleme özellikleri bölümünün ekran görüntüsü ":::
 
@@ -151,7 +151,7 @@ Visual Studio, birleştirme çakışmasını belirlemeyi ve çözümlemeyi kolay
 
 :::image type="content" source="media/git-merge-conflict-gold-bar.png" alt-text="Visual Studio 'da Seçenekler iletişim kutusunun Önizleme özellikleri bölümünün ekran görüntüsü ":::
 
-**Git değişiklikleri** penceresi ayrıca, bu dosyanın altındaki ayrı bölümünde birleştirilmemiş dosyalar içeren bir '*birleştirme, çakışmalar ile devam ediyor*' iletisiyle birlikte görüntülenir.
+**Git değişiklikleri** penceresi ayrıca, bu dosyanın altındaki ayrı bölümünde birleştirilmemiş dosyalar içeren bir ' *birleştirme, çakışmalar ile devam ediyor* ' iletisiyle birlikte görüntülenir.
 
 :::image type="content" source="media/git-merge-progress-conflicts-message.png" alt-text="Visual Studio 'da Seçenekler iletişim kutusunun Önizleme özellikleri bölümünün ekran görüntüsü ":::
 
@@ -163,7 +163,7 @@ Ancak, bu pencerelerin hiçbiri açık değilse ve bunun yerine birleştirme ça
     >>>>>>> main
 ```
 
-Bunun yerine, Visual Studio sayfanın üst kısmında, açılan dosyanın çakışmalar olduğunu gösteren bir altın bilgi çubuğu görüntüler. Ardından, **birleştirme düzenleyicisini**açmak için bağlantıya tıklayabilirsiniz.
+Bunun yerine, Visual Studio sayfanın üst kısmında, açılan dosyanın çakışmalar olduğunu gösteren bir altın bilgi çubuğu görüntüler. Ardından, **birleştirme düzenleyicisini** açmak için bağlantıya tıklayabilirsiniz.
 
 :::image type="content" source="media/git-merge-conflict-gold-info-bar.png" alt-text="Visual Studio 'da Seçenekler iletişim kutusunun Önizleme özellikleri bölümünün ekran görüntüsü ":::
 
