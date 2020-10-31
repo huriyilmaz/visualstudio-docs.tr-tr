@@ -1,5 +1,6 @@
 ---
-title: Uluslararası Ayarlar, Ortam, Seçenekler İletişim Kutusu
+title: Seçenekler iletişim kutusundaki uluslararası ayarlar
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1526e1c49636f4883392caa63966714625d066d6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1210f217c9e1dc1f8a90eb99fec9e55970aa8eff
+ms.sourcegitcommit: f1bb1b66ed141837e992b3352ce68ff24c11f53e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595520"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93102499"
 ---
 # <a name="options-dialog-box-environment--international-settings"></a>Seçenekler iletişim kutusu: ortam \> Uluslararası ayarları
 
@@ -30,7 +31,7 @@ Uluslararası Ayarlar sayfası, makinenizde tümleşik geliştirme ortamının (
 
 **Dil**
 
-Yüklü ürün dili sürümleri için kullanılabilir dilleri listeler. Birden çok ürün dili veya ürünlerin karışık dil yüklemesi ortamı paylaşıyorsa, dil seçimi **Microsoft Windows Ile aynı**olarak değiştirilir.
+Yüklü ürün dili sürümleri için kullanılabilir dilleri listeler. Birden çok ürün dili veya ürünlerin karışık dil yüklemesi ortamı paylaşıyorsa, dil seçimi **Microsoft Windows Ile aynı** olarak değiştirilir.
 
 > [!CAUTION]
 > Birden çok dilin yüklü olduğu bir sistemde, Visual C++ derleme araçları (cl.exe, link.exe, nmake.exe, bscmake.exe ve ilgili dosyalar) bu ayardan etkilenmez. Bu araçlar, yüklenen son dilin sürümünü kullanır. Visual C++ yapı araçları uydu DLL modelini kullandığından, daha önce yüklenen dile yönelik derleme araçlarının üzerine yazılır.

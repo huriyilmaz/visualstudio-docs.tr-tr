@@ -1,7 +1,7 @@
 ---
 title: ASP.NET uygulamaları için hata ayıklamayı etkinleştirme | Microsoft Docs
 ms.custom: ''
-ms.date: 09/21/2018
+ms.date: 10/29/2020
 ms.topic: how-to
 dev_langs:
 - CSharp
@@ -18,79 +18,83 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: f23f5bb2588c179f47593b1ecbcf5d6cd7fa9f0d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3755489332bcc174e70e193a836db05e672907e1
+ms.sourcegitcommit: f1bb1b66ed141837e992b3352ce68ff24c11f53e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349763"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93102577"
 ---
 # <a name="debug-aspnet-or-aspnet-core-apps-in-visual-studio"></a>Visual Studio'da ASP.NET veya ASP.NET Core uygulamalarının hatalarını ayıklama
 
 Visual Studio 'da ASP.NET ve ASP.NET Core uygulamalarında hata ayıklaması yapabilirsiniz. İşlem, ASP.NET ve ASP.NET Core arasında ve IIS Express ya da yerel bir IIS sunucusunda çalıştırıp çalıştırıetmeksizin farklılık gösterir.
 
 >[!NOTE]
->Aşağıdaki adımlar ve ayarlar yalnızca yerel bir sunucudaki uygulamalarda hata ayıklama için geçerlidir. Uzak IIS sunucusundaki uygulamalarda hata ayıklama Işlemi, **işlemek Için İliştir**kullanır ve bu ayarları yoksayar. IIS üzerinde uzaktan hata ayıklama ASP.NET uygulamaları hakkında daha fazla bilgi ve yönergeler için, uzak bir IIS bilgisayarında [BIR IIS bilgisayarında uzaktan hata ayıklama ASP.net](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) veya [uzaktan hata ayıklama ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)bakın.
+>Aşağıdaki adımlar ve ayarlar yalnızca yerel bir sunucudaki uygulamalarda hata ayıklama için geçerlidir. Uzak IIS sunucusundaki uygulamalarda hata ayıklama Işlemi, **işlemek Için İliştir** kullanır ve bu ayarları yoksayar. IIS üzerinde uzaktan hata ayıklama ASP.NET uygulamaları hakkında daha fazla bilgi ve yönergeler için, uzak bir IIS bilgisayarında [BIR IIS bilgisayarında uzaktan hata ayıklama ASP.net](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) veya [uzaktan hata ayıklama ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)bakın.
 
 Yerleşik IIS Express sunucusu, Visual Studio 'Ya dahildir. IIS Express, ASP.NET ve ASP.NET Core projelerine yönelik varsayılan hata ayıklama sunucusudur ve önceden yapılandırılmıştır. Hata ayıklamanın en kolay yolu, ilk hata ayıklama ve test için idealdir.
 
 Ayrıca, uygulamayı çalıştıracak şekilde yapılandırılmış yerel bir IIS sunucusunda (sürüm 8,0 veya üzeri) bir ASP.NET veya ASP.NET Core uygulamasında hata ayıklaması yapabilirsiniz. Yerel IIS 'de hata ayıklamak için aşağıdaki gereksinimleri karşılamanız gerekir:
 
 <a name="iis"></a>
-- Visual Studio 'Yu yüklerken **geliştirme zamanı IIS desteği** ' ni seçin. (Gerekirse, Visual Studio Yükleyicisi yeniden çalıştırın, **Değiştir**' i seçin ve bu bileşeni ekleyin.)
-- Visual Studio 'Yu yönetici olarak çalıştırıyor olun.
-- ASP.NET ve/veya ASP.NET Core uygun sürümleri ile IIS 'yi yükleyip doğru şekilde yapılandırın. Daha fazla bilgi ve yönergeler için bkz. IIS [Ile Windows üzerinde](/aspnet/core/host-and-deploy/iis/index) [ASP.NET 3,5 ve ASP.NET 4,5 veya Host ASP.NET Core kullanarak IIS 8,0](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) .
+- Yüklü değilse, **ASP.net ve Web geliştirme iş yükünü** yükleme. (Visual Studio Yükleyicisi yeniden çalıştırın, **Değiştir** ' i seçin ve bu iş yükünü ekleyin.)
+
+   ::: moniker range="vs-2017"
+   Visual Studio 2017 ' de, **geliştirme zamanı IIS destek** bileşeni ' ne bakın. İş yükünü eklediğinizde seçildiğinden emin olun.
+   ::: moniker-end
+- Visual Studio'yu yönetici olarak çalıştırın.
+- ASP.NET ve/veya ASP.NET Core uygun sürümleri ile IIS 'yi yükleyip doğru şekilde yapılandırın. ASP.NET Core ile IIS kullanma hakkında daha fazla bilgi için bkz. [IIS Ile Windows üzerinde konak ASP.NET Core](/aspnet/core/host-and-deploy/iis/index). ASP.NET için bkz. [IIS ve ASP.net modüllerini Install](/iis/application-frameworks/scenario-build-an-aspnet-website-on-iis/configuring-step-1-install-iis-and-asp-net-modules).
 - Uygulamanın IIS 'de hata olmadan çalıştığından emin olun.
 
 ## <a name="debug-aspnet-apps"></a>ASP.NET uygulamalarında hata ayıklama
 
 IIS Express varsayılandır ve önceden yapılandırılmıştır. Yerel IIS 'de hata ayıklaması yapıyorsanız, [yerel IIS hata ayıklama gereksinimlerini](#iis)karşıladığınızdan emin olun.
 
-1. Visual Studio 'da ASP.NET projesini seçin **Çözüm Gezgini** ve **Özellikler** simgesine tıklayın, **alt** + **ENTER**tuşuna basın veya sağ tıklayıp **Özellikler**' i seçin.
+1. Visual Studio 'da ASP.NET projesini seçin **Çözüm Gezgini** ve **Özellikler** simgesine tıklayın, **alt** + **ENTER** tuşuna basın veya sağ tıklayıp **Özellikler** ' i seçin.
 
 1. **Web** sekmesini seçin.
 
-1. **Özellikler** bölmesinde, **sunucular**altında,
+1. **Özellikler** bölmesinde, **sunucular** altında,
    - IIS Express için, açılan listeden **IIS Express** seçin.
    - Yerel IIS için
      1. Açılan listeden **yerel IIS** ' yi seçin.
-     1. Uygulamayı henüz IIS 'de ayarlamadıysanız, **proje URL 'si** alanının yanında, **sanal dizin oluştur**' u seçin.
+     1. Uygulamayı henüz IIS 'de ayarlamadıysanız, **proje URL 'si** alanının yanında, **sanal dizin oluştur** ' u seçin.
 
-1. **Hata ayıklayıcılar**altında **ASP.net**' yi seçin.
+1. **Hata ayıklayıcılar** altında **ASP.net** ' yi seçin.
 
    ![ASP.NET hata ayıklayıcısı ayarları](media/dbg-aspnet-enable-debugging2.png "ASP.NET hata ayıklayıcısı ayarları")
 
-1. **File**  >  Değişiklikleri kaydetmek için**Seçili öğeleri kaydet** veya **CTRL** + **S** dosyalarını kullanın.
+1. **File**  >  Değişiklikleri kaydetmek için **Seçili öğeleri kaydet** veya **CTRL** + **S** dosyalarını kullanın.
 
-1. Uygulamada hata ayıklamak için, projenizde, bazı koddaki kesme noktaları ayarlayın. Visual Studio araç çubuğunda, yapılandırmanın **hata ayıklama**olarak ayarlandığından ve istediğiniz tarayıcının öykünücü alanında **IIS Express ( \<Browser name> )** veya **yerel IIS ( \<Browser name> )** içinde göründüğünden emin olun.
+1. Uygulamada hata ayıklamak için, projenizde, bazı koddaki kesme noktaları ayarlayın. Visual Studio araç çubuğunda, yapılandırmanın **hata ayıklama** olarak ayarlandığından ve istediğiniz tarayıcının öykünücü alanında **IIS Express ( \<Browser name> )** veya **yerel IIS ( \<Browser name> )** içinde göründüğünden emin olun.
 
-1. Hata ayıklamayı başlatmak için, araç çubuğunda **IIS Express ( \<Browser name> )** veya **yerel IIS ( \<Browser name> )** seçeneğini belirleyin, **Hata Ayıkla** menüsünden **hata ayıklamayı Başlat** ' ı seçin veya **F5**tuşuna basın. Hata ayıklayıcı kesme noktalarında duraklatılır. Hata ayıklayıcı kesme noktalarına ulaşamıyorum, bkz. [hata ayıklama sorun giderme](#troubleshoot-debugging).
+1. Hata ayıklamayı başlatmak için, araç çubuğunda **IIS Express ( \<Browser name> )** veya **yerel IIS ( \<Browser name> )** seçeneğini belirleyin, **Hata Ayıkla** menüsünden **hata ayıklamayı Başlat** ' ı seçin veya **F5** tuşuna basın. Hata ayıklayıcı kesme noktalarında duraklatılır. Hata ayıklayıcı kesme noktalarına ulaşamıyorum, bkz. [hata ayıklama sorun giderme](#troubleshoot-debugging).
 
 ## <a name="debug-aspnet-core-apps"></a>ASP.NET Core uygulamalarda hata ayıkla
 
 IIS Express varsayılandır ve önceden yapılandırılmıştır. Yerel IIS 'de hata ayıklaması yapıyorsanız, [yerel IIS hata ayıklama gereksinimlerini](#iis)karşıladığınızdan emin olun.
 
-1. Visual Studio **Çözüm Gezgini** ASP.NET Core projesi seçin ve **Özellikler** simgesine tıklayın, **alt** + **ENTER**tuşuna basın veya sağ tıklayıp **Özellikler**' i seçin.
+1. Visual Studio **Çözüm Gezgini** ASP.NET Core projesi seçin ve **Özellikler** simgesine tıklayın, **alt** + **ENTER** tuşuna basın veya sağ tıklayıp **Özellikler** ' i seçin.
 
 1. **Hata Ayıkla** sekmesini seçin.
 
-1. **Özellikler** bölmesinde, **profil**' ın yanında,
+1. **Özellikler** bölmesinde, **profil** ' ın yanında,
    - IIS Express için, açılan listeden **IIS Express** seçin.
-   - Yerel IIS için, açılan listeden uygulama adını seçin veya **Yeni**' yi seçin, yeni bir profil adı oluşturun ve **Tamam**' ı seçin.
+   - Yerel IIS için, açılan listeden uygulama adını seçin veya **Yeni** ' yi seçin, yeni bir profil adı oluşturun ve **Tamam** ' ı seçin.
 
-1. **Başlat**' ın yanındaki açılan listeden **IIS Express** veya **IIS** ' yi seçin.
+1. **Başlat** ' ın yanındaki açılan listeden **IIS Express** veya **IIS** ' yi seçin.
 
 1. **Başlatma tarayıcısının** seçili olduğundan emin olun.
 
-1. **Ortam değişkenleri**altında **ASPNETCORE_ENVIRONMENT** bir **geliştirme**değeriyle bulunduğundan emin olun. Aksi takdirde **Ekle** ' yi seçin ve ekleyin.
+1. **Ortam değişkenleri** altında **ASPNETCORE_ENVIRONMENT** bir **geliştirme** değeriyle bulunduğundan emin olun. Aksi takdirde **Ekle** ' yi seçin ve ekleyin.
 
    ![ASP.NET Core hata ayıklayıcı ayarları](../debugger/media/dbg-aspnet-enable-debugging3.png "ASP.NET Core hata ayıklayıcı ayarları")
 
-1. **File**  >  Değişiklikleri kaydetmek için**Seçili öğeleri kaydet** veya **CTRL** + **S** dosyalarını kullanın.
+1. **File**  >  Değişiklikleri kaydetmek için **Seçili öğeleri kaydet** veya **CTRL** + **S** dosyalarını kullanın.
 
-1. Uygulamada hata ayıklamak için, projenizde, bazı koddaki kesme noktaları ayarlayın. Visual Studio araç çubuğunda, yapılandırmanın **hata ayıklama**olarak ayarlandığından ve **IIS Express**ya da yeni IIS profili adının öykünücü alanında göründüğünden emin olun.
+1. Uygulamada hata ayıklamak için, projenizde, bazı koddaki kesme noktaları ayarlayın. Visual Studio araç çubuğunda, yapılandırmanın **hata ayıklama** olarak ayarlandığından ve **IIS Express** ya da yeni IIS profili adının öykünücü alanında göründüğünden emin olun.
 
-1. Hata ayıklamayı başlatmak için **IIS Express** ' yi seçin veya **\<IIS profile name>** araç çubuğunda Hata **Ayıkla** menüsünden **hata ayıklamayı Başlat** ' ı seçin veya **F5**tuşuna basın. Hata ayıklayıcı kesme noktalarında duraklatılır. Hata ayıklayıcı kesme noktalarına ulaşamıyorum, bkz. [hata ayıklama sorun giderme](#troubleshoot-debugging).
+1. Hata ayıklamayı başlatmak için **IIS Express** ' yi seçin veya **\<IIS profile name>** araç çubuğunda Hata **Ayıkla** menüsünden **hata ayıklamayı Başlat** ' ı seçin veya **F5** tuşuna basın. Hata ayıklayıcı kesme noktalarında duraklatılır. Hata ayıklayıcı kesme noktalarına ulaşamıyorum, bkz. [hata ayıklama sorun giderme](#troubleshoot-debugging).
 
 ## <a name="troubleshoot-debugging"></a>Hata ayıklama sorunlarını giderme
 
@@ -98,9 +102,9 @@ Yerel IIS hata ayıklaması kesme noktasına ilerleyememesi durumunda sorun gide
 
 1. Web uygulamasını IIS 'den başlatın ve düzgün çalıştığından emin olun. Web uygulamasını çalışır durumda bırakın.
 
-2. Visual Studio 'da, **işleme eklemek > hata ayıkla** ' yı seçin veya **CTRL** + **alt** + **P**tuşlarına basın ve ASP.NET veya ASP.NET Core işlemine bağlanın (genellikle **w3wp.exe** veya **dotnet.exe**). Daha fazla bilgi için bkz. [Işleme iliştirme](attach-to-running-processes-with-the-visual-studio-debugger.md) ve [ASP.NET işleminin adını bulma](how-to-find-the-name-of-the-aspnet-process.md).
+2. Visual Studio 'da, **işleme eklemek > hata ayıkla** ' yı seçin veya **CTRL** + **alt** + **P** tuşlarına basın ve ASP.NET veya ASP.NET Core işlemine bağlanın (genellikle **w3wp.exe** veya **dotnet.exe** ). Daha fazla bilgi için bkz. [Işleme iliştirme](attach-to-running-processes-with-the-visual-studio-debugger.md) ve [ASP.NET işleminin adını bulma](how-to-find-the-name-of-the-aspnet-process.md).
 
-**Hata ayıklama**başlatma hata ayıklaması veya F5 kullanarak, **İşleme İliştir**' i kullanarak bağlanıp kesme noktasına ulaşırsanız  >  **Start Debugging** , proje özelliklerinde **F5**bir ayar büyük olasılıkla yanlış olur. Bir HOSTS dosyası kullanıyorsanız, bunun da doğru yapılandırıldığından emin olun.
+**Hata ayıklama** başlatma hata ayıklaması veya F5 kullanarak, **İşleme İliştir** ' i kullanarak bağlanıp kesme noktasına ulaşırsanız  >  **Start Debugging** , proje özelliklerinde **F5** bir ayar büyük olasılıkla yanlış olur. Bir HOSTS dosyası kullanıyorsanız, bunun da doğru yapılandırıldığından emin olun.
 
 ## <a name="configure-debugging-in-the-webconfig-file"></a>web.config dosyasında hata ayıklamayı yapılandırma
 
@@ -151,31 +155,31 @@ Uygulamaları IIS 'de yayımlamanın farklı yolları vardır. Bu adımlarda, do
 > [!IMPORTANT]
 > Kodunuzu değiştirirseniz veya yeniden oluşturursanız, yeniden yayımlamak için bu adımları yinelemeniz gerekir.
 
-1. Visual Studio 'da projeye sağ tıklayın ve **Yayımla**' yı seçin.
+1. Visual Studio 'da projeye sağ tıklayın ve **Yayımla** ' yı seçin.
 
-3. **IIS, FTP, vb.** seçeneklerini belirleyip **Yayımla**' ya tıklayın.
+3. **IIS, FTP, vb.** seçeneklerini belirleyip **Yayımla** ' ya tıklayın.
 
     ![IIS 'de Yayımla](media/dbg-aspnet-local-iis.png "IIS 'de Yayımla")
 
-4. **Customprofile** iletişim kutusunda, **Yayımla yöntemi**için **dosya sistemi**' ni seçin.
+4. **Customprofile** iletişim kutusunda, **Yayımla yöntemi** için **dosya sistemi** ' ni seçin.
 
-5. **Hedef konum**için, (**...**) **düğmesini** seçin.
+5. **Hedef konum** için, ( **...** ) **düğmesini** seçin.
 
-   - ASP.NET için **yerel IIS**' yi seçin, uygulama için oluşturduğunuz Web sitesini seçin ve sonra **Aç**' ı seçin.
+   - ASP.NET için **yerel IIS** ' yi seçin, uygulama için oluşturduğunuz Web sitesini seçin ve sonra **Aç** ' ı seçin.
 
      ![ASP.NET 'de IIS 'ye yayımlama](media/dbg-aspnet-local-iis1.png "ASP.NET 'i IIS 'ye yayımlama")
 
-   - ASP.NET Core için **dosya sistemi**' ni seçin, uygulama için ayarladığınız klasörü seçin ve **Aç**' ı seçin.
+   - ASP.NET Core için **dosya sistemi** ' ni seçin, uygulama için ayarladığınız klasörü seçin ve **Aç** ' ı seçin.
 
-1. **İleri**’yi seçin.
+1. **İleri** ’yi seçin.
 
-1. **Yapılandırma**altında, açılan listeden **Hata Ayıkla** ' yı seçin.
+1. **Yapılandırma** altında, açılan listeden **Hata Ayıkla** ' yı seçin.
 
-1. **Kaydet**’i seçin.
+1. **Kaydet** ’i seçin.
 
-1. **Yayımla** Iletişim kutusunda **customprofile** (veya yeni oluşturduğunuz profilin adı) göründüğünden emin olun ve **Lastusedbuildconfiguration** **hata ayıklama**olarak ayarlanmıştır.
+1. **Yayımla** Iletişim kutusunda **customprofile** (veya yeni oluşturduğunuz profilin adı) göründüğünden emin olun ve **Lastusedbuildconfiguration** **hata ayıklama** olarak ayarlanmıştır.
 
-1. **Yayımla**’yı seçin.
+1. **Yayımla** ’yı seçin.
 
     ![IIS 'de Yayımla](media/dbg-aspnet-local-iis-select-site.png "IIS 'de Yayımla")
 
