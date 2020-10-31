@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl Yapılır: Temel Renk Gölgelendiricisi Oluşturma'
+description: Gölgelendirici tasarımcısını ve yönlendirilen grafik gölgelendirici dilini kullanarak, son rengi sabit bir RGB renk değerine ayarlayan düz renk gölgelendirici oluşturma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: c301328a-079a-49e8-b688-4749c01657c0
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fe0fc31f3be758e16042de6133399b2df6b65c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d966a8fdc565eae5254d21dba4ab9dfaa440de94
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769158"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134112"
 ---
 # <a name="how-to-create-a-basic-color-shader"></a>Nasıl yapılır: temel renk gölgelendiricisi oluşturma
 
@@ -27,9 +29,9 @@ Başlamadan önce, **Özellikler** penceresinin ve **araç kutusunun** görünt�
 
 1. Birlikte çalışmak için bir DGSL gölgelendiricisi oluşturun. Projenize bir DGSL gölgelendiricisi ekleme hakkında daha fazla bilgi için bkz. [gölgelendirici tasarımcısında](../designers/shader-designer.md)Başlarken bölümü.
 
-2. **Nokta rengi** düğümünü silin. **Nokta rengi** düğümünü seçmek için **Seç** aracını kullanın ve ardından menü çubuğunda Sil **Düzenle**' yi seçin  >  **Delete**.
+2. **Nokta rengi** düğümünü silin. **Nokta rengi** düğümünü seçmek için **Seç** aracını kullanın ve ardından menü çubuğunda Sil **Düzenle** ' yi seçin  >  **Delete** .
 
-3. Grafiğe **renkli sabit** bir düğüm ekleyin. **Araç kutusunda** **sabitler**altında **renk sabiti** ' ni seçin ve tasarım yüzeyine taşıyın.
+3. Grafiğe **renkli sabit** bir düğüm ekleyin. **Araç kutusunda** **sabitler** altında **renk sabiti** ' ni seçin ve tasarım yüzeyine taşıyın.
 
 4. **Renk sabiti** düğümü için bir renk değeri belirtin. **Renk sabiti** düğümünü seçmek için **seçim** aracını kullanın ve ardından **Özellikler** penceresinde, **Çıkış** özelliği ' nde bir renk değeri belirtin. Turuncu için bir değer (1,0, 0,5, 0,2, 1,0) belirtin.
 

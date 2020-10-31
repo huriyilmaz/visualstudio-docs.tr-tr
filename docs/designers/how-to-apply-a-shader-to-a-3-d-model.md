@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: 3B modele gölgelendirici uygulama'
+description: Model Düzenleyicisi 'ni kullanarak, ilginç bir görünüm sağlamak için bir 3B modele yönlendirilmiş bir grafik gölgelendirici dili gölgelendiricisi nasıl uygulayacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: a3877bd6-abd8-4a9d-842c-6848b6c2f335
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f1ae981704287a74bb4e37117190b8b6111d0a9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7b31e9002a97decf699ffbd589a1e0e656e3e403
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769242"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134125"
 ---
 # <a name="how-to-apply-a-shader-to-a-3d-model"></a>Nasıl yapılır. 3B modele gölgelendirici uygulama
 
@@ -33,7 +35,7 @@ Temel renk efektinin uygulandığı bir model aşağıda verilmiştir:
 
 ![3&#45;D sahneyi temel renk efektini gösterir](../designers/media/digit-3d-model-effect.png)
 
-Bir modele gölgelendirici uyguladıktan sonra modeli seçerek gölgelendirici tasarımcısında açabilir ve ardından **Özellikler** penceresinde, **efekt** Özellik grubunun **(Gelişmiş)** özelliğindeki üç nokta (**...**) düğmesini seçebilirsiniz.
+Bir modele gölgelendirici uyguladıktan sonra modeli seçerek gölgelendirici tasarımcısında açabilir ve ardından **Özellikler** penceresinde, **efekt** Özellik grubunun **(Gelişmiş)** özelliğindeki üç nokta ( **...** ) düğmesini seçebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

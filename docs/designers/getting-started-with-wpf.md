@@ -1,5 +1,7 @@
 ---
 title: WPF nedir?
+description: Geniş kapsamlı bir geliştirme özelliklerini destekleyen masaüstü istemci uygulamaları oluşturmaya yönelik bir çerçeve olan Windows Presentation Foundation kullanmaya başlayın.
+ms.custom: SEO-VS-2020
 ms.date: 04/16/2018
 ms.topic: overview
 ms.assetid: f3be98cb-870f-472c-9da5-cb815e4f6598
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 350b43741ec7e5646eefce225ecd157b6781ada1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d8584ec76ce0779421f1151e53f562f66b8789c
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85328428"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134543"
 ---
 # <a name="get-started-with-wpf"></a>WPF kullanmaya başlama
 

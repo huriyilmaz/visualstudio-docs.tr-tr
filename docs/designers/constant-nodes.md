@@ -1,5 +1,7 @@
 ---
 title: Sabit Düğümler
+description: Gölgelendirici tasarımcısında sabit düğümler hakkında bilgi edinmek için, piksel gölgelendirici hesaplamalarında değişmez değerleri ve enterpolasyonlu köşe özniteliklerini temsil edin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 2c798a50-a2d7-459b-9879-ad4ad8290c9b
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6868a5dc7cbace1d061c43cd507d32c271436a26
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eb7297a5486764127efda72ea37c5c97acc05245
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769307"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134223"
 ---
 # <a name="constant-nodes"></a>Sabit düğümler
 
@@ -21,7 +23,7 @@ Gölgelendirici tasarımcısında, sabit düğümler sabit değerleri ve piksel 
 
 ## <a name="vertex-attribute-interpolation"></a>Köşe özniteliği ilişkilendirme
 
-Bir oyun veya uygulamadaki 3B sahnenin görüntüsü, köşeler, köşe öznitelikleri ve temel tanımlar tarafından tanımlanan bir dizi nesneyi, ekran piksellerine göre ve matematiksel olarak dönüştürerek yapılır. Bir piksel benzersiz görünümü sağlamak için gereken tüm bilgiler, temel öznitelikleri aracılığıyla sağlanır ve bu da, *temel*bir şekilde bir piksel oluşturan farklı köşelere göre karışrdı. Temel bir temel işleme öğesidir; diğer bir deyişle, nokta, çizgi veya üçgen gibi basit bir şekil. Köşelerin yalnızca birine yakın bir piksel, bu köşenin neredeyse aynısı olan sabitleri alır, ancak bir ilkel öğenin tüm köşeleri arasında eşit aralıklı bir piksel, bu köşelerin ortalaması olan sabitleri alır. Grafik programlamada, piksellerin aldığı sabitler, *enterpolasyonda*denir. Bu şekilde piksellere sabit veri sağlanması çok iyi bir görsel kalite oluşturur ve aynı zamanda, bellek ayak ve bant genişliği gereksinimlerini azaltır.
+Bir oyun veya uygulamadaki 3B sahnenin görüntüsü, köşeler, köşe öznitelikleri ve temel tanımlar tarafından tanımlanan bir dizi nesneyi, ekran piksellerine göre ve matematiksel olarak dönüştürerek yapılır. Bir piksel benzersiz görünümü sağlamak için gereken tüm bilgiler, temel öznitelikleri aracılığıyla sağlanır ve bu da, *temel* bir şekilde bir piksel oluşturan farklı köşelere göre karışrdı. Temel bir temel işleme öğesidir; diğer bir deyişle, nokta, çizgi veya üçgen gibi basit bir şekil. Köşelerin yalnızca birine yakın bir piksel, bu köşenin neredeyse aynısı olan sabitleri alır, ancak bir ilkel öğenin tüm köşeleri arasında eşit aralıklı bir piksel, bu köşelerin ortalaması olan sabitleri alır. Grafik programlamada, piksellerin aldığı sabitler, *enterpolasyonda* denir. Bu şekilde piksellere sabit veri sağlanması çok iyi bir görsel kalite oluşturur ve aynı zamanda, bellek ayak ve bant genişliği gereksinimlerini azaltır.
 
 Her piksel gölgelendirici örneği yalnızca bir sabit değer kümesi alırsa ve bu değerleri değiştiremese de, farklı piksel gölgelendirici örnekleri farklı sabit veri kümelerini alır. Bu tasarım, gölgelendirici programının ilkel içindeki her bir piksel için farklı bir renk çıkışı üretmesine olanak sağlar.
 

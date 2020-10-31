@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl Yapılır: Geometri Tabanlı Gradyan Gölgelendirici Oluşturma'
+description: Gölgelendirici tasarımcısını ve yönlendirilebilir grafik gölgelendirici dilini kullanarak sabit bir RGB renk değerini ölçeklendirilen geometri tabanlı bir gradyan gölgelendiricisi oluşturma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 4b204405-ba95-4c5e-bd51-ec033a3ebfb6
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e10fd5266ba39febe6261f41437c10c19b5c82f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 01d712365cc296c54f0e5d1a58660df1051e2f20
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769110"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134478"
 ---
 # <a name="how-to-create-a-geometry-based-gradient-shader"></a>Nasıl yapılır: Geometri tabanlı gradyan gölgelendirici oluşturma
 
@@ -27,15 +29,15 @@ Başlamadan önce, **Özellikler** penceresinin ve **araç kutusunun** görünt�
 
 1. Çalışmak için bir DGSL gölgelendiricisi oluşturun. Projenize bir DGSL gölgelendiricisi ekleme hakkında daha fazla bilgi için bkz. [gölgelendirici tasarımcısında](../designers/shader-designer.md)Başlarken bölümü.
 
-2. **Son renk** düğümündeki **nokta rengi** düğümünün bağlantısını kesin. **Nokta rengi** düğümünün **RGB** terminalini seçin ve ardından **Bağlantıları Kes**' i seçin. Bu, bir sonraki adımda eklenen düğüm için yer açar.
+2. **Son renk** düğümündeki **nokta rengi** düğümünün bağlantısını kesin. **Nokta rengi** düğümünün **RGB** terminalini seçin ve ardından **Bağlantıları Kes** ' i seçin. Bu, bir sonraki adımda eklenen düğüm için yer açar.
 
-3. Grafiğe **çarpma** düğümü ekleyin. **Araç kutusunda**, **matematik**altında **çarp** ' ı seçin ve tasarım yüzeyine taşıyın.
+3. Grafiğe **çarpma** düğümü ekleyin. **Araç kutusunda** , **matematik** altında **çarp** ' ı seçin ve tasarım yüzeyine taşıyın.
 
-4. Grafiğe bir **maske vektör** düğümü ekleyin. **Araç kutusu**' nda, **yardımcı program**altında **maske vektörü** ' nı seçin ve tasarım yüzeyine taşıyın.
+4. Grafiğe bir **maske vektör** düğümü ekleyin. **Araç kutusu** ' nda, **yardımcı program** altında **maske vektörü** ' nı seçin ve tasarım yüzeyine taşıyın.
 
-5. **Maske vektör** düğümü için maske değerlerini belirtin. **Seç** modunda, **maske vektörü** düğümünü seçin ve ardından **Özellikler** penceresinde **yeşil/Y** özelliğini **doğru**olarak ayarlayın ve ardından **kırmızı/X**, **mavi/Z** ve **Alfa/W** özelliklerini **yanlış**olarak ayarlayın. Bu örnekte, **kırmızı/X**, **yeşil/Y**ve **mavi/Z** özellikleri **Dünya konumu** düğümünün X, Y ve Z bileşenlerine karşılık gelir ve **Alfa/W** kullanılmıyor. Yalnızca **yeşil/Y** **doğru**olarak ayarlandığı için, yalnızca giriş vektörünün Y bileşeni maskelendikten sonra kalır.
+5. **Maske vektör** düğümü için maske değerlerini belirtin. **Seç** modunda, **maske vektörü** düğümünü seçin ve ardından **Özellikler** penceresinde **yeşil/Y** özelliğini **doğru** olarak ayarlayın ve ardından **kırmızı/X** , **mavi/Z** ve **Alfa/W** özelliklerini **yanlış** olarak ayarlayın. Bu örnekte, **kırmızı/X** , **yeşil/Y** ve **mavi/Z** özellikleri **Dünya konumu** düğümünün X, Y ve Z bileşenlerine karşılık gelir ve **Alfa/W** kullanılmıyor. Yalnızca **yeşil/Y** **doğru** olarak ayarlandığı için, yalnızca giriş vektörünün Y bileşeni maskelendikten sonra kalır.
 
-6. Grafiğe bir **Dünya konumu** düğümü ekleyin. **Araç kutusunda**, **sabitler**altında **Dünya konumu** ' nu seçin ve tasarım yüzeyine taşıyın.
+6. Grafiğe bir **Dünya konumu** düğümü ekleyin. **Araç kutusunda** , **sabitler** altında **Dünya konumu** ' nu seçin ve tasarım yüzeyine taşıyın.
 
 7. Parçanın dünya alanı konumunu maskeleyin. **Seç** modunda, **World Position** düğümünün **Çıkış** terminalini **maske vektör** düğümünün **vektör** terminaline taşıyın. Bu bağlantı, parçaların konumunu x ve z bileşenlerini yok saymak için maskeler.
 

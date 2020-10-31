@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl Yapılır: Temel Phong Gölgelendiricisi Oluşturma'
+description: Gölgelendirici tasarımcısını ve yönlendirilebilir grafik gölgelendirici dilini kullanarak klasik Phong aydınlatma modelini uygulayan bir aydınlatma gölgelendiricisi oluşturma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: c7c69da8-142b-4d3b-9be9-4be0d5970b25
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 718607d74be1a74a799f8de9f4883e1df9fb7ef5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c158453421d9e4f899a7cfed7118be8e5871356c
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769184"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134138"
 ---
 # <a name="how-to-create-a-basic-phong-shader"></a>Nasıl yapılır: temel bir Phong gölgelendiricisi oluşturma
 
@@ -29,11 +31,11 @@ Başlamadan önce, **Özellikler** penceresinin ve **araç kutusunun** görünt�
 
 1. [Nasıl yapılır: temel Lambert gölgelendiricisi oluşturma](../designers/how-to-create-a-basic-lambert-shader.md)bölümünde açıklandığı gibi bir Lambert gölgelendiricisi oluşturun.
 
-2. **Son renk** düğümünden **Lambert** düğümünün bağlantısını kesin. **Lambert** düğümünün **RGB** terminalini seçin ve ardından **Bağlantıları Kes**' i seçin. Bu, bir sonraki adımda eklenen düğüm için yer açar.
+2. **Son renk** düğümünden **Lambert** düğümünün bağlantısını kesin. **Lambert** düğümünün **RGB** terminalini seçin ve ardından **Bağlantıları Kes** ' i seçin. Bu, bir sonraki adımda eklenen düğüm için yer açar.
 
-3. Grafiğe **ekleme** düğümü ekleyin. **Araç kutusunda**, **matematik**altında **Ekle** ' yi seçin ve tasarım yüzeyine taşıyın.
+3. Grafiğe **ekleme** düğümü ekleyin. **Araç kutusunda** , **matematik** altında **Ekle** ' yi seçin ve tasarım yüzeyine taşıyın.
 
-4. Grafiğe **Yansımalı** bir düğüm ekleyin. **Araç kutusu**' nda, **yardımcı program**altında **Yansımalı** ' ı seçin ve tasarım yüzeyine taşıyın.
+4. Grafiğe **Yansımalı** bir düğüm ekleyin. **Araç kutusu** ' nda, **yardımcı program** altında **Yansımalı** ' ı seçin ve tasarım yüzeyine taşıyın.
 
 5. Yansımalı katkı ekleyin. **Yansımalı** düğümün **Çıkış** terminalini **Add** düğümünün **X** terminaline taşıyın ve ardından **Lambert** düğümünün **Çıkış** terminalini **Add** düğümünün **Y** terminaline taşıyın. Bu bağlantılar piksel için toplam dağıtma ve yansımalı renk katkıları birleştirir.
 

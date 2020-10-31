@@ -1,5 +1,7 @@
 ---
 title: Windows Forms uygulamaları tasarlama
+description: Visual Studio 'da, Windows Forms tabanlı uygulamalar oluşturmaya yönelik hızlı bir geliştirme çözümü sağlayan Windows Form Tasarımcısı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 08/09/2019
 ms.topic: overview
 helpviewer_keywords:
@@ -7,12 +9,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 03619582a30893c161c44c880a0d9cf6c9766d0b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f43b3e529d7e56af7639df1118baa64f0d594e6c
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85768763"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134661"
 ---
 # <a name="windows-forms-designer-overview"></a>Windows Form Tasarımcısı’na genel bakış
 
@@ -30,10 +32,10 @@ Tasarımcı kullanarak şunları yapabilirsiniz:
 
 - Seçili denetimin yerleşimini fareyle veya ok tuşlarıyla taşıyarak ayarlayın. Benzer şekilde, CTRL ve ok tuşlarını kullanarak yerleşimi daha kesin bir şekilde ayarlayın. Son olarak, Shift ve ok tuşlarını kullanarak denetimin boyutunu ayarlayın.
 
-- Tıklatırken **SHIFT** veya **CTRL** ' i seçerek birden çok denetim seçin. SHIFT + tıklama **tuşlarını**kullanırken, seçilen ilk denetim, boyutu hizalarken veya düzenleme yaparken baskın denetimdir. **CTRL**+ tıklama kullanılırken, seçilen son denetim baskın olduğundan, baskın denetim her yeni denetim eklenmiş şekilde değişir. Alternatif olarak, seçmek istediğiniz denetimlerin çevresine bir seçim dikdörtgeni sürükleyerek birden çok denetim seçebilirsiniz.
+- Tıklatırken **SHIFT** veya **CTRL** ' i seçerek birden çok denetim seçin. SHIFT + tıklama **tuşlarını** kullanırken, seçilen ilk denetim, boyutu hizalarken veya düzenleme yaparken baskın denetimdir. **CTRL** + tıklama kullanılırken, seçilen son denetim baskın olduğundan, baskın denetim her yeni denetim eklenmiş şekilde değişir. Alternatif olarak, seçmek istediğiniz denetimlerin çevresine bir seçim dikdörtgeni sürükleyerek birden çok denetim seçebilirsiniz.
 
 > [!NOTE]
-> Formun kaynak (*. resx*) dosyasında değişiklik yapmak Için kaynak düzenleyicisini değil Windows Form Tasarımcısı kullanın. Form tabanlı. resx dosyasını düzenlerseniz, kaynak düzenleyicisinde yaptığınız değişikliklerin kaybedilmesi gerektiğini belirten bir uyarı görürsünüz. Bunun nedeni Windows Form Tasarımcısı. resx dosyasını oluşturur.
+> Formun kaynak ( *. resx* ) dosyasında değişiklik yapmak Için kaynak düzenleyicisini değil Windows Form Tasarımcısı kullanın. Form tabanlı. resx dosyasını düzenlerseniz, kaynak düzenleyicisinde yaptığınız değişikliklerin kaybedilmesi gerektiğini belirten bir uyarı görürsünüz. Bunun nedeni Windows Form Tasarımcısı. resx dosyasını oluşturur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -11,19 +11,19 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 56a2da4e02f890e199a6ff69b5a61882d1dfa416
-ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
+ms.openlocfilehash: 8715bd00653f74d874dc077180a9978b26bff8f1
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039800"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134733"
 ---
 # <a name="devinit-commands"></a>devinit komutları
 
 ## <a name="init"></a>Init
 
 ```console
-> devinit init
+devinit init
 ```
 
 Geçerli çalışma dizinindeki [_.devinit.js_](devinit-json.md) dosyasında belirtilen araçları çalıştırarak ortamı başlatın.  
@@ -70,7 +70,7 @@ Dosyadaki _devinit.js_ yolunu belirtir. --Dosyası belirtilmemişse, aşağıdak
 ## <a name="run"></a>Çalıştır
 
 ```console
-> devinit run -t <toolname>
+devinit run -t <toolname>
 ```
 
 Belirli aracı çalıştırır, parametreler aşağıda listelenmiştir. Belirli kullanımlar için her bir araç için [belgelere](devinit-tool-list.md) bakın.
@@ -111,19 +111,19 @@ Ayrıntılı çıktıyı standart çıktıya yay. Yürütülecek araç ayrıntı
 Değerinde bir boşluk içeren bir kullanmak, başka bir kaçış `<arg>` tırnak çifti içermelidir.
 
 ```console
-> devinit run -t <toolname> -<somearg> "<some value>"
+devinit run -t <toolname> -<somearg> "<some value>"
 ```
 
 Belirli bir dizine DotNet yüklemek için `C:\Program Files\dotnet` :
 
 ```console
-> devinit run -t require-dotnetcoresdk --"-InstallDir \"C:\Program Files\dotnet\""
+devinit run -t require-dotnetcoresdk --"-InstallDir \"C:\Program Files\dotnet\""
 ```
 
 ## <a name="list"></a>Liste
 
 ```console
-> devinit list
+devinit list
 ```
 
 Tüm kullanılabilir araçların listesini yazdırır.
@@ -131,7 +131,7 @@ Tüm kullanılabilir araçların listesini yazdırır.
 ## <a name="show"></a>Göster
 
 ```console
-> devinit show -t <toolname>
+devinit show -t <toolname>
 ```
 
 | Bağımsız Değişken       | Gerekli | Açıklama                                                                          |
@@ -143,7 +143,7 @@ Belirli bir araç için yardım bilgilerini yazdırır.
 ## <a name="version"></a>Sürüm
 
 ```console
-> devinit version
+devinit version
 ```
 
 Devinit için geçerli sürüm bilgilerini yazdırır.
@@ -151,8 +151,8 @@ Devinit için geçerli sürüm bilgilerini yazdırır.
 ## <a name="help"></a>Yardım
 
 ```console
-> devinit help
-> devinit help list
+devinit help
+devinit help list
 ```
 
 Devinit veya belirli bir komut için yardım metnini yazdırır `devinit <command>` .

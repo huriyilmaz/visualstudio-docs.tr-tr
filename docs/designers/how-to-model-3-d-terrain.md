@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: 3B Terbotları modelleme'
+description: Bir düzlemi ek yüz oluşturacak ve köşelerine göre düzenleyerek 3B teryağmur modeli oluşturmak için Model Düzenleyicisi 'ni nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: f779b1fd-82a9-4a11-8ab7-c1c9caabc883
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 12f19363d9024f8e7e2deb69a8038b8854eb50e4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 54010c46d121fd4221500afb3038013626939a1b
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85768968"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134811"
 ---
 # <a name="how-to-model-3d-terrain"></a>Nasıl yapılır: 3B terbotları modelleme
 
@@ -31,18 +33,18 @@ Başlamadan önce, **Özellikler** penceresi ve **araç kutusunun** görüntüle
 
 1. Çalışmak için bir 3B model oluşturun. Projenize bir model ekleme hakkında daha fazla bilgi için, bkz. [Model Düzenleyicisi](../designers/model-editor.md)'ndeki Başlarken bölümü.
 
-2. Sahneye bir düzlem ekleyin. **Araç kutusunda**, **şekiller**altında **düzlem** ' i seçin ve tasarım yüzeyine taşıyın.
+2. Sahneye bir düzlem ekleyin. **Araç kutusunda** , **şekiller** altında **düzlem** ' i seçin ve tasarım yüzeyine taşıyın.
 
     > [!TIP]
     > Düzlem nesnesinin ile çalışmayı kolaylaştırmak için, Tasarım yüzeyinde çerçeveye taşıyabilirsiniz. **Seç** modunda, düzlem nesnesini seçin ve ardından Model Düzenleyicisi araç çubuğunda **çerçeve nesnesi** düğmesini seçin.
 
-3. Yüz seçimi modunu girin. Model Düzenleyicisi araç çubuğunda **yüz seç**' i seçin.
+3. Yüz seçimi modunu girin. Model Düzenleyicisi araç çubuğunda **yüz seç** ' i seçin.
 
-4. Düzlemi alt bölümlere ayır. Yüz seçimi modunda, seçim için etkinleştirmek üzere düzlemi bir kez seçtikten sonra tek yüzeyi seçmek için yeniden seçin. Model Düzenleyicisi araç çubuğunda alt **bölümlere**ayır ' ı seçin. Bu, düzlemi eşit olarak boyutlandırılmış dört bölüme bölünmüş yeni köşeler ekler.
+4. Düzlemi alt bölümlere ayır. Yüz seçimi modunda, seçim için etkinleştirmek üzere düzlemi bir kez seçtikten sonra tek yüzeyi seçmek için yeniden seçin. Model Düzenleyicisi araç çubuğunda alt **bölümlere** ayır ' ı seçin. Bu, düzlemi eşit olarak boyutlandırılmış dört bölüme bölünmüş yeni köşeler ekler.
 
 5. Daha fazla alt bölüm oluşturun. Yeni yüzler hala seçili durumdayken alt **bölüyi** iki kez seçin. Bu, Toplam 64 yüz oluşturur. Daha fazla alt bölüm oluşturarak, daha fazla ayrıntı sağlayabilirsiniz.
 
-6. Nokta seçimi modunu girin. Model Düzenleyicisi araç çubuğunda **nokta seç**' i seçin.
+6. Nokta seçimi modunu girin. Model Düzenleyicisi araç çubuğunda **nokta seç** ' i seçin.
 
 7. Bir noktayı bir teryağmi özelliği oluşturacak şekilde değiştirin. Nokta seçimi modunda noktalarından birini seçin ve ardından Model Düzenleyicisi araç çubuğunda **çevir** aracını seçin. Tasarım yüzeyinde, noktayı temsil eden bir kutu görüntülenir. Kutuyu taşımak için yeşil oku kullanın ve bu nedenle noktanın yüksekliğini değiştirin. İlginç teryağmur özellikleri oluşturmak için bu adımı farklı noktalara tekrarlayın.
 

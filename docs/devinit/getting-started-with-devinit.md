@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 62c31dcb72735304f7b28e7dfd817f6647187bc9
-ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
+ms.openlocfilehash: ae274e460f4404efa92c4cf3785a3c2e41fd9691
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91022631"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134079"
 ---
 # <a name="getting-started-with-devinit"></a>Devinit ile çalışmaya başlama
 
@@ -26,7 +26,7 @@ devinit Şu anda yalnızca Visual Studio kullanılırken GitHub Codespaces 'ın 
 
 ## <a name="step-2-define-your-environment"></a>2. Adım: ortamınızı tanımlama
 
-En önemli adım, ' Geliştirici ' ortamınızı dosyadaki bir [ _.devinit.js_ ](devinit-json.md)tanımlamaktır. Bu dosya, çalıştırdığınızda ortamınızı oluşturmak için devinit tarafından kullanılacaktır `devinit init` .
+En önemli adım, ' Geliştirici ' ortamınızı dosyadaki bir [ _.devinit.js_](devinit-json.md)tanımlamaktır. Bu dosya, çalıştırdığınızda ortamınızı oluşturmak için devinit tarafından kullanılacaktır `devinit init` .
 
 Bu adım için, bir projeyi bir proje deposu ile çalışmaya ve çalıştırmaya verdiğiniz yönergeleri düşünün. Örneğin, SQL 'in yüklü olması gerekir mi? .NET Core 'un belirli bir sürümü mi? benzerlerini. Ardından, bu bağımlılıkların her biri için, [Araçlar listesinde](devinit-tool-list.md) ilgili bir devinit aracını arayın ve dosyayı depodaki _.devinit.js_ dosyasına ekleyin.
 
@@ -35,7 +35,7 @@ Bu adım için, bir projeyi bir proje deposu ile çalışmaya ve çalıştırmay
 Şimdi, deponuzu kopyaladıktan sonra tüm birisinin yapması gerekiyor `devinit init` .
 
 ```console
-> devinit init
+devinit init
 ```
 
 [GitHub Codespaces](https://github.com/features/codespaces)kullanıyorsanız, `devinit init` codespace sağlandığında otomatik olarak çalışacak şekilde yapılandırabilirsiniz. Daha fazla bilgi edinmek için [devinit ve GitHub Codespaces belgelerine](devinit-and-codespaces.md)göz atın.
