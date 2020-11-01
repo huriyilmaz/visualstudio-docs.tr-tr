@@ -10,10 +10,10 @@ manager: AndSter
 ms.workload:
 - multiple
 ms.openlocfilehash: 33b471122318038ab66bc4f73e437209c6da2ffe
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "89561344"
 ---
 # <a name="log-info-to-the-output-window-using-tracepoints-in-visual-studio"></a>Visual Studio 'da izleme noktalarını kullanarak çıkış penceresinde bilgi günlük kaydı
@@ -53,7 +53,7 @@ Aşağıdaki örnek program, bir `for` sayaç değişkeni olan ve döngünün ba
 
    ![Denetlenen koşullar kutusu](../debugger/media/checkedconditionsbox.png "Denetlenen koşullar kutusu")
 
-   Koşullar için üç seçeneğiniz vardır: **koşullu ifade**, **filtre**ve **isabet sayısı**.
+   Koşullar için üç seçeneğiniz vardır: **koşullu ifade** , **filtre** ve **isabet sayısı** .
 
 ## <a name="actions-menu"></a>Eylemler menüsü
 
@@ -63,7 +63,7 @@ Bu menü, çıkış penceresine bir ileti kaydetmenize izin verir. İleti kutusu
 
 ![Sayaç çıkış Iletisi](../debugger/media/counteroutputmessage.png "Sayaç çıkış Iletisi")
 
-**Kapat** ' a tıklayıp programda hata ayıklaması yaparsanız (**F5**) çıkış penceresinde aşağıdaki çıktıyı görürsünüz.
+**Kapat** ' a tıklayıp programda hata ayıklaması yaparsanız ( **F5** ) çıkış penceresinde aşağıdaki çıktıyı görürsünüz.
 
 ![Çıkış Penceresi eylemler Iletisi](../debugger/media/actionsmessageinoutputwindow.png "Çıkış Penceresi eylemler Iletisi")
 

@@ -8,10 +8,10 @@ ms.date: 03/03/2020
 ms.topic: how-to
 description: Aylık abonelikler için yöneticileri ayarlama
 ms.openlocfilehash: 8e102cb19d4f34c93392d89f9778c88460446666
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "92904241"
 ---
 # <a name="set-up-admins-for-visual-studio-monthly-subscriptions"></a>Visual Studio aylık abonelikleri için yöneticileri ayarlama

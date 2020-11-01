@@ -8,10 +8,10 @@ ms.date: 10/28/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde ürün anahtarlarınızı edinme ve yönetme hakkında bilgi edinin.
 ms.openlocfilehash: a5da818a059709d311b87572f71b78a51dbb7deb
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "92903996"
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde ürün anahtarlarını kullanma

@@ -8,10 +8,10 @@ ms.date: 08/04/2020
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerine dahil edilen Pluralsel eğitim aboneliği hakkında bilgi edinin.
 ms.openlocfilehash: 26056c823dc4ab67f576eb430b85caac26d854af
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "91005348"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde pluralalsel eğitim avantajları
@@ -31,7 +31,7 @@ Aşağıdaki tabloda, her bir Visual Studio abonelik türü için Pluralalsel ab
 1. Visual Studio aboneliğinize dahil olan avantajdan dolayı Pluralalsel sayfasına yönlendirilirsiniz.
    - Formda istenen iletişim bilgilerini sağlayın
    - Kullanım koşullarını kabul etmek için onay kutusuna tıklayın
-   - Kullan **' a**tıklayın.
+   - Kullan **' a** tıklayın.
    > [!div class="mx-imgBorder"]
    > ![Pluralali kaydı](_img/vs-pluralsight/vs-pluralsight-registration.png "Kayıt formunu doldurun, koşulları kabul etmek için onay kutusuna tıklayın ve ardından kullan ' a tıklayın.")
 
@@ -43,9 +43,9 @@ Aşağıdaki tabloda, her bir Visual Studio abonelik türü için Pluralalsel ab
    > [!NOTE]
    > Hesabınız yeni teklifleri kullanmaya uygun değilse, aldığınız e-posta uygun olmadığından hesabınızı oluştururken bir sorun olduğunu açıklacaktır.  Ayrıca, Pluraltarın destek ekibine başvurabileceğiniz, hesabınız hakkında sahip olduğunuz soruları yanıtlayabilen bilgiler de içerir.
 
-1. **Parolayı ayarla**' ya tıklayın.
+1. **Parolayı ayarla** ' ya tıklayın.
 
-1. **Yeni parola** alanına istediğiniz parolayı girin, **Parolayı Onayla** alanına bir kez daha girin ve **Kaydet**' e tıklayın.
+1. **Yeni parola** alanına istediğiniz parolayı girin, **Parolayı Onayla** alanına bir kez daha girin ve **Kaydet** ' e tıklayın.
 
 1. İşte bu kadar!  Artık binlerce Pluralaltim kursu ile öğrenmeye başlamaya hazırsınız!
 

@@ -8,10 +8,10 @@ ms.date: 09/08/2020
 ms.topic: how-to
 description: Sorular veya sorunlarla ilgili yardım almak için abonelik yöneticinize nasıl başvurabileceğiniz hakkında bilgi edinin.
 ms.openlocfilehash: dab5a450f5a46bab527c5982288f6e2a98ecfd0c
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "92904534"
 ---
 # <a name="get-assistance-from-your-subscriptions-admin"></a>Abonelik yöneticinizden yardım alın

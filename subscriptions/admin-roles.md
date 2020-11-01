@@ -8,10 +8,10 @@ ms.date: 10/22/2020
 ms.topic: conceptual
 description: Süper yönetici ve yönetici rolleri ve yöneticiler atama hakkında bilgi edinin.
 ms.openlocfilehash: 491a8de27477f68b4344ad17b860b80b4ca96aa9
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "92467381"
 ---
 # <a name="super-admins-and-admins-for-visual-studio-subscription-agreements"></a>Visual Studio abonelik anlaşmaları için süper Yöneticiler ve Yöneticiler
@@ -28,8 +28,8 @@ Yöneticileri yönetme hakkında bir tanıtım izleyin.
 ## <a name="assigning-admins"></a>Yönetici atama
 Yeni Yöneticiler (Yöneticiler) atamak için:
 1. https://manage.visualstudio.comAboneliklerin satın alındığı anlaşmada süper yönetici olarak atanmış bir e-posta adresi kullanarak oturum açın.
-2. **Yöneticileri Yönet**etiketli sekmeye tıklayın.
-3. **Ekle**'ye tıklayın.
+2. **Yöneticileri Yönet** etiketli sekmeye tıklayın.
+3. **Ekle** 'ye tıklayın.
    > [!div class="mx-imgBorder"]
    > ![Yönetici Ekle](_img/admin-roles/add-admins.png "Yöneticileri Yönet dikey penceresine tıklayın ve sonra yeni yöneticiler atamak için Ekle ' ye tıklayın.")
 4. Formu yeni yönetici bilgileriyle doldurun.  
