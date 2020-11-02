@@ -1492,3 +1492,8 @@
       href: ide/developer-community-guidelines.md
     - name: Geliştirici Topluluğu veri gizliliği
       href: ide/developer-community-privacy.md
+- name: Visual Studio 2015
+  expanded: true
+  items:
+    - name: Visual Studio 2015 belgeleri
+      href: vs-2015-archive.md
