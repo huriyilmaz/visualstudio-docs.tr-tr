@@ -7,12 +7,12 @@ ms.assetid: 64455e79-229a-42f0-9d65-c2cca8ab8513
 ms.date: 09/08/2020
 ms.topic: how-to
 description: Sorular veya sorunlarla ilgili yardım almak için abonelik yöneticinize nasıl başvurabileceğiniz hakkında bilgi edinin.
-ms.openlocfilehash: dab5a450f5a46bab527c5982288f6e2a98ecfd0c
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 363fc84d0607e511d259153dc3e39d4b4063ff42
+ms.sourcegitcommit: fb2a60cfdf78964fa0cb6783a5d947deae04b6bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92904534"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93289971"
 ---
 # <a name="get-assistance-from-your-subscriptions-admin"></a>Abonelik yöneticinizden yardım alın
 Visual Studio aboneliğiniz sizin veya okulunuz tarafından size sağlanmışsa, size bir abonelik Yöneticisi veya "Yönetici" tarafından atanmıştı.  Yöneticiler abonelikleri atayabilir veya kaldırabilir, oturum açma e-posta adreslerini değiştirebilir, yazılım indirebilme ve aboneliğiniz ile ilgili başka işlevler gerçekleştirmenize izin verebilir.
@@ -33,7 +33,7 @@ Birçok kuruluşun boyut ve karmaşıklığı göz önüne alındığında, yön
 > **Süper Yöneticiler:**  "Yöneticime başvur" isteklerinin gönderildiği e-posta adresini ayarlamak için, [sözleşme tercihlerinde](admin-prefs.md#contact-email-address)bu adresi belirtin.
 
 ## <a name="resources"></a>Kaynaklar
-- [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
+- [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/subscriptions/support/#talktous)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
