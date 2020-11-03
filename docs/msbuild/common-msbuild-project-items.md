@@ -2,7 +2,7 @@
 title: Ortak MSBuild proje öğeleri | Microsoft Docs
 description: Ortak MSBuild proje öğeleri hakkında bilgi edinin. Öğeler bir veya daha fazla dosyaya başvuru olarak adlandırılır ve dosya adları, yollar ve sürüm numaraları gibi meta verilere sahiptir.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 10/29/2020
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b42ba80365b8aedd9527490235efb1228bc2a61d
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+ms.openlocfilehash: 638f67575a7214047cdb917c994179ac144e60b2
+ms.sourcegitcommit: 49c959911128a733ed2858db7c0e3b565f934b1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796400"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238629"
 ---
 # <a name="common-msbuild-project-items"></a>Yaygın MSBuild proje öğeleri
 
@@ -39,7 +39,7 @@ Projedeki derleme (yönetilen) başvurusunu temsil eder.
 |Öğe meta veri adı|Açıklama|
 |---------------|-----------------|
 |HintPath|İsteğe bağlı dize. Derlemenin göreli veya mutlak yolu.|
-|Ad|İsteğe bağlı dize. Derlemenin görünen adı, örneğin, "System. Windows. Forms."|
+|Name|İsteğe bağlı dize. Derlemenin görünen adı, örneğin, "System. Windows. Forms."|
 |FusionName|İsteğe bağlı dize. Öğe için basit veya güçlü Fusion adı belirtir.<br /><br /> Bu öznitelik mevcut olduğunda, derleme dosyası Fusion adını almak için açılmadığından zaman tasarrufu yapabilirsiniz.|
 |Bahsedilen SpecificVersion|İsteğe bağlı Boolean. Yalnızca Fusion adındaki sürümün başvurulması gerekip gerekmediğini belirtir.|
 |Diğer adlar|İsteğe bağlı dize. Başvuru için herhangi bir diğer ad.|
@@ -160,7 +160,19 @@ Olarak oluşturulacak derleme özniteliklerini temsil eder `[AssemblyMetadata(ke
 | Değer | Gerekli dize. Öznitelik oluşturucusunda ikinci parametre (değer) olur `AssemblyMetadataAttribute` . |
 
 > [!NOTE]
-> Bu, yalnızca .NET Core SDK kullanan projeler için geçerlidir.
+> Bu öğe, .NET 5 (ve .NET Core) ve sonraki sürümler için SDK 'Yı kullanan projeler için geçerlidir.
+
+### <a name="internalsvisibleto"></a>InternalsVisibleTo
+
+Derleme öznitelikleri olarak yayınlanedilecek derlemeleri belirtir `[InternalsVisibleTo(..)]` .
+
+| Öğe meta veri adı | Açıklama |
+|-----------------------| - |
+| Şunları Dahil Et: | Bütünleştirilmiş kod adı. |
+| Anahtar | İsteğe bağlı dize. Derlemenin ortak anahtarı. |
+
+> [!NOTE]
+> Bu öğe, .NET 5 (ve .NET Core) ve sonraki sürümler için SDK 'Yı kullanan projeler için geçerlidir.
 
 ### <a name="baseapplicationmanifest"></a>BaseApplicationManifest
 
