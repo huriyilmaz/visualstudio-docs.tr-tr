@@ -44,7 +44,9 @@
       href: using-the-subscriber-portal.md
     - name: Aboneliklerinizi yönetme
       href: manage-vs-subscriptions.md
-    - name: Abonelik yöneticinize başvurma
+    - name: Aboneliklerin süresi dolduğunda
+      href: subscription-expiration.md
+    - name: Abonelikler yöneticinize başvurma
       href: contact-my-admin.md
     - name: Yararları
       items:
