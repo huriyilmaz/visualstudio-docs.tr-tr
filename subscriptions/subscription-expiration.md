@@ -7,12 +7,12 @@ ms.assetid: b6fbfa3e-654a-462f-8e22-e313b6ea617f
 ms.date: 10/30/2020
 ms.topic: conceptual
 description: Visual Studio aboneliğinizin süresi dolarsa ne olacağını öğrenin
-ms.openlocfilehash: 118f9dcd1953799d74b10c682a007137474c2dd2
-ms.sourcegitcommit: 49c959911128a733ed2858db7c0e3b565f934b1a
+ms.openlocfilehash: 3bab529f4a45a57e6cc21260fdde2d5e18bc5217
+ms.sourcegitcommit: f81984aec5341a84b87c2466461656c38d8ff681
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239364"
+ms.locfileid: "93245006"
 ---
 # <a name="what-happens-when-your-subscription-expires"></a>Aboneliğinizin süresi dolarsa ne olur?
 Visual Studio aboneliklerinin belirli süreleri vardır ve yenilenmedikleri takdirde bu süre sona erer.  Bir aboneliğin süresi dolarsa, aboneliğin sağladığı avantajlar farklı yollarla etkilenir.  Bu makalede, son kullanım süresinin Visual Studio aboneliğinin çeşitli yönlerini nasıl etkilediği açıklanmaktadır. 
@@ -22,7 +22,7 @@ Yeni bir abonelik satın almak istiyorsanız [fiyatlandırma sayfamızda](https:
 ## <a name="downloads"></a>İndirmeler
 Ürün İndirmeleri sayfası, <https://my.visualstudio.com/downloads> yazılımı indirebilmeniz için kullanılabilir olmaya devam eder, ancak yeni ürün anahtarları isteyemeyeceksiniz.  Güncelleştirmeler, düzeltme ekleri ve diğer araçlar [Microsoft Indirme merkezi](https://www.microsoft.com/downloads)'nde hala kullanılabilir olabilir.  Aboneliğiniz aracılığıyla daha önce indirdiğiniz ürünler hala geçerlidir.
 
-## <a name="product-keys"></a>Ürün Anahtarları
+## <a name="product-keys"></a>Ürün anahtarları
 Ürün anahtarları sayfası <https://my.visualstudio.com/productkeys> artık kullanılamıyor.  Daha önce talep ettiğiniz herhangi bir ürün anahtarı normal şekilde çalışmaya devam eder.  Tüm yükleme sınırları etkilenmemiştir.  Aboneliğinizin süresi dolduktan sonra, talep ettiğiniz ürün anahtarlarınızı dışarı aktarmak için lütfen <https://my.visualstudio.com/subscriptions> **tüm anahtarları dışarı aktar** düğmesini ziyaret edin ve tıklatın.  Aboneliğinizin süresi dolduktan sonra yeni ürün anahtarı istenmeyebilir.
 
 ## <a name="benefits"></a>Yararları 
