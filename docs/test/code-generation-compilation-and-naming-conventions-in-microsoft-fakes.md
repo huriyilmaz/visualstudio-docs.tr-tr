@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 155caf50e82f56c1db0b0b0a65a640f252f44063
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a1ba469f460e966be581b87226f2a89faac8186
+ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75589337"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93325936"
 ---
 # <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Microsoft Fakes'te kod oluşturma, derleme ve adlandırma kuralları
 
@@ -22,9 +22,9 @@ Bu makalede, Fakes kod oluşturma ve derleme içindeki seçenekler ve sorunlar e
 
 - Visual Studio Enterprise
 - Bir .NET Framework projesi
-
-> [!NOTE]
-> .NET Standard projeler desteklenmez.
+::: moniker range=">=vs-2019"
+- Visual Studio 2019 güncelleştirme 6 ' da önizlenen .NET Core ve SDK stili proje desteği ve güncelleştirme 8 ' de varsayılan olarak etkinleştirilmiştir. Daha fazla bilgi için bkz. [.NET Core ve SDK stilindeki projeler Için Microsoft Fakes](/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects).
+::: moniker-end
 
 ## <a name="code-generation-and-compilation"></a>Kod oluşturma ve derleme
 
@@ -32,7 +32,7 @@ Bu makalede, Fakes kod oluşturma ve derleme içindeki seçenekler ve sorunlar e
 
 Saplama türlerinin üretimi *. Fakes* dosya uzantısına sahıp bir XML dosyasında yapılandırılır. Fakes çerçevesi, derleme sürecinde özel MSBuild görevleri aracılığıyla tümleştirilir ve derleme zamanında bu dosyaları algılar. Fakes kod Oluşturucusu, saplama türlerini bir derlemede derler ve başvuruyu projeye ekler.
 
-Aşağıdaki örnek, *FileSystem.dll*tanımlı saplama türlerini gösterir:
+Aşağıdaki örnek, *FileSystem.dll* tanımlı saplama türlerini gösterir:
 
 ```xml
 <Fakes xmlns="http://schemas.microsoft.com/fakes/2011/">
@@ -102,7 +102,7 @@ Varsayılan olarak, saplama türleri tüm korumalı olmayan sınıflar için olu
 
 ### <a name="internal-types"></a>İç türler
 
-Fakes kod Oluşturucusu, oluşturulan Fakes derlemesine görünür olan türler için dolgu türleri ve saplama türleri oluşturur. Shimmed derlemesinin iç türlerini Fakes ve test derlemelerinizi görünür hale getirmek için,  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> oluşturulan Fakes derlemesine ve test derlemesine görünürlük sağlayan shimmed derleme koduna öznitelikler ekleyin. Aşağıda bir örnek verilmiştir:
+Fakes kod Oluşturucusu, oluşturulan Fakes derlemesine görünür olan türler için dolgu türleri ve saplama türleri oluşturur. Shimmed derlemesinin iç türlerini Fakes ve test derlemelerinizi görünür hale getirmek için,  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> oluşturulan Fakes derlemesine ve test derlemesine görünürlük sağlayan shimmed derleme koduna öznitelikler ekleyin. İşte bir örnek:
 
 ```csharp
 // FileSystem\AssemblyInfo.cs
@@ -183,7 +183,7 @@ Bu sorundan kaçınmak için, Fakes, *. Fakes* dosyalarını eklerken proje dı�
 
 Bir derleme MyAssembly ve bir sürüm 1.2.3.4 verildiğinde, Fakes derleme adı MyAssembly. 1.2.3.4. Fakes ' dir.
 
-*. Fakes*içindeki derleme öğesinin sürüm özniteliğini düzenleyerek bu sürümü değiştirebilir veya kaldırabilirsiniz:
+*. Fakes* içindeki derleme öğesinin sürüm özniteliğini düzenleyerek bu sürümü değiştirebilir veya kaldırabilirsiniz:
 
 ```xml
 attribute of the Assembly element in the .fakes:
@@ -197,7 +197,7 @@ attribute of the Assembly element in the .fakes:
 
 ### <a name="shim-type-and-stub-type-naming-conventions"></a>Dolgu türü ve saplama türü adlandırma kuralları
 
-**Ad alanları**
+**Ad Alanları**
 
 - . Fakes soneki ad alanına eklenir.
 
@@ -237,14 +237,14 @@ Boş bir adından başlayarak alan adlandırmayla ilgili **temel kurallar** :
 |-|-|-|
 |Bir **Oluşturucu**|`.ctor`|`Constructor`|
 |Statik **Oluşturucu**|`.cctor`|`StaticConstructor`|
-|"_" (Özellik alıcıları gibi) ile ayrılmış iki bölümden oluşan Yöntem adına sahip bir **erişimci**|*kind_name* (yaygın durum, ancak ECMA tarafından zorlanmaz)|*NameKind*, her iki parça da büyük harfli ve değiştirilmiş|
+|"_" (Özellik alıcıları gibi) ile ayrılmış iki bölümden oluşan Yöntem adına sahip bir **erişimci**|*kind_name* (yaygın durum, ancak ECMA tarafından zorlanmaz)|*NameKind* , her iki parça da büyük harfli ve değiştirilmiş|
 ||Özelliğin alıcısı `Prop`|`PropGet`|
 ||Özelliğin ayarlayıcısı `Prop`|`PropSet`|
 ||Olay Ekleyici|`Add`|
 ||Olay çıkarıcı|`Remove`|
 |İki bölümden oluşan bir **operatör**|`op_name`|`NameOp`|
 |Örneğin: + işleci|`op_Add`|`AddOp`|
-|Bir **dönüştürme işleci**için, dönüş türü eklenir.|`T op_Implicit`|`ImplicitOpT`|
+|Bir **dönüştürme işleci** için, dönüş türü eklenir.|`T op_Implicit`|`ImplicitOpT`|
 
 > [!NOTE]
 > - **Dizin oluşturucularının alıcıları ve ayarlayıcıları** özelliğe benzer şekilde işlenir. Bir dizin oluşturucunun varsayılan adı `Item` .

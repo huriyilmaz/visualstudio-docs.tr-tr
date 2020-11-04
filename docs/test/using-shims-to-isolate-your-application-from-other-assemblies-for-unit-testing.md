@@ -9,18 +9,18 @@ author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 1a241fa8422a71900312198988dacfe144525b5a
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 13a5c8c4058fc051cf7ec0093632220c757604f0
+ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810529"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93325922"
 ---
 # <a name="use-shims-to-isolate-your-app-for-unit-testing"></a>Birim testi için uygulamanızı yalıtmak üzere dolgular kullanma
 
 **Dolgu türleri** , Microsoft Fakes çerçevesinin, ortamdan test altında bileşenleri yalıtmanızı sağlamak için kullandığı iki teknolojiden biridir. Öğims, testinizin bir parçası olarak yazdığınız koda yönelik belirli yöntemlere çağrı yapılır. Birçok yöntem dış koşullara bağlı farklı sonuçlar döndürür, ancak bir dolgu, testinizin denetimi altında bulunur ve her çağrıda tutarlı sonuçlar döndürebilir. Bu, testlerin yazmayı kolaylaştırır.
 
-Kodunuzu çözümünüzün bir parçası olmayan derlemelerden yalıtmak için *dolgular* kullanın. Çözümünüzün bileşenlerini birbirinden yalıtmak için, *saplamalar*kullanın.
+Kodunuzu çözümünüzün bir parçası olmayan derlemelerden yalıtmak için *dolgular* kullanın. Çözümünüzün bileşenlerini birbirinden yalıtmak için, *saplamalar* kullanın.
 
 Genel bakış ve "hızlı başlangıç" Kılavuzu için bkz. [Microsoft Fakes ile test edilen kodu yalıtma](../test/isolating-code-under-test-with-microsoft-fakes.md).
 
@@ -28,9 +28,9 @@ Genel bakış ve "hızlı başlangıç" Kılavuzu için bkz. [Microsoft Fakes il
 
 - Visual Studio Enterprise
 - Bir .NET Framework projesi
-
-> [!NOTE]
-> .NET Standard projeler desteklenmez.
+::: moniker range=">=vs-2019"
+- Visual Studio 2019 güncelleştirme 6 ' da önizlenen .NET Core ve SDK stili proje desteği ve güncelleştirme 8 ' de varsayılan olarak etkinleştirilmiştir. Daha fazla bilgi için bkz. [.NET Core ve SDK stilindeki projeler Için Microsoft Fakes](/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects).
+::: moniker-end
 
 ## <a name="example-the-y2k-bug"></a>Örnek: Y2K hatası
 
@@ -67,13 +67,16 @@ using (ShimsContext.Create()) {
 
 İlk olarak, Fakes derlemesi ekleyin:
 
-1. **Çözüm Gezgini**, birim testi projenizin **Başvurular** düğümünü genişletin.
+1. **Çözüm Gezgini** , 
+    - Daha eski bir .NET Framework projesi (SDK olmayan stil) için, birim testi projenizin **Başvurular** düğümünü genişletin.
+    ::: moniker range=">=vs-2019"
+    - .NET Framework veya .NET Core 'u hedefleyen SDK stili bir proje için, **derlemeler** , **Projeler** veya **paketler** altında taklit etmek istediğiniz derlemeyi bulmak için **Bağımlılıklar** düğümünü genişletin.
+    ::: moniker-end
+    - Visual Basic ' de çalışıyorsanız, **Başvurular** düğümünü görmek için **Çözüm Gezgini** araç çubuğunda **tüm dosyaları göster** ' i seçin.
 
-   - Visual Basic ' de çalışıyorsanız, **Başvurular** düğümünü görmek için **Çözüm Gezgini** araç çubuğunda **tüm dosyaları göster** ' i seçin.
+2. Dolgu oluşturmak istediğiniz sınıf tanımlarını içeren derlemeyi seçin. Örneğin, **TarihSaat** dolgusu istiyorsanız **System.dll** ' yi seçin.
 
-2. Dolgu oluşturmak istediğiniz sınıf tanımlarını içeren derlemeyi seçin. Örneğin, **TarihSaat**dolgusu istiyorsanız **System.dll**' yi seçin.
-
-3. Kısayol menüsünde **Fakes derlemesi Ekle**' yi seçin.
+3. Kısayol menüsünde **Fakes derlemesi Ekle** ' yi seçin.
 
 ### <a name="use-shimscontext"></a>ShimsContext kullanma
 
@@ -93,7 +96,7 @@ Her dolgu bağlamını doğru bir şekilde atmak önemlidir. Bir Thumb kuralı o
 
 ### <a name="write-a-test-with-shims"></a>Dolgular ile test yazma
 
-Test kodunuzda, taklit etmek istediğiniz yöntem için bir *deturu* ekleyin. Örnek:
+Test kodunuzda, taklit etmek istediğiniz yöntem için bir *deturu* ekleyin. Örneğin:
 
 ```csharp
 [TestClass]
@@ -520,7 +523,7 @@ System.Fakes.ShimEnvironment.GetCommandLineArgsGet = ...
 
 ## <a name="limitations"></a>Sınırlamalar
 
-Shims, .NET temel sınıf kitaplığı **mscorlib** ve **sistem**içindeki tüm türlerde kullanılamaz.
+Shims, .NET Core sınıf kitaplığı **mscorlib** ve System ' de .NET Framework **sistem** **. Runtime** ve .NET Core 'da bulunan tüm türler üzerinde kullanılamaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

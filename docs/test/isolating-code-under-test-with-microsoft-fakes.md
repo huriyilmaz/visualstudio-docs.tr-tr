@@ -10,16 +10,16 @@ author: mikejo5000
 dev_langs:
 - VB
 - CSharp
-ms.openlocfilehash: 9ef41b8645e77a28c8422fff49111b41215ba971
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: e837b1a0e9a1d8fe06342352e4eedf5ce0fa9117
+ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90739882"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93325958"
 ---
 # <a name="isolate-code-under-test-with-microsoft-fakes"></a>Microsoft Fakes ile test edilen kodu yalıtma
 
-Microsoft Fakes, uygulamanın diğer bölümlerini *saplamalar* *veya parçalar*ile değiştirerek test ettiğiniz kodu yalıtmanıza yardımcı olur. Bunlar, testlerinizin denetimi altında olan küçük kod parçalarıdır. Kodunuzu sınama için yalıttığınız zaman, sınama başarısız olduğunda nedeninin başka bir yerde değil, tam da orada olduğunu bileceksiniz. Uygulamanın diğer parçaları çalışmıyor olsa bile, saptamalar ve dolgular kodunuzu test etmenize olanak sağlar.
+Microsoft Fakes, uygulamanın diğer bölümlerini *saplamalar* *veya parçalar* ile değiştirerek test ettiğiniz kodu yalıtmanıza yardımcı olur. Bunlar, testlerinizin denetimi altında olan küçük kod parçalarıdır. Kodunuzu sınama için yalıttığınız zaman, sınama başarısız olduğunda nedeninin başka bir yerde değil, tam da orada olduğunu bileceksiniz. Uygulamanın diğer parçaları çalışmıyor olsa bile, saptamalar ve dolgular kodunuzu test etmenize olanak sağlar.
 
 Fakes iki türde olabilir:
 
@@ -33,10 +33,11 @@ Fakes iki türde olabilir:
 
 - Visual Studio Enterprise
 - Bir .NET Framework projesi
-- .NET Core ve SDK stili proje desteği şu anda önizleme aşamasındadır. [Daha fazla bilgi](/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects)
+::: moniker range=">=vs-2019"
+- Visual Studio 2019 güncelleştirme 6 ' da önizlenen .NET Core ve SDK stili proje desteği ve güncelleştirme 8 ' de varsayılan olarak etkinleştirilmiştir. Daha fazla bilgi için bkz. [.NET Core ve SDK stilindeki projeler Için Microsoft Fakes](/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects).
+::: moniker-end
 
 > [!NOTE]
-> - .NET Standard projeler desteklenmez.
 > - Visual Studio ile profil oluşturma, Microsoft Fakes kullanan testler için kullanılamaz.
 
 ## <a name="choose-between-stub-and-shim-types"></a>Saplama ve dolgu türleri arasında seçim yapın
@@ -82,11 +83,15 @@ Daha ayrıntılı bir açıklama için, [birim testi için uygulamanızın parç
 
 2. **Fakes derlemesi Ekle**
 
-    1. **Çözüm Gezgini**, test projesinin başvuru listesini genişletin. Visual Basic ' de çalışıyorsanız, başvuru listesini görmek için **tüm dosyaları göster** ' i seçmeniz gerekir.
+   1. **Çözüm Gezgini** , 
+       - Daha eski bir .NET Framework projesi (SDK olmayan stil) için, birim testi projenizin **Başvurular** düğümünü genişletin.
+       ::: moniker range=">=vs-2019"
+       - .NET Framework veya .NET Core 'u hedefleyen SDK stili bir proje için, **derlemeler** , **Projeler** veya **paketler** altında taklit etmek istediğiniz derlemeyi bulmak için **Bağımlılıklar** düğümünü genişletin.
+       ::: moniker-end
+       - Visual Basic ' de çalışıyorsanız, **Başvurular** düğümünü görmek için **Çözüm Gezgini** araç çubuğunda **tüm dosyaları göster** ' i seçin.
+   2. Dolgu oluşturmak istediğiniz sınıf tanımlarını içeren derlemeyi seçin. Örneğin, **TarihSaat** dolgusu istiyorsanız **System.dll** ' yi seçin.
 
-    2. Arabirimin (örneğin IStockFeed) tanımlandığı derleme başvurusunu seçin. Bu başvurunun kısayol menüsünde **Fakes derlemesi Ekle**' yi seçin.
-
-    3. Çözümü yeniden derleyin.
+   3. Kısayol menüsünde **Fakes derlemesi Ekle** ' yi seçin.
 
 3. Testlerinizde saptama örnekleri oluşturun ve yöntemleri için kod sağlayın:
 
@@ -169,9 +174,9 @@ Dolgu kullanmak için uygulama kodunu değiştirmeniz veya belirli bir şekilde 
 
 1. **Fakes derlemesi Ekle**
 
-     **Çözüm Gezgini**, birim testi projenizin başvurularını açın ve taklit etmek istediğiniz yöntemi içeren derlemenin başvurusunu seçin. Bu örnekte, `DateTime` sınıfı *System.dll*.  Visual Basic projesindeki başvuruları görmek için **tüm dosyaları göster**' i seçin.
+     **Çözüm Gezgini** , birim testi projenizin başvurularını açın ve taklit etmek istediğiniz yöntemi içeren derlemenin başvurusunu seçin. Bu örnekte, `DateTime` sınıfı *System.dll*.  Visual Basic projesindeki başvuruları görmek için **tüm dosyaları göster** ' i seçin.
 
-     **Fakes derlemesi Ekle**' yi seçin.
+     **Fakes derlemesi Ekle** ' yi seçin.
 
 2. **ShimsContext içine dolgu ekleme**
 
@@ -244,6 +249,61 @@ System.IO.Fakes.ShimFile.AllInstances.ReadToEnd = ...
 (Başvurulacak ' System. ıO. Fakes ' derlemesi yok. Ad alanı dolgu oluşturma işlemi tarafından oluşturulur. , Ancak her zamanki şekilde ' Using ' veya ' Import ' kullanabilirsiniz.)
 
 Ayrıca belirli örnekler, oluşturucular ve özellikler için dolgular oluşturabilirsiniz. Daha fazla bilgi için bkz. [birim testi için uygulamanızı diğer derlemelerden yalıtmak için dolgu kullanma](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).
+
+## <a name="using-microsoft-fakes-in-the-ci"></a>CI 'da Microsoft Fakes 'i kullanma
+
+### <a name="microsoft-fakes-assembly-generation"></a>Microsoft Fakes derleme oluşturma
+Microsoft Fakes için Visual Studio Enterprise gerektiğinden, Fakes derlemelerinin oluşturulması, projenizi [Visual Studio Build görevi](/azure/devops/pipelines/tasks/build/visual-studio-build?view=azure-devops)kullanarak oluşturmanızı gerektirir.
+
+::: moniker range=">=vs-2019"
+> [!NOTE]
+> Buna alternatif olarak, Fakes derlemelerinizi CI 'da denet, [MSBuild görevini](../msbuild/msbuild-task.md?view=vs-2019)kullanmaktır. Bunu yaptığınızda, aşağıdaki kod parçacığına benzer şekilde, test projenizde oluşturulan Fakes derlemesine bir derleme başvurunuz olduğundan emin olmanız gerekir:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+    <ItemGroup>
+        <Reference Include="FakesAssemblies\System.Fakes.dll">
+    </ItemGroup>
+</Project>
+```
+
+Bu başvurunun el ile özel SDK stili projelere eklenmesi gerekir (.NET Core ve .NET Framework). Bu, test projenize örtük olarak derleme başvuruları eklemek için taşınmıştır. Bu yöntemi izlerseniz, üst derleme değiştiğinde Fakes derlemesinin güncelleştirildiğinden emin olmanız gerekir.
+::: moniker-end
+
+### <a name="running-microsoft-fakes-tests"></a>Microsoft Fakes testlerini çalıştırma
+Microsoft Fakes derlemeleri yapılandırılmış `FakesAssemblies` dizinde (varsayılan olarak) bulunduğu sürece `$(ProjectDir)FakesAssemblies` , [VSTest görevini](/azure/devops/pipelines/tasks/test/vstest?view=azure-devops)kullanarak testleri çalıştırabilirsiniz.
+
+::: moniker range=">=vs-2019"
+[VSTest Task](/azure/devops/pipelines/tasks/test/vstest?view=azure-devops) .NET Core projeleriyle Microsoft Fakes kullanılarak dağıtılmış test, Visual Studio 2019 güncelleştirme 9 Preview `20201020-06` ve üstünü gerektirir.
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+## <a name="transitioning-your-net-framework-test-projects-that-use-microsoft-fakes-to-sdk-style-net-framework-or-net-core-projects"></a>Microsoft Fakes kullanan .NET Framework test projelerinizi SDK stili .NET Framework veya .NET Core projelerine geçme
+.NET Core 'a geçiş yapmak için .NET Framework, Microsoft Fakes için ayarlanmış en az değişiklik yapmanız gerekir. Göz önünde bulundurmanız gereken durumlar şunlardır:
+- Özel bir proje şablonu kullanıyorsanız, bunun SDK stili ve uyumlu bir hedef çerçeve için yapılar olduğundan emin olmanız gerekir.
+- Bazı türler .NET Framework ve .NET Core 'daki farklı derlemelerde mevcuttur (örneğin, .NET Framework içinde ve ' de `System.DateTime` `System` / `mscorlib` .NET Core 'da bulunur `System.Runtime` ) ve bu senaryolarda, faıllanmış olan derlemeyi değiştirmeniz gerekir.
+- Fakes derlemesine ve test projesine bir derleme başvurunuz varsa, şuna benzer bir eksik başvuru hakkında bir derleme uyarısı görebilirsiniz:
+  ```
+  (ResolveAssemblyReferences target) ->
+  warning MSB3245: Could not resolve this reference. Could not locate the assembly "AssemblyName.Fakes". Check to make sure the assembly exists on disk.
+  If this reference is required by your code, you may get compilation errors.
+  ```
+  Bu uyarı, Fakes oluşturmada yapılan gerekli değişikliklerin yoksayılmasına neden olmuş olabilir. Artık derleme sırasında dolaylı olarak eklemediğimiz için, proje dosyasından derleme başvurusu kaldırılarak bu kaçınılabilir.
+::: moniker-end
+
+## <a name="microsoft-fakes-support"></a>Microsoft Fakes desteği 
+### <a name="microsoft-fakes-in-older-projects-targeting-net-framework-non-sdk-style"></a>Daha eski projelerde .NET Framework (SDK olmayan stili) hedefleyen Microsoft Fakes.
+- Microsoft Fakes derleme üretimi Visual Studio Enterprise 2015 ve üzeri sürümlerde desteklenir.
+- Microsoft Fakes testleri, kullanılabilir tüm Microsoft. TestPlatform NuGet paketleriyle çalıştırılabilir.
+- Kod kapsamı, Visual Studio Enterprise 2015 ve üzeri sürümlerde Microsoft Fakes kullanan test projeleri için desteklenir.
+
+### <a name="microsoft-fakes-in-sdk-style-net-framework-and-net-core-projects"></a>SDK stilindeki .NET Framework ve .NET Core projelerinde Microsoft Fakes
+- Microsoft Fakes derleme nesli, Visual Studio Enterprise 2019 güncelleştirme 6 ' da önizlenmiş ve güncelleştirme 8 ' de varsayılan olarak etkinleştirilmiştir.
+- .NET Framework hedef olan projeler için Microsoft Fakes testleri, kullanılabilir tüm Microsoft. TestPlatform NuGet paketleriyle çalıştırılabilir.
+- .NET Core ' u hedefleyen projelere yönelik Microsoft Fakes testleri, [16.8.0-Preview-20200921-01](https://www.nuget.org/packages/Microsoft.TestPlatform/16.8.0-preview-20200921-01) ve üzeri sürümlerle Microsoft. TestPlatform NuGet paketleri ile çalışabilir.
+- Kod kapsamı, Visual Studio Enterprise Sürüm 2015 ve üzeri sürümlerde Microsoft Fakes 'i kullanarak .NET Framework Hedefleme test projeleri için desteklenir.
+- Microsoft Fakes kullanarak .NET Core 'u hedefleyen test projeleri için kod kapsamı desteği geliştirme aşamasındadır.
+
 
 ## <a name="in-this-section"></a>Bu bölümde
 [Birim testi için uygulamanızın parçalarını birbirinden yalıtmak üzere saplamalar kullanma](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md)

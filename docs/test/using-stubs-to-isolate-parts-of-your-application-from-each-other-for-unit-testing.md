@@ -10,12 +10,12 @@ author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 1d66dcd0a59edfbfb199a68f81ecebe608afccb1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 268cfaa0a5df458ae529f5f2d369dc157ef64548
+ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85289059"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93325969"
 ---
 # <a name="use-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>Birim testi için uygulamanızın parçalarını birbirinden yalıtmak üzere saplamalar kullanma
 
@@ -29,7 +29,7 @@ Diyagramda, StockAnalyzer bileşeni test etmek istediğimiz bir bileşendir. Nor
 
 ![Gerçek ve saplama sınıfları bir arabirimle uyumlu.](../test/media/fakesinterfaces.png)
 
-Saplamalar bu yolla kodunuzun yapısına güveneceğinden genellikle saplamaları başka bir uygulamanın bir bölümünü ayırmak için kullanırsınız. Denetiminiz altında olmayan diğer derlemelerden yalıtmak için, *System.dll*gibi Normalde, normal olarak shims kullanırsınız. [Birim testi için uygulamanızı diğer derlemelerden yalıtmak için bkz. dolgular kullanma](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).
+Saplamalar bu yolla kodunuzun yapısına güveneceğinden genellikle saplamaları başka bir uygulamanın bir bölümünü ayırmak için kullanırsınız. Denetiminiz altında olmayan diğer derlemelerden yalıtmak için, *System.dll* gibi Normalde, normal olarak shims kullanırsınız. [Birim testi için uygulamanızı diğer derlemelerden yalıtmak için bkz. dolgular kullanma](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).
 
 ## <a name="how-to-use-stubs"></a>Saptamalar nasıl kullanılır?
 
@@ -88,7 +88,7 @@ Uygulamanızın herhangi bir bileşeninin kodu asla açıkça bir bildirimde vey
 
 - "Bileşen" olarak, bir sınıf veya geliştirmekte ve güncelleştirmekte olduğunuz bir sınıf grubu anlamına geliyor. Genellikle, bir bileşen Visual Studio projesindeki koddur. Aynı anda güncelleştirildiğinden, sınıfları bir bileşen içinde ayırmak daha az önemlidir.
 
-- Ayrıca, *System.dll*gibi görece sağlam bir platformun sınıflarından bileşenlerinizi ayırmak de önemli değildir. Bu sınıfların arabirimlerini yazmak kodunuzu dağıtabilir.
+- Ayrıca, *System.dll* gibi görece sağlam bir platformun sınıflarından bileşenlerinizi ayırmak de önemli değildir. Bu sınıfların arabirimlerini yazmak kodunuzu dağıtabilir.
 
 Aşağıdaki gibi bir arabirim kullanarak StockAnalyzer kodunu StockFeed ' dan ayırarak kullanabilirsiniz:
 
@@ -147,13 +147,16 @@ Saptamalar kullanmak için saptama türleri arabirimi tanımlarından oluşturma
 
 #### <a name="add-a-fakes-assembly"></a>Fakes derlemesi Ekle
 
-1. **Çözüm Gezgini**, birim testi projenizin **başvurularını**genişletin.
+1. **Çözüm Gezgini** , 
+    - Daha eski bir .NET Framework projesi (SDK olmayan stil) için, birim testi projenizin **Başvurular** düğümünü genişletin.
+    ::: moniker range=">=vs-2019"
+    - .NET Framework veya .NET Core 'u hedefleyen SDK stili bir proje için, **derlemeler** , **Projeler** veya **paketler** altında taklit etmek istediğiniz derlemeyi bulmak için **Bağımlılıklar** düğümünü genişletin.
+    ::: moniker-end
+    - Visual Basic ' de çalışıyorsanız, **Başvurular** düğümünü görmek için **Çözüm Gezgini** araç çubuğunda **tüm dosyaları göster** ' i seçin.
 
-   Visual Basic ' de çalışıyorsanız, **Başvurular** düğümünü görmek için **Çözüm Gezgini** araç çubuğunda **tüm dosyaları göster** ' i seçin.
+2. Dolgu oluşturmak istediğiniz sınıf tanımlarını içeren derlemeyi seçin. Örneğin, **TarihSaat** dolgusu istiyorsanız **System.dll** ' yi seçin.
 
-2. Saptamaları oluşturmak istediğiniz arabirim tanımlarını içeren derlemeyi seçin.
-
-3. Kısayol menüsünde **Fakes derlemesi Ekle**' yi seçin.
+3. Kısayol menüsünde **Fakes derlemesi Ekle** ' yi seçin.
 
 ### <a name="write-your-test-with-stubs"></a>Saptamalarla test yazma
 
@@ -338,7 +341,7 @@ stub.ValueSet = (value) => i = value;
 
 Bir özelliğin ayarlayıcısı ya da alıcısı için saplama yöntemleri sağlamazsanız, Fakes, saplama özelliğinin basit bir değişken gibi çalışması için değerleri depolayan bir saplama oluşturur.
 
-### <a name="events"></a>Ekinlikler
+### <a name="events"></a>Olaylar
 
 Olaylar, temsilci alanları olarak sunulur. Sonuç olarak herhangi bir saptama olayı, olay yedekleme alanını çağırarak basitçe yükseltilebilir. Saplama için aşağıdaki arabirimi ele alalım:
 
