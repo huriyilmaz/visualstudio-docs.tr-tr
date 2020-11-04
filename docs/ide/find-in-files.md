@@ -19,26 +19,26 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e1f067df647f843819e085f283005606699f3bb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a32720475bda124c563d45133028f43b4f1b9cd
+ms.sourcegitcommit: e132a870ec198fdcec289227f1a0c1c48fef070c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595481"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344513"
 ---
 # <a name="find-in-files"></a>Dosyalarda Bul
 
-**Dosyalarda bul** , belirtilen dosya kümesinde arama yapmanıza olanak tanır. Bulunan eşleşmeler ve gerçekleştirilen eylemler, **sonuç seçeneklerinde**seçilen **sonuçları bul** penceresinde listelenir.
+**Dosyalarda bul** , belirtilen dosya kümesinde arama yapmanıza olanak tanır. Bulunan eşleşmeler ve gerçekleştirilen eylemler, **sonuç seçeneklerinde** seçilen **sonuçları bul** penceresinde listelenir.
 
 **Bul ve Değiştir** penceresinde **dosyalarda bul** ' ü göstermek için aşağıdaki yöntemlerden herhangi birini kullanabilirsiniz.
 
 ## <a name="to-display-find-in-files"></a>Dosyalarda bul ' i görüntüleme
 
-1. Menü çubuğunda **Düzenle**  >  **Bul ve Değiştir**' i seçin.
+1. Menü çubuğunda **Düzenle**  >  **Bul ve Değiştir** ' i seçin.
 
 1. **Dosyalarda bul '** ı seçin.
 
-Bir bul işlemini iptal etmek için **CTRL**  +  **Kes**' e basın.
+Bir bul işlemini iptal etmek için **CTRL**  +  **Kes** ' e basın.
 
 > [!NOTE]
 > Bul ve Değiştir aracı, `Hidden` veya özniteliğiyle Dizin aramaz `System` .
@@ -48,7 +48,7 @@ Bir bul işlemini iptal etmek için **CTRL**  +  **Kes**' e basın.
 Yeni bir metin dizesi veya ifade aramak için, kutuyu kutuda belirtin. En son aradığınız 20 dizeden herhangi birini aramak için, açılan listeyi açın ve dizeyi seçin. Arama dizenizde bir veya daha fazla normal ifade kullanmak istiyorsanız bitişik **Ifade Oluşturucu** düğmesini seçin. Daha fazla bilgi için bkz. [Visual Studio 'da normal Ifadeler kullanma](../ide/using-regular-expressions-in-visual-studio.md).
 
 > [!NOTE]
-> **Ifade Oluşturucu** düğmesi yalnızca **Bul seçenekleri**altında **Normal ifadeleri kullan** seçeneğini belirlediyseniz etkinleştirilir.
+> **Ifade Oluşturucu** düğmesi yalnızca **Bul seçenekleri** altında **Normal ifadeleri kullan** seçeneğini belirlediyseniz etkinleştirilir.
 
 ## <a name="look-in"></a>Arama yeri
 
@@ -92,11 +92,11 @@ Belirli türlerin dosyalarını bulacak önceden yapılandırılmış bir arama 
 
 **Arama sonuçları 1 penceresi**
 
-Seçildiğinde, geçerli aramanın sonuçları, **sonuçları Bul 1** penceresinin içeriğinin yerini alır. Bu pencere, arama sonuçlarınızı göstermek için otomatik olarak açılır. Bu pencereyi el ile açmak için, **Görünüm** menüsünde **diğer pencereler** ' i seçin ve **sonuçları Bul 1**' i seçin.
+Seçildiğinde, geçerli aramanın sonuçları, **sonuçları Bul 1** penceresinin içeriğinin yerini alır. Bu pencere, arama sonuçlarınızı göstermek için otomatik olarak açılır. Bu pencereyi el ile açmak için, **Görünüm** menüsünde **diğer pencereler** ' i seçin ve **sonuçları Bul 1** ' i seçin.
 
 **Sonuçları bul 2 penceresi**
 
-Seçildiğinde, geçerli aramanın sonuçları, **bulma sonuçları 2** penceresinin içeriğinin yerini alır. Bu pencere, arama sonuçlarınızı göstermek için otomatik olarak açılır. Bu pencereyi el ile açmak için, **Görünüm** menüsünde **diğer pencereler** ' i seçin ve **sonuçları bul 2**' yi seçin.
+Seçildiğinde, geçerli aramanın sonuçları, **bulma sonuçları 2** penceresinin içeriğinin yerini alır. Bu pencere, arama sonuçlarınızı göstermek için otomatik olarak açılır. Bu pencereyi el ile açmak için, **Görünüm** menüsünde **diğer pencereler** ' i seçin ve **sonuçları bul 2** ' yi seçin.
 
 **Yalnızca dosya adlarını görüntüle**
 

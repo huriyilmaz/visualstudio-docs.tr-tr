@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 8715bd00653f74d874dc077180a9978b26bff8f1
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 6543dfe8298ea24aa731a74556b01be1beeed2bf
+ms.sourcegitcommit: e132a870ec198fdcec289227f1a0c1c48fef070c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134733"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344480"
 ---
 # <a name="devinit-commands"></a>devinit komutları
 
@@ -34,10 +34,10 @@ Komut için isteğe bağlı seçenekler `devinit init` .
 
 | Bağımsız Değişken             | Gerekli | Açıklama                                                               |
 |----------------------|----------|---------------------------------------------------------------------------|
-| -f,--dosyası            | Hayır       | Dosyadaki _.devinit.js_ yolu.                                         |
-| --hata-eylem       | Hayır       | Hataların nasıl işleneceğini belirtir. Seçenekler: durdur, Yoksay, devam et (varsayılan).|
-| -v,--verbose         | Hayır       | Ayrıntılı çıktıyı yay.                                                      |
-| -n,--Kuru çalıştırma         | Hayır       | Kuru çalıştırma.                                                                  |
+| -f,--dosyası            | No       | Dosyadaki _.devinit.js_ yolu.                                         |
+| --hata-eylem       | No       | Hataların nasıl işleneceğini belirtir. Seçenekler: durdur, Yoksay, devam et (varsayılan).|
+| -v,--verbose         | No       | Ayrıntılı çıktıyı yay.                                                      |
+| -n,--Kuru çalıştırma         | No       | Kuru çalıştırma.                                                                  |
 
 #### <a name="--file-argument"></a>--Dosya bağımsız değişkeni
 
@@ -53,7 +53,7 @@ Dosyadaki _devinit.js_ yolunu belirtir. --Dosyası belirtilmemişse, aşağıdak
 * {geçerli-dizin} \\ . devcontainer \\devinit.json
 
 > [!NOTE]
-> Birden çok varsayılan dosya bulunursa devinit, yukarıdaki listede ilk görüntülenen dosyayı kullanır.
+> Birden çok varsayılan dosya bulunursa, devınit yukarıdaki listede ilk görüntülenen dosyayı kullanır.
 
 #### <a name="--error-action-argument"></a>--hata-eylem bağımsız değişkeni
 
@@ -81,12 +81,12 @@ Komut için Seçenekler `devinit run` .
 
 | Bağımsız Değişken                                      | Gerekli | Açıklama                                                                          |
 |-----------------------------------------------|----------|--------------------------------------------------------------------------------------|
-| -t,--aracı                                     | Yes      | Gereklidir. Araç adı.                                                             |
-| -ı,--girişi                                    | Hayır       | Araç giriş değeri. Örneğin, bir dosya adı, paket veya ad.                     |
-| --hata-eylem                                | Hayır       | Araç hatalarının nasıl işleneceğini belirtir: durdur, Yoksay, devam et. Varsayılan değer durdurulur. |
-| -v,--verbose                                  | Hayır       | Ayrıntılı çıktıyı yay.                                                                 |
-| -n,--Kuru çalıştırma                                  | Hayır       | Kuru çalıştırma.                                                                             |
-| --&lt;arg1 &gt; &lt; arg2 &gt; ... &lt; argN&gt;  | Hayır       | Araca ek komut satırı bağımsız değişkenleri.                                       |
+| -t,--aracı                                     | Evet      | Gereklidir. Araç adı.                                                             |
+| -ı,--girişi                                    | No       | Araç giriş değeri. Örneğin, bir dosya adı, paket veya ad.                     |
+| --hata-eylem                                | No       | Araç hatalarının nasıl işleneceğini belirtir: durdur, Yoksay, devam et. Varsayılan değer durdurulur. |
+| -v,--verbose                                  | No       | Ayrıntılı çıktıyı yay.                                                                 |
+| -n,--Kuru çalıştırma                                  | No       | Kuru çalıştırma.                                                                             |
+| --&lt;arg1 &gt; &lt; arg2 &gt; ... &lt; argN&gt;  | No       | Araca ek komut satırı bağımsız değişkenleri.                                       |
 
 #### <a name="--error-action-argument"></a>--hata-eylem bağımsız değişkeni
 
@@ -136,7 +136,7 @@ devinit show -t <toolname>
 
 | Bağımsız Değişken       | Gerekli | Açıklama                                                                          |
 |----------------|----------|--------------------------------------------------------------------------------------|
-| -t,--aracı      | Yes      | Gereklidir. Araç adı.                                                             |
+| -t,--aracı      | Evet      | Gereklidir. Araç adı.                                                             |
 
 Belirli bir araç için yardım bilgilerini yazdırır.
 

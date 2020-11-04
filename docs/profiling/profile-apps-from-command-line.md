@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 6de4291d08b3a6b6897b3ae41562f70fad5372b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b0d2b0964c565bab4d3a0731a14b93ccd976bb69
+ms.sourcegitcommit: e132a870ec198fdcec289227f1a0c1c48fef070c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89053435"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344500"
 ---
 # <a name="measure-application-performance-from-the-command-line"></a>Komut satırından uygulama performansını ölçme
 
@@ -27,13 +27,13 @@ Komut satırı araçlarını kullanarak bir uygulamayla ilgili performans bilgil
 
 Bu makalede açıklanan örnekte, Microsoft Notepad için performans bilgilerini topladığınızda, ancak aynı yöntem herhangi bir işlemi profilde de kullanılabilir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * Visual Studio 2019 veya sonraki sürümleri
 
 * Komut satırı araçlarıyla benzerlik
 
-* Visual Studio yüklü olmayan bir uzak makinede performans bilgilerini toplamak için, uzak makineye [Visual Studio Için performans araçları](https://visualstudio.microsoft.com/downloads#remote-tools-for-visual-studio-2019) 'nı yükleme. Araçların sürümü Visual Studio sürümünüz ile aynı olmalıdır.
+* Visual Studio yüklü olmayan bir uzak makinede performans bilgilerini toplamak için [Visual Studio için uzak Araçlar](https://visualstudio.microsoft.com/downloads#remote-tools-for-visual-studio-2019) uzak makineye yükleme. Araçların sürümü Visual Studio sürümünüz ile aynı olmalıdır.
 
 ## <a name="collect-performance-data"></a>Performans verilerini topla
 
@@ -71,7 +71,7 @@ Visual Studio tanılama CLı araçları kullanılarak profil oluşturma işlemi,
    VSDiagnostics.exe stop <id> /output:<path to file>
    ```
 
-1. Önceki komuttan *. diagsession* dosyası çıkışını bulun ve toplanan bilgileri incelemek için Visual Studio (**Dosya**  >  **Aç**) içinde açın.
+1. Önceki komuttan *. diagsession* dosyası çıkışını bulun ve toplanan bilgileri incelemek için Visual Studio ( **Dosya**  >  **Aç** ) içinde açın.
 
    Sonuçları çözümlemek için, ilgili performans aracına yönelik belgelere bakın. Örneğin, bu [CPU kullanımı](../profiling/cpu-usage.md), [.NET nesne ayırma aracı](../profiling/dotnet-alloc-tool.md)veya [veritabanı](../profiling/analyze-database.md) aracı olabilir.
 

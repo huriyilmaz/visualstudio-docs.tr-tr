@@ -1,7 +1,7 @@
 ---
 title: devinit yapılandırma dosyası
 description: Devınit için bildirim dosyası .devinit.jsbelgeleri.
-ms.date: 08/28/2020
+ms.date: 11/02/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: b0cfb1c41d7721598bae44f950ced01d17ff494a
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 29ea900b534bc03e47cfda49dba15af910189e48
+ms.sourcegitcommit: e132a870ec198fdcec289227f1a0c1c48fef070c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005362"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344487"
 ---
 # <a name="devinit-configuration-file"></a>devinit yapılandırma dosyası
 
@@ -24,11 +24,17 @@ ms.locfileid: "91005362"
 
 `devinit.exe init`Komut, _.devinit.js_ dosyası aracılığıyla yönlendiriliyor. Varsayılan olarak, `devinit.exe` aşağıdaki konumlarda dosyayı arar:
 
-- _{geçerli-dizin}\\_
-- _{geçerli-dizin} \\ . devinit\\_
-- _{geçerli-dizin} \\ . devcontainer\\_
+* {geçerli-dizin} \\ Üzerinde.devinit.js
+* {geçerli-dizin} \\ Üzerindedevinit.js
+* {geçerli-dizin} \\ . devinit \\.devinit.json
+* {geçerli-dizin} \\ . devinit \\devinit.json
+* {geçerli-dizin} \\ devinit \\.devinit.json
+* {geçerli-dizin} \\ devinit \\devinit.json
+* {geçerli-dizin} \\ . devcontainer \\.devinit.json
+* {geçerli-dizin} \\ . devcontainer \\devinit.json
 
-_._ Dizin ve dosya adları atlanabilir.
+> [!NOTE]
+> Birden çok varsayılan dosya bulunursa, devınit yukarıdaki listede ilk görüntülenen dosyayı kullanır.
 
 Dosyadaki _.devinit.js_ , açıkça seçeneği aracılığıyla da belirlenebilir `--file` / `-f` .
 
@@ -58,14 +64,14 @@ Yollar, devınit 'in çalıştığı konuma göre belirlenir. Bu, genellikle yü
 | Ad         | Tür   | Gerekli | Değer                              |
 |--------------|--------|----------|------------------------------------|
 | **açıklamaları** | dize | No       | Dosya için açıklamalar.             |
-| **çalışmaz**      | array  | Yes      | [RunTool nesnesi](#run-tool-object) |
+| **çalışmaz**      | array  | Evet      | [RunTool nesnesi](#run-tool-object) |
 
 #### <a name="run-tool-object"></a>Araç nesnesi Çalıştır
 
 | Ad                  | Tür   | Gerekli | Değer                                                                                                      |
 |-----------------------|--------|----------|------------------------------------------------------------------------------------------------------------|
 | **açıklamaları**          | dize | No       | Araç girişi için açıklamalar.                                                                               |
-| **Aracı**              | string | Yes      | Araç adı. `devinit list`Kullanılabilir araçların listesi için komutuna bakın.                            |
+| **Aracı**              | string | Evet      | Araç adı. `devinit list`Kullanılabilir araçların listesi için komutuna bakın.                            |
 | **girişinin**             | dize | No       | Araç girişi. Araca göre farklılık gösterir. Örneğin, gerekli sürüm, paket KIMLIĞI, dosya adı veya klasör.|
 | **additionalOptions** | dize | No       | Araca geçirilecek ek komut satırı bağımsız değişkenleri.                                                |
 
