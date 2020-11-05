@@ -1,7 +1,7 @@
 ---
 title: Depolama kaynaklarına gözatıp yönetme
 description: Sunucu Gezgini kullanarak depolama kaynaklarına göz atma ve bunları yönetme
-ms.custom: vs-azure
+ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
 assetId: 658dc064-4a4e-414b-ae5a-a977a34c930d
@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/24/2017
 ms.author: ghogen
-ms.openlocfilehash: 059145dbce95ade9f628f26afe4f70e1d6a065e9
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: ab8373a24d296052b7ecfc7fcae6c85c14c74a1d
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036450"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398871"
 ---
 # <a name="browse-and-manage-storage-resources-by-using-server-explorer"></a>Sunucu Gezgini'ni kullanarak depolama kaynaklarına göz atma ve bu kaynakları yönetme
 
@@ -24,7 +24,7 @@ ms.locfileid: "90036450"
 
 Microsoft Visual Studio için Azure Araçları 'nı yüklediyseniz, Azure için depolama hesaplarınızdan blob, kuyruk ve tablo verilerini görüntüleyebilirsiniz. Sunucu Gezgini 'de Azure **depolama** düğümü, yerel depolama öykünücü hesabınızdaki ve diğer Azure depolama hesaplarınızdaki verileri gösterir.
 
-Visual Studio 'da Sunucu Gezgini görüntülemek için, menü çubuğunda, Sunucu Gezgini **görüntüle**' yi seçin  >  **Server Explorer**. **Depolama** düğümü, her bir Azure aboneliğinde veya bağlı olduğunuz sertifikada bulunan tüm depolama hesaplarını gösterir. Depolama Hesabınız görünmezse, [Bu makalenin ilerleyen kısımlarındaki](#add-storage-accounts-by-using-server-explorer)yönergeleri izleyerek ekleyebilirsiniz.
+Visual Studio 'da Sunucu Gezgini görüntülemek için, menü çubuğunda, Sunucu Gezgini **görüntüle** ' yi seçin  >  **Server Explorer**. **Depolama** düğümü, her bir Azure aboneliğinde veya bağlı olduğunuz sertifikada bulunan tüm depolama hesaplarını gösterir. Depolama Hesabınız görünmezse, [Bu makalenin ilerleyen kısımlarındaki](#add-storage-accounts-by-using-server-explorer)yönergeleri izleyerek ekleyebilirsiniz.
 
 Azure SDK 2,7 ' den başlayarak, Azure kaynaklarınızı görüntülemek ve yönetmek için bulut Gezgini 'ni de kullanabilirsiniz. Daha fazla bilgi için bkz. [Cloud Explorer Ile Azure kaynaklarını yönetme](vs-azure-tools-resources-managing-with-cloud-explorer.md).
 
@@ -34,7 +34,7 @@ Sunucu Gezgini, depolama öykünücü hesabınızdaki Bloblar, kuyruklar ve tabl
 
 Depolama öykünücüsü hesabının kaynaklarını görmek için **geliştirme** düğümünü genişletin. **Geliştirme** düğümünü genişlettiğinizde depolama öykünücüsü başlatılmamışsa, otomatik olarak başlatılır. Bu işlem birkaç saniye sürebilir. Depolama öykünücüsü başladığında Visual Studio 'nun diğer alanlarında çalışmaya devam edebilirsiniz.
 
-Bir depolama hesabındaki kaynakları görüntülemek için, **BLOB**, **kuyruk**ve **tablo** düğümlerini gördüğünüz Sunucu Gezgini depolama hesabının düğümünü genişletin.
+Bir depolama hesabındaki kaynakları görüntülemek için, **BLOB** , **kuyruk** ve **tablo** düğümlerini gördüğünüz Sunucu Gezgini depolama hesabının düğümünü genişletin.
 
 ## <a name="work-with-blob-resources"></a>Blob kaynaklarıyla çalışma
 
@@ -42,7 +42,7 @@ Bir depolama hesabındaki kaynakları görüntülemek için, **BLOB**, **kuyruk*
 
 ### <a name="to-create-a-blob-container"></a>Blob kapsayıcısı oluşturmak için
 
-1. **Bloblar** düğümünün kısayol menüsünü açın ve ardından **BLOB kapsayıcısı oluştur**' u seçin.
+1. **Bloblar** düğümünün kısayol menüsünü açın ve ardından **BLOB kapsayıcısı oluştur** ' u seçin.
 1. **BLOB kapsayıcısı oluştur** iletişim kutusunda yeni kapsayıcının adını girin.
 1. Klavyenizde Enter ' u seçin veya blob kapsayıcısını kaydetmek için ad alanının dışına tıklayabilir veya dokunabilirsiniz.
 
@@ -51,11 +51,11 @@ Bir depolama hesabındaki kaynakları görüntülemek için, **BLOB**, **kuyruk*
 
 ### <a name="to-delete-a-blob-container"></a>Blob kapsayıcısını silmek için
 
-Kaldırmak istediğiniz blob kapsayıcısı için kısayol menüsünü açın ve **Sil**' i seçin.
+Kaldırmak istediğiniz blob kapsayıcısı için kısayol menüsünü açın ve **Sil** ' i seçin.
 
 ### <a name="to-display-a-list-of-the-items-in-a-blob-container"></a>Blob kapsayıcısındaki öğelerin listesini görüntüleme
 
-Listede bir blob kapsayıcısı adı için kısayol menüsünü açın ve **Aç**' ı seçin.
+Listede bir blob kapsayıcısı adı için kısayol menüsünü açın ve **Aç** ' ı seçin.
 
 Blob kapsayıcısının içeriğini görüntülediğinizde, blob kapsayıcı görünümü olarak bilinen bir sekmede görüntülenir.
 
@@ -72,7 +72,7 @@ Blob kapsayıcı görünümünün sağ üst köşesindeki düğmeleri kullanarak
 
 ### <a name="to-create-a-folder-or-subfolder-in-a-blob-container"></a>Blob kapsayıcısında klasör veya alt klasör oluşturmak için
 
-1. **Cloud Explorer**'da blob kapsayıcısını seçin. Kapsayıcı penceresinde, **blobu karşıya yükle** düğmesini seçin.
+1. **Cloud Explorer** 'da blob kapsayıcısını seçin. Kapsayıcı penceresinde, **blobu karşıya yükle** düğmesini seçin.
 
 1. Karşıya **yeni dosya yükle** iletişim kutusunda, karşıya yüklemek istediğiniz dosyayı belirtmek Için, **tarayıcı** düğmesini seçin ve ardından **klasöre (isteğe bağlı)** bir klasör adı girin.
 
@@ -94,7 +94,7 @@ Blob kapsayıcılarındaki klasörler sanal klasörlerdir, boş bir klasör olu�
 
 Ortak bir ön ek belirterek görüntülenen Blobları filtreleyebilirsiniz.
 
-Örneğin, filtre metin kutusuna **Hello** önekini girip **Yürüt** (**!**) düğmesini seçerseniz, yalnızca "Hello" ile başlayan Bloblar görüntülenir.
+Örneğin, filtre metin kutusuna **Hello** önekini girip **Yürüt** ( **!** ) düğmesini seçerseniz, yalnızca "Hello" ile başlayan Bloblar görüntülenir.
 
 ![Filtre metin kutusu](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC519076.png)
 
@@ -102,9 +102,9 @@ Filtre metin kutusu, büyük/küçük harfe duyarlıdır ve joker karakterlerle 
 
 ### <a name="to-download-blob-data"></a>Blob verilerini indirmek için
 
-**Cloud Explorer**'da aşağıdaki yöntemlerden birini kullanın:
+**Cloud Explorer** 'da aşağıdaki yöntemlerden birini kullanın:
 
-* Bir veya daha fazla Blobun kısayol menüsünü açın ve **Aç**' ı seçin.
+* Bir veya daha fazla Blobun kısayol menüsünü açın ve **Aç** ' ı seçin.
 * Blob adını seçin ve sonra **Aç** düğmesini seçin.
 * Blob adına çift tıklayın.
 
@@ -114,7 +114,7 @@ Blob, bu dosya türü için varsayılan düzenleyicide açılır. İşletim sist
 
 Blob verileri yerel olarak önbelleğe alınır ve BLOB 'un Azure Blob depolamada son değiştirilme zamanına karşı denetlenir. Blob son indirildikten sonra güncelleştirilirse, yeniden indirilir. Aksi takdirde, blob yerel diskten yüklenir.
 
-Varsayılan olarak, bir blob geçici bir dizine indirilir. Blob 'ları belirli bir dizine indirmek için seçili blob adları için kısayol menüsünü açın ve **farklı kaydet**' i seçin. Bir blobu bu şekilde kaydettiğinizde, blob dosyası açılmaz ve yerel dosya okuma/yazma öznitelikleriyle oluşturulur.
+Varsayılan olarak, bir blob geçici bir dizine indirilir. Blob 'ları belirli bir dizine indirmek için seçili blob adları için kısayol menüsünü açın ve **farklı kaydet** ' i seçin. Bir blobu bu şekilde kaydettiğinizde, blob dosyası açılmaz ve yerel dosya okuma/yazma öznitelikleriyle oluşturulur.
 
 ### <a name="to-upload-blobs"></a>Blobları karşıya yüklemek için
 
@@ -130,7 +130,7 @@ Azure Tanılama hakkında daha fazla bilgi için bkz. [Azure Tanılama kullanara
 
 ### <a name="to-get-the-url-for-a-blob"></a>Bir Blobun URL 'sini almak için
 
-Blobun kısayol menüsünü açın ve **URL 'Yi Kopyala**' yı seçin.
+Blobun kısayol menüsünü açın ve **URL 'Yi Kopyala** ' yı seçin.
 
 ### <a name="to-edit-a-blob"></a>Bir blobu düzenlemek için
 
@@ -166,14 +166,14 @@ Azure Tablo depolama, büyük miktarlarda yapısal veriyi depolar. Hizmet, Azure
 
 ### <a name="to-create-a-table"></a>Tablo oluşturmak için
 
-1. **Cloud Explorer**'da depolama hesabının **Tablolar** düğümünü seçin ve ardından **tablo oluştur**' u seçin.
+1. **Cloud Explorer** 'da depolama hesabının **Tablolar** düğümünü seçin ve ardından **tablo oluştur** ' u seçin.
 1. **Tablo oluştur** iletişim kutusunda tablo için bir ad girin.
 
 ### <a name="to-view-table-data"></a>Tablo verilerini görüntülemek için
 
-1. **Cloud Explorer**'da **Azure** düğümünü açın ve **depolama** düğümünü açın.
+1. **Cloud Explorer** 'da **Azure** düğümünü açın ve **depolama** düğümünü açın.
 1. İlgilendiğiniz depolama hesabı düğümünü açın ve ardından depolama hesabı için tabloların listesini görmek üzere **Tables** düğümünü açın.
-1. Bir tablo için kısayol menüsünü açın ve ardından **tabloyu görüntüle**' yi seçin.
+1. Bir tablo için kısayol menüsünü açın ve ardından **tabloyu görüntüle** ' yi seçin.
 
     ![Çözüm Gezgini bir Azure tablosu](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC744165.png)
 
@@ -181,7 +181,7 @@ Tablo varlıklara (satırlarda gösterilen) ve özelliklerde (sütunlarda göste
 
 ### <a name="to-edit-table-data"></a>Tablo verilerini düzenlemek için
 
-**Tablo Tasarımcısı**, bir varlık (tek bir satır) veya bir Özellik (tek bir hücre) için kısayol menüsünü açın ve ardından **Düzenle**' yi seçin.
+**Tablo Tasarımcısı** , bir varlık (tek bir satır) veya bir Özellik (tek bir hücre) için kısayol menüsünü açın ve ardından **Düzenle** ' yi seçin.
 
 ![Tablo varlığı ekleme veya düzenleme](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC656238.png)
 
@@ -189,7 +189,7 @@ Tek bir tablodaki varlıkların aynı özellik kümesine (sütun) sahip olması 
 
 * İkili verileri görüntüleyemez veya düzenleyemezsiniz ( `type byte[]` ), ancak bir tabloda saklayabilirsiniz.
 * Azure Tablo Depolaması bu işlemi desteklemediğinden **partitionkey** veya **rowkey** değerlerini düzenleyemezsiniz.
-* **Zaman damgası**adlı bir özellik oluşturamazsınız. Azure depolama hizmetleri, bu adı taşıyan bir özellik kullanır.
+* **Zaman damgası** adlı bir özellik oluşturamazsınız. Azure depolama hizmetleri, bu adı taşıyan bir özellik kullanır.
 * Bir **Tarih saat** değeri girerseniz, bilgisayarınızın bölge ve dil ayarlarına uygun bir biçimi izlemeniz gerekir (ÖRNEĞIN, aa/gg/yyyy HH: mm: SS [har | PM] ABD Ingilizcesi için).
 
 ### <a name="to-add-entities"></a>Varlık eklemek için
@@ -229,17 +229,17 @@ Sunucu Gezgini bir depolama hesabına bağlanıp verileri aldığında, işlemin
 
 ### <a name="to-refresh-blob-container-data"></a>Blob kapsayıcı verilerini yenilemek için
 
-* **Depolama**altındaki **Bloblar** düğümünü seçin ve ardından Sunucu Gezgini araç çubuğunda **Yenile** düğmesini seçin.
+* **Depolama** altındaki **Bloblar** düğümünü seçin ve ardından Sunucu Gezgini araç çubuğunda **Yenile** düğmesini seçin.
 * Görüntülenen blob 'ların listesini yenilemek için **Yürüt** düğmesini seçin.
 
 ### <a name="to-refresh-table-data"></a>Tablo verilerini yenilemek için
 
-* **Depolama**altındaki **Tablolar** düğümünü ve ardından Sunucu Gezgini araç çubuğunda **Yenile** düğmesini seçin.
-* **Tablo Tasarımcısı**' de görüntülenen varlıkların listesini yenilemek Için Tablo Tasarımcısı **Çalıştır** düğmesini seçin.
+* **Depolama** altındaki **Tablolar** düğümünü ve ardından Sunucu Gezgini araç çubuğunda **Yenile** düğmesini seçin.
+* **Tablo Tasarımcısı** ' de görüntülenen varlıkların listesini yenilemek Için Tablo Tasarımcısı **Çalıştır** düğmesini seçin.
 
 ### <a name="to-refresh-queue-data"></a>Sıra verilerini yenilemek için
 
-**Depolama**altındaki **Kuyruklar** düğümünü seçin ve ardından Sunucu Gezgini araç çubuğunda **Yenile** düğmesini seçin.
+**Depolama** altındaki **Kuyruklar** düğümünü seçin ve ardından Sunucu Gezgini araç çubuğunda **Yenile** düğmesini seçin.
 
 ### <a name="to-refresh-all-items-in-a-storage-account"></a>Bir depolama hesabındaki tüm öğeleri yenilemek için
 
@@ -251,7 +251,7 @@ Sunucu Gezgini kullanarak depolama hesapları eklemenin iki yolu vardır. Azure 
 
 ### <a name="to-create-a-storage-account-by-using-server-explorer"></a>Sunucu Gezgini kullanarak bir depolama hesabı oluşturmak için
 
-1. Sunucu Gezgini ' de, **depolama** düğümü için kısayol menüsünü açın ve **depolama hesabı oluştur**' u seçin.
+1. Sunucu Gezgini ' de, **depolama** düğümü için kısayol menüsünü açın ve **depolama hesabı oluştur** ' u seçin.
 
 1. **Depolama hesabı oluştur** iletişim kutusunda aşağıdaki bilgileri seçin veya girin:
 
@@ -262,13 +262,13 @@ Sunucu Gezgini kullanarak depolama hesapları eklemenin iki yolu vardır. Azure 
 
    ![Azure depolama hesabı oluşturma](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC744166.png)
 
-1. **Oluştur**’u seçin.
+1. **Oluştur** ’u seçin.
 
 Yeni depolama hesabı Çözüm Gezgini ' deki **depolama** listesinde görüntülenir.
 
 ### <a name="to-attach-an-existing-storage-account-by-using-server-explorer"></a>Sunucu Gezgini kullanarak var olan bir depolama hesabı eklemek için
 
-1. Sunucu Gezgini ' de Azure **Storage** düğümünün kısayol menüsünü açın ve **dış depolama Ekle**' yi seçin.
+1. Sunucu Gezgini ' de Azure **Storage** düğümünün kısayol menüsünü açın ve **dış depolama Ekle** ' yi seçin.
 
     ![Var olan bir depolama hesabı ekleniyor](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766039.png)
 1. **Depolama hesabı oluştur** iletişim kutusunda aşağıdaki bilgileri seçin veya girin:
@@ -279,13 +279,13 @@ Yeni depolama hesabı Çözüm Gezgini ' deki **depolama** listesinde görüntü
 
 ### <a name="to-view-the-secondary-endpoints"></a>İkincil uç noktaları görüntülemek için
 
-**Okuma Erişimli Coğrafi olarak yedekli** çoğaltma seçeneğini kullanarak bir depolama hesabı oluşturduysanız, hesap adının kısayol menüsünü açarak ve ardından **Özellikler**' i seçerek ikincil uç noktalarını görüntüleyebilirsiniz.
+**Okuma Erişimli Coğrafi olarak yedekli** çoğaltma seçeneğini kullanarak bir depolama hesabı oluşturduysanız, hesap adının kısayol menüsünü açarak ve ardından **Özellikler** ' i seçerek ikincil uç noktalarını görüntüleyebilirsiniz.
 
 ![Depolama ikincil uç noktaları](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766040.png)
 
 ### <a name="to-remove-a-storage-account-from-server-explorer"></a>Bir depolama hesabını Sunucu Gezgini kaldırmak için
 
-Sunucu Gezgini, hesap adının kısayol menüsünü açın ve **Sil**' i seçin.
+Sunucu Gezgini, hesap adının kısayol menüsünü açın ve **Sil** ' i seçin.
 
 Bir depolama hesabını silerseniz, bu hesap için kaydedilen anahtar bilgileri de kaldırılır.
 

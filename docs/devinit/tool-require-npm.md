@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 0af1e0561edfc4cf12ccd19f17bab2a386d0afe9
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 87938b05b860921ee81cb2ca9191ad58fa85dd7a
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005185"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399594"
 ---
 # <a name="require-npm"></a>require-npm
 
@@ -48,7 +48,7 @@ Aracın varsayılan davranışı `require-nodejs` NPM 'nin en son LTS sürümün
 
 ```json
 {
-    "$schema": "https://json.schemastore.org/devinit.schema-2.0",
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
             "comments": "Example that will trigger the Default behavior of installing latest LTS of NPM.",

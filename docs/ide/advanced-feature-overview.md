@@ -7,12 +7,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 60f5a5545152b9bf262f652e2fce5ce04e7b71cb
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 04c725e5bcae5d72562e767a06afdee8aa84950b
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099433"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399259"
 ---
 # <a name="features-of-visual-studio"></a>Visual Studio 'nun özellikleri
 
@@ -20,7 +20,7 @@ ms.locfileid: "92099433"
 
 ## <a name="modular-installation"></a>Modüler yükleme
 
-Visual Studio 'nun modüler yükleyicisi, *iş yüklerini*seçmenizi ve yüklemenizi sağlar. İş yükleri, tercih ettiğiniz programlama dili veya platformu için gereken özellik gruplarıdır. Bu strateji, Visual Studio yüklemesinin parmak izini daha küçük tutmaya yardımcı olur, bu da daha hızlı yüklenip güncelleştirilir.
+Visual Studio 'nun modüler yükleyicisi, *iş yüklerini* seçmenizi ve yüklemenizi sağlar. İş yükleri, tercih ettiğiniz programlama dili veya platformu için gereken özellik gruplarıdır. Bu strateji, Visual Studio yüklemesinin parmak izini daha küçük tutmaya yardımcı olur, bu da daha hızlı yüklenip güncelleştirilir.
 
 ::: moniker range="vs-2017"
 
@@ -60,7 +60,7 @@ Visual Studio 'nun [bulut Gezgini](/azure/vs-azure-tools-resources-managing-with
 - BLOB depolama, kuyruklar ve tablolar için [Azure Storage bağlı hizmeti](/azure/vs-azure-tools-connected-services-storage)
 - Web Apps için gizli dizileri yönetmek üzere [bağlı hizmet Key Vault](/azure/key-vault/vs-key-vault-add-connected-service)
 
-Kullanılabilir **bağlı hizmetler** , proje türüne bağlıdır. **Çözüm Gezgini** ' de projeye sağ tıklayıp **Add**  >  **bağlı hizmet**Ekle ' yi seçerek bir hizmet ekleyin.
+Kullanılabilir **bağlı hizmetler** , proje türüne bağlıdır. **Çözüm Gezgini** ' de projeye sağ tıklayıp **Add**  >  **bağlı hizmet** Ekle ' yi seçerek bir hizmet ekleyin.
 
 ![Visual Studio bağlı hizmetleri](media/connected-services.png)
 
@@ -82,7 +82,7 @@ Visual Studio 'Yu kullanarak macOS, Linux ve Windows için uygulama ve Oyunlar, 
 
 - &mdash; &mdash; [Apache Cordova](/visualstudio/cross-platform/tools-for-cordova/)kullanarak IOS, Android ve Windows için mobil uygulamalar oluşturmak üzere standart Web teknolojileri HTML, CSS ve JavaScript kullanın.
 
-- [Unity için Visual Studio Araçları](../cross-platform/visual-studio-tools-for-unity.md)kullanarak C# dilinde 2B ve 3B Oyunlar oluşturun.
+- [Unity için Visual Studio Araçları](/gamedev/unity/get-started/visual-studio-tools-for-unity.md)kullanarak C# dilinde 2B ve 3B Oyunlar oluşturun.
 
 - İOS, Android ve Windows cihazları için yerel C++ uygulamaları oluşturun. [Platformlar arası geliştirme için C++](/cpp/cross-platform/visual-cpp-for-cross-platform-mobile-development)kullanarak IOS, Android ve Windows için oluşturulan kitaplıklarda ortak kod paylaşma.
 
@@ -90,7 +90,7 @@ Visual Studio 'Yu kullanarak macOS, Linux ve Windows için uygulama ve Oyunlar, 
 
 ## <a name="connect-to-databases"></a>Veritabanlarına bağlanma
 
-**Sunucu Gezgini** , SQL Server örneklerine ve varlıklara yerel olarak, uzaktan ve Azure, Salesforce.com, Microsoft 365 ve web sitelerinde gözatmanıza ve yönetmenize yardımcı olur. **Sunucu Gezgini**açmak için, ana menüdeki Sunucu Gezgini **görüntüle**' yi seçin  >  **Server Explorer**. Sunucu Gezgini kullanma hakkında daha fazla bilgi için bkz. [yeni bağlantılar ekleme](../data-tools/add-new-connections.md).
+**Sunucu Gezgini** , SQL Server örneklerine ve varlıklara yerel olarak, uzaktan ve Azure, Salesforce.com, Microsoft 365 ve web sitelerinde gözatmanıza ve yönetmenize yardımcı olur. **Sunucu Gezgini** açmak için, ana menüdeki Sunucu Gezgini **görüntüle** ' yi seçin  >  **Server Explorer**. Sunucu Gezgini kullanma hakkında daha fazla bilgi için bkz. [yeni bağlantılar ekleme](../data-tools/add-new-connections.md).
 
 [SQL Server veri araçları (SSDT)](/sql/ssdt/download-sql-server-data-tools-ssdt) , SQL Server, Azure SQL veritabanı ve Azure SQL veri ambarı için güçlü bir geliştirme ortamıdır. Veritabanlarını oluşturmanızı, hatalarını ayıklamanızı, bakımını ve yeniden düzenlemenize olanak sağlar. Bir veritabanı projesiyle veya doğrudan bağlı bir veritabanı örneğiyle ya da şirket içi olarak çalışabilirsiniz.
 
@@ -118,7 +118,7 @@ Azure DevOps Services, yazılımı planlamak, barındırmak, otomatikleştirmek 
 
 Team Foundation Server (TFS), Visual Studio için uygulama yaşam döngüsü yönetim merkezdir. Geliştirme işlemiyle ilgili herkesin tek bir çözüm kullanarak katılmasını sağlar. TFS, heterojen takımları ve projeleri yönetmek için yararlıdır.
 
-Ağınızda bir Azure DevOps kuruluşunuz veya bir Team Foundation Server varsa, Visual Studio 'daki **Takım Gezgini** pencere aracılığıyla buna bağlanırsınız. Bu pencereden, kaynak denetimi içine veya dışına kodu denetleyebilir, iş öğelerini yönetebilir, yapıları başlatabilir ve ekip odalarına ve çalışma alanlarına erişebilirsiniz. **Takım Gezgini** arama kutusundan veya ana menüdeki Takım Gezgini **görüntüle**' den  >  **Team Explorer** veya **takımdan**  >  **Bağlantıları Yönet**' den açabilirsiniz.
+Ağınızda bir Azure DevOps kuruluşunuz veya bir Team Foundation Server varsa, Visual Studio 'daki **Takım Gezgini** pencere aracılığıyla buna bağlanırsınız. Bu pencereden, kaynak denetimi içine veya dışına kodu denetleyebilir, iş öğelerini yönetebilir, yapıları başlatabilir ve ekip odalarına ve çalışma alanlarına erişebilirsiniz. **Takım Gezgini** arama kutusundan veya ana menüdeki Takım Gezgini **görüntüle** ' den  >  **Team Explorer** veya **takımdan**  >  **Bağlantıları Yönet** ' den açabilirsiniz.
 
 Aşağıdaki görüntüde, Azure DevOps Services barındırılan bir çözüme yönelik **Takım Gezgini** penceresi gösterilmektedir.
 
@@ -140,4 +140,4 @@ Visual Studio 'Yu genişletme hakkında daha fazla bilgi için bkz. [Visual STUD
 
 - [Visual Studio IDE 'ye Genel Bakış](../get-started/visual-studio-ide.md)
 - [Visual Studio 2017’deki yenilikler](../ide/whats-new-visual-studio-2017.md)
-- [Visual Studio 2019 ' deki yenilikler](../ide/whats-new-visual-studio-2019.md)
+- [Visual Studio 2019’daki yenilikler](../ide/whats-new-visual-studio-2019.md)

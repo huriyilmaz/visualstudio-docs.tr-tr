@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 7bb545a8e8713159d6833f0ed8d8c2b8784095e1
-ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
+ms.openlocfilehash: b1299686c086feda0c51689d72a676ddc4ff00dc
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91959768"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400241"
 ---
 # <a name="set-env"></a>set-env
 
@@ -39,9 +39,9 @@ Bu araç .NET Core API 'sini kullanır `Environment.SetEnvironment` ve bu API il
 | Eylem       | Giriş            | Açıklama                                                                                                                                                              | Örnek             |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
 | **Tümünü Listele** | boş veya atlanmış | Tüm geçerli ortam değişkenlerini listeleyin.                                                                                                                              | `"input":""`        |
-| **liste bir** | dize           | Belirli bir ortam değişkeninin değerini ada göre listeleyin.                                                                                                               | `"input":"foo"`     |
-| **add**      | dize           | Bir ortam değişkeninin değerini anahtar değer çifti olarak ayarlar. Henüz yoksa yeni bir ortam değişkeni ekler veya var olan bir ortam değişkeninin değerini ayarlar | `"input":"foo=bar"` |
-| **delete**   | dize           | Boş bir değer dizesini geçirerek var olan bir ortam değişkenini siler.                                                                                            | `"input":"foo="`    |
+| **liste bir** | string           | Belirli bir ortam değişkeninin değerini ada göre listeleyin.                                                                                                               | `"input":"foo"`     |
+| **add**      | string           | Bir ortam değişkeninin değerini anahtar değer çifti olarak ayarlar. Henüz yoksa yeni bir ortam değişkeni ekler veya var olan bir ortam değişkeninin değerini ayarlar | `"input":"foo=bar"` |
+| **delete**   | string           | Boş bir değer dizesini geçirerek var olan bir ortam değişkenini siler.                                                                                            | `"input":"foo="`    |
 
 Bir `input` dize `%userprofile%` , örneğin değer okuma olduğunda genişletilen bir ortam değişkeni genişletmesi içerebilir.
 
@@ -57,7 +57,7 @@ Bir codespace kullanıyorsanız, codespace 'te kullanılan ortam değişkenlerin
 
 ```json
 {
-  "$schema": "https://json.schemastore.org/devinit.schema-2.0",
+  "$schema": "https://json.schemastore.org/devinit.schema-3.0",
   "comments": "A sample dot-devinit file demonstrating the set-env tool.",
   "run": [
     {

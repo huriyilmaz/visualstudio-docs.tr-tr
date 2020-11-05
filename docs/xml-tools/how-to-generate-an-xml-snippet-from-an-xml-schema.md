@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl Yapılır: XML Şemasından XML Kod Parçacığı Oluşturma'
+description: XML Düzenleyicisi 'nin bir XML şeması tanım dili (XSD) şemasından XML kod parçacığı oluşturmak için nasıl kullanılacağını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 2c128d2a-aaa6-4814-aa95-e07056afe338
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c7dff8e1bb211343ccc44e0d1fd33d96c102283
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ce87f71a465f9c6452fa713fd8a7bdf523e801a3
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817183"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399475"
 ---
 # <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>Nasıl yapılır: XML şemasından XML kod parçacığı oluşturma
 
@@ -50,23 +52,23 @@ Bu bölümdeki adımlarda, XML düzenleyicisinin şema tarafından oluşturulan 
 
 ### <a name="to-create-a-new-xml-file-and-associate-it-with-an-xml-schema"></a>Yeni bir XML dosyası oluşturmak ve bir XML şeması ile ilişkilendirmek için
 
-1. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve **Dosya**' ya tıklayın.
+1. **Dosya** menüsünde, **Yeni** ' nin üzerine gelin ve **Dosya** ' ya tıklayın.
 
-2. **Şablonlar** bölmesinde **XML dosyası** ' nı seçin ve **Aç**' a tıklayın.
+2. **Şablonlar** bölmesinde **XML dosyası** ' nı seçin ve **Aç** ' a tıklayın.
 
      Düzenleyicide yeni bir dosya açılır. Dosya varsayılan bir XML bildirimi içerir `<?xml version="1.0" encoding="utf-8">` .
 
-3. Belge Özellikleri penceresinde, **şemalar** alanındaki (**...**) düğmesine tıklayın.
+3. Belge Özellikleri penceresinde, **şemalar** alanındaki ( **...** ) düğmesine tıklayın.
 
      **Xsd şemaları** iletişim kutusu görüntülenir.
 
-4. **Ekle**'ye tıklayın.
+4. **Ekle** 'ye tıklayın.
 
      **XSD şeması aç** iletişim kutusu görüntülenir.
 
-5. Şema dosyasını seçin ve **Aç**' a tıklayın.
+5. Şema dosyasını seçin ve **Aç** ' a tıklayın.
 
-6. **Tamam**’a tıklayın.
+6. **Tamam** ’a tıklayın.
 
      XML şeması artık XML belgesiyle ilişkili.
 
@@ -78,13 +80,13 @@ Bu bölümdeki adımlarda, XML düzenleyicisinin şema tarafından oluşturulan 
 
      yorum eklemek için **!--** .
 
-     **! ** Belge türü eklemek IÇIN DOCTYPE.
+     **!** Belge türü eklemek IÇIN DOCTYPE.
 
      **?** bir işleme yönergesi eklemek için.
 
      Kök öğeyi eklemek için **Iletişim kurun** .
 
-3. Üye listesinden **kişi** ' yi seçin ve **ENTER**tuşuna basın.
+3. Üye listesinden **kişi** ' yi seçin ve **ENTER** tuşuna basın.
 
      Düzenleyici başlangıç etiketini ekler `<Contact` ve imleci öğe adından sonra konumlandırır.
 
@@ -139,7 +141,7 @@ Aşağıdaki şema dosyası, izlenecek yol tarafından kullanılır.
 </xs:schema>
 ```
 
-### <a name="output"></a>Çıktı
+### <a name="output"></a>Çıkış
 
 Aşağıda öğesiyle ilişkili şema bilgilerine göre oluşturulan XML verileri verilmiştir `Contact` . `bold`XML kod parçacığında düzenlenebilir alanları belirleyin olarak işaretlenen öğeler.
 

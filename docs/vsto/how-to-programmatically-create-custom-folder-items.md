@@ -12,12 +12,12 @@ author: John-Hart
 ms.author: johnhart
 ms.workload:
 - office
-ms.openlocfilehash: 652768fa23902722a9b071a4ad12de4cbf774ab6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 034131f19c141f81922c843be0eb49e640dee858
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546035"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399217"
 ---
 # <a name="how-to-programmatically-create-custom-folder-items"></a>Nasıl yapılır: program aracılığıyla özel klasör öğeleri oluşturma
   Bu örnek Outlook Microsoft Office yeni bir klasör oluşturur. Oturum açan kullanıcının adı klasör adı olarak kullanılır.

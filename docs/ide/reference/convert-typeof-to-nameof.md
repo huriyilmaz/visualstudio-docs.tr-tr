@@ -10,12 +10,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 233393114883c2a9833aa7ec82f0d78f0ef33bae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 96bd4d67302fb09e5c1cb7837ad73b345ad88c81
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88251305"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400330"
 ---
 # <a name="convert-typeof-to-nameof"></a>Dönüştür `typeof``nameof`
 
@@ -33,15 +33,16 @@ Bu yeniden düzenleme için geçerlidir:
 ## <a name="how-to"></a>Nasıl yapılır
 
 1. İmlecinizi `typeof(<QualifiedType>).Name` C# örneği Içine veya `GetType(<QualifiedType>).Name` Visual Basic içine yerleştirin.
-2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+
+2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+
 3. Aşağıdaki seçeneklerden birini belirleyin:
 
-- C#
-  <br>**' Typeof ' öğesini ' NameOf ' öğesine**Dönüştür 
-   ![ typeof öğesini NameOf olarak Dönüştür ' i seçin](media/convert-type-of.PNG)
+    - C#
+      <br>**' Typeof ' öğesini ' NameOf ' olarak Dönüştür** ' ü seçin: ![ typeof 'ı NameOf olarak Dönüştür](media/convert-type-of.PNG)
 
-- Visual Basic
-  <br>**' GetType ' öğesini ' NameOf ' öğesine** Dönüştür typeof öğesini NameOf olarak Dönüştür ' i seçin ![](media/convert-get-type.PNG)
+    - Visual Basic
+      <br>**' GetType ' öğesini ' NameOf ' öğesine Dönüştür** ' ü seçin: ![ typeof adını NameOf olarak Dönüştür](media/convert-get-type.PNG)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

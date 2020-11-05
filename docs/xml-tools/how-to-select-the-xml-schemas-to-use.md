@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl Yapılır: Kullanılacak XML Şemalarını Seçme'
+description: XML düzenleyicisini kullanarak, IntelliSense ve XML belge doğrulaması için kullanılan iyi bilinen XML şemaları içeren şema önbelleğinden bir XML şeması seçme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: d6fda3ef-d465-4788-8514-2f2d528d658c
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06f9de6927d616d6cf08995c076246c8a45ec014
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9773df597269d5f7044bf168626f530e4a454020
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815974"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400160"
 ---
 # <a name="how-to-select-the-xml-schemas-to-use"></a>Nasıl yapılır: kullanılacak XML şemalarını seçme
 
@@ -21,7 +23,7 @@ XML Düzenleyicisi, *%VSInstallDir%\Xml\Schemas* dizininde bulunan bir şema ön
 
 Bir veya daha fazla XML şeması tanım dili (XSD) şeması seçmek için **şemalar** belge özelliğini kullanın. Şema önbelleğinden veya başka bir yerde şemaları seçebilirsiniz.
 
-Belirttiğiniz şemalar bir (gizli) çözüm Kullanıcı seçenekleri dosyasına (.* suo*), diğer tüm XML belge özellikleriyle birlikte. Sonuç olarak, çözümü bir sonraki açışınızda bu değerleri yeniden girmeniz gerekmez.
+Belirttiğiniz şemalar bir (gizli) çözüm Kullanıcı seçenekleri dosyasına (. *suo* ), diğer tüm XML belge özellikleriyle birlikte. Sonuç olarak, çözümü bir sonraki açışınızda bu değerleri yeniden girmeniz gerekmez.
 
 > [!NOTE]
 > Düzenleyici, satır içi bir şemanın veya öznitelik tarafından başvurulan bir şemanın kullanımını doğrulayabilir `xsd:schemaLocation` . Daha fazla bilgi için bkz. [XML belge doğrulaması](../xml-tools/xml-document-validation.md).
@@ -38,13 +40,13 @@ Belirttiğiniz şemalar bir (gizli) çözüm Kullanıcı seçenekleri dosyasına
 
 3. Aşağıdakilerden birini yaparak doğrulama için kullanılacak şemaları seçin:
 
-   - **XML şemaları** iletişim kutusunda listelenen bir şemayı seçin, **kullan** sütununa tıklayın ve **Bu şemayı kullan**' ı seçin.
+   - **XML şemaları** iletişim kutusunda listelenen bir şemayı seçin, **kullan** sütununa tıklayın ve **Bu şemayı kullan** ' ı seçin.
 
      -veya-
 
-   - **XML şemaları** iletişim kutusunda birden çok şema seçin ve sağ tıklayın ve **Bu şemayı kullan**' ı seçin.
+   - **XML şemaları** iletişim kutusunda birden çok şema seçin ve sağ tıklayın ve **Bu şemayı kullan** ' ı seçin.
 
-4. **Tamam ' ı**seçin.
+4. **Tamam ' ı** seçin.
 
    Seçilen şemaların listesi, **şemalar** belge özelliğine geri kopyalanır.
 
@@ -52,21 +54,21 @@ Belirttiğiniz şemalar bir (gizli) çözüm Kullanıcı seçenekleri dosyasına
 
 1. Belge Özellikleri penceresinde, **şemalar** alanındaki düğmesine tıklayın.
 
-2. **Ekle**'ye tıklayın.
+2. **Ekle** 'ye tıklayın.
 
    **Open xsd şeması** iletişim kutusu açılır.
 
 3. Şema önbelleğine eklenecek şemaya gözatıp seçin.
 
-4. **Aç**’a tıklayın.
+4. **Aç** 'a tıklayın.
 
-   Şemalar şema önbelleğine eklenir ve **Use** sütun değeri **Bu şemayı kullanacak**şekilde ayarlanır.
+   Şemalar şema önbelleğine eklenir ve **Use** sütun değeri **Bu şemayı kullanacak** şekilde ayarlanır.
 
 ## <a name="to-delete-an-xml-schema-from-the-schema-cache"></a>Şema önbelleğinden bir XML şemasını silmek için
 
 1. Belge Özellikleri penceresinde, **şemalar** alanındaki düğmesine tıklayın.
 
-2. Kaldırılacak şemayı seçin ve ardından **Kaldır**' a tıklayın.
+2. Kaldırılacak şemayı seçin ve ardından **Kaldır** ' a tıklayın.
 
    Şema, bellek içi şema önbelleğinden kaldırılır, ancak dosya sisteminden kaldırılmaz.
 
@@ -77,4 +79,4 @@ Belirttiğiniz şemalar bir (gizli) çözüm Kullanıcı seçenekleri dosyasına
 
 - [Şema önbelleği](../xml-tools/schema-cache.md)
 - [XML şemaları iletişim kutusu](../xml-tools/xml-schemas-dialog-box.md)
-- [XML Düzenleyicisi](../xml-tools/xml-editor.md)
+- [XML düzenleyicisi](../xml-tools/xml-editor.md)

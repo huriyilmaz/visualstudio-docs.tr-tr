@@ -4,17 +4,16 @@ description: Visual Studio 'Yu kullanarak Azure bulut hizmetleri için rolleri a
 author: ghogen
 manager: jillfra
 assetId: d397ef87-64e5-401a-aad5-7f83f1022e16
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: 7107e7f9b156f4f62e798b7f4ffb283fb8a6678c
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: 6b34a61bb0353bbbd4405b7f642bc63758dfa096
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90740051"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399285"
 ---
 # <a name="configure-azure-cloud-service-roles-with-visual-studio"></a>Visual Studio ile Azure bulut hizmeti rollerini yapılandırma
 Bir Azure bulut hizmetinde bir veya daha fazla çalışan veya Web rolü olabilir. Her rol için, bu rolün nasıl ayarlandığını tanımlamanız ve ayrıca bu rolün nasıl çalıştığını tanımlamanız gerekir. Bulut hizmetlerindeki roller hakkında daha fazla bilgi edinmek için bkz. [Azure 'A giriş videosu Cloud Services](https://channel9.msdn.com/Series/Windows-Azure-Cloud-Services-Tutorials/Introduction-to-Windows-Azure-Cloud-Services).
@@ -36,7 +35,7 @@ Aşağıdaki adımlarda gösterildiği gibi, bir Azure bulut hizmetini Visual St
 
 1. Visual Studio 'da bir Azure bulut hizmeti projesi oluşturun veya açın.
 
-1. **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünden **Özellikler**' i seçin.
+1. **Çözüm Gezgini** , projeye sağ tıklayın ve bağlam menüsünden **Özellikler** ' i seçin.
 
     ![Çözüm Gezgini projesi bağlam menüsü](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-project-context-menu.png)
 
@@ -44,10 +43,10 @@ Aşağıdaki adımlarda gösterildiği gibi, bir Azure bulut hizmetini Visual St
 
     ![Proje Özellikleri sayfası-geliştirme sekmesi](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-development-tab.png)
 
-1. **Hizmet yapılandırması** listesinde, düzenlemek istediğiniz hizmet yapılandırmasının adını seçin. (Bu rolün tüm hizmet yapılandırmalarında değişiklik yapmak istiyorsanız, **Tüm Konfigürasyonlar**' ı seçin.)
+1. **Hizmet yapılandırması** listesinde, düzenlemek istediğiniz hizmet yapılandırmasının adını seçin. (Bu rolün tüm hizmet yapılandırmalarında değişiklik yapmak istiyorsanız, **Tüm Konfigürasyonlar** ' ı seçin.)
 
     > [!IMPORTANT]
-    > Belirli bir hizmet yapılandırması seçerseniz bazı özellikler yalnızca tüm yapılandırmalar için ayarlanabileceğinden devre dışı bırakılır. Bu özellikleri düzenlemek için **Tüm Konfigürasyonlar**' ı seçmeniz gerekir.
+    > Belirli bir hizmet yapılandırması seçerseniz bazı özellikler yalnızca tüm yapılandırmalar için ayarlanabileceğinden devre dışı bırakılır. Bu özellikleri düzenlemek için **Tüm Konfigürasyonlar** ' ı seçmeniz gerekir.
 
     ![Azure bulut hizmeti için hizmet yapılandırma listesi](./media/vs-azure-tools-configure-roles-for-cloud-service/cloud-service-service-configuration-property.png)
 
@@ -56,7 +55,7 @@ Bulut hizmetinizin performansını artırmak için, çalışan bir rolün örnek
 
 1. Visual Studio 'da bir Azure bulut hizmeti projesi oluşturun veya açın.
 
-1. **Çözüm Gezgini**, proje düğümünü genişletin. **Roller** düğümü altında, güncelleştirmek istediğiniz role sağ tıklayın ve bağlam menüsünden **Özellikler**' i seçin.
+1. **Çözüm Gezgini** , proje düğümünü genişletin. **Roller** düğümü altında, güncelleştirmek istediğiniz role sağ tıklayın ve bağlam menüsünden **Özellikler** ' i seçin.
 
     ![Azure rolü bağlam menüsünü Çözüm Gezgini](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-azure-role-context-menu.png)
 
@@ -66,13 +65,13 @@ Bulut hizmetinizin performansını artırmak için, çalışan bir rolün örnek
 
 1. **Hizmet yapılandırması** listesinde, güncelleştirmek istediğiniz hizmet yapılandırmasını seçin.
 
-    ![Hizmet yapılandırma listesi](./media/vs-azure-tools-configure-roles-for-cloud-service/role-configuration-properties-page-select-configuration.png)
+    ![Hizmet yapılandırma listesi 1](./media/vs-azure-tools-configure-roles-for-cloud-service/role-configuration-properties-page-select-configuration.png)
 
 1. **Örnek sayısı** metin kutusunda, bu rol için başlamasını istediğiniz örneklerin sayısını girin. Bulut hizmetini Azure 'da yayımladığınızda her örnek ayrı bir sanal makinede çalışır.
 
     ![Örnek sayısı güncelleştiriliyor](./media/vs-azure-tools-configure-roles-for-cloud-service/role-configuration-properties-page-instance-count.png)
 
-1. Visual Studio araç çubuğundan **Kaydet**' i seçin.
+1. Visual Studio araç çubuğundan **Kaydet** ' i seçin.
 
 ## <a name="manage-connection-strings-for-storage-accounts"></a>Depolama hesapları için bağlantı dizelerini yönetme
 Hizmet yapılandırmanız için bağlantı dizelerini ekleyebilir, kaldırabilir veya değiştirebilirsiniz. Örneğin, bir değeri olan yerel bir hizmet yapılandırması için yerel bir bağlantı dizesi isteyebilirsiniz `UseDevelopmentStorage=true` . Azure 'da bir depolama hesabı kullanan bir bulut hizmeti yapılandırması da yapılandırmak isteyebilirsiniz.
@@ -86,7 +85,7 @@ Her hizmet yapılandırması için farklı bir değer kullanarak, bulut hizmetin
 
 1. Visual Studio 'da bir Azure bulut hizmeti projesi oluşturun veya açın.
 
-1. **Çözüm Gezgini**, proje düğümünü genişletin. **Roller** düğümü altında, güncelleştirmek istediğiniz role sağ tıklayın ve bağlam menüsünden **Özellikler**' i seçin.
+1. **Çözüm Gezgini** , proje düğümünü genişletin. **Roller** düğümü altında, güncelleştirmek istediğiniz role sağ tıklayın ve bağlam menüsünden **Özellikler** ' i seçin.
 
     ![Azure rolü bağlam menüsünü Çözüm Gezgini](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-azure-role-context-menu.png)
 
@@ -98,7 +97,7 @@ Her hizmet yapılandırması için farklı bir değer kullanarak, bulut hizmetin
 
     ![Hizmet yapılandırması](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-settings-tab-select-configuration.png)
 
-1. Bir bağlantı dizesi eklemek için, **Ayar ekle**' yi seçin.
+1. Bir bağlantı dizesi eklemek için, **Ayar ekle** ' yi seçin.
 
     ![Bağlantı dizesi Ekle](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-settings-tab-add-setting.png)
 
@@ -110,15 +109,15 @@ Her hizmet yapılandırması için farklı bir değer kullanarak, bulut hizmetin
     - **Yazın** -açılan listeden **bağlantı dizesini** seçin.
     - **Değer** -bağlantı dizesini doğrudan **değer** hücresine girebilir veya **depolama bağlantı dizesi oluştur** iletişim kutusunda çalışmak için üç nokta (...) işaretini seçebilirsiniz.
 
-1. **Depolama bağlantı dizesi oluştur** iletişim kutusunda, **kullanarak bağlan**seçeneğini belirleyin. Ardından, seçtiğiniz seçeneğe ilişkin yönergeleri izleyin:
+1. **Depolama bağlantı dizesi oluştur** iletişim kutusunda, **kullanarak bağlan** seçeneğini belirleyin. Ardından, seçtiğiniz seçeneğe ilişkin yönergeleri izleyin:
 
-    - **Microsoft Azure depolama öykünücüsü** -bu seçeneği belirlerseniz, iletişim kutusundaki geri kalan ayarlar yalnızca Azure 'a uygulandıklarında devre dışı bırakılır. **Tamam**’ı seçin.
-    - **Aboneliğiniz** -bu seçeneği belirlerseniz, bir Microsoft hesabı seçip açmak ya da bir Microsoft hesabı eklemek için açılan listeyi kullanın. Bir Azure aboneliği ve depolama hesabı seçin. **Tamam**’ı seçin.
-    - **El ile girilen kimlik bilgileri** -depolama hesabı adını ve birincil ya da ikinci anahtarı girin. **Bağlantı** için bir seçenek belirleyin (çoğu senaryo için https önerilir.) **Tamam ' ı**seçin.
+    - **Microsoft Azure depolama öykünücüsü** -bu seçeneği belirlerseniz, iletişim kutusundaki geri kalan ayarlar yalnızca Azure 'a uygulandıklarında devre dışı bırakılır. **Tamam** ’ı seçin.
+    - **Aboneliğiniz** -bu seçeneği belirlerseniz, bir Microsoft hesabı seçip açmak ya da bir Microsoft hesabı eklemek için açılan listeyi kullanın. Bir Azure aboneliği ve depolama hesabı seçin. **Tamam** ’ı seçin.
+    - **El ile girilen kimlik bilgileri** -depolama hesabı adını ve birincil ya da ikinci anahtarı girin. **Bağlantı** için bir seçenek belirleyin (çoğu senaryo için https önerilir.) **Tamam ' ı** seçin.
 
-1. Bir bağlantı dizesini silmek için bağlantı dizesini seçin ve sonra **ayarı kaldır**' ı seçin.
+1. Bir bağlantı dizesini silmek için bağlantı dizesini seçin ve sonra **ayarı kaldır** ' ı seçin.
 
-1. Visual Studio araç çubuğundan **Kaydet**' i seçin.
+1. Visual Studio araç çubuğundan **Kaydet** ' i seçin.
 
 ## <a name="programmatically-access-a-connection-string"></a>Bir bağlantı dizesine program aracılığıyla erişin
 
@@ -148,7 +147,7 @@ Her hizmet yapılandırması için farklı bir değer kullanarak, bulut hizmetin
 
 1. Visual Studio 'da bir Azure bulut hizmeti projesi oluşturun veya açın.
 
-1. **Çözüm Gezgini**, proje düğümünü genişletin. **Roller** düğümü altında, güncelleştirmek istediğiniz role sağ tıklayın ve bağlam menüsünden **Özellikler**' i seçin.
+1. **Çözüm Gezgini** , proje düğümünü genişletin. **Roller** düğümü altında, güncelleştirmek istediğiniz role sağ tıklayın ve bağlam menüsünden **Özellikler** ' i seçin.
 
     ![Azure rolü bağlam menüsünü Çözüm Gezgini](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-azure-role-context-menu.png)
 
@@ -158,9 +157,9 @@ Her hizmet yapılandırması için farklı bir değer kullanarak, bulut hizmetin
 
 1. **Hizmet yapılandırması** listesinde, güncelleştirmek istediğiniz hizmet yapılandırmasını seçin.
 
-    ![Hizmet yapılandırma listesi](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-settings-tab-select-configuration.png)
+    ![Hizmet yapılandırma listesi 2](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-settings-tab-select-configuration.png)
 
-1. Özel bir ayar eklemek için **Ayar ekle**' yi seçin.
+1. Özel bir ayar eklemek için **Ayar ekle** ' yi seçin.
 
     ![Özel ayar Ekle](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-settings-tab-add-setting.png)
 
@@ -172,9 +171,9 @@ Her hizmet yapılandırması için farklı bir değer kullanarak, bulut hizmetin
     - **Açılan listeden** **dize** ' yi seçin.
     - **Değer** -ayarın değerini girin. Değeri doğrudan **değer** hücresine girebilir veya **dizeyi Düzenle** iletişim kutusuna değeri girmek için üç nokta (...) işaretini seçebilirsiniz.
 
-1. Özel bir ayarı silmek için ayarı seçin ve sonra **ayarı kaldır**' ı seçin.
+1. Özel bir ayarı silmek için ayarı seçin ve sonra **ayarı kaldır** ' ı seçin.
 
-1. Visual Studio araç çubuğundan **Kaydet**' i seçin.
+1. Visual Studio araç çubuğundan **Kaydet** ' i seçin.
 
 ## <a name="programmatically-access-a-custom-settings-value"></a>Programlı olarak özel bir ayarın değerine erişme
 
@@ -199,7 +198,7 @@ Bir rolün her örneği için yerel dosya sistemi depolaması ekleyebilirsiniz. 
 
 1. Visual Studio 'da bir Azure bulut hizmeti projesi oluşturun veya açın.
 
-1. **Çözüm Gezgini**, proje düğümünü genişletin. **Roller** düğümü altında, güncelleştirmek istediğiniz role sağ tıklayın ve bağlam menüsünden **Özellikler**' i seçin.
+1. **Çözüm Gezgini** , proje düğümünü genişletin. **Roller** düğümü altında, güncelleştirmek istediğiniz role sağ tıklayın ve bağlam menüsünden **Özellikler** ' i seçin.
 
     ![Azure rolü bağlam menüsünü Çözüm Gezgini](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-azure-role-context-menu.png)
 
@@ -209,9 +208,9 @@ Bir rolün her örneği için yerel dosya sistemi depolaması ekleyebilirsiniz. 
 
 1. **Hizmet yapılandırma** listesinde, yerel depolama ayarları tüm hizmet yapılandırmalarına uygulandığından **Tüm yapılandırmaların** seçili olduğundan emin olun. Diğer herhangi bir değer, sayfadaki tüm giriş alanlarının devre dışı bırakılmakta olduğunu sonuçlanır.
 
-    ![Hizmet yapılandırma listesi](./media/vs-azure-tools-configure-roles-for-cloud-service/role-local-storage-tab-service-configuration.png)
+    ![Hizmet yapılandırma listesi 3](./media/vs-azure-tools-configure-roles-for-cloud-service/role-local-storage-tab-service-configuration.png)
 
-1. Yerel depolama girişi eklemek için **yerel depolama Ekle**' yi seçin.
+1. Yerel depolama girişi eklemek için **yerel depolama Ekle** ' yi seçin.
 
     ![Yerel depolama Ekle](./media/vs-azure-tools-configure-roles-for-cloud-service/role-local-storage-tab-add-local-storage.png)
 
@@ -223,9 +222,9 @@ Bir rolün her örneği için yerel dosya sistemi depolaması ekleyebilirsiniz. 
     - **Boyut (MB)** -yeni yerel depolama için gereken boyutu MB olarak girin.
     - **Rol geri dönüşümü temizle** -rolün sanal makinesi geri dönüştürüldüğünde yeni yerel depolama alanındaki verileri kaldırmak için bu seçeneği belirleyin.
 
-1. Yerel depolama girişini silmek için girişi seçin ve ardından **yerel depolamayı kaldır**' ı seçin.
+1. Yerel depolama girişini silmek için girişi seçin ve ardından **yerel depolamayı kaldır** ' ı seçin.
 
-1. Visual Studio araç çubuğundan **Kaydet**' i seçin.
+1. Visual Studio araç çubuğundan **Kaydet** ' i seçin.
 
 ## <a name="programmatically-accessing-local-storage"></a>Yerel depolamaya programlı bir şekilde erişme
 
@@ -254,7 +253,7 @@ using (FileStream writeStream = File.Create(filePath))
 
 Önceki bölümde kodla oluşturulan dosyayı görüntülemek için aşağıdaki adımları izleyin:
 
-1. Windows bildirim alanında Azure simgesine sağ tıklayın ve bağlam menüsünde, **Işlem öykünücüsü Kullanıcı arabirimini göster**' i seçin.
+1. Windows bildirim alanında Azure simgesine sağ tıklayın ve bağlam menüsünde, **Işlem öykünücüsü Kullanıcı arabirimini göster** ' i seçin.
 
     ![Azure işlem öykünücüsünü göster](./media/vs-azure-tools-configure-roles-for-cloud-service/show-compute-emulator.png)
 
@@ -262,7 +261,7 @@ using (FileStream writeStream = File.Create(filePath))
 
     ![Azure işlem öykünücüsü](./media/vs-azure-tools-configure-roles-for-cloud-service/compute-emulator.png)
 
-1. **Microsoft Azure işlem öykünücüsü** menüsünde **Araçlar**  >  **yerel depo aç**' ı seçin.
+1. **Microsoft Azure işlem öykünücüsü** menüsünde **Araçlar**  >  **yerel depo aç** ' ı seçin.
 
     ![Yerel mağaza menü öğesini aç](./media/vs-azure-tools-configure-roles-for-cloud-service/compute-emulator-open-local-store-menu.png)
 

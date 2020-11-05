@@ -1,5 +1,7 @@
 ---
 title: XML şeması oluşturma
+description: XML belgesinden XML şeması tanım dili (XSD) şeması oluşturmak için Visual Studio 'da XML düzenleyicisini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 03/05/2019
 ms.topic: how-to
 ms.assetid: 1d6700a9-fd67-4794-8997-399589e99bec
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 10ce1c6dc5bd24b391a8cde184a32684270662ef
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 18081db7537eab1d14f800e9457821679c0316b8
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815454"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399528"
 ---
 # <a name="how-to-create-an-xml-schema-from-an-xml-document"></a>Nasıl yapılır: XML belgesinden XML şeması oluşturma
 
@@ -23,7 +25,7 @@ XML Düzenleyicisi bir XML belgesinden XML şeması tanım dili (XSD) şeması o
 
 - XML belgesi ilişkili bir DTD içeriyorsa, dış DTD ve iç alt küme karşılık gelen bir XML şemasına dönüştürülür.
 
-- XML belgesi satır içi XML verisi azaltılmış (XDR) şeması içeriyorsa, XDR şeması karşılık gelen bir XML şemasına dönüştürülür.
+- XML belgesi satır içi XML-Data azaltılmış (XDR) şeması içeriyorsa, XDR şeması karşılık gelen bir XML şemasına dönüştürülür.
 
 Oluşturulan şemalar, XML dosyası için IntelliSense sağlamak üzere kullanılır.
 
@@ -33,10 +35,10 @@ Oluşturulan şemalar, XML dosyası için IntelliSense sağlamak üzere kullanı
 
 1. Visual Studio 'da bir XML dosyası açın.
 
-2. Menü çubuğunda, **XML**  >  **şeması oluştur**' u seçin.
+2. Menü çubuğunda, **XML**  >  **şeması oluştur** ' u seçin.
 
    XML dosyasında bulunan her ad alanı için bir XML şeması belgesi oluşturulup açılır. Her şema geçici bir çeşitli dosya olarak açılır. Şemalar diske kaydedilebilir, projenize eklenebilir veya atılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Düzenleyicisi](../xml-tools/xml-editor.md)
+- [XML düzenleyicisi](../xml-tools/xml-editor.md)

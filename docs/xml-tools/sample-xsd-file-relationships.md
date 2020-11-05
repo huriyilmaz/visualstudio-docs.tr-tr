@@ -1,5 +1,7 @@
 ---
 title: 'Örnek XSD Dosyası: İlişkiler'
+description: Ek açıklamalar ve belgeler içeren bir satın alma siparişi şeması için örnek XSD dosyasını, XSD şema Tasarımcısı belgelerindeki çeşitli örneklerde kullanılan bir şekilde görüntüleyin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: sample
 ms.assetid: 60126510-b7dd-4cb4-92d3-9883590b92f2
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a52d152a78ee585cc2724d8504feff1e72558cf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6dd4e4f3678cd59562f5945ab26f8d828210375c
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592561"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398754"
 ---
 # <a name="sample-xsd-file-relationships"></a>Örnek XSD dosyası: Ilişkiler
 

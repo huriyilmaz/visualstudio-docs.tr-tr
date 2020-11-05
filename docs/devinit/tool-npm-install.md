@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: e3295ea2e67dd625387b054c488c5abacec2a718
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 432c2a6c532e95e7d0e3e4cb22c87930031f5907
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005554"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400297"
 ---
 # <a name="npm-install"></a>npm-install
 
@@ -44,7 +44,7 @@ Ek yapılandırma seçenekleri ' ın bir değeri olarak geçirilebilir `addition
 
 ```json
 {
-    "$schema": "https://json.schemastore.org/devinit.schema-2.0",
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
             "comments": "Example that will install the mongo NPM package (https://www.npmjs.com/package/mongo).",

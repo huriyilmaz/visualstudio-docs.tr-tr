@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl Yapılır: XML Kod Parçacıkları Oluşturma'
+description: XML dosyalarını daha hızlı bir şekilde oluşturmanızı sağlayan XML kod parçacıkları oluşturmak için Visual Studio 'da XML düzenleyicisini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: d8556dd7-1382-4af7-ba80-3e873c9416be
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b86962221dcdeff59b1152baf7b7cddcc55293e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d935f479e3133db8fb5340359d6a354058a3020a
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815402"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400036"
 ---
 # <a name="how-to-create-xml-snippets"></a>Nasıl yapılır: XML parçacıkları oluşturma
 
@@ -23,17 +25,17 @@ XML Düzenleyicisi, yeni XML parçacıkları oluşturmak için kullanılabilir. 
 
 Yeni bir XML kod parçacığı oluşturmak için yeni bir XML dosyası oluşturun ve **kod parçacığı Ekle** özelliğini kullanın.
 
-1. **Dosya** menüsünde **Yeni** ' ye ve ardından **Dosya**' ya tıklayın.
+1. **Dosya** menüsünde **Yeni** ' ye ve ardından **Dosya** ' ya tıklayın.
 
-2. **XML dosyası** ' na ve sonra **Aç**' a tıklayın.
+2. **XML dosyası** ' na ve sonra **Aç** ' a tıklayın.
 
-3. Düzenleyici bölmesine sağ tıklayın ve **kod parçacığı Ekle**' yi seçin.
+3. Düzenleyici bölmesine sağ tıklayın ve **kod parçacığı Ekle** ' yi seçin.
 
-4. Listeden **kod parçacığı** öğesini seçin ve **ENTER**tuşuna basın.
+4. Listeden **kod parçacığı** öğesini seçin ve **ENTER** tuşuna basın.
 
 5. Yeni kod parçacığında herhangi bir değişiklik yapın.
 
-6. **Dosya** menüsünden **Kaydet XMLFile.xml**' yi seçin.
+6. **Dosya** menüsünden **Kaydet XMLFile.xml** ' yi seçin.
 
      **Dosyayı farklı kaydet** iletişim kutusu görüntülenir.
 
@@ -104,7 +106,7 @@ Name öğesinin değeri düzenlenebilir bir bölge olarak işaretlenir.
 </Literal
 ```
 
-Değişmez değerler, işlevlere da başvurabilir. XML Düzenleyicisi **LookupPrefix**adlı bir işlev içerir. **LookupPrefix** işlevi, bu kod PARÇACıĞıNıN çağrıldığı XML belgesindeki konumdan verilen ad alanı URI 'sini arar ve bu ad alanı için tanımlanan ad alanı önekini (varsa) döndürür ve iki nokta üst üste ekler (:) Bu adda. Aşağıda `Literal` **LookupPrefix** işlevini kullanan bir öğe örneği verilmiştir.
+Değişmez değerler, işlevlere da başvurabilir. XML Düzenleyicisi **LookupPrefix** adlı bir işlev içerir. **LookupPrefix** işlevi, bu kod PARÇACıĞıNıN çağrıldığı XML belgesindeki konumdan verilen ad alanı URI 'sini arar ve bu ad alanı için tanımlanan ad alanı önekini (varsa) döndürür ve iki nokta üst üste ekler (:) Bu adda. Aşağıda `Literal` **LookupPrefix** işlevini kullanan bir öğe örneği verilmiştir.
 
 ```xml
 <Literal Editable="false">

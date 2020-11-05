@@ -4,17 +4,16 @@ description: Visual Studio 'da bir Azure projesini Azure araçlarının güncel 
 author: ghogen
 manager: jillfra
 assetId: 1d64070a-078d-468a-87f4-e6715de6475f
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/18/2016
 ms.author: ghogen
-ms.openlocfilehash: ece853aacc2af48ec89af510a055486b9dded7ae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4cd9ffac5f668a9f6cd6ab266d38b90658ce9336
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66260589"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398585"
 ---
 # <a name="how-to-upgrade-projects-to-the-current-version-of-the-azure-tools-for-visual-studio"></a>Projeleri Visual Studio için Azure Araçları'nın güncel sürümüne yükseltme
 ## <a name="overview"></a>Genel Bakış
@@ -37,7 +36,7 @@ Bir proje otomatik olarak yükseltildiyse veya onu yükseltmek istediğinizi bel
 
 ### <a name="how-to-upgrade-an-azure-project-to-the-current-release"></a>Bir Azure projesini geçerli sürüme yükseltme
 1. Azure araçlarının güncel sürümünü, yükseltilen proje için kullanmak istediğiniz Visual Studio yüklemesinde yükleme ve ardından yükseltmek istediğiniz projeyi açın. Proje 1,6 (2011 Kasım) öncesi bir Azure araçları sürümü ile oluşturulduysa, proje otomatik olarak geçerli sürüme yükseltilir. Proje Kasım 2011 sürümüyle oluşturulduysa ve bu yayın hala yüklüyse, proje o sürümde açılır.
-2. Çözüm Gezgini, proje düğümünün kısayol menüsünü açın, **Özellikler**' i seçin ve ardından görüntülenen Iletişim kutusunun **uygulama** sekmesini seçin.
+2. Çözüm Gezgini, proje düğümünün kısayol menüsünü açın, **Özellikler** ' i seçin ve ardından görüntülenen Iletişim kutusunun **uygulama** sekmesini seçin.
 
     **Uygulama** sekmesi, projeyle ilişkili araçlar sürümünü gösterir. Geçerli Azure araçları sürümü görüntülenirse, proje zaten yükseltilmiştir. Araçların gösterdiği sürümden daha yeni bir sürümünü yüklediyseniz, bir **yükseltme** düğmesi görünür.
 3. Bir projeyi araçların güncel sürümüne yükseltmek için **Yükselt** düğmesini seçin.

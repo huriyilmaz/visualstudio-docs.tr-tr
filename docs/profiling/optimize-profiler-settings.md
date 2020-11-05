@@ -9,12 +9,12 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ef802958817b43dd66973db66a80d328454aa83
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1f0629228c2fcad1f8ea36db2e4d0c67a68715e4
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329251"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400317"
 ---
 # <a name="optimizing-profiler-settings"></a>Profil Oluşturucu ayarlarını iyileştirme
 
@@ -22,7 +22,7 @@ Visual Studio 'da performans profil oluşturucu ve Tanılama Araçları penceres
 
 ## <a name="symbol-settings"></a>Sembol ayarları
 
-Hata ayıklayıcı seçeneklerinde bulunan semboller ayarları (**hata ayıklama > seçenekleri > semboller**), araçların sonuçları oluşturmak için ne kadar sürdüğünü önemli ölçüde etkiler. Sembol sunucularının etkinleştirilmesi veya **_NT_SYMBOL_PATH** kullanılması, profil oluşturucunun bir rapordaki her bir yüklü modül için semboller istemesine neden olur. Şu anda profil oluşturucu otomatik sembol yükleme tercihine bakılmaksızın her zaman otomatik olarak tüm sembolleri yükler.
+Hata ayıklayıcı seçeneklerinde bulunan semboller ayarları ( **hata ayıklama > seçenekleri > sembol** veya **araçların > seçenekler > hata ayıklama > sembolleri** ), araçların sonuçları oluşturmak için ne kadar sürdüğünü önemli ölçüde etkiler. Sembol sunucularının etkinleştirilmesi veya **_NT_SYMBOL_PATH** kullanılması, profil oluşturucunun bir rapordaki her bir yüklü modül için semboller istemesine neden olur. Şu anda profil oluşturucu otomatik sembol yükleme tercihine bakılmaksızın her zaman otomatik olarak tüm sembolleri yükler.
 
 ![Sembol yükleme sayfası](../profiling/media/symbolloading.png "Sembol yükleme")
 

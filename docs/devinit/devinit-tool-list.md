@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 3374e0763a0189fb16db35b5b9ec6ec6908d9f4f
-ms.sourcegitcommit: 417ea66a8b07ec102ece2fa00e07b88edc404c00
+ms.openlocfilehash: 6bb4656dd04db576877cfdddf67869eb6d1eff35
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91106273"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399954"
 ---
 # <a name="available-tools"></a>Kullanılabilir araçlar
 
@@ -29,7 +29,8 @@ Aşağıdaki tabloda devınit için şu anda kullanılabilir olan araçların bi
 | [**choco-upgrade**](tool-choco-upgrade.md)                                                       | Chocolatey paketlerini yükseltmek için araç.                                                                       |
 | [**dotnet-restore**](tool-dotnet-restore.md)                                                     | Bir .NET projesinin bağımlılıklarını ve araçlarını geri yükleme aracı.                                               |
 | [**dotnet-toolinstall**](tool-dotnet-toolinstall.md)                                             | .NET Core araçları 'nı yüklemeye yönelik araç (örneğin,. DotNet-EF)                                                |
-| [**Enable-IIS**](tool-enable-iis.md)                                                             | IIS özelliklerini etkinleştirme ve en son ASP.NET barındırma paketini yüklemeye yönelik araç.                                  |
+| [**enable-iis**](tool-enable-iis.md)                                                             | IIS özelliklerini etkinleştirme ve en son ASP.NET barındırma paketini yüklemeye yönelik araç.                                  |
+| [**MSI-install**](tool-msi-install.md)                                                           | Bir yol veya URL 'ye verilen MSI dosyalarını yüklemeye yönelik araç.                                                              |
 | [**npm-install**](tool-npm-install.md)                                                           | NPM paketlerini yüklemek için araç.                                                                               |
 | [**nuget-restore**](tool-nuget-restore.md)                                                       | NuGet paketlerini geri yüklemeye yönelik araç.                                                                         |
 | [**require-azureartifactscredentialprovider**](tool-require-azureartifactscredentialprovider.md) | Azure Artifacts kimlik bilgileri sağlayıcısını kurar.                                                           |
@@ -44,7 +45,7 @@ Aşağıdaki tabloda devınit için şu anda kullanılabilir olan araçların bi
 | [**require-vscomponent**](tool-require-vscomponent.md)                                           | Bir dosya temelinde VS yüklemelerini değiştirme aracı `.vsconfig` .                                                |
 | [**windowsfeature-enable**](tool-windowsfeature-enable.md)                                       | Araç kümesi Windows özelliklerini etkinleştir.                                                                           |
 | [**windowsfeature-disable**](tool-windowsfeature-disable.md)                                     | Araç kümesi Windows özelliklerini devre dışı bırak.                                                                          |
-| [**WindowsFeature-listesi**](tool-windowsfeature-list.md)                                           | Tüm Windows özelliklerinin etkinleştir/devre dışı bırak durumunu listelemek için araç.                                                                        |
+| [**windowsfeature-list**](tool-windowsfeature-list.md)                                           | Tüm Windows özelliklerinin etkinleştir/devre dışı bırak durumunu listelemek için araç.                                                                        |
 | [**set-env**](tool-set-env.md)                                                                   | Ortam değişkenlerini görüntüleme ve ayarlamaya yönelik araç.                                                                 |
 | [**vcpkg-install**](tool-vcpkg-install.md)                                                       | Vcpkg aracılığıyla paket yüklemeye yönelik araç.                                                                         |
 | [**wsl-install**](tool-wsl-install.md)                                                           | Linux için Windows alt sistemi için Linux Distro 'lara 'yi yüklemek ve yapılandırmak için araç.                             |

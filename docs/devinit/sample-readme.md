@@ -1,7 +1,7 @@
 ---
 title: Örnek listesi
 description: Devinit kullanan örnek depo özelleştirmeleri listesi.
-ms.date: 10/28/2020
+ms.date: 11/04/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,22 +11,23 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 765e96e724d7c0e682c722b3e7b5a4e8ecdca037
-ms.sourcegitcommit: 7915cedf2f5988db25cb90042aa8466a1d3cee7f
+ms.openlocfilehash: 30fc2c467d08b06da382b62b4cbc04eb731b196b
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "93027960"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400304"
 ---
 # <a name="sample-list"></a>Örnek listesi
 
 Aşağıdaki tabloda, GitHub Codespaces ' de devinit kullanmak için şu anda kullanılabilir olan tüm örneklerin bir listesi bulunur.
 
-| Araç                                              | Açıklama                                                                                                                  |   |
+| Örnek                                            | Açıklama                                                                                                                  |   |
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---|
 | [**Tüm araçlar**](sample-all-tool.md)               | Tüm araçları kullanma örneği.                                                                                              |   |
 | [**eShopOnWeb**](sample-eshoponweb.md)            | [DotNet-Architecture/eshoponweb](https://github.com/dotnet-architecture/eShopOnWeb) uygulamasını özelleştirme örneği.          |   |
 | [**Özel Önizleme**](sample-private-preview.md)  | GitHub Codespaces Visual Studio özel beta 'da kullanılan özelleştirmeler örneği.                                      |   |
 | [**CV 'yi açın**](sample-opencv.md)                   | OpenCV projesi için gereken özelleştirmeler örneği.                                                                |   |
 | [**.NET Core Runtime**](sample-dotnet-runtime.md) | .NET Core çalışma zamanı [DotNet/Runtime](https://github.com/dotnet/runtime) projesi için gereken özelleştirmeler örneği. |   |
-| [**.NET Core uygulaması**](sample-dotnet-core.md)        | Gerekli .NET Core SDK yüklemek için devinit kullanan bir depo örneği.                                             |   |
+| [**.NET Core Uygulaması**](sample-dotnet-core.md)        | Gerekli .NET Core SDK yüklemek için devinit kullanan bir depo örneği.                                             |   |
+| [**Node.js uygulaması**](sample-nodejs.md)               | Bir Node.js Express projesi için NPM paketlerini yüklemek için devinit kullanan bir depo örneği.                             |   |

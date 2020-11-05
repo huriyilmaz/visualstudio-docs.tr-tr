@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: b9aba6b9c4be882498535ab96020461f22722c10
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 750fcb907350d3bd135bc86e5d1bc1ed211c4a7b
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659309"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400147"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Visual Studio belgelerindeki yeniliklerin geçmişi
 
@@ -157,8 +157,8 @@ Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu konu, 2020 Eyl
 
 **Güncelleştirilmiş makaleler**
 
-- [Değişiklik günlüğü (Unity için Visual Studio Araçları, Windows)](../cross-platform/change-log-visual-studio-tools-for-unity.md) -kabartma VSTU changelog 4.7.1.0
-- [Değişiklik günlüğü (Unity için Visual Studio Araçları, Mac)](../cross-platform/change-log-visual-studio-tools-for-unity-mac.md) -kabartma vstum changelog, 2.7.1.0
+- [Değişiklik günlüğü (Unity için Visual Studio Araçları, Windows)](/gamedev/unity/change-log-visual-studio-tools-for-unity.md) -kabartma VSTU changelog 4.7.1.0
+- [Değişiklik günlüğü (Unity için Visual Studio Araçları, Mac)](/gamedev/unity/change-log-visual-studio-tools-for-unity-mac.md) -kabartma vstum changelog, 2.7.1.0
 
 ### <a name="get-started"></a>Kullanmaya başlayın
 

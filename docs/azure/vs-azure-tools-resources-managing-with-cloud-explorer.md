@@ -4,17 +4,16 @@ description: Visual Studio 'da Azure kaynaklarını taramak ve yönetmek için C
 author: ghogen
 manager: jillfra
 assetId: 6347dc53-f497-49d5-b29b-e8b9f0e939d7
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/25/2017
 ms.author: ghogen
-ms.openlocfilehash: 175aa7111d77e92fb29a3983db7365e068abba2f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 12c82cca6c8873facc1a16a926d90fd0f3918c07
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800391"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399396"
 ---
 # <a name="manage-the-resources-associated-with-your-azure-accounts-in-visual-studio-cloud-explorer"></a>Visual Studio Cloud Explorer'da Azure hizmetlerinizle ilişkilendirilmiş kaynakları yönetme
 
@@ -28,39 +27,39 @@ Cloud Explorer, Azure kaynaklarınızı ve Kaynak gruplarınızı görüntüleme
 * Microsoft Azure hesabı-hesabınız yoksa, [ücretsiz deneme için kaydolabilir](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) veya [Visual Studio abone avantajlarınızı etkinleştirebilirsiniz](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/).
 
 > [!NOTE]
-> Cloud Explorer 'ı görüntülemek için, **Ctrl** + arama kutusunu etkinleştirmek üzere CTRL**Q** tuşlarına basın ve ardından **bulut Gezgini**' ni girin.
+> Cloud Explorer 'ı görüntülemek için, **Ctrl** + arama kutusunu etkinleştirmek üzere CTRL **Q** tuşlarına basın ve ardından **bulut Gezgini** ' ni girin.
 
 ## <a name="add-an-azure-account-to-cloud-explorer"></a>Bulut Gezgini 'ne bir Azure hesabı ekleme
 
-Bir Azure hesabıyla ilişkili kaynakları görüntülemek için öncelikle hesabı **Cloud Explorer**'a eklemeniz gerekir.
+Bir Azure hesabıyla ilişkili kaynakları görüntülemek için öncelikle hesabı **Cloud Explorer** 'a eklemeniz gerekir.
 
-1. **Cloud Explorer**'Da **Hesap yönetimi** düğmesini seçin.
+1. **Cloud Explorer** 'Da **Hesap yönetimi** düğmesini seçin.
 
    ![Cloud Explorer Azure hesap ayarları simgesi](./media/vs-azure-tools-resources-managing-with-cloud-explorer/azure-account-settings.png)
 
-1. **Hesapları Yönet**' i seçin.
+1. **Hesapları Yönet** ' i seçin.
 
    ![Bulut Gezgini eklenti hesabı bağlantısı](./media/vs-azure-tools-resources-managing-with-cloud-explorer/manage-accounts-link.png)
 
 1. Kaynaklarını taramak istediğiniz Azure hesabında oturum açın.
 
-1. Bir Azure hesabında oturum açtıktan sonra, bu hesapla ilişkili abonelikler görüntülenir. Gezinmek istediğiniz hesap Aboneliklerinin onay kutularını seçin ve ardından **Uygula**' yı seçin.
+1. Bir Azure hesabında oturum açtıktan sonra, bu hesapla ilişkili abonelikler görüntülenir. Gezinmek istediğiniz hesap Aboneliklerinin onay kutularını seçin ve ardından **Uygula** ' yı seçin.
 
    ![Bulut Gezgini: görüntülenecek Azure aboneliklerini seçin](./media/vs-azure-tools-resources-managing-with-cloud-explorer/select-subscriptions.png)
 
-1. Kaynakları taramak istediğiniz abonelikler seçildikten sonra, bu abonelikler ve kaynaklar **bulut Gezgini**'nde görüntülenir.
+1. Kaynakları taramak istediğiniz abonelikler seçildikten sonra, bu abonelikler ve kaynaklar **bulut Gezgini** 'nde görüntülenir.
 
    ![Azure hesabı için bulut Gezgini kaynak listesi](./media/vs-azure-tools-resources-managing-with-cloud-explorer/resources-listed.png)
 
 ## <a name="remove-an-azure-account-from-cloud-explorer"></a>Azure hesabını bulut Gezgini 'nden kaldırma
 
-1. **Cloud Explorer**'Da **Hesap yönetimi**' ni seçin.
+1. **Cloud Explorer** 'Da **Hesap yönetimi** ' ni seçin.
 
-   ![Cloud Explorer Azure hesap ayarları simgesi](./media/vs-azure-tools-resources-managing-with-cloud-explorer/azure-account-settings.png)
+   ![Azure hesap ayarları](./media/vs-azure-tools-resources-managing-with-cloud-explorer/azure-account-settings.png)
 
-1. Kaldırmak istediğiniz hesabın yanındaki **hesapları Yönet**' i seçin.
+1. Kaldırmak istediğiniz hesabın yanındaki **hesapları Yönet** ' i seçin.
 
-   ![Cloud Explorer Azure hesap ayarları simgesi](./media/vs-azure-tools-resources-managing-with-cloud-explorer/remove-account.png)
+   ![Hesabı kaldır](./media/vs-azure-tools-resources-managing-with-cloud-explorer/remove-account.png)
 
 1. Hesabı kaldırmak için **Kaldır** ' ı seçin.
 
@@ -70,7 +69,7 @@ Bir Azure hesabıyla ilişkili kaynakları görüntülemek için öncelikle hesa
 
 Azure kaynaklarınızı görüntülemek için **kaynak türlerini** veya **kaynak grupları** görünümünü seçebilirsiniz.
 
-1. **Cloud Explorer**'da kaynak görünümü açılır listesini seçin.
+1. **Cloud Explorer** 'da kaynak görünümü açılır listesini seçin.
 
    ![İstenen kaynak görünümünü seçmek için bulut Gezgini açılan listesi](./media/vs-azure-tools-resources-managing-with-cloud-explorer/resources-view-dropdown.png)
 
@@ -95,13 +94,13 @@ Aşağıdaki görüntüde App Service için her sekmede gördüklerinize ilişki
 
   ![Cloud Explorer 'ın ekran görüntüsü](./media/vs-azure-tools-resources-managing-with-cloud-explorer/actions-and-properties.png)
 
-Her kaynak, **portalda açık**olan eylemi içerir. Bu eylemi seçtiğinizde, Cloud Explorer [Azure Portal](https://portal.azure.com)seçili kaynağı görüntüler. **Portal 'Da aç** özelliği, derin iç içe geçmiş kaynaklara gitmek için kullanışlıdır.
+Her kaynak, **portalda açık** olan eylemi içerir. Bu eylemi seçtiğinizde, Cloud Explorer [Azure Portal](https://portal.azure.com)seçili kaynağı görüntüler. **Portal 'Da aç** özelliği, derin iç içe geçmiş kaynaklara gitmek için kullanışlıdır.
 
-Ek eylemler ve özellik değerleri, Azure kaynağına göre de görünebilir. Örneğin, Web Apps ve Logic Apps Ayrıca eylemler **Içinde açılır** ve **portalda aç**' a ek olarak **hata ayıklayıcı ekler** . Bir depolama hesabı blobu, kuyruğu veya tablosu seçtiğinizde, düzenleyicilerin açılacağı eylemler görünür. Azure uygulamalarının **URL** ve **durum** özellikleri vardır, ancak depolama kaynaklarında anahtar ve bağlantı dizesi özellikleri vardır.
+Ek eylemler ve özellik değerleri, Azure kaynağına göre de görünebilir. Örneğin, Web Apps ve Logic Apps Ayrıca eylemler **Içinde açılır** ve **portalda aç** ' a ek olarak **hata ayıklayıcı ekler** . Bir depolama hesabı blobu, kuyruğu veya tablosu seçtiğinizde, düzenleyicilerin açılacağı eylemler görünür. Azure uygulamalarının **URL** ve **durum** özellikleri vardır, ancak depolama kaynaklarında anahtar ve bağlantı dizesi özellikleri vardır.
 
 ## <a name="find-resources-in-cloud-explorer"></a>Bulut Gezgininde kaynakları bulma
 
-Azure hesap aboneliklerinizde belirli bir ada sahip kaynakları bulmak için, **Cloud Explorer**'daki **arama** kutusuna adı girin.
+Azure hesap aboneliklerinizde belirli bir ada sahip kaynakları bulmak için, **Cloud Explorer** 'daki **arama** kutusuna adı girin.
 
   ![Bulut Gezgininde kaynakları bulma](./media/vs-azure-tools-resources-managing-with-cloud-explorer/search-for-resources.png)
 

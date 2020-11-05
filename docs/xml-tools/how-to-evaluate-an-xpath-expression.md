@@ -1,6 +1,8 @@
 ---
 title: Hata ayıklama sırasında bir XPath ifadesini değerlendir
 ms.date: 03/05/2019
+description: Hata ayıklama sırasında hızlı Izleme penceresini kullanarak XPath ifadelerini değerlendirmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 ms.assetid: 159ba4ef-75e4-4ac8-80dc-e064e0bec345
 author: TerryGLee
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 64113461cd081eb97e2eb927119f1cd67f8a8d6e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 068362f88d801d44a1a6b6a85c74f97ba2d3c773
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816260"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399747"
 ---
 # <a name="evaluate-xpath-expressions"></a>XPath ifadelerini değerlendir
 
@@ -34,11 +36,11 @@ Aşağıdaki yordam [Izlenecek yol: XSLT stil sayfası hata ayıklaması](../xml
 
 1. Başlangıç etiketine bir kesme noktası ekleyin `xsl:if` .
 
-2. Hata ayıklamayı başlatmak için, **XML**  >  menü çubuğunda XML**XSLT hata ayıklamayı Başlat** ' ı seçin (veya **alt** + **F5**tuşuna basın).
+2. Hata ayıklamayı başlatmak için, **XML**  >  menü çubuğunda XML **XSLT hata ayıklamayı Başlat** ' ı seçin (veya **alt** + **F5** tuşuna basın).
 
    Hata ayıklayıcı başlar ve `xsl:if` etiketi keser.
 
-3. Sağ tıklayın ve **hızlı gözcü**' ı seçin.
+3. Sağ tıklayın ve **hızlı gözcü** ' ı seçin.
 
    **QuickWatch** penceresi açılır.
 
@@ -48,7 +50,7 @@ Aşağıdaki yordam [Izlenecek yol: XSLT stil sayfası hata ayıklaması](../xml
 
    ![Hızlı Gözcü penceresinde bir XPath ifadesini değerlendirme](media/quickwatch-price.png)
 
-5. XPath ifadesini olarak değiştirin `./price/text() < $bookAverage` ve yeniden değerlendir **Reevaluate**' e tıklayın.
+5. XPath ifadesini olarak değiştirin `./price/text() < $bookAverage` ve yeniden değerlendir **Reevaluate** ' e tıklayın.
 
    **Değer** kutusunda XPath ifadesinin değerlendirme gösterilmektedir `true` .
 

@@ -4,17 +4,16 @@ description: Visual Studio ile bir Azure bulut hizmeti projesi oluşturmak için
 author: ghogen
 manager: jillfra
 assetId: ec580df7-3dcc-45a9-a1d9-8c110678dfb5
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/19/2019
 ms.author: ghogen
-ms.openlocfilehash: ef5acada89d48ed91dbf5b0f5fe7c9801337d47f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1fd554a397c6db3bb1f1d5beb2fc12c0423aed22
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85280381"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399760"
 ---
 # <a name="create-an-azure-cloud-service-project-with-visual-studio"></a>Visual Studio ile Azure bulut hizmeti projesi oluşturması
 
@@ -26,7 +25,7 @@ Bu bölümde, bir veya daha fazla web rolü ile Visual Studio 'da bir Azure bulu
 ::: moniker range="vs-2017"
 1. Visual Studio 'Yu yönetici olarak açın.
 
-1. Ana menüde **Dosya** > **Yeni** > **Proje**' yi seçin.
+1. Ana menüde **Dosya** > **Yeni** > **Proje** ' yi seçin.
 
 1. Visual C# veya Visual Basic proje şablonu düğümlerinde **bulut** ' u seçin ve şablonlar listesinden **Azure Cloud Service** ' i seçin.
 
@@ -36,16 +35,16 @@ Bu bölümde, bir veya daha fazla web rolü ile Visual Studio 'da bir Azure bulu
 
 1. Projeniz için bir ad ve konum ve çözüm için bir ad girin.
 
-1. **Tamam**’ı seçin.
+1. **Tamam** ’ı seçin.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-1. Başlangıç penceresinden **Yeni proje oluştur**' u seçin.
+1. Başlangıç penceresinden **Yeni proje oluştur** ' u seçin.
 
-1. Arama kutusuna *Cloud*yazın ve ardından **Azure bulut hizmeti**' ni seçin.
+1. Arama kutusuna *Cloud* yazın ve ardından **Azure bulut hizmeti** ' ni seçin.
 
    ![Yeni Azure bulut hizmeti](./media/vs-azure-tools-azure-project-create/vs-2019/new-project-cloud-service.png)
 
-1. Projeye bir ad verin ve **Oluştur**' a tıklayın.
+1. Projeye bir ad verin ve **Oluştur** ' a tıklayın.
 
    ![Projeye bir ad verin](./media/vs-azure-tools-azure-project-create/vs-2019/new-project-cloud-service-2.png)
 ::: moniker-end
@@ -54,11 +53,11 @@ Bu bölümde, bir veya daha fazla web rolü ile Visual Studio 'da bir Azure bulu
 
     ![Yeni Azure bulut hizmeti rolleri seçin](./media/vs-azure-tools-azure-project-create/new-cloud-service.png)
 
-1. Eklediğiniz bir rolü yeniden adlandırmak için, **yeni Microsoft Azure bulut hizmeti** iletişim kutusundaki rol üzerine gelin ve bağlam menüsünden **Yeniden Adlandır**' ı seçin. Ayrıca, çözümünüzde bir rolü ( **Çözüm Gezgini**) eklendikten sonra yeniden adlandırabilirsiniz.
+1. Eklediğiniz bir rolü yeniden adlandırmak için, **yeni Microsoft Azure bulut hizmeti** iletişim kutusundaki rol üzerine gelin ve bağlam menüsünden **Yeniden Adlandır** ' ı seçin. Ayrıca, çözümünüzde bir rolü ( **Çözüm Gezgini** ) eklendikten sonra yeniden adlandırabilirsiniz.
 
     ![Azure bulut hizmeti rolünü yeniden adlandır](./media/vs-azure-tools-azure-project-create/new-cloud-service-rename.png)
 
-Visual Studio Azure projesinde, çözümdeki rol projeleriyle ilişkiler vardır. Proje ayrıca *hizmet tanım dosyasını* ve *hizmet yapılandırma dosyasını*da içerir:
+Visual Studio Azure projesinde, çözümdeki rol projeleriyle ilişkiler vardır. Proje ayrıca *hizmet tanım dosyasını* ve *hizmet yapılandırma dosyasını* da içerir:
 
 - **Hizmet tanımı dosyası** -uygulamanız için gerekli olan, uç noktaların ve sanal makine boyutu dahil olmak üzere çalışma zamanı ayarlarını tanımlar.
 - **Hizmet yapılandırma dosyası** -bir rolün kaç örneğinin çalıştırılacağını ve bir rol için tanımlanan ayarların değerlerini yapılandırır.

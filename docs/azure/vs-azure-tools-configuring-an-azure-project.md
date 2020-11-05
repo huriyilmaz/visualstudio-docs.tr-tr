@@ -4,17 +4,16 @@ description: Bu projenin gereksinimlerine bağlı olarak, Visual Studio 'da bir 
 author: ghogen
 manager: jillfra
 assetId: 609d6965-05cc-47b1-82dc-c76a92d4f295
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/06/2017
 ms.author: ghogen
-ms.openlocfilehash: 7f207afc600402924969e4d2eee6df229c3d6f09
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: 388cd20468624c6441342267f6545dfaf0e21901
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426726"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399152"
 ---
 # <a name="configure-an-azure-cloud-service-project-with-visual-studio"></a>Visual Studio ile Azure bulut hizmeti projesini yapılandırma
 Bu projenin gereksinimlerine bağlı olarak bir Azure bulut hizmeti projesi yapılandırabilirsiniz. Projenin özelliklerini aşağıdaki kategoriler için ayarlayabilirsiniz:
@@ -26,7 +25,7 @@ Bu projenin gereksinimlerine bağlı olarak bir Azure bulut hizmeti projesi yap�
 ## <a name="steps-to-configure-an-azure-cloud-service-project"></a>Azure bulut hizmeti projesini yapılandırma adımları
 1. Visual Studio 'da bir bulut hizmeti projesi açın veya oluşturun
 
-1. **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünden **Özellikler**' i seçin.
+1. **Çözüm Gezgini** , projeye sağ tıklayın ve bağlam menüsünden **Özellikler** ' i seçin.
 
 1. Projenin Özellikler sayfasında **geliştirme** sekmesini seçin.
 
@@ -42,7 +41,7 @@ Bu projenin gereksinimlerine bağlı olarak bir Azure bulut hizmeti projesi yap�
 
 1. Web rolünüzün IIS Express yerel olarak başlatıldığı her seferinde aynı bağlantı noktasını kullandığından emin olmak için **Web projesi bağlantı noktalarını** **doğru** olarak kullan ' a ayarlayın.
 
-1. Visual Studio araç çubuğundan **Kaydet**' i seçin.
+1. Visual Studio araç çubuğundan **Kaydet** ' i seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 - [Birden çok hizmet yapılandırması kullanarak bir Azure projesi yapılandırma](vs-azure-tools-multiple-services-project-configurations.md)

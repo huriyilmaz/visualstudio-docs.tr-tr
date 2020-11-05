@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 29ea900b534bc03e47cfda49dba15af910189e48
-ms.sourcegitcommit: e132a870ec198fdcec289227f1a0c1c48fef070c
+ms.openlocfilehash: 2b6cc27d2614f71c85988457ab9bb64228bbaebb
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344487"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399968"
 ---
 # <a name="devinit-configuration-file"></a>devinit yapılandırma dosyası
 
@@ -46,7 +46,7 @@ Yollar, devınit 'in çalıştığı konuma göre belirlenir. Bu, genellikle yü
 
 ```json
 {
-    "$schema": "https://json.schemastore.org/devinit.schema-2.0",
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "comments": "string",
     "run": [
         {
@@ -64,14 +64,14 @@ Yollar, devınit 'in çalıştığı konuma göre belirlenir. Bu, genellikle yü
 | Ad         | Tür   | Gerekli | Değer                              |
 |--------------|--------|----------|------------------------------------|
 | **açıklamaları** | dize | No       | Dosya için açıklamalar.             |
-| **çalışmaz**      | array  | Evet      | [RunTool nesnesi](#run-tool-object) |
+| **çalışmaz**      | array  | Yes      | [RunTool nesnesi](#run-tool-object) |
 
 #### <a name="run-tool-object"></a>Araç nesnesi Çalıştır
 
 | Ad                  | Tür   | Gerekli | Değer                                                                                                      |
 |-----------------------|--------|----------|------------------------------------------------------------------------------------------------------------|
 | **açıklamaları**          | dize | No       | Araç girişi için açıklamalar.                                                                               |
-| **Aracı**              | string | Evet      | Araç adı. `devinit list`Kullanılabilir araçların listesi için komutuna bakın.                            |
+| **Aracı**              | string | Yes      | Araç adı. `devinit list`Kullanılabilir araçların listesi için komutuna bakın.                            |
 | **girişinin**             | dize | No       | Araç girişi. Araca göre farklılık gösterir. Örneğin, gerekli sürüm, paket KIMLIĞI, dosya adı veya klasör.|
 | **additionalOptions** | dize | No       | Araca geçirilecek ek komut satırı bağımsız değişkenleri.                                                |
 
