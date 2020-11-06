@@ -6,31 +6,31 @@
 - name: Unity için Visual Studio Araçları
   items:
     - name: Unity için Visual Studio Araçları
-      href: visual-studio-tools-for-unity.md
+      href: /gamedev/unity/get-started/visual-studio-tools-for-unity.md
     - name: Unity için Visual Studio Araçları ile Başlarken
-      href: getting-started-with-visual-studio-tools-for-unity.md
+      href: /gamedev/unity/get-started/getting-started-with-visual-studio-tools-for-unity.md
     - name: Unity için Visual Studio Araçları’nı Kullanma
-      href: using-visual-studio-tools-for-unity.md
+      href: /gamedev/unity/get-started/using-visual-studio-tools-for-unity.md
     - name: Unity’de .NET 4.x kullanma
-      href: unity-scripting-upgrade.md
+      href: /gamedev/unity/unity-scripting-upgrade.md
     - name: Unity için Visual Studio Araçları’nı Programlama
       items:
         - name: Unity için Visual Studio Araçları’nı Programlama
-          href: programming-visual-studio-tools-for-unity.md
+          href: /gamedev/unity/extensibility/programming-visual-studio-tools-for-unity.md
         - name: VSTU Tarafından Oluşturulan Proje Dosyalarını Özelleştirme
-          href: customize-project-files-created-by-vstu.md
+          href: /gamedev/unity/extensibility/customize-project-files-created-by-vstu.md
         - name: VSTU ile Unity Günlük Geri Çağırması paylaşma
-          href: share-the-unity-log-callback-with-vstu.md
+          href: /gamedev/unity/extensibility/share-the-unity-log-callback-with-vstu.md
     - name: Unity ve Azure ile Programlama
-      href: visual-studio-tools-for-unity-azure.md
+      href: /gamedev/unity/visual-studio-tools-for-unity-azure.md
     - name: Sorun Giderme ve Bilinen Sorunlar (Unity için Visual Studio Araçları)
-      href: troubleshooting-and-known-issues-visual-studio-tools-for-unity.md
+      href: /gamedev/unity/troubleshooting/troubleshooting-and-known-issues-visual-studio-tools-for-unity.md
     - name: 'Değişiklik Günlüğü (Unity için Visual Studio Araçları, Windows)'
-      href: change-log-visual-studio-tools-for-unity.md
+      href: /gamedev/unity/change-log-visual-studio-tools-for-unity.md
     - name: 'Değişiklik Günlüğü (Unity için Visual Studio Araçları, Mac)'
-      href: change-log-visual-studio-tools-for-unity-mac.md
+      href: /gamedev/unity/change-log-visual-studio-tools-for-unity-mac.md
     - name: Unity Uygulamaları ile DevOps
-      href: application-lifecycle-management-alm-with-unity-apps.md
+      href: /gamedev/unity/application-lifecycle-management-alm-with-unity-apps.md
 - name: C++ ile platformlar arası mobil geliştirme
   href: /cpp/cross-platform/
 - name: Evrensel Windows Platformu (UWP) için uygulama geliştirme
