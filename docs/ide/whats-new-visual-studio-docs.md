@@ -1,8 +1,8 @@
 ---
-title: "Visual Studio belgeleri: Eylül 2020 ' deki yenilikler "
+title: "Visual Studio belgeleri: Ekim 2020 ' deki yenilikler "
 titleSuffix: ''
-description: Eylül 2020 için Visual Studio docs 'daki yenilikler.
-ms.date: 09/30/2020
+description: Ekim 2020 için Visual Studio docs 'daki yenilikler.
+ms.date: 11/04/2020
 helpviewer_keywords:
 - Visual Studio, what's new, docs
 - what's new [Visual Studio]
@@ -15,90 +15,114 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 62449bd5571ff72cdf5a1c855417611f45f5970f
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: bbc723661b0556acd6c8e020709e0055a398f22d
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659322"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414496"
 ---
-# <a name="visual-studio-docs-whats-new-for-september-2020"></a>Visual Studio belgeleri: Eylül 2020 ' deki yenilikler
+# <a name="visual-studio-docs-whats-new-for-october-2020"></a>Visual Studio belgeleri: Ekim 2020 ' deki yenilikler
 
-Eylül 2020 için Visual Studio docs 'daki yenilikler 'e hoş geldiniz. Bu makalede, bu süre boyunca docs 'ta yapılan önemli değişikliklerden bazıları listelenir. Önceki aylardaki yenilikler hakkında daha fazla bilgi için bkz. yenilikler [geçmişi](whats-new-visual-studio-docs-history.md) konusu.
+Ekim 2020 için Visual Studio docs 'daki yenilikler 'e hoş geldiniz. Bu makalede, bu süre boyunca docs 'ta yapılan önemli değişikliklerden bazıları listelenir. Önceki aylardaki yenilikler hakkında daha fazla bilgi için bkz. yenilikler [geçmişi](whats-new-visual-studio-docs-history.md) makalesi.
 
 ## <a name="code-quality"></a>Kod kalitesi
 
-**Yeni makaleler**
-
-- [CA1416: platform uyumluluğunu doğrulama](/dotnet/fundamentals/code-analysis/quality-rules/ca1416) -CA1416 platform uyumluluğunu doğrula
-- [CA1834: tek karakter dizeleri Için StringBuilder. Append (Char) kullanın](/dotnet/fundamentals/code-analysis/quality-rules/ca1834) -CA1834 için docs
-
-**Güncellendi**
-
-- [Kaynak kodu analizine genel bakış](../code-quality/roslyn-analyzers-overview.md) -.NET yeniden düzenleme için kod analizi güncelleştirmeleri
-- [Kod kalitesi analizini yapılandırma](../code-quality/use-roslyn-analyzers.md) -.NET yeniden düzenleme için kod analizi güncelleştirmeleri
+**Güncelleştirilmiş makaleler**
+- [Kod Çözümleyicileri](../code-quality/index.yml) -.NET 5 için CA yeniden düzenleme
 
 ## <a name="containers"></a>Kapsayıcılar
 
+**Güncelleştirilmiş makaleler**
+
+- [Hızlı başlangıç: Visual Studio 'da bir tepki verme tek sayfalı uygulamayla Docker kullanma](../containers/container-tools-react.md)
+  - Kapsayıcı araçları: eski görüntü deposuna başvuruları kaldır
+  - .NET 3,1 ve VS 16,7 için kapsayıcıları güncelleştirme tepki verme öğreticisi
+- [Kubernetes Için köprü](../containers/overview-bridge-to-kubernetes.md) oluşturma-Kubernetes ile Köprü oluşturma: kısıtlama ekleme
+- [Yerel bir Docker kapsayıcısında uygulamalarda hata ayıklama](../containers/edit-and-refresh.md) -Docker araç kutusu
+
+## <a name="debugger"></a>Hata Ayıklayıcısı
+
 **Yeni makaleler**
 
-- Kubernetes ile yerel Işlem için Kubernetes 'e köprü [kullanarak](../containers/bridge-to-kubernetes.md) Kubernetes 'e köprü oluşturma
-- [Kubernetes Köprüsü](../containers/overview-bridge-to-kubernetes.md) , Kubernetes ile ilgili olarak Kubernetes Ile yerel işlem
-
-## <a name="deployment"></a>Dağıtım
+- [Visual Studio 'Da DirectX 12 desteği](../debugger/graphics/visual-studio-graphics-diagnostics-directx-12.md) -Vsdg DX12
 
 **Güncelleştirilmiş makaleler**
 
-- [Uygulamanızı bir klasöre, IIS 'ye, Azure 'a veya başka bir hedef](../deployment/deploying-applications-services-and-components-resources.md) dağıtım güncelleştirmelerine dağıtın
-- [Visual Studio dağıtım güncelleştirmelerini kullanarak bir uygulamayı bir klasöre dağıtma](../deployment/quickstart-deploy-to-local-folder.md)
+- [Visual Studio 'da ASP.NET veya ASP.NET Core uygulamalarda hata ayıklayın](../debugger/how-to-enable-debugging-for-aspnet-applications.md) -GitHub sorunları için hata ayıklayıcı içerik düzeltmeleri
+- [Visual Studio hata ayıklayıcısında kesme noktaları kullan](../debugger/using-breakpoints.md) -GitHub sorunları için hata ayıklayıcı içerik düzeltmeleri
+- [Visual Studio 'Da Azure hizmetlerinde hata ayıklama](../debugger/debug-azure-apps.md) -bir anlık görüntü hata ayıklayıcısı için bağlantı güncelleştirmeleri
+- Anlık görüntü hata ayıklayıcısı için Snapshot Debugger-SEO ve bağlantı güncelleştirmelerini [kullanarak canlı ASP.net Azure uygulamalarında hata ayıklayın](../debugger/debug-live-azure-applications.md)
+- [Uzaktan hata ayıklama](../debugger/remote-debugging.md) -anlık görüntü hata ayıklayıcısı için SEO ve bağlantı güncelleştirmeleri
+- [Visual Studio grafik tanılama genel bakış](../debugger/graphics/overview-of-visual-studio-graphics-diagnostics.md) -Vsdg DX12
+- [Visual Studio grafik tanılama](../debugger/graphics/visual-studio-graphics-diagnostics.md) -Vsdg DX12
+
+## <a name="get-started"></a>Kullanmaya başlayın
+
+**Güncelleştirilmiş makaleler**
+
+- [Öğretici: basit bir C# konsol uygulamasını genişletme](../get-started/csharp/tutorial-console-part-2.md) -genişletilmiş c# öğreticisi için hata ayıklama eklemeleri
 
 ## <a name="ide"></a>IDE
 
 **Yeni makaleler**
 
-- [Visual Studio 'Da yeni git deneyimi (Önizleme)](./git-with-visual-studio.md) -yeni git deneyimi içeriği ekleme (Önizleme)
-- [C++ Editorconfig biçimlendirme kuralları](./cpp-editorconfig-properties.md) -Yeni Makale
-- [GitHub Codespaces nedir? (Önizleme)](./codespaces/codespaces-overview.md) -Codespaces (Önizleme) içeriği ekleme
-- [Codespace 'i özelleştirme (Önizleme)](./codespaces/customize-codespaces.md) -codespaces (Önizleme) içeriğini ekleme
-- [Desteklenen Visual Studio özellikleri (Önizleme)](./codespaces/supported-features-codespaces.md) -codespaces (Önizleme) içeriği ekleme
-- [Visual Studio 'yu bir codespace (Önizleme) ile kullanma](./codespaces/use-visual-studio-with-codespaces.md) -Codespaces (Önizleme) içeriği ekleme
-
-**Güncelleştirilmiş makaleler**
-
-- [EditorConfig için .net kodlama kuralı ayarları](/dotnet/fundamentals/code-analysis/code-style-rule-options) -güncelleştirilmiş EditorConfig
-- [Dil kuralları](/dotnet/fundamentals/code-analysis/style-rules/language-rules) -eksik örnekler
+- [Visual Studio arama](./visual-studio-search.md) -vs arama belgesi kullanma
 
 ## <a name="install"></a>Yükleme
 
-**Yeni makaleler**
+**Güncelleştirilmiş makaleler**
 
-- [ARM ile desteklenen cihazlarda Visual Studio](../install/visual-studio-on-arm-devices.md) -ARM için belge ekleme
+- [Visual Studio derleme numaraları ve yayın tarihleri](../install/visual-studio-build-numbers-and-release-dates.md)
+  - 16.7.7 ve 16,8 Preview 6 verileri ekleme
+  - 16,8 Preview 5 bilgilerini ekle
+
+## <a name="msbuild"></a>MSBuild
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio 'yu yüklediğinizde veya kullanırken ağla ilgili hatalarda sorun giderme](../install/troubleshooting-network-related-errors-in-visual-studio.md) -geri bildirim kimlik doğrulama proxy kilitlenme için geçici çözüm ekleme
+- [Izlenecek yol: MSBuild](../msbuild/walkthrough-using-msbuild.md) -MSBuild izlenecek yol: tek başına yükleme adımları ekleme
 
 ## <a name="profiling"></a>Profil Oluşturma
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio 'da bellek kullanımını ölçme](../profiling/memory-usage.md) -profil oluşturma Özellik turu güncelleştirmeleri
-- [PerfTips](../profiling/perftips.md) -profil oluşturma özelliği turu güncelleştirmeleri
-- [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md) -profil oluşturma için güncelleştirmeler Özellik turu
+- [Bellek kullanımını analiz etme](../profiling/analyze-memory-usage.md)
+  - Profil oluşturma için bellek kullanım güncelleştirmeleri-bağlantılar ve açıklamalar
+  - Bellek kullanım Aracı güncelleştirmeleri
+- [Performans Profiler 'da hata ayıklama olmadan bellek kullanımını analiz etme](../profiling/memory-usage-without-debugging2.md)
+  - Profil oluşturma için bellek kullanım güncelleştirmeleri-bağlantılar ve açıklamalar
+  - Bellek kullanım Aracı güncelleştirmeleri
+- [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)
+  - Profil oluşturma için bellek kullanım güncelleştirmeleri-bağlantılar ve açıklamalar
+  - Bellek kullanım Aracı güncelleştirmeleri
 - [Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçları çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
-  - Profil oluşturma özelliği turu güncelleştirmeleri
-  - İçerik performansı geliştirmeleri
+  - Profil oluşturma için bellek kullanım güncelleştirmeleri-bağlantılar ve açıklamalar
+  - Bellek kullanım Aracı güncelleştirmeleri
+- Performans Profiler-bellek kullanım aracı güncelleştirmelerinde [, CPU kullanımını hata ayıklamadan çözümleyin](../profiling/cpu-usage.md)
+
+## <a name="windows"></a>Windows
+
+**Güncelleştirilmiş makaleler**
+
+- [Visual Studio belgeleri | Microsoft Docs](../windows/index.yml) -Windows hub güncelleştirmeleri
+
+## <a name="xaml-tools"></a>XAML araçları
+
+**Yeni makaleler**
+
+- [Visual Studio 'da XAML Tasarımcısı tasarım zamanı verilerini kullanma](../xaml-tools/xaml-designtime-data.md)
+  - XAML tasarım zamanı belgelerine genişletilebilirlik bölümü eklendi
+  - Yeni tasarım zamanı XAML makalesi
 
 ## <a name="community-contributors"></a>Topluluk katkı sağlayanlar
 
 Aşağıdaki kişiler bu süre boyunca Visual Studio belgelerine katkıda bulunanlar. Teşekkür ederiz! [Katkıda bulunan kılavuzundaki](/contribute/)Kılavuzu Izleyerek Visual Studio belgelerine nasıl katkıda bulunabileceğinizi öğrenin.
 
-- [hyoshioka0128](https://github.com/hyoshioka0128) -Hiroshi Yoshioka (3)
-- [gmsantos](https://github.com/gmsantos) -Gabriel, ADO (1)
-- [ıkullanılan-Klass](https://github.com/ite-klass) -Jan Klass (1)
-- [johnaller](https://github.com/johnallers) -John alleyiciler (1)
-- [mrlacey](https://github.com/mrlacey) -Matt Lacey (1)
-- [remona-Minett](https://github.com/remona-minett) -REM (1)
-- [sguitardude](https://github.com/sguitardude) (1)
-- [sjrct](https://github.com/sjrct) -Chris Harding (1)
-- [Youssef1313](https://github.com/Youssef1313) -Youssef Victor (1)
+- [bmarshalsea](https://github.com/bmarshalsea) (1)
+- [DavidJohnWilliams](https://github.com/DavidJohnWilliams) -David John Williams (1)
+- [Jessetg](https://github.com/JesseTG) -jeso Talavera-Greenberg (1)
+- [matkoch](https://github.com/matkoch) -MATTHIAS Koch (1)
+- [philipwolfe](https://github.com/philipwolfe) -Philip Wolfe (1)
+- [podsvirov](https://github.com/podsvirov) -KONSTANTIN podsvirov (1)
+- [drryder](https://github.com/drryder) (1)

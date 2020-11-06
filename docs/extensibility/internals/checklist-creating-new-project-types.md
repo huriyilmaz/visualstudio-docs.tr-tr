@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0aa4ad83428120c68adb89937afc46f51700dbfe
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 111eb74d388682ff3cf97d5e0aa7e7e5a91cbaf3
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583677"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414197"
 ---
 # <a name="checklist-create-new-project-types"></a>Denetim listesi: yeni proje türleri oluşturma
 Yeni bir proje türü oluşturmak için birkaç görevi gerçekleştirmeniz gerekir. Aşağıdaki denetim listesi, bu görevlere rehberlik sağlar:
@@ -25,7 +25,7 @@ Yeni bir proje türü oluşturmak için birkaç görevi gerçekleştirmeniz gere
 
 2. Hangi düzenleyicilerin kod ve diğer proje öğeleri için kullanıldığını belirleme. Çekirdek veya standart düzenleyicilerini kullanabilir veya projeye özgü düzenleyiciler oluşturup kullanabilirsiniz. Daha fazla bilgi için bkz. [özel düzenleyiciler ve tasarımcılar oluşturma](../../extensibility/creating-custom-editors-and-designers.md) ve [nasıl yapılır: projeye özgü düzenleyiciler açma](../../extensibility/how-to-open-project-specific-editors.md).
 
-3. Proje öğelerinizin **sınıf görünümü** ve **nesne tarayıcısı**sahip olacağı katılım düzeyini saptayın. Daha fazla bilgi için bkz. [support symbol-gözatma araçları](../../extensibility/internals/supporting-symbol-browsing-tools.md).
+3. Proje öğelerinizin **sınıf görünümü** ve **nesne tarayıcısı** sahip olacağı katılım düzeyini saptayın. Daha fazla bilgi için bkz. [support symbol-gözatma araçları](../../extensibility/internals/supporting-symbol-browsing-tools.md).
 
 4. Daha önce projeniz ve proje öğeleriniz için yaptığınız tasarım kararlarını temel alarak yeni sınıflar türetirsiniz.
 
@@ -33,7 +33,7 @@ Yeni bir proje türü oluşturmak için birkaç görevi gerçekleştirmeniz gere
 
     - Proje fabrikası, yeni proje oluşturmayı ve var olan projeleri açmayı yönetmek için. Daha fazla bilgi için bkz. [Proje fabrikalarını kullanarak proje örnekleri oluşturma](../../extensibility/internals/creating-project-instances-by-using-project-factories.md).
 
-    - Proje hiyerarşisi ve komut işleme. Daha fazla bilgi için bkz. [HierUtil7 proje sınıflarını kullanarak proje türü (C++)](/previous-versions/bb166212(v=vs.100)), [proje modeli öğeleri](../../extensibility/internals/elements-of-a-project-model.md), [proje modeli çekirdek bileşenleri](../../extensibility/internals/project-model-core-components.md)ve [MenuCommands vs. OleMenuCommands](../../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015&preserve-view=true).
+    - Proje hiyerarşisi ve komut işleme. Daha fazla bilgi için bkz. [HierUtil7 proje sınıflarını kullanarak proje türü (C++)](/previous-versions/bb166212(v=vs.100)), [proje modeli öğeleri](../../extensibility/internals/elements-of-a-project-model.md), [proje modeli çekirdek bileşenleri](../../extensibility/internals/project-model-core-components.md)ve [MenuCommands vs. OleMenuCommands](/previous-versions/visualstudio/visual-studio-2015/misc/menucommands-vs-olemenucommands?preserve-view=true&view=vs-2015).
 
     - Proje öğeleri yönetimi, projenizi **Yeni proje** iletişim kutusuna ekleme da dahil. Daha fazla bilgi için bkz. [Proje ve proje öğesi şablonları ekleme](../../extensibility/internals/adding-project-and-project-item-templates.md) ve [Proje ve öğe şablonlarını kaydetme](../../extensibility/internals/registering-project-and-item-templates.md).
 
@@ -49,13 +49,13 @@ Yeni bir proje türü oluşturmak için birkaç görevi gerçekleştirmeniz gere
 
     - ' Den türetilmiş nesneler veya sınıflar `IDispatch` Otomasyon için kullanılabilir.
 
-    - XML komut tablosu (*. vsct*) dosyaları. Daha fazla bilgi için bkz. [Visual Studio komut tablosu (. vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
+    - XML komut tablosu ( *. vsct* ) dosyaları. Daha fazla bilgi için bkz. [Visual Studio komut tablosu (. vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
 
 6. Proje türünü test edin, hata ayıklayın ve başlatın.
 
 7. Projeniz için değer olarak ayarlayarak **Başvuru Ekle** Iletişim kutusunun **Proje** sekmesinde projenizi görüntüleyin `VARIANT_TRUE` `VSHPROPID_ShowProjInSolutionPage` . Daha fazla bilgi için <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> bölümlerine bakın.
 
-8. VSPackages 'yi yüklemek için Microsoft Installer (*. msi*) dosyasını oluşturun. Daha fazla bilgi için bkz. [Windows Installer Ile VSPackages](../../extensibility/internals/installing-vspackages-with-windows-installer.md)'yi, [bir proje türünü](../../extensibility/internals/registering-a-project-type.md)ve [VSPackages](../../extensibility/internals/vspackages.md)'yi kaydetme.
+8. VSPackages 'yi yüklemek için Microsoft Installer ( *. msi* ) dosyasını oluşturun. Daha fazla bilgi için bkz. [Windows Installer Ile VSPackages](../../extensibility/internals/installing-vspackages-with-windows-installer.md)'yi, [bir proje türünü](../../extensibility/internals/registering-a-project-type.md)ve [VSPackages](../../extensibility/internals/vspackages.md)'yi kaydetme.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio’da Hiyerarşiler](../../extensibility/internals/hierarchies-in-visual-studio.md)

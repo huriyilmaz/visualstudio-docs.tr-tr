@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 155c703ebbeb2705ac7abbba5cd2c095f520c698
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 321bd82eb83ef37dc3981e38cc23d1d4b5685802
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584561"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93413950"
 ---
 # <a name="extend-the-editor-and-language-services"></a>Düzenleyiciyi ve dil hizmetlerini genişletme
 Dil hizmeti özelliklerini (IntelliSense gibi) kendi düzenleyicinize ekleyebilirsiniz ve Visual Studio Code Editor özelliklerinin çoğunu genişletebilirsiniz.  Neyi genişletebileceğinize ilişkin tam bir liste için bkz. [dil hizmeti ve Düzenleyici uzantı noktaları](../extensibility/language-service-and-editor-extension-points.md).
@@ -36,7 +36,7 @@ Dil hizmeti özelliklerini (IntelliSense gibi) kendi düzenleyicinize ekleyebili
 |[Dil hizmeti ve Düzenleyici uzantı noktaları](../extensibility/language-service-and-editor-extension-points.md)|Düzenleyicinin uzantı noktalarını listeler. Uzantı noktaları, genişletilebilen düzenleyici özelliklerini temsil eder.|
 |[İzlenecek yol: Görünüm kenarlığı, komutlar ve ayarlar oluşturma (sütun Kılavuzu)](../extensibility/walkthrough-creating-a-view-adornment-commands-and-settings-column-guides.md)|İzlenecek yol gösterir ve kodu belirli bir görüntüleme genişliğine sahip olmanıza yardımcı olmak üzere sütun kılavuzu çizgileri çizen bir görünüm kenarlığı oluşturmayı açıklar.  Ayrıca, okuma ve yazma ayarlarının yanı sıra komut penceresinden çağırabileceğiniz komutları bildirmek ve uygulamak da gösterilmektedir.|
 |[Düzenleyici içeri aktarmaları](../extensibility/editor-imports.md)|Bir uzantının içeri aktarabileceğiniz hizmetleri listeler.|
-|[Eski kodu düzenleyiciye uyarlayabilirsiniz](../vs-2015/extensibility/adapting-legacy-code-to-the-editor.md?view=vs-2015&preserve-view=true)|Düzenleyiciyi genişletmek için eski kodu (Visual Studio 2010 öncesi) uyarlamak için farklı yollar açıklanmaktadır.|
+|[Eski kodu düzenleyiciye uyarlayabilirsiniz](/previous-versions/visualstudio/visual-studio-2015/extensibility/adapting-legacy-code-to-the-editor?preserve-view=true&view=vs-2015)|Düzenleyiciyi genişletmek için eski kodu (Visual Studio 2010 öncesi) uyarlamak için farklı yollar açıklanmaktadır.|
 |[Eski dil hizmetini geçirme](../extensibility/internals/migrating-a-legacy-language-service.md)|VSPackage tabanlı dil hizmetinin nasıl geçirileceği açıklanmaktadır.|
 |[İzlenecek yol: bir içerik türünü bir dosya adı uzantısına bağlama](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)|Bir içerik türünün bir dosya adı uzantısına nasıl bağlanacağını gösterir.|
 |[İzlenecek yol: kenar boşluğu karakteri oluşturma](../extensibility/walkthrough-creating-a-margin-glyph.md)|Kenar boşluğuna bir simgenin nasıl ekleneceğini gösterir.|

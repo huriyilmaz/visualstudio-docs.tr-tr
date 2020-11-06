@@ -2,7 +2,7 @@
 title: 'Visual Studio belgeleri: yenilikler geçmişi '
 titleSuffix: ''
 description: Visual Studio belgelerindeki yeniliklerin geçmişi
-ms.date: 09/30/2020
+ms.date: 10/04/2020
 helpviewer_keywords:
 - Visual Studio, what's new, docs
 - what's new [Visual Studio]
@@ -15,16 +15,80 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 750fcb907350d3bd135bc86e5d1bc1ed211c4a7b
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 2314965dad6c77e749a62946f3372993813240bb
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400147"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414509"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Visual Studio belgelerindeki yeniliklerin geçmişi
 
-Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu konu, 2020 Eylül 'de (2020 ' den itibaren) önce docs üzerinde yapılan büyük değişiklikleri içerir. En son yenilikler için bkz. [Visual Studio docs: docs 'taki](whats-new-visual-studio-docs.md)yenilikler.
+Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu makale, 2020 Ekim 'de (2020 ' den itibaren) önce docs üzerinde yapılan büyük değişiklikleri içerir. En son yenilikler için bkz. [Visual Studio docs: docs 'taki](whats-new-visual-studio-docs.md)yenilikler.
+
+## <a name="september-2020"></a>Eylül 2020
+### <a name="code-quality"></a>Kod kalitesi
+
+**Yeni makaleler**
+
+- [CA1416: platform uyumluluğunu doğrulama](/dotnet/fundamentals/code-analysis/quality-rules/ca1416) -CA1416 platform uyumluluğunu doğrula
+- [CA1834: tek karakter dizeleri Için StringBuilder. Append (Char) kullanın](/dotnet/fundamentals/code-analysis/quality-rules/ca1834) -CA1834 için docs
+
+**Güncellendi**
+
+- [Kaynak kodu analizine genel bakış](../code-quality/roslyn-analyzers-overview.md) -.NET yeniden düzenleme için kod analizi güncelleştirmeleri
+- [Kod kalitesi analizini yapılandırma](../code-quality/use-roslyn-analyzers.md) -.NET yeniden düzenleme için kod analizi güncelleştirmeleri
+
+### <a name="containers"></a>Kapsayıcılar
+
+**Yeni makaleler**
+
+- Kubernetes ile yerel Işlem için Kubernetes 'e köprü [kullanarak](../containers/bridge-to-kubernetes.md) Kubernetes 'e köprü oluşturma
+- [Kubernetes Köprüsü](../containers/overview-bridge-to-kubernetes.md) , Kubernetes ile ilgili olarak Kubernetes Ile yerel işlem
+
+### <a name="deployment"></a>Dağıtım
+
+**Güncelleştirilmiş makaleler**
+
+- [Uygulamanızı bir klasöre, IIS 'ye, Azure 'a veya başka bir hedef](../deployment/deploying-applications-services-and-components-resources.md) dağıtım güncelleştirmelerine dağıtın
+- [Visual Studio dağıtım güncelleştirmelerini kullanarak bir uygulamayı bir klasöre dağıtma](../deployment/quickstart-deploy-to-local-folder.md)
+
+### <a name="ide"></a>IDE
+
+**Yeni makaleler**
+
+- [Visual Studio 'Da yeni git deneyimi (Önizleme)](./git-with-visual-studio.md) -yeni git deneyimi içeriği ekleme (Önizleme)
+- [C++ Editorconfig biçimlendirme kuralları](./cpp-editorconfig-properties.md) -Yeni Makale
+- [GitHub Codespaces nedir? (Önizleme)](./codespaces/codespaces-overview.md) -Codespaces (Önizleme) içeriği ekleme
+- [Codespace 'i özelleştirme (Önizleme)](./codespaces/customize-codespaces.md) -codespaces (Önizleme) içeriğini ekleme
+- [Desteklenen Visual Studio özellikleri (Önizleme)](./codespaces/supported-features-codespaces.md) -codespaces (Önizleme) içeriği ekleme
+- [Visual Studio 'yu bir codespace (Önizleme) ile kullanma](./codespaces/use-visual-studio-with-codespaces.md) -Codespaces (Önizleme) içeriği ekleme
+
+**Güncelleştirilmiş makaleler**
+
+- [EditorConfig için .net kodlama kuralı ayarları](/dotnet/fundamentals/code-analysis/code-style-rule-options) -güncelleştirilmiş EditorConfig
+- [Dil kuralları](/dotnet/fundamentals/code-analysis/style-rules/language-rules) -eksik örnekler
+
+### <a name="install"></a>Yükleme
+
+**Yeni makaleler**
+
+- [ARM ile desteklenen cihazlarda Visual Studio](../install/visual-studio-on-arm-devices.md) -ARM için belge ekleme
+
+**Güncelleştirilmiş makaleler**
+
+- [Visual Studio 'yu yüklediğinizde veya kullanırken ağla ilgili hatalarda sorun giderme](../install/troubleshooting-network-related-errors-in-visual-studio.md) -geri bildirim kimlik doğrulama proxy kilitlenme için geçici çözüm ekleme
+
+### <a name="profiling"></a>Profil Oluşturma
+
+**Güncelleştirilmiş makaleler**
+
+- [Visual Studio 'da bellek kullanımını ölçme](../profiling/memory-usage.md) -profil oluşturma Özellik turu güncelleştirmeleri
+- [PerfTips](../profiling/perftips.md) -profil oluşturma özelliği turu güncelleştirmeleri
+- [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md) -profil oluşturma için güncelleştirmeler Özellik turu
+- [Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçları çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
+  - Profil oluşturma özelliği turu güncelleştirmeleri
+  - İçerik performansı geliştirmeleri
 
 ## <a name="august-2020"></a>Ağustos 2020
 ### <a name="azure"></a>Azure
@@ -109,7 +173,7 @@ Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu konu, 2020 Eyl
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio 'da pencere düzenlerini özelleştirme](./customizing-window-layouts-in-visual-studio.md) -pencere düzenlerini özelleştirme konusunda monikered dikey belge sekmeleri ekleme bilgileri
+- [Visual Studio 'da pencere düzenlerini özelleştirme](./customizing-window-layouts-in-visual-studio.md) -pencere düzenlerini özelleştirmek için monikered dikey belge sekmeleri bilgilerini ekleyin.
 - [Visual Studio veya Visual Studio Yükleyicisi ilgili bir sorunu bildirme](./how-to-report-a-problem-with-visual-studio.md)
   - NMI 'ye daha fazla bilgi eklendi
   - Sorun bildir sayfasının tamamını yeniden oldu

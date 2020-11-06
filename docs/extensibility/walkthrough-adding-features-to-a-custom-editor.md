@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e0340b89ed87872833f554fb00e24aca2f4759f3
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 12f585a3e7dd4a8182d7ed80cf65a20d0a82da83
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583599"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414028"
 ---
 # <a name="walkthrough-add-features-to-a-custom-editor"></a>İzlenecek yol: özel düzenleyiciye özellikler ekleme
 Özel bir düzenleyici oluşturduktan sonra, ona daha fazla özellik ekleyebilirsiniz.
@@ -34,11 +34,11 @@ ms.locfileid: "91583599"
 
 3. Arabirimi ayarlayarak bir düzenleyici fabrikası uygulayın <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> .
 
-     Daha fazla bilgi için bkz. [Düzenleyici fabrikaları](../vs-2015/extensibility/editor-factories.md?view=vs-2015&preserve-view=true).
+     Daha fazla bilgi için bkz. [Düzenleyici fabrikaları](/previous-versions/visualstudio/visual-studio-2015/extensibility/editor-factories?preserve-view=true&view=vs-2015).
 
 4. Düzenleyici 'nin belge görünümü nesne penceresini yönetmek için yerinde etkinleştirme veya Basitleştirilmiş ekleme kullanmasını isteyip istemediğinize karar verin.
 
-     Basitleştirilmiş bir katıştırma Düzenleyicisi penceresi, standart bir belge görünümü barındırır, ancak yerinde etkinleştirme Düzenleyicisi penceresi, belge görünümü olarak bir ActiveX denetimi veya başka bir etkin nesne barındırır. Daha fazla bilgi için bkz. [Basitleştirilmiş ekleme](../extensibility/simplified-embedding.md) ve [yerinde etkinleştirme](../vs-2015/misc/in-place-activation.md?view=vs-2015&preserve-view=true).
+     Basitleştirilmiş bir katıştırma Düzenleyicisi penceresi, standart bir belge görünümü barındırır, ancak yerinde etkinleştirme Düzenleyicisi penceresi, belge görünümü olarak bir ActiveX denetimi veya başka bir etkin nesne barındırır. Daha fazla bilgi için bkz. [Basitleştirilmiş ekleme](../extensibility/simplified-embedding.md) ve [yerinde etkinleştirme](/previous-versions/visualstudio/visual-studio-2015/misc/in-place-activation?preserve-view=true&view=vs-2015).
 
 5. <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>Komutları işlemek için arabirimini uygulayın.
 
@@ -69,15 +69,15 @@ ms.locfileid: "91583599"
 
     2. `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> İçin bir işaretçi almak üzere hizmette çağrı yapın <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> .
 
-9. Kullanıcıların, düzenleyici ve **araç kutusu**arasında veya dış düzenleyiciler (Microsoft Word gibi) ve **araç kutusu**arasında öğeleri sürükleyip bırakması için izin sağlayın. Şu adımları izleyin:
+9. Kullanıcıların, düzenleyici ve **araç kutusu** arasında veya dış düzenleyiciler (Microsoft Word gibi) ve **araç kutusu** arasında öğeleri sürükleyip bırakması için izin sağlayın. Şu adımları izleyin:
 
     1. `IDropTarget`Düzenleyicinize bir bırakma hedefi olduğunu IDE 'yi uyarmak için düzenleyicinize uygulayın.
 
-    2. <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser>Düzenleyiciniz **araç kutusu**'ndaki öğeleri etkinleştirip devre dışı bırakabilmeniz için, bu arabirimi görünümde uygulayın.
+    2. <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser>Düzenleyiciniz **araç kutusu** 'ndaki öğeleri etkinleştirip devre dışı bırakabilmeniz için, bu arabirimi görünümde uygulayın.
 
     3. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.ResetDefaults%2A> `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.SVsToolbox> <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox2> Ve arayüzlerinin bir işaretçisini almak için hizmetini uygulayın ve çağırın <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox3> .
 
-         Bu adımlar, VSPackage 'ın **araç kutusuna**yeni öğeler eklemesini sağlar.
+         Bu adımlar, VSPackage 'ın **araç kutusuna** yeni öğeler eklemesini sağlar.
 
 10. Düzenleyiciniz için diğer isteğe bağlı özellikler isteyip istemediğinize karar verin.
 
@@ -115,7 +115,7 @@ ms.locfileid: "91583599"
 
 12. Bağlama duyarlı yardım desteği uygulayın.
 
-     Bu adım, düzenleyicinizdeki öğeler için F1 yardımı ve dinamik Yardım penceresi desteği sağlamanıza olanak tanır. Daha fazla bilgi için bkz. [nasıl yapılır: düzenleyiciler için bağlam sağlama](../vs-2015/extensibility/how-to-provide-context-for-editors.md?view=vs-2015&preserve-view=true).
+     Bu adım, düzenleyicinizdeki öğeler için F1 yardımı ve dinamik Yardım penceresi desteği sağlamanıza olanak tanır. Daha fazla bilgi için bkz. [nasıl yapılır: düzenleyiciler için bağlam sağlama](/previous-versions/visualstudio/visual-studio-2015/extensibility/how-to-provide-context-for-editors?preserve-view=true&view=vs-2015).
 
 13. Arabirimi uygulayarak düzenleyicinizden bir Otomasyon nesne modeli sunun `IDispatch` .
 
@@ -138,9 +138,9 @@ ms.locfileid: "91583599"
   > [!NOTE]
   > `IOleInPlaceComponent`Arabirim, OLE 2 menüsünü birleştirmeyi önlemek için kullanılır.
 
-   `IOleCommandTarget`Uygulamanız **Kes**, **Kopyala**ve **Yapıştır**gibi komutları işler. Uygulamasını uygularken `IOleCommandTarget` , Düzenleyicinizde kendi komut menü yapısını tanımlamak için kendi *. vsct* dosyasını gerektirip gerektirmediğini veya tarafından tanımlanan standart komutları uygulayamayacağını belirleyin [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Genellikle düzenleyiciler IDE menülerini kullanır ve genişletir ve kendi araç çubuklarını tanımlar. Bununla birlikte, genellikle bir düzenleyicinin IDE 'nin standart komut kümesini kullanmaya ek olarak kendi belirli komutlarını tanımlanması gerekir. Düzenleyiciniz, kullandığı standart komutları bildirmelidir ve sonra bir *. vsct* dosyasındaki yeni komutları, bağlam menülerini, üst düzey menüleri ve araç çubuklarını tanımlar. Yerinde etkinleştirme Düzenleyicisi oluşturursanız, <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent> OLE 2 menü birleştirme kullanmak yerine bir *. vsct* dosyasında düzenleyici için menüleri ve araç çubuklarını uygulayın ve tanımlayın.
+   `IOleCommandTarget`Uygulamanız **Kes** , **Kopyala** ve **Yapıştır** gibi komutları işler. Uygulamasını uygularken `IOleCommandTarget` , Düzenleyicinizde kendi komut menü yapısını tanımlamak için kendi *. vsct* dosyasını gerektirip gerektirmediğini veya tarafından tanımlanan standart komutları uygulayamayacağını belirleyin [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Genellikle düzenleyiciler IDE menülerini kullanır ve genişletir ve kendi araç çubuklarını tanımlar. Bununla birlikte, genellikle bir düzenleyicinin IDE 'nin standart komut kümesini kullanmaya ek olarak kendi belirli komutlarını tanımlanması gerekir. Düzenleyiciniz, kullandığı standart komutları bildirmelidir ve sonra bir *. vsct* dosyasındaki yeni komutları, bağlam menülerini, üst düzey menüleri ve araç çubuklarını tanımlar. Yerinde etkinleştirme Düzenleyicisi oluşturursanız, <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent> OLE 2 menü birleştirme kullanmak yerine bir *. vsct* dosyasında düzenleyici için menüleri ve araç çubuklarını uygulayın ve tanımlayın.
 
-- Kullanıcı arabiriminde menü komutunun kalabonu engellemek için, yeni komutları oluşturmadan önce IDE 'de var olan komutları kullanmanız gerekir. Paylaşılan komutlar *SharedCmdDef. vsct* ve *ShellCmdDef. vsct*içinde tanımlanır. Bu dosyalar, yüklemenizin VisualStudioIntegration\Common\Inc alt dizininde varsayılan olarak yüklenir [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] .
+- Kullanıcı arabiriminde menü komutunun kalabonu engellemek için, yeni komutları oluşturmadan önce IDE 'de var olan komutları kullanmanız gerekir. Paylaşılan komutlar *SharedCmdDef. vsct* ve *ShellCmdDef. vsct* içinde tanımlanır. Bu dosyalar, yüklemenizin VisualStudioIntegration\Common\Inc alt dizininde varsayılan olarak yüklenir [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] .
 
 - `ISelectionContainer` hem tek hem de birden çok seçimi ifade edebilir. Seçili her nesne bir nesne olarak uygulanır `IDispatch` .
 

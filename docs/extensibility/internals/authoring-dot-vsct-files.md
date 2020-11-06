@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 11e55da5f2eb1d8b4671543672a79b508e20a929
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 54e67a28d59cb739abbeab188ff1f100751f2aa8
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583690"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93413922"
 ---
 # <a name="author-vsct-files"></a>Author. vsct dosyaları
 Bu belgede, Visual Studio tümleşik geliştirme ortamına (IDE) menü öğeleri, araç çubukları ve diğer kullanıcı arabirimi (UI) öğeleri eklemek için bir *. vsct* dosyasının nasıl yazılacağı gösterilmektedir. Zaten bir *. vsct* dosyası olmayan bir Visual Studio paketine (VSPackage) Kullanıcı arabirimi öğeleri eklediğinizde bu adımları kullanın.
@@ -51,9 +51,9 @@ Bu belgede, Visual Studio tümleşik geliştirme ortamına (IDE) menü öğeleri
 
 1. Öğesinin üst kısmında `CommandTable` , `Extern` başvurulacak her harici dosya için bir öğe ekleyin ve `href` özniteliği dosyanın adı olarak ayarlayın. Visual Studio kaynaklarına erişmek için aşağıdaki üst bilgi dosyalarına başvurabilirsiniz:
 
-   - *Stdidcmd. h*: Visual Studio tarafından kullanıma sunulan tüm komutların kimliklerini tanımlar.
+   - *Stdidcmd. h* : Visual Studio tarafından kullanıma sunulan tüm komutların kimliklerini tanımlar.
 
-   - *Vsshlıds. h*: Visual Studio menülerinin komut kimliklerini içerir.
+   - *Vsshlıds. h* : Visual Studio menülerinin komut kimliklerini içerir.
 
 2. Paketiniz Visual Studio veya diğer paketler tarafından tanımlanan komutları çağırırsa, `UsedCommands` öğesinden sonra bir öğe ekleyin `Commands` . Bu öğeyi, paketinizin bir parçası olmayan çağırdığınız her komut için bir [UsedCommand](../../extensibility/usedcommand-element.md) öğesiyle doldurun. `guid` `id` Öğelerinin ve özniteliklerini, `UsedCommand` çağrılacak KOMUTLARıN GUID ve ID değerleriyle ayarlayın.
 
@@ -64,7 +64,7 @@ Bu belgede, Visual Studio tümleşik geliştirme ortamına (IDE) menü öğeleri
 
 #### <a name="to-declare-ui-elements"></a>UI öğelerini bildirmek için
 
-1. `Symbols`Öğesinde, üç [GuidSymbol](../../extensibility/guidsymbol-element.md) öğesi ekleyin. Her `GuidSymbol` öğenin bir `name` özniteliği ve özniteliği vardır `value` . `name`Özniteliğini öğenin amacını yansıtacak şekilde ayarlayın. `value`Öznitelik BIR GUID alır. (Bir GUID oluşturmak için, **Araçlar** menüsünde **GUID oluştur**' u seçin ve **kayıt defteri biçimi**' ni seçin.)
+1. `Symbols`Öğesinde, üç [GuidSymbol](../../extensibility/guidsymbol-element.md) öğesi ekleyin. Her `GuidSymbol` öğenin bir `name` özniteliği ve özniteliği vardır `value` . `name`Özniteliğini öğenin amacını yansıtacak şekilde ayarlayın. `value`Öznitelik BIR GUID alır. (Bir GUID oluşturmak için, **Araçlar** menüsünde **GUID oluştur** ' u seçin ve **kayıt defteri biçimi** ' ni seçin.)
 
      İlk `GuidSymbol` öğe paketinizi temsil eder ve genellikle alt öğeye sahip olmaz. İkinci `GuidSymbol` öğe, komut kümesini temsil eder ve menülerinizi, gruplarınızı ve komutlarınızı tanımlayan bütün sembolleri içerir. Üçüncü `GuidSymbol` öğe, görüntü deponuzi temsil eder ve komutlarınız için tüm simgelere yönelik semboller içerir. Simgeler kullanan komutlarınız yoksa, üçüncü `GuidSymbol` öğeyi atlayabilirsiniz.
 
@@ -108,7 +108,7 @@ Bu belgede, Visual Studio tümleşik geliştirme ortamına (IDE) menü öğeleri
        > [!NOTE]
        > Araç çubuğu düğmelerinde simgeler olmalıdır.
 
-   Daha fazla bilgi için bkz. [MenuCommands vs. OleMenuCommands](../../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015&preserve-view=true).
+   Daha fazla bilgi için bkz. [MenuCommands vs. OleMenuCommands](/previous-versions/visualstudio/visual-studio-2015/misc/menucommands-vs-olemenucommands?preserve-view=true&view=vs-2015).
 
 4. Komutlarınızın herhangi biri simge gerektiriyorsa, öğeye bir [bit eşlem](../../extensibility/bitmaps-element.md) öğesi ekleyin `Commands` . Ardından, her simge için öğesine bir [bit eşlem](../../extensibility/bitmap-element.md) öğesi ekleyin `Bitmaps` . Bu, bit eşlem kaynağının konumunu belirlediğiniz yerdir. Daha fazla bilgi için bkz. [menü komutlarına simgeler ekleme](../../extensibility/adding-icons-to-menu-commands.md).
 
