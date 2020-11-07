@@ -1,6 +1,8 @@
 ---
 title: Kod kusurları için yönetilen kodu çözümlemek için İzlenecek yol | Microsoft Docs
 ms.date: 01/29/2018
+description: Eski Kod analizini kullanarak .NET yönetilen kod derlemelerini nasıl analiz edeceğinizi öğrenin. Bkz. hataları denetleme ve .NET tasarım yönergeleriyle uyumluluk.
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis [Visual Studio]
@@ -10,12 +12,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab8a834de307cf7803b93f025a68b95defe12466
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 7e862b176ab396999d3504e19c4de9a5c407b266
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659198"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349028"
 ---
 # <a name="walkthrough-use-static-code-analysis-to-find-code-defects"></a>İzlenecek yol: kod kusurlarını bulmak için statik Kod analizini kullanın
 
@@ -27,7 +29,7 @@ Bu makalede, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım kıla
 
 1. Visual Studio 'Yu açın ve **sınıf kitaplığı (.NET Framework)** şablonundan yeni bir proje oluşturun.
 
-1. Projeyi **CodeAnalysisManagedDemo**olarak adlandırın.
+1. Projeyi **CodeAnalysisManagedDemo** olarak adlandırın.
 
 1. Proje oluşturulduktan sonra, *Class1.cs* dosyasını açın.
 
@@ -51,9 +53,9 @@ Bu makalede, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım kıla
 
 ## <a name="analyze-the-project-for-code-defects"></a>Kod kusurları için projeyi analiz etme
 
-1. **Çözüm Gezgini**' de CodeAnalysisManagedDemo projesini seçin.
+1. **Çözüm Gezgini** ' de CodeAnalysisManagedDemo projesini seçin.
 
-2. **Proje** menüsünde **Özellikler**' e tıklayın.
+2. **Proje** menüsünde **Özellikler** ' e tıklayın.
 
    CodeAnalysisManagedDemo özellikleri sayfası görüntülenir.
 
@@ -63,7 +65,7 @@ Bu makalede, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım kıla
 
 4. **Derlemede Kod analizini etkinleştir '** in seçildiğinden emin olun.
 
-5. **Bu kural kümesini Çalıştır** açılan listesinden **Microsoft tüm kurallar**' ı seçin.
+5. **Bu kural kümesini Çalıştır** açılan listesinden **Microsoft tüm kurallar** ' ı seçin.
 
 ::: moniker-end
 
@@ -71,23 +73,23 @@ Bu makalede, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım kıla
 
 4. **İkili çözümleyiciler** bölümünde **derlemede Çalıştır** ' ın seçili olduğundan emin olun.
 
-5. **Etkin kurallar** açılan listesinden **Microsoft tüm kurallar**' ı seçin.
+5. **Etkin kurallar** açılan listesinden **Microsoft tüm kurallar** ' ı seçin.
 
 ::: moniker-end
 
-6. **Dosya** menüsünde, **Seçili öğeleri kaydet**' e tıklayın ve ardından Özellikler sayfalarını kapatın.
+6. **Dosya** menüsünde, **Seçili öğeleri kaydet** ' e tıklayın ve ardından Özellikler sayfalarını kapatın.
 
-7. **Build** menüsünde **CodeAnalysisManagedDemo oluştur**' a tıklayın.
+7. **Build** menüsünde **CodeAnalysisManagedDemo oluştur** ' a tıklayın.
 
     CodeAnalysisManagedDemo proje derleme uyarıları **hata listesi** ve **Çıkış** penceresinde gösterilir.
 
 ## <a name="correct-the-code-analysis-issues"></a>Kod Analizi sorunlarını düzeltin
 
-1. **Görünüm** menüsünde **hata listesi**' yi seçin.
+1. **Görünüm** menüsünde **hata listesi** ' yi seçin.
 
-    Seçtiğiniz geliştirici profiline bağlı olarak, **Görünüm** menüsünde **diğer pencereler** ' i işaret etmeniz ve ardından **hata listesi**' yi seçmeniz gerekebilir.
+    Seçtiğiniz geliştirici profiline bağlı olarak, **Görünüm** menüsünde **diğer pencereler** ' i işaret etmeniz ve ardından **hata listesi** ' yi seçmeniz gerekebilir.
 
-1. **Çözüm Gezgini**, **tüm dosyaları göster**' i seçin.
+1. **Çözüm Gezgini** , **tüm dosyaları göster** ' i seçin.
 
 1. Özellikler düğümünü genişletin ve ardından *AssemblyInfo.cs* dosyasını açın.
 
@@ -115,7 +117,7 @@ Bu makalede, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım kıla
 
    [CA2210: derlemeler geçerli tanımlayıcı adlara sahip olmalıdır](../code-quality/ca2210.md): ' CodeAnalysisManagedDemo ' öğesini bir tanımlayıcı ad anahtarıyla imzalayın:
 
-   1. **Proje** menüsünde **CodeAnalysisManagedDemo özellikleri**' ni seçin.
+   1. **Proje** menüsünde **CodeAnalysisManagedDemo özellikleri** ' ni seçin.
 
       Proje özellikleri görüntülenir.
 
@@ -127,11 +129,11 @@ Bu makalede, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım kıla
 
       **Tanımlayıcı ad anahtarı oluştur** iletişim kutusu görüntülenir.
 
-   1. **Anahtar dosya adı**Için **TestKey**girin.
+   1. **Anahtar dosya adı** Için **TestKey** girin.
 
-   1. Bir parola girin ve **Tamam**' ı seçin.
+   1. Bir parola girin ve **Tamam** ' ı seçin.
 
-   1. **Dosya** menüsünde, **Seçili öğeleri kaydet**' i seçin ve sonra özellik sayfalarını kapatın.
+   1. **Dosya** menüsünde, **Seçili öğeleri kaydet** ' i seçin ve sonra özellik sayfalarını kapatın.
 
    Tüm değişiklikleri tamamladıktan sonra, Class1.cs dosyası aşağıdaki gibi görünmelidir:
 
@@ -162,9 +164,9 @@ Bu makalede, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım kıla
 
 1. Kalan uyarıların her biri için aşağıdakileri yapın:
 
-    1. **Hata listesi**uyarıyı seçin.
+    1. **Hata listesi** uyarıyı seçin.
 
-    1. Sağ tıklama menüsünde (bağlam menüsü), **Suppress**  >  **gizleme dosyasında**Gizle ' yi seçin.
+    1. Sağ tıklama menüsünde (bağlam menüsü), **Suppress**  >  **gizleme dosyasında** Gizle ' yi seçin.
 
 1. Projeyi yeniden derleyin.
 

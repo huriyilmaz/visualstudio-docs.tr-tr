@@ -1,16 +1,18 @@
 ---
 title: Eski Kod analizini devre dışı bırak
 ms.date: 10/04/2019
+description: Visual Studio 'da ikili kod analizini açma ve kapatma hakkında bilgi edinin. Bkz. yönetilen kod projelerinde bu özelliği yapılandırma.
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: eb4422a12620d7650b4fe150313b10fe59835064
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 582d0e0d86909b266bbb18f83745b1b2261f0d10
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801028"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348755"
 ---
 # <a name="how-to-enable-and-disable-binary-code-analysis-for-managed-code"></a>Nasıl yapılır: yönetilen kod için ikili kod analizini etkinleştirme ve devre dışı bırakma
 
@@ -21,11 +23,11 @@ Bilinen kod analizini (ikili analiz), her bir yönetilen kod projesi derlemeden 
 
 Eski Kod analizini etkinleştirmek veya devre dışı bırakmak için:
 
-1. **Çözüm Gezgini**' de, projeyi seçin ve tutun (veya sağ tıklayın) ve ardından **Özellikler**' i seçin.
+1. **Çözüm Gezgini** ' de, projeyi seçin ve tutun (veya sağ tıklayın) ve ardından **Özellikler** ' i seçin.
 
 2. Projenin Özellikler iletişim kutusunda **Kod Analizi** sekmesine gidin.
 
-3. **Yapılandırmada** derleme türünü ve hedef platformu **Platform**' da belirtin. (Yalnızca Non-.NET Core/. NET standart projeler.)
+3. **Yapılandırmada** derleme türünü ve hedef platformu **Platform** ' da belirtin. (Yalnızca Non-.NET Core/. NET standart projeler.)
 
 ::: moniker range="vs-2017"
 

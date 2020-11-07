@@ -1,6 +1,8 @@
 ---
 title: Yönetilen kod için Temel Tasarım Yönerge Kuralları kural kümesi
 ms.date: 11/04/2016
+description: Visual Studio 'da ayarlanan temel tasarım kılavuz kuralları kural, kodun anlaşılması ve kullanılması daha kolay hale getirmenize yardımcı olabilir. Bkz. kural açıklamaları.
+ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: 7eb384f5-f961-400b-b151-115d92addc6a
 author: mikejo5000
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2bf7542d94b16042df27ec8b780cc93c9061d6e8
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: abf11966f029d6c4ec66ce295332889a9d74c359
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659133"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348414"
 ---
 # <a name="basic-design-guideline-rules-rule-set-for-managed-code"></a>Yönetilen kod için Temel Tasarım Yönerge Kuralları kural kümesi
 
@@ -23,7 +25,7 @@ Temel tasarım kılavuz kuralları, [yönetilen önerilen kurallar](managed-reco
 
 Aşağıdaki tabloda, Microsoft temel tasarım kılavuzu kuralları kural kümesindeki tüm kurallar açıklanmaktadır.
 
-|Kural|Açıklama|
+|Kural|Description|
 |----------|-----------------|
 |[CA1000](/dotnet/fundamentals/code-analysis/quality-rules/ca1000)|Genel türlerde statik üyeler belirtme|
 |[CA1001](/dotnet/fundamentals/code-analysis/quality-rules/ca1001)|Atılabilen alanlara sahip türler atılabilir olmalıdır|

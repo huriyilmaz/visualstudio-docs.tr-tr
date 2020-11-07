@@ -1,5 +1,6 @@
 ---
 title: Uydu derlemesini isteğe bağlı olarak indirin (ClickOnce API)
+description: Uydu derlemelerini isteğe bağlı olarak nasıl işaretleyeceğinizi ve yalnızca geçerli kültür ayarları için bir istemci makinesi için gereken derlemeyi inditireceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cda69b1aad8e70dce14bb3f25e6bf935103642bf
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 54deb51714183497173c7df4e346bb65613366a2
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809243"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349301"
 ---
 # <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api"></a>İzlenecek yol: ClickOnce dağıtım API 'SI ile isteğe bağlı uydu derlemelerini Indirme
 Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür için yapılandırılabilir. *Uydu derlemesi* , uygulamanın varsayılan kültürü dışında bir kültür için uygulama kaynakları içeren bir derlemedir.
@@ -51,11 +52,11 @@ Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür i
 
 2. [Resgen.exe (kaynak dosya Oluşturucu)](/dotnet/framework/tools/resgen-exe-resource-file-generator) veya kullanarak uygulamanız için uydu derlemeleri oluşturun [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
-3. *MageUI.exe*kullanarak, bir uygulama bildirimi oluşturun veya mevcut uygulama bildiriminizi açın. Bu araç hakkında daha fazla bilgi için bkz. [MageUI.exe (bildirim oluşturma ve düzenleme aracı, grafik istemci)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client).
+3. *MageUI.exe* kullanarak, bir uygulama bildirimi oluşturun veya mevcut uygulama bildiriminizi açın. Bu araç hakkında daha fazla bilgi için bkz. [MageUI.exe (bildirim oluşturma ve düzenleme aracı, grafik istemci)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client).
 
 4. **Dosyalar** sekmesine tıklayın.
 
-5. **Üç nokta** düğmesine (**...**) tıklayın ve *Resgen.exe*kullanarak oluşturduğunuz uydu derlemeleri dahil olmak üzere tüm uygulamanızın derlemelerini ve dosyalarını içeren dizini seçin. (Uydu derlemesi, RFC 1766 biçiminde bir dil tanımlayıcısı olan * \<isoCode>\ApplicationName.resources.dll*biçimde bir ada sahip olacaktır \<isoCode> .)
+5. **Üç nokta** düğmesine ( **...** ) tıklayın ve *Resgen.exe* kullanarak oluşturduğunuz uydu derlemeleri dahil olmak üzere tüm uygulamanızın derlemelerini ve dosyalarını içeren dizini seçin. (Uydu derlemesi, RFC 1766 biçiminde bir dil tanımlayıcısı olan *\<isoCode>\ApplicationName.resources.dll* biçimde bir ada sahip olacaktır \<isoCode> .)
 
 6. Dosyaları dağıtımınıza eklemek için **doldur** ' a tıklayın.
 

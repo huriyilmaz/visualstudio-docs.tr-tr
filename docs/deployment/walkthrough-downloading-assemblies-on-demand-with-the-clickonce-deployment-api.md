@@ -1,5 +1,6 @@
 ---
 title: İsteğe bağlı derlemeleri indirme (ClickOnce API)
+description: ClickOnce uygulamanızdaki belirli derlemeleri isteğe bağlı olarak nasıl işaretleyeceğinizi ve ortak dil çalışma zamanı için gereken durumlarda onları nasıl inditireceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8452bec3443b93737e4799a8f09c8e342f011976
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: fb74d7fd5ad388b9b3dc217bae8782b24517c13b
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809256"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349272"
 ---
 # <a name="walkthrough-download-assemblies-on-demand-with-the-clickonce-deployment-api"></a>İzlenecek yol: ClickOnce dağıtım API 'SI ile isteğe bağlı derlemeleri Indirme
 Varsayılan olarak, uygulama ilk çalıştırıldığında bir uygulamaya dahil edilen tüm derlemeler [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] indirilir. Ancak, uygulamanızın küçük bir kullanıcı kümesi tarafından kullanılan bölümlerine sahip olabilirsiniz. Bu durumda, bir derlemeyi yalnızca türlerinden birini oluştururken indirmek istersiniz. Aşağıdaki izlenecek yol, uygulamanızda belirli derlemelerin "isteğe bağlı" olarak nasıl işaretleneceğini ve <xref:System.Deployment.Application> ortak dil çalışma zamanı (CLR) tarafından talep edildiğinde ad alanındaki sınıfları kullanarak nasıl indirileceğini gösterir.
@@ -58,7 +59,7 @@ Varsayılan olarak, uygulama ilk çalıştırıldığında bir uygulamaya dahil 
     [!code-vb[ClickOnceLibrary#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_1.vb)]
     [!code-csharp[ClickOnceLibrary#1](../deployment/codesnippet/CSharp/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_1.cs)]
 
-6. Metni, kullandığınız dile bağlı olarak *ClickOnceLibrary.cs* veya *ClickOnceLibrary. vb*adlı bir dosya olarak, *ClickOnceOnDemand* dizinine kaydedin.
+6. Metni, kullandığınız dile bağlı olarak *ClickOnceLibrary.cs* veya *ClickOnceLibrary. vb* adlı bir dosya olarak, *ClickOnceOnDemand* dizinine kaydedin.
 
 7. Dosyayı bir derlemede derleyin.
 
@@ -85,7 +86,7 @@ Varsayılan olarak, uygulama ilk çalıştırıldığında bir uygulamaya dahil 
 
 11. `PublicKeyToken`Daha önce aldığınız değere ayarlayın.
 
-12. Dosyayı *Form1.cs* veya *Form1. vb*olarak kaydedin.
+12. Dosyayı *Form1.cs* veya *Form1. vb* olarak kaydedin.
 
 13. Aşağıdaki komutu kullanarak bir yürütülebilir dosyaya derleyin.
 
@@ -101,15 +102,15 @@ Varsayılan olarak, uygulama ilk çalıştırıldığında bir uygulamaya dahil 
 
 #### <a name="to-mark-assemblies-as-optional-in-your-clickonce-application-by-using-mageuiexe"></a>MageUI.exe kullanarak derlemeleri ClickOnce uygulamanızda isteğe bağlı olarak işaretlemek için
 
-1. *MageUI.exe*kullanarak, [Izlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)bölümünde açıklandığı gibi bir uygulama bildirimi oluşturun. Uygulama bildirimi için aşağıdaki ayarları kullanın:
+1. *MageUI.exe* kullanarak, [Izlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)bölümünde açıklandığı gibi bir uygulama bildirimi oluşturun. Uygulama bildirimi için aşağıdaki ayarları kullanın:
 
     - Uygulama bildirimini adlandırın `ClickOnceOnDemand` .
 
-    - **Dosyalar** sayfasında, *ClickOnceLibrary.dll* satırında, **dosya türü** sütununu **none**olarak ayarlayın.
+    - **Dosyalar** sayfasında, *ClickOnceLibrary.dll* satırında, **dosya türü** sütununu **none** olarak ayarlayın.
 
     - **Dosyalar** sayfasında, *ClickOnceLibrary.dll* satırına, `ClickOnceLibrary.dll` **Grup** sütununu yazın.
 
-2. *MageUI.exe*kullanarak, [Izlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)bölümünde açıklandığı gibi bir dağıtım bildirimi oluşturun. Dağıtım bildirimi için aşağıdaki ayarları kullanın:
+2. *MageUI.exe* kullanarak, [Izlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)bölümünde açıklandığı gibi bir dağıtım bildirimi oluşturun. Dağıtım bildirimi için aşağıdaki ayarları kullanın:
 
     - Dağıtım bildirimini adlandırın `ClickOnceOnDemand` .
 

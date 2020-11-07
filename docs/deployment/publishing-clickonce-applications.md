@@ -1,5 +1,7 @@
 ---
 title: ClickOnce uygulamalarını yayımlama | Microsoft Docs
+description: Yayımlama Sihirbazı 'nı kullanarak bir ClickOnce uygulamasını ilk kez nasıl yayımlayacağınızı öğrenin. Proje Tasarımcısı 'nda Yayımla sayfasında daha sonra değişiklikler yapın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -20,17 +22,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 41f8a790decbd3af20141c1c95fcaed678a2ec6a
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: 737e1092d88c48227183a32072502cb833ebcd37
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641546"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349496"
 ---
 # <a name="publish-clickonce-applications"></a>ClickOnce uygulamalarını yayımlama
 Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamayı ilk kez yayımlarken yayımlama özellikleri, Yayımlama Sihirbazı kullanılarak ayarlanabilir. Sihirbazda yalnızca birkaç özellik mevcuttur; diğer tüm özellikler varsayılan değerlerine ayarlanır.
 
- Yayımla özelliklerinde sonraki değişiklikler, **Proje Tasarımcısı**'nda **Yayımla** sayfasında yapılır.
+ Yayımla özelliklerinde sonraki değişiklikler, **Proje Tasarımcısı** 'nda **Yayımla** sayfasında yapılır.
 
 ## <a name="publish-wizard"></a>Yayımlama Sihirbazı
  Uygulamanızı yayımlamak için temel ayarları ayarlamak üzere Yayımla sihirbazını kullanabilirsiniz. Bu, aşağıdaki yayımlama özelliklerini içerir:

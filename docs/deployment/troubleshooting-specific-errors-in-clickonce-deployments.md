@@ -1,5 +1,6 @@
 ---
 title: Sorun giderme hataları (ClickOnce dağıtımları)
+description: Bu makalede, bir ClickOnce uygulaması dağıttığınızda oluşabilecek yaygın hatalar açıklanmakta ve her bir sorunu çözmek için adımlar sağlanmaktadır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
@@ -20,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 351aad83fe28251fcb769c76dd3d63b61b108b6b
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: af462178cf18d57afa6b51aedaba0004615ebb6f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809459"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349275"
 ---
 # <a name="troubleshoot-specific-errors-in-clickonce-deployments"></a>ClickOnce dağıtımları içinde belirli hataları giderme
 Bu makalede, bir uygulamayı dağıtırken oluşabilecek aşağıdaki yaygın hatalar listelenir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ve her bir sorunu çözmek için adımlar sağlanır.
@@ -90,7 +91,7 @@ Bu makalede, bir uygulamayı dağıtırken oluşabilecek aşağıdaki yaygın ha
  PrivatePath (Fusion yoklama yolları) kullanmak için, uygulamanın tam güven izni istemesi gerekir. Uygulama bildirimini tam güven isteyecek şekilde değiştirmeyi deneyin ve sonra yeniden deneyin.
 
 #### <a name="during-uninstall-a-message-appears-saying-failed-to-uninstall-application"></a>Kaldırma sırasında bir ileti görünür, "uygulama kaldırılamadı" iletisini alıyorum
- Bu ileti genellikle uygulamanın zaten kaldırıldığını veya deponun bozulduğunu gösterir. **Tamam**' a tıkladıktan sonra **Program Ekle/Kaldır** girdisi kaldırılır.
+ Bu ileti genellikle uygulamanın zaten kaldırıldığını veya deponun bozulduğunu gösterir. **Tamam** ' a tıkladıktan sonra **Program Ekle/Kaldır** girdisi kaldırılır.
 
 #### <a name="during-installation-a-message-appears-that-says-that-the-platform-dependencies-are-not-installed"></a>Yükleme sırasında, platform bağımlılıklarının yüklenmediğini belirten bir ileti görüntülenir
  Uygulamanın çalışması için gerekli olan GAC 'de (genel derleme önbelleği) bir önkoşulu eksik.
@@ -113,17 +114,17 @@ Bu makalede, bir uygulamayı dağıtırken oluşabilecek aşağıdaki yaygın ha
 #### <a name="you-tried-to-sign-with-a-certificate-in-your-certificate-store-and-a-received-blank-message-box"></a>Sertifika deponuzda bir sertifikayla oturum açmaya çalıştınız ve alınan boş ileti kutusu
  **İmzalama** iletişim kutusunda şunları yapmanız gerekir:
 
-- **Depolanan sertifikayla imzala**' yı seçin ve
+- **Depolanan sertifikayla imzala** ' yı seçin ve
 
 - Listeden bir sertifika seçin; ilk sertifika varsayılan seçim değildir.
 
 #### <a name="clicking-the-dont-sign-button-causes-an-exception"></a>"Oturum açma" düğmesine tıklamak özel duruma neden olur
- Bu sorun bilinen bir hatadır. Tüm [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bildirimlerin imzalanması gerekir. İmzalama seçeneklerinden birini seçmeniz yeterlidir ve ardından **Tamam**' a tıklayın.
+ Bu sorun bilinen bir hatadır. Tüm [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bildirimlerin imzalanması gerekir. İmzalama seçeneklerinden birini seçmeniz yeterlidir ve ardından **Tamam** ' a tıklayın.
 
 ## <a name="additional-errors"></a>Ek hatalar
  Aşağıdaki tabloda, Kullanıcı bir uygulama yüklediğinde istemci-bilgisayar kullanıcısının alabileceği bazı yaygın hata iletileri gösterilmektedir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Her hata iletisi, hatanın en olası nedeni açıklamasının yanında listelenir.
 
-| Hata iletisi | Açıklama |
+| Hata iletisi | Description |
 | - | - |
 | Uygulama başlatılamıyor. Uygulama yayımcısına başvurun.<br /><br /> Uygulama başlatılamıyor. Yardım almak için uygulama satıcısına başvurun. | Bunlar, uygulama başlatılmadan oluşan genel hata iletilerdir ve başka bir özel neden bulunamamalıdır. Bu, genellikle uygulamanın bozulmuş olduğu veya deponun bozuk olduğu anlamına gelir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . |
 | Devam edilemiyor. Uygulama Hatalı biçimli. Yardım almak için uygulama yayımcısına başvurun.<br /><br /> Uygulama doğrulaması başarılı olmadı. Devam edilemiyor.<br /><br /> Uygulama dosyaları alınamıyor. Dağıtımdaki dosyalar bozuk. | Dağıtımdaki bildirim dosyalarından biri sözdizimsel olarak geçerli değil veya karşılık gelen dosyayla mutabık kılınabilecek bir karma içeriyor. Bu hata, bir derleme içine gömülü bildirimin bozuk olduğunu da gösterebilir. Dağıtımınızı yeniden oluşturun ve uygulamanızı yeniden derleyin ya da bildirimlerinizde el ile hataları bulup onarın. |

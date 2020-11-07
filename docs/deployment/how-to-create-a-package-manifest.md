@@ -1,5 +1,7 @@
 ---
 title: Paket bildirimi oluşturma | Microsoft Docs
+description: Her yerel ayar için bir paket bildirimi içeren ClickOnce uygulamanız için önkoşulları dağıtmak üzere bir önyükleyici paketi kullanma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fe51ac8bc8af07038e6bfe6ddb2c5730485ca60b
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 43790914be67ddaf2e82f1bb411180d5643ebcbe
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851716"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350055"
 ---
 # <a name="how-to-create-a-package-manifest"></a>Nasıl yapılır: Paket bildirimi oluşturma
 Uygulamanıza yönelik önkoşulları dağıtmak için bir önyükleyici paketi kullanabilirsiniz. Önyükleyici paketi tek bir ürün bildirim dosyası, ancak her yerel ayar için bir paket bildirimi içerir. Farklı yerelleştirilmiş sürümler genelinde paylaşılan işlevsellik ürün bildirimine gitmelidir.
@@ -34,11 +36,11 @@ Uygulamanıza yönelik önkoşulları dağıtmak için bir önyükleyici paketi 
 
 #### <a name="to-create-the-package-manifest"></a>Paket bildirimi oluşturmak için
 
-1. Önyükleyici paketi için bir dizin oluşturun. Bu örnekte *C:\Package*kullanılmaktadır.
+1. Önyükleyici paketi için bir dizin oluşturun. Bu örnekte *C:\Package* kullanılmaktadır.
 
 2. Yerel ayar adına sahip bir alt dizin oluşturun *(örneğin, İngilizce için)* .
 
-3. Visual Studio 'da, *package.xml*ADLı bir XML dosyası oluşturun ve *C:\package\en* klasörüne kaydedin.
+3. Visual Studio 'da, *package.xml* ADLı bir XML dosyası oluşturun ve *C:\package\en* klasörüne kaydedin.
 
 4. Önyükleyici paketinin adını, bu yerelleştirilmiş paket bildirimi için kültürü ve isteğe bağlı lisans sözleşmesini listelemek için XML ekleyin. Aşağıdaki XML, `DisplayName` ve `Culture` daha sonraki bir öğesinde tanımlanan değişkenleri kullanır.
 

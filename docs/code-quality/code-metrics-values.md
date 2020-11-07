@@ -1,6 +1,8 @@
 ---
 title: Kod ölçümlerini hesapla
 ms.date: 11/02/2018
+description: Döngüsel karmaşıklığı, sınıf bağlantısı ve diğer Visual Studio kod ölçümleri hakkında bilgi edinin. Ölçümlerin geliştirme ilerlemesini nasıl izleyip riskleri belirleyebilmesi için bkz..
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.codemetrics.toolwindow
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 796d8aa15aa3612b140917ccfa9db7663c0b0ad3
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: a5e7ee628f5a48f573afed9753f4fad17f85e33a
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599465"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348651"
 ---
 # <a name="code-metrics-values"></a>Kod ölçüm değerleri
 
@@ -46,7 +48,7 @@ Aşağıdaki listede, Visual Studio 'Nun hesapladığı kod ölçümleri sonuçl
 
 - **Kaynak kodu satırları** -boş satırlar da dahil olmak üzere kaynak dosyanızda bulunan kaynak kodu satırlarının tam sayısını gösterir. Bu ölçüm, Visual Studio 2019 sürüm 16,4 ve Microsoft. CodeAnalysis. ölçümlerini ('nın 2.9.5 sürümüyle) ile başlayarak kullanılabilir.
 
-- **Yürütülebilir kod satırları** -yürütülebilir kod satırlarının veya işlemlerin yaklaşık sayısını gösterir. Bu, çalıştırılabilir koddaki işlem sayısı sayısıdır. Bu ölçüm, Visual Studio 2019 sürüm 16,4 ve Microsoft. CodeAnalysis. ölçümlerini ('nın 2.9.5 sürümüyle) ile başlayarak kullanılabilir. Bu değer genellikle, eski modda kullanılan MSIL yönergesi tabanlı ölçüm olan önceki ölçüm ve **kod satırları**için yakın bir eşleşmedir.
+- **Yürütülebilir kod satırları** -yürütülebilir kod satırlarının veya işlemlerin yaklaşık sayısını gösterir. Bu, çalıştırılabilir koddaki işlem sayısı sayısıdır. Bu ölçüm, Visual Studio 2019 sürüm 16,4 ve Microsoft. CodeAnalysis. ölçümlerini ('nın 2.9.5 sürümüyle) ile başlayarak kullanılabilir. Bu değer genellikle, eski modda kullanılan MSIL yönergesi tabanlı ölçüm olan önceki ölçüm ve **kod satırları** için yakın bir eşleşmedir.
 ::: moniker-end
 ::: moniker range="vs-2017"
 

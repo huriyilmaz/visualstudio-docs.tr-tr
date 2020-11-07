@@ -1,5 +1,7 @@
 ---
 title: ClickOnce güven Istemi davranışını yapılandırma | Microsoft Docs
+description: Son kullanıcılara ClickOnce uygulamalarını yükleme seçeneği verilip verilmediğini denetlemek için ClickOnce güven istemi 'nin nasıl yapılandırılacağını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,19 +20,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f4becc0244f42507b581029b2dfe21c71570db6
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 68d39bed64ff1392c83d6fc2be0de936ac1b00d2
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852237"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350068"
 ---
 # <a name="how-to-configure-the-clickonce-trust-prompt-behavior"></a>Nasıl yapılır: ClickOnce güven istemi davranışını yapılandırma
 ClickOnce güven istemi ' ni, son kullanıcılara Windows Forms uygulamalar, Windows Presentation Foundation uygulamalar, konsol uygulamaları, WPF tarayıcı uygulamaları ve Office çözümleri gibi ClickOnce uygulamalarını yükleme seçeneği verilip verilmediğini denetlemek için yapılandırabilirsiniz. Her son kullanıcının bilgisayarında kayıt defteri anahtarlarını ayarlayarak güven istemi 'ni yapılandırırsınız.
 
  Aşağıdaki tabloda, beş bölgenin (Internet, UntrustedSites, Bilgisayarım, LocalIntranet ve TrustedSites) her birine uygulanabilen yapılandırma seçenekleri gösterilmektedir.
 
-|Seçenek|Kayıt defteri ayarı değeri|Açıklama|
+|Seçenek|Kayıt defteri ayarı değeri|Description|
 |------------|----------------------------|-----------------|
 |Güven istemi 'ni etkinleştirin.|`Enabled`|ClickOnce güven istemi, son kullanıcıların ClickOnce uygulamalarına güven izni verebilmesi için görüntülenir.|
 |Güven istemi 'ni kısıtlayın.|`AuthenticodeRequired`|ClickOnce güven istemi yalnızca, ClickOnce uygulamaları yayımcıyı tanımlayan bir sertifikayla imzalanmışsa görüntülenir.|
@@ -55,17 +57,17 @@ ClickOnce güven istemi ' ni, son kullanıcılara Windows Forms uygulamalar, Win
 
 1. Kayıt defteri düzenleyicisini açın: 
 
-    1. **Başlat**' a ve ardından **Çalıştır**' a tıklayın.
+    1. **Başlat** ' a ve ardından **Çalıştır** ' a tıklayın.
 
-    2. **Aç** kutusuna yazın `regedit` ve ardından **Tamam**' a tıklayın.
+    2. **Aç** kutusuna yazın `regedit` ve ardından **Tamam** ' a tıklayın.
 
 2. Aşağıdaki kayıt defteri anahtarını bulun:
 
-     **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT \\ . NETFramework\Security\TrustManager\PromptingLevel**
+     **\ HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\ . NETFramework\Security\TrustManager\PromptingLevel**
 
      Anahtar yoksa, oluşturun.
 
-3. Aşağıdaki tabloda gösterilen ilişkili değerlerle birlikte, zaten mevcut değilse, aşağıdaki alt anahtarları **dize değeri**olarak ekleyin.
+3. Aşağıdaki tabloda gösterilen ilişkili değerlerle birlikte, zaten mevcut değilse, aşağıdaki alt anahtarları **dize değeri** olarak ekleyin.
 
     |Dize değeri alt anahtarı|Değer|
     |-------------------------|-----------|
@@ -114,17 +116,17 @@ ClickOnce güven istemi ' ni, son kullanıcılara Windows Forms uygulamalar, Win
 
 1. Kayıt defteri düzenleyicisini açın: 
 
-    1. **Başlat**' a ve ardından **Çalıştır**' a tıklayın.
+    1. **Başlat** ' a ve ardından **Çalıştır** ' a tıklayın.
 
-    2. **Aç** kutusuna yazın `regedit` ve ardından **Tamam**' a tıklayın.
+    2. **Aç** kutusuna yazın `regedit` ve ardından **Tamam** ' a tıklayın.
 
 2. Aşağıdaki kayıt defteri anahtarını bulun:
 
-     **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT \\ . NETFramework\Security\TrustManager\PromptingLevel**
+     **\ HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\ . NETFramework\Security\TrustManager\PromptingLevel**
 
      Anahtar yoksa, oluşturun.
 
-3. Aşağıdaki tabloda gösterilen ilişkili değerlerle birlikte, zaten mevcut değilse, aşağıdaki alt anahtarları **dize değeri**olarak ekleyin.
+3. Aşağıdaki tabloda gösterilen ilişkili değerlerle birlikte, zaten mevcut değilse, aşağıdaki alt anahtarları **dize değeri** olarak ekleyin.
 
     |Dize değeri alt anahtarı|Değer|
     |-------------------------|-----------|
@@ -171,17 +173,17 @@ ClickOnce güven istemi ' ni, son kullanıcılara Windows Forms uygulamalar, Win
 
 1. Kayıt defteri düzenleyicisini açın: 
 
-    1. **Başlat**' a ve ardından **Çalıştır**' a tıklayın.
+    1. **Başlat** ' a ve ardından **Çalıştır** ' a tıklayın.
 
-    2. **Aç** kutusuna yazın `regedit` ve ardından **Tamam**' a tıklayın.
+    2. **Aç** kutusuna yazın `regedit` ve ardından **Tamam** ' a tıklayın.
 
 2. Aşağıdaki kayıt defteri anahtarını bulun:
 
-     **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT \\ . NETFramework\Security\TrustManager\PromptingLevel**
+     **\ HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\ . NETFramework\Security\TrustManager\PromptingLevel**
 
      Anahtar yoksa, oluşturun.
 
-3. Aşağıdaki tabloda gösterilen ilişkili değerlerle birlikte, zaten mevcut değilse, aşağıdaki alt anahtarları **dize değeri**olarak ekleyin.
+3. Aşağıdaki tabloda gösterilen ilişkili değerlerle birlikte, zaten mevcut değilse, aşağıdaki alt anahtarları **dize değeri** olarak ekleyin.
 
     |Dize değeri alt anahtarı|Değer|
     |-------------------------|-----------|

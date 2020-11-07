@@ -1,5 +1,7 @@
 ---
 title: XML Düzenleyicisi IntelliSense özellikleri
+description: Visual Studio 'da XML düzenleyicisinin IntelliSense özellikleri ve bunları XML şeması tanım dili (XSD) ve XSLT belgeleriyle nasıl kullanabileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2b26f214-cc3a-46bf-b260-14eb8e599182
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 609684452190bf7471f90fee75f66dbb2fcbec8e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dc79d40c2cb363b79c2064bd71fb23dece04e143
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592392"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350250"
 ---
 # <a name="xml-editor-intellisense-features"></a>XML düzenleyicisi IntelliSense özellikleri
 
@@ -87,7 +89,7 @@ Bir IntelliSense listesinden nitelenmiş bir ad alanı veya öznitelik seçersen
 
 ## <a name="brace-matching"></a>Ayraç eşleştirme
 
-XML Düzenleyicisi, az önce kapattığınız öğeler hakkında anında geri bildirim sağlamak için küme ayracı vurgulamasını sağlar. **Ctrl** + Bir küme ayracından eşleşen küme ayracına geçmek için klavye kısayolunu (Ctrl **]**) de kullanabilirsiniz.
+XML Düzenleyicisi, az önce kapattığınız öğeler hakkında anında geri bildirim sağlamak için küme ayracı vurgulamasını sağlar. **Ctrl** + Bir küme ayracından eşleşen küme ayracına geçmek için klavye kısayolunu (Ctrl **]** ) de kullanabilirsiniz.
 
 XML Düzenleyicisi bunu aşağıdaki öğeler için yapar:
 
@@ -121,12 +123,12 @@ IntelliSense ve otomatik tamamlama özellikleri varsayılan olarak etkindir. Anc
 
 1. **Araçlar** menüsünde **Seçenekler** ' i seçin.
 
-2. **Metin düzenleyiciyi**genişletin, **XML**' i genişletin ve **çeşitli**' ı seçin.
+2. **Metin düzenleyiciyi** genişletin, **XML** ' i genişletin ve **çeşitli** ' ı seçin.
 
-3. **Otomatik ekleme** bölümünde herhangi bir değişiklik yapıp **Tamam**' a tıklayın.
+3. **Otomatik ekleme** bölümünde herhangi bir değişiklik yapıp **Tamam** ' a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Düzenleyicisi](../xml-tools/xml-editor.md)
+- [XML düzenleyicisi](../xml-tools/xml-editor.md)
 - [IntelliSense kullanma](../ide/using-intellisense.md)
 - [İzlenecek Yol: XSLT IntelliSense Kullanma](../xml-tools/walkthrough-using-xslt-intellisense.md)

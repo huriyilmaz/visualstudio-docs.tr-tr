@@ -1,5 +1,7 @@
 ---
 title: XML kod parçacıkları
+description: XML, kod parçacıklarını yeniden çalıştırarak ve dosyalarınıza ekleyerek XML dosyalarını daha hızlı bir şekilde oluşturmanızı sağlayan XML Düzenleyicisi 'ndeki XML parçacıkları özelliği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 348dbf64-3f09-4fff-b47a-a7ecdf3221cc
@@ -8,16 +10,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2f2bcdd0c28d7b4b99c92d3346b32ed34aa92a0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e9114d50abd8f12e19f67d593927b94afcb010f6
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592327"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350198"
 ---
 # <a name="xml-snippets"></a>XML kod parçacıkları
 
-XML Düzenleyicisi, XML dosyalarını daha hızlı bir şekilde oluşturmanıza olanak sağlayan *XML parçacıkları*adlı bir özellik sunar. XML parçacıklarını dosyalarınıza ekleyerek yeniden kullanabilirsiniz. XML şeması tanım dili (XSD) şemasına göre XML verileri de oluşturabilirsiniz.
+XML Düzenleyicisi, XML dosyalarını daha hızlı bir şekilde oluşturmanıza olanak sağlayan *XML parçacıkları* adlı bir özellik sunar. XML parçacıklarını dosyalarınıza ekleyerek yeniden kullanabilirsiniz. XML şeması tanım dili (XSD) şemasına göre XML verileri de oluşturabilirsiniz.
 
 ## <a name="reusable-xml-snippets"></a>Yeniden kullanılabilir XML parçacıkları
 
@@ -52,4 +54,4 @@ Visual Studio 'da varsayılan olarak bulunan kod parçacıklarının yanı sıra
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio 'da kod parçacıkları](../ide/code-snippets.md)
-- [XML Düzenleyicisi](../xml-tools/xml-editor.md)
+- [XML düzenleyicisi](../xml-tools/xml-editor.md)

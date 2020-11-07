@@ -1,5 +1,6 @@
 ---
 title: ClickOnce uygulamasına bir veri dosyası dahil etme
+description: Hedef bilgisayarın yerel diskinde bulunan bir veri dizininde depolanacak ClickOnce uygulamanıza herhangi bir türde veri dosyası eklemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,15 +18,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cdc2154876724feb5c6a0329a2acc5df7ac80fbc
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: cb9e346022871a3aa25363aa717f1bf15a3d42a6
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809152"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349951"
 ---
 # <a name="how-to-include-a-data-file-in-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulamasına bir veri dosyası dahil etme
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Yüklediğiniz her uygulamaya, uygulamanın kendi verilerini yönetebileceği hedef bilgisayarın yerel diskinde bir veri dizini atanır. Veri dosyaları herhangi bir türde dosya içerebilir: metin dosyaları, XML dosyaları, hatta Microsoft Access veritabanı (*. mdb*) dosyaları. Aşağıdaki yordamlarda, uygulamanıza herhangi bir türde veri dosyasını nasıl ekleyeceğiniz gösterilmektedir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Yüklediğiniz her uygulamaya, uygulamanın kendi verilerini yönetebileceği hedef bilgisayarın yerel diskinde bir veri dizini atanır. Veri dosyaları herhangi bir türde dosya içerebilir: metin dosyaları, XML dosyaları, hatta Microsoft Access veritabanı ( *. mdb* ) dosyaları. Aşağıdaki yordamlarda, uygulamanıza herhangi bir türde veri dosyasını nasıl ekleyeceğiniz gösterilmektedir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
 
 ### <a name="to-include-a-data-file-by-using-mageexe"></a>Mage.exe kullanarak bir veri dosyası eklemek için
 
@@ -69,11 +70,11 @@ ms.locfileid: "90809152"
 
 4. **Dosyalar** sekmesini seçin.
 
-5. Sekmenin en üstündeki metin kutusuna uygulamanızın dosyalarını içeren dizini girin ve ardından **doldur**' a tıklayın.
+5. Sekmenin en üstündeki metin kutusuna uygulamanızın dosyalarını içeren dizini girin ve ardından **doldur** ' a tıklayın.
 
      Veri dosyanız kılavuzda görüntülenir.
 
-6. Veri dosyasının **dosya türü** değerini **veri**olarak ayarlayın.
+6. Veri dosyasının **dosya türü** değerini **veri** olarak ayarlayın.
 
 7. Uygulama bildirimini kaydedin ve sonra dosyayı yeniden imzalayın.
 

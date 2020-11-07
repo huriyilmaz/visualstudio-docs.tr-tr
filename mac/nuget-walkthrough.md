@@ -3,15 +3,15 @@ title: Projenize bir NuGet paketi dahil etme
 description: Bu belge, Mac için Visual Studio kullanarak bir projeye NuGet paketinin nasıl ekleneceğini kapsar. Bir paketi bulmayı ve indirmeyi, Ayrıca IDE tümleştirme özelliklerini tanıtmayı da açıklar.
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 11/01/2019
+ms.date: 09/04/2020
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
 ms.custom: conceptual
-ms.openlocfilehash: 4200f466c079247d3efa036f4f7cca2fd2d6b5d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e361a1a0fba05a6fdabc66b03008049dfa34784f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74127207"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349337"
 ---
 # <a name="install-and-manage-nuget-packages-in-visual-studio-for-mac"></a>Mac için Visual Studio NuGet paketlerini yükleyip yönetme
 
@@ -23,7 +23,7 @@ Mac için Visual Studio 'de NuGet kullanma girişi için bkz [. hızlı başlang
 
 ## <a name="find-and-install-a-package"></a>Paket bulma ve yüklemeyi
 
-1. Mac için Visual Studio bir proje açıkken, **çözüm bölmesi** **Bağımlılıklar** klasörüne (Xamarin projesi kullanılıyorsa**paketler** klasörü) sağ tıklayın ve **NuGet Paketlerini Yönet..**. seçeneğini belirleyin.
+1. Mac için Visual Studio bir proje açıkken, **çözüm bölmesi** **Bağımlılıklar** klasörüne (Xamarin projesi kullanılıyorsa **paketler** klasörü) sağ tıklayın ve **NuGet Paketlerini Yönet..**. seçeneğini belirleyin.
 
     ![Yeni NuGet paketi bağlam eylemi Ekle](media/nuget-walkthrough-packages-menu.png)
 
@@ -59,17 +59,30 @@ using Newtonsoft.Json;
 
 ## <a name="updating-packages"></a>Paketler güncelleştiriliyor
 
-Paket güncelleştirmeleri, **Bağımlılıklar** düğümüne sağ tıklanarak (Xamarin projeleri için**paketler** düğümü) veya her bir pakette ayrı ayrı tek bir şekilde yapılabilir. NuGet paketinin yeni bir sürümü kullanılabilir olduğunda, bir güncelleştirme simgesi, ![ daireyle birlikte görüntülenir ](media/nuget-walkthrough-update-icon.png) .
+Paket güncelleştirmeleri, **Bağımlılıklar** düğümüne sağ tıklanarak (Xamarin projeleri için **paketler** düğümü) veya her bir pakette ayrı ayrı tek bir şekilde yapılabilir. NuGet paketinin yeni bir sürümü kullanılabilir olduğunda, bir güncelleştirme simgesi, ![ daireyle birlikte görüntülenir ](media/nuget-walkthrough-update-icon.png) .
 
 Bağlam menüsüne erişmek için **Bağımlılıklar** ' a sağ tıklayın ve tüm paketleri güncelleştirmek için **Güncelleştir** ' i seçin:
 
-![Paketler menüsü](media/nuget-walkthrough-packages-menu-update.png)
+![Güncelleştirme menüsüyle bağımlılıklar bağlam menüsü vurgulandı](media/nuget-walkthrough-packages-menu-update.png)
 
 * **NuGet Paketlerini Yönet** -projeye daha fazla paket eklemek için pencereyi açar.
 * **Güncelleştir** -kaynak sunucuyu her bir paket için denetler ve daha yeni sürümleri indirir.
 * **Restore** -eksik paketleri indirir (var olan paketleri yeni sürümlere güncelleştirmeden önce).
 
 Güncelleştirme ve geri yükleme seçenekleri de çözüm düzeyinde bulunur ve Çözümdeki tüm projeleri etkiler.
+
+### <a name="updating-to-pre-release-versions-of-packages"></a>Paketlerin yayın öncesi sürümlerine güncelleştirme
+Bir paketin daha yeni bir yayın öncesi sürümüne güncelleştirmek için **Bağımlılıklar** ' a sağ tıklayarak bağlam menüsünü açabilir ve **NuGet Paketlerini Yönet...** menüsünü seçebilirsiniz.
+
+![NuGet Paketlerini Yönet ile bağımlılıklar bağlam menüsü... Menü vurgulandı](media/nuget-walkthrough-packages-menu-manage-nuget-packages.png)
+
+İletişim kutusunun alt kısmındaki **yayın öncesi paketleri göster** onay kutusunu işaretleyin.
+
+![' Yayın öncesi paketleri göster ' seçeneği işaretli olarak açılan NuGet Paketlerini Yönet iletişim kutusu](media/nuget-walkthrough-show-pre-release-packages.png)
+
+Son olarak, iletişim kutusunun **güncelleştirmeler** sekmesinde, güncelleştirmek istediğiniz paketi seçin ve **Yeni sürüm** açılan listesinden yeni yayın öncesi sürümü seçin ve **paketi Güncelleştir** ' e tıklayın.
+
+![Yüklü sekmesine açılan, seçili bir paket ve yeni sürüm açılan listesi açık olan NuGet Paketlerini Yönet iletişim kutusu.](media/nuget-walkthrough-packages-nuget-dialog-update-installed-package.png)
 
 ### <a name="locating-outdated-packages"></a>Güncel olmayan paketleri bulma
 Çözüm panelinden, bir paketin hangi sürümünün yüklü olduğunu görüntüleyebilir ve güncelleştirilecek pakete sağ tıklamakta tıklayabilirsiniz.
@@ -121,11 +134,11 @@ Mac için Visual Studio, paket kaynakları listesini görüntülemek ve düzenle
 
 Yeni bir kaynak kurmak için **Ekle** ' ye tıklayın. Paket kaynağına kolay bir ad ve URL (ya da dosya yolu) girin. Kaynak güvenli bir Web sunucusu ise, Kullanıcı adını ve parolayı da girin, aksi takdirde bu girdileri boş bırakın:
 
-![Paket kaynakları ekle](media/nuget-walkthrough-PackageSource2.png)
+![Ad, konum URL 'SI, Kullanıcı adı ve parola istemiyle paket kaynağı iletişim kutusu ekleyin.](media/nuget-walkthrough-PackageSource2.png)
 
 Paketler aranırken farklı kaynaklar seçilebilir:
 
-![Paket kaynakları ekle](media/nuget-walkthrough-PackageSource3.png)
+![Paket kaynakları listesini içeren bir açılan listeyi gösteren paket kaynağı iletişim kutusu ekleyin.](media/nuget-walkthrough-PackageSource3.png)
 
 ## <a name="version-control"></a>Sürüm Denetimi
 

@@ -1,5 +1,6 @@
 ---
 title: Standart kod analizi iade ilkelerini oluştur/güncelleştir
+description: Kod analizinin bir Azure DevOps projesindeki tüm kod projelerinde çalıştığını nasıl sağlayacağınızı öğrenin. Bkz. proje kod analizi iade etme ilkesini yapılandırma.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ad889ba106c288c07111857be965ef8d6c8295df
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d5f03cbd78944d49301362c07d01497abb22734c
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808632"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348768"
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>Nasıl yapılır: Standart Kod Çözümleme İade İlkeleri Oluşturma veya Güncelleme
 
@@ -36,11 +37,11 @@ Yönetilen kod için bir iade ilkesi belirttikten sonra, ekip üyeleri kod proje
 
 ## <a name="to-open-the-check-in-policy-editor"></a>İade İlkesi düzenleyicisini açmak için
 
-1. Takım Gezgini, proje adına sağ tıklayın, **proje ayarları**' nın üzerine gelin ve **kaynak denetimi**' ne tıklayın.
+1. Takım Gezgini, proje adına sağ tıklayın, **proje ayarları** ' nın üzerine gelin ve **kaynak denetimi** ' ne tıklayın.
 
 1. **Kaynak denetimi** iletişim kutusunda, **iade ilkesi** sekmesini seçin.
 
-1. Şunlardan birini yapın:
+1. Aşağıdakilerden birini yapın:
 
     - Yeni bir iade ilkesi oluşturmak için **Ekle** ' ye tıklayın.
 

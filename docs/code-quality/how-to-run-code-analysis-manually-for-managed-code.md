@@ -1,6 +1,8 @@
 ---
 title: .NET için kod analizini el ile çalıştırma
 ms.date: 09/02/2020
+description: Visual Studio 2019 sürüm 16,5 veya sonraki sürümlerinde kod analizini el ile çalıştırmayı öğrenin. Bkz. C# veya Visual Basic kodu üzerinde Roslyn Çözümleyicileri çalıştırma.
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 helpviewer_keywords:
 - code analysis, running
@@ -11,12 +13,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c24fa8e835dced8332aa4c50870d6251bdd43e63
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 2eb4beff76d602bb4ce6182fab6091c7cd2a0096
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037165"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348729"
 ---
 # <a name="run-code-analysis-manually-for-net"></a>.NET için kod analizini el ile çalıştırın
 Varsayılan olarak, .NET Compiler Platform ("Roslyn") Çözümleyicileri, derleme sırasında ve canlı analizler yaparak C# veya Visual Basic kodunuzu sizin yazarken analiz eder. Bu nedenle normalde Kod analizini el ile tetiklemeniz gerekmez. Ancak, Kod analizini el ile tetiklemek isteyebileceğiniz bazı senaryolar vardır:
@@ -29,8 +31,8 @@ Varsayılan olarak, .NET Compiler Platform ("Roslyn") Çözümleyicileri, derlem
 
 ### <a name="run-code-analysis-manually"></a>Kod analizini el ile çalıştırma
 
-1. **Çözüm Gezgini**, projeyi seçin.
+1. **Çözüm Gezgini** , projeyi seçin.
 
 2. **Çözümle** menüsünde, *Proje adı* **üzerinde Kod analizini Çalıştır** ' ı seçin.
 
-Kod Analizi, arka planda yürütülmeye başlayacak. Visual Studio durum çubuğunda ** \<project> ... için kod analizini çalıştıran** iletiyi sol alt köşeye doğru görmeniz gerekir. Kod Analizi tamamlandığında, durum iletisi **Için \<project> kod analizi tamamlandı **olarak değişecektir. Hata listesi, kısa bir süre önce tüm kod analizi Tanılama ile yenilenir.
+Kod Analizi, arka planda yürütülmeye başlayacak. Visual Studio durum çubuğunda **\<project> ... için kod analizini çalıştıran** iletiyi sol alt köşeye doğru görmeniz gerekir. Kod Analizi tamamlandığında, durum iletisi **Için \<project> kod analizi tamamlandı** olarak değişecektir. Hata listesi, kısa bir süre önce tüm kod analizi Tanılama ile yenilenir.

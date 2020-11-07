@@ -1,6 +1,8 @@
 ---
 title: 'Nasıl yapılır: Kod Çözümleme Dizinini Özelleştirme'
 ms.date: 11/04/2016
+description: Yazım ve adlandırma kuralı hatalarını tanımlayan kod analizi sözlüğü hakkında bilgi edinin. Bkz. özel sözlük oluşturma ve bunu bir projeye uygulama.
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 helpviewer_keywords:
 - code analysis dictionary
@@ -12,22 +14,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1a50374a2603153cc7f4770a9aaf5ba72fbe007
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 33a552cfe918ef75257a4d23391535622560661c
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87453649"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348742"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>Nasıl yapılır: Kod Çözümleme Dizinini Özelleştirme
 
 Kod Analizi, kodunuzun hatalarını yazım, dilbilgisi büyük/küçük harf ve diğer .NET Tasarım Yönergelerinin adlandırma kurallarına göre denetlemek için yerleşik bir sözlük kullanır. Yerleşik sözlüğe hüküm, kısaltmalar ve kısaltmalar eklemek, kaldırmak veya değiştirmek için özel bir sözlük XML dosyası oluşturabilirsiniz.
 
-Örneğin, kodunuzun **DoorKnokker**adlı bir sınıf içerdiğini varsayalım. Kod Analizi, adı iki sözcükten oluşan bir bileşim olarak belirler: **kapılı** ve **kker**. Daha sonra, **kker** 'ın doğru yazılmadığını belirten bir uyarı oluşturabilir. Kod analizini yazımı tanıyacak şekilde zorlamak için, özel sözlüğe **kker** terimini ekleyebilirsiniz.
+Örneğin, kodunuzun **DoorKnokker** adlı bir sınıf içerdiğini varsayalım. Kod Analizi, adı iki sözcükten oluşan bir bileşim olarak belirler: **kapılı** ve **kker**. Daha sonra, **kker** 'ın doğru yazılmadığını belirten bir uyarı oluşturabilir. Kod analizini yazımı tanıyacak şekilde zorlamak için, özel sözlüğe **kker** terimini ekleyebilirsiniz.
 
 ## <a name="to-create-a-custom-dictionary"></a>Özel sözlük oluşturmak için
 
-**CustomDictionary.xml**adlı bir dosya oluşturun.
+**CustomDictionary.xml** adlı bir dosya oluşturun.
 
 Aşağıdaki XML yapısını kullanarak özel sözcüklerinizi tanımlayın:
 
@@ -264,14 +266,14 @@ Sözlük/Kısaltmalar/CasingExceptions düğümündeki terimler aşağıdaki kod
 
 ## <a name="to-apply-a-custom-dictionary-to-a-project"></a><a name="BKMK_ToApplyACustomDictionaryToAProject"></a> Bir projeye özel bir sözlük uygulamak için
 
-1. **Çözüm Gezgini**, aşağıdaki yordamlardan birini kullanın:
+1. **Çözüm Gezgini** , aşağıdaki yordamlardan birini kullanın:
 
-    - Tek bir projeye sözlük eklemek için, proje adına sağ tıklayın ve ardından **varolan öğeyi Ekle**' ye tıklayın. **Varolan öğe Ekle** iletişim kutusunda dosyayı belirtin.
+    - Tek bir projeye sözlük eklemek için, proje adına sağ tıklayın ve ardından **varolan öğeyi Ekle** ' ye tıklayın. **Varolan öğe Ekle** iletişim kutusunda dosyayı belirtin.
   
-    - İki veya daha fazla proje arasında paylaşılan bir sözlük eklemek için, **Varolan öğe Ekle** iletişim kutusunda paylaşılacak dosyayı bulun, **Ekle** düğmesinin üzerindeki aşağı oka tıklayın ve ardından **bağlantı olarak ekle**' ye tıklayın.
+    - İki veya daha fazla proje arasında paylaşılan bir sözlük eklemek için, **Varolan öğe Ekle** iletişim kutusunda paylaşılacak dosyayı bulun, **Ekle** düğmesinin üzerindeki aşağı oka tıklayın ve ardından **bağlantı olarak ekle** ' ye tıklayın.
 
-2. **Çözüm Gezgini**, **CustomDictionary.xml** dosya adına sağ tıklayın ve **Özellikler**' e tıklayın.
+2. **Çözüm Gezgini** , **CustomDictionary.xml** dosya adına sağ tıklayın ve **Özellikler** ' e tıklayın.
 
-3. **Yapı eylemi** listesinden **codeanalysisdictionary**' yi seçin.
+3. **Yapı eylemi** listesinden **codeanalysisdictionary** ' yi seçin.
 
-4. **Çıkış Dizinine Kopyala** listesinden **kopyalama**' yı seçin.
+4. **Çıkış Dizinine Kopyala** listesinden **kopyalama** ' yı seçin.

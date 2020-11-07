@@ -1,6 +1,8 @@
 ---
 title: Kod Analiz İlkesi Hataları
 ms.date: 11/04/2016
+description: Visual Studio 'da kod çözümleme ilkesi hataları hakkında bilgi edinin. Kod iade edildiğinde ilke karşılanmıyorsa oluşan hataların açıklamalarını görüntüleyin.
+ms.custom: SEO-VS-2020
 ms.topic: reference
 f1_keywords:
 - vs.codeanalysis.policyfailures
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac7a949b3f8a1e0c9d44c6194f87745b4e3f17a8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 43dae5ec9ca68c746b914ad0a75b792f2a6e6b43
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75587751"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349106"
 ---
 # <a name="code-analysis-policy-errors"></a>Kod Analiz İlkesi Hataları
 
@@ -29,7 +31,7 @@ Bir veya daha fazla kod projesi için proje kaynak denetimine iade etme kod anal
 
 - Kod Analizi, Çözümdeki tüm projelere yönelik derlemede etkin değildir.
 
-- Visual Studio 'da projenin yerel kural kümesi, proje kuralı kümesinden daha az kısıtlayıcı bir **eylem** ayarına sahip. Örneğin, sunucuda **eylem**hatası olarak ayarlanan bir kural, = **Error** **eylemi** **Uyarı** olarak ayarlanmış veya Visual Studio 'da çalıştırılmakta olan kural kümesinde **yok** .
+- Visual Studio 'da projenin yerel kural kümesi, proje kuralı kümesinden daha az kısıtlayıcı bir **eylem** ayarına sahip. Örneğin, sunucuda **eylem** hatası olarak ayarlanan bir kural, = **Error** **eylemi** **Uyarı** olarak ayarlanmış veya Visual Studio 'da çalıştırılmakta olan kural kümesinde **yok** .
 
 - Visual Studio 'da belirtilen kural kümesi, proje için kod analizi iade ilkesinde belirtilen kural kümesinde belirtilen kuralların tümünü içermiyor.
 
@@ -47,11 +49,11 @@ Kod Analizi ilkesi, iade edilen tüm dosyaların Şu anda açık olan çözümde
 
 **' ' Öğesinin sürümü {0} doğru değil. İlkede belirtilen tanımlayıcı adı ' {1} '.**
 
-Bu hata .NET projeleri için geçerlidir. Yerel bilgisayarda kod analizi ilkesi için gereken bir kural. dll var, ancak sürüm/ortak anahtar eşleşmiyor. Bu hatayı düzeltmek için, ilke oluşturucunun, bilgisayarındaki *C:\Program Files\Microsoft Visual Studio 8 \ Team Tools\Static Analysis Tools\FxCop\Rules \\ * dizinindeki. dll 'leri güncelleştirmesi gerekir.
+Bu hata .NET projeleri için geçerlidir. Yerel bilgisayarda kod analizi ilkesi için gereken bir kural. dll var, ancak sürüm/ortak anahtar eşleşmiyor. Bu hatayı düzeltmek için, ilke oluşturucunun, bilgisayarındaki *C:\Program Files\Microsoft Visual Studio 8 \ Team Tools\Static Analysis Tools\FxCop\Rules \\* dizinindeki. dll 'leri güncelleştirmesi gerekir.
 
 **{0}ilkede belirtilen ' ' derlemesi yok.**
 
-Bu hata .NET projeleri için geçerlidir. Kod Analizi ilkesinin gerektirdiği bir kuralda, istemci bilgisayarda karşılık gelen dll yüklü değil. Bu hatayı düzeltmek için, ilke Oluşturucu bilgisayarında *C:\Program Files\Microsoft Visual Studio 8 \ Team Tools\Static Analysis Tools\FxCop\Rules \\ * dizininde bulunan dll 'yi güncelleştirmeniz gerekir.
+Bu hata .NET projeleri için geçerlidir. Kod Analizi ilkesinin gerektirdiği bir kuralda, istemci bilgisayarda karşılık gelen dll yüklü değil. Bu hatayı düzeltmek için, ilke Oluşturucu bilgisayarında *C:\Program Files\Microsoft Visual Studio 8 \ Team Tools\Static Analysis Tools\FxCop\Rules \\* dizininde bulunan dll 'yi güncelleştirmeniz gerekir.
 
 **Proje {0} kuralı ayarları, kod analizi ilkesiyle uyumlu değil.**
 

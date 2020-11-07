@@ -1,6 +1,8 @@
 ---
 title: Özel kod analizi kural kümesi oluşturma
 ms.date: 11/02/2018
+description: Visual Studio 'da kod analizi kural kümelerini özelleştirmeyi öğrenin. Bkz. sıfırdan veya mevcut kümelerden yeni kümeler oluşturma. Kural önceliğini anlayın.
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 f1_keywords:
 - vs.codeanalysis.addremoverulesets
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fe0d6ad545a197ca03c12acf68d779a42fd91ae
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: c6ad55d3d678a26489983bf276359f2141688272
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860503"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348820"
 ---
 # <a name="customize-a-rule-set"></a>Bir kural kümesini özelleştirme
 
@@ -24,9 +26,9 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
 ## <a name="create-a-custom-rule-set-from-an-existing-rule-set"></a>Var olan bir kural kümesinden özel bir kural kümesi oluşturma
 
-Özel bir kural kümesi oluşturmak için, **kural kümesi düzenleyicisinde**yerleşik bir kural kümesi açabilirsiniz. Buradan, belirli kuralları ekleyebilir veya kaldırabilir ve bir kural ihlal edildiğinde oluşan eylemi değiştirebilirsiniz &mdash; , örneğin bir uyarı veya hata gösterir.
+Özel bir kural kümesi oluşturmak için, **kural kümesi düzenleyicisinde** yerleşik bir kural kümesi açabilirsiniz. Buradan, belirli kuralları ekleyebilir veya kaldırabilir ve bir kural ihlal edildiğinde oluşan eylemi değiştirebilirsiniz &mdash; , örneğin bir uyarı veya hata gösterir.
 
-1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Özellikler**' i seçin.
+1. **Çözüm Gezgini** , projeye sağ tıklayın ve ardından **Özellikler** ' i seçin.
 
 2. **Özellikler** sayfalarında **Kod Analizi** sekmesini seçin.
 
@@ -51,17 +53,17 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 4. Kural kümesi düzenleyicisinde kuralları göstermek için **Aç** ' ı seçin.
 
 > [!NOTE]
-> .NET Core veya .NET Standard projeniz varsa, **Kod Analizi** Özellik sekmesi olmadığından işlem biraz farklıdır. [Önceden tanımlanmış bir kural kümesini projenize kopyalamak ve etkin kural kümesi olarak ayarlamak](/dotnet/fundamentals/code-analysis/code-quality-rule-options)için adımları izleyin. Bir kural kümesi üzerinden kopyaladıktan sonra, [bunu Visual Studio kural kümesi düzenleyicisinde](working-in-the-code-analysis-rule-set-editor.md) **Çözüm Gezgini**açarak düzenleyebilirsiniz.
+> .NET Core veya .NET Standard projeniz varsa, **Kod Analizi** Özellik sekmesi olmadığından işlem biraz farklıdır. [Önceden tanımlanmış bir kural kümesini projenize kopyalamak ve etkin kural kümesi olarak ayarlamak](/dotnet/fundamentals/code-analysis/code-quality-rule-options)için adımları izleyin. Bir kural kümesi üzerinden kopyaladıktan sonra, [bunu Visual Studio kural kümesi düzenleyicisinde](working-in-the-code-analysis-rule-set-editor.md) **Çözüm Gezgini** açarak düzenleyebilirsiniz.
 
 ## <a name="create-a-new-rule-set"></a>Yeni bir kural kümesi oluştur
 
 **Yeni dosya** iletişim kutusundan yeni bir kural kümesi dosyası oluşturabilirsiniz:
 
-1. **Dosya**  >  **Yeni**  >  **Dosya**' yı seçin veya **CTRL** + **N**tuşuna basın.
+1. **Dosya**  >  **Yeni**  >  **Dosya** ' yı seçin veya **CTRL** + **N** tuşuna basın.
 
-2. **Yeni dosya** iletişim kutusunda, sol taraftaki **genel** kategorisini seçin ve ardından **kod analizi kural kümesi**' ni seçin.
+2. **Yeni dosya** iletişim kutusunda, sol taraftaki **genel** kategorisini seçin ve ardından **kod analizi kural kümesi** ' ni seçin.
 
-3. **Aç**’ı seçin.
+3. **Aç** ’ı seçin.
 
    Yeni *. RuleSet* dosyası kural kümesi düzenleyicisinde açılır.
 
@@ -70,19 +72,19 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 > [!NOTE]
 > Aşağıdaki yordam, **Kod Analizi** özelliği sekmesi olmayan .NET Core projeleri için geçerlidir.
 
-1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Özellikler**' i seçin.
+1. **Çözüm Gezgini** , projeye sağ tıklayın ve ardından **Özellikler** ' i seçin.
 
 2. **Özellikler** sayfalarında **Kod Analizi** sekmesini seçin.
 
 ::: moniker range="vs-2017"
 
-3. **\<Choose multiple rule sets>** **Bu kural kümesini Çalıştır**' ı seçin.
+3. **\<Choose multiple rule sets>** **Bu kural kümesini Çalıştır** ' ı seçin.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. **\<Choose multiple rule sets>** **Etkin kurallar**arasından seçim yapın.
+3. **\<Choose multiple rule sets>** **Etkin kurallar** arasından seçim yapın.
 
 ::: moniker-end
 
@@ -90,7 +92,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
    ![Kural kümeleri Ekle veya Kaldır iletişim kutusu](media/add-remove-rule-sets.png)
 
-5. **Farklı kaydet**' i seçin, *. RuleSet* dosyası için bir ad girin ve ardından **Kaydet**' i seçin.
+5. **Farklı kaydet** ' i seçin, *. RuleSet* dosyası için bir ad girin ve ardından **Kaydet** ' i seçin.
 
    Yeni kural kümesi **Bu kural kümesini Çalıştır** listesinde seçilir.
 
@@ -109,7 +111,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
    </RuleSet>
    ```
 
-- *Aynı önem derecesine* sahip bir kural kümesinde aynı kural iki veya daha fazla kez listeleniyorsa, **hata listesi**aşağıdaki uyarıyı görebilirsiniz:
+- *Aynı önem derecesine* sahip bir kural kümesinde aynı kural iki veya daha fazla kez listeleniyorsa, **hata listesi** aşağıdaki uyarıyı görebilirsiniz:
 
    **CA0063: ' \[ sizin]. RuleSet ' kural kümesi dosyası veya bağımlı kural kümesi dosyalarından biri yüklenemedi. Dosya, kural kümesi şemasıyla uyumlu değil.**
 
@@ -136,7 +138,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
 ## <a name="name-and-description"></a>Ad ve açıklama
 
-Düzenleyicide açık olan bir kural kümesinin görünen adını değiştirmek için, **Properties** **View**  >  menü çubuğunda**Özellikler penceresini** görüntüle ' yi seçerek Özellikler penceresini açın. **Ad** kutusuna görünen adı girin. Kural kümesi için bir açıklama de girebilirsiniz.
+Düzenleyicide açık olan bir kural kümesinin görünen adını değiştirmek için, **Properties** **View**  >  menü çubuğunda **Özellikler penceresini** görüntüle ' yi seçerek Özellikler penceresini açın. **Ad** kutusuna görünen adı girin. Kural kümesi için bir açıklama de girebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -1,5 +1,7 @@
 ---
 title: İmzalama Sayfası, Proje Tasarımcısı
+description: Uygulama ve dağıtım bildirimlerini imzalamak ve derlemeyi imzalamak için proje Tasarımcısı ' nın Imzalama sayfasını kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
 ms.topic: reference
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fee2244792d73924793ae82def1f533b909403c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6e76be0482353ffe4740956ab16f24d6ce82f4da
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85418866"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348521"
 ---
 # <a name="signing-page-project-designer"></a>İmzalama Sayfası, Proje Tasarımcısı
 
@@ -35,7 +37,7 @@ Uygulama ve dağıtım bildirimlerinin imzalanmasının, bir derlemenin imzalanm
 
 Ayrıca, anahtar dosya bilgilerinin depolanması, bildirim imzalama ve derleme imzalama için farklılık gösterir. Bildirim imzalama için, anahtar bilgileri bilgisayarınızın şifreleme depolama veritabanında ve geçerli kullanıcının Windows sertifika deposunda depolanır. Derleme imzalama için, anahtar bilgileri yalnızca bilgisayarınızın şifreleme depolama veritabanında depolanır.
 
-**İmzalama** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü seçin ve ardından **Proje** menüsünde **Özellikler**' e tıklayın. **Proje Tasarımcısı** göründüğünde **imzalama** sekmesine tıklayın.
+**İmzalama** sayfasına erişmek için **Çözüm Gezgini** ' de bir proje düğümü seçin ve ardından **Proje** menüsünde **Özellikler** ' e tıklayın. **Proje Tasarımcısı** göründüğünde **imzalama** sekmesine tıklayın.
 
 ## <a name="application-and-deployment-manifest-signing"></a>Uygulama ve dağıtım bildirimi Imzalama
 
@@ -49,7 +51,7 @@ Geçerli kullanıcının kişisel sertifika deposundan mevcut bir sertifikayı s
 
 **Mağazadan Seç** ' i tıkladığınızda, kişisel sertifika deponuzda Şu anda geçerli olan ve özel anahtarlara sahip olan sertifikaları listeleyen **bir sertifika seç** iletişim kutusu açılır. Seçtiğiniz sertifikanın amacı kod imzalama içermelidir.
 
-**Sertifika özelliklerini görüntüle**' ye tıklarsanız, **sertifika ayrıntıları** iletişim kutusu görüntülenir. Bu iletişim kutusu sertifikayla ilgili ayrıntılı bilgileri içerir ve ek seçenekleri içerir. Ek Yardım bilgilerini görüntülemek için **Sertifikalar hakkında daha fazla bilgi** ' ye tıklayabilirsiniz.
+**Sertifika özelliklerini görüntüle** ' ye tıklarsanız, **sertifika ayrıntıları** iletişim kutusu görüntülenir. Bu iletişim kutusu sertifikayla ilgili ayrıntılı bilgileri içerir ve ek seçenekleri içerir. Ek Yardım bilgilerini görüntülemek için **Sertifikalar hakkında daha fazla bilgi** ' ye tıklayabilirsiniz.
 
 Dosyadan **Seç** düğmesi
 
@@ -63,7 +65,7 @@ Dosyadan **Seç** ' e tıkladığınızda **Dosya Seç** iletişim kutusu açıl
 
 Test için bir sertifika oluşturmanıza olanak sağlar. Test sertifikası, ClickOnce uygulamanızı ve dağıtım bildirimlerini imzalamak için kullanılır.
 
-Test **sertifikası oluştur** ' a tıklamak, test sertifikası **Oluştur** iletişim kutusunu açar, burada test sertifikası için tanımlayıcı ad anahtar dosyası için bir parola yazabilirsiniz. Dosya *projectname*_TemporaryKey. pfx olarak adlandırılır. Parola yazmadan **Tamam** ' a tıkladığınızda,. pfx dosyası parola şifrelenmez.
+Test **sertifikası oluştur** ' a tıklamak, test sertifikası **Oluştur** iletişim kutusunu açar, burada test sertifikası için tanımlayıcı ad anahtar dosyası için bir parola yazabilirsiniz. Dosya *projectname* _TemporaryKey. pfx olarak adlandırılır. Parola yazmadan **Tamam** ' a tıkladığınızda,. pfx dosyası parola şifrelenmez.
 
 **Zaman damgası sunucusu URL 'si** kutusu
 
@@ -73,7 +75,7 @@ Test **sertifikası oluştur** ' a tıklamak, test sertifikası **Oluştur** ile
 
 **Derlemeyi imzala** onay kutusu
 
-Derlemeyi imzalamak ve kesin adlı bir adlandırılmış anahtar dosyası oluşturmak için bu onay kutusunu seçin. **Proje tasarımcısını**kullanarak derlemeyi imzalama hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir derlemeyi Imzalama (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio).
+Derlemeyi imzalamak ve kesin adlı bir adlandırılmış anahtar dosyası oluşturmak için bu onay kutusunu seçin. **Proje tasarımcısını** kullanarak derlemeyi imzalama hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir derlemeyi Imzalama (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio).
 
 Bu seçenek, derlemeyi imzalamak için Windows yazılım geliştirme seti (SDK) tarafından sunulan Al.exe aracını kullanır. Al.exe hakkında daha fazla bilgi için bkz. [nasıl yapılır: derlemeyi güçlü bir adla imzalama](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name).
 

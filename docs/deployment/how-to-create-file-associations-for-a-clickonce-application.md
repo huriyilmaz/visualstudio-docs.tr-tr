@@ -1,5 +1,6 @@
 ---
 title: Dosya ilişkilendirmeleri oluşturma (ClickOnce uygulaması)
+description: Bir ClickOnce uygulamasını bir veya daha fazla dosya adı uzantısıyla ilişkilendirmeyi öğrenin, böylece Kullanıcı böyle bir dosya açtığında uygulamanın başlamasını sağlar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fcca57415eae6480286f457755b996f22cb6507a
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 21f6923185dbfa79fbe18b7b5c6a5d824a5a2cfe
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809787"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350042"
 ---
 # <a name="how-to-create-file-associations-for-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulaması için dosya ilişkilendirmeleri oluşturma
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamalar bir veya daha fazla dosya adı uzantısıyla ilişkilendirilebilen için, Kullanıcı bu türden bir dosya açtığında uygulamanın otomatik olarak başlatılması gerekir. Bir uygulamaya dosya adı uzantısı desteği eklemek [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] basittir.
@@ -48,7 +49,7 @@ ms.locfileid: "90809787"
 
 5. Birden çok dosya türünü uygulamayla ilişkilendirmek istiyorsanız, ek `fileAssociation` öğeler ekleyin. `progid`Özniteliğin her biri için farklı olması gerektiğini unutmayın.
 
-6. Uygulama bildirimini tamamladıktan sonra, bildirimi yeniden imzalayın. Bunu komut satırından *Mage.exe*kullanarak yapabilirsiniz.
+6. Uygulama bildirimini tamamladıktan sonra, bildirimi yeniden imzalayın. Bunu komut satırından *Mage.exe* kullanarak yapabilirsiniz.
 
     `mage -Sign WindowsFormsApp1.exe.manifest -CertFile mycert.pfx`
 

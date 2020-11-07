@@ -1,5 +1,6 @@
 ---
 title: Dağıtım güncelleştirmeleri için alternatif konum belirtin
+description: Dağıtım bildiriminizde ClickOnce uygulamanıza yönelik güncelleştirmeler için alternatif bir konum belirtme hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 096e962f9e334b3db9819973a0fbd82d636f7d6f
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 698ca2c97bcc4699d2c836eff9fefa371481c9cc
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808756"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349652"
 ---
 # <a name="how-to-specify-an-alternate-location-for-deployment-updates"></a>Nasıl yapılır: dağıtım güncelleştirmeleri için alternatif bir konum belirtme
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Uygulamanızı başlangıçta BIR CD veya dosya paylaşımından yükleyebilirsiniz, ancak uygulamanın Web üzerinde düzenli güncelleştirmeleri denetlemesi gerekir. Uygulamanızın ilk yüklemesinden sonra kendisini güncelleştirebilmesi için, dağıtım bildiriminizde güncelleştirmeler için alternatif bir konum belirtebilirsiniz.
@@ -39,7 +40,7 @@ ms.locfileid: "90808756"
 
 3. **Dağıtım seçenekleri** sekmesini seçin.
 
-4. **Başlatma konumu**adlı metin kutusunda, uygulama güncelleştirmeleri için dağıtım bildirimini içerecek dizine ait URL 'yi girin.
+4. **Başlatma konumu** adlı metin kutusunda, uygulama güncelleştirmeleri için dağıtım bildirimini içerecek dizine ait URL 'yi girin.
 
 5. Dağıtım bildirimini kaydedin.
 
@@ -54,7 +55,7 @@ ms.locfileid: "90808756"
 3. Dosyayı kaydedin.
 
    > [!NOTE]
-   > Artık *Mage.exe*dosyayı yeniden imzalamanız gerekir. Daha fazla bilgi için bkz. [Izlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).
+   > Artık *Mage.exe* dosyayı yeniden imzalamanız gerekir. Daha fazla bilgi için bkz. [Izlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).
 
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği
  Uygulamanızı CD gibi çevrimdışı bir ortamdan yüklerseniz ve bilgisayar çevrimiçi ise, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] önce `<deploymentProvider>` güncelleştirme konumunun uygulamanın daha yeni bir sürümünü içerip içermediğini anlamak için dağıtım bildiriminde etiketiyle belirtilen URL 'yi kontrol eder. Varsa, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamayı ilk yükleme dizininden değil, doğrudan buradan yüklenir ve ortak dil çalışma zamanı (CLR) uygulamanızın güven düzeyini belirler `<deploymentProvider>` . Bilgisayar çevrimdışıysa veya ulaşılamaz durumdaysa, `<deploymentProvider>` [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] CD 'den yükler ve clr, yükleme noktasına göre güven verir; bir CD yüklemesi için bu, uygulamanızın tam güven alacağı anlamına gelir. Sonraki tüm güncelleştirmeler, bu güven düzeyini devralacak.

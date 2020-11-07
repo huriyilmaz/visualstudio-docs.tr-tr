@@ -1,5 +1,6 @@
 ---
 title: Güvenlik bölgesini ayarlama (ClickOnce uygulaması)
+description: Proje tasarımcısında temel bir izin kümesiyle başlayan bir ClickOnce uygulaması için kod erişimi güvenlik izinlerini ayarlama hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,21 +18,21 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 59b099a406f31bf2a1c1266d76bb037ac3e85e19
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d2e8b49f833b5dd91dc6379d2a015d41a9679afe
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809735"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349782"
 ---
 # <a name="how-to-set-a-security-zone-for-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulaması için güvenlik bölgesi ayarlama
-ClickOnce uygulaması için kod erişimi güvenlik izinlerini ayarlarken, **Proje Tasarımcısı**'nın **güvenlik** sayfasında bir temel izin kümesiyle başlamanız gerekir.
+ClickOnce uygulaması için kod erişimi güvenlik izinlerini ayarlarken, **Proje Tasarımcısı** 'nın **güvenlik** sayfasında bir temel izin kümesiyle başlamanız gerekir.
 
  Çoğu durumda, sınırlı bir izin kümesi içeren **Internet** bölgesini veya daha büyük bir izin kümesi Içeren **Yerel Intranet** bölgesini de seçebilirsiniz. Uygulamanız özel izinler gerektiriyorsa, **özel** güvenlik bölgesini seçerek bunu yapabilirsiniz. Özel izinleri ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir ClickOnce uygulaması Için özel Izinleri ayarlama](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md).
 
 ### <a name="to-set-a-security-zone"></a>Bir güvenlik bölgesi ayarlamak için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
+1. **Çözüm Gezgini** ' de bir proje seçiliyken, **Proje** menüsünde **Özellikler** ' e tıklayın.
 
 2. **Güvenlik** sekmesine tıklayın.
 

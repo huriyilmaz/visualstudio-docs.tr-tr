@@ -1,5 +1,7 @@
 ---
 title: '&lt;TrustInfo &gt; öğesi (ClickOnce uygulaması) | Microsoft Docs'
+description: TrustInfo öğesi, uygulamanın istemci bilgisayarda çalışması için gereken en düşük güvenlik izinlerini açıklar. TrustInfo öğesi gereklidir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -22,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5873eb18b2f803acfd5aba9444657884b1a24581
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6779471edc25435f14511cc2ebcc34e6247225ee
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84184438"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349223"
 ---
 # <a name="lttrustinfogt-element-clickonce-application"></a>&lt;TrustInfo &gt; öğesi (ClickOnce uygulaması)
 Uygulamanın istemci bilgisayarda çalışması için gereken en düşük güvenlik izinlerini açıklar.

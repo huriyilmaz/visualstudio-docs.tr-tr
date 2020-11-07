@@ -1,6 +1,8 @@
 ---
 title: Yönetilen kod için eski analiz
 ms.date: 06/12/2019
+description: Visual Studio 'da eski analizler hakkında bilgi edinin. Uyarıları nasıl bastırın ve analizler ve derlemeler sırasında el ile, otomatik olarak ve analizleri nasıl çalıştıracağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, managed code
@@ -10,12 +12,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b6ab8171d2317549beabe2d8e552eeeefccd02cf
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: c6f1f12fa7fca964c857e534c1ffae50efe70b27
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91927997"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348664"
 ---
 # <a name="overview-of-legacy-analysis-for-managed-code-in-visual-studio"></a>Visual Studio 'da yönetilen kod için eski Analize genel bakış
 
@@ -26,7 +28,7 @@ Yönetilen kod için kod analizi, yönetilen derlemeleri analiz eder ve derlemel
 Analiz Aracı, bir analiz sırasında uyarı iletileri olarak gerçekleştirdiği denetimleri temsil eder. Uyarı iletileri ilgili programlama ve tasarım sorunlarını belirler ve mümkünse sorunun nasıl düzeltileceğini gösteren bilgileri sağlar.
 
 > [!NOTE]
-> Eski analiz (Statik kod analizi) Visual Studio 'daki .NET Core ve .NET Standard projelerinde desteklenmez. MSBuild 'in bir parçası olarak bir .NET Core veya .NET Standard projesi üzerinde kod analizi çalıştırırsanız, hataya benzer bir hata görürsünüz: **CA0055: Platform \<your.dll> tanımlanamıyor **. .NET Core veya .NET Standard projelerindeki kodu çözümlemek için, bunun yerine [kod Çözümleyicileri](../code-quality/roslyn-analyzers-overview.md) kullanın.
+> Eski analiz (Statik kod analizi) Visual Studio 'daki .NET Core ve .NET Standard projelerinde desteklenmez. MSBuild 'in bir parçası olarak bir .NET Core veya .NET Standard projesi üzerinde kod analizi çalıştırırsanız, hataya benzer bir hata görürsünüz: **CA0055: Platform \<your.dll> tanımlanamıyor**. .NET Core veya .NET Standard projelerindeki kodu çözümlemek için, bunun yerine [kod Çözümleyicileri](../code-quality/roslyn-analyzers-overview.md) kullanın.
 
 ## <a name="ide-integrated-development-environment-integration"></a>IDE (tümleşik geliştirme ortamı) Tümleştirmesi
 
@@ -34,7 +36,7 @@ Kod analizini, projenizde el ile veya otomatik olarak çalıştırabilirsiniz.
 
 Her proje oluşturduğunuzda Kod analizini çalıştırmak için projenin **Kod Analizi** Özellik sayfasında seçeneğini belirleyin. Daha fazla bilgi için bkz. [nasıl yapılır: Otomatik Kod analizini etkinleştirme ve devre dışı bırakma](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md).
 
-Kod analizini bir projede el ile çalıştırmak için, menü çubuğundan kodu **Çözümle**  >  **Çalıştır kod**analizini Çalıştır  >  **' \<project> **ı seçin.
+Kod analizini bir projede el ile çalıştırmak için, menü çubuğundan kodu **Çözümle**  >  **Çalıştır kod** analizini Çalıştır  >  **' \<project>** ı seçin.
 
 ## <a name="rule-sets"></a>Kural kümeleri
 
@@ -59,7 +61,7 @@ Daha fazla bilgi için bkz. [uyarıları gösterme](../code-quality/in-source-su
 ::: moniker range="vs-2017"
 
 > [!NOTE]
-> Bir projeyi Visual Studio 2017 ' a geçirirseniz, çok sayıda kod analizi uyarısıyla aniden karşılaşabilirsiniz. Uyarıları gidermeye hazırsanız, **Analyze**  >  **çalışma kodu analizini çözümle ve etkin sorunları Gizle**' yi seçerek bunların tümünün görüntülenmesini sağlayabilirsiniz.
+> Bir projeyi Visual Studio 2017 ' a geçirirseniz, çok sayıda kod analizi uyarısıyla aniden karşılaşabilirsiniz. Uyarıları gidermeye hazırsanız, **Analyze**  >  **çalışma kodu analizini çözümle ve etkin sorunları Gizle** ' yi seçerek bunların tümünün görüntülenmesini sağlayabilirsiniz.
 >
 > ![Visual Studio 'da Kod analizini çalıştırma ve sorunları gösterme](media/suppress-active-issues.png)
 
@@ -68,7 +70,7 @@ Daha fazla bilgi için bkz. [uyarıları gösterme](../code-quality/in-source-su
 ::: moniker range=">=vs-2019"
 
 > [!NOTE]
-> Bir projeyi Visual Studio 2019 ' a geçirirseniz, çok sayıda kod analizi uyarısıyla aniden karşılaşabilirsiniz. Uyarıları gidermeye hazırsanız, derlemeyi **Çözümle**  >  **ve etkin sorunları Gizle**' yi seçerek bunların tümünün görüntülenmesini sağlayabilirsiniz.
+> Bir projeyi Visual Studio 2019 ' a geçirirseniz, çok sayıda kod analizi uyarısıyla aniden karşılaşabilirsiniz. Uyarıları gidermeye hazırsanız, derlemeyi **Çözümle**  >  **ve etkin sorunları Gizle** ' yi seçerek bunların tümünün görüntülenmesini sağlayabilirsiniz.
 
 ::: moniker-end
 

@@ -1,5 +1,7 @@
 ---
 title: Güvenlik Sayfası, Proje Tasarımcısı
+description: Proje Tasarımcısı 'nın güvenlik sayfası, ClickOnce dağıtımı kullanılarak dağıtılan uygulamalar için kod erişimi güvenlik ayarlarını yapılandırmak üzere kullanılır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
 ms.topic: reference
@@ -14,18 +16,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0839adcf0e6c61141d2a14ad8903c532af76804c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7080c1a2ce77d26987f81acaa0a751887f9f574e
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85418905"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350263"
 ---
 # <a name="security-page-project-designer"></a>Güvenlik Sayfası, Proje Tasarımcısı
 
 **Proje Tasarımcısı** 'nın **güvenlik** sayfası, ClickOnce dağıtımı kullanılarak dağıtılan uygulamalar için kod erişimi güvenlik ayarlarını yapılandırmak üzere kullanılır. Daha fazla bilgi için bkz. [ClickOnce uygulamaları Için kod erişimi güvenliği](../../deployment/code-access-security-for-clickonce-applications.md).
 
-**Güvenlik** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümüne tıklayın ve ardından **Proje** menüsünde **Özellikler**' e tıklayın. **Proje Tasarımcısı** göründüğünde, **güvenlik** sekmesine tıklayın.
+**Güvenlik** sayfasına erişmek için **Çözüm Gezgini** ' de bir proje düğümüne tıklayın ve ardından **Proje** menüsünde **Özellikler** ' e tıklayın. **Proje Tasarımcısı** göründüğünde, **güvenlik** sekmesine tıklayın.
 
 ## <a name="security-settings"></a>Güvenlik Ayarları
 
@@ -62,7 +64,7 @@ Bu seçeneği belirlerseniz, uygulama bir istemci bilgisayarda yüklendiğinde v
 
 Varsayılan bir kod erişimi güvenlik izinleri kümesi belirtir. Kısıtlı bir izin kümesi için **Internet** veya **Yerel Intranet** ' i seçin veya özel bir izin kümesi yapılandırmak için **(özel)** seçeneğini belirleyin. Uygulama bir bölgede verilenden daha fazla izin isterse, son kullanıcının ek izinleri vermesi için bir ClickOnce güven istemi görüntülenir. Güvenlik izinlerini yapılandırma hakkında daha fazla bilgi için bkz. [ClickOnce uygulamaları Için kod erişimi güvenliği](../../deployment/code-access-security-for-clickonce-applications.md).
 
-Varsayılan olarak, WPF Web tarayıcısı uygulama projeleri için bu seçenek **Internet**olarak ayarlanır.
+Varsayılan olarak, WPF Web tarayıcısı uygulama projeleri için bu seçenek **Internet** olarak ayarlanır.
 
  **Izinleri Düzenle XML**
 

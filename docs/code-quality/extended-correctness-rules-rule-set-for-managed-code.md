@@ -1,6 +1,8 @@
 ---
 title: Yönetilen kod için Genişletilmiş Doğruluk Kuralları kural kümesi
 ms.date: 11/04/2016
+description: Visual Studio 'da, COM birlikte çalışabilirlik ve mobil uygulamalar için yararlı olan genişletilmiş doğruluk kuralları kural kümesi hakkında bilgi edinin. Bkz. kural açıklamaları.
+ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: 5b181f5b-6c7a-4e46-a783-360e1da427a0
 author: mikejo5000
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 00295a8485fa80d2aa6cf1977e014b191b28ba7e
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 6aa97d246ac767cc3c88c845298e2db61edcd35f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658613"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349002"
 ---
 # <a name="extended-correctness-rules-rule-set-for-managed-code"></a>Yönetilen kod için Genişletilmiş Doğruluk Kuralları kural kümesi
 
@@ -23,7 +25,7 @@ Microsoft genişletilmiş doğruluk kuralları kural kümesi, [yönetilen öneri
 
 Aşağıdaki tabloda, Microsoft genişletilmiş doğruluk kuralları kural kümesindeki tüm kurallar açıklanmaktadır.
 
-|Kural|Açıklama|
+|Kural|Description|
 |----------|-----------------|
 |[CA1001](/dotnet/fundamentals/code-analysis/quality-rules/ca1001)|Atılabilen alanlara sahip türler atılabilir olmalıdır|
 |[CA1009](../code-quality/ca1009.md)|Olay işleyicileri doğru olarak bildirin|
