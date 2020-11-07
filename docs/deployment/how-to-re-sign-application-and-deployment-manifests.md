@@ -1,5 +1,7 @@
 ---
 title: Uygulama ve dağıtım bildirimlerini yeniden imzala | Microsoft Docs
+description: Dağıtım özelliklerine değişiklikler yapıldıktan sonra uygulama ve dağıtım bildirimlerinin her ikisini de bir sertifikayla yeniden imzalamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a221eea7314ad79020437208bdba4fcb6b6972e
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 0a17902451c931bd37a92158a3b5c3838ed91ed4
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851690"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351134"
 ---
 # <a name="how-to-re-sign-application-and-deployment-manifests"></a>Nasıl yapılır: uygulama ve dağıtım bildirimlerini yeniden imzalama
 Uygulama bildiriminde Windows Forms uygulamalar, Windows Presentation Foundation uygulamalar (XBAP) veya Office çözümleri için dağıtım özelliklerinde değişiklikler yaptıktan sonra, hem uygulama hem de dağıtım bildirimlerini bir sertifikayla yeniden imzalamanız gerekir. Bu işlem, değiştirilen dosyaların son kullanıcı bilgisayarlarında yüklü olmamasını sağlamaya yardımcı olur.
@@ -31,7 +33,7 @@ Uygulama bildiriminde Windows Forms uygulamalar, Windows Presentation Foundation
  Bildirimleri yeniden imzalayabileceğiniz başka bir senaryo ise müşterilerinizin uygulama ve dağıtım bildirimlerini kendi sertifikasıyla imzalamasını ister.
 
 ## <a name="re-sign-the-application-and-deployment-manifests"></a>Uygulama ve dağıtım bildirimlerini yeniden imzalama
- Bu yordam, uygulama bildirimi dosyanızda (*. manifest*) daha önce değişiklikler yapmış olduğunuzu varsayar. Daha fazla bilgi için bkz. [nasıl yapılır: dağıtım özelliklerini değiştirme](/previous-versions/cc442869(v=vs.110)).
+ Bu yordam, uygulama bildirimi dosyanızda ( *. manifest* ) daha önce değişiklikler yapmış olduğunuzu varsayar. Daha fazla bilgi için bkz. [nasıl yapılır: dağıtım özelliklerini değiştirme](/previous-versions/cc442869(v=vs.110)).
 
 #### <a name="to-re-sign-the-application-and-deployment-manifests-with-mageexe"></a>Uygulama ve dağıtım bildirimlerini Mage.exe ile yeniden imzalamak için
 
@@ -67,10 +69,10 @@ Uygulama bildiriminde Windows Forms uygulamalar, Windows Presentation Foundation
     mage -update WpfBrowserApplication1.xbap -appmanifest WpfBrowserApplication1.exe.manifest -CertFile ..\WpfBrowserApplication1_TemporaryKey.pfx
     ```
 
-5. İsteğe bağlı olarak, ana dağıtım bildirimini (*Publish \\ \<appname> . Application*) sürüm dağıtım dizininize (*publish\Application Files \\ \<appname> _ \<version> *) kopyalayın.
+5. İsteğe bağlı olarak, ana dağıtım bildirimini ( *Publish \\ \<appname> . Application* ) sürüm dağıtım dizininize ( *publish\Application Files \\ \<appname> _ \<version>* ) kopyalayın.
 
 ## <a name="update-and-re-sign-the-application-and-deployment-manifests"></a>Uygulama ve dağıtım bildirimlerini güncelleştirin ve yeniden imzalayın
- Bu yordam, uygulama bildirimi dosyanızda (*. manifest*) daha önce değişiklikler yapmış olduğunu, ancak güncelleştirilmiş başka dosyalar olduğunu varsayar. Dosyalar güncelleştirilirken, dosyayı temsil eden karma değeri de güncelleştirilmeleri gerekir.
+ Bu yordam, uygulama bildirimi dosyanızda ( *. manifest* ) daha önce değişiklikler yapmış olduğunu, ancak güncelleştirilmiş başka dosyalar olduğunu varsayar. Dosyalar güncelleştirilirken, dosyayı temsil eden karma değeri de güncelleştirilmeleri gerekir.
 
 #### <a name="to-update-and-re-sign-the-application-and-deployment-manifests-with-mageexe"></a>Uygulama ve dağıtım bildirimlerini Mage.exe ile güncelleştirmek ve yeniden imzalamak için
 
@@ -110,7 +112,7 @@ Uygulama bildiriminde Windows Forms uygulamalar, Windows Presentation Foundation
 
 6. Uygulama ve dağıtım bildirim dosyaları dışında *. deploy* dosya uzantısını dosyalara geri ekleyin.
 
-7. İsteğe bağlı olarak, ana dağıtım bildirimini (*Publish \\ \<appname> . Application*) sürüm dağıtım dizininize (*publish\Application Files \\ \<appname> _ \<version> *) kopyalayın.
+7. İsteğe bağlı olarak, ana dağıtım bildirimini ( *Publish \\ \<appname> . Application* ) sürüm dağıtım dizininize ( *publish\Application Files \\ \<appname> _ \<version>* ) kopyalayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce uygulamalarını koruma](../deployment/securing-clickonce-applications.md)

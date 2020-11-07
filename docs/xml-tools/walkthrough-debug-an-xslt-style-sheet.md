@@ -1,5 +1,7 @@
 ---
 title: XSLT stil sayfalarında hata ayıkla
+description: Bu kılavuzda bulunan adımları izleyerek XSLT stil sayfasında hata ayıklamak için Visual Studio 'da XSLT hata ayıklayıcısı 'nı nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 03/05/2019
 ms.topic: how-to
 ms.assetid: 3db9fa5a-f619-4cb6-86e7-64b364e58e5d
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c75d3cae07101363f6c986a1defb375f602f466
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c69f93aca88cb8e83417a370de7113640d3ae38c
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815129"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351342"
 ---
 # <a name="walkthrough-debug-an-xslt-style-sheet"></a>İzlenecek yol: XSLT stil sayfasında hata ayıklama
 
@@ -26,49 +28,49 @@ Bu izlenecek yol için hazırlanmak üzere, önce iki [örnek dosyayı](#sample-
 
 ## <a name="start-debugging"></a>Hata ayıklamayı Başlat
 
-1. **Dosya** menüsünden dosya **Aç**' ı seçin  >  **File**.
+1. **Dosya** menüsünden dosya **Aç** ' ı seçin  >  **File**.
 
-2. *Below-Average. xsl* dosyasını bulun ve **Aç**' ı seçin.
+2. *Below-Average. xsl* dosyasını bulun ve **Aç** ' ı seçin.
 
    Stil sayfası XML düzenleyicisinde açılır.
 
-3. Belge Özellikleri penceresinin **giriş** alanındaki gezinme düğmesine (**...**) tıklayın. ( **Özellikler** penceresi görünür değilse, düzenleyicide açık dosyada herhangi bir yere sağ tıklayın ve ardından **Özellikler**' i seçin.)
+3. Belge Özellikleri penceresinin **giriş** alanındaki gezinme düğmesine ( **...** ) tıklayın. ( **Özellikler** penceresi görünür değilse, düzenleyicide açık dosyada herhangi bir yere sağ tıklayın ve ardından **Özellikler** ' i seçin.)
 
-4. *books.xml* dosyasını bulun ve **Aç**' ı seçin.
+4. *books.xml* dosyasını bulun ve **Aç** ' ı seçin.
 
    Bu, XSLT dönüştürmesi için kullanılan kaynak belge dosyasını ayarlar.
 
-5. 12 *. satırda below-Average. xsl*üzerine bir [kesme noktası](../debugger/using-breakpoints.md) ayarlayın. Bunu birden çok şekilde yapabilirsiniz:
+5. 12 *. satırda below-Average. xsl* üzerine bir [kesme noktası](../debugger/using-breakpoints.md) ayarlayın. Bunu birden çok şekilde yapabilirsiniz:
 
    - 12. satırda düzenleyicinin kenar boşluğuna tıklayın.
 
-   - 12. satırda herhangi bir yere tıklayın ve ardından **F9**tuşuna basın.
+   - 12. satırda herhangi bir yere tıklayın ve ardından **F9** tuşuna basın.
 
-   - Başlangıç etiketini sağ tıklatın `xsl:if` ve **kesme**noktası  >  **Ekle kesme noktası**' nı seçin.
+   - Başlangıç etiketini sağ tıklatın `xsl:if` ve **kesme** noktası  >  **Ekle kesme noktası** ' nı seçin.
 
       ![Visual Studio 'da XSL dosyasında kesme noktası ekle](media/insert-breakpoint.PNG)
 
-6. Menü çubuğunda, **XML**  >  **XSLT hata ayıklamayı Başlat** ' ı seçin (veya **alt** + **F5**tuşuna basın).
+6. Menü çubuğunda, **XML**  >  **XSLT hata ayıklamayı Başlat** ' ı seçin (veya **alt** + **F5** tuşuna basın).
 
    Hata ayıklama işlemi başlar.
 
    Düzenleyicide, hata ayıklayıcı `xsl:if` stil sayfasının öğesine yerleştirilir. *below-average.xml* adlı başka bir dosya düzenleyicide açılır; Bu, giriş dosyasındaki her düğüm *books.xml* işlendiği şekilde doldurulacak çıkış dosyasıdır.
 
-   **Oto, Yereller**ve **Locals** **Gözcü 1** pencereleri, Visual Studio penceresinin alt kısmında görünür. **Yereller** penceresi tüm yerel değişkenleri ve bunların geçerli değerlerini görüntüler. Bu, stil sayfasında tanımlanan değişkenleri ve ayrıca hata ayıklayıcının Şu anda bağlamdaki düğümleri izlemek için kullandığı değişkenleri içerir.
+   **Oto, Yereller** ve **Locals** **Gözcü 1** pencereleri, Visual Studio penceresinin alt kısmında görünür. **Yereller** penceresi tüm yerel değişkenleri ve bunların geçerli değerlerini görüntüler. Bu, stil sayfasında tanımlanan değişkenleri ve ayrıca hata ayıklayıcının Şu anda bağlamdaki düğümleri izlemek için kullandığı değişkenleri içerir.
 
 ## <a name="watch-window"></a>Gözcü penceresi
 
 Giriş dosyası işlendiğinde değerlerini inceleyebileceğiniz için, **1. gözcü** penceresine iki değişken ekleyeceğiz. (İzlemek istediğiniz değişkenler zaten orada ise, değerleri incelemek için **Yereller** penceresini de kullanabilirsiniz.)
 
-1. **Hata Ayıkla** menüsünde **Windows**'u  >  **Watch**  >  **izle 1**' i seçin.
+1. **Hata Ayıkla** menüsünde **Windows** 'u  >  **Watch**  >  **izle 1** ' i seçin.
 
    **1. gözcü** penceresi görünür hale gelir.
 
-2. `$bookAverage` **Ad** alanına yazın ve ardından **ENTER**tuşuna basın.
+2. `$bookAverage` **Ad** alanına yazın ve ardından **ENTER** tuşuna basın.
 
    `$bookAverage`Değişkenin değeri **değer** alanında görüntülenir.
 
-3. Sonraki satırda, `self::node()` **ad** alanına yazın ve ardından **ENTER**tuşuna basın.
+3. Sonraki satırda, `self::node()` **ad** alanına yazın ve ardından **ENTER** tuşuna basın.
 
    `self::node()` , geçerli bağlam düğümünü değerlendiren bir XPath ifadesidir. `self::node()`XPath ifadesinin değeri ilk kitap düğümüdür. Bu, dönüşümde ilerlemede olduğu gibi değişir.
 

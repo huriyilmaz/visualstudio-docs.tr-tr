@@ -1,5 +1,7 @@
 ---
 title: ClickOnce uygulaması için güncelleştirmeleri yönetme | Microsoft Docs
+description: Güncelleştirmeleri otomatik olarak veya ClickOnce uygulamalarınız için programlı olarak denetlemeye yönelik seçenekler hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f4ebe4d04aa585d9129587fe3c250c46516c824
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: bc2fd7b9e58cac0b013c511e17a6a9744e87ca39
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851612"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351186"
 ---
 # <a name="how-to-manage-updates-for-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulaması için güncelleştirmeleri yönetme
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamalar güncelleştirmeleri otomatik olarak veya programlı bir şekilde denetleyebilir. Bir geliştirici olarak, güncelleştirme denetimlerinin ne zaman ve nasıl gerçekleştirileceğini, güncelleştirmelerin zorunlu olup olmadığını ve uygulamanın güncelleştirmeleri denetlemesi gereken yeri belirtme konusunda çok sayıda esnekliğe sahip olursunuz.
@@ -41,7 +43,7 @@ ms.locfileid: "90851612"
 
 ### <a name="to-check-for-updates-before-the-application-starts"></a>Uygulama başlamadan önce güncelleştirmeleri denetlemek için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
+1. **Çözüm Gezgini** ' de bir proje seçiliyken, **Proje** menüsünde **Özellikler** ' e tıklayın.
 
 2. **Yayımla** sekmesine tıklayın.
 
@@ -49,11 +51,11 @@ ms.locfileid: "90851612"
 
 4. **Uygulama güncelleştirmeleri** iletişim kutusunda **uygulamanın güncelleştirmeleri denetlemesi gereken** onay kutusunun seçili olduğundan emin olun.
 
-5. **Uygulamanın güncelleştirmeleri denetlemesi gereken zaman Seç** bölümünde, **uygulama başlamadan önce**' yi seçin. Bu, ağa bağlı kullanıcıların her zaman en son güncelleştirmelerle uygulamayı çalıştırmasını sağlar.
+5. **Uygulamanın güncelleştirmeleri denetlemesi gereken zaman Seç** bölümünde, **uygulama başlamadan önce** ' yi seçin. Bu, ağa bağlı kullanıcıların her zaman en son güncelleştirmelerle uygulamayı çalıştırmasını sağlar.
 
 ### <a name="to-check-for-updates-in-the-background-after-the-application-starts"></a>Uygulama başladıktan sonra arka planda güncelleştirmeleri denetlemek için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
+1. **Çözüm Gezgini** ' de bir proje seçiliyken, **Proje** menüsünde **Özellikler** ' e tıklayın.
 
 2. **Yayımla** sekmesine tıklayın.
 
@@ -61,13 +63,13 @@ ms.locfileid: "90851612"
 
 4. **Uygulama güncelleştirmeleri** iletişim kutusunda **uygulamanın güncelleştirmeleri denetlemesi gereken** onay kutusunun seçili olduğundan emin olun.
 
-5. **Uygulamanın güncelleştirmeleri denetlemesi gereken zaman Seç bölümünde**, **uygulama başladıktan sonra**öğesini seçin. Uygulama bu şekilde daha hızlı başlayacaktır ve sonra arka planda güncelleştirmeleri denetlecektir ve yalnızca bir güncelleştirme kullanılabilir olduğunda kullanıcıya bildirilir. Yüklendikten sonra, güncelleştirmeler uygulama yeniden başlatılana kadar etkili olmaz.
+5. **Uygulamanın güncelleştirmeleri denetlemesi gereken zaman Seç bölümünde** , **uygulama başladıktan sonra** öğesini seçin. Uygulama bu şekilde daha hızlı başlayacaktır ve sonra arka planda güncelleştirmeleri denetlecektir ve yalnızca bir güncelleştirme kullanılabilir olduğunda kullanıcıya bildirilir. Yüklendikten sonra, güncelleştirmeler uygulama yeniden başlatılana kadar etkili olmaz.
 
 6. **Uygulamanın güncelleştirmeleri hangi sıklıkla denetlemesi gerektiğini belirtin** bölümünde, **uygulamanın her çalıştırılışında** (varsayılan) onay seçeneğini belirleyin veya **her** birini işaretleyin ve bir sayı ve zaman aralığı girin.
 
 ### <a name="to-specify-a-minimum-required-version-for-the-application"></a>Uygulama için gerekli en düşük sürümü belirtmek için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
+1. **Çözüm Gezgini** ' de bir proje seçiliyken, **Proje** menüsünde **Özellikler** ' e tıklayın.
 
 2. **Yayımla** sekmesine tıklayın.
 
@@ -75,11 +77,11 @@ ms.locfileid: "90851612"
 
 4. **Uygulama güncelleştirmeleri** iletişim kutusunda **uygulamanın güncelleştirmeleri denetlemesi gereken** onay kutusunun seçili olduğundan emin olun.
 
-5. **Bu uygulama için gerekli en düşük sürümü belirtin** onay kutusunu seçin ve ardından uygulama için **ana**, **İkincil**, **derleme**ve **Düzeltme** numaralarını girin.
+5. **Bu uygulama için gerekli en düşük sürümü belirtin** onay kutusunu seçin ve ardından uygulama için **ana** , **İkincil** , **derleme** ve **Düzeltme** numaralarını girin.
 
 ### <a name="to-specify-a-different-update-location"></a>Farklı bir güncelleştirme konumu belirtmek için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
+1. **Çözüm Gezgini** ' de bir proje seçiliyken, **Proje** menüsünde **Özellikler** ' e tıklayın.
 
 2. **Yayımla** sekmesine tıklayın.
 
@@ -87,11 +89,11 @@ ms.locfileid: "90851612"
 
 4. **Uygulama güncelleştirmeleri** iletişim kutusunda **uygulamanın güncelleştirmeleri denetlemesi gereken** onay kutusunun seçili olduğundan emin olun.
 
-5. **Güncelleştirme konumu** alanına, tam URL ile güncelleştirme konumunu, biçimini kullanarak *http://Hostname/ApplicationName* veya * \\ \server\applicationname*biçimini kullanarak bir UNC yolunu girin veya güncelleştirme konumuna göz atarak **göz** atın düğmesine tıklayın.
+5. **Güncelleştirme konumu** alanına, tam URL ile güncelleştirme konumunu, biçimini kullanarak *http://Hostname/ApplicationName* veya *\\ \server\applicationname* biçimini kullanarak bir UNC yolunu girin veya güncelleştirme konumuna göz atarak **göz** atın düğmesine tıklayın.
 
 ### <a name="to-check-for-updates-programmatically"></a>Güncelleştirmeleri program aracılığıyla denetlemek için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
+1. **Çözüm Gezgini** ' de bir proje seçiliyken, **Proje** menüsünde **Özellikler** ' e tıklayın.
 
 2. **Yayımla** sekmesine tıklayın.
 
@@ -99,7 +101,7 @@ ms.locfileid: "90851612"
 
 4. **Uygulama güncelleştirmeleri** iletişim kutusunda **uygulamanın güncelleştirmeleri denetlemesi gereken** onay kutusunun temizlenmiş olduğundan emin olun. (İsteğe bağlı olarak, güncelleştirmeleri programlı olarak denetlemek ve ayrıca ClickOnce çalışma zamanının güncelleştirmeleri otomatik olarak denetlemesini sağlamak için bu onay kutusunu seçebilirsiniz.)
 
-5. **Güncelleştirme konumu** alanına, tam URL ile güncelleştirme konumunu, biçimini kullanarak *http://Hostname/ApplicationName* veya * \\ \server\applicationname*biçimini kullanarak bir UNC yolunu girin veya güncelleştirme konumuna göz atarak **göz** atın düğmesine tıklayın. Güncelleştirme konumu, uygulamanın kendisi için güncelleştirilmiş bir sürümünü arayacağı yerdir.
+5. **Güncelleştirme konumu** alanına, tam URL ile güncelleştirme konumunu, biçimini kullanarak *http://Hostname/ApplicationName* veya *\\ \server\applicationname* biçimini kullanarak bir UNC yolunu girin veya güncelleştirme konumuna göz atarak **göz** atın düğmesine tıklayın. Güncelleştirme konumu, uygulamanın kendisi için güncelleştirilmiş bir sürümünü arayacağı yerdir.
 
 6. Kullanıcıların güncelleştirmeleri denetlemesini seçmesini sağlayacak bir Windows formunda düğme, menü öğesi veya diğer kullanıcı arabirimi öğesi oluşturun. Bu öğenin olay işleyicisinden, güncelleştirmeleri denetlemek ve yüklemek için bir yöntem çağırın. [Nasıl yapılır: ClickOnce DAĞıTıM API 'sini kullanarak program aracılığıyla uygulama güncelleştirmelerini denetleme](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)bölümünde, bu tür bir yöntem için Visual Basic ve Visual C# kodu örneği bulabilirsiniz.
 

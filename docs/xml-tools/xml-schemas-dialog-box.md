@@ -1,5 +1,7 @@
 ---
 title: XML şemaları
+description: Bir XML belgesi ile ilişkilendirilecek XML şeması tanım dili (XSD) şemalarını seçmek için kullanılan XML şemaları iletişim kutusu hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d01c56b04a9b046f695a19d61a9b47fcac73e06
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 26703b821d2748612f461a35591a831488807dbb
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592340"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351407"
 ---
 # <a name="xml-schemas-dialog-box"></a>XML Şemaları iletişim kutusu
 
@@ -25,7 +27,7 @@ Belge Özellikleri penceresinde **şemalar** düğmesine tıklayarak veya **XML*
 
 ## <a name="uielement-list"></a>UIElement Listesi
 
-**Kullanın**
+**Kullanırsınız**
 
 XML şemasının nasıl kullanılacağını seçin.
 
@@ -45,7 +47,7 @@ XML şeması dosya adını görüntüler.
 
 **Ekle**
 
-Şema kümesine eklemek üzere ek şemalar seçmenize olanak sağlayan, **Açık xsd şeması** iletişim kutusunu açar. Şema kümesine bir şema eklediğinizde, **Use** sütun değeri **Bu şemayı kullanacak**şekilde ayarlanır.
+Şema kümesine eklemek üzere ek şemalar seçmenize olanak sağlayan, **Açık xsd şeması** iletişim kutusunu açar. Şema kümesine bir şema eklediğinizde, **Use** sütun değeri **Bu şemayı kullanacak** şekilde ayarlanır.
 
 **Kaldır**
 

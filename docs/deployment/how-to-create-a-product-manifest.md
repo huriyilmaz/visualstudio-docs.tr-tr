@@ -1,5 +1,7 @@
 ---
 title: Ürün bildirimi oluşturun | Microsoft Docs
+description: Tek bir ürün bildirimi ve her yerel ayar için bir paket bildirimi içeren bir paket ile ClickOnce uygulamanız için önkoşulları dağıtmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97ec49438ce2382336b1b8a6f8355bd092486c2d
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: ab7156635914d46dfc1849717d29ac0416e2d9fa
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852224"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351225"
 ---
 # <a name="how-to-create-a-product-manifest"></a>Nasıl yapılır: Ürün bildirimi oluşturma
 Uygulamanız için önkoşulları dağıtmak üzere bir önyükleyici paketi oluşturabilirsiniz. Önyükleyici paketi tek bir ürün bildirim dosyası, ancak her yerel ayar için bir paket bildirimi içerir. Paket bildirimi, paketinizin yerelleştirmeye özgü yönlerini içerir. Buna dizeler, son kullanıcı lisans sözleşmeleri ve dil paketleri dahildir.
@@ -36,7 +38,7 @@ Uygulamanız için önkoşulları dağıtmak üzere bir önyükleyici paketi olu
 
 1. Önyükleyici paketi için bir dizin oluşturun. Bu örnek C:\packagekullanır.
 
-2. Visual Studio 'da *product.xml*adlı yenı bir XML dosyası oluşturun ve *c:\Package* klasörüne kaydedin.
+2. Visual Studio 'da *product.xml* adlı yenı bir XML dosyası oluşturun ve *c:\Package* klasörüne kaydedin.
 
 3. Aşağıdaki XML 'i, paketin XML ad alanını ve ürün kodunu tanımlayacak şekilde ekleyin. Ürün kodunu paket için benzersiz bir tanımlayıcı ile değiştirin.
 
@@ -54,7 +56,7 @@ Uygulamanız için önkoşulları dağıtmak üzere bir önyükleyici paketi olu
       </RelatedProducts>
     ```
 
-5. Önyükleyici paketindeki tüm dosyaları listelemek için XML ekleyin. Bu örnek *CorePackage.msi*paket dosyası adını kullanır.
+5. Önyükleyici paketindeki tüm dosyaları listelemek için XML ekleyin. Bu örnek *CorePackage.msi* paket dosyası adını kullanır.
 
     ```xml
     <PackageFiles>
@@ -64,7 +66,7 @@ Uygulamanız için önkoşulları dağıtmak üzere bir önyükleyici paketi olu
 
 6. *CorePackage.msi* dosyasını kopyalayın veya *c:\Package* klasörüne taşıyın.
 
-7. Önyükleyici komutlarını kullanarak paketi yüklemek için XML ekleyin. Önyükleyici, sessizce yüklenecek *. msi* dosyasına **/qn** bayrağını otomatik olarak ekler. Dosya bir *. exe*ise, önyükleyici kabuğu kullanarak *. exe* dosyasını çalıştırır. Aşağıdaki XML *CorePackage.msi*için bir bağımsız değişken göstermez, ancak komut satırı bağımsız değişkenini `Arguments` özniteliğe yerleştirebilirsiniz.
+7. Önyükleyici komutlarını kullanarak paketi yüklemek için XML ekleyin. Önyükleyici, sessizce yüklenecek *. msi* dosyasına **/qn** bayrağını otomatik olarak ekler. Dosya bir *. exe* ise, önyükleyici kabuğu kullanarak *. exe* dosyasını çalıştırır. Aşağıdaki XML *CorePackage.msi* için bir bağımsız değişken göstermez, ancak komut satırı bağımsız değişkenini `Arguments` özniteliğe yerleştirebilirsiniz.
 
     ```xml
     <Commands>

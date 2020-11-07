@@ -1,5 +1,7 @@
 ---
 title: XML Düzenleyicisi şema önbelleği
+description: IntelliSense ve XML belge doğrulaması için kullanılan standart XML şemalarını içeren XML Düzenleyicisi tarafından sunulan şema önbelleği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 35a7fcad-f3bf-4a96-9008-4306e7276223
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 40781a5249d9b69df5f41f863f3d36ac6a119645
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d3eaab4379d744bae0032e51995e5bc1b8e76423
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592496"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351381"
 ---
 # <a name="schema-cache"></a>Şema önbelleği
 
@@ -23,7 +25,7 @@ XML Düzenleyicisi çözümde bulunan şemaları, belge **özellikleri** pencere
 
 Aşağıdaki tablo, XML Düzenleyicisi ile yüklenen şemaları açıklar.
 
-| Kısaltın | Açıklama |
+| Kısaltın | Description |
 |-| - |
 | *Catalog. xsd* | XML Düzenleyicisi şema kataloğu dosyaları için şema. Şema katalogları hakkında daha fazla bilgi için aşağıya bakın. |
 | *DotNetConfig. xsd* | Web.Config dosyaları için şema `http://schemas.microsoft.com/.NETConfiguration/v2.0` . |
@@ -110,13 +112,13 @@ Aşağıdaki örnekte `Schema` yerelleştirilmiş şemayı işaret etmek için% 
 
 ### <a name="to-change-the-schema-cache-location"></a>Şema önbellek konumunu değiştirmek için
 
-1. **Araçlar** menüsünde **Seçenekler**' i seçin.
+1. **Araçlar** menüsünde **Seçenekler** ' i seçin.
 
-2. **Metin düzenleyiciyi**genişletin, **XML**' i genişletin ve ardından **çeşitli**' a tıklayın.
+2. **Metin düzenleyiciyi** genişletin, **XML** ' i genişletin ve ardından **çeşitli** ' a tıklayın.
 
 3. **Şemalar** alanındaki **tarayıcı** düğmesine tıklayın.
 
-4. Şema önbelleğinin klasörünü seçip **Tamam**' a tıklayın.
+4. Şema önbelleğinin klasörünü seçip **Tamam** ' a tıklayın.
 
 ### <a name="to-add-another-directory-of-common-schemas"></a>Ortak şemaların başka bir dizinini eklemek için
 
@@ -130,4 +132,4 @@ Aşağıdaki örnekte `Schema` yerelleştirilmiş şemayı işaret etmek için% 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Düzenleyicisi](../xml-tools/xml-editor.md)
+- [XML düzenleyicisi](../xml-tools/xml-editor.md)

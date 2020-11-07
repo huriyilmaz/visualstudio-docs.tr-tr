@@ -1,5 +1,7 @@
 ---
 title: XML düzenleyicisi
+description: Visual Studio 'da metin düzenleyiciyi temel alan XML Düzenleyicisi hakkında bilgi edinin ve XML dilleri için ek destek içerir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 550dcb0cc3299a4a1b884d3141761c39977ce088
-ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
+ms.openlocfilehash: 1bd1cac1c688bf2efc0a4c08797d72eabf0133e2
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90713548"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351446"
 ---
 # <a name="xml-editor"></a>XML düzenleyicisi
 
@@ -32,7 +34,7 @@ XML Düzenleyicisi aşağıdaki özellikleri içerir:
 
 - XML örnek belgesinden XML şeması oluşturma.
 
-- DTD veya XML verileri azaltılmış (XDR) şemasını bir XML şemasına dönüştürme.
+- DTD veya XML-Data azaltılmış (XDR) şemasını bir XML şemasına dönüştürme.
 
 - XSLT sözdizimi denetimi.
 
@@ -40,7 +42,7 @@ XML Düzenleyicisi aşağıdaki özellikleri içerir:
 
 - [XML şema Gezgini](../xml-tools/xml-schema-explorer.md)ile tümleştirme. Bu, XML şemaları için hiyerarşik bir görünüm sağlar.
 
-XML Düzenleyicisi, *. xml*, *. xsd*, *. xsl*ve *. config*gibi iyi bilinen dosya uzantıları için çağrılır. Ayrıca dosya XML içeriyorsa, herhangi bir bilinmeyen dosya uzantısında da çağrılır.
+XML Düzenleyicisi, *. xml* , *. xsd* , *. xsl* ve *. config* gibi iyi bilinen dosya uzantıları için çağrılır. Ayrıca dosya XML içeriyorsa, herhangi bir bilinmeyen dosya uzantısında da çağrılır.
 
 ## <a name="xslt-intellisense"></a>XSLT IntelliSense
 

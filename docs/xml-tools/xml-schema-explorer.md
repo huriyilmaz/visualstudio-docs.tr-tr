@@ -1,5 +1,7 @@
 ---
 title: XML Şema Gezgini
+description: Visual Studio ve XML Düzenleyicisi ile tümleştirilmiş XML şema Gezgini özellikleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2fc39e98-b194-456b-a452-cfafb0a52d66
@@ -8,16 +10,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 04c6415fed131abc5a102f6ec15c69e33f21fd68
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 31edea44741249c5d75a53e291c766824dc3b8ea
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592353"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351303"
 ---
 # <a name="xml-schema-explorer"></a>XML Şema Gezgini
 
-XML **şema Gezgini** , XML şeması tanım DILI (xsd) şemaları ile çalışmanıza olanak tanımak için MICROSOFT VISUAL STUDIO ve XML Düzenleyicisi ile tümleşiktir. Bir XML şema dosyası açtığınızda, **şema kümesi** düğümü **XML şema Gezgini**'nde görünür. Hedef dosyanız için dahil edilen, içeri aktarılan veya yeniden tanımlanmış şemaların yanı sıra bir veya ifadesiyle başvurulan tüm dosyalar `include` `import` da **XML şema Gezgini**'nde görünür.
+XML **şema Gezgini** , XML şeması tanım DILI (xsd) şemaları ile çalışmanıza olanak tanımak için MICROSOFT VISUAL STUDIO ve XML Düzenleyicisi ile tümleşiktir. Bir XML şema dosyası açtığınızda, **şema kümesi** düğümü **XML şema Gezgini** 'nde görünür. Hedef dosyanız için dahil edilen, içeri aktarılan veya yeniden tanımlanmış şemaların yanı sıra bir veya ifadesiyle başvurulan tüm dosyalar `include` `import` da **XML şema Gezgini** 'nde görünür.
 
 **XML şeması Gezgini** şunları yapmanızı sağlar:
 
@@ -35,15 +37,15 @@ XML **şema Gezgini** , XML şeması tanım DILI (xsd) şemaları ile çalışma
 
 - Genel öğeler için örnek XML oluşturun.
 
-**XML şema Gezgini** , bir ağaç görünümü aracılığıyla şema kümesinin hiyerarşik bir görünümünü sağlar. **XML şeması Gezgini** Ayrıca arama, filtreleme, gezinme ve sıralama sağlar. **XML şema Gezgini**'ne erişmek için aşağıdakilerden birini yapın:
+**XML şema Gezgini** , bir ağaç görünümü aracılığıyla şema kümesinin hiyerarşik bir görünümünü sağlar. **XML şeması Gezgini** Ayrıca arama, filtreleme, gezinme ve sıralama sağlar. **XML şema Gezgini** 'ne erişmek için aşağıdakilerden birini yapın:
 
 - [Başlangıç görünümü](../xml-tools/start-view.md)' nde, **XML şema Gezgini** bağlantısına tıklayın.
 
-- [Grafik görünümü](../xml-tools/graph-view.md) veya [içerik modeli görünümünde](../xml-tools/content-model-view.md) çalışıyorsanız ve çalışma alanınızda düğümleri varsa, **XML şema Gezginini**seçmek için bağlam (sağ tıklama) menüsünü kullanın.
+- [Grafik görünümü](../xml-tools/graph-view.md) veya [içerik modeli görünümünde](../xml-tools/content-model-view.md) çalışıyorsanız ve çalışma alanınızda düğümleri varsa, **XML şema Gezginini** seçmek için bağlam (sağ tıklama) menüsünü kullanın.
 
 - Ayrıca, **Görünüm** menüsünden **XML şema Gezginini** seçebilirsiniz.
 
-- **XML şema** Gezginine, bir *. xsd* dosyasıyla ilişkilendirilmiş Visual Basic xml sabit değeri olan bir *. vb* dosyasından erişebilirsiniz. **XML şeması Gezgininde**şema kümesini görmek için, XML sabit değerinde bir xml düğümüne veya bir XML ad alanı içeri aktarma öğesine sağ tıklayın ve **şema Gezgini 'nde göster** komutunu seçin. Daha fazla bilgi için bkz. xml [şema Gezgini Ile xml sabit değerlerini tümleştirme](../xml-tools/integration-of-xml-literals-with-xml-schema-explorer.md).
+- **XML şema** Gezginine, bir *. xsd* dosyasıyla ilişkilendirilmiş Visual Basic xml sabit değeri olan bir *. vb* dosyasından erişebilirsiniz. **XML şeması Gezgininde** şema kümesini görmek için, XML sabit değerinde bir xml düğümüne veya bir XML ad alanı içeri aktarma öğesine sağ tıklayın ve **şema Gezgini 'nde göster** komutunu seçin. Daha fazla bilgi için bkz. xml [şema Gezgini Ile xml sabit değerlerini tümleştirme](../xml-tools/integration-of-xml-literals-with-xml-schema-explorer.md).
 
 ## <a name="tree-view"></a>Ağacı Görünümü
 **XML şeması Gezgini** , önceden derlenmiş şema kümesi bilgilerini bir ağaç yapısında görüntüler. Ağaç yapısı aşağıdaki gibi düzenlenmiştir:

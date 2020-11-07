@@ -1,5 +1,6 @@
 ---
 title: Çevrimdışı veya çevrimiçi yüklemesi modunu belirtme (ClickOnce)
+description: Uygulamanın çevrimdışı veya çevrimiçi olarak kullanılabilir olup olmadığını belirleyen bir ClickOnce uygulaması için yük modunu belirtmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -19,24 +20,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 896d2218237b884d9483496e0adac157a6e26fd3
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 5236d73bb965d4f25634ad9e61a52608c9030146
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808743"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350939"
 ---
 # <a name="how-to-specify-the-clickonce-offline-or-online-install-mode"></a>Nasıl yapılır: ClickOnce Çevrimdışı veya çevrimiçi yüklemesi modunu belirtme
-`Install Mode`Uygulama için, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamanın çevrimdışı veya çevrimiçi olarak kullanılabilir olup olmayacağını belirler. **Uygulama yalnızca çevrimiçi kullanılabilir**olduğunda, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamayı çalıştırmak için kullanıcının yayımlama konumuna (bir Web sayfası veya bir dosya paylaşımında) erişimi olması gerekir. **Uygulamanın çevrimdışı kullanılabilir olduğunu**seçtiğinizde, uygulama **Başlangıç** menüsüne ve **Program Ekle veya Kaldır** iletişim kutusuna giriş ekler; Kullanıcılar bağlı olmadıkları zaman uygulamayı çalıştırabilir.
+`Install Mode`Uygulama için, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamanın çevrimdışı veya çevrimiçi olarak kullanılabilir olup olmayacağını belirler. **Uygulama yalnızca çevrimiçi kullanılabilir** olduğunda, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamayı çalıştırmak için kullanıcının yayımlama konumuna (bir Web sayfası veya bir dosya paylaşımında) erişimi olması gerekir. **Uygulamanın çevrimdışı kullanılabilir olduğunu** seçtiğinizde, uygulama **Başlangıç** menüsüne ve **Program Ekle veya Kaldır** iletişim kutusuna giriş ekler; Kullanıcılar bağlı olmadıkları zaman uygulamayı çalıştırabilir.
 
-, `Install Mode` **Proje Tasarımcısı**' nın **Yayımla** sayfasında ayarlanabilir.
+, `Install Mode` **Proje Tasarımcısı** ' nın **Yayımla** sayfasında ayarlanabilir.
 
 > [!NOTE]
 > , `Install Mode` Yayımlama Sihirbazı kullanılarak da ayarlanabilir. Daha fazla bilgi için bkz. [nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).
 
 ### <a name="to-make-a-clickonce-application-available-online-only"></a>ClickOnce uygulamasını yalnızca çevrimiçi kullanılabilir hale getirmek için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
+1. **Çözüm Gezgini** ' de bir proje seçiliyken, **Proje** menüsünde **Özellikler** ' e tıklayın.
 
 2. **Yayımla** sekmesine tıklayın.
 
@@ -44,7 +45,7 @@ ms.locfileid: "90808743"
 
 ### <a name="to-make-a-clickonce-application-available-online-or-offline"></a>ClickOnce uygulamasını çevrimiçi veya çevrimdışı kullanılabilir hale getirmek için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
+1. **Çözüm Gezgini** ' de bir proje seçiliyken, **Proje** menüsünde **Özellikler** ' e tıklayın.
 
 2. **Yayımla** sekmesine tıklayın.
 

@@ -1,5 +1,7 @@
 ---
 title: ClickOnce uygulaması için varsayılan Web sayfasını özelleştirme
+description: Web 'de uygulamanın adını ve diğer bilgileri içeren bir ClickOnce uygulaması yayımladığınızda oluşturulan Web sayfası hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ee4c1211840f17afe371961dea644372cd63efb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fbda4558622c2e244071a218d3d5e42196460113
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382477"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351212"
 ---
 # <a name="how-to-customize-the-default-web-page-for-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulaması için varsayılan Web sayfasını özelleştirme
 Bir ClickOnce uygulamasını Web 'de yayımlarken, bir Web sayfası otomatik olarak oluşturulur ve uygulamayla birlikte yayımlanır. Varsayılan sayfa, uygulamanın adını ve uygulamanın yükleneceği bağlantıları, önkoşulları yüklemeyi veya MSDN 'de yardım erişimini içerir.
@@ -30,7 +32,7 @@ Bir ClickOnce uygulamasını Web 'de yayımlarken, bir Web sayfası otomatik ola
 > [!NOTE]
 > Sayfada gördüğünüz gerçek bağlantılar, sayfanın görüntülendiği bilgisayara ve hangi önkoşulları dahil ettiğiniz üzerine bağlıdır.
 
- Web sayfası için varsayılan ad *Publish.htm*; **Proje tasarımcısında**adı değiştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce uygulaması için bir yayımlama sayfası belirtme](../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md).
+ Web sayfası için varsayılan ad *Publish.htm* ; **Proje tasarımcısında** adı değiştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce uygulaması için bir yayımlama sayfası belirtme](../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md).
 
  *Publish.htm* Web sayfası yalnızca daha yeni bir sürüm algılandığında yayımlanır.
 

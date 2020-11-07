@@ -1,5 +1,7 @@
 ---
 title: ClickOnce tasarımcısını kullanarak uydu derlemesini isteğe bağlı olarak indirme
+description: Tasarımcı kullanarak uydu derlemelerini nasıl isteğe bağlı olarak işaretleyeceğinizi ve yalnızca geçerli kültür ayarları için bir istemci makinesi için gereken derlemeyi indireceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f510ef4ad81188997e1d572e7aa3b52b65883269
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8b6b57faf01878dc5aff708f0aca47707bf6e48c
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66263411"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350341"
 ---
 # <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>İzlenecek yol: Tasarımcıyı kullanarak ClickOnce dağıtım API 'SI ile uydu derlemelerini isteğe bağlı olarak Indirme
 Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür için yapılandırılabilir. *Uydu derlemesi* , uygulamanın varsayılan kültürü dışında bir kültür için uygulama kaynakları içeren bir derlemedir.
@@ -41,13 +43,13 @@ Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür i
 
 1. Projenizi yapılandırın. Bu, yerelleştirçalıştığınız tüm kültürler için uydu derlemeleri oluşturur.
 
-2. Çözüm Gezgini ' de proje adına sağ tıklayın ve **Özellikler**' e tıklayın.
+2. Çözüm Gezgini ' de proje adına sağ tıklayın ve **Özellikler** ' e tıklayın.
 
-3. **Yayımla** sekmesine tıklayın ve ardından **uygulama dosyaları**' na tıklayın.
+3. **Yayımla** sekmesine tıklayın ve ardından **uygulama dosyaları** ' na tıklayın.
 
 4. Uydu derlemelerini görüntülemek için **tüm dosyaları göster** onay kutusunu seçin. Varsayılan olarak, tüm uydu derlemeleri dağıtımınıza dahil edilir ve bu iletişim kutusunda görünür olur.
 
-     Uydu derlemesinin, RFC 1766 biçiminde bir dil tanımlayıcısı olduğu * \<isoCode>\ApplicationName.resources.dll*biçimde adında bir adı olacaktır \<isoCode> .
+     Uydu derlemesinin, RFC 1766 biçiminde bir dil tanımlayıcısı olduğu *\<isoCode>\ApplicationName.resources.dll* biçimde adında bir adı olacaktır \<isoCode> .
 
 5. Her dil tanımlayıcısı için **Indirme grubu** listesinde **Yeni** ' ye tıklayın. Bir indirme grubu adı istendiğinde, dil tanımlayıcısını girin. Örneğin, bir Japonca uydu derlemesi için, indirme grubu adını belirtmeniz gerekir `ja-JP` .
 
@@ -55,7 +57,7 @@ Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür i
 
 ### <a name="to-download-satellite-assemblies-on-demand-in-c"></a>C 'de isteğe bağlı uydu derlemelerini indirmek için\#
 
-1. *Program.cs* dosyasını açın. Bu dosyayı Çözüm Gezgini görmüyorsanız, projenizi seçin ve **Proje** menüsünde **tüm dosyaları göster**' e tıklayın.
+1. *Program.cs* dosyasını açın. Bu dosyayı Çözüm Gezgini görmüyorsanız, projenizi seçin ve **Proje** menüsünde **tüm dosyaları göster** ' e tıklayın.
 
 2. Uygun uydu derlemesini indirmek ve uygulamanızı başlatmak için aşağıdaki kodu kullanın.
 
@@ -65,13 +67,13 @@ Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür i
 
 1. Uygulamanın **Özellikler** penceresinde **uygulama** sekmesine tıklayın.
 
-2. Sekme sayfasının alt kısmındaki **uygulama olaylarını görüntüle**' ye tıklayın.
+2. Sekme sayfasının alt kısmındaki **uygulama olaylarını görüntüle** ' ye tıklayın.
 
 3. Aşağıdaki içeri aktarmaları *ApplicationEvents. vb* dosyasının başına ekleyin.
 
      [!code-vb[ClickOnce.SatelliteAssembliesVB#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_2.vb)]
 
-4. Sınıfına aşağıdaki kodu ekleyin `MyApplication` .
+4. Aşağıdaki kodu `MyApplication` sınıfına ekleyin.
 
      [!code-vb[ClickOnce.SatelliteAssembliesVB#2](../deployment/codesnippet/VisualBasic/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_3.vb)]
 

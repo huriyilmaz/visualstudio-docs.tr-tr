@@ -1,5 +1,7 @@
 ---
 title: ClickOnce dağıtımında Önkoşullar için destek URL 'SI
+description: ClickOnce uygulamasının nasıl çalıştırılacağını ve dağıtımın eksik önkoşulları nasıl ele aldığı hakkında ClickOnce dağıtımı testini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,19 +17,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bf474e4926403a9475860bfdc620ee4a6860f8aa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: af912503ddc1e87f14756a1041e9fa4d8aac505b
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85381736"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350952"
 ---
 # <a name="how-to-specify-a-support-url-for-individual-prerequisites-in-a-clickonce-deployment"></a>Nasıl yapılır: bir ClickOnce dağıtımında tek Önkoşullar için destek URL 'SI belirtme
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Dağıtım, uygulamanın çalışması için istemci bilgisayarda kullanılabilir olması gereken bazı önkoşulları test edebilir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Bu bağımlılıklar, .NET Framework gereken en düşük sürümü, işletim sisteminin sürümünü ve genel derleme önbelleğinde (GAC) önceden yüklenmiş olması gereken tüm derlemeleri içerir. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Ancak, bu önkoşullardan herhangi biri yüklenemez; bir önkoşul bulunamazsa, yüklemeyi durdurur ve yüklemenin neden başarısız olduğunu açıklayan bir iletişim kutusu görüntüler.
 
  Önkoşulları yüklemek için iki yöntem vardır. Bunları bir önyükleyici uygulaması kullanarak yükleyebilirsiniz. Alternatif olarak, önkoşul bulunamazsa, iletişim kutusunda kullanıcılara görüntülenecek olan ayrı Önkoşullar için bir destek URL 'SI belirtebilirsiniz. Bu URL tarafından başvurulan sayfa, gerekli önkoşulu yüklemek için yönergelerin bağlantılarını içerebilir. Bir uygulama tek bir önkoşul için destek URL 'SI belirtmezse, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] tanımlanmazsa uygulamanın dağıtım bildiriminde belirtilen destek URL 'sini bir bütün olarak görüntüler.
 
- Ancak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , *Mage.exe*ve *MageUI.exe* her türlü dağıtım oluşturmak için kullanılabilir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , bu araçların hiçbiri ayrı Önkoşullar için bir destek URL 'si belirtmeyi doğrudan desteklemez. Bu belgede, bu destek URL 'Lerini dahil etmek için dağıtımınızın uygulama bildirimi ve dağıtım bildiriminin nasıl değiştirileceği açıklanmaktadır.
+ Ancak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , *Mage.exe* ve *MageUI.exe* her türlü dağıtım oluşturmak için kullanılabilir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , bu araçların hiçbiri ayrı Önkoşullar için bir destek URL 'si belirtmeyi doğrudan desteklemez. Bu belgede, bu destek URL 'Lerini dahil etmek için dağıtımınızın uygulama bildirimi ve dağıtım bildiriminin nasıl değiştirileceği açıklanmaktadır.
 
 ### <a name="specify-a-support-url-for-an-individual-prerequisite"></a>Tek bir önkoşul için destek URL 'SI belirtin
 

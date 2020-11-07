@@ -1,5 +1,7 @@
 ---
 title: ClickOnce güvenlik ayarlarını etkinleştirme | Microsoft Docs
+description: Yayımla sihirbazının uygulamayı yayımlaması için ClickOnce uygulamaları için kod erişim güvenliğini otomatik olarak nasıl etkinleştirmesine öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,23 +18,23 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f407ac42dc9997215bfe6682bb8b974b78c7847
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: db31d0182c598b32933cf2d4260706a2252a9b6f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90850936"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351173"
 ---
 # <a name="how-to-enable-clickonce-security-settings"></a>Nasıl yapılır: ClickOnce güvenlik ayarlarını etkinleştirme
 Uygulamayı yayımlamak için ClickOnce uygulamaları için kod erişimi güvenliği etkinleştirilmelidir. Bu, Yayımlama Sihirbazı 'nı kullanarak bir uygulamayı yayımladığınızda otomatik olarak yapılır.
 
  Bazı durumlarda, uygulama derlerken veya hata ayıklarken kod erişim güvenliğini etkinleştirmek performansı etkileyebilir; Bu durumlarda, güvenlik ayarlarını geçici olarak devre dışı bırakmak isteyebilirsiniz.
 
- ClickOnce güvenlik ayarları, **Proje Tasarımcısı**'nın **güvenlik** sayfasında etkinleştirilebilir veya devre dışı bırakılabilir.
+ ClickOnce güvenlik ayarları, **Proje Tasarımcısı** 'nın **güvenlik** sayfasında etkinleştirilebilir veya devre dışı bırakılabilir.
 
 ### <a name="to-enable-clickonce-security-settings"></a>ClickOnce güvenlik ayarlarını etkinleştirmek için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
+1. **Çözüm Gezgini** ' de bir proje seçiliyken, **Proje** menüsünde **Özellikler** ' e tıklayın.
 
 2. **Güvenlik** sekmesine tıklayın.
 
@@ -45,7 +47,7 @@ Uygulamayı yayımlamak için ClickOnce uygulamaları için kod erişimi güvenl
 
 ### <a name="to-disable-clickonce-security-settings"></a>ClickOnce güvenlik ayarlarını devre dışı bırakmak için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
+1. **Çözüm Gezgini** ' de bir proje seçiliyken, **Proje** menüsünde **Özellikler** ' e tıklayın.
 
 2. **Güvenlik** sekmesine tıklayın.
 

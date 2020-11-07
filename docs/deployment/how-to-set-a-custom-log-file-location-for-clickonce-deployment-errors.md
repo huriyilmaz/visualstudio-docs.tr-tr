@@ -1,5 +1,6 @@
 ---
 title: Özel günlük dosyası konumu ayarlama (ClickOnce dağıtım hataları)
+description: ClickOnce dağıtımını yükleme ve başlatma ile ilgili hataları belgelemek için ClickOnce 'ın tüm dağıtımlar için sakladığı etkinleştirme günlük dosyaları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,17 +18,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d5b5cf73a685eb68e389e6531022200acbefbfd2
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 3d9c8ce481ab9ca99b7d456f53418641654369ad
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809748"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351043"
 ---
 # <a name="how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors"></a>Nasıl yapılır: ClickOnce dağıtım hataları için özel günlük dosyası konumu ayarlama
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] tüm dağıtımlar için etkinleştirme günlük dosyalarını tutar. Bu Günlükler, bir dağıtımı yükleme ve başlatma ile ilgili tüm hataları belgeleyin [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Varsayılan olarak, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] her dağıtım etkinleştirmesi için bir günlük dosyası oluşturur. Bu günlük dosyalarını Temporary Internet Files klasöründe depolar. Bir dağıtım için günlük dosyası, bir etkinleştirme hatası oluştuğunda kullanıcıya gösterilir ve Kullanıcı ortaya çıkan hata iletişim kutusunda **Ayrıntılar** ' a tıklar.
 
- Özel bir günlük dosyası yolu ayarlamak için, kayıt defteri Düzenleyicisi 'Ni (**regedit.exe**) kullanarak belirli bir istemci için bu davranışı değiştirebilirsiniz. Bu durumda, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] tek bir dosyadaki tüm dağıtımlar için etkinleştirme başarıları ve başarısızlıklarını günlüğe kaydeder.
+ Özel bir günlük dosyası yolu ayarlamak için, kayıt defteri Düzenleyicisi 'Ni ( **regedit.exe** ) kullanarak belirli bir istemci için bu davranışı değiştirebilirsiniz. Bu durumda, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] tek bir dosyadaki tüm dağıtımlar için etkinleştirme başarıları ve başarısızlıklarını günlüğe kaydeder.
 
 > [!CAUTION]
 > Kayıt Defteri Düzenleyicisi 'Ni yanlış kullanırsanız, işletim sisteminizi yeniden yüklemenizi gerektirebilecek önemli sorunlara neden olabilirsiniz. Kayıt Defteri Düzenleyicisi 'Ni kullanarak kendi sorumluluğunuzdadır.
@@ -39,13 +40,13 @@ ms.locfileid: "90809748"
 
 ### <a name="to-set-a-custom-log-file-location"></a>Özel bir günlük dosyası konumu ayarlamak için
 
-1. **Regedit.exe**açın.
+1. **Regedit.exe** açın.
 
 2. Düğüme gidin `HKCU\Software\Classes\Software\Microsoft\Windows\CurrentVersion\Deployment` .
 
 3. Dize değerini `LogFilePath` tercih ettiğiniz özel günlük konumunun tam yolu ve dosya adı olarak ayarlayın.
 
-     Bu konum, kullanıcının yazma erişimine sahip olduğu bir dizinde olmalıdır. Örneğin, Windows Vista 'da aşağıdaki klasör yapısını oluşturun ve `LogFilePath` *C:\Users \\ \<username> \ Documents\logs\clickonce\ınstalk\.log*olarak ayarlayın.
+     Bu konum, kullanıcının yazma erişimine sahip olduğu bir dizinde olmalıdır. Örneğin, Windows Vista 'da aşağıdaki klasör yapısını oluşturun ve `LogFilePath` *C:\Users \\ \<username> \ Documents\logs\clickonce\ınstalk\.log* olarak ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce dağıtım sorunlarını giderme](../deployment/troubleshooting-clickonce-deployments.md)

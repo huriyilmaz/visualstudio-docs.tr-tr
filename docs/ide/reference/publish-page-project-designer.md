@@ -1,5 +1,7 @@
 ---
 title: Yayın Sayfası, Proje Tasarımcısı
+description: Proje Tasarımcısı ' nın Yayımla sayfası ClickOnce dağıtımınızın özelliklerini yapılandırmak için kullanılır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
 ms.topic: reference
@@ -13,31 +15,31 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bbb43408dc12c55b72eb0ca0909d8b261198a5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13edc1b2e2e235eaf5a475764a98067aa4b0150d
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68926165"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350289"
 ---
 # <a name="publish-page-project-designer"></a>Yayın Sayfası, Proje Tasarımcısı
 
 **Proje Tasarımcısı** ' nın **Yayımla** sayfası ClickOnce dağıtımı için özellikleri yapılandırmak üzere kullanılır.
 
-**Yayımla** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü seçin ve ardından **Proje** menüsünde **Özellikler**' e tıklayın. **Proje Tasarımcısı** göründüğünde, **Yayımla** sekmesine tıklayın.
+**Yayımla** sayfasına erişmek için **Çözüm Gezgini** ' de bir proje düğümü seçin ve ardından **Proje** menüsünde **Özellikler** ' e tıklayın. **Proje Tasarımcısı** göründüğünde, **Yayımla** sekmesine tıklayın.
 
 > [!NOTE]
-> Burada açıklanan bazı ClickOnce özellikleri, **derleme** menüsünde veya bu sayfadaki **publishwizard** düğmesine tıklanarak bulunan **publishwizard**'da da ayarlanabilir.
+> Burada açıklanan bazı ClickOnce özellikleri, **derleme** menüsünde veya bu sayfadaki **publishwizard** düğmesine tıklanarak bulunan **publishwizard** 'da da ayarlanabilir.
 
 ## <a name="uielement-list"></a>UIElement Listesi
 
  **Yayımlama klasörü konumu**
 
-Uygulamanın yayımlandığı konumu belirtir. , Bir sürücü yolu ( `C:\deploy\myapplication` ), bir dosya paylaşma ( `\\server\myapplication` ) veya bir FTP sunucusu () olabilir `ftp://ftp.microsoft.com/myapplication` . Göz at (**...**) düğmesinin çalışması Için **Yayımlama konumu** kutusunda metnin mevcut olması gerektiğini unutmayın.
+Uygulamanın yayımlandığı konumu belirtir. , Bir sürücü yolu ( `C:\deploy\myapplication` ), bir dosya paylaşma ( `\\server\myapplication` ) veya bir FTP sunucusu () olabilir `ftp://ftp.microsoft.com/myapplication` . Göz at ( **...** ) düğmesinin çalışması Için **Yayımlama konumu** kutusunda metnin mevcut olması gerektiğini unutmayın.
 
  **Yükleme klasörü URL 'SI**
 
-İsteğe bağlı. Kullanıcıların uygulamayı yüklemek için gideceği Web sitesini belirtir. Bu, yalnızca **yayımlama konumundan**farklı olduğunda (örneğin, uygulama bir hazırlama sunucusuna yayımlandığında) gereklidir.
+İsteğe bağlı. Kullanıcıların uygulamayı yüklemek için gideceği Web sitesini belirtir. Bu, yalnızca **yayımlama konumundan** farklı olduğunda (örneğin, uygulama bir hazırlama sunucusuna yayımlandığında) gereklidir.
 
  **Modu ve ayarları yükler**
 
@@ -63,7 +65,7 @@ Diğer gelişmiş yayımlama seçeneklerini belirtmek için kullanılan Yayımla
 
  **Yayımlama sürümü**
 
-Uygulama için yayımlama sürüm numarasını ayarlar; sürüm numarası değiştirildiğinde, uygulama bir güncelleştirme olarak yayımlanır. Yayımla sürümünün (**ana**, **İkincil**, **derleme**, **Düzeltme**) her bölümü <xref:System.UInt16.MaxValue> , izin verilen en yüksek 65355 () değerine sahip olabilir <xref:System.Version> .
+Uygulama için yayımlama sürüm numarasını ayarlar; sürüm numarası değiştirildiğinde, uygulama bir güncelleştirme olarak yayımlanır. Yayımla sürümünün ( **ana** , **İkincil** , **derleme** , **Düzeltme** ) her bölümü <xref:System.UInt16.MaxValue> , izin verilen en yüksek 65355 () değerine sahip olabilir <xref:System.Version> .
 
 ClickOnce kullanarak bir uygulamanın birden fazla sürümünü yüklediğinizde yükleme, uygulamanın önceki sürümlerini belirttiğiniz Yayımla konumundaki arşiv adlı bir klasöre taşır. Önceki sürümlerin bu şekilde arşivlenmesi, yükleme dizinini önceki sürümden klasörlerin temizlenmesini önler.
 
@@ -77,7 +79,7 @@ Yayımla sihirbazını açar. Yayımla sihirbazının tamamlanması, **derleme**
 
  **Şimdi Yayımla**
 
-Geçerli ayarları kullanarak uygulamayı yayımlar. **Publishwizard**'daki **son** düğmesine eşittir.
+Geçerli ayarları kullanarak uygulamayı yayımlar. **Publishwizard** 'daki **son** düğmesine eşittir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

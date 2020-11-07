@@ -1,5 +1,6 @@
 ---
 title: Önkoşulları dahil et (ClickOnce uygulaması)
+description: Geliştirme bilgisayarınız için ClickOnce uygulamanızı dağıtmaya yönelik önkoşullar için yükleyici paketleri almayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 29ba5cbef127be2c67c078a62574ade22295433c
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: e9199bb720cb94bc949a04bd59d5d3b6527108ed
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809139"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351199"
 ---
 # <a name="how-to-include-prerequisites-with-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulamasıyla önkoşulları dahil etme
-Önkoşul yazılımlarını bir uygulamayla dağıtabilmeniz için önce [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Bu önkoşulların yükleyici paketlerini geliştirme bilgisayarınıza indirmeniz gerekir. Bir uygulamayı yayımladığınızda ve Uygulamam **ile aynı konumdan önkoşulları indir**' i seçtiğinizde, yükleyici paketleri **paketler** klasöründe değilse bir hata oluşur.
+Önkoşul yazılımlarını bir uygulamayla dağıtabilmeniz için önce [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Bu önkoşulların yükleyici paketlerini geliştirme bilgisayarınıza indirmeniz gerekir. Bir uygulamayı yayımladığınızda ve Uygulamam **ile aynı konumdan önkoşulları indir** ' i seçtiğinizde, yükleyici paketleri **paketler** klasöründe değilse bir hata oluşur.
 
 > [!NOTE]
 > .NET Framework için bir yükleyici paketi eklemek için, bkz. [geliştiriciler için .NET Framework dağıtım kılavuzu](/dotnet/framework/deployment/deployment-guide-for-developers).
@@ -38,9 +39,9 @@ ms.locfileid: "90809139"
    > Hiçbir **ad** öğesi içermiyorsa `http://go.microsoft.com/fwlink` , önkoşul için kök klasörde **Product.xml** dosyasını açın ve **fwlink** dizesini bulun.
 
    > [!IMPORTANT]
-   > Bazı ön koşullar (örneğin, 32-bit veya 64-bit sistemler için) birden çok yükleme paketine sahiptirler. Birden çok **ad** öğesi **fwlink**içeriyorsa, her biri için kalan adımları tekrarlamanız gerekir.
+   > Bazı ön koşullar (örneğin, 32-bit veya 64-bit sistemler için) birden çok yükleme paketine sahiptirler. Birden çok **ad** öğesi **fwlink** içeriyorsa, her biri için kalan adımları tekrarlamanız gerekir.
 
-5. URL 'YI tarayıcınızın adres çubuğuna yapıştırın ve sonra çalıştırmanız veya kaydetmeniz istendiğinde **Kaydet**' i seçin.
+5. URL 'YI tarayıcınızın adres çubuğuna yapıştırın ve sonra çalıştırmanız veya kaydetmeniz istendiğinde **Kaydet** ' i seçin.
 
     Bu adım, yükleyici dosyasını bilgisayarınıza yükler.
 

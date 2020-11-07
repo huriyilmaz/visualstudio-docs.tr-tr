@@ -1,5 +1,7 @@
 ---
 title: '&lt;Paket &gt; öğesi (önyükleyici) | Microsoft Docs'
+description: Package öğesi, bir paket dosyasının içindeki en üst düzey XML öğesidir. Package öğesi gereklidir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab3478f701cade458ffdb97caf4541a88f52230e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7645731cf5b955601541a122f2fdb3fa3d794cc3
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66745757"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350744"
 ---
 # <a name="ltpackagegt-element-bootstrapper"></a>&lt;Package &gt; öğesi (önyükleyici)
 `Package`Öğesi, bir paket dosyasının içindeki en üst düzey xml öğesidir.
@@ -147,7 +149,7 @@ ms.locfileid: "66745757"
 |--------------------| - |
 | `Culture` | Gereklidir. Bu paket için kullanılacak dili belirleyen kültürü tanımlar. Bu öznitelik, `Strings` yükleme sırasında ürün adları ve hata iletileri için kültüre özgü dizeleri listeleyen öğesi için bir anahtardır. |
 | `Name` | Gereklidir. Gibi bir araç içinde geliştiriciye görüntülenecek paketin adı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Bu öznitelik, ve `Strings` `String` `Name` `Culture` özellikleriyle eşleşecek şekilde ayarlanmış bir öğesi içermesi gereken öğesi `Name` `Culture` için bir anahtardır `Package` . |
-| `LicenseAgreement` | İsteğe bağlı. Dağıtım paketindeki, Son Kullanıcı Lisans Sözleşmesi 'Ni (EULA) içeren dosyanın adını belirtir.  Bu dosya düz metin (*. txt*) ya da zengin metin biçimi olabilir. (*. rtf*) |
+| `LicenseAgreement` | İsteğe bağlı. Dağıtım paketindeki End-User lisans sözleşmesi 'Ni (EULA) içeren dosyanın adını belirtir.  Bu dosya düz metin ( *. txt* ) ya da zengin metin biçimi olabilir. ( *. rtf* ) |
 
 ## <a name="example"></a>Örnek
  Aşağıdaki kod örneği, 2,0 .NET Framework yeniden dağıtımı için tüm paket dosyalarını gösterir.

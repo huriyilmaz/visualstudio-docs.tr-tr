@@ -1,5 +1,7 @@
 ---
 title: Derleme ve bildirim imzalamayı yönetme
+description: Bir yazılım bileşenine küresel olarak benzersiz bir kimlik veren tanımlayıcı ad imzalama avantajları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/17/2017
 ms.technology: vs-ide-deployment
 ms.topic: conceptual
@@ -14,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a17ce633515979ca7a3fd3ac5a7e1d8802996944
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bdd2570f94b0f5577c7c09a696906338245f77a4
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770418"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351394"
 ---
 # <a name="manage-assembly-and-manifest-signing"></a>Derleme ve bildirim imzalamayı yönetme
 
@@ -38,13 +40,13 @@ C++ projelerinde derlemeleri imzalama hakkında daha fazla bilgi için bkz. [Str
 
 .NET derlemelerini ve uygulama bildirimlerini imzalayabilirsiniz:
 
-- Yürütülebilir dosyalar (*. exe*)
+- Yürütülebilir dosyalar ( *. exe* )
 
-- Uygulama bildirimleri (*. exe. manifest*)
+- Uygulama bildirimleri ( *. exe. manifest* )
 
-- Dağıtım bildirimleri (*. Application*)
+- Dağıtım bildirimleri ( *. Application* )
 
-- Paylaşılan bileşen derlemeleri (*. dll*)
+- Paylaşılan bileşen derlemeleri ( *. dll* )
 
 Aşağıdaki varlık türlerini imzalayın:
 
@@ -58,7 +60,7 @@ Genel olarak, yürütülebilir dosyaları imzalayamamalıdır. Kesin adlandırı
 
 ## <a name="how-to-sign-an-assembly-in-visual-studio"></a>Visual Studio 'da bir derlemeyi imzalama
 
-Proje Özellikleri penceresinin **imzalama** sekmesini kullanarak bir uygulamayı veya bileşeni imzalayabilirseniz ( **Çözüm Gezgini** içinde proje düğümüne sağ tıklayıp **Özellikler**' i seçin). **İmzalama** sekmesini seçin ve ardından **derlemeyi imzala** onay kutusunu seçin.
+Proje Özellikleri penceresinin **imzalama** sekmesini kullanarak bir uygulamayı veya bileşeni imzalayabilirseniz ( **Çözüm Gezgini** içinde proje düğümüne sağ tıklayıp **Özellikler** ' i seçin). **İmzalama** sekmesini seçin ve ardından **derlemeyi imzala** onay kutusunu seçin.
 
 Bir anahtar dosyası belirtin. Yeni bir anahtar dosyası oluşturmayı seçerseniz, yeni anahtar dosyaları her zaman *. pfx* biçiminde oluşturulur. Yeni dosya için bir ad ve parola gerekir.
 

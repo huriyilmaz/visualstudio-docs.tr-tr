@@ -1,16 +1,18 @@
 ---
 title: 'İzlenecek Yol: XSLT Hiyerarşisi Kullanma'
+description: Bu yönergedeki adımları izleyerek, Visual Studio 'daki XSLT hiyerarşisi aracını kullanarak başvurulan bir stil sayfasında hata ayıklamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 940185687544b22325d3f75751eb92e950deb685
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 68018c625c5e406e2ba0d7fbfb138b05c53fff9c
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815050"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351329"
 ---
 # <a name="walkthrough-use-xslt-hierarchy"></a>İzlenecek yol: XSLT hiyerarşisini kullanma
 
@@ -46,7 +48,7 @@ Bu konudaki örnekte, başvurulan bir stil sayfasında hata ayıklama gösterilm
     </COLLECTION>
     ```
 
-1. Aşağıdaki *xslıncludefile. xsl dosyasını*ekleyin:
+1. Aşağıdaki *xslıncludefile. xsl dosyasını* ekleyin:
 
     ```xml
     <?xml version='1.0'?>
@@ -111,4 +113,4 @@ Bu konudaki örnekte, başvurulan bir stil sayfasında hata ayıklama gösterilm
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XSLT Profiler](../xml-tools/xslt-profiler.md)
+- [XSLT profil oluşturucusu](../xml-tools/xslt-profiler.md)

@@ -1,5 +1,7 @@
 ---
 title: Ürün ve paket şema başvurusu | Microsoft Docs
+description: ClickOnce uygulaması için gereken dış bağımlılıkları açıklayan bir XML bildirimi olan ürün dosyası hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -25,12 +27,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1570aa3d4ea72dc1d133ce3096e1726fa1ffb782
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ac5810fa3bdd6d479c1df4c484960fd923b0ed59
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66745622"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350728"
 ---
 # <a name="product-and-package-schema-reference"></a>Ürün ve paket şema başvurusu
 *Ürün dosyası* , bir uygulamanın gerektirdiği tüm dış bağımlılıkları açıklayan bir XML bildirimidir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Dış bağımlılıklara örnek olarak .NET Framework ve Microsoft Data Access Components (MDAC) bulunur. Bir paket dosyası bir ürün dosyasına benzer, ancak yerelleştirilmiş derlemeler, lisans sözleşmeleri ve belgeler gibi bir bağımlılığın kültüre bağlı bileşenleri yüklemek için kullanılır.
@@ -39,16 +41,16 @@ ms.locfileid: "66745622"
 
 |Öğe|Açıklama|Öznitelikler|
 |-------------|-----------------|----------------|
-|[\<Product> Dosyalarında](../deployment/product-element-bootstrapper.md)|Ürün dosyaları için gerekli en üst düzey öğe.|Hiçbiri|
+|[\<Product> Dosyalarında](../deployment/product-element-bootstrapper.md)|Ürün dosyaları için gerekli en üst düzey öğe.|Yok|
 |[\<Package> Dosyalarında](../deployment/package-element-bootstrapper.md)|Paket dosyaları için gerekli en üst düzey öğe.|`Culture`<br /><br /> `Name`<br /><br /> `EULA`|
-|[\<RelatedProducts> Dosyalarında](../deployment/relatedproducts-element-bootstrapper.md)|Ürün dosyaları için isteğe bağlı öğe. Bu ürünün yüklediği veya bağlı olduğu diğer ürünler.|Hiçbiri|
-|[\<InstallChecks> Dosyalarında](../deployment/installchecks-element-bootstrapper.md)|Gerekli öğe. Yükleme sırasında yerel bilgisayarda gerçekleştirilecek bağımlılık denetimlerini listeler.|Hiçbiri|
-|[\<Commands> Dosyalarında](../deployment/commands-element-bootstrapper.md)|Gerekli öğe.  , Tarafından açıklanan bir veya daha fazla yükleme denetimini yürütür `InstallChecks` ve Denetim başarısız olduğunda hangi paketin yükleneceğini belirtir.|Hiçbiri|
-|[\<PackageFiles> Dosyalarında](../deployment/packagefiles-element-bootstrapper.md)|Gerekli öğe. Bu yükleme işlemi tarafından yüklenebilen paketleri listeler.|Hiçbiri|
-|[\<Strings> Dosyalarında](../deployment/strings-element-bootstrapper.md)|Gerekli öğe. Ürün adının ve hata dizelerinin yerelleştirilmiş sürümlerini depolar.|Hiçbiri|
+|[\<RelatedProducts> Dosyalarında](../deployment/relatedproducts-element-bootstrapper.md)|Ürün dosyaları için isteğe bağlı öğe. Bu ürünün yüklediği veya bağlı olduğu diğer ürünler.|Yok|
+|[\<InstallChecks> Dosyalarında](../deployment/installchecks-element-bootstrapper.md)|Gerekli öğe. Yükleme sırasında yerel bilgisayarda gerçekleştirilecek bağımlılık denetimlerini listeler.|Yok|
+|[\<Commands> Dosyalarında](../deployment/commands-element-bootstrapper.md)|Gerekli öğe.  , Tarafından açıklanan bir veya daha fazla yükleme denetimini yürütür `InstallChecks` ve Denetim başarısız olduğunda hangi paketin yükleneceğini belirtir.|Yok|
+|[\<PackageFiles> Dosyalarında](../deployment/packagefiles-element-bootstrapper.md)|Gerekli öğe. Bu yükleme işlemi tarafından yüklenebilen paketleri listeler.|Yok|
+|[\<Strings> Dosyalarında](../deployment/strings-element-bootstrapper.md)|Gerekli öğe. Ürün adının ve hata dizelerinin yerelleştirilmiş sürümlerini depolar.|Yok|
 
 ## <a name="remarks"></a>Açıklamalar
- Paket şeması, kendi kendine özgü bir mantığı içeren MS Build önyüklemesi görevi tarafından oluşturulan bir saplama programı olan *Setup.exe*tarafından kullanılır. Şema sürücüleri, yükleme işleminin her yönüyle.
+ Paket şeması, kendi kendine özgü bir mantığı içeren MS Build önyüklemesi görevi tarafından oluşturulan bir saplama programı olan *Setup.exe* tarafından kullanılır. Şema sürücüleri, yükleme işleminin her yönüyle.
 
  `InstallChecks` setup.exe belirli bir paketin varlığı için gerçekleştirmesi gereken testler. `PackageFiles` Kurulum işleminin yüklenmesi gerekebilecek tüm paketleri listeler, belirli bir test başarısız olur. Komutları altındaki her komut girdisi tarafından tanımlanan testlerin birini yürütür `InstallChecks` ve `PackageFile` testin başarısız olması gerektiğini belirtir. `Strings`Ürün adlarını ve hata iletilerini yerelleştirmek için öğesini kullanabilirsiniz, böylece uygulamanızı istediğiniz sayıda dilde yüklemek için tek bir yükleme ikilisini kullanabilirsiniz.
 

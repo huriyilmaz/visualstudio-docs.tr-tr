@@ -1,5 +1,7 @@
 ---
 title: ClickOnce dağıtım API 'sini kullanarak otomatik uygulama güncelleştirmeleri
+description: Kullanıcı isteği gibi bir olaya göre güncelleştirmeleri denetlemek için ApplicationDeployment sınıfını kullanan ClickOnce 'da kod yazmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6aee738d972b7c6e8c857ae87bb25758d871fe28
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f00bd8aaa5db8ab72e6b6286763fd89fc900599f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382581"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351264"
 ---
 # <a name="how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api"></a>Nasıl yapılır: ClickOnce dağıtım API 'sini kullanarak program aracılığıyla uygulama güncelleştirmelerini denetleme
 ClickOnce, bir uygulamayı dağıtıldıktan sonra güncelleştirmek için iki yol sağlar. İlk yöntemde, belirli aralıklarda güncelleştirmeleri otomatik olarak denetlemek için ClickOnce dağıtımını yapılandırabilirsiniz. İkinci yöntemde, <xref:System.Deployment.Application.ApplicationDeployment> bir Kullanıcı isteği gibi bir olaya göre güncelleştirmeleri denetlemek için sınıfını kullanan kodu yazabilirsiniz.

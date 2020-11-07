@@ -1,5 +1,6 @@
 ---
 title: Marka tutmayı & ClickOnce uygulamasını el ile dağıtın
+description: Yeni bir dağıtım bildirimi oluşturmadan ve müşteri markasını kullanabilmeniz için müşteriler tarafından dağıtılacak ClickOnce uygulamaları oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -23,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e3f21f9e377b7d3e2d71d499eed25079c7769c7
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 29bdd080e87e8fad44c7b8943d0d017749b8c30b
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809230"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350315"
 ---
 # <a name="walkthrough-manually-deploy-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information"></a>İzlenecek yol: yeniden imzalama gerektirmeyen ve marka bilgilerini koruyan bir ClickOnce uygulamasını El Ile dağıtın
 Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama oluşturup bu uygulamayı yayımlamak ve dağıtmak üzere bir müşteriye verdiğinizde, müşterinin genellikle dağıtım bildirimini güncelleştirmesi ve yeniden imzalaması gerekiyordu. Çoğu durumda hala tercih edilen yöntem olsa da, 3,5 .NET Framework, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Yeni bir dağıtım bildirimini yeniden oluşturmak zorunda kalmadan müşteriler tarafından dağıtılabilecek dağıtımlar oluşturmanıza olanak sağlar. Daha fazla bilgi için bkz. [sınama ve üretim sunucuları için teslim etmeden ClickOnce uygulamaları dağıtma](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md).
@@ -36,12 +37,12 @@ Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama o
  Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama oluşturup bu uygulamayı yayımlamak ve dağıtmak üzere bir müşteriye verdiğinizde, uygulama müşterinin markasını kullanabilir veya markalamayı koruyabilir. Örneğin, uygulama tek bir özel uygulama ise markanızı korumak isteyebilirsiniz. Uygulama her müşteri için yüksek düzeyde özelleştirildiyse, müşterinin markasını kullanmak isteyebilirsiniz. .NET Framework 3,5, bir kuruluşa dağıtmak üzere bir uygulama verdiğinizde markanızı, Yayımcı bilgilerini ve güvenlik imzanızı korumanıza olanak sağlar. Daha fazla bilgi için bkz. [diğer kullanıcıların dağıtması Için ClickOnce uygulamaları oluşturma](../deployment/creating-clickonce-applications-for-others-to-deploy.md).
 
 > [!NOTE]
-> Bu kılavuzda, komut satırı aracı *Mage.exe* veya grafik araç *MageUI.exe*kullanarak dağıtımları el ile oluşturabilirsiniz. El ile dağıtımlar hakkında daha fazla bilgi için bkz. [Izlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).
+> Bu kılavuzda, komut satırı aracı *Mage.exe* veya grafik araç *MageUI.exe* kullanarak dağıtımları el ile oluşturabilirsiniz. El ile dağıtımlar hakkında daha fazla bilgi için bkz. [Izlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).
 
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolda bulunan adımları gerçekleştirmek için aşağıdakiler gerekir:
 
-- Dağıtmaya hazırsanız Windows Forms bir uygulama. Bu uygulama *WindowsFormsApp1*olarak anılacaktır.
+- Dağıtmaya hazırsanız Windows Forms bir uygulama. Bu uygulama *WindowsFormsApp1* olarak anılacaktır.
 
 - Visual Studio veya Windows SDK.
 
@@ -49,7 +50,7 @@ Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama o
 
 1. Bir Visual Studio komut istemi veya bir [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] komut istemi açın ve dosyalarınızı depoladığınız dizine geçin [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
 
-2. Dağıtımınızın geçerli sürümünden sonra adlı bir dizin oluşturun. Uygulamayı ilk kez dağıtıyorsanız, büyük olasılıkla **1.0.0.0**' ı seçmeniz gerekir.
+2. Dağıtımınızın geçerli sürümünden sonra adlı bir dizin oluşturun. Uygulamayı ilk kez dağıtıyorsanız, büyük olasılıkla **1.0.0.0** ' ı seçmeniz gerekir.
 
    > [!NOTE]
    > Dağıtımınızın sürümü uygulama dosyalarınızın sürümünden farklı olabilir.
@@ -68,7 +69,7 @@ Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama o
    mage -Sign WindowsFormsApp1.exe.manifest -CertFile mycert.pfx
    ```
 
-6. Dağıtım bildirimini bir *Mage.exe*çağrısıyla oluşturun. *Mage.exe* , varsayılan olarak, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtımınızı yüklü bir uygulama olarak işaretleyecek ve bu sayede hem çevrimiçi hem de çevrimdışı olarak çalıştırılabilir. Uygulamayı yalnızca kullanıcı çevrimiçi olduğunda kullanılabilir hale getirmek için, `-i` bir değeri olan bağımsız değişkenini kullanın `f` . Bu uygulama birden çok dağıtım özelliğinden yararlandığından, `-providerUrl` *Mage.exe*bağımsız değişkenini dışlayın. (Sürüm 3,5 ' den önceki .NET Framework sürümlerinde, `-providerUrl` çevrimdışı bir uygulama için hariç tutularak hata oluşur.)
+6. Dağıtım bildirimini bir *Mage.exe* çağrısıyla oluşturun. *Mage.exe* , varsayılan olarak, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtımınızı yüklü bir uygulama olarak işaretleyecek ve bu sayede hem çevrimiçi hem de çevrimdışı olarak çalıştırılabilir. Uygulamayı yalnızca kullanıcı çevrimiçi olduğunda kullanılabilir hale getirmek için, `-i` bir değeri olan bağımsız değişkenini kullanın `f` . Bu uygulama birden çok dağıtım özelliğinden yararlandığından, `-providerUrl` *Mage.exe* bağımsız değişkenini dışlayın. (Sürüm 3,5 ' den önceki .NET Framework sürümlerinde, `-providerUrl` çevrimdışı bir uygulama için hariç tutularak hata oluşur.)
 
    ```cmd
    mage -New Deployment -ToFile WindowsFormsApp1.application -Name "Windows Forms App 1" -Version 1.0.0.0 -AppManifest 1.0.0.0\WindowsFormsApp1.manifest
@@ -78,7 +79,7 @@ Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama o
 
 8. Uygulamayı ağda dağıtacağı tüm dosyaları müşteriye sağlayın.
 
-9. Bu noktada, müşteri dağıtım bildirimini kendi kendine oluşturulmuş sertifikasıyla imzalayamalıdır. Örneğin, müşteri Adventure Works adlı bir şirkette çalışıyorsa, *MakeCert.exe* aracını kullanarak kendinden imzalı bir sertifika oluşturabilir. Sonra, *MakeCert.exe* tarafından oluşturulan dosyaları *Mage.exe*geçirilebilecek bir PFX dosyasına birleştirmek için *Pvk2pfx.exe* aracını kullanın.
+9. Bu noktada, müşteri dağıtım bildirimini kendi kendine oluşturulmuş sertifikasıyla imzalayamalıdır. Örneğin, müşteri Adventure Works adlı bir şirkette çalışıyorsa, *MakeCert.exe* aracını kullanarak kendinden imzalı bir sertifika oluşturabilir. Sonra, *MakeCert.exe* tarafından oluşturulan dosyaları *Mage.exe* geçirilebilecek bir PFX dosyasına birleştirmek için *Pvk2pfx.exe* aracını kullanın.
 
     ```cmd
     makecert -r -pe -n "CN=Adventure Works" -sv MyCert.pvk MyCert.cer
@@ -99,24 +100,24 @@ Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama o
 
 2. **Bin** adlı bir alt dizin oluşturun ve yürütülebilir dosyalar, derlemeler, kaynaklar ve veri dosyaları dahil olmak üzere buradaki tüm uygulama dosyalarınızı kopyalayın.
 
-3. Dağıtımınızın geçerli sürümünden sonra adlı bir alt dizin oluşturun. Uygulamayı ilk kez dağıtıyorsanız, büyük olasılıkla **1.0.0.0**' ı seçmeniz gerekir.
+3. Dağıtımınızın geçerli sürümünden sonra adlı bir alt dizin oluşturun. Uygulamayı ilk kez dağıtıyorsanız, büyük olasılıkla **1.0.0.0** ' ı seçmeniz gerekir.
 
    > [!NOTE]
    > Dağıtımınızın sürümü uygulama dosyalarınızın sürümünden farklı olabilir.
 
 4. \\ **Bin** dizinini adım 2 ' de oluşturduğunuz dizine taşıyın.
 
-5. Grafik aracı *MageUI.exe*başlatın.
+5. Grafik aracı *MageUI.exe* başlatın.
 
    ```cmd
    MageUI.exe
    ```
 
-6. Menüden **Dosya**, **Yeni**, **uygulama bildirimi** ' ni seçerek yeni bir uygulama bildirimi oluşturun.
+6. Menüden **Dosya** , **Yeni** , **uygulama bildirimi** ' ni seçerek yeni bir uygulama bildirimi oluşturun.
 
-7. Varsayılan **ad** sekmesinde, bu dağıtımın adını ve sürüm numarasını girin. Ayrıca, **Yayımcı**için, dağıtıldığında başlangıç menüsündeki uygulamanın kısayol bağlantısı için klasör adı olarak kullanılacak bir değer sağlayın.
+7. Varsayılan **ad** sekmesinde, bu dağıtımın adını ve sürüm numarasını girin. Ayrıca, **Yayımcı** için, dağıtıldığında başlangıç menüsündeki uygulamanın kısayol bağlantısı için klasör adı olarak kullanılacak bir değer sağlayın.
 
-8. **Uygulama seçenekleri** sekmesini seçin ve **güven bilgileri Için uygulama bildirimini kullan**' a tıklayın. Bu, bu uygulama için üçüncü taraf markalamayı etkinleştirir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
+8. **Uygulama seçenekleri** sekmesini seçin ve **güven bilgileri Için uygulama bildirimini kullan** ' a tıklayın. Bu, bu uygulama için üçüncü taraf markalamayı etkinleştirir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
 
 9. **Dosyalar** sekmesini seçin ve **uygulama dizini** metin kutusunun yanındaki **Git düğmesine tıklayın** .
 
@@ -126,17 +127,17 @@ Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama o
 
 12. **Gerekli izinler** sekmesini seçin ve uygulamanız için gereken güven düzeyini seçin. Varsayılan değer, çoğu uygulama için uygun olacak şekilde **tam güvendir**.
 
-13. **Dosya**' yı seçin, menüden **kaydedin** ve uygulama bildirimini kaydedin. Uygulamayı kaydettiğinizde uygulama bildirimini imzalamanız istenir.
+13. **Dosya** ' yı seçin, menüden **kaydedin** ve uygulama bildirimini kaydedin. Uygulamayı kaydettiğinizde uygulama bildirimini imzalamanız istenir.
 
-14. Dosya sisteminizde dosya olarak depolanan bir sertifikanız varsa, **sertifika dosyası olarak imzala** seçeneğini kullanın ve dosya sistemindeki sertifikayı, üç nokta (**...**) düğmesini kullanarak seçin.
+14. Dosya sisteminizde dosya olarak depolanan bir sertifikanız varsa, **sertifika dosyası olarak imzala** seçeneğini kullanın ve dosya sistemindeki sertifikayı, üç nokta ( **...** ) düğmesini kullanarak seçin.
 
      -veya-
 
-     Sertifikanız, bilgisayarınızdan erişilebilen bir sertifika deposunda tutuluyorsa, **depolanan sertifikayla imzala seçeneğini**belirleyin ve belirtilen listeden sertifikayı seçin.
+     Sertifikanız, bilgisayarınızdan erişilebilen bir sertifika deposunda tutuluyorsa, **depolanan sertifikayla imzala seçeneğini** belirleyin ve belirtilen listeden sertifikayı seçin.
 
-15. Dağıtım bildiriminizi oluşturmak için menüden **Dosya**, **Yeni**, **dağıtım bildirimi** ' ni seçin ve ardından **ad** sekmesine bir ad ve sürüm numarası sağlayın (Bu örnekte**1.0.0.0** ).
+15. Dağıtım bildiriminizi oluşturmak için menüden **Dosya** , **Yeni** , **dağıtım bildirimi** ' ni seçin ve ardından **ad** sekmesine bir ad ve sürüm numarası sağlayın (Bu örnekte **1.0.0.0** ).
 
-16. **Güncelleştirme** sekmesine geçin ve bu uygulamanın ne sıklıkta güncelleştirilmesini istediğinizi belirtin. Uygulamanız [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] güncelleştirmeleri denetlemek için DAĞıTıM API 'sini kullanıyorsa, **Bu uygulamanın güncelleştirmeleri denetlemesi gereken**onay kutusunun işaretini kaldırın.
+16. **Güncelleştirme** sekmesine geçin ve bu uygulamanın ne sıklıkta güncelleştirilmesini istediğinizi belirtin. Uygulamanız [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] güncelleştirmeleri denetlemek için DAĞıTıM API 'sini kullanıyorsa, **Bu uygulamanın güncelleştirmeleri denetlemesi gereken** onay kutusunun işaretini kaldırın.
 
 17. **Uygulama başvurusu** sekmesine geçin. **Bildirim Seç** düğmesine tıklayıp önceki adımlarda oluşturduğunuz uygulama bildirimini seçerek bu sekmedeki tüm değerleri önceden doldurabilirsiniz.
 
@@ -144,14 +145,14 @@ Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama o
 
 19. Tüm uygulama dosyalarını müşteriye sağlayın.
 
-20. Bu noktada, müşteri dağıtım bildirimini kendi kendine oluşturulmuş sertifikasıyla imzalayamalıdır. Örneğin, müşteri Adventure Works adlı bir şirkette çalışıyorsa, *MakeCert.exe* aracını kullanarak kendinden imzalı bir sertifika oluşturabilir. Sonra, *MakeCert.exe* tarafından oluşturulan dosyaları *MageUI.exe*geçirilebilecek bir PFX dosyasına birleştirmek için *Pvk2pfx.exe* aracını kullanın.
+20. Bu noktada, müşteri dağıtım bildirimini kendi kendine oluşturulmuş sertifikasıyla imzalayamalıdır. Örneğin, müşteri Adventure Works adlı bir şirkette çalışıyorsa, *MakeCert.exe* aracını kullanarak kendinden imzalı bir sertifika oluşturabilir. Sonra, *MakeCert.exe* tarafından oluşturulan dosyaları *MageUI.exe* geçirilebilecek bir PFX dosyasına birleştirmek için *Pvk2pfx.exe* aracını kullanın.
 
     ```cmd
     makecert -r -pe -n "CN=Adventure Works" -sv MyCert.pvk MyCert.cer
     pvk2pfx.exe -pvk MyCert.pvk -spc MyCert.cer -pfx MyCert.pfx
     ```
 
-21. Sertifika üretilerek, istemci artık *MageUI.exe*' de dağıtım bildirimini açıp ardından kaydederek dağıtım bildirimini imzalar. İmzalama iletişim kutusu göründüğünde, müşteri, **sertifika dosyası olarak imzala** seçeneğini belirler ve DISKTE kaydedildiği pfx dosyasını seçer.
+21. Sertifika üretilerek, istemci artık *MageUI.exe* ' de dağıtım bildirimini açıp ardından kaydederek dağıtım bildirimini imzalar. İmzalama iletişim kutusu göründüğünde, müşteri, **sertifika dosyası olarak imzala** seçeneğini belirler ve DISKTE kaydedildiği pfx dosyasını seçer.
 
 22. Müşteri, uygulamayı kullanıcılarına dağıtır.
 
