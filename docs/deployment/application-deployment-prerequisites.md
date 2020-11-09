@@ -1,5 +1,7 @@
 ---
 title: Uygulama dağıtımı önkoşulları | Microsoft Docs
+description: Önkoşullar Iletişim kutusu ve önyükleyici paketleri de dahil olmak üzere uygulamalarınızın dağıtım önkoşulları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,20 +21,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8206e199acc3ccb76cf89603d48bed0173129218
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c87b0f6ded2960054cb553dbeb85681aa447668b
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66746056"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383254"
 ---
 # <a name="application-deployment-prerequisites"></a>Uygulama dağıtımının önkoşulları
 
 Uygulamanızın başarıyla yüklenip çalışması için, önce uygulamanızın hedef bilgisayara bağlı olduğu tüm bileşenleri yüklemeniz gerekir. Örneğin, kullanılarak oluşturulan çoğu uygulamanın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .NET Framework bağımlılığı vardır. Bu durumda, uygulama yüklenmeden önce, hedef bilgisayarda ortak dil çalışma zamanının doğru sürümünün mevcut olması gerekir.
 
- **Önkoşullar Iletişim kutusunda** bu önkoşulları seçebilir ve .NET Framework ve diğer yeniden dağıtılabilir ' ı yüklemenizin bir parçası olarak yükleyebilirsiniz. Bu uygulama *önyükleme*olarak bilinir. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]*önyükleyici*olarak da bilinen *Setup.exe*adlı bir Windows yürütülebilir programı oluşturur. Önyükleyici, uygulamanız çalışmadan önce bu önkoşulları yüklemekten sorumludur. Bu önkoşulları seçme hakkında daha fazla bilgi için bkz. [Önkoşullar iletişim kutusu](../ide/reference/prerequisites-dialog-box.md).
+ **Önkoşullar Iletişim kutusunda** bu önkoşulları seçebilir ve .NET Framework ve diğer yeniden dağıtılabilir ' ı yüklemenizin bir parçası olarak yükleyebilirsiniz. Bu uygulama *önyükleme* olarak bilinir. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]*önyükleyici* olarak da bilinen *Setup.exe* adlı bir Windows yürütülebilir programı oluşturur. Önyükleyici, uygulamanız çalışmadan önce bu önkoşulları yüklemekten sorumludur. Bu önkoşulları seçme hakkında daha fazla bilgi için bkz. [Önkoşullar iletişim kutusu](../ide/reference/prerequisites-dialog-box.md).
 
- Her önkoşul bir önyükleyici paketidir. Önyükleyici paketi, önkoşulların nasıl yükleneceğini tanımlayan bildirim dosyalarını içeren bir dizin ve dosya grubudur. Uygulama önkoşulları **Önkoşul Iletişim kutusunda**listelenmiyorsa, özel önyükleyici paketleri oluşturabilir ve bunları Visual Studio 'ya ekleyebilirsiniz. Ardından **Önkoşullar Iletişim kutusunda**önkoşulları seçebilirsiniz. Daha fazla bilgi için bkz. [önyükleyici paketleri oluşturma](../deployment/creating-bootstrapper-packages.md).
+ Her önkoşul bir önyükleyici paketidir. Önyükleyici paketi, önkoşulların nasıl yükleneceğini tanımlayan bildirim dosyalarını içeren bir dizin ve dosya grubudur. Uygulama önkoşulları **Önkoşul Iletişim kutusunda** listelenmiyorsa, özel önyükleyici paketleri oluşturabilir ve bunları Visual Studio 'ya ekleyebilirsiniz. Ardından **Önkoşullar Iletişim kutusunda** önkoşulları seçebilirsiniz. Daha fazla bilgi için bkz. [önyükleyici paketleri oluşturma](../deployment/creating-bootstrapper-packages.md).
 
  Varsayılan olarak, önyükleme ClickOnce dağıtımı için etkinleştirilmiştir. ClickOnce dağıtımı için oluşturulan önyükleyici imzalanır. Bir bileşen için önyükleyiciyi devre dışı bırakabilirsiniz, ancak yalnızca bileşenin doğru sürümünün tüm hedef bilgisayarlarda zaten yüklü olduğundan eminseniz.
 
@@ -48,7 +50,7 @@ Uygulamanızın başarıyla yüklenip çalışması için, önce uygulamanızın
   [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] eksik önkoşulları algılayabilir ve bir önyükleyici kullanarak önkoşulları yükleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce uygulaması ile önkoşulları yüklemek](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md).
 
 > [!NOTE]
-> VeMageUI.exegibi araçlar tarafından oluşturulan bildirimlerde değerleri değiştirmek için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , uygulama bildirimini * *bir metin düzenleyicisinde düzenlemeniz ve ardından hem uygulama hem de dağıtım bildirimlerini yeniden imzalamanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: uygulama ve dağıtım bildirimlerini yeniden imzalama](../deployment/how-to-re-sign-application-and-deployment-manifests.md).
+> VeMageUI.exegibi araçlar tarafından oluşturulan bildirimlerde değerleri değiştirmek için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , uygulama bildirimini ** bir metin düzenleyicisinde düzenlemeniz ve ardından hem uygulama hem de dağıtım bildirimlerini yeniden imzalamanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: uygulama ve dağıtım bildirimlerini yeniden imzalama](../deployment/how-to-re-sign-application-and-deployment-manifests.md).
 
  Uygulamanızı dağıtmak için Visual Studio ve ClickOnce kullanıyorsanız, varsayılan olarak seçilen önyükleyici paketleri çözümdeki .NET Framework sürümüne göre değişir. Ancak, hedef .NET Framework sürümünü değiştirirseniz, **Önkoşullar Iletişim kutusundaki** seçenekleri el ile güncelleştirmeniz gerekir.
 
@@ -77,7 +79,7 @@ Uygulamanızın başarıyla yüklenip çalışması için, önce uygulamanızın
 | **-URL,-ComponentsUrl** | Bu kurulum için depolanan URL ve bileşen URL 'sini gösterir. |
 | **-URL =**`location` | *Setup.exe* uygulama için BAKACAĞı URL 'yi ayarlar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . |
 | **-ComponentsUrl =**`location` | *Setup.exe* , .NET Framework gibi bağımlılıklara BAKACAĞı URL 'yi ayarlar. |
-| **-HomeSite =** `true` **&#124;**`false` | Ne zaman `true` , bağımlılıkları satıcının sitesindeki tercih edilen konumdan indirir. Bu ayar **-ComponentsUrl** ayarını geçersiz kılar. Ne zaman `false` , bağımlılıklarını **-ComponentsUrl**tarafından belirtilen URL 'den indirir. |
+| **-HomeSite =** `true` **&#124;**`false` | Ne zaman `true` , bağımlılıkları satıcının sitesindeki tercih edilen konumdan indirir. Bu ayar **-ComponentsUrl** ayarını geçersiz kılar. Ne zaman `false` , bağımlılıklarını **-ComponentsUrl** tarafından belirtilen URL 'den indirir. |
 
 ## <a name="operating-system-support"></a>İşletim sistemi desteği
  Windows Server 2008 Server Core veya Windows Server 2008 R2 Server Core üzerinde, sınırlı işlevlere sahip düşük bakım sunucusu ortamı sağladıkları için Visual Studio önyükleyici desteklenmez. Örneğin, Sunucu Çekirdeği yükleme seçeneği yalnızca .NET Framework 3,5 sunucu çekirdeği profilini destekler ve bu, tam .NET Framework bağlı olan Visual Studio özelliklerini çalıştıraamaz.

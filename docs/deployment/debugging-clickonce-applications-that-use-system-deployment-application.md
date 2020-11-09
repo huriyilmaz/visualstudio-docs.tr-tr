@@ -1,5 +1,7 @@
 ---
 title: System. Deployment. Application kullanan ClickOnce uygulamalarında hata ayıklama
+description: System. Deployment. Application tarafından sunulan dağıtım nesne modeline erişerek gelişmiş ClickOnce dağıtım özelliklerini kullanmayı ve özelleştirmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 203f1edc2e29bbbc34fb39e6aa01c1b56bf20e91
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5e79b6a64eff9eab92a05624f6ca71ae7a242ad2
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382659"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382994"
 ---
 # <a name="debug-clickonce-applications-that-use-systemdeploymentapplication"></a>System. Deployment. Application kullanan ClickOnce uygulamalarında hata ayıklama
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]' De, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtım, bir uygulamanın nasıl güncelleştirileceğini yapılandırmanıza olanak tanır. Bununla birlikte, gelişmiş dağıtım özelliklerini kullanmanız ve özelleştirmeniz gerekiyorsa [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , tarafından sağlanmış olan dağıtım nesne modeline erişmeniz gerekir <xref:System.Deployment.Application> . API 'leri, gibi <xref:System.Deployment.Application> Gelişmiş görevler için kullanabilirsiniz:
@@ -43,11 +45,11 @@ ms.locfileid: "85382659"
 
 2. Uygulamanın sürüm 1 ' i dağıtın.
 
-3. Yeni bir boş çözüm oluşturun. **Dosya** menüsünde **Yeni**' ye ve ardından **Proje**' ye tıklayın. **Yeni proje** iletişim kutusunda, **diğer proje türleri** düğümünü açın ve ardından **Visual Studio çözümleri** klasörünü seçin. **Şablonlar** bölmesinde **boş çözüm**' ü seçin.
+3. Yeni bir boş çözüm oluşturun. **Dosya** menüsünde **Yeni** ' ye ve ardından **Proje** ' ye tıklayın. **Yeni proje** iletişim kutusunda, **diğer proje türleri** düğümünü açın ve ardından **Visual Studio çözümleri** klasörünü seçin. **Şablonlar** bölmesinde **boş çözüm** ' ü seçin.
 
-4. Arşivlenmiş kaynak konumunu bu yeni çözümün özelliklerine ekleyin. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın ve ardından **Özellikler**' e tıklayın. **Özellik sayfaları** iletişim kutusunda, **Hata Ayıkla kaynak dosyaları**' nı seçin ve ardından arşivlenen kaynak kodun dizinini ekleyin. Aksi takdirde, kaynak dosya yolları. pdb dosyasına kaydedildiğinden hata ayıklayıcı güncel olmayan kaynak dosyalarını bulur. Hata ayıklayıcı güncel olmayan kaynak dosyaları kullanıyorsa, kaynağın eşleşmez olduğunu söyleyen bir ileti görürsünüz.
+4. Arşivlenmiş kaynak konumunu bu yeni çözümün özelliklerine ekleyin. **Çözüm Gezgini** , çözüm düğümüne sağ tıklayın ve ardından **Özellikler** ' e tıklayın. **Özellik sayfaları** iletişim kutusunda, **Hata Ayıkla kaynak dosyaları** ' nı seçin ve ardından arşivlenen kaynak kodun dizinini ekleyin. Aksi takdirde, kaynak dosya yolları. pdb dosyasına kaydedildiğinden hata ayıklayıcı güncel olmayan kaynak dosyalarını bulur. Hata ayıklayıcı güncel olmayan kaynak dosyaları kullanıyorsa, kaynağın eşleşmez olduğunu söyleyen bir ileti görürsünüz.
 
-5. Hata ayıklayıcının *. pdb* dosyalarını bulabileceği şekilde emin olun. Bunları uygulamanızla dağıttıysanız, hata ayıklayıcı onları otomatik olarak bulur. Her zaman önce söz konusu derlemenin yanına bakar. Aksi takdirde, arşiv yolunu **sembol dosyası (. pdb) konumlarına** eklemeniz gerekir (Bu seçeneğe erişmek Için, **Araçlar** menüsünden **Seçenekler**' e tıklayın, ardından **hata ayıklama** düğümünü açın ve **semboller**' e tıklayın).
+5. Hata ayıklayıcının *. pdb* dosyalarını bulabileceği şekilde emin olun. Bunları uygulamanızla dağıttıysanız, hata ayıklayıcı onları otomatik olarak bulur. Her zaman önce söz konusu derlemenin yanına bakar. Aksi takdirde, arşiv yolunu **sembol dosyası (. pdb) konumlarına** eklemeniz gerekir (Bu seçeneğe erişmek Için, **Araçlar** menüsünden **Seçenekler** ' e tıklayın, ardından **hata ayıklama** düğümünü açın ve **semboller** ' e tıklayın).
 
 6. `CheckForUpdate`Ve `Download` / `Update` Yöntem çağrıları arasında neler olduğunu hata ayıklayın.
 

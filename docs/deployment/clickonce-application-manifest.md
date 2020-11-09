@@ -1,5 +1,7 @@
 ---
 title: ClickOnce uygulama bildirimi | Microsoft Docs
+description: ClickOnce kullanılarak dağıtılan bir uygulamayı açıklayan bir XML dosyası olan ClickOnce uygulama bildirimi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be9bfe19b92740d6be6c91802d193bf2fc401847
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13b84a256bfc9d13f8c17b92385df2106dc0a47d
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62928968"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383124"
 ---
 # <a name="clickonce-application-manifest"></a>ClickOnce uygulama bildirimi
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Uygulama bildirimi, kullanılarak dağıtılan bir uygulamayı açıklayan BIR XML dosyasıdır [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
@@ -31,9 +33,9 @@ ms.locfileid: "62928968"
 | - | - | - |
 | [\<assembly> Dosyalarında](../deployment/assembly-element-clickonce-application.md) | Gereklidir. Üst düzey öğe. | `manifestVersion` |
 | [\<assemblyIdentity> Dosyalarında](../deployment/assemblyidentity-element-clickonce-application.md) | Gereklidir. Uygulamanın birincil derlemesini tanımlar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . | `name`<br /><br /> `version`<br /><br /> `publicKeyToken`<br /><br /> `processorArchitecture`<br /><br /> `language` |
-| [\<trustInfo> Dosyalarında](../deployment/trustinfo-element-clickonce-application.md) | Uygulama güvenlik gereksinimlerini tanımlar. | Hiçbiri |
+| [\<trustInfo> Dosyalarında](../deployment/trustinfo-element-clickonce-application.md) | Uygulama güvenlik gereksinimlerini tanımlar. | Yok |
 | [\<entryPoint> Dosyalarında](../deployment/entrypoint-element-clickonce-application.md) | Gereklidir. Uygulama kodu giriş noktasını tanımlar. | `name` |
-| [\<dependency> Dosyalarında](../deployment/dependency-element-clickonce-application.md) | Gereklidir. Uygulamanın çalışması için gereken her bağımlılığı tanımlar. İsteğe bağlı olarak, önceden yüklenmesi gereken derlemeleri tanımlar. | Hiçbiri |
+| [\<dependency> Dosyalarında](../deployment/dependency-element-clickonce-application.md) | Gereklidir. Uygulamanın çalışması için gereken her bağımlılığı tanımlar. İsteğe bağlı olarak, önceden yüklenmesi gereken derlemeleri tanımlar. | Yok |
 | [\<file> Dosyalarında](../deployment/file-element-clickonce-application.md) | İsteğe bağlı. Uygulama tarafından kullanılan derleme olmayan her dosyayı tanımlar. , Dosyayla ilişkili bileşen nesne modeli (COM) yalıtım verilerini içerebilir. | `name`<br /><br /> `size`<br /><br /> `group`<br /><br /> `optional`<br /><br /> `writeableType` |
 | [\<fileAssociation> Dosyalarında](../deployment/fileassociation-element-clickonce-application.md) | İsteğe bağlı. Uygulamayla ilişkilendirilecek dosya uzantısını tanımlar. | `extension`<br /><br /> `description`<br /><br /> `progid`<br /><br /> `defaultIcon` |
 
@@ -46,7 +48,7 @@ ms.locfileid: "62928968"
  Uygulama bildirimi, dağıtımdan önce her zaman imzalanmalıdır. Uygulama bildirimini el ile değiştirirseniz, uygulama bildirimini yeniden imzalamak, dağıtım bildirimini güncelleştirmek ve ardından dağıtım bildirimini yeniden imzalamak için *mage.exe* kullanmanız gerekir. Daha fazla bilgi için bkz. [Izlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).
 
 ## <a name="file-name-syntax"></a>Dosya adı sözdizimi
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Uygulama bildirim dosyasının adı, öğesinde tanımlandığı şekilde uygulamanın tam adı ve uzantısı olmalıdır ve `assemblyIdentity` ardından *. manifest*uzantısını izler. Örneğin, *Example.exe* uygulamasına başvuran bir uygulama bildirimi aşağıdaki dosya adı sözdizimini kullanır.
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Uygulama bildirim dosyasının adı, öğesinde tanımlandığı şekilde uygulamanın tam adı ve uzantısı olmalıdır ve `assemblyIdentity` ardından *. manifest* uzantısını izler. Örneğin, *Example.exe* uygulamasına başvuran bir uygulama bildirimi aşağıdaki dosya adı sözdizimini kullanır.
 
  `example.exe.manifest`
 

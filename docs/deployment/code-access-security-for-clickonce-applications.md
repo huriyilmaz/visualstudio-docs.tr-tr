@@ -1,5 +1,7 @@
 ---
 title: ClickOnce uygulamaları için kod erişimi güvenliği | Microsoft Docs
+description: ClickOnce uygulamaları için kod erişimi güvenliği ve kod erişimi güvenlik izinlerinin nasıl yapılandırılacağı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fd2d9b6792cae002967c9000474a825bd3a0651
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 256a41138a3918dd61d8fd496465bb0230fb9362
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649271"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382578"
 ---
 # <a name="code-access-security-for-clickonce-applications"></a>ClickOnce uygulamaları için kod erişimi güvenliği
 ClickOnce uygulamaları .NET Framework tabanlıdır ve kod erişimi güvenlik kısıtlamalarına tabidir. Bu nedenle, kod erişimi güvenliğinin etkilerini anlamanız ve ClickOnce uygulamalarınızı buna göre yazmanız önemlidir.
@@ -48,7 +50,7 @@ ClickOnce uygulamaları .NET Framework tabanlıdır ve kod erişimi güvenlik k�
   Bir ClickOnce uygulaması için izinleri kısıtlamak amacıyla, uygulamanız için kod erişimi güvenlik izinlerini, uygulamanızın gerektirdiği izinlere en uygun bölgeyi isteyecek şekilde değiştirebilirsiniz. Çoğu durumda, uygulamanın dağıtıldığı bölgeyi seçebilirsiniz. Örneğin, uygulamanız bir kurumsal uygulama ise, **Yerel Intranet** bölgesini kullanabilirsiniz. Uygulamanız bir Internet uygulaması ise, **İnternet** alanını kullanabilirsiniz.
 
 ## <a name="configure-security-permissions"></a>Güvenlik izinlerini yapılandırma
- Her zaman ClickOnce uygulamanızı, kod erişimi güvenlik izinlerini sınırlamak üzere uygun bölgeyi isteyecek şekilde yapılandırmanız gerekir. **Proje Tasarımcısı**'nın **güvenlik** sayfasında güvenlik izinlerini yapılandırabilirsiniz.
+ Her zaman ClickOnce uygulamanızı, kod erişimi güvenlik izinlerini sınırlamak üzere uygun bölgeyi isteyecek şekilde yapılandırmanız gerekir. **Proje Tasarımcısı** 'nın **güvenlik** sayfasında güvenlik izinlerini yapılandırabilirsiniz.
 
  **Proje Tasarımcısı** 'ndaki **güvenlik** sayfasında **ClickOnce güvenlik ayarlarını etkinleştir** onay kutusu bulunur. Bu onay kutusu seçildiğinde, uygulamanız için dağıtım bildirimine güvenlik izin istekleri eklenir. Yükleme zamanında, istenen izinler uygulamanın dağıtıldığı bölge için varsayılan izinleri aşarsa kullanıcıdan izin vermesi istenir. Daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce güvenlik ayarlarını etkinleştirme](../deployment/how-to-enable-clickonce-security-settings.md).
 
@@ -61,7 +63,7 @@ ClickOnce uygulamaları .NET Framework tabanlıdır ve kod erişimi güvenlik k�
 ## <a name="debug-an-application-that-has-restricted-permissions"></a>Kısıtlanmış izinlere sahip bir uygulamada hata ayıklama
  Bir geliştirici olarak, büyük ihtimalle geliştirme bilgisayarınızı tam güven izinleriyle çalıştıracaksınız. Bu nedenle, kullanıcıların kısıtlı izinlerle çalıştıklarında görebileceği uygulamanın hatalarını ayıkladığınızda aynı güvenlik özel durumlarını görmezsiniz.
 
- Bu özel durumları yakalamak için, uygulamayı son kullanıcıyla aynı izinlerle ayıklamanız gerekir. Kısıtlanmış izinlerle hata ayıklama, **Proje Tasarımcısı**'nın **güvenlik** sayfasında etkinleştirilebilir.
+ Bu özel durumları yakalamak için, uygulamayı son kullanıcıyla aynı izinlerle ayıklamanız gerekir. Kısıtlanmış izinlerle hata ayıklama, **Proje Tasarımcısı** 'nın **güvenlik** sayfasında etkinleştirilebilir.
 
  Kısıtlanmış izinlerle bir uygulamada hata ayıklarken, **güvenlik** sayfasında etkinleştirilmemiş tüm kod güvenliği talepleri için özel durumlar tetiklenir. Özel durumu engellemek için kodunuzun nasıl değiştirileceği hakkında öneriler sağlayan bir özel durum Yardımcısı görüntülenir.
 

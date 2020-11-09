@@ -1,5 +1,6 @@
 ---
 title: Denetimleri verilere bağlama
+description: Denetimleri Visual Studio 'daki verilere bağlayın. Veri kaynakları penceresinden öğeleri sürükleyerek veri bağlantılı denetimler oluşturun.
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3d812316de46caf7480146003f7ba1950ae3b9e2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f92382721558d76cf9e84fa587b322d56af72247
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283040"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382175"
 ---
 # <a name="bind-controls-to-data-in-visual-studio"></a>Visual Studio'da verilere denetimler bağlama
 
@@ -32,12 +33,12 @@ Veri bağlama bağlamında, veri kaynağı, Kullanıcı arabiriminize bağlanabi
 
 | Veri kaynağı | **Windows Form Tasarımcısı için** sürükle ve bırak desteği | **WPF Tasarımcısında** sürükle ve bırak desteği | **Silverlight tasarımcısında** sürükle ve bırak desteği |
 | - | - | - | - |
-| Veri kümesi | Yes | Yes | Hayır |
-| Varlık Veri Modeli | Evet<sup>1</sup> | Yes | Yes |
+| Veri kümesi | Evet | Evet | Hayır |
+| Varlık Veri Modeli | Evet<sup>1</sup> | Evet | Evet |
 | LINQ to SQL sınıfları | <sup>2</sup> yok | <sup>2</sup> yok | <sup>2</sup> yok |
-| Hizmetler ( [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] WCF Hizmetleri ve Web Hizmetleri dahil) | Yes | Yes | Yes |
-| Nesne | Yes | Yes | Yes |
-| SharePoint | Yes | Yes | Yes |
+| Hizmetler ( [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] WCF Hizmetleri ve Web Hizmetleri dahil) | Evet | Evet | Evet |
+| Nesne | Evet | Evet | Evet |
+| SharePoint | Evet | Evet | Evet |
 
 1. **Varlık veri modeli** Sihirbazı 'nı kullanarak modeli oluşturun ve ardından bu nesneleri tasarımcıya sürükleyin.
 
@@ -45,7 +46,7 @@ Veri bağlama bağlamında, veri kaynağı, Kullanıcı arabiriminize bağlanabi
 
 ## <a name="data-sources-window"></a>Veri Kaynakları penceresi
 
-Veri kaynakları, projenizde **veri kaynakları** penceresinde öğeler olarak kullanılabilir. Bu pencere, form tasarım yüzeyi projenizdeki etkin pencere olduğunda görünür veya **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçerek (proje açıkken) açabilirsiniz. Bu penceredeki öğeleri, temel alınan verilere bağlanan denetimler oluşturmak için sürükleyebilir ve sağ tıklayarak da veri kaynaklarını yapılandırabilirsiniz.
+Veri kaynakları, projenizde **veri kaynakları** penceresinde öğeler olarak kullanılabilir. Bu pencere, form tasarım yüzeyi projenizdeki etkin pencere olduğunda görünür veya **View**  >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek (proje açıkken) açabilirsiniz. Bu penceredeki öğeleri, temel alınan verilere bağlanan denetimler oluşturmak için sürükleyebilir ve sağ tıklayarak da veri kaynaklarını yapılandırabilirsiniz.
 
 ![Veri Kaynakları penceresi](../data-tools/media/raddata-data-sources-window.png)
 
@@ -57,7 +58,7 @@ Aşağıdaki tabloda, denetimleri verilere bağlamak için gerçekleştirdiğini
 
 |Görev|Daha fazla bilgi|
 |----------| - |
-|**Veri kaynakları** penceresini açın.|Düzenleyicide bir tasarım yüzeyi açın ve **View**  >  **veri kaynaklarını**görüntüle ' yi seçin.|
+|**Veri kaynakları** penceresini açın.|Düzenleyicide bir tasarım yüzeyi açın ve **View**  >  **veri kaynaklarını** görüntüle ' yi seçin.|
 |Projenize bir veri kaynağı ekleyin.|[Yeni veri kaynağı ekleme](../data-tools/add-new-data-sources.md)|
 |**Veri kaynakları** penceresinden tasarımcıya bir öğe sürüklediğinizde oluşturulan denetimi ayarlayın.|[Veri Kaynakları penceresinden sürüklendiğinde denetimin oluşturulmasını ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)|
 |**Veri kaynakları** penceresindeki öğelerle ilişkili denetimlerin listesini değiştirin.|[Veri kaynakları penceresine özel denetimler ekleme](../data-tools/add-custom-controls-to-the-data-sources-window.md)|

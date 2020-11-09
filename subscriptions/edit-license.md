@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 97ac8e4d-7a03-42f8-98cb-15bcaa90ef65
-ms.date: 09/21/2020
+ms.date: 11/09/2020
 ms.topic: how-to
 description: Yöneticilerin abonelik atamalarını nasıl düzenleyebileceğinizi öğrenin.
-ms.openlocfilehash: d10e9ee779c6fc37c886bb1b5e00e15913bab7e2
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 785bad481e4329647582d1f441988b1cd83a055a
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904169"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382500"
 ---
 # <a name="edit-visual-studio-subscription-assignments"></a>Visual Studio abonelik atamalarını Düzenle
 Abonelik Yöneticisi olarak, kuruluşunuzdaki kişilere atanan aboneliklerde değişiklikler yapabilirsiniz.  Bu makale, yapabileceğiniz değişiklik türlerini açıklar ve gerekli adımları sağlar.
@@ -39,8 +39,6 @@ Toplu düzenleme kullanarak birden çok aboneyi nasıl düzenleyeceğinizi öğr
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vkAF]
 
-   > [!IMPORTANT]
-   > Abonelik düzeyleri (örn. Enterprise, Professional, vs.) ve abonelik GUID 'Leri toplu düzenleme kullanılarak değiştirilemez.  Kullanıcılarınıza belirli abonelik GUID 'Leri atamanız gerekiyorsa, abonelik KIMLIĞINI seçerek kullanıcı ekleme işlemini kullanın. Toplu düzenleme şablonunda bu öğelerle değiştirilen bir karşıya yüklemeyi denerseniz karşıya yükleme başarısız olur.
 
 1. Birden çok aboneyi aynı anda düzenlemek için, aboneler sekmesine gidin. Üstteki şeritte **toplu düzenleme** ' ye tıklayın.
 

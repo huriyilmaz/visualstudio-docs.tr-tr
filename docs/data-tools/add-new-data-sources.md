@@ -1,5 +1,6 @@
 ---
 title: Yeni veri kaynağı ekleme
+description: Visual Studio 'da yeni veri kaynakları ekleyin. Veri kaynağı, bir veri deposuna bağlanan ve verileri bir .NET uygulaması için kullanılabilir hale kılan bir .NET nesnesidir.
 ms.date: 11/21/2018
 ms.topic: how-to
 f1_keywords:
@@ -13,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 2e8ad5bf65ad25d197785c3e720ec01c7bdc6f9d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 51d7d2bb7a7037d3fbcf307c620e9aca702ac370
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283053"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382123"
 ---
 # <a name="add-new-data-sources"></a>Yeni veri kaynağı ekleme
 
@@ -51,7 +52,7 @@ Veri kaynaklarını bir Windows Forms veya Windows Presentation Foundation uygul
 Bir veri kaynağı oluşturduktan sonra **veri kaynakları** araç penceresinde görünür.
 
 > [!TIP]
-> **Veri kaynakları** penceresini açmak için projenizin açık olduğundan emin olun ve ardından **SHIFT** + **alt** + **D** ' ye basın veya **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçin.
+> **Veri kaynakları** penceresini açmak için projenizin açık olduğundan emin olun ve ardından **SHIFT** + **alt** + **D** ' ye basın veya **View**  >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçin.
 
 Veri **kaynakları** penceresinden bir veri kaynağını form tasarım yüzeyine veya denetimine sürükleyebilirsiniz. Bu, veri deposundaki verileri görüntüleyen ortak kodların oluşturulmasına neden olur.
 
@@ -65,13 +66,13 @@ Veritabanı veya veritabanı dosyası için veri kaynağı olarak kullanmak üze
 
 ### <a name="dataset"></a>Veri kümesi
 
-Veri kaynağı olarak bir veri kümesi oluşturmak için, **Proje**yeni veri kaynağı Ekle ' yi seçerek **veri kaynağı Yapılandırma Sihirbazı** 'nı çalıştırın  >  **Add New Data Source**. **Veritabanı** veri kaynağı türünü seçin ve yeni veya mevcut bir veritabanı bağlantısı ya da bir veritabanı dosyası belirtmek için istemleri izleyin.
+Veri kaynağı olarak bir veri kümesi oluşturmak için, **Proje** yeni veri kaynağı Ekle ' yi seçerek **veri kaynağı Yapılandırma Sihirbazı** 'nı çalıştırın  >  **Add New Data Source**. **Veritabanı** veri kaynağı türünü seçin ve yeni veya mevcut bir veritabanı bağlantısı ya da bir veritabanı dosyası belirtmek için istemleri izleyin.
 
 ### <a name="entity-classes"></a>Varlık sınıfları
 
 Veri kaynağı olarak bir Entity Framework modeli oluşturmak için:
 
-1. Varlık sınıflarını oluşturmak için **varlık veri modeli Sihirbazı 'nı** çalıştırın. **Project**  >  **Add New Item**  >  **ADO.net varlık veri modeli**seçin.
+1. Varlık sınıflarını oluşturmak için **varlık veri modeli Sihirbazı 'nı** çalıştırın. **Project**  >  **Add New Item**  >  **ADO.net varlık veri modeli** seçin.
 
    ![Yeni Entity Framework modeli proje öğesi](../data-tools/media/raddata-new-entity-framework-model-project-item.png)
 
@@ -85,7 +86,7 @@ Veri kaynağı olarak bir Entity Framework modeli oluşturmak için:
 
 ## <a name="data-source-for-a-service"></a>Bir hizmet için veri kaynağı
 
-Bir hizmetten veri kaynağı oluşturmak için, **veri kaynağı Yapılandırma Sihirbazı** 'nı çalıştırın ve **hizmet** veri kaynağı türünü seçin. Bu yalnızca **hizmet başvurusu Ekle** iletişim kutusunun bir kısayoludur. bu, **Çözüm Gezgini** projeye sağ tıklayıp **hizmet başvurusu Ekle**' yi seçerek de erişebilirsiniz.
+Bir hizmetten veri kaynağı oluşturmak için, **veri kaynağı Yapılandırma Sihirbazı** 'nı çalıştırın ve **hizmet** veri kaynağı türünü seçin. Bu yalnızca **hizmet başvurusu Ekle** iletişim kutusunun bir kısayoludur. bu, **Çözüm Gezgini** projeye sağ tıklayıp **hizmet başvurusu Ekle** ' yi seçerek de erişebilirsiniz.
 
 Bir hizmetten veri kaynağı oluşturduğunuzda, Visual Studio projenize bir hizmet başvurusu ekler. Visual Studio Ayrıca hizmetin döndürdüğü nesnelere karşılık gelen proxy nesnelerini de oluşturur. Örneğin, bir veri kümesi döndüren bir hizmet projenizde veri kümesi olarak temsil edilir; belirli bir türü döndüren bir hizmet, projenizde döndürülen tür olarak temsil edilir.
 

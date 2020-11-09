@@ -1,5 +1,7 @@
 ---
 title: 64 bit uygulamalar için önkoşulları dağıtma | Microsoft Docs
+description: 64-bit platformlarda uygulamaların ClickOnce dağıtımı için Önkoşullar olarak kullanabileceğiniz yeniden dağıtılabilir hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c70b58577f8aa6e391215658afb7f8fa43c9bb5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c051e57bb6af707e7bd5c096e230966e98498bd2
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62928877"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382916"
 ---
 # <a name="deploy-prerequisites-for-64-bit-applications"></a>64 bit uygulamalar için dağıtım önkoşulları
 ClickOnce dağıtımı, uygulamaların 64-bit platformlarda yüklenmesini destekler. Hedef platformlar, 32 bitlik platformlar için **x86** , amd64 ve EM64T yönerge kümelerini destekleyen makineler için **x64** ve 64 bit Itanium işlemci için **Itanium** .
@@ -35,11 +37,11 @@ ClickOnce dağıtımı, uygulamaların 64-bit platformlarda yüklenmesini destek
 
 | Yeniden dağıtılabilir | x64 desteği | IA64 desteği |
 | - |-------------|--------------|
-| [!INCLUDE[vsto_runtime](../deployment/includes/vsto_runtime_md.md)] | Yes | Hayır |
-| Visual C++ 2010 çalışma zamanı kitaplığı (ıA64) | Hayır | Yes |
-| Visual C++ 2010 çalışma zamanı kitaplıkları (x64) | Yes | Hayır |
-| Microsoft .NET Framework 4 (x86 ve x64) | Yes | |
-| Microsoft .NET Framework 4 Istemci profili (x86 ve x64) | Yes | |
+| [!INCLUDE[vsto_runtime](../deployment/includes/vsto_runtime_md.md)] | Evet | Hayır |
+| Visual C++ 2010 çalışma zamanı kitaplığı (ıA64) | Hayır | Evet |
+| Visual C++ 2010 çalışma zamanı kitaplıkları (x64) | Evet | Hayır |
+| Microsoft .NET Framework 4 (x86 ve x64) | Evet | |
+| Microsoft .NET Framework 4 Istemci profili (x86 ve x64) | Evet | |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Uygulamaları, hizmetleri ve bileşenleri dağıtma](../deployment/deploying-applications-services-and-components.md)

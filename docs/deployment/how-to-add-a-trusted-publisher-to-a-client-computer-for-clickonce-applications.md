@@ -1,5 +1,6 @@
 ---
 title: Güvenilen yayımcıyı istemci kutusuna Ekle (ClickOnce)
+description: ClickOnce uygulamalarınızın kullanıcıya sormadan daha yüksek bir güven düzeyinde çalışması için bir istemci bilgisayara nasıl sertifika ekleneceğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4146efe0790e2bfd4abfa9e30897811aba182916
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: cef5eb1df80c7fffcc4a938504e82cac2aa3ae46
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809813"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382708"
 ---
 # <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>Nasıl yapılır: ClickOnce uygulamaları için bir istemci bilgisayara güvenilir yayımcı ekleme
 Güvenilen uygulama dağıtımı ile, istemci bilgisayarlarını, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamalarınızın kullanıcıya sormadan daha yüksek bir güven düzeyiyle çalışmasını sağlayacak şekilde yapılandırabilirsiniz. Aşağıdaki yordamlarda, bir yayımcının sertifikasını bir istemci bilgisayarındaki Güvenilen Yayımcılar deposuna eklemek için CertMgr.exe komut satırı aracının nasıl kullanılacağı gösterilmektedir.
@@ -39,7 +40,7 @@ Güvenilen uygulama dağıtımı ile, istemci bilgisayarlarını, [!INCLUDE[ndpt
 
 1. Bir CA 'dan dijital sertifika alın.
 
-2. Sertifikayı Base64 X. 509.440 (*. cer*) biçiminde dışarı aktarın. Sertifika biçimleri hakkında daha fazla bilgi için bkz. [bir sertifikayı dışarı aktarma](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
+2. Sertifikayı Base64 X. 509.440 ( *. cer* ) biçiminde dışarı aktarın. Sertifika biçimleri hakkında daha fazla bilgi için bkz. [bir sertifikayı dışarı aktarma](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
 
 3. İstemci bilgisayarlardaki komut isteminden aşağıdaki komutu çalıştırın:
 
@@ -49,7 +50,7 @@ Güvenilen uygulama dağıtımı ile, istemci bilgisayarlarını, [!INCLUDE[ndpt
 
 1. Bir CA 'dan dijital sertifika alın.
 
-2. Sertifikayı Base64 X. 509.440 (*. cer*) biçiminde dışarı aktarın. Sertifika biçimleri hakkında daha fazla bilgi için bkz. [bir sertifikayı dışarı aktarma](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
+2. Sertifikayı Base64 X. 509.440 ( *. cer* ) biçiminde dışarı aktarın. Sertifika biçimleri hakkında daha fazla bilgi için bkz. [bir sertifikayı dışarı aktarma](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
 
 3. İstemci bilgisayarlardaki komut isteminden aşağıdaki komutu çalıştırın:
 

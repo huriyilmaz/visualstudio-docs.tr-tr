@@ -1,5 +1,7 @@
 ---
 title: ClickOnce ile COM bileşenleri dağıtma | Microsoft Docs
+description: .NET uygulamalarını, eski COM bileşenleri içeren ClickOnce 'ta dağıtmak için gereken adımlar hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,24 +20,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7032ec5ae03febf6c54978020379769ac742a136
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4fc6ef0e4d682f0f712eefc4c139895331c31688
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64804441"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382929"
 ---
 # <a name="deploy-com-components-with-clickonce"></a>ClickOnce ile COM bileşenleri dağıtma
 Eski COM bileşenlerinin dağıtımı, geleneksel olarak zor bir görevdir. Bileşenlerin Global olarak kaydedilmesi gerekir ve bu nedenle örtüşen uygulamalar arasında istenmeyen yan etkilere neden olabilir. Bileşenler bir uygulamaya tamamen yalıtılarak veya yan yana uyumlu olduğundan, bu durum genellikle .NET Framework uygulamalarında sorun değildir. Visual Studio, yalıtılmış COM bileşenlerini Windows XP veya daha yüksek işletim sisteminde dağıtmanıza olanak tanır.
 
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .NET uygulamalarınızı dağıtmaya yönelik kolay ve güvenli bir mekanizma sağlar. Ancak, uygulamalarınız eski COM bileşenleri kullanıyorsa, bunları dağıtmak için ek adımlar gerçekleştirmeniz gerekir. Bu konu, yalıtılmış COM bileşenlerinin dağıtımını ve yerel bileşenlerin (örneğin, Visual Basic 6,0 veya Visual C++) nasıl dağıtılacağını açıklar.
 
- Yalıtılmış COM bileşenlerini dağıtma hakkında daha fazla bilgi için bkz. [ClickOnce Ile uygulama dağıtımını basitleştirme ve KAYıTSıZ com](https://web.archive.org/web/20050326005413/msdn.microsoft.com/msdnmag/issues/05/04/RegFreeCOM/default.aspx).
+ Yalıtılmış COM bileşenlerini dağıtma hakkında daha fazla bilgi için bkz. [ClickOnce Ile uygulama dağıtımını basitleştirme ve com Registration-Free](https://web.archive.org/web/20050326005413/msdn.microsoft.com/msdnmag/issues/05/04/RegFreeCOM/default.aspx).
 
 ## <a name="registration-free-com"></a>Kayıt-ücretsiz COM
  Kayıtsız com, yalıtılmış COM bileşenlerini dağıtmaya ve etkinleştirmeyle ilgili yeni bir teknolojidir. Bu, tipik olarak sistem kayıt defterine yüklenmiş olan tüm bileşenin tür kitaplığı ve kayıt bilgilerini, uygulama ile aynı klasörde depolanan bir XML dosyasına, bildirim olarak adlandırılan bir XML dosyasına yerleştirerek işe yarar.
 
- Bir COM bileşenini yalıtmak, geliştiricinin makinesinde kaydedilmesini gerektirir, ancak son kullanıcının bilgisayarında kayıtlı olması gerekmez. Bir COM bileşenini yalıtmak için, tek yapmanız gereken, başvurusunun **yalıtılmış** özelliğini **doğru**olarak ayarladı. Varsayılan olarak, bu özellik, kayıtlı bir COM başvurusu olarak değerlendirilip değerlendirilmeyeceğini belirten **yanlış**olarak ayarlanır. Bu özellik **true**ise, derleme zamanında bu bileşen için bir bildirimin oluşturulmasına neden olur. Ayrıca, ilgili dosyaların yükleme sırasında uygulama klasörüne kopyalanmasına da neden olur.
+ Bir COM bileşenini yalıtmak, geliştiricinin makinesinde kaydedilmesini gerektirir, ancak son kullanıcının bilgisayarında kayıtlı olması gerekmez. Bir COM bileşenini yalıtmak için, tek yapmanız gereken, başvurusunun **yalıtılmış** özelliğini **doğru** olarak ayarladı. Varsayılan olarak, bu özellik, kayıtlı bir COM başvurusu olarak değerlendirilip değerlendirilmeyeceğini belirten **yanlış** olarak ayarlanır. Bu özellik **true** ise, derleme zamanında bu bileşen için bir bildirimin oluşturulmasına neden olur. Ayrıca, ilgili dosyaların yükleme sırasında uygulama klasörüne kopyalanmasına da neden olur.
 
  Bildirim Oluşturucu yalıtılmış bir COM başvurusuyla karşılaştığında, `CoClass` bileşenin tür kitaplığındaki tüm girişleri numaralandırır, her bir girdiyle ilgili kayıt verileriyle eşleşen ve tür kitaplığı dosyasındaki tüm com sınıfları için bildirim tanımları oluşturuyor.
 
@@ -57,14 +59,14 @@ Eski COM bileşenlerinin dağıtımı, geleneksel olarak zor bir görevdir. Bile
 
 ##### <a name="to-create-a-native-com-component"></a>Yerel bir COM bileşeni oluşturmak için
 
-1. Visual Basic 6,0 kullanarak, **Dosya** menüsünden **Yeni**ve ardından **Proje**' ye tıklayın.
+1. Visual Basic 6,0 kullanarak, **Dosya** menüsünden **Yeni** ve ardından **Proje** ' ye tıklayın.
 
 2. **Yeni proje** iletişim kutusunda **Visual Basic** düğümünü SEÇIN ve bir **ActiveX DLL** projesi seçin. **Ad** kutusuna `VB6Hello` yazın.
 
     > [!NOTE]
     > Kayıt-ücretsiz COM ile yalnızca ActiveX DLL ve ActiveX denetimi proje türleri desteklenir; ActiveX EXE ve ActiveX belge proje türleri desteklenmez.
 
-3. **Çözüm Gezgini**' de, **Class1. vb** ' ye çift tıklayarak metin düzenleyicisini açın.
+3. **Çözüm Gezgini** ' de, **Class1. vb** ' ye çift tıklayarak metin düzenleyicisini açın.
 
 4. Class1. vb ' de, yöntemi için oluşturulan koddan sonra aşağıdaki kodu ekleyin `New` :
 
@@ -74,7 +76,7 @@ Eski COM bileşenlerinin dağıtımı, geleneksel olarak zor bir görevdir. Bile
     End Sub
     ```
 
-5. Bileşeni oluşturun. **Derle** menüsünde **Çözümü Derle**'ye tıklayın.
+5. Bileşeni oluşturun. **Derle** menüsünde **Çözümü Derle** 'ye tıklayın.
 
 > [!NOTE]
 > Kayıt-ücretsiz COM yalnızca dll 'Leri ve COM denetimleri proje türlerini destekler. Kayıt-ücretsiz COM ile EXEs kullanamazsınız.
@@ -83,11 +85,11 @@ Eski COM bileşenlerinin dağıtımı, geleneksel olarak zor bir görevdir. Bile
 
 ##### <a name="to-create-a-windows-based-application-using-a-com-component"></a>COM bileşeni kullanarak Windows tabanlı bir uygulama oluşturmak için
 
-1. Visual Basic kullanarak, **Dosya** menüsünde, **Yeni**ve ardından **Proje**' ye tıklayın.
+1. Visual Basic kullanarak, **Dosya** menüsünde, **Yeni** ve ardından **Proje** ' ye tıklayın.
 
-2. **Yeni proje** iletişim kutusunda **Visual Basic** düğümünü seçin ve **Windows uygulaması**' nı seçin. **Ad** kutusuna `RegFreeComDemo` yazın.
+2. **Yeni proje** iletişim kutusunda **Visual Basic** düğümünü seçin ve **Windows uygulaması** ' nı seçin. **Ad** kutusuna `RegFreeComDemo` yazın.
 
-3. **Çözüm Gezgini**, proje başvurularını görüntülemek Için **tüm dosyaları göster** düğmesini tıklatın.
+3. **Çözüm Gezgini** , proje başvurularını görüntülemek Için **tüm dosyaları göster** düğmesini tıklatın.
 
 4. **Başvurular** düğümüne sağ tıklayın ve bağlam menüsünden **Başvuru Ekle** ' yi seçin.
 
@@ -95,9 +97,9 @@ Eski COM bileşenlerinin dağıtımı, geleneksel olarak zor bir görevdir. Bile
 
     Başvurular listesinde bir **VB6Hello** başvurusu görüntülenir.
 
-6. **Araç kutusu**' nun üzerine gelin, bir **düğme** denetimi seçin ve onu **Form1** formuna sürükleyin.
+6. **Araç kutusu** ' nun üzerine gelin, bir **düğme** denetimi seçin ve onu **Form1** formuna sürükleyin.
 
-7. **Özellikler** penceresinde, düğmenin **Text** özelliğini **Hello**olarak ayarlayın.
+7. **Özellikler** penceresinde, düğmenin **Text** özelliğini **Hello** olarak ayarlayın.
 
 8. İşleyici kodu eklemek için düğmeye çift tıklayın ve kod dosyasında, işleyicinin aşağıdaki gibi okuduğu kodu ekleyin:
 
@@ -108,7 +110,7 @@ Eski COM bileşenlerinin dağıtımı, geleneksel olarak zor bir görevdir. Bile
    End Sub
    ```
 
-9. Uygulamayı çalıştırın. **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat**' a tıklayın.
+9. Uygulamayı çalıştırın. **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat** ' a tıklayın.
 
    Sonra, denetimi yalıtmanız gerekir. Uygulamanızın kullandığı her bir COM bileşeni, projenizde bir COM başvurusu olarak temsil edilir. Bu başvurular **Çözüm Gezgini** penceresindeki **Başvurular** düğümü altında görünür. ( **Proje** menüsünde **Başvuru Ekle** komutunu kullanarak doğrudan veya bir ActiveX denetimini formunuza sürükleyerek başvuru ekleyebildiğinize dikkat edin.)
 
@@ -116,11 +118,11 @@ Eski COM bileşenlerinin dağıtımı, geleneksel olarak zor bir görevdir. Bile
 
 ##### <a name="to-isolate-a-com-component"></a>Bir COM bileşenini yalıtmak için
 
-1. **Çözüm Gezgini**, **Başvurular** düğümünde **VB6Hello** başvurusunu seçin.
+1. **Çözüm Gezgini** , **Başvurular** düğümünde **VB6Hello** başvurusunu seçin.
 
-2. **Özellikler** penceresinde, **yalıtılmış** özelliğin değerini **false** değerinden **true**değerine değiştirin.
+2. **Özellikler** penceresinde, **yalıtılmış** özelliğin değerini **false** değerinden **true** değerine değiştirin.
 
-3. **Derle** menüsünde **Çözümü Derle**'ye tıklayın.
+3. **Derle** menüsünde **Çözümü Derle** 'ye tıklayın.
 
    Şimdi F5 tuşuna bastığınızda uygulama beklendiği gibi çalışır, ancak artık kayıtsız COM altında çalışmaktadır. Bunu kanıtlamak için VB6Hello.dll bileşenini kaldırmayı ve Visual Studio IDE dışında RegFreeComDemo1.exe çalıştırmayı deneyin. Düğmeye tıklandığında bu kez hala işe yarar. Uygulama bildirimini geçici olarak yeniden adlandırırsanız, yeniden başarısız olur.
 
@@ -131,7 +133,7 @@ Eski COM bileşenlerinin dağıtımı, geleneksel olarak zor bir görevdir. Bile
 
 ##### <a name="to-publish-an-application-update-with-an-isolated-com-component"></a>Yalıtılmış bir COM bileşeniyle uygulama güncelleştirmesi yayımlamak için
 
-1. **Build** menüsünde, **RegFreeComDemo Yayımla**' ya tıklayın.
+1. **Build** menüsünde, **RegFreeComDemo Yayımla** ' ya tıklayın.
 
     Yayımla Sihirbazı görüntülenir.
 
@@ -142,7 +144,7 @@ Eski COM bileşenlerinin dağıtımı, geleneksel olarak zor bir görevdir. Bile
    Yayımlanan dosyaları incelerseniz, Sysmon. ocx dosyasının dahil edildiğini aklınızda olursunuz. Denetim, bu uygulamaya tamamen yalıtılmıştır, yani son kullanıcının makinesinde farklı bir denetim sürümü kullanan başka bir uygulama varsa, bu uygulamayla karışamaz.
 
 ## <a name="reference-native-assemblies"></a>Yerel derlemelere başvur
- Visual Studio, yerel Visual Basic 6,0 veya C++ derlemelerinin başvurularını destekler; Bu tür başvurular yerel başvurular olarak adlandırılır. **Dosya türü** özelliğinin **Yerel** veya **ActiveX**olarak ayarlandığını doğrulayarak başvurunun yerel olup olmadığını anlayabilirsiniz.
+ Visual Studio, yerel Visual Basic 6,0 veya C++ derlemelerinin başvurularını destekler; Bu tür başvurular yerel başvurular olarak adlandırılır. **Dosya türü** özelliğinin **Yerel** veya **ActiveX** olarak ayarlandığını doğrulayarak başvurunun yerel olup olmadığını anlayabilirsiniz.
 
  Yerel bir başvuru eklemek için **Başvuru Ekle** komutunu kullanın, ardından bildirime gidin. Bazı bileşenler, bildirimi DLL içine yerleştirir. Bu durumda, yalnızca DLL 'nin kendisini seçebilirsiniz ve Visual Studio, bileşenin gömülü bir bildirim içerdiğini algılarsa onu yerel bir başvuru olarak ekler. Visual Studio, başvurulan bileşenle aynı klasörseler de, bildirimde listelenen tüm bağımlı dosyaları veya derlemeleri otomatik olarak dahil eder.
 

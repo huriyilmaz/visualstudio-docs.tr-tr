@@ -1,6 +1,6 @@
 ---
 title: Dönüş türü değişikliği geri alınamıyor
-description: Bir DataContext yöntemin dönüş türünü değiştirme işlemi geri alınamaz
+description: DataContext metodunun dönüş türünü değiştirmek geri alınamaz. Bu Visual Studio Nesne İlişkisel Tasarımcısı (O/R Designer) iletisiyle ilgili bilgileri görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: fc0c3d6c1ddeab3ee92414e1264912f8b9d24b22
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: c0f3728056f2703dc1c9553a4a165f9654ce5112
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036476"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381824"
 ---
 # <a name="changing-the-return-type-of-a-datacontext-method-cannot-be-undone"></a>Bir DataContext yöntemin dönüş türünü değiştirme işlemi geri alınamaz
 
@@ -25,11 +25,11 @@ Bir yöntemin dönüş türü <xref:System.Data.Linq.DataContext> , öğesinde �
 
 ## <a name="to-change-the-return-type-of-a-datacontext"></a>DataContext 'in dönüş türünü değiştirmek için
 
-- **Evet**'e tıklayın.
+- **Evet** 'e tıklayın.
 
 ## <a name="to-exit-the-message-box-and-leave-the-return-type-unchanged"></a>İleti kutusundan çıkmak ve dönüş türünü değiştirmeden bırakmak için
 
-- **Hayır**'a tıklayın.
+- **Hayır** 'a tıklayın.
 
 ## <a name="to-revert-to-the-original-return-type-after-changing-the-return-type"></a>Dönüş türünü değiştirdikten sonra özgün dönüş türüne dönmek için
 

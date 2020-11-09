@@ -1,5 +1,7 @@
 ---
 title: '&lt;fileAssociation &gt; öğesi (ClickOnce uygulaması) | Microsoft Docs'
+description: FileAssociation öğesi uygulamayla ilişkilendirilecek bir dosya uzantısını tanımlar. FileAssociation öğesi isteğe bağlıdır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d3a43af5b2c7d50034cbed9d7da16e65b402f70
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1908b4f63edcf90643c28523c0c6ed0d0e11a97
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62928519"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382734"
 ---
 # <a name="ltfileassociationgt-element-clickonce-application"></a>&lt;fileAssociation &gt; öğesi (ClickOnce uygulaması)
 Uygulamayla ilişkilendirilecek dosya uzantısını tanımlar.

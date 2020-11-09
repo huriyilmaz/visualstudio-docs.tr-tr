@@ -1,5 +1,7 @@
 ---
 title: '&lt;Assembly &gt; öğesi (ClickOnce uygulaması) | Microsoft Docs'
+description: Bütünleştirilmiş kod öğesi kök öğesidir ve ClickOnce uygulamasında gereklidir. İlk kapsanan öğesi bir assemblyIdentity öğesi olmalıdır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b629243920021adc3833f43f268f05638029dc7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0c3614cd2d4fc0e6a5eebfb8dc6911e6eb183c01
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900766"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383228"
 ---
 # <a name="ltassemblygt-element-clickonce-application"></a>&lt;Assembly &gt; öğesi (ClickOnce uygulaması)
 Uygulama bildirimi için en üst düzey öğe.

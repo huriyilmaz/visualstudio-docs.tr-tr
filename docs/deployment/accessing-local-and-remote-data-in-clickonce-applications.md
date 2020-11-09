@@ -1,5 +1,6 @@
 ---
 title: Yerel & uzak veriye erişme (ClickOnce uygulamaları)
+description: ClickOnce 'ın hem yerel olarak hem de uzaktan veri okuma ve yazma için verdiği çeşitli seçenekler hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e93c8479e917e74d31c3eedbb00d9d5911442b92
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: da8eaa4405a83ff349fd3d7486909a9281962126
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810477"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383267"
 ---
 # <a name="access-local-and-remote-data-in-clickonce-applications"></a>ClickOnce uygulamalarında yerel ve uzak veri erişimi
 Çoğu uygulama veri kullanır veya üretir. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , hem yerel olarak hem de uzaktan veri okumak ve yazmak için çeşitli seçenekler sunar.
@@ -38,7 +39,7 @@ ms.locfileid: "90810477"
 ### <a name="clickonce-data-directory"></a>ClickOnce veri dizini
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Yerel bir bilgisayarda yüklü olan her uygulamanın, kullanıcının belgeler ve Ayarlar klasöründe depolanan bir veri dizini vardır. Bir uygulamaya eklenen [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ve "veri" dosyası olarak işaretlenen tüm dosyalar, bir uygulama yüklendiğinde bu dizine kopyalanır. Veri dosyaları, en sık kullanılan metin, XML ve Microsoft Access. mdb dosyaları gibi veritabanı dosyaları olan herhangi bir dosya türünde olabilir.
 
- Veri dizini, uygulamanın açıkça sakladığı ve sakladığı veriler olan uygulama tarafından yönetilen verilere yöneliktir. Uygulama bildiriminde "veri" olarak işaretlenmemiş tüm statik, bağımlılığı olmayan dosyalar, uygulama dizininde yer alır. Bu dizin, uygulamanın yürütülebilir (*. exe*) dosyalarının ve derlemelerinin bulunduğu yerdir.
+ Veri dizini, uygulamanın açıkça sakladığı ve sakladığı veriler olan uygulama tarafından yönetilen verilere yöneliktir. Uygulama bildiriminde "veri" olarak işaretlenmemiş tüm statik, bağımlılığı olmayan dosyalar, uygulama dizininde yer alır. Bu dizin, uygulamanın yürütülebilir ( *. exe* ) dosyalarının ve derlemelerinin bulunduğu yerdir.
 
 > [!NOTE]
 > Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama kaldırıldığında, veri dizini de kaldırılır. Veri dizinini, belgeler gibi son kullanıcı tarafından yönetilen verileri depolamak için hiçbir şekilde kullanmayın.
@@ -61,7 +62,7 @@ ms.locfileid: "90810477"
 
  Ayrıca, sınıfında, gibi ilgili değişkenleri kullanarak veri dizini yolunu elde edebilirsiniz <xref:System.Windows.Forms.Application> <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A> .
 
- Diğer dosya türlerini işlemek için ek izinler gerekebilir. Örneğin, bir Access Database (*. mdb*) dosyası kullanmak istiyorsanız, uygulamanızın ilgili sınıfları kullanabilmesi için tam güven onayı gerekir \<xref:System.Data> .
+ Diğer dosya türlerini işlemek için ek izinler gerekebilir. Örneğin, bir Access Database ( *. mdb* ) dosyası kullanmak istiyorsanız, uygulamanızın ilgili sınıfları kullanabilmesi için tam güven onayı gerekir \<xref:System.Data> .
 
 #### <a name="data-directory-and-application-versions"></a>Veri dizini ve uygulama sürümleri
  Bir uygulamanın her sürümü kendi veri dizinine sahiptir ve bu, diğer sürümlerden yalıtılmıştır. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamanın çalışma zamanında yeni veri dosyaları oluşturmak için bir konumu olması adına, dağıtıma dahil edilmiş herhangi bir veri dosyası olup olmadığından bağımsız olarak bu dizini oluşturur. Bir uygulamanın yeni bir sürümü yüklendiğinde, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] önceki sürümün veri dizinindeki tüm mevcut veri dosyalarını, özgün dağıtıma dahil edilip edilmeyeceğini veya uygulama tarafından oluşturulup oluşturulmayacağını yeni sürümün veri dizinine kopyalayacaktır.

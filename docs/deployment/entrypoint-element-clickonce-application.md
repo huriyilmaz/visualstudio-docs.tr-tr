@@ -1,5 +1,7 @@
 ---
 title: '&lt;entryPoint &gt; öğesi (ClickOnce uygulaması) | Microsoft Docs'
+description: EntryPoint öğesi, bu ClickOnce uygulaması bir istemci bilgisayarda çalıştırıldığında yürütülmesi gereken derlemeyi tanımlar.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 615a606dc4d04682a9d5a1a69c91b4d2cd67de15
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f509ade0103e390ea9cf53cbd5907116b99ddd39
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62928617"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382818"
 ---
 # <a name="ltentrypointgt-element-clickonce-application"></a>&lt;entryPoint &gt; öğesi (ClickOnce uygulaması)
 Bu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama bir istemci bilgisayarda çalıştırıldığında yürütülmesi gereken derlemeyi tanımlar.

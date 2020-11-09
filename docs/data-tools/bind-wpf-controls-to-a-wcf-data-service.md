@@ -1,5 +1,6 @@
 ---
 title: Bir WCF veri hizmetine WPF denetimleri bağlama
+description: Visual Studio 'da bir WCF veri hizmetine WPF denetimleri bağlayın. Denetimler, bir WCF veri hizmetinde kapsüllenmiş müşteri kayıtlarına bağlanır.
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7371e08925ad9227cf15a93a339e6e0ed36d11db
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c627a9f09d5400e321bcc8a141c36ec46cad7958
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282858"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382214"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>Bir WCF veri hizmetine WPF denetimleri bağlama
 
@@ -40,7 +41,7 @@ Bu izlenecek yol aşağıdaki görevleri gösterir:
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
@@ -60,45 +61,45 @@ Aşağıdaki kavramların önceki bilgileri de yararlı olmakla kalmaz, izlenece
 
 ## <a name="create-the-service-project"></a>Hizmet projesi oluşturma
 
-1. C# veya Visual Basic **ASP.NET Web uygulaması** projesi oluşturarak bu yönergeyi başlatın. Projeyi **AdventureWorksService**olarak adlandırın.
+1. C# veya Visual Basic **ASP.NET Web uygulaması** projesi oluşturarak bu yönergeyi başlatın. Projeyi **AdventureWorksService** olarak adlandırın.
 
-2. **Çözüm Gezgini**, **default. aspx** öğesine sağ tıklayın ve **Sil**' i seçin. Bu dosya, izlenecek yol için gerekli değildir.
+2. **Çözüm Gezgini** , **default. aspx** öğesine sağ tıklayın ve **Sil** ' i seçin. Bu dosya, izlenecek yol için gerekli değildir.
 
 ## <a name="create-an-entity-data-model-for-the-service"></a>Hizmet için Varlık Veri Modeli oluşturma
 
 Bir WCF veri hizmeti kullanarak bir uygulamaya verileri göstermek için, hizmet için bir veri modeli tanımlamanız gerekir. WCF veri hizmeti iki tür veri modelini destekler: varlık veri modelleri ve arabirimi uygulayan ortak dil çalışma zamanı (CLR) nesneleri kullanılarak tanımlanan özel veri modelleri <xref:System.Linq.IQueryable%601> . Bu izlenecek yolda, veri modeli için bir Varlık Veri Modeli oluşturursunuz.
 
-1. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
+1. **Proje** menüsünde **Yeni öğe Ekle** ' ye tıklayın.
 
-2. Yüklü şablonlar listesinde, **veriler**' e tıklayın ve ardından **ADO.net varlık veri modeli** Proje öğesini seçin.
+2. Yüklü şablonlar listesinde, **veriler** ' e tıklayın ve ardından **ADO.net varlık veri modeli** Proje öğesini seçin.
 
-3. Adı olarak değiştirin `AdventureWorksModel.edmx` ve **Ekle**' ye tıklayın.
+3. Adı olarak değiştirin `AdventureWorksModel.edmx` ve **Ekle** ' ye tıklayın.
 
      **Varlık veri modeli** Sihirbazı açılır.
 
-4. **Model Içeriğini seçin** sayfasında, **veritabanından oluştur**' u ve **ardından İleri**' yi tıklatın.
+4. **Model Içeriğini seçin** sayfasında, **veritabanından oluştur** ' u ve **ardından İleri** ' yi tıklatın.
 
 5. **Veri bağlantınızı seçin** sayfasında, aşağıdaki seçeneklerden birini belirleyin:
 
     - Aşağı açılan listede AdventureWorksLT örnek veritabanıyla bir veri bağlantısı varsa, bunu seçin.
 
-    - **Yeni bağlantı**' ya tıklayın ve AdventureWorksLT veritabanına bir bağlantı oluşturun.
+    - **Yeni bağlantı** ' ya tıklayın ve AdventureWorksLT veritabanına bir bağlantı oluşturun.
 
-6. **Veri bağlantınızı seçin** sayfasında, **varlık bağlantı ayarlarını App.Config olarak Kaydet ' in** seçildiğinden emin olun ve ardından **İleri**' ye tıklayın.
+6. **Veri bağlantınızı seçin** sayfasında, **varlık bağlantı ayarlarını App.Config olarak Kaydet ' in** seçildiğinden emin olun ve ardından **İleri** ' ye tıklayın.
 
-7. **Veritabanı nesnelerinizi seçin** sayfasında **Tablolar**' ı genişletin ve ardından **SalesOrderHeader** tablosunu seçin.
+7. **Veritabanı nesnelerinizi seçin** sayfasında **Tablolar** ' ı genişletin ve ardından **SalesOrderHeader** tablosunu seçin.
 
-8. **Son**'a tıklayın.
+8. **Finish (Son)** düğmesine tıklayın.
 
 ## <a name="create-the-service"></a>Hizmeti oluşturma
 
 Varlık Veri Modeli verileri bir WPF uygulamasına göstermek için bir WCF veri hizmeti oluşturun:
 
-1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
+1. **Proje** menüsünde **Yeni öğe Ekle** ' yi seçin.
 
-2. **Yüklü şablonlar** listesinde, **Web**' e tıklayın ve ardından **WCF veri hizmeti** Proje öğesini seçin.
+2. **Yüklü şablonlar** listesinde, **Web** ' e tıklayın ve ardından **WCF veri hizmeti** Proje öğesini seçin.
 
-3. **Ad** kutusuna yazın `AdventureWorksService.svc` ve **Ekle**' ye tıklayın.
+3. **Ad** kutusuna yazın `AdventureWorksService.svc` ve **Ekle** ' ye tıklayın.
 
      Visual Studio, öğesini `AdventureWorksService.svc` projeye ekler.
 
@@ -119,37 +120,37 @@ Hizmeti, oluşturduğunuz Varlık Veri Modeli çalışacak şekilde yapılandır
 
 WCF veri hizmetindeki verileri göstermek için, hizmeti temel alan bir veri kaynağıyla yeni bir WPF uygulaması oluşturun. Bu izlenecek yolda daha sonra uygulamaya veri bağlantılı denetimler ekleyeceksiniz.
 
-1. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın, **Ekle**' ye tıklayın ve **Yeni proje**' yi seçin.
+1. **Çözüm Gezgini** , çözüm düğümüne sağ tıklayın, **Ekle** ' ye tıklayın ve **Yeni proje** ' yi seçin.
 
-2. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic**öğesini genişletin ve ardından **Windows**' u seçin.
+2. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** öğesini genişletin ve ardından **Windows** ' u seçin.
 
 3. **WPF uygulaması** proje şablonunu seçin.
 
-4. **Ad** kutusuna yazın `AdventureWorksSalesEditor` ve **Tamam**' a tıklayın.
+4. **Ad** kutusuna yazın `AdventureWorksSalesEditor` ve **Tamam** ' a tıklayın.
 
    Visual Studio, `AdventureWorksSalesEditor` projeyi çözüme ekler.
 
-5. **Veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
+5. **Veri** menüsünde **veri kaynaklarını göster** ' e tıklayın.
 
    **Veri kaynakları** penceresi açılır.
 
-6. **Veri kaynakları** penceresinde **Yeni veri kaynağı Ekle**' ye tıklayın.
+6. **Veri kaynakları** penceresinde **Yeni veri kaynağı Ekle** ' ye tıklayın.
 
    **Veri kaynağı yapılandırma** Sihirbazı açılır.
 
-7. Sihirbazın **veri kaynağı türünü seçin** sayfasında **hizmet**' i seçin ve ardından **İleri**' ye tıklayın.
+7. Sihirbazın **veri kaynağı türünü seçin** sayfasında **hizmet** ' i seçin ve ardından **İleri** ' ye tıklayın.
 
-8. **Hizmet başvurusu Ekle** Iletişim kutusunda **bul**' a tıklayın.
+8. **Hizmet başvurusu Ekle** Iletişim kutusunda **bul** ' a tıklayın.
 
    Visual Studio kullanılabilir hizmetler için geçerli çözümü arar ve `AdventureWorksService.svc` **Hizmetler** kutusunda kullanılabilir Hizmetler listesine ekler.
 
-9. **Ad alanı** kutusuna **AdventureWorksService**yazın.
+9. **Ad alanı** kutusuna **AdventureWorksService** yazın.
 
-10. **Hizmetler** kutusunda **AdventureWorksService. svc**' ye tıklayın ve ardından **Tamam**' a tıklayın.
+10. **Hizmetler** kutusunda **AdventureWorksService. svc** ' ye tıklayın ve ardından **Tamam** ' a tıklayın.
 
     Visual Studio, hizmet bilgilerini indirir ve ardından **veri kaynağı yapılandırma** sihirbazına geri döner.
 
-11. **Hizmet başvurusu Ekle** sayfasında **son**' a tıklayın.
+11. **Hizmet başvurusu Ekle** sayfasında **son** ' a tıklayın.
 
     Visual Studio, **veri kaynakları** penceresine hizmet tarafından döndürülen verileri temsil eden düğümleri ekler.
 
@@ -157,7 +158,7 @@ WCF veri hizmetindeki verileri göstermek için, hizmeti temel alan bir veri kay
 
 WPF Tasarımcısında XAML 'yi değiştirerek pencereye birkaç düğme ekleyin. Bu izlenecek yolda daha sonra, kullanıcıların bu düğmeleri kullanarak satış kayıtlarını görüntülemesine ve güncelleştirmesine olanak tanıyan bir kod ekleyeceksiniz.
 
-1. **Çözüm Gezgini**, **MainWindow. xaml**' ye çift tıklayın.
+1. **Çözüm Gezgini** , **MainWindow. xaml** ' ye çift tıklayın.
 
    Pencere WPF Tasarımcısı 'nda açılır.
 
@@ -179,11 +180,11 @@ WPF Tasarımcısında XAML 'yi değiştirerek pencereye birkaç düğme ekleyin.
 
 `SalesOrderHeaders`Düğümü **veri kaynakları** penceresinden tasarımcıya sürükleyerek müşteri kayıtlarını görüntüleyen denetimler oluşturun.
 
-1. **Veri kaynakları** penceresinde, **SalesOrderHeaders** düğümünün açılan menüsüne tıklayın ve **Ayrıntılar**' ı seçin.
+1. **Veri kaynakları** penceresinde, **SalesOrderHeaders** düğümünün açılan menüsüne tıklayın ve **Ayrıntılar** ' ı seçin.
 
 2. **SalesOrderHeaders** düğümünü genişletin.
 
-3. Bu örnekte, bazı alanlar görüntülenmeyecektir, bu nedenle aşağıdaki düğümlerin yanındaki açılan menüye tıklayın ve **hiçbiri**' ni seçin:
+3. Bu örnekte, bazı alanlar görüntülenmeyecektir, bu nedenle aşağıdaki düğümlerin yanındaki açılan menüye tıklayın ve **hiçbiri** ' ni seçin:
 
     - **CreditCardApprovalCode**
 
@@ -259,27 +260,27 @@ Kullanıcıların, düğmeleri kullanarak satış kayıtları arasında gezinmel
      [!code-csharp[Data_WPFWCF#5](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_5.cs)]
      [!code-vb[Data_WPFWCF#5](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_5.vb)]
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
 
 Müşteri kayıtlarını görüntüleyip güncelleştirebildiğinizi doğrulamak için uygulamayı derleyin ve çalıştırın:
 
-1. **Yapı** menüsünde **çözüm oluştur**' a tıklayın. Çözümün hata olmadan yapılandırıldığını doğrulayın.
+1. **Yapı** menüsünde **çözüm oluştur** ' a tıklayın. Çözümün hata olmadan yapılandırıldığını doğrulayın.
 
-2. **CTRL** + **F5**tuşuna basın.
+2. **CTRL** + **F5** tuşuna basın.
 
      Visual Studio, **AdventureWorksService** projesini hata ayıklamadan başlatır.
 
-3. **Çözüm Gezgini**, **AdventureWorksSalesEditor** projesine sağ tıklayın.
+3. **Çözüm Gezgini** , **AdventureWorksSalesEditor** projesine sağ tıklayın.
 
-4. Sağ tıklama menüsünde (bağlam menüsü), **Hata Ayıkla**altında **Yeni örnek Başlat**' a tıklayın.
+4. Sağ tıklama menüsünde (bağlam menüsü), **Hata Ayıkla** altında **Yeni örnek Başlat** ' a tıklayın.
 
      Uygulama çalışır. Aşağıdakileri doğrulayın:
 
-    - Metin kutuları, satış siparişi KIMLIĞI **71774**olan ilk satış kaydından farklı veri alanları görüntüler.
+    - Metin kutuları, satış siparişi KIMLIĞI **71774** olan ilk satış kaydından farklı veri alanları görüntüler.
 
     - **>** **<** Diğer satış kayıtlarında gezinmek için veya düğmelerine tıklayabilirsiniz.
 
-5. Satış kayıtlarından birinde, **Açıklama** kutusuna bir metin yazın ve ardından **Değişiklikleri Kaydet**' e tıklayın.
+5. Satış kayıtlarından birinde, **Açıklama** kutusuna bir metin yazın ve ardından **Değişiklikleri Kaydet** ' e tıklayın.
 
 6. Uygulamayı kapatın ve sonra Visual Studio 'dan uygulamayı yeniden başlatın.
 
@@ -298,7 +299,7 @@ Bu yönergeyi tamamladıktan sonra, aşağıdaki ilgili görevleri gerçekleşti
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio'da verilere WPF denetimleri bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
-- [Veri kümesine WPF denetimleri bağlama](../data-tools/bind-wpf-controls-to-a-dataset.md)
+- [Bir veri kümesine WPF denetimleri bağlama](../data-tools/bind-wpf-controls-to-a-dataset.md)
 - [WCF genel bakış (.NET Framework)](/dotnet/framework/data/wcf/wcf-data-services-overview)
 - [Entity Framework genel bakış (.NET Framework)](/dotnet/framework/data/adonet/ef/overview)
 - [Veri Bağlamaya Genel Bakış (.NET Framework)](/dotnet/desktop-wpf/data/data-binding-overview)

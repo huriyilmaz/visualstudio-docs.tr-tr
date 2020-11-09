@@ -1,5 +1,7 @@
 ---
 title: Önyükleyici paketleri oluşturma
+description: Kurulum programı hakkında bilgi edinin ve ClickOnce bileşenlerinin yüklenmesini yönetmek için meta verileri belirten XML bildirimlerinin nasıl kullanılacağını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 05/02/2018
 ms.topic: conceptual
 dev_langs:
@@ -20,15 +22,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 17ac6fdb6b2eaf80d927407e717954842f6e6b1b
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: 4ffa19de6abff0bb73c91c4a8e79d707d0941e00
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641656"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383020"
 ---
 # <a name="create-bootstrapper-packages"></a>Önyükleyici paketleri oluşturma
-Kurulum programı, Windows Installer (*. msi*) dosyaları ve yürütülebilir programlar gibi yeniden dağıtılabilir bileşenleri tespit etmek ve yüklemek için yapılandırılabilecek genel bir yükleyicidir. Yükleyici, önyükleyici olarak da bilinir. Bileşenin yüklenmesini yönetmek için meta verileri belirten bir XML bildirimleri kümesi aracılığıyla programlanır.  ClickOnce için **Önkoşullar** iletişim kutusunda görünen her yeniden dağıtılabilir bileşen veya önkoşul, bir önyükleyici paketidir. Önyükleyici paketi, önkoşulun nasıl yükleneceğini tanımlayan bildirim dosyalarını içeren bir dizin ve dosya grubudur.
+Kurulum programı, Windows Installer ( *. msi* ) dosyaları ve yürütülebilir programlar gibi yeniden dağıtılabilir bileşenleri tespit etmek ve yüklemek için yapılandırılabilecek genel bir yükleyicidir. Yükleyici, önyükleyici olarak da bilinir. Bileşenin yüklenmesini yönetmek için meta verileri belirten bir XML bildirimleri kümesi aracılığıyla programlanır.  ClickOnce için **Önkoşullar** iletişim kutusunda görünen her yeniden dağıtılabilir bileşen veya önkoşul, bir önyükleyici paketidir. Önyükleyici paketi, önkoşulun nasıl yükleneceğini tanımlayan bildirim dosyalarını içeren bir dizin ve dosya grubudur.
 
 Önyükleyici önce önkoşullardan birinin zaten yüklü olup olmadığını algılar. Önkoşullar yüklü değilse, ilk olarak önyükleyici lisans sözleşmelerini gösterir. İkincisi, son kullanıcı lisans sözleşmelerini kabul ettikten sonra, yükleme önkoşulları için başlar. Aksi takdirde, önkoşullardan bazıları algılanırsa önyükleyici yalnızca uygulama yükleyicisini başlatır.
 
@@ -37,9 +39,9 @@ Kurulum programı, Windows Installer (*. msi*) dosyaları ve yürütülebilir pr
 
 Bir önyükleyici paketi oluşturmak için bir ürün bildirimi ve bir bileşenin yerelleştirilmiş her sürümü için bir paket bildirimi oluşturmanız gerekir.
 
-* Ürün bildirimi *product.xml*, paket için dilden bağımsız meta veriler içerir. Bu, yeniden dağıtılabilir bileşenin tüm yerelleştirilmiş sürümlerinde ortak olan meta verileri içerir.  Bu dosyayı oluşturmak için bkz. [nasıl yapılır: Ürün bildirimi oluşturma](../deployment/how-to-create-a-product-manifest.md).
+* Ürün bildirimi *product.xml* , paket için dilden bağımsız meta veriler içerir. Bu, yeniden dağıtılabilir bileşenin tüm yerelleştirilmiş sürümlerinde ortak olan meta verileri içerir.  Bu dosyayı oluşturmak için bkz. [nasıl yapılır: Ürün bildirimi oluşturma](../deployment/how-to-create-a-product-manifest.md).
 
-* Paket bildirimi, *package.xml*, dile özgü meta veriler içerir; genellikle yerelleştirilmiş hata iletileri içerir. Bir bileşen, bu bileşenin yerelleştirilmiş her sürümü için en az bir paket bildirimine sahip olmalıdır. Bu dosyayı oluşturmak için bkz. [nasıl yapılır: paket bildirimi oluşturma](../deployment/how-to-create-a-package-manifest.md).
+* Paket bildirimi, *package.xml* , dile özgü meta veriler içerir; genellikle yerelleştirilmiş hata iletileri içerir. Bir bileşen, bu bileşenin yerelleştirilmiş her sürümü için en az bir paket bildirimine sahip olmalıdır. Bu dosyayı oluşturmak için bkz. [nasıl yapılır: paket bildirimi oluşturma](../deployment/how-to-create-a-package-manifest.md).
 
 Bu dosyalar oluşturulduktan sonra, ürün bildirim dosyasını özel önyükleyici için adlı bir klasöre koyun. Paket bildirim dosyası, yerel ayar için adlı bir klasöre gider. Örneğin, Paket bildirim dosyası Ingilizce yeniden dağıtım için ise, dosyayı en-adlı bir klasöre koyun. Bu işlemi her yerel ayar için (Japonca için ja ve Almanca için de) yineleyin. Son özel önyükleyici paketi aşağıdaki klasör yapısına sahip olabilir.
 
@@ -109,7 +111,7 @@ Yeniden dağıtılabilir dosyaların Kurulum projelerinde dağıtılmasını eng
 
 `%ProgramFiles%\Microsoft.NET\RedistList`
 
-Yeniden dağıtılabilir liste, şu biçimi kullanarak ad almanız gereken bir XML dosyasıdır: * \<Company Name> . \<Component Name>.RedistList.xml*. Bu nedenle, örneğin, bileşen Acme tarafından yapılan veri öğeleri olarak çağrılırsa, *Acme.DataWidgets.RedistList.xml*kullanın. Yeniden dağıtılabilir listenin içeriğine bir örnek şuna benzeyebilir:
+Yeniden dağıtılabilir liste, şu biçimi kullanarak ad almanız gereken bir XML dosyasıdır: *\<Company Name> . \<Component Name>.RedistList.xml*. Bu nedenle, örneğin, bileşen Acme tarafından yapılan veri öğeleri olarak çağrılırsa, *Acme.DataWidgets.RedistList.xml* kullanın. Yeniden dağıtılabilir listenin içeriğine bir örnek şuna benzeyebilir:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

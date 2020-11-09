@@ -1,5 +1,7 @@
 ---
 title: ClickOnce güncelleştirme stratejisi seçme | Microsoft Docs
+description: ClickOnce uygulamasının otomatik güncelleştirmeleri nasıl desteklediğini ve hangi güncelleştirme stratejileri kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cbddf759841dbe9626868d6c00f42a0849d70520
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5618a8996b9858f0799f2a359573d5b7b9da1ce9
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64858741"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383163"
 ---
 # <a name="choose-a-clickonce-update-strategy"></a>ClickOnce güncelleştirme stratejisini seçme
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , otomatik uygulama güncelleştirmeleri sağlayabilir. Uygulama [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] güncelleştirmelerin kullanılabilir olup olmadığını görmek için uygulama düzenli aralıklarla dağıtım bildirimi dosyasını okur. Kullanılabilir olması durumunda uygulamanın yeni sürümü indirilir ve çalıştırılır. Verimlilik için, sadece değişen dosyalar indirilir.
@@ -41,7 +43,7 @@ ms.locfileid: "64858741"
 
  Bu strateji en iyi uzun indirmelere ihtiyaç duyacak büyük uygulamalar için veya düşük bant genişliğine sahip ağ bağlantıları için çalışır.
 
- Bu güncelleştirme stratejisini etkinleştirmek için, uygulama **güncelleştirmeleri** iletişim kutusunda uygulamanın **güncelleştirmeleri denetlemesi gereken seçeneği belirleyin** bölümünde **uygulama başladıktan sonra** ' ye tıklayın. Sonra, **uygulamanın güncelleştirmeleri ne sıklıkta denetlemesi gerektiğini belirtmek**için bölümünde bir güncelleştirme aralığı belirtin.
+ Bu güncelleştirme stratejisini etkinleştirmek için, uygulama **güncelleştirmeleri** iletişim kutusunda uygulamanın **güncelleştirmeleri denetlemesi gereken seçeneği belirleyin** bölümünde **uygulama başladıktan sonra** ' ye tıklayın. Sonra, **uygulamanın güncelleştirmeleri ne sıklıkta denetlemesi gerektiğini belirtmek** için bölümünde bir güncelleştirme aralığı belirtin.
 
  Bu, dağıtım bildiriminde **Update** öğesini şu şekilde değiştirme ile aynıdır:
 
@@ -78,7 +80,7 @@ ms.locfileid: "64858741"
 > [!NOTE]
 > Diğer güncelleştirme stratejilerini kullanarak güncelleştirmeler gerektirseniz de, **uygulama başlamadan önce** denetim, eski bir sürümün çalıştırılabilmesi için tek yoldur. Zorunlu güncelleştirme başlangıçta algılandığında, kullanıcının ya güncelleştirmeyi kabul etmesi ya da uygulamayı kapatması gerekir.
 
- Bir güncelleştirmeyi gerekli olarak işaretlemek için, **uygulama güncelleştirmeleri** iletişim kutusunda **Bu uygulama için gereken en düşük sürümü belirtin** ' e tıklayın ve ardından yüklenebilen uygulamanın en düşük sürüm numarasını belirten yayımlama sürümünü (**ana**, **İkincil**, **derleme**, **Düzeltme**) belirtin.
+ Bir güncelleştirmeyi gerekli olarak işaretlemek için, **uygulama güncelleştirmeleri** iletişim kutusunda **Bu uygulama için gereken en düşük sürümü belirtin** ' e tıklayın ve ardından yüklenebilen uygulamanın en düşük sürüm numarasını belirten yayımlama sürümünü ( **ana** , **İkincil** , **derleme** , **Düzeltme** ) belirtin.
 
  Bu, dağıtım bildiriminde **dağıtım** öğesinin **MinimumRequiredVersion** özniteliğini ayarlamayla aynıdır; Örneğin:
 

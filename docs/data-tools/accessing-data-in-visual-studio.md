@@ -1,5 +1,6 @@
 ---
 title: Visual Studio’da verilerle çalışma
+description: Visual Studio 'da verilerle çalışın. Yerel makineler, lan 'Lar veya genel veya özel bulutlar üzerinde diğer veritabanı ürünlerinde veya hizmetlerinde bulunan verilere bağlanan uygulamalar oluşturun.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d1a82cc5fc5ea34f007750a08c0e8140421a9f41
-ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
+ms.openlocfilehash: 846898c1cf93d0f90ce04e77ee93bd8802e22ec2
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91959828"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382097"
 ---
 # <a name="work-with-data-in-visual-studio"></a>Visual Studio’da verilerle çalışma
 
@@ -70,13 +71,13 @@ Burada listelenen diğer SQL ve NoSQL veritabanı ürünlerinin çoğu bir yerel
 
 ::: moniker range="vs-2017"
 
-Birçok veritabanı satıcısı ve üçüncü taraf, NuGet paketleri tarafından Visual Studio tümleştirmesini destekler. Teklifleri NuGet.org üzerinde veya Visual Studio 'daki NuGet Paket Yöneticisi aracılığıyla inceleyebilirsiniz (**Araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet Paketlerini Yönet**). Diğer veritabanı ürünleri, Visual Studio ile bir uzantı olarak tümleştirilir. Bu tekliflere [Visual Studio Market](https://marketplace.visualstudio.com/) gözatabilir veya **Araçlar**  >  **uzantıları ve güncelleştirmeleri** ' ne giderek ve ardından iletişim kutusunun sol bölmesinde **çevrimiçi** ' i seçerek bu teklife gidebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio Için uyumlu veritabanı sistemleri](../data-tools/installing-database-systems-tools-and-samples.md).
+Birçok veritabanı satıcısı ve üçüncü taraf, NuGet paketleri tarafından Visual Studio tümleştirmesini destekler. Teklifleri NuGet.org üzerinde veya Visual Studio 'daki NuGet Paket Yöneticisi aracılığıyla inceleyebilirsiniz ( **Araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet Paketlerini Yönet** ). Diğer veritabanı ürünleri, Visual Studio ile bir uzantı olarak tümleştirilir. Bu tekliflere [Visual Studio Market](https://marketplace.visualstudio.com/) gözatabilir veya **Araçlar**  >  **uzantıları ve güncelleştirmeleri** ' ne giderek ve ardından iletişim kutusunun sol bölmesinde **çevrimiçi** ' i seçerek bu teklife gidebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio Için uyumlu veritabanı sistemleri](../data-tools/installing-database-systems-tools-and-samples.md).
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Birçok veritabanı satıcısı ve üçüncü taraf, NuGet paketleri tarafından Visual Studio tümleştirmesini destekler. Teklifleri NuGet.org üzerinde veya Visual Studio 'daki NuGet Paket Yöneticisi aracılığıyla inceleyebilirsiniz (**Araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet Paketlerini Yönet**). Diğer veritabanı ürünleri, Visual Studio ile bir uzantı olarak tümleştirilir. Bu tekliflerde [Visual Studio Market](https://marketplace.visualstudio.com/) veya **Uzantılar**  >  **Yönet** ' e gidip iletişim kutusunun sol bölmesinde **çevrimiçi** ' i seçerek bu tekliflere gidebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio Için uyumlu veritabanı sistemleri](../data-tools/installing-database-systems-tools-and-samples.md).
+Birçok veritabanı satıcısı ve üçüncü taraf, NuGet paketleri tarafından Visual Studio tümleştirmesini destekler. Teklifleri NuGet.org üzerinde veya Visual Studio 'daki NuGet Paket Yöneticisi aracılığıyla inceleyebilirsiniz ( **Araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet Paketlerini Yönet** ). Diğer veritabanı ürünleri, Visual Studio ile bir uzantı olarak tümleştirilir. Bu tekliflerde [Visual Studio Market](https://marketplace.visualstudio.com/) veya **Uzantılar**  >  **Yönet** ' e gidip iletişim kutusunun sol bölmesinde **çevrimiçi** ' i seçerek bu tekliflere gidebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio Için uyumlu veritabanı sistemleri](../data-tools/installing-database-systems-tools-and-samples.md).
 
 ::: moniker-end
 

@@ -1,5 +1,7 @@
 ---
 title: ClickOnce uygulama güncelleştirmelerini nasıl gerçekleştirir | Microsoft Docs
+description: ClickOnce 'ın, uygulamayı güncelleştirip güncelleştirmeyeceğine karar vermek için dosya sürüm bilgilerini nasıl kullandığını öğrenin. ClickOnce, indirme sırasında yedekliliği önlemek için dosya düzeltme eki uygulamayı kullanır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9217558c68d47ef8f2bf34b10db16463ee76f857
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e0177f199f0178e9fe0221a4cb6daa58d36a6f87
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900031"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382674"
 ---
 # <a name="how-clickonce-performs-application-updates"></a>ClickOnce uygulama güncelleştirmelerini nasıl gerçekleştirir
 ClickOnce, uygulamanın dosyalarını güncelleştirip güncelleştirmeyeceğine karar vermek için uygulamanın dağıtım bildiriminde belirtilen dosya sürümü bilgilerini kullanır. Güncelleştirme başladıktan sonra ClickOnce, uygulama dosyalarının gereksiz şekilde indirilmesini önlemek için *Dosya düzeltme eki* adlı bir teknik kullanır.

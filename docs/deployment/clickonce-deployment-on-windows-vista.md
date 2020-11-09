@@ -1,5 +1,7 @@
 ---
 title: Windows Vista 'da ClickOnce dağıtımı | Microsoft Docs
+description: Visual Studio 'Nun, bir dış bildirim gerektiren ClickOnce ve Registration-Free COM uygulamaları için dış UAC bildirimi nasıl oluşturduğu hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,16 +19,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b76804eb8c06acbcdeac017108773056ee38338
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: c2e09225339a87c55c31d27d26b129e199385e99
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641499"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383085"
 ---
 # <a name="clickonce-deployment-on-windows-vista"></a>Windows Vista'da ClickOnce dağıtımı
 
-Windows Vista 'da Kullanıcı hesabı denetimi (UAC) için Visual Studio 'da uygulamalar derleme, normalde, uygulamanın yürütülebilir dosyasında ikili XML verileri olarak kodlanmış bir katıştırılmış bildirim oluşturur.  ClickOnce ve kayıtsız COM uygulamaları için bir dış bildirim gerekir, bu nedenle Visual Studio bu projeler için katıştırılmış bir bildirim yerine UAC verilerini içeren bir dosya oluşturur. ClickOnce ve kayıtsız COM dağıtımları için, Visual Studio dış UAC bildirim bilgileri oluşturmak için *app. manifest* adlı bir dosyadaki bilgileri kullanır. Diğer tüm durumlarda, Visual Studio UAC verilerini uygulamanın yürütülebilir dosyasına katıştırır.
+Windows Vista 'da Kullanıcı hesabı denetimi (UAC) için Visual Studio 'da uygulamalar derleme, normalde, uygulamanın yürütülebilir dosyasında ikili XML verileri olarak kodlanmış bir katıştırılmış bildirim oluşturur.  ClickOnce ve Registration-Free COM uygulamaları için bir dış bildirim gerekir, bu nedenle Visual Studio bu projeler için katıştırılmış bir bildirim yerine UAC verilerini içeren bir dosya oluşturur. ClickOnce ve Registration-Free COM dağıtımları için, Visual Studio dış UAC bildirim bilgileri oluşturmak için *app. manifest* adlı bir dosyadaki bilgileri kullanır. Diğer tüm durumlarda, Visual Studio UAC verilerini uygulamanın yürütülebilir dosyasına katıştırır.
 
 Visual Studio, bildirim oluşturma için aşağıdaki seçenekleri sağlar:
 
@@ -34,13 +36,13 @@ Visual Studio, bildirim oluşturma için aşağıdaki seçenekleri sağlar:
 
    Bu, varsayılan ayardır (ClickOnce kullanmadığınız durumlar dışında). Bu ayar, kullanarak Visual Studio 'nun Windows Vista 'da çalıştığı olağan şekilde, hem iç hem de dış bildirim oluşturma ile birlikte desteklenir `AsInvoker` .
 
-- Dış bildirim kullanın. *App. manifest*kullanarak bir dış bildirim oluşturun.
+- Dış bildirim kullanın. *App. manifest* kullanarak bir dış bildirim oluşturun.
 
-   Bu, *app. manifest*'teki bilgileri kullanarak yalnızca dış bildirimi oluşturur. Bir uygulamayı ClickOnce veya kayıtsız COM kullanarak yayımladığınızda, Visual Studio projeye *app. manifest* ekler ve sonra bu seçeneği ekler.
+   Bu, *app. manifest* 'teki bilgileri kullanarak yalnızca dış bildirimi oluşturur. ClickOnce veya Registration-Free COM kullanarak bir uygulamayı yayımladığınızda, Visual Studio projeye *app. manifest* ekler ve sonra bu seçeneği ekler.
 
 - Bildirim yok ' u kullanın. Bildirimi olmayan uygulamayı oluşturun.
 
-   Bu yaklaşım *sanallaştırma*olarak da bilinir. Visual Studio 'nun önceki sürümlerindeki mevcut uygulamalarla uyumluluk için bu seçeneği kullanın.
+   Bu yaklaşım *sanallaştırma* olarak da bilinir. Visual Studio 'nun önceki sürümlerindeki mevcut uygulamalarla uyumluluk için bu seçeneği kullanın.
 
   Yeni özellikler, proje Tasarımcısı 'nın **uygulama** sayfasında (yalnızca Visual C# projeleri için) ve MSBuild proje dosyası biçiminde bulunur.
 

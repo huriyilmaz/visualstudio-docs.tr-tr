@@ -1,5 +1,6 @@
 ---
 title: Yeni bağlantı ekleme
+description: Visual Studio 'da bir VERITABANıNA veya hizmete bir bağlantı ekleyin ve Sunucu Gezgini, bulut Gezgini veya SQL Server Nesne Gezgini kullanarak DB içeriğini ve şemalarını keşfedebilirsiniz.
 ms.date: 11/04/2016
 ms.topic: how-to
 author: ghogen
@@ -7,16 +8,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5f6f34c28a6bbba236a4d90e2f936fad0b2a3f60
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 34f3ef6823ddfae806de11b85cc5bfe6b14c9b19
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283066"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382422"
 ---
 # <a name="add-new-connections"></a>Yeni bağlantı ekleme
 
-Bir veritabanı veya hizmetle bağlantınızı test edebilir ve **Sunucu Gezgini**, **bulut Gezgini**veya **SQL Server Nesne Gezgini**kullanarak veritabanı içeriğini ve şemalarını keşfedebilirsiniz. Bu pencerelerin işlevselliği bir ölçüde çakışıyor. Temel farklılıklar şunlardır:
+Bir veritabanı veya hizmetle bağlantınızı test edebilir ve **Sunucu Gezgini** , **bulut Gezgini** veya **SQL Server Nesne Gezgini** kullanarak veritabanı içeriğini ve şemalarını keşfedebilirsiniz. Bu pencerelerin işlevselliği bir ölçüde çakışıyor. Temel farklılıklar şunlardır:
 
 - Sunucu Gezgini
 
@@ -32,7 +33,7 @@ Bir veritabanı veya hizmetle bağlantınızı test edebilir ve **Sunucu Gezgini
 
 ## <a name="add-a-connection-in-server-explorer"></a>Sunucu Gezgini bağlantı ekleme
 
-Veritabanına bir bağlantı oluşturmak için **Sunucu Gezgini** **bağlantı ekle** simgesine tıklayın veya **veri bağlantıları** düğümünde **Sunucu Gezgini** ' a sağ tıklayıp **bağlantı ekle**' yi seçin. Buradan, başka bir sunucuda, SharePoint hizmetinde veya bir Azure hizmetinde bir veritabanına da bağlanabilirsiniz.
+Veritabanına bir bağlantı oluşturmak için **Sunucu Gezgini** **bağlantı ekle** simgesine tıklayın veya **veri bağlantıları** düğümünde **Sunucu Gezgini** ' a sağ tıklayıp **bağlantı ekle** ' yi seçin. Buradan, başka bir sunucuda, SharePoint hizmetinde veya bir Azure hizmetinde bir veritabanına da bağlanabilirsiniz.
 
 ![Sunucu Gezgini yeni bağlantı simgesi](../data-tools/media/raddata-server-explorer-new-connection-icon.png)
 
@@ -48,11 +49,11 @@ Veri kaynağı istediğiniz gibi değilse, yeni bir veri kaynağı ve/veya yeni 
 
 ## <a name="test-the-connection"></a>Bağlantıyı test etme
 
-Veri kaynağını seçtikten sonra **Bağlantıyı Sına**' ya tıklayın. Başarılı olmazsa, satıcının belgelerine göre sorun gidermeniz gerekecektir.
+Veri kaynağını seçtikten sonra **Bağlantıyı Sına** ' ya tıklayın. Başarılı olmazsa, satıcının belgelerine göre sorun gidermeniz gerekecektir.
 
 ![Bağlantıyı Sına](../data-tools/media/raddata-test-connection.png)
 
-Test başarılı olursa, aslında temel veritabanını veya hizmeti temel alan bir *veri modeli* anlamına gelen bir Visual Studio terimi olan bir *veri kaynağı*oluşturmaya hazırsınızdır.
+Test başarılı olursa, aslında temel veritabanını veya hizmeti temel alan bir *veri modeli* anlamına gelen bir Visual Studio terimi olan bir *veri kaynağı* oluşturmaya hazırsınızdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,7 @@
 ---
 title: '&lt;Dağıtım &gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
+description: Dağıtım öğesi, güncelleştirmelerin dağıtımı ve sistemde etkilenme için kullanılan öznitelikleri tanımlar.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 988ce0859ab24377395cc4077f9e6fa42e0487a5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3252c8f305b97564b8fb19affa83cc7dd837c97d
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "70887862"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382864"
 ---
 # <a name="ltdeploymentgt-element-clickonce-deployment"></a>&lt;Dağıtım &gt; öğesi (ClickOnce dağıtımı)
 Güncelleştirmelerin dağıtımı için kullanılan öznitelikleri ve sistemde pozlandırmayı tanımlar.

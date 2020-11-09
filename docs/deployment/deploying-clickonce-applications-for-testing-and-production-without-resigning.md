@@ -1,5 +1,7 @@
 ---
 title: ClickOnce uygulamalarını yeniden imzalama olmadan dağıtma
+description: ClickOnce bildirimlerini yeniden imzalamadan veya değiştirmeden birden çok ağ konumundan ClickOnce uygulamalarını dağıtma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 89e1d7970b26d5ba9bd49090362a6a4e8c09f78d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b5644a890a8705c68852cb5f67e4d998e12338dc
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80395320"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382942"
 ---
 # <a name="deploy-clickonce-applications-for-testing-and-production-servers-without-resigning"></a>Sınama ve üretim sunucuları için teslim etmeden ClickOnce uygulamaları dağıtma
 Bu makalede, ClickOnce bildirimleri yeniden imzalanmadan veya değiştirmeden birden çok ağ konumundan ClickOnce uygulamalarının dağıtımına izin veren .NET Framework sürüm 3,5 ' de tanıtılan bir ClickOnce özelliği açıklanır.

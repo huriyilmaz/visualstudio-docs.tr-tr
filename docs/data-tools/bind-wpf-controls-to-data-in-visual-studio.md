@@ -1,5 +1,6 @@
 ---
 title: WPF denetimlerini veriye bağlama-Bölüm 1
+description: WPF denetimlerini verilere bağlayın. Bu veriye dayalı denetimleri oluşturmak için, veri kaynakları penceresinden öğeleri Visual Studio 'daki WPF Tasarımcısı üzerine sürükleyin.
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -16,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 27d0c14bcf09a3b0d30cd23dea0f8348c45fcab7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 697b5efb172a09f2dcd5512a6301febd7429411f
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282887"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381928"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Visual Studio'da verilere WPF denetimleri bağlama
 
@@ -35,7 +36,7 @@ Aşağıdaki tabloda, öğeleri **veri kaynakları** penceresinden öğesine sü
 
 |Görev|Daha fazla bilgi|
 |----------| - |
-|Yeni verilere bağlı denetimler oluşturun.<br /><br /> Varolan denetimleri verilere bağlayın.|[Veri kümesine WPF denetimleri bağlama](../data-tools/bind-wpf-controls-to-a-dataset.md)|
+|Yeni verilere bağlı denetimler oluşturun.<br /><br /> Varolan denetimleri verilere bağlayın.|[Bir veri kümesine WPF denetimleri bağlama](../data-tools/bind-wpf-controls-to-a-dataset.md)|
 |Bir üst-alt ilişkisinde ilgili verileri görüntüleyen denetimler oluşturma: Kullanıcı bir denetimde üst veri kaydını seçtiğinde, bir diğer denetim seçili kayıt ile ilgili alt verileri görüntüler.|[WPF uygulamalarındaki ilgili verileri görüntüleme](../data-tools/display-related-data-in-wpf-applications.md)|
 |Bir tablodaki bilgileri başka bir tablodaki yabancı anahtar alanının değerine göre görüntüleyen bir *arama tablosu* oluşturun.|[WPF uygulamalarında arama tabloları oluşturma](../data-tools/create-lookup-tables-in-wpf-applications.md)|
 |Veritabanında bir denetimi görüntüye bağlayın.|[Bir veritabanından resimlere denetim bağlama](../data-tools/bind-controls-to-pictures-from-a-database.md)|
@@ -52,10 +53,10 @@ Aşağıdaki tabloda, [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasha
 
 | Veri kaynağı | Bir denetimi veri kaynağına bağlayan XAML oluşturma | Veri kaynağını verilerle dolduran kod oluşturma |
 | - | - | - |
-| Veri kümesi | Yes | Yes |
-| [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] | Yes | Yes |
-| Hizmet | Yes | Hayır |
-| Nesne | Yes | Hayır |
+| Veri kümesi | Evet | Evet |
+| [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] | Evet | Evet |
+| Hizmet | Evet | Hayır |
+| Nesne | Evet | Hayır |
 
 ### <a name="datasets"></a>Veri kümeleri
 

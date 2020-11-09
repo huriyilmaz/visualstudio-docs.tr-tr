@@ -1,5 +1,7 @@
 ---
 title: '&lt;Commands &gt; öğesi (önyükleyici) | Microsoft Docs'
+description: Komutlar öğesi, test önyükleyici testi başarısız olursa Install the The The Install The Elements The Install the The The Commands.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f52c862adcdaf7a95de6a90c2c330c39edcea13
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 65c63d52290962d8c9878edf025bbc05487103da
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900350"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383059"
 ---
 # <a name="ltcommandsgt-element-bootstrapper"></a>&lt;Commands &gt; öğesi (önyükleyici)
 `Commands`Öğesi, öğesinin altındaki öğeler tarafından tanımlanan testleri uygular `InstallChecks` ve [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] test başarısız olursa önyükleyici hangi pakete yükleneceğini bildirir.

@@ -1,5 +1,6 @@
 ---
 title: Bir veritabanından resimlere denetim bağlama
+description: Veritabanındaki bir görüntüyü Visual Studio uygulamanızdaki bir denetime bağlamak için veri kaynakları penceresini kullanın.
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -17,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: e9093c2a2d7cec95e4fdd08ff4273ae8f8126a36
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a2033bfe6719ccd325a2409d20fbb0e77d92926
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282990"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382305"
 ---
 # <a name="bind-controls-to-pictures-from-a-database"></a>Bir veritabanından resimlere denetim bağlama
 
@@ -39,13 +40,13 @@ Aşağıdaki yordamda, **veri kaynakları** penceresinin görüntenize bağlanan
 2. **Veri kaynakları** penceresinde, sütun veya özelliklerini göstermek için istenen tabloyu veya nesneyi genişletin.
 
    > [!TIP]
-   > **Veri kaynakları** penceresi açık değilse, **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçerek açın.
+   > **Veri kaynakları** penceresi açık değilse, **View**  >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek açın.
 
 3. Görüntü verilerinizi içeren sütunu veya özelliği seçin ve açılan denetim listesinden aşağıdaki denetimlerden birini seçin:
 
-    - WPF Tasarımcısı açıksa **görüntü**' i seçin.
+    - WPF Tasarımcısı açıksa **görüntü** ' i seçin.
 
-    - Windows Forms Tasarımcısı açıksa, **PictureBox**' ı seçin.
+    - Windows Forms Tasarımcısı açıksa, **PictureBox** ' ı seçin.
 
     - Alternatif olarak, veri bağlamayı destekleyen ve görüntü görüntüleyebilen farklı bir denetim seçebilirsiniz. Kullanmak istediğiniz denetim kullanılabilir denetimler listesinde değilse, listeye ekleyebilir ve sonra bunu seçebilirsiniz. Daha fazla bilgi için bkz. [veri kaynakları penceresine özel denetimler ekleme](../data-tools/add-custom-controls-to-the-data-sources-window.md).
 

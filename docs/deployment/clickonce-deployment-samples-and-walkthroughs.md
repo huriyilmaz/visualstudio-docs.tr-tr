@@ -1,5 +1,7 @@
 ---
 title: ClickOnce dağıtımı örnekleri ve Izlenecek yollar | Microsoft Docs
+description: Windows Forms, WPF ve Konsol uygulamalarını dağıtmak için kullanılan teknikleri anlamak için bu örnek uygulamalar, örnek kod ve İzlenecek yol-kılavuzlarına kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8083ed11537975bfd05f546843264881fe7a7aa0
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: 419fa9f917358ae19a073b5f864ee76d92c33e75
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641463"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383046"
 ---
 # <a name="clickonce-deployment-samples-and-walkthroughs"></a>ClickOnce dağıtım örnekleri ve yönergeler
 Bu bölüm örnek uygulamalar, örnek kod ve Windows Forms, WPF ve Konsol uygulamalarını dağıtmak için kullanılan sözdizimi, yapı ve teknikleri gösteren adım adım yönergeler içerir.

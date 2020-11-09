@@ -1,5 +1,7 @@
 ---
 title: ClickOnce dağıtım bildirimi | Microsoft Docs
+description: Dağıtılacak geçerli ClickOnce uygulaması sürümü de dahil olmak üzere ClickOnce dağıtımını tanımlayan bir XML dosyası olan dağıtım bildirimi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d2f3383731fcfa314c3b936cd42002186012439
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 47589b909ee2b7ee367c81684ac53e2b5e4e7d70
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900485"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383098"
 ---
 # <a name="clickonce-deployment-manifest"></a>ClickOnce dağıtım bildirimi
 Dağıtım bildirimi [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , dağıtılacak geçerli uygulama sürümünün tanımlanması dahil olmak üzere bir dağıtımı açıklayan BIR XML dosyasıdır [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
@@ -36,7 +38,7 @@ Dağıtım bildirimi [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_m
 | [\<compatibleFrameworks> Dosyalarında](../deployment/compatibleframeworks-element-clickonce-deployment.md) | Gereklidir. Bu uygulamanın yükleyebildiği ve çalıştırılacağı .NET Framework sürümlerini tanımlar. | `SupportUrl` |
 | [\<dependency> Dosyalarında](../deployment/dependency-element-clickonce-deployment.md) | Gereklidir. Dağıtım için yüklenecek uygulamanın sürümünü ve uygulama bildiriminin konumunu tanımlar. | `preRequisite`<br /><br /> `visible`<br /><br /> `dependencyType`<br /><br /> `codebase`<br /><br /> `size` |
 | [\<publisherIdentity> Dosyalarında](../deployment/publisheridentity-element-clickonce-deployment.md) | İmzalı bildirimler için gereklidir. Bu dağıtım bildirimini imzalayan yayımcı hakkındaki bilgileri içerir. | `Name`<br /><br /> `issuerKeyHash` |
-| [\<Signature> Dosyalarında](../deployment/signature-element-clickonce-deployment.md) | İsteğe bağlı. Bu dağıtım bildirimini dijital olarak imzalamak için gereken bilgileri içerir. | Hiçbiri |
+| [\<Signature> Dosyalarında](../deployment/signature-element-clickonce-deployment.md) | İsteğe bağlı. Bu dağıtım bildirimini dijital olarak imzalamak için gereken bilgileri içerir. | Yok |
 | [\<customErrorReporting> Dosyalarında](../deployment/customerrorreporting-element-clickonce-deployment.md) | İsteğe bağlı. Bir hata oluştuğunda gösterilecek URI 'yi belirtir. | Kullanılmamışsa |
 
 ## <a name="remarks"></a>Açıklamalar

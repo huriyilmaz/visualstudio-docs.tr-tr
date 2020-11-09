@@ -1,5 +1,7 @@
 ---
 title: Başkalarının dağıtması için ClickOnce uygulamaları oluşturma | Microsoft Docs
+description: .NET Framework 3,5 ' de ve önceki .NET Framework sürümlerinde geliştirilen, müşteri tarafından barındırılan ClickOnce uygulamaları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -24,12 +26,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3307fc124f50e8c9f73749293c36f53be36c5e3c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7379038d1c2bf203f7787e69408ddd9b2e30f372
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71252456"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383007"
 ---
 # <a name="create-clickonce-applications-for-others-to-deploy"></a>Başkalarının dağıtması için ClickOnce uygulamaları oluşturma
 ClickOnce dağıtımları oluşturan tüm geliştiriciler uygulamaları kendileri dağıtmayı planlıyor. Bunların birçoğu ClickOnce kullanarak kendi uygulamasını paketleyebilir ve ardından dosyaları büyük bir kuruluş gibi bir müşteriye kapatır. Müşteri, uygulamayı ağı üzerinde barındırmaktan sorumlu olur. Bu konuda 3,5 sürümünden önceki .NET Framework sürümlerinde bu tür dağıtımlarda bulunan bazı sorunlar ele alınmaktadır. Daha sonra, .NET Framework 3,5 ' deki yeni "güven için bildirimi kullan" özelliği kullanılarak sağlanmış yeni bir çözüm açıklanmaktadır. Son olarak, .NET Framework eski sürümlerini kullanmaya devam eden müşteriler için ClickOnce dağıtımları oluşturmaya yönelik önerilen stratejileri de sonlanır.
@@ -50,7 +52,7 @@ ClickOnce dağıtımları oluşturan tüm geliştiriciler uygulamaları kendiler
  Geliştirici ve müşteri, müşterinin uygulama bildirimini imzalayacağını kabul etse bile, bu durum özellikle güvenilen uygulama dağıtımı için geçerli olduğu gibi uygulamanın kimliğini çevreleyen diğer sorunları da yükseltir. (Bu özellik hakkında daha fazla bilgi için bkz. [Güvenilen uygulama dağıtımına genel bakış](../deployment/trusted-application-deployment-overview.md).) Adventure Works 'ün, Microsoft Corporation tarafından sunulan herhangi bir uygulamanın tam güvenle çalışması için istemci bilgisayarlarını yapılandırmak istediğini varsayalım. Adventure Works dağıtım bildirimini imzalarsa, ClickOnce, uygulamanın güven düzeyini belirlemekte Adventure Work 'ün güvenlik imzasını kullanacaktır.
 
 ## <a name="create-customer-deployments-by-using-application-manifest-for-trust"></a>Güven için uygulama bildirimini kullanarak müşteri dağıtımları oluşturma
- .NET Framework 3,5 ' de ClickOnce, geliştiricilere ve müşterilere bildirimlerin nasıl imzalanması gerektiğine ilişkin senaryoya yeni bir çözüm veren yeni bir özellik içerir. ClickOnce uygulama bildirimi, `<useManifestForTrust>` bir geliştiricinin uygulama bildiriminin dijital imzasının güven kararları vermek için kullanılması gerekenler olduğunu işaret etmesini sağlayan adlı yeni bir öğeyi destekler. Geliştirici, bu öğeyi uygulama bildirimine dahil etmek için *Mage.exe*, *MageUI.exe*ve Visual Studio gibi ClickOnce paketleme araçları 'Nı kullanır ve hem yayımcı adını hem de bildirimin uygulamanın adını eklemek için.
+ .NET Framework 3,5 ' de ClickOnce, geliştiricilere ve müşterilere bildirimlerin nasıl imzalanması gerektiğine ilişkin senaryoya yeni bir çözüm veren yeni bir özellik içerir. ClickOnce uygulama bildirimi, `<useManifestForTrust>` bir geliştiricinin uygulama bildiriminin dijital imzasının güven kararları vermek için kullanılması gerekenler olduğunu işaret etmesini sağlayan adlı yeni bir öğeyi destekler. Geliştirici, bu öğeyi uygulama bildirimine dahil etmek için *Mage.exe* , *MageUI.exe* ve Visual Studio gibi ClickOnce paketleme araçları 'Nı kullanır ve hem yayımcı adını hem de bildirimin uygulamanın adını eklemek için.
 
  Kullanırken `<useManifestForTrust>` , dağıtım bildiriminin, bir sertifika yetkilisi tarafından verilen bir Authenticode sertifikasıyla imzalanması gerekmez. Bunun yerine, otomatik olarak imzalanan sertifika olarak bilinen ile imzalanabilir. Otomatik olarak imzalanan bir sertifika, standart .NET Framework SDK araçları kullanılarak müşteri ya da geliştirici tarafından oluşturulur ve ardından standart ClickOnce dağıtım araçları kullanılarak dağıtım bildirimine uygulanır. Daha fazla bilgi için bkz. [MakeCert](/windows/desktop/SecCrypto/makecert).
 
