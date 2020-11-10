@@ -32,8 +32,6 @@
   items:
     - name: IDE görünümünü ve deneyimini özelleştirme
       href: customizing-the-ide.md
-    - name: Mac için Visual Studio’yu Genişletme
-      href: extending-visual-studio-mac.md
 - name: Projeler ve Çözümler
   items:
     - name: Genel Bakış
