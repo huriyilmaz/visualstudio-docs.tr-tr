@@ -1,6 +1,8 @@
 ---
 title: Kod ölçümleri penceresi
 ms.date: 12/12/2017
+description: Visual Studio Code ölçümleri analiz verilerini görüntülemeyi, filtrelemenizi, yeniden düzenlemenizi ve dışarı aktarmayı öğrenin. Bkz. kod ölçüm sonuçlarına göre iş öğeleri oluşturma.
+ms.custom: SEO-VS-2020
 ms.topic: reference
 f1_keywords:
 - vs.codemetrics.output
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c01543b290d991a189c0851c64526c9c513068ba
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: d29109811c3dd5f354b510d046b33b0ba31d60e5
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91927984"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436816"
 ---
 # <a name="use-the-code-metrics-results-window"></a>Kod ölçümleri sonuçları penceresini kullanın
 
@@ -30,9 +32,9 @@ Kod **ölçümleri sonuçları penceresi,** kod ölçümleri sonuçları oluştu
 
 Aşağıdaki menü dizilerinden birini kullanarak kod ölçümleri sonuçları penceresini görüntüleyebilirsiniz:
 
-- **Çözümle** menüsünde **Windows**  >  **Kod ölçümleri sonuçları**' nı seçin.
+- **Çözümle** menüsünde **Windows**  >  **Kod ölçümleri sonuçları** ' nı seçin.
 
-- **Görünüm** menüsünde **diğer Windows**  >  **Kod ölçümleri sonuçları**' nı seçin.
+- **Görünüm** menüsünde **diğer Windows**  >  **Kod ölçümleri sonuçları** ' nı seçin.
 
 **Kod ölçümleri sonuçları** penceresi, hiçbir sonuç içermediğinden bile açılır.
 
@@ -50,9 +52,9 @@ Kod ölçümleri sonuçları oluşturulduysa, **hiyerarşi** sütunundaki ağac�
 
 1. **Filtre** listesinden sütun adını seçin.
 
-2. **En**az, görüntülenecek en düşük değeri yazın.
+2. **En** az, görüntülenecek en düşük değeri yazın.
 
-3. **En**fazla, görüntülenecek en büyük değeri yazın.
+3. **En** fazla, görüntülenecek en büyük değeri yazın.
 
 4. **Filtre Uygula** düğmesine tıklayın.
 
@@ -64,9 +66,9 @@ Kod ölçümleri sonuçları oluşturulduysa, **hiyerarşi** sütunundaki ağac�
 
 ### <a name="add-or-remove-a-column"></a>Sütun ekleme veya kaldırma
 
-1. Sütun **Ekle/Kaldır** düğmesine tıklayın veya herhangi bir sütun başlığına sağ tıklayıp **sütun Ekle/Kaldır**' a tıklayın.
+1. Sütun **Ekle/Kaldır** düğmesine tıklayın veya herhangi bir sütun başlığına sağ tıklayıp **sütun Ekle/Kaldır** ' a tıklayın.
 
-1. **Sütun Ekle/Kaldır** iletişim kutusunda, eklemek veya kaldırmak istediğiniz sütunun onay kutusunu seçin veya temizleyin ve ardından **Tamam**' ı seçin.
+1. **Sütun Ekle/Kaldır** iletişim kutusunda, eklemek veya kaldırmak istediğiniz sütunun onay kutusunu seçin veya temizleyin ve ardından **Tamam** ' ı seçin.
 
 ### <a name="rearrange-columns"></a>Sütunları yeniden Düzenle
 
@@ -74,7 +76,7 @@ Kod ölçümleri sonuçları oluşturulduysa, **hiyerarşi** sütunundaki ağac�
 
 1. **Sütun Ekle/Kaldır** iletişim kutusunda, taşımak istediğiniz sütunu seçin ve ardından yukarı oku veya aşağı oku seçin.
 
-1. Sütun istediğiniz yere konumlandırıldığında **Tamam**' ı seçin.
+1. Sütun istediğiniz yere konumlandırıldığında **Tamam** ' ı seçin.
 
 ## <a name="copy-data-to-the-clipboard-or-excel"></a>Verileri panoya veya Excel 'e kopyalama
 
@@ -90,7 +92,7 @@ Azure Boards iş öğeleri hakkında daha fazla bilgi için bkz. [iş öğeleri]
 
 1. Sonuca sağ tıklayın.
 
-2. **Iş öğesi oluştur**' un üzerine gelin ve sonra oluşturmak istediğiniz iş öğesi türüne (**hata**, **görev**vb.) tıklayın.
+2. **Iş öğesi oluştur** ' un üzerine gelin ve sonra oluşturmak istediğiniz iş öğesi türüne ( **hata** , **görev** vb.) tıklayın.
 
 3. Tüm gerekli alanları doldurarak iş öğesi formunu doldurun.
 

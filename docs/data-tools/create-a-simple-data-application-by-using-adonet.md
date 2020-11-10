@@ -1,5 +1,6 @@
 ---
 title: ADO.NET kullanarak basit veri uygulaması oluşturma
+description: Visual Studio 'da Windows Forms ve ADO.NET kullanarak basit bir Forms-Data uygulaması oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 08/23/2017
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c7db4d0072f217604e7ca163e581cc8fe138ffdb
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 44205f7f8f12d453a7c1d93ec8fee6ed1a3c1765
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037438"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436803"
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET kullanarak basit veri uygulaması oluşturma
 
@@ -28,7 +29,7 @@ Bu makalede, verileri bir veritabanından hızlı bir şekilde almanın basit bi
 > [!IMPORTANT]
 > Kodu basit tutmak için üretime hazırlanma özel durum işleme içermez.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Uygulamayı oluşturmak için şunlar gerekir:
 
@@ -44,15 +45,15 @@ Aşağıdaki adımları izleyerek örnek veritabanını oluşturun:
 
 1. Visual Studio 'da **Sunucu Gezgini** penceresini açın.
 
-2. **Veri bağlantıları** ' na sağ tıklayın ve **Yeni SQL Server veritabanı oluştur**' u seçin.
+2. **Veri bağlantıları** ' na sağ tıklayın ve **Yeni SQL Server veritabanı oluştur** ' u seçin.
 
-3. **Sunucu adı** metin kutusuna **(LocalDB) \mssqllocaldb**yazın.
+3. **Sunucu adı** metin kutusuna **(LocalDB) \mssqllocaldb** yazın.
 
-4. **Yeni veritabanı adı** metin kutusunda **Sales**yazın ve ardından **Tamam**' ı seçin.
+4. **Yeni veritabanı adı** metin kutusunda **Sales** yazın ve ardından **Tamam** ' ı seçin.
 
      Boş **Satış** veritabanı oluşturulur ve Sunucu Gezgini veri bağlantıları düğümüne eklenir.
 
-5. **Satış** verileri bağlantısına sağ tıklayın ve **Yeni sorgu**' yı seçin.
+5. **Satış** verileri bağlantısına sağ tıklayın ve **Yeni sorgu** ' yı seçin.
 
      Sorgu Düzenleyicisi penceresi açılır.
 
@@ -64,9 +65,9 @@ Aşağıdaki adımları izleyerek örnek veritabanını oluşturun:
 
 ## <a name="create-the-forms-and-add-controls"></a>Formları oluşturma ve denetimleri ekleme
 
-1. Windows Forms bir uygulama için bir proje oluşturun ve bunu **Simpledataapp**olarak adlandırın.
+1. Windows Forms bir uygulama için bir proje oluşturun ve bunu **Simpledataapp** olarak adlandırın.
 
-    Visual Studio, **Form1**adlı boş bir Windows formu dahil olmak üzere projeyi ve birkaç dosyayı oluşturur.
+    Visual Studio, **Form1** adlı boş bir Windows formu dahil olmak üzere projeyi ve birkaç dosyayı oluşturur.
 
 2. Projenize üç form olması için iki Windows formu ekleyin ve ardından aşağıdaki adları verin:
 
@@ -123,16 +124,16 @@ Aşağıdaki adımları izleyerek örnek veritabanını oluşturun:
 ## <a name="store-the-connection-string"></a>Bağlantı dizesini depolayın
 Uygulamanız veritabanına bir bağlantı açmaya çalıştığında, uygulamanızın bağlantı dizesine erişimi olması gerekir. Dizeyi her bir forma el ile girmekten kaçınmak için, dizeyi projenizdeki *App.config* dosyasına depolayın ve yöntemi uygulamanızdaki herhangi bir formdan çağrıldığında dizeyi döndüren bir yöntem oluşturun.
 
-Bağlantı dizesini **Sunucu Gezgini** ' de **Satış** verileri bağlantısına sağ tıklayıp **Özellikler**' i seçerek bulabilirsiniz. **ConnectionString** özelliğini bulun ve ardından **Ctrl** + **A** **Ctrl** + dizeyi seçmek ve panoya kopyalamak için CTRL A, CTRL**C** tuşlarını kullanın.
+Bağlantı dizesini **Sunucu Gezgini** ' de **Satış** verileri bağlantısına sağ tıklayıp **Özellikler** ' i seçerek bulabilirsiniz. **ConnectionString** özelliğini bulun ve ardından **Ctrl** + **A** **Ctrl** + dizeyi seçmek ve panoya kopyalamak için CTRL A, CTRL **C** tuşlarını kullanın.
 
-1. C# kullanıyorsanız, **Çözüm Gezgini**' de, proje altındaki **Özellikler** düğümünü genişletin ve ardından **Settings. Settings** dosyasını açın.
-    Visual Basic kullanıyorsanız, **Çözüm Gezgini**' de **tüm dosyaları göster**' e tıklayın, **Proje** düğümünü genişletin ve ardından **ayarlar. ayarlar** dosyasını açın.
+1. C# kullanıyorsanız, **Çözüm Gezgini** ' de, proje altındaki **Özellikler** düğümünü genişletin ve ardından **Settings. Settings** dosyasını açın.
+    Visual Basic kullanıyorsanız, **Çözüm Gezgini** ' de **tüm dosyaları göster** ' e tıklayın, **Proje** düğümünü genişletin ve ardından **ayarlar. ayarlar** dosyasını açın.
 
 2. **Ad** sütununda, girin `connString` .
 
 3. **Tür** listesinde **(bağlantı dizesi)** öğesini seçin.
 
-4. **Kapsam** listesinde, **uygulama**' yı seçin.
+4. **Kapsam** listesinde, **uygulama** ' yı seçin.
 
 5. **Değer** sütununda, Bağlantı dizenizi (dış tırnak işaretleri olmadan) girin ve ardından değişikliklerinizi kaydedin.
 
@@ -149,9 +150,9 @@ Uygulamayı çalıştırdığınızda gezinti formu açılır. **Hesap Ekle** d�
 
 #### <a name="make-the-navigation-form-the-startup-form"></a>Gezinti formunu başlangıç formu haline getirme
 
-C# kullanıyorsanız, **Çözüm Gezgini**' de **program.cs**açın ve ardından `Application.Run` satırı bu şekilde değiştirin: `Application.Run(new Navigation());`
+C# kullanıyorsanız, **Çözüm Gezgini** ' de **program.cs** açın ve ardından `Application.Run` satırı bu şekilde değiştirin: `Application.Run(new Navigation());`
 
-Visual Basic kullanıyorsanız, **Çözüm Gezgini**' de **Özellikler** penceresini açın, **uygulama** sekmesini seçin ve ardından **başlangıç formu** listesinden **simpledataapp. Navigation** öğesini seçin.
+Visual Basic kullanıyorsanız, **Çözüm Gezgini** ' de **Özellikler** penceresini açın, **uygulama** sekmesini seçin ve ardından **başlangıç formu** listesinden **simpledataapp. Navigation** öğesini seçin.
 
 #### <a name="create-auto-generated-event-handlers"></a>Otomatik olarak oluşturulan olay işleyicileri oluşturma
 

@@ -1,6 +1,8 @@
 ---
 title: Kod Analizi İade İlkeleri için Sürüm Uyumluluğu
 ms.date: 11/04/2016
+description: Team System 2008 Team Foundation Server ve Team Foundation Server 2010 ' nin Visual Studio iade ilkelerini farklı şekilde nasıl değerlendirçalıştığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
 - version compatibility, code analysis check-in policy
@@ -11,18 +13,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4757b3a105ff02a92944d9b45e645e2c63a8b81c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3a681f510da270bc22ae4bc983103f9a5735a127
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75587166"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436881"
 ---
 # <a name="version-compatibility-for-code-analysis-check-in-policies"></a>Kod Analizi İade İlkeleri için Sürüm Uyumluluğu
 
 Farklı sürümlerini kullanarak kod analizi iade ilkelerini değerlendirmeli ve yazarsa [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] , iade ilkelerinin nasıl ve nasıl değerlendirileceği hakkında farkları bilmeniz gerekir [!INCLUDE[vstsTfsOrcasLong](../code-quality/includes/vststfsorcaslong_md.md)] [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] .
 
-## <a name="version-compatibility-for-evaluating-check-in-policies"></a>Iade Ilkelerini değerlendirmek için sürüm uyumluluğu
+## <a name="version-compatibility-for-evaluating-check-in-policies"></a>Check-In Ilkelerini değerlendirmek için sürüm uyumluluğu
 
 - İçinde kod analizi iade etme ilkeleri değerlendirildiğinde [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] , içinde var olan ancak bulunmayan tüm kurallar yok [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] sayılır.
 
@@ -32,7 +34,7 @@ Farklı sürümlerini kullanarak kod analizi iade ilkelerini değerlendirmeli ve
 
 - Kod Analizi iade etme ilkesi, tanımadığı kural derlemelerini belirtiyorsa [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] bir ileti görüntülenir.
 
-## <a name="version-compatibility-for-authoring-check-in-policies"></a>Iade Ilkelerini yazmak için sürüm uyumluluğu
+## <a name="version-compatibility-for-authoring-check-in-policies"></a>Check-In Ilkeleri yazma için sürüm uyumluluğu
 
 - Sürümünü kullanarak bir kod analizi iade etme ilkesi oluşturduysanız [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] , [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] bunu değiştirmek için sürümünü kullanamazsınız. Ayrıca, [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] ilke değerlendirilemiyor.
 

@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-InvokeMethod etkinlik Tasarımcısı
+description: InvokeMethod etkinliği ve bir InvokeMethod etkinliği oluşturmak ve yapılandırmak için InvokeMethod etkinlik Tasarımcısı ' nı nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8660cd82f9d671da3b535ac228e8ce62c875dc07
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 55162def18d2295e0767a3999ffde75d71e1233d
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75593206"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437742"
 ---
 # <a name="invokemethod-activity-designer"></a>InvokeMethod Etkinlik Tasarımcısı
 
@@ -36,10 +38,10 @@ Aşağıdaki tabloda <xref:System.Activities.Statements.InvokeMethod> Özellikle
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay adı <xref:System.Activities.Statements.InvokeMethod> . Varsayılan değer InvokeMethod ' dır.<br /><br /> Kesinlikle gerekli olmasa da, <xref:System.Activities.Activity.DisplayName%2A> en iyisi bir tane kullanmaktır.|
-|<xref:System.Activities.Statements.InvokeMethod.MethodName%2A>|Doğru|Etkinlik yürütüldüğünde çağrılacak yöntemin adı. Çağrılan yöntem **ortak**olarak bildirilmelidir. Bu özellik tasarımcı yüzeyinde düzenlenebilir ve zorunludur.|
+|<xref:System.Activities.Statements.InvokeMethod.MethodName%2A>|Doğru|Etkinlik yürütüldüğünde çağrılacak yöntemin adı. Çağrılan yöntem **ortak** olarak bildirilmelidir. Bu özellik tasarımcı yüzeyinde düzenlenebilir ve zorunludur.|
 |<xref:System.Activities.Statements.InvokeMethod.Parameters%2A>|Yanlış|Çağrılan metodun parametre koleksiyonu. Parametrelerin, yöntem imzasında göründükleri sırada koleksiyona eklenmesi gerekir. Bu özelliği ayarlayabileceğiniz **Parametreler** iletişim kutusunu göstermek için, özellik kılavuzunun **Parametreler** alanındaki üç nokta düğmesine tıklayın. Parametreleri eklemek için **bağımsız değişken Oluştur** düğmesine tıklayın.|
 |<xref:System.Activities.Statements.InvokeMethod.Result%2A>|Yanlış|Yöntem çağrısının dönüş değeri.|
-|<xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>|Doğru|Metodun zaman uyumsuz olarak verilip verilmeyeceğini belirtir. Varsayılan değer **false**'dur.|
+|<xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>|Doğru|Metodun zaman uyumsuz olarak verilip verilmeyeceğini belirtir. Varsayılan değer **false** 'dur.|
 |<xref:System.Activities.Statements.InvokeMethod.TargetObject%2A>|Yanlış|Çağrılacak yöntemi içeren nesne. Bu özellik, tasarımcı yüzeyinde düzenlenebilir.<br /><br /> Ya da ' <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> nin ayarlanması gerekiyor.|
 |<xref:System.Activities.Statements.InvokeMethod.TargetType%2A>|Yanlış|Türü <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> . Bu özellik tasarımcı yüzeyinde düzenlenebilir. Bu özellik yalnızca çağrılan yöntem static ise ayarlanmalıdır.|
 

@@ -1,5 +1,7 @@
 ---
 title: TableAdapter’lar oluşturma ve yapılandırma
+description: Visual Studio 'da TableAdapter oluşturma ve yapılandırma konusunu gözden geçirin. TableAdapter, uygulamanızla veritabanı arasındaki iletişimi sağlar.
+ms.custom: SEO-VS-2020
 ms.date: 09/01/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 90dcc8e623f258721c71ef02082500a0736764e4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6c976f06f105969f1eaa91022607d61251a56008
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282680"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436764"
 ---
 # <a name="create-and-configure-tableadapters"></a>TableAdapter’lar oluşturma ve yapılandırma
 
@@ -27,7 +29,7 @@ TableAdapter, uygulamanızla veritabanı arasındaki iletişimi sağlar. Veritab
 
 TableAdapters, aşağıdaki eylemlerden birini gerçekleştirdiğinizde sizin için oluşturulur:
 
-- Veritabanı nesnelerini **Sunucu Gezgini** **veri kümesi Tasarımcısı**sürükleyin.
+- Veritabanı nesnelerini **Sunucu Gezgini** **veri kümesi Tasarımcısı** sürükleyin.
 
 - Veri kaynağı Yapılandırma Sihirbazı 'nı çalıştırın ve **veritabanı** ya da **Web hizmeti** veri kaynağı türünü seçin.
 
@@ -41,7 +43,7 @@ TableAdapters 'e giriş için bkz. [TableAdapters kullanarak veri kümelerini do
 
 ## <a name="use-the-tableadapter-configuration-wizard"></a>TableAdapter Yapılandırma Sihirbazı 'nı kullanma
 
-TableAdapters ve ilişkili DataTable değerlerini oluşturmak veya düzenlemek için **TableAdapter Yapılandırma sihirbazını** çalıştırın. Mevcut bir TableAdapter 'ı **veri kümesi Tasarımcısı**sağ tıklayarak yapılandırabilirsiniz.
+TableAdapters ve ilişkili DataTable değerlerini oluşturmak veya düzenlemek için **TableAdapter Yapılandırma sihirbazını** çalıştırın. Mevcut bir TableAdapter 'ı **veri kümesi Tasarımcısı** sağ tıklayarak yapılandırabilirsiniz.
 
 ![radveri tablo bağdaştırıcısı yapılandırma Sihirbazı](../data-tools/media/raddata-table-adapter-configuration-wizard.png)
 
@@ -49,7 +51,7 @@ Araç kutusundan yeni bir TableAdapter sürükleyip **veri kümesi Tasarımcıs�
 
 - Veritabanı için doğru izinleriniz varsa, temel alınan veritabanında yeni bir saklı yordam oluşturma seçeneğiniz vardır. Bu izinlere sahip değilseniz bu bir seçenek değildir.
 
-- Ayrıca, TableAdapter 'ın **Select**, **Insert**, **Update**ve **Delete** komutları için mevcut saklı yordamları çalıştırmayı da tercih edebilirsiniz. **Update** komutuna atanan saklı yordam, örneğin, `TableAdapter.Update()` yöntemi çağrıldığında çalıştırılır.
+- Ayrıca, TableAdapter 'ın **Select** , **Insert** , **Update** ve **Delete** komutları için mevcut saklı yordamları çalıştırmayı da tercih edebilirsiniz. **Update** komutuna atanan saklı yordam, örneğin, `TableAdapter.Update()` yöntemi çağrıldığında çalıştırılır.
 
 Seçili saklı yordamdaki parametreleri veri tablosundaki karşılık gelen sütunlara eşleyin. Örneğin, saklı yordamınız tablodaki sütuna geçtiğinde adlı bir parametreyi kabul ediyorsa `@CompanyName` `CompanyName` , parametresinin **kaynak sütununu** `@CompanyName` olarak ayarlayın `CompanyName` .
 
@@ -80,9 +82,9 @@ Aşağıdaki örnek, adlı ek bir sorgunun nasıl çağrılacağını göstermek
 
 ### <a name="to-start-the-tableadapter-query-configuration-wizard-with-a-new-query"></a>TableAdapter sorgu Yapılandırma Sihirbazı 'nı yeni bir sorgu ile başlatmak için
 
-1. Veri kümenizi **veri kümesi Tasarımcısı**açın.
+1. Veri kümenizi **veri kümesi Tasarımcısı** açın.
 
-2. Yeni bir sorgu oluşturuyorsanız, bir **sorgu** nesnesini **Toolbox** 'ın **DataSet** sekmesinden bir nesne üzerine sürükleyin <xref:System.Data.DataTable> veya TableAdapter 'ın kısayol menüsünden **Sorgu Ekle** ' yi seçin. Ayrıca, ilişkili olmayan bir TableAdapter oluşturan **veri kümesi Tasarımcısı**boş bir alanına bir **sorgu** nesnesi sürükleyebilirsiniz <xref:System.Data.DataTable> . Bu sorgular yalnızca tek (skaler) değerler döndürebilir veya veritabanına karşı UPDATE, INSERT veya DELETE komutlarını çalıştırabilir.
+2. Yeni bir sorgu oluşturuyorsanız, bir **sorgu** nesnesini **Toolbox** 'ın **DataSet** sekmesinden bir nesne üzerine sürükleyin <xref:System.Data.DataTable> veya TableAdapter 'ın kısayol menüsünden **Sorgu Ekle** ' yi seçin. Ayrıca, ilişkili olmayan bir TableAdapter oluşturan **veri kümesi Tasarımcısı** boş bir alanına bir **sorgu** nesnesi sürükleyebilirsiniz <xref:System.Data.DataTable> . Bu sorgular yalnızca tek (skaler) değerler döndürebilir veya veritabanına karşı UPDATE, INSERT veya DELETE komutlarını çalıştırabilir.
 
 3. **Veri bağlantınızı seçin** ekranında, sorgunun kullanacağı bağlantıyı seçin veya oluşturun.
 
@@ -108,7 +110,7 @@ Aşağıdaki örnek, adlı ek bir sorgunun nasıl çağrılacağını göstermek
 
 - Genel sorgular, tek (skaler) bir değer veya değer döndürmeyen SQL sorgulardır. Genellikle, genel işlevler ekleme, güncelleştirme ve silme gibi veritabanı işlemleri gerçekleştirir. Ayrıca, bir tablodaki müşterilerin sayısı veya belirli bir sırada tüm öğeler için toplam ücretler gibi bilgileri toplar.
 
-     Bir **sorgu** nesnesini **araç** **kümesi** sekmesinden **veri kümesi Tasarımcısı**boş bir alana sürükleyerek genel sorgular eklersiniz.
+     Bir **sorgu** nesnesini **araç** **kümesi** sekmesinden **veri kümesi Tasarımcısı** boş bir alana sürükleyerek genel sorgular eklersiniz.
 
 - İstenen görevi gerçekleştiren bir sorgu sağlayın, örneğin, `SELECT COUNT(*) AS CustomerCount FROM Customers` .
 

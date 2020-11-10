@@ -1,5 +1,7 @@
 ---
 title: LINQ to SQL O/R tasarımcısına genel bakış
+description: Visual Studio 'da LINQ to SQL araçlara genel bakış alın. Nesne İlişkisel Tasarımcısı (O/R Designer) hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: 45e477c0-5c6b-41f9-b2d0-2808fb4f6537
@@ -8,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 55f6fa2ad9eda2d701563d1fa99c76f5cd5c7c1d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: af394318d18244fc6e20e517d0ff985ca5e5ad1f
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282013"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436243"
 ---
 # <a name="linq-to-sql-tools-in-visual-studio"></a>Visual Studio 'da LINQ to SQL araçları
 
@@ -21,9 +23,9 @@ LINQ to SQL, Microsoft tarafından yayınlanan ilk nesne ilişkisel eşleme tekn
 
 ## <a name="install-the-linq-to-sql-tools"></a>LINQ to SQL araçlarını yükler
 
-Visual Studio 'da, **nesne ilişkisel Tasarımcısı** (**O/R DESIGNER**) kullanarak SQL tablolarını temsil eden LINQ to SQL sınıflar oluşturursunuz. O/R Tasarımcısı,. dbml dosyalarının düzenlenmesine yönelik Kullanıcı arabirimdir. . Dbml dosyalarını tasarımcı yüzeyine göre düzenlediğinizde, Visual Studio 'nun herhangi bir iş yükünün parçası olarak varsayılan olarak yüklenmeyen LINQ to SQL araçları gerekir.
+Visual Studio 'da, **nesne ilişkisel Tasarımcısı** ( **O/R DESIGNER** ) kullanarak SQL tablolarını temsil eden LINQ to SQL sınıflar oluşturursunuz. O/R Tasarımcısı,. dbml dosyalarının düzenlenmesine yönelik Kullanıcı arabirimdir. . Dbml dosyalarını tasarımcı yüzeyine göre düzenlediğinizde, Visual Studio 'nun herhangi bir iş yükünün parçası olarak varsayılan olarak yüklenmeyen LINQ to SQL araçları gerekir.
 
-LINQ to SQL araçlarını yüklemek için, Visual Studio yükleyicisi 'ni başlatın, **Değiştir**' i seçin, sonra **ayrı bileşenler** sekmesini seçin ve ardından **kod araçları** kategorisi altında **LINQ to SQL araçlar** ' ı seçin.
+LINQ to SQL araçlarını yüklemek için, Visual Studio yükleyicisi 'ni başlatın, **Değiştir** ' i seçin, sonra **ayrı bileşenler** sekmesini seçin ve ardından **kod araçları** kategorisi altında **LINQ to SQL araçlar** ' ı seçin.
 
 ## <a name="what-is-the-or-designer"></a>O/R Tasarımcısı nedir?
 
@@ -33,7 +35,7 @@ LINQ to SQL araçlarını yüklemek için, Visual Studio yükleyicisi 'ni başla
 
 ## <a name="open-the-or-designer"></a>O/R tasarımcısını açın
 
-Projenize LINQ to SQL bir varlık modeli eklemek için **Proje**  >  **Ekle yeni öğe**' yi seçin ve ardından proje öğeleri listesinden **LINQ to SQL sınıflar** ' ı seçin:
+Projenize LINQ to SQL bir varlık modeli eklemek için **Proje**  >  **Ekle yeni öğe** ' yi seçin ve ardından proje öğeleri listesinden **LINQ to SQL sınıflar** ' ı seçin:
 
 ![LINQ to SQL sınıfları](../data-tools/media/raddata-linq-to-sql-classes.png)
 
@@ -41,27 +43,27 @@ Visual Studio bir *. dbml* dosyası oluşturur ve bunu çözümünüze ekler. Bu
 
 ![Çözüm Gezgini LINQ to SQL sınıfları](../data-tools/media/raddata-linq-to-sql-classes-in-solution-explorer.png)
 
-*. Dbml* dosyasını seçtiğinizde, Visual Studio modeli görsel olarak oluşturmanıza olanak sağlayan **O/R tasarımcı** yüzeyini gösterir. Aşağıdaki çizimde, Northwind `Customers` ve `Orders` Tablolar **Sunucu Gezgini**sürükledikten sonra tasarımcı gösterilmektedir. Tablolar arasındaki ilişkiyi aklınızda edin.
+*. Dbml* dosyasını seçtiğinizde, Visual Studio modeli görsel olarak oluşturmanıza olanak sağlayan **O/R tasarımcı** yüzeyini gösterir. Aşağıdaki çizimde, Northwind `Customers` ve `Orders` Tablolar **Sunucu Gezgini** sürükledikten sonra tasarımcı gösterilmektedir. Tablolar arasındaki ilişkiyi aklınızda edin.
 
 ![LINQ to SQL Tasarımcısı](../data-tools/media/raddata-linq-to-sql-designer.png)
 
 > [!IMPORTANT]
-> Yalnızca 1:1 eşleme ilişkilerini desteklediği için **O/R Tasarımcısı** basit bir nesne ilişkisel eşleştiricisidir. Diğer bir deyişle, bir varlık sınıfı bir veritabanı tablosu veya görünümüyle yalnızca 1:1 eşleme ilişkisine sahip olabilir. Bir varlık sınıfını birleştirilmiş bir tabloya eşleme gibi karmaşık eşleme desteklenmez; karmaşık eşleme için Entity Framework kullanın. Ayrıca, tasarımcı tek yönlü bir kod Oluşturucu olur. Bu, yalnızca tasarımcı yüzeyine yaptığınız değişikliklerin kod dosyasında yansıtıldığı anlamına gelir. Kod dosyasında el ile yapılan değişiklikler **O/R tasarımcısında**yansıtılmaz. Tasarımcı kaydedildiğinde ve kod yeniden oluşturulduğunda kod dosyasında el ile yaptığınız tüm değişiklikler üzerine yazılır. Kullanıcı kodu ekleme ve **o/r Tasarımcısı**tarafından oluşturulan sınıfları genişletme hakkında bilgi için bkz. [nasıl yapılır: o/r Tasarımcısı tarafından oluşturulan kodu genişletme](../data-tools/how-to-extend-code-generated-by-the-o-r-designer.md).
+> Yalnızca 1:1 eşleme ilişkilerini desteklediği için **O/R Tasarımcısı** basit bir nesne ilişkisel eşleştiricisidir. Diğer bir deyişle, bir varlık sınıfı bir veritabanı tablosu veya görünümüyle yalnızca 1:1 eşleme ilişkisine sahip olabilir. Bir varlık sınıfını birleştirilmiş bir tabloya eşleme gibi karmaşık eşleme desteklenmez; karmaşık eşleme için Entity Framework kullanın. Ayrıca, tasarımcı tek yönlü bir kod Oluşturucu olur. Bu, yalnızca tasarımcı yüzeyine yaptığınız değişikliklerin kod dosyasında yansıtıldığı anlamına gelir. Kod dosyasında el ile yapılan değişiklikler **O/R tasarımcısında** yansıtılmaz. Tasarımcı kaydedildiğinde ve kod yeniden oluşturulduğunda kod dosyasında el ile yaptığınız tüm değişiklikler üzerine yazılır. Kullanıcı kodu ekleme ve **o/r Tasarımcısı** tarafından oluşturulan sınıfları genişletme hakkında bilgi için bkz. [nasıl yapılır: o/r Tasarımcısı tarafından oluşturulan kodu genişletme](../data-tools/how-to-extend-code-generated-by-the-o-r-designer.md).
 
 ## <a name="create-and-configure-the-datacontext"></a>DataContext oluşturma ve yapılandırma
 
-Bir projeye **LINQ to SQL Classes** öğesi ekledikten ve **O/R tasarımcısını**açtıktan sonra boş tasarım yüzeyi, yapılandırmaya yönelik boş bir <xref:System.Data.Linq.DataContext> hazırlık gösterir. , <xref:System.Data.Linq.DataContext> tasarım yüzeyine sürüklenen ilk öğe tarafından belirtilen bağlantı bilgileriyle yapılandırılır. Bu nedenle, <xref:System.Data.Linq.DataContext> tasarım yüzeyine bırakılan ilk öğeden bağlantı bilgileri kullanılarak yapılandırılır. Sınıf hakkında daha fazla bilgi için <xref:System.Data.Linq.DataContext> bkz. [DataContext metotları (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
+Bir projeye **LINQ to SQL Classes** öğesi ekledikten ve **O/R tasarımcısını** açtıktan sonra boş tasarım yüzeyi, yapılandırmaya yönelik boş bir <xref:System.Data.Linq.DataContext> hazırlık gösterir. , <xref:System.Data.Linq.DataContext> tasarım yüzeyine sürüklenen ilk öğe tarafından belirtilen bağlantı bilgileriyle yapılandırılır. Bu nedenle, <xref:System.Data.Linq.DataContext> tasarım yüzeyine bırakılan ilk öğeden bağlantı bilgileri kullanılarak yapılandırılır. Sınıf hakkında daha fazla bilgi için <xref:System.Data.Linq.DataContext> bkz. [DataContext metotları (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
 
 ## <a name="create-entity-classes-that-map-to-database-tables-and-views"></a>Veritabanı tabloları ve görünümleri ile eşlenen varlık sınıfları oluşturma
 
-Veritabanı tablolarını ve görünümlerini **Sunucu Gezgini** veya **veritabanı Gezgini** ' den **O/R tasarımcısına**sürükleyerek tablolara ve görünümlere eşlenmiş varlık sınıfları oluşturabilirsiniz. Önceki bölümde gösterildiği gibi,, <xref:System.Data.Linq.DataContext> tasarım yüzeyine sürüklenen ilk öğe tarafından sağlanmış olan bağlantı bilgileriyle yapılandırılır. Farklı bir bağlantı kullanan sonraki bir öğe **O/R tasarımcısına**eklenirse, bağlantısını değiştirebilirsiniz <xref:System.Data.Linq.DataContext> . Daha fazla bilgi için bkz. [nasıl yapılır: tablolar ve görünümler ile eşlenmiş LINQ to SQL sınıfları oluşturma (O/R Designer)](../data-tools/how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md).
+Veritabanı tablolarını ve görünümlerini **Sunucu Gezgini** veya **veritabanı Gezgini** ' den **O/R tasarımcısına** sürükleyerek tablolara ve görünümlere eşlenmiş varlık sınıfları oluşturabilirsiniz. Önceki bölümde gösterildiği gibi,, <xref:System.Data.Linq.DataContext> tasarım yüzeyine sürüklenen ilk öğe tarafından sağlanmış olan bağlantı bilgileriyle yapılandırılır. Farklı bir bağlantı kullanan sonraki bir öğe **O/R tasarımcısına** eklenirse, bağlantısını değiştirebilirsiniz <xref:System.Data.Linq.DataContext> . Daha fazla bilgi için bkz. [nasıl yapılır: tablolar ve görünümler ile eşlenmiş LINQ to SQL sınıfları oluşturma (O/R Designer)](../data-tools/how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md).
 
 ## <a name="create-datacontext-methods-that-call-stored-procedures-and-functions"></a>Saklı yordam ve işlevleri çağıran DataContext yöntemleri oluşturma
 
-<xref:System.Data.Linq.DataContext>Saklı yordam ve işlevleri çağıran (ile eşlenmiş) Yöntemler oluşturabilir ve bu nesneleri **Sunucu Gezgini** veya **veritabanı Gezgini** **O/R tasarımcısına**sürükleyin. Saklı yordamlar ve işlevler, yöntemi olarak **O/R tasarımcısına** eklenir <xref:System.Data.Linq.DataContext> .
+<xref:System.Data.Linq.DataContext>Saklı yordam ve işlevleri çağıran (ile eşlenmiş) Yöntemler oluşturabilir ve bu nesneleri **Sunucu Gezgini** veya **veritabanı Gezgini** **O/R tasarımcısına** sürükleyin. Saklı yordamlar ve işlevler, yöntemi olarak **O/R tasarımcısına** eklenir <xref:System.Data.Linq.DataContext> .
 
 > [!NOTE]
-> **Sunucu Gezgini** veya **veritabanı Gezgini** içindeki saklı yordamları ve Işlevleri **O/R tasarımcısına**sürüklediğinizde, oluşturulan metodun dönüş türü, <xref:System.Data.Linq.DataContext> öğeyi nereye bıraktığınızda olduğuna göre farklılık gösterir. Daha fazla bilgi için bkz. [DataContext yöntemleri (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
+> **Sunucu Gezgini** veya **veritabanı Gezgini** içindeki saklı yordamları ve Işlevleri **O/R tasarımcısına** sürüklediğinizde, oluşturulan metodun dönüş türü, <xref:System.Data.Linq.DataContext> öğeyi nereye bıraktığınızda olduğuna göre farklılık gösterir. Daha fazla bilgi için bkz. [DataContext yöntemleri (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
 
 ## <a name="configure-a-datacontext-to-use-stored-procedures-to-save-data-between-entity-classes-and-a-database"></a>Varlık sınıfları ve veritabanı arasında veri kaydetmek için saklı yordamları kullanmak üzere bir DataContext yapılandırma
 

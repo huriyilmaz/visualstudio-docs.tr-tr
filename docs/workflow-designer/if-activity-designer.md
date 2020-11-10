@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-If etkinlik Tasarımcısı
+description: Etkinliğin bir koşulu nasıl değerlendirdiğine ve bu değerlendirmenin sonuçlarına bağlı olarak bir etkinliği nasıl yürüttüğünü öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 099be38c5585fe19c00b31c00ac3a7ddcd3d7fe2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2daa2ab6e3f41d5447204db573b8ae228d617fdf
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76111467"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437820"
 ---
 # <a name="if-activity-designer"></a>If Etkinlik Tasarımcısı
 

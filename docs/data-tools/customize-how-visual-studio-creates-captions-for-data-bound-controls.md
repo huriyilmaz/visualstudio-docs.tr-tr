@@ -1,5 +1,7 @@
 ---
 title: Veri bağlantılı denetimler için açıklamalı alt yazıları özelleştirme
+description: Visual Studio 'Nun veri bağlantılı denetimler için açıklamalı alt yazı oluşturma şeklini özelleştirin. Veri kaynakları penceresinin akıllı açıklamalı alt yazı davranışını değiştirin. Akıllı resim yazısı devre dışı bırakın.
+ms.custom: SEO-VS-2020
 ms.date: 11/03/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 085542f912cc5747c2012adb05e6097b5891ed60
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 65c0f1146549dfbee6f84fab06be12053b174aeb
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282585"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436634"
 ---
 # <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>Visual Studio'nun verilere bağlı denetimler için başlık oluşturma biçimini özelleştirme
 
@@ -26,13 +28,13 @@ ms.locfileid: "85282585"
 
 ::: moniker range="vs-2017"
 
-**HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\15.0\Data tasarımcıları** kayıt defteri anahtarındaki **SmartCaptionExpression**, **Smartcaptiondeğişim**ve **SmartCaptionSuffix** değerlerini ayarlayarak bu etiketlerin oluşturulma biçimini özelleştirebilirsiniz.
+**HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Data Designers** kayıt defteri anahtarındaki **SmartCaptionExpression** , **Smartcaptiondeğişim** ve **SmartCaptionSuffix** değerlerini ayarlayarak bu etiketlerin oluşturulma biçimini özelleştirebilirsiniz.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-**HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\16.0\Data tasarımcıları** kayıt defteri anahtarındaki **SmartCaptionExpression**, **Smartcaptiondeğişim**ve **SmartCaptionSuffix** değerlerini ayarlayarak bu etiketlerin oluşturulma biçimini özelleştirebilirsiniz.
+**HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\16.0\Data Designers** kayıt defteri anahtarındaki **SmartCaptionExpression** , **Smartcaptiondeğişim** ve **SmartCaptionSuffix** değerlerini ayarlayarak bu etiketlerin oluşturulma biçimini özelleştirebilirsiniz.
 
 ::: moniker-end
 
@@ -43,10 +45,10 @@ Akıllı resim yazısı, **SmartCaptionExpression** değerinin değerine girilen
 
 Aşağıdaki tabloda, Başlık etiketlerini denetleyen kayıt defteri değerleri açıklanmaktadır.
 
-|Kayıt defteri öğesi|Description|
+|Kayıt defteri öğesi|Açıklama|
 |-------------------|-----------------|
 |**Smartcaptionifadesi**|Desenlerinizi eşleştirmek için kullandığınız normal ifade.|
-|**Smartcaptiondeğiştirme**|**SmartCaptionExpression**ile eşleşen grupları görüntüleme biçimi.|
+|**Smartcaptiondeğiştirme**|**SmartCaptionExpression** ile eşleşen grupları görüntüleme biçimi.|
 |**SmartCaptionSuffix**|Açıklamalı alt yazısının sonuna eklenecek isteğe bağlı bir dize.|
 
 Aşağıdaki tabloda, bu kayıt defteri değerleri için iç varsayılan ayarlar listelenmektedir.
@@ -64,9 +66,9 @@ Aşağıdaki tabloda, bu kayıt defteri değerleri için iç varsayılan ayarlar
 
 ## <a name="modify-the-smart-captioning-behavior-of-the-data-sources-window"></a>Veri kaynakları penceresinin akıllı açıklamalı alt yazı davranışını değiştirme
 
-1. **Başlat** ' a ve ardından **Çalıştır**' a tıklayarak bir komut penceresi açın.
+1. **Başlat** ' a ve ardından **Çalıştır** ' a tıklayarak bir komut penceresi açın.
 
-2. `regedit` **Çalıştır** iletişim kutusuna yazın ve **Tamam**' a tıklayın.
+2. `regedit` **Çalıştır** iletişim kutusuna yazın ve **Tamam** ' a tıklayın.
 
 3. **HKEY_CURRENT_USER**  >  **Software**  >  **Microsoft**  >  **VisualStudio** düğümünü genişletin.
 
@@ -88,15 +90,15 @@ Aşağıdaki tabloda, bu kayıt defteri değerleri için iç varsayılan ayarlar
     - `SmartCaptionReplacement`
     - `SmartCaptionSuffix`
 
-6. **SmartCaptionExpression** değerine sağ tıklayın ve **Değiştir**' i seçin.
+6. **SmartCaptionExpression** değerine sağ tıklayın ve **Değiştir** ' i seçin.
 
 7. **Veri kaynakları** penceresinin kullanmasını istediğiniz normal ifadeyi girin.
 
-8. **Smartcaptiondeğiştirme** değerine sağ tıklayın ve **Değiştir**' i seçin.
+8. **Smartcaptiondeğiştirme** değerine sağ tıklayın ve **Değiştir** ' i seçin.
 
 9. Normal ifadenizde eşleşen desenleri göstermek istediğiniz şekilde biçimlendirilen değiştirme dizesini girin.
 
-10. **SmartCaptionSuffix** değerine sağ tıklayın ve **Değiştir**' i seçin.
+10. **SmartCaptionSuffix** değerine sağ tıklayın ve **Değiştir** ' i seçin.
 
 11. Resim yazısının sonunda görünmesini istediğiniz karakterleri girin.
 
@@ -104,9 +106,9 @@ Aşağıdaki tabloda, bu kayıt defteri değerleri için iç varsayılan ayarlar
 
 ## <a name="turn-off-the-smart-captioning-feature"></a>Akıllı resim yazısı özelliğini kapatma
 
-1. **Başlat** ' a ve ardından **Çalıştır**' a tıklayarak bir komut penceresi açın.
+1. **Başlat** ' a ve ardından **Çalıştır** ' a tıklayarak bir komut penceresi açın.
 
-2. `regedit` **Çalıştır** iletişim kutusuna yazın ve **Tamam**' a tıklayın.
+2. `regedit` **Çalıştır** iletişim kutusuna yazın ve **Tamam** ' a tıklayın.
 
 3. **HKEY_CURRENT_USER**  >  **Software**  >  **Microsoft**  >  **VisualStudio** düğümünü genişletin.
 
@@ -128,11 +130,11 @@ Aşağıdaki tabloda, bu kayıt defteri değerleri için iç varsayılan ayarlar
     - `SmartCaptionReplacement`
     - `SmartCaptionSuffix`
 
-6. **SmartCaptionExpression** öğesine sağ tıklayın ve **Değiştir**' i seçin.
+6. **SmartCaptionExpression** öğesine sağ tıklayın ve **Değiştir** ' i seçin.
 
 7. `(.*)`Değer için girin. Bu, tüm dizeyle eşleşir.
 
-8. **Smartcaptiondeðiþtirme** öğesine sağ tıklayın ve **Değiştir**' i seçin.
+8. **Smartcaptiondeðiþtirme** öğesine sağ tıklayın ve **Değiştir** ' i seçin.
 
 9. `$1`Değer için girin. Bu, dizeyi, değiştirilmeden kalacak şekilde tüm dize olan eşleşen değerle değiştirir.
 

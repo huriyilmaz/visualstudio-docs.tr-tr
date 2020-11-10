@@ -12,21 +12,29 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f392cc2dcb474487a37076229c0b10f7359b9251
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: a96ea0fe4b4bbbebfc29cde7258273ea4f4b21e2
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349574"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437695"
 ---
 # <a name="deploy-an-app-to-a-folder-using-visual-studio"></a>Visual Studio 'Yu kullanarak bir klasöre uygulama dağıtma
 
 **Yayımla** aracını, Visual Studio 'daki bir klasöre ASP.NET, ASP.NET Core, .NET Core ve Python uygulamaları yayımlamak için kullanabilirsiniz. Node.js, adımlar desteklenir, ancak kullanıcı arabirimi farklıdır.
 
 [!INCLUDE [quickstart-prereqs](includes/quickstart-prereqs.md)]
-
+::: moniker range=">=vs-2017"
 > [!NOTE]
 > Bir Windows masaüstü uygulamasını bir klasöre yayımlamanız gerekiyorsa bkz. [ClickOnce kullanarak masaüstü uygulaması dağıtma](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) (C# veya Visual Basic). C++/CLR için bkz. [ClickOnce kullanarak yerel uygulama dağıtma](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) veya C/C++ için bkz. [Kurulum projesi kullanarak yerel uygulama dağıtma](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+> [!NOTE]
+> Bir klasöre .NET Core 3,1 veya daha yeni bir Windows masaüstü uygulaması yayımlamanız gerekiyorsa bkz. [ClickOnce kullanarak .NET Windows uygulaması dağıtma](quickstart-deploy-using-clickonce-folder.md).
+
+::: moniker-end
 
 ## <a name="deploy-to-a-local-folder"></a>Yerel klasöre dağıtma
 
@@ -40,7 +48,17 @@ ms.locfileid: "94349574"
 
     ![Yayımla hedefi olarak klasör seçin](../deployment/media/quickstart-publish-folder-new.png "Klasör Seç")
 
-1. Bir yol girin veya bir klasör belirtmek için **Araştır** ' ı seçin.
+::: moniker range=">=vs-2019"
+
+4. Bir .NET Core 3,1 veya daha yeni bir Windows uygulaması dağıtıyorsanız, **belirli hedef** pencerede **klasör** ' i seçmeniz gerekebilir.
+
+![Belirli bir hedef olarak klasör seçin](../deployment/media/quickstart-publish-folder-targets.png "Belirli hedef seçin")
+
+5. ClickOnce ile bir .NET Core 3,1 veya daha yeni bir sürümü yayınlamak istiyorsanız, bkz. [ClickOnce kullanarak .NET Windows uygulaması dağıtma](quickstart-deploy-using-clickonce-folder.md).
+
+ ::: moniker-end
+
+4. Bir yol girin veya bir klasör belirtmek için **Araştır** ' ı seçin.
 
     ![Klasörün yolunu belirtin](../deployment/media/quickstart-publish-folder-path.png "Klasör Seç")
 
@@ -73,3 +91,6 @@ Yayınlanan dosyaları dilediğiniz gibi dağıtın. Örneğin, bunları bir *. 
 - [Yayımla aracıyla .NET Core uygulaması dağıtma](/dotnet/core/deploying/deploy-with-vs)
 - [.NET Core uygulaması yayımlama (çerçeveye bağlı ve kendinden bağımsız dağıtımlar)](/dotnet/core/deploying/)
 - [.NET Framework ve uygulamaları dağıtma](/dotnet/framework/deployment/)
+::: moniker range=">=vs-2019"
+- [ClickOnce kullanarak bir .NET Windows uygulaması dağıtın](quickstart-deploy-using-clickonce-folder.md).
+ ::: moniker-end

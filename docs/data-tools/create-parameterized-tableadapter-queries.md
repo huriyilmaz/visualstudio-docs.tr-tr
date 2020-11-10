@@ -1,5 +1,7 @@
 ---
 title: Parametreleştirilmiş TableAdapter sorguları oluşturma
+description: Parametreli TableAdapter sorguları oluşturmayı anlayın. Parametreli bir sorgu, sorgu içindeki bir WHERE yan tümcesinin koşullarını karşılayan verileri döndürür.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,18 +20,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a2b94e10dd09d26a17a7574db97880567f7725cd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6eb2f6e1358c91a1103615aca67ede4a3561fae
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282611"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436673"
 ---
 # <a name="create-parameterized-tableadapter-queries"></a>Parametreleştirilmiş TableAdapter sorguları oluşturma
 
 Parametreli bir sorgu, sorgu içindeki bir WHERE yan tümcesinin koşullarını karşılayan verileri döndürür. Örneğin, bir müşteri listesini, `WHERE City = @City` müşterilerin listesini döndüren SQL ifadesinin sonuna ekleyerek yalnızca belirli bir şehirdeki müşterileri görüntüleyecek şekilde parametreleştirebilirsiniz.
 
-**Veri kümesi Tasarımcısı**parametreli TableAdapter sorguları oluşturursunuz. Bunları, **veri** menüsünde **Parametreleştirme veri kaynağı** komutuyla bir Windows uygulamasında da oluşturabilirsiniz. **Parametreleştirme veri kaynağı** komutu, formunuzda parametre değerlerini girebileceğiniz ve sorguyu çalıştıran denetimler oluşturur.
+**Veri kümesi Tasarımcısı** parametreli TableAdapter sorguları oluşturursunuz. Bunları, **veri** menüsünde **Parametreleştirme veri kaynağı** komutuyla bir Windows uygulamasında da oluşturabilirsiniz. **Parametreleştirme veri kaynağı** komutu, formunuzda parametre değerlerini girebileceğiniz ve sorguyu çalıştıran denetimler oluşturur.
 
 > [!NOTE]
 > Parametreli bir sorgu oluştururken, kodlama yaptığınız veritabanına özgü parametre gösterimini kullanın. Örneğin, Access ve OleDb veri kaynakları, parametreleri göstermek için '? ' soru işaretini kullanır, bu nedenle WHERE yan tümcesi şöyle görünür: `WHERE City = ?` .
@@ -48,13 +50,13 @@ Parametreli bir sorgu, sorgu içindeki bir WHERE yan tümcesinin koşullarını 
 
 1. Formunuzda zaten bir veri kümesine bağlı olan bir denetim seçin. Daha fazla bilgi için bkz. [Visual Studio 'da verilere Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md).
 
-2. **Veri** menüsünde **Sorgu Ekle**' yi seçin.
+2. **Veri** menüsünde **Sorgu Ekle** ' yi seçin.
 
 3. **Arama ölçütleri Oluşturucu** iletişim kutusunu doldurun ve istenen PARAMETRELERE sahip WHERE yan tümcesini SQL deyimi 'ne ekleyin.
 
 ### <a name="to-add-a-query-to-an-existing-data-bound-form"></a>Varolan bir veri bağlantılı forma bir sorgu eklemek için
 
-1. **Windows Form Tasarımcısı**formunu açın.
+1. **Windows Form Tasarımcısı** formunu açın.
 
 2. **Veri** menüsünde sorgu veya **veri Akıllı Etiketler** **Ekle** ' yi seçin.
 
@@ -71,7 +73,7 @@ Parametreli bir sorgu, sorgu içindeki bir WHERE yan tümcesinin koşullarını 
 
 5. **Sorgu metin** kutusuna parametreleri alan bir sorgu yazın.
 
-6. **Tamam**’ı seçin.
+6. **Tamam** ’ı seçin.
 
      Bir denetimde parametre ve bir **yükleme** düğmesi girişi için bir denetim eklenir <xref:System.Windows.Forms.ToolStrip> .
 
@@ -92,9 +94,9 @@ Bu bir TableAdapter üzerinde bir sorgu olsaydı, şu kodla gönderilmeyen tüm 
 
 Bir sorguyu null değerlerini kabul edecek şekilde etkinleştirmek için:
 
-1. **Veri kümesi Tasarımcısı**, null parametre değerlerini kabul etmesi gereken TableAdapter sorgusunu seçin.
+1. **Veri kümesi Tasarımcısı** , null parametre değerlerini kabul etmesi gereken TableAdapter sorgusunu seçin.
 
-2. **Özellikler** penceresinde **Parametreler**' i seçin, sonra **Parametreler koleksiyonu düzenleyicisini**açmak için üç nokta (**...**) düğmesini tıklatın.
+2. **Özellikler** penceresinde **Parametreler** ' i seçin, sonra **Parametreler koleksiyonu düzenleyicisini** açmak için üç nokta ( **...** ) düğmesini tıklatın.
 
 3. Null değerlere izin veren parametreyi seçin ve **AllowDBNull** özelliğini olarak ayarlayın `true` .
 

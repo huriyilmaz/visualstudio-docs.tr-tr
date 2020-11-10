@@ -1,6 +1,6 @@
 ---
-title: Özel Önizleme
-description: GitHub Codespaces Visual Studio Preview Beta deposu 'nda kullanılan örnek özelleştirmeler.
+title: Özel Beta
+description: GitHub Codespaces Visual Studio Preview Beta deposunda kullanılan örnek özelleştirmeler.
 ms.date: 08/28/2020
 ms.topic: reference
 author: andysterland
@@ -11,20 +11,20 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 61ef0a0575e5b86ab7cbd7c17e37c552c0c14388
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: c79206295615fc984d2a95b52e0ecc0f70814e6f
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005633"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437103"
 ---
-# <a name="private-preview"></a>Özel Önizleme
+# <a name="private-beta"></a>Özel Beta
 
 Bu örnekte, Visual Studio 'nun ilk [GitHub Codespaces](https://github.com/features/codespaces) özel beta ile aynı özelliklere sahip olması için bir codespace 'in nasıl özelleştirileceği gösterilmektedir.
 
 ## <a name="devinitjson"></a>.devinit.json
 
-Dosyadaki [_.devinit.js_](devinit-json.md) içeriği. Bu dosyanın _.devcontainer.js_ile aynı klasörde olması gerekir.
+[`.devinit.json`](devinit-json.md)Dosyanın içeriği. Bu dosyanın _.devcontainer.js_ ile aynı klasörde olması gerekir.
 
 ```json
 {

@@ -11,14 +11,18 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: ae274e460f4404efa92c4cf3785a3c2e41fd9691
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 1f66f691bd92c6cc9d315c58225b9345198fe96d
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134079"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435768"
 ---
 # <a name="getting-started-with-devinit"></a>Devinit ile çalışmaya başlama
+
+devinit, basit bir komut çalıştırarak, herkesin koda almasını ve deponuzda üretken olmasını sağlamak için kullanabileceğiniz bir araçtır. Deponuzda SQL Server, Node.js, Docker veya IIS gibi bir şeyler için gereken tüm sistem genelinde bağımlılıkları tanımlamak için devinit kullanabilirsiniz. Devinit, deponuzu yüklemek için diğer araçları ve paket yöneticilerini çağırabilir. Bu bağımlılıkları [ üzerinde.devinit.js](devinit-json.md) ADLı bir JSON dosyasında tanımlarsınız ve sonra deponuzu kullanmak için bir sonraki kişinin yalnızca [`devinit init`](devinit-commands.md#init) Tüm bu bağımlılıkları yüklemek üzere çalıştırması gerekir. Bu nedenle, yeni bir depoya bir gün sonra ekleme yapmak yerine dakikalar içinde yapılabilir.
+
+devinit, ve ' de bir paket yöneticisi veya bir sanal makine (VM) yapılandırma aracı değil. Bu, uygulamanızın ihtiyaç duyacağı sistem genelinde bağımlılıkları tanımlayan [.devinit.json](devinit-json.md)adlı bir bildirim dosyası için görev Çalıştırıcısı. Bu bağımlılıkları yüklemek için devinit, [Chocolatey](https://chocolatey.org)gibi zaten kullanmakta olabileceğiniz araçları kullanır. Kullanılabilen araçları [tam listede](devinit-tool-list.md)inceleyebilirsiniz. Devinit, yazılımın doğrudan dağıtılması yerine bu araçları kullanarak tercih ettiğiniz aracı kullanmanın rahatlığını sağlar ve var olan konfigürasyonları (örneğin, Chocolatey için bir [packages.config](https://chocolatey.org/docs/commands-install#packagesconfig) dosyası) kullanmanıza olanak tanır.  
 
 ## <a name="step-1-get-devinit"></a>1. Adım: devinit al
 
@@ -26,9 +30,9 @@ devinit Şu anda yalnızca Visual Studio kullanılırken GitHub Codespaces 'ın 
 
 ## <a name="step-2-define-your-environment"></a>2. Adım: ortamınızı tanımlama
 
-En önemli adım, ' Geliştirici ' ortamınızı dosyadaki bir [ _.devinit.js_](devinit-json.md)tanımlamaktır. Bu dosya, çalıştırdığınızda ortamınızı oluşturmak için devinit tarafından kullanılacaktır `devinit init` .
+En önemli adım, ' geliştirme ' ortamınızı [ dosyadaki bir.devinit.js](devinit-json.md)tanımlamaktır. Bu dosya, çalıştırdığınızda ortamınızı oluşturmak için devinit tarafından kullanılacaktır `devinit init` .
 
-Bu adım için, bir projeyi bir proje deposu ile çalışmaya ve çalıştırmaya verdiğiniz yönergeleri düşünün. Örneğin, SQL 'in yüklü olması gerekir mi? .NET Core 'un belirli bir sürümü mi? benzerlerini. Ardından, bu bağımlılıkların her biri için, [Araçlar listesinde](devinit-tool-list.md) ilgili bir devinit aracını arayın ve dosyayı depodaki _.devinit.js_ dosyasına ekleyin.
+Bu adım için, bir projeyi bir proje deposu ile çalışmaya ve çalıştırmaya verdiğiniz yönergeleri düşünün. Örneğin, SQL 'in yüklü olması gerekir mi? .NET Core 'un belirli bir sürümü mi? Etki alanları bu hiyerarşi sıralamasıyla devam eder. Ardından, bu bağımlılıkların her biri için, [Araçlar listesinde](devinit-tool-list.md) ilgili devinit aracına bakın ve bunu deponun `.devinit.json` dosyasına ekleyin. Örnekler [belgelerinde](sample-readme.md)örnek seçimini de görebilirsiniz.
 
 ## <a name="step-3-enjoy"></a>3. Adım: keyfini çıkarın!
 

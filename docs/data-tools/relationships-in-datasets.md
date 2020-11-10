@@ -1,5 +1,6 @@
 ---
 title: Veri kümeleri arasında ilişki oluşturma
+description: Visual Studio 'da veri kümeleri arasında ilişkiler oluşturun. DataRelation nesnelerini ve kısıtlamalarını anlayın. Veri kümesi Yöneticisi 'nde el ile bir veri ilişkisi oluşturun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,15 +17,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 93575cb299513dbb0616f3c7ed6f1c7db6d65bb5
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 0a07ca2d30e27cdcbc06e8f90a810982d4410931
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037692"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436104"
 ---
 # <a name="create-relationships-between-datasets"></a>Veri kümeleri arasında ilişki oluşturma
-İlişkili veri tabloları içeren veri kümeleri <xref:System.Data.DataRelation> , tablolar arasında bir üst/alt ilişkiyi temsil etmek ve birbiriyle ilişkili kayıtları döndürmek için nesneleri kullanır. **Veri kaynağı Yapılandırma Sihirbazı**' nı kullanarak veya **veri kümesi tasarımcısı**, ilgili tabloları veri kümelerine eklemek <xref:System.Data.DataRelation> sizin için nesneyi oluşturur ve yapılandırır.
+İlişkili veri tabloları içeren veri kümeleri <xref:System.Data.DataRelation> , tablolar arasında bir üst/alt ilişkiyi temsil etmek ve birbiriyle ilişkili kayıtları döndürmek için nesneleri kullanır. **Veri kaynağı Yapılandırma Sihirbazı** ' nı kullanarak veya **veri kümesi tasarımcısı** , ilgili tabloları veri kümelerine eklemek <xref:System.Data.DataRelation> sizin için nesneyi oluşturur ve yapılandırır.
 
 <xref:System.Data.DataRelation>Nesnesi iki işlev gerçekleştirir:
 
@@ -69,15 +70,15 @@ Veri kümesi tablolarındaki güncelleştirmeler hakkında daha fazla bilgi içi
 Bir <xref:System.Data.DataRelation> nesne oluşturduğunuzda, ilişkinin yalnızca kısıtlamaları zorlamak için kullanıldığını belirtme seçeneğiniz vardır. diğer bir deyişle, ilgili kayıtlara erişmek için de kullanılmaz. Bu seçeneği, biraz daha verimli bir veri kümesi oluşturmak ve ilgili kayıtlar özelliğiyle bunlardan daha az metot içermesi için kullanabilirsiniz. Bununla birlikte, ilgili kayıtlara erişemeyeceksiniz. Örneğin, yalnızca kısıtlama ilişkisi, hala alt kayıtları olan bir üst kaydı silmenizi önler ve üst öğe üzerinden alt kayıtlara erişemezsiniz.
 
 ## <a name="manually-creating-a-data-relation-in-the-dataset-designer"></a>Veri Kümesi Tasarımcısı bir veri ilişkisini el ile oluşturma
-Visual Studio 'daki veri tasarım araçlarını kullanarak veri tabloları oluşturduğunuzda, bilgiler verilerinizin kaynağından toplanarak ilişkiler otomatik olarak oluşturulur. **Araç kutusunun**veri **kümesi** sekmesinden veri tabloları el ile eklerseniz, ilişkiyi el ile oluşturmanız gerekebilir. Program aracılığıyla nesne oluşturma hakkında bilgi için <xref:System.Data.DataRelation> bkz. [DataRelation 'ı ekleme](/dotnet/framework/data/adonet/dataset-datatable-dataview/adding-datarelations).
+Visual Studio 'daki veri tasarım araçlarını kullanarak veri tabloları oluşturduğunuzda, bilgiler verilerinizin kaynağından toplanarak ilişkiler otomatik olarak oluşturulur. **Araç kutusunun** veri **kümesi** sekmesinden veri tabloları el ile eklerseniz, ilişkiyi el ile oluşturmanız gerekebilir. Program aracılığıyla nesne oluşturma hakkında bilgi için <xref:System.Data.DataRelation> bkz. [DataRelation 'ı ekleme](/dotnet/framework/data/adonet/dataset-datatable-dataview/adding-datarelations).
 
-Veri tabloları arasındaki ilişkiler, ilişkinin tek-çok yönünü gösteren anahtar ve sonsuz bir karakter içeren **veri kümesi Tasarımcısı**satır olarak görünür. Varsayılan olarak, ilişkinin adı tasarım yüzeyinde görünmez.
+Veri tabloları arasındaki ilişkiler, ilişkinin tek-çok yönünü gösteren anahtar ve sonsuz bir karakter içeren **veri kümesi Tasarımcısı** satır olarak görünür. Varsayılan olarak, ilişkinin adı tasarım yüzeyinde görünmez.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
 #### <a name="to-create-a-relationship-between-two-data-tables"></a>İki veri tablosu arasında bir ilişki oluşturmak için
 
-1. Veri kümenizi **veri kümesi Tasarımcısı**açın. Daha fazla bilgi için bkz. [Izlenecek yol: veri kümesi Tasarımcısı veri kümesi oluşturma](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
+1. Veri kümenizi **veri kümesi Tasarımcısı** açın. Daha fazla bilgi için bkz. [Izlenecek yol: veri kümesi Tasarımcısı veri kümesi oluşturma](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
 
 2. **Veri kümesi** araç kutusundan **ilişki nesnesini,** ilişkideki alt veri tablosuna sürükleyin.
 
@@ -101,7 +102,7 @@ Veri tabloları arasındaki ilişkiler, ilişkinin tek-çok yönünü gösteren 
 
 #### <a name="to-display-a-relation-name-in-the-dataset-designer"></a>Veri Kümesi Tasarımcısı bir ilişki adı görüntüleme
 
-1. Veri kümenizi **veri kümesi Tasarımcısı**açın. Daha fazla bilgi için bkz. [Izlenecek yol: veri kümesi Tasarımcısı veri kümesi oluşturma](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
+1. Veri kümenizi **veri kümesi Tasarımcısı** açın. Daha fazla bilgi için bkz. [Izlenecek yol: veri kümesi Tasarımcısı veri kümesi oluşturma](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
 
 2. **Veri** menüsünde Ilişki **etiketlerini göster** komutunu seçerek ilişki adını görüntüleyin. İlişki adını gizlemek için bu komutu temizleyin.
 

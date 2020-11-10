@@ -2,7 +2,7 @@
 title: 'Öğretici: bir depodan bir proje açın'
 description: Visual Studio 'Yu kullanarak bir git veya Azure DevOps deposunda bir projeyi açmayı öğrenin.
 ms.custom: get-started
-ms.date: 11/03/2020
+ms.date: 11/10/2020
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 56005faa4475f040375108ca02abbca40cd2652d
-ms.sourcegitcommit: e132a870ec198fdcec289227f1a0c1c48fef070c
+ms.openlocfilehash: 91fb06a50fe0c992d3018aee31cfc963544f8b97
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344546"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436087"
 ---
 # <a name="tutorial-open-a-project-from-a-repo"></a>Öğretici: bir depodan bir proje açın
 
@@ -75,6 +75,9 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
 ::: moniker range="vs-2019"
 
+> [!NOTE]
+> Visual Studio 2019 ' de yeni tümleşik git deneyimini denemek istiyorsanız, [**16,8 sürümüne**](/visualstudio/releases/2019/release-notes/)güncelleştirdiğinizden emin olun. Daha fazla bilgi için bkz. [Visual Studio 'Da yeni git deneyimi](../ide/git-with-visual-studio.md) sayfası.
+
 1. Visual Studio 2019 ' i açın.
 
 1. Başlangıç penceresinde, **Kopyala veya kullanıma alma kodu** ' nu seçin.
@@ -92,9 +95,6 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
    ![Çözüm Gezgini açılır listesinden neleri açmak istediğinizi seçin](./media/open-proj-repo-github-solutions-folders-picker.png)
 
    Deponuzda bir çözüm dosyanız (özellikle bir. sln dosyası) yoksa, giriş menüsünde "hiçbir çözüm bulunamadı" söylecektir. Ancak, klasörü Visual Studio kod düzenleyicisinde açmak için klasör menüsünden herhangi bir dosyaya çift tıklayabilirsiniz.
-
-> [!TIP]
-> Visual Studio 'da yeni bir tümleşik git deneyimi denemek ve 16,6 veya sonraki bir [sürümü](/visualstudio/releases/2019/release-notes-v16.6) kullanıyorsanız, **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **Önizleme özellikleri** ' ne giderek ve ardından **Yeni git Kullanıcı deneyimi** onay kutusunu seçerek bu özelliği etkinleştirebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'Da yeni git deneyimi](../ide/git-with-visual-studio.md) sayfası.
 
 ::: moniker-end
 

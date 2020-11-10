@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-FlowSwitch &lt; T &gt; etkinlik Tasarımcısı
+description: FlowSwitch <T> etkinliğinin, eşleşme ölçütü temelinde denetim akışı için dallandırma sağlayan bir koşullu düğüm olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d6637682bd6ba649f27c1a53f3b1448629f03736
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4eff69f1da5d2bc8c5f397b0cc6d21492a0a8d20
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88711579"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435801"
 ---
 # <a name="flowswitcht-activity-designer"></a>FlowSwitch\<T> Etkinlik Tasarımcısı
 
@@ -30,11 +32,11 @@ ms.locfileid: "88711579"
 
 ### <a name="using-the-flowswitcht-activity-designer"></a>FlowSwitch \<T> etkinlik tasarımcısını kullanma
 
-** \<T> FlowSwitch** etkinlik Tasarımcısı, iş akışı Tasarımcısı 'In sol tarafındaki **araç kutusu** sekmesine tıklanarak erişilen **araç çubuğu** **kategorisinde bulunabilir** . Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X**tuşlarına basın.
+**\<T> FlowSwitch** etkinlik Tasarımcısı, iş akışı Tasarımcısı 'In sol tarafındaki **araç kutusu** sekmesine tıklanarak erişilen **araç çubuğu** **kategorisinde bulunabilir** . Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X** tuşlarına basın.
 
-**FlowSwitch \<T> ** etkinlik Tasarımcısı **araç kutusundan** sürüklenip bir **akış çizelgesi** etkinlik Tasarımcısı içinde iş akışı Tasarımcısı yüzeyine bırakılabilir. Değerlendirilmeden elde edilen türü belirtmek için görüntülenen **türleri Seç** penceresini kullanın (genel parametresine göre ile ilişkili kod ile ilişkilendirilir <xref:System.Activities.Statements.FlowSwitch%601> ) <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> . Bu yordam <xref:System.Activities.Statements.FlowSwitch%601> , etkinlik Içinde **anahtar** etiketli bir etkinlik oluşturur <xref:System.Activities.Statements.Flowchart> . , <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> İpucu metninin "vb Ifadesi girin" ifadesini tıklatarak **Özellikler** penceresinin **ifade** kutusuna yazılabilir.
+**FlowSwitch \<T>** etkinlik Tasarımcısı **araç kutusundan** sürüklenip bir **akış çizelgesi** etkinlik Tasarımcısı içinde iş akışı Tasarımcısı yüzeyine bırakılabilir. Değerlendirilmeden elde edilen türü belirtmek için görüntülenen **türleri Seç** penceresini kullanın (genel parametresine göre ile ilişkili kod ile ilişkilendirilir <xref:System.Activities.Statements.FlowSwitch%601> ) <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> . Bu yordam <xref:System.Activities.Statements.FlowSwitch%601> , etkinlik Içinde **anahtar** etiketli bir etkinlik oluşturur <xref:System.Activities.Statements.Flowchart> . , <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> İpucu metninin "vb Ifadesi girin" ifadesini tıklatarak **Özellikler** penceresinin **ifade** kutusuna yazılabilir.
 
-**FlowSwitch \<T> ** etkinlik Tasarımcısı üzerinde fare, <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> kenarları etrafında görüntülenecek şekilde bağlantı kurmak için kullanılan kare tutamaçlarının oluşmasına neden olur. **FlowSwitch<T \> ** etkinlik tasarımcısını ve diğer etkinlik tasarımcılarını **Akış Çizelgesine**sürükledikten sonra <xref:System.Activities.Activity> temsil ettikleri nesneler, yürütme sırasını belirtmek için birlikte bağlanmaya hazırlarlar. İle ilişkili aşağıdakilerden birini oluşturmak için <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> <xref:System.Activities.Statements.FlowSwitch%601> , akışın çevreninin çevresi üzerinde yer alan bir kare, **<T \> ** ve sürükleyin (fare düğmesini basılı tutarak), fare tasarımcısının üzerine geldiğinde hedef etkinlik etrafında benzer şekilde görünen tutamaçlardan birine tıklayın. Fare düğmesini ve **FlowSwitch<T \> ** ' den, bu durumu temsil eden hedef tasarımcı ' ya bir ok işareti olarak bırakın. Bu örnek için varsayılan değer ok üzerinde görüntülenir ve **Özellikler** penceresinin **durum** kutusunda düzenlenebilir.
+**FlowSwitch \<T>** etkinlik Tasarımcısı üzerinde fare, <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> kenarları etrafında görüntülenecek şekilde bağlantı kurmak için kullanılan kare tutamaçlarının oluşmasına neden olur. **FlowSwitch<T \>** etkinlik tasarımcısını ve diğer etkinlik tasarımcılarını **Akış Çizelgesine** sürükledikten sonra <xref:System.Activities.Activity> temsil ettikleri nesneler, yürütme sırasını belirtmek için birlikte bağlanmaya hazırlarlar. İle ilişkili aşağıdakilerden birini oluşturmak için <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> <xref:System.Activities.Statements.FlowSwitch%601> , akışın çevreninin çevresi üzerinde yer alan bir kare, **<T \>** ve sürükleyin (fare düğmesini basılı tutarak), fare tasarımcısının üzerine geldiğinde hedef etkinlik etrafında benzer şekilde görünen tutamaçlardan birine tıklayın. Fare düğmesini ve **FlowSwitch<T \>** ' den, bu durumu temsil eden hedef tasarımcı ' ya bir ok işareti olarak bırakın. Bu örnek için varsayılan değer ok üzerinde görüntülenir ve **Özellikler** penceresinin **durum** kutusunda düzenlenebilir.
 
 ### <a name="the-flowswitcht-properties"></a>FlowSwitch \<T> Özellikleri
 

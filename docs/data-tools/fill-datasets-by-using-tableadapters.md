@@ -1,5 +1,7 @@
 ---
 title: TableAdapter'ları kullanarak veri kümelerini doldurma
+description: TableAdapters kullanarak veri kümelerini doldur. TableAdapter bileşeni, bir veri kümesini bir veya daha fazla sorgu ya da belirttiğiniz saklı yordamları temel alarak, VERITABANıNDAKI verilerle doldurur.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 888e2ac47348d7e61d115f51e3ea52d15ea9f447
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6a10eb996acbdbf5411688860ce2ec8b00da1f6
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282442"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436465"
 ---
 # <a name="fill-datasets-by-using-tableadapters"></a>TableAdapter'ları kullanarak veri kümelerini doldurma
 
@@ -35,7 +37,7 @@ TableAdapter bileşeni, bir veri kümesini bir veya daha fazla sorgu ya da belir
 
 TableAdapter işlemleri hakkında ayrıntılı bilgi için doğrudan şu konulardan birine atlayabilirsiniz:
 
-|Konu|Description|
+|Konu|Açıklama|
 |-----------|-----------------|
 |[TableAdapter’lar oluşturma ve yapılandırma](../data-tools/create-and-configure-tableadapters.md)|TableAdapters oluşturmak ve yapılandırmak için tasarımcıları kullanma|
 |[Parametreleştirilmiş TableAdapter sorguları oluşturma](../data-tools/create-parameterized-tableadapter-queries.md)|Kullanıcıların TableAdapter yordamlarına veya sorgularına bağımsız değişkenler vermesini sağlama|
@@ -52,7 +54,7 @@ TableAdapters, bir veritabanına bağlanan, sorguları veya saklı yordamları �
 
 ![İstemci uygulamasında veri akışı](../data-tools/media/clientdatadiagram.gif)
 
-TableAdapters, **veri kümesi Tasarımcısı**ile tasarlanırken, TableAdapter sınıfları iç içe geçmiş sınıfları olarak oluşturulmaz  <xref:System.Data.DataSet> . Her veri kümesine özgü ayrı ad alanlarında bulunur. Örneğin, adlı bir veri kümeniz varsa, `NorthwindDataSet` içinde ile ilişkili olan TableAdapters  <xref:System.Data.DataTable> `NorthwindDataSet` `NorthwindDataSetTableAdapters` ad alanında olur. Belirli bir TableAdapter bağdaştırıcısına program aracılığıyla erişmek için TableAdapter'ın yeni bir örneğini bildirmeniz gerekir. Örneğin:
+TableAdapters, **veri kümesi Tasarımcısı** ile tasarlanırken, TableAdapter sınıfları iç içe geçmiş sınıfları olarak oluşturulmaz  <xref:System.Data.DataSet> . Her veri kümesine özgü ayrı ad alanlarında bulunur. Örneğin, adlı bir veri kümeniz varsa, `NorthwindDataSet` içinde ile ilişkili olan TableAdapters  <xref:System.Data.DataTable> `NorthwindDataSet` `NorthwindDataSetTableAdapters` ad alanında olur. Belirli bir TableAdapter bağdaştırıcısına program aracılığıyla erişmek için TableAdapter'ın yeni bir örneğini bildirmeniz gerekir. Örneğin:
 
 [!code-csharp[VbRaddataTableAdapters#7](../data-tools/codesnippet/CSharp/fill-datasets-by-using-tableadapters_1.cs)]
 [!code-vb[VbRaddataTableAdapters#7](../data-tools/codesnippet/VisualBasic/fill-datasets-by-using-tableadapters_1.vb)]
@@ -63,7 +65,7 @@ Bir TableAdapter oluşturduğunuzda, TableAdapter 'ın ilişkili şemasını tan
 
 ## <a name="tableadapter-update-commands"></a>TableAdapter güncelleştirme komutları
 
-TableAdapter 'ın güncelleştirme işlevselliği, **TableAdapter sihirbazındaki**ana sorguda ne kadar bilgi kullanılabileceğini bağlıdır. Örneğin, birden çok tablodan (kullanarak) değerler getirmek üzere yapılandırılan TableAdapters `JOIN` , skaler değerler, görünümler veya toplama işlevlerinin sonuçları, başlangıçta temel alınan veritabanına güncelleştirmeleri geri gönderebilme özelliği ile oluşturulmaz. Ancak,, `INSERT` `UPDATE` ve `DELETE` komutlarını **Özellikler** penceresinde el ile yapılandırabilirsiniz.
+TableAdapter 'ın güncelleştirme işlevselliği, **TableAdapter sihirbazındaki** ana sorguda ne kadar bilgi kullanılabileceğini bağlıdır. Örneğin, birden çok tablodan (kullanarak) değerler getirmek üzere yapılandırılan TableAdapters `JOIN` , skaler değerler, görünümler veya toplama işlevlerinin sonuçları, başlangıçta temel alınan veritabanına güncelleştirmeleri geri gönderebilme özelliği ile oluşturulmaz. Ancak,, `INSERT` `UPDATE` ve `DELETE` komutlarını **Özellikler** penceresinde el ile yapılandırabilirsiniz.
 
 ## <a name="tableadapter-queries"></a>TableAdapter sorguları
 
@@ -81,15 +83,15 @@ Varsayılan olarak, bir TableAdapter 'ın veri tablosunu dolduracak bir sorguyu 
 
 ## <a name="tableadapter-inheritance"></a>TableAdapter devralma
 
-TableAdapters, yapılandırılmış bir sınıfı kapsülleyerek standart veri bağdaştırıcılarının işlevselliğini genişletir <xref:System.Data.Common.DataAdapter> . Varsayılan olarak, TableAdapter <xref:System.ComponentModel.Component> sınıfından devralır ve <xref:System.Data.Common.DataAdapter> sınıfa atanamaz. Bir TableAdapter 'ı sınıfa atama <xref:System.Data.Common.DataAdapter> bir <xref:System.InvalidCastException> hatayla sonuçlanır. Bir TableAdapter 'ın temel sınıfını değiştirmek için, <xref:System.ComponentModel.Component> **veri kümesi Tasarımcısı**TableAdapter 'ın **Base Class** özelliğinden türeten bir sınıf belirtebilirsiniz.
+TableAdapters, yapılandırılmış bir sınıfı kapsülleyerek standart veri bağdaştırıcılarının işlevselliğini genişletir <xref:System.Data.Common.DataAdapter> . Varsayılan olarak, TableAdapter <xref:System.ComponentModel.Component> sınıfından devralır ve <xref:System.Data.Common.DataAdapter> sınıfa atanamaz. Bir TableAdapter 'ı sınıfa atama <xref:System.Data.Common.DataAdapter> bir <xref:System.InvalidCastException> hatayla sonuçlanır. Bir TableAdapter 'ın temel sınıfını değiştirmek için, <xref:System.ComponentModel.Component> **veri kümesi Tasarımcısı** TableAdapter 'ın **Base Class** özelliğinden türeten bir sınıf belirtebilirsiniz.
 
 ## <a name="tableadapter-methods-and-properties"></a>TableAdapter yöntemleri ve özellikleri
 
-TableAdapter sınıfı bir .NET türü değil. Bu, belgelerde veya **nesne tarayıcısı**bakameyeceğiniz anlamına gelir. Daha önce bahsedilen sihirbazlardan birini kullandığınızda tasarım zamanında oluşturulur. Oluşturduğunuz bir TableAdapter 'a atanan ad, üzerinde çalıştığınız tablonun adını temel alır. Örneğin, adlı bir veritabanındaki bir tabloyu temel alan bir TableAdapter oluşturduğunuzda `Orders` , TableAdapter adlandırılır `OrdersTableAdapter` . TableAdapter 'ın sınıf adı, **veri kümesi Tasarımcısı** **ad** özelliği kullanılarak değiştirilebilir.
+TableAdapter sınıfı bir .NET türü değil. Bu, belgelerde veya **nesne tarayıcısı** bakameyeceğiniz anlamına gelir. Daha önce bahsedilen sihirbazlardan birini kullandığınızda tasarım zamanında oluşturulur. Oluşturduğunuz bir TableAdapter 'a atanan ad, üzerinde çalıştığınız tablonun adını temel alır. Örneğin, adlı bir veritabanındaki bir tabloyu temel alan bir TableAdapter oluşturduğunuzda `Orders` , TableAdapter adlandırılır `OrdersTableAdapter` . TableAdapter 'ın sınıf adı, **veri kümesi Tasarımcısı** **ad** özelliği kullanılarak değiştirilebilir.
 
 Aşağıda, TableAdapters 'in yaygın olarak kullanılan yöntemleri ve özellikleri verilmiştir:
 
-|Üye|Description|
+|Üye|Açıklama|
 |------------|-----------------|
 |`TableAdapter.Fill`|TableAdapter 'ın ilişkili veri tablosunu TableAdapter komutunun sonuçlarıyla doldurur `SELECT` .|
 |`TableAdapter.Update`|Değişiklikleri veritabanına geri gönderir ve güncelleştirmeden etkilenen satır sayısını temsil eden bir tamsayı döndürür. Daha fazla bilgi için bkz. [TableAdapter kullanarak verileri güncelleştirme](../data-tools/update-data-by-using-a-tableadapter.md).|
@@ -99,7 +101,7 @@ Aşağıda, TableAdapters 'in yaygın olarak kullanılan yöntemleri ve özellik
 
 ## <a name="tableadapter-update-method"></a>TableAdapter Update yöntemi
 
-TableAdapter bağdaştırıcıları veritabanından okuma ve yazma yapmak için veri komutlarını kullanır. TableAdapter 'ın ilk `Fill` (ana) sorgusunu, ilişkili veri tablosunun şemasını oluşturma `InsertCommand` `UpdateCommand` ve `DeleteCommand` yöntemi ile ilişkili olan komutları temel olarak kullanın `TableAdapter.Update` . TableAdapter 'ın metodunu çağırmak `Update` , TableAdapter **sorgu Yapılandırma Sihirbazı**ile eklediğiniz ek sorgulardan birini değil, TableAdapter ilk yapılandırıldığında oluşturulan deyimleri çalıştırır.
+TableAdapter bağdaştırıcıları veritabanından okuma ve yazma yapmak için veri komutlarını kullanır. TableAdapter 'ın ilk `Fill` (ana) sorgusunu, ilişkili veri tablosunun şemasını oluşturma `InsertCommand` `UpdateCommand` ve `DeleteCommand` yöntemi ile ilişkili olan komutları temel olarak kullanın `TableAdapter.Update` . TableAdapter 'ın metodunu çağırmak `Update` , TableAdapter **sorgu Yapılandırma Sihirbazı** ile eklediğiniz ek sorgulardan birini değil, TableAdapter ilk yapılandırıldığında oluşturulan deyimleri çalıştırır.
 
 TableAdapter kullandığınızda, genellikle gerçekleştirdiğiniz komutlarla aynı işlemleri etkili bir şekilde gerçekleştirir. Örneğin, bağdaştırıcının `Fill` yöntemini çağırdığınızda, bağdaştırıcı özelliğindeki Data komutunu çalıştırır `SelectCommand` ve <xref:System.Data.SqlClient.SqlDataReader> sonuç kümesini veri tablosuna yüklemek için bir veri okuyucu (örneğin,) kullanır. Benzer şekilde, bağdaştırıcının `Update` yöntemini çağırdığınızda, `UpdateCommand` `InsertCommand` `DeleteCommand` veri tablosundaki her değiştirilmiş kayıt için uygun komutu (,, ve özellikleri) çalıştırır.
 
@@ -126,12 +128,12 @@ TableAdapterManager sınıfı bir .NET türü değildir. Bu nedenle, belgelerde 
 
 Aşağıda, sınıfının sık kullanılan yöntemleri ve özellikleri verilmiştir `TableAdapterManager` :
 
-|Üye|Description|
+|Üye|Açıklama|
 |------------|-----------------|
 |`UpdateAll` yöntemi|Tüm veri tablolarından tüm verileri kaydeder.|
 |`BackUpDataSetBeforeUpdate` özelliði|Yöntemi yürütmeden önce veri kümesinin yedek kopyasının oluşturulup oluşturulmayacağını belirler `TableAdapterManager.UpdateAll` . Boolean.|
 |*TableName* `TableAdapter` özelliði|Bir TableAdapter temsil eder. Oluşturulan TableAdapterManager, yönettiği her bir özellik içerir `TableAdapter` . Örneğin, Customers ve Orders tablosu içeren bir veri kümesi, ve özellikleri içeren bir TableAdapterManager ile `CustomersTableAdapter` oluşturulur `OrdersTableAdapter` .|
-|`UpdateOrder` özelliði|Tek tek ekleme, güncelleştirme ve silme komutlarının sırasını denetler. Bunu, Numaralandırmadaki değerlerden birine ayarlayın `TableAdapterManager.UpdateOrderOption` .<br /><br /> Varsayılan olarak, `UpdateOrder` **InsertUpdateDelete**olarak ayarlanır. Bu, daha sonra, ve sonrasında silinmeler, veri kümesindeki tüm tablolar için gerçekleştirilir.|
+|`UpdateOrder` özelliði|Tek tek ekleme, güncelleştirme ve silme komutlarının sırasını denetler. Bunu, Numaralandırmadaki değerlerden birine ayarlayın `TableAdapterManager.UpdateOrderOption` .<br /><br /> Varsayılan olarak, `UpdateOrder` **InsertUpdateDelete** olarak ayarlanır. Bu, daha sonra, ve sonrasında silinmeler, veri kümesindeki tüm tablolar için gerçekleştirilir.|
 
 ## <a name="security"></a>Güvenlik
 

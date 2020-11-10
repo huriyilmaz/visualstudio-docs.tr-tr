@@ -1,5 +1,7 @@
 ---
 title: WPF uygulamalarında arama tabloları oluşturma
+description: WPF uygulamalarında arama tabloları oluşturma. Arama tablosu, bir veri tablosundan, diğer bir tablodaki yabancı anahtar alan değerine göre bilgi gösteren bir denetimdir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -16,16 +18,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7485c63d358bc6f6fe7030e589fbdf7286ded3fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 293f04ca111fe88c905a288885f7e4763ec1cdc3
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282624"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436699"
 ---
 # <a name="create-lookup-tables-in-wpf-applications"></a>WPF uygulamalarında arama tabloları oluşturma
 
-Terim *arama tablosu* (bazen *arama bağlaması*denir), bir veri tablosundan, başka bir tablodaki yabancı anahtar alanının değerine göre bilgi görüntüleyen bir denetimi açıklar. Bir üst tablonun veya nesnenin ana **düğümünü, ilgili** alt tablodaki bir sütuna veya özelliğe zaten bağımlı olan bir denetimin üzerine sürükleyerek bir arama tablosu oluşturabilirsiniz.
+Terim *arama tablosu* (bazen *arama bağlaması* denir), bir veri tablosundan, başka bir tablodaki yabancı anahtar alanının değerine göre bilgi görüntüleyen bir denetimi açıklar. Bir üst tablonun veya nesnenin ana **düğümünü, ilgili** alt tablodaki bir sütuna veya özelliğe zaten bağımlı olan bir denetimin üzerine sürükleyerek bir arama tablosu oluşturabilirsiniz.
 
 Örneğin, `Orders` bir satış veritabanındaki tablosunu düşünün. Tablodaki her kayıt `Orders` `CustomerID` , siparişi hangi müşterinin yaptığını belirten bir içerir. , `CustomerID` Tablodaki bir müşteri kaydına işaret eden bir yabancı anahtardır `Customers` . Tablodan siparişlerin bir listesini görüntülediğinizde, `Orders` yerine gerçek müşteri adını göstermek isteyebilirsiniz `CustomerID` . Müşteri adı `Customers` tabloda olduğundan, müşteri adını göstermek için bir arama tablosu oluşturmanız gerekir. Arama tablosu, `CustomerID` `Orders` ilişkide gezinmek için kayıttaki değeri kullanır ve müşteri adını döndürür.
 
@@ -42,7 +44,7 @@ Terim *arama tablosu* (bazen *arama bağlaması*denir), bir veri tablosundan, ba
     > [!NOTE]
     > Bir arama tablosu oluşturabilmeniz için önce iki ilişkili tablo veya nesne, proje için bir veri kaynağı olarak bulunmalıdır.
 
-2. **WPF tasarımcısını**açın ve tasarımcı 'Nın **veri kaynakları** penceresindeki öğeler için geçerli bir bırakma hedefi olan bir kapsayıcı içerdiğinden emin olun.
+2. **WPF tasarımcısını** açın ve tasarımcı 'Nın **veri kaynakları** penceresindeki öğeler için geçerli bir bırakma hedefi olan bir kapsayıcı içerdiğinden emin olun.
 
      Geçerli bırakma hedefleri hakkında daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).
 
@@ -53,7 +55,7 @@ Terim *arama tablosu* (bazen *arama bağlaması*denir), bir veri tablosundan, ba
     > [!NOTE]
     > İlişkili alt tablo veya nesne, üst tablo veya nesne altında genişletilebilen bir alt düğüm olarak görünen düğümdür.
 
-5. Alt düğümün açılan menüsüne tıklayın ve **Ayrıntılar**' ı seçin.
+5. Alt düğümün açılan menüsüne tıklayın ve **Ayrıntılar** ' ı seçin.
 
 6. Alt düğümü genişletin.
 

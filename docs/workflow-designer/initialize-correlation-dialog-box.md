@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-bağıntıyı Başlat Iletişim kutusu
+description: Initialbir Ilişki etkinliğinin CorrelationData özelliğini düzenlemek için İş Akışı Tasarımcısı bağıntıyı Başlat iletişim kutusunu nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 04f0a3bb70dbab31e0faa5c38caac9b54c6154fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a35911fef39315580f402e174b0f32d443a33cf
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114781"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437807"
 ---
 # <a name="initialize-correlation-dialog-box"></a>Bağıntıyı Başlat İletişim Kutusu
 
@@ -23,9 +25,9 @@ Bir etkinliğin özelliğini düzenlemek için İş Akışı Tasarımcısı **ba
 
 Aşağıdaki tabloda **bağıntı Başlat** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır:
 
-|Arabirim Öğesi|Description|
+|Arabirim Öğesi|Açıklama|
 |-|-----------------|
-|**Correlation (Bağıntı)** |<xref:System.ServiceModel.Activities.CorrelationHandle>Başlatılacak bağıntı.|
+|**Bağıntı**|<xref:System.ServiceModel.Activities.CorrelationHandle>Başlatılacak bağıntı.|
 |**Başlatma tarihi**|Başlatılacak verileri içeren bir anahtar/değer çifti. Bu değer özelliğine karşılık gelir <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> . Geçerli bir anahtar/değer çifti örneği, OrderID adlı bir değişkenle eşleştirilmiş "OrderID" adlı bir anahtardır.|
 
 ## <a name="to-launch-the-initialize-correlation-dialog-box"></a>Bağıntıyı Başlat iletişim kutusunu başlatmak için

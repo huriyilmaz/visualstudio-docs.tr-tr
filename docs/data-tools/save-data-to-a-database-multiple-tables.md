@@ -1,5 +1,7 @@
 ---
 title: Bir veritabanına (birden çok tablo) veri kaydetme
+description: Bu kılavuzda, Visual Studio 'da veri kümesi araçlarını kullanarak verileri birden çok tablodan veritabanına kaydedin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b512263cd5d0ca8c83b0ba6848fb16feca1a71f6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2f6401fedc3158e2743f08775da93faf2ddfee73
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281649"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436048"
 ---
 # <a name="save-data-to-a-database-multiple-tables"></a>Bir veritabanına (birden çok tablo) veri kaydetme
 
@@ -41,15 +43,15 @@ Bu izlenecek yolda gösterilen görevler şunlardır:
 
 - Veri kümesindeki güncelleştirilmiş verileri veritabanına geri göndermek için kodu değiştirme.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
-1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi**aracılığıyla yükleyin. **Visual Studio yükleyicisi**, SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
+1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. **Visual Studio yükleyicisi** , SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
 
 2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
-    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
+    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu** ' yı seçin.
 
        Sorgu Düzenleyicisi penceresi açılır.
 
@@ -61,19 +63,19 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 ## <a name="create-the-windows-forms-application"></a>Windows Forms uygulamasını oluşturma
 
-C# veya Visual Basic için yeni bir **Windows Forms uygulama** projesi oluşturun. Projeyi **UpdateMultipleTablesWalkthrough**olarak adlandırın.
+C# veya Visual Basic için yeni bir **Windows Forms uygulama** projesi oluşturun. Projeyi **UpdateMultipleTablesWalkthrough** olarak adlandırın.
 
 ## <a name="create-the-data-source"></a>Veri kaynağını oluşturma
 
-Bu adım, **veri kaynağı Yapılandırma Sihirbazı**'Nı kullanarak Northwind veritabanından bir veri kaynağı oluşturur. Bağlantıyı oluşturmak için Northwind örnek veritabanına erişiminizin olması gerekir. Northwind örnek veritabanını ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: örnek veritabanlarını kurma](../data-tools/installing-database-systems-tools-and-samples.md).
+Bu adım, **veri kaynağı Yapılandırma Sihirbazı** 'Nı kullanarak Northwind veritabanından bir veri kaynağı oluşturur. Bağlantıyı oluşturmak için Northwind örnek veritabanına erişiminizin olması gerekir. Northwind örnek veritabanını ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: örnek veritabanlarını kurma](../data-tools/installing-database-systems-tools-and-samples.md).
 
-1. **Veri** menüsünde **veri kaynaklarını göster**' i seçin.
+1. **Veri** menüsünde **veri kaynaklarını göster** ' i seçin.
 
    **Veri kaynakları** penceresi açılır.
 
-2. Veri **kaynakları** penceresinde, **veri kaynağı Yapılandırma Sihirbazı**' nı başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
+2. Veri **kaynakları** penceresinde, **veri kaynağı Yapılandırma Sihirbazı** ' nı başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
-3. **Veri kaynağı türü seçin** ekranında **veritabanı**' nı seçin ve ardından **İleri**' yi seçin.
+3. **Veri kaynağı türü seçin** ekranında **veritabanı** ' nı seçin ve ardından **İleri** ' yi seçin.
 
 4. **Veri bağlantınızı seçin** ekranında aşağıdakilerden birini yapın:
 
@@ -83,13 +85,13 @@ Bu adım, **veri kaynağı Yapılandırma Sihirbazı**'Nı kullanarak Northwind 
 
     - **Yeni bağlantı** ' yı seçerek **Bağlantı Ekle/Değiştir** iletişim kutusunu açın.
 
-5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etme seçeneğini belirleyin ve ardından **İleri**' yi seçin.
+5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etme seçeneğini belirleyin ve ardından **İleri** ' yi seçin.
 
-6. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet**sayfasında **İleri**' yi seçin.
+6. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** sayfasında **İleri** ' yi seçin.
 
 7. **Veritabanı nesnelerinizi seçin** ekranında **Tablolar** düğümünü genişletin.
 
-8. **Müşteriler** ve **siparişler** tablolarını seçip **son**' u seçin.
+8. **Müşteriler** ve **siparişler** tablolarını seçip **son** ' u seçin.
 
      **NorthwindDataSet** , projenize eklenir ve tablolar **veri kaynakları** penceresinde görüntülenir.
 
@@ -107,11 +109,11 @@ Bu kılavuzda, tablodaki veriler, `Customers` verilerin tek tek denetimlerde gö
 
 Veri **kaynakları** penceresinden formunuza öğe sürükleyerek veri bağlantılı denetimleri oluşturabilirsiniz.
 
-1. Ana **müşteriler** düğümünü **veri kaynakları** penceresinden **Form1**üzerine sürükleyin.
+1. Ana **müşteriler** düğümünü **veri kaynakları** penceresinden **Form1** üzerine sürükleyin.
 
      Açıklayıcı etiketlere sahip veriye bağlı denetimler, formda gezinmek için bir araç şeridinde () birlikte görüntülenir <xref:System.Windows.Forms.BindingNavigator> . Bileşen tepsisinde bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `CustomersTableAdapter` , <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> görüntülenir.
 
-2. İlgili **siparişler** düğümünü **veri kaynakları** penceresinden **Form1**üzerine sürükleyin.
+2. İlgili **siparişler** düğümünü **veri kaynakları** penceresinden **Form1** üzerine sürükleyin.
 
     > [!NOTE]
     > İlişkili **siparişler** düğümü, **Faks** sütununun altında bulunur ve **müşteriler** düğümünün bir alt düğümüdür.
@@ -134,9 +136,9 @@ Veri **kaynakları** penceresinden formunuza öğe sürükleyerek veri bağlant�
      [!code-vb[VbRaddataSaving#10](../data-tools/codesnippet/VisualBasic/save-data-to-a-database-multiple-tables_1.vb)]
      [!code-csharp[VbRaddataSaving#10](../data-tools/codesnippet/CSharp/save-data-to-a-database-multiple-tables_1.cs)]
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
 
-1. **F5**tuşuna basın.
+1. **F5** tuşuna basın.
 
 2. Her tablodaki bir veya daha fazla kaydın verilerinde bazı değişiklikler yapın.
 

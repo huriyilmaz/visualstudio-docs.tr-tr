@@ -1,5 +1,7 @@
 ---
 title: WPF uygulamalarındaki ilgili verileri görüntüleme
+description: WPF uygulamalarında ilgili verileri görüntüleme. Birden çok tablodan veya bir üst-alt ilişkisinde birbirleriyle ilişkili varlıklardan verilerle çalışın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6694d3c1521a6a405323edc33adc44dac0e66829
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a9604ac7c0083bc40edb17b19d4de608eb7366b1
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282559"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436504"
 ---
 # <a name="display-related-data-in-wpf-applications"></a>WPF uygulamalarındaki ilgili verileri görüntüleme
 
@@ -33,7 +35,7 @@ Bazı uygulamalarda, bir üst-alt ilişkisinde birbirleriyle ilgili birden çok 
 
 1. Veri **kaynakları** penceresini açmak için **veri** menüsünde **veri kaynaklarını göster** ' e tıklayın.
 
-2. **Yeni veri kaynağı Ekle**' ye tıklayın ve **veri kaynağı yapılandırma** Sihirbazı ' nı doldurun.
+2. **Yeni veri kaynağı Ekle** ' ye tıklayın ve **veri kaynağı yapılandırma** Sihirbazı ' nı doldurun.
 
 3. WPF tasarımcısını açın ve tasarımcı 'nın **veri kaynakları** penceresindeki öğeler için geçerli bir bırakma hedefi olan bir kapsayıcı içerdiğinden emin olun.
 

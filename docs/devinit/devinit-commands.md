@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 6543dfe8298ea24aa731a74556b01be1beeed2bf
-ms.sourcegitcommit: e132a870ec198fdcec289227f1a0c1c48fef070c
+ms.openlocfilehash: 153864a293ca25fdcf30f23b96f686737411c965
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344480"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435788"
 ---
 # <a name="devinit-commands"></a>devinit komutları
 
@@ -26,7 +26,7 @@ ms.locfileid: "93344480"
 devinit init
 ```
 
-Geçerli çalışma dizinindeki [_.devinit.js_](devinit-json.md) dosyasında belirtilen araçları çalıştırarak ortamı başlatın.  
+Dosyasında [.devinit.js](devinit-json.md) belirtilen araçları çalıştırarak ortamı başlatın.
 
 ### <a name="options-for-init"></a>İnit seçenekleri
 
@@ -34,7 +34,7 @@ Komut için isteğe bağlı seçenekler `devinit init` .
 
 | Bağımsız Değişken             | Gerekli | Açıklama                                                               |
 |----------------------|----------|---------------------------------------------------------------------------|
-| -f,--dosyası            | No       | Dosyadaki _.devinit.js_ yolu.                                         |
+| -f,--dosyası            | No       | `.devinit.json`Dosyanın yolu.                                         |
 | --hata-eylem       | No       | Hataların nasıl işleneceğini belirtir. Seçenekler: durdur, Yoksay, devam et (varsayılan).|
 | -v,--verbose         | No       | Ayrıntılı çıktıyı yay.                                                      |
 | -n,--Kuru çalıştırma         | No       | Kuru çalıştırma.                                                                  |
@@ -81,7 +81,7 @@ Komut için Seçenekler `devinit run` .
 
 | Bağımsız Değişken                                      | Gerekli | Açıklama                                                                          |
 |-----------------------------------------------|----------|--------------------------------------------------------------------------------------|
-| -t,--aracı                                     | Evet      | Gereklidir. Araç adı.                                                             |
+| -t,--aracı                                     | Yes      | Gereklidir. Araç adı.                                                             |
 | -ı,--girişi                                    | No       | Araç giriş değeri. Örneğin, bir dosya adı, paket veya ad.                     |
 | --hata-eylem                                | No       | Araç hatalarının nasıl işleneceğini belirtir: durdur, Yoksay, devam et. Varsayılan değer durdurulur. |
 | -v,--verbose                                  | No       | Ayrıntılı çıktıyı yay.                                                                 |
@@ -97,6 +97,10 @@ Bir araç sıfır olmayan bir çıkış kodu döndürürse gerçekleştirilecek 
 | continue | Standart hataya bir hata gönderdikten sonra diğer araçları işlemeye devam edin. devinit.exe çıkış kodu sıfır değil (hata). Bu davranış durdurma hatası eylemine benzerdir, ancak işleme devam eder. `continue` init komutu için varsayılan hata-eylem.              |
 | yoksayma   | Standart çıktıya bir uyarı yaydıktan sonra diğer araçları işlemeye devam edin. DevInit işlem çıkış kodu her zaman sıfır (başarılı) olmalıdır. `ignore`Ayar tüm hataları yoksayar.                                                                                                      |
 | Dur     | Standart hataya bir hata yayar ve araçları işlemeyi durduruyor. devinit.exe çıkış kodu sıfır değil (hata). Bu, devam etme hatası eylemine benzerdir, ancak karşılaşılan ilk hatada işleme durdurulur. `stop` , init hariç tüm komutlar için varsayılan hata eylemi olur. |
+
+#### <a name="--dry-run-switch"></a>--Kuru çalıştırma anahtarı
+
+Çalıştırılacak yankı aracı komutları. Bazı araçlar, söz konusu araç için belgelendiği şekilde daha fazla işlem gerçekleştirebilir. 
 
 #### <a name="--verbose-switch"></a>--ayrıntılı anahtar
 
@@ -136,7 +140,7 @@ devinit show -t <toolname>
 
 | Bağımsız Değişken       | Gerekli | Açıklama                                                                          |
 |----------------|----------|--------------------------------------------------------------------------------------|
-| -t,--aracı      | Evet      | Gereklidir. Araç adı.                                                             |
+| -t,--aracı      | Yes      | Gereklidir. Araç adı.                                                             |
 
 Belirli bir araç için yardım bilgilerini yazdırır.
 

@@ -6,16 +6,16 @@ keywords: ''
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 08/05/2020
+ms.date: 11/10/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 085a2015e0338581a0eb80cb38655ecb654f27d3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e30ca3abfd2ebe2d937963547248d318a43f59e2
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87805715"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437290"
 ---
 ## <a name="test-agent"></a>Test Aracısı
 
@@ -25,7 +25,7 @@ ms.locfileid: "87805715"
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. VisualStudio. ComponentGroup. TestTools. TestAgent | Test Aracısı temel özellikleri | 16.0.28315.86 | Gerekli
 
@@ -33,6 +33,6 @@ Microsoft. VisualStudio. ComponentGroup. TestTools. TestAgent | Test Aracısı t
 
 Bunlar herhangi bir iş yüküne dahil olmayan, ancak tek bir bileşen olarak seçilebilir olan bileşenlerdir.
 
-Bileşen KIMLIĞI | Name | Sürüm
+Bileşen KIMLIĞI | Ad | Sürüm
 --- | --- | ---
 yok | yok | yok

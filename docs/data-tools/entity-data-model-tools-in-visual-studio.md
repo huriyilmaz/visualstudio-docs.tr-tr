@@ -1,5 +1,7 @@
 ---
 title: Entity Framework Tools
+description: Visual Studio 'da Entity Framework Tools anlayın. Entity Framework Tools, Entity Framework (EF) uygulamaları oluşturmanıza yardımcı olacak şekilde tasarlanmıştır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1b06b573-84aa-4458-b3f5-e238df47bf45
@@ -8,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 250f1ad55f8d60396b8423098e58801d0ed81e77
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1cc1aa43945ceee19b70a037b1c865c67539fb61
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75916732"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436647"
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>Visual Studio 'da Entity Framework Tools
 
@@ -30,9 +32,9 @@ Entity Framework araçları, Visual Studio Yükleyicisi **veri depolama ve işle
 
 Visual Studio 'da Entity Framework araçları oluşturan özel araçlar şunlardır:
 
-- [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] ** [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] Tasarımcı** (**Entity Desisgner**) kullanarak varlıklar, ilişkilendirmeler, eşlemeler ve devralma ilişkilerini görsel olarak oluşturabilir ve değiştirebilirsiniz. **Entity Desisgner** Ayrıca, [!INCLUDE[TLA#tla_cshrp](../data-tools/includes/tlasharptla_cshrp_md.md)] veya [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] nesne katmanı kodu oluşturur.
+- [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] **[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] Tasarımcı** ( **Entity Desisgner** ) kullanarak varlıklar, ilişkilendirmeler, eşlemeler ve devralma ilişkilerini görsel olarak oluşturabilir ve değiştirebilirsiniz. **Entity Desisgner** Ayrıca, [!INCLUDE[TLA#tla_cshrp](../data-tools/includes/tlasharptla_cshrp_md.md)] veya [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] nesne katmanı kodu oluşturur.
 
-- ** [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] Sihirbazı** , mevcut bir veritabanından kavramsal bir model oluşturmak ve uygulamanıza veritabanı bağlantı bilgilerini eklemek için kullanabilirsiniz.
+- **[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] Sihirbazı** , mevcut bir veritabanından kavramsal bir model oluşturmak ve uygulamanıza veritabanı bağlantı bilgilerini eklemek için kullanabilirsiniz.
 
 - Önce kavramsal model oluşturmak için **veritabanı oluşturma Sihirbazı 'nı** kullanabilir, sonra da modeli destekleyen bir veritabanı oluşturabilirsiniz.
 

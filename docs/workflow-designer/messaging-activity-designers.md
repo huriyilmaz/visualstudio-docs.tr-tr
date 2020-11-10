@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-mesajlaşma etkinlik tasarımcıları
+description: Windows Communication Foundation (WCF) iletileri gönderen ve alan mesajlaşma etkinliklerini oluşturmak ve yapılandırmak için mesajlaşma etkinliği tasarımcılarını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 897e63cf-a42f-4edd-876f-c4ccfffaf6d6
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f1b821b4e63f82233b3c2e92fa3f5c3481cda982
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4e82e4cd9f539dea5d0683999413a8371a442a13
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86876196"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435657"
 ---
 # <a name="messaging-activity-designers"></a>Messaging etkinlik tasarımcıları
 

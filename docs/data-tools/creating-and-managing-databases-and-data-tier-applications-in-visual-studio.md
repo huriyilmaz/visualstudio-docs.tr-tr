@@ -1,5 +1,7 @@
 ---
 title: Veritabanı projeleri ve DAC projeleri
+description: Veritabanı projeleri ve veri katmanı uygulamaları (BACS) hakkında bilgi edinin. VERITABANı projelerini kullanarak yeni veritabanları oluşturun, yeni bir Kacs oluşturun ve var olan veritabanlarını güncelleştirin.
+ms.custom: SEO-VS-2020
 ms.date: 11/21/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: cc8d32ddcc332264278cf76392ac69a6188ca51c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 57b889f025b06e127e8e4bb38be311f6bbe55952
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75586737"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436608"
 ---
 # <a name="database-projects-and-data-tier-applications"></a>Veritabanı projeleri ve veri katmanı uygulamaları
 
@@ -25,7 +27,7 @@ Veri katmanı uygulamaları tarafından desteklenen veritabanı özelliklerinin 
 
 ## <a name="common-high-level-tasks"></a>Ortak üst düzey görevler
 
-| Üst düzey görev | Destekleyici İçerik |
+| High-Level görev | Destekleyici İçerik |
 | - | - |
 | **Veri katmanı uygulamasının geliştirilmesini başlatın:** Veri katmanı uygulaması (DAC) kavramı SQL Server 2008 ile tanıtılmıştı. DAC bir SQL Server veritabanının tanımını ve bir istemci-sunucu veya 3 katmanlı uygulama tarafından kullanılan destekleyici örnek nesnelerini içerir. DAC, tablolar ve görünümler gibi veritabanı nesnelerini, örneğin oturum açma işlemleri gibi örnek varlıklarla birlikte içerir. Visual Studio 'Yu kullanarak bir DAC projesi oluşturabilir, bir DAC paket dosyası oluşturabilir ve DAC paket dosyasını SQL Server veritabanı altyapısının bir örneğine dağıtım için bir veritabanı yöneticisine gönderebilirsiniz. | - [Veri katmanı uygulamaları](/sql/relational-databases/data-tier-applications/data-tier-applications)<br />- [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms) |
 | **Yinelemeli veritabanı geliştirme gerçekleştiriliyor:** Geliştiriciler projenin parçalarını kullanıma alabilir ve bunları yalıtılmış bir geliştirme ortamında güncelleştirebilir. Bu ortam türünü kullanarak, ekibinizin diğer üyelerini etkilemeden değişikliklerinizi test edebilirsiniz. Değişiklikler tamamlandıktan sonra, diğer ekip üyelerinin değişiklikleri alabileceği ve bunları bir test sunucusuna dağıtabeceği sürüm denetimine geri döndüğünüzde dosyaları kontrol edersiniz. | - [Projeye dayalı çevrimdışı veritabanı geliştirme (SQL Server Veri Araçları)](/sql/ssdt/project-oriented-offline-database-development)<br />- [Transact-SQL hata ayıklayıcı (SQL Server Management Studio)](/sql/ssms/scripting/transact-sql-debugger) |

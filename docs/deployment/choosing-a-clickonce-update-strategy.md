@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5618a8996b9858f0799f2a359573d5b7b9da1ce9
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 7f231f3426821b7f3148d3e6c268234f125f88f0
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94383163"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437610"
 ---
 # <a name="choose-a-clickonce-update-strategy"></a>ClickOnce güncelleştirme stratejisini seçme
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , otomatik uygulama güncelleştirmeleri sağlayabilir. Uygulama [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] güncelleştirmelerin kullanılabilir olup olmadığını görmek için uygulama düzenli aralıklarla dağıtım bildirimi dosyasını okur. Kullanılabilir olması durumunda uygulamanın yeni sürümü indirilir ve çalıştırılır. Verimlilik için, sadece değişen dosyalar indirilir.
@@ -73,6 +73,8 @@ ms.locfileid: "94383163"
    </update>
 </subscription>
 ```
+> [!NOTE]
+> .NET 3,1 ve daha yeni uygulamalar için, uygulama başlamadan önce güncelleştirmelerin denetlenmesi desteklenen tek güncelleştirme seçeneğidir.
 
 ## <a name="make-updates-required"></a>Gerekli güncelleştirmeleri yapın
  Kullanıcıların uygulamanızın güncelleştirilmiş bir sürümünü çalıştırmasını istediğiniz durumlar olabilir. Örneğin, çalışan uygulamanızın daha eski bir sürümünün doğru olarak çalışmasını engelleyen bir Web hizmeti gibi harici bir kaynakta değişiklik yapabilirsiniz. Bu durumda, güncelleştirmenizi gerekli olarak işaretlemek ve kullanıcıların daha eski sürümleri çalıştırmasını engellemek isteyeceksinizdir.
@@ -119,7 +121,7 @@ ms.locfileid: "94383163"
  Güvenilir Uygulama Dağıtımı kullanıyorsanız, güven düzeyleri için hiçbir uyarı ile karşılaşmazsınız. Daha fazla bilgi için bkz. [Güvenilen uygulama dağıtımına genel bakış](../deployment/trusted-application-deployment-overview.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
- \<xref:System.Deployment.Application>
+- <xref:System.Deployment.Application>
 - [ClickOnce güvenliği ve dağıtımı](../deployment/clickonce-security-and-deployment.md)
 - [ClickOnce dağıtım stratejisini seçme](../deployment/choosing-a-clickonce-deployment-strategy.md)
 - [ClickOnce uygulamalarını koruma](../deployment/securing-clickonce-applications.md)

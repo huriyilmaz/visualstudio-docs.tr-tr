@@ -1,5 +1,6 @@
 ---
 title: WCF veri hizmeti başvurusu ekleme, güncelleştirme veya kaldırma
+description: Windows Communication Foundation (WCF) veri hizmeti başvurusunun nasıl ekleneceğini, güncelleştirilmesini veya kaldırılacağını inceleyin.
 ms.date: 11/04/2016
 ms.custom: SEO-VS-2020
 ms.topic: how-to
@@ -15,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d9a05924bd7c790d2a1cc9ffd96d66eb905acb39
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 6e6c289038c3f8cb9d1586ae4a1f7a84b563239f
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037321"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436439"
 ---
 # <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>Nasıl yapılır: WCF veri hizmeti başvurusu ekleme, güncelleştirme veya kaldırma
 
@@ -28,7 +29,7 @@ ms.locfileid: "90037321"
 Bir *hizmet başvurusu* , projenin bir veya daha fazla erişmesini sağlar [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] . Yerel ağda veya Internet 'te geçerli çözümde arama yapmak için **hizmet başvurusu Ekle** iletişim kutusunu kullanın [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] .
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmenizi sağlayan **Microsoft WCF Web Service Reference Provider**erişmek Için **Çözüm Gezgini** **bağlı hizmetler** düğümünü kullanabilirsiniz.
+Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmenizi sağlayan **Microsoft WCF Web Service Reference Provider** erişmek Için **Çözüm Gezgini** **bağlı hizmetler** düğümünü kullanabilirsiniz.
 ::: moniker-end
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
@@ -39,7 +40,7 @@ Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmeniz
 
 ::: moniker range="vs-2017"
 
-1. **Çözüm Gezgini**, hizmeti eklemek istediğiniz projenin adına sağ tıklayın ve ardından **hizmet başvurusu Ekle**' e tıklayın.
+1. **Çözüm Gezgini** , hizmeti eklemek istediğiniz projenin adına sağ tıklayın ve ardından **hizmet başvurusu Ekle** ' e tıklayın.
 
    **Hizmet başvurusu Ekle** iletişim kutusu görüntülenir.
 
@@ -50,7 +51,7 @@ Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmeniz
 
      Ayrıca, geçerli hizmet meta verilerinin bulunduğu önceki 15 URL 'Leri depolayan **Adres** listesinden URL 'yi seçebilirsiniz.
 
-     Arama gerçekleştirilirken bir ilerleme çubuğu görüntülenir. **Durdur**' a tıklayarak aramayı dilediğiniz zaman durdurabilirsiniz.
+     Arama gerçekleştirilirken bir ilerleme çubuğu görüntülenir. **Durdur** ' a tıklayarak aramayı dilediğiniz zaman durdurabilirsiniz.
 
 1. **Hizmetler** listesinde, kullanmak istediğiniz hizmetin düğümünü genişletin ve bir varlık kümesi seçin.
 
@@ -61,11 +62,11 @@ Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmeniz
      Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler *app.config* dosyasına eklenir.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-1. **Çözüm Gezgini**, **bağlı hizmetler** düğümüne çift tıklayın veya dokunun.
+1. **Çözüm Gezgini** , **bağlı hizmetler** düğümüne çift tıklayın veya dokunun.
 
    **Hizmetleri Yapılandır** sekmesi açılır.
 
-1. **Microsoft WCF Web Service Reference Provider**seçin.
+1. **Microsoft WCF Web Service Reference Provider** seçin.
 
    **WCF Web hizmeti başvurusunu Yapılandır** iletişim kutusu görüntülenir.
 
@@ -79,7 +80,7 @@ Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmeniz
 
      Ayrıca, geçerli hizmet meta verilerinin bulunduğu önceki 15 URL 'Leri depolayan **URI** listesinden URL 'yi seçebilirsiniz.
 
-     Arama gerçekleştirilirken bir ilerleme çubuğu görüntülenir. **Durdur**' a tıklayarak aramayı dilediğiniz zaman durdurabilirsiniz.
+     Arama gerçekleştirilirken bir ilerleme çubuğu görüntülenir. **Durdur** ' a tıklayarak aramayı dilediğiniz zaman durdurabilirsiniz.
 
 1. **Hizmetler** listesinde, kullanmak istediğiniz hizmetin düğümünü genişletin ve bir varlık kümesi seçin.
 
@@ -95,11 +96,11 @@ Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmeniz
 
 ::: moniker range="vs-2017"
 
-1. **Çözüm Gezgini**, hizmeti eklemek istediğiniz projenin adına sağ tıklayın ve ardından **hizmet başvurusu Ekle**' e tıklayın.
+1. **Çözüm Gezgini** , hizmeti eklemek istediğiniz projenin adına sağ tıklayın ve ardından **hizmet başvurusu Ekle** ' e tıklayın.
 
     **Hizmet başvurusu Ekle** iletişim kutusu görüntülenir.
 
-1. **Bul**'a tıklayın.
+1. **Bul** 'a tıklayın.
 
     Geçerli Çözümdeki tüm hizmetler (her ikisi [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] ve WCF Hizmetleri) **Hizmetler** listesine eklenir.
 
@@ -112,15 +113,15 @@ Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmeniz
     Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler *app.config* dosyasına eklenir.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-1. **Çözüm Gezgini**, **bağlı hizmetler** düğümüne çift tıklayın veya dokunun. 
+1. **Çözüm Gezgini** , **bağlı hizmetler** düğümüne çift tıklayın veya dokunun. 
 
    **Hizmetleri Yapılandır** sekmesi açılır.
 
-1. **Microsoft WCF Web Service Reference Provider**seçin.
+1. **Microsoft WCF Web Service Reference Provider** seçin.
 
    **WCF Web hizmeti başvurusunu Yapılandır** iletişim kutusu görüntülenir.
 
-1. **Bul**'a tıklayın.
+1. **Bul** 'a tıklayın.
 
     Geçerli Çözümdeki tüm hizmetler (her ikisi [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] ve WCF Hizmetleri) **Hizmetler** listesine eklenir.
 
@@ -140,7 +141,7 @@ Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmeniz
 
 ### <a name="to-update-a-service-reference"></a>Bir hizmet başvurusunu güncelleştirmek için
 
-- **Çözüm Gezgini**' de, hizmet başvurusunu sağ tıklatın ve ardından **hizmet başvurusunu Güncelleştir**' e tıklayın.
+- **Çözüm Gezgini** ' de, hizmet başvurusunu sağ tıklatın ve ardından **hizmet başvurusunu Güncelleştir** ' e tıklayın.
 
      Bir ilerleme iletişim kutusu, başvurunun özgün konumundan güncelleştirildiği sırada görüntülenir ve hizmet istemcisi meta verilerde yapılan değişiklikleri yansıtacak şekilde yeniden oluşturulur.
 
@@ -150,7 +151,7 @@ Bir hizmet başvurusu artık kullanılmıyorsa, çözümünüzü çözümden kal
 
 ### <a name="to-remove-a-service-reference"></a>Bir hizmet başvurusunu kaldırmak için
 
-- **Çözüm Gezgini**, hizmet başvurusunu sağ tıklatın ve ardından **Sil**' e tıklayın.
+- **Çözüm Gezgini** , hizmet başvurusunu sağ tıklatın ve ardından **Sil** ' e tıklayın.
 
      Hizmet istemcisi çözümden kaldırılacak ve hizmeti tanımlayan meta veriler *app.config* dosyasından kaldırılacak.
 

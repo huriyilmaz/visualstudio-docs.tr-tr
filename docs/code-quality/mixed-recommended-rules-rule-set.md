@@ -1,18 +1,20 @@
 ---
 title: Karışık Önerilen Kurallar kural kümesi
 ms.date: 11/04/2016
+description: Visual Studio 'da karışık Önerilen Kurallar kural kümesi hakkında bilgi edinin. Ortak dil çalışma zamanını destekleyen C++ projeleri için kuralların açıklamalarını inceleyin.
+ms.custom: SEO-VS-2020
 ms.topic: reference
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 324595021a11fb533a1eeb1936df6f4894d4fbce
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: bc30012dc025c5fc92f6d589c8e40740d689a86b
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658457"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437076"
 ---
 # <a name="mixed-recommended-rules-rule-set"></a>Karışık Önerilen Kurallar kural kümesi
 
@@ -38,20 +40,20 @@ Bu kuralı, ortak dil çalışma zamanını destekleyen C++ projeleriniz için o
 |[C6201](/cpp/code-quality/c6201)|Dizin yığın arabelleği üst sınırını aşıyor|
 |[C6214](/cpp/code-quality/c6214)|HRESULT Ile BOOL arasında geçersiz atama|
 |[C6215](/cpp/code-quality/c6215)|Geçersiz tür BOOL olarak HRESULT|
-|[C6216](/cpp/code-quality/c6216)|Geçersiz derleyici ile ekli atama BOOL 'A dönüştürüldü|
+|[C6216](/cpp/code-quality/c6216)|Geçersiz Compiler-Inserted cast BOOL olarak HRESULT|
 |[C6217](/cpp/code-quality/c6217)|NOT Ile geçersiz HRESULT testi|
 |[C6220](/cpp/code-quality/c6220)|-1 Ile geçersiz HRESULT karşılaştırması|
 |[C6226](/cpp/code-quality/c6226)|-1 Için geçersiz HRESULT ataması|
 |[C6230](/cpp/code-quality/c6230)|Boole olarak geçersiz HRESULT kullanımı|
-|[C6235](/cpp/code-quality/c6235)|Mantıksal or Ile sıfır olmayan sabit|
-|[C6236](/cpp/code-quality/c6236)|Sıfır olmayan sabit Ile mantıksal or|
-|[C6237](/cpp/code-quality/c6237)|Mantıksal-ve yan etkileri olan sıfır|
+|[C6235](/cpp/code-quality/c6235)|Logical-Or Ile sıfır olmayan sabit|
+|[C6236](/cpp/code-quality/c6236)|Sıfır olmayan sabit Ile Logical-Or|
+|[C6237](/cpp/code-quality/c6237)|Logical-And, yan etkileri kaybediyor|
 |[C6242](/cpp/code-quality/c6242)|Yerel geriye doğru Izleme zorlandı|
 |[C6248](/cpp/code-quality/c6248)|NULL DACL oluşturuluyor|
 |[C6250](/cpp/code-quality/c6250)|Yayımlanverilmemiş adres tanımlayıcıları|
 |[C6255](/cpp/code-quality/c6255)|Korumasız alloca kullanımı|
 |[C6258](/cpp/code-quality/c6258)|Sonlandırma Iş parçacığını kullanma|
-|[C6259](/cpp/code-quality/c6259)|Bit düzeyinde veya sınırlı anahtarda ölü kod|
+|[C6259](/cpp/code-quality/c6259)|Bitwise-Or sınırlı anahtardaki ölü kod|
 |[C6260](/cpp/code-quality/c6260)|Bayt aritmetiği kullanımı|
 |[C6262](/cpp/code-quality/c6262)|Aşırı yığın kullanımı|
 |[C6263](/cpp/code-quality/c6263)|Döngüde alloca kullanma|
@@ -64,20 +66,20 @@ Bu kuralı, ortak dil çalışma zamanını destekleyen C++ projeleriniz için o
 |[C6274](/cpp/code-quality/c6274)|Biçimlendirme Işlevinde karakter olmayan bağımsız değişken|
 |[C6276](/cpp/code-quality/c6276)|Geçersiz dize dönüştürme|
 |[C6277](/cpp/code-quality/c6277)|Geçersiz CreateProcess çağrısı|
-|[C6278](/cpp/code-quality/c6278)|Dizi-yeni skaler-silme uyumsuzluğu|
-|[C6279](/cpp/code-quality/c6279)|Skaler-yeni dizi-silme uyumsuzluğu|
-|[C6280](/cpp/code-quality/c6280)|Bellek ayırma-ayırmayı kaldırma uyumsuzluğu|
+|[C6278](/cpp/code-quality/c6278)|Array-New Scalar-Delete uyumsuzluğu|
+|[C6279](/cpp/code-quality/c6279)|Scalar-New Array-Delete uyumsuzluğu|
+|[C6280](/cpp/code-quality/c6280)|Bellek Allocation-Deallocation uyumsuzluğu|
 |[C6281](/cpp/code-quality/c6281)|Bit düzeyinde Ilişki önceliği|
 |[C6282](/cpp/code-quality/c6282)|Atama testin yerini alır|
-|[C6283](/cpp/code-quality/c6283)|İlkel dizi-yeni skaler-silme uyumsuzluğu|
+|[C6283](/cpp/code-quality/c6283)|Temel Array-New Scalar-Delete uyumsuzluğu|
 |[C6284](/cpp/code-quality/c6284)|Biçimlendirme Işlevine geçersiz nesne değişkeni|
-|[C6285](/cpp/code-quality/c6285)|Sabitler mantıksal or|
-|[C6286](/cpp/code-quality/c6286)|Sıfır olmayan mantıksal veya kayıp yan etkileri|
+|[C6285](/cpp/code-quality/c6285)|Sabitler Logical-Or|
+|[C6286](/cpp/code-quality/c6286)|Sıfır olmayan Logical-Or yan etkileri kaybetme|
 |[C6287](/cpp/code-quality/c6287)|Gereksiz test|
-|[C6288](/cpp/code-quality/c6288)|Mantıksal and üzerinde karşılıklı Içerme yanlış|
-|[C6289](/cpp/code-quality/c6289)|Mantıksal or üzerinde karşılıklı dışlama doğru|
-|[C6290](/cpp/code-quality/c6290)|Mantıksal değil bit düzeyinde and önceliği|
-|[C6291](/cpp/code-quality/c6291)|Mantıksal değil bit düzeyinde OR önceliği|
+|[C6288](/cpp/code-quality/c6288)|Logical-And üzerinden karşılıklı ekleme false|
+|[C6289](/cpp/code-quality/c6289)|Logical-Or üzerinden karşılıklı dışlama doğru|
+|[C6290](/cpp/code-quality/c6290)|Logical-Not Bitwise-And önceliği|
+|[C6291](/cpp/code-quality/c6291)|Logical-Not Bitwise-Or önceliği|
 |[C6292](/cpp/code-quality/c6292)|Döngü en yüksek değerinden yukarı sayılır|
 |[C6293](/cpp/code-quality/c6293)|Döngü en küçük değerden aşağı doğru sayılır|
 |[C6294](/cpp/code-quality/c6294)|Döngü gövdesi hiç yürütülmedi|
@@ -92,7 +94,7 @@ Bu kuralı, ortak dil çalışma zamanını destekleyen C++ projeleriniz için o
 |[C6308](/cpp/code-quality/c6308)|Realloc sızıntısı|
 |[C6310](/cpp/code-quality/c6310)|Geçersiz özel durum filtre sabiti|
 |[C6312](/cpp/code-quality/c6312)|Özel durum yürütme döngüsüne devam et|
-|[C6314](/cpp/code-quality/c6314)|Bit düzeyinde OR önceliği|
+|[C6314](/cpp/code-quality/c6314)|Bitwise-Or önceliği|
 |[C6317](/cpp/code-quality/c6317)|Tamamlayıcı değil|
 |[C6318](/cpp/code-quality/c6318)|Özel durum aramaya devam et|
 |[C6319](/cpp/code-quality/c6319)|Virgülle yoksayıldı|
@@ -103,7 +105,7 @@ Bu kuralı, ortak dil çalışma zamanını destekleyen C++ projeleriniz için o
 |[C6333](/cpp/code-quality/c6333)|VirtualFree geçersiz boyutu|
 |[C6335](/cpp/code-quality/c6335)|Sızan Işlem tanıtıcısı|
 |[C6381](/cpp/code-quality/c6381)|Kapatılmış bilgiler eksik|
-|[C6383](/cpp/code-quality/c6383)|Öğe-sayım bayt sayısı arabellek taşması|
+|[C6383](/cpp/code-quality/c6383)|Element-Count Byte-Count arabellek taşması|
 |[C6384](/cpp/code-quality/c6384)|İşaretçi boyutu bölümü|
 |[C6385](/cpp/code-quality/c6385)|Okuma taşması|
 |[C6386](/cpp/code-quality/c6386)|Yazma taşması|

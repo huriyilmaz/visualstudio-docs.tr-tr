@@ -1,5 +1,7 @@
 ---
 title: 'İş Akışı Tasarımcısı-nasıl yapılır: değişken tasarımcısını kullanma'
+description: Veri bağlama senaryolarında ve Koşullu deyimlerde kullanılacak değişkenleri oluşturmak için değişken tasarımcısını nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f02aab6c5ecf545e0f754f1a88fa7e26a88f206d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e8dc5e402fcf3bedabe2b0f7fe606dfe807525ab
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817417"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437833"
 ---
 # <a name="how-to-use-the-variable-designer"></a>Nasıl Yapılır: Değişken Tasarımcısını Kullanma
 
@@ -31,7 +33,7 @@ Değişken tasarımcı, veri bağlama senaryolarında ve Koşullu deyimlerde kul
 
 3. Tasarım tuvalinin sol alt köşesindeki **değişkenler** düğmesine tıklayarak değişken tasarımcısını açın. Değişken tasarımcı belirir.
 
-4. **Oluşturma değişkeni**etiketli boş satıra tıklayın. Bu, aşağıdaki varsayılan değerleri kullanarak yeni bir değişken içeren yeni bir satır ekler: x, benzersiz değişken adları, **değişken türü**için **dize** ve **kapsam** **sırası** için otomatik olarak arttırılan 1 başlangıç değeri olan bir tamsayı olan **addır** . **Varsayılan**için değer eklenmez. Bu değerleri, iş akışı tasarım sürecinde istediğiniz zaman değiştirebilirsiniz.
+4. **Oluşturma değişkeni** etiketli boş satıra tıklayın. Bu, aşağıdaki varsayılan değerleri kullanarak yeni bir değişken içeren yeni bir satır ekler: x, benzersiz değişken adları, **değişken türü** için **dize** ve **kapsam** **sırası** için otomatik olarak arttırılan 1 başlangıç değeri olan bir tamsayı olan **addır** . **Varsayılan** için değer eklenmez. Bu değerleri, iş akışı tasarım sürecinde istediğiniz zaman değiştirebilirsiniz.
 
     > [!NOTE]
     > Bir değişkeni silmek için, ve ardından **Delete** tuşuna basarak değişkeni seçin.

@@ -1,5 +1,7 @@
 ---
-title: N katmanlı veri uygulamalarına genel bakış
+title: N Katmanlı Veri Uygulamalarına Genel Bakış
+description: N katmanlı veri uygulamasına genel bakış konusunu okuyun. Dağıtılmış uygulamalar veya çok katmanlı uygulamalar da denir, bunlar birçok katmanda ayrılmış veri uygulamalarıdır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 helpviewer_keywords:
@@ -13,15 +15,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 445826a2ada7b22201b7dd82948bc8bd5dd3d296
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: ea1ab222868df6ff1b22eee7827e1edd3978a88e
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426869"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436217"
 ---
 # <a name="n-tier-data-applications-overview"></a>N katmanlı veri uygulamalarına genel bakış
-*N katmanlı* veri uygulamaları *, birden fazla*katmana ayrılan veri uygulamalarıdır. Ayrıca, "dağıtılmış uygulamalar" ve "çok katmanlı uygulamalar" olarak da bilinen n katmanlı uygulamalar, istemci ile sunucu arasında dağıtılan ayrı katmanlara ayrı işlem ayırır. Veriye erişen uygulamalar geliştirirken, uygulamayı oluşturan çeşitli katmanlar arasında açık bir ayrımı olması gerekir.
+*N katmanlı* veri uygulamaları *, birden fazla* katmana ayrılan veri uygulamalarıdır. Ayrıca, "dağıtılmış uygulamalar" ve "çok katmanlı uygulamalar" olarak da bilinen n katmanlı uygulamalar, istemci ile sunucu arasında dağıtılan ayrı katmanlara ayrı işlem ayırır. Veriye erişen uygulamalar geliştirirken, uygulamayı oluşturan çeşitli katmanlar arasında açık bir ayrımı olması gerekir.
 
 Tipik n katmanlı bir uygulama, bir sunum katmanı, orta katman ve veri katmanı içerir. N katmanlı bir uygulamadaki çeşitli katmanları ayırmanın en kolay yolu, uygulamanıza dahil etmek istediğiniz her katman için ayrı projeler oluşturmaktır. Örneğin, sunum katmanı bir Windows Forms uygulaması olabilir, ancak veri erişim mantığı Orta katmanda bulunan bir sınıf kitaplığı olabilir. Ayrıca, sunu katmanı, bir Web hizmeti gibi bir hizmet aracılığıyla orta katmandaki veri erişim mantığı ile iletişim kurabilir. Uygulama bileşenlerini ayrı katmanlara ayırmak, uygulamanın bakım ve ölçeklenebilirlik düzeyini artırır. Bu, tüm çözümü yeniden tasarlama gereksinimi olmadan tek bir katmana uygulanabilecek yeni teknolojilerin kullanımını daha kolay benimseyerek etkinleştirir. Bunlara ek olarak, n katmanlı uygulamalar genellikle hassas bilgileri Orta katmanda depolar ve bu da sunum katmanından yalıtımı korur.
 

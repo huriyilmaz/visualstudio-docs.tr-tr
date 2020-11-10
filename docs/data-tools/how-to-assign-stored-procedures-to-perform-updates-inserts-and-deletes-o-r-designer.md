@@ -1,5 +1,6 @@
 ---
 title: Verileri güncelleştirmek için LINQ to SQL depolanan yordamları kullanın
+description: Verileri güncelleştirme, ekleme ve silme işlemlerini gerçekleştirmek için LINQ to SQL Nesne İlişkisel Tasarımcısı (O/R Designer) içindeki saklı yordamları kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3f8b2f783d6ae449a6124afe5d8e25dd836f0f8e
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 5915de290a84429878eccb4eae17821f8ac27f70
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036320"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436419"
 ---
 # <a name="how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-or-designer"></a>Nasıl yapılır: Güncelleştirme, ekleme ve silme işlemleri gerçekleştirmek için saklı yordamlar atama (O/R Tasarımcısı)
 
@@ -36,19 +37,19 @@ Varsayılan olarak, bir veritabanını güncelleştirme mantığı (ekler, günc
 
 1. Tasarımcıda **LINQ to SQL** dosyasını açın. ( **Çözüm Gezgini** **. dbml** dosyasına çift tıklayın.)
 
-2. **Sunucu Gezgini** veya **veritabanı Gezgini**' de, **saklı yordamlar** ' ı genişletin ve varlık sınıfının INSERT, Update ve/veya delete komutları için kullanmak istediğiniz saklı yordamları bulun.
+2. **Sunucu Gezgini** veya **veritabanı Gezgini** ' de, **saklı yordamlar** ' ı genişletin ve varlık sınıfının INSERT, Update ve/veya delete komutları için kullanmak istediğiniz saklı yordamları bulun.
 
-3. Saklı yordamı **O/R tasarımcısına**sürükleyin.
+3. Saklı yordamı **O/R tasarımcısına** sürükleyin.
 
      Saklı yordam Yöntemler bölmesine Yöntem olarak eklenir <xref:System.Data.Linq.DataContext> . Daha fazla bilgi için bkz. [DataContext yöntemleri (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
 
 4. Güncelleştirme gerçekleştirmek için saklı yordamı kullanmak istediğiniz varlık sınıfını seçin.
 
-5. **Özellikler** penceresinde, geçersiz kılmak için komutu seçin (**Insert**, **Update**veya **Delete**).
+5. **Özellikler** penceresinde, geçersiz kılmak için komutu seçin ( **Insert** , **Update** veya **Delete** ).
 
 6. **Çalışma zamanı kullan** **iletişim kutusunu** açmak için sözcüklerin yanındaki üç nokta (...) simgesine tıklayın.
 
-7. **Özelleştir**'i seçin.
+7. **Özelleştir** 'i seçin.
 
 8. **Özelleştir** listesinde istenen saklı yordamı seçin.
 
@@ -57,12 +58,12 @@ Varsayılan olarak, bir veritabanını güncelleştirme mantığı (ekler, günc
     > [!NOTE]
     > Varsayılan olarak, yöntem bağımsız değişkenleri, adlar eşleşiyorsa sınıf özellikleriyle eşlenir. Değiştirilen özellik adları, tablo ve varlık sınıfı arasında artık eşleşmezse, tasarımcı doğru eşlemeyi belirleyememesi durumunda eşlenecek eşdeğer sınıf özelliğini seçmeniz gerekebilir.
 
-10. **Tamam** ' a veya **Uygula**' ya tıklayın.
+10. **Tamam** ' a veya **Uygula** ' ya tıklayın.
 
     > [!NOTE]
-    > Her bir değişiklik yaptıktan sonra **Uygula** ' ya tıkladığınızda her bir sınıf ve davranış birleşimine yönelik davranışı yapılandırmaya devam edebilirsiniz. **Uygula**' ya tıklamadan önce sınıfı veya davranışı değiştirirseniz, bir uyarı iletişim kutusu görüntülenir ve yaptığınız değişiklikleri uygulamak için size bir fırsat sağlar.
+    > Her bir değişiklik yaptıktan sonra **Uygula** ' ya tıkladığınızda her bir sınıf ve davranış birleşimine yönelik davranışı yapılandırmaya devam edebilirsiniz. **Uygula** ' ya tıklamadan önce sınıfı veya davranışı değiştirirseniz, bir uyarı iletişim kutusu görüntülenir ve yaptığınız değişiklikleri uygulamak için size bir fırsat sağlar.
 
-Güncelleştirmeler için varsayılan çalışma zamanı mantığını kullanmaya dönmek için, **Özellikler** penceresinde **Ekle**, **Güncelleştir**ve **Sil** komutunun yanındaki üç noktaya tıklayın ve sonra **davranışı Yapılandır** iletişim kutusunda **çalışma zamanını kullan** iletişim kutusunu seçin.
+Güncelleştirmeler için varsayılan çalışma zamanı mantığını kullanmaya dönmek için, **Özellikler** penceresinde **Ekle** , **Güncelleştir** ve **Sil** komutunun yanındaki üç noktaya tıklayın ve sonra **davranışı Yapılandır** iletişim kutusunda **çalışma zamanını kullan** iletişim kutusunu seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,7 @@
 ---
 title: Verileri yeniden veritabanına kaydetme
+description: Verileri veritabanına geri kaydetmek için veri kümesi araçları 'nı kullanın. Veri kümesi, değiştirilirse veritabanına geri kaydedilmesi gereken verilerin bellek içi bir kopyasıdır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -20,12 +22,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 493637f81df15fadf65d6c7d90e980e322919b13
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 77f6a837fcc88c7154978e8031b17febaa0fcd39
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281753"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436061"
 ---
 # <a name="save-data-back-to-the-database"></a>Verileri yeniden veritabanına kaydetme
 
@@ -41,7 +43,7 @@ Veri kümesi tablolarını bir Windows form veya XAML sayfasında denetimlere ve
 
 TableAdapters hakkında bilgi sahibiyseniz, doğrudan bu konulardan birine atlayabilirsiniz:
 
-|Konu|Description|
+|Konu|Açıklama|
 |-----------|-----------------|
 |[Veritabanına yeni kayıtlar ekleme](../data-tools/insert-new-records-into-a-database.md)|TableAdapters veya komut nesnelerini kullanarak güncelleştirmeleri ve eklemeleri gerçekleştirme|
 |[TableAdapter kullanarak verileri güncelleştirme](../data-tools/update-data-by-using-a-tableadapter.md)|TableAdapters ile güncelleştirme gerçekleştirme|
@@ -125,7 +127,7 @@ Bir veri kümesindeki değişikliklerle ilgili bilgiler iki şekilde tutulur: de
 
 Aşağıdaki tabloda, sabit listesinin olası değerlerinin ayrıntıları verilmiştir <xref:System.Data.DataRowState> :
 
-|DataRowState değeri|Description|
+|DataRowState değeri|Açıklama|
 | - |-----------------|
 |<xref:System.Data.DataRowState.Added>|Satır, öğesine bir öğe olarak eklenmiştir <xref:System.Data.DataRowCollection> . (Son yöntem çağrıldığında mevcut olmadığından, bu durumdaki bir satır karşılık gelen orijinal bir sürüme sahip değildir <xref:System.Data.DataRow.AcceptChanges%2A> ).|
 |<xref:System.Data.DataRowState.Deleted>|Satır, bir nesnesi kullanılarak silindi <xref:System.Data.DataRow.Delete%2A> <xref:System.Data.DataRow> .|
@@ -139,7 +141,7 @@ Veri kümeleri kayıtların birden çok sürümünü tutar. <xref:System.Data.Da
 
 Aşağıdaki tabloda, sabit listesinin olası değerlerinin ayrıntıları verilmiştir <xref:System.Data.DataRowVersion> :
 
-|DataRowVersion değeri|Description|
+|DataRowVersion değeri|Açıklama|
 | - |-----------------|
 |<xref:System.Data.DataRowVersion.Current>|Bir kaydın geçerli sürümü, en son çağrılmasından bu yana kayıtta gerçekleştirilen tüm değişiklikleri içerir <xref:System.Data.DataRow.AcceptChanges%2A> . Satır silinmişse, geçerli sürüm yoktur.|
 |<xref:System.Data.DataRowVersion.Default>|Bir kaydın veri kümesi şeması veya veri kaynağı tarafından tanımlanan varsayılan değeri.|

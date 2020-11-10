@@ -1,5 +1,7 @@
 ---
 title: 'İş Akışı Tasarımcısı: parametre ekleme & bağımsız değişken Ekle iletişim kutuları'
+description: Parametre Ekle iletişim kutusunun Kullanıcı arabirimi (UI) öğelerinin InvokeMethod Tasarımcısı tarafından nasıl kullanıldığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,18 +12,18 @@ manager: jillfra
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: c8acef82c2616259793ba63ca51c789cfd1b9ba4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2038e56770a7d671a25b3982f865926c29697b13
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547361"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435696"
 ---
 # <a name="add-parameters-and-add-arguments-dialog-boxes"></a>Parametreler ve Bağımsız Değişkenler Ekle İletişim Kutuları
 
 Aşağıdaki tabloda, tasarımcı tarafından kullanılan **parametre Ekle** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır <xref:System.Activities.Statements.InvokeMethod> :
 
-|Name|Değer|
+|Ad|Değer|
 |-|-|
 |**Yön**|Parametrenin yönteme veri akışını, yöntemin dışına mı yoksa her ikisini de temsil ettiğini belirtir.|
 |**Tür**|Yeni parametrenin tür adı.|
@@ -29,7 +31,7 @@ Aşağıdaki tabloda, tasarımcı tarafından kullanılan **parametre Ekle** ile
 
 Aşağıdaki tabloda, tasarımcı tarafından kullanılan **bağımsız değişken Ekle** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır <xref:System.Activities.Statements.InvokeDelegate> :
 
-|Name|Değer|
+|Ad|Değer|
 |-|-|
 |**Ad**|Bağımsız değişkenin adı.|
 |**Yön**|Bağımsız değişkenin temsilciye veri akışını temsil ettiğini, temsilcinin dışına mı yoksa her ikisini birden mi temsil ettiğini belirtir.|

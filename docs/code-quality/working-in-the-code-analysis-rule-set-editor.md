@@ -1,6 +1,8 @@
 ---
 title: Kod Analizi Kural Kümesi Düzenleyicisini Kullanma
 ms.date: 04/04/2018
+description: Visual Studio 'da kural kümelerini düzenleme ve görüntüleme hakkında bilgi edinin. Kural önem derecesini ayarlama, özel bir küme içinde kuralları belirtme ve kural kümesi kılavuzundaki verileri ayarlama bölümüne bakın.
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.ruleseteditor
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ffaf964b24fea41d8e364d610806ba92980b1dc7
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 4d2703972658aace438ab235d469eed3e0644c06
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659185"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436829"
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>Kod analizi kural kümesi düzenleyicisini kullanma
 
@@ -27,7 +29,7 @@ Aşağıdaki tabloda önem derecesi seçenekleri gösterilmektedir:
 |-|-|
 |Uyarı|**Hata listesi** ve derleme zamanında bir uyarı oluşturur.|
 |Hata|**Hata listesi** ve derleme zamanında bir hata oluşturur.|
-|Bilgi|**Hata listesi**bir ileti oluşturur.|
+|Bilgi|**Hata listesi** bir ileti oluşturur.|
 |Gizli|İhlalin kullanıcıya görünür değil. Ancak, bu, ihlalin ihlal olduğu konusunda bilgilendirilir.|
 |Hiçbiri|Kural bastırılır. Kural, kuralın kural kümesinden kaldırılmış olduğu durumla aynıdır.|
 
